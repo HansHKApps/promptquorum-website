@@ -628,6 +628,122 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Hardware-Specific',
+    title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: configuração e desempenho',
+    seoTitle: 'Strix Halo Ollama Vulkan: configuração 2026 | PromptQuorum',
+    metaDescription: 'Ryzen AI Max 395 (Strix Halo, 40 CU): 96 GB unificados, executa modelos 70B via Ollama Vulkan no Linux. ~22 tok/s com Llama 3.3 8B. Resposta rápida.',
+    publishDate: '2026-05-23',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-23',
+    affiliateDisclosure: true,
+    audience: 'Usuários Linux com um dispositivo Ryzen AI Max 395 (Strix Halo) querendo configurar inferência LLM local com aceleração GPU via Ollama Vulkan',
+    readTime: '4 min de leitura',
+    leadAnswerBlock: 'Sim — Ryzen AI Max 395 (Strix Halo) executa Ollama com aceleração GPU via o backend Vulkan no Linux. Instale o binário padrão do Ollama, verifique a detecção de GPU com ollama ps e configure OLLAMA_FLASH_ATTENTION=1 para modelos grandes. O pool de 96 GB de memória unificada permite executar modelos 70B impossíveis em qualquer GPU desktop individual.',
+    intro: 'Strix Halo (Ryzen AI Max 395) é uma APU de alta memória encontrada em mini PCs e laptops. Sua GPU RDNA 3.5 executa Ollama via Vulkan no Linux sem drivers adicionais — e seus 96 GB de memória unificada são a vantagem de hardware que torna os modelos de classe 70B viáveis em um único dispositivo.',
+    toc: [
+      { label: 'Como executar Ollama com Vulkan', anchor: '#setup' },
+      { label: 'Strix Halo vs RTX 4090', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leituras relacionadas', anchor: '#related' },
+    ],
+    quickAnswerTop: {
+      pt: {
+        question: 'Strix Halo (Ryzen AI Max) funciona com Ollama via Vulkan?',
+        answer: 'Sim — Ryzen AI Max (Strix Halo, RDNA 3.5) executa Ollama via Vulkan no Linux. Com 96 GB de memória unificada no MAX 395, cabe Qwen 32B e até Llama 70B Q4_K_M — modelos que nenhuma GPU desktop individual consegue armazenar.',
+        bullets: [
+          'Linux: Ollama detecta automaticamente Strix Halo Vulkan; configure OLLAMA_FLASH_ATTENTION=1 para sessões de contexto longo',
+          'Ryzen AI Max 395 (96 GB): cabe Llama 70B Q4_K_M (~41 GB) e Qwen 32B Q4_K_M (~19 GB) simultaneamente na memória',
+          'O caminho Vulkan Windows para Strix Halo é experimental; Linux é a plataforma estável para Ollama com aceleração GPU',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Ryzen AI Max 395 (Strix Halo, 40 CU RDNA 3.5, 96 GB LPDDR5X) usa o backend Vulkan no Ollama no Linux — o caminho GPU correto quando o suporte ROCm iGPU não está disponível',
+          'O pool de 96 GB de memória unificada é a vantagem principal: cabe Llama 70B Q4_K_M (~41 GB) — um modelo que requer múltiplas GPUs desktop em outras configurações',
+          'Velocidade no Ryzen AI Max 395: Llama 3.3 8B ~22 tok/s, Qwen 3 14B ~13 tok/s, Qwen 3 32B ~7 tok/s via Vulkan',
+          'O suporte Windows para Strix Halo no Ollama está amadurecendo; Linux via Vulkan é o caminho estável em meados de 2026',
+        ],
+      },
+      body1: {
+        id: 'setup',
+        title: 'Como executar Ollama com Vulkan no Strix Halo',
+        content: [
+          'No Linux, instalar o binário padrão do Ollama é suficiente — ele usa llama.cpp com o backend Vulkan, que suporta RDNA 3.5 (gfx1150) nativamente. Nenhuma instalação adicional de ROCm é necessária para o caminho Vulkan. Execute `curl -fsSL https://ollama.com/install.sh | sh` como de costume.',
+          'Após a instalação, defina o flag de flash attention para melhor eficiência de memória em sessões longas: `OLLAMA_FLASH_ATTENTION=1 ollama run qwen2.5:14b`. Isso reduz o uso de memória do KV-cache e é particularmente importante ao executar modelos de 32B ou mais que se aproximam do pool completo de 96 GB.',
+          'Para verificar se o Ollama está usando a GPU (e não a CPU), execute `ollama ps` enquanto um modelo estiver ativo. A saída mostra "GPU" na coluna PROCESSOR e um valor VRAM diferente de zero. Se você ver "CPU", o backend Vulkan não foi inicializado — verifique se o pacote `vulkan-icd-loader` está instalado na sua distribuição Linux.',
+        ],
+        columns: ['Modelo', 'VRAM em Q4_K_M', 'Velocidade (MAX 395 Vulkan)', 'Cabe em 96 GB?'],
+        rows: [
+          { 'Modelo': 'Llama 3.3 8B', 'VRAM em Q4_K_M': '4,9 GB', 'Velocidade (MAX 395 Vulkan)': '~22 tok/s', 'Cabe em 96 GB?': '✓' },
+          { 'Modelo': 'Qwen 3 14B', 'VRAM em Q4_K_M': '9,3 GB', 'Velocidade (MAX 395 Vulkan)': '~13 tok/s', 'Cabe em 96 GB?': '✓' },
+          { 'Modelo': 'Qwen 3 32B', 'VRAM em Q4_K_M': '19,4 GB', 'Velocidade (MAX 395 Vulkan)': '~7 tok/s', 'Cabe em 96 GB?': '✓' },
+          { 'Modelo': 'Llama 3.3 70B', 'VRAM em Q4_K_M': '~41 GB', 'Velocidade (MAX 395 Vulkan)': '~3 tok/s', 'Cabe em 96 GB?': '✓' },
+          { 'Modelo': 'Qwen 3 72B', 'VRAM em Q4_K_M': '~43 GB', 'Velocidade (MAX 395 Vulkan)': '~3 tok/s', 'Cabe em 96 GB?': '✓' },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Minisforum+AI370+Ryzen+AI+Max+395',
+            productName: 'Minisforum AI370-G (Ryzen AI Max 395, 96 GB)',
+            productCategory: 'mini-pc',
+            label: 'Ver preço do Minisforum AI370-G na Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=ASUS+ROG+NUC+Ryzen+AI+Max',
+            productName: 'ASUS ROG NUC (Ryzen AI Max 395)',
+            productCategory: 'mini-pc',
+            label: 'Ver preço do ASUS ROG NUC na Amazon',
+          },
+        ],
+      },
+      body2: {
+        id: 'comparison',
+        title: 'Strix Halo vs RTX 4090: a memória vence, a velocidade perde',
+        content: [
+          '<strong>O Ryzen AI Max 395 troca velocidade de GPU por capacidade de memória.</strong> Uma RTX 4090 executa Llama 3.3 8B a ~45 tok/s versus ~22 tok/s no Strix Halo Vulkan. Para modelos de 7B e 14B, a RTX 4090 é mais rápida. Mas a RTX 4090 está limitada a 24 GB de VRAM — Strix Halo MAX 395 tem 96 GB, permitindo tamanhos de modelos simplesmente impossíveis em uma GPU desktop.',
+          'O caso de uso prático para Strix Halo é executar modelos de 32B–70B localmente sem APIs em nuvem. Qwen 3 32B em Q4_K_M (~19 GB) roda a ~7 tok/s — lento para chat interativo, mas adequado para sumarização em lote, processamento de documentos ou trabalhos de fine-tuning noturnos. Llama 3.3 70B em Q4_K_M (~41 GB) é alcançável a ~3 tok/s, adequado para consultas únicas de alta qualidade.',
+          'No Windows, Ollama para Strix Halo cai de volta para inferência por CPU por padrão em meados de 2026, pois o suporte ROCm iGPU para gfx1150 ainda não está completo na versão oficial do Ollama Windows. O caminho Vulkan requer compilar llama.cpp do código fonte com `-DGGML_VULKAN=ON`. Linux é recomendado para inferência Strix Halo com aceleração GPU até que o caminho ROCm Windows amadureça.',
+          'Para comparação com outro hardware APU Apple Silicon, veja o bite <a href="/pt/prompt-bites/mac-mini-m4-local-llm" class="text-primary hover:underline">Mac Mini M4 para LLMs locais</a>, que cobre a abordagem alternativa de memória unificada no macOS.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre Strix Halo e Ollama Vulkan',
+        faqs: [
+          {
+            q: 'AMD Strix Halo suporta ROCm no Ollama?',
+            a: 'Não completamente em meados de 2026. O suporte ROCm para gfx1150 (RDNA 3.5) está em desenvolvimento, mas ainda não está estável nas versões oficiais do Ollama. O backend Vulkan é o caminho de aceleração GPU atualmente confiável no Linux. Verifique a página de releases do Ollama no GitHub para atualizações sobre o suporte ROCm iGPU.',
+          },
+          {
+            q: 'Posso usar Ollama com Strix Halo Vulkan no Windows?',
+            a: 'De forma experimental, sim. A versão oficial do Ollama Windows não expõe o backend Vulkan por padrão para Strix Halo — ele cai para CPU. Você pode compilar llama.cpp do código fonte com -DGGML_VULKAN=ON no Windows para habilitá-lo, mas isso requer um processo de compilação manual. Linux é a plataforma recomendada para inferência Strix Halo Vulkan.',
+          },
+          {
+            q: 'Qual é o maior modelo que cabe no Ryzen AI Max 395?',
+            a: 'Com 96 GB de memória unificada, o Ryzen AI Max 395 cabe Llama 3.3 70B em Q4_K_M (~41 GB) ou Qwen 3 72B em Q4_K_M (~43 GB), cada um com memória sobrando. Para modelos muito grandes, Qwen 3 72B em Q5_K_M (~55 GB) também cabe, embora a velocidade caia para aproximadamente 2 tok/s. Modelos que requerem mais de 90 GB (ex.: 70B em Q8_0) excedem o pool disponível.',
+          },
+          {
+            q: 'Como Strix Halo se compara ao Mac Studio M4 Ultra para Ollama?',
+            a: 'Mac Studio M4 Ultra tem 192 GB de memória unificada e usa aceleração Metal via llama.cpp — significativamente mais rápido que Strix Halo Vulkan por token (~12 tok/s em 70B Q4_K_M vs ~3 tok/s no Strix Halo). Para qualidade e velocidade de inferência em modelos grandes, M4 Ultra vence. Strix Halo é competitivo apenas na faixa de 8B–32B e roda em um fluxo de trabalho Linux padrão.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Mac Mini M4 para LLMs locais](/pt/prompt-bites/mac-mini-m4-local-llm) — alternativa Apple de memória unificada ao Strix Halo',
+          '[Melhor mini PC para LLM local](/pt/prompt-bites/best-mini-pc-for-local-llm) — comparativo de mini PCs com opções AMD e Apple',
+          '[Melhores GPUs econômicas para LLMs locais](/pt/local-llms/best-budget-gpus-local-llm) — opções de GPU discreta para builds Linux desktop',
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Hardware-Specific',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: configuración y rendimiento',

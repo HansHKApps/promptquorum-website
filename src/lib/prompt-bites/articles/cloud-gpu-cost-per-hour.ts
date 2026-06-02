@@ -706,6 +706,147 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Hardware-Specific',
+    title: 'Quanto custa uma GPU na nuvem por hora em 2026?',
+    seoTitle: 'Preço de GPU na nuvem por hora 2026 | Prompt Bites',
+    metaDescription: 'Preço de GPU na nuvem por hora (maio de 2026): RTX 4090 ~$0,30–0,80, A100 80 GB ~$0,90–1,90, H100 ~$2,20–4,00. Faixas aproximadas entre os principais provedores.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['RTX 4090', 'A100 80 GB', 'H100'],
+    educationalLevel: 'Intermediate',
+    audience: 'Desenvolvedores comparando preços de GPU na nuvem para cargas de trabalho LLM',
+    affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
+    siblingBites: ['runpod-vs-vastai-pricing', 'best-gpu-under-600-local-llm'],
+    is_living_page: false,
+    readTime: '4 min de leitura',
+    leadAnswerBlock:
+      'Em maio de 2026, as GPUs na nuvem geralmente custam: RTX 4090 24 GB a $0,30–0,80/h, A100 80 GB a $0,90–1,90/h, H100 80 GB a $2,20–4,00/h. As tarifas variam muito por provedor, região e se a instância é interrompível. Verifique os painéis em tempo real antes de reservar.',
+    toc: [
+      { label: 'Melhor opção por carga de trabalho', anchor: '#best-pick' },
+      { label: 'Tarifas horárias de GPU por placa', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leituras relacionadas', anchor: '#related' },
+    ],
+    intro:
+      'Os preços de GPU na nuvem em 2026 abrangem mais de 10x entre as placas de consumidor interrompíveis mais baratas e as placas de datacenter sob demanda. Escolher o nível correto depende do tamanho da carga de trabalho, da duração da execução e de quanta interrupção você pode tolerar.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Quanto custa uma GPU na nuvem por hora em 2026?',
+        answer: 'RTX 4090: $0,15–0,44/h. A100 80 GB: $1,10–2,00/h. H100: $2,50–4,00/h. Mais barata para inferência: Vast.ai spot.',
+        bullets: [
+          'Vast.ai spot RTX 4090 é a mais barata a ~$0,15/h, mas pode ser interrompida no meio do trabalho.',
+          'RunPod Secure Cloud cobra ~$0,44/h por RTX 4090 com disponibilidade garantida.',
+          'H100 80 GB na Lambda Labs: ~$2,49/h — use apenas para modelos de 70B+ ou jobs batch de grande escala.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'RTX 4090 24 GB é a opção viável mais barata — $0,30–0,80/h em marketplaces, ideal para inferência de 13B–30B',
+          'A100 80 GB a $0,90–1,90/h é o cavalo de batalha para inferência de 70B e a maioria dos jobs de treinamento',
+          'H100 80 GB a $2,20–4,00/h é a opção mais rápida, mas vale a pena apenas para treinamento em larga escala ou serving em produção',
+          'Todas as faixas são aproximações de maio de 2026 — verifique os painéis dos provedores em tempo real antes de reservar',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'Melhor opção: ajuste a placa à carga de trabalho',
+        content: [
+          '<strong>A GPU na nuvem mais barata viável é aquela que cabe no seu modelo com a menor margem de VRAM.</strong> Alugar uma H100 a $4/h para executar um modelo de 13B desperdiça mais de 60 GB de VRAM pelo qual você está pagando.',
+          'Para inferência de 7B–13B: uma RTX 4090 24 GB em um marketplace (Vast.ai, RunPod community pool) a $0,30–0,80/h. Os 24 GB de VRAM são suficientes e os marketplaces de placas de consumidor são mais baratos do que nuvens gerenciadas.',
+          'Para inferência de 70B ou fine-tuning de escala média: uma A100 80 GB a $0,90–1,90/h. Os 80 GB de VRAM acomodam um modelo de 70B em Q4 com espaço para contexto. Para treinamento de modelos frontier ou serving em produção com objetivos rígidos de latência: uma H100 80 GB a $2,20–4,00/h — vale apenas quando o desempenho sustentado é o gargalo.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io',
+            productName: 'RunPod cloud GPUs',
+            productCategory: 'cloud-gpu',
+            label: 'Ver tarifas atuais de GPU no RunPod',
+          },
+          {
+            url: 'https://www.vast.ai',
+            productName: 'Vast.ai marketplace',
+            productCategory: 'cloud-gpu',
+            label: 'Ver tarifas atuais de GPU no Vast.ai',
+          },
+          {
+            url: 'https://lambdalabs.com',
+            productName: 'Lambda Labs cloud GPUs',
+            productCategory: 'cloud-gpu',
+            label: 'Ver tarifas atuais de GPU na Lambda Labs',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Tarifas horárias de GPU na nuvem por placa (maio de 2026)',
+        content: [
+          '<strong>As faixas abaixo são cifras aproximadas de maio de 2026 entre os principais provedores (RunPod, Vast.ai, Lambda Labs e outros).</strong> O extremo inferior corresponde tipicamente a preços interrompíveis ou de marketplace; o extremo superior é nuvem gerenciada sob demanda.',
+        ],
+        columns: ['GPU', 'VRAM', 'Tarifa horária (aprox.)', 'Ideal para'],
+        rows: [
+          {
+            'GPU': 'RTX 4090',
+            'VRAM': '24 GB',
+            'Tarifa horária (aprox.)': '$0,30–0,80/h',
+            'Ideal para': 'Inferência 7B–30B, fine-tuning leve',
+          },
+          {
+            'GPU': 'A100 80 GB',
+            'VRAM': '80 GB',
+            'Tarifa horária (aprox.)': '$0,90–1,90/h',
+            'Ideal para': 'Inferência 70B, maioria dos fine-tunings',
+          },
+          {
+            'GPU': 'H100 80 GB',
+            'VRAM': '80 GB',
+            'Tarifa horária (aprox.)': '$2,20–4,00/h',
+            'Ideal para': 'Treinamento em larga escala, serving crítico em latência',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre preços de GPU na nuvem',
+        faqs: [
+          {
+            q: 'Quando é mais barato alugar uma GPU na nuvem do que comprá-la?',
+            a: 'Alugar vence em cargas de trabalho curtas e esporádicas — algumas horas por semana. Comprar vence com uso diário sustentado. Uma RTX 4090 usada a ~$2.500 se amortiza em aproximadamente 3.000–8.000 horas de aluguel na nuvem a $0,30–0,80/h.',
+          },
+          {
+            q: 'Por que a mesma GPU custa tão diferente por provedor?',
+            a: 'Nuvens gerenciadas (Lambda, AWS, GCP) incluem suporte, SLA e hardware dedicado — são mais caras. Marketplaces (Vast.ai) são de hosts individuais, que podem ser interrompíveis. Região e demanda também deslocam os preços.',
+          },
+          {
+            q: 'As tarifas incluem armazenamento e largura de banda?',
+            a: 'Geralmente não. O armazenamento persistente custa tipicamente $0,05–0,20/GB-mês. A largura de banda de saída pode adicionar centavos por GB. Para pesos de modelos grandes ou datasets, inclua-os no custo total.',
+          },
+          {
+            q: 'Como encontro a GPU mais barata para minha carga de trabalho agora?',
+            a: 'Compare pelo menos dois provedores antes de reservar — RunPod (gerenciado) e Vast.ai (marketplace) cobrem ambos os extremos do espectro. Filtre pela VRAM necessária e depois ordene por preço.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'Leituras relacionadas',
+        items: [
+          '[RunPod vs Vast.ai Preços](/pt/prompt-bites/runpod-vs-vastai-pricing) — prós e contras de gerenciado vs marketplace',
+          '[Melhor GPU por menos de $600 para LLMs locais](/pt/prompt-bites/best-gpu-under-600-local-llm) — contexto para decidir entre comprar e alugar',
+          '[Guia completo de compra de GPU para LLMs locais 2026](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — panorama completo de compra de hardware',
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Hardware-Specific',
     title: '¿Cuánto cuesta un GPU en la nube por hora en 2026?',

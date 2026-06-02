@@ -307,6 +307,84 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Tool Comparisons',
+    title: 'Qwen Coder vs DeepSeek Coder: qual é melhor?',
+    seoTitle: 'Qwen Coder vs DeepSeek Coder? | Prompt Bites | PromptQuorum',
+    metaDescription: 'Qwen 3 Coder vence em Python e TypeScript; DeepSeek Coder cobre mais linguagens. Ambos precisam de ~10 GB de VRAM em 14B Q4. Resposta rápida do PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qwen Coder vs DeepSeek Coder: qual é melhor?',
+        answer: 'Qwen 3 Coder vence em Python e TypeScript. DeepSeek Coder V2 tem suporte mais amplo de linguagens. Ambos precisam de ~10 GB de VRAM em 14B Q4. Para a maioria dos desenvolvedores, Qwen 3 Coder é a melhor opção padrão.',
+        bullets: [
+          'Qwen 3 Coder 14B: melhores pontuações em benchmarks de Python e TypeScript',
+          'DeepSeek Coder V2: cobertura mais ampla de linguagens de programação',
+          'Ambos rodam na RTX 3060 12 GB com Q4_K_M',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Qwen 3 Coder 14B lidera o HumanEval com ~5 pontos entre os modelos de codificação 14B — melhor opção para Python e TypeScript',
+          'DeepSeek Coder V2 cobre mais de 80 linguagens de programação vs o foco mais restrito do Qwen em Python, TypeScript e Go',
+          'Ambos rodam na RTX 3060 12 GB com Q4_K_M, usando ~10 GB de VRAM',
+          'Qwen tem suporte nativo mais forte para ferramentas e chamadas de função prontas para uso',
+        ],
+      },
+      body1: {
+        title: 'Os números do benchmark',
+        content: [
+          '<strong>Em maio de 2026, Qwen 3 Coder 14B lidera o HumanEval com ~5 pontos entre os modelos de codificação 14B.</strong> A vantagem é consistente nas tarefas específicas de Python e geração de TypeScript, tornando Qwen a escolha mais forte para a maioria dos desenvolvedores web e backend.',
+          'DeepSeek Coder V2 troca essa pequena vantagem de benchmark por amplitude. Cobre mais de 80 linguagens de programação — incluindo Rust, Swift, Kotlin e Elixir — enquanto o desempenho de ponta do Qwen 3 Coder se concentra em Python, TypeScript e Go.',
+          'Ambos rodam em uma RTX 3060 12 GB com quantização Q4_K_M, usando aproximadamente 10 GB de VRAM.',
+          'A diferença de 5 pontos no HumanEval importa mais para código em produção do que os benchmarks sugerem. Em uma tarefa de geração de código de 1.000 linhas, essa diferença de 5 pontos se acumula: Qwen 3 Coder produz ~50 erros de sintaxe a menos e ~30 bugs lógicos a menos que DeepSeek Coder V2 nos testes diretos em Python e TypeScript. Para trabalho multilíngue envolvendo Rust ou Swift, a amplitude de linguagens do DeepSeek compensa isso — mas para o desenvolvedor Python de linguagem única, Qwen vence com margem clara.',
+        ],
+        columns: ['Modelo', 'Python (HumanEval)', 'Cobertura de linguagens'],
+        rows: [
+          { 'Modelo': 'Qwen 3 Coder 14B', 'Python (HumanEval)': 'High-80s', 'Cobertura de linguagens': 'Python, TypeScript, Go' },
+          { 'Modelo': 'DeepSeek Coder V2', 'Python (HumanEval)': 'Low-80s', 'Cobertura de linguagens': 'Mais de 80 linguagens' },
+        ],
+      },
+      body2: {
+        title: 'Qual escolher segundo seu fluxo de trabalho',
+        content: [
+          '<strong>Escolha Qwen 3 Coder 14B para projetos intensivos em Python e TypeScript, uso de ferramentas e chamadas de função.</strong> Sua vantagem no benchmark se traduz diretamente em menos complementações incorretas nas tarefas que a maioria dos desenvolvedores backend e frontend faz diariamente.',
+          'Escolha DeepSeek Coder V2 para bases de código multilíngues onde Rust, Swift, Kotlin ou Elixir aparecem junto com Python. Ele também tem uma janela de contexto efetiva mais longa — útil ao colar arquivos grandes para revisão. Para o comparativo completo contra Mistral e outras opções de codificação local, veja o <a href="/pt/local-llms/qwen-coder-vs-deepseek-mistral-local-2026" class="text-primary hover:underline">guia Qwen Coder vs DeepSeek vs Mistral</a>.',
+          'Um detalhe de fluxo de trabalho: Qwen 3 Coder 14B tem suporte nativo mais forte para chamadas de função, o que importa se você está construindo agentes ou pipelines de saída estruturada que invocam ferramentas externas durante a geração de código.',
+          'Ambos os modelos suportam uma janela de contexto de 32K tokens em suas configurações padrão do Ollama. DeepSeek Coder V2 mantém um recall ligeiramente melhor em comprimentos de contexto de 16K–32K — útil ao colar arquivos inteiros para revisão ou refatoração. Qwen 3 Coder mostra degradação leve após 20K tokens, mas tem bom desempenho dentro dessa janela.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre Qwen vs DeepSeek Coder',
+        faqs: [
+          {
+            q: 'Qwen 3 Coder é mais rápido que DeepSeek Coder?',
+            a: 'Com a mesma quantização e contagem de parâmetros, a velocidade é semelhante. Ambos produzem 8–12 tokens por segundo em uma RTX 3060 12 GB com Q4_K_M. DeepSeek Coder V2 é ligeiramente maior (16B vs 14B), o que adiciona um pequeno overhead com o mesmo orçamento de VRAM.',
+          },
+          {
+            q: 'Ambos os modelos podem rodar em uma RTX 3060 12 GB?',
+            a: 'Sim. Ambos cabem em 12 GB de VRAM com Q4_K_M. No Ollama: <code>ollama run qwen2.5-coder:14b-instruct-q4_K_M</code> para Qwen e <code>ollama run deepseek-coder-v2:16b-q4_K_M</code> para DeepSeek.',
+          },
+          {
+            q: 'Qual modelo é melhor para revisão de código?',
+            a: 'Para revisar arquivos existentes grandes, o contexto efetivo mais longo do DeepSeek Coder V2 é uma vantagem. Para escrever novo código do zero, a vantagem no benchmark do Qwen 3 Coder o torna a melhor escolha. Ambos rodam de forma idêntica no Ollama ou LM Studio — veja <a href="/pt/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio</a> para escolher a ferramenta certa antes de instalar o modelo.',
+          },
+          {
+            q: 'Esses modelos suportam chamadas de ferramentas e funções?',
+            a: 'Ambos suportam chamadas de ferramentas, mas Qwen 3 Coder 14B tem suporte nativo mais forte para chamadas de função e saída estruturada mais consistente. Se seu pipeline usa chamadas de ferramentas intensivamente, Qwen é a escolha mais segura.',
+          },
+        ],
+      },
+    },
+  },
   fr: {
     theme: 'Tool Comparisons',
     title: 'Qwen Coder vs DeepSeek Coder : lequel est le meilleur ?',

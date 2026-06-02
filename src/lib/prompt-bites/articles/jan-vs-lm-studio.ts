@@ -444,6 +444,93 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Tool Comparisons',
+    title: 'Jan vs LM Studio: Qual é melhor?',
+    seoTitle: 'Jan vs LM Studio: Qual usar | Prompt Bites | PromptQuorum',
+    metaDescription: 'Jan: código aberto, ~30 extensões. LM Studio: interface mais refinada e biblioteca maior. Para personalização escolha Jan; para facilidade, LM Studio. Resposta rápida.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: 'Intermediate',
+    audience: 'Desenvolvedores escolhendo um aplicativo desktop para LLMs locais',
+    parentArticle: '/local-llms/lm-studio-vs-jan-ai',
+    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama'],
+    is_living_page: false,
+    quickAnswerTop: {
+      pt: {
+        question: 'Jan vs LM Studio: qual é melhor?',
+        answer: 'Jan é completamente código aberto com um sistema de extensões. LM Studio tem uma interface mais refinada e uma biblioteca de modelos integrada maior. Para usuários avançados que querem personalização, escolha Jan. Para facilidade de uso, escolha LM Studio.',
+        bullets: [
+          'Jan: código aberto, extensões, funciona bem no Linux',
+          'LM Studio: interface refinada, biblioteca de modelos maior, melhor UX',
+          'Ambos são gratuitos e funcionam completamente offline',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Jan é licenciado sob MIT e código aberto; LM Studio é proprietário, mas gratuito para projetos pessoais e comerciais',
+          'Jan suporta os três sistemas operacionais nativamente com aceleração GPU NVIDIA e AMD; LM Studio é apenas Mac e Windows (suporte Linux está apenas em beta a partir de maio de 2026)',
+          'LM Studio tem uma loja de modelos integrada com downloads em um clique; Jan depende de fontes de modelos de terceiros como Hugging Face',
+          'Ambos os apps usam o formato GGUF, incluem um servidor API local e funcionam completamente offline — a escolha é personalização vs. refinamento',
+        ],
+      },
+      body1: {
+        title: 'O dilema: código aberto vs. refinamento',
+        content: [
+          '<strong>Jan (github.com/janhq/jan) tem licença MIT e é completamente código aberto — você pode ler, fazer fork e modificar o código.</strong> LM Studio (lmstudio.ai) é software proprietário que é gratuito, mas de código fechado. Jan inclui um sistema de extensões que permite aos desenvolvedores adicionar funcionalidades personalizadas, recurso que o LM Studio não oferece.',
+          'Casos de uso reais de extensões incluem: conectar Jan a APIs em nuvem (OpenAI, Anthropic, Groq) para fluxos de trabalho híbridos local/nuvem, adicionar modelos de prompt personalizados e predefinições de chat, e integrar com ferramentas externas como o Obsidian para anotações. Cerca de 30 extensões comunitárias existem a partir de maio de 2026.',
+          'A principal vantagem do LM Studio é sua loja de modelos integrada. Você pode navegar, visualizar e baixar centenas de modelos GGUF sem sair do app. Jan exige que você encontre modelos no Hugging Face ou os importe manualmente — mais atrito para usuários que só querem começar rapidamente.',
+          'Para desenvolvedores que querem construir sobre a aplicação, a base de código aberto do Jan e a API de extensões são vantagens significativas. Para todos os outros, a escolha depende de qual fluxo de trabalho combina com seu uso diário.',
+        ],
+      },
+      body2: {
+        title: 'Qual se adapta ao seu fluxo de trabalho',
+        content: [
+          '<strong>Use Jan se quiser estender o app, executá-lo no Linux ou precisar de suporte a GPU AMD.</strong> Use LM Studio se quiser uma experiência refinada com uma biblioteca de modelos integrada e não precisar de personalização.',
+          'Para a comparação completa com etapas de configuração e detalhes da API, consulte o <a href="/pt/local-llms/lm-studio-vs-jan-ai" class="text-primary hover:underline">guia aprofundado Jan vs LM Studio</a>.',
+        ],
+        columns: ['Característica', 'Jan', 'LM Studio'],
+        rows: [
+          { 'Característica': 'Licença', 'Jan': 'MIT (código aberto)', 'LM Studio': 'Proprietário (gratuito)' },
+          { 'Característica': 'Extensões', 'Jan': '~30 disponíveis', 'LM Studio': 'Não' },
+          { 'Característica': 'Sistemas operacionais', 'Jan': 'Mac, Windows, Linux', 'LM Studio': 'Mac, Windows (Linux beta)' },
+          { 'Característica': 'Backend GPU', 'Jan': 'NVIDIA + AMD', 'LM Studio': 'Apenas NVIDIA' },
+          { 'Característica': 'Biblioteca de modelos', 'Jan': 'Terceiros (Hugging Face)', 'LM Studio': 'Loja integrada' },
+          { 'Característica': 'Melhor para', 'Jan': 'Personalização / Extensibilidade', 'LM Studio': 'Facilidade / Variedade de modelos' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre Jan vs LM Studio',
+        faqs: [
+          {
+            q: 'Jan é realmente gratuito?',
+            a: 'Sim. Jan é software de código aberto com licença MIT. Não há níveis pagos, sem telemetria por padrão, e o código-fonte completo está disponível no GitHub em github.com/janhq/jan.',
+          },
+          {
+            q: 'LM Studio funciona no Linux?',
+            a: 'LM Studio não tem uma versão Linux estável oficial. Funciona no Mac e Windows. Usuários Linux devem usar Jan, Ollama ou Open WebUI.',
+          },
+          {
+            q: 'Tanto Jan quanto LM Studio podem usar GPUs AMD?',
+            a: 'Jan suporta aceleração GPU AMD via ROCm no Linux. LM Studio suporta apenas NVIDIA no Windows (sem versão Linux estável). No macOS, o Apple Metal cuida da aceleração GPU para ambos os apps, independentemente da marca da GPU. Para uma alternativa baseada em terminal em qualquer SO, veja <a href="/pt/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio</a>.',
+          },
+          {
+            q: 'Qual app tem uma biblioteca de modelos maior?',
+            a: 'LM Studio tem uma loja de modelos integrada maior com modelos GGUF curados que você pode navegar e baixar com um clique. Jan exige importar modelos do Hugging Face ou de outra fonte.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Tool Comparisons',
     title: '¿Jan vs LM Studio: Cuál es mejor?',

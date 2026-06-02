@@ -396,6 +396,83 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Quantization & VRAM',
+    title: 'O que é a quantização Q4_K_M?',
+    seoTitle: 'Guia de quantização Q4_K_M 2026 | PromptQuorum',
+    metaDescription: 'Q4_K_M é quantização de 4 bits k-quant de qualidade média: melhor que Q4_0, menor que Q8_0. Use-a como padrão no Ollama. Guia rápido do PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'O que é a quantização Q4_K_M?',
+        answer: 'Q4_K_M significa quantização de 4 bits com compressão k-quant (K) em qualidade média (M). É a melhor opção padrão para a maioria dos modelos: melhor qualidade que Q4_0, tamanho menor que Q8_0.',
+        bullets: [
+          'Q = quantizado, 4 = 4 bits, K = k-quant, M = médio',
+          'Melhor qualidade que Q4_0 no mesmo tamanho de arquivo',
+          'Use Q4_K_M como quantização padrão',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Q4_K_M = quantização de 4 bits com compressão k-quant em qualidade média — melhor que Q4_0 no mesmo tamanho de arquivo',
+          'Um modelo 7B em Q4_K_M ocupa ~4,1 GB no disco e precisa de ~5,5 GB de VRAM para rodar',
+          'Use Q4_K_M como padrão — oferece a melhor relação qualidade por gigabyte para a maioria dos orçamentos de VRAM',
+        ],
+      },
+      body1: {
+        title: 'O que cada letra em Q4_K_M significa',
+        content: [
+          'Em maio de 2026, <strong>Q4_K_M existe porque os formatos antigos de 4 bits (Q4_0) perdiam muita qualidade nos pesos críticos.</strong> A compressão k-quant resolve isso alocando mais bits para os pesos que mais afetam a saída e menos bits para os de menor impacto. Resultado: 5–8% mais qualidade que Q4_0 no mesmo tamanho de arquivo.',
+          'O "K" é o diferenciador principal. A compressão k-quant aplica alocação de bits não uniforme — pesos críticos recebem mais bits, os menos importantes recebem menos. Isso recupera 5–8% de qualidade em comparação com o formato Q4_0 mais antigo no mesmo tamanho de arquivo.',
+          'O "M" é a configuração de qualidade dentro do k-quant. Q4_K_S (small) é ligeiramente menor com qualidade menor. Q4_K_M (medium) é o melhor equilíbrio. Q4_K_L (large) é marginalmente melhor, mas raramente vale o tamanho extra.',
+          '<strong>K-quant funciona agrupando pesos e atribuindo bits com base na importância.</strong> Clusters de maior importância recebem 6 bits por peso. Clusters de nível médio recebem 4 bits. Clusters de baixa importância recebem 3 bits. O nível "M" tem uma média de 4,5 bits por peso em todo o modelo — explicando por que Q4_K_M fica entre Q4_K_S e Q5_K_M em tamanho e qualidade. Para quando o nível M não é suficiente, veja <a href="/pt/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
+        ],
+      },
+      body2: {
+        title: 'Como Q4_K_M se compara a outras quantizações',
+        content: [
+          'A tabela abaixo mostra os trade-offs para um modelo 7B. A qualidade é relativa ao baseline de precisão total Q8_0. A menos que você tenha 12+ GB de VRAM, Q4_K_M oferece a melhor relação qualidade por gigabyte.',
+          'Para uma comparação direta de Q4_K_M vs Q8_0, veja o <a href="/pt/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">guia de decisão Q4_K_M vs Q8_0</a>. Para a referência completa de quantização, veja a <a href="/pt/local-llms/quantization-levels-comparison" class="text-primary hover:underline">comparação de níveis de quantização</a>.',
+        ],
+        columns: ['Formato', 'Tamanho do arquivo (7B)', 'Qualidade vs Q8_0'],
+        rows: [
+          { 'Formato': 'Q4_0', 'Tamanho do arquivo (7B)': '3,8 GB', 'Qualidade vs Q8_0': 'Base (~87%)' },
+          { 'Formato': 'Q4_K_M', 'Tamanho do arquivo (7B)': '4,1 GB', 'Qualidade vs Q8_0': '~92% (+5%)' },
+          { 'Formato': 'Q5_K_M', 'Tamanho do arquivo (7B)': '5,0 GB', 'Qualidade vs Q8_0': '~95% (+3%)' },
+          { 'Formato': 'Q8_0', 'Tamanho do arquivo (7B)': '7,7 GB', 'Qualidade vs Q8_0': '100% (referência)' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre quantização',
+        faqs: [
+          {
+            q: 'Q4_K_M é o mesmo que Q4_0?',
+            a: 'Não. Q4_K_M usa compressão k-quant que recupera 5–8% de qualidade sobre Q4_0 na mesma profundidade de bits. Sempre prefira Q4_K_M a Q4_0. Veja o <a href="/pt/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">guia Q4_K_M vs Q8_0</a> para saber quando subir de nível.',
+          },
+          {
+            q: 'Qual quantização devo usar com 8 GB de VRAM?',
+            a: 'Q4_K_M para modelos 7B (5,5 GB de VRAM). Se quiser melhor qualidade e tiver margem, Q5_K_M usa 6,5 GB e adiciona ~3% de qualidade. Ambas cabem confortavelmente em 8 GB.',
+          },
+          {
+            q: "O que significa o 'M' em Q4_K_M?",
+            a: "Medium (médio) — refere-se ao nível de qualidade dentro da compressão k-quant. Q4_K_S é a variante pequena (qualidade menor), Q4_K_M é médio (recomendado) e Q4_K_L é grande (melhora marginal em relação ao M).",
+          },
+          {
+            q: 'Quais modelos no Ollama usam Q4_K_M por padrão?',
+            a: 'A maioria deles — Llama 3, Mistral, Qwen, Phi e Gemma usam tags Q4_K_M por padrão. Especifique <code>:q5_K_M</code> ou <code>:q8_0</code> na tag do modelo para mudar a quantização.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Quantization & VRAM',
     title: '¿Qué es la cuantización Q4_K_M?',

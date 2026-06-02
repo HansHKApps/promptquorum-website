@@ -2814,4 +2814,480 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Mobile & Edge LLMs',
+    title: 'Crie um assistente de voz local no seu telefone: Whisper + LLM local (sem nuvem) — 2026',
+    seoTitle: 'Assistente de voz local Whisper LLM telefone 2026',
+    intro:
+      'Um assistente de voz totalmente offline no iPhone ou Android em 2026 combina três componentes: Whisper para converter voz em texto, um LLM local no dispositivo para gerar a resposta e Piper ou o TTS do sistema para a síntese de voz. A latência real desde quando você fala até o primeiro áudio em telefones de ponta é de 0,8–1,5 segundos, abaixo do limite de 2 segundos que "parece utilizável". Este guia cobre o caminho no iPhone (LLM Farm + WhisperKit), Android (Layla + Whisper.cpp) e híbrido (STT no telefone + Ollama remoto), com números medidos de latência, bateria e precisão.',
+    metaDescription:
+      'IA de voz totalmente offline no iPhone e Android em 2026: Whisper STT + LLM local + Piper TTS. Configuração iPhone, Android e híbrida. Latência e bateria.',
+    twitterDescription:
+      'Crie um substituto da Siri que funciona offline: Whisper STT local + Phi-4 Mini + Piper TTS. Voz ao primeiro áudio em menos de 1,5 segundo em telefones de ponta. Configuração iPhone + Android.',
+    current_models_mentioned: [
+      'Whisper Small',
+      'Whisper Medium',
+      'WhisperKit',
+      'Phi-4 Mini',
+      'Gemma 3 4B',
+      'Piper TTS',
+    ],
+    current_hardware_mentioned: [
+      'iPhone 17 Pro (A19 Pro)',
+      'iPhone 16 Pro (A18 Pro, 8 GB RAM)',
+      'Pixel 9 Pro (Tensor G4)',
+      'Galaxy S25 Ultra (Snapdragon 8 Elite)',
+      'OnePlus 13 (Snapdragon 8 Elite)',
+    ],
+    audience:
+      'Usuários de telefone preocupados com privacidade que querem um substituto da Siri / Google Assistant que funcione inteiramente no dispositivo, incluindo viajantes, jornalistas, profissionais de saúde e desenvolvedores que estão criando fluxos de trabalho de voz offline.',
+    readTime: '13 min de leitura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'local voice assistant',
+    targetKeywords: [
+      'assistente de voz local telefone',
+      'Whisper offline iPhone',
+      'Whisper LLM local Android',
+      'substituto Siri offline',
+      'Piper TTS móvel',
+      'WhisperKit iOS',
+      'Layla Android voz',
+    ],
+    leadAnswerBlock:
+      '**Um assistente de voz totalmente offline em 2026 precisa de três componentes: Whisper Small ou Medium para voz em texto, um LLM local de 3B–4B (Phi-4 Mini ou Gemma 3 4B) para a resposta e Piper TTS ou o TTS do sistema para a saída de áudio.** No iPhone, a configuração mais simples é o WhisperKit (ou o app Whisper Transcription) + LLM Farm + TTS do sistema iOS — voz ao primeiro áudio de ~0,9–1,4 segundo no iPhone 16 Pro. No Android, o Layla inclui uma configuração semelhante de forma nativa, ou você monta tudo com Termux + whisper.cpp + Ollama + Piper. Para melhor qualidade de LLM, use o caminho híbrido: o telefone executa o Whisper localmente para o STT (crítico para a privacidade) e depois envia a transcrição para um Mac ou PC em casa com Ollama e um modelo de 70B. As três configurações funcionam sem internet depois que os modelos são baixados.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Você consegue criar um assistente de voz totalmente offline no seu telefone em 2026?',
+        answer:
+          'Sim. A configuração padrão é o Whisper para voz em texto, um LLM local de 3B–4B (Phi-4 Mini ou Gemma 3 4B) para a resposta e Piper TTS ou o TTS do sistema iOS / Android para a saída de áudio. No iPhone 16 Pro, a latência de voz ao primeiro áudio é de ~0,9–1,4 segundo, abaixo do limite de 2 segundos que "parece utilizável". Em telefones Android de ponta (Pixel 9 Pro, Galaxy S25 Ultra), a latência é de ~1,0–1,6 segundo. O caminho no iPhone usa WhisperKit + LLM Farm; o caminho no Android usa Layla (stack integrado) ou Termux + whisper.cpp + Ollama; o caminho híbrido mantém o STT no dispositivo e envia a transcrição para um Mac ou PC em casa com um modelo de 70B.',
+        bullets: [
+          'Stack: Whisper (STT) + LLM local de 3B–4B + Piper ou TTS do sistema — tudo no dispositivo.',
+          'iPhone: WhisperKit / Whisper Transcription + LLM Farm + voz do sistema iOS. Latência ~0,9–1,4 seg no 16 Pro.',
+          'Android: Layla (stack integrado) ou Termux + whisper.cpp + Ollama + Piper. Latência ~1,0–1,6 seg no Pixel 9 Pro.',
+          'Híbrido: o telefone executa o STT localmente e envia a transcrição para o Ollama em casa com Llama 3.3 70B. Melhor qualidade.',
+          'Bateria (1 hora de conversa ativa): ~25–35% no iPhone 16 Pro; ~25–40% no Android de ponta.',
+          'Whisper Small (~466 MB) é o padrão para celular — ~12% WER, ~150–300 ms de latência STT.',
+          'Voz ao primeiro áudio em menos de 2 segundos é o limite de "parece utilizável"; menos de 1 segundo parece nativo.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: 'Pontos-chave', anchor: '#key-takeaways' },
+      { label: 'Fatos rápidos', anchor: '#quick-facts' },
+      { label: 'Qual stack de assistente de voz você deve criar?', anchor: '#which-stack' },
+      { label: 'Comparação de stacks de assistente de voz', anchor: '#stack-comparison' },
+      { label: 'O stack de três componentes: STT + LLM + TTS', anchor: '#the-stack' },
+      { label: 'Configuração no iPhone: WhisperKit + LLM Farm (5 min)', anchor: '#iphone-setup' },
+      { label: 'Configuração no Android: Layla ou stack Termux (5–15 min)', anchor: '#android-setup' },
+      { label: 'Configuração híbrida: STT no telefone + Ollama remoto', anchor: '#hybrid-setup' },
+      { label: 'Orçamento de latência: para onde vão os segundos', anchor: '#latency-budget' },
+      { label: 'Precisão e consumo de bateria durante 1 hora', anchor: '#accuracy-battery' },
+      { label: 'Mãos livres: Shortcuts, Tasker, CarPlay, Android Auto', anchor: '#hands-free' },
+      { label: 'Garantias de privacidade: realmente offline vs assistido pela nuvem', anchor: '#privacy' },
+      { label: 'Erros comuns', anchor: '#common-mistakes' },
+      { label: 'Fontes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leituras relacionadas', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**O stack totalmente offline é Whisper (STT) + LLM local de 3B–4B + Piper ou TTS do sistema.** Os três componentes são executados localmente no dispositivo uma vez instalados; sem chamadas à nuvem durante o uso.',
+          '**iPhone: WhisperKit + LLM Farm + voz do sistema iOS é o caminho mais simples.** O WhisperKit usa o Apple Neural Engine para o STT; o LLM Farm executa o Phi-4 Mini para a resposta; o TTS do sistema iOS gerencia o áudio. Voz ao primeiro áudio: ~0,9–1,4 segundo no iPhone 16 Pro.',
+          '**Android: o Layla inclui o stack completo de forma nativa, ou monte-o manualmente com Termux + whisper.cpp + Ollama + Piper.** O Layla é o caminho mais fácil; a build do Termux é mais flexível. Voz ao primeiro áudio: ~1,0–1,6 segundo no Pixel 9 Pro e no Galaxy S25 Ultra.',
+          '**Híbrido (STT no telefone + Ollama remoto) dá a melhor qualidade de LLM.** O telefone executa o Whisper localmente (crítico para a privacidade do áudio) e depois envia a transcrição de texto para um Mac ou PC em casa com Llama 3.3 70B. Melhor qualidade de resposta; requer Wi-Fi doméstico.',
+          '**Whisper Small (~466 MB) é o ponto ideal para celular.** ~12% de WER em fala comum, ~150–300 ms de latência STT. O Whisper Medium (~1,5 GB) é mais preciso (~9% WER) mas mais lento; o Whisper Tiny (~75 MB) é mais rápido mas propenso a erros com ruído de fundo.',
+          '**O consumo de bateria é significativo — cerca de 25–35% por hora de conversa ativa em telefones de ponta.** Para uso o dia todo, conecte o carregador ou use o caminho híbrido (apenas o STT é executado no telefone, reduzindo o consumo para ~10–15% por hora).',
+          '**Este é um substituto real da Siri para usuários que preferem a privacidade à amplitude de recursos.** O que você abre mão: busca na web, integração com casa inteligente em nuvens proprietárias, cobertura de ações do sistema. O que você ganha: funciona offline, sem telemetria, sem conta.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Fatos rápidos',
+        items: [
+          '**Motor STT:** Whisper.cpp (multiplataforma), WhisperKit (iOS, otimizado para Apple Neural Engine), Sherpa-ONNX (Android, runtime ONNX).',
+          '**LLM:** Phi-4 Mini (3,8B) em telefones de ponta; Qwen3 1,7B ou SmolLM 2 1,7B em dispositivos mais antigos.',
+          '**TTS:** Piper TTS (código aberto, ~50 MB por voz), TTS do sistema iOS (AVSpeechSynthesizer), TTS do sistema Android.',
+          '**Apps para iPhone:** WhisperKit, Whisper Transcription (desenvolvedor Aiko), LLM Farm, PocketPal AI.',
+          '**Apps para Android:** Layla (stack integrado), Termux + whisper.cpp + Ollama, apps de demonstração do Sherpa-ONNX.',
+          '**Meta de voz ao primeiro áudio:** menos de 2 segundos = "parece utilizável"; menos de 1 segundo = "parece nativo".',
+          '**Bateria (1 hora ativa):** iPhone 16 Pro ~25–35%; Pixel 9 Pro / Galaxy S25 Ultra ~25–40%.',
+        ],
+      },
+      whichStack: {
+        id: 'which-stack',
+        title: 'Qual stack de assistente de voz você deve criar?',
+        content:
+          '**Para a maioria dos usuários em telefones de ponta: o caminho totalmente no dispositivo é a opção certa.** Ele é totalmente privado, funciona offline e produz resultados utilizáveis em menos de 1,5 segundo. Use o caminho híbrido apenas se você precisar especificamente de qualidade de classe 70B e aceitar a dependência do Wi-Fi doméstico.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Crie um assistente de voz totalmente offline combinando Whisper (STT), um LLM local de 3B–4B (Phi-4 Mini ou Gemma 3 4B) e Piper ou o TTS do sistema — voz ao primeiro áudio de 0,9–1,6 segundo em telefones de ponta em 2026.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Um assistente de voz tem três tarefas: converter sua voz em texto, gerar uma resposta e falar essa resposta em voz alta. Com o Whisper para o primeiro passo, um LLM local pequeno para o segundo e o Piper ou a voz integrada do telefone para o terceiro, você pode fazer os três no telefone sem internet. O ciclo completo leva cerca de 1 segundo em um iPhone ou Android de ponta recente — rápido o suficiente para parecer que você está falando com a Siri, mas tudo permanece no dispositivo.',
+          },
+        ],
+        decisionBlock: {
+          title: 'Decisão: qual stack de assistente de voz?',
+          localIf: [
+            'Você quer privacidade total e funcionamento offline → totalmente no dispositivo (caminho iPhone ou Android)',
+            'Você viaja com frequência e quer voz em aviões / áreas sem sinal → totalmente no dispositivo',
+            'Você é jornalista, profissional de saúde ou advogado → totalmente no dispositivo para confidencialidade de fontes / pacientes / clientes',
+            'Você é desenvolvedor criando um protótipo de fluxo de trabalho de voz offline → totalmente no dispositivo',
+          ],
+          cloudIf: [
+            'Você precisa de qualidade de modelo 70B+ (raciocínio complexo) → caminho híbrido (STT no telefone + Ollama remoto em casa)',
+            'Você precisa de busca na web em tempo real ou dados ao vivo → assistente na nuvem (não há equivalente local em 2026)',
+            'Você precisa de integração profunda com nuvens proprietárias (Google Calendar, iCloud, etc.) → continue usando Siri / Google Assistant para essas tarefas',
+          ],
+          quick: [
+            'Caminho mais simples no iPhone: WhisperKit + LLM Farm + voz iOS',
+            'Caminho mais simples no Android: Layla (stack integrado)',
+            'Melhor qualidade: híbrido (STT no telefone + Ollama em casa 70B)',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Comece pelo caminho totalmente no dispositivo mesmo que eventualmente queira a abordagem híbrida. A configuração no dispositivo ensina as partes móveis (STT, LLM, TTS) e funciona sem dependência de um servidor em casa. Uma vez que estiver funcionando, trocar a chamada ao LLM de local para uma URL remota do Ollama é uma mudança de uma linha.',
+          },
+        ],
+      },
+      stackComparison: {
+        id: 'stack-comparison',
+        title: 'Comparação de stacks de assistente de voz',
+        content:
+          '**Três stacks viáveis em 2026, cada um ajustado a uma prioridade diferente: simplicidade (Layla), acabamento nativo da Apple (WhisperKit + LLM Farm) ou qualidade de LLM (híbrido).** Os três executam STT e TTS no dispositivo; o híbrido move apenas o passo do LLM para um computador em casa.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Escolha iPhone (WhisperKit + LLM Farm + voz iOS) para simplicidade no iOS, Android (Layla) para simplicidade no Android, ou híbrido (STT no telefone + Ollama em casa) para melhor qualidade de LLM.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Os números de latência abaixo são voz ao primeiro áudio — o tempo desde quando você para de falar até o assistente começar a responder. Menos de 2 segundos parece utilizável; menos de 1 segundo parece nativo. A bateria é a porcentagem consumida em 1 hora de conversa ativa de mão dupla.',
+          },
+        ],
+        columns: ['Stack', 'Latência (voz → primeiro áudio)', 'Bateria (1 h ativa)', 'Ideal para'],
+        rows: [
+          { 'Stack': 'iPhone (WhisperKit + LLM Farm)', 'Latência (voz → primeiro áudio)': '~0,9–1,4 seg (16 Pro / 17 Pro)', 'Bateria (1 h ativa)': '~25–35%', 'Ideal para': 'Usuários de iOS que querem acabamento nativo da Apple' },
+          { 'Stack': 'Android (Layla, integrado)', 'Latência (voz → primeiro áudio)': '~1,0–1,6 seg (Pixel 9 Pro, Galaxy S25 Ultra)', 'Bateria (1 h ativa)': '~25–40%', 'Ideal para': 'Usuários de Android que querem simplicidade em um único app' },
+          { 'Stack': 'Android (Termux + whisper.cpp + Ollama + Piper)', 'Latência (voz → primeiro áudio)': '~1,2–2,0 seg', 'Bateria (1 h ativa)': '~30–40%', 'Ideal para': 'Usuários avançados que querem controle total' },
+          { 'Stack': 'Híbrido (STT no telefone + Ollama em casa 70B)', 'Latência (voz → primeiro áudio)': '~1,5–2,5 seg (depende do Wi-Fi)', 'Bateria (1 h ativa)': '~10–15%', 'Ideal para': 'Qualidade de classe 70B, uso em rede doméstica' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'A latência é dominada pelo passo de "primeiro token" do LLM, não pelo Whisper nem pelo TTS. Para reduzir a latência, use um LLM menor (Qwen3 1,7B no lugar do Phi-4 Mini reduz o passo do LLM de ~600 ms para ~250 ms). A desvantagem são respostas mais curtas e menos detalhadas.',
+          },
+        ],
+      },
+      theStack: {
+        id: 'the-stack',
+        title: 'O stack de três componentes: STT + LLM + TTS',
+        content:
+          '**Voz em texto, o LLM e texto em voz são três componentes independentes que você pode trocar individualmente.** Otimizar qualquer um deles (Whisper menor, LLM mais rápido, TTS com menor latência) reduz a latência total.',
+        items: [
+          '**STT — Whisper.cpp / WhisperKit / Sherpa-ONNX.** O Whisper Small (~466 MB) é a escolha padrão para celular — ~12% de taxa de erro de palavras (WER) em fala comum, ~150–300 ms de latência STT para uma fala de 5 segundos. O Whisper Medium (~1,5 GB) baixa o WER para ~9% mas dobra a latência. O Whisper Tiny (~75 MB) é rápido mas propenso a erros com ruído de fundo moderado. O WhisperKit (iOS) usa o Apple Neural Engine para uma latência STT ~30–40% menor que o Whisper.cpp padrão.',
+          '**LLM — Phi-4 Mini, Gemma 3 4B, Llama 3.2 3B.** O Phi-4 Mini (3,8B Q4_K_M, ~2,7 GB) é o padrão recomendado em telefones de ponta. O tempo até o primeiro token é de ~400–800 ms no iPhone 16 Pro para um prompt curto — o maior contribuinte individual para a latência total. Para dispositivos mais antigos ou com RAM limitada, o Qwen3 1,7B (~1,1 GB) é mais rápido (~200–400 ms TTFT) ao custo de respostas mais curtas e simples.',
+          '**TTS — Piper TTS ou TTS do sistema.** O Piper (projeto Rhasspy, código aberto) suporta mais de 30 idiomas, ~50 MB por voz, ~100–200 ms de latência até o primeiro áudio, e funciona no iOS, Android, Linux, macOS e Windows. O TTS do sistema (AVSpeechSynthesizer no iOS, TextToSpeech no Android) tem menor latência (~50–100 ms) mas uma voz mais robótica em versões antigas do sistema. As vozes do sistema do iOS 18+ e Android 14+ são notavelmente melhores do que em versões anteriores.',
+          '**Detecção de atividade de voz (VAD).** A maioria dos apps usa Silero VAD ou webrtcvad para detectar quando você para de falar. Uma janela de silêncio de 200–500 ms é o limite típico de fim de fala. Curta demais → corta você no meio da frase; longa demais → adiciona latência. 300 ms é um valor padrão razoável.',
+          '**O pipeline completo:** captura do microfone → VAD detecta o fim da fala → Whisper transcreve → LLM gera a resposta → TTS fala. Transmitir os tokens do LLM ao TTS em streaming à medida que chegam é o que faz o "primeiro áudio" chegar em menos de 1 segundo em telefones de ponta — a alternativa (esperar a resposta completa do LLM e depois falar) dobra a latência percebida.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Se o seu stack parece lento, analise cada passo: registre a duração de (microfone → STT pronto), (STT pronto → primeiro token do LLM), (primeiro token do LLM → primeiro áudio do TTS). Um passo geralmente domina. Em telefones de ponta em 2026, quase sempre é o tempo até o primeiro token do LLM (~400–800 ms). Troque por um LLM menor para reduzir a latência percebida.',
+          },
+        ],
+      },
+      iphoneSetup: {
+        id: 'iphone-setup',
+        title: 'Configuração no iPhone: WhisperKit + LLM Farm (5 min)',
+        content:
+          '**O assistente de voz para iPhone mais simples e totalmente offline em 2026: WhisperKit (ou Whisper Transcription) para STT, LLM Farm para o LLM e o TTS do sistema iOS para a voz.** O tempo total de configuração é de 5–10 minutos mais o tempo de download do modelo.',
+        numberedItems: [
+          'Instale um app baseado no WhisperKit na App Store (por exemplo, "Whisper Transcription" do desenvolvedor Aiko, gratuito) — ele oferece transcrição no dispositivo usando o Apple Neural Engine. Você também pode compilar o app de referência do WhisperKit pelo GitHub (Argmax / WhisperKit).',
+          'No WhisperKit / Whisper Transcription: baixe o modelo "Small" (~466 MB). O Tiny é mais rápido mas impreciso; o Medium é mais preciso mas mais lento.',
+          'Instale o LLM Farm na App Store (gratuito). No LLM Farm: toque em Modelos → "Adicionar modelo a partir de URL" → cole uma URL do Hugging Face para o Phi-4 Mini Q4_K_M (ou use a biblioteca integrada se disponível). O modelo ocupa ~2,7 GB.',
+          'Conecte-os usando os Atalhos do iOS: crie um Atalho com estas ações — (1) Gravar áudio (ou aceitar entrada de áudio da Folha de compartilhamento), (2) Transcrever com Whisper Transcription, (3) Gerar texto com LLM Farm (se disponível) ou Private LLM (~£10, tem uma ação de Atalhos), (4) Reproduzir texto com a voz do sistema iOS.',
+          'Atribua o Atalho a um widget de tela de bloqueio, ao Botão de Ação (iPhone 15 Pro e mais recentes) ou a "E aí Siri, executar [nome do atalho]". O Botão de Ação oferece o menor tempo de resposta mãos livres.',
+          'Teste: mantenha pressionado o Botão de Ação → fale → solte. O STT é executado (~200 ms) → o LLM gera (~600 ms primeiro token, transmite ao TTS) → o primeiro áudio soa em ~0,9–1,4 seg no total. Ajuste o limite de silêncio do VAD no Atalho se ele cortar você.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'O LLM Farm atualmente não expõe uma ação de Atalhos (em maio de 2026). Para usar o pipeline de Atalhos do iOS, você precisará do Private LLM (~£10 pagamento único) que expõe uma ação "Gerar texto". A abordagem com Atalhos é o que faz o caminho no iPhone ser de "5 minutos" — sem Atalhos, é preciso encadear os apps manualmente.',
+          },
+        ],
+      },
+      androidSetup: {
+        id: 'android-setup',
+        title: 'Configuração no Android: Layla ou stack Termux (5–15 min)',
+        content:
+          '**Dois caminhos no Android: Layla (abordagem de stack integrado em 5 minutos) ou Termux + whisper.cpp + Ollama + Piper (abordagem manual em 15 minutos com mais controle).** Ambos funcionam totalmente offline depois de configurados.',
+        items: [
+          '**Caminho A — Layla (5 min):** instale o Layla pela Play Store, baixe um modelo (Phi-4 Mini ou Gemma 3 4B), ative o modo de voz nas configurações. O Layla inclui o whisper.cpp para STT, o LLM local para a resposta e usa o TTS do sistema Android. O caminho mais simples; a desvantagem é menor capacidade de configuração.',
+          '**Caminho B — Stack Termux (15 min):**',
+          'Instale o Termux pelo F-Droid (não pela Play Store; a versão da Play Store está desatualizada).',
+          'No Termux: `pkg update && pkg install git cmake clang ffmpeg`.',
+          'Compile o whisper.cpp: `git clone https://github.com/ggerganov/whisper.cpp && cd whisper.cpp && make` e baixe o modelo Small: `bash ./models/download-ggml-model.sh small`.',
+          'Instale o Ollama (build Termux ARM): `curl -fsSL https://ollama.com/install.sh | sh`. Baixe um modelo: `ollama pull phi4-mini`. Inicie o servidor: `ollama serve`.',
+          'Instale o Piper: `pip install piper-tts` (em um venv Python do Termux) e baixe uma voz (por exemplo `piper-tts --download-voice en_US-amy-low`).',
+          'Conecte o pipeline com um pequeno script Python que leia do `arecord`, execute o whisper.cpp sobre o áudio, envie a transcrição para o Ollama em localhost:11434 e redirecione a resposta para o Piper. Ou use o Tasker para encadear comandos de shell acionados por um botão ou um bloco rápido.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para o Caminho B, use o Termux:Widget para criar um atalho na tela inicial que execute o script do assistente de voz. Um único toque no widget aciona o pipeline completo. Combine com um botão Bluetooth ou um bloco rápido do Tasker para invocação mãos livres. As teclas de ação / laterais do Pixel 9 Pro e do Galaxy S25 Ultra também podem acionar ações do Tasker.',
+          },
+        ],
+      },
+      hybridSetup: {
+        id: 'hybrid-setup',
+        title: 'Configuração híbrida: STT no telefone + Ollama remoto',
+        content:
+          '**O stack híbrido move apenas a chamada ao LLM para um computador em casa, mantendo o STT e o TTS no dispositivo.** Isso dá acesso a modelos de classe 70B (Llama 3.3 70B, Qwen3-Coder 32B) enquanto preserva a privacidade do áudio (que nunca sai do telefone — apenas a transcrição de texto é enviada pelo seu Wi-Fi doméstico).',
+        numberedItems: [
+          'No computador de casa (Mac, PC ou NAS): instale o Ollama. Baixe um modelo 70B: `ollama pull llama3.3:70b` (requer ~40 GB de espaço livre em disco + ~48 GB de RAM ou 24 GB de VRAM de GPU).',
+          'Vincule o Ollama à sua rede local: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. Anote o IP local do computador de casa (por exemplo, 192.168.1.20).',
+          'No telefone, configure o seu pipeline de assistente de voz (Atalho do iOS ou Tasker do Android) para enviar a transcrição do Whisper via HTTP POST para `http://192.168.1.20:11434/api/generate` em vez da chamada ao LLM local.',
+          'O TTS continua sendo executado no telefone (Piper ou voz do sistema) usando o texto de resposta do computador de casa.',
+          'Resultado: o Whisper STT é executado no telefone (o áudio nunca sai do dispositivo), o Ollama em casa gera uma resposta de qualidade 70B em ~600–1200 ms, o TTS fala no telefone. Latência total ~1,5–2,5 segundos — um pouco maior do que totalmente no dispositivo mas com qualidade de LLM muito melhor.',
+        ],
+        promptExamples: [
+          {
+            label: 'Atalho do iOS: assistente de voz híbrido (acionamento com o Botão de Ação)',
+            text: '1. Gravar áudio → salvar em arquivo temporário.\n2. Transcrever com Whisper Transcription → saída: texto da transcrição.\n3. Obter conteúdo de URL → URL: http://192.168.1.20:11434/api/generate, Método: POST, corpo JSON: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → saída: texto de resposta.\n4. Reproduzir texto → entrada: texto de resposta, voz: voz do sistema iOS.\nAtribua ao Botão de Ação. Mantenha pressionado para gravar; solte para enviar. O primeiro áudio soa em ~1,5–2,5 seg.',
+          },
+          {
+            label: 'Tasker: assistente de voz híbrido no Android',
+            text: '1. Variável: %TRANSCRIPT = (saída do whisper-cli sobre o arquivo de áudio gravado).\n2. Solicitação HTTP: URL http://192.168.1.20:11434/api/generate, Método POST, Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. Variável: %REPLY = (campo "response" analisado do JSON).\n4. Falar: %REPLY (TTS do sistema Android ou Piper se instalado).\nAcionar via bloco rápido, botão Bluetooth ou pressionamento longo na tecla lateral do Pixel 9 Pro.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para a menor latência no modo híbrido, configure o Ollama no modo streaming (`"stream":true`) e transmita os tokens ao TTS à medida que chegam em vez de esperar a resposta completa. Os Atalhos do iOS não conseguem fazer streaming de forma nativa, mas um pequeno plugin do Tasker ou um app iOS personalizado conseguem. Com streaming, a latência percebida até o "primeiro áudio" cai 200–400 ms mesmo que o tempo total de resposta seja o mesmo.',
+          },
+        ],
+      },
+      latencyBudget: {
+        id: 'latency-budget',
+        title: 'Orçamento de latência: para onde vão os segundos',
+        content:
+          '**Em telefones de ponta em 2026, o tempo até o primeiro token do LLM domina a latência total — geralmente 50–60% do tempo de voz ao primeiro áudio.** Otimizar o passo do LLM tem mais impacto do que ajustar o Whisper ou o TTS.',
+        columns: ['Passo', 'Tempo típico (iPhone 16 Pro, no dispositivo)', 'Notas'],
+        rows: [
+          { 'Passo': 'Detecção de fim de fala VAD', 'Tempo típico (iPhone 16 Pro, no dispositivo)': '~200–500 ms', 'Notas': 'Ajustável; 300 ms por padrão. Conta na latência percebida.' },
+          { 'Passo': 'Whisper Small STT (fala de 5 seg)', 'Tempo típico (iPhone 16 Pro, no dispositivo)': '~150–300 ms', 'Notas': 'WhisperKit ~30–40% mais rápido via Apple Neural Engine.' },
+          { 'Passo': 'Tempo até o primeiro token do LLM (Phi-4 Mini)', 'Tempo típico (iPhone 16 Pro, no dispositivo)': '~400–800 ms', 'Notas': 'Maior contribuinte. Modelo menor = mais rápido.' },
+          { 'Passo': 'Primeiro áudio do TTS (Piper ou sistema)', 'Tempo típico (iPhone 16 Pro, no dispositivo)': '~100–200 ms', 'Notas': 'TTS do sistema um pouco mais rápido que o Piper.' },
+          { 'Passo': 'Total voz ao primeiro áudio', 'Tempo típico (iPhone 16 Pro, no dispositivo)': '~0,9–1,4 seg', 'Notas': 'Menos de 2 seg = "parece utilizável"; menos de 1 seg = "parece nativo".' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para ficar abaixo de 1 segundo no total: use Whisper Tiny (75 MB, ~80 ms STT) + Qwen3 1,7B (~250 ms TTFT) + TTS do sistema (~80 ms primeiro áudio). Total ~600–800 ms no iPhone 16 Pro. A desvantagem são respostas mais curtas e menos coerentes do LLM e menor precisão do STT em ambientes ruidosos. Vale a pena se a velocidade de resposta for a sua prioridade principal.',
+          },
+        ],
+      },
+      accuracyBattery: {
+        id: 'accuracy-battery',
+        title: 'Precisão e consumo de bateria durante 1 hora',
+        content:
+          '**O Whisper Small atinge ~88% de precisão em fala comum com ruído de fundo moderado; o Whisper Medium chega a ~91% mas dobra a latência.** O consumo de bateria durante 1 hora de conversa ativa é de ~25–35% no iPhone 16 Pro e ~25–40% no Android de ponta.',
+        items: [
+          '**Precisão do Whisper por tamanho de modelo (WER LibriSpeech-clean, menor é melhor):** Tiny ~7,5%, Small ~3%, Medium ~2,4%, Large v3 ~1,8%. Em condições reais com ruído: Tiny piora para ~15–20% WER, Small para ~10–14%, Medium para ~7–10%, Large v3 para ~5–7%.',
+          '**Whisper na nuvem vs Whisper local:** A API do Whisper na nuvem da OpenAI usa o Large v3 por padrão (~2% WER em fala limpa). O Whisper Small local em um telefone é ~3% WER no mesmo áudio — próximo o suficiente para que a diferença seja imperceptível no uso cotidiano do assistente.',
+          '**Consumo de bateria (1 hora de conversa ativa, tela ligada):** iPhone 16 Pro ~25–35%; iPhone 17 Pro ~22–30%; Pixel 9 Pro ~30–40%; Galaxy S25 Ultra ~28–38%. O modo híbrido reduz o consumo do telefone para ~10–15% por hora porque apenas o STT é executado localmente.',
+          '**Limitação térmica:** a inferência sustentada do LLM no dispositivo aciona a limitação térmica após ~10–15 min no iPhone (superfície do chip ~38°C); ~15–20 min no Android de ponta (melhor massa térmica em tablets e telefones grandes). A limitação reduz os tokens/seg em 30–50%, alongando a latência até o primeiro token do LLM de ~600 ms para ~900 ms.',
+          '**Mitigação para sessões longas:** conecte o carregador, coloque o telefone virado para cima sobre uma superfície dura (não na mão) ou mude para o modo híbrido. O telefone como microfone usa uma fração da energia do telefone como tudo.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Uma sessão de voz totalmente local de 1 hora pode consumir a bateria do seu telefone em 30–40%. Para uso o dia todo ou no carro, planeje o carregamento. O caminho híbrido (apenas STT no dispositivo) é a opção realista para assistentes de voz ambientais sempre ativos — o computador de casa faz o trabalho pesado.',
+          },
+        ],
+      },
+      handsFree: {
+        id: 'hands-free',
+        title: 'Mãos livres: Shortcuts, Tasker, CarPlay, Android Auto',
+        content:
+          '**A ativação mãos livres depende do mecanismo de acionamento, não do stack de voz.** O iOS usa Atalhos com o Botão de Ação ou "E aí Siri, executar [atalho]"; o Android usa Tasker com a tecla lateral, um bloco rápido ou botões Bluetooth.',
+        items: [
+          '**Botão de Ação do iPhone (iPhone 15 Pro e mais recentes):** atribua um Atalho que acione o pipeline de voz. Mantenha pressionado o Botão de Ação para começar a gravar; solte para enviar. O acionador mãos livres com menor latência no iPhone em 2026.',
+          '**iPhone "E aí Siri, executar [nome do atalho]":** ativa a Siri (~500 ms) e depois executa o Atalho. Adiciona latência em relação ao Botão de Ação mas funciona mãos livres a qualquer momento com o telefone desbloqueado.',
+          '**Tecla lateral / tecla Bixby do Android (Galaxy):** atribua uma ação do Tasker pelas configurações de Modos e Rotinas do Galaxy ou apps de remapeamento da tecla Bixby. Pressione para acionar.',
+          '**Bloco rápido do Tasker no Android:** adicione um bloco rápido ao painel de notificações que execute o script de voz. Acionamento com dois deslizamentos a partir da tela de bloqueio.',
+          '**Botões Bluetooth (por exemplo, Flic, botões de mídia genéricos):** pareie com o iOS ou Android, configure para acionar o Atalho de voz / tarefa do Tasker. Verdadeiramente mãos livres (botão em uma mesa, no volante, em um bolso).',
+          '**CarPlay / Android Auto:** estes usam o sistema Siri / Google Assistant por design — nenhum expõe uma API de assistente de voz de terceiros em 2026. A solução alternativa para o CarPlay é vincular um Atalho a um botão de ação do CarPlay (suporte limitado de Atalhos); para o Android Auto, use o Tasker acionado por um botão de mídia Bluetooth. Nenhum tem o mesmo nível de integração que os assistentes do sistema.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para uso no carro sem integração com CarPlay / Android Auto: pareie um pequeno botão Bluetooth (Flic, AirShou, controle de mídia genérico) e fixe-o no volante. Pressione para acionar o assistente de voz offline — ele funciona sem internet, nunca envia áudio para a nuvem e responde em ~1,5 segundo. A desvantagem em relação ao CarPlay é que não há interface na tela do carro, apenas áudio.',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'Garantias de privacidade: realmente offline vs assistido pela nuvem',
+        content:
+          '**Um assistente de voz é "realmente offline" somente se o áudio do microfone, as transcrições e o áudio do TTS permanecerem no dispositivo sem nenhuma chamada de rede.** Muitos apps comercializados como "privados" ainda enviam transcrições ou telemetria para a nuvem — verifique com o modo avião ou um monitor de rede antes de confiar.',
+        items: [
+          '**Como verificar "realmente offline":** coloque o telefone no modo avião e use o assistente. Se ele funcionar com qualidade plena, é realmente offline. Se degradar ou falhar, algum passo depende de um serviço na nuvem.',
+          '**Captura de áudio:** os dados do microfone devem ser processados localmente e nunca gravados em disco ou enviados a qualquer lugar. O Whisper, o WhisperKit e o Sherpa-ONNX executam o STT na memória e descartam o áudio após a transcrição.',
+          '**Inferência do LLM:** se a resposta for gerada por um modelo local (Phi-4 Mini, Gemma 3, Llama 3.2) no telefone, nenhum prompt sai do dispositivo. Se o assistente usar um modo "assistido pela nuvem" (Apple Intelligence Private Cloud Compute, o modo primeiro-no-dispositivo-depois-nuvem do Google), as transcrições podem ser enviadas a um servidor sob certas condições — verifique a política de privacidade do app.',
+          '**TTS:** o Piper e o TTS do sistema são totalmente no dispositivo. Algumas vozes "premium" na nuvem (ElevenLabs, OpenAI TTS) exigem enviar o texto de resposta para um servidor — evite-as para uso verdadeiramente offline.',
+          '**Postura de privacidade do caminho híbrido:** no modo híbrido, o áudio permanece no telefone (Whisper local), mas a transcrição de texto é enviada ao seu servidor Ollama em casa pelo seu Wi-Fi doméstico. Isso é apenas rede local, não nuvem — os dados permanecem dentro da sua rede. Aceitável para a maioria dos usuários preocupados com privacidade; não equivalente a totalmente no dispositivo para os modelos de ameaça mais rigorosos.',
+          '**Notas específicas de apps (maio de 2026):** o WhisperKit e o whisper.cpp são de código aberto e verificavelmente offline. O Layla funciona localmente por padrão (verifique no modo avião). O LLM Farm e o PocketPal AI executam a inferência totalmente no dispositivo. O Apple Intelligence tem tanto um modo no dispositivo quanto o Private Cloud Compute — desative o PCC nas Configurações para funcionamento totalmente no dispositivo.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Se o funcionamento totalmente offline for crítico (jornalista / confidencialidade de fontes, saúde, jurídico): prefira apps de código aberto (build de referência do WhisperKit, whisper.cpp via Termux, Layla) onde você pode auditar o comportamento de rede. Os apps de código fechado (mesmo os comercializados como "privados") podem adicionar funcionalidades na nuvem em atualizações futuras sem notificação evidente ao usuário.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erros comuns',
+        items: [
+          '**Usar o Whisper Tiny para tudo.** O Tiny é rápido (~80 ms STT) mas propenso a erros em ambientes ruidosos (~15–20% WER frente a ~10–14% do Small). O Tiny é aceitável para comandos curtos em salas silenciosas; use o Small para assistentes de voz de propósito geral.',
+          '**Esperar a resposta completa do LLM antes do TTS começar.** Isso dobra a latência percebida. Transmita os tokens do LLM ao TTS à medida que chegam — o Piper suporta entrada em streaming, o TTS do sistema suporta fala incremental. O primeiro áudio deve ser reproduzido após a primeira frase do LLM, não após a resposta completa.',
+          '**Executar o LLM no dispositivo em um ambiente quente.** A limitação térmica é acionada em minutos sob sol direto ou dentro de um carro quente, reduzindo os tokens/seg em 30–50% e empurrando a latência acima de 2 segundos. Use o caminho híbrido ou mantenha o telefone frio.',
+          '**Confiar em "privado" sem verificar.** "Privado" e "local" são termos de marketing em 2026 — alguns apps que afirmam processamento local ainda enviam dados para casa para análises, atualizações de modelos ou transcrição com apoio na nuvem. Verifique no modo avião antes de confiar neles para uso sensível.',
+          '**Construir o stack Termux do Android em um dispositivo com pouca RAM.** O Termux + whisper.cpp + Ollama + Piper consome ~4 GB de RAM do sistema no pico. Os dispositivos com 6 GB ou menos de RAM acabarão matando componentes por OOM no meio de uma conversa. Use o Layla no Android com pouca RAM, ou fique com o caminho no iPhone.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          'Whisper.cpp — [github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp) (Whisper multiplataforma, incluindo builds para Android e iOS).',
+          'WhisperKit (Argmax) — [github.com/argmaxinc/WhisperKit](https://github.com/argmaxinc/WhisperKit) (Whisper otimizado para Apple Neural Engine no iOS / macOS).',
+          'Piper TTS (Rhasspy) — [github.com/rhasspy/piper](https://github.com/rhasspy/piper) (TTS neural de código aberto, compatível com celulares, mais de 30 idiomas).',
+          'LLM Farm — [github.com/guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm) (app iOS para executar modelos GGUF localmente).',
+          'Layla (Android) — [Listagem na Play Store](https://play.google.com) e documentação do desenvolvedor (stack LLM local integrado com suporte de voz).',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Quão preciso é o Whisper local frente ao Whisper na nuvem?',
+            a: 'O Whisper Small executando localmente em um telefone atinge ~3% WER em fala limpa; o Whisper na nuvem da OpenAI (Large v3) atinge ~2%. Em ambientes ruidosos, o Small local cai para ~10–14% WER enquanto o Cloud Large v3 cai para ~5–7%. Para o uso cotidiano do assistente de voz, a precisão local é próxima o suficiente para ser imperceptível. Para ditado de texto longo onde cada palavra importa, é preferível a nuvem ou o Medium / Large local.',
+          },
+          {
+            q: 'Um assistente de voz local pode substituir completamente a Siri?',
+            a: 'Para perguntas e respostas privadas, redação e resumos: sim, com qualidade comparável ou melhor que os recursos no dispositivo da Siri. Para ações do sistema (abrir apps, definir timers, controlar o HomeKit), iniciar buscas na web ou dados ao vivo (clima, resultados esportivos): não — a integração da Siri com o iOS e os serviços da Apple não pode ser replicada por um stack local de terceiros em 2026. Muitos usuários mantêm os dois: Siri para ações do sistema, o stack local para perguntas e respostas privadas.',
+          },
+          {
+            q: 'Isso funciona com CarPlay ou Android Auto?',
+            a: 'De forma limitada. O CarPlay e o Android Auto são projetados em torno do sistema Siri / Google Assistant; nenhum expõe uma API de assistente de voz de terceiros. Soluções alternativas: use um Atalho vinculado a um botão de ação do CarPlay (suporte limitado de Atalhos), ou pareie um botão Bluetooth (Flic, controle de mídia genérico) e acione o Tasker / Atalhos a partir dele. Nenhum alcança o nível de integração dos assistentes do sistema para uso no carro.',
+          },
+          {
+            q: 'Como faço para acioná-lo com as mãos livres?',
+            a: 'iPhone: mantenha pressionado o Botão de Ação (iPhone 15 Pro e mais recentes) para invocar o Atalho, ou diga "E aí Siri, executar [nome do atalho]". Android: use a tecla lateral ou a tecla Bixby em telefones Galaxy, um bloco rápido do Tasker ou um botão Bluetooth pareado. Para mãos livres ambiental verdadeiro (sempre escutando uma palavra de ativação), o stack local não iguala a Siri / Google Assistant em 2026 — o detector de palavra de ativação do sistema do telefone não está exposto a apps de terceiros.',
+          },
+          {
+            q: 'Ele consegue lidar com conversas em vários idiomas?',
+            a: 'Sim, mas com ressalvas. O Whisper detecta automaticamente o idioma de entrada e suporta 99 idiomas. Os LLMs locais variam: o Phi-4 Mini lida bem com o inglês e razoavelmente com os principais idiomas europeus; o Qwen3 tem forte suporte multilíngue incluindo o chinês; o Gemma 3 suporta mais de 100 idiomas. Para TTS, o Piper tem vozes em mais de 30 idiomas; o TTS do sistema depende dos pacotes de idioma do sistema operacional que você tem instalados. A troca de idioma no meio da conversa funciona no Whisper mas pode confundir o LLM.',
+          },
+          {
+            q: 'O ruído de fundo arruína o STT local?',
+            a: 'O Whisper Tiny se degrada significativamente com ruído moderado (~15–20% WER); o Small lida com ruído de nível cafeteria razoavelmente (~10–14% WER); o Medium e o Large lidam bem com a maioria dos ambientes reais. Para uso ruidoso (carros, transporte público), use o Whisper Medium se o seu telefone tiver a RAM, ou aplique o VAD de forma agressiva (transcreva apenas quando a fala for detectada, ignore os silêncios entre falas).',
+          },
+          {
+            q: 'Como integro com dispositivos de casa inteligente de forma local?',
+            a: 'Passe a resposta do LLM por um analisador que detecte intenções (por exemplo, "apagar as luzes da cozinha") e chame diretamente a API do seu hub de casa inteligente local — o Home Assistant tem uma API REST no seu IP local, e a integração com o Apple HomeKit funciona pelas ações "Controlar a casa" dos Atalhos. Evite as integrações de casa inteligente na nuvem (Alexa, Google Home) se você quiser um pipeline totalmente offline.',
+          },
+          {
+            q: 'Posso personalizar a voz (TTS)?',
+            a: 'Sim. O Piper TTS tem mais de 100 vozes treinadas pela comunidade em mais de 30 idiomas, baixáveis como modelos de voz de ~50 MB. Os Atalhos de voz do iOS permitem escolher entre as vozes do sistema incluindo as vozes Premium de maior qualidade (baixar em Configurações → Acessibilidade → Conteúdo falado → Vozes). O TTS do sistema Android suporta pacotes de voz do Google ou de terceiros. A clonagem de voz personalizada (sua própria voz ou uma persona específica) requer uma cadeia de ferramentas TTS separada (Coqui, Tortoise TTS) — ainda não é prático no dispositivo em 2026.',
+          },
+          {
+            q: 'A bateria sofre muito?',
+            a: 'Sim — cerca de 25–40% por hora de conversa ativa em telefones de ponta. Para consultas de voz ocasionais, o impacto é pequeno. Para uso o dia todo ou sempre ativo, conecte o carregador ou use o caminho híbrido (apenas o STT é executado no dispositivo, reduzindo o consumo para ~10–15% por hora). A escuta passiva em segundo plano com detecção de palavra de ativação atualmente não é viável em stacks locais de terceiros a um custo de bateria aceitável.',
+          },
+          {
+            q: 'O iOS 19 ou o Android 16 vão quebrar essa configuração?',
+            a: 'É improvável para o stack principal (Whisper, LLM local, TTS) — esses são apps em espaço de usuário que dependem de APIs padrão (captura de microfone, TTS, rede). O que pode quebrar: as integrações de Atalhos se a Apple mudar a API de Atalhos; o Termux no Android se o Android 16 restringir ainda mais os processos em segundo plano (o Android vem restringindo isso a cada versão). Mantenha os apps atualizados e verifique após cada atualização maior do sistema operacional.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Melhores apps de LLM local para iPhone em 2026](/pt/power-local-llm/best-local-llm-apps-iphone-2026) — apps da camada base (PocketPal AI, LLM Farm, Private LLM) para o caminho no iPhone.',
+          '[Melhores apps de LLM local para Android em 2026](/pt/power-local-llm/best-local-llm-apps-android-2026) — apps da camada base (Layla, Maid, MLC Chat, Termux + Ollama) para o caminho no Android.',
+          '[Melhores modelos LLM para celular em 2026: Phi-4 Mini vs Gemma 3 vs SmolLM](/pt/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — camada de modelo do stack de voz; benchmarks e compromissos de qualidade vs latência.',
+          '[Como executar IA em um tablet: iPad e Android (2026)](/pt/power-local-llm/run-ai-on-tablet-ipad-android) — equivalente em tablet para usuários que querem uma configuração de voz com tela maior.',
+          '[Melhores LLMs locais em 2026](/pt/local-llms/best-local-llms-2026) — autoridade de modelos mais ampla cobrindo todos os níveis de hardware, útil para escolher o LLM na configuração híbrida.',
+          '[Diretório de software LLM local 2026](/pt/power-local-llm/local-llm-software-directory-2026) — entradas do diretório para Whisper.cpp, WhisperKit, Piper TTS e outros componentes do stack de voz.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Crie um assistente de voz local no seu telefone: Whisper + LLM local (sem nuvem) — 2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/voice-assistant-local-mobile-offline?lang=pt',
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/og-image.png',
+        width: 1200,
+        height: 630,
+      },
+      description: 'IA de voz totalmente offline no iPhone e Android em 2026. Whisper STT local + LLM local + Piper TTS. Configuração no iPhone, Android e híbrida; latência, bateria, privacidade.',
+      inLanguage: 'pt',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      datePublished: '2026-05-08',
+      dateModified: '2026-05-08',
+      about: [
+        { '@type': 'Thing', name: 'Whisper STT' },
+        { '@type': 'Thing', name: 'LLM locais' },
+        { '@type': 'Thing', name: 'iPhone offline' },
+        { '@type': 'Thing', name: 'Android offline' },
+        { '@type': 'Thing', name: 'Asistente de voz' },
+        { '@type': 'Thing', name: 'IA móvil' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'WhisperKit' },
+        { '@type': 'SoftwareApplication', name: 'LLM Farm' },
+        { '@type': 'SoftwareApplication', name: 'Layla' },
+        { '@type': 'SoftwareApplication', name: 'Piper TTS' },
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways', '.faq'],
+      },
+    },
+  },
 }

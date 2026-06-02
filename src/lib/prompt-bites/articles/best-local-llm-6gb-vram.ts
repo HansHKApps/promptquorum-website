@@ -467,4 +467,80 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Quantization & VRAM',
+    title: 'Melhor LLM local para 6 GB de VRAM?',
+    seoTitle: '6 GB VRAM: melhor LLM local 2026 | PromptQuorum',
+    metaDescription: 'Llama 3 8B Q4_K_M (5,5 GB) é a melhor opção para 6 GB de VRAM. Phi-4 Q4 e Mistral Small Q4_K_S são alternativas sólidas. Resposta rápida do PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Melhor LLM local para 6 GB de VRAM?',
+        answer: 'Com 6 GB de VRAM, o Llama 3 8B Q4_K_M é a melhor opção com ~5,5 GB, oferecendo excelentes capacidades de chat e programação a ~20 tok/s. Phi-4 Q4_K_M e Mistral Small Q4_K_S são alternativas sólidas.',
+        bullets: [
+          'Llama 3 8B Q4_K_M: melhor opção geral para 6 GB (5,5 GB VRAM)',
+          'Phi-4 Q4_K_M: melhor para seguimento de instruções',
+          'Mistral Small Q4_K_S: o mais rápido em 6 GB',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Llama 3 8B Q4_K_M é a melhor escolha para 6 GB de VRAM: 5,5 GB, ~20 tok/s, excelente para chat e programação',
+          'Phi-4 Q4_K_M (5,0 GB) lidera em tarefas de seguimento de instruções e raciocínio',
+          '6 GB de VRAM cobre RTX 3050/4050 no Windows e qualquer MacBook com 16 GB de memória unificada',
+        ],
+      },
+      body1: {
+        title: 'Top 3 modelos para 6 GB de VRAM',
+        content: [
+          'Em maio de 2026, <strong>6 GB de VRAM cobre duas classes de hardware muito diferentes: laptops Windows de entrada (RTX 3050/4050) e qualquer MacBook com 16 GB de memória unificada.</strong> O desempenho difere entre eles em 30–50% — o Mac executa o Llama 3 8B Q4_K_M a ~25 tok/s graças à largura de banda da memória unificada, enquanto a GPU discreta do Windows chega a ~18 tok/s devido à sobrecarga de transferência PCIe.',
+          'Os três modelos funcionam com o Ollama sem configuração especial. As velocidades abaixo assumem uma janela de contexto de 2.048 tokens. Ampliar para 4.096 tokens adiciona ~1 GB — ainda dentro de 6 GB para Phi-4 e Mistral.',
+        ],
+        columns: ['Modelo', 'VRAM', 'Melhor para'],
+        rows: [
+          { 'Modelo': 'Llama 3 8B Q4_K_M', 'VRAM': '5,5 GB', 'Melhor para': 'Chat geral, programação' },
+          { 'Modelo': 'Phi-4 Q4_K_M', 'VRAM': '5,0 GB', 'Melhor para': 'Instruções, raciocínio' },
+          { 'Modelo': 'Mistral Small Q4_K_S', 'VRAM': '4,5 GB', 'Melhor para': 'Tarefas onde a velocidade é prioritária' },
+        ],
+      },
+      body2: {
+        title: '6 GB de VRAM no Windows vs MacBook',
+        content: [
+          'No Windows, a RTX 3050 6 GB e a RTX 4050 6 GB são as duas principais GPUs nesta faixa. Ambas executam o Ollama via CUDA com desempenho quase idêntico — a RTX 4050 mais recente é cerca de 10% mais eficiente por watt, mas não significativamente mais rápida na prática.',
+          'No macOS, qualquer MacBook com 16 GB de memória unificada tem aproximadamente 6 GB disponíveis para a carga de trabalho da GPU. A memória unificada elimina o gargalo PCIe que limita as placas discretas, por isso o desempenho no macOS costuma ser igual ou superior ao de uma RTX 3050 discreta.',
+          'Atualizar de 6 GB para 8 GB desbloqueia a quantização Q5_K_M em modelos 7–8B (+3% de qualidade) e janelas de contexto mais rápidas. Para opções de 12 GB e modelos 14B, consulte <a href="/pt/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">os melhores modelos Ollama para RTX 3060 12 GB</a>. Para a referência completa de VRAM, consulte <a href="/pt/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">quanta VRAM um LLM local precisa</a>.',
+          '<strong>6 GB é a menor quantidade de VRAM em que um LLM local compete com modelos em nuvem em tarefas cotidianas.</strong> Abaixo de 6 GB, você está limitado a modelos pequenos que têm dificuldade com programação ou raciocínio extenso. Com 6 GB, o Llama 3 8B Q4_K_M está totalmente disponível. Para dar o salto para modelos 14B, consulte <a href="/pt/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">as opções do nível de 12 GB</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre modelos com 6 GB de VRAM',
+        faqs: [
+          {
+            q: '6 GB de VRAM é suficiente para uso diário de LLMs?',
+            a: 'Sim. O Llama 3 8B Q4_K_M a ~20 tok/s lida com chat multiturn, autocomplete de código, resumo de documentos e perguntas e respostas. A velocidade é suficiente para uso interativo.',
+          },
+          {
+            q: 'O Llama 3 8B cabe em 6 GB de VRAM?',
+            a: 'Sim em Q4_K_M — o modelo usa 5,5 GB. Uma janela de contexto de 4.096 tokens adiciona ~1 GB, totalizando ~6,5 GB. Para ter margem estrita de 6 GB, use um contexto de 2.048 tokens (<code>--num-ctx 2048</code>) ou escolha o Phi-4 Q4_K_M em vez disso.',
+          },
+          {
+            q: 'Posso executar modelos 13B ou 14B com 6 GB de VRAM?',
+            a: 'Não. O Qwen 14B em Q4_K_M precisa de ~10 GB de VRAM. Atualizar para 12 GB é o mínimo para modelos 14B. Consulte <a href="/pt/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">os melhores modelos Ollama para RTX 3060 12 GB</a>.',
+          },
+          {
+            q: 'Posso usar 6 GB de VRAM também para geração de imagens?',
+            a: 'Não muito bem. O Stable Diffusion XL requer no mínimo 8 GB de VRAM. Executar tanto LLMs quanto geração de imagens em uma placa de 6 GB significa trocar constantemente — foque em uma única carga de trabalho por vez ou atualize para 8 GB.',
+          },
+        ],
+      },
+    },
+  },
 }

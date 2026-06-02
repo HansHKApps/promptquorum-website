@@ -2835,4 +2835,483 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
 },
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: 'O melhor NAS e armazenamento para modelos de IA local 2026: guia de compra',
+    seoTitle: 'Melhor NAS e SSD para modelos de IA local 2026',
+    intro:
+      'A maioria dos conselhos de armazenamento para IA local otimiza um único número —a capacidade— e ignora que há duas tarefas de armazenamento envolvidas. Um SSD NVMe rápido é o lugar de onde os modelos são carregados no momento da inferência; um NAS é onde a biblioteca de modelos reside, se mantém com backup e é compartilhada entre várias máquinas. Os dois não são intercambiáveis, e comprar um quando você precisa do outro é o erro de armazenamento mais comum. Este guia compara os NAS da Synology e da QNAP para o papel de biblioteca, e os SSDs da Samsung e da Western Digital para o papel de carregamento, nos números que definem a compra: capacidade, redundância, velocidade de transferência e preço. Um aviso sobre o preço: a escassez de chips de memória de 2026 elevou os preços dos SSDs muito acima dos níveis anteriores, então cada preço aqui é um instantâneo de maio de 2026 — confirme o preço atual antes de comprar.',
+    metaDescription:
+      'Compare NAS Synology e QNAP mais SSDs Samsung e WD para modelos de IA local: redundância RAID 6, carregamento rápido, capacidade e preços de 2026.',
+    twitterDescription:
+      'NAS para a biblioteca de modelos, SSD NVMe para carregamento rápido — duas tarefas, não uma. Synology, QNAP, Samsung, WD comparados para armazenamento de IA local com preços de maio de 2026.',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 7B',
+      'Mistral Small',
+    ],
+    current_hardware_mentioned: [
+      'Synology DS423+',
+      'Synology DS923+',
+      'QNAP TS-464',
+      'Samsung 990 Pro NVMe SSD',
+      'Western Digital Black SN850X NVMe SSD',
+    ],
+    audience:
+      'Desenvolvedores e times pequenos que constroem uma biblioteca de modelos de IA local e precisam decidir entre um NAS, um SSD ou ambos, e qual marca e capacidade escolher. Assume familiaridade com os arquivos de modelos GGUF e a quantização, mas não com modelos específicos de NAS ou SSD.',
+    readTime: '13 min de leitura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'NAS and storage for local AI models',
+    targetKeywords: [
+      'melhor nas para modelos de ia local 2026',
+      'nas vs ssd para llm local',
+      'synology vs qnap para modelos de ia',
+      'ssd rápido para carregar llm local',
+      'armazenamento para biblioteca de modelos llm local',
+    ],
+    leadAnswerBlock:
+      '**O melhor armazenamento para modelos de IA local é um SSD NVMe rápido para carregar modelos no momento da inferência mais um NAS para a biblioteca de modelos compartilhada e com backup — eles fazem trabalhos distintos. Compre um Samsung 990 Pro ou WD Black SN850X para velocidade de carregamento, e um NAS Synology ou QNAP com RAID 6 para a biblioteca.**',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual NAS e armazenamento eu devo comprar para modelos de IA local em 2026?',
+        answer:
+          'Divida o orçamento por tarefa. Para carregar modelos rapidamente no momento da inferência, compre um SSD NVMe de ponta — o Samsung 990 Pro ou o WD Black SN850X. Para a biblioteca de modelos que várias máquinas compartilham e que precisa de backup, compre um NAS de 4 baias — Synology para o software mais simples, QNAP para mais hardware por dólar — e execute-o em RAID 6. Um desenvolvedor solo pode dispensar o NAS e usar um SSD mais uma unidade de backup externa.',
+        bullets: [
+          'Carregamento rápido: SSD NVMe Samsung 990 Pro ou WD Black SN850X, na máquina de inferência',
+          'Biblioteca compartilhada: NAS Synology de 4 baias — software mais simples, ideal para times sem especialistas',
+          'Mais hardware por dólar: NAS QNAP de 4 baias — CPU mais potente e mais portas a preço similar',
+          'Execute o NAS em RAID 6: sobrevive a duas falhas de disco simultâneas',
+          'Os preços dos SSDs subiram com a escassez de memória de 2026 — trate cada preço como um instantâneo de maio de 2026',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: 'Pontos-chave', anchor: '#key-takeaways' },
+      { label: 'Fatos rápidos', anchor: '#quick-facts' },
+      { label: 'Escolha do editor', anchor: '#editors-choice' },
+      { label: 'Tabela comparativa de armazenamento', anchor: '#comparison-table' },
+      { label: 'Qual armazenamento você deve comprar?', anchor: '#which-storage' },
+      { label: 'NAS Synology', anchor: '#synology' },
+      { label: 'NAS QNAP', anchor: '#qnap' },
+      { label: 'SSDs rápidos para carregamento de modelos', anchor: '#ssds' },
+      { label: 'RAID e backup', anchor: '#raid-backup' },
+      { label: 'Fluxograma de decisão', anchor: '#decision-flowchart' },
+      { label: 'Onde comprar e preços', anchor: '#where-to-buy' },
+      { label: 'Erros comuns', anchor: '#common-mistakes' },
+      { label: 'Fontes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leitura relacionada', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**O armazenamento para IA local são duas tarefas, não uma.** Um SSD NVMe rápido na máquina de inferência carrega os pesos do modelo rapidamente na memória; um NAS armazena a biblioteca de modelos compartilhada e com backup. Compre para a tarefa que você realmente tem — comprar o errado é o erro mais comum.',
+          '**Um NAS não executa inferência.** Nunca carregue modelos para inferência através da rede — é lento demais. O NAS guarda a biblioteca; o SSD da máquina GPU realiza o carregamento. Mantenha esses papéis separados.',
+          '**Escolha para carregamento rápido: Samsung 990 Pro ou WD Black SN850X.** Um SSD NVMe PCIe 4.0 de ponta encurta a espera quando um modelo é carregado do disco para a VRAM. Um modelo de 70B em Q4 pesa aproximadamente 35-42 GB, então a velocidade de carregamento se nota em cada troca de modelo.',
+          '**Escolha para biblioteca compartilhada (mais simples): NAS Synology de 4 baias.** O software DSM da Synology é o mais acessível para times sem especialistas — os backups, os snapshots e o gerenciamento de usuários são feitos com cliques.',
+          '**Escolha para biblioteca compartilhada (mais hardware por dólar): NAS QNAP de 4 baias.** A QNAP costuma oferecer uma CPU mais potente e mais portas a um preço similar, ao custo de uma curva de aprendizado ligeiramente mais acentuada.',
+          '**Execute o NAS em RAID 6.** O RAID 6 sobrevive a duas falhas de disco simultâneas e é o padrão em produção; o RAID 5 com discos grandes arrisca uma segunda falha durante a reconstrução de 24-48 horas.',
+          '**RAID não é um backup.** O RAID protege contra falha de disco, não contra ransomware, roubo ou exclusão. Siga a regra 3-2-1: 3 cópias, 2 tipos de mídia, 1 fora do local.',
+          '**Os preços subiram em 2026.** A escassez de chips de memória elevou os preços de NAND e SSD. Trate cada preço aqui como um instantâneo de maio de 2026 e verifique novamente antes de comprar.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Fatos rápidos',
+        items: [
+          '**Dois papéis:** SSD NVMe = carregamento rápido de modelos na máquina GPU; NAS = biblioteca compartilhada e com backup.',
+          '**Referência de tamanho de modelos:** um modelo de 7B em Q4 pesa aproximadamente 4-5 GB; um modelo de 70B em Q4 pesa aproximadamente 35-42 GB.',
+          '**RAID 6:** sobrevive a 2 falhas de disco simultâneas; a capacidade utilizável é aproximadamente 50% da bruta (4x 4 TB = ~8 TB utilizáveis).',
+          '**Velocidade de rede:** um NAS na mesma LAN gigabit é suficiente para transferir um modelo de 35 GB (aproximadamente 1 hora); o 10 GbE só importa para times com mais de ~20 usuários.',
+          '**Regra de backup:** 3-2-1 — 3 cópias, 2 tipos de mídia, 1 fora do local. Só RAID não é um backup.',
+          '**Desenvolvedor solo:** um SSD interno rápido mais uma unidade de backup externa costuma ser melhor que comprar um NAS.',
+          '**Realidade de preços 2026:** a escassez de chips de memória elevou os preços dos SSDs; trate os números como um instantâneo de maio de 2026.',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: 'Escolha do editor: NAS Synology de 4 baias + SSD Samsung 990 Pro',
+        sponsoredSlot: true,
+        content:
+          '**Para um time pequeno que constrói uma biblioteca de modelos de IA local, a combinação que realiza bem ambas as tarefas de armazenamento é um NAS Synology de 4 baias para a biblioteca e um SSD NVMe Samsung 990 Pro na máquina de inferência.** O software DSM da Synology faz com que RAID 6, os snapshots programados e a configuração de backup sejam acessíveis sem um especialista em armazenamento, e uma unidade de 4 baias oferece aproximadamente 8 TB utilizáveis em RAID 6 — suficiente para uma biblioteca grande de modelos quantizados. O Samsung 990 Pro cuida da outra tarefa: carregamento rápido dos pesos do modelo do disco para a VRAM em cada troca de modelo. Um desenvolvedor solo pode dispensar o NAS completamente e combinar o SSD com uma única unidade de backup externa. Escolha a QNAP em vez da Synology só se você especificamente quer mais CPU e portas por dólar e aceita uma configuração mais complexa.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'Esta escolha do editor reflete apenas a relação capacidade-preço. A PromptQuorum não está inscrita em nenhum programa de afiliados e os links abaixo não levam etiquetas de afiliado — são links de referência simples que não geram comissão.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Synology+4-bay+NAS',
+            productName: 'Synology 4-Bay NAS',
+            productCategory: 'storage',
+            priceRange: '450-650',
+            label: 'Ver preço do NAS Synology de 4 baias na Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Samsung+990+Pro+2TB',
+            productName: 'Samsung 990 Pro 2TB NVMe SSD',
+            productCategory: 'storage',
+            priceRange: '150-250',
+            label: 'Ver preço do Samsung 990 Pro na Amazon',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Como o NAS e o SSD se comparam para IA local em 2026',
+        content:
+          'A tabela separa as duas tarefas de armazenamento. As linhas de NAS cobrem o papel de biblioteca compartilhada; as linhas de SSD cobrem o papel de carregamento rápido. Os números de capacidade e RAID baseiam-se em configurações padrão de 4 baias. Os preços são um instantâneo de maio de 2026 — a escassez de chips de memória de 2026 elevou os preços dos SSDs, então confirme o número atual antes de comprar. Os preços dos NAS são apenas de hardware e excluem os discos.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Para os modelos de IA local, um SSD NVMe realiza o carregamento rápido no momento da inferência e um NAS guarda a biblioteca compartilhada e com backup — compre cada um para o seu próprio trabalho, não um para ambos.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Imagine o SSD como a bancada da cozinha onde você realmente cozinha e o NAS como a despensa onde tudo é guardado. Você cozinha rápido na bancada; mantém o estoque seguro na despensa. Cozinhar na despensa é lento, e uma bancada sem despensa fica sem espaço.',
+          },
+        ],
+        columns: ['Armazenamento', 'Papel', 'Capacidade', 'Redundância', 'Preço (maio 2026)', 'Melhor para'],
+        rows: [
+          {
+            'Armazenamento': 'NAS Synology de 4 baias',
+            'Papel': 'Biblioteca de modelos compartilhada',
+            'Capacidade': '~8 TB utilizáveis em RAID 6 (4x 4 TB)',
+            'Redundância': 'RAID 6 — sobrevive a 2 falhas de disco',
+            'Preço (maio 2026)': '~$450-650 só hardware',
+            'Melhor para': 'Times que querem o software mais simples',
+          },
+          {
+            'Armazenamento': 'NAS QNAP de 4 baias',
+            'Papel': 'Biblioteca de modelos compartilhada',
+            'Capacidade': '~8 TB utilizáveis em RAID 6 (4x 4 TB)',
+            'Redundância': 'RAID 6 — sobrevive a 2 falhas de disco',
+            'Preço (maio 2026)': '~$450-650 só hardware',
+            'Melhor para': 'Times que querem mais CPU e portas',
+          },
+          {
+            'Armazenamento': 'Samsung 990 Pro NVMe SSD',
+            'Papel': 'Carregamento rápido de modelos',
+            'Capacidade': '1-4 TB por disco',
+            'Redundância': 'Nenhuma — combine com um backup',
+            'Preço (maio 2026)': '~$150-250 para 2 TB',
+            'Melhor para': 'Carregamento mais rápido, máquina única',
+          },
+          {
+            'Armazenamento': 'WD Black SN850X NVMe SSD',
+            'Papel': 'Carregamento rápido de modelos',
+            'Capacidade': '1-4 TB por disco',
+            'Redundância': 'Nenhuma — combine com um backup',
+            'Preço (maio 2026)': '~$150-250 para 2 TB',
+            'Melhor para': 'Carregamento rápido, alternativa de valor',
+          },
+          {
+            'Armazenamento': 'Disco USB externo',
+            'Papel': 'Backup sem conexão',
+            'Capacidade': '2-8 TB',
+            'Redundância': 'Nenhuma — é o backup',
+            'Preço (maio 2026)': '~$80-200',
+            'Melhor para': 'Desenvolvedores solo, cópia fora do local',
+          },
+        ],
+      },
+      whichStorage: {
+        id: 'which-storage',
+        title: 'Qual armazenamento você deve comprar?',
+        content:
+          '**O tamanho do seu time decide se você precisa de um NAS; a máquina de inferência sempre precisa de um SSD rápido.** Encontre a linha que corresponde à sua situação.',
+        columns: ['Sua situação', 'Compre isto'],
+        rows: [
+          { 'Sua situação': 'Sou um desenvolvedor solo com uma máquina', 'Compre isto': 'SSD NVMe rápido + uma unidade de backup externa — dispense o NAS' },
+          { 'Sua situação': 'Quero o carregamento de modelos mais rápido possível', 'Compre isto': 'SSD NVMe Samsung 990 Pro na máquina GPU' },
+          { 'Sua situação': 'Quero carregamento rápido a um preço ligeiramente menor', 'Compre isto': 'SSD NVMe WD Black SN850X' },
+          { 'Sua situação': 'Meu time de 3-10 pessoas compartilha uma biblioteca de modelos', 'Compre isto': 'NAS Synology de 4 baias em RAID 6' },
+          { 'Sua situação': 'Quero mais CPU e portas por dólar e aceito uma configuração mais complexa', 'Compre isto': 'NAS QNAP de 4 baias em RAID 6' },
+          { 'Sua situação': 'Preciso do software de backup e snapshots mais simples', 'Compre isto': 'Synology — o DSM é o mais intuitivo' },
+          { 'Sua situação': 'Não tenho certeza e quero uma opção segura por padrão', 'Compre isto': 'SSD Samsung 990 Pro agora; adicione um NAS Synology quando o time crescer' },
+        ],
+      },
+      synologySection: {
+        id: 'synology',
+        title: 'NAS Synology: a biblioteca compartilhada mais simples',
+        content:
+          '**Um NAS Synology de 4 baias é a escolha quando você quer uma biblioteca de modelos compartilhada que uma pessoa sem conhecimentos especializados consiga configurar e manter — o seu software DSM faz com que RAID 6, os snapshots e o backup sejam acessíveis com cliques.** O papel de biblioteca é exatamente para o que um NAS foi projetado: muitas máquinas acessam o mesmo conjunto de arquivos de modelos GGUF, e o NAS os mantém redundantes e com backup.',
+        items: [
+          '**Software:** o Synology DSM é o sistema operacional NAS mais acessível — a configuração de RAID, os snapshots programados e o backup na nuvem são assistentes guiados, não arquivos de configuração.',
+          '**Capacidade:** uma unidade de 4 baias com quatro discos de 4 TB oferece aproximadamente 8 TB utilizáveis em RAID 6 — espaço para uma biblioteca grande de modelos quantizados (um modelo de 70B em Q4 pesa aproximadamente 35-42 GB).',
+          '**Rede:** um NAS na mesma LAN gigabit transfere um modelo de 35 GB em aproximadamente uma hora; isso é suficiente para o papel de biblioteca. O 10 GbE só importa a partir de aproximadamente 20 usuários.',
+          '**Preço:** aproximadamente $450-650 só de hardware como instantâneo de maio de 2026; orce os discos à parte.',
+          '**Por que comprar a Synology:** você quer uma biblioteca compartilhada e com backup com o menor esforço de configuração e manutenção.',
+          '**Por que evitar a Synology:** um desenvolvedor solo com uma máquina não precisa de um NAS — um SSD mais uma unidade externa é mais barato e simples.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Use discos certificados para NAS em um NAS, não discos de desktop. Os discos para NAS são projetados para funcionamento contínuo e tolerância a vibrações em um chassi de múltiplas baias. Orce os discos separadamente — os preços de lista dos NAS são apenas de hardware.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Synology+DS923+NAS',
+            productName: 'Synology DS923+ 4-Bay NAS',
+            productCategory: 'storage',
+            priceRange: '450-650',
+            label: 'Ver preço do NAS Synology na Amazon',
+          },
+        ],
+      },
+      qnapSection: {
+        id: 'qnap',
+        title: 'NAS QNAP: mais hardware por dólar',
+        content:
+          '**Um NAS QNAP de 4 baias é a escolha quando você quer uma CPU mais potente e mais conectividade por dólar que a Synology, e aceita uma configuração ligeiramente mais complexa.** Ele cumpre o mesmo papel de biblioteca compartilhada — armazenamento GGUF redundante e com backup acessível por várias máquinas — com mais margem para serviços adicionais.',
+        items: [
+          '**Hardware:** os modelos QNAP costumam incluir uma CPU mais rápida e mais portas (incluindo opções de rede mais rápidas) a um preço similar ao modelo Synology comparável.',
+          '**Software:** o QTS é capaz mas menos guiado que o Synology DSM — espere mais menus e uma configuração inicial mais complexa.',
+          '**Capacidade:** uma unidade de 4 baias em RAID 6 com quatro discos de 4 TB oferece aproximadamente 8 TB utilizáveis — a mesma margem de biblioteca que o equivalente Synology.',
+          '**Preço:** aproximadamente $450-650 só de hardware como instantâneo de maio de 2026, discos à parte.',
+          '**Por que comprar a QNAP:** você quer mais CPU e opções de rede mais rápidas por dólar, e se sente confortável com uma configuração menos guiada.',
+          '**Por que evitar a QNAP:** se o time não tem especialistas em armazenamento e quer o software mais simples possível, o Synology DSM é o caminho mais fácil.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Synology e QNAP cumprem o mesmo papel para uma biblioteca de modelos de IA local. Escolha a QNAP para mais hardware por dólar, a Synology para a curva de aprendizado de software mais suave — o resultado de armazenamento é o mesmo.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=QNAP+TS-464+NAS',
+            productName: 'QNAP TS-464 4-Bay NAS',
+            productCategory: 'storage',
+            priceRange: '450-650',
+            label: 'Ver preço do NAS QNAP na Amazon',
+          },
+        ],
+      },
+      ssdsSection: {
+        id: 'ssds',
+        title: 'SSDs rápidos para carregamento de modelos: Samsung 990 Pro e WD Black SN850X',
+        content:
+          '**Um SSD NVMe PCIe 4.0 de ponta na máquina de inferência é o que encurta a espera quando um modelo é carregado do disco para a VRAM — o Samsung 990 Pro e o WD Black SN850X são as duas opções.** Esta é a outra tarefa de armazenamento: não a biblioteca, mas o disco do qual a máquina GPU lê os pesos em cada troca de modelo.',
+        items: [
+          '**Samsung 990 Pro:** um SSD NVMe PCIe 4.0 de ponta; a opção recomendada para o carregamento de modelos mais rápido. Um modelo de 70B em Q4 pesa aproximadamente 35-42 GB, então a velocidade de leitura se nota em cada troca de modelo.',
+          '**WD Black SN850X:** um SSD NVMe PCIe 4.0 de ponta comparável; a alternativa de valor quando o Samsung tem um preço mais alto no momento.',
+          '**Capacidade:** 2 TB é o ponto ideal prático para um conjunto de trabalho na máquina; 4 TB se você mantém muitos modelos grandes carregados localmente em vez de no NAS.',
+          '**Preço:** aproximadamente $150-250 para um disco de 2 TB como instantâneo de maio de 2026 — a escassez de chips de memória elevou os preços de NAND, então confirme antes de comprar.',
+          '**Por que comprar um SSD NVMe de ponta:** o tempo de carregamento do modelo se nota em cada troca, e um SSD rápido elimina segundos de cada uma.',
+          '**Por que evitar o topo de linha:** se você carrega um modelo e raramente troca, um SSD NVMe intermediário é suficiente — a velocidade de leitura de topo de linha importa mais com trocas frequentes.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'O SSD serve para carregar modelos na VRAM, não para a inferência em si — a inferência é executada na VRAM uma vez que o modelo está carregado. Um SSD rápido encurta a espera de carregamento; ele não muda os tokens por segundo uma vez que um modelo está em execução.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Samsung+990+Pro+2TB+NVMe',
+            productName: 'Samsung 990 Pro 2TB NVMe SSD',
+            productCategory: 'storage',
+            priceRange: '150-250',
+            label: 'Ver preço do Samsung 990 Pro na Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=WD+Black+SN850X+2TB',
+            productName: 'WD Black SN850X 2TB NVMe SSD',
+            productCategory: 'storage',
+            priceRange: '150-250',
+            label: 'Ver preço do WD Black SN850X na Amazon',
+          },
+        ],
+      },
+      raidBackup: {
+        id: 'raid-backup',
+        title: 'RAID e backup: por que RAID 6 e a regra 3-2-1',
+        content:
+          '**Execute um NAS em RAID 6 e trate o RAID como proteção contra falhas de disco — nunca como um backup.** O RAID 6 mantém os dados seguros diante de duas falhas de disco simultâneas; um backup real protege contra o que o RAID não pode.',
+        items: [
+          '**RAID 6 é o padrão em produção.** Sobrevive a 2 falhas de disco simultâneas e oferece aproximadamente 50% de capacidade utilizável (4x 4 TB = ~8 TB utilizáveis).',
+          '**Evite o RAID 5 com discos grandes.** Uma reconstrução de RAID 5 com discos grandes leva 24-48 horas, e um segundo disco que falhe durante essa janela perde tudo. O RAID 6 absorve essa segunda falha.',
+          '**RAID não é um backup.** O RAID não faz nada contra ransomware, exclusão acidental, roubo ou um chassi com defeito. Você ainda precisa de backups reais.',
+          '**Siga a regra 3-2-1.** Mantenha 3 cópias da biblioteca de modelos, em 2 tipos de mídia, com 1 cópia fora do local — por exemplo NAS mais disco USB externo mais uma cópia na nuvem.',
+          '**Verifique com checksums.** Armazene um hash SHA-256 para cada arquivo de modelo e verifique-o no download e na restauração — os arquivos GGUF grandes podem corromper silenciosamente.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'O RAID 6 protege uma biblioteca de modelos de IA local contra duas falhas de disco simultâneas, mas não é um backup — a regra 3-2-1 continua valendo porque o RAID não consegue impedir ransomware, exclusão nem roubo.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'O RAID é como ter estepes no carro: um pneu furado não te deixa na mão. Mas os estepes não ajudam se o carro inteiro for roubado. Um backup é a cópia separada guardada em outro lugar, e você precisa dos dois.',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: 'Fluxograma de decisão: escolha o seu armazenamento em quatro perguntas',
+        content:
+          '**Quatro perguntas, em ordem, guiam a maioria dos compradores para o armazenamento correto.**',
+        items: [
+          '**1. Várias máquinas ou pessoas compartilham a biblioteca de modelos?** Não: um SSD rápido mais uma unidade de backup externa é suficiente. Sim: você precisa de um NAS — continue.',
+          '**2. Synology ou QNAP?** Software mais simples para um time sem especialistas: Synology. Mais CPU e portas por dólar: QNAP.',
+          '**3. Qual SSD para a máquina de inferência?** Carregamento mais rápido: Samsung 990 Pro. A mesma categoria a um preço menor quando há desconto: WD Black SN850X.',
+          '**4. O NAS tem backup fora do local?** Se não, adicione a terceira cópia — o RAID 6 não é um backup; aplique a regra 3-2-1 antes de entrar em produção.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Escolha o armazenamento para IA local decidindo primeiro se a biblioteca é compartilhada, segundo Synology versus QNAP, terceiro qual SSD, e por último se o NAS tem backup fora do local.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Comece por verificar se mais de uma máquina acessa a biblioteca de modelos. Se não, um SSD e uma unidade externa te cobrem. Se sim, você precisa de um NAS, e as únicas perguntas em aberto são qual marca, qual SSD para a máquina GPU, e se você tem um backup real fora do local.',
+          },
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Onde comprar e preços',
+        content:
+          '**Os NAS e os SSDs estão amplamente disponíveis nos principais varejistas — compre de um vendedor com uma política de devolução clara porque o armazenamento é um componente que você não pode testar antes de instalar.** Os links abaixo são links simples de busca de produtos; eles não levam etiquetas de afiliado e não geram comissão.',
+        items: [
+          '**Onde comprar:** Amazon e Newegg oferecem armazenamento Synology, QNAP, Samsung e WD. Os NAS costumam ser vendidos só de hardware — orce os discos separadamente.',
+          '**Compre discos certificados para NAS em um NAS:** os discos de desktop não são projetados para funcionamento contínuo em múltiplas baias. Ajuste o número de discos ao seu plano de RAID 6.',
+          '**Os preços dos SSDs variaram em 2026:** a escassez de chips de memória elevou os preços de NAND — compare o Samsung 990 Pro e o WD Black SN850X no dia da compra, já que o mais barato alterna.',
+          '**Verifique a garantia:** os SSDs NVMe de ponta costumam ter uma garantia de 5 anos com uma classificação de durabilidade indicada (TBW). Confirme ambas para o modelo escolhido.',
+          '**Margem de capacidade:** as bibliotecas de modelos crescem. Compre mais capacidade no NAS do que você acha que precisa hoje — redimensionar uma matriz RAID mais tarde é problemático.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Como a escassez de chips de memória de 2026 mexeu nos preços dos SSDs, cada número deste guia é um instantâneo de maio de 2026. Abra o anúncio atual do varejista antes de comprar e compare os discos Samsung e WD nesse dia — o melhor valor alterna.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Synology+NAS',
+            productName: 'Synology NAS',
+            productCategory: 'storage',
+            priceRange: '450-650',
+            label: 'Ver NAS Synology na Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=QNAP+NAS',
+            productName: 'QNAP NAS',
+            productCategory: 'storage',
+            priceRange: '450-650',
+            label: 'Ver NAS QNAP na Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Samsung+990+Pro+NVMe+SSD',
+            productName: 'Samsung 990 Pro NVMe SSD',
+            productCategory: 'storage',
+            priceRange: '150-400',
+            label: 'Ver SSD Samsung 990 Pro na Amazon',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=WD+Black+SN850X+NVMe+SSD',
+            productName: 'WD Black SN850X NVMe SSD',
+            productCategory: 'storage',
+            priceRange: '150-400',
+            label: 'Ver SSD WD Black SN850X na Amazon',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erros comuns ao comprar armazenamento para modelos de IA local',
+        items: [
+          '**Carregar modelos para inferência através da rede.** Um NAS guarda a biblioteca; ele não alimenta a inferência. A latência de rede faz com que carregar pesos através da LAN no momento da inferência seja lento demais. Carregue de um SSD local; mantenha a biblioteca no NAS.',
+          '**Comprar um NAS quando o que você precisava era um SSD.** Um desenvolvedor solo com uma máquina raramente precisa de um NAS. O que se precisa é carregamento rápido e um backup — isso é um bom SSD mais uma unidade externa.',
+          '**Usar RAID 5 com discos grandes.** Uma reconstrução de RAID 5 com discos grandes leva 24-48 horas, e uma segunda falha durante essa janela é fatal. Use RAID 6 para qualquer biblioteca em produção.',
+          '**Tratar o RAID como um backup.** O RAID só protege contra falhas de disco — não contra ransomware, exclusão nem roubo. Siga a regra 3-2-1: 3 cópias, 2 tipos de mídia, 1 fora do local.',
+          '**Colocar discos de desktop em um NAS.** Os discos certificados para NAS são projetados para funcionamento contínuo em múltiplas baias. Os discos de desktop falham antes nesse ambiente.',
+          '**Subestimar a capacidade.** As bibliotecas de modelos crescem de forma constante. Compre mais capacidade no NAS do que a biblioteca de hoje precisa — ampliar uma matriz RAID mais tarde é problemático.',
+          '**Fixar-se em uma só marca de SSD.** A escassez de memória de 2026 mexeu nos preços, então o mais barato entre o Samsung 990 Pro e o WD Black SN850X alterna. Compare ambos no dia da compra.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          '[O melhor NAS e armazenamento para modelos de IA local](/pt/local-llms/best-nas-storage-local-llm) — guia da PromptQuorum sobre dimensionamento de NAS, níveis de RAID e a regra de backup 3-2-1 para bibliotecas de modelos de LLM locais.',
+          '[Synology — Documentação de produtos NAS](https://www.synology.com/en-us/products) — especificações oficiais da Synology para número de baias, níveis de RAID compatíveis e software DSM.',
+          '[QNAP — Documentação de produtos NAS](https://www.qnap.com/en/product/) — especificações oficiais da QNAP para CPU, rede e software QTS.',
+          '[Samsung — Especificações do SSD NVMe 990 Pro](https://www.samsung.com/us/computing/memory-storage/solid-state-drives/) — números oficiais da Samsung de capacidade, interface e durabilidade do SSD NVMe.',
+          '[Western Digital — Especificações do WD Black SN850X](https://www.westerndigital.com/products/internal-drives/wd-black-sn850x-nvme-ssd) — números oficiais da WD de capacidade, interface e garantia do SSD NVMe.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Eu preciso de um NAS para modelos de IA local, ou só de um SSD?',
+            a: 'Depende de se a biblioteca de modelos é compartilhada. Um desenvolvedor solo com uma máquina normalmente só precisa de um SSD NVMe rápido para carregar modelos mais uma unidade externa para backup — um NAS adiciona custo sem benefício. Um time de várias pessoas que compartilha uma biblioteca de modelos precisa de um NAS para armazenamento redundante, com backup e acessível em rede. O SSD e o NAS fazem trabalhos distintos.',
+          },
+          {
+            q: 'Posso executar inferência diretamente de um NAS?',
+            a: 'Não — um NAS é para armazenamento, não para inferência. Carregar os pesos do modelo na VRAM através da rede é lento demais para uso em tempo real. Mantenha a biblioteca de modelos no NAS, copie ou carregue o modelo de que você precisa no SSD local da máquina de inferência, e execute a inferência a partir daí. A inferência em si é executada na VRAM da GPU uma vez que o modelo está carregado.',
+          },
+          {
+            q: 'Synology ou QNAP para uma biblioteca de modelos de IA local?',
+            a: 'Ambos cumprem o mesmo papel de biblioteca compartilhada. Escolha a Synology se você quer o software mais simples — o seu sistema operacional DSM faz com que RAID 6, os snapshots e o backup sejam acessíveis com cliques, o que se adapta a um time sem especialistas em armazenamento. Escolha a QNAP se você quer uma CPU mais potente e mais portas por dólar e aceita uma configuração mais complexa. O resultado de armazenamento é idêntico.',
+          },
+          {
+            q: 'Qual SSD é mais rápido para carregar LLMs locais?',
+            a: 'Um SSD NVMe PCIe 4.0 de ponta — o Samsung 990 Pro ou o WD Black SN850X. Ambos oferecem altas velocidades de leitura sequencial, que é o que encurta a espera quando um modelo grande é carregado do disco para a VRAM. Um modelo de 70B em Q4 pesa aproximadamente 35-42 GB, então a velocidade de leitura se nota em cada troca de modelo. O Samsung é a opção padrão; o WD é a alternativa de valor.',
+          },
+          {
+            q: 'Por que RAID 6 em vez de RAID 5 para um NAS?',
+            a: 'O RAID 6 sobrevive a duas falhas de disco simultâneas; o RAID 5 só sobrevive a uma. Uma reconstrução de RAID 5 com discos grandes leva 24-48 horas, e se um segundo disco falhar durante essa janela toda a matriz é perdida. O RAID 6 absorve essa segunda falha, por isso é o padrão em produção para uma biblioteca de modelos que você não pode se dar ao luxo de perder.',
+          },
+          {
+            q: 'O RAID é um backup?',
+            a: 'Não. O RAID só protege contra falhas de disco. Ele não faz nada contra ransomware, exclusão acidental, roubo ou um chassi com defeito. Você ainda precisa de backups reais. Siga a regra 3-2-1: mantenha 3 cópias da biblioteca de modelos, em 2 tipos de mídia distintos, com 1 cópia armazenada fora do local.',
+          },
+          {
+            q: 'Quanto armazenamento eu preciso para uma biblioteca de modelos de IA local?',
+            a: 'Dimensione a partir dos tamanhos dos seus modelos. Um modelo de 7B em Q4 pesa aproximadamente 4-5 GB; um modelo de 70B em Q4 pesa aproximadamente 35-42 GB. Um NAS de 4 baias em RAID 6 com quatro discos de 4 TB oferece aproximadamente 8 TB utilizáveis, suficiente para uma biblioteca grande de modelos quantizados. As bibliotecas de modelos crescem, então compre mais capacidade do que o conjunto atual precisa.',
+          },
+          {
+            q: 'Os preços dos SSDs mudaram em 2026?',
+            a: 'Sim. A escassez de chips de memória de 2026 elevou os preços de NAND e SSD acima dos níveis anteriores. Cada preço deste guia é um instantâneo de maio de 2026. Confirme o preço atual no anúncio do varejista antes de comprar, e compare o Samsung 990 Pro com o WD Black SN850X nesse dia — o mais barato dos dois alterna com o mercado.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          '[Planeje o dimensionamento de NAS e o backup para uma biblioteca de LLM local](/pt/local-llms/best-nas-storage-local-llm) — os detalhes sobre níveis de RAID e backup 3-2-1 por trás deste guia.',
+          '[Configure uma stack de LLM local para um time distribuído](/pt/local-llms/local-llm-setup-for-teams) — onde o armazenamento compartilhado se encaixa em uma implantação de LLM local para múltiplos usuários.',
+          '[Construa um fluxo de trabalho de LLM local seguro e sem conexão](/pt/local-llms/secure-offline-local-llm-workflow) — padrões de armazenamento isolado e manuseio de modelos.',
+          '[Entenda como a quantização determina o tamanho do arquivo do modelo](/pt/local-llms/llm-quantization-explained) — por que um modelo Q4 tem o tamanho que tem, o que determina os seus cálculos de armazenamento.',
+        ],
+      },
+    },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'O melhor NAS e armazenamento para modelos de IA local 2026: guia de compra',
+      description: 'Comparativo de NAS Synology e QNAP mais SSDs Samsung e WD para modelos de IA local: redundância RAID 6, carregamento rápido de modelos, capacidade e preços de maio de 2026.',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-nas-storage-local-ai-models-2026?lang=pt',
+      inLanguage: 'pt',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+},
 }

@@ -749,6 +749,147 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Hardware-Specific',
+    title: 'O Mac Mini M4 é bom para LLMs locais em 2026?',
+    seoTitle: 'Mac Mini M4 para LLMs locais 2026 | Prompt Bites',
+    metaDescription: 'Sim, o Mac Mini M4 roda LLMs locais bem. O M4 Pro com 24 GB de memória unificada lida com modelos 8B facilmente e é a melhor opção Apple em custo-benefício.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Mac Mini M4', 'Mac Mini M4 Pro'],
+    educationalLevel: 'Intermediate',
+    audience: 'Compradores avaliando um Mac Mini M4 para executar LLMs localmente',
+    affiliateDisclosure: true,
+    parentArticle: '/local-llms/best-mini-pcs-local-llm',
+    siblingBites: ['best-mini-pc-for-local-llm', 'best-egpu-ollama-macbook'],
+    is_living_page: false,
+    readTime: '4 min de leitura',
+    leadAnswerBlock:
+      'Sim, o Mac Mini M4 é bom para LLMs locais. A configuração M4 Pro com 24 GB de memória unificada roda modelos 8B facilmente e é a melhor opção Apple em custo-benefício para inferência local. Memória unificada significa que a RAM é compartilhada entre CPU e GPU, portanto não há teto de VRAM separado.',
+    toc: [
+      { label: 'Melhor escolha: Mac Mini M4 Pro 24 GB', anchor: '#best-pick' },
+      { label: 'Configurações do Mac Mini M4 comparadas', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leituras relacionadas', anchor: '#related' },
+    ],
+    intro:
+      'O Mac Mini M4 é uma máquina capaz para LLMs locais porque o Apple Silicon usa memória unificada: a mesma RAM serve tanto à CPU quanto à GPU. Isso elimina o teto fixo de VRAM que limita os mini PCs com GPU discreta. A questão é qual configuração comprar.',
+    quickAnswerTop: {
+      pt: {
+        question: 'O Mac Mini M4 é bom para executar LLMs locais?',
+        answer: 'Sim — Mac Mini M4 Pro com 24 GB de memória unificada roda Llama 3 8B a ~36 tok/s via MLX. A melhor opção Apple em custo-benefício a $1.599.',
+        bullets: [
+          'M4 base (16 GB) roda modelos 7B facilmente, mas não consegue carregar 14B com qualidade completa.',
+          'M4 Pro 24 GB gerencia Qwen 14B Q4 a ~20 tok/s — o ponto prático ideal.',
+          'M4 Pro 48 GB roda Qwen 32B Q4 a ~12 tok/s — equivalente a uma RTX 4090 discreta para a maioria das tarefas.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Melhor escolha: Mac Mini M4 Pro com 24 GB de memória unificada — roda modelos 8B facilmente e a maioria dos 14B em Q4',
+          'A arquitetura de memória unificada compartilha a RAM entre CPU e GPU — sem teto de VRAM separado',
+          'O Mac Mini M4 base com 16 GB roda modelos 8B, mas deixa pouca margem para modelos maiores ou contexto longo',
+          'O M4 usa Apple Metal para aceleração GPU; Ollama e LM Studio o suportam sem configuração de drivers',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'Melhor escolha: Mac Mini M4 Pro com 24 GB de memória unificada',
+        content: [
+          '<strong>O Mac Mini M4 Pro com 24 GB de memória unificada é a melhor opção Apple em custo-benefício para LLMs locais porque 24 GB roda confortavelmente modelos 8B e a maioria dos 14B em quantização Q4.</strong> A memória unificada é compartilhada entre CPU e GPU, portanto não há orçamento de VRAM separado para gerenciar.',
+          'Um modelo 8B em Q4 usa aproximadamente 5 GB; um 14B usa aproximadamente 9-10 GB. Com 24 GB no total, o M4 Pro deixa margem suficiente para a janela de contexto, o sistema operacional e outros apps. O Mac Mini M4 base com 16 GB roda modelos 8B, mas tem pouca margem para algo maior.',
+          'O M4 usa Apple Metal para aceleração GPU, e Ollama e LM Studio o suportam sem configuração de drivers. Escolha o M4 base de 16 GB se você só roda modelos 8B e quer o preço mais baixo. Escolha o M4 Pro 24 GB se quiser margem para crescer para modelos 14B. Para preços, verifique os listagens atuais da Apple e varejistas — as configurações variam.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro+24GB',
+            productName: 'Apple Mac Mini M4 Pro 24GB',
+            productCategory: 'mini-pc',
+            label: 'Ver preço do Mac Mini M4 Pro na Amazon',
+          },
+          {
+            url: 'https://www.bestbuy.com/site/searchpage.jsp?st=Mac+Mini+M4+Pro',
+            productName: 'Apple Mac Mini M4 Pro 24GB',
+            productCategory: 'mini-pc',
+            label: 'Ver preço do Mac Mini M4 Pro na Best Buy',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Mac+Mini+M4+16GB',
+            productName: 'Apple Mac Mini M4 16GB',
+            productCategory: 'mini-pc',
+            label: 'Ver preço do Mac Mini M4 base na Amazon',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Configurações do Mac Mini M4 para LLMs locais',
+        content: [
+          '<strong>O fator decisivo é o tamanho da memória unificada — ela define o maior modelo que você pode rodar.</strong> Os preços variam conforme o varejista e a configuração; verifique os listagens atuais antes de comprar.',
+        ],
+        columns: ['Configuração', 'Memória unificada', 'Maior modelo (Q4)', 'Ideal para'],
+        rows: [
+          {
+            'Configuração': 'Mac Mini M4 (base)',
+            'Memória unificada': '16 GB',
+            'Maior modelo (Q4)': '8B confortavelmente',
+            'Ideal para': 'Preço mais baixo, apenas 8B',
+          },
+          {
+            'Configuração': 'Mac Mini M4 Pro',
+            'Memória unificada': '24 GB',
+            'Maior modelo (Q4)': '14B confortavelmente',
+            'Ideal para': 'Melhor custo-benefício — margem para crescer',
+          },
+          {
+            'Configuração': 'Mac Mini M4 Pro (aprimorado)',
+            'Memória unificada': '48 GB+',
+            'Maior modelo (Q4)': 'Classe 30B',
+            'Ideal para': 'Modelos maiores, custo mais alto',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre o Mac Mini M4 para LLMs locais',
+        faqs: [
+          {
+            q: 'O Mac Mini M4 consegue rodar modelos 8B?',
+            a: 'Sim. O Mac Mini M4 base com 16 GB de memória unificada roda modelos 8B em quantização Q4 sem problemas. O M4 Pro com 24 GB os roda com mais margem e também lida com a maioria dos modelos 14B.',
+          },
+          {
+            q: 'O que significa memória unificada para LLMs locais?',
+            a: 'Memória unificada é RAM compartilhada entre CPU e GPU no Apple Silicon. Não há pool de VRAM separado, portanto toda a quantidade de memória está disponível para carregar um modelo. Um Mac Mini M4 Pro de 24 GB pode dedicar a maior parte desses 24 GB para inferência.',
+          },
+          {
+            q: 'Quanta memória devo comprar em um Mac Mini M4 para LLMs?',
+            a: 'Compre 24 GB se quiser rodar modelos 14B confortavelmente. A memória não pode ser atualizada após a compra no Apple Silicon, portanto dimensione para o maior modelo que você espera rodar, não apenas para as necessidades de hoje.',
+          },
+          {
+            q: 'Preciso de software adicional para rodar LLMs em um Mac Mini M4?',
+            a: 'Nenhum driver especial é necessário. Ollama e LM Studio suportam aceleração GPU Apple Metal no M4 de fábrica. Instale o app, baixe um modelo e execute.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Melhor mini PC para LLM local](/pt/prompt-bites/best-mini-pc-for-local-llm) — Mac Mini M4 comparado com mini PCs AMD',
+          '[Melhor eGPU para Ollama em um MacBook](/pt/prompt-bites/best-egpu-ollama-macbook) — por que as eGPUs não ajudam a inferência LLM no Apple Silicon',
+          '[Melhor LLM local para laptop com 16 GB de RAM](/pt/prompt-bites/best-local-llm-16gb-ram-laptop) — seleção de modelos para o nível de 16 GB',
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Hardware-Specific',
     title: '¿Es el Mac Mini M4 bueno para LLMs locales en 2026?',

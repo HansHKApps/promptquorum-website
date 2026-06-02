@@ -2466,4 +2466,443 @@ if __name__ == "__main__":
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
      },
 },
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-14',
+    dateModified: '2026-05-14',
+    next_refresh_due: '2026-11-14',
+    theme: 'Voice, Speech & Multimodal',
+    title: 'Crie um assistente de voz totalmente offline em 2026: Whisper + LLM + Piper (passo a passo)',
+    seoTitle: 'Assistente de voz local 2026: Whisper + LLM + Piper TTS',
+    intro:
+      'Um assistente de voz totalmente offline em 2026 combina três componentes: whisper.cpp para o reconhecimento de voz, um LLM local (Llama 3.3 8B, Phi-4 ou Mistral Small via Ollama) para o raciocínio, e Piper TTS para a saída de áudio. A latência de ponta a ponta em um equipamento de desktop com GPU é de 1 a 2 segundos, comparável à Alexa ou ao Google Assistant. Em um Mac Mini M5, é inferior a 1,5 segundo. Em um Raspberry Pi 5, é de 5 a 8 segundos — suficiente para consultas mãos livres, não para conversas fluidas. Este guia percorre cada camada passo a passo, com tabelas de hardware, código do orquestrador Python, configuração da palavra de ativação e técnicas de otimização de latência.',
+    metaDescription:
+      'whisper.cpp (STT), Ollama + Llama 3.3 8B (raciocínio) e Piper TTS (áudio). Latência 1–2 s em GPU. Orquestrador Python e palavra de ativação. 2026.',
+    twitterDescription:
+      'Assistente de voz offline DIY em 2026: Whisper STT + LLM local + Piper TTS. Sem nuvem, sem assinatura. Guia completo com especificações de hardware, código Python e configuração de palavra de ativação.',
+    audience:
+      'Desenvolvedores e entusiastas que querem um assistente de voz privado e totalmente offline — um substituto para Siri ou Alexa que roda inteiramente em hardware próprio sem dependências de nuvem.',
+    readTime: '14 min de leitura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'assistente de voz offline',
+    targetKeywords: [
+      'criar assistente de voz offline 2026',
+      'pipeline whisper llm piper',
+      'assistente de voz local python',
+      'assistente de voz privado sem nuvem',
+      'whisper.cpp ollama piper',
+      'assistente de voz open source 2026',
+      'assistente de voz DIY raspberry pi',
+      'alternativa alexa offline',
+    ],
+    current_models_mentioned: [
+      'whisper.cpp large-v3',
+      'Whisper small',
+      'Whisper base',
+      'Llama 3.3 8B',
+      'Phi-4',
+      'Phi-3 mini 3.8B',
+      'Mistral Small',
+      'Piper TTS',
+      'Coqui TTS',
+    ],
+    current_hardware_mentioned: [
+      'Raspberry Pi 5 (8 GB)',
+      'Mini PC (16 GB RAM)',
+      'NVIDIA RTX 3060 12 GB',
+      'Mac Mini M5 (24 GB)',
+    ],
+    leadAnswerBlock:
+      '**Um assistente de voz totalmente offline em 2026 requer três componentes: whisper.cpp para o reconhecimento de voz, um LLM local via Ollama para o raciocínio e Piper TTS para a saída de áudio.** Os três se conectam por meio de um orquestrador Python que escuta o áudio, transcreve, envia ao LLM e converte a resposta em voz. Em um equipamento com uma RTX 3060 12 GB de VRAM, a latência de ponta a ponta é de 1 a 2 segundos com Llama 3.3 8B e Whisper small. Em um Mac Mini M5 (24 GB), a latência é de 1 a 1,5 segundo com os mesmos modelos sobre Apple Silicon. Em um Raspberry Pi 5 (8 GB), a latência é de 5 a 8 segundos com Phi-3 mini 3.8B — suficiente para consultas mãos livres com alguma paciência. Adicione um detector de palavra de ativação (OpenWakeWord ou Porcupine) para que o assistente fique sempre escutando sem executar o Whisper continuamente.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Como se constrói um assistente de voz totalmente offline em 2026?',
+        answer:
+          'Combine três componentes: whisper.cpp (reconhecimento de voz), um LLM local via Ollama (raciocínio) e Piper TTS (síntese de voz). Um orquestrador Python conecta os três: áudio do microfone → Whisper → texto → Ollama LLM → texto de resposta → Piper → alto-falante. Adicione um detector de palavra de ativação para evitar executar o Whisper continuamente. O stack completo requer um mínimo de 8–16 GB de RAM (desktop) ou 6 GB de VRAM na GPU. O custo do hardware varia de ~US$ 100 (Raspberry Pi 5) a ~US$ 600 (Mac Mini M5) ou ~US$ 800 (GPU de desktop).',
+        bullets: [
+          'Camada 1 — STT: whisper.cpp (multiplataforma, Metal no Mac) ou faster-whisper (GPU NVIDIA).',
+          'Camada 2 — LLM: Ollama + Llama 3.3 8B (desktop), Phi-4 (notebook/Pi) ou Mistral Small (GPU).',
+          'Camada 3 — TTS: Piper (mais rápido, CPU, todo o hardware), Coqui (melhor qualidade, requer GPU).',
+          'Cola: orquestrador Python — captura de áudio → STT → LLM → TTS → reprodução.',
+          'Palavra de ativação: OpenWakeWord (open-source, MIT) ou Porcupine (Picovoice, nível gratuito para uso pessoal).',
+          'Latência: 1–2 s em GPU de desktop / Mac M5. 5–8 s em Raspberry Pi 5.',
+          'Custo de hardware: Raspberry Pi 5 ~US$ 100, Mini PC ~US$ 300, GPU de desktop ~US$ 800, Mac Mini M5 ~US$ 600.',
+        ],
+        updatedDate: '2026-05-14',
+      },
+    },
+    toc: [
+      { label: 'Pontos principais', anchor: '#key-takeaways' },
+      { label: 'Dados rápidos', anchor: '#quick-facts' },
+      { label: 'Por que construir um assistente de voz local?', anchor: '#why-build' },
+      { label: 'A arquitetura de três camadas', anchor: '#architecture' },
+      { label: 'Requisitos de hardware', anchor: '#hardware' },
+      { label: 'Passo 1: Configurar o reconhecimento de voz', anchor: '#step1-stt' },
+      { label: 'Passo 2: Configurar o LLM local', anchor: '#step2-llm' },
+      { label: 'Passo 3: Configurar a síntese de voz', anchor: '#step3-tts' },
+      { label: 'Passo 4: Conectar o pipeline', anchor: '#step4-pipeline' },
+      { label: 'Passo 5: Detecção de palavra de ativação', anchor: '#step5-wake-word' },
+      { label: 'Otimização de latência', anchor: '#latency' },
+      { label: 'Privacidade e segurança', anchor: '#privacy' },
+      { label: 'Perguntas frequentes', anchor: '#faq' },
+      { label: 'Fontes', anchor: '#sources' },
+      { label: 'Leituras relacionadas', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        title: 'Pontos principais',
+        items: [
+          '**O stack do assistente de voz offline é: whisper.cpp → Ollama LLM → Piper TTS, orquestrado por um script Python.** Os três componentes são gratuitos, open-source e funcionam totalmente offline depois de instalados.',
+          '**Latência de ponta a ponta em GPU de desktop (RTX 3060 12 GB): 1–2 segundos.** Comparável à Alexa e ao Google Assistant — o limiar para que a interação de voz "pareça natural". Use Whisper small e Llama 3.3 8B para esse resultado.',
+          '**O Raspberry Pi 5 (8 GB) é uma plataforma viável, mas lenta.** Com Phi-3 mini 3.8B e Whisper base, a latência é de 5–8 segundos. Útil para consultas mãos livres em que o usuário aceita uma pausa mais longa, não para conversas.',
+          '**O Mac Mini M5 (24 GB de memória unificada) é o ponto ideal entre qualidade e silêncio.** Silencioso em repouso, potente o suficiente para executar Llama 3.3 8B a ~50 tokens/s com Whisper large-v3 a 10× tempo real via Metal. Latência de 1–1,5 segundo.',
+          '**Adicione uma palavra de ativação para não executar o Whisper continuamente.** OpenWakeWord (MIT, gratuito, palavras de ativação personalizadas) é a melhor opção open-source. O Porcupine (Picovoice) tem um nível gratuito para uso pessoal com palavras de ativação predefinidas como "Hey Jarvis".',
+          '**A alucinação do Whisper no silêncio é o bug mais comum do pipeline.** O Whisper transcreverá o silêncio como palavras de preenchimento ou citações dos seus dados de treinamento. Defina um limiar mínimo de energia de áudio antes de passar o áudio ao Whisper e configure `--no-speech-threshold 0.6` no whisper.cpp.',
+          '**Essa configuração gera zero tráfego de rede durante o funcionamento.** Verifique com o Wireshark após a montagem. Nem o áudio, nem as transcrições, nem as consultas ao LLM saem da sua máquina. A conformidade com o RGPD para ferramentas internas é automática — nenhum acordo de tratamento de dados é necessário.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Dados rápidos',
+        items: [
+          '**Camada STT:** whisper.cpp (melhor para Apple Silicon e hardware embarcado), faster-whisper (melhor para pipelines Python com GPU NVIDIA).',
+          '**Camada LLM:** Ollama com Llama 3.3 8B (recomendado), Phi-4 (mais leve, boa qualidade) ou Mistral Small (qualidade comparável ao Llama 3.3 8B).',
+          '**Camada TTS:** Piper (mais rápido, só CPU, tempo real no Pi), Coqui TTS (melhor qualidade, requer GPU).',
+          '**Opções de palavra de ativação:** OpenWakeWord (MIT, totalmente offline), Porcupine (nível gratuito, 1 palavra de ativação personalizada).',
+          '**Hardware mínimo:** Raspberry Pi 5 com 8 GB de RAM (~US$ 100) para uma latência de 5–8 segundos.',
+          '**Hardware recomendado:** Mac Mini M5 24 GB (~US$ 600) ou desktop com RTX 3060 12 GB (~US$ 800) para 1–2 segundos de latência.',
+          '**Idiomas:** o Whisper suporta 99 idiomas. O Piper suporta mais de 20 pacotes de vozes. O desempenho do LLM varia conforme o idioma.',
+        ],
+      },
+      whyBuild: {
+        id: 'why-build',
+        title: 'Por que construir um assistente de voz local?',
+        content:
+          'Alexa, Siri e Google Assistant roteiam a sua voz por servidores na nuvem — o seu áudio é transcrito, processado e registrado pelo fornecedor. Um assistente de voz local processa tudo no seu próprio hardware.',
+        items: [
+          '**Privacidade:** Nenhum áudio sai da sua casa. Nenhum áudio da palavra de ativação é armazenado na nuvem. Sem histórico de conversas em servidores de terceiros. Fundamental para profissionais de saúde, advogados, jornalistas e qualquer pessoa com trabalho sensível.',
+          '**Custo:** Sem assinatura. O Alexa+ custa US$ 4,99/mês. O Google One custa entre US$ 1,99 e US$ 9,99/mês. Um assistente local é um custo único de hardware.',
+          '**Personalização:** Escolha a sua palavra de ativação, personalidade, system prompt e funcionalidades. Adicione comandos personalizados, conecte sistemas de automação residencial local e integre APIs locais.',
+          '**Funcionamento offline:** Funciona sem internet. Um corte de energia (com nobreak) + um corte de internet: o seu assistente local continua funcionando. Útil em chalés, locais remotos e para preparação para emergências.',
+          '**O que você abre mão:** Busca web, integração de automação residencial com nuvens proprietárias, sincronização de calendários com serviços na nuvem e os anos de ajuste com RLHF que tornam a Alexa/Siri fluidas em casos extremos.',
+        ],
+      },
+      architecture: {
+        id: 'architecture',
+        title: 'A arquitetura de três camadas',
+        content:
+          '**O assistente de voz offline consiste em três camadas independentes conectadas por um orquestrador Python.**',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Microfone → whisper.cpp (STT) → Ollama LLM → Piper TTS → alto-falante: três componentes independentes unidos por um orquestrador Python de cerca de 50 linhas.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Pense nisso como uma cadeia de retransmissão telefônica: você fala, o Whisper anota, o LLM pensa em uma resposta e a anota, o Piper a lê em voz alta. Cada passo é um programa separado; o Python passa o texto entre eles.',
+          },
+        ],
+        items: [
+          '**Camada 1 — STT (reconhecimento de voz):** whisper.cpp ou faster-whisper. Converte o áudio do microfone em texto. Funciona offline, sem rede.',
+          '**Camada 2 — LLM (raciocínio):** Ollama servindo Llama 3.3 8B, Phi-4 ou Mistral Small. Pega o texto transcrito + histórico de conversa + system prompt e gera uma resposta. Funciona offline, sem rede.',
+          '**Camada 3 — TTS (síntese de voz):** Piper ou Coqui TTS. Converte o texto de resposta do LLM em áudio e o reproduz pelo alto-falante. Funciona offline, sem rede.',
+          '**Orquestrador:** Um script Python que conecta os três: captura o áudio do microfone → passa ao STT → passa a transcrição ao LLM → passa a resposta ao TTS → reproduz o áudio.',
+          '**Palavra de ativação opcional:** Um detector leve sempre ativo (OpenWakeWord, Porcupine) que ativa o pipeline completo apenas quando a frase de ativação é detectada. Sem isso, o orquestrador executa o whisper.cpp continuamente — consumindo mais CPU e gerando mais falsos positivos.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Requisitos de hardware',
+        content:
+          'Quatro níveis de hardware, ordenados por latência e custo. Todos suportam o stack completo de Whisper + LLM + Piper.',
+        columns: ['Configuração', 'Modelo STT', 'Modelo LLM', 'TTS', 'Custo total', 'Latência ponta a ponta'],
+        rows: [
+          {
+            'Configuração': 'Raspberry Pi 5 (8 GB)',
+            'Modelo STT': 'Whisper base (CPU)',
+            'Modelo LLM': 'Phi-3 mini 3.8B Q4',
+            'TTS': 'Piper (CPU)',
+            'Custo total': '~$100',
+            'Latência ponta a ponta': '5–8 s',
+          },
+          {
+            'Configuração': 'Mini PC (16 GB RAM)',
+            'Modelo STT': 'Whisper small (CPU)',
+            'Modelo LLM': 'Llama 3.3 8B Q4 (CPU)',
+            'TTS': 'Piper (CPU)',
+            'Custo total': '~$300',
+            'Latência ponta a ponta': '3–5 s',
+          },
+          {
+            'Configuração': 'Desktop (RTX 3060 12 GB)',
+            'Modelo STT': 'Whisper large-v3 (GPU)',
+            'Modelo LLM': 'Llama 3.3 8B Q4 (GPU)',
+            'TTS': 'Piper ou Coqui (CPU/GPU)',
+            'Custo total': '~$800',
+            'Latência ponta a ponta': '1–2 s',
+          },
+          {
+            'Configuração': 'Mac Mini M5 (24 GB)',
+            'Modelo STT': 'Whisper large-v3 (Metal)',
+            'Modelo LLM': 'Llama 3.3 8B (Metal)',
+            'TTS': 'Piper (CPU)',
+            'Custo total': '~$600',
+            'Latência ponta a ponta': '1–1,5 s',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'O Mac Mini M5 é o caminho mais econômico para alcançar uma latência inferior a 2 segundos. Ele é silencioso em repouso, executa o Whisper Metal e o Ollama simultaneamente sobre memória unificada e não requer gestão de drivers da NVIDIA.',
+          },
+        ],
+      },
+      step1STT: {
+        id: 'step1-stt',
+        title: 'Passo 1: Configurar o reconhecimento de voz',
+        content:
+          'Instale o whisper.cpp para Apple Silicon e hardware embarcado; instale o faster-whisper para configurações com GPU NVIDIA.',
+        items: [
+          '**Instalar o whisper.cpp:** `git clone https://github.com/ggerganov/whisper.cpp && cd whisper.cpp && make -j4`',
+          '**Baixar o modelo:** `bash ./models/download-ggml-model.sh small` (small = 3,4% de WER, bom equilíbrio entre velocidade e precisão)',
+          '**Testar a transcrição:** `./main -m models/ggml-small.bin -f test.wav` — deve produzir uma saída de texto precisa.',
+          '**Ativar o Metal no Mac:** `make -j4 WHISPER_COREML=1` e depois `bash models/generate-coreml-model.sh small`',
+          '**Seleção do modelo Whisper:** base para Raspberry Pi (1 GB de RAM, baixa latência), small para o equilíbrio ideal (2 GB de RAM, 3,4% de WER), large-v3 para máxima precisão (10 GB de VRAM/RAM).',
+          '**Configurar a supressão de silêncio:** Adicione as flags `--no-speech-threshold 0.6 --suppress-blank` para evitar transcrever o silêncio como texto alucinado.',
+          '**Testar com uma gravação de 10 segundos:** Grave uma frase de teste e verifique se o Whisper a transcreve corretamente. Verifique tanto em condições de ruído quanto com voz tranquila.',
+        ],
+      },
+      step2LLM: {
+        id: 'step2-llm',
+        title: 'Passo 2: Configurar o LLM local',
+        content:
+          'Instale o Ollama e baixe o modelo LLM. Configure um system prompt para o comportamento do assistente de voz — respostas mais curtas, sem markdown, personalidade adequada.',
+        items: [
+          '**Instalar o Ollama:** Baixe de ollama.com. Disponível para macOS, Linux e Windows. Instala em menos de 2 minutos.',
+          '**Baixar o modelo:** `ollama pull llama3.1:8b` (recomendado) ou `ollama pull phi4` (mais leve, adequado para sistemas com 16 GB de RAM).',
+          '**Testar:** `ollama run llama3.1:8b "What is the capital of France?"` — verifique se a resposta é precisa e rápida.',
+          '**System prompt para voz:** Use um system prompt curto e direto: "Você é um assistente de voz útil. Mantenha as respostas concisas — no máximo 1–3 frases. Nunca use listas, markdown ou formatação. Fale de forma natural, como em uma conversa."',
+          '**Temperatura:** Defina a temperatura em 0,3–0,5 para respostas mais previsíveis e factuais. Uma temperatura mais baixa reduz as alucinações nas respostas de voz.',
+          '**Máximo de tokens:** Limite o comprimento da resposta com `--num-predict 150` — respostas longas exigem mais tempo de TTS e parecem artificiais na interação de voz.',
+        ],
+      },
+      step3TTS: {
+        id: 'step3-tts',
+        title: 'Passo 3: Configurar a síntese de voz',
+        content:
+          'Instale o Piper para todos os níveis de hardware. Ele funciona em tempo real na CPU, incluindo o Raspberry Pi, tem mais de 20 pacotes de vozes em diferentes idiomas e não requer GPU.',
+        items: [
+          '**Instalar o Piper:** `pip install piper-tts`',
+          '**Baixar uma voz:** `piper --download-dir voices --update-voices --voice en_US-lessac-medium` (ou qualquer voz da página de vozes do Piper no Hugging Face).',
+          '**Testar:** `echo "Hello, how can I help you today?" | piper --model voices/en_US-lessac-medium.onnx --output-raw | aplay -r 22050 -f S16_LE -c 1`',
+          '**Saída de áudio:** O Piper gera PCM bruto ou WAV. Redirecione para `aplay` (Linux), `afplay` (Mac), ou use a biblioteca Python `sounddevice` para reprodução multiplataforma.',
+          '**Alternativa (melhor qualidade):** Backend Coqui VITS — instale `pip install TTS`, use `tts --model_name tts_models/en/vctk/vits`. Requer ~2 GB de VRAM; 2–3× mais lento do que o Piper, mas notavelmente mais natural.',
+          '**Seleção de voz:** Para assistentes de voz, escolha uma voz de qualidade média em vez de alta — as vozes médias são mais rápidas e a diferença é insignificante por um alto-falante.',
+        ],
+      },
+      step4Pipeline: {
+        id: 'step4-pipeline',
+        title: 'Passo 4: Conectar o pipeline',
+        content:
+          'Um orquestrador Python conecta STT → LLM → TTS. O script captura o áudio do microfone, transcreve com o Whisper, envia a transcrição ao Ollama, converte a resposta em voz com o Piper e a reproduz.',
+        codeBlock: `#!/usr/bin/env python3
+"""Minimal offline voice assistant: Whisper STT + Ollama LLM + Piper TTS."""
+
+import subprocess
+import tempfile
+import sounddevice as sd
+import soundfile as sf
+import numpy as np
+import requests
+import json
+
+SAMPLE_RATE = 16000
+RECORD_SECONDS = 5
+OLLAMA_URL = "http://localhost:11434/api/generate"
+WHISPER_BIN = "./whisper.cpp/main"
+WHISPER_MODEL = "./whisper.cpp/models/ggml-small.bin"
+PIPER_BIN = "piper"
+PIPER_VOICE = "voices/en_US-lessac-medium.onnx"
+SYSTEM_PROMPT = (
+    "You are a helpful voice assistant. Keep responses to 1-3 sentences. "
+    "Never use markdown, bullet points, or formatting. Speak naturally."
+)
+
+conversation_history = []
+
+def record_audio(seconds: int = RECORD_SECONDS) -> np.ndarray:
+    print("Listening...")
+    audio = sd.rec(int(seconds * SAMPLE_RATE), samplerate=SAMPLE_RATE, channels=1, dtype="int16")
+    sd.wait()
+    return audio
+
+def transcribe(audio: np.ndarray) -> str:
+    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
+        sf.write(f.name, audio, SAMPLE_RATE)
+        result = subprocess.run(
+            [WHISPER_BIN, "-m", WHISPER_MODEL, "-f", f.name, "--no-timestamps", "--no-prints"],
+            capture_output=True, text=True
+        )
+    return result.stdout.strip()
+
+def ask_llm(text: str) -> str:
+    conversation_history.append({"role": "user", "content": text})
+    response = requests.post(OLLAMA_URL, json={
+        "model": "llama3.1:8b",
+        "system": SYSTEM_PROMPT,
+        "messages": conversation_history,
+        "stream": False,
+    })
+    reply = response.json()["message"]["content"]
+    conversation_history.append({"role": "assistant", "content": reply})
+    return reply
+
+def speak(text: str) -> None:
+    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
+        subprocess.run(
+            f'echo "{text}" | {PIPER_BIN} --model {PIPER_VOICE} --output_file {f.name}',
+            shell=True, check=True
+        )
+        data, sr = sf.read(f.name)
+        sd.play(data, sr)
+        sd.wait()
+
+def main():
+    print("Voice assistant ready. Press Ctrl+C to stop.")
+    while True:
+        audio = record_audio()
+        transcript = transcribe(audio)
+        if not transcript or len(transcript) < 3:
+            continue
+        print(f"You: {transcript}")
+        response = ask_llm(transcript)
+        print(f"Assistant: {response}")
+        speak(response)
+
+if __name__ == "__main__":
+    main()`,
+        codeLanguage: 'python',
+        callouts: [
+          {
+            type: 'note',
+            text: 'Este é um pipeline mínimo pensado para maior clareza — ele grava áudio de duração fixa. Para produção, use VAD (detecção de atividade de voz) para gravar até que a fala termine em vez de usar uma duração fixa. O faster-whisper inclui o Silero VAD; para o whisper.cpp, use o modo --stream ou implemente um VAD WebRTC com a biblioteca Python webrtcvad.',
+          },
+        ],
+      },
+      step5WakeWord: {
+        id: 'step5-wake-word',
+        title: 'Passo 5: Detecção de palavra de ativação',
+        content:
+          '**Um detector de palavra de ativação executa um modelo leve de forma contínua e ativa o pipeline completo apenas quando detecta a sua frase escolhida.** Sem ele, o Whisper roda continuamente — consumindo mais CPU/GPU e gerando mais falsos positivos com o ruído de fundo.',
+        items: [
+          '**OpenWakeWord (licença MIT):** Totalmente open-source, roda na CPU, suporta palavras de ativação personalizadas mediante fine-tuning com a sua própria frase. Instalação: `pip install openwakeword`. Funciona no Raspberry Pi. A melhor opção para configurações totalmente offline e open-source.',
+          '**Porcupine (Picovoice):** Proprietário, mas com nível gratuito para uso pessoal. As palavras de ativação predefinidas incluem "Alexa", "Hey Siri", "Ok Google" e opções personalizadas como "Hey Jarvis". Muito preciso com baixa taxa de falsos positivos. Instalação: `pip install pvporcupine`.',
+          '**Padrão de integração:** Execute o OpenWakeWord/Porcupine em um loop. Quando a palavra de ativação é detectada, reproduza um som "ding" (retorno ao usuário), ative o pipeline Whisper + LLM + TTS para uma consulta e volte a escutar a palavra de ativação após a reprodução do TTS.',
+          '**Consumo em funcionamento contínuo:** A detecção de palavra de ativação usa ~2–5% de CPU em um Raspberry Pi 5 — insignificante. Você pode deixar o assistente funcionando 24/7 com consumo mínimo.',
+          '**Palavras de ativação personalizadas (OpenWakeWord):** Gere 500 exemplos de áudio positivos e 500 negativos da sua frase de ativação usando síntese de voz, depois ajuste o OpenWakeWord em menos de 30 minutos na CPU. A precisão é comparável ao Porcupine para palavras comuns em inglês.',
+        ],
+      },
+      latencyOptimization: {
+        id: 'latency',
+        title: 'Otimização de latência',
+        content:
+          '**O objetivo de 1–2 segundos é alcançável em hardware de desktop com a configuração adequada.** A latência se distribui entre as três camadas:',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'O STT adiciona 0,2–0,5 s, a latência do primeiro token do LLM adiciona 0,5–1,5 s, o TTS adiciona 0,1–0,3 s — total de 1–2 segundos em GPU de desktop.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'O LLM é o maior gargalo. A otimização mais eficaz consiste em iniciar o streaming da saída do TTS enquanto o LLM gera tokens — o usuário começa a ouvir a resposta antes de o LLM terminar de escrevê-la.',
+          },
+        ],
+        items: [
+          '**Otimização do STT (~0,2–0,5 s):** Use Whisper small em vez de large-v3. Use VAD para cortar o silêncio antes de passar o áudio ao Whisper — áudio mais curto = transcrição mais rápida.',
+          '**Otimização do LLM (~0,5–1,5 s primeiro token):** Pré-carregue o modelo na inicialização (o Ollama faz isso automaticamente). Use quantização Q4_K_M para o melhor equilíbrio entre velocidade e qualidade. Defina `--num-predict 100–150` para limitar o comprimento da resposta.',
+          '**Streaming LLM → TTS:** Transmita a saída do LLM token a token. Inicie o TTS a cada frase completa (detectada por ponto ou ponto de interrogação). Isso reduz a latência percebida em 0,3–0,7 segundos — o usuário ouve o início da resposta enquanto o LLM ainda gera o fim.',
+          '**Otimização do TTS (~0,1–0,3 s):** O Piper gera o primeiro áudio em 50 ms. Inicialize o Piper na inicialização. Use `--output-raw` para transmitir o áudio enquanto ele é gerado em vez de esperar o arquivo completo.',
+          '**Manter os modelos na memória:** O Ollama mantém os modelos quentes na VRAM automaticamente. O whisper.cpp carregado no modo stream permanece na memória. Evite recarregar os modelos entre consultas.',
+          '**Latência-alvo por nível de hardware:** Pi 5: 5–8 s (aceitável para uso não conversacional). Mini PC CPU: 3–5 s (limite para conversa). GPU de desktop: 1–2 s (natural). Mac M5: 1–1,5 s (excelente).',
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'Privacidade e segurança',
+        content:
+          '**Um assistente de voz local corretamente montado gera zero tráfego de rede durante o funcionamento.** Todo o processamento — captura de áudio, reconhecimento de voz, inferência do LLM e TTS — roda inteiramente no seu hardware.',
+        items: [
+          '**Verifique com o Wireshark:** Execute o Wireshark na sua interface de rede durante uma conversa com o assistente. Você não deve ver nenhum pacote vindo do processo do assistente. Qualquer tráfego inesperado indica uma má configuração — verifique se a API externa do Ollama está desativada caso você tenha um IP público.',
+          '**Sem armazenamento de áudio:** Nem o whisper.cpp nem o faster-whisper gravam arquivos de áudio por padrão — eles processam na memória. O orquestrador Python deste guia grava um arquivo WAV temporário para o whisper.cpp, que é excluído após a transcrição.',
+          '**Sem histórico de conversas armazenado:** O histórico de conversas do script de exemplo está apenas na memória e é reiniciado ao reiniciar o programa. Para histórico persistente, implemente um armazenamento explícito com um banco de dados local e criptografia em repouso.',
+          '**Conformidade com o RGPD:** Como todo o processamento é local e nenhum dado sai da sua rede, um assistente de voz local para uso interno não requer um acordo de tratamento de dados. Não existe uma relação controlador/operador de dados com um terceiro.',
+          '**Isolamento de rede:** Para máxima privacidade, adicione uma regra de firewall que bloqueie o tráfego de saída do processo do assistente. O Ollama e o whisper.cpp funcionarão normalmente — eles não requerem acesso à rede depois que os modelos são baixados.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          {
+            q: 'Posso usar um assistente de voz local para controlar a automação residencial?',
+            a: 'Sim, se o seu sistema de automação residencial tiver uma API local. O Home Assistant (HASS) oferece excelente integração local — você pode chamar a API REST do HASS a partir do orquestrador depois que o LLM interpretar o comando. O LLM atua como analisador de intenções: "Acenda as luzes da sala" → JSON estruturado → chamada à API do HASS. Para sistemas de automação residencial proprietários (Ring, Nest, Philips Hue na nuvem) sem suporte de API local, não é possível integrar localmente sem acesso à internet.',
+          },
+          {
+            q: 'Quantos idiomas o assistente de voz local suporta?',
+            a: 'O Whisper suporta 99 idiomas para o reconhecimento de voz. O Piper suporta mais de 20 pacotes de vozes para TTS. O suporte de idiomas do LLM depende do modelo — o Llama 3.3 8B lida bem com inglês, francês, alemão, espanhol, italiano, português e um pouco de japonês/chinês. Para suporte multilíngue completo em idiomas menos comuns, escolha um modelo especificamente treinado para esses idiomas (por exemplo, o Mistral Small tem bom suporte para idiomas europeus).',
+          },
+          {
+            q: 'Qual é o hardware mínimo para obter menos de 2 segundos de latência?',
+            a: 'Um Mac Mini M5 (24 GB, ~US$ 600) ou um desktop com NVIDIA RTX 3060 12 GB (~US$ 400 de GPU, ~US$ 800 no total) alcançam ambos uma latência de 1–2 segundos. Os requisitos principais são: 8+ GB de VRAM na GPU para o Llama 3.3 8B em Q4, mais aceleração Metal ou CUDA para o Whisper. Uma configuração só com CPU e 16 GB de RAM (Mini PC, ~US$ 300) alcança 3–5 segundos — utilizável, mas abaixo do limiar de "sensação natural".',
+          },
+          {
+            q: 'O pipeline Whisper + LLM + Piper funciona no Windows?',
+            a: 'Sim. O whisper.cpp tem instruções de compilação para Windows usando cmake e Visual Studio. O Ollama funciona de forma nativa no Windows 10/11 com suporte de GPU NVIDIA. O Piper tem binários para Windows. O orquestrador Python funciona no Windows com o sounddevice para a captura de áudio. A principal complexidade no Windows é compilar o whisper.cpp a partir do código-fonte — como alternativa, use o faster-whisper (pip install, sem necessidade de compilar) no Windows com GPU NVIDIA.',
+          },
+          {
+            q: 'Como adiciono a busca web ao assistente de voz local?',
+            a: 'Você pode adicionar busca web integrando uma ferramenta de busca local ao orquestrador. Opções: (1) Use a API do DuckDuckGo (gratuita, sem conta) para consultas gerais — analise o resultado e injete-o no prompt do LLM. (2) Use um feed RSS local de notícias para eventos atuais. (3) Use um sistema RAG local (AnythingLLM, PrivateGPT) com a sua própria coleção de documentos para busca específica de um domínio. O LLM então usa o contexto recuperado para responder às perguntas com precisão. Isso adiciona entre 0,5 e 2 segundos de latência conforme o método de busca.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          '[whisper.cpp no GitHub](https://github.com/ggerganov/whisper.cpp) — Código-fonte, instruções de compilação, documentação do modo stream.',
+          '[Ollama em ollama.com](https://ollama.com) — Instalação, biblioteca de modelos, referência de API.',
+          '[Piper TTS no GitHub](https://github.com/rhasspy/piper) — Código-fonte, download de pacotes de vozes, guia de configuração para Raspberry Pi.',
+          '[OpenWakeWord no GitHub](https://github.com/dscripka/openWakeWord) — Código-fonte, guia de treinamento de palavras de ativação personalizadas, arquiteturas compatíveis.',
+          '[Porcupine da Picovoice](https://github.com/Picovoice/porcupine) — SDK de palavra de ativação, condições do nível gratuito, documentação do SDK de Python.',
+          '[Picovoice Console](https://console.picovoice.ai) — Crie uma chave de API gratuita para o Porcupine em uso pessoal.',
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Reconhecimento de voz local 2026: Whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison-2026) — Análise aprofundada da camada STT deste pipeline.',
+          '[TTS local e clonagem de voz 2026: Piper vs Coqui vs XTTS v2](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Análise aprofundada da camada TTS e das opções de clonagem de voz.',
+          '[Pipeline de IA multimodal local 2026](/pt/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Amplie este pipeline de voz com suporte para modelos de visão.',
+          '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) — Instalação do Ollama e gestão de modelos.',
+          '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Seleção de hardware para o pipeline completo de voz + LLM.',
+          '[Construa um assistente de voz local no seu telefone](/pt/power-local-llm/voice-assistant-local-mobile-offline) — A versão móvel deste guia (iPhone + Android).',
+        ],
+      },
+    },
+       schema: {
+       '@context': 'https://schema.org',
+       '@type': 'TechArticle',
+       headline: 'Crie um assistente de voz totalmente offline em 2026: Whisper + LLM + Piper (passo a passo)',
+       description: 'whisper.cpp para STT, Ollama + Llama 3.3 8B para raciocínio, Piper TTS para áudio. Latência de 1–2 s em GPU. Orquestrador Python + configuração de palavra de ativação. 2026.',
+       url: 'https://www.promptquorum.com/pt/power-local-llm/build-local-voice-assistant-2026?lang=pt',
+       inLanguage: 'pt',
+       datePublished: '2026-05-24',
+       dateModified: '2026-05-24',
+       author: { '@type': 'Person', name: 'Hans Kuepper' },
+       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+     },
+},
 }

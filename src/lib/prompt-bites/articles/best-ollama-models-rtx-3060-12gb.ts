@@ -406,6 +406,85 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Quantization & VRAM',
+    title: 'Melhores modelos Ollama para RTX 3060 12 GB?',
+    seoTitle: 'Melhores modelos Ollama RTX 3060 12 GB 2026 | PromptQuorum',
+    metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M para chat (20 tok/s), Qwen 3 Coder 14B Q4 para código. Ambos cabem em 12 GB de VRAM. Resposta rápida do PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Melhores modelos Ollama para RTX 3060 12 GB?',
+        answer: 'Com 12 GB de VRAM, o melhor modelo de uso geral é Llama 3 8B em Q5_K_M, entregando 20–30 tokens por segundo com qualidade equilibrada. Para programação, use Qwen 3 Coder 14B em Q4_K_M. Ambos funcionam a 20–30 tok/s.',
+        bullets: [
+          'Llama 3 8B Q5_K_M: melhor uso geral na RTX 3060',
+          'Qwen 3 Coder 14B Q4_K_M: melhor para programação',
+          'Mistral Small Q6_K: alternativa rápida para chat',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Melhor geral: Llama 3 8B em Q5_K_M — 7 GB de VRAM, ~25 tok/s, excelente qualidade para chat e código',
+          'Melhor para código: Qwen 3 Coder 14B em Q4_K_M — 10 GB de VRAM, melhor pontuação HumanEval na classe 14B',
+          'RTX 3060 12 GB é a única GPU de consumo abaixo de $400 com VRAM suficiente para rodar modelos 14B em Q4',
+        ],
+      },
+      body1: {
+        title: 'Top 5 modelos Ollama para RTX 3060 12 GB',
+        content: [
+          'Em maio de 2026, <strong>a RTX 3060 12 GB é o caminho mais barato para rodar modelos 14B localmente.</strong> Seus 12 GB de VRAM equivalem à RTX 4070 Ti (~$800) e RTX 4080 (~$1.100) a uma fração do custo. Por $280–$350 de segunda mão, você obtém a mesma capacidade de modelo que placas 3× mais caras — limitado apenas pela velocidade bruta, não pelo que pode carregar.',
+          'Os cinco modelos abaixo funcionam com Ollama sem configuração. Os valores de velocidade são com contexto padrão de 2048 tokens em um PC desktop sem offload de CPU.',
+        ],
+        columns: ['Modelo', 'VRAM usada', 'Velocidade'],
+        rows: [
+          { 'Modelo': 'Llama 3 8B Q5_K_M', 'VRAM usada': '7,0 GB', 'Velocidade': '~25 tok/s' },
+          { 'Modelo': 'Qwen 3 Coder 14B Q4_K_M', 'VRAM usada': '10,0 GB', 'Velocidade': '~20 tok/s' },
+          { 'Modelo': 'Mistral Small Q6_K', 'VRAM usada': '6,5 GB', 'Velocidade': '~27 tok/s' },
+          { 'Modelo': 'Phi-4 Q5_K_M', 'VRAM usada': '6,2 GB', 'Velocidade': '~28 tok/s' },
+          { 'Modelo': 'Qwen 14B Q4_K_M', 'VRAM usada': '10,0 GB', 'Velocidade': '~18 tok/s' },
+        ],
+      },
+      body2: {
+        title: 'Como obter o melhor desempenho na RTX 3060',
+        content: [
+          'Para uso geral, execute Llama 3 8B em Q5_K_M com uma janela de contexto de 4096 tokens. Isso usa ~8 GB de VRAM no total e deixa 4 GB de margem — suficiente para evitar estouro de VRAM ao alternar entre modelos.',
+          'Para código, Qwen 3 Coder 14B em Q4_K_M é a escolha clara: supera o Llama 3 8B no HumanEval, cabe em 10 GB de VRAM e lida com Python, TypeScript e Go sem ajuste fino.',
+          'Deixe sempre pelo menos 1,5–2 GB de VRAM livre. Carregar dois modelos em sequência sem descarregar o primeiro provoca estouro de VRAM e força o lento offload para CPU. Para o contexto completo de benchmarks de GPU, consulte <a href="/pt/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">as melhores GPUs para LLMs locais</a>. Se sua GPU tiver menos de 12 GB, consulte <a href="/pt/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">os melhores modelos para 6 GB de VRAM</a>. Para executar a melhor opção de uso geral na sua RTX 3060:',
+        ],
+        codeBlock: 'ollama pull llama3:8b-instruct-q5_K_M\nollama run llama3:8b-instruct-q5_K_M',
+        callouts: [{ type: 'tip', text: 'Pull baixa ~7 GB na primeira execução. As execuções seguintes iniciam instantaneamente do cache. Use <code>--num-ctx 4096</code> se precisar de uma janela de contexto maior.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre modelos para RTX 3060',
+        faqs: [
+          {
+            q: 'A RTX 3060 consegue rodar um modelo 70B?',
+            a: 'Não. Um modelo 70B em Q4_K_M precisa de aproximadamente 40 GB de VRAM. A RTX 3060 12 GB chega no máximo a ~14B modelos em Q4. Consulte <a href="/pt/prompt-bites/vram-for-70b-model" class="text-primary hover:underline">quanta VRAM um modelo 70B precisa</a> para as opções.',
+          },
+          {
+            q: 'A RTX 3060 12 GB é boa para LLMs locais?',
+            a: 'Sim — é a melhor relação custo-benefício neste nível de VRAM. A capacidade de 12 GB permite modelos 14B em Q4, que placas de 8 GB não conseguem executar. O preço de segunda mão é tipicamente $280–$350.',
+          },
+          {
+            q: 'Qual quantização usar na RTX 3060 12 GB?',
+            a: 'Q5_K_M para modelos 7–8B (melhor qualidade dentro do orçamento de 12 GB). Q4_K_M para modelos 13–14B (necessário para caber). Consulte <a href="/pt/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">o que significa Q4_K_M</a> para o compromisso de qualidade.',
+          },
+          {
+            q: 'O Ollama usa automaticamente a GPU RTX 3060?',
+            a: 'Sim. O Ollama detecta GPUs NVIDIA via CUDA automaticamente no Windows e no Linux. Nenhuma configuração manual é necessária. Execute <code>ollama run nomedomodelo</code> e ele carrega completamente na GPU se a VRAM for suficiente.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Quantization & VRAM',
     title: '¿Mejores modelos Ollama para RTX 3060 12 GB?',

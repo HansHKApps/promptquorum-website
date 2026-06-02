@@ -646,6 +646,135 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Hardware-Specific',
+    title: 'Qual é o Melhor Notebook IA Econômico por Menos de $1.000 em 2026?',
+    seoTitle: 'Melhor Notebook IA Econômico abaixo de $1.000 2026 | Prompt Bites',
+    metaDescription:
+      'O melhor notebook IA econômico abaixo de $1.000: um Ryzen 7 com 16 GB de RAM executa LLMs pequenos na CPU. Para inferência GPU, melhor poupar para um MacBook Air.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Laptops Ryzen 7', 'MacBook Air'],
+    educationalLevel: 'Intermediate',
+    audience: 'Compradores com orçamento reduzido que buscam um notebook para experimentar com LLMs locais',
+    affiliateDisclosure: true,
+    parentArticle: '/local-llms/best-laptops-local-llm',
+    siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
+    is_living_page: false,
+    leadAnswerBlock:
+      'O melhor notebook IA econômico por menos de $1.000 é um Ryzen 7 com 16 GB de RAM — executa LLMs pequenos (3B-8B em Q4) na CPU de forma aceitável. Para inferência acelerada por GPU, a faixa abaixo de $1.000 é muito limitada; melhor poupar para um MacBook Air série M, que usa Unified Memory para um trabalho com LLMs locais muito mais rápido. Os preços no seu país podem variar conforme impostos locais.',
+    toc: [
+      { label: 'Melhor escolha: notebook Ryzen 7 + 16 GB de RAM', anchor: '#best-pick' },
+      { label: 'Comparativo de opções econômicas', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leitura relacionada', anchor: '#related' },
+    ],
+    intro:
+      'Por menos de $1.000, um notebook com GPU discreta capaz de rodar um LLM é raro. A escolha realista com esse orçamento é um Ryzen 7 com 16 GB de RAM usando inferência na CPU. Se a aceleração GPU importa, o MacBook Air está logo acima dessa faixa e é o melhor objetivo de economia. Os preços no seu país podem variar.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Melhor escolha abaixo de $1.000: um notebook Ryzen 7 + 16 GB de RAM — executa modelos 3B-8B na CPU em velocidades utilizáveis',
+          'A inferência na CPU nessa faixa entrega ~3-7 tokens por segundo em modelos 7B Q4 — aceitável para tarefas curtas, lento para gerações longas',
+          'Para inferência GPU em tempo real, a faixa abaixo de $1.000 é muito limitada — poupe para um MacBook Air série M com Unified Memory',
+          'Evite notebooks com 8 GB de RAM — não conseguem carregar confortavelmente um modelo 7B junto com o SO e os apps',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'Melhor Escolha: um Notebook Ryzen 7 com 16 GB de RAM',
+        content: [
+          '<strong>O melhor notebook IA econômico por menos de $1.000 é um Ryzen 7 (ou Intel Core i7 equivalente) com 16 GB de RAM — executa modelos 3B e 7-8B na CPU em velocidades utilizáveis.</strong> Modelos como Mistral Small, Llama 3.2 3B e Phi-3 Mini rodam a 3-7 tokens por segundo em inferência CPU, lento mas aceitável para prompts curtos.',
+          'O problema: nessa faixa significa inferência apenas na CPU. A maioria dos notebooks abaixo de $1.000 não tem GPU discreta ou tem apenas uma GPU de 4 GB, pequena demais para trabalho sério com LLMs. A inferência CPU é boa para experimentação e aprendizado; é lenta para gerações longas.',
+          'Se a inferência acelerada por GPU é sua prioridade, a faixa abaixo de $1.000 é muito limitada. Poupe para um MacBook Air série M — sua arquitetura de Unified Memory transforma a RAM do sistema em memória LLM utilizável e entrega muito mais tokens por segundo do que qualquer notebook Windows abaixo de $1.000. Consulte os preços atuais na sua região.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.es/s?k=portatil+Ryzen+7+16GB+RAM',
+            productName: 'Notebook Ryzen 7 + 16 GB de RAM',
+            productCategory: 'laptop',
+            label: 'Ver notebooks Ryzen 7 + 16 GB na Amazon',
+          },
+          {
+            url: 'https://www.newegg.com/p/pl?d=Ryzen+7+laptop+16GB',
+            productName: 'Notebook Ryzen 7 + 16 GB de RAM',
+            productCategory: 'laptop',
+            label: 'Ver notebooks Ryzen 7 + 16 GB na Newegg',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=MacBook+Air+M+series',
+            productName: 'MacBook Air série M',
+            productCategory: 'laptop',
+            label: 'Ver preço do MacBook Air (próxima faixa)',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Comparativo de Notebooks IA Econômicos',
+        content: [
+          '<strong>O fator decisivo é se você aceita inferência na CPU (lenta mas barata) ou poupa para a aceleração de Unified Memory (rápida, logo acima de $1.000).</strong> Os preços de modelos específicos variam — consulte as listagens atuais na sua região.',
+        ],
+        columns: ['Opção', 'Tipo de inferência', 'Velocidade (7B Q4)', 'Veredicto'],
+        rows: [
+          {
+            'Opção': 'Notebook Ryzen 7 + 16 GB de RAM (~$700-1.000)',
+            'Tipo de inferência': 'Somente CPU',
+            'Velocidade (7B Q4)': '~3-7 tok/s',
+            'Veredicto': 'Melhor escolha abaixo de $1.000',
+          },
+          {
+            'Opção': 'Notebook econômico com 8 GB de RAM (menos de $600)',
+            'Tipo de inferência': 'Somente CPU, apertado',
+            'Velocidade (7B Q4)': 'Não cabe confortavelmente',
+            'Veredicto': 'Evitar — RAM insuficiente',
+          },
+          {
+            'Opção': 'MacBook Air série M (logo acima de $1.000)',
+            'Tipo de inferência': 'GPU Apple Metal',
+            'Velocidade (7B Q4)': '~15-20 tok/s',
+            'Veredicto': 'Poupe — vale a espera',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas Rápidas sobre Notebooks IA Econômicos',
+        faqs: [
+          {
+            q: 'Um notebook de $700-1.000 pode executar LLMs locais?',
+            a: 'Sim, mas na CPU. Um Ryzen 7 (ou Intel Core i7) com 16 GB de RAM executa modelos 3B e 7-8B a 3-7 tokens por segundo usando llama.cpp ou Ollama no modo CPU. Lento para gerações longas, aceitável para prompts curtos.',
+          },
+          {
+            q: '8 GB de RAM é suficiente para um notebook IA econômico?',
+            a: 'Não. Um modelo 7B em Q4 precisa de aproximadamente 5-6 GB de RAM, o que quase não deixa espaço para o SO e outros apps. 16 GB é o mínimo prático para trabalhar com LLMs locais.',
+          },
+          {
+            q: 'Por que o MacBook Air é o próximo passo para notebooks IA?',
+            a: 'Apple Silicon usa Unified Memory, então a RAM do sistema também é memória GPU. Um MacBook Air série M executa modelos 7B a 15-20 tokens por segundo usando Metal — 3-5× mais rápido do que a inferência CPU em um notebook Windows de preço semelhante.',
+          },
+          {
+            q: 'Posso adicionar uma GPU externa a um notebook econômico para LLMs?',
+            a: 'Geralmente não. A maioria dos notebooks econômicos não tem Thunderbolt 4 ou OCuLink, as únicas interfaces eGPU práticas. Mesmo quando suportadas, a inferência eGPU é prejudicada por gargalos de largura de banda PCIe. Comprar um desktop ou poupar para um notebook com Unified Memory é o melhor caminho.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'Leitura Relacionada',
+        items: [
+          '[Melhor LLM local para um notebook com 16 GB de RAM](/pt/prompt-bites/best-local-llm-16gb-ram-laptop) — seleção de modelos para a faixa de 16 GB',
+          '[O Mac Mini M4 é bom para LLMs locais?](/pt/prompt-bites/mac-mini-m4-local-llm) — o equivalente desktop do MacBook Air',
+          '[Melhor eGPU para Ollama em um MacBook](/pt/prompt-bites/best-egpu-ollama-macbook) — por que eGPUs não são a solução econômica',
+        ],
+      },
+    },
+  },
   zh: {
     theme: 'Hardware-Specific',
     title: '2026年7,000元以下最佳AI笔记本电脑？',

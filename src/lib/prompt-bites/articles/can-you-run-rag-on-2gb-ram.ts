@@ -329,6 +329,76 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Quick Answers',
+    title: 'Você pode executar RAG com 2 GB de RAM?',
+    seoTitle: 'RAG com 2 GB de RAM 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Llama 3.2 1B + embeddings MiniLM-L6-v2 permitem RAG com 2 GB de RAM (~1,3–1,5 GB no total). Modelos 7B+ precisam de 8 GB. Resposta rápida do PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Você pode executar RAG com 2 GB de RAM?',
+        answer: 'Sim — mas apenas para conjuntos pequenos de documentos pessoais usando Llama 3.2 1B (~750 MB), embeddings MiniLM-L6-v2 (~80 MB) e um vector store em memória totalizando ~1,3–1,5 GB em um dispositivo de 2 GB. Modelos maiores (7B+) e conjuntos de documentos maiores (200+ páginas) precisam de 8 GB no mínimo.',
+        bullets: [
+          'Llama 3.2 1B Q4_K_M (~750 MB) + embeddings MiniLM-L6-v2 (~80 MB) cabem em 2 GB',
+          'O conjunto de documentos deve ter menos de ~200 páginas para caber na RAM',
+          'Modelos 7B+ ou corpora maiores precisam de pelo menos 8 GB de RAM',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      body1: {
+        title: 'Sim — Mas Apenas as Configurações Mínimas Funcionam',
+        content: [
+          'Com 2 GB de RAM, o único pipeline RAG viável usa um LLM da classe 1B (Llama 3.2 1B ou Phi-3 Mini) com um modelo de embeddings leve (MiniLM-L6-v2 a ~80 MB) e um vector store em memória ou arquivo plano. Em maio de 2026, isso funciona — mas apenas para conjuntos pequenos de documentos pessoais (menos de ~200 páginas).',
+          'A tabela abaixo mostra o uso de RAM de cada componente RAG na configuração mínima viável.',
+        ],
+        columns: ['Componente', 'Uso de memória', 'Notas'],
+        rows: [
+          { 'Componente': 'LLM (Llama 3.2 1B Q4_K_M)', 'Uso de memória': '~750 MB', 'Notas': 'O menor modelo instruction-tuned utilizável' },
+          { 'Componente': 'Modelo de embeddings (MiniLM-L6-v2)', 'Uso de memória': '~80 MB', 'Notas': 'Roda na CPU; não requer GPU' },
+          { 'Componente': 'Vector store (Chroma em memória)', 'Uso de memória': '~150 MB', 'Notas': 'Escala com o tamanho do corpus' },
+          { 'Componente': 'Runtime Python + overhead do framework', 'Uso de memória': '~300 MB', 'Notas': 'LangChain ou llama-index mínimo' },
+          { 'Componente': 'Total mínimo', 'Uso de memória': '~1,3–1,5 GB', 'Notas': 'Deixa ~500 MB para o SO em um dispositivo de 2 GB' },
+        ],
+        content2: [
+          'Essa configuração cabe em um Raspberry Pi 4 (variante de 2 GB) ou qualquer dispositivo de baixo consumo com 2 GB de RAM. A qualidade da recuperação é limitada pelos embeddings de 384 dimensões do MiniLM-L6, eficazes para passagens curtas mas que degradam em documentos de várias páginas.',
+        ],
+      },
+      body2: {
+        title: 'O que Falha com 2 GB de RAM',
+        content: [
+          '<strong>A falha mais comum é o LLM ultrapassar a RAM disponível ao expandir a janela de contexto.</strong> Com 2 GB, o contexto de um modelo 1B é limitado a cerca de 2k tokens antes de o SO começar a usar swap. Carregar um modelo 7B ou maior falha imediatamente — Llama 3 8B Q4_K_M requer ~5 GB sozinho.',
+          'O segundo modo de falha é o crescimento do vector store. Um banco de dados Chroma para 500 páginas PDF usa aproximadamente 400–600 MB dependendo do tamanho do chunk. Combinado com o LLM e o modelo de embeddings, a RAM total ultrapassa 2 GB. A solução: limitar a ingestão a menos de 150 páginas, usar chunks de 256 tokens e limpar o store após cada sessão.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas Rápidas sobre RAG com 2 GB de RAM',
+        faqs: [
+          {
+            q: 'Qual é o menor LLM que funciona para RAG?',
+            a: 'Llama 3.2 1B Q4_K_M (~750 MB) é o menor modelo instruction-tuned que produz respostas coerentes para tarefas de recuperação aumentada. Phi-3 Mini (3,8B) é melhor se você tiver 3–4 GB disponíveis — seu contexto de 4k lida melhor com passagens recuperadas mais longas. Abaixo de 1B parâmetros, a qualidade das respostas cai drasticamente para perguntas no estilo RAG.',
+          },
+          {
+            q: 'Posso usar Ollama com 2 GB de RAM?',
+            a: 'A RAM mínima recomendada pelo Ollama é 8 GB. Com 2 GB, o Ollama carrega, mas o serviço de modelos falha ou usa swap intensamente. Para dispositivos de 2 GB, use llama.cpp diretamente pela CLI ou os bindings llama-cpp-python — têm uma pegada de memória residente menor do que o processo do servidor Ollama.',
+          },
+          {
+            q: 'Um Raspberry Pi 5 (8 GB) pode executar RAG de verdade?',
+            a: 'Sim. Um Raspberry Pi 5 com 8 GB de RAM executa Llama 3 8B Q4_K_M (~5 GB) junto com uma pilha completa de embeddings + vector store com margem. A velocidade é ~1–2 tok/s na CPU do Pi 5 — lento mas funcional para pesquisa pessoal offline. Consulte os benchmarks nos <a href="/pt/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">melhores modelos do Ollama para inferência somente em CPU</a>.',
+          },
+          {
+            q: 'Vale a pena o RAG local com 2 GB de RAM?',
+            a: 'Para conjuntos pequenos de documentos pessoais (notas, alguns PDFs), sim — o pipeline 1B + MiniLM é genuinamente útil. Para tudo que exige recuperação precisa em corpora grandes ou raciocínio complexo de múltiplas etapas, 2 GB de RAM é um limite rígido. Atualize para pelo menos 8 GB antes de esperar qualidade RAG de nível produção.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Quick Answers',
     title: '¿Puedes Ejecutar RAG con 2 GB de RAM?',

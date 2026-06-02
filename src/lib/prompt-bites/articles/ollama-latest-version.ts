@@ -413,6 +413,86 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Ollama',
+    title: 'Qual é a versão mais recente do Ollama?',
+    seoTitle: 'Versão mais recente do Ollama 2026 | PromptQuorum',
+    metaDescription: 'Verifique a versão atual do Ollama no GitHub. Execute ollama --version. Linux: execute novamente o script de instalação; Mac/Windows: baixe em ollama.com.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    is_living_page: true,
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual é a versão mais recente do Ollama?',
+        answer: 'Verifique ollama.com ou a página de lançamentos do GitHub do Ollama para a versão atual. No Linux, execute o script de instalação para atualizar. No Mac/Windows, baixe o instalador mais recente.',
+        bullets: [
+          'Verificar: github.com/ollama/ollama/releases para a versão mais recente',
+          'Atualização no Linux: curl -fsSL https://ollama.com/install.sh | sh',
+          'Mac/Windows: baixar novamente o instalador em ollama.com',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Execute <code>ollama --version</code> para ver sua versão instalada; compare com a página de lançamentos do GitHub',
+          'Atualização no Linux com um único comando: <code>curl -fsSL https://ollama.com/install.sh | sh</code>',
+          'Mac e Windows: baixe novamente o instalador em ollama.com — sem linha de comando',
+          'As atualizações nunca excluem seus modelos — os arquivos GGUF são armazenados separadamente do binário do Ollama',
+        ],
+      },
+      body1: {
+        title: 'Onde verificar a versão do Ollama',
+        content: [
+          '<strong>Em maio de 2026, o lançamento estável mais recente do Ollama está listado em github.com/ollama/ollama/releases — essa página mostra o número exato da versão e as notas de lançamento. Esta página é atualizada mensalmente — última verificação em maio de 2026.</strong>',
+          'Execute <code>ollama --version</code> em um terminal para ver sua versão instalada. A saída é uma única linha. Se a página de lançamentos do GitHub mostrar um número de versão mais alto, sua instalação está desatualizada.',
+          'Novas famílias de modelos — incluindo Llama 3.3 e Qwen 3 — requerem uma versão mínima do Ollama para carregar corretamente. Lançamentos recentes também incluem carregamento GGUF mais rápido e melhor gerenciamento de contexto multi-GPU — melhorias que se acumulam no uso diário.',
+        ],
+      },
+      body2: {
+        title: 'Como atualizar o Ollama com segurança',
+        content: [
+          '<strong>A atualização é segura: seus modelos baixados são armazenados em um diretório separado e nunca são removidos por uma atualização do Ollama.</strong> A API REST voltada para o usuário manteve compatibilidade retroativa desde a versão 0.1.',
+          'Se você estiver vários lançamentos atrasado, execute <code>ollama list</code> antes de atualizar para registrar seus modelos atuais. Nada quebrará, mas esse passo de 30 segundos elimina a incerteza antes de um salto de versão principal.',
+          'Para um registro completo de mudanças de cada lançamento do Ollama e quais famílias de modelos se beneficiam, consulte o <a href="/pt/local-llms/local-llm-model-updates-2026" class="text-primary hover:underline">guia de atualizações de modelos LLM locais para 2026</a>.',
+        ],
+        columns: ['Plataforma', 'Método de atualização', 'Notas'],
+        rows: [
+          { 'Plataforma': 'Linux', 'Método de atualização': 'Executar script de instalação (um comando)', 'Notas': 'Substitui o binário, mantém os modelos' },
+          { 'Plataforma': 'macOS', 'Método de atualização': 'Baixar novamente em ollama.com', 'Notas': 'Arraste para Aplicativos, modelos mantidos' },
+          { 'Plataforma': 'Windows', 'Método de atualização': 'Baixar novamente o .exe em ollama.com', 'Notas': 'Execute o instalador, modelos mantidos' },
+        ],
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+        callouts: [{ type: 'info', text: 'Última verificação: maio de 2026. Se os dados acima parecerem desatualizados, consulte a página oficial de lançamentos do GitHub do Ollama ou a biblioteca de modelos.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre atualizações do Ollama',
+        faqs: [
+          {
+            q: 'Como posso verificar qual versão do Ollama tenho instalada?',
+            a: 'Execute <code>ollama --version</code> em um terminal. Ele exibe seu número de compilação em uma linha, por exemplo <code>ollama version 0.x.y</code>.',
+          },
+          {
+            q: 'Atualizar o Ollama excluirá meus modelos baixados?',
+            a: 'Não. O Ollama armazena os arquivos de modelos em <code>~/.ollama/models/</code> no Linux e macOS, separados do binário do aplicativo. As atualizações nunca tocam nesse diretório. Consulte <a href="/pt/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">os melhores modelos do Ollama agora</a> se quiser adicionar novos após atualizar.',
+          },
+          {
+            q: 'É seguro pular várias versões do Ollama ao atualizar?',
+            a: 'Sim. O instalador do Ollama sempre leva você à versão mais recente em um único passo, independentemente de quantas versões você perdeu. Não são necessárias atualizações incrementais.',
+          },
+          {
+            q: 'Atualizar o Ollama requer atualizar também os modelos instalados?',
+            a: 'Não. Os arquivos de modelos GGUF são compatíveis para frente. Os mesmos arquivos que você baixou para uma versão mais antiga do Ollama funcionam na versão atual sem necessidade de baixar novamente.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Ollama',
     title: '¿Cuál es la versión más reciente de Ollama?',

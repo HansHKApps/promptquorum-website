@@ -925,6 +925,470 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
 },
+
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: 'Melhor VPN para privacidade com IA: proteja sua configuração de LLM local 2026',
+    seoTitle: 'Melhor VPN para privacidade de LLM local 2026: 4 provedores comparados',
+    intro:
+      'Um LLM local mantém seus prompts e documentos fora dos servidores na nuvem, mas no momento em que você acessa esse LLM remotamente — ou navega em busca de modelos, pesos e atualizações — seu tráfego de rede ainda sai do prédio. Uma VPN fecha essa última brecha: ela criptografa a conexão entre uma máquina remota e o servidor do LLM e oculta do seu provedor de internet quais serviços de IA você acessa. Este guia compara quatro provedores de VPN de consumo — ProtonVPN, NordVPN, Mullvad e Surfshark — nas coisas que realmente importam para uma configuração de privacidade com IA: política sem registros, jurisdição, suporte a WireGuard e preço. Uma ressalva sobre o preço: os preços de VPN oscilam muito com os ciclos promocionais, então cada número aqui é um retrato de maio de 2026 — confirme a tarifa atual no site do provedor antes de assinar.',
+    metaDescription:
+      'ProtonVPN, NordVPN, Mullvad e Surfshark comparados para proteger uma configuração de LLM local: política sem registros, jurisdição, WireGuard e preços de maio de 2026.',
+    twitterDescription:
+      'ProtonVPN, NordVPN, Mullvad, Surfshark — quatro VPNs comparadas para privacidade de LLM local. A regra de decisão: escolha por jurisdição e prova de sem registros, não por velocidade bruta.',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 7B',
+      'Mistral Small',
+    ],
+    current_hardware_mentioned: [
+      'WireGuard VPN protocol',
+      'OpenVPN VPN protocol',
+      'Ollama local inference server',
+      'LM Studio local inference app',
+    ],
+    audience:
+      'Desenvolvedores e equipes pequenas que rodam um LLM local e querem acessá-lo remotamente ou navegar por serviços de IA sem expor o tráfego. Pressupõe familiaridade com Ollama ou LM Studio, mas não com produtos de VPN específicos.',
+    readTime: '13 min de leitura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'VPN for AI privacy',
+    targetKeywords: [
+      'melhor vpn para privacidade com ia 2026',
+      'vpn para llm local',
+      'protonvpn vs mullvad vs nordvpn',
+      'vpn sem registros para ia',
+      'vpn para proteger configuração de llm local',
+    ],
+    leadAnswerBlock:
+      '**A melhor VPN para privacidade com IA é a que tem uma política sem registros comprovada em uma jurisdição amigável à privacidade, não a que anuncia a maior velocidade. Mullvad é a escolha mais rigorosa em sem registros, ProtonVPN o melhor equilíbrio entre privacidade auditada e usabilidade, NordVPN a mais rápida, e Surfshark a mais barata para dispositivos ilimitados.**',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual VPN devo usar para proteger uma configuração de LLM local em 2026?',
+        answer:
+          'Escolha primeiro por prova de sem registros e jurisdição, velocidade em segundo. Mullvad é a escolha de privacidade mais rigorosa — aceita pagamento anônimo em dinheiro e tem uma tarifa fixa de ~US$ 5,40/mês sem e-mail de conta. ProtonVPN é a melhor escolha equilibrada com sem registros auditado e um nível gratuito utilizável. NordVPN é a mais rápida para acesso remoto ao LLM, e Surfshark a mais barata para cobrir muitos dispositivos.',
+        bullets: [
+          'Privacidade mais rigorosa: Mullvad, ~US$ 5,40/mês fixo, números de conta anônimos, Suécia',
+          'Melhor equilíbrio: ProtonVPN, nível gratuito disponível, sem registros auditado, Suíça',
+          'Mais rápida: NordVPN, protocolo NordLynx (WireGuard), grande rede de servidores, Panamá',
+          'Mais barata para muitos dispositivos: Surfshark, conexões simultâneas ilimitadas, Países Baixos',
+          'Os preços de VPN mudam com promoções — trate cada número como um retrato de maio de 2026',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: 'Principais conclusões', anchor: '#key-takeaways' },
+      { label: 'Fatos rápidos', anchor: '#quick-facts' },
+      { label: 'Escolha do editor', anchor: '#editors-choice' },
+      { label: 'Tabela comparativa de VPNs', anchor: '#comparison-table' },
+      { label: 'Qual VPN você deve escolher?', anchor: '#which-vpn' },
+      { label: 'ProtonVPN', anchor: '#protonvpn' },
+      { label: 'NordVPN', anchor: '#nordvpn' },
+      { label: 'Mullvad', anchor: '#mullvad' },
+      { label: 'Surfshark', anchor: '#surfshark' },
+      { label: 'Fluxograma de decisão', anchor: '#decision-flowchart' },
+      { label: 'Onde comprar e preços', anchor: '#where-to-buy' },
+      { label: 'Erros comuns', anchor: '#common-mistakes' },
+      { label: 'Fontes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leituras relacionadas', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**A prova de sem registros é o critério determinante.** Uma VPN que registra logs de conexão pode ser obrigada a entregá-los. Escolha um provedor com uma política sem registros auditada de forma independente antes de comparar qualquer outra coisa.',
+          '**Uma VPN não substitui um túnel auto-hospedado — ela o complementa.** Para acesso remoto a um LLM local, um túnel WireGuard auto-hospedado é a rota mais direta; uma VPN comercial protege a navegação, os downloads de modelos e o tráfego de serviços de IA do seu provedor de internet.',
+          '**Escolha mais rigorosa: Mullvad** — tarifa fixa de ~US$ 5,40/mês, sem e-mail ou nome exigidos, números de conta em vez de identidades, e pagamento em dinheiro ou Monero. Sediada na Suécia.',
+          '**Melhor equilíbrio: ProtonVPN** — sem registros auditado, um nível gratuito genuinamente utilizável, jurisdição suíça e apps open source. A escolha equilibrada recomendada para privacidade com IA.',
+          '**Mais rápida: NordVPN** — seu protocolo NordLynx (baseado em WireGuard) e sua grande rede de servidores oferecem a menor latência para acesso remoto ao LLM. Sediada no Panamá.',
+          '**Mais barata para muitos dispositivos: Surfshark** — conexões simultâneas ilimitadas em uma assinatura, cobrindo assim uma equipe ou um domicílio inteiro. Sediada nos Países Baixos.',
+          '**WireGuard é o protocolo a preferir.** Os quatro provedores suportam WireGuard (ou uma variante baseada em WireGuard); ele tem uma base de código de ~4.000 linhas, muito menor que as 400.000+ do OpenVPN, o que significa uma superfície de ataque menor.',
+          '**Os preços mudam constantemente.** Os planos de longo prazo têm grandes descontos e renovam a tarifas mais altas. Trate cada preço aqui como um retrato de maio de 2026 e leia os termos de renovação.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Fatos rápidos',
+        items: [
+          '**Sem registros mais rigoroso:** Mullvad — números de conta anônimos, sem e-mail, aceita dinheiro/Monero.',
+          '**Melhor nível gratuito:** ProtonVPN — um plano gratuito sem limite de dados, incomum entre as VPNs de confiança.',
+          '**Caminho de protocolo mais rápido:** NordVPN NordLynx, um protocolo baseado em WireGuard otimizado para throughput.',
+          '**Mais dispositivos por plano:** Surfshark — conexões simultâneas ilimitadas em uma única assinatura.',
+          '**Protocolo a preferir:** WireGuard — ~4.000 linhas de código contra 400.000+ do OpenVPN, uma superfície de ataque menor.',
+          '**Custo de latência:** Uma VPN normalmente adiciona 5-15 ms; a inferência do LLM já leva 10-100 ms por token, então o impacto em uma sessão remota costuma ser inferior a 5%.',
+          '**Realidade de preços de 2026:** as tarifas de introdução têm grandes descontos e renovam mais alto — leia os termos de renovação, trate os números como um retrato de maio de 2026.',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: 'Escolha do editor: ProtonVPN',
+        sponsoredSlot: true,
+        content:
+          '**Para a maioria das pessoas que protegem uma configuração de LLM local, ProtonVPN é a escolha que equilibra privacidade comprovada, usabilidade e preço.** Sua política sem registros foi auditada de forma independente, ela é sediada na Suíça (fora da aliança de compartilhamento de inteligência dos 14 Olhos), seus apps são open source e oferece um nível gratuito sem limite de dados para que você possa verificar a experiência antes de pagar. Para o anonimato mais rigoroso possível — números de conta anônimos, pagamento em dinheiro, sem e-mail — Mullvad é a melhor escolha. Para o acesso remoto ao LLM mais rápido, NordVPN vence em velocidade bruta. Escolha ProtonVPN quando você quer um provedor que faça bem o trabalho de privacidade sem forçar uma concessão.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'Esta Escolha do editor reflete apenas o equilíbrio entre privacidade e usabilidade. A PromptQuorum não está inscrita em nenhum programa de afiliados e os links abaixo não carregam etiquetas de afiliado — são simples links de referência que não geram nenhuma comissão.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://protonvpn.com/pricing',
+            productName: 'ProtonVPN',
+            productCategory: 'vpn',
+            priceRange: '0-10',
+            label: 'Ver planos do ProtonVPN em protonvpn.com',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Como as quatro VPNs se comparam para privacidade com IA em 2026',
+        content:
+          'O status sem registros, a jurisdição e o suporte a protocolos são obtidos da documentação publicada de cada provedor e dos relatórios de auditoria públicos. Os preços são um retrato de maio de 2026 das tarifas de planos de longo prazo — os descontos de introdução são acentuados e as tarifas de renovação são mais altas, então confirme o número atual e os termos de renovação no site do provedor antes de assinar.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Para privacidade com IA, a política sem registros e a jurisdição de uma VPN decidem quanto ela realmente protege você — compre primeiro por esses critérios, depois compare velocidade e preço.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Uma VPN é tão privada quanto os registros que ela mantém. Se um provedor armazena quem se conectou e quando, esses dados podem ser solicitados pelas autoridades. Escolha um provedor que tenha sido verificado de forma independente como não mantendo tais registros, depois se preocupe com o quão rápido ele é.',
+          },
+        ],
+        columns: ['VPN', 'Sem registros (auditado)', 'Jurisdição', 'WireGuard', 'Preço (maio de 2026)', 'Melhor para'],
+        rows: [
+          {
+            'VPN': 'ProtonVPN',
+            'Sem registros (auditado)': 'Sim, auditado de forma independente',
+            'Jurisdição': 'Suíça',
+            'WireGuard': 'Sim',
+            'Preço (maio de 2026)': 'Nível gratuito; pago a partir de ~US$ 5/mês em planos longos',
+            'Melhor para': 'Melhor escolha versátil para privacidade com IA',
+          },
+          {
+            'VPN': 'NordVPN',
+            'Sem registros (auditado)': 'Sim, auditado de forma independente',
+            'Jurisdição': 'Panamá',
+            'WireGuard': 'Sim (NordLynx)',
+            'Preço (maio de 2026)': '~US$ 4-6/mês em planos longos',
+            'Melhor para': 'Acesso remoto ao LLM mais rápido',
+          },
+          {
+            'VPN': 'Mullvad',
+            'Sem registros (auditado)': 'Sim, auditado de forma independente',
+            'Jurisdição': 'Suécia',
+            'WireGuard': 'Sim',
+            'Preço (maio de 2026)': 'Tarifa fixa de ~US$ 5,40/mês, sem fidelização de longo prazo',
+            'Melhor para': 'Anonimato mais rigoroso',
+          },
+          {
+            'VPN': 'Surfshark',
+            'Sem registros (auditado)': 'Sim, auditado de forma independente',
+            'Jurisdição': 'Países Baixos',
+            'WireGuard': 'Sim',
+            'Preço (maio de 2026)': '~US$ 2-4/mês em planos longos',
+            'Melhor para': 'Mais barata para dispositivos ilimitados',
+          },
+        ],
+      },
+      whichVpn: {
+        id: 'which-vpn',
+        title: 'Qual VPN você deve escolher?',
+        content:
+          '**Seu limite de privacidade decide o provedor; sua contagem de dispositivos e o orçamento desempatam.** Encontre a linha que combina com a sua situação.',
+        columns: ['Sua situação', 'Escolha esta'],
+        rows: [
+          { 'Sua situação': 'Quero o anonimato mais rigoroso possível e vou pagar em dinheiro ou Monero', 'Escolha esta': 'Mullvad' },
+          { 'Sua situação': 'Quero um provedor sólido para privacidade geral com IA sem concessões', 'Escolha esta': 'ProtonVPN' },
+          { 'Sua situação': 'Quero experimentar uma VPN antes de pagar qualquer coisa', 'Escolha esta': 'ProtonVPN (nível gratuito, sem limite de dados)' },
+          { 'Sua situação': 'Preciso da menor latência para acessar meu servidor LLM remotamente', 'Escolha esta': 'NordVPN' },
+          { 'Sua situação': 'Preciso cobrir uma equipe ou um domicílio inteiro em uma assinatura', 'Escolha esta': 'Surfshark (dispositivos ilimitados)' },
+          { 'Sua situação': 'Quero jurisdição fora da aliança dos 14 Olhos', 'Escolha esta': 'ProtonVPN (Suíça) ou NordVPN (Panamá)' },
+          { 'Sua situação': 'Estou em dúvida e quero um padrão seguro', 'Escolha esta': 'ProtonVPN — comece no nível gratuito, faça upgrade se precisar de mais' },
+        ],
+      },
+      protonVpnSection: {
+        id: 'protonvpn',
+        title: 'ProtonVPN: a escolha equilibrada para privacidade com IA',
+        content:
+          '**ProtonVPN é a melhor escolha versátil para proteger uma configuração de LLM local porque combina uma política sem registros auditada de forma independente com jurisdição suíça, apps open source e um nível gratuito sem limite de dados.** A Suíça fica fora da aliança de compartilhamento de inteligência dos 14 Olhos, e a Proton publica o código-fonte de seus apps para que as alegações de privacidade possam ser inspecionadas.',
+        items: [
+          '**Política sem registros:** auditada de forma independente; a Proton declara que não registra a atividade do usuário. A lei suíça de proteção de dados respalda a alegação.',
+          '**Jurisdição:** Suíça — fora das alianças de 5/9/14 Olhos, com uma lei de privacidade forte.',
+          '**Nível gratuito:** um plano gratuito genuinamente utilizável sem limite de dados, raro entre as VPNs de confiança — use-o para verificar a velocidade e os apps antes de pagar.',
+          '**WireGuard:** suportado em todas as plataformas principais, o protocolo a preferir para uma superfície de ataque menor.',
+          '**Por que escolher a ProtonVPN:** você quer um único provedor que atenda bem às necessidades de privacidade com IA sem abrir mão de usabilidade, velocidade ou transparência.',
+          '**Por que descartar a ProtonVPN:** se você precisa de pagamento anônimo e nenhum e-mail de conta, o Mullvad vai mais longe; se a velocidade bruta é a única métrica, o NordVPN sai um pouco na frente.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Comece no nível gratuito do ProtonVPN antes de pagar. Ele não tem limite de dados, então você pode confirmar que os apps funcionam com o seu fluxo de trabalho de LLM remoto e que a velocidade é aceitável antes de se comprometer com um plano de longo prazo.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://protonvpn.com/pricing',
+            productName: 'ProtonVPN',
+            productCategory: 'vpn',
+            priceRange: '0-10',
+            label: 'Ver preço do ProtonVPN em protonvpn.com',
+          },
+        ],
+      },
+      nordVpnSection: {
+        id: 'nordvpn',
+        title: 'NordVPN: a mais rápida para acesso remoto ao LLM',
+        content:
+          '**NordVPN é a escolha quando a latência importa mais — por exemplo, quando você se conecta a um servidor LLM local de fora da rede e quer a sessão mais ágil possível.** Seu protocolo NordLynx é baseado em WireGuard e otimizado para throughput, e sua grande rede de servidores significa que um endpoint próximo geralmente está disponível.',
+        items: [
+          '**Política sem registros:** auditada de forma independente; a NordVPN publica os resultados das auditorias periodicamente.',
+          '**Jurisdição:** Panamá — fora da aliança dos 14 Olhos, sem lei de retenção de dados obrigatória.',
+          '**NordLynx:** um protocolo baseado em WireGuard; espere uma sobrecarga de VPN na faixa típica de 5-15 ms, pequena ao lado do tempo de inferência do LLM por token.',
+          '**Rede de servidores:** grande, então você pode escolher um servidor geograficamente próximo ao host do LLM para minimizar a latência adicionada.',
+          '**Por que escolher a NordVPN:** você acessa regularmente um LLM auto-hospedado de forma remota e quer a menor latência extra, ou quer uma VPN rápida de uso geral.',
+          '**Por que descartar a NordVPN:** se sua prioridade é o pagamento anônimo ou a menor pegada de registro possível, o Mullvad é a escolha mais rigorosa.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Para acesso remoto ao LLM, uma VPN comercial é uma opção; um túnel WireGuard auto-hospedado na sua própria rede é a rota mais direta. Use a NordVPN quando você também quiser proteger a navegação geral e o tráfego de serviços de IA, não apenas a conexão ao LLM.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://nordvpn.com/pricing/',
+            productName: 'NordVPN',
+            productCategory: 'vpn',
+            priceRange: '4-6',
+            label: 'Ver preço da NordVPN em nordvpn.com',
+          },
+        ],
+      },
+      mullvadSection: {
+        id: 'mullvad',
+        title: 'Mullvad: a escolha de anonimato mais rigoroso',
+        content:
+          '**Mullvad é a escolha de privacidade mais rigorosa porque não pede e-mail, nome ou qualquer detalhe identificável — você recebe um número de conta aleatório e pode pagar em dinheiro ou Monero.** Isso remove o vínculo entre a sua identidade e a sua assinatura de VPN, que é o modelo mais limpo para trabalho de privacidade com IA.',
+        items: [
+          '**Modelo de conta:** números de conta aleatórios em vez de identidades de e-mail e senha — nada vincula a conta a você.',
+          '**Preço:** uma tarifa fixa de ~US$ 5,40/mês sem fidelização de longo prazo e sem planos escalonados, então não há surpresa na tarifa de renovação.',
+          '**Pagamento:** aceita dinheiro e Monero além de cartões, permitindo uma compra anônima.',
+          '**Jurisdição:** Suécia — dentro da UE, mas com uma postura sem registros publicada e auditada de forma independente.',
+          '**Por que escolher o Mullvad:** você quer a menor pegada de identidade possível no seu provedor de VPN e preços fixos previsíveis.',
+          '**Por que descartar o Mullvad:** não há nível gratuito para testar, e a Suécia está dentro da aliança dos 14 Olhos — se a jurisdição fora dessa aliança importa mais para você, ProtonVPN ou NordVPN encaixam melhor.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'O preço fixo de ~US$ 5,40/mês do Mullvad não muda com a duração do plano. Se você não gosta de acompanhar datas de renovação e desviar de aumentos de preço, o modelo fixo é o mais simples dos quatro.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://mullvad.net/en/account/create',
+            productName: 'Mullvad VPN',
+            productCategory: 'vpn',
+            priceRange: '5-6',
+            label: 'Ver preço do Mullvad em mullvad.net',
+          },
+        ],
+      },
+      surfsharkSection: {
+        id: 'surfshark',
+        title: 'Surfshark: a mais barata para dispositivos ilimitados',
+        content:
+          '**Surfshark é a escolha de custo-benefício porque uma assinatura cobre um número ilimitado de conexões simultâneas — útil quando uma equipe ou um domicílio inteiro precisa proteger o tráfego de IA.** Os planos de longo prazo a colocam entre as VPNs de confiança mais baratas.',
+        items: [
+          '**Contagem de dispositivos:** conexões simultâneas ilimitadas em uma única assinatura, ao contrário dos limites por dispositivo ou de 5-10 dispositivos de outros lugares.',
+          '**Preço:** cerca de US$ 2-4/mês em planos de longo prazo como retrato de maio de 2026 — o mais baixo dos quatro, embora as tarifas de renovação sejam mais altas.',
+          '**Política sem registros:** auditada de forma independente; a Surfshark publica os resultados das auditorias.',
+          '**Jurisdição:** os Países Baixos — um país da UE sem lei de retenção de dados de VPN obrigatória.',
+          '**Por que escolher a Surfshark:** você precisa cobrir muitas máquinas ou várias pessoas a baixo custo, e uma política sem registros auditada é suficiente para o seu modelo de ameaça.',
+          '**Por que descartar a Surfshark:** para o anonimato mais rigoroso (pagamento anônimo, sem e-mail de conta), o Mullvad encaixa melhor.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Os preços mais baixos da Surfshark se aplicam apenas a planos plurianuais, que renovam a uma tarifa mais alta. Anote o preço de renovação antes de assinar — o número em destaque é uma tarifa de introdução, não o custo contínuo.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://surfshark.com/pricing',
+            productName: 'Surfshark VPN',
+            productCategory: 'vpn',
+            priceRange: '2-4',
+            label: 'Ver preço da Surfshark em surfshark.com',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: 'Fluxograma de decisão: escolha sua VPN em quatro perguntas',
+        content:
+          '**Quatro perguntas, em ordem, encaminham a maioria dos compradores para um provedor.**',
+        items: [
+          '**1. O cadastro anônimo, sem identidade, é essencial?** Sim: Mullvad — números de conta aleatórios e pagamento em dinheiro. Não: continue.',
+          '**2. Você precisa cobrir muitos dispositivos em um plano?** Sim: Surfshark — conexões simultâneas ilimitadas. Não: continue.',
+          '**3. A menor latência de acesso remoto possível é a prioridade?** Sim: NordVPN — o NordLynx é otimizado para throughput. Não: continue.',
+          '**4. Quer um provedor equilibrado, auditado e transparente com um teste gratuito?** ProtonVPN — jurisdição suíça, apps open source, nível gratuito sem limite de dados.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Escolha uma VPN para privacidade com IA decidindo primeiro se o cadastro anônimo é essencial, a contagem de dispositivos em segundo, a latência de acesso remoto em terceiro e o equilíbrio geral por último.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Comece pelo requisito inflexível. Se você precisa se cadastrar sem dar um e-mail, o Mullvad é a resposta. Se você precisa cobrir muitos dispositivos, é a Surfshark. Se a velocidade é tudo, é a NordVPN. Se nenhuma dessas é uma regra inflexível, a ProtonVPN é o padrão seguro e equilibrado.',
+          },
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Onde comprar e preços',
+        content:
+          '**Compre uma VPN diretamente no site do próprio provedor, nunca de um revendedor terceiro — contas de VPN revendidas não são confiáveis em matéria de privacidade.** Os links abaixo vão direto para a página de preços de cada provedor; eles não carregam etiquetas de afiliado e não geram nenhuma comissão.',
+        items: [
+          '**Compre direto:** compre apenas em protonvpn.com, nordvpn.com, mullvad.net ou surfshark.com. Revendedores e sites de chaves quebram a cadeia de privacidade.',
+          '**Leia os termos de renovação:** ProtonVPN, NordVPN e Surfshark anunciam tarifas de longo prazo com desconto que renovam mais alto. O Mullvad é a exceção com um preço mensal fixo.',
+          '**Use o caminho gratuito primeiro:** o nível gratuito do ProtonVPN não tem limite de dados — teste-o antes de pagar por qualquer provedor.',
+          '**Privacidade no pagamento:** o Mullvad e (em parte) outros provedores aceitam dinheiro ou criptomoeda; pague anonimamente se o cadastro sem identidade importa para você.',
+          '**Janela de reembolso:** a maioria dos provedores oferece uma janela de reembolso de 30 dias — use-a para testar a velocidade contra o seu fluxo de trabalho real de LLM remoto.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'O preço de VPN é promocional e muda de semana para semana. Cada valor em dólares neste guia é um retrato de maio de 2026 — abra a página de preços atual do provedor antes de assinar e verifique a tarifa de renovação, não apenas a tarifa de introdução.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://protonvpn.com/pricing',
+            productName: 'ProtonVPN',
+            productCategory: 'vpn',
+            priceRange: '0-10',
+            label: 'Ver preço do ProtonVPN em protonvpn.com',
+          },
+          {
+            url: 'https://nordvpn.com/pricing/',
+            productName: 'NordVPN',
+            productCategory: 'vpn',
+            priceRange: '4-6',
+            label: 'Ver preço da NordVPN em nordvpn.com',
+          },
+          {
+            url: 'https://mullvad.net/en/account/create',
+            productName: 'Mullvad VPN',
+            productCategory: 'vpn',
+            priceRange: '5-6',
+            label: 'Ver preço do Mullvad em mullvad.net',
+          },
+          {
+            url: 'https://surfshark.com/pricing',
+            productName: 'Surfshark VPN',
+            productCategory: 'vpn',
+            priceRange: '2-4',
+            label: 'Ver preço da Surfshark em surfshark.com',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erros comuns ao escolher uma VPN para privacidade com IA',
+        items: [
+          '**Escolher pela velocidade anunciada em vez da prova de sem registros.** Uma VPN rápida que registra logs de conexão oferece privacidade fraca. Confirme primeiro uma política sem registros auditada de forma independente, depois compare a velocidade.',
+          '**Supor que uma VPN comercial substitui um túnel auto-hospedado.** Para acesso remoto ao seu próprio servidor LLM, um túnel WireGuard auto-hospedado é a rota mais direta. Uma VPN comercial protege a navegação e o tráfego de serviços de IA — os dois são complementares, não substitutos.',
+          '**Ignorar a jurisdição.** Uma política sem registros é mais fraca em um país com retenção de dados obrigatória. Verifique onde o provedor é sediado — a Suíça e o Panamá ficam fora da aliança dos 14 Olhos.',
+          '**Ancorar no preço de introdução.** Os planos de VPN de longo prazo renovam a tarifas mais altas. Leia os termos de renovação; o preço fixo do Mullvad é a exceção que evita essa armadilha.',
+          '**Comprar de um revendedor.** Uma conta de VPN revendida quebra a cadeia de privacidade. Compre apenas no site do próprio provedor.',
+          '**Usar OpenVPN quando o WireGuard está disponível.** A base de código de ~4.000 linhas do WireGuard é muito menor que as 400.000+ do OpenVPN, dando uma superfície de ataque menor. Prefira WireGuard, a menos que uma necessidade específica de compatibilidade force o OpenVPN.',
+          '**Pular o teste gratuito.** O nível gratuito do ProtonVPN não tem limite de dados, e a maioria dos provedores oferece um reembolso de 30 dias. Teste contra o seu fluxo de trabalho real antes de se comprometer.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          '[ProtonVPN — Política sem registros e auditorias](https://protonvpn.com/blog/no-logs-vpn/) — a política sem registros publicada pela Proton e os resumos de auditorias independentes.',
+          '[Mullvad VPN — Privacidade e modelo de conta](https://mullvad.net/en/help/no-logging-data-policy) — o modelo de número de conta do Mullvad e a documentação de sem registros.',
+          '[WireGuard — Documentação do protocolo](https://www.wireguard.com/) — documentação oficial do WireGuard, incluindo a justificativa de design da base de código pequena.',
+          '[VPNs e IA local: o que você precisa saber](/pt/local-llms/vpn-for-local-llm-users) — guia da PromptQuorum sobre WireGuard versus OpenVPN, sobrecarga de latência e acesso remoto ao LLM.',
+          '[NordVPN — Auditorias de segurança independentes](https://nordvpn.com/blog/no-log-vpn-audit/) — os resultados de auditoria sem registros publicados pela NordVPN.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Preciso de uma VPN se o meu LLM já roda localmente?',
+            a: 'Rodar um LLM localmente mantém seus prompts e documentos fora dos servidores na nuvem, mas não oculta o seu tráfego de rede. Uma VPN importa quando você acessa o LLM remotamente ou quando navega em busca de modelos, pesos e atualizações — ela criptografa esse tráfego e oculta do seu provedor de internet quais serviços de IA você acessa. O LLM local e a VPN resolvem partes diferentes do problema de privacidade.',
+          },
+          {
+            q: 'Qual é a VPN mais privada para trabalho com IA?',
+            a: 'Mullvad é a escolha de privacidade mais rigorosa. Não exige e-mail, nome ou qualquer detalhe identificável — você se cadastra com um número de conta aleatório e pode pagar em dinheiro ou Monero, o que remove o vínculo entre a sua identidade e a sua assinatura. ProtonVPN é uma segunda colocada próxima com sem registros auditado e jurisdição suíça, além de um nível gratuito.',
+          },
+          {
+            q: 'Uma VPN deixa uma sessão remota de LLM local mais lenta?',
+            a: 'Apenas um pouco. Uma VPN normalmente adiciona 5-15 ms de latência. Como a inferência do LLM já leva 10-100 ms por token, a sobrecarga de VPN adicionada costuma ser inferior a 5% do total — imperceptível em uso interativo. Escolha um servidor VPN geograficamente próximo ao host do LLM para manter a sobrecarga no extremo baixo.',
+          },
+          {
+            q: 'Devo usar WireGuard ou OpenVPN?',
+            a: 'Prefira WireGuard. Sua base de código tem aproximadamente 4.000 linhas contra 400.000+ do OpenVPN, o que significa uma superfície de ataque muito menor e auditoria mais fácil. Os quatro provedores deste guia suportam WireGuard (a NordVPN chama sua variante de NordLynx). Use OpenVPN apenas se um dispositivo ou rede específico o forçar.',
+          },
+          {
+            q: 'Uma VPN comercial é suficiente para acessar meu servidor LLM remotamente?',
+            a: 'Uma VPN comercial protege o seu tráfego geral, mas para alcançar o seu próprio servidor LLM a rota mais direta é um túnel WireGuard auto-hospedado na sua rede. Use uma VPN comercial ao lado dele para proteger a navegação e o tráfego de serviços de IA. Eles são complementares: um protege a conexão ao LLM, o outro oculta todo o resto.',
+          },
+          {
+            q: 'Por que a jurisdição de uma VPN importa?',
+            a: 'A jurisdição decide quais leis podem obrigar um provedor a registrar ou entregar dados. Uma política sem registros é mais forte em um país sem regras de retenção de dados obrigatória e fora de alianças de compartilhamento de inteligência. ProtonVPN (Suíça) e NordVPN (Panamá) ficam fora da aliança dos 14 Olhos; Mullvad (Suécia) e Surfshark (Países Baixos) estão dentro da UE, mas mantêm políticas sem registros auditadas.',
+          },
+          {
+            q: 'Qual VPN é a mais barata para uma equipe?',
+            a: 'Surfshark, porque uma assinatura permite conexões simultâneas ilimitadas — uma equipe ou um domicílio inteiro é coberto por um único plano. Como retrato de maio de 2026, seus planos de longo prazo custam cerca de US$ 2-4/mês, o mais baixo dos quatro, embora as tarifas de renovação sejam mais altas. Confirme o preço atual e os termos de renovação em surfshark.com.',
+          },
+          {
+            q: 'Posso pagar por uma VPN de forma anônima?',
+            a: 'Sim, com o Mullvad da forma mais limpa — ele aceita dinheiro e Monero e nunca pede e-mail ou nome, então a compra não deixa rastro de identidade. Alguns outros provedores também aceitam criptomoeda, mas ainda vinculam a conta a um e-mail. Se o cadastro anônimo é um requisito inflexível, o Mullvad é a escolha.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Configure acesso remoto por VPN a um servidor LLM local](/pt/local-llms/vpn-for-local-llm-users) — o guia de configuração WireGuard versus OpenVPN por trás do conselho de protocolo daqui.',
+          '[Mantenha dados sensíveis em um LLM local privado](/pt/local-llms/private-local-llm-sensitive-data) — por que a inferência local mais a proteção de rede cobre mais do problema de privacidade que qualquer uma sozinha.',
+          '[Construa um fluxo de trabalho de LLM local seguro e offline](/pt/local-llms/secure-offline-local-llm-workflow) — padrões air-gapped para os requisitos de privacidade mais rigorosos.',
+          '[Configure uma configuração de LLM local para uma equipe distribuída](/pt/local-llms/local-llm-setup-for-teams) — como o acesso remoto se encaixa em uma implantação de LLM local multiusuário.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Melhor VPN para privacidade com IA: proteja sua configuração de LLM local 2026',
+      description: 'ProtonVPN, NordVPN, Mullvad e Surfshark comparados para proteger uma configuração de LLM local: política sem registros, jurisdição, WireGuard e preços de maio de 2026.',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-vpn-ai-privacy-local-llm-2026?lang=pt',
+      inLanguage: 'pt',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',

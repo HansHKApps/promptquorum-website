@@ -377,6 +377,87 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Prompt Engineering',
+    title: 'O que é o framework CO-STAR para prompts?',
+    seoTitle: 'Framework CO-STAR 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'CO-STAR é um framework de 6 partes: Context, Objective, Style, Tone, Audience, Response. Estrutura prompts para outputs consistentes em 60–120 palavras.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'O que é o framework CO-STAR?',
+        answer: 'CO-STAR é uma estrutura de prompt de 6 partes para outputs consistentes de LLM: Context (contexto), Objective (objetivo), Style (estilo de escrita), Tone (registro emocional), Audience (audiência), Response (formato de resposta). Ajuda a produzir outputs direcionados e coerentes ao tornar cada restrição explícita.',
+        bullets: [
+          'C = Context: informações de contexto que o LLM precisa',
+          'O = Objective: a tarefa específica a ser concluída',
+          'S/T/A = Style, Tone, Audience: como e para quem escrever',
+          'R = Response: formato (lista, parágrafo, JSON, etc.)',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'CO-STAR significa Context, Objective, Style, Tone, Audience, Response — uma estrutura de prompt de 6 componentes para outputs consistentes',
+          'O framework força você a tornar cada suposição explícita, reduzindo respostas vagas ou desalinhadas de modelos de linguagem grandes',
+          'CO-STAR funciona melhor para redação de documentos, comunicações com clientes e qualquer tarefa que exija uma voz ou formato específico',
+          'Para consultas factuais simples ou comandos de uma linha, CO-STAR adiciona overhead sem ganho significativo de qualidade',
+        ],
+      },
+      body1: {
+        title: 'O que CO-STAR representa',
+        content: [
+          '<strong>CO-STAR é uma estrutura de prompt de 6 partes: Context, Objective, Style, Tone, Audience, Response format. É um dos frameworks mais citados para estruturar prompts complexos de LLM porque obriga o escritor a especificar cada dimensão que afeta a qualidade do output.</strong>',
+          'O framework foi desenvolvido para resolver um problema recorrente em prompt engineering: prompts que são tecnicamente claros, mas perdem restrições implícitas. Quando você escreve "Resuma este documento", o modelo faz suposições sobre comprimento, formalidade, audiência e formato. CO-STAR substitui essas suposições por instruções explícitas.',
+          'Cada componente foca em uma dimensão diferente do output. Context ancora o modelo na situação relevante. Objective define o entregável exato. Style e Tone controlam o registro de escrita. Audience calibra vocabulário e complexidade. Response especifica o formato estrutural.',
+        ],
+        columns: ['Letra', 'Elemento', 'Propósito'],
+        rows: [
+          { 'Letra': 'C', 'Elemento': 'Context', 'Propósito': 'Informações de fundo que o modelo precisa' },
+          { 'Letra': 'O', 'Elemento': 'Objective', 'Propósito': 'O que você quer que o modelo faça' },
+          { 'Letra': 'S', 'Elemento': 'Style', 'Propósito': 'Estilo de escrita (formal, casual, técnico, etc.)' },
+          { 'Letra': 'T', 'Elemento': 'Tone', 'Propósito': 'Registro emocional (neutro, encorajador, direto)' },
+          { 'Letra': 'A', 'Elemento': 'Audience', 'Propósito': 'Quem lê o output (especialista, iniciante, executivo)' },
+          { 'Letra': 'R', 'Elemento': 'Response format', 'Propósito': 'Estrutura (marcadores, parágrafos, JSON, tabela)' },
+        ],
+      },
+      body2: {
+        title: 'Quando CO-STAR supera os prompts rápidos',
+        content: [
+          'CO-STAR não é a ferramenta certa para cada tarefa. Adiciona mais valor para criação de documentos, comunicações com clientes, relatórios formais e qualquer output onde voz, formato e consistência de audiência importam. Um prompt CO-STAR bem estruturado tipicamente leva 60–120 palavras de configuração, mas elimina múltiplas rodadas de correção.',
+          'Considere um exemplo real. <strong>ANTES:</strong> "Escreva um e-mail para a equipe sobre o atraso do projeto." <strong>DEPOIS:</strong> "Context: O projeto Q2 está 3 semanas atrasado devido a atrasos do fornecedor. Objective: Informar a equipe e tranquilizá-la. Style: Profissional. Tone: Empático, focado em soluções. Audience: 12 engenheiros, senioridade variada. Response: E-mail de 150 palavras com linha de assunto." A versão CO-STAR produz um rascunho inicial mais específico e utilizável.',
+          '<strong>Para consultas factuais simples, geração de código ou pesquisas pontuais, CO-STAR adiciona overhead sem ganho significativo de qualidade.</strong> Perguntar "O que faz a função `zip()` do Python?" não se beneficia de uma estrutura de 6 componentes. Reserve o CO-STAR para tarefas onde o output será lido por pessoas reais em um contexto específico. Para uma análise mais profunda de padrões de prompt que funcionam bem com CO-STAR, veja o <a href="/pt/prompt-engineering/co-star-framework" class="text-primary hover:underline">guia completo de prompt engineering CO-STAR</a> que cobre exemplos avançados e modos de falha comuns.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre o framework CO-STAR',
+        faqs: [
+          {
+            q: 'Como CO-STAR se diferencia de outros frameworks como RISEN ou TRACE?',
+            a: 'CO-STAR foca especificamente em características do output — estilo, tom, audiência e formato. RISEN (Role, Instructions, Steps, End Goal, Narrowing) enfatiza processo e restrições. TRACE (Task, Role, Audience, Context, Examples) se sobrepõe amplamente ao CO-STAR. A principal vantagem do CO-STAR é sua separação explícita de Style e Tone, que a maioria dos outros frameworks combina em um único parâmetro de "voz".',
+          },
+          {
+            q: 'Qual é o componente mais importante no CO-STAR?',
+            a: 'O componente Objective tem o maior impacto. Um Objective vago produz uma resposta vaga independentemente de quão cuidadosamente você especifique Style, Tone e Audience. Escreva o Objective primeiro e torne-o o mais específico possível — um entregável concreto com critérios de conclusão mensuráveis.',
+          },
+          {
+            q: 'CO-STAR funciona com todos os modelos de linguagem grandes?',
+            a: 'Sim. CO-STAR é uma técnica estrutural, não uma funcionalidade específica do modelo. Funciona com qualquer modelo de linguagem que processe instruções em linguagem natural. Modelos com melhores capacidades de seguimento de instruções aplicarão as restrições de forma mais confiável, mas o framework é universalmente aplicável.',
+          },
+          {
+            q: 'Quando devo pular completamente o CO-STAR?',
+            a: 'Pule o CO-STAR para: consultas factuais de uma linha, geração de código onde o formato de output é fixo, extração rápida de dados e qualquer tarefa onde o formato de output é óbvio pela solicitação. Veja nosso <a href="/pt/prompt-bites/best-llm-right-now" class="text-primary hover:underline">guia de comparação de LLMs</a> para combinar o modelo certo com prompt engineering estruturado para seu caso de uso.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Prompt Engineering',
     title: '¿Qué es el framework CO-STAR para prompts?',

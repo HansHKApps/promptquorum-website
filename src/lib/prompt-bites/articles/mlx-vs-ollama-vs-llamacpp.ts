@@ -349,6 +349,82 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Tool Comparisons',
+    title: 'MLX vs Ollama vs llama.cpp: Qual motor de inferência usar?',
+    seoTitle: 'MLX vs Ollama vs llama.cpp 2026 | PromptQuorum',
+    metaDescription: 'No Apple Silicon use MLX (~65 tok/s no M5 Pro). Em NVIDIA, Ollama pela simplicidade ou llama.cpp pelo controle. Ollama encapsula llama.cpp. Resposta rápida.',
+    publishDate: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Apple M5 Pro', 'Apple Silicon', 'NVIDIA GPU'],
+    educationalLevel: 'Intermediate',
+    audience: 'Desenvolvedores escolhendo entre MLX, Ollama e llama.cpp para inferência local',
+    parentArticle: '/local-llms/apple-silicon-local-llm-guide-2026',
+    siblingBites: ['ollama-vs-lm-studio', 'convert-ollama-model-to-mlx', 'ollama-mlx-apple-silicon'],
+    is_living_page: false,
+    quickAnswerTop: {
+      pt: {
+        question: 'MLX vs Ollama vs llama.cpp: qual motor de inferência usar?',
+        answer: 'No Apple Silicon, use MLX — roda ~65 tok/s versus ~35 tok/s do Ollama em um M5 Pro com um modelo 8B. Em GPUs NVIDIA, use Ollama pela simplicidade ou llama.cpp pelo controle máximo. Ollama usa llama.cpp internamente e adiciona uma camada de API por cima.',
+        bullets: [
+          'MLX: apenas Apple Silicon, inferência nativa mais rápida, baseado em Python',
+          'Ollama: qualquer plataforma, API compatível com OpenAI, configuração mais fácil',
+          'llama.cpp: qualquer hardware, controle máximo, requer compilação',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'MLX é o mais rápido no Apple Silicon nativo — ~65 tok/s no M5 Pro, mas funciona apenas em Macs',
+          'Ollama é o mais simples em qualquer plataforma — wrapper do llama.cpp com API REST compatível com OpenAI',
+          'llama.cpp é o mais flexível — inferência direta, compilável para qualquer hardware, sem camada de API',
+          'Ollama usa llama.cpp internamente — é uma camada mais conveniente, mas com menor controle granular',
+        ],
+      },
+      body1: {
+        title: 'Comparação de motores',
+        content: [
+          '<strong>Se você tem Apple Silicon e precisa de máxima velocidade de inferência, escolha MLX.</strong> mlx-lm é um pacote Python (instale com <code>pip install mlx-lm</code>) que usa memória unificada da Apple, o que o torna mais rápido que o caminho llama.cpp+Metal do Ollama no mesmo hardware. Trade-off: MLX só funciona no Apple Silicon e você executa scripts Python, não um serviço API persistente.',
+          '<strong>Se quiser configuração com um comando e uma API compatível com OpenAI estável em qualquer hardware, escolha Ollama.</strong> Funciona no Mac, Windows e Linux. No Apple Silicon usa llama.cpp com Metal — rápido, mas não tão otimizado quanto o MLX nativo.',
+          '<strong>Se precisar de controle máximo, escolha llama.cpp diretamente:</strong> quantização personalizada, parâmetros de amostragem específicos, ou embutir inferência em aplicações C/C++. O custo de configuração é maior (compilar a partir do código-fonte), mas você obtém todas as funcionalidades antes de chegarem ao Ollama.',
+        ],
+        columns: ['Motor', 'Melhor para', 'Velocidade (M5 Pro, 8B)', 'Dificuldade de configuração'],
+        rows: [
+          { 'Motor': 'MLX', 'Melhor para': 'Apple Silicon nativo', 'Velocidade (M5 Pro, 8B)': '~65 tok/s', 'Dificuldade de configuração': 'Média (Python)' },
+          { 'Motor': 'Ollama', 'Melhor para': 'Qualquer plataforma, API fácil', 'Velocidade (M5 Pro, 8B)': '~35 tok/s', 'Dificuldade de configuração': 'Fácil (um comando)' },
+          { 'Motor': 'llama.cpp', 'Melhor para': 'Controle máximo, qualquer HW', 'Velocidade (M5 Pro, 8B)': '~40 tok/s', 'Dificuldade de configuração': 'Difícil (compilação)' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Perguntas rápidas: MLX vs Ollama vs llama.cpp',
+        faqs: [
+          {
+            q: 'O Ollama usa MLX no Mac?',
+            a: 'Não. O Ollama usa llama.cpp com aceleração Metal no Apple Silicon, não MLX nativo. Para inferência MLX nativa, use mlx-lm diretamente ou LM Studio (que suporta ambos os backends).',
+          },
+          {
+            q: 'O llama.cpp é mais rápido que o Ollama?',
+            a: 'Levemente — llama.cpp compilado nativamente é ~5-10% mais rápido que o Ollama porque o Ollama adiciona overhead de API HTTP e gerenciamento de modelos. Na maioria das cargas de trabalho a diferença é pequena. MLX é significativamente mais rápido que ambos no hardware Apple Silicon.',
+          },
+          {
+            q: 'Posso usar MLX no Windows ou Linux?',
+            a: 'Não. MLX é um framework da Apple que funciona apenas no Apple Silicon (M1 em diante). No Windows ou Linux com GPUs NVIDIA ou AMD, use Ollama ou llama.cpp com suporte para CUDA ou ROCm.',
+          },
+          {
+            q: 'Como converto modelos do Ollama para o formato MLX?',
+            a: 'Não é possível converter modelos do Ollama diretamente para MLX. Baixe os pesos originais do Hugging Face e use o conversor do mlx-lm, ou busque versões pré-convertidas na organização mlx-community. Consulte <a href="/pt/prompt-bites/convert-ollama-model-to-mlx" class="text-primary hover:underline">Converter modelos do Ollama para MLX</a>.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Tool Comparisons',
     title: 'MLX vs Ollama vs llama.cpp: ¿Cuál motor de inferencia deberías usar?',

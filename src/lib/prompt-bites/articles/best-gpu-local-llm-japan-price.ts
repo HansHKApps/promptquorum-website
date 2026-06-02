@@ -1374,4 +1374,254 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Hardware Guides',
+    title: 'Qual é a melhor GPU por custo-benefício para LLMs locais no Japão?',
+    seoTitle: 'Melhor GPU para LLMs no Japão 2026 | PromptQuorum',
+    metaDescription:
+      'RTX 3060 12 GB é a melhor GPU por custo-benefício no Japão: ~¥40.000 nova, ¥25.000 usada. Modelos 7B a 20–25 tok/s. Disponível na Tsukumo e Dospara.',
+    publishDate: '2026-05-27',
+    dateModified: '2026-05-27',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-27',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['RTX 3060 12GB', 'RTX 4060 Ti 16GB', 'RX 7800 XT 16GB', 'RTX 3090 24GB'],
+    educationalLevel: 'Intermediate',
+    audience: 'Usuários no Japão comprando uma GPU para inferência local com LLMs',
+    affiliateDisclosure: true,
+    parentArticle: '/local-llms/best-budget-gpus-local-llm',
+    siblingBites: ['best-ollama-models-rtx-3060-12gb', 'best-egpu-ollama-macbook'],
+    is_living_page: false,
+    readTime: '5 min de leitura',
+    leadAnswerBlock:
+      'No Japão, a RTX 3060 12 GB oferece o melhor custo-benefício (nova ~¥40.000, usada ~¥25.000). 12 GB VRAM executa modelos 7B a 20–25 tok/s. Disponível na Tsukumo e Dospara em Akihabara.',
+    toc: [
+      { label: 'GPUs por faixa de preço no Japão', anchor: '#gpus-by-price' },
+      { label: 'Guia de compra no Japão', anchor: '#buying-guide' },
+      { label: 'FAQ', anchor: '#faq' },
+    ],
+    intro:
+      'Os preços de GPUs no Japão estão 15–20% acima dos preços nos EUA devido a custos de importação e 10% de imposto de consumo. O mercado de usados (Mercari, Yahoo Auctions, Janpara) pode economizar 30–40% em relação ao novo. Este guia mapeia as quatro GPUs que valem a pena comprar no Japão com seus preços reais de rua de maio de 2026 — novas na Tsukumo, Dospara e Yodobashi, e usadas online.',
+    quickAnswerTop: {
+      en: {
+        question: 'What is the best value GPU for local LLMs in Japan?',
+        answer: 'RTX 3060 12GB at ~¥40,000 new.',
+        bullets: ['RTX 3060 12GB: ¥40K new / ¥25K used', 'RTX 4060 Ti 16GB: ¥65K new'],
+        updatedDate: '2026-05',
+      },
+      de: {
+        question: 'Beste GPU für LLMs Japan?',
+        answer: 'RTX 3060 12 GB — bestes Preis-Leistungs-Verhältnis.',
+        bullets: ['RTX 3060: ¥40K neu / ¥25K gebraucht'],
+        updatedDate: '2026-05',
+      },
+      fr: {
+        question: 'Meilleure GPU LLM Japon ?',
+        answer: 'RTX 3060 12 Go — meilleur rapport qualité-prix.',
+        bullets: ['RTX 3060: ¥40K neuve / ¥25K occasion'],
+        updatedDate: '2026-05',
+      },
+      ja: {
+        question: '日本でコスパ最強のLLM用GPUは？',
+        answer: 'RTX 3060 12 GB（新品~¥40,000）がコスパ最強。',
+        bullets: ['RTX 3060: 新品¥40K/中古¥25K'],
+        updatedDate: '2026-05',
+      },
+      zh: {
+        question: '日本LLM最佳性价比显卡？',
+        answer: 'RTX 3060 12 GB（新品约¥40,000）性价比最高。',
+        bullets: ['RTX 3060: 新品¥40K/二手¥25K'],
+        updatedDate: '2026-05',
+      },
+      es: {
+        question: '¿Cuál es la mejor GPU por precio para LLMs locales en Japón?',
+        answer:
+          'La RTX 3060 12 GB a ~¥40,000 nueva (¥25,000 de segunda mano) es la mejor GPU por precio en Japón. 12 GB VRAM ejecuta cualquier modelo 7B a 20–25 tok/s sin configuración adicional.',
+        bullets: [
+          'RTX 3060 12 GB: ¥40K nueva / ¥25K segunda mano — mejor valor para modelos 7B a 20-25 tok/s.',
+          'RTX 4060 Ti 16 GB: ¥65K nueva / ¥50K segunda mano — acceso a modelos 13B a 18-22 tok/s.',
+          'RTX 3090 24 GB segunda mano ¥90K — evitar en apartamentos japoneses: 340W, ~¥8,000/mes en electricidad.',
+        ],
+        updatedDate: '2026-05',
+      },
+      pt: {
+        question: 'Qual é a melhor GPU por custo-benefício para LLMs locais no Japão?',
+        answer:
+          'A RTX 3060 12 GB a ~¥40.000 nova (¥25.000 usada) é a melhor GPU por custo-benefício no Japão. 12 GB VRAM executa qualquer modelo 7B a 20–25 tok/s sem configuração adicional.',
+        bullets: [
+          'RTX 3060 12 GB: ¥40K nova / ¥25K usada — melhor valor para modelos 7B a 20-25 tok/s.',
+          'RTX 4060 Ti 16 GB: ¥65K nova / ¥50K usada — acesso a modelos 13B a 18-22 tok/s.',
+          'RTX 3090 24 GB usada ¥90K — evitar em apartamentos japoneses: 340W, ~¥8.000/mês em eletricidade.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Melhor valor: RTX 3060 12 GB a ~¥40.000 nova / ¥25.000 usada (maio 2026) — modelos 7B a 20-25 tok/s',
+          'Médio alcance: RTX 4060 Ti 16 GB a ¥65.000 nova — modelos 13B a 18-22 tok/s, 16 GB de margem de contexto',
+          'Alternativa AMD: RX 7800 XT 16 GB a ¥70.000 — 16 GB VRAM, Vulkan/ROCm, ideal para Linux',
+          'Evitar: RTX 3090 24 GB em apartamentos japoneses — 340W TDP gera ~¥8.000/mês a ¥31/kWh',
+          'Usados: Mercari (メルカリ), Yahoo Auctions (Yahoo!オークション), Janpara (じゃんぱら) em Akihabara',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'A RTX 3060 12 GB a ~¥40.000 nova é a GPU com melhor custo-benefício para LLMs locais no Japão em maio de 2026.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Os preços de GPUs no Japão são 15-20% superiores aos dos EUA. A RTX 3060 12 GB executa qualquer modelo 7B a 20-25 tok/s e está disponível na Tsukumo e Dospara em Akihabara, ou usada no Mercari por ¥25.000.',
+          },
+        ],
+      },
+      body1: {
+        id: 'gpus-by-price',
+        title: 'GPUs por faixa de preço no Japão',
+        content: [
+          '<strong>Em maio de 2026, os preços de GPUs no Japão estão 15–20% acima dos preços equivalentes nos EUA devido a custos de importação e 10% de imposto de consumo. As quatro placas abaixo cobrem qualquer orçamento realista para inferência LLM local, de ¥25.000 usada a ¥90.000 usada.</strong>',
+          'A tabela abaixo usa preços de rua de maio de 2026 da Tsukumo, Dospara e Yodobashi para placas novas, e pontos médios do Mercari/Yahoo Auctions para usadas. Os preços flutuam — verifique antes de comprar.',
+        ],
+        columns: ['GPU + VRAM', 'Preço nova / usada (¥)', 'Melhor para'],
+        rows: [
+          {
+            'GPU + VRAM': 'RTX 3060 12 GB',
+            'Preço nova / usada (¥)': '¥40.000 / ¥25.000',
+            'Melhor para': 'Modelos 7B, melhor valor de entrada',
+          },
+          {
+            'GPU + VRAM': 'RTX 4060 Ti 16 GB',
+            'Preço nova / usada (¥)': '¥65.000 / ¥50.000',
+            'Melhor para': 'Modelos 13B, médio alcance',
+          },
+          {
+            'GPU + VRAM': 'RX 7800 XT 16 GB',
+            'Preço nova / usada (¥)': '¥70.000 / ¥55.000',
+            'Melhor para': 'AMD/Vulkan/ROCm no Linux',
+          },
+          {
+            'GPU + VRAM': 'RTX 3090 24 GB',
+            'Preço nova / usada (¥)': '— / ¥90.000',
+            'Melhor para': 'Modelos 30B+ (EVITAR: 340W, quente demais para apartamentos)',
+          },
+        ],
+        callouts: [
+          {
+            type: 'verdict',
+            text: 'RTX 3060 12 GB — Ideal para: primeira build com GPU, modelos 7B, compradores com orçamento reduzido. Evite se: precisar de modelos 13B+.',
+          },
+          {
+            type: 'verdict',
+            text: 'RTX 4060 Ti 16 GB — Ideal para: modelos 13B, upgrade da 3060. Evite se: o orçamento for apertado e o 7B for suficiente.',
+          },
+          {
+            type: 'verdict',
+            text: 'RX 7800 XT 16 GB — Ideal para: fãs de AMD, Vulkan/ROCm no Linux. Evite se: preferir o ecossistema CUDA.',
+          },
+          {
+            type: 'warning',
+            text: 'RTX 3090 24 GB — EVITAR em apartamentos japoneses. 340W TDP gera ~¥8.000/mês de eletricidade a ¥31/kWh. Compre somente se tiver um quarto dedicado com boa ventilação.',
+          },
+        ],
+        items: [
+          'Para inferência sem GPU no Japão com mini PC, consulte nosso [guia de mini PCs para o Japão](/pt/prompt-bites/best-mini-pc-local-llm-japan).',
+          'Para os melhores modelos em japonês, consulte nosso [guia de modelos LLM em japonês](/pt/prompt-bites/best-japanese-language-models-local).',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+3060+12GB',
+            productName: 'NVIDIA RTX 3060 12 GB',
+            productCategory: 'gpu',
+            priceRange: '¥25.000-40.000',
+            label: 'Ver preço da RTX 3060 12 GB na Amazon.co.jp',
+          },
+          {
+            url: 'https://www.tsukumo.co.jp/search/?keyword=RTX+3060+12GB',
+            productName: 'NVIDIA RTX 3060 12 GB',
+            productCategory: 'gpu',
+            priceRange: '¥40.000',
+            label: 'Ver preço da RTX 3060 12 GB na Tsukumo (ツクモ)',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+4060+Ti+16GB',
+            productName: 'NVIDIA RTX 4060 Ti 16 GB',
+            productCategory: 'gpu',
+            priceRange: '¥50.000-65.000',
+            label: 'Ver preço da RTX 4060 Ti 16 GB na Amazon.co.jp',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RX+7800+XT',
+            productName: 'AMD RX 7800 XT 16 GB',
+            productCategory: 'gpu',
+            priceRange: '¥55.000-70.000',
+            label: 'Ver preço da RX 7800 XT na Amazon.co.jp',
+          },
+        ],
+      },
+      body2: {
+        id: 'buying-guide',
+        title: 'Guia de compra no Japão',
+        content: [
+          '<strong>O Japão oferece dois canais de compra confiáveis para GPUs: novo em varejistas autorizados (Amazon.co.jp, Tsukumo, Dospara, Yodobashi Camera) e usado no Mercari, Yahoo Auctions ou Janpara em Akihabara.</strong> Para compradores de primeira vez, Akihabara tem uma vantagem decisiva: você pode inspecionar a placa pessoalmente e sair no mesmo dia.',
+          'Varejistas de GPUs novas no Japão (preços de maio de 2026): Amazon.co.jp entrega em todo o país com Prime no dia seguinte. Tsukumo (ツクモ) em 1-chome, Akihabara tem o estoque mais amplo e equipe experiente para builds LLM. Dospara (ドスパラ) Akihabara é forte em placas NVIDIA. Yodobashi Camera (ヨドバシカメラ) Multi Akiba cobre todas as marcas principais com pontos Yodobashi.',
+          'Fontes de usados: Mercari (メルカリ) e Yahoo! Auctions (Yahoo!オークション) oferecem a maior seleção e os menores preços. Janpara (じゃんぱら) em Akihabara é um especialista em usados de confiança com devoluções de 30 dias. Ao comprar no Mercari: verifique o status de garantia (保証) na listagem, pergunte ao vendedor se a GPU foi usada para mineração (マイニング) e evite listagens sem várias fotos claras da placa real.',
+          'Matriz de decisão de orçamento: Abaixo de ¥30.000 → RTX 3060 12 GB usada no Mercari. ¥30.000–50.000 → RTX 3060 12 GB nova na Tsukumo ou Dospara. ¥50.000–70.000 → RTX 4060 Ti 16 GB (usada) ou RX 7800 XT (nova). Acima de ¥70.000 → RX 7800 XT nova ou RTX 3090 usada (somente com quarto dedicado e boa ventilação).',
+          'Nota sobre eletricidade no Japão: média de ¥31/kWh (2026). A 8 horas de inferência diária: RTX 3060 12 GB (170W) custa ~¥3.200/mês. RTX 4060 Ti 16 GB (165W) custa ~¥3.100/mês. RTX 3090 24 GB (350W) custa ~¥6.600/mês.',
+          '<em>Aviso: Este artigo contém links de afiliados. Podemos ganhar uma comissão se você comprar por meio desses links, sem custo adicional para você.</em>',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://jp.mercari.com/search?keyword=RTX+3060+12GB',
+            productName: 'NVIDIA RTX 3060 12 GB (usada)',
+            productCategory: 'gpu',
+            priceRange: '¥20.000-25.000',
+            label: 'Buscar RTX 3060 12 GB usada no Mercari (メルカリ)',
+          },
+          {
+            url: 'https://auctions.yahoo.co.jp/search/search?p=RTX+3060+12GB',
+            productName: 'NVIDIA RTX 3060 12 GB (usada)',
+            productCategory: 'gpu',
+            priceRange: '¥20.000-27.000',
+            label: 'Buscar RTX 3060 12 GB usada no Yahoo Auctions (Yahoo!オークション)',
+          },
+          {
+            url: 'https://www.janpara.co.jp/sale/search/?KEYWORDS=RTX+3060+12GB',
+            productName: 'NVIDIA RTX 3060 12 GB (usada)',
+            productCategory: 'gpu',
+            priceRange: '¥25.000-30.000',
+            label: 'Buscar RTX 3060 12 GB usada na Janpara (じゃんぱら)',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ: Comprar uma GPU para LLMs locais no Japão',
+        faqs: [
+          {
+            q: 'Qual é a diferença entre a RTX 3060 12 GB e a versão de 8 GB?',
+            a: 'A versão de 8 GB não consegue executar modelos 7B em quantização Q4_K_M — um modelo 7B em Q4_K_M precisa de aproximadamente 6 GB de VRAM, e o overhead de tempo de execução ultrapassa o limite de 8 GB. A versão de 12 GB supera esse limite com 5–6 GB de sobra. Para LLMs locais, sempre compre a versão de 12 GB.',
+          },
+          {
+            q: 'O Ollama funciona com GPUs AMD como a RX 7800 XT?',
+            a: 'Sim. O Ollama suporta aceleração GPU da AMD via ROCm no Linux e Vulkan no Windows para a RX 7800 XT e outras placas RDNA3. No Linux com ROCm, o desempenho é próximo ao NVIDIA CUDA. No Windows, o Vulkan funciona, mas requer uma etapa de configuração manual. Se você estiver no Windows e priorizar zero configuração, a RTX 3060 12 GB ou RTX 4060 Ti 16 GB são escolhas mais fáceis.',
+          },
+          {
+            q: 'O que devo verificar ao comprar no Mercari (メルカリ)?',
+            a: 'Verifique o status de garantia (保証) na listagem — idealmente com pelo menos um mês de garantia do fabricante restante. Pergunte diretamente ao vendedor se a GPU foi usada para mineração (マイニング). Verifique se a avaliação do vendedor está acima de 95% e compre apenas de listagens com várias fotos claras da placa real.',
+          },
+          {
+            q: 'Dá para usar uma eGPU com um MacBook para inferência local no Japão?',
+            a: 'Sim, via Thunderbolt 3 ou 4. Uma eGPU com RTX 3060 12 GB ou RTX 4060 Ti 16 GB executará o Ollama e o llama.cpp com aceleração GPU. O desempenho é de aproximadamente 80% de uma conexão PCIe interna devido aos limites de largura de banda do Thunderbolt. Gabinetes eGPU estão disponíveis na Yodobashi Camera e Amazon.co.jp.',
+          },
+          {
+            q: 'Quais são os custos de eletricidade para rodar uma GPU no Japão?',
+            a: 'O Japão tem média de aproximadamente ¥31/kWh em 2026. A 4 horas de inferência diária: RTX 3060 12 GB (170W) custa ~¥1.600/mês. RTX 4060 Ti 16 GB (165W) custa ~¥1.550/mês. RTX 3090 24 GB (350W) custa ~¥3.300/mês. A 8 horas/dia, dobre esses valores. Inclua isso no cálculo do custo total de propriedade antes de comprar.',
+          },
+        ],
+      },
+    },
+  },
 }

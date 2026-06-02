@@ -3709,4 +3709,621 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
 },
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & Document Chat',
+    title: 'RAG local para dados empresariais: IA em conformidade com LGPD/GDPR para documentos sensíveis (2026)',
+    seoTitle: 'RAG local em conformidade com LGPD/GDPR para documentos sensíveis (2026)',
+    intro:
+      'As equipes jurídicas, médicas e financeiras enfrentam o mesmo problema: os documentos que mais valor agregariam buscar com IA são precisamente os que não podem sair da organização. Este artigo reúne a arquitetura, o conjunto de controles e a matriz de decisão de padrões de implantação para um RAG auto-hospedado que cumpre LGPD, GDPR, EU AI Act, HIPAA e as expectativas do Datenschutz alemão — redigido para o responsável por conformidade que precisa enviar um único documento para sua equipe de TI e que esta saiba o que construir.',
+    metaDescription:
+      'RAG local em conformidade com LGPD/GDPR para equipes jurídicas, médicas e financeiras: arquitetura, log de auditoria, escopo da DPIA e 3 padrões de implantação.',
+    twitterDescription:
+      'RAG local que cumpre LGPD/GDPR e EU AI Act. Air-gap, logs de auditoria, rastreabilidade de dados, escopo da DPIA e 3 padrões de implantação — o artigo que os responsáveis por conformidade enviam ao TI.',
+    audience:
+      'Responsáveis por conformidade da UE e Brasil, Encarregados de Proteção de Dados (DPO/ANPD), conselheiros jurídicos e arquitetos de TI responsáveis por construir RAG auto-hospedado sobre documentos confidenciais — contratos, prontuários de pacientes, arquivos de auditoria, salas de dados de M&A, correspondência com reguladores.',
+    readTime: '15 min de leitura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'RAG local em conformidade com LGPD/GDPR',
+    targetKeywords: [
+      'rag conforme lgpd gdpr',
+      'rag local dados empresariais',
+      'lei ia ue rag',
+      'rag privado documentos confidenciais',
+      'implantação rag on-premise',
+      'dpia rag local',
+      'anpd rag local',
+    ],
+    leadAnswerBlock:
+      '**Uma implantação RAG auto-hospedada está em conformidade com LGPD/GDPR e EU AI Act apenas quando seis controles são integrados desde o primeiro dia: hospedagem em air-gap ou com egresso estritamente controlado, autenticação por usuário com acesso a documentos baseado em funções, logs de auditoria imutáveis que cobrem a ingestão e a recuperação, criptografia de ponta a ponta em repouso e em trânsito, rastreabilidade determinista do chunk até a fonte, e um procedimento de exclusão por escrito que se propaga do armazenamento de origem pelo índice vetorial e quaisquer embeddings em cache.**',
+    quickAnswerTop: {
+      pt: {
+        question: 'O RAG local cumpre LGPD/GDPR por padrão e qual padrão de implantação as equipes reguladas devem escolher?',
+        answer:
+          'O RAG local não cumpre LGPD/GDPR por padrão. Executar um modelo on-premise resolve o problema da transferência transfronteiriça de dados e reduz a lista de sub-processadores, mas os artigos 5, 25, 30, 32 e 35 do GDPR / os artigos correspondentes da LGPD continuam sendo aplicáveis: base jurídica, minimização de dados, log de auditoria, segurança do tratamento e uma DPIA/RIPD para qualquer sistema que ingira dados de categorias especiais em larga escala. Escolha o padrão de notebook de usuário único para profissionais individuais e revisões pontuais; um servidor on-premise para bases de conhecimento departamentais com até alguns milhares de documentos e 5–50 usuários; uma nuvem privada na UE (nuvem soberana, chaves gerenciadas pelo cliente, região exclusiva na UE) para implantações multi-entidade onde a resiliência multirregional importa mais do que um air-gap completo. Independentemente da escolha, os seis controles são os mesmos — apenas o custo de implementação muda.',
+        bullets: [
+          'A hospedagem local resolve a transferência transfronteiriça (arts. 44–49 GDPR) e reduz a lista de sub-processadores — não resolve por si só a base jurídica, a DPIA nem os direitos dos titulares.',
+          'Notebook de usuário único — ideal para advogados, médicos, auditores individuais e revisões pontuais.',
+          'Servidor on-premise — ideal para implantações departamentais de 5–50 usuários.',
+          'Nuvem privada na UE — ideal para implantações multi-entidade que precisam de resiliência.',
+          'Uma DPIA/RIPD é obrigatória sob o artigo 35 GDPR / artigo 38 LGPD quando dados de categorias especiais são ingeridos em larga escala.',
+          'As solicitações de direito ao esquecimento devem se propagar para os documentos de origem, os índices vetoriais e os embeddings em cache — projete o procedimento de exclusão antes da produção, não após receber a primeira solicitação.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Principais destaques', anchor: '#key-takeaways' },
+      { label: 'Fatos rápidos', anchor: '#quick-facts' },
+      { label: 'Comparação de padrões de implantação', anchor: '#deployment-comparison' },
+      { label: 'Escolher um padrão de implantação', anchor: '#which-deployment' },
+      { label: 'Por que RAG local para dados sensíveis', anchor: '#why-local-rag' },
+      { label: 'Os seis controles que toda implantação precisa', anchor: '#required-controls' },
+      { label: 'Air-gap e controle de egresso', anchor: '#air-gap' },
+      { label: 'Log de auditoria que resiste a uma revisão', anchor: '#audit-logging' },
+      { label: 'Rastreabilidade de dados do chunk à fonte', anchor: '#data-lineage' },
+      { label: 'Criptografia e controle de acesso', anchor: '#encryption-access' },
+      { label: 'Padrão de notebook de usuário único', anchor: '#laptop-pattern' },
+      { label: 'Padrão de servidor on-premise', anchor: '#on-prem-pattern' },
+      { label: 'Opções de bancos de dados vetoriais', anchor: '#vector-db-comparison' },
+      { label: 'Padrão de nuvem privada na UE', anchor: '#private-cloud-pattern' },
+      { label: 'Classificação segundo a Lei de IA da UE', anchor: '#eu-ai-act' },
+      { label: 'Requisitos da DPIA/RIPD', anchor: '#dpia-requirements' },
+      { label: 'LGPD e ANPD: notas específicas para o Brasil', anchor: '#germany-datenschutz' },
+      { label: 'Lista de verificação de conformidade', anchor: '#compliance-checklist' },
+      { label: 'Erros frequentes', anchor: '#common-mistakes' },
+      { label: 'Fontes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leituras relacionadas', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**A hospedagem local é necessária, mas não suficiente.** Executar o modelo e o armazenamento vetorial no seu próprio hardware resolve a transferência transfronteiriça de dados e reduz a lista de sub-processadores, mas os artigos 5, 25, 30, 32 e 35 do GDPR / artigos correspondentes da LGPD continuam se aplicando.',
+          '**Seis controles são inegociáveis** independentemente do padrão de implantação: air-gap ou controle de egresso estrito, autenticação por usuário com acesso baseado em funções, logs de auditoria imutáveis, criptografia em repouso e em trânsito, rastreabilidade determinista do chunk até o documento de origem, e um procedimento de exclusão por escrito que inclua o índice vetorial e quaisquer embeddings em cache.',
+          '**Três padrões de implantação cobrem a maioria dos casos de uso regulados.** Notebook de usuário único para profissionais individuais e revisões pontuais; servidor on-premise para bases de conhecimento departamentais de 5–50 usuários; nuvem privada na UE (região soberana, chaves gerenciadas pelo cliente) para implantações multi-entidade onde a resiliência importa mais do que o air-gap completo.',
+          '**A Lei de IA da UE classifica a maioria dos RAGs locais como sistemas de risco limitado** — mas no momento em que a recuperação alimenta uma decisão automatizada (pontuação de crédito, seleção de pessoal, elegibilidade a benefícios), a implantação passa a ser de alto risco e aciona a avaliação de conformidade completa.',
+          '**Uma DPIA/RIPD é obrigatória** para qualquer RAG que ingerir dados de categorias especiais (saúde, dados jurídicos, biométricos, políticos, de filiação sindical) em larga escala, ou qualquer sistema que produza decisões automatizadas com efeitos jurídicos.',
+          '**O direito ao esquecimento é o teste de exclusão que mais implantações reprovam.** Os documentos de origem são fáceis. Os índices vetoriais podem ser reconstruídos. Os embeddings em cache, os registros de recuperação e as respostas armazenadas no histórico de chat são as partes que são esquecidas.',
+          '**Os modelos de embedding de código aberto são seguros para LGPD/GDPR em princípio**, mas apenas se (a) os pesos do modelo são baixados uma vez e fixados a um hash, (b) a inferência é executada inteiramente em hardware local sem telemetria, e (c) a ficha do modelo e a licença são revisadas para detectar cláusulas que conflitem com o uso empresarial confidencial.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Fatos rápidos',
+        items: [
+          '**6 controles obrigatórios** para qualquer RAG regulado: air-gap, RBAC, logs de auditoria, criptografia, rastreabilidade de dados, procedimento de exclusão.',
+          '**3 padrões de implantação:** notebook de usuário único (profissionais individuais), servidor on-premise (5–50 usuários), nuvem privada na UE (multi-entidade).',
+          '**A DPIA/RIPD é obrigatória** quando dados de categorias especiais (saúde, jurídicos, biométricos) são ingeridos em larga escala.',
+          '**Lei de IA da UE:** a maioria dos RAGs locais = risco limitado; passa a alto risco quando a recuperação alimenta decisões automatizadas (crédito, emprego, benefícios).',
+          '**O direito ao esquecimento** deve se propagar para documentos de origem, índices vetoriais, embeddings em cache E o histórico de respostas.',
+          '**LGPD e ANPD (Brasil):** o relatório de impacto à proteção de dados pessoais (RIPD) é o equivalente brasileiro da DPIA; a ANPD é a autoridade supervisora nacional.',
+          '**Os modelos de embedding de código aberto** só são conformes com LGPD/GDPR se os pesos estiverem fixados, a inferência for completamente local e a licença tiver sido revisada.',
+        ],
+      },
+      comparisonTable: {
+        id: 'deployment-comparison',
+        title: 'Comparação de padrões de implantação',
+        content:
+          'Cada padrão pode ser feito em conformidade com LGPD/GDPR; o que muda é o custo dos controles e os modos de falha quando algo dá errado. Escolha o padrão mais simples que se encaixe no número de usuários, na sensibilidade dos documentos e no requisito de resiliência.',
+        columns: ['Controle', 'Notebook de usuário único', 'Servidor on-premise', 'Nuvem privada na UE'],
+        rows: [
+          {
+            'Controle': 'Air-gap (sem rede de saída)',
+            'Notebook de usuário único': 'Trivial — desativar a rede',
+            'Servidor on-premise': 'Alcançável — VLAN + firewall',
+            'Nuvem privada na UE': 'Difícil — apenas lista de egresso permitido',
+          },
+          {
+            'Controle': 'Log de auditoria (quem, o quê, quando)',
+            'Notebook de usuário único': 'Manual — apenas no nível do SO',
+            'Servidor on-premise': 'Sólido — pipeline de logs centralizado',
+            'Nuvem privada na UE': 'Sólido — logging nativo na nuvem',
+          },
+          {
+            'Controle': 'Rastreabilidade de dados (chunk → fonte)',
+            'Notebook de usuário único': 'Apenas arquivos locais',
+            'Servidor on-premise': 'Pipeline completamente rastreável',
+            'Nuvem privada na UE': 'Completa — mas abrange regiões',
+          },
+          {
+            'Controle': 'Residência de dados na UE/Brasil',
+            'Notebook de usuário único': 'Inerente — localização física',
+            'Servidor on-premise': 'Inerente — localização física',
+            'Nuvem privada na UE': 'Configurada — região soberana obrigatória',
+          },
+          {
+            'Controle': 'RBAC por usuário',
+            'Notebook de usuário único': 'Usuário único — N/A',
+            'Servidor on-premise': 'Provedor de identidade + grupos',
+            'Nuvem privada na UE': 'IAM + SSO + ACL por coleção',
+          },
+          {
+            'Controle': 'Backup e recuperação de desastres',
+            'Notebook de usuário único': 'Disco externo criptografado',
+            'Servidor on-premise': 'Fita ou backup externo',
+            'Nuvem privada na UE': 'Replicação multi-AZ',
+          },
+          {
+            'Controle': 'Custo inicial',
+            'Notebook de usuário único': 'Apenas hardware — baixo',
+            'Servidor on-premise': 'Servidor + integração — médio',
+            'Nuvem privada na UE': 'Assinatura + configuração — médio',
+          },
+          {
+            'Controle': 'Custo contínuo',
+            'Notebook de usuário único': 'Nenhum — tempo de sysadmin',
+            'Servidor on-premise': 'Operações de TI + eletricidade + resfriamento',
+            'Nuvem privada na UE': 'Mensalidade recorrente',
+          },
+          {
+            'Controle': 'Ideal para',
+            'Notebook de usuário único': 'Profissionais individuais, revisões pontuais',
+            'Servidor on-premise': '5–50 usuários, bases de conhecimento departamentais',
+            'Nuvem privada na UE': 'Multi-entidade, implantações resilientes',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-deployment',
+        title: 'Escolher um padrão de implantação',
+        content:
+          '**A escolha correta depende do número de usuários, da sensibilidade dos documentos, da pressão de auditoria e da capacidade interna de TI.**',
+        columns: ['Sua situação', 'Escolha'],
+        rows: [
+          {
+            'Sua situação': 'Advogado, médico ou auditor individual que revisa um caso por vez',
+            'Escolha': 'Notebook de usuário único',
+          },
+          {
+            'Sua situação': 'Sala de dados de M&A com 3–5 revisores nomeados e data de fechamento definida',
+            'Escolha': 'Notebook de usuário único ou on-premise (conforme o volume de documentos)',
+          },
+          {
+            'Sua situação': 'Equipe de conformidade de 10–30 pessoas que compartilha um arquivo de correspondência com reguladores',
+            'Escolha': 'Servidor on-premise',
+          },
+          {
+            'Sua situação': 'Departamento hospitalar construindo um assistente de protocolos clínicos para 50 funcionários',
+            'Escolha': 'Servidor on-premise',
+          },
+          {
+            'Sua situação': 'Grupo multi-entidade que precisa de um RAG compartilhado entre filiais em vários países da UE',
+            'Escolha': 'Nuvem privada na UE (região soberana + chaves gerenciadas pelo cliente)',
+          },
+          {
+            'Sua situação': 'Seguradora com requisito de disponibilidade 24/7 e plano de recuperação de desastres',
+            'Escolha': 'Nuvem privada na UE',
+          },
+          {
+            'Sua situação': 'Órgão público com dados classificados ou restritos',
+            'Escolha': 'Apenas on-premise com air-gap — a nuvem está fora de alcance',
+          },
+          {
+            'Sua situação': 'Defesa de auditoria perante regulador em menos de 6 semanas',
+            'Escolha': 'Servidor on-premise (o mais rápido para demonstrar controle)',
+          },
+        ],
+      },
+      whyLocalRag: {
+        id: 'why-local-rag',
+        title: 'Por que RAG local para dados sensíveis',
+        content:
+          '**O argumento a favor do RAG local versus LLM-as-a-service na nuvem não é ideologia — é a forma que assume a avaliação de riscos LGPD/GDPR.** O RAG na nuvem é viável para muitos casos de uso; para dados empresariais sensíveis, ele adiciona cinco riscos que o RAG local elimina por construção.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'O RAG local mantém seus documentos sensíveis no seu próprio hardware enquanto fornece à sua equipe busca potenciada por IA — nenhum dado sai do edifício, nenhum sub-processador externo os toca, e nenhuma questão de transferência transfronteiriça surge.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Imagine que sua equipe jurídica pudesse pesquisar em 10.000 processos fazendo perguntas em linguagem natural — mas os documentos nunca saíssem da sala de servidores. É isso que o RAG local faz: a IA lê seus documentos no seu hardware, responde suas perguntas no seu hardware, e nada é enviado a lugar nenhum. A vantagem de conformidade não é uma funcionalidade — é a arquitetura.',
+          },
+        ],
+        items: [
+          '**Transferência transfronteiriça (arts. 44–49 GDPR / arts. LGPD sobre transferências internacionais).** Enviar dados pessoais a um sub-processador fora da UE/Brasil requer cláusulas contratuais padrão, uma avaliação do impacto da transferência e uma resposta crível sobre se a jurisdição receptora tem poderes de intimação que alcancem esses dados. O RAG local não transfere dados — a questão não surge.',
+          '**Proliferação de sub-processadores (art. 28 GDPR / art. 37 LGPD).** Os provedores de LLM na nuvem frequentemente dependem de infraestrutura de hiperescalador, serviços de moderação de conteúdo e provedores de observabilidade. Cada um é um sub-processador que deve ser listado, contratado e auditado. O RAG local tem zero sub-processadores por padrão.',
+          '**Vazamento de dados de treinamento.** Muitos termos de LLM na nuvem se reservam o direito de usar os prompts dos clientes para melhorar o modelo, a menos que seja usado um nível enterprise pago e a cláusula de não treinamento seja verificada. O RAG local executa modelos com pesos que você controla; nada sai do host.',
+          '**Cláusulas de confidencialidade em contratos com clientes.** Os acordos com consultoria externa, NDAs de M&A e acordos sobre dados de pacientes frequentemente proíbem a transmissão do material protegido a sub-processadores externos. O RAG local contorna a cláusula completamente.',
+          '**Exposição a intimações judiciais e processos legais.** Os documentos armazenados com um provedor na nuvem podem ser requeridos via processo legal dirigido ao provedor, com obrigações de divulgação das quais o controlador pode nem ser notificado a tempo. Os documentos que nunca saem das suas instalações só podem ser requeridos a você.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'O RAG local não é a resposta correta para todas as cargas de trabalho. A pesquisa de informações públicas, a geração de rascunhos de marketing, a assistência de código em repositórios de código aberto — tudo isso geralmente funciona melhor com LLM na nuvem porque a exposição LGPD/GDPR é baixa e a lacuna de qualidade do modelo importa. O argumento deste artigo é especificamente para dados empresariais confidenciais: jurídicos, médicos, financeiros, de RH, correspondência com reguladores e segredos comerciais.',
+          },
+        ],
+      },
+      requiredControls: {
+        id: 'required-controls',
+        title: 'Os seis controles que toda implantação precisa',
+        content:
+          '**Esses seis controles são o piso mínimo.** Toda implantação regulada precisa dos seis; o padrão de implantação apenas muda como você os implementa.',
+        numberedItems: [
+          {
+            title: 'Air-gap ou controle de egresso estrito',
+            whyItMatters:
+              'Confirme que os documentos e embeddings não podem vazar via chamadas de saída — SDKs de telemetria, sondas de atualização do modelo, relatores de falhas, callbacks de moderação de conteúdo, CDN de terceiros para fontes. Ou desative o acesso à rede completamente (air-gap real) ou execute uma lista de egresso permitido que só autorize servidores de atualização assinados.',
+          },
+          {
+            title: 'Autenticação por usuário com acesso baseado em funções',
+            whyItMatters:
+              'Você precisa conseguir responder "quem acessou qual documento" antes que um regulador pergunte. Login único contra um provedor de identidade, acesso por grupos a coleções e ACL por documento onde o caso o exige. Contas compartilhadas não são um controle — são uma falha de auditoria esperando para acontecer.',
+          },
+          {
+            title: 'Logs de auditoria imutáveis que cobrem a ingestão e a recuperação',
+            whyItMatters:
+              'Para cada documento: quem o enviou, quando, caminho de origem, hash. Para cada consulta: quem perguntou, o que foi perguntado (se o logging permitir), quais chunks foram recuperados, de quais IDs de documentos vieram, qual resposta foi retornada. Os logs devem ser à prova de adulteração — somente de adição, assinados, com uma retenção suficiente para cobrir a janela de investigação da autoridade supervisora.',
+          },
+          {
+            title: 'Criptografia em repouso e em trânsito',
+            whyItMatters:
+              'Criptografia de disco completo no host, TLS para qualquer chamada interna entre serviços, e gerenciamento de chaves que sobreviva a um notebook roubado ou uma conta de administrador comprometida. Chaves gerenciadas pelo cliente para implantações na nuvem.',
+          },
+          {
+            title: 'Rastreabilidade determinista de dados do chunk à fonte',
+            whyItMatters:
+              'Cada chunk recuperado deve ser rastreado até seu documento de origem, página, seção e versão. Isso é o que permite (a) verificar a resposta, (b) atender uma solicitação de exclusão, (c) defender o sistema perante um tribunal quando um resumo gerado é questionado.',
+          },
+          {
+            title: 'Procedimento de exclusão por escrito que inclua o índice vetorial e os embeddings em cache',
+            whyItMatters:
+              'Uma solicitação de direito ao esquecimento deve se propagar do armazenamento de origem, pelo índice vetorial, até quaisquer embeddings em cache, e pela retenção de registros de recuperação. A maioria das implantações gerencia a exclusão da origem corretamente e esquece o restante.',
+          },
+        ],
+      },
+      airGap: {
+        id: 'air-gap',
+        title: 'Air-gap e controle de egresso',
+        content:
+          '**Air-gap significa que o host não tem rota de rede de saída; o controle de egresso significa que ele tem uma estritamente permitida.** Ambos são aceitáveis; escolha o modelo mais robusto que suas operações consigam sustentar.',
+        items: [
+          '**Air-gap real** — sem DHCP, sem resolução DNS para destinos públicos, sem TCP de saída. As atualizações são realizadas via mídia assinada que um administrador conecta fisicamente.',
+          '**Lista de egresso permitido** — o tráfego de saída só é permitido para uma pequena lista de destinos nomeados (servidores de atualização do modelo, seu provedor de identidade, encaminhadores de logs para coletores internos).',
+          '**O que verificar na plataforma:** zero telemetria por padrão, sem chamadas de saída durante a inferência, sem CDN de fontes na UI, sem relatores de falhas que enviem payloads. Verifique com uma captura de pacotes ou uma ferramenta como Little Snitch no banco de testes antes de ir para produção.',
+          '**Governança de atualizações** — os pesos do modelo, os pesos do embedder, o código do aplicativo e os patches do SO passam todos por uma janela de atualização controlada. O administrador que promove uma atualização a assina por escrito; a mudança é registrada.',
+          '**Ruptura de air-gap frequente:** um SDK de análise incluído com um componente de interface de terceiros, uma referência a CDN de fontes no chrome do aplicativo, ou uma sonda de "verificar atualizações" que roda na inicialização.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Realize uma captura de pacotes de 24 horas no host com o aplicativo aberto e em repouso. Qualquer tráfego de saída que não esteja na lista permitida é uma descoberta. Repita isso toda vez que o aplicativo for atualizado.',
+          },
+        ],
+      },
+      auditLogging: {
+        id: 'audit-logging',
+        title: 'Log de auditoria que resiste a uma revisão',
+        content:
+          '**O log de auditoria é o artefato que uma autoridade supervisora (ANPD no Brasil, DPA na UE) lerá primeiro.** Ele deve responder duas perguntas para cada recuperação: quem perguntou e o que o sistema lhe deu.',
+        items: [
+          '**Eventos de ingestão:** ID de documento, hash (SHA-256), nome de arquivo, caminho de origem, enviado por, timestamp, rótulo de classificação, tamanho, número de páginas, grupo proprietário, classe de retenção.',
+          '**Eventos de recuperação:** ID de consulta, ID de usuário, timestamp, IDs de chunks recuperados (e IDs de documentos dos quais vieram), pontuações de recuperação, hash da resposta final, identificador do modelo, identificador do embedder, top-K utilizado.',
+          '**Eventos administrativos:** promoção do modelo, troca de embedder, reconstrução do índice, mudanças de usuário/grupo, mudanças de ACL.',
+          '**Resistência a adulterações:** log de somente adição, encadeamento de hashes (cada entrada referencia o hash da entrada anterior), chave de assinatura fora de banda, reconciliação periódica com uma cópia separada.',
+          '**Retenção:** se alinha com a janela de investigação da autoridade supervisora — no mínimo o período de retenção do caso; comumente seis a sete anos para setores regulados; mais onde normas setoriais se aplicam.',
+          '**Pipeline:** o aplicativo emite eventos estruturados; um encaminhador os envia a um armazenamento de logs separado com acesso de escrita restrito. O servidor de aplicativo nunca deve ter permissão para excluir ou reescrever entradas de logs.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Registrar o texto da consulta introduz sua própria questão de LGPD/GDPR — uma consulta pode conter em si mesma dados pessoais (ex.: "resuma o histórico médico do paciente X"). Decida no momento do design se sua base jurídica de tratamento cobre o logging de consultas, e se não cobrir, registre apenas os metadados necessários para auditoria e diagnóstico operacional.',
+          },
+        ],
+      },
+      dataLineage: {
+        id: 'data-lineage',
+        title: 'Rastreabilidade de dados do chunk à fonte',
+        content:
+          '**A rastreabilidade é a espinha dorsal de todos os outros controles.** Sem ela, as solicitações de exclusão falham, a verificação de respostas é impossível e o rastro de auditoria desmorona.',
+        items: [
+          '**Rastreabilidade no nível do documento:** cada documento tem um ID interno estável, um hash de conteúdo, um timestamp de ingestão, um proprietário, uma classificação e uma classe de retenção.',
+          '**Rastreabilidade no nível do chunk:** cada chunk referencia seu ID de documento pai, página (para PDFs), seção (para documentos estruturados), offset de caractere, comprimento e versão da estratégia de chunking.',
+          '**Rastreabilidade no nível do embedding:** cada vetor de embedding referencia seu ID de chunk e identificador de embedder.',
+          '**Rastreabilidade no nível da resposta:** cada resposta gerada referencia os IDs de chunks que a produziram, o identificador do modelo, a versão do template de prompt e o timestamp.',
+          '**Reindexação sem quebrar a rastreabilidade:** as reconstruções preservam os IDs de documentos e incrementam as versões da estratégia de chunking.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Teste a cadeia de rastreabilidade trimestralmente. Escolha uma recuperação aleatória do log de auditoria e percorra-a de volta: ID de chunk → ID de documento → arquivo original no armazenamento de origem → classe de retenção. Se qualquer etapa estiver quebrada, corrija o esquema antes da próxima inspeção supervisora — não durante ela.',
+          },
+        ],
+      },
+      encryptionAccess: {
+        id: 'encryption-access',
+        title: 'Criptografia e controle de acesso',
+        content:
+          '**Criptografia em repouso, criptografia em trânsito e controle de acesso que se mapeia ao seu provedor de identidade existente.** O modo de falha é esquecer uma das três camadas, não implementar mal a camada escolhida.',
+        items: [
+          '**Criptografia em repouso** — criptografia de disco completo no host (LUKS no Linux, BitLocker no Windows, FileVault no macOS para notebooks). Para servidores, criptografe também as partições que hospedam o armazenamento vetorial e o estágio de ingestão.',
+          '**Criptografia em trânsito** — TLS para qualquer salto entre serviços, mesmo no localhost. TLS mútuo onde o modelo de ameaças justificar.',
+          '**Autenticação** — login único contra seu provedor de identidade existente (OIDC, SAML). Sem contas locais em produção. MFA obrigatório para qualquer usuário com acesso administrativo ou a coleções sensíveis.',
+          '**Autorização** — acesso baseado em grupos no nível da coleção; ACL no nível do documento onde o caso o exigir. O pipeline de recuperação deve aplicar as ACL no momento da consulta — não apenas a interface de usuário.',
+          '**Acesso administrativo** — gerenciamento de acesso privilegiado para qualquer conta que possa ler ou reconstruir índices, ver logs de auditoria ou alterar ACLs.',
+          '**Segurança de endpoint** — dispositivos gerenciados para implantações com notebook (registrados em MDM, criptografados, política de bloqueio de tela aplicada).',
+        ],
+      },
+      laptopDeep: {
+        id: 'laptop-pattern',
+        title: 'Padrão de notebook de usuário único',
+        content:
+          '**O notebook de usuário único é o padrão mais fácil de fazer com air-gap e o mais difícil de escalar.** Adequado para profissionais individuais e revisões pontuais.',
+        items: [
+          '**Hardware** — um notebook de categoria workstation com criptografia de disco completo, uma GPU discreta (ou uma máquina recente de memória unificada) e pelo menos 32 GB de RAM.',
+          '**Software** — um aplicativo RAG de desktop autocontido que roda localmente; um LLM de código aberto com pesos baixados uma vez e fixados a um hash; um embedder de código aberto; um armazenamento vetorial local no disco criptografado.',
+          '**Postura de rede** — com air-gap durante o trabalho; reconectado apenas para atualizações assinadas explícitas.',
+          '**Manuseio de documentos** — documentos de origem no disco criptografado; uma estrutura de pastas por caso; backups semanais criptografados em um disco externo armazenado em local diferente.',
+          '**Postura de auditoria** — o log de auditoria no nível do SO é o piso mínimo para o padrão de notebook.',
+          '**Limitações** — um notebook de usuário único não é uma plataforma multiusuário. Compartilhar o notebook, compartilhar contas ou copiar o armazenamento de documentos para o notebook de um colega quebra a postura de auditoria.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Para profissionais individuais que trabalham com casos confidenciais, o padrão de notebook de usuário único é genuinamente a postura de privacidade mais sólida disponível — melhor do que qualquer nuvem e mais sólida do que muitas implantações on-premise. A contrapartida é operacional: quando o notebook falha, o caso herda o tempo de recuperação da sua disciplina de backup.',
+          },
+        ],
+      },
+      onPremDeep: {
+        id: 'on-prem-pattern',
+        title: 'Padrão de servidor on-premise',
+        content:
+          '**O servidor on-premise é o padrão de trabalho habitual para RAG departamental regulado.** Escala para 5–50 usuários e alguns milhares de documentos, suporta logs de auditoria adequados e permanece dentro do seu perímetro físico.',
+        items: [
+          '**Hardware** — um servidor com uma ou duas GPUs de nível empresarial, discos redundantes, memória ECC e um no-break. Planeje 2–4× o armazenamento do seu corpus de documentos bruto para cobrir vetores, índices, logs e backups.',
+          '**Rede** — uma VLAN dedicada atrás do firewall corporativo; lista de egresso permitido ou air-gap completo conforme o modelo de ameaças.',
+          '**Stack de software** — uma plataforma RAG auto-hospedada, um LLM de código aberto como modelo de chat, um embedder de código aberto e um armazenamento vetorial apropriado para o tamanho do corpus.',
+          '**Identidade** — federada com o provedor de identidade corporativo; a associação a grupos controla o acesso às coleções.',
+          '**Backup e recuperação de desastres** — backups incrementais noturnos; backups completos semanais; cópia externa mantida pelo TI.',
+          '**Operações** — janela de correção segundo a política de gerenciamento de mudanças; revisões de acesso trimestrais; procedimento de exclusão para solicitações de direito ao esquecimento testado; rota de atualização do modelo e do embedder documentada.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'O RAG on-premise frequentemente falha por razões não técnicas: um backup que nunca foi restaurado, uma conta de administrador compartilhada entre o pessoal de TI, um no-break que ninguém testou. Os controles técnicos são mais fáceis do que a higiene operacional.',
+          },
+        ],
+      },
+      vectorDbComparison: {
+        id: 'vector-db-comparison',
+        title: 'Opções de bancos de dados vetoriais para RAG on-premise',
+        content:
+          '**A escolha do armazenamento vetorial raramente determina a conformidade — mas dá forma ao custo operacional, ao teto de escala e à limpeza com que o procedimento de exclusão pode ser implementado.**',
+        columns: ['Banco de dados vetorial', 'Tipo', 'Auto-hospedagem na UE/Brasil', 'Melhor padrão de RAG'],
+        rows: [
+          {
+            'Banco de dados vetorial': '**Chroma**',
+            'Tipo': 'Código aberto, leve',
+            'Auto-hospedagem na UE/Brasil': '✅',
+            'Melhor padrão de RAG': 'Notebook + on-premise pequeno',
+          },
+          {
+            'Banco de dados vetorial': '**Qdrant**',
+            'Tipo': 'Código aberto, alto desempenho',
+            'Auto-hospedagem na UE/Brasil': '✅',
+            'Melhor padrão de RAG': 'Servidor on-premise, filtragem intensiva',
+          },
+          {
+            'Banco de dados vetorial': '**Weaviate**',
+            'Tipo': 'Código aberto, completo',
+            'Auto-hospedagem na UE/Brasil': '✅',
+            'Melhor padrão de RAG': 'On-premise + busca híbrida',
+          },
+          {
+            'Banco de dados vetorial': '**Milvus**',
+            'Tipo': 'Código aberto, enterprise',
+            'Auto-hospedagem na UE/Brasil': '✅',
+            'Melhor padrão de RAG': 'On-premise em grande escala',
+          },
+          {
+            'Banco de dados vetorial': '**pgvector**',
+            'Tipo': 'Extensão do PostgreSQL',
+            'Auto-hospedagem na UE/Brasil': '✅',
+            'Melhor padrão de RAG': 'Equipes que já usam Postgres',
+          },
+          {
+            'Banco de dados vetorial': '**Pinecone**',
+            'Tipo': 'SaaS gerenciado',
+            'Auto-hospedagem na UE/Brasil': '⚠️ Hospedado nos EUA',
+            'Melhor padrão de RAG': 'Apenas nuvem privada na UE (com ressalvas)',
+          },
+        ],
+      },
+      euCloudDeep: {
+        id: 'private-cloud-pattern',
+        title: 'Padrão de nuvem privada na UE',
+        content:
+          '**O padrão de nuvem privada na UE utiliza um provedor de nuvem em região soberana com chaves gerenciadas pelo cliente, residência de dados exclusivamente na UE e uma cláusula contratual de não treinamento de IA que cubra os dados do cliente.**',
+        items: [
+          '**Seleção do provedor** — a oferta soberana na UE de um hiperescalador ou um provedor de nuvem europeu. O DPA deve listar cada sub-processador; os mecanismos de transferência devem ser abordados se algum sub-processador estiver fora do EEE.',
+          '**Região** — exclusivamente na UE, com garantias explícitas de residência de dados. Replicação entre regiões apenas para outras regiões da UE. Sem região dos EUA como failover, nem mesmo temporariamente.',
+          '**Criptografia** — chaves gerenciadas pelo cliente com rotação; bring-your-own-key onde o provedor admitir; eventos de acesso a chaves registrados separadamente.',
+          '**Rede** — VPC privada sem ingresso público; acesso apenas via conectividade privada (link dedicado ou VPN) da sua rede corporativa.',
+          '**Contratos** — o DPA deve cumprir o art. 28 GDPR, listar sub-processadores, abordar as cláusulas contratuais padrão onde necessário e incluir uma cláusula explícita de não treinamento com dados do cliente que cubra tanto os pesos do LLM quanto qualquer serviço auxiliar.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'O padrão de nuvem privada na UE parece mais permissivo do que o on-premise porque utiliza um sub-processador externo — mas com região soberana, chaves gerenciadas pelo cliente, cláusula contratual de não treinamento e controle de egresso adequado, pode igualar ou superar o on-premise em disponibilidade e postura de auditoria.',
+          },
+        ],
+      },
+      euAiAct: {
+        id: 'eu-ai-act',
+        title: 'Classificação segundo a Lei de IA da UE: risco limitado vs. alto risco',
+        content:
+          '**A maioria das implantações de RAG local são sistemas de IA de risco limitado segundo a Lei de IA da UE — mas no momento em que a recuperação alimenta uma decisão automatizada que afeta uma pessoa, a classificação passa a alto risco e as obrigações se multiplicam.**',
+        items: [
+          '**Risco limitado (a maioria dos RAGs locais)** — o sistema recupera e resume documentos para assistir a um humano; o humano toma a decisão. As obrigações são principalmente de transparência.',
+          '**Alto risco** — a recuperação alimenta uma decisão automatizada em domínios que a Lei enumera: pontuação de crédito, seleção de pessoal, admissões educacionais, serviços públicos essenciais, aplicação da lei, migração, justiça, identificação biométrica, infraestrutura crítica.',
+          '**Obrigações de alto risco** — sistema de gestão de riscos ao longo do ciclo de vida, governança de dados documentada, documentação técnica, registro automático de eventos, transparência, supervisão humana, medidas de precisão e robustez, avaliação de conformidade pré-comercialização.',
+          '**Práticas proibidas** — pontuação social, rastreamento não seletivo de imagens faciais, reconhecimento de emoções em locais de trabalho e centros educacionais, determinada categorização biométrica em tempo real.',
+          '**Documentação como artefato de auditoria** — o expediente técnico exigido para sistemas de alto risco não é um entregável único; é um documento vivo.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'A linha entre alto risco e risco limitado é traçada pelo caso de uso, não pela tecnologia. O mesmo armazenamento vetorial e o mesmo modelo podem ser de risco limitado em uma implantação de assistente de pesquisa e de alto risco em uma implantação de seleção de pessoal de RH.',
+          },
+        ],
+      },
+      dpia: {
+        id: 'dpia-requirements',
+        title: 'Requisitos da DPIA (GDPR) / RIPD (LGPD)',
+        content:
+          '**Uma Avaliação de Impacto sobre a Proteção de Dados (DPIA — art. 35 GDPR) ou Relatório de Impacto à Proteção de Dados Pessoais (RIPD — art. 38 LGPD) é obrigatória para o tratamento que possa acarretar alto risco aos direitos e liberdades dos titulares.** A maioria dos RAGs locais regulados está no escopo. Trate a DPIA/RIPD como o documento de design, não como um artefato de conformidade posterior.',
+        items: [
+          '**Quando é obrigatória (GDPR/LGPD)** — avaliação sistemática e exaustiva que inclua elaboração de perfis com efeitos jurídicos; tratamento em larga escala de dados de categorias especiais (saúde, dados jurídicos, biométricos, raciais, políticos, religiosos, sindicais); monitoramento sistemático de zonas de acesso público.',
+          '**Escopo da DPIA/RIPD** — finalidade e base jurídica; descrição das operações de tratamento; avaliação de necessidade e proporcionalidade; avaliação de riscos para os titulares; mitigações e risco residual; consulta ao DPO/encarregado.',
+          '**Riscos específicos do RAG** a abordar: reidentificação de indivíduos a partir de chunks recuperados; geração de informação imprecisa que afete uma pessoa; vazamento via logs ou backups; completude da exclusão em solicitações de direito ao esquecimento; contaminação cruzada entre coleções.',
+          '**Documento vivo** — reexecute a DPIA/RIPD quando o corpus se ampliar materialmente, quando o modelo ou o embedder mudar, quando os limites de acesso mudarem, ou anualmente como linha de base.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Uma DPIA/RIPD redigida na semana dois do projeto é uma ferramenta de planejamento. Uma DPIA/RIPD redigida na semana dez é um documento defensivo. A primeira é muito mais útil e tende a revelar mudanças de design que reduzem o risco residual final.',
+          },
+        ],
+      },
+      germany: {
+        id: 'germany-datenschutz',
+        title: 'LGPD e ANPD: notas específicas para o Brasil',
+        content:
+          '**A Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018) e a Autoridade Nacional de Proteção de Dados (ANPD) adicionam camadas específicas ao Brasil que os guias internacionais frequentemente ignoram.** Um RAG que satisfaz o GDPR genérico pode ainda não passar em uma revisão brasileira se esses pontos forem negligenciados.',
+        items: [
+          '**ANPD (Autoridade Nacional de Proteção de Dados).** A ANPD é a autoridade supervisora brasileira equivalente às DPAs europeias. As diretrizes e resoluções da ANPD são a referência operativa para conformidade LGPD. Monitore o site da ANPD (gov.br/anpd) para orientações sobre sistemas de IA e RAG.',
+          '**Encarregado de Proteção de Dados (artigo 41 LGPD).** Toda organização que realiza tratamento de dados pessoais deve indicar um encarregado (equivalente ao DPO europeu). O encarregado deve ser informado e consultado antes da implantação de sistemas de RAG que tratem dados pessoais.',
+          '**RIPD (Relatório de Impacto à Proteção de Dados Pessoais — art. 38 LGPD).** Equivalente funcional da DPIA europeia. A ANPD pode exigi-lo mediante solicitação. Para RAGs que tratem dados sensíveis (art. 5, II LGPD) em larga escala, a elaboração preventiva do RIPD é a postura defensável.',
+          '**Dados sensíveis (artigo 11 LGPD).** A LGPD eleva a proteção de dados de saúde, biométricos, genéticos, sobre convicção religiosa, opinião política, filiação sindical ou a organização de caráter religioso, filosófico ou político, referentes à vida sexual ou orientação sexual e dados de crianças e adolescentes. Para RAGs que ingerem esses dados, a base jurídica é mais restrita do que para dados pessoais comuns.',
+          '**Transferência internacional de dados (artigo 33 LGPD).** A LGPD restringe a transferência de dados pessoais para países ou organismos internacionais que não proporcionem nível de proteção adequado. O RAG local elimina essa preocupação por construção — os dados nunca saem do território nacional.',
+          '**Registro das operações de tratamento.** Organizações que realizam tratamento em larga escala devem manter um registro das atividades de tratamento (artigo 37 LGPD), incluindo os sistemas de RAG que tratem dados pessoais.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Para empresas com operações tanto no Brasil quanto na UE: a LGPD e o GDPR têm estrutura semelhante mas diferem em detalhes como as bases jurídicas, os prazos de notificação de violações (72 horas para GDPR vs. prazo razoável para LGPD) e os poderes sancionatórios da ANPD vs. das DPAs europeias. A arquitetura local de air-gap cobre ambas as regulamentações; a documentação deve referenciar as bases jurídicas de cada lei separadamente.',
+          },
+        ],
+      },
+      checklist: {
+        id: 'compliance-checklist',
+        title: 'Lista de verificação de conformidade antes da produção',
+        content:
+          '**Percorra esta lista de ponta a ponta antes de qualquer implantação em produção.** Cada item é um modo de falha real de uma auditoria real.',
+        items: [
+          '☐ **Base jurídica documentada** para cada categoria de dados de origem — consentimento, contrato, obrigação legal, interesse vital, tarefa pública ou interesse legítimo com um teste de ponderação no expediente.',
+          '☐ **DPIA/RIPD aprovada pelo DPO/encarregado**, com um procedimento de exclusão testado em anexo.',
+          '☐ **Registro de atividades de tratamento (art. 30 GDPR / art. 37 LGPD)** atualizado para incluir o sistema RAG.',
+          '☐ **Seis controles verificados de ponta a ponta:** air-gap ou lista de egresso permitido, RBAC, logs de auditoria, criptografia, rastreabilidade, procedimento de exclusão.',
+          '☐ **Captura de pacotes de saída** limpa durante um teste de saturação de 24 horas; repetida após cada atualização do aplicativo.',
+          '☐ **Integração do provedor de identidade** testada com um usuário real de cada nível de acesso.',
+          '☐ **Backups realizados e uma restauração realmente testada** em hardware isolado.',
+          '☐ **Procedimento de direito ao esquecimento testado** com dados sintéticos cobrindo o armazenamento de origem, o índice vetorial, os embeddings em cache e a retenção do log de recuperação.',
+          '☐ **Classificação segundo a Lei de IA da UE** confirmada (risco limitado vs. alto risco); expediente técnico em vigor se for de alto risco.',
+          '☐ **Contratos de fornecedores (se houver) revisados:** DPA conforme o art. 28 GDPR, sub-processadores listados, cláusula de não treinamento cobrindo os dados do cliente.',
+          '☐ **Aviso de transparência** redigido em linguagem compreensível para o usuário explicando a assistência de IA, o humano no loop e o fluxo de dados.',
+          '☐ **Procedimento de resposta a incidentes** atualizado para incluir cenários específicos do RAG.',
+          '☐ **Revisão de acesso trimestral** programada e atribuída.',
+          '☐ **Atualização anual da DPIA/RIPD** programada e vinculada ao processo de gerenciamento de mudanças.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erros frequentes',
+        items: [
+          '**Erro 1: tratar "local" como sinônimo de "em conformidade".** Executar on-premise resolve as questões de transferência e de sub-processador; não resolve a base jurídica, a DPIA/RIPD, o log de auditoria nem os direitos dos titulares.',
+          '**Erro 2: pular a DPIA/RIPD porque o sistema é "apenas uma ferramenta de busca".** Uma ferramenta de busca que ingere dados de categorias especiais em larga escala é exatamente o que o art. 35 GDPR / art. 38 LGPD cobre.',
+          '**Erro 3: registrar o texto da consulta sem verificar a base jurídica.** As próprias consultas são dados pessoais quando fazem referência a indivíduos.',
+          '**Erro 4: esquecer os embeddings em cache no procedimento de exclusão.** A exclusão da origem funciona. A reconstrução do índice vetorial funciona. A camada de cache que sua plataforma adicionou para desempenho, as pegadas de embedding no log de recuperação e o histórico de respostas no armazenamento de chat são as partes que são esquecidas.',
+          '**Erro 5: permitir a usuários com muitos privilégios contornar as ACLs de coleção.** "Os administradores podem ver tudo" é conveniente e muito comum; também é a razão mais frequente por que as auditorias saem mal.',
+          '**Erro 6: reutilizar um workspace para vários casos ou clientes.** A contaminação cruzada de citações e contexto é uma falha de confidencialidade mesmo antes de qualquer parte externa vê-la.',
+          '**Erro 7: comprar air-gap e depois conectar um telefone pessoal para os testes.** O perímetro de air-gap deve incluir as pessoas que podem transportar dados por ele.',
+          '**Erro 8: tratar a escolha de modelo e embedder como "configurar e esquecer".** Cada atualização é um evento de gerenciamento de mudanças com implicações para a DPIA/RIPD, a rastreabilidade e o rastro de auditoria.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          '[Texto completo do GDPR (gdpr-info.eu)](https://gdpr-info.eu/) — Texto completo do Regulamento Geral de Proteção de Dados com comentário artigo por artigo.',
+          '[Texto completo do EU AI Act](https://artificialintelligenceact.eu/) — Texto completo do regulamento com o framework de classificação de riscos.',
+          '[Lei Geral de Proteção de Dados — LGPD (planalto.gov.br)](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm) — Texto completo da LGPD brasileira.',
+          '[ANPD — Autoridade Nacional de Proteção de Dados (gov.br/anpd)](https://www.gov.br/anpd/) — Diretrizes, resoluções e orientações da autoridade supervisora brasileira.',
+          '[Framework de Gestão de Risco de IA do NIST](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — Framework de governança federal dos EUA aplicável à avaliação de riscos de IA.',
+          '[Diretrizes do EDPB sobre DPIA](https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-data-protection-impact-assessment-and-determining_en) — Orientação do Comitê Europeu de Proteção de Dados sobre quando e como realizar DPIAs.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Executar RAG localmente cumpre automaticamente o LGPD/GDPR?',
+            a: 'Não. A hospedagem local resolve a questão da transferência transfronteiriça e reduz a lista de sub-processadores, mas os princípios do GDPR no art. 5 e os da LGPD no art. 6 continuam se aplicando. O art. 25 (proteção de dados desde o design), o art. 30 GDPR / art. 37 LGPD (registro de atividades de tratamento), o art. 32 (segurança do tratamento) e o art. 35 GDPR / art. 38 LGPD (DPIA/RIPD) se aplicam independentemente de onde o modelo é executado.',
+          },
+          {
+            q: 'O que é exigido para conformidade com a Lei de IA da UE em uma implantação de RAG local?',
+            a: 'Classifique o caso de uso como risco limitado ou alto risco. A maioria das implantações de assistente de recuperação são de risco limitado e requerem obrigações de transparência: os usuários devem saber que estão interagindo com IA, o conteúdo gerado deve ser identificável. Quando a recuperação alimenta uma decisão automatizada em um domínio enumerado (crédito, emprego, educação, serviços públicos, aplicação da lei, migração, justiça, biometria, infraestrutura crítica), a implantação é de alto risco e se aplicam as obrigações completas.',
+          },
+          {
+            q: 'Preciso de uma DPIA/RIPD para o RAG local?',
+            a: 'Uma DPIA/RIPD é obrigatória para o tratamento que possa acarretar alto risco — o que inclui o tratamento em larga escala de dados de categorias especiais (saúde, dados jurídicos, biométricos, raciais, políticos, religiosos, sindicais) e a elaboração de perfis sistemática com efeitos jurídicos. A maioria do RAG local regulado (jurídico, médico, financeiro, investigações de RH) está no escopo. Execute a DPIA/RIPD cedo, trate-a como o documento de design e ensaie as mitigações — especialmente o procedimento de exclusão — antes da produção.',
+          },
+          {
+            q: 'Como a LGPD difere do GDPR para implantações de RAG?',
+            a: 'A LGPD segue a mesma estrutura conceitual do GDPR: base jurídica para tratamento, direitos dos titulares, encarregado (equivalente ao DPO), RIPD (equivalente à DPIA) e notificação de incidentes à ANPD. As principais diferenças práticas são: a ANPD é o órgão regulador no Brasil; o conceito de "dados sensíveis" (art. 11 LGPD) abrange categorias similares ao art. 9 GDPR; as transferências internacionais de dados são reguladas pelo art. 33 LGPD. A arquitetura local — sem egresso de dados, log de auditoria imutável, RIPD antes da implantação — funciona igualmente para LGPD e GDPR.',
+          },
+          {
+            q: 'Como audito quem acessou qual documento?',
+            a: 'Registre cada recuperação com ID de usuário, timestamp, IDs de chunks recuperados e os IDs de documentos dos quais vieram. Encaminhe os eventos a um armazenamento de logs separado com acesso de escrita restrito sob controle administrativo diferente do servidor de aplicativo (separação de funções). Use armazenamento de somente adição com encadeamento de hashes para que a adulteração seja detectável.',
+          },
+          {
+            q: 'Os modelos de embedding de código aberto são seguros para LGPD/GDPR?',
+            a: 'Em princípio sim, com três condições. Primeiro, os pesos são baixados uma vez e fixados a um hash para que você possa demonstrar o que estava em execução. Segundo, a inferência é completamente local sem telemetria nem chamadas de saída — verifique com uma captura de pacotes. Terceiro, a ficha do modelo e a licença são revisadas para detectar cláusulas que conflitem com o uso empresarial confidencial.',
+          },
+          {
+            q: 'Como gerencio as solicitações de direito ao esquecimento no RAG?',
+            a: 'Com um procedimento documentado que percorra a exclusão por cada camada: armazenamento de documentos de origem, índice vetorial, embeddings em cache, retenção do log de recuperação (onde a base jurídica permitir a exclusão da entrada do log) e quaisquer respostas armazenadas no histórico de chat. A exclusão da origem é simples; a reconstrução do índice vetorial está bem compreendida; os embeddings em cache e o histórico de respostas são as partes que a maioria das implantações esquece. Ensaie o procedimento com dados sintéticos, documente o ensaio e vincule o procedimento ao seu processo de resposta a incidentes.',
+          },
+          {
+            q: 'Posso usar RAG local para documentos confidenciais de clientes?',
+            a: 'Frequentemente sim, às vezes não. Muitos acordos com consultoria externa, NDAs de M&A e contratos de dados de pacientes permitem a revisão assistida por IA desde que os dados não saiam de um limite definido e certos controles sejam atendidos. O RAG local cumpre o requisito de limite por construção; a lista de controles específicos do contrato deve continuar sendo respeitada.',
+          },
+          {
+            q: 'Que registro é necessário para conformidade?',
+            a: 'Eventos de ingestão (ID de documento, hash, origem, enviador, timestamp, classificação), eventos de recuperação (ID de usuário, metadados de consulta ou hash, IDs de chunks recuperados, referência de resposta, identificador de modelo/embedder), eventos administrativos (promoção do modelo, troca de embedder, mudança de ACL) e eventos operacionais (backup, restauração, rotação de chaves). Todos os eventos encaminhados a um armazenamento de logs separado, de somente adição, com encadeamento de hashes e retidos conforme seus requisitos de caso e setor.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: o melhor RAG local](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — quais plataformas auto-hospedadas se adaptam a cada postura de conformidade.',
+          '[Agentes de IA locais para fluxos de trabalho empresariais e conformidade na UE](/pt/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — tema de conformidade adjacente quando a recuperação alimenta etapas de fluxo de trabalho automatizados.',
+          '[Automação local de e-mail e calendário com LLM](/pt/power-local-llm/local-llm-email-and-calendar-automation) — padrões de automação empresarial adjacentes onde o mesmo conjunto de controles se aplica.',
+          '[RAG local nos seus PDFs passo a passo](/pt/power-local-llm/local-rag-on-your-pdfs-step-by-step) — guia de implementação prática para os padrões on-premise e de notebook.',
+          '[Converse com 1.000 PDFs localmente](/pt/power-local-llm/chat-with-1000-pdfs-locally) — orientação operacional para corpus maiores que pressionam o teto do on-premise.',
+          '[Hub de Power Local LLM](/pt/power-local-llm) — a biblioteca completa de guias para implantações de LLM auto-hospedados.',
+        ],
+      },
+    },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'RAG local para dados empresariais: IA em conformidade com LGPD/GDPR para documentos sensíveis (2026)',
+      description: 'RAG local em conformidade com LGPD/GDPR para equipes jurídicas, médicas e financeiras. Arquitetura, log de auditoria, escopo da DPIA/RIPD e 3 padrões de implantação comparados.',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-rag-for-private-business-data?lang=pt',
+      inLanguage: 'pt-BR',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
 }

@@ -2511,4 +2511,570 @@ if __name__ == "__main__":
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
      },
 },
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-14',
+    dateModified: '2026-05-14',
+    next_refresh_due: '2026-11-14',
+    theme: 'Voice, Speech & Multimodal',
+    title: 'Pipeline multimodal de IA local 2026: combine voz, visão e texto offline',
+    seoTitle: 'Pipeline multimodal local 2026: voz + visão + texto',
+    intro:
+      'Um pipeline multimodal de IA local combina modelos especializados independentes para cada modalidade — whisper.cpp para a entrada de voz, LLaVA ou Llama 3.2 Vision para a compreensão de imagens, um LLM do Ollama para o raciocínio textual e Piper TTS para a saída de voz — orquestrados em um sistema coerente que funciona 100% offline. Este é o equivalente local das capacidades multimodais do GPT-5.5: nenhum modelo individual entende tudo, mas o orquestrador direciona cada tipo de entrada para o modelo correto e combina as saídas. Este guia mostra como construir um pipeline multimodal local com esses componentes de código aberto — cobrindo a arquitetura, o stack de componentes, os níveis de hardware, cinco casos de uso práticos e um orquestrador assíncrono em Python que processa entradas de voz e visão em paralelo.',
+    metaDescription:
+      'Rode IA de voz, visão e texto localmente em 2026 com whisper.cpp, LLaVA 1.6, Ollama e Piper TTS. Orquestrador Python completo, sem nuvem nem chaves de API.',
+    twitterDescription:
+      'IA multimodal local em 2026: combine Whisper STT + visão LLaVA + LLM Ollama + Piper TTS em um pipeline offline. Guia de arquitetura, níveis de hardware e código Python.',
+    readTime: '16 min de leitura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'pipeline multimodal de IA local',
+    targetKeywords: [
+      'pipeline multimodal IA local 2026',
+      'whisper llava ollama piper',
+      'IA multimodal offline',
+      'voz visão texto IA local',
+      'alternativa local ao GPT-5.5',
+      'construir IA multimodal offline',
+      'pipeline voz visão local',
+      'integração llava whisper',
+    ],
+    current_models_mentioned: [
+      'whisper.cpp large-v3',
+      'LLaVA 1.6 7B',
+      'Qwen2-VL 7B',
+      'Llama 3.2 Vision 11B',
+      'Llama 3.3 8B',
+      'Moondream 2',
+      'Piper TTS',
+      'Coqui TTS',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 3060 12 GB',
+      'NVIDIA RTX 4070 12 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 Pro 36 GB',
+      'Apple M5 Max 128 GB',
+    ],
+    leadAnswerBlock:
+      '**Um pipeline multimodal de IA local em 2026 requer no mínimo 12 GB de VRAM na GPU para rodar STT + visão + LLM + TTS simultaneamente.** A configuração mínima viável é uma RTX 4070 (12 GB) ou Mac M5 Pro (36 GB de memória unificada), rodando whisper.cpp para entrada de voz, LLaVA 1.6 7B para visão, Llama 3.3 8B para raciocínio textual e Piper para saída de voz. Em uma RTX 3060 12 GB você pode rodar o stack com um LLM menor (Phi-4) sem visão — ou trocar modelos dentro/fora da VRAM conforme necessário. A decisão arquitetural-chave é se compartilhar a VRAM entre o modelo de visão e o LLM (requer 12+ GB) ou rodá-los sequencialmente em uma GPU menor.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Como você constrói um pipeline multimodal de IA local com voz, visão e texto em 2026?',
+        answer:
+          'Combine quatro modelos especializados: whisper.cpp (voz → texto), um modelo de visão-linguagem como LLaVA 1.6 ou Llama 3.2 Vision (imagem → descrição de texto), um LLM do Ollama como Llama 3.3 8B (texto → raciocínio textual) e Piper TTS (texto → voz). Um orquestrador assíncrono em Python detecta o tipo de entrada e o roteia para o modelo correto, combinando as saídas em uma resposta coerente. VRAM mínima: 12 GB para uma configuração de VRAM compartilhada; 8 GB se você trocar modelos.',
+        bullets: [
+          'Entrada de voz: whisper.cpp (Metal no Mac, CUDA na NVIDIA) → transcrição de texto.',
+          'Entrada de imagem: LLaVA 1.6 7B ou Llama 3.2 Vision 11B via Ollama → descrição textual.',
+          'Raciocínio textual: Ollama + Llama 3.3 8B → texto de resposta.',
+          'Saída de voz: Piper TTS (CPU, ~0,1 seg de latência) → reprodução de áudio.',
+          'Hardware mínimo: RTX 4070 12 GB ou M5 Pro 36 GB para o stack completo simultâneo.',
+          'Visão + LLM podem compartilhar uma instância do Ollama (o Llama 3.2 Vision gerencia ambos).',
+          'VRAM total para o stack completo: ~15 GB (whisper 3 GB + LLaVA 7B 6 GB + Llama 3.3 8B 6 GB + Piper CPU).',
+        ],
+        updatedDate: '2026-05-14',
+      },
+    },
+    toc: [
+      { label: 'Pontos principais', anchor: '#key-takeaways' },
+      { label: 'Dados rápidos', anchor: '#quick-facts' },
+      { label: 'O que é um pipeline multimodal?', anchor: '#what-is-multimodal' },
+      { label: 'Custo: pipeline local vs APIs na nuvem', anchor: '#cost-comparison' },
+      { label: 'Visão geral da arquitetura', anchor: '#architecture' },
+      { label: 'O stack de componentes', anchor: '#component-stack' },
+      { label: 'Níveis de hardware', anchor: '#hardware-tiers' },
+      { label: 'Caso de uso 1: Analisador de documentos por voz', anchor: '#use-case-1' },
+      { label: 'Caso de uso 2: Assistente de Q&A visual', anchor: '#use-case-2' },
+      { label: 'Caso de uso 3: Transcrição de reunião + análise de slides', anchor: '#use-case-3' },
+      { label: 'Caso de uso 4: Ferramenta de acessibilidade local', anchor: '#use-case-4' },
+      { label: 'Caso de uso 5: Análise local de câmera de segurança', anchor: '#use-case-5' },
+      { label: 'Construindo o orquestrador Python', anchor: '#orchestrator' },
+      { label: 'Otimização do desempenho', anchor: '#performance' },
+      { label: 'Limitações e avaliação honesta', anchor: '#limitations' },
+      { label: 'Perguntas frequentes', anchor: '#faq' },
+      { label: 'Fontes', anchor: '#sources' },
+      { label: 'Leitura relacionada', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Um pipeline multimodal local são quatro modelos orquestrados separadamente — não um único modelo como o GPT-5.5.** O whisper.cpp gerencia a voz, um VLM (LLaVA ou Llama 3.2 Vision) gerencia as imagens, um LLM gerencia o raciocínio textual e o Piper gerencia a saída de voz. O orquestrador direciona as entradas para o modelo correto e combina as saídas.',
+          '**O Llama 3.2 Vision 11B pode substituir tanto o VLM quanto o LLM de texto em um único modelo.** Ele aceita texto e imagens simultaneamente e gerencia tanto a descrição quanto o raciocínio em um único passo — reduzindo a VRAM de ~15 GB (modelos separados) para ~8 GB (Llama 3.2 Vision 11B único).',
+          '**Hardware mínimo para o stack completo: RTX 4070 12 GB ou Apple M5 Pro 36 GB.** Uma RTX 3060 12 GB pode rodar uma versão limitada (Phi-4 em vez de Llama 3.3 8B, ou carregamento sequencial de modelos) — funcional, mas mais lenta.',
+          '**Cinco casos de uso práticos justificam a complexidade:** análise de documentos por voz, Q&A visual com interação de voz, transcrição de reuniões combinada com análise de slides, ferramentas de acessibilidade com leitor de tela local e análise local de câmera de segurança.',
+          '**A orquestração assíncrona é essencial para um desempenho aceitável.** O STT e a visão podem rodar em paralelo quando há entradas de áudio e imagem disponíveis — o LLM de texto espera por ambos e depois gera uma resposta combinada.',
+          '**Transmitir a saída do LLM para o TTS reduz a latência percebida em 0,3–0,7 segundo.** Comece a gerar áudio a partir da primeira frase concluída enquanto o LLM ainda está escrevendo o resto da resposta.',
+          '**Isto não é o GPT-5.5.** Os modelos separados produzem "costuras" — a descrição do modelo de visão é passada como texto para o LLM, perdendo parte do raciocínio cross-modal. A qualidade em tarefas multimodais complexas está abaixo dos modelos fechados de fronteira, mas é adequada para documentos estruturados e tarefas com fotos claras.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Dados rápidos',
+        items: [
+          '**VRAM total para o stack completo:** ~15 GB (Whisper 3 GB + LLaVA 7B 6 GB + Llama 3.3 8B 6 GB). O Piper roda na CPU.',
+          '**Stack simplificado (Llama 3.2 Vision 11B):** ~8 GB VRAM — gerencia visão e raciocínio textual em um único modelo.',
+          '**Latência de voz (Whisper small, RTX 4070):** STT ~200–500 ms. Primeiro token do LLM 500–1500 ms. Piper TTS 100 ms.',
+          '**Latência de processamento de imagem (LLaVA 7B, RTX 4070):** ~2–5 segundos por imagem dependendo da resolução e do prompt.',
+          '**Sem vídeo em tempo real:** Os VLMs processam frames individuais, não fluxos de vídeo contínuos. Para vídeo, extraia frames a 1 FPS e processe cada um.',
+          '**Mesma instância do Ollama para VLM + LLM:** O Ollama pode servir o Llama 3.2 Vision como modelo de visão e modelo de texto ao mesmo tempo, economizando VRAM.',
+          '**Todos os componentes com licença MIT ou Apache 2.0** (whisper.cpp MIT, LLaVA MIT, Llama 3.3 8B Llama 3 Community License, Piper MIT).',
+        ],
+      },
+      whatIsMultimodal: {
+        id: 'what-is-multimodal',
+        title: 'O que é um pipeline multimodal de IA?',
+        content:
+          'Um sistema de IA multimodal aceita múltiplos tipos de entrada (voz, imagens, texto) e produz múltiplos tipos de saída (texto, voz). O equivalente na nuvem é o GPT-5.5 — um único modelo que aceita áudio, imagens e texto em qualquer combinação.',
+        items: [
+          '**Abordagem na nuvem (GPT-5.5):** Um modelo gigante treinado em todas as modalidades simultaneamente. O raciocínio cross-modal é aprendido durante o treinamento — o modelo pode raciocinar nativamente sobre a relação entre o conteúdo da imagem e as consultas de voz.',
+          '**Abordagem local (este guia):** Modelos especializados independentes para cada modalidade, conectados por um orquestrador. Mais modular e econômico de rodar, mas produz "costuras" — a saída do modelo de visão é serializada para texto antes de ser passada ao LLM.',
+          '**Por que construir localmente:** Privacidade (imagens médicas, documentos proprietários, capturas de tela confidenciais), custo (zero taxas por consulta), capacidade offline (não requer internet após baixar o modelo), personalização (troque qualquer componente).',
+          '**Vantagem modular:** Você pode atualizar qualquer componente de forma independente. Quando aparecer um melhor modelo STT local, substitua apenas a camada STT. Quando aparecer um melhor VLM, troque apenas o modelo de visão — o resto do pipeline não muda.',
+        ],
+      },
+      costComparison: {
+        id: 'cost-comparison',
+        title: 'Custo: pipeline local vs APIs na nuvem (mensal)',
+        content:
+          'Com uso moderado (mais de 100 consultas por dia), um pipeline multimodal local se paga em 3–6 meses. Com uso leve (10 consultas por dia), o ponto de equilíbrio se estende a 12–18 meses.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Um pipeline multimodal local custa $0/mês em taxas de API após o investimento único em hardware ($600–3.500), com ponto de equilíbrio frente aos custos da API do GPT-5.5 ($135–225/mês) em 3–18 meses conforme o volume de consultas.',
+          },
+        ],
+        columns: ['Uso', 'GPT-5.5 API', 'Google Cloud', 'Local'],
+        rows: [
+          { 'Uso': '100 consultas de voz/dia', 'GPT-5.5 API': '$90–150/mês', 'Google Cloud': '$60–120/mês', 'Local': '$0' },
+          { 'Uso': '50 análises de imagem/dia', 'GPT-5.5 API': '$45–75/mês', 'Google Cloud': '$30–60/mês', 'Local': '$0' },
+          { 'Uso': 'Combinado (típico)', 'GPT-5.5 API': '$135–225/mês', 'Google Cloud': '$90–180/mês', 'Local': '$0' },
+          { 'Uso': 'Hardware (uma única vez)', 'GPT-5.5 API': '$0', 'Google Cloud': '$0', 'Local': '$600–3.500' },
+          { 'Uso': 'Ponto de equilíbrio', 'GPT-5.5 API': '—', 'Google Cloud': '—', 'Local': '3–18 meses' },
+        ],
+        note: 'O pipeline local se paga em 3–6 meses com uso moderado (mais de 100 consultas por dia). Com uso leve (10 consultas por dia), o ponto de equilíbrio se estende a 12–18 meses.',
+      },
+      architecture: {
+        id: 'architecture',
+        title: 'Visão geral da arquitetura',
+        content:
+          'O pipeline multimodal local usa um padrão de router-orquestrador: as entradas são tipificadas no limite, roteadas para o modelo apropriado, e as saídas são combinadas pelo orquestrador antes de gerar a resposta final.',
+        items: [
+          '**Tipos de entrada:** Áudio de microfone (voz), imagem de câmera ou arquivo (visão), texto de teclado (texto).',
+          '**Lógica do router:** Detecta o tipo de entrada no limite. Áudio → modelo STT. Imagem → VLM. Texto → LLM diretamente. Se chegarem áudio e imagem juntos, processar em paralelo e combinar.',
+          '**Registro de modelos:** Cada tipo de entrada é mapeado para uma função handler que chama o modelo apropriado e retorna uma descrição/transcrição de texto.',
+          '**Orquestrador:** Coleta todas as saídas dos modelos, combina-as em um único prompt para o LLM de texto, obtém a resposta do LLM e a direciona para o TTS para a saída de voz ou para a tela como texto.',
+          '**Tipos de saída:** Resposta de voz (Piper TTS), texto na tela ou dados estruturados (JSON) para integração com outros sistemas.',
+          '**Processamento paralelo:** STT e VLM podem processar simultaneamente — uma consulta de áudio sobre uma imagem pode ter ambos processados em paralelo, reduzindo a latência total em 40–60% frente ao processamento sequencial.',
+        ],
+      },
+      componentStack: {
+        id: 'component-stack',
+        title: 'O stack de componentes',
+        content:
+          'Stack completo com requisitos de VRAM e o papel de cada componente.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'O stack multimodal local completo usa ~15 GB de VRAM: Whisper large-v3 (3 GB) + LLaVA 1.6 7B (6 GB) + Llama 3.3 8B (6 GB); o Piper TTS roda na CPU sem custo de VRAM.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Você pode reduzir a VRAM para 8 GB usando o Llama 3.2 Vision 11B tanto como modelo de visão quanto de texto — ele gerencia fotos E conversa em um único modelo, enquanto o Whisper continua fazendo a voz e o Piper a saída de voz.',
+          },
+        ],
+        columns: ['Camada', 'Ferramenta', 'Modelo', 'VRAM', 'Papel'],
+        rows: [
+          {
+            'Camada': 'STT',
+            'Ferramenta': 'whisper.cpp',
+            'Modelo': 'Whisper large-v3',
+            'VRAM': '~3 GB',
+            'Papel': 'Voz → transcrição de texto',
+          },
+          {
+            'Camada': 'Visão',
+            'Ferramenta': 'Ollama',
+            'Modelo': 'LLaVA 1.6 7B',
+            'VRAM': '~6 GB',
+            'Papel': 'Imagem → descrição de texto',
+          },
+          {
+            'Camada': 'Raciocínio',
+            'Ferramenta': 'Ollama',
+            'Modelo': 'Llama 3.3 8B Q4',
+            'VRAM': '~6 GB',
+            'Papel': 'Texto → resposta de texto',
+          },
+          {
+            'Camada': 'TTS',
+            'Ferramenta': 'Piper',
+            'Modelo': 'en_US-lessac-medium',
+            'VRAM': 'Só CPU',
+            'Papel': 'Texto → saída de voz',
+          },
+          {
+            'Camada': 'Total (modelos separados)',
+            'Ferramenta': '',
+            'Modelo': '',
+            'VRAM': '~15 GB',
+            'Papel': 'Pipeline completo',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Use o Llama 3.2 Vision 11B em vez de LLaVA + Llama 3.3 8B separados para reduzir a VRAM para ~8 GB. O Llama 3.2 Vision gerencia tanto a descrição de imagens quanto o raciocínio textual em um único modelo, eliminando a necessidade de um VLM separado.',
+          },
+          {
+            type: 'tip',
+            text: 'VLM alternativo: [Qwen2-VL 7B](/pt/power-local-llm/local-vision-models-llava-ollama-2026) (~6 GB VRAM) — mais forte que o LLaVA em OCR multilíngue e compreensão de documentos. Recomendado se você processa documentos em chinês, japonês ou coreano.',
+          },
+        ],
+      },
+      hardwareTiers: {
+        id: 'hardware-tiers',
+        title: 'Níveis de hardware para multimodal',
+        content:
+          'Cinco configurações de hardware ordenadas por capacidade e VRAM. Cada uma suporta um subconjunto diferente do stack multimodal completo.',
+        columns: ['Nível', 'GPU', 'RAM', 'Pode rodar', 'Latência (consulta de voz + imagem)'],
+        rows: [
+          {
+            'Nível': 'Básico',
+            'GPU': 'RTX 3060 12 GB',
+            'RAM': '16 GB',
+            'Pode rodar': 'STT + Phi-4 (visão separadamente, sequencial)',
+            'Latência (consulta de voz + imagem)': '5–10 seg',
+          },
+          {
+            'Nível': 'Médio',
+            'GPU': 'RTX 4070 12 GB',
+            'RAM': '32 GB',
+            'Pode rodar': 'Stack completo com modelos 7B (LLaVA 7B + Llama 3.3 8B, ajuste justo)',
+            'Latência (consulta de voz + imagem)': '3–6 seg',
+          },
+          {
+            'Nível': 'Alto',
+            'GPU': 'RTX 4090 24 GB',
+            'RAM': '64 GB',
+            'Pode rodar': 'Stack completo com VLM 13B + LLM 8B simultaneamente',
+            'Latência (consulta de voz + imagem)': '2–4 seg',
+          },
+          {
+            'Nível': 'Apple Médio',
+            'GPU': 'M5 Pro 36 GB',
+            'RAM': '36 GB unificada',
+            'Pode rodar': 'Stack completo com modelos 8B via Metal (recomendado). Qwen2-VL 7B + Llama 3.3 8B cabem confortavelmente em 36 GB com espaço para o Whisper large-v3.',
+            'Latência (consulta de voz + imagem)': '2–4 seg',
+          },
+          {
+            'Nível': 'Apple Alto',
+            'GPU': 'M5 Max 128 GB',
+            'RAM': '128 GB unificada',
+            'Pode rodar': 'Stack completo com modelos 70B — melhor qualidade local',
+            'Latência (consulta de voz + imagem)': '1–3 seg',
+          },
+        ],
+        note: 'A latência é medida do fim da consulta de voz até o início da reprodução TTS, incluindo o processamento de imagem se houver uma imagem presente.',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'O M5 Max com 128 GB de memória unificada é a plataforma multimodal local definitiva. Pode rodar Whisper large-v3 (3 GB) + Llama 3.2 Vision 90B (~64 GB) + Piper TTS simultaneamente — o modelo de visão 90B é o VLM local de maior qualidade disponível, aproximando-se do GPT-5.5 em tarefas de documentos e fotos. Nenhuma configuração de GPU discreta consegue igualar isso sem configurações multi-GPU que custam 2–3 vezes mais.',
+          },
+        ],
+      },
+      useCase1: {
+        id: 'use-case-1',
+        title: 'Caso de uso 1: Analisador de documentos controlado por voz',
+        content:
+          '**Fale uma pergunta sobre uma imagem de documento; o pipeline transcreve a sua voz, processa o documento visualmente e lê a resposta em voz alta.** Este é o caso de uso principal para combinar STT + VLM + LLM + TTS.',
+        items: [
+          '**Exemplo:** Fotografe uma fatura e diga "Qual é o valor total a pagar e o prazo de pagamento?"',
+          '**Pipeline:** O Whisper transcreve a pergunta → imagem enviada ao LLaVA ou Llama 3.2 Vision → o VLM extrai texto e estrutura da fatura → o LLM combina pergunta + saída do VLM → o Piper lê a resposta em voz alta.',
+          '**Prompt:** "Aqui está uma imagem: [descrição do VLM]. O usuário pergunta: [transcrição]. Responda a pergunta com base no conteúdo da imagem."',
+          '**Melhor VLM:** MiniCPM-V 2.6 ou Llama 3.2 Vision 11B para precisão de OCR em faturas e documentos.',
+          '**Valor de privacidade:** Histórico médico, documentos jurídicos, demonstrações financeiras — processados completamente localmente, sem que nenhum dado saia da máquina.',
+        ],
+      },
+      useCase2: {
+        id: 'use-case-2',
+        title: 'Caso de uso 2: Assistente de Q&A visual',
+        content:
+          '**Aponte uma câmera para um objeto ou cena, faça uma pergunta de forma verbal e receba uma resposta falada.** Este caso de uso é o equivalente local mais próximo do Google Lens com interação de voz.',
+        items: [
+          '**Aplicações:** Inventário de almoxarifado (fotografe uma prateleira, pergunte "Quantas unidades de SKU-4429 há?"), inspeção de campo (fotografe danos em máquinas, pergunte "É seguro operar isto?"), acessibilidade (descreva objetos para usuários com deficiência visual).',
+          '**Implementação:** Capture um frame de câmera (OpenCV `cv2.VideoCapture(0).read()`), salve como JPEG, passe-o ao VLM junto com a transcrição do Whisper.',
+          '**Melhores modelos:** LLaVA 1.6 7B ou Llama 3.2 Vision 11B para compreensão geral de objetos e cenas.',
+          '**Latência:** 3–6 segundos para captura de imagem + processamento do VLM + LLM + TTS na RTX 4070. Reduza com um VLM menor (Moondream 2 para identificação simples de objetos).',
+        ],
+      },
+      useCase3: {
+        id: 'use-case-3',
+        title: 'Caso de uso 3: Transcrição de reunião + análise de slides',
+        content:
+          '**Rode o Whisper continuamente durante uma reunião para construir uma transcrição, enquanto captura periodicamente capturas de tela de slides para análise com VLM. Ao final, combine transcrição + conteúdo dos slides para um resumo local e itens de ação — zero nuvem, zero exposição de dados.**',
+        items: [
+          '**STT:** Rode o faster-whisper em modo de streaming durante a reunião. Acumule segmentos em um buffer de transcrição.',
+          '**Visão:** Cada vez que aparecer um novo slide (detectar via diff de captura de tela), capture uma imagem e passe-a ao LLaVA para descrição.',
+          '**Combinação:** Ao final da reunião (ou sob demanda), passe transcrição + descrições de slides ao Llama 3.3 8B: "Resuma esta reunião e liste os itens de ação. Aqui está a transcrição: [...]. Aqui estão os conteúdos dos slides: [...]."',
+          '**Saída:** Resumo lido em voz alta (Piper TTS) + arquivo de texto salvo localmente.',
+          '**Valor GDPR:** Todo o processamento da reunião é local. Nenhum áudio, transcrição ou slide é enviado a qualquer serviço na nuvem. Em conformidade para contextos jurídicos, médicos e corporativos.',
+        ],
+      },
+      useCase4: {
+        id: 'use-case-4',
+        title: 'Caso de uso 4: Ferramenta de acessibilidade local',
+        content:
+          '**Um pipeline multimodal local pode servir como leitor de tela e assistente de UI controlado por voz para usuários com deficiências visuais ou motoras — funcionando offline sem as preocupações de privacidade dos serviços de acessibilidade na nuvem.**',
+        items: [
+          '**Leitor de tela:** Capture uma captura de tela a cada 2 segundos → o LLaVA descreve o que há na tela → o Piper lê em voz alta. Adicione comandos de voz (Whisper) para controlar o que descrever em seguida.',
+          '**Navegação por voz:** O Whisper transcreve comandos de voz → o LLM interpreta a intenção → executa ações de teclado/mouse via pyautogui. Não requer internet.',
+          '**Benefício de privacidade:** Usuários com deficiências costumam usar ferramentas de acessibilidade em contextos sensíveis (portais médicos, contas financeiras). Uma ferramenta local garante que nenhum conteúdo de tela seja transmitido a terceiros.',
+          '**Uso com conectividade limitada:** Funciona em hospitais, prédios governamentais e áreas com internet restrita — importante para implantações institucionais de acessibilidade.',
+          '**Escolha de modelo para acessibilidade:** Moondream 2 para descrições de tela rápidas (2 GB VRAM, ~1 seg por frame). LLaVA 7B para descrições mais ricas (6 GB VRAM, ~3 seg por frame).',
+        ],
+      },
+      useCase5: {
+        id: 'use-case-5',
+        title: 'Caso de uso 5: Análise local de câmera de segurança',
+        content:
+          '**Capture frames de uma câmera IP, rode a detecção de movimento localmente e acione a análise VLM apenas quando o movimento for detectado — sem serviços de câmera na nuvem nem armazenamento de vídeo de terceiros.**',
+        items: [
+          '**Captura de frames:** Use o OpenCV para capturar um frame a cada 5–10 segundos de uma câmera IP via RTSP (`cv2.VideoCapture("rtsp://camera-ip:554/stream")`). Para câmeras USB, use o índice de dispositivo 0.',
+          '**Detecção de movimento:** Calcule a diferença entre frames consecutivos com `cv2.absdiff()`. Pule frames abaixo do limiar de movimento — isso evita chamadas VLM desnecessárias em cenas estáticas e vazias.',
+          '**Análise VLM:** Quando o movimento for detectado, envie o frame ao VLM: "Descreva o que está acontecendo. Há uma pessoa? O que ela está fazendo?"',
+          '**Saída de alerta:** Se a resposta indicar uma pessoa ou anomalia, acione uma notificação de desktop local e um anúncio do Piper TTS ("Pessoa detectada na porta principal"). Não requer serviço de notificação na nuvem.',
+          '**Vantagem de privacidade:** Ring e Nest enviam vídeo para os servidores da AWS e do Google respectivamente. Esta configuração mantém toda a gravação no seu hardware — sem assinatura, sem armazenamento de vídeo de terceiros, sem compartilhamento de dados com serviços externos.',
+          '**Melhor VLM para velocidade:** Moondream 2 para processamento rápido de frames (~1 segundo por frame, ~2 GB VRAM) ou LLaVA 7B para descrições de cena mais ricas (~3 segundos por frame, ~6 GB VRAM).',
+          '**Nota de hardware:** Um Mac Mini M5 dedicado (~$600) rodando este stack 24/7 consome ~15–25W em repouso — menos eletricidade anualmente do que uma assinatura do Ring Doorbell Pro.',
+        ],
+      },
+      orchestrator: {
+        id: 'orchestrator',
+        title: 'Construindo o orquestrador Python',
+        content:
+          'Um orquestrador Python assíncrono direciona as entradas para o modelo correto e combina as saídas. Usar asyncio permite que o STT e o processamento de visão rodem em paralelo.',
+        codeBlock: `#!/usr/bin/env python3
+"""Local multimodal orchestrator: voice + vision + text, all offline."""
+
+import asyncio
+import base64
+import subprocess
+import tempfile
+import sounddevice as sd
+import soundfile as sf
+import numpy as np
+import requests
+
+OLLAMA_URL = "http://localhost:11434/api/generate"
+WHISPER_BIN = "./whisper.cpp/main"
+WHISPER_MODEL = "./whisper.cpp/models/ggml-small.bin"
+VISION_MODEL = "llava:7b"        # or "llama3.2-vision" for combined VLM+LLM
+TEXT_MODEL = "llama3.1:8b"
+PIPER_VOICE = "voices/en_US-lessac-medium.onnx"
+SAMPLE_RATE = 16000
+
+async def transcribe_audio(audio: np.ndarray) -> str:
+    """Convert audio array to text using whisper.cpp."""
+    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
+        sf.write(f.name, audio, SAMPLE_RATE)
+        loop = asyncio.get_event_loop()
+        result = await loop.run_in_executor(None, lambda: subprocess.run(
+            [WHISPER_BIN, "-m", WHISPER_MODEL, "-f", f.name, "--no-timestamps", "--no-prints"],
+            capture_output=True, text=True
+        ))
+    return result.stdout.strip()
+
+async def describe_image(image_path: str) -> str:
+    """Get text description of an image using local VLM via Ollama."""
+    with open(image_path, "rb") as f:
+        image_b64 = base64.b64encode(f.read()).decode("utf-8")
+    loop = asyncio.get_event_loop()
+    response = await loop.run_in_executor(None, lambda: requests.post(
+        OLLAMA_URL,
+        json={
+            "model": VISION_MODEL,
+            "prompt": "Describe the content of this image in detail, including any text visible.",
+            "images": [image_b64],
+            "stream": False,
+        },
+    ))
+    return response.json()["response"]
+
+async def reason(transcript: str, image_description: str | None = None) -> str:
+    """Generate a response combining transcript and optional image description."""
+    if image_description:
+        prompt = (
+            f"The user asked (via voice): {transcript}\\n\\n"
+            f"The image shows: {image_description}\\n\\n"
+            "Answer the question based on the image content. Be concise — 2-3 sentences."
+        )
+    else:
+        prompt = transcript
+    # Note: /api/generate is for single-turn queries.
+    # For multi-turn conversation with context, use
+    # /api/chat with a messages array instead.
+    loop = asyncio.get_event_loop()
+    response = await loop.run_in_executor(None, lambda: requests.post(
+        OLLAMA_URL,
+        json={"model": TEXT_MODEL, "prompt": prompt, "stream": False},
+    ))
+    return response.json()["response"]
+
+async def speak(text: str) -> None:
+    """Convert text to speech using Piper TTS."""
+    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
+        await asyncio.get_event_loop().run_in_executor(None, lambda: subprocess.run(
+            f'echo "{text}" | piper --model {PIPER_VOICE} --output_file {f.name}',
+            shell=True, check=True
+        ))
+        data, sr = sf.read(f.name)
+        sd.play(data, sr)
+        sd.wait()
+
+async def process_query(audio: np.ndarray, image_path: str | None = None) -> None:
+    """Process a multimodal query: transcribe audio and optionally describe image in parallel."""
+    if image_path:
+        # Run STT and vision in parallel
+        transcript, image_desc = await asyncio.gather(
+            transcribe_audio(audio),
+            describe_image(image_path),
+        )
+    else:
+        transcript = await transcribe_audio(audio)
+        image_desc = None
+
+    if not transcript or len(transcript) < 3:
+        return
+
+    print(f"You: {transcript}")
+    if image_desc:
+        print(f"Image: {image_desc[:100]}...")
+
+    response = await reason(transcript, image_desc)
+    print(f"Assistant: {response}")
+    await speak(response)
+
+async def main():
+    print("Multimodal assistant ready. Ctrl+C to stop.")
+    while True:
+        audio = sd.rec(int(5 * SAMPLE_RATE), samplerate=SAMPLE_RATE, channels=1, dtype="int16")
+        sd.wait()
+        await process_query(audio)  # Pass image_path="photo.jpg" for image queries
+
+if __name__ == "__main__":
+    asyncio.run(main())`,
+        codeLanguage: 'python',
+      },
+      performance: {
+        id: 'performance',
+        title: 'Otimização do desempenho',
+        content:
+          'Otimizações-chave para alcançar uma latência aceitável no stack multimodal completo:',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'As duas maiores otimizações são: (1) rodar STT e VLM em paralelo com asyncio quando tanto o áudio quanto a imagem estiverem disponíveis, e (2) transmitir a saída do LLM para o TTS frase por frase para que o áudio comece antes de o LLM terminar.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Sem paralelismo, o pipeline é: STT (0,5 seg) → VLM (3 seg) → LLM (1 seg) → TTS (0,1 seg) = 4,6 seg no total. Com STT + VLM paralelos, torna-se: max(STT, VLM) (3 seg) → LLM (1 seg) → TTS (0,1 seg) = 4,1 seg. Adicione TTS em streaming e o usuário ouve áudio aos 3,5 seg em vez de 4,6 seg.',
+          },
+        ],
+        items: [
+          '**STT + VLM paralelos:** Use `asyncio.gather(transcribe_audio(), describe_image())` para rodar ambos simultaneamente. Economiza 0,3–2 segundos dependendo do tamanho do modelo STT.',
+          '**Mantenha os modelos quentes:** O Ollama mantém os modelos na VRAM automaticamente entre solicitações. O whisper.cpp em modo stream permanece carregado. Nunca recarregue entre consultas.',
+          '**Transmita LLM → TTS:** Detecte os limites de frase na saída do LLM em streaming (`.`, `!`, `?`). Passe cada frase concluída ao Piper enquanto o LLM continua gerando.',
+          '**Gestão de VRAM:** Se a VRAM total estiver apertada, descarregue o VLM após o processamento de imagem (endpoint HTTP de exclusão do Ollama) antes de carregar o LLM de texto. Adiciona ~2–3 segundos, mas permite que uma GPU de 8 GB gerencie o stack completo.',
+          '**Use o Llama 3.2 Vision como VLM + LLM combinado:** Elimina completamente o overhead da troca de modelo — um modelo gerencia tanto a descrição visual quanto o raciocínio textual. Contrapartida: raciocínio de texto puro ligeiramente mais fraco em comparação com o Llama 3.3 8B dedicado.',
+          '**Meta de primeiro áudio do TTS:** O Piper gera o primeiro áudio em 50–100 ms após receber texto. Transmita uma frase por vez para uma latência TTS percebida de menos de um segundo.',
+        ],
+      },
+      limitations: {
+        id: 'limitations',
+        title: 'Limitações e avaliação honesta',
+        content:
+          '**Um pipeline multimodal local não é o GPT-5.5.** Ser claro sobre as lacunas previne a frustração e ajuda a projetar em torno das limitações.',
+        items: [
+          '**Costuras de modalidade:** A saída de visão é serializada para texto antes de ser passada ao LLM de texto. O LLM não pode raciocinar diretamente sobre as características da imagem — ele raciocina sobre uma descrição textual da imagem. Isso perde informação em tarefas que exigem raciocínio visual sutil.',
+          '**Sem vídeo em tempo real:** Os VLMs locais processam frames individuais, não vídeo contínuo. Para vídeo, extraia frames a 0,5–2 FPS e processe sequencialmente. Isso significa que você não pode perguntar "o que acabou de acontecer nos últimos 5 segundos deste vídeo".',
+          '**Lacuna de qualidade do VLM:** Os modelos de visão locais (LLaVA 7B, Llama 3.2 Vision 11B) ficam atrás do GPT-5.5 Vision em infográficos complexos, texto manuscrito, cenas ambíguas e tarefas que exigem amplo conhecimento do mundo junto à compreensão visual.',
+          '**Pressão de VRAM:** Rodar três modelos simultaneamente em uma única GPU exige uma gestão cuidadosa da VRAM. Em GPUs de 12 GB você está no limite — os tamanhos dos modelos devem ser escolhidos cuidadosamente para evitar erros OOM (sem memória).',
+          '**Latência vs. nuvem:** Uma chamada multimodal na nuvem (GPT-5.5) leva 1–3 segundos para áudio + imagem + texto. Um pipeline local leva 3–8 segundos em hardware comparável — mais lento, mas com total privacidade e custo zero por consulta.',
+          '**Consistência:** Os modelos locais produzem qualidade de saída mais variável do que os modelos na nuvem com extenso RLHF. Espere alucinações ocasionais tanto em descrições de visão quanto em respostas do LLM.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          {
+            q: 'Posso usar um único modelo tanto para visão quanto para raciocínio textual?',
+            a: 'Sim. O Llama 3.2 Vision 11B gerencia tanto a compreensão de imagens quanto o raciocínio textual em um único modelo — você pode pular a configuração separada de LLaVA + Llama 3.3 8B. Isso reduz a VRAM de ~15 GB para ~8 GB e elimina uma chamada à API do Ollama. A contrapartida é um desempenho ligeiramente pior em tarefas de raciocínio de texto puro em comparação com um Llama 3.3 8B dedicado.',
+          },
+          {
+            q: 'Como lido com a entrada de vídeo em um pipeline multimodal local?',
+            a: 'Extraia frames do vídeo usando o OpenCV (`cv2.VideoCapture`) e processe cada frame individualmente através do VLM. Para um vídeo de 1 minuto a 1 FPS, você obtém 60 frames — cada um levando 2–5 segundos para processar, então o vídeo completo levaria 2–5 minutos para ser analisado. Para monitoramento de vídeo em tempo real, processe apenas 1 frame a cada 2–3 segundos e use detecção de movimento para pular frames estáticos. A compreensão completa de vídeo (rastreamento de objetos entre frames, compreensão de sequências temporais) está além das capacidades atuais dos VLMs locais.',
+          },
+          {
+            q: 'Qual é a VRAM mínima na GPU para o stack multimodal completo?',
+            a: 'Em uma configuração de VRAM compartilhada (todos os modelos na VRAM simultaneamente), são necessários 15 GB para Whisper large-v3 + LLaVA 7B + Llama 3.3 8B. Com o Llama 3.2 Vision 11B substituindo tanto o VLM quanto o LLM de texto, 8 GB de VRAM são suficientes. Em uma GPU de 12 GB (RTX 4070), você pode rodar o stack completo de modelos separados com VRAM bem apertada com quantização pequena, ou usar o Llama 3.2 Vision 11B para a abordagem combinada. Em 8 GB de VRAM (RTX 4060), use o Llama 3.2 Vision 11B com quantização agressiva (Q3_K) ou troque modelos entre consultas de visão e texto.',
+          },
+          {
+            q: 'O pipeline multimodal pode processar PDFs?',
+            a: 'Não diretamente — os VLMs locais aceitam entrada de imagem, não de PDF. Converta primeiro as páginas do PDF em imagens usando pdf2image (`pip install pdf2image`) ou pypdfium2 (`pip install pypdfium2`). Depois passe cada imagem de página ao VLM separadamente. Para um PDF de 10 páginas, você gera 10 descrições de imagem separadas, depois passa todas as descrições ao LLM de texto para uma análise ou resumo combinado. É mais lento que o suporte nativo a PDF, mas produz bons resultados em documentos estruturados.',
+          },
+          {
+            q: 'O pipeline multimodal local é compatível com o GDPR para uso médico ou jurídico?',
+            a: 'Um pipeline multimodal local que gera zero tráfego de rede durante a operação é compatível por design para casos de uso interno — não é necessário um acordo de processamento de dados porque nenhum dado pessoal sai dos seus sistemas. Para verificar a conformidade: rode o Wireshark durante a operação e confirme zero pacotes de saída do processo do pipeline. O armazenamento também é importante — se o seu orquestrador armazena histórico de conversas ou arquivos de imagem, esses armazenamentos estão sujeitos a requisitos de retenção. Use armazenamento efêmero em memória ou armazenamento local criptografado com políticas de retenção apropriadas.',
+          },
+          {
+            q: 'Posso adicionar busca na web ao pipeline multimodal?',
+            a: 'Sim. Adicione um passo de busca entre o orquestrador e o LLM de texto. Use a API do DuckDuckGo ou um sistema RAG local (AnythingLLM, PrivateGPT) para recuperar contexto antes do passo de raciocínio do LLM. O LLM então raciocina sobre a transcrição + descrição de imagem + resultados de busca combinados. Isso adiciona 0,5–2 segundos à latência, mas permite responder perguntas de atualidade junto à análise visual.',
+          },
+          {
+            q: 'Quanta eletricidade o stack multimodal completo consome funcionando 24/7?',
+            a: 'Repouso com modelos quentes na VRAM: ~50–80 W (GPU de desktop), ~15–25 W (Mac Mini M5 Pro). Processamento ativo: ~150–300 W (GPU de desktop), ~30–60 W (Mac Mini M5 Pro). Custo mensal a $0,15/kWh: aproximadamente $5–15 (Mac Mini) ou $15–35 (desktop). Isso é menos que rodar uma API na nuvem com volumes de consultas comparáveis — um Mac Mini rodando o stack completo 24/7 custa menos em eletricidade por mês do que dois dias de uso da API do GPT-5.5 a 100 consultas/dia.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          '[whisper.cpp no GitHub](https://github.com/ggerganov/whisper.cpp) — Fonte e documentação do componente STT.',
+          '[faster-whisper no GitHub](https://github.com/SYSTRAN/faster-whisper) — Alternativa STT em Python com VAD integrado para streaming.',
+          '[Página do projeto LLaVA](https://llava-vl.github.io) — Arquitetura do modelo de visão e fichas de modelo.',
+          '[Ficha do modelo Llama 3.2 Vision](https://huggingface.co/meta-llama) — Modelo multimodal da Meta que suporta raciocínio com imagem + texto.',
+          '[Documentação do Ollama](https://ollama.com) — API de modelos de visão, formato de solicitação multimodal.',
+          '[Piper TTS no GitHub](https://github.com/rhasspy/piper) — Componente de saída TTS, biblioteca de packs de voz.',
+          '[Coqui TTS no GitHub](https://github.com/coqui-ai/TTS) — TTS alternativo com suporte a clonagem de voz.',
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          '[Reconhecimento de voz local 2026: Whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison-2026) — Análise detalhada do componente STT.',
+          '[Modelos de visão locais 2026: LLaVA, Llama 3.2 Vision e Ollama](/pt/power-local-llm/local-vision-models-llava-ollama-2026) — Análise detalhada do componente de visão.',
+          '[TTS local e clonagem de voz 2026](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Análise detalhada do componente TTS.',
+          '[Como construir um assistente de voz totalmente offline em 2026](/pt/power-local-llm/build-local-voice-assistant-2026) — A versão só de voz (mais simples, voz + LLM + TTS sem visão).',
+          '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Seleção de hardware para pipelines multi-modelo.',
+          '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) — Como encaixar múltiplos modelos em VRAM limitada via quantização.',
+        ],
+      },
+    },
+       schema: {
+       '@context': 'https://schema.org',
+       '@type': 'TechArticle',
+       headline: 'Pipeline multimodal de IA local 2026: combine voz, visão e texto offline',
+       description: 'Rode IA de voz + visão + texto localmente em 2026. Combine whisper.cpp, LLaVA 1.6, Ollama e Piper TTS. Orquestrador Python completo — sem nuvem, sem chaves de API.',
+       url: 'https://www.promptquorum.com/pt/power-local-llm/local-multimodal-pipeline-voice-vision-text?lang=pt',
+       inLanguage: 'pt',
+       datePublished: '2026-05-24',
+       dateModified: '2026-05-24',
+       author: { '@type': 'Person', name: 'Hans Kuepper' },
+       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+     },
+},
 }

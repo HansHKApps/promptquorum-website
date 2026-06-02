@@ -107,16 +107,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       modelRecommendations: {
         title: 'Best Local Models by Plugin and Task',
-        tableData: {
-          headers: ['Plugin', 'Best Coding Model (Local)', 'Best Chat Model (Local)', 'Min VRAM'],
-          rows: [
-            ['Continue', 'Qwen3-Coder 14B Q8', 'Llama 3.3 8B Q4', '16 GB'],
-            ['Cline', 'Qwen3-Coder 32B Q4', 'Qwen3 32B Q4', '24 GB'],
-            ['Tabby', 'StarCoder2-7B (built-in)', 'N/A (code only)', '8 GB'],
-            ['Aider', 'Qwen3-Coder 14B (editor)', 'Qwen3-Coder 32B (architect)', '16–24 GB'],
-            ['Cursor', 'DeepSeek-Coder-V2 (via Ollama)', 'Qwen3 14B', '16 GB'],
-          ],
-        },
+        columns: ['Plugin', 'Best Coding Model (Local)', 'Best Chat Model (Local)', 'Min VRAM'],
+        rows: [
+          { 'Plugin': 'Continue', 'Best Coding Model (Local)': 'Qwen3-Coder 14B Q8', 'Best Chat Model (Local)': 'Llama 3.3 8B Q4', 'Min VRAM': '16 GB' },
+          { 'Plugin': 'Cline', 'Best Coding Model (Local)': 'Qwen3-Coder 32B Q4', 'Best Chat Model (Local)': 'Qwen3 32B Q4', 'Min VRAM': '24 GB' },
+          { 'Plugin': 'Tabby', 'Best Coding Model (Local)': 'StarCoder2-7B (built-in)', 'Best Chat Model (Local)': 'N/A (code only)', 'Min VRAM': '8 GB' },
+          { 'Plugin': 'Aider', 'Best Coding Model (Local)': 'Qwen3-Coder 14B (editor)', 'Best Chat Model (Local)': 'Qwen3-Coder 32B (architect)', 'Min VRAM': '16–24 GB' },
+          { 'Plugin': 'Cursor', 'Best Coding Model (Local)': 'DeepSeek-Coder-V2 (via Ollama)', 'Best Chat Model (Local)': 'Qwen3 14B', 'Min VRAM': '16 GB' },
+        ],
       },
       faq: {
         faqs: [
@@ -831,16 +829,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       modelRecommendations: {
         title: 'Mejores modelos locales por plugin y tarea',
-        tableData: {
-          headers: ['Plugin', 'Mejor modelo de codificación (local)', 'Mejor modelo de chat (local)', 'VRAM mínima'],
-          rows: [
-            ['Continue', 'Qwen3-Coder 14B Q8', 'Llama 3.3 8B Q4', '16 GB'],
-            ['Cline', 'Qwen3-Coder 32B Q4', 'Qwen3 32B Q4', '24 GB'],
-            ['Tabby', 'StarCoder2-7B (integrado)', 'N/A (solo código)', '8 GB'],
-            ['Aider', 'Qwen3-Coder 14B (editor)', 'Qwen3-Coder 32B (arquitecto)', '16–24 GB'],
-            ['Cursor', 'DeepSeek-Coder-V2 (via Ollama)', 'Qwen3 14B', '16 GB'],
-          ],
-        },
+        columns: ['Plugin', 'Mejor modelo de codificación (local)', 'Mejor modelo de chat (local)', 'VRAM mínima'],
+        rows: [
+          { 'Plugin': 'Continue', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 14B Q8', 'Mejor modelo de chat (local)': 'Llama 3.3 8B Q4', 'VRAM mínima': '16 GB' },
+          { 'Plugin': 'Cline', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 32B Q4', 'Mejor modelo de chat (local)': 'Qwen3 32B Q4', 'VRAM mínima': '24 GB' },
+          { 'Plugin': 'Tabby', 'Mejor modelo de codificación (local)': 'StarCoder2-7B (integrado)', 'Mejor modelo de chat (local)': 'N/A (solo código)', 'VRAM mínima': '8 GB' },
+          { 'Plugin': 'Aider', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 14B (editor)', 'Mejor modelo de chat (local)': 'Qwen3-Coder 32B (arquitecto)', 'VRAM mínima': '16–24 GB' },
+          { 'Plugin': 'Cursor', 'Mejor modelo de codificación (local)': 'DeepSeek-Coder-V2 (via Ollama)', 'Mejor modelo de chat (local)': 'Qwen3 14B', 'VRAM mínima': '16 GB' },
+        ],
       },
       faq: {
         faqs: [
@@ -906,6 +902,190 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-ide-plugins-2026?lang=es',
       inLanguage: 'es',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+  },
+
+  pt: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Coding Assistants',
+    title: 'Melhores plugins de IDE para LLMs locais em 2026 (VS Code e JetBrains)',
+    seoTitle: 'Melhores plugins de IDE para LLM local 2026 (VS Code e JetBrains)',
+    metaDescription: 'Continue, Cline, Aider, Cursor — classificados por suporte a modelos locais em 2026. Qual plugin de IDE se conecta melhor ao Ollama, LM Studio ou llama.cpp?',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**Continue (VS Code + JetBrains) é o melhor plugin de IDE gratuito para LLMs locais em 2026: conecta-se nativamente ao Ollama e a qualquer API compatível com OpenAI, oferece chat + autocompletar + edição de código com reconhecimento de contexto, e roda inteiramente no seu hardware sem que nenhum dado saia da sua máquina.**',
+    quickAnswerTop: {
+      question: 'Qual é o melhor plugin de IDE para executar modelos de IA locais enquanto você programa?',
+      answer: 'Continue (gratuito, open-source) é o melhor plugin de IDE para Ollama e LLMs locais no VS Code e em IDEs JetBrains. Para apenas autocompletar, Tabby é a opção mais leve. Para codificação agêntica (edição de arquivos, comandos de shell), Cline é o mais capaz. Aider funciona melhor no terminal.',
+      bullets: [
+        'Continue: melhor no geral — Ollama + API OpenAI, chat + autocompletar, VS Code + JetBrains',
+        'Cline: melhor plugin de IDE agêntico — lê/escreve arquivos, executa comandos de terminal, usa ferramentas MCP',
+        'Tabby: melhor autocompletar self-hosted — roda seu próprio servidor de inferência, modelos de 1–3B',
+        'Aider: melhor nativo de terminal — com reconhecimento de git, edições multiarquivo, excelente com modelos 14B+',
+        'Cursor: melhor opção comercial — suporte a modelos locais adicionado, mas projetado com foco na nuvem',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Continue (open-source) é a escolha padrão: suporte nativo ao Ollama, VS Code + JetBrains',
+          'Os agentes do Cline leem/escrevem arquivos e executam comandos de shell — o mais poderoso para tarefas agênticas',
+          'Tabby roda seu próprio servidor de inferência (modelos de 1–3B) — menor latência de autocompletar',
+          'Aider é a opção terminal-first — com reconhecimento de commits git, reescritas multiarquivo',
+          'Cursor suporta modelos locais (Ollama/LM Studio), mas seus melhores recursos exigem a nuvem',
+          'Os quatro funcionam com Ollama; apenas o Tabby exige seu próprio servidor backend',
+        ],
+      },
+      rankedList: {
+        title: 'Melhores plugins de IDE para LLMs locais — Classificação',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Continue é o melhor plugin de IDE para LLMs locais em 2026 porque suporta o Ollama nativamente, funciona tanto no VS Code quanto no JetBrains e oferece chat, autocompletar e edição de código sem nenhuma dependência da nuvem.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Um plugin de IDE para LLMs locais conecta seu editor de código (VS Code, IntelliJ) a um modelo executando na sua própria máquina (via Ollama, LM Studio ou llama.cpp). O modelo vê seu código e responde — nenhum código sai do seu computador, sem taxas de API, sem limites de uso.',
+          },
+        ],
+        rankedItems: [
+          {
+            rank: 1,
+            title: 'Continue — Melhor no geral (gratuito, open-source)',
+            content: 'Continue é o principal assistente de codificação de IA open-source para LLMs locais. Conecta-se ao Ollama, LM Studio, llama.cpp e a qualquer API compatível com OpenAI. Recursos: chat inline (Cmd+L), autocompletar (Tab), ferramentas MCP (model context protocol), indexação de codebase e comandos slash personalizados. A extensão do VS Code tem mais de 2M de instalações. O plugin do JetBrains funciona no IntelliJ, PyCharm, GoLand, WebStorm e Rider. Melhores modelos locais: Qwen3-Coder 14B (codificação), Llama 3.3 8B (chat). Configuração: instale a extensão, defina o provedor como Ollama, escolha o modelo — pronto em 2 minutos.',
+            affiliateLinks: [
+              { label: 'Continue no VS Code Marketplace (gratuito)', url: 'https://continue.dev' },
+            ],
+          },
+          {
+            rank: 2,
+            title: 'Cline — Melhor para tarefas de codificação agêntica',
+            content: 'Cline (anteriormente Claude Dev) é o plugin de codificação agêntica mais poderoso para LLMs locais. Ele lê e escreve arquivos, executa comandos de terminal, navega na web (via ferramenta de navegador) e usa servidores MCP. Com Ollama + Qwen3-Coder 32B, o Cline consegue implementar funcionalidades inteiras a partir de um prompt. Limitações: modelos de 32B são necessários para tarefas agênticas confiáveis de múltiplos passos; modelos de 14B funcionam para tarefas simples. Preço estimado: gratuito para uso de modelos locais. Apenas VS Code (sem JetBrains). Backends compatíveis: Ollama, LM Studio, proxy LiteLLM.',
+            affiliateLinks: [
+              { label: 'Cline no VS Code Marketplace (gratuito)', url: 'https://github.com/cline/cline' },
+            ],
+          },
+          {
+            rank: 3,
+            title: 'Tabby — Melhor servidor de autocompletar self-hosted',
+            content: 'Tabby é um assistente de codificação self-hosted que roda seu próprio servidor de inferência (separado do Ollama). Ele usa modelos pequenos e especializados de completar código (1–3B parâmetros) treinados especificamente para autocompletar fill-in-the-middle (FIM) — significativamente mais rápido do que usar um modelo 7B de uso geral. Existem extensões de IDE do Tabby para VS Code, JetBrains, Vim/Neovim e Emacs. Ideal para: times que querem autocompletar rápido (<200ms) sem a nuvem. Requer um servidor dedicado ou uma máquina desktop potente.',
+            affiliateLinks: [
+              { label: 'Tabby no GitHub (open-source, self-hosted)', url: 'https://tabby.tabbyml.com' },
+            ],
+          },
+          {
+            rank: 4,
+            title: 'Aider — Melhor codificação de IA nativa de terminal',
+            content: 'Aider é um par de programação de IA baseado em terminal que se integra ao git. Ele entende a estrutura completa do seu repositório, faz edições multiarquivo e faz commit das mudanças automaticamente. Funciona com Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio ou qualquer API compatível com OpenAI. Melhores modelos locais: Qwen3-Coder 32B (modo arquiteto) + Qwen3-Coder 7B (modo editor). O Aider usa uma abordagem de dois modelos: um modelo grande planeja as mudanças, um modelo pequeno as implementa. Custo: gratuito e open-source.',
+            affiliateLinks: [
+              { label: 'Aider no GitHub (open-source)', url: 'https://aider.chat' },
+            ],
+          },
+          {
+            rank: 5,
+            title: 'Cursor — Melhor opção comercial com suporte a modelos locais',
+            content: 'Cursor é um fork do VS Code com recursos de IA integrados. A partir de 2026, o Cursor suporta modelos locais via Ollama e LM Studio em sua configuração "Custom API". No entanto, os recursos mais poderosos do Cursor (modo Agent com busca na web, reconhecimento completo do codebase) exigem modelos na nuvem (Claude, GPT-5.5). A integração de modelos locais é funcional para chat e completar simples, mas fica atrás do Continue e do Cline para fluxos de trabalho focados em privacidade. Preço: $20/mês para Pro (inclui créditos na nuvem). Uso de modelos locais: nível gratuito.',
+            affiliateLinks: [
+              { label: 'Assinatura Cursor Pro', url: 'https://cursor.com' },
+            ],
+          },
+        ],
+      },
+      setupGuide: {
+        title: 'Configuração rápida: Continue + Ollama no VS Code',
+        content: 'A forma mais rápida de começar a programar com LLM local:',
+        numberedItems: [
+          'Instale o Ollama: `curl -fsSL https://ollama.com/install.sh | sh`',
+          'Baixe um modelo de codificação: `ollama pull qwen2.5-coder:14b`',
+          'No VS Code, instale o Continue pelo marketplace de extensões',
+          'Abra as configurações do Continue (Cmd+Shift+P → "Continue: Open Config")',
+          'Adicione o provedor Ollama: defina `provider: "ollama"`, `model: "qwen2.5-coder:14b"`',
+          'Reinicie o VS Code — a aba do Continue aparece na barra lateral',
+          'Pressione Cmd+L para abrir o chat, ou comece a digitar e pressione Tab para autocompletar',
+        ],
+      },
+      modelRecommendations: {
+        title: 'Melhores modelos locais por plugin e tarefa',
+        columns: ['Plugin', 'Melhor modelo de codificação (local)', 'Melhor modelo de chat (local)', 'VRAM mínima'],
+        rows: [
+          { 'Plugin': 'Continue', 'Melhor modelo de codificação (local)': 'Qwen3-Coder 14B Q8', 'Melhor modelo de chat (local)': 'Llama 3.3 8B Q4', 'VRAM mínima': '16 GB' },
+          { 'Plugin': 'Cline', 'Melhor modelo de codificação (local)': 'Qwen3-Coder 32B Q4', 'Melhor modelo de chat (local)': 'Qwen3 32B Q4', 'VRAM mínima': '24 GB' },
+          { 'Plugin': 'Tabby', 'Melhor modelo de codificação (local)': 'StarCoder2-7B (integrado)', 'Melhor modelo de chat (local)': 'N/A (apenas código)', 'VRAM mínima': '8 GB' },
+          { 'Plugin': 'Aider', 'Melhor modelo de codificação (local)': 'Qwen3-Coder 14B (editor)', 'Melhor modelo de chat (local)': 'Qwen3-Coder 32B (arquiteto)', 'VRAM mínima': '16–24 GB' },
+          { 'Plugin': 'Cursor', 'Melhor modelo de codificação (local)': 'DeepSeek-Coder-V2 (via Ollama)', 'Melhor modelo de chat (local)': 'Qwen3 14B', 'VRAM mínima': '16 GB' },
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: 'O Continue pode substituir completamente o GitHub Copilot para uso local?',
+            a: 'Para a maioria dos casos de uso, sim. Continue com Qwen3-Coder 14B Q8 oferece qualidade de autocompletar comparável ao GitHub Copilot para Python, TypeScript e Go. O Copilot ainda tem vantagem em APIs muito novas e uso de bibliotecas obscuras, onde sua vantagem de dados de treinamento aparece. Para codebases críticas em privacidade, Continue + Ollama local é a melhor escolha.',
+          },
+          {
+            q: 'Qual plugin funciona melhor para refatoração multiarquivo?',
+            a: 'Cline ou Aider. Ambos conseguem ler vários arquivos, entender dependências e fazer edições coordenadas em um codebase. O Cline funciona dentro do VS Code (melhor para feedback visual); o Aider funciona no terminal (melhor para integração CI/CD e commits com reconhecimento de git). Para modelos de 30B+ com 24 GB de VRAM, o Cline com Qwen3-Coder 32B lida com refatorações complexas de forma confiável.',
+          },
+          {
+            q: 'O Tabby funciona sem GPU?',
+            a: 'Sim — o Tabby pode rodar em CPU com modelos pequenos (1–3B). No entanto, a latência de autocompletar em CPU é de 500ms–2s, o que parece lento comparado ao objetivo de <200ms para uma codificação fluida. Para máquinas apenas com CPU, Continue + Ollama com um modelo rápido de 1B ou 3B oferece melhor controle de latência.',
+          },
+          {
+            q: 'Posso usar esses plugins com o LM Studio em vez do Ollama?',
+            a: 'Sim. O LM Studio expõe uma API compatível com OpenAI na porta 1234 por padrão. Defina o provedor do seu plugin como "openai" com a URL base `http://localhost:1234/v1` e use qualquer nome de modelo da sua biblioteca do LM Studio. Continue, Cline e Aider suportam essa configuração.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'O Continue pode substituir completamente o GitHub Copilot para uso local?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Para a maioria dos casos de uso, sim. Continue com Qwen3-Coder 14B Q8 oferece qualidade de autocompletar comparável para Python, TypeScript e Go. Para codebases críticas em privacidade, Continue + Ollama local é a melhor escolha.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Qual plugin funciona melhor para refatoração multiarquivo?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Cline (VS Code) ou Aider (terminal). Ambos leem vários arquivos e fazem edições coordenadas. O Cline é melhor para feedback visual; o Aider para commits com reconhecimento de git. Use modelos de 32B para refatorações complexas confiáveis.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Melhores plugins de IDE para LLMs locais 2026',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Continue', description: 'Melhor no geral — Ollama nativo, VS Code + JetBrains, gratuito' },
+        { '@type': 'ListItem', position: 2, name: 'Cline', description: 'Melhor agêntico — lê/escreve arquivos, executa comandos, VS Code' },
+        { '@type': 'ListItem', position: 3, name: 'Tabby', description: 'Melhor autocompletar self-hosted — modelos FIM 1–3B, todos os editores' },
+        { '@type': 'ListItem', position: 4, name: 'Aider', description: 'Melhor nativo de terminal — com reconhecimento de git, edições multiarquivo, open-source' },
+        { '@type': 'ListItem', position: 5, name: 'Cursor', description: 'Melhor comercial — suporte a modelos locais, $20/mês Pro' },
+      ],
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'Melhores plugins de IDE para LLMs locais em 2026 (VS Code e JetBrains)',
+      description: 'Comparação classificada de Continue, Cline, Tabby, Aider e Cursor para uso de LLM local no VS Code e JetBrains. Inclui guia de configuração, recomendações de modelos e comparação de desempenho.',
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-llm-ide-plugins-2026?lang=pt',
+      inLanguage: 'pt',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },

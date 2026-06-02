@@ -437,6 +437,86 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Model Comparisons',
+    title: 'Qwen 14B vs Llama 3 8B: qual funciona melhor localmente?',
+    seoTitle: 'Qwen 14B vs Llama 3 8B: Qual escolher? 2026 | PromptQuorum',
+    metaDescription: 'Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 3 14B: 10 GB, MMLU 74,8%. Com 12 GB de VRAM, Qwen 14B vence em qualidade. Resposta rápida do PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qwen 14B vs Llama 3 8B: qual funciona melhor localmente?',
+        answer: 'Llama 3 8B cabe em 6 GB de VRAM e é mais rápido. Qwen 3 14B precisa de 10 GB ou mais, mas obtém melhores resultados nos benchmarks. Com 12 GB de VRAM, Qwen 14B vence em qualidade.',
+        bullets: [
+          'Llama 3 8B Q4_K_M: 6 GB VRAM, ~25 tok/s na RTX 3060',
+          'Qwen 3 14B Q4_K_M: 10 GB VRAM, ~15 tok/s na RTX 3060',
+          'Qwen 14B oferece melhor qualidade; Llama 8B é mais rápido',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Llama 3 8B Q4_K_M precisa de apenas 6 GB de VRAM e oferece ~25 tok/s na RTX 3060 — a escolha certa para velocidade interativa',
+          'Qwen 3 14B Q4_K_M precisa de 10 GB de VRAM e roda a ~15 tok/s — mas supera em 8–10 pontos no MMLU e nos benchmarks de raciocínio',
+          'O ponto de cruzamento de VRAM é 12 GB: abaixo disso, Llama 8B é a única opção; com 12 GB, Qwen 14B vence em qualidade',
+          'Em tarefas de codificação, a diferença aumenta ainda mais a favor do Qwen 14B — as variantes Qwen Coder adicionam vantagem extra nos benchmarks de código',
+        ],
+      },
+      body1: {
+        title: 'Llama 3 8B vence em velocidade e consumo de VRAM',
+        content: [
+          '<strong>Llama 3 8B com quantização Q4_K_M usa 6 GB de VRAM e roda a ~25 tokens por segundo em uma RTX 3060 12 GB — a escolha padrão para qualquer configuração com menos de 10 GB de VRAM.</strong> Seus 8 bilhões de parâmetros se traduzem em respostas rápidas e interativas, naturais para chat e sessões curtas de código.',
+          'Qwen 3 14B em Q4_K_M precisa de aproximadamente 10 GB de VRAM e produz ~15 tok/s na mesma placa. O menor throughput é perceptível em conversas em tempo real, mas aceitável para sumarização em lote ou processamento de documentos longos onde qualidade importa mais que latência.',
+          'A diferença de velocidade (25 vs 15 tok/s) significa que Llama 3 8B gera uma resposta de 200 tokens em cerca de 8 segundos, enquanto Qwen 3 14B leva cerca de 13 segundos. Para consultas de turno único essa diferença é menor; em sessões de chat com múltiplos turnos ela se acumula.',
+        ],
+        columns: ['Caso de uso', 'Vencedor', 'Por quê'],
+        rows: [
+          { 'Caso de uso': 'Codificação e raciocínio', 'Vencedor': 'Qwen 3 14B', 'Por quê': 'Maior quantidade de parâmetros melhora a lógica de múltiplas etapas' },
+          { 'Caso de uso': 'Chat e instrução', 'Vencedor': 'Llama 3 8B', 'Por quê': 'Otimizado para respostas interativas rápidas' },
+          { 'Caso de uso': 'Multilíngue', 'Vencedor': 'Empate', 'Por quê': 'Ambos sólidos em idiomas europeus e do leste asiático' },
+          { 'Caso de uso': 'RAM limitada (≤8 GB)', 'Vencedor': 'Llama 3 8B', 'Por quê': 'Cabe em 6 GB; Qwen 14B precisa de 10 GB' },
+          { 'Caso de uso': 'Contexto longo (16K+)', 'Vencedor': 'Qwen 3 14B', 'Por quê': 'Melhor recuperação em comprimentos de contexto estendidos' },
+        ],
+      },
+      body2: {
+        title: 'Qwen 3 14B vence em qualidade quando a VRAM permite',
+        content: [
+          '<strong>Qwen 3 14B obtém 74,8% no MMLU contra 66,6% do Llama 3 8B — uma diferença de 8 pontos que se reflete em raciocínio de múltiplas etapas, seguimento de instruções e consistência de saída estruturada notavelmente melhores.</strong> A diferença é particularmente visível em tarefas que exigem manter e aplicar contexto ao longo de múltiplos parágrafos.',
+          'Se seu caso de uso principal é complementação de código, a diferença de qualidade cresce. Qwen 3 Coder 14B (a variante ajustada para código da mesma base) obtém 78,4% no HumanEval. Llama 3 8B genérico alcança cerca de 55% no mesmo benchmark — uma diferença de 23 pontos nas tarefas de codificação.',
+          '≤8 GB VRAM: Llama 3 8B Q4_K_M cabe com ~2 GB de folga — Qwen 14B não é uma opção. 10–12 GB VRAM: Qwen 3 14B Q4_K_M cabe no ponto de inflexão. 16+ GB VRAM: qualquer modelo funciona; Qwen 3 14B Q5 se torna prático.',
+          'Para uma análise mais aprofundada do desempenho de modelos de codificação incluindo tabelas de benchmarks, veja a comparação <a href="/pt/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">melhores modelos 14B para codificação</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre Qwen 14B vs Llama 8B',
+        faqs: [
+          {
+            q: 'Qwen 3 14B pode rodar em uma GPU com 6 GB de VRAM?',
+            a: 'Não. Qwen 3 14B em Q4_K_M requer aproximadamente 10 GB de VRAM. Em uma placa de 6 GB você precisaria usar quantização Q2_K, o que causa degradação significativa de qualidade. Llama 3 8B é o modelo correto para 6 GB de VRAM.',
+          },
+          {
+            q: 'Qwen 3 14B ou Llama 3 8B é melhor para codificação?',
+            a: 'Qwen 3 14B é substancialmente melhor para codificação. Qwen Coder 14B (a variante ajustada para código) obtém 78,4% no HumanEval contra ~55% do Llama 3 8B. Use Llama 3 8B para codificação apenas quando a VRAM impede executar Qwen.',
+          },
+          {
+            q: 'Qwen 3 14B suporta um contexto mais longo que Llama 3 8B?',
+            a: 'Qwen 3 14B suporta nativamente uma janela de contexto de 128K. Llama 3 8B suporta 8K por padrão, embora variantes estendidas por RoPE possam alcançar 128K com alguma perda de qualidade. Para tarefas com documentos longos, Qwen 3 14B tem clara vantagem mesmo antes de considerar sua maior contagem de parâmetros.',
+          },
+          {
+            q: 'O comprimento do contexto afeta a escolha do modelo para chat?',
+            a: 'Sim. Para chat típico de turno único ou múltiplos turnos curtos (menos de 4K tokens), ambos os modelos funcionam bem — escolha com base na VRAM. Para conversas longas ou sessões com documentos extensos, a janela de contexto nativa de 128K do Qwen 3 14B é uma vantagem significativa sobre o limite padrão de 8K do Llama 3 8B.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Model Comparisons',
     title: 'Qwen 14B vs Llama 3 8B: ¿cuál funciona mejor en local?',
