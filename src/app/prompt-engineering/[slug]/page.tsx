@@ -342,7 +342,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
         name: 'Prompt Engineering Glossary 2026',
         description: 'As of April 2026: 100 essential terms for prompt engineering, AI agents, safety, evaluation, and production workflows — with definitions, examples, and citations.',
         url: canonicalUrl,
-        inLanguage: 'en',
+        inLanguage: toOutputLocale(selectedLang),
         datePublished: '2026-03-28',
         dateModified: '2026-04-05',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -541,7 +541,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     description: article.intro,
     url: canonicalUrl,
     author: { '@type': 'Organization', name: 'PromptQuorum' },
-    inLanguage: 'en',
+    inLanguage: toOutputLocale(selectedLang),
     encodingFormat: 'text/html',
     isPartOf: {
       '@type': 'WebPage',
