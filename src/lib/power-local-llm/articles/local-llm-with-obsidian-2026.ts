@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'You want chat with strict privacy guarantees + minimal features → Local GPT',
           ],
           cloudIf: [
-            'You need GPT-4o quality on every chat response → cloud equivalents (the local stack is ~70% as capable)',
+            'You need GPT-5.5 quality on every chat response → cloud equivalents (the local stack is ~70% as capable)',
             'Your vault is on a managed cloud service that blocks local network calls → cloud plugin',
             'You want an iOS-native AI feature inside the Obsidian Mobile app without LAN access → not yet feasible in 2026 (mobile cannot reach localhost LLM without Tailscale or similar)',
           ],

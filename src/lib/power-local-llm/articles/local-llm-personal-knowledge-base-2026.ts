@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'You want full control over chunking, retrieval, and re-ranking → custom Python + ChromaDB',
           ],
           cloudIf: [
-            'You need GPT-4o-class reasoning on every query and your archive is small → Notion AI or ChatGPT with custom GPTs (the local stack is ~70% as capable on synthesis)',
+            'You need GPT-5.5-class reasoning on every query and your archive is small → Notion AI or ChatGPT with custom GPTs (the local stack is ~70% as capable on synthesis)',
             'You have no machine with 16 GB+ RAM and no home server → cloud SaaS PKB (Mem, Reflect)',
             'Your team needs concurrent multi-user access and you do not want to host services → cloud equivalent',
           ],

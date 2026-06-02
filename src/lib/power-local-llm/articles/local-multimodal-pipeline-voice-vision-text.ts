@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline',
     seoTitle: 'Local Multimodal Pipeline 2026: Voice + Vision + Text',
     intro:
-      'A local multimodal AI pipeline combines separate specialized models for each modality — whisper.cpp for voice input, LLaVA or Llama 3.2 Vision for image understanding, an Ollama LLM for text reasoning, and Piper TTS for voice output — orchestrated into a single coherent system that runs 100% offline. This is the local equivalent of GPT-4o\'s multimodal capabilities: no single model understands everything, but the orchestrator routes each input type to the right model and combines the outputs. This guide shows how to build local multimodal pipeline capabilities from these open-source components — covering the architecture, component stack, hardware tiers, five practical use cases, and a Python async orchestrator that processes voice and vision inputs in parallel.',
+      'A local multimodal AI pipeline combines separate specialized models for each modality — whisper.cpp for voice input, LLaVA or Llama 3.2 Vision for image understanding, an Ollama LLM for text reasoning, and Piper TTS for voice output — orchestrated into a single coherent system that runs 100% offline. This is the local equivalent of GPT-5.5\'s multimodal capabilities: no single model understands everything, but the orchestrator routes each input type to the right model and combines the outputs. This guide shows how to build local multimodal pipeline capabilities from these open-source components — covering the architecture, component stack, hardware tiers, five practical use cases, and a Python async orchestrator that processes voice and vision inputs in parallel.',
     metaDescription:
       'Run voice + vision + text AI locally in 2026. Combine whisper.cpp, LLaVA 1.6, Ollama, and Piper TTS. Full Python orchestrator — no cloud, no API keys.',
     twitterDescription:
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'whisper llava ollama piper',
       'offline multimodal AI',
       'voice vision text local AI',
-      'local GPT-4o alternative',
+      'local GPT-5.5 alternative',
       'build multimodal AI offline',
       'local speech vision pipeline',
       'llava whisper integration',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LLaVA 1.6 7B',
       'Qwen2-VL 7B',
       'Llama 3.2 Vision 11B',
-      'Llama 3.1 8B',
+      'Llama 3.3 8B',
       'Moondream 2',
       'Piper TTS',
       'Coqui TTS',
@@ -53,20 +53,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Apple M5 Max 128 GB',
     ],
     leadAnswerBlock:
-      '**A local multimodal AI pipeline in 2026 requires at minimum 12 GB of GPU VRAM to run STT + vision + LLM + TTS simultaneously — the full stack.** The practical minimum viable setup is an RTX 4070 (12 GB) or Mac M5 Pro (36 GB unified memory), running whisper.cpp for voice input, LLaVA 1.6 7B for vision, Llama 3.1 8B for text reasoning, and Piper for voice output. On an RTX 3060 12 GB, you can run the stack with a smaller LLM (Phi-4) and no vision — or swap models in/out of VRAM as needed. The key architectural decision is whether to share VRAM between the vision model and the LLM (requires 12+ GB) or run them sequentially on a smaller GPU.',
+      '**A local multimodal AI pipeline in 2026 requires at minimum 12 GB of GPU VRAM to run STT + vision + LLM + TTS simultaneously — the full stack.** The practical minimum viable setup is an RTX 4070 (12 GB) or Mac M5 Pro (36 GB unified memory), running whisper.cpp for voice input, LLaVA 1.6 7B for vision, Llama 3.3 8B for text reasoning, and Piper for voice output. On an RTX 3060 12 GB, you can run the stack with a smaller LLM (Phi-4) and no vision — or swap models in/out of VRAM as needed. The key architectural decision is whether to share VRAM between the vision model and the LLM (requires 12+ GB) or run them sequentially on a smaller GPU.',
     quickAnswerTop: {
       en: {
         question: 'How do you build a local multimodal AI pipeline with voice, vision, and text in 2026?',
         answer:
-          'Combine four specialized models: whisper.cpp (voice → text), a vision-language model like LLaVA 1.6 or Llama 3.2 Vision (image → text description), an Ollama LLM like Llama 3.1 8B (text → text reasoning), and Piper TTS (text → speech). A Python async orchestrator detects the input type and routes it to the right model, combining outputs into a coherent response. Minimum VRAM: 12 GB for a shared-VRAM setup; 8 GB if you swap models in/out.',
+          'Combine four specialized models: whisper.cpp (voice → text), a vision-language model like LLaVA 1.6 or Llama 3.2 Vision (image → text description), an Ollama LLM like Llama 3.3 8B (text → text reasoning), and Piper TTS (text → speech). A Python async orchestrator detects the input type and routes it to the right model, combining outputs into a coherent response. Minimum VRAM: 12 GB for a shared-VRAM setup; 8 GB if you swap models in/out.',
         bullets: [
           'Voice input: whisper.cpp (Metal on Mac, CUDA on NVIDIA) → text transcript.',
           'Image input: LLaVA 1.6 7B or Llama 3.2 Vision 11B via Ollama → text description.',
-          'Text reasoning: Ollama + Llama 3.1 8B → response text.',
+          'Text reasoning: Ollama + Llama 3.3 8B → response text.',
           'Voice output: Piper TTS (CPU, ~0.1 sec latency) → audio playback.',
           'Minimum hardware: RTX 4070 12 GB or M5 Pro 36 GB for full simultaneous stack.',
           'Vision + LLM can share one Ollama instance (Llama 3.2 Vision handles both).',
-          'Total VRAM for full stack: ~15 GB (whisper 3 GB + LLaVA 7B 6 GB + Llama 3.1 8B 6 GB + Piper CPU).',
+          'Total VRAM for full stack: ~15 GB (whisper 3 GB + LLaVA 7B 6 GB + Llama 3.3 8B 6 GB + Piper CPU).',
         ],
         updatedDate: '2026-05-14',
       },
@@ -96,35 +96,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**A local multimodal pipeline is four separate models orchestrated together — not a single model like GPT-4o.** whisper.cpp handles voice, a VLM (LLaVA or Llama 3.2 Vision) handles images, an LLM handles text reasoning, and Piper handles speech output. The orchestrator routes inputs to the right model and combines outputs.',
+          '**A local multimodal pipeline is four separate models orchestrated together — not a single model like GPT-5.5.** whisper.cpp handles voice, a VLM (LLaVA or Llama 3.2 Vision) handles images, an LLM handles text reasoning, and Piper handles speech output. The orchestrator routes inputs to the right model and combines outputs.',
           '**Llama 3.2 Vision 11B can replace both the VLM and the text LLM in one model.** It accepts text and images simultaneously and handles both description and reasoning in one pass — reducing VRAM from ~15 GB (separate models) to ~8 GB (single Llama 3.2 Vision 11B).',
-          '**Minimum hardware for the full stack: RTX 4070 12 GB or Apple M5 Pro 36 GB.** An RTX 3060 12 GB can run a constrained version (Phi-4 instead of Llama 3.1 8B, or sequential model loading) — usable but slower.',
+          '**Minimum hardware for the full stack: RTX 4070 12 GB or Apple M5 Pro 36 GB.** An RTX 3060 12 GB can run a constrained version (Phi-4 instead of Llama 3.3 8B, or sequential model loading) — usable but slower.',
           '**Five practical use cases justify the complexity:** voice-controlled document analysis, visual Q&A with voice interaction, meeting transcription combined with slide analysis, local screen-reader accessibility tools, and local security camera analysis.',
           '**Async orchestration is essential for acceptable performance.** STT and vision can run in parallel when both audio and image inputs are available — the text LLM waits for both, then generates a combined response.',
           '**Streaming LLM output to TTS reduces perceived latency by 0.3–0.7 seconds.** Start generating audio from the first completed sentence while the LLM is still writing the rest of the response.',
-          '**This is not GPT-4o.** Separate models produce "seams" — the vision model\'s description passes as text to the LLM, losing some cross-modal reasoning. Quality on complex multimodal tasks is below frontier closed models but adequate for structured document and clear photo tasks.',
+          '**This is not GPT-5.5.** Separate models produce "seams" — the vision model\'s description passes as text to the LLM, losing some cross-modal reasoning. Quality on complex multimodal tasks is below frontier closed models but adequate for structured document and clear photo tasks.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'Quick Facts',
         items: [
-          '**Total VRAM for full stack:** ~15 GB (whisper 3 GB + LLaVA 7B 6 GB + Llama 3.1 8B 6 GB). Piper runs on CPU.',
+          '**Total VRAM for full stack:** ~15 GB (whisper 3 GB + LLaVA 7B 6 GB + Llama 3.3 8B 6 GB). Piper runs on CPU.',
           '**Simplified stack (Llama 3.2 Vision 11B):** ~8 GB VRAM — handles both vision and text reasoning in one model.',
           '**Voice latency (Whisper small, RTX 4070):** ~200–500 ms STT. 500–1500 ms LLM first token. 100 ms Piper TTS.',
           '**Image processing latency (LLaVA 7B, RTX 4070):** ~2–5 seconds per image depending on resolution and prompt.',
           '**No real-time video:** VLMs process individual frames, not continuous video streams. For video, extract frames at 1 FPS and process each.',
           '**Same Ollama instance for VLM + LLM:** Ollama can serve Llama 3.2 Vision as both the vision model and the text model, saving VRAM.',
-          '**All components MIT or Apache 2.0 licensed** (whisper.cpp MIT, LLaVA MIT, Llama 3.1 8B Llama 3 Community License, Piper MIT).',
+          '**All components MIT or Apache 2.0 licensed** (whisper.cpp MIT, LLaVA MIT, Llama 3.3 8B Llama 3 Community License, Piper MIT).',
         ],
       },
       whatIsMultimodal: {
         id: 'what-is-multimodal',
         title: 'What Is a Multimodal AI Pipeline?',
         content:
-          'A multimodal AI system accepts multiple types of input (voice, images, text) and produces multiple types of output (text, speech). The cloud equivalent is GPT-4o — a single model that accepts audio, images, and text in any combination.',
+          'A multimodal AI system accepts multiple types of input (voice, images, text) and produces multiple types of output (text, speech). The cloud equivalent is GPT-5.5 — a single model that accepts audio, images, and text in any combination.',
         items: [
-          '**Cloud approach (GPT-4o):** One giant model trained on all modalities simultaneously. Cross-modal reasoning is learned during training — the model can reason about the relationship between image content and voice queries natively.',
+          '**Cloud approach (GPT-5.5):** One giant model trained on all modalities simultaneously. Cross-modal reasoning is learned during training — the model can reason about the relationship between image content and voice queries natively.',
           '**Local approach (this guide):** Separate specialized models for each modality, connected by an orchestrator. More modular and cheaper to run, but produces "seams" — vision model output is serialized to text before being passed to the LLM.',
           '**Why build local:** Privacy (medical images, proprietary documents, confidential screenshots), cost (zero per-query fees), offline capability (no internet required after model download), customization (swap any component).',
           '**Modular advantage:** You can upgrade any one component independently. When a better local STT model ships, replace only the STT layer. When a better VLM ships, swap only the vision model — the rest of the pipeline is unchanged.',
@@ -138,16 +138,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'A local multimodal pipeline costs $0/month in API fees after the one-time hardware investment ($600–3,500), with break-even against GPT-4o API costs ($135–225/mo) in 3–18 months depending on query volume.',
+            text: 'A local multimodal pipeline costs $0/month in API fees after the one-time hardware investment ($600–3,500), with break-even against GPT-5.5 API costs ($135–225/mo) in 3–18 months depending on query volume.',
           },
         ],
-        columns: ['Usage', 'GPT-4o API', 'Google Cloud', 'Local'],
+        columns: ['Usage', 'GPT-5.5 API', 'Google Cloud', 'Local'],
         rows: [
-          { 'Usage': '100 voice queries/day', 'GPT-4o API': '$90–150/mo', 'Google Cloud': '$60–120/mo', 'Local': '$0' },
-          { 'Usage': '50 image analyses/day', 'GPT-4o API': '$45–75/mo', 'Google Cloud': '$30–60/mo', 'Local': '$0' },
-          { 'Usage': 'Combined (typical)', 'GPT-4o API': '$135–225/mo', 'Google Cloud': '$90–180/mo', 'Local': '$0' },
-          { 'Usage': 'Hardware (one-time)', 'GPT-4o API': '$0', 'Google Cloud': '$0', 'Local': '$600–3,500' },
-          { 'Usage': 'Break-even', 'GPT-4o API': '—', 'Google Cloud': '—', 'Local': '3–18 months' },
+          { 'Usage': '100 voice queries/day', 'GPT-5.5 API': '$90–150/mo', 'Google Cloud': '$60–120/mo', 'Local': '$0' },
+          { 'Usage': '50 image analyses/day', 'GPT-5.5 API': '$45–75/mo', 'Google Cloud': '$30–60/mo', 'Local': '$0' },
+          { 'Usage': 'Combined (typical)', 'GPT-5.5 API': '$135–225/mo', 'Google Cloud': '$90–180/mo', 'Local': '$0' },
+          { 'Usage': 'Hardware (one-time)', 'GPT-5.5 API': '$0', 'Google Cloud': '$0', 'Local': '$600–3,500' },
+          { 'Usage': 'Break-even', 'GPT-5.5 API': '—', 'Google Cloud': '—', 'Local': '3–18 months' },
         ],
         note: 'The local pipeline pays for itself in 3–6 months at moderate usage (100+ queries/day). At light usage (10 queries/day), the break-even extends to 12–18 months.',
       },
@@ -173,7 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'The full local multimodal stack uses ~15 GB VRAM: Whisper large-v3 (3 GB) + LLaVA 1.6 7B (6 GB) + Llama 3.1 8B (6 GB); Piper TTS runs on CPU at no VRAM cost.',
+            text: 'The full local multimodal stack uses ~15 GB VRAM: Whisper large-v3 (3 GB) + LLaVA 1.6 7B (6 GB) + Llama 3.3 8B (6 GB); Piper TTS runs on CPU at no VRAM cost.',
           },
           {
             type: 'plain-terms',
@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Layer': 'Reasoning',
             'Tool': 'Ollama',
-            'Model': 'Llama 3.1 8B Q4',
+            'Model': 'Llama 3.3 8B Q4',
             'VRAM': '~6 GB',
             'Role': 'Text → text response',
           },
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Use Llama 3.2 Vision 11B instead of separate LLaVA + Llama 3.1 8B to cut VRAM to ~8 GB. Llama 3.2 Vision handles both image description and text reasoning in one model, eliminating the need for a separate VLM.',
+            text: 'Use Llama 3.2 Vision 11B instead of separate LLaVA + Llama 3.3 8B to cut VRAM to ~8 GB. Llama 3.2 Vision handles both image description and text reasoning in one model, eliminating the need for a separate VLM.',
           },
           {
             type: 'tip',
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Tier': 'Mid',
             'GPU': 'RTX 4070 12 GB',
             'RAM': '32 GB',
-            'Can Run': 'Full stack with 7B models (LLaVA 7B + Llama 3.1 8B, tight fit)',
+            'Can Run': 'Full stack with 7B models (LLaVA 7B + Llama 3.3 8B, tight fit)',
             'Latency (voice query + image)': '3–6 sec',
           },
           {
@@ -261,7 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Tier': 'Apple Mid',
             'GPU': 'M5 Pro 36 GB',
             'RAM': '36 GB unified',
-            'Can Run': 'Full stack with 8B models via Metal (recommended). Qwen2-VL 7B + Llama 3.1 8B fits comfortably in 36 GB with room for Whisper large-v3.',
+            'Can Run': 'Full stack with 8B models via Metal (recommended). Qwen2-VL 7B + Llama 3.3 8B fits comfortably in 36 GB with room for Whisper large-v3.',
             'Latency (voice query + image)': '2–4 sec',
           },
           {
@@ -276,7 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'The M5 Max with 128 GB unified memory is the ultimate local multimodal platform. It can run Whisper large-v3 (3 GB) + Llama 3.2 Vision 90B (~64 GB) + Piper TTS simultaneously — the 90B vision model is the highest-quality local VLM available, approaching GPT-4o on document and photo tasks. No discrete GPU setup can match this without multi-GPU configurations costing 2–3× more.',
+            text: 'The M5 Max with 128 GB unified memory is the ultimate local multimodal platform. It can run Whisper large-v3 (3 GB) + Llama 3.2 Vision 90B (~64 GB) + Piper TTS simultaneously — the 90B vision model is the highest-quality local VLM available, approaching GPT-5.5 on document and photo tasks. No discrete GPU setup can match this without multi-GPU configurations costing 2–3× more.',
           },
         ],
       },
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**STT:** Run faster-whisper in streaming mode during the meeting. Accumulate segments into a transcript buffer.',
           '**Vision:** Every time a new slide appears (detect via screen capture diff), capture a screenshot and pass to LLaVA for description.',
-          '**Combination:** At end of meeting (or on-demand), pass transcript + slide descriptions to Llama 3.1 8B: "Summarize this meeting and list action items. Here is the transcript: [...]. Here are the slide contents: [...]."',
+          '**Combination:** At end of meeting (or on-demand), pass transcript + slide descriptions to Llama 3.3 8B: "Summarize this meeting and list action items. Here is the transcript: [...]. Here are the slide contents: [...]."',
           '**Output:** Voice-read summary (Piper TTS) + text file saved locally.',
           '**GDPR value:** Entire meeting processing is local. No audio, transcript, or slides sent to any cloud service. Compliant for legal, medical, and corporate contexts.',
         ],
@@ -483,7 +483,7 @@ if __name__ == "__main__":
           '**Keep models warm:** Ollama keeps models in VRAM automatically between requests. whisper.cpp in stream mode stays loaded. Never reload between queries.',
           '**Stream LLM → TTS:** Detect sentence boundaries in the streaming LLM output (`.`, `!`, `?`). Pass each completed sentence to Piper while the LLM continues generating.',
           '**VRAM management:** If total VRAM is tight, unload the VLM after image processing (Ollama HTTP delete endpoint) before loading the text LLM. Adds ~2–3 seconds but allows 8 GB GPU to handle the full stack.',
-          '**Use Llama 3.2 Vision as combined VLM + LLM:** Eliminates model switching overhead entirely — one model handles both vision description and text reasoning. Trade-off: slightly weaker on pure text reasoning vs. Llama 3.1 8B.',
+          '**Use Llama 3.2 Vision as combined VLM + LLM:** Eliminates model switching overhead entirely — one model handles both vision description and text reasoning. Trade-off: slightly weaker on pure text reasoning vs. Llama 3.3 8B.',
           '**TTS first audio target:** Piper generates first audio within 50–100 ms of receiving text. Stream one sentence at a time for sub-second perceived TTS latency.',
         ],
       },
@@ -491,13 +491,13 @@ if __name__ == "__main__":
         id: 'limitations',
         title: 'Limitations and Honest Assessment',
         content:
-          '**A local multimodal pipeline is not GPT-4o.** Being clear about the gaps prevents frustration and helps you design around limitations.',
+          '**A local multimodal pipeline is not GPT-5.5.** Being clear about the gaps prevents frustration and helps you design around limitations.',
         items: [
           '**Modality seams:** Vision output is serialized to text before passing to the text LLM. The LLM cannot reason directly about image features — it reasons about a text description of the image. This loses information for tasks requiring subtle visual reasoning.',
           '**No real-time video:** Local VLMs process single frames, not continuous video. For video, extract frames at 0.5–2 FPS and process sequentially. This means you cannot ask "what just happened in the last 5 seconds of this video."',
-          '**VLM quality gap:** Local vision models (LLaVA 7B, Llama 3.2 Vision 11B) are behind GPT-4o Vision on complex infographics, handwritten text, ambiguous scenes, and tasks requiring broad world knowledge alongside visual understanding.',
+          '**VLM quality gap:** Local vision models (LLaVA 7B, Llama 3.2 Vision 11B) are behind GPT-5.5 Vision on complex infographics, handwritten text, ambiguous scenes, and tasks requiring broad world knowledge alongside visual understanding.',
           '**VRAM pressure:** Running three models simultaneously on a single GPU requires careful VRAM management. On 12 GB GPUs, you are at the edge — model sizes must be carefully chosen to avoid OOM (out of memory) errors.',
-          '**Latency vs. cloud:** A cloud multimodal call (GPT-4o) takes 1–3 seconds for audio + image + text. A local pipeline takes 3–8 seconds on comparable hardware — slower, but with full privacy and zero per-query cost.',
+          '**Latency vs. cloud:** A cloud multimodal call (GPT-5.5) takes 1–3 seconds for audio + image + text. A local pipeline takes 3–8 seconds on comparable hardware — slower, but with full privacy and zero per-query cost.',
           '**Consistency:** Local models produce more variable output quality than cloud models with extensive RLHF. Expect occasional hallucinations in both vision descriptions and LLM responses.',
         ],
       },
@@ -507,7 +507,7 @@ if __name__ == "__main__":
         faqs: [
           {
             q: 'Can I use a single model for both vision and text reasoning?',
-            a: 'Yes. Llama 3.2 Vision 11B handles both image understanding and text reasoning in one model — you can skip the separate LLaVA + Llama 3.1 8B setup. This cuts VRAM from ~15 GB to ~8 GB and eliminates one Ollama API call. The trade-off is slightly weaker performance on pure text reasoning tasks compared to a dedicated Llama 3.1 8B.',
+            a: 'Yes. Llama 3.2 Vision 11B handles both image understanding and text reasoning in one model — you can skip the separate LLaVA + Llama 3.3 8B setup. This cuts VRAM from ~15 GB to ~8 GB and eliminates one Ollama API call. The trade-off is slightly weaker performance on pure text reasoning tasks compared to a dedicated Llama 3.3 8B.',
           },
           {
             q: 'How do I handle video input in a local multimodal pipeline?',
@@ -515,7 +515,7 @@ if __name__ == "__main__":
           },
           {
             q: 'What is the minimum GPU VRAM for the full multimodal stack?',
-            a: 'On a shared-VRAM setup (all models in VRAM simultaneously), 15 GB is required for Whisper large-v3 + LLaVA 7B + Llama 3.1 8B. With Llama 3.2 Vision 11B replacing both VLM and text LLM, 8 GB VRAM is sufficient. On a 12 GB GPU (RTX 4070), you can run the full separate-model stack at very tight VRAM with small quantization, or use Llama 3.2 Vision 11B for the combined approach. On 8 GB VRAM (RTX 4060), use Llama 3.2 Vision 11B with aggressive quantization (Q3_K) or swap models in/out between vision and text queries.',
+            a: 'On a shared-VRAM setup (all models in VRAM simultaneously), 15 GB is required for Whisper large-v3 + LLaVA 7B + Llama 3.3 8B. With Llama 3.2 Vision 11B replacing both VLM and text LLM, 8 GB VRAM is sufficient. On a 12 GB GPU (RTX 4070), you can run the full separate-model stack at very tight VRAM with small quantization, or use Llama 3.2 Vision 11B for the combined approach. On 8 GB VRAM (RTX 4060), use Llama 3.2 Vision 11B with aggressive quantization (Q3_K) or swap models in/out between vision and text queries.',
           },
           {
             q: 'Can the multimodal pipeline process PDFs?',
@@ -531,7 +531,7 @@ if __name__ == "__main__":
           },
           {
             q: 'How much electricity does the full multimodal stack use running 24/7?',
-            a: 'Idle with models warm in VRAM: ~50–80W (desktop GPU), ~15–25W (Mac Mini M5 Pro). Active processing: ~150–300W (desktop GPU), ~30–60W (Mac Mini M5 Pro). Monthly cost at $0.15/kWh: approximately $5–15 (Mac Mini) or $15–35 (desktop). This is less than running a cloud API at comparable query volumes — a Mac Mini running the full stack 24/7 costs less in electricity per month than two days of GPT-4o API usage at 100 queries/day.',
+            a: 'Idle with models warm in VRAM: ~50–80W (desktop GPU), ~15–25W (Mac Mini M5 Pro). Active processing: ~150–300W (desktop GPU), ~30–60W (Mac Mini M5 Pro). Monthly cost at $0.15/kWh: approximately $5–15 (Mac Mini) or $15–35 (desktop). This is less than running a cloud API at comparable query volumes — a Mac Mini running the full stack 24/7 costs less in electricity per month than two days of GPT-5.5 API usage at 100 queries/day.',
           },
         ],
       },

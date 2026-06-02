@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Ollama, GPT4All, Jan, llama.cpp tested on 8 GB RAM + integrated graphics. Tokens/sec, memory pressure, exact settings for no-GPU local AI. May 2026.',
     twitterDescription:
       '4 local AI apps that run on 8 GB RAM laptops with no GPU. Tokens/sec ranges, exact settings, real verdicts. May 2026.',
-    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 2.5 1.5B'],
+    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 3 1.5B'],
     current_hardware_mentioned: [
       'Intel UHD 620',
       'Intel Iris Xe',
@@ -372,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Does adding RAM help more than upgrading the CPU?',
-            a: 'On 8 GB systems, going to 16 GB is the single biggest practical upgrade because it unlocks 7B–8B models like Mistral 7B Q4 and Llama 3.1 8B Q4. CPU upgrades give 20–50% more tokens/sec; the RAM upgrade gives 2–4× quality (jumping from 1B–4B to 7B–8B). If you can do only one, add RAM.',
+            a: 'On 8 GB systems, going to 16 GB is the single biggest practical upgrade because it unlocks 7B–8B models like Mistral Small Q4 and Llama 3.3 8B Q4. CPU upgrades give 20–50% more tokens/sec; the RAM upgrade gives 2–4× quality (jumping from 1B–4B to 7B–8B). If you can do only one, add RAM.',
           },
           {
             q: 'Can I run local AI on a Chromebook?',

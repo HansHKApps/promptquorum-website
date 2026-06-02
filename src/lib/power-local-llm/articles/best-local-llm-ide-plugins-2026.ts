@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Continue — Best Overall (Free, Open-Source)',
-            content: 'Continue is the leading open-source AI coding assistant for local LLMs. It connects to Ollama, LM Studio, llama.cpp, and any OpenAI-compatible API. Features: inline chat (Cmd+L), autocomplete (Tab), model context protocol (MCP) tools, codebase indexing, and custom slash commands. VS Code extension has 2M+ installs. JetBrains plugin works in IntelliJ, PyCharm, GoLand, WebStorm, and Rider. Best local models: Qwen2.5-Coder 14B (coding), Llama 3.1 8B (chat). Setup: install extension, set provider to Ollama, choose model — done in 2 minutes.',
+            content: 'Continue is the leading open-source AI coding assistant for local LLMs. It connects to Ollama, LM Studio, llama.cpp, and any OpenAI-compatible API. Features: inline chat (Cmd+L), autocomplete (Tab), model context protocol (MCP) tools, codebase indexing, and custom slash commands. VS Code extension has 2M+ installs. JetBrains plugin works in IntelliJ, PyCharm, GoLand, WebStorm, and Rider. Best local models: Qwen2.5-Coder 14B (coding), Llama 3.3 8B (chat). Setup: install extension, set provider to Ollama, choose model — done in 2 minutes.',
             affiliateLinks: [
               { label: 'Continue on VS Code Marketplace (free)', url: 'https://continue.dev' },
             ],
@@ -85,7 +85,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Cursor — Best Commercial Option with Local Model Support',
-            content: 'Cursor is a VS Code fork with AI features built in. As of 2026, Cursor supports local models via Ollama and LM Studio in its "Custom API" setting. However, Cursor\'s most powerful features (Agent mode with web search, full codebase awareness) require cloud models (Claude, GPT-4o). The local model integration is functional for chat and simple completions but falls behind Continue and Cline for privacy-focused workflows. Price: $20/month for Pro (includes cloud credits). Local model use: free tier.',
+            content: 'Cursor is a VS Code fork with AI features built in. As of 2026, Cursor supports local models via Ollama and LM Studio in its "Custom API" setting. However, Cursor\'s most powerful features (Agent mode with web search, full codebase awareness) require cloud models (Claude, GPT-5.5). The local model integration is functional for chat and simple completions but falls behind Continue and Cline for privacy-focused workflows. Price: $20/month for Pro (includes cloud credits). Local model use: free tier.',
             affiliateLinks: [
               { label: 'Cursor Pro subscription', url: 'https://cursor.com' },
             ],
@@ -110,7 +110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tableData: {
           headers: ['Plugin', 'Best Coding Model (Local)', 'Best Chat Model (Local)', 'Min VRAM'],
           rows: [
-            ['Continue', 'Qwen2.5-Coder 14B Q8', 'Llama 3.1 8B Q4', '16 GB'],
+            ['Continue', 'Qwen2.5-Coder 14B Q8', 'Llama 3.3 8B Q4', '16 GB'],
             ['Cline', 'Qwen2.5-Coder 32B Q4', 'Qwen2.5 32B Q4', '24 GB'],
             ['Tabby', 'StarCoder2-7B (built-in)', 'N/A (code only)', '8 GB'],
             ['Aider', 'Qwen2.5-Coder 14B (editor)', 'Qwen2.5-Coder 32B (architect)', '16–24 GB'],

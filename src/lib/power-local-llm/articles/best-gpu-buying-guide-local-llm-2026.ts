@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 4 Scout',
       'Qwen3 8B',
-      'Mistral 7B',
+      'Mistral Small',
       'DeepSeek-R1 7B',
       'Llama 3.3 70B',
     ],
@@ -257,7 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The budget tier runs every 7B model and most 13B models — and for most first-time local-LLM users, that is all the capability they need.** The RTX 3060 12 GB is the recommended pick; the RX 6700 XT is the cheaper alternative if you accept AMD setup friction. The used market matters most in this tier — new prices have risen sharply with the 2026 surge.',
         items: [
-          '**RTX 3060 12 GB ($150-250 used, $350-680 new):** 12 GB VRAM, 170 W, 15-20 tok/s on 7B models at Q4. Runs Mistral 7B, Qwen3 8B, DeepSeek-R1 7B, and most 13B models. The 12 GB variant is the one to buy — avoid the 6 GB variant, which is limited to 3B models. Buy used — new stock is discontinued and inflated.',
+          '**RTX 3060 12 GB ($150-250 used, $350-680 new):** 12 GB VRAM, 170 W, 15-20 tok/s on 7B models at Q4. Runs Mistral Small, Qwen3 8B, DeepSeek-R1 7B, and most 13B models. The 12 GB variant is the one to buy — avoid the 6 GB variant, which is limited to 3B models. Buy used — new stock is discontinued and inflated.',
           '**RX 6700 XT ($130-200 used, discontinued new):** 12 GB VRAM, 230 W, 10-14 tok/s on 7B models. The cheapest way into local LLMs, but slower than the RTX 3060 and dependent on AMD ROCm, which adds setup time.',
           '**Why buy this tier:** lowest cost of entry, low power draw on the RTX 3060, and enough VRAM for the 7B-13B models that cover general chat, coding assistance, and summarization.',
           '**Why skip this tier:** if you already know you want 14B or larger models, the budget tier will frustrate you within weeks — start at the mid tier instead.',

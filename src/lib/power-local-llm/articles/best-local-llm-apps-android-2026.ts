@@ -278,7 +278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'MLC Chat\'s model library is curated and compiled. If you need a model not in the official library (e.g., a fine-tuned Mistral 7B or a domain-specific model), MLC Chat cannot help — use PocketPal AI or Maid for arbitrary GGUF support. MLC Chat is a speed tool, not a flexibility tool.',
+            text: 'MLC Chat\'s model library is curated and compiled. If you need a model not in the official library (e.g., a fine-tuned Mistral Small or a domain-specific model), MLC Chat cannot help — use PocketPal AI or Maid for arbitrary GGUF support. MLC Chat is a speed tool, not a flexibility tool.',
           },
         ],
       },

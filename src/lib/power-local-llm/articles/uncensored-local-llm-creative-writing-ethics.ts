@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: 'The slide deck below covers: what "uncensored" fine-tuning actually means (RLHF removal vs. zero constraints); a 5-model comparison table (Hermes 3 Llama 3.3 to Dolphin 3.0 Mistral 7B with VRAM, refusal rate, instruction quality); appropriate vs. inappropriate use cases; Ollama setup commands; ethical responsibilities that remain regardless of local setup; and 5 common mistakes. Download the PDF as an uncensored local LLM creative writing reference card.',
+    gammaDescription: 'The slide deck below covers: what "uncensored" fine-tuning actually means (RLHF removal vs. zero constraints); a 5-model comparison table (Hermes 3 Llama 3.3 to Dolphin 3.0 Mistral Small with VRAM, refusal rate, instruction quality); appropriate vs. inappropriate use cases; Ollama setup commands; ethical responsibilities that remain regardless of local setup; and 5 common mistakes. Download the PDF as an uncensored local LLM creative writing reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**What is removed:** refusal behaviours for specific content categories (explicit sexual content, graphic violence, dark psychological content).',
           '**What is retained:** instruction following, character consistency, prompt structure adherence, language quality.',
           '**Degrees of uncensoring:** Hermes 3 is selectively uncensored (mature content yes, but retains some guardrails for extreme content). Dolphin series is more broadly uncensored. Fully abliterated models (Wizard-Uncensored, Erebus) have the most aggressive removal of guardrails — and the weakest instruction following for complex fiction tasks.',
-          '**Base model quality matters:** uncensoring degrades instruction quality if the base model is weak. Hermes 3 on Llama 3.3 70B retains Llama 3.3\'s strong instruction following; Dolphin 3.0 on Mistral 7B is limited by the smaller base.',
+          '**Base model quality matters:** uncensoring degrades instruction quality if the base model is weak. Hermes 3 on Llama 3.3 70B retains Llama 3.3\'s strong instruction following; Dolphin 3.0 on Mistral Small is limited by the smaller base.',
         ],
         snippetBlocks: [
           {
@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Model': 'Hermes 3 Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Selective', 'Instruction Quality': '★★★★★', 'Drift to Extremes': 'Low', 'Best For': 'Default pick for serious fiction — best instruction following + uncensored capability' },
           { 'Model': 'Dolphin 3.0 Mistral 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Refusal Rate': 'Broad', 'Instruction Quality': '★★★★☆', 'Drift to Extremes': 'Low-Moderate', 'Best For': '16–24 GB systems; mature content across a wider range' },
-          { 'Model': 'Dolphin 3.0 Mistral 7B', 'Base': 'Mistral 7B', 'VRAM (Q4)': '~8 GB', 'Refusal Rate': 'Broad', 'Instruction Quality': '★★★☆☆', 'Drift to Extremes': 'Moderate', 'Best For': 'Low-VRAM systems; short-form drafts, prompt testing' },
+          { 'Model': 'Dolphin 3.0 Mistral Small', 'Base': 'Mistral Small', 'VRAM (Q4)': '~8 GB', 'Refusal Rate': 'Broad', 'Instruction Quality': '★★★☆☆', 'Drift to Extremes': 'Moderate', 'Best For': 'Low-VRAM systems; short-form drafts, prompt testing' },
           { 'Model': 'Hermes 3 Llama 3.2 8B', 'Base': 'Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', 'Refusal Rate': 'Selective', 'Instruction Quality': '★★★☆☆', 'Drift to Extremes': 'Low', 'Best For': 'Resource-constrained; dialogue and shorter scenes' },
           { 'Model': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Limited', 'Instruction Quality': '★★★★★', 'Drift to Extremes': 'None', 'Best For': 'Dark themes, moral complexity, violence — without needing explicit sexual content' },
         ],

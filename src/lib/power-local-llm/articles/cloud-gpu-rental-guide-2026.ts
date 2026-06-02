@@ -28,10 +28,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RunPod vs Lambda Labs vs Vast.ai for cloud GPU AI inference — three providers, one rule: pick by reliability need first, then price. May 2026 rates.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
-      'Llama 3.1 70B',
-      'Mistral 7B',
-      'Qwen 2.5 32B',
+      'Llama 3.3 8B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
       'DeepSeek-R1 70B',
     ],
     current_hardware_mentioned: [

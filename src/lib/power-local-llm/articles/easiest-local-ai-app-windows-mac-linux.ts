@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Qwen3 8B',
       'Phi-4 Mini',
-      'Mistral 7B',
+      'Mistral Small',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -238,12 +238,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'No GPU needed for the small models (Phi-4 Mini, Llama 3.2 3B). These run on CPU inference and produce a response at typing speed on any modern laptop. If you have an NVIDIA GPU with 8 GB+ VRAM, LM Studio will automatically use it and run larger models (Mistral 7B, Qwen3 8B) much faster. If you have an Apple Silicon Mac, the unified memory architecture means you can run models up to the size of your RAM.',
+            text: 'No GPU needed for the small models (Phi-4 Mini, Llama 3.2 3B). These run on CPU inference and produce a response at typing speed on any modern laptop. If you have an NVIDIA GPU with 8 GB+ VRAM, LM Studio will automatically use it and run larger models (Mistral Small, Qwen3 8B) much faster. If you have an Apple Silicon Mac, the unified memory architecture means you can run models up to the size of your RAM.',
           },
         ],
         items: [
           '**Apple Silicon (M1–M5):** best consumer hardware for local LLMs. Unified memory means the GPU and CPU share RAM — an M3 MacBook Air with 8 GB runs Phi-4 Mini at 20+ tokens/sec; an M5 Max with 64 GB runs Llama 3.3 70B.',
-          '**NVIDIA GPU (Windows/Linux):** CUDA acceleration in LM Studio and Jan dramatically speeds up generation. RTX 3060 12 GB runs Mistral 7B and Qwen3 8B in real time. RTX 4090 24 GB runs 30B models.',
+          '**NVIDIA GPU (Windows/Linux):** CUDA acceleration in LM Studio and Jan dramatically speeds up generation. RTX 3060 12 GB runs Mistral Small and Qwen3 8B in real time. RTX 4090 24 GB runs 30B models.',
           '**AMD GPU (Windows/Linux):** ROCm support in LM Studio and Jan is improving but less mature than CUDA. If you have an AMD GPU, check the LM Studio release notes for your specific card before relying on GPU acceleration.',
           '**CPU-only Intel/AMD:** works for 3B–7B models at 5–15 tokens/sec — usable but slow. The experience is better for tasks where you send a prompt and go do something else (summarisation, email drafting) than for real-time conversational use.',
           '**RAM and VRAM:** the model must fit in RAM (or VRAM) entirely. A 4B model needs ~3 GB; an 8B model needs ~5 GB; a 14B model needs ~9 GB; a 70B model needs ~42 GB. If the model is too large, LM Studio will warn you before downloading.',
@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Common Mistakes',
         items: [
           '**Downloading a model too large for your RAM.** Check available RAM before downloading. A 70B model on a 16 GB machine will disk-swap and produce output at 1 token per 10 seconds.',
-          '**Expecting cloud AI quality from a 3B model.** Small local models (3B–7B) are less capable than GPT-4o or Claude. They are better than nothing and useful for many tasks, but they make more mistakes, lose context faster, and produce less nuanced output.',
+          '**Expecting cloud AI quality from a 3B model.** Small local models (3B–7B) are less capable than GPT-5.5 or Claude. They are better than nothing and useful for many tasks, but they make more mistakes, lose context faster, and produce less nuanced output.',
           '**Not using the Q4_K_M quantisation.** LM Studio defaults to Q4_K_M for most models, which is the right choice. Q8 takes twice the RAM for modest quality gain; Q2 takes less RAM but degrades output quality noticeably. Stick with Q4_K_M unless you have a specific reason to deviate.',
           '**Closing the chat between sessions and losing history.** In LM Studio and Jan, each chat session stores its history unless you delete it. Save or pin important conversations; do not assume the history persists if you reinstall or clear the app.',
           '**Not running the Local Server for integrations.** If you later want to use your local model with Obsidian, VS Code, or any other tool, click the Local Server tab in LM Studio and press Start. Other tools connect to `http://localhost:1234` using the OpenAI-compatible API.',

@@ -278,7 +278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What is the difference between local AI and ChatGPT for a non-technical user?',
-            a: 'Three differences: (1) local AI runs on your laptop and does not send your prompts to a server, (2) local AI works offline after the first model download, (3) local AI is free forever — no subscription, no token bill. The trade-off is speed and quality: a 3B–8B local model is meaningfully less capable than GPT-4o-class cloud models. For everyday writing, summarising, brainstorming, and Q&A, the gap is small. For long, complex reasoning, the gap is larger.',
+            a: 'Three differences: (1) local AI runs on your laptop and does not send your prompts to a server, (2) local AI works offline after the first model download, (3) local AI is free forever — no subscription, no token bill. The trade-off is speed and quality: a 3B–8B local model is meaningfully less capable than GPT-5.5-class cloud models. For everyday writing, summarising, brainstorming, and Q&A, the gap is small. For long, complex reasoning, the gap is larger.',
           },
           {
             q: 'Do these apps cost money long-term?',

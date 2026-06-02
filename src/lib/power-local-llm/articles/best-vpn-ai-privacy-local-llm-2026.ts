@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen2.5 7B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'WireGuard VPN protocol',

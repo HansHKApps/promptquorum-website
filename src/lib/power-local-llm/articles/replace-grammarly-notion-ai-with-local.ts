@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 14B',
       'Phi-4 Mini',
       'Llama 3.3 70B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'Apple M3 MacBook Air 8 GB',
@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Task', 'Best Model', 'Alternative (lower VRAM)', 'Why'],
         rows: [
           { 'Task': 'Grammar correction', 'Best Model': 'Qwen3 14B', 'Alternative (lower VRAM)': 'Phi-4 Mini', 'Why': 'Accurate, minimal unnecessary changes, correct punctuation' },
-          { 'Task': 'Style rewrite', 'Best Model': 'Qwen3 14B or Llama 3.3 70B', 'Alternative (lower VRAM)': 'Mistral 7B', 'Why': 'Natural prose output; avoids AI-register drift' },
+          { 'Task': 'Style rewrite', 'Best Model': 'Qwen3 14B or Llama 3.3 70B', 'Alternative (lower VRAM)': 'Mistral Small', 'Why': 'Natural prose output; avoids AI-register drift' },
           { 'Task': 'Tone adjustment', 'Best Model': 'Llama 3.3 70B', 'Alternative (lower VRAM)': 'Qwen3 14B', 'Why': 'Best at maintaining factual content while changing register' },
           { 'Task': 'Document drafting (Notion AI replacement)', 'Best Model': 'Qwen3 14B', 'Alternative (lower VRAM)': 'Phi-4 Mini', 'Why': 'Good structure generation, follows document-format instructions' },
           { 'Task': 'Note summarisation / Q&A', 'Best Model': 'Qwen3 14B', 'Alternative (lower VRAM)': 'Phi-4 Mini', 'Why': 'Adequate for summarisation at any model size above 3B' },

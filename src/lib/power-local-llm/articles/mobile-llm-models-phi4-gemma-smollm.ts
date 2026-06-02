@@ -386,7 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Downloading multiple quantisation variants of the same model.** Pick Q4_K_M and stop. Five GB of redundant Q5/Q6 variants on a 256 GB phone is wasted space, and the quality differences are not perceptible in everyday chat.',
           '**Using SmolLM 2 1.7B for multi-step reasoning.** It is the fastest model but not the smartest. For chain-of-thought tasks (math, planning, complex reasoning), use Phi-4 Mini even if the slower tokens/sec feels frustrating. Speed without quality is just a faster wrong answer.',
           '**Asking Phi-4 Mini for non-English output without a multilingual prompt prefix.** Phi-4 Mini handles common European languages adequately but produces uneven output in CJK or Arabic. For multilingual use, install Qwen 2.5 1.5B alongside Phi-4 Mini and switch per language.',
-          '**Expecting cloud-AI quality from any of these models.** All six are 1B–4B, which means roughly 60–80% of the capability of GPT-4o on chat tasks and far less on complex reasoning. Use them for what they are good at (private chat, summarisation, drafting, translation) and use cloud or remote-connect for what requires a 70B+ model.',
+          '**Expecting cloud-AI quality from any of these models.** All six are 1B–4B, which means roughly 60–80% of the capability of GPT-5.5 on chat tasks and far less on complex reasoning. Use them for what they are good at (private chat, summarisation, drafting, translation) and use cloud or remote-connect for what requires a 70B+ model.',
           '**Confusing Phi-4 Mini (3.8B) with the older Phi-3 Mini (3.8B).** They share a parameter count but Phi-4 Mini\'s training data and chat template are different. Always confirm the model identifier in the GGUF filename — `phi-4-mini-instruct` not `phi-3-mini-4k-instruct`.',
         ],
       },
@@ -412,7 +412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Does Phi-4 Mini really beat 7B models on phone?',
-            a: 'It beats older 7B models (Llama 2 7B, Mistral 7B v0.1) on standard benchmarks like MMLU and reasoning tasks despite being half the size. It does NOT beat current 7B models (Llama 3.1 7B, Mistral 7B v0.3) on raw capability — those still lead on broad knowledge and complex reasoning. The reason Phi-4 Mini punches above its weight is Microsoft\'s training-data mix (heavy on synthetic reasoning chains and high-quality text). On phone, 7B models are usually too slow to be practical anyway, so Phi-4 Mini wins by default.',
+            a: 'It beats older 7B models (Llama 3.3 7B, Mistral Small v0.1) on standard benchmarks like MMLU and reasoning tasks despite being half the size. It does NOT beat current 7B models (Llama 3.3 7B, Mistral Small v0.3) on raw capability — those still lead on broad knowledge and complex reasoning. The reason Phi-4 Mini punches above its weight is Microsoft\'s training-data mix (heavy on synthetic reasoning chains and high-quality text). On phone, 7B models are usually too slow to be practical anyway, so Phi-4 Mini wins by default.',
           },
           {
             q: 'Can SmolLM 2 run on a 4-year-old phone?',

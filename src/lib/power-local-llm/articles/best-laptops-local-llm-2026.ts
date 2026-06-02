@@ -29,10 +29,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.2 3B',
-      'Mistral 7B v0.3',
+      'Mistral Small v0.3',
       'Qwen2.5 7B',
-      'Llama 3.1 8B',
-      'Llama 3.1 13B',
+      'Llama 3.3 8B',
+      'Llama 3.3 13B',
     ],
     current_hardware_mentioned: [
       'Apple MacBook Pro (Apple Silicon)',

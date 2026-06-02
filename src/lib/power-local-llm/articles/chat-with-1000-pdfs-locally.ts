@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Scaling local RAG to 1,000-10,000+ PDFs. Architecture decision tree, measured benchmarks, storage and latency at 100/1k/10k docs across AnythingLLM, LlamaIndex, ChromaDB, Qdrant. May 2026.',
     twitterDescription:
       'When toy RAG breaks: scaling personal document chat to 1,000-10,000 PDFs locally. Architecture decision tree + measured benchmarks across four open-source stacks. May 2026.',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 2.5 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       'Power users, researchers, lawyers, and developers with personal document corpora of 1,000-10,000+ files who hit the scaling cliff where default RAG settings stop working.',
@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The lowest-friction option that still handles a 1,000-document personal corpus when tuned correctly.** AnythingLLM Desktop ships LanceDB embedded, parses PDF/DOCX/MD natively, and talks to Ollama as its LLM provider. Default settings break around 500 documents; the tuning below pushes it to 2,000-3,000.',
         items: [
-          '**LLM:** Llama 3.3 8B Q4_K_M via Ollama (5 GB RAM during inference). On 24 GB+ systems, Qwen 2.5 14B Q4 noticeably improves synthesis.',
+          '**LLM:** Llama 3.3 8B Q4_K_M via Ollama (5 GB RAM during inference). On 24 GB+ systems, Qwen 3 14B Q4 noticeably improves synthesis.',
           '**Embedder:** switch from the AnythingLLM Native default to nomic-embed-text-v1.5 via Ollama. The default embedder is the single biggest reason "AnythingLLM does not scale" reports exist.',
           '**Chunking:** 1,000 tokens with 200-token overlap, set per workspace under Vector Database settings. The default 512/0 is wrong for any corpus larger than a few dozen documents.',
           '**Top-K:** raise from default 4 to 6-8. At 1,000 documents the truly best chunk often sits at rank 5-7, and the LLM can ignore weak chunks better than it can invent missing ones.',

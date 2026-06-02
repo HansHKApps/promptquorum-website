@@ -29,11 +29,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac Mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio for local AI — three Macs, one decision rule: buy for unified memory, then bandwidth. May 2026 prices.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
-      'Llama 3.1 34B',
-      'Llama 3.1 70B',
-      'Mistral 7B',
-      'Qwen 2.5 32B',
+      'Llama 3.3 8B',
+      'Llama 3.3 34B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M5 Pro',
@@ -271,7 +271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The MacBook Pro 16" M5 Max is the only shipping Mac that runs 70B models, and it does so in a portable form factor.** It is the pick for buyers who need 70B-class models and want to carry the machine. The trade-off is a 10-15% thermal throttle under sustained inference and a higher price than a desktop with the same chip.',
         items: [
-          '**MacBook Pro 16" M5 Max 64 GB (~$3,499):** 32-core GPU, 460 GB/s bandwidth. Runs 8B models at roughly 100-110 tok/s and Llama 3.1 70B Q4 at 7-11 tok/s. The portable entry point to 70B local AI.',
+          '**MacBook Pro 16" M5 Max 64 GB (~$3,499):** 32-core GPU, 460 GB/s bandwidth. Runs 8B models at roughly 100-110 tok/s and Llama 3.3 70B Q4 at 7-11 tok/s. The portable entry point to 70B local AI.',
           '**MacBook Pro 16" M5 Max 128 GB (~$4,499):** 40-core GPU, 614 GB/s bandwidth. Runs 70B at Q5 (higher quality) and supports running two models at once — for example a 70B model plus a 13B model.',
           '**Why buy this Mac:** you need 70B models and portability, you want a single machine for creative work and AI, or you present and travel and cannot leave a desktop behind.',
           '**Why skip this Mac:** if the machine never leaves a desk, a Mac Studio with the same memory costs less and runs cooler; if 34B models are enough, the Mac Mini M5 Pro saves over $2,000.',
@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can a Mac run 70B models?',
-            a: 'Yes. A MacBook Pro 16" M5 Max with 64 GB runs Llama 3.1 70B Q4 at 7-11 tokens per second, and the 128 GB version runs 70B at Q5 at 8-12 tokens per second. A 128 GB Mac Studio also runs 70B comfortably. The Mac Mini M5 Pro cannot — 64 GB is too tight for 70B once macOS overhead is counted.',
+            a: 'Yes. A MacBook Pro 16" M5 Max with 64 GB runs Llama 3.3 70B Q4 at 7-11 tokens per second, and the 128 GB version runs 70B at Q5 at 8-12 tokens per second. A 128 GB Mac Studio also runs 70B comfortably. The Mac Mini M5 Pro cannot — 64 GB is too tight for 70B once macOS overhead is counted.',
           },
           {
             q: 'Is a Mac faster than an NVIDIA GPU for local LLMs?',

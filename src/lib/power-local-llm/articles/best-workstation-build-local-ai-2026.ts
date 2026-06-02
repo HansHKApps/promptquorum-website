@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tier1: {
         title: 'Tier 1: $1200 Budget AI Workstation',
-        content: 'The $1200 budget build uses a used RTX 3090 (24 GB VRAM) as the core. It runs Llama 3.1 8B Q8 at 45–60 tok/s, Qwen2.5 14B Q8 at 20–28 tok/s, and Qwen2.5 32B Q4 at 12–18 tok/s entirely on GPU. The RTX 3090 draws 350 W — pair with a quality 850 W PSU.',
+        content: 'The $1200 budget build uses a used RTX 3090 (24 GB VRAM) as the core. It runs Llama 3.3 8B Q8 at 45–60 tok/s, Qwen2.5 14B Q8 at 20–28 tok/s, and Qwen2.5 32B Q4 at 12–18 tok/s entirely on GPU. The RTX 3090 draws 350 W — pair with a quality 850 W PSU.',
         tableData: {
           headers: ['Component', 'Model', 'Price (May 2026)'],
           rows: [
@@ -146,11 +146,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tableData: {
           headers: ['Model + Quant', 'Budget ($1200)', 'Recommended ($2500)', 'Professional ($5000)'],
           rows: [
-            ['Llama 3.1 8B Q4', '55–70 tok/s', '105–125 tok/s', '120–140 tok/s'],
+            ['Llama 3.3 8B Q4', '55–70 tok/s', '105–125 tok/s', '120–140 tok/s'],
             ['Qwen2.5 14B Q8', '20–28 tok/s', '48–60 tok/s', '55–70 tok/s'],
             ['Qwen2.5 32B Q4', '12–18 tok/s', '28–38 tok/s', '40–55 tok/s'],
-            ['Llama 3.1 70B Q4', '5–8 tok/s (CPU)', '10–15 tok/s (CPU)', '25–40 tok/s (GPU)'],
-            ['Mixtral 8x7B Q4', '15–22 tok/s', '32–45 tok/s', '45–60 tok/s'],
+            ['Llama 3.3 70B Q4', '5–8 tok/s (CPU)', '10–15 tok/s (CPU)', '25–40 tok/s (GPU)'],
+            ['Mixtral 8x22B Q4', '15–22 tok/s', '32–45 tok/s', '45–60 tok/s'],
           ],
         },
       },
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Why not an RTX 4090 over dual RTX 3090 for the professional build?',
-            a: 'VRAM is the deciding factor. Two RTX 3090s at 24 GB each = 48 GB total, enough for Llama 3.1 70B Q4 (~40 GB). A single RTX 4090 has only 24 GB — 70B Q4 does not fit without CPU offloading. For 70B inference at GPU speed, dual 3090s win on VRAM/dollar. For 30B and below, the RTX 4090 is faster per dollar.',
+            a: 'VRAM is the deciding factor. Two RTX 3090s at 24 GB each = 48 GB total, enough for Llama 3.3 70B Q4 (~40 GB). A single RTX 4090 has only 24 GB — 70B Q4 does not fit without CPU offloading. For 70B inference at GPU speed, dual 3090s win on VRAM/dollar. For 30B and below, the RTX 4090 is faster per dollar.',
           },
           {
             q: 'Can I start with the budget build and upgrade to the recommended tier?',
@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Why not an RTX 4090 over dual RTX 3090 for the professional build?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'VRAM: two RTX 3090s = 48 GB total, which holds Llama 3.1 70B Q4 (~40 GB). A single RTX 4090 has only 24 GB — 70B does not fit without CPU offloading. Dual 3090s win for 70B at GPU speed.',
+            text: 'VRAM: two RTX 3090s = 48 GB total, which holds Llama 3.3 70B Q4 (~40 GB). A single RTX 4090 has only 24 GB — 70B does not fit without CPU offloading. Dual 3090s win for 70B at GPU speed.',
           },
         },
       ],

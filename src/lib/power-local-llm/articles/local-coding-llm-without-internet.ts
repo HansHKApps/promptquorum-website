@@ -282,7 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 7B Q4_K_M (~5 GB) — the lightweight fallback.** Runs on 8 GB unified RAM or 8 GB VRAM. About 80–85% of the 30B\'s quality on everyday work; the gap shows on multi-step refactors and long-context reasoning. The right choice if your laptop has less than 24 GB of memory or if you want the model to coexist with heavy Docker workloads.',
           '**DeepSeek Coder V3 — choose this if you need very long contexts.** DeepSeek\'s V3 supports 128K tokens; useful when you are debugging across many files in one prompt. Larger on disk (~25 GB at Q4_K_M); roughly equivalent to Qwen3-Coder 30B on raw quality.',
           '**Codestral 22B — the speed pick.** Faster autocomplete than Qwen3-Coder 30B; weaker on tool calling and multi-step plans. Good if your offline workflow is autocomplete-dominant and you do not use agent harnesses.',
-          '**Skip:** general-purpose models under 13B without a coding fine-tune (Llama 3.2 7B, Mistral 7B), and any quantization harsher than Q4_K_M. Both fail in obvious ways on real coding work.',
+          '**Skip:** general-purpose models under 13B without a coding fine-tune (Llama 3.2 7B, Mistral Small), and any quantization harsher than Q4_K_M. Both fail in obvious ways on real coding work.',
           '**For the full coding-model comparison** including HumanEval+ scores per language, see [Best Local Coding Models in 2026: Qwen3-Coder vs DeepSeek vs Codestral](/power-local-llm/best-local-coding-models-2026).',
         ],
         image: '/images/local-coding-llm-model-choice-en.svg',

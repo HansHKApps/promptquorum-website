@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Qwen3 1.7B',
       'Gemma 3 4B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'iPad Pro M4 16 GB',
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I use ChatGPT-quality responses on a tablet locally?',
-            a: 'Not quite, but close with the right setup. GPT-4o quality requires a 70B+ model. On a tablet: the iPad Pro M4 (16 GB) cannot run 70B models — only 3B–8B models fit. Via remote connection: if your home machine has a 24 GB GPU (RTX 4090) or 64 GB unified memory (Mac M5 Max), it can run Llama 3.3 70B, and your tablet accesses that quality via Open WebUI in the browser. That is the closest to cloud-AI quality on a tablet.',
+            a: 'Not quite, but close with the right setup. GPT-5.5 quality requires a 70B+ model. On a tablet: the iPad Pro M4 (16 GB) cannot run 70B models — only 3B–8B models fit. Via remote connection: if your home machine has a 24 GB GPU (RTX 4090) or 64 GB unified memory (Mac M5 Max), it can run Llama 3.3 70B, and your tablet accesses that quality via Open WebUI in the browser. That is the closest to cloud-AI quality on a tablet.',
           },
           {
             q: 'How do I keep my home Ollama server running when I close the laptop lid?',

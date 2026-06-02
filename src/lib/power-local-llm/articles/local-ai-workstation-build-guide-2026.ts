@@ -29,10 +29,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Local AI PC build guide: three budget tiers with full parts lists for 7B to 70B models. The 2026 GPU price surge raised every build cost — here are May 2026 totals.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
+      'Llama 3.3 8B',
       'Qwen3 8B',
-      'Mistral 7B',
-      'Llama 3.1 33B',
+      'Mistral Small',
+      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [

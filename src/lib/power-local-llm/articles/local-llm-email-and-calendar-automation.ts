@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 14B',
-      'Mistral 7B',
+      'Mistral Small',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: [

@@ -15,9 +15,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)',
     seoTitle: 'Local Voice Assistant 2026: Whisper + LLM + Piper TTS',
     intro:
-      'A fully offline voice assistant in 2026 combines three components: whisper.cpp for speech-to-text, a local LLM (Llama 3.1 8B, Phi-4, or Mistral 7B via Ollama) for reasoning, and Piper TTS for speech output. The end-to-end latency on a desktop GPU setup is 1–2 seconds, comparable to Alexa or Google Assistant. On a Mac Mini M5, it is under 1.5 seconds. On a Raspberry Pi 5, it is 5–8 seconds — usable for hands-free queries, not conversational. This guide walks through each layer step by step, with hardware tables, code for the Python orchestrator, wake word setup, and latency optimization techniques.',
+      'A fully offline voice assistant in 2026 combines three components: whisper.cpp for speech-to-text, a local LLM (Llama 3.3 8B, Phi-4, or Mistral Small via Ollama) for reasoning, and Piper TTS for speech output. The end-to-end latency on a desktop GPU setup is 1–2 seconds, comparable to Alexa or Google Assistant. On a Mac Mini M5, it is under 1.5 seconds. On a Raspberry Pi 5, it is 5–8 seconds — usable for hands-free queries, not conversational. This guide walks through each layer step by step, with hardware tables, code for the Python orchestrator, wake word setup, and latency optimization techniques.',
     metaDescription:
-      'whisper.cpp for STT, Ollama + Llama 3.1 8B for reasoning, Piper TTS for speech. 1–2 sec GPU latency. Python orchestrator + wake word setup. 2026.',
+      'whisper.cpp for STT, Ollama + Llama 3.3 8B for reasoning, Piper TTS for speech. 1–2 sec GPU latency. Python orchestrator + wake word setup. 2026.',
     twitterDescription:
       'DIY offline voice assistant in 2026: Whisper STT + local LLM + Piper TTS. No cloud, no subscription. Full build guide with hardware specs, Python code, and wake word setup.',
     audience:
@@ -39,10 +39,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'whisper.cpp large-v3',
       'Whisper small',
       'Whisper base',
-      'Llama 3.1 8B',
+      'Llama 3.3 8B',
       'Phi-4',
       'Phi-3 mini 3.8B',
-      'Mistral 7B',
+      'Mistral Small',
       'Piper TTS',
       'Coqui TTS',
     ],
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac Mini M5 (24 GB)',
     ],
     leadAnswerBlock:
-      '**A fully offline voice assistant in 2026 requires three components: whisper.cpp for speech-to-text, a local LLM via Ollama for reasoning, and Piper TTS for speech output.** The three connect via a Python orchestrator that listens for audio, transcribes it, sends the text to the LLM, and converts the response back to speech. On a desktop with an RTX 3060 12 GB GPU, end-to-end latency is 1–2 seconds with Llama 3.1 8B and Whisper small. On a Mac Mini M5 (24 GB), latency is 1–1.5 seconds with the same models running on Apple Silicon. On a Raspberry Pi 5 (8 GB), latency is 5–8 seconds with Phi-3 mini 3.8B — usable for hands-free queries with patience. Add a wake word detector (OpenWakeWord or Porcupine) to make the assistant always-listening without running Whisper continuously.',
+      '**A fully offline voice assistant in 2026 requires three components: whisper.cpp for speech-to-text, a local LLM via Ollama for reasoning, and Piper TTS for speech output.** The three connect via a Python orchestrator that listens for audio, transcribes it, sends the text to the LLM, and converts the response back to speech. On a desktop with an RTX 3060 12 GB GPU, end-to-end latency is 1–2 seconds with Llama 3.3 8B and Whisper small. On a Mac Mini M5 (24 GB), latency is 1–1.5 seconds with the same models running on Apple Silicon. On a Raspberry Pi 5 (8 GB), latency is 5–8 seconds with Phi-3 mini 3.8B — usable for hands-free queries with patience. Add a wake word detector (OpenWakeWord or Porcupine) to make the assistant always-listening without running Whisper continuously.',
     quickAnswerTop: {
       en: {
         question: 'How do you build a fully offline voice assistant in 2026?',
@@ -61,7 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Stack three components: whisper.cpp (speech-to-text), a local LLM via Ollama (reasoning), and Piper TTS (text-to-speech). A Python orchestrator connects the three: microphone audio → Whisper → text → Ollama LLM → response text → Piper → speaker. Add a wake word detector to avoid running Whisper continuously. The full stack requires 8–16 GB RAM minimum (desktop) or 6 GB GPU VRAM. Total hardware cost ranges from ~$100 (Raspberry Pi 5) to ~$600 (Mac Mini M5) to ~$800 (desktop GPU).',
         bullets: [
           'Layer 1 — STT: whisper.cpp (cross-platform, Metal on Mac) or faster-whisper (NVIDIA GPU).',
-          'Layer 2 — LLM: Ollama + Llama 3.1 8B (desktop), Phi-4 (laptop/Pi), or Mistral 7B (GPU).',
+          'Layer 2 — LLM: Ollama + Llama 3.3 8B (desktop), Phi-4 (laptop/Pi), or Mistral Small (GPU).',
           'Layer 3 — TTS: Piper (fastest, CPU, all hardware), Coqui (better quality, needs GPU).',
           'Glue: Python orchestrator — audio capture → STT → LLM → TTS → playback.',
           'Wake word: OpenWakeWord (open-source, MIT) or Porcupine (Picovoice, free tier for personal use).',
@@ -94,9 +94,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**The offline voice assistant stack is: whisper.cpp → Ollama LLM → Piper TTS, orchestrated by a Python script.** All three components are free, open-source, and operate entirely offline once installed.',
-          '**End-to-end latency on a desktop GPU (RTX 3060 12 GB): 1–2 seconds.** This is comparable to Alexa and Google Assistant — the latency threshold for "feels natural" in voice interaction. Use Whisper small and Llama 3.1 8B for this result.',
+          '**End-to-end latency on a desktop GPU (RTX 3060 12 GB): 1–2 seconds.** This is comparable to Alexa and Google Assistant — the latency threshold for "feels natural" in voice interaction. Use Whisper small and Llama 3.3 8B for this result.',
           '**Raspberry Pi 5 (8 GB) is a viable but slow platform.** With Phi-3 mini 3.8B and Whisper base, latency is 5–8 seconds. Usable for hands-free queries where the user accepts a longer pause, not for conversational interaction.',
-          '**Mac Mini M5 (24 GB unified memory) is the sweet spot for quality and silence.** Silent, fanless at idle, and powerful enough to run Llama 3.1 8B at ~50 tokens/sec with Whisper large-v3 at 10× real-time via Metal. Latency of 1–1.5 seconds.',
+          '**Mac Mini M5 (24 GB unified memory) is the sweet spot for quality and silence.** Silent, fanless at idle, and powerful enough to run Llama 3.3 8B at ~50 tokens/sec with Whisper large-v3 at 10× real-time via Metal. Latency of 1–1.5 seconds.',
           '**Add a wake word to avoid running Whisper continuously.** OpenWakeWord (MIT, free, custom wake words) is the best open-source option. Porcupine (Picovoice) has a free tier for personal use with pre-built wake words like "Hey Jarvis".',
           '**Whisper hallucination on silence is the most common pipeline bug.** Whisper will transcribe silence as filler words or quotes from its training data. Set a minimum audio energy threshold before passing audio to Whisper — and configure `--no-speech-threshold 0.6` in whisper.cpp.',
           '**This setup produces zero network traffic during operation.** Verify with Wireshark after assembly. No audio, no transcripts, and no LLM queries leave your machine. EU GDPR compliance is automatic — no data processing agreement needed for internal tools.',
@@ -107,7 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quick Facts',
         items: [
           '**STT layer:** whisper.cpp (best for Apple Silicon and embedded), faster-whisper (best for NVIDIA GPU Python pipelines).',
-          '**LLM layer:** Ollama with Llama 3.1 8B (recommended), Phi-4 (smaller, good quality), or Mistral 7B (comparable quality to Llama 3.1 8B).',
+          '**LLM layer:** Ollama with Llama 3.3 8B (recommended), Phi-4 (smaller, good quality), or Mistral Small (comparable quality to Llama 3.3 8B).',
           '**TTS layer:** Piper (fastest, CPU-only, real-time on Pi), Coqui TTS (better quality, needs GPU).',
           '**Wake word options:** OpenWakeWord (MIT, fully offline), Porcupine (free tier, 1 custom wake word).',
           '**Minimum hardware:** Raspberry Pi 5 with 8 GB RAM (~$100) for 5–8 second latency.',
@@ -145,7 +145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Layer 1 — STT (Speech-to-Text):** whisper.cpp or faster-whisper. Converts microphone audio to text. Runs offline, no network.',
-          '**Layer 2 — LLM (Reasoning):** Ollama serving Llama 3.1 8B, Phi-4, or Mistral 7B. Takes the transcribed text + conversation history + system prompt and generates a response. Runs offline, no network.',
+          '**Layer 2 — LLM (Reasoning):** Ollama serving Llama 3.3 8B, Phi-4, or Mistral Small. Takes the transcribed text + conversation history + system prompt and generates a response. Runs offline, no network.',
           '**Layer 3 — TTS (Text-to-Speech):** Piper or Coqui TTS. Converts the LLM response text to audio and plays it through the speaker. Runs offline, no network.',
           '**Orchestrator:** A Python script that wires the three together: captures audio from microphone → passes to STT → passes transcript to LLM → passes response to TTS → plays audio.',
           '**Optional wake word:** A lightweight always-on detector (OpenWakeWord, Porcupine) that triggers the full pipeline only when the wake phrase is detected. Without this, the orchestrator runs whisper.cpp continuously — consuming more CPU and generating more false positives.',
@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Setup': 'Mini PC (16 GB RAM)',
             'STT Model': 'Whisper small (CPU)',
-            'LLM Model': 'Llama 3.1 8B Q4 (CPU)',
+            'LLM Model': 'Llama 3.3 8B Q4 (CPU)',
             'TTS': 'Piper (CPU)',
             'Total Cost': '~$300',
             'End-to-End Latency': '3–5 sec',
@@ -177,7 +177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Setup': 'Desktop (RTX 3060 12 GB)',
             'STT Model': 'Whisper large-v3 (GPU)',
-            'LLM Model': 'Llama 3.1 8B Q4 (GPU)',
+            'LLM Model': 'Llama 3.3 8B Q4 (GPU)',
             'TTS': 'Piper or Coqui (CPU/GPU)',
             'Total Cost': '~$800',
             'End-to-End Latency': '1–2 sec',
@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Setup': 'Mac Mini M5 (24 GB)',
             'STT Model': 'Whisper large-v3 (Metal)',
-            'LLM Model': 'Llama 3.1 8B (Metal)',
+            'LLM Model': 'Llama 3.3 8B (Metal)',
             'TTS': 'Piper (CPU)',
             'Total Cost': '~$600',
             'End-to-End Latency': '1–1.5 sec',
@@ -390,11 +390,11 @@ if __name__ == "__main__":
           },
           {
             q: 'How many languages does the local voice assistant support?',
-            a: 'Whisper supports 99 languages for speech recognition. Piper supports 20+ language voice packs for TTS. The LLM\'s language support depends on the model — Llama 3.1 8B handles English, French, German, Spanish, Italian, Portuguese, and some Japanese/Chinese. For full multilingual support in less-common languages, choose a model specifically trained for those languages (e.g., Mistral 7B has strong European language support).',
+            a: 'Whisper supports 99 languages for speech recognition. Piper supports 20+ language voice packs for TTS. The LLM\'s language support depends on the model — Llama 3.3 8B handles English, French, German, Spanish, Italian, Portuguese, and some Japanese/Chinese. For full multilingual support in less-common languages, choose a model specifically trained for those languages (e.g., Mistral Small has strong European language support).',
           },
           {
             q: 'What is the minimum hardware to get under 2 seconds latency?',
-            a: 'A Mac Mini M5 (24 GB, ~$600) or a desktop with an NVIDIA RTX 3060 12 GB (~$400 GPU, ~$800 total) both achieve 1–2 second latency. The key requirements are: 8+ GB GPU VRAM for Llama 3.1 8B at Q4, plus Metal or CUDA acceleration for Whisper. A 16 GB RAM CPU-only setup (Mini PC, ~$300) achieves 3–5 seconds — usable but below the "feels natural" threshold.',
+            a: 'A Mac Mini M5 (24 GB, ~$600) or a desktop with an NVIDIA RTX 3060 12 GB (~$400 GPU, ~$800 total) both achieve 1–2 second latency. The key requirements are: 8+ GB GPU VRAM for Llama 3.3 8B at Q4, plus Metal or CUDA acceleration for Whisper. A 16 GB RAM CPU-only setup (Mini PC, ~$300) achieves 3–5 seconds — usable but below the "feels natural" threshold.',
           },
           {
             q: 'Does the Whisper + LLM + Piper pipeline work on Windows?',

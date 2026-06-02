@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           cloudIf: [
             'You need AI features on iOS or Android (not just capture) → neither tool supports plugins on mobile in 2026; consider Obsidian Mobile + LAN Ollama with Tailscale',
             'You need real-time multi-user collaboration on the same vault → both Logseq and Joplin are single-user-by-design; collaborative editing is not in their model',
-            'You need GPT-4o quality on every chat response → cloud equivalents (the local stack is ~70% as capable)',
+            'You need GPT-5.5 quality on every chat response → cloud equivalents (the local stack is ~70% as capable)',
           ],
           quick: [
             'Daily journal + outliner: Logseq + logseq-copilot',
