@@ -682,6 +682,190 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
 
+    pt: {
+      theme: 'Fundamentals',
+      title: 'Respostas de IA mais rápidas: Como fazer prompts para velocidade',
+      intro: 'Prompts lentos de IA têm uma única causa: a ambiguidade força o modelo a adivinhar. Elimine a ambiguidade com cinco decisões de design e você obterá respostas precisas e rápidas na primeira tentativa — em qualquer modelo.',
+      publishDate: '2026-03-22',
+      seoTitle: 'Prompts de IA mais rápidos: Técnicas de velocidade 2026',
+      metaDescription: 'Prompts lentos de IA são ambiguidade que força o modelo a adivinhar. 5 mudanças de design para respostas precisas na primeira tentativa no GPT-5.5 e Claude.',
+      readTime: '8 min de leitura',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Respostas de IA mais rápidas: Como fazer prompts para velocidade',
+        description: 'Prompts lentos de IA têm uma única causa: a ambiguidade. Cinco decisões de design geram respostas precisas e rápidas na primeira tentativa.',
+        datePublished: '2026-03-22',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed?lang=pt',
+        inLanguage: 'pt-BR',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        keywords: ['prompts de IA mais rápidos', 'prompting para velocidade', 'reduzir latência de IA', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini'],
+      },
+      sections: {
+        definition: {
+          title: 'Por que as respostas de IA são lentas ou longas?',
+          content: [
+            '**Respostas lentas ou longas de IA têm uma única causa: a ambiguidade força o modelo a adivinhar.** Quando um prompt não especifica comprimento, formato, escopo ou nível de detalhe, o modelo preenche a lacuna com elaboração — hedging, recapitulação, contexto desnecessário e avisos. Cada frase adicionada é latência adicionada.',
+            'A solução não é escrever mais — é eliminar a ambiguidade com decisões de design explícitas. As cinco mudanças a seguir transformam prompts vagos e lentos em instruções precisas e rápidas que produzem o output correto na primeira tentativa.',
+          ],
+        },
+        tldr: {
+          title: 'Pontos-chave',
+          isTldr: true,
+          items: [
+            'Respostas lentas de IA = ambiguidade → o modelo elabora quando o comprimento não é especificado',
+            'Especifique o formato de output exato (bullets, JSON, uma frase) — isso sozinho reduz os outputs longos pela metade',
+            'Use restrições negativas explícitas: "Sem introdução", "Sem avisos", "Sem repetir a pergunta"',
+            'O one-shot prompting (um exemplo do output esperado) é a mudança de maior impacto para a precisão do formato',
+            'Restrições de comprimento quantitativas ("Exatamente 3 bullets") funcionam melhor do que instruções vagas de comprimento ("Seja breve")',
+            'Modelos menores (GPT-5.5 mini, Claude Haiku 4.5) respondem mais rápido para outputs curtos — nem sempre é necessário o modelo frontier',
+          ],
+        },
+        whySlow: {
+          title: 'Por que prompts vagos produzem outputs lentos',
+          content: [
+            'Modelos de linguagem geram tokens sequencialmente — o comprimento do output determina diretamente a latência. Um output de 500 tokens leva ~5× mais tempo do que um de 100 tokens, com custos que escalam linearmente.',
+            'Quatro comportamentos do modelo que adicionam comprimento desnecessário:',
+          ],
+          items: [
+            '**Recapitulação:** O modelo repete a pergunta ou parafraseia o prompt como abertura',
+            '**Hedging:** O modelo adiciona "Observe que..." ou "Isso pode variar..." sem que seja solicitado',
+            '**Elaboração de fundo:** O modelo explica conceitos que você não pediu',
+            '**Preenchimento de conclusão:** O modelo adiciona um parágrafo de fechamento resumindo o que acabou de dizer',
+          ],
+        },
+        change1: {
+          title: 'Mudança 1: Especifique o formato de output exato',
+          content: [
+            '**Especificar o formato é a única mudança que mais reduz o comprimento do output.** Sem ele, os modelos escolhem sua própria estrutura — que tende a ser mais longa e mais em prosa do que a maioria das tarefas exige.',
+          ],
+          items: [
+            '❌ Sem formato: "Explique o cache de prompts" → output típico: 400–600 palavras em prosa',
+            '✅ Com formato: "Explique o cache de prompts em 3 bullets, cada um com menos de 20 palavras" → output típico: 60–80 palavras',
+          ],
+        },
+        change2: {
+          title: 'Mudança 2: Adicione restrições negativas explícitas',
+          content: [
+            '**Restrições negativas eliminam os comportamentos de preenchimento mais comuns de uma vez.** São mais eficazes do que instruções positivas (dizer ao modelo o que NÃO fazer é mais preciso do que descrever o que deveria fazer em vez disso).',
+          ],
+          items: [
+            '"Não repita a pergunta" — elimina a recapitulação',
+            '"Sem introdução nem conclusão" — elimina os parágrafos de abertura e fechamento',
+            '"Sem avisos nem considerações a menos que sejam críticos" — elimina o hedging reflexivo',
+            '"Sem explicar os conceitos básicos — assumir experiência com X" — elimina a elaboração de antecedentes',
+            '"Apenas resultados — sem processo nem raciocínio" — elimina o show-your-work',
+          ],
+        },
+        change3: {
+          title: 'Mudança 3: Especifique restrições de comprimento quantitativas',
+          content: [
+            '**Restrições numéricas de comprimento funcionam melhor do que descritores de qualidade.** "Seja conciso" é ambíguo — "Em exatamente 2 frases" não é.',
+          ],
+          items: [
+            '❌ Vago: "Seja breve" → O modelo interpreta a brevidade de acordo com seus padrões de treinamento',
+            '✅ Quantitativo: "Em exatamente 2 frases" → O modelo tem um limite rígido e claro',
+            '✅ Quantitativo: "Máx. 50 palavras" → Cria pressão para eliminar o preenchimento',
+            '✅ Quantitativo: "Exatamente 5 pontos com marcadores, cada um com menos de 15 palavras" → Restrição dupla',
+          ],
+        },
+        change4: {
+          title: 'Mudança 4: Um exemplo de output (one-shot prompting)',
+          content: [
+            '**Um exemplo do output alvo é a mudança de maior impacto para a precisão do formato.** Ver o padrão exato que você quer é mais eficaz do que descrevê-lo, especialmente para outputs estruturados.',
+          ],
+          items: [
+            '**Sem exemplo (zero-shot):** "Escreva uma mensagem de erro para entrada inválida" — o modelo escolhe o formato, o comprimento e o tom',
+            '**Com exemplo (one-shot):** "Escreva uma mensagem de erro para entrada inválida. Exemplo: \'Erro: O nome de usuário deve ter 3–20 caracteres. Tente novamente.\'" — o modelo imita exatamente o comprimento, o formato e o tom do exemplo',
+          ],
+        },
+        change5: {
+          title: 'Mudança 5: Atribua um papel específico de domínio',
+          content: [
+            '**Um papel específico de domínio calibra o nível de detalhe padrão para baixo.** Um especialista assume que você conhece o básico — responde diretamente, omite as explicações de fundo e usa o vocabulário do setor sem defini-lo.',
+          ],
+          items: [
+            '❌ Sem papel: "Explique o debounce em JavaScript" → provavelmente incluirá uma introdução sobre o que é debounce',
+            '✅ Com papel: "Você é um desenvolvedor sênior de JavaScript. Explique o debounce em JavaScript" → omitirá as definições básicas, irá direto à implementação',
+          ],
+        },
+        combineAll: {
+          title: 'Combinar as 5 mudanças: O template de speed prompt',
+          content: [
+            'Aqui está o padrão completo de speed prompt com as 5 mudanças aplicadas:',
+            '[Papel] Você é [ESPECIALISTA NO DOMÍNIO].\n[Tarefa] [VERBO DE AÇÃO] [OBJETO ESPECÍFICO].\n[Formato] Formato: [ESTRUTURA EXATA].\n[Comprimento] Comprimento: [RESTRIÇÃO NUMÉRICA].\n[Negativo] Sem: [COMPORTAMENTOS A ELIMINAR].',
+          ],
+        },
+        modelSelection: {
+          title: 'Seleção de modelos para velocidade',
+          content: [
+            '**Modelos menores respondem mais rápido para outputs curtos e bem especificados.** GPT-5.5 mini, Claude Haiku 4.5 e Gemini Flash têm latência de primeiro token ~2–3× mais rápida do que suas contrapartes de tamanho completo para outputs de <200 tokens.',
+          ],
+          items: [
+            '**GPT-5.5 mini:** Melhor para classificação rápida, Q&A curto, extração de dados',
+            '**Claude Haiku 4.5:** Melhor para tarefas de formatação rápida, síntese estruturada breve',
+            '**Gemini Flash:** Melhor para buscas rápidas, respostas de uma frase, síntese breve',
+            '**GPT-5.5 / Claude Opus / Gemini Pro:** Reservar para raciocínio de múltiplos passos, outputs longos, código complexo',
+          ],
+        },
+        promptquorum: {
+          title: 'Como o PromptQuorum ajuda você a fazer prompts mais rápido',
+          content: [
+            '**Dispatch multi-modelo:** Em vez de testar seu speed prompt separadamente no GPT-5.5, Claude e Gemini (três copiar e colar), o PromptQuorum envia um prompt para 25+ modelos simultaneamente e exibe todas as respostas em paralelo. Você vê imediatamente qual modelo dá a resposta mais concisa para sua tarefa.',
+            '**Frameworks integrados:** Os 9 frameworks do PromptQuorum (CO-STAR, CRAFT, SPECS, RISEN, TRACE e outros) integram automaticamente papel, tarefa, formato e restrições em uma única interface.',
+            '**Visualização de consenso:** Ao testar velocidade em vários modelos, você precisa comparar não apenas o comprimento, mas também a precisão. A análise Quorum do PromptQuorum avalia qual modelo responde de forma mais direta e precisa.',
+          ],
+        },
+        template: {
+          title: 'Template de speed prompt — Referência rápida',
+          blockquote: 'Você é [PAPEL].\n\n[TAREFA ÚNICA E ESPECÍFICA].\n\nFormato: [FORMATO DE OUTPUT — uma frase, JSON, bullets, tabela, etc.].\n\nComprimento: [RESTRIÇÃO EXPLÍCITA — X palavras, Y bullets, uma frase, etc.].\n\nSem: repetir a pergunta, adicionar introdução/fechamento, incluir avisos a menos que sejam críticos, explicar conceitos básicos.',
+        },
+        templateExample: {
+          title: 'Exemplo (completo)',
+          blockquote: 'Você é um gerente de produto com experiência em métricas B2B SaaS.\n\nResuma os 3 principais fatores de rotatividade de clientes em nosso segmento de assinaturas.\n\nFormato: Bullets, uma linha cada.\n\nComprimento: Máx. 3 bullets.\n\nSem: repetir os dados fornecidos, adicionar introdução, cobrir com "depende".',
+        },
+        faqs: {
+          faqs: [
+            {
+              q: 'Um prompt mais curto sempre gera respostas mais rápidas?',
+              a: 'Não. **A precisão importa mais do que a brevidade.** Um prompt vago de 50 palavras gera respostas mais longas do que um prompt preciso de 100 palavras. Restrições de comprimento sem especificidade são inúteis.',
+            },
+            {
+              q: 'Funciona da mesma forma no GPT-5.5, Claude e Gemini?',
+              a: 'Em sua maioria. Os três respeitam limites de comprimento explícitos e restrições de formato. Claude segue restrições de bullets com mais precisão; GPT-5.5 às vezes adiciona uma frase de resumo mesmo quando se pede "sem conclusão". Teste seu speed prompt nos três para encontrar o melhor ajuste.',
+            },
+            {
+              q: 'E se eu precisar de uma resposta rápida, mas ela também deve ser precisa?',
+              a: 'Combine a precisão com uma instrução de auto-verificação. Exemplo: "Responda em 2 frases. Em seguida, verifique sua resposta quanto a contradições." Isso adiciona uma etapa de verificação sem inflar a resposta principal.',
+            },
+            {
+              q: 'Posso salvar templates de speed prompt para reutilização?',
+              a: 'Sim. O PromptQuorum permite criar, nomear e salvar templates de speed prompt ao lado dos frameworks integrados. Compartilhe templates com sua equipe para eliminar o desenvolvimento repetido de prompts.',
+            },
+            {
+              q: 'A inferência local (Ollama, LM Studio) acelera ainda mais as respostas?',
+              a: 'Sim, mas apenas quando seu prompt está otimizado. Modelos locais são executados em seu hardware — menor latência de rede. Mas se seu prompt gera 500 em vez de 100 tokens, a melhoria de latência não ajuda. Otimize o prompt primeiro; a inferência local amplifica essa vantagem.',
+            },
+          ],
+        },
+        relatedReading: {
+          content: [
+            '[O que é Prompt Engineering?](/pt/prompt-engineering/what-is-prompt-engineering) — a base de todo o design de prompts',
+            '[Os 5 blocos de construção que todo prompt precisa](/pt/prompt-engineering/5-building-blocks-every-prompt-needs) — papel, tarefa, exemplos, restrições, formato',
+            '[Tokens, custos e limites](/pt/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — como o comprimento do output afeta diretamente o custo da API',
+          ],
+        },
+        sources: {
+          content: [
+            '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — mostra como a estrutura nos prompts reduz o overhead de explicação',
+            '[Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — cataloga 58+ técnicas discretas de prompting',
+            '[OpenAI, 2024. "Techniques for Production LLM Applications"](https://platform.openai.com/docs/guides/prompt-engineering) — guia oficial para otimização de prompts para velocidade e confiabilidade',
+          ],
+        },
+      },
+    },
+
     fr: {
       theme: 'Fondamentaux',
       title: 'Des réponses IA plus rapides : Comment concevoir des prompts pour la vitesse',
