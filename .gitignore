@@ -19,3 +19,6 @@ playwright-report/
 
 # Backup files from sed -i.bak operations
 *.bak
+
+# Screenshot / image artifacts dropped in the tree (e.g. Playwright captures)
+*.png

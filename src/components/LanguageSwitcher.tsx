@@ -30,7 +30,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
     { code: 'ja', flag: '🇯🇵' },
     { code: 'zh', flag: '🇨🇳' },
     { code: 'es', flag: '🇪🇸' },
-    { code: 'pt', flag: '🇧🇷', comingSoon: true },
+    { code: 'pt', flag: '🇧🇷' },
     // TODO: RTL styling needed for AR option — August 2026
     { code: 'ar', flag: '🇸🇦', comingSoon: true },
   ]

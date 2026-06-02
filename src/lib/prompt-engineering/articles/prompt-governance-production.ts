@@ -614,6 +614,215 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
 
+  pt: {
+    theme: 'Team Governance',
+    title: 'Governance de prompts em produção: papéis, gates de revisão e regras de implantação',
+    seoTitle: 'Governança de prompts em produção: papéis e revisão',
+    intro: 'A governance de prompts é o sistema de papéis, processos de revisão e regras de implantação que controla quais prompts chegam à produção e como são monitorados. Sem ela, as alterações de prompts não são rastreadas, não são testadas e não podem ser revertidas.',
+    metaDescription: 'Configure a governança de prompts com 3 papéis (Autor, Revisor, Aprovador), 3 gates de revisão, rollback e auditoria. Pronto para NIST AI RMF, LGPD e EU AI Act.',
+    ogDescription: 'Governance de prompts em produção: modelo de 3 papéis, gates de testes automatizados, rollback em menos de 5 minutos e trilha de auditoria completa. Teste em múltiplos modelos com PromptQuorum.',
+    twitterDescription: 'Prompts falham silenciosamente. A governance é o único mecanismo de visibilidade. 3 papéis, 3 gates, rollback em 5 minutos, trilha de auditoria completa.',
+    publishDate: '2026-05-02',
+    readTime: '14 min de leitura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'Prompt Governance',
+    leadAnswerBlock: '**A governance de prompts é o conjunto de papéis, gates de revisão e regras de implantação que controla quais prompts entram em produção.** Sem governance, os prompts são alterados silenciosamente — sem rastro de aprovação, sem caminho de rollback, sem resposta a incidentes quando as saídas se degradam.',
+    quickFacts: [
+      'Modelo de propriedade com 3 papéis: Autor, Revisor, Aprovador',
+      'O rollback leva menos de 5 minutos com controle de versões configurado antecipadamente',
+      'Três gates obrigatórios: testes de regressão automatizados (≥90% de taxa de aprovação), revisão por pares, varredura de segurança',
+      'A trilha de auditoria deve registrar quem, o quê, quando, por quê e os resultados dos gates',
+      'O EU AI Act (em vigor em 2026) e a LGPD/ANPD exigem rastreabilidade para prompts de IA de alto risco',
+      'Stack mínimo viável: Git + Braintrust ou Promptfoo',
+    ],
+    toc: [
+      { label: 'O que é governance de prompts e por que importa', anchor: 'what_is_governance' },
+      { label: 'O modelo de propriedade com 3 papéis', anchor: 'ownership_model' },
+      { label: 'Gates de revisão antes da implantação', anchor: 'review_gates' },
+      { label: 'Como reverter um prompt com falha', anchor: 'rollback' },
+      { label: 'Trilha de auditoria: o que registrar', anchor: 'audit_trail' },
+      { label: 'Ferramentas para governance de prompts', anchor: 'tools' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+      { label: 'Leitura relacionada', anchor: 'related_reading' },
+      { label: 'Fontes', anchor: 'sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/prompt-governance-production?lang=pt',
+      inLanguage: 'pt-BR',
+      headline: 'Governance de prompts em produção: papéis, gates de revisão e regras de implantação',
+      description: 'Configure a governance de prompts com 3 papéis, 3 gates de revisão, procedimentos de rollback e trilhas de auditoria. Conforme com NIST AI RMF, LGPD e EU AI Act.',
+      datePublished: '2026-05-02',
+      keywords: ['governance de prompts', 'gerenciamento de prompts', 'prompts de produção', 'governance de IA', 'implantação de prompts'],
+      mentions: [
+        { '@type': 'Thing', name: 'PromptHub' },
+        { '@type': 'Thing', name: 'Git' },
+        { '@type': 'Thing', name: 'Braintrust' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
+        { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
+        { '@type': 'Thing', name: 'PromptQuorum' },
+      ],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 630 },
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        content: [
+          'A governance de prompts controla quais prompts chegam à produção por meio de 3 papéis (Autor, Revisor, Aprovador), 3 gates de revisão obrigatórios e procedimentos de rollback. Prompts falham silenciosamente — a governance é o único mecanismo de visibilidade. Configure o controle de versões e o rollback antes de precisar deles: com preparação, o rollback leva menos de 5 minutos; sem preparação, pode levar horas.',
+        ],
+      },
+      key_takeaways: {
+        title: 'Pontos-chave',
+        items: [
+          'Governance de prompts = papéis (Autor, Revisor, Aprovador) + gates de revisão (testes automatizados, revisão por pares, varredura de segurança) + procedimento de rollback',
+          'Prompts falham silenciosamente — a governance é o único mecanismo que fornece visibilidade antes e depois da implantação',
+          'Três gates mínimos: testes de regressão automatizados (≥90% de taxa de aprovação), revisão por pares, varredura de segurança',
+          'Configure o rollback antes de precisar: etiquetas de versão, configuração de implantação apontando para etiquetas, acesso de plantão',
+          'A trilha de auditoria deve capturar quem, o quê, quando, por quê e os resultados dos gates — exigido pelo NIST AI RMF e pela LGPD/ANPD para sistemas de alto risco',
+          'Stack mínimo viável: Git + Braintrust ou Promptfoo. Adicione PromptHub ou Vellum conforme o tamanho da equipe e o tráfego crescem',
+        ],
+      },
+      what_is_governance: {
+        title: 'O que é governance de prompts e por que importa',
+        snippets: [
+          { type: 'in-one-sentence', text: 'A governance de prompts é o sistema de papéis, gates de revisão e regras de implantação que controla quais prompts chegam à produção e como são monitorados uma vez em produção.' },
+          { type: 'in-plain-terms', text: 'Sem governance, as alterações de prompts são invisíveis — sem registro de quem mudou o quê, sem forma de reverter quando algo quebra e sem alerta quando a qualidade da saída se degrada silenciosamente.' },
+        ],
+        content: [
+          '**A governance de prompts é o sistema que controla quais prompts chegam à produção, quem pode alterá-los e o que acontece quando falham.** Cobre três áreas: controle de acesso (quem pode criar, revisar e aprovar prompts), processo de implantação (quais testes devem ser aprovados antes de um prompt entrar em produção) e resposta a incidentes (como detectar, diagnosticar e reverter um prompt com falha).',
+          'A governance não é burocracia por si só. Existe porque prompts falham silenciosamente. Quando uma alteração de prompt degrada a qualidade da saída, não há log de erro, não há exceção e não há alerta — as saídas simplesmente pioram. Sem governance, as equipes frequentemente passam dias diagnosticando regressões de qualidade causadas por uma alteração de uma linha no prompt.',
+          'Use governance sempre que prompts afetarem funcionalidades voltadas ao usuário, saídas regulamentadas (jurídico, médico, financeiro) ou fluxos de trabalho automatizados de alto volume. Omita a governance formal para prompts internos de baixo risco e uso único.',
+        ],
+        callouts: [
+          { type: 'warning', label: 'Falhas silenciosas', text: 'Uma alteração de prompt que degrada a qualidade não produz erro, exceção nem alerta. O problema só é descoberto por meio de reclamações de usuários ou monitoramento — ambos depois que o dano já ocorreu.' },
+        ],
+      },
+      ownership_model: {
+        title: 'Quem possui os prompts? O modelo de propriedade com 3 papéis',
+        content: [
+          '**Três papéis cobrem a governance de prompts para a maioria das equipes: Autor, Revisor e Aprovador.** Cada papel tem uma responsabilidade distinta e um ponto de veto distinto.',
+        ],
+        items: [
+          'Autor: escreve o prompt, executa testes de qualidade iniciais, envia para revisão. Responsável pela correção funcional.',
+          'Revisor: verifica qualidade, conformidade e segurança. Para domínios regulamentados (jurídico, médico, financeiro), o revisor deve ter expertise no domínio. Para prompts sensíveis à segurança, a revisão deve incluir uma verificação de red team.',
+          'Aprovador: aprova ou rejeita a implantação em produção. Tem autoridade unilateral para bloquear um lançamento independentemente da aprovação do revisor.',
+        ],
+      },
+      ownership_model_part2: {
+        content: [
+          'Adicione um papel de Proprietário de Prompt para prompts de produção de alto tráfego. O Proprietário do Prompt é responsável pelo desempenho em produção do prompt em todas as versões do modelo — GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro — e é o primeiro contato durante incidentes.',
+          'Evite que a mesma pessoa atue como Autor e Aprovador. Prompts auto-aprovados têm uma taxa de incidentes significativamente mais alta. Se sua equipe é muito pequena para três papéis distintos, exija no mínimo a assinatura de uma segunda pessoa antes que qualquer prompt chegue à produção.',
+        ],
+        callouts: [
+          { type: 'insight', label: 'O modelo de 3 papéis na prática', text: 'A separação Autor-Revisor-Aprovador reflete a revisão de código de software: quem escreve o código não pode aprovar seu próprio pull request. O mesmo princípio se aplica aos prompts.' },
+        ],
+      },
+      review_gates: {
+        title: 'Gates de revisão que todo prompt deve passar antes da implantação',
+        content: [
+          '**Um prompt deve passar por pelo menos três gates antes da produção: testes de qualidade automatizados, revisão por pares e varredura de segurança.** Cada gate tem um resultado binário — passar ou bloquear. Sem exceções.',
+        ],
+        items: [
+          'Gate 1 — Testes automatizados: o prompt deve passar em seu conjunto de testes de regressão (golden set + casos extremos) com uma taxa de aprovação ≥ 90%. Execute com Braintrust ou Promptfoo. As falhas bloqueiam a implantação automaticamente.',
+          'Gate 2 — Revisão por pares: um Revisor assina a qualidade e a conformidade. A lista de verificação cobre: completude da tarefa, conformidade de formato, restrições de segurança e comportamento específico do modelo (teste no GPT-5.5 e Claude 4.6 Sonnet no mínimo).',
+          'Gate 3 — Varredura de segurança: verifique vetores de injection, suscetibilidade a jailbreak e vazamento de dados sensíveis. Para prompts internos sem entrada do usuário, este gate pode ser simplificado para uma revisão de lista de verificação. Para prompts que processam entrada do usuário, execute testes de injection automatizados.',
+        ],
+      },
+      review_gates_part2: {
+        content: [
+          'Para domínios regulamentados, adicione um Gate 4 — Revisão de conformidade. Um especialista de domínio qualificado confirma que a saída do prompt atende aos padrões aplicáveis (LGPD, HIPAA, SOC 2, etc.). Este gate não pode ser automatizado.',
+          'Documente cada resultado de gate no log de alterações do prompt. Se o Gate 2 for bloqueado e depois reenviado, o motivo do bloqueio original e a resolução devem ser registrados. Os auditores procuram essa trilha.',
+        ],
+        callouts: [
+          { type: 'tip', label: 'Automatize o Gate 1', text: 'O Gate 1 (testes automatizados) deve ser executado a cada commit, não apenas antes da implantação. Detectar regressões no momento do commit custa minutos de correção; detectá-las na implantação custa horas.' },
+        ],
+      },
+      rollback: {
+        title: 'Como reverter um prompt com falha em produção',
+        content: [
+          '**Um rollback de prompt deve levar menos de 5 minutos se o controle de versões estiver configurado antecipadamente.** O procedimento de rollback tem quatro etapas: detectar (alerta de monitoramento ou relato do usuário), identificar (qual versão do prompt causou a regressão), reverter (apontar a configuração de implantação para a etiqueta de versão anterior) e confirmar (verificar que a qualidade da saída é restaurada).',
+          'Configure o rollback antes de precisar dele, não durante um incidente. A configuração mínima viável:',
+        ],
+        items: [
+          'Todo prompt implantado tem uma etiqueta de versão: v1.0, v1.1, etc.',
+          'A configuração de implantação referencia a etiqueta, não o arquivo diretamente',
+          'As 3 versões anteriores são retidas e podem ser implantadas sem testes adicionais',
+          'A pessoa de plantão tem acesso de escrita à configuração de implantação sem aprovação gerencial',
+        ],
+      },
+      rollback_part2: {
+        content: [
+          'Após o rollback, trate o incidente como um post-mortem. Documente: o que foi alterado, o que falhou, quanto tempo até a detecção, quanto tempo até a resolução e qual gate deveria ter capturado o problema. Atualize sua lista de verificação de revisão para prevenir recorrências.',
+          'A maioria dos incidentes de prompts é detectada por reclamações de usuários em vez de monitoramento automatizado. Adicione monitoramento de qualidade de saída ao seu stack de produção: o Braintrust suporta avaliação em produção contra saídas golden e alertará quando a qualidade cair abaixo do limiar.',
+        ],
+      },
+      audit_trail: {
+        title: 'Trilha de auditoria: o que registrar e por quê',
+        content: [
+          '**Uma trilha de auditoria para prompts deve capturar: quem alterou o prompt, o que foi alterado, quando, por quê (justificativa da alteração) e quais gates de revisão foram aprovados.** Este é o mínimo exigido pelo NIST AI RMF, pela LGPD/ANPD e pelo EU AI Act para sistemas de IA de alto risco.',
+          'Armazene a trilha de auditoria no mesmo sistema de controle de versões que o prompt. As mensagens de commit do Git funcionam para equipes pequenas. O PromptHub fornece um log de auditoria estruturado com assinaturas de revisores, resultados de testes e timestamps de implantação.',
+          'Use um formato de commit consistente:',
+        ],
+        items: [
+          'Autor: [nome]',
+          'Revisor: [nome] — aprovado/rejeitado',
+          'Alteração: [resumo em uma linha do que foi alterado]',
+          'Motivo: [por que a alteração foi feita]',
+          'Resultados de testes: [taxa de aprovação, número de testes, ferramenta utilizada]',
+          'Versão: [nova etiqueta de versão]',
+        ],
+      },
+      tools: {
+        title: 'Ferramentas para governance de prompts',
+        content: [
+          '**O stack mínimo viável de governance é Git + um test runner.** PromptHub, Braintrust e Vellum adicionam estrutura sobre essa base.',
+        ],
+        items: [
+          'Git: controle de versões para arquivos de prompts. Gratuito. Funciona para qualquer tamanho de equipe. Requer disciplina para ser usado de forma consistente.',
+          'PromptHub: gerenciamento de prompts com histórico de versões, fluxos de trabalho de revisores e rastreamento de implantações. $0–$49/mês conforme o tamanho da equipe.',
+          'Braintrust: plataforma de avaliação com integração CI/CD. Executa testes de qualidade automatizados em cada PR. Melhor para equipes que já executam testes automatizados de prompts.',
+          'Vellum: implantação de prompts em produção com gerenciamento de tráfego, testes A/B e avaliação em produção. Melhor para aplicações de alto tráfego onde lançamentos parciais reduzem o raio de impacto de incidentes.',
+          '[PromptQuorum](/features): testes multi-modelo para confirmar que um prompt funciona no GPT-5.5, Claude 4.6 Sonnet e Gemini 2.5 Pro antes da implantação. Use durante a revisão por pares do Gate 2.',
+        ],
+      },
+      faq: {
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'O que é governance de prompts?', a: 'A governance de prompts é o sistema de papéis, processos de revisão e regras de implantação que controla quais prompts chegam à produção e como são monitorados. Inclui quem pode criar prompts, quem deve aprová-los, quais testes devem ser aprovados antes da implantação e o que acontece quando um prompt falha em produção.' },
+          { q: 'Por que a governance de prompts importa em produção?', a: 'Prompts falham silenciosamente — sem log de erro, sem exceção, sem alerta. A qualidade da saída se degrada sem sinal visível. A governance adiciona visibilidade: cada alteração é rastreada, cada versão é revisável, cada implantação pode ser revertida.' },
+          { q: 'Quais papéis são necessários para governance de prompts?', a: 'Três papéis cobrem a maioria das equipes: Autor (escreve o prompt, executa testes iniciais), Revisor (verifica qualidade e conformidade) e Aprovador (aprova a implantação em produção). Equipes grandes adicionam um papel de Proprietário de Prompt.' },
+          { q: 'Como reverto um prompt defeituoso em produção?', a: 'Armazene cada prompt implantado com uma etiqueta de versão no Git ou PromptHub. Quando uma regressão é detectada, reverta para a versão anterior em sua configuração de implantação e reimplante. Isso leva menos de 5 minutos se o controle de versões estiver configurado antecipadamente.' },
+          { q: 'O NIST AI Risk Management Framework exige governance de prompts?', a: 'O NIST AI RMF (2023) recomenda controles de governance incluindo rastreabilidade, avaliação de riscos antes da implantação e resposta a incidentes. O controle de versões de prompts e os gates de revisão abordam os três.' },
+          { q: 'O EU AI Act e a LGPD exigem governance de prompts?', a: 'O EU AI Act (em vigor em 2026) exige supervisão humana, documentação e rastreabilidade para sistemas de IA de alto risco. A LGPD e a ANPD (Autoridade Nacional de Proteção de Dados) do Brasil também requerem controles de qualidade para sistemas que processam dados pessoais. O controle de versões, os gates de revisão e as trilhas de auditoria satisfazem diretamente o requisito de rastreabilidade.' },
+          { q: 'Em que difere governance de prompts de governance de modelos?', a: 'A governance de modelos cobre a seleção do modelo, o treinamento, os testes de viés e as políticas de implantação. A governance de prompts cobre quais instruções são dadas a um modelo implantado. Ambas são necessárias em ambientes regulamentados; são complementares, mas distintas.' },
+          { q: 'O que uma trilha de auditoria para prompts deve conter?', a: 'Uma trilha de auditoria de prompts deve registrar: o texto do prompt em cada versão, quem o alterou, quando, por quê, quais testes aprovou, quem aprovou a implantação e qualquer incidente atribuído a ela. A trilha deve ser consultável — se um auditor perguntar qual prompt estava em produção em um momento específico, você deve conseguir responder em menos de 5 minutos.' },
+        ],
+      },
+      related_reading: {
+        title: 'Leitura relacionada',
+        items: [
+          { title: 'Fluxo de revisão de prompts para equipes', url: '/pt/prompt-engineering/prompt-review-workflow-for-teams' },
+          { title: 'Controle de versões de prompts', url: '/pt/prompt-engineering/prompt-version-control' },
+          { title: 'Auditoria e testes de regressão de prompts', url: '/pt/prompt-engineering/prompt-audit-and-regression-risk' },
+          { title: 'Ferramentas de segurança de prompts: testes de injection', url: '/pt/prompt-engineering/prompt-security-tools-injection-testing' },
+          { title: 'Templates de documentação de prompts', url: '/pt/prompt-engineering/prompt-documentation-templates' },
+        ],
+      },
+      sources: {
+        title: 'Fontes',
+        items: [
+          { title: 'NIST AI Risk Management Framework (AI RMF 1.0)', url: 'https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf' },
+          { title: 'EU AI Act — Official Text', url: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689' },
+          { title: 'LGPD — Lei Geral de Proteção de Dados (Lei nº 13.709/2018)', url: 'https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm' },
+          { title: 'OWASP LLM Top 10', url: 'https://owasp.org/www-project-top-10-for-large-language-model-applications/' },
+        ],
+      },
+    },
+  },
+
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Gouvernance d\'équipe',
