@@ -38,7 +38,7 @@ export function GuideStarWidget({ signal, recommendations }: Props) {
         setIsOpen(false)
       }
     }
-    document.addEventListener('mousedown', handleClick)
+    document.addEventListener('mousedown', handleClick, { passive: true })
     return () => document.removeEventListener('mousedown', handleClick)
   }, [isOpen])
 

@@ -17,8 +17,6 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 })
 import Script from 'next/script'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 import { Footer } from '@/components/Footer'
@@ -220,11 +218,7 @@ export default async function RootLayout({
           }}
         />
 
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-8DQ4B3DXBS"
-        />
+        {/* GA4 initialization — inline only, keep small. External load moves to body with afterInteractive */}
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
@@ -235,25 +229,13 @@ gtag('consent', 'default', {
   'ad_user_data': 'denied',
   'ad_personalization': 'denied',
   'wait_for_update': 500
-});
-gtag('js', new Date());
-gtag('config', 'G-8DQ4B3DXBS', {
-  'anonymize_ip': true,
-  'allow_ad_personalization_signals': false
 });`,
-          }}
-        />
-
-        {/* Microsoft Clarity — cookieless via consentv2 (GDPR-compliant, runs for all visitors) */}
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="/api/clarity/tag/wtwpeavhum";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wtwpeavhum");window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'denied'});`,
           }}
         />
       </head>
       <body>
         <Providers>
+          <div className="scroll-progress-bar" aria-hidden="true" />
           <HeaderClient />
           <PageTracker />
           <OneSignalInit />
@@ -261,15 +243,24 @@ gtag('config', 'G-8DQ4B3DXBS', {
           <Footer lang={selectedLang as any} />
           <CookieBanner />
           <PushPromptBanner />
+
+          {/* GA4 external loader — deferred to afterInteractive */}
           <Script
-            id="umami-script"
+            id="ga4-loader"
             strategy="afterInteractive"
-            src="/lib/s/script.js"
-            data-website-id="1a0d1160-11ea-4882-a110-90fd9e5ebb75"
-            data-host-url="/lib/s"
+            src="https://www.googletagmanager.com/gtag/js?id=G-8DQ4B3DXBS"
+            onLoad={() => {
+              window.gtag?.('js', new Date())
+              window.gtag?.('config', 'G-8DQ4B3DXBS', {
+                'anonymize_ip': true,
+                'allow_ad_personalization_signals': false
+              })
+            }}
           />
-          <Analytics endpoint="/api/data" scriptSrc="/api/data/script.js" />
-          <SpeedInsights />
+
+          {/* Umami, Microsoft Clarity, and Vercel Analytics/Speed Insights all load inside
+              ConsentedAnalytics — only after the visitor grants Analytics consent.
+              GA4 above uses Google Consent Mode (default denied, upgraded on grant). */}
           <ConsentedAnalytics />
         </Providers>
       </body>

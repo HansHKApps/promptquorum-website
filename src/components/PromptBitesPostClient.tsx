@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LangLinksBar } from '@/components/LangLinksBar'
@@ -186,6 +187,36 @@ function SectionTable({ rows, columns }: { rows: Array<Record<string, string>>; 
   )
 }
 
+function CodeBlock({ code }: { code: string }) {
+  const [expanded, setExpanded] = useState(false)
+  const isLong = code.split('\n').length > 12
+
+  return (
+    <div className="mt-3">
+      <div className="flex items-center justify-end bg-gray-800 rounded-t-lg px-4 py-2 text-xs text-gray-400 font-mono">
+        <CopyButton text={code} />
+      </div>
+      <div className="relative">
+        <pre
+          className={`bg-surface border border-primary/10 rounded-b-lg p-4 text-sm text-text-primary overflow-x-auto ${
+            !expanded && isLong ? 'max-h-48 overflow-y-hidden' : ''
+          }`}
+        >
+          <code>{code}</code>
+        </pre>
+        {isLong && !expanded && (
+          <button
+            onClick={() => setExpanded(true)}
+            className="absolute inset-x-0 bottom-0 flex justify-center items-end pb-2 pt-8 bg-gradient-to-t from-surface to-transparent text-xs text-primary font-medium"
+          >
+            Show more ↓
+          </button>
+        )}
+      </div>
+    </div>
+  )
+}
+
 function BodySection({ section, lang }: { section: LLMSection; lang: Language }) {
   const paragraphs = Array.isArray(section.content)
     ? section.content
@@ -218,16 +249,7 @@ function BodySection({ section, lang }: { section: LLMSection; lang: Language })
           ))}
         </ul>
       )}
-      {section.codeBlock && (
-        <div className="mt-3">
-          <div className="flex items-center justify-end bg-gray-800 rounded-t-lg px-4 py-2 text-xs text-gray-400 font-mono">
-            <CopyButton text={section.codeBlock} />
-          </div>
-          <pre className="bg-surface border border-primary/10 rounded-b-lg p-4 text-sm text-text-primary overflow-x-auto">
-            <code>{section.codeBlock}</code>
-          </pre>
-        </div>
-      )}
+      {section.codeBlock && <CodeBlock code={section.codeBlock} />}
       {section.callouts && section.callouts.length > 0 && section.callouts.map((c, i) => (
         <div
           key={i}

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { AlertCircle, ChevronDown } from 'lucide-react'
 import type { Lang } from '@/hooks/useLang'
 
@@ -210,7 +210,10 @@ export function PromptOptimizerShowcase({ lang = 'en' }: { lang?: Lang }) {
   const [framework, setFramework] = useState('quick-prompt')
   const [prompt, setPrompt] = useState('')
   const [provider, setProvider] = useState('gpt-4')
+  const [optimizationStarted, setOptimizationStarted] = useState(false)
   const t = translations[lang] || translations.en
+
+  useEffect(() => setOptimizationStarted(false), [prompt])
 
   const frameworks = [
     { id: 'quick-prompt', name: t.quickPrompt, description: t.simpleDirect },
@@ -315,7 +318,7 @@ export function PromptOptimizerShowcase({ lang = 'en' }: { lang?: Lang }) {
       {/* Action Buttons */}
       <div className="flex gap-3 mb-6">
         <button
-          onClick={() => prompt && alert('Optimization started...')}
+          onClick={() => prompt && setOptimizationStarted(true)}
           className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           disabled={!prompt.trim()}
         >
@@ -327,6 +330,12 @@ export function PromptOptimizerShowcase({ lang = 'en' }: { lang?: Lang }) {
           {t.compareFrameworks}
         </button>
       </div>
+
+      {optimizationStarted && (
+        <div role="status" className="mt-3 px-4 py-2 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-800">
+          Optimization started...
+        </div>
+      )}
 
       {/* Help Text */}
       <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">

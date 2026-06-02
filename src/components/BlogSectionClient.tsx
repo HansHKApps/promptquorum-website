@@ -19,8 +19,8 @@ const blogPosts = [
   { key: 'whatIsConsensusScoring' as const, href: '/blog/what-is-ai-consensus-scoring' },
 ]
 
-function BlogSectionInner() {
-  const lang = useLang() as Language
+function BlogSectionInner({ initialLang }: { initialLang?: Language }) {
+  const lang = useLang(initialLang) as Language
   const t = translations[lang] || translations.en
 
   return (
@@ -68,6 +68,6 @@ function BlogSectionInner() {
   )
 }
 
-export function BlogSectionClient() {
-  return <BlogSectionInner />
+export function BlogSectionClient({ initialLang }: { initialLang?: Language } = {}) {
+  return <BlogSectionInner initialLang={initialLang} />
 }

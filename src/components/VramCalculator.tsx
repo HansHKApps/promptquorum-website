@@ -328,6 +328,7 @@ export function VramCalculator() {
   const [batchSize, setBatchSize] = useState<string>('1');
   const [useCase, setUseCase] = useState<string>('single');
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
+  const [shareUrl, setShareUrl] = useState<string | null>(null);
 
   // Load from URL params on mount
   useEffect(() => {
@@ -354,10 +355,16 @@ export function VramCalculator() {
   }, []);
 
   useEffect(() => {
+    setShareUrl(
+      `${window.location.origin}${window.location.pathname}${generateShareUrl(modelSize, quantization, contextLength, batchSize)}`
+    );
+  }, [modelSize, quantization, contextLength, batchSize]);
+
+  useEffect(() => {
     const handleClickOutside = () => {
       setActiveTooltip(null);
     };
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('click', handleClickOutside, { passive: true });
     return () => document.removeEventListener('click', handleClickOutside);
   }, []);
 
@@ -620,9 +627,7 @@ export function VramCalculator() {
       <div className="text-xs text-slate-500 pt-4 border-t border-slate-200">
         <p className="font-semibold text-slate-700 mb-2">{t.shareConfig}</p>
         <div className="bg-slate-50 p-3 rounded border border-slate-200 font-mono text-xs break-all">
-          {typeof window !== 'undefined'
-            ? `${window.location.origin}${window.location.pathname}${generateShareUrl(modelSize, quantization, contextLength, batchSize)}`
-            : t.loading}
+          {shareUrl ?? t.loading}
         </div>
       </div>
     </div>

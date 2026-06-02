@@ -121,3 +121,28 @@
     @apply text-xs text-text-secondary/70;
   }
 }
+
+/* CSS scroll progress bar — no JS needed */
+@supports (animation-timeline: scroll()) {
+  .scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgb(124, 58, 237); /* --primary: 265 50% 42% */
+    transform-origin: left;
+    animation: scroll-progress linear;
+    animation-timeline: scroll();
+    z-index: 60;
+  }
+
+  @keyframes scroll-progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+}

@@ -4,7 +4,7 @@ import { Ratelimit } from '@upstash/ratelimit'
 import { redis } from '@/lib/redis'
 import { makeToken } from '@/lib/token'
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
 
 const EMAIL_CONTENT: Record<Lang, {
   subject: string
@@ -25,6 +25,26 @@ const EMAIL_CONTENT: Record<Lang, {
     ignore: "If you didn't sign up for PromptQuorum, you can safely ignore this email.",
     expires: 'This link expires in 7 days.',
     unsubscribe: 'Unsubscribe',
+  },
+  es: {
+    subject: 'Confirma tu lugar en la lista de espera de PromptQuorum',
+    headline: 'Un último paso',
+    body: 'Confirma tu correo para asegurar tu lugar en la lista de espera.\nEl acceso anticipado incluye incorporación prioritaria, acceso directo al desarrollador,',
+    benefit: 'y una herramienta gratuita.',
+    cta: 'Confirmar mi lugar',
+    ignore: 'Si no te registraste en PromptQuorum, puedes ignorar este correo.',
+    expires: 'Este enlace caduca en 7 días.',
+    unsubscribe: 'Cancelar suscripción',
+  },
+  pt: {
+    subject: 'Confirme seu lugar na lista de espera do PromptQuorum',
+    headline: 'Último passo',
+    body: 'Confirme seu e-mail para garantir seu lugar na lista de espera.\nO acesso antecipado inclui integração prioritária, acesso direto ao desenvolvedor,',
+    benefit: 'e uma ferramenta gratuita.',
+    cta: 'Confirmar meu lugar',
+    ignore: 'Se você não se cadastrou no PromptQuorum, pode ignorar este e-mail com segurança.',
+    expires: 'Este link expira em 7 dias.',
+    unsubscribe: 'Cancelar inscrição',
   },
   de: {
     subject: 'Bitte bestätigen Sie Ihren PromptQuorum-Wartelistenplatz',
@@ -97,7 +117,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json()
     const email: string = (body.email ?? '').toLowerCase().trim()
     const consent: boolean = body.consent === true
-    const lang: Lang = (['en','de','fr','ja','zh'].includes(body.lang) ? body.lang : 'en') as Lang
+    const lang: Lang = (['en','de','fr','ja','zh','es','pt'].includes(body.lang) ? body.lang : 'en') as Lang
     const c = EMAIL_CONTENT[lang]
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {

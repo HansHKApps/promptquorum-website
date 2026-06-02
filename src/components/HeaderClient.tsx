@@ -187,85 +187,90 @@ function HeaderInner() {
       </div>
 
       {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md px-4 py-3 space-y-2">
-          {/* Language Selector in Mobile Menu */}
-          <div className="sm:hidden mb-2 pb-2 border-b border-gray-200">
-            <LanguageSwitcherWrapper initialLang={lang as Language} />
-          </div>
-
-          <Link
-            href={navHref('/compare', lang)}
-            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {t('compare', lang)}
-          </Link>
-          <Link
-            href={navHref('/features', lang)}
-            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {t('features', lang)}
-          </Link>
-          <Link
-            href={navHref('/how-it-works', lang)}
-            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {t('howItWorks', lang)}
-          </Link>
-          <Link
-            href={navHref('/faq', lang)}
-            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {t('faq', lang)}
-          </Link>
-          <Link
-            href={navHref('/blog', lang)}
-            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {t('blog', lang)}
-          </Link>
-          <Link
-            href={navHref('/prompt-engineering', lang)}
-            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {t('promptEngineering', lang)}
-          </Link>
-          <Link
-            href={navHref('/local-llms', lang)}
-            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {t('localLlms', lang)}
-          </Link>
-          <Link
-            href={powerLocalLlmHref(lang)}
-            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {t('powerLocalLlm', lang)}
-          </Link>
-          <Link
-            href={promptBitesHref(lang)}
-            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {t('promptBites', lang)}
-          </Link>
-          <a
-            href="#waitlist"
-            onClick={handleWaitlistClick}
-            className="block px-4 py-2 text-purple-600 font-medium hover:bg-purple-50 rounded-lg transition-colors"
-          >
-            {t('waitlist', lang)}
-          </a>
+      <div
+        className={`lg:hidden border-t border-gray-200 bg-white px-4 py-3 space-y-2 transition-opacity duration-150 ${
+          mobileMenuOpen
+            ? 'opacity-100 pointer-events-auto'
+            : 'opacity-0 pointer-events-none h-0 overflow-hidden'
+        }`}
+        aria-hidden={!mobileMenuOpen}
+      >
+        {/* Language Selector in Mobile Menu */}
+        <div className="sm:hidden mb-2 pb-2 border-b border-gray-200">
+          <LanguageSwitcherWrapper initialLang={lang as Language} />
         </div>
-      )}
+
+        <Link
+          href={navHref('/compare', lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('compare', lang)}
+        </Link>
+        <Link
+          href={navHref('/features', lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('features', lang)}
+        </Link>
+        <Link
+          href={navHref('/how-it-works', lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('howItWorks', lang)}
+        </Link>
+        <Link
+          href={navHref('/faq', lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('faq', lang)}
+        </Link>
+        <Link
+          href={navHref('/blog', lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('blog', lang)}
+        </Link>
+        <Link
+          href={navHref('/prompt-engineering', lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('promptEngineering', lang)}
+        </Link>
+        <Link
+          href={navHref('/local-llms', lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('localLlms', lang)}
+        </Link>
+        <Link
+          href={powerLocalLlmHref(lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('powerLocalLlm', lang)}
+        </Link>
+        <Link
+          href={promptBitesHref(lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('promptBites', lang)}
+        </Link>
+        <a
+          href="#waitlist"
+          onClick={handleWaitlistClick}
+          className="block px-4 py-2 text-purple-600 font-medium hover:bg-purple-50 rounded-lg transition-colors"
+        >
+          {t('waitlist', lang)}
+        </a>
+      </div>
     </header>
   )
 }
