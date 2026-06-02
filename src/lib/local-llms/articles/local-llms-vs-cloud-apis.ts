@@ -133,9 +133,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**The choice between local and cloud inference carries direct compliance implications across regulatory jurisdictions.**',
           ],
           items: [
-            '**EU / GDPR + AI Act:** GDPR Article 28 requires a Data Processing Agreement with any third-party that processes personal data on your behalf -- including cloud AI API providers. Local LLMs eliminate this requirement entirely: no DPA, no Article 46 transfer mechanism, no cross-border data flow. The EU AI Act (effective February 2025) classifies AI systems processing personal data in regulated sectors (healthcare, HR, legal, financial) as high-risk. For these sectors, local inference is the lowest-risk deployment path. Cloud API enterprise tiers (OpenAI Enterprise, Anthropic for Teams) offer GDPR-compliant data processing, but require procurement, DPA signing, and ongoing compliance monitoring. Model preference for EU: Mistral (France, Apache 2.0) provides the strongest EU compliance narrative for local deployments. Llama 3.x and Qwen2.5 are also usable under GDPR for local inference.',
-            '**Japan (METI):** METI AI Governance Guidelines recommend on-premises inference for enterprise data classified as sensitive. For Japanese companies handling customer data, local LLMs align with METI\'s principle of "appropriate management of AI systems." Cloud APIs require verifying that the provider\'s data processing location complies with Japan\'s Act on the Protection of Personal Information (APPI). Qwen2.5 7B via Ollama is the recommended local model for Japanese-language business workflows -- native Japanese tokenization processes Japanese text 30-40% more efficiently than Llama, reducing inference time for Japanese documents.',
-            '**China:** Under China\'s Personal Information Protection Law (PIPL, 2021) and Data Security Law (数据安全法, 2021), cross-border transfer of personal data to foreign cloud providers requires regulatory approval. For most Chinese enterprises, local LLMs are not just preferable -- they are legally necessary for sensitive data processing. Cloud APIs from foreign providers (OpenAI, Anthropic) require PIPL impact assessments for personal data processing. Local Qwen2.5 deployment avoids all of these requirements.',
+            '**EU / GDPR + AI Act:** GDPR Article 28 requires a Data Processing Agreement with any third-party that processes personal data on your behalf -- including cloud AI API providers. Local LLMs eliminate this requirement entirely: no DPA, no Article 46 transfer mechanism, no cross-border data flow. The EU AI Act (effective February 2025) classifies AI systems processing personal data in regulated sectors (healthcare, HR, legal, financial) as high-risk. For these sectors, local inference is the lowest-risk deployment path. Cloud API enterprise tiers (OpenAI Enterprise, Anthropic for Teams) offer GDPR-compliant data processing, but require procurement, DPA signing, and ongoing compliance monitoring. Model preference for EU: Mistral (France, Apache 2.0) provides the strongest EU compliance narrative for local deployments. Llama 3.x and Qwen3 are also usable under GDPR for local inference.',
+            '**Japan (METI):** METI AI Governance Guidelines recommend on-premises inference for enterprise data classified as sensitive. For Japanese companies handling customer data, local LLMs align with METI\'s principle of "appropriate management of AI systems." Cloud APIs require verifying that the provider\'s data processing location complies with Japan\'s Act on the Protection of Personal Information (APPI). Qwen3 7B via Ollama is the recommended local model for Japanese-language business workflows -- native Japanese tokenization processes Japanese text 30-40% more efficiently than Llama, reducing inference time for Japanese documents.',
+            '**China:** Under China\'s Personal Information Protection Law (PIPL, 2021) and Data Security Law (数据安全法, 2021), cross-border transfer of personal data to foreign cloud providers requires regulatory approval. For most Chinese enterprises, local LLMs are not just preferable -- they are legally necessary for sensitive data processing. Cloud APIs from foreign providers (OpenAI, Anthropic) require PIPL impact assessments for personal data processing. Local Qwen3 deployment avoids all of these requirements.',
           ],
         },
         relatedReading: {
@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Is a local 70B model better than GPT-5.5 Mini?',
-              a: 'On most benchmarks in 2026, yes -- Meta Llama 3.3 70B and Qwen2.5 72B score above GPT-5.5 Mini on standard reasoning and coding tasks. However, 70B models require 40-48 GB of RAM, putting them out of reach for most consumer hardware. For practical local use, 7B-13B models are the common range.',
+              a: 'On most benchmarks in 2026, yes -- Meta Llama 3.3 70B and Qwen3 72B score above GPT-5.5 Mini on standard reasoning and coding tasks. However, 70B models require 40-48 GB of RAM, putting them out of reach for most consumer hardware. For practical local use, 7B-13B models are the common range.',
             },
             { q: 'What hardware do I need to run a 7B model locally?', a: 'A modern laptop CPU can run Llama 3.2 3B at 10-20 tokens/sec, but GPU is essential for practical use. For 7B models: RTX 4070 Ti (12 GB, ~80 tok/sec), RTX 4090 (24 GB, ~130 tok/sec), or Apple M3 Pro (18 GB, ~60 tok/sec). With Q4 quantization, VRAM requirements drop significantly.' },
             { q: 'Are cloud APIs GDPR-compliant?', a: 'Most providers (OpenAI, Anthropic, Google) offer GDPR-compliant tiers, but you must opt-in and verify your tier. Enterprise plans include stricter data isolation. For regulated healthcare, finance, or legal data, local LLMs offer the strongest guarantee by keeping data entirely on-device.' },
@@ -216,7 +216,7 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can I switch between local and cloud models in the same application?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Ollama and LM Studio expose an OpenAI-compatible REST API at localhost. Any application built on the OpenAI SDK can switch to local by changing the base URL to localhost:11434 (Ollama) or localhost:1234 (LM Studio). No code changes required.' } },
           { '@type': 'Question', 'name': 'Do cloud API providers train on my prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For paid API tiers, most providers (OpenAI, Anthropic, Google) opt API customers out of training data collection by default. Free tiers typically use inputs for improvement. Always verify the current data policy for your specific tier.' } },
-          { '@type': 'Question', 'name': 'Is a local 70B model better than GPT-5.5 Mini?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'On most benchmarks in 2026, yes -- Meta Llama 3.3 70B and Qwen2.5 72B score above GPT-5.5 Mini on reasoning and coding tasks. However, 70B models require 40-48 GB of RAM, putting them out of reach for most consumer hardware.' } },
+          { '@type': 'Question', 'name': 'Is a local 70B model better than GPT-5.5 Mini?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'On most benchmarks in 2026, yes -- Meta Llama 3.3 70B and Qwen3 72B score above GPT-5.5 Mini on reasoning and coding tasks. However, 70B models require 40-48 GB of RAM, putting them out of reach for most consumer hardware.' } },
           { '@type': 'Question', 'name': 'What hardware do I need to run a 7B model locally?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For 7B models: RTX 4070 Ti (12 GB, ~80 tok/sec), RTX 4090 (24 GB, ~130 tok/sec), or Apple M3 Pro (18 GB, ~60 tok/sec). With Q4 quantization, VRAM requirements drop to ~4.7 GB. CPU-only produces 10-25 tok/sec.' } },
           { '@type': 'Question', 'name': 'Are cloud APIs GDPR-compliant?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Most providers offer GDPR-compliant tiers requiring opt-in and verification. Enterprise plans offer stricter data isolation. For regulated healthcare, finance, or legal data, local LLMs offer the strongest guarantee by keeping data entirely on-device with no third-party data processor relationship under GDPR Article 28.' } },
           { '@type': 'Question', 'name': 'What is the best local model for beginners?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3B or 8B. Small (3-8 GB VRAM), fast (50-80 tok/sec on GPU), good quality for summarization and Q&A. Download via Ollama: ollama run llama3.2:3b or ollama run llama3.2.' } },
@@ -358,9 +358,9 @@ schema: {
             '**La elección entre inferencia local y en la nube tiene implicaciones directas de cumplimiento en distintas jurisdicciones regulatorias.**',
           ],
           items: [
-            '**UE / RGPD + Ley de IA:** El Artículo 28 del RGPD exige un Acuerdo de Procesamiento de Datos con cualquier tercero que procese datos personales en tu nombre -- incluidos los proveedores de APIs de IA en la nube. Los LLMs locales eliminan completamente este requisito: sin DPA, sin mecanismo del Artículo 46, sin flujo transfronterizo de datos. La Ley de IA de la UE (vigente desde febrero de 2025) clasifica los sistemas de IA que procesan datos personales en sectores regulados (salud, RRHH, legal, financiero) como de alto riesgo. Para estos sectores, la inferencia local es la vía de implementación de menor riesgo. Los niveles empresariales de proveedores en la nube (OpenAI Enterprise, Anthropic for Teams) ofrecen procesamiento de datos conforme al RGPD, pero requieren adquisición, firma de DPA y monitoreo continuo de cumplimiento. Preferencia de modelo para la UE: Mistral (Francia, Apache 2.0) ofrece la narrativa de cumplimiento UE más sólida para implementaciones locales. Llama 3.x y Qwen2.5 también son utilizables bajo el RGPD para inferencia local.',
-            '**Japón (METI):** Las Directrices de Gobernanza de IA del METI recomiendan la inferencia en las instalaciones para datos empresariales clasificados como sensibles. Para empresas japonesas que manejan datos de clientes, los LLMs locales se alinean con el principio del METI de "gestión adecuada de sistemas de IA". Las APIs en la nube requieren verificar que la ubicación de procesamiento de datos del proveedor cumpla con la Ley de Protección de Información Personal (APPI) de Japón. Qwen2.5 7B vía Ollama es el modelo local recomendado para flujos de trabajo empresariales en japonés -- la tokenización nativa del japonés procesa texto japonés un 30-40% más eficientemente que Llama, reduciendo el tiempo de inferencia para documentos en japonés.',
-            '**China:** Bajo la Ley de Protección de Información Personal (PIPL, 2021) y la Ley de Seguridad de Datos (数据安全法, 2021) de China, la transferencia transfronteriza de datos personales a proveedores de nube extranjeros requiere aprobación regulatoria. Para la mayoría de las empresas chinas, los LLMs locales no son solo preferibles -- son legalmente necesarios para el procesamiento de datos sensibles. Las APIs en la nube de proveedores extranjeros (OpenAI, Anthropic) requieren evaluaciones de impacto PIPL para el procesamiento de datos personales. El despliegue local de Qwen2.5 evita todos estos requisitos.',
+            '**UE / RGPD + Ley de IA:** El Artículo 28 del RGPD exige un Acuerdo de Procesamiento de Datos con cualquier tercero que procese datos personales en tu nombre -- incluidos los proveedores de APIs de IA en la nube. Los LLMs locales eliminan completamente este requisito: sin DPA, sin mecanismo del Artículo 46, sin flujo transfronterizo de datos. La Ley de IA de la UE (vigente desde febrero de 2025) clasifica los sistemas de IA que procesan datos personales en sectores regulados (salud, RRHH, legal, financiero) como de alto riesgo. Para estos sectores, la inferencia local es la vía de implementación de menor riesgo. Los niveles empresariales de proveedores en la nube (OpenAI Enterprise, Anthropic for Teams) ofrecen procesamiento de datos conforme al RGPD, pero requieren adquisición, firma de DPA y monitoreo continuo de cumplimiento. Preferencia de modelo para la UE: Mistral (Francia, Apache 2.0) ofrece la narrativa de cumplimiento UE más sólida para implementaciones locales. Llama 3.x y Qwen3 también son utilizables bajo el RGPD para inferencia local.',
+            '**Japón (METI):** Las Directrices de Gobernanza de IA del METI recomiendan la inferencia en las instalaciones para datos empresariales clasificados como sensibles. Para empresas japonesas que manejan datos de clientes, los LLMs locales se alinean con el principio del METI de "gestión adecuada de sistemas de IA". Las APIs en la nube requieren verificar que la ubicación de procesamiento de datos del proveedor cumpla con la Ley de Protección de Información Personal (APPI) de Japón. Qwen3 7B vía Ollama es el modelo local recomendado para flujos de trabajo empresariales en japonés -- la tokenización nativa del japonés procesa texto japonés un 30-40% más eficientemente que Llama, reduciendo el tiempo de inferencia para documentos en japonés.',
+            '**China:** Bajo la Ley de Protección de Información Personal (PIPL, 2021) y la Ley de Seguridad de Datos (数据安全法, 2021) de China, la transferencia transfronteriza de datos personales a proveedores de nube extranjeros requiere aprobación regulatoria. Para la mayoría de las empresas chinas, los LLMs locales no son solo preferibles -- son legalmente necesarios para el procesamiento de datos sensibles. Las APIs en la nube de proveedores extranjeros (OpenAI, Anthropic) requieren evaluaciones de impacto PIPL para el procesamiento de datos personales. El despliegue local de Qwen3 evita todos estos requisitos.',
           ],
         },
         relatedReading: {
@@ -389,7 +389,7 @@ schema: {
             },
             {
               q: '¿Es un modelo local 70B mejor que GPT-5.5 Mini?',
-              a: 'En la mayoría de los benchmarks de 2026, sí -- Meta Llama 3.3 70B y Qwen2.5 72B obtienen puntuaciones superiores a GPT-5.5 Mini en tareas estándar de razonamiento y programación. Sin embargo, los modelos 70B requieren 40-48 GB de RAM, fuera del alcance de la mayoría del hardware de consumo. Para uso local práctico, el rango 7B-13B es el más común.',
+              a: 'En la mayoría de los benchmarks de 2026, sí -- Meta Llama 3.3 70B y Qwen3 72B obtienen puntuaciones superiores a GPT-5.5 Mini en tareas estándar de razonamiento y programación. Sin embargo, los modelos 70B requieren 40-48 GB de RAM, fuera del alcance de la mayoría del hardware de consumo. Para uso local práctico, el rango 7B-13B es el más común.',
             },
             { q: '¿Qué hardware necesito para ejecutar un modelo 7B localmente?', a: 'Una CPU moderna de laptop puede ejecutar Llama 3.2 3B a 10-20 tokens/seg, pero la GPU es esencial para uso práctico. Para modelos 7B: RTX 4070 Ti (12 GB, ~80 tok/seg), RTX 4090 (24 GB, ~130 tok/seg), o Apple M3 Pro (18 GB, ~60 tok/seg). Con cuantización Q4, los requisitos de VRAM caen significativamente.' },
             { q: '¿Las APIs en la nube cumplen con el RGPD?', a: 'La mayoría de los proveedores (OpenAI, Anthropic, Google) ofrecen niveles compatibles con el RGPD, pero debes registrarte y verificar tu nivel. Los planes empresariales ofrecen aislamiento de datos más estricto. Para datos regulados de salud, finanzas o legales, los LLMs locales ofrecen la mayor garantía al mantener los datos completamente en el dispositivo.' },
@@ -447,7 +447,7 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo cambiar entre modelos locales y en la nube en la misma aplicación?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Ollama y LM Studio exponen una API REST compatible con OpenAI en localhost. Cualquier aplicación construida sobre el SDK de OpenAI puede cambiar a local modificando la URL base a localhost:11434 (Ollama) o localhost:1234 (LM Studio). No se requieren cambios en el código.' } },
           { '@type': 'Question', 'name': '¿Los proveedores de APIs en la nube entrenan con mis prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para los niveles de API de pago, la mayoría de los proveedores (OpenAI, Anthropic, Google) excluyen a los clientes de API de la recopilación de datos de entrenamiento por defecto. Los niveles gratuitos típicamente usan las entradas para mejoras. Siempre verifica la política de datos vigente para tu nivel específico.' } },
-          { '@type': 'Question', 'name': '¿Es un modelo local 70B mejor que GPT-5.5 Mini?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En la mayoría de los benchmarks de 2026, sí -- Meta Llama 3.3 70B y Qwen2.5 72B obtienen puntuaciones superiores a GPT-5.5 Mini en tareas de razonamiento y programación. Sin embargo, los modelos 70B requieren 40-48 GB de RAM, fuera del alcance de la mayoría del hardware de consumo.' } },
+          { '@type': 'Question', 'name': '¿Es un modelo local 70B mejor que GPT-5.5 Mini?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En la mayoría de los benchmarks de 2026, sí -- Meta Llama 3.3 70B y Qwen3 72B obtienen puntuaciones superiores a GPT-5.5 Mini en tareas de razonamiento y programación. Sin embargo, los modelos 70B requieren 40-48 GB de RAM, fuera del alcance de la mayoría del hardware de consumo.' } },
           { '@type': 'Question', 'name': '¿Qué hardware necesito para ejecutar un modelo 7B localmente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para modelos 7B: RTX 4070 Ti (12 GB, ~80 tok/seg), RTX 4090 (24 GB, ~130 tok/seg), o Apple M3 Pro (18 GB, ~60 tok/seg). Con cuantización Q4, los requisitos de VRAM caen a ~4.7 GB. Solo CPU produce 10-25 tok/seg.' } },
           { '@type': 'Question', 'name': '¿Las APIs en la nube cumplen con el RGPD?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La mayoría de los proveedores ofrecen niveles compatibles con el RGPD que requieren registro y verificación. Los planes empresariales ofrecen aislamiento de datos más estricto. Para datos regulados de salud, finanzas o legales, los LLMs locales ofrecen la mayor garantía al mantener los datos completamente en el dispositivo sin relación de procesador de datos bajo el Artículo 28 del RGPD.' } },
           { '@type': 'Question', 'name': '¿Cuál es el mejor modelo local para principiantes?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3B o 8B. Pequeño (3-8 GB VRAM), rápido (50-80 tok/seg en GPU), buena calidad para resúmenes y preguntas. Descarga vía Ollama: ollama run llama3.2:3b o ollama run llama3.2.' } },
@@ -589,7 +589,7 @@ schema: {
           ],
           items: [
             '**EU / DSGVO + KI-Gesetz:** DSGVO Artikel 28 erfordert einen Datenverarbeitungsvertrag (DPA) mit jedem Dritten, der personenbezogene Daten in Ihrem Auftrag verarbeitet \u2014 einschließlich Cloud-KI-API-Anbietern. Lokale LLMs eliminieren diese Anforderung vollständig: kein DPA, kein Mechanismus nach Artikel 46, kein grenzüberschreitender Datenfluss. Das EU-KI-Gesetz (in Kraft seit Februar 2025) klassifiziert KI-Systeme, die personenbezogene Daten in regulierten Bereichen (Gesundheitswesen, Personalwesen, Recht, Finanzen) verarbeiten, als hochriskant. Das BSI-Grundschutz-Kompendium empfiehlt für KRITIS-Unternehmen und den öffentlichen Sektor ausdrücklich die Datensouveränität durch On-Premises-Verarbeitung. Für den DACH-Raum (Deutschland, Österreich, Schweiz) bieten Mistral (Frankreich, Apache 2.0) und Llama 3.x die stärksten Compliance-Narrative für lokale Deployments. Enterprise-Tier von Cloud-Anbietern (OpenAI Enterprise, Anthropic for Teams) bieten DSGVO-konforme Datenverarbeitung, erfordern jedoch Procurement, DPA-Unterzeichnung und laufendes Compliance-Monitoring.',
-            '**Japan (METI):** Die METI-KI-Governance-Richtlinien empfehlen die On-Premises-Inferenz für Unternehmensdaten, die als sensibel eingestuft sind. Für japanische Unternehmen, die Kundendaten verarbeiten, stimmen lokale LLMs mit METIs Grundsatz des "angemessenen Managements von KI-Systemen" überein. Cloud-APIs erfordern die Überprüfung, ob der Datenverarbeitungsstandort des Anbieters mit Japans Gesetz zum Schutz personenbezogener Informationen (APPI) übereinstimmt. Qwen2.5 7B über Ollama ist das empfohlene lokale Modell für japanischsprachige Geschäftsabläufe.',
+            '**Japan (METI):** Die METI-KI-Governance-Richtlinien empfehlen die On-Premises-Inferenz für Unternehmensdaten, die als sensibel eingestuft sind. Für japanische Unternehmen, die Kundendaten verarbeiten, stimmen lokale LLMs mit METIs Grundsatz des "angemessenen Managements von KI-Systemen" überein. Cloud-APIs erfordern die Überprüfung, ob der Datenverarbeitungsstandort des Anbieters mit Japans Gesetz zum Schutz personenbezogener Informationen (APPI) übereinstimmt. Qwen3 7B über Ollama ist das empfohlene lokale Modell für japanischsprachige Geschäftsabläufe.',
             '**China:** Unter Chinas Gesetz zum Schutz personenbezogener Informationen (PIPL, 2021) und dem Datensicherheitsgesetz (数据安全法, 2021) erfordert die grenzüberschreitende Übermittlung personenbezogener Daten an ausländische Cloud-Anbieter eine behördliche Genehmigung. Für die meisten chinesischen Unternehmen sind lokale LLMs bei der Verarbeitung sensibler Daten nicht nur vorzuziehen \u2014 sie sind rechtlich notwendig.',
           ],
         },
@@ -619,7 +619,7 @@ schema: {
             },
             {
               q: 'Ist ein lokales 70B-Modell besser als GPT-5.5 Mini?',
-              a: 'Bei den meisten Benchmarks 2026 ja \u2014 Meta Llama 3.3 70B und Qwen2.5 72B erzielen bessere Ergebnisse als GPT-5.5 Mini bei Standard-Denk- und Codieraufgaben. Allerdings benötigen 70B-Modelle 40\u201348 GB RAM, was für die meisten Consumer-Hardware unerreichbar ist. Für die praktische lokale Nutzung ist der 7B\u201313B-Bereich üblicher.',
+              a: 'Bei den meisten Benchmarks 2026 ja \u2014 Meta Llama 3.3 70B und Qwen3 72B erzielen bessere Ergebnisse als GPT-5.5 Mini bei Standard-Denk- und Codieraufgaben. Allerdings benötigen 70B-Modelle 40\u201348 GB RAM, was für die meisten Consumer-Hardware unerreichbar ist. Für die praktische lokale Nutzung ist der 7B\u201313B-Bereich üblicher.',
             },
             {
               q: 'Welche Hardware benötige ich, um ein 7B-Modell lokal auszuführen?',
@@ -694,7 +694,7 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'Kann ich in derselben Anwendung zwischen lokalen und Cloud-Modellen wechseln?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Ollama und LM Studio bieten beide eine OpenAI-kompatible REST-API auf localhost an. Jede mit dem OpenAI-SDK erstellte Anwendung kann ihre Basis-URL auf localhost:11434 (Ollama) oder localhost:1234 (LM Studio) zeigen, um ein lokales Modell ohne Codeänderungen zu verwenden.' } },
           { '@type': 'Question', 'name': 'Trainieren Cloud-API-Anbieter mit meinen Prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für kostenpflichtige API-Tiers schließen die meisten großen Anbieter API-Kunden standardmäßig von der Trainingsdatensammlung aus. Kostenlose Tiers verwenden Eingaben in der Regel zur Verbesserung.' } },
-          { '@type': 'Question', 'name': 'Ist ein lokales 70B-Modell besser als GPT-5.5 Mini?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bei den meisten Benchmarks 2026 ja \u2014 Meta Llama 3.3 70B und Qwen2.5 72B erzielen bessere Ergebnisse. 70B-Modelle benötigen jedoch 40\u201348 GB RAM, was für Consumer-Hardware meist unerreichbar ist.' } },
+          { '@type': 'Question', 'name': 'Ist ein lokales 70B-Modell besser als GPT-5.5 Mini?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bei den meisten Benchmarks 2026 ja \u2014 Meta Llama 3.3 70B und Qwen3 72B erzielen bessere Ergebnisse. 70B-Modelle benötigen jedoch 40\u201348 GB RAM, was für Consumer-Hardware meist unerreichbar ist.' } },
           { '@type': 'Question', 'name': 'Welche Hardware benötige ich für ein 7B-Modell?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für 7B-Modelle: RTX 4070 Ti (12 GB, ~80 Tokens/Sek.), RTX 4090 (24 GB, ~130 Tokens/Sek.) oder Apple M3 Pro (18 GB, ~60 Tokens/Sek.). Mit Q4-Quantisierung sinken VRAM-Anforderungen auf ca. 4,7 GB.' } },
           { '@type': 'Question', 'name': 'Sind Cloud-APIs DSGVO-konform?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Die meisten Anbieter bieten DSGVO-konforme Tiers an, erfordern aber Opt-in. Für regulierte Daten bieten lokale LLMs die stärkste Garantie \u2014 kein Drittanbieter-Datenverarbeitungsverhältnis nach DSGVO Artikel 28.' } },
           { '@type': 'Question', 'name': 'Was ist das beste lokale Modell für Einsteiger?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3B oder 8B: klein (3\u20138 GB VRAM), schnell (50\u201380 Tokens/Sek. auf GPU), gute Qualität. Download über Ollama: ollama run llama3.2:3b.' } },
@@ -832,7 +832,7 @@ schema: {
           ],
           items: [
             '**UE / RGPD + Loi IA :** L\'article 28 du RGPD exige un accord de traitement des données (DPA) avec tout tiers traitant des données personnelles en votre nom -- y compris les fournisseurs d\'APIs IA cloud. Les LLMs locaux éliminent entièrement cette exigence : pas de DPA, pas de mécanisme selon l\'article 46, pas de transfert de données transfrontalier. La Loi IA de l\'UE (en vigueur depuis février 2025) classe les systèmes IA traitant des données personnelles dans les secteurs réglementés (santé, RH, droit, finance) comme à haut risque. Pour ces secteurs, l\'inférence locale est la voie de déploiement la moins risquée. La CNIL recommande l\'inférence locale pour le traitement de données professionnelles sensibles afin de garantir la conformité au RGPD sans transfert vers des sous-traitants tiers. Les offres Enterprise des fournisseurs cloud (OpenAI Enterprise, Anthropic for Teams) proposent un traitement des données conforme au RGPD, mais nécessitent un processus d\'achat, la signature d\'un DPA et un suivi continu de la conformité.',
-            '**Japon (METI) :** Les directives de gouvernance IA du METI recommandent l\'inférence sur site pour les données d\'entreprise classifiées comme sensibles. Pour les entreprises japonaises traitant des données clients, les LLMs locaux s\'alignent sur le principe du METI de "gestion appropriée des systèmes IA". Les APIs cloud nécessitent de vérifier que le lieu de traitement des données du fournisseur est conforme à la loi japonaise sur la protection des informations personnelles (APPI). Qwen2.5 7B via Ollama est le modèle local recommandé pour les flux de travail professionnels en japonais.',
+            '**Japon (METI) :** Les directives de gouvernance IA du METI recommandent l\'inférence sur site pour les données d\'entreprise classifiées comme sensibles. Pour les entreprises japonaises traitant des données clients, les LLMs locaux s\'alignent sur le principe du METI de "gestion appropriée des systèmes IA". Les APIs cloud nécessitent de vérifier que le lieu de traitement des données du fournisseur est conforme à la loi japonaise sur la protection des informations personnelles (APPI). Qwen3 7B via Ollama est le modèle local recommandé pour les flux de travail professionnels en japonais.',
             '**Chine :** En vertu de la loi chinoise sur la protection des informations personnelles (PIPL, 2021) et de la loi sur la sécurité des données (2021), le transfert transfrontalier de données personnelles vers des fournisseurs cloud étrangers nécessite une approbation réglementaire. Pour la plupart des entreprises chinoises, les LLMs locaux ne sont pas seulement préférables -- ils sont légalement nécessaires pour le traitement de données sensibles.',
           ],
         },
@@ -862,7 +862,7 @@ schema: {
             },
             {
               q: 'Un modèle local 70B est-il meilleur que GPT-5.5 Mini ?',
-              a: 'Sur la plupart des benchmarks en 2026, oui -- Meta Llama 3.3 70B et Qwen2.5 72B obtiennent de meilleurs scores que GPT-5.5 Mini sur les tâches standard de raisonnement et de codage. Cependant, les modèles 70B nécessitent 40-48 Go de RAM, hors de portée de la plupart du matériel grand public. Pour une utilisation locale pratique, la plage 7B-13B est la plus courante.',
+              a: 'Sur la plupart des benchmarks en 2026, oui -- Meta Llama 3.3 70B et Qwen3 72B obtiennent de meilleurs scores que GPT-5.5 Mini sur les tâches standard de raisonnement et de codage. Cependant, les modèles 70B nécessitent 40-48 Go de RAM, hors de portée de la plupart du matériel grand public. Pour une utilisation locale pratique, la plage 7B-13B est la plus courante.',
             },
             {
               q: 'De quel matériel ai-je besoin pour exécuter un modèle 7B localement ?',
@@ -889,8 +889,8 @@ schema: {
               a: 'Pour les données professionnelles sensibles -- dossiers clients, correspondances légales, données financières -- les LLMs locaux garantissent qu\'aucune donnée ne quitte votre infrastructure. Les APIs cloud, même conformes au RGPD, impliquent un transfert de données vers des serveurs tiers et la signature d\'un accord de traitement des données (DPA) selon l\'article 28 du RGPD. Pour les cabinets juridiques, établissements de santé et entreprises financières en France, l\'inférence locale est souvent la solution la plus prudente sur le plan réglementaire.',
             },
             {
-              q: 'Qwen2.5 fonctionne-t-il bien pour le français ?',
-              a: 'Oui. Qwen2.5 7B et 14B offrent de bonnes performances en français grâce à un entraînement multilingue étendu. Pour un usage professionnel en français, Llama 3.3 8B et Mistral Small sont également de bons choix avec Ollama. Les modèles 13B et supérieurs produisent généralement une qualité de texte français nettement supérieure aux modèles 7B.',
+              q: 'Qwen3 fonctionne-t-il bien pour le français ?',
+              a: 'Oui. Qwen3 7B et 14B offrent de bonnes performances en français grâce à un entraînement multilingue étendu. Pour un usage professionnel en français, Llama 3.3 8B et Mistral Small sont également de bons choix avec Ollama. Les modèles 13B et supérieurs produisent généralement une qualité de texte français nettement supérieure aux modèles 7B.',
             },
           ],
         },
@@ -937,14 +937,14 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'Puis-je basculer entre modèles locaux et cloud dans la même application ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Ollama et LM Studio exposent une API REST compatible OpenAI sur localhost. Toute application construite sur le SDK OpenAI peut pointer vers localhost:11434 (Ollama) ou localhost:1234 (LM Studio) sans modifier le code.' } },
           { '@type': 'Question', 'name': 'Les fournisseurs d\'APIs cloud s\'entraînent-ils sur mes prompts ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour les niveaux API payants, la plupart des grands fournisseurs excluent les clients API de la collecte de données d\'entraînement par défaut. Les niveaux gratuits utilisent généralement les entrées pour l\'amélioration.' } },
-          { '@type': 'Question', 'name': 'Un modèle local 70B est-il meilleur que GPT-5.5 Mini ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sur la plupart des benchmarks 2026, oui -- Meta Llama 3.3 70B et Qwen2.5 72B surpassent GPT-5.5 Mini. Cependant, les modèles 70B nécessitent 40-48 Go de RAM, inaccessible pour la plupart du matériel grand public.' } },
+          { '@type': 'Question', 'name': 'Un modèle local 70B est-il meilleur que GPT-5.5 Mini ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sur la plupart des benchmarks 2026, oui -- Meta Llama 3.3 70B et Qwen3 72B surpassent GPT-5.5 Mini. Cependant, les modèles 70B nécessitent 40-48 Go de RAM, inaccessible pour la plupart du matériel grand public.' } },
           { '@type': 'Question', 'name': 'De quel matériel ai-je besoin pour un modèle 7B ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour les modèles 7B : RTX 4070 Ti (12 Go, ~80 tokens/s), RTX 4090 (24 Go, ~130 tokens/s), ou Apple M3 Pro (18 Go, ~60 tokens/s). Avec Q4, les besoins en VRAM descendent à ~4,7 Go.' } },
           { '@type': 'Question', 'name': 'Les APIs cloud sont-elles conformes au RGPD ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La plupart proposent des niveaux conformes au RGPD mais nécessitent une inscription. Les LLMs locaux offrent la garantie la plus solide -- aucune relation de sous-traitant selon l\'article 28 du RGPD.' } },
           { '@type': 'Question', 'name': 'Quel est le meilleur modèle local pour débutants ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3B ou 8B : léger (3-8 Go VRAM), rapide (50-80 tokens/s sur GPU), bonne qualité. Téléchargement via Ollama : ollama run llama3.2:3b.' } },
           { '@type': 'Question', 'name': 'Comment réduire les coûts des APIs cloud ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Utilisez des modèles moins chers (GPT-5.5 Mini : $0,15/M tokens vs. GPT-5.5 : $2,50). Regroupez les requêtes. Mettez en cache les prompts. Ou passez aux modèles locaux pour les charges fréquentes.' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser modèles locaux et cloud en parallèle ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Des outils comme PromptQuorum vous permettent d\'envoyer un prompt à votre modèle Ollama local et à plus de 25 modèles cloud simultanément, et de comparer les résultats côte à côte.' } },
           { '@type': 'Question', 'name': 'Quelle différence pour la confidentialité des données professionnelles ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour les données professionnelles sensibles, les LLMs locaux garantissent qu\'aucune donnée ne quitte votre infrastructure. Les APIs cloud impliquent un transfert vers des tiers et la signature d\'un DPA selon l\'article 28 du RGPD.' } },
-          { '@type': 'Question', 'name': 'Qwen2.5 fonctionne-t-il bien pour le français ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Qwen2.5 7B et 14B offrent de bonnes performances en français. Llama 3.3 8B et Mistral Small sont également de bons choix via Ollama pour les flux professionnels en français.' } },
+          { '@type': 'Question', 'name': 'Qwen3 fonctionne-t-il bien pour le français ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Qwen3 7B et 14B offrent de bonnes performances en français. Llama 3.3 8B et Mistral Small sont également de bons choix via Ollama pour les flux professionnels en français.' } },
         ],
       },
       supplementalSchema: {
@@ -1074,7 +1074,7 @@ schema: {
             '**ローカル推論とクラウド推論の選択は、地域の規制管轄区域によって直接的なコンプライアンスへの影響があります。**',
           ],
           items: [
-            '**日本（METI）：** 経済産業省（METI）のAIガバナンスガイドラインは、機密に分類された企業データに対してオンプレミス推論を推奨しています。顧客データを取り扱う日本企業にとって、ローカルLLMはMETIの「AIシステムの適切な管理」という原則に沿っています。クラウドAPIを使用する場合は、プロバイダーのデータ処理場所が個人情報保護法（APPI）に準拠していることを確認する必要があります。日本語業務ワークフローには、OllamaでのQwen2.5 7Bが推奨ローカルモデルです -- ネイティブな日本語トークナイゼーションにより、日本語文書の処理速度がLlamaより30〜40%向上します。',
+            '**日本（METI）：** 経済産業省（METI）のAIガバナンスガイドラインは、機密に分類された企業データに対してオンプレミス推論を推奨しています。顧客データを取り扱う日本企業にとって、ローカルLLMはMETIの「AIシステムの適切な管理」という原則に沿っています。クラウドAPIを使用する場合は、プロバイダーのデータ処理場所が個人情報保護法（APPI）に準拠していることを確認する必要があります。日本語業務ワークフローには、OllamaでのQwen3 7Bが推奨ローカルモデルです -- ネイティブな日本語トークナイゼーションにより、日本語文書の処理速度がLlamaより30〜40%向上します。',
             '**アジア太平洋地域：** APACの多くの規制フレームワークはデータの国内保管を優先しています。特に金融・医療・法務データについては、ローカルLLMはデータがデバイスから離れないことを保証し、クロスボーダーデータ転送の規制審査を回避します。シンガポール、韓国、オーストラリアでも独自のデータローカライゼーション要件が存在します。',
             '**グローバル：** GDPR（EU）やCCPA（米国カリフォルニア州）などのデータ保護法制が世界的に広がる中、ローカルLLMは最もシンプルなコンプライアンスアプローチを提供します。データがデバイスから離れないため、データ処理契約（DPA）や規制当局への届出が不要です。',
           ],
@@ -1105,7 +1105,7 @@ schema: {
             },
             {
               q: 'ローカル70BモデルはGPT-5.5 Miniより優れていますか？',
-              a: '2026年のほとんどのベンチマークでは、そうです -- Meta Llama 3.3 70BとQwen2.5 72Bは標準的な推論とコーディングタスクでGPT-5.5 Miniを上回ります。ただし、70Bモデルは40〜48 GBのRAMが必要で、ほとんどのコンシューマーハードウェアでは実行困難です。実用的なローカル使用では7B〜13Bが一般的な範囲です。',
+              a: '2026年のほとんどのベンチマークでは、そうです -- Meta Llama 3.3 70BとQwen3 72Bは標準的な推論とコーディングタスクでGPT-5.5 Miniを上回ります。ただし、70Bモデルは40〜48 GBのRAMが必要で、ほとんどのコンシューマーハードウェアでは実行困難です。実用的なローカル使用では7B〜13Bが一般的な範囲です。',
             },
             {
               q: '7Bモデルをローカルで実行するにはどのようなハードウェアが必要ですか？',
@@ -1129,11 +1129,11 @@ schema: {
             },
             {
               q: '日本語の業務データにはローカルLLMとクラウドAPIのどちらが適していますか？',
-              a: 'METIのAIガバナンスガイドラインの観点から、機密な顧客データや業務データにはローカルLLMが推奨されます。OllamaでのQwen2.5 7Bは日本語に最適化されており、ネイティブな日本語トークナイゼーションにより高速な処理が可能です。個人情報保護法（APPI）への準拠を確実にするため、クラウドAPIを使用する場合はデータ処理場所を必ず確認してください。',
+              a: 'METIのAIガバナンスガイドラインの観点から、機密な顧客データや業務データにはローカルLLMが推奨されます。OllamaでのQwen3 7Bは日本語に最適化されており、ネイティブな日本語トークナイゼーションにより高速な処理が可能です。個人情報保護法（APPI）への準拠を確実にするため、クラウドAPIを使用する場合はデータ処理場所を必ず確認してください。',
             },
             {
-              q: 'Qwen2.5は日本語に対応していますか？',
-              a: 'はい。Qwen2.5 7Bと14Bは広範な多言語トレーニングにより日本語で優れたパフォーマンスを発揮します。ネイティブな日本語トークナイゼーションにより、Llama系モデルと比較して日本語文書の処理が30〜40%効率的です。Ollamaで実行できます：ollama run qwen2.5:7b。',
+              q: 'Qwen3は日本語に対応していますか？',
+              a: 'はい。Qwen3 7Bと14Bは広範な多言語トレーニングにより日本語で優れたパフォーマンスを発揮します。ネイティブな日本語トークナイゼーションにより、Llama系モデルと比較して日本語文書の処理が30〜40%効率的です。Ollamaで実行できます：ollama run qwen2.5:7b。',
             },
           ],
         },
@@ -1180,14 +1180,14 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': '同じアプリでローカルとクラウドモデルを切り替えられますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。OllamaとLM StudioはOpenAI互換REST APIをlocalhostで公開しています。ベースURLをlocalhost:11434（Ollama）またはlocalhost:1234（LM Studio）に変更するだけでコード変更なしに切り替え可能です。' } },
           { '@type': 'Question', 'name': 'クラウドAPIプロバイダーはプロンプトでトレーニングしますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '有料APIティアではほとんどのプロバイダーがデフォルトでトレーニングデータ収集から除外しています。無料ティアは通常入力データを改善に使用します。' } },
-          { '@type': 'Question', 'name': 'ローカル70BモデルはGPT-5.5 Miniより優れていますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '2026年のほとんどのベンチマークでそうです -- Llama 3.3 70BとQwen2.5 72BがGPT-5.5 Miniを上回ります。ただし40〜48 GB RAMが必要です。' } },
+          { '@type': 'Question', 'name': 'ローカル70BモデルはGPT-5.5 Miniより優れていますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '2026年のほとんどのベンチマークでそうです -- Llama 3.3 70BとQwen3 72BがGPT-5.5 Miniを上回ります。ただし40〜48 GB RAMが必要です。' } },
           { '@type': 'Question', 'name': '7Bモデルに必要なハードウェアは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 4070 Ti（12 GB、~80トークン/秒）、RTX 4090（24 GB、~130トークン/秒）、またはApple M3 Pro（18 GB、~60トークン/秒）。Q4量子化でVRAM要件が大幅削減。' } },
           { '@type': 'Question', 'name': 'クラウドAPIはGDPRに準拠していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ほとんどのプロバイダーがGDPR準拠ティアを提供していますが、オプトインが必要です。ローカルLLMはデータを完全にデバイス上に保持することで最も強力な保証を提供します。' } },
           { '@type': 'Question', 'name': '初心者に最適なローカルモデルは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3BまたはLlama 3.3 8B：小さい（3〜8 GB VRAM）、高速（~50〜80トークン/秒）。ollama run llama3.2:3bで開始できます。' } },
           { '@type': 'Question', 'name': 'クラウドAPIコストを削減するには？', 'acceptedAnswer': { '@type': 'Answer', 'text': '安価なモデルを使用（GPT-5.5 Mini：$0.15/100万トークン vs GPT-5.5：$2.50）。バッチ処理とプロンプトキャッシュを活用。高頻度ワークロードはローカルモデルに切り替え。' } },
           { '@type': 'Question', 'name': 'ローカルとクラウドモデルを並行して使用できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。PromptQuorumはローカルOllamaモデルと25以上のクラウドモデルに同時送信し、結果を並べて比較する機能を提供します。' } },
-          { '@type': 'Question', 'name': '日本語業務データにはどちらが適していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'METIのガイドラインでは機密データにはローカルLLMを推奨。QwendいえQwen2.5 7BはOllamaで日本語に最適化。APPIへの準拠のため、クラウドAPIはデータ処理場所を確認してください。' } },
-          { '@type': 'Question', 'name': 'Qwen2.5は日本語に対応していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Qwen2.5 7B/14Bは日本語で優れたパフォーマンスを発揮します。ollama run qwen2.5:7bで実行可能。Llamaと比較して日本語処理が30〜40%効率的です。' } },
+          { '@type': 'Question', 'name': '日本語業務データにはどちらが適していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'METIのガイドラインでは機密データにはローカルLLMを推奨。QwendいえQwen3 7BはOllamaで日本語に最適化。APPIへの準拠のため、クラウドAPIはデータ処理場所を確認してください。' } },
+          { '@type': 'Question', 'name': 'Qwen3は日本語に対応していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Qwen3 7B/14Bは日本語で優れたパフォーマンスを発揮します。ollama run qwen2.5:7bで実行可能。Llamaと比較して日本語処理が30〜40%効率的です。' } },
         ],
       },
       supplementalSchema: {
@@ -1317,9 +1317,9 @@ schema: {
             '**在AI推理的选择中，不同国家和地区的数据法规直接影响企业的合规要求。**',
           ],
           items: [
-            '**中国（数据安全法）：** 根据中国《个人信息保护法》（PIPL，2021年）和《数据安全法》（2021年），将个人数据跨境传输给境外云端提供商需要监管审批。对于大多数中国企业，本地LLM不仅是优选 -- 处理敏感数据时在法律上是必要的。境外云端API（OpenAI、Anthropic）需要进行PIPL影响评估。部署本地Qwen2.5可完全避免上述要求。国产模型（通义千问/Qwen2.5、文心等）专为中文优化，本地部署可同时满足数据主权和推理效率的双重需求。',
+            '**中国（数据安全法）：** 根据中国《个人信息保护法》（PIPL，2021年）和《数据安全法》（2021年），将个人数据跨境传输给境外云端提供商需要监管审批。对于大多数中国企业，本地LLM不仅是优选 -- 处理敏感数据时在法律上是必要的。境外云端API（OpenAI、Anthropic）需要进行PIPL影响评估。部署本地Qwen3可完全避免上述要求。国产模型（通义千问/Qwen3、文心等）专为中文优化，本地部署可同时满足数据主权和推理效率的双重需求。',
             '**亚太地区（数据跨境）：** 亚太地区各国的数据本地化框架日益严格。新加坡PDPA、韩国PIPA、澳大利亚隐私法均要求对跨境数据传输进行评估。金融、医疗和法律行业通常需要数据在境内处理。本地LLM通过确保数据完全留在基础设施内，简化了合规流程。对于在多个亚太国家运营的企业，本地推理是最稳健的数据治理策略。',
-            '**企业部署：** 对于中国银行、医院、律所等大型企业，本地LLM部署结合私有化部署方案可满足：数据不出境要求、行业监管合规（如金融行业数据安全指引）、内部知识产权保护。推荐模型：Qwen2.5 72B（阿里云开源）适合中文企业场景，可在配备2-4张NVIDIA A100的服务器上运行。',
+            '**企业部署：** 对于中国银行、医院、律所等大型企业，本地LLM部署结合私有化部署方案可满足：数据不出境要求、行业监管合规（如金融行业数据安全指引）、内部知识产权保护。推荐模型：Qwen3 72B（阿里云开源）适合中文企业场景，可在配备2-4张NVIDIA A100的服务器上运行。',
           ],
         },
         relatedReading: {
@@ -1348,7 +1348,7 @@ schema: {
             },
             {
               q: '本地70B模型比GPT-5.5 Mini更好吗？',
-              a: '在2026年的大多数基准测试中，是的 -- Meta Llama 3.3 70B和Qwen2.5 72B在标准推理和编程任务上的得分高于GPT-5.5 Mini。但70B模型需要40-48 GB内存，大多数消费级硬件难以满足。实用的本地使用通常在7B-13B范围内。',
+              a: '在2026年的大多数基准测试中，是的 -- Meta Llama 3.3 70B和Qwen3 72B在标准推理和编程任务上的得分高于GPT-5.5 Mini。但70B模型需要40-48 GB内存，大多数消费级硬件难以满足。实用的本地使用通常在7B-13B范围内。',
             },
             {
               q: '在本地运行7B模型需要什么硬件？',
@@ -1375,8 +1375,8 @@ schema: {
               a: '根据《个人信息保护法》（PIPL），将中国公民的个人数据传输给境外云端提供商需要通过国家网信办的安全评估或标准合同。大多数情况下，本地LLM部署通过确保数据完全留在境内基础设施，是最简单的合规方案。境外API还需要审查数据处理协议是否符合《数据安全法》要求。',
             },
             {
-              q: 'Qwen2.5适合中文业务场景吗？',
-              a: '非常适合。Qwen2.5（通义千问2.5）是阿里云开源的多语言模型，对中文进行了深度优化。7B版本可在消费级GPU上运行（8 GB VRAM），72B版本适合企业服务器部署。相比Llama系列，Qwen2.5在中文理解和生成方面具有显著优势。通过Ollama下载：ollama run qwen2.5:7b。',
+              q: 'Qwen3适合中文业务场景吗？',
+              a: '非常适合。Qwen3（通义千问2.5）是阿里云开源的多语言模型，对中文进行了深度优化。7B版本可在消费级GPU上运行（8 GB VRAM），72B版本适合企业服务器部署。相比Llama系列，Qwen3在中文理解和生成方面具有显著优势。通过Ollama下载：ollama run qwen2.5:7b。',
             },
           ],
         },
@@ -1423,14 +1423,14 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': '可以在同一应用中切换本地和云端模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。Ollama和LM Studio在localhost上公开OpenAI兼容REST API。将base URL指向localhost:11434（Ollama）或localhost:1234（LM Studio）即可无需更改代码使用本地模型。' } },
           { '@type': 'Question', 'name': '云端API提供商会用我的提示词训练吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '付费API层级的大多数提供商默认将API客户排除在训练数据收集之外。免费层级通常使用输入进行改进。请核实您使用的特定层级的当前数据政策。' } },
-          { '@type': 'Question', 'name': '本地70B模型比GPT-5.5 Mini更好吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '大多数基准测试中是的 -- Llama 3.3 70B和Qwen2.5 72B在推理和编程任务上超越GPT-5.5 Mini。但70B模型需要40-48 GB内存，大多数消费级硬件难以满足。' } },
+          { '@type': 'Question', 'name': '本地70B模型比GPT-5.5 Mini更好吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '大多数基准测试中是的 -- Llama 3.3 70B和Qwen3 72B在推理和编程任务上超越GPT-5.5 Mini。但70B模型需要40-48 GB内存，大多数消费级硬件难以满足。' } },
           { '@type': 'Question', 'name': '运行7B模型需要什么硬件？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 4070 Ti（12 GB，~80 token/秒）、RTX 4090（24 GB，~130 token/秒）或Apple M3 Pro（18 GB，~60 token/秒）。Q4量化后VRAM需求约4.7 GB。' } },
           { '@type': 'Question', 'name': '云端API是否符合GDPR要求？', 'acceptedAnswer': { '@type': 'Answer', 'text': '大多数提供商提供GDPR合规层级，但需要选择加入。本地LLM通过将数据完全保留在设备上提供最强保证 -- 无需GDPR第28条的数据处理协议。' } },
           { '@type': 'Question', 'name': '初学者最适合什么本地模型？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3B或8B：体积小（3-8 GB VRAM）、速度快（~50-80 token/秒），质量良好。通过Ollama下载：ollama run llama3.2:3b。' } },
           { '@type': 'Question', 'name': '如何降低云端API成本？', 'acceptedAnswer': { '@type': 'Answer', 'text': '简单任务使用更便宜的模型（GPT-5.5 Mini：$0.15/百万token vs GPT-5.5：$2.50）。批量处理请求。高频工作负载可切换到本地模型。' } },
           { '@type': 'Question', 'name': '可以并行使用本地和云端模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。PromptQuorum让您同时向本地Ollama模型和25+云端模型发送提示词，并排比较结果，将任务路由到最佳模型。' } },
           { '@type': 'Question', 'name': '中国企业使用境外AI API有哪些合规要求？', 'acceptedAnswer': { '@type': 'Answer', 'text': '根据PIPL，将中国公民个人数据传输给境外提供商需要通过国家网信办安全评估或标准合同。本地LLM部署通过确保数据留在境内基础设施是最简单的合规方案。' } },
-          { '@type': 'Question', 'name': 'Qwen2.5适合中文业务场景吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '非常适合。Qwen2.5是阿里云开源模型，对中文深度优化。7B版本可在8 GB VRAM GPU上运行，72B版本适合企业服务器。通过Ollama：ollama run qwen2.5:7b。' } },
+          { '@type': 'Question', 'name': 'Qwen3适合中文业务场景吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '非常适合。Qwen3是阿里云开源模型，对中文深度优化。7B版本可在8 GB VRAM GPU上运行，72B版本适合企业服务器。通过Ollama：ollama run qwen2.5:7b。' } },
         ],
       },
       supplementalSchema: {

@@ -201,7 +201,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'Indirekte Injection über RAG-Dokumente ist in der Produktion häufiger als direkte Benutzereingabe-Injection.',
       'Die Abwehr erfordert 4 Schichten: Input-Filterung, Output-Schema-Validierung, Privilege Separation und Anweisungsisolierung.',
       'PyRIT (Microsoft) ermöglicht Multi-Turn-Red-Teaming, das Single-Turn-Scanner wie Garak nicht replizieren können.',
-      'PromptQuorum führt dieselben Angriffstests über GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro durch, um modellspezifische Schwachstellen zu erkennen.',
+      'PromptQuorum führt dieselben Angriffstests über GPT-5.5, Claude 4.6 Sonnet und Gemini 2.5 Pro durch, um modellspezifische Schwachstellen zu erkennen.',
     ],
     toc: [
       { label: 'Was Prompt-Injection ist', anchor: 'what_is_injection' },
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Vier Tools decken Prompt-Sicherheitstests ab: Garak (Open Source), PyRIT (Open Source), manuelle Red-Teaming-Checklisten und PromptQuorum (Cross-Model-Vergleich).** Alle Open-Source-Tools sind kostenlos.',
           'Garak ist eine Open-Source-Bibliothek für adversarielle Proben. Sie enthält Proben für Prompt-Injection, Datenlecks, Jailbreaks und Toxizität und läuft über die CLI. Verwenden Sie Garak für automatische Abdeckung bekannter Angriffsmuster.',
           'PyRIT (Python Risk Identification Toolkit) ist Microsofts Open-Source-Red-Teaming-Framework mit strukturierter Angriffsorchestration und Zieladaptern für verschiedene LLM-APIs. Verwenden Sie PyRIT für mehrstufige Angriffssequenzen oder benutzerdefinierte Angriffsstrategien.',
-          'PromptQuorum führt dieselben Angriffstests über mehrere Modelle (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) durch. Dies identifiziert, welche Modelle anfälliger für spezifische Angriffsmuster sind, und hilft bei Modellauswahl-Entscheidungen auf Basis des Sicherheitsverhaltens.',
+          'PromptQuorum führt dieselben Angriffstests über mehrere Modelle (GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro) durch. Dies identifiziert, welche Modelle anfälliger für spezifische Angriffsmuster sind, und hilft bei Modellauswahl-Entscheidungen auf Basis des Sicherheitsverhaltens.',
         ],
         callouts: [
           { type: 'tip', label: 'Garak vs. PyRIT', text: 'Garak für breite automatische Abdeckung von 40+ bekannten Angriffsmustern. PyRIT für Tiefe — mehrstufige simulierte Konversationen, die Single-Turn-Scanner verpassen.' },
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'La injection indirecta vía documentos RAG es más común en producción que la injection directa por entrada de usuario.',
       'La defensa requiere 4 capas: filtrado de entrada, aplicación de esquema de salida, separación de privilegios y aislamiento de instrucciones.',
       'PyRIT (Microsoft) permite red-teaming multi-turno que los escáneres de turno único como Garak no pueden replicar.',
-      'PromptQuorum ejecuta los mismos probes de ataque en GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro para detectar vulnerabilidades específicas de cada modelo.',
+      'PromptQuorum ejecuta los mismos probes de ataque en GPT-5.5, Claude 4.6 Sonnet y Gemini 2.5 Pro para detectar vulnerabilidades específicas de cada modelo.',
     ],
     toc: [
       { label: 'Qué es la prompt injection', anchor: 'what_is_injection' },
@@ -443,7 +443,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Cuatro herramientas cubren las pruebas de seguridad de prompts: Garak (open source), PyRIT (open source), listas de verificación de red-teaming manual y PromptQuorum (comparación multi-modelo).** Todas las herramientas open source son gratuitas.',
           'Garak es una biblioteca de probes adversariales open source mantenida por el proyecto Garak. Incluye probes para prompt injection, filtración de datos, jailbreaks y toxicidad. Ejecútala desde la CLI contra cualquier endpoint de API compatible con OpenAI. Usa Garak para cobertura automatizada de patrones de ataque conocidos.',
           'PyRIT (Python Risk Identification Toolkit) es el framework de red-teaming open source de Microsoft. Proporciona orquestación de ataques estructurada, adaptadores de objetivo para diferentes APIs LLM y mecanismos de puntuación. Usa PyRIT cuando necesites ejecutar secuencias de ataque multi-turno o estrategias de ataque personalizadas.',
-          'PromptQuorum ejecuta el mismo conjunto de probes de ataque en múltiples modelos simultáneamente (por ejemplo, GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro). Esto identifica qué modelos son más susceptibles a patrones de ataque específicos y te ayuda a tomar decisiones de selección de modelos basadas en el comportamiento de seguridad, no solo en la calidad de salida.',
+          'PromptQuorum ejecuta el mismo conjunto de probes de ataque en múltiples modelos simultáneamente (por ejemplo, GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro). Esto identifica qué modelos son más susceptibles a patrones de ataque específicos y te ayuda a tomar decisiones de selección de modelos basadas en el comportamiento de seguridad, no solo en la calidad de salida.',
         ],
         callouts: [
           { type: 'tip', label: 'Garak vs PyRIT', text: 'Usa Garak para cobertura automatizada amplia de 40+ patrones de ataque conocidos. Usa PyRIT para profundidad — conversaciones adversariales simuladas multi-turno que los escáneres de turno único no detectan.' },
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'L\'injection indirecte via les documents RAG est plus courante en production que l\'injection directe par entrée utilisateur.',
       'La défense nécessite 4 couches : filtrage des entrées, validation du schéma de sortie, séparation des privilèges et isolation des instructions.',
       'PyRIT (Microsoft) permet le red-teaming multi-tour que les scanners single-turn comme Garak ne peuvent pas répliquer.',
-      'PromptQuorum exécute les mêmes sondes d\'attaque sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro pour détecter les vulnérabilités spécifiques aux modèles.',
+      'PromptQuorum exécute les mêmes sondes d\'attaque sur GPT-5.5, Claude 4.6 Sonnet et Gemini 2.5 Pro pour détecter les vulnérabilités spécifiques aux modèles.',
     ],
     toc: [
       { label: 'Ce qu\'est l\'injection de prompt', anchor: 'what_is_injection' },
@@ -613,7 +613,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Quatre outils couvrent les tests de sécurité des prompts : Garak (open source), PyRIT (open source), des listes de contrôle de red-teaming manuel et PromptQuorum (comparaison multi-modèles).** Tous les outils open source sont gratuits.',
           'Garak est une bibliothèque open source de sondes adversariales. Elle inclut des sondes pour l\'injection de prompt, les fuites de données, les jailbreaks et la toxicité. Utilisez Garak pour la couverture automatisée des schémas d\'attaque connus.',
           'PyRIT (Python Risk Identification Toolkit) est le framework open source de red-teaming de Microsoft avec une orchestration d\'attaques structurée et des adaptateurs cibles pour différentes API LLM. Utilisez PyRIT pour les séquences d\'attaques multi-tours.',
-          'PromptQuorum exécute les mêmes sondes d\'attaque sur plusieurs modèles (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) simultanément pour identifier lesquels sont plus susceptibles à des schémas d\'attaque spécifiques.',
+          'PromptQuorum exécute les mêmes sondes d\'attaque sur plusieurs modèles (GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro) simultanément pour identifier lesquels sont plus susceptibles à des schémas d\'attaque spécifiques.',
         ],
         callouts: [
           { type: 'tip', label: 'Garak vs PyRIT', text: 'Utilisez Garak pour une couverture automatisée large de 40+ schémas d\'attaque connus. Utilisez PyRIT pour la profondeur — des conversations adversariales multi-tours simulées que les scanners single-tour manquent.' },
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'RAGドキュメントによる間接インジェクションは、直接ユーザー入力インジェクションよりも本番環境でより一般的。',
       '防御には4つの層が必要：入力フィルタリング、出力スキーマ強制、特権分離、指示の分離。',
       'PyRIT（Microsoft）はシングルターンスキャナーでは再現できないマルチターンレッドチーミングを可能にする。',
-      'PromptQuorumはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proで同じ攻撃プローブを実行し、モデル固有の脆弱性を検出。',
+      'PromptQuorumはGPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Proで同じ攻撃プローブを実行し、モデル固有の脆弱性を検出。',
     ],
     toc: [
       { label: 'プロンプトインジェクションとは何か', anchor: 'what_is_injection' },
@@ -781,7 +781,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**4つのツールがプロンプトセキュリティテストをカバーします：Garak（オープンソース）、PyRIT（オープンソース）、手動レッドチーミングチェックリスト、PromptQuorum（クロスモデル比較）。** オープンソースツールはすべて無料です。',
           'GarakはLLM向けのオープンソースの敵対的プローブライブラリです。プロンプトインジェクション、データ漏洩、ジェイルブレイク、毒性のプローブが含まれています。既知の攻撃パターンの自動カバレッジにGarakを使用します。',
           'PyRIT（Python Risk Identification Toolkit）はMicrosoftのオープンソースレッドチーミングフレームワークです。構造化された攻撃オーケストレーション、さまざまなLLM APIのターゲットアダプターを提供します。マルチターン攻撃シーケンスにはPyRITを使用します。',
-          'PromptQuorumは複数のモデル（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）で同じ攻撃プローブを実行し、どのモデルが特定の攻撃パターンに対してより脆弱かを特定します。',
+          'PromptQuorumは複数のモデル（GPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Pro）で同じ攻撃プローブを実行し、どのモデルが特定の攻撃パターンに対してより脆弱かを特定します。',
         ],
         callouts: [
           { type: 'tip', label: 'GarakとPyRITの使い分け', text: 'Garakで40以上の既知の攻撃パターンの広範な自動カバレッジ。PyRITで深さ — シングルターンスキャナーでは見逃すマルチターンの模擬敵対的会話。' },
@@ -876,7 +876,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '通过RAG文档的间接注入在生产环境中比直接用户输入注入更常见。',
       '防御需要4层：输入过滤、输出模式强制、特权分离和指令隔离。',
       'PyRIT（微软）支持单轮扫描器无法复制的多轮红队测试。',
-      'PromptQuorum在GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro上运行相同的攻击探针，检测特定模型漏洞。',
+      'PromptQuorum在GPT-5.5、Claude 4.6 Sonnet和Gemini 2.5 Pro上运行相同的攻击探针，检测特定模型漏洞。',
     ],
     toc: [
       { label: '什么是提示词注入', anchor: 'what_is_injection' },
@@ -949,7 +949,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**四种工具涵盖提示词安全测试：Garak（开源）、PyRIT（开源）、手动红队测试清单和PromptQuorum（跨模型比较）。** 所有开源工具均免费。',
           'Garak是一个开源的对抗性探针库。它包含针对提示词注入、数据泄漏、越狱和毒性的探针，通过CLI运行。使用Garak进行已知攻击模式的自动覆盖。',
           'PyRIT（Python风险识别工具包）是微软的开源红队测试框架，具有结构化攻击编排和针对不同LLM API的目标适配器。对于多轮攻击序列使用PyRIT。',
-          'PromptQuorum在多个模型（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）上同时运行相同的攻击探针，识别哪些模型对特定攻击模式更容易受到攻击。',
+          'PromptQuorum在多个模型（GPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Pro）上同时运行相同的攻击探针，识别哪些模型对特定攻击模式更容易受到攻击。',
         ],
         callouts: [
           { type: 'tip', label: 'Garak与PyRIT', text: '使用Garak进行40+已知攻击模式的广泛自动覆盖。使用PyRIT进行深度测试 — 单轮扫描器遗漏的多轮模拟对抗性对话。' },

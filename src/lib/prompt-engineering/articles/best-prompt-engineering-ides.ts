@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Best for API testing and token counting before code',
           'Metered billing: you pay for every token used during exploration',
-          'Model selection: GPT-5.5, GPT-5.5, custom fine-tunes',
+          'Model selection: GPT-5.5, custom fine-tunes',
           'Export to curl/Python/JS with one click',
         ],
         callouts: [
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       regionalContext: {
         id: 'regional-context',
         title: 'Prompt Engineering IDE Availability by Region',
-        content: '**IDE choice depends on where you work and what data privacy requirements apply.** Cloud playgrounds (Cursor, OpenAI Playground, Claude Console, Google AI Studio) send prompts to US-based servers by default. LM Studio and VS Code + local Ollama keep all data on-device.\n\n**EU / GDPR:** Cloud playgrounds require reviewing each provider\'s Data Processing Agreement (DPA) before use with sensitive data. LM Studio and VS Code + Ollama are GDPR-safe for any data — no external transmission.\n\n**Japan / APPI:** Same cloud data transfer considerations apply. Japanese enterprises with APPI compliance requirements are adopting VS Code + local Ollama or LM Studio for internal prompt testing.\n\n**China:** OpenAI Playground and Claude Console are blocked in mainland China. LM Studio with Qwen 2.5 7B (downloaded locally) is the most commonly used alternative for offline development.',
+        content: '**IDE choice depends on where you work and what data privacy requirements apply.** Cloud playgrounds (Cursor, OpenAI Playground, Claude Console, Google AI Studio) send prompts to US-based servers by default. LM Studio and VS Code + local Ollama keep all data on-device.\n\n**EU / GDPR:** Cloud playgrounds require reviewing each provider\'s Data Processing Agreement (DPA) before use with sensitive data. LM Studio and VS Code + Ollama are GDPR-safe for any data — no external transmission.\n\n**Japan / APPI:** Same cloud data transfer considerations apply. Japanese enterprises with APPI compliance requirements are adopting VS Code + local Ollama or LM Studio for internal prompt testing.\n\n**China:** OpenAI Playground and Claude Console are blocked in mainland China. LM Studio with Qwen 3 7B (downloaded locally) is the most commonly used alternative for offline development.',
       },
       relatedReading: {
         id: 'related-reading',
@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor: KI-native IDE',
           url: 'https://cursor.sh',
-          description: 'VS Code-Fork mit integriertem KI-Chat, Modellwechsel (GPT-4o, Claude, Gemini) und codebasisbewusstem Kontext. Ideal für Entwickler, die sowohl Prompts als auch Anwendungscode schreiben. Kostenloser Tarif oder 20 €/Monat.',
+          description: 'VS Code-Fork mit integriertem KI-Chat, Modellwechsel (GPT-5.5, Claude, Gemini) und codebasisbewusstem Kontext. Ideal für Entwickler, die sowohl Prompts als auch Anwendungscode schreiben. Kostenloser Tarif oder 20 €/Monat.',
         },
         {
           '@type': 'ListItem',
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: 'Was macht eine gute Prompt-Engineering-IDE aus?',
-        content: '**Eine gute Prompt-IDE minimiert die Reibung zwischen Idee und Umsetzung.** Sie sollten in der Lage sein, Modelle in Sekunden zu wechseln, Ergebnisse sofort zu sehen, Token-Zahlen einzusehen, den Prompt-Verlauf zu speichern und in Code zu exportieren, ohne das Tool zu verlassen.\n\nWichtige Kriterien bei der Bewertung:\n\n- **Modellwechsel:** Können Sie denselben Prompt in einem Tool mit GPT-4o, Claude und Gemini testen?\n- **Playground-Modus:** Können Sie Prompts ohne Code ausführen?\n- **Token-Zähler:** Zeigt das Tool den Token-Verbrauch vor der Ausführung an? (Token-Kosten summieren sich — erfahren Sie, wie Sie [Prompts kostenoptimiert gestalten](/de/prompt-engineering/optimize-prompts-for-cost).)\n- **Prompt-Verlauf:** Können Sie zu früheren Versionen zurückkehren, ohne manuelle Sicherungsdateien anlegen zu müssen?\n- **Code-Export:** Können Sie einen funktionierenden Prompt in das Python/JS/API-Format konvertieren?\n- **Kostentransparenz:** Können Sie die Kosten pro Anfrage während der Erkundung einsehen?\n\nStand April 2026 erfüllt keine einzelne IDE alle sechs Kriterien vollständig. Entwickler wählen je nach Workflow: Cursor für Entwicklungsgeschwindigkeit, Playground für API-Erkundung, Console für modellspezifischen Fokus, LM Studio für den Offline-Betrieb.',
+        content: '**Eine gute Prompt-IDE minimiert die Reibung zwischen Idee und Umsetzung.** Sie sollten in der Lage sein, Modelle in Sekunden zu wechseln, Ergebnisse sofort zu sehen, Token-Zahlen einzusehen, den Prompt-Verlauf zu speichern und in Code zu exportieren, ohne das Tool zu verlassen.\n\nWichtige Kriterien bei der Bewertung:\n\n- **Modellwechsel:** Können Sie denselben Prompt in einem Tool mit GPT-5.5, Claude und Gemini testen?\n- **Playground-Modus:** Können Sie Prompts ohne Code ausführen?\n- **Token-Zähler:** Zeigt das Tool den Token-Verbrauch vor der Ausführung an? (Token-Kosten summieren sich — erfahren Sie, wie Sie [Prompts kostenoptimiert gestalten](/de/prompt-engineering/optimize-prompts-for-cost).)\n- **Prompt-Verlauf:** Können Sie zu früheren Versionen zurückkehren, ohne manuelle Sicherungsdateien anlegen zu müssen?\n- **Code-Export:** Können Sie einen funktionierenden Prompt in das Python/JS/API-Format konvertieren?\n- **Kostentransparenz:** Können Sie die Kosten pro Anfrage während der Erkundung einsehen?\n\nStand April 2026 erfüllt keine einzelne IDE alle sechs Kriterien vollständig. Entwickler wählen je nach Workflow: Cursor für Entwicklungsgeschwindigkeit, Playground für API-Erkundung, Console für modellspezifischen Fokus, LM Studio für den Offline-Betrieb.',
         snippets: [
           { type: 'in-one-sentence', text: 'Eine Prompt-Engineering-IDE ist jedes Tool, mit dem Sie Prompts schreiben, testen und iterieren können, ohne in ein Terminal oder einen separaten API-Client wechseln zu müssen.' },
         ],
@@ -448,12 +448,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       cursor: {
         id: 'cursor-ai-native',
         title: 'Cursor: KI-native Code- und Prompt-IDE',
-        content: '**Cursor ist ein VS Code-Fork, der für KI-gestützte Entwicklung optimiert ist.** Der integrierte Chat ermöglicht es Ihnen, in der Seitenleiste Prompts zu erstellen, während Sie im Editor programmieren. Sie können einen Prompt schreiben, Code daraus generieren und beides gleichzeitig verfeinern. Erstklassige Unterstützung für GPT-4o, Claude, Gemini — Modelle können mitten in einer Konversation gewechselt werden. Kombinieren Sie Cursor mit einer [Prompt-Management-Plattform](/de/prompt-engineering/best-prompt-management-platforms), um Prompts projektübergreifend zu versionieren.',
+        content: '**Cursor ist ein VS Code-Fork, der für KI-gestützte Entwicklung optimiert ist.** Der integrierte Chat ermöglicht es Ihnen, in der Seitenleiste Prompts zu erstellen, während Sie im Editor programmieren. Sie können einen Prompt schreiben, Code daraus generieren und beides gleichzeitig verfeinern. Erstklassige Unterstützung für GPT-5.5, Claude, Gemini — Modelle können mitten in einer Konversation gewechselt werden. Kombinieren Sie Cursor mit einer [Prompt-Management-Plattform](/de/prompt-engineering/best-prompt-management-platforms), um Prompts projektübergreifend zu versionieren.',
         numberedItems: [
           'Bestens geeignet, wenn Sie sowohl Prompts als auch Anwendungscode schreiben',
           'Enthält codebasisbewussten Kontext (liest Ihre Projektdateien)',
           'Preise: Kostenloser Tarif (eingeschränkt), 20 €/Monat für unbegrenzte Nutzung',
-          'Latenz: Abhängig vom gewählten Modell (GPT-4o ~1–2 Sek., Claude ~2–3 Sek.)',
+          'Latenz: Abhängig vom gewählten Modell (GPT-5.5 ~1–2 Sek., Claude ~2–3 Sek.)',
         ],
         callouts: [
           { type: 'warning', label: 'DSGVO-Hinweis', text: 'Cursor ist ausschließlich cloudbasiert — alle Prompts werden an Server von Anthropic, OpenAI oder Google übertragen (in der Regel in den USA). Bei der Verarbeitung personenbezogener oder vertraulicher Daten ist gemäß DSGVO Artikel 28 ein Auftragsverarbeitungsvertrag (AVV) mit dem jeweiligen Anbieter erforderlich. Überprüfen Sie die Datenschutzerklärungen und AVVs der Anbieter, bevor Sie sensible Daten verarbeiten. Für vollständig DSGVO-konforme Workflows ohne externe Datenübertragung empfehlen sich LM Studio oder VS Code + Ollama.' },
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       continueVscode: {
         id: 'vscode-continue',
         title: 'VS Code + Continue.dev: Open-Source, Multi-Modell',
-        content: '**Continue ist eine Open-Source-VS Code-Erweiterung, die jedes LLM in Ihren Code-Editor bringt.** Unterstützt GPT-4o, Claude, Gemini sowie lokale Modelle über Ollama. Schreiben Sie einen Prompt, drücken Sie Tab, und das Modell vervollständigt den Code automatisch. Kein Vendor-Lock-in. Community-gepflegt, vollständig transparent. Erstellen Sie parallel eine [Prompt-Bibliothek](/de/prompt-engineering/build-a-prompt-library), um Ihre besten Prompts wiederzuverwenden und zu versionieren.',
+        content: '**Continue ist eine Open-Source-VS Code-Erweiterung, die jedes LLM in Ihren Code-Editor bringt.** Unterstützt GPT-5.5, Claude, Gemini sowie lokale Modelle über Ollama. Schreiben Sie einen Prompt, drücken Sie Tab, und das Modell vervollständigt den Code automatisch. Kein Vendor-Lock-in. Community-gepflegt, vollständig transparent. Erstellen Sie parallel eine [Prompt-Bibliothek](/de/prompt-engineering/build-a-prompt-library), um Ihre besten Prompts wiederzuverwenden und zu versionieren.',
         numberedItems: [
           'Bestens geeignet für Entwickler, die Open-Source- und lokale Modellunterstützung benötigen',
           'Unterstützt lokales Ollama, vLLM und Cloud-APIs in einer einzigen IDE',
@@ -476,15 +476,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       openAIPlayground: {
         id: 'openai-playground',
         title: 'OpenAI Playground: API-Erkundung und Tests',
-        content: '**OpenAI Playground ist ein webbasierter Editor zum Testen von GPT-4o und anderen OpenAI-Modellen.** Der Token-Zähler zeigt den Verbrauch in Echtzeit an. Exportieren Sie Playground-Einstellungen in API-Code (curl, Python, JavaScript). Entwickelt für die API-Erkundung vor dem Produktiveinsatz.',
+        content: '**OpenAI Playground ist ein webbasierter Editor zum Testen von GPT-5.5 und anderen OpenAI-Modellen.** Der Token-Zähler zeigt den Verbrauch in Echtzeit an. Exportieren Sie Playground-Einstellungen in API-Code (curl, Python, JavaScript). Entwickelt für die API-Erkundung vor dem Produktiveinsatz.',
         numberedItems: [
           'Bestens geeignet für API-Tests und Token-Zählung vor der Code-Implementierung',
           'Verbrauchsabhängige Abrechnung: Sie zahlen für jeden im Rahmen der Erkundung genutzten Token',
-          'Modellauswahl: GPT-4o, GPT-4 Turbo, GPT-3.5, individuelle Fine-Tunes',
+          'Modellauswahl: GPT-5.5, GPT-4o mini, individuelle Fine-Tunes',
           'Export nach curl/Python/JS mit einem Klick',
         ],
         callouts: [
-          { type: 'warning', label: 'Warnung', text: 'Playground-Token werden zum gleichen Tarif wie Produktions-API-Aufrufe abgerechnet. Ein einzelner komplexer Prompt mit Few-Shot-Beispielen kann bei GPT-4o-Preisen $0,10–$0,50 pro Ausführung kosten. Beachten Sie: OpenAI stellt Rechnungen in USD — unabhängig vom Standort des Nutzers. Überwachen Sie den Token-Zähler vor jeder Ausführung.' },
+          { type: 'warning', label: 'Warnung', text: 'Playground-Token werden zum gleichen Tarif wie Produktions-API-Aufrufe abgerechnet. Ein einzelner komplexer Prompt mit Few-Shot-Beispielen kann bei GPT-5.5-Preisen $0,10–$0,50 pro Ausführung kosten. Beachten Sie: OpenAI stellt Rechnungen in USD — unabhängig vom Standort des Nutzers. Überwachen Sie den Token-Zähler vor jeder Ausführung.' },
         ],
       },
       anthropicConsole: {
@@ -529,8 +529,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**Stand April 2026 sieht die Übersicht wie folgt aus.** In unseren Workflow-Tests dauerte die Einrichtung von Cloud-Playground-Umgebungen für Erstnutzer im Durchschnitt unter 2 Minuten, während LM Studio bei der ersten Installation etwa 45 Minuten benötigte (einschließlich Modell-Download). Anschließende Modell-Downloads dauerten zwischen 10 Minuten (7B Q4, ~4 GB) und über 90 Minuten (70B Q4, ~40 GB).',
         columns: ['IDE', 'Typ', 'Multi-Modell', 'Lokale Modelle', 'Token-Zähler', 'Prompt-Verlauf', 'Code-Export', 'Offline', 'Preis', 'Am besten für'],
         rows: [
-          { IDE: 'Cursor', Typ: 'Desktop-IDE', 'Multi-Modell': 'GPT-4o, Claude, Gemini', 'Lokale Modelle': 'Nein', 'Token-Zähler': 'Über API', 'Prompt-Verlauf': 'Ja (Chat)', 'Code-Export': 'Ja', Offline: 'Nein', Preis: 'Kostenlos / 20 €/Monat', 'Am besten für': 'Entwicklung von App + Prompts' },
-          { IDE: 'VS Code + Continue', Typ: 'Desktop-IDE + Erw.', 'Multi-Modell': 'GPT-4o, Claude, Gemini, lokal', 'Lokale Modelle': 'Ja (Ollama)', 'Token-Zähler': 'Abhängig vom Anbieter', 'Prompt-Verlauf': 'Manuell', 'Code-Export': 'Ja', Offline: 'Ja (lokal)', Preis: 'Kostenlos (MIT)', 'Am besten für': 'Multi-Modell + Open-Source' },
+          { IDE: 'Cursor', Typ: 'Desktop-IDE', 'Multi-Modell': 'GPT-5.5, Claude, Gemini', 'Lokale Modelle': 'Nein', 'Token-Zähler': 'Über API', 'Prompt-Verlauf': 'Ja (Chat)', 'Code-Export': 'Ja', Offline: 'Nein', Preis: 'Kostenlos / 20 €/Monat', 'Am besten für': 'Entwicklung von App + Prompts' },
+          { IDE: 'VS Code + Continue', Typ: 'Desktop-IDE + Erw.', 'Multi-Modell': 'GPT-5.5, Claude, Gemini, lokal', 'Lokale Modelle': 'Ja (Ollama)', 'Token-Zähler': 'Abhängig vom Anbieter', 'Prompt-Verlauf': 'Manuell', 'Code-Export': 'Ja', Offline: 'Ja (lokal)', Preis: 'Kostenlos (MIT)', 'Am besten für': 'Multi-Modell + Open-Source' },
           { IDE: 'OpenAI Playground', Typ: 'Web-Playground', 'Multi-Modell': 'Nur OpenAI', 'Lokale Modelle': 'Nein', 'Token-Zähler': 'Integriert, Echtzeit', 'Prompt-Verlauf': 'Ja', 'Code-Export': 'Ja (curl/Python/JS)', Offline: 'Nein', Preis: 'Pay-per-Token', 'Am besten für': 'API-Erkundung' },
           { IDE: 'Claude Console', Typ: 'Web-Playground', 'Multi-Modell': 'Nur Claude', 'Lokale Modelle': 'Nein', 'Token-Zähler': 'Integriert', 'Prompt-Verlauf': 'Ja', 'Code-Export': 'Ja (Python/JS)', Offline: 'Nein', Preis: 'Pay-per-Token', 'Am besten für': 'Claude-spezifisch' },
           { IDE: 'Google AI Studio', Typ: 'Web-Playground', 'Multi-Modell': 'Gemini-Varianten', 'Lokale Modelle': 'Nein', 'Token-Zähler': 'Nicht angezeigt', 'Prompt-Verlauf': 'Ja', 'Code-Export': 'Ja (Python/JS/curl)', Offline: 'Nein', Preis: 'Kostenloses Kontingent', 'Am besten für': 'Gemini + Multimodal' },
@@ -566,7 +566,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       regionalContext: {
         id: 'regional-context',
         title: 'Regionale Verfügbarkeit von Prompt-Engineering-IDEs',
-        content: '**Die IDE-Wahl hängt davon ab, wo Sie arbeiten und welche Datenschutzanforderungen gelten.** Cloud-Playground-Umgebungen (Cursor, OpenAI Playground, Claude Console, Google AI Studio) übertragen Prompts standardmäßig an US-amerikanische Server. LM Studio und VS Code + lokales Ollama halten alle Daten auf dem eigenen Gerät.\n\n**EU / DSGVO:** Cloud-Playground-Umgebungen erfordern vor der Nutzung mit sensiblen Daten die Prüfung des Auftragsverarbeitungsvertrags (AVV) des jeweiligen Anbieters gemäß DSGVO Artikel 28. LM Studio und VS Code + Ollama sind für jede Art von Daten DSGVO-konform — es findet keine externe Übertragung statt. Das BSI empfiehlt in seinen Grundschutz-Katalogen für sicherheitskritische Umgebungen den Einsatz lokal ausgeführter Modelle, um Datensouveränität und Compliance sicherzustellen. Für DACH-Unternehmen (Deutschland, Österreich, Schweiz) mit besonders schützenswerten Daten (Gesundheit, Finanzen, Recht) ist LM Studio die empfohlene Offline-Lösung.\n\n**Japan / APPI:** Es gelten dieselben Überlegungen zur Cloud-Datenübertragung. Japanische Unternehmen mit APPI-Compliance-Anforderungen setzen zunehmend auf VS Code + lokales Ollama oder LM Studio für interne Prompt-Tests.\n\n**China:** OpenAI Playground und Claude Console sind in der Volksrepublik China blockiert. LM Studio mit Qwen 2.5 7B (lokal heruntergeladen) ist die am häufigsten genutzte Alternative für den Offline-Einsatz.',
+        content: '**Die IDE-Wahl hängt davon ab, wo Sie arbeiten und welche Datenschutzanforderungen gelten.** Cloud-Playground-Umgebungen (Cursor, OpenAI Playground, Claude Console, Google AI Studio) übertragen Prompts standardmäßig an US-amerikanische Server. LM Studio und VS Code + lokales Ollama halten alle Daten auf dem eigenen Gerät.\n\n**EU / DSGVO:** Cloud-Playground-Umgebungen erfordern vor der Nutzung mit sensiblen Daten die Prüfung des Auftragsverarbeitungsvertrags (AVV) des jeweiligen Anbieters gemäß DSGVO Artikel 28. LM Studio und VS Code + Ollama sind für jede Art von Daten DSGVO-konform — es findet keine externe Übertragung statt. Das BSI empfiehlt in seinen Grundschutz-Katalogen für sicherheitskritische Umgebungen den Einsatz lokal ausgeführter Modelle, um Datensouveränität und Compliance sicherzustellen. Für DACH-Unternehmen (Deutschland, Österreich, Schweiz) mit besonders schützenswerten Daten (Gesundheit, Finanzen, Recht) ist LM Studio die empfohlene Offline-Lösung.\n\n**Japan / APPI:** Es gelten dieselben Überlegungen zur Cloud-Datenübertragung. Japanische Unternehmen mit APPI-Compliance-Anforderungen setzen zunehmend auf VS Code + lokales Ollama oder LM Studio für interne Prompt-Tests.\n\n**China:** OpenAI Playground und Claude Console sind in der Volksrepublik China blockiert. LM Studio mit Qwen 3 7B (lokal heruntergeladen) ist die am häufigsten genutzte Alternative für den Offline-Einsatz.',
       },
       relatedReading: {
         id: 'related-reading',
@@ -685,7 +685,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor: IDE nativo de IA',
           url: 'https://cursor.sh',
-          description: 'Fork de VS Code con chat de IA integrado, cambio de modelo (GPT-4o, Claude, Gemini) y contexto consciente del código base. Ideal para desarrolladores que escriben tanto prompts como código de aplicación. Tier gratuito o $20/mes.',
+          description: 'Fork de VS Code con chat de IA integrado, cambio de modelo (GPT-5.5, Claude, Gemini) y contexto consciente del código base. Ideal para desarrolladores que escriben tanto prompts como código de aplicación. Tier gratuito o $20/mes.',
         },
         {
           '@type': 'ListItem',
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: '¿Qué hace un buen IDE de prompt engineering?',
-        content: '**Un buen IDE de prompts minimiza la fricción entre la idea y la ejecución.** Deberías poder cambiar de modelo en segundos, ver los resultados inmediatamente, ver los conteos de tokens, guardar el historial de prompts y exportar a código sin salir de la herramienta.\n\nCaracterísticas clave a evaluar:\n\n- **Cambio de modelo:** ¿Puedes testear el mismo prompt en GPT-4o, Claude y Gemini en una sola herramienta?\n- **Modo playground:** ¿Puedes ejecutar prompts sin escribir código?\n- **Contador de tokens:** ¿Muestra los tokens consumidos antes de confirmar? (Los costes de tokens se acumulan — aprende a [optimizar prompts por coste](/es/prompt-engineering/optimize-prompts-for-cost).)\n- **Historial de prompts:** ¿Puedes volver a versiones anteriores sin archivos de guardado manuales?\n- **Exportar a código:** ¿Puedes convertir un prompt que funciona al formato Python/JS/API?\n- **Visibilidad de coste:** ¿Puedes ver el coste por petición durante la exploración?\n\nA abril de 2026, ningún IDE único domina los seis criterios. Los desarrolladores eligen según el flujo de trabajo: Cursor para velocidad de desarrollo, Playground para exploración de API, Console para foco en un modelo específico, LM Studio para trabajo offline.',
+        content: '**Un buen IDE de prompts minimiza la fricción entre la idea y la ejecución.** Deberías poder cambiar de modelo en segundos, ver los resultados inmediatamente, ver los conteos de tokens, guardar el historial de prompts y exportar a código sin salir de la herramienta.\n\nCaracterísticas clave a evaluar:\n\n- **Cambio de modelo:** ¿Puedes testear el mismo prompt en GPT-5.5, Claude y Gemini en una sola herramienta?\n- **Modo playground:** ¿Puedes ejecutar prompts sin escribir código?\n- **Contador de tokens:** ¿Muestra los tokens consumidos antes de confirmar? (Los costes de tokens se acumulan — aprende a [optimizar prompts por coste](/es/prompt-engineering/optimize-prompts-for-cost).)\n- **Historial de prompts:** ¿Puedes volver a versiones anteriores sin archivos de guardado manuales?\n- **Exportar a código:** ¿Puedes convertir un prompt que funciona al formato Python/JS/API?\n- **Visibilidad de coste:** ¿Puedes ver el coste por petición durante la exploración?\n\nA abril de 2026, ningún IDE único domina los seis criterios. Los desarrolladores eligen según el flujo de trabajo: Cursor para velocidad de desarrollo, Playground para exploración de API, Console para foco en un modelo específico, LM Studio para trabajo offline.',
         snippets: [
           { type: 'in-one-sentence', text: 'Un IDE de prompt engineering es cualquier herramienta donde puedes escribir, testear e iterar sobre prompts sin cambiar a un terminal o cliente API separado.' },
         ],
@@ -751,12 +751,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       cursor: {
         id: 'cursor-ai-native',
         title: 'Cursor: IDE nativo de IA para código + prompts',
-        content: '**Cursor es un fork de VS Code optimizado para desarrollo asistido por IA.** El chat integrado te permite hacer prompts en la barra lateral mientras codificas en el editor. Puedes escribir un prompt, generar código a partir de él y refinar ambos simultáneamente. Soporte de primera clase para GPT-4o, Claude, Gemini — cambia de modelo a mitad de conversación. Combina Cursor con una [plataforma de gestión de prompts](/es/prompt-engineering/best-prompt-management-platforms) para versionar prompts entre proyectos.',
+        content: '**Cursor es un fork de VS Code optimizado para desarrollo asistido por IA.** El chat integrado te permite hacer prompts en la barra lateral mientras codificas en el editor. Puedes escribir un prompt, generar código a partir de él y refinar ambos simultáneamente. Soporte de primera clase para GPT-5.5, Claude, Gemini — cambia de modelo a mitad de conversación. Combina Cursor con una [plataforma de gestión de prompts](/es/prompt-engineering/best-prompt-management-platforms) para versionar prompts entre proyectos.',
         numberedItems: [
           'Ideal si escribes tanto prompts como código de aplicación',
           'Incluye contexto consciente del código base (lee los archivos de tu proyecto)',
           'Precios: Tier gratuito (limitado), $20/mes para uso ilimitado',
-          'Latencia: Depende del modelo seleccionado (GPT-4o ~1-2s, Claude ~2-3s)',
+          'Latencia: Depende del modelo seleccionado (GPT-5.5 ~1-2s, Claude ~2-3s)',
         ],
         callouts: [
           { type: 'warning', label: 'Aviso', text: 'Cursor es solo en la nube — todos los prompts se envían a servidores de Anthropic, OpenAI o Google. No es adecuado para datos sensibles al GDPR o confidenciales sin revisar el Acuerdo de Procesamiento de Datos de cada proveedor.' },
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       continueVscode: {
         id: 'vscode-continue',
         title: 'VS Code + Continue.dev: Open-source multi-modelo',
-        content: '**Continue es una extensión open-source de VS Code que lleva cualquier LLM a tu editor de código.** Soporta GPT-4o, Claude, Gemini, más modelos locales vía Ollama. Escribe un prompt, pulsa Tab y el modelo autocompleta el código. Sin vendor lock-in. Mantenido por la comunidad, completamente transparente. Construye una [biblioteca de prompts](/es/prompt-engineering/build-a-prompt-library) junto a él para reutilizar y versionar tus mejores prompts.',
+        content: '**Continue es una extensión open-source de VS Code que lleva cualquier LLM a tu editor de código.** Soporta GPT-5.5, Claude, Gemini, más modelos locales vía Ollama. Escribe un prompt, pulsa Tab y el modelo autocompleta el código. Sin vendor lock-in. Mantenido por la comunidad, completamente transparente. Construye una [biblioteca de prompts](/es/prompt-engineering/build-a-prompt-library) junto a él para reutilizar y versionar tus mejores prompts.',
         numberedItems: [
           'Ideal para desarrolladores que quieren soporte open-source y de modelos locales',
           'Soporta Ollama local, vLLM y APIs en la nube en un solo IDE',
@@ -779,15 +779,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       openAIPlayground: {
         id: 'openai-playground',
         title: 'OpenAI Playground: exploración y testing de API',
-        content: '**OpenAI Playground es un editor basado en web para testear GPT-4o y otros modelos de OpenAI.** El contador de tokens muestra el uso en tiempo real. Exporta la configuración del playground a código API (curl, Python, JavaScript). Diseñado para exploración de API antes del despliegue en producción.',
+        content: '**OpenAI Playground es un editor basado en web para testear GPT-5.5 y otros modelos de OpenAI.** El contador de tokens muestra el uso en tiempo real. Exporta la configuración del playground a código API (curl, Python, JavaScript). Diseñado para exploración de API antes del despliegue en producción.',
         numberedItems: [
           'Ideal para testing de API y conteo de tokens antes de escribir código',
           'Facturación metered: pagas por cada token utilizado durante la exploración',
-          'Selección de modelo: GPT-4o, GPT-4 Turbo, GPT-3.5, fine-tunes personalizados',
+          'Selección de modelo: GPT-5.5, GPT-4o mini, fine-tunes personalizados',
           'Exportar a curl/Python/JS con un clic',
         ],
         callouts: [
-          { type: 'warning', label: 'Advertencia', text: 'Los tokens del Playground se facturan a la misma tarifa que las llamadas a la API de producción. Un prompt complejo con ejemplos few-shot puede costar $0.10–$0.50 por ejecución a precios de GPT-4o. Monitoriza el contador de tokens antes de cada ejecución.' },
+          { type: 'warning', label: 'Advertencia', text: 'Los tokens del Playground se facturan a la misma tarifa que las llamadas a la API de producción. Un prompt complejo con ejemplos few-shot puede costar $0.10–$0.50 por ejecución a precios de GPT-5.5. Monitoriza el contador de tokens antes de cada ejecución.' },
         ],
       },
       anthropicConsole: {
@@ -832,8 +832,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**A abril de 2026, este es el desglose.** En nuestras pruebas de flujo de trabajo, la configuración de playgrounds en la nube promedió menos de 2 minutos para usuarios por primera vez, mientras que LM Studio requirió aproximadamente 45 minutos en la primera instalación (incluyendo la descarga del modelo). Las descargas posteriores de modelos oscilaron entre 10 minutos (7B Q4, ~4GB) y más de 90 minutos (70B Q4, ~40GB).',
         columns: ['IDE', 'Tipo', 'Multi-modelo', 'Modelos locales', 'Contador de tokens', 'Historial de prompts', 'Exportar a código', 'Offline', 'Precio', 'Ideal para'],
         rows: [
-          { IDE: 'Cursor', Tipo: 'IDE de escritorio', 'Multi-modelo': 'GPT-4o, Claude, Gemini', 'Modelos locales': 'No', 'Contador de tokens': 'Vía API', 'Historial de prompts': 'Sí (chat)', 'Exportar a código': 'Sí', Offline: 'No', Precio: 'Gratis / $20/mes', 'Ideal para': 'Dev que construye app+prompts' },
-          { IDE: 'VS Code + Continue', Tipo: 'IDE escritorio + ext.', 'Multi-modelo': 'GPT-4o, Claude, Gemini, local', 'Modelos locales': 'Sí (Ollama)', 'Contador de tokens': 'Depende del proveedor', 'Historial de prompts': 'Manual', 'Exportar a código': 'Sí', Offline: 'Sí (local)', Precio: 'Gratis (MIT)', 'Ideal para': 'Multi-modelo + open-source' },
+          { IDE: 'Cursor', Tipo: 'IDE de escritorio', 'Multi-modelo': 'GPT-5.5, Claude, Gemini', 'Modelos locales': 'No', 'Contador de tokens': 'Vía API', 'Historial de prompts': 'Sí (chat)', 'Exportar a código': 'Sí', Offline: 'No', Precio: 'Gratis / $20/mes', 'Ideal para': 'Dev que construye app+prompts' },
+          { IDE: 'VS Code + Continue', Tipo: 'IDE escritorio + ext.', 'Multi-modelo': 'GPT-5.5, Claude, Gemini, local', 'Modelos locales': 'Sí (Ollama)', 'Contador de tokens': 'Depende del proveedor', 'Historial de prompts': 'Manual', 'Exportar a código': 'Sí', Offline: 'Sí (local)', Precio: 'Gratis (MIT)', 'Ideal para': 'Multi-modelo + open-source' },
           { IDE: 'OpenAI Playground', Tipo: 'Playground web', 'Multi-modelo': 'Solo OpenAI', 'Modelos locales': 'No', 'Contador de tokens': 'Integrado, tiempo real', 'Historial de prompts': 'Sí', 'Exportar a código': 'Sí (curl/Python/JS)', Offline: 'No', Precio: 'Pago por token', 'Ideal para': 'Exploración de API' },
           { IDE: 'Claude Console', Tipo: 'Playground web', 'Multi-modelo': 'Solo Claude', 'Modelos locales': 'No', 'Contador de tokens': 'Integrado', 'Historial de prompts': 'Sí', 'Exportar a código': 'Sí (Python/JS)', Offline: 'No', Precio: 'Pago por token', 'Ideal para': 'Específico de Claude' },
           { IDE: 'Google AI Studio', Tipo: 'Playground web', 'Multi-modelo': 'Variantes de Gemini', 'Modelos locales': 'No', 'Contador de tokens': 'No visible', 'Historial de prompts': 'Sí', 'Exportar a código': 'Sí (Python/JS/curl)', Offline: 'No', Precio: 'Tier gratuito', 'Ideal para': 'Gemini + multimodal' },
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       regionalContext: {
         id: 'regional-context',
         title: 'Disponibilidad regional de IDEs de prompt engineering',
-        content: '**La elección del IDE depende de dónde trabajas y qué requisitos de privacidad de datos aplican.** Los playgrounds en la nube (Cursor, OpenAI Playground, Claude Console, Google AI Studio) envían prompts a servidores en EE.UU. por defecto. LM Studio y VS Code + Ollama local mantienen todos los datos en el dispositivo.\n\n**UE / GDPR:** Los playgrounds en la nube requieren revisar el Acuerdo de Procesamiento de Datos (DPA) de cada proveedor antes de usar con datos sensibles. LM Studio y VS Code + Ollama son seguros para cualquier dato según el GDPR — sin transmisión externa.\n\n**Japón / APPI:** Se aplican las mismas consideraciones de transferencia de datos en la nube. Las empresas japonesas con requisitos de cumplimiento APPI están adoptando VS Code + Ollama local o LM Studio para testing interno de prompts.\n\n**China:** OpenAI Playground y Claude Console están bloqueados en China continental. LM Studio con Qwen 2.5 7B (descargado localmente) es la alternativa más utilizada para desarrollo offline.',
+        content: '**La elección del IDE depende de dónde trabajas y qué requisitos de privacidad de datos aplican.** Los playgrounds en la nube (Cursor, OpenAI Playground, Claude Console, Google AI Studio) envían prompts a servidores en EE.UU. por defecto. LM Studio y VS Code + Ollama local mantienen todos los datos en el dispositivo.\n\n**UE / GDPR:** Los playgrounds en la nube requieren revisar el Acuerdo de Procesamiento de Datos (DPA) de cada proveedor antes de usar con datos sensibles. LM Studio y VS Code + Ollama son seguros para cualquier dato según el GDPR — sin transmisión externa.\n\n**Japón / APPI:** Se aplican las mismas consideraciones de transferencia de datos en la nube. Las empresas japonesas con requisitos de cumplimiento APPI están adoptando VS Code + Ollama local o LM Studio para testing interno de prompts.\n\n**China:** OpenAI Playground y Claude Console están bloqueados en China continental. LM Studio con Qwen 3 7B (descargado localmente) es la alternativa más utilizada para desarrollo offline.',
       },
       relatedReading: {
         id: 'related-reading',
@@ -986,7 +986,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor : IDE natif IA',
           url: 'https://cursor.sh',
-          description: 'Fork de VS Code avec chat IA intégré, sélection de modèle (GPT-4o, Claude, Gemini) et contexte aware de la base de code. Idéal pour les développeurs écrivant des prompts et du code applicatif. Version gratuite ou 20 €/mois.',
+          description: 'Fork de VS Code avec chat IA intégré, sélection de modèle (GPT-5.5, Claude, Gemini) et contexte aware de la base de code. Idéal pour les développeurs écrivant des prompts et du code applicatif. Version gratuite ou 20 €/mois.',
         },
         {
           '@type': 'ListItem',
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: 'Ce qui fait un bon IDE de prompt engineering',
-        content: '**Un bon IDE de prompt engineering minimise la friction entre idée et exécution.** Vous devez pouvoir changer de modèle en quelques secondes, voir les résultats immédiatement, consulter le nombre de tokens, sauvegarder l\'historique des prompts et exporter en code sans quitter l\'outil.\n\nCritères clés à évaluer :\n\n- **Sélection de modèle :** Pouvez-vous tester le même prompt sur GPT-4o, Claude et Gemini dans un seul outil ?\n- **Mode playground :** Pouvez-vous exécuter des prompts sans écrire de code ?\n- **Compteur de tokens :** Affiche-t-il les tokens consommés avant l\'exécution ? (Les coûts s\'accumulent — découvrez comment [optimiser vos prompts pour réduire les coûts](/fr/prompt-engineering/optimize-prompts-for-cost).)\n- **Historique des prompts :** Pouvez-vous revenir aux versions précédentes sans fichiers de sauvegarde manuels ?\n- **Export en code :** Pouvez-vous convertir un prompt fonctionnel en Python/JS/API ?\n- **Visibilité sur les coûts :** Pouvez-vous voir le coût par requête pendant l\'exploration ?\n\nEn avril 2026, aucun IDE ne remplit les six critères. Les développeurs choisissent selon leur workflow : Cursor pour la vitesse de développement, Playground pour l\'exploration d\'API, Console pour un focus mono-modèle, LM Studio pour le travail hors ligne.',
+        content: '**Un bon IDE de prompt engineering minimise la friction entre idée et exécution.** Vous devez pouvoir changer de modèle en quelques secondes, voir les résultats immédiatement, consulter le nombre de tokens, sauvegarder l\'historique des prompts et exporter en code sans quitter l\'outil.\n\nCritères clés à évaluer :\n\n- **Sélection de modèle :** Pouvez-vous tester le même prompt sur GPT-5.5, Claude et Gemini dans un seul outil ?\n- **Mode playground :** Pouvez-vous exécuter des prompts sans écrire de code ?\n- **Compteur de tokens :** Affiche-t-il les tokens consommés avant l\'exécution ? (Les coûts s\'accumulent — découvrez comment [optimiser vos prompts pour réduire les coûts](/fr/prompt-engineering/optimize-prompts-for-cost).)\n- **Historique des prompts :** Pouvez-vous revenir aux versions précédentes sans fichiers de sauvegarde manuels ?\n- **Export en code :** Pouvez-vous convertir un prompt fonctionnel en Python/JS/API ?\n- **Visibilité sur les coûts :** Pouvez-vous voir le coût par requête pendant l\'exploration ?\n\nEn avril 2026, aucun IDE ne remplit les six critères. Les développeurs choisissent selon leur workflow : Cursor pour la vitesse de développement, Playground pour l\'exploration d\'API, Console pour un focus mono-modèle, LM Studio pour le travail hors ligne.',
         snippets: [
           { type: 'in-one-sentence', text: 'Un IDE de prompt engineering est tout outil permettant d\'écrire, tester et itérer sur des prompts sans passer par un terminal ou un client API séparé.' },
         ],
@@ -1052,12 +1052,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       cursor: {
         id: 'cursor-ai-native',
         title: 'Cursor : IDE natif IA pour le code et les prompts',
-        content: '**Cursor est un fork de VS Code optimisé pour le développement assisté par IA.** Un chat intégré vous permet de rédiger des prompts dans la barre latérale tout en codant dans l\'éditeur. Vous pouvez écrire un prompt, générer du code et affiner les deux simultanément. Support natif pour GPT-4o, Claude, Gemini — changez de modèle en cours de conversation. Associez Cursor à une [plateforme de gestion de prompts](/fr/prompt-engineering/best-prompt-management-platforms) pour versionner vos prompts entre projets.',
+        content: '**Cursor est un fork de VS Code optimisé pour le développement assisté par IA.** Un chat intégré vous permet de rédiger des prompts dans la barre latérale tout en codant dans l\'éditeur. Vous pouvez écrire un prompt, générer du code et affiner les deux simultanément. Support natif pour GPT-5.5, Claude, Gemini — changez de modèle en cours de conversation. Associez Cursor à une [plateforme de gestion de prompts](/fr/prompt-engineering/best-prompt-management-platforms) pour versionner vos prompts entre projets.',
         numberedItems: [
           'Idéal si vous écrivez à la fois des prompts et le code applicatif qui les utilise',
           'Contexte aware de la base de code (lit vos fichiers de projet)',
           'Tarifs : version gratuite (limitée), 20 €/mois pour une utilisation illimitée',
-          'Latence : selon le modèle choisi (GPT-4o ~1–2s, Claude ~2–3s)',
+          'Latence : selon le modèle choisi (GPT-5.5 ~1–2s, Claude ~2–3s)',
         ],
         callouts: [
           { type: 'warning', label: 'Note RGPD', text: 'Cursor est exclusivement cloud — tous les prompts sont envoyés aux serveurs d\'Anthropic, d\'OpenAI ou de Google (généralement aux États-Unis). Non adapté aux données sensibles sans examen préalable du Contrat de traitement des données (DPA) de chaque fournisseur, conformément au RGPD. Pour les workflows entièrement conformes sans transmission externe, optez pour LM Studio ou VS Code + Ollama.' },
@@ -1066,7 +1066,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       continueVscode: {
         id: 'vscode-continue',
         title: 'VS Code + Continue.dev : open source, multi-modèle',
-        content: '**Continue est une extension VS Code open source qui intègre n\'importe quel LLM dans votre éditeur de code.** Supporte GPT-4o, Claude, Gemini et les modèles locaux via Ollama. Saisissez un prompt, appuyez sur Tab, et le modèle complète le code. Pas de vendor lock-in. Maintenu par la communauté, entièrement transparent. Constituez une [bibliothèque de prompts](/fr/prompt-engineering/build-a-prompt-library) en parallèle pour réutiliser et versionner vos meilleurs prompts.',
+        content: '**Continue est une extension VS Code open source qui intègre n\'importe quel LLM dans votre éditeur de code.** Supporte GPT-5.5, Claude, Gemini et les modèles locaux via Ollama. Saisissez un prompt, appuyez sur Tab, et le modèle complète le code. Pas de vendor lock-in. Maintenu par la communauté, entièrement transparent. Constituez une [bibliothèque de prompts](/fr/prompt-engineering/build-a-prompt-library) en parallèle pour réutiliser et versionner vos meilleurs prompts.',
         numberedItems: [
           'Idéal pour les développeurs souhaitant un support open source et des modèles locaux',
           'Supporte Ollama local, vLLM et les API cloud dans un seul IDE',
@@ -1080,15 +1080,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       openAIPlayground: {
         id: 'openai-playground',
         title: 'OpenAI Playground : exploration et tests d\'API',
-        content: '**OpenAI Playground est un éditeur web pour tester GPT-4o et les autres modèles OpenAI.** Le compteur de tokens affiche l\'utilisation en temps réel. Exportez les paramètres du playground en code API (curl, Python, JavaScript). Conçu pour l\'exploration d\'API avant le déploiement en production.',
+        content: '**OpenAI Playground est un éditeur web pour tester GPT-5.5 et les autres modèles OpenAI.** Le compteur de tokens affiche l\'utilisation en temps réel. Exportez les paramètres du playground en code API (curl, Python, JavaScript). Conçu pour l\'exploration d\'API avant le déploiement en production.',
         numberedItems: [
           'Idéal pour les tests d\'API et le comptage de tokens avant de coder',
           'Facturation à la consommation : vous payez chaque token utilisé pendant l\'exploration',
-          'Sélection de modèles : GPT-4o, GPT-4 Turbo, GPT-3.5, fine-tunes personnalisés',
+          'Sélection de modèles : GPT-5.5, GPT-4o mini, fine-tunes personnalisés',
           'Export vers curl/Python/JS en un clic',
         ],
         callouts: [
-          { type: 'warning', label: 'Attention', text: 'Les tokens du Playground sont facturés au même tarif que les appels API de production. Un prompt complexe avec des exemples few-shot peut coûter $0,10–$0,50 par exécution aux tarifs GPT-4o. Note : OpenAI facture en USD quelle que soit votre localisation. Surveillez le compteur de tokens avant chaque exécution.' },
+          { type: 'warning', label: 'Attention', text: 'Les tokens du Playground sont facturés au même tarif que les appels API de production. Un prompt complexe avec des exemples few-shot peut coûter $0,10–$0,50 par exécution aux tarifs GPT-5.5. Note : OpenAI facture en USD quelle que soit votre localisation. Surveillez le compteur de tokens avant chaque exécution.' },
         ],
       },
       anthropicConsole: {
@@ -1133,8 +1133,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**En avril 2026, voici le récapitulatif.** Dans nos tests de workflow, la configuration des environnements cloud a pris en moyenne moins de 2 minutes pour les nouveaux utilisateurs, tandis que LM Studio a nécessité environ 45 minutes à la première installation (téléchargement du modèle inclus). Les téléchargements ultérieurs ont duré de 10 minutes (7B Q4, ~4 Go) à plus de 90 minutes (70B Q4, ~40 Go).',
         columns: ['IDE', 'Type', 'Multi-modèle', 'Modèles locaux', 'Compteur de tokens', 'Historique des prompts', 'Export en code', 'Hors ligne', 'Prix', 'Idéal pour'],
         rows: [
-          { IDE: 'Cursor', Type: 'IDE bureau', 'Multi-modèle': 'GPT-4o, Claude, Gemini', 'Modèles locaux': 'Non', 'Compteur de tokens': 'Via API', 'Historique des prompts': 'Oui (chat)', 'Export en code': 'Oui', 'Hors ligne': 'Non', Prix: 'Gratuit / 20 €/mois', 'Idéal pour': 'Développement app + prompts' },
-          { IDE: 'VS Code + Continue', Type: 'IDE bureau + ext.', 'Multi-modèle': 'GPT-4o, Claude, Gemini, local', 'Modèles locaux': 'Oui (Ollama)', 'Compteur de tokens': 'Selon le fournisseur', 'Historique des prompts': 'Manuel', 'Export en code': 'Oui', 'Hors ligne': 'Oui (local)', Prix: 'Gratuit (MIT)', 'Idéal pour': 'Multi-modèle + open source' },
+          { IDE: 'Cursor', Type: 'IDE bureau', 'Multi-modèle': 'GPT-5.5, Claude, Gemini', 'Modèles locaux': 'Non', 'Compteur de tokens': 'Via API', 'Historique des prompts': 'Oui (chat)', 'Export en code': 'Oui', 'Hors ligne': 'Non', Prix: 'Gratuit / 20 €/mois', 'Idéal pour': 'Développement app + prompts' },
+          { IDE: 'VS Code + Continue', Type: 'IDE bureau + ext.', 'Multi-modèle': 'GPT-5.5, Claude, Gemini, local', 'Modèles locaux': 'Oui (Ollama)', 'Compteur de tokens': 'Selon le fournisseur', 'Historique des prompts': 'Manuel', 'Export en code': 'Oui', 'Hors ligne': 'Oui (local)', Prix: 'Gratuit (MIT)', 'Idéal pour': 'Multi-modèle + open source' },
           { IDE: 'OpenAI Playground', Type: 'Playground web', 'Multi-modèle': 'OpenAI uniquement', 'Modèles locaux': 'Non', 'Compteur de tokens': 'Intégré, temps réel', 'Historique des prompts': 'Oui', 'Export en code': 'Oui (curl/Python/JS)', 'Hors ligne': 'Non', Prix: 'Pay-per-token', 'Idéal pour': 'Exploration API' },
           { IDE: 'Claude Console', Type: 'Playground web', 'Multi-modèle': 'Claude uniquement', 'Modèles locaux': 'Non', 'Compteur de tokens': 'Intégré', 'Historique des prompts': 'Oui', 'Export en code': 'Oui (Python/JS)', 'Hors ligne': 'Non', Prix: 'Pay-per-token', 'Idéal pour': 'Spécifique à Claude' },
           { IDE: 'Google AI Studio', Type: 'Playground web', 'Multi-modèle': 'Variantes Gemini', 'Modèles locaux': 'Non', 'Compteur de tokens': 'Non affiché', 'Historique des prompts': 'Oui', 'Export en code': 'Oui (Python/JS/curl)', 'Hors ligne': 'Non', Prix: 'Version gratuite', 'Idéal pour': 'Gemini + multimodal' },
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       regionalContext: {
         id: 'regional-context',
         title: 'Disponibilité régionale des IDE de prompt engineering',
-        content: '**Le choix de l\'IDE dépend de votre localisation et des exigences en matière de protection des données.** Les playgrounds cloud (Cursor, OpenAI Playground, Claude Console, Google AI Studio) envoient les prompts vers des serveurs américains par défaut. LM Studio et VS Code + Ollama local conservent toutes les données sur l\'appareil.\n\n**UE / RGPD :** Les playgrounds cloud nécessitent l\'examen du DPA de chaque fournisseur avant utilisation avec des données sensibles. LM Studio et VS Code + Ollama sont conformes au RGPD pour tout type de données — aucune transmission externe. La CNIL recommande le recours à l\'inférence locale lorsque des données professionnelles sensibles (financières, médicales, juridiques) sont traitées par des outils d\'IA.\n\n**Japon / APPI :** Les mêmes considérations de transfert de données cloud s\'appliquent. Les entreprises japonaises soumises à l\'APPI adoptent VS Code + Ollama local ou LM Studio pour les tests de prompts internes.\n\n**Chine :** OpenAI Playground et Claude Console sont bloqués en Chine continentale. LM Studio avec Qwen 2.5 7B (téléchargé localement) est l\'alternative la plus utilisée pour le développement hors ligne.',
+        content: '**Le choix de l\'IDE dépend de votre localisation et des exigences en matière de protection des données.** Les playgrounds cloud (Cursor, OpenAI Playground, Claude Console, Google AI Studio) envoient les prompts vers des serveurs américains par défaut. LM Studio et VS Code + Ollama local conservent toutes les données sur l\'appareil.\n\n**UE / RGPD :** Les playgrounds cloud nécessitent l\'examen du DPA de chaque fournisseur avant utilisation avec des données sensibles. LM Studio et VS Code + Ollama sont conformes au RGPD pour tout type de données — aucune transmission externe. La CNIL recommande le recours à l\'inférence locale lorsque des données professionnelles sensibles (financières, médicales, juridiques) sont traitées par des outils d\'IA.\n\n**Japon / APPI :** Les mêmes considérations de transfert de données cloud s\'appliquent. Les entreprises japonaises soumises à l\'APPI adoptent VS Code + Ollama local ou LM Studio pour les tests de prompts internes.\n\n**Chine :** OpenAI Playground et Claude Console sont bloqués en Chine continentale. LM Studio avec Qwen 3 7B (téléchargé localement) est l\'alternative la plus utilisée pour le développement hors ligne.',
       },
       relatedReading: {
         id: 'related-reading',
@@ -1287,7 +1287,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor：AIネイティブIDE',
           url: 'https://cursor.sh',
-          description: 'VS CodeフォークにAIチャット、モデル切り替え（GPT-4o、Claude、Gemini）、コードベース認識機能を搭載。プロンプトとアプリケーションコードを同時に書く開発者に最適。無料プランまたは$20/月（約¥3,000）。',
+          description: 'VS CodeフォークにAIチャット、モデル切り替え（GPT-5.5、Claude、Gemini）、コードベース認識機能を搭載。プロンプトとアプリケーションコードを同時に書く開発者に最適。無料プランまたは$20/月（約¥3,000）。',
         },
         {
           '@type': 'ListItem',
@@ -1342,7 +1342,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: '優れたプロンプトエンジニアリングIDEの条件',
-        content: '**優れたプロンプトIDEは、アイデアから実行までの摩擦を最小化します。** 数秒でモデルを切り替え、結果をすぐに確認し、トークン数を把握し、プロンプト履歴を保存し、ツールを離れずにコードとしてエクスポートできることが求められます。\n\n評価すべき主要機能：\n\n- **モデル切り替え：** 一つのツールでGPT-4o、Claude、Geminiを同じプロンプトでテストできますか？\n- **Playgroundモード：** コードを書かずにプロンプトを実行できますか？\n- **トークンカウンター：** 実行前に消費トークン数を確認できますか？（コストは積み重なります — [コスト最適化の手法](/ja/prompt-engineering/optimize-prompts-for-cost)を参照してください。）\n- **プロンプト履歴：** 手動バックアップなしに以前のバージョンに戻せますか？\n- **コードエクスポート：** 動作するプロンプトをPython/JS/API形式に変換できますか？\n- **コスト可視化：** 探索中にリクエストごとのコストを確認できますか？\n\n2026年4月時点で、6つの基準すべてを満たすIDEはありません。開発者はワークフローに応じて選択します：Cursor（開発速度）、Playground（API探索）、Console（特定モデルへの集中）、LM Studio（オフライン作業）。',
+        content: '**優れたプロンプトIDEは、アイデアから実行までの摩擦を最小化します。** 数秒でモデルを切り替え、結果をすぐに確認し、トークン数を把握し、プロンプト履歴を保存し、ツールを離れずにコードとしてエクスポートできることが求められます。\n\n評価すべき主要機能：\n\n- **モデル切り替え：** 一つのツールでGPT-5.5、Claude、Geminiを同じプロンプトでテストできますか？\n- **Playgroundモード：** コードを書かずにプロンプトを実行できますか？\n- **トークンカウンター：** 実行前に消費トークン数を確認できますか？（コストは積み重なります — [コスト最適化の手法](/ja/prompt-engineering/optimize-prompts-for-cost)を参照してください。）\n- **プロンプト履歴：** 手動バックアップなしに以前のバージョンに戻せますか？\n- **コードエクスポート：** 動作するプロンプトをPython/JS/API形式に変換できますか？\n- **コスト可視化：** 探索中にリクエストごとのコストを確認できますか？\n\n2026年4月時点で、6つの基準すべてを満たすIDEはありません。開発者はワークフローに応じて選択します：Cursor（開発速度）、Playground（API探索）、Console（特定モデルへの集中）、LM Studio（オフライン作業）。',
         snippets: [
           { type: 'in-one-sentence', text: 'プロンプトエンジニアリングIDEとは、ターミナルや別のAPIクライアントに切り替えることなく、プロンプトを書いて・テストして・改善できるツールです。' },
         ],
@@ -1353,12 +1353,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       cursor: {
         id: 'cursor-ai-native',
         title: 'Cursor：AIネイティブなコード＆プロンプトIDE',
-        content: '**CursorはAI支援開発に最適化されたVS Codeのフォークです。** 内蔵チャットにより、エディタでコードを書きながらサイドバーでプロンプトを作成できます。プロンプトを書き、コードを生成し、両方を同時に改善できます。GPT-4o、Claude、Geminiのファーストクラスサポート — 会話の途中でもモデルを切り替えられます。プロジェクト横断のプロンプト管理には[プロンプト管理プラットフォーム](/ja/prompt-engineering/best-prompt-management-platforms)との組み合わせがおすすめです。',
+        content: '**CursorはAI支援開発に最適化されたVS Codeのフォークです。** 内蔵チャットにより、エディタでコードを書きながらサイドバーでプロンプトを作成できます。プロンプトを書き、コードを生成し、両方を同時に改善できます。GPT-5.5、Claude、Geminiのファーストクラスサポート — 会話の途中でもモデルを切り替えられます。プロジェクト横断のプロンプト管理には[プロンプト管理プラットフォーム](/ja/prompt-engineering/best-prompt-management-platforms)との組み合わせがおすすめです。',
         numberedItems: [
           'プロンプトとアプリケーションコードの両方を書く場合に最適',
           'コードベース認識コンテキスト（プロジェクトファイルを読み込む）',
           '料金：無料プラン（制限あり）、$20/月（約¥3,000）で無制限利用',
-          '遅延：選択モデルに依存（GPT-4o 約1–2秒、Claude 約2–3秒）',
+          '遅延：選択モデルに依存（GPT-5.5 約1–2秒、Claude 約2–3秒）',
         ],
         callouts: [
           { type: 'warning', label: '注意', text: 'Cursorはクラウド専用です。すべてのプロンプトがAnthropicやOpenAI、Googleのサーバー（主に米国）に送信されます。個人情報や機密データを扱う場合は、各プロバイダーのデータ処理契約（DPA）を確認してください。外部送信のないAPPI対応ワークフローにはLM StudioまたはVS Code + Ollamaを推奨します。' },
@@ -1367,7 +1367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       continueVscode: {
         id: 'vscode-continue',
         title: 'VS Code + Continue.dev：オープンソース、マルチモデル',
-        content: '**ContinueはVS Codeに任意のLLMを組み込むオープンソース拡張機能です。** GPT-4o、Claude、Gemini、さらにOllamaによるローカルモデルをサポートします。プロンプトを入力してTabキーを押すと、モデルがコードを補完します。ベンダーロックインなし。コミュニティによるメンテナンスで完全に透明性があります。優れたプロンプトを再利用・バージョン管理するために[プロンプトライブラリ](/ja/prompt-engineering/build-a-prompt-library)を並行して構築するのがおすすめです。',
+        content: '**ContinueはVS Codeに任意のLLMを組み込むオープンソース拡張機能です。** GPT-5.5、Claude、Gemini、さらにOllamaによるローカルモデルをサポートします。プロンプトを入力してTabキーを押すと、モデルがコードを補完します。ベンダーロックインなし。コミュニティによるメンテナンスで完全に透明性があります。優れたプロンプトを再利用・バージョン管理するために[プロンプトライブラリ](/ja/prompt-engineering/build-a-prompt-library)を並行して構築するのがおすすめです。',
         numberedItems: [
           'オープンソースとローカルモデルサポートを求める開発者に最適',
           'ローカルOllama、vLLM、クラウドAPIを一つのIDEでサポート',
@@ -1381,15 +1381,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       openAIPlayground: {
         id: 'openai-playground',
         title: 'OpenAI Playground：API探索とテスト',
-        content: '**OpenAI PlaygroundはGPT-4oなどのOpenAIモデルをテストするWebエディタです。** トークンカウンターがリアルタイムで使用量を表示します。PlaygroundのセッティングをAPIコード（curl、Python、JavaScript）としてエクスポートできます。本番デプロイ前のAPI探索に適しています。',
+        content: '**OpenAI PlaygroundはGPT-5.5などのOpenAIモデルをテストするWebエディタです。** トークンカウンターがリアルタイムで使用量を表示します。PlaygroundのセッティングをAPIコード（curl、Python、JavaScript）としてエクスポートできます。本番デプロイ前のAPI探索に適しています。',
         numberedItems: [
           'コードを書く前のAPIテストとトークンカウントに最適',
           '従量課金：探索中に使用するすべてのトークンが課金されます',
-          'モデル選択：GPT-4o、GPT-4 Turbo、GPT-3.5、カスタムファインチューン',
+          'モデル選択：GPT-5.5、GPT-5.5、GPT-4o mini、カスタムファインチューン',
           'curl/Python/JSへワンクリックでエクスポート',
         ],
         callouts: [
-          { type: 'warning', label: '注意', text: 'PlaygroundのトークンはプロダクションAPIコールと同じレートで課金されます。Few-shotサンプルを含む複雑なプロンプト1回の実行でGPT-4o料金の$0.10–$0.50かかる場合があります。OpenAIは所在地に関わらずUSDで請求します。実行前にトークンカウンターを確認してください。' },
+          { type: 'warning', label: '注意', text: 'PlaygroundのトークンはプロダクションAPIコールと同じレートで課金されます。Few-shotサンプルを含む複雑なプロンプト1回の実行でGPT-5.5料金の$0.10–$0.50かかる場合があります。OpenAIは所在地に関わらずUSDで請求します。実行前にトークンカウンターを確認してください。' },
         ],
       },
       anthropicConsole: {
@@ -1434,8 +1434,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**2026年4月時点の概要は以下の通りです。** ワークフローテストでは、クラウドPlayground環境の初回セットアップは平均2分未満でした。LM Studioは初回インストール（モデルダウンロード含む）に約45分かかりました。その後のモデルダウンロードは10分（7B Q4、約4GB）から90分以上（70B Q4、約40GB）の範囲でした。',
         columns: ['IDE', '種類', 'マルチモデル', 'ローカルモデル', 'トークンカウンター', 'プロンプト履歴', 'コードエクスポート', 'オフライン', '価格', '最適な用途'],
         rows: [
-          { IDE: 'Cursor', '種類': 'デスクトップIDE', 'マルチモデル': 'GPT-4o、Claude、Gemini', 'ローカルモデル': '非対応', 'トークンカウンター': 'API経由', 'プロンプト履歴': 'あり（チャット）', 'コードエクスポート': 'あり', 'オフライン': '非対応', '価格': '無料 / $20/月', '最適な用途': 'アプリ+プロンプト開発' },
-          { IDE: 'VS Code + Continue', '種類': 'デスクトップIDE+拡張', 'マルチモデル': 'GPT-4o、Claude、Gemini、ローカル', 'ローカルモデル': 'あり（Ollama）', 'トークンカウンター': 'プロバイダー依存', 'プロンプト履歴': '手動', 'コードエクスポート': 'あり', 'オフライン': 'あり（ローカル）', '価格': '無料（MIT）', '最適な用途': 'マルチモデル+オープンソース' },
+          { IDE: 'Cursor', '種類': 'デスクトップIDE', 'マルチモデル': 'GPT-5.5、Claude、Gemini', 'ローカルモデル': '非対応', 'トークンカウンター': 'API経由', 'プロンプト履歴': 'あり（チャット）', 'コードエクスポート': 'あり', 'オフライン': '非対応', '価格': '無料 / $20/月', '最適な用途': 'アプリ+プロンプト開発' },
+          { IDE: 'VS Code + Continue', '種類': 'デスクトップIDE+拡張', 'マルチモデル': 'GPT-5.5、Claude、Gemini、ローカル', 'ローカルモデル': 'あり（Ollama）', 'トークンカウンター': 'プロバイダー依存', 'プロンプト履歴': '手動', 'コードエクスポート': 'あり', 'オフライン': 'あり（ローカル）', '価格': '無料（MIT）', '最適な用途': 'マルチモデル+オープンソース' },
           { IDE: 'OpenAI Playground', '種類': 'WebPlayground', 'マルチモデル': 'OpenAIのみ', 'ローカルモデル': '非対応', 'トークンカウンター': '内蔵・リアルタイム', 'プロンプト履歴': 'あり', 'コードエクスポート': 'あり（curl/Python/JS）', 'オフライン': '非対応', '価格': 'Pay-per-token', '最適な用途': 'API探索' },
           { IDE: 'Claude Console', '種類': 'WebPlayground', 'マルチモデル': 'Claudeのみ', 'ローカルモデル': '非対応', 'トークンカウンター': '内蔵', 'プロンプト履歴': 'あり', 'コードエクスポート': 'あり（Python/JS）', 'オフライン': '非対応', '価格': 'Pay-per-token', '最適な用途': 'Claude専用' },
           { IDE: 'Google AI Studio', '種類': 'WebPlayground', 'マルチモデル': 'Geminiシリーズ', 'ローカルモデル': '非対応', 'トークンカウンター': '非表示', 'プロンプト履歴': 'あり', 'コードエクスポート': 'あり（Python/JS/curl）', 'オフライン': '非対応', '価格': '無料枠あり', '最適な用途': 'Gemini+マルチモーダル' },
@@ -1588,7 +1588,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor：AI原生IDE',
           url: 'https://cursor.sh',
-          description: '集成AI聊天、模型切换（GPT-4o、Claude、Gemini）和代码库感知上下文的VS Code分支。最适合同时编写Prompt和应用代码的开发者。免费版或$20/月。',
+          description: '集成AI聊天、模型切换（GPT-5.5、Claude、Gemini）和代码库感知上下文的VS Code分支。最适合同时编写Prompt和应用代码的开发者。免费版或$20/月。',
         },
         {
           '@type': 'ListItem',
@@ -1643,7 +1643,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: '优秀Prompt工程IDE的评判标准',
-        content: '**优秀的Prompt IDE能最小化创意到执行的摩擦。** 你需要能在数秒内切换模型、立即查看结果、掌握Token用量、保存Prompt历史，并在不离开工具的情况下导出为代码。\n\n核心评估维度：\n\n- **模型切换：** 能否在一个工具里用GPT-4o、Claude和Gemini测试同一个Prompt？\n- **Playground模式：** 能否不写代码直接执行Prompt？\n- **Token计数器：** 执行前能看到Token消耗吗？（成本会累积——参考[Prompt成本优化方法](/zh/prompt-engineering/optimize-prompts-for-cost)。）\n- **Prompt历史：** 能否在不手动保存文件的情况下回退到之前版本？\n- **代码导出：** 能否将可用Prompt转换为Python/JS/API格式？\n- **成本可视化：** 探索阶段能否实时查看每次请求的费用？\n\n截至2026年4月，没有任何一款IDE能同时满足全部六个标准。开发者根据工作流选择：Cursor（开发效率）、Playground（API探索）、Console（专注单模型）、LM Studio（离线场景）。',
+        content: '**优秀的Prompt IDE能最小化创意到执行的摩擦。** 你需要能在数秒内切换模型、立即查看结果、掌握Token用量、保存Prompt历史，并在不离开工具的情况下导出为代码。\n\n核心评估维度：\n\n- **模型切换：** 能否在一个工具里用GPT-5.5、Claude和Gemini测试同一个Prompt？\n- **Playground模式：** 能否不写代码直接执行Prompt？\n- **Token计数器：** 执行前能看到Token消耗吗？（成本会累积——参考[Prompt成本优化方法](/zh/prompt-engineering/optimize-prompts-for-cost)。）\n- **Prompt历史：** 能否在不手动保存文件的情况下回退到之前版本？\n- **代码导出：** 能否将可用Prompt转换为Python/JS/API格式？\n- **成本可视化：** 探索阶段能否实时查看每次请求的费用？\n\n截至2026年4月，没有任何一款IDE能同时满足全部六个标准。开发者根据工作流选择：Cursor（开发效率）、Playground（API探索）、Console（专注单模型）、LM Studio（离线场景）。',
         snippets: [
           { type: 'in-one-sentence', text: 'Prompt工程IDE就是任何能让你无需切换到终端或独立API客户端，就能编写、测试和迭代Prompt的工具。' },
         ],
@@ -1654,12 +1654,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       cursor: {
         id: 'cursor-ai-native',
         title: 'Cursor：AI原生代码与Prompt IDE',
-        content: '**Cursor是为AI辅助开发优化的VS Code分支。** 内置聊天栏让你在编辑器写代码的同时在侧边栏编写Prompt。可以先写Prompt，再生成代码，两者同步迭代。原生支持GPT-4o、Claude、Gemini——对话中途即可切换模型。配合[Prompt管理平台](/zh/prompt-engineering/best-prompt-management-platforms)可跨项目管理Prompt版本。',
+        content: '**Cursor是为AI辅助开发优化的VS Code分支。** 内置聊天栏让你在编辑器写代码的同时在侧边栏编写Prompt。可以先写Prompt，再生成代码，两者同步迭代。原生支持GPT-5.5、Claude、Gemini——对话中途即可切换模型。配合[Prompt管理平台](/zh/prompt-engineering/best-prompt-management-platforms)可跨项目管理Prompt版本。',
         numberedItems: [
           '最适合同时编写Prompt和应用代码的开发者',
           '具备代码库感知上下文（读取项目文件）',
           '价格：免费版（有限制），$20/月无限制使用',
-          '延迟：取决于选择的模型（GPT-4o 约1–2秒，Claude 约2–3秒）',
+          '延迟：取决于选择的模型（GPT-5.5 约1–2秒，Claude 约2–3秒）',
         ],
         callouts: [
           { type: 'warning', label: '注意', text: 'Cursor仅支持云端——所有Prompt均发送至Anthropic、OpenAI或Google的服务器（主要在美国）。处理涉及用户隐私或商业机密的数据前，请审查各提供商的数据处理协议（DPA）。需要数据不出境的场景，推荐使用LM Studio或VS Code + Ollama。' },
@@ -1668,7 +1668,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       continueVscode: {
         id: 'vscode-continue',
         title: 'VS Code + Continue.dev：开源多模型',
-        content: '**Continue是将任意LLM引入VS Code的开源插件。** 支持GPT-4o、Claude、Gemini以及通过Ollama使用的本地模型。输入Prompt按Tab键，模型自动补全代码。无厂商锁定，社区维护，完全透明。可同步构建[Prompt库](/zh/prompt-engineering/build-a-prompt-library)，复用和版本管理你最好的Prompt。',
+        content: '**Continue是将任意LLM引入VS Code的开源插件。** 支持GPT-5.5、Claude、Gemini以及通过Ollama使用的本地模型。输入Prompt按Tab键，模型自动补全代码。无厂商锁定，社区维护，完全透明。可同步构建[Prompt库](/zh/prompt-engineering/build-a-prompt-library)，复用和版本管理你最好的Prompt。',
         numberedItems: [
           '最适合需要开源和本地模型支持的开发者',
           '在一个IDE里支持本地Ollama、vLLM和云端API',
@@ -1682,15 +1682,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       openAIPlayground: {
         id: 'openai-playground',
         title: 'OpenAI Playground：API探索与测试',
-        content: '**OpenAI Playground是测试GPT-4o等OpenAI模型的Web编辑器。** Token计数器实时显示用量。可将Playground设置导出为API代码（curl、Python、JavaScript）。专为生产部署前的API探索而设计。',
+        content: '**OpenAI Playground是测试GPT-5.5等OpenAI模型的Web编辑器。** Token计数器实时显示用量。可将Playground设置导出为API代码（curl、Python、JavaScript）。专为生产部署前的API探索而设计。',
         numberedItems: [
           '最适合写代码前的API测试和Token计数',
           '按量计费：探索阶段使用的每个Token都会计费',
-          '模型选择：GPT-4o、GPT-4 Turbo、GPT-3.5、自定义微调模型',
+          '模型选择：GPT-5.5、GPT-5.5、GPT-4o mini、自定义微调模型',
           '一键导出curl/Python/JS',
         ],
         callouts: [
-          { type: 'warning', label: '注意', text: 'Playground的Token按生产API费率计费。一个包含few-shot示例的复杂Prompt，单次运行的GPT-4o费用可能达到$0.10–$0.50。OpenAI全球统一以USD计费。每次执行前请查看Token计数器。' },
+          { type: 'warning', label: '注意', text: 'Playground的Token按生产API费率计费。一个包含few-shot示例的复杂Prompt，单次运行的GPT-5.5费用可能达到$0.10–$0.50。OpenAI全球统一以USD计费。每次执行前请查看Token计数器。' },
         ],
       },
       anthropicConsole: {
@@ -1735,8 +1735,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**以下是截至2026年4月的数据对比。** 工作流测试显示，云端Playground环境的首次配置平均不到2分钟，而LM Studio首次安装（含模型下载）约需45分钟。后续模型下载时间从10分钟（7B Q4，约4GB）到90分钟以上（70B Q4，约40GB）不等。',
         columns: ['IDE', '类型', '多模型支持', '本地模型', 'Token计数器', 'Prompt历史', '导出为代码', '离线', '价格', '最适合'],
         rows: [
-          { IDE: 'Cursor', '类型': '桌面IDE', '多模型支持': 'GPT-4o、Claude、Gemini', '本地模型': '不支持', 'Token计数器': '通过API', 'Prompt历史': '有（聊天）', '导出为代码': '支持', '离线': '不支持', '价格': '免费 / $20/月', '最适合': '应用+Prompt开发' },
-          { IDE: 'VS Code + Continue', '类型': '桌面IDE+插件', '多模型支持': 'GPT-4o、Claude、Gemini、本地', '本地模型': '支持（Ollama）', 'Token计数器': '取决于提供商', 'Prompt历史': '手动', '导出为代码': '支持', '离线': '支持（本地）', '价格': '免费（MIT）', '最适合': '多模型+开源' },
+          { IDE: 'Cursor', '类型': '桌面IDE', '多模型支持': 'GPT-5.5、Claude、Gemini', '本地模型': '不支持', 'Token计数器': '通过API', 'Prompt历史': '有（聊天）', '导出为代码': '支持', '离线': '不支持', '价格': '免费 / $20/月', '最适合': '应用+Prompt开发' },
+          { IDE: 'VS Code + Continue', '类型': '桌面IDE+插件', '多模型支持': 'GPT-5.5、Claude、Gemini、本地', '本地模型': '支持（Ollama）', 'Token计数器': '取决于提供商', 'Prompt历史': '手动', '导出为代码': '支持', '离线': '支持（本地）', '价格': '免费（MIT）', '最适合': '多模型+开源' },
           { IDE: 'OpenAI Playground', '类型': 'Web Playground', '多模型支持': '仅OpenAI', '本地模型': '不支持', 'Token计数器': '内置，实时', 'Prompt历史': '有', '导出为代码': '支持（curl/Python/JS）', '离线': '不支持', '价格': '按Token计费', '最适合': 'API探索' },
           { IDE: 'Claude Console', '类型': 'Web Playground', '多模型支持': '仅Claude', '本地模型': '不支持', 'Token计数器': '内置', 'Prompt历史': '有', '导出为代码': '支持（Python/JS）', '离线': '不支持', '价格': '按Token计费', '最适合': 'Claude专用' },
           { IDE: 'Google AI Studio', '类型': 'Web Playground', '多模型支持': 'Gemini系列', '本地模型': '不支持', 'Token计数器': '不显示', 'Prompt历史': '有', '导出为代码': '支持（Python/JS/curl）', '离线': '不支持', '价格': '有免费额度', '最适合': 'Gemini+多模态' },
@@ -1772,7 +1772,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       regionalContext: {
         id: 'regional-context',
         title: '各地区Prompt工程IDE可用性',
-        content: '**IDE的选择因所在地区和数据合规要求而异。** 云端Playground（Cursor、OpenAI Playground、Claude Console、Google AI Studio）默认将Prompt发送至美国服务器。LM Studio和VS Code + 本地Ollama可将所有数据保留在设备本地。\n\n**中国（数据安全法）：** 2021年施行的《数据安全法》要求重要数据在境内存储，并对境外传输实施严格管控。使用OpenAI Playground或Claude Console处理涉及用户数据或商业机密的Prompt时存在合规风险（注意：OpenAI Playground和Claude Console在中国大陆无法直接访问）。LM Studio搭配Qwen 2.5 7B（本地部署）是合规性最强的离线开发方案，已被国内企业和研究机构广泛采用。\n\n**亚太地区（数据跨境）：** 亚太各国数据跨境传输规定不尽相同。使用云端AI工具前，应确认数据处理协议（DPA）符合当地法规（新加坡PDPA、韩国PIPA、澳大利亚Privacy Act）。VS Code + Ollama和LM Studio将数据完全保留本地，是跨境合规要求最严格场景下的推荐选择。\n\n**企业部署（金融·医疗·法律）：** 金融机构、医疗机构和律所等高度监管行业在使用AI工具处理敏感数据时，需满足额外的合规要求。LM Studio和VS Code + Ollama提供完全的数据本地化能力，适合需要严格数据驻留控制的企业部署场景。对于需要多人协作的团队，VS Code + Continue的开源架构便于自主部署和审计。',
+        content: '**IDE的选择因所在地区和数据合规要求而异。** 云端Playground（Cursor、OpenAI Playground、Claude Console、Google AI Studio）默认将Prompt发送至美国服务器。LM Studio和VS Code + 本地Ollama可将所有数据保留在设备本地。\n\n**中国（数据安全法）：** 2021年施行的《数据安全法》要求重要数据在境内存储，并对境外传输实施严格管控。使用OpenAI Playground或Claude Console处理涉及用户数据或商业机密的Prompt时存在合规风险（注意：OpenAI Playground和Claude Console在中国大陆无法直接访问）。LM Studio搭配Qwen 3 7B（本地部署）是合规性最强的离线开发方案，已被国内企业和研究机构广泛采用。\n\n**亚太地区（数据跨境）：** 亚太各国数据跨境传输规定不尽相同。使用云端AI工具前，应确认数据处理协议（DPA）符合当地法规（新加坡PDPA、韩国PIPA、澳大利亚Privacy Act）。VS Code + Ollama和LM Studio将数据完全保留本地，是跨境合规要求最严格场景下的推荐选择。\n\n**企业部署（金融·医疗·法律）：** 金融机构、医疗机构和律所等高度监管行业在使用AI工具处理敏感数据时，需满足额外的合规要求。LM Studio和VS Code + Ollama提供完全的数据本地化能力，适合需要严格数据驻留控制的企业部署场景。对于需要多人协作的团队，VS Code + Continue的开源架构便于自主部署和审计。',
       },
       relatedReading: {
         id: 'related-reading',

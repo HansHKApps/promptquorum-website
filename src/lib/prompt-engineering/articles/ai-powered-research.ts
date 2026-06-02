@@ -154,7 +154,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Does AI research assistance work differently outside the US?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes. European researchers must comply with EU AI Act transparency requirements for AI-assisted work. Chinese institutions primarily use Qwen 2.5 (Alibaba) and DeepSeek V3, which have faster token processing for CJK-language literature. Japanese researchers under METI data governance guidelines often use Ollama-based local models — LLaMA 3.1 7B runs locally with 8GB RAM, with no data leaving the institution\'s infrastructure.',
+              text: 'Yes. European researchers must comply with EU AI Act transparency requirements for AI-assisted work. Chinese institutions primarily use Qwen 3 (Alibaba) and DeepSeek V3, which have faster token processing for CJK-language literature. Japanese researchers under METI data governance guidelines often use Ollama-based local models — LLaMA 3.1 7B runs locally with 8GB RAM, with no data leaving the institution\'s infrastructure.',
             },
           },
           {
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Global and Regional Research AI Context',
           content: [
             'European research institutions increasingly require that AI-assisted research comply with the EU AI Act, which mandates transparency, traceability, and human oversight for high-risk AI applications including academic publishing. Mistral AI (France) is widely used in EU academic settings because its models are deployable on-premise, satisfying GDPR data residency requirements for sensitive research data.',
-            'Chinese research institutions use **Qwen 2.5** (Alibaba) and **DeepSeek V3** as primary research AI tools — both are open-source, locally deployable, and handle CJK-language academic literature with faster token processing than Western-trained models. China\'s Interim Measures for Generative AI (2023) requires AI-generated research content to be labelled as such, a policy now influencing academic publishing standards globally.',
+            'Chinese research institutions use **Qwen 3** (Alibaba) and **DeepSeek V3** as primary research AI tools — both are open-source, locally deployable, and handle CJK-language academic literature with faster token processing than Western-trained models. China\'s Interim Measures for Generative AI (2023) requires AI-generated research content to be labelled as such, a policy now influencing academic publishing standards globally.',
             'Japanese universities operating under METI data governance guidelines frequently deploy **Ollama** with LLaMA 3.1 models locally — LLaMA 3.1 7B requires 8GB RAM for local inference, producing zero external API calls and meeting strict data residency standards for sensitive research.',
           ],
         },
@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Choosing based on benchmark leaderboards (not actual task)** — **Fix:** Choose models by task fit, not leaderboard rank. Benchmark winners (GPT-5.5) are overkill for summarization; Gemini 3.1 Pro\'s cost advantage dominates when you only need context processing.',
             '**Assuming context window = quality (all 1M; LLaMA 4 Scout at 10M local)** — **Fix:** Context window is one dimension. 1M tokens matters only for 50+ papers. For small literature reviews, GPT-5.5 (128k) or Claude Opus 4.8 (200k) suffice and cost less.',
             '**Using frontier model for every task (60× cost difference Gemini Flash vs GPT)** — **Fix:** Route tasks by cost-efficiency: Gemini Flash for classification, Claude Opus 4.8 for writing, GPT-5.5 for code. Multi-model dispatch via PromptQuorum enables per-task model selection.',
-            '**Ignoring geography and data residency (EU GDPR, China)** — **Fix:** EU research must use GDPR-compliant tools (Mistral on-premise, Ollama local). China-based institutions use Qwen 2.5 or DeepSeek. Japan under METI guidelines uses Ollama with LLaMA 3.1 locally.',
+            '**Ignoring geography and data residency (EU GDPR, China)** — **Fix:** EU research must use GDPR-compliant tools (Mistral on-premise, Ollama local). China-based institutions use Qwen 3 or DeepSeek. Japan under METI guidelines uses Ollama with LLaMA 3.1 locally.',
             '**Locking into one provider SDK without abstraction layer** — **Fix:** Use multi-model dispatch tools (PromptQuorum) to avoid vendor lock-in. A single API call routes to the best model per task; switching providers requires no code changes.',
           ],
         },
@@ -513,7 +513,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Does AI research assistance work differently outside the US?',
-              a: 'Yes. European researchers must comply with EU AI Act transparency requirements for AI-assisted work. Chinese institutions primarily use Qwen 2.5 (Alibaba) and DeepSeek V3, which have faster token processing for CJK-language literature. Japanese researchers under METI data governance guidelines often use Ollama-based local models — LLaMA 3.1 7B runs locally with 8GB RAM, with no data leaving the institution\'s infrastructure.',
+              a: 'Yes. European researchers must comply with EU AI Act transparency requirements for AI-assisted work. Chinese institutions primarily use Qwen 3 (Alibaba) and DeepSeek V3, which have faster token processing for CJK-language literature. Japanese researchers under METI data governance guidelines often use Ollama-based local models — LLaMA 3.1 7B runs locally with 8GB RAM, with no data leaving the institution\'s infrastructure.',
             },
             {
               q: 'What temperature should I use for AI research tasks?',
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Funktioniert KI-Forschungsassistenz außerhalb der USA anders?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Ja. Europäische Forscher müssen die EU AI Act Transparenzanforderungen für KI-gestützte Arbeit erfüllen. Chinesische Institutionen verwenden hauptsächlich Qwen 2.5 (Alibaba) und DeepSeek V3, die eine schnellere Token-Verarbeitung für CJK-Sprachenliteratur bieten. Japanische Forscher unter METI-Datenschutz-Richtlinien verwenden häufig Ollama-basierte lokale Modelle – LLaMA 3.1 7B läuft lokal mit 8GB RAM, mit Daten, die die institutionelle Infrastruktur nicht verlassen.',
+              text: 'Ja. Europäische Forscher müssen die EU AI Act Transparenzanforderungen für KI-gestützte Arbeit erfüllen. Chinesische Institutionen verwenden hauptsächlich Qwen 3 (Alibaba) und DeepSeek V3, die eine schnellere Token-Verarbeitung für CJK-Sprachenliteratur bieten. Japanische Forscher unter METI-Datenschutz-Richtlinien verwenden häufig Ollama-basierte lokale Modelle – LLaMA 3.1 7B läuft lokal mit 8GB RAM, mit Daten, die die institutionelle Infrastruktur nicht verlassen.',
             },
           },
           {
@@ -977,7 +977,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Globaler und regionaler Forschungs-KI-Kontext',
           content: [
             'Europäische Forschungsinstitutionen erfordern zunehmend, dass KI-gestützte Forschung mit dem EU AI Act konform ist, der Transparenz, Rückverfolgbarkeit und menschliche Aufsicht für hochriskante KI-Anwendungen einschließlich akademischer Veröffentlichung verpflichtet. Mistral AI (Frankreich) wird häufig in EU-akademischen Umgebungen verwendet, weil ihre Modelle On-Premise deploybar sind und GDPR-Daten-Residenzanforderungen für sensible Forschungsdaten erfüllen.',
-            'Chinesische Forschungsinstitutionen verwenden **Qwen 2.5** (Alibaba) und **DeepSeek V3** als primäre Forschungs-KI-Tools – beide sind Open-Source, lokal deploybar und verarbeiten CJK-Sprachenliteratur schneller als Western-trainierte Modelle. Chinas Interim Measures for Generative AI (2023) erfordern, dass KI-generierte Forschungs-Inhalte als solche gekennzeichnet werden – eine Richtlinie, die jetzt akademische Veröffentlichungs-Standards global beeinflusst.',
+            'Chinesische Forschungsinstitutionen verwenden **Qwen 3** (Alibaba) und **DeepSeek V3** als primäre Forschungs-KI-Tools – beide sind Open-Source, lokal deploybar und verarbeiten CJK-Sprachenliteratur schneller als Western-trainierte Modelle. Chinas Interim Measures for Generative AI (2023) erfordern, dass KI-generierte Forschungs-Inhalte als solche gekennzeichnet werden – eine Richtlinie, die jetzt akademische Veröffentlichungs-Standards global beeinflusst.',
             'Japanische Universitäten, die unter METI-Datenschutz-Richtlinien operieren, deployen häufig **Ollama** mit LLaMA 3.1 Modellen lokal – LLaMA 3.1 7B erfordert 8GB RAM für lokale Inferenz, produziert Null externe API-Aufrufe und erfüllt strikte Daten-Residenzstandards für sensible Forschung.',
           ],
         },
@@ -990,7 +990,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Auswahl basierend auf Benchmark-Leaderboards (nicht tatsächliche Aufgabe)** – **Korrektur:** Wählen Sie Modelle nach Aufgaben-Passung, nicht Leaderboard-Rang. Benchmark-Sieger (GPT-5.5) sind übertrieben für Zusammenfassung; Gemini 3.1 Pros Kosten-Vorteil dominiert, wenn Sie nur Context-Verarbeitung benötigen.',
             '**Annahme, Context Window = Qualität (alle 1M; LLaMA 4 Scout bei 10M lokal)** – **Korrektur:** Context Window ist eine Dimension. 1M Tokens ist wichtig nur für 50+ Papiere. Für kleine Literatur-Reviews reichen GPT-5.5 (128k) oder Claude Opus 4.8 (200k) aus und kosten weniger.',
             '**Frontier-Modell für jede Aufgabe verwenden (60× Kosten-Unterschied Gemini Flash vs GPT)** – **Korrektur:** Leiten Sie Aufgaben nach Kosten-Effizienz: Gemini Flash für Klassifizierung, Claude Opus 4.8 für Schreiben, GPT-5.5 für Code. Multi-Modell-Dispatch über PromptQuorum ermöglicht Pro-Aufgaben-Modell-Auswahl.',
-            '**Geografie und Daten-Residenz ignorieren (EU GDPR, China)** – **Korrektur:** EU-Forschung muss GDPR-konforme Tools verwenden (Mistral On-Premise, Ollama lokal). China-basierte Institutionen verwenden Qwen 2.5 oder DeepSeek. Japan unter METI-Richtlinien nutzt Ollama mit LLaMA 3.1 lokal.',
+            '**Geografie und Daten-Residenz ignorieren (EU GDPR, China)** – **Korrektur:** EU-Forschung muss GDPR-konforme Tools verwenden (Mistral On-Premise, Ollama lokal). China-basierte Institutionen verwenden Qwen 3 oder DeepSeek. Japan unter METI-Richtlinien nutzt Ollama mit LLaMA 3.1 lokal.',
             '**Vendor Lock-in ohne Abstraktions-Layer:** In einen Provider SDK sperren** – **Korrektur:** Nutzen Sie Multi-Modell-Dispatch-Tools (PromptQuorum), um Vendor Lock-in zu vermeiden. Ein einzelner API-Aufruf leitet zum besten Modell pro Aufgabe; Anbieter-Wechsel erfordert keine Code-Änderungen.',
           ],
         },
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Funktioniert KI-Forschungsassistenz außerhalb der USA anders?',
-              a: 'Ja. Europäische Forscher müssen die EU AI Act Transparenzanforderungen für KI-gestützte Arbeit erfüllen. Chinesische Institutionen verwenden hauptsächlich Qwen 2.5 (Alibaba) und DeepSeek V3, die eine schnellere Token-Verarbeitung für CJK-Sprachenliteratur bieten. Japanische Forscher unter METI-Datenschutz-Richtlinien verwenden häufig Ollama-basierte lokale Modelle – LLaMA 3.1 7B läuft lokal mit 8GB RAM, mit Daten, die die institutionelle Infrastruktur nicht verlassen.',
+              a: 'Ja. Europäische Forscher müssen die EU AI Act Transparenzanforderungen für KI-gestützte Arbeit erfüllen. Chinesische Institutionen verwenden hauptsächlich Qwen 3 (Alibaba) und DeepSeek V3, die eine schnellere Token-Verarbeitung für CJK-Sprachenliteratur bieten. Japanische Forscher unter METI-Datenschutz-Richtlinien verwenden häufig Ollama-basierte lokale Modelle – LLaMA 3.1 7B läuft lokal mit 8GB RAM, mit Daten, die die institutionelle Infrastruktur nicht verlassen.',
             },
             {
               q: 'Welche Temperature sollte ich für KI-Forschungsaufgaben verwenden?',
@@ -1207,7 +1207,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: '¿Funciona de manera diferente la asistencia de investigación con IA fuera de los EE. UU.?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Sí. Los investigadores europeos deben cumplir los requisitos de transparencia de la Ley de IA de la UE para trabajos asistidos por IA. Las instituciones chinas usan principalmente Qwen 2.5 (Alibaba) y DeepSeek V3. Los investigadores japoneses bajo las directrices de gobernanza de datos de METI suelen usar modelos locales basados en Ollama — LLaMA 3.1 7B se ejecuta localmente con 8 GB de RAM, sin que los datos salgan de la infraestructura de la institución.',
+              text: 'Sí. Los investigadores europeos deben cumplir los requisitos de transparencia de la Ley de IA de la UE para trabajos asistidos por IA. Las instituciones chinas usan principalmente Qwen 3 (Alibaba) y DeepSeek V3. Los investigadores japoneses bajo las directrices de gobernanza de datos de METI suelen usar modelos locales basados en Ollama — LLaMA 3.1 7B se ejecuta localmente con 8 GB de RAM, sin que los datos salgan de la infraestructura de la institución.',
             },
           },
           {
@@ -1503,7 +1503,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Contexto global y regional para IA de investigación',
           content: [
             'Las instituciones de investigación europeas requieren cada vez más que la investigación asistida por IA cumpla con la Ley de IA de la UE, que obliga a transparencia, trazabilidad y supervisión humana para aplicaciones de IA de alto riesgo, incluida la publicación académica. Mistral AI (Francia) se usa frecuentemente en entornos académicos de la UE porque sus modelos son desplegables on-premise y cumplen los requisitos de residencia de datos del RGPD para datos de investigación sensibles.',
-            'Las instituciones de investigación chinas usan **Qwen 2.5** (Alibaba) y **DeepSeek V3** como herramientas principales de IA de investigación — ambos son de código abierto, desplegables localmente y procesan literatura en idioma CJK más rápido que los modelos entrenados en Occidente. Las Medidas Interinas para la IA Generativa de China (2023) requieren que el contenido de investigación generado por IA se etiquete como tal.',
+            'Las instituciones de investigación chinas usan **Qwen 3** (Alibaba) y **DeepSeek V3** como herramientas principales de IA de investigación — ambos son de código abierto, desplegables localmente y procesan literatura en idioma CJK más rápido que los modelos entrenados en Occidente. Las Medidas Interinas para la IA Generativa de China (2023) requieren que el contenido de investigación generado por IA se etiquete como tal.',
             'Las universidades japonesas que operan bajo las directrices de protección de datos de METI suelen desplegar **Ollama** con modelos LLaMA 3.1 localmente — LLaMA 3.1 7B requiere 8 GB de RAM para inferencia local, produce cero llamadas API externas y cumple estrictos estándares de residencia de datos para investigación sensible.',
           ],
         },
@@ -1516,7 +1516,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Seleccionar basándose en tablas de clasificación de benchmarks (no en la tarea real)** — **Corrección:** Elige modelos por adecuación a la tarea, no por posición en la tabla de clasificación. Los campeones de benchmark (GPT-5.5) están sobredimensionados para resúmenes; la ventaja de costo de Gemini 3.1 Pro domina cuando solo necesitas procesamiento de contexto.',
             '**Asumir que ventana de contexto = calidad** — **Corrección:** La ventana de contexto es una dimensión. 1M de tokens importa solo para más de 50 artículos. Para revisiones bibliográficas pequeñas, GPT-5.5 (128k) o Claude Opus 4.8 (200k) son suficientes y cuestan menos.',
             '**Usar modelo frontier para cada tarea** — **Corrección:** Enruta tareas por eficiencia de costo: Gemini Flash para clasificación, Claude Opus 4.8 para redacción, GPT-5.5 para código. El despacho multi-modelo mediante PromptQuorum permite la selección de modelo por tarea.',
-            '**Ignorar geografía y residencia de datos (RGPD de la UE, China)** — **Corrección:** La investigación en la UE debe usar herramientas conformes con el RGPD (Mistral on-premise, Ollama local). Las instituciones en China usan Qwen 2.5 o DeepSeek. Japón bajo directrices de METI usa Ollama con LLaMA 3.1 localmente.',
+            '**Ignorar geografía y residencia de datos (RGPD de la UE, China)** — **Corrección:** La investigación en la UE debe usar herramientas conformes con el RGPD (Mistral on-premise, Ollama local). Las instituciones en China usan Qwen 3 o DeepSeek. Japón bajo directrices de METI usa Ollama con LLaMA 3.1 localmente.',
             '**Bloqueo de proveedor sin capa de abstracción** — **Corrección:** Usa herramientas de despacho multi-modelo (PromptQuorum) para evitar el bloqueo de proveedor. Una sola llamada API enruta al mejor modelo por tarea; cambiar de proveedor no requiere cambios de código.',
           ],
         },
@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Funciona de manera diferente la asistencia de investigación con IA fuera de los EE. UU.?',
-              a: 'Sí. Los investigadores europeos deben cumplir los requisitos de transparencia de la Ley de IA de la UE para trabajos asistidos por IA. Las instituciones chinas usan principalmente Qwen 2.5 (Alibaba) y DeepSeek V3, que tienen un procesamiento de tokens más rápido para literatura en idioma CJK. Los investigadores japoneses bajo las directrices de gobernanza de datos de METI suelen usar modelos locales basados en Ollama — LLaMA 3.1 7B se ejecuta localmente con 8 GB de RAM, sin que los datos salgan de la infraestructura de la institución.',
+              a: 'Sí. Los investigadores europeos deben cumplir los requisitos de transparencia de la Ley de IA de la UE para trabajos asistidos por IA. Las instituciones chinas usan principalmente Qwen 3 (Alibaba) y DeepSeek V3, que tienen un procesamiento de tokens más rápido para literatura en idioma CJK. Los investigadores japoneses bajo las directrices de gobernanza de datos de METI suelen usar modelos locales basados en Ollama — LLaMA 3.1 7B se ejecuta localmente con 8 GB de RAM, sin que los datos salgan de la infraestructura de la institución.',
             },
             {
               q: '¿Qué temperatura debo usar para tareas de investigación con IA?',
@@ -1734,7 +1734,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'L\'assistance à la recherche IA fonctionne-t-elle différemment en dehors des États-Unis ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Oui. Les chercheurs européens doivent respecter les exigences de transparence de l\'AI Act de l\'UE pour les travaux assistés par IA. Les institutions chinoises utilisent principalement Qwen 2.5 (Alibaba) et DeepSeek V3. Les chercheurs japonais sous les directives de gouvernance des données METI utilisent souvent des modèles locaux basés sur Ollama — LLaMA 3.1 7B fonctionne localement avec 8 Go de RAM.',
+              text: 'Oui. Les chercheurs européens doivent respecter les exigences de transparence de l\'AI Act de l\'UE pour les travaux assistés par IA. Les institutions chinoises utilisent principalement Qwen 3 (Alibaba) et DeepSeek V3. Les chercheurs japonais sous les directives de gouvernance des données METI utilisent souvent des modèles locaux basés sur Ollama — LLaMA 3.1 7B fonctionne localement avec 8 Go de RAM.',
             },
           },
           {
@@ -2030,7 +2030,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Contexte mondial et régional de la recherche IA',
           content: [
             'Les institutions de recherche européennes exigent de plus en plus que la recherche assistée par IA soit conforme à l\'AI Act de l\'UE, qui mandate transparence, traçabilité et supervision humaine pour les applications IA à haut risque incluant la publication académique. Mistral AI (France) est largement utilisé dans les milieux académiques européens car ses modèles sont déployables en local, satisfaisant les exigences de résidence des données RGPD pour les données de recherche sensibles.',
-            'Les institutions de recherche chinoises utilisent **Qwen 2.5** (Alibaba) et **DeepSeek V3** comme principaux outils de recherche IA — les deux sont open-source, déployables localement et traitent la littérature académique en langues CJK avec un traitement de tokens plus rapide que les modèles entraînés en Occident. Les Mesures Provisoires pour l\'IA Générative de Chine (2023) exigent que le contenu de recherche généré par IA soit étiqueté comme tel — une politique qui influence maintenant les normes mondiales de publication académique.',
+            'Les institutions de recherche chinoises utilisent **Qwen 3** (Alibaba) et **DeepSeek V3** comme principaux outils de recherche IA — les deux sont open-source, déployables localement et traitent la littérature académique en langues CJK avec un traitement de tokens plus rapide que les modèles entraînés en Occident. Les Mesures Provisoires pour l\'IA Générative de Chine (2023) exigent que le contenu de recherche généré par IA soit étiqueté comme tel — une politique qui influence maintenant les normes mondiales de publication académique.',
             'Les universités japonaises opérant sous les directives de gouvernance des données METI déploient fréquemment **Ollama** avec les modèles LLaMA 3.1 localement — LLaMA 3.1 7B nécessite 8 Go de RAM pour l\'inférence locale, ne produit aucun appel API externe et répond aux normes strictes de résidence des données pour la recherche sensible.',
           ],
         },
@@ -2043,7 +2043,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Choisir basé sur les leaderboards de benchmarks (pas la tâche réelle)** – **Correction :** Choisissez les modèles par adéquation à la tâche, pas par rang de leaderboard. Les gagnants de benchmarks (GPT-5.5) sont excessifs pour la synthèse ; l\'avantage de coût de Gemini 3.1 Pro domine quand vous avez juste besoin de traitement de contexte.',
             '**Assumer context window = qualité (tous 1M; LLaMA 4 Scout à 10M local)** – **Correction :** La fenêtre de contexte est une dimension. 1M tokens compte seulement pour 50+ articles. Pour les petites revues de littérature, GPT-5.5 (128k) ou Claude Opus 4.8 (200k) suffisent et coûtent moins.',
             '**Utiliser le modèle frontier pour chaque tâche (différence de coût 60× Gemini Flash vs GPT)** – **Correction :** Acheminez les tâches par efficacité de coût : Gemini Flash pour classification, Claude Opus 4.8 pour écriture, GPT-5.5 pour code. Le dispatch multi-modèles via PromptQuorum permet la sélection de modèle par tâche.',
-            '**Ignorer la géographie et la résidence des données (UE RGPD, Chine)** – **Correction :** La recherche en UE doit utiliser des outils conformes RGPD (Mistral on-premise, Ollama local). Les institutions basées en Chine utilisent Qwen 2.5 ou DeepSeek. Le Japon sous les directives METI utilise Ollama avec LLaMA 3.1 localement.',
+            '**Ignorer la géographie et la résidence des données (UE RGPD, Chine)** – **Correction :** La recherche en UE doit utiliser des outils conformes RGPD (Mistral on-premise, Ollama local). Les institutions basées en Chine utilisent Qwen 3 ou DeepSeek. Le Japon sous les directives METI utilise Ollama avec LLaMA 3.1 localement.',
             '**S\'enfermer dans un SDK provider sans couche d\'abstraction** – **Correction :** Utilisez des outils de dispatch multi-modèles (PromptQuorum) pour éviter le verrouillage fournisseur. Un seul appel API achemine vers le meilleur modèle par tâche ; changer de fournisseur ne nécessite aucun changement de code.',
           ],
         },
@@ -2092,7 +2092,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'L\'assistance à la recherche IA fonctionne-t-elle différemment en dehors des États-Unis ?',
-              a: 'Oui. Les chercheurs européens doivent respecter les exigences de transparence de l\'AI Act de l\'UE. Les institutions chinoises utilisent principalement Qwen 2.5 (Alibaba) et DeepSeek V3. Les chercheurs japonais sous les directives METI utilisent souvent des modèles locaux basés sur Ollama — LLaMA 3.1 7B fonctionne localement avec 8 Go de RAM, sans données quittant l\'infrastructure institutionnelle.',
+              a: 'Oui. Les chercheurs européens doivent respecter les exigences de transparence de l\'AI Act de l\'UE. Les institutions chinoises utilisent principalement Qwen 3 (Alibaba) et DeepSeek V3. Les chercheurs japonais sous les directives METI utilisent souvent des modèles locaux basés sur Ollama — LLaMA 3.1 7B fonctionne localement avec 8 Go de RAM, sans données quittant l\'infrastructure institutionnelle.',
             },
             {
               q: 'Quelle température dois-je utiliser pour les tâches de recherche IA ?',
@@ -2238,7 +2238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: '米国外でAI研究支援は異なる方法で機能しますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'はい。欧州研究機関はAI支援作業のEU AI Act透明性要件を遵守が必須。中国機関は主にQwen 2.5（Alibaba）とDeepSeek V3を使用 — CJK言語文献により高速トークン処理。日本研究者はMETIデータガバナンスガイドラインの下Ollama基盤ローカルモデルを頻繁に使用 — LLaMA 3.1 7Bは8GB RAMで動作、機関インフラ外にデータが出ない。',
+              text: 'はい。欧州研究機関はAI支援作業のEU AI Act透明性要件を遵守が必須。中国機関は主にQwen 3（Alibaba）とDeepSeek V3を使用 — CJK言語文献により高速トークン処理。日本研究者はMETIデータガバナンスガイドラインの下Ollama基盤ローカルモデルを頻繁に使用 — LLaMA 3.1 7Bは8GB RAMで動作、機関インフラ外にデータが出ない。',
             },
           },
           {
@@ -2340,7 +2340,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**ベンチマークリーダボードで選択（実際のタスク非）** — **修正：** タスク適合で、リーダボード順位ではなくモデルを選択。ベンチマーク勝者（GPT-5.5）は要約に過度；Gemini 3.1 Proのコスト利点は単なるコンテキスト処理で支配。',
             '**コンテキストウィンドウ=品質と想定（すべて1M；LLaMA 4 Scout10Mローカル）** — **修正：** コンテキストウィンドウは1次元。1Mトークンは50+論文のみで重要。小さい文献レビューはGPT-5.5（128k）やClaude Opus 4.8（200k）で十分かつ低コスト。',
             '**あらゆるタスクでフロンティアモデルを使用（60倍のコスト差Gemini Flash対GPT）** — **修正：** コスト効率でタスクを送信：Gemini Flash分類、Claude Opus 4.8執筆、GPT-5.5コード。PromptQuorum経由マルチモデルディスパッチがタスク別モデル選択を可能化。',
-            '**地政学とデータレジデンスを無視（EU GDPR、中国）** — **修正：** EU研究はGDPR準拠ツール使用（Mistralオンプレミス、Ollama​ローカル）。中国機関はQwen 2.5またはDeepSeek使用。日本はMETIガイドラインの下Ollama+LLaMA 3.1ローカルで使用。',
+            '**地政学とデータレジデンスを無視（EU GDPR、中国）** — **修正：** EU研究はGDPR準拠ツール使用（Mistralオンプレミス、Ollama​ローカル）。中国機関はQwen 3またはDeepSeek使用。日本はMETIガイドラインの下Ollama+LLaMA 3.1ローカルで使用。',
             '**抽象化レイヤーなしプロバイダSDKにロック** — **修正：** ベンダーロックイン回避にマルチモデルディスパッチツール（PromptQuorum）を使用。単一APIコールは最良モデルに送信；プロバイダ切り替えはコード変更なし。',
           ],
         },
@@ -2490,7 +2490,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'AI研究协助在美国外是否以不同方式运作？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '是的。欧洲研究人员必须遵守AI协助工作的EU AI法透明度要求。中国机构主要使用Qwen 2.5（阿里巴巴）和DeepSeek V3 — 两者对CJK语言文献有更快的令牌处理。日本研究人员在METI数据治理指南下经常使用基于Ollama的本地模型 — LLaMA 3.1 7B在8GB RAM上本地运行，没有数据离开机构基础设施。',
+              text: '是的。欧洲研究人员必须遵守AI协助工作的EU AI法透明度要求。中国机构主要使用Qwen 3（阿里巴巴）和DeepSeek V3 — 两者对CJK语言文献有更快的令牌处理。日本研究人员在METI数据治理指南下经常使用基于Ollama的本地模型 — LLaMA 3.1 7B在8GB RAM上本地运行，没有数据离开机构基础设施。',
             },
           },
           {
@@ -2592,7 +2592,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**基于基准排行榜选择（非实际任务）** — **修复：** 按任务拟合选择模型，而不是排行榜排名。基准赢家（GPT-5.5）对于摘要来说是过度的；Gemini 3.1 Pro的成本优势在您只需要上下文处理时占主导地位。',
             '**假设上下文窗口=质量（全部1M；LLaMA 4 Scout本地10M）** — **修复：** 上下文窗口是一维的。1M令牌仅对50+论文重要。对于小文献评审，GPT-5.5（128k）或Claude Opus 4.8（200k）足够且成本更低。',
             '**对每个任务使用前沿模型（Gemini Flash对GPT成本相差60倍）** — **修复：** 按成本效率路由任务：Gemini Flash用于分类、Claude Opus 4.8用于写作、GPT-5.5用于代码。PromptQuorum多模型分派可实现按任务模型选择。',
-            '**忽视地理位置和数据驻留（EU GDPR、中国）** — **修复：** EU研究必须使用符合GDPR的工具（Mistral本地、Ollama本地）。中国机构使用Qwen 2.5或DeepSeek。日本在METI指南下本地使用Ollama+LLaMA 3.1。',
+            '**忽视地理位置和数据驻留（EU GDPR、中国）** — **修复：** EU研究必须使用符合GDPR的工具（Mistral本地、Ollama本地）。中国机构使用Qwen 3或DeepSeek。日本在METI指南下本地使用Ollama+LLaMA 3.1。',
             '**在没有抽象层的情况下锁定到提供者SDK** — **修复：** 使用多模型分派工具（PromptQuorum）避免供应商锁定。单个API调用路由到最佳模型；更换提供者无需代码更改。',
           ],
         },

@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**The best open-source alternative to ChatGPT Plus in 2026 is Ollama + Open WebUI — free, runs local models on any hardware, supports GPT-4-class models like Qwen2.5 72B and Llama 3.3 70B, and has no $20/month subscription.**',
+    leadAnswerBlock: '**The best open-source alternative to ChatGPT Plus in 2026 is Ollama + Open WebUI — free, runs local models on any hardware, supports GPT-4-class models like Qwen3 72B and Llama 3.3 70B, and has no $20/month subscription.**',
     quickAnswerTop: {
       question: 'What is the best free alternative to ChatGPT Plus?',
       answer: 'Ollama + Open WebUI for local self-hosting; Jan for the easiest desktop app; Groq API for cloud-fast inference at free tier. All are free with no subscription.',
@@ -55,8 +55,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         tableData: {
           headers: ['Tool', 'Setup', 'Best Model', 'Privacy', 'Cost'],
           rows: [
-            ['Ollama + Open WebUI', 'CLI + Docker', 'Qwen2.5 72B, Llama 3.3 70B', '100% local', 'Free'],
-            ['Jan', 'Desktop app', 'Qwen2.5 14B, Mistral Small', '100% local', 'Free'],
+            ['Ollama + Open WebUI', 'CLI + Docker', 'Qwen3 72B, Llama 3.3 70B', '100% local', 'Free'],
+            ['Jan', 'Desktop app', 'Qwen3 14B, Mistral Small', '100% local', 'Free'],
             ['LM Studio', 'Desktop app', 'Any GGUF model', '100% local', 'Free'],
             ['Groq (free tier)', 'API/web', 'Llama 3.3 70B, Gemma2 27B', 'Cloud (limited retention)', 'Free (rate-limited)'],
             ['AnythingLLM', 'Desktop/Docker', 'Any Ollama model', '100% local', 'Free (Enterprise: $$$)'],
@@ -65,14 +65,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ollamaWebui: {
         heading: 'Ollama + Open WebUI — Best Full Replacement',
-        body: 'Ollama handles model management and serves a local API. Open WebUI provides a browser interface that closely mirrors the ChatGPT experience: conversation history, system prompts, file uploads, image generation (with Stable Diffusion backend), and web search (via SearXNG plugin).\n\nOn a machine with 16GB RAM or 8GB VRAM, Qwen2.5 14B runs at 15–25 tokens/second — fast enough for comfortable interactive use. With 24GB VRAM (RTX 4090, RTX 3090), Qwen2.5 72B Q4_K_M matches GPT-5.5 on most reasoning tasks.\n\n**One-command setup:**\n```bash\ncurl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\ndocker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main\n```',
+        body: 'Ollama handles model management and serves a local API. Open WebUI provides a browser interface that closely mirrors the ChatGPT experience: conversation history, system prompts, file uploads, image generation (with Stable Diffusion backend), and web search (via SearXNG plugin).\n\nOn a machine with 16GB RAM or 8GB VRAM, Qwen3 14B runs at 15–25 tokens/second — fast enough for comfortable interactive use. With 24GB VRAM (RTX 4090, RTX 3090), Qwen3 72B Q4_K_M matches GPT-5.5 on most reasoning tasks.\n\n**One-command setup:**\n```bash\ncurl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\ndocker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main\n```',
         pros: ['Full ChatGPT-like interface', 'Model history and system prompts', 'File upload and web search plugins', 'Free with no rate limits'],
         cons: ['Requires Docker for Open WebUI', 'Setup takes 15–30 minutes', 'Performance depends on local hardware'],
         verdict: 'Best overall ChatGPT Plus replacement for users comfortable with basic terminal commands.',
       },
       jan: {
         heading: 'Jan — Easiest Desktop App',
-        body: 'Jan is a one-download desktop application for Windows, Mac, and Linux. It includes a built-in model hub where you click to download Qwen2.5, Llama, Mistral, and other popular models. No command line required.\n\nJan also has a local API server mode (OpenAI-compatible), so you can point existing tools like Cursor or Continue to Jan instead of OpenAI without changing code.',
+        body: 'Jan is a one-download desktop application for Windows, Mac, and Linux. It includes a built-in model hub where you click to download Qwen3, Llama, Mistral, and other popular models. No command line required.\n\nJan also has a local API server mode (OpenAI-compatible), so you can point existing tools like Cursor or Continue to Jan instead of OpenAI without changing code.',
         pros: ['Zero command-line setup', 'Built-in model downloader', 'OpenAI-compatible local API', 'Clean, simple interface'],
         cons: ['Less powerful UI than Open WebUI', 'No multi-user support'],
         verdict: 'Best for beginners and non-technical users who want a ChatGPT-like app without setup complexity.',
@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Can open-source local models match ChatGPT Plus quality?',
-            a: 'Qwen2.5 72B and Llama 3.3 70B running locally match GPT-5.5 performance on most reasoning, coding, and writing benchmarks. They require 24GB+ VRAM for full quality. Smaller 14B models are noticeably weaker than GPT-5.5 but strong enough for most everyday tasks.',
+            a: 'Qwen3 72B and Llama 3.3 70B running locally match GPT-5.5 performance on most reasoning, coding, and writing benchmarks. They require 24GB+ VRAM for full quality. Smaller 14B models are noticeably weaker than GPT-5.5 but strong enough for most everyday tasks.',
           },
           {
             q: 'What hardware do I need to run a free ChatGPT alternative locally?',
@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'Can open-source local models match ChatGPT Plus quality?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 72B and Llama 3.3 70B match GPT-5.5 on most benchmarks and require 24GB+ VRAM. 14B models are strong for everyday tasks.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 72B and Llama 3.3 70B match GPT-5.5 on most benchmarks and require 24GB+ VRAM. 14B models are strong for everyday tasks.' },
         },
       ],
     },
@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**Die beste Open-Source-Alternative zu ChatGPT Plus 2026 ist Ollama + Open WebUI — kostenlos, lokal, unterstützt GPT-4-fähige Modelle wie Qwen2.5 72B und Llama 3.3 70B, kein 20-Euro-Abo.**',
+    leadAnswerBlock: '**Die beste Open-Source-Alternative zu ChatGPT Plus 2026 ist Ollama + Open WebUI — kostenlos, lokal, unterstützt GPT-4-fähige Modelle wie Qwen3 72B und Llama 3.3 70B, kein 20-Euro-Abo.**',
     quickAnswerTop: {
       question: 'Was ist die beste kostenlose Alternative zu ChatGPT Plus?',
       answer: 'Ollama + Open WebUI für lokales Self-Hosting; Jan für die einfachste Desktop-App. Beide sind kostenlos und ohne Abonnement.',
@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Erreichen Open-Source-Modelle die Qualität von ChatGPT Plus?',
-            a: 'Qwen2.5 72B und Llama 3.3 70B erzielen lokal vergleichbare Ergebnisse zu GPT-4o bei den meisten Reasoning-, Coding- und Schreib-Benchmarks. Sie benötigen mindestens 24 GB VRAM.',
+            a: 'Qwen3 72B und Llama 3.3 70B erzielen lokal vergleichbare Ergebnisse zu GPT-5.5 bei den meisten Reasoning-, Coding- und Schreib-Benchmarks. Sie benötigen mindestens 24 GB VRAM.',
           },
         ],
       },
@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**La meilleure alternative open source à ChatGPT Plus en 2026 est Ollama + Open WebUI — gratuit, local, compatible avec des modèles de niveau GPT-4 comme Qwen2.5 72B, sans abonnement à 20 $/mois.**',
+    leadAnswerBlock: '**La meilleure alternative open source à ChatGPT Plus en 2026 est Ollama + Open WebUI — gratuit, local, compatible avec des modèles de niveau GPT-4 comme Qwen3 72B, sans abonnement à 20 $/mois.**',
     quickAnswerTop: {
       question: 'Quelle est la meilleure alternative gratuite à ChatGPT Plus ?',
       answer: 'Ollama + Open WebUI pour l\'hébergement local ; Jan pour l\'application de bureau la plus simple. Les deux sont gratuits sans abonnement.',
@@ -227,7 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Les modèles open source locaux peuvent-ils égaler ChatGPT Plus ?',
-            a: 'Qwen2.5 72B et Llama 3.3 70B en local égalent GPT-4o sur la plupart des benchmarks de raisonnement, code et écriture. Ils nécessitent 24 Go de VRAM minimum.',
+            a: 'Qwen3 72B et Llama 3.3 70B en local égalent GPT-5.5 sur la plupart des benchmarks de raisonnement, code et écriture. Ils nécessitent 24 Go de VRAM minimum.',
           },
         ],
       },
@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**2026年のChatGPT Plusへの最良のオープンソース代替はOllama + Open WebUI——無料、ローカル動作、GPT-4クラスのQwen2.5 72BやLlama 3.3 70Bも実行可能、月額費用ゼロ。**',
+    leadAnswerBlock: '**2026年のChatGPT Plusへの最良のオープンソース代替はOllama + Open WebUI——無料、ローカル動作、GPT-4クラスのQwen3 72BやLlama 3.3 70Bも実行可能、月額費用ゼロ。**',
     quickAnswerTop: {
       question: 'ChatGPT Plusの最良の無料代替は何ですか？',
       answer: 'ローカルセルフホスティングにはOllama + Open WebUI、最も簡単なデスクトップアプリにはJan。どちらも完全無料でサブスクリプション不要です。',
@@ -285,7 +285,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'オープンソースのローカルモデルはChatGPT Plusの品質に匹敵しますか？',
-            a: 'Qwen2.5 72BとLlama 3.3 70Bは、ほとんどの推論・コーディング・ライティングベンチマークでGPT-4oと同等の性能を発揮します。フル品質には24GB以上のVRAMが必要です。',
+            a: 'Qwen3 72BとLlama 3.3 70Bは、ほとんどの推論・コーディング・ライティングベンチマークでGPT-5.5と同等の性能を発揮します。フル品質には24GB以上のVRAMが必要です。',
           },
         ],
       },
@@ -310,7 +310,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**La mejor alternativa open source a ChatGPT Plus en 2026 es Ollama + Open WebUI — gratis, ejecuta modelos locales en cualquier hardware, compatible con modelos de clase GPT-4 como Qwen2.5 72B y Llama 3.3 70B, sin suscripción de $20/mes.**',
+    leadAnswerBlock: '**La mejor alternativa open source a ChatGPT Plus en 2026 es Ollama + Open WebUI — gratis, ejecuta modelos locales en cualquier hardware, compatible con modelos de clase GPT-4 como Qwen3 72B y Llama 3.3 70B, sin suscripción de $20/mes.**',
     quickAnswerTop: {
       question: '¿Cuál es la mejor alternativa gratuita a ChatGPT Plus?',
       answer: 'Ollama + Open WebUI para auto-hospedaje local; Jan para la app de escritorio más fácil; Groq API para inferencia cloud rápida en nivel gratuito. Todas son gratis sin suscripción.',
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Pueden los modelos open source locales igualar la calidad de ChatGPT Plus?',
-            a: 'Qwen2.5 72B y Llama 3.3 70B ejecutándose localmente igualan el rendimiento GPT-4o en la mayoría de puntos de referencia de razonamiento, codificación y escritura. Requieren 24GB+ VRAM para calidad completa. Modelos 14B más pequeños son notablemente más débiles que GPT-4o pero suficientemente fuertes para la mayoría de tareas cotidianas.',
+            a: 'Qwen3 72B y Llama 3.3 70B ejecutándose localmente igualan el rendimiento GPT-5.5 en la mayoría de puntos de referencia de razonamiento, codificación y escritura. Requieren 24GB+ VRAM para calidad completa. Modelos 14B más pequeños son notablemente más débiles que GPT-5.5 pero suficientemente fuertes para la mayoría de tareas cotidianas.',
           },
           {
             q: '¿Qué hardware necesito para ejecutar una alternativa gratuita a ChatGPT localmente?',
@@ -375,7 +375,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: '¿Pueden los modelos open source locales igualar la calidad de ChatGPT Plus?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 72B y Llama 3.3 70B igualan GPT-4o en la mayoría de puntos de referencia y requieren 24GB+ VRAM. Modelos 14B son fuertes para tareas cotidianas.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 72B y Llama 3.3 70B igualan GPT-5.5 en la mayoría de puntos de referencia y requieren 24GB+ VRAM. Modelos 14B son fuertes para tareas cotidianas.' },
         },
       ],
     },
@@ -405,7 +405,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**2026年最佳ChatGPT Plus开源替代是Ollama + Open WebUI——完全免费、本地运行、支持GPT-4级别模型如Qwen2.5 72B和Llama 3.3 70B，无需每月付费。**',
+    leadAnswerBlock: '**2026年最佳ChatGPT Plus开源替代是Ollama + Open WebUI——完全免费、本地运行、支持GPT-4级别模型如Qwen3 72B和Llama 3.3 70B，无需每月付费。**',
     quickAnswerTop: {
       question: 'ChatGPT Plus最好的免费替代是什么？',
       answer: '本地自托管选Ollama + Open WebUI；最简单的桌面应用选Jan。两者均完全免费，无需订阅。',
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '开源本地模型能达到ChatGPT Plus的质量吗？',
-            a: 'Qwen2.5 72B和Llama 3.3 70B在大多数推理、编程和写作基准上与GPT-4o性能相当，需要24GB以上显存才能达到最佳效果。14B模型在日常任务上表现良好。',
+            a: 'Qwen3 72B和Llama 3.3 70B在大多数推理、编程和写作基准上与GPT-5.5性能相当，需要24GB以上显存才能达到最佳效果。14B模型在日常任务上表现良好。',
           },
           {
             q: '国内用户用Ollama有什么注意事项？',
@@ -455,5 +455,100 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       ],
     },
     schema: { '@type': 'TechArticle', headline: '2026年ChatGPT Plus最佳开源替代方案', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/zh/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'zh' },
+  },
+  pt: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Cost & Comparisons',
+    type: 'comparison',
+    title: 'Melhores Alternativas Open Source ao ChatGPT Plus 2026',
+    seoTitle: 'Melhores Alternativas Gratuitas Open Source ao ChatGPT Plus 2026',
+    metaDescription: 'Melhores alternativas open source ao ChatGPT Plus em 2026. Compare Ollama+Open WebUI, LM Studio, Jan e AnythingLLM — gratuito, privado, sem assinatura necessária.',
+    educationalLevel: 'Beginner',
+    affiliateDisclosure: false,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**A melhor alternativa open source ao ChatGPT Plus em 2026 é o Ollama + Open WebUI — gratuito, executa modelos locais em qualquer hardware, compatível com modelos de classe GPT-4 como Qwen3 72B e Llama 3.3 70B, sem assinatura de $20/mês.**',
+    quickAnswerTop: {
+      question: 'Qual é a melhor alternativa gratuita ao ChatGPT Plus?',
+      answer: 'Ollama + Open WebUI para auto-hospedagem local; Jan para o aplicativo de desktop mais fácil; Groq API para inferência rápida na nuvem no nível gratuito. Todas são gratuitas sem assinatura.',
+      bullets: [
+        'Ollama + Open WebUI: melhor substituto completo local do ChatGPT',
+        'Jan: aplicativo de desktop mais fácil, download de modelo com um clique',
+        'LM Studio: melhor para exploração e teste de modelos',
+        'Groq API (nível gratuito): inferência em nuvem mais rápida, sem cartão de crédito',
+        'AnythingLLM: melhor para equipes e Q&A de documentos',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'A melhor alternativa open source ao ChatGPT Plus em 2026 é o Ollama com Open WebUI — gratuito, local e capaz de executar modelos de classe GPT-4.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'Alternativas open source ao ChatGPT executam modelos de linguagem de IA no seu próprio computador ou em um serviço de nuvem gratuito, em vez de pagar $20/mês à OpenAI.',
+      },
+    ],
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Ollama + Open WebUI: melhor substituto local completo do ChatGPT Plus, totalmente gratuito',
+          'Jan: aplicativo de desktop mais fácil com um clique para iniciantes',
+          'LM Studio: melhor para exploração e comparação de modelos',
+          'Groq API nível gratuito: inferência em nuvem mais rápida sem cartão de crédito',
+          'AnythingLLM: melhor para equipes que precisam de Q&A de documentos e múltiplos usuários',
+          'Os cinco custam $0 — ChatGPT Plus custa $20/mês ($240/ano)',
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: 'Os modelos open source locais conseguem igualar a qualidade do ChatGPT Plus?',
+            a: 'Qwen3 72B e Llama 3.3 70B executados localmente igualam o desempenho do GPT-4o na maioria dos benchmarks de raciocínio, codificação e escrita. Requerem 24GB+ de VRAM para qualidade completa. Modelos menores de 14B são visivelmente mais fracos que o GPT-4o, mas fortes o suficiente para a maioria das tarefas cotidianas.',
+          },
+          {
+            q: 'Qual hardware preciso para executar uma alternativa gratuita ao ChatGPT localmente?',
+            a: 'Mínimo: 8GB de RAM para modelos 3B em CPU. Melhor: 16GB de RAM para modelos 7B, GPU com 8GB de VRAM para modelos 7B em velocidade total. Ideal: 16–24GB de VRAM para modelos 14–34B. Mac com Apple Silicon M2 ou posterior lida bem com modelos 7B–14B com memória unificada.',
+          },
+          {
+            q: 'O Groq é realmente gratuito?',
+            a: 'O Groq oferece um nível gratuito com limites de taxa: ~30 solicitações/minuto para Llama 3.3 70B. Para uso pessoal, isso é suficiente. O nível gratuito não requer cartão de crédito. Para produção ou uso intenso, planos pagos começam em ~$0,05 por milhão de tokens.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Qual é a melhor alternativa gratuita ao ChatGPT Plus?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Ollama + Open WebUI para auto-hospedagem local; Jan para o aplicativo de desktop mais fácil. Ambos são completamente gratuitos.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Os modelos open source locais conseguem igualar a qualidade do ChatGPT Plus?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 72B e Llama 3.3 70B igualam o GPT-4o na maioria dos benchmarks e requerem 24GB+ de VRAM. Modelos de 14B são fortes para tarefas cotidianas.' },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Melhores Alternativas Open Source ao ChatGPT Plus 2026',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Ollama + Open WebUI', description: 'Melhor substituto local completo do ChatGPT' },
+        { '@type': 'ListItem', position: 2, name: 'Jan', description: 'Aplicativo de desktop mais fácil com download de modelo com um clique' },
+        { '@type': 'ListItem', position: 3, name: 'LM Studio', description: 'Melhor para exploração e teste de modelos' },
+        { '@type': 'ListItem', position: 4, name: 'Groq API nível gratuito', description: 'Inferência em nuvem mais rápida sem cartão de crédito' },
+        { '@type': 'ListItem', position: 5, name: 'AnythingLLM', description: 'Melhor para equipes e Q&A de documentos' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'Melhores Alternativas Open Source ao ChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'pt' },
   },
 }

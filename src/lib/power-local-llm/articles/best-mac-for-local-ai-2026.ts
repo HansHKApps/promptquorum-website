@@ -163,7 +163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Mac', 'Unified memory', 'Bandwidth', 'Speed (8B Q4)', 'Speed (70B Q4)', 'Price (May 2026)', 'Best for'],
         rows: [
           {
-            'Mac': 'Mac Mini M5 Pro 64 GB',
+            'Mac': '[Mac Mini M5 Pro 64 GB](https://www.apple.com/mac-mini/)',
             'Unified memory': '64 GB',
             'Bandwidth': '307 GB/s',
             'Speed (8B Q4)': '50-60 tok/s',
@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Best for': 'Silent always-on server, 34B models',
           },
           {
-            'Mac': 'MacBook Pro 16" M5 Max 64 GB',
+            'Mac': '[MacBook Pro 16" M5 Max 64 GB](https://www.apple.com/macbook-pro/)',
             'Unified memory': '64 GB',
             'Bandwidth': '460 GB/s',
             'Speed (8B Q4)': '~100-110 tok/s',
@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Best for': 'Portable 70B Q5, multi-model',
           },
           {
-            'Mac': 'Mac Studio M4 Max 128 GB',
+            'Mac': '[Mac Studio M4 Max 128 GB](https://www.apple.com/mac-studio/)',
             'Unified memory': '128 GB',
             'Bandwidth': '~410-546 GB/s',
             'Speed (8B Q4)': 'family-level est.',
@@ -216,12 +216,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Your largest target model and your form factor decide the Mac; your budget decides the memory tier inside it.** Find the row that matches your situation.',
         columns: ['Your situation', 'Buy this'],
         rows: [
-          { 'Your situation': 'I want a silent always-on AI server for home or office', 'Buy this': 'Mac Mini M5 Pro 64 GB' },
+          { 'Your situation': 'I want a silent always-on AI server for home or office', 'Buy this': '[Mac Mini M5 Pro 64 GB](https://www.apple.com/mac-mini/)' },
           { 'Your situation': 'I run 8B-13B models and want the cheapest capable Mac', 'Buy this': 'Mac Mini M5 Pro (32-64 GB)' },
           { 'Your situation': 'I run 34B models on a desk and value low running cost', 'Buy this': 'Mac Mini M5 Pro 64 GB' },
-          { 'Your situation': 'I need to run 70B models and travel with the machine', 'Buy this': 'MacBook Pro 16" M5 Max 64 GB' },
+          { 'Your situation': 'I need to run 70B models and travel with the machine', 'Buy this': '[MacBook Pro 16" M5 Max 64 GB](https://www.apple.com/macbook-pro/)' },
           { 'Your situation': 'I want 70B at Q5 quality and run multiple models at once', 'Buy this': 'MacBook Pro 16" M5 Max 128 GB' },
-          { 'Your situation': 'I want a 70B desktop machine and want to buy today', 'Buy this': 'Mac Studio M4 Max 128 GB' },
+          { 'Your situation': 'I want a 70B desktop machine and want to buy today', 'Buy this': '[Mac Studio M4 Max 128 GB](https://www.apple.com/mac-studio/)' },
           { 'Your situation': 'I want the M5 Mac Studio specifically', 'Buy this': 'Wait — expected late 2026, not yet released' },
           { 'Your situation': 'I am unsure and want the safest first Mac for local AI', 'Buy this': 'Mac Mini M5 Pro 64 GB — upgrade later if you outgrow it' },
         ],
@@ -503,11 +503,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac Mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio para IA local — tres Mac, una regla de decisión: compra por memoria unificada, luego optimiza el ancho de banda. Precios de mayo 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
-      'Llama 3.1 34B',
-      'Llama 3.1 70B',
-      'Mistral 7B',
-      'Qwen 2.5 32B',
+      'Llama 3.3 8B',
+      'Llama 3.3 34B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M5 Pro',
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Mac', 'Memoria unificada', 'Ancho de banda', 'Velocidad (8B Q4)', 'Velocidad (70B Q4)', 'Precio (mayo 2026)', 'Ideal para'],
         rows: [
           {
-            'Mac': 'Mac Mini M5 Pro 64 GB',
+            'Mac': '[Mac Mini M5 Pro 64 GB](https://www.apple.com/mac-mini/)',
             'Memoria unificada': '64 GB',
             'Ancho de banda': '307 GB/s',
             'Velocidad (8B Q4)': '50-60 tok/s',
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ideal para': 'Servidor siempre activo silencioso, modelos 34B',
           },
           {
-            'Mac': 'MacBook Pro 16" M5 Max 64 GB',
+            'Mac': '[MacBook Pro 16" M5 Max 64 GB](https://www.apple.com/macbook-pro/)',
             'Memoria unificada': '64 GB',
             'Ancho de banda': '460 GB/s',
             'Velocidad (8B Q4)': '~100-110 tok/s',
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ideal para': '70B Q5 portátil, multi-modelo',
           },
           {
-            'Mac': 'Mac Studio M4 Max 128 GB',
+            'Mac': '[Mac Studio M4 Max 128 GB](https://www.apple.com/mac-studio/)',
             'Memoria unificada': '128 GB',
             'Ancho de banda': '~410-546 GB/s',
             'Velocidad (8B Q4)': 'estimación a nivel de familia',
@@ -690,12 +690,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tu modelo objetivo más grande y tu factor de forma deciden el Mac; tu presupuesto decide el nivel de memoria dentro de él.** Encuentra la fila que coincide con tu situación.',
         columns: ['Tu situación', 'Compra este'],
         rows: [
-          { 'Tu situación': 'Quiero un servidor de IA siempre activo y silencioso para casa u oficina', 'Compra este': 'Mac Mini M5 Pro 64 GB' },
+          { 'Tu situación': 'Quiero un servidor de IA siempre activo y silencioso para casa u oficina', 'Compra este': '[Mac Mini M5 Pro 64 GB](https://www.apple.com/mac-mini/)' },
           { 'Tu situación': 'Ejecuto modelos 8B-13B y quiero el Mac más económico capaz', 'Compra este': 'Mac Mini M5 Pro (32-64 GB)' },
           { 'Tu situación': 'Ejecuto modelos 34B en un escritorio y valoro el bajo costo operativo', 'Compra este': 'Mac Mini M5 Pro 64 GB' },
-          { 'Tu situación': 'Necesito ejecutar modelos 70B y viajar con el equipo', 'Compra este': 'MacBook Pro 16" M5 Max 64 GB' },
+          { 'Tu situación': 'Necesito ejecutar modelos 70B y viajar con el equipo', 'Compra este': '[MacBook Pro 16" M5 Max 64 GB](https://www.apple.com/macbook-pro/)' },
           { 'Tu situación': 'Quiero 70B en calidad Q5 y ejecutar varios modelos a la vez', 'Compra este': 'MacBook Pro 16" M5 Max 128 GB' },
-          { 'Tu situación': 'Quiero un equipo de escritorio 70B y comprar hoy', 'Compra este': 'Mac Studio M4 Max 128 GB' },
+          { 'Tu situación': 'Quiero un equipo de escritorio 70B y comprar hoy', 'Compra este': '[Mac Studio M4 Max 128 GB](https://www.apple.com/mac-studio/)' },
           { 'Tu situación': 'Quiero específicamente el Mac Studio M5', 'Compra este': 'Esperar — esperado para finales de 2026, aún no lanzado' },
           { 'Tu situación': 'Estoy indeciso y quiero el primer Mac más seguro para IA local', 'Compra este': 'Mac Mini M5 Pro 64 GB — actualiza después si lo superas' },
         ],
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**El MacBook Pro 16" M5 Max es el único Mac disponible que ejecuta modelos 70B, y lo hace en un factor de forma portátil.** Es la opción para compradores que necesitan modelos de clase 70B y quieren llevar el equipo consigo. El compromiso es una reducción térmica del 10-15% bajo inferencia sostenida y un precio más alto que un equipo de escritorio con el mismo chip.',
         items: [
-          '**MacBook Pro 16" M5 Max 64 GB (~$3,499):** GPU de 32 núcleos, 460 GB/s de ancho de banda. Ejecuta modelos 8B a aproximadamente 100-110 tok/s y Llama 3.1 70B Q4 a 7-11 tok/s. El punto de entrada portátil a la IA local 70B.',
+          '**MacBook Pro 16" M5 Max 64 GB (~$3,499):** GPU de 32 núcleos, 460 GB/s de ancho de banda. Ejecuta modelos 8B a aproximadamente 100-110 tok/s y Llama 3.3 70B Q4 a 7-11 tok/s. El punto de entrada portátil a la IA local 70B.',
           '**MacBook Pro 16" M5 Max 128 GB (~$4,499):** GPU de 40 núcleos, 614 GB/s de ancho de banda. Ejecuta 70B en Q5 (mayor calidad) y permite ejecutar dos modelos a la vez — por ejemplo un modelo 70B más un modelo 13B.',
           '**Por qué comprar este Mac:** necesitas modelos 70B y portabilidad, quieres un único equipo para trabajo creativo e IA, o viajas y presentas y no puedes dejar un equipo de escritorio.',
           '**Por qué descartarlo:** si el equipo nunca abandona el escritorio, un Mac Studio con la misma memoria cuesta menos y funciona más frío; si los modelos 34B son suficientes, el Mac Mini M5 Pro ahorra más de $2,000.',
@@ -932,7 +932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puede un Mac ejecutar modelos 70B?',
-            a: 'Sí. Un MacBook Pro 16" M5 Max de 64 GB ejecuta Llama 3.1 70B Q4 a 7-11 tokens por segundo, y la versión de 128 GB ejecuta 70B en Q5 a 8-12 tokens por segundo. Un Mac Studio de 128 GB también ejecuta 70B cómodamente. El Mac Mini M5 Pro no puede — los 64 GB son demasiado justos para 70B una vez contado el overhead de macOS.',
+            a: 'Sí. Un MacBook Pro 16" M5 Max de 64 GB ejecuta Llama 3.3 70B Q4 a 7-11 tokens por segundo, y la versión de 128 GB ejecuta 70B en Q5 a 8-12 tokens por segundo. Un Mac Studio de 128 GB también ejecuta 70B cómodamente. El Mac Mini M5 Pro no puede — los 64 GB son demasiado justos para 70B una vez contado el overhead de macOS.',
           },
           {
             q: '¿Es un Mac más rápido que una GPU NVIDIA para LLMs locales?',
@@ -989,11 +989,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac Mini M5 Pro vs. MacBook Pro 16" M5 Max vs. Mac Studio für lokale KI — drei Macs, eine Entscheidungsregel: zuerst nach Unified Memory kaufen, dann nach Bandbreite. Preise vom Mai 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
-      'Llama 3.1 34B',
-      'Llama 3.1 70B',
-      'Mistral 7B',
-      'Qwen 2.5 32B',
+      'Llama 3.3 8B',
+      'Llama 3.3 34B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M5 Pro',
@@ -1123,7 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Mac', 'Unified Memory', 'Bandbreite', 'Tempo (8B Q4)', 'Tempo (70B Q4)', 'Preis (Mai 2026)', 'Am besten für'],
         rows: [
           {
-            'Mac': 'Mac Mini M5 Pro 64 GB',
+            'Mac': '[Mac Mini M5 Pro 64 GB](https://www.apple.com/mac-mini/)',
             'Unified Memory': '64 GB',
             'Bandbreite': '307 GB/s',
             'Tempo (8B Q4)': '50-60 Tok/s',
@@ -1132,7 +1132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Am besten für': 'Lautloser Always-on-Server, 34B-Modelle',
           },
           {
-            'Mac': 'MacBook Pro 16" M5 Max 64 GB',
+            'Mac': '[MacBook Pro 16" M5 Max 64 GB](https://www.apple.com/macbook-pro/)',
             'Unified Memory': '64 GB',
             'Bandbreite': '460 GB/s',
             'Tempo (8B Q4)': 'ca. 100-110 Tok/s',
@@ -1150,7 +1150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Am besten für': 'Portable 70B Q5, mehrere Modelle',
           },
           {
-            'Mac': 'Mac Studio M4 Max 128 GB',
+            'Mac': '[Mac Studio M4 Max 128 GB](https://www.apple.com/mac-studio/)',
             'Unified Memory': '128 GB',
             'Bandbreite': 'ca. 410-546 GB/s',
             'Tempo (8B Q4)': 'Schätzung auf Familienebene',
@@ -1176,12 +1176,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ihr größtes Zielmodell und Ihre Bauform entscheiden über den Mac; Ihr Budget entscheidet über die Speicherklasse innerhalb davon.** Suchen Sie die Zeile, die zu Ihrer Situation passt.',
         columns: ['Ihre Situation', 'Kaufen Sie dies'],
         rows: [
-          { 'Ihre Situation': 'Ich möchte einen lautlosen Always-on-KI-Server für Zuhause oder das Büro', 'Kaufen Sie dies': 'Mac Mini M5 Pro 64 GB' },
+          { 'Ihre Situation': 'Ich möchte einen lautlosen Always-on-KI-Server für Zuhause oder das Büro', 'Kaufen Sie dies': '[Mac Mini M5 Pro 64 GB](https://www.apple.com/mac-mini/)' },
           { 'Ihre Situation': 'Ich nutze 8B-13B-Modelle und möchte den günstigsten leistungsfähigen Mac', 'Kaufen Sie dies': 'Mac Mini M5 Pro (32-64 GB)' },
           { 'Ihre Situation': 'Ich nutze 34B-Modelle am Schreibtisch und lege Wert auf niedrige Betriebskosten', 'Kaufen Sie dies': 'Mac Mini M5 Pro 64 GB' },
-          { 'Ihre Situation': 'Ich muss 70B-Modelle ausführen und das Gerät mit mir tragen', 'Kaufen Sie dies': 'MacBook Pro 16" M5 Max 64 GB' },
+          { 'Ihre Situation': 'Ich muss 70B-Modelle ausführen und das Gerät mit mir tragen', 'Kaufen Sie dies': '[MacBook Pro 16" M5 Max 64 GB](https://www.apple.com/macbook-pro/)' },
           { 'Ihre Situation': 'Ich möchte 70B in Q5-Qualität und mehrere Modelle gleichzeitig betreiben', 'Kaufen Sie dies': 'MacBook Pro 16" M5 Max 128 GB' },
-          { 'Ihre Situation': 'Ich möchte einen 70B-Desktop-Rechner und heute kaufen', 'Kaufen Sie dies': 'Mac Studio M4 Max 128 GB' },
+          { 'Ihre Situation': 'Ich möchte einen 70B-Desktop-Rechner und heute kaufen', 'Kaufen Sie dies': '[Mac Studio M4 Max 128 GB](https://www.apple.com/mac-studio/)' },
           { 'Ihre Situation': 'Ich möchte gezielt den M5-Mac-Studio', 'Kaufen Sie dies': 'Warten — erwartet Ende 2026, noch nicht erschienen' },
           { 'Ihre Situation': 'Ich bin unsicher und möchte den sichersten ersten Mac für lokale KI', 'Kaufen Sie dies': 'Mac Mini M5 Pro 64 GB — später aufrüsten, falls er Ihnen zu klein wird' },
         ],
@@ -1231,7 +1231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Das MacBook Pro 16" M5 Max ist der einzige ausgelieferte Mac, der 70B-Modelle ausführt, und er tut dies in einer portablen Bauform.** Es ist die Wahl für Käuferinnen und Käufer, die Modelle der 70B-Klasse brauchen und das Gerät mit sich tragen wollen. Der Kompromiss ist eine thermische Drosselung von 10-15 % unter Dauerinferenz und ein höherer Preis als bei einem Desktop mit demselben Chip.',
         items: [
-          '**MacBook Pro 16" M5 Max 64 GB (ca. 4.179 €):** 32-Core-GPU, 460 GB/s Bandbreite. Führt 8B-Modelle mit rund 100-110 Tok/s und Llama 3.1 70B Q4 mit 7-11 Tok/s aus. Der portable Einstieg in lokale 70B-KI.',
+          '**MacBook Pro 16" M5 Max 64 GB (ca. 4.179 €):** 32-Core-GPU, 460 GB/s Bandbreite. Führt 8B-Modelle mit rund 100-110 Tok/s und Llama 3.3 70B Q4 mit 7-11 Tok/s aus. Der portable Einstieg in lokale 70B-KI.',
           '**MacBook Pro 16" M5 Max 128 GB (ca. 5.299 €):** 40-Core-GPU, 614 GB/s Bandbreite. Führt 70B bei Q5 (höhere Qualität) aus und unterstützt den Betrieb von zwei Modellen gleichzeitig — etwa ein 70B-Modell plus ein 13B-Modell.',
           '**Warum diesen Mac kaufen:** Sie brauchen 70B-Modelle und Portabilität, Sie möchten eine einzige Maschine für Kreativarbeit und KI, oder Sie präsentieren und reisen und können keinen Desktop zurücklassen.',
           '**Warum diesen Mac überspringen:** Wenn die Maschine den Schreibtisch nie verlässt, kostet ein Mac Studio mit demselben Speicher weniger und läuft kühler; wenn 34B-Modelle genügen, spart der Mac Mini M5 Pro über 2.000 €.',
@@ -1418,7 +1418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ein Mac 70B-Modelle ausführen?',
-            a: 'Ja. Ein MacBook Pro 16" M5 Max mit 64 GB führt Llama 3.1 70B Q4 mit 7-11 Tokens pro Sekunde aus, und die 128-GB-Version führt 70B bei Q5 mit 8-12 Tokens pro Sekunde aus. Ein Mac Studio mit 128 GB führt 70B ebenfalls komfortabel aus. Der Mac Mini M5 Pro kann das nicht — 64 GB sind für 70B zu knapp, sobald der macOS-Overhead mitgezählt wird.',
+            a: 'Ja. Ein MacBook Pro 16" M5 Max mit 64 GB führt Llama 3.3 70B Q4 mit 7-11 Tokens pro Sekunde aus, und die 128-GB-Version führt 70B bei Q5 mit 8-12 Tokens pro Sekunde aus. Ein Mac Studio mit 128 GB führt 70B ebenfalls komfortabel aus. Der Mac Mini M5 Pro kann das nicht — 64 GB sind für 70B zu knapp, sobald der macOS-Overhead mitgezählt wird.',
           },
           {
             q: 'Ist ein Mac schneller als eine NVIDIA-GPU für lokale LLMs?',
@@ -1471,11 +1471,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio pour l\'IA locale — trois Mac, une règle : acheter selon la mémoire unifiée, puis la bande passante. Prix de mai 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
-      'Llama 3.1 34B',
-      'Llama 3.1 70B',
-      'Mistral 7B',
-      'Qwen 2.5 32B',
+      'Llama 3.3 8B',
+      'Llama 3.3 34B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M5 Pro',
@@ -1605,7 +1605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Mac', 'Mémoire unifiée', 'Bande passante', 'Vitesse (8B Q4)', 'Vitesse (70B Q4)', 'Prix (mai 2026)', 'Idéal pour'],
         rows: [
           {
-            'Mac': 'Mac mini M5 Pro 64 Go',
+            'Mac': '[Mac mini M5 Pro 64 Go](https://www.apple.com/mac-mini/)',
             'Mémoire unifiée': '64 Go',
             'Bande passante': '307 Go/s',
             'Vitesse (8B Q4)': '50-60 tok/s',
@@ -1614,7 +1614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Idéal pour': 'Serveur toujours actif silencieux, modèles 34B',
           },
           {
-            'Mac': 'MacBook Pro 16" M5 Max 64 Go',
+            'Mac': '[MacBook Pro 16" M5 Max 64 Go](https://www.apple.com/macbook-pro/)',
             'Mémoire unifiée': '64 Go',
             'Bande passante': '460 Go/s',
             'Vitesse (8B Q4)': 'env. 100-110 tok/s',
@@ -1632,7 +1632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Idéal pour': '70B Q5 portable, multi-modèle',
           },
           {
-            'Mac': 'Mac Studio M4 Max 128 Go',
+            'Mac': '[Mac Studio M4 Max 128 Go](https://www.apple.com/mac-studio/)',
             'Mémoire unifiée': '128 Go',
             'Bande passante': 'env. 410-546 Go/s',
             'Vitesse (8B Q4)': 'est. au niveau de la famille',
@@ -1658,12 +1658,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Votre plus gros modèle cible et votre format décident du Mac ; votre budget décide de la catégorie de mémoire à l\'intérieur.** Trouvez la ligne qui correspond à votre situation.',
         columns: ['Votre situation', 'Achetez ceci'],
         rows: [
-          { 'Votre situation': 'Je veux un serveur d\'IA toujours actif et silencieux pour la maison ou le bureau', 'Achetez ceci': 'Mac mini M5 Pro 64 Go' },
+          { 'Votre situation': 'Je veux un serveur d\'IA toujours actif et silencieux pour la maison ou le bureau', 'Achetez ceci': '[Mac mini M5 Pro 64 Go](https://www.apple.com/mac-mini/)' },
           { 'Votre situation': 'J\'exécute des modèles 8B-13B et veux le Mac capable le moins cher', 'Achetez ceci': 'Mac mini M5 Pro (32-64 Go)' },
           { 'Votre situation': 'J\'exécute des modèles 34B sur un bureau et tiens à un faible coût d\'exploitation', 'Achetez ceci': 'Mac mini M5 Pro 64 Go' },
-          { 'Votre situation': 'J\'ai besoin d\'exécuter des modèles 70B et de voyager avec la machine', 'Achetez ceci': 'MacBook Pro 16" M5 Max 64 Go' },
+          { 'Votre situation': 'J\'ai besoin d\'exécuter des modèles 70B et de voyager avec la machine', 'Achetez ceci': '[MacBook Pro 16" M5 Max 64 Go](https://www.apple.com/macbook-pro/)' },
           { 'Votre situation': 'Je veux du 70B en qualité Q5 et exécuter plusieurs modèles à la fois', 'Achetez ceci': 'MacBook Pro 16" M5 Max 128 Go' },
-          { 'Votre situation': 'Je veux une machine de bureau 70B et acheter aujourd\'hui', 'Achetez ceci': 'Mac Studio M4 Max 128 Go' },
+          { 'Votre situation': 'Je veux une machine de bureau 70B et acheter aujourd\'hui', 'Achetez ceci': '[Mac Studio M4 Max 128 Go](https://www.apple.com/mac-studio/)' },
           { 'Votre situation': 'Je veux spécifiquement le Mac Studio M5', 'Achetez ceci': 'Attendez — attendu fin 2026, pas encore sorti' },
           { 'Votre situation': 'Je suis indécis et veux le premier Mac le plus sûr pour l\'IA locale', 'Achetez ceci': 'Mac mini M5 Pro 64 Go — montez en gamme plus tard s\'il devient trop juste' },
         ],
@@ -1713,7 +1713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Le MacBook Pro 16" M5 Max est le seul Mac livré qui exécute les modèles 70B, et il le fait dans un format portable.** C\'est le choix des acheteurs qui ont besoin de modèles de classe 70B et veulent emporter la machine. Le compromis : un throttling thermique de 10-15 % en inférence soutenue et un prix plus élevé qu\'un bureau doté de la même puce.',
         items: [
-          '**MacBook Pro 16" M5 Max 64 Go (env. 4 179 €) :** GPU 32 cœurs, 460 Go/s de bande passante. Exécute les modèles 8B à environ 100-110 tok/s et Llama 3.1 70B Q4 à 7-11 tok/s. Le point d\'entrée portable dans l\'IA locale 70B.',
+          '**MacBook Pro 16" M5 Max 64 Go (env. 4 179 €) :** GPU 32 cœurs, 460 Go/s de bande passante. Exécute les modèles 8B à environ 100-110 tok/s et Llama 3.3 70B Q4 à 7-11 tok/s. Le point d\'entrée portable dans l\'IA locale 70B.',
           '**MacBook Pro 16" M5 Max 128 Go (env. 5 299 €) :** GPU 40 cœurs, 614 Go/s de bande passante. Exécute le 70B en Q5 (meilleure qualité) et permet d\'exécuter deux modèles à la fois — par exemple un modèle 70B et un modèle 13B.',
           '**Pourquoi acheter ce Mac :** vous avez besoin de modèles 70B et de portabilité, vous voulez une seule machine pour le travail créatif et l\'IA, ou vous présentez et voyagez et ne pouvez pas laisser un bureau derrière vous.',
           '**Pourquoi écarter ce Mac :** si la machine ne quitte jamais un bureau, un Mac Studio doté de la même mémoire coûte moins cher et chauffe moins ; si les modèles 34B suffisent, le Mac mini M5 Pro économise plus de 2 000 €.',
@@ -1900,7 +1900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Un Mac peut-il exécuter des modèles 70B ?',
-            a: 'Oui. Un MacBook Pro 16" M5 Max de 64 Go exécute Llama 3.1 70B Q4 à 7-11 tokens par seconde, et la version 128 Go exécute le 70B en Q5 à 8-12 tokens par seconde. Un Mac Studio de 128 Go exécute aussi le 70B sans peine. Le Mac mini M5 Pro ne le peut pas — 64 Go sont trop justes pour le 70B une fois la surcharge de macOS comptée.',
+            a: 'Oui. Un MacBook Pro 16" M5 Max de 64 Go exécute Llama 3.3 70B Q4 à 7-11 tokens par seconde, et la version 128 Go exécute le 70B en Q5 à 8-12 tokens par seconde. Un Mac Studio de 128 Go exécute aussi le 70B sans peine. Le Mac mini M5 Pro ne le peut pas — 64 Go sont trop justes pour le 70B une fois la surcharge de macOS comptée.',
           },
           {
             q: 'Un Mac est-il plus rapide qu\'un GPU NVIDIA pour les LLM locaux ?',
@@ -1945,11 +1945,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルAI向けMac mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio——3台のMac、判断ルールは一つ：まずunified memoryで選び、次に帯域幅。2026年5月時点の価格。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
-      'Llama 3.1 34B',
-      'Llama 3.1 70B',
-      'Mistral 7B',
-      'Qwen 2.5 32B',
+      'Llama 3.3 8B',
+      'Llama 3.3 34B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M5 Pro',
@@ -2079,7 +2079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Mac', 'unified memory', '帯域幅', '速度（8B Q4）', '速度（70B Q4）', '価格（2026年5月）', '最適な用途'],
         rows: [
           {
-            'Mac': 'Mac mini M5 Pro 64GB',
+            'Mac': '[Mac mini M5 Pro 64GB](https://www.apple.com/mac-mini/)',
             'unified memory': '64GB',
             '帯域幅': '307GB/s',
             '速度（8B Q4）': '50-60 tok/s',
@@ -2088,7 +2088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最適な用途': '静音の常時稼働サーバー、34Bモデル',
           },
           {
-            'Mac': 'MacBook Pro 16" M5 Max 64GB',
+            'Mac': '[MacBook Pro 16" M5 Max 64GB](https://www.apple.com/macbook-pro/)',
             'unified memory': '64GB',
             '帯域幅': '460GB/s',
             '速度（8B Q4）': '約100-110 tok/s',
@@ -2106,7 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最適な用途': 'ポータブル70B Q5、マルチモデル',
           },
           {
-            'Mac': 'Mac Studio M4 Max 128GB',
+            'Mac': '[Mac Studio M4 Max 128GB](https://www.apple.com/mac-studio/)',
             'unified memory': '128GB',
             '帯域幅': '約410-546GB/s',
             '速度（8B Q4）': 'ファミリーレベルの推定',
@@ -2132,12 +2132,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**最大のターゲットモデルとフォームファクターがMacを決め、予算がその中のメモリ帯を決めます。** あなたの状況に合う行を見つけてください。',
         columns: ['あなたの状況', 'これを買う'],
         rows: [
-          { 'あなたの状況': '家庭やオフィス向けに静音の常時稼働AIサーバーが欲しい', 'これを買う': 'Mac mini M5 Pro 64GB' },
+          { 'あなたの状況': '家庭やオフィス向けに静音の常時稼働AIサーバーが欲しい', 'これを買う': '[Mac mini M5 Pro 64GB](https://www.apple.com/mac-mini/)' },
           { 'あなたの状況': '8B-13Bモデルを動かし、最も安価で能力のあるMacが欲しい', 'これを買う': 'Mac mini M5 Pro（32-64GB）' },
           { 'あなたの状況': 'デスクで34Bモデルを動かし、低い運用コストを重視する', 'これを買う': 'Mac mini M5 Pro 64GB' },
-          { 'あなたの状況': '70Bモデルを動かす必要があり、マシンを持ち運ぶ', 'これを買う': 'MacBook Pro 16" M5 Max 64GB' },
+          { 'あなたの状況': '70Bモデルを動かす必要があり、マシンを持ち運ぶ', 'これを買う': '[MacBook Pro 16" M5 Max 64GB](https://www.apple.com/macbook-pro/)' },
           { 'あなたの状況': 'Q5品質の70Bが欲しく、複数モデルを同時に動かす', 'これを買う': 'MacBook Pro 16" M5 Max 128GB' },
-          { 'あなたの状況': '70Bのデスクトップマシンが欲しく、今日購入したい', 'これを買う': 'Mac Studio M4 Max 128GB' },
+          { 'あなたの状況': '70Bのデスクトップマシンが欲しく、今日購入したい', 'これを買う': '[Mac Studio M4 Max 128GB](https://www.apple.com/mac-studio/)' },
           { 'あなたの状況': 'M5 Mac Studioを特に欲しい', 'これを買う': '待つ——2026年後半に予想、まだ未発売' },
           { 'あなたの状況': '迷っていて、ローカルAIに最も安全な最初のMacが欲しい', 'これを買う': 'Mac mini M5 Pro 64GB——足りなくなったら後でアップグレード' },
         ],
@@ -2187,7 +2187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**MacBook Pro 16" M5 Maxは70Bモデルを動かせる唯一の出荷中Macであり、しかもそれをポータブルなフォームファクターで実現します。** 70Bクラスのモデルが必要で、マシンを持ち運びたい購入者向けの選択肢です。トレードオフは、持続的な推論での10-15%のサーマルスロットリングと、同じチップを積むデスクトップより高い価格です。',
         items: [
-          '**MacBook Pro 16" M5 Max 64GB（約¥554,800）：** 32コアGPU、460GB/sの帯域幅。8Bモデルをおよそ100-110 tok/s、Llama 3.1 70B Q4を7-11 tok/sで動かします。ローカル70B AIへのポータブルな入口です。',
+          '**MacBook Pro 16" M5 Max 64GB（約¥554,800）：** 32コアGPU、460GB/sの帯域幅。8Bモデルをおよそ100-110 tok/s、Llama 3.3 70B Q4を7-11 tok/sで動かします。ローカル70B AIへのポータブルな入口です。',
           '**MacBook Pro 16" M5 Max 128GB（約¥718,800）：** 40コアGPU、614GB/sの帯域幅。Q5（より高品質）で70Bを動かし、2つのモデルを同時に動かすこと——たとえば70Bモデルと13Bモデル——をサポートします。',
           '**このMacを買う理由：** 70Bモデルとポータビリティが必要、クリエイティブ作業とAIに1台のマシンが欲しい、あるいはプレゼンや出張でデスクトップを置いていけない。',
           '**このMacを見送る理由：** マシンがデスクを離れないなら、同じメモリのMac Studioのほうが安く、より冷えて動きます；34Bモデルで十分なら、Mac mini M5 Proで¥300,000以上節約できます。',
@@ -2374,7 +2374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Macは70Bモデルを動かせますか？',
-            a: 'はい。64GBのMacBook Pro 16" M5 MaxはLlama 3.1 70B Q4を毎秒7-11トークンで動かし、128GB版は70B Q5を毎秒8-12トークンで動かします。128GBのMac Studioも70Bを余裕で動かします。Mac mini M5 Proはできません——macOSのオーバーヘッドを数えると64GBは70Bには厳しすぎます。',
+            a: 'はい。64GBのMacBook Pro 16" M5 MaxはLlama 3.3 70B Q4を毎秒7-11トークンで動かし、128GB版は70B Q5を毎秒8-12トークンで動かします。128GBのMac Studioも70Bを余裕で動かします。Mac mini M5 Proはできません——macOSのオーバーヘッドを数えると64GBは70Bには厳しすぎます。',
           },
           {
             q: 'ローカルLLMではMacはNVIDIA GPUより速いですか？',
@@ -2419,11 +2419,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio 跑本地 AI——三台 Mac，一条决策规则：先按统一内存买，再优化带宽。2026 年 5 月价格。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
-      'Llama 3.1 34B',
-      'Llama 3.1 70B',
-      'Mistral 7B',
-      'Qwen 2.5 32B',
+      'Llama 3.3 8B',
+      'Llama 3.3 34B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M5 Pro',
@@ -2553,7 +2553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Mac', '统一内存', '带宽', '速度（8B Q4）', '速度（70B Q4）', '价格（2026 年 5 月）', '最适合'],
         rows: [
           {
-            'Mac': 'Mac mini M5 Pro 64 GB',
+            'Mac': '[Mac mini M5 Pro 64 GB](https://www.apple.com/mac-mini/)',
             '统一内存': '64 GB',
             '带宽': '307 GB/s',
             '速度（8B Q4）': '50-60 tok/s',
@@ -2562,7 +2562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最适合': '静音常开服务器，34B 模型',
           },
           {
-            'Mac': 'MacBook Pro 16" M5 Max 64 GB',
+            'Mac': '[MacBook Pro 16" M5 Max 64 GB](https://www.apple.com/macbook-pro/)',
             '统一内存': '64 GB',
             '带宽': '460 GB/s',
             '速度（8B Q4）': '约 100-110 tok/s',
@@ -2580,7 +2580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最适合': '便携 70B Q5，多模型',
           },
           {
-            'Mac': 'Mac Studio M4 Max 128 GB',
+            'Mac': '[Mac Studio M4 Max 128 GB](https://www.apple.com/mac-studio/)',
             '统一内存': '128 GB',
             '带宽': '约 410-546 GB/s',
             '速度（8B Q4）': '系列级估算',
@@ -2606,12 +2606,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**你最大的目标模型和外形决定选哪台 Mac；你的预算决定其中的内存档位。** 找到与你情况匹配的那一行。',
         columns: ['你的情况', '买这台'],
         rows: [
-          { '你的情况': '我想要一台用于家庭或办公的静音常开 AI 服务器', '买这台': 'Mac mini M5 Pro 64 GB' },
+          { '你的情况': '我想要一台用于家庭或办公的静音常开 AI 服务器', '买这台': '[Mac mini M5 Pro 64 GB](https://www.apple.com/mac-mini/)' },
           { '你的情况': '我跑 8B-13B 模型，想要最便宜又够用的 Mac', '买这台': 'Mac mini M5 Pro（32-64 GB）' },
           { '你的情况': '我在桌面上跑 34B 模型，看重低运行成本', '买这台': 'Mac mini M5 Pro 64 GB' },
-          { '你的情况': '我需要运行 70B 模型并随机器移动', '买这台': 'MacBook Pro 16" M5 Max 64 GB' },
+          { '你的情况': '我需要运行 70B 模型并随机器移动', '买这台': '[MacBook Pro 16" M5 Max 64 GB](https://www.apple.com/macbook-pro/)' },
           { '你的情况': '我想要 Q5 质量的 70B 并同时运行多个模型', '买这台': 'MacBook Pro 16" M5 Max 128 GB' },
-          { '你的情况': '我想要一台 70B 桌面机，并且今天就买', '买这台': 'Mac Studio M4 Max 128 GB' },
+          { '你的情况': '我想要一台 70B 桌面机，并且今天就买', '买这台': '[Mac Studio M4 Max 128 GB](https://www.apple.com/mac-studio/)' },
           { '你的情况': '我就是想要 M5 版 Mac Studio', '买这台': '等待——预计 2026 年底，尚未发布' },
           { '你的情况': '我拿不定主意，想要最稳妥的第一台本地 AI Mac', '买这台': 'Mac mini M5 Pro 64 GB——不够用时再升级' },
         ],
@@ -2661,7 +2661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**MacBook Pro 16" M5 Max 是唯一在售且能跑 70B 模型的 Mac，而且它以便携外形做到这一点。** 它适合需要 70B 级模型并想随身携带机器的购买者。代价是持续推理下 10-15% 的热降频，以及比同芯片桌面机更高的价格。',
         items: [
-          '**MacBook Pro 16" M5 Max 64 GB（约 $3,499）：** 32 核 GPU，460 GB/s 带宽。以约 100-110 tok/s 跑 8B 模型，以 7-11 tok/s 跑 Llama 3.1 70B Q4。这是进入本地 70B AI 的便携入口。',
+          '**MacBook Pro 16" M5 Max 64 GB（约 $3,499）：** 32 核 GPU，460 GB/s 带宽。以约 100-110 tok/s 跑 8B 模型，以 7-11 tok/s 跑 Llama 3.3 70B Q4。这是进入本地 70B AI 的便携入口。',
           '**MacBook Pro 16" M5 Max 128 GB（约 $4,499）：** 40 核 GPU，614 GB/s 带宽。可以 Q5（更高质量）跑 70B，并支持同时运行两个模型——例如一个 70B 模型加一个 13B 模型。',
           '**为什么买这台 Mac：** 你需要 70B 模型且要便携，你想要一台机器同时用于创意工作和 AI，或者你经常演示和出差，无法把桌面机留在原地。',
           '**为什么跳过这台 Mac：** 如果机器从不离开桌面，同样内存的 Mac Studio 更便宜也更凉快；如果 34B 模型就够用，Mac mini M5 Pro 能省下 $2,000 以上。',
@@ -2848,7 +2848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Mac 能跑 70B 模型吗？',
-            a: '能。64 GB 的 MacBook Pro 16" M5 Max 以每秒 7-11 token 跑 Llama 3.1 70B Q4，128 GB 版本以每秒 8-12 token 跑 70B Q5。128 GB 的 Mac Studio 也能从容跑 70B。Mac mini M5 Pro 不行——计入 macOS 开销后，64 GB 对 70B 来说太紧。',
+            a: '能。64 GB 的 MacBook Pro 16" M5 Max 以每秒 7-11 token 跑 Llama 3.3 70B Q4，128 GB 版本以每秒 8-12 token 跑 70B Q5。128 GB 的 Mac Studio 也能从容跑 70B。Mac mini M5 Pro 不行——计入 macOS 开销后，64 GB 对 70B 来说太紧。',
           },
           {
             q: '本地 LLM 上 Mac 比 NVIDIA GPU 快吗？',

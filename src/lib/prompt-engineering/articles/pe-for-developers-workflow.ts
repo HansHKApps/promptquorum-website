@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Prompts direkt im Anwendungscode schreiben', problem: 'Hardcodierte Prompts können nicht versioniert, getestet oder ohne vollständiges Deployment geändert werden', fix: 'Prompts als separate Dateien in einem /prompts-Verzeichnis speichern. Zur Laufzeit laden.' },
           { mistake: 'Nur lokal testen, nie in CI/CD', problem: 'Lokale Tests werden unter Zeitdruck übersprungen; CI/CD-Gates sind obligatorisch', fix: 'Einen Promptfoo-Testschritt zu GitHub Actions hinzufügen. Merge blockieren, wenn Bestehensquote unter 85% fällt.' },
           { mistake: 'Kein Produktionsmonitoring', problem: 'Prompt-Qualität verschlechtert sich nach dem Deployment ohne Sichtbarkeit', fix: 'Bestehensquote pro Prompt pro Tag loggen. Alarmieren, wenn Bestehensquote wöchentlich um 5% fällt.' },
-          { mistake: 'Nur auf einem Modell testen', problem: 'Ein Prompt, der auf GPT-4o funktioniert, kann auf Claude 4.6 Sonnet scheitern', fix: 'Testsuite gegen mindestens 2 Modelle in CI/CD ausführen.' },
+          { mistake: 'Nur auf einem Modell testen', problem: 'Ein Prompt, der auf GPT-5.5 funktioniert, kann auf Claude 4.6 Sonnet scheitern', fix: 'Testsuite gegen mindestens 2 Modelle in CI/CD ausführen.' },
         ],
       },
       key_takeaways: {
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Escribir prompts directamente en el código de la aplicación', problem: 'Los prompts codificados no pueden versionarse, probarse ni cambiarse sin un despliegue completo', fix: 'Almacena los prompts como archivos separados en un directorio /prompts. Cárgalos en tiempo de ejecución.' },
           { mistake: 'Probar solo localmente, nunca en CI/CD', problem: 'Las pruebas locales se omiten bajo presión de tiempo; los gates CI/CD son obligatorios', fix: 'Añade un paso de prueba con Promptfoo a GitHub Actions. Bloquea el merge si la tasa de aprobación cae por debajo del 85%.' },
           { mistake: 'Sin monitoreo en producción', problem: 'La calidad de los prompts se degrada después del despliegue sin visibilidad', fix: 'Registra la tasa de aprobación por prompt por día. Alerta si la tasa de aprobación cae un 5% semana a semana.' },
-          { mistake: 'Probar con un solo modelo', problem: 'Un prompt que funciona en GPT-4o puede fallar en Claude 4.6 Sonnet', fix: 'Ejecuta tu suite de pruebas en al menos 2 modelos en CI/CD.' },
+          { mistake: 'Probar con un solo modelo', problem: 'Un prompt que funciona en GPT-5.5 puede fallar en Claude 4.6 Sonnet', fix: 'Ejecuta tu suite de pruebas en al menos 2 modelos en CI/CD.' },
         ],
       },
       key_takeaways: {
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Écrire des prompts directement dans le code de l\'application', problem: 'Les prompts codés en dur ne peuvent pas être versionnés, testés ou modifiés sans un déploiement complet', fix: 'Stocker les prompts comme fichiers séparés dans un répertoire /prompts. Les charger à l\'exécution.' },
           { mistake: 'Tester uniquement localement, jamais en CI/CD', problem: 'Les tests locaux sont sautés sous pression ; les gates CI/CD sont obligatoires', fix: 'Ajouter une étape de test Promptfoo à GitHub Actions. Bloquer la fusion si le taux de réussite descend sous 85%.' },
           { mistake: 'Pas de monitoring en production', problem: 'La qualité des prompts se dégrade après le déploiement sans visibilité', fix: 'Journaliser le taux de réussite par prompt par jour. Alerter si le taux chute de 5% semaine après semaine.' },
-          { mistake: 'Tester sur un seul modèle', problem: 'Un prompt qui fonctionne sur GPT-4o peut échouer sur Claude 4.6 Sonnet', fix: 'Exécuter la suite de tests contre au moins 2 modèles en CI/CD.' },
+          { mistake: 'Tester sur un seul modèle', problem: 'Un prompt qui fonctionne sur GPT-5.5 peut échouer sur Claude 4.6 Sonnet', fix: 'Exécuter la suite de tests contre au moins 2 modèles en CI/CD.' },
         ],
       },
       key_takeaways: {
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'プロンプトをアプリケーションコードに直接書く', problem: 'ハードコードされたプロンプトは完全なデプロイメントなしにバージョン管理、テスト、変更ができない', fix: 'プロンプトを/promptsディレクトリに別ファイルとして保存し、ランタイムに読み込む。' },
           { mistake: 'ローカルのみでテストし、CI/CDでテストしない', problem: 'ローカルテストは時間的プレッシャー下でスキップされる；CI/CDゲートは必須', fix: 'GitHub ActionsにPromptfooテストステップを追加。合格率が85%を下回った場合にマージをブロック。' },
           { mistake: '本番監視なし', problem: 'プロンプト品質はデプロイ後に可視性なく劣化する', fix: '1日あたりプロンプトごとの合格率をログに記録。週次で5%低下した場合にアラートを発する。' },
-          { mistake: '1つのモデルでのみテスト', problem: 'GPT-4oで動作するプロンプトがClaude 4.6 Sonnetで失敗する可能性がある', fix: 'CI/CDで少なくとも2つのモデルに対してテストスイートを実行。' },
+          { mistake: '1つのモデルでのみテスト', problem: 'GPT-5.5で動作するプロンプトがClaude 4.6 Sonnetで失敗する可能性がある', fix: 'CI/CDで少なくとも2つのモデルに対してテストスイートを実行。' },
         ],
       },
       key_takeaways: {
@@ -966,7 +966,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: '将提示词直接写入应用程序代码', problem: '硬编码的提示词无法在没有完整部署的情况下进行版本控制、测试或更改', fix: '将提示词作为单独文件存储在/prompts目录中，在运行时加载。' },
           { mistake: '仅在本地测试，从不在CI/CD中测试', problem: '本地测试在时间压力下被跳过；CI/CD门控是强制性的', fix: '向GitHub Actions添加Promptfoo测试步骤。如果通过率低于85%则阻止合并。' },
           { mistake: '没有生产监控', problem: '提示词质量在部署后无可见性地退化', fix: '每天记录每个提示词的通过率。如果通过率每周下降5%则发出警报。' },
-          { mistake: '仅在一个模型上测试', problem: '在GPT-4o上工作的提示词可能在Claude 4.6 Sonnet上失败', fix: '在CI/CD中针对至少2个模型运行测试套件。' },
+          { mistake: '仅在一个模型上测试', problem: '在GPT-5.5上工作的提示词可能在Claude 4.6 Sonnet上失败', fix: '在CI/CD中针对至少2个模型运行测试套件。' },
         ],
       },
       key_takeaways: {

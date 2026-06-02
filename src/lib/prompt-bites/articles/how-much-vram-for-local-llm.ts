@@ -168,7 +168,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'VRAM': '4 GB', 'Bestes Modell bei Q4_K_M': 'Phi-4 Mini Q4', 'Geschwindigkeit': '~25 tok/s' },
           { 'VRAM': '6 GB', 'Bestes Modell bei Q4_K_M': 'Llama 3 8B Q4_K_M', 'Geschwindigkeit': '~20 tok/s' },
-          { 'VRAM': '8 GB', 'Bestes Modell bei Q4_K_M': 'Mistral 7B Q5_K_M', 'Geschwindigkeit': '~18 tok/s' },
+          { 'VRAM': '8 GB', 'Bestes Modell bei Q4_K_M': 'Mistral Small Q5_K_M', 'Geschwindigkeit': '~18 tok/s' },
           { 'VRAM': '12 GB', 'Bestes Modell bei Q4_K_M': 'Qwen 14B Q4_K_M', 'Geschwindigkeit': '~15 tok/s' },
           { 'VRAM': '16+ GB', 'Bestes Modell bei Q4_K_M': 'Qwen 32B Q4 oder Llama 70B partiell', 'Geschwindigkeit': '~8 tok/s' },
         ],
@@ -187,7 +187,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Reichen 8 GB VRAM für lokale LLMs aus?',
-            a: 'Ja. 8 GB betreibt Llama 3 8B bei Q5_K_M mit etwa 18 Tokens pro Sekunde oder Mistral 7B bei Q5_K_M mit ausreichend Spielraum. Die meisten alltäglichen Chat- und Coding-Aufgaben sind bei dieser Tier gut abgedeckt.',
+            a: 'Ja. 8 GB betreibt Llama 3 8B bei Q5_K_M mit etwa 18 Tokens pro Sekunde oder Mistral Small bei Q5_K_M mit ausreichend Spielraum. Die meisten alltäglichen Chat- und Coding-Aufgaben sind bei dieser Tier gut abgedeckt.',
           },
           {
             q: 'Kann ich ein 7B-Modell auf 4 GB VRAM betreiben?',
@@ -235,7 +235,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'VRAM': '4 Go', 'Meilleur modèle en Q4_K_M': 'Phi-4 Mini Q4', 'Vitesse': '~25 tok/s' },
           { 'VRAM': '6 Go', 'Meilleur modèle en Q4_K_M': 'Llama 3 8B Q4_K_M', 'Vitesse': '~20 tok/s' },
-          { 'VRAM': '8 Go', 'Meilleur modèle en Q4_K_M': 'Mistral 7B Q5_K_M', 'Vitesse': '~18 tok/s' },
+          { 'VRAM': '8 Go', 'Meilleur modèle en Q4_K_M': 'Mistral Small Q5_K_M', 'Vitesse': '~18 tok/s' },
           { 'VRAM': '12 Go', 'Meilleur modèle en Q4_K_M': 'Qwen 14B Q4_K_M', 'Vitesse': '~15 tok/s' },
           { 'VRAM': '16+ Go', 'Meilleur modèle en Q4_K_M': 'Qwen 32B Q4 ou Llama 70B partiel', 'Vitesse': '~8 tok/s' },
         ],
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '8 Go de VRAM suffisent-ils pour les LLMs locaux ?',
-            a: 'Oui. 8 Go fait tourner Llama 3 8B en Q5_K_M à environ 18 tokens par seconde, ou Mistral 7B en Q5_K_M avec de la marge. La plupart des tâches quotidiennes de chat et de coding sont bien couvertes à ce tier.',
+            a: 'Oui. 8 Go fait tourner Llama 3 8B en Q5_K_M à environ 18 tokens par seconde, ou Mistral Small en Q5_K_M avec de la marge. La plupart des tâches quotidiennes de chat et de coding sont bien couvertes à ce tier.',
           },
           {
             q: 'Puis-je faire tourner un modèle 7B sur 4 Go de VRAM ?',
@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'VRAM': '4 GB', 'Q4_K_Mでの最良モデル': 'Phi-4 Mini Q4', '速度': '~25 tok/s' },
           { 'VRAM': '6 GB', 'Q4_K_Mでの最良モデル': 'Llama 3 8B Q4_K_M', '速度': '~20 tok/s' },
-          { 'VRAM': '8 GB', 'Q4_K_Mでの最良モデル': 'Mistral 7B Q5_K_M', '速度': '~18 tok/s' },
+          { 'VRAM': '8 GB', 'Q4_K_Mでの最良モデル': 'Mistral Small Q5_K_M', '速度': '~18 tok/s' },
           { 'VRAM': '12 GB', 'Q4_K_Mでの最良モデル': 'Qwen 14B Q4_K_M', '速度': '~15 tok/s' },
           { 'VRAM': '16+ GB', 'Q4_K_Mでの最良モデル': 'Qwen 32B Q4またはLlama 70B部分実行', '速度': '~8 tok/s' },
         ],
@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '8 GB VRAMはローカルLLMに十分ですか？',
-            a: 'はい。8 GBはLlama 3 8BをQ5_K_Mで毎秒約18トークン、またはMistral 7BをQ5_K_Mで余裕を持って動作させられます。このティアでは日常的なチャットやコーディングタスクのほとんどに対応できます。',
+            a: 'はい。8 GBはLlama 3 8BをQ5_K_Mで毎秒約18トークン、またはMistral SmallをQ5_K_Mで余裕を持って動作させられます。このティアでは日常的なチャットやコーディングタスクのほとんどに対応できます。',
           },
           {
             q: '4 GB VRAMで7Bモデルを動かせますか？',
@@ -369,7 +369,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '显存': '4 GB', 'Q4_K_M最佳模型': 'Phi-4 Mini Q4', '速度': '~25 tok/s' },
           { '显存': '6 GB', 'Q4_K_M最佳模型': 'Llama 3 8B Q4_K_M', '速度': '~20 tok/s' },
-          { '显存': '8 GB', 'Q4_K_M最佳模型': 'Mistral 7B Q5_K_M', '速度': '~18 tok/s' },
+          { '显存': '8 GB', 'Q4_K_M最佳模型': 'Mistral Small Q5_K_M', '速度': '~18 tok/s' },
           { '显存': '12 GB', 'Q4_K_M最佳模型': 'Qwen 14B Q4_K_M', '速度': '~15 tok/s' },
           { '显存': '16+ GB', 'Q4_K_M最佳模型': 'Qwen 32B Q4或Llama 70B部分运行', '速度': '~8 tok/s' },
         ],
@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '8 GB显存足够运行本地LLM吗？',
-            a: '足够。8 GB可以Q5_K_M运行Llama 3 8B，速度约每秒18个令牌；或以Q5_K_M运行Mistral 7B，还有充足余量。在此档位下，日常聊天和编程任务都能得到良好支持。',
+            a: '足够。8 GB可以Q5_K_M运行Llama 3 8B，速度约每秒18个令牌；或以Q5_K_M运行Mistral Small，还有充足余量。在此档位下，日常聊天和编程任务都能得到良好支持。',
           },
           {
             q: '4 GB显存能运行7B模型吗？',
@@ -421,7 +421,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '4 GB: Phi-4 Mini Q4, Gemma 2 2B',
           '6 GB: Llama 3 8B Q4_K_M',
-          '8–12 GB: Mistral 7B Q5, Qwen 14B Q4',
+          '8–12 GB: Mistral Small Q5, Qwen 14B Q4',
         ],
         updatedDate: '2026-05',
       },
@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'VRAM': '4 GB', 'Mejor modelo en Q4_K_M': 'Phi-4 Mini Q4', 'Velocidad': '~25 tok/s' },
           { 'VRAM': '6 GB', 'Mejor modelo en Q4_K_M': 'Llama 3 8B Q4_K_M', 'Velocidad': '~20 tok/s' },
-          { 'VRAM': '8 GB', 'Mejor modelo en Q4_K_M': 'Mistral 7B Q5_K_M', 'Velocidad': '~18 tok/s' },
+          { 'VRAM': '8 GB', 'Mejor modelo en Q4_K_M': 'Mistral Small Q5_K_M', 'Velocidad': '~18 tok/s' },
           { 'VRAM': '12 GB', 'Mejor modelo en Q4_K_M': 'Qwen 14B Q4_K_M', 'Velocidad': '~15 tok/s' },
           { 'VRAM': '16+ GB', 'Mejor modelo en Q4_K_M': 'Qwen 32B Q4 o Llama 70B parcial', 'Velocidad': '~8 tok/s' },
         ],
@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Son suficientes 8 GB de VRAM para LLMs locales?',
-            a: 'Sí. Con 8 GB puedes ejecutar Llama 3 8B en Q5_K_M a unos 18 tokens por segundo, o Mistral 7B en Q5_K_M con margen de sobra. La mayoría de las tareas cotidianas de chat y programación están bien cubiertas en este rango.',
+            a: 'Sí. Con 8 GB puedes ejecutar Llama 3 8B en Q5_K_M a unos 18 tokens por segundo, o Mistral Small en Q5_K_M con margen de sobra. La mayoría de las tareas cotidianas de chat y programación están bien cubiertas en este rango.',
           },
           {
             q: '¿Puedo ejecutar un modelo 7B con 4 GB de VRAM?',

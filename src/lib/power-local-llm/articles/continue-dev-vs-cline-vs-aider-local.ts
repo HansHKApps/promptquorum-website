@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Install path:** VS Code Marketplace and JetBrains Marketplace. Configuration lives in `~/.continue/config.json` (or `config.yaml`); model definitions, autocomplete settings, and `@`-context providers all live there.',
           '**Workflow primitive:** autocomplete via FIM (fill-in-the-middle) plus an in-IDE chat sidebar. The chat panel can apply edits directly to open files; an Agent mode adds tool-call loops for multi-step tasks.',
-          '**Local model setup:** native Ollama support is one config block. llama.cpp, LM Studio, and any OpenAI-compatible endpoint also work. Separate models for autocomplete (small, fast — Qwen2.5-Coder 1.5B class) and chat (larger — Qwen3-Coder 30B, DeepSeek Coder V3) is the standard pattern.',
+          '**Local model setup:** native Ollama support is one config block. llama.cpp, LM Studio, and any OpenAI-compatible endpoint also work. Separate models for autocomplete (small, fast — Qwen3-Coder 1.5B class) and chat (larger — Qwen3-Coder 30B, DeepSeek Coder V3) is the standard pattern.',
           '**Codebase context:** local index (TF-IDF plus embeddings) sits in your project folder. `@codebase`, `@file`, `@folder`, `@docs`, `@terminal`, and custom providers reach into the index from the chat panel.',
           '**Edit model:** in chat, the model proposes a code block; clicking "Apply" diffs it against the open file and you accept or reject the change. Inline edits via Cmd/Ctrl+I rewrite a selection in place. Both flows show a diff preview before any write.',
           '**Where it shines:** keyboard-driven editing inside an IDE you already use, low cognitive overhead per edit, fast feedback loop. The tool you forget you installed.',
@@ -222,7 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Run two models in your Continue.dev config: a small autocomplete model (Qwen2.5-Coder 1.5B at Q4_K_M needs ~1.5 GB VRAM) and a larger chat model (Qwen3-Coder 30B Q4_K_M, ~17 GB). Splitting them keeps autocomplete latency under 200 ms while leaving the chat panel useful for non-trivial questions.',
+            text: 'Run two models in your Continue.dev config: a small autocomplete model (Qwen3-Coder 1.5B at Q4_K_M needs ~1.5 GB VRAM) and a larger chat model (Qwen3-Coder 30B Q4_K_M, ~17 GB). Splitting them keeps autocomplete latency under 200 ms while leaving the chat panel useful for non-trivial questions.',
           },
         ],
       },
@@ -1201,7 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "**Chemin d'installation :** VS Code Marketplace et JetBrains Marketplace. La configuration se trouve dans `~/.continue/config.json` (ou `config.yaml`) ; les définitions de modèles, les paramètres d'autocomplétion et les fournisseurs de contexte `@` s'y trouvent tous.",
           "**Primitive de flux de travail :** autocomplétion via FIM (Fill-in-the-Middle) plus un panneau de chat intégré à l'IDE. Le panneau de chat peut appliquer les éditions directement aux fichiers ouverts ; un mode Agent ajoute des boucles d'appels d'outils pour les tâches multi-étapes.",
-          "**Configuration du modèle local :** le support natif d'Ollama est un bloc de configuration. llama.cpp, LM Studio et tout endpoint compatible OpenAI fonctionnent également. Le motif standard consiste à exécuter des modèles distincts pour l'autocomplétion (petit, rapide — classe Qwen2.5-Coder 1.5B) et le chat (plus grand — Qwen3-Coder 30B, DeepSeek Coder V3).",
+          "**Configuration du modèle local :** le support natif d'Ollama est un bloc de configuration. llama.cpp, LM Studio et tout endpoint compatible OpenAI fonctionnent également. Le motif standard consiste à exécuter des modèles distincts pour l'autocomplétion (petit, rapide — classe Qwen3-Coder 1.5B) et le chat (plus grand — Qwen3-Coder 30B, DeepSeek Coder V3).",
           "**Contexte de la base de code :** index local (TF-IDF plus embeddings) dans votre dossier de projet. `@codebase`, `@file`, `@folder`, `@docs`, `@terminal` et les fournisseurs personnalisés accèdent à l'index à partir du panneau de chat.",
           '**Modèle d\'édition :** dans le chat, le modèle propose un bloc de code ; cliquer sur "Apply" fait un diff par rapport au fichier ouvert et vous acceptez ou rejetez la modification. Les éditions en ligne via Cmd/Ctrl+I réécrivent une sélection sur place. Les deux flux affichent un aperçu de diff avant toute écriture.',
           "**Où il excelle :** édition basée sur le clavier dans un IDE que vous utilisez déjà, peu de surcharge cognitive par édition, boucle de rétroaction rapide. L'outil que vous oubliez d'avoir installé.",
@@ -1210,7 +1210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: "Exécutez deux modèles dans votre configuration Continue.dev : un petit modèle d'autocomplétion (Qwen2.5-Coder 1.5B à Q4_K_M a besoin d'environ 1,5 GB de VRAM) et un plus grand modèle de chat (Qwen3-Coder 30B Q4_K_M, ~17 GB). La séparation maintient la latence d'autocomplétion sous 200 ms pendant que le panneau de chat reste utile pour les questions non triviales.",
+            text: "Exécutez deux modèles dans votre configuration Continue.dev : un petit modèle d'autocomplétion (Qwen3-Coder 1.5B à Q4_K_M a besoin d'environ 1,5 GB de VRAM) et un plus grand modèle de chat (Qwen3-Coder 30B Q4_K_M, ~17 GB). La séparation maintient la latence d'autocomplétion sous 200 ms pendant que le panneau de chat reste utile pour les questions non triviales.",
           },
         ],
       },
@@ -1697,7 +1697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**インストールパス：** VS Code Marketplace および JetBrains Marketplace。設定は `~/.continue/config.json`（または `config.yaml`）にあります。モデル定義、オートコンプリート設定、`@` コンテキストプロバイダーはすべてそこにあります。',
           '**ワークフロープリミティブ：** FIM（Fill-in-the-Middle）を通じたオートコンプリート、IDE に統合されたチャットサイドバー。チャットパネルは開いているファイルに直接編集を適用できます。Agent モードはマルチステップタスク用のツール呼び出しループを追加します。',
-          '**ローカルモデル設定：** ネイティブ Ollama サポートは 1 つの設定ブロックです。llama.cpp、LM Studio、OpenAI 互換エンドポイントも動作します。標準的なパターンは、オートコンプリート用の小さいモデル（小さい、高速—Qwen2.5-Coder 1.5B クラス）とチャット用のより大きいモデル（Qwen3-Coder 30B、DeepSeek Coder V3）を実行することです。',
+          '**ローカルモデル設定：** ネイティブ Ollama サポートは 1 つの設定ブロックです。llama.cpp、LM Studio、OpenAI 互換エンドポイントも動作します。標準的なパターンは、オートコンプリート用の小さいモデル（小さい、高速—Qwen3-Coder 1.5B クラス）とチャット用のより大きいモデル（Qwen3-Coder 30B、DeepSeek Coder V3）を実行することです。',
           '**コードベースコンテキスト：** ローカルインデックス（TF-IDF + embeddings）はプロジェクトフォルダにあります。`@codebase`、`@file`、`@folder`、`@docs`、`@terminal`、およびカスタムプロバイダーはチャットパネルからインデックスにアクセスします。',
           '**編集モデル：** チャットでは、モデルがコードブロックを提案します。「Apply」をクリックすると、開いているファイルに対して diff し、変更を受け入れるか拒否します。インライン編集（Cmd/Ctrl+I on selection）は選択を所定の場所で再度実行します。両方のフローが書き込む前に差分プレビューを表示します。',
           '**光る場所：** 既に使用している IDE でのキーボード駆動の編集、編集ごとの認知的オーバーヘッドが低い、高速フィードバックループ。インストールを忘れるツール。',
@@ -1706,7 +1706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Continue.dev 設定で 2 つのモデルを実行します：小さいオートコンプリートモデル（Qwen2.5-Coder 1.5B at Q4_K_M は約 1.5 GB VRAM が必要）と大きいチャットモデル（Qwen3-Coder 30B Q4_K_M、約 17 GB）。分割すると、オートコンプリートレイテンシが 200 ms 未満に保たれ、チャットパネルは重要でない質問に役立ちます。',
+            text: 'Continue.dev 設定で 2 つのモデルを実行します：小さいオートコンプリートモデル（Qwen3-Coder 1.5B at Q4_K_M は約 1.5 GB VRAM が必要）と大きいチャットモデル（Qwen3-Coder 30B Q4_K_M、約 17 GB）。分割すると、オートコンプリートレイテンシが 200 ms 未満に保たれ、チャットパネルは重要でない質問に役立ちます。',
           },
         ],
       },
@@ -2192,7 +2192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**安装路径：** VS Code Marketplace 和 JetBrains Marketplace。配置在 `~/.continue/config.json`（或 `config.yaml`）中；模型定义、自动完成设置和 `@` 上下文提供者都在那里。',
           '**工作流原语：** 通过 FIM（Fill-in-the-Middle）的自动完成加上 IDE 集成的聊天侧边栏。聊天面板可以直接将编辑应用到打开的文件；Agent 模式为多步任务添加工具调用循环。',
-          '**本地模型设置：** 原生 Ollama 支持是一个配置块。llama.cpp、LM Studio 和任何 OpenAI 兼容端点也可以工作。标准模式是运行用于自动完成的小型模型（小、快 — Qwen2.5-Coder 1.5B 类）和用于聊天的较大型模型（Qwen3-Coder 30B、DeepSeek Coder V3）。',
+          '**本地模型设置：** 原生 Ollama 支持是一个配置块。llama.cpp、LM Studio 和任何 OpenAI 兼容端点也可以工作。标准模式是运行用于自动完成的小型模型（小、快 — Qwen3-Coder 1.5B 类）和用于聊天的较大型模型（Qwen3-Coder 30B、DeepSeek Coder V3）。',
           '**代码库上下文：** 本地索引（TF-IDF + embeddings）在您的项目文件夹中。`@codebase`、`@file`、`@folder`、`@docs`、`@terminal` 和自定义提供者从聊天面板访问索引。',
           '**编辑模型：** 在聊天中，模型建议一个代码块；点击"应用"就会对打开的文件进行差异并显示它供您接受或拒绝。内联编辑（选择上的 Cmd/Ctrl+I）在原地重写选择。两个流都在任何写入前显示差异预览。',
           '**发光处：** 您已在使用的 IDE 中键盘驱动的编辑、每次编辑的认知开销低、快速反馈循环。您忘记安装的工具。',
@@ -2201,7 +2201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '在您的 Continue.dev 配置中运行两个模型：小型自动完成模型（Qwen2.5-Coder 1.5B at Q4_K_M 需要约 1.5 GB VRAM）和较大的聊天模型（Qwen3-Coder 30B Q4_K_M，约 17 GB）。分割使自动完成延迟保持在 200 毫秒以下，同时保持聊天面板对非平凡问题有用。',
+            text: '在您的 Continue.dev 配置中运行两个模型：小型自动完成模型（Qwen3-Coder 1.5B at Q4_K_M 需要约 1.5 GB VRAM）和较大的聊天模型（Qwen3-Coder 30B Q4_K_M，约 17 GB）。分割使自动完成延迟保持在 200 毫秒以下，同时保持聊天面板对非平凡问题有用。',
           },
         ],
       },
@@ -2687,7 +2687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Ruta de instalación:** VS Code Marketplace y JetBrains Marketplace. La configuración vive en `~/.continue/config.json` (o `config.yaml`); las definiciones de modelos, la configuración de autocompletado y los proveedores de contexto `@` están todos ahí.',
           '**Primitiva de flujo de trabajo:** autocompletado vía FIM (fill-in-the-middle) más un panel de chat lateral integrado en el IDE. El panel de chat puede aplicar ediciones directamente a los archivos abiertos; un modo Agente añade bucles de llamadas a herramientas para tareas de múltiples pasos.',
-          '**Configuración de modelo local:** el soporte nativo de Ollama es un bloque de configuración. llama.cpp, LM Studio y cualquier endpoint compatible con OpenAI también funcionan. El patrón estándar es ejecutar modelos separados para autocompletado (pequeño, rápido — clase Qwen2.5-Coder 1.5B) y chat (más grande — Qwen3-Coder 30B, DeepSeek Coder V3).',
+          '**Configuración de modelo local:** el soporte nativo de Ollama es un bloque de configuración. llama.cpp, LM Studio y cualquier endpoint compatible con OpenAI también funcionan. El patrón estándar es ejecutar modelos separados para autocompletado (pequeño, rápido — clase Qwen3-Coder 1.5B) y chat (más grande — Qwen3-Coder 30B, DeepSeek Coder V3).',
           '**Contexto de base de código:** índice local (TF-IDF más embeddings) en tu carpeta de proyecto. `@codebase`, `@file`, `@folder`, `@docs`, `@terminal` y proveedores personalizados acceden al índice desde el panel de chat.',
           '**Modelo de edición:** en el chat, el modelo propone un bloque de código; hacer clic en "Aplicar" hace un diff contra el archivo abierto y puedes aceptar o rechazar el cambio. Las ediciones en línea vía Cmd/Ctrl+I reescriben una selección en su lugar. Ambos flujos muestran una vista previa de diff antes de cualquier escritura.',
           '**Donde destaca:** edición con teclado dentro de un IDE que ya usas, baja sobrecarga cognitiva por edición, ciclo de retroalimentación rápido. La herramienta que olvidas que instalaste.',
@@ -2696,7 +2696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Ejecuta dos modelos en tu configuración de Continue.dev: un modelo de autocompletado pequeño (Qwen2.5-Coder 1.5B en Q4_K_M necesita ~1.5 GB de VRAM) y un modelo de chat más grande (Qwen3-Coder 30B Q4_K_M, ~17 GB). Separarlos mantiene la latencia de autocompletado por debajo de 200 ms mientras el panel de chat sigue siendo útil para preguntas no triviales.',
+            text: 'Ejecuta dos modelos en tu configuración de Continue.dev: un modelo de autocompletado pequeño (Qwen3-Coder 1.5B en Q4_K_M necesita ~1.5 GB de VRAM) y un modelo de chat más grande (Qwen3-Coder 30B Q4_K_M, ~17 GB). Separarlos mantiene la latencia de autocompletado por debajo de 200 ms mientras el panel de chat sigue siendo útil para preguntas no triviales.',
           },
         ],
       },

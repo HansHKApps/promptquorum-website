@@ -12,8 +12,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Best Models',
       title: 'Run 70B LLMs on Consumer Hardware 2026: RAM & GPU Setup',
       seoTitle: '70B on Consumer Hardware 2026: RAM, GPU Setup Guide',
-      intro: 'Running a 70B parameter model locally requires 40-48 GB of RAM at Q4_K_M quantization. This is achievable on: Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or machines combining a 24 GB NVIDIA GPU with 32 GB system RAM using layer offloading. As of April 2026, Llama 3.3 70B and Qwen2.5 72B are the two primary 70B models available.',
-      metaDescription: 'Run Llama 3.3 and Qwen2.5 70B models locally: RAM requirements, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Complete hardware guide -- April 2026.',
+      intro: 'Running a 70B parameter model locally requires 40-48 GB of RAM at Q4_K_M quantization. This is achievable on: Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or machines combining a 24 GB NVIDIA GPU with 32 GB system RAM using layer offloading. As of April 2026, Llama 3.3 70B and Qwen3 72B are the two primary 70B models available.',
+      metaDescription: 'Run Llama 3.3 and Qwen3 70B models locally: RAM requirements, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Complete hardware guide -- April 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Running a 70B parameter model locally requires 40-48 GB of RAM at Q4_K_M quantization. This is achievable on: Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or machines combining a 24 GB NVIDIA GPU with 32 GB system RAM using layer offloading.**',
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
           isTldr: true,
           items: [
-            'Q4_K_M quantization: Llama 3.3 70B requires ~40 GB RAM; Qwen2.5 72B requires ~43 GB RAM.',
+            'Q4_K_M quantization: Llama 3.3 70B requires ~40 GB RAM; Qwen3 72B requires ~43 GB RAM.',
             '**Easiest consumer hardware**: Apple Mac Studio M2 Ultra (64 GB unified) or M5 Max MacBook Pro (64 GB) -- full GPU acceleration, no layer offloading needed.',
             '**NVIDIA option**: RTX 4090 (24 GB VRAM) + 32 GB system RAM with layer offloading in Ollama handles most 70B models, though 20-30% of layers run on CPU.',
             '**CPU-only 70B**: possible on 64 GB RAM but produces 1-3 tok/sec -- marginally usable for batch tasks, not for interactive chat.',
@@ -92,7 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'NVIDIA DGX Spark: 128GB Unified Memory for 70B Models',
           content: [
             '**The NVIDIA DGX Spark ($3,999) is a compact desktop AI computer launched in October 2025, built on the GB10 Grace Blackwell Superchip with 128GB of unified LPDDR5x memory.** Its unified memory architecture means GPU and CPU share the same 128GB pool -- similar to Apple Silicon but with CUDA acceleration.',
-            'At 128GB unified memory, the DGX Spark runs Llama 3.3 70B and Qwen2.5 72B at Q8_0 (70GB -- near-lossless quality). Inference speed for 70B at Q8_0 is approximately 18-28 tok/sec.',
+            'At 128GB unified memory, the DGX Spark runs Llama 3.3 70B and Qwen3 72B at Q8_0 (70GB -- near-lossless quality). Inference speed for 70B at Q8_0 is approximately 18-28 tok/sec.',
           ],
           rows: [
             { 'Spec': 'Memory', 'Value': '128 GB unified LPDDR5x' },
@@ -123,7 +123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Which 70B Model Should You Run Locally?',
           rows: [
             { 'Model': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'Best For': 'General English tasks, instruction-following' },
-            { 'Model': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'Best For': 'Coding, multilingual (29 languages)' },
+            { 'Model': 'Qwen3 72B', 'MMLU': '84%', 'HumanEval': '87%', 'Best For': 'Coding, multilingual (29 languages)' },
             { 'Model': 'Mistral Large 123B', 'MMLU': '84%', 'HumanEval': '80%', 'Best For': 'Requires 80+ GB -- workstation only' },
           ],
           columns: ['Model', 'MMLU', 'HumanEval', 'Best For'],
@@ -134,8 +134,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**EU / GDPR**: A 70B local model represents the practical ceiling of privately-runnable AI quality. For EU enterprises processing sensitive data -- legal documents, medical records, financial analysis -- a 70B model running on-premises delivers GPT-4 2023 quality with full GDPR compliance. No prompt content, context, or output leaves the organization\'s infrastructure.',
             'For German BSI and French CNIL compliance: the Mac Studio M2 Ultra (Apple, USA) and NVIDIA DGX Spark (NVIDIA, USA) are both from non-EU vendors. For organizations requiring EU-supply-chain hardware, NVIDIA OEM partners (Dell, HP, Lenovo) produce DGX Spark-compatible GB10 systems with EU support.',
             'Model selection for EU compliance: Mistral Large 123B (Mistral AI, France, Apache 2.0) is the only 70B+ model from an EU-based developer. It requires 80+ GB RAM (workstation only) but provides the strongest EU IP and compliance narrative.',
-            '**Japan (METI)**: For Japanese enterprises, Qwen2.5 72B is the recommended 70B model -- its native Japanese tokenization is 30-40% more efficient than Llama for Japanese text. On a Mac Studio M2 Ultra (64 GB): `ollama run qwen2.5:72b`. METI AI governance requires documenting hardware and model versions. The `ollama ps` output provides exact model identification for compliance records.',
-            '**China**: Qwen2.5 72B (Alibaba) running locally satisfies data localization under China\'s Data Security Law (数据安全法) while delivering 84% MMLU quality. Enterprise teams commonly deploy on dual-GPU servers (2× RTX 4090, 48 GB VRAM combined). For CAC compliance: a locally-hosted Qwen2.5 72B serving internal users is outside the CAC provider definition -- it is not offered as a public service.',
+            '**Japan (METI)**: For Japanese enterprises, Qwen3 72B is the recommended 70B model -- its native Japanese tokenization is 30-40% more efficient than Llama for Japanese text. On a Mac Studio M2 Ultra (64 GB): `ollama run qwen2.5:72b`. METI AI governance requires documenting hardware and model versions. The `ollama ps` output provides exact model identification for compliance records.',
+            '**China**: Qwen3 72B (Alibaba) running locally satisfies data localization under China\'s Data Security Law (数据安全法) while delivering 84% MMLU quality. Enterprise teams commonly deploy on dual-GPU servers (2× RTX 4090, 48 GB VRAM combined). For CAC compliance: a locally-hosted Qwen3 72B serving internal users is outside the CAC provider definition -- it is not offered as a public service.',
           ],
         },
         commonMistakes: {
@@ -189,7 +189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'How does 70B local quality compare to GPT-5.5?',
-              a: 'On MMLU and HumanEval benchmarks, Llama 3.3 70B (82%, 88%) and Qwen2.5 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-5.5 (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-5.5 on most tasks.',
+              a: 'On MMLU and HumanEval benchmarks, Llama 3.3 70B (82%, 88%) and Qwen3 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-5.5 (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-5.5 on most tasks.',
             },
             {
               q: 'Does Ollama support running 70B models automatically?',
@@ -237,7 +237,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Run 70B LLMs on Consumer Hardware 2026: RAM & GPU Setup',
-        'description': 'Run Llama 3.3 and Qwen2.5 70B models locally: RAM requirements, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Complete hardware guide -- April 2026.',
+        'description': 'Run Llama 3.3 and Qwen3 70B models locally: RAM requirements, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Complete hardware guide -- April 2026.',
         'url': 'https://www.promptquorum.com/local-llms/70b-models-consumer-hardware',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
@@ -249,7 +249,7 @@ schema: {
           { '@type': 'Thing', 'name': 'NVIDIA RTX 4090' },
           { '@type': 'Thing', 'name': 'Layer offloading' },
           { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
-          { '@type': 'Thing', 'name': 'Qwen2.5 72B' },
+          { '@type': 'Thing', 'name': 'Qwen3 72B' },
           { '@type': 'Thing', 'name': 'NVIDIA DGX Spark' },
         ],
         'mentions': [
@@ -291,7 +291,7 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'What is the cheapest hardware that can run a 70B model usably?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'As of April 2026, a used Mac Studio M2 Ultra (64 GB unified memory) for ~$2,000 is the cheapest path to 70B inference at 25+ tok/sec. A new machine equivalent would be the M5 Max MacBook Pro 64 GB (~$3,500). An NVIDIA RTX 4090 desktop build (24 GB VRAM + 32 GB RAM) costs ~$3,000-$4,000 total but produces slower inference due to layer offloading.' } },
           { '@type': 'Question', 'name': 'Can I run a 70B model on two GPUs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes -- llama.cpp and Ollama support multi-GPU inference on NVIDIA hardware. Two RTX 4090s (48 GB total VRAM) fit a Q4_K_M 70B model entirely in VRAM. Ollama handles multi-GPU automatically when multiple GPUs are present. Tensor parallelism in llama.cpp (`--tensor-split`) controls how layers are distributed.' } },
-          { '@type': 'Question', 'name': 'How does 70B local quality compare to GPT-5.5?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'On MMLU and HumanEval benchmarks, Llama 3.3 70B (82%, 88%) and Qwen2.5 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-5.5 (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-5.5 on most tasks.' } },
+          { '@type': 'Question', 'name': 'How does 70B local quality compare to GPT-5.5?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'On MMLU and HumanEval benchmarks, Llama 3.3 70B (82%, 88%) and Qwen3 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-5.5 (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-5.5 on most tasks.' } },
           { '@type': 'Question', 'name': 'Does Ollama support running 70B models automatically?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Running `ollama run llama3.3:70b` downloads and runs the model with automatic GPU layer offloading. Ollama detects available VRAM and system RAM, offloads as many layers as possible to GPU, and runs the rest on CPU. No manual configuration is required for basic use.' } },
           { '@type': 'Question', 'name': 'How much electricity does running a 70B model use?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A Mac Studio M2 Ultra running 70B inference draws approximately 30-50 W. An NVIDIA RTX 4090 desktop under load draws 350-450 W. At $0.15 per kWh, continuous 70B inference on an RTX 4090 costs approximately $0.05-0.07 per hour. Apple Silicon is 7-10× more energy-efficient for this workload.' } },
           { '@type': 'Question', 'name': 'Are 70B models worth it compared to 13B models for everyday tasks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For complex reasoning, long-document analysis, and nuanced writing, yes -- the quality difference is noticeable. For simple summarization, Q&A, and classification, a 13B or even 7B model produces nearly identical output. Run both on your specific use case with [PromptQuorum](/) to quantify the quality difference before investing in 70B hardware.' } },
@@ -307,8 +307,8 @@ schema: {
       theme: 'Best Models',
       title: 'Cómo ejecutar modelos 70B en hardware de consumo 2026: RAM y GPU',
       seoTitle: '70B en hardware de consumo 2026: guía de RAM y GPU',
-      intro: 'Ejecutar un modelo de 70B parámetros localmente requiere 40-48 GB de RAM con cuantización Q4_K_M. Esto es posible en: Macs Apple Silicon con 64 GB de memoria unificada, estaciones de trabajo con 64 GB DDR5, o máquinas que combinan una GPU NVIDIA de 24 GB con 32 GB de RAM del sistema usando layer offloading. En abril de 2026, Llama 3.3 70B y Qwen2.5 72B son los dos modelos 70B principales disponibles.',
-      metaDescription: 'Ejecuta Llama 3.3 y Qwen2.5 70B en local: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading y benchmarks. Guía de hardware completa 2026.',
+      intro: 'Ejecutar un modelo de 70B parámetros localmente requiere 40-48 GB de RAM con cuantización Q4_K_M. Esto es posible en: Macs Apple Silicon con 64 GB de memoria unificada, estaciones de trabajo con 64 GB DDR5, o máquinas que combinan una GPU NVIDIA de 24 GB con 32 GB de RAM del sistema usando layer offloading. En abril de 2026, Llama 3.3 70B y Qwen3 72B son los dos modelos 70B principales disponibles.',
+      metaDescription: 'Ejecuta Llama 3.3 y Qwen3 70B en local: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading y benchmarks. Guía de hardware completa 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Ejecutar un modelo de 70B parámetros localmente requiere 40-48 GB de RAM con cuantización Q4_K_M. Esto es posible en: Macs Apple Silicon con 64 GB de memoria unificada, estaciones de trabajo con 64 GB DDR5, o máquinas que combinan una GPU NVIDIA de 24 GB con 32 GB de RAM del sistema usando layer offloading.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo con LLMs locales',
@@ -335,7 +335,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'Cuantización Q4_K_M: Llama 3.3 70B requiere ~40 GB de RAM; Qwen2.5 72B requiere ~43 GB de RAM.',
+            'Cuantización Q4_K_M: Llama 3.3 70B requiere ~40 GB de RAM; Qwen3 72B requiere ~43 GB de RAM.',
             '**Hardware de consumo más sencillo**: Apple Mac Studio M2 Ultra (64 GB unificados) o MacBook Pro M5 Max (64 GB) -- aceleración GPU completa, sin layer offloading necesario.',
             '**Opción NVIDIA**: RTX 4090 (24 GB VRAM) + 32 GB de RAM del sistema con layer offloading en Ollama funciona con la mayoría de modelos 70B, aunque el 20-30% de las capas se ejecutan en CPU.',
             '**70B solo con CPU**: posible con 64 GB de RAM pero produce 1-3 tok/seg -- marginalmente usable para tareas por lotes, no para chat interactivo.',
@@ -386,7 +386,7 @@ schema: {
           title: 'NVIDIA DGX Spark: 128 GB de memoria unificada para modelos 70B',
           content: [
             '**El NVIDIA DGX Spark ($3,999) es un ordenador de escritorio de IA compacto lanzado en octubre de 2025, basado en el GB10 Grace Blackwell Superchip con 128 GB de memoria unificada LPDDR5x.** Su arquitectura de memoria unificada significa que la GPU y la CPU comparten el mismo pool de 128 GB -- similar a Apple Silicon pero con aceleración CUDA.',
-            'Con 128 GB de memoria unificada, el DGX Spark ejecuta Llama 3.3 70B y Qwen2.5 72B en Q8_0 (70 GB -- calidad casi sin pérdida). La velocidad de inferencia para 70B en Q8_0 es aproximadamente 18-28 tok/seg.',
+            'Con 128 GB de memoria unificada, el DGX Spark ejecuta Llama 3.3 70B y Qwen3 72B en Q8_0 (70 GB -- calidad casi sin pérdida). La velocidad de inferencia para 70B en Q8_0 es aproximadamente 18-28 tok/seg.',
           ],
           rows: [
             { 'Especificación': 'Memoria', 'Valor': '128 GB unificados LPDDR5x' },
@@ -417,7 +417,7 @@ schema: {
           title: '¿Qué modelo 70B deberías ejecutar localmente?',
           rows: [
             { 'Modelo': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'Ideal para': 'Tareas generales en inglés, seguimiento de instrucciones' },
-            { 'Modelo': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'Ideal para': 'Codificación, multilingüe (29 idiomas)' },
+            { 'Modelo': 'Qwen3 72B', 'MMLU': '84%', 'HumanEval': '87%', 'Ideal para': 'Codificación, multilingüe (29 idiomas)' },
             { 'Modelo': 'Mistral Large 123B', 'MMLU': '84%', 'HumanEval': '80%', 'Ideal para': 'Requiere 80+ GB -- solo estaciones de trabajo' },
           ],
           columns: ['Modelo', 'MMLU', 'HumanEval', 'Ideal para'],
@@ -428,8 +428,8 @@ schema: {
             '**UE / RGPD**: Un modelo local 70B representa el límite práctico de la calidad de IA ejecutable de forma privada. Para empresas de la UE que procesan datos sensibles -- documentos legales, registros médicos, análisis financiero -- un modelo 70B en local entrega calidad GPT-4 2023 con pleno cumplimiento del RGPD. Ningún prompt, contexto ni salida abandona la infraestructura de la organización.',
             'Para el cumplimiento de BSI alemán y CNIL francesa: el Mac Studio M2 Ultra (Apple, EE.UU.) y el NVIDIA DGX Spark (NVIDIA, EE.UU.) son de proveedores no europeos. Para organizaciones que requieran hardware de cadena de suministro europea, los partners OEM de NVIDIA (Dell, HP, Lenovo) producen sistemas compatibles con DGX Spark y GB10 con soporte en la UE.',
             'Selección de modelos para cumplimiento en la UE: Mistral Large 123B (Mistral AI, Francia, Apache 2.0) es el único modelo de 70B+ desarrollado por una empresa europea. Requiere más de 80 GB de RAM (solo estaciones de trabajo), pero ofrece la narrativa más sólida en términos de propiedad intelectual y cumplimiento en la UE.',
-            '**Japón (METI)**: Para empresas japonesas, Qwen2.5 72B es el modelo 70B recomendado -- su tokenización nativa para japonés es un 30-40% más eficiente que Llama para texto en japonés. En un Mac Studio M2 Ultra (64 GB): `ollama run qwen2.5:72b`. La gobernanza de IA del METI requiere documentar las versiones de hardware y modelo. La salida de `ollama ps` proporciona la identificación exacta del modelo para los registros de cumplimiento.',
-            '**China**: Qwen2.5 72B (Alibaba) ejecutado localmente satisface la localización de datos bajo la Ley de Seguridad de Datos de China (数据安全法) mientras ofrece un 84% de calidad MMLU. Los equipos empresariales comúnmente despliegan en servidores de doble GPU (2× RTX 4090, 48 GB de VRAM combinados). Para el cumplimiento del CAC: un Qwen2.5 72B alojado localmente que atiende usuarios internos está fuera de la definición de proveedor del CAC -- no se ofrece como servicio público.',
+            '**Japón (METI)**: Para empresas japonesas, Qwen3 72B es el modelo 70B recomendado -- su tokenización nativa para japonés es un 30-40% más eficiente que Llama para texto en japonés. En un Mac Studio M2 Ultra (64 GB): `ollama run qwen2.5:72b`. La gobernanza de IA del METI requiere documentar las versiones de hardware y modelo. La salida de `ollama ps` proporciona la identificación exacta del modelo para los registros de cumplimiento.',
+            '**China**: Qwen3 72B (Alibaba) ejecutado localmente satisface la localización de datos bajo la Ley de Seguridad de Datos de China (数据安全法) mientras ofrece un 84% de calidad MMLU. Los equipos empresariales comúnmente despliegan en servidores de doble GPU (2× RTX 4090, 48 GB de VRAM combinados). Para el cumplimiento del CAC: un Qwen3 72B alojado localmente que atiende usuarios internos está fuera de la definición de proveedor del CAC -- no se ofrece como servicio público.',
           ],
         },
         commonMistakes: {
@@ -483,7 +483,7 @@ schema: {
             },
             {
               q: '¿Cómo se compara la calidad local 70B con GPT-5.5?',
-              a: 'En los benchmarks MMLU y HumanEval, Llama 3.3 70B (82%, 88%) y Qwen2.5 72B (84%, 87%) igualan o superan ligeramente los puntajes de GPT-4 (2023). GPT-5.5 (2024) puntúa más alto en tareas intensivas en razonamiento. Para seguimiento general de instrucciones, resumen y generación de código, los modelos locales 70B son competitivos con GPT-5.5 en la mayoría de tareas.',
+              a: 'En los benchmarks MMLU y HumanEval, Llama 3.3 70B (82%, 88%) y Qwen3 72B (84%, 87%) igualan o superan ligeramente los puntajes de GPT-4 (2023). GPT-5.5 (2024) puntúa más alto en tareas intensivas en razonamiento. Para seguimiento general de instrucciones, resumen y generación de código, los modelos locales 70B son competitivos con GPT-5.5 en la mayoría de tareas.',
             },
             {
               q: '¿Admite Ollama la ejecución automática de modelos 70B?',
@@ -531,7 +531,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Cómo ejecutar modelos 70B en hardware de consumo 2026: RAM y GPU',
-        'description': 'Ejecuta modelos Llama 3.3 y Qwen2.5 70B localmente: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Guía de hardware completa -- abril 2026.',
+        'description': 'Ejecuta modelos Llama 3.3 y Qwen3 70B localmente: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Guía de hardware completa -- abril 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/70b-models-consumer-hardware?lang=es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
@@ -543,7 +543,7 @@ schema: {
           { '@type': 'Thing', 'name': 'NVIDIA RTX 4090' },
           { '@type': 'Thing', 'name': 'Layer offloading' },
           { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
-          { '@type': 'Thing', 'name': 'Qwen2.5 72B' },
+          { '@type': 'Thing', 'name': 'Qwen3 72B' },
           { '@type': 'Thing', 'name': 'NVIDIA DGX Spark' },
         ],
         'mentions': [
@@ -585,7 +585,7 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Cuál es el hardware más barato que puede ejecutar un modelo 70B de forma utilizable?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En abril de 2026, un Mac Studio M2 Ultra de segunda mano (64 GB de memoria unificada) por ~$2,000 es el camino más económico hacia la inferencia 70B a 25+ tok/seg. Un equipo nuevo equivalente sería el MacBook Pro M5 Max de 64 GB (~$3,500). Un escritorio con NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) cuesta ~$3,000-$4,000 en total, pero produce una inferencia más lenta debido al layer offloading.' } },
           { '@type': 'Question', 'name': '¿Puedo ejecutar un modelo 70B en dos GPUs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí -- llama.cpp y Ollama admiten inferencia multi-GPU en hardware NVIDIA. Dos RTX 4090 (48 GB de VRAM total) caben un modelo 70B en Q4_K_M completamente en VRAM. Ollama gestiona el multi-GPU automáticamente cuando hay múltiples GPUs presentes. El paralelismo de tensores en llama.cpp (`--tensor-split`) controla cómo se distribuyen las capas.' } },
-          { '@type': 'Question', 'name': '¿Cómo se compara la calidad local 70B con GPT-5.5?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En los benchmarks MMLU y HumanEval, Llama 3.3 70B (82%, 88%) y Qwen2.5 72B (84%, 87%) igualan o superan ligeramente los puntajes de GPT-4 (2023). GPT-5.5 (2024) puntúa más alto en tareas intensivas en razonamiento. Para seguimiento general de instrucciones, resumen y generación de código, los modelos locales 70B son competitivos con GPT-5.5 en la mayoría de tareas.' } },
+          { '@type': 'Question', 'name': '¿Cómo se compara la calidad local 70B con GPT-5.5?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En los benchmarks MMLU y HumanEval, Llama 3.3 70B (82%, 88%) y Qwen3 72B (84%, 87%) igualan o superan ligeramente los puntajes de GPT-4 (2023). GPT-5.5 (2024) puntúa más alto en tareas intensivas en razonamiento. Para seguimiento general de instrucciones, resumen y generación de código, los modelos locales 70B son competitivos con GPT-5.5 en la mayoría de tareas.' } },
           { '@type': 'Question', 'name': '¿Admite Ollama la ejecución automática de modelos 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Ejecutar `ollama run llama3.3:70b` descarga y ejecuta el modelo con layer offloading automático de GPU. Ollama detecta la VRAM disponible y la RAM del sistema, hace offloading de tantas capas como sea posible a la GPU y ejecuta el resto en CPU. No se requiere configuración manual para el uso básico.' } },
           { '@type': 'Question', 'name': '¿Cuánta electricidad consume ejecutar un modelo 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Un Mac Studio M2 Ultra ejecutando inferencia 70B consume aproximadamente 30-50 W. Un escritorio con NVIDIA RTX 4090 bajo carga consume 350-450 W. A $0.15 por kWh, la inferencia 70B continua en una RTX 4090 cuesta aproximadamente $0.05-0.07 por hora. Apple Silicon es 7-10 veces más eficiente energéticamente para esta carga de trabajo.' } },
           { '@type': 'Question', 'name': '¿Valen la pena los modelos 70B comparados con los modelos 13B para tareas cotidianas?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para razonamiento complejo, análisis de documentos extensos y escritura matizada, sí -- la diferencia de calidad es notable. Para resumen simple, preguntas y respuestas, y clasificación, un modelo de 13B o incluso 7B produce una salida prácticamente idéntica. Ejecuta ambos en tu caso de uso específico con [PromptQuorum](/) para cuantificar la diferencia de calidad antes de invertir en hardware para 70B.' } },
@@ -600,8 +600,8 @@ schema: {
   theme: 'Beste Modelle',
   title: 'So führst du 70B Local LLM Modelle auf Consumer Hardware 2026 aus',
   seoTitle: '70B Modelle auf Consumer-Hardware 2026: RAM & GPU',
-  intro: 'Ein 70B Parameter Modell lokal auszuführen benötigt 40-48 GB RAM bei Q4_K_M Quantisierung. Dies ist erreichbar auf: Apple Silicon Macs mit 64 GB unified memory, Workstations mit 64 GB DDR5, oder Maschinen, die eine 24 GB NVIDIA GPU mit 32 GB System RAM kombinieren, unter Verwendung von Layer Offloading. Ab April 2026 sind Llama 3.3 70B und Qwen2.5 72B die beiden primären 70B Modelle verfügbar.',
-  metaDescription: 'Betreibe Llama 3.3 und Qwen2.5 70B lokal: RAM-Anforderungen, NVIDIA vs Apple Silicon, Layer-Offloading, Benchmarks. Kompletter Hardware-Leitfaden -- April 2026.',
+  intro: 'Ein 70B Parameter Modell lokal auszuführen benötigt 40-48 GB RAM bei Q4_K_M Quantisierung. Dies ist erreichbar auf: Apple Silicon Macs mit 64 GB unified memory, Workstations mit 64 GB DDR5, oder Maschinen, die eine 24 GB NVIDIA GPU mit 32 GB System RAM kombinieren, unter Verwendung von Layer Offloading. Ab April 2026 sind Llama 3.3 70B und Qwen3 72B die beiden primären 70B Modelle verfügbar.',
+  metaDescription: 'Betreibe Llama 3.3 und Qwen3 70B lokal: RAM-Anforderungen, NVIDIA vs Apple Silicon, Layer-Offloading, Benchmarks. Kompletter Hardware-Leitfaden -- April 2026.',
   publishDate: '2026-04-04',
   readTime: '9 Min. Lesezeit',
   educationalLevel: 'Intermediate',
@@ -628,7 +628,7 @@ schema: {
     'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     'about': [
       { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
-      { '@type': 'Thing', 'name': 'Qwen2.5 72B' },
+      { '@type': 'Thing', 'name': 'Qwen3 72B' },
       { '@type': 'Thing', 'name': 'Q4_K_M Quantisierung' },
       { '@type': 'Thing', 'name': 'Layer Offloading' },
       { '@type': 'Thing', 'name': 'NVIDIA GPU' },
@@ -646,7 +646,7 @@ schema: {
     'name': 'So führst du 70B Modelle auf Consumer Hardware aus',
     'step': [
       { '@type': 'HowToStep', 'position': 1, 'name': 'Überprüfe deine Hardware-Anforderungen', 'text': 'Bestimme, ob deine Hardware 40-48 GB RAM insgesamt bereitstellen kann. Apple Silicon Macs mit 64 GB, NVIDIA RTX 4090 mit 32 GB System RAM oder CPU-only Systeme mit 64 GB sind alle machbar.' },
-      { '@type': 'HowToStep', 'position': 2, 'name': 'Wähle dein 70B Modell', 'text': 'Entscheide zwischen Llama 3.3 70B für Englisch oder Qwen2.5 72B für Multilingual und Coding.' },
+      { '@type': 'HowToStep', 'position': 2, 'name': 'Wähle dein 70B Modell', 'text': 'Entscheide zwischen Llama 3.3 70B für Englisch oder Qwen3 72B für Multilingual und Coding.' },
       { '@type': 'HowToStep', 'position': 3, 'name': 'Installiere Ollama oder llama.cpp', 'text': 'Lade Ollama von ollama.com herunter oder kompiliere llama.cpp für Layer Offloading Support.' },
       { '@type': 'HowToStep', 'position': 4, 'name': 'Ziehe das Modell herunter', 'text': 'Führe `ollama pull llama3.3:70b` aus. Dieser Download benötigt 30-40 GB Speicherplatz und 10-30 Minuten.' },
       { '@type': 'HowToStep', 'position': 5, 'name': 'Starten und teste', 'text': 'Führe `ollama run llama3.3:70b` aus und überprüfe die Inferenzgeschwindigkeit und Ausgabebqualität.' },
@@ -689,7 +689,7 @@ schema: {
         'name': 'Wie vergleicht sich 70B lokale Qualität mit GPT-5.5?',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': 'Bei MMLU und HumanEval Benchmarks entspricht Llama 3.3 70B (82%, 88%) und Qwen2.5 72B (84%, 87%) oder übertrifft leicht GPT-4 (2023) Scores. GPT-5.5 (2024) schneidet höher bei reasoningintensiven Aufgaben ab. Für allgemeine Anweisung-Befolgung, Zusammenfassung und Code-Generierung sind 70B lokale Modelle bei den meisten Aufgaben konkurrenzfähig mit GPT-5.5.',
+          'text': 'Bei MMLU und HumanEval Benchmarks entspricht Llama 3.3 70B (82%, 88%) und Qwen3 72B (84%, 87%) oder übertrifft leicht GPT-4 (2023) Scores. GPT-5.5 (2024) schneidet höher bei reasoningintensiven Aufgaben ab. Für allgemeine Anweisung-Befolgung, Zusammenfassung und Code-Generierung sind 70B lokale Modelle bei den meisten Aufgaben konkurrenzfähig mit GPT-5.5.',
         }
       },
       {
@@ -729,7 +729,7 @@ schema: {
         'name': 'Sollte ich 70B oder 34B Modelle auf meinem System laufen lassen?',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': 'Wenn du mindestens 48 GB RAM hast (dediziert für das Modell), wähle 70B -- der Qualitätssprung ist erheblich und rechtfertigt die zusätzliche Hardware-Anforderung. Mit 32-48 GB RAM ist ein 34B Modell eine praktischere Option mit noch respektabler Qualität (ähnlich GPT-3.5). Teste beide mit [PromptQuorum](/?lang=de) auf deinen speziellen Aufgaben.',
+          'text': 'Wenn du mindestens 48 GB RAM hast (dediziert für das Modell), wähle 70B -- der Qualitätssprung ist erheblich und rechtfertigt die zusätzliche Hardware-Anforderung. Mit 32-48 GB RAM ist ein 34B Modell eine praktischere Option mit noch respektabler Qualität (ähnlich GPT-4o mini). Teste beide mit [PromptQuorum](/?lang=de) auf deinen speziellen Aufgaben.',
         }
       },
       {
@@ -756,7 +756,7 @@ schema: {
 
       isTldr: true,
       items: [
-        'Q4_K_M Quantisierung: Llama 3.3 70B benötigt etwa 40 GB RAM; Qwen2.5 72B benötigt etwa 43 GB RAM.',
+        'Q4_K_M Quantisierung: Llama 3.3 70B benötigt etwa 40 GB RAM; Qwen3 72B benötigt etwa 43 GB RAM.',
         '**Einfachste Consumer Hardware**: Apple Mac Studio M2 Ultra (64 GB unified) oder M5 Max MacBook Pro (64 GB) -- vollständige GPU Beschleunigung, kein Layer Offloading erforderlich.',
         '**NVIDIA Option**: RTX 4090 (24 GB VRAM) + 32 GB System RAM mit Layer Offloading in Ollama bewältigt die meisten 70B Modelle, obwohl 20-30% der Layers auf der CPU laufen.',
         '**CPU-only 70B**: möglich auf 64 GB RAM, erzeugt aber 1-3 tok/sec -- marginal nutzbar für Batch-Aufgaben, nicht für interaktiven Chat.',
@@ -821,7 +821,7 @@ schema: {
       title: 'Welches 70B Modell solltest du lokal ausführen?',
       rows: [
         { 'Modell': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'Beste für': 'Allgemeine Englisch Aufgaben, Anweisung-Befolgung' },
-        { 'Modell': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'Beste für': 'Coding, Mehrsprachigkeit (29 Sprachen)' },
+        { 'Modell': 'Qwen3 72B', 'MMLU': '84%', 'HumanEval': '87%', 'Beste für': 'Coding, Mehrsprachigkeit (29 Sprachen)' },
         { 'Modell': 'Mistral Large 123B', 'MMLU': '84%', 'HumanEval': '80%', 'Beste für': 'Benötigt 80+ GB -- nur Workstation' },
       ],
       columns: ['Modell', 'MMLU', 'HumanEval', 'Beste für'],
@@ -847,7 +847,7 @@ schema: {
         },
         {
           q: 'Wie vergleicht sich 70B lokale Qualität mit GPT-5.5?',
-          a: 'Bei MMLU und HumanEval Benchmarks entspricht Llama 3.3 70B (82%, 88%) und Qwen2.5 72B (84%, 87%) oder übertrifft leicht GPT-4 (2023) Scores. GPT-5.5 (2024) schneidet höher bei reasoning-intensiven Aufgaben ab. Für allgemeine Anweisung-Befolgung, Zusammenfassung und Code-Generierung sind 70B lokale Modelle bei den meisten Aufgaben konkurrenzfähig mit GPT-5.5.',
+          a: 'Bei MMLU und HumanEval Benchmarks entspricht Llama 3.3 70B (82%, 88%) und Qwen3 72B (84%, 87%) oder übertrifft leicht GPT-4 (2023) Scores. GPT-5.5 (2024) schneidet höher bei reasoning-intensiven Aufgaben ab. Für allgemeine Anweisung-Befolgung, Zusammenfassung und Code-Generierung sind 70B lokale Modelle bei den meisten Aufgaben konkurrenzfähig mit GPT-5.5.',
         },
         {
           q: 'Unterstützt Ollama die automatische Ausführung von 70B Modellen?',
@@ -867,7 +867,7 @@ schema: {
         },
         {
           q: 'Sollte ich 70B oder 34B Modelle auf meinem System laufen lassen?',
-          a: 'Wenn du mindestens 48 GB RAM hast (dediziert für das Modell), wähle 70B -- der Qualitätssprung ist erheblich und rechtfertigt die zusätzliche Hardware-Anforderung. Mit 32-48 GB RAM ist ein 34B Modell eine praktischere Option mit noch respektabler Qualität (ähnlich GPT-3.5). Teste beide mit [PromptQuorum](/?lang=de) auf deinen speziellen Aufgaben.',
+          a: 'Wenn du mindestens 48 GB RAM hast (dediziert für das Modell), wähle 70B -- der Qualitätssprung ist erheblich und rechtfertigt die zusätzliche Hardware-Anforderung. Mit 32-48 GB RAM ist ein 34B Modell eine praktischere Option mit noch respektabler Qualität (ähnlich GPT-4o mini). Teste beide mit [PromptQuorum](/?lang=de) auf deinen speziellen Aufgaben.',
         },
         {
           q: 'DSGVO: Muss ich bei der Verwendung von lokalen 70B Modellen die DSGVO beachten?',
@@ -895,8 +895,8 @@ schema: {
   theme: 'Meilleurs modèles',
   title: 'Comment exécuter un modèle LLM 70B local sur du matériel grand public en 2026',
   seoTitle: 'Modèles 70B sur Matériel Grand Public 2026: Guide',
-  intro: 'Exécuter un modèle 70B localement nécessite 40-48 Go de RAM en quantification Q4_K_M. C\'est réalisable sur : les Mac Apple Silicon avec 64 Go de mémoire unifiée, les stations de travail avec 64 Go DDR5, ou les machines combinant un GPU NVIDIA 24 Go avec 32 Go de RAM système via déchargement de couches. En avril 2026, Llama 3.3 70B et Qwen2.5 72B sont les deux principaux modèles 70B disponibles.',
-  metaDescription: 'Exécutez Llama 3.3 et Qwen2.5 70B localement : exigences RAM, NVIDIA vs Apple Silicon, déchargement de couches, benchmarks. Guide matériel complet -- avril 2026.',
+  intro: 'Exécuter un modèle 70B localement nécessite 40-48 Go de RAM en quantification Q4_K_M. C\'est réalisable sur : les Mac Apple Silicon avec 64 Go de mémoire unifiée, les stations de travail avec 64 Go DDR5, ou les machines combinant un GPU NVIDIA 24 Go avec 32 Go de RAM système via déchargement de couches. En avril 2026, Llama 3.3 70B et Qwen3 72B sont les deux principaux modèles 70B disponibles.',
+  metaDescription: 'Exécutez Llama 3.3 et Qwen3 70B localement : exigences RAM, NVIDIA vs Apple Silicon, déchargement de couches, benchmarks. Guide matériel complet -- avril 2026.',
   publishDate: '2026-04-04',
   readTime: '8 min de lecture',
   educationalLevel: 'Intermediate',
@@ -918,7 +918,7 @@ schema: {
 
       isTldr: true,
       items: [
-        'Quantification Q4_K_M : Llama 3.3 70B nécessite ~40 Go RAM ; Qwen2.5 72B nécessite ~43 Go RAM.',
+        'Quantification Q4_K_M : Llama 3.3 70B nécessite ~40 Go RAM ; Qwen3 72B nécessite ~43 Go RAM.',
         '**Matériel grand public le plus facile** : Mac Studio M2 Ultra (64 Go unifiée) ou MacBook Pro M5 Max 64 Go -- accélération GPU complète, pas de déchargement nécessaire.',
         '**Option NVIDIA** : RTX 4090 (24 Go VRAM) + 32 Go RAM système avec déchargement de couches dans Ollama. Environ 20-30 % des couches s\'exécutent sur CPU.',
         '**70B sur CPU uniquement** : possible sur 64 Go RAM, mais produit 1-3 tok/sec -- à peine utilisable pour les tâches batch, pas pour le chat interactif.',
@@ -983,7 +983,7 @@ schema: {
       title: 'Quel modèle 70B devriez-vous exécuter localement ?',
       rows: [
         { 'Modèle': 'Llama 3.3 70B', 'MMLU': '82 %', 'HumanEval': '88 %', 'Meilleur pour': 'Tâches anglais générales, suivi d\'instructions' },
-        { 'Modèle': 'Qwen2.5 72B', 'MMLU': '84 %', 'HumanEval': '87 %', 'Meilleur pour': 'Codage, multilingue (29 langues)' },
+        { 'Modèle': 'Qwen3 72B', 'MMLU': '84 %', 'HumanEval': '87 %', 'Meilleur pour': 'Codage, multilingue (29 langues)' },
         { 'Modèle': 'Mistral Large 123B', 'MMLU': '84 %', 'HumanEval': '80 %', 'Meilleur pour': 'Nécessite 80+ Go -- stations de travail uniquement' },
       ],
       columns: ['Modèle', 'MMLU', 'HumanEval', 'Meilleur pour'],
@@ -1018,7 +1018,7 @@ schema: {
         },
         {
           q: 'Comment la qualité 70B locale se compare-t-elle à GPT-5.5 ?',
-          a: 'Sur les benchmarks MMLU et HumanEval, Llama 3.3 70B (82 %, 88 %) et Qwen2.5 72B (84 %, 87 %) égalent ou dépassent légèrement les scores GPT-4 (2023). GPT-5.5 (2024) obtient des scores plus élevés sur les tâches lourdes en raisonnement. Pour le suivi d\'instructions général, résumé et génération de code, les modèles 70B locaux sont compétitifs avec GPT-5.5 sur la plupart des tâches.',
+          a: 'Sur les benchmarks MMLU et HumanEval, Llama 3.3 70B (82 %, 88 %) et Qwen3 72B (84 %, 87 %) égalent ou dépassent légèrement les scores GPT-4 (2023). GPT-5.5 (2024) obtient des scores plus élevés sur les tâches lourdes en raisonnement. Pour le suivi d\'instructions général, résumé et génération de code, les modèles 70B locaux sont compétitifs avec GPT-5.5 sur la plupart des tâches.',
         },
         {
           q: 'Ollama supporte-t-il l\'exécution automatique de modèles 70B ?',
@@ -1056,7 +1056,7 @@ schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Comment exécuter un modèle LLM 70B local sur du matériel grand public en 2026',
-      description: 'Guide d\'exécution de modèles 70B locaux: besoins RAM, GPU, déchargement de couches et quantification. Déployer Llama 3.3 et Qwen2.5 -- avril 2026.',
+      description: 'Guide d\'exécution de modèles 70B locaux: besoins RAM, GPU, déchargement de couches et quantification. Déployer Llama 3.3 et Qwen3 -- avril 2026.',
       url: 'https://www.promptquorum.com/fr/local-llms/70b-models-consumer-hardware',
       inLanguage: 'fr',
       datePublished: '2026-04-04',
@@ -1064,7 +1064,7 @@ schema: {
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
-        { '@type': 'Thing', 'name': 'Qwen2.5 72B' },
+        { '@type': 'Thing', 'name': 'Qwen3 72B' },
         { '@type': 'Thing', 'name': 'Q4_K_M Quantification' },
         { '@type': 'Thing', 'name': 'Déchargement de couches' },
         { '@type': 'Thing', 'name': 'GPU NVIDIA' },
@@ -1093,8 +1093,8 @@ schema: {
   theme: 'Best Models',
   title: '2026年：コンシューマーハードウェアで70Bローカルモデルを実行する方法',
   seoTitle: '2026年：コンシューマーハードで70B実行ガイド',
-  intro: 'ローカルで70Bパラメータモデルを実行するには、Q4_K_M量化で40～48GBのRAMが必要です。これは以下のハードウェアで実現可能です：64GB統合メモリを持つApple Silicon Mac、64GB DDR5を搭載したワークステーション、またはレイヤーオフロードを使用して24GB NVIDIA GPUと32GB システムRAMを組み合わせたマシン。2026年4月時点では、Llama 3.3 70BとQwen2.5 72Bが利用可能な主要な70Bモデルです。',
-  metaDescription: 'Llama 3.3とQwen2.5 70Bモデルをローカルで実行：RAM要件、NVIDIAとApple Siliconの比較、レイヤーオフロード、ベンチマーク。完全なハードウェアガイド -- 2026年4月。',
+  intro: 'ローカルで70Bパラメータモデルを実行するには、Q4_K_M量化で40～48GBのRAMが必要です。これは以下のハードウェアで実現可能です：64GB統合メモリを持つApple Silicon Mac、64GB DDR5を搭載したワークステーション、またはレイヤーオフロードを使用して24GB NVIDIA GPUと32GB システムRAMを組み合わせたマシン。2026年4月時点では、Llama 3.3 70BとQwen3 72Bが利用可能な主要な70Bモデルです。',
+  metaDescription: 'Llama 3.3とQwen3 70Bモデルをローカルで実行：RAM要件、NVIDIAとApple Siliconの比較、レイヤーオフロード、ベンチマーク。完全なハードウェアガイド -- 2026年4月。',
   publishDate: '2026-04-04',
   readTime: '9分',
   educationalLevel: 'Intermediate',
@@ -1124,7 +1124,7 @@ schema: {
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Llama 3.3 70B' },
-      { '@type': 'Thing', name: 'Qwen2.5 72B' },
+      { '@type': 'Thing', name: 'Qwen3 72B' },
       { '@type': 'Thing', name: 'Apple M5 Max' },
       { '@type': 'Thing', name: 'NVIDIA RTX 4090' },
     ],
@@ -1138,12 +1138,12 @@ schema: {
       { '@type': 'Question', name: 'RTX 4090で70Bモデルを完全に実行できますか？', acceptedAnswer: { '@type': 'Answer', text: '直接ではありません。RTX 4090は24GB VRAMで、Q4_K_Mで量化された70Bモデルには約40～43GBが必要です。Ollamaまたはllama.cppのレイヤーオフロード機能を使用して、約60％のレイヤーをGPU上で実行し、残りの40％をシステムRAM上で実行できます。これにより10～18 tok/secが得られます。' } },
       { '@type': 'Question', name: '「レイヤーオフロード」とは正確には何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'レイヤーオフロード（層オフロード）は、LLMの計算レイヤーを GPU VRAM とシステムRAMに分割する手法です。VRAMに格納されたレイヤーはGPU速度で実行され、システムRAMのレイヤーはCPU速度で実行されます。Ollamaで自動的に処理されます：OLLAMA_GPU_LAYERS=999 を設定すると、VRAMに収まるだけ多くのレイヤーをオフロードします。' } },
       { '@type': 'Question', name: 'CPU専用で70Bモデルを実行することは実際に可能ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、64GB RAMを備えたハイコアCPU（AMD Threadripper、Intel Xeon）では可能ですが、1～3 tok/secしか生成しません。200語の応答は約75秒かかります。バッチ処理（文書の要約、レポート生成）には使用できますが、対話的なチャットには不適切です。対話的な使用には最低8+ tok/secの処理速度が必要です。' } },
-      { '@type': 'Question', name: '70Bモデルの質は GPT-5.5 と比較してどうですか？', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.3 70B（MMLU 82%、HumanEval 88%）と Qwen2.5 72B（MMLU 84%、HumanEval 87%）は、ベンチマークスコアで GPT-4（2023年）を一致または僅かに上回ります。GPT-5.5（2024年）は推論の多い作業ではスコアが高くなりますが、一般的な指示遵行、要約、コード生成では、70Bのローカルモデルはほとんどのタスクで GPT-5.5 と同等です。' } },
+      { '@type': 'Question', name: '70Bモデルの質は GPT-5.5 と比較してどうですか？', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.3 70B（MMLU 82%、HumanEval 88%）と Qwen3 72B（MMLU 84%、HumanEval 87%）は、ベンチマークスコアで GPT-4（2023年）を一致または僅かに上回ります。GPT-5.5（2024年）は推論の多い作業ではスコアが高くなりますが、一般的な指示遵行、要約、コード生成では、70Bのローカルモデルはほとんどのタスクで GPT-5.5 と同等です。' } },
       { '@type': 'Question', name: '2026年4月時点での最も費用対効果の高い70B セットアップは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '中古 Mac Studio M2 Ultra（64GB統合メモリ）で約2,000ドル、25+ tok/secで動作することが最も費用対効果の高い選択肢です。新品相当品（M5 Max MacBook Pro 64GB）は約3,500ドルです。NVIDIA RTX 4090デスクトップ構成（24GB VRAM + 32GB RAM）は3,000～4,000ドルかかりますが、レイヤーオフロードのため速度が低下します。' } },
       { '@type': 'Question', name: '複数のGPUで70Bモデルを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、NVIDIA ハードウェアでは llama.cpp と Ollama がマルチGPU推論をサポートしています。2つのRTX 4090s（合計48GB VRAM）は Q4_K_M 70B モデルを完全にVRAM内に適合させることができます。Ollamaは複数GPUが存在する場合、自動的にマルチGPU処理を行います。llama.cpp では tensor parallelism（--tensor-split）がレイヤー分配を制御します。' } },
       { '@type': 'Question', name: '70Bモデルを実行する場合、電力消費はどのくらいですか？', acceptedAnswer: { '@type': 'Answer', text: 'Mac Studio M2 Ultra は70B推論で約30～50W消費します。NVIDIA RTX 4090 デスクトップは負荷時に350～450W消費します。1kWh あたり0.15ドルで、RTX 4090での継続的な70B推論は時間あたり約0.05～0.07ドルのコストがかかります。Apple Siliconはこのワークロードで7～10倍エネルギー効率が優れています。' } },
-      { '@type': 'Question', name: '日本で70Bモデルを実行する場合、METI規制を遵守する必要がありますか？', acceptedAnswer: { '@type': 'Answer', text: '2026年4月時点では、Open-Weight LLM（Llama 3.3、Qwen2.5など）の個人使用に対する直接的な METI 規制はありません。ただし、組織として機密データを処理する場合は、データ保護とプライバシー要件を確認してください。日本国内の機械学習規制については、デジタル庁のガイドラインを参照してください。' } },
-      { '@type': 'Question', name: '日本語で70Bモデルを使用する場合、どのモデルが最適ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 72B は日本語を含む29言語にネイティブに対応しており、70Bクラスで最良の選択肢です。Llama 3.3 70B は 日本語をサポートしていますが、英語にはやや劣ります。動的トークン化とBPE（バイトペア符号化）のため、日本語は英語より多くのトークンを消費します。同じコンテキストでも日本語の方が多くのトークンが必要です。' } },
+      { '@type': 'Question', name: '日本で70Bモデルを実行する場合、METI規制を遵守する必要がありますか？', acceptedAnswer: { '@type': 'Answer', text: '2026年4月時点では、Open-Weight LLM（Llama 3.3、Qwen3など）の個人使用に対する直接的な METI 規制はありません。ただし、組織として機密データを処理する場合は、データ保護とプライバシー要件を確認してください。日本国内の機械学習規制については、デジタル庁のガイドラインを参照してください。' } },
+      { '@type': 'Question', name: '日本語で70Bモデルを使用する場合、どのモデルが最適ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 72B は日本語を含む29言語にネイティブに対応しており、70Bクラスで最良の選択肢です。Llama 3.3 70B は 日本語をサポートしていますが、英語にはやや劣ります。動的トークン化とBPE（バイトペア符号化）のため、日本語は英語より多くのトークンを消費します。同じコンテキストでも日本語の方が多くのトークンが必要です。' } },
     ],
   },
   sections: {
@@ -1152,7 +1152,7 @@ schema: {
 
       isTldr: true,
       items: [
-        'Q4_K_M 量化：Llama 3.3 70B は ~40GB RAM が必要。Qwen2.5 72B は ~43GB RAM が必要です。',
+        'Q4_K_M 量化：Llama 3.3 70B は ~40GB RAM が必要。Qwen3 72B は ~43GB RAM が必要です。',
         '**最も容易なコンシューマーハードウェア**：Apple Mac Studio M2 Ultra（64GB統合メモリ）または M5 Max MacBook Pro（64GB）-- 完全GPU加速、レイヤーオフロード不要。',
         '**NVIDIA オプション**：RTX 4090（24GB VRAM）+ 32GB システムRAM、Ollama のレイヤーオフロード機能で大ほどんどの70Bモデルに対応、ただし20～30％のレイヤーはCPU上で実行。',
         '**CPU専用70B**：64GB RAMで可能ですが、1～3 tok/sec 生成 -- バッチタスクではかろうじて使用可能、対話的チャットには不適切。',
@@ -1247,7 +1247,7 @@ schema: {
       title: 'どの70B モデルをローカルで実行すべきですか？',
       rows: [
         { 'モデル': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', '最適用途': '一般英語タスク、指示遵行' },
-        { 'モデル': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', '最適用途': 'コーディング、多言語（29言語）' },
+        { 'モデル': 'Qwen3 72B', 'MMLU': '84%', 'HumanEval': '87%', '最適用途': 'コーディング、多言語（29言語）' },
         { 'モデル': 'Mistral Large 123B', 'MMLU': '84%', 'HumanEval': '80%', '最適用途': '80GB以上が必要 -- ワークステーション専用' },
       ],
       columns: ['モデル', 'MMLU', 'HumanEval', '最適用途'],
@@ -1282,7 +1282,7 @@ schema: {
         },
         {
           q: '70B ローカル品質は GPT-5.5 とどう比較されますか？',
-          a: 'MMLU と HumanEval ベンチマークでは、Llama 3.3 70B（82%, 88%）と Qwen2.5 72B（84%, 87%）は GPT-4（2023年）スコアに一致またはやや上回ります。GPT-5.5（2024年）は推論が多いタスクではより高いスコアを示します。一般的な指示遵行、要約、コード生成では、70B ローカルモデルはほとんどのタスクで GPT-5.5 と同等です。',
+          a: 'MMLU と HumanEval ベンチマークでは、Llama 3.3 70B（82%, 88%）と Qwen3 72B（84%, 87%）は GPT-4（2023年）スコアに一致またはやや上回ります。GPT-5.5（2024年）は推論が多いタスクではより高いスコアを示します。一般的な指示遵行、要約、コード生成では、70B ローカルモデルはほとんどのタスクで GPT-5.5 と同等です。',
         },
         {
           q: 'Ollama は70Bモデルを自動的に実行できますか？',
@@ -1298,7 +1298,7 @@ schema: {
         },
         {
           q: '日本語で70Bモデルを使用する場合、どのモデルが推奨されますか？',
-          a: 'Qwen2.5 72B は日本語を含む29言語にネイティブに対応しており、70B クラスでの最適な選択肢です。Llama 3.3 70B は日本語をサポートしていますが、英語にはやや劣ります。日本語はトークン化が英語より多くのトークンを必要とします -- 同じコンテンツでも日本語の方が多くのトークンを消費します。',
+          a: 'Qwen3 72B は日本語を含む29言語にネイティブに対応しており、70B クラスでの最適な選択肢です。Llama 3.3 70B は日本語をサポートしていますが、英語にはやや劣ります。日本語はトークン化が英語より多くのトークンを必要とします -- 同じコンテンツでも日本語の方が多くのトークンを消費します。',
         },
         {
           q: '日本で組織として70Bモデルを使用する場合、法的な制限はありますか？',
@@ -1327,8 +1327,8 @@ schema: {
   theme: '最佳模型',
   title: '如何在消费级硬件上运行 70B 本地大模型 (2026)',
   seoTitle: '2026消费级硬件运行70B完整指南',
-  intro: '在 Q4_K_M 量化下，运行 70B 参数模型需要 40-48 GB 内存。这可以通过以下方式实现：1) 配置 64 GB 统一内存的 Apple Silicon Mac；2) 配置 64 GB DDR5 的工作站；3) 通过层卸载技术结合 24 GB NVIDIA GPU 与 32 GB 系统内存的机器。截至 2026 年 4 月，Llama 3.3 70B 和 Qwen2.5 72B 是两款主要可用的 70B 模型。',
-  metaDescription: '本地运行Llama 3.3和Qwen2.5 70B模型：RAM需求、NVIDIA与Apple Silicon对比、层卸载技术、基准测试。完整硬件部署指南 -- 2026年4月。',
+  intro: '在 Q4_K_M 量化下，运行 70B 参数模型需要 40-48 GB 内存。这可以通过以下方式实现：1) 配置 64 GB 统一内存的 Apple Silicon Mac；2) 配置 64 GB DDR5 的工作站；3) 通过层卸载技术结合 24 GB NVIDIA GPU 与 32 GB 系统内存的机器。截至 2026 年 4 月，Llama 3.3 70B 和 Qwen3 72B 是两款主要可用的 70B 模型。',
+  metaDescription: '本地运行Llama 3.3和Qwen3 70B模型：RAM需求、NVIDIA与Apple Silicon对比、层卸载技术、基准测试。完整硬件部署指南 -- 2026年4月。',
   publishDate: '2026-04-04',
   dateModified: '2026-04-10',
   readTime: '9 分钟阅读',
@@ -1351,7 +1351,7 @@ schema: {
 
       isTldr: true,
       numberedItems: [
-        'Q4_K_M 量化：Llama 3.3 70B 需要约 40 GB 内存；Qwen2.5 72B 需要约 43 GB 内存。',
+        'Q4_K_M 量化：Llama 3.3 70B 需要约 40 GB 内存；Qwen3 72B 需要约 43 GB 内存。',
         '最简单的消费级硬件方案：Mac Studio M2 Ultra (64 GB 统一内存) 或 M5 Max MacBook Pro (64 GB) -- 完整 GPU 加速，无需层卸载。',
         'NVIDIA 方案：RTX 4090 (24 GB VRAM) + 32 GB 系统内存配合 Ollama 层卸载技术可以处理大多数 70B 模型，尽管 20-30% 的层会在 CPU 上运行。',
         '纯 CPU 运行 70B：可行但只能产生 1-3 tok/秒 -- 边际可用于批处理任务，不适合交互式聊天。',
@@ -1416,7 +1416,7 @@ schema: {
       title: '应该在本地运行哪个 70B 模型？',
       rows: [
         { '模型': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', '最适用于': '通用英文任务、指令跟随' },
-        { '模型': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', '最适用于': '编码、多语言 (29 种语言)' },
+        { '模型': 'Qwen3 72B', 'MMLU': '84%', 'HumanEval': '87%', '最适用于': '编码、多语言 (29 种语言)' },
         { '模型': 'Mistral Large 123B', 'MMLU': '84%', 'HumanEval': '80%', '最适用于': '需要 80+ GB -- 仅工作站' },
       ],
       columns: ['模型', 'MMLU', 'HumanEval', '最适用于'],
@@ -1451,7 +1451,7 @@ schema: {
         },
         {
           q: '70B 本地质量与 GPT-5.5 相比如何？',
-          a: '在 MMLU 和 HumanEval 基准上，Llama 3.3 70B (82%, 88%) 和 Qwen2.5 72B (84%, 87%) 与或略超 GPT-4 (2023) 分数。GPT-5.5 (2024) 在推理密集任务上分数更高。对于通用指令跟随、摘要和代码生成，70B 本地模型在大多数任务上与 GPT-5.5 竞争力相当。',
+          a: '在 MMLU 和 HumanEval 基准上，Llama 3.3 70B (82%, 88%) 和 Qwen3 72B (84%, 87%) 与或略超 GPT-4 (2023) 分数。GPT-5.5 (2024) 在推理密集任务上分数更高。对于通用指令跟随、摘要和代码生成，70B 本地模型在大多数任务上与 GPT-5.5 竞争力相当。',
         },
         {
           q: 'Ollama 支持自动运行 70B 模型吗？',
@@ -1467,7 +1467,7 @@ schema: {
         },
         {
           q: '在中国部署 70B 本地模型有特殊考虑吗？',
-          a: '是。根据《数据安全法》(2021) 和 MLPS (多层次保护系统) 要求，本地部署 70B 模型适合处理敏感业务数据。Qwen2.5 72B 作为国产模型，在国内合规性更优。企业应在 CAC (网络安全审查委员会) 指导下评估使用场景，特别是在涉及个人数据或关键信息基础设施时。',
+          a: '是。根据《数据安全法》(2021) 和 MLPS (多层次保护系统) 要求，本地部署 70B 模型适合处理敏感业务数据。Qwen3 72B 作为国产模型，在国内合规性更优。企业应在 CAC (网络安全审查委员会) 指导下评估使用场景，特别是在涉及个人数据或关键信息基础设施时。',
         },
         {
           q: '如何在有限的电力供应中优化 70B 模型的运行？',
@@ -1481,7 +1481,7 @@ schema: {
         '1. 选择合适的量化等级：从 Q4_K_M 开始。如果遇到交换使用，降至 Q3_K_S。如果有余量且性能关键，升至 Q5_K_M 或 Q8_0。',
         '2. 监控内存使用：每次运行后执行 `ollama ps` 检查 GPU 层数。目标是至少 50% 层在 GPU 上，以获得可接受的交互速度。',
         '3. 考虑长期运行成本：Apple Silicon 总成本虽高但能效优异，适合频繁使用。NVIDIA RTX 4090 初期投资较低但电费持续累积。',
-        '4. 中国用户特别建议：优先评估 Qwen2.5 72B，其对中文的优化优于 Llama，符合国内合规要求，模型下载更快 (国内源可用)。',
+        '4. 中国用户特别建议：优先评估 Qwen3 72B，其对中文的优化优于 Llama，符合国内合规要求，模型下载更快 (国内源可用)。',
         '5. 生产部署检查：在 Ollama 中设置显式层卸载 (`-ngl` 标志)，建立监控告警 (内存、CPU 使用率)，准备故障转移方案。',
       ],
     },
@@ -1493,10 +1493,10 @@ schema: {
       numberedItems: [
         '《数据安全法》(2021)：强制所有包含用户或业务敏感信息的 AI 推理在本地执行或国内服务器上进行。本地 70B 部署完全符合此要求，因处理不离开企业网络。',
         'MLPS (多层次保护系统)：等级 3+ 涉密业务必须使用本地模型。70B 模型的智能程度使其成为替代云 API 的可行方案，避免数据跨境风险。',
-        'CAC (网络安全审查委员会) 指导：处理关键信息基础设施数据时，推荐使用国产模型如 Qwen2.5 (阿里巴巴) 或 Baichuan (百川)。部署前应咨询法务评估场景合规性。',
+        'CAC (网络安全审查委员会) 指导：处理关键信息基础设施数据时，推荐使用国产模型如 Qwen3 (阿里巴巴) 或 Baichuan (百川)。部署前应咨询法务评估场景合规性。',
       ],
       items: [
-        '中文优化：Qwen2.5 72B 在中文和英文上均表现优异 (MMLU 84%)，相比 Llama 3.3 提供更好的中文语义理解。',
+        '中文优化：Qwen3 72B 在中文和英文上均表现优异 (MMLU 84%)，相比 Llama 3.3 提供更好的中文语义理解。',
         '国内模型生态：Qwen、Baichuan、Deepseek 等国产 70B 级模型已支持 GGUF 量化，可通过国内 huggingface 镜像 (如 modelscope.cn) 高速下载。',
         '跨境数据规制：如数据涉及个人隐私或金融，本地部署是必须的，无例外。',
       ],
@@ -1508,7 +1508,7 @@ schema: {
         'Ollama 模型库 -- ollama.com/library/llama3.3',
         'Apple M5 Max 推理基准 -- github.com/ggerganov/llama.cpp/discussions (社区基准线程)',
         'Meta Llama 3.3 模型卡 -- huggingface.co/meta-llama/Llama-3.3-70B-Instruct',
-        'Qwen2.5 官方文档 -- github.com/QwenLM/Qwen2.5',
+        'Qwen3 官方文档 -- github.com/QwenLM/Qwen3',
         '中国数据安全法 -- cac.gov.cn (网络安全审查公告)',
       ],
     },
@@ -1554,7 +1554,7 @@ schema: {
         name: '70B 本地质量与 GPT-5.5 相比如何？',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '在 MMLU 和 HumanEval 基准上，Llama 3.3 70B 和 Qwen2.5 72B 与 GPT-4 (2023) 相当或略超。对于通用指令跟随、摘要和代码生成，70B 本地模型竞争力相当。',
+          text: '在 MMLU 和 HumanEval 基准上，Llama 3.3 70B 和 Qwen3 72B 与 GPT-4 (2023) 相当或略超。对于通用指令跟随、摘要和代码生成，70B 本地模型竞争力相当。',
         },
       },
       {
@@ -1578,7 +1578,7 @@ schema: {
         name: '在中国部署 70B 本地模型有特殊考虑吗？',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '是。根据《数据安全法》和 MLPS 要求，本地部署适合处理敏感业务数据。Qwen2.5 72B 作为国产模型，在国内合规性更优。企业应在 CAC 指导下评估使用场景。',
+          text: '是。根据《数据安全法》和 MLPS 要求，本地部署适合处理敏感业务数据。Qwen3 72B 作为国产模型，在国内合规性更优。企业应在 CAC 指导下评估使用场景。',
         },
       },
     ],

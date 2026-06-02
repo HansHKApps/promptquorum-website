@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Continue — Best Overall (Free, Open-Source)',
-            content: 'Continue is the leading open-source AI coding assistant for local LLMs. It connects to Ollama, LM Studio, llama.cpp, and any OpenAI-compatible API. Features: inline chat (Cmd+L), autocomplete (Tab), model context protocol (MCP) tools, codebase indexing, and custom slash commands. VS Code extension has 2M+ installs. JetBrains plugin works in IntelliJ, PyCharm, GoLand, WebStorm, and Rider. Best local models: Qwen2.5-Coder 14B (coding), Llama 3.3 8B (chat). Setup: install extension, set provider to Ollama, choose model — done in 2 minutes.',
+            content: 'Continue is the leading open-source AI coding assistant for local LLMs. It connects to Ollama, LM Studio, llama.cpp, and any OpenAI-compatible API. Features: inline chat (Cmd+L), autocomplete (Tab), model context protocol (MCP) tools, codebase indexing, and custom slash commands. VS Code extension has 2M+ installs. JetBrains plugin works in IntelliJ, PyCharm, GoLand, WebStorm, and Rider. Best local models: Qwen3-Coder 14B (coding), Llama 3.3 8B (chat). Setup: install extension, set provider to Ollama, choose model — done in 2 minutes.',
             affiliateLinks: [
               { label: 'Continue on VS Code Marketplace (free)', url: 'https://continue.dev' },
             ],
@@ -61,7 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'Cline — Best for Agentic Coding Tasks',
-            content: 'Cline (formerly Claude Dev) is the most powerful agentic coding plugin for local LLMs. It reads and writes files, runs terminal commands, browses the web (via browser tool), and uses MCP servers. With Ollama + Qwen2.5-Coder 32B, Cline can implement entire features from a prompt. Limitations: 32B models are required for reliable multi-step agentic tasks; 14B models work for simple tasks. Estimated price: free for local model use. VS Code only (no JetBrains). Compatible backends: Ollama, LM Studio, LiteLLM proxy.',
+            content: 'Cline (formerly Claude Dev) is the most powerful agentic coding plugin for local LLMs. It reads and writes files, runs terminal commands, browses the web (via browser tool), and uses MCP servers. With Ollama + Qwen3-Coder 32B, Cline can implement entire features from a prompt. Limitations: 32B models are required for reliable multi-step agentic tasks; 14B models work for simple tasks. Estimated price: free for local model use. VS Code only (no JetBrains). Compatible backends: Ollama, LM Studio, LiteLLM proxy.',
             affiliateLinks: [
               { label: 'Cline on VS Code Marketplace (free)', url: 'https://github.com/cline/cline' },
             ],
@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 4,
             title: 'Aider — Best Terminal-Native AI Coding',
-            content: 'Aider is a terminal-based AI pair programmer that integrates with git. It understands your full repository structure, makes multi-file edits, and commits changes automatically. Works with Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio, or any OpenAI-compatible API. Best local models: Qwen2.5-Coder 32B (architect mode) + Qwen2.5-Coder 7B (editor mode). Aider uses a two-model approach: a large model plans changes, a small model implements them. Cost: free and open-source.',
+            content: 'Aider is a terminal-based AI pair programmer that integrates with git. It understands your full repository structure, makes multi-file edits, and commits changes automatically. Works with Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio, or any OpenAI-compatible API. Best local models: Qwen3-Coder 32B (architect mode) + Qwen3-Coder 7B (editor mode). Aider uses a two-model approach: a large model plans changes, a small model implements them. Cost: free and open-source.',
             affiliateLinks: [
               { label: 'Aider on GitHub (open-source)', url: 'https://aider.chat' },
             ],
@@ -110,11 +110,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tableData: {
           headers: ['Plugin', 'Best Coding Model (Local)', 'Best Chat Model (Local)', 'Min VRAM'],
           rows: [
-            ['Continue', 'Qwen2.5-Coder 14B Q8', 'Llama 3.3 8B Q4', '16 GB'],
-            ['Cline', 'Qwen2.5-Coder 32B Q4', 'Qwen2.5 32B Q4', '24 GB'],
+            ['Continue', 'Qwen3-Coder 14B Q8', 'Llama 3.3 8B Q4', '16 GB'],
+            ['Cline', 'Qwen3-Coder 32B Q4', 'Qwen3 32B Q4', '24 GB'],
             ['Tabby', 'StarCoder2-7B (built-in)', 'N/A (code only)', '8 GB'],
-            ['Aider', 'Qwen2.5-Coder 14B (editor)', 'Qwen2.5-Coder 32B (architect)', '16–24 GB'],
-            ['Cursor', 'DeepSeek-Coder-V2 (via Ollama)', 'Qwen2.5 14B', '16 GB'],
+            ['Aider', 'Qwen3-Coder 14B (editor)', 'Qwen3-Coder 32B (architect)', '16–24 GB'],
+            ['Cursor', 'DeepSeek-Coder-V2 (via Ollama)', 'Qwen3 14B', '16 GB'],
           ],
         },
       },
@@ -122,11 +122,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Can Continue replace GitHub Copilot entirely for local use?',
-            a: 'For most use cases, yes. Continue with Qwen2.5-Coder 14B Q8 provides comparable autocomplete quality to GitHub Copilot for Python, TypeScript, and Go. Copilot still has an edge in very new APIs and obscure library usage where its training data advantage shows. For privacy-critical codebases, Continue + local Ollama is the better choice.',
+            a: 'For most use cases, yes. Continue with Qwen3-Coder 14B Q8 provides comparable autocomplete quality to GitHub Copilot for Python, TypeScript, and Go. Copilot still has an edge in very new APIs and obscure library usage where its training data advantage shows. For privacy-critical codebases, Continue + local Ollama is the better choice.',
           },
           {
             q: 'Which plugin works best for multi-file refactoring?',
-            a: 'Cline or Aider. Both can read multiple files, understand dependencies, and make coordinated edits across a codebase. Cline works inside VS Code (better for visual feedback); Aider works in the terminal (better for CI/CD integration and git-aware commits). For 30B+ models with 24 GB VRAM, Cline with Qwen2.5-Coder 32B handles complex refactoring reliably.',
+            a: 'Cline or Aider. Both can read multiple files, understand dependencies, and make coordinated edits across a codebase. Cline works inside VS Code (better for visual feedback); Aider works in the terminal (better for CI/CD integration and git-aware commits). For 30B+ models with 24 GB VRAM, Cline with Qwen3-Coder 32B handles complex refactoring reliably.',
           },
           {
             q: 'Does Tabby work without a GPU?',
@@ -148,7 +148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Can Continue replace GitHub Copilot entirely for local use?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'For most use cases, yes. Continue with Qwen2.5-Coder 14B Q8 provides comparable autocomplete quality for Python, TypeScript, and Go. For privacy-critical codebases, Continue + local Ollama is the better choice.',
+            text: 'For most use cases, yes. Continue with Qwen3-Coder 14B Q8 provides comparable autocomplete quality for Python, TypeScript, and Go. For privacy-critical codebases, Continue + local Ollama is the better choice.',
           },
         },
         {
@@ -235,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Continue — Bestes Gesamtpaket (kostenlos, Open-Source)',
-            content: 'Continue ist der führende Open-Source-KI-Coding-Assistent für lokale LLMs. Er verbindet sich mit Ollama, LM Studio, llama.cpp und jeder OpenAI-kompatiblen API. Features: Inline-Chat (Cmd+L), Autocomplete (Tab), MCP-Tools, Codebase-Indexierung. VS-Code-Extension hat 2M+ Installs. JetBrains-Plugin läuft in IntelliJ, PyCharm, GoLand, WebStorm und Rider. Empfohlene lokale Modelle: Qwen2.5-Coder 14B (Coding), Llama 3.1 8B (Chat).',
+            content: 'Continue ist der führende Open-Source-KI-Coding-Assistent für lokale LLMs. Er verbindet sich mit Ollama, LM Studio, llama.cpp und jeder OpenAI-kompatiblen API. Features: Inline-Chat (Cmd+L), Autocomplete (Tab), MCP-Tools, Codebase-Indexierung. VS-Code-Extension hat 2M+ Installs. JetBrains-Plugin läuft in IntelliJ, PyCharm, GoLand, WebStorm und Rider. Empfohlene lokale Modelle: Qwen3-Coder 14B (Coding), Llama 3.3 8B (Chat).',
             affiliateLinks: [
               { label: 'Continue im VS Code Marketplace (kostenlos)', url: 'https://continue.dev' },
             ],
@@ -243,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'Cline — Bestes agentisches IDE-Plugin',
-            content: 'Cline ist das leistungsfähigste agentische Coding-Plugin für lokale LLMs. Es liest und schreibt Dateien, führt Terminal-Befehle aus, und nutzt MCP-Server. Mit Ollama + Qwen2.5-Coder 32B kann Cline komplette Features aus einem Prompt implementieren. Einschränkungen: 32B-Modelle für zuverlässige Multi-Schritt-Agenten nötig; nur VS Code (kein JetBrains).',
+            content: 'Cline ist das leistungsfähigste agentische Coding-Plugin für lokale LLMs. Es liest und schreibt Dateien, führt Terminal-Befehle aus, und nutzt MCP-Server. Mit Ollama + Qwen3-Coder 32B kann Cline komplette Features aus einem Prompt implementieren. Einschränkungen: 32B-Modelle für zuverlässige Multi-Schritt-Agenten nötig; nur VS Code (kein JetBrains).',
             affiliateLinks: [
               { label: 'Cline im VS Code Marketplace (kostenlos)', url: 'https://github.com/cline/cline' },
             ],
@@ -278,7 +278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Kann Continue GitHub Copilot vollständig für lokale Nutzung ersetzen?',
-            a: 'Für die meisten Anwendungsfälle ja. Continue mit Qwen2.5-Coder 14B Q8 bietet vergleichbare Autocomplete-Qualität zu GitHub Copilot für Python, TypeScript und Go. Copilot hat noch einen Vorteil bei sehr neuen APIs. Für datenschutzkritische Codebases ist Continue + lokales Ollama die bessere Wahl.',
+            a: 'Für die meisten Anwendungsfälle ja. Continue mit Qwen3-Coder 14B Q8 bietet vergleichbare Autocomplete-Qualität zu GitHub Copilot für Python, TypeScript und Go. Copilot hat noch einen Vorteil bei sehr neuen APIs. Für datenschutzkritische Codebases ist Continue + lokales Ollama die bessere Wahl.',
           },
           {
             q: 'Welches Plugin funktioniert am besten für Multi-Datei-Refactoring?',
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'Kann Continue GitHub Copilot vollständig für lokale Nutzung ersetzen?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Für die meisten Anwendungsfälle ja. Continue + Qwen2.5-Coder 14B Q8 bietet vergleichbare Qualität zu Copilot. Für datenschutzkritische Codebases ist Continue + lokales Ollama die bessere Wahl.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Für die meisten Anwendungsfälle ja. Continue + Qwen3-Coder 14B Q8 bietet vergleichbare Qualität zu Copilot. Für datenschutzkritische Codebases ist Continue + lokales Ollama die bessere Wahl.' },
         },
       ],
     },
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Continue — Meilleur global (gratuit, open-source)',
-            content: 'Continue est le principal assistant de codage IA open-source pour les LLMs locaux. Il se connecte à Ollama, LM Studio, llama.cpp et toute API OpenAI-compatible. Fonctionnalités : chat inline (Cmd+L), autocomplétion (Tab), outils MCP, indexation de codebase. L\'extension VS Code a 2M+ installations. Le plugin JetBrains fonctionne dans IntelliJ, PyCharm, GoLand, WebStorm et Rider. Meilleurs modèles locaux : Qwen2.5-Coder 14B (codage), Llama 3.1 8B (chat).',
+            content: 'Continue est le principal assistant de codage IA open-source pour les LLMs locaux. Il se connecte à Ollama, LM Studio, llama.cpp et toute API OpenAI-compatible. Fonctionnalités : chat inline (Cmd+L), autocomplétion (Tab), outils MCP, indexation de codebase. L\'extension VS Code a 2M+ installations. Le plugin JetBrains fonctionne dans IntelliJ, PyCharm, GoLand, WebStorm et Rider. Meilleurs modèles locaux : Qwen3-Coder 14B (codage), Llama 3.3 8B (chat).',
             affiliateLinks: [
               { label: 'Continue sur VS Code Marketplace (gratuit)', url: 'https://continue.dev' },
             ],
@@ -376,7 +376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'Cline — Meilleur pour le codage agentique',
-            content: 'Cline est le plugin de codage agentique le plus puissant pour les LLMs locaux. Il lit et écrit des fichiers, exécute des commandes terminal et utilise des serveurs MCP. Avec Ollama + Qwen2.5-Coder 32B, Cline peut implémenter des fonctionnalités complètes à partir d\'une invite. Limites : modèles 32B requis pour les tâches agentiques multi-étapes fiables. VS Code uniquement.',
+            content: 'Cline est le plugin de codage agentique le plus puissant pour les LLMs locaux. Il lit et écrit des fichiers, exécute des commandes terminal et utilise des serveurs MCP. Avec Ollama + Qwen3-Coder 32B, Cline peut implémenter des fonctionnalités complètes à partir d\'une invite. Limites : modèles 32B requis pour les tâches agentiques multi-étapes fiables. VS Code uniquement.',
             affiliateLinks: [
               { label: 'Cline sur VS Code Marketplace (gratuit)', url: 'https://github.com/cline/cline' },
             ],
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue peut-il remplacer entièrement GitHub Copilot pour un usage local ?',
-            a: 'Pour la plupart des cas d\'usage, oui. Continue avec Qwen2.5-Coder 14B Q8 offre une qualité d\'autocomplétion comparable à GitHub Copilot pour Python, TypeScript et Go. Pour les codebases où la confidentialité est critique, Continue + Ollama local est le meilleur choix.',
+            a: 'Pour la plupart des cas d\'usage, oui. Continue avec Qwen3-Coder 14B Q8 offre une qualité d\'autocomplétion comparable à GitHub Copilot pour Python, TypeScript et Go. Pour les codebases où la confidentialité est critique, Continue + Ollama local est le meilleur choix.',
           },
           {
             q: 'Quel plugin est le meilleur pour le refactoring multi-fichiers ?',
@@ -431,7 +431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'Continue peut-il remplacer entièrement GitHub Copilot pour un usage local ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Pour la plupart des cas, oui. Continue + Qwen2.5-Coder 14B Q8 est comparable à Copilot. Pour les codebases confidentielles, Continue + Ollama local est le meilleur choix.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Pour la plupart des cas, oui. Continue + Qwen3-Coder 14B Q8 est comparable à Copilot. Pour les codebases confidentielles, Continue + Ollama local est le meilleur choix.' },
         },
       ],
     },
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Continue — 総合最良（無料・オープンソース）',
-            content: 'ContinueはローカルLLM向けの主要オープンソースAIコーディングアシスタントです。Ollama、LM Studio、llama.cpp、すべてのOpenAI互換APIに接続。機能：インラインチャット（Cmd+L）、オートコンプリート（Tab）、MCPツール、コードベースインデックス化。VS Code拡張は200万以上のインストール実績。JetBrainsプラグインはIntelliJ、PyCharm、GoLand、WebStorm、Riderで動作。推奨ローカルモデル：Qwen2.5-Coder 14B（コーディング）、Llama 3.1 8B（チャット）。',
+            content: 'ContinueはローカルLLM向けの主要オープンソースAIコーディングアシスタントです。Ollama、LM Studio、llama.cpp、すべてのOpenAI互換APIに接続。機能：インラインチャット（Cmd+L）、オートコンプリート（Tab）、MCPツール、コードベースインデックス化。VS Code拡張は200万以上のインストール実績。JetBrainsプラグインはIntelliJ、PyCharm、GoLand、WebStorm、Riderで動作。推奨ローカルモデル：Qwen3-Coder 14B（コーディング）、Llama 3.3 8B（チャット）。',
             affiliateLinks: [
               { label: 'Continue をVS Code Marketplaceでダウンロード（無料）', url: 'https://continue.dev' },
             ],
@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'Cline — エージェント的コーディングに最良',
-            content: 'ClineはローカルLLM向け最高機能のエージェント的コーディングプラグインです。ファイルの読み書き、ターミナルコマンド実行、MCPサーバー使用が可能。Ollama + Qwen2.5-Coder 32Bとの組み合わせで、プロンプトから完全な機能実装が可能。制限：信頼性の高いマルチステップエージェントタスクには32Bモデルが必要。VS Codeのみ（JetBrainsなし）。',
+            content: 'ClineはローカルLLM向け最高機能のエージェント的コーディングプラグインです。ファイルの読み書き、ターミナルコマンド実行、MCPサーバー使用が可能。Ollama + Qwen3-Coder 32Bとの組み合わせで、プロンプトから完全な機能実装が可能。制限：信頼性の高いマルチステップエージェントタスクには32Bモデルが必要。VS Codeのみ（JetBrainsなし）。',
             affiliateLinks: [
               { label: 'Cline をVS Code Marketplaceでダウンロード（無料）', url: 'https://github.com/cline/cline' },
             ],
@@ -544,7 +544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'ContinueはローカルでGitHub Copilotの完全な代替になれますか？',
-            a: 'ほとんどのユースケースでは、はい。Qwen2.5-Coder 14B Q8を使用したContinueは、Python、TypeScript、GoでGitHub Copilotに匹敵するオートコンプリート品質を提供します。プライバシーが重要なコードベースでは、Continue + ローカルOllamaがより良い選択です。',
+            a: 'ほとんどのユースケースでは、はい。Qwen3-Coder 14B Q8を使用したContinueは、Python、TypeScript、GoでGitHub Copilotに匹敵するオートコンプリート品質を提供します。プライバシーが重要なコードベースでは、Continue + ローカルOllamaがより良い選択です。',
           },
           {
             q: 'マルチファイルリファクタリングに最適なプラグインはどれですか？',
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'ContinueはローカルでGitHub Copilotの完全な代替になれますか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'ほとんどのユースケースでは、はい。Continue + Qwen2.5-Coder 14B Q8はCopilotと同等の品質を提供。プライバシー重視のコードベースでは、Continue + ローカルOllamaがより良い選択です。' },
+          acceptedAnswer: { '@type': 'Answer', text: 'ほとんどのユースケースでは、はい。Continue + Qwen3-Coder 14B Q8はCopilotと同等の品質を提供。プライバシー重視のコードベースでは、Continue + ローカルOllamaがより良い選択です。' },
         },
       ],
     },
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Continue — 综合最佳（免费开源）',
-            content: 'Continue是本地LLM领先的开源AI编程助手。连接Ollama、LM Studio、llama.cpp和所有OpenAI兼容API。功能：内联对话（Cmd+L）、代码补全（Tab）、MCP工具、代码库索引、自定义斜杠命令。VS Code扩展已有200万以上安装量。JetBrains插件支持IntelliJ、PyCharm、GoLand、WebStorm和Rider。推荐本地模型：Qwen2.5-Coder 14B（编程）、Llama 3.1 8B（对话）。安装→设置Ollama提供商→选择模型，2分钟完成。',
+            content: 'Continue是本地LLM领先的开源AI编程助手。连接Ollama、LM Studio、llama.cpp和所有OpenAI兼容API。功能：内联对话（Cmd+L）、代码补全（Tab）、MCP工具、代码库索引、自定义斜杠命令。VS Code扩展已有200万以上安装量。JetBrains插件支持IntelliJ、PyCharm、GoLand、WebStorm和Rider。推荐本地模型：Qwen3-Coder 14B（编程）、Llama 3.3 8B（对话）。安装→设置Ollama提供商→选择模型，2分钟完成。',
             affiliateLinks: [
               { label: '在VS Code Marketplace下载Continue（免费）', url: 'https://continue.dev' },
             ],
@@ -642,7 +642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'Cline — 智能体编程任务最佳',
-            content: 'Cline是本地LLM中功能最强的智能体编程插件。可以读写文件、运行终端命令、使用MCP服务器。配合Ollama + Qwen2.5-Coder 32B，Cline能从一个提示词实现完整功能。限制：可靠的多步骤智能体任务需要32B模型；仅支持VS Code（不支持JetBrains）。',
+            content: 'Cline是本地LLM中功能最强的智能体编程插件。可以读写文件、运行终端命令、使用MCP服务器。配合Ollama + Qwen3-Coder 32B，Cline能从一个提示词实现完整功能。限制：可靠的多步骤智能体任务需要32B模型；仅支持VS Code（不支持JetBrains）。',
             affiliateLinks: [
               { label: '在VS Code Marketplace下载Cline（免费）', url: 'https://github.com/cline/cline' },
             ],
@@ -677,7 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue能完全替代GitHub Copilot用于本地使用吗？',
-            a: '大多数场景下，可以。使用Qwen2.5-Coder 14B Q8的Continue在Python、TypeScript和Go方面提供与GitHub Copilot相当的代码补全质量。对于注重隐私的代码库，Continue + 本地Ollama是更好的选择。',
+            a: '大多数场景下，可以。使用Qwen3-Coder 14B Q8的Continue在Python、TypeScript和Go方面提供与GitHub Copilot相当的代码补全质量。对于注重隐私的代码库，Continue + 本地Ollama是更好的选择。',
           },
           {
             q: '哪个插件最适合多文件重构？',
@@ -689,7 +689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Tabby和Continue在代码补全上有什么区别？',
-            a: 'Tabby使用专门为代码补全训练的小型FIM模型（StarCoder2等），延迟约100–200ms，体验更流畅。Continue使用你选择的Ollama模型（如Qwen2.5-Coder 7B），灵活性更高但延迟稍大（300–800ms）。如果补全速度是首要考虑，选Tabby；如果需要聊天+补全的综合体验，选Continue。',
+            a: 'Tabby使用专门为代码补全训练的小型FIM模型（StarCoder2等），延迟约100–200ms，体验更流畅。Continue使用你选择的Ollama模型（如Qwen3-Coder 7B），灵活性更高但延迟稍大（300–800ms）。如果补全速度是首要考虑，选Tabby；如果需要聊天+补全的综合体验，选Continue。',
           },
         ],
       },
@@ -701,7 +701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'Continue能完全替代GitHub Copilot用于本地使用吗？',
-          acceptedAnswer: { '@type': 'Answer', text: '大多数场景下可以。Continue + Qwen2.5-Coder 14B Q8的代码补全质量与Copilot相当。对于注重隐私的代码库，Continue + 本地Ollama是更好的选择。' },
+          acceptedAnswer: { '@type': 'Answer', text: '大多数场景下可以。Continue + Qwen3-Coder 14B Q8的代码补全质量与Copilot相当。对于注重隐私的代码库，Continue + 本地Ollama是更好的选择。' },
         },
         {
           '@type': 'Question',
@@ -777,7 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Continue — El mejor en general (gratuito, open-source)',
-            content: 'Continue es el asistente de codificación de IA open-source líder para LLMs locales. Se conecta a Ollama, LM Studio, llama.cpp y cualquier API compatible con OpenAI. Funciones: chat en línea (Cmd+L), autocompletado (Tab), herramientas MCP (model context protocol), indexación de codebase y comandos slash personalizados. La extensión de VS Code tiene más de 2M de instalaciones. El plugin de JetBrains funciona en IntelliJ, PyCharm, GoLand, WebStorm y Rider. Mejores modelos locales: Qwen2.5-Coder 14B (codificación), Llama 3.1 8B (chat). Configuración: instala la extensión, define el proveedor como Ollama, elige el modelo — listo en 2 minutos.',
+            content: 'Continue es el asistente de codificación de IA open-source líder para LLMs locales. Se conecta a Ollama, LM Studio, llama.cpp y cualquier API compatible con OpenAI. Funciones: chat en línea (Cmd+L), autocompletado (Tab), herramientas MCP (model context protocol), indexación de codebase y comandos slash personalizados. La extensión de VS Code tiene más de 2M de instalaciones. El plugin de JetBrains funciona en IntelliJ, PyCharm, GoLand, WebStorm y Rider. Mejores modelos locales: Qwen3-Coder 14B (codificación), Llama 3.3 8B (chat). Configuración: instala la extensión, define el proveedor como Ollama, elige el modelo — listo en 2 minutos.',
             affiliateLinks: [
               { label: 'Continue en VS Code Marketplace (gratuito)', url: 'https://continue.dev' },
             ],
@@ -785,7 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'Cline — El mejor para tareas de codificación agéntica',
-            content: 'Cline (anteriormente Claude Dev) es el plugin de codificación agéntica más potente para LLMs locales. Lee y escribe archivos, ejecuta comandos de terminal, navega la web (mediante herramienta de navegador) y usa servidores MCP. Con Ollama + Qwen2.5-Coder 32B, Cline puede implementar funcionalidades completas a partir de un prompt. Limitaciones: se requieren modelos de 32B para tareas agénticas de múltiples pasos fiables; los modelos de 14B funcionan para tareas simples. Solo para VS Code (sin JetBrains). Backends compatibles: Ollama, LM Studio, proxy LiteLLM.',
+            content: 'Cline (anteriormente Claude Dev) es el plugin de codificación agéntica más potente para LLMs locales. Lee y escribe archivos, ejecuta comandos de terminal, navega la web (mediante herramienta de navegador) y usa servidores MCP. Con Ollama + Qwen3-Coder 32B, Cline puede implementar funcionalidades completas a partir de un prompt. Limitaciones: se requieren modelos de 32B para tareas agénticas de múltiples pasos fiables; los modelos de 14B funcionan para tareas simples. Solo para VS Code (sin JetBrains). Backends compatibles: Ollama, LM Studio, proxy LiteLLM.',
             affiliateLinks: [
               { label: 'Cline en VS Code Marketplace (gratuito)', url: 'https://github.com/cline/cline' },
             ],
@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 4,
             title: 'Aider — La mejor codificación de IA nativa de terminal',
-            content: 'Aider es un programador en par de IA basado en terminal que se integra con git. Entiende la estructura completa de tu repositorio, realiza ediciones multi-archivo y hace commits de los cambios automáticamente. Funciona con Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio o cualquier API compatible con OpenAI. Mejores modelos locales: Qwen2.5-Coder 32B (modo arquitecto) + Qwen2.5-Coder 7B (modo editor). Aider usa un enfoque de dos modelos: un modelo grande planifica los cambios, uno pequeño los implementa. Gratuito y open-source.',
+            content: 'Aider es un programador en par de IA basado en terminal que se integra con git. Entiende la estructura completa de tu repositorio, realiza ediciones multi-archivo y hace commits de los cambios automáticamente. Funciona con Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio o cualquier API compatible con OpenAI. Mejores modelos locales: Qwen3-Coder 32B (modo arquitecto) + Qwen3-Coder 7B (modo editor). Aider usa un enfoque de dos modelos: un modelo grande planifica los cambios, uno pequeño los implementa. Gratuito y open-source.',
             affiliateLinks: [
               { label: 'Aider en GitHub (open-source)', url: 'https://aider.chat' },
             ],
@@ -809,7 +809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Cursor — La mejor opción comercial con soporte de modelos locales',
-            content: 'Cursor es un fork de VS Code con funciones de IA integradas. A partir de 2026, Cursor soporta modelos locales a través de Ollama y LM Studio en su configuración "Custom API". Sin embargo, las funciones más potentes de Cursor (modo Agent con búsqueda web, conciencia completa del codebase) requieren modelos en la nube (Claude, GPT-4o). La integración de modelos locales es funcional para chat y completados simples, pero queda por detrás de Continue y Cline para flujos de trabajo enfocados en privacidad. Precio: $20/mes para Pro (incluye créditos cloud). Uso de modelos locales: nivel gratuito.',
+            content: 'Cursor es un fork de VS Code con funciones de IA integradas. A partir de 2026, Cursor soporta modelos locales a través de Ollama y LM Studio en su configuración "Custom API". Sin embargo, las funciones más potentes de Cursor (modo Agent con búsqueda web, conciencia completa del codebase) requieren modelos en la nube (Claude, GPT-5.5). La integración de modelos locales es funcional para chat y completados simples, pero queda por detrás de Continue y Cline para flujos de trabajo enfocados en privacidad. Precio: $20/mes para Pro (incluye créditos cloud). Uso de modelos locales: nivel gratuito.',
             affiliateLinks: [
               { label: 'Suscripción Cursor Pro', url: 'https://cursor.com' },
             ],
@@ -834,11 +834,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tableData: {
           headers: ['Plugin', 'Mejor modelo de codificación (local)', 'Mejor modelo de chat (local)', 'VRAM mínima'],
           rows: [
-            ['Continue', 'Qwen2.5-Coder 14B Q8', 'Llama 3.1 8B Q4', '16 GB'],
-            ['Cline', 'Qwen2.5-Coder 32B Q4', 'Qwen2.5 32B Q4', '24 GB'],
+            ['Continue', 'Qwen3-Coder 14B Q8', 'Llama 3.3 8B Q4', '16 GB'],
+            ['Cline', 'Qwen3-Coder 32B Q4', 'Qwen3 32B Q4', '24 GB'],
             ['Tabby', 'StarCoder2-7B (integrado)', 'N/A (solo código)', '8 GB'],
-            ['Aider', 'Qwen2.5-Coder 14B (editor)', 'Qwen2.5-Coder 32B (arquitecto)', '16–24 GB'],
-            ['Cursor', 'DeepSeek-Coder-V2 (via Ollama)', 'Qwen2.5 14B', '16 GB'],
+            ['Aider', 'Qwen3-Coder 14B (editor)', 'Qwen3-Coder 32B (arquitecto)', '16–24 GB'],
+            ['Cursor', 'DeepSeek-Coder-V2 (via Ollama)', 'Qwen3 14B', '16 GB'],
           ],
         },
       },
@@ -846,11 +846,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Puede Continue reemplazar completamente a GitHub Copilot para uso local?',
-            a: 'Para la mayoría de los casos de uso, sí. Continue con Qwen2.5-Coder 14B Q8 ofrece una calidad de autocompletado comparable a GitHub Copilot para Python, TypeScript y Go. Copilot aún tiene ventaja con APIs muy nuevas y uso de librerías oscuras donde su ventaja de datos de entrenamiento se nota. Para codebases donde la privacidad es crítica, Continue + Ollama local es la mejor opción.',
+            a: 'Para la mayoría de los casos de uso, sí. Continue con Qwen3-Coder 14B Q8 ofrece una calidad de autocompletado comparable a GitHub Copilot para Python, TypeScript y Go. Copilot aún tiene ventaja con APIs muy nuevas y uso de librerías oscuras donde su ventaja de datos de entrenamiento se nota. Para codebases donde la privacidad es crítica, Continue + Ollama local es la mejor opción.',
           },
           {
             q: '¿Qué plugin funciona mejor para refactorización multi-archivo?',
-            a: 'Cline o Aider. Ambos pueden leer múltiples archivos, entender dependencias y realizar ediciones coordinadas en un codebase. Cline funciona dentro de VS Code (mejor para retroalimentación visual); Aider funciona en la terminal (mejor para integración CI/CD y commits conscientes de git). Para modelos de 30B+ con 24 GB de VRAM, Cline con Qwen2.5-Coder 32B maneja refactorizaciones complejas de forma fiable.',
+            a: 'Cline o Aider. Ambos pueden leer múltiples archivos, entender dependencias y realizar ediciones coordinadas en un codebase. Cline funciona dentro de VS Code (mejor para retroalimentación visual); Aider funciona en la terminal (mejor para integración CI/CD y commits conscientes de git). Para modelos de 30B+ con 24 GB de VRAM, Cline con Qwen3-Coder 32B maneja refactorizaciones complejas de forma fiable.',
           },
           {
             q: '¿Tabby funciona sin GPU?',
@@ -872,7 +872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Puede Continue reemplazar completamente a GitHub Copilot para uso local?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Para la mayoría de los casos de uso, sí. Continue con Qwen2.5-Coder 14B Q8 ofrece una calidad de autocompletado comparable para Python, TypeScript y Go. Para codebases donde la privacidad es crítica, Continue + Ollama local es la mejor opción.',
+            text: 'Para la mayoría de los casos de uso, sí. Continue con Qwen3-Coder 14B Q8 ofrece una calidad de autocompletado comparable para Python, TypeScript y Go. Para codebases donde la privacidad es crítica, Continue + Ollama local es la mejor opción.',
           },
         },
         {

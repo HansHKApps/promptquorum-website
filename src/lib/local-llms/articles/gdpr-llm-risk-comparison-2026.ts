@@ -16,12 +16,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'CISOs, procurement teams, and compliance officers choosing between proprietary and open-weight LLMs',
     primaryTerm: 'GDPR risk comparison LLM models',
     leadAnswerBlock: '**DeepSeek API presents the highest GDPR risk of any major LLM due to Chinese data-access law (PIPL); Qwen and Llama run locally carry equivalent low risk; Claude and GPT-5.5 APIs with EU residency carry medium risk and require Standard Contractual Clauses (SCCs).**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 2.5 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 4.6', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 4.6', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       en: {
         question: 'Which LLM is safest under GDPR?',
-        answer: 'Qwen 2.5 14B or Llama 4 Scout run locally on your own hardware—no data leaves your jurisdiction, no Article 44 transfer, no SCC or TIA needed. DeepSeek API is highest-risk because servers obey Chinese data law (PIPL). Claude and GPT-5.5 APIs require EU data residency + SCCs for medium-risk compliance.',
+        answer: 'Qwen 3 14B or Llama 4 Scout run locally on your own hardware—no data leaves your jurisdiction, no Article 44 transfer, no SCC or TIA needed. DeepSeek API is highest-risk because servers obey Chinese data law (PIPL). Claude and GPT-5.5 APIs require EU data residency + SCCs for medium-risk compliance.',
         bullets: [
           'Qwen local: Lowest risk. No transfer, Apache 2.0 weights, 12–24 GB VRAM, <30 min setup.',
           'DeepSeek API: Highest risk. PIPL jurisdiction, no EU adequacy, ToS allows state-mandated data sharing.',
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Welches LLM ist unter DSGVO am sichersten?',
-        answer: 'Qwen 2.5 14B oder Llama 4 Scout lokal auf eigener Hardware — keine Daten verlassen die Gerichtsbarkeit, kein Artikel-44-Transfer, keine SCC oder TIA erforderlich. DeepSeek API ist höchstes Risiko, da Server chinesisches Datenrecht (PIPL) befolgen. Claude und GPT-5.5 APIs erfordern EU-Datenspeicherung + SCCs für mittleres Konformitätsrisiko.',
+        answer: 'Qwen 3 14B oder Llama 4 Scout lokal auf eigener Hardware — keine Daten verlassen die Gerichtsbarkeit, kein Artikel-44-Transfer, keine SCC oder TIA erforderlich. DeepSeek API ist höchstes Risiko, da Server chinesisches Datenrecht (PIPL) befolgen. Claude und GPT-5.5 APIs erfordern EU-Datenspeicherung + SCCs für mittleres Konformitätsrisiko.',
         bullets: [
           'Qwen lokal: Geringestes Risiko. Kein Transfer, Apache-2.0-Gewichte, 12–24 GB VRAM, <30-Minuten-Setup.',
           'DeepSeek API: Höchstes Risiko. PIPL-Jurisdiktion, keine EU-Adäquanz, ToS ermöglicht staatlich angeforderte Datenteilung.',
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel LLM est le plus sûr selon le RGPD ?',
-        answer: 'Qwen 2.5 14B ou Llama 4 Scout exécutés localement sur votre propre matériel — aucune donnée ne quitte votre juridiction, aucun transfert Article 44, aucune SCC ou TIA requise. DeepSeek API présente le risque le plus élevé car les serveurs obéissent à la loi chinoise sur les données (PIPL). Les API Claude et GPT-5.5 nécessitent une résidence des données dans l\'UE + SCC pour un risque de conformité moyen.',
+        answer: 'Qwen 3 14B ou Llama 4 Scout exécutés localement sur votre propre matériel — aucune donnée ne quitte votre juridiction, aucun transfert Article 44, aucune SCC ou TIA requise. DeepSeek API présente le risque le plus élevé car les serveurs obéissent à la loi chinoise sur les données (PIPL). Les API Claude et GPT-5.5 nécessitent une résidence des données dans l\'UE + SCC pour un risque de conformité moyen.',
         bullets: [
           'Qwen local : Risque le plus faible. Aucun transfert, poids Apache 2.0, 12–24 Go VRAM, configuration < 30 min.',
           'DeepSeek API : Risque le plus élevé. Juridiction PIPL, pas d\'adéquation UE, ToS permet le partage de données mandaté par l\'État.',
@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: 'GDPRの下で最も安全なLLMは何ですか？',
-        answer: 'Qwen 2.5 14BまたはLlama 4 Scoutを自分のハードウェア上でローカル実行——データはあなたの管轄権を離れず、第44条転送なし、SCC or TIA不要。DeepSeek APIは中国データ法（PIPL）に従うサーバーのため最高リスク。Claude/GPT-5.5 APIはEUデータ拠点+SCCで中程度リスク対応が必要。',
+        answer: 'Qwen 3 14BまたはLlama 4 Scoutを自分のハードウェア上でローカル実行——データはあなたの管轄権を離れず、第44条転送なし、SCC or TIA不要。DeepSeek APIは中国データ法（PIPL）に従うサーバーのため最高リスク。Claude/GPT-5.5 APIはEUデータ拠点+SCCで中程度リスク対応が必要。',
         bullets: [
           'Qwen local：最低リスク。転送なし、Apache 2.0ウェイト、12–24 GB VRAM、<30分セットアップ。',
           'DeepSeek API：最高リスク。PIPL管轄権、EU妥当性なし、ToS国家命令によるデータ共有を許可。',
@@ -61,7 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '在GDPR下哪个LLM最安全？',
-        answer: 'Qwen 2.5 14B或Llama 4 Scout在您自己的硬件上本地运行——数据不离开您的司法管辖区、无第44条转移、无需SCC或TIA。DeepSeek API风险最高，因为服务器受中国数据法律（PIPL）约束。Claude和GPT-5.5 API需要EU数据驻留+SCC才能获得中等风险合规。',
+        answer: 'Qwen 3 14B或Llama 4 Scout在您自己的硬件上本地运行——数据不离开您的司法管辖区、无第44条转移、无需SCC或TIA。DeepSeek API风险最高，因为服务器受中国数据法律（PIPL）约束。Claude和GPT-5.5 API需要EU数据驻留+SCC才能获得中等风险合规。',
         bullets: [
           'Qwen本地：风险最低。无转移，Apache 2.0权重，12–24 GB VRAM，<30分钟设置。',
           'DeepSeek API：风险最高。PIPL管辖权、无EU充分性、ToS允许政府命令数据共享。',
@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'DeepSeek API is highest-risk: servers are subject to Chinese data-access law (PIPL), there is no EU adequacy decision for China, and the ToS explicitly allows data sharing with Chinese authorities',
-          'Qwen 2.5 14B and Llama 4 Scout run locally are lowest-risk: no Article 44 transfer, no SCC required, data stays on your hardware',
+          'Qwen 3 14B and Llama 4 Scout run locally are lowest-risk: no Article 44 transfer, no SCC required, data stays on your hardware',
           'Claude API and GPT-5.5 Instant are medium-risk: US jurisdiction requires Standard Contractual Clauses + Transfer Impact Assessment; EU-data-residency options (Claude EU) reduce risk',
           'Recommended stacks: startups (Claude + SCC), data-sensitive orgs (Qwen 24 GB local), enterprises (multi-GPU Qwen + air-gap)',
           'Risk decision matrix covers five vectors: data residency, training-data jurisdiction, ToS data retention, SCC requirement, and legal verdict',
@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               cells: ['Llama 4 Scout (local)', 'Your hardware (LAN)', 'Open-source, no commercial retention', 'You control retention via local logs only', 'No', '🟢 Lowest'],
             },
             {
-              cells: ['Qwen 2.5 14B (local)', 'Your hardware (LAN)', 'Open-source (Apache 2.0), no commercial retention', 'You control retention via local logs only', 'No', '🟢 Lowest'],
+              cells: ['Qwen 3 14B (local)', 'Your hardware (LAN)', 'Open-source (Apache 2.0), no commercial retention', 'You control retention via local logs only', 'No', '🟢 Lowest'],
             },
           ],
         },
@@ -172,8 +172,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Llama weights are open-source under a commercial-use-friendly license. Running Llama locally on your own hardware means: (1) zero Article 44 transfer; (2) you control all data retention; (3) no SCC or TIA required; (4) full Article 25 (privacy by design) compliance. Suitable for all data sensitivity levels. Llama 4 Scout at 8 GB or Llama 3.2 70B at 48 GB covers most enterprise use cases.',
           },
           {
-            title: 'Qwen 2.5 / 3 (local) — Lowest risk, no transfer',
-            text: 'Qwen weights are open-source under Apache 2.0. Like Llama, running Qwen locally means: (1) zero Article 44 transfer; (2) you control retention; (3) no legal basis required (no transfer = no transfer risk). Qwen 2.5 14B is the most widely deployed in Europe due to excellent multilingual performance and a smaller VRAM footprint (12–16 GB vs Llama 3.2 70B\'s 48 GB). Suitable for all sensitivity levels.',
+            title: 'Qwen 3 / 3 (local) — Lowest risk, no transfer',
+            text: 'Qwen weights are open-source under Apache 2.0. Like Llama, running Qwen locally means: (1) zero Article 44 transfer; (2) you control retention; (3) no legal basis required (no transfer = no transfer risk). Qwen 3 14B is the most widely deployed in Europe due to excellent multilingual performance and a smaller VRAM footprint (12–16 GB vs Llama 3.2 70B\'s 48 GB). Suitable for all sensitivity levels.',
           },
         ],
       },
@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'SME with employee/customer data (medium regulatory pressure)',
-            text: 'Use Qwen 2.5 14B or Llama 3.2 32B locally. Rationale: You handle personal data (employee roster, customer contact info, transaction history), so zero-transfer architecture is required. Deploy on a single on-prem GPU (RTX 4070 Ti, 12 GB VRAM for Qwen 2.5 at Q4 quantization). Cost is ~$500 one-time hardware + ~$100/year electricity. Setup time: <1 hour (Ollama is trivial). Compliance burden: zero (no SCC, no TIA, no DPA negotiation).',
+            text: 'Use Qwen 3 14B or Llama 3.2 32B locally. Rationale: You handle personal data (employee roster, customer contact info, transaction history), so zero-transfer architecture is required. Deploy on a single on-prem GPU (RTX 4070 Ti, 12 GB VRAM for Qwen 3 at Q4 quantization). Cost is ~$500 one-time hardware + ~$100/year electricity. Setup time: <1 hour (Ollama is trivial). Compliance burden: zero (no SCC, no TIA, no DPA negotiation).',
           },
           {
             title: 'Enterprise (high regulatory pressure: healthcare, fintech, law)',
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I use Llama 4 Scout as a drop-in replacement for Claude?',
-            a: 'For GDPR compliance: yes. Llama 4 Scout is open-source and can run locally, so it satisfies Articles 44, 25, and 32 fully. For capability and performance: maybe. Llama 4 Scout is smaller (8 GB VRAM) than Claude (which is proprietary and very large), so it is faster and cheaper to run locally, but may be less capable on some benchmarks. Test on your workload first. For simple Q&A, summarization, and code tasks, Llama 4 Scout is competitive. For very complex reasoning, Claude is still better, but local Qwen 2.5 14B or Llama 3.2 70B can handle most enterprise tasks.',
+            a: 'For GDPR compliance: yes. Llama 4 Scout is open-source and can run locally, so it satisfies Articles 44, 25, and 32 fully. For capability and performance: maybe. Llama 4 Scout is smaller (8 GB VRAM) than Claude (which is proprietary and very large), so it is faster and cheaper to run locally, but may be less capable on some benchmarks. Test on your workload first. For simple Q&A, summarization, and code tasks, Llama 4 Scout is competitive. For very complex reasoning, Claude is still better, but local Qwen 3 14B or Llama 3.2 70B can handle most enterprise tasks.',
           },
           {
             q: 'What happens if I log my prompts locally for audit purposes?',
@@ -249,8 +249,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'CISOs, equipos de adquisiciones y responsables de cumplimiento que eligen entre LLMs propietarios y de pesos abiertos',
     primaryTerm: 'comparación de riesgo RGPD modelos LLM',
-    leadAnswerBlock: '**La API de DeepSeek presenta el mayor riesgo RGPD de cualquier LLM importante debido a la ley china de acceso a datos (PIPL); Qwen y Llama ejecutados localmente tienen un riesgo igualmente bajo; las API de Claude y GPT-4o con residencia EU tienen riesgo medio y requieren Cláusulas Contractuales Estándar (SCCs).**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 2.5 14B', 'Qwen local', 'Llama 4 Scout', 'Claude 3.5 Sonnet', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
+    leadAnswerBlock: '**La API de DeepSeek presenta el mayor riesgo RGPD de cualquier LLM importante debido a la ley china de acceso a datos (PIPL); Qwen y Llama ejecutados localmente tienen un riesgo igualmente bajo; las API de Claude y GPT-5.5 con residencia EU tienen riesgo medio y requieren Cláusulas Contractuales Estándar (SCCs).**',
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 4.6', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     toc: [
       { label: 'Cuatro vectores de riesgo RGPD para LLMs', anchor: 'risk-vectors' },
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'La API de DeepSeek tiene el mayor riesgo RGPD de todos los LLMs importantes: los servidores están sujetos a la ley china de acceso a datos (PIPL), no existe decisión de adecuación UE-China, y los ToS permiten explícitamente compartir datos con las autoridades chinas',
-          'Qwen 2.5 14B y Llama 4 Scout ejecutados localmente son los de menor riesgo: sin transferencia según el Artículo 44, sin SCC requerida, los datos permanecen en tu hardware',
+          'Qwen 3 14B y Llama 4 Scout ejecutados localmente son los de menor riesgo: sin transferencia según el Artículo 44, sin SCC requerida, los datos permanecen en tu hardware',
           'Las API de Claude y GPT-5.5 Instant tienen riesgo medio: la jurisdicción estadounidense requiere Cláusulas Contractuales Estándar más Evaluación de Impacto de Transferencia; las opciones de residencia de datos en la UE (Claude EU) reducen el riesgo',
           'Stacks recomendados: startups (Claude + SCC), organizaciones con datos sensibles (Qwen 24 GB local), empresas (Qwen multi-GPU + air-gap)',
           'La matriz de decisión de riesgo cubre cinco vectores: residencia de datos, jurisdicción de datos de entrenamiento, retención de datos en ToS, requisito SCC y veredicto legal',
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               cells: ['Claude API (EE. UU.)', 'EE. UU. (Virginia)', 'EE. UU.', 'Anthropic se compromete a eliminar los datos bajo petición; retención por defecto de 30 días', 'Sí, requiere SCC + TIA', '🟠 Medio-alto'],
             },
             {
-              cells: ['GPT-4o (EE. UU.)', 'EE. UU. (múltiples regiones)', 'EE. UU.', 'OpenAI puede retener datos para mejorar el modelo; política opaca', 'Sí, requiere SCC + TIA', '🟠 Medio-alto'],
+              cells: ['GPT-5.5 (EE. UU.)', 'EE. UU. (múltiples regiones)', 'EE. UU.', 'OpenAI puede retener datos para mejorar el modelo; política opaca', 'Sí, requiere SCC + TIA', '🟠 Medio-alto'],
             },
             {
               cells: ['Claude (residencia de datos UE)', 'UE (Irlanda o Alemania)', 'EE. UU. (Anthropic), datos permanecen en la UE', 'Anthropic se compromete a residencia solo en la UE + cumplimiento RGPD', 'Sí, SCC adecuada por procesamiento en la UE', '🟡 Medio'],
@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               cells: ['Llama 4 Scout (local)', 'Tu hardware (LAN)', 'Código abierto, sin retención comercial', 'Tú controlas la retención solo a través de logs locales', 'No', '🟢 Menor'],
             },
             {
-              cells: ['Qwen 2.5 14B (local)', 'Tu hardware (LAN)', 'Código abierto (Apache 2.0), sin retención comercial', 'Tú controlas la retención solo a través de logs locales', 'No', '🟢 Menor'],
+              cells: ['Qwen 3 14B (local)', 'Tu hardware (LAN)', 'Código abierto (Apache 2.0), sin retención comercial', 'Tú controlas la retención solo a través de logs locales', 'No', '🟢 Menor'],
             },
           ],
         },
@@ -339,14 +339,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Claude API (EE. UU.) — Riesgo medio, gestionable con SCC + TIA',
-            text: 'La API de Claude requiere Cláusulas Contractuales Estándar y una Evaluación de Impacto de Transferencia, pero es más conforme que GPT-4o porque: (1) Anthropic tiene un compromiso más claro de eliminación bajo petición; (2) Anthropic ha publicado Addendas de Procesamiento de Datos (DPA) que hacen referencia explícita a los Artículos 28 y 32 del RGPD; (3) la ley de EE. UU., aunque permite el acceso de las autoridades, no obliga a retener datos comerciales. Para datos personales no sensibles (cargos de trabajo, contexto empresarial genérico), la API de Claude con SCC + TIA es aceptable. Para datos de alta sensibilidad (salud, financieros, biométricos), se requiere despliegue local.',
+            text: 'La API de Claude requiere Cláusulas Contractuales Estándar y una Evaluación de Impacto de Transferencia, pero es más conforme que GPT-5.5 porque: (1) Anthropic tiene un compromiso más claro de eliminación bajo petición; (2) Anthropic ha publicado Addendas de Procesamiento de Datos (DPA) que hacen referencia explícita a los Artículos 28 y 32 del RGPD; (3) la ley de EE. UU., aunque permite el acceso de las autoridades, no obliga a retener datos comerciales. Para datos personales no sensibles (cargos de trabajo, contexto empresarial genérico), la API de Claude con SCC + TIA es aceptable. Para datos de alta sensibilidad (salud, financieros, biométricos), se requiere despliegue local.',
           },
           {
             title: 'Claude (residencia de datos UE) — Riesgo medio, reducido por procesamiento en la UE',
             text: 'Anthropic ofrece una opción de residencia de datos en la UE donde los prompts se procesan en Irlanda o Alemania. Esto reduce el riesgo porque: (1) los datos permanecen dentro de la UE durante el procesamiento; (2) los datos se eliminan a los 30 días; (3) Anthropic se compromete al cumplimiento del RGPD. Sin embargo, los datos de entrenamiento detrás de los modelos Claude son de entrenamiento en EE. UU., y Anthropic es una empresa estadounidense, por lo que el cumplimiento total del Artículo 44 sigue requiriendo SCCs. Mejor que Claude EE. UU. para el RGPD, pero no equivalente al despliegue local.',
           },
           {
-            title: 'GPT-4o / GPT-5.5 Instant — Riesgo medio-alto',
+            title: 'GPT-5.5 / GPT-5.5 Instant — Riesgo medio-alto',
             text: 'Las API de OpenAI conllevan mayor riesgo que Claude porque: (1) la política de retención de datos de OpenAI es opaca — la empresa ha dicho que puede retener datos de usuarios para "mejoras de investigación y seguridad"; (2) no hay DPA publicada; (3) no hay opción de residencia de datos en la UE. Si eliges OpenAI, exige SCC explícita + TIA exhaustiva, y evita enviar datos de alta sensibilidad (salud, financieros, biométricos, genéticos). Para tareas de baja sensibilidad, es aceptable con SCC.',
           },
           {
@@ -354,8 +354,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Los pesos de Llama son de código abierto bajo una licencia amigable para uso comercial. Ejecutar Llama localmente en tu propio hardware significa: (1) cero transferencia según el Artículo 44; (2) tú controlas toda la retención de datos; (3) no se requiere SCC ni TIA; (4) cumplimiento total del Artículo 25 (privacidad desde el diseño). Apto para todos los niveles de sensibilidad de datos. Llama 4 Scout a 8 GB o Llama 3.2 70B a 48 GB cubre la mayoría de los casos de uso empresarial.',
           },
           {
-            title: 'Qwen 2.5 / 3 (local) — Menor riesgo, sin transferencia',
-            text: 'Los pesos de Qwen son de código abierto bajo Apache 2.0. Al igual que Llama, ejecutar Qwen localmente significa: (1) cero transferencia según el Artículo 44; (2) tú controlas la retención; (3) no se requiere base legal (sin transferencia = sin riesgo de transferencia). Qwen 2.5 14B es el más ampliamente desplegado en Europa y en organizaciones latinoamericanas con requisitos de privacidad estrictos, gracias a su excelente rendimiento multilingüe y menor huella de VRAM (12–16 GB frente a los 48 GB de Llama 3.2 70B). Apto para todos los niveles de sensibilidad.',
+            title: 'Qwen 3 / 3 (local) — Menor riesgo, sin transferencia',
+            text: 'Los pesos de Qwen son de código abierto bajo Apache 2.0. Al igual que Llama, ejecutar Qwen localmente significa: (1) cero transferencia según el Artículo 44; (2) tú controlas la retención; (3) no se requiere base legal (sin transferencia = sin riesgo de transferencia). Qwen 3 14B es el más ampliamente desplegado en Europa y en organizaciones latinoamericanas con requisitos de privacidad estrictos, gracias a su excelente rendimiento multilingüe y menor huella de VRAM (12–16 GB frente a los 48 GB de Llama 3.2 70B). Apto para todos los niveles de sensibilidad.',
           },
         ],
       },
@@ -372,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'PYME con datos de empleados/clientes (presión regulatoria media)',
-            text: 'Usa Qwen 2.5 14B o Llama 3.2 32B localmente. Justificación: Gestionas datos personales (nómina de empleados, información de contacto de clientes, historial de transacciones), por lo que se requiere arquitectura de cero transferencia. Aplica tanto para RGPD en la UE como para LFPDPPP en México, Ley 25.326 en Argentina y Ley 1581 en Colombia. Despliega en una GPU on-prem (RTX 4070 Ti, 12 GB VRAM para Qwen 2.5 en cuantización Q4). Costo: ~$500 hardware único + ~$100/año en electricidad. Tiempo de configuración: menos de 1 hora (Ollama es trivial). Carga de cumplimiento: cero (sin SCC, sin TIA, sin negociación de DPA).',
+            text: 'Usa Qwen 3 14B o Llama 3.2 32B localmente. Justificación: Gestionas datos personales (nómina de empleados, información de contacto de clientes, historial de transacciones), por lo que se requiere arquitectura de cero transferencia. Aplica tanto para RGPD en la UE como para LFPDPPP en México, Ley 25.326 en Argentina y Ley 1581 en Colombia. Despliega en una GPU on-prem (RTX 4070 Ti, 12 GB VRAM para Qwen 3 en cuantización Q4). Costo: ~$500 hardware único + ~$100/año en electricidad. Tiempo de configuración: menos de 1 hora (Ollama es trivial). Carga de cumplimiento: cero (sin SCC, sin TIA, sin negociación de DPA).',
           },
           {
             title: 'Empresa (alta presión regulatoria: salud, fintech, derecho)',
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo usar Llama 4 Scout como sustituto directo de Claude?',
-            a: 'Para el cumplimiento RGPD: sí. Llama 4 Scout es de código abierto y puede ejecutarse localmente, por lo que satisface plenamente los Artículos 44, 25 y 32. Para capacidad y rendimiento: quizás. Llama 4 Scout es más pequeño (8 GB VRAM) que Claude (que es propietario y muy grande), por lo que es más rápido y barato de ejecutar localmente, pero puede ser menos capaz en algunos benchmarks. Pruébalo en tu carga de trabajo primero. Para Q&A simple, resumen y tareas de código, Llama 4 Scout es competitivo. Para razonamiento muy complejo, Claude sigue siendo mejor, pero Qwen 2.5 14B local o Llama 3.2 70B pueden manejar la mayoría de las tareas empresariales.',
+            a: 'Para el cumplimiento RGPD: sí. Llama 4 Scout es de código abierto y puede ejecutarse localmente, por lo que satisface plenamente los Artículos 44, 25 y 32. Para capacidad y rendimiento: quizás. Llama 4 Scout es más pequeño (8 GB VRAM) que Claude (que es propietario y muy grande), por lo que es más rápido y barato de ejecutar localmente, pero puede ser menos capaz en algunos benchmarks. Pruébalo en tu carga de trabajo primero. Para Q&A simple, resumen y tareas de código, Llama 4 Scout es competitivo. Para razonamiento muy complejo, Claude sigue siendo mejor, pero Qwen 3 14B local o Llama 3.2 70B pueden manejar la mayoría de las tareas empresariales.',
           },
           {
             q: '¿Qué ocurre si registro mis prompts localmente con fines de auditoría?',
@@ -446,7 +446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'DeepSeek API trägt das höchste DSGVO-Risiko aller großen LLMs, da Server dem chinesischen Datenzugangsgesetz (PIPL) unterliegen; Qwen und Llama lokal haben gleichwertiges niedriges Risiko',
-          'Claude und GPT-4o APIs mit EU-Datenspeicherung tragen mittleres Risiko und erfordern Standardvertragsklauseln (SVKs)',
+          'Claude und GPT-5.5 APIs mit EU-Datenspeicherung tragen mittleres Risiko und erfordern Standardvertragsklauseln (SVKs)',
           'Empfohlene Stacks: Startups (Claude + SVK), datenempfindliche Orgs (Qwen 24 GB lokal), Unternehmen (Multi-GPU Qwen + Air-Gap)',
           'Risikoentscheidungsmatrix behandelt fünf Vektoren: Datenspeicherung, Ausbildungsdaten-Gerichtsbarkeit, ToS-Datenspeicherung, SVK-Anforderung und rechtliches Urteil',
           'Lokale Qwen- und Llama-Modelle erfüllen Artikel 44 (kein Transfer), Artikel 25 (Datenschutz durch Design) und Artikel 32 (Sicherheit)',
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'DeepSeek API présente le risque RGPD le plus élevé de tous les grands LLM car les serveurs sont soumis à la loi chinoise sur l\'accès aux données (PIPL) ; Qwen et Llama locaux portent un risque équivalent plus faible',
-          'Claude et les API GPT-4o avec résidence des données dans l\'UE portent un risque moyen et nécessitent des clauses contractuelles types (CCT)',
+          'Claude et les API GPT-5.5 avec résidence des données dans l\'UE portent un risque moyen et nécessitent des clauses contractuelles types (CCT)',
           'Piles recommandées : startups (Claude + CCT), organisations sensibles aux données (Qwen 24 Go local), entreprises (Qwen multi-GPU + air-gap)',
           'La matrice de décision des risques couvre cinq vecteurs : résidence des données, juridiction des données d\'entraînement, conservation des données ToS et exigence CCT/TIA',
           'Les modèles Qwen et Llama locaux satisfont les articles 44 (pas de transfert), 25 (protection des données dès la conception) et 32 (sécurité)',
@@ -592,7 +592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'DeepSeek APIはすべての主要なLLMの中で最高のGDPRリスクを持っています。サーバーが中国のデータアクセス法（PIPL）の対象となるためです。QwenおよびLlamaをローカルで実行すると、同等の低リスクになります。',
-          'ClaudeおよびGPT-4o APIはEUデータ拠点を備えた場合、中程度のリスクを負い、標準契約条項（SCC）が必要です。',
+          'ClaudeおよびGPT-5.5 APIはEUデータ拠点を備えた場合、中程度のリスクを負い、標準契約条項（SCC）が必要です。',
           '推奨スタック：スタートアップ（Claude + SCC）、データ敏感な組織（Qwen 24 GBローカル）、エンタープライズ（マルチGPU Qwen + エアギャップ）',
           'リスク決定行列は5つのベクトルをカバーしています：データ拠点、トレーニングデータ管轄権、ToSデータ保持、SCC要件、および法的判断',
           'ローカルQwenおよびLlamaモデルは、第44条（転送なし）、第25条（デザインによるデータ保護）、および第32条（セキュリティ）を満たします。',
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'DeepSeek API在所有主要LLM中呈现最高的GDPR风险，因为服务器受中国数据访问法（PIPL）约束；Qwen和Llama本地运行风险相同且最低',
-          'Claude和GPT-4o API具有欧盟数据驻留时承担中等风险，需要标准合同条款（SCC）',
+          'Claude和GPT-5.5 API具有欧盟数据驻留时承担中等风险，需要标准合同条款（SCC）',
           '推荐堆栈：初创企业（Claude + SCC）、数据敏感组织（Qwen 24GB本地）、企业（多GPU Qwen + 气隙）',
           '风险决策矩阵涵盖五个向量：数据驻留、训练数据管辖权、ToS数据保留、SCC要求和法律裁定',
           '本地Qwen和Llama模型满足第44条（无转移）、第25条（设计中的数据保护）和第32条（安全性）',

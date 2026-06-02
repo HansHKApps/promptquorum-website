@@ -183,7 +183,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Welche Modelle haben vorkonvertierte MLX-Versionen?',
-            a: 'Die mlx-community-Organisation deckt die meisten großen Modelle ab: Llama 3, Qwen 2.5, Mistral, Phi-3/4, Gemma 2 und viele Fine-Tunes. Sowohl 4-Bit- als auch 8-Bit-quantisierte Versionen sind in der Regel verfügbar. Besuchen Sie huggingface.co/mlx-community und suchen Sie nach dem Modellfamiliennamen.',
+            a: 'Die mlx-community-Organisation deckt die meisten großen Modelle ab: Llama 3, Qwen 3, Mistral, Phi-3/4, Gemma 2 und viele Fine-Tunes. Sowohl 4-Bit- als auch 8-Bit-quantisierte Versionen sind in der Regel verfügbar. Besuchen Sie huggingface.co/mlx-community und suchen Sie nach dem Modellfamiliennamen.',
           },
           {
             q: 'Welche Quantisierung sollte ich bei der MLX-Konvertierung verwenden?',
@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quels modèles disposent de versions MLX pré-converties ?',
-            a: 'L\'organisation mlx-community couvre la plupart des modèles majeurs : Llama 3, Qwen 2.5, Mistral, Phi-3/4, Gemma 2 et de nombreux fine-tunes. Des versions quantifiées en 4 bits et 8 bits sont généralement disponibles. Visitez huggingface.co/mlx-community et recherchez par nom de famille de modèle.',
+            a: 'L\'organisation mlx-community couvre la plupart des modèles majeurs : Llama 3, Qwen 3, Mistral, Phi-3/4, Gemma 2 et de nombreux fine-tunes. Des versions quantifiées en 4 bits et 8 bits sont généralement disponibles. Visitez huggingface.co/mlx-community et recherchez par nom de famille de modèle.',
           },
           {
             q: 'Quelle quantification utiliser lors de la conversion en MLX ?',
@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     title: 'OllamaモデルをMLX形式に変換する方法',
     seoTitle: 'OllamaモデルをMLXに変換 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'OllamaモデルをMLXに直接変換することはできません。代わりにHugging Faceの重みとmlx-lm convertを使用してください。Qwen 2.5をはじめ多くの人気モデルはHugging Faceにすでに事前変換済みMLXバージョンが存在します。',
+    metaDescription: 'OllamaモデルをMLXに直接変換することはできません。代わりにHugging Faceの重みとmlx-lm convertを使用してください。Qwen 3をはじめ多くの人気モデルはHugging Faceにすでに事前変換済みMLXバージョンが存在します。',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
@@ -291,14 +291,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Ollamaはモデルを~/.ollama/models内の独自の内部形式で保存します — これらをMLXに直接インポートすることはできません',
-          'Hugging Faceのmlx-communityオーガニゼーションには、Llama 3、Qwen、Mistral、Phi、Gemmaなど多数の事前変換済みMLXバージョンがあります。特に日本語テキスト生成で広く使われているQwen 2.5は、mlx-communityで豊富なMLXバリアントが揃っています — 変換する前にまずそこを確認してください',
+          'Hugging Faceのmlx-communityオーガニゼーションには、Llama 3、Qwen、Mistral、Phi、Gemmaなど多数の事前変換済みMLXバージョンがあります。特に日本語テキスト生成で広く使われているQwen 3は、mlx-communityで豊富なMLXバリアントが揃っています — 変換する前にまずそこを確認してください',
           '事前変換済みバージョンが存在しない場合は、Hugging FaceからオリジナルのSafeTensorsの重みをダウンロードし、mlx_lm.convertを実行してください — 変換中に量子化が適用されます',
         ],
       },
       body1: {
         title: 'ステップ1：事前変換済みMLXモデルを確認する',
         content: [
-          '何かを変換する前に、<a href="https://huggingface.co/mlx-community" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-community\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">huggingface.co/mlx-community</a>を訪問してください。このコミュニティは、MLX向けにすでに変換・量子化された数百のモデルを管理しています。モデル名で検索してください — そこに存在すれば、インストールはコマンド1つで変換も不要です。なお、日本語テキスト生成で人気のQwen 2.5モデルは、mlx-communityで特に多くのMLXバリアントが公開されており、日本のユーザーにとって便利です。',
+          '何かを変換する前に、<a href="https://huggingface.co/mlx-community" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-community\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">huggingface.co/mlx-community</a>を訪問してください。このコミュニティは、MLX向けにすでに変換・量子化された数百のモデルを管理しています。モデル名で検索してください — そこに存在すれば、インストールはコマンド1つで変換も不要です。なお、日本語テキスト生成で人気のQwen 3モデルは、mlx-communityで特に多くのMLXバリアントが公開されており、日本のユーザーにとって便利です。',
           '事前変換済みバージョンが存在する場合は、mlx-lmで直接モデルを実行してください：',
         ],
         codeBlock: 'pip install mlx-lm\nmlx_lm.generate --model mlx-community/Meta-Llama-3-8B-4bit --prompt "Hello"',
@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '事前変換済みMLXバージョンがあるモデルはどれですか？',
-            a: 'mlx-communityオーガニゼーションは、Llama 3、Qwen 2.5、Mistral、Phi-3/4、Gemma 2、および多くのファインチューンを含む主要モデルのほとんどをカバーしています。4ビットと8ビットの量子化バージョンの両方が通常利用可能です。huggingface.co/mlx-communityにアクセスし、モデルファミリー名で検索してください。',
+            a: 'mlx-communityオーガニゼーションは、Llama 3、Qwen 3、Mistral、Phi-3/4、Gemma 2、および多くのファインチューンを含む主要モデルのほとんどをカバーしています。4ビットと8ビットの量子化バージョンの両方が通常利用可能です。huggingface.co/mlx-communityにアクセスし、モデルファミリー名で検索してください。',
           },
           {
             q: 'MLXに変換する際にどの量子化を使用すべきですか？',
@@ -399,7 +399,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '哪些模型有预转换的 MLX 版本？',
-            a: 'mlx-community 组织涵盖了大多数主要模型：Llama 3、Qwen 2.5、Mistral、Phi-3/4、Gemma 2 以及许多微调版本。4 位和 8 位量化版本通常均可获得。访问 huggingface.co/mlx-community 并按模型系列名称搜索。',
+            a: 'mlx-community 组织涵盖了大多数主要模型：Llama 3、Qwen 3、Mistral、Phi-3/4、Gemma 2 以及许多微调版本。4 位和 8 位量化版本通常均可获得。访问 huggingface.co/mlx-community 并按模型系列名称搜索。',
           },
           {
             q: '转换为 MLX 时应使用哪种量化方式？',

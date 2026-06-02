@@ -130,16 +130,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: 'Beste MoE-Modelle für lokales Coding?',
     seoTitle: 'Beste MoE-Modelle für lokales Coding 2026',
-    metaDescription: 'Mixtral 8x7B：26 GB VRAM, 46,7B params. DeepSeek V2：16 GB VRAM, bestes Coding. MoE aktiviert nur aktive Parameter. Schnelle Antwort von PromptQuorum.',
+    metaDescription: 'Mixtral 8x22B：26 GB VRAM, 46,7B params. DeepSeek V2：16 GB VRAM, bestes Coding. MoE aktiviert nur aktive Parameter. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       de: {
         question: 'Beste MoE-Modelle für lokales Coding?',
-        answer: 'Mixtral 8x7B und DeepSeek V2 sind die führenden MoE-Coding-Modelle für den lokalen Einsatz. MoE-Modelle aktivieren pro Token nur einen Bruchteil der Parameter, was eine bessere Qualität pro VRAM als vergleichbar große Dense-Modelle ergibt. Beide benötigen mindestens 16 GB VRAM bei Q4.',
+        answer: 'Mixtral 8x22B und DeepSeek V2 sind die führenden MoE-Coding-Modelle für den lokalen Einsatz. MoE-Modelle aktivieren pro Token nur einen Bruchteil der Parameter, was eine bessere Qualität pro VRAM als vergleichbar große Dense-Modelle ergibt. Beide benötigen mindestens 16 GB VRAM bei Q4.',
         bullets: [
-          'Mixtral 8x7B Q4_K_M: ~26 GB VRAM, starkes Coding, auf Ollama verfügbar',
+          'Mixtral 8x22B Q4_K_M: ~26 GB VRAM, starkes Coding, auf Ollama verfügbar',
           'DeepSeek V2 Q4: ~16 GB VRAM, führende Coding-Benchmark-Werte',
           'MoE-Vorteil: schnellere Inferenz als vergleichbare Dense-Modelle',
         ],
@@ -151,8 +151,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'MoE-Modelle aktivieren pro Token nur aktive Experten-Parameter — Mixtral 8x7B hat 46,7B Gesamtparameter, aber nur ~12,9B aktiv pro Token',
-          'Mixtral 8x7B Q4_K_M benötigt ~26 GB VRAM — geeignet für Dual-GPU oder High-VRAM-Setups',
+          'MoE-Modelle aktivieren pro Token nur aktive Experten-Parameter — Mixtral 8x22B hat 46,7B Gesamtparameter, aber nur ~12,9B aktiv pro Token',
+          'Mixtral 8x22B Q4_K_M benötigt ~26 GB VRAM — geeignet für Dual-GPU oder High-VRAM-Setups',
           'DeepSeek V2 bei Q4 passt in ~16 GB VRAM und erzielt führende Coding-Benchmark-Werte',
           'Unter 16 GB VRAM sind Dense-Coding-Modelle wie DeepSeek Coder 14B praktischer als MoE-Optionen',
         ],
@@ -160,22 +160,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Wie die MoE-Architektur die VRAM-Rechnung verändert',
         content: [
-          '<strong>Mixture of Experts (MoE)-Modelle leiten jeden Token nur durch eine Teilmenge spezialisierter Schichten (Experten), sodass die Inferenzkosten mit den aktiven Parametern skalieren, nicht mit den Gesamtparametern.</strong> Mixtral 8x7B hat 46,7 Milliarden Gesamtparameter, aber nur ~12,9 Milliarden sind pro Vorwärtsdurchlauf aktiv — vergleichbar mit einem 13B Dense-Modell in Rechenkosten.',
-          'Das bedeutet, Mixtral 8x7B liefert im Vergleich zu den Inferenzkosten pro Token eine überdurchschnittliche Ausgabequalität. Allerdings müssen alle Experten-Gewichte beim Start in den VRAM geladen werden. Bei Q4_K_M benötigt Mixtral 8x7B ca. 26 GB VRAM — entweder eine 24-GB-Einzelkarte mit leichtem Quantisierungskompromiss oder ein Dual-GPU-Setup.',
+          '<strong>Mixture of Experts (MoE)-Modelle leiten jeden Token nur durch eine Teilmenge spezialisierter Schichten (Experten), sodass die Inferenzkosten mit den aktiven Parametern skalieren, nicht mit den Gesamtparametern.</strong> Mixtral 8x22B hat 46,7 Milliarden Gesamtparameter, aber nur ~12,9 Milliarden sind pro Vorwärtsdurchlauf aktiv — vergleichbar mit einem 13B Dense-Modell in Rechenkosten.',
+          'Das bedeutet, Mixtral 8x22B liefert im Vergleich zu den Inferenzkosten pro Token eine überdurchschnittliche Ausgabequalität. Allerdings müssen alle Experten-Gewichte beim Start in den VRAM geladen werden. Bei Q4_K_M benötigt Mixtral 8x22B ca. 26 GB VRAM — entweder eine 24-GB-Einzelkarte mit leichtem Quantisierungskompromiss oder ein Dual-GPU-Setup.',
           'DeepSeek V2 verwendet eine ähnliche MoE-Architektur, die für Coding-Aufgaben optimiert ist, und benötigt bei Q4 ca. 16 GB VRAM. Seine Coding-Benchmark-Werte entsprechen Modellen mit zwei- bis dreifach größerem aktiven Parameteranzahl.',
         ],
         columns: ['Modell', 'Gesamtparameter', 'Aktiv pro Token', 'VRAM bei Q4'],
         rows: [
-          { 'Modell': 'Mixtral 8x7B', 'Gesamtparameter': '46,7B', 'Aktiv pro Token': '~12,9B', 'VRAM bei Q4': '~26 GB' },
+          { 'Modell': 'Mixtral 8x22B', 'Gesamtparameter': '46,7B', 'Aktiv pro Token': '~12,9B', 'VRAM bei Q4': '~26 GB' },
           { 'Modell': 'DeepSeek V2', 'Gesamtparameter': '236B', 'Aktiv pro Token': '~21B', 'VRAM bei Q4': '~16 GB' },
         ],
       },
       body2: {
         title: 'MoE-Modelle mit Ollama ausführen',
         content: [
-          '<strong>Mixtral 8x7B ist auf Ollama via <code>ollama pull mixtral:8x7b</code> verfügbar, was das Q4_K_M GGUF automatisch herunterlädt.</strong> Ollama übernimmt die Layer-Zuteilung über den verfügbaren VRAM und lagert bei unzureichendem VRAM partiell auf den CPU-RAM aus, was jedoch die Geschwindigkeit deutlich reduziert.',
+          '<strong>Mixtral 8x22B ist auf Ollama via <code>ollama pull mixtral:8x7b</code> verfügbar, was das Q4_K_M GGUF automatisch herunterlädt.</strong> Ollama übernimmt die Layer-Zuteilung über den verfügbaren VRAM und lagert bei unzureichendem VRAM partiell auf den CPU-RAM aus, was jedoch die Geschwindigkeit deutlich reduziert.',
           'Wenn Sie nur 16 GB VRAM haben, ist DeepSeek V2 Q4 die bessere MoE-Wahl. Es passt vollständig auf eine 16-GB-Karte und liefert einen Coding-Durchsatz von ca. 15–20 tok/s auf einer RTX 4080 oder ähnlichem. Unter 16 GB VRAM sollten Sie auf Dense-Modelle wechseln — MoE-Vorteile verschwinden bei starkem CPU-Offloading.',
-          'Ein verbreiteter Missverständnis: MoE-Modelle müssen beim Start ALLE Experten-Gewichte in den VRAM laden, nicht nur die aktiven Teilmengen. Die VRAM-Kosten spiegeln Gesamtparameter wider, nicht aktive. Für Aufgaben einer Sprache (z.B. nur Python-Arbeit) outperformt ein Dense-Modell wie Qwen 2.5 Coder 14B oft Mixtral 8x7B, da seine Gewichte vollständig auf Code spezialisiert sind, nicht über allgemeine Experten verteilt.',
+          'Ein verbreiteter Missverständnis: MoE-Modelle müssen beim Start ALLE Experten-Gewichte in den VRAM laden, nicht nur die aktiven Teilmengen. Die VRAM-Kosten spiegeln Gesamtparameter wider, nicht aktive. Für Aufgaben einer Sprache (z.B. nur Python-Arbeit) outperformt ein Dense-Modell wie Qwen 3 Coder 14B oft Mixtral 8x22B, da seine Gewichte vollständig auf Code spezialisiert sind, nicht über allgemeine Experten verteilt.',
           'Für einen vollständigen Vergleich der besten Coding-Modelle bei jedem VRAM-Niveau einschließlich Dense-Alternativen lesen Sie den <a href="/de/local-llms/best-local-llms-for-coding" class="text-primary hover:underline">Leitfaden zu den besten lokalen LLMs für Coding</a>.',
         ],
       },
@@ -188,15 +188,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'MoE steht für Mixture of Experts. Das Modell enthält viele spezialisierte Teilnetzwerke (Experten), aktiviert aber pro Token nur wenige. Das bedeutet, die Inferenzkosten entsprechen einem viel kleineren Dense-Modell, während die Gesamtparameteranzahl dem Modell eine breitere Wissensbasis verleiht — nützlich für Coding-Aufgaben über mehrere Sprachen und Frameworks.',
           },
           {
-            q: 'Passt Mixtral 8x7B auf eine einzelne GPU?',
-            a: 'Bei Q4_K_M benötigt Mixtral 8x7B ~26 GB VRAM. Eine RTX 3090 oder RTX 4090 (24 GB) erfordert eine leichte Quantisierungsreduktion auf Q3_K_M (~22 GB). Eine 48-GB-Karte (z.B. RTX A6000) passt bei Q4. Dual RTX 3090 via llama.cpp mit Tensor-Parallelismus funktioniert ebenfalls.',
+            q: 'Passt Mixtral 8x22B auf eine einzelne GPU?',
+            a: 'Bei Q4_K_M benötigt Mixtral 8x22B ~26 GB VRAM. Eine RTX 3090 oder RTX 4090 (24 GB) erfordert eine leichte Quantisierungsreduktion auf Q3_K_M (~22 GB). Eine 48-GB-Karte (z.B. RTX A6000) passt bei Q4. Dual RTX 3090 via llama.cpp mit Tensor-Parallelismus funktioniert ebenfalls.',
           },
           {
-            q: 'Ist DeepSeek V2 für Coding besser als Mixtral 8x7B?',
-            a: 'In Coding-Benchmarks entspricht DeepSeek V2 Q4 Mixtral 8x7B oder übertrifft es bei niedrigerem VRAM (~16 GB vs. ~26 GB). Für VRAM-begrenzte Setups ist DeepSeek V2 die bessere Wahl. Bei reiner Generierungsqualität auf einem High-VRAM-System sind beide konkurrenzfähig.',
+            q: 'Ist DeepSeek V2 für Coding besser als Mixtral 8x22B?',
+            a: 'In Coding-Benchmarks entspricht DeepSeek V2 Q4 Mixtral 8x22B oder übertrifft es bei niedrigerem VRAM (~16 GB vs. ~26 GB). Für VRAM-begrenzte Setups ist DeepSeek V2 die bessere Wahl. Bei reiner Generierungsqualität auf einem High-VRAM-System sind beide konkurrenzfähig.',
           },
           {
-            q: 'Mit welchem Ollama-Befehl wird Mixtral 8x7B gestartet?',
+            q: 'Mit welchem Ollama-Befehl wird Mixtral 8x22B gestartet?',
             a: '<code>ollama pull mixtral:8x7b</code> lädt das Q4_K_M-quantisierte GGUF herunter. Dann startet <code>ollama run mixtral:8x7b</code> es. Ollama verteilt den VRAM automatisch und lagert bei Bedarf auf den CPU-RAM aus.',
           },
         ],
@@ -207,16 +207,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: 'Meilleurs modèles MoE pour le codage local ?',
     seoTitle: 'Meilleurs Modèles MoE pour Coding 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Mixtral 8x7B：26 Go VRAM, 46,7B params. DeepSeek V2：16 Go VRAM, coding top. MoE active uniquement paramètres actifs. Réponse rapide de PromptQuorum.',
+    metaDescription: 'Mixtral 8x22B：26 Go VRAM, 46,7B params. DeepSeek V2：16 Go VRAM, coding top. MoE active uniquement paramètres actifs. Réponse rapide de PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       fr: {
         question: 'Meilleurs modèles MoE pour le codage local ?',
-        answer: 'Mixtral 8x7B et DeepSeek V2 sont les meilleurs modèles MoE de codage pour un usage local. Les modèles MoE n\'activent qu\'une fraction des paramètres par token, offrant une meilleure qualité par Go de VRAM que les modèles denses de taille totale similaire. Les deux nécessitent au moins 16 Go de VRAM en Q4.',
+        answer: 'Mixtral 8x22B et DeepSeek V2 sont les meilleurs modèles MoE de codage pour un usage local. Les modèles MoE n\'activent qu\'une fraction des paramètres par token, offrant une meilleure qualité par Go de VRAM que les modèles denses de taille totale similaire. Les deux nécessitent au moins 16 Go de VRAM en Q4.',
         bullets: [
-          'Mixtral 8x7B Q4_K_M : ~26 Go de VRAM, codage solide, disponible sur Ollama',
+          'Mixtral 8x22B Q4_K_M : ~26 Go de VRAM, codage solide, disponible sur Ollama',
           'DeepSeek V2 Q4 : ~16 Go de VRAM, meilleures performances sur les benchmarks de codage',
           'Avantage MoE : inférence plus rapide que les modèles denses comparables',
         ],
@@ -228,8 +228,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Les modèles MoE n\'activent que les paramètres d\'experts actifs par token — Mixtral 8x7B a 46,7B params totaux mais seulement ~12,9B actifs par token',
-          'Mixtral 8x7B Q4_K_M nécessite ~26 Go de VRAM — adapté aux setups dual-GPU ou GPU haute VRAM',
+          'Les modèles MoE n\'activent que les paramètres d\'experts actifs par token — Mixtral 8x22B a 46,7B params totaux mais seulement ~12,9B actifs par token',
+          'Mixtral 8x22B Q4_K_M nécessite ~26 Go de VRAM — adapté aux setups dual-GPU ou GPU haute VRAM',
           'DeepSeek V2 en Q4 tient dans ~16 Go de VRAM et atteint les meilleures performances sur les benchmarks de codage',
           'Sous 16 Go de VRAM, les modèles denses de codage comme DeepSeek Coder 14B sont plus pratiques que les options MoE',
         ],
@@ -237,22 +237,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Comment l\'architecture MoE change le calcul VRAM',
         content: [
-          '<strong>Les modèles Mixture of Experts (MoE) dirigent chaque token uniquement à travers un sous-ensemble de couches spécialisées appelées experts, donc le coût d\'inférence évolue avec les paramètres actifs, pas les paramètres totaux.</strong> Mixtral 8x7B a 46,7 milliards de paramètres totaux mais seulement ~12,9 milliards sont actifs par passe — comparable à un modèle dense 13B en coût de calcul.',
-          'Cela signifie que Mixtral 8x7B surpasse son poids en qualité de sortie par rapport au coût d\'inférence par token. Cependant, tous les poids d\'experts doivent être chargés en VRAM au démarrage. En Q4_K_M, Mixtral 8x7B nécessite environ 26 Go de VRAM — soit un GPU 24 Go avec léger compromis de quantisation, soit un setup dual-GPU.',
+          '<strong>Les modèles Mixture of Experts (MoE) dirigent chaque token uniquement à travers un sous-ensemble de couches spécialisées appelées experts, donc le coût d\'inférence évolue avec les paramètres actifs, pas les paramètres totaux.</strong> Mixtral 8x22B a 46,7 milliards de paramètres totaux mais seulement ~12,9 milliards sont actifs par passe — comparable à un modèle dense 13B en coût de calcul.',
+          'Cela signifie que Mixtral 8x22B surpasse son poids en qualité de sortie par rapport au coût d\'inférence par token. Cependant, tous les poids d\'experts doivent être chargés en VRAM au démarrage. En Q4_K_M, Mixtral 8x22B nécessite environ 26 Go de VRAM — soit un GPU 24 Go avec léger compromis de quantisation, soit un setup dual-GPU.',
           'DeepSeek V2 utilise une architecture MoE similaire optimisée pour le codage et nécessite environ 16 Go de VRAM en Q4. Ses scores de benchmarks de codage correspondent à des modèles deux à trois fois plus grands en nombre de paramètres actifs.',
         ],
         columns: ['Modèle', 'Params totaux', 'Actifs par token', 'VRAM en Q4'],
         rows: [
-          { 'Modèle': 'Mixtral 8x7B', 'Params totaux': '46,7B', 'Actifs par token': '~12,9B', 'VRAM en Q4': '~26 Go' },
+          { 'Modèle': 'Mixtral 8x22B', 'Params totaux': '46,7B', 'Actifs par token': '~12,9B', 'VRAM en Q4': '~26 Go' },
           { 'Modèle': 'DeepSeek V2', 'Params totaux': '236B', 'Actifs par token': '~21B', 'VRAM en Q4': '~16 Go' },
         ],
       },
       body2: {
         title: 'Faire tourner des modèles MoE avec Ollama',
         content: [
-          '<strong>Mixtral 8x7B est disponible sur Ollama via <code>ollama pull mixtral:8x7b</code>, qui télécharge automatiquement le GGUF Q4_K_M.</strong> Ollama gère l\'allocation des couches sur la VRAM disponible et déchargera partiellement vers la RAM CPU si la VRAM est insuffisante, mais cela réduit significativement la vitesse.',
+          '<strong>Mixtral 8x22B est disponible sur Ollama via <code>ollama pull mixtral:8x7b</code>, qui télécharge automatiquement le GGUF Q4_K_M.</strong> Ollama gère l\'allocation des couches sur la VRAM disponible et déchargera partiellement vers la RAM CPU si la VRAM est insuffisante, mais cela réduit significativement la vitesse.',
           'Si vous disposez de seulement 16 Go de VRAM, DeepSeek V2 Q4 est le meilleur choix MoE. Il tient entièrement sur un GPU 16 Go et délivre un débit de codage d\'environ 15–20 tok/s sur une RTX 4080 ou équivalent. Sous 16 Go de VRAM, passez aux modèles denses — les avantages MoE disparaissent avec un déchargement CPU important.',
-          'Une idée fausse courante : les modèles MoE doivent charger TOUS les poids des experts en VRAM au démarrage, pas seulement le sous-ensemble actif. Le coût VRAM reflète les paramètres totaux, pas les paramètres actifs. Pour les tâches single-langue (par exemple, travail Python uniquement), un modèle dense comme Qwen 2.5 Coder 14B surpasse souvent Mixtral 8x7B car ses poids sont entièrement spécialisés dans le code plutôt que répartis entre des experts génériques.',
+          'Une idée fausse courante : les modèles MoE doivent charger TOUS les poids des experts en VRAM au démarrage, pas seulement le sous-ensemble actif. Le coût VRAM reflète les paramètres totaux, pas les paramètres actifs. Pour les tâches single-langue (par exemple, travail Python uniquement), un modèle dense comme Qwen 3 Coder 14B surpasse souvent Mixtral 8x22B car ses poids sont entièrement spécialisés dans le code plutôt que répartis entre des experts génériques.',
           'Pour une comparaison complète des meilleurs modèles de codage à chaque niveau de VRAM incluant les alternatives denses, consultez le <a href="/fr/local-llms/best-local-llms-for-coding" class="text-primary hover:underline">guide des meilleurs LLMs locaux pour le codage</a>.',
         ],
       },
@@ -265,15 +265,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'MoE signifie Mixture of Experts. Le modèle contient de nombreux sous-réseaux spécialisés (experts) mais n\'en active que quelques-uns par token. Cela signifie que le coût d\'inférence correspond à un modèle dense bien plus petit, tandis que le nombre total de paramètres offre une base de connaissances plus large — utile pour les tâches de codage couvrant plusieurs langages et frameworks.',
           },
           {
-            q: 'Mixtral 8x7B tient-il sur un seul GPU ?',
-            a: 'En Q4_K_M, Mixtral 8x7B nécessite ~26 Go de VRAM. Une RTX 3090 ou RTX 4090 (24 Go) requiert une légère réduction à Q3_K_M (~22 Go). Une carte 48 Go (ex. RTX A6000) le supporte en Q4. Dual RTX 3090 via llama.cpp avec parallélisme tensoriel fonctionne également.',
+            q: 'Mixtral 8x22B tient-il sur un seul GPU ?',
+            a: 'En Q4_K_M, Mixtral 8x22B nécessite ~26 Go de VRAM. Une RTX 3090 ou RTX 4090 (24 Go) requiert une légère réduction à Q3_K_M (~22 Go). Une carte 48 Go (ex. RTX A6000) le supporte en Q4. Dual RTX 3090 via llama.cpp avec parallélisme tensoriel fonctionne également.',
           },
           {
-            q: 'DeepSeek V2 est-il meilleur que Mixtral 8x7B pour le codage ?',
-            a: 'Sur les benchmarks de codage, DeepSeek V2 Q4 égale ou surpasse Mixtral 8x7B avec moins de VRAM (~16 Go vs ~26 Go). Pour les configurations VRAM limitées, DeepSeek V2 est le meilleur choix. Sur un système haute VRAM, les deux sont compétitifs.',
+            q: 'DeepSeek V2 est-il meilleur que Mixtral 8x22B pour le codage ?',
+            a: 'Sur les benchmarks de codage, DeepSeek V2 Q4 égale ou surpasse Mixtral 8x22B avec moins de VRAM (~16 Go vs ~26 Go). Pour les configurations VRAM limitées, DeepSeek V2 est le meilleur choix. Sur un système haute VRAM, les deux sont compétitifs.',
           },
           {
-            q: 'Quelle commande Ollama lance Mixtral 8x7B ?',
+            q: 'Quelle commande Ollama lance Mixtral 8x22B ?',
             a: '<code>ollama pull mixtral:8x7b</code> télécharge le GGUF quantisé Q4_K_M. Ensuite, <code>ollama run mixtral:8x7b</code> le lance. Ollama répartit automatiquement la VRAM et décharge vers la RAM CPU si nécessaire.',
           },
         ],
@@ -284,16 +284,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: 'ローカルコーディングに最適な MoE モデルは？',
     seoTitle: 'ローカルコーディング向けMoEモデル2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Mixtral 8x7B：26 GB VRAM、46.7B params。DeepSeek V2：16 GB VRAM、coding 最高。MoE はアクティブなパラメータのみ使用。PromptQuorum による簡潔な回答。',
+    metaDescription: 'Mixtral 8x22B：26 GB VRAM、46.7B params。DeepSeek V2：16 GB VRAM、coding 最高。MoE はアクティブなパラメータのみ使用。PromptQuorum による簡潔な回答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       ja: {
         question: 'ローカルコーディングに最適な MoE モデルは？',
-        answer: 'Mixtral 8x7B と DeepSeek V2 がローカル使用に最適な MoE コーディングモデルです。MoE モデルはトークンごとにパラメータの一部のみをアクティブにするため、同じ総サイズの Dense モデルより VRAM あたりの品質が高くなります。Q4 では両方とも最低 16 GB VRAM が必要です。',
+        answer: 'Mixtral 8x22B と DeepSeek V2 がローカル使用に最適な MoE コーディングモデルです。MoE モデルはトークンごとにパラメータの一部のみをアクティブにするため、同じ総サイズの Dense モデルより VRAM あたりの品質が高くなります。Q4 では両方とも最低 16 GB VRAM が必要です。',
         bullets: [
-          'Mixtral 8x7B Q4_K_M：~26 GB VRAM、強力なコーディング、Ollama で利用可能',
+          'Mixtral 8x22B Q4_K_M：~26 GB VRAM、強力なコーディング、Ollama で利用可能',
           'DeepSeek V2 Q4：~16 GB VRAM、コーディングベンチマーク最高スコア',
           'MoE の利点：同等の Dense モデルより高速な推論',
         ],
@@ -305,8 +305,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'MoE モデルはトークンごとに有効なエキスパートパラメータのみをアクティブにする — Mixtral 8x7B は総パラメータ 46.7B だがトークンごとにアクティブなのは ~12.9B',
-          'Mixtral 8x7B Q4_K_M は ~26 GB VRAM が必要 — デュアル GPU または高 VRAM 単一 GPU 向け',
+          'MoE モデルはトークンごとに有効なエキスパートパラメータのみをアクティブにする — Mixtral 8x22B は総パラメータ 46.7B だがトークンごとにアクティブなのは ~12.9B',
+          'Mixtral 8x22B Q4_K_M は ~26 GB VRAM が必要 — デュアル GPU または高 VRAM 単一 GPU 向け',
           'DeepSeek V2（Q4）は ~16 GB VRAM に収まり、トップクラスのコーディングベンチマークスコアを達成',
           '16 GB VRAM 未満では、MoE より DeepSeek Coder 14B などの Dense コーディングモデルの方が実用的',
         ],
@@ -314,22 +314,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'MoE アーキテクチャが VRAM の計算を変える仕組み',
         content: [
-          '<strong>Mixture of Experts（MoE）モデルは各トークンをエキスパートと呼ばれる専門レイヤーのサブセットのみを通してルーティングするため、推論コストは総パラメータではなくアクティブパラメータに比例します。</strong> Mixtral 8x7B は総パラメータ 467 億を持ちますが、1 回のフォワードパスでアクティブになるのは ~129 億のみ — 計算コストは 13B Dense モデルと同等です。',
-          'これはつまり、Mixtral 8x7B はトークンあたりの推論コストに対して出力品質が非常に高いことを意味します。ただし、全エキスパートの重みはスタートアップ時に VRAM に読み込む必要があります。Q4_K_M では Mixtral 8x7B に約 26 GB の VRAM が必要です。',
+          '<strong>Mixture of Experts（MoE）モデルは各トークンをエキスパートと呼ばれる専門レイヤーのサブセットのみを通してルーティングするため、推論コストは総パラメータではなくアクティブパラメータに比例します。</strong> Mixtral 8x22B は総パラメータ 467 億を持ちますが、1 回のフォワードパスでアクティブになるのは ~129 億のみ — 計算コストは 13B Dense モデルと同等です。',
+          'これはつまり、Mixtral 8x22B はトークンあたりの推論コストに対して出力品質が非常に高いことを意味します。ただし、全エキスパートの重みはスタートアップ時に VRAM に読み込む必要があります。Q4_K_M では Mixtral 8x22B に約 26 GB の VRAM が必要です。',
           'DeepSeek V2 はコーディングタスク向けに最適化した同様の MoE アーキテクチャを使用し、Q4 で約 16 GB VRAM を必要とします。そのコーディングベンチマークスコアは、アクティブパラメータ数が 2〜3 倍大きいモデルに匹敵します。',
         ],
         columns: ['モデル', '総パラメータ', 'トークンあたりアクティブ', 'Q4 での VRAM'],
         rows: [
-          { 'モデル': 'Mixtral 8x7B', '総パラメータ': '46.7B', 'トークンあたりアクティブ': '~12.9B', 'Q4 での VRAM': '~26 GB' },
+          { 'モデル': 'Mixtral 8x22B', '総パラメータ': '46.7B', 'トークンあたりアクティブ': '~12.9B', 'Q4 での VRAM': '~26 GB' },
           { 'モデル': 'DeepSeek V2', '総パラメータ': '236B', 'トークンあたりアクティブ': '~21B', 'Q4 での VRAM': '~16 GB' },
         ],
       },
       body2: {
         title: 'Ollama で MoE モデルを実行する',
         content: [
-          '<strong>Mixtral 8x7B は Ollama の <code>ollama pull mixtral:8x7b</code> コマンドで利用可能で、Q4_K_M GGUF を自動ダウンロードします。</strong> Ollama は利用可能な VRAM にレイヤーを割り当て、VRAM が不足している場合はパーシャルオフロードで CPU RAM に溢れさせますが、速度は大幅に低下します。',
+          '<strong>Mixtral 8x22B は Ollama の <code>ollama pull mixtral:8x7b</code> コマンドで利用可能で、Q4_K_M GGUF を自動ダウンロードします。</strong> Ollama は利用可能な VRAM にレイヤーを割り当て、VRAM が不足している場合はパーシャルオフロードで CPU RAM に溢れさせますが、速度は大幅に低下します。',
           '16 GB VRAM しかない場合、DeepSeek V2 Q4 が優れた MoE の選択肢です。16 GB カード 1 枚に完全に収まり、RTX 4080 相当の環境で約 15〜20 tok/s のコーディングスループットを発揮します。16 GB VRAM 未満では Dense モデルに切り替えてください — 大幅な CPU オフロードが必要になると MoE の利点がなくなります。',
-          'よくある誤解：MoE モデルはスタートアップ時にアクティブなサブセットではなく、全エキスパート重みを VRAM に読み込む必要があります。VRAM コストはアクティブパラメータではなく総パラメータを反映します。単一言語コーディングタスク（例：Python のみ）の場合、Qwen 2.5 Coder 14B のような Dense モデルは、重みが汎用エキスパート全体に分散されているのではなく完全にコードに特化しているため、Mixtral 8x7B を上回ることが多いです。',
+          'よくある誤解：MoE モデルはスタートアップ時にアクティブなサブセットではなく、全エキスパート重みを VRAM に読み込む必要があります。VRAM コストはアクティブパラメータではなく総パラメータを反映します。単一言語コーディングタスク（例：Python のみ）の場合、Qwen 3 Coder 14B のような Dense モデルは、重みが汎用エキスパート全体に分散されているのではなく完全にコードに特化しているため、Mixtral 8x22B を上回ることが多いです。',
           '各 VRAM レベルでの最適なコーディングモデルの完全な比較（Dense モデルの代替案を含む）については、<a href="/ja/local-llms/best-local-llms-for-coding" class="text-primary hover:underline">コーディング向け最適ローカル LLM ガイド</a>をご覧ください。',
         ],
       },
@@ -342,15 +342,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'MoE は Mixture of Experts の略です。モデルは多くの専門サブネットワーク（エキスパート）を含みますが、トークンごとにそのうち少数のみをアクティブにします。これにより推論コストははるかに小さい Dense モデルと同等になり、一方で総パラメータ数が幅広い知識ベースを提供します — 複数の言語やフレームワークにまたがるコーディングタスクに有効です。',
           },
           {
-            q: 'Mixtral 8x7B は 1 枚の GPU に収まりますか？',
-            a: 'Q4_K_M では Mixtral 8x7B に ~26 GB VRAM が必要です。RTX 3090 または RTX 4090（24 GB）では Q3_K_M（~22 GB）に若干下げる必要があります。48 GB カード（例：RTX A6000）なら Q4 で収まります。llama.cpp でテンソル並列処理を使ったデュアル RTX 3090 も動作します。',
+            q: 'Mixtral 8x22B は 1 枚の GPU に収まりますか？',
+            a: 'Q4_K_M では Mixtral 8x22B に ~26 GB VRAM が必要です。RTX 3090 または RTX 4090（24 GB）では Q3_K_M（~22 GB）に若干下げる必要があります。48 GB カード（例：RTX A6000）なら Q4 で収まります。llama.cpp でテンソル並列処理を使ったデュアル RTX 3090 も動作します。',
           },
           {
-            q: 'コーディングでは DeepSeek V2 と Mixtral 8x7B どちらが優れていますか？',
-            a: 'コーディングベンチマークでは、DeepSeek V2 Q4 は Mixtral 8x7B と同等か、より少ない VRAM（~16 GB 対 ~26 GB）で上回ります。VRAM が限られた環境では DeepSeek V2 が優れた選択肢です。高 VRAM システムでの純粋な生成品質では両者は競争力があります。',
+            q: 'コーディングでは DeepSeek V2 と Mixtral 8x22B どちらが優れていますか？',
+            a: 'コーディングベンチマークでは、DeepSeek V2 Q4 は Mixtral 8x22B と同等か、より少ない VRAM（~16 GB 対 ~26 GB）で上回ります。VRAM が限られた環境では DeepSeek V2 が優れた選択肢です。高 VRAM システムでの純粋な生成品質では両者は競争力があります。',
           },
           {
-            q: 'Mixtral 8x7B を起動する Ollama コマンドは？',
+            q: 'Mixtral 8x22B を起動する Ollama コマンドは？',
             a: '<code>ollama pull mixtral:8x7b</code> で Q4_K_M 量子化 GGUF をダウンロードします。次に <code>ollama run mixtral:8x7b</code> で起動します。Ollama は VRAM を自動配分し、必要に応じて CPU RAM にオフロードします。',
           },
         ],
@@ -361,16 +361,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: '本地编程最佳 MoE 模型是什么？',
     seoTitle: '本地编程最佳 MoE 模型 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Mixtral 8x7B：26 GB VRAM、46.7B 参数。DeepSeek V2：16 GB VRAM、编程最佳。MoE 仅激活活跃参数。PromptQuorum 快速解答。',
+    metaDescription: 'Mixtral 8x22B：26 GB VRAM、46.7B 参数。DeepSeek V2：16 GB VRAM、编程最佳。MoE 仅激活活跃参数。PromptQuorum 快速解答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       zh: {
         question: '本地编程最佳 MoE 模型是什么？',
-        answer: 'Mixtral 8x7B 和 DeepSeek V2 是本地使用的顶级 MoE 编程模型。MoE 模型每个 token 只激活一部分参数，相比总参数量相近的稠密模型，每 GB VRAM 能获得更高质量。两者 Q4 量化都需要至少 16 GB VRAM。',
+        answer: 'Mixtral 8x22B 和 DeepSeek V2 是本地使用的顶级 MoE 编程模型。MoE 模型每个 token 只激活一部分参数，相比总参数量相近的稠密模型，每 GB VRAM 能获得更高质量。两者 Q4 量化都需要至少 16 GB VRAM。',
         bullets: [
-          'Mixtral 8x7B Q4_K_M：~26 GB VRAM，编程能力强，Ollama 可用',
+          'Mixtral 8x22B Q4_K_M：~26 GB VRAM，编程能力强，Ollama 可用',
           'DeepSeek V2 Q4：~16 GB VRAM，编程基准测试顶级成绩',
           'MoE 优势：推理速度比同等稠密模型更快',
         ],
@@ -382,8 +382,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'MoE 模型每次 token 只激活活跃专家参数——Mixtral 8x7B 总参数 46.7B，每 token 只激活约 12.9B',
-          'Mixtral 8x7B Q4_K_M 需要约 26 GB VRAM——适合双 GPU 或高 VRAM 单 GPU 配置',
+          'MoE 模型每次 token 只激活活跃专家参数——Mixtral 8x22B 总参数 46.7B，每 token 只激活约 12.9B',
+          'Mixtral 8x22B Q4_K_M 需要约 26 GB VRAM——适合双 GPU 或高 VRAM 单 GPU 配置',
           'DeepSeek V2（Q4）适配约 16 GB VRAM，并在编程基准测试中取得顶级成绩',
           '低于 16 GB VRAM 时，DeepSeek Coder 14B 等稠密编程模型比 MoE 更实用',
         ],
@@ -391,22 +391,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'MoE 架构如何改变 VRAM 计算',
         content: [
-          '<strong>Mixture of Experts（MoE）模型将每个 token 只路由通过称为"专家"的专门层子集，因此推理成本随活跃参数而非总参数扩展。</strong> Mixtral 8x7B 有 467 亿总参数，但每次前向传播只有约 129 亿处于活跃状态——计算成本相当于 13B 稠密模型。',
-          '这意味着 Mixtral 8x7B 相对于每 token 推理成本而言，输出质量远超预期。但所有专家权重必须在启动时加载到 VRAM 中。Q4_K_M 下，Mixtral 8x7B 约需 26 GB VRAM——需要 24 GB 单卡（需略微降低量化）或双 GPU 配置。',
+          '<strong>Mixture of Experts（MoE）模型将每个 token 只路由通过称为"专家"的专门层子集，因此推理成本随活跃参数而非总参数扩展。</strong> Mixtral 8x22B 有 467 亿总参数，但每次前向传播只有约 129 亿处于活跃状态——计算成本相当于 13B 稠密模型。',
+          '这意味着 Mixtral 8x22B 相对于每 token 推理成本而言，输出质量远超预期。但所有专家权重必须在启动时加载到 VRAM 中。Q4_K_M 下，Mixtral 8x22B 约需 26 GB VRAM——需要 24 GB 单卡（需略微降低量化）或双 GPU 配置。',
           'DeepSeek V2 采用针对编程任务优化的类似 MoE 架构，Q4 下约需 16 GB VRAM。其编程基准测试成绩与活跃参数量多出 2~3 倍的模型相当。',
         ],
         columns: ['模型', '总参数', '每 token 活跃参数', 'Q4 下的 VRAM'],
         rows: [
-          { '模型': 'Mixtral 8x7B', '总参数': '46.7B', '每 token 活跃参数': '~12.9B', 'Q4 下的 VRAM': '~26 GB' },
+          { '模型': 'Mixtral 8x22B', '总参数': '46.7B', '每 token 活跃参数': '~12.9B', 'Q4 下的 VRAM': '~26 GB' },
           { '模型': 'DeepSeek V2', '总参数': '236B', '每 token 活跃参数': '~21B', 'Q4 下的 VRAM': '~16 GB' },
         ],
       },
       body2: {
         title: '使用 Ollama 运行 MoE 模型',
         content: [
-          '<strong>Mixtral 8x7B 可通过 Ollama 的 <code>ollama pull mixtral:8x7b</code> 命令获取，会自动下载 Q4_K_M GGUF。</strong> Ollama 处理跨可用 VRAM 的层分配，若 VRAM 不足会部分卸载至 CPU 内存，但这会显著降低速度。',
+          '<strong>Mixtral 8x22B 可通过 Ollama 的 <code>ollama pull mixtral:8x7b</code> 命令获取，会自动下载 Q4_K_M GGUF。</strong> Ollama 处理跨可用 VRAM 的层分配，若 VRAM 不足会部分卸载至 CPU 内存，但这会显著降低速度。',
           '如果只有 16 GB VRAM，DeepSeek V2 Q4 是更好的 MoE 选择。它完全适配 16 GB 显卡，在 RTX 4080 或同等设备上编程吞吐量约 15~20 tok/s。低于 16 GB VRAM 时请切换至稠密模型——大量 CPU 卸载时 MoE 的优势会消失。',
-          '常见误解：MoE 模型必须在启动时将全部专家权重加载到 VRAM 中，而不仅仅是活跃子集。VRAM 成本反映的是总参数，而非活跃参数。对于单一语言编程任务（如纯 Python 工作），Qwen 2.5 Coder 14B 等稠密模型通常优于 Mixtral 8x7B，因为其权重完全专门化于代码，而不是分散在多个通用专家中。',
+          '常见误解：MoE 模型必须在启动时将全部专家权重加载到 VRAM 中，而不仅仅是活跃子集。VRAM 成本反映的是总参数，而非活跃参数。对于单一语言编程任务（如纯 Python 工作），Qwen 3 Coder 14B 等稠密模型通常优于 Mixtral 8x22B，因为其权重完全专门化于代码，而不是分散在多个通用专家中。',
           '关于各 VRAM 层级最佳编程模型的完整对比（包括稠密模型替代方案），请参阅<a href="/zh/local-llms/best-local-llms-for-coding" class="text-primary hover:underline">本地编程最佳 LLM 指南</a>。',
         ],
       },
@@ -419,15 +419,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'MoE 是 Mixture of Experts（混合专家）的缩写。模型包含多个专门子网络（专家），但每个 token 只激活其中少数几个。这意味着推理成本与小得多的稠密模型相当，同时总参数量提供了更广泛的知识基础——对于跨多种语言和框架的编程任务很有价值。',
           },
           {
-            q: 'Mixtral 8x7B 能在单张 GPU 上运行吗？',
-            a: 'Q4_K_M 下，Mixtral 8x7B 需要约 26 GB VRAM。RTX 3090 或 RTX 4090（24 GB）需要略降至 Q3_K_M（~22 GB）才能放入。48 GB 显卡（如 RTX A6000）可在 Q4 下运行。通过 llama.cpp 张量并行的双 RTX 3090 也可以。',
+            q: 'Mixtral 8x22B 能在单张 GPU 上运行吗？',
+            a: 'Q4_K_M 下，Mixtral 8x22B 需要约 26 GB VRAM。RTX 3090 或 RTX 4090（24 GB）需要略降至 Q3_K_M（~22 GB）才能放入。48 GB 显卡（如 RTX A6000）可在 Q4 下运行。通过 llama.cpp 张量并行的双 RTX 3090 也可以。',
           },
           {
-            q: 'DeepSeek V2 编程能力是否优于 Mixtral 8x7B？',
-            a: '在编程基准测试中，DeepSeek V2 Q4 以更少的 VRAM（~16 GB 对比 ~26 GB）达到与 Mixtral 8x7B 相当或更好的成绩。对于 VRAM 受限的配置，DeepSeek V2 是更好的选择。在高 VRAM 系统上，两者都具有竞争力。',
+            q: 'DeepSeek V2 编程能力是否优于 Mixtral 8x22B？',
+            a: '在编程基准测试中，DeepSeek V2 Q4 以更少的 VRAM（~16 GB 对比 ~26 GB）达到与 Mixtral 8x22B 相当或更好的成绩。对于 VRAM 受限的配置，DeepSeek V2 是更好的选择。在高 VRAM 系统上，两者都具有竞争力。',
           },
           {
-            q: '启动 Mixtral 8x7B 的 Ollama 命令是什么？',
+            q: '启动 Mixtral 8x22B 的 Ollama 命令是什么？',
             a: '<code>ollama pull mixtral:8x7b</code> 下载 Q4_K_M 量化 GGUF；<code>ollama run mixtral:8x7b</code> 启动模型。Ollama 自动分配 VRAM，不足时卸载到 CPU 内存。',
           },
         ],
@@ -438,16 +438,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: '¿Los mejores modelos MoE para coding local?',
     seoTitle: 'Mejores modelos MoE para coding 2026 | PromptQuorum',
-    metaDescription: 'Mixtral 8x7B: 26 GB VRAM, 46,7B parámetros. DeepSeek V2: 16 GB VRAM, top en coding. MoE solo activa los parámetros necesarios. Respuesta rápida.',
+    metaDescription: 'Mixtral 8x22B: 26 GB VRAM, 46,7B parámetros. DeepSeek V2: 16 GB VRAM, top en coding. MoE solo activa los parámetros necesarios. Respuesta rápida.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       es: {
         question: '¿Cuáles son los mejores modelos MoE para coding local?',
-        answer: 'Mixtral 8x7B y DeepSeek V2 son los mejores modelos MoE de coding para uso local, activando solo una fracción de los parámetros totales por token para ofrecer mejor calidad por VRAM que los modelos densos. Ambos necesitan al menos 16 GB de VRAM en Q4, con Mixtral en ~26 GB y DeepSeek V2 en ~16 GB.',
+        answer: 'Mixtral 8x22B y DeepSeek V2 son los mejores modelos MoE de coding para uso local, activando solo una fracción de los parámetros totales por token para ofrecer mejor calidad por VRAM que los modelos densos. Ambos necesitan al menos 16 GB de VRAM en Q4, con Mixtral en ~26 GB y DeepSeek V2 en ~16 GB.',
         bullets: [
-          'Mixtral 8x7B Q4_K_M: ~26 GB VRAM, coding sólido, disponible en Ollama',
+          'Mixtral 8x22B Q4_K_M: ~26 GB VRAM, coding sólido, disponible en Ollama',
           'DeepSeek V2 Q4: ~16 GB VRAM, puntuaciones top en benchmarks de coding',
           'Ventaja MoE: inferencia más rápida que modelos densos comparables',
         ],
@@ -459,8 +459,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Los modelos MoE activan solo los parámetros del experto activo por token — Mixtral 8x7B tiene 46.7B parámetros totales pero solo ~12.9B activos por token',
-          'Mixtral 8x7B Q4_K_M necesita ~26 GB de VRAM, convirtiéndolo en una carga de trabajo para GPU doble o GPU de alto VRAM',
+          'Los modelos MoE activan solo los parámetros del experto activo por token — Mixtral 8x22B tiene 46.7B parámetros totales pero solo ~12.9B activos por token',
+          'Mixtral 8x22B Q4_K_M necesita ~26 GB de VRAM, convirtiéndolo en una carga de trabajo para GPU doble o GPU de alto VRAM',
           'DeepSeek V2 en Q4 cabe en ~16 GB de VRAM y logra puntuaciones top en benchmarks de coding comparables a modelos densos mucho más grandes',
           'Para VRAM por debajo de 16 GB, los modelos densos de coding de 13B–14B como DeepSeek Coder 14B son más prácticos que las opciones MoE',
         ],
@@ -468,22 +468,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Cómo la arquitectura MoE cambia el cálculo de VRAM',
         content: [
-          '<strong>Los modelos Mixture of Experts (MoE) enrutan cada token solo a través de un subconjunto de capas especialistas llamadas expertos, de modo que el coste de inferencia escala con los parámetros activos, no con los totales.</strong> Mixtral 8x7B tiene 46.7 mil millones de parámetros totales pero solo ~12.9 mil millones son activos por pase hacia adelante — comparable a un modelo denso de 13B en coste de cómputo.',
-          'Esto significa que Mixtral 8x7B supera su peso en calidad de salida relativa al coste de inferencia por token. Sin embargo, todos los pesos de los expertos deben cargarse en VRAM al inicio. En Q4_K_M, Mixtral 8x7B necesita aproximadamente 26 GB de VRAM. Esto requiere una GPU de 24 GB (p. ej., RTX 3090/4090) con algún compromiso de cuantización, o una configuración de GPU doble.',
+          '<strong>Los modelos Mixture of Experts (MoE) enrutan cada token solo a través de un subconjunto de capas especialistas llamadas expertos, de modo que el coste de inferencia escala con los parámetros activos, no con los totales.</strong> Mixtral 8x22B tiene 46.7 mil millones de parámetros totales pero solo ~12.9 mil millones son activos por pase hacia adelante — comparable a un modelo denso de 13B en coste de cómputo.',
+          'Esto significa que Mixtral 8x22B supera su peso en calidad de salida relativa al coste de inferencia por token. Sin embargo, todos los pesos de los expertos deben cargarse en VRAM al inicio. En Q4_K_M, Mixtral 8x22B necesita aproximadamente 26 GB de VRAM. Esto requiere una GPU de 24 GB (p. ej., RTX 3090/4090) con algún compromiso de cuantización, o una configuración de GPU doble.',
           'DeepSeek V2 usa una arquitectura MoE similar optimizada para tareas de coding y necesita aproximadamente 16 GB de VRAM en Q4, ajustándose en una sola GPU de 16 GB o 24 GB. Sus puntuaciones en benchmarks de coding igualan a modelos dos o tres veces más grandes en recuento de parámetros activos.',
         ],
         columns: ['Modelo', 'Parámetros totales', 'Activos por token', 'VRAM en Q4'],
         rows: [
-          { 'Modelo': 'Mixtral 8x7B', 'Parámetros totales': '46.7B', 'Activos por token': '~12.9B', 'VRAM en Q4': '~26 GB' },
+          { 'Modelo': 'Mixtral 8x22B', 'Parámetros totales': '46.7B', 'Activos por token': '~12.9B', 'VRAM en Q4': '~26 GB' },
           { 'Modelo': 'DeepSeek V2', 'Parámetros totales': '236B', 'Activos por token': '~21B', 'VRAM en Q4': '~16 GB' },
         ],
       },
       body2: {
         title: 'Ejecutar modelos MoE con Ollama',
         content: [
-          '<strong>Mixtral 8x7B está disponible en Ollama mediante <code>ollama pull mixtral:8x7b</code>, que descarga automáticamente el GGUF Q4_K_M.</strong> Ollama gestiona la asignación de capas entre el VRAM disponible y hará descarga parcial a la RAM de la CPU si el VRAM es insuficiente, aunque esto reduce significativamente la velocidad.',
+          '<strong>Mixtral 8x22B está disponible en Ollama mediante <code>ollama pull mixtral:8x7b</code>, que descarga automáticamente el GGUF Q4_K_M.</strong> Ollama gestiona la asignación de capas entre el VRAM disponible y hará descarga parcial a la RAM de la CPU si el VRAM es insuficiente, aunque esto reduce significativamente la velocidad.',
           'Si solo tienes 16 GB de VRAM, DeepSeek V2 Q4 es la mejor opción MoE. Cabe completamente en una sola tarjeta de 16 GB y ofrece un rendimiento de coding de aproximadamente 15–20 tok/s en una RTX 4080 o equivalente. Para VRAM por debajo de 16 GB, cambia a modelos densos — las ventajas de MoE desaparecen cuando se requiere una descarga pesada a la CPU.',
-          'Un malentendido común: los modelos MoE deben cargar TODOS los pesos de los expertos en VRAM al inicio, no solo el subconjunto activo. El coste de VRAM refleja los parámetros totales, no los activos. Para tareas de coding en un solo lenguaje (p. ej., trabajo solo en Python), un modelo denso como Qwen 2.5 Coder 14B a menudo supera a Mixtral 8x7B porque sus pesos están completamente especializados para código en lugar de distribuidos entre expertos de propósito general.',
+          'Un malentendido común: los modelos MoE deben cargar TODOS los pesos de los expertos en VRAM al inicio, no solo el subconjunto activo. El coste de VRAM refleja los parámetros totales, no los activos. Para tareas de coding en un solo lenguaje (p. ej., trabajo solo en Python), un modelo denso como Qwen 3 Coder 14B a menudo supera a Mixtral 8x22B porque sus pesos están completamente especializados para código en lugar de distribuidos entre expertos de propósito general.',
           'Para una comparativa completa de los mejores modelos de coding en cada nivel de VRAM incluyendo alternativas densas, consulta la <a href="/es/local-llms/best-local-llms-for-coding" class="text-primary hover:underline">guía de mejores LLMs locales para coding</a>.',
         ],
       },
@@ -496,15 +496,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'MoE significa Mixture of Experts. El modelo contiene muchas subredes especialistas (expertos) pero solo activa unas pocas por token. Esto significa que el cómputo de inferencia iguala a un modelo denso mucho más pequeño mientras el número total de parámetros da al modelo una base de conocimiento más amplia — útil para tareas de coding que abarcan múltiples lenguajes y frameworks.',
           },
           {
-            q: '¿Cabe Mixtral 8x7B en una sola GPU?',
-            a: 'En Q4_K_M, Mixtral 8x7B necesita ~26 GB de VRAM. Una sola RTX 3090 o RTX 4090 (24 GB) requiere una ligera reducción de cuantización a Q3_K_M (~22 GB) para ajustarse. Una tarjeta de 48 GB (p. ej., RTX A6000) lo admite en Q4. También funciona con dual RTX 3090 mediante llama.cpp con paralelismo tensorial.',
+            q: '¿Cabe Mixtral 8x22B en una sola GPU?',
+            a: 'En Q4_K_M, Mixtral 8x22B necesita ~26 GB de VRAM. Una sola RTX 3090 o RTX 4090 (24 GB) requiere una ligera reducción de cuantización a Q3_K_M (~22 GB) para ajustarse. Una tarjeta de 48 GB (p. ej., RTX A6000) lo admite en Q4. También funciona con dual RTX 3090 mediante llama.cpp con paralelismo tensorial.',
           },
           {
-            q: '¿DeepSeek V2 es mejor que Mixtral 8x7B para coding?',
-            a: 'En benchmarks de coding, DeepSeek V2 Q4 iguala o supera a Mixtral 8x7B con menor VRAM (~16 GB vs ~26 GB). Para configuraciones con VRAM limitado, DeepSeek V2 es la mejor opción. Para calidad de generación pura en un sistema de alto VRAM, ambos son competitivos.',
+            q: '¿DeepSeek V2 es mejor que Mixtral 8x22B para coding?',
+            a: 'En benchmarks de coding, DeepSeek V2 Q4 iguala o supera a Mixtral 8x22B con menor VRAM (~16 GB vs ~26 GB). Para configuraciones con VRAM limitado, DeepSeek V2 es la mejor opción. Para calidad de generación pura en un sistema de alto VRAM, ambos son competitivos.',
           },
           {
-            q: '¿Qué comando de Ollama ejecuta Mixtral 8x7B?',
+            q: '¿Qué comando de Ollama ejecuta Mixtral 8x22B?',
             a: '<code>ollama pull mixtral:8x7b</code> descarga el GGUF cuantizado Q4_K_M. Luego <code>ollama run mixtral:8x7b</code> lo inicia. Ollama asigna VRAM automáticamente y vierte a la RAM de la CPU si es necesario. Consulta los <a href="/es/prompt-bites/best-models-amd-5700x-3070ti" class="text-primary hover:underline">requisitos de VRAM GPU por modelo</a> para confirmar que tu tarjeta puede manejarlo.',
           },
         ],

@@ -403,7 +403,7 @@ require_code_owner_reviews: true`,
     intro: 'Nicht überprüfte Prompts verursachen 3x mehr Produktionsfehler. Ein strukturierter Team-Workflow verhindert Halluzinationen, fängt Sicherheitslücken ab und gewährleistet Konsistenz über Modelle hinweg. Dieser Leitfaden behandelt den vollständigen Workflow: Review-Gates, Team-Zusammensetzung, Qualitätsprüfungen und Automatisierung.',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
-    lastFactChecked: '2026-04-30 — GPT-4o, Claude, Braintrust, GitHub Actions, GitLab CI verifiziert',
+    lastFactChecked: '2026-04-30 — GPT-5.5, Claude, Braintrust, GitHub Actions, GitLab CI verifiziert',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die mit LLMs arbeiten; Prompt Engineers; Teamleiter',
     seoTitle: 'Prompt-Review für Teams: 7-Punkte-Checkliste & CI/CD-Gates',
@@ -584,7 +584,7 @@ require_code_owner_reviews: true`,
           {
             'Kriterium': 'Modell-Fit',
             'Was zu prüfen ist': 'Ist der Prompt für das Zielmodell geschrieben? Nutzt er modell-spezifische Features korrekt?',
-            'Fehler-Beispiel': 'Claude-spezifische Instruktionen (Thinking Tags) in Prompt für GPT-4o verwendet.',
+            'Fehler-Beispiel': 'Claude-spezifische Instruktionen (Thinking Tags) in Prompt für GPT-5.5 verwendet.',
             'Erfolgs-Beispiel': 'Prompt ist agnostisch, oder explizit dokumentiert: "Für Claude. Nutzt Extended Thinking." '
           },
         ],
@@ -714,7 +714,7 @@ require_code_owner_reviews: true`,
         content: [
           '**Ja — Die EU, Japan und China adden jeweils Compliance-Anforderungen on top des Base-Workflows hinzu.** Teams, die mit regulierten Daten umgehen, müssen diese in ihre Review-Checklisten einbauen.',
           '**EU (GDPR + AI Act):** GDPR Artikel 9 erfordert menschliches Oversight für hochriskante KI-Verarbeitung — Prompt-Review erfüllt dies. Der EU AI Act (Enforcement ab 2026) fordert Traceability von KI-Entscheidungen; Version-kontrollierte Prompt-Reviews mit Approval-Logs erfüllen diese Anforderung. Fügen Sie ein GDPR-Impact-Assessment-Checklisten-Item für Prompts hinzu, die personenbezogene Daten verarbeiten.',
-          '**DSGVO Artikel 28 – Auftragsverarbeiter:** Wenn Sie externe APIs (z.B. GPT-4o Cloud, Claude API) nutzen, benötigen Sie eine Auftragsverarbeiter-Vereinbarung. Ein dokumentierter Review-Prozess mit Audit-Trail zeigt Ihre Sorgfalt (Due Diligence). Lokale Inferenz (On-Premise oder Ollama) ist DSGVO-konform, da Daten die EU niemals verlassen.',
+          '**DSGVO Artikel 28 – Auftragsverarbeiter:** Wenn Sie externe APIs (z.B. GPT-5.5 Cloud, Claude API) nutzen, benötigen Sie eine Auftragsverarbeiter-Vereinbarung. Ein dokumentierter Review-Prozess mit Audit-Trail zeigt Ihre Sorgfalt (Due Diligence). Lokale Inferenz (On-Premise oder Ollama) ist DSGVO-konform, da Daten die EU niemals verlassen.',
           '**BSI-Grundschutz-Kataloge:** Für sensitive German-Enterprise-Deployments: Referenzieren Sie BSI C5-zertifizierte Cloud-Infrastruktur (z.B. für Healthcare/Finance). Ein strukturierter Review-Workflow erfüllt Anforderungen an Zugriffskontrolle und Audit-Logging.',
           '**Japan (METI AI Guidelines 2024):** METI empfiehlt KI-Entscheidungs-Rationale zu loggen für Auditierbarkeit. Speichern Sie Review-Kommentare und Approval-Gründe in Ihren Git-Commit-Messages oder PR-Beschreibungen.',
           '**China (Datensicherheitsgesetz 2021):** Prompts, die China-User-Daten verarbeiten, müssen Evaluierungs-Logs On-Premise oder in China-hosted-Infrastruktur halten. Führen Sie Test-Suites gegen China-User-Daten lokal durch, nicht via externe APIs.',
@@ -739,7 +739,7 @@ require_code_owner_reviews: true`,
         faqs: [
           {
             q: 'Was sollte eine Prompt-Review-Checkliste enthalten?',
-            a: 'Eine Prompt-Review-Checkliste muss abdecken: (1) Klarheit — ist die Anweisung eindeutig? (2) Kontext — sind genug Details vorhanden, damit das Modell korrekt denken kann? (3) Ausgabeformat — legt der Prompt die erwartete Ausgabestruktur fest (JSON, Markdown, etc.)? (4) Einschränkungen — sind Halluzinations-Risiken (Factual Claims) gekennzeichnet? (5) Sicherheit — sind Prompt-Injection-Anfälligkeit möglich? (6) Konsistenz — passt der Prompt zu bestehenden Mustern in Ihrer Codebase? (7) Modell-Kompatibilität — ist der Prompt für das Zielmodell geschrieben (GPT-4o, Claude, Llama, etc.)?'
+            a: 'Eine Prompt-Review-Checkliste muss abdecken: (1) Klarheit — ist die Anweisung eindeutig? (2) Kontext — sind genug Details vorhanden, damit das Modell korrekt denken kann? (3) Ausgabeformat — legt der Prompt die erwartete Ausgabestruktur fest (JSON, Markdown, etc.)? (4) Einschränkungen — sind Halluzinations-Risiken (Factual Claims) gekennzeichnet? (5) Sicherheit — sind Prompt-Injection-Anfälligkeit möglich? (6) Konsistenz — passt der Prompt zu bestehenden Mustern in Ihrer Codebase? (7) Modell-Kompatibilität — ist der Prompt für das Zielmodell geschrieben (GPT-5.5, Claude, Llama, etc.)?'
           },
           {
             q: 'Wer sollte Prompts in einem Team überprüfen?',
@@ -767,7 +767,7 @@ require_code_owner_reviews: true`,
           },
           {
             q: 'Wie oft sollten wir bestehende Prompts überprüfen?',
-            a: 'Überprüfen Sie Prompts nach diesen Triggern: (1) Jede Änderung (Code-Review-Stil). (2) Bei Deployment auf ein neues Modell (z.B. Migration von GPT-4o zu Claude). (3) Wenn sich der Use-Case ändert (z.B. Prompt wechselt von Customer-Facing zu Internal). (4) Nach einem Produktions-Incident (Halluzination, falsche Ausgabe). NICHT erforderlich: Überprüfung bei reinen Dokumentations-Änderungen oder Test-Only-Änderungen.'
+            a: 'Überprüfen Sie Prompts nach diesen Triggern: (1) Jede Änderung (Code-Review-Stil). (2) Bei Deployment auf ein neues Modell (z.B. Migration von GPT-5.5 zu Claude). (3) Wenn sich der Use-Case ändert (z.B. Prompt wechselt von Customer-Facing zu Internal). (4) Nach einem Produktions-Incident (Halluzination, falsche Ausgabe). NICHT erforderlich: Überprüfung bei reinen Dokumentations-Änderungen oder Test-Only-Änderungen.'
           },
           {
             q: 'Welche Tools helfen bei der Automatisierung von Prompt-Review?',
@@ -779,7 +779,7 @@ require_code_owner_reviews: true`,
           },
           {
             q: 'Muss ich bei der Verwendung von Prompt-Review DSGVO beachten?',
-            a: 'Ja, absolut. Die DSGVO Artikel 28 und 32 erfordern Auftragsverarbeiter-Vereinbarungen und technische Maßnahmen, wenn Prompts personenbezogene Daten verarbeiten. Ein strukturierter Review-Workflow mit dokumentierter Genehmigung und Audit-Trail erfüllt die Anforderung der „Rechenschaftspflicht" (Accountability). Besonders wichtig: Wenn Sie externe APIs (GPT-4o, Claude Cloud API) nutzen, sollte Ihr Review-Prozess sicherstellen, dass keine Personendaten an diese APIs gesendet werden, oder Sie müssen eine entsprechende Auftragsverarbeiter-Vereinbarung haben. Lokale Inferenz (z.B. Ollama auf On-Premise-Hardware) ist DSGVO-konform, da Daten niemals die EU verlassen.'
+            a: 'Ja, absolut. Die DSGVO Artikel 28 und 32 erfordern Auftragsverarbeiter-Vereinbarungen und technische Maßnahmen, wenn Prompts personenbezogene Daten verarbeiten. Ein strukturierter Review-Workflow mit dokumentierter Genehmigung und Audit-Trail erfüllt die Anforderung der „Rechenschaftspflicht" (Accountability). Besonders wichtig: Wenn Sie externe APIs (GPT-5.5, Claude Cloud API) nutzen, sollte Ihr Review-Prozess sicherstellen, dass keine Personendaten an diese APIs gesendet werden, oder Sie müssen eine entsprechende Auftragsverarbeiter-Vereinbarung haben. Lokale Inferenz (z.B. Ollama auf On-Premise-Hardware) ist DSGVO-konform, da Daten niemals die EU verlassen.'
           },
           {
             q: 'Ist Prompt-Review für den deutschen Mittelstand geeignet?',
@@ -808,7 +808,7 @@ require_code_owner_reviews: true`,
     intro: 'Los prompts sin revisar causan 3 veces más fallos en producción que los revisados. Un flujo de trabajo de revisión de prompts estructurado en equipo previene que las alucinaciones lleguen a producción, detecta vulnerabilidades de seguridad antes del despliegue y garantiza la coherencia entre modelos. Esta guía cubre el flujo completo: activar gates de revisión, formar equipos de revisión, ejecutar controles de calidad y automatizar la toma de decisiones.',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
-    lastFactChecked: '2026-04-30 — GPT-4o, Claude, Braintrust, GitHub Actions, GitLab CI verificados',
+    lastFactChecked: '2026-04-30 — GPT-5.5, Claude, Braintrust, GitHub Actions, GitLab CI verificados',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que trabajan con LLMs, ingenieros de prompts, líderes de equipos de ingeniería',
     seoTitle: 'Revisión de prompts en equipo: lista de 7 puntos y CI/CD',
@@ -989,7 +989,7 @@ require_code_owner_reviews: true`,
           {
             'Criterio': 'Ajuste al modelo',
             'Qué verificar': '¿El prompt está escrito para el modelo objetivo? ¿Usa correctamente las características específicas del modelo?',
-            'Ejemplo de fallo': 'Instrucciones específicas de Claude (thinking tags) usadas en un prompt desplegado en GPT-4o.',
+            'Ejemplo de fallo': 'Instrucciones específicas de Claude (thinking tags) usadas en un prompt desplegado en GPT-5.5.',
             'Ejemplo de éxito': 'El prompt es agnóstico, o documentado explícitamente: "Para Claude. Usa extended thinking." '
           },
         ],
@@ -1142,7 +1142,7 @@ require_code_owner_reviews: true`,
         faqs: [
           {
             q: '¿Qué debe incluir una lista de verificación de revisión de prompts?',
-            a: 'Una lista de verificación de revisión de prompts debe cubrir: (1) Claridad — ¿la instrucción es inequívoca? (2) Contexto — ¿hay suficientes detalles para que el modelo razone correctamente? (3) Formato de salida — ¿el prompt especifica la estructura de salida esperada (JSON, markdown, etc.)? (4) Restricciones — ¿los riesgos de alucinación (afirmaciones factuales) están marcados? (5) Seguridad — ¿son posibles las vulnerabilidades de inyección de prompts? (6) Coherencia — ¿el prompt coincide con los patrones existentes en tu código base? (7) Compatibilidad con el modelo — ¿el prompt está escrito para el modelo objetivo (GPT-4o, Claude, Llama, etc.)?'
+            a: 'Una lista de verificación de revisión de prompts debe cubrir: (1) Claridad — ¿la instrucción es inequívoca? (2) Contexto — ¿hay suficientes detalles para que el modelo razone correctamente? (3) Formato de salida — ¿el prompt especifica la estructura de salida esperada (JSON, markdown, etc.)? (4) Restricciones — ¿los riesgos de alucinación (afirmaciones factuales) están marcados? (5) Seguridad — ¿son posibles las vulnerabilidades de inyección de prompts? (6) Coherencia — ¿el prompt coincide con los patrones existentes en tu código base? (7) Compatibilidad con el modelo — ¿el prompt está escrito para el modelo objetivo (GPT-5.5, Claude, Llama, etc.)?'
           },
           {
             q: '¿Quién debería revisar los prompts en un equipo?',
@@ -1170,7 +1170,7 @@ require_code_owner_reviews: true`,
           },
           {
             q: '¿Con qué frecuencia deberíamos revisar los prompts existentes?',
-            a: 'Revisa los prompts en estos desencadenantes: (1) Cada cambio (estilo de revisión de código). (2) Al desplegar en un nuevo modelo (p. ej., migrar de GPT-4o a Claude). (3) Cuando el caso de uso cambia (p. ej., el prompt pasa de cara al cliente a interno). (4) Después de un incidente en producción (alucinación, salida incorrecta). NO requiere revisión para cambios solo de documentación o solo de pruebas.'
+            a: 'Revisa los prompts en estos desencadenantes: (1) Cada cambio (estilo de revisión de código). (2) Al desplegar en un nuevo modelo (p. ej., migrar de GPT-5.5 a Claude). (3) Cuando el caso de uso cambia (p. ej., el prompt pasa de cara al cliente a interno). (4) Después de un incidente en producción (alucinación, salida incorrecta). NO requiere revisión para cambios solo de documentación o solo de pruebas.'
           },
           {
             q: '¿Qué herramientas ayudan a automatizar la revisión de prompts?',
@@ -1203,7 +1203,7 @@ require_code_owner_reviews: true`,
     intro: '**Les prompts non révisés causent 3× plus d\'échecs en production.** Un workflow structuré empêche les hallucinations, détecte les failles de sécurité et assure la cohérence entre les modèles. Ce guide couvre l\'intégralité du processus : gates de revue, rôles d\'équipe, vérifications qualité et automatisation CI/CD.',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
-    lastFactChecked: '2026-04-30 — GPT-4o, Claude, Braintrust, GitHub Actions, GitLab CI vérifiés',
+    lastFactChecked: '2026-04-30 — GPT-5.5, Claude, Braintrust, GitHub Actions, GitLab CI vérifiés',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs travaillant avec les LLM; Ingénieurs en Prompt Engineering; Responsables techniques',
     seoTitle: 'Workflow de Revue de Prompts : Checklist & Gates CI/CD',
@@ -1384,7 +1384,7 @@ require_code_owner_reviews: true`,
           {
             'Critère': 'Compatibilité modèle',
             'À vérifier': 'Le prompt est-il écrit pour le modèle cible ? Utilise-t-il correctement les features modèle-spécifiques ?',
-            'Exemple défaut': 'Instructions Claude (thinking tags) utilisées dans prompt pour GPT-4o.',
+            'Exemple défaut': 'Instructions Claude (thinking tags) utilisées dans prompt pour GPT-5.5.',
             'Exemple réussi': 'Prompt est agnostique, ou explicitement documenté : "Pour Claude. Utilise extended thinking." '
           },
         ],
@@ -1537,7 +1537,7 @@ require_code_owner_reviews: true`,
         faqs: [
           {
             q: 'Que doit contenir une checklist de revue de prompts ?',
-            a: 'Une checklist doit couvrir : (1) Clarté — l\'instruction est-elle sans ambiguïté ? (2) Contexte — suffisamment de détails pour que le modèle raisonne correctement ? (3) Format de sortie — le format attendu est-il spécifié (JSON, markdown, etc.) ? (4) Risque d\'hallucination — y a-t-il des affirmations factuelles sans sources ? (5) Sécurité — vulnérabilités d\'injection possibles ? (6) Cohérence — aligne-t-elle les patterns de votre codebase ? (7) Compatibilité modèle — écrite pour le modèle cible (GPT-4o, Claude, Llama, etc.) ?'
+            a: 'Une checklist doit couvrir : (1) Clarté — l\'instruction est-elle sans ambiguïté ? (2) Contexte — suffisamment de détails pour que le modèle raisonne correctement ? (3) Format de sortie — le format attendu est-il spécifié (JSON, markdown, etc.) ? (4) Risque d\'hallucination — y a-t-il des affirmations factuelles sans sources ? (5) Sécurité — vulnérabilités d\'injection possibles ? (6) Cohérence — aligne-t-elle les patterns de votre codebase ? (7) Compatibilité modèle — écrite pour le modèle cible (GPT-5.5, Claude, Llama, etc.) ?'
           },
           {
             q: 'Qui devrait réviser les prompts dans une équipe ?',
@@ -1565,7 +1565,7 @@ require_code_owner_reviews: true`,
           },
           {
             q: 'À quelle fréquence réviser les prompts existants ?',
-            a: 'Révisez aux déclencheurs : (1) Chaque modification (style revue code). (2) Déploiement sur nouveau modèle (migration GPT-4o vers Claude). (3) Changement de use case (passage customer-facing vers interne). (4) Après incident production (hallucination, mauvaise sortie). PAS requis : changements documentation-only ou test-only.'
+            a: 'Révisez aux déclencheurs : (1) Chaque modification (style revue code). (2) Déploiement sur nouveau modèle (migration GPT-5.5 vers Claude). (3) Changement de use case (passage customer-facing vers interne). (4) Après incident production (hallucination, mauvaise sortie). PAS requis : changements documentation-only ou test-only.'
           },
           {
             q: 'Quels outils aident à automatiser la revue de prompts ?',
@@ -1598,7 +1598,7 @@ require_code_owner_reviews: true`,
     intro: '**レビューなしのプロンプトは本番環境で3倍多くの障害を引き起こします。** 構造化されたチームワークフローは幻覚を防ぎ、セキュリティの脆弱性を検出し、モデル全体の一貫性を確保します。このガイドでは、レビューゲート、チーム構成、品質チェック、自動化CI/CDゲートについて解説します。',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
-    lastFactChecked: '2026-04-30 — GPT-4o、Claude、Braintrust、GitHub Actions、GitLab CI で検証済み',
+    lastFactChecked: '2026-04-30 — GPT-5.5、Claude、Braintrust、GitHub Actions、GitLab CI で検証済み',
     educationalLevel: 'Intermediate',
     audience: 'LLM で開発するエンジニア、プロンプトエンジニア、エンジニアリングチームリード',
     toc: [
@@ -1779,7 +1779,7 @@ require_code_owner_reviews: true`,
           {
             '基準': 'モデル適合性',
             '確認事項': 'プロンプトはターゲットモデル向けに書かれているか？モデル固有の機能を正しく使用しているか？',
-            '失敗例': 'Claude固有の指示（thinking tags）がGPT-4oにデプロイされるプロンプトで使用されている。',
+            '失敗例': 'Claude固有の指示（thinking tags）がGPT-5.5にデプロイされるプロンプトで使用されている。',
             '合格例': 'プロンプトはモデル非依存、または明示的に文書化されている：「Claude向け。拡張思考を使用。」 '
           },
         ],
@@ -1931,7 +1931,7 @@ require_code_owner_reviews: true`,
         faqs: [
           {
             q: 'プロンプトレビューチェックリストに何を含めるべきですか？',
-            a: 'プロンプトレビューチェックリストは以下をカバーする必要があります：（1）明確性 — 指示は明確ですか？（2）コンテキスト — モデルが正しく推論するのに十分な詳細が提供されていますか？（3）出力形式 — 期待される出力構造（JSON、マークダウンなど）を指定していますか？（4）制約 — 幻覚リスク（事実的な主張）はフラグが立てられていますか？（5）セキュリティ — プロンプトインジェクションの脆弱性の可能性はありますか？（6）一貫性 — プロンプトはコードベース内の既存パターンと一致していますか？（7）モデル互換性 — プロンプトは対象モデル（GPT-4o、Claude、Llamaなど）向けに書かれていますか？'
+            a: 'プロンプトレビューチェックリストは以下をカバーする必要があります：（1）明確性 — 指示は明確ですか？（2）コンテキスト — モデルが正しく推論するのに十分な詳細が提供されていますか？（3）出力形式 — 期待される出力構造（JSON、マークダウンなど）を指定していますか？（4）制約 — 幻覚リスク（事実的な主張）はフラグが立てられていますか？（5）セキュリティ — プロンプトインジェクションの脆弱性の可能性はありますか？（6）一貫性 — プロンプトはコードベース内の既存パターンと一致していますか？（7）モデル互換性 — プロンプトは対象モデル（GPT-5.5、Claude、Llamaなど）向けに書かれていますか？'
           },
           {
             q: 'チームではだれがプロンプトをレビューすべきですか？',
@@ -1959,7 +1959,7 @@ require_code_owner_reviews: true`,
           },
           {
             q: '既存のプロンプトをどのくらい頻繁にレビューすべきですか？',
-            a: 'これらのトリガーでプロンプトをレビューしてください：（1）すべての変更（コードレビュースタイル）。（2）新しいモデルにデプロイする場合（例：GPT-4oからClaudeへの移行）。（3）ユースケースが変わる場合（例：プロンプトが顧客向けから内部に移行）。（4）本番環境でのインシデント後（幻覚、不正な出力）。ドキュメントのみの変更またはテストのみの変更ではレビューを要求しないでください。'
+            a: 'これらのトリガーでプロンプトをレビューしてください：（1）すべての変更（コードレビュースタイル）。（2）新しいモデルにデプロイする場合（例：GPT-5.5からClaudeへの移行）。（3）ユースケースが変わる場合（例：プロンプトが顧客向けから内部に移行）。（4）本番環境でのインシデント後（幻覚、不正な出力）。ドキュメントのみの変更またはテストのみの変更ではレビューを要求しないでください。'
           },
           {
             q: 'プロンプトレビューの自動化に役立つツールはどれですか？',
@@ -1992,7 +1992,7 @@ require_code_owner_reviews: true`,
     intro: '**未经审查的 Prompt 在生产环境中导致故障率高 3 倍。** 结构化的团队审查工作流可防止模型幻觉、检测安全漏洞、确保模型间一致性，并满足中国数据合规要求。本指南涵盖完整流程：审查门控设计、团队角色分工、自动化检查、手动审查和部署把控。',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
-    lastFactChecked: '2026-04-30 — GPT-4o、Claude、Braintrust、GitHub Actions、GitLab CI 已验证',
+    lastFactChecked: '2026-04-30 — GPT-5.5、Claude、Braintrust、GitHub Actions、GitLab CI 已验证',
     educationalLevel: 'Intermediate',
     audience: '使用 LLM 开发的工程师、Prompt 工程师、团队负责人',
     toc: [
@@ -2136,7 +2136,7 @@ require_code_owner_reviews: true`,
           '**幻觉风险（Hallucination Risk）** — Prompt 是否促使模型做出事实声明（统计、日期、企业名称）？无源数据 = 风险。修复 Prompt 或在输出上标记。',
           '**安全性（Security）** — 用户输入是否直接插入 Prompt？是 = 注入漏洞风险。清理输入或从系统 Prompt 分离问题。',
           '**一致性（Consistency）** — 这个 Prompt 是否与代码库中的其他 Prompt 使用相同风格、变量命名和输出格式？不一致 = 修复。',
-          '**模型适配性（Model Fit）** — 这个 Prompt 是否为目标模型（GPT-4o、Claude 4.6 Sonnet、Llama 3.3）优化？未测试 = 测试后修复。',
+          '**模型适配性（Model Fit）** — 这个 Prompt 是否为目标模型（GPT-5.5、Claude 4.6 Sonnet、Llama 3.3）优化？未测试 = 测试后修复。',
         ],
       },
 
@@ -2226,7 +2226,7 @@ require_code_owner_reviews: true`,
         faqs: [
           {
             q: 'Prompt 审查检查清单应包含哪些内容？',
-            a: 'Prompt 审查检查清单必须涵盖：（1）清晰性 — 指令是否明确无歧义？（2）上下文 — 是否提供足够的信息让模型正确推理？（3）输出格式 — 是否指定预期的输出结构（JSON、Markdown 等）？（4）约束条件 — 是否标记了幻觉风险（事实声明）？（5）安全性 — 是否存在 Prompt 注入漏洞？（6）一致性 — Prompt 是否与代码库中的现有模式一致？（7）模型适配性 — Prompt 是否针对目标模型（GPT-4o、Claude、Llama 等）编写？',
+            a: 'Prompt 审查检查清单必须涵盖：（1）清晰性 — 指令是否明确无歧义？（2）上下文 — 是否提供足够的信息让模型正确推理？（3）输出格式 — 是否指定预期的输出结构（JSON、Markdown 等）？（4）约束条件 — 是否标记了幻觉风险（事实声明）？（5）安全性 — 是否存在 Prompt 注入漏洞？（6）一致性 — Prompt 是否与代码库中的现有模式一致？（7）模型适配性 — Prompt 是否针对目标模型（GPT-5.5、Claude、Llama 等）编写？',
           },
           {
             q: '团队中谁应该审查 Prompt？',
@@ -2254,7 +2254,7 @@ require_code_owner_reviews: true`,
           },
           {
             q: '应该多频繁地审查现有的 Prompt？',
-            a: '在以下触发条件下审查 Prompt：（1）每次变更（代码审查风格）。（2）部署到新模型时（如从 GPT-4o 迁移到 Claude）。（3）使用场景变化时（如 Prompt 从面向客户改为内部使用）。（4）发生生产事件后（幻觉、错误输出）。不要求对仅文档或仅测试的变更进行审查。',
+            a: '在以下触发条件下审查 Prompt：（1）每次变更（代码审查风格）。（2）部署到新模型时（如从 GPT-5.5 迁移到 Claude）。（3）使用场景变化时（如 Prompt 从面向客户改为内部使用）。（4）发生生产事件后（幻觉、错误输出）。不要求对仅文档或仅测试的变更进行审查。',
           },
           {
             q: '哪些工具可以帮助自动化 Prompt 审查？',

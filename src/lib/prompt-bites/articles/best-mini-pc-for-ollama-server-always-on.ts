@@ -79,7 +79,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 4,
             title: 'Apple Mac Mini M4 Pro — Best for macOS',
-            content: 'The Mac Mini M4 Pro (24-core GPU, 48 GB unified memory, ~$1399) is the only mini PC that runs 32B models at GPU speed out of the box. Ollama on Apple Silicon uses Metal, not CUDA — the 48 GB unified memory loads Qwen2.5 32B Q4 (~18 GB) and runs at 20–30 tok/s. Power: 18–30 W under Ollama load. Ideal for macOS users who want a silent, always-on home server that doubles as a desk machine. The price premium is real but justified if 32B performance matters.',
+            content: 'The Mac Mini M4 Pro (24-core GPU, 48 GB unified memory, ~$1399) is the only mini PC that runs 32B models at GPU speed out of the box. Ollama on Apple Silicon uses Metal, not CUDA — the 48 GB unified memory loads Qwen3 32B Q4 (~18 GB) and runs at 20–30 tok/s. Power: 18–30 W under Ollama load. Ideal for macOS users who want a silent, always-on home server that doubles as a desk machine. The price premium is real but justified if 32B performance matters.',
             affiliateLinks: [
               { label: 'Apple Mac Mini M4 Pro on Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
               { label: 'Apple Mac Mini M4 Pro on Apple.com', url: 'https://www.apple.com/shop/buy-mac/mac-mini' },
@@ -201,7 +201,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — Bestes Gesamtpaket',
-            content: 'Der Minisforum UM890 Pro läuft mit dem AMD Ryzen 9 8945HS (8-Kerne, bis 5,2 GHz) und unterstützt bis zu 96 GB DDR5-5600 Dual-Channel-RAM — genug, um Llama 3.1 70B bei Q4 vollständig in RAM zu laden. Die Radeon 780M iGPU (12 RDNA3-CUs) beschleunigt 7B- und 13B-Modelle auf 8–14 Tok/s via ROCm. CPU-only 7B Q4: ~12–18 Tok/s. Idle: ~15 W. Last (GPU aktiv): ~35–45 W. Preis: ~450 € (32 GB) bis 550 € (64 GB).',
+            content: 'Der Minisforum UM890 Pro läuft mit dem AMD Ryzen 9 8945HS (8-Kerne, bis 5,2 GHz) und unterstützt bis zu 96 GB DDR5-5600 Dual-Channel-RAM — genug, um Llama 3.3 70B bei Q4 vollständig in RAM zu laden. Die Radeon 780M iGPU (12 RDNA3-CUs) beschleunigt 7B- und 13B-Modelle auf 8–14 Tok/s via ROCm. CPU-only 7B Q4: ~12–18 Tok/s. Idle: ~15 W. Last (GPU aktiv): ~35–45 W. Preis: ~450 € (32 GB) bis 550 € (64 GB).',
             affiliateLinks: [
               { label: 'Minisforum UM890 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Minisforum+UM890+Pro' },
             ],
@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 4,
             title: 'Apple Mac Mini M4 Pro — Bester macOS-Mini-PC',
-            content: 'Der Mac Mini M4 Pro (24-Kerne-GPU, 48 GB Unified Memory, ~1399 €) ist der einzige Mini-PC, der 32B-Modelle mit GPU-Geschwindigkeit von Haus aus ausführt. Ollama auf Apple Silicon nutzt Metal — die 48 GB Unified Memory lädt Qwen2.5 32B Q4 (~18 GB) und läuft mit 20–30 Tok/s. Stromaufnahme: 18–30 W unter Ollama-Last. Ideal für macOS-Nutzer, die einen stillen, dauerhaft laufenden Heimserver möchten.',
+            content: 'Der Mac Mini M4 Pro (24-Kerne-GPU, 48 GB Unified Memory, ~1399 €) ist der einzige Mini-PC, der 32B-Modelle mit GPU-Geschwindigkeit von Haus aus ausführt. Ollama auf Apple Silicon nutzt Metal — die 48 GB Unified Memory lädt Qwen3 32B Q4 (~18 GB) und läuft mit 20–30 Tok/s. Stromaufnahme: 18–30 W unter Ollama-Last. Ideal für macOS-Nutzer, die einen stillen, dauerhaft laufenden Heimserver möchten.',
             affiliateLinks: [
               { label: 'Apple Mac Mini M4 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Mac+Mini+M4+Pro' },
             ],
@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Kann ein Mini-PC 13B- oder größere Modelle in nutzbarer Geschwindigkeit ausführen?',
-            a: 'Ja — mit genug RAM. Der UM890 Pro mit 64 GB läuft Llama 3.1 13B Q8 vollständig im RAM mit ~8–12 Tok/s CPU-only. Mit der Radeon 780M iGPU laufen Q4-Modelle mit 10–18 Tok/s — nutzbar für Hintergrund-Zusammenfassungen oder API-Aufrufe. Für 30B+-Modelle ist der Mac Mini M4 Pro (48 GB Unified Memory) die einzige Mini-PC-Option unter 1500 €.',
+            a: 'Ja — mit genug RAM. Der UM890 Pro mit 64 GB läuft Llama 3.3 13B Q8 vollständig im RAM mit ~8–12 Tok/s CPU-only. Mit der Radeon 780M iGPU laufen Q4-Modelle mit 10–18 Tok/s — nutzbar für Hintergrund-Zusammenfassungen oder API-Aufrufe. Für 30B+-Modelle ist der Mac Mini M4 Pro (48 GB Unified Memory) die einzige Mini-PC-Option unter 1500 €.',
           },
           {
             q: 'Funktioniert Ollama gut als Netzwerkserver auf einem Mini-PC?',
@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — Meilleur choix global',
-            content: 'Le Minisforum UM890 Pro tourne avec l\'AMD Ryzen 9 8945HS (8 cœurs, jusqu\'à 5,2 GHz) et supporte jusqu\'à 96 Go de DDR5-5600 double canal — assez pour charger Llama 3.1 70B en Q4 entièrement en RAM. L\'iGPU Radeon 780M (12 CU RDNA3) accélère les modèles 7B et 13B à 8–14 tok/s via ROCm. CPU seul 7B Q4 : ~12–18 tok/s. Consommation au repos : ~15 W. Sous charge (GPU actif) : ~35–45 W. Prix : ~450 € (32 Go) à 550 € (64 Go).',
+            content: 'Le Minisforum UM890 Pro tourne avec l\'AMD Ryzen 9 8945HS (8 cœurs, jusqu\'à 5,2 GHz) et supporte jusqu\'à 96 Go de DDR5-5600 double canal — assez pour charger Llama 3.3 70B en Q4 entièrement en RAM. L\'iGPU Radeon 780M (12 CU RDNA3) accélère les modèles 7B et 13B à 8–14 tok/s via ROCm. CPU seul 7B Q4 : ~12–18 tok/s. Consommation au repos : ~15 W. Sous charge (GPU actif) : ~35–45 W. Prix : ~450 € (32 Go) à 550 € (64 Go).',
             affiliateLinks: [
               { label: 'Minisforum UM890 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Minisforum+UM890+Pro' },
             ],
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 4,
             title: 'Apple Mac Mini M4 Pro — Meilleur pour macOS',
-            content: 'Le Mac Mini M4 Pro (GPU 24 cœurs, 48 Go de mémoire unifiée, ~1399 €) est le seul mini PC à faire tourner les modèles 32B à vitesse GPU de série. Ollama sur Apple Silicon utilise Metal — les 48 Go de mémoire unifiée chargent Qwen2.5 32B Q4 (~18 Go) à 20–30 tok/s. Consommation : 18–30 W sous Ollama. Idéal pour les utilisateurs macOS qui veulent un serveur maison silencieux.',
+            content: 'Le Mac Mini M4 Pro (GPU 24 cœurs, 48 Go de mémoire unifiée, ~1399 €) est le seul mini PC à faire tourner les modèles 32B à vitesse GPU de série. Ollama sur Apple Silicon utilise Metal — les 48 Go de mémoire unifiée chargent Qwen3 32B Q4 (~18 Go) à 20–30 tok/s. Consommation : 18–30 W sous Ollama. Idéal pour les utilisateurs macOS qui veulent un serveur maison silencieux.',
             affiliateLinks: [
               { label: 'Apple Mac Mini M4 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Mac+Mini+M4+Pro' },
             ],
@@ -362,7 +362,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Un mini PC peut-il faire tourner des modèles 13B ou plus à vitesse utile ?',
-            a: 'Oui, avec assez de RAM. L\'UM890 Pro avec 64 Go fait tourner Llama 3.1 13B Q8 entièrement en RAM à ~8–12 tok/s en CPU seul, et 10–18 tok/s avec l\'iGPU Radeon 780M. Pour les modèles 30B+, le Mac Mini M4 Pro (48 Go) est la seule option mini PC sous 1500 €.',
+            a: 'Oui, avec assez de RAM. L\'UM890 Pro avec 64 Go fait tourner Llama 3.3 13B Q8 entièrement en RAM à ~8–12 tok/s en CPU seul, et 10–18 tok/s avec l\'iGPU Radeon 780M. Pour les modèles 30B+, le Mac Mini M4 Pro (48 Go) est la seule option mini PC sous 1500 €.',
           },
           {
             q: 'Ollama fonctionne-t-il bien comme serveur réseau sur un mini PC ?',
@@ -449,7 +449,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — 総合1位',
-            content: 'Minisforum UM890 ProはAMD Ryzen 9 8945HS（8コア、最大5.2GHz）を搭載し、最大96GB DDR5-5600デュアルチャンネルRAMに対応—Llama 3.1 70B Q4をRAMに完全収容できます。Radeon 780M内蔵GPU（12 RDNA3 CU）がROCm経由で7B・13Bモデルを8〜14トークン/秒に加速。CPUのみ7B Q4：12〜18トークン/秒。アイドル時：約15W。負荷時（GPU稼働）：35〜45W。価格：約4万5000円（32GB）〜5万5000円（64GB）。',
+            content: 'Minisforum UM890 ProはAMD Ryzen 9 8945HS（8コア、最大5.2GHz）を搭載し、最大96GB DDR5-5600デュアルチャンネルRAMに対応—Llama 3.3 70B Q4をRAMに完全収容できます。Radeon 780M内蔵GPU（12 RDNA3 CU）がROCm経由で7B・13Bモデルを8〜14トークン/秒に加速。CPUのみ7B Q4：12〜18トークン/秒。アイドル時：約15W。負荷時（GPU稼働）：35〜45W。価格：約4万5000円（32GB）〜5万5000円（64GB）。',
             affiliateLinks: [
               { label: 'Minisforum UM890 Pro をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Minisforum+UM890+Pro' },
             ],
@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 4,
             title: 'Apple Mac Mini M4 Pro — macOS最良',
-            content: 'Mac Mini M4 Pro（24コアGPU、48GB統合メモリ、約18万円）は箱から出してすぐGPUスピードで32Bモデルを動かせる唯一のミニPCです。Apple SiliconのOllamaはMetalを使用—48GB統合メモリがQwen2.5 32B Q4（約18GB）を20〜30トークン/秒で実行。消費電力：Ollama負荷時18〜30W。静音・常時稼働のホームサーバーを求めるmacOSユーザーに最適。',
+            content: 'Mac Mini M4 Pro（24コアGPU、48GB統合メモリ、約18万円）は箱から出してすぐGPUスピードで32Bモデルを動かせる唯一のミニPCです。Apple SiliconのOllamaはMetalを使用—48GB統合メモリがQwen3 32B Q4（約18GB）を20〜30トークン/秒で実行。消費電力：Ollama負荷時18〜30W。静音・常時稼働のホームサーバーを求めるmacOSユーザーに最適。',
             affiliateLinks: [
               { label: 'Apple Mac Mini M4 Pro をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Mac+Mini+M4+Pro' },
             ],
@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'ミニPCで13B以上のモデルを実用的な速度で動かせますか？',
-            a: 'はい、十分なRAMがあれば可能です。64GB搭載のUM890 ProはLlama 3.1 13B Q8をRAMに完全収容し、CPUのみで8〜12トークン/秒、Radeon 780M内蔵GPU使用時は10〜18トークン/秒で動作します。30B以上のモデルには、Mac Mini M4 Pro（48GB統合メモリ）が15万円以下で唯一のミニPC選択肢です。',
+            a: 'はい、十分なRAMがあれば可能です。64GB搭載のUM890 ProはLlama 3.3 13B Q8をRAMに完全収容し、CPUのみで8〜12トークン/秒、Radeon 780M内蔵GPU使用時は10〜18トークン/秒で動作します。30B以上のモデルには、Mac Mini M4 Pro（48GB統合メモリ）が15万円以下で唯一のミニPC選択肢です。',
           },
           {
             q: 'OllamaはミニPC上でネットワークサーバーとして機能しますか？',
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'ミニPCで13B以上のモデルを実用的な速度で動かせますか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'はい。64GB搭載UM890 ProはLlama 3.1 13B Q8をCPUのみで8〜12トークン/秒で動作。30B以上にはMac Mini M4 Pro（48GB統合メモリ）が最良選択肢です。' },
+          acceptedAnswer: { '@type': 'Answer', text: 'はい。64GB搭載UM890 ProはLlama 3.3 13B Q8をCPUのみで8〜12トークン/秒で動作。30B以上にはMac Mini M4 Pro（48GB統合メモリ）が最良選択肢です。' },
         },
       ],
     },
@@ -559,7 +559,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Puede un mini PC ejecutar modelos 13B o más grandes a velocidad útil?',
-            a: 'Sí — con suficiente RAM. El UM890 Pro con 64 GB ejecuta Llama 3.1 13B Q8 completamente en RAM a ~8–12 tok/s solo CPU. Con GPU Radeon 780M, modelos Q4 corren a 10–18 tok/s — útil para resumen en fondo o llamadas API. Para modelos 30B+, Mac Mini M4 Pro (48 GB memoria unificada) es la única opción mini PC bajo $1500.',
+            a: 'Sí — con suficiente RAM. El UM890 Pro con 64 GB ejecuta Llama 3.3 13B Q8 completamente en RAM a ~8–12 tok/s solo CPU. Con GPU Radeon 780M, modelos Q4 corren a 10–18 tok/s — útil para resumen en fondo o llamadas API. Para modelos 30B+, Mac Mini M4 Pro (48 GB memoria unificada) es la única opción mini PC bajo $1500.',
           },
           {
             q: '¿Funciona bien Ollama como servidor de red en un mini PC?',
@@ -654,7 +654,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 1,
             title: '铭凡UM890 Pro — 综合最佳',
-            content: '铭凡UM890 Pro搭载AMD Ryzen 9 8945HS（8核、最高5.2GHz），支持最高96GB DDR5-5600双通道内存——足以将Llama 3.1 70B Q4完整加载到内存。Radeon 780M核显（12个RDNA3 CU）通过ROCm将7B和13B模型加速至8–14 tok/s。纯CPU 7B Q4：约12–18 tok/s。闲置功耗：约15W。负载（GPU激活）：约35–45W。价格：约3100元（32GB）至3800元（64GB）。',
+            content: '铭凡UM890 Pro搭载AMD Ryzen 9 8945HS（8核、最高5.2GHz），支持最高96GB DDR5-5600双通道内存——足以将Llama 3.3 70B Q4完整加载到内存。Radeon 780M核显（12个RDNA3 CU）通过ROCm将7B和13B模型加速至8–14 tok/s。纯CPU 7B Q4：约12–18 tok/s。闲置功耗：约15W。负载（GPU激活）：约35–45W。价格：约3100元（32GB）至3800元（64GB）。',
             affiliateLinks: [
               { label: '在京东查看铭凡UM890 Pro', url: 'https://search.jd.com/Search?keyword=Minisforum+UM890+Pro' },
               { label: '在铭凡官网查看UM890 Pro', url: 'https://minisforum.com.cn' },
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 4,
             title: 'Apple Mac Mini M4 Pro — 最佳macOS选择',
-            content: 'Mac Mini M4 Pro（24核GPU、48GB统一内存、约9800元）是唯一能开箱即用以GPU速度运行32B模型的迷你PC。Apple Silicon上的Ollama使用Metal——48GB统一内存加载Qwen2.5 32B Q4（约18GB）并以20–30 tok/s运行。功耗：Ollama负载时18–30W。适合希望拥有静音常驻家庭服务器的macOS用户。',
+            content: 'Mac Mini M4 Pro（24核GPU、48GB统一内存、约9800元）是唯一能开箱即用以GPU速度运行32B模型的迷你PC。Apple Silicon上的Ollama使用Metal——48GB统一内存加载Qwen3 32B Q4（约18GB）并以20–30 tok/s运行。功耗：Ollama负载时18–30W。适合希望拥有静音常驻家庭服务器的macOS用户。',
             affiliateLinks: [
               { label: '在京东查看Apple Mac Mini M4 Pro', url: 'https://search.jd.com/Search?keyword=Mac+Mini+M4+Pro' },
             ],
@@ -690,7 +690,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '迷你PC能以实用速度运行13B或更大的模型吗？',
-            a: '可以——需要足够的内存。配备64GB内存的UM890 Pro能将Llama 3.1 13B Q8完整加载到内存，纯CPU速度约8–12 tok/s，Radeon 780M核显加速时Q4模型可达10–18 tok/s。30B以上模型，Mac Mini M4 Pro（48GB统一内存）是1万元以下唯一迷你PC选择。',
+            a: '可以——需要足够的内存。配备64GB内存的UM890 Pro能将Llama 3.3 13B Q8完整加载到内存，纯CPU速度约8–12 tok/s，Radeon 780M核显加速时Q4模型可达10–18 tok/s。30B以上模型，Mac Mini M4 Pro（48GB统一内存）是1万元以下唯一迷你PC选择。',
           },
           {
             q: 'Ollama在迷你PC上作为网络服务器运行效果如何？',

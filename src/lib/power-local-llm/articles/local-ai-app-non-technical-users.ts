@@ -636,7 +636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was ist der Unterschied zwischen lokaler KI und ChatGPT für einen nicht-technischen Nutzer?',
-            a: 'Drei Unterschiede: (1) lokale KI läuft auf Ihrem Laptop und sendet Ihre Eingaben nicht an einen Server, (2) lokale KI funktioniert offline nach dem ersten Modell-Download, (3) lokale KI ist für immer kostenlos — kein Abonnement, keine Token-Rechnung. Der Kompromiss ist Geschwindigkeit und Qualität: ein 3B–8B lokales Modell ist sinnvoll weniger fähig als GPT-4o-Klasse Cloud-Modelle. Für alltägliches Schreiben, Zusammenfassen, Brainstorming und Q&A ist die Lücke klein. Für lange, komplexe Überlegungen ist die Lücke größer.',
+            a: 'Drei Unterschiede: (1) lokale KI läuft auf Ihrem Laptop und sendet Ihre Eingaben nicht an einen Server, (2) lokale KI funktioniert offline nach dem ersten Modell-Download, (3) lokale KI ist für immer kostenlos — kein Abonnement, keine Token-Rechnung. Der Kompromiss ist Geschwindigkeit und Qualität: ein 3B–8B lokales Modell ist sinnvoll weniger fähig als GPT-5.5-Klasse Cloud-Modelle. Für alltägliches Schreiben, Zusammenfassen, Brainstorming und Q&A ist die Lücke klein. Für lange, komplexe Überlegungen ist die Lücke größer.',
           },
           {
             q: 'Kosten diese Apps langfristig Geld?',
@@ -1002,7 +1002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelle est la différence entre IA locale et ChatGPT pour un utilisateur non-technique ?',
-            a: 'Trois différences : (1) l\'IA locale tourne sur votre portable et ne transmet vos entrées à aucun serveur, (2) l\'IA locale fonctionne hors ligne après le premier téléchargement de modèle, (3) l\'IA locale est gratuite pour toujours — pas d\'abonnement, pas de facture de tokens. Le compromis est vitesse et qualité : un modèle local 3B–8B est sensiblement moins capable que les modèles classe GPT-4o cloud. Pour l\'écriture quotidienne, résumé, brainstorming et Q&A, l\'écart est petit. Pour la réflexion longue et complexe, l\'écart est plus grand.',
+            a: 'Trois différences : (1) l\'IA locale tourne sur votre portable et ne transmet vos entrées à aucun serveur, (2) l\'IA locale fonctionne hors ligne après le premier téléchargement de modèle, (3) l\'IA locale est gratuite pour toujours — pas d\'abonnement, pas de facture de tokens. Le compromis est vitesse et qualité : un modèle local 3B–8B est sensiblement moins capable que les modèles classe GPT-5.5 cloud. Pour l\'écriture quotidienne, résumé, brainstorming et Q&A, l\'écart est petit. Pour la réflexion longue et complexe, l\'écart est plus grand.',
           },
           {
             q: 'Ces apps coûtent-elles de l\'argent à long terme ?',
@@ -1360,7 +1360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '非技術ユーザーにはローカルAI と ChatGPTの違いは？',
-            a: '3つの違い：(1) ローカルAIはノートパソコンで実行。プロンプトをサーバーに送信しない。(2) ローカルAIはモデル初回ダウンロード後オフラインで機能。(3) ローカルAIは永遠無料 — 購読なし、トークン料金なし。トレードオフは速さ・質 — 3B–8B ローカルモデルはGPT-4oクラスクラウドモデルより意味のある段階で能力が低い。日常執筆、要約、ブレインストーム、Q&Aでギャップ小さい。長く複雑な推論ではギャップ大きい。',
+            a: '3つの違い：(1) ローカルAIはノートパソコンで実行。プロンプトをサーバーに送信しない。(2) ローカルAIはモデル初回ダウンロード後オフラインで機能。(3) ローカルAIは永遠無料 — 購読なし、トークン料金なし。トレードオフは速さ・質 — 3B–8B ローカルモデルはGPT-5.5クラスクラウドモデルより意味のある段階で能力が低い。日常執筆、要約、ブレインストーム、Q&Aでギャップ小さい。長く複雑な推論ではギャップ大きい。',
           },
           {
             q: 'これらアプリは長期的にお金がかかる？',
@@ -1718,7 +1718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '对于非技术用户，本地AI和ChatGPT有什么区别？',
-            a: '三个区别：(1)本地AI在您的笔记本电脑上运行，不会将您的提示发送到服务器，(2)本地AI在首次模型下载后可离线工作，(3)本地AI永远免费——无订阅、无token账单。权衡是速度和质量：3B–8B本地模型的能力比GPT-4o级云模型少。对于日常写作、总结、头脑风暴和问答，差距很小。对于长期复杂推理，差距更大。',
+            a: '三个区别：(1)本地AI在您的笔记本电脑上运行，不会将您的提示发送到服务器，(2)本地AI在首次模型下载后可离线工作，(3)本地AI永远免费——无订阅、无token账单。权衡是速度和质量：3B–8B本地模型的能力比GPT-5.5级云模型少。对于日常写作、总结、头脑风暴和问答，差距很小。对于长期复杂推理，差距更大。',
           },
           {
             q: '这些应用会长期花费金钱吗？',
@@ -2076,7 +2076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es la diferencia entre IA local y ChatGPT para un usuario sin conocimientos técnicos?',
-            a: 'Tres diferencias: (1) la IA local corre en tu portátil y no envía tus prompts a un servidor, (2) la IA local funciona sin conexión tras la primera descarga del modelo, (3) la IA local es gratuita para siempre — sin suscripción, sin factura de tokens. La desventaja es velocidad y calidad: un modelo local de 3B–8B es significativamente menos capaz que los modelos de nube de la clase GPT-4o. Para escritura cotidiana, resumen, lluvia de ideas y Q&A, la diferencia es pequeña. Para razonamiento largo y complejo, la diferencia es mayor.',
+            a: 'Tres diferencias: (1) la IA local corre en tu portátil y no envía tus prompts a un servidor, (2) la IA local funciona sin conexión tras la primera descarga del modelo, (3) la IA local es gratuita para siempre — sin suscripción, sin factura de tokens. La desventaja es velocidad y calidad: un modelo local de 3B–8B es significativamente menos capaz que los modelos de nube de la clase GPT-5.5. Para escritura cotidiana, resumen, lluvia de ideas y Q&A, la diferencia es pequeña. Para razonamiento largo y complejo, la diferencia es mayor.',
           },
           {
             q: '¿Estas apps cuestan dinero a largo plazo?',

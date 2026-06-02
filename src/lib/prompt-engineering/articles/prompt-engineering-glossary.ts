@@ -317,7 +317,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Welche Modelle sind sicher für deutsche Unternehmen?',
-          a: 'Das hängt vom Datenschutz-Level ab: (1) **Cloud mit Datenschutzvertrag:** Claude (Anthropic) oder GPT-5.5 (wenn Sie Microsoft oder OpenAI Datenschutzverträge abschließen). (2) **Vollständig privat:** Mistral 7B, LLaMA 3 über Ollama auf eigenen Servern. (3) **Deutsche Alternativen:** Firmen wie Aleph Alpha arbeiten an DSGVO-konformen Lösungen. (4) **Regel:** Je sensibler die Daten, desto lokaler die Lösung. Deutsche Firmen wählen oft ein Hybrid-Modell: Cloud für nicht-kritische Use-Cases, lokal für sensible Daten.',
+          a: 'Das hängt vom Datenschutz-Level ab: (1) **Cloud mit Datenschutzvertrag:** Claude (Anthropic) oder GPT-5.5 (wenn Sie Microsoft oder OpenAI Datenschutzverträge abschließen). (2) **Vollständig privat:** Mistral Small, LLaMA 3 über Ollama auf eigenen Servern. (3) **Deutsche Alternativen:** Firmen wie Aleph Alpha arbeiten an DSGVO-konformen Lösungen. (4) **Regel:** Je sensibler die Daten, desto lokaler die Lösung. Deutsche Firmen wählen oft ein Hybrid-Modell: Cloud für nicht-kritische Use-Cases, lokal für sensible Daten.',
         },
         {
           q: 'Wie bereite ich mein Team im Unternehmen auf Prompt Engineering vor?',
@@ -712,7 +712,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Quels modèles souverains ou alternatifs fonctionnent bien avec l\'ingénierie de prompt en français?',
-          a: 'Plusieurs alternatives aux modèles américains offrent une meilleure conformité et souveraineté : Mistral 7B/Medium (France, optimisé pour français), Llama 3 via Ollama (auto-hébergement), et Claude via API (Anthropic respecte DSGVO). Pour les organisations privilégiant la souveraineté, des modèles quantifiés (4-bit QLoRA) permettent auto-hébergement sur GPU standard. L\'ingénierie de prompt reste identique : structure, contexte, examples — seul change le modèle cible.',
+          a: 'Plusieurs alternatives aux modèles américains offrent une meilleure conformité et souveraineté : Mistral Small/Medium (France, optimisé pour français), Llama 3 via Ollama (auto-hébergement), et Claude via API (Anthropic respecte DSGVO). Pour les organisations privilégiant la souveraineté, des modèles quantifiés (4-bit QLoRA) permettent auto-hébergement sur GPU standard. L\'ingénierie de prompt reste identique : structure, contexte, examples — seul change le modèle cible.',
         },
         {
           q: 'Comment former une équipe française à l\'ingénierie de prompt efficacement?',

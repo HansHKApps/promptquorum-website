@@ -223,8 +223,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Local LLMs on Low-End PCs: Regional Context',
           content: [
             '**EU / GDPR:** Running local LLMs on low-end hardware is the most GDPR-compliant deployment pattern for individuals and small businesses — no data leaves the device. The EU AI Act (effective February 2025) does not impose documentation requirements on personal-use inference. For German SMEs using local LLMs for internal business tasks, BSI-Grundschutz recommends local inference for sensitive document processing.',
-            '**Japan:** METI AI Governance Guidelines encourage data minimization. CPU inference on low-end hardware, while slow, satisfies the strictest data sovereignty requirements — no API calls, no logging, no third-party data access. For Japanese users running Qwen2.5 on CPU for Japanese-language tasks, throughput of 1–3 tok/sec is acceptable for non-time-critical document summarization.',
-            '**China:** Local inference on consumer hardware is common for Qwen2.5 and DeepSeek-R1 deployments in China, where cloud API access to non-Chinese models is restricted. Qwen2.5 1.5B and 3B run on CPU-only hardware, providing a functional alternative to cloud APIs for users with constrained hardware.',
+            '**Japan:** METI AI Governance Guidelines encourage data minimization. CPU inference on low-end hardware, while slow, satisfies the strictest data sovereignty requirements — no API calls, no logging, no third-party data access. For Japanese users running Qwen3 on CPU for Japanese-language tasks, throughput of 1–3 tok/sec is acceptable for non-time-critical document summarization.',
+            '**China:** Local inference on consumer hardware is common for Qwen3 and DeepSeek-R1 deployments in China, where cloud API access to non-Chinese models is restricted. Qwen3 1.5B and 3B run on CPU-only hardware, providing a functional alternative to cloud APIs for users with constrained hardware.',
           ],
         },
         'faqSection': {
@@ -593,7 +593,7 @@ schema: {
           content: [
             '**UE / RGPD:** Ejecutar LLMs locales en hardware de gama baja es el patrón de despliegue más conforme al RGPD para particulares y pequeñas empresas — ningún dato sale del dispositivo. La Ley de IA de la UE (vigente desde febrero de 2025) no impone requisitos de documentación para la inferencia de uso personal. Para las pymes alemanas que usan LLMs locales para tareas internas de negocio, BSI-Grundschutz recomienda la inferencia local para el procesamiento de documentos sensibles.',
             '**América Latina:** La inferencia local en hardware de consumo cumple con las principales leyes de protección de datos de la región: la LFPDPPP de México, la Ley 25.326 de Argentina y la Ley 1581 de Colombia. Dado que ningún dato sale del dispositivo, la inferencia local elimina la necesidad de cláusulas contractuales estándar con proveedores de IA externos y satisface los requisitos de residencia de datos donde aplica. Para empresas latinoamericanas que procesan datos de clientes o documentos internos sensibles, la inferencia local en hardware accesible es la opción más simple de cumplimiento normativo.',
-            '**China:** La inferencia local en hardware de consumidor es común para despliegues de Qwen2.5 y DeepSeek-R1 en China, donde el acceso a las APIs en la nube de modelos no chinos está restringido. Qwen2.5 1.5B y 3B funcionan en hardware solo CPU, proporcionando una alternativa funcional a las APIs en la nube para usuarios con hardware limitado.',
+            '**China:** La inferencia local en hardware de consumidor es común para despliegues de Qwen3 y DeepSeek-R1 en China, donde el acceso a las APIs en la nube de modelos no chinos está restringido. Qwen3 1.5B y 3B funcionan en hardware solo CPU, proporcionando una alternativa funcional a las APIs en la nube para usuarios con hardware limitado.',
           ],
         },
         'faqSection': {
@@ -1268,8 +1268,8 @@ schema: {
           title: 'LLMs locaux sur PC bas de gamme : contexte régional',
           content: [
             '**UE / RGPD :** Exécuter des LLMs locaux sur matériel bas de gamme est le schéma de déploiement le plus conforme au RGPD pour les particuliers et petites entreprises — aucune donnée ne quitte l\'appareil. Le règlement AI de l\'UE (applicable depuis février 2025) n\'impose pas d\'obligations de documentation pour l\'inférence personnelle. La CNIL recommande l\'IA locale pour le traitement de données professionnelles sensibles (financières, médicales, juridiques) lorsque la confidentialité est prioritaire.',
-            '**Japon :** Les directives de gouvernance IA du METI encouragent la minimisation des données. L\'inférence CPU sur matériel bas de gamme satisfait les exigences les plus strictes de souveraineté des données — pas d\'appels API, pas de journalisation, pas d\'accès tiers. Pour les utilisateurs japonais exécutant Qwen2.5 sur CPU, un débit de 1–3 tok/sec est acceptable pour les résumés de documents non urgents.',
-            '**Chine :** L\'inférence locale sur matériel grand public est courante pour les déploiements Qwen2.5 et DeepSeek-R1, où l\'accès aux API cloud de modèles non chinois est restreint. Qwen2.5 1.5B et 3B fonctionnent sur matériel CPU seul comme alternative fonctionnelle aux API cloud.',
+            '**Japon :** Les directives de gouvernance IA du METI encouragent la minimisation des données. L\'inférence CPU sur matériel bas de gamme satisfait les exigences les plus strictes de souveraineté des données — pas d\'appels API, pas de journalisation, pas d\'accès tiers. Pour les utilisateurs japonais exécutant Qwen3 sur CPU, un débit de 1–3 tok/sec est acceptable pour les résumés de documents non urgents.',
+            '**Chine :** L\'inférence locale sur matériel grand public est courante pour les déploiements Qwen3 et DeepSeek-R1, où l\'accès aux API cloud de modèles non chinois est restreint. Qwen3 1.5B et 3B fonctionnent sur matériel CPU seul comme alternative fonctionnelle aux API cloud.',
           ],
         },
         'faqSection': {
@@ -1619,7 +1619,7 @@ schema: {
           id: 'regional-context',
           title: '低スペックPCのローカルLLM：地域別コンテキスト',
           content: [
-            '**日本（METI AIガバナンス）：** 経済産業省（METI）のAIガバナンスガイドライン（2024年改定）はデータ最小化を推進します。低スペックハードウェアでのCPU推論は最も厳格なデータ主権要件を満たします — APIコールなし、ロギングなし、第三者データアクセスなし。METI AI Governance Framework 2024はエンタープライズ環境でのオンプレミスAI推論を推奨しており、日本語タスク向けにCPU上でQwen2.5を実行しているユーザーの場合、時間に余裕のある文書要約には1〜3トークン/秒のスループットで十分です。',
+            '**日本（METI AIガバナンス）：** 経済産業省（METI）のAIガバナンスガイドライン（2024年改定）はデータ最小化を推進します。低スペックハードウェアでのCPU推論は最も厳格なデータ主権要件を満たします — APIコールなし、ロギングなし、第三者データアクセスなし。METI AI Governance Framework 2024はエンタープライズ環境でのオンプレミスAI推論を推奨しており、日本語タスク向けにCPU上でQwen3を実行しているユーザーの場合、時間に余裕のある文書要約には1〜3トークン/秒のスループットで十分です。',
             '**東アジア・アジア太平洋：** 韓国、台湾、東南アジア諸国のデータ残留法制はAI推論データがデバイスを離れないことを要求しており、ローカル推論がコンプライアンスの観点から最も安全な選択肢です。APECフレームワークはデータローカライゼーションを積極的に推進している地域での機密データ処理にオンプレミス解決策を推奨しています。',
             '**グローバル：** 法的要件を超えて、ローカル推論は外部サービス依存のないAI能力を提供します。医療、法律、財務などのプライバシー重視の業界では、ローカルLLMはオフライン動作とデータプライバシー保証を組み合わせた実用的な解決策です。',
           ],
@@ -1971,7 +1971,7 @@ schema: {
           id: 'regional-context',
           title: '低配PC本地LLM：地区背景',
           content: [
-            '**中国（数据安全法）：** 根据2021年《数据安全法》和《个人信息保护法》（PIPL），在消费级硬件上运行Qwen2.5和DeepSeek-R1是金融、医疗和法律行业企业合规的首选部署模式。本地推理确保数据不离开设备，满足数据本地化要求，无需依赖境外云服务。Qwen2.5 1.5B和3B可在纯CPU硬件上运行，为硬件受限用户提供可行的替代方案，同时符合《网络安全法》对敏感数据处理的规定。',
+            '**中国（数据安全法）：** 根据2021年《数据安全法》和《个人信息保护法》（PIPL），在消费级硬件上运行Qwen3和DeepSeek-R1是金融、医疗和法律行业企业合规的首选部署模式。本地推理确保数据不离开设备，满足数据本地化要求，无需依赖境外云服务。Qwen3 1.5B和3B可在纯CPU硬件上运行，为硬件受限用户提供可行的替代方案，同时符合《网络安全法》对敏感数据处理的规定。',
             '**亚太地区（数据跨境）：** 亚太地区的数据跨境传输框架（包括ASEAN数据管理框架和各国数据本地化法规）使本地推理成为处理敏感数据的合规选项。在纯CPU硬件上运行本地LLM可满足新加坡PDPA、日本APPI以及澳大利亚隐私法的数据驻留要求，无需额外合规配置。对于在多个亚太司法管辖区运营的企业，本地推理是统一隐私合规策略的最简方案。',
             '**企业部署：** 在银行、医院和律师事务所等受监管行业，低配PC上的本地LLM推理适用于离线文档摘要、内部知识库查询和合规审查等非实时任务。金融机构可使用Phi 2.7B进行内部合规文件初审；医疗机构可用TinyLlama处理非实时病历摘要；法律事务所可在隔离网络中运行本地模型审查合同草稿，全程数据不出企业网络。',
           ],

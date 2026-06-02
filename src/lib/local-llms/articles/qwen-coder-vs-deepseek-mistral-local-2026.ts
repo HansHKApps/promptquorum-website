@@ -296,7 +296,7 @@ DEEPSEEK_MODEL=deepseek-chat
     title: 'Qwen 3.6 Coder vs. DeepSeek Coder vs. Mistral Devstral: Lokaler Coding-Benchmark 2026',
     seoTitle: 'Qwen 3.6 Coder vs. DeepSeek vs. Mistral: Code-Benchmark 2026',
     intro: 'Qwen 3.6 27B erreicht 92,1% HumanEval und 77,2% SWE-bench lokal auf 16 GB VRAM. DeepSeek Coder erreicht 91,6% HumanEval als Cloud-API. Mistral Devstral Small 24B erreicht 90,1% HumanEval und fuehrt bei agentischen Multi-Datei-Aufgaben.',
-    metaDescription: 'Qwen 2.5 Coder vs. DeepSeek vs. Mistral für lokales Coding 2026: Benchmarks, VRAM-Bedarf und Performance. Das beste lokale Coding-Modell.',
+    metaDescription: 'Qwen 3 Coder vs. DeepSeek vs. Mistral für lokales Coding 2026: Benchmarks, VRAM-Bedarf und Performance. Das beste lokale Coding-Modell.',
     publishDate: '2026-05-16',
     dateModified: '2026-05-16',
     readTime: '9 min Lesezeit',
@@ -366,11 +366,11 @@ DEEPSEEK_MODEL=deepseek-chat
         title: 'Pourquoi les modèles de code locaux ont rattrapé leur retard',
         content: [
           'Durant les trois premières années de l\'ère LLM, les modèles cloud devançaient les modèles locaux de 10 à 20 points de pourcentage sur tous les benchmarks de code. Cet écart s\'est comblé en 2025–2026 lorsque les modèles open-weight ont atteint la plage des 27–72 milliards de paramètres, avec un entraînement spécialisé sur de larges corpus de code.',
-          'Qwen 3.6 27B, publié en avril 2026, atteint 77,2% SWE-bench — un benchmark qui teste si les modèles peuvent résoudre de vraies issues GitHub dans des bases de code open source. Ce score se compare directement à Claude Sonnet 4.6 (~72%) et GPT-4o (~73%), tous deux bien plus volumineux et accessibles uniquement en cloud. L\'insight architectural est que le pré-entraînement intensif sur du code filtré (Alibaba a publié 3T tokens de code pour Qwen 3) compense le déficit en nombre de paramètres.',
+          'Qwen 3.6 27B, publié en avril 2026, atteint 77,2% SWE-bench — un benchmark qui teste si les modèles peuvent résoudre de vraies issues GitHub dans des bases de code open source. Ce score se compare directement à Claude Sonnet 4.6 (~72%) et GPT-5.5 (~73%), tous deux bien plus volumineux et accessibles uniquement en cloud. L\'insight architectural est que le pré-entraînement intensif sur du code filtré (Alibaba a publié 3T tokens de code pour Qwen 3) compense le déficit en nombre de paramètres.',
           'Trois facteurs ont conduit à cette convergence : (1) des données d\'entraînement code de haute qualité à grande échelle, (2) un RLHF ajusté sur de vraies tâches d\'ingénierie logicielle plutôt que sur du suivi d\'instructions générique, et (3) une quantisation GGUF améliorée qui préserve mieux les capacités de codage en précision Q4 qu\'avec les méthodes antérieures.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen 3.6 27B obtient 77,2% SWE-bench en local — rivalisant avec ou surpassant Claude Sonnet 4.6 et GPT-4o sur la résolution réelle d\'issues GitHub.' },
+          { type: 'one-sentence', text: 'Qwen 3.6 27B obtient 77,2% SWE-bench en local — rivalisant avec ou surpassant Claude Sonnet 4.6 et GPT-5.5 sur la résolution réelle d\'issues GitHub.' },
           { type: 'plain-terms', text: 'SWE-bench teste si une IA peut véritablement corriger des bugs dans de vraies bases de code open source comme Django, Flask et NumPy. Un score de 77,2% signifie que le modèle a résolu 77 issues GitHub réelles sur 100 sans aide humaine.' },
         ],
       },
@@ -628,11 +628,11 @@ DEEPSEEK_MODEL=deepseek-chat
         title: 'Por qué los modelos locales de código han alcanzado a los cloud',
         content: [
           'Durante los tres primeros años de la era LLM, los modelos cloud superaban a los locales en todos los benchmarks de código por 10–20 puntos porcentuales. Esta brecha se cerró en 2025–2026 cuando los modelos open-weight escalaron al rango de 27–72B parámetros con entrenamiento específico en código sobre grandes corpus.',
-          'Qwen 3.6 27B, lanzado en abril de 2026, alcanza 77.2% SWE-bench — un benchmark que prueba si los modelos pueden resolver issues reales de GitHub en bases de código open source. Esta puntuación se compara directamente con Claude Sonnet 4.6 (~72%) y GPT-4o (~73%), ambos significativamente más grandes y solo disponibles en cloud. La clave arquitectónica es que el pre-entrenamiento enfocado en código filtrado (Alibaba publicó 3T tokens de código para Qwen 3) compensa la diferencia en número de parámetros.',
+          'Qwen 3.6 27B, lanzado en abril de 2026, alcanza 77.2% SWE-bench — un benchmark que prueba si los modelos pueden resolver issues reales de GitHub en bases de código open source. Esta puntuación se compara directamente con Claude Sonnet 4.6 (~72%) y GPT-5.5 (~73%), ambos significativamente más grandes y solo disponibles en cloud. La clave arquitectónica es que el pre-entrenamiento enfocado en código filtrado (Alibaba publicó 3T tokens de código para Qwen 3) compensa la diferencia en número de parámetros.',
           'Tres factores impulsaron la convergencia: (1) datos de entrenamiento de código de alta calidad a escala, (2) RLHF ajustado en tareas reales de ingeniería de software en lugar de seguimiento genérico de instrucciones, y (3) cuantización GGUF mejorada que preserva mejor la capacidad de codificación en precisión Q4 que los métodos anteriores.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen 3.6 27B alcanza 77.2% SWE-bench localmente — igualando o superando a Claude Sonnet 4.6 y GPT-4o en resolución real de issues de GitHub.' },
+          { type: 'one-sentence', text: 'Qwen 3.6 27B alcanza 77.2% SWE-bench localmente — igualando o superando a Claude Sonnet 4.6 y GPT-5.5 en resolución real de issues de GitHub.' },
           { type: 'plain-terms', text: 'SWE-bench prueba si una IA puede realmente corregir bugs en bases de código open source reales como Django, Flask y NumPy. Una puntuación del 77.2% significa que el modelo resolvió 77 de 100 issues reales de GitHub sin ayuda humana.' },
         ],
       },

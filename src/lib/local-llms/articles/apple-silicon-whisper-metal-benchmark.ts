@@ -495,7 +495,7 @@ while True:
           { config: 'M3/M4 base', model: 'distil-large-v3', realtime: '12–15×', useCase: 'Mejor calidad, aún rápido' },
           { config: 'M5 base 32GB', model: 'large-v3-turbo', realtime: '14–18×', useCase: 'Velocidad + calidad' },
           { config: 'M5 Pro 36–64GB', model: 'large-v3', realtime: '10–12×', useCase: 'Máxima precisión' },
-          { config: 'M5 Pro + LLM simultáneo', model: 'large-v3 + Llama 3.1 8B', realtime: '10×', useCase: 'Asistente de voz' },
+          { config: 'M5 Pro + LLM simultáneo', model: 'large-v3 + Llama 3.3 8B', realtime: '10×', useCase: 'Asistente de voz' },
           { config: 'M5 Max 128GB', model: 'large-v3 + LLM + TTS', realtime: '12–14×', useCase: 'Stack multimodal completo' },
         ],
         note: 'Para asistente de voz en tiempo real: usa small o large-v3-turbo para la menor latencia. Para transcripción de reuniones/podcasts: usa large-v3 para máxima precisión (retraso de 1–2 segundos aceptable). Los precios pueden variar según tu país.'
@@ -786,7 +786,7 @@ while True:
           { config: 'M3/M4 Basis', model: 'distil-large-v3', realtime: '12–15×', useCase: 'Bessere Qualität, immer noch schnell' },
           { config: 'M5 Basis 32GB', model: 'large-v3-turbo', realtime: '14–18×', useCase: 'Geschwindigkeit + Qualität' },
           { config: 'M5 Pro 36–64GB', model: 'large-v3', realtime: '10–12×', useCase: 'Maximale Genauigkeit' },
-          { config: 'M5 Pro + gleichzeitiges LLM', model: 'large-v3 + Llama 3.1 8B', realtime: '10×', useCase: 'Sprachassistent' },
+          { config: 'M5 Pro + gleichzeitiges LLM', model: 'large-v3 + Llama 3.3 8B', realtime: '10×', useCase: 'Sprachassistent' },
           { config: 'M5 Max 128GB', model: 'large-v3 + LLM + TTS', realtime: '12–14×', useCase: 'Vollständiger Multi-Modal-Stack' },
         ],
         note: 'Für Echtzeit-Sprachassistenten: Verwenden Sie small oder large-v3-turbo für niedrigste Latenz. Für Meeting-/Podcast-Transkription: Verwenden Sie large-v3 für maximale Genauigkeit (1–2 Sekunden Verzögerung akzeptabel).'
@@ -1060,7 +1060,7 @@ while True:
           { config: 'M3/M4 base', model: 'distil-large-v3', realtime: '12–15×', useCase: 'Meilleure qualité, toujours rapide' },
           { config: 'M5 base 32 Go', model: 'large-v3-turbo', realtime: '14–18×', useCase: 'Vitesse + qualité' },
           { config: 'M5 Pro 36–64 Go', model: 'large-v3', realtime: '10–12×', useCase: 'Précision maximale' },
-          { config: 'M5 Pro + LLM simultané', model: 'large-v3 + Llama 3.1 8B', realtime: '10×', useCase: 'Assistant vocal' },
+          { config: 'M5 Pro + LLM simultané', model: 'large-v3 + Llama 3.3 8B', realtime: '10×', useCase: 'Assistant vocal' },
           { config: 'M5 Max 128 Go', model: 'large-v3 + LLM + TTS', realtime: '12–14×', useCase: 'Stack multimodal complet' },
         ],
         note: 'Pour un assistant vocal temps réel : utilisez small ou large-v3-turbo pour la latence la plus faible. Pour la transcription de réunions/podcasts : utilisez large-v3 pour une précision maximale (délai de 1–2 secondes acceptable).'
@@ -1334,7 +1334,7 @@ while True:
           { config: 'M3/M4 base', model: 'distil-large-v3', realtime: '12–15×', useCase: '高品質、高速' },
           { config: 'M5 base 32GB', model: 'large-v3-turbo', realtime: '14–18×', useCase: '速度＋品質' },
           { config: 'M5 Pro 36–64GB', model: 'large-v3', realtime: '10–12×', useCase: '最高精度' },
-          { config: 'M5 Pro + LLM同時実行', model: 'large-v3 + Llama 3.1 8B', realtime: '10×', useCase: '音声アシスタント' },
+          { config: 'M5 Pro + LLM同時実行', model: 'large-v3 + Llama 3.3 8B', realtime: '10×', useCase: '音声アシスタント' },
           { config: 'M5 Max 128GB', model: 'large-v3 + LLM + TTS', realtime: '12–14×', useCase: 'フルマルチモーダルスタック' },
         ],
         note: 'リアルタイム音声アシスタント向け：最低遅延のためsmallまたはlarge-v3-turboを使用。会議/ポッドキャスト文字起こし向け：最高精度のためlarge-v3を使用（1–2秒の遅延は許容範囲）。'
@@ -1608,7 +1608,7 @@ while True:
           { config: 'M3/M4 base', model: 'distil-large-v3', realtime: '12–15×', useCase: '更高质量，仍然快速' },
           { config: 'M5 base 32GB', model: 'large-v3-turbo', realtime: '14–18×', useCase: '速度+质量' },
           { config: 'M5 Pro 36–64GB', model: 'large-v3', realtime: '10–12×', useCase: '最高精度' },
-          { config: 'M5 Pro + 同时运行LLM', model: 'large-v3 + Llama 3.1 8B', realtime: '10×', useCase: '语音助手' },
+          { config: 'M5 Pro + 同时运行LLM', model: 'large-v3 + Llama 3.3 8B', realtime: '10×', useCase: '语音助手' },
           { config: 'M5 Max 128GB', model: 'large-v3 + LLM + TTS', realtime: '12–14×', useCase: '完整多模态栈' },
         ],
         note: '实时语音助手：使用small或large-v3-turbo以获得最低延迟。会议/播客转录：使用large-v3以获得最高精度（1–2秒延迟可接受）。'

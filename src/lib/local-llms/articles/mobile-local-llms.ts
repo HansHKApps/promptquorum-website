@@ -69,7 +69,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**iPhone (A18/A18 Pro):** Runs 1–3B models only. Llama 3.2 1B and Phi-4 Mini 3.8B are the practical choices. Speed: 3–4 tok/sec. Good for quick Q&A, short summaries, offline dictionary-style lookups. Not usable for long conversations or code generation.',
             '**Android (Snapdragon X Elite):** Runs 3–7B models. Llama 3.2 7B and Mistral Small work at 5 tok/sec. Galaxy S25 Ultra and flagship Snapdragon devices are the best Android options. Practical for chat, summarization, and offline assistants.',
-            '**iPad Pro (M4):** The only mobile device where local LLMs feel usable. Runs 7–13B models at 15 tok/sec with 16 GB unified memory. Handles Llama 3.2 7B comfortably and can run 13B models for quality close to GPT-3.5 level.',
+            '**iPad Pro (M4):** The only mobile device where local LLMs feel usable. Runs 7–13B models at 15 tok/sec with 16 GB unified memory. Handles Llama 3.2 7B comfortably and can run 13B models for quality close to GPT-4o mini level.',
             '**What does NOT work:** 70B models on any mobile device. 7B models on iPhone (crashes). Any model on phones with under 8 GB RAM. Real-time voice assistants (latency too high).',
           ],
         },
@@ -159,7 +159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**EU/UK:** GDPR Article 5 compliance is a key driver for mobile local LLMs — on-device inference keeps personal data on the user\'s phone with zero cross-border transfer. Enterprise MDM policies in Germany and France increasingly require on-device AI for healthcare and legal apps.',
             '**Japan:** APPI (Act on Protection of Personal Information) requirements favor on-device inference for mobile business apps. Japanese carriers (NTT Docomo, SoftBank) are partnering with chipset vendors to optimize on-device AI for domestic models.',
-            '**China:** Mobile local LLMs running Qwen2.5 comply with China\'s 2021 Data Security Law without CAC registration. Huawei Kirin 9000S and MediaTek Dimensity 9300 support on-device inference for Chinese-language models.',
+            '**China:** Mobile local LLMs running Qwen3 comply with China\'s 2021 Data Security Law without CAC registration. Huawei Kirin 9000S and MediaTek Dimensity 9300 support on-device inference for Chinese-language models.',
           ],
           image: '/images/mobile-local-llms-bandwidth-gap-en.svg',
           imageCaption: 'Memory bandwidth gap: iPhone A18 at 68 GB/sec vs RTX 4090 at 1,008 GB/sec — a 15× difference that directly explains why mobile LLMs run 15–50× slower than desktop.',
@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Late 2027 is the inflection point.** Apple A19 Pro and Snapdragon X2 will bring 7–13B models to phones at 15–25 tok/sec — fast enough for real-time chat. Until then, mobile LLMs are a niche tool for specific use cases.',
             '**2027 phones:** 7–13B models at 15–25 tok/sec. Practical for most chat and Q&A tasks. Still no 70B.',
-            '**2028+ phones:** 13–24B models expected. Quality approaching GPT-3.5 level on-device. Battery and thermal constraints remain the bottleneck.',
+            '**2028+ phones:** 13–24B models expected. Quality approaching GPT-4o mini level on-device. Battery and thermal constraints remain the bottleneck.',
             '**Best option today:** Use your phone for quick offline queries and run a [Mac mini M4 Pro](/local-llms/best-mini-pcs-local-llm) or [desktop GPU](/local-llms/local-llm-hardware-guide-2026) as a local server accessible from your phone via Wi-Fi. This gives you mobile convenience with desktop-quality inference.',
           ],
         },
@@ -488,7 +488,7 @@ schema: {
           content: [
             '**iPhone (A18/A18 Pro):** Führt nur 1–3B-Modelle aus. Llama 3.2 1B und Phi-4 Mini 3.8B sind die praktischen Optionen. Geschwindigkeit: 3–4 Tok/Sek. Gut für schnelle Frage-Antwort, kurze Zusammenfassungen, Offline-Nachschlagewerke. Nicht nutzbar für lange Gespräche oder Codegenerierung.',
             '**Android (Snapdragon X Elite):** Führt 3–7B-Modelle aus. Llama 3.2 7B und Mistral Small funktionieren mit 5 Tok/Sek. Galaxy S25 Ultra und Flaggschiff-Snapdragon-Geräte sind die besten Android-Optionen. Praktisch für Chat, Zusammenfassung und Offline-Assistenten.',
-            '**iPad Pro (M4):** Das einzige Mobilgerät, auf dem lokale LLMs sich nutzbar anfühlen. Führt 7–13B-Modelle mit 15 Tok/Sek bei 16 GB Unified Memory aus. Bewältigt Llama 3.2 7B komfortabel und kann 13B-Modelle für Qualität nahe GPT-3.5-Niveau ausführen.',
+            '**iPad Pro (M4):** Das einzige Mobilgerät, auf dem lokale LLMs sich nutzbar anfühlen. Führt 7–13B-Modelle mit 15 Tok/Sek bei 16 GB Unified Memory aus. Bewältigt Llama 3.2 7B komfortabel und kann 13B-Modelle für Qualität nahe GPT-4o mini-Niveau ausführen.',
             '**Was NICHT funktioniert:** 70B-Modelle auf jedem Mobilgerät. 7B-Modelle auf iPhone (Abstürze). Jedes Modell auf Telefonen mit unter 8 GB RAM. Echtzeit-Sprachassistenten (Latenz zu hoch).',
           ],
         },
@@ -578,7 +578,7 @@ schema: {
           content: [
             '**Deutschland/DACH:** Die DSGVO (Artikel 5) und BSI-Grundschutz-Kataloge machen On-Device-Inferenz zur bevorzugten Lösung für sensible Daten im Gesundheitswesen, Rechtsbereich und Finanzsektor. Mobile lokale LLMs halten personenbezogene Daten vollständig auf dem Gerät des Nutzers — keine grenzüberschreitende Datenübertragung, keine Auftragsverarbeitung nach Artikel 28 erforderlich. Enterprise-MDM-Richtlinien in Deutschland und Österreich fordern zunehmend On-Device-KI für mobile Geschäftsanwendungen.',
             '**Japan:** APPI-Anforderungen (Gesetz zum Schutz personenbezogener Daten) begünstigen On-Device-Inferenz für mobile Geschäftsanwendungen. Japanische Mobilfunkanbieter (NTT Docomo, SoftBank) kooperieren mit Chipsatzherstellern zur Optimierung von On-Device-KI.',
-            '**China:** Mobile lokale LLMs mit Qwen2.5 entsprechen dem chinesischen Datensicherheitsgesetz von 2021 ohne CAC-Registrierung. Huawei Kirin 9000S und MediaTek Dimensity 9300 unterstützen On-Device-Inferenz für chinesischsprachige Modelle.',
+            '**China:** Mobile lokale LLMs mit Qwen3 entsprechen dem chinesischen Datensicherheitsgesetz von 2021 ohne CAC-Registrierung. Huawei Kirin 9000S und MediaTek Dimensity 9300 unterstützen On-Device-Inferenz für chinesischsprachige Modelle.',
           ],
           image: '/images/mobile-local-llms-bandwidth-gap-de.svg',
           imageCaption: 'Speicherbandbreitenlücke: iPhone A18 mit 68 GB/Sek vs RTX 4090 mit 1.008 GB/Sek — ein 15× Unterschied, der direkt erklärt, warum mobile LLMs 15–50× langsamer sind.',
@@ -618,7 +618,7 @@ schema: {
           content: [
             '**Ende 2027 ist der Wendepunkt.** Apple A19 Pro und Snapdragon X2 bringen 7–13B-Modelle mit 15–25 Tok/Sek auf Telefone.',
             '**2027er Telefone:** 7–13B-Modelle mit 15–25 Tok/Sek. Praktisch für die meisten Chat-Aufgaben.',
-            '**2028+:** 13–24B-Modelle erwartet. Qualität nähert sich GPT-3.5-Niveau.',
+            '**2028+:** 13–24B-Modelle erwartet. Qualität nähert sich GPT-4o mini-Niveau.',
             '**Beste Option heute:** Telefon für Offline-Anfragen und einen [Mac mini M4 Pro](/de/local-llms/best-mini-pcs-local-llm) oder [Desktop-GPU](/de/local-llms/local-llm-hardware-guide-2026) als lokalen Server per WLAN.',
           ],
         },
@@ -938,7 +938,7 @@ schema: {
           content: [
             '**UE/France :** La conformité RGPD (Article 5) est un moteur clé pour les LLM locaux mobiles — l\'inférence on-device conserve les données personnelles sur le téléphone de l\'utilisateur sans transfert transfrontalier. La CNIL recommande le traitement local de l\'IA pour les données professionnelles sensibles (financières, médicales, juridiques). Les politiques MDM d\'entreprise en France exigent de plus en plus l\'IA on-device pour les applications de santé et juridiques.',
             '**Japon :** Les exigences APPI favorisent l\'inférence on-device pour les applications mobiles professionnelles. Les opérateurs japonais coopèrent avec les fabricants de puces pour optimiser l\'IA on-device.',
-            '**Chine :** Les LLM locaux mobiles avec Qwen2.5 sont conformes à la loi chinoise sur la sécurité des données de 2021. Huawei Kirin 9000S et MediaTek Dimensity 9300 supportent l\'inférence on-device pour les modèles en chinois.',
+            '**Chine :** Les LLM locaux mobiles avec Qwen3 sont conformes à la loi chinoise sur la sécurité des données de 2021. Huawei Kirin 9000S et MediaTek Dimensity 9300 supportent l\'inférence on-device pour les modèles en chinois.',
           ],
           image: '/images/mobile-local-llms-bandwidth-gap-fr.svg',
           imageCaption: 'Écart de bande passante : iPhone A18 à 68 Go/sec vs RTX 4090 à 1 008 Go/sec — un écart de 15× qui explique pourquoi les LLM mobiles sont 15–50× plus lents.',
@@ -978,7 +978,7 @@ schema: {
           content: [
             '**Fin 2027 est le point d\'inflexion.** Apple A19 Pro et Snapdragon X2 apporteront les 7–13B à 15–25 tok/sec sur téléphones.',
             '**Téléphones 2027 :** 7–13B à 15–25 tok/sec. Pratique pour la plupart des tâches de chat.',
-            '**2028+ :** Modèles 13–24B attendus. Qualité approchant GPT-3.5.',
+            '**2028+ :** Modèles 13–24B attendus. Qualité approchant GPT-4o mini.',
             '**Meilleure option aujourd\'hui :** Téléphone pour requêtes rapides et un [Mac mini M4 Pro](/fr/local-llms/best-mini-pcs-local-llm) ou [GPU bureau](/fr/local-llms/local-llm-hardware-guide-2026) comme serveur local via Wi-Fi.',
           ],
         },
@@ -1328,7 +1328,7 @@ schema: {
           content: [
             '**2027年後半が転換点です。** Apple A19 ProとSnapdragon X2が7–13Bモデルを15–25トークン/秒でスマートフォンに提供。',
             '**2027年スマートフォン：** 7–13Bモデルを15–25トークン/秒。ほとんどのチャットタスクに実用的。',
-            '**2028年以降：** 13–24Bモデルが期待。品質はGPT-3.5レベルに近づく。',
+            '**2028年以降：** 13–24Bモデルが期待。品質はGPT-4o miniレベルに近づく。',
             '**今日の最適オプション：** スマートフォンでオフラインクエリ、[Mac mini M4 Pro](/ja/local-llms/best-mini-pcs-local-llm)または[デスクトップGPU](/ja/local-llms/local-llm-hardware-guide-2026)をWi-Fi経由のローカルサーバーとして使用。',
           ],
         },
@@ -1636,7 +1636,7 @@ schema: {
           id: 'regional-context',
           title: '地区考量',
           content: [
-            '**中国（数据安全法）：** 移动端本地LLM运行Qwen2.5符合2021年《数据安全法》，无需向网信办进行算法备案。华为麒麟9000S和联发科天玑9300支持中文模型的端设备推理。对于涉及用户个人信息的移动应用，端设备推理避免了《个人信息保护法》（PIPL）的跨境数据传输合规要求。',
+            '**中国（数据安全法）：** 移动端本地LLM运行Qwen3符合2021年《数据安全法》，无需向网信办进行算法备案。华为麒麟9000S和联发科天玑9300支持中文模型的端设备推理。对于涉及用户个人信息的移动应用，端设备推理避免了《个人信息保护法》（PIPL）的跨境数据传输合规要求。',
             '**亚太地区（数据跨境）：** 韩国PIPA、新加坡PDPA、澳大利亚Privacy Act等数据保护法均倾向端设备处理。Samsung Galaxy S25 Ultra在韩国市场的本土部署正加速移动端本地LLM的采用。日本APPI要求有利于移动商务应用的端设备推理。',
             '**企业部署：** 金融、医疗、法律行业的移动办公场景中，端设备LLM推理满足数据合规要求。iPad Pro M4搭配13B模型适用于现场文档摘要和客户沟通。对于需要严格数据驻留的企业移动应用，端设备推理消除了云API的数据泄露风险。',
           ],
@@ -1678,7 +1678,7 @@ schema: {
           content: [
             '**2027年底是转折点。** Apple A19 Pro和Snapdragon X2将在手机上实现7–13B模型15–25令牌/秒——足以进行实时聊天。在此之前，移动端LLM是特定场景的利基工具。',
             '**2027年手机：** 7–13B模型15–25令牌/秒。大多数聊天和问答任务可实用。仍无70B。',
-            '**2028年及以后：** 预期13–24B模型。质量接近GPT-3.5级别。电池和散热仍是瓶颈。',
+            '**2028年及以后：** 预期13–24B模型。质量接近GPT-4o mini级别。电池和散热仍是瓶颈。',
             '**今天的最佳方案：** 手机用于快速离线查询，[Mac mini M4 Pro](/zh/local-llms/best-mini-pcs-local-llm)或[桌面GPU](/zh/local-llms/local-llm-hardware-guide-2026)作为Wi-Fi局域网内的本地服务器。',
           ],
         },
@@ -1898,7 +1898,7 @@ schema: {
           content: [
             '**iPhone (A18/A18 Pro):** Solo ejecuta modelos 1–3B. Llama 3.2 1B y Phi-4 Mini 3.8B son las opciones prácticas. Velocidad: 3–4 tok/seg. Útil para preguntas rápidas, resúmenes cortos y consultas sin conexión. No es adecuado para conversaciones largas ni generación de código.',
             '**Android (Snapdragon X Elite):** Ejecuta modelos 3–7B. Llama 3.2 7B y Mistral Small funcionan a 5 tok/seg. Galaxy S25 Ultra y los dispositivos Snapdragon de gama alta son las mejores opciones Android. Práctico para chat, resúmenes y asistentes sin conexión.',
-            '**iPad Pro (M4):** El único dispositivo móvil donde los LLMs locales se sienten realmente utilizables. Ejecuta modelos 7–13B a 15 tok/seg con 16 GB de memoria unificada. Maneja Llama 3.2 7B con comodidad y puede ejecutar modelos 13B con calidad cercana a GPT-3.5.',
+            '**iPad Pro (M4):** El único dispositivo móvil donde los LLMs locales se sienten realmente utilizables. Ejecuta modelos 7–13B a 15 tok/seg con 16 GB de memoria unificada. Maneja Llama 3.2 7B con comodidad y puede ejecutar modelos 13B con calidad cercana a GPT-4o mini.',
             '**Lo que NO funciona:** Modelos 70B en ningún dispositivo móvil. Modelos 7B en iPhone (causa cierres inesperados). Cualquier modelo en teléfonos con menos de 8 GB de RAM. Asistentes de voz en tiempo real (latencia demasiado alta).',
           ],
         },
@@ -1988,7 +1988,7 @@ schema: {
           content: [
             '**UE/Reino Unido:** El cumplimiento del artículo 5 del RGPD es un factor clave para los LLMs locales móviles — la inferencia en dispositivo mantiene los datos personales en el teléfono del usuario sin transferencia transfronteriza. Las políticas de MDM empresarial en Alemania y Francia exigen cada vez más IA en dispositivo para apps de salud y legales.',
             '**Japón:** Los requisitos de la APPI (Ley de Protección de Información Personal) favorecen la inferencia en dispositivo para apps de negocio móviles. Los operadores japoneses (NTT Docomo, SoftBank) se asocian con proveedores de chipsets para optimizar la IA en dispositivo para modelos domésticos.',
-            '**China:** Los LLMs locales móviles que ejecutan Qwen2.5 cumplen con la Ley de Seguridad de Datos de China de 2021 sin registro CAC. Huawei Kirin 9000S y MediaTek Dimensity 9300 admiten inferencia en dispositivo para modelos en chino.',
+            '**China:** Los LLMs locales móviles que ejecutan Qwen3 cumplen con la Ley de Seguridad de Datos de China de 2021 sin registro CAC. Huawei Kirin 9000S y MediaTek Dimensity 9300 admiten inferencia en dispositivo para modelos en chino.',
             '**Latinoamérica/España:** Los LLMs locales en español ofrecen privacidad de datos sin depender de servidores externos, lo que es relevante para sectores legales, médicos y educativos donde la confidencialidad es prioritaria.',
           ],
           image: '/images/mobile-local-llms-bandwidth-gap-es.svg',
@@ -2029,7 +2029,7 @@ schema: {
           content: [
             '**Finales de 2027 es el punto de inflexión.** Apple A19 Pro y Snapdragon X2 llevarán modelos 7–13B a los teléfonos a 15–25 tok/seg — suficientemente rápido para chat en tiempo real. Hasta entonces, los LLMs móviles son una herramienta de nicho para casos de uso específicos.',
             '**Teléfonos 2027:** Modelos 7–13B a 15–25 tok/seg. Práctico para la mayoría de tareas de chat y preguntas. Sin 70B todavía.',
-            '**Teléfonos 2028+:** Se esperan modelos 13–24B. Calidad acercándose al nivel de GPT-3.5 en dispositivo. Las limitaciones de batería y temperatura siguen siendo el cuello de botella.',
+            '**Teléfonos 2028+:** Se esperan modelos 13–24B. Calidad acercándose al nivel de GPT-4o mini en dispositivo. Las limitaciones de batería y temperatura siguen siendo el cuello de botella.',
             '**Mejor opción hoy:** Usa tu teléfono para consultas rápidas sin conexión y ejecuta un [Mac mini M4 Pro](/es/local-llms/best-mini-pcs-local-llm) o [GPU de escritorio](/es/local-llms/local-llm-hardware-guide-2026) como servidor local accesible desde tu teléfono por Wi-Fi. Esto te da comodidad móvil con inferencia de calidad de escritorio.',
           ],
         },

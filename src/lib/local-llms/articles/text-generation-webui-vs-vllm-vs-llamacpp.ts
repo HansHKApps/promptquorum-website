@@ -172,8 +172,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           items: [
             '**EU / GDPR:** For EU enterprise deployments, vLLM running on-premises keeps all inference within EU infrastructure -- no tokens, prompts, or outputs leave your servers. For German BSI IT-Grundschutz compliance, vLLM is the recommended production engine because it provides structured audit logging via Prometheus metrics (/metrics endpoint), and all model versions are pinnable via HuggingFace model IDs for compliance documentation. Mistral models (Mistral AI, France, Apache 2.0) are the EU-preferred choice for vLLM production deployments -- EU origin, clean licence, strong performance. vLLM command: `vllm serve mistralai/Mistral-7B-Instruct-v0.3`',
-            '**Japan (METI):** METI AI governance requires documenting inference infrastructure. vLLM\'s structured Prometheus metrics satisfy audit trail requirements better than llama.cpp\'s stdout logging. For Japanese enterprise deployments, Qwen2.5 7B via vLLM is the recommended stack -- native Japanese tokenization plus production throughput. vLLM command: `vllm serve Qwen/Qwen2.5-7B-Instruct`',
-            '**China:** Under China\'s Data Security Law (数据安全法), all inference must remain on-premises for sensitive data. vLLM is compatible with Alibaba Cloud A10 and A100 GPU instances. Qwen2.5 (Alibaba) models are natively optimized for vLLM and provide the best Chinese-language throughput. For Chinese enterprise production: vLLM + Qwen2.5 14B on Alibaba Cloud is the standard stack as of April 2026.',
+            '**Japan (METI):** METI AI governance requires documenting inference infrastructure. vLLM\'s structured Prometheus metrics satisfy audit trail requirements better than llama.cpp\'s stdout logging. For Japanese enterprise deployments, Qwen3 7B via vLLM is the recommended stack -- native Japanese tokenization plus production throughput. vLLM command: `vllm serve Qwen/Qwen3-7B-Instruct`',
+            '**China:** Under China\'s Data Security Law (数据安全法), all inference must remain on-premises for sensitive data. vLLM is compatible with Alibaba Cloud A10 and A100 GPU instances. Qwen3 (Alibaba) models are natively optimized for vLLM and provide the best Chinese-language throughput. For Chinese enterprise production: vLLM + Qwen3 14B on Alibaba Cloud is the standard stack as of April 2026.',
           ],
         },
         commonMistakes: {
@@ -532,8 +532,8 @@ schema: {
           ],
           items: [
             '**UE / GDPR:** Para despliegues empresariales en la UE, vLLM ejecutándose en las instalaciones mantiene toda la inferencia dentro de la infraestructura de la UE -- no salen tokens, prompts ni respuestas de tus servidores. Para el cumplimiento de BSI IT-Grundschutz alemán, vLLM es el motor de producción recomendado porque proporciona registro de auditoría estructurado a través de métricas Prometheus (endpoint /metrics), y todas las versiones de modelos son fijables mediante IDs de modelos de HuggingFace para la documentación de cumplimiento. Los modelos Mistral (Mistral AI, Francia, Apache 2.0) son la opción preferida de la UE para despliegues de producción con vLLM -- origen europeo, licencia limpia, buen rendimiento. Comando vLLM: `vllm serve mistralai/Mistral-7B-Instruct-v0.3`',
-            '**Japón (METI):** La gobernanza de IA de METI requiere documentar la infraestructura de inferencia. Las métricas estructuradas de Prometheus de vLLM satisfacen mejor los requisitos de registro de auditoría que el logging por stdout de llama.cpp. Para despliegues empresariales en Japón, Qwen2.5 7B a través de vLLM es la pila recomendada -- tokenización nativa en japonés más rendimiento de producción. Comando vLLM: `vllm serve Qwen/Qwen2.5-7B-Instruct`',
-            '**China:** Bajo la Ley de Seguridad de Datos de China (数据安全法), toda la inferencia debe permanecer en las instalaciones para datos sensibles. vLLM es compatible con instancias GPU A10 y A100 de Alibaba Cloud. Los modelos Qwen2.5 (Alibaba) están optimizados nativamente para vLLM y proporcionan el mejor rendimiento en lengua china. Para producción empresarial en China: vLLM + Qwen2.5 14B en Alibaba Cloud es la pila estándar a partir de abril de 2026.',
+            '**Japón (METI):** La gobernanza de IA de METI requiere documentar la infraestructura de inferencia. Las métricas estructuradas de Prometheus de vLLM satisfacen mejor los requisitos de registro de auditoría que el logging por stdout de llama.cpp. Para despliegues empresariales en Japón, Qwen3 7B a través de vLLM es la pila recomendada -- tokenización nativa en japonés más rendimiento de producción. Comando vLLM: `vllm serve Qwen/Qwen3-7B-Instruct`',
+            '**China:** Bajo la Ley de Seguridad de Datos de China (数据安全法), toda la inferencia debe permanecer en las instalaciones para datos sensibles. vLLM es compatible con instancias GPU A10 y A100 de Alibaba Cloud. Los modelos Qwen3 (Alibaba) están optimizados nativamente para vLLM y proporcionan el mejor rendimiento en lengua china. Para producción empresarial en China: vLLM + Qwen3 14B en Alibaba Cloud es la pila estándar a partir de abril de 2026.',
           ],
         },
         commonMistakes: {
@@ -890,8 +890,8 @@ schema: {
         ],
         items: [
           '**Deutschland / EU / DSGVO:** Für deutsche Unternehmens-Deployments muss vLLM auf lokalen deutschen Servern laufen, um DSGVO-Compliance zu gewährleisten -- keine Tokens, Prompts oder Outputs verlassen Ihre Infrastruktur. Für BSI IT-Grundschutz-Kataloge Compliance ist vLLM die empfohlene Production-Engine, da sie strukturiertes Audit-Logging über Prometheus-Metriken (/metrics Endpunkt) bietet, und alle Modellversionen über HuggingFace-Modell-IDs für Compliance-Dokumentation fixierbar sind. Mistral-Modelle (Mistral AI, Frankreich, Apache 2.0) sind die EU-bevorzugte Wahl für vLLM Production-Deployments -- EU-Ursprung, saubere Lizenz, starke Performance. vLLM-Befehl: `vllm serve mistralai/Mistral-7B-Instruct-v0.3`. Für DACH-Mittelstand-Unternehmen bietet vLLM die notwendige Skalierbarkeit für 50-500 Concurrent-User-Szenarien.',
-          '**Japan (METI):** METI AI Governance erfordert die Dokumentation der Inferenz-Infrastruktur. vLLMs strukturierte Prometheus-Metriken erfüllen Audit-Trail-Anforderungen besser als llama.cpps stdout-Logging. Für japanische Unternehmens-Deployments ist Qwen2.5 7B über vLLM der empfohlene Stack -- native japanische Tokenisierung plus Production-Durchsatz. vLLM-Befehl: `vllm serve Qwen/Qwen2.5-7B-Instruct`',
-          '**China:** Unter Chinas Datensicherheitsgesetz (数据安全法) muss alle Inferenz für sensible Daten on-premises bleiben. vLLM ist kompatibel mit Alibaba Cloud A10 und A100 GPU-Instanzen. Qwen2.5 (Alibaba) Modelle sind nativ für vLLM optimiert und bieten den besten chinesischen Sprachdurchsatz. Für chinesische Enterprise-Production: vLLM + Qwen2.5 14B auf Alibaba Cloud ist der Standard-Stack im April 2026.',
+          '**Japan (METI):** METI AI Governance erfordert die Dokumentation der Inferenz-Infrastruktur. vLLMs strukturierte Prometheus-Metriken erfüllen Audit-Trail-Anforderungen besser als llama.cpps stdout-Logging. Für japanische Unternehmens-Deployments ist Qwen3 7B über vLLM der empfohlene Stack -- native japanische Tokenisierung plus Production-Durchsatz. vLLM-Befehl: `vllm serve Qwen/Qwen3-7B-Instruct`',
+          '**China:** Unter Chinas Datensicherheitsgesetz (数据安全法) muss alle Inferenz für sensible Daten on-premises bleiben. vLLM ist kompatibel mit Alibaba Cloud A10 und A100 GPU-Instanzen. Qwen3 (Alibaba) Modelle sind nativ für vLLM optimiert und bieten den besten chinesischen Sprachdurchsatz. Für chinesische Enterprise-Production: vLLM + Qwen3 14B auf Alibaba Cloud ist der Standard-Stack im April 2026.',
         ],
       },
       commonMistakes: {
@@ -1129,8 +1129,8 @@ schema: {
           ],
           items: [
             '**UE / RGPD** : Pour les déploiements en entreprise dans l\'UE, vLLM s\'exécutant sur site maintient toute l\'inférence au sein de l\'infrastructure de l\'UE -- aucun token, prompt ou résultat ne quitte vos serveurs. Pour la conformité BSI IT-Grundschutz allemande, vLLM est le moteur de production recommandé car il fournit un enregistrement d\'audit structuré via les métriques Prometheus (point de terminaison /metrics), et toutes les versions de modèles sont épinglables via les IDs de modèles HuggingFace pour la documentation de conformité. Les modèles Mistral (Mistral AI, France, Apache 2.0) sont le choix préféré de l\'UE pour les déploiements de production vLLM -- origine de l\'UE, licence propre, performance solide.',
-            '**Japon (METI)** : la gouvernance IA METI exige de documenter l\'infrastructure d\'inférence. Les métriques Prometheus structurées de vLLM satisfont les exigences de piste d\'audit mieux que l\'enregistrement stdout de llama.cpp. Pour les déploiements en entreprise japonais, Qwen2.5 7B via vLLM est la pile recommandée -- tokenization native du japonais plus débit de production.',
-            '**Chine** : selon la Loi sur la sécurité des données de Chine (数据安全法), toute l\'inférence doit rester sur site pour les données sensibles. vLLM est compatible avec les instances GPU Alibaba Cloud A10 et A100. Les modèles Qwen2.5 (Alibaba) sont nativement optimisés pour vLLM et fournissent le meilleur débit en langue chinoise.',
+            '**Japon (METI)** : la gouvernance IA METI exige de documenter l\'infrastructure d\'inférence. Les métriques Prometheus structurées de vLLM satisfont les exigences de piste d\'audit mieux que l\'enregistrement stdout de llama.cpp. Pour les déploiements en entreprise japonais, Qwen3 7B via vLLM est la pile recommandée -- tokenization native du japonais plus débit de production.',
+            '**Chine** : selon la Loi sur la sécurité des données de Chine (数据安全法), toute l\'inférence doit rester sur site pour les données sensibles. vLLM est compatible avec les instances GPU Alibaba Cloud A10 et A100. Les modèles Qwen3 (Alibaba) sont nativement optimisés pour vLLM et fournissent le meilleur débit en langue chinoise.',
           ],
         },
         commonMistakes: {
@@ -1468,8 +1468,8 @@ schema: {
             '**推論エンジンの選択は地域的コンプライアンスと異なる規制管轄区域全体の企業デプロイメントに直接的な含意。**',
           ],
           items: [
-            '**日本（METI）**：METI AI ガバナンス 2024 は推論インフラストラクチャのドキュメント化を要求。vLLM の構造化 Prometheus メトリクス（/metrics エンドポイント）は llama.cpp の stdout ログより監査証跡要件をより満たしやすい。日本企業デプロイメント用、Qwen2.5 7B via vLLM が推奨スタック -- ネイティブ日本語トークン化と本番環境スループット。vLLM コマンド：`vllm serve Qwen/Qwen2.5-7B-Instruct`',
-            '**東アジア（データ越境）**：シンガポール、台湾、韓国、オーストラリア等での ASEAN/APAC データ居住要件により、vLLM 地域ローカルデプロイメントが標準。モデル管理の汎用性のため Qwen2.5 または Llama 3.3 推奨。APAC 規制フレームワーク（PDPC シンガポール、PIPA 台湾）と互換性あり。',
+            '**日本（METI）**：METI AI ガバナンス 2024 は推論インフラストラクチャのドキュメント化を要求。vLLM の構造化 Prometheus メトリクス（/metrics エンドポイント）は llama.cpp の stdout ログより監査証跡要件をより満たしやすい。日本企業デプロイメント用、Qwen3 7B via vLLM が推奨スタック -- ネイティブ日本語トークン化と本番環境スループット。vLLM コマンド：`vllm serve Qwen/Qwen3-7B-Instruct`',
+            '**東アジア（データ越境）**：シンガポール、台湾、韓国、オーストラリア等での ASEAN/APAC データ居住要件により、vLLM 地域ローカルデプロイメントが標準。モデル管理の汎用性のため Qwen3 または Llama 3.3 推奨。APAC 規制フレームワーク（PDPC シンガポール、PIPA 台湾）と互換性あり。',
             '**グローバル展開用**：エンタープライズ多地域デプロイメント時は、Mistral Small Instruct の vLLM 実装を考慮。EU 基準を満たし、APAC 規制と互換性あり、NVIDIA どのリージョンでも利用可能。',
           ],
         },
@@ -1808,9 +1808,9 @@ schema: {
             '**推理引擎的选择对不同地区和监管框架的合规性和企业部署有直接影响。**',
           ],
           items: [
-            '**中国（数据安全法）**：根据 2021 年《数据安全法》，所有推理必须在本地进行，敏感数据不能跨境传输。vLLM 与阿里云 A10 和 A100 GPU 实例兼容。Qwen2.5（阿里巴巴）模型针对 vLLM 本地优化，提供最佳中文语言吞吐量。对于中国企业生产：**vLLM + Qwen2.5 14B on 阿里云**是 2026 年 4 月的标准栈。数据合规性要求：所有推理日志和模型权重必须在中国大陆境内存储；使用阿里云数据库服务以满足合规审计要求。',
-            '**亚太地区（数据跨境）**：新加坡（PDPC）、澳大利亚（Privacy Act）和东南亚国家的数据跨境规则要求本地部署。vLLM 分布式推理支持跨地区 GPU 集群。对于多地区 APAC 部署：Qwen2.5 或 Llama 3.3 via vLLM 都适合，支持新加坡、悉尼和东京地区数据中心。数据管理：为每个司法管辖区使用单独的部署；不要跨地区复制训练数据或推理日志。',
-            '**企业部署（金融、医疗、法律）**：在高度受管制的行业（银行、保险、医疗保健、律师事务所），vLLM 的 Prometheus 指标暴露（/metrics 端点）提供审计证跟踪满足合规要求。**建议**：部署 vLLM + 本地模型（Qwen2.5 或 Mistral Small）+ 专业加密存储（HSM 或密钥管理服务），并在企业防火墙后面。对于金融机构，使用 vLLM 的分布式推理跨多个 GPU 进行推理，每个 GPU 隔离在子网络中，并记录所有推理提示/响应到合规日志。',
+            '**中国（数据安全法）**：根据 2021 年《数据安全法》，所有推理必须在本地进行，敏感数据不能跨境传输。vLLM 与阿里云 A10 和 A100 GPU 实例兼容。Qwen3（阿里巴巴）模型针对 vLLM 本地优化，提供最佳中文语言吞吐量。对于中国企业生产：**vLLM + Qwen3 14B on 阿里云**是 2026 年 4 月的标准栈。数据合规性要求：所有推理日志和模型权重必须在中国大陆境内存储；使用阿里云数据库服务以满足合规审计要求。',
+            '**亚太地区（数据跨境）**：新加坡（PDPC）、澳大利亚（Privacy Act）和东南亚国家的数据跨境规则要求本地部署。vLLM 分布式推理支持跨地区 GPU 集群。对于多地区 APAC 部署：Qwen3 或 Llama 3.3 via vLLM 都适合，支持新加坡、悉尼和东京地区数据中心。数据管理：为每个司法管辖区使用单独的部署；不要跨地区复制训练数据或推理日志。',
+            '**企业部署（金融、医疗、法律）**：在高度受管制的行业（银行、保险、医疗保健、律师事务所），vLLM 的 Prometheus 指标暴露（/metrics 端点）提供审计证跟踪满足合规要求。**建议**：部署 vLLM + 本地模型（Qwen3 或 Mistral Small）+ 专业加密存储（HSM 或密钥管理服务），并在企业防火墙后面。对于金融机构，使用 vLLM 的分布式推理跨多个 GPU 进行推理，每个 GPU 隔离在子网络中，并记录所有推理提示/响应到合规日志。',
           ],
         },
         commonMistakes: {

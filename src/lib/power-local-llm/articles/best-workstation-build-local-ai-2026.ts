@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tier1: {
         title: 'Tier 1: $1200 Budget AI Workstation',
-        content: 'The $1200 budget build uses a used RTX 3090 (24 GB VRAM) as the core. It runs Llama 3.3 8B Q8 at 45–60 tok/s, Qwen2.5 14B Q8 at 20–28 tok/s, and Qwen2.5 32B Q4 at 12–18 tok/s entirely on GPU. The RTX 3090 draws 350 W — pair with a quality 850 W PSU.',
+        content: 'The $1200 budget build uses a used RTX 3090 (24 GB VRAM) as the core. It runs Llama 3.3 8B Q8 at 45–60 tok/s, Qwen3 14B Q8 at 20–28 tok/s, and Qwen3 32B Q4 at 12–18 tok/s entirely on GPU. The RTX 3090 draws 350 W — pair with a quality 850 W PSU.',
         tableData: {
           headers: ['Component', 'Model', 'Price (May 2026)'],
           rows: [
@@ -147,8 +147,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           headers: ['Model + Quant', 'Budget ($1200)', 'Recommended ($2500)', 'Professional ($5000)'],
           rows: [
             ['Llama 3.3 8B Q4', '55–70 tok/s', '105–125 tok/s', '120–140 tok/s'],
-            ['Qwen2.5 14B Q8', '20–28 tok/s', '48–60 tok/s', '55–70 tok/s'],
-            ['Qwen2.5 32B Q4', '12–18 tok/s', '28–38 tok/s', '40–55 tok/s'],
+            ['Qwen3 14B Q8', '20–28 tok/s', '48–60 tok/s', '55–70 tok/s'],
+            ['Qwen3 32B Q4', '12–18 tok/s', '28–38 tok/s', '40–55 tok/s'],
             ['Llama 3.3 70B Q4', '5–8 tok/s (CPU)', '10–15 tok/s (CPU)', '25–40 tok/s (GPU)'],
             ['Mixtral 8x22B Q4', '15–22 tok/s', '32–45 tok/s', '45–60 tok/s'],
           ],
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tier1: {
         title: 'Stufe 1: ~1200 € Budget-KI-Workstation',
-        content: 'Der 1200-€-Budget-Build nutzt eine gebrauchte RTX 3090 (24 GB VRAM) als Kern. Er läuft Llama 3.1 8B Q8 mit 45–60 Tok/s, Qwen2.5 14B Q8 mit 20–28 Tok/s und Qwen2.5 32B Q4 mit 12–18 Tok/s vollständig auf GPU.',
+        content: 'Der 1200-€-Budget-Build nutzt eine gebrauchte RTX 3090 (24 GB VRAM) als Kern. Er läuft Llama 3.3 8B Q8 mit 45–60 Tok/s, Qwen3 14B Q8 mit 20–28 Tok/s und Qwen3 32B Q4 mit 12–18 Tok/s vollständig auf GPU.',
         tableData: {
           headers: ['Komponente', 'Modell', 'Preis (Mai 2026)'],
           rows: [
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Warum Dual RTX 3090 statt einer RTX 4090 für den Profi-Build?',
-            a: 'VRAM ist entscheidend. Zwei RTX 3090s ergeben 48 GB gesamt — genug für Llama 3.1 70B Q4 (~40 GB). Eine einzelne RTX 4090 hat nur 24 GB. Für 70B-Inferenz auf GPU gewinnen die Dual-3090s beim VRAM/Euro-Verhältnis.',
+            a: 'VRAM ist entscheidend. Zwei RTX 3090s ergeben 48 GB gesamt — genug für Llama 3.3 70B Q4 (~40 GB). Eine einzelne RTX 4090 hat nur 24 GB. Für 70B-Inferenz auf GPU gewinnen die Dual-3090s beim VRAM/Euro-Verhältnis.',
           },
         ],
       },
@@ -426,7 +426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tier1: {
         title: 'Niveau 1 : ~1200 € Workstation IA budget',
-        content: 'Le build à 1200 € utilise une RTX 3090 occasion (24 Go VRAM). Il fait tourner Llama 3.1 8B Q8 à 45–60 tok/s, Qwen2.5 14B Q8 à 20–28 tok/s et Qwen2.5 32B Q4 à 12–18 tok/s entièrement sur GPU.',
+        content: 'Le build à 1200 € utilise une RTX 3090 occasion (24 Go VRAM). Il fait tourner Llama 3.3 8B Q8 à 45–60 tok/s, Qwen3 14B Q8 à 20–28 tok/s et Qwen3 32B Q4 à 12–18 tok/s entièrement sur GPU.',
         tableData: {
           headers: ['Composant', 'Modèle', 'Prix (mai 2026)'],
           rows: [
@@ -579,7 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tier1: {
         title: '第1段階：約16万円バジェットAIワークステーション',
-        content: '16万円バジェットビルドは中古RTX 3090（24GB VRAM）を中心に構成。Llama 3.1 8B Q8を45〜60 tok/s、Qwen2.5 14B Q8を20〜28 tok/s、Qwen2.5 32B Q4を12〜18 tok/sでGPUのみで動作。',
+        content: '16万円バジェットビルドは中古RTX 3090（24GB VRAM）を中心に構成。Llama 3.3 8B Q8を45〜60 tok/s、Qwen3 14B Q8を20〜28 tok/s、Qwen3 32B Q4を12〜18 tok/sでGPUのみで動作。',
         tableData: {
           headers: ['コンポーネント', 'モデル', '価格（2026年5月）'],
           rows: [
@@ -672,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'プロビルドにRTX 4090の代わりにデュアルRTX 3090を使う理由は？',
-            a: 'VRAMが決め手です。2枚のRTX 3090で合計48GB——Llama 3.1 70B Q4（約40GB）を収容できます。単体のRTX 4090は24GBのみ——70BはCPUオフロードなしでは収まりません。GPU速度での70B推論にはデュアル3090がVRAM/円で優れています。',
+            a: 'VRAMが決め手です。2枚のRTX 3090で合計48GB——Llama 3.3 70B Q4（約40GB）を収容できます。単体のRTX 4090は24GBのみ——70BはCPUオフロードなしでは収まりません。GPU速度での70B推論にはデュアル3090がVRAM/円で優れています。',
           },
         ],
       },
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tier1: {
         title: '第一档：约8000元预算AI工作站',
-        content: '8000元预算方案以二手RTX 3090（24GB显存）为核心。Llama 3.1 8B Q8达45–60 tok/s，Qwen2.5 14B Q8达20–28 tok/s，Qwen2.5 32B Q4达12–18 tok/s，全部纯GPU运行。',
+        content: '8000元预算方案以二手RTX 3090（24GB显存）为核心。Llama 3.3 8B Q8达45–60 tok/s，Qwen3 14B Q8达20–28 tok/s，Qwen3 32B Q4达12–18 tok/s，全部纯GPU运行。',
         tableData: {
           headers: ['组件', '型号', '价格（2026年5月）'],
           rows: [
@@ -830,7 +830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '专业方案为什么用双RTX 3090而不是单RTX 4090？',
-            a: '显存是关键。两块RTX 3090合计48GB——足够装下Llama 3.1 70B Q4（约40GB）。单块RTX 4090只有24GB——70B无法不卸载直接运行。对于GPU速度的70B推理，双3090在显存/元的性价比上更优。',
+            a: '显存是关键。两块RTX 3090合计48GB——足够装下Llama 3.3 70B Q4（约40GB）。单块RTX 4090只有24GB——70B无法不卸载直接运行。对于GPU速度的70B推理，双3090在显存/元的性价比上更优。',
           },
           {
             q: '可以从预算方案升级到推荐方案吗？',
@@ -906,7 +906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tier1: {
         title: 'Nivel 1: workstation de IA económica por $1200',
-        content: 'El build económico de $1200 utiliza una RTX 3090 usada (24 GB VRAM) como núcleo. Ejecuta Llama 3.1 8B Q8 a 45–60 tok/s, Qwen2.5 14B Q8 a 20–28 tok/s y Qwen2.5 32B Q4 a 12–18 tok/s completamente en GPU. La RTX 3090 consume 350 W — combínala con una fuente de poder de calidad de 850 W.',
+        content: 'El build económico de $1200 utiliza una RTX 3090 usada (24 GB VRAM) como núcleo. Ejecuta Llama 3.3 8B Q8 a 45–60 tok/s, Qwen3 14B Q8 a 20–28 tok/s y Qwen3 32B Q4 a 12–18 tok/s completamente en GPU. La RTX 3090 consume 350 W — combínala con una fuente de poder de calidad de 850 W.',
         tableData: {
           headers: ['Componente', 'Modelo', 'Precio (mayo 2026)'],
           rows: [
@@ -1013,11 +1013,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tableData: {
           headers: ['Modelo + cuantización', 'Económico ($1200)', 'Recomendado ($2500)', 'Profesional ($5000)'],
           rows: [
-            ['Llama 3.1 8B Q4', '55–70 tok/s', '105–125 tok/s', '120–140 tok/s'],
-            ['Qwen2.5 14B Q8', '20–28 tok/s', '48–60 tok/s', '55–70 tok/s'],
-            ['Qwen2.5 32B Q4', '12–18 tok/s', '28–38 tok/s', '40–55 tok/s'],
-            ['Llama 3.1 70B Q4', '5–8 tok/s (CPU)', '10–15 tok/s (CPU)', '25–40 tok/s (GPU)'],
-            ['Mixtral 8x7B Q4', '15–22 tok/s', '32–45 tok/s', '45–60 tok/s'],
+            ['Llama 3.3 8B Q4', '55–70 tok/s', '105–125 tok/s', '120–140 tok/s'],
+            ['Qwen3 14B Q8', '20–28 tok/s', '48–60 tok/s', '55–70 tok/s'],
+            ['Qwen3 32B Q4', '12–18 tok/s', '28–38 tok/s', '40–55 tok/s'],
+            ['Llama 3.3 70B Q4', '5–8 tok/s (CPU)', '10–15 tok/s (CPU)', '25–40 tok/s (GPU)'],
+            ['Mixtral 8x22B Q4', '15–22 tok/s', '32–45 tok/s', '45–60 tok/s'],
           ],
         },
       },
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Por qué una dual RTX 3090 en lugar de una RTX 4090 para el build profesional?',
-            a: 'La VRAM es el factor decisivo. Dos RTX 3090 de 24 GB cada una = 48 GB en total, suficiente para Llama 3.1 70B Q4 (~40 GB). Una sola RTX 4090 tiene solo 24 GB — el modelo 70B Q4 no cabe sin CPU offloading. Para inferencia de 70B a velocidad de GPU, el dual 3090 gana en VRAM por dólar. Para 30B e inferiores, la RTX 4090 es más rápida por dólar.',
+            a: 'La VRAM es el factor decisivo. Dos RTX 3090 de 24 GB cada una = 48 GB en total, suficiente para Llama 3.3 70B Q4 (~40 GB). Una sola RTX 4090 tiene solo 24 GB — el modelo 70B Q4 no cabe sin CPU offloading. Para inferencia de 70B a velocidad de GPU, el dual 3090 gana en VRAM por dólar. Para 30B e inferiores, la RTX 4090 es más rápida por dólar.',
           },
           {
             q: '¿Puedo empezar con el build económico y actualizar al nivel recomendado?',
@@ -1071,7 +1071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Por qué una dual RTX 3090 en lugar de una RTX 4090 para el build profesional?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'VRAM: dos RTX 3090 = 48 GB en total, que aloja Llama 3.1 70B Q4 (~40 GB). Una sola RTX 4090 tiene solo 24 GB — el 70B no cabe sin CPU offloading. El dual 3090 gana para inferencia de 70B a velocidad de GPU.',
+            text: 'VRAM: dos RTX 3090 = 48 GB en total, que aloja Llama 3.3 70B Q4 (~40 GB). Una sola RTX 4090 tiene solo 24 GB — el 70B no cabe sin CPU offloading. El dual 3090 gana para inferencia de 70B a velocidad de GPU.',
           },
         },
       ],

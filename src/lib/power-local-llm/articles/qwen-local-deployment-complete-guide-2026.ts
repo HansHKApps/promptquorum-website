@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 14B',
       'Qwen3 32B',
       'Qwen3 72B',
-      'Qwen2.5-Coder 32B',
+      'Qwen3-Coder 32B',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 3060 12 GB',
@@ -135,7 +135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '5': 'Yes — single GPU',
           },
           {
-            '0': 'Qwen2.5-Coder 32B',
+            '0': 'Qwen3-Coder 32B',
             '1': '19.8 GB',
             '2': 'RTX 4090 24 GB',
             '3': '10–13 tok/s',
@@ -529,8 +529,8 @@ docker run --gpus all \\
     },
     relatedReading: {
       items: [
-        '[Qwen Local Deployment Guide — Beginner Setup with Ollama & LM Studio](/local-llms/qwen-local-deployment-guide-2026) — hardware-tier guide for Qwen2.5 7B through 72B on consumer hardware',
-        '[Best GPU Buying Guide for Local LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU recommendations for Qwen2.5-72B and multi-GPU production setups',
+        '[Qwen Local Deployment Guide — Beginner Setup with Ollama & LM Studio](/local-llms/qwen-local-deployment-guide-2026) — hardware-tier guide for Qwen3 7B through 72B on consumer hardware',
+        '[Best GPU Buying Guide for Local LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU recommendations for Qwen3-72B and multi-GPU production setups',
         '[Run Qwen Locally — Quick Start Guide](/local-llms/run-qwen-locally-guide-2026) — single-model beginner install in under 5 minutes',
       ],
     },
@@ -673,8 +673,8 @@ docker run --gpus all \\
     },
     relatedReading: {
       items: [
-        '[Qwen Lokales Deployment Guide — Beginner-Setup mit Ollama & LM Studio](/de/local-llms/qwen-local-deployment-guide-2026) — Hardware-Tier-Leitfaden für Qwen2.5 7B bis 72B auf Consumer-Hardware',
-        '[Bester GPU-Kaufratgeber für lokale LLMs 2026](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU-Empfehlungen für Qwen2.5-72B und Multi-GPU-Produktionssetups',
+        '[Qwen Lokales Deployment Guide — Beginner-Setup mit Ollama & LM Studio](/de/local-llms/qwen-local-deployment-guide-2026) — Hardware-Tier-Leitfaden für Qwen3 7B bis 72B auf Consumer-Hardware',
+        '[Bester GPU-Kaufratgeber für lokale LLMs 2026](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU-Empfehlungen für Qwen3-72B und Multi-GPU-Produktionssetups',
         '[Qwen lokal ausführen — Schnellstart-Leitfaden](/de/local-llms/run-qwen-locally-guide-2026) — Einzelmodell-Beginner-Installation in unter 5 Minuten',
       ],
     },
@@ -785,8 +785,8 @@ docker run --gpus all \\
     },
     relatedReading: {
       items: [
-        "[Guide de déploiement Qwen en local — Configuration débutant avec Ollama & LM Studio](/fr/local-llms/qwen-local-deployment-guide-2026) — guide par niveau matériel pour Qwen2.5 7B à 72B sur hardware grand public",
-        "[Guide d'achat GPU 2026 pour LLM locaux](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — recommandations GPU pour Qwen2.5-72B et configurations multi-GPU en production",
+        "[Guide de déploiement Qwen en local — Configuration débutant avec Ollama & LM Studio](/fr/local-llms/qwen-local-deployment-guide-2026) — guide par niveau matériel pour Qwen3 7B à 72B sur hardware grand public",
+        "[Guide d'achat GPU 2026 pour LLM locaux](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — recommandations GPU pour Qwen3-72B et configurations multi-GPU en production",
         '[Exécuter Qwen en local — Guide de démarrage rapide](/fr/local-llms/run-qwen-locally-guide-2026) — installation débutant en moins de 5 minutes',
       ],
     },
@@ -902,8 +902,8 @@ docker run --gpus all \\
     },
     relatedReading: {
       items: [
-        '[Qwenローカルデプロイガイド — OllamaとLM Studioによる入門セットアップ](/ja/local-llms/qwen-local-deployment-guide-2026) — 消費者向けハードウェアのQwen2.5 7Bから72Bのハードウェア階層ガイド',
-        '[ローカルLLM向けGPU購入ガイド2026](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — Qwen2.5-72BおよびマルチGPU本番セットアップのGPU推奨',
+        '[Qwenローカルデプロイガイド — OllamaとLM Studioによる入門セットアップ](/ja/local-llms/qwen-local-deployment-guide-2026) — 消費者向けハードウェアのQwen3 7Bから72Bのハードウェア階層ガイド',
+        '[ローカルLLM向けGPU購入ガイド2026](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — Qwen3-72BおよびマルチGPU本番セットアップのGPU推奨',
         '[Qwenをローカルで実行 — クイックスタートガイド](/ja/local-llms/run-qwen-locally-guide-2026) — 5分以内の単一モデル入門インストール',
       ],
     },
@@ -1037,8 +1037,8 @@ docker run --gpus all \\
     },
     relatedReading: {
       items: [
-        '[Qwen 本地部署指南——使用 Ollama 和 LM Studio 的入门配置](/zh/local-llms/qwen-local-deployment-guide-2026) — 覆盖 Qwen2.5 7B 至 72B 的消费级硬件分层指南',
-        '[本地 LLM 显卡购买指南 2026](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 运行 Qwen2.5-72B 或多卡生产配置的 GPU 选购建议',
+        '[Qwen 本地部署指南——使用 Ollama 和 LM Studio 的入门配置](/zh/local-llms/qwen-local-deployment-guide-2026) — 覆盖 Qwen3 7B 至 72B 的消费级硬件分层指南',
+        '[本地 LLM 显卡购买指南 2026](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 运行 Qwen3-72B 或多卡生产配置的 GPU 选购建议',
         '[本地运行 Qwen——快速入门指南](/zh/local-llms/run-qwen-locally-guide-2026) — 5 分钟完成单模型初学者安装',
       ],
     },
@@ -1073,7 +1073,7 @@ docker run --gpus all \\
       'Qwen3 14B',
       'Qwen3 32B',
       'Qwen3 72B',
-      'Qwen2.5-Coder 32B',
+      'Qwen3-Coder 32B',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 3060 12 GB',
@@ -1170,7 +1170,7 @@ docker run --gpus all \\
             '5': 'Sí — GPU única',
           },
           {
-            '0': 'Qwen2.5-Coder 32B',
+            '0': 'Qwen3-Coder 32B',
             '1': '19,8 GB',
             '2': 'RTX 4090 24 GB',
             '3': '10–13 tok/s',
@@ -1566,8 +1566,8 @@ docker run --gpus all \\
     },
     relatedReading: {
       items: [
-        '[Guía de despliegue local de Qwen — Configuración para principiantes con Ollama y LM Studio](/es/local-llms/qwen-local-deployment-guide-2026) — guía por nivel de hardware para Qwen2.5 7B a 72B en hardware de consumo',
-        '[Guía de compra de GPU para LLMs locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — recomendaciones de GPU para Qwen2.5-72B y configuraciones multi-GPU en producción',
+        '[Guía de despliegue local de Qwen — Configuración para principiantes con Ollama y LM Studio](/es/local-llms/qwen-local-deployment-guide-2026) — guía por nivel de hardware para Qwen3 7B a 72B en hardware de consumo',
+        '[Guía de compra de GPU para LLMs locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — recomendaciones de GPU para Qwen3-72B y configuraciones multi-GPU en producción',
         '[Ejecutar Qwen localmente — Guía de inicio rápido](/es/local-llms/run-qwen-locally-guide-2026) — instalación para principiantes en menos de 5 minutos',
       ],
     },

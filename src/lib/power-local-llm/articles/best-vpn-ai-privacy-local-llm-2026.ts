@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
-      'Qwen2.5 7B',
+      'Qwen3 7B',
       'Mistral Small',
     ],
     current_hardware_mentioned: [
@@ -480,8 +480,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
-      'Qwen2.5 7B',
-      'Mistral 7B',
+      'Qwen3 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'WireGuard VPN protocol',
@@ -942,8 +942,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
-      'Qwen2.5 7B',
-      'Mistral 7B',
+      'Qwen3 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'WireGuard VPN protocol',
@@ -1400,8 +1400,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
-      'Qwen2.5 7B',
-      'Mistral 7B',
+      'Qwen3 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'WireGuard VPN protocol',
@@ -1850,8 +1850,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
-      'Qwen2.5 7B',
-      'Mistral 7B',
+      'Qwen3 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'WireGuard VPN protocol',
@@ -2300,8 +2300,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
-      'Qwen2.5 7B',
-      'Mistral 7B',
+      'Qwen3 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'WireGuard VPN protocol',

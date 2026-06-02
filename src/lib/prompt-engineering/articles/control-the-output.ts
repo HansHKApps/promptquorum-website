@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'European enterprises building LLM pipelines that process personal data must apply GDPR Article 25 (privacy by design) to output schema design — outputs that expose personal data fields in JSON payloads require a legal basis under Article 6 GDPR. The CNIL (France\'s data protection authority) issued guidance in January 2026 that automated decision-making outputs — including structured LLM outputs used in scoring or eligibility workflows — may trigger Article 22 GDPR rights to human review.',
             'For EU teams requiring on-premise inference with structured output control, Mistral AI (France) supports vLLM-based constrained decoding with guided JSON parameters — enabling guaranteed JSON Schema compliance entirely within EU infrastructure, satisfying GDPR data residency requirements under Article 46. Mistral Large runs on-premise with structured output support.',
-            'Chinese enterprises use Qwen 2.5 (Alibaba) and DeepSeek V3 (DeepSeek AI) for production output-controlled pipelines. Both models support JSON mode and are locally deployable on Chinese enterprise infrastructure under China\'s Interim Measures for Generative AI (2023). Japanese enterprises running local inference via Ollama — LLaMA 3.1 7B at 8GB RAM, LLaMA 3.1 13B at 16GB RAM — benefit from Outlines and XGrammar for constrained decoding on self-hosted models, producing guaranteed JSON Schema compliance without external API calls.',
+            'Chinese enterprises use Qwen 3 (Alibaba) and DeepSeek V3 (DeepSeek AI) for production output-controlled pipelines. Both models support JSON mode and are locally deployable on Chinese enterprise infrastructure under China\'s Interim Measures for Generative AI (2023). Japanese enterprises running local inference via Ollama — LLaMA 3.1 7B at 8GB RAM, LLaMA 3.1 13B at 16GB RAM — benefit from Outlines and XGrammar for constrained decoding on self-hosted models, producing guaranteed JSON Schema compliance without external API calls.',
           ],
         },
 
@@ -631,7 +631,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Europäische Unternehmen, die LLM-Pipelines zur Verarbeitung personenbezogener Daten aufbauen, müssen DSGVO Artikel 25 (Privacy by Design) auf das Ausgabeschema-Design anwenden — Ausgaben, die personenbezogene Datenfelder in JSON-Payloads offenlegen, erfordern eine Rechtsgrundlage nach Artikel 6 DSGVO. Die CNIL (Frankreichs Datenschutzbehörde) hat im Januar 2026 Leitlinien herausgegeben, nach denen automatisierte Entscheidungsausgaben — einschließlich strukturierter LLM-Ausgaben, die in Scoring- oder Berechtigungs-Workflows verwendet werden — möglicherweise Rechte auf menschliche Überprüfung nach Artikel 22 DSGVO auslösen.',
             'Für EU-Teams mit Anforderungen an On-Premise-Inferenz mit strukturierter Ausgabekontrolle unterstützt Mistral AI (Frankreich) vLLM-basiertes Constrained Decoding mit guided JSON-Parametern — das eine garantierte JSON-Schema-Compliance vollständig innerhalb der EU-Infrastruktur ermöglicht und die DSGVO-Anforderungen an den Datentransfer nach Artikel 46 erfüllt. In Deutschland und der DACH-Region empfehlen die BSI-Grundschutz-Kataloge für KI-gestützte Produktivpipelines eine klare Trennung der Verarbeitungsschichten — der zweistufige Ansatz (Reasoning → Strukturierung) entspricht diesem Sicherheitsmodell. Mistral Large läuft on-premise mit Unterstützung für strukturierten Output.',
-            'Chinesische Unternehmen nutzen Qwen 2.5 (Alibaba) und DeepSeek V3 (DeepSeek AI) für produktive, ausgabekontrollierte Pipelines. Beide Modelle unterstützen JSON-Mode und sind auf chinesischer Enterprise-Infrastruktur lokal einsetzbar gemäß den Interimmaßnahmen für generative KI Chinas (2023). Japanische Unternehmen, die lokale Inferenz via Ollama betreiben — LLaMA 3.1 7B bei 8 GB RAM, LLaMA 3.1 13B bei 16 GB RAM — profitieren von Outlines und XGrammar für Constrained Decoding auf selbst gehosteten Modellen und erreichen so garantierte JSON-Schema-Compliance ohne externe API-Aufrufe.',
+            'Chinesische Unternehmen nutzen Qwen 3 (Alibaba) und DeepSeek V3 (DeepSeek AI) für produktive, ausgabekontrollierte Pipelines. Beide Modelle unterstützen JSON-Mode und sind auf chinesischer Enterprise-Infrastruktur lokal einsetzbar gemäß den Interimmaßnahmen für generative KI Chinas (2023). Japanische Unternehmen, die lokale Inferenz via Ollama betreiben — LLaMA 3.1 7B bei 8 GB RAM, LLaMA 3.1 13B bei 16 GB RAM — profitieren von Outlines und XGrammar für Constrained Decoding auf selbst gehosteten Modellen und erreichen so garantierte JSON-Schema-Compliance ohne externe API-Aufrufe.',
           ],
         },
 
@@ -980,7 +980,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Las empresas europeas que construyen pipelines LLM que procesan datos personales deben aplicar el Artículo 25 del RGPD (privacidad por diseño) al diseño del esquema de salida — las salidas que exponen campos de datos personales en payloads JSON requieren una base legal bajo el Artículo 6 del RGPD. La CNIL (autoridad francesa de protección de datos) emitió directrices en enero de 2026 indicando que las salidas de toma de decisiones automatizadas — incluidas las salidas LLM estructuradas usadas en workflows de puntuación o elegibilidad — pueden activar los derechos de revisión humana del Artículo 22 del RGPD.',
             'Para equipos de la UE que requieren inferencia on-premise con control de salida estructurada, Mistral AI (Francia) soporta constrained decoding basado en vLLM con parámetros JSON guiados — habilitando cumplimiento garantizado de JSON Schema completamente dentro de la infraestructura de la UE, satisfaciendo los requisitos de residencia de datos del RGPD bajo el Artículo 46. Mistral Large funciona on-premise con soporte de salida estructurada.',
-            'Las empresas chinas usan Qwen 2.5 (Alibaba) y DeepSeek V3 (DeepSeek AI) para pipelines de producción con control de salida. Ambos modelos soportan modo JSON y son desplegables localmente en infraestructura empresarial china bajo las Medidas Provisionales de IA Generativa de China (2023). Las empresas japonesas que ejecutan inferencia local vía Ollama — LLaMA 3.1 7B con 8 GB de RAM, LLaMA 3.1 13B con 16 GB de RAM — se benefician de Outlines y XGrammar para constrained decoding en modelos auto-alojados, produciendo cumplimiento garantizado de JSON Schema sin llamadas a API externas.',
+            'Las empresas chinas usan Qwen 3 (Alibaba) y DeepSeek V3 (DeepSeek AI) para pipelines de producción con control de salida. Ambos modelos soportan modo JSON y son desplegables localmente en infraestructura empresarial china bajo las Medidas Provisionales de IA Generativa de China (2023). Las empresas japonesas que ejecutan inferencia local vía Ollama — LLaMA 3.1 7B con 8 GB de RAM, LLaMA 3.1 13B con 16 GB de RAM — se benefician de Outlines y XGrammar para constrained decoding en modelos auto-alojados, produciendo cumplimiento garantizado de JSON Schema sin llamadas a API externas.',
           ],
         },
         tldr: {
@@ -1339,7 +1339,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Les entreprises européennes construisant des pipelines LLM traitant des données personnelles doivent appliquer l\'article 25 du RGPD (protection des données dès la conception) à la conception du schéma de sortie — les sorties exposant des champs de données personnelles dans des charges JSON nécessitent une base légale au titre de l\'article 6 du RGPD. La CNIL a publié en janvier 2026 des orientations selon lesquelles les sorties de décision automatisée — y compris les sorties LLM structurées utilisées dans des workflows de scoring ou d\'éligibilité — peuvent déclencher des droits à l\'examen humain au titre de l\'article 22 du RGPD.',
             'Pour les équipes UE nécessitant une inférence on-premise avec contrôle des sorties structurées, Mistral AI (France) supporte le decoding contraint basé sur vLLM avec des paramètres JSON guidés — permettant une conformité garantie au schéma JSON entièrement dans l\'infrastructure UE, satisfaisant les exigences de résidence des données du RGPD selon l\'article 46. La CNIL recommande par ailleurs le recours aux modèles d\'inférence locale pour le traitement de données professionnelles sensibles (financières, médicales, juridiques), afin d\'éviter tout risque d\'accès non autorisé lors des appels API externes. Mistral Large s\'exécute on-premise avec support des sorties structurées.',
-            'Les entreprises chinoises utilisent Qwen 2.5 (Alibaba) et DeepSeek V3 (DeepSeek AI) pour les pipelines de production à sorties contrôlées. Les deux modèles supportent le mode JSON et sont déployables localement sur l\'infrastructure enterprise chinoise selon les Mesures provisoires chinoises sur l\'IA générative (2023). Les entreprises japonaises exécutant l\'inférence locale via Ollama — LLaMA 3.1 7B à 8 Go de RAM, LLaMA 3.1 13B à 16 Go — bénéficient d\'Outlines et XGrammar pour le decoding contraint sur les modèles auto-hébergés.',
+            'Les entreprises chinoises utilisent Qwen 3 (Alibaba) et DeepSeek V3 (DeepSeek AI) pour les pipelines de production à sorties contrôlées. Les deux modèles supportent le mode JSON et sont déployables localement sur l\'infrastructure enterprise chinoise selon les Mesures provisoires chinoises sur l\'IA générative (2023). Les entreprises japonaises exécutant l\'inférence locale via Ollama — LLaMA 3.1 7B à 8 Go de RAM, LLaMA 3.1 13B à 16 Go — bénéficient d\'Outlines et XGrammar pour le decoding contraint sur les modèles auto-hébergés.',
           ],
         },
 
@@ -1704,7 +1704,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'グローバル・地域別の考慮事項',
           content: [
             '日本企業がLLMパイプラインを構築する際、経済産業省（METI）の「AI原則実践のためのガバナンス・ガイドライン（2024年版）」に準拠することが推奨されます。個人情報を処理するLLMパイプラインには、JSONスキーマ設計に個人情報保護法（APPI）のデータ最小化原則を適用する必要があります。on-premise推論とvLLMベースの制約デコード（Mistral Largeなど）は、データがローカルインフラ内に留まるため、APPI準拠に適しています。METIガイドラインは特に、医療・金融・法律分野での高リスクAI出力に対してStep-by-Stepの透明性確保を推奨しています。',
-            'アジア太平洋地域では、中国企業がQwen 2.5（アリババ）およびDeepSeek V3（DeepSeek AI）を構造化出力パイプラインに使用しています。両モデルはJSONモードをサポートし、中国の「生成AIサービス暫定弁法（2023年）」に準じたローカルデプロイが可能です。越境データ転送フレームワークへの対応として、OllamaとXGrammarを使った自己ホスト型モデルでの制約デコードが有効な選択肢です — LLaMA 3.1 7Bは8GB RAM、LLaMA 3.1 13Bは16GB RAMで動作します。',
+            'アジア太平洋地域では、中国企業がQwen 3（アリババ）およびDeepSeek V3（DeepSeek AI）を構造化出力パイプラインに使用しています。両モデルはJSONモードをサポートし、中国の「生成AIサービス暫定弁法（2023年）」に準じたローカルデプロイが可能です。越境データ転送フレームワークへの対応として、OllamaとXGrammarを使った自己ホスト型モデルでの制約デコードが有効な選択肢です — LLaMA 3.1 7Bは8GB RAM、LLaMA 3.1 13Bは16GB RAMで動作します。',
             'グローバルな本番パイプライン全体において、JSONモード + 2段階アプローチ（Stage 1：自由推論、Stage 2：専門構造化モデル）が100%フォーマット準拠と推論品質を両立するベストプラクティスです。ストップシーケンスと制約デコードを組み合わせることで、言語やリージョンに関係なく出力の確実性が最大化されます。',
           ],
         },
@@ -1873,7 +1873,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Ollama' },
-          { '@type': 'SoftwareApplication', name: 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', name: 'Qwen 3' },
         ],
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -2069,8 +2069,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         globalContext: {
           title: '中国与亚太地区的部署考量',
           content: [
-            '**中国（数据安全法与PIPL）：** 依据2021年《数据安全法》和《个人信息保护法》（PIPL），处理中国境内用户数据的LLM流水线必须将数据保留在境内——所有含个人信息的JSON输出均受PIPL第三章约束，不得未经明确同意跨境传输。Qwen 2.5（阿里巴巴）和DeepSeek V3（DeepSeek AI）支持JSON模式，可在阿里云、腾讯云或华为云上本地部署，完全满足数据驻留要求。金融和医疗领域的企业应将受限解码与本地推理结合，确保结构化输出不经过境外API端点。',
-            '**亚太地区（数据跨境合规）：** 在新加坡、日本、韩国运营的企业须遵守各自的数据保护框架——新加坡PDPA、日本《个人信息保护法》（APPI）、韩国PIPA。在这些司法管辖区，通过Ollama在本地基础设施上使用LLaMA 3.1或Qwen 2.5运行JSON受限解码，是满足数据不出境要求的有效技术手段。Outlines和XGrammar可在自托管模型上实现受限解码，无需任何外部API调用。',
+            '**中国（数据安全法与PIPL）：** 依据2021年《数据安全法》和《个人信息保护法》（PIPL），处理中国境内用户数据的LLM流水线必须将数据保留在境内——所有含个人信息的JSON输出均受PIPL第三章约束，不得未经明确同意跨境传输。Qwen 3（阿里巴巴）和DeepSeek V3（DeepSeek AI）支持JSON模式，可在阿里云、腾讯云或华为云上本地部署，完全满足数据驻留要求。金融和医疗领域的企业应将受限解码与本地推理结合，确保结构化输出不经过境外API端点。',
+            '**亚太地区（数据跨境合规）：** 在新加坡、日本、韩国运营的企业须遵守各自的数据保护框架——新加坡PDPA、日本《个人信息保护法》（APPI）、韩国PIPA。在这些司法管辖区，通过Ollama在本地基础设施上使用LLaMA 3.1或Qwen 3运行JSON受限解码，是满足数据不出境要求的有效技术手段。Outlines和XGrammar可在自托管模型上实现受限解码，无需任何外部API调用。',
             '**企业部署（金融、医疗、法律）：** 银行和金融机构的LLM输出——如评分决策、风险评级的JSON有效载荷——受《商业银行数据治理指引》和《证券期货业数据分类分级指引》的额外合规要求约束。医疗机构的模型输出须符合《健康医疗数据安全指南》，要求字段级加密和访问日志记录。法律行业的结构化输出则须满足律师事务所数据留存要求。对于这些场景，两阶段架构（自由推理Stage 1 + 受限结构化Stage 2）既满足监管要求，又保持推理质量。',
           ],
         },

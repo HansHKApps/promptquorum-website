@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'annual',
       last_full_refresh: '2026-06-01',
-      current_models_mentioned: ['Qwen 2.5', 'ERNIE 4.0', 'Doubao', 'Z.ai GLM-4', 'DeepSeek R1', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'Mistral Large 2'],
+      current_models_mentioned: ['Qwen 3', 'ERNIE 4.0', 'Doubao', 'Z.ai GLM-4', 'DeepSeek R1', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'Mistral Large 2'],
       theme: 'Policy & Compliance',
       title: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
       intro: 'The US, China, and European Union are pursuing incompatible visions of AI governance — the US prioritizes competitiveness, China emphasizes state control, and the EU builds a rights-based legal framework. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements that apply regardless of where the organization is headquartered.',
@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'What are the fines for violating the EU AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Fines reach up to €35 million or 7% of global annual turnover for prohibited AI practices (whichever is higher). High-risk AI violations carry fines up to €15 million or 3% of global turnover. Providing incorrect information to authorities carries fines up to €7.5 million or 1% of global turnover.' } },
           { '@type': 'Question', name: 'What AI applications does the EU ban outright?', acceptedAnswer: { '@type': 'Answer', text: 'The EU AI Act prohibits: social scoring systems by public authorities, real-time biometric surveillance in public spaces (with narrow law enforcement exceptions), AI that exploits cognitive vulnerabilities, and untargeted scraping of facial images from the internet to build recognition databases. These are categorized as Unacceptable Risk.' } },
           { '@type': 'Question', name: 'How does US AI regulation differ from the EU approach?', acceptedAnswer: { '@type': 'Answer', text: 'The US uses a sectoral, voluntary approach — existing regulators (FTC, FDA, CFPB, EEOC) apply their mandates to AI within their domains. There is no federal AI law equivalent to the EU AI Act. The Biden Executive Order on AI Safety (October 2023) was revoked by the Trump administration in January 2025 and replaced with a competitiveness-focused AI Action Plan.' } },
-          { '@type': 'Question', name: 'Is China\'s AI as capable as US AI systems?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1, released January 2025, exceeded GPT-5.5 on reasoning and coding benchmarks (AIME 2024: 79.8% vs GPT-5.5\'s 74.4%, MATH-500: 97.3%, HumanEval) while reportedly training at ~$6 million — a 94% cost reduction vs estimated frontier model training costs. China\'s leading models — including Alibaba\'s Qwen 2.5 and Baidu\'s ERNIE 4.0 — are competitive on many tasks but trail on multilingual reasoning and safety benchmarks. Hardware export controls limit China\'s access to the latest Nvidia GPUs, but DeepSeek\'s success demonstrates those controls have significant limits.' } },
+          { '@type': 'Question', name: 'Is China\'s AI as capable as US AI systems?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1, released January 2025, exceeded GPT-5.5 on reasoning and coding benchmarks (AIME 2024: 79.8% vs GPT-5.5\'s 74.4%, MATH-500: 97.3%, HumanEval) while reportedly training at ~$6 million — a 94% cost reduction vs estimated frontier model training costs. China\'s leading models — including Alibaba\'s Qwen 3 and Baidu\'s ERNIE 4.0 — are competitive on many tasks but trail on multilingual reasoning and safety benchmarks. Hardware export controls limit China\'s access to the latest Nvidia GPUs, but DeepSeek\'s success demonstrates those controls have significant limits.' } },
           { '@type': 'Question', name: 'Can EU companies use GPT-5.5 and Claude under the AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, for most use cases. GPT-5.5 and Claude Opus 4.8 qualify as General Purpose AI (GPAI) models and must comply with transparency obligations — including publishing training data summaries and complying with EU copyright law — which took effect August 2025. OpenAI and Anthropic have both published GPAI compliance documentation for EU users.' } },
           { '@type': 'Question', name: 'What is the UK AI Safety Institute (AISI)?', acceptedAnswer: { '@type': 'Answer', text: 'The UK AI Safety Institute (AISI) was established in November 2023 following the AI Safety Summit at Bletchley Park. It conducts technical research on AI safety, evaluates frontier AI models for dangerous capabilities, and publishes safety reports. The AISI operates independently of commercial AI developers and collaborates with the US AI Safety Institute.' } },
           { '@type': 'Question', name: 'How does DeepSeek affect the AI geopolitics race?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1\'s January 2025 release demonstrated that frontier AI capabilities are achievable at significantly lower compute costs than previously assumed. This weakens the argument that export controls on Nvidia GPUs will permanently limit Chinese AI development. It accelerated US and EU policy discussions about whether compute-based containment strategies are sufficient.' } },
@@ -179,12 +179,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'How to Deploy Generative AI Products in China: A Developer Guide',
         description: 'Step-by-step guide for developers deploying AI products in China — model selection, content restrictions, CAC security assessment, PIPL data residency, and go-to-market timeline.',
         step: [
-          { '@type': 'HowToStep', position: 1, name: 'Understand Available AI Models in China', text: 'Foreign models (GPT-5.5, Claude, Gemini) are inaccessible from mainland China without a VPN. Available options: Alibaba Qwen 2.5 (open-weights, 7B–72B, 128K context), Baidu ERNIE 4.0 (Qianfan API), ByteDance Doubao (Volcano Engine), Z.ai GLM-4, DeepSeek R1/V3. Qwen 2.5 72B is the strongest open-weights option for self-hosting.' },
+          { '@type': 'HowToStep', position: 1, name: 'Understand Available AI Models in China', text: 'Foreign models (GPT-5.5, Claude, Gemini) are inaccessible from mainland China without a VPN. Available options: Alibaba Qwen 3 (open-weights, 7B–72B, 128K context), Baidu ERNIE 4.0 (Qianfan API), ByteDance Doubao (Volcano Engine), Z.ai GLM-4, DeepSeek R1/V3. Qwen 3 72B is the strongest open-weights option for self-hosting.' },
           { '@type': 'HowToStep', position: 2, name: 'Plan for API-Level Content Restrictions', text: 'CAC-registered generative AI services filter content blocking CPC leadership criticism, Taiwan/Tibet/Xinjiang independence discussions, politically sensitive historical events, and content undermining "socialist core values." Filters are built into the API. Filter errors return HTTP 200 with is_safe: 0 — not HTTP 4xx — requiring explicit application-level handling.' },
           { '@type': 'HowToStep', position: 3, name: 'Complete the CAC Security Assessment', text: 'Required before any consumer-facing generative AI service launches in China. Submit training data sources, content filtering documentation, and sample outputs. Timeline: 45–90 days. Foreign companies must partner with a mainland China entity or licensed cloud provider (Alibaba Cloud, Tencent Cloud) as the registered provider.' },
-          { '@type': 'HowToStep', position: 4, name: 'Deploy a Hybrid Model for China and International Users', text: 'Deploy Qwen 2.5 72B (Apache 2.0) on your own infrastructure outside China for international users. Use Alibaba Cloud API for the China segment under their CAC registration. Qwen 2.5 72B scores within 5 points of GPT-5.5 on MMLU and outperforms on C-Eval. 128K context window.' },
+          { '@type': 'HowToStep', position: 4, name: 'Deploy a Hybrid Model for China and International Users', text: 'Deploy Qwen 3 72B (Apache 2.0) on your own infrastructure outside China for international users. Use Alibaba Cloud API for the China segment under their CAC registration. Qwen 3 72B scores within 5 points of GPT-5.5 on MMLU and outperforms on C-Eval. 128K context window.' },
           { '@type': 'HowToStep', position: 5, name: 'Comply with PIPL Data Residency Requirements', text: 'PIPL (2021) requires personal data from Chinese users to stay in China or pass a government security assessment before cross-border transfer. Route all China-user traffic through mainland-hosted inference (Alibaba Cloud, Tencent Cloud, Huawei Cloud).' },
-          { '@type': 'HowToStep', position: 6, name: 'Plan Your China Go-to-Market Timeline', text: 'Budget 45–90 days for CAC pre-launch review. Partner with a mainland entity for consumer-facing products. Use Qwen 2.5 72B for Chinese-language tasks. Avoid routing Chinese user data through US-hosted APIs.' },
+          { '@type': 'HowToStep', position: 6, name: 'Plan Your China Go-to-Market Timeline', text: 'Budget 45–90 days for CAC pre-launch review. Partner with a mainland entity for consumer-facing products. Use Qwen 3 72B for Chinese-language tasks. Avoid routing Chinese user data through US-hosted APIs.' },
         ],
       },
       tableSchema: {
@@ -287,8 +287,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Region': 'China',
               'Legal constraint on prompts': 'CAC Generative AI Measures (2023): prompts that request content on CPC leadership, Taiwan/Tibet/Xinjiang independence, the 1989 Tiananmen events, or anything undermining "socialist core values" will be blocked. Returned as HTTP 200 with `is_safe: 0`. PIPL: prompts containing personal data of Chinese users must not be routed to non-China servers.',
-              'Language optimization': 'Write prompts in Simplified Chinese (Mandarin) for Chinese-language tasks — Qwen 2.5 and ERNIE 4.0 score 10–20% higher on Chinese-language benchmarks (C-Eval) vs the same prompt in English. Use Pinyin or English for technical terminology when no Chinese equivalent exists.',
-              'Recommended model': 'Qwen 2.5 72B (self-hosted outside China, no CAC filters) for cross-border tasks. ERNIE 4.0 via Qianfan API (CAC-registered) for consumer-facing China deployments. DeepSeek R1 for reasoning tasks that do not touch filtered content areas.',
+              'Language optimization': 'Write prompts in Simplified Chinese (Mandarin) for Chinese-language tasks — Qwen 3 and ERNIE 4.0 score 10–20% higher on Chinese-language benchmarks (C-Eval) vs the same prompt in English. Use Pinyin or English for technical terminology when no Chinese equivalent exists.',
+              'Recommended model': 'Qwen 3 72B (self-hosted outside China, no CAC filters) for cross-border tasks. ERNIE 4.0 via Qianfan API (CAC-registered) for consumer-facing China deployments. DeepSeek R1 for reasoning tasks that do not touch filtered content areas.',
             },
             {
               'Region': 'UK / Post-Brexit',
@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhichCountriesDominate: {
           title: 'Which Countries Dominate AI Development?',
           content: [
-            'The United States dominates frontier model capability — OpenAI (GPT-5.5), Anthropic (Claude), and Google DeepMind (Gemini) are all US-headquartered. China leads on AI patent volume (~70% of global patents in 2022 per WIPO) and has the most capable domestic models outside the US: Alibaba Qwen 2.5, Baidu ERNIE 4.0, and DeepSeek R1. The EU leads on AI regulation but trails on frontier capability — France\'s Mistral AI is the strongest European contender. The UK, Canada, and UAE are investing in AI as independent actors rather than aligning exclusively with either US or Chinese infrastructure.',
+            'The United States dominates frontier model capability — OpenAI (GPT-5.5), Anthropic (Claude), and Google DeepMind (Gemini) are all US-headquartered. China leads on AI patent volume (~70% of global patents in 2022 per WIPO) and has the most capable domestic models outside the US: Alibaba Qwen 3, Baidu ERNIE 4.0, and DeepSeek R1. The EU leads on AI regulation but trails on frontier capability — France\'s Mistral AI is the strongest European contender. The UK, Canada, and UAE are investing in AI as independent actors rather than aligning exclusively with either US or Chinese infrastructure.',
           ],
         },
 
@@ -396,7 +396,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**US position:** Leads on frontier model capability (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro), chip design (Nvidia, AMD), and AI investment ($67B private investment in 2023 per OECD). No unified federal AI law — accelerates deployment but creates compliance fragmentation.',
-            '**China\'s position:** Leads on AI patent volume, facial recognition scale, and state-directed infrastructure deployment. Models (Qwen 2.5, ERNIE 4.0, DeepSeek R1) are competitive on many benchmarks. Hardware dependence on Nvidia architectures is the primary strategic vulnerability export controls target.',
+            '**China\'s position:** Leads on AI patent volume, facial recognition scale, and state-directed infrastructure deployment. Models (Qwen 3, ERNIE 4.0, DeepSeek R1) are competitive on many benchmarks. Hardware dependence on Nvidia architectures is the primary strategic vulnerability export controls target.',
             '**Europe\'s position:** Leads on AI regulation — the EU AI Act is the global reference framework — and open-weights research (Mistral from France). Trails on frontier model capability and private investment. Compensates through regulatory leverage: the Brussels Effect forces US and Chinese providers to comply with EU standards for global products.',
             '**The hardware layer:** Nvidia H100/H200 GPUs dominate AI training. US export controls restrict sales to China. DeepSeek R1 trained on restricted H800 GPUs at reported ~$6M — a 94% cost reduction vs GPT-5.5 training estimates — demonstrating hardware controls have not halted Chinese frontier AI.',
           ],
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'France & Mistral: Building European AI Independence',
           content: [
             '**France is building a strategic counter to US AI dominance through public investment and Mistral AI — positioning open-weights models as Europe\'s path to AI sovereignty.** Mistral represents the EU\'s most viable alternative to GPT-5.5 and Claude, and France\'s €2 billion AI investment is explicitly designed to fund companies like Mistral and reduce reliance on OpenAI, Google, and Anthropic.',
-            '**Mistral AI (founded 2023):** Founded by Arthur Mensch, Guilaume Blanc, and Tim Caron — all former Meta employees. Mistral released Mistral 7B (open-weights) in September 2023, followed by Mistral Large 2 (competitive with GPT-5.5 on many tasks). Mistral Large 2 scores 81.2% on MMLU vs GPT-5.5\'s 88.7%, but matches proprietary models on classification, summarization, and extraction tasks. 123K token context window. Licensed under Mistral Community License (permits commercial use; derivative naming restrictions similar to LLaMA).',
+            '**Mistral AI (founded 2023):** Founded by Arthur Mensch, Guilaume Blanc, and Tim Caron — all former Meta employees. Mistral released Mistral Small (open-weights) in September 2023, followed by Mistral Large 2 (competitive with GPT-5.5 on many tasks). Mistral Large 2 scores 81.2% on MMLU vs GPT-5.5\'s 88.7%, but matches proprietary models on classification, summarization, and extraction tasks. 123K token context window. Licensed under Mistral Community License (permits commercial use; derivative naming restrictions similar to LLaMA).',
             '**Why France chose open-weights:** France\'s position is that proprietary APIs create vendor lock-in, data residency risks, and long-term dependency on US companies. Open-weights models can be deployed on European infrastructure, keeping data within EU jurisdictions and avoiding GDPR/AI Act friction with US cloud providers. This aligns with the Brussels Effect — by ensuring Mistral compliance with the EU AI Act, France strengthens Europe\'s regulatory leverage globally.',
             '**Government support:** French government backing via La Caisse des Dépôts et Placements (state investment fund) and direct subsidies. Mistral received €385 million Series B funding (February 2024) with support from French strategic investors. Positioned as a "European champion" in AI — similar to how Airbus was built as a European aerospace counterweight to Boeing.',
           ],
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**DeepSeek R1 (January 2025):** Released by DeepSeek (a Chinese AI lab backed by High-Flyer hedge fund), R1 exceeded GPT-5.5 on multiple benchmarks including AIME 2024 (79.8%), MATH-500 (97.3%), and HumanEval coding tasks. Trained on Nvidia H800 GPUs — the China-specific variant within export control limits — with estimated training cost of ~$6 million (94% reduction vs. frontier model estimates; figure is disputed but significant cost advantage clear). The release triggered a significant drop in Nvidia\'s stock price and accelerated US policy debates about the effectiveness of hardware export controls.',
             '**Huawei Ascend chips:** Huawei\'s Ascend 910B and 910C chips are positioned as domestic alternatives to Nvidia GPUs for AI training. Performance remains below Nvidia H100 on most benchmarks but sufficient for training medium-scale models. Major Chinese tech companies (Baidu, Alibaba, ByteDance) have begun migrating some workloads to Ascend to reduce Nvidia dependency.',
             '**Belt and Road AI diplomacy:** China exports AI surveillance infrastructure (facial recognition, smart city systems) to developing nations through BRI partnerships. Providers include Huawei, Alibaba Cloud, and ZTE. This exports Chinese AI governance norms — including algorithmic social management — to partner countries, creating a parallel AI standards ecosystem outside the OECD/EU framework.',
-            '**Leading Chinese AI models:** Alibaba Qwen 2.5, Baidu ERNIE 4.0, ByteDance Doubao, Z.ai GLM-4. These are competitive on Chinese-language tasks and increasingly on multilingual benchmarks. [Open-source vs proprietary LLM tradeoffs](/prompt-engineering/open-source-vs-proprietary-llms) affect Chinese model adoption — Qwen\'s open-weights release has attracted international developers.',
+            '**Leading Chinese AI models:** Alibaba Qwen 3, Baidu ERNIE 4.0, ByteDance Doubao, Z.ai GLM-4. These are competitive on Chinese-language tasks and increasingly on multilingual benchmarks. [Open-source vs proprietary LLM tradeoffs](/prompt-engineering/open-source-vs-proprietary-llms) affect Chinese model adoption — Qwen\'s open-weights release has attracted international developers.',
           ],
         },
 
@@ -518,7 +518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'China for Prompt Engineers: Which Models Are Available',
           content: [
             '**If your product serves users in China, you are operating in a distinct AI ecosystem with different available models, mandatory content filters, and a pre-launch approval requirement that has no equivalent in the EU or US.** Foreign models — GPT-5.5, Claude, Gemini — are inaccessible from mainland China without a VPN. Your options are limited to domestically registered alternatives.',
-            '**Available models in China:** Alibaba Qwen 2.5 (open-weights, 7B–72B, 128K context, API via Alibaba Cloud), Baidu ERNIE 4.0 (API via Qianfan platform), ByteDance Doubao (API via Volcano Engine), Z.ai GLM-4 (API via Z.ai platform), and DeepSeek R1/V3 (API via DeepSeek platform). Qwen 2.5 72B is the strongest open-weights option — you can self-host it outside China while using it for Chinese-language tasks. It scores within 5 percentage points of GPT-5.5 on MMLU and outperforms on Chinese-specific benchmarks (C-Eval).',
+            '**Available models in China:** Alibaba Qwen 3 (open-weights, 7B–72B, 128K context, API via Alibaba Cloud), Baidu ERNIE 4.0 (API via Qianfan platform), ByteDance Doubao (API via Volcano Engine), Z.ai GLM-4 (API via Z.ai platform), and DeepSeek R1/V3 (API via DeepSeek platform). Qwen 3 72B is the strongest open-weights option — you can self-host it outside China while using it for Chinese-language tasks. It scores within 5 percentage points of GPT-5.5 on MMLU and outperforms on Chinese-specific benchmarks (C-Eval).',
           ],
         },
 
@@ -543,12 +543,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**The Personal Information Protection Law (PIPL, 2021) is your binding constraint.** PIPL requires that personal data collected from Chinese users either stays in China or passes a government security assessment before cross-border transfer. If your AI application processes personal data of Chinese users — names, IDs, location, behavioral data — and sends it to a model API outside China, you violate PIPL. The practical solution: route China-user traffic through mainland-hosted inference (Alibaba Cloud, Tencent Cloud, Huawei Cloud) so personal data never leaves Chinese jurisdiction.',
             '**Baidu ERNIE 4.0 API (practical details):** Accessible via Qianfan (千帆) platform. Pricing: ¥0.12 per 1K tokens (input/output) for ERNIE 4.0 Turbo as of 2026. Accepts system prompts, supports function calling, returns JSON-structured responses. Rate limits: 60 QPM standard tier. Content filter errors return HTTP 200 with `is_safe: 0` flag — requires explicit application-level error handling.',
-            '**Qwen 2.5 as a hybrid solution:** For teams serving both Chinese and international users, Qwen 2.5 (open-weights, Apache 2.0) is the most practical bridge. Deploy Qwen 2.5 72B on your infrastructure outside China for international users (no CAC filters), use Alibaba Cloud API for China segment under Alibaba\'s CAC registration. 128K context window, competitive on multilingual tasks.',
+            '**Qwen 3 as a hybrid solution:** For teams serving both Chinese and international users, Qwen 3 (open-weights, Apache 2.0) is the most practical bridge. Deploy Qwen 3 72B on your infrastructure outside China for international users (no CAC filters), use Alibaba Cloud API for China segment under Alibaba\'s CAC registration. 128K context window, competitive on multilingual tasks.',
           ],
           items: [
             '**Prompt example (safe):** "What are the key provisions of China\'s Generative AI Measures (2023) and what documentation must a company prepare before launching a generative AI service in China?" — Works because it asks factual regulatory information without touching prohibited areas. DeepSeek R1 handles regulatory analysis reliably.',
             '**Prompt example (filtered):** "Compare the political systems of Taiwan and mainland China" triggers `is_safe: 0` across CAC APIs. Rephrase: "Compare GDP per capita and trade volume of Taiwan and mainland China" — shifts focus to economics.',
-            '**Prompt example (Qwen 2.5 advantage):** "Summarize this Chinese regulatory document and identify three compliance obligations for a foreign AI company." Qwen 2.5 72B (self-hosted outside China) handles Chinese-language legal documents without CAC filters — best option for cross-border compliance workflows.',
+            '**Prompt example (Qwen 3 advantage):** "Summarize this Chinese regulatory document and identify three compliance obligations for a foreign AI company." Qwen 3 72B (self-hosted outside China) handles Chinese-language legal documents without CAC filters — best option for cross-border compliance workflows.',
           ],
         },
 
@@ -779,7 +779,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               mistake: 'Sending personal data of Chinese users through US-hosted API endpoints without GDPR-equivalent protections.',
               problem: 'China\'s PIPL (2021) prohibits cross-border transfer of personal data without government security assessment. Regulators in Germany, France, and Netherlands have restricted Chinese AI tools for government use. Private-sector organizations face legal exposure.',
-              fix: 'Route China-user traffic through mainland-hosted inference (Alibaba Cloud, Tencent Cloud) so personal data never leaves Chinese jurisdiction. For international deployments, use Qwen 2.5 (open-weights) or Mistral (EU-based) instead of US APIs for China-facing products.',
+              fix: 'Route China-user traffic through mainland-hosted inference (Alibaba Cloud, Tencent Cloud) so personal data never leaves Chinese jurisdiction. For international deployments, use Qwen 3 (open-weights) or Mistral (EU-based) instead of US APIs for China-facing products.',
             },
             {
               mistake: 'Assuming CAC content filters return HTTP 4xx errors (like standard API errors).',
@@ -934,8 +934,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Region': 'China',
               'Gesetzliche Einschränkung für Prompts': 'CAC Generative AI Measures (2023): Prompts, die Inhalte zu KP-Führung, Taiwan/Tibet/Xinjiang-Unabhängigkeit, die Tiananmen-Ereignisse von 1989 oder alles, das "sozialistische Kernwerte" untergräbt, anfordern, werden blockiert. Zurückgegeben als HTTP 200 mit `is_safe: 0`. PIPL: Prompts mit personenbezogenen Daten chinesischer Nutzer dürfen nicht an Nicht-China-Server weitergeleitet werden.',
-              'Sprachoptimierung': 'Schreiben Sie Prompts in vereinfachtem Chinesisch (Mandarin) für chinesischsprachige Aufgaben — Qwen 2.5 und ERNIE 4.0 erreichen 10–20% höhere Scores bei chinesischsprachigen Benchmarks (C-Eval) vs. den gleichen Prompt auf Englisch. Verwenden Sie Pinyin oder Englisch für technische Terminologie, wenn es kein chinesisches Äquivalent gibt.',
-              'Empfohlenes Modell': 'Qwen 2.5 72B (selbst-gehostet außerhalb Chinas, keine CAC-Filter) für grenzüberschreitende Aufgaben. ERNIE 4.0 via Qianfan API (CAC-registriert) für verbrauchernahe China-Implementierungen. DeepSeek R1 für Reasoning-Aufgaben, die gefilterte Inhaltsbereiche nicht berühren.',
+              'Sprachoptimierung': 'Schreiben Sie Prompts in vereinfachtem Chinesisch (Mandarin) für chinesischsprachige Aufgaben — Qwen 3 und ERNIE 4.0 erreichen 10–20% höhere Scores bei chinesischsprachigen Benchmarks (C-Eval) vs. den gleichen Prompt auf Englisch. Verwenden Sie Pinyin oder Englisch für technische Terminologie, wenn es kein chinesisches Äquivalent gibt.',
+              'Empfohlenes Modell': 'Qwen 3 72B (selbst-gehostet außerhalb Chinas, keine CAC-Filter) für grenzüberschreitende Aufgaben. ERNIE 4.0 via Qianfan API (CAC-registriert) für verbrauchernahe China-Implementierungen. DeepSeek R1 für Reasoning-Aufgaben, die gefilterte Inhaltsbereiche nicht berühren.',
             },
             {
               'Region': 'UK / Post-Brexit',
@@ -981,7 +981,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhichCountriesDominate: {
           title: 'Welche Länder dominieren die KI-Entwicklung?',
           content: [
-            'Die Vereinigten Staaten dominieren Frontier-Modell-Leistung — OpenAI (GPT-5.5), Anthropic (Claude) und Google DeepMind (Gemini) sind alle in der USA ansässig. China führt beim KI-Patent-Volumen (~70% globaler Patente 2022 per WIPO) und hat die fähigsten inländischen Modelle außerhalb der USA: Alibaba Qwen 2.5, Baidu ERNIE 4.0 und DeepSeek R1. Die EU führt bei KI-Regulierung, bleibt aber bei Frontier-Leistung zurück — Frankreichs Mistral AI ist der stärkste europäische Kandidat. UK, Kanada und UAE investieren in KI als unabhängige Akteure statt exklusiv mit US oder chinesischer Infrastruktur zu alignieren.',
+            'Die Vereinigten Staaten dominieren Frontier-Modell-Leistung — OpenAI (GPT-5.5), Anthropic (Claude) und Google DeepMind (Gemini) sind alle in der USA ansässig. China führt beim KI-Patent-Volumen (~70% globaler Patente 2022 per WIPO) und hat die fähigsten inländischen Modelle außerhalb der USA: Alibaba Qwen 3, Baidu ERNIE 4.0 und DeepSeek R1. Die EU führt bei KI-Regulierung, bleibt aber bei Frontier-Leistung zurück — Frankreichs Mistral AI ist der stärkste europäische Kandidat. UK, Kanada und UAE investieren in KI als unabhängige Akteure statt exklusiv mit US oder chinesischer Infrastruktur zu alignieren.',
           ],
         },
 
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**US-Position:** Führt bei Frontier-Modell-Leistung (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro), Chip-Design (Nvidia, AMD) und KI-Investitionen (67 Mrd. USD private Investition 2023 pro OECD). Kein einheitliches bundesweites KI-Gesetz — beschleunigt Bereitstellung, schafft aber Compliance-Fragmentierung.',
-            '**Chinas Position:** Führt bei KI-Patent-Volumen, Gesichtserkennung im großen Maßstab und staatlich geleiteter Infrastruktur-Bereitstellung. Modelle (Qwen 2.5, ERNIE 4.0, DeepSeek R1) sind bei vielen Benchmarks wettbewerbsfähig. Hardware-Abhängigkeit von Nvidia-Architekturen ist die primäre strategische Schwachstelle, die Export-Kontrolle anvisiert.',
+            '**Chinas Position:** Führt bei KI-Patent-Volumen, Gesichtserkennung im großen Maßstab und staatlich geleiteter Infrastruktur-Bereitstellung. Modelle (Qwen 3, ERNIE 4.0, DeepSeek R1) sind bei vielen Benchmarks wettbewerbsfähig. Hardware-Abhängigkeit von Nvidia-Architekturen ist die primäre strategische Schwachstelle, die Export-Kontrolle anvisiert.',
             '**Europas Position:** Führt bei KI-Regulierung — der EU AI Act ist das globale Referenz-Framework — und Open-Weights-Forschung (Mistral aus Frankreich). Bleibt bei Frontier-Modell-Leistung und private Investitionen zurück. Kompensiert durch Regulierungs-Hebelwirkung: Der Brussels Effect zwingt US- und chinesische Anbieter, EU-Standards für globale Produkte zu erfüllen.',
             '**Die Hardware-Schicht:** Nvidia H100/H200 GPUs dominieren KI-Training. US-Exportkontrollen beschränken Verkäufe nach China. DeepSeek R1 trainiert auf beschränkten H800 GPUs bei berichteten ~6 Mio. USD — eine 94% Kostenreduktion vs GPT-5.5 Trainings-Schätzungen — zeigt, dass Hardware-Kontrolle chinesische Frontier-KI nicht gestoppt hat.',
           ],
@@ -1084,7 +1084,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Frankreich & Mistral: Europäische KI-Unabhängigkeit aufbauen',
           content: [
             '**Frankreich baut einen strategischen Gegenpoint zu US-KI-Dominanz durch öffentliche Investition und Mistral AI — positioniert Open-Weights-Modelle als Europas Weg zu KI-Souveränität.** Mistral stellt die lebensfähigste Alternative der EU zu GPT-5.5 und Claude dar, und Frankreichs 2 Mrd. EUR KI-Investition ist explizit entworfen, um Unternehmen wie Mistral zu finanzieren und die Abhängigkeit von OpenAI, Google und Anthropic zu reduzieren.',
-            '**Mistral AI (gegründet 2023):** Gegründet von Arthur Mensch, Guilaume Blanc und Tim Caron — alle ehemalige Meta-Mitarbeiter. Mistral gab Mistral 7B (Open-Weights) im September 2023 frei, gefolgt von Mistral Large 2 (wettbewerbsfähig mit GPT-5.5 bei vielen Aufgaben). Mistral Large 2 bewertet 81,2% auf MMLU vs GPT-5.5\'s 88,7%, passt aber zu proprietären Modellen bei Klassifizierung, Zusammenfassung und Extraktionsaufgaben. 123K Token-Kontextfenster. Lizenziert unter Mistral Community License (erlaubt kommerzielle Nutzung; Ableitungs-Namensrestriktionen ähnlich LLaMA).',
+            '**Mistral AI (gegründet 2023):** Gegründet von Arthur Mensch, Guilaume Blanc und Tim Caron — alle ehemalige Meta-Mitarbeiter. Mistral gab Mistral Small (Open-Weights) im September 2023 frei, gefolgt von Mistral Large 2 (wettbewerbsfähig mit GPT-5.5 bei vielen Aufgaben). Mistral Large 2 bewertet 81,2% auf MMLU vs GPT-5.5\'s 88,7%, passt aber zu proprietären Modellen bei Klassifizierung, Zusammenfassung und Extraktionsaufgaben. 123K Token-Kontextfenster. Lizenziert unter Mistral Community License (erlaubt kommerzielle Nutzung; Ableitungs-Namensrestriktionen ähnlich LLaMA).',
             '**Warum Frankreich Open-Weights wählte:** Frankreichs Position ist, dass proprietäre APIs Anbieter-Lock-in, Datenresidenz-Risiken und langfristige Abhängigkeit von US-Unternehmen schaffen. Open-Weights-Modelle können auf europäischer Infrastruktur bereitgestellt werden, Daten innerhalb der EU-Jurisdiktionen halten und GDPR/AI Act-Reibung mit US-Cloud-Anbietern vermeiden. Dies aligniert sich mit dem Brussels Effect — durch die Sicherstellung von Mistrals Konformität mit dem EU AI Act stärkt Frankreich Europas Regulierungs-Hebelwirkung global.',
             '**Regierungsunterstützung:** Französische Regierungsunterstützung via La Caisse des Dépôts et Placements (staatlicher Investitionsfonds) und direkte Subventionen. Mistral erhielt 385 Millionen EUR Series B Finanzierung (Februar 2024) mit Unterstützung von französischen strategischen Investoren. Positioniert als "europäischer Champion" in KI — ähnlich, wie Airbus als europäischer Luft- und Raumfahrt-Gegenpoint zu Boeing gebaut wurde.',
           ],
@@ -1129,7 +1129,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**DeepSeek R1 (Januar 2025):** Freigegeben von DeepSeek (ein chinesisches KI-Lab von High-Flyer-Hedgefonds unterstützt), R1 passte oder übertraf GPT-5.5 bei mehreren Benchmarks, einschließlich AIME 2024 (79,8% vs GPT-5.5\'s 74,4%), MATH-500 (97,3%) und HumanEval-Coding-Aufgaben. Trainiert auf Nvidia H800 GPUs — die China-spezifische Variante innerhalb von Exportkontroll-Grenzen. Die Freigabe triggerte einen signifikanten Drop in Nvidias Aktienkurs und beschleunigte US-Richtlinien-Debatten über die Effektivität von Hardware-Exportkontrollen.',
             '**Huawei Ascend Chips:** Huaweis Ascend 910B und 910C Chips sind positioniert als inländische Alternativen zu Nvidia GPUs für KI-Training. Performance bleibt unter Nvidia H100 bei den meisten Benchmarks, aber ausreichend für das Training von Medium-Scale-Modellen. Große chinesische Tech-Unternehmen (Baidu, Alibaba, ByteDance) haben begonnen, einige Workloads zu Ascend zu migrieren, um Nvidia-Abhängigkeit zu reduzieren.',
             '**Belt and Road KI-Diplomatie:** China exportiert KI-Überwachungs-Infrastruktur (Gesichtserkennung, Smart-City-Systeme) zu entwickelnden Nationen durch BRI-Partnerschaften. Anbieter enthalten Huawei, Alibaba Cloud und ZTE. Dies exportiert chinesische KI-Governance-Normen — einschließlich algorithmischer sozialer Verwaltung — zu Partner-Ländern, eine parallele KI-Standards-Ökosystem außerhalb des OECD/EU-Rahmens schaffend.',
-            '**Führende chinesische KI-Modelle:** Alibaba Qwen 2.5, Baidu ERNIE 4.0, ByteDance Doubao, Z.ai GLM-4. Diese sind wettbewerbsfähig bei chinesischen Sprach-Aufgaben und zunehmend bei mehrsprachigen Benchmarks. [Open-source vs proprietary LLM Tradeoffs](/prompt-engineering/open-source-vs-proprietary-llms) beeinflussen chinesische Modell-Annahme — Qwens Open-Weights-Freigabe hat internationale Entwickler angezogen.',
+            '**Führende chinesische KI-Modelle:** Alibaba Qwen 3, Baidu ERNIE 4.0, ByteDance Doubao, Z.ai GLM-4. Diese sind wettbewerbsfähig bei chinesischen Sprach-Aufgaben und zunehmend bei mehrsprachigen Benchmarks. [Open-source vs proprietary LLM Tradeoffs](/prompt-engineering/open-source-vs-proprietary-llms) beeinflussen chinesische Modell-Annahme — Qwens Open-Weights-Freigabe hat internationale Entwickler angezogen.',
           ],
         },
 
@@ -1137,7 +1137,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'China für Prompt Engineers: Welche Modelle sind verfügbar',
           content: [
             '**Wenn Ihr Produkt Nutzer in China bedient, funktionieren Sie in einem eigenständigen KI-Ökosystem mit unterschiedlichen verfügbaren Modellen, zwingenden Inhaltsfiltern und einer Pre-Launch-Genehmigungsanforderung ohne Äquivalent in der EU oder USA.** Ausländische Modelle — GPT-5.5, Claude, Gemini — sind vom Festland China ohne VPN unzugänglich. Ihre Optionen sind auf domestic registrierte Alternativen begrenzt.',
-            '**Verfügbare Modelle in China:** Alibaba Qwen 2.5 (Open-Weights, 7B–72B, 128K Kontext, API via Alibaba Cloud), Baidu ERNIE 4.0 (API via Qianfan Plattform), ByteDance Doubao (API via Volcano Engine), Z.ai GLM-4 (API via Z.ai Plattform) und DeepSeek R1/V3 (API via DeepSeek Plattform). Qwen 2.5 72B ist die stärkste Open-Weights-Option — Sie können sie außerhalb Chinas selbst-hosten, während Sie sie für chinesischsprachige Aufgaben nutzen. Sie bewertet sich innerhalb von 5 Prozentpunkten von GPT-5.5 bei MMLU und outperformt bei chinesisch-spezifischen Benchmarks (C-Eval).',
+            '**Verfügbare Modelle in China:** Alibaba Qwen 3 (Open-Weights, 7B–72B, 128K Kontext, API via Alibaba Cloud), Baidu ERNIE 4.0 (API via Qianfan Plattform), ByteDance Doubao (API via Volcano Engine), Z.ai GLM-4 (API via Z.ai Plattform) und DeepSeek R1/V3 (API via DeepSeek Plattform). Qwen 3 72B ist die stärkste Open-Weights-Option — Sie können sie außerhalb Chinas selbst-hosten, während Sie sie für chinesischsprachige Aufgaben nutzen. Sie bewertet sich innerhalb von 5 Prozentpunkten von GPT-5.5 bei MMLU und outperformt bei chinesisch-spezifischen Benchmarks (C-Eval).',
           ],
         },
 
@@ -1155,12 +1155,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Das Personal Information Protection Law (PIPL, 2021) ist Ihre bindende Einschränkung.** PIPL verlangt, dass personenbezogene Daten, die von chinesischen Nutzern gesammelt werden, entweder in China bleiben oder eine Regierungs-Sicherheitsbewertung vor Cross-Border-Übertrag bestehen. Wenn Ihre KI-Anwendung personenbezogene Daten chinesischer Nutzer verarbeitet — Namen, IDs, Ort, Verhaltendaten — und es an eine Modell-API außerhalb Chinas sendet, verletzen Sie PIPL. Die praktische Lösung: routen Sie China-Nutzer-Traffic durch Mainland-gehostete Inferenz (Alibaba Cloud, Tencent Cloud, Huawei Cloud), so dass personenbezogene Daten nie chinesische Jurisdiktion verlassen.',
             '**Baidu ERNIE 4.0 API (praktische Details):** Zugänglich via Qianfan (千帆) Plattform. Preisgestaltung: ¥0,12 per 1K Tokens (Input/Output) für ERNIE 4.0 Turbo ab 2026. Akzeptiert System-Prompts, unterstützt Funktionsaufrufe, gibt JSON-strukturierte Responses zurück. Rate-Limits: 60 QPM Standard-Tier. Content-Filter-Fehler geben HTTP 200 mit `is_safe: 0` Flag zurück — erfordert explizite Anwendungsebene-Fehlerbehandlung.',
-            '**Qwen 2.5 als Hybrid-Lösung:** Für Teams, die chinesische und internationale Nutzer bedienen, ist Qwen 2.5 (Open-Weights, Apache 2.0) die praktischste Brücke. Deployen Sie Qwen 2.5 72B auf Ihrer Infrastruktur außerhalb Chinas für internationale Nutzer (keine CAC-Filter), verwenden Sie Alibaba Cloud API für China-Segment unter Alibabas CAC-Registrierung. 128K Kontext-Fenster, wettbewerbsfähig bei mehrsprachigen Aufgaben.',
+            '**Qwen 3 als Hybrid-Lösung:** Für Teams, die chinesische und internationale Nutzer bedienen, ist Qwen 3 (Open-Weights, Apache 2.0) die praktischste Brücke. Deployen Sie Qwen 3 72B auf Ihrer Infrastruktur außerhalb Chinas für internationale Nutzer (keine CAC-Filter), verwenden Sie Alibaba Cloud API für China-Segment unter Alibabas CAC-Registrierung. 128K Kontext-Fenster, wettbewerbsfähig bei mehrsprachigen Aufgaben.',
           ],
           items: [
             '**Prompt-Beispiel (sicher):** "Was sind die Schlüsselbestimmungen von Chinas Generative AI Measures (2023) und welche Dokumentation muss ein Unternehmen vorbereiten, bevor es einen generativen KI-Service in China startet?" — Funktioniert, weil es faktische Regulierungs-Information verlangt, ohne verbotene Bereiche zu berühren. DeepSeek R1 behandelt Regulierungs-Analyse zuverlässig.',
             '**Prompt-Beispiel (gefiltert):** "Vergleichen Sie die politischen Systeme von Taiwan und Festland-China" triggert `is_safe: 0` über CAC-APIs. Umformulieren: "Vergleichen Sie BIP pro Kopf und Handelsvolumen von Taiwan und Festland-China" — verschiebt Fokus zu Wirtschaft.',
-            '**Prompt-Beispiel (Qwen 2.5 Vorteil):** "Fassen Sie dieses chinesische Regulierungs-Dokument zusammen und identifizieren Sie drei Compliance-Verpflichtungen für ein ausländisches KI-Unternehmen." Qwen 2.5 72B (selbst-gehostet außerhalb Chinas) behandelt chinesischsprachige rechtliche Dokumente ohne CAC-Filter — beste Option für Cross-Border-Compliance-Workflows.',
+            '**Prompt-Beispiel (Qwen 3 Vorteil):** "Fassen Sie dieses chinesische Regulierungs-Dokument zusammen und identifizieren Sie drei Compliance-Verpflichtungen für ein ausländisches KI-Unternehmen." Qwen 3 72B (selbst-gehostet außerhalb Chinas) behandelt chinesischsprachige rechtliche Dokumente ohne CAC-Filter — beste Option für Cross-Border-Compliance-Workflows.',
           ],
         },
 
@@ -1527,8 +1527,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Región': 'China',
               'Restricción legal en prompts': 'Medidas de IA Generativa del CAC (2023): los prompts que soliciten contenido sobre el liderazgo del PCCh, la independencia de Taiwán/Tíbet/Xinjiang, los eventos de Tiananmen de 1989 o cualquier cosa que socave los "valores socialistas fundamentales" serán bloqueados. Devuelto como HTTP 200 con `is_safe: 0`. PIPL: los prompts que contengan datos personales de usuarios chinos no deben enrutarse a servidores fuera de China.',
-              'Optimización de idioma': 'Escribe prompts en chino simplificado (mandarín) para tareas en chino — Qwen 2.5 y ERNIE 4.0 puntúan entre un 10-20% más alto en benchmarks de idioma chino (C-Eval) vs. el mismo prompt en inglés. Usa Pinyin o inglés para terminología técnica cuando no exista equivalente en chino.',
-              'Modelo recomendado': 'Qwen 2.5 72B (auto-alojado fuera de China, sin filtros CAC) para tareas transfronterizas. ERNIE 4.0 vía API Qianfan (registrado en CAC) para despliegues de cara al consumidor en China. DeepSeek R1 para tareas de razonamiento que no toquen áreas de contenido filtrado.',
+              'Optimización de idioma': 'Escribe prompts en chino simplificado (mandarín) para tareas en chino — Qwen 3 y ERNIE 4.0 puntúan entre un 10-20% más alto en benchmarks de idioma chino (C-Eval) vs. el mismo prompt en inglés. Usa Pinyin o inglés para terminología técnica cuando no exista equivalente en chino.',
+              'Modelo recomendado': 'Qwen 3 72B (auto-alojado fuera de China, sin filtros CAC) para tareas transfronterizas. ERNIE 4.0 vía API Qianfan (registrado en CAC) para despliegues de cara al consumidor en China. DeepSeek R1 para tareas de razonamiento que no toquen áreas de contenido filtrado.',
             },
             {
               'Región': 'Reino Unido / Post-Brexit',
@@ -1576,7 +1576,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhichCountriesDominate: {
           title: '¿Qué países dominan el desarrollo de la IA?',
           content: [
-            'EE.UU. domina la capacidad de modelos de frontera — OpenAI (GPT-5.5), Anthropic (Claude) y Google DeepMind (Gemini) tienen todas sede en EE.UU. China lidera en volumen de patentes de IA (~70% de las patentes globales en 2022 según la OMPI) y tiene los modelos domésticos más capaces fuera de EE.UU.: Alibaba Qwen 2.5, Baidu ERNIE 4.0 y DeepSeek R1. La UE lidera en regulación de IA pero va por detrás en capacidad de frontera — Mistral AI de Francia es el principal contendiente europeo.',
+            'EE.UU. domina la capacidad de modelos de frontera — OpenAI (GPT-5.5), Anthropic (Claude) y Google DeepMind (Gemini) tienen todas sede en EE.UU. China lidera en volumen de patentes de IA (~70% de las patentes globales en 2022 según la OMPI) y tiene los modelos domésticos más capaces fuera de EE.UU.: Alibaba Qwen 3, Baidu ERNIE 4.0 y DeepSeek R1. La UE lidera en regulación de IA pero va por detrás en capacidad de frontera — Mistral AI de Francia es el principal contendiente europeo.',
           ],
         },
 
@@ -1636,7 +1636,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**Posición de EE.UU.:** Lidera en capacidad de modelos de frontera (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro), diseño de chips (Nvidia, AMD) e inversión en IA ($67B de inversión privada en 2023 según la OCDE). Sin ley federal unificada de IA — acelera el despliegue pero crea fragmentación de cumplimiento.',
-            '**Posición de China:** Lidera en volumen de patentes de IA, escala de reconocimiento facial y despliegue de infraestructura dirigido por el estado. Los modelos (Qwen 2.5, ERNIE 4.0, DeepSeek R1) son competitivos en muchos benchmarks. La dependencia del hardware en arquitecturas Nvidia es la principal vulnerabilidad estratégica que buscan los controles de exportación.',
+            '**Posición de China:** Lidera en volumen de patentes de IA, escala de reconocimiento facial y despliegue de infraestructura dirigido por el estado. Los modelos (Qwen 3, ERNIE 4.0, DeepSeek R1) son competitivos en muchos benchmarks. La dependencia del hardware en arquitecturas Nvidia es la principal vulnerabilidad estratégica que buscan los controles de exportación.',
             '**Posición de Europa:** Lidera en regulación de IA — el EU AI Act es el marco de referencia global — e investigación de pesos abiertos (Mistral de Francia). Va por detrás en capacidad de modelos de frontera e inversión privada. Compensa mediante apalancamiento regulatorio: el Efecto Bruselas obliga a los proveedores de EE.UU. y China a cumplir con los estándares de la UE para productos globales.',
             '**La capa de hardware:** Las GPU Nvidia H100/H200 dominan el entrenamiento de IA. Los controles de exportación de EE.UU. restringen las ventas a China. DeepSeek R1 entrenado en GPU H800 restringidas a un costo reportado de ~$6M — una reducción del 94% frente a las estimaciones de entrenamiento de GPT-5.5 — demostrando que los controles de hardware no han detenido la IA de frontera china.',
           ],
@@ -1699,7 +1699,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Francia y Mistral: Construyendo la independencia europea en IA',
           content: [
             '**Francia está construyendo un contrapeso estratégico a la dominancia de IA de EE.UU. a través de la inversión pública y Mistral AI — posicionando los modelos de pesos abiertos como el camino de Europa hacia la soberanía de IA.**',
-            '**Mistral AI (fundada en 2023):** Fundada por Arthur Mensch, Guillaume Blanc y Tim Caron — todos ex empleados de Meta. Mistral lanzó Mistral 7B (pesos abiertos) en septiembre de 2023, seguido de Mistral Large 2 (competitivo con GPT-5.5 en muchas tareas). Mistral Large 2 puntúa 81.2% en MMLU vs. el 88.7% de GPT-5.5. Ventana de contexto de 123K tokens.',
+            '**Mistral AI (fundada en 2023):** Fundada por Arthur Mensch, Guillaume Blanc y Tim Caron — todos ex empleados de Meta. Mistral lanzó Mistral Small (pesos abiertos) en septiembre de 2023, seguido de Mistral Large 2 (competitivo con GPT-5.5 en muchas tareas). Mistral Large 2 puntúa 81.2% en MMLU vs. el 88.7% de GPT-5.5. Ventana de contexto de 123K tokens.',
             '**Por qué Francia eligió pesos abiertos:** La posición de Francia es que las APIs propietarias crean dependencia de proveedor, riesgos de residencia de datos y dependencia a largo plazo de empresas de EE.UU. Los modelos de pesos abiertos pueden desplegarse en infraestructura europea, manteniendo los datos dentro de las jurisdicciones de la UE.',
             '**Apoyo gubernamental:** Respaldo del gobierno francés a través de La Caisse des Dépôts et Placements (fondo de inversión estatal). Mistral recibió €385 millones en financiación de la Serie B (febrero de 2024) con apoyo de inversores estratégicos franceses.',
           ],
@@ -1751,7 +1751,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Los modelos extranjeros (GPT-5.5, Claude, Gemini) son inaccesibles desde China continental sin una VPN.** Para despliegues en China, los desarrolladores deben usar modelos nacionales a través de plataformas aprobadas por el CAC.',
           ],
           items: [
-            'Alibaba Qwen 2.5 (pesos abiertos, 7B–72B, ventana de contexto de 128K): el modelo de código abierto más fuerte de China. Licencia Apache 2.0. Desplegable auto-alojado fuera de China sin filtros del CAC.',
+            'Alibaba Qwen 3 (pesos abiertos, 7B–72B, ventana de contexto de 128K): el modelo de código abierto más fuerte de China. Licencia Apache 2.0. Desplegable auto-alojado fuera de China sin filtros del CAC.',
             'Baidu ERNIE 4.0 (API Qianfan): registrado en el CAC para despliegues de cara al consumidor en China. Mejor rendimiento en tareas en chino.',
             'ByteDance Doubao (Volcano Engine): API de servicio gestionado de China continental. Rentable para aplicaciones de alto volumen.',
             'DeepSeek R1/V3: abierto y auto-alojable; también disponible como servicio API. Sin filtros de contenido en la versión auto-alojada.',
@@ -1768,7 +1768,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Áreas de contenido filtradas: liderazgo del PCCh y sus políticas, independencia de Taiwán/Tíbet/Xinjiang, eventos de Tiananmen de 1989, contenido que socave los "valores socialistas fundamentales", críticas al gobierno chino.',
             'Formato de respuesta del filtro: HTTP 200 con `{"is_safe": 0}` en el cuerpo de la respuesta — NO HTTP 4xx. El manejo de errores en la aplicación debe comprobar explícitamente `is_safe` en lugar de depender de los códigos de estado HTTP.',
             'Acciones del desarrollador requeridas: Añade un handler `is_safe` a todas las llamadas a la API de modelos de China. Muestra un mensaje de error controlado al usuario cuando `is_safe: 0`. No asumas que los errores del filtro son raros — cualquier prompt sobre política, historia o eventos geopolíticos actuales puede activar los filtros.',
-            'Solución para datos transfronterizos: usa Qwen 2.5 72B auto-alojado fuera de China para aplicaciones que requieran cobertura de contenido completa. El mismo modelo sirve a ambas regiones con el filtrado de contenido correcto aplicado solo cuando se sirve a través de las APIs de China continental.',
+            'Solución para datos transfronterizos: usa Qwen 3 72B auto-alojado fuera de China para aplicaciones que requieran cobertura de contenido completa. El mismo modelo sirve a ambas regiones con el filtrado de contenido correcto aplicado solo cuando se sirve a través de las APIs de China continental.',
           ],
         },
 
@@ -1779,7 +1779,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Cumplimiento de PIPL: enruta todo el tráfico de usuarios chinos a través de inferencia alojada en China continental (Alibaba Cloud, Tencent Cloud, Huawei Cloud). No envíes datos de usuarios chinos a APIs alojadas en EE.UU. aunque estés usando versiones de Qwen o DeepSeek.',
-            'Arquitectura de despliegue recomendada: despliega Qwen 2.5 72B (Apache 2.0) en tu propia infraestructura fuera de China para usuarios internacionales. Usa la API de Alibaba Cloud para el segmento de China bajo su registro en el CAC.',
+            'Arquitectura de despliegue recomendada: despliega Qwen 3 72B (Apache 2.0) en tu propia infraestructura fuera de China para usuarios internacionales. Usa la API de Alibaba Cloud para el segmento de China bajo su registro en el CAC.',
             'Cronograma de evaluación del CAC: 45–90 días para la revisión previa al lanzamiento de servicios de IA generativa de cara al consumidor. Las empresas extranjeras deben asociarse con una entidad de China continental o un proveedor de nube autorizado como el proveedor registrado.',
           ],
         },
@@ -1839,7 +1839,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               mistake: 'Usar modelos de EE.UU. (GPT-5.5, Claude) para usuarios de China continental sin una arquitectura alternativa',
               problem: 'Los modelos de EE.UU. son inaccesibles en China continental sin una VPN, que es ilegal para uso comercial. Los servicios basados en estos modelos fallarán para usuarios de China continental.',
-              fix: 'Despliega una arquitectura de dos pilas: modelos de EE.UU. para usuarios internacionales, Qwen 2.5 o ERNIE 4.0 vía Alibaba Cloud para usuarios de China. Enruta las solicitudes según la detección de ubicación del usuario.',
+              fix: 'Despliega una arquitectura de dos pilas: modelos de EE.UU. para usuarios internacionales, Qwen 3 o ERNIE 4.0 vía Alibaba Cloud para usuarios de China. Enruta las solicitudes según la detección de ubicación del usuario.',
             },
             {
               mistake: 'Manejar errores de filtros del CAC como errores HTTP estándar',
@@ -2909,8 +2909,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               '地域': '中国',
               'プロンプトの法的制限': 'CAC 生成型AI対策（2023）：CP主導部、台湾/チベット/新疆の独立、1989年の天安門事件、または「社会主義の核心的価値」を損なうものに関するコンテンツをリクエストするプロンプトはブロックされる。HTTP 200 で is_safe: 0 として返される。PIPL：中国ユーザーの個人データを含むプロンプトは非中国サーバーに転送することはできない。',
-              '言語最適化': '中国語タスクでは簡体字中国語（北京官話）でプロンプトを書く — Qwen 2.5 と ERNIE 4.0 は中国語ベンチマーク（C-Eval）で 10-20% 高いスコアを達成 vs 英語で同じプロンプト。技術用語に中国語等価がない場合は Pinyin または英語を使用。',
-              '推奨モデル': 'Qwen 2.5 72B（中国外で自己ホスト、CAC フィルターなし）クロスボーダータスク用。ERNIE 4.0 via Qianfan API（CAC 登録）消費者向け中国実装用。DeepSeek R1 は推論タスク用、フィルタリングコンテンツエリアに触れないもの。',
+              '言語最適化': '中国語タスクでは簡体字中国語（北京官話）でプロンプトを書く — Qwen 3 と ERNIE 4.0 は中国語ベンチマーク（C-Eval）で 10-20% 高いスコアを達成 vs 英語で同じプロンプト。技術用語に中国語等価がない場合は Pinyin または英語を使用。',
+              '推奨モデル': 'Qwen 3 72B（中国外で自己ホスト、CAC フィルターなし）クロスボーダータスク用。ERNIE 4.0 via Qianfan API（CAC 登録）消費者向け中国実装用。DeepSeek R1 は推論タスク用、フィルタリングコンテンツエリアに触れないもの。',
             },
             {
               '地域': 'UK / ポストブレグジット',
@@ -3090,12 +3090,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '如何在中国部署生成式AI产品：开发者指南',
         description: '在中国部署AI产品的分步指南——模型选择、内容限制、CAC安全评估、PIPL数据驻留和上市时间表。',
         step: [
-          { '@type': 'HowToStep', position: 1, name: '了解中国可用的AI模型', text: '外国模型（GPT-5.5、Claude、Gemini）在中国大陆无法在不使用VPN的情况下访问。可用选项：Alibaba Qwen 2.5（开源权重，7B–72B，128K上下文）、Baidu ERNIE 4.0（Qianfan API）、ByteDance Doubao（Volcano Engine）、Z.ai GLM-4、DeepSeek R1/V3。Qwen 2.5 72B是自托管的最强开源权重选项。' },
+          { '@type': 'HowToStep', position: 1, name: '了解中国可用的AI模型', text: '外国模型（GPT-5.5、Claude、Gemini）在中国大陆无法在不使用VPN的情况下访问。可用选项：Alibaba Qwen 3（开源权重，7B–72B，128K上下文）、Baidu ERNIE 4.0（Qianfan API）、ByteDance Doubao（Volcano Engine）、Z.ai GLM-4、DeepSeek R1/V3。Qwen 3 72B是自托管的最强开源权重选项。' },
           { '@type': 'HowToStep', position: 2, name: '规划API级内容限制', text: 'CAC注册的生成式AI服务过滤阻止CPC领导批评、台湾/西藏/新疆独立讨论、政治敏感历史事件以及损害"社会主义核心价值观"的内容。过滤器内置于API中。过滤错误返回HTTP 200，is_safe: 0——而不是HTTP 4xx——需要显式应用级处理。' },
           { '@type': 'HowToStep', position: 3, name: '完成CAC安全评估', text: '在中国任何面向消费者的生成式AI服务上市前需要。提交训练数据源、内容过滤文档和示例输出。时间表：45–90天。外国公司必须与中国大陆实体或持证云提供商（Alibaba Cloud、Tencent Cloud）合作作为注册提供商。' },
-          { '@type': 'HowToStep', position: 4, name: '为中国和国际用户部署混合模型', text: '在中国外的自有基础设施上部署Qwen 2.5 72B（Apache 2.0）供国际用户使用。根据CAC注册使用Alibaba Cloud API处理中国部分。Qwen 2.5 72B在MMLU上的分数在GPT-5.5的5分以内，在C-Eval上表现优于GPT-5.5。128K上下文窗口。' },
+          { '@type': 'HowToStep', position: 4, name: '为中国和国际用户部署混合模型', text: '在中国外的自有基础设施上部署Qwen 3 72B（Apache 2.0）供国际用户使用。根据CAC注册使用Alibaba Cloud API处理中国部分。Qwen 3 72B在MMLU上的分数在GPT-5.5的5分以内，在C-Eval上表现优于GPT-5.5。128K上下文窗口。' },
           { '@type': 'HowToStep', position: 5, name: '遵守PIPL数据驻留要求', text: 'PIPL（2021年）要求中国用户的个人数据留在中国，或在跨境转移前通过政府安全评估。通过中国大陆托管的推理（Alibaba Cloud、Tencent Cloud、Huawei Cloud）路由所有中国用户流量。' },
-          { '@type': 'HowToStep', position: 6, name: '规划中国上市时间表', text: '为CAC上市前审查预留45–90天。与中国大陆实体合作进行面向消费者的产品。使用Qwen 2.5 72B处理中文语言任务。避免通过美国托管API路由中国用户数据。' },
+          { '@type': 'HowToStep', position: 6, name: '规划中国上市时间表', text: '为CAC上市前审查预留45–90天。与中国大陆实体合作进行面向消费者的产品。使用Qwen 3 72B处理中文语言任务。避免通过美国托管API路由中国用户数据。' },
         ],
       },
       tableSchema: {
@@ -3179,8 +3179,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               '地区': '中国',
               '对提示的法律约束': 'CAC生成式AI措施（2023年）：请求CPC领导、台湾/西藏/新疆独立、1989年天安门事件或任何损害"社会主义核心价值观"的内容的提示将被阻止。返回为HTTP 200，`is_safe: 0`。PIPL：包含中国用户个人数据的提示不能路由到非中国服务器。',
-              '语言优化': '对于中文语言任务，用简体中文（普通话）写提示——Qwen 2.5和ERNIE 4.0在中文基准（C-Eval）上的分数比英文相同提示高10–20%。对于技术术语（无中文等同物时使用拼音或英文）。',
-              '推荐模型': 'Qwen 2.5 72B（在中国外自托管，无CAC过滤）用于跨境任务。ERNIE 4.0通过Qianfan API（CAC注册）用于面向消费者的中国部署。DeepSeek R1用于不涉及过滤内容区域的推理任务。',
+              '语言优化': '对于中文语言任务，用简体中文（普通话）写提示——Qwen 3和ERNIE 4.0在中文基准（C-Eval）上的分数比英文相同提示高10–20%。对于技术术语（无中文等同物时使用拼音或英文）。',
+              '推荐模型': 'Qwen 3 72B（在中国外自托管，无CAC过滤）用于跨境任务。ERNIE 4.0通过Qianfan API（CAC注册）用于面向消费者的中国部署。DeepSeek R1用于不涉及过滤内容区域的推理任务。',
             },
             {
               '地区': '英国/脱欧后',
@@ -3226,7 +3226,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhichCountriesDominate: {
           title: '哪些国家主导AI开发？',
           content: [
-            '美国主导前沿模型能力——OpenAI（GPT-5.5）、Anthropic（Claude）和Google DeepMind（Gemini）都以美国为基地。中国在AI专利数量（2022年WIPO约70%的全球专利）上领先，并拥有美国之外最强大的国内模型：Alibaba Qwen 2.5、Baidu ERNIE 4.0和DeepSeek R1。欧盟在AI监管上领先但在前沿能力上落后——法国的Mistral AI是最强的欧洲竞争对手。英国、加拿大和阿联酋正在将AI作为独立参与者投资，而非专门排列于美国或中国基础设施。',
+            '美国主导前沿模型能力——OpenAI（GPT-5.5）、Anthropic（Claude）和Google DeepMind（Gemini）都以美国为基地。中国在AI专利数量（2022年WIPO约70%的全球专利）上领先，并拥有美国之外最强大的国内模型：Alibaba Qwen 3、Baidu ERNIE 4.0和DeepSeek R1。欧盟在AI监管上领先但在前沿能力上落后——法国的Mistral AI是最强的欧洲竞争对手。英国、加拿大和阿联酋正在将AI作为独立参与者投资，而非专门排列于美国或中国基础设施。',
           ],
         },
 
@@ -3364,7 +3364,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '对于在中国运营的开发者，可用的模型有限制：',
           ],
           items: [
-            '**Alibaba Qwen 2.5：** 开源权重（Apache 2.0），7B至72B参数，128K上下文。分数接近GPT-5.5在多个基准上。可在中国外自托管。',
+            '**Alibaba Qwen 3：** 开源权重（Apache 2.0），7B至72B参数，128K上下文。分数接近GPT-5.5在多个基准上。可在中国外自托管。',
             '**Baidu ERNIE 4.0：** 通过Qianfan API可用。CAC注册。在中文任务上强大。',
             '**ByteDance Doubao：** 通过Volcano Engine API可用。面向中国市场优化。',
             '**DeepSeek R1：** 新型推理模型。与GPT-5.5相当。经过CAC审查。',
@@ -3451,7 +3451,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '谁在赢得全球AI竞争？',
           content: [
             '到2026年，不清楚谁在"赢"，因为每个参与者优先级不同的指标：',
-            '**美国领先：** 前沿模型能力（GPT-5.5 > Qwen 2.5）、GPU设计（Nvidia）、人才吸引力。',
+            '**美国领先：** 前沿模型能力（GPT-5.5 > Qwen 3）、GPU设计（Nvidia）、人才吸引力。',
             '**中国赶上：** AI专利数量（全球70%）、成本效率（DeepSeek）、国内市场（4亿用户）。',
             '**欧盟领先：** 监管框架（EU AI法案作为全球规范）、数据权利（GDPR）、独立模型（Mistral）。',
             'DeepSeek R1在2025年1月的发布表明中国的快速进步。美国不能再假设技术优势是永久的。',

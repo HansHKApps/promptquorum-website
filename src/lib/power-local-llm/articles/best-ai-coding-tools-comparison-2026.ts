@@ -29,8 +29,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — four AI coding tools compared. The decision rule most rankings skip: does it run on a local LLM?',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Qwen2.5 Coder 14B',
-      'Qwen2.5 Coder 7B',
+      'Qwen3 Coder 14B',
+      'Qwen3 Coder 7B',
       'DeepSeek Coder 33B',
     ],
     current_hardware_mentioned: [
@@ -95,7 +95,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Most polished editor: Cursor** — roughly $20/month for the Pro tier, the best autocomplete experience, and local LLM support through a custom OpenAI-compatible endpoint. Closed source.',
           '**GitHub ecosystem default: GitHub Copilot** — roughly $10/month, tight GitHub integration, but cloud-only: it has no local LLM mode, so code context is sent to the provider.',
           '**Best codebase context for teams: Sourcegraph Cody** — codebase-wide context for refactoring, plus team admin and audit logs. Local LLM support via Ollama; the standard tier runs about $9/user/month and an enterprise tier costs more.',
-          '**A local LLM needs a GPU.** Local coding models want roughly 8 GB of VRAM or more — Qwen2.5 Coder 7B fits smaller systems, 14B is the mid-size default, and 33B-class models want 24 GB. With no GPU, a cloud tool is the only option.',
+          '**A local LLM needs a GPU.** Local coding models want roughly 8 GB of VRAM or more — Qwen3 Coder 7B fits smaller systems, 14B is the mid-size default, and 33B-class models want 24 GB. With no GPU, a cloud tool is the only option.',
           '**Cloud tools still win on raw quality and setup speed.** Top cloud coding models lead local options on hard problems, and a cloud tool is productive in minutes versus the longer setup of a local LLM stack.',
           '**Prices change with plan revisions.** Treat every figure here as a May 2026 snapshot and confirm the current rate and tier on the vendor pricing page.',
         ],
@@ -108,7 +108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Best autocomplete UX:** Cursor — a VS Code fork; local LLM via a custom endpoint takes roughly 15 minutes to configure.',
           '**Only cloud-only tool here:** GitHub Copilot — no local LLM mode; code context goes to the provider.',
           '**Best for teams:** Sourcegraph Cody — codebase-wide context, admin console, and audit logs.',
-          '**Local LLM hardware floor:** roughly 8 GB of VRAM; Qwen2.5 Coder 14B is the mid-size default coding model.',
+          '**Local LLM hardware floor:** roughly 8 GB of VRAM; Qwen3 Coder 14B is the mid-size default coding model.',
           '**Open source:** only Continue.dev (Apache 2.0); Cursor, GitHub Copilot, and Cody IDE extensions are closed.',
           '**2026 pricing reality:** developer-tool subscriptions change with plan revisions — treat figures as a May 2026 snapshot.',
         ],
@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Pair Continue.dev with Qwen2.5 Coder for local coding. The 7B model fits smaller GPUs, the 14B model is the mid-size default, and a 33B-class model wants roughly 24 GB of VRAM. Match the model to your GPU first.',
+            text: 'Pair Continue.dev with Qwen3 Coder for local coding. The 7B model fits smaller GPUs, the 14B model is the mid-size default, and a 33B-class model wants roughly 24 GB of VRAM. Match the model to your GPU first.',
           },
         ],
         affiliateLinks: [
@@ -398,7 +398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Assuming GitHub Copilot has a local mode.** It does not — GitHub Copilot is cloud-only. For code that must stay on your machine, choose Continue.dev or Cursor with a local LLM.',
           '**Buying a paid tool to run a local LLM that Continue.dev runs for free.** If a fully local, open-source workflow is the goal, Continue.dev does it at zero cost. Pay for Cursor or Cody for their editor or team features, not for local capability alone.',
           '**Trying to run a local LLM with no GPU.** Local coding models want roughly 8 GB of VRAM or more. On a machine with no dedicated GPU, a local LLM is not viable — use a cloud tool instead.',
-          '**Mismatching the local model to the GPU.** Qwen2.5 Coder 7B fits smaller GPUs, 14B is the mid-size default, and a 33B-class model wants roughly 24 GB of VRAM. Pick the model your GPU can actually hold.',
+          '**Mismatching the local model to the GPU.** Qwen3 Coder 7B fits smaller GPUs, 14B is the mid-size default, and a 33B-class model wants roughly 24 GB of VRAM. Pick the model your GPU can actually hold.',
           '**Anchoring on an old price or the wrong tier.** Developer-tool plans change, and a per-user price is not an individual price. Confirm the current figure and tier on the vendor pricing page.',
           '**Picking a team tool for solo work.** Sourcegraph Cody\'s strengths are codebase-wide context and audit logs — team-scale features. A solo developer is better served by Continue.dev or Cursor.',
         ],
@@ -436,7 +436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What hardware do I need to run a local LLM for coding?',
-            a: 'A GPU with roughly 8 GB of VRAM or more. Qwen2.5 Coder 7B fits smaller systems, the 14B model is the mid-size default, and a 33B-class model wants roughly 24 GB of VRAM. On a machine with no dedicated GPU, running a local coding LLM is not viable, and a cloud tool is the only practical option.',
+            a: 'A GPU with roughly 8 GB of VRAM or more. Qwen3 Coder 7B fits smaller systems, the 14B model is the mid-size default, and a 33B-class model wants roughly 24 GB of VRAM. On a machine with no dedicated GPU, running a local coding LLM is not viable, and a cloud tool is the only practical option.',
           },
           {
             q: 'Which tool is best for a development team?',
@@ -457,7 +457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Compare AI coding assistants by local-LLM support](/local-llms/best-ai-coding-assistant-local-llm) — the deeper feature and setup comparison behind this guide.',
-          '[Pick a local LLM for coding work](/local-llms/best-local-llms-for-coding) — which models, including Qwen2.5 Coder, are strongest for code generation.',
+          '[Pick a local LLM for coding work](/local-llms/best-local-llms-for-coding) — which models, including Qwen3 Coder, are strongest for code generation.',
           '[Set up your first local LLM with Ollama](/local-llms/run-first-local-llm) — the step-by-step Ollama install that Continue.dev connects to.',
           '[Choose a GPU for running local coding models](/local-llms/best-gpus-for-local-llms) — VRAM requirements for the 7B, 14B, and 33B coding models referenced here.',
         ],
@@ -480,8 +480,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — vier KI-Coding-Tools im Vergleich. Die Entscheidungsregel, die die meisten Rankings auslassen: Läuft es auf einem lokalen LLM?',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Qwen2.5 Coder 14B',
-      'Qwen2.5 Coder 7B',
+      'Qwen3 Coder 14B',
+      'Qwen3 Coder 7B',
       'DeepSeek Coder 33B',
     ],
     current_hardware_mentioned: [
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ausgereiftester Editor: Cursor** — rund 20 $/Monat für die Pro-Stufe, das beste Autovervollständigungserlebnis und Unterstützung für lokale LLMs über einen benutzerdefinierten OpenAI-kompatiblen Endpunkt. Closed Source.',
           '**Standard für das GitHub-Ökosystem: GitHub Copilot** — rund 10 $/Monat, enge GitHub-Integration, aber reine Cloud: Es hat keinen lokalen LLM-Modus, sodass der Code-Kontext an den Anbieter gesendet wird.',
           '**Bester Codebasis-Kontext für Teams: Sourcegraph Cody** — projektweiter Kontext für Refactoring, dazu Team-Administration und Audit-Protokolle. Unterstützung für lokale LLMs über Ollama; die Standardstufe liegt bei etwa 9 $/Nutzer/Monat und eine Enterprise-Stufe kostet mehr.',
-          '**Ein lokales LLM braucht eine GPU.** Lokale Coding-Modelle wollen ungefähr 8 GB VRAM oder mehr — Qwen2.5 Coder 7B passt auf kleinere Systeme, 14B ist der mittelgroße Standard und Modelle der 33B-Klasse wollen 24 GB. Ohne GPU ist ein Cloud-Tool die einzige Option.',
+          '**Ein lokales LLM braucht eine GPU.** Lokale Coding-Modelle wollen ungefähr 8 GB VRAM oder mehr — Qwen3 Coder 7B passt auf kleinere Systeme, 14B ist der mittelgroße Standard und Modelle der 33B-Klasse wollen 24 GB. Ohne GPU ist ein Cloud-Tool die einzige Option.',
           '**Cloud-Tools gewinnen weiterhin bei reiner Qualität und Einrichtungsgeschwindigkeit.** Top-Cloud-Coding-Modelle führen lokale Optionen bei schwierigen Problemen an, und ein Cloud-Tool ist in Minuten produktiv, verglichen mit der längeren Einrichtung eines lokalen LLM-Stacks.',
           '**Preise ändern sich mit Tarifüberarbeitungen.** Behandeln Sie jede Zahl hier als Momentaufnahme von Mai 2026 und bestätigen Sie den aktuellen Tarif und die Stufe auf der Anbieter-Preisseite.',
         ],
@@ -559,7 +559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Beste Autovervollständigungs-UX:** Cursor — ein VS-Code-Fork; ein lokales LLM über einen benutzerdefinierten Endpunkt braucht rund 15 Minuten zur Konfiguration.',
           '**Einziges reines Cloud-Tool hier:** GitHub Copilot — kein lokaler LLM-Modus; der Code-Kontext geht an den Anbieter.',
           '**Am besten für Teams:** Sourcegraph Cody — projektweiter Kontext, Admin-Konsole und Audit-Protokolle.',
-          '**Hardware-Untergrenze für lokale LLMs:** rund 8 GB VRAM; Qwen2.5 Coder 14B ist das mittelgroße Standard-Coding-Modell.',
+          '**Hardware-Untergrenze für lokale LLMs:** rund 8 GB VRAM; Qwen3 Coder 14B ist das mittelgroße Standard-Coding-Modell.',
           '**Quelloffen:** nur Continue.dev (Apache 2.0); die IDE-Erweiterungen von Cursor, GitHub Copilot und Cody sind closed.',
           '**Preisrealität 2026:** Abonnements für Entwickler-Tools ändern sich mit Tarifüberarbeitungen — behandeln Sie Zahlen als Momentaufnahme von Mai 2026.',
         ],
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Kombinieren Sie Continue.dev mit Qwen2.5 Coder für lokales Coding. Das 7B-Modell passt auf kleinere GPUs, das 14B-Modell ist der mittelgroße Standard, und ein Modell der 33B-Klasse will rund 24 GB VRAM. Stimmen Sie das Modell zuerst auf Ihre GPU ab.',
+            text: 'Kombinieren Sie Continue.dev mit Qwen3 Coder für lokales Coding. Das 7B-Modell passt auf kleinere GPUs, das 14B-Modell ist der mittelgroße Standard, und ein Modell der 33B-Klasse will rund 24 GB VRAM. Stimmen Sie das Modell zuerst auf Ihre GPU ab.',
           },
         ],
         affiliateLinks: [
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Annehmen, GitHub Copilot habe einen lokalen Modus.** Hat es nicht — GitHub Copilot ist reine Cloud. Für Code, der auf Ihrem Rechner bleiben muss, wählen Sie Continue.dev oder Cursor mit einem lokalen LLM.',
           '**Ein kostenpflichtiges Tool kaufen, um ein lokales LLM auszuführen, das Continue.dev kostenlos ausführt.** Wenn ein vollständig lokaler, quelloffener Workflow das Ziel ist, schafft Continue.dev das ohne Kosten. Zahlen Sie für Cursor oder Cody wegen ihres Editors oder ihrer Team-Funktionen, nicht allein für die lokale Fähigkeit.',
           '**Versuchen, ein lokales LLM ohne GPU auszuführen.** Lokale Coding-Modelle wollen rund 8 GB VRAM oder mehr. Auf einem Rechner ohne dedizierte GPU ist ein lokales LLM nicht praktikabel — verwenden Sie stattdessen ein Cloud-Tool.',
-          '**Das lokale Modell und die GPU nicht aufeinander abstimmen.** Qwen2.5 Coder 7B passt auf kleinere GPUs, 14B ist der mittelgroße Standard, und ein Modell der 33B-Klasse will rund 24 GB VRAM. Wählen Sie das Modell, das Ihre GPU tatsächlich aufnehmen kann.',
+          '**Das lokale Modell und die GPU nicht aufeinander abstimmen.** Qwen3 Coder 7B passt auf kleinere GPUs, 14B ist der mittelgroße Standard, und ein Modell der 33B-Klasse will rund 24 GB VRAM. Wählen Sie das Modell, das Ihre GPU tatsächlich aufnehmen kann.',
           '**Sich an einem alten Preis oder der falschen Stufe orientieren.** Tarife für Entwickler-Tools ändern sich, und ein Pro-Nutzer-Preis ist kein Einzelnutzer-Preis. Bestätigen Sie die aktuelle Zahl und Stufe auf der Anbieter-Preisseite.',
           '**Ein Team-Tool für Einzelarbeit wählen.** Die Stärken von Sourcegraph Cody sind projektweiter Kontext und Audit-Protokolle — Funktionen auf Team-Ebene. Ein Einzelentwickler ist mit Continue.dev oder Cursor besser bedient.',
         ],
@@ -887,7 +887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche Hardware brauche ich, um ein lokales LLM zum Coden auszuführen?',
-            a: 'Eine GPU mit rund 8 GB VRAM oder mehr. Qwen2.5 Coder 7B passt auf kleinere Systeme, das 14B-Modell ist der mittelgroße Standard, und ein Modell der 33B-Klasse will rund 24 GB VRAM. Auf einem Rechner ohne dedizierte GPU ist es nicht praktikabel, ein lokales Coding-LLM auszuführen, und ein Cloud-Tool ist die einzige praktische Option.',
+            a: 'Eine GPU mit rund 8 GB VRAM oder mehr. Qwen3 Coder 7B passt auf kleinere Systeme, das 14B-Modell ist der mittelgroße Standard, und ein Modell der 33B-Klasse will rund 24 GB VRAM. Auf einem Rechner ohne dedizierte GPU ist es nicht praktikabel, ein lokales Coding-LLM auszuführen, und ein Cloud-Tool ist die einzige praktische Option.',
           },
           {
             q: 'Welches Tool ist am besten für ein Entwicklerteam?',
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Lektüre',
         items: [
           '[KI-Coding-Assistenten nach Unterstützung für lokale LLMs vergleichen](/de/local-llms/best-ai-coding-assistant-local-llm) — der tiefere Funktions- und Einrichtungsvergleich hinter diesem Leitfaden.',
-          '[Ein lokales LLM für Coding-Arbeit wählen](/de/local-llms/best-local-llms-for-coding) — welche Modelle, einschließlich Qwen2.5 Coder, am stärksten für die Code-Generierung sind.',
+          '[Ein lokales LLM für Coding-Arbeit wählen](/de/local-llms/best-local-llms-for-coding) — welche Modelle, einschließlich Qwen3 Coder, am stärksten für die Code-Generierung sind.',
           '[Ihr erstes lokales LLM mit Ollama einrichten](/de/local-llms/run-first-local-llm) — die Schritt-für-Schritt-Ollama-Installation, mit der sich Continue.dev verbindet.',
           '[Eine GPU für den Betrieb lokaler Coding-Modelle wählen](/de/local-llms/best-gpus-for-local-llms) — VRAM-Anforderungen für die hier erwähnten 7B-, 14B- und 33B-Coding-Modelle.',
         ],
@@ -931,8 +931,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — quatre outils de codage IA comparés. La règle de décision que la plupart des classements ignorent : tourne-t-il sur un LLM local ?",
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Qwen2.5 Coder 14B',
-      'Qwen2.5 Coder 7B',
+      'Qwen3 Coder 14B',
+      'Qwen3 Coder 7B',
       'DeepSeek Coder 33B',
     ],
     current_hardware_mentioned: [
@@ -997,7 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Éditeur le plus abouti : Cursor** — environ 20 $/mois pour le palier Pro, la meilleure expérience d'autocomplétion, et la prise en charge d'un LLM local via un point de terminaison personnalisé compatible OpenAI. Code source fermé.",
           "**Référence de l'écosystème GitHub : GitHub Copilot** — environ 10 $/mois, intégration GitHub étroite, mais uniquement cloud : il n'a pas de mode LLM local, donc le contexte du code est envoyé au fournisseur.",
           "**Meilleur contexte de code source pour les équipes : Sourcegraph Cody** — contexte à l'échelle du code source pour le refactoring, plus administration d'équipe et journaux d'audit. Prise en charge de LLM local via Ollama ; le palier standard tourne autour de 9 $/utilisateur/mois et un palier entreprise coûte plus cher.",
-          "**Un LLM local nécessite un GPU.** Les modèles de codage locaux veulent environ 8 Go de VRAM ou plus — Qwen2.5 Coder 7B convient aux systèmes plus modestes, le 14B est le choix de taille moyenne par défaut, et les modèles de classe 33B veulent 24 Go. Sans GPU, un outil cloud est la seule option.",
+          "**Un LLM local nécessite un GPU.** Les modèles de codage locaux veulent environ 8 Go de VRAM ou plus — Qwen3 Coder 7B convient aux systèmes plus modestes, le 14B est le choix de taille moyenne par défaut, et les modèles de classe 33B veulent 24 Go. Sans GPU, un outil cloud est la seule option.",
           "**Les outils cloud gardent l'avantage sur la qualité brute et la vitesse de mise en place.** Les meilleurs modèles de codage cloud devancent les options locales sur les problèmes difficiles, et un outil cloud est productif en quelques minutes contre une mise en place plus longue d'une pile LLM locale.",
           "**Les prix changent avec les révisions de plans.** Traitez chaque chiffre ici comme un instantané de mai 2026 et confirmez le tarif et le palier courants sur la page de tarifs de l'éditeur.",
         ],
@@ -1010,7 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Meilleure UX d'autocomplétion :** Cursor — un fork de VS Code ; le LLM local via un point de terminaison personnalisé prend environ 15 minutes à configurer.",
           "**Seul outil uniquement cloud ici :** GitHub Copilot — pas de mode LLM local ; le contexte du code va au fournisseur.",
           "**Idéal pour les équipes :** Sourcegraph Cody — contexte à l'échelle du code source, console d'administration et journaux d'audit.",
-          "**Plancher matériel pour LLM local :** environ 8 Go de VRAM ; Qwen2.5 Coder 14B est le modèle de codage de taille moyenne par défaut.",
+          "**Plancher matériel pour LLM local :** environ 8 Go de VRAM ; Qwen3 Coder 14B est le modèle de codage de taille moyenne par défaut.",
           "**Open source :** seul Continue.dev (Apache 2.0) ; les extensions IDE de Cursor, GitHub Copilot et Cody sont fermées.",
           "**Réalité tarifaire 2026 :** les abonnements aux outils de développement changent avec les révisions de plans — traitez les chiffres comme un instantané de mai 2026.",
         ],
@@ -1120,7 +1120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: "Associez Continue.dev à Qwen2.5 Coder pour le codage local. Le modèle 7B convient aux GPU plus modestes, le modèle 14B est le choix de taille moyenne par défaut, et un modèle de classe 33B veut environ 24 Go de VRAM. Adaptez d'abord le modèle à votre GPU.",
+            text: "Associez Continue.dev à Qwen3 Coder pour le codage local. Le modèle 7B convient aux GPU plus modestes, le modèle 14B est le choix de taille moyenne par défaut, et un modèle de classe 33B veut environ 24 Go de VRAM. Adaptez d'abord le modèle à votre GPU.",
           },
         ],
         affiliateLinks: [
@@ -1300,7 +1300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Supposer que GitHub Copilot a un mode local.** Ce n'est pas le cas — GitHub Copilot est uniquement cloud. Pour du code qui doit rester sur votre machine, choisissez Continue.dev ou Cursor avec un LLM local.",
           "**Acheter un outil payant pour faire tourner un LLM local que Continue.dev fait tourner gratuitement.** Si un flux de travail entièrement local et open source est l'objectif, Continue.dev le fait sans aucun coût. Payez pour Cursor ou Cody pour leur éditeur ou leurs fonctions d'équipe, pas pour la seule capacité locale.",
           "**Tenter de faire tourner un LLM local sans GPU.** Les modèles de codage locaux veulent environ 8 Go de VRAM ou plus. Sur une machine sans GPU dédié, un LLM local n'est pas viable — utilisez plutôt un outil cloud.",
-          "**Mal adapter le modèle local au GPU.** Qwen2.5 Coder 7B convient aux GPU plus modestes, le 14B est le choix de taille moyenne par défaut, et un modèle de classe 33B veut environ 24 Go de VRAM. Choisissez le modèle que votre GPU peut réellement contenir.",
+          "**Mal adapter le modèle local au GPU.** Qwen3 Coder 7B convient aux GPU plus modestes, le 14B est le choix de taille moyenne par défaut, et un modèle de classe 33B veut environ 24 Go de VRAM. Choisissez le modèle que votre GPU peut réellement contenir.",
           "**S'ancrer sur un ancien prix ou le mauvais palier.** Les plans des outils de développement changent, et un prix par utilisateur n'est pas un prix individuel. Confirmez le chiffre et le palier courants sur la page de tarifs de l'éditeur.",
           "**Choisir un outil d'équipe pour un travail en solo.** Les forces de Sourcegraph Cody sont le contexte à l'échelle du code source et les journaux d'audit — des fonctions à l'échelle de l'équipe. Un développeur seul est mieux servi par Continue.dev ou Cursor.",
         ],
@@ -1338,7 +1338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: "Quel matériel faut-il pour faire tourner un LLM local pour le codage ?",
-            a: "Un GPU avec environ 8 Go de VRAM ou plus. Qwen2.5 Coder 7B convient aux systèmes plus modestes, le modèle 14B est le choix de taille moyenne par défaut, et un modèle de classe 33B veut environ 24 Go de VRAM. Sur une machine sans GPU dédié, faire tourner un LLM de codage local n'est pas viable, et un outil cloud est la seule option pratique.",
+            a: "Un GPU avec environ 8 Go de VRAM ou plus. Qwen3 Coder 7B convient aux systèmes plus modestes, le modèle 14B est le choix de taille moyenne par défaut, et un modèle de classe 33B veut environ 24 Go de VRAM. Sur une machine sans GPU dédié, faire tourner un LLM de codage local n'est pas viable, et un outil cloud est la seule option pratique.",
           },
           {
             q: "Quel outil est le meilleur pour une équipe de développement ?",
@@ -1359,7 +1359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           "[Comparer les assistants de codage IA par prise en charge des LLM locaux](/fr/local-llms/best-ai-coding-assistant-local-llm) — le comparatif plus approfondi des fonctions et de la mise en place derrière ce guide.",
-          "[Choisir un LLM local pour le travail de codage](/fr/local-llms/best-local-llms-for-coding) — quels modèles, dont Qwen2.5 Coder, sont les plus solides pour la génération de code.",
+          "[Choisir un LLM local pour le travail de codage](/fr/local-llms/best-local-llms-for-coding) — quels modèles, dont Qwen3 Coder, sont les plus solides pour la génération de code.",
           "[Mettre en place votre premier LLM local avec Ollama](/fr/local-llms/run-first-local-llm) — l'installation pas à pas d'Ollama à laquelle Continue.dev se connecte.",
           "[Choisir un GPU pour faire tourner des modèles de codage locaux](/fr/local-llms/best-gpus-for-local-llms) — les besoins en VRAM des modèles de codage 7B, 14B et 33B référencés ici.",
         ],
@@ -1382,8 +1382,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Cursor、Continue.dev、GitHub Copilot、Sourcegraph Cody — 4つのAIコーディングツールを比較。多くのランキングが飛ばす判断基準: ローカルLLMで動作するか。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Qwen2.5 Coder 14B',
-      'Qwen2.5 Coder 7B',
+      'Qwen3 Coder 14B',
+      'Qwen3 Coder 7B',
       'DeepSeek Coder 33B',
     ],
     current_hardware_mentioned: [
@@ -1448,7 +1448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**最も洗練されたエディタ: Cursor** — Proティアで約$20/month、最高のオートコンプリート体験、そしてカスタムのOpenAI互換エンドポイント経由でローカルLLMをサポートします。クローズドソースです。',
           '**GitHubエコシステムの定番: GitHub Copilot** — 約$10/month、GitHubとの密接な統合、ただしクラウド専用です。ローカルLLMモードはなく、コードコンテキストはプロバイダーに送信されます。',
           '**チーム向けのベストなコードベースコンテキスト: Sourcegraph Cody** — リファクタリング向けのコードベース全体のコンテキスト、加えてチーム管理と監査ログ。Ollama経由でローカルLLMをサポート。標準ティアは約$9/user/monthで、エンタープライズティアはさらに高くなります。',
-          '**ローカルLLMにはGPUが必要です。** ローカルコーディングモデルはおよそ8 GB以上のVRAMを必要とします — Qwen2.5 Coder 7B は小規模なシステムに収まり、14B が中規模の標準、33Bクラスのモデルは24 GBを必要とします。GPUがなければ、クラウドツールが唯一の選択肢です。',
+          '**ローカルLLMにはGPUが必要です。** ローカルコーディングモデルはおよそ8 GB以上のVRAMを必要とします — Qwen3 Coder 7B は小規模なシステムに収まり、14B が中規模の標準、33Bクラスのモデルは24 GBを必要とします。GPUがなければ、クラウドツールが唯一の選択肢です。',
           '**クラウドツールは生の品質とセットアップ速度では依然として勝ります。** トップクラスのクラウドコーディングモデルは難しい問題でローカルの選択肢をリードし、クラウドツールは数分で生産的になるのに対し、ローカルLLMスタックのセットアップはより長くかかります。',
           '**価格はプラン改定とともに変動します。** ここに記載した数値はすべて2026年5月時点のスナップショットとして扱い、ベンダーの価格ページで現在のレートとティアを確認してください。',
         ],
@@ -1461,7 +1461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ベストなオートコンプリートUX:** Cursor — VS Codeのフォーク。カスタムエンドポイント経由のローカルLLMの設定にはおよそ15分かかります。',
           '**ここで唯一のクラウド専用ツール:** GitHub Copilot — ローカルLLMモードはなく、コードコンテキストはプロバイダーに送られます。',
           '**チームに最適:** Sourcegraph Cody — コードベース全体のコンテキスト、管理コンソール、監査ログ。',
-          '**ローカルLLMのハードウェア下限:** およそ8 GBのVRAM。Qwen2.5 Coder 14B が中規模の標準コーディングモデルです。',
+          '**ローカルLLMのハードウェア下限:** およそ8 GBのVRAM。Qwen3 Coder 14B が中規模の標準コーディングモデルです。',
           '**オープンソース:** Continue.dev のみ (Apache 2.0)。Cursor、GitHub Copilot、Cody のIDE拡張機能はクローズドです。',
           '**2026年の価格の実情:** 開発者向けツールのサブスクリプションはプラン改定とともに変動します — 数値は2026年5月時点のスナップショットとして扱ってください。',
         ],
@@ -1571,7 +1571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'ローカルコーディングには Continue.dev と Qwen2.5 Coder を組み合わせてください。7B モデルは小規模なGPUに収まり、14B モデルは中規模の標準、33Bクラスのモデルはおよそ24 GBのVRAMを必要とします。まずモデルをGPUに合わせてください。',
+            text: 'ローカルコーディングには Continue.dev と Qwen3 Coder を組み合わせてください。7B モデルは小規模なGPUに収まり、14B モデルは中規模の標準、33Bクラスのモデルはおよそ24 GBのVRAMを必要とします。まずモデルをGPUに合わせてください。',
           },
         ],
         affiliateLinks: [
@@ -1751,7 +1751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**GitHub Copilot にローカルモードがあると思い込む。** ありません — GitHub Copilot はクラウド専用です。マシンに残さなければならないコードには、ローカルLLMを使った Continue.dev または Cursor を選んでください。',
           '**Continue.dev が無料で動かすローカルLLMを動かすために有料ツールを買う。** 完全にローカルでオープンソースのワークフローが目標なら、Continue.dev がそれをゼロコストで実現します。Cursor や Cody にはそのエディタやチーム機能のために支払い、ローカル能力だけのためには支払わないでください。',
           '**GPUなしでローカルLLMを動かそうとする。** ローカルコーディングモデルはおよそ8 GB以上のVRAMを必要とします。専用GPUのないマシンでは、ローカルLLMは実用的ではありません — 代わりにクラウドツールを使ってください。',
-          '**ローカルモデルをGPUに合わせ損なう。** Qwen2.5 Coder 7B は小規模なGPUに収まり、14B は中規模の標準、33Bクラスのモデルはおよそ24 GBのVRAMを必要とします。GPUが実際に収められるモデルを選んでください。',
+          '**ローカルモデルをGPUに合わせ損なう。** Qwen3 Coder 7B は小規模なGPUに収まり、14B は中規模の標準、33Bクラスのモデルはおよそ24 GBのVRAMを必要とします。GPUが実際に収められるモデルを選んでください。',
           '**古い価格や間違ったティアに固執する。** 開発者向けツールのプランは変動し、ユーザーごとの価格は個人価格ではありません。ベンダーの価格ページで現在の数値とティアを確認してください。',
           '**個人作業にチームツールを選ぶ。** Sourcegraph Cody の強みはコードベース全体のコンテキストと監査ログ — チーム規模の機能です。個人開発者は Continue.dev または Cursor によりよく対応されます。',
         ],
@@ -1789,7 +1789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'コーディング用のローカルLLMを動かすにはどんなハードウェアが必要ですか?',
-            a: 'およそ8 GB以上のVRAMを持つGPUです。Qwen2.5 Coder 7B は小規模なシステムに収まり、14B モデルは中規模の標準、33Bクラスのモデルはおよそ24 GBのVRAMを必要とします。専用GPUのないマシンでは、ローカルコーディングLLMを動かすことは実用的ではなく、クラウドツールが唯一の現実的な選択肢です。',
+            a: 'およそ8 GB以上のVRAMを持つGPUです。Qwen3 Coder 7B は小規模なシステムに収まり、14B モデルは中規模の標準、33Bクラスのモデルはおよそ24 GBのVRAMを必要とします。専用GPUのないマシンでは、ローカルコーディングLLMを動かすことは実用的ではなく、クラウドツールが唯一の現実的な選択肢です。',
           },
           {
             q: '開発チームに最適なツールはどれですか?',
@@ -1810,7 +1810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[ローカルLLMサポートでAIコーディングアシスタントを比較](/ja/local-llms/best-ai-coding-assistant-local-llm) — 本ガイドの背後にあるより深い機能とセットアップの比較。',
-          '[コーディング業務向けのローカルLLMを選ぶ](/ja/local-llms/best-local-llms-for-coding) — Qwen2.5 Coder を含め、どのモデルがコード生成に最も強いか。',
+          '[コーディング業務向けのローカルLLMを選ぶ](/ja/local-llms/best-local-llms-for-coding) — Qwen3 Coder を含め、どのモデルがコード生成に最も強いか。',
           '[Ollama で初めてのローカルLLMをセットアップする](/ja/local-llms/run-first-local-llm) — Continue.dev が接続するステップバイステップの Ollama インストール。',
           '[ローカルコーディングモデルを動かすためのGPUを選ぶ](/ja/local-llms/best-gpus-for-local-llms) — ここで参照した 7B、14B、33B コーディングモデルのVRAM要件。',
         ],
@@ -1833,8 +1833,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Cursor、Continue.dev、GitHub Copilot、Sourcegraph Cody——四款 AI 编程工具对比。大多数排名跳过的决策规则：它能在本地 LLM 上运行吗？',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Qwen2.5 Coder 14B',
-      'Qwen2.5 Coder 7B',
+      'Qwen3 Coder 14B',
+      'Qwen3 Coder 7B',
       'DeepSeek Coder 33B',
     ],
     current_hardware_mentioned: [
@@ -1899,7 +1899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**最精致的编辑器：Cursor**——Pro 套餐约 $20/month，自动补全体验最佳，并通过自定义的 OpenAI 兼容端点支持本地 LLM。闭源。',
           '**GitHub 生态默认选择：GitHub Copilot**——约 $10/month，与 GitHub 紧密集成，但仅限云端：它没有本地 LLM 模式，因此代码上下文会被发送给提供商。',
           '**面向团队的最佳代码库上下文：Sourcegraph Cody**——为重构提供全代码库的上下文，外加团队管理和审计日志。通过 Ollama 支持本地 LLM；标准版约为 $9/user/month，企业版费用更高。',
-          '**本地 LLM 需要 GPU。** 本地编程模型大约需要 8 GB 或以上的 VRAM——Qwen2.5 Coder 7B 适合较小的系统，14B 是中等规模的默认选择，33B 级别的模型需要 24 GB。没有 GPU 时，云端工具是唯一选择。',
+          '**本地 LLM 需要 GPU。** 本地编程模型大约需要 8 GB 或以上的 VRAM——Qwen3 Coder 7B 适合较小的系统，14B 是中等规模的默认选择，33B 级别的模型需要 24 GB。没有 GPU 时，云端工具是唯一选择。',
           '**云端工具在原始质量和搭建速度上仍然占优。** 顶级云端编程模型在难题上领先于本地选项，而云端工具几分钟内就能投入使用，本地 LLM 技术栈的搭建则耗时更久。',
           '**价格会随套餐调整而变动。** 把这里的每个数字都当作 2026 年 5 月的快照，并到厂商定价页面确认当前价格和套餐。',
         ],
@@ -1912,7 +1912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**最佳自动补全体验：** Cursor——一个 VS Code 分支；通过自定义端点配置本地 LLM 大约需要 15 分钟。',
           '**这里唯一仅限云端的工具：** GitHub Copilot——没有本地 LLM 模式；代码上下文会发送给提供商。',
           '**最适合团队：** Sourcegraph Cody——全代码库上下文、管理控制台和审计日志。',
-          '**本地 LLM 硬件门槛：** 大约 8 GB 的 VRAM；Qwen2.5 Coder 14B 是中等规模的默认编程模型。',
+          '**本地 LLM 硬件门槛：** 大约 8 GB 的 VRAM；Qwen3 Coder 14B 是中等规模的默认编程模型。',
           '**开源：** 只有 Continue.dev（Apache 2.0）；Cursor、GitHub Copilot 和 Cody 的 IDE 扩展均为闭源。',
           '**2026 年定价现实：** 开发者工具的订阅会随套餐调整而变动——把这些数字当作 2026 年 5 月的快照。',
         ],
@@ -2022,7 +2022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '把 Continue.dev 与 Qwen2.5 Coder 搭配用于本地编程。7B 模型适合较小的 GPU，14B 模型是中等规模的默认选择，而 33B 级别的模型大约需要 24 GB 的 VRAM。先让模型与你的 GPU 匹配。',
+            text: '把 Continue.dev 与 Qwen3 Coder 搭配用于本地编程。7B 模型适合较小的 GPU，14B 模型是中等规模的默认选择，而 33B 级别的模型大约需要 24 GB 的 VRAM。先让模型与你的 GPU 匹配。',
           },
         ],
         affiliateLinks: [
@@ -2202,7 +2202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**以为 GitHub Copilot 有本地模式。** 它没有——GitHub Copilot 仅限云端。对于必须留在你机器上的代码，选择 Continue.dev 或带本地 LLM 的 Cursor。',
           '**为了运行 Continue.dev 免费就能运行的本地 LLM 而购买付费工具。** 如果目标是完全本地、开源的工作流程，Continue.dev 零成本就能做到。为 Cursor 或 Cody 付费是为了它们的编辑器或团队功能，而非仅为本地能力。',
           '**试图在没有 GPU 的情况下运行本地 LLM。** 本地编程模型大约需要 8 GB 或以上的 VRAM。在没有独立 GPU 的机器上，本地 LLM 不可行——改用云端工具。',
-          '**让本地模型与 GPU 不匹配。** Qwen2.5 Coder 7B 适合较小的 GPU，14B 是中等规模的默认选择，而 33B 级别的模型大约需要 24 GB 的 VRAM。挑选你的 GPU 实际能容纳的模型。',
+          '**让本地模型与 GPU 不匹配。** Qwen3 Coder 7B 适合较小的 GPU，14B 是中等规模的默认选择，而 33B 级别的模型大约需要 24 GB 的 VRAM。挑选你的 GPU 实际能容纳的模型。',
           '**锚定在旧价格或错误的套餐上。** 开发者工具的套餐会变动，而按用户计费的价格不是个人版价格。请到厂商定价页面确认当前数字和套餐。',
           '**为单人工作挑选团队工具。** Sourcegraph Cody 的强项是全代码库上下文和审计日志——团队规模的功能。单人开发者用 Continue.dev 或 Cursor 会得到更好的服务。',
         ],
@@ -2240,7 +2240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '运行用于编程的本地 LLM 需要什么硬件？',
-            a: '一块大约有 8 GB 或以上 VRAM 的 GPU。Qwen2.5 Coder 7B 适合较小的系统，14B 模型是中等规模的默认选择，而 33B 级别的模型大约需要 24 GB 的 VRAM。在没有独立 GPU 的机器上，运行本地编程 LLM 不可行，云端工具是唯一可行的选择。',
+            a: '一块大约有 8 GB 或以上 VRAM 的 GPU。Qwen3 Coder 7B 适合较小的系统，14B 模型是中等规模的默认选择，而 33B 级别的模型大约需要 24 GB 的 VRAM。在没有独立 GPU 的机器上，运行本地编程 LLM 不可行，云端工具是唯一可行的选择。',
           },
           {
             q: '哪款工具最适合开发团队？',
@@ -2261,7 +2261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '延伸阅读',
         items: [
           '[按本地 LLM 支持对比 AI 编程助手](/zh/local-llms/best-ai-coding-assistant-local-llm) — 本指南背后更深入的功能和搭建对比。',
-          '[为编程工作挑选本地 LLM](/zh/local-llms/best-local-llms-for-coding) — 哪些模型（包括 Qwen2.5 Coder）在代码生成方面最强。',
+          '[为编程工作挑选本地 LLM](/zh/local-llms/best-local-llms-for-coding) — 哪些模型（包括 Qwen3 Coder）在代码生成方面最强。',
           '[用 Ollama 搭建你的第一个本地 LLM](/zh/local-llms/run-first-local-llm) — Continue.dev 所连接的 Ollama 分步安装。',
           '[为运行本地编程模型挑选 GPU](/zh/local-llms/best-gpus-for-local-llms) — 这里提到的 7B、14B 和 33B 编程模型的 VRAM 需求。',
         ],
@@ -2284,8 +2284,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — cuatro herramientas de programación con IA comparadas. La regla de decisión que la mayoría de rankings omite: ¿funciona con un LLM local?',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Qwen2.5 Coder 14B',
-      'Qwen2.5 Coder 7B',
+      'Qwen3 Coder 14B',
+      'Qwen3 Coder 7B',
       'DeepSeek Coder 33B',
     ],
     current_hardware_mentioned: [
@@ -2350,7 +2350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Editor más pulido: Cursor** — aproximadamente $20/mes para el plan Pro, la mejor experiencia de autocompletado, y soporte para LLM local a través de un endpoint personalizado compatible con OpenAI. Código cerrado.',
           '**Opción predeterminada del ecosistema GitHub: GitHub Copilot** — aproximadamente $10/mes, integración estrecha con GitHub, pero solo nube: no tiene modo LLM local, por lo que el contexto del código se envía al proveedor.',
           '**Mejor contexto de base de código para equipos: Sourcegraph Cody** — contexto de toda la base de código para refactorización, más administración de equipos y registros de auditoría. Soporte para LLM local vía Ollama; el plan estándar ronda los $9/usuario/mes y un plan empresarial cuesta más.',
-          '**Un LLM local necesita una GPU.** Los modelos de programación locales necesitan aproximadamente 8 GB de VRAM o más — Qwen2.5 Coder 7B cabe en sistemas más pequeños, el 14B es el estándar de tamaño medio, y los modelos de clase 33B necesitan 24 GB. Sin GPU, una herramienta en la nube es la única opción.',
+          '**Un LLM local necesita una GPU.** Los modelos de programación locales necesitan aproximadamente 8 GB de VRAM o más — Qwen3 Coder 7B cabe en sistemas más pequeños, el 14B es el estándar de tamaño medio, y los modelos de clase 33B necesitan 24 GB. Sin GPU, una herramienta en la nube es la única opción.',
           '**Las herramientas en la nube siguen ganando en calidad bruta y velocidad de configuración.** Los mejores modelos de programación en la nube superan a las opciones locales en problemas difíciles, y una herramienta en la nube es productiva en minutos frente a la configuración más larga de un stack de LLM local.',
           '**Los precios cambian con las revisiones de planes.** Trata cada cifra aquí como una instantánea de mayo de 2026 y confirma la tarifa y el plan actuales en la página de precios del proveedor.',
         ],
@@ -2363,7 +2363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mejor experiencia de autocompletado:** Cursor — una bifurcación de VS Code; configurar un LLM local vía endpoint personalizado lleva aproximadamente 15 minutos.',
           '**Única herramienta solo en la nube aquí:** GitHub Copilot — sin modo LLM local; el contexto del código va al proveedor.',
           '**Mejor para equipos:** Sourcegraph Cody — contexto de toda la base de código, consola de administración y registros de auditoría.',
-          '**Mínimo de hardware para LLM local:** aproximadamente 8 GB de VRAM; Qwen2.5 Coder 14B es el modelo de programación estándar de tamaño medio.',
+          '**Mínimo de hardware para LLM local:** aproximadamente 8 GB de VRAM; Qwen3 Coder 14B es el modelo de programación estándar de tamaño medio.',
           '**Código abierto:** solo Continue.dev (Apache 2.0); las extensiones de IDE de Cursor, GitHub Copilot y Cody son de código cerrado.',
           '**Realidad de precios 2026:** las suscripciones a herramientas para desarrolladores cambian con las revisiones de planes — trata las cifras como una instantánea de mayo de 2026.',
         ],
@@ -2473,7 +2473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Combina Continue.dev con Qwen2.5 Coder para programar en local. El modelo 7B cabe en GPUs más pequeñas, el modelo 14B es el estándar de tamaño medio, y un modelo de clase 33B necesita aproximadamente 24 GB de VRAM. Ajusta primero el modelo a tu GPU.',
+            text: 'Combina Continue.dev con Qwen3 Coder para programar en local. El modelo 7B cabe en GPUs más pequeñas, el modelo 14B es el estándar de tamaño medio, y un modelo de clase 33B necesita aproximadamente 24 GB de VRAM. Ajusta primero el modelo a tu GPU.',
           },
         ],
         affiliateLinks: [
@@ -2653,7 +2653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Asumir que GitHub Copilot tiene un modo local.** No lo tiene — GitHub Copilot es solo nube. Para código que debe quedarse en tu máquina, elige Continue.dev o Cursor con un LLM local.',
           '**Comprar una herramienta de pago para ejecutar un LLM local que Continue.dev ejecuta de forma gratuita.** Si el objetivo es un flujo de trabajo completamente local y de código abierto, Continue.dev lo hace a coste cero. Paga por Cursor o Cody por su editor o sus funciones de equipo, no solo por la capacidad local.',
           '**Intentar ejecutar un LLM local sin GPU.** Los modelos de programación locales necesitan aproximadamente 8 GB de VRAM o más. En una máquina sin GPU dedicada, un LLM local no es viable — usa una herramienta en la nube en su lugar.',
-          '**No ajustar el modelo local a la GPU.** Qwen2.5 Coder 7B cabe en GPUs más pequeñas, el 14B es el estándar de tamaño medio, y un modelo de clase 33B necesita aproximadamente 24 GB de VRAM. Elige el modelo que tu GPU puede realmente alojar.',
+          '**No ajustar el modelo local a la GPU.** Qwen3 Coder 7B cabe en GPUs más pequeñas, el 14B es el estándar de tamaño medio, y un modelo de clase 33B necesita aproximadamente 24 GB de VRAM. Elige el modelo que tu GPU puede realmente alojar.',
           '**Anclarse en un precio antiguo o el plan incorrecto.** Los planes de herramientas para desarrolladores cambian, y un precio por usuario no es un precio individual. Confirma la cifra y el plan actuales en la página de precios del proveedor.',
           '**Elegir una herramienta de equipo para trabajo en solitario.** Los puntos fuertes de Sourcegraph Cody son el contexto de toda la base de código y los registros de auditoría — funciones a escala de equipo. Un desarrollador en solitario estará mejor servido con Continue.dev o Cursor.',
         ],
@@ -2691,7 +2691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué hardware necesito para ejecutar un LLM local para programar?',
-            a: 'Una GPU con aproximadamente 8 GB de VRAM o más. Qwen2.5 Coder 7B cabe en sistemas más pequeños, el modelo 14B es el estándar de tamaño medio, y un modelo de clase 33B necesita aproximadamente 24 GB de VRAM. En una máquina sin GPU dedicada, ejecutar un LLM de programación local no es viable, y una herramienta en la nube es la única opción práctica.',
+            a: 'Una GPU con aproximadamente 8 GB de VRAM o más. Qwen3 Coder 7B cabe en sistemas más pequeños, el modelo 14B es el estándar de tamaño medio, y un modelo de clase 33B necesita aproximadamente 24 GB de VRAM. En una máquina sin GPU dedicada, ejecutar un LLM de programación local no es viable, y una herramienta en la nube es la única opción práctica.',
           },
           {
             q: '¿Qué herramienta es mejor para un equipo de desarrollo?',
@@ -2712,7 +2712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectura relacionada',
         items: [
           '[Comparar asistentes de programación con IA por soporte de LLM local](/es/local-llms/best-ai-coding-assistant-local-llm) — la comparativa más profunda de funciones y configuración detrás de esta guía.',
-          '[Elegir un LLM local para trabajo de programación](/es/local-llms/best-local-llms-for-coding) — qué modelos, incluido Qwen2.5 Coder, son más potentes para generación de código.',
+          '[Elegir un LLM local para trabajo de programación](/es/local-llms/best-local-llms-for-coding) — qué modelos, incluido Qwen3 Coder, son más potentes para generación de código.',
           '[Configurar tu primer LLM local con Ollama](/es/local-llms/run-first-local-llm) — la instalación paso a paso de Ollama a la que se conecta Continue.dev.',
           '[Elegir una GPU para ejecutar modelos de programación locales](/es/local-llms/best-gpus-for-local-llms) — requisitos de VRAM para los modelos de programación 7B, 14B y 33B mencionados aquí.',
         ],

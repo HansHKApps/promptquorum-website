@@ -173,7 +173,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Top-Tipp: Ryzen 7 Notebook mit 16 GB RAM',
         content: [
-          '<strong>Das beste Budget-KI-Notebook unter 1.000 € ist ein Ryzen 7 (oder vergleichbarer Intel Core i7) mit 16 GB RAM — 3B- und 7-8B-Modelle laufen auf der CPU brauchbar.</strong> Modelle wie Mistral 7B, Llama 3.2 3B und Phi-3 Mini erreichen 3-7 Tokens pro Sekunde auf der CPU — langsam, aber für kurze Prompts akzeptabel.',
+          '<strong>Das beste Budget-KI-Notebook unter 1.000 € ist ein Ryzen 7 (oder vergleichbarer Intel Core i7) mit 16 GB RAM — 3B- und 7-8B-Modelle laufen auf der CPU brauchbar.</strong> Modelle wie Mistral Small, Llama 3.2 3B und Phi-3 Mini erreichen 3-7 Tokens pro Sekunde auf der CPU — langsam, aber für kurze Prompts akzeptabel.',
           'Der Haken: In dieser Klasse läuft alles auf der CPU. Die meisten Notebooks unter 1.000 € haben keine dedizierte GPU oder nur eine 4-GB-GPU, die für ernsthafte LLM-Arbeit zu klein ist. CPU-Inferenz reicht zum Lernen und Experimentieren; für lange Generierungen ist sie langsam.',
           'Wenn GPU-Beschleunigung Priorität hat, ist die Klasse unter 1.000 € zu knapp. Spare lieber für ein MacBook Air M-Serie — die Unified-Memory-Architektur macht den RAM zu nutzbarem LLM-Speicher und liefert deutlich mehr Tokens pro Sekunde als jedes Windows-Notebook in der Klasse darunter. Aktuelle Preise direkt prüfen.',
         ],
@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Meilleur choix : un portable Ryzen 7 avec 16 Go de RAM',
         content: [
-          '<strong>Le meilleur PC portable IA à moins de 1 000 € est un Ryzen 7 (ou Intel Core i7 équivalent) avec 16 Go de RAM — il fait tourner les modèles 3B et 7-8B sur CPU à des vitesses exploitables.</strong> Des modèles comme Mistral 7B, Llama 3.2 3B et Phi-3 Mini tournent à 3-7 tokens par seconde en inférence CPU, lent mais acceptable pour des prompts courts.',
+          '<strong>Le meilleur PC portable IA à moins de 1 000 € est un Ryzen 7 (ou Intel Core i7 équivalent) avec 16 Go de RAM — il fait tourner les modèles 3B et 7-8B sur CPU à des vitesses exploitables.</strong> Des modèles comme Mistral Small, Llama 3.2 3B et Phi-3 Mini tournent à 3-7 tokens par seconde en inférence CPU, lent mais acceptable pour des prompts courts.',
           "Le piège : dans cette gamme, l'inférence est uniquement CPU. La plupart des portables sous 1 000 € n'ont pas de GPU dédié, ou seulement un GPU de 4 Go trop petit pour un usage LLM sérieux. L'inférence CPU convient à l'apprentissage et à l'expérimentation ; elle reste lente pour les générations longues.",
           "Si l'accélération GPU est prioritaire, le palier sous 1 000 € est trop juste. Économisez pour un MacBook Air série M — sa mémoire unifiée transforme la RAM système en mémoire LLM utilisable et délivre bien plus de tokens par seconde que n'importe quel portable Windows à moins de 1 000 €. Vérifiez les prix actuels.",
         ],
@@ -431,7 +431,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'ベスト：Ryzen 7 + 16GBメモリ機',
         content: [
-          '<strong>15万円以下のベストAIノートPCはRyzen 7（または同等のIntel Core i7）+ 16GBメモリ機 — 3Bや7-8BモデルをCPUで実用速度で実行できます。</strong>Mistral 7B、Llama 3.2 3B、Phi-3 MiniなどがCPU推論で3〜7トークン/秒。長文生成には遅いが、短いプロンプトには十分です。',
+          '<strong>15万円以下のベストAIノートPCはRyzen 7（または同等のIntel Core i7）+ 16GBメモリ機 — 3Bや7-8BモデルをCPUで実用速度で実行できます。</strong>Mistral Small、Llama 3.2 3B、Phi-3 MiniなどがCPU推論で3〜7トークン/秒。長文生成には遅いが、短いプロンプトには十分です。',
           '注意点はCPU推論限定であること。15万円以下の多くのノートPCは独立GPU非搭載、または4GB GPUしか積んでおらず本格的なLLMには小さすぎます。CPU推論は学習・実験には十分ですが、長文生成は遅くなります。',
           'GPU加速が最優先なら15万円以下では厳しいです。MacBook Air Mシリーズまで貯めましょう — ユニファイドメモリがシステムRAMをそのままLLMメモリに使い、同価格帯のWindowsノートよりはるかに高速。具体的な価格はその時点の販売店で確認してください。',
         ],
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Mejor Elección: un Laptop Ryzen 7 con 16 GB de RAM',
         content: [
-          '<strong>El mejor laptop IA económico por menos de $1,000 es un Ryzen 7 (o Intel Core i7 equivalente) con 16 GB de RAM — ejecuta modelos 3B y 7-8B en CPU a velocidades utilizables.</strong> Modelos como Mistral 7B, Llama 3.2 3B y Phi-3 Mini corren a 3-7 tokens por segundo en inferencia CPU, lento pero aceptable para prompts cortos.',
+          '<strong>El mejor laptop IA económico por menos de $1,000 es un Ryzen 7 (o Intel Core i7 equivalente) con 16 GB de RAM — ejecuta modelos 3B y 7-8B en CPU a velocidades utilizables.</strong> Modelos como Mistral Small, Llama 3.2 3B y Phi-3 Mini corren a 3-7 tokens por segundo en inferencia CPU, lento pero aceptable para prompts cortos.',
           'La limitación: este rango significa inferencia solo en CPU. La mayoría de los laptops bajo $1,000 no tienen GPU discreta o solo tienen una GPU de 4 GB, demasiado pequeña para trabajo serio con LLMs. La inferencia en CPU está bien para experimentar y aprender; es lenta para generaciones largas.',
           'Si la inferencia acelerada por GPU es tu prioridad, el rango bajo $1,000 es demasiado ajustado. Ahorra para un MacBook Air serie M — su arquitectura de Unified Memory convierte la RAM del sistema en memoria LLM utilizable y ofrece muchos más tokens por segundo que cualquier laptop Windows bajo $1,000. Consulta los precios actuales en tu región.',
         ],
@@ -689,7 +689,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: '最佳推荐：Ryzen 7 + 16GB内存笔记本',
         content: [
-          '<strong>7,000元以下最佳AI笔记本是Ryzen 7（或同级Intel Core i7）+ 16GB内存机型 — 3B和7-8B模型在CPU上能跑出可用速度。</strong>Mistral 7B、Llama 3.2 3B、Phi-3 Mini等模型在CPU推理下可达3-7 tokens/秒，长文偏慢，但短prompt够用。',
+          '<strong>7,000元以下最佳AI笔记本是Ryzen 7（或同级Intel Core i7）+ 16GB内存机型 — 3B和7-8B模型在CPU上能跑出可用速度。</strong>Mistral Small、Llama 3.2 3B、Phi-3 Mini等模型在CPU推理下可达3-7 tokens/秒，长文偏慢，但短prompt够用。',
           '注意点：这一档基本只能CPU推理。7,000元以下的笔记本大多没有独立GPU，或只有4GB GPU，对认真的LLM工作来说太小。CPU推理适合学习和实验，长文生成会慢。',
           '如果GPU加速优先，7,000元以下太紧。建议攒到MacBook Air M系列 — 统一内存架构让系统RAM同时充当GPU内存，每秒token数远高于同价位Windows笔记本。具体价格请查阅当时的销售页面。',
         ],

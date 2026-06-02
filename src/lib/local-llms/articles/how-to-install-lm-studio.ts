@@ -187,7 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Run Your First Local LLM](/local-llms/run-first-local-llm) -- Next steps after installation',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- Terminal-based alternative to LM Studio',
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) -- Model recommendations by hardware',
-            '[Best Local LLMs for Coding 2026](/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder vs DeepSeek benchmark comparison',
+            '[Best Local LLMs for Coding 2026](/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs DeepSeek benchmark comparison',
           ],
         },
       },
@@ -449,7 +449,7 @@ schema: {
             '[Ejecuta tu primer LLM local](/es/local-llms/run-first-local-llm) -- Próximos pasos tras la instalación',
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- Alternativa basada en terminal a LM Studio',
             '[Mejores modelos LLM locales para principiantes](/es/local-llms/best-beginner-local-llm-models) -- Recomendaciones de modelos por hardware',
-            '[Mejores LLMs locales para programación 2026](/es/local-llms/best-local-llms-for-coding) — Comparativa Qwen2.5-Coder vs DeepSeek',
+            '[Mejores LLMs locales para programación 2026](/es/local-llms/best-local-llms-for-coding) — Comparativa Qwen3-Coder vs DeepSeek',
           ],
         },
       },
@@ -698,7 +698,7 @@ print(response.choices[0].message.content)`,
           content: [
             '**EU / DSGVO**: LM Studio mit lokalen Modellen ist die datenschutzkonformste KI-Konfiguration, die für Desktop-Benutzer verfügbar ist. Keine Eingabetexte, Kontexte oder Ausgaben werden außerhalb des Geräts übertragen -- DSGVO Artikel 46 Transfermechanismen finden keine Anwendung. Für EU-Fachleute, die mit personenbezogenen Daten arbeiten (Rechtsdokumente, medizinische Unterlagen, Finanzanalysen), bietet LM Studio auf einem MacBook M-Serie oder Windows-Arbeitsplatz mit dedizierter GPU eine vollständig konforme lokale Inferenz-Umgebung. Die BSI-Grundschutz-Kataloge empfehlen lokale Inferenz für KI-Systeme, die sensitive personenbezogene Daten verarbeiten. Für den deutschen Mittelstand ohne IT-Personal ist die GUI von LM Studio der einfachste Weg zu DSGVO-konformem KI-Einsatz, ohne Terminal-Befehle erlernen zu müssen. Artikel 28 DSGVO-Auftragsverarbeiter fallen weg, da keine Daten an externe API-Anbieter gehen.',
             '**Japan (METI)**: Die METI AI Governance Guidelines erfordern die Dokumentation, wo KI-Inferenz stattfindet. LM Studio speichert den lokalen Modell-Cache auf einem festen Pfad auf der Festplatte -- alle Inferenzen sind rückverfolgbar auf Gerät, Modelldatei und Version. Japanische Enterprise-Teams verwenden LM Studio als Zero-Egress-Dokumenten-Analysetool für vertrauliche behördliche und Compliance-Arbeiten.',
-            '**China**: LM Studio unterstützt Qwen2.5-Modelle nativ über Hugging Face-Suche -- suchen Sie „qwen2.5" im Modellbrowser, um alle verfügbaren Größen zu finden. Für chinesische Workflows bietet Qwen2.5 7B oder 14B 30-40% bessere Token-Effizienz auf chinesischem Text als westlich trainierte Modelle bei der gleichen Parametergröße. Alle Inferenzen laufen lokal unter Chinas Datensicherheitsgesetz (数据安全法) mit null externen API-Aufrufen.',
+            '**China**: LM Studio unterstützt Qwen3-Modelle nativ über Hugging Face-Suche -- suchen Sie „qwen2.5" im Modellbrowser, um alle verfügbaren Größen zu finden. Für chinesische Workflows bietet Qwen3 7B oder 14B 30-40% bessere Token-Effizienz auf chinesischem Text als westlich trainierte Modelle bei der gleichen Parametergröße. Alle Inferenzen laufen lokal unter Chinas Datensicherheitsgesetz (数据安全法) mit null externen API-Aufrufen.',
           ],
         },
         commonMistakes: {
@@ -720,7 +720,7 @@ print(response.choices[0].message.content)`,
             '[Best Beginner Local LLM Models](/de/local-llms/best-beginner-local-llm-models) -- Modellempfehlungen nach Hardware',
             '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) -- GPU- und RAM-Empfehlungen für beste Leistung mit LM Studio auf Ihrer Hardware',
             '[Local LLMs vs Cloud APIs](/de/local-llms/local-llms-vs-cloud-apis) -- Kosten- und Geschwindigkeitsvergleich, um zu entscheiden, wann lokale Inferenz in LM Studio die richtige Wahl ist',
-            '[Beste LLMs für Coding 2026](/de/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder vs DeepSeek Benchmark-Vergleich',
+            '[Beste LLMs für Coding 2026](/de/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs DeepSeek Benchmark-Vergleich',
           ],
         },
         faqSection: {
@@ -752,7 +752,7 @@ print(response.choices[0].message.content)`,
             },
             {
               q: 'Welche Modelle funktionieren mit LM Studio?',
-              a: 'Jedes GGUF-Format-Modell von Hugging Face. Die integrierte Suche deckt den vollständigen Hugging Face-Modell-Hub ab. Beliebte Optionen sind Llama 3.3 8B, Qwen2.5 7B, Mistral Small, Phi-4 Mini und Gemma 3 9B. Suchen Sie nach Modellname auf der Registerkarte „Discover". LM Studio zeigt Dateigröße für jedes Quantisierungsniveau vor dem Download.'
+              a: 'Jedes GGUF-Format-Modell von Hugging Face. Die integrierte Suche deckt den vollständigen Hugging Face-Modell-Hub ab. Beliebte Optionen sind Llama 3.3 8B, Qwen3 7B, Mistral Small, Phi-4 Mini und Gemma 3 9B. Suchen Sie nach Modellname auf der Registerkarte „Discover". LM Studio zeigt Dateigröße für jedes Quantisierungsniveau vor dem Download.'
             },
             {
               q: 'Verwendet LM Studio meine GPU automatisch?',
@@ -852,7 +852,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Welche Modelle funktionieren mit LM Studio?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Jedes GGUF-Format-Modell von Hugging Face. Die integrierte Suche deckt den vollständigen Hugging Face-Modell-Hub ab. Beliebte Optionen sind Llama 3.3 8B, Qwen2.5 7B, Mistral Small, Phi-4 Mini und Gemma 3 9B. Suchen Sie nach Modellname auf der Registerkarte „Discover". LM Studio zeigt Dateigröße für jedes Quantisierungsniveau vor dem Download.' }
+            acceptedAnswer: { '@type': 'Answer', text: 'Jedes GGUF-Format-Modell von Hugging Face. Die integrierte Suche deckt den vollständigen Hugging Face-Modell-Hub ab. Beliebte Optionen sind Llama 3.3 8B, Qwen3 7B, Mistral Small, Phi-4 Mini und Gemma 3 9B. Suchen Sie nach Modellname auf der Registerkarte „Discover". LM Studio zeigt Dateigröße für jedes Quantisierungsniveau vor dem Download.' }
           },
           {
             '@type': 'Question',
@@ -1051,7 +1051,7 @@ schema: {
           content: [
             '**UE / RGPD** : La CNIL recommande le déploiement d\'IA locale pour les professionnels français traitant des données personnelles. LM Studio exécutant des modèles locaux est la configuration la plus préservant la confidentialité disponible pour les utilisateurs desktop. Aucun texte de prompt, contexte ou sortie n\'est transmis en dehors de l\'appareil -- les mécanismes de transfert RGPD Article 46 ne s\'appliquent pas. Pour les professionnels de l\'UE gérant des données personnelles (documents juridiques, notes médicales, analyse financière), LM Studio sur un MacBook M-series ou une station de travail Windows avec GPU discret fournit un environnement d\'inférence locale entièrement conforme. Les directives BSI allemandes recommandent l\'inférence locale pour les systèmes d\'IA traitant des données personnelles sensibles. L\'interface graphique de LM Studio rend cette configuration accessible aux professionnels non techniques qui ne peuvent pas utiliser les outils de terminal comme Ollama.',
             '**Japon (METI)** : Les directives de gouvernance de l\'IA du METI exigent de documenter où se produit l\'inférence d\'IA. LM Studio maintient un cache de modèles locaux à un chemin fixe sur le disque -- toute l\'inférence est traçable au périphérique, au fichier de modèle et à la version. Les équipes d\'entreprise japonaises utilisent LM Studio comme outil d\'analyse de documents à zéro sortie pour les travaux de conformité et réglementaires sensibles.',
-            '**Chine** : LM Studio supporte les modèles Qwen2.5 en natif via la recherche Hugging Face -- recherchez « qwen2.5 » dans le navigateur de modèles pour trouver toutes les tailles disponibles. Pour les flux de travail en langue chinoise, Qwen2.5 7B ou 14B offrent une efficacité de token de 30-40% meilleure sur le texte chinois que les modèles entraînés occidentaux du même nombre de paramètres. Toute l\'inférence s\'exécute localement en vertu de la Loi sur la sécurité des données chinoises (数据安全法) sans aucun appel API externe.',
+            '**Chine** : LM Studio supporte les modèles Qwen3 en natif via la recherche Hugging Face -- recherchez « qwen2.5 » dans le navigateur de modèles pour trouver toutes les tailles disponibles. Pour les flux de travail en langue chinoise, Qwen3 7B ou 14B offrent une efficacité de token de 30-40% meilleure sur le texte chinois que les modèles entraînés occidentaux du même nombre de paramètres. Toute l\'inférence s\'exécute localement en vertu de la Loi sur la sécurité des données chinoises (数据安全法) sans aucun appel API externe.',
           ],
         },
         commonMistakes: {
@@ -1073,7 +1073,7 @@ schema: {
             '[Meilleurs modèles LLM locaux pour débutants](/fr/local-llms/best-beginner-local-llm-models) -- Recommandations de modèles par matériel',
             '[Guide de matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Recommandations GPU et RAM pour obtenir les meilleures performances de LM Studio',
             '[LLM locaux vs APIs cloud](/fr/local-llms/local-llms-vs-cloud-apis) -- Comparaison de coûts et de vitesse pour décider quand l\'inférence locale dans LM Studio est le bon choix',
-            '[Meilleurs LLMs pour le code 2026](/fr/local-llms/best-local-llms-for-coding) — Comparatif Qwen2.5-Coder vs DeepSeek',
+            '[Meilleurs LLMs pour le code 2026](/fr/local-llms/best-local-llms-for-coding) — Comparatif Qwen3-Coder vs DeepSeek',
           ],
         },
         faqSection: {
@@ -1105,7 +1105,7 @@ schema: {
             },
             {
               q: 'Quels modèles fonctionnent avec LM Studio ?',
-              a: 'N\'importe quel modèle au format GGUF de Hugging Face. La recherche intégrée couvre l\'intégralité du hub de modèles Hugging Face. Les choix populaires incluent Llama 3.3 8B, Qwen2.5 7B, Mistral Small, Phi-4 Mini et Gemma 3 9B. Recherchez par nom de modèle dans l\'onglet Discover. LM Studio affiche les tailles de fichier pour chaque niveau de quantification avant le téléchargement.',
+              a: 'N\'importe quel modèle au format GGUF de Hugging Face. La recherche intégrée couvre l\'intégralité du hub de modèles Hugging Face. Les choix populaires incluent Llama 3.3 8B, Qwen3 7B, Mistral Small, Phi-4 Mini et Gemma 3 9B. Recherchez par nom de modèle dans l\'onglet Discover. LM Studio affiche les tailles de fichier pour chaque niveau de quantification avant le téléchargement.',
             },
             {
               q: 'LM Studio utilise-t-il mon GPU automatiquement ?',
@@ -1182,7 +1182,7 @@ schema: {
           { '@type': 'Question', name: 'Le serveur local retourne des erreurs « model not found »', acceptedAnswer: { '@type': 'Answer', text: 'Un modèle doit être chargé dans l\'onglet Serveur Local avant que le serveur puisse répondre. Ouvrez l\'onglet Serveur Local, sélectionnez un modèle dans la liste déroulante et cliquez sur Démarrer le serveur. Le nom du modèle dans les requêtes API peut être n\'importe quelle chaîne -- LM Studio utilise le modèle actuellement chargé.' } },
           { '@type': 'Question', name: 'LM Studio est-il gratuit ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. LM Studio est gratuit pour un usage personnel sans limitations de fonctionnalités. Une licence commerciale est requise pour un usage professionnel -- voir lmstudio.ai/pricing pour les conditions actuelles. En avril 2026, le niveau personnel n\'a pas de limites d\'utilisation, de restrictions de modèles ou de filigranes.' } },
           { '@type': 'Question', name: 'Quelle est la différence entre LM Studio et Ollama ?', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio est une application desktop graphique -- vous parcourez et téléchargez des modèles via une interface visuelle, lancez des discussions en un clic et ajustez les paramètres avec des curseurs. Ollama est un outil en ligne de commande et service d\'arrière-plan -- plus rapide à configurer avec une seule commande, meilleur pour l\'automatisation et le scripting. Les deux utilisent le même moteur d\'inférence llama.cpp.' } },
-          { '@type': 'Question', name: 'Quels modèles fonctionnent avec LM Studio ?', acceptedAnswer: { '@type': 'Answer', text: 'N\'importe quel modèle au format GGUF de Hugging Face. Les choix populaires incluent Llama 3.3 8B, Qwen2.5 7B, Mistral Small, Phi-4 Mini et Gemma 3 9B. Recherchez par nom de modèle dans l\'onglet Discover. LM Studio affiche les tailles de fichier pour chaque niveau de quantification avant le téléchargement.' } },
+          { '@type': 'Question', name: 'Quels modèles fonctionnent avec LM Studio ?', acceptedAnswer: { '@type': 'Answer', text: 'N\'importe quel modèle au format GGUF de Hugging Face. Les choix populaires incluent Llama 3.3 8B, Qwen3 7B, Mistral Small, Phi-4 Mini et Gemma 3 9B. Recherchez par nom de modèle dans l\'onglet Discover. LM Studio affiche les tailles de fichier pour chaque niveau de quantification avant le téléchargement.' } },
           { '@type': 'Question', name: 'LM Studio utilise-t-il mon GPU automatiquement ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui sur Apple Silicon -- l\'accélération Metal est activée par défaut. Sur Windows et Linux avec GPU NVIDIA, LM Studio détecte CUDA automatiquement si les pilotes sont installés. Vérifiez le paramètre Couches GPU dans le panneau modèle -- s\'il affiche 0 couche sur GPU, votre GPU n\'est pas utilisé.' } },
           { '@type': 'Question', name: 'Où LM Studio stocke-t-il les modèles téléchargés ?', acceptedAnswer: { '@type': 'Answer', text: 'Sur macOS : ~/Library/Application Support/LM Studio/Models/lmstudio-community/. Sur Windows : %USERPROFILE%\\.cache\\lm-studio\\models\\. Sur Linux : ~/.cache/lm-studio/models/. Vous pouvez modifier l\'emplacement du stockage dans LM Studio Paramètres → Général → Répertoire de stockage des modèles.' } },
           { '@type': 'Question', name: 'Puis-je utiliser LM Studio avec VS Code ou Cursor ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Lancez le serveur local de LM Studio sur localhost:1234, puis configurez votre extension IDE pour utiliser http://localhost:1234/v1 comme URL de base API avec n\'importe quelle chaîne comme clé API. Les extensions VS Code qui supportent les APIs compatibles OpenAI (Continue, alternatives GitHub Copilot) fonctionnent avec LM Studio directement.' } }
@@ -1357,7 +1357,7 @@ schema: {
           title: 'プライバシーに敏感なユースケース向けのLM Studio',
           content: [
             '**日本（METI）**：METI AI Governance Guidelinesは、AI推論がどこで発生するかを文書化することを要求。LM Studioは固定パスをディスク上に保持--すべての推論はデバイス、モデルファイル、およびバージョンに追跡可能。日本の企業チームは、機密規制およびコンプライアンス作業のためのゼロ出口文書分析ツールとしてLM Studioを使用。METI要件では、リモートAPI呼び出しなしで、オンプレミス推論実装が必須。',
-            '**東アジア地域**：LM Studioは、Hugging Face検索を通じてQwen2.5モデルをネイティブにサポート--モデルブラウザで「qwen2.5」を検索してすべての利用可能なサイズを見つける。中国語テキストワークロードの場合、Qwen2.5 7Bまたは14Bは、同じパラメータ数の西部トレーニングモデルよりも中国語テキストで30～40％優れたトークン効率を提供。',
+            '**東アジア地域**：LM Studioは、Hugging Face検索を通じてQwen3モデルをネイティブにサポート--モデルブラウザで「qwen2.5」を検索してすべての利用可能なサイズを見つける。中国語テキストワークロードの場合、Qwen3 7Bまたは14Bは、同じパラメータ数の西部トレーニングモデルよりも中国語テキストで30～40％優れたトークン効率を提供。',
             '**データセキュリティ**：LM Studioのすべての推論はローカルで実行され、外部API呼び出しはない。これは、データセキュリティ法（数据安全法）など、厳密なローカルデータ処理要件を持つすべての地域で完全にコンプライアント。',
           ],
         },
@@ -1380,7 +1380,7 @@ schema: {
             '[初心者向けベストローカルLLMモデル](/ja/local-llms/best-beginner-local-llm-models) -- ハードウェアごとのモデル推奨',
             '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) -- LM StudioでNativeハードウェアから最高のパフォーマンスを取得するためのGPUおよびRAM推奨',
             '[ローカルLLM対クラウドAPI](/ja/local-llms/local-llms-vs-cloud-apis) -- ローカル推論がNativeハードウェアの正しい選択であるときを決定するためのコストと速度の比較',
-            '[2026年コーディング用ローカルLLM比較](/ja/local-llms/best-local-llms-for-coding) — Qwen2.5-CoderとDeepSeekのベンチマーク',
+            '[2026年コーディング用ローカルLLM比較](/ja/local-llms/best-local-llms-for-coding) — Qwen3-CoderとDeepSeekのベンチマーク',
           ],
         },
         faqSection: {
@@ -1392,7 +1392,7 @@ schema: {
             { q: 'ローカルサーバーが「モデルが見つかりません」エラーを返す', a: 'モデルは、サーバーが応答する前にローカルサーバータブにロードされている必要がある。ローカルサーバータブを開き、ドロップダウンからモデルを選択し、サーバーの開始をクリック。APIリクエストのモデル名は任意の文字列にできる。' },
             { q: 'LM Studioは無料ですか？', a: 'はい。LM Studioは個人使用のための機能制限なし無料。商用ライセンスはビジネス使用に必要。2026年4月の時点で、個人層は使用量の上限、モデル制限、または透かしはない。' },
             { q: 'LM StudioとOllamaの違いは何ですか？', a: 'LM Studioはグラフィカルデスクトップアプリ。視覚的インターフェースを通じてモデルを閲覧およびダウンロード、ワンクリックでチャット開始、スライダーで設定を調整。Ollamaはコマンドラインツールおよびバックグラウンドサービス--1つのコマンドで設定するのが高速。' },
-            { q: 'LM Studioはどのモデルで動作しますか？', a: 'Hugging Faceからの任意のGGUF形式モデル。人気のある選択肢には、Llama 3.3 8B、Qwen2.5 7B、Mistral Small、Phi-4 Mini、およびGemma 3 9Bが含まれる。Discover tabでモデル名で検索。LM Studioはダウンロード前に各量子化レベルのファイルサイズを表示。' },
+            { q: 'LM Studioはどのモデルで動作しますか？', a: 'Hugging Faceからの任意のGGUF形式モデル。人気のある選択肢には、Llama 3.3 8B、Qwen3 7B、Mistral Small、Phi-4 Mini、およびGemma 3 9Bが含まれる。Discover tabでモデル名で検索。LM Studioはダウンロード前に各量子化レベルのファイルサイズを表示。' },
             { q: 'LM StudioはGPUを自動的に使用していますか？', a: 'Apple Siliconでははい--Metal加速はデフォルトで有効。Windows and Linux with NVIDIAの場合、ドライバーがインストールされている場合、LM StudioはCUDAを自動検出。モデルパネルのGPU Layers設定をチェック--GPU上に0レイヤーが表示される場合、GPUは使用されていない。' },
             { q: 'LM Studioはダウンロードモデルをどこに保存していますか？', a: 'macOS：~/Library/Application Support/LM Studio/Models/lmstudio-community/。Windows：%USERPROFILE%\.cache\lm-studio\models\。Linux：~/.cache/lm-studio/models/。LM Studio Settings→General→Model Storage Directoryでストレージロケーションを変更。' },
             { q: 'VS CodeやCursorでLM Studioを使用できますか？', a: 'はい。localhost:1234でLM Studio localサーバーを起動し、IDE拡張を設定してhttp://localhost:1234/v1をAPI基本URLとして使用し、API キーとして任意の文字列を使用。OpenAI互換APIをサポートするVS Code拡張はLM Studioでボックスから動作。' },
@@ -1442,7 +1442,7 @@ schema: {
           { '@type': 'Question', name: 'ローカルサーバーが「モデルが見つかりません」エラーを返す', acceptedAnswer: { '@type': 'Answer', text: 'モデルは、サーバーが応答する前にローカルサーバータブにロードされている必要がある。ローカルサーバータブを開き、ドロップダウンからモデルを選択。' } },
           { '@type': 'Question', name: 'LM Studioは無料ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。LM Studioは個人使用のための機能制限なし無料。商用ライセンスはビジネス使用に必要。' } },
           { '@type': 'Question', name: 'LM StudioとOllamaの違いは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'LM Studioはグラフィカルデスクトップアプリ。視覚的インターフェースを通じてモデルを閲覧およびダウンロード、ワンクリックでチャット開始。Ollamaはコマンドラインツール。' } },
-          { '@type': 'Question', name: 'LM Studioはどのモデルで動作しますか？', acceptedAnswer: { '@type': 'Answer', text: 'Hugging Faceからの任意のGGUF形式モデル。人気のある選択肢には、Llama 3.3 8B、Qwen2.5 7B、Mistral Small、Phi-4 Mini、およびGemma 3 9Bが含まれる。' } },
+          { '@type': 'Question', name: 'LM Studioはどのモデルで動作しますか？', acceptedAnswer: { '@type': 'Answer', text: 'Hugging Faceからの任意のGGUF形式モデル。人気のある選択肢には、Llama 3.3 8B、Qwen3 7B、Mistral Small、Phi-4 Mini、およびGemma 3 9Bが含まれる。' } },
           { '@type': 'Question', name: 'LM StudioはGPUを自動的に使用していますか？', acceptedAnswer: { '@type': 'Answer', text: 'Apple Siliconでははい--Metal加速はデフォルトで有効。Windows and Linux with NVIDIAの場合、LM StudioはCUDAを自動検出。' } },
           { '@type': 'Question', name: 'LM Studioはダウンロードモデルをどこに保存していますか？', acceptedAnswer: { '@type': 'Answer', text: 'macOS：~/Library/Application Support/LM Studio/Models/lmstudio-community/。Windows：%USERPROFILE%\.cache\lm-studio\models\。Linux：~/.cache/lm-studio/models/。' } },
           { '@type': 'Question', name: 'VS CodeやCursorでLM Studioを使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。localhost:1234でLM Studio localサーバーを起動し、IDE拡張を設定してhttp://localhost:1234/v1をAPI基本URLとして使用。' } }
@@ -1616,7 +1616,7 @@ schema: {
         regionalContext: {
           title: '对隐私敏感的用例 LM Studio',
           content: [
-            '**中国（数据安全法）**：LM Studio 支持通过 Hugging Face 搜索原生 Qwen2.5 模型 - 在模型浏览器中搜索"qwen2.5"以查找所有可用大小。对于中文文本工作流，Qwen2.5 7B 或 14B 比同参数数量的西方训练模型在中文文本上提供 30-40% 更好的令牌效率。所有推理在本地运行，根据中国数据安全法（数据安全法），无外部 API 调用。',
+            '**中国（数据安全法）**：LM Studio 支持通过 Hugging Face 搜索原生 Qwen3 模型 - 在模型浏览器中搜索"qwen2.5"以查找所有可用大小。对于中文文本工作流，Qwen3 7B 或 14B 比同参数数量的西方训练模型在中文文本上提供 30-40% 更好的令牌效率。所有推理在本地运行，根据中国数据安全法（数据安全法），无外部 API 调用。',
             '**亚太地区（数据跨境）**：LM Studio 在本地运行所有推理，符合 MLAI（多边人工智能）框架和地区数据驻留要求。对于在亚太地区处理敏感数据的企业，LM Studio 消除了数据跨越国界的风险。',
             '**企业部署**：LM Studio 提供零出口推理，适合金融、医疗和法律行业的监管合规。所有数据留在本地设备上，简化了审计和数据保护认证。',
           ],
@@ -1640,7 +1640,7 @@ schema: {
             '[初学者最佳本地 LLM 模型](/zh/local-llms/best-beginner-local-llm-models) -- 按硬件的模型建议',
             '[本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026) -- GPU 和 RAM 建议以从您的硬件获得 LM Studio 的最佳性能',
             '[本地 LLM vs 云 API](/zh/local-llms/local-llms-vs-cloud-apis) -- 成本和速度比较以决定何时本地 LM Studio 推理是正确的选择',
-            '[2026年最佳编程本地LLM对比](/zh/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder与DeepSeek基准测试',
+            '[2026年最佳编程本地LLM对比](/zh/local-llms/best-local-llms-for-coding) — Qwen3-Coder与DeepSeek基准测试',
           ],
         },
         faqSection: {
@@ -1652,7 +1652,7 @@ schema: {
             { q: '本地服务器返回"找不到模型"错误', a: '必须在本地服务器选项卡中加载模型，服务器才能响应。打开本地服务器选项卡，从下拉菜单中选择一个模型，然后单击启动服务器。' },
             { q: 'LM Studio 免费吗？', a: '是的。LM Studio 可供个人使用免费，没有功能限制。商业用途需要商业许可。截至 2026 年 4 月，个人级别没有使用上限、模型限制或水印。' },
             { q: 'LM Studio 和 Ollama 之间有什么区别？', a: 'LM Studio 是图形桌面应用 - 您通过可视界面浏览和下载模型、通过一次单击启动聊天、用滑块调整设置。Ollama 是命令行工具和后台服务 - 用单个命令设置更快。' },
-            { q: 'LM Studio 可以使用哪些模型？', a: '来自 Hugging Face 的任何 GGUF 格式模型。热门选择包括 Llama 3.3 8B、Qwen2.5 7B、Mistral Small、Phi-4 Mini 和 Gemma 3 9B。在 Discover 选项卡中按模型名称搜索。' },
+            { q: 'LM Studio 可以使用哪些模型？', a: '来自 Hugging Face 的任何 GGUF 格式模型。热门选择包括 Llama 3.3 8B、Qwen3 7B、Mistral Small、Phi-4 Mini 和 Gemma 3 9B。在 Discover 选项卡中按模型名称搜索。' },
             { q: 'LM Studio 自动使用我的 GPU 吗？', a: '在 Apple Silicon 上是的 - Metal 加速默认启用。在 Windows and Linux with NVIDIA 上，如果驱动程序已安装，LM Studio 会自动检测 CUDA。' },
             { q: 'LM Studio 在哪里存储下载的模型？', a: 'macOS：~/Library/Application Support/LM Studio/Models/lmstudio-community/。Windows：%USERPROFILE%\.cache\lm-studio\models\。Linux：~/.cache/lm-studio/models/。' },
             { q: '我可以在 VS Code 或 Cursor 中使用 LM Studio 吗？', a: '可以。在 localhost:1234 启动 LM Studio 本地服务器，然后配置您的 IDE 扩展以使用 http://localhost:1234/v1 作为 API 基本 URL。' },
@@ -1702,7 +1702,7 @@ schema: {
           { '@type': 'Question', name: '本地服务器返回"找不到模型"错误', acceptedAnswer: { '@type': 'Answer', text: '必须在本地服务器选项卡中加载模型，服务器才能响应。' } },
           { '@type': 'Question', name: 'LM Studio 免费吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。LM Studio 可供个人使用免费，没有功能限制。商业用途需要商业许可。' } },
           { '@type': 'Question', name: 'LM Studio 和 Ollama 之间有什么区别？', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio 是图形桌面应用。Ollama 是命令行工具和后台服务。两者使用相同的 llama.cpp 推理引擎。' } },
-          { '@type': 'Question', name: 'LM Studio 可以使用哪些模型？', acceptedAnswer: { '@type': 'Answer', text: '来自 Hugging Face 的任何 GGUF 格式模型。热门选择包括 Llama 3.3 8B、Qwen2.5 7B、Mistral Small。' } },
+          { '@type': 'Question', name: 'LM Studio 可以使用哪些模型？', acceptedAnswer: { '@type': 'Answer', text: '来自 Hugging Face 的任何 GGUF 格式模型。热门选择包括 Llama 3.3 8B、Qwen3 7B、Mistral Small。' } },
           { '@type': 'Question', name: 'LM Studio 自动使用我的 GPU 吗？', acceptedAnswer: { '@type': 'Answer', text: '在 Apple Silicon 上是的 - Metal 加速默认启用。在 Windows and Linux with NVIDIA 上，LM Studio 自动检测 CUDA。' } },
           { '@type': 'Question', name: 'LM Studio 在哪里存储下载的模型？', acceptedAnswer: { '@type': 'Answer', text: 'macOS：~/Library/Application Support/LM Studio/Models/lmstudio-community/。Windows 和 Linux 有类似位置。' } },
           { '@type': 'Question', name: '我可以在 VS Code 或 Cursor 中使用 LM Studio 吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。在 localhost:1234 启动 LM Studio 本地服务器，然后配置您的 IDE 扩展以使用兼容的 API 端点。' } }

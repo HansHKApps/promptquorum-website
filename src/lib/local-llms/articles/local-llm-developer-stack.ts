@@ -219,7 +219,7 @@ schema: {
             '[vLLM OpenAI-Compatible Server Documentation](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) -- Official vLLM API server setup guide',
             '[Continue.dev Configuration Documentation](https://docs.continue.dev/reference/Model%20Providers/openai) -- IDE extension config for custom OpenAI endpoints',
             '[Meta Llama 3.3 Model Card](https://ai.meta.com/llama/) -- Meta. Updated instruct model, Apache 2.0. Recommended replacement for Llama 3.3 8B.',
-            '[Qwen2.5-Coder Model Card](https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct) -- Alibaba. 82% HumanEval, Apache 2.0 license. Best coding model under 8 GB VRAM.',
+            '[Qwen3-Coder Model Card](https://huggingface.co/Qwen/Qwen3-Coder-7B-Instruct) -- Alibaba. 82% HumanEval, Apache 2.0 license. Best coding model under 8 GB VRAM.',
           ],
         },
       },
@@ -456,7 +456,7 @@ schema: {
             '[vLLM OpenAI-Compatible Server Documentation](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) -- Guía oficial de configuración del servidor API de vLLM',
             '[Continue.dev Configuration Documentation](https://docs.continue.dev/reference/Model%20Providers/openai) -- Configuración de la extensión IDE para endpoints OpenAI personalizados',
             '[Meta Llama 3.3 Model Card](https://ai.meta.com/llama/) -- Meta. Modelo instruct actualizado, Apache 2.0. Reemplazo recomendado de Llama 3.3 8B.',
-            '[Qwen2.5-Coder Model Card](https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct) -- Alibaba. 82% HumanEval, licencia Apache 2.0. Mejor modelo de programación con menos de 8 GB de VRAM.',
+            '[Qwen3-Coder Model Card](https://huggingface.co/Qwen/Qwen3-Coder-7B-Instruct) -- Alibaba. 82% HumanEval, licencia Apache 2.0. Mejor modelo de programación con menos de 8 GB de VRAM.',
           ],
         },
       },
@@ -1240,7 +1240,7 @@ schema: {
         'regional': {
           title: '区域合规要求',
           items: [
-            '**中国（数据安全法）：** 中国2021年《数据安全法》和《个人信息保护法》要求数据本地化存储。本地LLM推理确保所有数据留在境内，完全符合监管要求。Qwen2.5系列模型特别适合中国企业部署，推荐金融、医疗、法律行业优先选用。',
+            '**中国（数据安全法）：** 中国2021年《数据安全法》和《个人信息保护法》要求数据本地化存储。本地LLM推理确保所有数据留在境内，完全符合监管要求。Qwen3系列模型特别适合中国企业部署，推荐金融、医疗、法律行业优先选用。',
             '**亚太地区（数据跨境）：** 韩国《个人信息保护法》（PIPA）、新加坡《个人数据保护法》（PDPA）、澳大利亚《隐私法》均对跨境数据传输有严格限制。层级2/3本地推理栈满足所有亚太地区数据驻留要求，无需跨境数据传输合规审批。',
             '**企业部署：** 银行、医院、律所等监管敏感行业可通过层级三实现完全合规的AI推理基础设施。配合Prometheus监控和nginx访问控制，可满足等保2.0三级及以上要求。企业可在阿里云或腾讯云GPU实例上部署，数据完全留在中国境内。',
           ],

@@ -54,12 +54,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'How Does an AI Agent Work?',
           content: [
             '**An agent follows this loop: (1) observe state/context, (2) LLM reasons about best action, (3) execute action (tool call), (4) observe result, (5) repeat until done.**',
-            'Example: Research agent given task "Compare [Llama 3.2 vs Qwen 2.5](/local-llms/qwen-vs-llama-vs-mistral) on coding tasks".',
+            'Example: Research agent given task "Compare [Llama 3.2 vs Qwen 3](/local-llms/qwen-vs-llama-vs-mistral) on coding tasks".',
             '- Observation: Task received.',
             '- Reasoning: Need to find benchmarks, search for HumanEval scores.',
             '- Action: Use web_search tool to find "Llama 3.2 HumanEval benchmark".',
             '- Observation: Retrieved text with scores.',
-            '- Action: Search for "Qwen 2.5 HumanEval".',
+            '- Action: Search for "Qwen 3 HumanEval".',
             '- Reasoning: Both models found. Qwen is faster, Llama is more general.',
             '- Final Action: Synthesize answer and return.',
           ],
@@ -235,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Local agents are the default choice for GDPR-regulated workflows in the EU.** When agents process personal data — customer records, medical files, legal documents — local inference keeps data within your own infrastructure and satisfies GDPR Articles 25 and 32 without requiring a data processing agreement with a cloud provider.',
             'In Japan, the Act on Protection of Personal Information (APPI), amended in 2022, restricts cross-border data transfers. Local agents running on-premises satisfy APPI requirements by default for enterprises handling sensitive customer data without further regulatory burden.',
-            'In China, the 2021 Data Security Law and the Personal Information Protection Law (PIPL) require that certain categories of data remain within Chinese borders. Local agents using [Qwen2.5](/local-llms/qwen-vs-llama-vs-mistral) or other locally-hosted models satisfy these residency requirements where cloud inference would not.',
+            'In China, the 2021 Data Security Law and the Personal Information Protection Law (PIPL) require that certain categories of data remain within Chinese borders. Local agents using [Qwen3](/local-llms/qwen-vs-llama-vs-mistral) or other locally-hosted models satisfy these residency requirements where cloud inference would not.',
           ],
         },
         relatedReading: {
@@ -355,12 +355,12 @@ schema: {
           title: 'Wie funktioniert ein KI-Agent?',
           content: [
             '**Ein Agent folgt dieser Schleife: (1) Zustand/Kontext beobachten, (2) LLM denkt über beste Aktion nach, (3) Aktion ausführen (Tool-Aufruf), (4) Ergebnis beobachten, (5) wiederholen bis fertig.**',
-            'Beispiel: Recherche-Agent mit der Aufgabe „Vergleiche [Llama 3.2 vs Qwen 2.5](/de/local-llms/qwen-vs-llama-vs-mistral) bei Codierungsaufgaben".',
+            'Beispiel: Recherche-Agent mit der Aufgabe „Vergleiche [Llama 3.2 vs Qwen 3](/de/local-llms/qwen-vs-llama-vs-mistral) bei Codierungsaufgaben".',
             '- Beobachtung: Aufgabe empfangen.',
             '- Überlegung: Benchmarks finden, HumanEval-Scores suchen.',
             '- Aktion: Web_search-Tool verwenden, um „Llama 3.2 HumanEval Benchmark" zu finden.',
             '- Beobachtung: Text mit Scores abgerufen.',
-            '- Aktion: Nach „Qwen 2.5 HumanEval" suchen.',
+            '- Aktion: Nach „Qwen 3 HumanEval" suchen.',
             '- Überlegung: Beide Modelle gefunden. Qwen ist schneller, Llama ist universeller.',
             '- Letzte Aktion: Antwort zusammenfassen und zurückgeben.',
           ],
@@ -534,7 +534,7 @@ schema: {
           content: [
             '**Lokale Agenten sind die Standardwahl für DSGVO-geregelte Workflows in der EU.** Wenn Agenten personenbezogene Daten verarbeiten – Kundendatensätze, medizinische Dateien, rechtliche Dokumente – hält lokale Inferenz Daten in Ihrer eigenen Infrastruktur und erfüllt DSGVO-Artikel 25 und 32, ohne dass ein Datenverarbeitungsvertrag mit einem Cloud-Anbieter erforderlich ist.',
             'In Japan schränkt das am 2022 geänderte Gesetz zum Schutz personenbezogener Informationen (APPI) die Übertragung personenbezogener Daten über Grenzen hinweg ein. Lokale Agenten, die lokal gehostet werden, erfüllen standardmäßig APPI-Anforderungen für Unternehmen, die empfindliche Kundendaten verarbeiten, ohne weiteren Regelungsaufwand.',
-            'In China erfordern das Datensicherheitsgesetz von 2021 und das Gesetz zum Schutz personenbezogener Informationen (PIPL), dass bestimmte Datenkategorien innerhalb der chinesischen Grenzen bleiben. Lokale Agenten mit [Qwen2.5](/de/local-llms/qwen-vs-llama-vs-mistral) oder anderen lokal gehosteten Modellen erfüllen diese Aufenthaltsanforderungen dort, wo Cloud-Inferenz nicht erfüllt würde.',
+            'In China erfordern das Datensicherheitsgesetz von 2021 und das Gesetz zum Schutz personenbezogener Informationen (PIPL), dass bestimmte Datenkategorien innerhalb der chinesischen Grenzen bleiben. Lokale Agenten mit [Qwen3](/de/local-llms/qwen-vs-llama-vs-mistral) oder anderen lokal gehosteten Modellen erfüllen diese Aufenthaltsanforderungen dort, wo Cloud-Inferenz nicht erfüllt würde.',
             '**Deutschland und Mittelstand:** Das BSI-Grundschutz-Katalog-Framework empfiehlt lokale Verarbeitung für sensible Daten. Lokale Agenten ermöglichen es Mittelstandsunternehmen, KI-Systeme intern zu verwalten und die Anforderungen der Datenschutz-Grundverordnung einzuhalten, ohne von Dritten abhängig zu sein.',
           ],
         },
@@ -656,12 +656,12 @@ schema: {
           title: 'Comment fonctionne un agent IA ?',
           content: [
             '**Un agent suit cette boucle : (1) observer l\'état/contexte, (2) le LLM raisonne sur la meilleure action, (3) exécuter l\'action (appel outil), (4) observer le résultat, (5) répéter jusqu\'à terminer.**',
-            'Exemple : Agent de recherche chargé de la tâche « Comparer [Llama 3.2 vs Qwen 2.5](/fr/local-llms/qwen-vs-llama-vs-mistral) sur les tâches de codage ».',
+            'Exemple : Agent de recherche chargé de la tâche « Comparer [Llama 3.2 vs Qwen 3](/fr/local-llms/qwen-vs-llama-vs-mistral) sur les tâches de codage ».',
             '- Observation : Tâche reçue.',
             '- Raisonnement : Besoin de trouver les benchmarks, rechercher les scores HumanEval.',
             '- Action : Utiliser l\'outil web_search pour « Llama 3.2 HumanEval benchmark ».',
             '- Observation : Texte récupéré avec scores.',
-            '- Action : Rechercher « Qwen 2.5 HumanEval ».',
+            '- Action : Rechercher « Qwen 3 HumanEval ».',
             '- Raisonnement : Les deux modèles trouvés. Qwen est plus rapide, Llama est plus général.',
             '- Action finale : Synthétiser la réponse et retourner.',
           ],
@@ -827,7 +827,7 @@ schema: {
           content: [
             '**Les agents locaux sont le choix par défaut pour les workflows réglementés par le RGPD en l\'UE.** Quand les agents traitent les données personnelles — dossiers clients, fichiers médicaux, documents juridiques — l\'inférence locale garde les données dans votre propre infrastructure et satisfait les articles 25 et 32 du RGPD sans nécessiter un accord de traitement des données avec un fournisseur cloud. De plus, la Commission Nationale de l\'Informatique et des Libertés (CNIL) recommande les modèles locaux quand vous gérez des données sensibles dans les secteurs financier, médical et juridique.',
             'Au Japon, la Loi sur la protection des informations personnelles (APPI), modifiée en 2022, restreint les transferts de données transfrontaliers. Les agents locaux fonctionnant sur site satisfont les exigences APPI par défaut pour les entreprises traitant les données clients sensibles sans charge réglementaire supplémentaire.',
-            'En Chine, la loi 2021 sur la sécurité des données et la loi sur la protection des informations personnelles (PIPL) exigent que certaines catégories de données restent dans les frontières chinoises. Les agents locaux utilisant [Qwen2.5](/fr/local-llms/qwen-vs-llama-vs-mistral) ou d\'autres modèles auto-hébergés satisfont ces exigences de résidence où l\'inférence cloud ne le ferait pas.',
+            'En Chine, la loi 2021 sur la sécurité des données et la loi sur la protection des informations personnelles (PIPL) exigent que certaines catégories de données restent dans les frontières chinoises. Les agents locaux utilisant [Qwen3](/fr/local-llms/qwen-vs-llama-vs-mistral) ou d\'autres modèles auto-hébergés satisfont ces exigences de résidence où l\'inférence cloud ne le ferait pas.',
           ],
         },
         relatedReading: {
@@ -948,12 +948,12 @@ schema: {
           title: 'AIエージェントはどのように機能するか',
           content: [
             '**エージェントはこのループに従います：（1）状態/コンテキストを観察する、（2）LLMが最適なアクションについて推論する、（3）アクションを実行する（ツール呼び出し）、（4）結果を観察する、（5）完了するまで繰り返す。**',
-            '例：タスク「[Llama 3.2とQwen 2.5](/ja/local-llms/qwen-vs-llama-vs-mistral)をコーディングタスクで比較する」を与えられた研究エージェント。',
+            '例：タスク「[Llama 3.2とQwen 3](/ja/local-llms/qwen-vs-llama-vs-mistral)をコーディングタスクで比較する」を与えられた研究エージェント。',
             '- 観察：タスクを受信。',
             '- 推論：ベンチマークを見つける必要があり、HumanEvalスコアを検索します。',
             '- アクション：web_searchツールを使用して「Llama 3.2 HumanEvalベンチマーク」を検索。',
             '- 観察：スコア付きのテキストを取得。',
-            '- アクション：「Qwen 2.5 HumanEval」を検索。',
+            '- アクション：「Qwen 3 HumanEval」を検索。',
             '- 推論：両方のモデルが見つかりました。Qwenはより高速で、Llamaはより汎用的です。',
             '- 最終アクション：回答を合成して返す。',
           ],
@@ -1119,7 +1119,7 @@ schema: {
           content: [
             '**日本：** 「このセクションでは」METI（経済産業省）が2024年に発布したAIガバナンス指針にはデータレジデンシーと監査要件が含まれています。ローカルエージェントはこれらの要件を満たし、エンタープライズAI展開で推奨されます。Act on Protection of Personal Information（APPI、2022年改正）では個人データの国外転送が制限されていますが、ローカルエージェントはこれを自動的に満たします。',
             '**アジア太平洋地域：** 「東アジア広域」ASEAN域内ではMyPersonal Data Protection Act（マレーシア）、Personal Data Protection Law（タイ）、Data Security Law（ベトナム）が個人データの域内残存を要求。ローカルエージェントは共通のARPA（Asia-Pacific Regional Architecture）準拠で展開でき、クロスボーダーデータ転送を排除。',
-            '**グローバル：** エンタープライズ環境では、AIシステムが独立した意思決定を行い、データが民感な場合（金融、医療、法律）、ローカル展開が監査可能性と説明責任を向上。Ollamaとローカルモデル（特にQwen2.5など）はこれらの要件をサポート。',
+            '**グローバル：** エンタープライズ環境では、AIシステムが独立した意思決定を行い、データが民感な場合（金融、医療、法律）、ローカル展開が監査可能性と説明責任を向上。Ollamaとローカルモデル（特にQwen3など）はこれらの要件をサポート。',
           ],
         },
         relatedReading: {
@@ -1240,12 +1240,12 @@ schema: {
           title: 'AI智能体如何运作',
           content: [
             '**智能体遵循这个循环：（1）观察状态/背景、（2）LLM推理最佳行动、（3）执行行动（工具调用）、（4）观察结果、（5）重复直到完成。**',
-            '示例：研究智能体被给予任务"比较[Llama 3.2与Qwen 2.5](/zh/local-llms/qwen-vs-llama-vs-mistral)的编码任务"。',
+            '示例：研究智能体被给予任务"比较[Llama 3.2与Qwen 3](/zh/local-llms/qwen-vs-llama-vs-mistral)的编码任务"。',
             '- 观察：收到任务。',
             '- 推理：需要查找基准、搜索HumanEval分数。',
             '- 行动：使用web_search工具搜索"Llama 3.2 HumanEval基准"。',
             '- 观察：检索到带有分数的文本。',
-            '- 行动：搜索"Qwen 2.5 HumanEval"。',
+            '- 行动：搜索"Qwen 3 HumanEval"。',
             '- 推理：两个模型都找到。Qwen更快，Llama更通用。',
             '- 最终行动：合成答案并返回。',
           ],
@@ -1409,7 +1409,7 @@ schema: {
           id: 'regional-context',
           title: '区域背景和部署规制',
           content: [
-            '**中国（数据安全法）：**2021年《数据安全法》和个人信息保护法（PIPL）要求特定数据类别保留在中国境内。使用Qwen2.5或其他自托管模型的本地智能体满足这些驻留要求，云推理则不然。对于金融机构、医疗提供商和法律事务所处理敏感客户数据的企业部署，本地推理保证了PIPL和行业安全标准合规。',
+            '**中国（数据安全法）：**2021年《数据安全法》和个人信息保护法（PIPL）要求特定数据类别保留在中国境内。使用Qwen3或其他自托管模型的本地智能体满足这些驻留要求，云推理则不然。对于金融机构、医疗提供商和法律事务所处理敏感客户数据的企业部署，本地推理保证了PIPL和行业安全标准合规。',
             '**亚太地区（数据跨界）：**ASEAN地区个国家（新加坡个人数据保护法、泰国个人数据保护法、越南数据安全法）要求个人数据跨境转移最小化。本地智能体通过在ASEAN区域内的服务器运行满足这些要求。多国ASEAN个人信息保护框架（APIAN）优先支持本地或区域性部署，以实现合规且减少跨界API调用。',
             '**企业部署（金融、医疗、法律）：**银行、医院和律师事务所处理受管制数据（支付卡信息、患者记录、法律通讯）的部署可以使用本地智能体来维持完全的数据驻留和审计控制。这消除了由于第三方API依赖而产生的监管负担，并为受保护信息提供端到端加密和本地日志记录。',
           ],
@@ -1532,12 +1532,12 @@ schema: {
           title: '¿Cómo funciona un agente de IA?',
           content: [
             '**Un agente sigue este bucle: (1) observar estado/contexto, (2) el LLM razona sobre la mejor acción, (3) ejecutar la acción (llamada a herramienta), (4) observar el resultado, (5) repetir hasta terminar.**',
-            'Ejemplo: agente de investigación con la tarea "Comparar [Llama 3.2 vs Qwen 2.5](/es/local-llms/qwen-vs-llama-vs-mistral) en tareas de codificación".',
+            'Ejemplo: agente de investigación con la tarea "Comparar [Llama 3.2 vs Qwen 3](/es/local-llms/qwen-vs-llama-vs-mistral) en tareas de codificación".',
             '- Observación: tarea recibida.',
             '- Razonamiento: necesito encontrar benchmarks, buscar puntuaciones HumanEval.',
             '- Acción: usar la herramienta web_search para buscar "Llama 3.2 HumanEval benchmark".',
             '- Observación: texto recuperado con puntuaciones.',
-            '- Acción: buscar "Qwen 2.5 HumanEval".',
+            '- Acción: buscar "Qwen 3 HumanEval".',
             '- Razonamiento: ambos modelos encontrados. Qwen es más rápido, Llama es más general.',
             '- Acción final: sintetizar la respuesta y devolver.',
           ],
@@ -1713,7 +1713,7 @@ schema: {
           content: [
             '**Los agentes locales son la opción predeterminada para flujos de trabajo regulados por el RGPD en la UE.** Cuando los agentes procesan datos personales — registros de clientes, archivos médicos, documentos legales — la inferencia local mantiene los datos dentro de tu propia infraestructura y satisface los artículos 25 y 32 del RGPD sin requerir un acuerdo de procesamiento de datos con un proveedor de nube.',
             'En Japón, la Ley de Protección de Información Personal (APPI), enmendada en 2022, restringe las transferencias de datos transfronterizas. Los agentes locales que se ejecutan en local satisfacen los requisitos de la APPI de forma predeterminada para las empresas que manejan datos confidenciales de clientes sin carga regulatoria adicional.',
-            'En China, la Ley de Seguridad de Datos de 2021 y la Ley de Protección de Información Personal (PIPL) requieren que ciertas categorías de datos permanezcan dentro de las fronteras chinas. Los agentes locales que usan [Qwen2.5](/es/local-llms/qwen-vs-llama-vs-mistral) u otros modelos alojados localmente satisfacen estos requisitos de residencia donde la inferencia en la nube no lo haría.',
+            'En China, la Ley de Seguridad de Datos de 2021 y la Ley de Protección de Información Personal (PIPL) requieren que ciertas categorías de datos permanezcan dentro de las fronteras chinas. Los agentes locales que usan [Qwen3](/es/local-llms/qwen-vs-llama-vs-mistral) u otros modelos alojados localmente satisfacen estos requisitos de residencia donde la inferencia en la nube no lo haría.',
           ],
         },
         relatedReading: {

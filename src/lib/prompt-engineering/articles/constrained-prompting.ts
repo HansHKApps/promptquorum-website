@@ -1291,7 +1291,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Tous les modèles supportent-ils les contraintes ?',
-          a: 'Les modèles modernes (GPT-5.5, Claude 3.5 Sonnet, Llama 3.2, Mistral) supportent bien les contraintes de format et les énumérés. Mais plus la contrainte est complexe (schémas imbriqués profonds, logique sémantique), plus la compliance varie. Les petits modèles (< 7B) sont moins fiables. Testez votre modèle et cas d\'usage spécifiques.'
+          a: 'Les modèles modernes (GPT-5.5, Claude Sonnet 4.6, Llama 3.2, Mistral) supportent bien les contraintes de format et les énumérés. Mais plus la contrainte est complexe (schémas imbriqués profonds, logique sémantique), plus la compliance varie. Les petits modèles (< 7B) sont moins fiables. Testez votre modèle et cas d\'usage spécifiques.'
         },
         {
           q: 'Dois-je mettre la contrainte dans le prompt système ou utilisateur ?',
@@ -1330,7 +1330,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   title: '制約付きプロンプティング：完全ガイド',
   seoTitle: '制約付きプロンプティング：構造化AIの完全ガイド',
   intro: '制約付きプロンプティングとは、LLMに厳格なルールを強制する技法です。特定の出力形式、長さの制限、事前定義されたスキーマの遵守を指示します。本番環境で信頼性が高く、再現可能な結果を得たいときに有効です。',
-  metaDescription: '制約付きプロンプティングでLLM出力を制御。JSONフォーマット強制、スキーマ検証、本番環境での信頼性確保。GPT-4o、Claude、Geminiに対応。',
+  metaDescription: '制約付きプロンプティングでLLM出力を制御。JSONフォーマット強制、スキーマ検証、本番環境での信頼性確保。GPT-5.5、Claude、Geminiに対応。',
   leadAnswerBlock: '制約付きプロンプティングは、LLMが特定の形式・内容・長さで応答するよう強制する技法です。JSONスキーマを指定することで、解析可能で予測可能な出力を保証し、本番環境での信頼性と再現性を大幅に向上させます。金融、医療、法務などの規制環境でも安全性が確保でき、データ抽出や分類タスクを自動化するのに最適な方法です。',
   publishDate: '2026-01-20',
   dateModified: '2026-04-28',
@@ -1349,7 +1349,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       numberedItems: [
         'フォーマット制約により、モデルはJSONやXMLなど構造化出力を生成します',
         '長さ制限とスキーマは幻覚や内容の逸脱を減らします',
-        'Llama 3.2やMistral 7Bなどのオープンソース、GPT-4oやClaudeなどの商用モデルが制約に対応しており、対応レベルに違いがあります',
+        'Llama 3.2やMistral Smallなどのオープンソース、GPT-5.5やClaudeなどの商用モデルが制約に対応しており、対応レベルに違いがあります',
         'システムプロンプトまたはユーザープロンプトで制約を明確に指定するほど効果が高まります',
         'PromptQuorumなどのツールで、制約遵守を大規模にテストし検証できます',
         '一般的なミス：制約が曖昧、ルールの過度な積み重ね、エッジケースのテスト不足',
@@ -1360,7 +1360,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'クイックファクト',
       numberedItems: [
         '制約の種類：フォーマット（JSON/XML）、列挙型（限定値）、長さ制限、ネストされたスキーマ、セマンティック',
-        'モデルの対応：GPT-4o、Claude 3.5 Sonnet、Llama 3.2、Mistral はすべて制約に対応。対応レベルは異なる',
+        'モデルの対応：GPT-5.5、Claude Sonnet 4.6、Llama 3.2、Mistral はすべて制約に対応。対応レベルは異なる',
         'ベストプラクティス：システムプロンプトに一般的制約を配置。ユーザープロンプトにコンテキスト固有制約を配置',
         'JSON出力の一貫性：適切に設計された制約により、実行ごとに有効でスキーマ準拠のJSONが保証される',
         'テスト方法：単一モデルで5回テスト。その後、別モデルで検証。エッジケース（空リスト、Unicode）をテスト',
@@ -1462,7 +1462,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'PromptQuorumが制約付きプロンプティングをサポートする方法',
       content: '「PromptQuorum」は、制約テストと検証を大規模に実行するネイティブツールを備えています。',
       items: [
-        '**構造化テストモード**：複数モデル（GPT-4o、Claude、Llama 3.2）でスキーマ準拠をテスト',
+        '**構造化テストモード**：複数モデル（GPT-5.5、Claude、Llama 3.2）でスキーマ準拠をテスト',
         '**スキーマ検証**：JSONスキーマを定義。各レスポンスの違反を検出・報告',
         '**マルチモデルディスパッチ**：複数モデルに同じ制約付きプロンプトを送信。構造化レスポンスを収集、違いを検出',
         '**本番監視**：スキーマ準拠率をトラッキング。どのモデルが逸脱？どのフィールドが構造化されていない？',
@@ -1482,7 +1482,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           title: '複数モデルでテスト',
-          whyItMatters: 'Llama、Mistral、GPT-4o、Claudeは制約に異なる反応。各モデルをテスト。準拠率を測定。'
+          whyItMatters: 'Llama、Mistral、GPT-5.5、Claudeは制約に異なる反応。各モデルをテスト。準拠率を測定。'
         },
         {
           title: '本番で各レスポンスを検証',
@@ -1539,7 +1539,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           mistake: 'モデル間の違いを無視',
-          problem: 'JSONを完全に守るモデル。別のモデルがコメント追加。GPT-4oは```で囲む。',
+          problem: 'JSONを完全に守るモデル。別のモデルがコメント追加。GPT-5.5は```で囲む。',
           fix: '使用するすべてのモデルで制約テスト。違いが許容不可ならモデル固定。'
         },
         {
@@ -1569,7 +1569,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'すべてのモデルが制約に対応している？',
-          a: '最新モデル（GPT-4o、Claude 3.5 Sonnet、Llama 3.2、Mistral）はフォーマット制約と列挙型をよく対応しています。ただし、制約が複雑（深いネストスキーマ、複雑なセマンティックロジック）ほど対応レベルが変わります。小規模モデル（<7B）は信頼性が低い。自分のモデルとユースケースでテストしてください。'
+          a: '最新モデル（GPT-5.5、Claude Sonnet 4.6、Llama 3.2、Mistral）はフォーマット制約と列挙型をよく対応しています。ただし、制約が複雑（深いネストスキーマ、複雑なセマンティックロジック）ほど対応レベルが変わります。小規模モデル（<7B）は信頼性が低い。自分のモデルとユースケースでテストしてください。'
         },
         {
           q: '制約はシステムプロンプトですか、ユーザープロンプトですか？',
@@ -1577,7 +1577,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'モデルが制約を無視したら？',
-          a: '段階的対応：1) より明確に：「構造的に」→ 「常にJSON有効で返す」。2) 例を追加：「例：{ sentiment: \'positive\', score: 0.9 }」。3) より強力なモデルに切り替え（GPT-4oではなく3.5、Llama 70B vs 8B）。4) ファインチューニング（高コスト、本番環境で信頼性向上）。'
+          a: '段階的対応：1) より明確に：「構造的に」→ 「常にJSON有効で返す」。2) 例を追加：「例：{ sentiment: \'positive\', score: 0.9 }」。3) より強力なモデルに切り替え（GPT-5.5ではなく3.5、Llama 70B vs 8B）。4) ファインチューニング（高コスト、本番環境で信頼性向上）。'
         },
         {
           q: '制約はコンテンツ品質に影響する？',
@@ -1649,7 +1649,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     'mentions': [
       { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' },
-      { '@type': 'SoftwareApplication', 'name': 'GPT-4o' },
+      { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
       { '@type': 'SoftwareApplication', 'name': 'Claude' },
       { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
       { '@type': 'SoftwareApplication', 'name': 'Mistral' }
@@ -1673,7 +1673,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'name': 'すべてのモデルが制約に対応している？',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': '最新モデル（GPT-4o、Claude 3.5 Sonnet、Llama 3.2、Mistral）はフォーマット制約と列挙型をよく対応しています。ただし、制約が複雑（深いネストスキーマ、複雑なセマンティックロジック）ほど対応レベルが変わります。小規模モデル（<7B）は信頼性が低い。自分のモデルとユースケースでテストしてください。'
+          'text': '最新モデル（GPT-5.5、Claude Sonnet 4.6、Llama 3.2、Mistral）はフォーマット制約と列挙型をよく対応しています。ただし、制約が複雑（深いネストスキーマ、複雑なセマンティックロジック）ほど対応レベルが変わります。小規模モデル（<7B）は信頼性が低い。自分のモデルとユースケースでテストしてください。'
         }
       },
       {
@@ -1689,7 +1689,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'name': 'モデルが制約を無視したら？',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': '段階的対応：1) より明確に：「構造的に」→ 「常にJSON有効で返す」。2) 例を追加：「例：{ sentiment: \'positive\', score: 0.9 }」。3) より強力なモデルに切り替え（GPT-4oではなく3.5、Llama 70B vs 8B）。4) ファインチューニング（高コスト、本番環境で信頼性向上）。'
+          'text': '段階的対応：1) より明確に：「構造的に」→ 「常にJSON有効で返す」。2) 例を追加：「例：{ sentiment: \'positive\', score: 0.9 }」。3) より強力なモデルに切り替え（GPT-5.5ではなく3.5、Llama 70B vs 8B）。4) ファインチューニング（高コスト、本番環境で信頼性向上）。'
         }
       },
       {
@@ -1763,7 +1763,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'HowToStep',
         'position': 3,
         'name': '複数モデルでテスト',
-        'text': 'Llama、Mistral、GPT-4o、Claudeは制約に異なる反応。各モデルをテスト。準拠率を測定。'
+        'text': 'Llama、Mistral、GPT-5.5、Claudeは制約に異なる反応。各モデルをテスト。準拠率を測定。'
       },
       {
         '@type': 'HowToStep',
@@ -1822,7 +1822,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   title: '受限提示：完整指南',
   seoTitle: '受限提示：结构化输出完整指南',
   intro: '受限提示强制LLM遵守严格规则：特定输出格式、长度限制或预定义架构遵守。在生产环境中需要可靠、可重现的结果时至关重要。',
-  metaDescription: '学习受限提示强制LLM输出为JSON、XML等结构化格式。5种约束技术、API级别强制、生产环境实例。适配GPT-4o、Claude、Gemini。',
+  metaDescription: '学习受限提示强制LLM输出为JSON、XML等结构化格式。5种约束技术、API级别强制、生产环境实例。适配GPT-5.5、Claude、Gemini。',
   leadAnswerBlock: '受限提示是强制LLM生成符合特定结构、格式和内容要求的响应的技术。通过指定JSON架构、枚举值或长度限制，你可以确保每次输出都是有效的、可解析的、符合预期的。这在金融、医疗和法律等受管制行业尤为关键，可确保合规性、数据安全和生产工作流的可靠性。',
   publishDate: '2026-01-20',
   dateModified: '2026-05-03',
@@ -1841,7 +1841,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       numberedItems: [
         '格式约束强制模型生成JSON、XML等结构化输出，而非自由文本',
         '长度限制和架构减少幻觉和内容偏离',
-        '开源模型（Llama 3.2、Mistral 7B）和商用模型（GPT-4o、Claude）均支持约束，但对应程度有差异',
+        '开源模型（Llama 3.2、Mistral Small）和商用模型（GPT-5.5、Claude）均支持约束，但对应程度有差异',
         '在系统或用户提示中明确指定约束时效果最佳',
         'PromptQuorum等工具支持大规模测试和验证约束遵守',
         '常见错误：约束模糊、规则过度堆积、缺少边界情况测试',
@@ -1852,7 +1852,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '快速事实',
       numberedItems: [
         '约束类型：格式（JSON/XML）、枚举（限制值）、长度限制、嵌套架构、语义约束',
-        '模型支持：GPT-4o、Claude 3.5 Sonnet、Llama 3.2、Mistral 均支持约束。支持程度各异',
+        '模型支持：GPT-5.5、Claude Sonnet 4.6、Llama 3.2、Mistral 均支持约束。支持程度各异',
         '最佳实践：系统提示放一般约束。用户提示放上下文特定约束',
         'JSON一致性：设计良好的约束保证每次执行返回有效、符合架构的JSON',
         '测试方法：单模型测试5次。跨模型验证。测试边界情况（空列表、Unicode）',
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'PromptQuorum如何支持受限提示',
       content: 'PromptQuorum包含原生工具用于大规模测试和验证约束：',
       items: [
-        '**结构化测试模式**：对多个模型（GPT-4o、Claude、Llama 3.2）测试架构遵守',
+        '**结构化测试模式**：对多个模型（GPT-5.5、Claude、Llama 3.2）测试架构遵守',
         '**架构验证**：定义JSON架构。检测并报告每个响应的违规',
         '**多模型分发**：向多个模型发送相同的受限提示。收集结构化响应，检测差异',
         '**生产监控**：跟踪架构遵守率。哪些模型偏离？哪些字段经常未结构化？',
@@ -1974,7 +1974,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           title: '在多个模型上测试',
-          whyItMatters: 'Llama、Mistral、GPT-4o、Claude对约束反应不同。测试每个。测量遵守率。'
+          whyItMatters: 'Llama、Mistral、GPT-5.5、Claude对约束反应不同。测试每个。测量遵守率。'
         },
         {
           title: '在生产中验证每个响应',
@@ -2031,7 +2031,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           mistake: '忽视模型间差异',
-          problem: '一个模型完美遵守JSON。另一个添加注释。GPT-4o用```包裹。',
+          problem: '一个模型完美遵守JSON。另一个添加注释。GPT-5.5用```包裹。',
           fix: '在所有计划使用的模型上测试约束。差异不可接受则固定模型。'
         },
         {
@@ -2061,7 +2061,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: '所有模型都支持约束吗？',
-          a: '最新模型（GPT-4o、Claude 3.5 Sonnet、Llama 3.2、Mistral）很好地支持格式约束和枚举。但约束越复杂（深层嵌套架构、复杂语义逻辑），支持程度越不同。小模型（<7B）可靠性较低。在你的模型和用例上测试。'
+          a: '最新模型（GPT-5.5、Claude Sonnet 4.6、Llama 3.2、Mistral）很好地支持格式约束和枚举。但约束越复杂（深层嵌套架构、复杂语义逻辑），支持程度越不同。小模型（<7B）可靠性较低。在你的模型和用例上测试。'
         },
         {
           q: '约束应在系统还是用户提示中？',
@@ -2069,7 +2069,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: '模型忽略约束怎么办？',
-          a: '递进处理：1）更明确："结构化"→"始终以有效JSON返回"。2）添加示例："例：{ sentiment: \'positive\', score: 0.9 }"。3）切换到更强大模型（GPT-4o vs 3.5、Llama 70B vs 8B）。4）微调（高成本，生产中可靠）。'
+          a: '递进处理：1）更明确："结构化"→"始终以有效JSON返回"。2）添加示例："例：{ sentiment: \'positive\', score: 0.9 }"。3）切换到更强大模型（GPT-5.5 vs 3.5、Llama 70B vs 8B）。4）微调（高成本，生产中可靠）。'
         },
         {
           q: '约束影响内容质量吗？',
@@ -2141,7 +2141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     'mentions': [
       { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' },
-      { '@type': 'SoftwareApplication', 'name': 'GPT-4o' },
+      { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
       { '@type': 'SoftwareApplication', 'name': 'Claude' },
       { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
       { '@type': 'SoftwareApplication', 'name': 'Mistral' }
@@ -2165,7 +2165,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'name': '所有模型都支持约束吗？',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': '最新模型（GPT-4o、Claude 3.5 Sonnet、Llama 3.2、Mistral）很好地支持格式约束和枚举。但约束越复杂（深层嵌套架构、复杂语义逻辑），支持程度越不同。小模型（<7B）可靠性较低。在你的模型和用例上测试。'
+          'text': '最新模型（GPT-5.5、Claude Sonnet 4.6、Llama 3.2、Mistral）很好地支持格式约束和枚举。但约束越复杂（深层嵌套架构、复杂语义逻辑），支持程度越不同。小模型（<7B）可靠性较低。在你的模型和用例上测试。'
         }
       },
       {
@@ -2181,7 +2181,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'name': '模型忽略约束怎么办？',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': '递进处理：1）更明确："结构化"→"始终以有效JSON返回"。2）添加示例："例：{ sentiment: \'positive\', score: 0.9 }"。3）切换到更强大模型（GPT-4o vs 3.5、Llama 70B vs 8B）。4）微调（高成本，生产中可靠）。'
+          'text': '递进处理：1）更明确："结构化"→"始终以有效JSON返回"。2）添加示例："例：{ sentiment: \'positive\', score: 0.9 }"。3）切换到更强大模型（GPT-5.5 vs 3.5、Llama 70B vs 8B）。4）微调（高成本，生产中可靠）。'
         }
       },
       {
@@ -2255,7 +2255,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'HowToStep',
         'position': 3,
         'name': '在多个模型上测试',
-        'text': 'Llama、Mistral、GPT-4o、Claude对约束反应不同。测试每个。测量遵守率。'
+        'text': 'Llama、Mistral、GPT-5.5、Claude对约束反应不同。测试每个。测量遵守率。'
       },
       {
         '@type': 'HowToStep',

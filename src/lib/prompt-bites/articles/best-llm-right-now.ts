@@ -135,18 +135,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     title: 'Welches LLM ist aktuell das beste?',
     seoTitle: 'Beste LLM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Das beste lokale LLM jetzt: Llama 3.3 70B für die meisten, Qwen 2.5 Coder fürs Programmieren, Phi-4 für schwache Hardware. Nach Anwendungsfall und VRAM.',
+    metaDescription: 'Das beste lokale LLM jetzt: Llama 3.3 70B für die meisten, Qwen 3 Coder fürs Programmieren, Phi-4 für schwache Hardware. Nach Anwendungsfall und VRAM.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     quickAnswerTop: {
       de: {
         question: 'Welches LLM ist aktuell das beste?',
-        answer: 'Für Cloud-Nutzung: Claude Opus 4.8 führt bei Coding und langen Dokumenten, GPT-5.5 Instant bei allgemeinen Aufgaben, Gemini 2.5 Pro bei multimodalen Aufgaben. Lokal: Llama 4 Scout bei 24 GB VRAM; Qwen 2.5 14B für 12 GB VRAM.',
+        answer: 'Für Cloud-Nutzung: Claude Opus 4.8 führt bei Coding und langen Dokumenten, GPT-5.5 Instant bei allgemeinen Aufgaben, Gemini 2.5 Pro bei multimodalen Aufgaben. Lokal: Llama 4 Scout bei 24 GB VRAM; Qwen 3 14B für 12 GB VRAM.',
         bullets: [
           'Cloud allgemein: GPT-5.5 Instant — ChatGPT Standard seit Mai 2026, 52,5% weniger Halluzinationen',
           'Cloud Coding: Claude Opus 4.8 — 87,6% SWE-Bench Verified',
-          'Lokal 12 GB VRAM: Qwen 2.5 14B Q4_K_M — bestes Qualitäts-/VRAM-Verhältnis',
+          'Lokal 12 GB VRAM: Qwen 3 14B Q4_K_M — bestes Qualitäts-/VRAM-Verhältnis',
         ],
         updatedDate: '2026-05',
       },
@@ -157,9 +157,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Kein einzelnes LLM gewinnt jede Aufgabe — Claude Opus 4.8 führt beim Coding (87,6% SWE-Bench), GPT-5.5 Instant beim allgemeinen Chat',
-          'Lokal mit 12 GB VRAM bietet Qwen 2.5 14B Q4_K_M das beste verfügbare Qualitäts-/VRAM-Verhältnis',
+          'Lokal mit 12 GB VRAM bietet Qwen 3 14B Q4_K_M das beste verfügbare Qualitäts-/VRAM-Verhältnis',
           'Cloud-Modelle erfordern API-Keys und verursachen Token-Kosten; lokale Modelle laufen nach der Hardware-Investition kostenlos',
-          'Für lokale Nutzung passt Llama 4 Scout (17B/16 Experten) auf ein einzelnes H100 mit 10M Token-Kontext; Qwen 2.5 14B Q4_K_M für 12 GB VRAM',
+          'Für lokale Nutzung passt Llama 4 Scout (17B/16 Experten) auf ein einzelnes H100 mit 10M Token-Kontext; Qwen 3 14B Q4_K_M für 12 GB VRAM',
         ],
       },
       body1: {
@@ -173,7 +173,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'Kategorie': 'Cloud Allgemein', 'Modell': 'GPT-5.5 Instant', 'Stärke': 'ChatGPT Standard seit Mai 2026, 52,5% weniger Halluzinationen' },
           { 'Kategorie': 'Cloud Coding', 'Modell': 'Claude Opus 4.8', 'Stärke': '87,6% SWE-Bench Verified, langer Kontext' },
-          { 'Kategorie': 'Lokal (12 GB VRAM)', 'Modell': 'Qwen 2.5 14B Q4', 'Stärke': 'Bestes Qualitäts-/VRAM-Verhältnis' },
+          { 'Kategorie': 'Lokal (12 GB VRAM)', 'Modell': 'Qwen 3 14B Q4', 'Stärke': 'Bestes Qualitäts-/VRAM-Verhältnis' },
           { 'Kategorie': 'Lokal (6 GB VRAM)', 'Modell': 'Llama 3 8B Q4', 'Stärke': 'Geschwindigkeit + Effizienz' },
         ],
       },
@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Was ist das beste lokale LLM mit nur 8 GB VRAM?',
-            a: 'Mit 8 GB VRAM ist Llama 3 8B bei Q4_K_M die beste Option — es passt komfortabel mit ~5 GB VRAM und lässt Spielraum für den Kontext. Qwen 2.5 7B Q4_K_M ist eine enge Alternative mit starker mehrsprachiger Leistung.',
+            a: 'Mit 8 GB VRAM ist Llama 3 8B bei Q4_K_M die beste Option — es passt komfortabel mit ~5 GB VRAM und lässt Spielraum für den Kontext. Qwen 3 7B Q4_K_M ist eine enge Alternative mit starker mehrsprachiger Leistung.',
           },
           {
             q: 'Wie vergleicht sich Gemini 2.5 Pro mit Claude Opus 4.8 und GPT-5.5?',
@@ -213,18 +213,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     title: 'Quel est le meilleur LLM en ce moment ?',
     seoTitle: 'Meilleur LLM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Code : Claude Opus 4.8 (87,6% SWE-Bench). Chat général : GPT-5.5 Instant (52,5% moins d\'hallucinations). Local : Llama 4 Scout ou Qwen 2.5 14B. Mis à jour chaque mois.',
+    metaDescription: 'Code : Claude Opus 4.8 (87,6% SWE-Bench). Chat général : GPT-5.5 Instant (52,5% moins d\'hallucinations). Local : Llama 4 Scout ou Qwen 3 14B. Mis à jour chaque mois.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     quickAnswerTop: {
       fr: {
         question: 'Quel est le meilleur LLM en ce moment ?',
-        answer: 'Pour le cloud : Claude Opus 4.8 domine le code et les longs documents, GPT-5.5 Instant la conversation générale, Gemini 2.5 Pro les tâches multimodales. En local : Llama 4 Scout avec 24 Go de VRAM ; Qwen 2.5 14B pour 12 Go de VRAM.',
+        answer: 'Pour le cloud : Claude Opus 4.8 domine le code et les longs documents, GPT-5.5 Instant la conversation générale, Gemini 2.5 Pro les tâches multimodales. En local : Llama 4 Scout avec 24 Go de VRAM ; Qwen 3 14B pour 12 Go de VRAM.',
         bullets: [
           'Cloud général : GPT-5.5 Instant — ChatGPT standard depuis mai 2026, 52,5% moins d\'hallucinations',
           'Cloud code : Claude Opus 4.8 — 87,6% SWE-Bench Verified',
-          'Local 12 Go VRAM : Qwen 2.5 14B Q4_K_M — meilleur rapport qualité/VRAM',
+          'Local 12 Go VRAM : Qwen 3 14B Q4_K_M — meilleur rapport qualité/VRAM',
         ],
         updatedDate: '2026-05',
       },
@@ -235,9 +235,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Aucun LLM ne gagne sur toutes les tâches — Claude Opus 4.8 mène sur le code (87,6% SWE-Bench), GPT-5.5 Instant sur le chat général',
-          'En local avec 12 Go de VRAM, Qwen 2.5 14B Q4_K_M offre le meilleur rapport qualité/VRAM disponible',
+          'En local avec 12 Go de VRAM, Qwen 3 14B Q4_K_M offre le meilleur rapport qualité/VRAM disponible',
           'Les modèles cloud nécessitent des clés API et facturent par token ; les modèles locaux sont gratuits après l\'investissement matériel',
-          'En local, Llama 4 Scout (17B/16 experts) tient sur un seul H100 avec 10M tokens de contexte ; Qwen 2.5 14B Q4_K_M pour 12 Go de VRAM',
+          'En local, Llama 4 Scout (17B/16 experts) tient sur un seul H100 avec 10M tokens de contexte ; Qwen 3 14B Q4_K_M pour 12 Go de VRAM',
         ],
       },
       body1: {
@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'Catégorie': 'Cloud général', 'Modèle': 'GPT-5.5 Instant', 'Point fort': 'ChatGPT standard depuis mai 2026, 52,5% moins d\'hallucinations' },
           { 'Catégorie': 'Cloud code', 'Modèle': 'Claude Opus 4.8', 'Point fort': '87,6% SWE-Bench Verified, long contexte' },
-          { 'Catégorie': 'Local (12 Go VRAM)', 'Modèle': 'Qwen 2.5 14B Q4', 'Point fort': 'Meilleur rapport qualité/VRAM' },
+          { 'Catégorie': 'Local (12 Go VRAM)', 'Modèle': 'Qwen 3 14B Q4', 'Point fort': 'Meilleur rapport qualité/VRAM' },
           { 'Catégorie': 'Local (6 Go VRAM)', 'Modèle': 'Llama 3 8B Q4', 'Point fort': 'Vitesse + efficacité' },
         ],
       },
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quel est le meilleur LLM local avec seulement 8 Go de VRAM ?',
-            a: 'Avec 8 Go de VRAM, Llama 3 8B en Q4_K_M est la meilleure option — il tient confortablement avec ~5 Go de VRAM et laisse de la marge pour le contexte. Qwen 2.5 7B Q4_K_M est une alternative proche avec de solides performances multilingues.',
+            a: 'Avec 8 Go de VRAM, Llama 3 8B en Q4_K_M est la meilleure option — il tient confortablement avec ~5 Go de VRAM et laisse de la marge pour le contexte. Qwen 3 7B Q4_K_M est une alternative proche avec de solides performances multilingues.',
           },
           {
             q: 'Comment Gemini 2.5 Pro se compare-t-il à Claude Opus 4.8 et GPT-5.5 ?',
@@ -291,18 +291,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     title: '現在最良のLLMは何ですか？',
     seoTitle: '2026年最良LLM | Prompt Bites | PromptQuorum',
-    metaDescription: 'クラウド：Claude Opus 4.8（87.6% SWE-Bench）コーディング、GPT-5.5 Instant（幻覚52.5%削減）汎用チャット。ローカル：Llama 4 Scout か Qwen 2.5 14B。毎月更新。',
+    metaDescription: 'クラウド：Claude Opus 4.8（87.6% SWE-Bench）コーディング、GPT-5.5 Instant（幻覚52.5%削減）汎用チャット。ローカル：Llama 4 Scout か Qwen 3 14B。毎月更新。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     quickAnswerTop: {
       ja: {
         question: '現在最良のLLMは何ですか？',
-        answer: 'クラウド利用では：Claude Opus 4.8がコーディングと長文書をリード、GPT-5.5 Instantが汎用チャット、Gemini 2.5 Proがマルチモーダルタスクを担当。ローカルでは：24GB VRAMあればLlama 4 Scout、12GB VRAMならQwen 2.5 14B。',
+        answer: 'クラウド利用では：Claude Opus 4.8がコーディングと長文書をリード、GPT-5.5 Instantが汎用チャット、Gemini 2.5 Proがマルチモーダルタスクを担当。ローカルでは：24GB VRAMあればLlama 4 Scout、12GB VRAMならQwen 3 14B。',
         bullets: [
           'クラウド汎用：GPT-5.5 Instant — ChatGPT標準（2026年5月〜）、幻覚を52.5%削減',
           'クラウドコーディング：Claude Opus 4.8 — SWE-Bench Verified 87.6%',
-          'ローカル12GB VRAM：Qwen 2.5 14B Q4_K_M — 最高の品質/VRAM比',
+          'ローカル12GB VRAM：Qwen 3 14B Q4_K_M — 最高の品質/VRAM比',
         ],
         updatedDate: '2026-05',
       },
@@ -313,9 +313,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'すべてのタスクで勝る単一LLMは存在しない — Claude Opus 4.8がコーディングをリード（87.6% SWE-Bench）、GPT-5.5 Instantが汎用チャットをリード',
-          'ローカルで12GB VRAMの場合、Qwen 2.5 14B Q4_K_Mが利用可能な最高の品質/VRAM比を提供する',
+          'ローカルで12GB VRAMの場合、Qwen 3 14B Q4_K_Mが利用可能な最高の品質/VRAM比を提供する',
           'クラウドモデルはAPIキーが必要でトークン課金が発生するが、ローカルモデルはハードウェア投資後は無料で動作する',
-          'ローカル利用では、Llama 4 Scout（17B/16 experts）は単一H100で10Mトークンコンテキスト対応；12GB VRAMではQwen 2.5 14B Q4_K_M',
+          'ローカル利用では、Llama 4 Scout（17B/16 experts）は単一H100で10Mトークンコンテキスト対応；12GB VRAMではQwen 3 14B Q4_K_M',
         ],
       },
       body1: {
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'カテゴリ': 'クラウド汎用', 'モデル': 'GPT-5.5 Instant', '主な強み': '2026年5月〜ChatGPT標準、幻覚を52.5%削減' },
           { 'カテゴリ': 'クラウドコーディング', 'モデル': 'Claude Opus 4.8', '主な強み': '87.6% SWE-Bench Verified、長文脈' },
-          { 'カテゴリ': 'ローカル（12 GB VRAM）', 'モデル': 'Qwen 2.5 14B Q4', '主な強み': '最高の品質/VRAM比' },
+          { 'カテゴリ': 'ローカル（12 GB VRAM）', 'モデル': 'Qwen 3 14B Q4', '主な強み': '最高の品質/VRAM比' },
           { 'カテゴリ': 'ローカル（6 GB VRAM）', 'モデル': 'Llama 3 8B Q4', '主な強み': 'スピード + 効率' },
         ],
       },
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '8GB VRAMしかない場合の最良のローカルLLMは何ですか？',
-            a: '8GB VRAMでは、Q4_K_MのLlama 3 8Bが最良の選択です — 約5GB VRAMで快適に収まり、コンテキストに余裕があります。Qwen 2.5 7B Q4_K_Mは多言語パフォーマンスが強力な近接した代替案です。',
+            a: '8GB VRAMでは、Q4_K_MのLlama 3 8Bが最良の選択です — 約5GB VRAMで快適に収まり、コンテキストに余裕があります。Qwen 3 7B Q4_K_Mは多言語パフォーマンスが強力な近接した代替案です。',
           },
           {
             q: 'Gemini 2.5 ProはClaude Opus 4.8とGPT-5.5とどう比べますか？',
@@ -369,11 +369,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     title: '¿Cuál es el mejor LLM ahora mismo?',
     seoTitle: 'Mejor LLM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Código: Claude Opus 4.8 (87.6% SWE-Bench). Chat: GPT-5.5 Instant (52.5% menos alucinaciones). Local: Llama 4 Scout o Qwen 2.5 14B. Actualizado mensualmente.',
+    metaDescription: 'Código: Claude Opus 4.8 (87.6% SWE-Bench). Chat: GPT-5.5 Instant (52.5% menos alucinaciones). Local: Llama 4 Scout o Qwen 3 14B. Actualizado mensualmente.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
-    current_models_mentioned: ['Claude Opus 4.8', 'GPT-5.5 Instant', 'Gemini 2.5 Pro', 'Llama 4 Scout', 'Qwen 2.5 14B'],
+    current_models_mentioned: ['Claude Opus 4.8', 'GPT-5.5 Instant', 'Gemini 2.5 Pro', 'Llama 4 Scout', 'Qwen 3 14B'],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Usuarios comparando los mejores LLMs disponibles en cloud y local',
@@ -383,11 +383,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor LLM ahora mismo?',
-        answer: 'Para tareas de programación en cloud, Claude Opus 4.8 logra 87.6% en SWE-Bench, mientras GPT-5.5 Instant lidera chat general con 52.5% menos alucinaciones. Cloud: Claude Opus 4.8 para código y documentos largos, GPT-5.5 Instant para chat general, Gemini 2.5 Pro para tareas multimodales. Local: Llama 4 Scout si tienes 24 GB VRAM; Qwen 2.5 14B para 12 GB VRAM.',
+        answer: 'Para tareas de programación en cloud, Claude Opus 4.8 logra 87.6% en SWE-Bench, mientras GPT-5.5 Instant lidera chat general con 52.5% menos alucinaciones. Cloud: Claude Opus 4.8 para código y documentos largos, GPT-5.5 Instant para chat general, Gemini 2.5 Pro para tareas multimodales. Local: Llama 4 Scout si tienes 24 GB VRAM; Qwen 3 14B para 12 GB VRAM.',
         bullets: [
           'Cloud general: GPT-5.5 Instant — ChatGPT por defecto, 52.5% menos alucinaciones',
           'Cloud código: Claude Opus 4.8 — 87.6% SWE-Bench Verified',
-          'Local 12 GB VRAM: Qwen 2.5 14B Q4_K_M — mejor relación calidad/VRAM',
+          'Local 12 GB VRAM: Qwen 3 14B Q4_K_M — mejor relación calidad/VRAM',
         ],
         updatedDate: '2026-05',
       },
@@ -398,9 +398,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Ningún LLM gana en todas las tareas — Claude Opus 4.8 lidera en código (87.6% SWE-Bench), GPT-5.5 Instant en chat general',
-          'Para uso local con 12 GB VRAM, Qwen 2.5 14B Q4_K_M ofrece la mejor relación calidad/VRAM disponible',
+          'Para uso local con 12 GB VRAM, Qwen 3 14B Q4_K_M ofrece la mejor relación calidad/VRAM disponible',
           'Los modelos cloud requieren claves API y cuestan por token; los modelos locales corren gratis después de la inversión en hardware',
-          'Para uso local, Llama 4 Scout (17B/16 expertos) cabe en un H100 único con contexto de 10M tokens; Qwen 2.5 14B Q4_K_M para 12 GB VRAM',
+          'Para uso local, Llama 4 Scout (17B/16 expertos) cabe en un H100 único con contexto de 10M tokens; Qwen 3 14B Q4_K_M para 12 GB VRAM',
         ],
       },
       body1: {
@@ -458,18 +458,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     title: '当前最好的 LLM 是什么？',
     seoTitle: '2026年最佳LLM | Prompt Bites | PromptQuorum',
-    metaDescription: '编程：Claude Opus 4.8（87.6% SWE-Bench）；对话：GPT-5.5 Instant（幻觉减少 52.5%）；本地：Llama 4 Scout 或 Qwen 2.5 14B。每月更新。',
+    metaDescription: '编程：Claude Opus 4.8（87.6% SWE-Bench）；对话：GPT-5.5 Instant（幻觉减少 52.5%）；本地：Llama 4 Scout 或 Qwen 3 14B。每月更新。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     quickAnswerTop: {
       zh: {
         question: '当前最好的 LLM 是什么？',
-        answer: '云端：Claude Opus 4.8 在编程和长文档领先，GPT-5.5 Instant 适合通用对话，Gemini 2.5 Pro 适合多模态任务。本地：24GB VRAM 选 Llama 4 Scout；12 GB VRAM 选 Qwen 2.5 14B。',
+        answer: '云端：Claude Opus 4.8 在编程和长文档领先，GPT-5.5 Instant 适合通用对话，Gemini 2.5 Pro 适合多模态任务。本地：24GB VRAM 选 Llama 4 Scout；12 GB VRAM 选 Qwen 3 14B。',
         bullets: [
           '云端通用：GPT-5.5 Instant — ChatGPT 默认（2026 年 5 月起），幻觉减少 52.5%',
           '云端编程：Claude Opus 4.8 — SWE-Bench Verified 87.6%',
-          '本地 12 GB VRAM：Qwen 2.5 14B Q4_K_M — 最佳质量/VRAM 比',
+          '本地 12 GB VRAM：Qwen 3 14B Q4_K_M — 最佳质量/VRAM 比',
         ],
         updatedDate: '2026-05',
       },
@@ -480,9 +480,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           '没有单一 LLM 能在所有任务上获胜——Claude Opus 4.8 领先编程（87.6% SWE-Bench），GPT-5.5 Instant 领先通用对话',
-          '本地使用 12 GB VRAM 时，Qwen 2.5 14B Q4_K_M 提供可用的最佳质量/VRAM 比',
+          '本地使用 12 GB VRAM 时，Qwen 3 14B Q4_K_M 提供可用的最佳质量/VRAM 比',
           '云端模型需要 API 密钥且按 token 计费；本地模型在硬件投入后免费运行',
-          '本地使用中，Llama 4 Scout（17B/16 experts）可在单一 H100 上运行，拥有 10M 上下文；12 GB VRAM 选 Qwen 2.5 14B Q4_K_M',
+          '本地使用中，Llama 4 Scout（17B/16 experts）可在单一 H100 上运行，拥有 10M 上下文；12 GB VRAM 选 Qwen 3 14B Q4_K_M',
         ],
       },
       body1: {
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '类别': '云端通用', '模型': 'GPT-5.5 Instant', '核心优势': '2026 年 5 月起 ChatGPT 默认，幻觉减少 52.5%' },
           { '类别': '云端编程', '模型': 'Claude Opus 4.8', '核心优势': '87.6% SWE-Bench Verified，长上下文' },
-          { '类别': '本地（12 GB VRAM）', '模型': 'Qwen 2.5 14B Q4', '核心优势': '最佳质量/VRAM 比' },
+          { '类别': '本地（12 GB VRAM）', '模型': 'Qwen 3 14B Q4', '核心优势': '最佳质量/VRAM 比' },
           { '类别': '本地（6 GB VRAM）', '模型': 'Llama 3 8B Q4', '核心优势': '速度 + 效率' },
         ],
       },
@@ -518,7 +518,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '只有 8 GB VRAM 时最好的本地 LLM 是什么？',
-            a: '使用 8 GB VRAM 时，Q4_K_M 的 Llama 3 8B 是最佳选择——它可以舒适地用约 5 GB VRAM 运行，为上下文留有余量。Qwen 2.5 7B Q4_K_M 是多语言性能强劲的近似替代方案。',
+            a: '使用 8 GB VRAM 时，Q4_K_M 的 Llama 3 8B 是最佳选择——它可以舒适地用约 5 GB VRAM 运行，为上下文留有余量。Qwen 3 7B Q4_K_M 是多语言性能强劲的近似替代方案。',
           },
           {
             q: 'Gemini 2.5 Pro 与 Claude Opus 4.8 和 GPT-5.5 如何比较？',

@@ -398,7 +398,7 @@ uptime`,
     publishDate: '2026-05-15',
     dateModified: '2026-05-15',
     ctaText: 'Mac Mini KI-Server läuft? Vergleichen Sie Ihre lokalen Llama- oder DeepSeek-Antworten mit GPT-4, Claude, Gemini und 22 weiteren Modellen in einem Dispatch mit PromptQuorum — prüfen Sie, ob Ihr selbst gehostetes Setup Cloud-Qualität liefert.',
-    current_models_mentioned: ['Llama 3.1 8B', 'Mistral 7B', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Mistral Small', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
     current_hardware_mentioned: ['M5 Pro', 'M5 Max', 'Mac Mini M5'],
     audience: 'Nutzer, die einen dauerhaft laufenden lokalen KI-Server für Zuhause oder das Büro betreiben möchten.',
     readTime: '12 Min. Lesezeit',
@@ -472,7 +472,7 @@ uptime`,
           { 'Konfiguration': 'Mac Mini M5 Pro 64 GB ★', 'Preis (2026)': 'ca. 1.349 €', 'Speicher': '64 GB', 'Geeignet für': 'Empfohlener Sweet Spot', 'Unterstützte Modelle': '34B-Modelle komfortabel' },
           { 'Konfiguration': 'Mac Mini M5 Pro 64 GB + 1 TB', 'Preis (2026)': 'ca. 1.549 €', 'Speicher': '64 GB', 'Geeignet für': 'Viele gespeicherte Modelle', 'Unterstützte Modelle': '50+ Modelle auf Disk' },
         ],
-        note: '★ Empfohlen. Speicherplanung: Llama 3.1 8B Q4 ca. 5 GB pro Modell, Whisper large-v3 ca. 3 GB, Embedding-Modell ca. 0,5 GB, ChromaDB mit 10.000 Dokumenten ca. 2 GB. Typisches 5-Modell-Setup: 50–80 GB. Mindestens 512 GB SSD; 1 TB für Power-User.',
+        note: '★ Empfohlen. Speicherplanung: Llama 3.3 8B Q4 ca. 5 GB pro Modell, Whisper large-v3 ca. 3 GB, Embedding-Modell ca. 0,5 GB, ChromaDB mit 10.000 Dokumenten ca. 2 GB. Typisches 5-Modell-Setup: 50–80 GB. Mindestens 512 GB SSD; 1 TB für Power-User.',
       },
       setup: {
         id: 'setup',
@@ -606,7 +606,7 @@ cloudflared tunnel route dns ai-server ai.meinedomain.de
       usecaseRAG: {
         id: 'usecases-rag',
         title: 'Anwendungsfall 2: Privater RAG-Dokumenten-Q&A-Server',
-        content: 'Stack: Ollama (Llama 3.1 8B) + nomic-embed-text + ChromaDB. Alles auf dem Mac Mini, über das Heimnetz erreichbar. Anwendungsfälle: Familiendokumente, Verträge, technische Handbücher, Rezeptbibliothek, medizinische Unterlagen, wissenschaftliche Arbeiten. Alles privat. Alles durchsuchbar. Alles offline.',
+        content: 'Stack: Ollama (Llama 3.3 8B) + nomic-embed-text + ChromaDB. Alles auf dem Mac Mini, über das Heimnetz erreichbar. Anwendungsfälle: Familiendokumente, Verträge, technische Handbücher, Rezeptbibliothek, medizinische Unterlagen, wissenschaftliche Arbeiten. Alles privat. Alles durchsuchbar. Alles offline.',
         codeBlock: `# ChromaDB via Docker installieren
 brew install --cask docker
 docker run -d -p 8000:8000 -v ~/chromadb:/data chromadb/chroma
@@ -630,7 +630,7 @@ vectordb = Chroma.from_documents(
         id: 'usecases-voice',
         title: 'Anwendungsfall 3: Always-On-Sprachassistent',
         content: [
-          'Stack auf Mac Mini: whisper.cpp für STT (Metal-beschleunigt), Ollama Llama 3.1 8B für Reasoning, Piper TTS für Sprachausgabe, Wyoming-Protokoll für Home-Assistant-Integration.',
+          'Stack auf Mac Mini: whisper.cpp für STT (Metal-beschleunigt), Ollama Llama 3.3 8B für Reasoning, Piper TTS für Sprachausgabe, Wyoming-Protokoll für Home-Assistant-Integration.',
           'Wake-Word-Aktivierung über Client-Geräte (Apple HomePod via Home Assistant oder Raspberry Pi Mikrofon-Arrays). End-to-End-Latenz auf M5 Pro: 1,2 Sekunden (STT 0,3 s + LLM 0,7 s + TTS 0,2 s).',
           'Jahresstrom: ca. 35 €. Vergleichbarer Cloud-Dienst (Alexa Plus, 3 €/Monat): 36 €/Jahr — ähnliche Kosten, aber mit vollständiger Privatsphäre.',
         ],
@@ -778,7 +778,7 @@ uptime`,
     publishDate: '2026-05-15',
     dateModified: '2026-05-15',
     ctaText: 'Votre serveur Mac Mini IA est opérationnel ? Comparez les réponses de votre Llama ou DeepSeek local avec GPT-4, Claude, Gemini et 22 autres modèles en un seul envoi avec PromptQuorum — vérifiez que votre configuration auto-hébergée délivre une qualité cloud.',
-    current_models_mentioned: ['Llama 3.1 8B', 'Mistral 7B', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Mistral Small', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
     current_hardware_mentioned: ['M5 Pro', 'M5 Max', 'Mac Mini M5'],
     audience: 'Utilisateurs souhaitant un serveur IA local permanent pour la maison ou le bureau.',
     readTime: '12 min de lecture',
@@ -852,7 +852,7 @@ uptime`,
           { 'Configuration': 'Mac Mini M5 Pro 64 Go ★', 'Prix (2026)': 'env. 1 349 €', 'Mémoire': '64 Go', 'Idéal pour': 'Meilleur rapport qualité-prix', 'Modèles supportés': 'Modèles 34B confortablement' },
           { 'Configuration': 'Mac Mini M5 Pro 64 Go + 1 To', 'Prix (2026)': 'env. 1 549 €', 'Mémoire': '64 Go', 'Idéal pour': 'Nombreux modèles stockés', 'Modèles supportés': '50+ modèles sur disque' },
         ],
-        note: '★ Recommandé. Planification stockage : Llama 3.1 8B Q4 env. 5 Go par modèle, Whisper large-v3 env. 3 Go, modèle d\'embedding env. 0,5 Go, ChromaDB avec 10 000 documents env. 2 Go. Setup 5 modèles typique : 50–80 Go. SSD 512 Go minimum ; 1 To pour les utilisateurs avancés.',
+        note: '★ Recommandé. Planification stockage : Llama 3.3 8B Q4 env. 5 Go par modèle, Whisper large-v3 env. 3 Go, modèle d\'embedding env. 0,5 Go, ChromaDB avec 10 000 documents env. 2 Go. Setup 5 modèles typique : 50–80 Go. SSD 512 Go minimum ; 1 To pour les utilisateurs avancés.',
       },
       setup: {
         id: 'setup',
@@ -986,7 +986,7 @@ cloudflared tunnel route dns ai-server ia.mondomaine.fr
       usecaseRAG: {
         id: 'usecases-rag',
         title: 'Cas d\'usage 2 : Serveur RAG pour documents privés',
-        content: 'Stack : Ollama (Llama 3.1 8B) + nomic-embed-text + ChromaDB. Tout fonctionne sur le Mac Mini, accessible via le réseau local. Cas d\'usage : documents familiaux, contrats, manuels techniques, recettes, dossiers médicaux, articles de recherche. Tout est privé, consultable et hors ligne.',
+        content: 'Stack : Ollama (Llama 3.3 8B) + nomic-embed-text + ChromaDB. Tout fonctionne sur le Mac Mini, accessible via le réseau local. Cas d\'usage : documents familiaux, contrats, manuels techniques, recettes, dossiers médicaux, articles de recherche. Tout est privé, consultable et hors ligne.',
         codeBlock: `# Installer ChromaDB via Docker
 brew install --cask docker
 docker run -d -p 8000:8000 -v ~/chromadb:/data chromadb/chroma
@@ -1010,7 +1010,7 @@ vectordb = Chroma.from_documents(
         id: 'usecases-voice',
         title: 'Cas d\'usage 3 : Assistant vocal permanent',
         content: [
-          'Stack sur Mac Mini : whisper.cpp pour la STT (accéléré Metal), Ollama Llama 3.1 8B pour le raisonnement, Piper TTS pour la synthèse vocale, protocole Wyoming pour l\'intégration Home Assistant.',
+          'Stack sur Mac Mini : whisper.cpp pour la STT (accéléré Metal), Ollama Llama 3.3 8B pour le raisonnement, Piper TTS pour la synthèse vocale, protocole Wyoming pour l\'intégration Home Assistant.',
           'Activation par mot de réveil via les appareils clients (Apple HomePod via Home Assistant, ou réseaux de microphones Raspberry Pi). Latence bout en bout sur M5 Pro : 1,2 seconde (STT 0,3 s + LLM 0,7 s + TTS 0,2 s).',
           'Électricité annuelle : env. 35 €. Service cloud comparable (Google Home, Amazon Alexa) : gratuit mais toutes vos données vocales sont transmises à des serveurs externes.',
         ],
@@ -1156,7 +1156,7 @@ uptime`,
     publishDate: '2026-05-15',
     dateModified: '2026-05-15',
     ctaText: 'Mac Mini AIサーバーを構築しましたか？PromptQuorumで、ローカルのLlamaまたはDeepSeekの回答をGPT-4、Claude、Geminiなど22のモデルと一括比較して、自己ホスト環境がクラウド品質を実現しているか検証しましょう。',
-    current_models_mentioned: ['Llama 3.1 8B', 'Mistral 7B', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Mistral Small', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
     current_hardware_mentioned: ['M5 Pro', 'M5 Max', 'Mac Mini M5'],
     audience: '家庭やオフィスで常時稼働のローカルAIサーバーを構築したいユーザー。',
     readTime: '12分で読める',
@@ -1230,7 +1230,7 @@ uptime`,
           { '構成': 'Mac Mini M5 Pro 64GB ★', '価格（2026年）': '約¥179,800', 'メモリ': '64GB', '最適な用途': '推奨スイートスポット', '対応モデル': '34Bモデルを快適に実行' },
           { '構成': 'Mac Mini M5 Pro 64GB + 1TB', '価格（2026年）': '約¥209,800', 'メモリ': '64GB', '最適な用途': '多数のモデルを保存', '対応モデル': 'ディスクに50以上のモデル' },
         ],
-        note: '★推奨。ストレージ計画：Llama 3.1 8B Q4は約5GB/モデル、Whisper large-v3は約3GB、埋め込みモデルは約0.5GB、ChromaDB（1万文書）は約2GB。典型的な5モデル構成：50〜80GB使用。最低512GB SSD推奨、パワーユーザーには1TB。',
+        note: '★推奨。ストレージ計画：Llama 3.3 8B Q4は約5GB/モデル、Whisper large-v3は約3GB、埋め込みモデルは約0.5GB、ChromaDB（1万文書）は約2GB。典型的な5モデル構成：50〜80GB使用。最低512GB SSD推奨、パワーユーザーには1TB。',
       },
       setup: {
         id: 'setup',
@@ -1364,7 +1364,7 @@ cloudflared tunnel route dns ai-server ai.mydomain.com
       usecaseRAG: {
         id: 'usecases-rag',
         title: 'ユースケース2：プライベートRAGドキュメントQ&Aサーバー',
-        content: 'スタック：Ollama（Llama 3.1 8B）+ nomic-embed-text + ChromaDB。すべてMac Mini上で動作し、LAN経由でアクセス可能。用途：家族の書類、法的契約書、技術マニュアル、レシピライブラリ、医療記録、研究論文。すべてプライベート。すべて検索可能。すべてオフライン。',
+        content: 'スタック：Ollama（Llama 3.3 8B）+ nomic-embed-text + ChromaDB。すべてMac Mini上で動作し、LAN経由でアクセス可能。用途：家族の書類、法的契約書、技術マニュアル、レシピライブラリ、医療記録、研究論文。すべてプライベート。すべて検索可能。すべてオフライン。',
         codeBlock: `# ChromaDBをDockerでインストール
 brew install --cask docker
 docker run -d -p 8000:8000 -v ~/chromadb:/data chromadb/chroma
@@ -1388,7 +1388,7 @@ vectordb = Chroma.from_documents(
         id: 'usecases-voice',
         title: 'ユースケース3：常時稼働音声アシスタント',
         content: [
-          'Mac Mini上のスタック：whisper.cpp（Metal加速でのSTT）、Ollama Llama 3.1 8B（推論）、Piper TTS（音声出力）、WyomingプロトコルによるHome Assistant連携。',
+          'Mac Mini上のスタック：whisper.cpp（Metal加速でのSTT）、Ollama Llama 3.3 8B（推論）、Piper TTS（音声出力）、WyomingプロトコルによるHome Assistant連携。',
           'クライアントデバイス（Apple HomePod via Home Assistant、または各部屋のRaspberry Piマイクアレイ）でウェイクワード起動。M5 Proでのエンドツーエンドレイテンシ：1.2秒（STT 0.3秒 + LLM 0.7秒 + TTS 0.2秒）。',
           '年間電気代：約4,300円。すべての音声データがプライベートに保たれます。',
         ],
@@ -1534,7 +1534,7 @@ uptime`,
     publishDate: '2026-05-15',
     dateModified: '2026-05-15',
     ctaText: 'Mac Mini AI服务器已搭建完成？用PromptQuorum将您本地Llama或DeepSeek的回答与GPT-4、Claude、Gemini等22个模型一键对比——验证您的自托管方案是否达到云服务品质。',
-    current_models_mentioned: ['Llama 3.1 8B', 'Mistral 7B', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Mistral Small', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
     current_hardware_mentioned: ['M5 Pro', 'M5 Max', 'Mac Mini M5'],
     audience: '希望在家庭或办公室搭建全天候本地AI服务器的用户。',
     readTime: '阅读约12分钟',
@@ -1608,7 +1608,7 @@ uptime`,
           { '配置': 'Mac Mini M5 Pro 64GB ★', '价格（2026年）': '$1,199', '内存': '64GB', '适用场景': '推荐最佳配置', '支持模型': '34B模型轻松运行' },
           { '配置': 'Mac Mini M5 Pro 64GB + 1TB', '价格（2026年）': '$1,399', '内存': '64GB', '适用场景': '存储大量模型', '支持模型': '磁盘存放50+模型' },
         ],
-        note: '★推荐。存储规划：Llama 3.1 8B Q4约5GB/模型，Whisper large-v3约3GB，嵌入模型约0.5GB，含1万文档的ChromaDB约2GB。典型5模型配置：占用50–80GB。最低推荐512GB SSD；高级用户选1TB。',
+        note: '★推荐。存储规划：Llama 3.3 8B Q4约5GB/模型，Whisper large-v3约3GB，嵌入模型约0.5GB，含1万文档的ChromaDB约2GB。典型5模型配置：占用50–80GB。最低推荐512GB SSD；高级用户选1TB。',
       },
       setup: {
         id: 'setup',
@@ -1742,7 +1742,7 @@ cloudflared tunnel route dns ai-server ai.yourdomain.com
       usecaseRAG: {
         id: 'usecases-rag',
         title: '场景二：私有RAG文档问答服务器',
-        content: '技术栈：Ollama（Llama 3.1 8B）+ nomic-embed-text + ChromaDB。全部运行在Mac Mini上，通过LAN访问。用途：家庭文档、法律合同、技术手册、食谱库、医疗记录、研究论文。完全私密、可搜索、离线可用。',
+        content: '技术栈：Ollama（Llama 3.3 8B）+ nomic-embed-text + ChromaDB。全部运行在Mac Mini上，通过LAN访问。用途：家庭文档、法律合同、技术手册、食谱库、医疗记录、研究论文。完全私密、可搜索、离线可用。',
         codeBlock: `# 通过Docker安装ChromaDB
 brew install --cask docker
 docker run -d -p 8000:8000 -v ~/chromadb:/data chromadb/chroma
@@ -1766,7 +1766,7 @@ vectordb = Chroma.from_documents(
         id: 'usecases-voice',
         title: '场景三：全天候语音助手',
         content: [
-          'Mac Mini上的技术栈：whisper.cpp（Metal加速STT）、Ollama Llama 3.1 8B（推理）、Piper TTS（语音输出）、Wyoming协议（Home Assistant集成）。',
+          'Mac Mini上的技术栈：whisper.cpp（Metal加速STT）、Ollama Llama 3.3 8B（推理）、Piper TTS（语音输出）、Wyoming协议（Home Assistant集成）。',
           '通过客户端设备（Apple HomePod via Home Assistant，或各房间的Raspberry Pi麦克风阵列）唤醒词激活。M5 Pro端到端延迟：1.2秒（STT 0.3秒 + LLM 0.7秒 + TTS 0.2秒）。',
           '年电费约$35。所有语音数据完全保留在本地，私密无忧。',
         ],
@@ -1912,7 +1912,7 @@ uptime`,
     publishDate: '2026-05-15',
     dateModified: '2026-05-15',
     ctaText: '¿Ya tienes tu servidor de IA Mac Mini funcionando? Compara las respuestas de tu Llama o DeepSeek local con GPT-4, Claude, Gemini y otros 22 modelos en un solo envío con PromptQuorum — verifica que tu configuración autoalojada entrega respuestas de calidad cloud para tus casos de uso.',
-    current_models_mentioned: ['Llama 3.1 8B', 'Mistral 7B', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Mistral Small', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
     current_hardware_mentioned: ['M5 Pro', 'M5 Max', 'Mac Mini M5'],
     audience: 'Usuarios que quieren un servidor de IA local siempre activo para el hogar o la oficina. Usuarios técnicos cómodos con la terminal.',
     readTime: '12 min de lectura',
@@ -1986,7 +1986,7 @@ uptime`,
           { 'Configuración': 'Mac Mini M5 Pro 64 GB ★', 'Precio (2026)': '$1.199', 'Memoria': '64 GB', 'Ideal para': 'Punto óptimo recomendado', 'Modelos compatibles': 'Modelos 34B con comodidad' },
           { 'Configuración': 'Mac Mini M5 Pro 64 GB + 1 TB', 'Precio (2026)': '$1.399', 'Memoria': '64 GB', 'Ideal para': 'Muchos modelos almacenados', 'Modelos compatibles': '50+ modelos en disco' },
         ],
-        note: '★ Recomendado. Planificación de almacenamiento: Llama 3.1 8B Q4 ~5 GB por modelo, Whisper large-v3 ~3 GB, modelo de embeddings ~0,5 GB, ChromaDB con 10.000 documentos ~2 GB. Configuración típica de 5 modelos: 50–80 GB. Mínimo 512 GB SSD; 1 TB para usuarios avanzados.',
+        note: '★ Recomendado. Planificación de almacenamiento: Llama 3.3 8B Q4 ~5 GB por modelo, Whisper large-v3 ~3 GB, modelo de embeddings ~0,5 GB, ChromaDB con 10.000 documentos ~2 GB. Configuración típica de 5 modelos: 50–80 GB. Mínimo 512 GB SSD; 1 TB para usuarios avanzados.',
       },
       setup: {
         id: 'setup',
@@ -2115,14 +2115,14 @@ cloudflared tunnel route dns ai-server ai.tudominio.com
         title: 'Caso de uso 1: Servidor de IA familiar para el hogar',
         content: [
           'El Mac Mini está en un armario funcionando 24/7. Todos los dispositivos de la red doméstica — teléfonos, tabletas, portátiles — envían solicitudes API a la misma instancia de Ollama. Una familia de 4 personas con iPhones, iPads y MacBooks lo usan simultáneamente.',
-          'Los iPhone usan Atajos → POST a macmini.local:11434. Los usuarios de MacBook usan Continue.dev o extensiones de Raycast. Ajusta OLLAMA_NUM_PARALLEL=2 para que dos miembros de la familia puedan chatear simultáneamente con Llama 3.1 8B.',
+          'Los iPhone usan Atajos → POST a macmini.local:11434. Los usuarios de MacBook usan Continue.dev o extensiones de Raycast. Ajusta OLLAMA_NUM_PARALLEL=2 para que dos miembros de la familia puedan chatear simultáneamente con Llama 3.3 8B.',
           'Sustituye 4 suscripciones a ChatGPT Plus ($80/mes = $960/año). Periodo de amortización del Mac Mini: ~15 meses. Del año 2 al 5: ahorro puro.',
         ],
       },
       usecaseRAG: {
         id: 'usecases-rag',
         title: 'Caso de uso 2: Servidor privado de preguntas y respuestas sobre documentos con RAG',
-        content: 'Pila: Ollama (Llama 3.1 8B) + nomic-embed-text + ChromaDB. Todo ejecutándose en el Mac Mini, accesible desde la LAN. Casos de uso: documentos familiares, contratos legales, manuales técnicos, biblioteca de recetas, historial médico, artículos de investigación. Todo privado. Todo buscable. Todo sin conexión.',
+        content: 'Pila: Ollama (Llama 3.3 8B) + nomic-embed-text + ChromaDB. Todo ejecutándose en el Mac Mini, accesible desde la LAN. Casos de uso: documentos familiares, contratos legales, manuales técnicos, biblioteca de recetas, historial médico, artículos de investigación. Todo privado. Todo buscable. Todo sin conexión.',
         codeBlock: `# Install ChromaDB via Docker
 brew install --cask docker
 docker run -d -p 8000:8000 -v ~/chromadb:/data chromadb/chroma
@@ -2146,7 +2146,7 @@ vectordb = Chroma.from_documents(
         id: 'usecases-voice',
         title: 'Caso de uso 3: Asistente de voz siempre activo',
         content: [
-          'Pila en Mac Mini: whisper.cpp para STT (acelerado con Metal), Ollama Llama 3.1 8B para el razonamiento, Piper TTS para la salida de voz, protocolo Wyoming para la integración con Home Assistant.',
+          'Pila en Mac Mini: whisper.cpp para STT (acelerado con Metal), Ollama Llama 3.3 8B para el razonamiento, Piper TTS para la salida de voz, protocolo Wyoming para la integración con Home Assistant.',
           'Activado por palabra de activación desde dispositivos cliente (Apple HomePod vía Home Assistant, o matrices de micrófonos Raspberry Pi en cada habitación). Latencia extremo a extremo en M5 Pro: 1,2 segundos (STT 0,3 s + LLM 0,7 s + TTS 0,2 s).',
           'Electricidad anual: $35. Servicio cloud comparable (Alexa Plus a $20/mes): $240/año. Ahorra más de $200 al año manteniendo todos los datos de voz privados.',
         ],

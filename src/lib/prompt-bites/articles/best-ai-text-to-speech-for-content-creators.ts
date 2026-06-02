@@ -544,4 +544,145 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: 'Mejor IA de texto a voz para creadores de contenido 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/es/prompt-bites/best-ai-text-to-speech-for-content-creators', inLanguage: 'es' },
   },
+  pt: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Tools & Interfaces',
+    type: 'comparison',
+    title: 'Melhor IA de texto para voz para criadores de conteúdo 2026',
+    seoTitle: 'Melhor IA texto para voz para criadores de conteúdo 2026',
+    metaDescription: 'ElevenLabs, Kokoro, Piper e Coqui XTTS comparados para criadores de conteúdo em 2026 — qualidade de voz, preços e opções locais vs nuvem.',
+    educationalLevel: 'Beginner',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**ElevenLabs lidera no TTS em nuvem (melhor qualidade de voz, plano inicial a $5/mês), enquanto Kokoro-82M é a melhor opção local gratuita — funciona em CPU, soa quase profissional e não tem custo por caractere.**',
+    quickAnswerTop: {
+      question: 'Qual é a melhor IA de texto para voz para criadores de conteúdo?',
+      answer: 'ElevenLabs para qualidade em nuvem e clonagem de voz; Kokoro-82M (gratuito, local) para criadores com orçamento limitado que precisam de geração ilimitada sem custo por caractere.',
+      bullets: [
+        'ElevenLabs: melhor qualidade de voz e clonagem ($5–$22/mês)',
+        'Kokoro-82M: melhor TTS local gratuito, amigável a CPU',
+        'Piper TTS: síntese local mais rápida, mais de 100 vozes',
+        'Coqui XTTS v2: melhor clonagem de voz local a partir de clipe de 6 segundos',
+        'PlayHT: melhor para narração estilo podcast na nuvem',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'A melhor IA de texto para voz para criadores de conteúdo em 2026 é ElevenLabs para qualidade em nuvem e Kokoro-82M para síntese local gratuita e ilimitada.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'A IA de texto para voz converte scripts escritos em áudio falado usando modelos de voz neurais — útil para narração em vídeos no YouTube, intros de podcast e narração de acessibilidade.',
+      },
+    ],
+    affiliateLinks: [
+      {
+        productName: 'ElevenLabs',
+        url: 'https://elevenlabs.io',
+        productCategory: 'ai-service',
+      },
+      {
+        productName: 'PlayHT',
+        url: 'https://play.ht',
+        productCategory: 'ai-service',
+      },
+    ],
+    parentArticle: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'ElevenLabs: melhor qualidade de voz e clonagem para uso comercial',
+          'Kokoro-82M: melhor TTS local gratuito — funciona em CPU, licença Apache 2.0',
+          'Piper TTS: síntese local mais rápida para geração de alto volume',
+          'Coqui XTTS v2: melhor clonagem de voz local a partir de clipe de referência de 6 segundos',
+          'PlayHT: melhor opção em nuvem para narração com qualidade de podcast',
+        ],
+      },
+      comparison: {
+        heading: 'Comparativo de ferramentas TTS de IA',
+        body: 'Métricas-chave para criadores de conteúdo: naturalidade da voz, capacidade de clonagem, custo por 1000 palavras e se funciona localmente.',
+        tableData: {
+          headers: ['Ferramenta', 'Tipo', 'Clonagem de voz', 'Custo', 'Melhor para'],
+          rows: [
+            ['ElevenLabs', 'Nuvem', 'Sim (instantânea)', '$5–$22/mês', 'Narração profissional'],
+            ['Kokoro-82M', 'Local', 'Não', 'Gratuito', 'Criadores com orçamento, uso ilimitado'],
+            ['Piper TTS', 'Local', 'Não (vozes fixas)', 'Gratuito', 'Geração em lote de alto volume'],
+            ['Coqui XTTS v2', 'Local', 'Sim (clipe de 6s)', 'Gratuito', 'Clonagem de voz personalizada offline'],
+            ['PlayHT', 'Nuvem', 'Sim (ultra-realista)', '$31–$99/mês', 'Narração de podcast'],
+          ],
+        },
+      },
+      elevenlabs: {
+        heading: 'ElevenLabs — Melhor TTS em nuvem para criadores de conteúdo',
+        body: 'ElevenLabs produz as vozes de IA com som mais natural disponíveis em 2026. O plano Starter ($5/mês) inclui 30.000 caracteres por mês (~22 minutos de áudio) e acesso a 10 clones de voz. Vozes em 29 idiomas soam consistentemente naturais com entonação, ritmo e variação emocional adequados.\n\nCriadores de conteúdo usam ElevenLabs para narração em vídeos no YouTube, audiolivros e música de encerramento de podcast. A API integra com ferramentas de edição de vídeo como DaVinci Resolve e CapCut via webhook.\n\n**Clonagem de voz:** Faça upload de 1–5 minutos de áudio limpo para clonar qualquer voz. A Clonagem de Voz Instantânea está incluída em todos os planos pagos.',
+        affiliateLinks: [
+          {
+            productName: 'ElevenLabs Starter',
+            url: 'https://elevenlabs.io',
+            productCategory: 'ai-service',
+          },
+        ],
+        pros: ['Melhor naturalidade de voz em 2026', 'Clonagem instantânea a partir de 1 minuto de áudio', '29 idiomas suportados', 'API para automação'],
+        cons: ['Limites de caracteres em todos os planos', 'Áudio com marca d\'água no plano gratuito', 'Custo mensal acumula para usuários intensos'],
+        verdict: 'Ideal para criadores de conteúdo profissionais que monetizam seu canal e precisam de vozes de alta qualidade de forma consistente.',
+      },
+      kokoro: {
+        heading: 'Kokoro-82M — Melhor TTS local gratuito',
+        body: 'Kokoro-82M é um modelo TTS de 82 milhões de parâmetros lançado sob licença Apache 2.0. Apesar do tamanho pequeno, a qualidade de voz rivaliza com modelos 10x maiores. Funciona em CPU sem GPU, gerando áudio em velocidade aproximadamente em tempo real em um laptop moderno.\n\nInstale via `pip install kokoro-onnx` e gere áudio com uma única chamada Python. Kokoro inclui 54 vozes integradas em inglês americano e britânico. Sem limites de caracteres, sem custos de API, sem necessidade de conta.\n\nPara criadores no YouTube que produzem alto volume de conteúdo (10+ vídeos/semana), Kokoro elimina o custo por caractere que torna o ElevenLabs caro em escala.',
+        pros: ['Completamente gratuito, Apache 2.0', 'Funciona em CPU', 'Qualidade de voz quase profissional', 'Sem limites de caracteres'],
+        cons: ['Sem clonagem de voz', 'Focado em inglês (multilíngue limitado)', '54 vozes vs milhares em plataformas de nuvem'],
+        verdict: 'Ideal para criadores com orçamento limitado que precisam de geração de áudio ilimitada sem custos de assinatura contínuos.',
+      },
+      faq: {
+        faqs: [
+          {
+            q: 'Posso usar áudio TTS de IA comercialmente?',
+            a: 'ElevenLabs, PlayHT e Kokoro-82M (Apache 2.0) permitem uso comercial em planos pagos ou gratuitos. Coqui XTTS v2 requer verificação da licença do modelo específico. Sempre verifique os termos para conteúdo com voz clonada.',
+          },
+          {
+            q: 'Qual é o melhor TTS de IA gratuito em 2026?',
+            a: 'Kokoro-82M é o melhor TTS local gratuito em 2026 — licença Apache 2.0, amigável a CPU, qualidade quase profissional. Para TTS gratuito em nuvem, ElevenLabs oferece 10.000 caracteres/mês no nível gratuito.',
+          },
+          {
+            q: 'Quanto custa o ElevenLabs para criadores do YouTube?',
+            a: 'O plano Creator do ElevenLabs ($22/mês) inclui 100.000 caracteres (~75 minutos de áudio) — suficiente para 3–4 vídeos por semana. Usuários intensos que produzem conteúdo diariamente podem precisar do plano Pro ($99/mês, 500.000 caracteres).',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Posso usar áudio TTS de IA comercialmente?',
+          acceptedAnswer: { '@type': 'Answer', text: 'ElevenLabs, PlayHT e Kokoro-82M (Apache 2.0) permitem uso comercial. Sempre verifique os termos para conteúdo com voz clonada.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Qual é o melhor TTS de IA gratuito em 2026?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Kokoro-82M é o melhor TTS local gratuito em 2026 — licença Apache 2.0, amigável a CPU, qualidade quase profissional.' },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Melhor IA de texto para voz para criadores de conteúdo 2026',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'ElevenLabs', description: 'Melhor qualidade de voz em nuvem e clonagem' },
+        { '@type': 'ListItem', position: 2, name: 'Kokoro-82M', description: 'Melhor TTS local gratuito, amigável a CPU' },
+        { '@type': 'ListItem', position: 3, name: 'Piper TTS', description: 'Síntese local em lote mais rápida' },
+        { '@type': 'ListItem', position: 4, name: 'Coqui XTTS v2', description: 'Melhor clonagem de voz local a partir de clipe de 6 segundos' },
+        { '@type': 'ListItem', position: 5, name: 'PlayHT', description: 'Melhor TTS em nuvem para narração de podcast' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'Melhor IA de texto para voz para criadores de conteúdo 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-ai-text-to-speech-for-content-creators', inLanguage: 'pt' },
+  },
 }

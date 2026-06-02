@@ -224,7 +224,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-02',
       keywords: ['Prompt-Bibliothek', 'Prompt-Management', 'Team-Prompts', 'Prompt-Versionskontrolle', 'PromptHub', 'Prompt-Governance'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'PromptQuorum' },
         { '@type': 'Thing', name: 'Braintrust' },
@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-02',
       keywords: ['biblioteca de prompts', 'gestión de prompts', 'prompts de equipo', 'control de versiones de prompts', 'PromptHub', 'gobernanza de prompts'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'PromptQuorum' },
         { '@type': 'Thing', name: 'Braintrust' },
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-02',
       keywords: ['bibliothèque de prompts', 'gestion de prompts', 'prompts d\'équipe', 'contrôle de version prompts', 'PromptHub', 'gouvernance prompts'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'PromptQuorum' },
         { '@type': 'Thing', name: 'Braintrust' },
@@ -728,7 +728,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-02',
       keywords: ['プロンプトライブラリ', 'プロンプト管理', 'チームプロンプト', 'プロンプトバージョン管理', 'PromptHub', 'プロンプトガバナンス'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'PromptQuorum' },
         { '@type': 'Thing', name: 'Braintrust' },
@@ -892,7 +892,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-02',
       keywords: ['Prompt库', 'Prompt管理', '团队Prompt', 'Prompt版本控制', 'PromptHub', 'Prompt治理'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'PromptQuorum' },
         { '@type': 'Thing', name: 'Braintrust' },

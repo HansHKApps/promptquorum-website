@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**EU / GDPR / AI Act:** All four tools perform inference entirely on-device -- no prompt text, context, or output is sent to external servers during inference. For EU professionals processing personal data under GDPR, the privacy ranking is: (1) Jan AI -- fully MIT open source, no telemetry, fully auditable; (2) Ollama -- MIT open source, confirmed no telemetry, localhost API by default; (3) GPT4All -- open source, opt-in telemetry only; (4) LM Studio -- closed source, anonymous analytics on by default (disable: Settings → Privacy → Send anonymous usage data → off). EU AI Act high-risk system obligations apply from August 2, 2026 (pending Digital Omnibus). Local inference tools satisfy GDPR data residency requirements by default — no data processing agreement needed with the tool vendor.',
             "**Japan / APPI:** Japan's Act on the Protection of Personal Information restricts cross-border data transfer for personal data. Local inference with any of these four tools eliminates cross-border transfer entirely -- all processing stays on the local machine. Ollama and Jan AI are preferred for enterprise deployments due to MIT source code transparency.",
-            "**China:** All four tools support Qwen2.5 and Qwen3 models -- the primary local LLM choice for Chinese organizations. In Ollama: `ollama pull qwen3:8b`. Under China's Data Security Law (数据安全法), local inference with any of these tools satisfies data localization requirements -- all processing occurs locally without external API calls during inference.",
+            "**China:** All four tools support Qwen3 and Qwen3 models -- the primary local LLM choice for Chinese organizations. In Ollama: `ollama pull qwen3:8b`. Under China's Data Security Law (数据安全法), local inference with any of these tools satisfies data localization requirements -- all processing occurs locally without external API calls during inference.",
           ],
         },
         sources: {
@@ -462,7 +462,7 @@ schema: {
           content: [
             '**UE / RGPD / AI Act:** Las cuatro herramientas realizan la inferencia completamente en el dispositivo — ningún texto de prompt, contexto o salida se envía a servidores externos durante la inferencia. Para profesionales de la UE que procesan datos personales bajo el RGPD, el ranking de privacidad es: (1) Jan AI — completamente MIT de código abierto, sin telemetría, completamente auditable; (2) Ollama — MIT de código abierto, confirmado sin telemetría, API localhost por defecto; (3) GPT4All — código abierto, solo telemetría opt-in; (4) LM Studio — código cerrado, analítica anónima activada por defecto (deshabilitar: Configuración → Privacidad → Enviar datos de uso anónimos → desactivar). Las obligaciones del EU AI Act para sistemas de alto riesgo aplican desde el 2 de agosto de 2026. Las herramientas de inferencia local satisfacen los requisitos de residencia de datos del RGPD por defecto.',
             "**Japón / APPI:** La Ley de Protección de Información Personal de Japón restringe la transferencia transfronteriza de datos personales. La inferencia local con cualquiera de estas cuatro herramientas elimina la transferencia transfronteriza por completo — todo el procesamiento permanece en la máquina local. Ollama y Jan AI son preferidos para despliegues empresariales por la transparencia del código fuente MIT.",
-            "**China:** Las cuatro herramientas admiten los modelos Qwen2.5 y Qwen3 — la principal elección de LLM local para organizaciones chinas. En Ollama: `ollama pull qwen3:8b`. Bajo la Ley de Seguridad de Datos de China (数据安全法), la inferencia local con cualquiera de estas herramientas satisface los requisitos de localización de datos — todo el procesamiento ocurre localmente sin llamadas a API externas durante la inferencia.",
+            "**China:** Las cuatro herramientas admiten los modelos Qwen3 y Qwen3 — la principal elección de LLM local para organizaciones chinas. En Ollama: `ollama pull qwen3:8b`. Bajo la Ley de Seguridad de Datos de China (数据安全法), la inferencia local con cualquiera de estas herramientas satisface los requisitos de localización de datos — todo el procesamiento ocurre localmente sin llamadas a API externas durante la inferencia.",
           ],
         },
         sources: {
@@ -729,7 +729,7 @@ schema: {
           content: [
             '**EU / GDPR / Deutschland:** Alle vier Tools führen Inference vollständig auf dem Gerät durch -- kein Prompt-Text, Kontext oder Ausgabe wird während der Inference an externe Server übertragen. Für deutsche Fachleute, die persönliche Daten unter GDPR verarbeiten, ist die Rangfolge nach Compliance-Stärke: (1) Jan AI -- vollständig Open Source MIT, keine Telemetrie, vollständig überprüfbar; (2) Ollama -- Open Source MIT, bestätigte keine Telemetrie, localhost-API standardmäßig; (3) GPT4All -- Open Source, nur Opt-in-Telemetrie, LocalDocs verarbeitet Dokumente vollständig offline; (4) LM Studio -- Closed Source, anonyme Analytik standardmäßig aktiviert (deaktivieren: Einstellungen → Datenschutz → Anonyme Nutzungsdaten senden → aus). Für BSI-Richtlinien-Konformität sind Jan AI oder Ollama die empfohlenen Wahlen -- beide bieten einen vollständig überprüfbaren Open-Source-Inference-Stack.',
             '**DSGVO-spezifisches FAQ:** Müssen lokale LLMs in DSGVO-Kontext BSI-zertifiziert sein? Nein. Die BSI hat keine spezifische Zertifizierung für lokale LLM-Tools. Stattdessen überprüfen Sie: (a) Source-Code-Transparenz (Jan AI und Ollama sind MIT-lizenziert); (b) Telemetrie-Status (beide sind deaktiviert); (c) Datenspeicherort (auf dem Gerät, keine Cloud). Dies erfüllt die DSGVO-Anforderung der Datenvermeidung durch Design.',
-            '**China:** Alle vier Tools unterstützen Qwen2.5-Models -- die primäre lokale LLM-Wahl für chinesische Unternehmen. In Ollama: `ollama pull qwen2.5:7b`. Nach Chinas Data Security Law (数据安全法) erfüllt lokale Inference durch eines dieser Tools die Anforderungen der Datenlokalisierung -- gesamte Verarbeitung erfolgt lokal ohne externe API-Aufrufe während der Inference.',
+            '**China:** Alle vier Tools unterstützen Qwen3-Models -- die primäre lokale LLM-Wahl für chinesische Unternehmen. In Ollama: `ollama pull qwen2.5:7b`. Nach Chinas Data Security Law (数据安全法) erfüllt lokale Inference durch eines dieser Tools die Anforderungen der Datenlokalisierung -- gesamte Verarbeitung erfolgt lokal ohne externe API-Aufrufe während der Inference.',
           ],
         },
         commonMistakes: {
@@ -1258,8 +1258,8 @@ schema: {
           title: '日本のローカルLLM利用と規制',
           content: [
             '**日本（METI）:** METI（経済産業省）のAIガバナンスガイドラインでは、AI推論の実施場所ドキュメント化が必要です。4つのツールはすべてローカルで推論を実行し、モデルファイルを文書化可能なパスに保存：Ollama `~/.ollama/models/`、LM Studio `~/Library/Application Support/LM Studio/`（macOS）、Jan AI `~/jan/models/`、GPT4All `~/Library/Application Support/nomic.ai/GPT4All/`（macOS）。これらのパスはAIガバナンス文書に含められます。日本の企業チームは通常、オープンソース監査可能性とMETI追跡可能性要件のためにJan AIまたはOllamaを好みます。',
-            '**日本での実際の適用:** 金融機関は顧客データ処理のためにローカルLLMを使用、医療機関は患者記録処理に、製造業は製造プロセスデータの分析に使用します。すべての場合で、GGUFモデル（Qwen2.5など）はローカル推論に適しており、APIコール時のデータ流出なし。',
-            '**Qwen2.5との統合:** 中国企業とアジア太平洋企業向けに、すべてのツールはQwen2.5をサポート -- Ollama では `ollama pull qwen2.5:7b`、LM StudioとJan AIではモデルブラウザで「qwen2.5」検索、GPT4AllではQwenカテゴリから。',
+            '**日本での実際の適用:** 金融機関は顧客データ処理のためにローカルLLMを使用、医療機関は患者記録処理に、製造業は製造プロセスデータの分析に使用します。すべての場合で、GGUFモデル（Qwen3など）はローカル推論に適しており、APIコール時のデータ流出なし。',
+            '**Qwen3との統合:** 中国企業とアジア太平洋企業向けに、すべてのツールはQwen3をサポート -- Ollama では `ollama pull qwen2.5:7b`、LM StudioとJan AIではモデルブラウザで「qwen2.5」検索、GPT4AllではQwenカテゴリから。',
           ],
         },
         commonMistakes: {
@@ -1522,7 +1522,7 @@ schema: {
           title: '中国本地LLM合规性',
           content: [
             '**中国数据安全法（DSL）合规：** 所有4个工具都在设备上执行推理 -- 推理过程中没有提示文本、上下文或输出被传输到外部服务器。对于在中国处理敏感数据的企业，按合规强度排名：(1) Jan AI -- 完全开源MIT、无遥测、完全可审计；(2) Ollama -- 开源MIT、确认无遥测、默认本地API；(3) GPT4All -- 开源、仅选择加入遥测、LocalDocs完全离线处理文档；(4) LM Studio -- 闭源、默认启用匿名分析。对于PIPL（个人信息保护法）合规，Jan AI或Ollama是推荐选择。',
-            '**Qwen2.5集成（中文企业首选）：** 所有4个工具都支持Qwen2.5模型 -- 中国本地LLM的主要选择。在Ollama中：`ollama pull qwen2.5:7b`。在LM Studio和Jan AI中：在模型浏览器搜索"qwen2.5"。在GPT4All中：Qwen2.5模型在Qwen类别中。',
+            '**Qwen3集成（中文企业首选）：** 所有4个工具都支持Qwen3模型 -- 中国本地LLM的主要选择。在Ollama中：`ollama pull qwen2.5:7b`。在LM Studio和Jan AI中：在模型浏览器搜索"qwen2.5"。在GPT4All中：Qwen3模型在Qwen类别中。',
             '**企业部署注意事项：** 数据出境法规（DECL）和数据安全法（DSL）都要求数据本地处理。这4个工具通过在设备上执行推理、存储在本地文件系统上的所有数据来满足此要求 -- 不需要将任何内容上传到云端。政府、金融、医疗行业可使用这些工具进行敏感信息处理。',
           ],
         },

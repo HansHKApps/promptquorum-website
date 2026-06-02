@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'PromptHub' },
         { '@type': 'Thing', name: 'Git' },
         { '@type': 'Thing', name: 'Braintrust' },
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'PromptQuorum' },
       ],
@@ -318,7 +318,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         items: [
           'Gate 1 — Automatisierte Tests: der Prompt muss die Regressionstestsuite mit einer Bestehensquote von ≥ 90% bestehen (Braintrust oder Promptfoo).',
-          'Gate 2 — Peer-Review: ein Reviewer gibt die Qualität und Compliance frei. Mindestens auf GPT-4o und Claude 4.6 Sonnet testen.',
+          'Gate 2 — Peer-Review: ein Reviewer gibt die Qualität und Compliance frei. Mindestens auf GPT-5.5 und Claude 4.6 Sonnet testen.',
           'Gate 3 — Sicherheitsscan: auf Injection-Vektoren, Jailbreak-Anfälligkeit und sensible Datenlecks prüfen.',
         ],
         callouts: [
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub: Prompt-Management mit Versionsverlauf, Reviewer-Workflows und Deployment-Tracking. 0–49 $/Monat.',
           'Braintrust: Evaluierungsplattform mit CI/CD-Integration. Führt automatisierte Qualitätstests bei jedem PR durch.',
           'Vellum: Produktions-Prompt-Deployment mit Traffic-Management, A/B-Tests und Live-Evaluierung.',
-          'PromptQuorum: Multi-Modell-Tests zur Bestätigung, dass ein Prompt über GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro funktioniert.',
+          'PromptQuorum: Multi-Modell-Tests zur Bestätigung, dass ein Prompt über GPT-5.5, Claude 4.6 Sonnet und Gemini 2.5 Pro funktioniert.',
         ],
       },
       faq: {
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'PromptHub' },
         { '@type': 'Thing', name: 'Git' },
         { '@type': 'Thing', name: 'Braintrust' },
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'PromptQuorum' },
       ],
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       ownership_model_part2: {
         content: [
-          'Añade un rol de Propietario de Prompt para prompts de producción de alto tráfico. El Propietario del Prompt es responsable del rendimiento en vivo del prompt en todas las versiones del modelo — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro — y es el primer contacto durante incidentes.',
+          'Añade un rol de Propietario de Prompt para prompts de producción de alto tráfico. El Propietario del Prompt es responsable del rendimiento en vivo del prompt en todas las versiones del modelo — GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro — y es el primer contacto durante incidentes.',
           'Evita que la misma persona actúe como Autor y Aprobador. Los prompts auto-aprobados tienen una tasa de incidentes significativamente más alta. Si tu equipo es demasiado pequeño para tres roles distintos, requiere como mínimo la firma de una segunda persona antes de que cualquier prompt llegue a producción.',
         ],
         callouts: [
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         items: [
           'Gate 1 — Pruebas automatizadas: el prompt debe superar tu suite de pruebas de regresión (golden set + casos límite) con una tasa de éxito ≥ 90%. Ejecuta con Braintrust o Promptfoo. Los fallos bloquean el despliegue automáticamente.',
-          'Gate 2 — Revisión por pares: un Revisor firma la calidad y el cumplimiento. La lista de verificación cubre: completitud de la tarea, cumplimiento del formato, restricciones de seguridad y comportamiento específico del modelo (prueba en GPT-4o y Claude 4.6 Sonnet como mínimo).',
+          'Gate 2 — Revisión por pares: un Revisor firma la calidad y el cumplimiento. La lista de verificación cubre: completitud de la tarea, cumplimiento del formato, restricciones de seguridad y comportamiento específico del modelo (prueba en GPT-5.5 y Claude 4.6 Sonnet como mínimo).',
           'Gate 3 — Escaneo de seguridad: comprueba vectores de injection, susceptibilidad a jailbreak y filtración de datos sensibles. Para prompts internos sin entrada de usuario, este gate puede simplificarse a una revisión de lista de verificación. Para prompts que procesan entrada de usuario, ejecuta pruebas de injection automatizadas.',
         ],
       },
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub: gestión de prompts con historial de versiones, flujos de trabajo de revisores y seguimiento de despliegues. $0–$49/mes según el tamaño del equipo.',
           'Braintrust: plataforma de evaluación con integración CI/CD. Ejecuta pruebas de calidad automatizadas en cada PR. Mejor para equipos que ya ejecutan pruebas de prompts automatizadas.',
           'Vellum: despliegue de prompts en producción con gestión de tráfico, pruebas A/B y evaluación en vivo. Mejor para aplicaciones de alto tráfico donde los lanzamientos parciales reducen el radio de impacto de incidentes.',
-          '[PromptQuorum](/features): pruebas multi-modelo para confirmar que un prompt funciona en GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro antes del despliegue. Úsalo durante la revisión por pares del Gate 2.',
+          '[PromptQuorum](/features): pruebas multi-modelo para confirmar que un prompt funciona en GPT-5.5, Claude 4.6 Sonnet y Gemini 2.5 Pro antes del despliegue. Úsalo durante la revisión por pares del Gate 2.',
         ],
       },
       faq: {
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'PromptHub' },
         { '@type': 'Thing', name: 'Git' },
         { '@type': 'Thing', name: 'Braintrust' },
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'PromptQuorum' },
       ],
@@ -719,7 +719,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         items: [
           'Gate 1 — Tests automatisés : le prompt doit passer la suite de tests de régression avec un taux ≥ 90% (Braintrust ou Promptfoo).',
-          'Gate 2 — Revue par les pairs : un Réviseur valide la qualité et la conformité. Tester sur GPT-4o et Claude 4.6 Sonnet au minimum.',
+          'Gate 2 — Revue par les pairs : un Réviseur valide la qualité et la conformité. Tester sur GPT-5.5 et Claude 4.6 Sonnet au minimum.',
           'Gate 3 — Scan de sécurité : vérifier les vecteurs d\'injection, la susceptibilité aux jailbreaks et les fuites de données sensibles.',
         ],
         callouts: [
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub : gestion des prompts avec historique des versions, workflows de révision et suivi des déploiements.',
           'Braintrust : plateforme d\'évaluation avec intégration CI/CD. Exécute des tests qualité automatisés à chaque PR.',
           'Vellum : déploiement de prompts en production avec gestion du trafic et tests A/B.',
-          'PromptQuorum : tests multi-modèles pour confirmer qu\'un prompt fonctionne sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro.',
+          'PromptQuorum : tests multi-modèles pour confirmer qu\'un prompt fonctionne sur GPT-5.5, Claude 4.6 Sonnet et Gemini 2.5 Pro.',
         ],
       },
       faq: {
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'PromptHub' },
         { '@type': 'Thing', name: 'Git' },
         { '@type': 'Thing', name: 'Braintrust' },
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'PromptQuorum' },
       ],
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         items: [
           'ゲート1 — 自動テスト：回帰テストスイートを合格率 ≥ 90%で通過（BraintrustまたはPromptfoo使用）。',
-          'ゲート2 — ピアレビュー：Reviewerが品質とコンプライアンスを承認。最低GPT-4oとClaude 4.6 Sonnetでテスト。',
+          'ゲート2 — ピアレビュー：Reviewerが品質とコンプライアンスを承認。最低GPT-5.5とClaude 4.6 Sonnetでテスト。',
           'ゲート3 — セキュリティスキャン：インジェクションベクター、ジェイルブレイク脆弱性、機密データ漏洩を確認。',
         ],
         callouts: [
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub：バージョン履歴、レビュアーワークフロー、デプロイ追跡を備えた専用Prompt管理。',
           'Braintrust：CI/CD統合の評価プラットフォーム。すべてのPRで自動品質テストを実行。',
           'Vellum：トラフィック管理、A/Bテスト、ライブ評価を備えた本番Promptデプロイ。',
-          'PromptQuorum：デプロイ前にGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proでの動作を確認するマルチモデルテスト。',
+          'PromptQuorum：デプロイ前にGPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Proでの動作を確認するマルチモデルテスト。',
         ],
       },
       faq: {
@@ -1043,7 +1043,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'PromptHub' },
         { '@type': 'Thing', name: 'Git' },
         { '@type': 'Thing', name: 'Braintrust' },
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'PromptQuorum' },
       ],
@@ -1101,7 +1101,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         items: [
           '门控1 — 自动测试：Prompt必须以 ≥ 90%的通过率通过回归测试套件（使用Braintrust或Promptfoo）。',
-          '门控2 — 同行审查：Reviewer确认质量和合规性。至少在GPT-4o和Claude 4.6 Sonnet上测试。',
+          '门控2 — 同行审查：Reviewer确认质量和合规性。至少在GPT-5.5和Claude 4.6 Sonnet上测试。',
           '门控3 — 安全扫描：检查注入向量、越狱漏洞和敏感数据泄露。',
         ],
         callouts: [
@@ -1151,7 +1151,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub：具备版本历史、审查者工作流和部署跟踪的专用Prompt管理。',
           'Braintrust：具有CI/CD集成的评估平台。在每个PR上运行自动质量测试。',
           'Vellum：具有流量管理、A/B测试和实时评估的生产Prompt部署。',
-          'PromptQuorum：多模型测试，确认Prompt在GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro上部署前能正常工作。',
+          'PromptQuorum：多模型测试，确认Prompt在GPT-5.5、Claude 4.6 Sonnet和Gemini 2.5 Pro上部署前能正常工作。',
         ],
       },
       faq: {

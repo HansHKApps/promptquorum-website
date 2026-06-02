@@ -286,7 +286,7 @@ tests:
       'Hochfrequentierte Prompts (>1.000 Aufrufe/Tag) benötigen wöchentliche Audits zusätzlich zu CI/CD-Regressionstests.',
       'Promptfoo ist Open Source und kostenlos. Braintrust kostet 0–99 $/Monat mit kollaborativer Oberfläche.',
       'Prompt-Regression ist lautlos: kein Fehlerlog, keine Exception — nur schlechtere Ausgabequalität.',
-      'PromptQuorum führt dieselbe Testsuite gleichzeitig auf GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro aus.',
+      'PromptQuorum führt dieselbe Testsuite gleichzeitig auf GPT-5.5, Claude 4.6 Sonnet und Gemini 2.5 Pro aus.',
     ],
     toc: [
       { label: 'Was Prompt-Regressionstests sind', anchor: 'what_is_regression' },
@@ -450,7 +450,7 @@ tests:
           'Braintrust ist eine Cloud-Plattform mit kollaborativer UI und kostenlosem Tarif bis zu einem Nutzungsschwellenwert (0–99 $/Monat). PromptQuorum führt denselben Prompt gleichzeitig auf mehreren Modellen aus.',
         ],
         callouts: [
-          { type: 'insight', label: 'Multi-Modell-Tests sind wichtig', text: 'Ein Prompt, der auf GPT-4o besteht, kann auf Claude 4.6 Sonnet lautlos scheitern. Führen Sie Ihre Testsuite auf mindestens 2 Modellen aus, bevor Sie Änderungen deployen.' },
+          { type: 'insight', label: 'Multi-Modell-Tests sind wichtig', text: 'Ein Prompt, der auf GPT-5.5 besteht, kann auf Claude 4.6 Sonnet lautlos scheitern. Führen Sie Ihre Testsuite auf mindestens 2 Modellen aus, bevor Sie Änderungen deployen.' },
         ],
       },
       cadence: {
@@ -470,7 +470,7 @@ tests:
           { mistake: 'Nur goldene Beispiele testen', problem: 'Goldene Beispiele lösen selten die Edge Cases aus, die echte Fehler verursachen', fix: 'Immer mindestens 5 Edge Cases und 3 adversarielle Eingaben in jede Testsuite aufnehmen' },
           { mistake: 'Kein Bestehensquoten-Schwellenwert', problem: 'Jede Regression kann deployt werden, weil keine definierende Blocking-Bedingung existiert', fix: 'Deployment automatisch blockieren, wenn die Bestehensquote um mehr als 5% vom Baseline sinkt' },
           { mistake: 'Nur manuelles Testen', problem: 'Manuelle Tests werden unter Zeitdruck übersprungen — genau dann, wenn sie am meisten gebraucht werden', fix: 'Regressionstests in CI/CD mit Promptfoo oder Braintrust einbinden, damit sie automatisch bei jeder Änderung laufen' },
-          { mistake: 'Nur auf einem Modell testen', problem: 'Ein Prompt, der auf GPT-4o besteht, kann auf Claude 4.6 Sonnet scheitern — Single-Modell-Tests verpassen modellübergreifende Regressionen', fix: 'Testsuite auf mindestens 2 Modellen ausführen: GPT-4o und Claude 4.6 Sonnet als Minimum' },
+          { mistake: 'Nur auf einem Modell testen', problem: 'Ein Prompt, der auf GPT-5.5 besteht, kann auf Claude 4.6 Sonnet scheitern — Single-Modell-Tests verpassen modellübergreifende Regressionen', fix: 'Testsuite auf mindestens 2 Modellen ausführen: GPT-5.5 und Claude 4.6 Sonnet als Minimum' },
         ],
       },
       key_takeaways: {
@@ -481,7 +481,7 @@ tests:
           'Ein Prompt-Testset hat drei Komponenten: goldenes Set (10–20 bestätigte gute Beispiele), Edge Cases und adversarielle Eingaben.',
           'Regressionstests bei jeder Änderung via CI/CD. Deployment blockieren, wenn die Bestehensquote mehr als 5 % unter die Baseline fällt.',
           'Promptfoo (kostenlos, Open Source) ist für Teams mit lokalem Kontrollbedarf geeignet. Braintrust (0–99 $/Monat) für Teams mit kollaborativem Sichtbarkeitsbedarf.',
-          'PromptQuorum prüft, ob eine Prompt-Änderung über mehrere Modelle (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) konsistentes Verhalten zeigt.',
+          'PromptQuorum prüft, ob eine Prompt-Änderung über mehrere Modelle (GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro) konsistentes Verhalten zeigt.',
         ],
       },
       faq: {
@@ -494,7 +494,7 @@ tests:
           { q: 'Wie oft sollten Produktions-Prompts auditiert werden?', a: 'Regressionstests bei jeder Änderung (CI/CD), wöchentliche Audits für >1.000 Aufrufe/Tag, monatliche für <100 Aufrufe/Tag. Deployment blockieren, wenn Bestehensquote >5% unter Baseline fällt.' },
           { q: 'Was ist ein Golden Test Set?', a: 'Ein Golden Test Set ist eine feste Sammlung von Eingabe-/Ausgabe-Paaren, bei denen die erwartete Ausgabe manuell als korrekt verifiziert wurde. Es ist der Maßstab, den Ihr Prompt konsistent erfüllen muss.' },
           { q: 'Woran erkenne ich, ob eine Prompt-Regression signifikant ist?', a: 'Eine Regression ist signifikant, wenn die Bestehensquote um mehr als 5% sinkt, wenn ein adversarieller Test, der zuvor bestanden hat, jetzt fehlschlägt, oder wenn die Ausgabeformat-Compliance bei mehr als 2 von 10 Testfällen sinkt.' },
-          { q: 'Kann ich PromptQuorum für Regressionstests verwenden?', a: 'Ja. PromptQuorum sendet Prompts gleichzeitig an mehrere Modelle und eignet sich gut für Multi-Modell-Regressionstests. Sie können ein Testset parallel gegen GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro ausführen.' },
+          { q: 'Kann ich PromptQuorum für Regressionstests verwenden?', a: 'Ja. PromptQuorum sendet Prompts gleichzeitig an mehrere Modelle und eignet sich gut für Multi-Modell-Regressionstests. Sie können ein Testset parallel gegen GPT-5.5, Claude 4.6 Sonnet und Gemini 2.5 Pro ausführen.' },
         ],
       },
       related_reading: {
@@ -539,7 +539,7 @@ tests:
       'Los prompts de alto tráfico (>1.000 llamadas/día) necesitan auditorías semanales además de las pruebas de regresión en CI/CD.',
       'Promptfoo es open source y cuesta $0. Braintrust cuesta $0–99/mes con una interfaz colaborativa.',
       'La regresión de prompts es silenciosa: sin log de error, sin excepción — solo menor calidad de salida.',
-      'PromptQuorum ejecuta la misma suite de pruebas simultáneamente en GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro.',
+      'PromptQuorum ejecuta la misma suite de pruebas simultáneamente en GPT-5.5, Claude 4.6 Sonnet y Gemini 2.5 Pro.',
     ],
     toc: [
       { label: 'Qué son las pruebas de regresión de prompts', anchor: 'what_is_regression' },
@@ -583,7 +583,7 @@ tests:
         ],
         content: [
           '**La regresión de prompts es una degradación silenciosa de calidad: el prompt sigue ejecutándose sin error, pero la calidad de salida ha disminuido respecto a la versión anterior.** A diferencia de un crash de software, no hay log de error — los usuarios simplemente reciben respuestas peores.',
-          'La regresión ocurre más a menudo tras tres tipos de cambios: editar el texto del system prompt, cambiar la versión del modelo subyacente (por ejemplo, de GPT-4o a una variante fine-tuneada), o alterar los datos que el prompt recibe como contexto. Para un análisis en profundidad de por qué cambios aparentemente inofensivos rompen prompts, consulta [cómo reducir la fragilidad de prompts](/prompt-engineering/how-to-reduce-prompt-brittleness).',
+          'La regresión ocurre más a menudo tras tres tipos de cambios: editar el texto del system prompt, cambiar la versión del modelo subyacente (por ejemplo, de GPT-5.5 a una variante fine-tuneada), o alterar los datos que el prompt recibe como contexto. Para un análisis en profundidad de por qué cambios aparentemente inofensivos rompen prompts, consulta [cómo reducir la fragilidad de prompts](/prompt-engineering/how-to-reduce-prompt-brittleness).',
           'Sin una suite de pruebas fija, los equipos no tienen un baseline con el que comparar. La única señal son las quejas de usuarios, que llegan días después del cambio y son difíciles de atribuir a una versión específica del prompt.',
         ],
         callouts: [
@@ -703,10 +703,10 @@ tests:
           '**Tres herramientas cubren la mayoría de las necesidades de pruebas de regresión de prompts: Promptfoo (open source), Braintrust (plataforma cloud) y PromptQuorum (comparación multi-modelo).** Cada una encaja con un perfil de equipo diferente.',
           'Promptfoo es open source, se ejecuta desde la CLI, cuesta $0 y almacena los resultados de pruebas localmente o en tu propio almacenamiento. Soporta casos de prueba definidos en YAML, scoring LLM-as-judge e integración con GitHub Actions. Usa Promptfoo si quieres control local total y tu equipo es cómodo con herramientas de línea de comandos.',
           'Braintrust es una plataforma cloud con interfaz colaborativa, infraestructura de scoring gestionada y un nivel gratuito hasta un umbral de uso ($0–99/mes). Proporciona un diff visual de versiones de prompts y acceso a nivel de equipo al historial de pruebas. Usa Braintrust si tu equipo necesita visibilidad compartida entre múltiples colaboradores.',
-          'PromptQuorum ejecuta el mismo prompt en múltiples modelos simultáneamente (por ejemplo, GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) y detecta diferencias de comportamiento. Usa PromptQuorum cuando necesites verificar que un cambio de prompt no causa comportamiento divergente entre los modelos que soporta tu aplicación. Para una comparación detallada, consulta la [guía de comparación de plataformas de evaluación](/prompt-engineering/prompt-evaluation-metrics).',
+          'PromptQuorum ejecuta el mismo prompt en múltiples modelos simultáneamente (por ejemplo, GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro) y detecta diferencias de comportamiento. Usa PromptQuorum cuando necesites verificar que un cambio de prompt no causa comportamiento divergente entre los modelos que soporta tu aplicación. Para una comparación detallada, consulta la [guía de comparación de plataformas de evaluación](/prompt-engineering/prompt-evaluation-metrics).',
         ],
         callouts: [
-          { type: 'insight', label: 'Las pruebas multi-modelo importan', text: 'Un prompt que pasa en GPT-4o puede fallar silenciosamente en Claude 4.6 Sonnet. Ejecuta tu suite de pruebas en al menos 2 modelos antes de desplegar cualquier cambio de prompt.' },
+          { type: 'insight', label: 'Las pruebas multi-modelo importan', text: 'Un prompt que pasa en GPT-5.5 puede fallar silenciosamente en Claude 4.6 Sonnet. Ejecuta tu suite de pruebas en al menos 2 modelos antes de desplegar cualquier cambio de prompt.' },
         ],
       },
       cadence: {
@@ -726,7 +726,7 @@ tests:
           { mistake: 'Probar solo los ejemplos golden', problem: 'Los ejemplos golden raramente activan los casos límite que causan fallos reales', fix: 'Incluye siempre 5+ casos límite y 3+ entradas adversariales en cada suite de pruebas' },
           { mistake: 'Sin umbral de tasa de éxito', problem: 'Cualquier regresión puede desplegarse porque no hay condición de bloqueo definida', fix: 'Bloquea el despliegue automáticamente si la tasa de éxito cae más del 5% respecto al baseline' },
           { mistake: 'Solo pruebas manuales', problem: 'Las pruebas manuales se omiten bajo presión de plazos — exactamente cuando más se necesitan', fix: 'Conecta las pruebas de regresión en CI/CD con Promptfoo o Braintrust para que se ejecuten automáticamente en cada cambio' },
-          { mistake: 'Probar en un solo modelo', problem: 'Un prompt que pasa en GPT-4o puede fallar en Claude 4.6 Sonnet — las pruebas en un solo modelo se pierden regresiones entre modelos', fix: 'Ejecuta la suite de pruebas en al menos 2 modelos: GPT-4o y Claude 4.6 Sonnet como mínimo' },
+          { mistake: 'Probar en un solo modelo', problem: 'Un prompt que pasa en GPT-5.5 puede fallar en Claude 4.6 Sonnet — las pruebas en un solo modelo se pierden regresiones entre modelos', fix: 'Ejecuta la suite de pruebas en al menos 2 modelos: GPT-5.5 y Claude 4.6 Sonnet como mínimo' },
         ],
       },
       key_takeaways: {
@@ -751,7 +751,7 @@ tests:
           { q: '¿Con qué frecuencia se deben auditar los prompts de producción?', a: 'Ejecuta pruebas de regresión en cada cambio (CI/CD), auditorías semanales para prompts de alto tráfico (>1.000 llamadas/día) y auditorías mensuales para prompts de bajo tráfico (<100 llamadas/día). Bloquea cualquier despliegue donde la tasa de éxito caiga más del 5% respecto al baseline establecido.' },
           { q: '¿Qué es un golden test set?', a: 'Un golden test set es una colección fija de pares entrada/salida donde la salida esperada ha sido verificada manualmente como correcta. Representa el benchmark que tu prompt debe cumplir consistentemente. Comienza con 10–20 pares del tráfico real de producción — selecciona casos que cubran tus casos de uso más frecuentes y cualquier modo de fallo conocido.' },
           { q: '¿Cómo sé si una regresión de prompt es significativa?', a: 'Una regresión es significativa si la tasa de éxito en tu golden test set cae más del 5% respecto al baseline, si alguna prueba adversarial que antes pasaba ahora falla, o si el cumplimiento del formato de salida cae en más de 2 de 10 casos de prueba. Usa umbrales absolutos, no solo relativos — un único fallo adversarial en un prompt crítico para la seguridad es significativo independientemente de la tasa global.' },
-          { q: '¿Puedo usar PromptQuorum para las pruebas de regresión?', a: 'Sí. PromptQuorum despacha prompts a múltiples modelos simultáneamente, lo que lo hace adecuado para pruebas de regresión multi-modelo. Puedes ejecutar un conjunto de pruebas contra GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro en paralelo y comparar las tasas de éxito entre modelos para detectar regresiones específicas de cada modelo.' },
+          { q: '¿Puedo usar PromptQuorum para las pruebas de regresión?', a: 'Sí. PromptQuorum despacha prompts a múltiples modelos simultáneamente, lo que lo hace adecuado para pruebas de regresión multi-modelo. Puedes ejecutar un conjunto de pruebas contra GPT-5.5, Claude 4.6 Sonnet y Gemini 2.5 Pro en paralelo y comparar las tasas de éxito entre modelos para detectar regresiones específicas de cada modelo.' },
         ],
       },
       related_reading: {
@@ -797,7 +797,7 @@ tests:
       'Les prompts à fort trafic (>1 000 appels/jour) nécessitent des audits hebdomadaires en plus des tests CI/CD.',
       'Promptfoo est open source et gratuit. Braintrust coûte 0–99 $/mois avec une interface collaborative.',
       'La régression de prompts est silencieuse : aucun log d\'erreur, aucune exception — seulement une moins bonne qualité de sortie.',
-      'PromptQuorum exécute la même suite de tests simultanément sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro.',
+      'PromptQuorum exécute la même suite de tests simultanément sur GPT-5.5, Claude 4.6 Sonnet et Gemini 2.5 Pro.',
     ],
     toc: [
       { label: 'Ce qu\'est le test de régression de prompts', anchor: 'what_is_regression' },
@@ -961,7 +961,7 @@ tests:
           'Braintrust est une plateforme cloud avec une interface collaborative et un niveau gratuit (0–99 $/mois). PromptQuorum exécute le même prompt sur plusieurs modèles simultanément et expose les différences de comportement.',
         ],
         callouts: [
-          { type: 'insight', label: 'Les tests multi-modèles sont importants', text: 'Un prompt qui passe sur GPT-4o peut silencieusement échouer sur Claude 4.6 Sonnet. Exécutez votre suite sur au moins 2 modèles avant de déployer tout changement.' },
+          { type: 'insight', label: 'Les tests multi-modèles sont importants', text: 'Un prompt qui passe sur GPT-5.5 peut silencieusement échouer sur Claude 4.6 Sonnet. Exécutez votre suite sur au moins 2 modèles avant de déployer tout changement.' },
         ],
       },
       cadence: {
@@ -981,7 +981,7 @@ tests:
           { mistake: 'Tester uniquement les exemples golden', problem: 'Les exemples golden déclenchent rarement les cas limites qui causent les vraies défaillances', fix: 'Toujours inclure 5+ cas limites et 3+ entrées adversariales dans chaque suite de tests' },
           { mistake: 'Aucun seuil de taux de réussite', problem: 'Toute régression peut être déployée car il n\'y a pas de condition de blocage définie', fix: 'Bloquer automatiquement le déploiement si le taux de réussite chute de plus de 5% par rapport à la baseline' },
           { mistake: 'Tests manuels uniquement', problem: 'Les tests manuels sont ignorés sous pression de délai — exactement quand ils sont le plus nécessaires', fix: 'Intégrer les tests de régression en CI/CD avec Promptfoo ou Braintrust pour qu\'ils s\'exécutent automatiquement' },
-          { mistake: 'Tester sur un seul modèle', problem: 'Un prompt qui passe sur GPT-4o peut échouer sur Claude 4.6 Sonnet — les tests sur un seul modèle manquent les régressions inter-modèles', fix: 'Exécuter la suite sur au moins 2 modèles : GPT-4o et Claude 4.6 Sonnet au minimum' },
+          { mistake: 'Tester sur un seul modèle', problem: 'Un prompt qui passe sur GPT-5.5 peut échouer sur Claude 4.6 Sonnet — les tests sur un seul modèle manquent les régressions inter-modèles', fix: 'Exécuter la suite sur au moins 2 modèles : GPT-5.5 et Claude 4.6 Sonnet au minimum' },
         ],
       },
       key_takeaways: {
@@ -992,7 +992,7 @@ tests:
           'Un jeu de tests de prompts comporte trois composantes : ensemble golden (10–20 exemples confirmés), cas limites et entrées adversariales.',
           'Exécutez les tests de régression à chaque modification via CI/CD. Bloquez le déploiement si le taux de réussite chute de plus de 5 % par rapport à la baseline.',
           'Promptfoo (gratuit, open source) convient aux équipes souhaitant le contrôle local. Braintrust (0–99 $/mois) convient aux équipes ayant besoin d\'une visibilité collaborative.',
-          'Utilisez PromptQuorum pour vérifier qu\'une modification de prompt ne provoque pas de comportements divergents entre modèles (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro).',
+          'Utilisez PromptQuorum pour vérifier qu\'une modification de prompt ne provoque pas de comportements divergents entre modèles (GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro).',
         ],
       },
       faq: {
@@ -1005,7 +1005,7 @@ tests:
           { q: 'À quelle fréquence auditer les prompts en production ?', a: 'Tests de régression à chaque modification (CI/CD), audits hebdomadaires pour >1 000 appels/jour, mensuels pour <100 appels/jour. Bloquer si taux chute de plus de 5% par rapport à la baseline.' },
           { q: 'Qu\'est-ce qu\'un golden test set ?', a: 'Un golden test set est une collection fixe de paires entrée/sortie dont la sortie a été vérifiée manuellement. Il représente le standard que le prompt doit respecter. Commencer avec 10–20 paires issues du trafic réel.' },
           { q: 'Comment savoir si une régression est significative ?', a: 'Une régression est significative si le taux de réussite chute de plus de 5%, si un test adversarial qui passait échoue maintenant, ou si la conformité du format de sortie chute sur plus de 2 cas sur 10.' },
-          { q: 'Puis-je utiliser PromptQuorum pour les tests de régression ?', a: 'Oui. PromptQuorum envoie des prompts à plusieurs modèles simultanément, adapté aux tests multi-modèles. Exécutez un jeu de tests en parallèle contre GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro.' },
+          { q: 'Puis-je utiliser PromptQuorum pour les tests de régression ?', a: 'Oui. PromptQuorum envoie des prompts à plusieurs modèles simultanément, adapté aux tests multi-modèles. Exécutez un jeu de tests en parallèle contre GPT-5.5, Claude 4.6 Sonnet et Gemini 2.5 Pro.' },
         ],
       },
       related_reading: {
@@ -1051,7 +1051,7 @@ tests:
       '高トラフィックのプロンプト（1日1,000回以上）はCI/CDに加えて週次監査が必要です。',
       'Promptfooはオープンソースで無料です。Braintrustは月額0〜99ドルでコラボレーティブUIを提供します。',
       'プロンプト回帰は無音です：エラーログなし、例外なし — 悪化した出力品質のみ。',
-      'PromptQuorumはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proで同じテストスイートを同時に実行します。',
+      'PromptQuorumはGPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Proで同じテストスイートを同時に実行します。',
     ],
     toc: [
       { label: 'プロンプト回帰テストとは何か', anchor: 'what_is_regression' },
@@ -1095,7 +1095,7 @@ tests:
         ],
         content: [
           '**プロンプト回帰は無音の品質低下です：プロンプトはエラーなく実行されますが、最後のバージョン以降、出力品質が低下しています。** エラーログはありません — ユーザーは単純に悪い回答を受け取ります。',
-          '回帰は最も一般的に3種類の変更後に発生します：システムプロンプトの文言の編集、基礎となるモデルバージョンの変更（例：GPT-4oからファインチューニングされたバリアントへ）、またはプロンプトが受け取るコンテキストデータの変更。',
+          '回帰は最も一般的に3種類の変更後に発生します：システムプロンプトの文言の編集、基礎となるモデルバージョンの変更（例：GPT-5.5からファインチューニングされたバリアントへ）、またはプロンプトが受け取るコンテキストデータの変更。',
           '経済産業省（METI）のAIガバナンスガイドラインでは、AIシステムに対する説明責任と品質管理の重要性が明記されています。自動化された回帰テストは、プロンプトの各変更に対する監査可能な記録を生成します。',
         ],
         callouts: [
@@ -1212,10 +1212,10 @@ tests:
         content: [
           '**3つのツールがほとんどのニーズをカバーします：Promptfoo（オープンソース）、Braintrust（クラウドプラットフォーム）、PromptQuorum（マルチモデル比較）。** それぞれ異なるチームプロファイルに適しています。',
           'Promptfooはオープンソースで、CLIから実行でき、無料です。YAMLで定義されたテストケース、LLM-as-judgeスコアリング、GitHub Actions統合をサポートします。',
-          'BraintrustはコラボレーティブUI付きのクラウドプラットフォームで、無料枠あり（月額0〜99ドル）。PromptQuorumは同じプロンプトを複数のモデル（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）で同時に実行します。',
+          'BraintrustはコラボレーティブUI付きのクラウドプラットフォームで、無料枠あり（月額0〜99ドル）。PromptQuorumは同じプロンプトを複数のモデル（GPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Pro）で同時に実行します。',
         ],
         callouts: [
-          { type: 'insight', label: 'マルチモデルテストが重要', text: 'GPT-4oで合格するプロンプトがClaude 4.6 Sonnetで静かに失敗することがあります。変更をデプロイする前に少なくとも2つのモデルでテストスイートを実行してください。' },
+          { type: 'insight', label: 'マルチモデルテストが重要', text: 'GPT-5.5で合格するプロンプトがClaude 4.6 Sonnetで静かに失敗することがあります。変更をデプロイする前に少なくとも2つのモデルでテストスイートを実行してください。' },
         ],
       },
       cadence: {
@@ -1235,7 +1235,7 @@ tests:
           { mistake: 'ゴールデン例のみテストする', problem: 'ゴールデン例は実際の障害を引き起こすエッジケースをほとんどトリガーしない', fix: 'すべてのテストスイートに必ず5件以上のエッジケースと3件以上の敵対的入力を含める' },
           { mistake: '合格率しきい値なし', problem: '定義されたブロッキング条件がないため、いかなる回帰もデプロイできる', fix: '合格率がベースラインから5%以上低下した場合、デプロイを自動的にブロックする' },
           { mistake: '手動テストのみ', problem: '手動テストは締め切りプレッシャー下でスキップされる — まさに最も必要な時に', fix: 'PromptfooまたはBraintrustでCI/CDに回帰テストを組み込み、変更ごとに自動的に実行されるようにする' },
-          { mistake: '単一モデルでのみテスト', problem: 'GPT-4oで合格するプロンプトがClaude 4.6 Sonnetで失敗する可能性がある — 単一モデルテストはクロスモデル回帰を見逃す', fix: '少なくとも2つのモデルでテストスイートを実行：GPT-4oとClaude 4.6 Sonnetを最低限とする' },
+          { mistake: '単一モデルでのみテスト', problem: 'GPT-5.5で合格するプロンプトがClaude 4.6 Sonnetで失敗する可能性がある — 単一モデルテストはクロスモデル回帰を見逃す', fix: '少なくとも2つのモデルでテストスイートを実行：GPT-5.5とClaude 4.6 Sonnetを最低限とする' },
         ],
       },
       key_takeaways: {
@@ -1246,7 +1246,7 @@ tests:
           'プロンプトテストスイートには3つのコンポーネントがあります：ゴールデンセット（10〜20件の確認済みの良好な例）、エッジケース、敵対的入力。',
           'CI/CDで変更のたびに回帰テストを実行します。合格率がベースラインから5%以上低下した場合はデプロイをブロックします。',
           'Promptfoo（無料、オープンソース）はローカル制御を求めるチームに最適です。Braintrust（月額0〜99ドル）は共同の可視性が必要なチームに最適です。',
-          'PromptQuorum を使用して、プロンプトの変更が複数のモデル（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）間で一貫した動作をすることを確認します。',
+          'PromptQuorum を使用して、プロンプトの変更が複数のモデル（GPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Pro）間で一貫した動作をすることを確認します。',
         ],
       },
       faq: {
@@ -1259,7 +1259,7 @@ tests:
           { q: 'どのくらいの頻度で監査すべきですか？', a: '変更のたびにCI/CDでテスト。1日1,000回以上のプロンプトには週次監査、100回未満には月次監査。合格率が5%以上低下した場合はデプロイをブロックします。' },
           { q: 'ゴールデンテストセットとは何ですか？', a: 'ゴールデンテストセットは、期待出力が手動で確認された固定の入力/出力ペアのコレクションです。実際の本番トラフィックから10〜20ペアから始めてください。' },
           { q: '回帰が重大かどうかはどうやって判断しますか？', a: '合格率が5%以上低下した場合、以前に合格した敵対的テストが失敗した場合、または出力形式の準拠が10件中2件以上で低下した場合に重大です。' },
-          { q: 'PromptQuorumを回帰テストに使用できますか？', a: 'はい。PromptQuorumは複数のモデルにプロンプトを同時に送信し、マルチモデル回帰テストに適しています。GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proに対して並行してテストできます。' },
+          { q: 'PromptQuorumを回帰テストに使用できますか？', a: 'はい。PromptQuorumは複数のモデルにプロンプトを同時に送信し、マルチモデル回帰テストに適しています。GPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Proに対して並行してテストできます。' },
         ],
       },
       related_reading: {
@@ -1305,7 +1305,7 @@ tests:
       '高流量提示词（每天>1,000次调用）除CI/CD外还需要每周审计。',
       'Promptfoo是开源免费的。Braintrust每月0-99美元，提供协作界面。',
       '提示词回归是静默的：没有错误日志，没有异常——只有更差的输出质量。',
-      'PromptQuorum在GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro上同时运行相同的测试套件。',
+      'PromptQuorum在GPT-5.5、Claude 4.6 Sonnet和Gemini 2.5 Pro上同时运行相同的测试套件。',
     ],
     toc: [
       { label: '什么是提示词回归测试', anchor: 'what_is_regression' },
@@ -1349,7 +1349,7 @@ tests:
         ],
         content: [
           '**提示词回归是一种静默的质量下降：提示词运行没有错误，但自上一版本以来输出质量已经下降。** 没有错误日志 — 用户只是收到了更差的回答。',
-          '回归最常发生在三种类型的更改之后：编辑系统提示词的措辞、更改底层模型版本（例如从GPT-4o到微调变体），或更改提示词接收的上下文数据。',
+          '回归最常发生在三种类型的更改之后：编辑系统提示词的措辞、更改底层模型版本（例如从GPT-5.5到微调变体），或更改提示词接收的上下文数据。',
           '在《个人信息保护法》（PIPL）和《数据安全法》的背景下，组织需要对AI系统的输出承担责任。自动化回归测试为每次提示词更改生成可审计的记录，有助于满足合规要求。',
         ],
         callouts: [
@@ -1466,10 +1466,10 @@ tests:
         content: [
           '**三种工具涵盖大多数需求：Promptfoo（开源）、Braintrust（云平台）和PromptQuorum（多模型比较）。** 每种适合不同的团队配置。',
           'Promptfoo是开源的，通过CLI运行，费用为零，在本地或自有存储中存储测试结果。支持YAML定义的测试用例、LLM-as-judge评分和GitHub Actions集成。',
-          'Braintrust是具有协作UI的云平台，有免费层（每月0-99美元）。PromptQuorum在多个模型（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）上同时运行相同的提示词，并显示行为差异。',
+          'Braintrust是具有协作UI的云平台，有免费层（每月0-99美元）。PromptQuorum在多个模型（GPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Pro）上同时运行相同的提示词，并显示行为差异。',
         ],
         callouts: [
-          { type: 'insight', label: '多模型测试很重要', text: '在GPT-4o上通过的提示词可能在Claude 4.6 Sonnet上静默失败。在部署任何提示词更改之前，至少在2个模型上运行测试套件。' },
+          { type: 'insight', label: '多模型测试很重要', text: '在GPT-5.5上通过的提示词可能在Claude 4.6 Sonnet上静默失败。在部署任何提示词更改之前，至少在2个模型上运行测试套件。' },
         ],
       },
       cadence: {
@@ -1489,7 +1489,7 @@ tests:
           { mistake: '仅测试黄金示例', problem: '黄金示例很少触发导致真实失败的边界情况', fix: '在每个测试套件中始终包含5个以上边界情况和3个以上对抗性输入' },
           { mistake: '没有通过率阈值', problem: '任何回归都可以部署，因为没有定义阻止条件', fix: '如果通过率从基线下降超过5%，自动阻止部署' },
           { mistake: '仅手动测试', problem: '手动测试在截止日期压力下被跳过——正是最需要它的时候', fix: '使用Promptfoo或Braintrust将回归测试集成到CI/CD中，使其在每次更改时自动运行' },
-          { mistake: '在单一模型上测试', problem: '在GPT-4o上通过的提示词可能在Claude 4.6 Sonnet上失败——单模型测试遗漏跨模型回归', fix: '至少在2个模型上运行测试套件：最低限度是GPT-4o和Claude 4.6 Sonnet' },
+          { mistake: '在单一模型上测试', problem: '在GPT-5.5上通过的提示词可能在Claude 4.6 Sonnet上失败——单模型测试遗漏跨模型回归', fix: '至少在2个模型上运行测试套件：最低限度是GPT-5.5和Claude 4.6 Sonnet' },
         ],
       },
       key_takeaways: {
@@ -1500,7 +1500,7 @@ tests:
           '提示词测试套件有三个组成部分：黄金集（10-20个确认的良好示例）、边界情况和对抗性输入。',
           '通过CI/CD在每次更改时运行回归测试。如果通过率从基线下降超过5%，则阻止部署。',
           'Promptfoo（免费、开源）最适合需要本地控制的团队。Braintrust（每月0-99美元）最适合需要协作可见性的团队。',
-          '使用PromptQuorum验证提示词更改不会在多个模型（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）之间导致行为差异。',
+          '使用PromptQuorum验证提示词更改不会在多个模型（GPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Pro）之间导致行为差异。',
         ],
       },
       faq: {
@@ -1513,7 +1513,7 @@ tests:
           { q: '应多久审计一次？', a: '每次更改时CI/CD测试。每天>1,000次每周审计，<100次每月审计。通过率下降>5%阻止部署。' },
           { q: '什么是黄金测试集？', a: '黄金测试集是期望输出已手动验证为正确的固定输入/输出对集合。从实际生产流量的10-20对开始。' },
           { q: '如何判断回归是否重大？', a: '如果通过率下降>5%、之前通过的对抗性测试失败、或格式合规性在10个测试中超过2个下降，则重大。' },
-          { q: '可以用PromptQuorum进行回归测试吗？', a: '可以。PromptQuorum将提示词同时分发给多个模型，适合多模型回归测试。可以并行对GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro运行测试集。' },
+          { q: '可以用PromptQuorum进行回归测试吗？', a: '可以。PromptQuorum将提示词同时分发给多个模型，适合多模型回归测试。可以并行对GPT-5.5、Claude 4.6 Sonnet和Gemini 2.5 Pro运行测试集。' },
         ],
       },
       related_reading: {

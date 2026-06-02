@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'RTX 4060 Ti 16GB — Best Overall',
-            content: 'The NVIDIA GeForce RTX 4060 Ti 16GB is the clear winner for local LLM inference under $500. Its 16 GB GDDR6 VRAM handles Qwen2.5 14B, Llama 3.3 14B, and Mistral 12B at Q8 quality with no swapping. The Ada Lovelace architecture\'s 288 GB/s memory bandwidth delivers 45–60 tok/s on 7B Q4 models and 18–25 tok/s on 14B Q8 with Ollama. At 165 W TDP, it runs comfortably on any 650 W PSU. Price: ~$420 new, ~$330–360 used.',
+            content: 'The NVIDIA GeForce RTX 4060 Ti 16GB is the clear winner for local LLM inference under $500. Its 16 GB GDDR6 VRAM handles Qwen3 14B, Llama 3.3 14B, and Mistral 12B at Q8 quality with no swapping. The Ada Lovelace architecture\'s 288 GB/s memory bandwidth delivers 45–60 tok/s on 7B Q4 models and 18–25 tok/s on 14B Q8 with Ollama. At 165 W TDP, it runs comfortably on any 650 W PSU. Price: ~$420 new, ~$330–360 used.',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16GB on Amazon', url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB' },
               { label: 'RTX 4060 Ti 16GB on Newegg', url: 'https://www.newegg.com/p/pl?d=RTX+4060+Ti+16GB' },
@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'NVIDIA RTX 3090 (Used) — Best for 30B Models',
-            content: 'A used RTX 3090 costs $420–460 and delivers 24 GB GDDR6X — more VRAM than any new GPU under $500. That 24 GB enables Mixtral 8x22B (47B total, MoE) at Q4, Qwen2.5 32B at Q4, and Llama 3.3 70B split with CPU offload. Memory bandwidth is 936 GB/s — more than 3× the 4060 Ti — so inference on large models is faster than the numbers suggest. Downsides: 350 W TDP requires a 750 W+ PSU and good case airflow. Buy from reputable sellers (eBay, Facebook Marketplace) and verify VRAM health with gpu-burn.',
+            content: 'A used RTX 3090 costs $420–460 and delivers 24 GB GDDR6X — more VRAM than any new GPU under $500. That 24 GB enables Mixtral 8x22B (47B total, MoE) at Q4, Qwen3 32B at Q4, and Llama 3.3 70B split with CPU offload. Memory bandwidth is 936 GB/s — more than 3× the 4060 Ti — so inference on large models is faster than the numbers suggest. Downsides: 350 W TDP requires a 750 W+ PSU and good case airflow. Buy from reputable sellers (eBay, Facebook Marketplace) and verify VRAM health with gpu-burn.',
             affiliateLinks: [
               { label: 'RTX 3090 on eBay (verified sellers)', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090' },
             ],
@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 4,
             title: 'NVIDIA RTX 4070 12GB — Fastest, VRAM-Limited',
-            content: 'The RTX 4070 12GB (~$380–420 in 2026 after price drops) is the fastest GPU under $500 in raw inference speed. Its 504 GB/s bandwidth pushes 65–80 tok/s on 7B Q4 models. The problem: 12 GB caps you at 13B Q4 models. Qwen2.5 14B at Q4 requires ~8.5 GB — it fits — but Q8 quality (14 GB) does not. For users who primarily run 7B and 13B models and want maximum speed, the RTX 4070 wins. For 14B Q8 or larger, the 4060 Ti 16GB is the better buy.',
+            content: 'The RTX 4070 12GB (~$380–420 in 2026 after price drops) is the fastest GPU under $500 in raw inference speed. Its 504 GB/s bandwidth pushes 65–80 tok/s on 7B Q4 models. The problem: 12 GB caps you at 13B Q4 models. Qwen3 14B at Q4 requires ~8.5 GB — it fits — but Q8 quality (14 GB) does not. For users who primarily run 7B and 13B models and want maximum speed, the RTX 4070 wins. For 14B Q8 or larger, the 4060 Ti 16GB is the better buy.',
             affiliateLinks: [
               { label: 'RTX 4070 12GB on Amazon', url: 'https://www.amazon.com/s?k=RTX+4070' },
             ],
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Performance Comparison — 2026 Test Results',
         content: 'Benchmarks measured with Ollama 0.6.x, llama.cpp server, models from HuggingFace. Test system: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD.',
         tableData: {
-          headers: ['GPU', 'VRAM', 'Price (May 2026)', 'Llama 3.3 8B Q4 tok/s', 'Qwen2.5 14B Q8 tok/s', 'Max Model (Q4)'],
+          headers: ['GPU', 'VRAM', 'Price (May 2026)', 'Llama 3.3 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Max Model (Q4)'],
           rows: [
             ['RTX 4060 Ti 16GB', '16 GB', '~$420', '55 tok/s', '22 tok/s', '30B (Q4)'],
             ['RTX 3090 (used)', '24 GB', '~$440', '72 tok/s', '38 tok/s', '70B (Q4, partial offload)'],
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: '¿Cuál es la mejor GPU para ejecutar LLMs localmente por menos de $500?',
       answer: 'La RTX 4060 Ti 16GB (~$420) ofrece el mejor equilibrio entre VRAM, velocidad y consumo energético para ejecutar modelos de 7B a 14B. Para modelos 30B, una RTX 3090 de segunda mano (24 GB, ~$440) es la mejor compra. Los usuarios de AMD deberían considerar la RX 7800 XT 16GB (~$370). Los precios pueden variar según tu país.',
       bullets: [
-        'RTX 4060 Ti 16GB: mejor opción global — 16 GB VRAM, 165 W, ~55 tok/s en Llama 3.1 8B Q4',
+        'RTX 4060 Ti 16GB: mejor opción global — 16 GB VRAM, 165 W, ~55 tok/s en Llama 3.3 8B Q4',
         'RTX 3090 (segunda mano): 24 GB VRAM, ejecuta 30B Q4 — mejor VRAM por dólar',
         'RX 7800 XT 16GB: mejor opción AMD con soporte ROCm / Ollama completo',
         'Intel Arc B580 12GB: mejor opción económica a ~$280 para usuarios de modelos 7B',
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'RTX 4060 Ti 16GB — Mejor opción global',
-            content: 'La NVIDIA GeForce RTX 4060 Ti 16GB es la ganadora clara para inferencia LLM local por menos de $500. Sus 16 GB de VRAM GDDR6 manejan Qwen2.5 14B, Llama 3.1 14B y Mistral 12B en calidad Q8 sin intercambio. La arquitectura Ada Lovelace con 288 GB/s de ancho de banda de memoria entrega 45–60 tok/s en modelos 7B Q4 y 18–25 tok/s en 14B Q8 con Ollama. Con 165 W TDP, funciona cómodamente con cualquier fuente de 650 W. Precio: ~$420 nueva, ~$330–360 de segunda mano. Los precios pueden variar según tu país.',
+            content: 'La NVIDIA GeForce RTX 4060 Ti 16GB es la ganadora clara para inferencia LLM local por menos de $500. Sus 16 GB de VRAM GDDR6 manejan Qwen3 14B, Llama 3.3 14B y Mistral 12B en calidad Q8 sin intercambio. La arquitectura Ada Lovelace con 288 GB/s de ancho de banda de memoria entrega 45–60 tok/s en modelos 7B Q4 y 18–25 tok/s en 14B Q8 con Ollama. Con 165 W TDP, funciona cómodamente con cualquier fuente de 650 W. Precio: ~$420 nueva, ~$330–360 de segunda mano. Los precios pueden variar según tu país.',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16GB en Amazon', url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB' },
               { label: 'RTX 4060 Ti 16GB en Newegg', url: 'https://www.newegg.com/p/pl?d=RTX+4060+Ti+16GB' },
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'NVIDIA RTX 3090 (Segunda Mano) — Mejor para modelos 30B',
-            content: 'Una RTX 3090 de segunda mano cuesta $420–460 y ofrece 24 GB GDDR6X — más VRAM que cualquier GPU nueva por menos de $500. Esos 24 GB permiten ejecutar Mixtral 8x7B (47B total, MoE) en Q4, Qwen2.5 32B en Q4, y Llama 3.1 70B con descarga parcial a CPU. El ancho de banda de memoria es de 936 GB/s — más de 3× la 4060 Ti — por lo que la inferencia en modelos grandes es más rápida de lo que sugieren los números. Desventajas: 350 W TDP requiere una fuente de 750 W o más y buena ventilación del chasis. Compra a vendedores de confianza (eBay, Facebook Marketplace) y verifica la salud de la VRAM con gpu-burn.',
+            content: 'Una RTX 3090 de segunda mano cuesta $420–460 y ofrece 24 GB GDDR6X — más VRAM que cualquier GPU nueva por menos de $500. Esos 24 GB permiten ejecutar Mixtral 8x22B (47B total, MoE) en Q4, Qwen3 32B en Q4, y Llama 3.3 70B con descarga parcial a CPU. El ancho de banda de memoria es de 936 GB/s — más de 3× la 4060 Ti — por lo que la inferencia en modelos grandes es más rápida de lo que sugieren los números. Desventajas: 350 W TDP requiere una fuente de 750 W o más y buena ventilación del chasis. Compra a vendedores de confianza (eBay, Facebook Marketplace) y verifica la salud de la VRAM con gpu-burn.',
             affiliateLinks: [
               { label: 'RTX 3090 en eBay (vendedores verificados)', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090' },
             ],
@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'AMD RX 7800 XT 16GB — Mejor opción AMD',
-            content: 'La AMD Radeon RX 7800 XT ofrece 16 GB GDDR6 a ~$360–390. El backend ROCm de Ollama funciona de fábrica en Linux para esta tarjeta; el soporte ROCm en Windows está mejorando pero aún requiere configuración adicional. Benchmark: ~38–48 tok/s en Llama 3.1 8B Q4 — aproximadamente un 15% más lenta que la RTX 4060 Ti en el mismo modelo por menor ancho de banda de memoria (576 GB/s vs 288 GB/s por tamaño). Si ya usas Linux y quieres evitar NVIDIA, la RX 7800 XT ofrece el mismo espacio de VRAM a un precio menor.',
+            content: 'La AMD Radeon RX 7800 XT ofrece 16 GB GDDR6 a ~$360–390. El backend ROCm de Ollama funciona de fábrica en Linux para esta tarjeta; el soporte ROCm en Windows está mejorando pero aún requiere configuración adicional. Benchmark: ~38–48 tok/s en Llama 3.3 8B Q4 — aproximadamente un 15% más lenta que la RTX 4060 Ti en el mismo modelo por menor ancho de banda de memoria (576 GB/s vs 288 GB/s por tamaño). Si ya usas Linux y quieres evitar NVIDIA, la RX 7800 XT ofrece el mismo espacio de VRAM a un precio menor.',
             affiliateLinks: [
               { label: 'RX 7800 XT 16GB en Amazon', url: 'https://www.amazon.com/s?k=RX+7800+XT' },
             ],
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 4,
             title: 'NVIDIA RTX 4070 12GB — La más rápida, limitada en VRAM',
-            content: 'La RTX 4070 12GB (~$380–420 en 2026 tras las bajadas de precio) es la GPU más rápida por menos de $500 en velocidad de inferencia bruta. Su ancho de banda de 504 GB/s empuja 65–80 tok/s en modelos 7B Q4. El problema: 12 GB te limitan a modelos 13B Q4. Qwen2.5 14B en Q4 requiere ~8.5 GB — cabe — pero en Q8 (14 GB) no. Para usuarios que principalmente ejecutan modelos 7B y 13B y quieren máxima velocidad, la RTX 4070 gana. Para 14B Q8 o más grandes, la 4060 Ti 16GB es la mejor compra.',
+            content: 'La RTX 4070 12GB (~$380–420 en 2026 tras las bajadas de precio) es la GPU más rápida por menos de $500 en velocidad de inferencia bruta. Su ancho de banda de 504 GB/s empuja 65–80 tok/s en modelos 7B Q4. El problema: 12 GB te limitan a modelos 13B Q4. Qwen3 14B en Q4 requiere ~8.5 GB — cabe — pero en Q8 (14 GB) no. Para usuarios que principalmente ejecutan modelos 7B y 13B y quieren máxima velocidad, la RTX 4070 gana. Para 14B Q8 o más grandes, la 4060 Ti 16GB es la mejor compra.',
             affiliateLinks: [
               { label: 'RTX 4070 12GB en Amazon', url: 'https://www.amazon.com/s?k=RTX+4070' },
             ],
@@ -337,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Intel Arc B580 12GB — Mejor opción económica',
-            content: 'La Intel Arc B580 12GB se lanzó a $249 y se mantiene por debajo de $299 en 2026. Ejecuta Ollama a través del backend SYCL/oneAPI en Linux y Windows. El rendimiento es sólido para modelos 7B: ~28–35 tok/s en Llama 3.1 8B Q4. El límite de 12 GB VRAM te restringe a modelos 13B Q4 — la misma limitación que la RTX 4070 pero $130 más barata. Para una primera GPU o una máquina de inferencia secundaria, la Arc B580 es una entrada inteligente. El soporte de drivers de Intel ha mejorado significativamente desde su lanzamiento.',
+            content: 'La Intel Arc B580 12GB se lanzó a $249 y se mantiene por debajo de $299 en 2026. Ejecuta Ollama a través del backend SYCL/oneAPI en Linux y Windows. El rendimiento es sólido para modelos 7B: ~28–35 tok/s en Llama 3.3 8B Q4. El límite de 12 GB VRAM te restringe a modelos 13B Q4 — la misma limitación que la RTX 4070 pero $130 más barata. Para una primera GPU o una máquina de inferencia secundaria, la Arc B580 es una entrada inteligente. El soporte de drivers de Intel ha mejorado significativamente desde su lanzamiento.',
             affiliateLinks: [
               { label: 'Intel Arc B580 12GB en Amazon', url: 'https://www.amazon.com/s?k=Intel+Arc+B580' },
               { label: 'Intel Arc B580 12GB en Newegg', url: 'https://www.newegg.com/p/pl?d=Intel+Arc+B580' },
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparación de rendimiento — Resultados de pruebas 2026',
         content: 'Benchmarks medidos con Ollama 0.6.x, servidor llama.cpp, modelos de HuggingFace. Sistema de prueba: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD.',
         tableData: {
-          headers: ['GPU', 'VRAM', 'Precio (mayo 2026)', 'Llama 3.1 8B Q4 tok/s', 'Qwen2.5 14B Q8 tok/s', 'Modelo máximo (Q4)'],
+          headers: ['GPU', 'VRAM', 'Precio (mayo 2026)', 'Llama 3.3 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Modelo máximo (Q4)'],
           rows: [
             ['RTX 4060 Ti 16GB', '16 GB', '~$420', '55 tok/s', '22 tok/s', '30B (Q4)'],
             ['RTX 3090 (segunda mano)', '24 GB', '~$440', '72 tok/s', '38 tok/s', '70B (Q4, descarga parcial)'],
@@ -532,7 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: 'Welche GPU ist am besten für lokale KI-Modelle unter 500 €?',
       answer: 'Die RTX 4060 Ti 16GB (~420 €) bietet das beste Gleichgewicht aus VRAM, Geschwindigkeit und Stromverbrauch für 7B–14B-Modelle. Für 30B-Modelle ist eine gebrauchte RTX 3090 (24 GB, ~430–460 €) die bessere Wahl. AMD-Nutzer sollten die RX 7800 XT 16GB (~370 €) in Betracht ziehen.',
       bullets: [
-        'RTX 4060 Ti 16GB: Bestes Gesamtpaket — 16 GB VRAM, 165 W, ~55 Tok/s bei Llama 3.1 8B Q4',
+        'RTX 4060 Ti 16GB: Bestes Gesamtpaket — 16 GB VRAM, 165 W, ~55 Tok/s bei Llama 3.3 8B Q4',
         'RTX 3090 (gebraucht): 24 GB VRAM, läuft 30B Q4 — bestes VRAM pro Euro',
         'RX 7800 XT 16GB: Beste AMD-Option mit ROCm/Ollama-Unterstützung',
         'Intel Arc B580 12GB: Beste Budget-Option für ~270–290 € bei 7B-Modellen',
@@ -568,7 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'RTX 4060 Ti 16GB — Bestes Gesamtpaket',
-            content: 'Die NVIDIA GeForce RTX 4060 Ti 16GB ist die klare Empfehlung für lokale LLM-Inferenz unter 500 €. 16 GB GDDR6 VRAM bieten Platz für Qwen2.5 14B, Llama 3.1 14B und Mistral 12B mit Q8-Qualität ohne Auslagerung. Die Ada-Lovelace-Architektur liefert 45–60 Tok/s bei 7B-Q4-Modellen und 18–25 Tok/s bei 14B Q8 mit Ollama. 165 W TDP läuft problemlos an einem 650-W-Netzteil. Preis: ca. 420 € neu, 330–360 € gebraucht.',
+            content: 'Die NVIDIA GeForce RTX 4060 Ti 16GB ist die klare Empfehlung für lokale LLM-Inferenz unter 500 €. 16 GB GDDR6 VRAM bieten Platz für Qwen3 14B, Llama 3.3 14B und Mistral 12B mit Q8-Qualität ohne Auslagerung. Die Ada-Lovelace-Architektur liefert 45–60 Tok/s bei 7B-Q4-Modellen und 18–25 Tok/s bei 14B Q8 mit Ollama. 165 W TDP läuft problemlos an einem 650-W-Netzteil. Preis: ca. 420 € neu, 330–360 € gebraucht.',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16GB bei Amazon.de', url: 'https://www.amazon.de/s?k=RTX+4060+Ti+16GB' },
             ],
@@ -576,7 +576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'NVIDIA RTX 3090 (Gebraucht) — Beste Option für 30B-Modelle',
-            content: 'Eine gebrauchte RTX 3090 kostet 420–460 € und liefert 24 GB GDDR6X — mehr VRAM als jede neue GPU unter 500 €. Diese 24 GB ermöglichen Mixtral 8x7B (47B gesamt, MoE) bei Q4, Qwen2.5 32B bei Q4 und partielle Offloading-Ausführung von Llama 3.1 70B. Speicherbandbreite: 936 GB/s — mehr als 3× die 4060 Ti. Nachteil: 350 W TDP erfordert ein 750-W+-Netzteil und gute Kühlung.',
+            content: 'Eine gebrauchte RTX 3090 kostet 420–460 € und liefert 24 GB GDDR6X — mehr VRAM als jede neue GPU unter 500 €. Diese 24 GB ermöglichen Mixtral 8x22B (47B gesamt, MoE) bei Q4, Qwen3 32B bei Q4 und partielle Offloading-Ausführung von Llama 3.3 70B. Speicherbandbreite: 936 GB/s — mehr als 3× die 4060 Ti. Nachteil: 350 W TDP erfordert ein 750-W+-Netzteil und gute Kühlung.',
             affiliateLinks: [
               { label: 'RTX 3090 bei eBay.de (verifizierte Verkäufer)', url: 'https://www.ebay.de/sch/i.html?_nkw=RTX+3090' },
             ],
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'AMD RX 7800 XT 16GB — Beste AMD-Wahl',
-            content: 'Die AMD Radeon RX 7800 XT bietet 16 GB GDDR6 für ca. 360–390 €. Ollamas ROCm-Backend funktioniert unter Linux sofort. Windows-ROCm-Support verbessert sich, erfordert aber noch manuelle Einrichtung. Benchmark: ca. 38–48 Tok/s bei Llama 3.1 8B Q4 — rund 15 % langsamer als die RTX 4060 Ti. Für Linux-Nutzer ohne NVIDIA-Bindung bietet die RX 7800 XT identischen VRAM-Spielraum zu einem günstigeren Preis.',
+            content: 'Die AMD Radeon RX 7800 XT bietet 16 GB GDDR6 für ca. 360–390 €. Ollamas ROCm-Backend funktioniert unter Linux sofort. Windows-ROCm-Support verbessert sich, erfordert aber noch manuelle Einrichtung. Benchmark: ca. 38–48 Tok/s bei Llama 3.3 8B Q4 — rund 15 % langsamer als die RTX 4060 Ti. Für Linux-Nutzer ohne NVIDIA-Bindung bietet die RX 7800 XT identischen VRAM-Spielraum zu einem günstigeren Preis.',
             affiliateLinks: [
               { label: 'RX 7800 XT 16GB bei Amazon.de', url: 'https://www.amazon.de/s?k=RX+7800+XT' },
             ],
@@ -592,7 +592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 4,
             title: 'NVIDIA RTX 4070 12GB — Schnellste GPU, VRAM-Beschränkung',
-            content: 'Die RTX 4070 12GB (~380–420 € nach Preissenkungen 2026) ist die schnellste GPU unter 500 € in roher Inferenzgeschwindigkeit: 65–80 Tok/s bei 7B Q4. Problem: 12 GB begrenzen auf 13B-Q4-Modelle. Qwen2.5 14B bei Q8 (14 GB) passt nicht. Für Nutzer, die hauptsächlich 7B- und 13B-Modelle verwenden und maximale Geschwindigkeit wollen, gewinnt die RTX 4070.',
+            content: 'Die RTX 4070 12GB (~380–420 € nach Preissenkungen 2026) ist die schnellste GPU unter 500 € in roher Inferenzgeschwindigkeit: 65–80 Tok/s bei 7B Q4. Problem: 12 GB begrenzen auf 13B-Q4-Modelle. Qwen3 14B bei Q8 (14 GB) passt nicht. Für Nutzer, die hauptsächlich 7B- und 13B-Modelle verwenden und maximale Geschwindigkeit wollen, gewinnt die RTX 4070.',
             affiliateLinks: [
               { label: 'RTX 4070 12GB bei Amazon.de', url: 'https://www.amazon.de/s?k=RTX+4070' },
             ],
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Intel Arc B580 12GB — Bestes Budget-Angebot',
-            content: 'Der Intel Arc B580 12GB startete bei 249 $ und liegt 2026 unter 290 €. Ollama läuft über den SYCL/oneAPI-Backend auf Linux und Windows. Leistung: ~28–35 Tok/s bei Llama 3.1 8B Q4. Die 12-GB-VRAM-Grenze entspricht der RTX 4070, aber zum deutlich niedrigeren Preis. Für einen Einstieg oder ein sekundäres Inferenzgerät ist der Arc B580 eine kluge Wahl.',
+            content: 'Der Intel Arc B580 12GB startete bei 249 $ und liegt 2026 unter 290 €. Ollama läuft über den SYCL/oneAPI-Backend auf Linux und Windows. Leistung: ~28–35 Tok/s bei Llama 3.3 8B Q4. Die 12-GB-VRAM-Grenze entspricht der RTX 4070, aber zum deutlich niedrigeren Preis. Für einen Einstieg oder ein sekundäres Inferenzgerät ist der Arc B580 eine kluge Wahl.',
             affiliateLinks: [
               { label: 'Intel Arc B580 12GB bei Amazon.de', url: 'https://www.amazon.de/s?k=Intel+Arc+B580' },
             ],
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: 'Quelle est la meilleure GPU pour faire tourner des LLMs en local à moins de 500 € ?',
       answer: 'La RTX 4060 Ti 16 Go (~420 €) offre le meilleur équilibre VRAM/vitesse/consommation pour les modèles 7B–14B. Pour les modèles 30B, une RTX 3090 d\'occasion (24 Go, ~430–460 €) est préférable. Les utilisateurs AMD devraient considérer la RX 7800 XT 16 Go (~370 €).',
       bullets: [
-        'RTX 4060 Ti 16 Go : meilleur rapport global — 16 Go VRAM, 165 W, ~55 tok/s sur Llama 3.1 8B Q4',
+        'RTX 4060 Ti 16 Go : meilleur rapport global — 16 Go VRAM, 165 W, ~55 tok/s sur Llama 3.3 8B Q4',
         'RTX 3090 (occasion) : 24 Go VRAM, exécute du 30B Q4 — meilleur VRAM par euro',
         'RX 7800 XT 16 Go : meilleure option AMD avec support ROCm/Ollama',
         'Intel Arc B580 12 Go : meilleur choix budget à ~270 € pour les modèles 7B',
@@ -702,7 +702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'RTX 4060 Ti 16 Go — Meilleur choix global',
-            content: 'La NVIDIA GeForce RTX 4060 Ti 16 Go est le choix évident pour l\'inférence LLM locale sous 500 €. Ses 16 Go de VRAM GDDR6 accueillent Qwen2.5 14B, Llama 3.1 14B et Mistral 12B en qualité Q8 sans swap. L\'architecture Ada Lovelace délivre 45–60 tok/s sur les modèles 7B Q4 et 18–25 tok/s sur 14B Q8 avec Ollama. À 165 W, elle fonctionne avec n\'importe quelle alimentation 650 W. Prix : ~420 € neuf, ~330–360 € occasion.',
+            content: 'La NVIDIA GeForce RTX 4060 Ti 16 Go est le choix évident pour l\'inférence LLM locale sous 500 €. Ses 16 Go de VRAM GDDR6 accueillent Qwen3 14B, Llama 3.3 14B et Mistral 12B en qualité Q8 sans swap. L\'architecture Ada Lovelace délivre 45–60 tok/s sur les modèles 7B Q4 et 18–25 tok/s sur 14B Q8 avec Ollama. À 165 W, elle fonctionne avec n\'importe quelle alimentation 650 W. Prix : ~420 € neuf, ~330–360 € occasion.',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16 Go sur Amazon.fr', url: 'https://www.amazon.fr/s?k=RTX+4060+Ti+16GB' },
             ],
@@ -710,7 +710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'NVIDIA RTX 3090 (Occasion) — Meilleure pour les modèles 30B',
-            content: 'Une RTX 3090 occasion coûte 420–460 € et offre 24 Go de GDDR6X — plus de VRAM que toute nouvelle GPU sous 500 €. Ces 24 Go permettent Mixtral 8x7B en Q4, Qwen2.5 32B en Q4, et Llama 3.1 70B avec déchargement partiel. Bande passante mémoire : 936 Go/s — plus de 3× la 4060 Ti. Inconvénient : 350 W nécessite une alimentation 750 W+ et une bonne ventilation.',
+            content: 'Une RTX 3090 occasion coûte 420–460 € et offre 24 Go de GDDR6X — plus de VRAM que toute nouvelle GPU sous 500 €. Ces 24 Go permettent Mixtral 8x22B en Q4, Qwen3 32B en Q4, et Llama 3.3 70B avec déchargement partiel. Bande passante mémoire : 936 Go/s — plus de 3× la 4060 Ti. Inconvénient : 350 W nécessite une alimentation 750 W+ et une bonne ventilation.',
             affiliateLinks: [
               { label: 'RTX 3090 sur eBay.fr (vendeurs vérifiés)', url: 'https://www.ebay.fr/sch/i.html?_nkw=RTX+3090' },
             ],
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'AMD RX 7800 XT 16 Go — Meilleure option AMD',
-            content: 'La AMD Radeon RX 7800 XT propose 16 Go de GDDR6 à ~360–390 €. Le backend ROCm d\'Ollama fonctionne directement sur Linux pour cette carte. Support ROCm Windows en amélioration mais nécessite encore des étapes manuelles. Benchmark : ~38–48 tok/s sur Llama 3.1 8B Q4 — environ 15 % plus lent que la RTX 4060 Ti.',
+            content: 'La AMD Radeon RX 7800 XT propose 16 Go de GDDR6 à ~360–390 €. Le backend ROCm d\'Ollama fonctionne directement sur Linux pour cette carte. Support ROCm Windows en amélioration mais nécessite encore des étapes manuelles. Benchmark : ~38–48 tok/s sur Llama 3.3 8B Q4 — environ 15 % plus lent que la RTX 4060 Ti.',
             affiliateLinks: [
               { label: 'RX 7800 XT 16 Go sur Amazon.fr', url: 'https://www.amazon.fr/s?k=RX+7800+XT' },
             ],
@@ -726,7 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 4,
             title: 'NVIDIA RTX 4070 12 Go — La plus rapide, limitée en VRAM',
-            content: 'La RTX 4070 12 Go (~380–420 € après les baisses de prix 2026) est la GPU la plus rapide sous 500 € en vitesse d\'inférence brute : 65–80 tok/s sur 7B Q4. Problème : 12 Go limitent à 13B Q4. Qwen2.5 14B en Q8 (14 Go) ne rentre pas. Pour les utilisateurs de modèles 7B et 13B qui veulent la vitesse maximale, la RTX 4070 est le bon choix.',
+            content: 'La RTX 4070 12 Go (~380–420 € après les baisses de prix 2026) est la GPU la plus rapide sous 500 € en vitesse d\'inférence brute : 65–80 tok/s sur 7B Q4. Problème : 12 Go limitent à 13B Q4. Qwen3 14B en Q8 (14 Go) ne rentre pas. Pour les utilisateurs de modèles 7B et 13B qui veulent la vitesse maximale, la RTX 4070 est le bon choix.',
             affiliateLinks: [
               { label: 'RTX 4070 12 Go sur Amazon.fr', url: 'https://www.amazon.fr/s?k=RTX+4070' },
             ],
@@ -734,7 +734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Intel Arc B580 12 Go — Meilleur choix budget',
-            content: 'L\'Intel Arc B580 12 Go a été lancé à 249 $ et reste sous 290 € en 2026. Il fait tourner Ollama via le backend SYCL/oneAPI sur Linux et Windows. Performance : ~28–35 tok/s sur Llama 3.1 8B Q4. La limite de 12 Go correspond à la RTX 4070 mais à 130 € de moins. Pour une première GPU ou une machine d\'inférence secondaire, l\'Arc B580 est un choix judicieux.',
+            content: 'L\'Intel Arc B580 12 Go a été lancé à 249 $ et reste sous 290 € en 2026. Il fait tourner Ollama via le backend SYCL/oneAPI sur Linux et Windows. Performance : ~28–35 tok/s sur Llama 3.3 8B Q4. La limite de 12 Go correspond à la RTX 4070 mais à 130 € de moins. Pour une première GPU ou une machine d\'inférence secondaire, l\'Arc B580 est un choix judicieux.',
             affiliateLinks: [
               { label: 'Intel Arc B580 12 Go sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Intel+Arc+B580' },
             ],
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: '500ドル以下でローカルAIモデルを動かす最高のGPUは何ですか？',
       answer: 'RTX 4060 Ti 16GB（約4万2000円）がVRAM・速度・消費電力のバランスで最高です。7B〜14Bモデルに最適。30Bモデルなら中古RTX 3090（24GB、約4万4000円）が上位。AMD派にはRX 7800 XT 16GB（約3万7000円）がおすすめです。',
       bullets: [
-        'RTX 4060 Ti 16GB：総合1位 — 16GB VRAM、165W、Llama 3.1 8B Q4で約55トークン/秒',
+        'RTX 4060 Ti 16GB：総合1位 — 16GB VRAM、165W、Llama 3.3 8B Q4で約55トークン/秒',
         'RTX 3090（中古）：24GB VRAM、30B Q4対応 — VRAM単価最良',
         'RX 7800 XT 16GB：ROCm/Ollama対応の最良AMD選択肢',
         'Intel Arc B580 12GB：約2万8000円の最安バジェット選択肢（7Bモデル向け）',
@@ -836,7 +836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'RTX 4060 Ti 16GB — 総合1位',
-            content: 'NVIDIA GeForce RTX 4060 Ti 16GBは500ドル以下のローカルLLM推論で明確なおすすめです。16GB GDDR6 VRAMがQwen2.5 14B・Llama 3.1 14B・Mistral 12BをQ8品質でスワップなしに収容。Ada Lovelaceアーキテクチャが7B Q4モデルで45〜60トークン/秒、14B Q8で18〜25トークン/秒（Ollama使用時）を実現。165W TDPは650W電源で問題なし。価格：約4万2000円（新品）、3万3000〜3万6000円（中古）。',
+            content: 'NVIDIA GeForce RTX 4060 Ti 16GBは500ドル以下のローカルLLM推論で明確なおすすめです。16GB GDDR6 VRAMがQwen3 14B・Llama 3.3 14B・Mistral 12BをQ8品質でスワップなしに収容。Ada Lovelaceアーキテクチャが7B Q4モデルで45〜60トークン/秒、14B Q8で18〜25トークン/秒（Ollama使用時）を実現。165W TDPは650W電源で問題なし。価格：約4万2000円（新品）、3万3000〜3万6000円（中古）。',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16GB をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=RTX+4060+Ti+16GB' },
             ],
@@ -844,7 +844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'NVIDIA RTX 3090（中古）— 30Bモデル向け最良',
-            content: '中古RTX 3090は4万2000〜4万6000円で24GB GDDR6X——500ドル以下の新品GPUより多いVRAMです。この24GBでMixtral 8x7B（47B合計、MoE）のQ4、Qwen2.5 32B Q4、Llama 3.1 70Bの部分オフロードが可能。メモリ帯域幅936GB/s——4060 Tiの3倍以上。欠点：350W TDPは750W以上の電源と十分な冷却を必要とします。',
+            content: '中古RTX 3090は4万2000〜4万6000円で24GB GDDR6X——500ドル以下の新品GPUより多いVRAMです。この24GBでMixtral 8x22B（47B合計、MoE）のQ4、Qwen3 32B Q4、Llama 3.3 70Bの部分オフロードが可能。メモリ帯域幅936GB/s——4060 Tiの3倍以上。欠点：350W TDPは750W以上の電源と十分な冷却を必要とします。',
             affiliateLinks: [
               { label: 'RTX 3090 中古品をeBayで確認', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090' },
             ],
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'AMD RX 7800 XT 16GB — 最良AMD選択肢',
-            content: 'AMD Radeon RX 7800 XTは16GB GDDR6を約3万6000〜3万9000円で提供。OllamaのROCmバックエンドがLinuxですぐに動作。Windows ROCmサポートは改善中だが手動設定が必要。ベンチマーク：Llama 3.1 8B Q4で約38〜48トークン/秒——RTX 4060 Tiより15%程度遅い。Linux環境でNVIDIA以外を希望するなら、RX 7800 XT 16GBは同じVRAM容量をより低価格で提供します。',
+            content: 'AMD Radeon RX 7800 XTは16GB GDDR6を約3万6000〜3万9000円で提供。OllamaのROCmバックエンドがLinuxですぐに動作。Windows ROCmサポートは改善中だが手動設定が必要。ベンチマーク：Llama 3.3 8B Q4で約38〜48トークン/秒——RTX 4060 Tiより15%程度遅い。Linux環境でNVIDIA以外を希望するなら、RX 7800 XT 16GBは同じVRAM容量をより低価格で提供します。',
             affiliateLinks: [
               { label: 'RX 7800 XT 16GB をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=RX+7800+XT' },
             ],
@@ -860,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 4,
             title: 'NVIDIA RTX 4070 12GB — 最高速、VRAM制限あり',
-            content: 'RTX 4070 12GB（2026年の値下げ後3万8000〜4万2000円）は500ドル以下で生の推論速度が最速：7B Q4で65〜80トークン/秒。問題点：12GBで13B Q4が上限。Qwen2.5 14B Q8（14GB）は収まりません。主に7Bと13Bモデルを使い最大速度を求めるなら、RTX 4070が勝ります。',
+            content: 'RTX 4070 12GB（2026年の値下げ後3万8000〜4万2000円）は500ドル以下で生の推論速度が最速：7B Q4で65〜80トークン/秒。問題点：12GBで13B Q4が上限。Qwen3 14B Q8（14GB）は収まりません。主に7Bと13Bモデルを使い最大速度を求めるなら、RTX 4070が勝ります。',
             affiliateLinks: [
               { label: 'RTX 4070 12GB をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=RTX+4070' },
             ],
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Intel Arc B580 12GB — 最安バジェット選択肢',
-            content: 'Intel Arc B580 12GBは249ドルで発売され、2026年も2万8000〜2万9000円前後。SYCL/oneAPIバックエンドでLinux・WindowsのOllamaに対応。性能：Llama 3.1 8B Q4で約28〜35トークン/秒。12GB VRAM上限はRTX 4070と同じですが1万3000円安い。初めてのGPUやサブ推論マシンとしてArc B580は賢い選択です。',
+            content: 'Intel Arc B580 12GBは249ドルで発売され、2026年も2万8000〜2万9000円前後。SYCL/oneAPIバックエンドでLinux・WindowsのOllamaに対応。性能：Llama 3.3 8B Q4で約28〜35トークン/秒。12GB VRAM上限はRTX 4070と同じですが1万3000円安い。初めてのGPUやサブ推論マシンとしてArc B580は賢い選択です。',
             affiliateLinks: [
               { label: 'Intel Arc B580 12GB をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Intel+Arc+B580' },
             ],
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: '500美元以下跑本地大模型最好的GPU是什么？',
       answer: 'RTX 4060 Ti 16GB（约2900元）在显存、速度和功耗上取得最佳平衡，适合7B–14B模型。要跑30B模型，二手RTX 3090（24GB，约3000元）是更好选择。AMD用户可考虑RX 7800 XT 16GB（约2600元）。',
       bullets: [
-        'RTX 4060 Ti 16GB：综合最佳——16GB显存、165W、Llama 3.1 8B Q4约55 tok/s',
+        'RTX 4060 Ti 16GB：综合最佳——16GB显存、165W、Llama 3.3 8B Q4约55 tok/s',
         'RTX 3090（二手）：24GB显存，可跑30B Q4——每元显存最高',
         'RX 7800 XT 16GB：支持ROCm/Ollama的最佳AMD选择',
         'Intel Arc B580 12GB：约1900元的最佳预算选择（仅7B模型）',
@@ -970,7 +970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'RTX 4060 Ti 16GB — 综合最佳',
-            content: 'NVIDIA GeForce RTX 4060 Ti 16GB是500美元以下本地LLM推理的明确赢家。16GB GDDR6显存可无压力容纳Qwen2.5 14B、Llama 3.1 14B和Mistral 12B（Q8质量）。Ada Lovelace架构在Ollama下7B Q4模型达到45–60 tok/s，14B Q8达到18–25 tok/s。165W功耗配合650W电源即可。价格：约2900元（新品），约2300–2500元（二手）。',
+            content: 'NVIDIA GeForce RTX 4060 Ti 16GB是500美元以下本地LLM推理的明确赢家。16GB GDDR6显存可无压力容纳Qwen3 14B、Llama 3.3 14B和Mistral 12B（Q8质量）。Ada Lovelace架构在Ollama下7B Q4模型达到45–60 tok/s，14B Q8达到18–25 tok/s。165W功耗配合650W电源即可。价格：约2900元（新品），约2300–2500元（二手）。',
             affiliateLinks: [
               { label: '在京东查看RTX 4060 Ti 16GB', url: 'https://search.jd.com/Search?keyword=RTX+4060+Ti+16GB' },
               { label: '在淘宝查看RTX 4060 Ti 16GB', url: 'https://s.taobao.com/search?q=RTX+4060+Ti+16GB' },
@@ -979,7 +979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'NVIDIA RTX 3090（二手）— 跑30B模型最佳',
-            content: '二手RTX 3090售价约2900–3200元，提供24GB GDDR6X显存——超过500美元以下任何新品GPU。这24GB可运行Mixtral 8x7B（47B总参数，MoE）Q4、Qwen2.5 32B Q4，以及Llama 3.1 70B的部分卸载推理。内存带宽936GB/s——是4060 Ti的3倍以上。缺点：350W功耗需要750W以上电源和良好散热。建议从信誉好的二手平台购买并用gpu-burn验证显存健康。',
+            content: '二手RTX 3090售价约2900–3200元，提供24GB GDDR6X显存——超过500美元以下任何新品GPU。这24GB可运行Mixtral 8x22B（47B总参数，MoE）Q4、Qwen3 32B Q4，以及Llama 3.3 70B的部分卸载推理。内存带宽936GB/s——是4060 Ti的3倍以上。缺点：350W功耗需要750W以上电源和良好散热。建议从信誉好的二手平台购买并用gpu-burn验证显存健康。',
             affiliateLinks: [
               { label: '在闲鱼查看RTX 3090二手', url: 'https://www.goofish.com/search?q=RTX+3090' },
             ],
@@ -987,7 +987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'AMD RX 7800 XT 16GB — 最佳AMD选择',
-            content: 'AMD Radeon RX 7800 XT提供16GB GDDR6，约2500–2700元。Ollama的ROCm后端在Linux上开箱即用。Windows ROCm支持在改善中，但仍需手动配置。基准测试：Llama 3.1 8B Q4约38–48 tok/s——比RTX 4060 Ti慢约15%。对于不想依赖NVIDIA的Linux用户，RX 7800 XT 16GB以更低价格提供相同的显存空间。',
+            content: 'AMD Radeon RX 7800 XT提供16GB GDDR6，约2500–2700元。Ollama的ROCm后端在Linux上开箱即用。Windows ROCm支持在改善中，但仍需手动配置。基准测试：Llama 3.3 8B Q4约38–48 tok/s——比RTX 4060 Ti慢约15%。对于不想依赖NVIDIA的Linux用户，RX 7800 XT 16GB以更低价格提供相同的显存空间。',
             affiliateLinks: [
               { label: '在京东查看RX 7800 XT 16GB', url: 'https://search.jd.com/Search?keyword=RX+7800+XT' },
             ],
@@ -995,7 +995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 4,
             title: 'NVIDIA RTX 4070 12GB — 最快但显存受限',
-            content: 'RTX 4070 12GB（2026年降价后约2600–2900元）是500美元以下原始推理速度最快的GPU：7B Q4高达65–80 tok/s。问题：12GB限制在13B Q4。Qwen2.5 14B Q8（需14GB）放不下。主要运行7B和13B模型且追求最大速度的用户，RTX 4070是更好选择。',
+            content: 'RTX 4070 12GB（2026年降价后约2600–2900元）是500美元以下原始推理速度最快的GPU：7B Q4高达65–80 tok/s。问题：12GB限制在13B Q4。Qwen3 14B Q8（需14GB）放不下。主要运行7B和13B模型且追求最大速度的用户，RTX 4070是更好选择。',
             affiliateLinks: [
               { label: '在京东查看RTX 4070 12GB', url: 'https://search.jd.com/Search?keyword=RTX+4070' },
             ],
@@ -1003,7 +1003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Intel Arc B580 12GB — 最佳预算选择',
-            content: 'Intel Arc B580 12GB发售价249美元，2026年仍在1900–2000元以内。通过SYCL/oneAPI后端在Linux和Windows上运行Ollama。性能：Llama 3.1 8B Q4约28–35 tok/s。12GB显存上限与RTX 4070相同，但便宜约900元。作为第一块GPU或辅助推理机器，Arc B580是明智之选，Intel驱动支持也已大幅改善。',
+            content: 'Intel Arc B580 12GB发售价249美元，2026年仍在1900–2000元以内。通过SYCL/oneAPI后端在Linux和Windows上运行Ollama。性能：Llama 3.3 8B Q4约28–35 tok/s。12GB显存上限与RTX 4070相同，但便宜约900元。作为第一块GPU或辅助推理机器，Arc B580是明智之选，Intel驱动支持也已大幅改善。',
             affiliateLinks: [
               { label: '在京东查看Intel Arc B580 12GB', url: 'https://search.jd.com/Search?keyword=Intel+Arc+B580' },
             ],

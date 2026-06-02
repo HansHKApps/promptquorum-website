@@ -593,7 +593,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wie beeinflussen regionale Vorschriften KI Code Review?',
           content: [
             '**EU / GDPR** — Europäische Unternehmen, die Quellcode an externe KI APIs senden, müssen eine Datenschutz-Folgenabschätzung (DPIA) unter GDPR Artikel 35 durchführen. Die CNIL (Frankreichs Datenschutzbehörde) bestätigte im Januar 2026, dass sowohl GDPR als auch das EU-KI-Gesetz gleichzeitig auf KI-unterstützte Code Review anwendbar sind. Für EU-Teams bieten CodeRabbit und Augment Code On-Premise/Self-Hosted-Bereitstellung für Teams mit 500+ Sitzen an.',
-            '**China** — Chinesische Entwicklungsteams verwenden Qwen 2.5 Code und DeepSeek Coder V2 als lokal-deploybare Code Review Modelle, die beide chinesisch-sprachige Code-Kommentare und Dokumentation unterstützen.',
+            '**China** — Chinesische Entwicklungsteams verwenden Qwen 3 Code und DeepSeek Coder V2 als lokal-deploybare Code Review Modelle, die beide chinesisch-sprachige Code-Kommentare und Dokumentation unterstützen.',
             '**Japan (METI)** — Japanische Unternehmen unter METI Daten-Governance-Richtlinien stellen LLaMA 3.1-basierte Code Review Workflows lokal via Ollama bereit — LLaMA 3.1 7B benötigt 8GB RAM, LLaMA 3.1 13B benötigt 16GB RAM, null externe API-Aufrufe.',
           ],
         },
@@ -1274,7 +1274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Comment les Réglementations Régionales Affectent-elles la Révision de Code par IA ?',
           content: [
             '**UE / RGPD** — Les entreprises européennes envoyant du code source à des APIs IA externes doivent effectuer une évaluation d\'impact relative à la protection des données (EIPD) en vertu de l\'article 35 du RGPD. La CNIL (autorité de protection des données de la France) a confirmé en janvier 2026 que le RGPD et la Loi sur l\'IA de l\'UE s\'appliquent tous deux simultanément à la révision de code assistée par IA. Pour les équipes de l\'UE, CodeRabbit et Augment Code offrent un déploiement On-Premise/Self-Hosted pour les équipes de 500+ sièges.',
-            '**Chine** — Les équipes de développement chinoises utilisent Qwen 2.5 Code et DeepSeek Coder V2 comme modèles de révision de code déployables localement, supportant tous deux les commentaires de code et la documentation en langue chinoise.',
+            '**Chine** — Les équipes de développement chinoises utilisent Qwen 3 Code et DeepSeek Coder V2 comme modèles de révision de code déployables localement, supportant tous deux les commentaires de code et la documentation en langue chinoise.',
             '**Japon (METI)** — Les entreprises japonaises sous les directives de gouvernance des données METI déploient localement des workflows de révision de code basés sur LLaMA 3.1 via Ollama — LLaMA 3.1 7B nécessite 8GB RAM, LLaMA 3.1 13B nécessite 16GB RAM, zéro appels API externes.',
           ],
         },
@@ -1500,7 +1500,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '地域規制はAIコードレビューにどのような影響を与えるのか？',
           content: [
             '**EU / GDPR** —— EU 企業がソースコードを外部 AI API に送信する場合、GDPR 第35条に基づくデータ保護影響評価 (DPIA) を実施する必要があります。フランスのデータ保護機関である CNIL は2026年1月に、GDPR と EU AI Act の両方が AI 支援コードレビューに同時に適用されることを確認しました。EU チーム向けに CodeRabbit と Augment Code は500席以上のチーム向けにオンプレミス/セルフホスティングデプロイメントを提供しています。',
-            '**中国** —— 中国開発チームは Qwen 2.5 Code と DeepSeek Coder V2 をローカルでデプロイ可能なコードレビューモデルとして使用、両方とも中国語コードコメントとドキュメントをサポートします。',
+            '**中国** —— 中国開発チームは Qwen 3 Code と DeepSeek Coder V2 をローカルでデプロイ可能なコードレビューモデルとして使用、両方とも中国語コードコメントとドキュメントをサポートします。',
             '**日本 (METI)** —— METI データガバナンスガイドラインの対象となる日本企業は Ollama 経由で LLaMA 3.1 ベースのコードレビューワークフローをローカルにデプロイ——LLaMA 3.1 7B は8GB RAM、LLaMA 3.1 13B は16GB RAM、ゼロ外部API 呼び出し。',
           ],
         },
@@ -1726,7 +1726,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '区域法规如何影响 AI 代码审查？',
           content: [
             '**欧盟 / GDPR** —— 将源代码发送到外部 AI API 的欧洲企业必须根据 GDPR 第 35 条进行数据保护影响评估 (DPIA)。法国数据保护机构 CNIL 在 2026 年 1 月确认 GDPR 和 EU AI Act 都同时适用于 AI 辅助代码审查。对于欧盟团队，CodeRabbit 和 Augment Code 为 500+ 席位的团队提供内部部署/自托管部署。',
-            '**中国** —— 中国开发团队使用 Qwen 2.5 Code 和 DeepSeek Coder V2 作为本地可部署的代码审查模型，两者都支持中文代码注释和文档。',
+            '**中国** —— 中国开发团队使用 Qwen 3 Code 和 DeepSeek Coder V2 作为本地可部署的代码审查模型，两者都支持中文代码注释和文档。',
             '**日本 (METI)** —— 受 METI 数据治理指南约束的日本企业通过 Ollama 在本地部署基于 LLaMA 3.1 的代码审查工作流——LLaMA 3.1 7B 需要 8GB RAM，LLaMA 3.1 13B 需要 16GB RAM，零外部 API 调用。',
           ],
         },

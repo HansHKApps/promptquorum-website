@@ -596,7 +596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Sie wollen volle Kontrolle über Chunking, Retrieval und Re-Ranking → eigener Python + ChromaDB Stack',
           ],
           cloudIf: [
-            'Sie brauchen GPT-4o-Klasse Reasoning bei jeder Anfrage und Ihr Archiv ist klein → Notion AI oder ChatGPT mit Custom GPTs (der lokale Stack ist bei Synthese rund 70 % so leistungsfähig)',
+            'Sie brauchen GPT-5.5-Klasse Reasoning bei jeder Anfrage und Ihr Archiv ist klein → Notion AI oder ChatGPT mit Custom GPTs (der lokale Stack ist bei Synthese rund 70 % so leistungsfähig)',
             'Sie haben keinen Rechner mit 16 GB+ RAM und keinen Heimserver → Cloud-SaaS-PKB (Mem, Reflect)',
             'Ihr Team braucht gleichzeitigen Multi-User-Zugriff und Sie wollen keine Dienste hosten → Cloud-Äquivalent',
           ],
@@ -1065,7 +1065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Vous voulez un contrôle total sur le chunking, la récupération et le re-ranking → stack Python + ChromaDB sur mesure',
           ],
           cloudIf: [
-            'Vous avez besoin d\'un raisonnement de classe GPT-4o à chaque requête et votre archive est petite → Notion AI ou ChatGPT avec GPT personnalisés (le stack local est ~70 % aussi capable en synthèse)',
+            'Vous avez besoin d\'un raisonnement de classe GPT-5.5 à chaque requête et votre archive est petite → Notion AI ou ChatGPT avec GPT personnalisés (le stack local est ~70 % aussi capable en synthèse)',
             'Vous n\'avez pas de machine avec 16 Go+ de RAM ni de serveur domestique → PKB SaaS cloud (Mem, Reflect)',
             'Votre équipe a besoin d\'un accès multi-utilisateurs concurrent et vous ne voulez pas héberger de services → équivalent cloud',
           ],
@@ -1526,7 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'チャンキング、検索、再ランク付けを完全にコントロールしたい → カスタムPython + ChromaDBスタック',
           ],
           cloudIf: [
-            'すべてのクエリでGPT-4oクラスの推論が必要で、アーカイブが小さい → Notion AIまたはChatGPT with Custom GPTs (ローカルスタックは合成で約70%の能力)',
+            'すべてのクエリでGPT-5.5クラスの推論が必要で、アーカイブが小さい → Notion AIまたはChatGPT with Custom GPTs (ローカルスタックは合成で約70%の能力)',
             '16 GB+ RAMのマシンもホームサーバーもない → クラウドSaaS PKB (Mem、Reflect)',
             'チームに同時マルチユーザーアクセスが必要で、サービスをホストしたくない → クラウド相当',
           ],
@@ -1987,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '您希望完全控制分块、检索和重排 → 自建 Python + ChromaDB 技术栈',
           ],
           cloudIf: [
-            '您每次查询都需要 GPT-4o 级推理且归档很小 → Notion AI 或带自定义 GPT 的 ChatGPT (本地技术栈在合成上约有 70% 的能力)',
+            '您每次查询都需要 GPT-5.5 级推理且归档很小 → Notion AI 或带自定义 GPT 的 ChatGPT (本地技术栈在合成上约有 70% 的能力)',
             '您没有 16 GB+ 内存的机器或家庭服务器 → 云 SaaS PKB (Mem、Reflect)',
             '您的团队需要并发多用户访问且不想托管服务 → 云等价方案',
           ],
@@ -2448,7 +2448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Quieres control total sobre el chunking, la recuperación y el re-ranking → stack personalizado Python + ChromaDB',
           ],
           cloudIf: [
-            'Necesitas razonamiento de clase GPT-4o en cada consulta y tu archivo es pequeño → Notion AI o ChatGPT con GPTs personalizados (el stack local es ~70% tan capaz en síntesis)',
+            'Necesitas razonamiento de clase GPT-5.5 en cada consulta y tu archivo es pequeño → Notion AI o ChatGPT con GPTs personalizados (el stack local es ~70% tan capaz en síntesis)',
             'No tienes ninguna máquina con 16 GB+ de RAM ni servidor doméstico → PKB SaaS en la nube (Mem, Reflect)',
             'Tu equipo necesita acceso concurrente multiusuario y no quieres alojar servicios → equivalente en la nube',
           ],

@@ -198,7 +198,7 @@ schema: {
           content: [
             '**EU/GDPR:** All three backends run fully on-premises. No data leaves your infrastructure, satisfying GDPR Article 28 (no data processor agreement needed). Recommended for EU financial, healthcare, and legal workloads.',
             '**Japan/APPI:** On-premises inference satisfies APPI requirements for sensitive personal data. vLLM is used in Japanese enterprise deployments for batch document processing.',
-            '**China/Data Security Law (2021):** Local inference avoids cross-border data transfer restrictions. llama.cpp and Ollama are commonly used in China with Qwen2.5 models.',
+            '**China/Data Security Law (2021):** Local inference avoids cross-border data transfer restrictions. llama.cpp and Ollama are commonly used in China with Qwen3 models.',
           ],
         },
         'faqSection': {
@@ -659,7 +659,7 @@ schema: {
           content: [
             '**EU/DSGVO:** Alle drei Backends laufen vollständig On-Premises. Da keine Daten Ihre Infrastruktur verlassen, entfällt nach DSGVO Art. 28 die Pflicht zum Abschluss eines Auftragsverarbeitungsvertrags. Die BSI-Grundschutz-Kataloge empfehlen On-Premises-Inferenz für kritische Verarbeitungstätigkeiten in den Bereichen Finanzen, Gesundheit und Recht. Für DACH-Unternehmen (Deutschland, Österreich, Schweiz) entspricht lokale Inferenz den IT-Sicherheitsstandards für den Umgang mit personenbezogenen und unternehmenskritischen Daten.',
             '**Japan/APPI:** On-Premises-Inferenz erfüllt die APPI-Anforderungen für sensible personenbezogene Daten. vLLM wird in japanischen Unternehmensdeployments für die Batch-Dokumentenverarbeitung eingesetzt.',
-            '**China/Datensicherheitsgesetz (2021):** Lokale Inferenz vermeidet Beschränkungen bei grenzüberschreitenden Datenübertragungen. llama.cpp und Ollama werden in China häufig mit Qwen2.5-Modellen eingesetzt.',
+            '**China/Datensicherheitsgesetz (2021):** Lokale Inferenz vermeidet Beschränkungen bei grenzüberschreitenden Datenübertragungen. llama.cpp und Ollama werden in China häufig mit Qwen3-Modellen eingesetzt.',
           ],
         },
         'faqSection': {
@@ -879,7 +879,7 @@ schema: {
           content: [
             '**UE/RGPD :** Les trois backends fonctionnent entièrement on-premises. Aucune donnée ne quitte votre infrastructure, ce qui dispense de la conclusion d\'un accord de sous-traitance au sens de l\'article 28 du RGPD. La CNIL recommande l\'inférence locale pour le traitement de données professionnelles sensibles (financières, médicales, juridiques). Recommandé pour les secteurs financier, santé et juridique en Europe.',
             '**Japon/APPI :** L\'inférence on-premises satisfait aux exigences de l\'APPI pour les données personnelles sensibles. vLLM est utilisé dans des déploiements d\'entreprise japonais pour le traitement de documents en batch.',
-            '**Chine/Loi sur la sécurité des données (2021) :** L\'inférence locale évite les restrictions au transfert transfrontalier de données. llama.cpp et Ollama sont couramment utilisés en Chine avec les modèles Qwen2.5.',
+            '**Chine/Loi sur la sécurité des données (2021) :** L\'inférence locale évite les restrictions au transfert transfrontalier de données. llama.cpp et Ollama sont couramment utilisés en Chine avec les modèles Qwen3.',
           ],
         },
         'faqSection': {
@@ -1102,7 +1102,7 @@ schema: {
           title: '地域コンテキスト & データレジデンシー',
           content: [
             '**日本（METI AIガバナンス）：** 経济産業省（METI）の「AI原則実践のためのガバナンスガイドラインVer.1.1」（2024年）は、機密性の高い業務データの処理において、オンプレミス推論による完全なデータ管理を推奨しています。vLLMはバッチドキュメント処理に活用する日本企業の本番環境でも使われています。llama.cppとOllamaはAPPI（個人情報保護法）対応の機密データ推論に適しています。',
-            '**東アジア・アジア太平洋（データレジデンシー）：** 日本のAPPI、韓国のPIPA、台湾のPDPAはいずれもローカル推論でオンプレミス処理要件を満たせます。中国のデータセキュリティ法（2021年）対応にはllama.cppまたはOllamaをQwen2.5モデルと一緒に利用する企業が多数あります。',
+            '**東アジア・アジア太平洋（データレジデンシー）：** 日本のAPPI、韓国のPIPA、台湾のPDPAはいずれもローカル推論でオンプレミス処理要件を満たせます。中国のデータセキュリティ法（2021年）対応にはllama.cppまたはOllamaをQwen3モデルと一緒に利用する企業が多数あります。',
             '**グローバル（EU GDPR対応）：** 3つのバックエンドはすべてオンプレミスで動作します。データがインフラ外に出ないため、GDPR第28条に基づくDPA（データ処理契約）が不要です。',
           ],
         },
@@ -1309,7 +1309,7 @@ schema: {
         regionalContext: {
           title: '中国及亚太地区应用场景',
           items: [
-            '**中国（数据安全法）：** 根据2021年《数据安全法》，重要数据必须在境内存储。本地LLM推理（llama.cpp、Ollama、vLLM）可让数据完全留在本地，满足合规要求。Qwen2.5等国产模型尤适合国内企业部署。',
+            '**中国（数据安全法）：** 根据2021年《数据安全法》，重要数据必须在境内存储。本地LLM推理（llama.cpp、Ollama、vLLM）可让数据完全留在本地，满足合规要求。Qwen3等国产模型尤适合国内企业部署。',
             '**亚太地区（数据跨境）：** 新加坡、日本、韩国、澳大利亚等地均有跥境传输限制。本地推理可根据 PDPA、APPI、K-ISMS等地区性法规满足合规要求。',
             '**企业部署：** 金融、医疗、法律行业将敏感数据处理在本地。单内部工具用Ollama，多用户企业服务用vLLM。',
           ],

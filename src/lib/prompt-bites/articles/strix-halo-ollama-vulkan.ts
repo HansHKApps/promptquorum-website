@@ -202,7 +202,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Ryzen AI Max 395 (Strix Halo, 40 RDNA 3.5 CUs, 96 GB LPDDR5X) verwendet das Vulkan-Backend in Ollama unter Linux — der korrekte GPU-Pfad, wenn ROCm-iGPU-Unterstützung nicht verfügbar ist',
           'Der 96 GB große Unified-Memory-Pool ist der entscheidende Vorteil: Er nimmt Llama 70B Q4_K_M (~41 GB) auf — ein Modell, das in anderen Setups mehrere Desktop-GPUs erfordert',
-          'Geschwindigkeit auf Ryzen AI Max 395: Llama 3.1 8B ~22 tok/s, Qwen 2.5 14B ~13 tok/s, Qwen 2.5 32B ~7 tok/s via Vulkan',
+          'Geschwindigkeit auf Ryzen AI Max 395: Llama 3.3 8B ~22 tok/s, Qwen 3 14B ~13 tok/s, Qwen 3 32B ~7 tok/s via Vulkan',
           'Die Windows-Unterstützung für Strix Halo in Ollama reift; Linux via Vulkan ist der stabile Pfad Stand Mitte 2026',
         ],
       },
@@ -216,11 +216,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['Modell', 'VRAM bei Q4_K_M', 'Geschwindigkeit (MAX 395 Vulkan)', 'Passt in 96 GB?'],
         rows: [
-          { 'Modell': 'Llama 3.1 8B', 'VRAM bei Q4_K_M': '4,9 GB', 'Geschwindigkeit (MAX 395 Vulkan)': '~22 tok/s', 'Passt in 96 GB?': '✓' },
-          { 'Modell': 'Qwen 2.5 14B', 'VRAM bei Q4_K_M': '9,3 GB', 'Geschwindigkeit (MAX 395 Vulkan)': '~13 tok/s', 'Passt in 96 GB?': '✓' },
-          { 'Modell': 'Qwen 2.5 32B', 'VRAM bei Q4_K_M': '19,4 GB', 'Geschwindigkeit (MAX 395 Vulkan)': '~7 tok/s', 'Passt in 96 GB?': '✓' },
+          { 'Modell': 'Llama 3.3 8B', 'VRAM bei Q4_K_M': '4,9 GB', 'Geschwindigkeit (MAX 395 Vulkan)': '~22 tok/s', 'Passt in 96 GB?': '✓' },
+          { 'Modell': 'Qwen 3 14B', 'VRAM bei Q4_K_M': '9,3 GB', 'Geschwindigkeit (MAX 395 Vulkan)': '~13 tok/s', 'Passt in 96 GB?': '✓' },
+          { 'Modell': 'Qwen 3 32B', 'VRAM bei Q4_K_M': '19,4 GB', 'Geschwindigkeit (MAX 395 Vulkan)': '~7 tok/s', 'Passt in 96 GB?': '✓' },
           { 'Modell': 'Llama 3.3 70B', 'VRAM bei Q4_K_M': '~41 GB', 'Geschwindigkeit (MAX 395 Vulkan)': '~3 tok/s', 'Passt in 96 GB?': '✓' },
-          { 'Modell': 'Qwen 2.5 72B', 'VRAM bei Q4_K_M': '~43 GB', 'Geschwindigkeit (MAX 395 Vulkan)': '~3 tok/s', 'Passt in 96 GB?': '✓' },
+          { 'Modell': 'Qwen 3 72B', 'VRAM bei Q4_K_M': '~43 GB', 'Geschwindigkeit (MAX 395 Vulkan)': '~3 tok/s', 'Passt in 96 GB?': '✓' },
         ],
         affiliateLinks: [
           {
@@ -241,8 +241,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Strix Halo vs. RTX 4090: Speicher gewinnt, Geschwindigkeit verliert',
         content: [
-          '<strong>Der Ryzen AI Max 395 tauscht GPU-Geschwindigkeit gegen Speicherkapazität.</strong> Eine RTX 4090 führt Llama 3.1 8B mit ~45 tok/s aus, gegenüber ~22 tok/s auf Strix Halo Vulkan. Für 7B- und 14B-Modelle ist die RTX 4090 schneller. Aber die RTX 4090 ist auf 24 GB VRAM begrenzt — Strix Halo MAX 395 hält 96 GB, was Modellgrößen ermöglicht, die auf einer Desktop-GPU schlicht unmöglich sind.',
-          'Der praktische Anwendungsfall für Strix Halo ist das lokale Ausführen von 32B–70B-Modellen ohne Cloud-APIs. Qwen 2.5 32B bei Q4_K_M (~19 GB) läuft mit ~7 tok/s — langsam für interaktiven Chat, aber geeignet für Batch-Zusammenfassungen, Dokumentenverarbeitung oder nächtliche Fine-Tuning-Jobs. Llama 3.3 70B bei Q4_K_M (~41 GB) ist mit ~3 tok/s erreichbar und eignet sich für hochwertige Einzelabfragen.',
+          '<strong>Der Ryzen AI Max 395 tauscht GPU-Geschwindigkeit gegen Speicherkapazität.</strong> Eine RTX 4090 führt Llama 3.3 8B mit ~45 tok/s aus, gegenüber ~22 tok/s auf Strix Halo Vulkan. Für 7B- und 14B-Modelle ist die RTX 4090 schneller. Aber die RTX 4090 ist auf 24 GB VRAM begrenzt — Strix Halo MAX 395 hält 96 GB, was Modellgrößen ermöglicht, die auf einer Desktop-GPU schlicht unmöglich sind.',
+          'Der praktische Anwendungsfall für Strix Halo ist das lokale Ausführen von 32B–70B-Modellen ohne Cloud-APIs. Qwen 3 32B bei Q4_K_M (~19 GB) läuft mit ~7 tok/s — langsam für interaktiven Chat, aber geeignet für Batch-Zusammenfassungen, Dokumentenverarbeitung oder nächtliche Fine-Tuning-Jobs. Llama 3.3 70B bei Q4_K_M (~41 GB) ist mit ~3 tok/s erreichbar und eignet sich für hochwertige Einzelabfragen.',
           'Unter Windows fällt Ollama für Strix Halo Stand Mitte 2026 standardmäßig auf CPU-Inferenz zurück, da die ROCm-iGPU-Unterstützung für gfx1150 im offiziellen Ollama-Windows-Build noch nicht abgeschlossen ist. Der Vulkan-Pfad erfordert das Kompilieren von llama.cpp aus dem Quellcode mit `-DGGML_VULKAN=ON`. Linux wird für GPU-beschleunigte Strix-Halo-Inferenz empfohlen, bis der Windows-ROCm-Pfad ausgereift ist.',
           'Einen Vergleich mit anderer Apple-Silicon-APU-Hardware finden Sie im <a href="/de/prompt-bites/mac-mini-m4-local-llm" class="text-primary hover:underline">Mac Mini M4 für lokale LLMs</a>-Bite, der den alternativen Unified-Memory-Ansatz unter macOS behandelt.',
         ],
@@ -261,7 +261,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Was ist das größte Modell, das auf Ryzen AI Max 395 passt?',
-            a: 'Mit 96 GB Unified Memory nimmt der Ryzen AI Max 395 Llama 3.3 70B bei Q4_K_M (~41 GB) oder Qwen 2.5 72B bei Q4_K_M (~43 GB) auf, jeweils noch mit Speicherreserve. Für sehr große Modelle passt Qwen 2.5 72B bei Q5_K_M (~55 GB) ebenfalls, obwohl die Geschwindigkeit auf etwa 2 tok/s sinkt. Modelle, die über 90 GB benötigen (z. B. 70B bei Q8_0), überschreiten den verfügbaren Pool.',
+            a: 'Mit 96 GB Unified Memory nimmt der Ryzen AI Max 395 Llama 3.3 70B bei Q4_K_M (~41 GB) oder Qwen 3 72B bei Q4_K_M (~43 GB) auf, jeweils noch mit Speicherreserve. Für sehr große Modelle passt Qwen 3 72B bei Q5_K_M (~55 GB) ebenfalls, obwohl die Geschwindigkeit auf etwa 2 tok/s sinkt. Modelle, die über 90 GB benötigen (z. B. 70B bei Q8_0), überschreiten den verfügbaren Pool.',
           },
           {
             q: 'Wie schneidet Strix Halo im Vergleich zu Mac Studio M4 Ultra für Ollama ab?',
@@ -284,7 +284,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan : configuration et performances',
     seoTitle: 'Strix Halo Ollama Vulkan Configuration 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Ryzen AI Max 395 (Strix Halo, 40 CU) : 96 Go de mémoire unifiée, fait tourner les modèles 70B via Ollama Vulkan sous Linux. ~22 tok/s sur Llama 3.1 8B. Réponse rapide de PromptQuorum.',
+    metaDescription: 'Ryzen AI Max 395 (Strix Halo, 40 CU) : 96 Go de mémoire unifiée, fait tourner les modèles 70B via Ollama Vulkan sous Linux. ~22 tok/s sur Llama 3.3 8B. Réponse rapide de PromptQuorum.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
@@ -318,7 +318,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Ryzen AI Max 395 (Strix Halo, 40 CU RDNA 3.5, 96 Go LPDDR5X) utilise le backend Vulkan dans Ollama sous Linux — le chemin GPU correct quand la prise en charge ROCm iGPU n\'est pas disponible',
           'Le pool de 96 Go de mémoire unifiée est l\'avantage clé : il accueille Llama 70B Q4_K_M (~41 Go) — un modèle qui nécessite plusieurs GPU de bureau dans d\'autres configurations',
-          'Vitesse sur Ryzen AI Max 395 : Llama 3.1 8B ~22 tok/s, Qwen 2.5 14B ~13 tok/s, Qwen 2.5 32B ~7 tok/s via Vulkan',
+          'Vitesse sur Ryzen AI Max 395 : Llama 3.3 8B ~22 tok/s, Qwen 3 14B ~13 tok/s, Qwen 3 32B ~7 tok/s via Vulkan',
           'La prise en charge Windows pour Strix Halo dans Ollama est en cours de maturation ; Linux via Vulkan est le chemin stable à mi-2026',
         ],
       },
@@ -332,11 +332,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['Modèle', 'VRAM à Q4_K_M', 'Vitesse (MAX 395 Vulkan)', 'Entre dans 96 Go ?'],
         rows: [
-          { 'Modèle': 'Llama 3.1 8B', 'VRAM à Q4_K_M': '4,9 Go', 'Vitesse (MAX 395 Vulkan)': '~22 tok/s', 'Entre dans 96 Go ?': '✓' },
-          { 'Modèle': 'Qwen 2.5 14B', 'VRAM à Q4_K_M': '9,3 Go', 'Vitesse (MAX 395 Vulkan)': '~13 tok/s', 'Entre dans 96 Go ?': '✓' },
-          { 'Modèle': 'Qwen 2.5 32B', 'VRAM à Q4_K_M': '19,4 Go', 'Vitesse (MAX 395 Vulkan)': '~7 tok/s', 'Entre dans 96 Go ?': '✓' },
+          { 'Modèle': 'Llama 3.3 8B', 'VRAM à Q4_K_M': '4,9 Go', 'Vitesse (MAX 395 Vulkan)': '~22 tok/s', 'Entre dans 96 Go ?': '✓' },
+          { 'Modèle': 'Qwen 3 14B', 'VRAM à Q4_K_M': '9,3 Go', 'Vitesse (MAX 395 Vulkan)': '~13 tok/s', 'Entre dans 96 Go ?': '✓' },
+          { 'Modèle': 'Qwen 3 32B', 'VRAM à Q4_K_M': '19,4 Go', 'Vitesse (MAX 395 Vulkan)': '~7 tok/s', 'Entre dans 96 Go ?': '✓' },
           { 'Modèle': 'Llama 3.3 70B', 'VRAM à Q4_K_M': '~41 Go', 'Vitesse (MAX 395 Vulkan)': '~3 tok/s', 'Entre dans 96 Go ?': '✓' },
-          { 'Modèle': 'Qwen 2.5 72B', 'VRAM à Q4_K_M': '~43 Go', 'Vitesse (MAX 395 Vulkan)': '~3 tok/s', 'Entre dans 96 Go ?': '✓' },
+          { 'Modèle': 'Qwen 3 72B', 'VRAM à Q4_K_M': '~43 Go', 'Vitesse (MAX 395 Vulkan)': '~3 tok/s', 'Entre dans 96 Go ?': '✓' },
         ],
         affiliateLinks: [
           {
@@ -357,8 +357,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Strix Halo vs RTX 4090 : la mémoire gagne, la vitesse perd',
         content: [
-          '<strong>Le Ryzen AI Max 395 échange la vitesse GPU contre la capacité mémoire.</strong> Une RTX 4090 fait tourner Llama 3.1 8B à ~45 tok/s contre ~22 tok/s sur Strix Halo Vulkan. Pour les modèles 7B et 14B, la RTX 4090 est plus rapide. Mais la RTX 4090 est limitée à 24 Go de VRAM — Strix Halo MAX 395 dispose de 96 Go, permettant des tailles de modèles tout simplement impossibles sur un GPU de bureau.',
-          'Le cas d\'usage pratique pour Strix Halo est l\'exécution locale de modèles 32B–70B sans API cloud. Qwen 2.5 32B à Q4_K_M (~19 Go) tourne à ~7 tok/s — lent pour le chat interactif, mais convenable pour la synthèse par lots, le traitement de documents, ou les tâches de fine-tuning nocturnes. Llama 3.3 70B à Q4_K_M (~41 Go) est atteignable à ~3 tok/s, adapté aux requêtes uniques de haute qualité.',
+          '<strong>Le Ryzen AI Max 395 échange la vitesse GPU contre la capacité mémoire.</strong> Une RTX 4090 fait tourner Llama 3.3 8B à ~45 tok/s contre ~22 tok/s sur Strix Halo Vulkan. Pour les modèles 7B et 14B, la RTX 4090 est plus rapide. Mais la RTX 4090 est limitée à 24 Go de VRAM — Strix Halo MAX 395 dispose de 96 Go, permettant des tailles de modèles tout simplement impossibles sur un GPU de bureau.',
+          'Le cas d\'usage pratique pour Strix Halo est l\'exécution locale de modèles 32B–70B sans API cloud. Qwen 3 32B à Q4_K_M (~19 Go) tourne à ~7 tok/s — lent pour le chat interactif, mais convenable pour la synthèse par lots, le traitement de documents, ou les tâches de fine-tuning nocturnes. Llama 3.3 70B à Q4_K_M (~41 Go) est atteignable à ~3 tok/s, adapté aux requêtes uniques de haute qualité.',
           'Sous Windows, Ollama pour Strix Halo revient par défaut à l\'inférence CPU à mi-2026, la prise en charge ROCm iGPU pour gfx1150 n\'étant pas encore complète dans la version officielle Ollama Windows. Le chemin Vulkan nécessite de compiler llama.cpp depuis les sources avec `-DGGML_VULKAN=ON`. Linux est recommandé pour l\'inférence Strix Halo accélérée GPU jusqu\'à ce que le chemin ROCm Windows soit finalisé.',
           'Pour une comparaison avec d\'autres matériels APU Apple Silicon, consultez le bite <a href="/fr/prompt-bites/mac-mini-m4-local-llm" class="text-primary hover:underline">Mac Mini M4 pour les LLMs locaux</a>, qui couvre l\'approche alternative de mémoire unifiée sur macOS.',
         ],
@@ -377,7 +377,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quel est le plus grand modèle qui tient sur Ryzen AI Max 395 ?',
-            a: 'Avec 96 Go de mémoire unifiée, le Ryzen AI Max 395 accueille Llama 3.3 70B à Q4_K_M (~41 Go) ou Qwen 2.5 72B à Q4_K_M (~43 Go), chacun avec de la mémoire disponible. Pour les très grands modèles, Qwen 2.5 72B à Q5_K_M (~55 Go) tient également, bien que la vitesse chute à environ 2 tok/s. Les modèles nécessitant plus de 90 Go (ex. 70B à Q8_0) dépassent le pool disponible.',
+            a: 'Avec 96 Go de mémoire unifiée, le Ryzen AI Max 395 accueille Llama 3.3 70B à Q4_K_M (~41 Go) ou Qwen 3 72B à Q4_K_M (~43 Go), chacun avec de la mémoire disponible. Pour les très grands modèles, Qwen 3 72B à Q5_K_M (~55 Go) tient également, bien que la vitesse chute à environ 2 tok/s. Les modèles nécessitant plus de 90 Go (ex. 70B à Q8_0) dépassent le pool disponible.',
           },
           {
             q: 'Comment Strix Halo se compare-t-il au Mac Studio M4 Ultra pour Ollama ?',
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     title: 'Strix Halo（Ryzen AI Max）+ Ollama Vulkan：セットアップとパフォーマンス',
     seoTitle: 'Strix Halo Ollama Vulkan セットアップ 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Ryzen AI Max 395（Strix Halo、40 CU）：96 GB ユニファイドメモリ、Linux上でOllama Vulkan経由で70Bモデルを実行。Llama 3.1 8Bで~22 tok/s。PromptQuorumによる簡潔な回答。',
+    metaDescription: 'Ryzen AI Max 395（Strix Halo、40 CU）：96 GB ユニファイドメモリ、Linux上でOllama Vulkan経由で70Bモデルを実行。Llama 3.3 8Bで~22 tok/s。PromptQuorumによる簡潔な回答。',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
@@ -434,7 +434,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Ryzen AI Max 395（Strix Halo、40 RDNA 3.5 CU、96 GB LPDDR5X）はLinux上のOllamaでVulkanバックエンドを使用 — ROCm iGPUサポートが利用できない場合の正しいGPUパス',
           '96 GBユニファイドメモリプールが重要な優位点：Llama 70B Q4_K_M（~41 GB）を格納可能 — 他のセットアップでは複数の独立GPUが必要なモデル',
-          'Ryzen AI Max 395での速度：Llama 3.1 8B ~22 tok/s、Qwen 2.5 14B ~13 tok/s、Qwen 2.5 32B ~7 tok/s（Vulkan経由）',
+          'Ryzen AI Max 395での速度：Llama 3.3 8B ~22 tok/s、Qwen 3 14B ~13 tok/s、Qwen 3 32B ~7 tok/s（Vulkan経由）',
           'OllamaにおけるStrix HaloのWindowsサポートは成熟中；2026年半ば時点ではVulkan経由のLinuxが安定したパス',
         ],
       },
@@ -448,11 +448,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['モデル', 'Q4_K_M時のVRAM', '速度（MAX 395 Vulkan）', '96 GBに収まるか？'],
         rows: [
-          { 'モデル': 'Llama 3.1 8B', 'Q4_K_M時のVRAM': '4.9 GB', '速度（MAX 395 Vulkan）': '~22 tok/s', '96 GBに収まるか？': '✓' },
-          { 'モデル': 'Qwen 2.5 14B', 'Q4_K_M時のVRAM': '9.3 GB', '速度（MAX 395 Vulkan）': '~13 tok/s', '96 GBに収まるか？': '✓' },
-          { 'モデル': 'Qwen 2.5 32B', 'Q4_K_M時のVRAM': '19.4 GB', '速度（MAX 395 Vulkan）': '~7 tok/s', '96 GBに収まるか？': '✓' },
+          { 'モデル': 'Llama 3.3 8B', 'Q4_K_M時のVRAM': '4.9 GB', '速度（MAX 395 Vulkan）': '~22 tok/s', '96 GBに収まるか？': '✓' },
+          { 'モデル': 'Qwen 3 14B', 'Q4_K_M時のVRAM': '9.3 GB', '速度（MAX 395 Vulkan）': '~13 tok/s', '96 GBに収まるか？': '✓' },
+          { 'モデル': 'Qwen 3 32B', 'Q4_K_M時のVRAM': '19.4 GB', '速度（MAX 395 Vulkan）': '~7 tok/s', '96 GBに収まるか？': '✓' },
           { 'モデル': 'Llama 3.3 70B', 'Q4_K_M時のVRAM': '~41 GB', '速度（MAX 395 Vulkan）': '~3 tok/s', '96 GBに収まるか？': '✓' },
-          { 'モデル': 'Qwen 2.5 72B', 'Q4_K_M時のVRAM': '~43 GB', '速度（MAX 395 Vulkan）': '~3 tok/s', '96 GBに収まるか？': '✓' },
+          { 'モデル': 'Qwen 3 72B', 'Q4_K_M時のVRAM': '~43 GB', '速度（MAX 395 Vulkan）': '~3 tok/s', '96 GBに収まるか？': '✓' },
         ],
         affiliateLinks: [
           {
@@ -473,8 +473,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Strix Halo対RTX 4090：メモリで勝り、速度で劣る',
         content: [
-          '<strong>Ryzen AI Max 395はGPU速度をメモリ容量と交換します。</strong>RTX 4090はLlama 3.1 8Bを~45 tok/sで実行するのに対し、Strix Halo Vulkanでは~22 tok/sです。7Bおよび14BモデルではRTX 4090の方が高速です。しかしRTX 4090は24 GB VRAMに制限されており、Strix Halo MAX 395は96 GBを保有し、デスクトップGPUでは不可能なモデルサイズを実現します。',
-          'Strix Haloの実用的なユースケースは、クラウドAPIなしで32B〜70Bモデルをローカルで実行することです。Qwen 2.5 32B（Q4_K_M、~19 GB）は~7 tok/sで動作します — インタラクティブなチャットには遅いですが、バッチ要約、文書処理、または一晩のファインチューニング作業には十分です。Llama 3.3 70B（Q4_K_M、~41 GB）は~3 tok/sで実行可能で、高品質な単発クエリに適しています。',
+          '<strong>Ryzen AI Max 395はGPU速度をメモリ容量と交換します。</strong>RTX 4090はLlama 3.3 8Bを~45 tok/sで実行するのに対し、Strix Halo Vulkanでは~22 tok/sです。7Bおよび14BモデルではRTX 4090の方が高速です。しかしRTX 4090は24 GB VRAMに制限されており、Strix Halo MAX 395は96 GBを保有し、デスクトップGPUでは不可能なモデルサイズを実現します。',
+          'Strix Haloの実用的なユースケースは、クラウドAPIなしで32B〜70Bモデルをローカルで実行することです。Qwen 3 32B（Q4_K_M、~19 GB）は~7 tok/sで動作します — インタラクティブなチャットには遅いですが、バッチ要約、文書処理、または一晩のファインチューニング作業には十分です。Llama 3.3 70B（Q4_K_M、~41 GB）は~3 tok/sで実行可能で、高品質な単発クエリに適しています。',
           'Windowsでは、gfx1150のROCm iGPUサポートが公式OllamaのWindowsビルドでまだ完成していないため、Strix Halo向けOllamaは2026年半ば時点でデフォルトのCPU推論にフォールバックします。VulkanパスはWindowsで`-DGGML_VULKAN=ON`を使ってllama.cppをソースからビルドする必要があります。WindowsのROCmパスが成熟するまでは、GPU加速Strix Halo推論にはLinuxを推奨します。',
           'その他のApple Silicon APUハードウェアとの比較については、macOSでの代替ユニファイドメモリアプローチを扱う<a href="/ja/prompt-bites/mac-mini-m4-local-llm" class="text-primary hover:underline">ローカルLLM向けMac Mini M4</a>のビットをご覧ください。',
         ],
@@ -493,7 +493,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Ryzen AI Max 395に収まる最大のモデルは何ですか？',
-            a: '96 GBのユニファイドメモリで、Ryzen AI Max 395はLlama 3.3 70B（Q4_K_M、~41 GB）またはQwen 2.5 72B（Q4_K_M、~43 GB）を格納でき、それぞれメモリに余裕があります。非常に大きなモデルの場合、Qwen 2.5 72B（Q5_K_M、~55 GB）も収まりますが、速度は約2 tok/sに低下します。90 GB以上が必要なモデル（例：70B at Q8_0）は利用可能なプールを超えます。',
+            a: '96 GBのユニファイドメモリで、Ryzen AI Max 395はLlama 3.3 70B（Q4_K_M、~41 GB）またはQwen 3 72B（Q4_K_M、~43 GB）を格納でき、それぞれメモリに余裕があります。非常に大きなモデルの場合、Qwen 3 72B（Q5_K_M、~55 GB）も収まりますが、速度は約2 tok/sに低下します。90 GB以上が必要なモデル（例：70B at Q8_0）は利用可能なプールを超えます。',
           },
           {
             q: 'OllamaにおいてStrix HaloとMac Studio M4 Ultraはどう比較されますか？',
@@ -516,7 +516,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     title: 'Strix Halo（Ryzen AI Max）+ Ollama Vulkan：配置与性能',
     seoTitle: 'Strix Halo Ollama Vulkan 配置 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Ryzen AI Max 395（Strix Halo，40 CU）：96 GB 统一内存，在 Linux 上通过 Ollama Vulkan 运行 70B 模型。Llama 3.1 8B 约 22 tok/s。PromptQuorum 快速解答。',
+    metaDescription: 'Ryzen AI Max 395（Strix Halo，40 CU）：96 GB 统一内存，在 Linux 上通过 Ollama Vulkan 运行 70B 模型。Llama 3.3 8B 约 22 tok/s。PromptQuorum 快速解答。',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
@@ -550,7 +550,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Ryzen AI Max 395（Strix Halo，40 个 RDNA 3.5 CU，96 GB LPDDR5X）在 Linux 上通过 Ollama 使用 Vulkan 后端——这是 ROCm iGPU 支持不可用时的正确 GPU 路径',
           '96 GB 统一内存池是关键优势：可容纳 Llama 70B Q4_K_M（~41 GB）——在其他配置中需要多块桌面 GPU 的模型',
-          'Ryzen AI Max 395 的速度：Llama 3.1 8B ~22 tok/s，Qwen 2.5 14B ~13 tok/s，Qwen 2.5 32B ~7 tok/s（通过 Vulkan）',
+          'Ryzen AI Max 395 的速度：Llama 3.3 8B ~22 tok/s，Qwen 3 14B ~13 tok/s，Qwen 3 32B ~7 tok/s（通过 Vulkan）',
           'Ollama 中 Strix Halo 的 Windows 支持正在成熟；截至 2026 年中，通过 Vulkan 的 Linux 是稳定路径',
         ],
       },
@@ -564,11 +564,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['模型', 'Q4_K_M 时 VRAM', '速度（MAX 395 Vulkan）', '能否放入 96 GB？'],
         rows: [
-          { '模型': 'Llama 3.1 8B', 'Q4_K_M 时 VRAM': '4.9 GB', '速度（MAX 395 Vulkan）': '~22 tok/s', '能否放入 96 GB？': '✓' },
-          { '模型': 'Qwen 2.5 14B', 'Q4_K_M 时 VRAM': '9.3 GB', '速度（MAX 395 Vulkan）': '~13 tok/s', '能否放入 96 GB？': '✓' },
-          { '模型': 'Qwen 2.5 32B', 'Q4_K_M 时 VRAM': '19.4 GB', '速度（MAX 395 Vulkan）': '~7 tok/s', '能否放入 96 GB？': '✓' },
+          { '模型': 'Llama 3.3 8B', 'Q4_K_M 时 VRAM': '4.9 GB', '速度（MAX 395 Vulkan）': '~22 tok/s', '能否放入 96 GB？': '✓' },
+          { '模型': 'Qwen 3 14B', 'Q4_K_M 时 VRAM': '9.3 GB', '速度（MAX 395 Vulkan）': '~13 tok/s', '能否放入 96 GB？': '✓' },
+          { '模型': 'Qwen 3 32B', 'Q4_K_M 时 VRAM': '19.4 GB', '速度（MAX 395 Vulkan）': '~7 tok/s', '能否放入 96 GB？': '✓' },
           { '模型': 'Llama 3.3 70B', 'Q4_K_M 时 VRAM': '~41 GB', '速度（MAX 395 Vulkan）': '~3 tok/s', '能否放入 96 GB？': '✓' },
-          { '模型': 'Qwen 2.5 72B', 'Q4_K_M 时 VRAM': '~43 GB', '速度（MAX 395 Vulkan）': '~3 tok/s', '能否放入 96 GB？': '✓' },
+          { '模型': 'Qwen 3 72B', 'Q4_K_M 时 VRAM': '~43 GB', '速度（MAX 395 Vulkan）': '~3 tok/s', '能否放入 96 GB？': '✓' },
         ],
         affiliateLinks: [
           {
@@ -589,8 +589,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Strix Halo 对比 RTX 4090：内存胜，速度败',
         content: [
-          '<strong>Ryzen AI Max 395 以 GPU 速度换取内存容量。</strong>RTX 4090 运行 Llama 3.1 8B 约 45 tok/s，而 Strix Halo Vulkan 约 22 tok/s。对于 7B 和 14B 模型，RTX 4090 更快。但 RTX 4090 受限于 24 GB VRAM——Strix Halo MAX 395 拥有 96 GB，可支持桌面 GPU 上根本无法运行的模型规模。',
-          'Strix Halo 的实际使用场景是在不依赖云 API 的情况下在本地运行 32B–70B 模型。Qwen 2.5 32B（Q4_K_M，~19 GB）以 ~7 tok/s 运行——对于交互式聊天较慢，但适用于批量摘要、文档处理或整夜微调任务。Llama 3.3 70B（Q4_K_M，~41 GB）可以 ~3 tok/s 运行，适合高质量单次查询。',
+          '<strong>Ryzen AI Max 395 以 GPU 速度换取内存容量。</strong>RTX 4090 运行 Llama 3.3 8B 约 45 tok/s，而 Strix Halo Vulkan 约 22 tok/s。对于 7B 和 14B 模型，RTX 4090 更快。但 RTX 4090 受限于 24 GB VRAM——Strix Halo MAX 395 拥有 96 GB，可支持桌面 GPU 上根本无法运行的模型规模。',
+          'Strix Halo 的实际使用场景是在不依赖云 API 的情况下在本地运行 32B–70B 模型。Qwen 3 32B（Q4_K_M，~19 GB）以 ~7 tok/s 运行——对于交互式聊天较慢，但适用于批量摘要、文档处理或整夜微调任务。Llama 3.3 70B（Q4_K_M，~41 GB）可以 ~3 tok/s 运行，适合高质量单次查询。',
           '在 Windows 上，由于 gfx1150 的 ROCm iGPU 支持在官方 Ollama Windows 版本中尚未完成，Strix Halo 的 Ollama 截至 2026 年中默认回退到 CPU 推理。Vulkan 路径需要在 Windows 上使用 `-DGGML_VULKAN=ON` 从源码编译 llama.cpp。建议在 Windows ROCm 路径成熟之前，使用 Linux 进行 GPU 加速的 Strix Halo 推理。',
           '与其他 Apple Silicon APU 硬件的比较，请参阅<a href="/zh/prompt-bites/mac-mini-m4-local-llm" class="text-primary hover:underline">用于本地 LLM 的 Mac Mini M4</a> 文章，其中介绍了 macOS 上的替代统一内存方案。',
         ],
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Ryzen AI Max 395 能容纳的最大模型是什么？',
-            a: '拥有 96 GB 统一内存，Ryzen AI Max 395 可容纳 Llama 3.3 70B（Q4_K_M，~41 GB）或 Qwen 2.5 72B（Q4_K_M，~43 GB），各有剩余内存。对于非常大的模型，Qwen 2.5 72B（Q5_K_M，~55 GB）也可以放入，但速度降至约 2 tok/s。需要超过 90 GB 的模型（如 70B at Q8_0）超出可用池。',
+            a: '拥有 96 GB 统一内存，Ryzen AI Max 395 可容纳 Llama 3.3 70B（Q4_K_M，~41 GB）或 Qwen 3 72B（Q4_K_M，~43 GB），各有剩余内存。对于非常大的模型，Qwen 3 72B（Q5_K_M，~55 GB）也可以放入，但速度降至约 2 tok/s。需要超过 90 GB 的模型（如 70B at Q8_0）超出可用池。',
           },
           {
             q: 'Strix Halo 与 Mac Studio M4 Ultra 在 Ollama 上如何比较？',
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: configuración y rendimiento',
     seoTitle: 'Strix Halo Ollama Vulkan: configuración 2026 | PromptQuorum',
-    metaDescription: 'Ryzen AI Max 395 (Strix Halo, 40 CU): 96 GB unificados, ejecuta modelos 70B vía Ollama Vulkan en Linux. ~22 tok/s con Llama 3.1 8B. Respuesta rápida.',
+    metaDescription: 'Ryzen AI Max 395 (Strix Halo, 40 CU): 96 GB unificados, ejecuta modelos 70B vía Ollama Vulkan en Linux. ~22 tok/s con Llama 3.3 8B. Respuesta rápida.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Ryzen AI Max 395 (Strix Halo, 40 CU RDNA 3.5, 96 GB LPDDR5X) usa el backend Vulkan en Ollama en Linux — la ruta GPU correcta cuando el soporte ROCm iGPU no está disponible',
           'El pool de 96 GB de memoria unificada es la ventaja clave: cabe Llama 70B Q4_K_M (~41 GB) — un modelo que requiere múltiples GPU de escritorio en otras configuraciones',
-          'Velocidad en Ryzen AI Max 395: Llama 3.1 8B ~22 tok/s, Qwen 2.5 14B ~13 tok/s, Qwen 2.5 32B ~7 tok/s vía Vulkan',
+          'Velocidad en Ryzen AI Max 395: Llama 3.3 8B ~22 tok/s, Qwen 3 14B ~13 tok/s, Qwen 3 32B ~7 tok/s vía Vulkan',
           'El soporte de Windows para Strix Halo en Ollama está madurando; Linux vía Vulkan es la ruta estable a mediados de 2026',
         ],
       },
@@ -680,11 +680,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ['Modelo', 'VRAM en Q4_K_M', 'Velocidad (MAX 395 Vulkan)', '¿Cabe en 96 GB?'],
         rows: [
-          { 'Modelo': 'Llama 3.1 8B', 'VRAM en Q4_K_M': '4.9 GB', 'Velocidad (MAX 395 Vulkan)': '~22 tok/s', '¿Cabe en 96 GB?': '✓' },
-          { 'Modelo': 'Qwen 2.5 14B', 'VRAM en Q4_K_M': '9.3 GB', 'Velocidad (MAX 395 Vulkan)': '~13 tok/s', '¿Cabe en 96 GB?': '✓' },
-          { 'Modelo': 'Qwen 2.5 32B', 'VRAM en Q4_K_M': '19.4 GB', 'Velocidad (MAX 395 Vulkan)': '~7 tok/s', '¿Cabe en 96 GB?': '✓' },
+          { 'Modelo': 'Llama 3.3 8B', 'VRAM en Q4_K_M': '4.9 GB', 'Velocidad (MAX 395 Vulkan)': '~22 tok/s', '¿Cabe en 96 GB?': '✓' },
+          { 'Modelo': 'Qwen 3 14B', 'VRAM en Q4_K_M': '9.3 GB', 'Velocidad (MAX 395 Vulkan)': '~13 tok/s', '¿Cabe en 96 GB?': '✓' },
+          { 'Modelo': 'Qwen 3 32B', 'VRAM en Q4_K_M': '19.4 GB', 'Velocidad (MAX 395 Vulkan)': '~7 tok/s', '¿Cabe en 96 GB?': '✓' },
           { 'Modelo': 'Llama 3.3 70B', 'VRAM en Q4_K_M': '~41 GB', 'Velocidad (MAX 395 Vulkan)': '~3 tok/s', '¿Cabe en 96 GB?': '✓' },
-          { 'Modelo': 'Qwen 2.5 72B', 'VRAM en Q4_K_M': '~43 GB', 'Velocidad (MAX 395 Vulkan)': '~3 tok/s', '¿Cabe en 96 GB?': '✓' },
+          { 'Modelo': 'Qwen 3 72B', 'VRAM en Q4_K_M': '~43 GB', 'Velocidad (MAX 395 Vulkan)': '~3 tok/s', '¿Cabe en 96 GB?': '✓' },
         ],
         affiliateLinks: [
           {
@@ -705,8 +705,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Strix Halo vs RTX 4090: la memoria gana, la velocidad pierde',
         content: [
-          '<strong>El Ryzen AI Max 395 intercambia velocidad de GPU por capacidad de memoria.</strong> Una RTX 4090 ejecuta Llama 3.1 8B a ~45 tok/s frente a ~22 tok/s en Strix Halo Vulkan. Para modelos de 7B y 14B, la RTX 4090 es más rápida. Pero la RTX 4090 está limitada a 24 GB de VRAM — Strix Halo MAX 395 tiene 96 GB, lo que permite tamaños de modelo imposibles en cualquier GPU de escritorio.',
-          'El caso de uso práctico para Strix Halo es ejecutar modelos de 32B–70B localmente sin APIs en la nube. Qwen 2.5 32B en Q4_K_M (~19 GB) corre a ~7 tok/s — lento para chat interactivo, pero válido para resúmenes en lote, procesamiento de documentos o trabajos de fine-tuning nocturnos. Llama 3.3 70B en Q4_K_M (~41 GB) es alcanzable a ~3 tok/s, adecuado para consultas individuales de alta calidad.',
+          '<strong>El Ryzen AI Max 395 intercambia velocidad de GPU por capacidad de memoria.</strong> Una RTX 4090 ejecuta Llama 3.3 8B a ~45 tok/s frente a ~22 tok/s en Strix Halo Vulkan. Para modelos de 7B y 14B, la RTX 4090 es más rápida. Pero la RTX 4090 está limitada a 24 GB de VRAM — Strix Halo MAX 395 tiene 96 GB, lo que permite tamaños de modelo imposibles en cualquier GPU de escritorio.',
+          'El caso de uso práctico para Strix Halo es ejecutar modelos de 32B–70B localmente sin APIs en la nube. Qwen 3 32B en Q4_K_M (~19 GB) corre a ~7 tok/s — lento para chat interactivo, pero válido para resúmenes en lote, procesamiento de documentos o trabajos de fine-tuning nocturnos. Llama 3.3 70B en Q4_K_M (~41 GB) es alcanzable a ~3 tok/s, adecuado para consultas individuales de alta calidad.',
           'En Windows, Ollama para Strix Halo vuelve por defecto a la inferencia por CPU a mediados de 2026, ya que el soporte ROCm iGPU para gfx1150 aún no está completo en la versión oficial de Ollama para Windows. La ruta Vulkan requiere compilar llama.cpp desde el código fuente con `-DGGML_VULKAN=ON`. Se recomienda Linux para inferencia Strix Halo con aceleración GPU hasta que la ruta ROCm de Windows madure.',
           'Para comparar con otro hardware APU Apple Silicon, consulta el bite <a href="/es/prompt-bites/mac-mini-m4-local-llm" class="text-primary hover:underline">Mac Mini M4 para LLMs locales</a>, que cubre el enfoque alternativo de memoria unificada en macOS.',
         ],
@@ -725,7 +725,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Cuál es el modelo más grande que cabe en Ryzen AI Max 395?',
-            a: 'Con 96 GB de memoria unificada, el Ryzen AI Max 395 carga Llama 3.3 70B en Q4_K_M (~41 GB) o Qwen 2.5 72B en Q4_K_M (~43 GB), cada uno con memoria disponible. Para modelos muy grandes, Qwen 2.5 72B en Q5_K_M (~55 GB) también cabe, aunque la velocidad baja a aproximadamente 2 tok/s. Los modelos que requieren más de 90 GB (p. ej., 70B en Q8_0) superan el pool disponible.',
+            a: 'Con 96 GB de memoria unificada, el Ryzen AI Max 395 carga Llama 3.3 70B en Q4_K_M (~41 GB) o Qwen 3 72B en Q4_K_M (~43 GB), cada uno con memoria disponible. Para modelos muy grandes, Qwen 3 72B en Q5_K_M (~55 GB) también cabe, aunque la velocidad baja a aproximadamente 2 tok/s. Los modelos que requieren más de 90 GB (p. ej., 70B en Q8_0) superan el pool disponible.',
           },
           {
             q: '¿Cómo se compara Strix Halo con Mac Studio M4 Ultra para Ollama?',

@@ -217,7 +217,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-02',
       keywords: ['Prompt-Workflows', 'Automatisierungsvorlagen', 'wiederholbare Prompts', 'LangChain Workflow', 'n8n Prompts', 'Produktions-KI-Workflow'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Vier Vorlagen decken die häufigsten Produktionsanwendungsfälle ab: Dokumentenverarbeitung, Recherche-Pipeline, Code-Review und Kundentriage.**',
         ],
         numberedItems: [
-          'Dokumentenverarbeitung — Auslöser: neues PDF hochgeladen → Kerndaten extrahieren (Daten, Parteien, Beträge) → Dokumenttyp klassifizieren → an Reviewer-Warteschlange weiterleiten. Tools: n8n + GPT-4o. Ausgabe: strukturierter JSON-Datensatz in einer gemeinsamen Datenbank.',
+          'Dokumentenverarbeitung — Auslöser: neues PDF hochgeladen → Kerndaten extrahieren (Daten, Parteien, Beträge) → Dokumenttyp klassifizieren → an Reviewer-Warteschlange weiterleiten. Tools: n8n + GPT-5.5. Ausgabe: strukturierter JSON-Datensatz in einer gemeinsamen Datenbank.',
           'Recherche-Pipeline — Auslöser: Themenliste eingereicht → Webquellen suchen → jede Quelle zusammenfassen → strukturierten Bericht erstellen. Tools: LangChain + Perplexity API. Ausgabe: Markdown-Bericht mit Quellenangaben.',
           'Code-Review-Schleife — Auslöser: Pull Request geöffnet → Diff analysieren → Review-Kommentare nach Schweregrad erstellen → Kommentare im PR veröffentlichen. Tools: GitHub Actions + Claude 4.6 Sonnet. Ausgabe: PR-Kommentare über GitHub API.',
           'Kundentriage — Auslöser: neues Support-Ticket eingegangen → Schweregrad klassifizieren (P1/P2/P3) → an richtigen Kanal weiterleiten → Erstentwurf einer Antwort generieren. Tools: Make + PromptQuorum. Ausgabe: Ticket mit Schweregradlabel und Antwortentwurf aktualisiert.',
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Das richtige Tool hängt davon ab, ob Ihr Team visuelle Automatisierung, codebasierte Pipelines oder Multi-Modell-Dispatch bevorzugt.**',
           'Make ist ein visueller No-Code-Workflow-Builder. Kosten: 0 $ für bis zu 1.000 Operationen/Monat, 16 $/Monat für 10.000 Operationen. Am besten für: nicht-technische Teams, CRM- und E-Mail-Integrationen. n8n ist Open-Source und selbst hostbar für 0 $. LangChain (Python und JavaScript) ist ein codebasiertes Framework für mehrstufige Prompt-Pipelines.',
-          'PromptQuorum ergänzt jedes dieser Tools um Multi-Modell-Dispatch und den direkten Vergleich von Ausgaben zwischen GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro. Verwenden Sie es an Schritten, bei denen die Modellwahl die Ausgabequalität beeinflusst.',
+          'PromptQuorum ergänzt jedes dieser Tools um Multi-Modell-Dispatch und den direkten Vergleich von Ausgaben zwischen GPT-5.5, Claude 4.6 Sonnet und Gemini 2.5 Pro. Verwenden Sie es an Schritten, bei denen die Modellwahl die Ausgabequalität beeinflusst.',
         ],
         callouts: [
           { type: 'tip', label: 'Tool-Auswahlregel', text: 'Beginnen Sie mit Make oder n8n für die Orchestrierung und fügen Sie PromptQuorum an Schritten hinzu, an denen Sie Modellausgaben vergleichen oder das beste Modell dispatchen möchten.' },
@@ -307,7 +307,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Automatisieren Sie bei Häufigkeit >5/Woche, strukturierten Eingaben und konstantem Output-Routing',
           'Drei Auslöser-Typen: ereignisbasiert (Webhook/Upload), zeitplanbasiert (Cron), schwellenwertbasiert (Metrik)',
           'JSON-Ausgabeschema an jeder Schrittgrenze definieren — niemals unstrukturierte Rohdaten weitergeben',
-          '4 Produktionsvorlagen: Dokumentenverarbeitung (n8n + GPT-4o), Recherche (LangChain + Perplexity), Code-Review (GitHub Actions + Claude 4.6 Sonnet), Kundentriage (Make + PromptQuorum)',
+          '4 Produktionsvorlagen: Dokumentenverarbeitung (n8n + GPT-5.5), Recherche (LangChain + Perplexity), Code-Review (GitHub Actions + Claude 4.6 Sonnet), Kundentriage (Make + PromptQuorum)',
         ],
       },
       faq: {
@@ -384,7 +384,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-02',
       keywords: ['flujos de trabajo de prompts', 'plantillas de automatización', 'prompts repetibles', 'LangChain workflow', 'n8n prompts', 'Make automatización'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
@@ -433,10 +433,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Cuatro plantillas cubren los casos de uso de producción más comunes: procesamiento de documentos, pipeline de investigación, revisión de código y triage de clientes.**',
         ],
         numberedItems: [
-          'Procesamiento de documentos — activador: nuevo PDF cargado → extraer datos clave (fechas, partes, importes) → clasificar tipo de documento → enrutar a la cola del revisor asignado. Herramientas: n8n para orquestación + GPT-4o para extracción y clasificación. Salida: registro JSON estructurado escrito en una base de datos compartida.',
+          'Procesamiento de documentos — activador: nuevo PDF cargado → extraer datos clave (fechas, partes, importes) → clasificar tipo de documento → enrutar a la cola del revisor asignado. Herramientas: n8n para orquestación + GPT-5.5 para extracción y clasificación. Salida: registro JSON estructurado escrito en una base de datos compartida.',
           'Pipeline de investigación — activador: lista de temas enviada → buscar fuentes web → resumir cada fuente → sintetizar en un informe estructurado. Herramientas: LangChain para orquestación multi-paso + API de Perplexity para búsqueda web. Salida: informe markdown con citas, almacenado en una carpeta compartida.',
           'Bucle de revisión de código — activador: pull request abierto → analizar diff → generar comentarios de revisión inline categorizados por severidad → publicar comentarios en el PR. Herramientas: GitHub Actions para el activador + Claude 4.6 Sonnet para el análisis del diff. Salida: comentarios de PR publicados a través de la API de GitHub.',
-          'Triage de clientes — activador: nuevo ticket de soporte recibido → clasificar severidad (P1/P2/P3) → enrutar a la cola correcta → generar un borrador de primera respuesta. Herramientas: Make para orquestación + PromptQuorum para despacho multi-modelo (despacha a GPT-4o para clasificación, Claude 4.6 Sonnet para generación de borrador). Salida: ticket actualizado con etiqueta de severidad y respuesta borrador.',
+          'Triage de clientes — activador: nuevo ticket de soporte recibido → clasificar severidad (P1/P2/P3) → enrutar a la cola correcta → generar un borrador de primera respuesta. Herramientas: Make para orquestación + PromptQuorum para despacho multi-modelo (despacha a GPT-5.5 para clasificación, Claude 4.6 Sonnet para generación de borrador). Salida: ticket actualizado con etiqueta de severidad y respuesta borrador.',
         ],
       },
       tools: {
@@ -444,7 +444,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**La herramienta correcta depende de si tu equipo prefiere automatización visual, pipelines de código primero o despacho multi-modelo.**',
           'Make (anteriormente Integromat) es un constructor de flujos de trabajo visual sin código. Coste: $0 para hasta 1.000 operaciones/mes, $16/mes para 10.000 operaciones. Mejor para: equipos no técnicos, integraciones de CRM y email, pipelines de acción-activador sencillos. n8n es de código abierto y auto-alojable a $0 de coste. LangChain (Python y JavaScript) es un framework de código primero para construir pipelines de prompts de múltiples pasos con memoria, agentes y uso de herramientas.',
-          'PromptQuorum añade despacho multi-modelo y comparación de salidas en paralelo entre GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro — úsalo en cualquier paso donde la selección del modelo afecte la calidad de la salida.',
+          'PromptQuorum añade despacho multi-modelo y comparación de salidas en paralelo entre GPT-5.5, Claude 4.6 Sonnet y Gemini 2.5 Pro — úsalo en cualquier paso donde la selección del modelo afecte la calidad de la salida.',
         ],
         callouts: [
           { type: 'tip', label: 'Regla de selección de herramienta', text: 'Comienza con Make o n8n para la orquestación y añade PromptQuorum en cualquier paso donde necesites comparar salidas de modelos o despachar al mejor modelo para ese tipo de paso.' },
@@ -474,7 +474,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Automatiza cuando la frecuencia >5/semana, las entradas son estructuradas y la salida siempre se enruta al mismo siguiente paso',
           'Tres tipos de activadores: basado en eventos (webhook/carga), basado en programación (cron), basado en umbrales (métrica)',
           'Define un esquema de salida JSON en cada límite de paso — nunca pases texto sin estructura entre pasos',
-          '4 plantillas de producción: procesamiento de documentos (n8n + GPT-4o), investigación (LangChain + Perplexity), revisión de código (GitHub Actions + Claude 4.6 Sonnet), triage de clientes (Make + PromptQuorum)',
+          '4 plantillas de producción: procesamiento de documentos (n8n + GPT-5.5), investigación (LangChain + Perplexity), revisión de código (GitHub Actions + Claude 4.6 Sonnet), triage de clientes (Make + PromptQuorum)',
         ],
       },
       faq: {
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-02',
       keywords: ['workflows de prompts', 'automatisation', 'prompts répétables', 'LangChain workflow', 'n8n prompts', 'Make automatisation'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Quatre modèles couvrent les cas d\'usage les plus courants : traitement de documents, pipeline de recherche, revue de code et triage client.**',
         ],
         numberedItems: [
-          'Traitement de documents — déclencheur : nouveau PDF téléchargé → extraire les données clés → classifier le type de document → acheminer vers la file de révision. Outils : n8n + GPT-4o. Sortie : enregistrement JSON structuré écrit dans une base de données partagée.',
+          'Traitement de documents — déclencheur : nouveau PDF téléchargé → extraire les données clés → classifier le type de document → acheminer vers la file de révision. Outils : n8n + GPT-5.5. Sortie : enregistrement JSON structuré écrit dans une base de données partagée.',
           'Pipeline de recherche — déclencheur : liste de sujets soumise → rechercher des sources web → résumer chaque source → générer un rapport structuré. Outils : LangChain + API Perplexity. Sortie : rapport Markdown avec citations.',
           'Boucle de revue de code — déclencheur : pull request ouverte → analyser le diff → générer des commentaires catégorisés par sévérité → publier les commentaires sur la PR. Outils : GitHub Actions + Claude 4.6 Sonnet. Sortie : commentaires PR publiés via l\'API GitHub.',
           'Triage client — déclencheur : nouveau ticket de support reçu → classifier la sévérité (P1/P2/P3) → acheminer vers la bonne file → générer un brouillon de première réponse. Outils : Make + PromptQuorum. Sortie : ticket mis à jour avec label de sévérité et brouillon de réponse.',
@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Le bon outil dépend de si votre équipe préfère l\'automatisation visuelle, les pipelines basés sur le code, ou le dispatch multi-modèle.**',
           'Make est un générateur de workflows visuel sans code. Coût : 0 $ pour 1 000 opérations/mois, 16 $/mois pour 10 000 opérations. n8n est open-source et auto-hébergeable à 0 $. LangChain (Python et JavaScript) est un framework basé sur le code pour des pipelines de prompts multi-étapes.',
-          'PromptQuorum ajoute le dispatch multi-modèle et la comparaison côte à côte des sorties entre GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro. Utilisez-le à toute étape où le choix du modèle affecte la qualité de la sortie.',
+          'PromptQuorum ajoute le dispatch multi-modèle et la comparaison côte à côte des sorties entre GPT-5.5, Claude 4.6 Sonnet et Gemini 2.5 Pro. Utilisez-le à toute étape où le choix du modèle affecte la qualité de la sortie.',
         ],
         callouts: [
           { type: 'tip', label: 'Règle de sélection d\'outil', text: 'Commencez avec Make ou n8n pour l\'orchestration et ajoutez PromptQuorum aux étapes où vous avez besoin de comparer les sorties des modèles ou de dispatcher vers le meilleur modèle.' },
@@ -641,7 +641,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Automatisez quand la fréquence >5/semaine, les entrées sont structurées et la sortie est toujours acheminée vers la même étape suivante',
           'Trois types de déclencheurs : événementiel (webhook/envoi), planifié (cron), par seuil (métrique)',
           'Définir un schéma de sortie JSON à chaque frontière d\'étape — ne jamais transmettre du texte brut non structuré',
-          '4 modèles de production : traitement de documents (n8n + GPT-4o), recherche (LangChain + Perplexity), revue de code (GitHub Actions + Claude 4.6 Sonnet), triage client (Make + PromptQuorum)',
+          '4 modèles de production : traitement de documents (n8n + GPT-5.5), recherche (LangChain + Perplexity), revue de code (GitHub Actions + Claude 4.6 Sonnet), triage client (Make + PromptQuorum)',
         ],
       },
       faq: {
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-02',
       keywords: ['プロンプトワークフロー', '自動化テンプレート', '繰り返し可能なプロンプト', 'LangChainワークフロー', 'n8nプロンプト'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
@@ -767,7 +767,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**4つのテンプレートが最も一般的な本番ユースケースをカバーします：文書処理、リサーチパイプライン、コードレビュー、顧客トリアージ。**',
         ],
         numberedItems: [
-          '文書処理 — トリガー：新しいPDFアップロード → 主要データを抽出（日付、当事者、金額）→ 文書タイプを分類 → レビュアーキューにルーティング。ツール：n8n + GPT-4o。出力：共有データベースに書き込まれた構造化JSONレコード。',
+          '文書処理 — トリガー：新しいPDFアップロード → 主要データを抽出（日付、当事者、金額）→ 文書タイプを分類 → レビュアーキューにルーティング。ツール：n8n + GPT-5.5。出力：共有データベースに書き込まれた構造化JSONレコード。',
           'リサーチパイプライン — トリガー：トピックリスト送信 → ウェブソースを検索 → 各ソースを要約 → 構造化レポートを生成。ツール：LangChain + Perplexity API。出力：引用付きMarkdownレポート。',
           'コードレビューループ — トリガー：プルリクエストが開かれる → diff分析 → 重大度別にレビューコメントを生成 → PRにコメントを投稿。ツール：GitHub Actions + Claude 4.6 Sonnet。出力：GitHub APIを介して投稿されたPRコメント。',
           '顧客トリアージ — トリガー：新しいサポートチケット受信 → 重大度を分類（P1/P2/P3）→ 適切なキューにルーティング → 最初の応答の下書きを生成。ツール：Make + PromptQuorum。出力：重大度ラベルと応答下書きで更新されたチケット。',
@@ -778,7 +778,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**適切なツールは、チームがビジュアル自動化、コードファーストパイプライン、またはマルチモデルディスパッチを好むかどうかによって異なります。**',
           'Makeはビジュアルなノーコードワークフロービルダーです。コスト：月1,000オペレーションまで0ドル、10,000オペレーションで月16ドル。n8nはオープンソースで自己ホスト可能（0ドル）。LangChain（PythonとJavaScript）はメモリ、エージェント、ツール使用を備えたマルチステッププロンプトパイプライン向けのコードファーストフレームワークです。',
-          'PromptQuorumはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proへのマルチモデルディスパッチと出力の並列比較を追加します。モデルの選択が出力品質に影響するステップで使用してください。',
+          'PromptQuorumはGPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Proへのマルチモデルディスパッチと出力の並列比較を追加します。モデルの選択が出力品質に影響するステップで使用してください。',
         ],
         callouts: [
           { type: 'tip', label: 'ツール選択ルール', text: 'オーケストレーションにはMakeまたはn8nから始め、モデル出力を比較したり最適なモデルにディスパッチしたいステップでPromptQuorumを追加してください。' },
@@ -808,7 +808,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '週5回以上の頻度、構造化された入力、一定の出力ルーティングがある場合は自動化する',
           '3つのトリガータイプ：イベントベース（Webhook/アップロード）、スケジュールベース（cron）、しきい値ベース（メトリクス）',
           '各ステップの境界でJSON出力スキーマを定義——非構造化テキストを渡さない',
-          '4つの本番テンプレート：文書処理（n8n + GPT-4o）、リサーチ（LangChain + Perplexity）、コードレビュー（GitHub Actions + Claude 4.6 Sonnet）、顧客トリアージ（Make + PromptQuorum）',
+          '4つの本番テンプレート：文書処理（n8n + GPT-5.5）、リサーチ（LangChain + Perplexity）、コードレビュー（GitHub Actions + Claude 4.6 Sonnet）、顧客トリアージ（Make + PromptQuorum）',
         ],
       },
       faq: {
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-02',
       keywords: ['Prompt工作流', '自动化模板', '可重复Prompt', 'LangChain工作流', 'n8n Prompt', '生产AI工作流'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**4个模板涵盖最常见的生产用例：文档处理、研究管道、代码审查和客户分诊。**',
         ],
         numberedItems: [
-          '文档处理——触发：新PDF上传 → 提取关键数据（日期、当事方、金额）→ 分类文档类型 → 路由到审阅者队列。工具：n8n + GPT-4o。输出：写入共享数据库的结构化JSON记录。',
+          '文档处理——触发：新PDF上传 → 提取关键数据（日期、当事方、金额）→ 分类文档类型 → 路由到审阅者队列。工具：n8n + GPT-5.5。输出：写入共享数据库的结构化JSON记录。',
           '研究管道——触发：提交主题列表 → 搜索网络来源 → 汇总每个来源 → 生成结构化报告。工具：LangChain + Perplexity API。输出：带引用的Markdown报告。',
           '代码审查循环——触发：拉取请求打开 → 分析差异 → 按严重程度生成内联审查评论 → 将评论发布到PR。工具：GitHub Actions + Claude 4.6 Sonnet。输出：通过GitHub API发布的PR评论。',
           '客户分诊——触发：收到新支持工单 → 分类严重程度（P1/P2/P3）→ 路由到正确队列 → 生成初始回复草稿。工具：Make + PromptQuorum。输出：更新了严重程度标签和回复草稿的工单。',
@@ -945,7 +945,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**正确的工具取决于你的团队偏好可视化自动化、代码优先管道还是多模型调度。**',
           'Make是一个可视化无代码工作流构建器。成本：每月1,000次操作以内免费，每月10,000次操作16美元。n8n是开源且可自托管的（0美元）。LangChain（Python和JavaScript）是一个用于构建多步骤Prompt管道的代码优先框架。',
-          'PromptQuorum为GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro添加多模型调度和并排输出比较。在模型选择影响输出质量的任何步骤中使用它。',
+          'PromptQuorum为GPT-5.5、Claude 4.6 Sonnet和Gemini 2.5 Pro添加多模型调度和并排输出比较。在模型选择影响输出质量的任何步骤中使用它。',
         ],
         callouts: [
           { type: 'tip', label: '工具选择规则', text: '从Make或n8n开始进行编排，并在需要比较模型输出或调度到最佳模型的步骤添加PromptQuorum。' },
@@ -975,7 +975,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '当频率>每周5次、输入结构化、输出始终路由到相同下一步时自动化',
           '三种触发类型：基于事件（Webhook/上传）、基于计划（cron）、基于阈值（指标）',
           '在每个步骤边界定义JSON输出架构——永远不要传递非结构化文本',
-          '4个生产模板：文档处理（n8n + GPT-4o）、研究（LangChain + Perplexity）、代码审查（GitHub Actions + Claude 4.6 Sonnet）、客户分诊（Make + PromptQuorum）',
+          '4个生产模板：文档处理（n8n + GPT-5.5）、研究（LangChain + Perplexity）、代码审查（GitHub Actions + Claude 4.6 Sonnet）、客户分诊（Make + PromptQuorum）',
         ],
       },
       faq: {

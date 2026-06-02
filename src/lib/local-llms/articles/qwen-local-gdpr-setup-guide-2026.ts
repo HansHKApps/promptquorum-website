@@ -8,22 +8,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     title: 'How to Set Up Qwen Locally for GDPR-Compliant Workflows',
     seoTitle: 'GDPR-Compliant Local LLM Setup with Qwen 2026 | PromptQuorum',
-    metaDescription: 'Step-by-step guide to running Qwen 2.5 14B locally for GDPR compliance: Ollama install, network isolation, disk encryption, and Article 30 audit trail. Updated May 2026.',
+    metaDescription: 'Step-by-step guide to running Qwen 3 14B locally for GDPR compliance: Ollama install, network isolation, disk encryption, and Article 30 audit trail. Updated May 2026.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     readTime: '9 min read',
     educationalLevel: 'Intermediate',
     audience: 'DPOs, IT leads, and legal ops teams setting up a GDPR-compliant local LLM stack',
     primaryTerm: 'GDPR-compliant local LLM setup',
-    leadAnswerBlock: '**Running Qwen 2.5 14B locally via Ollama on your own hardware produces a deployment where no prompt data leaves your jurisdiction — directly satisfying GDPR Articles 44, 25, and 5(1)(f).**',
-    current_models_mentioned: ['Qwen 2.5 14B', 'Qwen 2.5 Coder 14B', 'Qwen 3 8B', 'Llama 4 Scout'],
+    leadAnswerBlock: '**Running Qwen 3 14B locally via Ollama on your own hardware produces a deployment where no prompt data leaves your jurisdiction — directly satisfying GDPR Articles 44, 25, and 5(1)(f).**',
+    current_models_mentioned: ['Qwen 3 14B', 'Qwen 3 Coder 14B', 'Qwen 3 8B', 'Llama 4 Scout'],
     current_hardware_mentioned: ['RTX 3080', 'RTX 4070', 'RTX 3090'],
     quickAnswerTop: {
       en: {
         question: 'How do I set up Qwen locally for GDPR compliance?',
         answer: 'Install Ollama, run ollama run qwen2.5:14b on a machine with 12 GB VRAM, block all outbound network calls from the inference process, enable full-disk encryption, and log prompt/response hashes (not content) for your Article 30 processing record. Total setup time: under 30 minutes.',
         bullets: [
-          'Hardware: RTX 3080 / RTX 4070 / any 12 GB VRAM GPU — minimum for Qwen 2.5 14B at Q4',
+          'Hardware: RTX 3080 / RTX 4070 / any 12 GB VRAM GPU — minimum for Qwen 3 14B at Q4',
           'Isolation: firewall the Ollama port (11434) to LAN-only; disable telemetry in .ollama/config',
           'Article 30 record: log model name, quantization, timestamp, and prompt hash — never raw PII',
         ],
@@ -33,7 +33,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Wie richte ich Qwen lokal für DSGVO-Compliance ein?',
         answer: 'Ollama installieren, ollama run qwen2.5:14b auf einer Maschine mit 12 GB VRAM ausführen, alle ausgehenden Netzwerkaufrufe des Inferenzprozesses blockieren, Festplattenverschlüsselung aktivieren und Prompt/Antwort-Hashes (nicht den Inhalt) für das Verarbeitungsverzeichnis nach Artikel 30 protokollieren. Einrichtungszeit: unter 30 Minuten.',
         bullets: [
-          'Hardware: RTX 3080 / RTX 4070 / beliebige 12-GB-VRAM-GPU — Minimum für Qwen 2.5 14B bei Q4',
+          'Hardware: RTX 3080 / RTX 4070 / beliebige 12-GB-VRAM-GPU — Minimum für Qwen 3 14B bei Q4',
           'Isolation: Ollama-Port (11434) per Firewall auf LAN beschränken; Telemetrie in .ollama/config deaktivieren',
           'Artikel-30-Verzeichnis: Modellname, Quantisierung, Zeitstempel und Prompt-Hash protokollieren — keine rohen personenbezogenen Daten',
         ],
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Comment configurer Qwen localement pour la conformité RGPD ?',
         answer: 'Installez Ollama, exécutez ollama run qwen2.5:14b sur une machine avec 12 Go de VRAM, bloquez tous les appels réseau sortants du processus d\'inférence, activez le chiffrement intégral du disque, et journalisez les hachages de prompt/réponse (pas le contenu) pour votre registre de traitement Article 30. Durée d\'installation : moins de 30 minutes.',
         bullets: [
-          'Matériel : RTX 3080 / RTX 4070 / toute GPU 12 Go VRAM — minimum pour Qwen 2.5 14B en Q4',
+          'Matériel : RTX 3080 / RTX 4070 / toute GPU 12 Go VRAM — minimum pour Qwen 3 14B en Q4',
           'Isolation : restreindre le port Ollama (11434) au LAN par pare-feu ; désactiver la télémétrie dans .ollama/config',
           'Registre Article 30 : journaliser nom du modèle, quantisation, horodatage et hash du prompt — jamais les données personnelles brutes',
         ],
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'GDPR準拠のためにQwenをローカルでセットアップするには？',
         answer: 'Ollamaをインストールし、12 GB VRAMのマシンでollama run qwen2.5:14bを実行し、推論プロセスのすべての外部ネットワーク呼び出しをブロックし、フルディスク暗号化を有効にし、第30条処理記録のためにプロンプト/レスポンスのハッシュ（内容でなく）をログに記録します。セットアップ時間：30分未満。',
         bullets: [
-          'ハードウェア：RTX 3080 / RTX 4070 / 12 GB VRAM以上のGPU——Q4でのQwen 2.5 14Bの最低要件',
+          'ハードウェア：RTX 3080 / RTX 4070 / 12 GB VRAM以上のGPU——Q4でのQwen 3 14Bの最低要件',
           '分離：ファイアウォールでOllamaポート（11434）をLAN専用に制限；.ollama/configでテレメトリを無効化',
           '第30条記録：モデル名・量子化・タイムスタンプ・プロンプトハッシュをログ記録——生の個人データは含めない',
         ],
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '如何为GDPR合规本地设置Qwen？',
         answer: '安装Ollama，在12 GB VRAM的机器上运行ollama run qwen2.5:14b，阻止推理进程的所有外部网络调用，启用全盘加密，并记录提示词/响应哈希（非内容）用于第30条处理记录。安装时间：30分钟以内。',
         bullets: [
-          '硬件：RTX 3080 / RTX 4070 / 任意12 GB VRAM GPU——Q4运行Qwen 2.5 14B的最低要求',
+          '硬件：RTX 3080 / RTX 4070 / 任意12 GB VRAM GPU——Q4运行Qwen 3 14B的最低要求',
           '隔离：防火墙限制Ollama端口（11434）仅限局域网；在.ollama/config中禁用遥测',
           '第30条记录：记录模型名称、量化、时间戳和提示词哈希——绝不包含原始个人数据',
         ],
@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Local Qwen deployment satisfies GDPR Articles 44 (no third-country transfer), 25 (privacy by design), and 5(1)(f) (data integrity) in a single architecture decision',
-          'Minimum hardware: any 12 GB VRAM GPU (RTX 3080, RTX 4070 Ti, or equivalent) running Qwen 2.5 14B at Q4_K_M via Ollama',
+          'Minimum hardware: any 12 GB VRAM GPU (RTX 3080, RTX 4070 Ti, or equivalent) running Qwen 3 14B at Q4_K_M via Ollama',
           'Critical isolation steps: firewall Ollama port 11434 to LAN-only, disable model-download telemetry, run on an isolated network segment',
           'Article 30 processing record: log model version, quantization level, session timestamp, and a SHA-256 hash of the prompt — never log PII content itself',
           'Total setup time from clean OS to first GDPR-safe inference: under 30 minutes',
@@ -109,14 +109,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'Hardware Requirements by Organisation Size',
         content: [
-          '<strong>For a single DPO or legal ops analyst: any GPU with 12 GB VRAM handles Qwen 2.5 14B Q4_K_M at practical inference speeds (~18 tok/s on RTX 3080). For a team of 5–10 users sharing a central server: 24 GB VRAM (RTX 3090 or RTX 4090) handles multiple simultaneous requests.</strong> Enterprise multi-user deployment requires multi-GPU setup — out of scope for this guide.',
+          '<strong>For a single DPO or legal ops analyst: any GPU with 12 GB VRAM handles Qwen 3 14B Q4_K_M at practical inference speeds (~18 tok/s on RTX 3080). For a team of 5–10 users sharing a central server: 24 GB VRAM (RTX 3090 or RTX 4090) handles multiple simultaneous requests.</strong> Enterprise multi-user deployment requires multi-GPU setup — out of scope for this guide.',
           'Minimum viable setup: RTX 3080, RTX 4070 Ti, or any GPU with 12 GB VRAM. Dedicated GPU recommended over shared workstation GPU — you want inference-only, not a GPU switching between gaming and LLM workloads. CPU fallback is possible via Ollama but inference speed drops to ~3 tok/s.',
         ],
         columns: ['Team Size', 'Recommended GPU', 'Model', 'Expected Speed'],
         rows: [
-          { 'Team Size': '1 user', 'Recommended GPU': 'RTX 3080 (12 GB)', 'Model': 'Qwen 2.5 14B Q4', 'Expected Speed': '~18 tok/s' },
-          { 'Team Size': '2–5 users (queued)', 'Recommended GPU': 'RTX 4070 Ti (12 GB)', 'Model': 'Qwen 2.5 14B Q4', 'Expected Speed': '~22 tok/s' },
-          { 'Team Size': '5–10 users (shared)', 'Recommended GPU': 'RTX 3090 / 4090 (24 GB)', 'Model': 'Qwen 2.5 14B Q5', 'Expected Speed': '~28 tok/s' },
+          { 'Team Size': '1 user', 'Recommended GPU': 'RTX 3080 (12 GB)', 'Model': 'Qwen 3 14B Q4', 'Expected Speed': '~18 tok/s' },
+          { 'Team Size': '2–5 users (queued)', 'Recommended GPU': 'RTX 4070 Ti (12 GB)', 'Model': 'Qwen 3 14B Q4', 'Expected Speed': '~22 tok/s' },
+          { 'Team Size': '5–10 users (shared)', 'Recommended GPU': 'RTX 3090 / 4090 (24 GB)', 'Model': 'Qwen 3 14B Q5', 'Expected Speed': '~28 tok/s' },
           { 'Team Size': 'Long-document team', 'Recommended GPU': 'RTX 3090 (24 GB)', 'Model': 'Llama 4 Scout (10M ctx)', 'Expected Speed': '~15 tok/s' },
         ],
       },
@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ollama-install',
         title: 'Ollama Installation — Step by Step',
         content: [
-          '<strong>Install Ollama on Linux, macOS, or Windows. Pull Qwen 2.5 14B once over HTTPS. After that, inference is fully offline.</strong>',
+          '<strong>Install Ollama on Linux, macOS, or Windows. Pull Qwen 3 14B once over HTTPS. After that, inference is fully offline.</strong>',
         ],
         numberedItems: [
           {
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Does a local LLM require a Data Protection Impact Assessment (DPIA)?',
-            a: 'Possibly. A DPIA is required when processing is likely to result in a high risk to individuals — for example, processing medical records, employee performance data, or legal documents at scale. The "systematic and large-scale" threshold is the trigger, not the AI tool itself. A single analyst using Qwen 2.5 14B for contract review likely does not trigger mandatory DPIA. A healthcare organisation processing hundreds of patient records per day likely does.',
+            a: 'Possibly. A DPIA is required when processing is likely to result in a high risk to individuals — for example, processing medical records, employee performance data, or legal documents at scale. The "systematic and large-scale" threshold is the trigger, not the AI tool itself. A single analyst using Qwen 3 14B for contract review likely does not trigger mandatory DPIA. A healthcare organisation processing hundreds of patient records per day likely does.',
           },
           {
             q: 'Can I use Open WebUI with Ollama for GDPR-compliant access?',
@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which Qwen model variant is best for legal and HR text in European languages?',
-            a: 'Qwen 2.5 14B Q4_K_M is the recommended baseline: strong across German, French, Italian, Spanish, and English at the 14B tier. For code-heavy legal workflows (e.g., processing contracts with embedded code clauses or structured data), Qwen 2.5 Coder 14B Q4_K_M. For organisations limited to 6–8 GB VRAM, Qwen 3 8B performs well on multilingual text.',
+            a: 'Qwen 3 14B Q4_K_M is the recommended baseline: strong across German, French, Italian, Spanish, and English at the 14B tier. For code-heavy legal workflows (e.g., processing contracts with embedded code clauses or structured data), Qwen 3 Coder 14B Q4_K_M. For organisations limited to 6–8 GB VRAM, Qwen 3 8B performs well on multilingual text.',
           },
           {
             q: 'Do I need a Data Processing Agreement with Ollama?',
@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Lokale Qwen-Bereitstellung erfüllt DSGVO-Artikel 44 (kein Drittlandtransfer), Artikel 25 (Datenschutz durch Technikgestaltung) und Artikel 5(1)(f) (Datenintegrität) durch eine einzige Architekturentscheidung',
-          'Mindest-Hardware: beliebige 12-GB-VRAM-GPU (RTX 3080, RTX 4070 Ti oder ähnlich) für Qwen 2.5 14B bei Q4_K_M via Ollama',
+          'Mindest-Hardware: beliebige 12-GB-VRAM-GPU (RTX 3080, RTX 4070 Ti oder ähnlich) für Qwen 3 14B bei Q4_K_M via Ollama',
           'Kritische Isolierungsschritte: Ollama-Port 11434 per Firewall auf LAN beschränken, Telemetrie deaktivieren, auf isoliertem Netzwerksegment betreiben',
           'Artikel-30-Verarbeitungsverzeichnis: Modellversion, Quantisierung, Sitzungszeitstempel und SHA-256-Hash des Prompts protokollieren — niemals personenbezogene Dateninhalte selbst',
           'Gesamte Einrichtungszeit von frischem OS bis erster DSGVO-sicherer Inferenz: unter 30 Minuten',
@@ -253,21 +253,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'Hardware-Anforderungen nach Organisationsgröße',
         content: [
-          '<strong>Für einen einzelnen Datenschutzbeauftragten oder eine Rechtsabteilung: jede GPU mit 12 GB VRAM ermöglicht Qwen 2.5 14B Q4_K_M bei praktischen Inferenzgeschwindigkeiten (~18 Tok/s auf RTX 3080). Für ein Team mit 5–10 gemeinsamen Nutzern: 24 GB VRAM (RTX 3090 oder RTX 4090) verarbeitet mehrere gleichzeitige Anfragen.</strong>',
+          '<strong>Für einen einzelnen Datenschutzbeauftragten oder eine Rechtsabteilung: jede GPU mit 12 GB VRAM ermöglicht Qwen 3 14B Q4_K_M bei praktischen Inferenzgeschwindigkeiten (~18 Tok/s auf RTX 3080). Für ein Team mit 5–10 gemeinsamen Nutzern: 24 GB VRAM (RTX 3090 oder RTX 4090) verarbeitet mehrere gleichzeitige Anfragen.</strong>',
           'Mindest-Setup: RTX 3080, RTX 4070 Ti oder beliebige 12-GB-VRAM-GPU. Dedizierte GPU empfohlen — keine GPU, die zwischen Gaming und LLM wechselt. CPU-Fallback über Ollama ist möglich, aber Inferenzgeschwindigkeit sinkt auf ~3 Tok/s.',
         ],
         columns: ['Teamgröße', 'Empfohlene GPU', 'Modell', 'Erwartete Geschwindigkeit'],
         rows: [
-          { 'Teamgröße': '1 Nutzer', 'Empfohlene GPU': 'RTX 3080 (12 GB)', 'Modell': 'Qwen 2.5 14B Q4', 'Erwartete Geschwindigkeit': '~18 Tok/s' },
-          { 'Teamgröße': '2–5 Nutzer (gereihte Anfragen)', 'Empfohlene GPU': 'RTX 4070 Ti (12 GB)', 'Modell': 'Qwen 2.5 14B Q4', 'Erwartete Geschwindigkeit': '~22 Tok/s' },
-          { 'Teamgröße': '5–10 Nutzer (geteilt)', 'Empfohlene GPU': 'RTX 3090 / 4090 (24 GB)', 'Modell': 'Qwen 2.5 14B Q5', 'Erwartete Geschwindigkeit': '~28 Tok/s' },
+          { 'Teamgröße': '1 Nutzer', 'Empfohlene GPU': 'RTX 3080 (12 GB)', 'Modell': 'Qwen 3 14B Q4', 'Erwartete Geschwindigkeit': '~18 Tok/s' },
+          { 'Teamgröße': '2–5 Nutzer (gereihte Anfragen)', 'Empfohlene GPU': 'RTX 4070 Ti (12 GB)', 'Modell': 'Qwen 3 14B Q4', 'Erwartete Geschwindigkeit': '~22 Tok/s' },
+          { 'Teamgröße': '5–10 Nutzer (geteilt)', 'Empfohlene GPU': 'RTX 3090 / 4090 (24 GB)', 'Modell': 'Qwen 3 14B Q5', 'Erwartete Geschwindigkeit': '~28 Tok/s' },
           { 'Teamgröße': 'Langdokument-Team', 'Empfohlene GPU': 'RTX 3090 (24 GB)', 'Modell': 'Llama 4 Scout (10M Kontext)', 'Erwartete Geschwindigkeit': '~15 Tok/s' },
         ],
       },
       ollamaInstall: {
         id: 'ollama-install',
         title: 'Ollama-Installation — Schritt für Schritt',
-        content: ['<strong>Ollama auf Linux, macOS oder Windows installieren. Qwen 2.5 14B einmalig über HTTPS herunterladen. Danach ist Inferenz vollständig offline.</strong>'],
+        content: ['<strong>Ollama auf Linux, macOS oder Windows installieren. Qwen 3 14B einmalig über HTTPS herunterladen. Danach ist Inferenz vollständig offline.</strong>'],
         numberedItems: [
           { title: 'Ollama installieren', whyItMatters: 'Einzeiler auf Linux: <code>curl -fsSL https://ollama.com/install.sh | sh</code>. macOS: .app von ollama.com herunterladen. Windows: .exe-Installer. Überprüfen: <code>ollama --version</code> gibt Versionsnummer aus.' },
           { title: 'Modell herunterladen (einmaliger HTTPS-Download)', whyItMatters: '<code>ollama pull qwen2.5:14b</code> ausführen. ~9 GB werden von Hugging Face über HTTPS heruntergeladen. Dies ist die einzige erforderliche externe Netzwerkverbindung. Für Air-Gap-Umgebungen: auf vernetztem Rechner herunterladen, GGUF-Datei per USB übertragen und mit <code>ollama create qwen2.5:14b --from /pfad/zur/datei.gguf</code> importieren.' },
@@ -301,8 +301,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Was pro Inferenzsitzung protokolliert wird: (1) Modellname und -version, (2) Quantisierungsstufe, (3) Sitzungszeitstempel (ISO 8601), (4) SHA-256-Hash des Eingabe-Prompts — nicht der Rohtext. (5) Nutzerkennung (pseudonymisiert) falls zutreffend. Was NICHT protokolliert wird: Rohtext des Prompts, Rohtext der Antwort, extrahierte personenbezogene Daten.',
         ],
         faqs: [
-          { q: 'Erfordert ein lokales LLM eine Datenschutz-Folgenabschätzung (DSFA)?', a: 'Möglicherweise. Eine DSFA ist erforderlich, wenn die Verarbeitung voraussichtlich ein hohes Risiko für Personen birgt — z. B. bei medizinischen Unterlagen, Mitarbeiterleistungsdaten oder Rechtsdokumenten im großen Maßstab. Ein einzelner Analyst, der Qwen 2.5 14B für Vertragsprüfung nutzt, löst wahrscheinlich keine obligatorische DSFA aus. Eine Gesundheitsorganisation, die täglich Hunderte von Patientenakten verarbeitet, wahrscheinlich schon.' },
-          { q: 'Welches Qwen-Modell ist am besten für Rechts- und HR-Text in europäischen Sprachen?', a: 'Qwen 2.5 14B Q4_K_M ist die empfohlene Basis: stark in Deutsch, Französisch, Italienisch, Spanisch und Englisch auf dem 14B-Tier. Für VRAM-begrenzte Umgebungen (6–8 GB): Qwen 3 8B bietet gute mehrsprachige Leistung.' },
+          { q: 'Erfordert ein lokales LLM eine Datenschutz-Folgenabschätzung (DSFA)?', a: 'Möglicherweise. Eine DSFA ist erforderlich, wenn die Verarbeitung voraussichtlich ein hohes Risiko für Personen birgt — z. B. bei medizinischen Unterlagen, Mitarbeiterleistungsdaten oder Rechtsdokumenten im großen Maßstab. Ein einzelner Analyst, der Qwen 3 14B für Vertragsprüfung nutzt, löst wahrscheinlich keine obligatorische DSFA aus. Eine Gesundheitsorganisation, die täglich Hunderte von Patientenakten verarbeitet, wahrscheinlich schon.' },
+          { q: 'Welches Qwen-Modell ist am besten für Rechts- und HR-Text in europäischen Sprachen?', a: 'Qwen 3 14B Q4_K_M ist die empfohlene Basis: stark in Deutsch, Französisch, Italienisch, Spanisch und Englisch auf dem 14B-Tier. Für VRAM-begrenzte Umgebungen (6–8 GB): Qwen 3 8B bietet gute mehrsprachige Leistung.' },
         ],
       },
     },
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     title: 'Configurer Qwen localement pour des workflows conformes au RGPD',
     seoTitle: 'Configuration LLM local conforme RGPD avec Qwen 2026 | PromptQuorum',
-    metaDescription: 'Guide étape par étape pour faire tourner Qwen 2.5 14B localement en conformité RGPD : installation Ollama, isolation réseau, chiffrement disque, journal Article 30. Mai 2026.',
+    metaDescription: 'Guide étape par étape pour faire tourner Qwen 3 14B localement en conformité RGPD : installation Ollama, isolation réseau, chiffrement disque, journal Article 30. Mai 2026.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     readTime: '9 min de lecture',
@@ -323,7 +323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Le déploiement local de Qwen satisfait les Articles 44 (pas de transfert vers pays tiers), 25 (protection dès la conception) et 5(1)(f) (intégrité des données) par une seule décision d\'architecture',
-          'Matériel minimum : toute GPU 12 Go VRAM (RTX 3080, RTX 4070 Ti ou équivalent) pour Qwen 2.5 14B en Q4_K_M via Ollama',
+          'Matériel minimum : toute GPU 12 Go VRAM (RTX 3080, RTX 4070 Ti ou équivalent) pour Qwen 3 14B en Q4_K_M via Ollama',
           'Étapes d\'isolation critiques : restreindre le port Ollama 11434 au LAN par pare-feu, désactiver la télémétrie, faire tourner sur un segment réseau isolé',
           'Registre de traitement Article 30 : journaliser version du modèle, quantisation, horodatage de session et hash SHA-256 du prompt — jamais le contenu personnel brut',
           'Durée totale d\'installation depuis un OS propre jusqu\'à la première inférence conforme RGPD : moins de 30 minutes',
@@ -346,21 +346,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'Besoins matériels selon la taille de l\'organisation',
         content: [
-          '<strong>Pour un DPO ou analyste juridique seul : toute GPU 12 Go VRAM gère Qwen 2.5 14B Q4_K_M à des vitesses pratiques (~18 tok/s sur RTX 3080). Pour une équipe de 5 à 10 utilisateurs partageant un serveur central : 24 Go VRAM (RTX 3090 ou RTX 4090).</strong>',
+          '<strong>Pour un DPO ou analyste juridique seul : toute GPU 12 Go VRAM gère Qwen 3 14B Q4_K_M à des vitesses pratiques (~18 tok/s sur RTX 3080). Pour une équipe de 5 à 10 utilisateurs partageant un serveur central : 24 Go VRAM (RTX 3090 ou RTX 4090).</strong>',
           'Configuration minimale viable : RTX 3080, RTX 4070 Ti, ou toute GPU 12 Go VRAM. GPU dédié recommandé. Le fallback CPU via Ollama est possible mais la vitesse d\'inférence descend à ~3 tok/s.',
         ],
         columns: ['Taille d\'équipe', 'GPU recommandée', 'Modèle', 'Vitesse attendue'],
         rows: [
-          { 'Taille d\'équipe': '1 utilisateur', 'GPU recommandée': 'RTX 3080 (12 Go)', 'Modèle': 'Qwen 2.5 14B Q4', 'Vitesse attendue': '~18 tok/s' },
-          { 'Taille d\'équipe': '2–5 utilisateurs (file)', 'GPU recommandée': 'RTX 4070 Ti (12 Go)', 'Modèle': 'Qwen 2.5 14B Q4', 'Vitesse attendue': '~22 tok/s' },
-          { 'Taille d\'équipe': '5–10 utilisateurs (partagé)', 'GPU recommandée': 'RTX 3090 / 4090 (24 Go)', 'Modèle': 'Qwen 2.5 14B Q5', 'Vitesse attendue': '~28 tok/s' },
+          { 'Taille d\'équipe': '1 utilisateur', 'GPU recommandée': 'RTX 3080 (12 Go)', 'Modèle': 'Qwen 3 14B Q4', 'Vitesse attendue': '~18 tok/s' },
+          { 'Taille d\'équipe': '2–5 utilisateurs (file)', 'GPU recommandée': 'RTX 4070 Ti (12 Go)', 'Modèle': 'Qwen 3 14B Q4', 'Vitesse attendue': '~22 tok/s' },
+          { 'Taille d\'équipe': '5–10 utilisateurs (partagé)', 'GPU recommandée': 'RTX 3090 / 4090 (24 Go)', 'Modèle': 'Qwen 3 14B Q5', 'Vitesse attendue': '~28 tok/s' },
           { 'Taille d\'équipe': 'Équipe longs documents', 'GPU recommandée': 'RTX 3090 (24 Go)', 'Modèle': 'Llama 4 Scout (10M ctx)', 'Vitesse attendue': '~15 tok/s' },
         ],
       },
       ollamaInstall: {
         id: 'ollama-install',
         title: 'Installation Ollama — étape par étape',
-        content: ['<strong>Installez Ollama sur Linux, macOS ou Windows. Téléchargez Qwen 2.5 14B une fois via HTTPS. Ensuite, l\'inférence est entièrement hors ligne.</strong>'],
+        content: ['<strong>Installez Ollama sur Linux, macOS ou Windows. Téléchargez Qwen 3 14B une fois via HTTPS. Ensuite, l\'inférence est entièrement hors ligne.</strong>'],
         numberedItems: [
           { title: 'Installer Ollama', whyItMatters: 'En une ligne sur Linux : <code>curl -fsSL https://ollama.com/install.sh | sh</code>. macOS : télécharger le .app. Windows : télécharger l\'installateur .exe. Vérifier : <code>ollama --version</code>.' },
           { title: 'Télécharger le modèle (téléchargement HTTPS unique)', whyItMatters: 'Exécutez <code>ollama pull qwen2.5:14b</code>. Télécharge ~9 Go depuis Hugging Face via HTTPS. C\'est la seule connexion réseau externe requise. En environnement isolé : téléchargez sur une machine connectée, transférez le fichier GGUF par USB et importez avec <code>ollama create qwen2.5:14b --from /chemin/fichier.gguf</code>.' },
@@ -394,8 +394,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'À journaliser par session d\'inférence : (1) nom et version du modèle, (2) niveau de quantisation, (3) horodatage de session (ISO 8601), (4) hash SHA-256 du prompt d\'entrée — pas le texte brut. À NE PAS journaliser : le texte brut du prompt, le texte brut de la réponse, toute donnée personnelle extraite.',
         ],
         faqs: [
-          { q: 'Un LLM local nécessite-t-il une Analyse d\'Impact sur la Protection des Données (AIPD) ?', a: 'Peut-être. Une AIPD est requise quand le traitement est susceptible d\'engendrer un risque élevé pour les personnes — par exemple, traitement de dossiers médicaux ou données de performance à grande échelle. Un seul analyste utilisant Qwen 2.5 14B pour la révision de contrats ne déclenche probablement pas d\'AIPD obligatoire. Une organisation de santé traitant des centaines de dossiers patients par jour, probablement si.' },
-          { q: 'Quel modèle Qwen est le mieux adapté aux textes juridiques et RH en langues européennes ?', a: 'Qwen 2.5 14B Q4_K_M est la base recommandée : fort sur l\'allemand, le français, l\'italien, l\'espagnol et l\'anglais au niveau 14B. Pour les environnements VRAM limités (6–8 Go) : Qwen 3 8B offre de bonnes performances multilingues.' },
+          { q: 'Un LLM local nécessite-t-il une Analyse d\'Impact sur la Protection des Données (AIPD) ?', a: 'Peut-être. Une AIPD est requise quand le traitement est susceptible d\'engendrer un risque élevé pour les personnes — par exemple, traitement de dossiers médicaux ou données de performance à grande échelle. Un seul analyste utilisant Qwen 3 14B pour la révision de contrats ne déclenche probablement pas d\'AIPD obligatoire. Une organisation de santé traitant des centaines de dossiers patients par jour, probablement si.' },
+          { q: 'Quel modèle Qwen est le mieux adapté aux textes juridiques et RH en langues européennes ?', a: 'Qwen 3 14B Q4_K_M est la base recommandée : fort sur l\'allemand, le français, l\'italien, l\'espagnol et l\'anglais au niveau 14B. Pour les environnements VRAM limités (6–8 Go) : Qwen 3 8B offre de bonnes performances multilingues.' },
         ],
       },
     },
@@ -406,7 +406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     title: 'GDPRに準拠したワークフローのためのQwenローカルセットアップ方法',
     seoTitle: 'QwenでGDPR準拠ローカルLLM構築 2026 | PromptQuorum',
-    metaDescription: 'Qwen 2.5 14BをGDPR準拠でローカル実行するステップバイステップガイド：Ollamaインストール、ネットワーク分離、ディスク暗号化、第30条監査証跡。2026年5月更新。',
+    metaDescription: 'Qwen 3 14BをGDPR準拠でローカル実行するステップバイステップガイド：Ollamaインストール、ネットワーク分離、ディスク暗号化、第30条監査証跡。2026年5月更新。',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     readTime: '9分で読める',
@@ -416,7 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'ローカルQwen展開はGDPR第44条（第三国転送なし）、第25条（プライバシーバイデザイン）、第5条(1)(f)（データ完全性）を単一のアーキテクチャ決定で満たす',
-          '最低ハードウェア：12 GB VRAM GPU（RTX 3080、RTX 4070 Ti相当）でOllama経由Qwen 2.5 14B Q4_K_M実行',
+          '最低ハードウェア：12 GB VRAM GPU（RTX 3080、RTX 4070 Ti相当）でOllama経由Qwen 3 14B Q4_K_M実行',
           '重要な分離手順：Ollamaポート11434をファイアウォールでLAN専用に制限、テレメトリ無効化、分離ネットワークセグメントで運用',
           '第30条処理記録：モデルバージョン・量子化・セッションタイムスタンプ・プロンプトSHA-256ハッシュを記録——個人データの内容自体は記録しない',
           'クリーンOSからGDPR安全な最初の推論まで合計セットアップ時間：30分以内',
@@ -439,21 +439,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: '組織規模別ハードウェア要件',
         content: [
-          '<strong>単一のDPOや法務アナリスト：12 GB VRAMのGPUでQwen 2.5 14B Q4_K_Mが実用的な推論速度（RTX 3080で~18 tok/s）で動作します。5〜10人のチームが中央サーバーを共有する場合：24 GB VRAM（RTX 3090またはRTX 4090）が複数の同時リクエストを処理します。</strong>',
+          '<strong>単一のDPOや法務アナリスト：12 GB VRAMのGPUでQwen 3 14B Q4_K_Mが実用的な推論速度（RTX 3080で~18 tok/s）で動作します。5〜10人のチームが中央サーバーを共有する場合：24 GB VRAM（RTX 3090またはRTX 4090）が複数の同時リクエストを処理します。</strong>',
           '最低限の構成：RTX 3080、RTX 4070 Ti、または12 GB VRAMのGPU。専用GPUを推奨。OllamaのCPUフォールバックは可能ですが、推論速度は~3 tok/sに低下します。',
         ],
         columns: ['チーム規模', '推奨GPU', 'モデル', '期待速度'],
         rows: [
-          { 'チーム規模': '1ユーザー', '推奨GPU': 'RTX 3080 (12 GB)', 'モデル': 'Qwen 2.5 14B Q4', '期待速度': '~18 tok/s' },
-          { 'チーム規模': '2〜5ユーザー（キューあり）', '推奨GPU': 'RTX 4070 Ti (12 GB)', 'モデル': 'Qwen 2.5 14B Q4', '期待速度': '~22 tok/s' },
-          { 'チーム規模': '5〜10ユーザー（共有）', '推奨GPU': 'RTX 3090 / 4090 (24 GB)', 'モデル': 'Qwen 2.5 14B Q5', '期待速度': '~28 tok/s' },
+          { 'チーム規模': '1ユーザー', '推奨GPU': 'RTX 3080 (12 GB)', 'モデル': 'Qwen 3 14B Q4', '期待速度': '~18 tok/s' },
+          { 'チーム規模': '2〜5ユーザー（キューあり）', '推奨GPU': 'RTX 4070 Ti (12 GB)', 'モデル': 'Qwen 3 14B Q4', '期待速度': '~22 tok/s' },
+          { 'チーム規模': '5〜10ユーザー（共有）', '推奨GPU': 'RTX 3090 / 4090 (24 GB)', 'モデル': 'Qwen 3 14B Q5', '期待速度': '~28 tok/s' },
           { 'チーム規模': '長文書チーム', '推奨GPU': 'RTX 3090 (24 GB)', 'モデル': 'Llama 4 Scout (10Mコンテキスト)', '期待速度': '~15 tok/s' },
         ],
       },
       ollamaInstall: {
         id: 'ollama-install',
         title: 'Ollamaインストール——ステップバイステップ',
-        content: ['<strong>Linux・macOS・WindowsにOllamaをインストール。Qwen 2.5 14Bを一度だけHTTPSでダウンロード。その後、推論は完全にオフライン。</strong>'],
+        content: ['<strong>Linux・macOS・WindowsにOllamaをインストール。Qwen 3 14Bを一度だけHTTPSでダウンロード。その後、推論は完全にオフライン。</strong>'],
         numberedItems: [
           { title: 'Ollamaをインストール', whyItMatters: 'Linuxのワンライン：<code>curl -fsSL https://ollama.com/install.sh | sh</code>。macOS：ollama.comから.appをダウンロード。Windows：.exeインストーラーをダウンロード。確認：<code>ollama --version</code>。' },
           { title: 'モデルをダウンロード（一度限りのHTTPS）', whyItMatters: '<code>ollama pull qwen2.5:14b</code>を実行。Hugging FaceからHTTPS経由で~9 GBをダウンロード。これが唯一必要な外部ネットワーク接続です。エアギャップ環境の場合：ネットワーク接続マシンでダウンロードし、USBでGGUFファイルを転送、<code>ollama create qwen2.5:14b --from /path/to/file.gguf</code>でインポート。' },
@@ -487,8 +487,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '推論セッションごとに記録する内容：(1)モデル名とバージョン、(2)量子化レベル、(3)セッションタイムスタンプ（ISO 8601）、(4)入力プロンプトのSHA-256ハッシュ——生テキストではない。記録しないもの：プロンプト生テキスト・レスポンス生テキスト・抽出された個人データ。',
         ],
         faqs: [
-          { q: 'ローカルLLMにはデータ保護影響評価（DPIA）が必要ですか？', a: '場合によります。DPIAは個人に高いリスクをもたらす可能性がある処理に必要です。Qwen 2.5 14Bを契約レビューに使う単一アナリストは義務的DPIAをおそらく要しません。毎日何百もの患者記録を処理する医療機関はおそらく必要です。' },
-          { q: 'ヨーロッパ言語での法務・HRテキストに最適なQwenモデルはどれですか？', a: 'Qwen 2.5 14B Q4_K_Mが推奨基準：14Bティアでドイツ語・フランス語・イタリア語・スペイン語・英語に強い。VRAM制限環境（6〜8 GB）：Qwen 3 8Bが多言語テキストで良好なパフォーマンスを発揮。' },
+          { q: 'ローカルLLMにはデータ保護影響評価（DPIA）が必要ですか？', a: '場合によります。DPIAは個人に高いリスクをもたらす可能性がある処理に必要です。Qwen 3 14Bを契約レビューに使う単一アナリストは義務的DPIAをおそらく要しません。毎日何百もの患者記録を処理する医療機関はおそらく必要です。' },
+          { q: 'ヨーロッパ言語での法務・HRテキストに最適なQwenモデルはどれですか？', a: 'Qwen 3 14B Q4_K_Mが推奨基準：14Bティアでドイツ語・フランス語・イタリア語・スペイン語・英語に強い。VRAM制限環境（6〜8 GB）：Qwen 3 8Bが多言語テキストで良好なパフォーマンスを発揮。' },
         ],
       },
     },
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     title: 'Cómo configurar Qwen localmente para flujos de trabajo conformes con el RGPD',
     seoTitle: 'Configuración local de Qwen conforme al RGPD 2026',
-    metaDescription: 'Guía paso a paso para ejecutar Qwen 2.5 14B en local con RGPD: Ollama, aislamiento de red, cifrado de disco y registro de auditoría del Artículo 30.',
+    metaDescription: 'Guía paso a paso para ejecutar Qwen 3 14B en local con RGPD: Ollama, aislamiento de red, cifrado de disco y registro de auditoría del Artículo 30.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     readTime: '9 min de lectura',
@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'El despliegue local de Qwen satisface los Artículos 44 (sin transferencia a terceros países), 25 (privacidad desde el diseño) y 5(1)(f) (integridad de datos) del RGPD con una sola decisión arquitectónica',
-          'Hardware mínimo: cualquier GPU con 12 GB de VRAM (RTX 3080, RTX 4070 Ti o equivalente) para ejecutar Qwen 2.5 14B en Q4_K_M a través de Ollama',
+          'Hardware mínimo: cualquier GPU con 12 GB de VRAM (RTX 3080, RTX 4070 Ti o equivalente) para ejecutar Qwen 3 14B en Q4_K_M a través de Ollama',
           'Pasos de aislamiento críticos: restringir el puerto 11434 de Ollama solo a la LAN mediante firewall, deshabilitar la telemetría y ejecutar en un segmento de red aislado',
           'Registro de tratamiento del Artículo 30: registrar versión del modelo, cuantización, marca de tiempo de sesión y hash SHA-256 del prompt — nunca el contenido de datos personales en bruto',
           'Tiempo total de configuración desde un SO limpio hasta la primera inferencia segura según el RGPD: menos de 30 minutos',
@@ -532,21 +532,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'Requisitos de hardware según el tamaño de la organización',
         content: [
-          '<strong>Para un solo DPO o analista legal: cualquier GPU con 12 GB de VRAM gestiona Qwen 2.5 14B Q4_K_M a velocidades de inferencia prácticas (~18 tok/s en RTX 3080). Para un equipo de 5 a 10 usuarios compartiendo un servidor central: 24 GB de VRAM (RTX 3090 o RTX 4090) gestiona múltiples solicitudes simultáneas.</strong> El despliegue empresarial multi-usuario requiere configuración multi-GPU, fuera del alcance de esta guía.',
+          '<strong>Para un solo DPO o analista legal: cualquier GPU con 12 GB de VRAM gestiona Qwen 3 14B Q4_K_M a velocidades de inferencia prácticas (~18 tok/s en RTX 3080). Para un equipo de 5 a 10 usuarios compartiendo un servidor central: 24 GB de VRAM (RTX 3090 o RTX 4090) gestiona múltiples solicitudes simultáneas.</strong> El despliegue empresarial multi-usuario requiere configuración multi-GPU, fuera del alcance de esta guía.',
           'Configuración mínima viable: RTX 3080, RTX 4070 Ti o cualquier GPU con 12 GB de VRAM. Se recomienda GPU dedicada sobre GPU de estación de trabajo compartida. La alternativa por CPU mediante Ollama es posible, pero la velocidad de inferencia cae a ~3 tok/s.',
         ],
         columns: ['Tamaño del equipo', 'GPU recomendada', 'Modelo', 'Velocidad esperada'],
         rows: [
-          { 'Tamaño del equipo': '1 usuario', 'GPU recomendada': 'RTX 3080 (12 GB)', 'Modelo': 'Qwen 2.5 14B Q4', 'Velocidad esperada': '~18 tok/s' },
-          { 'Tamaño del equipo': '2–5 usuarios (cola)', 'GPU recomendada': 'RTX 4070 Ti (12 GB)', 'Modelo': 'Qwen 2.5 14B Q4', 'Velocidad esperada': '~22 tok/s' },
-          { 'Tamaño del equipo': '5–10 usuarios (compartido)', 'GPU recomendada': 'RTX 3090 / 4090 (24 GB)', 'Modelo': 'Qwen 2.5 14B Q5', 'Velocidad esperada': '~28 tok/s' },
+          { 'Tamaño del equipo': '1 usuario', 'GPU recomendada': 'RTX 3080 (12 GB)', 'Modelo': 'Qwen 3 14B Q4', 'Velocidad esperada': '~18 tok/s' },
+          { 'Tamaño del equipo': '2–5 usuarios (cola)', 'GPU recomendada': 'RTX 4070 Ti (12 GB)', 'Modelo': 'Qwen 3 14B Q4', 'Velocidad esperada': '~22 tok/s' },
+          { 'Tamaño del equipo': '5–10 usuarios (compartido)', 'GPU recomendada': 'RTX 3090 / 4090 (24 GB)', 'Modelo': 'Qwen 3 14B Q5', 'Velocidad esperada': '~28 tok/s' },
           { 'Tamaño del equipo': 'Equipo de documentos largos', 'GPU recomendada': 'RTX 3090 (24 GB)', 'Modelo': 'Llama 4 Scout (10M ctx)', 'Velocidad esperada': '~15 tok/s' },
         ],
       },
       ollamaInstall: {
         id: 'ollama-install',
         title: 'Instalación de Ollama — paso a paso',
-        content: ['<strong>Instala Ollama en Linux, macOS o Windows. Descarga Qwen 2.5 14B una sola vez por HTTPS. A partir de ese momento, la inferencia es completamente sin conexión.</strong>'],
+        content: ['<strong>Instala Ollama en Linux, macOS o Windows. Descarga Qwen 3 14B una sola vez por HTTPS. A partir de ese momento, la inferencia es completamente sin conexión.</strong>'],
         numberedItems: [
           {
             title: 'Instalar Ollama',
@@ -608,7 +608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Un LLM local requiere una Evaluación de Impacto sobre la Protección de Datos (EIPD)?',
-            a: 'Posiblemente. Se requiere una EIPD cuando el tratamiento es probable que genere un alto riesgo para las personas — por ejemplo, el tratamiento de registros médicos, datos de rendimiento de empleados o documentos legales a gran escala. El umbral de "sistemático y a gran escala" es el desencadenante, no la herramienta de IA en sí. Un solo analista que use Qwen 2.5 14B para revisar contratos probablemente no active la EIPD obligatoria. Una organización sanitaria que procese cientos de registros de pacientes al día probablemente sí.',
+            a: 'Posiblemente. Se requiere una EIPD cuando el tratamiento es probable que genere un alto riesgo para las personas — por ejemplo, el tratamiento de registros médicos, datos de rendimiento de empleados o documentos legales a gran escala. El umbral de "sistemático y a gran escala" es el desencadenante, no la herramienta de IA en sí. Un solo analista que use Qwen 3 14B para revisar contratos probablemente no active la EIPD obligatoria. Una organización sanitaria que procese cientos de registros de pacientes al día probablemente sí.',
           },
           {
             q: '¿Puedo usar Open WebUI con Ollama para el acceso conforme al RGPD?',
@@ -616,7 +616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué variante del modelo Qwen es mejor para texto legal y de RR.HH. en idiomas europeos?',
-            a: 'Qwen 2.5 14B Q4_K_M es la base recomendada: fuerte en alemán, francés, italiano, español e inglés en el nivel 14B. Para flujos de trabajo legales con mucho código (p. ej., procesamiento de contratos con cláusulas de código incorporado o datos estructurados), Qwen 2.5 Coder 14B Q4_K_M. Para organizaciones limitadas a 6–8 GB de VRAM, Qwen 3 8B rinde bien con texto multilingüe.',
+            a: 'Qwen 3 14B Q4_K_M es la base recomendada: fuerte en alemán, francés, italiano, español e inglés en el nivel 14B. Para flujos de trabajo legales con mucho código (p. ej., procesamiento de contratos con cláusulas de código incorporado o datos estructurados), Qwen 3 Coder 14B Q4_K_M. Para organizaciones limitadas a 6–8 GB de VRAM, Qwen 3 8B rinde bien con texto multilingüe.',
           },
           {
             q: '¿Necesito un Acuerdo de Encargado del Tratamiento con Ollama?',
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Cómo configurar Qwen localmente para flujos de trabajo RGPD 2026',
-      description: 'Guía paso a paso para ejecutar Qwen 2.5 14B localmente con cumplimiento RGPD completo.',
+      description: 'Guía paso a paso para ejecutar Qwen 3 14B localmente con cumplimiento RGPD completo.',
       url: 'https://www.promptquorum.com/es/local-llms/qwen-local-gdpr-setup-guide-2026?lang=es',
       inLanguage: 'es',
       datePublished: '2026-05-22',
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     title: '为GDPR合规工作流本地配置Qwen',
     seoTitle: '使用Qwen构建GDPR合规本地LLM 2026 | PromptQuorum',
-    metaDescription: '本地GDPR合规运行Qwen 2.5 14B的步骤指南：Ollama安装、网络隔离、磁盘加密、第30条审计追踪。2026年5月更新。',
+    metaDescription: '本地GDPR合规运行Qwen 3 14B的步骤指南：Ollama安装、网络隔离、磁盘加密、第30条审计追踪。2026年5月更新。',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     readTime: '9分钟阅读',
@@ -654,7 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '本地Qwen部署通过单一架构决策满足GDPR第44条（无第三国传输）、第25条（隐私设计）和第5(1)(f)条（数据完整性）',
-          '最低硬件：任意12 GB VRAM GPU（RTX 3080、RTX 4070 Ti或同等）通过Ollama运行Qwen 2.5 14B Q4_K_M',
+          '最低硬件：任意12 GB VRAM GPU（RTX 3080、RTX 4070 Ti或同等）通过Ollama运行Qwen 3 14B Q4_K_M',
           '关键隔离步骤：防火墙将Ollama端口11434限制为仅限局域网，禁用遥测，在隔离网络段运行',
           '第30条处理记录：记录模型版本、量化、会话时间戳和提示词SHA-256哈希——绝不记录个人数据内容本身',
           '从全新OS到首次GDPR安全推理的总安装时间：30分钟以内',
@@ -677,21 +677,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: '按组织规模划分的硬件要求',
         content: [
-          '<strong>单个DPO或法务分析师：任何12 GB VRAM GPU均可在实用推理速度下（RTX 3080约18 tok/s）处理Qwen 2.5 14B Q4_K_M。5-10人共享中央服务器的团队：24 GB VRAM（RTX 3090或RTX 4090）处理多个并发请求。</strong>',
+          '<strong>单个DPO或法务分析师：任何12 GB VRAM GPU均可在实用推理速度下（RTX 3080约18 tok/s）处理Qwen 3 14B Q4_K_M。5-10人共享中央服务器的团队：24 GB VRAM（RTX 3090或RTX 4090）处理多个并发请求。</strong>',
           '最低可行配置：RTX 3080、RTX 4070 Ti或任意12 GB VRAM GPU。推荐专用GPU。Ollama的CPU后备可行，但推理速度降至约3 tok/s。',
         ],
         columns: ['团队规模', '推荐GPU', '模型', '预期速度'],
         rows: [
-          { '团队规模': '1个用户', '推荐GPU': 'RTX 3080 (12 GB)', '模型': 'Qwen 2.5 14B Q4', '预期速度': '~18 tok/s' },
-          { '团队规模': '2-5用户（排队）', '推荐GPU': 'RTX 4070 Ti (12 GB)', '模型': 'Qwen 2.5 14B Q4', '预期速度': '~22 tok/s' },
-          { '团队规模': '5-10用户（共享）', '推荐GPU': 'RTX 3090 / 4090 (24 GB)', '模型': 'Qwen 2.5 14B Q5', '预期速度': '~28 tok/s' },
+          { '团队规模': '1个用户', '推荐GPU': 'RTX 3080 (12 GB)', '模型': 'Qwen 3 14B Q4', '预期速度': '~18 tok/s' },
+          { '团队规模': '2-5用户（排队）', '推荐GPU': 'RTX 4070 Ti (12 GB)', '模型': 'Qwen 3 14B Q4', '预期速度': '~22 tok/s' },
+          { '团队规模': '5-10用户（共享）', '推荐GPU': 'RTX 3090 / 4090 (24 GB)', '模型': 'Qwen 3 14B Q5', '预期速度': '~28 tok/s' },
           { '团队规模': '长文档团队', '推荐GPU': 'RTX 3090 (24 GB)', '模型': 'Llama 4 Scout (10M上下文)', '预期速度': '~15 tok/s' },
         ],
       },
       ollamaInstall: {
         id: 'ollama-install',
         title: 'Ollama安装——分步指南',
-        content: ['<strong>在Linux、macOS或Windows上安装Ollama。通过HTTPS一次性拉取Qwen 2.5 14B。之后推理完全离线。</strong>'],
+        content: ['<strong>在Linux、macOS或Windows上安装Ollama。通过HTTPS一次性拉取Qwen 3 14B。之后推理完全离线。</strong>'],
         numberedItems: [
           { title: '安装Ollama', whyItMatters: 'Linux单行安装：<code>curl -fsSL https://ollama.com/install.sh | sh</code>。macOS：从ollama.com下载.app。Windows：下载.exe安装程序。验证：<code>ollama --version</code>应返回版本号。' },
           { title: '拉取模型（一次性HTTPS下载）', whyItMatters: '运行<code>ollama pull qwen2.5:14b</code>。通过HTTPS从Hugging Face下载约9 GB。这是唯一需要外部网络访问的时候。气隙环境：在联网机器上下载，通过USB传输GGUF文件，用<code>ollama create qwen2.5:14b --from /path/to/file.gguf</code>导入。' },
@@ -725,8 +725,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '每次推理会话记录内容：(1)模型名称和版本，(2)量化级别，(3)会话时间戳（ISO 8601），(4)输入提示词的SHA-256哈希——不是原始文本。不记录内容：提示词原始文本、响应原始文本、从响应中提取的任何个人身份信息。',
         ],
         faqs: [
-          { q: '本地LLM是否需要数据保护影响评估（DPIA）？', a: '可能需要。当处理可能对个人产生高风险时（例如大规模处理医疗记录、员工绩效数据或法律文件）需要DPIA。单个分析师使用Qwen 2.5 14B进行合同审查可能不触发强制DPIA。每天处理数百份患者记录的医疗机构可能需要。' },
-          { q: '哪种Qwen模型最适合欧洲语言的法律和HR文本？', a: 'Qwen 2.5 14B Q4_K_M是推荐基线：在14B级别上德语、法语、意大利语、西班牙语和英语都表现强劲。VRAM受限环境（6-8 GB）：Qwen 3 8B在多语言文本上表现良好。' },
+          { q: '本地LLM是否需要数据保护影响评估（DPIA）？', a: '可能需要。当处理可能对个人产生高风险时（例如大规模处理医疗记录、员工绩效数据或法律文件）需要DPIA。单个分析师使用Qwen 3 14B进行合同审查可能不触发强制DPIA。每天处理数百份患者记录的医疗机构可能需要。' },
+          { q: '哪种Qwen模型最适合欧洲语言的法律和HR文本？', a: 'Qwen 3 14B Q4_K_M是推荐基线：在14B级别上德语、法语、意大利语、西班牙语和英语都表现强劲。VRAM受限环境（6-8 GB）：Qwen 3 8B在多语言文本上表现良好。' },
         ],
       },
     },

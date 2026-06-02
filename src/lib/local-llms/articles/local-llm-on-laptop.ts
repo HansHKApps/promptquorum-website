@@ -138,7 +138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': 'Llama 3.2 3B', 'RAM': '2.5 GB', 'Speed (CPU)': '25-45 tok/s', 'Quality': 'Medium', 'Best For': '8 GB laptops, quick tasks' },
             { 'Model': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Speed (CPU)': '20-35 tok/s', 'Quality': 'Medium-High', 'Best For': '8 GB laptops, reasoning/coding' },
             { 'Model': 'Mistral Small v0.3', 'RAM': '4.5 GB', 'Speed (CPU)': '10-20 tok/s', 'Quality': 'High', 'Best For': '8-16 GB, general use' },
-            { 'Model': 'Qwen2.5 7B', 'RAM': '4.7 GB', 'Speed (CPU)': '10-18 tok/s', 'Quality': 'High', 'Best For': '8-16 GB, multilingual, coding' },
+            { 'Model': 'Qwen3 7B', 'RAM': '4.7 GB', 'Speed (CPU)': '10-18 tok/s', 'Quality': 'High', 'Best For': '8-16 GB, multilingual, coding' },
             { 'Model': 'Llama 3.3 8B', 'RAM': '5.5 GB', 'Speed (CPU)': '8-15 tok/s', 'Quality': 'High+', 'Best For': '16 GB laptops, best quality at size' },
           ],
           columns: ['Model', 'RAM', 'Speed (CPU)', 'Quality', 'Best For'],
@@ -338,7 +338,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Run Local LLMs on a Laptop: RAM, Speed & Thermals 2026',
-        'description': 'Run local LLMs on laptops with 8 GB RAM. Covers best models (Llama 3.2 3B, Mistral Small, Qwen2.5 7B), thermal throttling fixes, battery optimization, and Q4_K_M quantization settings.',
+        'description': 'Run local LLMs on laptops with 8 GB RAM. Covers best models (Llama 3.2 3B, Mistral Small, Qwen3 7B), thermal throttling fixes, battery optimization, and Q4_K_M quantization settings.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
@@ -363,7 +363,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': '3B model. 2.5 GB RAM. 25-45 tok/sec on CPU, 60-100 tok/sec on Apple Silicon. Best starting model for 8 GB laptops.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': '3.8B model. 3 GB RAM. 20-35 tok/sec on CPU. Best reasoning and coding for under 4 GB RAM.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '7B model. 4.5 GB RAM. 10-20 tok/sec on CPU. Best general-purpose model for 8-16 GB laptops.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen2.5 7B', 'description': '7B model. 4.7 GB RAM. 10-18 tok/sec on CPU. Best for multilingual tasks and coding on 8-16 GB laptops.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '7B model. 4.7 GB RAM. 10-18 tok/sec on CPU. Best for multilingual tasks and coding on 8-16 GB laptops.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '8B model. 5.5 GB RAM. 8-15 tok/sec on CPU. Best quality at size for 16 GB laptops.' },
         ],
       },
@@ -596,7 +596,7 @@ schema: {
             { 'Modelo': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Velocidad (CPU)': '25–45 tok/s', 'Calidad': 'Media', 'Mejor para': 'Portátiles de 8 GB, tareas rápidas' },
             { 'Modelo': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Velocidad (CPU)': '20–35 tok/s', 'Calidad': 'Media-Alta', 'Mejor para': 'Portátiles de 8 GB, razonamiento/código' },
             { 'Modelo': 'Mistral Small v0.3', 'RAM': '4,5 GB', 'Velocidad (CPU)': '10–20 tok/s', 'Calidad': 'Alta', 'Mejor para': '8–16 GB, uso general' },
-            { 'Modelo': 'Qwen2.5 7B', 'RAM': '4,7 GB', 'Velocidad (CPU)': '10–18 tok/s', 'Calidad': 'Alta', 'Mejor para': '8–16 GB, multilingüe, código' },
+            { 'Modelo': 'Qwen3 7B', 'RAM': '4,7 GB', 'Velocidad (CPU)': '10–18 tok/s', 'Calidad': 'Alta', 'Mejor para': '8–16 GB, multilingüe, código' },
             { 'Modelo': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Velocidad (CPU)': '8–15 tok/s', 'Calidad': 'Alta+', 'Mejor para': 'Portátiles de 16 GB, mejor calidad en ese tamaño' },
           ],
           columns: ['Modelo', 'RAM', 'Velocidad (CPU)', 'Calidad', 'Mejor para'],
@@ -796,7 +796,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Ejecutar LLMs Locales en un Portátil: RAM, Velocidad y Temperatura 2026',
-        'description': 'Ejecuta LLMs locales en portátiles con 8 GB de RAM. Cubre los mejores modelos (Llama 3.2 3B, Mistral Small, Qwen2.5 7B), correcciones de throttling térmico, optimización de batería y configuración de cuantización Q4_K_M.',
+        'description': 'Ejecuta LLMs locales en portátiles con 8 GB de RAM. Cubre los mejores modelos (Llama 3.2 3B, Mistral Small, Qwen3 7B), correcciones de throttling térmico, optimización de batería y configuración de cuantización Q4_K_M.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-on-laptop?lang=es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
@@ -826,7 +826,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': 'Modelo 3B. 2,5 GB de RAM. 25–45 tok/seg en CPU, 60–100 tok/seg en Apple Silicon. Mejor modelo de inicio para portátiles de 8 GB.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': 'Modelo 3.8B. 3 GB de RAM. 20–35 tok/seg en CPU. Mejor razonamiento y código con menos de 4 GB de RAM.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': 'Modelo 7B. 4,5 GB de RAM. 10–20 tok/seg en CPU. Mejor modelo de propósito general para portátiles de 8–16 GB.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen2.5 7B', 'description': 'Modelo 7B. 4,7 GB de RAM. 10–18 tok/seg en CPU. Mejor para tareas multilingüe y código en portátiles de 8–16 GB.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': 'Modelo 7B. 4,7 GB de RAM. 10–18 tok/seg en CPU. Mejor para tareas multilingüe y código en portátiles de 8–16 GB.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': 'Modelo 8B. 5,5 GB de RAM. 8–15 tok/seg en CPU. Mejor calidad en ese tamaño para portátiles de 16 GB.' },
         ],
       },
@@ -1049,7 +1049,7 @@ schema: {
             { 'Modell': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Geschwindigkeit (CPU)': '25-45 Token/s', 'Qualität': 'Mittel', 'Beste für': '8 GB Laptops, schnelle Aufgaben' },
             { 'Modell': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Geschwindigkeit (CPU)': '20-35 Token/s', 'Qualität': 'Mittel-Hoch', 'Beste für': '8 GB Laptops, Reasoning/Coding' },
             { 'Modell': 'Mistral Small v0.3', 'RAM': '4,5 GB', 'Geschwindigkeit (CPU)': '10-20 Token/s', 'Qualität': 'Hoch', 'Beste für': '8-16 GB, allgemeine Nutzung' },
-            { 'Modell': 'Qwen2.5 7B', 'RAM': '4,7 GB', 'Geschwindigkeit (CPU)': '10-18 Token/s', 'Qualität': 'Hoch', 'Beste für': '8-16 GB, mehrsprachig, Coding' },
+            { 'Modell': 'Qwen3 7B', 'RAM': '4,7 GB', 'Geschwindigkeit (CPU)': '10-18 Token/s', 'Qualität': 'Hoch', 'Beste für': '8-16 GB, mehrsprachig, Coding' },
             { 'Modell': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Geschwindigkeit (CPU)': '8-15 Token/s', 'Qualität': 'Hoch+', 'Beste für': '16 GB Laptops, beste Qualität bei dieser Größe' },
           ],
           columns: ['Modell', 'RAM', 'Geschwindigkeit (CPU)', 'Qualität', 'Beste für'],
@@ -1130,7 +1130,7 @@ schema: {
           content: [
             '**EU / DSGVO**: Ein Laptop, auf dem lokale LLMs ausgeführt werden, ist die datenschutzfreundlichste KI-Konfiguration, die es gibt. Kein Prompt-Text, Kontext oder Output verlässt das Gerät -- DSGVO-Artikel-46-Transfermechanismen sind nicht erforderlich. Für EU-Fachleute, die mit Personendaten umgehen (medizinisch, rechtlich, finanziell), ist ein MacBook Pro M3 oder M4 mit 18-36 GB vereinheitlichtem Speicher die empfohlene Konfiguration für lokale Inferenz bei sensiblem Inhalt. Das deutsche BSI empfiehlt lokale Inferenz für KI-Systeme, die sensible Personendaten in professionellen Kontexten verarbeiten.',
             '**Japan (METI)**: Die METI-AI-Governance-Richtlinien verlangen von Organisationen, zu dokumentieren, wo KI-Inferenz stattfindet. Ein Laptop, auf dem Ollama lokal läuft, erfüllt diese Anforderung für die individuelle berufliche Nutzung -- alle Inferenzen sind auf das Gerät und die Modellversion zurückzuführen. Japanische Fachleute verwenden üblicherweise LLaMA 3.1 7B über Ollama auf M-Series MacBooks für das Verarbeiten sensibler Dokumente ohne Datenaustritt.',
-            '**China**: Chinas Datensicherheitsgesetz (数据安全法) beschränkt bestimmte Datenkategorien daran, genehmigte Infrastrukturen zu verlassen. Ein Laptop, auf dem Qwen2.5 7B lokal über Ollama läuft, erfüllt diese Anforderung für individuelle Anwendungsfälle -- Qwen2.5 verarbeitet chinesische Spracheninhalte 30-40% token-effizienter als von Westen trainierte Modelle auf derselben Hardware.',
+            '**China**: Chinas Datensicherheitsgesetz (数据安全法) beschränkt bestimmte Datenkategorien daran, genehmigte Infrastrukturen zu verlassen. Ein Laptop, auf dem Qwen3 7B lokal über Ollama läuft, erfüllt diese Anforderung für individuelle Anwendungsfälle -- Qwen3 verarbeitet chinesische Spracheninhalte 30-40% token-effizienter als von Westen trainierte Modelle auf derselben Hardware.',
           ],
         },
         commonMistakes: {
@@ -1290,7 +1290,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': '2,5 GB RAM. 25-45 Token/s CPU. Beste für 8 GB Laptops und schnelle Aufgaben.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': '3 GB RAM. 20-35 Token/s CPU. Beste für 8 GB Laptops, Reasoning und Coding.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '4,5 GB RAM. 10-20 Token/s CPU. Beste für 8-16 GB allgemeine Nutzung.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen2.5 7B', 'description': '4,7 GB RAM. 10-18 Token/s CPU. Beste für mehrsprachig und Coding auf 8-16 GB.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '4,7 GB RAM. 10-18 Token/s CPU. Beste für mehrsprachig und Coding auf 8-16 GB.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '5,5 GB RAM. 8-15 Token/s CPU. Beste Qualität bei dieser Größe für 16 GB Laptops.' }
         ]
       },
@@ -1413,7 +1413,7 @@ schema: {
             { 'Modèle': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Vitesse (CPU)': '25-45 token/s', 'Qualité': 'Moyenne', 'Meilleur pour': 'Ordinateurs portables 8 GB, tâches rapides' },
             { 'Modèle': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Vitesse (CPU)': '20-35 token/s', 'Qualité': 'Moyenne-Haute', 'Meilleur pour': 'Ordinateurs portables 8 GB, reasoning/coding' },
             { 'Modèle': 'Mistral Small v0.3', 'RAM': '4,5 GB', 'Vitesse (CPU)': '10-20 token/s', 'Qualité': 'Haute', 'Meilleur pour': '8-16 GB, utilisation générale' },
-            { 'Modèle': 'Qwen2.5 7B', 'RAM': '4,7 GB', 'Vitesse (CPU)': '10-18 token/s', 'Qualité': 'Haute', 'Meilleur pour': '8-16 GB, multilingue, coding' },
+            { 'Modèle': 'Qwen3 7B', 'RAM': '4,7 GB', 'Vitesse (CPU)': '10-18 token/s', 'Qualité': 'Haute', 'Meilleur pour': '8-16 GB, multilingue, coding' },
             { 'Modèle': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Vitesse (CPU)': '8-15 token/s', 'Qualité': 'Haute+', 'Meilleur pour': 'Ordinateurs portables 16 GB, meilleure qualité à cette taille' },
           ],
           columns: ['Modèle', 'RAM', 'Vitesse (CPU)', 'Qualité', 'Meilleur pour'],
@@ -1652,7 +1652,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': '2,5 GB RAM. 25-45 token/s CPU. Meilleur pour ordinateurs portables 8 GB et tâches rapides.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': '3 GB RAM. 20-35 token/s CPU. Meilleur pour ordinateurs portables 8 GB, reasoning et coding.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '4,5 GB RAM. 10-20 token/s CPU. Meilleur pour utilisation générale 8-16 GB.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen2.5 7B', 'description': '4,7 GB RAM. 10-18 token/s CPU. Meilleur pour multilingue et coding sur 8-16 GB.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '4,7 GB RAM. 10-18 token/s CPU. Meilleur pour multilingue et coding sur 8-16 GB.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '5,5 GB RAM. 8-15 token/s CPU. Meilleure qualité à cette taille pour ordinateurs portables 16 GB.' }
         ]
       },
@@ -1775,7 +1775,7 @@ schema: {
             { 'モデル': 'Llama 3.2 3B', 'RAM': '2.5GB', 'Speed (CPU)': '25-45トークン/秒', '品質': '中', '最適な用途': '8GBノートパソコン、クイックタスク' },
             { 'モデル': 'Phi-3.5 Mini 3.8B', 'RAM': '3GB', 'Speed (CPU)': '20-35トークン/秒', '品質': '中〜高', '最適な用途': '8GBノートパソコン、推論/コーディング' },
             { 'モデル': 'Mistral Small v0.3', 'RAM': '4.5GB', 'Speed (CPU)': '10-20トークン/秒', '品質': '高', '最適な用途': '8-16GB、一般的な用途' },
-            { 'モデル': 'Qwen2.5 7B', 'RAM': '4.7GB', 'Speed (CPU)': '10-18トークン/秒', '品質': '高', '最適な用途': '8-16GB、多言語、コーディング' },
+            { 'モデル': 'Qwen3 7B', 'RAM': '4.7GB', 'Speed (CPU)': '10-18トークン/秒', '品質': '高', '最適な用途': '8-16GB、多言語、コーディング' },
             { 'モデル': 'Llama 3.3 8B', 'RAM': '5.5GB', 'Speed (CPU)': '8-15トークン/秒', '品質': '高+', '最適な用途': '16GBノートパソコン、最高の品質' },
           ],
           columns: ['モデル', 'RAM', 'Speed (CPU)', '品質', '最適な用途'],
@@ -2014,7 +2014,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': '2.5GB RAM。25-45トークン/秒CPU。8GBノートパソコン、クイックタスク向けベスト。' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': '3GB RAM。20-35トークン/秒CPU。8GBノートパソコン、推論/コーディング向けベスト。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '4.5GB RAM。10-20トークン/秒CPU。8-16GB一般使用向けベスト。' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen2.5 7B', 'description': '4.7GB RAM。10-18トークン/秒CPU。8-16GB多言語コーディング向けベスト。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '4.7GB RAM。10-18トークン/秒CPU。8-16GB多言語コーディング向けベスト。' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '5.5GB RAM。8-15トークン/秒CPU。16GBノートパソコンこのサイズでベスト品質。' }
         ]
       },
@@ -2137,7 +2137,7 @@ schema: {
             { '模型': 'Llama 3.2 3B', 'RAM': '2.5GB', '速度（CPU）': '25-45令牌/秒', '质量': '中等', '最佳适配': '8GB笔记本电脑，快速任务' },
             { '模型': 'Phi-3.5 Mini 3.8B', 'RAM': '3GB', '速度（CPU）': '20-35令牌/秒', '质量': '中高', '最佳适配': '8GB笔记本电脑，推理/编码' },
             { '模型': 'Mistral Small v0.3', 'RAM': '4.5GB', '速度（CPU）': '10-20令牌/秒', '质量': '高', '最佳适配': '8-16GB，通用用途' },
-            { '模型': 'Qwen2.5 7B', 'RAM': '4.7GB', '速度（CPU）': '10-18令牌/秒', '质量': '高', '最佳适配': '8-16GB，多语言、编码' },
+            { '模型': 'Qwen3 7B', 'RAM': '4.7GB', '速度（CPU）': '10-18令牌/秒', '质量': '高', '最佳适配': '8-16GB，多语言、编码' },
             { '模型': 'Llama 3.3 8B', 'RAM': '5.5GB', '速度（CPU）': '8-15令牌/秒', '质量': '高+', '最佳适配': '16GB笔记本电脑，这个大小最好的品质' },
           ],
           columns: ['模型', 'RAM', '速度（CPU）', '质量', '最佳适配'],
@@ -2216,7 +2216,7 @@ schema: {
         regionalContext: {
           title: '在笔记本电脑上运行本地LLM如何保护您的隐私？',
           content: [
-            '**中国（数据安全法）** ：中国《数据安全法》限制某些数据类别离开经批准的基础设施。在笔记本电脑上运行Qwen2.5 7B本地（通过Ollama）满足个人用例的此要求 -- Qwen2.5在相同硬件上处理中文内容比西方训练的模型令牌高效30-40%。',
+            '**中国（数据安全法）** ：中国《数据安全法》限制某些数据类别离开经批准的基础设施。在笔记本电脑上运行Qwen3 7B本地（通过Ollama）满足个人用例的此要求 -- Qwen3在相同硬件上处理中文内容比西方训练的模型令牌高效30-40%。',
             '**数据主权** ：在笔记本电脑上本地运行LLM可确保所有数据保持在设备上。推理文本、上下文、输出都存储在本地。这满足《数据安全法》对受管制数据处理的合规性要求。',
             '**隐私最大化** ：与网络隔离的笔记本电脑上的本地推理是处理个人信息（医疗数据、财务记录）的最佳隐私配置。没有云同步、没有API调用、没有外部处理 -- 完全数据隐私。',
           ],
@@ -2376,7 +2376,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': '2.5GB RAM。25-45令牌/秒CPU。8GB笔记本电脑、快速任务最佳。' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': '3GB RAM。20-35令牌/秒CPU。8GB笔记本电脑、推理/编码最佳。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '4.5GB RAM。10-20令牌/秒CPU。8-16GB通用用途最佳。' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen2.5 7B', 'description': '4.7GB RAM。10-18令牌/秒CPU。8-16GB多语言编码最佳。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '4.7GB RAM。10-18令牌/秒CPU。8-16GB多语言编码最佳。' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '5.5GB RAM。8-15令牌/秒CPU。16GB笔记本电脑这个大小最好的品质。' }
         ]
       },

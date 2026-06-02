@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         productItems: [
           {
             title: 'Mac Mini M4 Pro (48 GB) — Best macOS Option',
-            content: 'The Mac Mini M4 Pro with 48 GB of unified memory runs Qwen2.5 32B Q4 at 20–30 tok/s via Ollama Metal backend. The 24-core GPU handles larger models than a MacBook M4 Pro (which maxes at 64 GB). Price: ~$1399. If you want to stay in the macOS ecosystem and need 32B+ model capability, this is the upgrade path — not an eGPU.',
+            content: 'The Mac Mini M4 Pro with 48 GB of unified memory runs Qwen3 32B Q4 at 20–30 tok/s via Ollama Metal backend. The 24-core GPU handles larger models than a MacBook M4 Pro (which maxes at 64 GB). Price: ~$1399. If you want to stay in the macOS ecosystem and need 32B+ model capability, this is the upgrade path — not an eGPU.',
             affiliateLinks: [
               { label: 'Apple Mac Mini M4 Pro on Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
             ],
@@ -188,7 +188,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         productItems: [
           {
             title: 'Mac Mini M4 Pro (48 GB) — Beste macOS-Option',
-            content: 'Der Mac Mini M4 Pro mit 48 GB Unified Memory läuft Qwen2.5 32B Q4 mit 20–30 Tok/s über Ollamas Metal-Backend. Preis: ~1399 €. Wenn macOS Voraussetzung ist und 32B+-Modelle benötigt werden, ist dies der Upgrade-Pfad — nicht eine eGPU.',
+            content: 'Der Mac Mini M4 Pro mit 48 GB Unified Memory läuft Qwen3 32B Q4 mit 20–30 Tok/s über Ollamas Metal-Backend. Preis: ~1399 €. Wenn macOS Voraussetzung ist und 32B+-Modelle benötigt werden, ist dies der Upgrade-Pfad — nicht eine eGPU.',
             affiliateLinks: [
               { label: 'Apple Mac Mini M4 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Mac+Mini+M4+Pro' },
             ],
@@ -292,7 +292,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         productItems: [
           {
             title: 'Mac Mini M4 Pro (48 Go) — Meilleure option macOS',
-            content: 'Le Mac Mini M4 Pro avec 48 Go de mémoire unifiée fait tourner Qwen2.5 32B Q4 à 20–30 tok/s via le backend Metal d\'Ollama. Prix : ~1399 €. Si macOS est requis et que vous avez besoin de modèles 32B+, c\'est la bonne mise à niveau — pas une eGPU.',
+            content: 'Le Mac Mini M4 Pro avec 48 Go de mémoire unifiée fait tourner Qwen3 32B Q4 à 20–30 tok/s via le backend Metal d\'Ollama. Prix : ~1399 €. Si macOS est requis et que vous avez besoin de modèles 32B+, c\'est la bonne mise à niveau — pas une eGPU.',
             affiliateLinks: [
               { label: 'Apple Mac Mini M4 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Mac+Mini+M4+Pro' },
             ],
@@ -396,7 +396,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         productItems: [
           {
             title: 'Mac Mini M4 Pro（48GB）——最良macOS選択肢',
-            content: 'Mac Mini M4 Pro（48GB統合メモリ、約18万円）はOllamaのMetalバックエンドを通じてQwen2.5 32B Q4を20〜30 tok/sで実行できます。macOS環境が必要で32B以上のモデル能力が求められる場合、eGPUではなくこれがアップグレードパスです。',
+            content: 'Mac Mini M4 Pro（48GB統合メモリ、約18万円）はOllamaのMetalバックエンドを通じてQwen3 32B Q4を20〜30 tok/sで実行できます。macOS環境が必要で32B以上のモデル能力が求められる場合、eGPUではなくこれがアップグレードパスです。',
             affiliateLinks: [
               { label: 'Apple Mac Mini M4 Pro をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Mac+Mini+M4+Pro' },
             ],
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         productItems: [
           {
             title: 'Mac Mini M4 Pro（48GB）——最佳macOS选择',
-            content: 'Mac Mini M4 Pro（48GB统一内存，约9800元）通过Ollama的Metal后端以20–30 tok/s运行Qwen2.5 32B Q4。如果需要在macOS环境中运行32B以上模型，这是正确的升级路径——而非eGPU。',
+            content: 'Mac Mini M4 Pro（48GB统一内存，约9800元）通过Ollama的Metal后端以20–30 tok/s运行Qwen3 32B Q4。如果需要在macOS环境中运行32B以上模型，这是正确的升级路径——而非eGPU。',
             affiliateLinks: [
               { label: '在京东查看Apple Mac Mini M4 Pro', url: 'https://search.jd.com/Search?keyword=Mac+Mini+M4+Pro' },
             ],
@@ -617,7 +617,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         productItems: [
           {
             title: 'Mac Mini M4 Pro (48 GB) — Mejor opción macOS',
-            content: 'El Mac Mini M4 Pro con 48 GB de memoria unificada ejecuta Qwen2.5 32B Q4 a 20–30 tok/s vía el backend Metal de Ollama. Precio: ~$1399. Si necesitas quedarte en el ecosistema macOS y necesitas capacidad de modelos 32B+, esta es la ruta de actualización — no una eGPU.',
+            content: 'El Mac Mini M4 Pro con 48 GB de memoria unificada ejecuta Qwen3 32B Q4 a 20–30 tok/s vía el backend Metal de Ollama. Precio: ~$1399. Si necesitas quedarte en el ecosistema macOS y necesitas capacidad de modelos 32B+, esta es la ruta de actualización — no una eGPU.',
             affiliateLinks: [
               { label: 'Apple Mac Mini M4 Pro en Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
             ],

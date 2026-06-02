@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Does AI coding assistance work the same way in all programming languages?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'No. AI tools are trained primarily on English-language codebases, meaning Python and JavaScript receive the strongest support. For Japanese (kanji/kana), Chinese, or other CJK-heavy projects, Qwen 2.5 (Alibaba) or DeepSeek V3 provide faster token processing because their tokenizers handle CJK scripts at a better ratio than Western-trained models.',
+              text: 'No. AI tools are trained primarily on English-language codebases, meaning Python and JavaScript receive the strongest support. For Japanese (kanji/kana), Chinese, or other CJK-heavy projects, Qwen 3 (Alibaba) or DeepSeek V3 provide faster token processing because their tokenizers handle CJK scripts at a better ratio than Western-trained models.',
             },
           },
           {
@@ -450,7 +450,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Does AI coding assistance work the same way in all programming languages?',
-              a: 'No. AI tools are trained primarily on English-language codebases, meaning Python and JavaScript receive the strongest support. For Japanese (kanji/kana), Chinese, or other CJK-heavy projects, Qwen 2.5 (Alibaba) or DeepSeek V3 provide faster token processing because their tokenizers handle CJK scripts at a better ratio than Western-trained models.',
+              a: 'No. AI tools are trained primarily on English-language codebases, meaning Python and JavaScript receive the strongest support. For Japanese (kanji/kana), Chinese, or other CJK-heavy projects, Qwen 3 (Alibaba) or DeepSeek V3 provide faster token processing because their tokenizers handle CJK scripts at a better ratio than Western-trained models.',
             },
             {
               q: 'What temperature should I use for AI code generation?',
@@ -627,7 +627,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Funktioniert KI-Programmier-Unterstützung gleich in allen Programmiersprachen?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung erhalten. Für japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte bieten Qwen 2.5 (Alibaba) oder DeepSeek V3 schnellere Token-Verarbeitung, da ihre Tokenizer CJK-Skripte besser verarbeiten als westliche Modelle.',
+              text: 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung erhalten. Für japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte bieten Qwen 3 (Alibaba) oder DeepSeek V3 schnellere Token-Verarbeitung, da ihre Tokenizer CJK-Skripte besser verarbeiten als westliche Modelle.',
             },
           },
           {
@@ -959,7 +959,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Funktioniert KI-Programmier-Unterstützung gleich in allen Programmiersprachen?',
-              a: 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung bekommen. Für Japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte erzeugen Qwen 2.5 (Alibaba) oder DeepSeek V3 schnellere Token-Verarbeitung, weil ihre Tokenizer CJK-Skripte besser handhaben als westliche Modelle.',
+              a: 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung bekommen. Für Japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte erzeugen Qwen 3 (Alibaba) oder DeepSeek V3 schnellere Token-Verarbeitung, weil ihre Tokenizer CJK-Skripte besser handhaben als westliche Modelle.',
             },
             {
               q: 'Welche Temperature sollte ich für KI-Code-Generierung nutzen?',
@@ -1422,7 +1422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'L\'assistance au codage IA fonctionne-t-elle de la même façon dans tous les langages de programmation ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen 2.5 (Alibaba) ou DeepSeek V3 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.',
+              text: 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen 3 (Alibaba) ou DeepSeek V3 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.',
             },
           },
           {
@@ -1744,7 +1744,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'L\'assistance au codage IA fonctionne-t-elle de la même façon dans tous les langages de programmation ?',
-              a: 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen 2.5 (Alibaba) ou DeepSeek V3 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.',
+              a: 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen 3 (Alibaba) ou DeepSeek V3 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.',
             },
             {
               q: 'Quelle température devrais-je utiliser pour la génération de code IA ?',
@@ -1927,7 +1927,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'AI コーディング支援はすべてのプログラミング言語で同じように機能しますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'いいえ。AI ツールは主に英語のコードベースで訓練されているため、Python と JavaScript が最も強いサポートを受けています。日本語（漢字・ひらがな）、中国語、またはその他の CJK 集約的なプロジェクトの場合、Qwen 2.5（Alibaba）または DeepSeek V3 は CJK スクリプトの処理が優れています。',
+              text: 'いいえ。AI ツールは主に英語のコードベースで訓練されているため、Python と JavaScript が最も強いサポートを受けています。日本語（漢字・ひらがな）、中国語、またはその他の CJK 集約的なプロジェクトの場合、Qwen 3（Alibaba）または DeepSeek V3 は CJK スクリプトの処理が優れています。',
             },
           },
           {
@@ -2187,7 +2187,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'AI コーディング支援はすべてのプログラミング言語で同じように機能しますか？',
-              a: 'いいえ。Python と JavaScript が最強。CJK プロジェクトには Qwen 2.5 や DeepSeek V3。',
+              a: 'いいえ。Python と JavaScript が最強。CJK プロジェクトには Qwen 3 や DeepSeek V3。',
             },
             {
               q: 'AI コード生成に何の Temperature を使用すべきですか？',

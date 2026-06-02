@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
             { 'Model': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
             { 'Model': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
-            { 'Model': 'Qwen2.5 72B Q4', 'tok/s': '22–26' },
+            { 'Model': 'Qwen3 72B Q4', 'tok/s': '22–26' },
           ],
         },
         platforms: {
@@ -163,7 +163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**EU / GDPR:** Local inference eliminates data processor agreements (Article 28 GDPR). Sensitive professional data (legal, medical, financial) stays within the EU without SCC contractual overhead.',
             '**Japan / APPI:** The Act on Protection of Personal Information (APPI) requires explicit consent for cross-border data transfer. Local inference removes this requirement entirely.',
-            '**China / Data Security Law:** The 2021 Data Security Law restricts sending certain categories of data offshore. A mini PC running [Qwen2.5](/local-llms/top-open-source-models-ollama) locally satisfies these requirements without cloud routing.',
+            '**China / Data Security Law:** The 2021 Data Security Law restricts sending certain categories of data offshore. A mini PC running [Qwen3](/local-llms/top-open-source-models-ollama) locally satisfies these requirements without cloud routing.',
           ],
         },
         mistakes: {
@@ -366,7 +366,7 @@ schema: {
             { 'Modell': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
             { 'Modell': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
             { 'Modell': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
-            { 'Modell': 'Qwen2.5 72B Q4', 'tok/s': '22–26' },
+            { 'Modell': 'Qwen3 72B Q4', 'tok/s': '22–26' },
           ],
         },
         platforms: {
@@ -431,7 +431,7 @@ schema: {
             '**EU / DSGVO:** Lokale Inferenz eliminiert Auftragsverarbeitungsverträge (Artikel 28 DSGVO). Sensible Berufsdaten (rechtlich, medizinisch, finanziell) verbleiben innerhalb der EU ohne SCC-Vertragsaufwand. Der BSI-Grundschutz-Katalog empfiehlt On-Premises-Verarbeitung für kritische Infrastrukturen und Behörden.',
             '**DACH-Unternehmensstandards:** Im deutschsprachigen Raum (Deutschland, Österreich, Schweiz) verlangen DSGVO-Umsetzungsgesetze und BSI-IT-Grundschutz strikte Datenlokalisierung. Mini-PCs eignen sich für den Einsatz in regulierten Branchen (Gesundheit, Finanzen, öffentliche Verwaltung), da alle Verarbeitungen lokal stattfinden.',
             '**Japan / APPI:** Das japanische Gesetz zum Schutz personenbezogener Informationen (APPI) erfordert ausdrückliche Einwilligung für grenzüberschreitende Datentransfers. Lokale Inferenz beseitigt diese Anforderung vollständig.',
-            '**China / Datensicherheitsgesetz:** Das Datensicherheitsgesetz von 2021 schränkt die Übertragung bestimmter Datenkategorien ins Ausland ein. Ein Mini-PC, der [Qwen2.5](/de/local-llms/top-open-source-models-ollama) lokal ausführt, erfüllt diese Anforderungen ohne Cloud-Routing.',
+            '**China / Datensicherheitsgesetz:** Das Datensicherheitsgesetz von 2021 schränkt die Übertragung bestimmter Datenkategorien ins Ausland ein. Ein Mini-PC, der [Qwen3](/de/local-llms/top-open-source-models-ollama) lokal ausführt, erfüllt diese Anforderungen ohne Cloud-Routing.',
           ],
         },
         mistakes: {
@@ -636,7 +636,7 @@ schema: {
             { 'Modèle': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
             { 'Modèle': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
             { 'Modèle': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
-            { 'Modèle': 'Qwen2.5 72B Q4', 'tok/s': '22–26' },
+            { 'Modèle': 'Qwen3 72B Q4', 'tok/s': '22–26' },
           ],
         },
         platforms: {
@@ -694,7 +694,7 @@ schema: {
           items: [
             '**UE / RGPD :** L’inférence locale élimine les accords de sous-traitance (article 28 RGPD). Les données sensibles (juridiques, médicales, financières) restent dans l’UE sans surcoût contractuel SCC. La CNIL recommande l’IA locale pour le traitement de données professionnelles sensibles afin d’éviter tout transfert vers des serveurs tiers.',
             '**Japon / APPI :** La loi sur la protection des informations personnelles (APPI) exige un consentement explicite pour les transferts transfrontaliers. L’inférence locale supprime totalement cette exigence.',
-            '**Chine / Loi sur la sécurité des données :** La loi de 2021 restreint l’envoi de certaines catégories de données à l’étranger. Un mini PC exécutant [Qwen2.5](/fr/local-llms/top-open-source-models-ollama) localement satisfait ces exigences sans routage cloud.',
+            '**Chine / Loi sur la sécurité des données :** La loi de 2021 restreint l’envoi de certaines catégories de données à l’étranger. Un mini PC exécutant [Qwen3](/fr/local-llms/top-open-source-models-ollama) localement satisfait ces exigences sans routage cloud.',
           ],
         },
         mistakes: {
@@ -895,7 +895,7 @@ schema: {
             { 'モデル': 'Llama 3.3 8B Q4', 'tok/s': '45〜60' },
             { 'モデル': 'Llama 3.3 70B Q4', 'tok/s': '20〜25' },
             { 'モデル': 'DeepSeek-R1 70B Q4', 'tok/s': '18〜22' },
-            { 'モデル': 'Qwen2.5 72B Q4', 'tok/s': '22〜26' },
+            { 'モデル': 'Qwen3 72B Q4', 'tok/s': '22〜26' },
           ],
         },
         platforms: {
@@ -951,7 +951,7 @@ schema: {
           content: '**ローカルLLMを実行するミニPCはすべてのデータをオンプレミスに保持 — データがデバイスを離れることなく、日本のAPPI・アジア太平洋地域のデータ残留要件をデフォルトで満たします。**',
           items: [
             '**日本 / APPI・METI AIガバナンス：** 個人情報保護法（APPI）は国境を越えるデータ転送に明示的な同意を要求。ローカル推論はこの要件を完全に排除。経済産業省（METI）の2024年AIガバナンスガイドラインは、企業のAI展開においてデータ処理の透明性と残留管理を重視しており、ローカル推論はこれに完全適合。',
-            '**アジア太平洋地域：** 韓国のPIPA、シンガポールのPDPA、オーストラリアのPrivacy Actを含む各国のデータ残留フレームワークでは、クラウドルーティングなしにデータを国内に保つローカル推論が推奨される場合があります。[Qwen2.5](/ja/local-llms/top-open-source-models-ollama)などのモデルをミニPC上でローカル実行することで、アジア太平洋企業は地域のコンプライアンス要件を満たせます。',
+            '**アジア太平洋地域：** 韓国のPIPA、シンガポールのPDPA、オーストラリアのPrivacy Actを含む各国のデータ残留フレームワークでは、クラウドルーティングなしにデータを国内に保つローカル推論が推奨される場合があります。[Qwen3](/ja/local-llms/top-open-source-models-ollama)などのモデルをミニPC上でローカル実行することで、アジア太平洋企業は地域のコンプライアンス要件を満たせます。',
           ],
         },
         mistakes: {
@@ -1152,7 +1152,7 @@ schema: {
             { '型号': 'Llama 3.3 8B Q4', 'tok/s': '45〜60' },
             { '型号': 'Llama 3.3 70B Q4', 'tok/s': '20〜25' },
             { '型号': 'DeepSeek-R1 70B Q4', 'tok/s': '18〜22' },
-            { '型号': 'Qwen2.5 72B Q4', 'tok/s': '22〜26' },
+            { '型号': 'Qwen3 72B Q4', 'tok/s': '22〜26' },
           ],
         },
         platforms: {
@@ -1207,7 +1207,7 @@ schema: {
           title: '地区合规背景：迷你PC与数据安全',
           content: '**在迷你PC上运行本地LLM可将所有数据保留在本地设备——满足中国数据安全法、亚太地区数据驻留要求及企业合规标准。**',
           items: [
-            '**中国（数据安全法）：** 2021年《数据安全法》限制特定类别数据出境。金融、医疗、法律行业的企业须将敏感数据保留在境内。在迷你PC上本地运行[Qwen2.5](/zh/local-llms/top-open-source-models-ollama)或DeepSeek-R1完全满足数据安全法要求，无需云端路由，避免数据出境风险。国产大模型Qwen2.5和DeepSeek在中文推理任务上表现尤为出色，是中国企业的首选。',
+            '**中国（数据安全法）：** 2021年《数据安全法》限制特定类别数据出境。金融、医疗、法律行业的企业须将敏感数据保留在境内。在迷你PC上本地运行[Qwen3](/zh/local-llms/top-open-source-models-ollama)或DeepSeek-R1完全满足数据安全法要求，无需云端路由，避免数据出境风险。国产大模型Qwen3和DeepSeek在中文推理任务上表现尤为出色，是中国企业的首选。',
             '**亚太地区（数据跨境）：** 新加坡PDPA、韩国PIPA、澳大利亚隐私法等亚太数据框架均推荐在处理敏感个人数据时采用本地推理。本地LLM推理消除跨境数据传输的合规负担，特别适合在多个亚太司法管辖区运营的企业。统一内存迷你PC（Framework Desktop、Mac mini M4 Pro）可在不建立云基础设施的情况下满足各地数据驻留要求。',
             '**企业部署：** 银行、医院、律所等大型机构面临严格的数据监管要求。本地LLM推理迷你PC提供端到端数据控制——敏感客户数据、患者记录或法律文件永不离开企业网络。与云API相比，迷你PC的一次性硬件投入（$900〜2,300）可在6〜12个月内收回成本，同时实现完全的数据主权。',
           ],
@@ -1415,7 +1415,7 @@ schema: {
             { 'Modelo': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
             { 'Modelo': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
             { 'Modelo': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
-            { 'Modelo': 'Qwen2.5 72B Q4', 'tok/s': '22–26' },
+            { 'Modelo': 'Qwen3 72B Q4', 'tok/s': '22–26' },
           ],
         },
         platforms: {
@@ -1479,7 +1479,7 @@ schema: {
           items: [
             '**UE / GDPR:** La inferencia local elimina los acuerdos de procesamiento de datos (Artículo 28 del GDPR). Los datos profesionales sensibles (legales, médicos, financieros) permanecen dentro de la UE sin la carga contractual de las SCC.',
             '**Japón / APPI:** La Ley de Protección de Información Personal (APPI) requiere consentimiento explícito para la transferencia transfronteriza de datos. La inferencia local elimina completamente este requisito.',
-            '**China / Ley de Seguridad de Datos:** La Ley de Seguridad de Datos de 2021 restringe el envío de ciertas categorías de datos al exterior. Un mini PC que ejecuta [Qwen2.5](/es/local-llms/top-open-source-models-ollama) localmente cumple estos requisitos sin enrutamiento en la nube.',
+            '**China / Ley de Seguridad de Datos:** La Ley de Seguridad de Datos de 2021 restringe el envío de ciertas categorías de datos al exterior. Un mini PC que ejecuta [Qwen3](/es/local-llms/top-open-source-models-ollama) localmente cumple estos requisitos sin enrutamiento en la nube.',
           ],
         },
         mistakes: {

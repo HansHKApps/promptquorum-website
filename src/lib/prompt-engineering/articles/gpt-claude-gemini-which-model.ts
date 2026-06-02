@@ -173,10 +173,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['Your Priority', 'Start With', 'Why', 'When to Switch'],
           rows: [
-            { 'Your Priority': 'Complex writing & analysis', 'Start With': 'Claude Opus 4.8', 'Why': 'Highest output quality; cuts revision rounds', 'When to Switch': 'Switch to GPT-5.5 if you need multi-tool workflows or integrations' },
-            { 'Your Priority': 'Coding & development speed', 'Start With': 'Gemini 3.1 Pro or Flash', 'Why': '1M context (load entire projects) + best cost/quality', 'When to Switch': 'Switch to Claude for deep debugging or code review; GPT for tool integration' },
-            { 'Your Priority': 'Multi-agent workflows / APIs', 'Start With': 'GPT-5.5', 'Why': 'Richest third-party ecosystem; best tool calling', 'When to Switch': 'Switch to Gemini to save costs on high-volume tasks' },
-            { 'Your Priority': 'Mainland China users/data', 'Start With': 'DeepSeek or Baidu ERNIE', 'Why': 'Only practical choice — Western models restricted/slow', 'When to Switch': 'N/A — compliance/latency requirements make switch impossible' },
+            { 'Your Priority': 'Complex writing & analysis', 'Start With': '[Claude Opus 4.8](https://www.anthropic.com/claude)', 'Why': 'Highest output quality; cuts revision rounds', 'When to Switch': 'Switch to GPT-5.5 if you need multi-tool workflows or integrations' },
+            { 'Your Priority': 'Coding & development speed', 'Start With': '[Gemini 3.1 Pro](https://gemini.google.com) or Flash', 'Why': '1M context (load entire projects) + best cost/quality', 'When to Switch': 'Switch to Claude for deep debugging or code review; GPT for tool integration' },
+            { 'Your Priority': 'Multi-agent workflows / APIs', 'Start With': '[GPT-5.5](https://openai.com/chatgpt)', 'Why': 'Richest third-party ecosystem; best tool calling', 'When to Switch': 'Switch to Gemini to save costs on high-volume tasks' },
+            { 'Your Priority': 'Mainland China users/data', 'Start With': '[DeepSeek](https://ollama.com/library/deepseek-r1) or Baidu ERNIE', 'Why': 'Only practical choice — Western models restricted/slow', 'When to Switch': 'N/A — compliance/latency requirements make switch impossible' },
           ],
         },
 
@@ -562,10 +562,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tableFormat: true,
       columns: ['Ihre Priorität', 'Beginnen Sie mit', 'Warum', 'Wann wechseln'],
       rows: [
-        { 'Ihre Priorität': 'Komplexes Schreiben & Analyse', 'Beginnen Sie mit': 'Claude Opus 4.8', 'Warum': 'Höchste Ausgabequalität; reduziert Überarbeitungsrunden', 'Wann wechseln': 'Wechseln Sie zu GPT-5.5, wenn Sie Multi-Tool-Workflows oder Integrationen benötigen' },
-        { 'Ihre Priorität': 'Coding & Entwicklungsgeschwindigkeit', 'Beginnen Sie mit': 'Gemini 3.1 Pro oder Flash', 'Warum': '1M Kontext (laden Sie komplette Projekte) + beste Kosten/Qualität', 'Wann wechseln': 'Wechseln Sie zu Claude für tiefes Debugging oder Code-Review; GPT für Tool-Integration' },
-        { 'Ihre Priorität': 'Multi-Agent-Workflows / APIs', 'Beginnen Sie mit': 'GPT-5.5', 'Warum': 'Reichstes Drittanbieter-Ökosystem; bester Tool-Aufruf', 'Wann wechseln': 'Wechseln Sie zu Gemini, um Kosten bei Hochvolumen-Aufgaben zu sparen' },
-        { 'Ihre Priorität': 'Festlandchina Nutzer/Daten', 'Beginnen Sie mit': 'DeepSeek oder Baidu ERNIE', 'Warum': 'Einzig praktische Wahl — westliche Modelle eingeschränkt/langsam', 'Wann wechseln': 'N/A — Compliance/Latenz-Anforderungen machen Wechsel unmöglich' },
+        { 'Ihre Priorität': 'Komplexes Schreiben & Analyse', 'Beginnen Sie mit': '[Claude Opus 4.8](https://www.anthropic.com/claude)', 'Warum': 'Höchste Ausgabequalität; reduziert Überarbeitungsrunden', 'Wann wechseln': 'Wechseln Sie zu GPT-5.5, wenn Sie Multi-Tool-Workflows oder Integrationen benötigen' },
+        { 'Ihre Priorität': 'Coding & Entwicklungsgeschwindigkeit', 'Beginnen Sie mit': '[Gemini 3.1 Pro](https://gemini.google.com) oder Flash', 'Warum': '1M Kontext (laden Sie komplette Projekte) + beste Kosten/Qualität', 'Wann wechseln': 'Wechseln Sie zu Claude für tiefes Debugging oder Code-Review; GPT für Tool-Integration' },
+        { 'Ihre Priorität': 'Multi-Agent-Workflows / APIs', 'Beginnen Sie mit': '[GPT-5.5](https://openai.com/chatgpt)', 'Warum': 'Reichstes Drittanbieter-Ökosystem; bester Tool-Aufruf', 'Wann wechseln': 'Wechseln Sie zu Gemini, um Kosten bei Hochvolumen-Aufgaben zu sparen' },
+        { 'Ihre Priorität': 'Festlandchina Nutzer/Daten', 'Beginnen Sie mit': '[DeepSeek](https://ollama.com/library/deepseek-r1) oder Baidu ERNIE', 'Warum': 'Einzig praktische Wahl — westliche Modelle eingeschränkt/langsam', 'Wann wechseln': 'N/A — Compliance/Latenz-Anforderungen machen Wechsel unmöglich' },
       ],
     },
 
@@ -680,10 +680,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tableFormat: true,
       columns: ['Modell', 'Beste Anwendung', 'Kontextfenster', 'Kosten', 'Stärke', 'Schwäche'],
       rows: [
-        { 'Modell': 'GPT-5.5', 'Beste Anwendung': 'Tool-Integration, Agenten', 'Kontextfenster': '1M', 'Kosten': '$5/$30 per M', 'Stärke': 'Integrationen, Ökosystem', 'Schwäche': 'Preislich höher als Gemini' },
-        { 'Modell': 'Claude Opus 4.8', 'Beste Anwendung': 'Schreiben, Code-Quality', 'Kontextfenster': '1M', 'Kosten': '$5/$25 per M', 'Stärke': 'Schreibqualität, Sicherheit', 'Schwäche': 'Weniger Integrationen als GPT' },
-        { 'Modell': 'Gemini 3.1 Pro', 'Beste Anwendung': 'Langkontext, Batch-Coding', 'Kontextfenster': '2M', 'Kosten': '$1.25/$5 per M', 'Stärke': 'Langkontext, Kosteneffizienz', 'Schwäche': 'Weniger Agenten-Features' },
-        { 'Modell': 'DeepSeek', 'Beste Anwendung': 'China, Kosteneffizienz', 'Kontextfenster': '64k-128k', 'Kosten': '$0.14/$0.42 per M', 'Stärke': 'Preis, China-Latenz', 'Schwäche': 'Weniger Ökosystem außerhalb China' },
+        { 'Modell': '[GPT-5.5](https://openai.com/chatgpt)', 'Beste Anwendung': 'Tool-Integration, Agenten', 'Kontextfenster': '1M', 'Kosten': '$5/$30 per M', 'Stärke': 'Integrationen, Ökosystem', 'Schwäche': 'Preislich höher als Gemini' },
+        { 'Modell': '[Claude Opus 4.8](https://www.anthropic.com/claude)', 'Beste Anwendung': 'Schreiben, Code-Quality', 'Kontextfenster': '1M', 'Kosten': '$5/$25 per M', 'Stärke': 'Schreibqualität, Sicherheit', 'Schwäche': 'Weniger Integrationen als GPT' },
+        { 'Modell': '[Gemini 3.1 Pro](https://gemini.google.com)', 'Beste Anwendung': 'Langkontext, Batch-Coding', 'Kontextfenster': '2M', 'Kosten': '$1.25/$5 per M', 'Stärke': 'Langkontext, Kosteneffizienz', 'Schwäche': 'Weniger Agenten-Features' },
+        { 'Modell': '[DeepSeek](https://ollama.com/library/deepseek-r1)', 'Beste Anwendung': 'China, Kosteneffizienz', 'Kontextfenster': '64k-128k', 'Kosten': '$0.14/$0.42 per M', 'Stärke': 'Preis, China-Latenz', 'Schwäche': 'Weniger Ökosystem außerhalb China' },
         { 'Modell': 'Baidu ERNIE', 'Beste Anwendung': 'China, Compliance', 'Kontextfenster': '128k', 'Kosten': 'Pay-per-token', 'Stärke': 'China, Regulierung', 'Schwäche': 'Begrenzte internationale Nutzung' },
       ],
     },
@@ -862,14 +862,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     theme: 'Fundamentals',
     title: 'GPT, Claude ou Gemini : Comment choisir le bon modèle IA',
-    intro: 'Aucun modèle IA unique n\'est le meilleur pour chaque tâche. GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek et Baidu ERNIE excellent chacun dans des tâches, régions et budgets différents. Ce guide vous offre un cadre décisionnel pratique — pas une autre liste de benchmarks.',
+    intro: 'Aucun modèle IA unique n\'est le meilleur pour chaque tâche. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek et Baidu ERNIE excellent chacun dans des tâches, régions et budgets différents. Ce guide vous offre un cadre décisionnel pratique — pas une autre liste de benchmarks.',
     publishDate: '2026-03-23',
     seoTitle: 'GPT vs Claude vs Gemini 2026: Quel Modèle?',
-    metaDescription: 'GPT-4o pour intégrations, Claude pour qualité d\'écriture, Gemini pour efficacité coûts. Tous à 1M contexte. Matrice décisionnelle, tarifs et guide routage.',
-    ogTitle: 'GPT-4o vs Claude Opus 4.8 vs Gemini 3.1 Pro : qui gagne pour VOTRE tâche ?',
-    ogDescription: 'Aucun modèle IA ne gagne partout. GPT-4o domine intégration outils, Claude excelle rédaction, Gemini offre coût efficace. Comparaison sur tâches réelles.',
-    twitterTitle: 'GPT-4o vs Claude vs Gemini 3.1 Pro : lequel ? (2026)',
-    twitterDescription: 'GPT-4o pour agents, Claude pour rédaction, Gemini pour coûts. Tous à 1M contexte. Matrice décision, tarifs et 4 recettes routage.',
+    metaDescription: 'GPT-5.5 pour intégrations, Claude pour qualité d\'écriture, Gemini pour efficacité coûts. Tous à 1M contexte. Matrice décisionnelle, tarifs et guide routage.',
+    ogTitle: 'GPT-5.5 vs Claude Opus 4.8 vs Gemini 3.1 Pro : qui gagne pour VOTRE tâche ?',
+    ogDescription: 'Aucun modèle IA ne gagne partout. GPT-5.5 domine intégration outils, Claude excelle rédaction, Gemini offre coût efficace. Comparaison sur tâches réelles.',
+    twitterTitle: 'GPT-5.5 vs Claude vs Gemini 3.1 Pro : lequel ? (2026)',
+    twitterDescription: 'GPT-5.5 pour agents, Claude pour rédaction, Gemini pour coûts. Tous à 1M contexte. Matrice décision, tarifs et 4 recettes routage.',
     readTime: '12 min de lecture',
     schema: {
       '@context': 'https://schema.org',
@@ -890,7 +890,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'description': 'Concepts fondamentaux et sujets clés pour choisir le bon modèle IA',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Matrice de décision rapide', 'description': 'Comment choisir votre modèle de départ selon la tâche, la géographie et le budget' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Comparaison complète des modèles', 'description': 'Comparaison détaillée entre GPT-4o, Claude, Gemini, DeepSeek et Baidu ERNIE' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Comparaison complète des modèles', 'description': 'Comparaison détaillée entre GPT-5.5, Claude, Gemini, DeepSeek et Baidu ERNIE' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Compromis coût vs qualité', 'description': 'Quand utiliser les modèles budgétaires par rapport aux modèles frontière et répartition des coûts par jeton' },
         { '@type': 'ListItem', 'position': 4, 'name': 'Contraintes géographiques et accès à la Chine', 'description': 'Disponibilité des modèles en Chine continentale et considérations pour le routage mondial/régional' },
         { '@type': 'ListItem', 'position': 5, 'name': 'Tests avec PromptQuorum', 'description': 'Comment évaluer les modèles sur vos données de tâche réelles et votre voix de marque' },
@@ -900,9 +900,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       definition: {
         title: 'Aucun modèle IA « meilleur » — choisissez par tâche',
         content: [
-          '**Aucun modèle IA unique n\'est le meilleur pour toutes les tâches. GPT-4o excelle à l\'intégration d\'outils et au raisonnement; Claude Opus 4.8 domine la qualité de l\'écriture et du code; Gemini 3.1 Pro offre des performances rentables et une intégration profonde avec Google Workspace; DeepSeek et Baidu ERNIE sont essentiels pour les charges de travail en Chine continentale.**',
+          '**Aucun modèle IA unique n\'est le meilleur pour toutes les tâches. GPT-5.5 excelle à l\'intégration d\'outils et au raisonnement; Claude Opus 4.8 domine la qualité de l\'écriture et du code; Gemini 3.1 Pro offre des performances rentables et une intégration profonde avec Google Workspace; DeepSeek et Baidu ERNIE sont essentiels pour les charges de travail en Chine continentale.**',
           'Lorsque vous avez une nouvelle tâche, la première question ne devrait pas être « quel est le meilleur modèle? » mais plutôt « quel modèle est le meilleur pour CETTE tâche, dans CETTE région, avec CE budget? » Les benchmarks et les classements changent tous les quelques mois. Votre tâche réelle — votre style d\'écriture spécifique, votre base de code, vos clients en Chine, votre sensibilité aux données — devrait guider le choix.',
-          'PromptQuorum est un outil de dispatch multi-modèle IA qui résout cela directement: envoyez une invite structurée unique à GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, Baidu ERNIE et LLMs locaux (Ollama, LM Studio) simultanément. Voyez toutes les réponses côte à côte. Laissez PromptQuorum noter quel modèle fonctionne le mieux pour VOTRE tâche, VOS données, VOTRE voix de marque — pas les benchmarks YouTube.',
+          'PromptQuorum est un outil de dispatch multi-modèle IA qui résout cela directement: envoyez une invite structurée unique à GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, Baidu ERNIE et LLMs locaux (Ollama, LM Studio) simultanément. Voyez toutes les réponses côte à côte. Laissez PromptQuorum noter quel modèle fonctionne le mieux pour VOTRE tâche, VOS données, VOTRE voix de marque — pas les benchmarks YouTube.',
         ],
       },
 
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Matrice de décision rapide — choisissez votre modèle de départ',
         content: '**Choisissez votre modèle de départ en fonction de votre tâche principale. La plupart des équipes utilisent plusieurs modèles — commencez par le bon et changez selon les besoins.**',
         items: [
-          'GPT-4o gagne: workflows multi-agents, intégration d\'outils, écosystème API, multimodal (images/audio). Commencez ici si les intégrations sont importantes.',
+          'GPT-5.5 gagne: workflows multi-agents, intégration d\'outils, écosystème API, multimodal (images/audio). Commencez ici si les intégrations sont importantes.',
           'Claude Opus 4.8 gagne: qualité de l\'écriture, révision de code, profondeur du raisonnement, sécurité d\'entreprise. Commencez ici pour la qualité du contenu/code.',
           'Gemini 3.1 Pro gagne: longs documents (1M tokens), traitement par lots, efficacité des coûts, Google Workspace. Commencez ici pour l\'analyse à grande échelle de documents.',
           'DeepSeek/Baidu ERNIE gagne: Chine continentale (requis pour la latence/accès), tâches sensibles aux coûts à haut volume. Seul choix si les données restent en Chine.',
@@ -919,19 +919,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tableFormat: true,
         columns: ['Votre priorité', 'Commencez par', 'Pourquoi', 'Quand changer'],
         rows: [
-          { 'Votre priorité': 'Écriture & analyse complexe', 'Commencez par': 'Claude Opus 4.8', 'Pourquoi': 'Qualité de sortie la plus élevée; réduit les cycles de révision', 'Quand changer': 'Basculez vers GPT-4o si vous avez besoin de workflows multi-outils ou d\'intégrations' },
-          { 'Votre priorité': 'Codage & vitesse de développement', 'Commencez par': 'Gemini 3.1 Pro ou Flash', 'Pourquoi': '2M contexte (chargez des projets complets) + meilleur coût/qualité', 'Quand changer': 'Basculez vers Claude pour le débogage approfondi ou la révision de code; GPT pour l\'intégration d\'outils' },
-          { 'Votre priorité': 'Workflows multi-agents / APIs', 'Commencez par': 'GPT-4o', 'Pourquoi': 'Écosystème tiers le plus riche; meilleur appel d\'outils', 'Quand changer': 'Basculez vers Gemini pour économiser sur les tâches à haut volume' },
-          { 'Votre priorité': 'Utilisateurs/données Chine continentale', 'Commencez par': 'DeepSeek ou Baidu ERNIE', 'Pourquoi': 'Seul choix pratique — modèles occidentaux restreints/lents', 'Quand changer': 'N/A — les exigences de conformité/latence rendent le changement impossible' },
+          { 'Votre priorité': 'Écriture & analyse complexe', 'Commencez par': '[Claude Opus 4.8](https://www.anthropic.com/claude)', 'Pourquoi': 'Qualité de sortie la plus élevée; réduit les cycles de révision', 'Quand changer': 'Basculez vers GPT-5.5 si vous avez besoin de workflows multi-outils ou d\'intégrations' },
+          { 'Votre priorité': 'Codage & vitesse de développement', 'Commencez par': '[Gemini 3.1 Pro](https://gemini.google.com) ou Flash', 'Pourquoi': '2M contexte (chargez des projets complets) + meilleur coût/qualité', 'Quand changer': 'Basculez vers Claude pour le débogage approfondi ou la révision de code; GPT pour l\'intégration d\'outils' },
+          { 'Votre priorité': 'Workflows multi-agents / APIs', 'Commencez par': '[GPT-5.5](https://openai.com/chatgpt)', 'Pourquoi': 'Écosystème tiers le plus riche; meilleur appel d\'outils', 'Quand changer': 'Basculez vers Gemini pour économiser sur les tâches à haut volume' },
+          { 'Votre priorité': 'Utilisateurs/données Chine continentale', 'Commencez par': '[DeepSeek](https://ollama.com/library/deepseek-r1) ou Baidu ERNIE', 'Pourquoi': 'Seul choix pratique — modèles occidentaux restreints/lents', 'Quand changer': 'N/A — les exigences de conformité/latence rendent le changement impossible' },
         ],
       },
 
       tldr: {
         title: 'Points clés',
-        content: '**Différents modèles excellent dans différentes tâches — GPT-4o domine l\'intégration d\'outils, Claude excelle à l\'écriture, Gemini gère mieux les longs documents, et DeepSeek/ERNIE sont requis pour la Chine.**',
+        content: '**Différents modèles excellent dans différentes tâches — GPT-5.5 domine l\'intégration d\'outils, Claude excelle à l\'écriture, Gemini gère mieux les longs documents, et DeepSeek/ERNIE sont requis pour la Chine.**',
         isTldr: true,
         items: [
-          '**GPT-4o:** outils + écosystème. Meilleur pour les workflows multi-agents, l\'appel d\'outils et les intégrations tierces les plus étendues.',
+          '**GPT-5.5:** outils + écosystème. Meilleur pour les workflows multi-agents, l\'appel d\'outils et les intégrations tierces les plus étendues.',
           '**Claude Opus 4.8:** raisonnement réfléchi + écriture. Meilleur pour les rapports, analyses, révisions de code et exigences de sécurité d\'entreprise.',
           '**Gemini 3.1 Pro:** écosystème Google + coûts. Meilleur pour les équipes dans Google Workspace, codage par lots et recherche en contexte long.',
           '**DeepSeek / Baidu ERNIE:** charges de travail axées sur la Chine. Obligatoire pour la Chine continentale en raison de la latence, des restrictions d\'accès et des exigences réglementaires.',
@@ -948,15 +948,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Coût par token et niveaux de tarification:** Les modèles frontier coûtent $15–60 par million de tokens; les modèles budgétaires coûtent $0,15–3. Le prix varie selon les tokens d\'entrée et de sortie. [Voir l\'économie des tokens en détail.](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
           '**Latence et limites de débit:** À quelle vitesse répond-il? Peut-il gérer votre volume de demandes? Certains modèles sont limités à 100 requêtes par minute; d\'autres supportent 10 000+.',
           '**Taille de la fenêtre de contexte:** Tous les trois modèles frontière: 1M tokens (mai 2026). Suffisant pour les longs documents, archives, projets complets. [En savoir plus sur les fenêtres de contexte.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
-          '**Capacités multimodales:** Peut-il traiter les images, l\'audio ou la vidéo? GPT-4o et Gemini 3.1 Pro supportent bien les images. DeepSeek et Baidu ERNIE se concentrent sur le texte.',
-          '**Écosystème et intégrations:** Combien d\'outils tiers, plugins et APIs le supportent? GPT-4o domine ici. Les modèles locaux via Ollama ou LM Studio supportent des milliers d\'intégrations communautaires.',
+          '**Capacités multimodales:** Peut-il traiter les images, l\'audio ou la vidéo? GPT-5.5 et Gemini 3.1 Pro supportent bien les images. DeepSeek et Baidu ERNIE se concentrent sur le texte.',
+          '**Écosystème et intégrations:** Combien d\'outils tiers, plugins et APIs le supportent? GPT-5.5 domine ici. Les modèles locaux via Ollama ou LM Studio supportent des milliers d\'intégrations communautaires.',
           '**Géographie et règles de résidence des données:** Est-il disponible dans votre région? Vos données doivent-elles rester dans un pays ou un réseau d\'entreprise? La Chine continentale exige des modèles locaux (DeepSeek, Baidu ERNIE) en raison des réglementations et de la latence.',
         ],
       },
 
       gptSection: {
-        title: 'Quand utiliser GPT-4o?',
-        content: '**GPT-4o est le modèle multimodal frontier d\'OpenAI — le plus fort pour les workflows agentic lourds en outils avec les intégrations tierces et outils les plus étendus.** Utilisez GPT-4o quand les outils, intégrations et capacités multimodales sont plus importants que le coût.',
+        title: 'Quand utiliser GPT-5.5?',
+        content: '**GPT-5.5 est le modèle multimodal frontier d\'OpenAI — le plus fort pour les workflows agentic lourds en outils avec les intégrations tierces et outils les plus étendus.** Utilisez GPT-5.5 quand les outils, intégrations et capacités multimodales sont plus importants que le coût.',
         items: [
           '**Forces:** Excellent raisonnement général et chat sur tous les domaines. Fortes capacités multimodales — traite de manière fiable les images, l\'audio et parfois la vidéo. Appel d\'outils et intégrations de classe mondiale (agents, plugins IDE, pile d\'entreprise). De confiance en production par des millions de développeurs.',
           '**Meilleurs cas d\'usage:** Workflows agents multi-étapes. Chaînes complexes où l\'appel d\'outils (APIs, bases de données, exécution de code) est requis. Tâches nécessitant l\'analyse de captures d\'écran ou d\'images. Projets d\'écosystème OpenAI (ChatGPT, Assistants API, Codex, fine-tuning).',
@@ -971,7 +971,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**Forces:** Écriture de haute qualité et résumés; les sorties sont concises, bien structurées et prêtes pour la publication. Excellente compréhension du code, refactorisation et explication — découvre souvent des bogues que d\'autres modèles manquent. Bon traitement du contexte long pour la recherche et les workflows de documents. Culture de sécurité forte; préféré dans les industries réglementées.',
           '**Meilleurs cas d\'usage:** Rapports, analyses et travaux de connaissance où la structure et la clarté sont essentielles. Codebases et discussions d\'architecture complexes. Contextes d\'entreprise avec exigences de conformité et de sécurité. Contenu nécessitant une minimisation des modifications.',
-          '**Compromis:** Points de prix plus élevés pour les niveaux supérieurs; peut être excessif pour les tâches simples. Certaines intégrations tierces sont plus récentes que les équivalents GPT-4o.',
+          '**Compromis:** Points de prix plus élevés pour les niveaux supérieurs; peut être excessif pour les tâches simples. Certaines intégrations tierces sont plus récentes que les équivalents GPT-5.5.',
           '**Fenêtre de contexte:** 200 000 tokens (gère ~150 pages de texte).',
         ],
       },
@@ -989,9 +989,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       coding: {
         title: 'Quel modèle IA est meilleur pour le codage en 2026?',
-        content: '**Claude Opus 4.8 excelle à la qualité du code et au refactorisation; GPT-4o domine l\'intégration d\'outils et le raisonnement multi-fichiers; Gemini 3.1 Pro offre le meilleur ratio coût/qualité pour les tâches par lots; DeepSeek est le choix pour les développeurs de Chine continentale.** Le modèle « meilleur » pour le codage dépend de votre défi principal: qualité du code, largeur d\'intégration, coût par token ou géographie.',
+        content: '**Claude Opus 4.8 excelle à la qualité du code et au refactorisation; GPT-5.5 domine l\'intégration d\'outils et le raisonnement multi-fichiers; Gemini 3.1 Pro offre le meilleur ratio coût/qualité pour les tâches par lots; DeepSeek est le choix pour les développeurs de Chine continentale.** Le modèle « meilleur » pour le codage dépend de votre défi principal: qualité du code, largeur d\'intégration, coût par token ou géographie.',
         items: [
-          '**GPT-4o:** Le plus fort pour les tâches de codage multi-étapes avec usage d\'outils (accès système de fichiers, APIs, commandes shell). Excellent au raisonnement sur les grandes codebases et à la génération de workflows complexes. Meilleur si les intégrations avec GitHub, AWS, APIs sont critiques.',
+          '**GPT-5.5:** Le plus fort pour les tâches de codage multi-étapes avec usage d\'outils (accès système de fichiers, APIs, commandes shell). Excellent au raisonnement sur les grandes codebases et à la génération de workflows complexes. Meilleur si les intégrations avec GitHub, AWS, APIs sont critiques.',
           '**Claude Opus 4.8:** Meilleur pour la révision de code, le refactorisation et les discussions d\'architecture. Détecte les bogues subtils que d\'autres modèles manquent. Préféré pour maintenir les codebases existantes et expliquer le code hérité. Coût de token plus élevé mais réduit souvent les allers-retours.',
           '**Gemini 3.1 Pro:** Meilleur coût/qualité pour les tâches de codage par lots (traitement de données, scripts utilitaires, automation). 2M contexte signifie charger des projets entiers à la fois. Excellent pour la vélocité prototype-à-production où le coût compte.',
           '**DeepSeek:** Compétitif avec GPT pour le codage mais 10× moins cher. Meilleur pour les développeurs de Chine continentale et tâches de codage sensibles aux coûts (scaffolding, boilerplate, refactorisation routinière). Très fort sur les problèmes d\'algorithme et la programmation compétitive.',
@@ -1000,13 +1000,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       longContext: {
         title: 'Meilleur LLM pour le contexte long ou les grands documents 2026?',
-        content: '**Tous les trois modèles (Gemini, Claude, GPT-4o) supportent maintenant 1M tokens (~800 pages). Choisissez en fonction de la qualité des résultats, du coût, des intégrations, et de votre zone géographique plutôt que de la taille du contexte.**',
+        content: '**Tous les trois modèles (Gemini, Claude, GPT-5.5) supportent maintenant 1M tokens (~800 pages). Choisissez en fonction de la qualité des résultats, du coût, des intégrations, et de votre zone géographique plutôt que de la taille du contexte.**',
         image: '/images/context-windows-chart.svg',
-        imageCaption: 'Comparaison de fenêtre de contexte: Gemini 3.1 Pro supporte un contexte 10× plus grand que GPT-4o, permettant des projets entiers et des archives de documents en une seule requête.',
+        imageCaption: 'Comparaison de fenêtre de contexte: Gemini 3.1 Pro supporte un contexte 10× plus grand que GPT-5.5, permettant des projets entiers et des archives de documents en une seule requête.',
         items: [
           '**Gemini 3.1 Pro (1M tokens / ~800 pages):** Chargez des codebases entières, des archives juridiques ou de recherche complètes. Intégration de recherche web native. Meilleur pour: due diligence, analyses réglementaires, recherche documentaire, traitement massif de PDFs.',
           '**Claude Opus 4.8 (1M tokens / ~800 pages):** Idéal pour tous les documents: livres, thèses, codebases complètes. Excellence en analyse détaillée et extraction nuancée. Meilleur pour: révision de code, rapports longs, analyse de contrats.',
-          '**GPT-4o (1M tokens / ~800 pages):** Excellente pour documents longs + appels d\'outils (filesystem, APIs). Meilleur pour: agentique, intégrations, systèmes complexes avec contexte long.',
+          '**GPT-5.5 (1M tokens / ~800 pages):** Excellente pour documents longs + appels d\'outils (filesystem, APIs). Meilleur pour: agentique, intégrations, systèmes complexes avec contexte long.',
           '**Stratégie pratique:** Pour les tâches très longues (workflows multi-documents), utilisez d\'abord Gemini (moins cher, plus grand contexte), puis affinez avec Claude si la qualité de sortie a besoin de finition.',
         ],
       },
@@ -1014,28 +1014,28 @@ export const article: Partial<Record<Language, PEArticle>> = {
       chineseModels: {
         title: 'Comment choisir un modèle IA si vous êtes en Chine ou avez besoin de faible latence?',
         content: [
-          '**Pour les utilisateurs et données en Chine continentale, DeepSeek et Baidu ERNIE ne sont pas optionnels — ils sont requis.** Les modèles frontier occidentaux (GPT-4o, Claude, Gemini) sont souvent restreints ou à latence élevée en Chine en raison des restrictions de réseau et des exigences réglementaires. En 2026, la latence (3–10 secondes de temps de réponse vs 500ms localement) et la conformité (résidence des données, modération du contenu) sont des douleurs énormes. Utiliser un modèle occidental en Chine continentale signifie soit: (1) service indisponible, (2) latence inacceptable pour les utilisateurs, (3) violations réglementaires. Les modèles locaux éliminent tous les trois.',
+          '**Pour les utilisateurs et données en Chine continentale, DeepSeek et Baidu ERNIE ne sont pas optionnels — ils sont requis.** Les modèles frontier occidentaux (GPT-5.5, Claude, Gemini) sont souvent restreints ou à latence élevée en Chine en raison des restrictions de réseau et des exigences réglementaires. En 2026, la latence (3–10 secondes de temps de réponse vs 500ms localement) et la conformité (résidence des données, modération du contenu) sont des douleurs énormes. Utiliser un modèle occidental en Chine continentale signifie soit: (1) service indisponible, (2) latence inacceptable pour les utilisateurs, (3) violations réglementaires. Les modèles locaux éliminent tous les trois.',
           '**DeepSeek (modèle frontier, codage compétitif):** Performances compétitives en codage et raisonnement, tarification agressive, excellent support des langues chinoises et tâches mixtes chinois-anglais. Infrastructure native Chine continentale = latence sub-500ms. Meilleur pour les workflows de développeurs en Chine continentale et les charges de travail sensibles aux coûts à haut volume. Compromis: écosystème plus petit en dehors de la Chine, moins d\'intégrations tierces vs GPT/Claude/Gemini.',
           '**Baidu ERNIE (entreprise et consommateur):** Intégration étroite avec la recherche Baidu et le cloud, ancrage fort dans le contenu web chinois et les données d\'entreprise. Entièrement conforme aux exigences réglementaires de Chine continentale (modération du contenu, résidence des données, filtrage des mots-clés). Meilleur pour les applications consommateur et d\'entreprise ciblant les utilisateurs chinois, les applications sur l\'infrastructure Baidu Cloud où la conformité est non-négociable. Compromis: principalement optimisé pour le chinois, l\'anglais et les autres langues peuvent traîner derrière les modèles frontier occidentaux.',
         ],
       },
 
       comparison: {
-        title: 'GPT-4o vs Claude Opus 4.8 vs Gemini 3.1 Pro: Comparaison rapide',
+        title: 'GPT-5.5 vs Claude Opus 4.8 vs Gemini 3.1 Pro: Comparaison rapide',
         content: '**Ce tableau compare 5 modèles IA sur 8 dimensions clés: raisonnement général, écriture, codage, traitement du contexte long, support multimodal, efficacité des coûts, écosystème global et accès à la Chine.**',
         image: '/images/model-strengths-radar.svg',
-        imageCaption: 'Diagramme radar: Claude domine l\'écriture & raisonnement; GPT-4o excelle aux outils & multimodal; Gemini gagne sur coûts & contexte-long. Aucun gagnant unique — appareille le modèle à la tâche.',
+        imageCaption: 'Diagramme radar: Claude domine l\'écriture & raisonnement; GPT-5.5 excelle aux outils & multimodal; Gemini gagne sur coûts & contexte-long. Aucun gagnant unique — appareille le modèle à la tâche.',
         tableFormat: true,
-        columns: ['Dimension', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE'],
+        columns: ['Dimension', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE'],
         rows: [
-          { 'Dimension': 'Q&A Générale', 'GPT-4o': 'Excellent global', 'Claude Opus 4.8': 'Très bon, prudent', 'Gemini 3.1 Pro': 'Très bon + retrieval', 'DeepSeek': 'Fort, meilleur pour CN', 'Baidu ERNIE': 'Fort, meilleur pour CN' },
-          { 'Dimension': 'Écriture', 'GPT-4o': 'Excellent, parfois verbeux', 'Claude Opus 4.8': 'Structure & clarté excellent', 'Gemini 3.1 Pro': 'Bon, ton neutre', 'DeepSeek': 'Bon, chinois-first', 'Baidu ERNIE': 'Bon, chinois-first' },
-          { 'Dimension': 'Codage', 'GPT-4o': 'Fort', 'Claude Opus 4.8': 'Excellent, premium', 'Gemini 3.1 Pro': 'Excellent rapport qualité-prix', 'DeepSeek': 'Très fort pour dév CN', 'Baidu ERNIE': 'Bon, business appliqué' },
-          { 'Dimension': 'Contexte long', 'GPT-4o': 'Fort (1M)', 'Claude Opus 4.8': 'Fort (1M)', 'Gemini 3.1 Pro': 'Fort (1M) + web', 'DeepSeek': 'Bon', 'Baidu ERNIE': 'Bon avec données Baidu' },
-          { 'Dimension': 'Multimodal', 'GPT-4o': 'Leader (image/audio)', 'Claude Opus 4.8': 'Bonne vision', 'Gemini 3.1 Pro': 'Très fort (vidéo/web)', 'DeepSeek': 'Varie', 'Baidu ERNIE': 'Texte + web CN' },
-          { 'Dimension': 'Efficacité des coûts', 'GPT-4o': 'Moyen–Élevé', 'Claude Opus 4.8': 'Plus élevé, qualité premium', 'Gemini 3.1 Pro': 'Très rentable', 'DeepSeek': 'Très compétitif', 'Baidu ERNIE': 'Compétitif (ent CN)' },
-          { 'Dimension': 'Écosystème global', 'GPT-4o': 'Le plus étendu', 'Claude Opus 4.8': 'Croissance, esp. d\'entreprise', 'Gemini 3.1 Pro': 'Fort dans monde Google', 'DeepSeek': 'Limité hors Chine', 'Baidu ERNIE': 'Fort écosystème Baidu' },
-          { 'Dimension': 'Accès/latence Chine', 'GPT-4o': 'Souvent restreint', 'Claude Opus 4.8': 'Souvent restreint', 'Gemini 3.1 Pro': 'Souvent restreint', 'DeepSeek': 'Natif / faible latence', 'Baidu ERNIE': 'Natif / requis' },
+          { 'Dimension': 'Q&A Générale', 'GPT-5.5': 'Excellent global', 'Claude Opus 4.8': 'Très bon, prudent', 'Gemini 3.1 Pro': 'Très bon + retrieval', 'DeepSeek': 'Fort, meilleur pour CN', 'Baidu ERNIE': 'Fort, meilleur pour CN' },
+          { 'Dimension': 'Écriture', 'GPT-5.5': 'Excellent, parfois verbeux', 'Claude Opus 4.8': 'Structure & clarté excellent', 'Gemini 3.1 Pro': 'Bon, ton neutre', 'DeepSeek': 'Bon, chinois-first', 'Baidu ERNIE': 'Bon, chinois-first' },
+          { 'Dimension': 'Codage', 'GPT-5.5': 'Fort', 'Claude Opus 4.8': 'Excellent, premium', 'Gemini 3.1 Pro': 'Excellent rapport qualité-prix', 'DeepSeek': 'Très fort pour dév CN', 'Baidu ERNIE': 'Bon, business appliqué' },
+          { 'Dimension': 'Contexte long', 'GPT-5.5': 'Fort (1M)', 'Claude Opus 4.8': 'Fort (1M)', 'Gemini 3.1 Pro': 'Fort (1M) + web', 'DeepSeek': 'Bon', 'Baidu ERNIE': 'Bon avec données Baidu' },
+          { 'Dimension': 'Multimodal', 'GPT-5.5': 'Leader (image/audio)', 'Claude Opus 4.8': 'Bonne vision', 'Gemini 3.1 Pro': 'Très fort (vidéo/web)', 'DeepSeek': 'Varie', 'Baidu ERNIE': 'Texte + web CN' },
+          { 'Dimension': 'Efficacité des coûts', 'GPT-5.5': 'Moyen–Élevé', 'Claude Opus 4.8': 'Plus élevé, qualité premium', 'Gemini 3.1 Pro': 'Très rentable', 'DeepSeek': 'Très compétitif', 'Baidu ERNIE': 'Compétitif (ent CN)' },
+          { 'Dimension': 'Écosystème global', 'GPT-5.5': 'Le plus étendu', 'Claude Opus 4.8': 'Croissance, esp. d\'entreprise', 'Gemini 3.1 Pro': 'Fort dans monde Google', 'DeepSeek': 'Limité hors Chine', 'Baidu ERNIE': 'Fort écosystème Baidu' },
+          { 'Dimension': 'Accès/latence Chine', 'GPT-5.5': 'Souvent restreint', 'Claude Opus 4.8': 'Souvent restreint', 'Gemini 3.1 Pro': 'Souvent restreint', 'DeepSeek': 'Natif / faible latence', 'Baidu ERNIE': 'Natif / requis' },
         ],
       },
 
@@ -1043,7 +1043,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Comment choisir le bon modèle IA?',
         content: [
           '**Commencez par votre cas d\'usage principal, intégrez vos contraintes, puis choisissez le modèle le mieux adapté aux deux.**',
-          '**Si: Assistant général, workflows agentic multi-outils.** Alors: Commencez par GPT-4o. Vous avez besoin de l\'écosystème d\'outils le plus étendu et des intégrations.',
+          '**Si: Assistant général, workflows agentic multi-outils.** Alors: Commencez par GPT-5.5. Vous avez besoin de l\'écosystème d\'outils le plus étendu et des intégrations.',
           '**Si: Écriture approfondie, analyse, code complexe ou fortes exigences de sécurité.** Alors: Commencez par Claude Opus 4.8. La qualité et la fiabilité sont plus importantes que le coût.',
           '**Si: Utilisation intensive de Google Workspace, codage/données par lots ou traitement de 100+ longs documents.** Alors: Commencez par Gemini 3.1 Pro. Le contexte long et l\'intégration d\'écosystème économisent du temps.',
           '**Si: Utilisateurs et données principalement en Chine continentale.** Alors: Commencez par DeepSeek (codage-lourd) ou Baidu ERNIE (applications consommateur/entreprise). Les modèles occidentaux sont restreints ou à latence élevée.',
@@ -1051,7 +1051,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**Budget serré, volume élevé:** Favorisez Gemini Flash / DeepSeek / modèles GPT plus petits.',
           '**Conformité stricte, contrats d\'entreprise:** Claude d\'entreprise, Baidu ERNIE pour la Chine.',
-          '**Besoin multimodal (captures d\'écran, graphiques, audio):** GPT-4o ou Gemini 3.1 Pro.',
+          '**Besoin multimodal (captures d\'écran, graphiques, audio):** GPT-5.5 ou Gemini 3.1 Pro.',
           '**Données privées uniquement:** LLMs locaux via Ollama ou LM Studio (aucune donnée ne quitte votre appareil).',
         ],
       },
@@ -1060,7 +1060,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Comment les coûts et limites de tokens se comparent-ils?',
         content: '**Tous les modèles majeurs sont tarifés par token d\'entrée et sortie, avec des limites de débit basées sur votre niveau.** Les modèles frontier coûtent 10–100× plus par token que les modèles budgétaires. La tarification varie selon la région (surtout la Chine).',
         items: [
-          '**Modèles frontier (les plus chers par token):** GPT-4o ($5 entrée / $15 sortie par million de tokens), Claude Opus 4.8 (~$3 entrée / $15 sortie par million de tokens).',
+          '**Modèles frontier (les plus chers par token):** GPT-5.5 ($5 entrée / $15 sortie par million de tokens), Claude Opus 4.8 (~$3 entrée / $15 sortie par million de tokens).',
           '**Mid-tier rentable:** Gemini 2.5 Flash ($0,075 entrée / $0,30 sortie par million de tokens).',
           '**Modèles budgétaires compétitifs:** DeepSeek (tarification agressive), modèles locaux via Ollama/LM Studio (gratuits, exécution sur appareil).',
           '**Limites de débit:** Les modèles frontier commencent souvent à 100 req/min; le niveau échelonné peut atteindre 10 000+ req/min. Les modèles locaux dépendent de votre matériel.',
@@ -1083,7 +1083,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Comment PromptQuorum vous aide à comparer et router les modèles?',
         content: '**PromptQuorum résout la douleur du changement manuel de modèle en envoyant une invite structurée unique à tous les modèles simultanément et en comparant automatiquement les résultats.** Plus de copie d\'invites entre onglets ou de devinage de quel modèle a eu les meilleur résultats.',
         items: [
-          '**Une invite structurée → nombreux modèles simultanément.** Écrivez votre invite une fois. PromptQuorum la dispatch à GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, Baidu ERNIE et LLMs locaux (Ollama, LM Studio) en parallèle. Voyez toutes les réponses côte à côte.',
+          '**Une invite structurée → nombreux modèles simultanément.** Écrivez votre invite une fois. PromptQuorum la dispatch à GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, Baidu ERNIE et LLMs locaux (Ollama, LM Studio) en parallèle. Voyez toutes les réponses côte à côte.',
           '**Cadres partagés assurent une comparaison équitable.** Utilisez la même structure d\'invite, contraintes et formats sur tous les modèles. Cela élimine l\'excuse « Claude a obtenu une meilleure sortie parce que j\'ai formulé l\'invite pour Claude. »',
           '**Vue consensus et notation.** PromptQuorum vous montre quel modèle écrit le mieux pour votre voix de marque, qui produit le code le plus correct, quel modèle gère le plus fiablement vos documents propriétaires, et quel modèle est le plus rapide et le moins cher pour VOTRE tâche.',
           '**Règles de routage:** Envoyez les tâches bon marché / haut volume aux modèles petits ou locaux. Envoyez le raisonnement complexe aux modèles premium. Automatisez la sélection de modèle en fonction du type de tâche.',
@@ -1094,7 +1094,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       promptquorumVisual: {
         title: 'Tableau de bord PromptQuorum: Voir tous les modèles à la fois',
-        content: '**Envoyez une invite, voyez les sorties de GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek et Baidu ERNIE — tous dans une seule vue.** La comparaison côte à côte élimine la douleur du changement manuel de modèle.',
+        content: '**Envoyez une invite, voyez les sorties de GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek et Baidu ERNIE — tous dans une seule vue.** La comparaison côte à côte élimine la douleur du changement manuel de modèle.',
         imagePlaceholder: true,
         imageCaption: '[À venir: Capture d\'écran en direct du tableau de bord PromptQuorum montrant les sorties parallèles de 5 modèles IA sur la même tâche d\'invite — affiche le raisonnement, coût, latence et scores de qualité côte à côte]',
       },
@@ -1106,12 +1106,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       recipe1: {
         title: 'Recette 1: Décider quel modèle écrit le mieux pour votre voix de marque',
-        blockquote: 'Vous écrivez une copie de produit pour une page d\'atterrissage B2B SaaS. Le ton doit être autoritaire mais accessible — pas de battage marketing, pas de superlatives vagues. Testez le même brief sur GPT-4o, Claude Opus 4.8 et Gemini. Voyez quel modèle capture le mieux votre voix de marque. Exécutez-le via PromptQuorum, notez chaque sortie sur le ton, la clarté et la conformité à vos directives de marque. Le gagnant devient votre modèle préféré pour la rédaction. Invite exemple: « Réécrivez cette description de fonction dans notre voix de marque: [collez votre guide de style + copie existante]. Quel modèle correspond le mieux? »',
+        blockquote: 'Vous écrivez une copie de produit pour une page d\'atterrissage B2B SaaS. Le ton doit être autoritaire mais accessible — pas de battage marketing, pas de superlatives vagues. Testez le même brief sur GPT-5.5, Claude Opus 4.8 et Gemini. Voyez quel modèle capture le mieux votre voix de marque. Exécutez-le via PromptQuorum, notez chaque sortie sur le ton, la clarté et la conformité à vos directives de marque. Le gagnant devient votre modèle préféré pour la rédaction. Invite exemple: « Réécrivez cette description de fonction dans notre voix de marque: [collez votre guide de style + copie existante]. Quel modèle correspond le mieux? »',
       },
 
       recipe2: {
         title: 'Recette 2: Comparer la qualité du codage et le coût pour votre pile backend',
-        blockquote: 'Vous avez une codebase Python. Testez: « Examinez cette fonction pour la performance et les bogues. Suggérez un refactorisation. » Exécutez-la via GPT-4o, Claude Opus 4.8 et Gemini 2.5 Flash. Qui détecte le plus de bogues? Quel refactorisation est le plus propre? Lequel est le moins cher par requête? Utilisez PromptQuorum pour noter la qualité du code. Vous pourriez trouver que Gemini Flash détecte 90% des problèmes à 1/50ème du coût de Claude. Exemple: « Optimisez cette requête de base de données pour la vitesse. Quelle\\\'s la complexité temporelle? » — routé vers Claude pour une analyse approfondie, Gemini pour l\'itération conscious des coûts.',
+        blockquote: 'Vous avez une codebase Python. Testez: « Examinez cette fonction pour la performance et les bogues. Suggérez un refactorisation. » Exécutez-la via GPT-5.5, Claude Opus 4.8 et Gemini 2.5 Flash. Qui détecte le plus de bogues? Quel refactorisation est le plus propre? Lequel est le moins cher par requête? Utilisez PromptQuorum pour noter la qualité du code. Vous pourriez trouver que Gemini Flash détecte 90% des problèmes à 1/50ème du coût de Claude. Exemple: « Optimisez cette requête de base de données pour la vitesse. Quelle\\\'s la complexité temporelle? » — routé vers Claude pour une analyse approfondie, Gemini pour l\'itération conscious des coûts.',
       },
 
       recipe3: {
@@ -1129,7 +1129,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqs: [
           {
             q: 'Si je ne peux payer que pour un seul abonnement, lequel devrais-je choisir?',
-            a: 'Commencez par Claude Opus 4.8. C\'est la qualité la plus élevée sur l\'écriture, le raisonnement et le code. Si votre besoin principal est l\'intégration d\'outils et multimodal (images/audio), choisissez GPT-4o. Si vous avez une équipe lourde Google Workspace et le coût est critique, choisissez Gemini. Si vos utilisateurs sont en Chine continentale, vous n\'avez pas de choix — choisissez DeepSeek ou Baidu ERNIE (requis pour la latence et la conformité).'
+            a: 'Commencez par Claude Opus 4.8. C\'est la qualité la plus élevée sur l\'écriture, le raisonnement et le code. Si votre besoin principal est l\'intégration d\'outils et multimodal (images/audio), choisissez GPT-5.5. Si vous avez une équipe lourde Google Workspace et le coût est critique, choisissez Gemini. Si vos utilisateurs sont en Chine continentale, vous n\'avez pas de choix — choisissez DeepSeek ou Baidu ERNIE (requis pour la latence et la conformité).'
           },
           {
             q: 'À quelle fréquence devrais-je rééévaluer mes choix de modèle?',
@@ -1149,15 +1149,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Claude est-il meilleur que ChatGPT?',
-            a: 'Pour la qualité de l\'écriture, la révision de code et le raisonnement structuré, Claude Opus 4.8 surpasse ChatGPT (GPT-4o) dans la plupart des évaluations. Pour l\'intégration d\'outils, les workflows multi-agents et l\'écosystème tiers le plus large, GPT-4o a l\'avantage. Aucun n\'est universellement meilleur — le bon choix dépend de votre tâche spécifique. Utilisez PromptQuorum pour tester les deux sur vos invites réelles et comparer les résultats directement.'
+            a: 'Pour la qualité de l\'écriture, la révision de code et le raisonnement structuré, Claude Opus 4.8 surpasse ChatGPT (GPT-5.5) dans la plupart des évaluations. Pour l\'intégration d\'outils, les workflows multi-agents et l\'écosystème tiers le plus large, GPT-5.5 a l\'avantage. Aucun n\'est universellement meilleur — le bon choix dépend de votre tâche spécifique. Utilisez PromptQuorum pour tester les deux sur vos invites réelles et comparer les résultats directement.'
           },
           {
             q: 'Quel modèle IA est le plus précis?',
-            a: 'Aucun modèle unique n\'est le plus précis sur toutes les tâches. Claude Opus 4.8 mène à l\'écriture et analyse structurée. GPT-4o mène au raisonnement intégré d\'outils. Gemini 3.1 Pro mène à la recherche de longs documents avec ancrage web en direct. La précision est spécifique à la tâche — le seul test fiable est d\'exécuter vos invites réelles sur tous les modèles et de mesurer les résultats.'
+            a: 'Aucun modèle unique n\'est le plus précis sur toutes les tâches. Claude Opus 4.8 mène à l\'écriture et analyse structurée. GPT-5.5 mène au raisonnement intégré d\'outils. Gemini 3.1 Pro mène à la recherche de longs documents avec ancrage web en direct. La précision est spécifique à la tâche — le seul test fiable est d\'exécuter vos invites réelles sur tous les modèles et de mesurer les résultats.'
           },
           {
-            q: 'Quelle est la différence entre GPT-4o et GPT-4o mini?',
-            a: 'GPT-4o est le modèle frontier d\'OpenAI — capacité la plus élevée, coût le plus élevé ($5 entrée/$15 sortie par million de tokens). GPT-4o mini est une version plus petite, plus rapide, moins chère ($0,15 entrée/$0,60 sortie par million de tokens) — 33× moins cher avec qualité légèrement inférieure. Utilisez GPT-4o mini pour la classification, le résumé et les tâches haut volume où le raisonnement frontier n\'est pas requis. Utilisez GPT-4o pour le raisonnement multi-étapes complexe, les workflows d\'agents et les tâches où la qualité est critique.'
+            q: 'Quelle est la différence entre GPT-5.5 et GPT-5.5 mini?',
+            a: 'GPT-5.5 est le modèle frontier d\'OpenAI — capacité la plus élevée, coût le plus élevé ($5 entrée/$15 sortie par million de tokens). GPT-5.5 mini est une version plus petite, plus rapide, moins chère ($0,15 entrée/$0,60 sortie par million de tokens) — 33× moins cher avec qualité légèrement inférieure. Utilisez GPT-5.5 mini pour la classification, le résumé et les tâches haut volume où le raisonnement frontier n\'est pas requis. Utilisez GPT-5.5 pour le raisonnement multi-étapes complexe, les workflows d\'agents et les tâches où la qualité est critique.'
           },
         ],
       },
@@ -1166,7 +1166,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Sources et lectures complémentaires',
         content: '**Les forces du modèle et la tarification reflètent les modèles d\'utilisation de mars 2026 et les benchmarks de LMSYS Arena, SWE-Bench et GPQA.** Les capacités du modèle et la tarification changent fréquemment — vérifiez les pages de tarification officielles pour les taux actuels et testez sur votre tâche avant de valider la production.',
         items: [
-          '[OpenAI — GPT-4o et aperçu du modèle](https://platform.openai.com/docs/models)',
+          '[OpenAI — GPT-5.5 et aperçu du modèle](https://platform.openai.com/docs/models)',
           '[Anthropic — Aperçu des modèles Claude](https://docs.anthropic.com/en/docs/models-overview)',
           '[Google — Modèles Gemini et tarification](https://ai.google.dev/gemini-api/docs/models)',
           '[DeepSeek — Documentation API et modèles](https://api-docs.deepseek.com)',
@@ -1192,10 +1192,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     theme: 'Fundamentals',
     title: 'GPT、Claude、Gemini：正しいAIモデルの選び方',
-    intro: 'すべてのタスクに最適な単一のAIモデルはありません。GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek、Baidu ERNIEは、それぞれ異なるタスク、地域、予算で優れています。このガイドでは、ベンチマークリストではなく、実践的な意思決定フレームワークを提供します。',
+    intro: 'すべてのタスクに最適な単一のAIモデルはありません。GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek、Baidu ERNIEは、それぞれ異なるタスク、地域、予算で優れています。このガイドでは、ベンチマークリストではなく、実践的な意思決定フレームワークを提供します。',
     publishDate: '2026-03-23',
     seoTitle: 'GPT vs Claude vs Gemini 2026：どのモデルが最適？',
-    metaDescription: 'GPT-4oはツール連携、Claude Opus 4.8は文章品質、Gemini 3.1 Proはコスト効率に優れる。全て1Mコンテキスト対応。判断マトリクス・料金・ルーティングガイド。',
+    metaDescription: 'GPT-5.5はツール連携、Claude Opus 4.8は文章品質、Gemini 3.1 Proはコスト効率に優れる。全て1Mコンテキスト対応。判断マトリクス・料金・ルーティングガイド。',
     ogTitle: 'GPT・Claude・Gemini——あなたのタスクに最適なAIモデルは？',
     ogDescription: 'Claudeは文章、Geminiは長文書、GPTはエージェント、DeepSeekは中国向け。判断マトリクスあり。',
     twitterTitle: 'GPT vs Claude vs Gemini：最適モデルの選び方（2026）',
@@ -1220,7 +1220,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'description': 'AIモデルの選択をめぐる中核的な概念とトピック',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': '迅速な意思決定マトリックス', 'description': 'タスク、地理、予算に基づいて開始モデルを選ぶ方法' },
-        { '@type': 'ListItem', 'position': 2, 'name': '完全なモデル比較', 'description': 'GPT-4o、Claude、Gemini、DeepSeek、Baidu ERNIEの詳細比較' },
+        { '@type': 'ListItem', 'position': 2, 'name': '完全なモデル比較', 'description': 'GPT-5.5、Claude、Gemini、DeepSeek、Baidu ERNIEの詳細比較' },
         { '@type': 'ListItem', 'position': 3, 'name': 'コスト対品質のトレードオフ', 'description': 'バジェットモデルとフロンティアモデルをいつ使用するかおよびトークンあたりのコスト' },
         { '@type': 'ListItem', 'position': 4, 'name': '地理的制約と中国へのアクセス', 'description': '中国本土でのモデル利用可能性とグローバル/地域ルーティングの考慮事項' },
         { '@type': 'ListItem', 'position': 5, 'name': 'PromptQuorumでのテスト', 'description': '実際のタスクデータとブランドボイスでモデルをベンチマークする方法' },
@@ -1230,9 +1230,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       definition: {
         title: '単一の「最高」AIモデルなし — タスク別に選択',
         content: [
-          '**単一のAIモデルがすべてのタスクに最適なわけではありません。GPT-4oはツール統合と推論に優れています。Claude Opus 4.8は書き込み品質とコード品質で支配的です。Gemini 3.1 Proは費用効果的なパフォーマンスとGoogle Workspaceとの深い統合を提供します。DeepSeekとBaidu ERNIEは中国本土のワークロードに不可欠です。**',
+          '**単一のAIモデルがすべてのタスクに最適なわけではありません。GPT-5.5はツール統合と推論に優れています。Claude Opus 4.8は書き込み品質とコード品質で支配的です。Gemini 3.1 Proは費用効果的なパフォーマンスとGoogle Workspaceとの深い統合を提供します。DeepSeekとBaidu ERNIEは中国本土のワークロードに不可欠です。**',
           '新しいタスクがある場合、最初の質問は「最高のモデルは何ですか？」ではなく、「このタスク、このリージョン、この予算で最適なモデルはどれですか？」であるべきです。ベンチマークとランキングは数ヶ月ごとに変わります。実際のタスク—特定の文章スタイル、コードベース、中国の顧客、データの感度—が選択を導くべきです。',
-          'PromptQuorumはAIマルチモデルディスパッチツールで、これを直接解決します。1つの構造化プロンプトをGPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek、Baidu ERNIE、ローカルLLM（Ollama、LM Studio）に同時に送信します。すべての応答を並べて見ます。PromptQuorumにYOURタスク、YOURデータ、YOURブランドボイスに対してどのモデルが最適に機能するかをスコア化させます—YouTubeベンチマークではなく。',
+          'PromptQuorumはAIマルチモデルディスパッチツールで、これを直接解決します。1つの構造化プロンプトをGPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek、Baidu ERNIE、ローカルLLM（Ollama、LM Studio）に同時に送信します。すべての応答を並べて見ます。PromptQuorumにYOURタスク、YOURデータ、YOURブランドボイスに対してどのモデルが最適に機能するかをスコア化させます—YouTubeベンチマークではなく。',
         ],
       },
 
@@ -1240,7 +1240,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'クイック決定マトリックス — スタートモデルを選択',
         content: '**主要なタスクに基づいてスタートモデルを選択します。ほとんどのチームは複数のモデルを使用します—正しいもので開始し、必要に応じて切り替えます。**',
         items: [
-          'GPT-4oが勝つ: マルチエージェントワークフロー、ツール統合、APIエコシステム、マルチモーダル（画像/音声）。統合が重要な場合はここから開始します。',
+          'GPT-5.5が勝つ: マルチエージェントワークフロー、ツール統合、APIエコシステム、マルチモーダル（画像/音声）。統合が重要な場合はここから開始します。',
           'Claude Opus 4.8が勝つ: 書き込み品質、コードレビュー、推論の深さ、エンタープライズセキュリティ。コンテンツ/コード品質が必要な場合はここから開始します。',
           'Gemini 3.1 Proが勝つ: 長いドキュメント（2Mトークン）、バッチ処理、コスト効率、Google Workspace。大規模ドキュメント分析はここから開始します。',
           'DeepSeek/Baidu ERNIEが勝つ: 中国本土（レイテンシー/アクセスに必須）、コスト敏感な大量タスク。データが中国に留まる場合は唯一の選択肢。',
@@ -1249,19 +1249,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tableFormat: true,
         columns: ['優先事項', '開始', '理由', 'いつ切り替える'],
         rows: [
-          { '優先事項': '複雑な文章と分析', '開始': 'Claude Opus 4.8', '理由': '最高の出力品質; 修正ラウンドを削減', 'いつ切り替える': 'マルチツールワークフローまたは統合が必要な場合はGPT-4oに切り替え' },
-          { '優先事項': 'コーディングと開発速度', '開始': 'Gemini 3.1 ProまたはFlash', '理由': '2Mコンテキスト（プロジェクト全体をロード）+ 最高のコスト/品質', 'いつ切り替える': 'ディープデバッグまたはコードレビューはClaudeに; ツール統合はGPTに' },
-          { '優先事項': 'マルチエージェントワークフロー/API', '開始': 'GPT-4o', '理由': '最豊富なサードパーティエコシステム; 最高のツール呼び出し', 'いつ切り替える': '高ボリュームタスクでコスト削減にはGeminiに切り替え' },
-          { '優先事項': '中国本土ユーザー/データ', '開始': 'DeepSeekまたはBaidu ERNIE', '理由': '唯一の実用的な選択肢—西部モデルは制限/遅い', 'いつ切り替える': 'N/A—コンプライアンス/レイテンシー要件により切り替え不可能' },
+          { '優先事項': '複雑な文章と分析', '開始': '[Claude Opus 4.8](https://www.anthropic.com/claude)', '理由': '最高の出力品質; 修正ラウンドを削減', 'いつ切り替える': 'マルチツールワークフローまたは統合が必要な場合はGPT-5.5に切り替え' },
+          { '優先事項': 'コーディングと開発速度', '開始': '[Gemini 3.1 Pro](https://gemini.google.com)またはFlash', '理由': '2Mコンテキスト（プロジェクト全体をロード）+ 最高のコスト/品質', 'いつ切り替える': 'ディープデバッグまたはコードレビューはClaudeに; ツール統合はGPTに' },
+          { '優先事項': 'マルチエージェントワークフロー/API', '開始': '[GPT-5.5](https://openai.com/chatgpt)', '理由': '最豊富なサードパーティエコシステム; 最高のツール呼び出し', 'いつ切り替える': '高ボリュームタスクでコスト削減にはGeminiに切り替え' },
+          { '優先事項': '中国本土ユーザー/データ', '開始': '[DeepSeek](https://ollama.com/library/deepseek-r1)またはBaidu ERNIE', '理由': '唯一の実用的な選択肢—西部モデルは制限/遅い', 'いつ切り替える': 'N/A—コンプライアンス/レイテンシー要件により切り替え不可能' },
         ],
       },
 
       tldr: {
         title: '重要なポイント',
-        content: '**異なるモデルは異なるタスクで優れています—GPT-4oはツール統合を支配し、Claudeは文章で優れ、Geminiは長いドキュメントを最も良く処理し、DeepSeek/ERNIEは中国に必須です。**',
+        content: '**異なるモデルは異なるタスクで優れています—GPT-5.5はツール統合を支配し、Claudeは文章で優れ、Geminiは長いドキュメントを最も良く処理し、DeepSeek/ERNIEは中国に必須です。**',
         isTldr: true,
         items: [
-          '**GPT-4o:** ツール+エコシステム。マルチエージェントワークフロー、ツール呼び出し、最も広範なサードパーティ統合に最適。',
+          '**GPT-5.5:** ツール+エコシステム。マルチエージェントワークフロー、ツール呼び出し、最も広範なサードパーティ統合に最適。',
           '**Claude Opus 4.8:** 思慮深い推論+文章。レポート、分析、コードレビュー、エンタープライズセキュリティ要件に最適。',
           '**Gemini 3.1 Pro:** Googleエコシステム+コスト。Google Workspaceのチーム、バッチコーディング、長文脈研究に最適。',
           '**DeepSeek / Baidu ERNIE:** 中国中心のワークロード。レイテンシー、アクセス制限、規制要件のため中国本土に必須。',
@@ -1277,16 +1277,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**あなたのタスクの品質:** このモデルは文章、コーディング、分析、推論に優れていますか？あなたのタスクに類似したタスクのパフォーマンスを確認してください—汎用ベンチマークではなく。',
           '**トークンあたりのコストと価格レベル:** フロンティアモデルは100万トークンあたり$15–60; 予算モデルは$0.15–3。価格は入力トークンと出力トークンで変わります。[トークン経済学の詳細を参照。](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
           '**レイテンシーとレート制限:** どのくらい速く応答しますか？リクエストボリュームを処理できますか？一部のモデルは1分100リクエストに制限; 他は10,000+をサポート。',
-          '**コンテキストウィンドウサイズ:** すべてのフロンティアモデル（GPT-4o、Claude、Gemini）は1Mトークン（2026年5月）。長いドキュメント、プロジェクト全体、大規模アーカイブに対応。[コンテキストウィンドウについて学習。](/prompt-engineering/context-windows-explained-why-ai-forgets)',
-          '**マルチモーダル機能:** 画像、音声、またはビデオを処理できますか？GPT-4oとGemini 3.1 Proは画像をサポートします。DeepSeekとBaidu ERNIEはテキストに焦点。',
-          '**エコシステムと統合:** どのくらいのサードパーティツール、プラグイン、APIがサポートしていますか？GPT-4oがここを支配します。OllamaまたはLM Studio経由のローカルモデルは数千のコミュニティ統合をサポート。',
+          '**コンテキストウィンドウサイズ:** すべてのフロンティアモデル（GPT-5.5、Claude、Gemini）は1Mトークン（2026年5月）。長いドキュメント、プロジェクト全体、大規模アーカイブに対応。[コンテキストウィンドウについて学習。](/prompt-engineering/context-windows-explained-why-ai-forgets)',
+          '**マルチモーダル機能:** 画像、音声、またはビデオを処理できますか？GPT-5.5とGemini 3.1 Proは画像をサポートします。DeepSeekとBaidu ERNIEはテキストに焦点。',
+          '**エコシステムと統合:** どのくらいのサードパーティツール、プラグイン、APIがサポートしていますか？GPT-5.5がここを支配します。OllamaまたはLM Studio経由のローカルモデルは数千のコミュニティ統合をサポート。',
           '**地理と規制:** あなたの地域で利用可能ですか？データは国またはネットワーク内に留まる必要がありますか？中国本土は規制とレイテンシーのため、ローカルモデル（DeepSeek、Baidu ERNIE）が必須。',
         ],
       },
 
       gptSection: {
-        title: 'GPT-4oをいつ使用すべきですか?',
-        content: '**GPT-4oはOpenAIのフロンティアマルチモーダルモデル—最も広範なサードパーティ統合とツール付きツール集約的なエージェンティックワークフローに最強。** コスト以上にツーリング、統合、マルチモーダル機能が重要な場合はGPT-4oを使用します。',
+        title: 'GPT-5.5をいつ使用すべきですか?',
+        content: '**GPT-5.5はOpenAIのフロンティアマルチモーダルモデル—最も広範なサードパーティ統合とツール付きツール集約的なエージェンティックワークフローに最強。** コスト以上にツーリング、統合、マルチモーダル機能が重要な場合はGPT-5.5を使用します。',
         items: [
           '**強み:** すべてのドメインにわたる優れた一般推論とチャット。強いマルチモーダル機能—信頼性の高い画像、音声、時々ビデオ処理。クラス最高のツール呼び出しと統合（エージェント、IDEプラグイン、エンタープライズスタック）。数百万の開発者による本番環境で信頼。',
           '**最良の使用例:** マルチステップエージェントワークフロー。ツール呼び出し（API、データベース、コード実行）が必須の複雑なチェーン。スクリーンショットまたは画像分析が必要なタスク。ChatGPT、Assistants API、Codex、ファインチューニングなどのOpenAIエコシステムプロジェクト。',
@@ -1301,7 +1301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**強み:** 高品質の文章とサマリー; 出力は簡潔で、よく構造化され、発行準備完了。優れたコード理解、リファクタリング、説明—他のモデルが見逃すバグをしばしば検出。長文脈処理が優れている研究およびドキュメントワークフロー。強いセキュリティ文化; 規制産業で推奨。',
           '**最良の使用例:** 構造と明確さが極めて重要なレポート、分析、知識作業。複雑なコードベースとアーキテクチャ議論。コンプライアンスとセキュリティ要件を持つエンタープライズ設定。最小限の編集が必要なコンテンツ。',
-          '**トレードオフ:** 最上位レベルでより高い価格ポイント; 単純なタスクには過剰かもしれません。一部のサードパーティ統合はGPT-4o同等より新しい。',
+          '**トレードオフ:** 最上位レベルでより高い価格ポイント; 単純なタスクには過剰かもしれません。一部のサードパーティ統合はGPT-5.5同等より新しい。',
           '**コンテキストウィンドウ:** 1,000,000 トークン（~800ページのテキストを処理）。',
         ],
       },
@@ -1319,9 +1319,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       coding: {
         title: '2026年のコーディングに最適なAIモデルは何ですか?',
-        content: '**Claude Opus 4.8はコード品質とリファクタリングで優れています。GPT-4oはツール統合とマルチファイル推論を支配します。Gemini 3.1 Proはバッチタスクに最高のコスト/品質比を提供します。DeepSeekは中国本土の開発者向けの選択肢です。** コーディングの「最高」モデルはあなたの主要な課題に依存します。コード品質、統合幅、トークンあたりのコスト、または地理。',
+        content: '**Claude Opus 4.8はコード品質とリファクタリングで優れています。GPT-5.5はツール統合とマルチファイル推論を支配します。Gemini 3.1 Proはバッチタスクに最高のコスト/品質比を提供します。DeepSeekは中国本土の開発者向けの選択肢です。** コーディングの「最高」モデルはあなたの主要な課題に依存します。コード品質、統合幅、トークンあたりのコスト、または地理。',
         items: [
-          '**GPT-4o:** ツール使用を含むマルチステップコーディングタスク（ファイルシステムアクセス、API、シェルコマンド）に最強。大規模なコードベースにわたるリーズニング、複雑なワークフロー生成に優れています。GitHub、AWS、API統合が重要な場合に最適。',
+          '**GPT-5.5:** ツール使用を含むマルチステップコーディングタスク（ファイルシステムアクセス、API、シェルコマンド）に最強。大規模なコードベースにわたるリーズニング、複雑なワークフロー生成に優れています。GitHub、AWS、API統合が重要な場合に最適。',
           '**Claude Opus 4.8:** コードレビュー、リファクタリング、アーキテクチャ議論に最適。他のモデルが見逃す微妙なバグを検出します。既存のコードベースの保守と、従来のコード説明に推奨。トークンコストは高いが、多くの場合、往復を削減。',
           '**Gemini 3.1 Pro:** バッチコーディングタスク（データ処理、ユーティリティスクリプト、自動化）に最高のコスト/品質。2Mコンテキストは全プロジェクトを一度にロードすることを意味します。コストが重要なプロトタイプから本番までの速度に優れています。',
           '**DeepSeek:** コーディングはGPTと競争力がありますが、10倍安価。中国本土の開発者およびコスト敏感なコーディングタスク（スキャフォルディング、ボイラープレート、定期的なリファクタリング）に最適。アルゴリズム問題と競争プログラミングで非常に強力。',
@@ -1332,11 +1332,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '2026年のロングコンテキストまたは大規模ドキュメントに最適なLLMは?',
         content: '**すべてのフロンティアモデルが1Mトークンに統一（2026年5月）。選択の基準はコンテキストサイズではなく、品質（Claude/GPT）、コスト効率（Gemini）、統合能力（GPT）で判断してください。**',
         image: '/images/context-windows-chart.svg',
-        imageCaption: 'コンテキストウィンドウ比較: Gemini 3.1 ProはGPT-4oより10倍大きなコンテキストをサポート、単一リクエストでプロジェクト全体とドキュメントアーカイブを有効にします。',
+        imageCaption: 'コンテキストウィンドウ比較: Gemini 3.1 ProはGPT-5.5より10倍大きなコンテキストをサポート、単一リクエストでプロジェクト全体とドキュメントアーカイブを有効にします。',
         items: [
           '**Gemini 3.1 Pro（2Mトークン）:** 完全なコードベース、法律ドキュメントセット、または研究アーカイブをロードします。ウェブ検索統合により、ロングコンテキスト内で外部ソースを参照できます。最適: デューディリジェンスレビュー、規制分析、知識ベース検索、100+ページPDF処理。',
           '**Claude Opus 4.8（1Mトークン / ~800ページ）:** すべてのドキュメントに対応: 本、論文、完全なコードベース。詳細な分析と微妙な情報抽出に優れています。ベストフォー: コードレビュー、長い報告書、複雑な分析。',
-          '**GPT-4o（1Mトークン / ~800ページ）:** ツール呼び出しと長いコンテキストが必要な場合（ファイルシステム、API、エージェント）。ベストフォー: エージェント、統合、複雑なワークフロー。',
+          '**GPT-5.5（1Mトークン / ~800ページ）:** ツール呼び出しと長いコンテキストが必要な場合（ファイルシステム、API、エージェント）。ベストフォー: エージェント、統合、複雑なワークフロー。',
           '**実用的な戦略:** 非常に長いタスク（マルチドキュメントワークフロー）では、最初にGeminiを使用（安価、大規模コンテキスト）、出力品質が最後の仕上げが必要な場合はClaudeで改良。',
         ],
       },
@@ -1344,28 +1344,28 @@ export const article: Partial<Record<Language, PEArticle>> = {
       chineseModels: {
         title: '中国にいるか、低レイテンシーが必要な場合、AIモデルを選択する方法は?',
         content: [
-          '**中国本土のユーザーとデータの場合、DeepSeekとBaidu ERNIEはオプションではありません—必須です。** 西部のフロンティアモデル（GPT-4o、Claude、Gemini）は、ネットワーク制限と規制要件のため、中国で制限または高レイテンシーになることが多いです。2026年では、レイテンシー（3–10秒応答時間対500msローカル）とコンプライアンス（データレジデンシー、コンテンツモデレーション）は大きな課題です。中国本土で西部モデルを使用することは、（1）利用不可のサービス、（2）ユーザーに受け入れられない高レイテンシー、（3）規制違反のいずれかを意味します。ローカルモデルはすべて3つを排除します。',
+          '**中国本土のユーザーとデータの場合、DeepSeekとBaidu ERNIEはオプションではありません—必須です。** 西部のフロンティアモデル（GPT-5.5、Claude、Gemini）は、ネットワーク制限と規制要件のため、中国で制限または高レイテンシーになることが多いです。2026年では、レイテンシー（3–10秒応答時間対500msローカル）とコンプライアンス（データレジデンシー、コンテンツモデレーション）は大きな課題です。中国本土で西部モデルを使用することは、（1）利用不可のサービス、（2）ユーザーに受け入れられない高レイテンシー、（3）規制違反のいずれかを意味します。ローカルモデルはすべて3つを排除します。',
           '**DeepSeek（フロンティアモデル、競争的なコーディング）:** 競争的なコーディングと推論パフォーマンス、積極的な価格設定、優れた中国言語サポートと混合中国語-英語タスク。中国本土のネイティブインフラ = サブ500msレイテンシー。中国本土の開発者ワークフローと高ボリュームコスト敏感なワークロードに最適。トレードオフ: 中国外の小さいエコシステム、GPT/Claude/Geminivs少ないサードパーティ統合。',
           '**Baidu ERNIE（エンタープライズと消費者）:** Baidu検索とクラウドとの緊密な統合、中国ウェブコンテンツと企業データへの強いアンカー。中国本土の規制要件に完全に準拠（コンテンツモデレーション、データレジデンシー、キーワードフィルタリング）。中国ユーザーを対象とした消費者およびエンタープライズアプリ、Baidu Cloudインフラ上のアプリケーション、コンプライアンスが非交渉の場合に最適。トレードオフ: 主に中国語用に最適化; 英語と他の言語は西部フロンティアモデルより遅れる可能性。',
         ],
       },
 
       comparison: {
-        title: 'GPT-4o対Claude Opus 4.8対Gemini 3.1 Pro:クイック比較',
+        title: 'GPT-5.5対Claude Opus 4.8対Gemini 3.1 Pro:クイック比較',
         content: '**このテーブルは5つのAIモデルを8つの主要側面で比較します: 一般推論、文章、コーディング、ロングコンテキスト処理、マルチモーダルサポート、コスト効率、グローバルエコシステム、中国アクセス。**',
         image: '/images/model-strengths-radar.svg',
-        imageCaption: 'レーダーチャート: Claudeは文章と推論で支配的。GPT-4oはツールとマルチモーダルで優れている。Geminiはコストと長文脈で勝つ。単一の勝者なし—モデルをタスクに合わせる。',
+        imageCaption: 'レーダーチャート: Claudeは文章と推論で支配的。GPT-5.5はツールとマルチモーダルで優れている。Geminiはコストと長文脈で勝つ。単一の勝者なし—モデルをタスクに合わせる。',
         tableFormat: true,
-        columns: ['側面', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE'],
+        columns: ['側面', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE'],
         rows: [
-          { '側面': '一般Q&A', 'GPT-4o': '優れた グローバル', 'Claude Opus 4.8': '非常に良好、慎重', 'Gemini 3.1 Pro': '非常に良好+リトリーバル', 'DeepSeek': '強い、CN向け最高', 'Baidu ERNIE': '強い、CN向け最高' },
-          { '側面': '文章', 'GPT-4o': '優れた、時々冗長', 'Claude Opus 4.8': '優れた構造と明確さ', 'Gemini 3.1 Pro': '良好、ニュートラルトーン', 'DeepSeek': '良好、中国語-優先', 'Baidu ERNIE': '良好、中国語-優先' },
-          { '側面': 'コーディング', 'GPT-4o': '強い', 'Claude Opus 4.8': '優れた、プレミアム', 'Gemini 3.1 Pro': '優れた価値', 'DeepSeek': 'CN開発者向けに非常に強い', 'Baidu ERNIE': '良好、ビジネス適用' },
-          { '側面': 'ロングコンテキスト', 'GPT-4o': '強い（1M）', 'Claude Opus 4.8': '強い（1M）', 'Gemini 3.1 Pro': '強い（1M）+ウェブ', 'DeepSeek': '良好', 'Baidu ERNIE': 'Baiduデータで良好' },
-          { '側面': 'マルチモーダル', 'GPT-4o': 'リード（画像/音声）', 'Claude Opus 4.8': '良好なビジョン', 'Gemini 3.1 Pro': '非常に強い（ビデオ/ウェブ）', 'DeepSeek': 'varies', 'Baidu ERNIE': 'テキスト+中国ウェブ' },
-          { '側面': 'コスト効率', 'GPT-4o': '中程度–高', 'Claude Opus 4.8': 'より高い、プレミアム品質', 'Gemini 3.1 Pro': '非常に費用効果的', 'DeepSeek': '非常に競争力がある', 'Baidu ERNIE': '競争力がある（ent CN）' },
-          { '側面': 'グローバルエコシステム', 'GPT-4o': '最も広範', 'Claude Opus 4.8': '成長中、特に企業', 'Gemini 3.1 Pro': 'Googleの世界で強い', 'DeepSeek': '中国外では限定的', 'Baidu ERNIE': '強いBaiduエコシステム' },
-          { '側面': '中国アクセス/レイテンシー', 'GPT-4o': 'しばしば制限', 'Claude Opus 4.8': 'しばしば制限', 'Gemini 3.1 Pro': 'しばしば制限', 'DeepSeek': 'ネイティブ/低レイテンシー', 'Baidu ERNIE': 'ネイティブ/必須' },
+          { '側面': '一般Q&A', 'GPT-5.5': '優れた グローバル', 'Claude Opus 4.8': '非常に良好、慎重', 'Gemini 3.1 Pro': '非常に良好+リトリーバル', 'DeepSeek': '強い、CN向け最高', 'Baidu ERNIE': '強い、CN向け最高' },
+          { '側面': '文章', 'GPT-5.5': '優れた、時々冗長', 'Claude Opus 4.8': '優れた構造と明確さ', 'Gemini 3.1 Pro': '良好、ニュートラルトーン', 'DeepSeek': '良好、中国語-優先', 'Baidu ERNIE': '良好、中国語-優先' },
+          { '側面': 'コーディング', 'GPT-5.5': '強い', 'Claude Opus 4.8': '優れた、プレミアム', 'Gemini 3.1 Pro': '優れた価値', 'DeepSeek': 'CN開発者向けに非常に強い', 'Baidu ERNIE': '良好、ビジネス適用' },
+          { '側面': 'ロングコンテキスト', 'GPT-5.5': '強い（1M）', 'Claude Opus 4.8': '強い（1M）', 'Gemini 3.1 Pro': '強い（1M）+ウェブ', 'DeepSeek': '良好', 'Baidu ERNIE': 'Baiduデータで良好' },
+          { '側面': 'マルチモーダル', 'GPT-5.5': 'リード（画像/音声）', 'Claude Opus 4.8': '良好なビジョン', 'Gemini 3.1 Pro': '非常に強い（ビデオ/ウェブ）', 'DeepSeek': 'varies', 'Baidu ERNIE': 'テキスト+中国ウェブ' },
+          { '側面': 'コスト効率', 'GPT-5.5': '中程度–高', 'Claude Opus 4.8': 'より高い、プレミアム品質', 'Gemini 3.1 Pro': '非常に費用効果的', 'DeepSeek': '非常に競争力がある', 'Baidu ERNIE': '競争力がある（ent CN）' },
+          { '側面': 'グローバルエコシステム', 'GPT-5.5': '最も広範', 'Claude Opus 4.8': '成長中、特に企業', 'Gemini 3.1 Pro': 'Googleの世界で強い', 'DeepSeek': '中国外では限定的', 'Baidu ERNIE': '強いBaiduエコシステム' },
+          { '側面': '中国アクセス/レイテンシー', 'GPT-5.5': 'しばしば制限', 'Claude Opus 4.8': 'しばしば制限', 'Gemini 3.1 Pro': 'しばしば制限', 'DeepSeek': 'ネイティブ/低レイテンシー', 'Baidu ERNIE': 'ネイティブ/必須' },
         ],
       },
 
@@ -1373,7 +1373,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '正しいAIモデルをどのように選択するか?',
         content: [
           '**主要なユースケースから始めて、制約を積み重ねて、両方に最も適したモデルを選択してください。**',
-          '**場合: 一般アシスタント、マルチツールエージェンティックワークフロー。** その場合: GPT-4oで開始します。最も広範なツールエコシステムと統合が必要です。',
+          '**場合: 一般アシスタント、マルチツールエージェンティックワークフロー。** その場合: GPT-5.5で開始します。最も広範なツールエコシステムと統合が必要です。',
           '**場合: 深い文章、分析、複雑なコード、または強いセキュリティ要件。** その場合: Claude Opus 4.8で開始します。品質と信頼性はコスト以上に重要です。',
           '**場合: Google Workspace利用が多い、バッチコーディング/データ、または100+の長いドキュメント処理。** その場合: Gemini 3.1 Proで開始します。ロングコンテキストとエコシステム統合が時間を節約します。',
           '**場合: ユーザーとデータが主に中国本土。** その場合: DeepSeek（コーディング-重い）またはBaidu ERNIE（消費者/企業アプリ）で開始します。西部モデルは制限または高レイテンシー。',
@@ -1381,7 +1381,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**予算きつい、ボリューム高:** Gemini Flash/DeepSeek/小さいGPTモデルを優先。',
           '**厳密なコンプライアンス、エンタープライズ契約:** Claude Enterprise、中国向けBaidu ERNIE。',
-          '**マルチモーダルが必要（スクリーンショット、グラフ、音声）:** GPT-4oまたはGemini 3.1 Pro。',
+          '**マルチモーダルが必要（スクリーンショット、グラフ、音声）:** GPT-5.5またはGemini 3.1 Pro。',
           '**プライベートデータのみ:** OllamaまたはLM Studio経由のローカルLLM（デバイスを離れるデータなし）。',
         ],
       },
@@ -1390,7 +1390,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'コストとトークンの制限はどのように比較されるか?',
         content: '**すべての主要モデルは入力と出力トークンで価格が設定され、レート制限はあなたのレベルに基づいています。** フロンティアモデルはトークンあたり10–100倍多く、予算モデルより高くなります。地域によって価格が変わります（特に中国）。',
         items: [
-          '**フロンティアモデル（最高トークンあたり）:** GPT-4o（100万トークンあたり$5/$15）、Claude Opus 4.8（~100万トークンあたり$3/$15）。',
+          '**フロンティアモデル（最高トークンあたり）:** GPT-5.5（100万トークンあたり$5/$15）、Claude Opus 4.8（~100万トークンあたり$3/$15）。',
           '**費用効果的なミッドティア:** Gemini 2.5 Flash（100万トークンあたり$0.075/$0.30）。',
           '**競争力がある予算モデル:** DeepSeek（積極的な価格）、Ollama/LM Studio経由のローカルモデル（無料、オンデバイス実行）。',
           '**レート制限:** フロンティアモデルはしばしば100 req/minで開始; スケールされたティアは10,000+ req/minに達する可能性があります。ローカルモデルはハードウェアに依存します。',
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'PromptQuorumはモデルの比較とルーティングをどのように支援するか?',
         content: '**PromptQuorumは単一の構造化プロンプトをすべてのモデルに同時に送信し、自動的に結果を比較することで、手動モデル切り替えの問題を解決します。** タブ間でプロンプトをコピーしたり、どのモデルが最良の結果を得たかを推測したりすることはありません。',
         items: [
-          '**1つの構造化プロンプト→多くのモデル同時。** プロンプトは一度だけ書きます。PromptQuorumはそれをGPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek、Baidu ERNIE、ローカルLLM（Ollama、LM Studio）に並列にディスパッチします。すべての応答を並べて見ます。',
+          '**1つの構造化プロンプト→多くのモデル同時。** プロンプトは一度だけ書きます。PromptQuorumはそれをGPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek、Baidu ERNIE、ローカルLLM（Ollama、LM Studio）に並列にディスパッチします。すべての応答を並べて見ます。',
           '**共有フレームワークは公正な比較を保証します。** すべてのモデルで同じプロンプト構造、制約、フォーマットを使用します。これにより「Claudeはプロンプトをクロードのために言葉にしたため、より良い出力を得た」という言い訳が排除されます。',
           '**コンセンサスと採点ビュー。** PromptQuorumはあなたのブランドボイスのために最良の書き込みをするモデル、最も正しいコードを生成するモデル、独有のドキュメントを最も信頼性で処理するモデル、あなたのタスクで最速で最安いモデルを示します。',
           '**ルーティングルール:** 安い/高ボリュームタスクを小さいまたはローカルモデルに送信。複雑な推論をプレミアムモデルに送信。タスクタイプに基づいてモデル選択を自動化。',
@@ -1424,7 +1424,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       promptquorumVisual: {
         title: 'PromptQuorumダッシュボード: すべてのモデルを一度に見る',
-        content: '**プロンプトを送信し、GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeekおよびBaidu ERNIEからの出力を見ます—すべて1つのビューで。** サイドバイサイド比較は手動モデル切り替えの痛みを排除します。',
+        content: '**プロンプトを送信し、GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeekおよびBaidu ERNIEからの出力を見ます—すべて1つのビューで。** サイドバイサイド比較は手動モデル切り替えの痛みを排除します。',
         imagePlaceholder: true,
         imageCaption: '[近日公開: PromptQuorumダッシュボードの生きたスクリーンショット、同じプロンプトタスク上の5つのAIモデルからの並列出力を示す—推論、コスト、レイテンシーおよび品質スコアをサイドバイサイドで表示]',
       },
@@ -1436,12 +1436,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       recipe1: {
         title: 'レシピ1: ブランドボイスに最適なモデルを決定',
-        blockquote: 'B2B SaaSランディングページの製品コピーを書いています。トーンは権威的でもアクセスしやすい必要があります—マーケティング販売促進なし、曖昧な最上級なし。GPT-4o、Claude Opus 4.8、Geminiで同じブリーフをテストします。どのモデルが最良にあなたのブランドボイスをキャプチャするかを参照してください。PromptQuorumを通じて実行し、各出力をトーン、明確さ、およびあなたのブランドガイドラインへのコンプライアンスでスコア化します。勝者はあなたのコピーライティングの推奨モデルになります。プロンプト例:「この機能の説明をあなたのブランドボイスで書き換えてください: [スタイルガイド+既存コピーを貼り付け]。どのモデルが最も適合しますか?」',
+        blockquote: 'B2B SaaSランディングページの製品コピーを書いています。トーンは権威的でもアクセスしやすい必要があります—マーケティング販売促進なし、曖昧な最上級なし。GPT-5.5、Claude Opus 4.8、Geminiで同じブリーフをテストします。どのモデルが最良にあなたのブランドボイスをキャプチャするかを参照してください。PromptQuorumを通じて実行し、各出力をトーン、明確さ、およびあなたのブランドガイドラインへのコンプライアンスでスコア化します。勝者はあなたのコピーライティングの推奨モデルになります。プロンプト例:「この機能の説明をあなたのブランドボイスで書き換えてください: [スタイルガイド+既存コピーを貼り付け]。どのモデルが最も適合しますか?」',
       },
 
       recipe2: {
         title: 'レシピ2: バックエンドスタックのコーディング品質とコストを比較',
-        blockquote: 'Pythonコードベースを持っています。テスト:「この関数をパフォーマンスとバグについてレビューしてください。リファクタリングを提案してください。」GPT-4o、Claude Opus 4.8、Gemini 2.5 Flashを通じて実行します。最も多くのバグを検出するのは誰ですか？最もクリーンなリファクタリング？リクエストごとに最も安いのは？PromptQuorumを使用してコード品質をスコア化します。あなたはGemini Flashが90%の問題をClaudeコストの1/50で検出することに気づくかもしれません。例:「このデータベースクエリを速度のために最適化します。時間複雑さは何ですか?」—ディープ分析のためClaudeへのルーティング、コスト意識的な反復のためGeminiへのルーティング。',
+        blockquote: 'Pythonコードベースを持っています。テスト:「この関数をパフォーマンスとバグについてレビューしてください。リファクタリングを提案してください。」GPT-5.5、Claude Opus 4.8、Gemini 2.5 Flashを通じて実行します。最も多くのバグを検出するのは誰ですか？最もクリーンなリファクタリング？リクエストごとに最も安いのは？PromptQuorumを使用してコード品質をスコア化します。あなたはGemini Flashが90%の問題をClaudeコストの1/50で検出することに気づくかもしれません。例:「このデータベースクエリを速度のために最適化します。時間複雑さは何ですか?」—ディープ分析のためClaudeへのルーティング、コスト意識的な反復のためGeminiへのルーティング。',
       },
 
       recipe3: {
@@ -1459,7 +1459,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqs: [
           {
             q: '1つのサブスクリプションだけにお金を払える場合、どれを選択すべきですか？',
-            a: 'Claude Opus 4.8で開始します。これは文章、推論、コードにおける最高の品質です。主な必要性がツール統合とマルチモーダル（画像/音声）である場合は、GPT-4oを選択します。Google Workspace-ヘビーチームでコストが重要な場合は、Geminiを選択します。ユーザーが中国本土にいる場合、選択肢がありません—DeepSeekまたはBaidu ERNIE（レイテンシーとコンプライアンスに必須）を選択します。'
+            a: 'Claude Opus 4.8で開始します。これは文章、推論、コードにおける最高の品質です。主な必要性がツール統合とマルチモーダル（画像/音声）である場合は、GPT-5.5を選択します。Google Workspace-ヘビーチームでコストが重要な場合は、Geminiを選択します。ユーザーが中国本土にいる場合、選択肢がありません—DeepSeekまたはBaidu ERNIE（レイテンシーとコンプライアンスに必須）を選択します。'
           },
           {
             q: 'モデル選択を再評価する頻度はどのくらいですか？',
@@ -1479,15 +1479,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'ClaudeはChatGPTより良いですか？',
-            a: '文章品質、コードレビュー、構造的推論に対して、Claude Opus 4.8はほとんどの評価でChatGPT（GPT-4o）を上回ります。ツール統合、マルチエージェントワークフロー、最も広いサードパーティエコシステムについて、GPT-4oに利点があります。どちらも普遍的により良くない—正しい選択はあなたの特定のタスクに依存します。PromptQuorumを使用して実際のプロンプトで両方をテストし、結果を直接比較してください。'
+            a: '文章品質、コードレビュー、構造的推論に対して、Claude Opus 4.8はほとんどの評価でChatGPT（GPT-5.5）を上回ります。ツール統合、マルチエージェントワークフロー、最も広いサードパーティエコシステムについて、GPT-5.5に利点があります。どちらも普遍的により良くない—正しい選択はあなたの特定のタスクに依存します。PromptQuorumを使用して実際のプロンプトで両方をテストし、結果を直接比較してください。'
           },
           {
             q: 'どのAIモデルが最も正確ですか？',
-            a: 'どのモデルも、すべてのタスクで最も正確です。Claude Opus 4.8は文章と構造化分析でリード。GPT-4oはツール統合推論でリード。Gemini 3.1 Proはライブウェブグラウンディング付きロングドキュメント研究でリード。精度はタスク固有—唯一の信頼できるテストはすべてのモデルで実際のプロンプトを実行し、結果を測定しています。'
+            a: 'どのモデルも、すべてのタスクで最も正確です。Claude Opus 4.8は文章と構造化分析でリード。GPT-5.5はツール統合推論でリード。Gemini 3.1 Proはライブウェブグラウンディング付きロングドキュメント研究でリード。精度はタスク固有—唯一の信頼できるテストはすべてのモデルで実際のプロンプトを実行し、結果を測定しています。'
           },
           {
-            q: 'GPT-4oとGPT-4o miniの違いは何ですか？',
-            a: 'GPT-4oはOpenAIのフロンティアモデル—最高の機能、最高のコスト（100万トークンあたり$5入力/$15出力）。GPT-4o miniはより小さく、より速く、より安い版（100万トークンあたり$0.15入力/$0.60出力）—33倍安価でわずかに低い品質。GPT-4o miniを分類、要約、フロンティア推論が不要な高ボリュームタスクに使用します。複雑なマルチステップ推論、エージェントワークフロー、品質が重要なタスクに対してGPT-4oを使用します。'
+            q: 'GPT-5.5とGPT-5.5 miniの違いは何ですか？',
+            a: 'GPT-5.5はOpenAIのフロンティアモデル—最高の機能、最高のコスト（100万トークンあたり$5入力/$15出力）。GPT-5.5 miniはより小さく、より速く、より安い版（100万トークンあたり$0.15入力/$0.60出力）—33倍安価でわずかに低い品質。GPT-5.5 miniを分類、要約、フロンティア推論が不要な高ボリュームタスクに使用します。複雑なマルチステップ推論、エージェントワークフロー、品質が重要なタスクに対してGPT-5.5を使用します。'
           },
         ],
       },
@@ -1496,7 +1496,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'ソースと参考文献',
         content: '**モデルの強みと価格はApril 2026の使用パターンとLMSYS Arena、SWE-Bench、GPQAのベンチマークを反映します。** モデルの機能と価格は頻繁に変わります—最新レートの公式価格ページを確認し、本番提供に先立ってタスクでテストしてください。',
         items: [
-          '[OpenAI — GPT-4oとモデル概要](https://platform.openai.com/docs/models)',
+          '[OpenAI — GPT-5.5とモデル概要](https://platform.openai.com/docs/models)',
           '[Anthropic — Claudeモデル概要](https://docs.anthropic.com/en/docs/models-overview)',
           '[Google — Geminiモデルと価格](https://ai.google.dev/gemini-api/docs/models)',
           '[DeepSeek — APIドキュメントとモデル](https://api-docs.deepseek.com)',
@@ -1522,10 +1522,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     theme: 'Fundamentals',
     title: 'GPT、Claude还是Gemini：如何选择正确的AI模型',
-    intro: '没有一个AI模型对所有任务都是最好的。GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek和Baidu ERNIE在不同的任务、地区和预算中各有所长。本指南为您提供了实用的决策框架——而不是另一个基准测试清单。',
+    intro: '没有一个AI模型对所有任务都是最好的。GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek和Baidu ERNIE在不同的任务、地区和预算中各有所长。本指南为您提供了实用的决策框架——而不是另一个基准测试清单。',
     publishDate: '2026-03-23',
     seoTitle: 'GPT vs Claude vs Gemini 2026：哪个最适合？',
-    metaDescription: 'GPT-4o擅长工具集成，Claude Opus 4.8擅长写作，Gemini 3.1 Pro最具性价比。全部支持1M上下文。决策矩阵、定价对比、路由指南。',
+    metaDescription: 'GPT-5.5擅长工具集成，Claude Opus 4.8擅长写作，Gemini 3.1 Pro最具性价比。全部支持1M上下文。决策矩阵、定价对比、路由指南。',
     ogTitle: 'GPT、Claude还是Gemini——哪个AI模型最适合你的任务？',
     ogDescription: 'Claude擅写作，Gemini擅长文档，GPT擅智能体，DeepSeek适合中国。内含决策矩阵。',
     twitterTitle: 'GPT vs Claude vs Gemini：如何选对AI模型（2026）',
@@ -1550,7 +1550,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'description': '选择合适AI模型的核心概念和主题',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': '快速决策矩阵', 'description': '根据任务、地域和预算选择起始模型的方法' },
-        { '@type': 'ListItem', 'position': 2, 'name': '完整模型对比', 'description': 'GPT-4o、Claude、Gemini、DeepSeek和Baidu ERNIE的详细对比' },
+        { '@type': 'ListItem', 'position': 2, 'name': '完整模型对比', 'description': 'GPT-5.5、Claude、Gemini、DeepSeek和Baidu ERNIE的详细对比' },
         { '@type': 'ListItem', 'position': 3, 'name': '成本与质量权衡', 'description': '何时使用预算模型与前沿模型以及每个代币的成本细分' },
         { '@type': 'ListItem', 'position': 4, 'name': '地理约束和中国访问', 'description': '中国大陆的模型可用性和全球/地域路由考虑因素' },
         { '@type': 'ListItem', 'position': 5, 'name': '使用PromptQuorum进行测试', 'description': '如何在实际任务数据和品牌语音上对模型进行基准测试' },
@@ -1560,9 +1560,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       definition: {
         title: '没有单一"最佳"AI模型——按任务选择',
         content: [
-          '**没有单个AI模型对所有任务都是最好的。GPT-4o在工具集成和推理方面表现出色;Claude Opus 4.8主导写作质量和代码质量;Gemini 3.1 Pro提供具有成本效益的性能和深度Google Workspace集成;DeepSeek和Baidu ERNIE对中国大陆工作负载至关重要。**',
+          '**没有单个AI模型对所有任务都是最好的。GPT-5.5在工具集成和推理方面表现出色;Claude Opus 4.8主导写作质量和代码质量;Gemini 3.1 Pro提供具有成本效益的性能和深度Google Workspace集成;DeepSeek和Baidu ERNIE对中国大陆工作负载至关重要。**',
           '当您有新任务时,第一个问题不应该是"什么是最好的模型?"而应该是"此任务、此地区、此预算的最佳模型是什么?"基准和排名每几个月都会改变。您的实际任务——您的特定写作风格、代码库、中国客户、数据敏感性——应该指导选择。',
-          'PromptQuorum是一个AI多模型调度工具,可直接解决此问题:将一个结构化提示同时发送到GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek、Baidu ERNIE和本地LLM(Ollama、LM Studio)。并排查看所有响应。让PromptQuorum评分哪个模型对您的任务、您的数据、您的品牌声音最有效——而不是YouTube基准。',
+          'PromptQuorum是一个AI多模型调度工具,可直接解决此问题:将一个结构化提示同时发送到GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek、Baidu ERNIE和本地LLM(Ollama、LM Studio)。并排查看所有响应。让PromptQuorum评分哪个模型对您的任务、您的数据、您的品牌声音最有效——而不是YouTube基准。',
         ],
       },
 
@@ -1570,7 +1570,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '快速决策矩阵——选择您的起始模型',
         content: '**根据您的主要任务选择您的起始模型。大多数团队使用多个模型——从正确的模型开始,根据需要切换。**',
         items: [
-          'GPT-4o赢得:多代理工作流程、工具集成、API生态系统、多模态(图像/音频)。如果集成很重要,请从这里开始。',
+          'GPT-5.5赢得:多代理工作流程、工具集成、API生态系统、多模态(图像/音频)。如果集成很重要,请从这里开始。',
           'Claude Opus 4.8赢得:写作质量、代码审查、推理深度、企业安全。如果内容/代码质量很重要,请从这里开始。',
           'Gemini 3.1 Pro赢得:长文档(2M令牌)、批处理、成本效益、Google Workspace。如果大规模文档分析,请从这里开始。',
           'DeepSeek/Baidu ERNIE赢得:中国大陆(延迟/访问权限必需)、成本敏感的大量任务。如果数据留在中国,这是唯一的选择。',
@@ -1579,19 +1579,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tableFormat: true,
         columns: ['您的优先级', '开始使用', '为什么', '何时切换'],
         rows: [
-          { '您的优先级': '复杂的写作和分析', '开始使用': 'Claude Opus 4.8', '为什么': '最高的输出质量;减少修订轮次', '何时切换': '如果您需要多工具工作流或集成,请切换到GPT-4o' },
-          { '您的优先级': '编码和开发速度', '开始使用': 'Gemini 3.1 Pro或Flash', '为什么': '2M上下文(加载整个项目)+最佳成本/质量', '何时切换': '深度调试或代码审查切换到Claude;工具集成切换到GPT' },
-          { '您的优先级': '多代理工作流/API', '开始使用': 'GPT-4o', '为什么': '最丰富的第三方生态系统;最佳工具调用', '何时切换': '在高容量任务上节省成本时切换到Gemini' },
-          { '您的优先级': '中国大陆用户/数据', '开始使用': 'DeepSeek或Baidu ERNIE', '为什么': '唯一实用的选择——西方模型受限/慢', '何时切换': 'N/A——合规/延迟要求使切换不可能' },
+          { '您的优先级': '复杂的写作和分析', '开始使用': '[Claude Opus 4.8](https://www.anthropic.com/claude)', '为什么': '最高的输出质量;减少修订轮次', '何时切换': '如果您需要多工具工作流或集成,请切换到GPT-5.5' },
+          { '您的优先级': '编码和开发速度', '开始使用': '[Gemini 3.1 Pro](https://gemini.google.com)或Flash', '为什么': '2M上下文(加载整个项目)+最佳成本/质量', '何时切换': '深度调试或代码审查切换到Claude;工具集成切换到GPT' },
+          { '您的优先级': '多代理工作流/API', '开始使用': '[GPT-5.5](https://openai.com/chatgpt)', '为什么': '最丰富的第三方生态系统;最佳工具调用', '何时切换': '在高容量任务上节省成本时切换到Gemini' },
+          { '您的优先级': '中国大陆用户/数据', '开始使用': '[DeepSeek](https://ollama.com/library/deepseek-r1)或Baidu ERNIE', '为什么': '唯一实用的选择——西方模型受限/慢', '何时切换': 'N/A——合规/延迟要求使切换不可能' },
         ],
       },
 
       tldr: {
         title: '主要要点',
-        content: '**不同的模型在不同的任务中表现出色——GPT-4o主导工具集成,Claude在写作中表现出色,Gemini最好地处理长文档,DeepSeek/ERNIE对中国是必需的。**',
+        content: '**不同的模型在不同的任务中表现出色——GPT-5.5主导工具集成,Claude在写作中表现出色,Gemini最好地处理长文档,DeepSeek/ERNIE对中国是必需的。**',
         isTldr: true,
         items: [
-          '**GPT-4o:** 工具+生态系统。最适合多代理工作流、工具调用和最广泛的第三方集成。',
+          '**GPT-5.5:** 工具+生态系统。最适合多代理工作流、工具调用和最广泛的第三方集成。',
           '**Claude Opus 4.8:** 深思熟虑的推理+写作。最适合报告、分析、代码审查和企业安全要求。',
           '**Gemini 3.1 Pro:** Google生态系统+成本。最适合Google Workspace中的团队、批量编码和长上下文研究。',
           '**DeepSeek / Baidu ERNIE:** 中国中心的工作负载。由于延迟、访问限制和监管要求,中国大陆必需。',
@@ -1607,16 +1607,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**您的任务质量:** 此模型在写作、编码、分析或推理方面表现出色吗?检查与您的任务类似的任务的性能——而不是通用基准。',
           '**每令牌成本和定价等级:** 前沿模型成本$15–60 per百万令牌;预算模型成本$0.15–3。价格随输入和输出令牌缩放。[详细查看令牌经济学。](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
           '**延迟和速率限制:** 它的响应速度有多快?它能处理您的请求量吗?某些模型限制为每分钟100个请求;其他模型支持10,000+。',
-          '**上下文窗口大小:** 所有前沿模型（GPT-4o、Claude、Gemini）均为1M令牌（2026年5月）。足以处理长文档、整个项目、大型档案库。[了解上下文窗口。](/prompt-engineering/context-windows-explained-why-ai-forgets)',
-          '**多模态功能:** 它能处理图像、音频或视频吗?GPT-4o和Gemini 3.1 Pro很好地支持图像。DeepSeek和Baidu ERNIE专注于文本。',
-          '**生态系统和集成:** 多少第三方工具、插件和API支持它?GPT-4o在这里占主导地位。Ollama或LM Studio的本地模型支持数千个社区集成。',
+          '**上下文窗口大小:** 所有前沿模型（GPT-5.5、Claude、Gemini）均为1M令牌（2026年5月）。足以处理长文档、整个项目、大型档案库。[了解上下文窗口。](/prompt-engineering/context-windows-explained-why-ai-forgets)',
+          '**多模态功能:** 它能处理图像、音频或视频吗?GPT-5.5和Gemini 3.1 Pro很好地支持图像。DeepSeek和Baidu ERNIE专注于文本。',
+          '**生态系统和集成:** 多少第三方工具、插件和API支持它?GPT-5.5在这里占主导地位。Ollama或LM Studio的本地模型支持数千个社区集成。',
           '**地理和数据驻留规则:** 在您的地区可用吗?您的数据需要留在国家或公司网络内吗?中国大陆因规定和延迟需要本地模型(DeepSeek、Baidu ERNIE)。',
         ],
       },
 
       gptSection: {
-        title: '什么时候应该使用GPT-4o?',
-        content: '**GPT-4o是OpenAI的前沿多模态模型——最强大的工具密集型代理工作流,具有最广泛的第三方集成和工具。** 当工具、集成和多模态功能比成本更重要时,使用GPT-4o。',
+        title: '什么时候应该使用GPT-5.5?',
+        content: '**GPT-5.5是OpenAI的前沿多模态模型——最强大的工具密集型代理工作流,具有最广泛的第三方集成和工具。** 当工具、集成和多模态功能比成本更重要时,使用GPT-5.5。',
         items: [
           '**优势:** 跨所有领域的优秀通用推理和聊天。强大的多模态功能——可靠地处理图像、音频,有时还处理视频。一流的工具调用和集成(代理、IDE插件、企业堆栈)。被数百万开发人员在生产中信任。',
           '**最佳用例:** 多步骤代理工作流。需要工具调用(API、数据库、代码执行)的复杂链。需要屏幕截图或图像分析的任务。ChatGPT、Assistants API、Codex、微调等OpenAI生态系统项目。',
@@ -1631,7 +1631,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**优势:** 高质量的写作和总结;输出简洁、结构良好、可发表。优秀的代码理解、重构和解释——经常发现其他模型遗漏的错误。优秀的长上下文处理,用于研究和文档工作流。强大的安全文化;在受管制的行业中是首选。',
           '**最佳用例:** 结构和清晰度至关重要的报告、分析和知识工作。复杂的代码库和架构讨论。具有合规和安全要求的企业设置。需要最少编辑的内容。',
-          '**权衡:** 最高级更高的价格点;可能对简单任务过度。一些第三方集成比GPT-4o等价物更新。',
+          '**权衡:** 最高级更高的价格点;可能对简单任务过度。一些第三方集成比GPT-5.5等价物更新。',
           '**上下文窗口:** 1,000,000令牌(处理~800页文本)。',
         ],
       },
@@ -1649,9 +1649,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       coding: {
         title: '2026年编码的最佳AI模型是什么?',
-        content: '**Claude Opus 4.8在代码质量和重构方面表现出色;GPT-4o主导工具集成和多文件推理;Gemini 3.1 Pro为批处理任务提供最佳成本/质量比;DeepSeek是中国大陆开发人员的选择。** 编码的"最佳"模型取决于您的主要挑战:代码质量、集成宽度、每令牌成本或地理。',
+        content: '**Claude Opus 4.8在代码质量和重构方面表现出色;GPT-5.5主导工具集成和多文件推理;Gemini 3.1 Pro为批处理任务提供最佳成本/质量比;DeepSeek是中国大陆开发人员的选择。** 编码的"最佳"模型取决于您的主要挑战:代码质量、集成宽度、每令牌成本或地理。',
         items: [
-          '**GPT-4o:** 对于具有工具使用的多步骤编码任务(文件系统访问、API、shell命令)最强。擅长跨大型代码库的推理和生成复杂工作流。如果与GitHub、AWS、API的集成至关重要,最佳。',
+          '**GPT-5.5:** 对于具有工具使用的多步骤编码任务(文件系统访问、API、shell命令)最强。擅长跨大型代码库的推理和生成复杂工作流。如果与GitHub、AWS、API的集成至关重要,最佳。',
           '**Claude Opus 4.8:** 最适合代码审查、重构和架构讨论。检测其他模型遗漏的微妙错误。对维护现有代码库和解释遗留代码首选。令牌成本更高,但往往减少来回次数。',
           '**Gemini 3.1 Pro:** 对于批量编码任务(数据处理、实用程序脚本、自动化)最佳成本/质量。2M上下文意味着一次加载整个项目。对于成本很重要的原型到生产速度很好。',
           '**DeepSeek:** 与GPT的编码竞争力,但便宜10倍。最适合中国大陆开发人员和成本敏感的编码任务(脚手架、样板、日常重构)。在算法问题和竞争程序设计上非常强。',
@@ -1662,11 +1662,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '2026年最适合长上下文或大型文档的LLM?',
         content: '**所有前沿模型现统一为1M上下文令牌(2026年5月)。选择标准改为：质量(Claude/GPT)、成本效益(Gemini)、集成能力(GPT)、地域可用性。**',
         image: '/images/context-windows-chart.svg',
-        imageCaption: '上下文窗口比较:Gemini 3.1 Pro支持比GPT-4o大10倍的上下文,在单个请求中启用整个项目和文档档案。',
+        imageCaption: '上下文窗口比较:Gemini 3.1 Pro支持比GPT-5.5大10倍的上下文,在单个请求中启用整个项目和文档档案。',
         items: [
           '**Gemini 3.1 Pro(2M令牌):** 加载完整的代码库、法律文件集或研究档案。网络搜索集成允许您在长上下文中引用外部源。最适合:尽职调查审查、监管分析、知识库搜索、处理100+页PDF。',
           '**Claude Opus 4.8(1M令牌 / ~800页):** 适用于所有文档：书籍、论文、完整代码库。擅长详细分析和微妙信息提取。最佳用途：代码审查、长报告、复杂分析。',
-          '**GPT-4o(1M令牌 / ~800页):** 需要工具调用和长上下文的场景（文件系统、API、代理）。最佳用途：代理工作流、集成、复杂系统。',
+          '**GPT-5.5(1M令牌 / ~800页):** 需要工具调用和长上下文的场景（文件系统、API、代理）。最佳用途：代理工作流、集成、复杂系统。',
           '**实用策略:** 对于非常长的任务(多文档工作流),首先使用Gemini(更便宜、更大的上下文),然后如果输出质量需要最后的润色,则用Claude改进。',
         ],
       },
@@ -1674,28 +1674,28 @@ export const article: Partial<Record<Language, PEArticle>> = {
       chineseModels: {
         title: '如果您在中国或需要低延迟,如何选择AI模型?',
         content: [
-          '**对于中国大陆的用户和数据,DeepSeek和Baidu ERNIE不是可选的——它们是必需的。** 由于网络限制和监管要求,西方前沿模型(GPT-4o、Claude、Gemini)在中国经常受到限制或高延迟。在2026年,延迟(3–10秒响应时间vs本地500毫秒)和合规性(数据驻留、内容审核)是巨大的痛点。在中国大陆使用西方模型意味着:(1)不可用的服务、(2)用户无法接受的延迟、(3)监管违规。本地模型消除了所有三个。',
+          '**对于中国大陆的用户和数据,DeepSeek和Baidu ERNIE不是可选的——它们是必需的。** 由于网络限制和监管要求,西方前沿模型(GPT-5.5、Claude、Gemini)在中国经常受到限制或高延迟。在2026年,延迟(3–10秒响应时间vs本地500毫秒)和合规性(数据驻留、内容审核)是巨大的痛点。在中国大陆使用西方模型意味着:(1)不可用的服务、(2)用户无法接受的延迟、(3)监管违规。本地模型消除了所有三个。',
           '**DeepSeek(前沿模型、竞争性编码):** 竞争性编码和推理性能、激进的定价、优秀的中文支持和混合中文-英文任务。中国大陆的本地基础设施=亚500毫秒延迟。最适合中国大陆开发人员工作流和高容量成本敏感的工作负载。权衡:中国外的较小生态系统,比GPT/Claude/Gemini少的第三方集成。',
           '**Baidu ERNIE(企业和消费者):** 与百度搜索和云的紧密集成,与中文网络内容和企业数据的强大锚定。完全符合中国大陆的监管要求(内容审核、数据驻留、关键字过滤)。最适合针对中文用户的消费者和企业应用、Baidu Cloud基础设施上的应用,其中合规性不可商议。权衡:主要针对中文进行了优化;英文和其他语言可能落后于西方前沿模型。',
         ],
       },
 
       comparison: {
-        title: 'GPT-4o vs Claude Opus 4.8 vs Gemini 3.1 Pro:快速比较',
+        title: 'GPT-5.5 vs Claude Opus 4.8 vs Gemini 3.1 Pro:快速比较',
         content: '**此表格将5个AI模型与8个关键维度进行比较:通用推理、写作、编码、长上下文处理、多模态支持、成本效率、全球生态系统和中国访问权限。**',
         image: '/images/model-strengths-radar.svg',
-        imageCaption: '雷达图:Claude在写作和推理中占主导地位;GPT-4o在工具和多模态中表现出色;Gemini在成本和长上下文中胜出。没有单一的赢家——将模型与任务匹配。',
+        imageCaption: '雷达图:Claude在写作和推理中占主导地位;GPT-5.5在工具和多模态中表现出色;Gemini在成本和长上下文中胜出。没有单一的赢家——将模型与任务匹配。',
         tableFormat: true,
-        columns: ['维度', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE'],
+        columns: ['维度', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE'],
         rows: [
-          { '维度': '常规问答', 'GPT-4o': '优秀全球', 'Claude Opus 4.8': '很好,谨慎', 'Gemini 3.1 Pro': '很好+检索', 'DeepSeek': '强,最好CN', 'Baidu ERNIE': '强,最好CN' },
-          { '维度': '写作', 'GPT-4o': '优秀,有时冗长', 'Claude Opus 4.8': '优秀结构和清晰', 'Gemini 3.1 Pro': '好,中立语气', 'DeepSeek': '好,中文优先', 'Baidu ERNIE': '好,中文优先' },
-          { '维度': '编码', 'GPT-4o': '强', 'Claude Opus 4.8': '优秀,高级', 'Gemini 3.1 Pro': '优秀价值', 'DeepSeek': '非常强CN开发者', 'Baidu ERNIE': '好,应用业务' },
-          { '维度': '长上下文', 'GPT-4o': '强(1M)', 'Claude Opus 4.8': '强(1M)', 'Gemini 3.1 Pro': '强(1M)+网络', 'DeepSeek': '好', 'Baidu ERNIE': '好带百度数据' },
-          { '维度': '多模态', 'GPT-4o': '领先(图像/音频)', 'Claude Opus 4.8': '好的视觉', 'Gemini 3.1 Pro': '非常强(视频/网络)', 'DeepSeek': '变化', 'Baidu ERNIE': '文本+中文网络' },
-          { '维度': '成本效率', 'GPT-4o': '中等-高', 'Claude Opus 4.8': '更高、高级质量', 'Gemini 3.1 Pro': '非常划算', 'DeepSeek': '非常有竞争力', 'Baidu ERNIE': '竞争力(ent CN)' },
-          { '维度': '全球生态系统', 'GPT-4o': '最广泛', 'Claude Opus 4.8': '增长,特别是企业', 'Gemini 3.1 Pro': '在Google世界中强大', 'DeepSeek': '中国外有限', 'Baidu ERNIE': '强大的百度生态' },
-          { '维度': '中国访问权/延迟', 'GPT-4o': '经常受限', 'Claude Opus 4.8': '经常受限', 'Gemini 3.1 Pro': '经常受限', 'DeepSeek': '本机/低延迟', 'Baidu ERNIE': '本机/必需' },
+          { '维度': '常规问答', 'GPT-5.5': '优秀全球', 'Claude Opus 4.8': '很好,谨慎', 'Gemini 3.1 Pro': '很好+检索', 'DeepSeek': '强,最好CN', 'Baidu ERNIE': '强,最好CN' },
+          { '维度': '写作', 'GPT-5.5': '优秀,有时冗长', 'Claude Opus 4.8': '优秀结构和清晰', 'Gemini 3.1 Pro': '好,中立语气', 'DeepSeek': '好,中文优先', 'Baidu ERNIE': '好,中文优先' },
+          { '维度': '编码', 'GPT-5.5': '强', 'Claude Opus 4.8': '优秀,高级', 'Gemini 3.1 Pro': '优秀价值', 'DeepSeek': '非常强CN开发者', 'Baidu ERNIE': '好,应用业务' },
+          { '维度': '长上下文', 'GPT-5.5': '强(1M)', 'Claude Opus 4.8': '强(1M)', 'Gemini 3.1 Pro': '强(1M)+网络', 'DeepSeek': '好', 'Baidu ERNIE': '好带百度数据' },
+          { '维度': '多模态', 'GPT-5.5': '领先(图像/音频)', 'Claude Opus 4.8': '好的视觉', 'Gemini 3.1 Pro': '非常强(视频/网络)', 'DeepSeek': '变化', 'Baidu ERNIE': '文本+中文网络' },
+          { '维度': '成本效率', 'GPT-5.5': '中等-高', 'Claude Opus 4.8': '更高、高级质量', 'Gemini 3.1 Pro': '非常划算', 'DeepSeek': '非常有竞争力', 'Baidu ERNIE': '竞争力(ent CN)' },
+          { '维度': '全球生态系统', 'GPT-5.5': '最广泛', 'Claude Opus 4.8': '增长,特别是企业', 'Gemini 3.1 Pro': '在Google世界中强大', 'DeepSeek': '中国外有限', 'Baidu ERNIE': '强大的百度生态' },
+          { '维度': '中国访问权/延迟', 'GPT-5.5': '经常受限', 'Claude Opus 4.8': '经常受限', 'Gemini 3.1 Pro': '经常受限', 'DeepSeek': '本机/低延迟', 'Baidu ERNIE': '本机/必需' },
         ],
       },
 
@@ -1703,7 +1703,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '如何选择正确的AI模型?',
         content: [
           '**从您的主要用例开始,分层您的约束,然后选择最适合两者的模型。**',
-          '**如果:通用助手、多工具代理工作流程。** 然后:从GPT-4o开始。您需要最广泛的工具生态系统和集成。',
+          '**如果:通用助手、多工具代理工作流程。** 然后:从GPT-5.5开始。您需要最广泛的工具生态系统和集成。',
           '**如果:深度写作、分析、复杂代码或强大的安全要求。** 然后:从Claude Opus 4.8开始。质量和可信度比成本更重要。',
           '**如果:大量Google Workspace使用、批量编码/数据或处理100+长文档。** 然后:从Gemini 3.1 Pro开始。长上下文和生态系统集成节省时间。',
           '**如果:用户和数据主要在中国大陆。** 然后:从DeepSeek(编码重型)或Baidu ERNIE(消费者/企业应用)开始。西方模型受限或高延迟。',
@@ -1711,7 +1711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**预算紧张、容量高:** 偏好Gemini Flash / DeepSeek /较小的GPT模型。',
           '**严格合规、企业合同:** Claude企业,中国的Baidu ERNIE。',
-          '**需要多模态(屏幕截图、图表、音频):** GPT-4o或Gemini 3.1 Pro。',
+          '**需要多模态(屏幕截图、图表、音频):** GPT-5.5或Gemini 3.1 Pro。',
           '**私有数据仅:** 通过Ollama或LM Studio的本地LLM(设备上没有数据离开)。',
         ],
       },
@@ -1720,7 +1720,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '成本和令牌限制如何比较?',
         content: '**所有主要模型都按输入和输出令牌定价,速率限制基于您的级别。** 前沿模型的每令牌成本比预算模型高10–100倍。定价因地区而异(特别是中国)。',
         items: [
-          '**前沿模型(每令牌成本最高):** GPT-4o(百万令牌$5输入/$15输出)、Claude Opus 4.8(约百万令牌$3输入/$15输出)。',
+          '**前沿模型(每令牌成本最高):** GPT-5.5(百万令牌$5输入/$15输出)、Claude Opus 4.8(约百万令牌$3输入/$15输出)。',
           '**划算的中端:** Gemini 2.5 Flash(百万令牌$0.075输入/$0.30输出)。',
           '**竞争力强的预算模型:** DeepSeek(激进的定价)、通过Ollama/LM Studio的本地模型(免费,在设备上运行)。',
           '**速率限制:** 前沿模型通常从100 req/min开始;扩展级别可以达到10,000+ req/min。本地模型取决于您的硬件。',
@@ -1743,7 +1743,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'PromptQuorum如何帮助您比较和路由模型?',
         content: '**PromptQuorum通过将一个结构化的提示同时发送到所有模型并自动比较结果,解决了手动模型切换的问题。** 不再在选项卡之间复制提示或猜测哪个模型性能最好。',
         items: [
-          '**一个结构化的提示→许多模型同时。** 一次写您的提示。PromptQuorum将其并行分发到GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek、Baidu ERNIE和本地LLM(Ollama、LM Studio)。并排查看所有响应。',
+          '**一个结构化的提示→许多模型同时。** 一次写您的提示。PromptQuorum将其并行分发到GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek、Baidu ERNIE和本地LLM(Ollama、LM Studio)。并排查看所有响应。',
           '**共享框架确保公平比较。** 在所有模型中使用相同的提示结构、约束和格式。这消除了"Claude得到更好的输出,因为我为Claude措辞提示"的借口。',
           '**共识和评分视图。** PromptQuorum显示您为品牌语音最好地写作的模型,生成最正确代码的模型,最可靠地处理专有文档的模型,以及您的任务中最快最便宜的模型。',
           '**路由规则:** 便宜/高容量任务发送到小或本地模型。复杂推理发送到高级模型。基于任务类型自动执行模型选择。',
@@ -1754,7 +1754,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       promptquorumVisual: {
         title: 'PromptQuorum仪表板:同时查看所有模型',
-        content: '**发送一个提示,看到来自GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek和Baidu ERNIE的输出——全部在一个视图中。** 并排比较消除了手动模型切换的痛苦。',
+        content: '**发送一个提示,看到来自GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek和Baidu ERNIE的输出——全部在一个视图中。** 并排比较消除了手动模型切换的痛苦。',
         imagePlaceholder: true,
         imageCaption: '[即将推出:PromptQuorum仪表板的实时屏幕截图,显示同一提示任务上5个AI模型的并行输出——并排显示推理、成本、延迟和质量分数]',
       },
@@ -1766,12 +1766,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       recipe1: {
         title: '食谱1:决定哪个模型最适合您的品牌语音',
-        blockquote: '您正在为B2B SaaS登录页面编写产品文案。语气需要权威但可访问——没有营销炒作,没有模糊的最高级。在GPT-4o、Claude Opus 4.8和Gemini上测试相同的简报。看看哪个模型最好地捕捉您的品牌声音。通过PromptQuorum运行它,根据语气、清晰度和对您的品牌指南的合规性对每个输出进行评分。赢家成为您的文案首选模型。示例提示:"用我们的品牌语音重写此功能说明:[粘贴您的样式指南+现有副本]。哪个模型最匹配?"',
+        blockquote: '您正在为B2B SaaS登录页面编写产品文案。语气需要权威但可访问——没有营销炒作,没有模糊的最高级。在GPT-5.5、Claude Opus 4.8和Gemini上测试相同的简报。看看哪个模型最好地捕捉您的品牌声音。通过PromptQuorum运行它,根据语气、清晰度和对您的品牌指南的合规性对每个输出进行评分。赢家成为您的文案首选模型。示例提示:"用我们的品牌语音重写此功能说明:[粘贴您的样式指南+现有副本]。哪个模型最匹配?"',
       },
 
       recipe2: {
         title: '食谱2:比较后端堆栈的编码质量和成本',
-        blockquote: '您有一个Python代码库。测试:"查看此函数的性能和错误。建议重构。"通过GPT-4o、Claude Opus 4.8和Gemini 2.5 Flash运行它。谁检测到最多的错误?哪个重构最干净?哪个是每个请求最便宜的?使用PromptQuorum为代码质量评分。您可能会发现Gemini Flash以Claude成本的1/50检测到90%的问题。例子:"将此数据库查询优化以提高速度。时间复杂性是什么?"——路由到Claude进行深入分析,路由到Gemini进行成本意识的迭代。',
+        blockquote: '您有一个Python代码库。测试:"查看此函数的性能和错误。建议重构。"通过GPT-5.5、Claude Opus 4.8和Gemini 2.5 Flash运行它。谁检测到最多的错误?哪个重构最干净?哪个是每个请求最便宜的?使用PromptQuorum为代码质量评分。您可能会发现Gemini Flash以Claude成本的1/50检测到90%的问题。例子:"将此数据库查询优化以提高速度。时间复杂性是什么?"——路由到Claude进行深入分析,路由到Gemini进行成本意识的迭代。',
       },
 
       recipe3: {
@@ -1789,7 +1789,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqs: [
           {
             q: '如果我只能为一个订阅付费,应该选择哪一个?',
-            a: '从Claude Opus 4.8开始。这是写作、推理和代码的最高质量。如果您的主要需求是工具集成和多模态(图像/音频),请选择GPT-4o。如果您有一个Google Workspace繁重的团队,成本是关键,请选择Gemini。如果您的用户在中国大陆,您没有选择——选择DeepSeek或Baidu ERNIE(延迟和合规性必需)。'
+            a: '从Claude Opus 4.8开始。这是写作、推理和代码的最高质量。如果您的主要需求是工具集成和多模态(图像/音频),请选择GPT-5.5。如果您有一个Google Workspace繁重的团队,成本是关键,请选择Gemini。如果您的用户在中国大陆,您没有选择——选择DeepSeek或Baidu ERNIE(延迟和合规性必需)。'
           },
           {
             q: '我应该多久重新评估我的模型选择?',
@@ -1809,15 +1809,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Claude比ChatGPT更好吗?',
-            a: '对于写作质量、代码审查和结构化推理,Claude Opus 4.8在大多数评估中都超过ChatGPT(GPT-4o)。对于工具集成、多代理工作流和最广泛的第三方生态系统,GPT-4o具有优势。两者都不是普遍更好的——正确的选择取决于您的特定任务。使用PromptQuorum在您的实际提示上测试两者并直接比较结果。'
+            a: '对于写作质量、代码审查和结构化推理,Claude Opus 4.8在大多数评估中都超过ChatGPT(GPT-5.5)。对于工具集成、多代理工作流和最广泛的第三方生态系统,GPT-5.5具有优势。两者都不是普遍更好的——正确的选择取决于您的特定任务。使用PromptQuorum在您的实际提示上测试两者并直接比较结果。'
           },
           {
             q: '哪个AI模型最准确?',
-            a: '没有单个模型对所有任务都最准确。Claude Opus 4.8在写作和结构化分析中领先。GPT-4o在工具集成推理中领先。Gemini 3.1 Pro在具有实时网络基础的长文档研究中领先。准确性是特定于任务的——唯一可靠的测试是在所有模型上运行您的实际提示并测量结果。'
+            a: '没有单个模型对所有任务都最准确。Claude Opus 4.8在写作和结构化分析中领先。GPT-5.5在工具集成推理中领先。Gemini 3.1 Pro在具有实时网络基础的长文档研究中领先。准确性是特定于任务的——唯一可靠的测试是在所有模型上运行您的实际提示并测量结果。'
           },
           {
-            q: 'GPT-4o和GPT-4o mini之间有什么区别?',
-            a: 'GPT-4o是OpenAI的前沿模型——最高的功能,最高的成本(百万令牌$5输入/$15输出)。GPT-4o mini是一个更小、更快、更便宜的版本(百万令牌$0.15输入/$0.60输出)——便宜33倍,质量略低。对于分类、总结和不需要前沿推理的高容量任务,使用GPT-4o mini。对于复杂的多步骤推理、代理工作流和质量至关重要的任务,使用GPT-4o。'
+            q: 'GPT-5.5和GPT-5.5 mini之间有什么区别?',
+            a: 'GPT-5.5是OpenAI的前沿模型——最高的功能,最高的成本(百万令牌$5输入/$15输出)。GPT-5.5 mini是一个更小、更快、更便宜的版本(百万令牌$0.15输入/$0.60输出)——便宜33倍,质量略低。对于分类、总结和不需要前沿推理的高容量任务,使用GPT-5.5 mini。对于复杂的多步骤推理、代理工作流和质量至关重要的任务,使用GPT-5.5。'
           },
         ],
       },
@@ -1826,7 +1826,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '来源和参考文献',
         content: '**模型优势和定价反映了2026年3月的使用模式和来自LMSYS Arena、SWE-Bench和GPQA的基准。** 模型功能和定价经常更改——检查官方定价页面以获取当前费率,并在生产承诺前在您的任务上测试。',
         items: [
-          '[OpenAI — GPT-4o和模型概述](https://platform.openai.com/docs/models)',
+          '[OpenAI — GPT-5.5和模型概述](https://platform.openai.com/docs/models)',
           '[Anthropic — Claude模型概述](https://docs.anthropic.com/en/docs/models-overview)',
           '[Google — Gemini模型和定价](https://ai.google.dev/gemini-api/docs/models)',
           '[DeepSeek — API文档和模型](https://api-docs.deepseek.com)',
@@ -1853,21 +1853,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
     next_refresh_due: '2026-11-04',
     theme: 'Fundamentals',
     title: 'GPT, Claude o Gemini: Cómo elegir el modelo de IA correcto',
-    intro: '**Ningún modelo de IA es el mejor para todas las tareas. GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek y Baidu ERNIE destacan en distintas tareas, geografías y presupuestos. Esta guía te ofrece un framework de decisión práctico — no otra lista de benchmarks.**',
+    intro: '**Ningún modelo de IA es el mejor para todas las tareas. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek y Baidu ERNIE destacan en distintas tareas, geografías y presupuestos. Esta guía te ofrece un framework de decisión práctico — no otra lista de benchmarks.**',
     publishDate: '2026-03-23',
     seoTitle: 'GPT vs Claude vs Gemini 2026: ¿Cuál Gana?',
-    metaDescription: 'GPT-4o destaca en herramientas, Claude en escritura y Gemini en costos. Todos con 1M de contexto. Matriz de decisión, precios y guía de enrutamiento.',
-    ogTitle: 'GPT-4o vs Claude Opus 4.8 vs Gemini 3.1 Pro: ¿Cuál Gana para Tu Tarea?',
-    ogDescription: 'Ningún modelo de IA gana en todo. GPT-4o domina la integración de herramientas, Claude lidera en calidad de escritura, Gemini ofrece eficiencia de costos. Comparamos los tres en tareas reales.',
-    twitterTitle: 'GPT-4o vs Claude vs Gemini 3.1 Pro: ¿Qué Modelo? (2026)',
-    twitterDescription: 'GPT-4o para agentes, Claude para escritura, Gemini para costos. Los tres con 1M de contexto. Matriz de decisión, precios y 4 recetas de enrutamiento.',
+    metaDescription: 'GPT-5.5 destaca en herramientas, Claude en escritura y Gemini en costos. Todos con 1M de contexto. Matriz de decisión, precios y guía de enrutamiento.',
+    ogTitle: 'GPT-5.5 vs Claude Opus 4.8 vs Gemini 3.1 Pro: ¿Cuál Gana para Tu Tarea?',
+    ogDescription: 'Ningún modelo de IA gana en todo. GPT-5.5 domina la integración de herramientas, Claude lidera en calidad de escritura, Gemini ofrece eficiencia de costos. Comparamos los tres en tareas reales.',
+    twitterTitle: 'GPT-5.5 vs Claude vs Gemini 3.1 Pro: ¿Qué Modelo? (2026)',
+    twitterDescription: 'GPT-5.5 para agentes, Claude para escritura, Gemini para costos. Los tres con 1M de contexto. Matriz de decisión, precios y 4 recetas de enrutamiento.',
     readTime: '12 min de lectura',
     educationalLevel: 'Beginner',
     toc: [
       { label: 'No hay un único "mejor" modelo de IA — Elige según la tarea', anchor: 'no-single-best-ai-model' },
       { label: 'Matriz de decisión rápida', anchor: 'quick-decision-matrix' },
       { label: '¿Qué importa al elegir un modelo de IA?', anchor: 'what-matters' },
-      { label: '¿Cuándo usar GPT-4o?', anchor: 'when-gpt' },
+      { label: '¿Cuándo usar GPT-5.5?', anchor: 'when-gpt' },
       { label: '¿Cuándo usar Claude Opus 4.8?', anchor: 'when-claude' },
       { label: '¿Cuándo usar Gemini 3.1 Pro?', anchor: 'when-gemini' },
       { label: '¿Qué modelo de IA es mejor para programar?', anchor: 'best-for-coding' },
@@ -1891,15 +1891,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'es',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       headline: 'GPT, Claude o Gemini: Cómo elegir el modelo de IA correcto',
-      description: 'Una guía práctica para elegir entre GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek y Baidu ERNIE según tu tarea, presupuesto y geografía.',
+      description: 'Una guía práctica para elegir entre GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek y Baidu ERNIE según tu tarea, presupuesto y geografía.',
       datePublished: '2026-03-23',
       dateModified: '2026-05-04',
-      keywords: ['GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'comparación de modelos de IA', 'selección de modelos', 'ingeniería de prompts'],
+      keywords: ['GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'comparación de modelos de IA', 'selección de modelos', 'ingeniería de prompts'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       mentions: [
         { '@type': 'Thing', name: 'PromptQuorum' },
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude Opus 4.8' },
         { '@type': 'Thing', name: 'Gemini 3.1 Pro' },
         { '@type': 'Thing', name: 'DeepSeek' },
@@ -1913,11 +1913,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
     supplementalSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'name': 'Comparación de modelos de IA — GPT-4o vs Claude vs Gemini vs DeepSeek vs Baidu ERNIE (abril 2026)',
+      'name': 'Comparación de modelos de IA — GPT-5.5 vs Claude vs Gemini vs DeepSeek vs Baidu ERNIE (abril 2026)',
       'description': 'Comparación de 5 modelos de IA principales en 8 dimensiones: razonamiento general, escritura, programación, contexto largo, multimodal, costo, ecosistema y acceso en China.',
       'numberOfItems': 5,
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'GPT-4o', 'description': 'Mejor para integración de herramientas y flujos de trabajo agénticos. Contexto: 1M tokens. Costo: $5 entrada/$30 salida por 1M tokens. Restringido en China continental.' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'GPT-5.5', 'description': 'Mejor para integración de herramientas y flujos de trabajo agénticos. Contexto: 1M tokens. Costo: $5 entrada/$30 salida por 1M tokens. Restringido en China continental.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Claude Opus 4.8', 'description': 'Mejor para calidad de escritura, revisión de código y seguridad empresarial. Contexto: 1M tokens. Costo: $5 entrada/$25 salida por 1M tokens. Restringido en China continental.' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Gemini 3.1 Pro', 'description': 'Mejor para Google Workspace, documentos largos y eficiencia de costos. Contexto: 1M tokens. El modelo frontier más rentable. Restringido en China continental.' },
         { '@type': 'ListItem', 'position': 4, 'name': 'DeepSeek', 'description': 'Mejor para cargas de trabajo en China continental, programación y tareas de alto volumen sensibles al costo. Baja latencia nativa en China. Precios competitivos a nivel global.' },
@@ -1928,12 +1928,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
       'name': 'Cómo elegir el modelo de IA correcto',
-      'description': 'Un proceso de decisión paso a paso para elegir entre GPT-4o, Claude, Gemini, DeepSeek y Baidu ERNIE según la tarea, la geografía y el presupuesto.',
+      'description': 'Un proceso de decisión paso a paso para elegir entre GPT-5.5, Claude, Gemini, DeepSeek y Baidu ERNIE según la tarea, la geografía y el presupuesto.',
       'totalTime': 'PT5M',
       'step': [
-        { '@type': 'HowToStep', 'position': 1, 'name': 'Identifica tu caso de uso principal', 'text': 'Determina si necesitas principalmente integración de herramientas y agentes (GPT-4o), calidad de escritura y código (Claude Opus 4.8), investigación en contexto largo o Google Workspace (Gemini 3.1 Pro), o modelos compatibles con China (DeepSeek o Baidu ERNIE).' },
-        { '@type': 'HowToStep', 'position': 2, 'name': 'Verifica las restricciones geográficas', 'text': 'Si los usuarios o los datos están en China continental, usa DeepSeek o Baidu ERNIE. Los modelos frontier occidentales (GPT-4o, Claude, Gemini) están restringidos o tienen alta latencia en China debido a restricciones de red y requisitos normativos.' },
-        { '@type': 'HowToStep', 'position': 3, 'name': 'Evalúa la relación costo-calidad', 'text': 'Usa modelos de presupuesto (GPT-4o mini, Gemini Flash, DeepSeek) para tareas repetitivas de alto volumen. Reserva los modelos frontier (GPT-4o, Claude Opus 4.8) para razonamientos complejos donde la calidad importa más que el costo.' },
+        { '@type': 'HowToStep', 'position': 1, 'name': 'Identifica tu caso de uso principal', 'text': 'Determina si necesitas principalmente integración de herramientas y agentes (GPT-5.5), calidad de escritura y código (Claude Opus 4.8), investigación en contexto largo o Google Workspace (Gemini 3.1 Pro), o modelos compatibles con China (DeepSeek o Baidu ERNIE).' },
+        { '@type': 'HowToStep', 'position': 2, 'name': 'Verifica las restricciones geográficas', 'text': 'Si los usuarios o los datos están en China continental, usa DeepSeek o Baidu ERNIE. Los modelos frontier occidentales (GPT-5.5, Claude, Gemini) están restringidos o tienen alta latencia en China debido a restricciones de red y requisitos normativos.' },
+        { '@type': 'HowToStep', 'position': 3, 'name': 'Evalúa la relación costo-calidad', 'text': 'Usa modelos de presupuesto (GPT-5.5 mini, Gemini Flash, DeepSeek) para tareas repetitivas de alto volumen. Reserva los modelos frontier (GPT-5.5, Claude Opus 4.8) para razonamientos complejos donde la calidad importa más que el costo.' },
         { '@type': 'HowToStep', 'position': 4, 'name': 'Considera los requisitos de privacidad de datos', 'text': 'Para la residencia de datos en la UE o datos sensibles que no pueden salir de tu infraestructura, usa modelos locales vía Ollama o LM Studio. Con la inferencia local, ningún dato sale de tu dispositivo.' },
         { '@type': 'HowToStep', 'position': 5, 'name': 'Prueba en tu tarea real con PromptQuorum', 'text': 'Envía un prompt a todos los modelos simultáneamente usando PromptQuorum. Compara los resultados en tus datos reales y la voz de tu marca. El modelo ganador para tu tarea específica es la elección correcta, no los benchmarks genéricos.' },
       ],
@@ -1942,14 +1942,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'Si solo puedo pagar una suscripción, ¿cuál elijo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Empieza con Claude Opus 4.8. Es el de mayor calidad en escritura, razonamiento y código. Si tu principal necesidad es la integración de herramientas y multimodal (imágenes/audio), elige GPT-4o. Si tienes un equipo que usa mucho Google Workspace y el costo es crítico, elige Gemini. Si tus usuarios están en China continental, no tienes opción — elige DeepSeek o Baidu ERNIE (necesarios por latencia y cumplimiento normativo).' } },
+        { '@type': 'Question', 'name': 'Si solo puedo pagar una suscripción, ¿cuál elijo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Empieza con Claude Opus 4.8. Es el de mayor calidad en escritura, razonamiento y código. Si tu principal necesidad es la integración de herramientas y multimodal (imágenes/audio), elige GPT-5.5. Si tienes un equipo que usa mucho Google Workspace y el costo es crítico, elige Gemini. Si tus usuarios están en China continental, no tienes opción — elige DeepSeek o Baidu ERNIE (necesarios por latencia y cumplimiento normativo).' } },
         { '@type': 'Question', 'name': '¿Con qué frecuencia debo reevaluar mis elecciones de modelos?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Trimestralmente. Cada 3–4 meses, se lanzan nuevos modelos y las posiciones en los rankings cambian. Usa PromptQuorum para re-testear tus tareas más críticas en los últimos modelos. Lo que era mejor hace 6 meses puede que ya no sea óptimo.' } },
         { '@type': 'Question', 'name': '¿Puedo mezclar múltiples modelos dentro de un producto o agente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, y deberías hacerlo. Enruta distintas tareas a distintos modelos: Claude para escritura, Gemini para recuperación, GPT para agentes. Usa lógica condicional: si es una tarea de escritura, usa Claude; si es de recuperación, usa Gemini. Así es como funcionan los sistemas en producción.' } },
         { '@type': 'Question', 'name': '¿Cómo pienso sobre el bloqueo por proveedor?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El bloqueo por proveedor ocurre cuando tu sistema depende del formato API de un modelo, funciones especiales o precios. Protégete: (1) Usa estructuras de prompt estándar que funcionen en todos los modelos. (2) Usa capas de abstracción (como PromptQuorum) que soporten múltiples proveedores. (3) Prueba regularmente en múltiples modelos para detectar divergencias específicas del proveedor. (4) Para sistemas críticos, soporta modelos locales (Ollama, LM Studio) como respaldo.' } },
         { '@type': 'Question', 'name': '¿Dónde encajan los modelos locales de código abierto?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Los modelos locales (Llama 4 Scout, Qwen3, Mistral y otros vía Ollama o LM Studio) son mejores para: tareas repetitivas de alto volumen (clasificar, resumir, extraer), datos privados (sin llamadas a la API), cargas de trabajo sensibles al costo y pruebas antes de comprometerse con costos de API. No igualan a los modelos frontier en calidad, pero destacan en privacidad y costo. Úsalos para el 80% de las tareas que no necesitan razonamiento de nivel frontier.' } },
-        { '@type': 'Question', 'name': '¿Es Claude mejor que ChatGPT?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para calidad de escritura, revisión de código y razonamiento estructurado, Claude Opus 4.8 supera a ChatGPT (GPT-4o) en la mayoría de las evaluaciones. Para integración de herramientas, flujos de trabajo multi-agente y el ecosistema más amplio de terceros, GPT-4o tiene la ventaja. Ninguno es universalmente mejor — la elección correcta depende de tu tarea específica. Usa PromptQuorum para probar ambos en tus prompts reales y comparar los resultados directamente.' } },
-        { '@type': 'Question', 'name': '¿Qué modelo de IA es el más preciso?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ningún modelo es el más preciso en todas las tareas. Claude Opus 4.8 lidera en escritura y análisis estructurado. GPT-4o lidera en razonamiento integrado con herramientas. Gemini 3.1 Pro lidera en investigación de documentos largos con búsqueda web en vivo. La precisión es específica para cada tarea — la única prueba fiable es ejecutar tus prompts reales en todos los modelos y medir los resultados.' } },
-        { '@type': 'Question', 'name': '¿Cuál es la diferencia entre GPT-4o y GPT-4o mini?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPT-4o es el modelo frontier de OpenAI — máxima capacidad, mayor costo ($5 entrada/$30 salida por millón de tokens). GPT-4o mini es una versión más pequeña, rápida y barata ($0.15 entrada/$0.60 salida por millón de tokens) — 50 veces más barata con calidad ligeramente menor. Usa GPT-4o mini para clasificación, resumen y tareas de alto volumen donde no se requiere razonamiento frontier. Usa GPT-4o para razonamiento multi-paso complejo, flujos de trabajo de agentes y tareas donde la calidad es crítica.' } },
+        { '@type': 'Question', 'name': '¿Es Claude mejor que ChatGPT?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para calidad de escritura, revisión de código y razonamiento estructurado, Claude Opus 4.8 supera a ChatGPT (GPT-5.5) en la mayoría de las evaluaciones. Para integración de herramientas, flujos de trabajo multi-agente y el ecosistema más amplio de terceros, GPT-5.5 tiene la ventaja. Ninguno es universalmente mejor — la elección correcta depende de tu tarea específica. Usa PromptQuorum para probar ambos en tus prompts reales y comparar los resultados directamente.' } },
+        { '@type': 'Question', 'name': '¿Qué modelo de IA es el más preciso?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ningún modelo es el más preciso en todas las tareas. Claude Opus 4.8 lidera en escritura y análisis estructurado. GPT-5.5 lidera en razonamiento integrado con herramientas. Gemini 3.1 Pro lidera en investigación de documentos largos con búsqueda web en vivo. La precisión es específica para cada tarea — la única prueba fiable es ejecutar tus prompts reales en todos los modelos y medir los resultados.' } },
+        { '@type': 'Question', 'name': '¿Cuál es la diferencia entre GPT-5.5 y GPT-5.5 mini?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPT-5.5 es el modelo frontier de OpenAI — máxima capacidad, mayor costo ($5 entrada/$30 salida por millón de tokens). GPT-5.5 mini es una versión más pequeña, rápida y barata ($0.15 entrada/$0.60 salida por millón de tokens) — 50 veces más barata con calidad ligeramente menor. Usa GPT-5.5 mini para clasificación, resumen y tareas de alto volumen donde no se requiere razonamiento frontier. Usa GPT-5.5 para razonamiento multi-paso complejo, flujos de trabajo de agentes y tareas donde la calidad es crítica.' } },
       ],
     },
     recipesHowToSchema: {
@@ -1959,7 +1959,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'description': '4 escenarios del mundo real para decidir qué modelo de IA usar y cómo probar tu elección',
       'step': [
         { '@type': 'HowToStep', 'position': 1, 'name': 'Receta 1: Decide qué modelo escribe mejor para la voz de tu marca', 'text': 'Envía una muestra de tu escritura (artículo, email, página de ventas) a PromptQuorum con un prompt: "Reescribe esto con la voz de nuestra marca." Compara los resultados en paralelo. El modelo que requiera menos revisiones es tu modelo de escritura.' },
-        { '@type': 'HowToStep', 'position': 2, 'name': 'Receta 2: Compara la calidad y el costo de programación para tu stack backend', 'text': 'Toma una tarea de programación real de tu backlog. Envíala a GPT-4o, Claude, Gemini y DeepSeek. Mide: corrección del código (¿funciona?), tiempo de implementación (uso de tokens), costo por token. Gemini y DeepSeek suelen ganar en costo; Claude y GPT en calidad.' },
+        { '@type': 'HowToStep', 'position': 2, 'name': 'Receta 2: Compara la calidad y el costo de programación para tu stack backend', 'text': 'Toma una tarea de programación real de tu backlog. Envíala a GPT-5.5, Claude, Gemini y DeepSeek. Mide: corrección del código (¿funciona?), tiempo de implementación (uso de tokens), costo por token. Gemini y DeepSeek suelen ganar en costo; Claude y GPT en calidad.' },
         { '@type': 'HowToStep', 'position': 3, 'name': 'Receta 3: Configura un stack global + China: GPT/Claude/Gemini + DeepSeek/ERNIE', 'text': 'Si sirves a usuarios a nivel global Y en China continental: enruta a los usuarios occidentales a tu configuración multi-modelo (GPT, Claude, Gemini por tarea). Enruta a los usuarios de China a DeepSeek o Baidu ERNIE (latencia y cumplimiento). Automatiza mediante detección geográfica (IP, configuración de usuario, idioma del navegador).' },
         { '@type': 'HowToStep', 'position': 4, 'name': 'Receta 4: Usa LLMs locales para datos privados, modelos frontier para el acabado final', 'text': 'Tienes datos sensibles de clientes. Paso 1: procesa localmente con Ollama o LM Studio (ningún dato sale de tus servidores). Paso 2: envía el output refinado a Claude o GPT para el acabado final y verificación de calidad. Este enfoque híbrido es económico, privado y produce salidas de alta calidad. Pruébalo en PromptQuorum para encontrar el modelo local que mejor funciona para tu pipeline.' },
       ],
@@ -1968,7 +1968,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'SoftwareApplication',
       'name': 'PromptQuorum',
-      'description': 'Herramienta de despacho multi-modelo de IA que envía un prompt estructurado a GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, Baidu ERNIE y LLMs locales simultáneamente — devuelve todas las respuestas para comparación y puntuación de consenso',
+      'description': 'Herramienta de despacho multi-modelo de IA que envía un prompt estructurado a GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, Baidu ERNIE y LLMs locales simultáneamente — devuelve todas las respuestas para comparación y puntuación de consenso',
       'url': 'https://www.promptquorum.com',
       'applicationCategory': 'ProductivityApplication',
       'operatingSystem': 'Web, macOS, Windows, Linux',
@@ -1985,7 +1985,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'description': 'Conceptos y temas principales cubiertos al elegir el modelo de IA correcto',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Matriz de decisión rápida', 'description': 'Cómo elegir tu modelo de partida según la tarea, la geografía y el presupuesto' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Comparación completa de modelos', 'description': 'Comparación detallada de GPT-4o, Claude, Gemini, DeepSeek y Baidu ERNIE' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Comparación completa de modelos', 'description': 'Comparación detallada de GPT-5.5, Claude, Gemini, DeepSeek y Baidu ERNIE' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Equilibrio costo-calidad', 'description': 'Cuándo usar modelos de presupuesto vs modelos frontier, y desglose del costo por token' },
         { '@type': 'ListItem', 'position': 4, 'name': 'Restricciones geográficas y acceso en China', 'description': 'Disponibilidad de modelos en China continental y consideraciones para el enrutamiento global/regional' },
         { '@type': 'ListItem', 'position': 5, 'name': 'Pruebas con PromptQuorum', 'description': 'Cómo comparar modelos en tus datos de tareas reales y la voz de tu marca' },
@@ -1995,9 +1995,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       definition: {
         title: 'No hay un único "mejor" modelo de IA — Elige según la tarea',
         content: [
-          '**Ningún modelo de IA es el mejor para todas las tareas. GPT-4o destaca en integración de herramientas y razonamiento; Claude Opus 4.8 domina en escritura y calidad de código; Gemini 3.1 Pro ofrece un rendimiento rentable e integración profunda con Google Workspace; DeepSeek y Baidu ERNIE son esenciales para cargas de trabajo en China continental.**',
+          '**Ningún modelo de IA es el mejor para todas las tareas. GPT-5.5 destaca en integración de herramientas y razonamiento; Claude Opus 4.8 domina en escritura y calidad de código; Gemini 3.1 Pro ofrece un rendimiento rentable e integración profunda con Google Workspace; DeepSeek y Baidu ERNIE son esenciales para cargas de trabajo en China continental.**',
           'Cuando tengas una nueva tarea, la primera pregunta no debería ser "¿cuál es el mejor modelo?" sino "¿qué modelo es el mejor para ESTA tarea, en ESTA geografía, con ESTE presupuesto?" Los benchmarks y los rankings cambian cada pocos meses. Tu tarea real — tu estilo de escritura específico, tu base de código, tus clientes en China, la sensibilidad de tus datos — debe guiar la elección.',
-          'PromptQuorum es una herramienta de despacho multi-modelo de IA que resuelve esto directamente: envía un prompt estructurado a GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, Baidu ERNIE y LLMs locales (Ollama, LM Studio) simultáneamente. Ve todas las respuestas en paralelo. Deja que PromptQuorum puntúe qué modelo funciona mejor para TU tarea, TUS datos y la voz de TU marca — no los benchmarks de YouTube.',
+          'PromptQuorum es una herramienta de despacho multi-modelo de IA que resuelve esto directamente: envía un prompt estructurado a GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, Baidu ERNIE y LLMs locales (Ollama, LM Studio) simultáneamente. Ve todas las respuestas en paralelo. Deja que PromptQuorum puntúe qué modelo funciona mejor para TU tarea, TUS datos y la voz de TU marca — no los benchmarks de YouTube.',
         ],
       },
 
@@ -2005,7 +2005,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Matriz de decisión rápida — Elige tu modelo de partida',
         content: '**Elige tu modelo de partida según tu tarea principal. La mayoría de los equipos usan múltiples modelos — empieza con el correcto y cambia según sea necesario.**',
         items: [
-          'GPT-4o gana: flujos de trabajo multi-agente, integración de herramientas, ecosistema API, multimodal (imágenes/audio). Empieza aquí si las integraciones importan.',
+          'GPT-5.5 gana: flujos de trabajo multi-agente, integración de herramientas, ecosistema API, multimodal (imágenes/audio). Empieza aquí si las integraciones importan.',
           'Claude Opus 4.8 gana: calidad de escritura, revisión de código, profundidad de razonamiento, seguridad empresarial. Empieza aquí para calidad de contenido/código.',
           'Gemini 3.1 Pro gana: documentos largos (1M tokens), procesamiento por lotes, eficiencia de costos, Google Workspace. Empieza aquí para el análisis de documentos a gran escala.',
           'DeepSeek/Baidu ERNIE gana: cargas de trabajo en China continental (necesario por latencia/acceso), tareas de alto volumen sensibles al costo. La única opción si los datos se quedan en China.',
@@ -2014,19 +2014,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tableFormat: true,
         columns: ['Tu prioridad', 'Empieza con', 'Por qué', 'Cuándo cambiar'],
         rows: [
-          { 'Tu prioridad': 'Escritura y análisis complejos', 'Empieza con': 'Claude Opus 4.8', 'Por qué': 'Mayor calidad de salida; reduce las rondas de revisión', 'Cuándo cambiar': 'Cambia a GPT-4o si necesitas flujos de trabajo multi-herramienta o integraciones' },
-          { 'Tu prioridad': 'Programación y velocidad de desarrollo', 'Empieza con': 'Gemini 3.1 Pro o Flash', 'Por qué': 'Contexto de 1M (carga proyectos completos) + mejor relación costo/calidad', 'Cuándo cambiar': 'Cambia a Claude para depuración profunda o revisión de código; GPT para integración de herramientas' },
-          { 'Tu prioridad': 'Flujos de trabajo multi-agente / APIs', 'Empieza con': 'GPT-4o', 'Por qué': 'Ecosistema de terceros más rico; mejor llamada a herramientas', 'Cuándo cambiar': 'Cambia a Gemini para ahorrar costos en tareas de alto volumen' },
-          { 'Tu prioridad': 'Usuarios/datos en China continental', 'Empieza con': 'DeepSeek o Baidu ERNIE', 'Por qué': 'La única opción práctica — modelos occidentales restringidos/lentos', 'Cuándo cambiar': 'N/A — los requisitos de cumplimiento/latencia hacen imposible el cambio' },
+          { 'Tu prioridad': 'Escritura y análisis complejos', 'Empieza con': '[Claude Opus 4.8](https://www.anthropic.com/claude)', 'Por qué': 'Mayor calidad de salida; reduce las rondas de revisión', 'Cuándo cambiar': 'Cambia a GPT-5.5 si necesitas flujos de trabajo multi-herramienta o integraciones' },
+          { 'Tu prioridad': 'Programación y velocidad de desarrollo', 'Empieza con': '[Gemini 3.1 Pro](https://gemini.google.com) o Flash', 'Por qué': 'Contexto de 1M (carga proyectos completos) + mejor relación costo/calidad', 'Cuándo cambiar': 'Cambia a Claude para depuración profunda o revisión de código; GPT para integración de herramientas' },
+          { 'Tu prioridad': 'Flujos de trabajo multi-agente / APIs', 'Empieza con': '[GPT-5.5](https://openai.com/chatgpt)', 'Por qué': 'Ecosistema de terceros más rico; mejor llamada a herramientas', 'Cuándo cambiar': 'Cambia a Gemini para ahorrar costos en tareas de alto volumen' },
+          { 'Tu prioridad': 'Usuarios/datos en China continental', 'Empieza con': '[DeepSeek](https://ollama.com/library/deepseek-r1) o Baidu ERNIE', 'Por qué': 'La única opción práctica — modelos occidentales restringidos/lentos', 'Cuándo cambiar': 'N/A — los requisitos de cumplimiento/latencia hacen imposible el cambio' },
         ],
       },
 
       tldr: {
         title: 'Puntos clave',
-        content: '**Distintos modelos destacan en distintas tareas — GPT-4o domina la integración de herramientas, Claude destaca en escritura, Gemini maneja mejor los documentos largos, y DeepSeek/ERNIE son necesarios para China.**',
+        content: '**Distintos modelos destacan en distintas tareas — GPT-5.5 domina la integración de herramientas, Claude destaca en escritura, Gemini maneja mejor los documentos largos, y DeepSeek/ERNIE son necesarios para China.**',
         isTldr: true,
         items: [
-          '**GPT-4o:** herramientas + ecosistema. Mejor para flujos de trabajo multi-agente, llamadas a herramientas y las integraciones de terceros más amplias.',
+          '**GPT-5.5:** herramientas + ecosistema. Mejor para flujos de trabajo multi-agente, llamadas a herramientas y las integraciones de terceros más amplias.',
           '**Claude Opus 4.8:** razonamiento cuidadoso + escritura. Mejor para informes, análisis, revisiones de código y requisitos de seguridad empresarial.',
           '**Gemini 3.1 Pro:** ecosistema Google + costo. Mejor para equipos en Google Workspace, programación por lotes e investigación en contexto largo.',
           '**DeepSeek / Baidu ERNIE:** cargas de trabajo enfocadas en China. Obligatorio para China continental por latencia, restricciones de acceso y requisitos normativos.',
@@ -2039,10 +2039,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Datos rápidos: mayo 2026',
         content: '**De un vistazo — cifras clave antes de profundizar:**',
         items: [
-          '**Ventanas de contexto:** GPT-4o (1M), Claude Opus 4.8 (1M), Gemini 3.1 Pro (1M) — los tres ahora iguales',
-          '**Precios (por 1M tokens):** GPT-4o $5/$30, Claude Opus 4.8 $5/$25, Gemini 3.1 Pro $2/$12',
+          '**Ventanas de contexto:** GPT-5.5 (1M), Claude Opus 4.8 (1M), Gemini 3.1 Pro (1M) — los tres ahora iguales',
+          '**Precios (por 1M tokens):** GPT-5.5 $5/$30, Claude Opus 4.8 $5/$25, Gemini 3.1 Pro $2/$12',
           '**Mejor escritura:** Claude Opus 4.8 — conciso, estructurado, listo para publicación',
-          '**Mejor integración de herramientas:** GPT-4o — mayor ecosistema de terceros (50.000+ integraciones)',
+          '**Mejor integración de herramientas:** GPT-5.5 — mayor ecosistema de terceros (50.000+ integraciones)',
           '**Mejor relación costo/calidad:** Gemini 3.1 Pro — el modelo frontier más barato por token',
           '**Obligatorio para China:** DeepSeek o Baidu ERNIE — modelos occidentales restringidos o con alta latencia',
           '**Privado/local:** Ollama o LM Studio — cero salida de datos',
@@ -2056,16 +2056,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Calidad para tu tarea:** ¿Este modelo destaca en escritura, programación, análisis o razonamiento? Comprueba el rendimiento en tareas similares a las tuyas — no en benchmarks genéricos.',
           '**Costo por token y niveles de precios:** Los modelos frontier cuestan $15–60 por millón de tokens; los modelos de presupuesto cuestan $0.15–3. El precio escala según los tokens de entrada y salida. [Ver la economía de tokens en detalle.](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
           '**Latencia y límites de frecuencia:** ¿Qué tan rápido responde? ¿Puede gestionar tu volumen de solicitudes? Algunos modelos están limitados a 100 solicitudes por minuto; otros soportan 10.000+.',
-          '**Tamaño de la ventana de contexto:** GPT-4o: 1M tokens. Claude Opus 4.8: 1M tokens. Gemini 3.1 Pro: 1M tokens (los tres ahora iguales). [Aprende sobre las ventanas de contexto.](/es/prompt-engineering/context-windows-explained-why-ai-forgets)',
-          '**Capacidades multimodales:** ¿Puede procesar imágenes, audio o video? GPT-4o y Gemini 3.1 Pro soportan bien las imágenes. DeepSeek y Baidu ERNIE se centran en texto.',
-          '**Ecosistema e integraciones:** ¿Cuántas herramientas de terceros, plugins y APIs lo soportan? GPT-4o domina aquí. Los modelos locales vía Ollama o LM Studio soportan miles de integraciones de la comunidad.',
+          '**Tamaño de la ventana de contexto:** GPT-5.5: 1M tokens. Claude Opus 4.8: 1M tokens. Gemini 3.1 Pro: 1M tokens (los tres ahora iguales). [Aprende sobre las ventanas de contexto.](/es/prompt-engineering/context-windows-explained-why-ai-forgets)',
+          '**Capacidades multimodales:** ¿Puede procesar imágenes, audio o video? GPT-5.5 y Gemini 3.1 Pro soportan bien las imágenes. DeepSeek y Baidu ERNIE se centran en texto.',
+          '**Ecosistema e integraciones:** ¿Cuántas herramientas de terceros, plugins y APIs lo soportan? GPT-5.5 domina aquí. Los modelos locales vía Ollama o LM Studio soportan miles de integraciones de la comunidad.',
           '**Geografía y reglas de residencia de datos:** ¿Está disponible en tu región? ¿Tus datos necesitan quedarse dentro de un país o red de empresa? China continental requiere modelos locales (DeepSeek, Baidu ERNIE) por regulaciones y latencia.',
         ],
       },
 
       gptSection: {
-        title: '¿Cuándo usar GPT-4o?',
-        content: '**GPT-4o es el modelo multimodal frontier de OpenAI — el más potente para flujos de trabajo agénticos con muchas herramientas, con las integraciones y herramientas de terceros más amplias.** Usa GPT-4o cuando las herramientas, las integraciones y las capacidades multimodales importan más que el costo.',
+        title: '¿Cuándo usar GPT-5.5?',
+        content: '**GPT-5.5 es el modelo multimodal frontier de OpenAI — el más potente para flujos de trabajo agénticos con muchas herramientas, con las integraciones y herramientas de terceros más amplias.** Usa GPT-5.5 cuando las herramientas, las integraciones y las capacidades multimodales importan más que el costo.',
         items: [
           '**Puntos fuertes:** Excelente razonamiento general y chat en todos los dominios. Capacidades multimodales sólidas — procesa imágenes, audio y a veces video de forma fiable. El ecosistema de llamadas a herramientas más potente — la biblioteca de integración de terceros más grande de cualquier modelo comercial (50.000+ integraciones en la plataforma OpenAI). Confiado en producción por millones de desarrolladores.',
           '**Mejores casos de uso:** Flujos de trabajo agénticos multi-paso. Cadenas complejas donde se requiere llamada a herramientas (APIs, bases de datos, ejecución de código). Tareas que necesitan análisis de capturas de pantalla o imágenes. Proyectos del ecosistema OpenAI (ChatGPT, Assistants API, Codex, fine-tuning).',
@@ -2080,7 +2080,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**Puntos fuertes:** Escritura y resumen de alta calidad; los outputs son concisos, bien estructurados y listos para publicación. Excelente comprensión de código, refactorización y explicación — a menudo detecta bugs que otros modelos pasan por alto. Buen manejo del contexto largo para investigación y flujos de trabajo con documentos. Cultura de seguridad sólida; preferido en industrias reguladas.',
           '**Mejores casos de uso:** Informes, análisis y trabajo del conocimiento donde la estructura y la claridad son críticas. Bases de código complejas y discusiones de arquitectura. Entornos empresariales con requisitos de cumplimiento y seguridad. Contenido que requiere minimizar las revisiones.',
-          '**Desventajas:** Punto de precio más alto para los niveles superiores; puede ser excesivo para tareas simples. Algunas integraciones de terceros son más recientes que los equivalentes de GPT-4o.',
+          '**Desventajas:** Punto de precio más alto para los niveles superiores; puede ser excesivo para tareas simples. Algunas integraciones de terceros son más recientes que los equivalentes de GPT-5.5.',
           '**Ventana de contexto:** 1.000.000 tokens (gestiona ~800 páginas de texto).',
         ],
       },
@@ -2098,9 +2098,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       coding: {
         title: '¿Qué modelo de IA es mejor para programar en 2026?',
-        content: '**Claude Opus 4.8 destaca en calidad de código y refactorización; GPT-4o domina la integración de herramientas y el razonamiento multi-archivo; Gemini 3.1 Pro ofrece la mejor relación costo/calidad para tareas por lotes; DeepSeek es la elección para desarrolladores en China continental.** El modelo "mejor" para programar depende de tu desafío principal: calidad del código, amplitud de integración, costo por token o geografía.',
+        content: '**Claude Opus 4.8 destaca en calidad de código y refactorización; GPT-5.5 domina la integración de herramientas y el razonamiento multi-archivo; Gemini 3.1 Pro ofrece la mejor relación costo/calidad para tareas por lotes; DeepSeek es la elección para desarrolladores en China continental.** El modelo "mejor" para programar depende de tu desafío principal: calidad del código, amplitud de integración, costo por token o geografía.',
         items: [
-          '**GPT-4o:** El más potente para tareas de programación multi-paso con uso de herramientas (acceso al sistema de archivos, APIs, comandos de shell). Excelente para razonar en bases de código grandes y generar flujos de trabajo complejos. Mejor si las integraciones con GitHub, AWS y APIs son críticas.',
+          '**GPT-5.5:** El más potente para tareas de programación multi-paso con uso de herramientas (acceso al sistema de archivos, APIs, comandos de shell). Excelente para razonar en bases de código grandes y generar flujos de trabajo complejos. Mejor si las integraciones con GitHub, AWS y APIs son críticas.',
           '**Claude Opus 4.8:** Mejor para revisión de código, refactorización y discusiones de arquitectura. Detecta bugs sutiles que otros modelos pasan por alto. Preferido para mantener bases de código existentes y explicar código legado. Mayor costo por token, pero a menudo reduce las rondas de ida y vuelta.',
           '**Gemini 3.1 Pro:** Mejor relación costo/calidad para tareas de programación por lotes (procesamiento de datos, scripts utilitarios, automatización). El contexto de 2M significa que puedes cargar proyectos completos de una vez. Excelente para la velocidad de prototipo a producción cuando el costo importa.',
           '**DeepSeek:** Competitivo con GPT en programación pero 10 veces más barato. Mejor para desarrolladores en China continental y tareas de programación de alto volumen (scaffolding, boilerplate, refactorización rutinaria). Muy fuerte en problemas de algoritmos y programación competitiva.',
@@ -2115,36 +2115,36 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**Gemini 3.1 Pro (1M tokens):** Carga bases de código completas, conjuntos de documentos legales o archivos de investigación. La integración de búsqueda web te permite hacer referencia a fuentes externas dentro del contexto largo. Mejor para: revisiones de due diligence, análisis normativo, búsqueda en bases de conocimiento, procesamiento de PDFs de más de 100 páginas.',
           '**Claude Opus 4.8 (1M tokens):** Excelente para análisis detallado y extracción de información matizada de documentos largos. Desventaja: mayor costo por token, pero la calidad puede reducir las rondas de revisión.',
-          '**GPT-4o (1M tokens):** Potente para razonamiento multi-paso en documentos largos. Mejor cuando necesitas llamadas a herramientas junto con contexto largo (sistema de archivos, APIs).',
-          '**Estrategia práctica:** Los tres ahora soportan 1M tokens por igual. Elige según el costo (Gemini más barato), la calidad (Claude la más alta) o el ecosistema de herramientas (GPT-4o el más amplio).',
+          '**GPT-5.5 (1M tokens):** Potente para razonamiento multi-paso en documentos largos. Mejor cuando necesitas llamadas a herramientas junto con contexto largo (sistema de archivos, APIs).',
+          '**Estrategia práctica:** Los tres ahora soportan 1M tokens por igual. Elige según el costo (Gemini más barato), la calidad (Claude la más alta) o el ecosistema de herramientas (GPT-5.5 el más amplio).',
         ],
       },
 
       chineseModels: {
         title: '¿Cómo elegir un modelo de IA si estás en China o necesitas baja latencia?',
         content: [
-          '**Para usuarios y datos en China continental, DeepSeek y Baidu ERNIE no son opcionales — son necesarios.** Los modelos frontier occidentales (GPT-4o, Claude, Gemini) suelen estar restringidos o tienen alta latencia en China por las restricciones de red y los requisitos normativos. En 2026, la latencia (tiempos de respuesta de 3–10 segundos frente a 500ms localmente) y el cumplimiento normativo (residencia de datos, moderación de contenido) son problemas enormes. Usar un modelo occidental en China continental significa: (1) servicio no disponible, (2) latencia inaceptable para los usuarios, o (3) violaciones normativas. Los modelos locales eliminan los tres.',
+          '**Para usuarios y datos en China continental, DeepSeek y Baidu ERNIE no son opcionales — son necesarios.** Los modelos frontier occidentales (GPT-5.5, Claude, Gemini) suelen estar restringidos o tienen alta latencia en China por las restricciones de red y los requisitos normativos. En 2026, la latencia (tiempos de respuesta de 3–10 segundos frente a 500ms localmente) y el cumplimiento normativo (residencia de datos, moderación de contenido) son problemas enormes. Usar un modelo occidental en China continental significa: (1) servicio no disponible, (2) latencia inaceptable para los usuarios, o (3) violaciones normativas. Los modelos locales eliminan los tres.',
           '**DeepSeek (modelo frontier, programación competitiva):** Rendimiento competitivo en programación y razonamiento, precios agresivos, excelente soporte para el idioma chino y tareas mixtas chino-inglés. Infraestructura nativa en China continental = latencia inferior a 500ms. Mejor para flujos de trabajo de desarrolladores en China continental y cargas de trabajo de alto volumen sensibles al costo. Desventajas: ecosistema más pequeño fuera de China, menos integraciones de terceros frente a GPT/Claude/Gemini.',
           '**Baidu ERNIE (empresarial y de consumo):** Integración estrecha con la búsqueda y la nube de Baidu, sólido anclaje en contenido web chino y datos empresariales. Totalmente conforme con los requisitos normativos de China continental (moderación de contenido, residencia de datos, filtrado de palabras clave). Mejor para apps de consumo y empresariales dirigidas a usuarios chinos, apps en infraestructura de Baidu Cloud donde el cumplimiento no es negociable. Desventajas: principalmente optimizado para el chino; el inglés y otros idiomas pueden ir por detrás de los modelos frontier occidentales.',
         ],
       },
 
       comparison: {
-        title: 'GPT-4o vs Claude Opus 4.8 vs Gemini 3.1 Pro: Comparación rápida',
+        title: 'GPT-5.5 vs Claude Opus 4.8 vs Gemini 3.1 Pro: Comparación rápida',
         content: '**Esta tabla compara 5 modelos de IA en 8 dimensiones clave: razonamiento general, escritura, programación, manejo de contexto largo, soporte multimodal, eficiencia de costos, ecosistema global y acceso en China.**',
         image: '/images/model-strengths-radar.svg',
-        imageCaption: 'Gráfico radar: Claude domina escritura y razonamiento; GPT-4o destaca en herramientas y multimodal; Gemini gana en costo y contexto largo. No hay un ganador único — adapta el modelo a la tarea.',
+        imageCaption: 'Gráfico radar: Claude domina escritura y razonamiento; GPT-5.5 destaca en herramientas y multimodal; Gemini gana en costo y contexto largo. No hay un ganador único — adapta el modelo a la tarea.',
         tableFormat: true,
-        columns: ['Dimensión', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE'],
+        columns: ['Dimensión', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE'],
         rows: [
-          { 'Dimensión': 'Preguntas generales', 'GPT-4o': 'Excelente, global', 'Claude Opus 4.8': 'Muy bueno, cauteloso', 'Gemini 3.1 Pro': 'Muy bueno + recuperación', 'DeepSeek': 'Fuerte, mejor para China', 'Baidu ERNIE': 'Fuerte, mejor para China' },
-          { 'Dimensión': 'Escritura', 'GPT-4o': 'Excelente, a veces verboso', 'Claude Opus 4.8': 'Excelente estructura y claridad', 'Gemini 3.1 Pro': 'Bueno, tono neutro', 'DeepSeek': 'Bueno, primero en chino', 'Baidu ERNIE': 'Bueno, primero en chino' },
-          { 'Dimensión': 'Programación', 'GPT-4o': 'Potente', 'Claude Opus 4.8': 'Excelente, premium', 'Gemini 3.1 Pro': 'Gran relación calidad-precio', 'DeepSeek': 'Muy potente para devs en China', 'Baidu ERNIE': 'Bueno, aplicaciones de negocio' },
-          { 'Dimensión': 'Contexto largo', 'GPT-4o': 'Potente (1M)', 'Claude Opus 4.8': 'Potente (1M)', 'Gemini 3.1 Pro': 'Potente (1M) + web', 'DeepSeek': 'Bueno', 'Baidu ERNIE': 'Bueno con datos Baidu' },
-          { 'Dimensión': 'Multimodal', 'GPT-4o': 'Líder (imagen/audio)', 'Claude Opus 4.8': 'Buena visión', 'Gemini 3.1 Pro': 'Muy potente (video/web)', 'DeepSeek': 'Variable', 'Baidu ERNIE': 'Texto + web chino' },
-          { 'Dimensión': 'Eficiencia de costos', 'GPT-4o': 'Medio–Alto', 'Claude Opus 4.8': 'Mayor, calidad premium', 'Gemini 3.1 Pro': 'Muy rentable', 'DeepSeek': 'Muy competitivo en precio', 'Baidu ERNIE': 'Competitivo (empresa China)' },
-          { 'Dimensión': 'Ecosistema global', 'GPT-4o': 'El más extenso', 'Claude Opus 4.8': 'Creciendo, esp. empresarial', 'Gemini 3.1 Pro': 'Fuerte en el mundo Google', 'DeepSeek': 'Limitado fuera de China', 'Baidu ERNIE': 'Fuerte en ecosistema Baidu' },
-          { 'Dimensión': 'Acceso/latencia en China', 'GPT-4o': 'A menudo restringido', 'Claude Opus 4.8': 'A menudo restringido', 'Gemini 3.1 Pro': 'A menudo restringido', 'DeepSeek': 'Nativo / baja latencia', 'Baidu ERNIE': 'Nativo / necesario' },
+          { 'Dimensión': 'Preguntas generales', 'GPT-5.5': 'Excelente, global', 'Claude Opus 4.8': 'Muy bueno, cauteloso', 'Gemini 3.1 Pro': 'Muy bueno + recuperación', 'DeepSeek': 'Fuerte, mejor para China', 'Baidu ERNIE': 'Fuerte, mejor para China' },
+          { 'Dimensión': 'Escritura', 'GPT-5.5': 'Excelente, a veces verboso', 'Claude Opus 4.8': 'Excelente estructura y claridad', 'Gemini 3.1 Pro': 'Bueno, tono neutro', 'DeepSeek': 'Bueno, primero en chino', 'Baidu ERNIE': 'Bueno, primero en chino' },
+          { 'Dimensión': 'Programación', 'GPT-5.5': 'Potente', 'Claude Opus 4.8': 'Excelente, premium', 'Gemini 3.1 Pro': 'Gran relación calidad-precio', 'DeepSeek': 'Muy potente para devs en China', 'Baidu ERNIE': 'Bueno, aplicaciones de negocio' },
+          { 'Dimensión': 'Contexto largo', 'GPT-5.5': 'Potente (1M)', 'Claude Opus 4.8': 'Potente (1M)', 'Gemini 3.1 Pro': 'Potente (1M) + web', 'DeepSeek': 'Bueno', 'Baidu ERNIE': 'Bueno con datos Baidu' },
+          { 'Dimensión': 'Multimodal', 'GPT-5.5': 'Líder (imagen/audio)', 'Claude Opus 4.8': 'Buena visión', 'Gemini 3.1 Pro': 'Muy potente (video/web)', 'DeepSeek': 'Variable', 'Baidu ERNIE': 'Texto + web chino' },
+          { 'Dimensión': 'Eficiencia de costos', 'GPT-5.5': 'Medio–Alto', 'Claude Opus 4.8': 'Mayor, calidad premium', 'Gemini 3.1 Pro': 'Muy rentable', 'DeepSeek': 'Muy competitivo en precio', 'Baidu ERNIE': 'Competitivo (empresa China)' },
+          { 'Dimensión': 'Ecosistema global', 'GPT-5.5': 'El más extenso', 'Claude Opus 4.8': 'Creciendo, esp. empresarial', 'Gemini 3.1 Pro': 'Fuerte en el mundo Google', 'DeepSeek': 'Limitado fuera de China', 'Baidu ERNIE': 'Fuerte en ecosistema Baidu' },
+          { 'Dimensión': 'Acceso/latencia en China', 'GPT-5.5': 'A menudo restringido', 'Claude Opus 4.8': 'A menudo restringido', 'Gemini 3.1 Pro': 'A menudo restringido', 'DeepSeek': 'Nativo / baja latencia', 'Baidu ERNIE': 'Nativo / necesario' },
         ],
       },
 
@@ -2152,7 +2152,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '¿Cómo elegir el modelo de IA correcto?',
         content: [
           '**Empieza con tu caso de uso principal, añade tus restricciones y luego elige el modelo más adecuado para ambos.**',
-          '**Si: Asistente general, flujos de trabajo agénticos multi-herramienta.** Entonces: empieza con GPT-4o. Necesitas el ecosistema de herramientas e integraciones más amplio.',
+          '**Si: Asistente general, flujos de trabajo agénticos multi-herramienta.** Entonces: empieza con GPT-5.5. Necesitas el ecosistema de herramientas e integraciones más amplio.',
           '**Si: Escritura profunda, análisis, código complejo o requisitos de seguridad estrictos.** Entonces: empieza con Claude Opus 4.8. La calidad y la confiabilidad importan más que el costo.',
           '**Si: Uso intensivo de Google Workspace, programación/datos por lotes o procesamiento de más de 100 documentos largos.** Entonces: empieza con Gemini 3.1 Pro. El contexto largo y la integración del ecosistema ahorran tiempo.',
           '**Si: Usuarios y datos principalmente en China continental.** Entonces: empieza con DeepSeek (mucha programación) o Baidu ERNIE (apps de consumo/negocio). Los modelos occidentales están restringidos o tienen alta latencia.',
@@ -2160,7 +2160,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**Presupuesto ajustado, volumen alto:** Prefiere Gemini Flash / DeepSeek / modelos GPT más pequeños.',
           '**Cumplimiento estricto, contratos empresariales:** Claude enterprise, Baidu ERNIE para China.',
-          '**Necesitas multimodal (capturas, gráficos, audio):** GPT-4o o Gemini 3.1 Pro.',
+          '**Necesitas multimodal (capturas, gráficos, audio):** GPT-5.5 o Gemini 3.1 Pro.',
           '**Solo datos privados:** LLMs locales vía Ollama o LM Studio (ningún dato sale de tu dispositivo).',
         ],
       },
@@ -2169,7 +2169,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '¿Cómo se comparan los costos y los límites de tokens?',
         content: '**Todos los modelos principales tienen precios por token de entrada y salida, con límites de frecuencia basados en tu nivel.** Los modelos frontier cuestan 10–100 veces más por token que los modelos de presupuesto. Los precios varían según la región (especialmente China).',
         items: [
-          '**Modelos frontier (más caros por token):** GPT-4o ($5 entrada / $30 salida por millón de tokens), Claude Opus 4.8 ($5 entrada / $25 salida por millón de tokens).',
+          '**Modelos frontier (más caros por token):** GPT-5.5 ($5 entrada / $30 salida por millón de tokens), Claude Opus 4.8 ($5 entrada / $25 salida por millón de tokens).',
           '**Nivel medio rentable:** Gemini 2.5 Flash ($0.075 entrada / $0.30 salida por millón de tokens).',
           '**Modelos de presupuesto competitivos:** DeepSeek (precios agresivos), modelos locales vía Ollama/LM Studio (gratis, se ejecutan en tu dispositivo).',
           '**Límites de frecuencia:** Los modelos frontier a menudo empiezan en 100 solicitudes/min; el nivel escalado puede alcanzar 10.000+ solicitudes/min. Los modelos locales dependen de tu hardware.',
@@ -2192,7 +2192,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '¿Cómo te ayuda PromptQuorum a comparar y enrutar modelos?',
         content: '**PromptQuorum resuelve el problema del cambio manual de modelos enviando un prompt estructurado a todos los modelos simultáneamente y comparando los resultados automáticamente.** Sin más copiar prompts entre pestañas o adivinar qué modelo funcionó mejor.',
         items: [
-          '**Un prompt estructurado → muchos modelos simultáneamente.** Escribe tu prompt una vez. PromptQuorum lo envía a GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, Baidu ERNIE y LLMs locales (Ollama, LM Studio) en paralelo. Ve todas las respuestas en paralelo.',
+          '**Un prompt estructurado → muchos modelos simultáneamente.** Escribe tu prompt una vez. PromptQuorum lo envía a GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, Baidu ERNIE y LLMs locales (Ollama, LM Studio) en paralelo. Ve todas las respuestas en paralelo.',
           '**Los frameworks compartidos garantizan una comparación justa.** Usa la misma estructura de prompt, restricciones y formatos en todos los modelos. Esto elimina la excusa de "Claude obtuvo mejor output porque formulé el prompt para Claude."',
           '**Vista de consenso y puntuación.** PromptQuorum te muestra qué modelo escribe mejor para la voz de tu marca, cuál produce el código más correcto, cuál gestiona tus documentos propietarios de manera más fiable y cuál es el más rápido y barato para TU tarea.',
           '**Reglas de enrutamiento:** Envía tareas baratas / de alto volumen a modelos pequeños o locales. Envía razonamientos complejos a modelos premium. Automatiza la selección de modelos según el tipo de tarea.',
@@ -2203,7 +2203,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       promptquorumVisual: {
         title: 'Panel de PromptQuorum: Ve todos los modelos a la vez',
-        content: '**Envía un prompt, ve los outputs de GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek y Baidu ERNIE — todo en una vista.** La comparación en paralelo elimina el dolor del cambio manual de modelos.',
+        content: '**Envía un prompt, ve los outputs de GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek y Baidu ERNIE — todo en una vista.** La comparación en paralelo elimina el dolor del cambio manual de modelos.',
       },
 
       practicalRecipes: {
@@ -2213,12 +2213,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       recipe1: {
         title: 'Receta 1: Decide qué modelo escribe mejor para la voz de tu marca',
-        blockquote: 'Estás escribiendo copy de producto para una landing page B2B SaaS. El tono debe ser autoritativo pero accesible — sin relleno de marketing, sin superlativos vagos. Prueba el mismo brief en GPT-4o, Claude Opus 4.8 y Gemini. Ve qué modelo captura mejor la voz de tu marca. Ejecútalo a través de PromptQuorum, puntúa cada output en tono, claridad y adherencia a tus directrices de marca. El ganador se convierte en tu modelo de referencia para copywriting. Prompt de ejemplo: "Reescribe esta descripción de función con la voz de nuestra marca: [pega tu guía de estilo + copy existente]. ¿Qué modelo encaja mejor?"',
+        blockquote: 'Estás escribiendo copy de producto para una landing page B2B SaaS. El tono debe ser autoritativo pero accesible — sin relleno de marketing, sin superlativos vagos. Prueba el mismo brief en GPT-5.5, Claude Opus 4.8 y Gemini. Ve qué modelo captura mejor la voz de tu marca. Ejecútalo a través de PromptQuorum, puntúa cada output en tono, claridad y adherencia a tus directrices de marca. El ganador se convierte en tu modelo de referencia para copywriting. Prompt de ejemplo: "Reescribe esta descripción de función con la voz de nuestra marca: [pega tu guía de estilo + copy existente]. ¿Qué modelo encaja mejor?"',
       },
 
       recipe2: {
         title: 'Receta 2: Compara la calidad y el costo de programación para tu stack backend',
-        blockquote: 'Tienes una base de código en Python. Prueba: "Revisa esta función en busca de rendimiento y bugs. Sugiere refactorizaciones." Ejecútalo a través de GPT-4o, Claude Opus 4.8 y Gemini 2.5 Flash. ¿Cuál detecta más bugs? ¿Cuál refactorización es más limpia? ¿Cuál es más barata por solicitud? Usa PromptQuorum para puntuar la calidad del código. Puede que descubras que Gemini Flash detecta el 90% de los problemas al 1/50 del costo de Claude. Ejemplo: "Optimiza esta consulta de base de datos por velocidad. ¿Cuál es la complejidad temporal?" — enrutado a Claude para análisis profundo, Gemini para iteración económica.',
+        blockquote: 'Tienes una base de código en Python. Prueba: "Revisa esta función en busca de rendimiento y bugs. Sugiere refactorizaciones." Ejecútalo a través de GPT-5.5, Claude Opus 4.8 y Gemini 2.5 Flash. ¿Cuál detecta más bugs? ¿Cuál refactorización es más limpia? ¿Cuál es más barata por solicitud? Usa PromptQuorum para puntuar la calidad del código. Puede que descubras que Gemini Flash detecta el 90% de los problemas al 1/50 del costo de Claude. Ejemplo: "Optimiza esta consulta de base de datos por velocidad. ¿Cuál es la complejidad temporal?" — enrutado a Claude para análisis profundo, Gemini para iteración económica.',
       },
 
       recipe3: {
@@ -2234,12 +2234,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       howToStart: {
         title: 'Cómo elegir un modelo de IA para tu tarea',
         numberedItems: [
-          '**Define tu tipo de tarea:** ¿Es factual/analítica (análisis legal, revisión de código, extracción de datos) o creativa/generativa (brainstorming, copywriting, ideación de diseño)? Las tareas factuales favorecen GPT-4o o Claude Opus 4.8; las tareas creativas funcionan bien en todos los modelos frontier.',
-          '**Adapta el modelo a las concesiones de velocidad/costo:** GPT-4o es el más rápido y barato para la mayoría de las tareas. Claude Opus 4.8 es el mejor para razonamiento largo y precisión. Gemini 3.1 Pro destaca en multimodal y contexto largo (1M tokens). Usa PromptQuorum para comparar los tres con tu prompt específico.',
-          '**Empieza con un modelo frontier (GPT-4o, Claude Opus 4.8 o Gemini 3.1 Pro), luego baja si es posible:** Una tarea que funciona bien en GPT-4o puede funcionar igual de bien en GPT-4o mini (10–33 veces más barato). Prueba tu prompt en modelos más baratos una vez que tengas una versión que funciona.',
+          '**Define tu tipo de tarea:** ¿Es factual/analítica (análisis legal, revisión de código, extracción de datos) o creativa/generativa (brainstorming, copywriting, ideación de diseño)? Las tareas factuales favorecen GPT-5.5 o Claude Opus 4.8; las tareas creativas funcionan bien en todos los modelos frontier.',
+          '**Adapta el modelo a las concesiones de velocidad/costo:** GPT-5.5 es el más rápido y barato para la mayoría de las tareas. Claude Opus 4.8 es el mejor para razonamiento largo y precisión. Gemini 3.1 Pro destaca en multimodal y contexto largo (1M tokens). Usa PromptQuorum para comparar los tres con tu prompt específico.',
+          '**Empieza con un modelo frontier (GPT-5.5, Claude Opus 4.8 o Gemini 3.1 Pro), luego baja si es posible:** Una tarea que funciona bien en GPT-5.5 puede funcionar igual de bien en GPT-5.5 mini (10–33 veces más barato). Prueba tu prompt en modelos más baratos una vez que tengas una versión que funciona.',
           '**Para flujos de trabajo locales/privados, usa Ollama o LM Studio, pero acepta menor calidad:** Los modelos locales gestionan datos privados sin llamadas a la API externa, pero producen menor precisión que los modelos frontier. Usa un enfoque híbrido: modelo local para el primer paso, modelo frontier para la verificación de calidad.',
-          '**Para usuarios distribuidos geográficamente, enruta por región:** Usuarios globales (EE. UU., UE, Japón) → GPT-4o / Claude / Gemini. China → DeepSeek o Baidu ERNIE (requisito legal). Usa PromptQuorum para probar el modelo de cada región de forma independiente.',
-          '**Prueba los tres (o más) con PromptQuorum antes de comprometerte:** Envía tu prompt a GPT-4o, Claude Opus 4.8 y Gemini 3.1 Pro simultáneamente. Compara los outputs para descubrir qué modelo se adapta mejor a tu tarea.',
+          '**Para usuarios distribuidos geográficamente, enruta por región:** Usuarios globales (EE. UU., UE, Japón) → GPT-5.5 / Claude / Gemini. China → DeepSeek o Baidu ERNIE (requisito legal). Usa PromptQuorum para probar el modelo de cada región de forma independiente.',
+          '**Prueba los tres (o más) con PromptQuorum antes de comprometerte:** Envía tu prompt a GPT-5.5, Claude Opus 4.8 y Gemini 3.1 Pro simultáneamente. Compara los outputs para descubrir qué modelo se adapta mejor a tu tarea.',
         ],
       },
 
@@ -2258,7 +2258,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Usar un modelo frontier para todas las tareas',
-            problem: 'GPT-4o a $5/$30 por millón de tokens es 60 veces más caro que Gemini 3 Flash a ~$0.50/$3. La mayoría de las tareas de clasificación, extracción y resumen producen calidad idéntica en modelos baratos.',
+            problem: 'GPT-5.5 a $5/$30 por millón de tokens es 60 veces más caro que Gemini 3 Flash a ~$0.50/$3. La mayoría de las tareas de clasificación, extracción y resumen producen calidad idéntica en modelos baratos.',
             fix: 'Empieza con el modelo más barato. Sube a frontier solo cuando el modelo más barato falle de forma medible en tu tarea.',
           },
           {
@@ -2279,7 +2279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqs: [
           {
             q: 'Si solo puedo pagar una suscripción, ¿cuál elijo?',
-            a: 'Empieza con Claude Opus 4.8. Es el de mayor calidad en escritura, razonamiento y código. Si tu principal necesidad es la integración de herramientas y multimodal (imágenes/audio), elige GPT-4o. Si tienes un equipo que usa mucho Google Workspace y el costo es crítico, elige Gemini. Si tus usuarios están en China continental, no tienes opción — elige DeepSeek o Baidu ERNIE (necesarios por latencia y cumplimiento normativo).'
+            a: 'Empieza con Claude Opus 4.8. Es el de mayor calidad en escritura, razonamiento y código. Si tu principal necesidad es la integración de herramientas y multimodal (imágenes/audio), elige GPT-5.5. Si tienes un equipo que usa mucho Google Workspace y el costo es crítico, elige Gemini. Si tus usuarios están en China continental, no tienes opción — elige DeepSeek o Baidu ERNIE (necesarios por latencia y cumplimiento normativo).'
           },
           {
             q: '¿Con qué frecuencia debo reevaluar mis elecciones de modelos?',
@@ -2299,15 +2299,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '¿Es Claude mejor que ChatGPT?',
-            a: 'Para calidad de escritura, revisión de código y razonamiento estructurado, Claude Opus 4.8 supera a ChatGPT (GPT-4o) en la mayoría de las evaluaciones. Para integración de herramientas, flujos de trabajo multi-agente y el ecosistema más amplio de terceros, GPT-4o tiene la ventaja. Ninguno es universalmente mejor — la elección correcta depende de tu tarea específica. Usa PromptQuorum para probar ambos en tus prompts reales y comparar los resultados directamente.'
+            a: 'Para calidad de escritura, revisión de código y razonamiento estructurado, Claude Opus 4.8 supera a ChatGPT (GPT-5.5) en la mayoría de las evaluaciones. Para integración de herramientas, flujos de trabajo multi-agente y el ecosistema más amplio de terceros, GPT-5.5 tiene la ventaja. Ninguno es universalmente mejor — la elección correcta depende de tu tarea específica. Usa PromptQuorum para probar ambos en tus prompts reales y comparar los resultados directamente.'
           },
           {
             q: '¿Qué modelo de IA es el más preciso?',
-            a: 'Ningún modelo es el más preciso en todas las tareas. Claude Opus 4.8 lidera en escritura y análisis estructurado. GPT-4o lidera en razonamiento integrado con herramientas. Gemini 3.1 Pro lidera en investigación de documentos largos con búsqueda web en vivo. La precisión es específica para cada tarea — la única prueba fiable es ejecutar tus prompts reales en todos los modelos y medir los resultados.'
+            a: 'Ningún modelo es el más preciso en todas las tareas. Claude Opus 4.8 lidera en escritura y análisis estructurado. GPT-5.5 lidera en razonamiento integrado con herramientas. Gemini 3.1 Pro lidera en investigación de documentos largos con búsqueda web en vivo. La precisión es específica para cada tarea — la única prueba fiable es ejecutar tus prompts reales en todos los modelos y medir los resultados.'
           },
           {
-            q: '¿Cuál es la diferencia entre GPT-4o y GPT-4o mini?',
-            a: 'GPT-4o es el modelo frontier de OpenAI — máxima capacidad, mayor costo ($5 entrada/$30 salida por millón de tokens). GPT-4o mini es una versión más pequeña, rápida y barata ($0.15 entrada/$0.60 salida por millón de tokens) — 50 veces más barata con calidad ligeramente menor. Usa GPT-4o mini para clasificación, resumen y tareas de alto volumen donde no se requiere razonamiento frontier. Usa GPT-4o para razonamiento multi-paso complejo, flujos de trabajo de agentes y tareas donde la calidad es crítica.'
+            q: '¿Cuál es la diferencia entre GPT-5.5 y GPT-5.5 mini?',
+            a: 'GPT-5.5 es el modelo frontier de OpenAI — máxima capacidad, mayor costo ($5 entrada/$30 salida por millón de tokens). GPT-5.5 mini es una versión más pequeña, rápida y barata ($0.15 entrada/$0.60 salida por millón de tokens) — 50 veces más barata con calidad ligeramente menor. Usa GPT-5.5 mini para clasificación, resumen y tareas de alto volumen donde no se requiere razonamiento frontier. Usa GPT-5.5 para razonamiento multi-paso complejo, flujos de trabajo de agentes y tareas donde la calidad es crítica.'
           },
         ],
       },
@@ -2316,7 +2316,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Fuentes y lecturas adicionales',
         content: '**Las fortalezas de los modelos y los precios reflejan los patrones de uso y los benchmarks de mayo de 2026 de LMSYS Arena, SWE-Bench y GPQA.** Las capacidades y los precios de los modelos cambian con frecuencia — consulta las páginas de precios oficiales para las tarifas actuales y prueba en tu tarea antes de comprometerte en producción.',
         items: [
-          '[OpenAI — Descripción general de GPT-4o y modelos](https://platform.openai.com/docs/models)',
+          '[OpenAI — Descripción general de GPT-5.5 y modelos](https://platform.openai.com/docs/models)',
           '[Anthropic — Descripción general de los modelos Claude](https://docs.anthropic.com/en/docs/models-overview)',
           '[Google — Modelos y precios de Gemini](https://ai.google.dev/gemini-api/docs/models)',
           '[DeepSeek — Documentación de la API y modelos](https://api-docs.deepseek.com)',
@@ -2335,9 +2335,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Fundamentos: ¿Qué framework de prompts deberías usar?](/es/prompt-engineering/which-prompt-framework-should-you-use) — los frameworks funcionan en todos los modelos; elige uno que se adapte a tu tarea',
           '[Técnicas: Encadenamiento de prompts](/es/prompt-engineering/prompt-chaining) — flujos de trabajo multi-paso donde distintos modelos pueden manejar distintos pasos',
           '[Fundamentos: Ventanas de contexto explicadas: Por qué la IA olvida](/es/prompt-engineering/context-windows-explained-why-ai-forgets) — cómo el tamaño de la ventana de contexto impulsa la selección de modelos para documentos largos',
-          '[Técnicas: Chain-of-Thought Prompting](/es/prompt-engineering/chain-of-thought-prompting) — técnica que funciona de manera diferente en GPT-4o, Claude y Gemini',
+          '[Técnicas: Chain-of-Thought Prompting](/es/prompt-engineering/chain-of-thought-prompting) — técnica que funciona de manera diferente en GPT-5.5, Claude y Gemini',
           '[LLMs locales: Qwen vs Llama vs Mistral](/es/local-llms/qwen-vs-llama-vs-mistral) — cómo se comparan los modelos de código abierto cuando eliges local en lugar de la nube',
-          '[LLMs locales: Mejores LLMs locales para programar](/es/local-llms/best-local-llms-for-coding) — alternativas locales de programación a GPT-4o y Claude',
+          '[LLMs locales: Mejores LLMs locales para programar](/es/local-llms/best-local-llms-for-coding) — alternativas locales de programación a GPT-5.5 y Claude',
           '[Fundamentos: LLMs de código abierto vs propietarios](/es/prompt-engineering/open-source-vs-proprietary-llms) — cuándo los modelos locales igualan a las APIs en la nube y cuándo no',
         ],
       },

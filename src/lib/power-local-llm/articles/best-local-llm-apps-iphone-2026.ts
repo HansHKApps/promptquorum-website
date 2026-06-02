@@ -576,8 +576,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Sie benötigen nur Schreibhilfe in Mail / Nachrichten / Notizen → Apple Intelligence (integriert)',
           ],
           cloudIf: [
-            'Sie benötigen 70B+-Modellqualität (Llama 3.3 70B, GPT-4o-Niveau) → Cloud oder Remote-Verbindung zu einem Heimrechner',
-            'Sie benötigen speziell GPT-4o, Claude Opus oder Gemini → Cloud-Apps (diese sind lokal nicht verfügbar)',
+            'Sie benötigen 70B+-Modellqualität (Llama 3.3 70B, GPT-5.5-Niveau) → Cloud oder Remote-Verbindung zu einem Heimrechner',
+            'Sie benötigen speziell GPT-5.5, Claude Opus oder Gemini → Cloud-Apps (diese sind lokal nicht verfügbar)',
             'Sie benötigen Echtzeit-Vision oder multimodale Ausgabe über Text hinaus → Cloud (On-Device-Multimodal ist 2026 begrenzt)',
           ],
           quick: [
@@ -654,7 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Was sie ist:** eine kostenpflichtige iOS-App mit kuratierter Modellbibliothek und tiefer iOS-Integration. Verwendet ein proprietäres On-Device-Runtime, das für Apple Silicon optimiert ist.',
           '**Installation:** App Store → „Private LLM". Einmaliger Kauf ~10,99 € (kein Abo).',
-          '**Kuratierte Modellbibliothek:** ~30 Modelle, vorgetestet und für iPhone optimiert, darunter Llama 3.2 3B, Phi-4 Mini, Mistral 7B Instruct und mehrere ungefilterte Varianten. Weniger flexibel als PocketPal AI, aber kein Risiko, ein Modell zu installieren, das abstürzt.',
+          '**Kuratierte Modellbibliothek:** ~30 Modelle, vorgetestet und für iPhone optimiert, darunter Llama 3.2 3B, Phi-4 Mini, Mistral Small Instruct und mehrere ungefilterte Varianten. Weniger flexibel als PocketPal AI, aber kein Risiko, ein Modell zu installieren, das abstürzt.',
           '**iOS Shortcuts:** Private LLM stellt eine Shortcuts-Aktion „Text mit Private LLM generieren" bereit, die in Automatisierungen eingebunden werden kann. Nützlich, um lokale KI per Schaltfläche auf dem Home-Bildschirm oder per NFC-Tag auszulösen.',
           '**Siri-Integration:** „Hey Siri, ask Private LLM [Ihre Frage]" leitet den Prompt an das On-Device-Modell weiter und Siri liest die Antwort vor – ohne Internetverbindung. Die Latenz ist höher als im Chat-UI (~3–5 Sekunden bis Audio beginnt).',
         ],
@@ -804,7 +804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufige Fehler',
         items: [
           '**Ein Modell installieren, das größer ist als der iPhone-RAM erlaubt.** Ein 7B-Modell auf einem 8-GB-iPhone läuft mit ~3–5 Tokens/Sek. und stürzt ab, wenn iOS Arbeitsspeicher für eine andere App beansprucht. Verwenden Sie das empfohlene Modell für Ihre iPhone-Klasse (3B–4B für 8-GB-Geräte, 1,7B für 6-GB-Geräte).',
-          '**Cloud-KI-Qualität von On-Device-Modellen erwarten.** Phi-4 Mini (3,8B) ist für seine Größe beeindruckend, aber kein GPT-4o. Verwenden Sie es für Chat, Zusammenfassungen, Textentwürfe und schnelle Fragen – nicht für mehrstufiges Schlussfolgern, komplexe Code-Generierung oder nuanciertes kreatives Schreiben.',
+          '**Cloud-KI-Qualität von On-Device-Modellen erwarten.** Phi-4 Mini (3,8B) ist für seine Größe beeindruckend, aber kein GPT-5.5. Verwenden Sie es für Chat, Zusammenfassungen, Textentwürfe und schnelle Fragen – nicht für mehrstufiges Schlussfolgern, komplexe Code-Generierung oder nuanciertes kreatives Schreiben.',
           '**Inferenz im direkten Sonnenlicht oder in einem heißen Auto ausführen.** Thermisches Throttling setzt innerhalb von Minuten ein. Die Generierung verlangsamt sich um 30–50 %, und die Meldung „iPhone muss sich abkühlen" kann erscheinen. Führen Sie Inferenz bei Raumtemperatur aus.',
           '**3+ Chat-Apps mit je 3-GB-Modellen installiert lassen.** Sie verbrauchen ~10 GB Speicher mit duplizierten Modellen. Entscheiden Sie sich für eine App und ein Modell; deinstallieren Sie die anderen, bis Sie sicher sind, dass Sie sie benötigen.',
           '**Apple Intelligence mit einer Chat-App verwechseln.** Apple Intelligence hat kein Chat-Interface – es treibt Systemfunktionen an. Wenn Sie dem Modell Fragen stellen möchten, installieren Sie PocketPal AI, Private LLM, MLC Chat oder LLM Farm separat.',
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie vergleicht sich lokale KI mit der ChatGPT-App auf dem iPhone?',
-            a: 'On-Device-Modelle (Phi-4 Mini, Llama 3.2 3B) sind 2026 für den alltäglichen Chat etwa 60–75 % so leistungsfähig wie GPT-4o, bei einfachen Anfragen schneller (kein Netzwerk-Round-Trip) und vollständig privat. ChatGPT bleibt besser für komplexes Schlussfolgern, breites Weltwissen und multimodale Aufgaben. Der ehrliche Kompromiss: lokale KI für Routine- und private Aufgaben; ChatGPT für gelegentliche schwierige Fragen. Viele Nutzer 2026 haben beide Apps und wählen je nach Anfrage.',
+            a: 'On-Device-Modelle (Phi-4 Mini, Llama 3.2 3B) sind 2026 für den alltäglichen Chat etwa 60–75 % so leistungsfähig wie GPT-5.5, bei einfachen Anfragen schneller (kein Netzwerk-Round-Trip) und vollständig privat. ChatGPT bleibt besser für komplexes Schlussfolgern, breites Weltwissen und multimodale Aufgaben. Der ehrliche Kompromiss: lokale KI für Routine- und private Aufgaben; ChatGPT für gelegentliche schwierige Fragen. Viele Nutzer 2026 haben beide Apps und wählen je nach Anfrage.',
           },
           {
             q: 'Muss ich bei der Verwendung dieser iPhone-LLM-Apps die DSGVO beachten?',
@@ -1022,8 +1022,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'メール・メッセージ・メモでの文章支援だけが必要 → Apple Intelligence（内蔵）',
           ],
           cloudIf: [
-            '70B以上のモデル品質（Llama 3.3 70B、GPT-4oクラス）が必要 → クラウドまたは自宅PCへのリモート接続',
-            'GPT-4o、Claude Opus、Geminiが特定で必要 → クラウドアプリ（ローカルでは利用不可）',
+            '70B以上のモデル品質（Llama 3.3 70B、GPT-5.5クラス）が必要 → クラウドまたは自宅PCへのリモート接続',
+            'GPT-5.5、Claude Opus、Geminiが特定で必要 → クラウドアプリ（ローカルでは利用不可）',
             'リアルタイムのビジョンやテキスト以外のマルチモーダル出力が必要 → クラウド（2026年のオンデバイスマルチモーダルは限定的）',
           ],
           quick: [
@@ -1100,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**概要：** 厳選モデルライブラリと深いiOS統合を備えた有料iOSアプリ。Apple Silicon向けに最適化された専用オンデバイスランタイムを使用しています。',
           '**インストール：** App Store → "Private LLM"。買い切り約¥1,500（サブスクなし）。',
-          '**厳選モデルライブラリ：** Llama 3.2 3B、Phi-4 Mini、Mistral 7B Instruct、複数の無検閲バリアントを含む約30モデルがiPhone向けに事前テスト・最適化済み。PocketPal AIより柔軟性は低いですが、クラッシュするモデルをインストールするリスクはありません。',
+          '**厳選モデルライブラリ：** Llama 3.2 3B、Phi-4 Mini、Mistral Small Instruct、複数の無検閲バリアントを含む約30モデルがiPhone向けに事前テスト・最適化済み。PocketPal AIより柔軟性は低いですが、クラッシュするモデルをインストールするリスクはありません。',
           '**iOS Shortcuts：** "Text With Private LLMを生成"アクションをShortcuts自動化に組み込めます。ホーム画面ボタンやNFCタグからローカルAIを起動するのに便利です。',
           '**Siri統合：** "Hey Siri, ask Private LLM [質問]"でプロンプトがオンデバイスモデルに送られ、Siriが回答を読み上げます。インターネット接続不要。チャットUIよりレイテンシは高め（音声開始まで約3〜5秒）。',
         ],
@@ -1250,7 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある間違い',
         items: [
           '**iPhoneのRAMが許容する以上のモデルをインストールする。** 8 GB iPhoneの7Bモデルは毎秒約3〜5トークンで動作し、iOSが別のアプリのためにメモリを回収するとクラッシュします。お使いのiPhoneクラスに合った推奨モデルを使用してください（8 GBデバイスは3B〜4B、6 GBデバイスは1.7B）。',
-          '**オンデバイスモデルにクラウドAIの品質を期待する。** Phi-4 Mini（3.8B）はそのサイズとしては印象的ですが、GPT-4oではありません。チャット・要約・下書き・簡単なQ&Aに使い、複数ステップの推論・複雑なコード生成・微妙な創作は対象外です。',
+          '**オンデバイスモデルにクラウドAIの品質を期待する。** Phi-4 Mini（3.8B）はそのサイズとしては印象的ですが、GPT-5.5ではありません。チャット・要約・下書き・簡単なQ&Aに使い、複数ステップの推論・複雑なコード生成・微妙な創作は対象外です。',
           '**直射日光下や熱い車内で推論を実行する。** 熱スロットリングは数分以内に発動します。生成速度が30〜50%低下し、「iPhoneを冷やす必要があります」の警告が表示される場合があります。室温で推論を実行してください。',
           '**3つ以上のチャットアプリをそれぞれ3 GBのモデルとともにインストールしたままにする。** 重複したモデルで約10 GBのストレージを消費します。1つのアプリと1つのモデルを選び、必要と確信できるまで他はアンインストールしてください。',
           '**Apple Intelligenceをチャットアプリと間違える。** Apple Intelligenceにはチャットインターフェースがありません — システム機能を担っています。モデルに質問したい場合は、PocketPal AI、Private LLM、MLC Chat、LLM Farmのいずれかを別途インストールしてください。',
@@ -1309,7 +1309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカルAIとiPhoneのChatGPTアプリを比べるとどうですか？',
-            a: '2026年において、オンデバイスモデル（Phi-4 Mini、Llama 3.2 3B）は日常的なチャットではGPT-4oの約60〜75%の性能で、シンプルな質問では（ネットワーク往復なしで）より速く、完全にプライベートです。ChatGPTは複雑な推論、幅広い世界の知識、マルチモーダルタスクに依然として優れています。正直なトレードオフ：日常的・プライベートなタスクにはローカルAI；ときどきの難しい質問にはChatGPT。2026年の多くのユーザーは両方のアプリを持ち、クエリに応じて選んでいます。',
+            a: '2026年において、オンデバイスモデル（Phi-4 Mini、Llama 3.2 3B）は日常的なチャットではGPT-5.5の約60〜75%の性能で、シンプルな質問では（ネットワーク往復なしで）より速く、完全にプライベートです。ChatGPTは複雑な推論、幅広い世界の知識、マルチモーダルタスクに依然として優れています。正直なトレードオフ：日常的・プライベートなタスクにはローカルAI；ときどきの難しい質問にはChatGPT。2026年の多くのユーザーは両方のアプリを持ち、クエリに応じて選んでいます。',
           },
         ],
       },
@@ -1460,8 +1460,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Vous n\'avez besoin que d\'aide à la rédaction dans Mail / Messages / Notes → Apple Intelligence (intégré)',
           ],
           cloudIf: [
-            'Vous avez besoin de la qualité d\'un modèle 70B+ (Llama 3.3 70B, niveau GPT-4o) → utilisez le cloud ou connectez-vous à distance à une machine domestique',
-            'Vous avez besoin d\'accès à GPT-4o, Claude Opus ou Gemini spécifiquement → applications cloud (non disponibles en local)',
+            'Vous avez besoin de la qualité d\'un modèle 70B+ (Llama 3.3 70B, niveau GPT-5.5) → utilisez le cloud ou connectez-vous à distance à une machine domestique',
+            'Vous avez besoin d\'accès à GPT-5.5, Claude Opus ou Gemini spécifiquement → applications cloud (non disponibles en local)',
             'Vous avez besoin de vision en temps réel ou de sorties multimodales au-delà du texte → cloud (le multimodal on-device est limité en 2026)',
           ],
           quick: [
@@ -1538,7 +1538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Qu\'est-ce que c\'est :** une application iOS payante avec une bibliothèque de modèles sélectionnés et une intégration iOS poussée. Utilise un runtime on-device propriétaire optimisé pour Apple Silicon.',
           '**Installation :** App Store → "Private LLM". Achat unique ~11 € (sans abonnement).',
-          '**Bibliothèque de modèles sélectionnés :** ~30 modèles pré-testés et optimisés pour iPhone, dont Llama 3.2 3B, Phi-4 Mini, Mistral 7B Instruct et plusieurs variantes non censurées. Moins de flexibilité que PocketPal AI mais aucun risque d\'installer un modèle qui plante.',
+          '**Bibliothèque de modèles sélectionnés :** ~30 modèles pré-testés et optimisés pour iPhone, dont Llama 3.2 3B, Phi-4 Mini, Mistral Small Instruct et plusieurs variantes non censurées. Moins de flexibilité que PocketPal AI mais aucun risque d\'installer un modèle qui plante.',
           '**iOS Shortcuts :** Private LLM expose une action "Générer du texte avec Private LLM" que vous pouvez enchaîner dans des automatisations Shortcuts. Utile pour déclencher l\'IA locale depuis un bouton sur votre écran d\'accueil ou via des étiquettes NFC.',
           '**Intégration Siri :** "Dis Siri, demande à Private LLM [votre question]" achemine l\'invite vers le modèle on-device et lit la réponse à voix haute. Fonctionne sans connexion internet. La latence est plus élevée que dans l\'interface de chat (~3–5 secondes avant le démarrage de l\'audio).',
         ],
@@ -1688,7 +1688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Erreurs fréquentes',
         items: [
           '**Installer un modèle plus grand que ce que la RAM de votre iPhone permet.** Un modèle 7B sur un iPhone 8 Go génère à ~3–5 tokens/sec — frustrant pour le chat. iOS tend également à arrêter l\'application quand d\'autres applications ont besoin de mémoire. Tenez-vous-en aux modèles recommandés pour votre niveau iPhone (3B–4B pour les appareils 8 Go, 1,7B pour les appareils 6 Go).',
-          '**S\'attendre à une qualité d\'IA cloud avec des modèles on-device.** Phi-4 Mini (3,8B) est impressionnant pour sa taille mais pas au niveau de GPT-4o. Utilisez-le pour le chat, la synthèse, la rédaction et les Q&A rapides — pas pour le raisonnement multi-étapes, la génération de code complexe ou l\'écriture créative nuancée.',
+          '**S\'attendre à une qualité d\'IA cloud avec des modèles on-device.** Phi-4 Mini (3,8B) est impressionnant pour sa taille mais pas au niveau de GPT-5.5. Utilisez-le pour le chat, la synthèse, la rédaction et les Q&A rapides — pas pour le raisonnement multi-étapes, la génération de code complexe ou l\'écriture créative nuancée.',
           '**Exécuter l\'inférence en plein soleil ou dans une voiture chaude.** La limitation thermique intervient en quelques minutes. La génération ralentit de 30–50 %, et vous pouvez voir l\'avertissement "L\'iPhone doit refroidir". Exécutez l\'inférence à température ambiante.',
           '**Laisser 3+ applications de chat installées avec des modèles de 3 Go dans chacune.** Vous consommerez ~10 Go de stockage en modèles dupliqués. Choisissez une application et un modèle ; désinstallez les autres jusqu\'à être sûr d\'en avoir besoin.',
           '**Confondre Apple Intelligence avec une application de chat.** Apple Intelligence n\'a pas d\'interface de chat — il alimente des fonctionnalités système. Si vous souhaitez poser des questions au modèle, installez PocketPal AI, Private LLM, MLC Chat ou LLM Farm séparément.',
@@ -1747,7 +1747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Comment l\'IA locale se compare-t-elle à l\'application ChatGPT sur iPhone ?',
-            a: 'Les modèles on-device (Phi-4 Mini, Llama 3.2 3B) sont environ 60–75 % aussi capables que GPT-4o pour le chat quotidien en 2026, plus rapides sur les requêtes simples (sans aller-retour réseau), et entièrement privés. ChatGPT reste supérieur pour le raisonnement complexe, les connaissances générales du monde et les tâches multimodales. Le compromis honnête : IA locale pour les tâches routinières et privées ; ChatGPT pour les questions difficiles occasionnelles. De nombreux utilisateurs en 2026 ont les deux applications et choisissent selon la requête.',
+            a: 'Les modèles on-device (Phi-4 Mini, Llama 3.2 3B) sont environ 60–75 % aussi capables que GPT-5.5 pour le chat quotidien en 2026, plus rapides sur les requêtes simples (sans aller-retour réseau), et entièrement privés. ChatGPT reste supérieur pour le raisonnement complexe, les connaissances générales du monde et les tâches multimodales. Le compromis honnête : IA locale pour les tâches routinières et privées ; ChatGPT pour les questions difficiles occasionnelles. De nombreux utilisateurs en 2026 ont les deux applications et choisissent selon la requête.',
           },
         ],
       },
@@ -1898,8 +1898,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '只需要在邮件/信息/备忘录中获得写作辅助 → Apple Intelligence（系统内置）',
           ],
           cloudIf: [
-            '需要70B以上模型质量（Llama 3.3 70B、GPT-4o水平）→ 使用云端或远程连接家用机器',
-            '需要访问GPT-4o、Claude Opus或Gemini → 云端应用（本地无法运行这些模型）',
+            '需要70B以上模型质量（Llama 3.3 70B、GPT-5.5水平）→ 使用云端或远程连接家用机器',
+            '需要访问GPT-5.5、Claude Opus或Gemini → 云端应用（本地无法运行这些模型）',
             '需要实时视觉或文字以外的多模态输出 → 云端（2026年设备端多模态能力有限）',
           ],
           quick: [
@@ -1976,7 +1976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**是什么：** 一款带有精选模型库和深度iOS集成的付费iOS应用。使用针对Apple Silicon优化的私有设备端运行时。',
           '**安装：** App Store → 搜索"Private LLM"。约£10买断（无订阅）。',
-          '**精选模型库：** 约30款预测试并为iPhone优化的模型，包括Llama 3.2 3B、Phi-4 Mini、Mistral 7B Instruct及若干非审查版本。灵活性低于PocketPal AI，但不会出现安装后崩溃的问题。',
+          '**精选模型库：** 约30款预测试并为iPhone优化的模型，包括Llama 3.2 3B、Phi-4 Mini、Mistral Small Instruct及若干非审查版本。灵活性低于PocketPal AI，但不会出现安装后崩溃的问题。',
           '**iOS Shortcuts：** Private LLM提供"使用Private LLM生成文本"动作，可集成到Shortcuts自动化流程中。可通过主屏幕按钮或NFC标签触发本地AI。',
           '**Siri集成：** "嘿Siri，问一下Private LLM [您的问题]"会将提示词发送至设备端模型并朗读回答，全程无需联网。延迟高于聊天界面（音频开始前约3–5秒）。',
         ],
@@ -2126,7 +2126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见错误',
         items: [
           '**安装超过iPhone内存承载能力的模型。** 8 GB iPhone上运行7B模型，生成速度仅约3–5 tokens/秒，且其他应用需要内存时iOS会强制关闭该应用。请遵循对应iPhone档次的推荐模型（8 GB设备用3B–4B，6 GB设备用1.7B）。',
-          '**期望设备端模型达到云端AI的质量。** Phi-4 Mini（3.8B）对于其体积已相当出色，但无法达到GPT-4o的水平。适合用于对话、摘要、起草和快速问答——不适合多步推理、复杂代码生成或细腻的创意写作。',
+          '**期望设备端模型达到云端AI的质量。** Phi-4 Mini（3.8B）对于其体积已相当出色，但无法达到GPT-5.5的水平。适合用于对话、摘要、起草和快速问答——不适合多步推理、复杂代码生成或细腻的创意写作。',
           '**在阳光直射或高温车内运行推理。** 数分钟内即触发热节流，生成速度下降30–50%，可能出现"iPhone需要冷却"提示。请在室温环境下运行推理。',
           '**同时安装3款以上对话应用，每个装着3 GB模型。** 这会消耗约10 GB存储空间用于重复模型。先选定一款应用和一个模型，其余的在确认需要前先卸载。',
           '**将Apple Intelligence误以为对话应用。** Apple Intelligence没有对话界面——它提供系统级功能。如需向模型提问，请单独安装PocketPal AI、Private LLM、MLC Chat或LLM Farm。',
@@ -2185,7 +2185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '本地AI与iPhone上的ChatGPT应用相比如何？',
-            a: '2026年，设备端模型（Phi-4 Mini、Llama 3.2 3B）的日常对话能力约为GPT-4o的60–75%，在简单问题上更快（无网络延迟），且完全私密。ChatGPT在复杂推理、广博世界知识和多模态任务上仍有明显优势。客观来说：本地AI适合日常和私密任务；ChatGPT适合偶尔的高难度问题。2026年很多用户两款应用都装着，按需选择。',
+            a: '2026年，设备端模型（Phi-4 Mini、Llama 3.2 3B）的日常对话能力约为GPT-5.5的60–75%，在简单问题上更快（无网络延迟），且完全私密。ChatGPT在复杂推理、广博世界知识和多模态任务上仍有明显优势。客观来说：本地AI适合日常和私密任务；ChatGPT适合偶尔的高难度问题。2026年很多用户两款应用都装着，按需选择。',
           },
         ],
       },
@@ -2336,8 +2336,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Solo necesitas asistencia de escritura en Mail / Mensajes / Notas → Apple Intelligence (integrada)',
           ],
           cloudIf: [
-            'Necesitas calidad de modelo 70B+ (Llama 3.3 70B, nivel GPT-4o) → usa la nube o conéctate de forma remota a una máquina doméstica',
-            'Necesitas acceso a GPT-4o, Claude Opus o Gemini específicamente → apps en la nube (no disponibles en local)',
+            'Necesitas calidad de modelo 70B+ (Llama 3.3 70B, nivel GPT-5.5) → usa la nube o conéctate de forma remota a una máquina doméstica',
+            'Necesitas acceso a GPT-5.5, Claude Opus o Gemini específicamente → apps en la nube (no disponibles en local)',
             'Necesitas visión en tiempo real o salida multimodal más allá del texto → nube (el multimodal en dispositivo es limitado en 2026)',
           ],
           quick: [
@@ -2414,7 +2414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Qué es:** una app iOS de pago con biblioteca de modelos curada e integración profunda con iOS. Usa un runtime en dispositivo propietario optimizado para Apple Silicon.',
           '**Instalación:** App Store → "Private LLM". Compra única ~10 € (sin suscripción).',
-          '**Biblioteca de modelos curada:** ~30 modelos pre-probados y optimizados para iPhone, incluyendo Llama 3.2 3B, Phi-4 Mini, Mistral 7B Instruct y varias variantes sin censura. Menos flexibilidad que PocketPal AI, pero sin riesgo de instalar un modelo que se cuelgue.',
+          '**Biblioteca de modelos curada:** ~30 modelos pre-probados y optimizados para iPhone, incluyendo Llama 3.2 3B, Phi-4 Mini, Mistral Small Instruct y varias variantes sin censura. Menos flexibilidad que PocketPal AI, pero sin riesgo de instalar un modelo que se cuelgue.',
           '**iOS Shortcuts:** Private LLM expone una acción "Generar texto con Private LLM" que puedes encadenar en automatizaciones de Shortcuts. Útil para activar la IA local desde un botón en tu pantalla de inicio o mediante etiquetas NFC.',
           '**Integración con Siri:** "Oye Siri, pregúntale a Private LLM [tu pregunta]" envía el prompt al modelo en dispositivo y Siri lee la respuesta en voz alta. Funciona sin conexión a internet. La latencia es mayor que en la interfaz de chat (~3–5 segundos antes de que empiece el audio).',
         ],
@@ -2564,7 +2564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Errores frecuentes',
         items: [
           '**Instalar un modelo más grande de lo que permite la RAM de tu iPhone.** Un modelo 7B en un iPhone de 8 GB genera a ~3–5 tokens/seg y se cierra cuando iOS recupera memoria para otra app. Quédate con el modelo recomendado para tu nivel de iPhone (3B–4B para dispositivos de 8 GB, 1.7B para dispositivos de 6 GB).',
-          '**Esperar calidad de IA en la nube de los modelos en dispositivo.** Phi-4 Mini (3.8B) es impresionante para su tamaño, pero no es GPT-4o. Úsalo para chat, síntesis, redacción y preguntas rápidas — no para razonamiento de múltiples pasos, generación de código complejo o escritura creativa con matices.',
+          '**Esperar calidad de IA en la nube de los modelos en dispositivo.** Phi-4 Mini (3.8B) es impresionante para su tamaño, pero no es GPT-5.5. Úsalo para chat, síntesis, redacción y preguntas rápidas — no para razonamiento de múltiples pasos, generación de código complejo o escritura creativa con matices.',
           '**Ejecutar inferencia bajo luz solar directa o en un coche caliente.** El throttling térmico aparece en cuestión de minutos. La generación se ralentiza un 30–50 % y puede aparecer la advertencia "El iPhone necesita enfriarse". Ejecuta la inferencia a temperatura ambiente.',
           '**Dejar instaladas 3 o más apps de chat con modelos de 3 GB en cada una.** Consumirás ~10 GB de almacenamiento en modelos duplicados. Elige una app y un modelo; desinstala las demás hasta que estés seguro de que las necesitas.',
           '**Confundir Apple Intelligence con una app de chat.** Apple Intelligence no tiene interfaz de chat — potencia funciones del sistema. Si quieres hacerle preguntas al modelo, instala PocketPal AI, Private LLM, MLC Chat o LLM Farm por separado.',
@@ -2623,7 +2623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cómo se compara la IA local con la app de ChatGPT en iPhone?',
-            a: 'Los modelos en dispositivo (Phi-4 Mini, Llama 3.2 3B) son aproximadamente un 60–75 % tan capaces como GPT-4o para el chat diario en 2026, más rápidos en consultas simples (sin ida y vuelta de red) y completamente privados. ChatGPT sigue siendo mejor para el razonamiento complejo, el conocimiento general del mundo y las tareas multimodales. El intercambio honesto: IA local para tareas rutinarias y privadas; ChatGPT para preguntas difíciles ocasionales. Muchos usuarios en 2026 tienen ambas apps y eligen según la consulta.',
+            a: 'Los modelos en dispositivo (Phi-4 Mini, Llama 3.2 3B) son aproximadamente un 60–75 % tan capaces como GPT-5.5 para el chat diario en 2026, más rápidos en consultas simples (sin ida y vuelta de red) y completamente privados. ChatGPT sigue siendo mejor para el razonamiento complejo, el conocimiento general del mundo y las tareas multimodales. El intercambio honesto: IA local para tareas rutinarias y privadas; ChatGPT para preguntas difíciles ocasionales. Muchos usuarios en 2026 tienen ambas apps y eligen según la consulta.',
           },
         ],
       },

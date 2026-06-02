@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             'VS Code uses Continue.dev extension to connect to local models (Ollama, LM Studio, vLLM).',
             'Cursor is a VS Code fork with built-in local model support. No extension needed.',
-            '**Best local models for code**: Qwen2.5-Coder 7B, Llama Code 13B, or Mistral Small.',
+            '**Best local models for code**: Qwen3-Coder 7B, Llama Code 13B, or Mistral Small.',
             'Expect 2-5 second completion latency on consumer GPUs with 7B models.',
             'As of April 2026, local code completions are practical for personal use, not yet production-grade for teams.',
           ],
@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestModels: {
           title: 'Which Models Are Best for Code?',
           rows: [
-            { 'Model': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'Best balance, fastest' },
+            { 'Model': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'Best balance, fastest' },
             { 'Model': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'General coding' },
             { 'Model': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4.5 GB', 'Speed': 'Very fast', 'Best For': 'Lightweight, EU servers' },
             { 'Model': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', 'Speed': 'Medium', 'Best For': 'Better quality on 16GB machines' },
@@ -76,10 +76,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Completion latency (time to first token) is critical for IDE experience.** As of April 2026, here are typical numbers:',
           ],
           rows: [
-            { 'Hardware': 'RTX 4090 GPU', 'Model': 'Qwen2.5-Coder 7B', 'Latency': '0.3-0.5 seconds', 'Throughput': '150 tokens/sec' },
-            { 'Hardware': 'RTX 4070 GPU', 'Model': 'Qwen2.5-Coder 7B', 'Latency': '0.8-1.5 seconds', 'Throughput': '80 tokens/sec' },
-            { 'Hardware': 'M3 MacBook Pro', 'Model': 'Qwen2.5-Coder 7B', 'Latency': '2-3 seconds', 'Throughput': '20 tokens/sec' },
-            { 'Hardware': '8-core CPU only', 'Model': 'Qwen2.5-Coder 7B', 'Latency': '5-10 seconds', 'Throughput': '3 tokens/sec' },
+            { 'Hardware': 'RTX 4090 GPU', 'Model': 'Qwen3-Coder 7B', 'Latency': '0.3-0.5 seconds', 'Throughput': '150 tokens/sec' },
+            { 'Hardware': 'RTX 4070 GPU', 'Model': 'Qwen3-Coder 7B', 'Latency': '0.8-1.5 seconds', 'Throughput': '80 tokens/sec' },
+            { 'Hardware': 'M3 MacBook Pro', 'Model': 'Qwen3-Coder 7B', 'Latency': '2-3 seconds', 'Throughput': '20 tokens/sec' },
+            { 'Hardware': '8-core CPU only', 'Model': 'Qwen3-Coder 7B', 'Latency': '5-10 seconds', 'Throughput': '3 tokens/sec' },
           ],
           columns: ['Hardware', 'Model', 'Latency', 'Throughput'],
         },
@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Continue.dev -- continue.dev',
             'Cursor Editor -- cursor.sh',
             'Continue GitHub -- github.com/continuedev/continue',
-            'Qwen2.5-Coder -- github.com/QwenLM/Qwen2.5-Coder',
+            'Qwen3-Coder -- github.com/QwenLM/Qwen3-Coder',
             'IDE integration is only half the problem. Writing effective prompts for code generation requires a different mindset than chatting. Learn prompt engineering for developers: [best prompt engineering IDEs](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides) compares tools and techniques.',
           ],
         },
@@ -205,7 +205,7 @@ schema: {
             'name': 'What is the minimum VRAM for usable local code completions?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '8 GB VRAM is the minimum for usable code completions with a 7B model at Q4_K_M quantization (~4.5 GB). With only 8 GB, you have little headroom. 12 GB or more is recommended for comfortable use with Qwen2.5-Coder 7B or Llama Code 7B.',
+              'text': '8 GB VRAM is the minimum for usable code completions with a 7B model at Q4_K_M quantization (~4.5 GB). With only 8 GB, you have little headroom. 12 GB or more is recommended for comfortable use with Qwen3-Coder 7B or Llama Code 7B.',
             },
           },
           {
@@ -213,7 +213,7 @@ schema: {
             'name': 'Which model is best for code completions with Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen2.5-Coder 7B is the best balance of speed and quality, scoring 72% on HumanEval and requiring only 4.7 GB VRAM. For 16 GB+ VRAM, Llama Code 13B (74% HumanEval, 8.5 GB VRAM) improves quality further.',
+              'text': 'Qwen3-Coder 7B is the best balance of speed and quality, scoring 72% on HumanEval and requiring only 4.7 GB VRAM. For 16 GB+ VRAM, Llama Code 13B (74% HumanEval, 8.5 GB VRAM) improves quality further.',
             },
           },
           {
@@ -278,7 +278,7 @@ schema: {
           items: [
             'VS Code nutzt die Continue.dev-Erweiterung, um sich mit lokalen Modellen zu verbinden (Ollama, LM Studio, vLLM).',
             'Cursor ist ein VS Code-Fork mit eingebauter lokaler Modellunterstützung. Keine Erweiterung erforderlich.',
-            '**Beste lokale Modelle für Code**: Qwen2.5-Coder 7B, Llama Code 13B oder Mistral Small.',
+            '**Beste lokale Modelle für Code**: Qwen3-Coder 7B, Llama Code 13B oder Mistral Small.',
             'Erwarten Sie 2-5 Sekunden Vervollständigungslatenz auf Consumer-GPUs mit 7B-Modellen.',
             'Stand April 2026 sind lokale Code-Completions für Einzelnutzer praktisch, noch nicht produktionsreif für Teams.',
           ],
@@ -303,7 +303,7 @@ schema: {
             '⚠️ **VRAM-Regel**: Haben Sie immer 2-3 GB mehr freien VRAM als das Modell benötigt. Ein 7B-Modell bei Q4 (4,7 GB) benötigt insgesamt 8 GB VRAM bei Ausführung in VS Code oder Cursor.',
           ],
           rows: [
-            { 'Modell': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Geschwindigkeit': 'Schnell', 'Beste für': 'Beste Balance, schnellste' },
+            { 'Modell': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Geschwindigkeit': 'Schnell', 'Beste für': 'Beste Balance, schnellste' },
             { 'Modell': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4,7 GB', 'Geschwindigkeit': 'Schnell', 'Beste für': 'Allgemeine Programmierung' },
             { 'Modell': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4,5 GB', 'Geschwindigkeit': 'Sehr schnell', 'Beste für': 'Leichtgewicht, EU-Server' },
             { 'Modell': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8,5 GB', 'Geschwindigkeit': 'Mittel', 'Beste für': 'Bessere Qualität bei 16GB-Maschinen' },
@@ -319,13 +319,13 @@ schema: {
             '💡 **Performance-Tuning**: Reduzieren Sie `contextLength` von 2048 auf 1024 Tokens, um die Latenz zu halbieren. Kompromiss: weniger Codezeilen im Kontext für Vorschläge.',
           ],
           rows: [
-            { 'Hardware': 'RTX 4090 GPU', 'Modell': 'Qwen2.5-Coder 7B', 'Latenz': '0,3-0,5 Sekunden', 'Durchsatz': '150 Tokens/Sek' },
-            { 'Hardware': 'RTX 4070 GPU', 'Modell': 'Qwen2.5-Coder 7B', 'Latenz': '0,8-1,5 Sekunden', 'Durchsatz': '80 Tokens/Sek' },
-            { 'Hardware': 'M3 MacBook Pro', 'Modell': 'Qwen2.5-Coder 7B', 'Latenz': '2-3 Sekunden', 'Durchsatz': '20 Tokens/Sek' },
-            { 'Hardware': '8-Kern CPU nur', 'Modell': 'Qwen2.5-Coder 7B', 'Latenz': '5-10 Sekunden', 'Durchsatz': '3 Tokens/Sek' },
+            { 'Hardware': 'RTX 4090 GPU', 'Modell': 'Qwen3-Coder 7B', 'Latenz': '0,3-0,5 Sekunden', 'Durchsatz': '150 Tokens/Sek' },
+            { 'Hardware': 'RTX 4070 GPU', 'Modell': 'Qwen3-Coder 7B', 'Latenz': '0,8-1,5 Sekunden', 'Durchsatz': '80 Tokens/Sek' },
+            { 'Hardware': 'M3 MacBook Pro', 'Modell': 'Qwen3-Coder 7B', 'Latenz': '2-3 Sekunden', 'Durchsatz': '20 Tokens/Sek' },
+            { 'Hardware': '8-Kern CPU nur', 'Modell': 'Qwen3-Coder 7B', 'Latenz': '5-10 Sekunden', 'Durchsatz': '3 Tokens/Sek' },
           ],
           columns: ['Hardware', 'Modell', 'Latenz', 'Durchsatz'],
-          note: '**Hinweis zu Performance-Daten**: Latenz und Durchsatz gemessen mit Qwen2.5-Coder 7B Q4_K_M-Format, Batch-Größe = 1, auf frischem System (keine Hintergrund-Aufgaben). Ihre tatsächliche Performance hängt ab von OS, VRAM-Verfügbarkeit, Quantisierungsformat und gleichzeitiger Last.',
+          note: '**Hinweis zu Performance-Daten**: Latenz und Durchsatz gemessen mit Qwen3-Coder 7B Q4_K_M-Format, Batch-Größe = 1, auf frischem System (keine Hintergrund-Aufgaben). Ihre tatsächliche Performance hängt ab von OS, VRAM-Verfügbarkeit, Quantisierungsformat und gleichzeitiger Last.',
         },
         advanced: {
           title: 'Wie konfigurieren Sie Code-Vervollständigungen für Performance?',
@@ -372,13 +372,13 @@ schema: {
           title: 'Lokale LLMs für deutsche Entwickler: DSGVO, Cursor Pro und Privacy',
           content: [
             'Für deutsche Softwareentwickler ist Cursor Pro ein zweischneidiges Schwert: Leistungsstarke KI-Features, aber Code wird an US-Server übertragen. Bei Projekten mit personenbezogenen Daten, Kundendaten oder vertraulichem Quellcode ist dies nach DSGVO Art. 28 (Auftragsverarbeitung) problematisch ohne entsprechenden DPA mit Anthropic/OpenAI.',
-            'Die datenschutzkonforme Alternative: Continue.dev mit lokalem LLM (Ollama + DeepSeek Coder oder Qwen2.5-Coder). Kein Code verlässt das Gerät, kein DPA nötig, BSI Grundschutz-kompatibel. Abstriche bei der Modellqualität gegenüber Claude Sonnet 4.6 sind bei einigen Tasks spürbar, bei anderen nicht.',
+            'Die datenschutzkonforme Alternative: Continue.dev mit lokalem LLM (Ollama + DeepSeek Coder oder Qwen3-Coder). Kein Code verlässt das Gerät, kein DPA nötig, BSI Grundschutz-kompatibel. Abstriche bei der Modellqualität gegenüber Claude Sonnet 4.6 sind bei einigen Tasks spürbar, bei anderen nicht.',
           ],
           items: [
             '**DSGVO und Cursor Pro:** Cursor überträgt Code-Snippets zur KI-Verarbeitung. Für Open-Source-Projekte unproblematisch. Für Projekte mit Gesundheits-, Finanz- oder personenbezogenen Daten: Cursor Business mit EU Data Residency-Option prüfen oder auf lokale Alternative wechseln.',
             '**Continue.dev DE-Konfiguration:** Continue.dev lässt sich vollständig lokal betreiben. `~/.continue/config.json` mit Ollama-Backend: `"provider": "ollama"`, `"model": "qwen2.5-coder:7b"`. Deutsche VS Code Lokalisierung (de-DE) funktioniert problemlos mit Continue.',
             '**Deutsche Entwickler-Community:** query „cursor ローカルllm" zeigt JA-Signal — DE-Äquivalent: Heise Developer, Golem.de, t3n.de als primäre News-Quellen. GitHub-Stars für Continue.dev (>20k) spiegeln globale Akzeptanz wider.',
-            '**Empfohlene Modelle für Code-Completion (DE-Kontext):** Qwen2.5-Coder-7B (beste Balance), DeepSeek Coder V2 (stärkste Reasoning-Leistung), Codestral Mamba (schnell auf CPU). Alle via Ollama verfügbar.',
+            '**Empfohlene Modelle für Code-Completion (DE-Kontext):** Qwen3-Coder-7B (beste Balance), DeepSeek Coder V2 (stärkste Reasoning-Leistung), Codestral Mamba (schnell auf CPU). Alle via Ollama verfügbar.',
             '**JetBrains-Nutzer in DE:** Continue.dev unterstützt auch JetBrains IDEs (IntelliJ, WebStorm, PyCharm) — in Deutschland oft beliebter als VS Code, besonders in Java/Kotlin-Shops.',
           ],
         },
@@ -399,7 +399,7 @@ schema: {
           items: [
             'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ -- Official setup guide, config.json reference, and local model integration instructions.',
             'Cursor. (2026). "Cursor Documentation." https://docs.cursor.com/ -- Local model configuration, Ollama integration, and inference setup guide.',
-            'Alibaba Qwen Team. (2025). "Qwen2.5-Coder Technical Report." arXiv:2409.12186. https://arxiv.org/abs/2409.12186 -- HumanEval and code generation benchmarks for Qwen2.5-Coder variants.',
+            'Alibaba Qwen Team. (2025). "Qwen3-Coder Technical Report." arXiv:2409.12186. https://arxiv.org/abs/2409.12186 -- HumanEval and code generation benchmarks for Qwen3-Coder variants.',
             'DeepSeek-AI. (2024). "DeepSeek-Coder Technical Paper." arXiv:2401.14196. https://arxiv.org/abs/2401.14196 -- Benchmark data and capability analysis for DeepSeek-Coder family.',
           ],
         },
@@ -413,7 +413,7 @@ schema: {
         'step': [
           { '@type': 'HowToStep', 'name': 'Installieren Sie Continue.dev für VS Code', 'text': 'Installieren Sie die Continue-Erweiterung aus dem VS Code Marketplace und konfigurieren Sie sie, um auf Ihren lokalen Ollama-Server zu zeigen.' },
           { '@type': 'HowToStep', 'name': 'Konfigurieren Sie Cursor mit lokalem LLM', 'text': 'In Cursor-Einstellungen stellen Sie den KI-Anbieter auf Ihren lokalen Ollama-Endpunkt (http://localhost:11434).' },
-          { '@type': 'HowToStep', 'name': 'Wählen Sie ein Programmierungs-Modell', 'text': 'Verwenden Sie Qwen2.5-Coder 7B oder DeepSeek-Coder für beste lokale Code-Vervollständigungsergebnisse.' },
+          { '@type': 'HowToStep', 'name': 'Wählen Sie ein Programmierungs-Modell', 'text': 'Verwenden Sie Qwen3-Coder 7B oder DeepSeek-Coder für beste lokale Code-Vervollständigungsergebnisse.' },
           { '@type': 'HowToStep', 'name': 'Testen Sie Prompts mit PromptQuorum', 'text': 'Vergleichen Sie Programmierungs-Prompt-Antworten über mehrere lokale Modelle mit PromptQuorum, um das beste für Ihren Workflow zu finden.' }
         ]
       },
@@ -434,7 +434,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code nutzt die Continue.dev-Erweiterung, um sich mit lokalen Modellen zu verbinden (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor ist ein VS Code-Fork mit eingebauter lokaler Modellunterstützung. Keine Erweiterung erforderlich.' },
-          { '@type': 'ListItem', position: 3, name: '**Beste lokale Modelle für Code**: Qwen2.5-Coder 7B, Llama Code 13B oder Mistral Small.' },
+          { '@type': 'ListItem', position: 3, name: '**Beste lokale Modelle für Code**: Qwen3-Coder 7B, Llama Code 13B oder Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Erwarten Sie 2-5 Sekunden Vervollständigungslatenz auf Consumer-GPUs mit 7B-Modellen.' },
           { '@type': 'ListItem', position: 5, name: 'Stand April 2026 sind lokale Code-Completions für Einzelnutzer praktisch, noch nicht produktionsreif für Teams.' },
         ],
@@ -467,7 +467,7 @@ schema: {
           items: [
             'VS Code utilise l\'extension Continue.dev pour se connecter aux modèles locaux (Ollama, LM Studio, vLLM).',
             'Cursor est un fork VS Code avec support de modèle local intégré. Aucune extension requise.',
-            '**Meilleurs modèles locaux pour le code** : Qwen2.5-Coder 7B, Llama Code 13B ou Mistral Small.',
+            '**Meilleurs modèles locaux pour le code** : Qwen3-Coder 7B, Llama Code 13B ou Mistral Small.',
             'Attendez-vous à 2-5 secondes de latence de complétude sur les GPU grand public avec des modèles 7B.',
             'Depuis avril 2026, les complétions de code locales sont pratiques pour usage personnel, pas encore prêtes pour la production d\'équipe.',
           ],
@@ -492,7 +492,7 @@ schema: {
             '⚠️ **Règle RAM** : Ayez toujours 2-3 Go de RAM libre de plus que ce que le modèle nécessite. Un modèle 7B en Q4 (4,7 Go) nécessite 8 Go de RAM totale lors de l\'exécution dans VS Code ou Cursor.',
           ],
           rows: [
-            { 'Modèle': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'RAM': '4,7 Go', 'Vitesse': 'Rapide', 'Meilleur pour': 'Meilleur équilibre, le plus rapide' },
+            { 'Modèle': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'RAM': '4,7 Go', 'Vitesse': 'Rapide', 'Meilleur pour': 'Meilleur équilibre, le plus rapide' },
             { 'Modèle': 'Llama Code 7B', 'HumanEval': '69%', 'RAM': '4,7 Go', 'Vitesse': 'Rapide', 'Meilleur pour': 'Codage général' },
             { 'Modèle': 'Mistral Small', 'HumanEval': '61%', 'RAM': '4,5 Go', 'Vitesse': 'Très rapide', 'Meilleur pour': 'Léger, serveurs UE' },
             { 'Modèle': 'Llama Code 13B', 'HumanEval': '74%', 'RAM': '8,5 Go', 'Vitesse': 'Moyen', 'Meilleur pour': 'Meilleure qualité sur 16Go' },
@@ -508,13 +508,13 @@ schema: {
             '💡 **Optimisation des performances** : Réduisez `contextLength` de 2048 à 1024 jetons pour réduire la latence de moitié. Compromis : moins de lignes de code dans le contexte pour les suggestions.',
           ],
           rows: [
-            { 'Matériel': 'RTX 4090 GPU', 'Modèle': 'Qwen2.5-Coder 7B', 'Latence': '0,3-0,5 sec', 'Débit': '150 jetons/sec' },
-            { 'Matériel': 'RTX 4070 GPU', 'Modèle': 'Qwen2.5-Coder 7B', 'Latence': '0,8-1,5 sec', 'Débit': '80 jetons/sec' },
-            { 'Matériel': 'M3 MacBook Pro', 'Modèle': 'Qwen2.5-Coder 7B', 'Latence': '2-3 sec', 'Débit': '20 jetons/sec' },
-            { 'Matériel': 'CPU 8 cœurs uniquement', 'Modèle': 'Qwen2.5-Coder 7B', 'Latence': '5-10 sec', 'Débit': '3 jetons/sec' },
+            { 'Matériel': 'RTX 4090 GPU', 'Modèle': 'Qwen3-Coder 7B', 'Latence': '0,3-0,5 sec', 'Débit': '150 jetons/sec' },
+            { 'Matériel': 'RTX 4070 GPU', 'Modèle': 'Qwen3-Coder 7B', 'Latence': '0,8-1,5 sec', 'Débit': '80 jetons/sec' },
+            { 'Matériel': 'M3 MacBook Pro', 'Modèle': 'Qwen3-Coder 7B', 'Latence': '2-3 sec', 'Débit': '20 jetons/sec' },
+            { 'Matériel': 'CPU 8 cœurs uniquement', 'Modèle': 'Qwen3-Coder 7B', 'Latence': '5-10 sec', 'Débit': '3 jetons/sec' },
           ],
           columns: ['Matériel', 'Modèle', 'Latence', 'Débit'],
-          note: '**Remarque sur les données de performance** : Latence et débit mesurés avec format Qwen2.5-Coder 7B Q4_K_M, taille de lot = 1, sur système frais (pas de tâches en arrière-plan). Vos performances réelles dépendent du SE, de la disponibilité RAM, du format de quantification et de la charge simultanée.',
+          note: '**Remarque sur les données de performance** : Latence et débit mesurés avec format Qwen3-Coder 7B Q4_K_M, taille de lot = 1, sur système frais (pas de tâches en arrière-plan). Vos performances réelles dépendent du SE, de la disponibilité RAM, du format de quantification et de la charge simultanée.',
         },
         advanced: {
           title: 'Comment configurez-vous les complétions de code pour les performances ?',
@@ -572,7 +572,7 @@ schema: {
           items: [
             'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ -- Official setup guide, config.json reference, and local model integration instructions.',
             'Cursor. (2026). "Cursor Documentation." https://docs.cursor.com/ -- Local model configuration, Ollama integration, and inference setup guide.',
-            'Alibaba Qwen Team. (2025). "Qwen2.5-Coder Technical Report." arXiv:2409.12186. https://arxiv.org/abs/2409.12186 -- HumanEval and code generation benchmarks for Qwen2.5-Coder variants.',
+            'Alibaba Qwen Team. (2025). "Qwen3-Coder Technical Report." arXiv:2409.12186. https://arxiv.org/abs/2409.12186 -- HumanEval and code generation benchmarks for Qwen3-Coder variants.',
             'DeepSeek-AI. (2024). "DeepSeek-Coder Technical Paper." arXiv:2401.14196. https://arxiv.org/abs/2401.14196 -- Benchmark data and capability analysis for DeepSeek-Coder family.',
           ],
         },
@@ -586,7 +586,7 @@ schema: {
         'step': [
           { '@type': 'HowToStep', 'name': 'Installez Continue.dev pour VS Code', 'text': 'Installez l\'extension Continue depuis la marketplace VS Code et configurez-la pour pointer vers votre serveur Ollama local.' },
           { '@type': 'HowToStep', 'name': 'Configurez Cursor avec LLM local', 'text': 'Dans les paramètres de Cursor, réglez le fournisseur d\'IA sur votre point de terminaison Ollama local (http://localhost:11434).' },
-          { '@type': 'HowToStep', 'name': 'Sélectionnez un modèle de codage', 'text': 'Utilisez Qwen2.5-Coder 7B ou DeepSeek-Coder pour les meilleurs résultats de complétude de code local.' },
+          { '@type': 'HowToStep', 'name': 'Sélectionnez un modèle de codage', 'text': 'Utilisez Qwen3-Coder 7B ou DeepSeek-Coder pour les meilleurs résultats de complétude de code local.' },
           { '@type': 'HowToStep', 'name': 'Testez les prompts avec PromptQuorum', 'text': 'Comparez les réponses aux prompts de codage sur plusieurs modèles locaux à l\'aide de PromptQuorum pour trouver le meilleur pour votre flux de travail.' }
         ]
       },
@@ -607,7 +607,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code utilise l\'extension Continue.dev pour se connecter aux modèles locaux (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor est un fork VS Code avec support de modèle local intégré. Aucune extension requise.' },
-          { '@type': 'ListItem', position: 3, name: '**Meilleurs modèles locaux pour le code** : Qwen2.5-Coder 7B, Llama Code 13B ou Mistral Small.' },
+          { '@type': 'ListItem', position: 3, name: '**Meilleurs modèles locaux pour le code** : Qwen3-Coder 7B, Llama Code 13B ou Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Attendez-vous à 2-5 secondes de latence de complétude sur les GPU grand public avec des modèles 7B.' },
           { '@type': 'ListItem', position: 5, name: 'Depuis avril 2026, les complétions de code locales sont pratiques pour usage personnel, pas encore prêtes pour la production d\'équipe.' },
         ],
@@ -640,7 +640,7 @@ schema: {
           items: [
             'VS CodeはContinue.dev拡張機能を使用してローカルモデル（Ollama、LM Studio、vLLM）に接続します。',
             'Cursorはビルトインのローカルモデルサポート付きのVS Codeフォークです。拡張機能は不要です。',
-            '**コードの最高のローカルモデル**：Qwen2.5-Coder 7B、Llama Code 13B、またはMistral Small。',
+            '**コードの最高のローカルモデル**：Qwen3-Coder 7B、Llama Code 13B、またはMistral Small。',
             '7Bモデルを使用したコンシューマーGPUで2〜5秒の補完レイテンシを予想してください。',
             '2026年4月現在、ローカルコード補完は個人使用に実用的ですが、チーム向けはまだ本番レベルではありません。',
           ],
@@ -665,7 +665,7 @@ schema: {
             '⚠️ **VRAM規則**：モデルが必要とするVRAMより2〜3 GB多い空きVRAMを常に持つ。Q4のときの7Bモデル（4.7 GB）はVS CodeまたはCursorで実行するときに合計8 GBのVRAMを必要とします。',
           ],
           rows: [
-            { 'モデル': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', '速度': '速い', '最適：': '最高のバランス、最速' },
+            { 'モデル': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', '速度': '速い', '最適：': '最高のバランス、最速' },
             { 'モデル': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', '速度': '速い', '最適：': '一般的なコーディング' },
             { 'モデル': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4.5 GB', '速度': '非常に速い', '最適：': '軽量、EUサーバー' },
             { 'モデル': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', '速度': '中程度', '最適：': '16GBマシンで品質向上' },
@@ -681,13 +681,13 @@ schema: {
             '💡 **パフォーマンスチューニング**：`contextLength`を2048から1024トークンに減らしてレイテンシを半分にします。トレード：提案のコンテキストコード行が少なくなる。',
           ],
           rows: [
-            { 'ハードウェア': 'RTX 4090 GPU', 'モデル': 'Qwen2.5-Coder 7B', 'レイテンシ': '0.3-0.5秒', 'スループット': '150トークン/秒' },
-            { 'ハードウェア': 'RTX 4070 GPU', 'モデル': 'Qwen2.5-Coder 7B', 'レイテンシ': '0.8-1.5秒', 'スループット': '80トークン/秒' },
-            { 'ハードウェア': 'M3 MacBook Pro', 'モデル': 'Qwen2.5-Coder 7B', 'レイテンシ': '2-3秒', 'スループット': '20トークン/秒' },
-            { 'ハードウェア': '8コアCPUのみ', 'モデル': 'Qwen2.5-Coder 7B', 'レイテンシ': '5-10秒', 'スループット': '3トークン/秒' },
+            { 'ハードウェア': 'RTX 4090 GPU', 'モデル': 'Qwen3-Coder 7B', 'レイテンシ': '0.3-0.5秒', 'スループット': '150トークン/秒' },
+            { 'ハードウェア': 'RTX 4070 GPU', 'モデル': 'Qwen3-Coder 7B', 'レイテンシ': '0.8-1.5秒', 'スループット': '80トークン/秒' },
+            { 'ハードウェア': 'M3 MacBook Pro', 'モデル': 'Qwen3-Coder 7B', 'レイテンシ': '2-3秒', 'スループット': '20トークン/秒' },
+            { 'ハードウェア': '8コアCPUのみ', 'モデル': 'Qwen3-Coder 7B', 'レイテンシ': '5-10秒', 'スループット': '3トークン/秒' },
           ],
           columns: ['ハードウェア', 'モデル', 'レイテンシ', 'スループット'],
-          note: '**パフォーマンスデータに関する注記**：Qwen2.5-Coder 7B Q4_K_Mフォーマット、バッチサイズ = 1、新規システム（バックグラウンドタスクなし）で測定されたレイテンシとスループット。実際のパフォーマンスはOS、VRAM可用性、量子化形式、および同時負荷に依存します。',
+          note: '**パフォーマンスデータに関する注記**：Qwen3-Coder 7B Q4_K_Mフォーマット、バッチサイズ = 1、新規システム（バックグラウンドタスクなし）で測定されたレイテンシとスループット。実際のパフォーマンスはOS、VRAM可用性、量子化形式、および同時負荷に依存します。',
         },
         advanced: {
           title: 'パフォーマンスのためにコード補完を設定するにはどうすればよいですか？',
@@ -738,7 +738,7 @@ schema: {
           ],
           items: [
             '**Zenn/Qiitaの日本語セットアップ記事：** 「Continue.dev Ollama 設定」「Cursor ローカル LLM」などで検索すると実践的な記事が多数ヒット。Zenn（zenn.dev）は技術記事品質が高く、GitHub連携で更新管理されている点が特徴。',
-            '**日本語コード用推奨モデル：** Qwen2.5-Coder-7B（日本語コメント・文書化に強い）、DeepSeek Coder V2（英語中心だが日本語コンテキストも理解）。日本語変数名やコメントを含むプロジェクトではQwen2.5-Coderが優位。',
+            '**日本語コード用推奨モデル：** Qwen3-Coder-7B（日本語コメント・文書化に強い）、DeepSeek Coder V2（英語中心だが日本語コンテキストも理解）。日本語変数名やコメントを含むプロジェクトではQwen3-Coderが優位。',
             '**Continue.dev 日本語設定：** `~/.continue/config.json`のシステムプロンプトに「日本語でコメントを生成してください」と追加すると日本語コード補完の品質が向上。',
             '**Apple Silicon優位性（日本市場）：** 日本はMacBook M系列の普及率が高い。MLX経由でのコード補完はOllama比で1.5-2倍速い（M2 Pro基準）。ただしContinue.devとの直接MLX統合は未対応 — Ollama経由が現実的。',
             '**日本語コミュニティ・Discordサーバー：** 「AI開発者JP」「Ollama日本語ユーザー会」などのDiscordサーバーでローカルLLMセットアップの日本語サポートが得られる。',
@@ -760,7 +760,7 @@ schema: {
           items: [
             'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ -- Official setup guide, config.json reference, and local model integration instructions.',
             'Cursor. (2026). "Cursor Documentation." https://docs.cursor.com/ -- Local model configuration, Ollama integration, and inference setup guide.',
-            'Alibaba Qwen Team. (2025). "Qwen2.5-Coder Technical Report." arXiv:2409.12186. https://arxiv.org/abs/2409.12186 -- HumanEval and code generation benchmarks for Qwen2.5-Coder variants.',
+            'Alibaba Qwen Team. (2025). "Qwen3-Coder Technical Report." arXiv:2409.12186. https://arxiv.org/abs/2409.12186 -- HumanEval and code generation benchmarks for Qwen3-Coder variants.',
             'DeepSeek-AI. (2024). "DeepSeek-Coder Technical Paper." arXiv:2401.14196. https://arxiv.org/abs/2401.14196 -- Benchmark data and capability analysis for DeepSeek-Coder family.',
           ],
         },
@@ -774,7 +774,7 @@ schema: {
         'step': [
           { '@type': 'HowToStep', 'name': 'VS Code用Continue.devをインストール', 'text': 'VS Code Marketplaceからcontinue拡張をインストールし、ローカルOllamaサーバーをポイントするように設定。' },
           { '@type': 'HowToStep', 'name': 'ローカルLLMでCursorを設定', 'text': 'Cursor設定でAIプロバイダーをローカルOllamaエンドポイント（http://localhost:11434）に設定。' },
-          { '@type': 'HowToStep', 'name': 'コーディングモデル選択', 'text': 'ローカルコード補完結果を最適にするには、Qwen2.5-Coder 7BまたはDeepSeek-Coderを使用。' },
+          { '@type': 'HowToStep', 'name': 'コーディングモデル選択', 'text': 'ローカルコード補完結果を最適にするには、Qwen3-Coder 7BまたはDeepSeek-Coderを使用。' },
           { '@type': 'HowToStep', 'name': 'PromptQuorumでプロンプトテスト', 'text': 'PromptQuorumを使用して複数のローカルモデル全体のコーディングプロンプト応答を比較し、ワークフローに最適なものを見つけ。' }
         ]
       },
@@ -795,7 +795,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS CodeはContinue.dev拡張機能を使用してローカルモデル（Ollama、LM Studio、vLLM）に接続します。' },
           { '@type': 'ListItem', position: 2, name: 'Cursorはビルトインのローカルモデルサポート付きのVS Codeフォークです。拡張機能は不要です。' },
-          { '@type': 'ListItem', position: 3, name: '**コードの最高のローカルモデル**：Qwen2.5-Coder 7B、Llama Code 13B、またはMistral Small。' },
+          { '@type': 'ListItem', position: 3, name: '**コードの最高のローカルモデル**：Qwen3-Coder 7B、Llama Code 13B、またはMistral Small。' },
           { '@type': 'ListItem', position: 4, name: '7Bモデルを使用したコンシューマーGPUで2〜5秒の補完レイテンシを予想。' },
           { '@type': 'ListItem', position: 5, name: '2026年4月現在、ローカルコード補完は個人使用に実用的ですが、チーム向けはまだ本番レベルではありません。' },
         ],
@@ -828,7 +828,7 @@ schema: {
           items: [
             'VS Code使用Continue.dev扩展连接到本地模型（Ollama、LM Studio、vLLM）。',
             'Cursor是一个VS Code分支，具有内置的本地模型支持。无需扩展。',
-            '**最佳代码本地模型**：Qwen2.5-Coder 7B、Llama Code 13B或Mistral Small。',
+            '**最佳代码本地模型**：Qwen3-Coder 7B、Llama Code 13B或Mistral Small。',
             '使用7B模型在消费者GPU上预期2-5秒补全延迟。',
             '截至2026年4月，本地代码补全对个人使用很实用，但对团队还不是生产级。',
           ],
@@ -853,7 +853,7 @@ schema: {
             '⚠️ **显存规则**：始终拥有比模型需求多2-3 GB的空闲显存。Q4时的7B模型（4.7 GB）在VS Code或Cursor中运行时需要总计8 GB显存。',
           ],
           rows: [
-            { '模型': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', '显存': '4.7 GB', '速度': '快速', '最佳用途': '最佳平衡、最快' },
+            { '模型': 'Qwen3-Coder 7B', 'HumanEval': '72%', '显存': '4.7 GB', '速度': '快速', '最佳用途': '最佳平衡、最快' },
             { '模型': 'Llama Code 7B', 'HumanEval': '69%', '显存': '4.7 GB', '速度': '快速', '最佳用途': '通用编码' },
             { '模型': 'Mistral Small', 'HumanEval': '61%', '显存': '4.5 GB', '速度': '非常快', '最佳用途': '轻量、EU服务器' },
             { '模型': 'Llama Code 13B', 'HumanEval': '74%', '显存': '8.5 GB', '速度': '中等', '最佳用途': '16GB机器质量更好' },
@@ -869,13 +869,13 @@ schema: {
             '💡 **性能调优**：将`contextLength`从2048减少到1024个token以将延迟减半。权衡：建议的代码上下文行更少。',
           ],
           rows: [
-            { '硬件': 'RTX 4090 GPU', '模型': 'Qwen2.5-Coder 7B', '延迟': '0.3-0.5秒', '吞吐量': '150个token/秒' },
-            { '硬件': 'RTX 4070 GPU', '模型': 'Qwen2.5-Coder 7B', '延迟': '0.8-1.5秒', '吞吐量': '80个token/秒' },
-            { '硬件': 'M3 MacBook Pro', '模型': 'Qwen2.5-Coder 7B', '延迟': '2-3秒', '吞吐量': '20个token/秒' },
-            { '硬件': '8核CPU仅', '模型': 'Qwen2.5-Coder 7B', '延迟': '5-10秒', '吞吐量': '3个token/秒' },
+            { '硬件': 'RTX 4090 GPU', '模型': 'Qwen3-Coder 7B', '延迟': '0.3-0.5秒', '吞吐量': '150个token/秒' },
+            { '硬件': 'RTX 4070 GPU', '模型': 'Qwen3-Coder 7B', '延迟': '0.8-1.5秒', '吞吐量': '80个token/秒' },
+            { '硬件': 'M3 MacBook Pro', '模型': 'Qwen3-Coder 7B', '延迟': '2-3秒', '吞吐量': '20个token/秒' },
+            { '硬件': '8核CPU仅', '模型': 'Qwen3-Coder 7B', '延迟': '5-10秒', '吞吐量': '3个token/秒' },
           ],
           columns: ['硬件', '模型', '延迟', '吞吐量'],
-          note: '**性能数据说明**：使用Qwen2.5-Coder 7B Q4_K_M格式、批大小 = 1、新鲜系统（无后台任务）测量的延迟和吞吐量。您的实际性能取决于OS、显存可用性、量化格式和并发负载。',
+          note: '**性能数据说明**：使用Qwen3-Coder 7B Q4_K_M格式、批大小 = 1、新鲜系统（无后台任务）测量的延迟和吞吐量。您的实际性能取决于OS、显存可用性、量化格式和并发负载。',
         },
         advanced: {
           title: '如何配置代码补全以获得最佳性能？',
@@ -933,7 +933,7 @@ schema: {
           items: [
             'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ -- Official setup guide, config.json reference, and local model integration instructions.',
             'Cursor. (2026). "Cursor Documentation." https://docs.cursor.com/ -- Local model configuration, Ollama integration, and inference setup guide.',
-            'Alibaba Qwen Team. (2025). "Qwen2.5-Coder Technical Report." arXiv:2409.12186. https://arxiv.org/abs/2409.12186 -- HumanEval and code generation benchmarks for Qwen2.5-Coder variants.',
+            'Alibaba Qwen Team. (2025). "Qwen3-Coder Technical Report." arXiv:2409.12186. https://arxiv.org/abs/2409.12186 -- HumanEval and code generation benchmarks for Qwen3-Coder variants.',
             'DeepSeek-AI. (2024). "DeepSeek-Coder Technical Paper." arXiv:2401.14196. https://arxiv.org/abs/2401.14196 -- Benchmark data and capability analysis for DeepSeek-Coder family.',
           ],
         },
@@ -947,7 +947,7 @@ schema: {
         'step': [
           { '@type': 'HowToStep', 'name': '安装VS Code的Continue.dev', 'text': '从VS Code市场安装Continue扩展并将其配置为指向您的本地Ollama服务器。' },
           { '@type': 'HowToStep', 'name': '在Cursor中配置本地LLM', 'text': '在Cursor设置中，将AI提供程序设置为您的本地Ollama端点（http://localhost:11434）。' },
-          { '@type': 'HowToStep', 'name': '选择编码模型', 'text': '使用Qwen2.5-Coder 7B或DeepSeek-Coder获得最佳本地代码补全结果。' },
+          { '@type': 'HowToStep', 'name': '选择编码模型', 'text': '使用Qwen3-Coder 7B或DeepSeek-Coder获得最佳本地代码补全结果。' },
           { '@type': 'HowToStep', 'name': '使用PromptQuorum测试提示', 'text': '使用PromptQuorum比较多个本地模型的编码提示响应，以找到最适合您工作流的模型。' }
         ]
       },
@@ -968,7 +968,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code使用Continue.dev扩展连接到本地模型（Ollama、LM Studio、vLLM）。' },
           { '@type': 'ListItem', position: 2, name: 'Cursor是一个VS Code分支，具有内置的本地模型支持。无需扩展。' },
-          { '@type': 'ListItem', position: 3, name: '**最佳代码本地模型**：Qwen2.5-Coder 7B、Llama Code 13B或Mistral Small。' },
+          { '@type': 'ListItem', position: 3, name: '**最佳代码本地模型**：Qwen3-Coder 7B、Llama Code 13B或Mistral Small。' },
           { '@type': 'ListItem', position: 4, name: '在消费者GPU上使用7B模型时，预期2-5秒补全延迟。' },
           { '@type': 'ListItem', position: 5, name: '截至2026年4月，本地代码补全对个人使用很实用，但对团队还不是生产级。' },
         ],
@@ -1003,7 +1003,7 @@ schema: {
           items: [
             'VS Code usa la extensión Continue.dev para conectarse a modelos locales (Ollama, LM Studio, vLLM).',
             'Cursor es un fork de VS Code con soporte nativo para modelos locales. No necesitas ninguna extensión.',
-            '**Mejores modelos locales para código**: Qwen2.5-Coder 7B, Llama Code 13B o Mistral Small.',
+            '**Mejores modelos locales para código**: Qwen3-Coder 7B, Llama Code 13B o Mistral Small.',
             'Espera una latencia de completación de 2-5 segundos en GPUs de consumo con modelos 7B.',
             'A partir de abril de 2026, las completaciones de código locales son prácticas para uso personal, pero aún no están listas para producción en equipos.',
           ],
@@ -1028,7 +1028,7 @@ schema: {
             '⚠️ **Regla de VRAM**: Ten siempre 2-3 GB de VRAM libre por encima de lo que requiere el modelo. Un modelo 7B en Q4 (4,7 GB) necesita 8 GB de VRAM en total al ejecutarse en VS Code o Cursor.',
           ],
           rows: [
-            { 'Modelo': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Mejor equilibrio, más veloz' },
+            { 'Modelo': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Mejor equilibrio, más veloz' },
             { 'Modelo': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4,7 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Programación general' },
             { 'Modelo': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4,5 GB', 'Velocidad': 'Muy rápido', 'Ideal para': 'Ligero, servidores UE' },
             { 'Modelo': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8,5 GB', 'Velocidad': 'Medio', 'Ideal para': 'Mejor calidad en máquinas de 16 GB' },
@@ -1044,13 +1044,13 @@ schema: {
             '💡 **Optimización del rendimiento**: Reduce `contextLength` de 2048 a 1024 tokens para reducir la latencia a la mitad. La contrapartida: menos líneas de código de contexto para las sugerencias.',
           ],
           rows: [
-            { 'Hardware': 'RTX 4090 GPU', 'Modelo': 'Qwen2.5-Coder 7B', 'Latencia': '0,3-0,5 seg', 'Rendimiento': '150 tokens/seg' },
-            { 'Hardware': 'RTX 4070 GPU', 'Modelo': 'Qwen2.5-Coder 7B', 'Latencia': '0,8-1,5 seg', 'Rendimiento': '80 tokens/seg' },
-            { 'Hardware': 'M3 MacBook Pro', 'Modelo': 'Qwen2.5-Coder 7B', 'Latencia': '2-3 seg', 'Rendimiento': '20 tokens/seg' },
-            { 'Hardware': 'CPU de 8 núcleos solo', 'Modelo': 'Qwen2.5-Coder 7B', 'Latencia': '5-10 seg', 'Rendimiento': '3 tokens/seg' },
+            { 'Hardware': 'RTX 4090 GPU', 'Modelo': 'Qwen3-Coder 7B', 'Latencia': '0,3-0,5 seg', 'Rendimiento': '150 tokens/seg' },
+            { 'Hardware': 'RTX 4070 GPU', 'Modelo': 'Qwen3-Coder 7B', 'Latencia': '0,8-1,5 seg', 'Rendimiento': '80 tokens/seg' },
+            { 'Hardware': 'M3 MacBook Pro', 'Modelo': 'Qwen3-Coder 7B', 'Latencia': '2-3 seg', 'Rendimiento': '20 tokens/seg' },
+            { 'Hardware': 'CPU de 8 núcleos solo', 'Modelo': 'Qwen3-Coder 7B', 'Latencia': '5-10 seg', 'Rendimiento': '3 tokens/seg' },
           ],
           columns: ['Hardware', 'Modelo', 'Latencia', 'Rendimiento'],
-          note: '**Nota sobre los datos de rendimiento**: Latencia y rendimiento medidos con el formato Qwen2.5-Coder 7B Q4_K_M, tamaño de lote = 1, en un sistema sin carga (sin tareas en segundo plano). Tu rendimiento real depende del sistema operativo, la disponibilidad de VRAM, el formato de cuantización y la carga concurrente.',
+          note: '**Nota sobre los datos de rendimiento**: Latencia y rendimiento medidos con el formato Qwen3-Coder 7B Q4_K_M, tamaño de lote = 1, en un sistema sin carga (sin tareas en segundo plano). Tu rendimiento real depende del sistema operativo, la disponibilidad de VRAM, el formato de cuantización y la carga concurrente.',
         },
         advanced: {
           title: '¿Cómo configurar las completaciones de código para obtener el mejor rendimiento?',
@@ -1108,7 +1108,7 @@ schema: {
           items: [
             'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ -- Official setup guide, config.json reference, and local model integration instructions.',
             'Cursor. (2026). "Cursor Documentation." https://docs.cursor.com/ -- Local model configuration, Ollama integration, and inference setup guide.',
-            'Alibaba Qwen Team. (2025). "Qwen2.5-Coder Technical Report." arXiv:2409.12186. https://arxiv.org/abs/2409.12186 -- HumanEval and code generation benchmarks for Qwen2.5-Coder variants.',
+            'Alibaba Qwen Team. (2025). "Qwen3-Coder Technical Report." arXiv:2409.12186. https://arxiv.org/abs/2409.12186 -- HumanEval and code generation benchmarks for Qwen3-Coder variants.',
             'DeepSeek-AI. (2024). "DeepSeek-Coder Technical Paper." arXiv:2401.14196. https://arxiv.org/abs/2401.14196 -- Benchmark data and capability analysis for DeepSeek-Coder family.',
           ],
         },
@@ -1122,7 +1122,7 @@ schema: {
         'step': [
           { '@type': 'HowToStep', 'name': 'Instala Continue.dev para VS Code', 'text': 'Instala la extensión Continue desde el marketplace de VS Code y configúrala para que apunte a tu servidor Ollama local.' },
           { '@type': 'HowToStep', 'name': 'Configura Cursor con LLM local', 'text': 'En los ajustes de Cursor, establece el proveedor de IA como tu endpoint local de Ollama (http://localhost:11434).' },
-          { '@type': 'HowToStep', 'name': 'Selecciona un modelo de código', 'text': 'Usa Qwen2.5-Coder 7B o DeepSeek-Coder para obtener los mejores resultados de completación de código local.' },
+          { '@type': 'HowToStep', 'name': 'Selecciona un modelo de código', 'text': 'Usa Qwen3-Coder 7B o DeepSeek-Coder para obtener los mejores resultados de completación de código local.' },
           { '@type': 'HowToStep', 'name': 'Prueba prompts con PromptQuorum', 'text': 'Compara las respuestas a prompts de código en varios modelos locales con PromptQuorum para encontrar el que mejor se adapta a tu flujo de trabajo.' },
         ],
       },
@@ -1143,7 +1143,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code usa la extensión Continue.dev para conectarse a modelos locales (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor es un fork de VS Code con soporte nativo para modelos locales. No necesitas ninguna extensión.' },
-          { '@type': 'ListItem', position: 3, name: '**Mejores modelos locales para código**: Qwen2.5-Coder 7B, Llama Code 13B o Mistral Small.' },
+          { '@type': 'ListItem', position: 3, name: '**Mejores modelos locales para código**: Qwen3-Coder 7B, Llama Code 13B o Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Espera una latencia de completación de 2-5 segundos en GPUs de consumo con modelos 7B.' },
           { '@type': 'ListItem', position: 5, name: 'A partir de abril de 2026, las completaciones de código locales son prácticas para uso personal, pero aún no están listas para producción en equipos.' },
         ],

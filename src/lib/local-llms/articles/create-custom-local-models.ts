@@ -128,7 +128,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Collect 500–5,000 domain-specific examples', 'text': 'Each example = input + expected output in JSON/JSONL format' },
-          { '@type': 'HowToStep', 'position': 2, 'name': 'Choose base model (Llama 3.3 8B or Qwen2.5 7B)', 'text': 'Use instruction-tuned variant for best results' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Choose base model (Llama 3.3 8B or Qwen3 7B)', 'text': 'Use instruction-tuned variant for best results' },
           { '@type': 'HowToStep', 'position': 3, 'name': 'Train with LoRA using Unsloth (4× faster)', 'text': 'lora_r=16, learning_rate=2e-4, 3 epochs, 8 GB VRAM' },
           { '@type': 'HowToStep', 'position': 4, 'name': 'Evaluate on held-out test set', 'text': 'Measure accuracy, F1, or task-specific metrics on unseen data' },
           { '@type': 'HowToStep', 'position': 5, 'name': 'Merge LoRA adapter into base model', 'text': 'model.merge_and_unload() creates single model file' },
@@ -510,7 +510,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Recolecta 500–5,000 ejemplos específicos del dominio', 'text': 'Cada ejemplo = entrada + salida esperada en formato JSON/JSONL' },
-          { '@type': 'HowToStep', 'position': 2, 'name': 'Elige el modelo base (Llama 3.3 8B o Qwen2.5 7B)', 'text': 'Usa la variante instruction-tuned para mejores resultados' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Elige el modelo base (Llama 3.3 8B o Qwen3 7B)', 'text': 'Usa la variante instruction-tuned para mejores resultados' },
           { '@type': 'HowToStep', 'position': 3, 'name': 'Entrena con LoRA usando Unsloth (4× más rápido)', 'text': 'lora_r=16, learning_rate=2e-4, 3 epochs, 8 GB VRAM' },
           { '@type': 'HowToStep', 'position': 4, 'name': 'Evalúa en el conjunto de prueba reservado', 'text': 'Mide precisión, F1 o métricas específicas de la tarea en datos no vistos' },
           { '@type': 'HowToStep', 'position': 5, 'name': 'Fusiona el adaptador LoRA en el modelo base', 'text': 'model.merge_and_unload() crea un único archivo de modelo' },
@@ -1303,7 +1303,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Collectez 500–5 000 exemples spécifiques au domaine', 'text': 'Chaque exemple = entrée + sortie attendue au format JSON/JSONL' },
-          { '@type': 'HowToStep', 'position': 2, 'name': 'Choisissez modèle base (Llama 3.3 8B ou Qwen2.5 7B)', 'text': 'Utilisez variante instruction-tuned meilleurs résultats' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Choisissez modèle base (Llama 3.3 8B ou Qwen3 7B)', 'text': 'Utilisez variante instruction-tuned meilleurs résultats' },
           { '@type': 'HowToStep', 'position': 3, 'name': 'Entraînez avec LoRA via Unsloth (4× plus rapide)', 'text': 'lora_r=16, learning_rate=2e-4, 3 epochs, 8 GB VRAM' },
           { '@type': 'HowToStep', 'position': 4, 'name': 'Évaluez sur ensemble test détenu', 'text': 'Mesurez précision, F1, ou métriques spécifiques tâche sur données non vues' },
           { '@type': 'HowToStep', 'position': 5, 'name': 'Fusionnez adaptateur LoRA dans modèle base', 'text': 'model.merge_and_unload() crée fichier modèle unique' },
@@ -1686,7 +1686,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': '500～5,000 ドメイン固有例を収集', 'text': '各例 = JSON/JSONL 形式の入力 + 期待される出力' },
-          { '@type': 'HowToStep', 'position': 2, 'name': 'ベースモデルを選択（Llama 3.3 8B または Qwen2.5 7B）', 'text': '最良の結果には命令チューン版を使用' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'ベースモデルを選択（Llama 3.3 8B または Qwen3 7B）', 'text': '最良の結果には命令チューン版を使用' },
           { '@type': 'HowToStep', 'position': 3, 'name': 'Unsloth を使用した LoRA でトレーニング（4 倍高速）', 'text': 'lora_r=16、learning_rate=2e-4、3 epochs、8 GB VRAM' },
           { '@type': 'HowToStep', 'position': 4, 'name': 'ホールドアウトテストセットで評価', 'text': '見ていないデータで精度、F1、またはタスク固有メトリクスを測定' },
           { '@type': 'HowToStep', 'position': 5, 'name': 'LoRA アダプターをベースモデルにマージ', 'text': 'model.merge_and_unload() は単一モデルファイルを作成' },
@@ -2070,7 +2070,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': '收集 500-5,000 个领域特定样本', 'text': '每个样本 = JSON/JSONL 格式的输入 + 预期输出' },
-          { '@type': 'HowToStep', 'position': 2, 'name': '选择基础模型（Llama 3.3 8B 或 Qwen2.5 7B）', 'text': '使用指令调优变体以获得最佳结果' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '选择基础模型（Llama 3.3 8B 或 Qwen3 7B）', 'text': '使用指令调优变体以获得最佳结果' },
           { '@type': 'HowToStep', 'position': 3, 'name': '使用 Unsloth 通过 LoRA 训练（快 4 倍）', 'text': 'lora_r=16, learning_rate=2e-4, 3 个 epoch, 8GB VRAM' },
           { '@type': 'HowToStep', 'position': 4, 'name': '在保留的测试集上评估', 'text': '在未见过的数据上测量准确性、F1 或特定任务指标' },
           { '@type': 'HowToStep', 'position': 5, 'name': '将 LoRA 适配器合并到基础模型中', 'text': 'model.merge_and_unload() 创建单个模型文件' },

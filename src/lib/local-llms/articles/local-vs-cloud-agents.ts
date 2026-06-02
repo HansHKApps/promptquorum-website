@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Task', 'Cloud Agents', 'Local Agents'],
           rows: [
             { 'Task': 'Multi-step reasoning', 'Cloud Agents': 'Excellent (GPT-4, Claude)', 'Local Agents': 'Good (13B+, DeepSeek-R1)' },
-            { 'Task': 'Code generation', 'Cloud Agents': 'Excellent', 'Local Agents': 'Good (Qwen2.5-Coder 32B)' },
+            { 'Task': 'Code generation', 'Cloud Agents': 'Excellent', 'Local Agents': 'Good (Qwen3-Coder 32B)' },
             { 'Task': 'Web search/browsing', 'Cloud Agents': 'Native (built-in)', 'Local Agents': 'DIY via [LangGraph](/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'Task': 'Document processing', 'Cloud Agents': 'Excellent', 'Local Agents': 'Good (via local RAG)' },
             { 'Task': 'Tool usage', 'Cloud Agents': 'Native function calling', 'Local Agents': 'Works via Ollama tool API' },
@@ -152,7 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**EU/DACH:** GDPR Article 28 and BSI-Grundschutz requirements strongly favor local agents for processing EU citizen data. Cloud agents require Standard Contractual Clauses for cross-border transfer to US providers.',
             '**Japan:** APPI requirements favor local agents for sensitive business data. Japanese enterprises in banking and healthcare increasingly deploy local agents for compliance.',
-            '**China:** Cloud agents from US providers (OpenAI, Anthropic) are not directly available. Local agents running [Qwen2.5](/local-llms/top-open-source-models-ollama) or DeepSeek comply with China\'s 2021 Data Security Law.',
+            '**China:** Cloud agents from US providers (OpenAI, Anthropic) are not directly available. Local agents running [Qwen3](/local-llms/top-open-source-models-ollama) or DeepSeek comply with China\'s 2021 Data Security Law.',
           ],
         },
         faqSection: {
@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Which local model is best for agents?',
-              a: 'Llama 3.3 70B for quality (needs dual RTX 4090), Qwen2.5 32B for balanced speed/quality (single RTX 4090), Llama 13B for cost-effective agents on RTX 4070 Ti. DeepSeek-R1 7B for reasoning-heavy tasks on budget hardware.',
+              a: 'Llama 3.3 70B for quality (needs dual RTX 4090), Qwen3 32B for balanced speed/quality (single RTX 4090), Llama 13B for cost-effective agents on RTX 4070 Ti. DeepSeek-R1 7B for reasoning-heavy tasks on budget hardware.',
             },
             {
               q: 'How do I handle agent failures locally?',
@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'sources',
           title: 'Sources',
           items: [
-            '[OpenAI API Pricing](https://openai.com/pricing) — Official GPT-4 and GPT-3.5 API pricing per token',
+            '[OpenAI API Pricing](https://openai.com/pricing) — Official OpenAI API pricing per token',
             '[Anthropic Claude Pricing](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet, Sonnet, and Haiku API pricing',
             '[Ollama Tool Calling Documentation](https://github.com/ollama/ollama/blob/main/docs/api.md) — Local model function calling API reference',
             '[LangGraph Documentation](https://langchain-ai.github.io/langgraph/) — Multi-agent orchestration framework for local and cloud LLMs',
@@ -247,7 +247,7 @@ schema: {
           { '@type': 'Question', 'name': 'Can I run a local agent on consumer hardware?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Llama 13B runs on RTX 4090 (24GB VRAM) at 2–3 sec per step. For 7B agents, RTX 4070 Ti (12GB) is sufficient.' } },
           { '@type': 'Question', 'name': 'Do local agents support tool use and function calling?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, via Ollama tool calling API (supported since Ollama 0.4+). LangGraph and LangChain integrate with local models for multi-step tool use.' } },
           { '@type': 'Question', 'name': 'Is hybrid deployment worth the complexity?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, for businesses processing 10M+ tokens/month. Route easy queries to local agents (free), complex queries to cloud (accurate). 80% cost reduction with no quality loss on complex queries.' } },
-          { '@type': 'Question', 'name': 'Which local model is best for agents?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B for quality (dual RTX 4090), Qwen2.5 32B for balanced speed/quality (single RTX 4090), Llama 13B for cost-effective agents on RTX 4070 Ti.' } },
+          { '@type': 'Question', 'name': 'Which local model is best for agents?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B for quality (dual RTX 4090), Qwen3 32B for balanced speed/quality (single RTX 4090), Llama 13B for cost-effective agents on RTX 4070 Ti.' } },
           { '@type': 'Question', 'name': 'How do I handle agent failures locally?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Set OLLAMA_KEEP_ALIVE for persistent model loading, implement health checks, add fallback to cloud API for critical workflows. Production local agents need monitoring (Prometheus, Grafana).' } },
           { '@type': 'Question', 'name': 'Will local agents match cloud quality by 2027?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For 70B models: likely within 90% of GPT-4 quality by late 2027. For 13B: not yet. The gap is narrowing but cloud maintains an edge on novel reasoning.' } },
         ],
@@ -357,7 +357,7 @@ schema: {
           columns: ['Tarea', 'Agentes Cloud', 'Agentes locales'],
           rows: [
             { 'Tarea': 'Razonamiento multietapa', 'Agentes Cloud': 'Excelente (GPT-4, Claude)', 'Agentes locales': 'Bueno (13B+, DeepSeek-R1)' },
-            { 'Tarea': 'Generación de código', 'Agentes Cloud': 'Excelente', 'Agentes locales': 'Bueno (Qwen2.5-Coder 32B)' },
+            { 'Tarea': 'Generación de código', 'Agentes Cloud': 'Excelente', 'Agentes locales': 'Bueno (Qwen3-Coder 32B)' },
             { 'Tarea': 'Búsqueda web/navegación', 'Agentes Cloud': 'Nativo (integrado)', 'Agentes locales': 'DIY via [LangGraph](/es/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'Tarea': 'Procesamiento de documentos', 'Agentes Cloud': 'Excelente', 'Agentes locales': 'Bueno (via RAG local)' },
             { 'Tarea': 'Uso de herramientas', 'Agentes Cloud': 'Function calling nativo', 'Agentes locales': 'Funciona via Ollama tool API' },
@@ -411,7 +411,7 @@ schema: {
           content: [
             '**UE/España y LATAM:** El Artículo 28 del RGPD y los requisitos de cumplimiento normativo favorecen fuertemente los agentes locales para el procesamiento de datos de ciudadanos de la UE. Los agentes Cloud requieren Cláusulas Contractuales Estándar para la transferencia transfronteriza a proveedores estadounidenses.',
             '**Japón:** Los requisitos de la APPI favorecen los agentes locales para datos empresariales sensibles. Las empresas japonesas de banca y sanidad despliegan cada vez más agentes locales para el cumplimiento.',
-            '**China:** Los agentes Cloud de proveedores estadounidenses (OpenAI, Anthropic) no están disponibles directamente. Los agentes locales que ejecutan [Qwen2.5](/es/local-llms/top-open-source-models-ollama) o DeepSeek cumplen con la Ley de Seguridad de Datos de China de 2021.',
+            '**China:** Los agentes Cloud de proveedores estadounidenses (OpenAI, Anthropic) no están disponibles directamente. Los agentes locales que ejecutan [Qwen3](/es/local-llms/top-open-source-models-ollama) o DeepSeek cumplen con la Ley de Seguridad de Datos de China de 2021.',
           ],
         },
         faqSection: {
@@ -440,7 +440,7 @@ schema: {
             },
             {
               q: '¿Qué modelo local es mejor para agentes?',
-              a: 'Llama 3.3 70B para calidad (necesita doble RTX 4090), Qwen2.5 32B para equilibrio velocidad/calidad (RTX 4090 única), Llama 13B para agentes rentables en RTX 4070 Ti. DeepSeek-R1 7B para tareas de razonamiento intensivo en hardware económico.',
+              a: 'Llama 3.3 70B para calidad (necesita doble RTX 4090), Qwen3 32B para equilibrio velocidad/calidad (RTX 4090 única), Llama 13B para agentes rentables en RTX 4070 Ti. DeepSeek-R1 7B para tareas de razonamiento intensivo en hardware económico.',
             },
             {
               q: '¿Cómo gestiono los fallos de agentes locales?',
@@ -468,7 +468,7 @@ schema: {
           id: 'sources',
           title: 'Fuentes',
           items: [
-            '[Precios de la API de OpenAI](https://openai.com/pricing) — Precios oficiales por token de la API de GPT-4 y GPT-3.5',
+            '[Precios de la API de OpenAI](https://openai.com/pricing) — Precios oficiales por token de la API de GPT-4 y GPT-4o mini',
             '[Precios de Anthropic Claude](https://www.anthropic.com/pricing) — Precios de la API de Claude 4.6 Sonnet, Sonnet y Haiku',
             '[Documentación de Ollama Tool Calling](https://github.com/ollama/ollama/blob/main/docs/api.md) — Referencia de la API de function calling de modelos locales',
             '[Documentación de LangGraph](https://langchain-ai.github.io/langgraph/) — Framework de orquestación multiagente para LLMs locales y Cloud',
@@ -500,7 +500,7 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'GPT-4' },
           { '@type': 'SoftwareApplication', 'name': 'Claude 4.6' },
           { '@type': 'SoftwareApplication', 'name': 'Llama 13B' },
-          { '@type': 'SoftwareApplication', 'name': 'Qwen2.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Qwen3' },
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'LangGraph' },
         ],
@@ -514,7 +514,7 @@ schema: {
           { '@type': 'Question', 'name': '¿Puedo ejecutar un agente local en hardware de consumo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Un agente Llama 13B funciona en una RTX 4090 (24GB VRAM) a 2–3 s por paso. Para agentes de 7B, una RTX 4070 Ti (12GB) es suficiente.' } },
           { '@type': 'Question', 'name': '¿Los agentes locales admiten uso de herramientas y function calling?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, a través de la API de herramientas de Ollama (desde Ollama 0.4+). LangGraph y LangChain se integran con modelos locales para el uso de herramientas multietapa.' } },
           { '@type': 'Question', 'name': '¿Vale la pena la complejidad del despliegue híbrido?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, para empresas que procesan 10M+ tokens/mes. Consultas fáciles a local (gratis), consultas difíciles a Cloud (precisas). Reducción de costes del 80% sin pérdida de calidad.' } },
-          { '@type': 'Question', 'name': '¿Qué modelo local es mejor para agentes?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B para calidad (doble RTX 4090), Qwen2.5 32B para equilibrio velocidad/calidad (RTX 4090 única), Llama 13B para agentes rentables en RTX 4070 Ti.' } },
+          { '@type': 'Question', 'name': '¿Qué modelo local es mejor para agentes?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B para calidad (doble RTX 4090), Qwen3 32B para equilibrio velocidad/calidad (RTX 4090 única), Llama 13B para agentes rentables en RTX 4070 Ti.' } },
           { '@type': 'Question', 'name': '¿Cómo gestiono los fallos de agentes locales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Configura OLLAMA_KEEP_ALIVE para la carga persistente del modelo, implementa comprobaciones de salud, añade fallback a Cloud API para flujos críticos. Los agentes en producción necesitan monitorización (Prometheus, Grafana).' } },
           { '@type': 'Question', 'name': '¿Igualarán los agentes locales la calidad Cloud en 2027?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para modelos de 70B: probablemente dentro del 90% de la calidad de GPT-4 a finales de 2027. Para modelos de 13B: todavía no. La brecha se está reduciendo, pero Cloud mantiene ventaja en razonamiento novedoso.' } },
         ],
@@ -624,7 +624,7 @@ schema: {
           columns: ['Aufgabe', 'Cloud-Agenten', 'Local-Agenten'],
           rows: [
             { 'Aufgabe': 'Multi-Step-Reasoning', 'Cloud-Agenten': 'Hervorragend (GPT-4, Claude)', 'Local-Agenten': 'Gut (13B+, DeepSeek-R1)' },
-            { 'Aufgabe': 'Code-Generierung', 'Cloud-Agenten': 'Hervorragend', 'Local-Agenten': 'Gut (Qwen2.5-Coder 32B)' },
+            { 'Aufgabe': 'Code-Generierung', 'Cloud-Agenten': 'Hervorragend', 'Local-Agenten': 'Gut (Qwen3-Coder 32B)' },
             { 'Aufgabe': 'Websuche/Browsing', 'Cloud-Agenten': 'Nativ (eingebaut)', 'Local-Agenten': 'Selbstgebaut via [LangGraph](/de/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'Aufgabe': 'Dokumentenverarbeitung', 'Cloud-Agenten': 'Hervorragend', 'Local-Agenten': 'Gut (via lokales RAG)' },
             { 'Aufgabe': 'Tool-Nutzung', 'Cloud-Agenten': 'Nativ Function Calling', 'Local-Agenten': 'Funktioniert via Ollama Tool API' },
@@ -681,7 +681,7 @@ schema: {
             '**EU/DACH:** DSGVO Artikel 28 und BSI-Grundschutz-Anforderungen begünstigen Local-Agenten stark bei der Verarbeitung von EU-Bürgerdaten. Cloud-Agenten erfordern Standardvertragsklauseln für grenzüberschreitende Transfers zu US-Anbietern.',
             '**Mittelstand & KMU (Deutschland, Österreich, Schweiz):** Kleine und mittlere Unternehmen (KMU) in DACH profitieren von Local-Agenten zur Einhaltung von BSI-Grundschutz-Katalogen und IT-Sicherheitsstandards. Kostenfreie Inference nach Hardware-Investment ist besonders wertvoll für Mittelstand mit begrenztem Cloud-Budget.',
             '**Japan:** APPI-Anforderungen begünstigen Local-Agenten für sensible Geschäftsdaten. Japanische Unternehmen in Banking und Gesundheitswesen setzen zunehmend Local-Agenten zur Compliance ein.',
-            '**China:** Cloud-Agenten von US-Anbietern (OpenAI, Anthropic) sind nicht direkt verfügbar. Local-Agenten mit [Qwen2.5](/de/local-llms/top-open-source-models-ollama) oder DeepSeek entsprechen Chinas Datensicherheitsgesetz von 2021.',
+            '**China:** Cloud-Agenten von US-Anbietern (OpenAI, Anthropic) sind nicht direkt verfügbar. Local-Agenten mit [Qwen3](/de/local-llms/top-open-source-models-ollama) oder DeepSeek entsprechen Chinas Datensicherheitsgesetz von 2021.',
           ],
         },
         faqSection: {
@@ -710,7 +710,7 @@ schema: {
             },
             {
               q: 'Welches lokale Modell ist am besten für Agenten?',
-              a: 'Llama 3.3 70B für Qualität (benötigt dual RTX 4090), Qwen2.5 32B für ausgewogene Geschwindigkeit/Qualität (einzelne RTX 4090), Llama 13B für kostengünstige Agenten auf RTX 4070 Ti. DeepSeek-R1 7B für Reasoning-intensive Aufgaben auf Budget-Hardware.',
+              a: 'Llama 3.3 70B für Qualität (benötigt dual RTX 4090), Qwen3 32B für ausgewogene Geschwindigkeit/Qualität (einzelne RTX 4090), Llama 13B für kostengünstige Agenten auf RTX 4070 Ti. DeepSeek-R1 7B für Reasoning-intensive Aufgaben auf Budget-Hardware.',
             },
             {
               q: 'Wie handhabe ich Local-Agent-Ausfälle?',
@@ -746,7 +746,7 @@ schema: {
           id: 'sources',
           title: 'Quellen',
           items: [
-            '[OpenAI API Pricing](https://openai.com/pricing) — Offizielle Preisgestaltung von GPT-4 und GPT-3.5 API pro Token',
+            '[OpenAI API Pricing](https://openai.com/pricing) — Offizielle Preisgestaltung von GPT-4 und GPT-4o mini API pro Token',
             '[Anthropic Claude Pricing](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet, Sonnet und Haiku API-Preisgestaltung',
             '[Ollama Tool Calling Documentation](https://github.com/ollama/ollama/blob/main/docs/api.md) — Referenz zur lokalen Modell-Function-Calling-API',
             '[LangGraph Documentation](https://langchain-ai.github.io/langgraph/) — Multi-Agent-Orchestrierungs-Framework für lokale und Cloud-LLMs',
@@ -783,7 +783,7 @@ schema: {
           { '@type': 'Question', 'name': 'Kann ich einen Local-Agenten auf Consumer-Hardware ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Llama 13B läuft auf RTX 4090 (24GB VRAM) mit 2–3 sec pro Schritt. Für 7B-Agenten ist RTX 4070 Ti (12GB) ausreichend.' } },
           { '@type': 'Question', 'name': 'Unterstützen Local-Agenten Tool-Nutzung und Function Calling?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, über Ollamas Tool-Calling-API (unterstützt seit Ollama 0.4+). LangGraph und LangChain integrieren sich mit lokalen Modellen für Multi-Step-Tool-Nutzung.' } },
           { '@type': 'Question', 'name': 'Lohnt sich eine Hybrid-Bereitstellung angesichts der Komplexität?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, für Unternehmen, die 10M+ Token pro Monat verarbeiten. Leiten Sie einfache Anfragen lokal (kostenlos), schwierige Anfragen an Cloud (genau). 80% Kosteneinsparung ohne Qualitätsverlust.' } },
-          { '@type': 'Question', 'name': 'Welches lokale Modell ist am besten für Agenten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B für Qualität (dual RTX 4090), Qwen2.5 32B für ausgewogene Geschwindigkeit/Qualität (einzelne RTX 4090), Llama 13B für kostengünstige Agenten auf RTX 4070 Ti.' } },
+          { '@type': 'Question', 'name': 'Welches lokale Modell ist am besten für Agenten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B für Qualität (dual RTX 4090), Qwen3 32B für ausgewogene Geschwindigkeit/Qualität (einzelne RTX 4090), Llama 13B für kostengünstige Agenten auf RTX 4070 Ti.' } },
           { '@type': 'Question', 'name': 'Wie handhabe ich Local-Agent-Ausfälle?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Setzen Sie OLLAMA_KEEP_ALIVE für persistentes Modell-Laden, implementieren Sie Health-Checks, fügen Sie einen Fallback zu Cloud-API hinzu. Production-Agenten benötigen Monitoring (Prometheus, Grafana).' } },
           { '@type': 'Question', 'name': 'Werden Local-Agenten bis 2027 die Cloud-Qualität erreichen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für 70B-Modelle: wahrscheinlich innerhalb von 90% der GPT-4-Qualität bis Ende 2027. Für 13B: nicht bald. Die Lücke schließt sich, aber Cloud behält einen Vorteil.' } },
           { '@type': 'Question', 'name': 'Ist eine lokale Bereitstellung für DSGVO und DACH-Compliance notwendig?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht unbedingt notwendig, aber stark empfohlen. DSGVO Artikel 28 erfordert eine Datenverarbeitungsvereinbarung für Cloud-KI. Local-Agenten eliminieren diese Anforderung völlig. BSI-Grundschutz bevorzugt Local-Deployment.' } },
@@ -895,7 +895,7 @@ schema: {
           columns: ['Tâche', 'Agents Cloud', 'Agents locaux'],
           rows: [
             { 'Tâche': 'Raisonnement multi-étapes', 'Agents Cloud': 'Excellent (GPT-4, Claude)', 'Agents locaux': 'Bon (13B+, DeepSeek-R1)' },
-            { 'Tâche': 'Génération de code', 'Agents Cloud': 'Excellent', 'Agents locaux': 'Bon (Qwen2.5-Coder 32B)' },
+            { 'Tâche': 'Génération de code', 'Agents Cloud': 'Excellent', 'Agents locaux': 'Bon (Qwen3-Coder 32B)' },
             { 'Tâche': 'Recherche/navigation web', 'Agents Cloud': 'Natif (intégré)', 'Agents locaux': 'Personnalisé via [LangGraph](/fr/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'Tâche': 'Traitement de documents', 'Agents Cloud': 'Excellent', 'Agents locaux': 'Bon (via RAG local)' },
             { 'Tâche': 'Utilisation d\'outils', 'Agents Cloud': 'Appel de fonction natif', 'Agents locaux': 'Fonctionne via API d\'outils Ollama' },
@@ -951,7 +951,7 @@ schema: {
           content: [
             '**UE :** Le RGPD Article 28 et les standards de conformité exigent des accords de traitement pour l\'IA Cloud. Les agents locaux éliminent cette exigence. La CNIL recommande les agents locaux pour le traitement des données sensibles des citoyens de l\'UE.',
             '**Japon :** Les exigences APPI favorisent les agents locaux pour les données commerciales sensibles. Les entreprises japonaises du secteur bancaire et de la santé déploient de plus en plus d\'agents locaux pour se conformer.',
-            '**Chine :** Les agents Cloud des fournisseurs américains (OpenAI, Anthropic) ne sont pas directement disponibles. Les agents locaux avec [Qwen2.5](/fr/local-llms/top-open-source-models-ollama) ou DeepSeek se conforment à la Loi sur la sécurité des données 2021 de la Chine.',
+            '**Chine :** Les agents Cloud des fournisseurs américains (OpenAI, Anthropic) ne sont pas directement disponibles. Les agents locaux avec [Qwen3](/fr/local-llms/top-open-source-models-ollama) ou DeepSeek se conforment à la Loi sur la sécurité des données 2021 de la Chine.',
           ],
         },
         faqSection: {
@@ -980,7 +980,7 @@ schema: {
             },
             {
               q: 'Quel modèle local convient le mieux aux agents?',
-              a: 'Llama 3.3 70B pour la qualité (nécessite dual RTX 4090), Qwen2.5 32B pour vitesse/qualité équilibrée (single RTX 4090), Llama 13B pour agents économiques sur RTX 4070 Ti. DeepSeek-R1 7B pour tâches lourdes en raisonnement sur matériel budget.',
+              a: 'Llama 3.3 70B pour la qualité (nécessite dual RTX 4090), Qwen3 32B pour vitesse/qualité équilibrée (single RTX 4090), Llama 13B pour agents économiques sur RTX 4070 Ti. DeepSeek-R1 7B pour tâches lourdes en raisonnement sur matériel budget.',
             },
             {
               q: 'Comment gérer les défaillances d\'agents locaux?',
@@ -1016,7 +1016,7 @@ schema: {
           id: 'sources',
           title: 'Sources',
           items: [
-            '[Tarification API OpenAI](https://openai.com/pricing) — Tarification officielle GPT-4 et GPT-3.5 API par token',
+            '[Tarification API OpenAI](https://openai.com/pricing) — Tarification officielle GPT-4 et GPT-4o mini API par token',
             '[Tarification Anthropic Claude](https://www.anthropic.com/pricing) — Tarification Claude 4.6 Sonnet, Sonnet et Haiku API',
             '[Documentation Ollama Tool Calling](https://github.com/ollama/ollama/blob/main/docs/api.md) — Référence API appel de fonction modèles locaux',
             '[Documentation LangGraph](https://langchain-ai.github.io/langgraph/) — Framework orchestration multi-agents pour LLMs locaux et Cloud',
@@ -1053,7 +1053,7 @@ schema: {
           { '@type': 'Question', 'name': 'Puis-je exécuter un agent local sur du matériel grand public?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Agent Llama 13B fonctionne sur RTX 4090 (24GB VRAM) à 2–3 sec/étape. Pour 7B, RTX 4070 Ti (12GB) suffit.' } },
           { '@type': 'Question', 'name': 'Les agents locaux supportent-ils l\'utilisation d\'outils et l\'appel de fonction?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, via API d\'outils Ollama (Ollama 0.4+). LangGraph et LangChain s\'intègrent avec modèles locaux pour utilisation d\'outils multi-étapes.' } },
           { '@type': 'Question', 'name': 'Le déploiement hybride vaut-il la complexité?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, pour entreprises traitant 10M+ tokens/mois. Routez requêtes faciles en local (gratuit), requêtes difficiles vers Cloud (exact). 80% réduction coûts.' } },
-          { '@type': 'Question', 'name': 'Quel modèle local convient le mieux aux agents?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B pour qualité (dual RTX 4090), Qwen2.5 32B pour vitesse/qualité (single RTX 4090), Llama 13B pour agents économiques sur RTX 4070 Ti.' } },
+          { '@type': 'Question', 'name': 'Quel modèle local convient le mieux aux agents?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B pour qualité (dual RTX 4090), Qwen3 32B pour vitesse/qualité (single RTX 4090), Llama 13B pour agents économiques sur RTX 4070 Ti.' } },
           { '@type': 'Question', 'name': 'Comment gérer les défaillances d\'agents locaux?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Définissez OLLAMA_KEEP_ALIVE pour chargement persistant, implémentez health checks, ajoutez fallback Cloud API. Agents production nécessitent monitoring (Prometheus, Grafana).' } },
           { '@type': 'Question', 'name': 'Les agents locaux égaleront-ils la qualité Cloud en 2027?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Modèles 70B : probablement 90% qualité GPT-4 fin 2027. Modèles 13B : pas encore. L\'écart se réduit mais Cloud maintient avantage.' } },
           { '@type': 'Question', 'name': 'Dois-je déployer localement pour la conformité RGPD?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pas obligatoire, mais fortement recommandé. RGPD Article 28 exige accord traitement Cloud. Agents locaux éliminent cette exigence. CNIL recommande local pour données sensibles.' } },
@@ -1165,7 +1165,7 @@ schema: {
           columns: ['タスク', 'Cloudエージェント', 'Localエージェント'],
           rows: [
             { 'タスク': 'マルチステップreasoning', 'Cloudエージェント': '優秀(GPT-4, Claude)', 'Localエージェント': '良好(13B+, DeepSeek-R1)' },
-            { 'タスク': 'コード生成', 'Cloudエージェント': '優秀', 'Localエージェント': '良好(Qwen2.5-Coder 32B)' },
+            { 'タスク': 'コード生成', 'Cloudエージェント': '優秀', 'Localエージェント': '良好(Qwen3-Coder 32B)' },
             { 'タスク': 'ウェブ検索/ブラウジング', 'Cloudエージェント': 'ネイティブ(内蔵)', 'Localエージェント': 'カスタム構築via [LangGraph](/ja/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'タスク': 'ドキュメント処理', 'Cloudエージェント': '優秀', 'Localエージェント': '良好(ローカルRAG経由)' },
             { 'タスク': 'ツール利用', 'Cloudエージェント': 'ネイティブ関数呼び出し', 'Localエージェント': 'Ollama Tool API経由で機能' },
@@ -1250,7 +1250,7 @@ schema: {
             },
             {
               q: 'エージェント向けベストなLocal modelは?',
-              a: '品質重視: Llama 3.3 70B(dual RTX 4090必須)。速度/品質バランス: Qwen2.5 32B(single RTX 4090)。コスト効率: Llama 13B RTX 4070 Ti対応。理由ウェイトタスク: DeepSeek-R1 7B 予算ハード向け。',
+              a: '品質重視: Llama 3.3 70B(dual RTX 4090必須)。速度/品質バランス: Qwen3 32B(single RTX 4090)。コスト効率: Llama 13B RTX 4070 Ti対応。理由ウェイトタスク: DeepSeek-R1 7B 予算ハード向け。',
             },
             {
               q: 'Localエージェント障害への対処?',
@@ -1286,7 +1286,7 @@ schema: {
           id: 'sources',
           title: '情報源',
           items: [
-            '[OpenAI API価格設定](https://openai.com/pricing) — GPT-4/GPT-3.5 API公式トークンあたり価格',
+            '[OpenAI API価格設定](https://openai.com/pricing) — GPT-4/GPT-4o mini API公式トークンあたり価格',
             '[Anthropic Claude価格設定](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet/Sonnet/Haiku API価格',
             '[Ollama Tool Calling Documentation](https://github.com/ollama/ollama/blob/main/docs/api.md) — Local model関数呼び出しAPI リファレンス',
             '[LangGraph Documentation](https://langchain-ai.github.io/langgraph/) — Local/Cloud LLM対応マルチエージェント オーケストレーション',
@@ -1323,7 +1323,7 @@ schema: {
           { '@type': 'Question', 'name': 'コンシューマーハードウェアでLocalエージェント実行可?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Llama 13B エージェントはRTX 4090(24GB VRAM)で2–3秒/ステップ。7B用ならRTX 4070 Ti(12GB)充分。' } },
           { '@type': 'Question', 'name': 'Localエージェントはツール利用と関数呼び出し対応?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、Ollama Tool API経由(Ollama 0.4+)。LangGraphとLangChainはLocal modelsのマルチステップツール利用に統合。' } },
           { '@type': 'Question', 'name': 'ハイブリッド導入は複雑さに見合う?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、10M+ tokens/月処理企業向け。ルーティングロジック単純: シンプルクエリLocal(無料), 難問題Cloud(正確)。複雑クエリで品質損失なく80%削減。' } },
-          { '@type': 'Question', 'name': 'エージェント向けベストなLocal modelは?', 'acceptedAnswer': { '@type': 'Answer', 'text': '品質: Llama 3.3 70B(dual RTX 4090)。速度/品質バランス: Qwen2.5 32B(single RTX 4090)。コスト効率: Llama 13B RTX 4070 Ti。' } },
+          { '@type': 'Question', 'name': 'エージェント向けベストなLocal modelは?', 'acceptedAnswer': { '@type': 'Answer', 'text': '品質: Llama 3.3 70B(dual RTX 4090)。速度/品質バランス: Qwen3 32B(single RTX 4090)。コスト効率: Llama 13B RTX 4070 Ti。' } },
           { '@type': 'Question', 'name': 'Localエージェント障害への対処?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'VRAM超過時クラッシュ/ハング可能。OLLAMA_KEEP_ALIVE 設定、health checks実装、クリティカルワークフローにCloud API fallback。本番は監視(Prometheus, Grafana)必須。' } },
           { '@type': 'Question', 'name': '2027年、LocalエージェントはCloud品質到達?', 'acceptedAnswer': { '@type': 'Answer', 'text': '70B model: 2027年末までにGPT-4品質の90%到達可能。13B: 未対応。ギャップ縮小中だがCloud優位保持。' } },
           { '@type': 'Question', 'name': 'GDPR/オンプレミス準拠でLocal導入必須?', 'acceptedAnswer': { '@type': 'Answer', 'text': '必須でなく、強く推奨。GDPR Article 28はCloud AIに処理契約要求。Localエージェント この要件完全排除。' } },
@@ -1435,7 +1435,7 @@ schema: {
           columns: ['任务', '云端代理', '本地代理'],
           rows: [
             { '任务': '多步推理', '云端代理': '优秀(GPT-4、Claude)', '本地代理': '良好(13B+、DeepSeek-R1)' },
-            { '任务': '代码生成', '云端代理': '优秀', '本地代理': '良好(Qwen2.5-Coder 32B)' },
+            { '任务': '代码生成', '云端代理': '优秀', '本地代理': '良好(Qwen3-Coder 32B)' },
             { '任务': '网络搜索/浏览', '云端代理': '原生(内置)', '本地代理': 'DIY via [LangGraph](/zh/local-llms/local-ai-agents-langgraph-ollama)' },
             { '任务': '文档处理', '云端代理': '优秀', '本地代理': '良好(通过本地RAG)' },
             { '任务': '工具使用', '云端代理': '原生函数调用', '本地代理': '通过Ollama工具API工作' },
@@ -1489,7 +1489,7 @@ schema: {
           id: 'regional-context',
           title: '地区考虑因素',
           content: [
-            '**中国(数据安全法):** 中国2021年《数据安全法》要求个人和企业数据处理保持在境内。美国云端AI供应商(OpenAI、Anthropic)在中国无法直接获取。本地代理运行Qwen2.5或DeepSeek完全符合数据安全法要求。中国金融机构和科技公司日益部署本地代理以确保法律合规。',
+            '**中国(数据安全法):** 中国2021年《数据安全法》要求个人和企业数据处理保持在境内。美国云端AI供应商(OpenAI、Anthropic)在中国无法直接获取。本地代理运行Qwen3或DeepSeek完全符合数据安全法要求。中国金融机构和科技公司日益部署本地代理以确保法律合规。',
             '**亚太地区(数据跨境):** 新加坡、日本、澳大利亚和东南亚多国的数据主权法正在加速本地代理采用。ASEAN框架要求敏感数据处理遵守跨境规则。本地代理在东京、新加坡、悉尼部署可完全避免地区外数据转移。',
             '**企业部署(多地区):** 大型金融机构(银行、保险)、医疗集团和法律事务所跨地区运行本地代理。使用Prometheus/Grafana监控实现完整的数据驻留合规、审计跟踪和安全隔离。成本效益和合规性使本地代理成为亚太地区大企业的首选。',
           ],
@@ -1520,7 +1520,7 @@ schema: {
             },
             {
               q: '最适合代理的本地模型是什么?',
-              a: '质量优先: Llama 3.3 70B(需双RTX 4090)。速度/质量均衡: Qwen2.5 32B(单RTX 4090)。成本效益: Llama 13B RTX 4070 Ti兼容。推理密集任务: DeepSeek-R1 7B预算硬件。',
+              a: '质量优先: Llama 3.3 70B(需双RTX 4090)。速度/质量均衡: Qwen3 32B(单RTX 4090)。成本效益: Llama 13B RTX 4070 Ti兼容。推理密集任务: DeepSeek-R1 7B预算硬件。',
             },
             {
               q: '如何处理本地代理故障?',
@@ -1556,7 +1556,7 @@ schema: {
           id: 'sources',
           title: '参考资源',
           items: [
-            '[OpenAI API价格](https://openai.com/pricing) — GPT-4和GPT-3.5官方API令牌价格',
+            '[OpenAI API价格](https://openai.com/pricing) — GPT-4和GPT-4o mini官方API令牌价格',
             '[Anthropic Claude价格](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet、Sonnet和Haiku API价格',
             '[Ollama工具调用文档](https://github.com/ollama/ollama/blob/main/docs/api.md) — 本地模型函数调用API参考',
             '[LangGraph文档](https://langchain-ai.github.io/langgraph/) — 本地和云端LLM的多代理编排框架',
@@ -1593,7 +1593,7 @@ schema: {
           { '@type': 'Question', 'name': '我能在消费级硬件上运行本地代理吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '能。Llama 13B代理在RTX 4090(24GB VRAM)上以2–3秒/步运行。7B代理用RTX 4070 Ti(12GB)足够。' } },
           { '@type': 'Question', 'name': '本地代理支持工具使用和函数调用吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '支持，通过Ollama工具API(Ollama 0.4+)。LangGraph和LangChain与本地模型集成用于多步工具使用。' } },
           { '@type': 'Question', 'name': '混合部署的复杂性值得吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于处理10M+令牌/月的企业: 值得。简单查询本地(免费)，难查询云端(准确)。复杂查询无质量损失，成本降低80%。' } },
-          { '@type': 'Question', 'name': '最适合代理的本地模型是什么?', 'acceptedAnswer': { '@type': 'Answer', 'text': '质量: Llama 3.3 70B(双RTX 4090)。速度/质量: Qwen2.5 32B(单RTX 4090)。成本效益: Llama 13B RTX 4070 Ti。' } },
+          { '@type': 'Question', 'name': '最适合代理的本地模型是什么?', 'acceptedAnswer': { '@type': 'Answer', 'text': '质量: Llama 3.3 70B(双RTX 4090)。速度/质量: Qwen3 32B(单RTX 4090)。成本效益: Llama 13B RTX 4070 Ti。' } },
           { '@type': 'Question', 'name': '如何处理本地代理故障?', 'acceptedAnswer': { '@type': 'Answer', 'text': '设置OLLAMA_KEEP_ALIVE用于持久模型加载，实施健康检查，为关键工作流添加云API回退。生产需要监控(Prometheus、Grafana)。' } },
           { '@type': 'Question', 'name': '本地代理到2027年会达到云端质量吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '70B模型: 可能在2027年底达到GPT-4质量的90%。13B模型: 尚不。差距在缩小但云端保持优势。' } },
           { '@type': 'Question', 'name': '我需要本地部署实现GDPR合规吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '不是必需，但强烈推荐。GDPR第28条要求云端AI签订数据处理协议。本地代理完全消除此要求。' } },

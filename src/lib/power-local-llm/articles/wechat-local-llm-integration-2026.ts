@@ -13,9 +13,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Connecting WeChat to a local LLM gives you a private AI assistant that replies in the world\'s most-used messaging app — without sending a single message to a cloud API. This guide covers three integration patterns (WeChatFerry on Windows, HTTP webhook bridge, always-on mini PC server), helps you choose the right Qwen model for Chinese chat, and shows how local inference satisfies China\'s Data Security Law.',
     metaDescription:
-      'Connect WeChat to a local LLM in 2026. Three patterns: WeChatFerry, HTTP webhook, mini PC Ollama server. Qwen2.5 7B for Chinese. No cloud API.',
+      'Connect WeChat to a local LLM in 2026. Three patterns: WeChatFerry, HTTP webhook, mini PC Ollama server. Qwen3 7B for Chinese. No cloud API.',
     twitterDescription:
-      'Build a WeChat + local LLM bridge: WeChatFerry, HTTP webhook, or mini PC server. Qwen2.5 7B for Chinese. No cloud API required.',
+      'Build a WeChat + local LLM bridge: WeChatFerry, HTTP webhook, or mini PC server. Qwen3 7B for Chinese. No cloud API required.',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
     readTime: '11 min read',
     educationalLevel: 'Intermediate',
@@ -28,16 +28,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local llm wechat python',
     ],
     leadAnswerBlock:
-      '**Connect WeChat to a local LLM by running Ollama on an always-on mini PC, then bridging WeChat messages to the Ollama HTTP API via WeChatFerry (Windows) or a webhook listener. Qwen2.5 7B Q4_K_M is the best model for Chinese-language WeChat chat — native CJK tokenisation, 5.5 GB VRAM, and 8–15 tok/s on modest hardware.**',
+      '**Connect WeChat to a local LLM by running Ollama on an always-on mini PC, then bridging WeChat messages to the Ollama HTTP API via WeChatFerry (Windows) or a webhook listener. Qwen3 7B Q4_K_M is the best model for Chinese-language WeChat chat — native CJK tokenisation, 5.5 GB VRAM, and 8–15 tok/s on modest hardware.**',
     quickAnswerTop: {
       en: {
         question: 'How do I connect WeChat to a local LLM?',
         answer:
-          'Run Ollama on a mini PC (or localhost), install WeChatFerry to intercept WeChat PC client messages, write a Python bridge that sends messages to Ollama\'s HTTP API at localhost:11434, and return the LLM response to the chat. Qwen2.5 7B Q4_K_M is the recommended model for Chinese-language chat.',
+          'Run Ollama on a mini PC (or localhost), install WeChatFerry to intercept WeChat PC client messages, write a Python bridge that sends messages to Ollama\'s HTTP API at localhost:11434, and return the LLM response to the chat. Qwen3 7B Q4_K_M is the recommended model for Chinese-language chat.',
         bullets: [
           'WeChatFerry: Windows-only WeChat hook; most reliable approach for 2026',
           'Ollama HTTP API: POST to /api/generate — no cloud credentials needed',
-          'Qwen2.5 7B Q4_K_M: 5.5 GB VRAM, native CJK tokenisation, 8–15 tok/s',
+          'Qwen3 7B Q4_K_M: 5.5 GB VRAM, native CJK tokenisation, 8–15 tok/s',
           'Mini PC server: Minisforum UM890 Pro runs 24/7 at ~35 W for always-on chat',
           'Privacy: zero data transmitted to WeChat servers or any LLM API',
         ],
@@ -46,11 +46,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Wie verbinde ich WeChat mit einem lokalen LLM?',
         answer:
-          'Ollama auf einem Mini-PC betreiben, WeChatFerry für die Windows-WeChat-Client-Integration installieren, Python-Bridge schreiben, die Nachrichten an localhost:11434 weiterleitet, und LLM-Antworten zurück in den Chat senden. Empfohlen: Qwen2.5 7B Q4_K_M für chinesischen Text.',
+          'Ollama auf einem Mini-PC betreiben, WeChatFerry für die Windows-WeChat-Client-Integration installieren, Python-Bridge schreiben, die Nachrichten an localhost:11434 weiterleitet, und LLM-Antworten zurück in den Chat senden. Empfohlen: Qwen3 7B Q4_K_M für chinesischen Text.',
         bullets: [
           'WeChatFerry: nur Windows, zuverlässigster Ansatz 2026',
           'Ollama HTTP API: POST an /api/generate — keine Cloud-Zugangsdaten nötig',
-          'Qwen2.5 7B Q4_K_M: 5,5 GB VRAM, native CJK-Tokenisierung',
+          'Qwen3 7B Q4_K_M: 5,5 GB VRAM, native CJK-Tokenisierung',
           'Mini-PC-Server: Minisforum UM890 Pro läuft 24/7 bei ~35 W',
           'Datenschutz: keine Daten an WeChat-Server oder Cloud-APIs',
         ],
@@ -59,11 +59,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: {
         question: 'Comment connecter WeChat à un LLM local ?',
         answer:
-          'Exécuter Ollama sur un mini PC, installer WeChatFerry pour intercepter les messages WeChat PC, écrire un bridge Python vers localhost:11434, et renvoyer les réponses du LLM dans la conversation. Modèle recommandé : Qwen2.5 7B Q4_K_M pour le chinois.',
+          'Exécuter Ollama sur un mini PC, installer WeChatFerry pour intercepter les messages WeChat PC, écrire un bridge Python vers localhost:11434, et renvoyer les réponses du LLM dans la conversation. Modèle recommandé : Qwen3 7B Q4_K_M pour le chinois.',
         bullets: [
           'WeChatFerry : Windows uniquement, approche la plus fiable en 2026',
           'API HTTP Ollama : POST vers /api/generate, aucune clé cloud nécessaire',
-          'Qwen2.5 7B Q4_K_M : 5,5 Go VRAM, tokenisation CJK native',
+          'Qwen3 7B Q4_K_M : 5,5 Go VRAM, tokenisation CJK native',
           'Serveur mini PC : Minisforum UM890 Pro, 24/7 à ~35 W',
           'Confidentialité : aucune donnée transmise vers des APIs cloud',
         ],
@@ -72,11 +72,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: 'WeChatをローカルLLMに接続する方法は？',
         answer:
-          'ミニPC上でOllamaを実行し、WeChatFerry（Windows版）でWeChatクライアントメッセージをインターセプト、Pythonブリッジでlocalhost:11434にルーティングし、LLMの応答をチャットに返します。中国語チャットにはQwen2.5 7B Q4_K_Mを推奨。',
+          'ミニPC上でOllamaを実行し、WeChatFerry（Windows版）でWeChatクライアントメッセージをインターセプト、Pythonブリッジでlocalhost:11434にルーティングし、LLMの応答をチャットに返します。中国語チャットにはQwen3 7B Q4_K_Mを推奨。',
         bullets: [
           'WeChatFerry：Windowsのみ、2026年で最も信頼性の高いアプローチ',
           'Ollama HTTP API：/api/generateへPOST、クラウド認証不要',
-          'Qwen2.5 7B Q4_K_M：5.5 GB VRAM、ネイティブCJKトークン化',
+          'Qwen3 7B Q4_K_M：5.5 GB VRAM、ネイティブCJKトークン化',
           'ミニPCサーバー：Minisforum UM890 Pro、24/7で~35 W運用',
           'プライバシー：クラウドAPIへのデータ送信なし',
         ],
@@ -85,11 +85,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zh: {
         question: '如何将微信与本地LLM连接？',
         answer:
-          '在迷你主机上运行Ollama，安装WeChatFerry钩入微信PC客户端，编写Python桥接脚本将消息路由至localhost:11434，并将LLM回复发回对话。中文聊天推荐Qwen2.5 7B Q4_K_M模型。',
+          '在迷你主机上运行Ollama，安装WeChatFerry钩入微信PC客户端，编写Python桥接脚本将消息路由至localhost:11434，并将LLM回复发回对话。中文聊天推荐Qwen3 7B Q4_K_M模型。',
         bullets: [
           'WeChatFerry：仅限Windows，2026年最可靠的微信集成方案',
           'Ollama HTTP API：POST至/api/generate，无需云端密钥',
-          'Qwen2.5 7B Q4_K_M：5.5 GB显存，原生CJK分词，8–15 tok/s',
+          'Qwen3 7B Q4_K_M：5.5 GB显存，原生CJK分词，8–15 tok/s',
           '迷你主机服务器：铭凡UM890 Pro，24/7运行约35 W功耗',
           '隐私保护：符合《数据安全法》，数据不出设备',
         ],
@@ -123,7 +123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'WeChatFerry (Windows) is the most reliable WeChat PC hook available in 2026 — runs alongside WeChat without modifying its binary',
           'Ollama exposes a local HTTP API at port 11434 — a 10-line Python script routes WeChat messages to any loaded model',
-          'Qwen2.5 7B Q4_K_M: recommended for Chinese chat — 5.5 GB VRAM, native CJK tokenisation, 8–15 tok/s on mini PC',
+          'Qwen3 7B Q4_K_M: recommended for Chinese chat — 5.5 GB VRAM, native CJK tokenisation, 8–15 tok/s on mini PC',
           'Always-on mini PC server (Minisforum UM890 Pro, ~35 W): keeps the bot live 24/7 for group and personal chats',
           'Local inference: zero data transmitted to cloud — satisfies China Data Security Law Article 31 for personal data',
         ],
@@ -182,7 +182,7 @@ while True:
         title: 'Mini PC as Always-On WeChat LLM Server',
         content: [
           'A dedicated always-on mini PC keeps your WeChat bot live without tying up a laptop or workstation.',
-          '**Minisforum UM890 Pro (Recommended):** AMD Ryzen 9 8945HS, 32–64 GB DDR5, AMD Radeon 780M iGPU. Runs Qwen2.5 7B at ~8 tok/s via ROCm on Linux. Power draw: ~35 W idle, ~65 W under inference. Price: ~$350–$450.',
+          '**Minisforum UM890 Pro (Recommended):** AMD Ryzen 9 8945HS, 32–64 GB DDR5, AMD Radeon 780M iGPU. Runs Qwen3 7B at ~8 tok/s via ROCm on Linux. Power draw: ~35 W idle, ~65 W under inference. Price: ~$350–$450.',
           '**Mac Mini M4:** Apple Silicon M4, 16–32 GB unified memory, ~18 tok/s on 7B models via MLX. Power draw: ~20 W idle. Quietest option. Price: ~$599.',
           '**Setup tip:** Enable auto-start — add `ollama serve` and your WeChatFerry bridge script to systemd (Linux) or Windows Task Scheduler. The bot then recovers automatically after power cycles.',
         ],
@@ -199,9 +199,9 @@ while True:
         id: 'model-choice',
         title: 'Best Models for Chinese WeChat Chat',
         content: [
-          '**Qwen2.5 7B Q4_K_M (Top Pick):** Built by Alibaba with native CJK tokenisation. 5.5 GB VRAM, 8–15 tok/s. Understands Chinese idioms, classical references, and colloquial phrasing far better than Western-first models. Install: `ollama pull qwen2.5:7b`.',
-          '**Qwen2.5 14B Q4_K_M:** For richer conversations where a mini PC with 12–16 GB RAM is available. 9.5 GB VRAM, 4–8 tok/s. Noticeably better at nuanced Chinese reasoning and multi-turn context.',
-          '**DeepSeek-R1-Distill-Qwen-7B:** Good for question-answering and step-by-step explanations in Chinese. Slightly weaker at casual conversation than Qwen2.5 7B.',
+          '**Qwen3 7B Q4_K_M (Top Pick):** Built by Alibaba with native CJK tokenisation. 5.5 GB VRAM, 8–15 tok/s. Understands Chinese idioms, classical references, and colloquial phrasing far better than Western-first models. Install: `ollama pull qwen2.5:7b`.',
+          '**Qwen3 14B Q4_K_M:** For richer conversations where a mini PC with 12–16 GB RAM is available. 9.5 GB VRAM, 4–8 tok/s. Noticeably better at nuanced Chinese reasoning and multi-turn context.',
+          '**DeepSeek-R1-Distill-Qwen-7B:** Good for question-answering and step-by-step explanations in Chinese. Slightly weaker at casual conversation than Qwen3 7B.',
           '**Avoid:** Llama 3 and Mistral — Western-first tokenisers use 2–3× more tokens for Chinese text, leading to slower responses and truncation on long messages.',
         ],
       },
@@ -240,11 +240,11 @@ while True:
           },
           {
             q: 'Which Ollama model is best for Chinese text?',
-            a: 'Qwen2.5 7B Q4_K_M. Built by Alibaba with native CJK tokenisation — 30–40% more efficient on Chinese text than Llama or Mistral models.',
+            a: 'Qwen3 7B Q4_K_M. Built by Alibaba with native CJK tokenisation — 30–40% more efficient on Chinese text than Llama or Mistral models.',
           },
           {
             q: 'Can I run this on a laptop?',
-            a: 'Yes. A 16 GB RAM laptop runs Qwen2.5 7B comfortably at 8–15 tok/s CPU-only. Response latency is 3–8 seconds per message — acceptable for chat.',
+            a: 'Yes. A 16 GB RAM laptop runs Qwen3 7B comfortably at 8–15 tok/s CPU-only. Response latency is 3–8 seconds per message — acceptable for chat.',
           },
           {
             q: 'Does local inference satisfy China Data Security Law?',
@@ -285,7 +285,7 @@ while True:
       mentions: [
         { '@type': 'SoftwareApplication', name: 'WeChatFerry' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
-        { '@type': 'SoftwareApplication', name: 'Qwen2.5 7B' },
+        { '@type': 'SoftwareApplication', name: 'Qwen3 7B' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -295,7 +295,7 @@ while True:
       inLanguage: 'en',
       mainEntity: [
         { '@type': 'Question', name: 'Does WeChatFerry work with WeChat for Mac?', acceptedAnswer: { '@type': 'Answer', text: 'No. WeChatFerry hooks the Windows WeChat PC client DLLs and does not support WeChat for Mac. On Mac, use a Windows VM or one of the HTTP webhook patterns instead.' } },
-        { '@type': 'Question', name: 'Which Ollama model is best for Chinese WeChat chat?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 7B Q4_K_M — built by Alibaba with native CJK tokenisation, 5.5 GB VRAM, and 30–40% more efficient on Chinese text than Llama or Mistral models.' } },
+        { '@type': 'Question', name: 'Which Ollama model is best for Chinese WeChat chat?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — built by Alibaba with native CJK tokenisation, 5.5 GB VRAM, and 30–40% more efficient on Chinese text than Llama or Mistral models.' } },
         { '@type': 'Question', name: 'Will Tencent ban my account for using a bot?', acceptedAnswer: { '@type': 'Answer', text: 'Personal bots with human-like response rates (1–5 messages per minute) rarely trigger bans. Avoid bulk messaging or commercial outreach via the bot.' } },
         { '@type': 'Question', name: 'Does local LLM inference satisfy China Data Security Law?', acceptedAnswer: { '@type': 'Answer', text: 'For inference content, yes — no prompts or responses leave your hardware. WeChat metadata still resides on Tencent servers per their ToS.' } },
       ],
@@ -313,9 +313,9 @@ while True:
     intro:
       'WeChat mit einem lokalen LLM zu verbinden ermöglicht einen privaten KI-Assistenten in der meistgenutzten Messaging-App weltweit – ohne eine einzige Nachricht an eine Cloud-API zu senden. Dieser Leitfaden behandelt drei Integrationsmuster, die Modellauswahl für chinesischen Text und wie lokale Inferenz DSGVO- und China-DSL-Anforderungen erfüllt.',
     metaDescription:
-      'WeChat mit lokalem LLM verbinden 2026: WeChatFerry (Windows), HTTP-Webhook-Brücke, Mini-PC-Ollama-Server. Qwen2.5 7B für Chinesisch. Keine Cloud-API.',
+      'WeChat mit lokalem LLM verbinden 2026: WeChatFerry (Windows), HTTP-Webhook-Brücke, Mini-PC-Ollama-Server. Qwen3 7B für Chinesisch. Keine Cloud-API.',
     twitterDescription:
-      'WeChat + lokales LLM: WeChatFerry, HTTP-Webhook oder Mini-PC-Server. Qwen2.5 7B für Chinesisch. Keine Cloud-API erforderlich.',
+      'WeChat + lokales LLM: WeChatFerry, HTTP-Webhook oder Mini-PC-Server. Qwen3 7B für Chinesisch. Keine Cloud-API erforderlich.',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
     readTime: '11 Min. Lesezeit',
     educationalLevel: 'Intermediate',
@@ -326,23 +326,23 @@ while True:
       'wechat bot lokal ki',
     ],
     leadAnswerBlock:
-      '**WeChat mit einem lokalen LLM verbinden: Ollama auf einem Mini-PC betreiben, WeChatFerry für die Windows-PC-Client-Integration installieren und eine Python-Brücke zur Ollama HTTP-API schreiben. Empfohlen: Qwen2.5 7B Q4_K_M für chinesische Konversationen – 5,5 GB VRAM, native CJK-Tokenisierung.**',
+      '**WeChat mit einem lokalen LLM verbinden: Ollama auf einem Mini-PC betreiben, WeChatFerry für die Windows-PC-Client-Integration installieren und eine Python-Brücke zur Ollama HTTP-API schreiben. Empfohlen: Qwen3 7B Q4_K_M für chinesische Konversationen – 5,5 GB VRAM, native CJK-Tokenisierung.**',
     quickAnswerTop: {
       en: {
         question: 'How do I connect WeChat to a local LLM?',
-        answer: 'Run Ollama on a mini PC, install WeChatFerry to intercept WeChat PC client messages, write a Python bridge to localhost:11434, and return LLM responses to the chat. Qwen2.5 7B Q4_K_M is recommended for Chinese.',
-        bullets: ['WeChatFerry: Windows-only, most reliable 2026', 'Ollama HTTP API: POST to /api/generate', 'Qwen2.5 7B Q4_K_M: 5.5 GB VRAM, CJK native'],
+        answer: 'Run Ollama on a mini PC, install WeChatFerry to intercept WeChat PC client messages, write a Python bridge to localhost:11434, and return LLM responses to the chat. Qwen3 7B Q4_K_M is recommended for Chinese.',
+        bullets: ['WeChatFerry: Windows-only, most reliable 2026', 'Ollama HTTP API: POST to /api/generate', 'Qwen3 7B Q4_K_M: 5.5 GB VRAM, CJK native'],
         updatedDate: '2026-05',
       },
       de: {
         question: 'Wie verbinde ich WeChat mit einem lokalen LLM?',
-        answer: 'Ollama auf Mini-PC, WeChatFerry installieren, Python-Brücke zu localhost:11434, LLM-Antwort zurücksenden. Qwen2.5 7B Q4_K_M für Chinesisch.',
-        bullets: ['WeChatFerry: nur Windows, zuverlässigster Ansatz', 'Ollama HTTP API: POST an /api/generate', 'Qwen2.5 7B Q4_K_M: 5,5 GB VRAM, CJK-nativ'],
+        answer: 'Ollama auf Mini-PC, WeChatFerry installieren, Python-Brücke zu localhost:11434, LLM-Antwort zurücksenden. Qwen3 7B Q4_K_M für Chinesisch.',
+        bullets: ['WeChatFerry: nur Windows, zuverlässigster Ansatz', 'Ollama HTTP API: POST an /api/generate', 'Qwen3 7B Q4_K_M: 5,5 GB VRAM, CJK-nativ'],
         updatedDate: '2026-05',
       },
-      fr: { question: 'Comment connecter WeChat à un LLM local ?', answer: 'Ollama sur mini PC, WeChatFerry, bridge Python vers localhost:11434, réponse renvoyée dans le chat.', bullets: ['WeChatFerry : Windows uniquement', 'Qwen2.5 7B Q4_K_M recommandé'], updatedDate: '2026-05' },
-      ja: { question: 'WeChatをローカルLLMに接続するには？', answer: 'ミニPCでOllamaを実行、WeChatFerryでメッセージをインターセプト、Python経由でlocalhost:11434にルーティング。', bullets: ['WeChatFerry：Windows専用', 'Qwen2.5 7B Q4_K_M推奨'], updatedDate: '2026-05' },
-      zh: { question: '如何将微信连接到本地LLM？', answer: '在迷你主机运行Ollama，安装WeChatFerry，Python脚本路由至localhost:11434。', bullets: ['WeChatFerry：仅限Windows', 'Qwen2.5 7B Q4_K_M推荐'], updatedDate: '2026-05' },
+      fr: { question: 'Comment connecter WeChat à un LLM local ?', answer: 'Ollama sur mini PC, WeChatFerry, bridge Python vers localhost:11434, réponse renvoyée dans le chat.', bullets: ['WeChatFerry : Windows uniquement', 'Qwen3 7B Q4_K_M recommandé'], updatedDate: '2026-05' },
+      ja: { question: 'WeChatをローカルLLMに接続するには？', answer: 'ミニPCでOllamaを実行、WeChatFerryでメッセージをインターセプト、Python経由でlocalhost:11434にルーティング。', bullets: ['WeChatFerry：Windows専用', 'Qwen3 7B Q4_K_M推奨'], updatedDate: '2026-05' },
+      zh: { question: '如何将微信连接到本地LLM？', answer: '在迷你主机运行Ollama，安装WeChatFerry，Python脚本路由至localhost:11434。', bullets: ['WeChatFerry：仅限Windows', 'Qwen3 7B Q4_K_M推荐'], updatedDate: '2026-05' },
     },
     snippetBlocks: [
       { type: 'one-sentence', text: 'WeChat mit WeChatFerry und Ollama verbinden – Nachrichten bleiben auf Ihrer eigenen Hardware, keine Cloud-API erforderlich.' },
@@ -365,7 +365,7 @@ while True:
         items: [
           'WeChatFerry (Windows) ist der zuverlässigste WeChat-PC-Hook 2026 – läuft neben WeChat ohne Binärmodifikation',
           'Ollama stellt eine lokale HTTP-API an Port 11434 bereit – 10 Zeilen Python reichen für die Nachrichtenweiterleitung',
-          'Qwen2.5 7B Q4_K_M: empfohlen für chinesischen Chat – 5,5 GB VRAM, native CJK-Tokenisierung, 8–15 tok/s',
+          'Qwen3 7B Q4_K_M: empfohlen für chinesischen Chat – 5,5 GB VRAM, native CJK-Tokenisierung, 8–15 tok/s',
           'Always-on Mini-PC-Server (Minisforum UM890 Pro, ~35 W): hält den Bot 24/7 für Gruppen- und Einzelchats aktiv',
           'DSGVO Art. 28: lokale Inferenz vermeidet die Notwendigkeit eines Auftragsverarbeitungsvertrags mit LLM-Anbietern',
         ],
@@ -421,7 +421,7 @@ while True:
         id: 'mini-pc-server',
         title: 'Mini-PC als Always-On-WeChat-LLM-Server',
         content: [
-          '**Minisforum UM890 Pro (Empfohlen):** AMD Ryzen 9 8945HS, 32–64 GB DDR5. Qwen2.5 7B mit ~8 tok/s unter ROCm auf Linux. Stromverbrauch: ~35 W idle. Preis: ca. 320–420 €.',
+          '**Minisforum UM890 Pro (Empfohlen):** AMD Ryzen 9 8945HS, 32–64 GB DDR5. Qwen3 7B mit ~8 tok/s unter ROCm auf Linux. Stromverbrauch: ~35 W idle. Preis: ca. 320–420 €.',
           '**Mac Mini M4:** Apple Silicon M4, 16–32 GB unified memory, ~18 tok/s via MLX. Stromverbrauch: ~20 W idle. Leiseste Option. Preis: ab 599 €.',
           '**Auto-Start:** `ollama serve` und WeChatFerry-Bridge-Skript in systemd (Linux) oder Windows Task-Planer einbinden.',
         ],
@@ -438,8 +438,8 @@ while True:
         id: 'model-choice',
         title: 'Beste Modelle für chinesischen WeChat-Chat',
         content: [
-          '**Qwen2.5 7B Q4_K_M (Erste Wahl):** Von Alibaba mit nativer CJK-Tokenisierung entwickelt. 5,5 GB VRAM, 8–15 tok/s. Versteht chinesische Redewendungen und umgangssprachliche Formulierungen weit besser als westliche Modelle. Installation: `ollama pull qwen2.5:7b`.',
-          '**Qwen2.5 14B Q4_K_M:** Für komplexere Unterhaltungen mit 12–16 GB RAM. 9,5 GB VRAM, 4–8 tok/s.',
+          '**Qwen3 7B Q4_K_M (Erste Wahl):** Von Alibaba mit nativer CJK-Tokenisierung entwickelt. 5,5 GB VRAM, 8–15 tok/s. Versteht chinesische Redewendungen und umgangssprachliche Formulierungen weit besser als westliche Modelle. Installation: `ollama pull qwen2.5:7b`.',
+          '**Qwen3 14B Q4_K_M:** Für komplexere Unterhaltungen mit 12–16 GB RAM. 9,5 GB VRAM, 4–8 tok/s.',
           '**Vermeiden:** Llama 3 und Mistral – westliche Tokenizer verwenden 2–3× mehr Token für chinesischen Text.',
         ],
       },
@@ -468,8 +468,8 @@ while True:
         faqs: [
           { q: 'Funktioniert WeChatFerry mit WeChat für Mac?', a: 'Nein. WeChatFerry hakt in die Windows-WeChat-PC-Client-DLLs ein und unterstützt WeChat für Mac nicht.' },
           { q: 'Sperrt Tencent mein Konto bei Verwendung eines Bots?', a: 'Persönliche Bots mit menschenähnlichen Antwortzeiten (1–5 Nachrichten pro Minute) lösen selten Sperren aus. Massennachrichten vermeiden.' },
-          { q: 'Welches Ollama-Modell ist am besten für chinesischen Text?', a: 'Qwen2.5 7B Q4_K_M von Alibaba – native CJK-Tokenisierung, 30–40 % effizienter bei chinesischem Text als Llama oder Mistral.' },
-          { q: 'Kann ich dies auf einem Laptop betreiben?', a: 'Ja. Ein 16 GB RAM Laptop betreibt Qwen2.5 7B mit 8–15 tok/s (CPU-only). Antwortlatenz: 3–8 Sekunden.' },
+          { q: 'Welches Ollama-Modell ist am besten für chinesischen Text?', a: 'Qwen3 7B Q4_K_M von Alibaba – native CJK-Tokenisierung, 30–40 % effizienter bei chinesischem Text als Llama oder Mistral.' },
+          { q: 'Kann ich dies auf einem Laptop betreiben?', a: 'Ja. Ein 16 GB RAM Laptop betreibt Qwen3 7B mit 8–15 tok/s (CPU-only). Antwortlatenz: 3–8 Sekunden.' },
           { q: 'Erfüllt lokale Inferenz DSGVO-Anforderungen?', a: 'Lokale LLMs vermeiden Auftragsverarbeitungsverträge mit LLM-Anbietern. WeChat-Metadaten verbleiben auf Tencent-Servern.' },
           { q: 'Wie behandle ich mehrstufige Unterhaltungen?', a: 'Gesprächsverlauf als Python-Liste von {role, content}-Dicts nach Absender indexiert führen und die letzten 10–15 Nachrichten an /api/chat übergeben.' },
         ],
@@ -504,7 +504,7 @@ while True:
       inLanguage: 'de',
       mainEntity: [
         { '@type': 'Question', name: 'Funktioniert WeChatFerry mit WeChat für Mac?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. WeChatFerry unterstützt nur den Windows WeChat PC Client.' } },
-        { '@type': 'Question', name: 'Welches Modell für chinesischen WeChat-Chat?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 7B Q4_K_M – native CJK-Tokenisierung, 5,5 GB VRAM.' } },
+        { '@type': 'Question', name: 'Welches Modell für chinesischen WeChat-Chat?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M – native CJK-Tokenisierung, 5,5 GB VRAM.' } },
       ],
     },
   },
@@ -520,27 +520,27 @@ while True:
     intro:
       'Connecter WeChat à un LLM local offre un assistant IA privé dans l\'application de messagerie la plus utilisée au monde, sans envoyer un seul message à une API cloud. Ce guide couvre trois patterns d\'intégration, le choix du modèle pour le texte chinois, et la conformité RGPD et DSL chinoise.',
     metaDescription:
-      'Connecter WeChat à un LLM local en 2026 : WeChatFerry (Windows), pont HTTP webhook, serveur mini PC Ollama. Qwen2.5 7B pour le chinois. Sans API cloud.',
+      'Connecter WeChat à un LLM local en 2026 : WeChatFerry (Windows), pont HTTP webhook, serveur mini PC Ollama. Qwen3 7B pour le chinois. Sans API cloud.',
     twitterDescription:
-      'WeChat + LLM local : WeChatFerry, webhook HTTP ou serveur mini PC. Qwen2.5 7B pour le chinois. Aucune API cloud.',
+      'WeChat + LLM local : WeChatFerry, webhook HTTP ou serveur mini PC. Qwen3 7B pour le chinois. Aucune API cloud.',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
     readTime: '11 min de lecture',
     educationalLevel: 'Intermediate',
     primaryTerm: 'intégration WeChat LLM local',
     targetKeywords: ['wechat llm local 2026', 'wechat ollama integration', 'bot wechat ia local'],
     leadAnswerBlock:
-      '**Connectez WeChat à un LLM local en exécutant Ollama sur un mini PC, en installant WeChatFerry pour intercepter les messages WeChat PC, et en écrivant un bridge Python vers l\'API HTTP Ollama. Recommandé : Qwen2.5 7B Q4_K_M pour les conversations en chinois.**',
+      '**Connectez WeChat à un LLM local en exécutant Ollama sur un mini PC, en installant WeChatFerry pour intercepter les messages WeChat PC, et en écrivant un bridge Python vers l\'API HTTP Ollama. Recommandé : Qwen3 7B Q4_K_M pour les conversations en chinois.**',
     quickAnswerTop: {
-      en: { question: 'How to connect WeChat to a local LLM?', answer: 'WeChatFerry + Ollama on Windows mini PC.', bullets: ['WeChatFerry: Windows only', 'Qwen2.5 7B recommended'], updatedDate: '2026-05' },
-      de: { question: 'WeChat mit lokalem LLM verbinden?', answer: 'WeChatFerry + Ollama auf Windows Mini-PC.', bullets: ['WeChatFerry: nur Windows', 'Qwen2.5 7B empfohlen'], updatedDate: '2026-05' },
+      en: { question: 'How to connect WeChat to a local LLM?', answer: 'WeChatFerry + Ollama on Windows mini PC.', bullets: ['WeChatFerry: Windows only', 'Qwen3 7B recommended'], updatedDate: '2026-05' },
+      de: { question: 'WeChat mit lokalem LLM verbinden?', answer: 'WeChatFerry + Ollama auf Windows Mini-PC.', bullets: ['WeChatFerry: nur Windows', 'Qwen3 7B empfohlen'], updatedDate: '2026-05' },
       fr: {
         question: 'Comment connecter WeChat à un LLM local ?',
         answer: 'Exécuter Ollama sur un mini PC, installer WeChatFerry (Windows), écrire un bridge Python vers localhost:11434, renvoyer les réponses dans WeChat.',
-        bullets: ['WeChatFerry : Windows uniquement, solution la plus fiable 2026', 'API HTTP Ollama : POST vers /api/generate sans clé cloud', 'Qwen2.5 7B Q4_K_M : 5,5 Go VRAM, tokenisation CJK native'],
+        bullets: ['WeChatFerry : Windows uniquement, solution la plus fiable 2026', 'API HTTP Ollama : POST vers /api/generate sans clé cloud', 'Qwen3 7B Q4_K_M : 5,5 Go VRAM, tokenisation CJK native'],
         updatedDate: '2026-05',
       },
-      ja: { question: 'WeChatをローカルLLMに接続するには？', answer: 'WeChatFerry + Ollama on Windows。', bullets: ['WeChatFerry：Windows専用', 'Qwen2.5 7B推奨'], updatedDate: '2026-05' },
-      zh: { question: '如何将微信连接到本地LLM？', answer: 'WeChatFerry + Ollama在Windows迷你主机上。', bullets: ['WeChatFerry：仅限Windows', 'Qwen2.5 7B推荐'], updatedDate: '2026-05' },
+      ja: { question: 'WeChatをローカルLLMに接続するには？', answer: 'WeChatFerry + Ollama on Windows。', bullets: ['WeChatFerry：Windows専用', 'Qwen3 7B推奨'], updatedDate: '2026-05' },
+      zh: { question: '如何将微信连接到本地LLM？', answer: 'WeChatFerry + Ollama在Windows迷你主机上。', bullets: ['WeChatFerry：仅限Windows', 'Qwen3 7B推荐'], updatedDate: '2026-05' },
     },
     snippetBlocks: [
       { type: 'one-sentence', text: 'Connecter WeChat à un LLM local avec WeChatFerry et Ollama — les messages restent sur votre matériel, aucune API cloud requise.' },
@@ -563,7 +563,7 @@ while True:
         items: [
           'WeChatFerry (Windows) est le hook WeChat PC le plus fiable en 2026',
           'Ollama expose une API HTTP locale sur le port 11434 — 10 lignes de Python suffisent',
-          'Qwen2.5 7B Q4_K_M : recommandé pour le chat en chinois — 5,5 Go VRAM, tokenisation CJK native',
+          'Qwen3 7B Q4_K_M : recommandé pour le chat en chinois — 5,5 Go VRAM, tokenisation CJK native',
           'Mini PC always-on (Minisforum UM890 Pro, ~35 W) pour un bot disponible 24/7',
           'Inférence locale : zéro donnée transmise vers le cloud — conformité RGPD Art. 28',
         ],
@@ -616,7 +616,7 @@ while True:
         id: 'mini-pc-server',
         title: 'Mini PC comme serveur WeChat LLM always-on',
         content: [
-          '**Minisforum UM890 Pro (Recommandé) :** AMD Ryzen 9 8945HS, 32–64 Go DDR5. ~8 tok/s sur Qwen2.5 7B. Consommation : ~35 W en veille. Prix : environ 320–420 €.',
+          '**Minisforum UM890 Pro (Recommandé) :** AMD Ryzen 9 8945HS, 32–64 Go DDR5. ~8 tok/s sur Qwen3 7B. Consommation : ~35 W en veille. Prix : environ 320–420 €.',
           '**Mac Mini M4 :** Apple Silicon M4, 16–32 Go RAM unifiée, ~18 tok/s. Consommation : ~20 W. Prix : à partir de 599 €.',
         ],
         comparisonTable: {
@@ -631,8 +631,8 @@ while True:
         id: 'model-choice',
         title: 'Meilleurs modèles pour le chat WeChat en chinois',
         content: [
-          '**Qwen2.5 7B Q4_K_M (Premier choix) :** Développé par Alibaba avec tokenisation CJK native. 5,5 Go VRAM, 8–15 tok/s. Installation : `ollama pull qwen2.5:7b`.',
-          '**Qwen2.5 14B Q4_K_M :** Pour des conversations plus riches avec 12–16 Go de RAM disponible.',
+          '**Qwen3 7B Q4_K_M (Premier choix) :** Développé par Alibaba avec tokenisation CJK native. 5,5 Go VRAM, 8–15 tok/s. Installation : `ollama pull qwen2.5:7b`.',
+          '**Qwen3 14B Q4_K_M :** Pour des conversations plus riches avec 12–16 Go de RAM disponible.',
           '**À éviter :** Llama 3 et Mistral — tokeniseurs occidentaux, 2–3× plus de tokens pour le texte chinois.',
         ],
       },
@@ -659,8 +659,8 @@ while True:
         faqs: [
           { q: 'WeChatFerry fonctionne-t-il avec WeChat pour Mac ?', a: 'Non. WeChatFerry ne supporte que le client WeChat PC sur Windows.' },
           { q: 'Tencent peut-il bannir mon compte pour l\'utilisation d\'un bot ?', a: 'Les bots personnels avec des taux de réponse humains (1–5 messages/min) déclenchent rarement des bannissements.' },
-          { q: 'Quel modèle Ollama pour le chinois ?', a: 'Qwen2.5 7B Q4_K_M — tokenisation CJK native, 30–40% plus efficace que Llama ou Mistral.' },
-          { q: 'Puis-je utiliser un laptop ?', a: 'Oui. 16 Go RAM suffit pour Qwen2.5 7B en mode CPU-only, 8–15 tok/s.' },
+          { q: 'Quel modèle Ollama pour le chinois ?', a: 'Qwen3 7B Q4_K_M — tokenisation CJK native, 30–40% plus efficace que Llama ou Mistral.' },
+          { q: 'Puis-je utiliser un laptop ?', a: 'Oui. 16 Go RAM suffit pour Qwen3 7B en mode CPU-only, 8–15 tok/s.' },
           { q: 'Conformité RGPD avec un LLM local ?', a: 'Les LLM locaux évitent les accords DPA avec les fournisseurs cloud. Les métadonnées WeChat restent chez Tencent.' },
           { q: 'Comment gérer les conversations multi-tours ?', a: 'Maintenir l\'historique comme liste de dicts {role, content} par expéditeur, transmettre les 10–15 derniers messages à /api/chat.' },
         ],
@@ -695,7 +695,7 @@ while True:
       inLanguage: 'fr',
       mainEntity: [
         { '@type': 'Question', name: 'WeChatFerry fonctionne-t-il sur Mac ?', acceptedAnswer: { '@type': 'Answer', text: 'Non, uniquement sur le client WeChat PC Windows.' } },
-        { '@type': 'Question', name: 'Quel modèle pour le texte chinois ?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 7B Q4_K_M — tokenisation CJK native, 5,5 Go VRAM.' } },
+        { '@type': 'Question', name: 'Quel modèle pour le texte chinois ?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — tokenisation CJK native, 5,5 Go VRAM.' } },
       ],
     },
   },
@@ -711,18 +711,18 @@ while True:
     intro:
       'WeChatをローカルLLMに接続することで、世界最大のメッセージングアプリでプライベートなAIアシスタントが利用可能になります。クラウドAPIへのデータ送信は一切不要です。このガイドでは3つの統合パターン、中国語テキスト向けモデル選択、個人情報保護法対応について解説します。',
     metaDescription:
-      '2026年版WeChat統合ガイド：WeChatFerry（Windows専用）、HTTPウェブフックブリッジ、ミニPCサーバーという三つのローカルLLM接続パターンを詳解。中国語チャットにはQwen2.5 7B推奨。クラウドAPI不要で会話データを完全ローカル保持。',
+      '2026年版WeChat統合ガイド：WeChatFerry（Windows専用）、HTTPウェブフックブリッジ、ミニPCサーバーという三つのローカルLLM接続パターンを詳解。中国語チャットにはQwen3 7B推奨。クラウドAPI不要で会話データを完全ローカル保持。',
     twitterDescription:
-      'WeChat + ローカルLLM：WeChatFerry、HTTPウェブフック、ミニPCサーバー。Qwen2.5 7B中国語対応。クラウドAPI不要。',
+      'WeChat + ローカルLLM：WeChatFerry、HTTPウェブフック、ミニPCサーバー。Qwen3 7B中国語対応。クラウドAPI不要。',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
     readTime: '11分で読める',
     educationalLevel: 'Intermediate',
     primaryTerm: 'WeChat ローカルLLM統合',
     targetKeywords: ['wechat ローカル llm 2026', 'wechat ollama 統合', 'wechat ボット ローカル ai'],
     leadAnswerBlock:
-      '**WeChatをローカルLLMに接続するには、ミニPC上でOllamaを実行し、WeChatFerry（Windows版）でWeChat PCクライアントのメッセージをインターセプトし、PythonブリッジでOllama HTTP APIにルーティングします。中国語チャットにはQwen2.5 7B Q4_K_Mを推奨します。**',
+      '**WeChatをローカルLLMに接続するには、ミニPC上でOllamaを実行し、WeChatFerry（Windows版）でWeChat PCクライアントのメッセージをインターセプトし、PythonブリッジでOllama HTTP APIにルーティングします。中国語チャットにはQwen3 7B Q4_K_Mを推奨します。**',
     quickAnswerTop: {
-      en: { question: 'How to connect WeChat to local LLM?', answer: 'WeChatFerry + Ollama on Windows.', bullets: ['WeChatFerry: Windows only', 'Qwen2.5 7B recommended'], updatedDate: '2026-05' },
+      en: { question: 'How to connect WeChat to local LLM?', answer: 'WeChatFerry + Ollama on Windows.', bullets: ['WeChatFerry: Windows only', 'Qwen3 7B recommended'], updatedDate: '2026-05' },
       de: { question: 'WeChat mit lokalem LLM verbinden?', answer: 'WeChatFerry + Ollama auf Windows.', bullets: ['WeChatFerry: nur Windows'], updatedDate: '2026-05' },
       fr: { question: 'Connecter WeChat au LLM local ?', answer: 'WeChatFerry + Ollama sur Windows.', bullets: ['WeChatFerry : Windows seulement'], updatedDate: '2026-05' },
       ja: {
@@ -731,7 +731,7 @@ while True:
         bullets: [
           'WeChatFerry：Windowsのみ対応、2026年で最も信頼性の高い手法',
           'Ollama HTTP API：/api/generateへPOST、クラウド認証不要',
-          'Qwen2.5 7B Q4_K_M：5.5 GB VRAM、ネイティブCJKトークン化',
+          'Qwen3 7B Q4_K_M：5.5 GB VRAM、ネイティブCJKトークン化',
         ],
         updatedDate: '2026-05',
       },
@@ -758,7 +758,7 @@ while True:
         items: [
           'WeChatFerry（Windows）は2026年で最も信頼性の高いWeChat PCフック',
           'OllamaはポートI11434でローカルHTTP APIを公開——10行のPythonでルーティング可能',
-          'Qwen2.5 7B Q4_K_M：中国語チャットに推奨——5.5 GB VRAM、ネイティブCJKトークン化',
+          'Qwen3 7B Q4_K_M：中国語チャットに推奨——5.5 GB VRAM、ネイティブCJKトークン化',
           'Always-onミニPCサーバー（Minisforum UM890 Pro、約35 W）——24/7稼働',
           'ローカル推論：個人情報保護法対応——データは自分のデバイスから出ない',
         ],
@@ -811,7 +811,7 @@ while True:
         id: 'mini-pc-server',
         title: 'ミニPCをWeChat LLMサーバーとして常時稼働',
         content: [
-          '**Minisforum UM890 Pro（推奨）：** AMD Ryzen 9 8945HS、32–64 GB DDR5。Qwen2.5 7Bで~8 tok/s。消費電力：~35 W。価格：約4.5〜6万円。',
+          '**Minisforum UM890 Pro（推奨）：** AMD Ryzen 9 8945HS、32–64 GB DDR5。Qwen3 7Bで~8 tok/s。消費電力：~35 W。価格：約4.5〜6万円。',
           '**Mac Mini M4：** Apple Silicon M4、16–32 GBユニファイドメモリ、~18 tok/s（MLX経由）。消費電力：~20 W。価格：約9万円〜。',
           '**自動起動：** systemd（Linux）またはWindowsタスクスケジューラーで`ollama serve`とWeChatFerryブリッジを自動起動。',
         ],
@@ -827,8 +827,8 @@ while True:
         id: 'model-choice',
         title: '中国語WeChat会話向け最適モデル',
         content: [
-          '**Qwen2.5 7B Q4_K_M（第1推奨）：** Alibabaがネイティブ中国語処理に特化して開発。5.5 GB VRAM、8–15 tok/s。インストール：`ollama pull qwen2.5:7b`。',
-          '**Qwen2.5 14B Q4_K_M：** 12–16 GB RAM環境での充実した会話向け。',
+          '**Qwen3 7B Q4_K_M（第1推奨）：** Alibabaがネイティブ中国語処理に特化して開発。5.5 GB VRAM、8–15 tok/s。インストール：`ollama pull qwen2.5:7b`。',
+          '**Qwen3 14B Q4_K_M：** 12–16 GB RAM環境での充実した会話向け。',
           '**避けるべき：** Llama 3とMistral——中国語テキストに2〜3倍多くのトークンを使用。',
         ],
       },
@@ -856,8 +856,8 @@ while True:
         faqs: [
           { q: 'WeChatFerryはWeChat for Macで動きますか？', a: 'いいえ。WeChatFerryはWindowsのWeChat PCクライアントDLLをフックするため、Mac版WeChat非対応です。' },
           { q: 'Tencentにアカウントがバンされますか？', a: '人間的な返信レート（1〜5メッセージ/分）のパーソナルボットはほとんどバンされません。大量送信は避けてください。' },
-          { q: '中国語向け最適Ollamaモデルは？', a: 'Qwen2.5 7B Q4_K_M。Alibabaがネイティブ中国語処理向けに開発、5.5 GB VRAM。' },
-          { q: 'ノートパソコンで使えますか？', a: 'はい。16 GBのRAMでQwen2.5 7BをCPU-onlyで8〜15 tok/sで実行可能。応答遅延3〜8秒。' },
+          { q: '中国語向け最適Ollamaモデルは？', a: 'Qwen3 7B Q4_K_M。Alibabaがネイティブ中国語処理向けに開発、5.5 GB VRAM。' },
+          { q: 'ノートパソコンで使えますか？', a: 'はい。16 GBのRAMでQwen3 7BをCPU-onlyで8〜15 tok/sで実行可能。応答遅延3〜8秒。' },
           { q: '個人情報保護法への対応は？', a: 'ローカルLLMはクラウドプロバイダーへのデータ転送を回避。WeChatメタデータはTencentサーバーに残ります。' },
           { q: 'マルチターン会話の管理方法は？', a: '送信者別に{role, content}辞書のリストを保持し、最新10〜15メッセージを/api/chatに渡します。' },
         ],
@@ -892,7 +892,7 @@ while True:
       inLanguage: 'ja',
       mainEntity: [
         { '@type': 'Question', name: 'WeChatFerryはMacで動きますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ、Windows版WeChat PCクライアントのみ対応です。' } },
-        { '@type': 'Question', name: '中国語テキスト向け最適モデルは？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 7B Q4_K_M——5.5 GB VRAMのネイティブ中国語対応モデル。' } },
+        { '@type': 'Question', name: '中国語テキスト向け最適モデルは？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M——5.5 GB VRAMのネイティブ中国語対応モデル。' } },
       ],
     },
   },
@@ -908,18 +908,18 @@ while True:
     intro:
       '将微信与本地LLM连接，让你在全球最常用的即时通讯应用中拥有私密AI助手——无需向任何云端API发送一条消息。本指南涵盖三种集成方案、中文文本的模型选择，以及如何通过本地推理满足《数据安全法》要求。',
     metaDescription:
-      '2026年微信整合本地大模型三种技术路线：WeChatFerry Windows钩子实现自动回复、HTTP Webhook事件驱动桥接、迷你PC专用Ollama服务器。中文对话优先推荐Qwen2.5 7B Q4_K_M量化版，完全符合《数据安全法》，推理数据完全不离开本地设备。',
+      '2026年微信整合本地大模型三种技术路线：WeChatFerry Windows钩子实现自动回复、HTTP Webhook事件驱动桥接、迷你PC专用Ollama服务器。中文对话优先推荐Qwen3 7B Q4_K_M量化版，完全符合《数据安全法》，推理数据完全不离开本地设备。',
     twitterDescription:
-      '微信 + 本地LLM：WeChatFerry、HTTP Webhook或迷你主机服务器。Qwen2.5 7B中文最优。无需云端API。',
+      '微信 + 本地LLM：WeChatFerry、HTTP Webhook或迷你主机服务器。Qwen3 7B中文最优。无需云端API。',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
     readTime: '11分钟阅读',
     educationalLevel: 'Intermediate',
     primaryTerm: '微信本地LLM集成',
     targetKeywords: ['微信 本地llm 2026', '微信 ollama 集成', '微信机器人 本地ai'],
     leadAnswerBlock:
-      '**将微信接入本地LLM：在迷你主机上运行Ollama，安装WeChatFerry钩入微信PC客户端，编写Python桥接脚本将消息路由至Ollama HTTP API。中文聊天推荐Qwen2.5 7B Q4_K_M——5.5 GB显存，原生CJK分词，8–15 tok/s。**',
+      '**将微信接入本地LLM：在迷你主机上运行Ollama，安装WeChatFerry钩入微信PC客户端，编写Python桥接脚本将消息路由至Ollama HTTP API。中文聊天推荐Qwen3 7B Q4_K_M——5.5 GB显存，原生CJK分词，8–15 tok/s。**',
     quickAnswerTop: {
-      en: { question: 'How to integrate WeChat with local LLM?', answer: 'WeChatFerry + Ollama on Windows mini PC.', bullets: ['WeChatFerry: Windows only', 'Qwen2.5 7B recommended'], updatedDate: '2026-05' },
+      en: { question: 'How to integrate WeChat with local LLM?', answer: 'WeChatFerry + Ollama on Windows mini PC.', bullets: ['WeChatFerry: Windows only', 'Qwen3 7B recommended'], updatedDate: '2026-05' },
       de: { question: 'WeChat mit lokalem LLM?', answer: 'WeChatFerry + Ollama auf Windows Mini-PC.', bullets: ['WeChatFerry: nur Windows'], updatedDate: '2026-05' },
       fr: { question: 'Intégrer WeChat avec LLM local ?', answer: 'WeChatFerry + Ollama sur Windows.', bullets: ['WeChatFerry : Windows seulement'], updatedDate: '2026-05' },
       ja: { question: 'WeChatとローカルLLM統合方法？', answer: 'WeChatFerry + Ollamaを使用。', bullets: ['WeChatFerry：Windows専用'], updatedDate: '2026-05' },
@@ -929,7 +929,7 @@ while True:
         bullets: [
           'WeChatFerry：仅限Windows，2026年最稳定的微信集成方案',
           'Ollama HTTP API：POST至/api/generate，无需任何云端密钥',
-          'Qwen2.5 7B Q4_K_M：5.5 GB显存，原生中文分词，速度8–15 tok/s',
+          'Qwen3 7B Q4_K_M：5.5 GB显存，原生中文分词，速度8–15 tok/s',
           '铭凡UM890 Pro迷你主机：24/7运行仅约35 W功耗',
           '符合《数据安全法》：数据不出设备，不经过境外服务器',
         ],
@@ -957,7 +957,7 @@ while True:
         items: [
           'WeChatFerry（Windows）是2026年最稳定的微信PC客户端钩子——无需修改微信二进制文件',
           'Ollama在11434端口提供本地HTTP API——10行Python即可实现消息路由',
-          'Qwen2.5 7B Q4_K_M：中文聊天首选——5.5 GB显存，原生中文分词，8–15 tok/s',
+          'Qwen3 7B Q4_K_M：中文聊天首选——5.5 GB显存，原生中文分词，8–15 tok/s',
           '铭凡UM890 Pro迷你主机（~35 W）：24/7群聊和私聊全覆盖',
           '符合《数据安全法》第31条：本地推理，推理内容数据不出设备',
         ],
@@ -1014,7 +1014,7 @@ while True:
         id: 'mini-pc-server',
         title: '迷你主机作为微信LLM常驻服务器',
         content: [
-          '**铭凡UM890 Pro（推荐）：** AMD Ryzen 9 8945HS，32–64 GB DDR5。Linux ROCm下Qwen2.5 7B约8 tok/s。功耗：~35 W待机。价格：约2500–3200元。',
+          '**铭凡UM890 Pro（推荐）：** AMD Ryzen 9 8945HS，32–64 GB DDR5。Linux ROCm下Qwen3 7B约8 tok/s。功耗：~35 W待机。价格：约2500–3200元。',
           '**Mac Mini M4：** Apple Silicon M4，16–32 GB统一内存，MLX下~18 tok/s。功耗：~20 W待机。价格：约4399元起。',
           '**自动启动：** 将`ollama serve`和WeChatFerry桥接脚本添加到systemd（Linux）或Windows任务计划程序，断电后自动恢复。',
         ],
@@ -1031,9 +1031,9 @@ while True:
         id: 'model-choice',
         title: '微信中文聊天最佳模型',
         content: [
-          '**Qwen2.5 7B Q4_K_M（首选）：** 阿里巴巴开发，原生中文分词。5.5 GB显存，8–15 tok/s。能理解中文成语、口语和表达，远优于西方优先模型。安装：`ollama pull qwen2.5:7b`。',
-          '**Qwen2.5 14B Q4_K_M：** 适合拥有12–16 GB内存的设备，对话质量明显提升，多轮推理更强。',
-          '**DeepSeek-R1-Distill-Qwen-7B：** 中文问答和推理表现良好，日常对话略弱于Qwen2.5 7B。',
+          '**Qwen3 7B Q4_K_M（首选）：** 阿里巴巴开发，原生中文分词。5.5 GB显存，8–15 tok/s。能理解中文成语、口语和表达，远优于西方优先模型。安装：`ollama pull qwen2.5:7b`。',
+          '**Qwen3 14B Q4_K_M：** 适合拥有12–16 GB内存的设备，对话质量明显提升，多轮推理更强。',
+          '**DeepSeek-R1-Distill-Qwen-7B：** 中文问答和推理表现良好，日常对话略弱于Qwen3 7B。',
           '**避免使用：** Llama 3和Mistral——西方优先分词器处理中文需要多2–3倍的token，导致速度慢且长消息截断。',
         ],
       },
@@ -1064,8 +1064,8 @@ while True:
         faqs: [
           { q: 'WeChatFerry支持Mac版微信吗？', a: '不支持。WeChatFerry钩入Windows版微信PC客户端DLL，不支持Mac版微信。Mac用户可使用Windows虚拟机或HTTP Webhook方案。' },
           { q: '使用机器人会被腾讯封号吗？', a: '微信ToS禁止大规模自动发消息。个人机器人以接近人类的回复频率（每分钟1–5条）运行极少触发封号。避免批量发送消息或商业推广。' },
-          { q: '微信中文聊天最推荐哪个Ollama模型？', a: 'Qwen2.5 7B Q4_K_M。阿里巴巴开发的原生中文分词模型，处理中文比Llama或Mistral效率高30–40%。' },
-          { q: '可以在笔记本电脑上运行吗？', a: '可以。16 GB内存的笔记本以纯CPU运行Qwen2.5 7B，速度约8–15 tok/s，每条消息响应延迟3–8秒，可接受用于聊天场景。' },
+          { q: '微信中文聊天最推荐哪个Ollama模型？', a: 'Qwen3 7B Q4_K_M。阿里巴巴开发的原生中文分词模型，处理中文比Llama或Mistral效率高30–40%。' },
+          { q: '可以在笔记本电脑上运行吗？', a: '可以。16 GB内存的笔记本以纯CPU运行Qwen3 7B，速度约8–15 tok/s，每条消息响应延迟3–8秒，可接受用于聊天场景。' },
           { q: '本地推理能满足《数据安全法》要求吗？', a: '对于推理内容（提示词和回复），是的——数据不离开您的设备。微信消息元数据依据微信ToS仍存储在腾讯服务器上。' },
           { q: '如何处理多轮对话？', a: '将对话历史以sender为键存储为Python列表（每项为{role, content}字典），每次请求将最近10–15条消息传递给/api/chat。' },
         ],
@@ -1078,7 +1078,7 @@ while True:
           '[本地AI智能体与MCP 2026](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 为微信机器人添加工具调用能力',
           '[用本地AI智能体替代Zapier](/zh/power-local-llm/replace-zapier-with-local-ai-agents) — 由微信事件触发的自动化工作流',
           '[本地AI防火墙/离线部署2026](/zh/power-local-llm/local-ai-behind-firewall-offline-2026) — 气隙Ollama：网络隔离、审计日志与无互联网设置。',
-          '[最佳Qwen编码模型](/zh/prompt-bites/best-qwen-model-for-coding) — Qwen2.5-Coder集成微信机器人的最优规格选择。',
+          '[最佳Qwen编码模型](/zh/prompt-bites/best-qwen-model-for-coding) — Qwen3-Coder集成微信机器人的最优规格选择。',
         ],
       },
     },
@@ -1101,7 +1101,7 @@ while True:
       mentions: [
         { '@type': 'SoftwareApplication', name: 'WeChatFerry' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
-        { '@type': 'SoftwareApplication', name: 'Qwen2.5 7B' },
+        { '@type': 'SoftwareApplication', name: 'Qwen3 7B' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -1111,7 +1111,7 @@ while True:
       inLanguage: 'zh',
       mainEntity: [
         { '@type': 'Question', name: 'WeChatFerry支持Mac版微信吗？', acceptedAnswer: { '@type': 'Answer', text: '不支持。WeChatFerry仅支持Windows版微信PC客户端。' } },
-        { '@type': 'Question', name: '微信中文聊天推荐哪个模型？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 7B Q4_K_M——5.5 GB显存，原生中文分词，速度8–15 tok/s。' } },
+        { '@type': 'Question', name: '微信中文聊天推荐哪个模型？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M——5.5 GB显存，原生中文分词，速度8–15 tok/s。' } },
         { '@type': 'Question', name: '本地推理能满足《数据安全法》要求吗？', acceptedAnswer: { '@type': 'Answer', text: '对于推理内容可以——数据不出设备。微信元数据仍在腾讯服务器上。' } },
       ],
     },
@@ -1128,9 +1128,9 @@ while True:
     intro:
       'Conectar WeChat a un LLM local te permite tener un asistente de IA privado en la app de mensajería más usada del mundo, sin enviar ni un solo mensaje a una API en la nube. Esta guía cubre tres patrones de integración (WeChatFerry en Windows, puente HTTP webhook, servidor mini PC siempre activo), te ayuda a elegir el modelo Qwen adecuado para chats en chino y muestra cómo la inferencia local cumple con la Ley de Seguridad de Datos de China.',
     metaDescription:
-      'Conecta WeChat a un LLM local en 2026. Tres patrones: WeChatFerry, HTTP webhook, servidor Ollama en mini PC. Qwen2.5 7B para chino. Sin API en la nube.',
+      'Conecta WeChat a un LLM local en 2026. Tres patrones: WeChatFerry, HTTP webhook, servidor Ollama en mini PC. Qwen3 7B para chino. Sin API en la nube.',
     twitterDescription:
-      'Crea un puente WeChat + LLM local: WeChatFerry, HTTP webhook o servidor mini PC. Qwen2.5 7B para chino. Sin API en la nube.',
+      'Crea un puente WeChat + LLM local: WeChatFerry, HTTP webhook o servidor mini PC. Qwen3 7B para chino. Sin API en la nube.',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
     readTime: '11 min de lectura',
     educationalLevel: 'Intermediate',
@@ -1143,16 +1143,16 @@ while True:
       'wechat llm python local',
     ],
     leadAnswerBlock:
-      '**Conecta WeChat a un LLM local ejecutando Ollama en un mini PC siempre activo, luego enruta los mensajes de WeChat a la API HTTP de Ollama mediante WeChatFerry (Windows) o un listener de webhook. Qwen2.5 7B Q4_K_M es el mejor modelo para chats en chino en WeChat: tokenización CJK nativa, 5.5 GB de VRAM y 8–15 tok/s en hardware modesto.**',
+      '**Conecta WeChat a un LLM local ejecutando Ollama en un mini PC siempre activo, luego enruta los mensajes de WeChat a la API HTTP de Ollama mediante WeChatFerry (Windows) o un listener de webhook. Qwen3 7B Q4_K_M es el mejor modelo para chats en chino en WeChat: tokenización CJK nativa, 5.5 GB de VRAM y 8–15 tok/s en hardware modesto.**',
     quickAnswerTop: {
       en: {
         question: 'How do I connect WeChat to a local LLM?',
         answer:
-          'Run Ollama on a mini PC (or localhost), install WeChatFerry to intercept WeChat PC client messages, write a Python bridge that sends messages to Ollama\'s HTTP API at localhost:11434, and return the LLM response to the chat. Qwen2.5 7B Q4_K_M is the recommended model for Chinese-language chat.',
+          'Run Ollama on a mini PC (or localhost), install WeChatFerry to intercept WeChat PC client messages, write a Python bridge that sends messages to Ollama\'s HTTP API at localhost:11434, and return the LLM response to the chat. Qwen3 7B Q4_K_M is the recommended model for Chinese-language chat.',
         bullets: [
           'WeChatFerry: Windows-only WeChat hook; most reliable approach for 2026',
           'Ollama HTTP API: POST to /api/generate — no cloud credentials needed',
-          'Qwen2.5 7B Q4_K_M: 5.5 GB VRAM, native CJK tokenisation, 8–15 tok/s',
+          'Qwen3 7B Q4_K_M: 5.5 GB VRAM, native CJK tokenisation, 8–15 tok/s',
           'Mini PC server: Minisforum UM890 Pro runs 24/7 at ~35 W for always-on chat',
           'Privacy: zero data transmitted to WeChat servers or any LLM API',
         ],
@@ -1161,17 +1161,17 @@ while True:
       de: {
         question: 'Wie verbinde ich WeChat mit einem lokalen LLM?',
         answer:
-          'Ollama auf einem Mini-PC betreiben, WeChatFerry installieren, Python-Brücke zu localhost:11434, LLM-Antwort zurücksenden. Qwen2.5 7B Q4_K_M für Chinesisch.',
+          'Ollama auf einem Mini-PC betreiben, WeChatFerry installieren, Python-Brücke zu localhost:11434, LLM-Antwort zurücksenden. Qwen3 7B Q4_K_M für Chinesisch.',
         bullets: [
           'WeChatFerry: nur Windows, zuverlässigster Ansatz',
           'Ollama HTTP API: POST an /api/generate',
-          'Qwen2.5 7B Q4_K_M: 5,5 GB VRAM, CJK-nativ',
+          'Qwen3 7B Q4_K_M: 5,5 GB VRAM, CJK-nativ',
         ],
         updatedDate: '2026-05',
       },
-      fr: { question: 'Comment connecter WeChat à un LLM local ?', answer: 'Ollama sur mini PC, WeChatFerry, bridge Python vers localhost:11434, réponse renvoyée dans le chat.', bullets: ['WeChatFerry : Windows uniquement', 'Qwen2.5 7B Q4_K_M recommandé'], updatedDate: '2026-05' },
-      ja: { question: 'WeChatをローカルLLMに接続するには？', answer: 'ミニPCでOllamaを実行、WeChatFerryでメッセージをインターセプト、Python経由でlocalhost:11434にルーティング。', bullets: ['WeChatFerry：Windows専用', 'Qwen2.5 7B Q4_K_M推奨'], updatedDate: '2026-05' },
-      zh: { question: '如何将微信连接到本地LLM？', answer: '在迷你主机运行Ollama，安装WeChatFerry，Python脚本路由至localhost:11434。', bullets: ['WeChatFerry：仅限Windows', 'Qwen2.5 7B Q4_K_M推荐'], updatedDate: '2026-05' },
+      fr: { question: 'Comment connecter WeChat à un LLM local ?', answer: 'Ollama sur mini PC, WeChatFerry, bridge Python vers localhost:11434, réponse renvoyée dans le chat.', bullets: ['WeChatFerry : Windows uniquement', 'Qwen3 7B Q4_K_M recommandé'], updatedDate: '2026-05' },
+      ja: { question: 'WeChatをローカルLLMに接続するには？', answer: 'ミニPCでOllamaを実行、WeChatFerryでメッセージをインターセプト、Python経由でlocalhost:11434にルーティング。', bullets: ['WeChatFerry：Windows専用', 'Qwen3 7B Q4_K_M推奨'], updatedDate: '2026-05' },
+      zh: { question: '如何将微信连接到本地LLM？', answer: '在迷你主机运行Ollama，安装WeChatFerry，Python脚本路由至localhost:11434。', bullets: ['WeChatFerry：仅限Windows', 'Qwen3 7B Q4_K_M推荐'], updatedDate: '2026-05' },
     },
     snippetBlocks: [
       {
@@ -1200,7 +1200,7 @@ while True:
         items: [
           'WeChatFerry (Windows) es el hook más fiable para el cliente WeChat PC en 2026: se ejecuta junto a WeChat sin modificar su binario',
           'Ollama expone una API HTTP local en el puerto 11434: un script Python de 10 líneas enruta mensajes de WeChat a cualquier modelo cargado',
-          'Qwen2.5 7B Q4_K_M: recomendado para chats en chino — 5.5 GB de VRAM, tokenización CJK nativa, 8–15 tok/s en mini PC',
+          'Qwen3 7B Q4_K_M: recomendado para chats en chino — 5.5 GB de VRAM, tokenización CJK nativa, 8–15 tok/s en mini PC',
           'Servidor mini PC siempre activo (Minisforum UM890 Pro, ~35 W): mantiene el bot disponible 24/7 para chats grupales y personales',
           'Inferencia local: cero datos transmitidos a la nube — cumple el Artículo 31 de la Ley de Seguridad de Datos de China para datos personales',
         ],
@@ -1259,7 +1259,7 @@ while True:
         title: 'Mini PC como servidor WeChat LLM siempre activo',
         content: [
           'Un mini PC dedicado y siempre activo mantiene tu bot de WeChat funcionando sin ocupar un portátil o estación de trabajo.',
-          '**Minisforum UM890 Pro (Recomendado):** AMD Ryzen 9 8945HS, 32–64 GB DDR5, iGPU AMD Radeon 780M. Ejecuta Qwen2.5 7B a ~8 tok/s mediante ROCm en Linux. Consumo: ~35 W en reposo, ~65 W bajo inferencia. Precio: ~$350–$450.',
+          '**Minisforum UM890 Pro (Recomendado):** AMD Ryzen 9 8945HS, 32–64 GB DDR5, iGPU AMD Radeon 780M. Ejecuta Qwen3 7B a ~8 tok/s mediante ROCm en Linux. Consumo: ~35 W en reposo, ~65 W bajo inferencia. Precio: ~$350–$450.',
           '**Mac Mini M4:** Apple Silicon M4, 16–32 GB de memoria unificada, ~18 tok/s en modelos 7B mediante MLX. Consumo: ~20 W en reposo. La opción más silenciosa. Precio: ~$599.',
           '**Consejo de configuración:** Activa el inicio automático — añade `ollama serve` y tu script de puente WeChatFerry a systemd (Linux) o al Programador de tareas de Windows. El bot se recuperará automáticamente tras cada corte de luz.',
         ],
@@ -1276,9 +1276,9 @@ while True:
         id: 'model-choice',
         title: 'Mejores modelos para chats en chino en WeChat',
         content: [
-          '**Qwen2.5 7B Q4_K_M (Primera opción):** Desarrollado por Alibaba con tokenización CJK nativa. 5.5 GB de VRAM, 8–15 tok/s. Entiende modismos chinos, referencias clásicas y frases coloquiales mucho mejor que los modelos centrados en Occidente. Instalación: `ollama pull qwen2.5:7b`.',
-          '**Qwen2.5 14B Q4_K_M:** Para conversaciones más ricas cuando se dispone de un mini PC con 12–16 GB de RAM. 9.5 GB de VRAM, 4–8 tok/s. Notablemente mejor en razonamiento matizado en chino y contexto multi-turno.',
-          '**DeepSeek-R1-Distill-Qwen-7B:** Bueno para responder preguntas y explicaciones paso a paso en chino. Ligeramente más débil en conversación casual que Qwen2.5 7B.',
+          '**Qwen3 7B Q4_K_M (Primera opción):** Desarrollado por Alibaba con tokenización CJK nativa. 5.5 GB de VRAM, 8–15 tok/s. Entiende modismos chinos, referencias clásicas y frases coloquiales mucho mejor que los modelos centrados en Occidente. Instalación: `ollama pull qwen2.5:7b`.',
+          '**Qwen3 14B Q4_K_M:** Para conversaciones más ricas cuando se dispone de un mini PC con 12–16 GB de RAM. 9.5 GB de VRAM, 4–8 tok/s. Notablemente mejor en razonamiento matizado en chino y contexto multi-turno.',
+          '**DeepSeek-R1-Distill-Qwen-7B:** Bueno para responder preguntas y explicaciones paso a paso en chino. Ligeramente más débil en conversación casual que Qwen3 7B.',
           '**Evitar:** Llama 3 y Mistral — los tokenizadores centrados en Occidente usan 2–3× más tokens para texto en chino, lo que genera respuestas más lentas y truncamiento en mensajes largos.',
         ],
       },
@@ -1317,11 +1317,11 @@ while True:
           },
           {
             q: '¿Qué modelo de Ollama es mejor para texto en chino?',
-            a: 'Qwen2.5 7B Q4_K_M. Desarrollado por Alibaba con tokenización CJK nativa — entre un 30–40% más eficiente con texto en chino que los modelos Llama o Mistral.',
+            a: 'Qwen3 7B Q4_K_M. Desarrollado por Alibaba con tokenización CJK nativa — entre un 30–40% más eficiente con texto en chino que los modelos Llama o Mistral.',
           },
           {
             q: '¿Puedo ejecutar esto en un portátil?',
-            a: 'Sí. Un portátil con 16 GB de RAM ejecuta Qwen2.5 7B cómodamente a 8–15 tok/s solo con CPU. La latencia de respuesta es de 3–8 segundos por mensaje, aceptable para chat.',
+            a: 'Sí. Un portátil con 16 GB de RAM ejecuta Qwen3 7B cómodamente a 8–15 tok/s solo con CPU. La latencia de respuesta es de 3–8 segundos por mensaje, aceptable para chat.',
           },
           {
             q: '¿La inferencia local cumple la Ley de Seguridad de Datos de China?',
@@ -1362,7 +1362,7 @@ while True:
       mentions: [
         { '@type': 'SoftwareApplication', name: 'WeChatFerry' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
-        { '@type': 'SoftwareApplication', name: 'Qwen2.5 7B' },
+        { '@type': 'SoftwareApplication', name: 'Qwen3 7B' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -1372,7 +1372,7 @@ while True:
       inLanguage: 'es',
       mainEntity: [
         { '@type': 'Question', name: '¿WeChatFerry funciona con WeChat para Mac?', acceptedAnswer: { '@type': 'Answer', text: 'No. WeChatFerry intercepta las DLL del cliente WeChat PC de Windows y no es compatible con WeChat para Mac. En Mac, usa una VM de Windows o un patrón de webhook HTTP.' } },
-        { '@type': 'Question', name: '¿Qué modelo de Ollama es mejor para chats en chino en WeChat?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 7B Q4_K_M — desarrollado por Alibaba con tokenización CJK nativa, 5.5 GB de VRAM y entre un 30–40% más eficiente con texto en chino que Llama o Mistral.' } },
+        { '@type': 'Question', name: '¿Qué modelo de Ollama es mejor para chats en chino en WeChat?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — desarrollado por Alibaba con tokenización CJK nativa, 5.5 GB de VRAM y entre un 30–40% más eficiente con texto en chino que Llama o Mistral.' } },
         { '@type': 'Question', name: '¿Tencent puede banearme por usar un bot?', acceptedAnswer: { '@type': 'Answer', text: 'Los bots personales con tasas de respuesta similares a las humanas (1–5 mensajes por minuto) raramente provocan bans. Evita el envío masivo o la promoción comercial a través del bot.' } },
         { '@type': 'Question', name: '¿La inferencia local con un LLM cumple la Ley de Seguridad de Datos de China?', acceptedAnswer: { '@type': 'Answer', text: 'Para el contenido de la inferencia, sí — ningún prompt ni respuesta sale de tu hardware. Los metadatos de WeChat siguen residiendo en los servidores de Tencent según sus ToS.' } },
       ],

@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Stand Mai 2026: Die neueste stabile Ollama-Version ist unter github.com/ollama/ollama/releases aufgeführt — dort sind die genaue Versionsnummer und die Release-Notes zu finden. Diese Seite wird monatlich aktualisiert — zuletzt überprüft im Mai 2026.</strong>',
           '<code>ollama --version</code> in einem Terminal ausführen, um den installierten Build zu sehen. Die Ausgabe besteht aus einer Zeile. Wenn die GitHub-Releases-Seite eine höhere Versionsnummer anzeigt, ist Ihre Installation veraltet.',
-          'Neue Modellfamilien — darunter Llama 3.1 und Qwen 3 — erfordern eine Mindestversion von Ollama, um korrekt geladen zu werden. Neuere Releases beinhalten auch schnelleres GGUF-Laden und bessere Multi-GPU-Kontextverarbeitung — Verbesserungen, die sich im täglichen Einsatz summieren.',
+          'Neue Modellfamilien — darunter Llama 3.3 und Qwen 3 — erfordern eine Mindestversion von Ollama, um korrekt geladen zu werden. Neuere Releases beinhalten auch schnelleres GGUF-Laden und bessere Multi-GPU-Kontextverarbeitung — Verbesserungen, die sich im täglichen Einsatz summieren.',
         ],
       },
       body2: {
@@ -210,7 +210,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>En mai 2026, la dernière version stable d\'Ollama est listée sur github.com/ollama/ollama/releases — cette page affiche le numéro de version exact et les notes de release. Cette page est mise à jour mensuellement — dernière vérification mai 2026.</strong>',
           'Exécutez <code>ollama --version</code> dans un terminal pour voir votre build installé. La sortie tient sur une ligne. Si la page des releases GitHub affiche un numéro de version supérieur, votre installation est en retard.',
-          'Les nouvelles familles de modèles — dont Llama 3.1 et Qwen 3 — nécessitent une version minimale d\'Ollama pour se charger correctement. Les versions récentes incluent également un chargement GGUF plus rapide et une meilleure gestion du contexte multi-GPU — des améliorations qui s\'accumulent à l\'usage quotidien.',
+          'Les nouvelles familles de modèles — dont Llama 3.3 et Qwen 3 — nécessitent une version minimale d\'Ollama pour se charger correctement. Les versions récentes incluent également un chargement GGUF plus rapide et une meilleure gestion du contexte multi-GPU — des améliorations qui s\'accumulent à l\'usage quotidien.',
         ],
       },
       body2: {
@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>2026年5月現在、最新の安定版Ollamaリリースはgithub.com/ollama/ollama/releasesに掲載されています — 正確なバージョン番号とリリースノートが確認できます。このページは毎月更新されています — 最終確認: 2026年5月。</strong>',
           'ターミナルで <code>ollama --version</code> を実行して、インストール済みのビルドを確認してください。出力は1行です。GitHubリリースページがより高いバージョン番号を示している場合、インストールが古くなっています。',
-          'Llama 3.1やQwen 3を含む新しいモデルファミリーは、正しく読み込むために最低限のOllamaバージョンが必要です。最近のリリースには、より高速なGGUFロードとマルチGPUコンテキスト処理の改善も含まれており、日常的な使用での効果が蓄積されます。',
+          'Llama 3.3やQwen 3を含む新しいモデルファミリーは、正しく読み込むために最低限のOllamaバージョンが必要です。最近のリリースには、より高速なGGUFロードとマルチGPUコンテキスト処理の改善も含まれており、日常的な使用での効果が蓄積されます。',
         ],
       },
       body2: {
@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>截至2026年5月，最新稳定版Ollama发布在github.com/ollama/ollama/releases — 该页面显示确切的版本号和发布说明。此页面每月更新 — 最后验证于2026年5月。</strong>',
           '在终端运行 <code>ollama --version</code> 查看已安装的版本。输出只有一行。如果GitHub发布页面显示更高的版本号，说明您的安装已过时。',
-          '包括Llama 3.1和Qwen 3在内的新模型系列需要最低Ollama版本才能正确加载。最新版本还包括更快的GGUF加载和更好的多GPU上下文处理 — 日常使用中积累的改进效果明显。',
+          '包括Llama 3.3和Qwen 3在内的新模型系列需要最低Ollama版本才能正确加载。最新版本还包括更快的GGUF加载和更好的多GPU上下文处理 — 日常使用中积累的改进效果明显。',
         ],
       },
       body2: {
@@ -450,7 +450,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>A mayo de 2026, la última versión estable de Ollama está disponible en github.com/ollama/ollama/releases — esa página muestra el número de versión exacto y las notas de lanzamiento. Esta página se actualiza mensualmente — última verificación mayo 2026.</strong>',
           'Ejecuta <code>ollama --version</code> en una terminal para ver tu versión instalada. La salida es una sola línea. Si la página de lanzamientos de GitHub muestra un número de versión superior, tu instalación está desactualizada.',
-          'Las nuevas familias de modelos — incluyendo Llama 3.1 y Qwen 3 — requieren una versión mínima de Ollama para cargarse correctamente. Los lanzamientos recientes también incluyen carga GGUF más rápida y mejor gestión de contexto multi-GPU — mejoras que se acumulan en el uso diario.',
+          'Las nuevas familias de modelos — incluyendo Llama 3.3 y Qwen 3 — requieren una versión mínima de Ollama para cargarse correctamente. Los lanzamientos recientes también incluyen carga GGUF más rápida y mejor gestión de contexto multi-GPU — mejoras que se acumulan en el uso diario.',
         ],
       },
       body2: {

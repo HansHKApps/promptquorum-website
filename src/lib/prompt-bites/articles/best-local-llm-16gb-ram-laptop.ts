@@ -122,17 +122,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quick Answers',
     title: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop?',
     seoTitle: 'Bestes LLM 16 GB Laptop 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M (~5 tok/s) am besten für 16 GB Laptops. Qwen 2.5 Coder 7B optimal für Coding. Apple Silicon ~3× schneller. Schnelle Antwort von PromptQuorum.',
+    metaDescription: 'Llama 3 8B Q4_K_M (~5 tok/s) am besten für 16 GB Laptops. Qwen 3 Coder 7B optimal für Coding. Apple Silicon ~3× schneller. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       de: {
         question: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop?',
-        answer: 'Llama 3 8B Q4_K_M ist das beste lokale LLM für einen 16-GB-RAM-Laptop ohne dedizierte GPU. Es benötigt ~5 GB RAM und läuft mit ~5 tok/s auf einem modernen CPU. Qwen 2.5 Coder 7B ist die bevorzugte Alternative für Coding-Aufgaben. Apple-Silicon-Laptops (M-Serie) sind durch Unified Memory bis zu 3–4× schneller.',
+        answer: 'Llama 3 8B Q4_K_M ist das beste lokale LLM für einen 16-GB-RAM-Laptop ohne dedizierte GPU. Es benötigt ~5 GB RAM und läuft mit ~5 tok/s auf einem modernen CPU. Qwen 3 Coder 7B ist die bevorzugte Alternative für Coding-Aufgaben. Apple-Silicon-Laptops (M-Serie) sind durch Unified Memory bis zu 3–4× schneller.',
         bullets: [
           'Llama 3 8B Q4_K_M: ~5 GB RAM, ~5 tok/s auf CPU, ausgewogene Gesamtleistung',
-          'Qwen 2.5 Coder 7B Q4_K_M: ~5 GB RAM, ~5 tok/s auf CPU, optimal für Coding',
+          'Qwen 3 Coder 7B Q4_K_M: ~5 GB RAM, ~5 tok/s auf CPU, optimal für Coding',
           'Apple Silicon Laptops (M-Serie): ~18 tok/s via Unified Memory — deutlich schneller',
         ],
         updatedDate: '2026-05',
@@ -148,12 +148,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['Modell', 'RAM-Bedarf (Q4_K_M)', 'Geschwindigkeit (am besten für)'],
         rows: [
           { 'Modell': 'Llama 3 8B', 'RAM-Bedarf (Q4_K_M)': '~5 GB', 'Geschwindigkeit (am besten für)': '~5 tok/s — allgemeine Nutzung, beste Balance' },
-          { 'Modell': 'Qwen 2.5 Coder 7B', 'RAM-Bedarf (Q4_K_M)': '~5 GB', 'Geschwindigkeit (am besten für)': '~5 tok/s — Coding-spezifische Aufgaben' },
+          { 'Modell': 'Qwen 3 Coder 7B', 'RAM-Bedarf (Q4_K_M)': '~5 GB', 'Geschwindigkeit (am besten für)': '~5 tok/s — Coding-spezifische Aufgaben' },
           { 'Modell': 'Phi-4 Mini', 'RAM-Bedarf (Q4_K_M)': '~3 GB', 'Geschwindigkeit (am besten für)': '~12 tok/s — Geschwindigkeit zuerst' },
-          { 'Modell': 'Qwen 2.5 14B', 'RAM-Bedarf (Q4_K_M)': '~9 GB', 'Geschwindigkeit (am besten für)': '~3 tok/s — Reasoning, langer Kontext' },
+          { 'Modell': 'Qwen 3 14B', 'RAM-Bedarf (Q4_K_M)': '~9 GB', 'Geschwindigkeit (am besten für)': '~3 tok/s — Reasoning, langer Kontext' },
         ],
         content2: [
-          'Qwen 2.5 14B ist die Obergrenze für 16 GB: Es passt bei Q4_K_M mit ~7 GB verbleibend, aber die Geschwindigkeit fällt auf ~3 tok/s auf CPU — langsam genug, um bei interaktiver Nutzung frustrierend zu sein. Führen Sie es für nicht-interaktive Aufgaben aus (Batch-Zusammenfassung, Dokumentenanalyse), bei denen Geschwindigkeit weniger wichtig ist als Ausgabequalität.',
+          'Qwen 3 14B ist die Obergrenze für 16 GB: Es passt bei Q4_K_M mit ~7 GB verbleibend, aber die Geschwindigkeit fällt auf ~3 tok/s auf CPU — langsam genug, um bei interaktiver Nutzung frustrierend zu sein. Führen Sie es für nicht-interaktive Aufgaben aus (Batch-Zusammenfassung, Dokumentenanalyse), bei denen Geschwindigkeit weniger wichtig ist als Ausgabequalität.',
         ],
       },
       body2: {
@@ -177,11 +177,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Sollte ich Apps schließen, um RAM für das LLM freizugeben?',
-            a: 'Nur wenn Sie ein Modell nahe der RAM-Obergrenze ausführen. Für Llama 3 8B (~5 GB) auf 16 GB ist das nicht nötig — das Betriebssystem verwaltet den Speicher effizient. Für Qwen 2.5 14B (~9 GB) verhindert das Schließen von Chrome und anderen RAM-intensiven Apps Disk-Swapping und hält die Geschwindigkeit konsistent. Verwenden Sie die Aktivitätsanzeige (macOS) oder den Task-Manager (Windows), um freien RAM vor dem Laden des Modells zu überprüfen.',
+            a: 'Nur wenn Sie ein Modell nahe der RAM-Obergrenze ausführen. Für Llama 3 8B (~5 GB) auf 16 GB ist das nicht nötig — das Betriebssystem verwaltet den Speicher effizient. Für Qwen 3 14B (~9 GB) verhindert das Schließen von Chrome und anderen RAM-intensiven Apps Disk-Swapping und hält die Geschwindigkeit konsistent. Verwenden Sie die Aktivitätsanzeige (macOS) oder den Task-Manager (Windows), um freien RAM vor dem Laden des Modells zu überprüfen.',
           },
           {
             q: 'Lohnt sich ein 32-GB-RAM-Upgrade für lokale LLMs?',
-            a: 'Ja, wenn Sie regelmäßig 14B+-Modelle ausführen oder das Modell geladen halten möchten, während Sie andere ressourcenintensive Anwendungen verwenden. Mit 32 GB läuft Qwen 2.5 14B problemlos ohne Speicherdruck. Sie können auch 70B-Modelle mit sehr aggressiver Quantisierung (Q2_K bei ~24 GB) nutzen, obwohl die Qualität unterhalb von Q4 erheblich abnimmt. Für die meisten Nutzer mit 7–8B-Modellen reichen 16 GB.',
+            a: 'Ja, wenn Sie regelmäßig 14B+-Modelle ausführen oder das Modell geladen halten möchten, während Sie andere ressourcenintensive Anwendungen verwenden. Mit 32 GB läuft Qwen 3 14B problemlos ohne Speicherdruck. Sie können auch 70B-Modelle mit sehr aggressiver Quantisierung (Q2_K bei ~24 GB) nutzen, obwohl die Qualität unterhalb von Q4 erheblich abnimmt. Für die meisten Nutzer mit 7–8B-Modellen reichen 16 GB.',
           },
         ],
       },
@@ -191,17 +191,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quick Answers',
     title: 'Meilleur LLM local pour un laptop avec 16 Go de RAM ?',
     seoTitle: 'LLM 16 Go RAM Laptop 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M (~5 tok/s) meilleur pour 16 Go. Qwen 2.5 Coder 7B optimal pour Coding. Apple Silicon 3× plus rapide. Réponse rapide PromptQuorum.',
+    metaDescription: 'Llama 3 8B Q4_K_M (~5 tok/s) meilleur pour 16 Go. Qwen 3 Coder 7B optimal pour Coding. Apple Silicon 3× plus rapide. Réponse rapide PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       fr: {
         question: 'Meilleur LLM local pour un laptop avec 16 Go de RAM ?',
-        answer: 'Llama 3 8B Q4_K_M est le meilleur LLM local pour un laptop avec 16 Go de RAM sans GPU dédié. Il utilise ~5 Go de RAM et tourne à ~5 tok/s sur un CPU moderne. Qwen 2.5 Coder 7B est l\'alternative privilégiée pour les tâches de Coding. Les laptops Apple Silicon (série M) sont 3 à 4 fois plus rapides via la mémoire unifiée.',
+        answer: 'Llama 3 8B Q4_K_M est le meilleur LLM local pour un laptop avec 16 Go de RAM sans GPU dédié. Il utilise ~5 Go de RAM et tourne à ~5 tok/s sur un CPU moderne. Qwen 3 Coder 7B est l\'alternative privilégiée pour les tâches de Coding. Les laptops Apple Silicon (série M) sont 3 à 4 fois plus rapides via la mémoire unifiée.',
         bullets: [
           'Llama 3 8B Q4_K_M : ~5 Go de RAM, ~5 tok/s sur CPU, meilleur équilibre général',
-          'Qwen 2.5 Coder 7B Q4_K_M : ~5 Go de RAM, ~5 tok/s sur CPU, optimal pour le Coding',
+          'Qwen 3 Coder 7B Q4_K_M : ~5 Go de RAM, ~5 tok/s sur CPU, optimal pour le Coding',
           'Laptops Apple Silicon (série M) : ~18 tok/s via mémoire unifiée — bien plus rapides',
         ],
         updatedDate: '2026-05',
@@ -217,12 +217,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['Modèle', 'RAM (Q4_K_M)', 'Vitesse (meilleur usage)'],
         rows: [
           { 'Modèle': 'Llama 3 8B', 'RAM (Q4_K_M)': '~5 Go', 'Vitesse (meilleur usage)': '~5 tok/s — usage général, meilleur équilibre' },
-          { 'Modèle': 'Qwen 2.5 Coder 7B', 'RAM (Q4_K_M)': '~5 Go', 'Vitesse (meilleur usage)': '~5 tok/s — tâches de Coding spécifiques' },
+          { 'Modèle': 'Qwen 3 Coder 7B', 'RAM (Q4_K_M)': '~5 Go', 'Vitesse (meilleur usage)': '~5 tok/s — tâches de Coding spécifiques' },
           { 'Modèle': 'Phi-4 Mini', 'RAM (Q4_K_M)': '~3 Go', 'Vitesse (meilleur usage)': '~12 tok/s — vitesse avant tout' },
-          { 'Modèle': 'Qwen 2.5 14B', 'RAM (Q4_K_M)': '~9 Go', 'Vitesse (meilleur usage)': '~3 tok/s — raisonnement, long contexte' },
+          { 'Modèle': 'Qwen 3 14B', 'RAM (Q4_K_M)': '~9 Go', 'Vitesse (meilleur usage)': '~3 tok/s — raisonnement, long contexte' },
         ],
         content2: [
-          'Qwen 2.5 14B est le plafond pour 16 Go : il tient en Q4_K_M avec ~7 Go restants, mais la vitesse chute à ~3 tok/s sur CPU — assez lent pour être frustrant en usage interactif. Utilisez-le pour des tâches non interactives (résumé par lots, analyse de documents) où la vitesse importe moins que la qualité de sortie.',
+          'Qwen 3 14B est le plafond pour 16 Go : il tient en Q4_K_M avec ~7 Go restants, mais la vitesse chute à ~3 tok/s sur CPU — assez lent pour être frustrant en usage interactif. Utilisez-le pour des tâches non interactives (résumé par lots, analyse de documents) où la vitesse importe moins que la qualité de sortie.',
         ],
       },
       body2: {
@@ -246,11 +246,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Dois-je fermer des apps pour libérer de la RAM pour le LLM ?',
-            a: 'Seulement si vous faites tourner un modèle près du plafond RAM. Pour Llama 3 8B (~5 Go) sur 16 Go, ce n\'est pas nécessaire — l\'OS gère la mémoire efficacement. Pour Qwen 2.5 14B (~9 Go), fermer Chrome et autres apps gourmandes en RAM évite le swap disque et maintient une vitesse constante. Utilisez le Moniteur d\'activité (macOS) ou le Gestionnaire des tâches (Windows) pour vérifier la RAM libre avant de charger le modèle.',
+            a: 'Seulement si vous faites tourner un modèle près du plafond RAM. Pour Llama 3 8B (~5 Go) sur 16 Go, ce n\'est pas nécessaire — l\'OS gère la mémoire efficacement. Pour Qwen 3 14B (~9 Go), fermer Chrome et autres apps gourmandes en RAM évite le swap disque et maintient une vitesse constante. Utilisez le Moniteur d\'activité (macOS) ou le Gestionnaire des tâches (Windows) pour vérifier la RAM libre avant de charger le modèle.',
           },
           {
             q: '32 Go de RAM vaut-il l\'upgrade pour les LLMs locaux ?',
-            a: 'Oui, si vous faites tourner des modèles 14B+ régulièrement ou souhaitez garder le modèle chargé en faisant tourner d\'autres applications lourdes. À 32 Go, Qwen 2.5 14B tourne confortablement sans pression mémoire. Vous débloquez aussi les modèles 70B avec une quantisation très agressive (Q2_K à ~24 Go), bien que la qualité se dégrade significativement sous Q4. Pour la plupart des utilisateurs avec des modèles 7–8B, 16 Go est suffisant.',
+            a: 'Oui, si vous faites tourner des modèles 14B+ régulièrement ou souhaitez garder le modèle chargé en faisant tourner d\'autres applications lourdes. À 32 Go, Qwen 3 14B tourne confortablement sans pression mémoire. Vous débloquez aussi les modèles 70B avec une quantisation très agressive (Q2_K à ~24 Go), bien que la qualité se dégrade significativement sous Q4. Pour la plupart des utilisateurs avec des modèles 7–8B, 16 Go est suffisant.',
           },
         ],
       },
@@ -260,17 +260,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quick Answers',
     title: '16 GB RAM ラップトップに最適なローカル LLM は？',
     seoTitle: '16 GB ラップトップ最適 LLM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M（16 GB、~5 tok/s）が最適。Coding は Qwen 2.5 Coder 7B。Apple Silicon は 3 倍高速。PromptQuorum より。',
+    metaDescription: 'Llama 3 8B Q4_K_M（16 GB、~5 tok/s）が最適。Coding は Qwen 3 Coder 7B。Apple Silicon は 3 倍高速。PromptQuorum より。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       ja: {
         question: '16 GB RAM ラップトップに最適なローカル LLM は？',
-        answer: '専用 GPU のない 16 GB RAM ラップトップでは、Llama 3 8B Q4_K_M が汎用ローカル LLM として最適です。~5 GB RAM を使用し、最新の x86 CPU で ~5 tok/s で動作します。Coding タスクには Qwen 2.5 Coder 7B が優先候補です。Apple Silicon ラップトップ（M シリーズ）はユニファイドメモリにより 3～4 倍高速です。',
+        answer: '専用 GPU のない 16 GB RAM ラップトップでは、Llama 3 8B Q4_K_M が汎用ローカル LLM として最適です。~5 GB RAM を使用し、最新の x86 CPU で ~5 tok/s で動作します。Coding タスクには Qwen 3 Coder 7B が優先候補です。Apple Silicon ラップトップ（M シリーズ）はユニファイドメモリにより 3～4 倍高速です。',
         bullets: [
           'Llama 3 8B Q4_K_M：~5 GB RAM、CPU で ~5 tok/s、汎用で最良バランス',
-          'Qwen 2.5 Coder 7B Q4_K_M：~5 GB RAM、CPU で ~5 tok/s、Coding に最適',
+          'Qwen 3 Coder 7B Q4_K_M：~5 GB RAM、CPU で ~5 tok/s、Coding に最適',
           'Apple Silicon ラップトップ（M シリーズ）：ユニファイドメモリ経由で ~18 tok/s — はるかに高速',
         ],
         updatedDate: '2026-05',
@@ -286,12 +286,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['モデル', 'RAM 使用量（Q4_K_M）', '速度（最適用途）'],
         rows: [
           { 'モデル': 'Llama 3 8B', 'RAM 使用量（Q4_K_M）': '~5 GB', '速度（最適用途）': '~5 tok/s — 汎用、最良バランス' },
-          { 'モデル': 'Qwen 2.5 Coder 7B', 'RAM 使用量（Q4_K_M）': '~5 GB', '速度（最適用途）': '~5 tok/s — Coding 特化タスク' },
+          { 'モデル': 'Qwen 3 Coder 7B', 'RAM 使用量（Q4_K_M）': '~5 GB', '速度（最適用途）': '~5 tok/s — Coding 特化タスク' },
           { 'モデル': 'Phi-4 Mini', 'RAM 使用量（Q4_K_M）': '~3 GB', '速度（最適用途）': '~12 tok/s — 速度優先' },
-          { 'モデル': 'Qwen 2.5 14B', 'RAM 使用量（Q4_K_M）': '~9 GB', '速度（最適用途）': '~3 tok/s — 推論、長いコンテキスト' },
+          { 'モデル': 'Qwen 3 14B', 'RAM 使用量（Q4_K_M）': '~9 GB', '速度（最適用途）': '~3 tok/s — 推論、長いコンテキスト' },
         ],
         content2: [
-          'Qwen 2.5 14B は 16 GB の上限です：Q4_K_M で ~7 GB の余裕を持って収まりますが、CPU での速度が ~3 tok/s に低下します — インタラクティブ使用には不満を感じる遅さです。速度より出力品質が重要な非インタラクティブタスク（バッチ要約、文書分析）に使用してください。',
+          'Qwen 3 14B は 16 GB の上限です：Q4_K_M で ~7 GB の余裕を持って収まりますが、CPU での速度が ~3 tok/s に低下します — インタラクティブ使用には不満を感じる遅さです。速度より出力品質が重要な非インタラクティブタスク（バッチ要約、文書分析）に使用してください。',
         ],
       },
       body2: {
@@ -315,11 +315,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'LLM のために RAM を空けるためアプリを閉じるべきですか？',
-            a: 'RAM 上限近くのモデルを実行する場合のみ。16 GB 上の Llama 3 8B（~5 GB）には必要ありません — OS がメモリを効率的に管理します。Qwen 2.5 14B（~9 GB）の場合、Chrome や他のメモリ集約型アプリを閉じることでディスクスワッピングを防ぎ、速度を一定に保ちます。モデルをロードする前に Activity Monitor（macOS）または タスクマネージャー（Windows）で空き RAM を確認してください。',
+            a: 'RAM 上限近くのモデルを実行する場合のみ。16 GB 上の Llama 3 8B（~5 GB）には必要ありません — OS がメモリを効率的に管理します。Qwen 3 14B（~9 GB）の場合、Chrome や他のメモリ集約型アプリを閉じることでディスクスワッピングを防ぎ、速度を一定に保ちます。モデルをロードする前に Activity Monitor（macOS）または タスクマネージャー（Windows）で空き RAM を確認してください。',
           },
           {
             q: 'ローカル LLM 用に 32 GB RAM へのアップグレードは価値がありますか？',
-            a: 'はい、14B+ モデルを定期的に実行する場合や、他の重いアプリケーションを実行しながらモデルをロードしたままにしたい場合は。32 GB なら Qwen 2.5 14B はメモリプレッシャーなしに快適に動作します。非常にアグレッシブな量子化で 70B モデルも解放されます（Q2_K で ~24 GB）が、Q4 以下では品質が著しく低下します。7～8B モデルを実行するほとんどのユーザーには 16 GB で十分です。',
+            a: 'はい、14B+ モデルを定期的に実行する場合や、他の重いアプリケーションを実行しながらモデルをロードしたままにしたい場合は。32 GB なら Qwen 3 14B はメモリプレッシャーなしに快適に動作します。非常にアグレッシブな量子化で 70B モデルも解放されます（Q2_K で ~24 GB）が、Q4 以下では品質が著しく低下します。7～8B モデルを実行するほとんどのユーザーには 16 GB で十分です。',
           },
         ],
       },
@@ -329,17 +329,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quick Answers',
     title: '¿Qué LLM Local es Mejor para un Laptop con 16 GB de RAM?',
     seoTitle: 'Mejor LLM local 16 GB de RAM 2026 | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M (~5 tok/s) para laptops con 16 GB de RAM sin GPU. Qwen 2.5 Coder 7B para programación. Apple Silicon ~3× más rápido. PromptQuorum.',
+    metaDescription: 'Llama 3 8B Q4_K_M (~5 tok/s) para laptops con 16 GB de RAM sin GPU. Qwen 3 Coder 7B para programación. Apple Silicon ~3× más rápido. PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       es: {
         question: '¿Qué LLM local es mejor para un laptop con 16 GB de RAM?',
-        answer: 'Llama 3 8B Q4_K_M es el mejor LLM local para un laptop con 16 GB de RAM sin GPU dedicada, usando ~5 GB de RAM y corriendo a ~5 tok/s en CPUs modernas. Para tareas de programación, Qwen 2.5 Coder 7B es la alternativa preferida. Los laptops Apple Silicon (serie M) son 3–4× más rápidos gracias a la Unified Memory.',
+        answer: 'Llama 3 8B Q4_K_M es el mejor LLM local para un laptop con 16 GB de RAM sin GPU dedicada, usando ~5 GB de RAM y corriendo a ~5 tok/s en CPUs modernas. Para tareas de programación, Qwen 3 Coder 7B es la alternativa preferida. Los laptops Apple Silicon (serie M) son 3–4× más rápidos gracias a la Unified Memory.',
         bullets: [
           'Llama 3 8B Q4_K_M: ~5 GB de RAM, ~5 tok/s en CPU, mejor equilibrio para uso general',
-          'Qwen 2.5 Coder 7B Q4_K_M: ~5 GB de RAM, ~5 tok/s en CPU, óptimo para programación',
+          'Qwen 3 Coder 7B Q4_K_M: ~5 GB de RAM, ~5 tok/s en CPU, óptimo para programación',
           'Laptops Apple Silicon (serie M): ~18 tok/s por Unified Memory — mucho más rápido',
         ],
         updatedDate: '2026-05',
@@ -355,12 +355,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['Modelo', 'Uso de RAM (Q4_K_M)', 'Velocidad (mejor para)'],
         rows: [
           { 'Modelo': 'Llama 3 8B', 'Uso de RAM (Q4_K_M)': '~5 GB', 'Velocidad (mejor para)': '~5 tok/s — uso general, mejor equilibrio' },
-          { 'Modelo': 'Qwen 2.5 Coder 7B', 'Uso de RAM (Q4_K_M)': '~5 GB', 'Velocidad (mejor para)': '~5 tok/s — tareas de programación' },
+          { 'Modelo': 'Qwen 3 Coder 7B', 'Uso de RAM (Q4_K_M)': '~5 GB', 'Velocidad (mejor para)': '~5 tok/s — tareas de programación' },
           { 'Modelo': 'Phi-4 Mini', 'Uso de RAM (Q4_K_M)': '~3 GB', 'Velocidad (mejor para)': '~12 tok/s — prioridad de velocidad' },
-          { 'Modelo': 'Qwen 2.5 14B', 'Uso de RAM (Q4_K_M)': '~9 GB', 'Velocidad (mejor para)': '~3 tok/s — razonamiento, contexto largo' },
+          { 'Modelo': 'Qwen 3 14B', 'Uso de RAM (Q4_K_M)': '~9 GB', 'Velocidad (mejor para)': '~3 tok/s — razonamiento, contexto largo' },
         ],
         content2: [
-          'Qwen 2.5 14B es el techo para 16 GB: cabe en Q4_K_M con ~7 GB sobrantes, pero la velocidad cae a ~3 tok/s en CPU — suficientemente lento para ser frustrante en uso interactivo. Úsalo para tareas no interactivas (resumen por lotes, análisis de documentos) donde la velocidad importa menos que la calidad de salida.',
+          'Qwen 3 14B es el techo para 16 GB: cabe en Q4_K_M con ~7 GB sobrantes, pero la velocidad cae a ~3 tok/s en CPU — suficientemente lento para ser frustrante en uso interactivo. Úsalo para tareas no interactivas (resumen por lotes, análisis de documentos) donde la velocidad importa menos que la calidad de salida.',
         ],
       },
       body2: {
@@ -384,11 +384,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Debo cerrar apps para liberar RAM para el LLM?',
-            a: 'Solo si ejecutas un modelo cerca del límite de RAM. Para Llama 3 8B (~5 GB) en 16 GB, no es necesario — el SO gestiona la memoria eficientemente. Para Qwen 2.5 14B (~9 GB), cerrar Chrome y otras apps con mucha RAM evita el swap en disco y mantiene la velocidad constante. Usa el Monitor de Actividad (macOS) o el Administrador de tareas (Windows) para verificar la RAM libre antes de cargar el modelo.',
+            a: 'Solo si ejecutas un modelo cerca del límite de RAM. Para Llama 3 8B (~5 GB) en 16 GB, no es necesario — el SO gestiona la memoria eficientemente. Para Qwen 3 14B (~9 GB), cerrar Chrome y otras apps con mucha RAM evita el swap en disco y mantiene la velocidad constante. Usa el Monitor de Actividad (macOS) o el Administrador de tareas (Windows) para verificar la RAM libre antes de cargar el modelo.',
           },
           {
             q: '¿Vale la pena actualizar a 32 GB de RAM para LLMs locales?',
-            a: 'Sí, si ejecutas modelos de 14B+ con frecuencia o quieres mantener el modelo cargado mientras usas otras aplicaciones pesadas. Con 32 GB, Qwen 2.5 14B corre sin presión de memoria. También puedes usar modelos de 70B con cuantización muy agresiva (Q2_K a ~24 GB), aunque la calidad cae notablemente por debajo de Q4. Para la mayoría que ejecuta modelos de 7–8B, 16 GB es suficiente.',
+            a: 'Sí, si ejecutas modelos de 14B+ con frecuencia o quieres mantener el modelo cargado mientras usas otras aplicaciones pesadas. Con 32 GB, Qwen 3 14B corre sin presión de memoria. También puedes usar modelos de 70B con cuantización muy agresiva (Q2_K a ~24 GB), aunque la calidad cae notablemente por debajo de Q4. Para la mayoría que ejecuta modelos de 7–8B, 16 GB es suficiente.',
           },
         ],
       },
@@ -398,17 +398,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quick Answers',
     title: '16 GB 内存笔记本最适合哪款本地 LLM？',
     seoTitle: '16 GB 笔记本最佳 LLM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M（16 GB、~5 tok/s）首选。编程任务选 Qwen 2.5 Coder 7B。Apple Silicon 快 3 倍。PromptQuorum 快速解答。',
+    metaDescription: 'Llama 3 8B Q4_K_M（16 GB、~5 tok/s）首选。编程任务选 Qwen 3 Coder 7B。Apple Silicon 快 3 倍。PromptQuorum 快速解答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       zh: {
         question: '16 GB 内存笔记本最适合哪款本地 LLM？',
-        answer: '对于没有独立 GPU 的 16 GB 内存笔记本，Llama 3 8B Q4_K_M 是最佳本地 LLM。占用约 5 GB 内存，在现代 CPU 上约 5 tok/s。编程任务优先选择 Qwen 2.5 Coder 7B。Apple Silicon 笔记本（M 系列）通过统一内存快 3~4 倍。',
+        answer: '对于没有独立 GPU 的 16 GB 内存笔记本，Llama 3 8B Q4_K_M 是最佳本地 LLM。占用约 5 GB 内存，在现代 CPU 上约 5 tok/s。编程任务优先选择 Qwen 3 Coder 7B。Apple Silicon 笔记本（M 系列）通过统一内存快 3~4 倍。',
         bullets: [
           'Llama 3 8B Q4_K_M：~5 GB 内存，CPU 约 5 tok/s，综合最佳平衡',
-          'Qwen 2.5 Coder 7B Q4_K_M：~5 GB 内存，CPU 约 5 tok/s，编程任务最优',
+          'Qwen 3 Coder 7B Q4_K_M：~5 GB 内存，CPU 约 5 tok/s，编程任务最优',
           'Apple Silicon 笔记本（M 系列）：通过统一内存约 18 tok/s——快得多',
         ],
         updatedDate: '2026-05',
@@ -424,12 +424,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['模型', '内存占用（Q4_K_M）', '速度（最适用途）'],
         rows: [
           { '模型': 'Llama 3 8B', '内存占用（Q4_K_M）': '~5 GB', '速度（最适用途）': '~5 tok/s — 通用，最佳平衡' },
-          { '模型': 'Qwen 2.5 Coder 7B', '内存占用（Q4_K_M）': '~5 GB', '速度（最适用途）': '~5 tok/s — 编程专项任务' },
+          { '模型': 'Qwen 3 Coder 7B', '内存占用（Q4_K_M）': '~5 GB', '速度（最适用途）': '~5 tok/s — 编程专项任务' },
           { '模型': 'Phi-4 Mini', '内存占用（Q4_K_M）': '~3 GB', '速度（最适用途）': '~12 tok/s — 速度优先' },
-          { '模型': 'Qwen 2.5 14B', '内存占用（Q4_K_M）': '~9 GB', '速度（最适用途）': '~3 tok/s — 推理，长上下文' },
+          { '模型': 'Qwen 3 14B', '内存占用（Q4_K_M）': '~9 GB', '速度（最适用途）': '~3 tok/s — 推理，长上下文' },
         ],
         content2: [
-          'Qwen 2.5 14B 是 16 GB 的上限：Q4_K_M 可以容纳，还剩约 7 GB，但 CPU 速度降至约 3 tok/s——交互使用时慢到令人沮丧。将其用于速度不如输出质量重要的非交互任务（批量摘要、文档分析）。',
+          'Qwen 3 14B 是 16 GB 的上限：Q4_K_M 可以容纳，还剩约 7 GB，但 CPU 速度降至约 3 tok/s——交互使用时慢到令人沮丧。将其用于速度不如输出质量重要的非交互任务（批量摘要、文档分析）。',
         ],
       },
       body2: {
@@ -453,11 +453,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '需要关闭应用来为 LLM 释放内存吗？',
-            a: '仅当运行内存接近上限的模型时。16 GB 上运行 Llama 3 8B（~5 GB）不需要——系统会高效管理内存。对于 Qwen 2.5 14B（~9 GB），关闭 Chrome 等内存密集型应用可防止磁盘交换并保持速度稳定。加载模型前用活动监视器（macOS）或任务管理器（Windows）查看可用内存。',
+            a: '仅当运行内存接近上限的模型时。16 GB 上运行 Llama 3 8B（~5 GB）不需要——系统会高效管理内存。对于 Qwen 3 14B（~9 GB），关闭 Chrome 等内存密集型应用可防止磁盘交换并保持速度稳定。加载模型前用活动监视器（macOS）或任务管理器（Windows）查看可用内存。',
           },
           {
             q: '为了本地 LLM 升级到 32 GB 内存值得吗？',
-            a: '值得，如果你经常运行 14B+ 模型或希望在运行其他繁重应用时保持模型加载。32 GB 下 Qwen 2.5 14B 运行流畅无内存压力。还可以解锁超激进量化的 70B 模型（Q2_K 约 24 GB），但 Q4 以下质量明显下降。对大多数运行 7~8B 模型的用户，16 GB 已经足够。',
+            a: '值得，如果你经常运行 14B+ 模型或希望在运行其他繁重应用时保持模型加载。32 GB 下 Qwen 3 14B 运行流畅无内存压力。还可以解锁超激进量化的 70B 模型（Q2_K 约 24 GB），但 Q4 以下质量明显下降。对大多数运行 7~8B 模型的用户，16 GB 已经足够。',
           },
         ],
       },

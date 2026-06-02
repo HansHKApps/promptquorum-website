@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Understand LLM quantization in 2026: Q4_K_M, Q5_K_M, Q8_0 differences. Memory savings, quality tradeoffs, model size table, recommendations per use case.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen2.5', 'Mistral'],
+      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**Choose quantization based on VRAM: 6–8 GB VRAM → use Q4_K_M (~4.5 GB for 7B models, 1–3% quality loss), 16 GB → Q5_K_M, 24+ GB → Q8_0 (negligible loss). Quantization reduces model weight precision from 16-bit floats to 4- or 8-bit integers, cutting RAM by 50–75%. For models larger than your GPU, add CPU offloading or multi-GPU layer splitting.**',
       audience: 'Engineers deploying local LLMs in production, optimizing for limited VRAM, or building multi-GPU systems',
@@ -316,8 +316,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'LLM Quantization: Regional Context',
           items: [
             '**EU (GDPR, Article 44)** -- Cross-border AI data transfers require adequacy decisions or Standard Contractual Clauses. Q4_K_M quantization enables 7B models to run on 8 GB edge devices, eliminating third-party cloud API calls entirely. The German BfDI and French CNIL both recommend local inference for high-risk AI processing under GDPR Article 22. Quantized Mistral and Llama models are the dominant choices in EU enterprise deployments for this reason.',
-            '**Japan (METI AI Governance Guidelines 2024)** -- Japan\'s Ministry of Economy, Trade and Industry requires AI governance documentation for enterprise deployments. Quantized models on domestic infrastructure satisfy METI\'s "controllability" requirements -- the model weights stay on-premises. Q4_K_M quantization makes 13B-32B models feasible on 16-32 GB corporate servers without GPU clusters. Qwen2.5 and Llama 3 are the most-deployed families in Japanese enterprise settings.',
-            '**China (CAC Generative AI Regulations 2023)** -- China\'s Cyberspace Administration requires security assessments for publicly deployed AI and data localization for user data. Quantized Chinese-native models (Qwen2.5, Baichuan2, Yi) run entirely on domestic hardware, satisfying CAC localization requirements. Q4_K_M and Q5_K_M quantization reduce hardware costs by 60-70% versus FP16, making on-premises CAC compliance economically viable for mid-sized enterprises.',
+            '**Japan (METI AI Governance Guidelines 2024)** -- Japan\'s Ministry of Economy, Trade and Industry requires AI governance documentation for enterprise deployments. Quantized models on domestic infrastructure satisfy METI\'s "controllability" requirements -- the model weights stay on-premises. Q4_K_M quantization makes 13B-32B models feasible on 16-32 GB corporate servers without GPU clusters. Qwen3 and Llama 3 are the most-deployed families in Japanese enterprise settings.',
+            '**China (CAC Generative AI Regulations 2023)** -- China\'s Cyberspace Administration requires security assessments for publicly deployed AI and data localization for user data. Quantized Chinese-native models (Qwen3, Baichuan2, Yi) run entirely on domestic hardware, satisfying CAC localization requirements. Q4_K_M and Q5_K_M quantization reduce hardware costs by 60-70% versus FP16, making on-premises CAC compliance economically viable for mid-sized enterprises.',
           ],
         },
         commonMistakes: {
@@ -375,7 +375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What is imatrix quantization?',
-              a: 'Imatrix (importance matrix) quantization uses calibration data to assign different precision levels to different weights based on their importance to model output. Weights that most affect predictions are quantized with more bits; less important weights use fewer bits. Result: better quality at the same bit count compared to uniform quantization. Qwen2.5 imatrix quantizations are 2-4% better than standard Q4_K_M.',
+              a: 'Imatrix (importance matrix) quantization uses calibration data to assign different precision levels to different weights based on their importance to model output. Weights that most affect predictions are quantized with more bits; less important weights use fewer bits. Result: better quality at the same bit count compared to uniform quantization. Qwen3 imatrix quantizations are 2-4% better than standard Q4_K_M.',
             },
             {
               q: 'What\'s the difference between Q4_K_M and Q4_K_S?',
@@ -538,7 +538,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'What is imatrix quantization?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Imatrix (importance matrix) quantization uses calibration data to assign higher precision to weights that most affect model predictions, and lower precision to less important weights. This produces 2-4% better quality than standard Q4_K_M at the same bit count. Qwen2.5 imatrix quantizations are widely available on Hugging Face.' },
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Imatrix (importance matrix) quantization uses calibration data to assign higher precision to weights that most affect model predictions, and lower precision to less important weights. This produces 2-4% better quality than standard Q4_K_M at the same bit count. Qwen3 imatrix quantizations are widely available on Hugging Face.' },
           },
           {
             '@type': 'Question',
@@ -594,7 +594,7 @@ schema: {
       metaDescription: 'Entiende la cuantización de LLM en 2026: Q4_K_M, Q5_K_M y Q8_0. Ahorro de memoria, compromisos de calidad y recomendaciones por caso de uso.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen2.5', 'Mistral'],
+      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**Elige la cuantización según tu VRAM: 6–8 GB → usa Q4_K_M (~4,5 GB para modelos 7B, pérdida de calidad del 1–3%), 16 GB → Q5_K_M, 24+ GB → Q8_0 (pérdida insignificante). La cuantización reduce la precisión de los pesos del modelo de floats de 16 bits a enteros de 4 u 8 bits, reduciendo la RAM entre un 50–75%. Para modelos más grandes que tu GPU, añade CPU offloading o layer splitting multi-GPU.**',
       audience: 'Ingenieros que despliegan LLMs locales en producción, optimizando para VRAM limitada o construyendo sistemas multi-GPU',
@@ -829,8 +829,8 @@ schema: {
           title: 'Cuantización de LLM: contexto regional',
           items: [
             '**UE (RGPD, Artículo 44)** — Las transferencias transfronterizas de datos de IA requieren decisiones de adecuación o Cláusulas Contractuales Estándar. La cuantización Q4_K_M permite que modelos 7B se ejecuten en dispositivos edge de 8 GB, eliminando por completo las llamadas a APIs de nube de terceros. La AEPD española y la CNIL francesa recomiendan la inferencia local para el procesamiento de IA de alto riesgo bajo el Artículo 22 del RGPD. Los modelos Mistral y Llama cuantizados son las opciones dominantes en despliegues empresariales de la UE por esta razón.',
-            '**Japón (Directrices de Gobernanza de IA de METI 2024)** — El Ministerio de Economía, Comercio e Industria de Japón requiere documentación de gobernanza de IA para despliegues empresariales. Los modelos cuantizados en infraestructura doméstica satisfacen los requisitos de "controlabilidad" de METI — los pesos del modelo permanecen en las instalaciones. La cuantización Q4_K_M hace viables modelos de 13B-32B en servidores corporativos de 16-32 GB sin clústeres de GPU. Qwen2.5 y Llama 3 son las familias más desplegadas en entornos empresariales japoneses.',
-            '**China (Regulaciones de IA Generativa del CAC 2023)** — La Administración del Ciberespacio de China requiere evaluaciones de seguridad para la IA desplegada públicamente y localización de datos para datos de usuarios. Los modelos chinos nativos cuantizados (Qwen2.5, Baichuan2, Yi) se ejecutan completamente en hardware doméstico, satisfaciendo los requisitos de localización del CAC. La cuantización Q4_K_M y Q5_K_M reduce los costos de hardware en un 60-70% frente a FP16, haciendo económicamente viable el cumplimiento del CAC en instalaciones propias para empresas medianas.',
+            '**Japón (Directrices de Gobernanza de IA de METI 2024)** — El Ministerio de Economía, Comercio e Industria de Japón requiere documentación de gobernanza de IA para despliegues empresariales. Los modelos cuantizados en infraestructura doméstica satisfacen los requisitos de "controlabilidad" de METI — los pesos del modelo permanecen en las instalaciones. La cuantización Q4_K_M hace viables modelos de 13B-32B en servidores corporativos de 16-32 GB sin clústeres de GPU. Qwen3 y Llama 3 son las familias más desplegadas en entornos empresariales japoneses.',
+            '**China (Regulaciones de IA Generativa del CAC 2023)** — La Administración del Ciberespacio de China requiere evaluaciones de seguridad para la IA desplegada públicamente y localización de datos para datos de usuarios. Los modelos chinos nativos cuantizados (Qwen3, Baichuan2, Yi) se ejecutan completamente en hardware doméstico, satisfaciendo los requisitos de localización del CAC. La cuantización Q4_K_M y Q5_K_M reduce los costos de hardware en un 60-70% frente a FP16, haciendo económicamente viable el cumplimiento del CAC en instalaciones propias para empresas medianas.',
           ],
         },
         commonMistakes: {
@@ -884,7 +884,7 @@ schema: {
             },
             {
               q: '¿Qué es la cuantización imatrix?',
-              a: 'La cuantización imatrix (importance matrix) usa datos de calibración para asignar diferentes niveles de precisión a diferentes pesos según su importancia para la salida del modelo. Los pesos que más afectan las predicciones se cuantizan con más bits; los pesos menos importantes usan menos bits. Resultado: mejor calidad con el mismo número de bits en comparación con la cuantización uniforme. Las cuantizaciones imatrix de Qwen2.5 son un 2-4% mejores que el Q4_K_M estándar.',
+              a: 'La cuantización imatrix (importance matrix) usa datos de calibración para asignar diferentes niveles de precisión a diferentes pesos según su importancia para la salida del modelo. Los pesos que más afectan las predicciones se cuantizan con más bits; los pesos menos importantes usan menos bits. Resultado: mejor calidad con el mismo número de bits en comparación con la cuantización uniforme. Las cuantizaciones imatrix de Qwen3 son un 2-4% mejores que el Q4_K_M estándar.',
             },
             {
               q: '¿Cuál es la diferencia entre Q4_K_M y Q4_K_S?',
@@ -1067,7 +1067,7 @@ schema: {
       metaDescription: 'Wählen Sie die richtige LLM-Quantisierung für Ihre Hardware. Q4_K_M für 6–8 GB VRAM, Q5_K_M für 16 GB, Q8_0 für 24 GB+. 2026-Leitfaden mit RAM-Tabellen.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen2.5', 'Mistral'],
+      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       readTime: '14 Min. Lesezeit',
       educationalLevel: 'Advanced',
@@ -1291,8 +1291,8 @@ schema: {
           content: 'Quantisierungsüberlegungen variieren nach Jurisdiktion aufgrund von regulatorischen, Souveränitäts- und Compliance-Anforderungen:',
           items: [
             '**EU/DSGVO** -- Organisationen, die in der EU tätig sind, bevorzugen das lokale Ausführen quantisierter Modelle, um Grenzüberschreitung von Daten unter DSGVO Artikel 5 und 44 zu vermeiden. Quantisierung ermöglicht es 7B-Modellen, auf Edge-Geräten mit 6 GB RAM zu laufen und unterstützt DSGVO-Prinzipien zur "Datensparsamkeit". Keine Cloud-APIs für Inference nötig. Die deutsche Datenschutzbehörde BfDI empfiehlt lokale Inference für risikoreiche KI-Anwendungen. **BSI-Grundschutz-Kataloge**: Q4_K_M und höhere Quantisierungen ermöglichen Einhaltung des BSI-Grundschutz für Regierungseinrichtungen und Finanzinstitute. DACH-Region (Deutschland/Österreich/Schweiz) Unternehmen profitieren von Quantisierung für lokale Compliance ohne zentrale Cloud-Infrastruktur.',
-            '**Japan/METI** -- Japans Ministerium für Wirtschaft, Handel und Industrie (METI) fördert einheimische KI-Souveränität. Quantisierte Qwen2.5- und Llama-Modelle laufen auf japanischer Unternehmensinfrastruktur ohne Drittanbieter-Verarbeitung. Q4_K_M-Quantisierung macht 13B+ Modelle auf 16-GB-Unternehmensservern machbar. Japanische Behörden bevorzugen lokale Inference für sensible Anwendungen.',
-            '**China** -- Lokale Betriebsfähigkeit ist für die meisten KI-Anwendungen rechtlich erforderlich unter CAC-Regulierungen. Quantisierung unterstützt das Ausführen großer China-nativer Modelle (Qwen2.5, Baichuan) auf inländischer Hardware mit niedrigeren Infrastrukturkosten. Q4_K_M- und Q5_K_M-Quantisierung ermöglichen lokale On-Premises-Compliance.',
+            '**Japan/METI** -- Japans Ministerium für Wirtschaft, Handel und Industrie (METI) fördert einheimische KI-Souveränität. Quantisierte Qwen3- und Llama-Modelle laufen auf japanischer Unternehmensinfrastruktur ohne Drittanbieter-Verarbeitung. Q4_K_M-Quantisierung macht 13B+ Modelle auf 16-GB-Unternehmensservern machbar. Japanische Behörden bevorzugen lokale Inference für sensible Anwendungen.',
+            '**China** -- Lokale Betriebsfähigkeit ist für die meisten KI-Anwendungen rechtlich erforderlich unter CAC-Regulierungen. Quantisierung unterstützt das Ausführen großer China-nativer Modelle (Qwen3, Baichuan) auf inländischer Hardware mit niedrigeren Infrastrukturkosten. Q4_K_M- und Q5_K_M-Quantisierung ermöglichen lokale On-Premises-Compliance.',
           ],
         },
         commonMistakes: {
@@ -1345,7 +1345,7 @@ schema: {
             },
             {
               q: 'Was ist imatrix-Quantisierung?',
-              a: 'Imatrix-Quantisierung (Importance Matrix) verwendet Kalibrierungsdaten, um verschiedenen Gewichten unterschiedliche Präzisionsstufen basierend auf ihrer Wichtigkeit für die Modellausgabe zuzuweisen. Gewichte, die Vorhersagen am meisten beeinflussen, werden mit mehr Bits quantisiert; weniger wichtige Gewichte verwenden weniger Bits. Ergebnis: bessere Qualität bei gleicher Bitanzahl im Vergleich zu einheitlicher Quantisierung. Qwen2.5-imatrix-Quantisierungen sind 2-4% besser als Standard-Q4_K_M.',
+              a: 'Imatrix-Quantisierung (Importance Matrix) verwendet Kalibrierungsdaten, um verschiedenen Gewichten unterschiedliche Präzisionsstufen basierend auf ihrer Wichtigkeit für die Modellausgabe zuzuweisen. Gewichte, die Vorhersagen am meisten beeinflussen, werden mit mehr Bits quantisiert; weniger wichtige Gewichte verwenden weniger Bits. Ergebnis: bessere Qualität bei gleicher Bitanzahl im Vergleich zu einheitlicher Quantisierung. Qwen3-imatrix-Quantisierungen sind 2-4% besser als Standard-Q4_K_M.',
             },
             {
               q: 'Was ist der Unterschied zwischen Q4_K_M und Q4_K_S?',
@@ -1578,7 +1578,7 @@ schema: {
       metaDescription: 'Choisissez la bonne quantification LLM pour votre matériel. Q4_K_M pour 6–8 GB VRAM, Q5_K_M pour 16 GB, Q8_0 pour 24 GB+. Guide 2026 avec tables RAM.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen2.5', 'Mistral'],
+      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       readTime: '14 min de lecture',
       educationalLevel: 'Advanced',
@@ -1770,8 +1770,8 @@ schema: {
           content: 'Les considérations de quantification varient selon la juridiction en raison des cadres réglementaires, de souveraineté et de conformité :',
           items: [
             '**UE/RGPD** -- Les organisations opérant dans l\'UE préfèrent exécuter localement les modèles quantifiés pour éviter le transfert de données transfrontalier en vertu des articles 5 et 44 du RGPD. La quantification permet aux modèles 7B de s\'exécuter sur des appareils edge avec 6 GB de RAM, soutenant les principes RGPD de "minimisation des données". Pas besoin d\'API cloud pour l\'inférence. La CNIL (Commission Nationale de l\'Informatique et des Libertés) recommande l\'inférence locale lors du traitement de données professionnelles sensibles (données financières, médicales, juridiques).',
-            '**Japon/METI** -- Le Ministère japonais de l\'économie, du commerce et de l\'industrie (METI) promeut la souveraineté de l\'IA intérieure. Les modèles quantifiés Qwen2.5 et Llama s\'exécutent sur l\'infrastructure d\'entreprise japonaise sans traitement tiers. La quantification Q4_K_M rend les modèles 13B+ viables sur les serveurs d\'entreprise 16 GB.',
-            '**Chine** -- L\'exploitation locale est légalement requise pour la plupart des applications d\'IA en vertu de la réglementation CAC. La quantification soutient l\'exécution de grands modèles natifs chinois (Qwen2.5, Baichuan) sur du matériel national avec des coûts d\'infrastructure réduits. La quantification Q4_K_M et Q5_K_M permet la conformité on-premises locale.',
+            '**Japon/METI** -- Le Ministère japonais de l\'économie, du commerce et de l\'industrie (METI) promeut la souveraineté de l\'IA intérieure. Les modèles quantifiés Qwen3 et Llama s\'exécutent sur l\'infrastructure d\'entreprise japonaise sans traitement tiers. La quantification Q4_K_M rend les modèles 13B+ viables sur les serveurs d\'entreprise 16 GB.',
+            '**Chine** -- L\'exploitation locale est légalement requise pour la plupart des applications d\'IA en vertu de la réglementation CAC. La quantification soutient l\'exécution de grands modèles natifs chinois (Qwen3, Baichuan) sur du matériel national avec des coûts d\'infrastructure réduits. La quantification Q4_K_M et Q5_K_M permet la conformité on-premises locale.',
           ],
         },
         commonMistakes: {
@@ -2039,7 +2039,7 @@ schema: {
       metaDescription: 'ハードウェアに適したLLM量子化を選択してください。Q4_K_Mは6～8GB VRAM、Q5_K_Mは16GB、Q8_0は24GB以上向け。2026年RAMテーブル付きガイド。',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen2.5', 'Mistral'],
+      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       readTime: '14分で読める',
       educationalLevel: 'Advanced',
@@ -2230,7 +2230,7 @@ schema: {
           title: 'ローカルLLM量子化の地域別コンテキスト',
           content: '量子化に関する考慮事項は、規制、主権、コンプライアンスフレームワークにより管轄権によって異なります：',
           items: [
-            '**日本 (METI)**：日本の経済産業省（METI）は国内AI主権を推進しています。量子化されたQwen2.5およびLlamaモデルは、第三者による処理なしに日本のエンタープライズインフラストラクチャで実行されます。Q4_K_M量子化により、16GBのコーポレートサーバーで13B以上のモデルが実行可能になります。METIのAIガバナンス2024フレームワークは、エンタープライズ展開向けにローカル推論を推奨しています。',
+            '**日本 (METI)**：日本の経済産業省（METI）は国内AI主権を推進しています。量子化されたQwen3およびLlamaモデルは、第三者による処理なしに日本のエンタープライズインフラストラクチャで実行されます。Q4_K_M量子化により、16GBのコーポレートサーバーで13B以上のモデルが実行可能になります。METIのAIガバナンス2024フレームワークは、エンタープライズ展開向けにローカル推論を推奨しています。',
             '**アジア太平洋地域**：東アジア全体（中国、台湾、韓国）では、データ主権と規制遵守のためにローカル推論が優先されています。VRAM効率とコスト削減のため、量子化は重要な実装パターンです。',
             '**グローバル**：コスト効率と推論速度のバランスを求める組織にとって、量子化は引き続き最良の選択肢です。',
           ],
@@ -2285,7 +2285,7 @@ schema: {
             },
             {
               q: 'imatrix量子化とは何ですか？',
-              a: 'Imatrix（重要度行列）量子化は、キャリブレーションデータを使用して、異なる精度レベルを異なる重みに割り当てます。予測に最も影響する重みはより多くのビットで量子化され、あまり重要でない重みはより少ないビットを使用します。結果：均一量子化と比較して、同じビット数でより良い品質。Qwen2.5 imatrix量子化は、標準Q4_K_Mより2～4%優れています。',
+              a: 'Imatrix（重要度行列）量子化は、キャリブレーションデータを使用して、異なる精度レベルを異なる重みに割り当てます。予測に最も影響する重みはより多くのビットで量子化され、あまり重要でない重みはより少ないビットを使用します。結果：均一量子化と比較して、同じビット数でより良い品質。Qwen3 imatrix量子化は、標準Q4_K_Mより2～4%優れています。',
             },
             {
               q: 'Q4_K_MとQ4_K_Sの違いは何ですか？',
@@ -2499,7 +2499,7 @@ schema: {
       metaDescription: '为您的硬件选择合适的LLM量化。Q4_K_M适合6-8GB显存，Q5_K_M适合16GB，Q8_0适合24GB以上。2026年含RAM表格的指南。',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen2.5', 'Mistral'],
+      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       readTime: '阅读约14分钟',
       educationalLevel: 'Advanced',
@@ -2690,7 +2690,7 @@ schema: {
           title: '本地LLM量化的地域背景',
           content: '量化的考量因地区而异，涉及法规、主权和合规框架：',
           items: [
-            '**中国（数据安全法）**：中国2021年《数据安全法》要求大多数AI应用实现本地运行。量化支持在国内硬件上运行大型中文原生模型（Qwen2.5、百川），降低基础设施成本。Q4_K_M和Q5_K_M量化在8GB～16GB GPU上实现了符合《数据安全法》的合规部署。金融机构、医疗组织和政府部门使用量化模型来满足数据驻留要求。',
+            '**中国（数据安全法）**：中国2021年《数据安全法》要求大多数AI应用实现本地运行。量化支持在国内硬件上运行大型中文原生模型（Qwen3、百川），降低基础设施成本。Q4_K_M和Q5_K_M量化在8GB～16GB GPU上实现了符合《数据安全法》的合规部署。金融机构、医疗组织和政府部门使用量化模型来满足数据驻留要求。',
             '**亚太地区（跨境数据）**：东南亚和亚太地区各国实施严格的数据驻留框架。量化降低了部署成本，使组织能够在国内服务器上合规地运行多语言模型。新加坡、印度尼西亚和泰国的金融和医疗组织优先采用本地量化模型以避免跨境数据传输。',
             '**企业部署（金融/医疗/法律）**：银行、医院和律师事务所使用量化模型处理敏感数据。Q4_K_M和Q5_K_M量化使这些组织能够在符合GDPR、HIPAA和本地数据保护法的本地服务器上部署LLM。成本和合规性是驱动力，量化通过减少硬件投资和消除云提供商数据处理依赖来解决两者。',
           ],
@@ -2745,7 +2745,7 @@ schema: {
             },
             {
               q: '什么是imatrix量化？',
-              a: 'Imatrix（重要性矩阵）量化使用校准数据为不同权重分配不同的精度级别，基于其对模型输出的重要性。最影响预测的权重用更多位量化；不太重要的权重使用更少的位。结果：与均匀量化相比，相同比特数的质量更好。Qwen2.5 imatrix量化比标准Q4_K_M好2～4%。',
+              a: 'Imatrix（重要性矩阵）量化使用校准数据为不同权重分配不同的精度级别，基于其对模型输出的重要性。最影响预测的权重用更多位量化；不太重要的权重使用更少的位。结果：与均匀量化相比，相同比特数的质量更好。Qwen3 imatrix量化比标准Q4_K_M好2～4%。',
             },
             {
               q: 'Q4_K_M和Q4_K_S有什么区别？',

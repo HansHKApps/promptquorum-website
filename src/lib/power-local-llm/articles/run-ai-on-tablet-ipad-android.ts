@@ -387,7 +387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Qwen3 1.7B',
       'Gemma 3 4B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'iPad Pro M4 16 GB',
@@ -691,7 +691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich ChatGPT-ähnliche Antworten lokal auf einem Tablet erhalten?',
-            a: 'Nicht ganz, aber fast mit dem richtigen Setup. GPT-4o-Qualität erfordert ein 70B+ Modell. Auf einem Tablet: Der iPad Pro M4 (16 GB) kann 70B-Modelle nicht ausführen — nur 3B–8B-Modelle passen. Via Remote-Verbindung: Wenn Ihr Home-Computer eine 24 GB-GPU (RTX 4090) oder 64 GB-Unified-Memory (Mac M5 Max) hat, kann er Llama 3.3 70B ausführen, und Ihr Tablet greift diese Qualität über Open WebUI im Browser zu. Das ist die Cloud-KI-Qualität auf einem Tablet am nächsten.',
+            a: 'Nicht ganz, aber fast mit dem richtigen Setup. GPT-5.5-Qualität erfordert ein 70B+ Modell. Auf einem Tablet: Der iPad Pro M4 (16 GB) kann 70B-Modelle nicht ausführen — nur 3B–8B-Modelle passen. Via Remote-Verbindung: Wenn Ihr Home-Computer eine 24 GB-GPU (RTX 4090) oder 64 GB-Unified-Memory (Mac M5 Max) hat, kann er Llama 3.3 70B ausführen, und Ihr Tablet greift diese Qualität über Open WebUI im Browser zu. Das ist die Cloud-KI-Qualität auf einem Tablet am nächsten.',
           },
           {
             q: 'Wie halte ich meinen Home-Ollama-Server am Laufen, wenn ich das Laptop-Deckel schließe?',
@@ -818,7 +818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Qwen3 1.7B',
       'Gemma 3 4B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'iPad Pro M4 16 GB',
@@ -1115,7 +1115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qualité ChatGPT locale tablette ?',
-            a: 'Presque avec bon setup. GPT-4o demande 70B+. iPad Pro M4 (16 GB) pas 70B — 3B–8B seulement. À distance : GPU 24 GB (RTX 4090) ou unifié 64 GB (Mac M5 Max) exécute Llama 3.3 70B, tablette accède qualité Open WebUI. Plus proche qualité cloud tablette.',
+            a: 'Presque avec bon setup. GPT-5.5 demande 70B+. iPad Pro M4 (16 GB) pas 70B — 3B–8B seulement. À distance : GPU 24 GB (RTX 4090) ou unifié 64 GB (Mac M5 Max) exécute Llama 3.3 70B, tablette accède qualité Open WebUI. Plus proche qualité cloud tablette.',
           },
           {
             q: 'Garder serveur Ollama maison démarré lid fermé ?',
@@ -1218,7 +1218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Qwen3 1.7B',
       'Gemma 3 4B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'iPad Pro M4 16 GB',
@@ -1522,7 +1522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'タブレットでChatGPT品質のレスポンスをローカルで得られますか？',
-            a: 'ほぼ、ただし適切なセットアップが必要です。GPT-4o品質には70B以上のモデルが必要です。タブレット上では：iPad Pro M4（16GB）は70Bモデルを実行できません — 3B〜8Bモデルのみ。リモート接続経由：ホームマシンに24GB GPU（RTX 4090）または64GB統合メモリ（Mac M5 Max）があればLlama 3.3 70Bを実行でき、タブレットはブラウザのOpen WebUI経由でその品質にアクセスできます。これがタブレットでクラウドAI品質に最も近い方法です。',
+            a: 'ほぼ、ただし適切なセットアップが必要です。GPT-5.5品質には70B以上のモデルが必要です。タブレット上では：iPad Pro M4（16GB）は70Bモデルを実行できません — 3B〜8Bモデルのみ。リモート接続経由：ホームマシンに24GB GPU（RTX 4090）または64GB統合メモリ（Mac M5 Max）があればLlama 3.3 70Bを実行でき、タブレットはブラウザのOpen WebUI経由でその品質にアクセスできます。これがタブレットでクラウドAI品質に最も近い方法です。',
           },
           {
             q: 'ラップトップのカバーを閉じてもホームOllamaサーバーを動かし続けるには？',
@@ -1629,7 +1629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Qwen3 1.7B',
       'Gemma 3 4B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'iPad Pro M4 16 GB',
@@ -2033,7 +2033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Qwen3 1.7B',
       'Gemma 3 4B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'iPad Pro M4 16 GB',
@@ -2320,7 +2320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo obtener respuestas de calidad similar a ChatGPT en una tablet de forma local?',
-            a: 'Casi, pero con la configuración correcta. La calidad de GPT-4o requiere un modelo de 70B o más. En una tablet: el iPad Pro M4 (16 GB) no puede ejecutar modelos de 70B — solo caben modelos de 3B a 8B. Mediante conexión remota: si tu máquina en casa tiene una GPU de 24 GB (RTX 4090) o 64 GB de memoria unificada (Mac M5 Max), puede ejecutar Llama 3.3 70B, y tu tablet accede a esa calidad mediante Open WebUI en el navegador. Eso es lo más cercano a la calidad de IA en la nube en una tablet.',
+            a: 'Casi, pero con la configuración correcta. La calidad de GPT-5.5 requiere un modelo de 70B o más. En una tablet: el iPad Pro M4 (16 GB) no puede ejecutar modelos de 70B — solo caben modelos de 3B a 8B. Mediante conexión remota: si tu máquina en casa tiene una GPU de 24 GB (RTX 4090) o 64 GB de memoria unificada (Mac M5 Max), puede ejecutar Llama 3.3 70B, y tu tablet accede a esa calidad mediante Open WebUI en el navegador. Eso es lo más cercano a la calidad de IA en la nube en una tablet.',
           },
           {
             q: '¿Cómo mantengo mi servidor de Ollama en casa funcionando cuando cierro la tapa del portátil?',

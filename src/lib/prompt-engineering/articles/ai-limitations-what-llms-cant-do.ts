@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'How do limitations differ between open-source and proprietary models in 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Open-source models (LLaMA 3.1, Mistral Large, Qwen 2.5) and proprietary models (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) face identical structural limitations — knowledge cutoffs, hallucination, context windows, reasoning constraints. The differences are in severity and cost: proprietary models typically have larger contexts (Gemini 3.1 Pro: 2M tokens vs. Mistral: 128K), better instruction-following, and more frequent training updates. Open-source models trade capabilities for cost and deployment control. Neither category eliminates any of the eight limitations.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Open-source models (LLaMA 3.1, Mistral Large, Qwen 3) and proprietary models (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) face identical structural limitations — knowledge cutoffs, hallucination, context windows, reasoning constraints. The differences are in severity and cost: proprietary models typically have larger contexts (Gemini 3.1 Pro: 2M tokens vs. Mistral: 128K), better instruction-following, and more frequent training updates. Open-source models trade capabilities for cost and deployment control. Neither category eliminates any of the eight limitations.' },
           },
         ],
       },
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'How LLM Limitations Vary by Region',
           content: [
             '**LLM limitations are universal in structure but vary in severity by language, region, and regulatory environment.** EU organizations operating under the EU AI Act (2024) must document AI limitations in risk assessments for high-risk use cases — making the eight limits here a compliance requirement, not just a technical concern.',
-            'In China, Baidu ERNIE 4.0 and Alibaba Qwen 2.5 share the same structural limitations but have training data weighted toward Mandarin-language sources. This improves performance on Chinese-language topics but the same knowledge cutoff, hallucination, and reasoning constraints apply.',
+            'In China, Baidu ERNIE 4.0 and Alibaba Qwen 3 share the same structural limitations but have training data weighted toward Mandarin-language sources. This improves performance on Chinese-language topics but the same knowledge cutoff, hallucination, and reasoning constraints apply.',
             'In Japan, Fujitsu Takane and Line HyperCLOVA X exhibit stronger performance on Japanese-language tasks than general multilingual models, but all structural limitations — cutoff dates, hallucination, context windows, no real-world action — apply identically.',
           ],
         },
@@ -376,7 +376,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Do fine-tuned models have the same limitations?', a: 'Yes. Fine-tuning adjusts style, domain focus, or instruction-following behavior — it does not add real-time data access, true reasoning, or persistent memory. A fine-tuned GPT-5.5 retains the same knowledge cutoff and hallucination risk as the base model.' },
             { q: 'What\'s the difference between an LLM limitation and a bug?', a: 'A bug is an unintended error fixable with a software update. A limitation is a structural property of how the model works. Hallucination, knowledge cutoffs, and context window caps are limitations — they emerge from the transformer architecture and training process and cannot be patched away, only worked around with system design.' },
             { q: 'Which LLM has the fewest limitations?', a: 'No model eliminates any of the eight structural limitations — they are universal to transformer architecture. Gemini 3.1 Pro has the largest context window (2 million tokens), best mitigating limitation 4. Claude Opus 4.8 hedges uncertainty and acknowledges knowledge cutoffs most reliably, mitigating hallucination risk. GPT-5.5 excels at tool use (limitation 6 workaround). Choose based on your specific limitation bottleneck, not on which model is "least limited."' },
-            { q: 'How do limitations differ between open-source and proprietary models in 2026?', a: 'Open-source models (LLaMA 3.1, Mistral Large, Qwen 2.5) and proprietary models (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) face identical structural limitations — knowledge cutoffs, hallucination, context windows, reasoning constraints. The differences are in severity and cost: proprietary models typically have larger contexts (Gemini 3.1 Pro: 2M tokens vs. Mistral: 128K), better instruction-following, and more frequent training updates. Open-source models trade capabilities for cost and deployment control. Neither category eliminates any of the eight limitations.' },
+            { q: 'How do limitations differ between open-source and proprietary models in 2026?', a: 'Open-source models (LLaMA 3.1, Mistral Large, Qwen 3) and proprietary models (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) face identical structural limitations — knowledge cutoffs, hallucination, context windows, reasoning constraints. The differences are in severity and cost: proprietary models typically have larger contexts (Gemini 3.1 Pro: 2M tokens vs. Mistral: 128K), better instruction-following, and more frequent training updates. Open-source models trade capabilities for cost and deployment control. Neither category eliminates any of the eight limitations.' },
           ],
         },
         sources: {
@@ -516,7 +516,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Wie unterscheiden sich die Einschränkungen zwischen Open-Source- und proprietären Modellen im Jahr 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Open-Source-Modelle (LLaMA 3.1, Mistral Large, Qwen 2.5) und proprietäre Modelle (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) stehen vor identischen strukturellen Einschränkungen — Wissens-Cutoffs, Halluzination, Kontextfenster, Schlussfolgerungsbeschränkungen. Die Unterschiede liegen im Schweregrad und den Kosten: Proprietäre Modelle haben typischerweise größere Kontexte (Gemini 3.1 Pro: 2M Tokens vs. Mistral: 128K), besseres Instruktions-Following und häufigere Trainingsupdates. Open-Source-Modelle tauschen Fähigkeiten gegen Kosten und Deployment-Kontrolle. Keine Kategorie eliminiert eine der acht Einschränkungen.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Open-Source-Modelle (LLaMA 3.1, Mistral Large, Qwen 3) und proprietäre Modelle (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) stehen vor identischen strukturellen Einschränkungen — Wissens-Cutoffs, Halluzination, Kontextfenster, Schlussfolgerungsbeschränkungen. Die Unterschiede liegen im Schweregrad und den Kosten: Proprietäre Modelle haben typischerweise größere Kontexte (Gemini 3.1 Pro: 2M Tokens vs. Mistral: 128K), besseres Instruktions-Following und häufigere Trainingsupdates. Open-Source-Modelle tauschen Fähigkeiten gegen Kosten und Deployment-Kontrolle. Keine Kategorie eliminiert eine der acht Einschränkungen.' },
           },
         ],
       },
@@ -730,7 +730,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wie LLM-Einschränkungen je nach Region variieren',
           content: [
             '**LLM-Einschränkungen sind strukturell universell, variieren aber im Schweregrad je nach Sprache, Region und regulatorischem Umfeld.** EU-Organisationen, die unter dem EU AI Act (2024) arbeiten, müssen KI-Einschränkungen in Risikobewertungen für Hochrisiko-Anwendungsfälle dokumentieren — was die acht hier genannten Grenzen zu einer Compliance-Anforderung macht, nicht nur zu einem technischen Anliegen.',
-            'In China teilen Baidu ERNIE 4.0 und Alibaba Qwen 2.5 dieselben strukturellen Einschränkungen, haben aber Trainingsdaten, die auf Mandarin-Quellen ausgerichtet sind. Dies verbessert die Leistung bei chinesischsprachigen Themen, aber dieselben Wissens-Cutoff-, Halluzinations- und Schlussfolgerungs-Einschränkungen gelten.',
+            'In China teilen Baidu ERNIE 4.0 und Alibaba Qwen 3 dieselben strukturellen Einschränkungen, haben aber Trainingsdaten, die auf Mandarin-Quellen ausgerichtet sind. Dies verbessert die Leistung bei chinesischsprachigen Themen, aber dieselben Wissens-Cutoff-, Halluzinations- und Schlussfolgerungs-Einschränkungen gelten.',
             'In Japan zeigen Fujitsu Takane und Line HyperCLOVA X stärkere Leistung bei japanischsprachigen Aufgaben als allgemeine mehrsprachige Modelle, aber alle strukturellen Einschränkungen — Cutoff-Daten, Halluzination, Kontextfenster, keine Echtwelt-Aktion — gelten identisch.',
           ],
         },
@@ -756,7 +756,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Haben fein abgestimmte Modelle die gleichen Einschränkungen?', a: 'Ja. Fine-Tuning passt Stil, Domänenfokus oder instruktionsfolgendes Verhalten an — es fügt keinen Echtzeit-Datenzugang, echtes Schlussfolgern oder dauerhaftes Gedächtnis hinzu. Ein fein abgestimmtes GPT-5.5 behält den gleichen Wissens-Cutoff und das gleiche Halluzinationsrisiko wie das Basismodell.' },
             { q: 'Was ist der Unterschied zwischen einer LLM-Einschränkung und einem Bug?', a: 'Ein Bug ist ein unbeabsichtigter Fehler, der durch ein Software-Update behoben werden kann. Eine Einschränkung ist eine strukturelle Eigenschaft der Funktionsweise des Modells. Halluzination, Wissens-Cutoffs und Kontextfenster-Limits sind Einschränkungen — sie entstehen aus der Transformer-Architektur und dem Trainingsprozess und können nicht durch Patches behoben werden, sondern nur durch System-Design umgangen werden.' },
             { q: 'Welches LLM hat die wenigsten Einschränkungen?', a: 'Kein Modell eliminiert eine der acht strukturellen Einschränkungen — sie sind universell für die Transformer-Architektur. Gemini 3.1 Pro hat das größte Kontextfenster (2 Millionen Tokens) und mildert am besten Einschränkung 4. Claude Opus 4.8 erkennt Wissens-Cutoffs am zuverlässigsten und mindert so das Halluzinationsrisiko. GPT-5.5 glänzt bei Tool-Use (Workaround für Einschränkung 6). Wählen Sie basierend auf Ihrem spezifischen Engpass, nicht danach, welches Modell am "wenigsten eingeschränkt" ist.' },
-            { q: 'Wie unterscheiden sich die Einschränkungen zwischen Open-Source- und proprietären Modellen im Jahr 2026?', a: 'Open-Source-Modelle (LLaMA 3.1, Mistral Large, Qwen 2.5) und proprietäre Modelle (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) stehen vor identischen strukturellen Einschränkungen — Wissens-Cutoffs, Halluzination, Kontextfenster, Schlussfolgerungsbeschränkungen. Die Unterschiede liegen im Schweregrad und den Kosten: Proprietäre Modelle haben typischerweise größere Kontexte (Gemini 3.1 Pro: 2M Tokens vs. Mistral: 128K), besseres Instruktions-Following und häufigere Trainingsupdates. Open-Source-Modelle tauschen Fähigkeiten gegen Kosten und Deployment-Kontrolle. Keine Kategorie eliminiert eine der acht Einschränkungen.' },
+            { q: 'Wie unterscheiden sich die Einschränkungen zwischen Open-Source- und proprietären Modellen im Jahr 2026?', a: 'Open-Source-Modelle (LLaMA 3.1, Mistral Large, Qwen 3) und proprietäre Modelle (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) stehen vor identischen strukturellen Einschränkungen — Wissens-Cutoffs, Halluzination, Kontextfenster, Schlussfolgerungsbeschränkungen. Die Unterschiede liegen im Schweregrad und den Kosten: Proprietäre Modelle haben typischerweise größere Kontexte (Gemini 3.1 Pro: 2M Tokens vs. Mistral: 128K), besseres Instruktions-Following und häufigere Trainingsupdates. Open-Source-Modelle tauschen Fähigkeiten gegen Kosten und Deployment-Kontrolle. Keine Kategorie eliminiert eine der acht Einschränkungen.' },
           ],
         },
         sources: {
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Cómo varían las limitaciones de los LLMs según la región',
           content: [
             '**Las limitaciones de los LLMs son estructuralmente universales, pero varían en severidad según el idioma, la región y el entorno regulatorio.** Las organizaciones de la UE que operan bajo la Ley de IA de la UE (2024) deben documentar las limitaciones de la IA en las evaluaciones de riesgo para los casos de uso de alto riesgo.',
-            'En China, Baidu ERNIE 4.0 y Alibaba Qwen 2.5 comparten las mismas restricciones estructurales pero tienen datos de entrenamiento orientados hacia fuentes en mandarín.',
+            'En China, Baidu ERNIE 4.0 y Alibaba Qwen 3 comparten las mismas restricciones estructurales pero tienen datos de entrenamiento orientados hacia fuentes en mandarín.',
             'En Japón, Fujitsu Takane y Line HyperCLOVA X muestran un rendimiento más fuerte en las tareas en japonés que los modelos multilingües generales, pero todas las restricciones estructurales aplican de forma idéntica.',
           ],
         },
@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '¿Los modelos ajustados tienen las mismas limitaciones?', a: 'Sí. El fine-tuning ajusta el estilo, el enfoque del dominio o el comportamiento de seguimiento de instrucciones — no añade acceso a datos en tiempo real, razonamiento real o memoria persistente. Un GPT-5.5 ajustado retiene el mismo corte de conocimiento y el mismo riesgo de alucinación que el modelo base.' },
             { q: '¿Cuál es la diferencia entre una limitación de LLM y un bug?', a: 'Un bug es un error no intencionado que puede corregirse con una actualización de software. Una limitación es una propiedad estructural de cómo funciona el modelo. La alucinación, los cortes de conocimiento y los límites del context window son limitaciones — surgen de la arquitectura transformer y el proceso de entrenamiento y no pueden corregirse con parches, solo ser sorteadas mediante el diseño del sistema.' },
             { q: '¿Qué LLM tiene las menos limitaciones?', a: 'Ningún modelo elimina ninguna de las ocho restricciones estructurales — son universales para la arquitectura transformer. Gemini 3.1 Pro tiene el mayor context window (2 millones de tokens) y mitiga mejor la limitación 4. Claude Opus 4.8 reconoce los cortes de conocimiento de forma más fiable, mitigando así el riesgo de alucinación. GPT-5.5 destaca en tool use (workaround para la limitación 6). Elige basándote en tu cuello de botella específico, no en qué modelo está "menos limitado".' },
-            { q: '¿Cómo difieren las limitaciones entre modelos open-source y propietarios en 2026?', a: 'Los modelos de código abierto (LLaMA 3.1, Mistral Large, Qwen 2.5) y los propietarios (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) enfrentan restricciones estructurales idénticas. Las diferencias están en la severidad y el coste: los modelos propietarios típicamente tienen contextos más grandes, mejor seguimiento de instrucciones y actualizaciones de entrenamiento más frecuentes. Ninguna categoría elimina ninguna de las ocho limitaciones.' },
+            { q: '¿Cómo difieren las limitaciones entre modelos open-source y propietarios en 2026?', a: 'Los modelos de código abierto (LLaMA 3.1, Mistral Large, Qwen 3) y los propietarios (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) enfrentan restricciones estructurales idénticas. Las diferencias están en la severidad y el coste: los modelos propietarios típicamente tienen contextos más grandes, mejor seguimiento de instrucciones y actualizaciones de entrenamiento más frecuentes. Ninguna categoría elimina ninguna de las ocho limitaciones.' },
           ],
         },
         sources: {
@@ -1098,7 +1098,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Comment les limitations diffèrent-elles entre les modèles open-source et propriétaires en 2026 ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Les modèles open-source (LLaMA 3.1, Mistral Large, Qwen 2.5) et propriétaires (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) font face à des limitations structurelles identiques — coupures de connaissance, hallucination, fenêtres de contexte, contraintes de raisonnement. Les différences résident dans la sévérité et le coût : les modèles propriétaires ont généralement des contextes plus grands (Gemini 3.1 Pro : 2M tokens vs Mistral : 128K), un meilleur suivi des instructions et des mises à jour d\'entraînement plus fréquentes. Les modèles open-source échangent des capacités contre le coût et le contrôle du déploiement. Aucune catégorie n\'élimine l\'une des huit limitations.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Les modèles open-source (LLaMA 3.1, Mistral Large, Qwen 3) et propriétaires (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) font face à des limitations structurelles identiques — coupures de connaissance, hallucination, fenêtres de contexte, contraintes de raisonnement. Les différences résident dans la sévérité et le coût : les modèles propriétaires ont généralement des contextes plus grands (Gemini 3.1 Pro : 2M tokens vs Mistral : 128K), un meilleur suivi des instructions et des mises à jour d\'entraînement plus fréquentes. Les modèles open-source échangent des capacités contre le coût et le contrôle du déploiement. Aucune catégorie n\'élimine l\'une des huit limitations.' },
           },
         ],
       },
@@ -1312,7 +1312,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Comment les limitations des LLMs varient selon la région',
           content: [
             '**Les limitations des LLMs sont structurellement universelles mais varient en sévérité selon la langue, la région et l\'environnement réglementaire.** Les organisations de l\'UE opérant sous le Règlement européen sur l\'IA (2024) doivent documenter les limitations de l\'IA dans les évaluations des risques pour les cas d\'usage à haut risque — rendant les huit limites ici une exigence de conformité, pas seulement une préoccupation technique.',
-            'En Chine, Baidu ERNIE 4.0 et Alibaba Qwen 2.5 partagent les mêmes limitations structurelles mais ont des données d\'entraînement pondérées vers les sources en mandarin. Cela améliore les performances sur les sujets en chinois, mais les mêmes contraintes de coupure de connaissance, d\'hallucination et de raisonnement s\'appliquent.',
+            'En Chine, Baidu ERNIE 4.0 et Alibaba Qwen 3 partagent les mêmes limitations structurelles mais ont des données d\'entraînement pondérées vers les sources en mandarin. Cela améliore les performances sur les sujets en chinois, mais les mêmes contraintes de coupure de connaissance, d\'hallucination et de raisonnement s\'appliquent.',
             'Au Japon, Fujitsu Takane et Line HyperCLOVA X présentent de meilleures performances sur les tâches en japonais que les modèles multilingues généraux, mais toutes les limitations structurelles — dates de coupure, hallucination, fenêtres de contexte, pas d\'action réelle — s\'appliquent identiquement.',
           ],
         },
@@ -1338,7 +1338,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Les modèles affinés ont-ils les mêmes limitations ?', a: 'Oui. L\'affinage ajuste le style, le focus du domaine ou le comportement de suivi des instructions — il n\'ajoute pas l\'accès aux données en temps réel, un vrai raisonnement ou une mémoire persistante. Un GPT-5.5 affiné conserve la même coupure de connaissance et le même risque d\'hallucination que le modèle de base.' },
             { q: 'Quelle est la différence entre une limitation d\'un LLM et un bug ?', a: 'Un bug est une erreur involontaire corrigeable par une mise à jour logicielle. Une limitation est une propriété structurelle du fonctionnement du modèle. L\'hallucination, les coupures de connaissance et les limites de la fenêtre de contexte sont des limitations — elles émergent de l\'architecture transformer et du processus d\'entraînement et ne peuvent pas être supprimées par un patch, seulement contournées par la conception du système.' },
             { q: 'Quel LLM a le moins de limitations ?', a: 'Aucun modèle n\'élimine l\'une des huit limitations structurelles — elles sont universelles à l\'architecture transformer. Gemini 3.1 Pro a la plus grande fenêtre de contexte (2 millions de tokens), atténuant au mieux la limitation 4. Claude Opus 4.8 reconnaît les coupures de connaissance le plus fiablement, réduisant le risque d\'hallucination. GPT-5.5 excelle dans l\'utilisation d\'outils (contournement de la limitation 6). Choisissez selon votre goulot d\'étranglement spécifique, pas selon le modèle le "moins limité".' },
-            { q: 'Comment les limitations diffèrent-elles entre les modèles open-source et propriétaires en 2026 ?', a: 'Les modèles open-source (LLaMA 3.1, Mistral Large, Qwen 2.5) et propriétaires (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) font face à des limitations structurelles identiques — coupures de connaissance, hallucination, fenêtres de contexte, contraintes de raisonnement. Les différences résident dans la sévérité et le coût : les modèles propriétaires ont généralement des contextes plus grands (Gemini 3.1 Pro : 2M tokens vs Mistral : 128K), un meilleur suivi des instructions et des mises à jour d\'entraînement plus fréquentes. Les modèles open-source échangent des capacités contre le coût et le contrôle du déploiement. Aucune catégorie n\'élimine l\'une des huit limitations.' },
+            { q: 'Comment les limitations diffèrent-elles entre les modèles open-source et propriétaires en 2026 ?', a: 'Les modèles open-source (LLaMA 3.1, Mistral Large, Qwen 3) et propriétaires (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) font face à des limitations structurelles identiques — coupures de connaissance, hallucination, fenêtres de contexte, contraintes de raisonnement. Les différences résident dans la sévérité et le coût : les modèles propriétaires ont généralement des contextes plus grands (Gemini 3.1 Pro : 2M tokens vs Mistral : 128K), un meilleur suivi des instructions et des mises à jour d\'entraînement plus fréquentes. Les modèles open-source échangent des capacités contre le coût et le contrôle du déploiement. Aucune catégorie n\'élimine l\'une des huit limitations.' },
           ],
         },
         sources: {
@@ -1478,7 +1478,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       {
         '@type': 'Question',
         name: '2026年のオープンソースと専有モデル間で制限はどのように異なりますか?',
-        acceptedAnswer: { '@type': 'Answer', text: 'オープンソースモデル（LLaMA 3.1、Mistral Large、Qwen 2.5）と専有モデル（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）は、同じ構造的な制限（知識カットオフ、幻覚、コンテキストウィンドウ、推論の制約）に直面しています。違いは重大度とコストにあります：専有モデルは通常、より大きなコンテキスト（Gemini 3.1 Pro：2Mトークン対Mistral：128K）、より良い指示追従、およびより頻繁なトレーニング更新を持っています。オープンソースモデルは、コストと展開制御のための能力をトレードします。どのカテゴリも8つの制限のいずれかを排除しません。' },
+        acceptedAnswer: { '@type': 'Answer', text: 'オープンソースモデル（LLaMA 3.1、Mistral Large、Qwen 3）と専有モデル（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）は、同じ構造的な制限（知識カットオフ、幻覚、コンテキストウィンドウ、推論の制約）に直面しています。違いは重大度とコストにあります：専有モデルは通常、より大きなコンテキスト（Gemini 3.1 Pro：2Mトークン対Mistral：128K）、より良い指示追従、およびより頻繁なトレーニング更新を持っています。オープンソースモデルは、コストと展開制御のための能力をトレードします。どのカテゴリも8つの制限のいずれかを排除しません。' },
       },
     ],
   },
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'LLM制限が地域によって異なる方法',
       content: [
         '**LLM制限は構造的に普遍的ですが、重大度は言語、地域、規制環境によって異なります。** EU AI法（2024）に基づいて運営するEU組織は、高リスク用途に関する危険評価でAI制限を文書化する必要があります — ここで8つの制限を技術的な懸念だけではなく、コンプライアンス要件にしています。',
-        '中国では、Baidu ERNIE 4.0とAlibaba Qwen 2.5は同じ構造的な制限を共有していますが、トレーニングデータは標準言語の資料に向かって重み付けされています。これは中国語トピックのパフォーマンスを改善しますが、同じ知識カットオフ、幻覚、推論制約が適用されます。',
+        '中国では、Baidu ERNIE 4.0とAlibaba Qwen 3は同じ構造的な制限を共有していますが、トレーニングデータは標準言語の資料に向かって重み付けされています。これは中国語トピックのパフォーマンスを改善しますが、同じ知識カットオフ、幻覚、推論制約が適用されます。',
         '日本では、Fujitsu TakaneとLine HyperCLOVA Xは汎用的な多言語モデルよりも日本語タスクで強力なパフォーマンスを示していますが、すべての構造的な制限 — カットオフ日、幻覚、コンテキストウィンドウ、実世界のアクションなし — 同一に適用されます。',
       ],
     },
@@ -1718,7 +1718,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { q: 'ファインチューニングされたモデルは同じ制限を持っていますか?', a: 'はい。ファインチューニングはスタイル、ドメインフォーカス、または指示追従の動作を調整します — リアルタイムのデータアクセス、真の推論、または永続的なメモリを追加しません。ファインチューニングされたGPT-5.5は、ベースモデルと同じ知識カットオフと幻覚リスクを保持しています。' },
         { q: 'LLM制限とバグの違いは何ですか?', a: 'バグは、ソフトウェアアップデートで修正可能な意図しないエラーです。制限は、モデルがどのように機能するかの構造的な特性です。幻覚、知識カットオフ、およびコンテキストウィンドウの制限は、トランスフォーマーアーキテクチャとトレーニングプロセスから生じ、パッチできず、システム設計でのみ回避できる制限です。' },
         { q: '最も制限が少ないLLMはどれですか?', a: 'どのモデルも8つの構造的な制限のいずれかを排除することはできません — これらはトランスフォーマーアーキテクチャに普遍的です。Gemini 3.1 Proは最大のコンテキストウィンドウ（200万トークン）を持ち、制限4を最よく緩和します。Claude Opus 4.8は不確実性を回避し、知識カットオフを最も確実に認め、幻覚リスクを緩和します。GPT-5.5はツール使用（制限6の回避）で優れています。「最も制限が少ない」モデルではなく、特定の制限のボトルネックに基づいて選択してください。' },
-        { q: '2026年のオープンソースと専有モデル間で制限はどのように異なりますか?', a: 'オープンソースモデル（LLaMA 3.1、Mistral Large、Qwen 2.5）と専有モデル（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）は、同じ構造的な制限（知識カットオフ、幻覚、コンテキストウィンドウ、推論の制約）に直面しています。違いは重大度とコストにあります：専有モデルは通常、より大きなコンテキスト（Gemini 3.1 Pro：2Mトークン対Mistral：128K）、より良い指示追従、およびより頻繁なトレーニング更新を持っています。オープンソースモデルは、コストと展開制御のための能力をトレードします。どのカテゴリも8つの制限のいずれかを排除しません。' },
+        { q: '2026年のオープンソースと専有モデル間で制限はどのように異なりますか?', a: 'オープンソースモデル（LLaMA 3.1、Mistral Large、Qwen 3）と専有モデル（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）は、同じ構造的な制限（知識カットオフ、幻覚、コンテキストウィンドウ、推論の制約）に直面しています。違いは重大度とコストにあります：専有モデルは通常、より大きなコンテキスト（Gemini 3.1 Pro：2Mトークン対Mistral：128K）、より良い指示追従、およびより頻繁なトレーニング更新を持っています。オープンソースモデルは、コストと展開制御のための能力をトレードします。どのカテゴリも8つの制限のいずれかを排除しません。' },
       ],
     },
     sources: {
@@ -1858,7 +1858,7 @@ zh: {
           {
             '@type': 'Question',
             name: '2026 年开源和专有模型之间的局限性如何不同？',
-            acceptedAnswer: { '@type': 'Answer', text: '开源模型（LLaMA 3.1、Mistral Large、Qwen 2.5）和专有模型（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）面临相同的结构性限制 — 知识截断、幻觉、上下文窗口、推理约束。区别在于严重程度和成本：专有模型通常有更大的上下文（Gemini 3.1 Pro：200 万令牌 vs Mistral：128K）、更好的指令遵循和更频繁的训练更新。开源模型以成本和部署控制为代价换取功能。两个类别都不消除这八个限制中的任何一个。' },
+            acceptedAnswer: { '@type': 'Answer', text: '开源模型（LLaMA 3.1、Mistral Large、Qwen 3）和专有模型（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）面临相同的结构性限制 — 知识截断、幻觉、上下文窗口、推理约束。区别在于严重程度和成本：专有模型通常有更大的上下文（Gemini 3.1 Pro：200 万令牌 vs Mistral：128K）、更好的指令遵循和更频繁的训练更新。开源模型以成本和部署控制为代价换取功能。两个类别都不消除这八个限制中的任何一个。' },
           },
         ],
       },
@@ -2098,7 +2098,7 @@ zh: {
             { q: '微调的模型是否有相同的局限性？', a: '是的。微调调整风格、领域焦点或指令遵循行为 — 它不添加实时数据访问、真正推理或持久内存。微调的 GPT-5.5 保留与基础模型相同的知识截断和幻觉风险。' },
             { q: '大语言模型局限性和错误之间的区别是什么？', a: '错误是无意的错误，可通过软件更新修复。局限性是模型工作方式的结构性属性。幻觉、知识截断和上下文窗口限制是局限性 — 它们来自 transformer 架构和训练过程，无法补丁修复，只能通过系统设计解决。' },
             { q: '哪个大语言模型的局限性最少？', a: '没有模型消除这八个结构性限制中的任何一个 — 它们对 transformer 架构是通用的。Gemini 3.1 Pro 拥有最大的上下文窗口（200 万令牌），最好地缓解了限制 4。Claude Opus 4.8 最可靠地对冲不确定性并承认知识截断，缓解了幻觉风险。GPT-5.5 在工具使用（限制 6 解决方案）上表现出色。根据您的特定限制瓶颈选择，而不是哪个模型"最不受限制"。' },
-            { q: '2026 年开源和专有模型之间的局限性如何不同？', a: '开源模型（LLaMA 3.1、Mistral Large、Qwen 2.5）和专有模型（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）面临相同的结构性限制 — 知识截断、幻觉、上下文窗口、推理约束。区别在于严重程度和成本：专有模型通常有更大的上下文（Gemini 3.1 Pro：200 万令牌 vs Mistral：128K）、更好的指令遵循和更频繁的训练更新。开源模型以成本和部署控制为代价换取功能。两个类别都不消除这八个限制中的任何一个。' },
+            { q: '2026 年开源和专有模型之间的局限性如何不同？', a: '开源模型（LLaMA 3.1、Mistral Large、Qwen 3）和专有模型（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）面临相同的结构性限制 — 知识截断、幻觉、上下文窗口、推理约束。区别在于严重程度和成本：专有模型通常有更大的上下文（Gemini 3.1 Pro：200 万令牌 vs Mistral：128K）、更好的指令遵循和更频繁的训练更新。开源模型以成本和部署控制为代价换取功能。两个类别都不消除这八个限制中的任何一个。' },
           ],
         },
         sources: {

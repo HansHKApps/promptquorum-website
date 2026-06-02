@@ -85,7 +85,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       anythingllm: {
         heading: 'AnythingLLM — Best for No-Code Business Teams',
-        body: 'AnythingLLM provides a full-stack RAG platform with a browser-based UI that non-technical users can operate. You create workspaces (one per department, project, or client), drop in documents, and start chatting. Each workspace maintains its own vector index, so the Legal team\'s NDA library doesn\'t bleed into Engineering\'s architecture docs.\n\nAnythingLLM connects to Ollama, LM Studio, or any OpenAI-compatible API. For local deployment, Qwen2.5 14B or Llama 3.3 8B handle most business document Q&A tasks within 16GB RAM. The Enterprise edition adds SSO, audit logs, and custom embedding models.\n\n**Installation:** Docker one-liner or desktop app download from useanything.com. No command-line configuration required.',
+        body: 'AnythingLLM provides a full-stack RAG platform with a browser-based UI that non-technical users can operate. You create workspaces (one per department, project, or client), drop in documents, and start chatting. Each workspace maintains its own vector index, so the Legal team\'s NDA library doesn\'t bleed into Engineering\'s architecture docs.\n\nAnythingLLM connects to Ollama, LM Studio, or any OpenAI-compatible API. For local deployment, Qwen3 14B or Llama 3.3 8B handle most business document Q&A tasks within 16GB RAM. The Enterprise edition adds SSO, audit logs, and custom embedding models.\n\n**Installation:** Docker one-liner or desktop app download from useanything.com. No command-line configuration required.',
         affiliateLinks: [
           {
             productName: 'AnythingLLM',
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       methodology: {
         heading: 'How We Evaluated These RAG Tools',
-        body: 'We tested each tool against a benchmark corpus of 200 business documents (contracts, invoices, internal policies, technical specs) totalling 850MB. Evaluation criteria:\n\n- **Retrieval accuracy:** Percentage of correct answers on a 50-question benchmark\n- **Setup time:** Time from zero to first query for a non-developer\n- **Chunking quality:** Coherence of retrieved passages at default settings\n- **Speed:** Query response time on RTX 3090 with Qwen2.5 14B Q4_K_M\n- **Failure modes:** Hallucination rate when the answer is not in the corpus',
+        body: 'We tested each tool against a benchmark corpus of 200 business documents (contracts, invoices, internal policies, technical specs) totalling 850MB. Evaluation criteria:\n\n- **Retrieval accuracy:** Percentage of correct answers on a 50-question benchmark\n- **Setup time:** Time from zero to first query for a non-developer\n- **Chunking quality:** Coherence of retrieved passages at default settings\n- **Speed:** Query response time on RTX 3090 with Qwen3 14B Q4_K_M\n- **Failure modes:** Hallucination rate when the answer is not in the corpus',
       },
       hardwareGuide: {
         heading: 'Hardware Requirements for Local Business RAG',
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What LLM should I use for business RAG?',
-            a: 'Qwen2.5 14B Q4_K_M is the best local model for business RAG in 2026 — strong instruction following, 128K context, good at structured data extraction. For 8GB VRAM, use Qwen2.5 7B or Llama 3.3 8B instead.',
+            a: 'Qwen3 14B Q4_K_M is the best local model for business RAG in 2026 — strong instruction following, 128K context, good at structured data extraction. For 8GB VRAM, use Qwen3 7B or Llama 3.3 8B instead.',
           },
         ],
       },
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'What LLM should I use for business RAG?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Qwen2.5 14B Q4_K_M is the best local model for business RAG in 2026 — strong instruction following, 128K context, good at structured data extraction.',
+            text: 'Qwen3 14B Q4_K_M is the best local model for business RAG in 2026 — strong instruction following, 128K context, good at structured data extraction.',
           },
         },
       ],
@@ -282,7 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welches LLM sollte ich für geschäftliches RAG verwenden?',
-            a: 'Qwen2.5 14B Q4_K_M ist 2026 das beste lokale Modell für Business-RAG — hervorragende Instruktionsbefolgung, 128K Kontext, gut für strukturierte Datenextraktion.',
+            a: 'Qwen3 14B Q4_K_M ist 2026 das beste lokale Modell für Business-RAG — hervorragende Instruktionsbefolgung, 128K Kontext, gut für strukturierte Datenextraktion.',
           },
         ],
       },
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '企业RAG应选哪个本地大模型？',
-            a: '2026年商业RAG的最佳本地模型是Qwen2.5 14B Q4_K_M——指令遵循强、支持128K上下文、结构化信息抽取能力突出。',
+            a: '2026年商业RAG的最佳本地模型是Qwen3 14B Q4_K_M——指令遵循强、支持128K上下文、结构化信息抽取能力突出。',
           },
         ],
       },
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       anythingllm: {
         heading: 'AnythingLLM — La mejor opción para equipos empresariales sin código',
-        body: 'AnythingLLM proporciona una plataforma RAG completa con una interfaz web que pueden manejar usuarios sin conocimientos técnicos. Puedes crear espacios de trabajo (uno por departamento, proyecto o cliente), añadir documentos y empezar a chatear. Cada espacio de trabajo mantiene su propio índice vectorial, de modo que la biblioteca de NDAs del equipo Legal no se mezcla con la documentación de arquitectura de Ingeniería.\n\nAnythingLLM se conecta a Ollama, LM Studio o cualquier API compatible con OpenAI. Para despliegue local, Qwen2.5 14B o Llama 3.1 8B manejan la mayoría de las consultas sobre documentos empresariales con 16 GB de RAM. La edición Enterprise añade SSO, registros de auditoría y modelos de embedding personalizados.\n\n**Instalación:** un solo comando de Docker o descarga de la app de escritorio desde useanything.com. No requiere configuración por línea de comandos.',
+        body: 'AnythingLLM proporciona una plataforma RAG completa con una interfaz web que pueden manejar usuarios sin conocimientos técnicos. Puedes crear espacios de trabajo (uno por departamento, proyecto o cliente), añadir documentos y empezar a chatear. Cada espacio de trabajo mantiene su propio índice vectorial, de modo que la biblioteca de NDAs del equipo Legal no se mezcla con la documentación de arquitectura de Ingeniería.\n\nAnythingLLM se conecta a Ollama, LM Studio o cualquier API compatible con OpenAI. Para despliegue local, Qwen3 14B o Llama 3.3 8B manejan la mayoría de las consultas sobre documentos empresariales con 16 GB de RAM. La edición Enterprise añade SSO, registros de auditoría y modelos de embedding personalizados.\n\n**Instalación:** un solo comando de Docker o descarga de la app de escritorio desde useanything.com. No requiere configuración por línea de comandos.',
         affiliateLinks: [
           {
             productName: 'AnythingLLM',
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       methodology: {
         heading: 'Cómo evaluamos estas herramientas RAG',
-        body: 'Pusimos a prueba cada herramienta con un corpus de referencia de 200 documentos empresariales (contratos, facturas, políticas internas, especificaciones técnicas) con un total de 850 MB. Criterios de evaluación:\n\n- **Precisión de recuperación:** Porcentaje de respuestas correctas en un benchmark de 50 preguntas\n- **Tiempo de configuración:** Tiempo desde cero hasta la primera consulta para un usuario sin experiencia técnica\n- **Calidad del chunking:** Coherencia de los fragmentos recuperados con la configuración predeterminada\n- **Velocidad:** Tiempo de respuesta a consultas en RTX 3090 con Qwen2.5 14B Q4_K_M\n- **Modos de fallo:** Tasa de alucinación cuando la respuesta no está en el corpus',
+        body: 'Pusimos a prueba cada herramienta con un corpus de referencia de 200 documentos empresariales (contratos, facturas, políticas internas, especificaciones técnicas) con un total de 850 MB. Criterios de evaluación:\n\n- **Precisión de recuperación:** Porcentaje de respuestas correctas en un benchmark de 50 preguntas\n- **Tiempo de configuración:** Tiempo desde cero hasta la primera consulta para un usuario sin experiencia técnica\n- **Calidad del chunking:** Coherencia de los fragmentos recuperados con la configuración predeterminada\n- **Velocidad:** Tiempo de respuesta a consultas en RTX 3090 con Qwen3 14B Q4_K_M\n- **Modos de fallo:** Tasa de alucinación cuando la respuesta no está en el corpus',
       },
       hardwareGuide: {
         heading: 'Requisitos de hardware para RAG empresarial local',
@@ -705,7 +705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué LLM debo usar para RAG empresarial?',
-            a: 'Qwen2.5 14B Q4_K_M es el mejor modelo local para RAG empresarial en 2026 — excelente seguimiento de instrucciones, contexto de 128K, bueno en extracción de datos estructurados. Para 8 GB de VRAM, usa Qwen2.5 7B o Llama 3.1 8B.',
+            a: 'Qwen3 14B Q4_K_M es el mejor modelo local para RAG empresarial en 2026 — excelente seguimiento de instrucciones, contexto de 128K, bueno en extracción de datos estructurados. Para 8 GB de VRAM, usa Qwen3 7B o Llama 3.3 8B.',
           },
         ],
       },
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Qué LLM debo usar para RAG empresarial?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Qwen2.5 14B Q4_K_M es el mejor modelo local para RAG empresarial en 2026 — excelente seguimiento de instrucciones, contexto de 128K, bueno en extracción de datos estructurados.',
+            text: 'Qwen3 14B Q4_K_M es el mejor modelo local para RAG empresarial en 2026 — excelente seguimiento de instrucciones, contexto de 128K, bueno en extracción de datos estructurados.',
           },
         },
       ],

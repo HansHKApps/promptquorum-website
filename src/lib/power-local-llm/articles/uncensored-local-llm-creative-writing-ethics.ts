@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'Which uncensored local LLMs should fiction writers use in 2026?',
         answer:
-          'Hermes 3 Llama 3.3 is the best all-round uncensored model for fiction in 2026 — strong instruction following, good character voice differentiation, fewer arbitrary refusals without the aggressive output that some fully uncensored fine-tunes produce. Dolphin 3.0 Mistral is the lighter alternative on 16–24 GB systems. For writers who need occasional dark content rather than persistent uncensored output, standard instruction-tuned models (Llama 3.3 70B, Qwen3 32B) with well-structured prompts generate most mature literary content without requiring an uncensored fine-tune. The ethical baseline that applies regardless of model: no content involving minors in sexual contexts, no non-consensual depictions of identifiable real people, and careful consideration before distributing output publicly.',
+          'Hermes 3 Llama 3.3 is the best all-round uncensored model for fiction in 2026 — strong instruction following, good character voice differentiation, fewer arbitrary refusals without the aggressive output that some fully uncensored fine-tunes produce. Dolphin 3.0 Mistral is the lighter alternative on 16–24 GB systems. For writers who need occasional dark content rather than persistent uncensored output, standard instruction-tuned models (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) with well-structured prompts generate most mature literary content without requiring an uncensored fine-tune. The ethical baseline that applies regardless of model: no content involving minors in sexual contexts, no non-consensual depictions of identifiable real people, and careful consideration before distributing output publicly.',
         bullets: [
           'Hermes 3 Llama 3.3 — best all-round uncensored fiction model; strong instruction following, fewer arbitrary refusals.',
           'Dolphin 3.0 Mistral — lighter option for 16–24 GB systems; broader uncensored range than Hermes 3.',
@@ -197,8 +197,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Not all uncensored models are equal — the degree of RLHF removal and the quality of the base model both matter for fiction-writing use cases.**',
         columns: ['Model', 'Base', 'VRAM (Q4)', 'Refusal Rate', 'Instruction Quality', 'Drift to Extremes', 'Best For'],
         rows: [
-          { 'Model': 'Hermes 3 Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Selective', 'Instruction Quality': '★★★★★', 'Drift to Extremes': 'Low', 'Best For': 'Default pick for serious fiction — best instruction following + uncensored capability' },
-          { 'Model': 'Dolphin 3.0 Mistral 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Refusal Rate': 'Broad', 'Instruction Quality': '★★★★☆', 'Drift to Extremes': 'Low-Moderate', 'Best For': '16–24 GB systems; mature content across a wider range' },
+          { 'Model': 'Hermes 3 [Llama](https://ollama.com/library/llama3.3) 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Selective', 'Instruction Quality': '★★★★★', 'Drift to Extremes': 'Low', 'Best For': 'Default pick for serious fiction — best instruction following + uncensored capability' },
+          { 'Model': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Refusal Rate': 'Broad', 'Instruction Quality': '★★★★☆', 'Drift to Extremes': 'Low-Moderate', 'Best For': '16–24 GB systems; mature content across a wider range' },
           { 'Model': 'Dolphin 3.0 Mistral Small', 'Base': 'Mistral Small', 'VRAM (Q4)': '~8 GB', 'Refusal Rate': 'Broad', 'Instruction Quality': '★★★☆☆', 'Drift to Extremes': 'Moderate', 'Best For': 'Low-VRAM systems; short-form drafts, prompt testing' },
           { 'Model': 'Hermes 3 Llama 3.2 8B', 'Base': 'Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', 'Refusal Rate': 'Selective', 'Instruction Quality': '★★★☆☆', 'Drift to Extremes': 'Low', 'Best For': 'Resource-constrained; dialogue and shorter scenes' },
           { 'Model': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Limited', 'Instruction Quality': '★★★★★', 'Drift to Extremes': 'None', 'Best For': 'Dark themes, moral complexity, violence — without needing explicit sexual content' },
@@ -418,7 +418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Welche Uncensored lokalen LLMs sollten Belletristik-Autoren 2026 verwenden?',
         answer:
-          'Hermes 3 Llama 3.3 ist das beste Allround-Uncensored-Modell für Belletristik in 2026 — starkes Anweisungsfolgen, gute Charakterstimmen-Differenzierung, weniger willkürliche Ablehnungen ohne die aggressive Ausgabe, die manche vollständig Uncensored-Fine-Tunes produzieren. Dolphin 3.0 Mistral ist die leichtere Alternative für 16–24-GB-Systeme. Für Autoren, die gelegentlich dunkle Inhalte statt persistenter Uncensored-Ausgabe benötigen, generieren Standard-Instruction-Tuned-Modelle (Llama 3.3 70B, Qwen3 32B) mit gut strukturierten Prompts die meisten reifen literarischen Inhalte ohne Uncensored-Fine-Tune. Die ethische Grundlinie, die unabhängig vom Modell gilt: keine Inhalte, die Minderjährige in sexuellen Kontexten involvieren, keine nicht-konsensuellen Darstellungen identifizierbarer realer Personen, und sorgfältige Überlegung vor der öffentlichen Verbreitung.',
+          'Hermes 3 Llama 3.3 ist das beste Allround-Uncensored-Modell für Belletristik in 2026 — starkes Anweisungsfolgen, gute Charakterstimmen-Differenzierung, weniger willkürliche Ablehnungen ohne die aggressive Ausgabe, die manche vollständig Uncensored-Fine-Tunes produzieren. Dolphin 3.0 Mistral ist die leichtere Alternative für 16–24-GB-Systeme. Für Autoren, die gelegentlich dunkle Inhalte statt persistenter Uncensored-Ausgabe benötigen, generieren Standard-Instruction-Tuned-Modelle (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) mit gut strukturierten Prompts die meisten reifen literarischen Inhalte ohne Uncensored-Fine-Tune. Die ethische Grundlinie, die unabhängig vom Modell gilt: keine Inhalte, die Minderjährige in sexuellen Kontexten involvieren, keine nicht-konsensuellen Darstellungen identifizierbarer realer Personen, und sorgfältige Überlegung vor der öffentlichen Verbreitung.',
         bullets: [
           'Hermes 3 Llama 3.3 — bestes Allround-Uncensored-Belletristik-Modell; starkes Anweisungsfolgen, weniger willkürliche Ablehnungen.',
           'Dolphin 3.0 Mistral — leichtere Option für 16–24-GB-Systeme; breiteres Uncensored-Spektrum als Hermes 3.',
@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Weiterführende Literatur', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: 'Die Präsentation zeigt: was „Uncensored"-Fine-Tuning wirklich bedeutet (RLHF-Entfernung vs. null Einschränkungen); eine 5-Modell-Vergleichstabelle (Hermes 3 Llama 3.3 bis Dolphin 3.0 Mistral 7B mit VRAM, Ablehnungsrate, Anweisungsqualität); geeignete und ungeeignete Anwendungsfälle; Ollama-Einrichtungsbefehle; bleibende ethische Verantwortlichkeiten; und 5 häufige Fehler. Als PDF-Referenzkarte für Uncensored-LLM-Kreativschreiben herunterladen.',
+    gammaDescription: 'Die Präsentation zeigt: was „Uncensored"-Fine-Tuning wirklich bedeutet (RLHF-Entfernung vs. null Einschränkungen); eine 5-Modell-Vergleichstabelle (Hermes 3 Llama 3.3 bis Dolphin 3.0 Mistral Small mit VRAM, Ablehnungsrate, Anweisungsqualität); geeignete und ungeeignete Anwendungsfälle; Ollama-Einrichtungsbefehle; bleibende ethische Verantwortlichkeiten; und 5 häufige Fehler. Als PDF-Referenzkarte für Uncensored-LLM-Kreativschreiben herunterladen.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -491,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Was entfernt wird:** Ablehnungsverhalten für bestimmte Inhaltskategorien (explizite sexuelle Inhalte, grafische Gewalt, dunkle psychologische Inhalte).',
           '**Was erhalten bleibt:** Anweisungsfolgen, Charakterkonsistenz, Prompt-Struktur-Einhaltung, Sprachqualität.',
           '**Grade des Uncensoring:** Hermes 3 ist selektiv Uncensored (reife Inhalte ja, aber behält einige Leitplanken für extreme Inhalte). Dolphin-Serie ist breiter Uncensored. Vollständig abliterierte Modelle (Wizard-Uncensored, Erebus) haben die aggressivste Entfernung von Leitplanken — und das schwächste Anweisungsfolgen für komplexe Belletristik-Aufgaben.',
-          '**Basismodell-Qualität zählt:** Uncensoring verschlechtert die Anweisungsqualität, wenn das Basismodell schwach ist. Hermes 3 auf Llama 3.3 70B behält Llama 3.3\'s starkes Anweisungsfolgen; Dolphin 3.0 auf Mistral 7B ist durch die kleinere Basis begrenzt.',
+          '**Basismodell-Qualität zählt:** Uncensoring verschlechtert die Anweisungsqualität, wenn das Basismodell schwach ist. Hermes 3 auf Llama 3.3 70B behält Llama 3.3\'s starkes Anweisungsfolgen; Dolphin 3.0 auf Mistral Small ist durch die kleinere Basis begrenzt.',
         ],
         snippetBlocks: [
           {
@@ -564,9 +564,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Nicht alle Uncensored-Modelle sind gleich — der Grad der RLHF-Entfernung und die Qualität des Basismodells sind beide relevant für Belletristik-Anwendungsfälle.**',
         columns: ['Modell', 'Basis', 'VRAM (Q4)', 'Ablehnungsrate', 'Anweisungsqualität', 'Tendenz zu Extremen', 'Bestes Einsatzgebiet'],
         rows: [
-          { 'Modell': 'Hermes 3 Llama 3.3 70B', 'Basis': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Ablehnungsrate': 'Selektiv', 'Anweisungsqualität': '★★★★★', 'Tendenz zu Extremen': 'Gering', 'Bestes Einsatzgebiet': 'Standardwahl für ernsthafte Belletristik — bestes Anweisungsfolgen + Uncensored-Fähigkeit' },
-          { 'Modell': 'Dolphin 3.0 Mistral 24B', 'Basis': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Ablehnungsrate': 'Breit', 'Anweisungsqualität': '★★★★☆', 'Tendenz zu Extremen': 'Gering-Mittel', 'Bestes Einsatzgebiet': '16–24-GB-Systeme; reife Inhalte über eine breitere Spanne' },
-          { 'Modell': 'Dolphin 3.0 Mistral 7B', 'Basis': 'Mistral 7B', 'VRAM (Q4)': '~8 GB', 'Ablehnungsrate': 'Breit', 'Anweisungsqualität': '★★★☆☆', 'Tendenz zu Extremen': 'Mittel', 'Bestes Einsatzgebiet': 'VRAM-arme Systeme; Kurzentwürfe, Prompt-Tests' },
+          { 'Modell': 'Hermes 3 [Llama](https://ollama.com/library/llama3.3) 3.3 70B', 'Basis': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Ablehnungsrate': 'Selektiv', 'Anweisungsqualität': '★★★★★', 'Tendenz zu Extremen': 'Gering', 'Bestes Einsatzgebiet': 'Standardwahl für ernsthafte Belletristik — bestes Anweisungsfolgen + Uncensored-Fähigkeit' },
+          { 'Modell': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Basis': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Ablehnungsrate': 'Breit', 'Anweisungsqualität': '★★★★☆', 'Tendenz zu Extremen': 'Gering-Mittel', 'Bestes Einsatzgebiet': '16–24-GB-Systeme; reife Inhalte über eine breitere Spanne' },
+          { 'Modell': 'Dolphin 3.0 Mistral Small', 'Basis': 'Mistral Small', 'VRAM (Q4)': '~8 GB', 'Ablehnungsrate': 'Breit', 'Anweisungsqualität': '★★★☆☆', 'Tendenz zu Extremen': 'Mittel', 'Bestes Einsatzgebiet': 'VRAM-arme Systeme; Kurzentwürfe, Prompt-Tests' },
           { 'Modell': 'Hermes 3 Llama 3.2 8B', 'Basis': 'Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', 'Ablehnungsrate': 'Selektiv', 'Anweisungsqualität': '★★★☆☆', 'Tendenz zu Extremen': 'Gering', 'Bestes Einsatzgebiet': 'Ressourcenbegrenzte Systeme; Dialog und kürzere Szenen' },
           { 'Modell': 'Standard Llama 3.3 70B', 'Basis': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Ablehnungsrate': 'Begrenzt', 'Anweisungsqualität': '★★★★★', 'Tendenz zu Extremen': 'Keine', 'Bestes Einsatzgebiet': 'Dunkle Themen, moralische Komplexität, Gewalt — ohne explizit sexuellen Inhalt' },
         ],
@@ -785,7 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: {
         question: 'Quels LLM locaux non censurés les auteurs de fiction doivent-ils utiliser en 2026 ?',
         answer:
-          'Hermes 3 Llama 3.3 est le meilleur modèle non censuré polyvalent pour la fiction en 2026 — excellente qualité d\'instruction, bonne différenciation des voix de personnages, moins de refus arbitraires sans la tendance agressive que produisent certains modèles entièrement non censurés. Dolphin 3.0 Mistral est l\'alternative légère pour les systèmes 16–24 Go. Pour les auteurs qui ont besoin de contenu sombre occasionnel plutôt que d\'une sortie non censurée persistante, les modèles instruction-tuned standard (Llama 3.3 70B, Qwen3 32B) avec des prompts bien structurés génèrent la plupart des contenus littéraires matures sans nécessiter de fine-tune non censuré. La ligne éthique de base qui s\'applique indépendamment du modèle : aucun contenu impliquant des mineurs dans des contextes sexuels, aucune représentation non consentie de personnes réelles identifiables, et une réflexion approfondie avant de distribuer publiquement.',
+          'Hermes 3 Llama 3.3 est le meilleur modèle non censuré polyvalent pour la fiction en 2026 — excellente qualité d\'instruction, bonne différenciation des voix de personnages, moins de refus arbitraires sans la tendance agressive que produisent certains modèles entièrement non censurés. Dolphin 3.0 Mistral est l\'alternative légère pour les systèmes 16–24 Go. Pour les auteurs qui ont besoin de contenu sombre occasionnel plutôt que d\'une sortie non censurée persistante, les modèles instruction-tuned standard (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) avec des prompts bien structurés génèrent la plupart des contenus littéraires matures sans nécessiter de fine-tune non censuré. La ligne éthique de base qui s\'applique indépendamment du modèle : aucun contenu impliquant des mineurs dans des contextes sexuels, aucune représentation non consentie de personnes réelles identifiables, et une réflexion approfondie avant de distribuer publiquement.',
         bullets: [
           'Hermes 3 Llama 3.3 — meilleur modèle non censuré polyvalent pour la fiction ; excellente qualité d\'instruction, moins de refus arbitraires.',
           'Dolphin 3.0 Mistral — option légère pour les systèmes 16–24 Go ; plage non censurée plus large qu\'Hermes 3.',
@@ -815,7 +815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: 'La présentation ci-dessous couvre : ce que signifie réellement le fine-tuning « non censuré » (suppression du RLHF vs. zéro contrainte) ; un tableau de comparaison de 5 modèles (Hermes 3 Llama 3.3 à Dolphin 3.0 Mistral 7B avec VRAM, taux de refus, qualité d\'instruction) ; cas d\'usage appropriés et inappropriés ; commandes de configuration Ollama ; responsabilités éthiques qui subsistent ; et 5 erreurs courantes. Téléchargez le PDF comme carte de référence pour l\'écriture créative avec LLM non censuré.',
+    gammaDescription: 'La présentation ci-dessous couvre : ce que signifie réellement le fine-tuning « non censuré » (suppression du RLHF vs. zéro contrainte) ; un tableau de comparaison de 5 modèles (Hermes 3 Llama 3.3 à Dolphin 3.0 Mistral Small avec VRAM, taux de refus, qualité d\'instruction) ; cas d\'usage appropriés et inappropriés ; commandes de configuration Ollama ; responsabilités éthiques qui subsistent ; et 5 erreurs courantes. Téléchargez le PDF comme carte de référence pour l\'écriture créative avec LLM non censuré.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -858,7 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ce qui est supprimé :** les comportements de refus pour des catégories de contenu spécifiques (contenu sexuel explicite, violence graphique, contenu psychologique sombre).',
           '**Ce qui est conservé :** le suivi d\'instructions, la cohérence des personnages, le respect de la structure des prompts, la qualité linguistique.',
           '**Degrés de non-censure :** Hermes 3 est sélectivement non censuré (contenu mature oui, mais conserve certaines barrières pour le contenu extrême). La série Dolphin est plus largement non censurée. Les modèles entièrement ablitérés (Wizard-Uncensored, Erebus) ont la suppression des barrières la plus agressive — et la qualité d\'instruction la plus faible pour les tâches de fiction complexes.',
-          '**La qualité du modèle de base compte :** la non-censure dégrade la qualité d\'instruction si le modèle de base est faible. Hermes 3 sur Llama 3.3 70B conserve le fort suivi d\'instructions de Llama 3.3 ; Dolphin 3.0 sur Mistral 7B est limité par la base plus petite.',
+          '**La qualité du modèle de base compte :** la non-censure dégrade la qualité d\'instruction si le modèle de base est faible. Hermes 3 sur Llama 3.3 70B conserve le fort suivi d\'instructions de Llama 3.3 ; Dolphin 3.0 sur Mistral Small est limité par la base plus petite.',
         ],
         snippetBlocks: [
           {
@@ -931,9 +931,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tous les modèles non censurés ne se valent pas — le degré de suppression RLHF et la qualité du modèle de base comptent tous deux pour les cas d\'usage d\'écriture fictionnelle.**',
         columns: ['Modèle', 'Base', 'VRAM (Q4)', 'Taux de refus', 'Qualité d\'instruction', 'Dérive vers l\'extrême', 'Idéal pour'],
         rows: [
-          { 'Modèle': 'Hermes 3 Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 Go', 'Taux de refus': 'Sélectif', 'Qualité d\'instruction': '★★★★★', 'Dérive vers l\'extrême': 'Faible', 'Idéal pour': 'Choix par défaut pour la fiction sérieuse — meilleur suivi d\'instructions + capacité non censurée' },
-          { 'Modèle': 'Dolphin 3.0 Mistral 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 Go', 'Taux de refus': 'Large', 'Qualité d\'instruction': '★★★★☆', 'Dérive vers l\'extrême': 'Faible à modérée', 'Idéal pour': 'Systèmes 16–24 Go ; contenu mature sur une plus large plage' },
-          { 'Modèle': 'Dolphin 3.0 Mistral 7B', 'Base': 'Mistral 7B', 'VRAM (Q4)': '~8 Go', 'Taux de refus': 'Large', 'Qualité d\'instruction': '★★★☆☆', 'Dérive vers l\'extrême': 'Modérée', 'Idéal pour': 'Systèmes à VRAM limitée ; ébauches courtes, test de prompts' },
+          { 'Modèle': 'Hermes 3 [Llama](https://ollama.com/library/llama3.3) 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 Go', 'Taux de refus': 'Sélectif', 'Qualité d\'instruction': '★★★★★', 'Dérive vers l\'extrême': 'Faible', 'Idéal pour': 'Choix par défaut pour la fiction sérieuse — meilleur suivi d\'instructions + capacité non censurée' },
+          { 'Modèle': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 Go', 'Taux de refus': 'Large', 'Qualité d\'instruction': '★★★★☆', 'Dérive vers l\'extrême': 'Faible à modérée', 'Idéal pour': 'Systèmes 16–24 Go ; contenu mature sur une plus large plage' },
+          { 'Modèle': 'Dolphin 3.0 Mistral Small', 'Base': 'Mistral Small', 'VRAM (Q4)': '~8 Go', 'Taux de refus': 'Large', 'Qualité d\'instruction': '★★★☆☆', 'Dérive vers l\'extrême': 'Modérée', 'Idéal pour': 'Systèmes à VRAM limitée ; ébauches courtes, test de prompts' },
           { 'Modèle': 'Hermes 3 Llama 3.2 8B', 'Base': 'Llama 3.2 8B', 'VRAM (Q4)': '~5 Go', 'Taux de refus': 'Sélectif', 'Qualité d\'instruction': '★★★☆☆', 'Dérive vers l\'extrême': 'Faible', 'Idéal pour': 'Ressources limitées ; dialogues et scènes courtes' },
           { 'Modèle': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 Go', 'Taux de refus': 'Limité', 'Qualité d\'instruction': '★★★★★', 'Dérive vers l\'extrême': 'Aucune', 'Idéal pour': 'Thèmes sombres, complexité morale, violence — sans contenu sexuel explicite' },
         ],
@@ -1160,7 +1160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: '2026年にフィクション作家が使うべき無検閲ローカルLLMは？',
         answer:
-          'Hermes 3 Llama 3.3は2026年のフィクション向け最良のオールラウンド無検閲モデルです――強力な指示追従性、良好なキャラクターボイス分化、一部の完全無検閲ファインチューンが生成するような攻撃的な出力を伴わない少ない任意拒否。Dolphin 3.0 Mistralは16〜24 GBシステム向けの軽量な代替です。永続的な無検閲出力ではなく、時折ダークなコンテンツが必要な作家向けには、標準命令チューニングモデル（Llama 3.3 70B、Qwen3 32B）が適切に構造化されたプロンプトで無検閲ファインチューンなしに大半の成人向け文学コンテンツを生成します。モデルに関わらず適用される倫理的基準：性的文脈での未成年者を含むコンテンツなし、識別可能な実在人物の非合意的描写なし、公開配布前の慎重な検討。',
+          'Hermes 3 Llama 3.3は2026年のフィクション向け最良のオールラウンド無検閲モデルです――強力な指示追従性、良好なキャラクターボイス分化、一部の完全無検閲ファインチューンが生成するような攻撃的な出力を伴わない少ない任意拒否。Dolphin 3.0 Mistralは16〜24 GBシステム向けの軽量な代替です。永続的な無検閲出力ではなく、時折ダークなコンテンツが必要な作家向けには、標準命令チューニングモデル（Llama 3.3 70B、[Qwen3](https://ollama.com/library/qwen3) 32B）が適切に構造化されたプロンプトで無検閲ファインチューンなしに大半の成人向け文学コンテンツを生成します。モデルに関わらず適用される倫理的基準：性的文脈での未成年者を含むコンテンツなし、識別可能な実在人物の非合意的描写なし、公開配布前の慎重な検討。',
         bullets: [
           'Hermes 3 Llama 3.3 ― フィクション向け最良オールラウンド無検閲モデル。強力な指示追従性、任意拒否が少ない。',
           'Dolphin 3.0 Mistral ― 16〜24 GBシステム向け軽量選択肢。Hermes 3より広い無検閲範囲。',
@@ -1190,7 +1190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '関連読み物', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: '以下のスライドデッキでは：「無検閲」ファインチューニングが実際に意味すること（RLHF除去対ゼロ制約）；5モデル比較表（Hermes 3 Llama 3.3からDolphin 3.0 Mistral 7BまでのVRAM、拒否率、指示品質）；適切・不適切なユースケース；Ollamaセットアップコマンド；ローカルセットアップに関わらず残る倫理的責任；5つのよくある間違いを掲載。PDFを無検閲ローカルLLM創作活動リファレンスカードとしてダウンロードしてください。',
+    gammaDescription: '以下のスライドデッキでは：「無検閲」ファインチューニングが実際に意味すること（RLHF除去対ゼロ制約）；5モデル比較表（Hermes 3 Llama 3.3からDolphin 3.0 Mistral SmallまでのVRAM、拒否率、指示品質）；適切・不適切なユースケース；Ollamaセットアップコマンド；ローカルセットアップに関わらず残る倫理的責任；5つのよくある間違いを掲載。PDFを無検閲ローカルLLM創作活動リファレンスカードとしてダウンロードしてください。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1233,7 +1233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**削除されるもの：** 特定のコンテンツカテゴリの拒否動作（明示的な性的コンテンツ、グラフィックな暴力、ダークな心理コンテンツ）。',
           '**維持されるもの：** 指示追従、キャラクターの一貫性、プロンプト構造の遵守、言語品質。',
           '**無検閲の度合い：** Hermes 3は選択的に無検閲（成人向けコンテンツOK、ただし極端なコンテンツにはある程度のガードレールを維持）。Dolphinシリーズはより広く無検閲。完全アブリテレートモデル（Wizard-Uncensored、Erebus）はガードレール除去が最も積極的ですが、複雑なフィクションタスクでは指示追従が最も弱い。',
-          '**ベースモデルの品質が重要：** ベースモデルが弱ければ、無検閲化は指示品質を劣化させます。Llama 3.3 70B上のHermes 3はLlama 3.3の強力な指示追従を維持。Mistral 7B上のDolphin 3.0はより小さなベースによって制限されます。',
+          '**ベースモデルの品質が重要：** ベースモデルが弱ければ、無検閲化は指示品質を劣化させます。Llama 3.3 70B上のHermes 3はLlama 3.3の強力な指示追従を維持。Mistral Small上のDolphin 3.0はより小さなベースによって制限されます。',
         ],
         snippetBlocks: [
           {
@@ -1306,9 +1306,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**すべての無検閲モデルが同等ではありません――RLHF除去の度合いとベースモデルの品質の両方が、フィクション執筆ユースケースに重要です。**',
         columns: ['モデル', 'ベース', 'VRAM (Q4)', '拒否率', '指示品質', '極端化傾向', '最適用途'],
         rows: [
-          { 'モデル': 'Hermes 3 Llama 3.3 70B', 'ベース': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒否率': '選択的', '指示品質': '★★★★★', '極端化傾向': '低', '最適用途': '本格的フィクションのデフォルト選択 ― 最高の指示追従性と無検閲能力' },
-          { 'モデル': 'Dolphin 3.0 Mistral 24B', 'ベース': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', '拒否率': '広範', '指示品質': '★★★★☆', '極端化傾向': '低〜中', '最適用途': '16〜24 GBシステム；広い範囲での成人向けコンテンツ' },
-          { 'モデル': 'Dolphin 3.0 Mistral 7B', 'ベース': 'Mistral 7B', 'VRAM (Q4)': '~8 GB', '拒否率': '広範', '指示品質': '★★★☆☆', '極端化傾向': '中', '最適用途': '低VRAMシステム；短編草稿、プロンプトテスト' },
+          { 'モデル': 'Hermes 3 [Llama](https://ollama.com/library/llama3.3) 3.3 70B', 'ベース': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒否率': '選択的', '指示品質': '★★★★★', '極端化傾向': '低', '最適用途': '本格的フィクションのデフォルト選択 ― 最高の指示追従性と無検閲能力' },
+          { 'モデル': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'ベース': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', '拒否率': '広範', '指示品質': '★★★★☆', '極端化傾向': '低〜中', '最適用途': '16〜24 GBシステム；広い範囲での成人向けコンテンツ' },
+          { 'モデル': 'Dolphin 3.0 Mistral Small', 'ベース': 'Mistral Small', 'VRAM (Q4)': '~8 GB', '拒否率': '広範', '指示品質': '★★★☆☆', '極端化傾向': '中', '最適用途': '低VRAMシステム；短編草稿、プロンプトテスト' },
           { 'モデル': 'Hermes 3 Llama 3.2 8B', 'ベース': 'Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', '拒否率': '選択的', '指示品質': '★★★☆☆', '極端化傾向': '低', '最適用途': 'リソース制限環境；対話と短い場面' },
           { 'モデル': 'Standard Llama 3.3 70B', 'ベース': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒否率': '限定的', '指示品質': '★★★★★', '極端化傾向': 'なし', '最適用途': 'ダークなテーマ、道徳的複雑性、暴力 ― 明示的な性的コンテンツ不要の場合' },
         ],
@@ -1528,7 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zh: {
         question: '2026年小说作家应使用哪些无审查本地LLM？',
         answer:
-          'Hermes 3 Llama 3.3是2026年小说创作的最佳全能无审查模型——强大的指令遵循性、良好的角色声音分化、较少的任意拒绝，且不会出现某些完全无审查微调模型产生的激进输出。Dolphin 3.0 Mistral是16至24 GB系统的轻量级替代选项。对于只需偶尔使用黑暗内容而非持续无审查输出的作家，标准指令调优模型（Llama 3.3 70B、Qwen3 32B）配合结构良好的提示词可以在无需无审查微调的情况下生成大多数成人向文学内容。无论使用何种模型，伦理底线始终适用：不得生成涉及未成年人的性内容，不得非合意描绘可识别的真实人物，公开分发前需谨慎考虑。',
+          'Hermes 3 Llama 3.3是2026年小说创作的最佳全能无审查模型——强大的指令遵循性、良好的角色声音分化、较少的任意拒绝，且不会出现某些完全无审查微调模型产生的激进输出。Dolphin 3.0 Mistral是16至24 GB系统的轻量级替代选项。对于只需偶尔使用黑暗内容而非持续无审查输出的作家，标准指令调优模型（Llama 3.3 70B、[Qwen3](https://ollama.com/library/qwen3) 32B）配合结构良好的提示词可以在无需无审查微调的情况下生成大多数成人向文学内容。无论使用何种模型，伦理底线始终适用：不得生成涉及未成年人的性内容，不得非合意描绘可识别的真实人物，公开分发前需谨慎考虑。',
         bullets: [
           'Hermes 3 Llama 3.3 ― 小说创作最佳全能无审查模型，指令遵循性强，任意拒绝少。',
           'Dolphin 3.0 Mistral ― 16至24 GB系统的轻量选项，无审查范围比Hermes 3更广。',
@@ -1558,7 +1558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '延伸阅读', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: '以下幻灯片包含：「无审查」微调的真实含义（RLHF移除对比零约束）；5模型对比表（Hermes 3 Llama 3.3至Dolphin 3.0 Mistral 7B，含VRAM、拒绝率、指令质量）；适用与不适用场景；Ollama配置命令；无论本地配置如何仍需承担的伦理责任；以及5个常见错误。将PDF作为无审查本地LLM创意写作参考卡下载。',
+    gammaDescription: '以下幻灯片包含：「无审查」微调的真实含义（RLHF移除对比零约束）；5模型对比表（Hermes 3 Llama 3.3至Dolphin 3.0 Mistral Small，含VRAM、拒绝率、指令质量）；适用与不适用场景；Ollama配置命令；无论本地配置如何仍需承担的伦理责任；以及5个常见错误。将PDF作为无审查本地LLM创意写作参考卡下载。',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1601,7 +1601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**被移除的内容：** 针对特定内容类别的拒绝行为（明确的性内容、图形化暴力、黑暗心理内容）。',
           '**被保留的内容：** 指令遵循、角色一致性、提示词结构遵守、语言质量。',
           '**无审查程度的差异：** Hermes 3是选择性无审查（成人内容可以，但对极端内容保留部分护栏）。Dolphin系列无审查范围更广。完全消融模型（Wizard-Uncensored、Erebus）护栏移除最积极——但对复杂小说任务的指令遵循最弱。',
-          '**基础模型质量很重要：** 如果基础模型较弱，无审查会降低指令质量。Llama 3.3 70B上的Hermes 3保留了Llama 3.3的强大指令遵循性；Mistral 7B上的Dolphin 3.0受限于较小的基础。',
+          '**基础模型质量很重要：** 如果基础模型较弱，无审查会降低指令质量。Llama 3.3 70B上的Hermes 3保留了Llama 3.3的强大指令遵循性；Mistral Small上的Dolphin 3.0受限于较小的基础。',
         ],
         snippetBlocks: [
           {
@@ -1674,9 +1674,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**并非所有无审查模型都相同——RLHF移除程度和基础模型质量对小说写作场景都很重要。**',
         columns: ['模型', '基础', 'VRAM (Q4)', '拒绝率', '指令质量', '极端化倾向', '最适用于'],
         rows: [
-          { '模型': 'Hermes 3 Llama 3.3 70B', '基础': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒绝率': '选择性', '指令质量': '★★★★★', '极端化倾向': '低', '最适用于': '严肃小说的默认选择——最佳指令遵循性与无审查能力' },
-          { '模型': 'Dolphin 3.0 Mistral 24B', '基础': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', '拒绝率': '广泛', '指令质量': '★★★★☆', '极端化倾向': '低至中', '最适用于': '16至24 GB系统；更广范围的成人内容' },
-          { '模型': 'Dolphin 3.0 Mistral 7B', '基础': 'Mistral 7B', 'VRAM (Q4)': '~8 GB', '拒绝率': '广泛', '指令质量': '★★★☆☆', '极端化倾向': '中', '最适用于': '低VRAM系统；短篇草稿、提示词测试' },
+          { '模型': 'Hermes 3 [Llama](https://ollama.com/library/llama3.3) 3.3 70B', '基础': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒绝率': '选择性', '指令质量': '★★★★★', '极端化倾向': '低', '最适用于': '严肃小说的默认选择——最佳指令遵循性与无审查能力' },
+          { '模型': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', '基础': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', '拒绝率': '广泛', '指令质量': '★★★★☆', '极端化倾向': '低至中', '最适用于': '16至24 GB系统；更广范围的成人内容' },
+          { '模型': 'Dolphin 3.0 Mistral Small', '基础': 'Mistral Small', 'VRAM (Q4)': '~8 GB', '拒绝率': '广泛', '指令质量': '★★★☆☆', '极端化倾向': '中', '最适用于': '低VRAM系统；短篇草稿、提示词测试' },
           { '模型': 'Hermes 3 Llama 3.2 8B', '基础': 'Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', '拒绝率': '选择性', '指令质量': '★★★☆☆', '极端化倾向': '低', '最适用于': '资源受限环境；对话和较短场景' },
           { '模型': 'Standard Llama 3.3 70B', '基础': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒绝率': '有限', '指令质量': '★★★★★', '极端化倾向': '无', '最适用于': '黑暗主题、道德复杂性、暴力——不需要明确性内容的场景' },
         ],
@@ -1735,7 +1735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '**中国（数据安全法）：** 中国2021年《数据安全法》（DSL）和《网络安全法》对数据处理建立了严格框架。本地推理在技术上将数据保留在设备上，有助于合规——但如果您通过任何联网平台分发AI辅助内容，运营商和内容合规义务可能仍然适用。对于使用Qwen2.5或其他中文语言模型的中国企业，本地推理可以满足数据本地化要求，同时规避云端内容审核的不确定性。',
+          '**中国（数据安全法）：** 中国2021年《数据安全法》（DSL）和《网络安全法》对数据处理建立了严格框架。本地推理在技术上将数据保留在设备上，有助于合规——但如果您通过任何联网平台分发AI辅助内容，运营商和内容合规义务可能仍然适用。对于使用Qwen3或其他中文语言模型的中国企业，本地推理可以满足数据本地化要求，同时规避云端内容审核的不确定性。',
           '**亚太地区（数据跨境）：** 数据残留框架在亚太地区差异很大。本地推理是满足多个亚太司法管辖区数据主权要求的技术路径——特别是金融和医疗行业，这些行业有强制要求数据不离开特定地理范围。',
           '**企业部署：** 在中国，银行和金融机构（受中国人民银行法规管辖）、医疗机构（受卫生健康委法规管辖）和律师事务所（受司法部法规管辖）在处理AI生成内容时面临额外义务。本地运行模型消除了数据传输风险，但内容本身仍受行业特定法规约束。',
           '**作者责任：** 您是AI辅助小说的作者。「AI生成的」不转移版权，不消除责任，也不构成针对违法内容的抗辩理由。',
@@ -1896,7 +1896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       es: {
         question: '¿Qué LLMs locales sin censura deben usar los escritores de ficción en 2026?',
         answer:
-          'Hermes 3 Llama 3.3 es el mejor modelo sin censura de propósito general para ficción en 2026 — fuerte seguimiento de instrucciones, buena diferenciación de voz de personajes, menos rechazos arbitrarios sin la tendencia agresiva que producen algunos fine-tunes completamente sin censura. Dolphin 3.0 Mistral es la alternativa más ligera para sistemas de 16–24 GB. Para escritores que necesitan contenido oscuro ocasional en lugar de salida sin censura persistente, los modelos estándar con ajuste de instrucciones (Llama 3.3 70B, Qwen3 32B) con prompts bien estructurados generan la mayoría del contenido literario adulto sin requerir un fine-tune sin censura. La línea ética de base que aplica independientemente del modelo: sin contenido que involucre a menores en contextos sexuales, sin representaciones no consentidas de personas reales identificables, y consideración cuidadosa antes de distribuir públicamente.',
+          'Hermes 3 Llama 3.3 es el mejor modelo sin censura de propósito general para ficción en 2026 — fuerte seguimiento de instrucciones, buena diferenciación de voz de personajes, menos rechazos arbitrarios sin la tendencia agresiva que producen algunos fine-tunes completamente sin censura. Dolphin 3.0 Mistral es la alternativa más ligera para sistemas de 16–24 GB. Para escritores que necesitan contenido oscuro ocasional en lugar de salida sin censura persistente, los modelos estándar con ajuste de instrucciones (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) con prompts bien estructurados generan la mayoría del contenido literario adulto sin requerir un fine-tune sin censura. La línea ética de base que aplica independientemente del modelo: sin contenido que involucre a menores en contextos sexuales, sin representaciones no consentidas de personas reales identificables, y consideración cuidadosa antes de distribuir públicamente.',
         bullets: [
           'Hermes 3 Llama 3.3 — mejor modelo sin censura de propósito general para ficción; fuerte seguimiento de instrucciones, menos rechazos arbitrarios.',
           'Dolphin 3.0 Mistral — opción más ligera para sistemas de 16–24 GB; rango sin censura más amplio que Hermes 3.',
@@ -1926,7 +1926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: 'La presentación a continuación cubre: qué significa realmente el fine-tuning "sin censura" (eliminación de RLHF frente a cero restricciones); una tabla comparativa de 5 modelos (de Hermes 3 Llama 3.3 a Dolphin 3.0 Mistral 7B con VRAM, tasa de rechazo y calidad de instrucciones); casos de uso apropiados e inapropiados; comandos de configuración de Ollama; responsabilidades éticas que permanecen independientemente de la configuración local; y 5 errores comunes. Descarga el PDF como tarjeta de referencia para escritura creativa con LLM sin censura.',
+    gammaDescription: 'La presentación a continuación cubre: qué significa realmente el fine-tuning "sin censura" (eliminación de RLHF frente a cero restricciones); una tabla comparativa de 5 modelos (de Hermes 3 Llama 3.3 a Dolphin 3.0 Mistral Small con VRAM, tasa de rechazo y calidad de instrucciones); casos de uso apropiados e inapropiados; comandos de configuración de Ollama; responsabilidades éticas que permanecen independientemente de la configuración local; y 5 errores comunes. Descarga el PDF como tarjeta de referencia para escritura creativa con LLM sin censura.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1969,7 +1969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qué se elimina:** los comportamientos de rechazo para categorías específicas de contenido (contenido sexual explícito, violencia gráfica, contenido psicológico oscuro).',
           '**Qué se conserva:** el seguimiento de instrucciones, la consistencia de los personajes, la adherencia a la estructura de los prompts, la calidad lingüística.',
           '**Grados de descensurado:** Hermes 3 está selectivamente sin censura (contenido adulto sí, pero conserva algunas barreras para el contenido extremo). La serie Dolphin está más ampliamente sin censura. Los modelos completamente abliterados (Wizard-Uncensored, Erebus) tienen la eliminación más agresiva de barreras — y el seguimiento de instrucciones más débil para tareas de ficción complejas.',
-          '**La calidad del modelo base importa:** el descensurado degrada la calidad de las instrucciones si el modelo base es débil. Hermes 3 sobre Llama 3.3 70B conserva el fuerte seguimiento de instrucciones de Llama 3.3; Dolphin 3.0 sobre Mistral 7B está limitado por la base más pequeña.',
+          '**La calidad del modelo base importa:** el descensurado degrada la calidad de las instrucciones si el modelo base es débil. Hermes 3 sobre Llama 3.3 70B conserva el fuerte seguimiento de instrucciones de Llama 3.3; Dolphin 3.0 sobre Mistral Small está limitado por la base más pequeña.',
         ],
         snippetBlocks: [
           {
@@ -2042,9 +2042,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**No todos los modelos sin censura son iguales — el grado de eliminación de RLHF y la calidad del modelo base importan para los casos de uso de escritura de ficción.**',
         columns: ['Modelo', 'Base', 'VRAM (Q4)', 'Tasa de rechazo', 'Calidad de instrucciones', 'Deriva hacia lo extremo', 'Ideal para'],
         rows: [
-          { 'Modelo': 'Hermes 3 Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Tasa de rechazo': 'Selectiva', 'Calidad de instrucciones': '★★★★★', 'Deriva hacia lo extremo': 'Baja', 'Ideal para': 'Opción por defecto para ficción seria — mejor seguimiento de instrucciones + capacidad sin censura' },
-          { 'Modelo': 'Dolphin 3.0 Mistral 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Tasa de rechazo': 'Amplia', 'Calidad de instrucciones': '★★★★☆', 'Deriva hacia lo extremo': 'Baja-moderada', 'Ideal para': 'Sistemas de 16–24 GB; contenido adulto en un rango más amplio' },
-          { 'Modelo': 'Dolphin 3.0 Mistral 7B', 'Base': 'Mistral 7B', 'VRAM (Q4)': '~8 GB', 'Tasa de rechazo': 'Amplia', 'Calidad de instrucciones': '★★★☆☆', 'Deriva hacia lo extremo': 'Moderada', 'Ideal para': 'Sistemas con poca VRAM; borradores cortos, pruebas de prompts' },
+          { 'Modelo': 'Hermes 3 [Llama](https://ollama.com/library/llama3.3) 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Tasa de rechazo': 'Selectiva', 'Calidad de instrucciones': '★★★★★', 'Deriva hacia lo extremo': 'Baja', 'Ideal para': 'Opción por defecto para ficción seria — mejor seguimiento de instrucciones + capacidad sin censura' },
+          { 'Modelo': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Tasa de rechazo': 'Amplia', 'Calidad de instrucciones': '★★★★☆', 'Deriva hacia lo extremo': 'Baja-moderada', 'Ideal para': 'Sistemas de 16–24 GB; contenido adulto en un rango más amplio' },
+          { 'Modelo': 'Dolphin 3.0 Mistral Small', 'Base': 'Mistral Small', 'VRAM (Q4)': '~8 GB', 'Tasa de rechazo': 'Amplia', 'Calidad de instrucciones': '★★★☆☆', 'Deriva hacia lo extremo': 'Moderada', 'Ideal para': 'Sistemas con poca VRAM; borradores cortos, pruebas de prompts' },
           { 'Modelo': 'Hermes 3 Llama 3.2 8B', 'Base': 'Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', 'Tasa de rechazo': 'Selectiva', 'Calidad de instrucciones': '★★★☆☆', 'Deriva hacia lo extremo': 'Baja', 'Ideal para': 'Recursos limitados; diálogos y escenas más cortas' },
           { 'Modelo': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Tasa de rechazo': 'Limitada', 'Calidad de instrucciones': '★★★★★', 'Deriva hacia lo extremo': 'Ninguna', 'Ideal para': 'Temas oscuros, complejidad moral, violencia — sin necesitar contenido sexual explícito' },
         ],

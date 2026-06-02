@@ -110,7 +110,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Lokales Qwen: kein Datentransfer = kein Artikel-44-Problem',
           'Qwen-API (Alibaba Cloud): SCC + TIA nach Post-Schrems-II erforderlich',
-          'Empfehlung: Qwen 2.5 14B oder Qwen 3 8B lokal via Ollama für datensensible Aufgaben',
+          'Empfehlung: Qwen 3 14B oder Qwen 3 8B lokal via Ollama für datensensible Aufgaben',
         ],
         updatedDate: '2026-05',
       },
@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Lokales Qwen ist DSGVO-konform — die Architektur ist der Grund',
         content: [
           '<strong>DSGVO-Artikel 44 verbietet die Übermittlung personenbezogener Daten in ein Land außerhalb der EU ohne angemessene Rechtsgrundlage. Wenn Sie Qwen lokal betreiben, findet keine Datenübermittlung statt — das Modell verarbeitet alles auf Ihrer Hardware innerhalb Ihrer Jurisdiktion. Das ist der Grund, warum die lokale Bereitstellung die am besten verteidigbare DSGVO-Position ist.</strong>',
-          'Die Qwen-Modellgewichte (Qwen 2.5, Qwen 3) werden unter Apache 2.0 veröffentlicht. Das bedeutet, Sie können sie herunterladen, prüfen und dauerhaft auf Ihrem eigenen Server betreiben — die Lizenz kann nicht widerrufen werden. Artikel 25 (Datenschutz durch Technikgestaltung) ist erfüllt, weil Sie nachweisen können, dass sensible Daten niemals extern übertragen werden.',
+          'Die Qwen-Modellgewichte (Qwen 3, Qwen 3) werden unter Apache 2.0 veröffentlicht. Das bedeutet, Sie können sie herunterladen, prüfen und dauerhaft auf Ihrem eigenen Server betreiben — die Lizenz kann nicht widerrufen werden. Artikel 25 (Datenschutz durch Technikgestaltung) ist erfüllt, weil Sie nachweisen können, dass sensible Daten niemals extern übertragen werden.',
           'Betreiben Sie Qwen lokal via Ollama: <code>ollama run qwen2.5:14b</code> für ein allgemeines 14B-Modell oder <code>ollama run qwen3:8b</code> für die aktuelle Qwen-3-Generation. Beide benötigen 10–12 GB VRAM bei Q4_K_M. Eine Standard-RTX-3080 oder RTX-4070 ist ausreichend.',
         ],
         snippetBlocks: [
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Welches Qwen-Modell ist am besten für DSGVO-sensible Workflows?',
-            a: 'Für 12 GB VRAM: Qwen 2.5 14B bei Q4_K_M (allgemeine Aufgaben) oder Qwen 2.5 Coder 14B (code-intensive Workflows). Für 6–8 GB VRAM: Qwen 3 8B bei Q4_K_M. Beide laufen vollständig offline via Ollama. Vollständige Einrichtungsschritte finden Sie im <a href="/de/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">vollständigen DSGVO-Qwen-Einrichtungsleitfaden</a>.',
+            a: 'Für 12 GB VRAM: Qwen 3 14B bei Q4_K_M (allgemeine Aufgaben) oder Qwen 3 Coder 14B (code-intensive Workflows). Für 6–8 GB VRAM: Qwen 3 8B bei Q4_K_M. Beide laufen vollständig offline via Ollama. Vollständige Einrichtungsschritte finden Sie im <a href="/de/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">vollständigen DSGVO-Qwen-Einrichtungsleitfaden</a>.',
           },
           {
             q: 'Benötige ich einen Auftragsverarbeitungsvertrag mit Ollama?',
@@ -191,7 +191,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Qwen local : pas de transfert = pas de problème Article 44 RGPD',
           'API Qwen (Alibaba Cloud) : CCT + EIT requis selon les règles post-Schrems II',
-          'Recommandé : Qwen 2.5 14B ou Qwen 3 8B en local via Ollama pour les tâches sensibles',
+          'Recommandé : Qwen 3 14B ou Qwen 3 8B en local via Ollama pour les tâches sensibles',
         ],
         updatedDate: '2026-05',
       },
@@ -211,7 +211,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Qwen local est conforme au RGPD — l\'architecture en est la raison',
         content: [
           '<strong>L\'Article 44 du RGPD interdit le transfert de données personnelles vers un pays hors UE sans base légale adéquate. Lorsque vous exécutez Qwen localement, aucun transfert de données n\'a lieu — le modèle traite tout sur votre matériel, dans votre juridiction. C\'est pourquoi le déploiement local est la position RGPD la plus défendable.</strong>',
-          'Les poids des modèles Qwen (Qwen 2.5, Qwen 3) sont publiés sous Apache 2.0. Cela signifie que vous pouvez les télécharger, les inspecter et les exécuter sur votre propre serveur de façon permanente — la licence ne peut pas être révoquée. L\'Article 25 (protection des données dès la conception) est satisfait car vous pouvez démontrer que les données sensibles ne sont jamais transmises en externe.',
+          'Les poids des modèles Qwen (Qwen 3, Qwen 3) sont publiés sous Apache 2.0. Cela signifie que vous pouvez les télécharger, les inspecter et les exécuter sur votre propre serveur de façon permanente — la licence ne peut pas être révoquée. L\'Article 25 (protection des données dès la conception) est satisfait car vous pouvez démontrer que les données sensibles ne sont jamais transmises en externe.',
           'Exécutez Qwen localement via Ollama : <code>ollama run qwen2.5:14b</code> pour un modèle 14B généraliste, ou <code>ollama run qwen3:8b</code> pour la génération Qwen 3 actuelle. Les deux nécessitent 10–12 Go de VRAM en Q4_K_M. Une RTX 3080 ou RTX 4070 standard suffit.',
         ],
         snippetBlocks: [
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quel modèle Qwen est le mieux adapté aux flux de travail sensibles sous RGPD ?',
-            a: 'Pour 12 Go de VRAM : Qwen 2.5 14B en Q4_K_M (tâches générales) ou Qwen 2.5 Coder 14B (flux de travail code-intensifs). Pour 6–8 Go de VRAM : Qwen 3 8B en Q4_K_M. Les deux fonctionnent entièrement hors ligne via Ollama. Consultez le <a href="/fr/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">guide complet de configuration Qwen pour le RGPD</a>.',
+            a: 'Pour 12 Go de VRAM : Qwen 3 14B en Q4_K_M (tâches générales) ou Qwen 3 Coder 14B (flux de travail code-intensifs). Pour 6–8 Go de VRAM : Qwen 3 8B en Q4_K_M. Les deux fonctionnent entièrement hors ligne via Ollama. Consultez le <a href="/fr/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">guide complet de configuration Qwen pour le RGPD</a>.',
           },
           {
             q: 'Ai-je besoin d\'un accord de traitement des données avec Ollama ?',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'ローカルQwen：データ転送なし = GDPR第44条問題なし',
           'Qwen API（Alibaba Cloud）：Post-Schrems II規則でSCC + TIA必要',
-          '推奨：Ollama経由Qwen 2.5 14BまたはQwen 3 8Bをローカル実行（データ機密タスク）',
+          '推奨：Ollama経由Qwen 3 14BまたはQwen 3 8Bをローカル実行（データ機密タスク）',
         ],
         updatedDate: '2026-05',
       },
@@ -292,7 +292,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'ローカルQwenはGDPR準拠——アーキテクチャがその理由',
         content: [
           '<strong>GDPR第44条はEU外の国への個人データ転送を適切な法的根拠なしに禁じています。Qwenをローカル実行する場合、データ転送は発生しません——モデルはお客様の管轄内のハードウェアで全処理を行います。これがローカル展開が最も防御しやすいGDPRポジションである理由です。</strong>',
-          'Qwenモデル重み（Qwen 2.5、Qwen 3）はApache 2.0で公開されています。ダウンロード、検査、自社サーバーでの永続的な運用が可能で、ライセンスは取り消せません。機密データが外部転送されないことを証明できるため、第25条（プライバシーバイデザイン）を満たします。',
+          'Qwenモデル重み（Qwen 3、Qwen 3）はApache 2.0で公開されています。ダウンロード、検査、自社サーバーでの永続的な運用が可能で、ライセンスは取り消せません。機密データが外部転送されないことを証明できるため、第25条（プライバシーバイデザイン）を満たします。',
           'OllamaでQwenをローカル実行：汎用14Bモデルは<code>ollama run qwen2.5:14b</code>、最新Qwen 3世代は<code>ollama run qwen3:8b</code>。Q4_K_Mでどちらも10〜12 GB VRAMが必要。標準的なRTX 3080またはRTX 4070で十分です。',
         ],
         snippetBlocks: [
@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'GDPRに配慮したワークフローに最適なQwenモデルは？',
-            a: '12 GB VRAM：Qwen 2.5 14B（Q4_K_M、汎用タスク）またはQwen 2.5 Coder 14B（コード重視）。6〜8 GB VRAM：Qwen 3 8B（Q4_K_M）。どちらもOllama経由で完全オフライン動作。詳細なセットアップ手順は<a href="/ja/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">Qwen GDPRセットアップガイド</a>を参照してください。',
+            a: '12 GB VRAM：Qwen 3 14B（Q4_K_M、汎用タスク）またはQwen 3 Coder 14B（コード重視）。6〜8 GB VRAM：Qwen 3 8B（Q4_K_M）。どちらもOllama経由で完全オフライン動作。詳細なセットアップ手順は<a href="/ja/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">Qwen GDPRセットアップガイド</a>を参照してください。',
           },
           {
             q: 'OllamaとのデータProcessing Agreementは必要ですか？',
@@ -353,7 +353,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '本地Qwen：无数据传输 = 无GDPR第44条问题',
           'Qwen API（阿里云）：Post-Schrems II规则下需要SCCs + TIA',
-          '推荐：Ollama本地运行Qwen 2.5 14B或Qwen 3 8B处理敏感数据任务',
+          '推荐：Ollama本地运行Qwen 3 14B或Qwen 3 8B处理敏感数据任务',
         ],
         updatedDate: '2026-05',
       },
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '本地Qwen符合GDPR——原因在于架构',
         content: [
           '<strong>GDPR第44条禁止在没有充分法律依据的情况下将个人数据转移到欧盟以外的国家。在本地运行Qwen时，不会发生任何数据传输——模型在您的硬件上、在您的管辖范围内处理所有内容。这就是为什么本地部署是最站得住脚的GDPR合规立场。</strong>',
-          'Qwen模型权重（Qwen 2.5、Qwen 3）以Apache 2.0发布。这意味着您可以下载、检查并在自己的服务器上永久运行它们——许可证不可撤销。由于您可以证明敏感数据从未外部传输，第25条（隐私设计）得以满足。',
+          'Qwen模型权重（Qwen 3、Qwen 3）以Apache 2.0发布。这意味着您可以下载、检查并在自己的服务器上永久运行它们——许可证不可撤销。由于您可以证明敏感数据从未外部传输，第25条（隐私设计）得以满足。',
           '通过Ollama本地运行Qwen：通用14B模型使用<code>ollama run qwen2.5:14b</code>，当前Qwen 3代使用<code>ollama run qwen3:8b</code>。两者在Q4_K_M下均需10-12 GB VRAM。标准RTX 3080或RTX 4070即可满足要求。',
         ],
         snippetBlocks: [
@@ -409,7 +409,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '哪种Qwen模型最适合GDPR敏感工作流程？',
-            a: '12 GB VRAM：Qwen 2.5 14B（Q4_K_M，通用任务）或Qwen 2.5 Coder 14B（代码密集型工作流）。6-8 GB VRAM：Qwen 3 8B（Q4_K_M）。两者均通过Ollama完全离线运行。完整设置步骤请参阅<a href="/zh/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">Qwen GDPR完整设置指南</a>。',
+            a: '12 GB VRAM：Qwen 3 14B（Q4_K_M，通用任务）或Qwen 3 Coder 14B（代码密集型工作流）。6-8 GB VRAM：Qwen 3 8B（Q4_K_M）。两者均通过Ollama完全离线运行。完整设置步骤请参阅<a href="/zh/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">Qwen GDPR完整设置指南</a>。',
           },
           {
             q: '我需要与Ollama签署数据处理协议吗？',
@@ -434,7 +434,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Qwen local: sin transferencia de datos = sin problema del Artículo 44 del RGPD',
           'API de Qwen (Alibaba Cloud): requiere CCT + EIT según las reglas post-Schrems II',
-          'Recomendado: Qwen 2.5 14B o Qwen 3 8B localmente via Ollama para tareas con datos sensibles',
+          'Recomendado: Qwen 3 14B o Qwen 3 8B localmente via Ollama para tareas con datos sensibles',
         ],
         updatedDate: '2026-05',
       },
@@ -454,7 +454,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Qwen local es compatible con el RGPD — la arquitectura es la razón',
         content: [
           '<strong>El Artículo 44 del RGPD prohíbe transferir datos personales a un país fuera de la UE sin una base legal adecuada. Cuando ejecutas Qwen localmente, no ocurre ninguna transferencia de datos: el modelo procesa todo en tu hardware, dentro de tu jurisdicción. Por eso el despliegue local es la posición más defendible frente al RGPD.</strong>',
-          'Los pesos del modelo Qwen (Qwen 2.5, Qwen 3) se publican bajo Apache 2.0. Esto significa que puedes descargarlos, inspeccionarlos y ejecutarlos en tu propio servidor de forma permanente; la licencia no puede revocarse. El Artículo 25 (privacidad desde el diseño) queda satisfecho porque puedes demostrar que los datos sensibles nunca se transmiten externamente.',
+          'Los pesos del modelo Qwen (Qwen 3, Qwen 3) se publican bajo Apache 2.0. Esto significa que puedes descargarlos, inspeccionarlos y ejecutarlos en tu propio servidor de forma permanente; la licencia no puede revocarse. El Artículo 25 (privacidad desde el diseño) queda satisfecho porque puedes demostrar que los datos sensibles nunca se transmiten externamente.',
           'Ejecuta Qwen localmente via Ollama: <code>ollama run qwen2.5:14b</code> para un modelo 14B de propósito general, o <code>ollama run qwen3:8b</code> para la generación actual de Qwen 3. Ambos necesitan 10–12 GB de VRAM en Q4_K_M. Una RTX 3080 o RTX 4070 estándar es suficiente.',
         ],
         snippetBlocks: [
@@ -490,7 +490,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué modelo de Qwen es el más adecuado para flujos de trabajo sensibles bajo el RGPD?',
-            a: 'Para 12 GB de VRAM: Qwen 2.5 14B en Q4_K_M (tareas generales) o Qwen 2.5 Coder 14B (flujos de trabajo intensivos en código). Para 6–8 GB de VRAM: Qwen 3 8B en Q4_K_M. Ambos funcionan completamente offline via Ollama. Consulta la <a href="/es/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">guía completa de configuración de Qwen para el RGPD</a> para los pasos de instalación con Ollama.',
+            a: 'Para 12 GB de VRAM: Qwen 3 14B en Q4_K_M (tareas generales) o Qwen 3 Coder 14B (flujos de trabajo intensivos en código). Para 6–8 GB de VRAM: Qwen 3 8B en Q4_K_M. Ambos funcionan completamente offline via Ollama. Consulta la <a href="/es/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">guía completa de configuración de Qwen para el RGPD</a> para los pasos de instalación con Ollama.',
           },
           {
             q: '¿Necesito un Acuerdo de Procesamiento de Datos con Ollama?',

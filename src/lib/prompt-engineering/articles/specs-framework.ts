@@ -159,7 +159,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
         { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       ],
@@ -168,7 +168,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsSPECS: {
         title: 'Was das SPECS-Framework ist',
         content: [
-          '**Das SPECS-Framework ist ein spezifikationsorientiertes Prompt-Muster, das jeden Prompt wie ein kleines Anforderungsdokument behandelt statt wie eine beiläufige Chat-Nachricht.** Es ist für Aufgaben gedacht, bei denen Genauigkeit, Struktur und Wiederholbarkeit wichtiger sind als offene Kreativität. SPECS funktioniert gut mit Modellen wie GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro und lokalen Modellen, weil es Mehrdeutigkeit aus Ihren Anweisungen entfernt.',
+          '**Das SPECS-Framework ist ein spezifikationsorientiertes Prompt-Muster, das jeden Prompt wie ein kleines Anforderungsdokument behandelt statt wie eine beiläufige Chat-Nachricht.** Es ist für Aufgaben gedacht, bei denen Genauigkeit, Struktur und Wiederholbarkeit wichtiger sind als offene Kreativität. SPECS funktioniert gut mit Modellen wie GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro und lokalen Modellen, weil es Mehrdeutigkeit aus Ihren Anweisungen entfernt.',
           'SPECS ist besonders nützlich, wenn verschiedene Personen oder Systeme denselben Prompt ausführen und konsistente Ergebnisse erhalten müssen. Indem Sie den Prompt in eine klare Spezifikation verwandeln, erleichtern Sie das Debuggen von Problemen, den Vergleich des Modellverhaltens und die Durchsetzung von Standards in Ihren Workflows.',
         ],
       },
@@ -284,7 +284,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
         { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       ],
@@ -293,7 +293,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsSPECS: {
         title: 'Qué es el Framework SPECS',
         content: [
-          '**El Framework SPECS es un patrón de prompts orientado a la especificación que trata cada prompt como un mini documento de requisitos en lugar de un mensaje de chat informal.** Está diseñado para tareas donde la precisión, la estructura y la repetibilidad importan más que la creatividad abierta. SPECS funciona bien con modelos como GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales, porque elimina la ambigüedad de tus instrucciones.',
+          '**El Framework SPECS es un patrón de prompts orientado a la especificación que trata cada prompt como un mini documento de requisitos en lugar de un mensaje de chat informal.** Está diseñado para tareas donde la precisión, la estructura y la repetibilidad importan más que la creatividad abierta. SPECS funciona bien con modelos como GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales, porque elimina la ambigüedad de tus instrucciones.',
           'SPECS es especialmente útil cuando distintas personas o sistemas deben ejecutar el mismo prompt y obtener resultados consistentes. Al convertir el prompt en una especificación clara, facilitas la depuración de problemas, la comparación del comportamiento de los modelos y el cumplimiento de estándares en tus flujos de trabajo.',
         ],
       },

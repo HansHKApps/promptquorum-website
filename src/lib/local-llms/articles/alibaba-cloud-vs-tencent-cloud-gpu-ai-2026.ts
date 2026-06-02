@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Qwen3 72B',
       'DeepSeek-V3',
-      'Qwen2.5-Coder 32B',
+      'Qwen3-Coder 32B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Qwen3 72B',
       'DeepSeek-V3',
-      'Qwen2.5-Coder 32B',
+      'Qwen3-Coder 32B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [

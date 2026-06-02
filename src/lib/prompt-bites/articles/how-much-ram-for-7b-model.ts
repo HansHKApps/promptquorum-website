@@ -467,4 +467,80 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Quantization & VRAM',
+    title: 'Quanta RAM um modelo 7B precisa?',
+    seoTitle: 'RAM para modelos 7B locais 2026 | PromptQuorum',
+    metaDescription: 'Um modelo 7B em Q4 precisa de 5–6 GB de RAM ou VRAM. CPU dá ~5 tok/s; GPU dá ~25 tok/s com a mesma memória. Regra: params × 0,7 = GB em Q4. PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Quanta RAM um modelo 7B precisa?',
+        answer: 'Um modelo 7B em quantização Q4 precisa de 5–6 GB de VRAM ou RAM para um desempenho de inferência eficiente. Regra: parâmetros do modelo em bilhões × 0,7 = GB aproximados em Q4. GPU oferece ~25 tok/s; CPU oferece ~5 tok/s com a mesma memória.',
+        bullets: [
+          '7B Q4: 5–6 GB de VRAM ou memória unificada',
+          '7B Q5: 6–7 GB de VRAM',
+          '7B Q8: 8–9 GB de VRAM',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Um modelo 7B em Q4 precisa de 5–6 GB de VRAM — reserve 6 GB para incluir a sobrecarga da janela de contexto',
+          'Regra rápida: número de parâmetros em bilhões × 0,7 = GB aproximados necessários em Q4',
+          'Expandir a janela de contexto para 16K tokens adiciona ~4 GB além do peso do modelo',
+        ],
+      },
+      body1: {
+        title: 'A regra rápida para CPU e GPU',
+        content: [
+          'Em maio de 2026, <strong>um modelo 7B em Q4 precisa de 5–6 GB de memória — seja RAM do sistema (inferência somente CPU) ou VRAM (inferência GPU).</strong> A quantidade é a mesma; o que muda é a velocidade. A inferência em CPU funciona a ~5 tokens por segundo em um processador moderno de 8 núcleos. A inferência em GPU funciona a 20–25 tokens por segundo em uma placa com VRAM adequada.',
+          'No modo somente CPU, divida a coluna de velocidade da GPU por 5× para uma estimativa de processador de 8 núcleos. Um modelo 7B em Q4 funciona a ~5 tok/s na CPU, ~25 na GPU. Essa diferença de 5× é a razão pela qual uma GPU de entrada vale a pena comprar para uso interativo.',
+        ],
+        columns: ['Tamanho do modelo', 'Memória Q4', 'Velocidade GPU'],
+        rows: [
+          { 'Tamanho do modelo': '3B', 'Memória Q4': '~2 GB', 'Velocidade GPU': '~40 tok/s' },
+          { 'Tamanho do modelo': '7B', 'Memória Q4': '~5 GB', 'Velocidade GPU': '~25 tok/s' },
+          { 'Tamanho do modelo': '8B', 'Memória Q4': '~5,5 GB', 'Velocidade GPU': '~22 tok/s' },
+          { 'Tamanho do modelo': '13B', 'Memória Q4': '~9 GB', 'Velocidade GPU': '~15 tok/s' },
+        ],
+      },
+      body2: {
+        title: 'Quando escolher CPU vs GPU',
+        content: [
+          'Escolha somente CPU quando tiver 16+ GB de RAM do sistema e suas tarefas forem em lote ou em segundo plano (análise de documentos noturna, resumos programados). A taxa de ~5 tok/s é aceitável para trabalho não interativo e evita completamente os custos de GPU.',
+          'Escolha GPU quando precisar de chat ou codificação interativos. A diferença de velocidade de 5× importa no uso em tempo real. Até uma RTX 3050 de entrada com 6 GB oferece ~22 tok/s em Llama 3 8B Q4_K_M — rápido o suficiente para um chat que parece instantâneo.',
+          'Para o detalhamento completo de VRAM por nível de GPU, veja <a href="/pt/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">quanta VRAM um LLM local precisa</a>. Para a referência de hardware completa, veja o <a href="/pt/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">guia completo de VRAM para LLMs locais</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre a RAM de modelos 7B',
+        faqs: [
+          {
+            q: '8 GB de RAM do sistema são suficientes para executar um modelo 7B sem GPU?',
+            a: 'Sim. No modo somente CPU, um modelo 7B em Q4 usa ~5–6 GB de RAM do sistema e funciona a 3–6 tok/s em um processador moderno de 8 núcleos. Veja <a href="/pt/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">o guia de VRAM</a> para opções com aceleração GPU.',
+          },
+          {
+            q: 'Quanta VRAM o Llama 3 8B precisa exatamente?',
+            a: '~5,5 GB em Q4_K_M para os pesos do modelo. Adicione 0,5–1 GB para uma janela de contexto de 4096 tokens. Reserve 6–7 GB no total para evitar estouro de VRAM.',
+          },
+          {
+            q: 'O que acontece quando um modelo excede a VRAM disponível?',
+            a: 'O Ollama descarrega camadas para a RAM do sistema, que é 10–20× mais lenta. O modelo continua funcionando, mas a velocidade de geração cai significativamente. Para evitar isso, reduza a quantização ou o contexto com <code>--num-ctx 2048</code>.',
+          },
+          {
+            q: 'A inferência em GPU é sempre melhor que em CPU?',
+            a: 'Não para todos os casos de uso. Para tarefas em lote, processamento programado ou uso não interativo, ~5 tok/s na CPU é aceitável e evita custos de GPU. Para chat ou codificação em tempo real, os 20–25 tok/s da GPU são essenciais.',
+          },
+        ],
+      },
+    },
+  },
 }

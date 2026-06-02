@@ -583,7 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Sie wollen Chat mit strikten Datenschutzgarantien und minimalem Funktionsumfang → Local GPT',
           ],
           cloudIf: [
-            'Sie benötigen GPT-4o-Qualität bei jeder Chat-Antwort → Cloud-Äquivalente (der lokale Stack erreicht ca. 70 % der Leistung)',
+            'Sie benötigen GPT-5.5-Qualität bei jeder Chat-Antwort → Cloud-Äquivalente (der lokale Stack erreicht ca. 70 % der Leistung)',
             'Ihr Vault liegt auf einem verwalteten Cloud-Dienst, der lokale Netzwerkaufrufe blockiert → Cloud-Plugin',
             'Sie wollen eine iOS-native KI-Funktion in Obsidian Mobile ohne LAN-Zugriff → 2026 noch nicht praktikabel (Mobile erreicht localhost-LLM nicht ohne Tailscale o. ä.)',
           ],
@@ -1030,7 +1030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Vous souhaitez un chat avec garanties de confidentialité strictes + fonctionnalités minimales → Local GPT',
           ],
           cloudIf: [
-            'Vous avez besoin de la qualité GPT-4o sur chaque réponse de chat → équivalents cloud (la pile locale atteint ~70 % de capacité)',
+            'Vous avez besoin de la qualité GPT-5.5 sur chaque réponse de chat → équivalents cloud (la pile locale atteint ~70 % de capacité)',
             'Votre vault est sur un service cloud géré qui bloque les appels réseau locaux → plugin cloud',
             'Vous souhaitez une fonctionnalité IA native iOS à l\'intérieur de l\'application Obsidian Mobile sans accès LAN → pas encore pratique en 2026 (mobile ne peut pas atteindre LLM localhost sans Tailscale ou similaire)',
           ],
@@ -1477,7 +1477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '厳密なプライバシー保証と最小機能が必要 → Local GPT',
           ],
           cloudIf: [
-            'すべてのチャット応答でGPT-4oの品質が必要 → クラウドの同等品 (ローカルスタックは~70%の容量に達します)',
+            'すべてのチャット応答でGPT-5.5の品質が必要 → クラウドの同等品 (ローカルスタックは~70%の容量に達します)',
             'ボルトがローカルネットワーク呼び出しをブロックする管理クラウドサービス上にある → クラウドプラグイン',
             'Obsidian Mobileアプリ内のiOSネイティブAI機能がLANアクセスなしで必要 → 2026年ではまだ実用的ではありません (モバイルはTailscaleなしでlocal hosLLMに到達できません)',
           ],
@@ -1924,7 +1924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '您想要严格的隐私保障 + 最少功能的聊天 → Local GPT',
           ],
           cloudIf: [
-            '您需要每次聊天响应都有 GPT-4o 质量 → 云等效物（本地堆栈约 70% 有能力）',
+            '您需要每次聊天响应都有 GPT-5.5 质量 → 云等效物（本地堆栈约 70% 有能力）',
             '您的库在阻止本地网络调用的托管云服务上 → 云插件',
             '您想要 Obsidian Mobile 应用内的原生 iOS AI 功能而无需 LAN 访问 → 2026 年尚不可行（移动端无法在没有 Tailscale 等帮助下到达本地大模型）',
           ],
@@ -2371,7 +2371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Quieres chat con garantías estrictas de privacidad y funciones mínimas → Local GPT',
           ],
           cloudIf: [
-            'Necesitas calidad GPT-4o en cada respuesta de chat → equivalentes en la nube (la pila local alcanza ~70 % de capacidad)',
+            'Necesitas calidad GPT-5.5 en cada respuesta de chat → equivalentes en la nube (la pila local alcanza ~70 % de capacidad)',
             'Tu vault está en un servicio en la nube gestionado que bloquea las llamadas a la red local → plugin en la nube',
             'Quieres una función de IA nativa de iOS dentro de la app Obsidian Mobile sin acceso LAN → aún no es factible en 2026 (el móvil no puede llegar al LLM local sin Tailscale o similar)',
           ],

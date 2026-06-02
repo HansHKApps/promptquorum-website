@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Kann ich Continue.dev mit einem lokalen Ollama-Modell nutzen?',
-            a: 'Ja — das ist ein primärer Anwendungsfall. Ollama installieren, ein Coding-Modell wie Qwen 2.5 Coder ziehen und Continue.dev auf den lokalen Ollama-Endpunkt richten. Kein API-Schlüssel erforderlich.',
+            a: 'Ja — das ist ein primärer Anwendungsfall. Ollama installieren, ein Coding-Modell wie Qwen 3 Coder ziehen und Continue.dev auf den lokalen Ollama-Endpunkt richten. Kein API-Schlüssel erforderlich.',
           },
           {
             q: 'Was ist bei intensiver täglicher Nutzung günstiger?',
@@ -317,7 +317,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Puis-je utiliser Continue.dev avec un modèle Ollama local ?',
-            a: 'Oui — c\'est un cas d\'usage principal. Installez Ollama, téléchargez un modèle de code comme Qwen 2.5 Coder, et pointez Continue.dev vers le endpoint Ollama local. Aucune clé API requise.',
+            a: 'Oui — c\'est un cas d\'usage principal. Installez Ollama, téléchargez un modèle de code comme Qwen 3 Coder, et pointez Continue.dev vers le endpoint Ollama local. Aucune clé API requise.',
           },
           {
             q: 'Quel est le moins cher en usage intensif quotidien ?',
@@ -415,7 +415,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Continue.devをローカルOllamaモデルで使えますか？',
-            a: 'はい — 主要ユースケースです。Ollamaをインストールし、Qwen 2.5 Coderなどコーディングモデルをpullし、Continue.devをローカルOllamaエンドポイントに向けてください。APIキー不要。',
+            a: 'はい — 主要ユースケースです。Ollamaをインストールし、Qwen 3 Coderなどコーディングモデルをpullし、Continue.devをローカルOllamaエンドポイントに向けてください。APIキー不要。',
           },
           {
             q: '毎日の重い利用ではどちらが安いですか？',
@@ -513,7 +513,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '能用Continue.dev配本地Ollama模型吗？',
-            a: '可以 — 这是主要用例。安装Ollama，拉取如Qwen 2.5 Coder的编码模型，让Continue.dev指向本地Ollama端点。无需API密钥。',
+            a: '可以 — 这是主要用例。安装Ollama，拉取如Qwen 3 Coder的编码模型，让Continue.dev指向本地Ollama端点。无需API密钥。',
           },
           {
             q: '重度日常使用下哪个更便宜？',
@@ -643,7 +643,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Continue.dev funciona con Ollama?',
-            a: 'Sí — ese es el caso de uso principal. Instala Ollama, descarga un modelo de codificación como Qwen 2.5 Coder, y apunta Continue.dev al endpoint local de Ollama. Sin necesidad de claves de API.',
+            a: 'Sí — ese es el caso de uso principal. Instala Ollama, descarga un modelo de codificación como Qwen 3 Coder, y apunta Continue.dev al endpoint local de Ollama. Sin necesidad de claves de API.',
           },
           {
             q: '¿Cuál es más barato en uso diario intenso?',

@@ -92,12 +92,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           items: [
             '**Entry-level — 7B models — RTX 4060 Ti 8 GB (used, $220–260):** Runs Llama 3.3 8B, Mistral Small, Gemma 4 9B at 25–60 tok/s. Total build including PC: $700–900.',
-            '**Sweet spot — 13B–24B models — [RTX 5060 Ti 16 GB (new, $450–500)](/local-llms/best-budget-gpus-local-llm):** Runs Mistral Small 3.1 24B and Qwen2.5 14B at 20–40 tok/s. Total build: $900–1,200. Covers 85% of ChatGPT Plus use cases.',
+            '**Sweet spot — 13B–24B models — [RTX 5060 Ti 16 GB (new, $450–500)](/local-llms/best-budget-gpus-local-llm):** Runs Mistral Small 3.1 24B and Qwen3 14B at 20–40 tok/s. Total build: $900–1,200. Covers 85% of ChatGPT Plus use cases.',
             '**70B tier — GPT-5.2 class — three hardware options:**',
             '   Option A: RTX 4090 used (24 GB, ~$1,400) — runs Llama 3.3 70B at ~25 tok/s via CUDA',
             '   Option B: Mac mini M4 Pro 64 GB ($2,299) — runs Llama 3.3 70B at 10–15 tok/s via Metal',
             '   Option C: Framework Desktop 128 GB ($1,999) — runs Llama 3.3 70B at 20+ tok/s (AMD Ryzen AI Max 395+)',
-            '**Free models in April 2026:** Llama 3.3 70B (Meta), Llama 4 Scout 8B (Meta, March 2026), Qwen2.5 72B (Alibaba), Mistral Small 3.1 24B, Gemma 4 9B (Google, April 2026), Phi-4 Mini 3.8B (Microsoft)',
+            '**Free models in April 2026:** Llama 3.3 70B (Meta), Llama 4 Scout 8B (Meta, March 2026), Qwen3 72B (Alibaba), Mistral Small 3.1 24B, Gemma 4 9B (Google, April 2026), Phi-4 Mini 3.8B (Microsoft)',
           ],
         },
         'breakeven': {
@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': 'GPT-5.4 Pro', 'Type': 'Cloud (Pro $100+)', 'MMLU': '~92%', 'HumanEval': '~93%', 'Notes': 'Most capable; requires Pro $100/mo' },
             { 'Model': 'GPT-5.2 Thinking', 'Type': 'Cloud (Plus)', 'MMLU': '~89%', 'HumanEval': '~90%', 'Notes': 'Deep reasoning; 3,000/week in Plus' },
             { 'Model': 'GPT-5.2', 'Type': 'Cloud (Plus)', 'MMLU': '~87%', 'HumanEval': '~87%', 'Notes': 'Standard; 160 msg/3hr in Plus' },
-            { 'Model': 'Qwen2.5 72B', 'Type': 'Local', 'MMLU': '83%', 'HumanEval': '87%', 'Notes': 'Best for Chinese; strong coding' },
+            { 'Model': 'Qwen3 72B', 'Type': 'Local', 'MMLU': '83%', 'HumanEval': '87%', 'Notes': 'Best for Chinese; strong coding' },
             { 'Model': 'Llama 3.3 70B', 'Type': 'Local', 'MMLU': '80%', 'HumanEval': '88%', 'Notes': 'Best overall open model (Dec 2024)' },
             { 'Model': 'Llama 4 Scout 8B', 'Type': 'Local', 'MMLU': '78%', 'HumanEval': '79%', 'Notes': 'New March 2026; top 8B class' },
             { 'Model': 'Mistral Small 3.1 24B', 'Type': 'Local', 'MMLU': '73%', 'HumanEval': '75%', 'Notes': 'Best 24B; fits RTX 5060 Ti 16 GB' },
@@ -162,7 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**EU/UK:** ChatGPT Plus costs €20/£17 per month; electricity costs 2–3× US rates (€0.28–0.40/kWh), making local LLM economics slightly worse. However, GDPR compliance strongly favors local LLMs — all data stays on your machine with no cross-border transfer liability under Article 44.',
             '**Germany/DACH:** BSI-Grundschutz requirements for sensitive data processing make local LLMs the compliant choice for healthcare and legal workflows. Local setups eliminate the need for EU Standard Contractual Clauses.',
             '**Japan:** APPI (Act on Protection of Personal Information) requirements favor local inference for sensitive business data. Japanese electricity rates (~¥27/kWh, ≈$0.18/kWh) add ~20% to local power costs vs US.',
-            '**China:** ChatGPT Plus is not available directly in mainland China. Local open-source models (Qwen2.5, Llama 3.3) running locally comply with the 2021 Data Security Law without CAC registration requirements.',
+            '**China:** ChatGPT Plus is not available directly in mainland China. Local open-source models (Qwen3, Llama 3.3) running locally comply with the 2021 Data Security Law without CAC registration requirements.',
           ],
         },
         'faqSection': {
@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Which local LLM matches GPT-5.2 quality in 2026?',
-              a: 'None fully. Llama 3.3 70B is closest at ~82% of GPT-5.2 on MMLU — the smallest gap in history. Qwen2.5 72B is similar. For coding specifically, Qwen2.5-Coder 32B achieves 92.7% HumanEval, matching GPT-5.2. The gap narrows annually, but GPT-5.4 Pro remains ahead for multi-step reasoning.',
+              a: 'None fully. Llama 3.3 70B is closest at ~82% of GPT-5.2 on MMLU — the smallest gap in history. Qwen3 72B is similar. For coding specifically, Qwen3-Coder 32B achieves 92.7% HumanEval, matching GPT-5.2. The gap narrows annually, but GPT-5.4 Pro remains ahead for multi-step reasoning.',
             },
             {
               q: 'What is the breakeven for a local 70B setup vs ChatGPT Plus?',
@@ -190,8 +190,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               a: 'No. Ads are on Free and Go tiers only (introduced February 2026, US market first). ChatGPT Plus, Pro $100, Pro $200, Business, and Enterprise are all ad-free. OpenAI has stated ads will not be introduced on paid tiers.',
             },
             {
-              q: 'Which is better for coding: ChatGPT Plus or local Qwen2.5-Coder?',
-              a: 'For general coding: close call. Qwen2.5-Coder 32B achieves 92.7% HumanEval locally, matching GPT-5.2. For autonomous coding agents and Codex integration, ChatGPT Plus has better tooling. For privacy-sensitive codebases or offline work, Qwen2.5-Coder 32B local is the right choice.',
+              q: 'Which is better for coding: ChatGPT Plus or local Qwen3-Coder?',
+              a: 'For general coding: close call. Qwen3-Coder 32B achieves 92.7% HumanEval locally, matching GPT-5.2. For autonomous coding agents and Codex integration, ChatGPT Plus has better tooling. For privacy-sensitive codebases or offline work, Qwen3-Coder 32B local is the right choice.',
             },
             {
               q: 'Can I cancel ChatGPT Plus anytime?',
@@ -264,10 +264,10 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'Is ChatGPT Plus worth $20/month compared to local LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For light users (under 5 hrs/week), yes — $20/month Plus is easier than buying a $450 GPU. For regular professional use (10+ hrs/week), local Llama 3.3 70B on RTX 5060 Ti breaks even in ~14 months and then costs only electricity (~$30/year). Plus stays ahead on novel reasoning via GPT-5.2 Thinking.' } },
           { '@type': 'Question', 'name': 'What is the new ChatGPT Pro $100 tier launched April 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OpenAI launched Pro $100 on April 9, 2026, bridging the gap between Plus ($20) and Pro ($200). Pro $100 includes 5× Plus usage limits, GPT-5.4 Pro model access, and o1 Pro mode for deeper reasoning. It targets power users who hit Plus rate limits (160 msg/3hr) but do not need the full Pro $200 tier.' } },
-          { '@type': 'Question', 'name': 'Which local LLM matches GPT-5.2 quality in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'None fully. Llama 3.3 70B is closest at ~82% of GPT-5.2 on MMLU — the smallest gap in history. Qwen2.5 72B is similar. For coding specifically, Qwen2.5-Coder 32B achieves 92.7% HumanEval, matching GPT-5.2. The gap narrows annually, but GPT-5.4 Pro remains ahead for multi-step reasoning.' } },
+          { '@type': 'Question', 'name': 'Which local LLM matches GPT-5.2 quality in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'None fully. Llama 3.3 70B is closest at ~82% of GPT-5.2 on MMLU — the smallest gap in history. Qwen3 72B is similar. For coding specifically, Qwen3-Coder 32B achieves 92.7% HumanEval, matching GPT-5.2. The gap narrows annually, but GPT-5.4 Pro remains ahead for multi-step reasoning.' } },
           { '@type': 'Question', 'name': 'What is the breakeven for a local 70B setup vs ChatGPT Plus?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Depends on hardware: RTX 4090 used ($1,400 + build) takes ~6 years to break even vs Plus. Mac mini M4 Pro 64 GB ($2,299) takes ~9 years. Framework Desktop 128 GB ($1,999) takes ~8 years. Local 70B is financially justified only if you also need privacy, no rate limits, offline capability, or multi-user access.' } },
           { '@type': 'Question', 'name': 'Does ChatGPT Plus have ads in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Ads are on Free and Go tiers only (introduced February 2026, US market first). ChatGPT Plus, Pro $100, Pro $200, Business, and Enterprise are all ad-free. OpenAI has stated ads will not be introduced on paid tiers.' } },
-          { '@type': 'Question', 'name': 'Which is better for coding: ChatGPT Plus or local Qwen2.5-Coder?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For general coding: close call. Qwen2.5-Coder 32B achieves 92.7% HumanEval locally, matching GPT-5.2. For autonomous coding agents and Codex integration, ChatGPT Plus has better tooling. For privacy-sensitive codebases or offline work, Qwen2.5-Coder 32B local is the right choice.' } },
+          { '@type': 'Question', 'name': 'Which is better for coding: ChatGPT Plus or local Qwen3-Coder?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For general coding: close call. Qwen3-Coder 32B achieves 92.7% HumanEval locally, matching GPT-5.2. For autonomous coding agents and Codex integration, ChatGPT Plus has better tooling. For privacy-sensitive codebases or offline work, Qwen3-Coder 32B local is the right choice.' } },
           { '@type': 'Question', 'name': 'Can I cancel ChatGPT Plus anytime?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Plus is monthly-only with no annual commitment as of April 2026. Cancel via Settings → Subscription in ChatGPT. Access continues through the end of the paid period. OpenAI does not offer refunds for partial months.' } },
           { '@type': 'Question', 'name': 'What is the electricity cost of running a local LLM in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5060 Ti at active inference: ~180 W. US average $0.14/kWh. Typical use (4 hrs/day active, rest idle): $30–40/year US. EU: 2–3× higher (~$90–120/year). Japan: ~$45/year. China: ~$25/year. 24/7 fully active would cost ~$220/year US — not a realistic usage pattern for most users.' } },
         ],
@@ -373,12 +373,12 @@ schema: {
           ],
           items: [
             '**Einsteiger-Level — 7B Modelle — RTX 4060 Ti 8 GB (gebraucht, 250–280€):** Führt Llama 3.3 8B, Mistral Small, Gemma 4 9B mit 25–60 Tokens/s aus. Gesamtkomplettrechner: 700–900€.',
-            '**Sweet Spot — 13B–24B Modelle — [RTX 5060 Ti 16 GB (neu, 450–500€)](/de/local-llms/best-budget-gpus-local-llm):** Führt Mistral Small 3.1 24B und Qwen2.5 14B mit 20–40 Tokens/s aus. Gesamtrechner: 900–1.200€. Deckt 85 % der ChatGPT Plus-Anwendungsfälle ab.',
+            '**Sweet Spot — 13B–24B Modelle — [RTX 5060 Ti 16 GB (neu, 450–500€)](/de/local-llms/best-budget-gpus-local-llm):** Führt Mistral Small 3.1 24B und Qwen3 14B mit 20–40 Tokens/s aus. Gesamtrechner: 900–1.200€. Deckt 85 % der ChatGPT Plus-Anwendungsfälle ab.',
             '**70B-Tier — GPT-5.2-Klasse — drei Hardware-Optionen:**',
             '   Option A: RTX 4090 gebraucht (24 GB, ~1.999€) — führt Llama 3.3 70B mit ~25 Tokens/s über CUDA aus',
             '   Option B: Mac mini M4 Pro 64 GB (~2.499€) — führt Llama 3.3 70B mit 10–15 Tokens/s über Metal aus',
             '   Option C: Framework Desktop 128 GB (~2.199€) — führt Llama 3.3 70B mit 20+ Tokens/s aus (AMD Ryzen AI Max 395+)',
-            '**Kostenlose Modelle im April 2026:** Llama 3.3 70B (Meta), Llama 4 Scout 8B (Meta, März 2026), Qwen2.5 72B (Alibaba), Mistral Small 3.1 24B, Gemma 4 9B (Google, April 2026), Phi-4 Mini 3.8B (Microsoft)',
+            '**Kostenlose Modelle im April 2026:** Llama 3.3 70B (Meta), Llama 4 Scout 8B (Meta, März 2026), Qwen3 72B (Alibaba), Mistral Small 3.1 24B, Gemma 4 9B (Google, April 2026), Phi-4 Mini 3.8B (Microsoft)',
           ],
         },
         'breakeven': {
@@ -428,7 +428,7 @@ schema: {
             { 'Modell': 'GPT-5.4 Pro', 'Typ': 'Cloud (Pro €100+)', 'MMLU': '~92 %', 'HumanEval': '~93 %', 'Hinweise': 'Am fähigsten; erfordert Pro €100/Monat' },
             { 'Modell': 'GPT-5.2 Thinking', 'Typ': 'Cloud (Plus)', 'MMLU': '~89 %', 'HumanEval': '~90 %', 'Hinweise': 'Tieferes Denken; 3.000/Woche in Plus' },
             { 'Modell': 'GPT-5.2', 'Typ': 'Cloud (Plus)', 'MMLU': '~87 %', 'HumanEval': '~87 %', 'Hinweise': 'Standard; 160 Nachr./3h in Plus' },
-            { 'Modell': 'Qwen2.5 72B', 'Typ': 'Lokal', 'MMLU': '83 %', 'HumanEval': '87 %', 'Hinweise': 'Am besten für Chinesisch; starkes Programmieren' },
+            { 'Modell': 'Qwen3 72B', 'Typ': 'Lokal', 'MMLU': '83 %', 'HumanEval': '87 %', 'Hinweise': 'Am besten für Chinesisch; starkes Programmieren' },
             { 'Modell': 'Llama 3.3 70B', 'Typ': 'Lokal', 'MMLU': '80 %', 'HumanEval': '88 %', 'Hinweise': 'Bestes Open-Source-Modell (Dezember 2024)' },
             { 'Modell': 'Llama 4 Scout 8B', 'Typ': 'Lokal', 'MMLU': '78 %', 'HumanEval': '79 %', 'Hinweise': 'Neu März 2026; Top 8B-Klasse' },
             { 'Modell': 'Mistral Small 3.1 24B', 'Typ': 'Lokal', 'MMLU': '73 %', 'HumanEval': '75 %', 'Hinweise': 'Bestes 24B; passt auf RTX 5060 Ti 16 GB' },
@@ -443,7 +443,7 @@ schema: {
             '**EU/UK:** ChatGPT Plus kostet 20€/£17 pro Monat; Stromkosten 2–3× US-Raten (0,28–0,40€/kWh), machen Lokale-LLM-Ökonomie leicht ungünstiger. Allerdings bevorzugt DSGVO-Compliance stark lokale LLMs — alle Daten bleiben auf Ihrer Maschine ohne Haftung für grenzüberschreitende Übertragungen nach Artikel 44.',
             '**Deutschland/DACH:** BSI-Grundschutz-Anforderungen für sensible Datenverarbeitung machen lokale LLMs zur compliant-Wahl für Gesundheits- und Rechts-Workflows. Lokale Setups eliminieren die Notwendigkeit von EU-Standardvertragsklauseln. **DSGVO-Artikel 28**: Bei der Verwendung von Cloud-KI-Systemen wie ChatGPT Plus müssen Unternehmen EU-Standardvertragsklauseln einhalten und eine Datenschutz-Folgenabschätzung durchführen. Lokale Inference-Lösungen erfüllen diese Anforderungen automatisch.',
             '**Japan:** APPI-Anforderungen (Act on Protection of Personal Information) bevorzugen lokale Inference für sensible Business-Daten. Japanische Stromraten (~0,18€/kWh) addieren ~20 % zu lokalen Stromkosten gegenüber den USA.',
-            '**China:** ChatGPT Plus ist in Festland-China nicht direkt verfügbar. Lokale Open-Source-Modelle (Qwen2.5, Llama 3.3), die lokal laufen, erfüllen das Datensicherheitsgesetz 2021 ohne CAC-Registrierungsanforderungen.',
+            '**China:** ChatGPT Plus ist in Festland-China nicht direkt verfügbar. Lokale Open-Source-Modelle (Qwen3, Llama 3.3), die lokal laufen, erfüllen das Datensicherheitsgesetz 2021 ohne CAC-Registrierungsanforderungen.',
           ],
         },
         'faqSection': {
@@ -460,7 +460,7 @@ schema: {
             },
             {
               q: 'Welches lokale LLM entspricht GPT-5.2-Qualität 2026?',
-              a: 'Keine vollständig. Llama 3.3 70B ist mit ~82 % von GPT-5.2 auf MMLU am nächsten — die kleinste Lücke in der Geschichte. Qwen2.5 72B ist ähnlich. Beim Programmieren speziell erreicht Qwen2.5-Coder 32B 92,7 % HumanEval, matched GPT-5.2. Die Lücke verengt sich jährlich, aber GPT-5.4 Pro bleibt bei mehrstufigem Denken vorne.',
+              a: 'Keine vollständig. Llama 3.3 70B ist mit ~82 % von GPT-5.2 auf MMLU am nächsten — die kleinste Lücke in der Geschichte. Qwen3 72B ist ähnlich. Beim Programmieren speziell erreicht Qwen3-Coder 32B 92,7 % HumanEval, matched GPT-5.2. Die Lücke verengt sich jährlich, aber GPT-5.4 Pro bleibt bei mehrstufigem Denken vorne.',
             },
             {
               q: 'Was ist der Amortisationspunkt für ein lokales 70B Setup gegenüber ChatGPT Plus?',
@@ -471,8 +471,8 @@ schema: {
               a: 'Nein. Werbung ist nur auf Free und Go-Stufen (eingeführt Februar 2026, US-Markt zuerst). ChatGPT Plus, Pro €100, Pro €200, Business und Enterprise sind alle werbefrei. OpenAI hat erklärt, dass Werbung nicht auf bezahlte Stufen eingeführt wird.',
             },
             {
-              q: 'Was ist besser für Programmierung: ChatGPT Plus oder lokales Qwen2.5-Coder?',
-              a: 'Bei allgemeinem Programmieren: ein enges Rennen. Qwen2.5-Coder 32B erreicht lokal 92,7 % HumanEval, matched GPT-5.2. Bei autonomen Programmier-Agenten und Codex-Integration hat ChatGPT Plus bessere Tools. Für datenschutz-sensible Codebases oder Offline-Arbeit ist lokales Qwen2.5-Coder 32B die richtige Wahl.',
+              q: 'Was ist besser für Programmierung: ChatGPT Plus oder lokales Qwen3-Coder?',
+              a: 'Bei allgemeinem Programmieren: ein enges Rennen. Qwen3-Coder 32B erreicht lokal 92,7 % HumanEval, matched GPT-5.2. Bei autonomen Programmier-Agenten und Codex-Integration hat ChatGPT Plus bessere Tools. Für datenschutz-sensible Codebases oder Offline-Arbeit ist lokales Qwen3-Coder 32B die richtige Wahl.',
             },
             {
               q: 'Kann ich ChatGPT Plus jederzeit kündigen?',
@@ -552,10 +552,10 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'Lohnt sich ChatGPT Plus für 20€/Monat gegenüber lokalen LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für Leichtnutzer (unter 5 Std./Woche): ja — 20€/Monat Plus ist einfacher als ein 450€ GPU zu kaufen. Für regelmäßige Profi-Nutzung (10+ Std./Woche) amortisiert sich lokales Llama 3.3 70B auf RTX 5060 Ti in ~14 Monaten und kostet dann nur noch Strom (~30€/Jahr). Plus bleibt vorne durch neuartiges Denken via GPT-5.2 Thinking.' } },
           { '@type': 'Question', 'name': 'Was ist die neue ChatGPT Pro €100-Stufe vom April 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OpenAI startete Pro €100 am 9. April 2026, schließt die Lücke zwischen Plus (20€) und Pro (200€). Pro €100 beinhaltet 5× Plus-Nutzungslimits, GPT-5.4 Pro Modell-Zugriff und o1 Pro-Modus für tieferes Denken. Es zielt auf Powernutzer, die Plus-Ratenbegrenzungen (160 Nachr./3h) treffen, aber nicht die volle Pro €200-Stufe benötigen.' } },
-          { '@type': 'Question', 'name': 'Welches lokale LLM entspricht GPT-5.2-Qualität 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Keine vollständig. Llama 3.3 70B ist mit ~82 % von GPT-5.2 auf MMLU am nächsten — die kleinste Lücke in der Geschichte. Qwen2.5 72B ist ähnlich. Beim Programmieren speziell erreicht Qwen2.5-Coder 32B 92,7 % HumanEval, matched GPT-5.2. Die Lücke verengt sich jährlich, aber GPT-5.4 Pro bleibt bei mehrstufigem Denken vorne.' } },
+          { '@type': 'Question', 'name': 'Welches lokale LLM entspricht GPT-5.2-Qualität 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Keine vollständig. Llama 3.3 70B ist mit ~82 % von GPT-5.2 auf MMLU am nächsten — die kleinste Lücke in der Geschichte. Qwen3 72B ist ähnlich. Beim Programmieren speziell erreicht Qwen3-Coder 32B 92,7 % HumanEval, matched GPT-5.2. Die Lücke verengt sich jährlich, aber GPT-5.4 Pro bleibt bei mehrstufigem Denken vorne.' } },
           { '@type': 'Question', 'name': 'Was ist der Amortisationspunkt für ein lokales 70B Setup gegenüber ChatGPT Plus?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Hängt von Hardware ab: RTX 4090 gebraucht (~1.999€ + Build) amortisiert sich in ~6 Jahren gegenüber Plus. Mac mini M4 Pro 64 GB (~2.499€) in ~9 Jahren. Framework Desktop 128 GB (~2.199€) in ~8 Jahren. Lokal 70B ist finanziell nur gerechtfertigt, wenn Sie auch Datenschutz, null Ratenbegrenzungen, Offline-Fähigkeit oder Multi-User-Zugriff benötigen.' } },
           { '@type': 'Question', 'name': 'Hat ChatGPT Plus 2026 Werbung?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Werbung ist nur auf Free und Go-Stufen (eingeführt Februar 2026, US-Markt zuerst). ChatGPT Plus, Pro €100, Pro €200, Business und Enterprise sind alle werbefrei. OpenAI hat erklärt, dass Werbung nicht auf bezahlte Stufen eingeführt wird.' } },
-          { '@type': 'Question', 'name': 'Was ist besser für Programmierung: ChatGPT Plus oder lokales Qwen2.5-Coder?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bei allgemeinem Programmieren: ein enges Rennen. Qwen2.5-Coder 32B erreicht lokal 92,7 % HumanEval, matched GPT-5.2. Bei autonomen Programmier-Agenten und Codex-Integration hat ChatGPT Plus bessere Tools. Für datenschutz-sensible Codebases oder Offline-Arbeit ist lokales Qwen2.5-Coder 32B die richtige Wahl.' } },
+          { '@type': 'Question', 'name': 'Was ist besser für Programmierung: ChatGPT Plus oder lokales Qwen3-Coder?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bei allgemeinem Programmieren: ein enges Rennen. Qwen3-Coder 32B erreicht lokal 92,7 % HumanEval, matched GPT-5.2. Bei autonomen Programmier-Agenten und Codex-Integration hat ChatGPT Plus bessere Tools. Für datenschutz-sensible Codebases oder Offline-Arbeit ist lokales Qwen3-Coder 32B die richtige Wahl.' } },
           { '@type': 'Question', 'name': 'Kann ich ChatGPT Plus jederzeit kündigen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Plus ist seit April 2026 nur monatlich ohne Jahresverpflichtung. Kündigung via Einstellungen → Abonnement in ChatGPT. Zugriff bleibt bis Ende der bezahlten Periode. OpenAI bietet keine Rückerstattungen für Teilmonate.' } },
           { '@type': 'Question', 'name': 'Was sind die Stromkosten für ein lokales LLM 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5060 Ti bei aktiver Inference: ~180 W. US-Durchschnitt 0,14€/kWh. Typische Nutzung (4 Std./Tag aktiv, Rest Leerlauf): 30–40€/Jahr US. EU: 2–3× höher (~90–120€/Jahr). Japan: ~45€/Jahr. China: ~25€/Jahr. 24/7 vollständig aktiv würde ~220€/Jahr US kosten — kein realistisches Nutzungsmuster für die meisten Nutzer.' } },
           { '@type': 'Question', 'name': 'Muss ich bei der Nutzung lokaler LLMs die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, teilweise. Obwohl lokale LLMs auf Ihrem Computer laufen und DSGVO-Anforderungen zur Datenschutz-Folgenabschätzung und grenzüberschreitender Übertragung eliminieren, müssen Sie dennoch sicherstellen, dass die Trainingsdaten, die Sie zum Feinabstimmen des Modells verwenden, rechtmäßig verarbeitet werden (Rechtsgrundlage). Personenbezogene Daten dürfen nicht in Eingabeaufforderungen verwendet werden, es sei denn, es liegt ein gültige Rechtsgrundlage vor. Für geschäftliche Nutzung in Deutschland ist ein Datenschutzbeauftragter oder juristische Beratung empfohlen.' } },
@@ -663,12 +663,12 @@ schema: {
           ],
           items: [
             '**Niveau d\'entrée — modèles 7B — RTX 4060 Ti 8 GB (occasion, 250–280€) :** Exécute Llama 3.3 8B, Mistral Small, Gemma 4 9B à 25–60 tokens/s. Construction complète : 700–900€.',
-            '**Point optimal — modèles 13B–24B — [RTX 5060 Ti 16 GB (neuf, 450–500€)](/fr/local-llms/best-budget-gpus-local-llm) :** Exécute Mistral Small 3.1 24B et Qwen2.5 14B à 20–40 tokens/s. Construction complète : 900–1 200€. Couvre 85 % des cas d\'usage ChatGPT Plus.',
+            '**Point optimal — modèles 13B–24B — [RTX 5060 Ti 16 GB (neuf, 450–500€)](/fr/local-llms/best-budget-gpus-local-llm) :** Exécute Mistral Small 3.1 24B et Qwen3 14B à 20–40 tokens/s. Construction complète : 900–1 200€. Couvre 85 % des cas d\'usage ChatGPT Plus.',
             '**Niveau 70B — classe GPT-5.2 — trois options matérielles :**',
             '   Option A : RTX 4090 occasion (24 GB, ~1 999€) — exécute Llama 3.3 70B à ~25 tokens/s via CUDA',
             '   Option B : Mac mini M4 Pro 64 GB (~2 499€) — exécute Llama 3.3 70B à 10–15 tokens/s via Metal',
             '   Option C : Framework Desktop 128 GB (~2 199€) — exécute Llama 3.3 70B à 20+ tokens/s (AMD Ryzen AI Max 395+)',
-            '**Modèles gratuits en avril 2026 :** Llama 3.3 70B (Meta), Llama 4 Scout 8B (Meta, mars 2026), Qwen2.5 72B (Alibaba), Mistral Small 3.1 24B, Gemma 4 9B (Google, avril 2026), Phi-4 Mini 3.8B (Microsoft)',
+            '**Modèles gratuits en avril 2026 :** Llama 3.3 70B (Meta), Llama 4 Scout 8B (Meta, mars 2026), Qwen3 72B (Alibaba), Mistral Small 3.1 24B, Gemma 4 9B (Google, avril 2026), Phi-4 Mini 3.8B (Microsoft)',
           ],
         },
         'breakeven': {
@@ -718,7 +718,7 @@ schema: {
             { 'Modèle': 'GPT-5.4 Pro', 'Type': 'Cloud (Pro 100€+)', 'MMLU': '~92 %', 'HumanEval': '~93 %', 'Notes': 'Plus capable ; nécessite Pro 100€/mois' },
             { 'Modèle': 'GPT-5.2 Thinking', 'Type': 'Cloud (Plus)', 'MMLU': '~89 %', 'HumanEval': '~90 %', 'Notes': 'Raisonnement profond ; 3 000/semaine dans Plus' },
             { 'Modèle': 'GPT-5.2', 'Type': 'Cloud (Plus)', 'MMLU': '~87 %', 'HumanEval': '~87 %', 'Notes': 'Standard ; 160 messages/3h dans Plus' },
-            { 'Modèle': 'Qwen2.5 72B', 'Type': 'Local', 'MMLU': '83 %', 'HumanEval': '87 %', 'Notes': 'Meilleur pour le chinois ; programmation solide' },
+            { 'Modèle': 'Qwen3 72B', 'Type': 'Local', 'MMLU': '83 %', 'HumanEval': '87 %', 'Notes': 'Meilleur pour le chinois ; programmation solide' },
             { 'Modèle': 'Llama 3.3 70B', 'Type': 'Local', 'MMLU': '80 %', 'HumanEval': '88 %', 'Notes': 'Meilleur modèle open global (décembre 2024)' },
             { 'Modèle': 'Llama 4 Scout 8B', 'Type': 'Local', 'MMLU': '78 %', 'HumanEval': '79 %', 'Notes': 'Nouveau mars 2026 ; classe 8B supérieure' },
             { 'Modèle': 'Mistral Small 3.1 24B', 'Type': 'Local', 'MMLU': '73 %', 'HumanEval': '75 %', 'Notes': 'Meilleur 24B ; tient sur RTX 5060 Ti 16 GB' },
@@ -733,7 +733,7 @@ schema: {
             '**UE/UK :** ChatGPT Plus coûte 20€/£17 par mois ; les coûts d\'électricité sont 2–3× les tarifs US (0,28–0,40€/kWh), rendant les économies LLM locales légèrement moins favorables. Cependant, la conformité RGPD favorise fortement les LLMs locaux — toutes les données restent sur votre machine sans responsabilité de transfert transfrontalier selon l\'article 44.',
             '**France :** La CNIL recommande l\'inférence locale pour les données professionnelles sensibles (données financières, médicales, juridiques) afin de garantir la conformité RGPD sans nécessité de contrats standard UE avec des prestataires cloud américains.',
             '**Japon :** Les exigences APPI (Loi sur la protection des informations personnelles) favorisent l\'inférence locale pour les données commerciales sensibles. Les tarifs d\'électricité japonais (~0,18€/kWh) ajoutent ~20 % aux coûts d\'électricité locaux par rapport aux États-Unis.',
-            '**Chine :** ChatGPT Plus n\'est pas disponible directement en Chine continentale. Les modèles open-source locaux (Qwen2.5, Llama 3.3) fonctionnant localement respectent la Loi sur la sécurité des données 2021 sans exigences d\'enregistrement CAC.',
+            '**Chine :** ChatGPT Plus n\'est pas disponible directement en Chine continentale. Les modèles open-source locaux (Qwen3, Llama 3.3) fonctionnant localement respectent la Loi sur la sécurité des données 2021 sans exigences d\'enregistrement CAC.',
           ],
         },
         'faqSection': {
@@ -750,7 +750,7 @@ schema: {
             },
             {
               q: 'Quel LLM local correspond à la qualité GPT-5.2 en 2026 ?',
-              a: 'Aucun complètement. Llama 3.3 70B est le plus proche à ~82 % de GPT-5.2 sur MMLU — le plus petit écart de l\'histoire. Qwen2.5 72B est similaire. Pour la programmation spécifiquement, Qwen2.5-Coder 32B atteint 92.7 % HumanEval, s\'aligne avec GPT-5.2. L\'écart se rétrécit annuellement, mais GPT-5.4 Pro reste en tête pour le raisonnement multi-étapes.',
+              a: 'Aucun complètement. Llama 3.3 70B est le plus proche à ~82 % de GPT-5.2 sur MMLU — le plus petit écart de l\'histoire. Qwen3 72B est similaire. Pour la programmation spécifiquement, Qwen3-Coder 32B atteint 92.7 % HumanEval, s\'aligne avec GPT-5.2. L\'écart se rétrécit annuellement, mais GPT-5.4 Pro reste en tête pour le raisonnement multi-étapes.',
             },
             {
               q: 'Quel est le point de rentabilité pour une configuration locale 70B vs ChatGPT Plus ?',
@@ -761,8 +761,8 @@ schema: {
               a: 'Non. Les publicités ne sont que sur les niveaux Free et Go (introduites février 2026, marché US en premier). ChatGPT Plus, Pro 100€, Pro 200€, Business et Enterprise sont tous sans publicité. OpenAI a déclaré que les publicités ne seraient pas introduites sur les niveaux payants.',
             },
             {
-              q: 'Qui est meilleur pour la programmation : ChatGPT Plus ou Qwen2.5-Coder local ?',
-              a: 'Pour la programmation générale : match serré. Qwen2.5-Coder 32B local atteint 92.7 % HumanEval, s\'aligne avec GPT-5.2. Pour les agents de codage autonomes et l\'intégration Codex, ChatGPT Plus a de meilleurs outils. Pour les codebases sensibles à la confidentialité ou le travail hors ligne, Qwen2.5-Coder 32B local est le bon choix.',
+              q: 'Qui est meilleur pour la programmation : ChatGPT Plus ou Qwen3-Coder local ?',
+              a: 'Pour la programmation générale : match serré. Qwen3-Coder 32B local atteint 92.7 % HumanEval, s\'aligne avec GPT-5.2. Pour les agents de codage autonomes et l\'intégration Codex, ChatGPT Plus a de meilleurs outils. Pour les codebases sensibles à la confidentialité ou le travail hors ligne, Qwen3-Coder 32B local est le bon choix.',
             },
             {
               q: 'Puis-je annuler ChatGPT Plus à tout moment ?',
@@ -834,10 +834,10 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'ChatGPT Plus vaut-il 20€/mois par rapport aux LLMs locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour les utilisateurs légers (moins de 5 heures/semaine), oui — 20€/mois Plus est plus facile que d\'acheter une GPU à 450€. Pour une utilisation professionnelle régulière (10+ heures/semaine), Llama 3.3 70B local sur RTX 5060 Ti se rentabilise en ~14 mois puis ne coûte que l\'électricité (~30€/an). Plus reste en tête sur le raisonnement novateur via GPT-5.2 Thinking.' } },
           { '@type': 'Question', 'name': 'Qu\'est-ce que le nouveau niveau ChatGPT Pro 100€ lancé en avril 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OpenAI a lancé Pro 100€ le 9 avril 2026, comblant l\'écart entre Plus (20€) et Pro (200€). Pro 100€ inclut 5× les limites de Plus, l\'accès au modèle GPT-5.4 Pro et le mode o1 Pro pour un raisonnement plus profond. Il cible les utilisateurs intensifs qui atteignent les limites de Plus (160 messages/3h) mais n\'ont pas besoin du tier Pro 200€ complet.' } },
-          { '@type': 'Question', 'name': 'Quel LLM local correspond à la qualité GPT-5.2 en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Aucun complètement. Llama 3.3 70B est le plus proche à ~82 % de GPT-5.2 sur MMLU — le plus petit écart de l\'histoire. Qwen2.5 72B est similaire. Pour la programmation spécifiquement, Qwen2.5-Coder 32B atteint 92.7 % HumanEval, s\'aligne avec GPT-5.2. L\'écart se rétrécit annuellement, mais GPT-5.4 Pro reste en tête pour le raisonnement multi-étapes.' } },
+          { '@type': 'Question', 'name': 'Quel LLM local correspond à la qualité GPT-5.2 en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Aucun complètement. Llama 3.3 70B est le plus proche à ~82 % de GPT-5.2 sur MMLU — le plus petit écart de l\'histoire. Qwen3 72B est similaire. Pour la programmation spécifiquement, Qwen3-Coder 32B atteint 92.7 % HumanEval, s\'aligne avec GPT-5.2. L\'écart se rétrécit annuellement, mais GPT-5.4 Pro reste en tête pour le raisonnement multi-étapes.' } },
           { '@type': 'Question', 'name': 'Quel est le point de rentabilité pour une configuration locale 70B vs ChatGPT Plus ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Dépend du matériel : RTX 4090 occasion (~1 999€ + build) se rentabilise en ~6 ans vs Plus. Mac mini M4 Pro 64 GB (~2 499€) en ~9 ans. Framework Desktop 128 GB (~2 199€) en ~8 ans. Local 70B n\'est financièrement justifié que si vous avez aussi besoin de confidentialité, zéro limites de débit, capacité hors ligne ou accès multi-utilisateurs.' } },
           { '@type': 'Question', 'name': 'ChatGPT Plus a-t-il des publicités en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Les publicités ne sont que sur les niveaux Free et Go (introduites février 2026, marché US en premier). ChatGPT Plus, Pro 100€, Pro 200€, Business et Enterprise sont tous sans publicité. OpenAI a déclaré que les publicités ne seraient pas introduites sur les niveaux payants.' } },
-          { '@type': 'Question', 'name': 'Qui est meilleur pour la programmation : ChatGPT Plus ou Qwen2.5-Coder local ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour la programmation générale : match serré. Qwen2.5-Coder 32B local atteint 92.7 % HumanEval, s\'aligne avec GPT-5.2. Pour les agents de codage autonomes et l\'intégration Codex, ChatGPT Plus a de meilleurs outils. Pour les codebases sensibles à la confidentialité ou le travail hors ligne, Qwen2.5-Coder 32B local est le bon choix.' } },
+          { '@type': 'Question', 'name': 'Qui est meilleur pour la programmation : ChatGPT Plus ou Qwen3-Coder local ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour la programmation générale : match serré. Qwen3-Coder 32B local atteint 92.7 % HumanEval, s\'aligne avec GPT-5.2. Pour les agents de codage autonomes et l\'intégration Codex, ChatGPT Plus a de meilleurs outils. Pour les codebases sensibles à la confidentialité ou le travail hors ligne, Qwen3-Coder 32B local est le bon choix.' } },
           { '@type': 'Question', 'name': 'Puis-je annuler ChatGPT Plus à tout moment ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Plus est mensuel uniquement depuis avril 2026 sans engagement annuel. Annulez via Paramètres → Abonnement dans ChatGPT. L\'accès continue jusqu\'à la fin de la période payée. OpenAI n\'offre pas de remboursements pour les mois partiels.' } },
           { '@type': 'Question', 'name': 'Quel est le coût d\'électricité pour faire fonctionner un LLM local en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5060 Ti en inférence active : ~180 W. US moyenne 0,14€/kWh. Utilisation typique (4 heures/jour actif, reste inactif) : 30–40€/an US. UE : 2–3× plus élevé (~90–120€/an). Japon : ~45€/an. Chine : ~25€/an. 24/7 entièrement actif coûterait ~220€/an US — pas un schéma d\'utilisation réaliste pour la plupart des utilisateurs.' } },
         ],
@@ -943,12 +943,12 @@ schema: {
           ],
           items: [
             '**エントリーレベル — 7B モデル — RTX 4060 Ti 8 GB（中古、約31,000～35,000円）：** Llama 3.3 8B、Mistral Small、Gemma 4 9B を 25～60 tokens/s で実行。完全なビルド：約87,000～112,000円。',
-            '**スイートスポット — 13B～24B モデル — [RTX 5060 Ti 16 GB（新品、約94,800円）](/ja/local-llms/best-budget-gpus-local-llm)：** Mistral Small 3.1 24B および Qwen2.5 14B を 20～40 tokens/s で実行。完全なビルド：約112,000～150,000円。ChatGPT Plus ユースケースの 85％ をカバー。',
+            '**スイートスポット — 13B～24B モデル — [RTX 5060 Ti 16 GB（新品、約94,800円）](/ja/local-llms/best-budget-gpus-local-llm)：** Mistral Small 3.1 24B および Qwen3 14B を 20～40 tokens/s で実行。完全なビルド：約112,000～150,000円。ChatGPT Plus ユースケースの 85％ をカバー。',
             '**70B ティア — GPT-5.2 クラス — 3つのハードウェアオプション：**',
             '   オプション A：RTX 4090 中古（24 GB、約220,000～280,000円）— CUDA 経由で Llama 3.3 70B を ~25 tokens/s で実行',
             '   オプション B：Mac mini M4 Pro 64 GB（約358,800円）— Metal 経由で Llama 3.3 70B を 10～15 tokens/s で実行',
             '   オプション C：Framework Desktop 128 GB（約315,000円）— AMD Ryzen AI Max 395+ で 20+ tokens/s で Llama 3.3 70B を実行',
-            '**2026年4月の無料モデル：** Llama 3.3 70B（Meta）、Llama 4 Scout 8B（Meta、3月2026）、Qwen2.5 72B（Alibaba）、Mistral Small 3.1 24B、Gemma 4 9B（Google、4月2026）、Phi-4 Mini 3.8B（Microsoft）',
+            '**2026年4月の無料モデル：** Llama 3.3 70B（Meta）、Llama 4 Scout 8B（Meta、3月2026）、Qwen3 72B（Alibaba）、Mistral Small 3.1 24B、Gemma 4 9B（Google、4月2026）、Phi-4 Mini 3.8B（Microsoft）',
           ],
         },
         'breakeven': {
@@ -998,7 +998,7 @@ schema: {
             { 'Model': 'GPT-5.4 Pro', 'Type': 'クラウド（Pro 100€+）', 'MMLU': '~92％', 'HumanEval': '~93％', 'Notes': '最も高性能；Pro 100€/月が必要' },
             { 'Model': 'GPT-5.2 Thinking', 'Type': 'クラウド（Plus）', 'MMLU': '~89％', 'HumanEval': '~90％', 'Notes': '深い推論；Plus で週3,000' },
             { 'Model': 'GPT-5.2', 'Type': 'クラウド（Plus）', 'MMLU': '~87％', 'HumanEval': '~87％', 'Notes': '標準；Plus で 160メッセージ/3h' },
-            { 'Model': 'Qwen2.5 72B', 'Type': 'ローカル', 'MMLU': '83％', 'HumanEval': '87％', 'Notes': '中国語に最適；強力なコーディング' },
+            { 'Model': 'Qwen3 72B', 'Type': 'ローカル', 'MMLU': '83％', 'HumanEval': '87％', 'Notes': '中国語に最適；強力なコーディング' },
             { 'Model': 'Llama 3.3 70B', 'Type': 'ローカル', 'MMLU': '80％', 'HumanEval': '88％', 'Notes': '最高のオープンソース（2024年12月）' },
             { 'Model': 'Llama 4 Scout 8B', 'Type': 'ローカル', 'MMLU': '78％', 'HumanEval': '79％', 'Notes': '新 2026年3月；トップ 8B クラス' },
             { 'Model': 'Mistral Small 3.1 24B', 'Type': 'ローカル', 'MMLU': '73％', 'HumanEval': '75％', 'Notes': 'ベスト 24B；RTX 5060 Ti 16 GB に対応' },
@@ -1011,7 +1011,7 @@ schema: {
           title: '地域的考慮事項',
           content: [
             '**日本（METI ガイドライン優先）：** 経済産業省（METI）は 2024 年に AI ガバナンスガイドラインを発行し、ローカル推論を機密ビジネスデータ処理の推奨プラクティスとしています。ChatGPT Plus は日本で公式には利用できません。ローカル Llama 3.3 70B は、金融機関、医療、法律事務所が日本のデータ保護規制（APPI）に準拠しながら運用する方法を提供します。',
-            '**東アジア（データ主権）：** 中国、韓国、台湾でのローカル推論は、データ跨国転送制限とデータ主権要件を完全に満たします。Qwen2.5（Alibaba）、Llama 3.3、Mistral などのオープンソースモデルは、これらの地域での完全なオンデバイス処理を可能にします。',
+            '**東アジア（データ主権）：** 中国、韓国、台湾でのローカル推論は、データ跨国転送制限とデータ主権要件を完全に満たします。Qwen3（Alibaba）、Llama 3.3、Mistral などのオープンソースモデルは、これらの地域での完全なオンデバイス処理を可能にします。',
             '**APPI（日本の個人情報保護法）準拠：** ローカル LLM セットアップにより、企業は個人データを国外転送することなく、機密顧客情報、医療記録、法的文書を処理できます。',
             '**企業導入：** 大企業と金融機関は、ローカル推論とオンサイト LLM デプロイメント戦略に転換しており、米国クラウドの依存を減らしています。',
           ],
@@ -1030,7 +1030,7 @@ schema: {
             },
             {
               q: '2026年のローカル LLM に対応する GPT-5.2 品質は何？',
-              a: '完全にはありません。Llama 3.3 70B は MMLU で GPT-5.2 の約82％に最も近い — 歴史上最小のギャップです。Qwen2.5 72B は同様です。コーディング専門では Qwen2.5-Coder 32B が 92.7％ HumanEval を達成し、GPT-5.2 に一致します。ギャップは毎年狭まっていますが、GPT-5.4 Pro はマルチステップ推論で前に出ます。',
+              a: '完全にはありません。Llama 3.3 70B は MMLU で GPT-5.2 の約82％に最も近い — 歴史上最小のギャップです。Qwen3 72B は同様です。コーディング専門では Qwen3-Coder 32B が 92.7％ HumanEval を達成し、GPT-5.2 に一致します。ギャップは毎年狭まっていますが、GPT-5.4 Pro はマルチステップ推論で前に出ます。',
             },
             {
               q: 'ローカル 70B セットアップと ChatGPT Plus の損益分岐点は？',
@@ -1041,8 +1041,8 @@ schema: {
               a: 'いいえ。広告は Free と Go レベルのみ（2026年2月に導入、米国市場が最初）。ChatGPT Plus、Pro 100€、Pro 200€、Business、Enterprise はすべて広告なしです。OpenAI は有料レベルに広告を導入しないと述べています。',
             },
             {
-              q: 'プログラミングではどちらが良い：ChatGPT Plus またはローカル Qwen2.5-Coder？',
-              a: '一般的なプログラミング：接戦です。Qwen2.5-Coder 32B ローカルは 92.7％ HumanEval を達成し、GPT-5.2 に一致します。自律コーディングエージェントと Codex 統合の場合、ChatGPT Plus はより良いツールを備えています。プライバシー保護コードベースまたはオフライン作業の場合、ローカル Qwen2.5-Coder 32B が適切な選択です。',
+              q: 'プログラミングではどちらが良い：ChatGPT Plus またはローカル Qwen3-Coder？',
+              a: '一般的なプログラミング：接戦です。Qwen3-Coder 32B ローカルは 92.7％ HumanEval を達成し、GPT-5.2 に一致します。自律コーディングエージェントと Codex 統合の場合、ChatGPT Plus はより良いツールを備えています。プライバシー保護コードベースまたはオフライン作業の場合、ローカル Qwen3-Coder 32B が適切な選択です。',
             },
             {
               q: 'いつでも ChatGPT Plus をキャンセルできます？',
@@ -1114,10 +1114,10 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'ChatGPT Plus は月額20€の価値があります？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ライトユーザー（週5時間未満）の場合：はい — 月額20€の Plus は 94,800円の GPU を購入するより簡単です。定期的なプロ使用（週10時間以上）の場合：ローカル Llama 3.3 70B は RTX 5060 Ti で約14ヶ月で損益分岐点に達し、その後は電気代のみ（年約7,500円）です。Plus は GPT-5.2 Thinking での斬新な推論で先を行きます。' } },
           { '@type': 'Question', 'name': '2026年4月に立ち上がった新しい ChatGPT Pro 100€ レベルとは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OpenAI は 2026年4月9日に Pro 100€ を立ち上げ、Plus（20€）とオリジナル Pro（200€）の間のギャップを埋めました。Pro 100€ は Plus の 5 倍の使用制限、GPT-5.4 Pro モデルアクセス、より深い推論のための o1 Proモードを含みます。Plus の制限に達するパワーユーザーを対象としていますが、フル Pro 200€ レベルは必要ありません。' } },
-          { '@type': 'Question', 'name': '2026年のローカル LLM に対応する GPT-5.2 品質は何？', 'acceptedAnswer': { '@type': 'Answer', 'text': '完全にはありません。Llama 3.3 70B は MMLU で GPT-5.2 の約82％に最も近い — 歴史上最小のギャップです。Qwen2.5 72B は同様です。コーディング専門では Qwen2.5-Coder 32B が 92.7％ HumanEval を達成し、GPT-5.2 に一致します。ギャップは毎年狭まっていますが、GPT-5.4 Pro はマルチステップ推論で前に出ます。' } },
+          { '@type': 'Question', 'name': '2026年のローカル LLM に対応する GPT-5.2 品質は何？', 'acceptedAnswer': { '@type': 'Answer', 'text': '完全にはありません。Llama 3.3 70B は MMLU で GPT-5.2 の約82％に最も近い — 歴史上最小のギャップです。Qwen3 72B は同様です。コーディング専門では Qwen3-Coder 32B が 92.7％ HumanEval を達成し、GPT-5.2 に一致します。ギャップは毎年狭まっていますが、GPT-5.4 Pro はマルチステップ推論で前に出ます。' } },
           { '@type': 'Question', 'name': 'ローカル 70B セットアップと ChatGPT Plus の損益分岐点は？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ハードウェアに依存：RTX 4090 中古（約220,000～280,000円 + ビルド）は Plus と比較して約6年で損益分岐点。Mac mini M4 Pro 64 GB（約358,800円）は約9年。Framework Desktop 128 GB（約315,000円）は約8年。ローカル 70B は、プライバシー、レート制限なし、オフライン機能、またはマルチユーザーアクセスも必要な場合にのみ経済的に正当化されます。' } },
           { '@type': 'Question', 'name': '2026年に ChatGPT Plus は広告を持つ？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。広告は Free と Go レベルのみ（2026年2月に導入、米国市場が最初）。ChatGPT Plus、Pro 100€、Pro 200€、Business、Enterprise はすべて広告なしです。OpenAI は有料レベルに広告を導入しないと述べています。' } },
-          { '@type': 'Question', 'name': 'プログラミングではどちらが良い：ChatGPT Plus またはローカル Qwen2.5-Coder？', 'acceptedAnswer': { '@type': 'Answer', 'text': '一般的なプログラミング：接戦です。Qwen2.5-Coder 32B ローカルは 92.7％ HumanEval を達成し、GPT-5.2 に一致します。自律コーディングエージェントと Codex 統合の場合、ChatGPT Plus はより良いツールを備えています。プライバシー保護コードベースまたはオフライン作業の場合、ローカル Qwen2.5-Coder 32B が適切な選択です。' } },
+          { '@type': 'Question', 'name': 'プログラミングではどちらが良い：ChatGPT Plus またはローカル Qwen3-Coder？', 'acceptedAnswer': { '@type': 'Answer', 'text': '一般的なプログラミング：接戦です。Qwen3-Coder 32B ローカルは 92.7％ HumanEval を達成し、GPT-5.2 に一致します。自律コーディングエージェントと Codex 統合の場合、ChatGPT Plus はより良いツールを備えています。プライバシー保護コードベースまたはオフライン作業の場合、ローカル Qwen3-Coder 32B が適切な選択です。' } },
           { '@type': 'Question', 'name': 'いつでも ChatGPT Plus をキャンセルできます？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Plus は 2026年4月現在、年間コミットメントなしで月単位のみです。ChatGPT の設定 → サブスクリプション経由でキャンセルしてください。アクセスは有料期間の終了まで続きます。OpenAI は部分月の払い戻しを提供していません。' } },
           { '@type': 'Question', 'name': '2026年のローカル LLM 実行の電気コストは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5060 Ti アクティブ推論：~180 W。日本平均 0.18€/kWh。標準的な使用（1 日 4 時間のアクティブ、残りはアイドル）：日本で年約22,500円。継続稼働（24/7）は年約55,000円のコストになります — ほとんどのユーザーにとっは現実的な使用パターンではありません。' } },
         ],
@@ -1223,12 +1223,12 @@ schema: {
           ],
           items: [
             '**入门级——7B模型——RTX 4060 Ti 8GB（二手，$220-260）：** 运行Llama 3.3 8B、Mistral Small、Gemma 4 9B，速度为25-60 tokens/秒。完整构建：$700-900。',
-            '**黄金点——13B-24B模型——[RTX 5060 Ti 16GB（新，$450-500）](/zh/local-llms/best-budget-gpus-local-llm)：** 运行Mistral Small 3.1 24B和Qwen2.5 14B，速度为20-40 tokens/秒。完整构建：$900-1,200。覆盖85%的ChatGPT Plus用例。',
+            '**黄金点——13B-24B模型——[RTX 5060 Ti 16GB（新，$450-500）](/zh/local-llms/best-budget-gpus-local-llm)：** 运行Mistral Small 3.1 24B和Qwen3 14B，速度为20-40 tokens/秒。完整构建：$900-1,200。覆盖85%的ChatGPT Plus用例。',
             '**70B层——GPT-5.2级别——三个硬件选项：**',
             '   选项A：RTX 4090二手（24GB，约$1,400）——通过CUDA以~25 tokens/秒运行Llama 3.3 70B',
             '   选项B：Mac mini M4 Pro 64GB（$2,299）——通过Metal以10-15 tokens/秒运行Llama 3.3 70B',
             '   选项C：Framework Desktop 128GB（$1,999）——使用AMD Ryzen AI Max 395+以20+ tokens/秒运行Llama 3.3 70B',
-            '**2026年4月免费模型：** Llama 3.3 70B（Meta）、Llama 4 Scout 8B（Meta，2026年3月）、Qwen2.5 72B（阿里巴巴）、Mistral Small 3.1 24B、Gemma 4 9B（Google，2026年4月）、Phi-4 Mini 3.8B（微软）',
+            '**2026年4月免费模型：** Llama 3.3 70B（Meta）、Llama 4 Scout 8B（Meta，2026年3月）、Qwen3 72B（阿里巴巴）、Mistral Small 3.1 24B、Gemma 4 9B（Google，2026年4月）、Phi-4 Mini 3.8B（微软）',
           ],
         },
         'breakeven': {
@@ -1278,7 +1278,7 @@ schema: {
             { 'Model': 'GPT-5.4 Pro', 'Type': '云（Pro 100€+）', 'MMLU': '~92%', 'HumanEval': '~93%', 'Notes': '最强大；需Pro 100€/月' },
             { 'Model': 'GPT-5.2 Thinking', 'Type': '云（Plus）', 'MMLU': '~89%', 'HumanEval': '~90%', 'Notes': '深度推理；Plus中每周3,000' },
             { 'Model': 'GPT-5.2', 'Type': '云（Plus）', 'MMLU': '~87%', 'HumanEval': '~87%', 'Notes': '标准；Plus中160条消息/3小时' },
-            { 'Model': 'Qwen2.5 72B', 'Type': '本地', 'MMLU': '83%', 'HumanEval': '87%', 'Notes': '最适合中文；强大的编码' },
+            { 'Model': 'Qwen3 72B', 'Type': '本地', 'MMLU': '83%', 'HumanEval': '87%', 'Notes': '最适合中文；强大的编码' },
             { 'Model': 'Llama 3.3 70B', 'Type': '本地', 'MMLU': '80%', 'HumanEval': '88%', 'Notes': '最佳开源（2024年12月）' },
             { 'Model': 'Llama 4 Scout 8B', 'Type': '本地', 'MMLU': '78%', 'HumanEval': '79%', 'Notes': '新增2026年3月；顶尖8B' },
             { 'Model': 'Mistral Small 3.1 24B', 'Type': '本地', 'MMLU': '73%', 'HumanEval': '75%', 'Notes': '最佳24B；适合RTX 5060 Ti 16GB' },
@@ -1290,7 +1290,7 @@ schema: {
           id: 'regional-context',
           title: '地区考虑事项',
           content: [
-            '**中国（数据安全法）：** 2021年《数据安全法》要求关键信息基础设施运营者和处理个人信息的组织采取措施防止数据跨国转移。本地Llama 3.3 70B或Qwen2.5在中国服务器或边缘节点上运行，满足完整的数据主权合规性，无需依赖美国云基础设施（如ChatGPT Plus）。金融机构、医疗提供商和政府机构日益采用本地AI推理来满足中国的严格数据驻留要求。',
+            '**中国（数据安全法）：** 2021年《数据安全法》要求关键信息基础设施运营者和处理个人信息的组织采取措施防止数据跨国转移。本地Llama 3.3 70B或Qwen3在中国服务器或边缘节点上运行，满足完整的数据主权合规性，无需依赖美国云基础设施（如ChatGPT Plus）。金融机构、医疗提供商和政府机构日益采用本地AI推理来满足中国的严格数据驻留要求。',
             '**亚太地区（数据跨境）：** 日本（APPI）、韩国、越南、新加坡和台湾都有针对个人数据跨国传输的类似立法。本地推理完全消除对这些法律的合规风险。企业可以在东南亚地区处理敏感的医疗、财务和法律文件，无需美国云合同。',
             '**企业部署：** 大型银行、医疗系统和律师事务所正在从ChatGPT Plus转向本地或私有化LLM部署，以最小化供应商锁定、降低合规风险并保持对敏感工作流的完全数据控制。RTX 5060 Ti或更强大的GPU上的Llama 3.3 70B是小到中型企业的实用选择。',
           ],
@@ -1309,7 +1309,7 @@ schema: {
             },
             {
               q: '2026年哪个本地LLM与GPT-5.2品质匹配？',
-              a: '没有完全匹配。Llama 3.3 70B最接近MMLU上GPT-5.2的~82%——历史上最小的差距。Qwen2.5 72B类似。对于编码具体而言，Qwen2.5-Coder 32B达到92.7% HumanEval，与GPT-5.2相当。差距每年都在缩小，但GPT-5.4 Pro在多步骤推理中保持领先。',
+              a: '没有完全匹配。Llama 3.3 70B最接近MMLU上GPT-5.2的~82%——历史上最小的差距。Qwen3 72B类似。对于编码具体而言，Qwen3-Coder 32B达到92.7% HumanEval，与GPT-5.2相当。差距每年都在缩小，但GPT-5.4 Pro在多步骤推理中保持领先。',
             },
             {
               q: '本地70B设置与ChatGPT Plus的平衡点是什么？',
@@ -1320,8 +1320,8 @@ schema: {
               a: '没有。广告仅在Free和Go级别（2026年2月推出，美国市场最先）。ChatGPT Plus、Pro 100€、Pro 200€、Business和Enterprise都无广告。OpenAI已声明不会在付费级别引入广告。',
             },
             {
-              q: '编程方面哪个更好：ChatGPT Plus还是本地Qwen2.5-Coder？',
-              a: '对于通用编程：接近。本地Qwen2.5-Coder 32B达到92.7% HumanEval，与GPT-5.2相当。对于自主编码代理和Codex集成，ChatGPT Plus有更好的工具。对于隐私敏感的代码库或离线工作，本地Qwen2.5-Coder 32B是正确选择。',
+              q: '编程方面哪个更好：ChatGPT Plus还是本地Qwen3-Coder？',
+              a: '对于通用编程：接近。本地Qwen3-Coder 32B达到92.7% HumanEval，与GPT-5.2相当。对于自主编码代理和Codex集成，ChatGPT Plus有更好的工具。对于隐私敏感的代码库或离线工作，本地Qwen3-Coder 32B是正确选择。',
             },
             {
               q: '我可以随时取消ChatGPT Plus吗？',
@@ -1393,10 +1393,10 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'ChatGPT Plus是否值得每月$20与本地LLM相比？', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于轻度用户（每周少于5小时），是的——每月$20的Plus比购买$500 GPU更简单。对于定期专业使用（每周10小时以上），本地Llama 3.3 70B在RTX 5060 Ti上在约14个月内平衡，然后仅成本电费（约$30/年）。Plus通过GPT-5.2 Thinking在新颖推理上保持领先。' } },
           { '@type': 'Question', 'name': '2026年4月推出的新ChatGPT Pro 100€级别是什么？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OpenAI于2026年4月9日推出Pro 100€，填补Plus（$20）和Pro（$200）之间的空白。Pro 100€包括Plus限制的5倍、GPT-5.4 Pro模型访问权限和用于更深入推理的o1 Pro模式。它针对触及Plus速率限制（160条消息/3小时）但不需要完整Pro 200€级别的高级用户。' } },
-          { '@type': 'Question', 'name': '2026年哪个本地LLM与GPT-5.2品质匹配？', 'acceptedAnswer': { '@type': 'Answer', 'text': '没有完全匹配。Llama 3.3 70B最接近MMLU上GPT-5.2的~82%——历史上最小的差距。Qwen2.5 72B类似。对于编码具体而言，Qwen2.5-Coder 32B达到92.7% HumanEval，与GPT-5.2相当。差距每年都在缩小，但GPT-5.4 Pro在多步骤推理中保持领先。' } },
+          { '@type': 'Question', 'name': '2026年哪个本地LLM与GPT-5.2品质匹配？', 'acceptedAnswer': { '@type': 'Answer', 'text': '没有完全匹配。Llama 3.3 70B最接近MMLU上GPT-5.2的~82%——历史上最小的差距。Qwen3 72B类似。对于编码具体而言，Qwen3-Coder 32B达到92.7% HumanEval，与GPT-5.2相当。差距每年都在缩小，但GPT-5.4 Pro在多步骤推理中保持领先。' } },
           { '@type': 'Question', 'name': '本地70B设置与ChatGPT Plus的平衡点是什么？', 'acceptedAnswer': { '@type': 'Answer', 'text': '取决于硬件：RTX 4090二手（约$1,400 + 构建）与Plus相比需要约6年平衡。Mac mini M4 Pro 64GB（$2,299）约需9年。Framework Desktop 128GB（$1,999）约需8年。本地70B仅当您还需要隐私、无速率限制、离线能力或多用户访问权限时，才在经济上合理。' } },
           { '@type': 'Question', 'name': '2026年ChatGPT Plus有广告吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '没有。广告仅在Free和Go级别（2026年2月推出，美国市场最先）。ChatGPT Plus、Pro 100€、Pro 200€、Business和Enterprise都无广告。OpenAI已声明不会在付费级别引入广告。' } },
-          { '@type': 'Question', 'name': '编程方面哪个更好：ChatGPT Plus还是本地Qwen2.5-Coder？', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于通用编程：接近。本地Qwen2.5-Coder 32B达到92.7% HumanEval，与GPT-5.2相当。对于自主编码代理和Codex集成，ChatGPT Plus有更好的工具。对于隐私敏感的代码库或离线工作，本地Qwen2.5-Coder 32B是正确选择。' } },
+          { '@type': 'Question', 'name': '编程方面哪个更好：ChatGPT Plus还是本地Qwen3-Coder？', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于通用编程：接近。本地Qwen3-Coder 32B达到92.7% HumanEval，与GPT-5.2相当。对于自主编码代理和Codex集成，ChatGPT Plus有更好的工具。对于隐私敏感的代码库或离线工作，本地Qwen3-Coder 32B是正确选择。' } },
           { '@type': 'Question', 'name': '我可以随时取消ChatGPT Plus吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的。截至2026年4月，Plus仅按月计费，无年度承诺。通过ChatGPT中的设置→订阅来取消。访问权限继续至付费期末。OpenAI不提供部分月份退款。' } },
           { '@type': 'Question', 'name': '2026年运行本地LLM的电费成本是多少？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5060 Ti活跃推理：~180W。美国平均$0.14/kWh。典型使用（每天4小时活跃，其余闲置）：美国年$30-40。欧盟：2-3倍更高（年$90-120）。日本：年~$45。中国：年~$25。24/7完全活跃会成本美国年~$220——大多数用户没有现实的使用模式。' } },
         ],
@@ -1502,12 +1502,12 @@ schema: {
           ],
           items: [
             '**Nivel de entrada — modelos 7B — RTX 4060 Ti 8 GB (usado, $220–260):** Ejecuta Llama 3.3 8B, Mistral Small, Gemma 4 9B a 25–60 tokens/s. Equipo completo incluyendo PC: $700–900.',
-            '**Punto óptimo — modelos 13B–24B — [RTX 5060 Ti 16 GB (nuevo, $450–500)](/es/local-llms/best-budget-gpus-local-llm):** Ejecuta Mistral Small 3.1 24B y Qwen2.5 14B a 20–40 tokens/s. Equipo completo: $900–1,200. Cubre el 85% de los casos de uso de ChatGPT Plus.',
+            '**Punto óptimo — modelos 13B–24B — [RTX 5060 Ti 16 GB (nuevo, $450–500)](/es/local-llms/best-budget-gpus-local-llm):** Ejecuta Mistral Small 3.1 24B y Qwen3 14B a 20–40 tokens/s. Equipo completo: $900–1,200. Cubre el 85% de los casos de uso de ChatGPT Plus.',
             '**Nivel 70B — clase GPT-5.2 — tres opciones de hardware:**',
             '   Opción A: RTX 4090 usada (24 GB, ~$1,400) — ejecuta Llama 3.3 70B a ~25 tokens/s vía CUDA',
             '   Opción B: Mac mini M4 Pro 64 GB ($2,299) — ejecuta Llama 3.3 70B a 10–15 tokens/s vía Metal',
             '   Opción C: Framework Desktop 128 GB ($1,999) — ejecuta Llama 3.3 70B a 20+ tokens/s (AMD Ryzen AI Max 395+)',
-            '**Modelos gratuitos en abril de 2026:** Llama 3.3 70B (Meta), Llama 4 Scout 8B (Meta, marzo de 2026), Qwen2.5 72B (Alibaba), Mistral Small 3.1 24B, Gemma 4 9B (Google, abril de 2026), Phi-4 Mini 3.8B (Microsoft)',
+            '**Modelos gratuitos en abril de 2026:** Llama 3.3 70B (Meta), Llama 4 Scout 8B (Meta, marzo de 2026), Qwen3 72B (Alibaba), Mistral Small 3.1 24B, Gemma 4 9B (Google, abril de 2026), Phi-4 Mini 3.8B (Microsoft)',
           ],
         },
         'breakeven': {
@@ -1557,7 +1557,7 @@ schema: {
             { 'Modelo': 'GPT-5.4 Pro', 'Tipo': 'Nube (Pro $100+)', 'MMLU': '~92%', 'HumanEval': '~93%', 'Notas': 'Más capaz; requiere Pro $100/mes' },
             { 'Modelo': 'GPT-5.2 Thinking', 'Tipo': 'Nube (Plus)', 'MMLU': '~89%', 'HumanEval': '~90%', 'Notas': 'Razonamiento profundo; 3,000/semana en Plus' },
             { 'Modelo': 'GPT-5.2', 'Tipo': 'Nube (Plus)', 'MMLU': '~87%', 'HumanEval': '~87%', 'Notas': 'Estándar; 160 mensajes/3h en Plus' },
-            { 'Modelo': 'Qwen2.5 72B', 'Tipo': 'Local', 'MMLU': '83%', 'HumanEval': '87%', 'Notas': 'Mejor para chino; buen rendimiento en código' },
+            { 'Modelo': 'Qwen3 72B', 'Tipo': 'Local', 'MMLU': '83%', 'HumanEval': '87%', 'Notas': 'Mejor para chino; buen rendimiento en código' },
             { 'Modelo': 'Llama 3.3 70B', 'Tipo': 'Local', 'MMLU': '80%', 'HumanEval': '88%', 'Notas': 'Mejor modelo open source general (dic. 2024)' },
             { 'Modelo': 'Llama 4 Scout 8B', 'Tipo': 'Local', 'MMLU': '78%', 'HumanEval': '79%', 'Notas': 'Nuevo mar. 2026; top de clase 8B' },
             { 'Modelo': 'Mistral Small 3.1 24B', 'Tipo': 'Local', 'MMLU': '73%', 'HumanEval': '75%', 'Notas': 'Mejor 24B; cabe en RTX 5060 Ti 16 GB' },
@@ -1571,7 +1571,7 @@ schema: {
           content: [
             '**Latinoamérica:** Los precios de ChatGPT Plus varían según el país — en México es $20 USD/mes, en Argentina se aplica el tipo de cambio oficial. Los costos de electricidad en la región son generalmente más bajos que en Europa (Mexico: ~$0.07/kWh, Argentina: ~$0.04/kWh), lo que hace que la ventaja económica del LLM local sea aún mayor que en EE. UU.',
             '**España/UE:** ChatGPT Plus cuesta 20€/mes; los costos de electricidad son 2–3× los de EE. UU. (€0.28–0.40/kWh), lo que hace que la economía del LLM local sea ligeramente menos favorable. Sin embargo, el cumplimiento del RGPD favorece fuertemente los LLMs locales — todos los datos permanecen en tu máquina sin responsabilidad de transferencia transfronteriza según el artículo 44.',
-            '**China:** ChatGPT Plus no está disponible directamente en China continental. Los modelos de código abierto locales (Qwen2.5, Llama 3.3) que se ejecutan localmente cumplen con la Ley de Seguridad de Datos de 2021 sin requisitos de registro en la CAC.',
+            '**China:** ChatGPT Plus no está disponible directamente en China continental. Los modelos de código abierto locales (Qwen3, Llama 3.3) que se ejecutan localmente cumplen con la Ley de Seguridad de Datos de 2021 sin requisitos de registro en la CAC.',
             '**Acceso sin conexión en zonas rurales:** En regiones con conectividad limitada en Latinoamérica y España, los LLMs locales ofrecen la única opción práctica de IA sin depender de una conexión estable a internet.',
           ],
         },
@@ -1589,7 +1589,7 @@ schema: {
             },
             {
               q: '¿Qué LLM local iguala la calidad de GPT-5.2 en 2026?',
-              a: 'Ninguno completamente. Llama 3.3 70B es el más cercano con ~82% de GPT-5.2 en MMLU — la brecha más pequeña de la historia. Qwen2.5 72B es similar. Para codificación específicamente, Qwen2.5-Coder 32B alcanza 92.7% HumanEval, igualando a GPT-5.2. La brecha se reduce anualmente, pero GPT-5.4 Pro sigue por delante en razonamiento de múltiples pasos.',
+              a: 'Ninguno completamente. Llama 3.3 70B es el más cercano con ~82% de GPT-5.2 en MMLU — la brecha más pequeña de la historia. Qwen3 72B es similar. Para codificación específicamente, Qwen3-Coder 32B alcanza 92.7% HumanEval, igualando a GPT-5.2. La brecha se reduce anualmente, pero GPT-5.4 Pro sigue por delante en razonamiento de múltiples pasos.',
             },
             {
               q: '¿Cuál es el punto de equilibrio para una configuración local 70B vs ChatGPT Plus?',
@@ -1600,8 +1600,8 @@ schema: {
               a: 'No. Los anuncios solo están en los niveles Free y Go (introducidos en febrero de 2026, el mercado de EE. UU. primero). ChatGPT Plus, Pro $100, Pro $200, Business y Enterprise son todos sin anuncios. OpenAI ha declarado que no introducirá anuncios en los niveles de pago.',
             },
             {
-              q: '¿Cuál es mejor para programación: ChatGPT Plus o Qwen2.5-Coder local?',
-              a: 'Para programación general: muy reñido. Qwen2.5-Coder 32B alcanza 92.7% HumanEval localmente, igualando a GPT-5.2. Para agentes de codificación autónomos e integración de Codex, ChatGPT Plus tiene mejores herramientas. Para bases de código sensibles a la privacidad o trabajo sin conexión, Qwen2.5-Coder 32B local es la elección correcta.',
+              q: '¿Cuál es mejor para programación: ChatGPT Plus o Qwen3-Coder local?',
+              a: 'Para programación general: muy reñido. Qwen3-Coder 32B alcanza 92.7% HumanEval localmente, igualando a GPT-5.2. Para agentes de codificación autónomos e integración de Codex, ChatGPT Plus tiene mejores herramientas. Para bases de código sensibles a la privacidad o trabajo sin conexión, Qwen3-Coder 32B local es la elección correcta.',
             },
             {
               q: '¿Puedo cancelar ChatGPT Plus en cualquier momento?',
@@ -1674,10 +1674,10 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Vale la pena ChatGPT Plus a $20/mes frente a los LLMs locales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para usuarios ligeros (menos de 5 hrs/semana), sí — $20/mes de Plus es más fácil que comprar una GPU de $450. Para uso profesional regular (más de 10 hrs/semana), Llama 3.3 70B local en RTX 5060 Ti alcanza el equilibrio en ~14 meses y luego solo cuesta electricidad (~$30/año). Plus sigue por delante en razonamiento novedoso vía GPT-5.2 Thinking.' } },
           { '@type': 'Question', 'name': '¿Qué es el nuevo nivel ChatGPT Pro $100 lanzado en abril de 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OpenAI lanzó Pro $100 el 9 de abril de 2026, cerrando la brecha entre Plus ($20) y Pro ($200). Pro $100 incluye 5× los límites de uso de Plus, acceso al modelo GPT-5.4 Pro y el modo o1 Pro para razonamiento más profundo. Está dirigido a usuarios avanzados que alcanzan los límites de velocidad de Plus (160 mensajes/3h) pero no necesitan el nivel completo Pro $200.' } },
-          { '@type': 'Question', 'name': '¿Qué LLM local iguala la calidad de GPT-5.2 en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ninguno completamente. Llama 3.3 70B es el más cercano con ~82% de GPT-5.2 en MMLU — la brecha más pequeña de la historia. Qwen2.5 72B es similar. Para codificación específicamente, Qwen2.5-Coder 32B alcanza 92.7% HumanEval, igualando a GPT-5.2. La brecha se reduce anualmente, pero GPT-5.4 Pro sigue por delante en razonamiento de múltiples pasos.' } },
+          { '@type': 'Question', 'name': '¿Qué LLM local iguala la calidad de GPT-5.2 en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ninguno completamente. Llama 3.3 70B es el más cercano con ~82% de GPT-5.2 en MMLU — la brecha más pequeña de la historia. Qwen3 72B es similar. Para codificación específicamente, Qwen3-Coder 32B alcanza 92.7% HumanEval, igualando a GPT-5.2. La brecha se reduce anualmente, pero GPT-5.4 Pro sigue por delante en razonamiento de múltiples pasos.' } },
           { '@type': 'Question', 'name': '¿Cuál es el punto de equilibrio para una configuración local 70B vs ChatGPT Plus?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Depende del hardware: RTX 4090 usada ($1,400 + equipo) tarda ~6 años en alcanzar el equilibrio vs Plus. Mac mini M4 Pro 64 GB ($2,299) tarda ~9 años. Framework Desktop 128 GB ($1,999) tarda ~8 años. El 70B local solo se justifica financieramente si también necesitas privacidad, sin límites de velocidad, capacidad sin conexión o acceso multiusuario.' } },
           { '@type': 'Question', 'name': '¿ChatGPT Plus tiene anuncios en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Los anuncios solo están en los niveles Free y Go (introducidos en febrero de 2026, el mercado de EE. UU. primero). ChatGPT Plus, Pro $100, Pro $200, Business y Enterprise son todos sin anuncios. OpenAI ha declarado que no introducirá anuncios en los niveles de pago.' } },
-          { '@type': 'Question', 'name': '¿Cuál es mejor para programación: ChatGPT Plus o Qwen2.5-Coder local?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para programación general: muy reñido. Qwen2.5-Coder 32B alcanza 92.7% HumanEval localmente, igualando a GPT-5.2. Para agentes de codificación autónomos e integración de Codex, ChatGPT Plus tiene mejores herramientas. Para bases de código sensibles a la privacidad o trabajo sin conexión, Qwen2.5-Coder 32B local es la elección correcta.' } },
+          { '@type': 'Question', 'name': '¿Cuál es mejor para programación: ChatGPT Plus o Qwen3-Coder local?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para programación general: muy reñido. Qwen3-Coder 32B alcanza 92.7% HumanEval localmente, igualando a GPT-5.2. Para agentes de codificación autónomos e integración de Codex, ChatGPT Plus tiene mejores herramientas. Para bases de código sensibles a la privacidad o trabajo sin conexión, Qwen3-Coder 32B local es la elección correcta.' } },
           { '@type': 'Question', 'name': '¿Puedo cancelar ChatGPT Plus en cualquier momento?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Plus es solo mensual sin compromiso anual a partir de abril de 2026. Cancela en Configuración → Suscripción en ChatGPT. El acceso continúa hasta el final del período de pago. OpenAI no ofrece reembolsos por meses parciales.' } },
           { '@type': 'Question', 'name': '¿Cuánto cuesta la electricidad para ejecutar un LLM local en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5060 Ti en inferencia activa: ~180 W. Promedio en EE. UU. $0.14/kWh. Uso típico (4 hrs/día activo, el resto inactivo): $30–40/año en EE. UU. UE: 2–3× más (~$90–120/año). Japón: ~$45/año. China: ~$25/año. 24/7 completamente activo costaría ~$220/año en EE. UU. — no es un patrón de uso realista para la mayoría de los usuarios.' } },
         ],

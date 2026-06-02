@@ -232,7 +232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'On a 24 GB GPU, run Qwen3-Coder 30B at Q4_K_M for the chat / agent role and Qwen2.5-Coder 1.5B at Q4_K_M as a separate autocomplete process. Total VRAM: ~19 GB. The split keeps autocomplete latency under 200 ms while the bigger model handles non-trivial work in chat.',
+            text: 'On a 24 GB GPU, run Qwen3-Coder 30B at Q4_K_M for the chat / agent role and Qwen3-Coder 1.5B at Q4_K_M as a separate autocomplete process. Total VRAM: ~19 GB. The split keeps autocomplete latency under 200 ms while the bigger model handles non-trivial work in chat.',
           },
         ],
       },
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modell': 'Qwen3-Coder 30B', 'Größe': '30B', 'Kontext': '256K', 'Lizenz': 'Apache 2.0', 'HumanEval+ Richtung': 'Führend', 'Beste Eigenschaft': 'Balance aus Performance und Größe', 'Q4_K_M VRAM': '~18 GB' },
           { 'Modell': 'DeepSeek Coder V3', 'Größe': '236B (MoE)', 'Kontext': '128K', 'Lizenz': 'Mistral', 'HumanEval+ Richtung': 'Top-Tier', 'Beste Eigenschaft': 'Längste Kontext-Fenster', 'Q4_K_M VRAM': '~48 GB (gekürzt)' },
           { 'Modell': 'Codestral 22B', 'Größe': '22B', 'Kontext': '32K', 'Lizenz': 'Mistral Commercial', 'HumanEval+ Richtung': 'Gut', 'Beste Eigenschaft': 'Schnellste Inferenz', 'Q4_K_M VRAM': '~13 GB' },
-          { 'Modell': 'Llama 3.3 Code', 'Größe': '70B', 'Kontext': '8K', 'Lizenz': 'Llama 2', 'HumanEval+ Richtung': 'Solide', 'Beste Eigenschaft': 'Ökosystem-Passung', 'Q4_K_M VRAM': '~42 GB' },
+          { 'Modell': 'Llama 3.3 Code', 'Größe': '70B', 'Kontext': '8K', 'Lizenz': 'Llama 3.3', 'HumanEval+ Richtung': 'Solide', 'Beste Eigenschaft': 'Ökosystem-Passung', 'Q4_K_M VRAM': '~42 GB' },
           { 'Modell': 'Granite Code 34B', 'Größe': '34B', 'Kontext': '8K', 'Lizenz': 'Apache 2.0', 'HumanEval+ Richtung': 'Gut', 'Beste Eigenschaft': 'Enterprise-Lizenz (IBM)', 'Q4_K_M VRAM': '~20 GB' },
           { 'Modell': 'StarCoder 2 15B', 'Größe': '15B', 'Kontext': '16K', 'Lizenz': 'BigCode Open RAIL', 'HumanEval+ Richtung': 'Solide', 'Beste Eigenschaft': 'Sprachen-Breite', 'Q4_K_M VRAM': '~9 GB' },
         ],
@@ -693,11 +693,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       llamaCode: {
         id: 'llama-code',
         title: 'Llama 3.3 Code: Detaillierte Analyse',
-        content: 'Llama 3.3 Code ist die Ökosystem-Wahl — wenn Sie bereits Llama 3.1 / 3.2 laufen, Zahlen Sie nicht die Schmerz-Kosten eines vollständigen Ökosystem-Wechsels.',
+        content: 'Llama 3.3 Code ist die Ökosystem-Wahl — wenn Sie bereits Llama 3.3 / 3.2 laufen, Zahlen Sie nicht die Schmerz-Kosten eines vollständigen Ökosystem-Wechsels.',
         items: [
           '**Warum nicht Standard-Pick?** Coding-Performance ist ein Schritt hinter Qwen3-Coder (~87% HumanEval+ vs ~92%). Es ist nicht schlecht, aber nicht das beste.',
           '**Wann wählen?** Sie haben bereits Llama-Tooling, Fine-Tunes, oder Deployments in Production. Der Ökosystem-Schmerz überwiegt den Performance-Nachteil.',
-          '**Lizenz?** Llama 2 Community License — Non-Commercial-Sektion ist komplizierter als Apache 2.0. Meta hat später clarified, dass ML Inference non-commercial nicht bedeutet, aber es ist komplexer.',
+          '**Lizenz?** Llama 3.3 Community License — Non-Commercial-Sektion ist komplizierter als Apache 2.0. Meta hat später clarified, dass ML Inference non-commercial nicht bedeutet, aber es ist komplexer.',
         ],
         image: '/images/best-local-coding-models-2026-decision-tree-de.svg',
         imageCaption: 'Sechs-Fragen-Entscheidungsbaum zur Wahl des richtigen lokalen Coding-Modells: VRAM zuerst, dann Lizenz, Kontext, Agent-Stabilität, Sprachen-Breite und schließlich Geschwindigkeit vs. Qualität.',
@@ -727,8 +727,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modelle, die nicht funktionieren',
         content: 'Es gibt auch Modelle, die nicht für lokale Coding gut sind — entweder aus Performance, Lizenz oder praktischen Gründen.',
         items: [
-          '**Llama 2 Code (älter)** — Vorgänger zu Llama 3.3 Code. Performance ist älter; nur wählen wenn Sie sehr old Tooling haben.',
-          '**Mistral 7B ohne Code-Training** — Generales Mistral 7B, nicht für Coding optimiert. Wenn Sie Mistral brauchen, verwenden Sie Codestral, nicht generales Mistral.',
+          '**Llama 3.3 Code (älter)** — Vorgänger zu Llama 3.3 Code. Performance ist älter; nur wählen wenn Sie sehr old Tooling haben.',
+          '**Mistral Small ohne Code-Training** — Generales Mistral Small, nicht für Coding optimiert. Wenn Sie Mistral brauchen, verwenden Sie Codestral, nicht generales Mistral.',
           '**Phi-3 5B / 3.8B** — Zu klein für echte Coding. Auto-Complete Szenarios nur.',
           '**ONNX-konvertierte Modelle ohne explizites Code-Training** — Manche Leute konvertieren GPT-J oder andere zu ONNX und sagen "lokales Coding", aber ohne Code-Training werden Sie Halluzinationen sehen.',
         ],
@@ -1052,7 +1052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modèle': 'Qwen3-Coder 30B', 'Taille': '30B', 'Contexte': '256K', 'License': 'Apache 2.0', 'Direction HumanEval+': 'Menant', 'Meilleure caractéristique': 'Balance performance-taille', 'VRAM Q4_K_M': '~18 GB' },
           { 'Modèle': 'DeepSeek Coder V3', 'Taille': '236B (MoE)', 'Contexte': '128K', 'License': 'Mistral', 'Direction HumanEval+': 'Top-Tier', 'Meilleure caractéristique': 'Fenêtre contexte plus longue', 'VRAM Q4_K_M': '~48 GB (tronqué)' },
           { 'Modèle': 'Codestral 22B', 'Taille': '22B', 'Contexte': '32K', 'License': 'Mistral Commercial', 'Direction HumanEval+': 'Bon', 'Meilleure caractéristique': 'Inférence la plus rapide', 'VRAM Q4_K_M': '~13 GB' },
-          { 'Modèle': 'Llama 3.3 Code', 'Taille': '70B', 'Contexte': '8K', 'License': 'Llama 2', 'Direction HumanEval+': 'Solide', 'Meilleure caractéristique': 'Compatibilité écosystème', 'VRAM Q4_K_M': '~42 GB' },
+          { 'Modèle': 'Llama 3.3 Code', 'Taille': '70B', 'Contexte': '8K', 'License': 'Llama 3.3', 'Direction HumanEval+': 'Solide', 'Meilleure caractéristique': 'Compatibilité écosystème', 'VRAM Q4_K_M': '~42 GB' },
           { 'Modèle': 'Granite Code 34B', 'Taille': '34B', 'Contexte': '8K', 'License': 'Apache 2.0', 'Direction HumanEval+': 'Bon', 'Meilleure caractéristique': 'License enterprise (IBM)', 'VRAM Q4_K_M': '~20 GB' },
           { 'Modèle': 'StarCoder 2 15B', 'Taille': '15B', 'Contexte': '16K', 'License': 'BigCode Open RAIL', 'Direction HumanEval+': 'Solide', 'Meilleure caractéristique': 'Couverture langage', 'VRAM Q4_K_M': '~9 GB' },
         ],
@@ -1124,11 +1124,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       llamaCode: {
         id: 'llama-code',
         title: 'Llama 3.3 Code : Analyse approfondie',
-        content: 'Llama 3.3 Code est le choix écosystème — si vous déjà Llama 3.1 / 3.2 running, vous paieriez coûts-pain ecosystem-complet switch.',
+        content: 'Llama 3.3 Code est le choix écosystème — si vous déjà Llama 3.3 / 3.2 running, vous paieriez coûts-pain ecosystem-complet switch.',
         items: [
           '**Pourquoi pas choix standard ?** Performance codage est step-back derrière Qwen3-Coder (~87% HumanEval+ vs ~92%). C\'est pas mauvais, mais pas meilleur.',
           '**Quand choisir ?** Vous avez déjà Llama-tooling, fine-tunes, ou production deployments. Les douleurs écosystème outweigh le performance-nachteil.',
-          '**License ?** Llama 2 Community License — Non-Commercial section est plus compliqué qu\'Apache 2.0. Meta a après clarified qu\'inférence ML non-commercial non veut dire, mais c\'est plus complexe.',
+          '**License ?** Llama 3.3 Community License — Non-Commercial section est plus compliqué qu\'Apache 2.0. Meta a après clarified qu\'inférence ML non-commercial non veut dire, mais c\'est plus complexe.',
         ],
         image: '/images/best-local-coding-models-2026-decision-tree-fr.svg',
         imageCaption: 'Arbre de décision en six questions pour choisir le bon modèle de codage local : VRAM d\'abord, puis licence, contexte, fiabilité agent, couverture linguistique et vitesse vs qualité.',
@@ -1158,8 +1158,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modèles qui ne fonctionnent pas',
         content: 'Il y a aussi modèles non-good pour codage local — soit par performance, licence, ou raisons pratiques.',
         items: [
-          '**Llama 2 Code (plus ancien)** — Prédécesseur à Llama 3.3 Code. Performance est vieil; choisir seulement si très vieux tooling.',
-          '**Mistral 7B sans Code-Training** — Mistral 7B général, non optimisé pour codage. Si vous besoin Mistral, utiliser Codestral, non Mistral général.',
+          '**Llama 3.3 Code (plus ancien)** — Prédécesseur à Llama 3.3 Code. Performance est vieil; choisir seulement si très vieux tooling.',
+          '**Mistral Small sans Code-Training** — Mistral Small général, non optimisé pour codage. Si vous besoin Mistral, utiliser Codestral, non Mistral général.',
           '**Phi-3 5B / 3.8B** — Trop petit pour vrai codage. Auto-complete scenarios seulement.',
           '**ONNX-converted Modèles sans code-training explicite** — Quelques gens convertissent GPT-J ou autres à ONNX et disent "codage local", mais sans code-training vous verrez hallucinations.',
         ],
@@ -1588,7 +1588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '24GB GPUで、Qwen3-Coder 30BをチャットAIエージェントロール向けQ4_K_Mで実行し、Qwen2.5-Coder 1.5BをQ4_K_Mで個別自動補完プロセスとして実行してください。合計VRAM：～19GB。分割は自動補完遅延を200ms未満に保ちながら、より大きいモデルはチャット内の非自明な作業を処理できます。',
+            text: '24GB GPUで、Qwen3-Coder 30BをチャットAIエージェントロール向けQ4_K_Mで実行し、Qwen3-Coder 1.5BをQ4_K_Mで個別自動補完プロセスとして実行してください。合計VRAM：～19GB。分割は自動補完遅延を200ms未満に保ちながら、より大きいモデルはチャット内の非自明な作業を処理できます。',
           },
         ],
       },
@@ -2106,7 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '在24GB GPU上，在聊天/代理角色的Q4_K_M中运行Qwen3-Coder 30B，并在Q4_K_M中运行Qwen2.5-Coder 1.5B作为单独的自动补完过程。总VRAM：～19GB。分割使自动补完延迟保持在200毫秒以下，而较大的模型处理聊天中的非平凡工作。',
+            text: '在24GB GPU上，在聊天/代理角色的Q4_K_M中运行Qwen3-Coder 30B，并在Q4_K_M中运行Qwen3-Coder 1.5B作为单独的自动补完过程。总VRAM：～19GB。分割使自动补完延迟保持在200毫秒以下，而较大的模型处理聊天中的非平凡工作。',
           },
         ],
       },
@@ -2624,7 +2624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'En una GPU de 24 GB, ejecuta Qwen3-Coder 30B con Q4_K_M para el rol de chat/agente y Qwen2.5-Coder 1.5B con Q4_K_M como proceso de autocompletado independiente. VRAM total: ~19 GB. La división mantiene la latencia del autocompletado por debajo de 200 ms mientras el modelo grande gestiona el trabajo no trivial en el chat.',
+            text: 'En una GPU de 24 GB, ejecuta Qwen3-Coder 30B con Q4_K_M para el rol de chat/agente y Qwen3-Coder 1.5B con Q4_K_M como proceso de autocompletado independiente. VRAM total: ~19 GB. La división mantiene la latencia del autocompletado por debajo de 200 ms mientras el modelo grande gestiona el trabajo no trivial en el chat.',
           },
         ],
       },

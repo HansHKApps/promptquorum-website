@@ -480,7 +480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Schritt-für-Schritt: Ollama installieren, AnythingLLM einrichten, PDFs hochladen, chatten. Gesamtzeit 30 Minuten. Getestet auf 16-GB-RAM-Laptop. Mai 2026.',
     twitterDescription:
       '30 Minuten vom leeren Laptop bis zum Chatten mit deinen eigenen PDFs. Ollama + Llama 3.3 8B + AnythingLLM + nomic-embed-text. Getestet auf 16 GB RAM.',
-    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral 7B'],
+    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral Small'],
     current_hardware_mentioned: ['16 GB RAM Laptop', 'Apple M1', 'Apple M3', 'Intel Core Ultra 5', 'AMD Ryzen 7 7700'],
     audience: 'Entwickler und Power User, die ein funktionsfähiges persönliches RAG-System auf ihrem Laptop benötigen, ohne auf eine Cloud-API angewiesen zu sein.',
     readTime: '12 Min. Lesezeit',
@@ -626,7 +626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-de.svg',
-        imageCaption: 'Modelloptionen nach RAM: Llama 3.3 8B Q4_K_M (~4,9 GB, 16 GB RAM, ~8 Min. bei 50 Mbps) empfohlen; Phi-4 Mini Q4 (~2,4 GB, 8 GB RAM) für wenig RAM; Mistral 7B Q4_K_M (~4,1 GB, 16 GB RAM) als Alternative.',
+        imageCaption: 'Modelloptionen nach RAM: Llama 3.3 8B Q4_K_M (~4,9 GB, 16 GB RAM, ~8 Min. bei 50 Mbps) empfohlen; Phi-4 Mini Q4 (~2,4 GB, 8 GB RAM) für wenig RAM; Mistral Small Q4_K_M (~4,1 GB, 16 GB RAM) als Alternative.',
       },
       step3InstallAnythingLlm: {
         id: 'step-3-install-anythingllm',
@@ -847,7 +847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sollte ich ein anderes Modell als Llama 3.3 8B verwenden?',
-            a: 'Llama 3.3 8B Q4_K_M ist das beste Qualitäts-pro-RAM-Verhältnis 2026 für 16 GB Systeme. Auf 8 GB RAM verwende Phi-4 Mini Q4_K_M (~2,4 GB). Auf 24 GB+ probiere Qwen 2.5 14B Q4 für merklich bessere Synthese bei langen Dokumenten. Für mehrsprachige Arbeitsbereiche, Mistral Nemo 12B behandelt Nicht-Englisch besser als Llama 3.3.',
+            a: 'Llama 3.3 8B Q4_K_M ist das beste Qualitäts-pro-RAM-Verhältnis 2026 für 16 GB Systeme. Auf 8 GB RAM verwende Phi-4 Mini Q4_K_M (~2,4 GB). Auf 24 GB+ probiere Qwen 3 14B Q4 für merklich bessere Synthese bei langen Dokumenten. Für mehrsprachige Arbeitsbereiche, Mistral Nemo 12B behandelt Nicht-Englisch besser als Llama 3.3.',
           },
           {
             q: 'Wie aktualisiere ich das Modell später?',
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Étape par étape: installer Ollama, configurer AnythingLLM, charger des PDFs, discuter. Temps total 30 minutes. Testé sur portable 16 GB. Mai 2026.',
     twitterDescription:
       '30 minutes du portable vierge au chat avec vos propres PDFs. Ollama + Llama 3.3 8B + AnythingLLM + nomic-embed-text. Testé sur 16 GB.',
-    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral 7B'],
+    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral Small'],
     current_hardware_mentioned: ['Portable 16 GB RAM', 'Apple M1', 'Apple M3', 'Intel Core Ultra 5', 'AMD Ryzen 7 7700'],
     audience: 'Développeurs et utilisateurs avancés qui souhaitent un système RAG personnel fonctionnel sur leur portable, sans dépendre d\'une API cloud.',
     readTime: '11 min de lecture',
@@ -1106,7 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-fr.svg',
-        imageCaption: 'Options de modèles par RAM : Llama 3.3 8B Q4_K_M (~4,9 Go, 16 Go RAM, ~8 min à 50 Mbps) recommandé ; Phi-4 Mini Q4 (~2,4 Go, 8 Go RAM) pour peu de RAM ; Mistral 7B Q4_K_M (~4,1 Go, 16 Go RAM) en alternative.',
+        imageCaption: 'Options de modèles par RAM : Llama 3.3 8B Q4_K_M (~4,9 Go, 16 Go RAM, ~8 min à 50 Mbps) recommandé ; Phi-4 Mini Q4 (~2,4 Go, 8 Go RAM) pour peu de RAM ; Mistral Small Q4_K_M (~4,1 Go, 16 Go RAM) en alternative.',
       },
       step3InstallAnythingLlm: {
         id: 'step-3-install-anythingllm',
@@ -1327,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Devrais-je utiliser un modèle différent de Llama 3.3 8B?',
-            a: 'Llama 3.3 8B Q4_K_M est le meilleur tradeoff qualité-par-RAM 2026 pour systèmes 16 Go. Sur 8 Go RAM, utilisez Phi-4 Mini Q4_K_M (~2,4 Go). Sur 24 Go+, essayez Qwen 2.5 14B Q4 pour synthèse notablement meilleure sur longs documents. Pour charges-travail multilingues, Mistral Nemo 12B traite mieux non-English que Llama 3.3.',
+            a: 'Llama 3.3 8B Q4_K_M est le meilleur tradeoff qualité-par-RAM 2026 pour systèmes 16 Go. Sur 8 Go RAM, utilisez Phi-4 Mini Q4_K_M (~2,4 Go). Sur 24 Go+, essayez Qwen 3 14B Q4 pour synthèse notablement meilleure sur longs documents. Pour charges-travail multilingues, Mistral Nemo 12B traite mieux non-English que Llama 3.3.',
           },
           {
             q: 'Comment mets-à-jour le modèle après?',
@@ -1432,7 +1432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ステップバイステップ: Ollama をインストール、AnythingLLM を設定、PDF をアップロード、チャット。合計時間 30分。16GB ノートパソコンで検証。2026年5月。',
     twitterDescription:
       '空のノートパソコンから PDF とのチャットまで 30 分。Ollama + Llama 3.3 8B + AnythingLLM + nomic-embed-text。16GB RAM で検証済み。',
-    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral 7B'],
+    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral Small'],
     current_hardware_mentioned: ['16GB RAM ノートパソコン', 'Apple M1', 'Apple M3', 'Intel Core Ultra 5', 'AMD Ryzen 7 7700'],
     audience: 'クラウド API に依存せず、ノートパソコン上で動作するパーソナルRAGシステムが必要な開発者とパワーユーザー。',
     readTime: '12分で読める',
@@ -1578,7 +1578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-ja.svg',
-        imageCaption: 'RAM別モデルオプション: Llama 3.3 8B Q4_K_M (~4.9GB, 16GB RAM, 50Mbpsで~8分) 推奨; Phi-4 Mini Q4 (~2.4GB, 8GB RAM) 低メモリ向け; Mistral 7B Q4_K_M (~4.1GB, 16GB RAM) 代替案。',
+        imageCaption: 'RAM別モデルオプション: Llama 3.3 8B Q4_K_M (~4.9GB, 16GB RAM, 50Mbpsで~8分) 推奨; Phi-4 Mini Q4 (~2.4GB, 8GB RAM) 低メモリ向け; Mistral Small Q4_K_M (~4.1GB, 16GB RAM) 代替案。',
       },
       step3InstallAnythingLlm: {
         id: 'step-3-install-anythingllm',
@@ -1799,7 +1799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Llama 3.3 8B 以外のモデルを使うべき?',
-            a: 'Llama 3.3 8B Q4_K_M は 16GB system での 2026 best quality-per-RAM tradeoff。8GB RAM では Phi-4 Mini Q4_K_M (~2.4GB)。24GB+ では Qwen 2.5 14B Q4 for notably better synthesis on long document。Multilingual workload は Mistral Nemo 12B が non-English より優秀 (Llama 3.3 より)。',
+            a: 'Llama 3.3 8B Q4_K_M は 16GB system での 2026 best quality-per-RAM tradeoff。8GB RAM では Phi-4 Mini Q4_K_M (~2.4GB)。24GB+ では Qwen 3 14B Q4 for notably better synthesis on long document。Multilingual workload は Mistral Nemo 12B が non-English より優秀 (Llama 3.3 より)。',
           },
           {
             q: '後でモデルを update する方法は?',
@@ -1908,7 +1908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '分步教程：安装 Ollama，配置 AnythingLLM，导入 PDF，即可对话。全程30分钟，在16 GB内存笔记本上测试验证。2026年5月。',
     twitterDescription:
       '30分钟从空笔记本到与自己的PDF对话。Ollama + Llama 3.3 8B + AnythingLLM + nomic-embed-text。在16 GB内存上测试验证。',
-    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral 7B'],
+    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral Small'],
     current_hardware_mentioned: ['16 GB内存笔记本', 'Apple M1', 'Apple M3', 'Intel Core Ultra 5', 'AMD Ryzen 7 7700'],
     audience: '希望在自己笔记本上搭建可用个人RAG系统、无需依赖云端API的开发者和高级用户。',
     readTime: '约12分钟阅读',
@@ -2054,7 +2054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-zh.svg',
-        imageCaption: '按内存选择模型: Llama 3.3 8B Q4_K_M (~4.9GB, 16GB内存, 50Mbps约8分钟) 推荐; Phi-4 Mini Q4 (~2.4GB, 8GB内存) 低内存方案; Mistral 7B Q4_K_M (~4.1GB, 16GB内存) 备选。',
+        imageCaption: '按内存选择模型: Llama 3.3 8B Q4_K_M (~4.9GB, 16GB内存, 50Mbps约8分钟) 推荐; Phi-4 Mini Q4 (~2.4GB, 8GB内存) 低内存方案; Mistral Small Q4_K_M (~4.1GB, 16GB内存) 备选。',
       },
       step3InstallAnythingLlm: {
         id: 'step-3-install-anythingllm',
@@ -2264,7 +2264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '应该使用 Llama 3.3 8B 以外的模型吗？',
-            a: 'Llama 3.3 8B Q4_K_M 是2026年16 GB系统上质量与内存比的最佳选择。8 GB内存使用 Phi-4 Mini Q4_K_M（约2.4 GB）。24 GB+可尝试 Qwen 2.5 14B Q4，长文档综合能力明显更强。多语言工作负载下，Mistral Nemo 12B 处理非英语内容优于 Llama 3.3。',
+            a: 'Llama 3.3 8B Q4_K_M 是2026年16 GB系统上质量与内存比的最佳选择。8 GB内存使用 Phi-4 Mini Q4_K_M（约2.4 GB）。24 GB+可尝试 Qwen 3 14B Q4，长文档综合能力明显更强。多语言工作负载下，Mistral Nemo 12B 处理非英语内容优于 Llama 3.3。',
           },
           {
             q: '以后如何更新模型？',
@@ -2369,7 +2369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Paso a paso: instala Ollama, configura AnythingLLM, sube PDFs y chatea con ellos. Tiempo total 30 minutos. Probado en portátil con 16 GB de RAM. Mayo 2026.',
     twitterDescription:
       '30 minutos desde un portátil vacío hasta chatear con tus propios PDFs. Ollama + Llama 3.3 8B + AnythingLLM + nomic-embed-text. Probado con 16 GB de RAM.',
-    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral 7B'],
+    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral Small'],
     current_hardware_mentioned: ['portátil con 16 GB de RAM', 'Apple M1', 'Apple M3', 'Intel Core Ultra 5', 'AMD Ryzen 7 7700'],
     audience: 'Desarrolladores y usuarios avanzados que quieren un sistema RAG personal funcional en su propio portátil, sin depender de una API en la nube.',
     readTime: '12 min de lectura',
@@ -2515,7 +2515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-es.svg',
-        imageCaption: 'Opciones de modelo por RAM: Llama 3.3 8B Q4_K_M (~4,9 GB, 16 GB de RAM, ~8 min a 50 Mbps) es el recomendado; Phi-4 Mini Q4 (~2,4 GB, 8 GB de RAM, ~4 min) para equipos con poca memoria; Mistral 7B Q4_K_M (~4,1 GB, 16 GB de RAM, ~7 min) como alternativa.',
+        imageCaption: 'Opciones de modelo por RAM: Llama 3.3 8B Q4_K_M (~4,9 GB, 16 GB de RAM, ~8 min a 50 Mbps) es el recomendado; Phi-4 Mini Q4 (~2,4 GB, 8 GB de RAM, ~4 min) para equipos con poca memoria; Mistral Small Q4_K_M (~4,1 GB, 16 GB de RAM, ~7 min) como alternativa.',
       },
       step3InstallAnythingLlm: {
         id: 'step-3-install-anythingllm',
@@ -2736,7 +2736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Debería usar un modelo diferente a Llama 3.3 8B?',
-            a: 'Llama 3.3 8B Q4_K_M es la mejor relación calidad-RAM en 2026 para sistemas con 16 GB. Con 8 GB de RAM usa Phi-4 Mini Q4_K_M (~2,4 GB). Con 24 GB o más, prueba Qwen 2.5 14B Q4 para una síntesis notablemente mejor en documentos largos. Para cargas de trabajo multilingüe, Mistral Nemo 12B maneja mejor el contenido que no está en inglés que Llama 3.3.',
+            a: 'Llama 3.3 8B Q4_K_M es la mejor relación calidad-RAM en 2026 para sistemas con 16 GB. Con 8 GB de RAM usa Phi-4 Mini Q4_K_M (~2,4 GB). Con 24 GB o más, prueba Qwen 3 14B Q4 para una síntesis notablemente mejor en documentos largos. Para cargas de trabajo multilingüe, Mistral Nemo 12B maneja mejor el contenido que no está en inglés que Llama 3.3.',
           },
           {
             q: '¿Cómo actualizo el modelo más adelante?',

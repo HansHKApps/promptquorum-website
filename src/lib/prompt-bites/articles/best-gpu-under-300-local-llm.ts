@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Beste Wahl: gebrauchte NVIDIA RTX 3060 12 GB',
         content: [
-          '<strong>Die gebrauchte NVIDIA RTX 3060 12 GB ist die beste GPU unter 300 € für lokale LLMs, weil 12 GB VRAM plus CUDA-Unterstützung ohne Einrichtungsaufwand in Minuten ein funktionierendes LLM-System ergeben.</strong> Auf dem deutschen Gebrauchtmarkt führt sie Mistral 7B, Llama 3 8B und Qwen3 8B mit 15-20 Token pro Sekunde aus und die meisten 13B-Modelle bei Q4.',
+          '<strong>Die gebrauchte NVIDIA RTX 3060 12 GB ist die beste GPU unter 300 € für lokale LLMs, weil 12 GB VRAM plus CUDA-Unterstützung ohne Einrichtungsaufwand in Minuten ein funktionierendes LLM-System ergeben.</strong> Auf dem deutschen Gebrauchtmarkt führt sie Mistral Small, Llama 3 8B und Qwen3 8B mit 15-20 Token pro Sekunde aus und die meisten 13B-Modelle bei Q4.',
           'Die RTX 3060 gewinnt bei der Software. Ollama und llama.cpp erkennen NVIDIA-GPUs unter Windows und Linux automatisch über CUDA — keine Treibersuche, kein ROCm. Die AMD RX 6700 XT erreicht dieselbe 12-GB-Kapazität, doch die ROCm-Einrichtung unter Linux kostet typischerweise 3-5 Stunden und wird unter Windows für schnelle Inferenz nicht unterstützt.',
           'Wählen Sie die RX 6700 XT nur, wenn das Budget der einzige Entscheidungsfaktor ist und Sie sich mit Linux wohlfühlen. Für alle anderen ist die RTX 3060 12 GB die sicherere erste GPU. Vermeiden Sie die 6-GB-Variante — sie sieht in Anzeigen identisch aus, passt aber nur für 3B-Modelle.',
         ],
@@ -376,7 +376,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Meilleur choix : NVIDIA RTX 3060 12 GB d\'occasion',
         content: [
-          '<strong>La NVIDIA RTX 3060 12 GB d\'occasion est le meilleur GPU sous 300 € pour les LLM locaux : 12 GB de VRAM et CUDA sans configuration donnent un poste LLM opérationnel en quelques minutes.</strong> Elle exécute Mistral 7B, Llama 3 8B et Qwen3 8B à 15-20 tokens par seconde, et la plupart des 13B en Q4.',
+          '<strong>La NVIDIA RTX 3060 12 GB d\'occasion est le meilleur GPU sous 300 € pour les LLM locaux : 12 GB de VRAM et CUDA sans configuration donnent un poste LLM opérationnel en quelques minutes.</strong> Elle exécute Mistral Small, Llama 3 8B et Qwen3 8B à 15-20 tokens par seconde, et la plupart des 13B en Q4.',
           'La RTX 3060 gagne sur le logiciel. Ollama et llama.cpp détectent les GPU NVIDIA automatiquement via CUDA sous Windows et Linux — pas de chasse aux pilotes, pas de ROCm. La AMD RX 6700 XT offre la même capacité de 12 GB, mais ROCm sous Linux coûte typiquement 3 à 5 heures et n\'est pas pris en charge sous Windows pour une inférence rapide.',
           'Choisissez la RX 6700 XT uniquement si le budget est le seul critère et que Linux ne vous gêne pas. Sinon, la RTX 3060 12 GB est le premier GPU plus sûr. Évitez la variante 6 GB — elle semble identique en annonce mais ne tient que les modèles 3B.',
         ],
@@ -516,7 +516,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'ベストピック：中古NVIDIA RTX 3060 12 GB',
         content: [
-          '<strong>中古のNVIDIA RTX 3060 12 GBは予算重視のローカルLLM向けに最適なGPUです。12 GBのVRAMと設定不要のCUDA対応で、数分でLLM環境が完成します。</strong> Mistral 7B、Llama 3 8B、Qwen3 8Bを毎秒15〜20トークンで動かし、ほとんどの13BモデルもQ4で動作します。',
+          '<strong>中古のNVIDIA RTX 3060 12 GBは予算重視のローカルLLM向けに最適なGPUです。12 GBのVRAMと設定不要のCUDA対応で、数分でLLM環境が完成します。</strong> Mistral Small、Llama 3 8B、Qwen3 8Bを毎秒15〜20トークンで動かし、ほとんどの13BモデルもQ4で動作します。',
           'RTX 3060はソフトウェア面で優れています。WindowsとLinuxの両方でOllamaとllama.cppがCUDAを介してNVIDIA GPUを自動検出します — ドライバ探しもROCm設定も不要です。AMD RX 6700 XTは12 GBの容量こそ同じですが、LinuxでのROCm設定は通常3〜5時間かかり、Windowsでは高速推論に対応していません。',
           'RX 6700 XTは予算が唯一の決定要因でLinuxに慣れている場合にのみ選んでください。それ以外の方にはRTX 3060 12 GBが安全な選択です。RTX 3060の6 GB版はリスト上で見分けがつきにくいですが、3Bモデルしか動かないので避けてください。',
         ],
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: '最佳选择:二手NVIDIA RTX 3060 12 GB',
         content: [
-          '<strong>二手NVIDIA RTX 3060 12 GB是低预算本地LLM的最佳GPU:12 GB VRAM加零配置CUDA,几分钟搭好LLM工作机。</strong>该卡可运行Mistral 7B、Llama 3 8B、Qwen3 8B,速度15-20 tokens/秒,大多数13B模型在Q4下也能跑。',
+          '<strong>二手NVIDIA RTX 3060 12 GB是低预算本地LLM的最佳GPU:12 GB VRAM加零配置CUDA,几分钟搭好LLM工作机。</strong>该卡可运行Mistral Small、Llama 3 8B、Qwen3 8B,速度15-20 tokens/秒,大多数13B模型在Q4下也能跑。',
           'RTX 3060在软件上胜出。Windows和Linux下,Ollama与llama.cpp通过CUDA自动识别NVIDIA GPU — 无需找驱动,无需ROCm。AMD RX 6700 XT同样12 GB,但Linux下ROCm配置通常需3-5小时,Windows下不支持高速推理。',
           '仅当预算是唯一决定因素且您习惯Linux时,选RX 6700 XT。否则RTX 3060 12 GB是更稳妥的入门卡。避开6 GB版RTX 3060 — 列表外观相同,但只能跑3B。',
         ],
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Mejor opción: NVIDIA RTX 3060 12 GB usada',
         content: [
-          '<strong>La NVIDIA RTX 3060 12 GB usada es la mejor GPU por menos de $300 para LLMs locales porque 12 GB de VRAM más soporte CUDA sin configuración te dan un equipo LLM funcional en minutos.</strong> A $150-250 en el mercado de segunda mano de mayo de 2026, ejecuta Mistral 7B, Llama 3 8B y Qwen3 8B a 15-20 tokens por segundo, y la mayoría de los modelos 13B en Q4.',
+          '<strong>La NVIDIA RTX 3060 12 GB usada es la mejor GPU por menos de $300 para LLMs locales porque 12 GB de VRAM más soporte CUDA sin configuración te dan un equipo LLM funcional en minutos.</strong> A $150-250 en el mercado de segunda mano de mayo de 2026, ejecuta Mistral Small, Llama 3 8B y Qwen3 8B a 15-20 tokens por segundo, y la mayoría de los modelos 13B en Q4.',
           'La RTX 3060 gana en software. Ollama y llama.cpp detectan las GPU NVIDIA vía CUDA automáticamente en Windows y Linux — sin buscar drivers, sin ROCm. La AMD RX 6700 XT ($130-200 usada) ahorra $30-80 y tiene la misma capacidad de 12 GB, pero la configuración de ROCm en Linux suele costar 3-5 horas y no está soportada en Windows para inferencia rápida.',
           'Elige la RX 6700 XT solo si el presupuesto es el único factor decisivo y te manejas bien en Linux. Para todos los demás, la RTX 3060 12 GB es la primera GPU más segura. Evita la variante de 6 GB de la RTX 3060 — parece idéntica en los listados pero solo cabe modelos 3B.',
         ],

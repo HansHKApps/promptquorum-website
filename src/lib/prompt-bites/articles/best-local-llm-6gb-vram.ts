@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     title: 'Bestes lokales LLM für 6 GB VRAM?',
     seoTitle: 'Lokales LLM für 6 GB VRAM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M (5,5 GB) ist die erste Wahl für 6 GB VRAM. Phi-4 Q4 und Mistral 7B Q4_K_S sind solide Alternativen. Schnelle Antwort von PromptQuorum.',
+    metaDescription: 'Llama 3 8B Q4_K_M (5,5 GB) ist die erste Wahl für 6 GB VRAM. Phi-4 Q4 und Mistral Small Q4_K_S sind solide Alternativen. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -163,7 +163,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'Modell': 'Llama 3 8B Q4_K_M', 'VRAM': '5,5 GB', 'Anwendungsbereich': 'Allgemeiner Chat, Coding' },
           { 'Modell': 'Phi-4 Q4_K_M', 'VRAM': '5,0 GB', 'Anwendungsbereich': 'Anweisungen, Reasoning' },
-          { 'Modell': 'Mistral 7B Q4_K_S', 'VRAM': '4,5 GB', 'Anwendungsbereich': 'Geschwindigkeitspriorisierte Aufgaben' },
+          { 'Modell': 'Mistral Small Q4_K_S', 'VRAM': '4,5 GB', 'Anwendungsbereich': 'Geschwindigkeitspriorisierte Aufgaben' },
         ],
       },
       body2: {
@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     title: 'Meilleur LLM local pour 6 Go de VRAM ?',
     seoTitle: '6 Go VRAM : meilleur LLM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M (5,5 Go) est le premier choix pour 6 Go de VRAM. Phi-4 Q4 et Mistral 7B Q4_K_S sont des alternatives. Réponse rapide par PromptQuorum.',
+    metaDescription: 'Llama 3 8B Q4_K_M (5,5 Go) est le premier choix pour 6 Go de VRAM. Phi-4 Q4 et Mistral Small Q4_K_S sont des alternatives. Réponse rapide par PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -227,7 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'Modèle': 'Llama 3 8B Q4_K_M', 'VRAM': '5,5 Go', 'Usage optimal': 'Chat général, code' },
           { 'Modèle': 'Phi-4 Q4_K_M', 'VRAM': '5,0 Go', 'Usage optimal': 'Instructions, raisonnement' },
-          { 'Modèle': 'Mistral 7B Q4_K_S', 'VRAM': '4,5 Go', 'Usage optimal': 'Tâches priorité vitesse' },
+          { 'Modèle': 'Mistral Small Q4_K_S', 'VRAM': '4,5 Go', 'Usage optimal': 'Tâches priorité vitesse' },
         ],
       },
       body2: {
@@ -267,7 +267,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     title: '6 GB VRAMに最適なローカルLLMは？',
     seoTitle: '6 GB VRAM向け最適ローカルLLM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M（5.5 GB）が6 GB VRAMの最有力候補です。Phi-4 Q4_K_MとMistral 7B Q4_K_Sも優れた代替選択肢です。PromptQuorumの解説。',
+    metaDescription: 'Llama 3 8B Q4_K_M（5.5 GB）が6 GB VRAMの最有力候補です。Phi-4 Q4_K_MとMistral Small Q4_K_Sも優れた代替選択肢です。PromptQuorumの解説。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'モデル': 'Llama 3 8B Q4_K_M', 'VRAM': '5.5 GB', '最適な用途': '汎用チャット、コーディング' },
           { 'モデル': 'Phi-4 Q4_K_M', 'VRAM': '5.0 GB', '最適な用途': '指示追従、推論' },
-          { 'モデル': 'Mistral 7B Q4_K_S', 'VRAM': '4.5 GB', '最適な用途': '速度優先タスク' },
+          { 'モデル': 'Mistral Small Q4_K_S', 'VRAM': '4.5 GB', '最適な用途': '速度優先タスク' },
         ],
       },
       body2: {
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     title: '6 GB显存最佳本地LLM是什么？',
     seoTitle: '6 GB显存最佳本地LLM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M（5.5 GB）是6 GB显存的首选。Phi-4 Q4_K_M和Mistral 7B Q4_K_S是可靠的备选方案。PromptQuorum快速解答。',
+    metaDescription: 'Llama 3 8B Q4_K_M（5.5 GB）是6 GB显存的首选。Phi-4 Q4_K_M和Mistral Small Q4_K_S是可靠的备选方案。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '模型': 'Llama 3 8B Q4_K_M', '显存': '5.5 GB', '适用场景': '通用聊天、编程' },
           { '模型': 'Phi-4 Q4_K_M', '显存': '5.0 GB', '适用场景': '指令执行、推理' },
-          { '模型': 'Mistral 7B Q4_K_S', '显存': '4.5 GB', '适用场景': '速度优先任务' },
+          { '模型': 'Mistral Small Q4_K_S', '显存': '4.5 GB', '适用场景': '速度优先任务' },
         ],
       },
       body2: {
@@ -395,18 +395,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     title: '¿Mejor LLM local para 6 GB de VRAM?',
     seoTitle: '6 GB VRAM: mejor LLM local 2026 | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M (5,5 GB) es la mejor opción para 6 GB de VRAM. Phi-4 Q4 y Mistral 7B Q4_K_S son alternativas sólidas. Respuesta rápida de PromptQuorum.',
+    metaDescription: 'Llama 3 8B Q4_K_M (5,5 GB) es la mejor opción para 6 GB de VRAM. Phi-4 Q4 y Mistral Small Q4_K_S son alternativas sólidas. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       es: {
         question: '¿Mejor LLM local para 6 GB de VRAM?',
-        answer: 'Con 6 GB de VRAM, Llama 3 8B Q4_K_M es la mejor opción con ~5,5 GB, con excelentes capacidades de chat y programación a ~20 tok/s. Phi-4 Q4_K_M y Mistral 7B Q4_K_S son alternativas sólidas.',
+        answer: 'Con 6 GB de VRAM, Llama 3 8B Q4_K_M es la mejor opción con ~5,5 GB, con excelentes capacidades de chat y programación a ~20 tok/s. Phi-4 Q4_K_M y Mistral Small Q4_K_S son alternativas sólidas.',
         bullets: [
           'Llama 3 8B Q4_K_M: mejor opción general para 6 GB (5,5 GB VRAM)',
           'Phi-4 Q4_K_M: mejor para seguimiento de instrucciones',
-          'Mistral 7B Q4_K_S: el más rápido en 6 GB',
+          'Mistral Small Q4_K_S: el más rápido en 6 GB',
         ],
         updatedDate: '2026-05',
       },
@@ -431,7 +431,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'Modelo': 'Llama 3 8B Q4_K_M', 'VRAM': '5,5 GB', 'Mejor para': 'Chat general, programación' },
           { 'Modelo': 'Phi-4 Q4_K_M', 'VRAM': '5,0 GB', 'Mejor para': 'Instrucciones, razonamiento' },
-          { 'Modelo': 'Mistral 7B Q4_K_S', 'VRAM': '4,5 GB', 'Mejor para': 'Tareas donde la velocidad es prioritaria' },
+          { 'Modelo': 'Mistral Small Q4_K_S', 'VRAM': '4,5 GB', 'Mejor para': 'Tareas donde la velocidad es prioritaria' },
         ],
       },
       body2: {

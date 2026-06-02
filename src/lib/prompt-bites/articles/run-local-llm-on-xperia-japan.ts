@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
-    current_models_mentioned: ['Rinna 3.6B', 'Phi-4', 'Qwen2.5 3B', 'Gemma 2B', 'TinyLlama'],
+    current_models_mentioned: ['Rinna 3.6B', 'Phi-4', 'Qwen3 3B', 'Gemma 2B', 'TinyLlama'],
     current_hardware_mentioned: ['Xperia 1 VI', 'Xperia 5 V', 'Xperia 10 VI', 'Snapdragon 8 Gen 3', 'Snapdragon 8 Gen 2', 'Snapdragon 6 Gen 1'],
     educationalLevel: 'Intermediate',
     audience: 'Xperia phone owners in Japan wanting to run local LLMs',
@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Can you run a local LLM on an Xperia phone?',
         answer: 'Yes — the Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3) runs Rinna 3.6B and Phi-4 Q4 via MLC Chat. The Xperia 5 V (8 GB) handles lightweight models. The Xperia 10 VI (6 GB) is limited to TinyLlama and Gemma 2B.',
         bullets: [
-          'Xperia 1 VI: 12 GB RAM — runs Phi-4 Q4, Rinna 3.6B, Qwen2.5-3B',
+          'Xperia 1 VI: 12 GB RAM — runs Phi-4 Q4, Rinna 3.6B, Qwen3-3B',
           'Xperia 5 V: 8 GB RAM — runs Rinna 3.6B and Gemma 2B Q4',
           'Xperia 10 VI: 6 GB RAM — TinyLlama and Gemma 2B only',
           'Sony does not include Galaxy AI-style features — local LLM via MLC Chat fills that gap',
@@ -33,7 +33,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Kann man auf einem Xperia ein lokales LLM ausführen?',
         answer: 'Ja — das Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3) kann Rinna 3.6B und Phi-4 Q4 über MLC Chat ausführen. Das Xperia 5 V (8 GB) schafft leichte Modelle. Das Xperia 10 VI (6 GB) läuft nur TinyLlama und Gemma 2B.',
         bullets: [
-          'Xperia 1 VI: 12 GB RAM — läuft Phi-4 Q4, Rinna 3.6B, Qwen2.5-3B',
+          'Xperia 1 VI: 12 GB RAM — läuft Phi-4 Q4, Rinna 3.6B, Qwen3-3B',
           'Xperia 5 V: 8 GB RAM — läuft Rinna 3.6B und Gemma 2B Q4',
           'Xperia 10 VI: 6 GB RAM — nur TinyLlama und Gemma 2B',
           'Sony enthält keine Galaxy-AI-ähnlichen Funktionen — lokale LLM via MLC Chat schließt diese Lücke',
@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Peut-on exécuter un LLM local sur un Xperia ?',
         answer: 'Oui — le Xperia 1 VI (12 Go de RAM, Snapdragon 8 Gen 3) exécute Rinna 3.6B et Phi-4 Q4 via MLC Chat. Le Xperia 5 V (8 Go) gère les modèles légers. Le Xperia 10 VI (6 Go) est limité à TinyLlama et Gemma 2B.',
         bullets: [
-          'Xperia 1 VI : 12 Go de RAM — exécute Phi-4 Q4, Rinna 3.6B, Qwen2.5-3B',
+          'Xperia 1 VI : 12 Go de RAM — exécute Phi-4 Q4, Rinna 3.6B, Qwen3-3B',
           'Xperia 5 V : 8 Go de RAM — exécute Rinna 3.6B et Gemma 2B Q4',
           'Xperia 10 VI : 6 Go de RAM — TinyLlama et Gemma 2B uniquement',
           'Sony n\'inclut pas de fonctionnalités type Galaxy AI — un LLM local via MLC Chat comble ce manque',
@@ -55,7 +55,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'XperiaでローカルLLMを動かせる？',
         answer: 'はい — Xperia 1 VI（12 GB RAM、Snapdragon 8 Gen 3）はMLC Chat経由でRinna 3.6BとPhi-4 Q4を実行できます。Xperia 5 V（8 GB）は軽量モデルに対応。Xperia 10 VI（6 GB）はTinyLlamaとGemma 2Bのみ動作します。',
         bullets: [
-          'Xperia 1 VI：12 GB RAM — Phi-4 Q4、Rinna 3.6B、Qwen2.5-3Bが動作',
+          'Xperia 1 VI：12 GB RAM — Phi-4 Q4、Rinna 3.6B、Qwen3-3Bが動作',
           'Xperia 5 V：8 GB RAM — Rinna 3.6BとGemma 2B Q4に対応',
           'Xperia 10 VI：6 GB RAM — TinyLlamaとGemma 2Bのみ',
           'SonyはGalaxy AIのような機能を搭載していない — MLC Chat経由のローカルLLMがその代替となる',
@@ -66,7 +66,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Xperia手机能运行本地LLM吗？',
         answer: '可以——Xperia 1 VI（12 GB内存，Snapdragon 8 Gen 3）可通过MLC Chat运行Rinna 3.6B和Phi-4 Q4。Xperia 5 V（8 GB）支持轻量模型。Xperia 10 VI（6 GB）仅限TinyLlama和Gemma 2B。',
         bullets: [
-          'Xperia 1 VI：12 GB内存——可运行Phi-4 Q4、Rinna 3.6B、Qwen2.5-3B',
+          'Xperia 1 VI：12 GB内存——可运行Phi-4 Q4、Rinna 3.6B、Qwen3-3B',
           'Xperia 5 V：8 GB内存——可运行Rinna 3.6B和Gemma 2B Q4',
           'Xperia 10 VI：6 GB内存——仅限TinyLlama和Gemma 2B',
           'Sony不包含Galaxy AI类功能——通过MLC Chat运行本地LLM填补了这一空缺',
@@ -79,7 +79,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3) is the only Xperia that reliably runs 7B+ models — use it for Phi-4 Q4 and Qwen2.5-3B',
+          'Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3) is the only Xperia that reliably runs 7B+ models — use it for Phi-4 Q4 and Qwen3-3B',
           'Xperia 5 V (8 GB RAM) handles 3B models including Rinna 3.6B and Gemma 2B Q4 without issues',
           'Xperia 10 VI (6 GB RAM) is limited to sub-2B models — TinyLlama 1.1B and Gemma 2B are the practical ceiling',
           'Sony does not ship on-device AI features — MLC Chat or PocketPal AI from Google Play is the practical replacement',
@@ -90,13 +90,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Xperia Model Compatibility',
         content: [
           '<strong>As of May 2026, three current Xperia models support local LLM inference, with capability determined entirely by RAM and chipset — the Xperia 1 VI leads, the Xperia 5 V covers the mid-range, and the Xperia 10 VI is limited to the smallest models.</strong> Sony does not pre-install on-device AI assistants (unlike Samsung Galaxy AI), so local LLM apps are the only route to private, offline AI on Xperia devices.',
-          'The Xperia 1 VI is the only Xperia capable of running quantized 7B+ models. Its Snapdragon 8 Gen 3 SoC and 12 GB of LPDDR5X RAM give it headroom for Phi-4 Q4 (14B quantized to ~8 GB) and Qwen2.5-3B alongside day-to-day app usage. The Xperia 5 V with Snapdragon 8 Gen 2 and 8 GB RAM is the sweet spot for 3B models — Rinna 3.6B and Gemma 2B Q4 run reliably. The Xperia 10 VI uses the mid-range Snapdragon 6 Gen 1 with only 6 GB RAM; at this tier, stick to TinyLlama 1.1B or Gemma 2B — larger models will crash or OOM during loading.',
+          'The Xperia 1 VI is the only Xperia capable of running quantized 7B+ models. Its Snapdragon 8 Gen 3 SoC and 12 GB of LPDDR5X RAM give it headroom for Phi-4 Q4 (14B quantized to ~8 GB) and Qwen3-3B alongside day-to-day app usage. The Xperia 5 V with Snapdragon 8 Gen 2 and 8 GB RAM is the sweet spot for 3B models — Rinna 3.6B and Gemma 2B Q4 run reliably. The Xperia 10 VI uses the mid-range Snapdragon 6 Gen 1 with only 6 GB RAM; at this tier, stick to TinyLlama 1.1B or Gemma 2B — larger models will crash or OOM during loading.',
           'Use Xperia 1 VI for 7B+ models; use Xperia 5 V for 3B models; stick to sub-2B models on Xperia 10 VI.',
           'For app setup instructions, see our <a href="/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">Android LLM apps for Japan guide</a>.',
         ],
         columns: ['Xperia Model', 'RAM / Chip', 'Recommended Models'],
         rows: [
-          { 'Xperia Model': 'Xperia 1 VI', 'RAM / Chip': '12 GB / Snapdragon 8 Gen 3', 'Recommended Models': 'Phi-4 Q4, Rinna 3.6B, Qwen2.5-3B' },
+          { 'Xperia Model': 'Xperia 1 VI', 'RAM / Chip': '12 GB / Snapdragon 8 Gen 3', 'Recommended Models': 'Phi-4 Q4, Rinna 3.6B, Qwen3-3B' },
           { 'Xperia Model': 'Xperia 5 V', 'RAM / Chip': '8 GB / Snapdragon 8 Gen 2', 'Recommended Models': 'Rinna 3.6B, Gemma 2B Q4' },
           { 'Xperia Model': 'Xperia 10 VI', 'RAM / Chip': '6 GB / Snapdragon 6 Gen 1', 'Recommended Models': 'TinyLlama 1.1B, Gemma 2B only' },
         ],
@@ -153,7 +153,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Kann man auf einem Xperia ein lokales LLM ausführen?',
         answer: 'Ja — das Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3) kann Rinna 3.6B und Phi-4 Q4 über MLC Chat ausführen. Das Xperia 5 V (8 GB) schafft leichte Modelle. Das Xperia 10 VI (6 GB) läuft nur TinyLlama und Gemma 2B.',
         bullets: [
-          'Xperia 1 VI: 12 GB RAM — läuft Phi-4 Q4, Rinna 3.6B, Qwen2.5-3B',
+          'Xperia 1 VI: 12 GB RAM — läuft Phi-4 Q4, Rinna 3.6B, Qwen3-3B',
           'Xperia 5 V: 8 GB RAM — läuft Rinna 3.6B und Gemma 2B Q4',
           'Xperia 10 VI: 6 GB RAM — nur TinyLlama und Gemma 2B',
           'Sony enthält keine Galaxy-AI-ähnlichen Funktionen — lokale LLM via MLC Chat schließt diese Lücke',
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Das Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3) ist das einzige Xperia, das zuverlässig 7B+-Modelle ausführt — ideal für Phi-4 Q4 und Qwen2.5-3B',
+          'Das Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3) ist das einzige Xperia, das zuverlässig 7B+-Modelle ausführt — ideal für Phi-4 Q4 und Qwen3-3B',
           'Das Xperia 5 V (8 GB RAM) unterstützt 3B-Modelle wie Rinna 3.6B und Gemma 2B Q4 problemlos',
           'Das Xperia 10 VI (6 GB RAM) ist auf Sub-2B-Modelle beschränkt — TinyLlama 1.1B und Gemma 2B sind die praktische Obergrenze',
           'Sony liefert keine On-Device-KI-Funktionen — MLC Chat oder PocketPal AI aus dem Google Play Store ist der praktische Ersatz',
@@ -177,13 +177,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Kompatibilität nach Xperia-Modell',
         content: [
           '<strong>Stand Mai 2026 unterstützen drei aktuelle Xperia-Modelle lokale LLM-Inferenz, wobei die Leistungsfähigkeit vollständig durch RAM und Chipsatz bestimmt wird — das Xperia 1 VI führt, das Xperia 5 V deckt den mittleren Bereich ab und das Xperia 10 VI ist auf kleinste Modelle begrenzt.</strong> Sony installiert keine On-Device-KI-Assistenten vor (anders als Samsung Galaxy AI), daher sind lokale LLM-Apps der einzige Weg zu privatem, offlinenem KI auf Xperia-Geräten.',
-          'Das Xperia 1 VI ist das einzige Xperia, das quantisierte 7B+-Modelle ausführen kann. Sein Snapdragon 8 Gen 3 SoC und 12 GB LPDDR5X RAM geben ihm Spielraum für Phi-4 Q4 (14B quantisiert auf ~8 GB) und Qwen2.5-3B neben dem normalen App-Betrieb. Das Xperia 5 V mit Snapdragon 8 Gen 2 und 8 GB RAM ist der Sweet Spot für 3B-Modelle — Rinna 3.6B und Gemma 2B Q4 laufen zuverlässig. Das Xperia 10 VI verwendet den Mid-Range Snapdragon 6 Gen 1 mit nur 6 GB RAM; auf dieser Stufe bei TinyLlama 1.1B oder Gemma 2B bleiben — größere Modelle werden beim Laden abstürzen oder OOM-Fehler verursachen.',
+          'Das Xperia 1 VI ist das einzige Xperia, das quantisierte 7B+-Modelle ausführen kann. Sein Snapdragon 8 Gen 3 SoC und 12 GB LPDDR5X RAM geben ihm Spielraum für Phi-4 Q4 (14B quantisiert auf ~8 GB) und Qwen3-3B neben dem normalen App-Betrieb. Das Xperia 5 V mit Snapdragon 8 Gen 2 und 8 GB RAM ist der Sweet Spot für 3B-Modelle — Rinna 3.6B und Gemma 2B Q4 laufen zuverlässig. Das Xperia 10 VI verwendet den Mid-Range Snapdragon 6 Gen 1 mit nur 6 GB RAM; auf dieser Stufe bei TinyLlama 1.1B oder Gemma 2B bleiben — größere Modelle werden beim Laden abstürzen oder OOM-Fehler verursachen.',
           'Xperia 1 VI für 7B+-Modelle verwenden; Xperia 5 V für 3B-Modelle; auf dem Xperia 10 VI bei Sub-2B-Modellen bleiben.',
           'Anleitungen zur App-Einrichtung finden Sie in unserem <a href="/de/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">Android-LLM-Apps für Japan Guide</a>.',
         ],
         columns: ['Xperia-Modell', 'RAM / Chip', 'Empfohlene Modelle'],
         rows: [
-          { 'Xperia-Modell': 'Xperia 1 VI', 'RAM / Chip': '12 GB / Snapdragon 8 Gen 3', 'Empfohlene Modelle': 'Phi-4 Q4, Rinna 3.6B, Qwen2.5-3B' },
+          { 'Xperia-Modell': 'Xperia 1 VI', 'RAM / Chip': '12 GB / Snapdragon 8 Gen 3', 'Empfohlene Modelle': 'Phi-4 Q4, Rinna 3.6B, Qwen3-3B' },
           { 'Xperia-Modell': 'Xperia 5 V', 'RAM / Chip': '8 GB / Snapdragon 8 Gen 2', 'Empfohlene Modelle': 'Rinna 3.6B, Gemma 2B Q4' },
           { 'Xperia-Modell': 'Xperia 10 VI', 'RAM / Chip': '6 GB / Snapdragon 6 Gen 1', 'Empfohlene Modelle': 'TinyLlama 1.1B, Gemma 2B nur' },
         ],
@@ -239,7 +239,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Peut-on exécuter un LLM local sur un Xperia ?',
         answer: 'Oui — le Xperia 1 VI (12 Go de RAM, Snapdragon 8 Gen 3) exécute Rinna 3.6B et Phi-4 Q4 via MLC Chat. Le Xperia 5 V (8 Go) gère les modèles légers. Le Xperia 10 VI (6 Go) est limité à TinyLlama et Gemma 2B.',
         bullets: [
-          'Xperia 1 VI : 12 Go de RAM — exécute Phi-4 Q4, Rinna 3.6B, Qwen2.5-3B',
+          'Xperia 1 VI : 12 Go de RAM — exécute Phi-4 Q4, Rinna 3.6B, Qwen3-3B',
           'Xperia 5 V : 8 Go de RAM — exécute Rinna 3.6B et Gemma 2B Q4',
           'Xperia 10 VI : 6 Go de RAM — TinyLlama et Gemma 2B uniquement',
           'Sony n\'inclut pas de fonctionnalités type Galaxy AI — un LLM local via MLC Chat comble ce manque',
@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Le Xperia 1 VI (12 Go de RAM, Snapdragon 8 Gen 3) est le seul Xperia qui exécute de manière fiable les modèles 7B+ — utilisez-le pour Phi-4 Q4 et Qwen2.5-3B',
+          'Le Xperia 1 VI (12 Go de RAM, Snapdragon 8 Gen 3) est le seul Xperia qui exécute de manière fiable les modèles 7B+ — utilisez-le pour Phi-4 Q4 et Qwen3-3B',
           'Le Xperia 5 V (8 Go de RAM) gère les modèles 3B dont Rinna 3.6B et Gemma 2B Q4 sans problème',
           'Le Xperia 10 VI (6 Go de RAM) est limité aux modèles sub-2B — TinyLlama 1.1B et Gemma 2B sont le plafond pratique',
           'Sony ne fournit pas de fonctionnalités IA embarquées — MLC Chat ou PocketPal AI depuis Google Play est le remplacement pratique',
@@ -263,13 +263,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Compatibilité par modèle Xperia',
         content: [
           '<strong>En mai 2026, trois modèles Xperia actuels prennent en charge l\'inférence LLM locale, la capacité étant entièrement déterminée par la RAM et le chipset — le Xperia 1 VI est en tête, le Xperia 5 V couvre le milieu de gamme et le Xperia 10 VI est limité aux plus petits modèles.</strong> Sony ne préinstalle pas d\'assistants IA embarqués (contrairement à Samsung Galaxy AI), donc les applications LLM locales sont la seule voie vers une IA privée et hors ligne sur les appareils Xperia.',
-          'Le Xperia 1 VI est le seul Xperia capable d\'exécuter des modèles 7B+ quantifiés. Son SoC Snapdragon 8 Gen 3 et ses 12 Go de RAM LPDDR5X lui donnent de la marge pour Phi-4 Q4 (14B quantifié à ~8 Go) et Qwen2.5-3B en plus de l\'utilisation normale des applications. Le Xperia 5 V avec Snapdragon 8 Gen 2 et 8 Go de RAM est le point optimal pour les modèles 3B — Rinna 3.6B et Gemma 2B Q4 fonctionnent de manière fiable. Le Xperia 10 VI utilise le Snapdragon 6 Gen 1 milieu de gamme avec seulement 6 Go de RAM ; à ce niveau, restez sur TinyLlama 1.1B ou Gemma 2B — les modèles plus grands se bloqueront lors du chargement.',
+          'Le Xperia 1 VI est le seul Xperia capable d\'exécuter des modèles 7B+ quantifiés. Son SoC Snapdragon 8 Gen 3 et ses 12 Go de RAM LPDDR5X lui donnent de la marge pour Phi-4 Q4 (14B quantifié à ~8 Go) et Qwen3-3B en plus de l\'utilisation normale des applications. Le Xperia 5 V avec Snapdragon 8 Gen 2 et 8 Go de RAM est le point optimal pour les modèles 3B — Rinna 3.6B et Gemma 2B Q4 fonctionnent de manière fiable. Le Xperia 10 VI utilise le Snapdragon 6 Gen 1 milieu de gamme avec seulement 6 Go de RAM ; à ce niveau, restez sur TinyLlama 1.1B ou Gemma 2B — les modèles plus grands se bloqueront lors du chargement.',
           'Utilisez le Xperia 1 VI pour les modèles 7B+ ; le Xperia 5 V pour les modèles 3B ; restez sur les modèles sub-2B sur le Xperia 10 VI.',
           'Pour les instructions d\'installation des applications, consultez notre <a href="/fr/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">guide des applications LLM Android pour le Japon</a>.',
         ],
         columns: ['Modèle Xperia', 'RAM / Puce', 'Modèles recommandés'],
         rows: [
-          { 'Modèle Xperia': 'Xperia 1 VI', 'RAM / Puce': '12 Go / Snapdragon 8 Gen 3', 'Modèles recommandés': 'Phi-4 Q4, Rinna 3.6B, Qwen2.5-3B' },
+          { 'Modèle Xperia': 'Xperia 1 VI', 'RAM / Puce': '12 Go / Snapdragon 8 Gen 3', 'Modèles recommandés': 'Phi-4 Q4, Rinna 3.6B, Qwen3-3B' },
           { 'Modèle Xperia': 'Xperia 5 V', 'RAM / Puce': '8 Go / Snapdragon 8 Gen 2', 'Modèles recommandés': 'Rinna 3.6B, Gemma 2B Q4' },
           { 'Modèle Xperia': 'Xperia 10 VI', 'RAM / Puce': '6 Go / Snapdragon 6 Gen 1', 'Modèles recommandés': 'TinyLlama 1.1B, Gemma 2B uniquement' },
         ],
@@ -325,7 +325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'XperiaでローカルLLMを動かせる？',
         answer: 'はい — Xperia 1 VI（12 GB RAM、Snapdragon 8 Gen 3）はMLC Chat経由でRinna 3.6BとPhi-4 Q4を実行できます。Xperia 5 V（8 GB）は軽量モデルに対応。Xperia 10 VI（6 GB）はTinyLlamaとGemma 2Bのみ動作します。',
         bullets: [
-          'Xperia 1 VI：12 GB RAM — Phi-4 Q4、Rinna 3.6B、Qwen2.5-3Bが動作',
+          'Xperia 1 VI：12 GB RAM — Phi-4 Q4、Rinna 3.6B、Qwen3-3Bが動作',
           'Xperia 5 V：8 GB RAM — Rinna 3.6BとGemma 2B Q4に対応',
           'Xperia 10 VI：6 GB RAM — TinyLlamaとGemma 2Bのみ',
           'SonyはGalaxy AIのような機能を搭載していない — MLC Chat経由のローカルLLMがその代替となる',
@@ -338,7 +338,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Xperia 1 VI（12 GB RAM、Snapdragon 8 Gen 3）は7B+モデルを確実に動かせる唯一のXperia — Phi-4 Q4とQwen2.5-3Bに最適',
+          'Xperia 1 VI（12 GB RAM、Snapdragon 8 Gen 3）は7B+モデルを確実に動かせる唯一のXperia — Phi-4 Q4とQwen3-3Bに最適',
           'Xperia 5 V（8 GB RAM）はRinna 3.6BやGemma 2B Q4を含む3Bモデルを問題なく処理できる',
           'Xperia 10 VI（6 GB RAM）はSub-2Bモデルに限定 — TinyLlama 1.1BとGemma 2Bが実用上の上限',
           'SonyはOn-Device AI機能を提供していない — Google PlayストアのMLC ChatまたはPocketPal AIが実用的な代替となる',
@@ -349,13 +349,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Xperiaモデル別の対応状況',
         content: [
           '<strong>2026年5月時点で、現行の3つのXperiaモデルがローカルLLM推論に対応しており、性能はRAMとチップセットによって完全に決まります — Xperia 1 VIがトップ、Xperia 5 Vがミドルレンジをカバー、Xperia 10 VIは最小モデルに限定されます。</strong> Sonyは（Samsung Galaxy AIとは異なり）On-Device AIアシスタントを事前インストールしていないため、ローカルLLMアプリがXperiaデバイスでプライベートなオフラインAIを実現する唯一の手段です。国産ブランドのSonyが作るXperiaで、外部サーバーに依存せず日本語AIを動かせるのは、秋葉原のガジェット愛好家から企業ユーザーまで注目を集めています。',
-          'Xperia 1 VIは、量子化された7B+モデルを実行できる唯一のXperiaです。Snapdragon 8 Gen 3 SoCと12 GB LPDDR5X RAMにより、通常のアプリ使用に加えてPhi-4 Q4（14Bを約8 GBに量子化）やQwen2.5-3Bを動かす余裕があります。Snapdragon 8 Gen 2と8 GB RAMを搭載したXperia 5 Vは3Bモデルのスイートスポット — Rinna 3.6BとGemma 2B Q4が安定して動作します。Xperia 10 VIはミッドレンジのSnapdragon 6 Gen 1と6 GB RAMのみ；このクラスではTinyLlama 1.1BまたはGemma 2Bにとどめること — 大きなモデルはロード中にクラッシュするかOOMエラーになります。',
+          'Xperia 1 VIは、量子化された7B+モデルを実行できる唯一のXperiaです。Snapdragon 8 Gen 3 SoCと12 GB LPDDR5X RAMにより、通常のアプリ使用に加えてPhi-4 Q4（14Bを約8 GBに量子化）やQwen3-3Bを動かす余裕があります。Snapdragon 8 Gen 2と8 GB RAMを搭載したXperia 5 Vは3Bモデルのスイートスポット — Rinna 3.6BとGemma 2B Q4が安定して動作します。Xperia 10 VIはミッドレンジのSnapdragon 6 Gen 1と6 GB RAMのみ；このクラスではTinyLlama 1.1BまたはGemma 2Bにとどめること — 大きなモデルはロード中にクラッシュするかOOMエラーになります。',
           'Xperia 1 VIは7B+モデル、Xperia 5 Vは3Bモデル、Xperia 10 VIはSub-2Bモデルに使用してください。',
           'アプリの設定手順については、<a href="/ja/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">日本向けAndroid LLMアプリガイド</a>をご覧ください。',
         ],
         columns: ['Xperiaモデル', 'RAM / チップ', '推奨モデル'],
         rows: [
-          { 'Xperiaモデル': 'Xperia 1 VI', 'RAM / チップ': '12 GB / Snapdragon 8 Gen 3', '推奨モデル': 'Phi-4 Q4、Rinna 3.6B、Qwen2.5-3B' },
+          { 'Xperiaモデル': 'Xperia 1 VI', 'RAM / チップ': '12 GB / Snapdragon 8 Gen 3', '推奨モデル': 'Phi-4 Q4、Rinna 3.6B、Qwen3-3B' },
           { 'Xperiaモデル': 'Xperia 5 V', 'RAM / チップ': '8 GB / Snapdragon 8 Gen 2', '推奨モデル': 'Rinna 3.6B、Gemma 2B Q4' },
           { 'Xperiaモデル': 'Xperia 10 VI', 'RAM / チップ': '6 GB / Snapdragon 6 Gen 1', '推奨モデル': 'TinyLlama 1.1B、Gemma 2Bのみ' },
         ],
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: '¿Puedes ejecutar un LLM local en un teléfono Xperia?',
         answer: 'Sí — el Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3) ejecuta Rinna 3.6B y Phi-4 Q4 a través de MLC Chat. El Xperia 5 V (8 GB) maneja modelos ligeros. El Xperia 10 VI (6 GB) está limitado a TinyLlama y Gemma 2B.',
         bullets: [
-          'Xperia 1 VI: 12 GB RAM — ejecuta Phi-4 Q4, Rinna 3.6B, Qwen2.5-3B',
+          'Xperia 1 VI: 12 GB RAM — ejecuta Phi-4 Q4, Rinna 3.6B, Qwen3-3B',
           'Xperia 5 V: 8 GB RAM — ejecuta Rinna 3.6B y Gemma 2B Q4',
           'Xperia 10 VI: 6 GB RAM — solo TinyLlama y Gemma 2B',
           'Sony no incluye funciones similares a Galaxy AI — un LLM local a través de MLC Chat cubre esa brecha',
@@ -424,7 +424,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'El Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3) es el único Xperia que ejecuta modelos 7B+ de forma fiable — ideal para Phi-4 Q4 y Qwen2.5-3B',
+          'El Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3) es el único Xperia que ejecuta modelos 7B+ de forma fiable — ideal para Phi-4 Q4 y Qwen3-3B',
           'El Xperia 5 V (8 GB RAM) maneja modelos 3B como Rinna 3.6B y Gemma 2B Q4 sin problemas',
           'El Xperia 10 VI (6 GB RAM) está limitado a modelos sub-2B — TinyLlama 1.1B y Gemma 2B son el techo práctico',
           'Sony no incluye funciones de IA On-Device — MLC Chat o PocketPal AI de Google Play es el reemplazo práctico',
@@ -435,13 +435,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Compatibilidad por modelo Xperia',
         content: [
           '<strong>A partir de mayo de 2026, tres modelos actuales de Xperia admiten inferencia LLM local, con capacidad determinada enteramente por la RAM y el chipset — el Xperia 1 VI lidera, el Xperia 5 V cubre el rango medio y el Xperia 10 VI está limitado a los modelos más pequeños.</strong> Sony no preinstala asistentes de IA On-Device (a diferencia de Samsung Galaxy AI), por lo que las aplicaciones LLM locales son la única vía hacia una IA privada y sin conexión en dispositivos Xperia.',
-          'El Xperia 1 VI es el único Xperia capaz de ejecutar modelos 7B+ cuantizados. Su SoC Snapdragon 8 Gen 3 y sus 12 GB de RAM LPDDR5X le dan margen para Phi-4 Q4 (14B cuantizado a ~8 GB) y Qwen2.5-3B junto con el uso habitual de aplicaciones. El Xperia 5 V con Snapdragon 8 Gen 2 y 8 GB RAM es el punto óptimo para modelos 3B — Rinna 3.6B y Gemma 2B Q4 funcionan de forma fiable. El Xperia 10 VI utiliza el Snapdragon 6 Gen 1 de gama media con solo 6 GB RAM; en este nivel, quédate con TinyLlama 1.1B o Gemma 2B — los modelos más grandes se bloquearán o producirán errores de memoria durante la carga.',
+          'El Xperia 1 VI es el único Xperia capaz de ejecutar modelos 7B+ cuantizados. Su SoC Snapdragon 8 Gen 3 y sus 12 GB de RAM LPDDR5X le dan margen para Phi-4 Q4 (14B cuantizado a ~8 GB) y Qwen3-3B junto con el uso habitual de aplicaciones. El Xperia 5 V con Snapdragon 8 Gen 2 y 8 GB RAM es el punto óptimo para modelos 3B — Rinna 3.6B y Gemma 2B Q4 funcionan de forma fiable. El Xperia 10 VI utiliza el Snapdragon 6 Gen 1 de gama media con solo 6 GB RAM; en este nivel, quédate con TinyLlama 1.1B o Gemma 2B — los modelos más grandes se bloquearán o producirán errores de memoria durante la carga.',
           'Usa el Xperia 1 VI para modelos 7B+; el Xperia 5 V para modelos 3B; quédate con modelos sub-2B en el Xperia 10 VI.',
           'Para instrucciones de configuración de aplicaciones, consulta nuestra <a href="/es/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">guía de aplicaciones LLM para Android en Japón</a>.',
         ],
         columns: ['Modelo Xperia', 'RAM / Chip', 'Modelos recomendados'],
         rows: [
-          { 'Modelo Xperia': 'Xperia 1 VI', 'RAM / Chip': '12 GB / Snapdragon 8 Gen 3', 'Modelos recomendados': 'Phi-4 Q4, Rinna 3.6B, Qwen2.5-3B' },
+          { 'Modelo Xperia': 'Xperia 1 VI', 'RAM / Chip': '12 GB / Snapdragon 8 Gen 3', 'Modelos recomendados': 'Phi-4 Q4, Rinna 3.6B, Qwen3-3B' },
           { 'Modelo Xperia': 'Xperia 5 V', 'RAM / Chip': '8 GB / Snapdragon 8 Gen 2', 'Modelos recomendados': 'Rinna 3.6B, Gemma 2B Q4' },
           { 'Modelo Xperia': 'Xperia 10 VI', 'RAM / Chip': '6 GB / Snapdragon 6 Gen 1', 'Modelos recomendados': 'TinyLlama 1.1B, solo Gemma 2B' },
         ],
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Xperia手机能运行本地LLM吗？',
         answer: '可以——Xperia 1 VI（12 GB内存，Snapdragon 8 Gen 3）可通过MLC Chat运行Rinna 3.6B和Phi-4 Q4。Xperia 5 V（8 GB）支持轻量模型。Xperia 10 VI（6 GB）仅限TinyLlama和Gemma 2B。',
         bullets: [
-          'Xperia 1 VI：12 GB内存——可运行Phi-4 Q4、Rinna 3.6B、Qwen2.5-3B',
+          'Xperia 1 VI：12 GB内存——可运行Phi-4 Q4、Rinna 3.6B、Qwen3-3B',
           'Xperia 5 V：8 GB内存——可运行Rinna 3.6B和Gemma 2B Q4',
           'Xperia 10 VI：6 GB内存——仅限TinyLlama和Gemma 2B',
           'Sony不包含Galaxy AI类功能——通过MLC Chat运行本地LLM填补了这一空缺',
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Xperia 1 VI（12 GB内存，Snapdragon 8 Gen 3）是唯一能可靠运行7B+模型的Xperia机型——适合Phi-4 Q4和Qwen2.5-3B',
+          'Xperia 1 VI（12 GB内存，Snapdragon 8 Gen 3）是唯一能可靠运行7B+模型的Xperia机型——适合Phi-4 Q4和Qwen3-3B',
           'Xperia 5 V（8 GB内存）可流畅处理3B模型，包括Rinna 3.6B和Gemma 2B Q4',
           'Xperia 10 VI（6 GB内存）仅限Sub-2B模型——TinyLlama 1.1B和Gemma 2B是实际上限',
           'Sony不提供On-Device AI功能——Google Play上的MLC Chat或PocketPal AI是实用的替代方案',
@@ -521,13 +521,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Xperia机型兼容性',
         content: [
           '<strong>截至2026年5月，三款现行Xperia机型支持本地LLM推理，性能完全由内存和芯片组决定——Xperia 1 VI居首，Xperia 5 V覆盖中端，Xperia 10 VI仅限最小模型。</strong> Sony不预装On-Device AI助手（不同于Samsung Galaxy AI），因此本地LLM应用是在Xperia设备上实现私密离线AI的唯一途径。',
-          'Xperia 1 VI是唯一能运行量化7B+模型的Xperia机型。其Snapdragon 8 Gen 3 SoC和12 GB LPDDR5X内存在日常应用运行的同时，还能处理Phi-4 Q4（14B量化至约8 GB）和Qwen2.5-3B。搭载Snapdragon 8 Gen 2和8 GB内存的Xperia 5 V是3B模型的最佳选择——Rinna 3.6B和Gemma 2B Q4运行稳定。Xperia 10 VI使用中端Snapdragon 6 Gen 1，内存仅6 GB；此配置下请坚持使用TinyLlama 1.1B或Gemma 2B——更大的模型加载时会崩溃或出现OOM错误。',
+          'Xperia 1 VI是唯一能运行量化7B+模型的Xperia机型。其Snapdragon 8 Gen 3 SoC和12 GB LPDDR5X内存在日常应用运行的同时，还能处理Phi-4 Q4（14B量化至约8 GB）和Qwen3-3B。搭载Snapdragon 8 Gen 2和8 GB内存的Xperia 5 V是3B模型的最佳选择——Rinna 3.6B和Gemma 2B Q4运行稳定。Xperia 10 VI使用中端Snapdragon 6 Gen 1，内存仅6 GB；此配置下请坚持使用TinyLlama 1.1B或Gemma 2B——更大的模型加载时会崩溃或出现OOM错误。',
           '7B+模型选Xperia 1 VI；3B模型选Xperia 5 V；Xperia 10 VI上坚持使用Sub-2B模型。',
           '应用安装说明，请参阅我们的<a href="/zh/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">日本Android LLM应用指南</a>。',
         ],
         columns: ['Xperia机型', '内存 / 芯片', '推荐模型'],
         rows: [
-          { 'Xperia机型': 'Xperia 1 VI', '内存 / 芯片': '12 GB / Snapdragon 8 Gen 3', '推荐模型': 'Phi-4 Q4、Rinna 3.6B、Qwen2.5-3B' },
+          { 'Xperia机型': 'Xperia 1 VI', '内存 / 芯片': '12 GB / Snapdragon 8 Gen 3', '推荐模型': 'Phi-4 Q4、Rinna 3.6B、Qwen3-3B' },
           { 'Xperia机型': 'Xperia 5 V', '内存 / 芯片': '8 GB / Snapdragon 8 Gen 2', '推荐模型': 'Rinna 3.6B、Gemma 2B Q4' },
           { 'Xperia机型': 'Xperia 10 VI', '内存 / 芯片': '6 GB / Snapdragon 6 Gen 1', '推荐模型': 'TinyLlama 1.1B、Gemma 2B（仅限）' },
         ],

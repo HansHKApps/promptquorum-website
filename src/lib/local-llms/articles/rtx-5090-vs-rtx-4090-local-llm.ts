@@ -482,7 +482,7 @@ schema: {
       sections: {
         tldr: { id: 'key-takeaways',
  isTldr: true, items: ['RTX 3060 12GB (150-190€) meilleur choix budget pour 7B-13B.', 'RTX 4060 Ti 8GB (220-250€) technologie plus récente, moins VRAM.', 'Évitez cartes 2GB/4GB pour LLMs--minimum 8GB VRAM.', 'Cartes enterprise occasion: 12GB-16GB VRAM pour 100-200€.', 'Budget: 200-300€ GPU, 300-400€ reste système (CPU, RAM, SSD).', 'Évitez DDR5 RAM et CPU haut-gamme avec GPU budget.'] },
-        'quick-answer': { title: 'Quels modèles gagnent?', content: ['✅ **Meilleur:** Llama 3.3 (ouvert, capable, largement optimisé)', '✅ **Codage:** Qwen 2.5 (compréhension code spécialisée)', '✅ **Léger:** Mistral Small (VRAM minimal, inférence rapide)', '✅ **Budget GPU:** RTX 3060 12GB (150-190€ occasion)'] },
+        'quick-answer': { title: 'Quels modèles gagnent?', content: ['✅ **Meilleur:** Llama 3.3 (ouvert, capable, largement optimisé)', '✅ **Codage:** Qwen 3 (compréhension code spécialisée)', '✅ **Léger:** Mistral Small (VRAM minimal, inférence rapide)', '✅ **Budget GPU:** RTX 3060 12GB (150-190€ occasion)'] },
         'faqSection': { title: 'Questions Fréquentes', faqs: [{ q: 'RTX 3060 12GB vaut peine 2026?', a: '4+ ans ancienneté, mais 12GB VRAM intemporel. Llama 3.3 8B et Mistral Small fluides.' }, { q: 'RTX 4060 ou RTX 4060 Ti pour LLMs?', a: 'RTX 4060 Ti. Ti meilleur prix RTX 40-série pour LLMs.' }, { q: 'GPU pour PME française?', a: 'RTX 3060 12GB ou A4000 équipes 1-50 personnes. Conformité données France/EU importante.' }] },
       },
       itemListSchema: {},
@@ -501,7 +501,7 @@ schema: {
       sections: {
         tldr: { id: 'key-takeaways',
  isTldr: true, items: ['RTX 3060 12GB（€150-190中古）が7B-13B向けベスト選択です。', 'RTX 4060 Ti 8GB（€220-250新品）は最新技術ですが、VRAMが限定的です。', 'ローカルLLM向けに2GB/4GBカードは絶対購入しないでください。', '中古企業カード（RTX A2000、A4000）は12GB-16GB VRAM €100-200で利用可能です。', 'GPU予算€200-300、システム残部€300-400でボトルネック回避。', 'バジェットGPUではDDR5 RAMと高端CPUを避けてください。'] },
-        'quick-answer': { title: 'ユースケース別最適モデル', content: ['✅ **全体最適：** Llama 3.3（オープン、capable、広く最適化）', '✅ **コーディング：** Qwen 2.5（専門コード理解）', '✅ **軽量：** Mistral Small（最小VRAM、高速推論）', '✅ **バジェットGPU：** RTX 3060 12GB（€150-190中古）'] },
+        'quick-answer': { title: 'ユースケース別最適モデル', content: ['✅ **全体最適：** Llama 3.3（オープン、capable、広く最適化）', '✅ **コーディング：** Qwen 3（専門コード理解）', '✅ **軽量：** Mistral Small（最小VRAM、高速推論）', '✅ **バジェットGPU：** RTX 3060 12GB（€150-190中古）'] },
         'faqSection': { title: 'よくある質問', faqs: [{ q: 'RTX 3060 12GBは2026年も価値がありますか？', a: '4年以上ですが12GB VRAMは時代を超えています。Llama 3.3 8BとMistral Smallはスムーズに動作。' }, { q: '日本企業向けGPU選択は？', a: 'RTX 3060 12GBまたはA4000は1-50従業員向け。データセキュリティが重要です。' }] },
       },
       itemListSchema: {},
@@ -520,7 +520,7 @@ schema: {
       sections: {
         tldr: { id: 'key-takeaways',
  isTldr: true, items: ['RTX 3060 12GB（€150-190二手）是7B-13B型号的最佳预算选择。', 'RTX 4060 Ti 8GB（€220-250新品）提供更新技术，但VRAM有限。', '永远不要为本地LLM购买2GB/4GB卡----最小VRAM是8GB。', '二手企业卡（RTX A2000、A4000）提供12GB-16GB VRAM €100-200。', 'GPU预算€200-300，系统其他部分€300-400避免瓶颈。', '对于预算GPU，避免DDR5 RAM和高端CPU。'] },
-        'quick-answer': { title: '按用例最佳模型', content: ['✅ **整体最佳：** Llama 3.3（开源、capable、广泛优化）', '✅ **代码编写：** Qwen 2.5（专业代码理解）', '✅ **轻量级：** Mistral Small（最小VRAM、快速推理）', '✅ **预算GPU：** RTX 3060 12GB（€150-190二手）'] },
+        'quick-answer': { title: '按用例最佳模型', content: ['✅ **整体最佳：** Llama 3.3（开源、capable、广泛优化）', '✅ **代码编写：** Qwen 3（专业代码理解）', '✅ **轻量级：** Mistral Small（最小VRAM、快速推理）', '✅ **预算GPU：** RTX 3060 12GB（€150-190二手）'] },
         'faqSection': { title: '常见问题解答', faqs: [{ q: 'RTX 3060 12GB在2026年还值得吗？', a: '4岁以上，但12GB VRAM永不过时。流畅运行Llama 3.3 8B和Mistral Small。' }, { q: '中国企业GPU选择？', a: 'RTX 3060 12GB或A4000适合1-50员工。数据安全和合规性很重要。' }] },
       },
       itemListSchema: {},

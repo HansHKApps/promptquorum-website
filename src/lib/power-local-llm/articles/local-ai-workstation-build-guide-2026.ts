@@ -538,10 +538,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Bauanleitung für einen Lokal-KI-PC: drei Budget-Stufen mit vollständigen Teilelisten für 7B- bis 70B-Modelle. Der GPU-Preisanstieg 2026 hat jeden Build verteuert — hier die Mai-2026-Summen.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
+      'Llama 3.3 8B',
       'Qwen3 8B',
-      'Mistral 7B',
-      'Llama 3.1 33B',
+      'Mistral Small',
+      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -1055,10 +1055,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Guide de montage d\'un PC pour IA locale : trois niveaux de budget avec listes de pièces complètes pour les modèles 7B à 70B. La hausse des prix des GPU en 2026 a renchéri chaque configuration — voici les totaux de mai 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
+      'Llama 3.3 8B',
       'Qwen3 8B',
-      'Mistral 7B',
-      'Llama 3.1 33B',
+      'Mistral Small',
+      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -1564,10 +1564,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルAI PC自作ガイド：7B〜70Bモデル向けの完全パーツリストを備えた予算別3構成。2026年のGPU価格高騰がすべての構成コストを押し上げた——2026年5月の合計はこちら。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
+      'Llama 3.3 8B',
       'Qwen3 8B',
-      'Mistral 7B',
-      'Llama 3.1 33B',
+      'Mistral Small',
+      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -2073,10 +2073,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地 AI PC 装机指南：三档预算配置，附 7B 到 70B 模型的完整部件清单。2026 年 GPU 价格上涨抬高了每套配置的成本——这里是 2026 年 5 月的总价。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
+      'Llama 3.3 8B',
       'Qwen3 8B',
-      'Mistral 7B',
-      'Llama 3.1 33B',
+      'Mistral Small',
+      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -2582,10 +2582,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Guía para armar una PC con IA local: tres niveles de presupuesto con listas de componentes completas para modelos de 7B a 70B. El aumento de precios de GPU en 2026 encareció cada configuración — aquí están los totales de mayo de 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
+      'Llama 3.3 8B',
       'Qwen3 8B',
-      'Mistral 7B',
-      'Llama 3.1 33B',
+      'Mistral Small',
+      'Llama 3.3 33B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [

@@ -184,7 +184,7 @@ sections: {
             '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparison of the two most popular local LLM tools',
             '[How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) -- Laptop-specific thermal and battery optimization',
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) -- Model recommendations for 8 GB RAM',
-            '[Best Local LLMs for Coding 2026](/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder vs DeepSeek benchmark comparison',
+            '[Best Local LLMs for Coding 2026](/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs DeepSeek benchmark comparison',
           ],
         },
         moreTroubleshooting: {
@@ -485,7 +485,7 @@ schema: {
             '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) — Comparación de las dos herramientas de LLM local más populares',
             '[Cómo ejecutar LLM locales en un portátil](/es/local-llms/local-llm-on-laptop) — Optimización térmica y de batería específica para portátiles',
             '[Mejores modelos de LLM local para principiantes](/es/local-llms/best-beginner-local-llm-models) — Recomendaciones de modelos para 8 GB de RAM',
-            '[Mejores LLM locales para programar 2026](/es/local-llms/best-local-llms-for-coding) — Comparativa Qwen2.5-Coder vs DeepSeek',
+            '[Mejores LLM locales para programar 2026](/es/local-llms/best-local-llms-for-coding) — Comparativa Qwen3-Coder vs DeepSeek',
           ],
         },
         moreTroubleshooting: {
@@ -869,7 +869,7 @@ schema: {
         '[Lokale LLM-Sicherheits- und Datenschutz-Checkliste](/de/local-llms/local-llm-security-privacy-checklist) — Vollständige Audit-Anleitung',
         '[Beste Anfänger-Lokale-LLM-Modelle](/de/local-llms/best-beginner-local-llm-models) — RAM-passende Modellempfehlungen',
         '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen',
-        '[Beste LLMs für Coding 2026](/de/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder vs DeepSeek Benchmark-Vergleich',
+        '[Beste LLMs für Coding 2026](/de/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs DeepSeek Benchmark-Vergleich',
       ],
     },
     moreTroubleshooting: {
@@ -1160,7 +1160,7 @@ schema: {
             '[Ollama vs LM Studio](/fr/local-llms/ollama-vs-lm-studio) -- Comparaison des deux outils LLM locaux les plus populaires',
             '[Comment exécuter des LLMs locaux sur un portable](/fr/local-llms/local-llm-on-laptop) -- Optimisation thermique et batterie spécifique au portable',
             '[Meilleurs modèles LLM locaux pour débutants](/fr/local-llms/best-beginner-local-llm-models) -- Recommandations de modèles pour 8 Go de RAM',
-            '[Meilleurs LLMs pour le code 2026](/fr/local-llms/best-local-llms-for-coding) — Comparatif Qwen2.5-Coder vs DeepSeek',
+            '[Meilleurs LLMs pour le code 2026](/fr/local-llms/best-local-llms-for-coding) — Comparatif Qwen3-Coder vs DeepSeek',
           ],
         },
         moreTroubleshooting: {
@@ -1461,7 +1461,7 @@ schema: {
         '[Ollama対LM Studio](/ja/local-llms/ollama-vs-lm-studio) — 2つの最も一般的なローカルLLMツールの比較',
         '[ラップトップでローカルLLMを実行する方法](/ja/local-llms/local-llm-on-laptop) — ラップトップ固有の熱とバッテリー最適化',
         '[初心者向けの最高のローカルLLMモデル](/ja/local-llms/best-beginner-local-llm-models) — 8 GBのRAMのモデル推奨事項',
-        '[2026年コーディング用ローカルLLM比較](/ja/local-llms/best-local-llms-for-coding) — Qwen2.5-CoderとDeepSeekのベンチマーク',
+        '[2026年コーディング用ローカルLLM比較](/ja/local-llms/best-local-llms-for-coding) — Qwen3-CoderとDeepSeekのベンチマーク',
       ],
     },
     faqSection: {
@@ -1793,7 +1793,7 @@ schema: {
       id: 'regional-context',
       title: '按地区划分的本地 LLM 故障排除',
       content: [
-        '**中国（数据安全法）**：根据中国 2021 年《数据安全法》部署时，使用 Ollama 和 Qwen2.5 7B 满足数据本地化要求。个人数据和敏感数据需要本地部署。GPU 驱动程序安装遵循与 Linux 相同的流程。对于中国制造的 GPU 卡（Biren BR100），ROCm 支持需要自定义 ROCm 构建。在阿里云、腾讯云或华为云上部署时，选择中国地区的实例以确保数据驻留合规性。',
+        '**中国（数据安全法）**：根据中国 2021 年《数据安全法》部署时，使用 Ollama 和 Qwen3 7B 满足数据本地化要求。个人数据和敏感数据需要本地部署。GPU 驱动程序安装遵循与 Linux 相同的流程。对于中国制造的 GPU 卡（Biren BR100），ROCm 支持需要自定义 ROCm 构建。在阿里云、腾讯云或华为云上部署时，选择中国地区的实例以确保数据驻留合规性。',
         '**亚太地区（数据跨境）**：数据跨境限制通常要求在当地数据中心运行推理。Ollama 和 LM Studio 在本地服务器上运行时避免了跨境数据传输。对于医疗、金融或法律数据，请咨询当地合规专家。',
         '**企业部署**：大型企业（银行、医院、律师事务所）处理受管制数据应使用经过审计的本地 LLM 部署。Ollama 不保存日志的事实减少了监管负担。使用强身份验证和磁盘上的模型加密。对于生产环境，在联想 ThinkPad 或华为 MateBook 上运行 13B 模型需要 32 GB RAM 和配置的 CUDA 驱动程序。',
       ],
@@ -1807,7 +1807,7 @@ schema: {
         '[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio) —— 两个最流行的本地 LLM 工具的比较',
         '[如何在笔记本电脑上运行本地 LLM](/zh/local-llms/local-llm-on-laptop) —— 笔记本电脑特定的热管理和电池优化',
         '[最佳初学者本地 LLM 模型](/zh/local-llms/best-beginner-local-llm-models) —— 8 GB RAM 的模型建议',
-        '[2026年最佳编程本地LLM对比](/zh/local-llms/best-local-llms-for-coding) — Qwen2.5-Coder与DeepSeek基准测试',
+        '[2026年最佳编程本地LLM对比](/zh/local-llms/best-local-llms-for-coding) — Qwen3-Coder与DeepSeek基准测试',
       ],
     },
     moreTroubleshooting: {

@@ -456,10 +456,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RunPod vs. Lambda Labs vs. Vast.ai für Cloud-GPU-KI-Inferenz — drei Anbieter, eine Regel: erst den Zuverlässigkeitsbedarf wählen, dann den Preis. Sätze von Mai 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
-      'Llama 3.1 70B',
-      'Mistral 7B',
-      'Qwen 2.5 32B',
+      'Llama 3.3 8B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
       'DeepSeek-R1 70B',
     ],
     current_hardware_mentioned: [
@@ -892,10 +892,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "RunPod vs Lambda Labs vs Vast.ai pour l'inférence IA sur GPU cloud — trois fournisseurs, une règle : choisir d'abord selon le besoin de fiabilité, puis le prix. Tarifs de mai 2026.",
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
-      'Llama 3.1 70B',
-      'Mistral 7B',
-      'Qwen 2.5 32B',
+      'Llama 3.3 8B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
       'DeepSeek-R1 70B',
     ],
     current_hardware_mentioned: [
@@ -1320,10 +1320,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'クラウドGPU AI推論向けのRunPod vs Lambda Labs vs Vast.ai — 3つのプロバイダー、1つのルール：まず信頼性のニーズで選び、次に価格。2026年5月時点の料金。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
-      'Llama 3.1 70B',
-      'Mistral 7B',
-      'Qwen 2.5 32B',
+      'Llama 3.3 8B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
       'DeepSeek-R1 70B',
     ],
     current_hardware_mentioned: [
@@ -1748,10 +1748,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RunPod vs Lambda Labs vs Vast.ai用于云GPU AI推理——三家提供商，一条规则：先按可靠性需求选，再看价格。2026年5月费率。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
-      'Llama 3.1 70B',
-      'Mistral 7B',
-      'Qwen 2.5 32B',
+      'Llama 3.3 8B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
       'DeepSeek-R1 70B',
     ],
     current_hardware_mentioned: [
@@ -2176,10 +2176,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RunPod vs Lambda Labs vs Vast.ai para inferencia de IA en GPU cloud — tres proveedores, una regla: elige primero por necesidad de fiabilidad, luego por precio. Tarifas de mayo 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.1 8B',
-      'Llama 3.1 70B',
-      'Mistral 7B',
-      'Qwen 2.5 32B',
+      'Llama 3.3 8B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
       'DeepSeek-R1 70B',
     ],
     current_hardware_mentioned: [

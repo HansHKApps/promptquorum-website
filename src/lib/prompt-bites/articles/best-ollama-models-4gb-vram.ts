@@ -92,7 +92,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Fits in 4 GB VRAM',
         content: [
-          'As of May 2026, <strong>at 4 GB VRAM you are limited to models with 3 billion parameters or fewer at Q4 quantization.</strong> This rules out every mainstream local model — Llama 3 8B, Mistral Small, Qwen 14B. Three modern small models perform surprisingly well: Phi-4 Mini matches GPT-3.5 on instruction following, Gemma 2 2B handles fast chat, and SmolLM 1.7B runs on integrated graphics.',
+          'As of May 2026, <strong>at 4 GB VRAM you are limited to models with 3 billion parameters or fewer at Q4 quantization.</strong> This rules out every mainstream local model — Llama 3 8B, Mistral Small, Qwen 14B. Three modern small models perform surprisingly well: Phi-4 Mini approaches GPT-5.5 mini on instruction following, Gemma 2 2B handles fast chat, and SmolLM 1.7B runs on integrated graphics.',
           'Phi-4 Mini is the top pick at this tier. Despite its small size, it handles general Q&A, light coding, and document summarization at ~25 tokens per second. Gemma 2 2B is faster for single-turn chat. SmolLM 1.7B is the fallback if even Phi-4 Mini pushes your VRAM too close to the limit.',
         ],
         columns: ['Model', 'VRAM', 'Best For'],
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Was in 4 GB VRAM passt',
         content: [
-          'Stand Mai 2026: <strong>Mit 4 GB VRAM sind Sie auf Modelle mit 3 Milliarden Parametern oder weniger bei Q4-Quantisierung beschränkt.</strong> Das schließt alle gängigen lokalen Modelle aus — Llama 3 8B, Mistral 7B, Qwen 14B. Drei moderne kleine Modelle performen überraschend gut: Phi-4 Mini entspricht GPT-3.5 bei Instruction Following, Gemma 2 2B bewältigt schnellen Chat und SmolLM 1.7B läuft auf integrierten Grafiken.',
+          'Stand Mai 2026: <strong>Mit 4 GB VRAM sind Sie auf Modelle mit 3 Milliarden Parametern oder weniger bei Q4-Quantisierung beschränkt.</strong> Das schließt alle gängigen lokalen Modelle aus — Llama 3 8B, Mistral Small, Qwen 14B. Drei moderne kleine Modelle performen überraschend gut: Phi-4 Mini entspricht GPT-4o mini bei Instruction Following, Gemma 2 2B bewältigt schnellen Chat und SmolLM 1.7B läuft auf integrierten Grafiken.',
           'Phi-4 Mini ist die erste Wahl in diesem Tier. Trotz seiner kleinen Größe bewältigt es allgemeines Q&A, leichtes Coding und Dokumentenzusammenfassung mit ~25 Token pro Sekunde. Gemma 2 2B ist schneller für Single-Turn-Chat. SmolLM 1.7B ist die Rückfallalternative, wenn sogar Phi-4 Mini Ihren VRAM zu nah an das Limit bringt.',
         ],
         columns: ['Modell', 'VRAM', 'Anwendungsbereich'],
@@ -174,11 +174,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Was nicht in 4 GB passt',
         content: [
           'Diese Modelle werden häufig angefragt, benötigen aber bei jeder Quantisierungsstufe mehr als 4 GB VRAM:',
-          'Ein Upgrade auf 6 GB schaltet Llama 3 8B und Mistral 7B frei — die zwei beliebtesten lokalen Modelle. Siehe <a href="/de/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">beste lokale LLMs für 6 GB VRAM</a>. Für einen vollständigen Hardware-Vergleich, siehe <a href="/de/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">schnellste lokale LLMs für Low-End-PCs</a>.',
+          'Ein Upgrade auf 6 GB schaltet Llama 3 8B und Mistral Small frei — die zwei beliebtesten lokalen Modelle. Siehe <a href="/de/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">beste lokale LLMs für 6 GB VRAM</a>. Für einen vollständigen Hardware-Vergleich, siehe <a href="/de/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">schnellste lokale LLMs für Low-End-PCs</a>.',
         ],
         items: [
           'Llama 3 8B — benötigt ~5,5 GB bei Q4_K_M (Minimum)',
-          'Mistral 7B — benötigt ~4,5 GB bei Q4_K_M (marginal; riskant bei 4 GB mit Kontext-Overhead)',
+          'Mistral Small — benötigt ~4,5 GB bei Q4_K_M (marginal; riskant bei 4 GB mit Kontext-Overhead)',
           'Phi-4 (vollständig 14B) — benötigt ~9,8 GB',
           'Qwen 14B — benötigt ~9,5 GB bei Q4_K_M',
         ],
@@ -228,7 +228,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Ce qui tient dans 4 Go de VRAM',
         content: [
-          'En mai 2026, <strong>avec 4 Go de VRAM, vous êtes limité aux modèles de 3 milliards de paramètres ou moins en quantisation Q4.</strong> Cela exclut tous les modèles locaux populaires — Llama 3 8B, Mistral 7B, Qwen 14B. Trois petits modèles modernes s\'en sortent étonnamment bien : Phi-4 Mini rivalise avec GPT-3.5 sur le suivi d\'instructions, Gemma 2 2B gère le chat rapide, et SmolLM 1.7B tourne sur des graphiques intégrés.',
+          'En mai 2026, <strong>avec 4 Go de VRAM, vous êtes limité aux modèles de 3 milliards de paramètres ou moins en quantisation Q4.</strong> Cela exclut tous les modèles locaux populaires — Llama 3 8B, Mistral Small, Qwen 14B. Trois petits modèles modernes s\'en sortent étonnamment bien : Phi-4 Mini rivalise avec GPT-4o mini sur le suivi d\'instructions, Gemma 2 2B gère le chat rapide, et SmolLM 1.7B tourne sur des graphiques intégrés.',
           'Phi-4 Mini est le premier choix à ce niveau. Malgré sa petite taille, il gère les Q&R généraux, le code léger et la synthèse de documents à ~25 tokens par seconde. Gemma 2 2B est plus rapide pour le chat en une seule passe. SmolLM 1.7B est le repli si même Phi-4 Mini pousse votre VRAM trop près de la limite.',
         ],
         columns: ['Modèle', 'VRAM', 'Usage optimal'],
@@ -242,11 +242,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Ce qui ne tient pas dans 4 Go',
         content: [
           'Ces modèles sont souvent demandés mais nécessitent plus de 4 Go de VRAM à tous les niveaux de quantisation :',
-          'Passer à 6 Go débloque Llama 3 8B et Mistral 7B — les deux modèles locaux les plus populaires. Voir <a href="/fr/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">les meilleurs LLM locaux pour 6 Go de VRAM</a>. Pour une comparaison matérielle complète, voir <a href="/fr/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">les LLM locaux les plus rapides pour PC d\'entrée de gamme</a>.',
+          'Passer à 6 Go débloque Llama 3 8B et Mistral Small — les deux modèles locaux les plus populaires. Voir <a href="/fr/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">les meilleurs LLM locaux pour 6 Go de VRAM</a>. Pour une comparaison matérielle complète, voir <a href="/fr/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">les LLM locaux les plus rapides pour PC d\'entrée de gamme</a>.',
         ],
         items: [
           'Llama 3 8B — nécessite ~5,5 Go en Q4_K_M (minimum)',
-          'Mistral 7B — nécessite ~4,5 Go en Q4_K_M (marginal ; risqué à 4 Go avec la surcharge de contexte)',
+          'Mistral Small — nécessite ~4,5 Go en Q4_K_M (marginal ; risqué à 4 Go avec la surcharge de contexte)',
           'Phi-4 (complet 14B) — nécessite ~9,8 Go',
           'Qwen 14B — nécessite ~9,5 Go en Q4_K_M',
         ],
@@ -296,7 +296,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '4 GB VRAMに何が収まるか',
         content: [
-          '2026年5月現在、<strong>4 GB VRAMではQ4量化で30億パラメータ以下のモデルに制限されます。</strong>これはすべての主流のローカルモデル — Llama 3 8B、Mistral 7B、Qwen 14B — を除外します。3つのモダンな小型モデルが驚くほど良いパフォーマンスを発揮します：Phi-4 Miniは指示追従でGPT-3.5に匹敵し、Gemma 2 2Bは高速チャットを処理し、SmolLM 1.7Bは統合グラフィックスで動作します。',
+          '2026年5月現在、<strong>4 GB VRAMではQ4量化で30億パラメータ以下のモデルに制限されます。</strong>これはすべての主流のローカルモデル — Llama 3 8B、Mistral Small、Qwen 14B — を除外します。3つのモダンな小型モデルが驚くほど良いパフォーマンスを発揮します：Phi-4 Miniは指示追従でGPT-4o miniに匹敵し、Gemma 2 2Bは高速チャットを処理し、SmolLM 1.7Bは統合グラフィックスで動作します。',
           'Phi-4 Miniがこのティアの最有力候補です。小さいながらも、一般的なQ&A、軽度のコーディング、ドキュメント要約を~25トークン/秒で処理します。Gemma 2 2BはSingle-Turnチャットで速い。SmolLM 1.7BはPhi-4 Miniでさえメモリ制限に近すぎる場合のフォールバックです。',
         ],
         columns: ['モデル', 'VRAM', '最適な用途'],
@@ -310,11 +310,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '4 GBに収まらないもの',
         content: [
           'よく要望されますが、すべての量化レベルで4 GB以上を必要とするモデル：',
-          '6 GBへのアップグレードでLlama 3 8BとMistral 7B — 最も人気の2つのローカルモデル — が解放されます。<a href="/ja/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB VRAM向け最良ローカルLLM</a>を参照してください。ハードウェアの完全な比較については<a href="/ja/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">ローエンドPCの最速ローカルLLM</a>をご覧ください。',
+          '6 GBへのアップグレードでLlama 3 8BとMistral Small — 最も人気の2つのローカルモデル — が解放されます。<a href="/ja/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB VRAM向け最良ローカルLLM</a>を参照してください。ハードウェアの完全な比較については<a href="/ja/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">ローエンドPCの最速ローカルLLM</a>をご覧ください。',
         ],
         items: [
           'Llama 3 8B — Q4_K_Mで~5.5 GB必要（最小）',
-          'Mistral 7B — Q4_K_Mで~4.5 GB必要（ギリギリ；コンテキストオーバーヘッドで4 GBでは危険）',
+          'Mistral Small — Q4_K_Mで~4.5 GB必要（ギリギリ；コンテキストオーバーヘッドで4 GBでは危険）',
           'Phi-4（フル14B）— ~9.8 GB必要',
           'Qwen 14B — Q4_K_Mで~9.5 GB必要',
         ],
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '4 GB显存能装什么',
         content: [
-          '截至2026年5月，<strong>4 GB显存下您只能使用Q4量化的30亿参数或更少的模型。</strong>这排除了所有主流本地模型——Llama 3 8B、Mistral 7B、Qwen 14B。三款现代小型模型表现出色：Phi-4 Mini在指令执行上与GPT-3.5相当，Gemma 2 2B处理快速聊天，SmolLM 1.7B可在集成显卡上运行。',
+          '截至2026年5月，<strong>4 GB显存下您只能使用Q4量化的30亿参数或更少的模型。</strong>这排除了所有主流本地模型——Llama 3 8B、Mistral Small、Qwen 14B。三款现代小型模型表现出色：Phi-4 Mini在指令执行上与GPT-4o mini相当，Gemma 2 2B处理快速聊天，SmolLM 1.7B可在集成显卡上运行。',
           'Phi-4 Mini是该层级的首选。尽管体积小，它能以约25 tok/s处理通用问答、轻度编程和文档摘要。Gemma 2 2B在单轮聊天中更快。SmolLM 1.7B是Phi-4 Mini也让显存太接近上限时的备选方案。',
         ],
         columns: ['模型', '显存', '适用场景'],
@@ -378,11 +378,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '4 GB装不下的模型',
         content: [
           '以下模型经常被问到，但在所有量化级别下都需要超过4 GB显存：',
-          '升级到6 GB可解锁Llama 3 8B和Mistral 7B——两款最流行的本地模型。参阅<a href="/zh/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB显存最佳本地LLM</a>。完整硬件比较请参阅<a href="/zh/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">低端PC最快本地LLM</a>。',
+          '升级到6 GB可解锁Llama 3 8B和Mistral Small——两款最流行的本地模型。参阅<a href="/zh/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB显存最佳本地LLM</a>。完整硬件比较请参阅<a href="/zh/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">低端PC最快本地LLM</a>。',
         ],
         items: [
           'Llama 3 8B——Q4_K_M至少需要约5.5 GB',
-          'Mistral 7B——Q4_K_M需要约4.5 GB（勉强；带上下文开销在4 GB下有风险）',
+          'Mistral Small——Q4_K_M需要约4.5 GB（勉强；带上下文开销在4 GB下有风险）',
           'Phi-4（完整14B）——需要约9.8 GB',
           'Qwen 14B——Q4_K_M需要约9.5 GB',
         ],
@@ -444,7 +444,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Qué cabe en 4 GB de VRAM',
         content: [
-          'A mayo de 2026, <strong>con 4 GB de VRAM estás limitado a modelos con 3.000 millones de parámetros o menos en cuantización Q4.</strong> Esto descarta todos los modelos locales populares — Llama 3 8B, Mistral 7B, Qwen 14B. Tres modelos pequeños modernos rinden sorprendentemente bien: Phi-4 Mini iguala a GPT-3.5 en seguimiento de instrucciones, Gemma 2 2B gestiona chat rápido, y SmolLM 1.7B funciona en gráficos integrados.',
+          'A mayo de 2026, <strong>con 4 GB de VRAM estás limitado a modelos con 3.000 millones de parámetros o menos en cuantización Q4.</strong> Esto descarta todos los modelos locales populares — Llama 3 8B, Mistral Small, Qwen 14B. Tres modelos pequeños modernos rinden sorprendentemente bien: Phi-4 Mini iguala a GPT-4o mini en seguimiento de instrucciones, Gemma 2 2B gestiona chat rápido, y SmolLM 1.7B funciona en gráficos integrados.',
           'Phi-4 Mini es la mejor opción en este rango. A pesar de su pequeño tamaño, maneja preguntas generales, código ligero y resumen de documentos a ~25 tokens por segundo. Gemma 2 2B es más rápido para chat de un solo turno. SmolLM 1.7B es la alternativa si incluso Phi-4 Mini acerca tu VRAM demasiado al límite.',
         ],
         columns: ['Modelo', 'VRAM', 'Mejor para'],
@@ -458,11 +458,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Qué no cabe en 4 GB',
         content: [
           'Estos modelos se solicitan frecuentemente pero requieren más de 4 GB de VRAM en todos los niveles de cuantización:',
-          'Actualizar a 6 GB desbloquea Llama 3 8B y Mistral 7B — los dos modelos locales más populares. Consulta <a href="/es/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">los mejores LLMs locales para 6 GB de VRAM</a>. Para una comparación completa de hardware, consulta <a href="/es/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">los LLMs locales más rápidos para PCs de gama baja</a>.',
+          'Actualizar a 6 GB desbloquea Llama 3 8B y Mistral Small — los dos modelos locales más populares. Consulta <a href="/es/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">los mejores LLMs locales para 6 GB de VRAM</a>. Para una comparación completa de hardware, consulta <a href="/es/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">los LLMs locales más rápidos para PCs de gama baja</a>.',
         ],
         items: [
           'Llama 3 8B — necesita ~5,5 GB en Q4_K_M (mínimo)',
-          'Mistral 7B — necesita ~4,5 GB en Q4_K_M (marginal; arriesgado en 4 GB con sobrecarga de contexto)',
+          'Mistral Small — necesita ~4,5 GB en Q4_K_M (marginal; arriesgado en 4 GB con sobrecarga de contexto)',
           'Phi-4 (completo 14B) — necesita ~9,8 GB',
           'Qwen 14B — necesita ~9,5 GB en Q4_K_M',
         ],
@@ -486,6 +486,86 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '¿Puede el modo solo-CPU superar el límite de 4 GB de VRAM?',
             a: 'Sí. Sin GPU, Llama 3 8B Q4 usa ~6 GB de RAM del sistema y funciona a 3–6 tok/s en una CPU moderna de 8 núcleos. Es más lento, pero funciona si tienes suficiente RAM.',
+          },
+        ],
+      },
+    },
+  },
+  pt: {
+    theme: 'Quantization & VRAM',
+    title: 'Melhores modelos Ollama para 4 GB de VRAM?',
+    seoTitle: 'Modelos Ollama para 4 GB VRAM 2026 | PromptQuorum',
+    metaDescription: '4 GB de VRAM é justo. Phi-4 Mini Q4 (3,2 GB), Gemma 2 2B (1,5 GB), SmolLM 1.7B (1,0 GB). Llama 3 8B não cabe. Resposta rápida do PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Melhores modelos Ollama para 4 GB de VRAM?',
+        answer: '4 GB de VRAM é justo mas utilizável com modelos pequenos como Phi-4 Mini Q4 (~3,2 GB), Gemma 2 2B (~1,5 GB) e SmolLM 1.7B (~1,0 GB). Llama 3 8B não cabe.',
+        bullets: [
+          'Phi-4 Mini Q4: melhor qualidade em 4 GB (3,2 GB VRAM)',
+          'Gemma 2 2B: rápido e leve (1,5 GB)',
+          'SmolLM 1.7B: menor ocupação de VRAM (1,0 GB)',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Melhor para 4 GB VRAM: Phi-4 Mini Q4 com ~3,2 GB — maior qualidade neste nível',
+          'Gemma 2 2B (1,5 GB) é a opção mais rápida; SmolLM 1.7B (1,0 GB) é a menor',
+          'Llama 3 8B não cabe em nenhuma quantização — precisa de 5,5 GB no mínimo',
+        ],
+      },
+      body1: {
+        title: 'O que cabe em 4 GB de VRAM',
+        content: [
+          'Em maio de 2026, <strong>com 4 GB de VRAM você está limitado a modelos com 3 bilhões de parâmetros ou menos em quantização Q4.</strong> Isso exclui todos os modelos locais populares — Llama 3 8B, Mistral Small, Qwen 14B. Três modelos pequenos modernos apresentam desempenho surpreendentemente bom: Phi-4 Mini iguala ao GPT-4o mini no seguimento de instruções, Gemma 2 2B lida com chat rápido e SmolLM 1.7B funciona em gráficos integrados.',
+          'Phi-4 Mini é a melhor escolha neste nível. Apesar do tamanho pequeno, ele lida com Q&A geral, codificação leve e resumo de documentos a ~25 tokens por segundo. Gemma 2 2B é mais rápido para chat de turno único. SmolLM 1.7B é a alternativa se mesmo o Phi-4 Mini deixar sua VRAM muito perto do limite.',
+        ],
+        columns: ['Modelo', 'VRAM', 'Melhor para'],
+        rows: [
+          { 'Modelo': 'Phi-4 Mini Q4', 'VRAM': '3,2 GB', 'Melhor para': 'Melhor qualidade em 4 GB' },
+          { 'Modelo': 'Gemma 2 2B Q4', 'VRAM': '1,5 GB', 'Melhor para': 'Chat rápido de turno único' },
+          { 'Modelo': 'SmolLM 1.7B Q4', 'VRAM': '1,0 GB', 'Melhor para': 'Menor ocupação de VRAM' },
+        ],
+      },
+      body2: {
+        title: 'O que não cabe em 4 GB',
+        content: [
+          'Estes modelos são frequentemente solicitados, mas requerem mais de 4 GB de VRAM em todos os níveis de quantização:',
+          'Atualizar para 6 GB desbloqueia Llama 3 8B e Mistral Small — os dois modelos locais mais populares. Veja os <a href="/pt/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">melhores LLMs locais para 6 GB de VRAM</a>. Para uma comparação completa de hardware, veja os <a href="/pt/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">LLMs locais mais rápidos para PCs de baixo custo</a>.',
+        ],
+        items: [
+          'Llama 3 8B — precisa de ~5,5 GB em Q4_K_M (mínimo)',
+          'Mistral Small — precisa de ~4,5 GB em Q4_K_M (marginal; arriscado em 4 GB com sobrecarga de contexto)',
+          'Phi-4 (completo 14B) — precisa de ~9,8 GB',
+          'Qwen 14B — precisa de ~9,5 GB em Q4_K_M',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre modelos com 4 GB de VRAM',
+        faqs: [
+          {
+            q: '4 GB de VRAM é suficiente para um LLM útil?',
+            a: 'Sim, para tarefas básicas. Phi-4 Mini lida com Q&A geral e codificação leve a ~25 tok/s. Para contextos longos, agentes de codificação em múltiplas etapas ou análise de documentos, 4 GB é um gargalo — atualize para 6 GB ou mais.',
+          },
+          {
+            q: 'Posso executar Llama 3 com 4 GB de VRAM?',
+            a: 'Não. Llama 3 8B precisa de ~5,5 GB em Q4_K_M no mínimo. Llama 3.2 3B cabe em ~2,5 GB se você quiser especificamente uma variante Llama. Veja <a href="/pt/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">o guia completo de requisitos de VRAM</a>.',
+          },
+          {
+            q: 'Qual GPU tem 4 GB de VRAM?',
+            a: 'RTX 3050 Ti (4 GB), GTX 1650 Super (4 GB) e AMD RX 6500 XT (4 GB) são as mais comuns. As três funcionam com Ollama — NVIDIA via CUDA, AMD via ROCm ou Vulkan.',
+          },
+          {
+            q: 'O modo somente-CPU pode contornar o limite de 4 GB de VRAM?',
+            a: 'Sim. Sem GPU, Llama 3 8B Q4 usa ~6 GB de RAM do sistema e funciona a 3–6 tok/s em uma CPU moderna de 8 núcleos. É mais lento, mas funciona se você tiver RAM suficiente.',
           },
         ],
       },

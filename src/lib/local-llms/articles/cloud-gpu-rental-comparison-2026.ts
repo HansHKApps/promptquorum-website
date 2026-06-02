@@ -105,7 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Head-to-head pricing and features (May 2026). Prices are hourly rates; most providers bill per-second, so actual costs depend on runtime.',
         rows: [
           {
-            'Provider': 'RunPod',
+            'Provider': '[RunPod](https://www.runpod.io)',
             'RTX 4090': '$0.34–0.69/hr',
             'A100 80GB': '$1.79/hr',
             'H100 80GB': '$2.69/hr',
@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'EU Region': '✓ Yes',
           },
           {
-            'Provider': 'Vast.ai',
+            'Provider': '[Vast.ai](https://vast.ai)',
             'RTX 4090': '$0.09–0.59/hr*',
             'A100 80GB': '$1.00–1.80/hr*',
             'H100 80GB': '$1.49–1.87/hr*',
@@ -125,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'EU Region': 'Per host',
           },
           {
-            'Provider': 'Lambda Labs',
+            'Provider': '[Lambda Labs](https://lambdalabs.com)',
             'RTX 4090': 'N/A',
             'A100 80GB': '$1.79/hr',
             'H100 80GB': '$2.99/hr',
@@ -153,9 +153,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Decision Matrix: Which Provider Fits Your Need?',
         content: 'Match your use case to the best provider.',
         numberedItems: [
-          'Budget is primary concern → Vast.ai (spot instances, $0.08/hr for RTX 4090)',
-          'Beginner, need simplicity → RunPod (unified dashboard, clear pricing, $10 free credit)',
-          'Team with managed workflows → Lambda Labs (API support, Slack support, 99.9% SLA)',
+          'Budget is primary concern → [Vast.ai](https://vast.ai) (spot instances, $0.08/hr for RTX 4090)',
+          'Beginner, need simplicity → [RunPod](https://www.runpod.io) (unified dashboard, clear pricing, $10 free credit)',
+          'Team with managed workflows → [Lambda Labs](https://lambdalabs.com) (API support, Slack support, 99.9% SLA)',
           'Multiple GPU types, experimentation → Vast.ai (largest catalog: 500+ GPU models)',
           'Fine-tuning only (stable workload) → RunPod Secure Cloud (99% SLA, no interruptions)',
           'Long-term production inference → Lambda Labs (reserved instances, cost guarantees)',
@@ -250,37 +250,37 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'These providers have EU data centers and can sign DPAs for EU personal data processing.',
         rows: [
           {
-            'Provider': 'Hetzner GPU',
+            'Provider': '[Hetzner GPU](https://www.hetzner.com)',
             'Location': 'Germany (Falkenstein, Nuremberg)',
             'DPA': '✓ German law',
             'Note': 'Ending referral June 15, 2026',
           },
           {
-            'Provider': 'Scaleway',
+            'Provider': '[Scaleway](https://www.scaleway.com)',
             'Location': 'France (Paris, Amsterdam)',
             'DPA': '✓ Available',
             'Note': 'French AI specialist, competitive pricing',
           },
           {
-            'Provider': 'OVHcloud',
+            'Provider': '[OVHcloud](https://www.ovhcloud.com)',
             'Location': 'France, Germany, UK',
             'DPA': '✓ Available',
             'Note': 'Largest EU cloud provider, enterprise focus',
           },
           {
-            'Provider': 'STACKIT (Schwarz Group)',
+            'Provider': '[STACKIT](https://www.stackit.de) (Schwarz Group)',
             'Location': 'Germany',
             'DPA': '✓ German law',
             'Note': 'Enterprise focus, Gaia-X certified',
           },
           {
-            'Provider': 'Nebius',
+            'Provider': '[Nebius](https://nebius.com)',
             'Location': 'Finland, Iceland',
             'DPA': '✓ Available',
             'Note': 'New, AI-specialized, high performance',
           },
           {
-            'Provider': 'RunPod (EU regions)',
+            'Provider': '[RunPod](https://www.runpod.io) (EU regions)',
             'Location': 'Netherlands, Romania',
             'DPA': '✓ Available',
             'Note': 'US company, but EU data centers available',
@@ -390,25 +390,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Hourly rental rates for common GPUs across the three platforms. Actual cost depends on runtime (RunPod per-minute, Vast.ai per-second, Lambda Labs per-hour with per-minute final billing).',
         rows: [
           {
-            'GPU': 'RTX 4090',
+            'GPU': '[RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/)',
             'RunPod': '$0.24–0.50/hr',
             'Vast.ai': '$0.08–0.25/hr',
             'Lambda Labs': 'N/A',
           },
           {
-            'GPU': 'A100 80GB',
+            'GPU': '[A100 80GB](https://www.nvidia.com/en-us/data-center/a100/)',
             'RunPod': '$0.50–1.20/hr',
             'Vast.ai': '$0.15–0.50/hr',
             'Lambda Labs': '$1.29–1.50/hr',
           },
           {
-            'GPU': 'H100',
+            'GPU': '[H100](https://www.nvidia.com/en-us/data-center/h100/)',
             'RunPod': '$1.50–2.50/hr',
             'Vast.ai': '$0.40–1.00/hr',
             'Lambda Labs': '$2.49–3.00/hr',
           },
           {
-            'GPU': 'L40S',
+            'GPU': '[L40S](https://www.nvidia.com/en-us/data-center/l40s/)',
             'RunPod': '$0.35–0.70/hr',
             'Vast.ai': '$0.10–0.30/hr',
             'Lambda Labs': '$1.00–1.50/hr',
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Comparativa directa de precios y características (mayo de 2026). Los precios son tarifas por hora; la mayoría de los proveedores cobran por segundo, por lo que el coste real depende del tiempo de ejecución. Los precios pueden variar según tu país.',
         rows: [
           {
-            'Proveedor': 'RunPod',
+            'Proveedor': '[RunPod](https://www.runpod.io)',
             'RTX 4090': '$0.34–0.69/hr',
             'A100 80GB': '$1.79/hr',
             'H100 80GB': '$2.69/hr',
@@ -613,7 +613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Región EU': '✓ Sí',
           },
           {
-            'Proveedor': 'Vast.ai',
+            'Proveedor': '[Vast.ai](https://vast.ai)',
             'RTX 4090': '$0.09–0.59/hr*',
             'A100 80GB': '$1.00–1.80/hr*',
             'H100 80GB': '$1.49–1.87/hr*',
@@ -623,7 +623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Región EU': 'Por host',
           },
           {
-            'Proveedor': 'Lambda Labs',
+            'Proveedor': '[Lambda Labs](https://lambdalabs.com)',
             'RTX 4090': 'N/A',
             'A100 80GB': '$1.79/hr',
             'H100 80GB': '$2.99/hr',
@@ -651,9 +651,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Matriz de Decisión: ¿Qué Proveedor se Adapta a tu Necesidad?',
         content: 'Asocia tu caso de uso con el mejor proveedor.',
         numberedItems: [
-          'El presupuesto es la prioridad → Vast.ai (instancias spot, $0.08/hr para RTX 4090)',
-          'Principiante, necesita simplicidad → RunPod (panel unificado, precios claros, $10 gratis)',
-          'Equipo con flujos de trabajo gestionados → Lambda Labs (soporte API, soporte Slack, SLA 99.9%)',
+          'El presupuesto es la prioridad → [Vast.ai](https://vast.ai) (instancias spot, $0.08/hr para RTX 4090)',
+          'Principiante, necesita simplicidad → [RunPod](https://www.runpod.io) (panel unificado, precios claros, $10 gratis)',
+          'Equipo con flujos de trabajo gestionados → [Lambda Labs](https://lambdalabs.com) (soporte API, soporte Slack, SLA 99.9%)',
           'Múltiples tipos de GPU, experimentación → Vast.ai (mayor catálogo: 500+ modelos de GPU)',
           'Solo fine-tuning (carga de trabajo estable) → RunPod Secure Cloud (SLA 99%, sin interrupciones)',
           'Inferencia de producción a largo plazo → Lambda Labs (instancias reservadas, garantías de coste)',
@@ -748,37 +748,37 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Estos proveedores tienen centros de datos en la EU y pueden firmar DPAs para el procesamiento de datos personales EU.',
         rows: [
           {
-            'Proveedor': 'Hetzner GPU',
+            'Proveedor': '[Hetzner GPU](https://www.hetzner.com)',
             'Ubicación': 'Alemania (Falkenstein, Núremberg)',
             'DPA': '✓ Ley alemana',
             'Nota': 'Fin del programa de referidos el 15 de junio de 2026',
           },
           {
-            'Proveedor': 'Scaleway',
+            'Proveedor': '[Scaleway](https://www.scaleway.com)',
             'Ubicación': 'Francia (París, Ámsterdam)',
             'DPA': '✓ Disponible',
             'Nota': 'Especialista en IA francés, precios competitivos',
           },
           {
-            'Proveedor': 'OVHcloud',
+            'Proveedor': '[OVHcloud](https://www.ovhcloud.com)',
             'Ubicación': 'Francia, Alemania, Reino Unido',
             'DPA': '✓ Disponible',
             'Nota': 'Mayor proveedor de nube EU, enfoque empresarial',
           },
           {
-            'Proveedor': 'STACKIT (Grupo Schwarz)',
+            'Proveedor': '[STACKIT](https://www.stackit.de) (Grupo Schwarz)',
             'Ubicación': 'Alemania',
             'DPA': '✓ Ley alemana',
             'Nota': 'Enfoque empresarial, certificado Gaia-X',
           },
           {
-            'Proveedor': 'Nebius',
+            'Proveedor': '[Nebius](https://nebius.com)',
             'Ubicación': 'Finlandia, Islandia',
             'DPA': '✓ Disponible',
             'Nota': 'Nuevo, especializado en IA, alto rendimiento',
           },
           {
-            'Proveedor': 'RunPod (regiones EU)',
+            'Proveedor': '[RunPod](https://www.runpod.io) (regiones EU)',
             'Ubicación': 'Países Bajos, Rumanía',
             'DPA': '✓ Disponible',
             'Nota': 'Empresa estadounidense, pero con centros de datos EU disponibles',
@@ -888,25 +888,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Tarifas de alquiler por hora para GPUs comunes en las tres plataformas. El coste real depende del tiempo de ejecución (RunPod por minuto, Vast.ai por segundo, Lambda Labs por hora con facturación final por minuto). Los precios pueden variar según tu país.',
         rows: [
           {
-            'GPU': 'RTX 4090',
+            'GPU': '[RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/)',
             'RunPod': '$0.24–0.50/hr',
             'Vast.ai': '$0.08–0.25/hr',
             'Lambda Labs': 'N/A',
           },
           {
-            'GPU': 'A100 80GB',
+            'GPU': '[A100 80GB](https://www.nvidia.com/en-us/data-center/a100/)',
             'RunPod': '$0.50–1.20/hr',
             'Vast.ai': '$0.15–0.50/hr',
             'Lambda Labs': '$1.29–1.50/hr',
           },
           {
-            'GPU': 'H100',
+            'GPU': '[H100](https://www.nvidia.com/en-us/data-center/h100/)',
             'RunPod': '$1.50–2.50/hr',
             'Vast.ai': '$0.40–1.00/hr',
             'Lambda Labs': '$2.49–3.00/hr',
           },
           {
-            'GPU': 'L40S',
+            'GPU': '[L40S](https://www.nvidia.com/en-us/data-center/l40s/)',
             'RunPod': '$0.35–0.70/hr',
             'Vast.ai': '$0.10–0.30/hr',
             'Lambda Labs': '$1.00–1.50/hr',
@@ -1119,7 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Direkter Vergleich von Preisen und Funktionen (Mai 2026). Alle Preise in USD (Anbieter rechnen in USD); EUR-Äquivalente sind Schätzungen zum Wechselkurs 1 USD ≈ 0,93 EUR. Die meisten Anbieter berechnen pro Sekunde, daher hängen die tatsächlichen Kosten von der Laufzeit ab.',
         rows: [
           {
-            'Anbieter': 'RunPod',
+            'Anbieter': '[RunPod](https://www.runpod.io)',
             'RTX 4090': '$0,34–0,69/h',
             'A100 80GB': '$1,79/h',
             'H100 80GB': '$2,69/h',
@@ -1129,7 +1129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'EU-Region': '✓ Ja',
           },
           {
-            'Anbieter': 'Vast.ai',
+            'Anbieter': '[Vast.ai](https://vast.ai)',
             'RTX 4090': '$0,09–0,59/h*',
             'A100 80GB': '$1,00–1,80/h*',
             'H100 80GB': '$1,49–1,87/h*',
@@ -1139,7 +1139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'EU-Region': 'Pro Host',
           },
           {
-            'Anbieter': 'Lambda Labs',
+            'Anbieter': '[Lambda Labs](https://lambdalabs.com)',
             'RTX 4090': 'N/A',
             'A100 80GB': '$1,79/h',
             'H100 80GB': '$2,99/h',
@@ -1167,9 +1167,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Entscheidungsmatrix: Welcher Anbieter passt zu Ihrem Bedarf?',
         content: 'Gleichen Sie Ihren Anwendungsfall mit dem besten Anbieter ab.',
         numberedItems: [
-          'Budget ist das Hauptanliegen → Vast.ai (Spot-Instanzen, 0,08 €/h für RTX 4090)',
-          'Anfänger, benötigen Einfachheit → RunPod (einheitliches Dashboard, klare Preisgestaltung, 10 € kostenlos)',
-          'Team mit verwalteten Workflows → Lambda Labs (API-Support, Slack-Support, 99,9% SLA)',
+          'Budget ist das Hauptanliegen → [Vast.ai](https://vast.ai) (Spot-Instanzen, 0,08 €/h für RTX 4090)',
+          'Anfänger, benötigen Einfachheit → [RunPod](https://www.runpod.io) (einheitliches Dashboard, klare Preisgestaltung, 10 € kostenlos)',
+          'Team mit verwalteten Workflows → [Lambda Labs](https://lambdalabs.com) (API-Support, Slack-Support, 99,9% SLA)',
           'Mehrere GPU-Typen, Experimente → Vast.ai (größter Katalog: 500+ GPU-Modelle)',
           'Nur Feinabstimmung (stabile Workload) → RunPod Secure Cloud (99% SLA, keine Unterbrechungen)',
           'Langfristige Produktionsinferenz → Lambda Labs (reservierte Instanzen, Kostenzusagen)',
@@ -1196,37 +1196,37 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Diese Anbieter haben EU-Rechenzentren und können Auftragsverarbeitungsverträge (AVV) für die Verarbeitung personenbezogener EU-Daten unterzeichnen.',
         rows: [
           {
-            'Anbieter': 'Hetzner GPU',
+            'Anbieter': '[Hetzner GPU](https://www.hetzner.com)',
             'Standort': 'Deutschland (Falkenstein, Nürnberg)',
             'AVV': '✓ Deutsches Recht',
             'Anmerkung': 'Endet 15. Juni 2026',
           },
           {
-            'Anbieter': 'Scaleway',
+            'Anbieter': '[Scaleway](https://www.scaleway.com)',
             'Standort': 'Frankreich (Paris, Amsterdam)',
             'AVV': '✓ Verfügbar',
             'Anmerkung': 'Französischer KI-Spezialist, wettbewerbsfähige Preise',
           },
           {
-            'Anbieter': 'OVHcloud',
+            'Anbieter': '[OVHcloud](https://www.ovhcloud.com)',
             'Standort': 'Frankreich, Deutschland, UK',
             'AVV': '✓ Verfügbar',
             'Anmerkung': 'Größter EU-Cloud-Anbieter, Enterprise-Fokus',
           },
           {
-            'Anbieter': 'STACKIT (Schwarz-Gruppe)',
+            'Anbieter': '[STACKIT](https://www.stackit.de) (Schwarz-Gruppe)',
             'Standort': 'Deutschland',
             'AVV': '✓ Deutsches Recht',
             'Anmerkung': 'Enterprise-Fokus, Gaia-X zertifiziert',
           },
           {
-            'Anbieter': 'Nebius',
+            'Anbieter': '[Nebius](https://nebius.com)',
             'Standort': 'Finnland, Island',
             'AVV': '✓ Verfügbar',
             'Anmerkung': 'Neu, KI-spezialisiert, hohe Leistung',
           },
           {
-            'Anbieter': 'RunPod (EU-Regionen)',
+            'Anbieter': '[RunPod](https://www.runpod.io) (EU-Regionen)',
             'Standort': 'Niederlande, Rumänien',
             'AVV': '✓ Verfügbar',
             'Anmerkung': 'US-Unternehmen, aber EU-Rechenzentren verfügbar',
@@ -1532,7 +1532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Comparaison directe des prix et fonctionnalités (mai 2026). Tous les prix en USD (les fournisseurs facturent en USD) ; les équivalents EUR sont des estimations au taux de change 1 USD ≈ 0,93 EUR. La plupart des fournisseurs facturent par seconde, donc les coûts réels dépendent du temps d\'exécution.',
         rows: [
           {
-            'Fournisseur': 'RunPod',
+            'Fournisseur': '[RunPod](https://www.runpod.io)',
             'RTX 4090': '$0,34–0,69/h',
             'A100 80GB': '$1,79/h',
             'H100 80GB': '$2,69/h',
@@ -1542,7 +1542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Région UE': '✓ Oui',
           },
           {
-            'Fournisseur': 'Vast.ai',
+            'Fournisseur': '[Vast.ai](https://vast.ai)',
             'RTX 4090': '$0,09–0,59/h*',
             'A100 80GB': '$1,00–1,80/h*',
             'H100 80GB': '$1,49–1,87/h*',
@@ -1552,7 +1552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Région UE': 'Par host',
           },
           {
-            'Fournisseur': 'Lambda Labs',
+            'Fournisseur': '[Lambda Labs](https://lambdalabs.com)',
             'RTX 4090': 'N/A',
             'A100 80GB': '$1,79/h',
             'H100 80GB': '$2,99/h',
@@ -1580,9 +1580,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Matrice de décision : Quel fournisseur convient à votre besoin ?',
         content: 'Associez votre cas d\'usage au meilleur fournisseur.',
         numberedItems: [
-          'Le budget est la priorité → Vast.ai (instances spot, $0,09–0,59/h pour RTX 4090)',
-          'Débutant, besoin de simplicité → RunPod (tableau de bord unifié, tarification claire, $10 gratuit)',
-          'Équipe avec workflows gérés → Lambda Labs (support API, support Slack, SLA 99,9%)',
+          'Le budget est la priorité → [Vast.ai](https://vast.ai) (instances spot, $0,09–0,59/h pour RTX 4090)',
+          'Débutant, besoin de simplicité → [RunPod](https://www.runpod.io) (tableau de bord unifié, tarification claire, $10 gratuit)',
+          'Équipe avec workflows gérés → [Lambda Labs](https://lambdalabs.com) (support API, support Slack, SLA 99,9%)',
           'Plusieurs types GPU, expérimentation → Vast.ai (plus grand catalogue : 500+ modèles GPU)',
           'Seulement ajustement fin (charge stable) → RunPod Secure Cloud (SLA 99%, pas d\'interruptions)',
           'Inférence production à long terme → Lambda Labs (instances réservées, garanties de coûts)',
@@ -1609,37 +1609,37 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Ces fournisseurs disposent de centres de données UE et peuvent signer des DPA pour le traitement des données personnelles UE.',
         rows: [
           {
-            'Fournisseur': 'Hetzner GPU',
+            'Fournisseur': '[Hetzner GPU](https://www.hetzner.com)',
             'Localisation': 'Allemagne (Falkenstein, Nuremberg)',
             'DPA': '✓ Droit allemand',
             'Note': 'Fin du parrainage 15 juin 2026',
           },
           {
-            'Fournisseur': 'Scaleway',
+            'Fournisseur': '[Scaleway](https://www.scaleway.com)',
             'Localisation': 'France (Paris, Amsterdam)',
             'DPA': '✓ Disponible',
             'Note': 'Spécialiste IA français, tarification compétitive',
           },
           {
-            'Fournisseur': 'OVHcloud',
+            'Fournisseur': '[OVHcloud](https://www.ovhcloud.com)',
             'Localisation': 'France, Allemagne, UK',
             'DPA': '✓ Disponible',
             'Note': 'Plus grand fournisseur cloud UE, focus entreprise',
           },
           {
-            'Fournisseur': 'STACKIT (Groupe Schwarz)',
+            'Fournisseur': '[STACKIT](https://www.stackit.de) (Groupe Schwarz)',
             'Localisation': 'Allemagne',
             'DPA': '✓ Droit allemand',
             'Note': 'Focus entreprise, certifié Gaia-X',
           },
           {
-            'Fournisseur': 'Nebius',
+            'Fournisseur': '[Nebius](https://nebius.com)',
             'Localisation': 'Finlande, Islande',
             'DPA': '✓ Disponible',
             'Note': 'Nouveau, spécialisé en IA, haute performance',
           },
           {
-            'Fournisseur': 'RunPod (régions UE)',
+            'Fournisseur': '[RunPod](https://www.runpod.io) (régions UE)',
             'Localisation': 'Pays-Bas, Roumanie',
             'DPA': '✓ Disponible',
             'Note': 'Entreprise américaine, mais centres de données UE disponibles',
@@ -1894,7 +1894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '価格と機能の直接比較(2026年5月)。すべての価格はUSD(プロバイダーはUSDで課金)。価格は時間レート。ほとんどのプロバイダーは秒単位で課金するため、実際のコストは実行時間に依存します。',
         rows: [
           {
-            'プロバイダー': 'RunPod',
+            'プロバイダー': '[RunPod](https://www.runpod.io)',
             'RTX 4090': '$0.34–0.69/時間',
             'A100 80GB': '$1.79/時間',
             'H100 80GB': '$2.69/時間',
@@ -1904,7 +1904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'EUリージョン': '✓ はい',
           },
           {
-            'プロバイダー': 'Vast.ai',
+            'プロバイダー': '[Vast.ai](https://vast.ai)',
             'RTX 4090': '$0.09–0.59/時間*',
             'A100 80GB': '$1.00–1.80/時間*',
             'H100 80GB': '$1.49–1.87/時間*',
@@ -1914,7 +1914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'EUリージョン': 'ホスト毎',
           },
           {
-            'プロバイダー': 'Lambda Labs',
+            'プロバイダー': '[Lambda Labs](https://lambdalabs.com)',
             'RTX 4090': 'N/A',
             'A100 80GB': '$1.79/時間',
             'H100 80GB': '$2.99/時間',
@@ -1942,9 +1942,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'デシジョン・マトリックス:どのプロバイダーがあなたのニーズに合いますか?',
         content: 'あなたのユースケースを最適なプロバイダーとマッチさせます。',
         numberedItems: [
-          '予算優先 → Vast.ai(スポットインスタンス、RTX 4090 $0.09–0.59/時間)',
-          '初心者、シンプルさが必要 → RunPod(統一ダッシュボード、明確な価格、$10無料)',
-          'マネージドワークフロー付きチーム → Lambda Labs(APIサポート、Slackサポート、99.9% SLA)',
+          '予算優先 → [Vast.ai](https://vast.ai)(スポットインスタンス、RTX 4090 $0.09–0.59/時間)',
+          '初心者、シンプルさが必要 → [RunPod](https://www.runpod.io)(統一ダッシュボード、明確な価格、$10無料)',
+          'マネージドワークフロー付きチーム → [Lambda Labs](https://lambdalabs.com)(APIサポート、Slackサポート、99.9% SLA)',
           '複数GPUタイプ、実験 → Vast.ai(最大カタログ:500+ GPUモデル)',
           'ファインチューニングのみ(安定したワークロード) → RunPod Secure Cloud(99% SLA、中断なし)',
           '長期本番推論 → Lambda Labs(予約インスタンス、コスト保証)',
@@ -1971,37 +1971,37 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'これらのプロバイダーはEUデータセンターを持ち、EU個人データ処理用のDPAに署名できます。',
         rows: [
           {
-            'プロバイダー': 'Hetzner GPU',
+            'プロバイダー': '[Hetzner GPU](https://www.hetzner.com)',
             '場所': 'ドイツ(フォルクステイン、ニュルンベルク)',
             'DPA': '✓ ドイツ法',
             '注記': '2026年6月15日終了',
           },
           {
-            'プロバイダー': 'Scaleway',
+            'プロバイダー': '[Scaleway](https://www.scaleway.com)',
             '場所': 'フランス(パリ、アムステルダム)',
             'DPA': '✓ 利用可能',
             '注記': 'フランスのAI専門家、競争力のある価格',
           },
           {
-            'プロバイダー': 'OVHcloud',
+            'プロバイダー': '[OVHcloud](https://www.ovhcloud.com)',
             '場所': 'フランス、ドイツ、英国',
             'DPA': '✓ 利用可能',
             '注記': '最大のEUクラウドプロバイダー、エンタープライズフォーカス',
           },
           {
-            'プロバイダー': 'STACKIT(Schwarzグループ)',
+            'プロバイダー': '[STACKIT](https://www.stackit.de)(Schwarzグループ)',
             '場所': 'ドイツ',
             'DPA': '✓ ドイツ法',
             '注記': 'エンタープライズフォーカス、Gaia-X認定',
           },
           {
-            'プロバイダー': 'Nebius',
+            'プロバイダー': '[Nebius](https://nebius.com)',
             '場所': 'フィンランド、アイスランド',
             'DPA': '✓ 利用可能',
             '注記': '新しい、AI特化、高性能',
           },
           {
-            'プロバイダー': 'RunPod(EUリージョン)',
+            'プロバイダー': '[RunPod](https://www.runpod.io)(EUリージョン)',
             '場所': 'オランダ、ルーマニア',
             'DPA': '✓ 利用可能',
             '注記': '米国企業だが、EUデータセンター利用可',
@@ -2256,7 +2256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '价格和功能的直接对比(2026年5月)。所有价格均为美元(提供商以美元计费)。价格为小时费率;大多数提供商按秒计费,因此实际成本取决于运行时间。',
         rows: [
           {
-            '提供商': 'RunPod',
+            '提供商': '[RunPod](https://www.runpod.io)',
             'RTX 4090': '$0.34–0.69/小时',
             'A100 80GB': '$1.79/小时',
             'H100 80GB': '$2.69/小时',
@@ -2266,7 +2266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'EU区域': '✓ 是',
           },
           {
-            '提供商': 'Vast.ai',
+            '提供商': '[Vast.ai](https://vast.ai)',
             'RTX 4090': '$0.09–0.59/小时*',
             'A100 80GB': '$1.00–1.80/小时*',
             'H100 80GB': '$1.49–1.87/小时*',
@@ -2276,7 +2276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'EU区域': '按主机',
           },
           {
-            '提供商': 'Lambda Labs',
+            '提供商': '[Lambda Labs](https://lambdalabs.com)',
             'RTX 4090': 'N/A',
             'A100 80GB': '$1.79/小时',
             'H100 80GB': '$2.99/小时',
@@ -2304,9 +2304,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '决策矩阵:哪个提供商适合您的需求?',
         content: '将您的用例与最佳提供商匹配。',
         numberedItems: [
-          '预算优先 → Vast.ai(现货实例,$0.09–0.59/小时 RTX 4090)',
-          '初学者,需要简洁 → RunPod(统一仪表板,明确定价,$10免费)',
-          '管理工作流的团队 → Lambda Labs(API支持,Slack支持,99.9% SLA)',
+          '预算优先 → [Vast.ai](https://vast.ai)(现货实例,$0.09–0.59/小时 RTX 4090)',
+          '初学者,需要简洁 → [RunPod](https://www.runpod.io)(统一仪表板,明确定价,$10免费)',
+          '管理工作流的团队 → [Lambda Labs](https://lambdalabs.com)(API支持,Slack支持,99.9% SLA)',
           '多个GPU类型,实验 → Vast.ai(最大目录:500+ GPU型号)',
           '仅微调(稳定工作负载) → RunPod Secure Cloud(99% SLA,无中断)',
           '长期生产推断 → Lambda Labs(保留实例,成本保证)',
@@ -2333,37 +2333,37 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '这些提供商拥有EU数据中心,可以签署EU个人数据处理的DPA。',
         rows: [
           {
-            '提供商': 'Hetzner GPU',
+            '提供商': '[Hetzner GPU](https://www.hetzner.com)',
             '位置': '德国(Falkenstein、纽伦堡)',
             'DPA': '✓ 德国法律',
             '注释': '2026年6月15日结束',
           },
           {
-            '提供商': 'Scaleway',
+            '提供商': '[Scaleway](https://www.scaleway.com)',
             '位置': '法国(巴黎、阿姆斯特丹)',
             'DPA': '✓ 可用',
             '注释': '法国AI专家,竞争性定价',
           },
           {
-            '提供商': 'OVHcloud',
+            '提供商': '[OVHcloud](https://www.ovhcloud.com)',
             '位置': '法国、德国、英国',
             'DPA': '✓ 可用',
             '注释': '最大的EU云提供商,企业焦点',
           },
           {
-            '提供商': 'STACKIT(施瓦茨集团)',
+            '提供商': '[STACKIT](https://www.stackit.de)(施瓦茨集团)',
             '位置': '德国',
             'DPA': '✓ 德国法律',
             '注释': '企业焦点,Gaia-X认证',
           },
           {
-            '提供商': 'Nebius',
+            '提供商': '[Nebius](https://nebius.com)',
             '位置': '芬兰、冰岛',
             'DPA': '✓ 可用',
             '注释': '新企业,AI专业,高性能',
           },
           {
-            '提供商': 'RunPod(EU区域)',
+            '提供商': '[RunPod](https://www.runpod.io)(EU区域)',
             '位置': '荷兰、罗马尼亚',
             'DPA': '✓ 可用',
             '注释': '美国公司,但EU数据中心可用',

@@ -408,7 +408,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ogDescription: 'JSON-Modus verhindert fehlerhafte JSON, nicht fehlende Felder oder falsche Typen. Drei Prompt-Techniken — Schema im Prompt, Ausgabebeispiele, Feldanweisungen — erreichen 95%+ strukturierte Output-Zuverlässigkeit ohne API-Änderungen.',
     twitterDescription: 'JSON-Modus behebt Syntax, nicht Schema-Konformität. Schema im Prompt + ein Ausgabebeispiel + Feldanweisungen → 95%+ strukturierte Output-Zuverlässigkeit. Keine API-Änderungen erforderlich.',
     intro: '**Die meisten Ausfälle bei strukturierter Ausgabe entstehen innerhalb gültigen JSON — erforderliche Felder fehlen, Daten sind als einfache Strings formatiert, Enum-Werte sind falsch geschrieben, nullable Felder geben Leerstrings statt null zurück.** APIs mit JSON-Modus und tool_use verhindern nicht analysierbare Ausgaben, tun aber nichts gegen Schema-Konformitätsfehler. Drei Prompt-Techniken beheben das, was JSON-Modus hinterlässt.',
-    leadAnswerBlock: '**Drei Prompt-Muster erreichen 95% oder mehr strukturierte Output-Zuverlässigkeit ohne API-Änderungen: Schema im Prompt einbetten, dem Modell ein gültiges Ausgabebeispiel zeigen und feldspezifische Anweisungen für Typ, Format und null-Behandlung hinzufügen.** Diese Muster funktionieren über GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro, mit oder ohne nativen JSON-Modus.',
+    leadAnswerBlock: '**Drei Prompt-Muster erreichen 95% oder mehr strukturierte Output-Zuverlässigkeit ohne API-Änderungen: Schema im Prompt einbetten, dem Modell ein gültiges Ausgabebeispiel zeigen und feldspezifische Anweisungen für Typ, Format und null-Behandlung hinzufügen.** Diese Muster funktionieren über GPT-5.5, Claude 4.6 Sonnet und Gemini 2.5 Pro, mit oder ohne nativen JSON-Modus.',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
     readTime: '9 Min. Lesezeit',
@@ -599,11 +599,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Erstellen Sie ein 20-Fall-Test-Set.** Zehn Happy-Path-Eingaben (typisch, wohlgeformte Daten), fünf Edge Cases (fehlende optionale Felder, langer Text, ungewöhnliche Werte, mehrsprachiger Inhalt), fünf gegnerische Eingaben (in Feldwerte eingebettete Anweisungen, extreme Daten, mehrdeutige Typen). Verwenden Sie realistische Eingaben aus Ihrer echten Datendomäne.',
           '**Führen Sie bei Temperatur 0 aus und zeichnen Sie Pass/Fail pro Feld auf.** Führen Sie alle 20 Fälle bei Temperatur 0 für deterministische, wiederholbare Ergebnisse aus. Zeichnen Sie auf, ob jedes Feld in jedem Test-Fall besteht oder fehlschlägt — nicht nur das Gesamtergebnis. Feldebene-Ausfallmuster identifizieren, welche Anweisung fehlt.',
           '**Beheben Sie das Feld mit der niedrigsten Pass-Rate und testen Sie erneut.** Addieren oder verstärken Sie eine Feldanweisung: Typ, Format, null-Behandlung oder Enum-Werte. Führen Sie alle 20 Fälle erneut aus. Eine einzelne gezielt Anweisung hebt typischerweise die Gesamtpass-Rate um 5–15 Prozentpunkte. Wiederholen Sie, bis die Gesamtpass-Rate 95% oder höher ist.',
-          '**Validieren Sie den Prompt auf einem zweiten Modell.** Führen Sie das volle 20-Fall-Set gegen ein zweites Modell mit dem gleichen Prompt aus. Ein Prompt bei 95%+ auf GPT-4o aber 70% auf Claude 4.6 Sonnet ist modellabhängig. Entweder addieren Sie explizitere Anweisungen, um auf beiden zu bestehen, oder dokumentieren Sie, für welches Modell der Prompt validiert ist, und switchen nicht ohne Retestung.',
+          '**Validieren Sie den Prompt auf einem zweiten Modell.** Führen Sie das volle 20-Fall-Set gegen ein zweites Modell mit dem gleichen Prompt aus. Ein Prompt bei 95%+ auf GPT-5.5 aber 70% auf Claude 4.6 Sonnet ist modellabhängig. Entweder addieren Sie explizitere Anweisungen, um auf beiden zu bestehen, oder dokumentieren Sie, für welches Modell der Prompt validiert ist, und switchen nicht ohne Retestung.',
         ],
         callouts: [
           { type: 'key-point', label: 'Führen Tests bei Temperatur 0 durch', text: 'Führen Sie strukturierte Output-Test-Sets bei Temperatur 0 durch, um deterministische, wiederholbare Ergebnisse zu erhalten. Ein Prompt, der bei Temperatur 0 besteht, ist zuverlässig von Design — nicht Glück. Erhöhen Sie die Temperatur nur, nachdem der Prompt bei 95%+ determiniert besteht, und testen Sie dann das Set bei der neuen Temperatur erneut, um sicherzustellen, dass Zuverlässigkeit hält.' },
-          { type: 'pro-tip', label: 'Nutzen Sie PromptQuorum für Multi-Modell-Vergleich', text: 'PromptQuorum führt Ihr 20-Fall-Test-Set gegen GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro gleichzeitig aus und zeigt feldspezifische Pass-Raten Seite an Seite. Dies identifiziert modellabhängige Fehler in einem Durchlauf statt drei.' },
+          { type: 'pro-tip', label: 'Nutzen Sie PromptQuorum für Multi-Modell-Vergleich', text: 'PromptQuorum führt Ihr 20-Fall-Test-Set gegen GPT-5.5, Claude 4.6 Sonnet und Gemini 2.5 Pro gleichzeitig aus und zeigt feldspezifische Pass-Raten Seite an Seite. Dies identifiziert modellabhängige Fehler in einem Durchlauf statt drei.' },
         ],
       },
       commonMistakes: {
@@ -623,7 +623,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Nur gegen das Modell testen, auf dem Sie den Prompt entwickelt haben',
-            problem: 'Strukturierte Output-Zuverlässigkeit variiert erheblich zwischen Modellen — ein Prompt bei 95% auf GPT-4o kann bei 70% auf Claude 4.6 Sonnet scheitern aufgrund unterschiedlichen Instruction-Folgens bei Schema-Konstraints',
+            problem: 'Strukturierte Output-Zuverlässigkeit variiert erheblich zwischen Modellen — ein Prompt bei 95% auf GPT-5.5 kann bei 70% auf Claude 4.6 Sonnet scheitern aufgrund unterschiedlichen Instruction-Folgens bei Schema-Konstraints',
             fix: 'Führen Sie jeden strukturierten Output-Prompt gegen mindestens 2 Modelle aus, bevor Sie ihn als modellunabhängig behandeln. Nutzen Sie PromptQuorum oder direkte API-Calls zum [Test von Prompts über Modelle hinweg](/de/prompt-engineering/how-to-test-prompts-across-models) in einem Schritt.',
           },
           {
@@ -642,11 +642,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Ressourcen',
         items: [
-          '[Strukturierte Ausgabe und JSON-Modus: Wann und wie Sie es nutzen](/de/prompt-engineering/structured-output-json-mode) — API-Level-JSON-Modus-Konfiguration für GPT-4o, Claude und Gemini mit Modell-Konformitäts-Tabelle',
+          '[Strukturierte Ausgabe und JSON-Modus: Wann und wie Sie es nutzen](/de/prompt-engineering/structured-output-json-mode) — API-Level-JSON-Modus-Konfiguration für GPT-5.5, Claude und Gemini mit Modell-Konformitäts-Tabelle',
           '[Beste Tools für strukturierte Ausgabe (2026)](/de/prompt-engineering/best-tools-structured-output) — Instructor, Outlines, Pydantic AI und LangChain für strukturierte Extraktions-Workflows verglichen',
           '[Wie Sie die Ausgabe kontrollieren: Format, Temperatur und beschränkte Dekodierung](/de/prompt-engineering/control-the-output) — beschränkte Dekodierungs-Mechanik, Temperatur und top-p für strukturierte Aufgaben, Stop-Sequenzen',
           '[Wie Sie Prompt-Qualität bewerten: Metriken, Tests und Checkliste](/de/prompt-engineering/how-to-evaluate-prompt-quality) — 20-Fall-Test-Set-Konstruktion, binäre Pass/Fail-Bewertung und LLM-as-Judge-Rubriken',
-          '[Wie Sie Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models) — Ausführen des gleichen Prompts gegen GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro, um modellabhängige Fehler zu finden',
+          '[Wie Sie Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models) — Ausführen des gleichen Prompts gegen GPT-5.5, Claude 4.6 Sonnet und Gemini 2.5 Pro, um modellabhängige Fehler zu finden',
           '[Zero-Shot vs. Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot) — Wann Sie Beispiele zu einem Prompt addieren und wie viele bei verschiedenen Aufgabentypen einbeziehen',
         ],
       },
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ogDescription: 'El modo JSON detiene el JSON malformado, no los campos faltantes ni los tipos incorrectos. Tres técnicas de prompt — incrustación del esquema, ejemplos de salida, instrucciones de campo — elevan la fiabilidad al 95%+ sin cambios en la API.',
     twitterDescription: 'El modo JSON corrige la sintaxis, no la conformidad del esquema. Esquema en el prompt + un ejemplo de salida + instrucciones de campo → 95%+ de fiabilidad en salida estructurada. No se necesitan cambios en la API.',
     intro: '**La mayoría de los fallos de salida estructurada ocurren dentro de JSON válido — campos requeridos faltantes, fechas formateadas como cadenas simples, valores de enum mal escritos, campos nullable que devuelven cadenas vacías en lugar de null.** El modo JSON a nivel de API y tool_use eliminan la salida no analizable pero no hacen nada para los fallos de conformidad del esquema. Tres técnicas de prompt corrigen lo que el modo JSON deja atrás.',
-    leadAnswerBlock: '**Tres patrones de prompt elevan la fiabilidad de salida estructurada al 95% o más sin cambios en la API: incrustar el esquema en el prompt, mostrarle al modelo un ejemplo de salida válida y añadir instrucciones a nivel de campo para tipo, formato y manejo de null.** Estos patrones funcionan en GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro, con o sin modo JSON nativo.',
+    leadAnswerBlock: '**Tres patrones de prompt elevan la fiabilidad de salida estructurada al 95% o más sin cambios en la API: incrustar el esquema en el prompt, mostrarle al modelo un ejemplo de salida válida y añadir instrucciones a nivel de campo para tipo, formato y manejo de null.** Estos patrones funcionan en GPT-5.5, Claude 4.6 Sonnet y Gemini 2.5 Pro, con o sin modo JSON nativo.',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
     readTime: '9 min de lectura',
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Escribe una instrucción de campo por campo requerido: tipo de datos, formato permitido, manejo de null y valores de enum — las instrucciones de campo eliminan la ambigüedad que causa errores de tipo',
           'Usa YAML en lugar de JSON para prompting libre sin enforcement de API — los modelos producen menos errores de sintaxis en YAML debido a su sintaxis más simple',
           'Apunta a un 95%+ de tasa de aprobación en un conjunto de prueba de 20 casos antes de desplegar cualquier prompt de salida estructurada en producción; por debajo del 95%, los fallos posteriores requieren un proceso de recuperación',
-          'Prueba cada prompt de salida estructurada contra al menos 2 modelos — un prompt que aprueba al 95% en GPT-4o puede fallar al 70% en Claude 4.6 Sonnet sin instrucciones agnósticas al modelo',
+          'Prueba cada prompt de salida estructurada contra al menos 2 modelos — un prompt que aprueba al 95% en GPT-5.5 puede fallar al 70% en Claude 4.6 Sonnet sin instrucciones agnósticas al modelo',
         ],
       },
       whatMakesReliable: {
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'El diseño del prompt determina la fiabilidad de la salida estructurada',
         content: [
           '**Las APIs de modo JSON y tool_use imponen JSON analizable, pero no garantizan la completitud de campos, los tipos de datos correctos o los valores de enum válidos — esos fallos requieren correcciones a nivel de prompt, no cambios en la API.** Los fallos más comunes de salida estructurada ocurren dentro de JSON sintácticamente válido: campos requeridos faltantes porque el modelo los trató como opcionales, fechas formateadas como cadenas relativas en lugar de ISO 8601, valores de enum mal escritos o abreviados, y campos nullable que devuelven cadenas vacías en lugar de null.',
-          'Tres intervenciones a nivel de prompt cierran consistentemente la brecha de fiabilidad. La incrustación del esquema hace que la estructura de salida sea inequívoca. Un solo ejemplo de salida válida elimina la ambigüedad de formato. Las instrucciones a nivel de campo eliminan los errores de tipo y manejo de null. Juntas, estas tres elevan la fiabilidad de salida estructurada al 95%+ en GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro — con o sin modo JSON nativo.',
+          'Tres intervenciones a nivel de prompt cierran consistentemente la brecha de fiabilidad. La incrustación del esquema hace que la estructura de salida sea inequívoca. Un solo ejemplo de salida válida elimina la ambigüedad de formato. Las instrucciones a nivel de campo eliminan los errores de tipo y manejo de null. Juntas, estas tres elevan la fiabilidad de salida estructurada al 95%+ en GPT-5.5, Claude 4.6 Sonnet y Gemini 2.5 Pro — con o sin modo JSON nativo.',
         ],
         columns: ['Tipo de fallo', 'Qué lo causa en el prompt', 'Corrección en el prompt'],
         rows: [
@@ -902,7 +902,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Construye un conjunto de prueba de 20 casos.** Diez entradas de ruta feliz (datos típicos y bien formados), cinco casos límite (campos opcionales faltantes, texto largo, valores inusuales), cinco entradas adversariales (instrucciones incrustadas en valores de campos, fechas extremas, tipos ambiguos).',
           '**Ejecuta a temperatura 0 y registra aprobación/fallo por campo.** Ejecuta los 20 casos a temperatura 0 para obtener resultados deterministas y repetibles. Registra si cada campo aprueba o falla en cada caso de prueba.',
           '**Corrige el campo con la tasa de aprobación más baja y vuelve a probar.** Añade o refuerza una instrucción de campo: tipo, formato, manejo de null o valores de enum. Vuelve a ejecutar los 20 casos. Una adición de instrucción dirigida normalmente eleva la tasa de aprobación general en 5–15 puntos porcentuales.',
-          '**Valida el prompt en un segundo modelo.** Ejecuta el conjunto completo de 20 casos contra un segundo modelo usando el mismo prompt. Un prompt al 95%+ en GPT-4o pero al 70% en Claude 4.6 Sonnet es dependiente del modelo.',
+          '**Valida el prompt en un segundo modelo.** Ejecuta el conjunto completo de 20 casos contra un segundo modelo usando el mismo prompt. Un prompt al 95%+ en GPT-5.5 pero al 70% en Claude 4.6 Sonnet es dependiente del modelo.',
         ],
       },
       commonMistakes: {
@@ -912,7 +912,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mistakes: [
           { mistake: 'Describir el esquema en lenguaje natural en lugar de incrustarlo', problem: 'Las descripciones en lenguaje natural son ambiguas — "una lista de elementos" podría significar un array, una cadena separada por comas o una lista numerada', fix: 'Incrusta el esquema esperado como plantilla JSON directamente en el prompt.' },
           { mistake: 'No especificar cómo manejar valores faltantes o desconocidos', problem: 'Los modelos inventan valores plausibles para campos desconocidos en lugar de devolver null — las fechas se convierten en "desconocido", los importes en 0, los IDs faltantes en "N/A"', fix: 'Añade manejo explícito de null para cada campo nullable: "Devuelve null si el valor no se puede determinar. No adivines ni inventes valores."' },
-          { mistake: 'Probar solo contra el modelo en el que se desarrolló el prompt', problem: 'La fiabilidad de salida estructurada varía significativamente entre modelos — un prompt al 95% en GPT-4o puede fallar al 70% en Claude 4.6 Sonnet', fix: 'Ejecuta cada prompt de salida estructurada contra al menos 2 modelos antes de tratarlo como agnóstico al modelo.' },
+          { mistake: 'Probar solo contra el modelo en el que se desarrolló el prompt', problem: 'La fiabilidad de salida estructurada varía significativamente entre modelos — un prompt al 95% en GPT-5.5 puede fallar al 70% en Claude 4.6 Sonnet', fix: 'Ejecuta cada prompt de salida estructurada contra al menos 2 modelos antes de tratarlo como agnóstico al modelo.' },
           { mistake: 'Reintentar la salida fallida con exactamente el mismo prompt', problem: 'Un prompt fallido reintentado a temperatura 0 produce el mismo fallo cada vez', fix: 'Usa un prompt de corrección con el error de validación específico y la salida malformada, o diagnostica el patrón de fallo y añade una instrucción de campo dirigida al prompt base.' },
           { mistake: 'Tratar el modo JSON como una solución completa de salida estructurada', problem: 'El modo JSON previene la salida no analizable pero no los fallos de conformidad del esquema — un modelo usando el modo JSON puede devolver JSON válido con campos faltantes, tipos incorrectos y valores de enum no válidos', fix: 'Siempre incluye el esquema en el prompt e instrucciones de campo incluso cuando uses el modo JSON impuesto por API.' },
         ],
@@ -929,17 +929,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: '¿Cómo obtengo salida estructurada fiable de un modelo sin modo JSON nativo?', a: 'Incrusta el esquema JSON completo como plantilla en el prompt, incluye un ejemplo de salida válida, añade instrucciones a nivel de campo y ejecuta a temperatura 0. Analiza y valida cada salida; envía un prompt de corrección para cualquier fallo de validación. Los prompts bien diseñados alcanzan 85–92% de fiabilidad en la mayoría de los modelos a temperatura 0 sin modo JSON nativo.' },
           { q: '¿Cuál es el tamaño correcto del conjunto de prueba para un prompt de salida estructurada?', a: '20 casos mínimo: 10 entradas de ruta feliz (datos típicos y bien formados), 5 casos límite (valores inusuales, campos opcionales faltantes, entradas largas), y 5 entradas adversariales.' },
           { q: '¿Cuándo debo usar un prompt de corrección vs corregir el prompt base?', a: 'Usa un prompt de corrección cuando los fallos son raros — menos del 10% de las salidas. Corrige el prompt base cuando los fallos son sistemáticos: el mismo campo faltante o el mismo error de tipo apareciendo en múltiples casos de prueba.' },
-          { q: '¿El orden de los campos en el esquema afecta la fiabilidad de la salida estructurada?', a: 'Sí. Coloca los campos requeridos primero y los campos opcionales o nullable al final. Los modelos ponderan más los elementos del esquema anteriores al decidir qué incluir. Este efecto de ordenamiento es consistente en GPT-4o y Claude 4.6 Sonnet.' },
+          { q: '¿El orden de los campos en el esquema afecta la fiabilidad de la salida estructurada?', a: 'Sí. Coloca los campos requeridos primero y los campos opcionales o nullable al final. Los modelos ponderan más los elementos del esquema anteriores al decidir qué incluir. Este efecto de ordenamiento es consistente en GPT-5.5 y Claude 4.6 Sonnet.' },
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Salida estructurada y modo JSON: cuándo y cómo usarlo](/es/prompt-engineering/structured-output-json-mode) — Configuración del modo JSON a nivel de API para GPT-4o, Claude y Gemini con tabla de cumplimiento del modelo',
+          '[Salida estructurada y modo JSON: cuándo y cómo usarlo](/es/prompt-engineering/structured-output-json-mode) — Configuración del modo JSON a nivel de API para GPT-5.5, Claude y Gemini con tabla de cumplimiento del modelo',
           '[Cómo controlar la salida: formato, temperatura y decodificación restringida](/es/prompt-engineering/control-the-output) — mecánicas de decodificación restringida, temperatura y top-p para tareas estructuradas',
           '[Cómo evaluar la calidad del prompt: métricas, pruebas y lista de verificación](/es/prompt-engineering/how-to-evaluate-prompt-quality) — construcción de conjuntos de prueba de 20 casos, puntuación binaria de aprobación/fallo',
-          '[Cómo probar prompts en diferentes modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — ejecutar el mismo prompt en GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro para encontrar fallos específicos del modelo',
+          '[Cómo probar prompts en diferentes modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — ejecutar el mismo prompt en GPT-5.5, Claude 4.6 Sonnet y Gemini 2.5 Pro para encontrar fallos específicos del modelo',
           '[Zero-Shot vs Few-Shot Prompting](/es/prompt-engineering/zero-shot-vs-few-shot) — cuándo añadir ejemplos a un prompt y cuántos incluir para diferentes tipos de tarea',
         ],
       },
@@ -966,7 +966,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ogDescription: 'JSON-mode empêche le JSON malformé, pas les champs manquants ou les mauvais types. Trois techniques de prompt — schéma intégré, exemples de sortie, instructions de champ — atteignent 95%+ de fiabilité sans changements API.',
     twitterDescription: 'JSON-mode corrige la syntaxe, pas la conformité du schéma. Schéma dans le prompt + un exemple de sortie + instructions de champ → 95%+ de fiabilité. Pas de changements API.',
     intro: '**La plupart des défaillances de sortie structurée surviennent dans du JSON valide — champs manquants, dates formatées en simples strings, valeurs enum mal orthographiées, champs nullable renvoyant des strings vides au lieu de null.** Les APIs avec JSON-mode et tool_use éliminent les sorties non analysables mais ne résolvent pas les défaillances de conformité de schéma. Trois techniques de prompt résolvent ce que JSON-mode laisse de côté.**',
-    leadAnswerBlock: '**Trois modèles de prompt atteignent 95% ou plus de fiabilité sans changements API: intégrer le schéma dans le prompt, montrer au modèle un exemple de sortie valide, et ajouter des instructions au niveau du champ pour le type, format et traitement null.** Ces modèles fonctionnent sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro, avec ou sans JSON-mode natif.',
+    leadAnswerBlock: '**Trois modèles de prompt atteignent 95% ou plus de fiabilité sans changements API: intégrer le schéma dans le prompt, montrer au modèle un exemple de sortie valide, et ajouter des instructions au niveau du champ pour le type, format et traitement null.** Ces modèles fonctionnent sur GPT-5.5, Claude 4.6 Sonnet et Gemini 2.5 Pro, avec ou sans JSON-mode natif.',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
     readTime: '9 min de lecture',
@@ -1157,11 +1157,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Construire un ensemble de test de 20 cas.** Dix happy-path (typiques, bien formées), cinq cas limites (champs optionnels manquants, texte long, valeurs inhabituelles, contenu multilingue), cinq adversariaux (instructions intégrées dans les valeurs de champs, dates extrêmes, types ambigus). Utilisez des inputs réalistes de votre domaine réel.',
           '**Exécuter à la température 0 et enregistrer réussite/échec par champ.** Exécutez les 20 cas à la température 0 pour des résultats déterministes et répétables. Enregistrez si chaque champ réussit ou échoue dans chaque test — pas seulement le résultat global. Les motifs d\'échec au niveau du champ identifient quelle instruction manque.',
           '**Corriger le champ avec le taux de réussite le plus faible et retester.** Ajouter ou renforcer une instruction de champ: type, format, traitement null ou valeurs enum. Réexécuter les 20 cas. Une instruction unique ciblée élève typiquement le taux global de 5–15 points. Répétez jusqu\'à atteindre 95% ou plus.',
-          '**Valider le prompt sur un second modèle.** Exécuter l\'ensemble complet de 20 cas sur un second modèle avec le même prompt. Un prompt à 95%+ sur GPT-4o mais 70% sur Claude 4.6 Sonnet est dépendant du modèle. Soit ajouter des instructions assez explicites pour réussir sur les deux, soit documenter quel modèle le prompt est validé pour et ne pas changer sans retesting.',
+          '**Valider le prompt sur un second modèle.** Exécuter l\'ensemble complet de 20 cas sur un second modèle avec le même prompt. Un prompt à 95%+ sur GPT-5.5 mais 70% sur Claude 4.6 Sonnet est dépendant du modèle. Soit ajouter des instructions assez explicites pour réussir sur les deux, soit documenter quel modèle le prompt est validé pour et ne pas changer sans retesting.',
         ],
         callouts: [
           { type: 'key-point', label: 'Exécuter les tests à la température 0', text: 'Exécuter les ensembles de test de sortie structurée à la température 0 pour obtenir des résultats déterministes et répétables. Un prompt qui passe à la température 0 est fiable par design — pas lucky. Seulement augmenter la température après que le prompt passe 95%+ déterministement, puis retester l\'ensemble à la nouvelle température pour confirmer que la fiabilité tient.' },
-          { type: 'pro-tip', label: 'Utiliser PromptQuorum pour comparaison multi-modèle', text: 'PromptQuorum exécute votre ensemble de test de 20 cas sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro simultanément et affiche les taux de réussite par champ côte à côte. Cela identifie les défaillances dépendantes du modèle en un run au lieu de trois.' },
+          { type: 'pro-tip', label: 'Utiliser PromptQuorum pour comparaison multi-modèle', text: 'PromptQuorum exécute votre ensemble de test de 20 cas sur GPT-5.5, Claude 4.6 Sonnet et Gemini 2.5 Pro simultanément et affiche les taux de réussite par champ côte à côte. Cela identifie les défaillances dépendantes du modèle en un run au lieu de trois.' },
         ],
       },
       commonMistakes: {
@@ -1181,7 +1181,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Tester seulement contre le modèle sur lequel vous avez développé le prompt',
-            problem: 'La fiabilité de sortie structurée varie significativement entre les modèles — un prompt à 95% sur GPT-4o peut échouer à 70% sur Claude 4.6 Sonnet à cause du suivi d\'instruction différent sur les contraintes de schéma',
+            problem: 'La fiabilité de sortie structurée varie significativement entre les modèles — un prompt à 95% sur GPT-5.5 peut échouer à 70% sur Claude 4.6 Sonnet à cause du suivi d\'instruction différent sur les contraintes de schéma',
             fix: 'Exécuter chaque prompt de sortie structurée contre au minimum 2 modèles avant de le traiter comme agnostique au modèle. Utiliser PromptQuorum ou des appels API directs pour [tester les prompts sur les modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) en une étape.',
           },
           {
@@ -1200,11 +1200,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectures Supplémentaires',
         items: [
-          '[Sortie Structurée et JSON-mode: Quand et Comment l\'Utiliser](/fr/prompt-engineering/structured-output-json-mode) — Configuration JSON-mode au niveau API pour GPT-4o, Claude et Gemini avec tableau de conformité du modèle',
+          '[Sortie Structurée et JSON-mode: Quand et Comment l\'Utiliser](/fr/prompt-engineering/structured-output-json-mode) — Configuration JSON-mode au niveau API pour GPT-5.5, Claude et Gemini avec tableau de conformité du modèle',
           '[Meilleurs Outils pour Sortie Structurée (2026)](/fr/prompt-engineering/best-tools-structured-output) — Instructor, Outlines, Pydantic AI et LangChain comparés pour workflows d\'extraction structurée',
           '[Comment Contrôler la Sortie: Format, Température et Décodage Contraint](/fr/prompt-engineering/control-the-output) — Mécanique de décodage contraint, température et top-p pour tâches structurées, séquences d\'arrêt',
           '[Comment Évaluer la Qualité du Prompt: Métriques, Tests et Checklist](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — Construction d\'ensemble de test de 20 cas, scoring réussite/échec binaire et rubriques LLM-as-judge',
-          '[Comment Tester les Prompts sur les Modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Exécution du même prompt sur GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro pour trouver les défaillances dépendantes du modèle',
+          '[Comment Tester les Prompts sur les Modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Exécution du même prompt sur GPT-5.5, Claude 4.6 Sonnet et Gemini 2.5 Pro pour trouver les défaillances dépendantes du modèle',
           '[Zero-Shot vs. Few-Shot Prompting](/fr/prompt-engineering/zero-shot-vs-few-shot) — Quand ajouter des exemples à un prompt et combien en inclure pour différents types de tâches',
         ],
       },
@@ -1231,7 +1231,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ogDescription: 'JSON-modeは形式が正しくないJSONを防ぎますが、フィールド不足や間違ったタイプは防ぎません。3つのプロンプトテクニック — スキーマ埋め込み、出力例、フィールド指示 — で95%以上の構造化出力信頼性を達成できます。',
     twitterDescription: 'JSON-modeは構文を修正し、スキーマ準拠は修正しません。プロンプトのスキーマ + 1つの出力例 + フィールド指示 → 95%以上の信頼性。API変更は不要です。',
     intro: '**構造化出力の失敗のほとんどは、有効なJSON内で発生します — 必須フィールドが不足している、日付が平文の文字列として形式化されている、列挙値が誤った綴りになっている、nullable フィールドがnullではなく空の文字列を返す。** JSON-modeとtool_useを備えたAPIは解析不可能な出力を排除しますが、スキーマ準拠の失敗には何もしません。3つのプロンプトテクニックがJSON-modeが残すものを修正します。',
-    leadAnswerBlock: '**3つのプロンプトパターンはAPI変更なしで95%以上の信頼性を達成します: スキーマをプロンプトに埋め込む、モデルに1つの有効な出力例を見せる、タイプ、形式、null処理のフィールドレベルの指示を追加する。** これらのパターンはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proで動作し、ネイティブJSON-modeの有無は問いません。',
+    leadAnswerBlock: '**3つのプロンプトパターンはAPI変更なしで95%以上の信頼性を達成します: スキーマをプロンプトに埋め込む、モデルに1つの有効な出力例を見せる、タイプ、形式、null処理のフィールドレベルの指示を追加する。** これらのパターンはGPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Proで動作し、ネイティブJSON-modeの有無は問いません。',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
     readTime: '9分で読める',
@@ -1422,11 +1422,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**20ケースのテストセットを構築します。** 10個のhappy-path (典型的、整形式)、5個のエッジケース (不足しているオプションフィールド、長いテキスト、異常な値、多言語コンテンツ)、5個の敵対的 (フィールド値に埋め込まれた指示、極端な日付、曖昧なタイプ)。実際のデータドメインからの現実的な入力を使用してください。',
           '**温度0で実行し、フィールドごとの合格/不合格を記録します。** 確定的で再現可能な結果のために、温度0で20ケースをすべて実行します。各テスト — 全体的な結果だけではなく — でどのフィールドが合格またはバックするかを記録します。フィールドレベルの失敗パターンは、どの指示が不足しているかを識別します。',
           '**成功率が最も低いフィールドを修正し、再度テストします。** フィールド指示を追加または強化します: タイプ、形式、null処理、または列挙値。20ケースを再度実行します。単一のターゲット指示は通常、全体的なパスレートを5–15ポイント上げます。95%以上に達するまで繰り返します。',
-          '**2番目のモデルで有効にします。** 2番目のモデルに対して完全な20ケースセットを実行します。GPT-4oで95%+、Claude 4.6 Sonnetで70%のプロンプトはモデル依存です。両方で成功するように指示をより明確にするか、プロンプトが検証されたモデルを文書化し、再テストなしで変更しないでください。',
+          '**2番目のモデルで有効にします。** 2番目のモデルに対して完全な20ケースセットを実行します。GPT-5.5で95%+、Claude 4.6 Sonnetで70%のプロンプトはモデル依存です。両方で成功するように指示をより明確にするか、プロンプトが検証されたモデルを文書化し、再テストなしで変更しないでください。',
         ],
         callouts: [
           { type: 'key-point', label: '温度0でテストを実行', text: '構造化出力テストセットを温度0で実行して、確定的で再現可能な結果を取得します。温度0をパスするプロンプトは設計による信頼性 — ラッキーではありません。プロンプトが95%+デターミニスティックをパスした後にのみ温度を上げ、新しい温度で設定を再度テストして、信頼性が保持されることを確認します。' },
-          { type: 'pro-tip', label: 'マルチモデル比較でPromptQuorumを使用', text: 'PromptQuorumは20ケースセットをGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proで同時にテストし、フィールドごとのパスレートを並べて表示します。これにより、モデル依存の失敗が1回の実行で識別され、3回ではなく。' },
+          { type: 'pro-tip', label: 'マルチモデル比較でPromptQuorumを使用', text: 'PromptQuorumは20ケースセットをGPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Proで同時にテストし、フィールドごとのパスレートを並べて表示します。これにより、モデル依存の失敗が1回の実行で識別され、3回ではなく。' },
         ],
       },
       commonMistakes: {
@@ -1446,7 +1446,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'プロンプトを開発したモデルに対してのみテストする',
-            problem: '構造化出力信頼性はモデル間で大きく異なります — GPT-4oで95%のプロンプトはClaude 4.6 Sonnetで70%失敗することができ、スキーマ制約でのさまざまな指示フォローが原因で',
+            problem: '構造化出力信頼性はモデル間で大きく異なります — GPT-5.5で95%のプロンプトはClaude 4.6 Sonnetで70%失敗することができ、スキーマ制約でのさまざまな指示フォローが原因で',
             fix: 'ライブラリをモデル依存として処理する前に、最小2モデルに対して各構造化出力プロンプトを実行します。PromptQuorumまたは直接API呼び出しを使用して [プロンプトをモデル全体でテスト](/ja/prompt-engineering/how-to-test-prompts-across-models) 1つのステップで。',
           },
           {
@@ -1465,11 +1465,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '参考資料',
         items: [
-          '[構造化出力とJSON-mode: いつ、どのように使用するか](/ja/prompt-engineering/structured-output-json-mode) — GPT-4o、Claude、Geminiのためのapi-levelJSON-mode構成と、モデル準拠テーブル',
+          '[構造化出力とJSON-mode: いつ、どのように使用するか](/ja/prompt-engineering/structured-output-json-mode) — GPT-5.5、Claude、Geminiのためのapi-levelJSON-mode構成と、モデル準拠テーブル',
           '[構造化出力用のベストツール (2026)](/ja/prompt-engineering/best-tools-structured-output) — 構造化抽出ワークフロー用に比較されたInstructor、Outlines、Pydantic AI、LangChain',
           '[出力を制御する方法: フォーマット、温度、制約デコード](/ja/prompt-engineering/control-the-output) — メカニクスデコード制約、構造化タスク、停止シーケンスの温度とtop-p',
           '[プロンプト品質を評価する方法: メトリクス、テスト、チェックリスト](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — 20ケーステストセット構築、バイナリ合格/不合格スコアリング、LLM-as-judgeルーブリック',
-          '[モデル全体でプロンプトをテストする方法](/ja/prompt-engineering/how-to-test-prompts-across-models) — GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro全体で同じプロンプトを実行して、モデル依存の失敗を検出',
+          '[モデル全体でプロンプトをテストする方法](/ja/prompt-engineering/how-to-test-prompts-across-models) — GPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Pro全体で同じプロンプトを実行して、モデル依存の失敗を検出',
           '[Zero-shotと少数shotプロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot) — プロンプトに例を追加する場合とさまざまなタスクタイプで含める数',
         ],
       },

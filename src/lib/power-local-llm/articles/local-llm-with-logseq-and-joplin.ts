@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)',
     seoTitle: 'Logseq + Joplin Local LLM: Smart Notes No Cloud 2026',
     intro:
-      'Logseq and Joplin are the two open-source notes apps in 2026 that pair cleanly with a local LLM and never need a cloud round-trip. Logseq runs the logseq-copilot plugin against Ollama for outliner-native chat and daily-journal AI; Joplin runs the Jarvis plugin against Ollama for note-aware chat, summaries, and embedding-backed retrieval. Both are GDPR-friendlier than Notion AI by default architecture — Notion sends note content to OpenAI; Logseq and Joplin send nothing unless you wire it up that way. The catch in 2026 is mobile: neither Logseq nor Joplin supports plugins on iOS or Android, so AI features run only on desktop. This guide ranks both tools on AI plugin maturity, sync-without-cloud paths, mobile compatibility, and the migration path from Notion, with concrete configuration steps for Ollama.',
+      '[Logseq](https://logseq.com) and [Joplin](https://joplinapp.org) are the two open-source notes apps in 2026 that pair cleanly with a local LLM and never need a cloud round-trip. Logseq runs the logseq-copilot plugin against [Ollama](https://ollama.com) for outliner-native chat and daily-journal AI; Joplin runs the Jarvis plugin against Ollama for note-aware chat, summaries, and embedding-backed retrieval. Both are GDPR-friendlier than Notion AI by default architecture — Notion sends note content to OpenAI; Logseq and Joplin send nothing unless you wire it up that way. The catch in 2026 is mobile: neither Logseq nor Joplin supports plugins on iOS or Android, so AI features run only on desktop. This guide ranks both tools on AI plugin maturity, sync-without-cloud paths, mobile compatibility, and the migration path from Notion, with concrete configuration steps for Ollama.',
     metaDescription:
       'Logseq + logseq-copilot vs Joplin + Jarvis on Ollama: private alternative to Notion AI. Cloud-free sync, GDPR posture, mobile plugin gap. 2026.',
     twitterDescription:
@@ -101,9 +101,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Quick Facts',
         items: [
-          '**Tools covered:** Logseq (outliner, daily-journal-first) and Joplin (plain-Markdown notebook). Obsidian is referenced for context — its dedicated guide is linked at the end.',
+          '**Tools covered:** Logseq (outliner, daily-journal-first) and Joplin (plain-Markdown notebook). [Obsidian](https://obsidian.md) is referenced for context — its dedicated guide is linked at the end.',
           '**Primary AI plugins:** logseq-copilot for Logseq; Jarvis (and similar Ollama-aware plugins) for Joplin.',
-          '**LLM backend:** Ollama (recommended) at `http://localhost:11434/v1`, or any OpenAI-compatible local endpoint (LM Studio, llama.cpp server, vLLM).',
+          '**LLM backend:** Ollama (recommended) at `http://localhost:11434/v1`, or any OpenAI-compatible local endpoint ([LM Studio](https://lmstudio.ai), llama.cpp server, vLLM).',
           '**Recommended chat models:** Llama 3.2 3B, Phi-4 Mini, Gemma 3 4B (16 GB RAM systems); Qwen3 1.7B (8 GB RAM).',
           '**Recommended embedding models (Joplin Jarvis only):** nomic-embed-text (768-dim, fast), mxbai-embed-large (1024-dim, more accurate).',
           '**Licences:** Logseq AGPL 3.0; Joplin AGPL 3.0; logseq-copilot AGPL 3.0 (same author as Copilot for Obsidian, Logan Yang); Jarvis (Joplin) AGPL 3.0.',
@@ -167,9 +167,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Tool', 'AI plugins', 'Sync (no cloud)', 'Mobile', 'Best for'],
         rows: [
-          { 'Tool': 'Logseq', 'AI plugins': 'logseq-copilot (chat blocks, slash commands), GPT-3 Plugin variants', 'Sync (no cloud)': 'Built-in Git, Syncthing, iCloud Drive, Logseq Sync (paid E2EE)', 'Mobile': 'Mobile app available; plugins not supported on mobile (2026)', 'Best for': 'Daily-journal + outliner workflow' },
-          { 'Tool': 'Joplin', 'AI plugins': 'Jarvis (chat, summarise, embedding-backed Q&A), Ollama-aware integrations', 'Sync (no cloud)': 'Joplin Cloud (paid E2EE), self-hosted Joplin Server, WebDAV, Nextcloud, Dropbox, OneDrive (all E2EE-capable)', 'Mobile': 'Mobile app available; plugins not supported on mobile (2026)', 'Best for': 'Markdown notebook + E2EE sync' },
-          { 'Tool': 'Obsidian (reference)', 'AI plugins': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (no cloud)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (paid E2EE)', 'Mobile': 'Mobile app supports most plugins; LAN access to Ollama required', 'Best for': 'Power users with paid plugins / paid sync' },
+          { 'Tool': '[Logseq](https://logseq.com)', 'AI plugins': 'logseq-copilot (chat blocks, slash commands), GPT-3 Plugin variants', 'Sync (no cloud)': 'Built-in Git, Syncthing, iCloud Drive, Logseq Sync (paid E2EE)', 'Mobile': 'Mobile app available; plugins not supported on mobile (2026)', 'Best for': 'Daily-journal + outliner workflow' },
+          { 'Tool': '[Joplin](https://joplinapp.org)', 'AI plugins': 'Jarvis (chat, summarise, embedding-backed Q&A), [Ollama](https://ollama.com)-aware integrations', 'Sync (no cloud)': 'Joplin Cloud (paid E2EE), self-hosted Joplin Server, WebDAV, Nextcloud, Dropbox, OneDrive (all E2EE-capable)', 'Mobile': 'Mobile app available; plugins not supported on mobile (2026)', 'Best for': 'Markdown notebook + E2EE sync' },
+          { 'Tool': '[Obsidian](https://obsidian.md) (reference)', 'AI plugins': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (no cloud)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (paid E2EE)', 'Mobile': 'Mobile app supports most plugins; LAN access to Ollama required', 'Best for': 'Power users with paid plugins / paid sync' },
         ],
         callouts: [
           {
@@ -318,7 +318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'If you used Notion databases as structured data (project trackers, CRMs, etc.), the migration is more involved than for prose pages. Consider keeping those specific databases in Notion (without AI) while moving prose-heavy content to Logseq or Joplin — or migrate the databases to AnythingLLM\'s structured RAG, where the local LLM can query them as documents.',
+            text: 'If you used Notion databases as structured data (project trackers, CRMs, etc.), the migration is more involved than for prose pages. Consider keeping those specific databases in Notion (without AI) while moving prose-heavy content to Logseq or Joplin — or migrate the databases to [AnythingLLM](https://anythingllm.com)\'s structured RAG, where the local LLM can query them as documents.',
           },
         ],
       },
@@ -435,7 +435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Logseq y Joplin con LLMs locales: notas inteligentes sin sincronización en la nube (2026)',
     seoTitle: 'Logseq + Joplin con LLM local: notas sin nube 2026',
     intro:
-      'Logseq y Joplin son las dos aplicaciones de notas open source que en 2026 se integran limpiamente con un LLM local y nunca necesitan una conexión a la nube. Logseq ejecuta el plugin logseq-copilot contra Ollama para chat nativo del outliner e IA en el diario diario; Joplin ejecuta el plugin Jarvis contra Ollama para chat consciente de notas, resúmenes y búsqueda respaldada por embeddings. Ambas son más compatibles con el RGPD que Notion AI por arquitectura predeterminada: Notion envía el contenido de las notas a OpenAI; Logseq y Joplin no envían nada a menos que tú lo configures así. El inconveniente en 2026 es el móvil: ni Logseq ni Joplin admiten plugins en iOS o Android, por lo que las funciones de IA solo se ejecutan en el escritorio. Esta guía clasifica ambas herramientas según la madurez de los plugins de IA, las rutas de sincronización sin nube, la compatibilidad móvil y el camino de migración desde Notion, con pasos de configuración concretos para Ollama.',
+      '[Logseq](https://logseq.com) y [Joplin](https://joplinapp.org) son las dos aplicaciones de notas open source que en 2026 se integran limpiamente con un LLM local y nunca necesitan una conexión a la nube. Logseq ejecuta el plugin logseq-copilot contra [Ollama](https://ollama.com) para chat nativo del outliner e IA en el diario diario; Joplin ejecuta el plugin Jarvis contra Ollama para chat consciente de notas, resúmenes y búsqueda respaldada por embeddings. Ambas son más compatibles con el RGPD que Notion AI por arquitectura predeterminada: Notion envía el contenido de las notas a OpenAI; Logseq y Joplin no envían nada a menos que tú lo configures así. El inconveniente en 2026 es el móvil: ni Logseq ni Joplin admiten plugins en iOS o Android, por lo que las funciones de IA solo se ejecutan en el escritorio. Esta guía clasifica ambas herramientas según la madurez de los plugins de IA, las rutas de sincronización sin nube, la compatibilidad móvil y el camino de migración desde Notion, con pasos de configuración concretos para Ollama.',
     metaDescription:
       'Logseq + logseq-copilot vs Joplin + Jarvis en Ollama: alternativa privada a Notion AI. Sync sin nube, postura RGPD, brecha de plugins móviles. 2026.',
     twitterDescription:
@@ -521,9 +521,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Datos rápidos',
         items: [
-          '**Herramientas cubiertas:** Logseq (outliner, con el diario diario como primera opción) y Joplin (cuaderno Markdown puro). Obsidian se menciona como referencia — su guía dedicada está enlazada al final.',
+          '**Herramientas cubiertas:** Logseq (outliner, con el diario diario como primera opción) y Joplin (cuaderno Markdown puro). [Obsidian](https://obsidian.md) se menciona como referencia — su guía dedicada está enlazada al final.',
           '**Plugins de IA principales:** logseq-copilot para Logseq; Jarvis (y plugins similares compatibles con Ollama) para Joplin.',
-          '**Backend LLM:** Ollama (recomendado) en `http://localhost:11434/v1`, o cualquier endpoint local compatible con OpenAI (LM Studio, servidor llama.cpp, vLLM).',
+          '**Backend LLM:** Ollama (recomendado) en `http://localhost:11434/v1`, o cualquier endpoint local compatible con OpenAI ([LM Studio](https://lmstudio.ai), servidor llama.cpp, vLLM).',
           '**Modelos de chat recomendados:** Llama 3.2 3B, Phi-4 Mini, Gemma 3 4B (sistemas con 16 GB de RAM); Qwen3 1.7B (8 GB de RAM).',
           '**Modelos de embedding recomendados (solo Joplin Jarvis):** nomic-embed-text (768 dimensiones, rápido), mxbai-embed-large (1024 dimensiones, más preciso).',
           '**Licencias:** Logseq AGPL 3.0; Joplin AGPL 3.0; logseq-copilot AGPL 3.0 (mismo autor que Copilot for Obsidian, Logan Yang); Jarvis (Joplin) AGPL 3.0.',
@@ -559,7 +559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           cloudIf: [
             'Necesitas funciones de IA en iOS o Android (no solo captura) → ninguna herramienta admite plugins en móvil en 2026; considera Obsidian Mobile + Ollama en LAN con Tailscale',
             'Necesitas colaboración multiusuario en tiempo real en el mismo vault → tanto Logseq como Joplin son de un solo usuario por diseño; la edición colaborativa no está en su modelo',
-            'Necesitas calidad GPT-4o en cada respuesta de chat → equivalentes en la nube (la pila local alcanza ~70% de capacidad)',
+            'Necesitas calidad GPT-5.5 en cada respuesta de chat → equivalentes en la nube (la pila local alcanza ~70% de capacidad)',
           ],
           quick: [
             'Diario diario + outliner: Logseq + logseq-copilot',
@@ -587,9 +587,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Herramienta', 'Plugins de IA', 'Sync (sin nube)', 'Móvil', 'Ideal para'],
         rows: [
-          { 'Herramienta': 'Logseq', 'Plugins de IA': 'logseq-copilot (bloques de chat, comandos slash), variantes del plugin GPT-3', 'Sync (sin nube)': 'Git integrado, Syncthing, iCloud Drive, Logseq Sync (de pago E2EE)', 'Móvil': 'App móvil disponible; plugins no admitidos en móvil (2026)', 'Ideal para': 'Flujo de trabajo de diario diario + outliner' },
-          { 'Herramienta': 'Joplin', 'Plugins de IA': 'Jarvis (chat, resumen, Q&A respaldada por embeddings), integraciones compatibles con Ollama', 'Sync (sin nube)': 'Joplin Cloud (de pago E2EE), Joplin Server auto-alojado, WebDAV, Nextcloud, Dropbox, OneDrive (todos compatibles con E2EE)', 'Móvil': 'App móvil disponible; plugins no admitidos en móvil (2026)', 'Ideal para': 'Cuaderno Markdown + sync E2EE' },
-          { 'Herramienta': 'Obsidian (referencia)', 'Plugins de IA': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (sin nube)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (de pago E2EE)', 'Móvil': 'La app móvil admite la mayoría de plugins; se requiere acceso LAN a Ollama', 'Ideal para': 'Usuarios avanzados con plugins de pago / sync de pago' },
+          { 'Herramienta': '[Logseq](https://logseq.com)', 'Plugins de IA': 'logseq-copilot (bloques de chat, comandos slash), variantes del plugin GPT-3', 'Sync (sin nube)': 'Git integrado, Syncthing, iCloud Drive, Logseq Sync (de pago E2EE)', 'Móvil': 'App móvil disponible; plugins no admitidos en móvil (2026)', 'Ideal para': 'Flujo de trabajo de diario diario + outliner' },
+          { 'Herramienta': '[Joplin](https://joplinapp.org)', 'Plugins de IA': 'Jarvis (chat, resumen, Q&A respaldada por embeddings), integraciones compatibles con [Ollama](https://ollama.com)', 'Sync (sin nube)': 'Joplin Cloud (de pago E2EE), Joplin Server auto-alojado, WebDAV, Nextcloud, Dropbox, OneDrive (todos compatibles con E2EE)', 'Móvil': 'App móvil disponible; plugins no admitidos en móvil (2026)', 'Ideal para': 'Cuaderno Markdown + sync E2EE' },
+          { 'Herramienta': '[Obsidian](https://obsidian.md) (referencia)', 'Plugins de IA': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (sin nube)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (de pago E2EE)', 'Móvil': 'La app móvil admite la mayoría de plugins; se requiere acceso LAN a Ollama', 'Ideal para': 'Usuarios avanzados con plugins de pago / sync de pago' },
         ],
         callouts: [
           {
@@ -738,7 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Si usaste bases de datos de Notion como datos estructurados (rastreadores de proyectos, CRMs, etc.), la migración es más compleja que para páginas de prosa. Considera mantener esas bases de datos específicas en Notion (sin IA) mientras mueves el contenido con mucho texto a Logseq o Joplin — o migra las bases de datos al RAG estructurado de AnythingLLM, donde el LLM local puede consultarlas como documentos.',
+            text: 'Si usaste bases de datos de Notion como datos estructurados (rastreadores de proyectos, CRMs, etc.), la migración es más compleja que para páginas de prosa. Considera mantener esas bases de datos específicas en Notion (sin IA) mientras mueves el contenido con mucho texto a Logseq o Joplin — o migra las bases de datos al RAG estructurado de [AnythingLLM](https://anythingllm.com), donde el LLM local puede consultarlas como documentos.',
           },
         ],
       },
@@ -867,7 +867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Logseq und Joplin mit lokalen LLMs: Intelligente Notizen ohne Cloud-Synchronisierung (2026)',
     seoTitle: 'Logseq + Joplin mit lokalem LLM: Notizen ohne Cloud 2026',
     intro:
-      'Logseq und Joplin sind die beiden Open-Source-Notiz-Apps, die sich 2026 sauber mit einem lokalen LLM kombinieren lassen und niemals eine Cloud-Verbindung benötigen. Logseq nutzt das logseq-copilot-Plugin gegen Ollama für Outliner-natives Chatten und KI im Tagesjournal; Joplin nutzt das Jarvis-Plugin gegen Ollama für notizbewussten Chat, Zusammenfassungen und Embedding-gestützte Suche. Beide sind durch ihre Standardarchitektur DSGVO-freundlicher als Notion AI — Notion sendet Notizinhalte an OpenAI; Logseq und Joplin senden nichts, sofern Sie es nicht entsprechend konfigurieren. Der Haken in 2026 ist mobil: Weder Logseq noch Joplin unterstützen Plugins unter iOS oder Android, KI-Funktionen laufen also ausschließlich am Desktop. Dieser Leitfaden bewertet beide Tools nach Reife der KI-Plugins, Synchronisierungspfaden ohne Cloud, mobiler Kompatibilität und Migrationspfad von Notion — mit konkreten Konfigurationsschritten für Ollama.',
+      '[Logseq](https://logseq.com) und [Joplin](https://joplinapp.org) sind die beiden Open-Source-Notiz-Apps, die sich 2026 sauber mit einem lokalen LLM kombinieren lassen und niemals eine Cloud-Verbindung benötigen. Logseq nutzt das logseq-copilot-Plugin gegen [Ollama](https://ollama.com) für Outliner-natives Chatten und KI im Tagesjournal; Joplin nutzt das Jarvis-Plugin gegen Ollama für notizbewussten Chat, Zusammenfassungen und Embedding-gestützte Suche. Beide sind durch ihre Standardarchitektur DSGVO-freundlicher als Notion AI — Notion sendet Notizinhalte an OpenAI; Logseq und Joplin senden nichts, sofern Sie es nicht entsprechend konfigurieren. Der Haken in 2026 ist mobil: Weder Logseq noch Joplin unterstützen Plugins unter iOS oder Android, KI-Funktionen laufen also ausschließlich am Desktop. Dieser Leitfaden bewertet beide Tools nach Reife der KI-Plugins, Synchronisierungspfaden ohne Cloud, mobiler Kompatibilität und Migrationspfad von Notion — mit konkreten Konfigurationsschritten für Ollama.',
     metaDescription:
       'Logseq + logseq-copilot vs. Joplin + Jarvis mit Ollama: private Alternative zu Notion AI. Cloud-freie Sync, DSGVO-konform, Mobile-Lücke. 2026.',
     twitterDescription:
@@ -953,9 +953,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Auf einen Blick',
         items: [
-          '**Behandelte Tools:** Logseq (Outliner, Tagesjournal-zentriert) und Joplin (reines Markdown-Notizbuch). Obsidian wird zur Einordnung erwähnt — der dedizierte Leitfaden ist am Ende verlinkt.',
+          '**Behandelte Tools:** Logseq (Outliner, Tagesjournal-zentriert) und Joplin (reines Markdown-Notizbuch). [Obsidian](https://obsidian.md) wird zur Einordnung erwähnt — der dedizierte Leitfaden ist am Ende verlinkt.',
           '**Primäre KI-Plugins:** logseq-copilot für Logseq; Jarvis (und ähnliche Ollama-fähige Plugins) für Joplin.',
-          '**LLM-Backend:** Ollama (empfohlen) unter `http://localhost:11434/v1` oder beliebiger OpenAI-kompatibler lokaler Endpunkt (LM Studio, llama.cpp Server, vLLM).',
+          '**LLM-Backend:** Ollama (empfohlen) unter `http://localhost:11434/v1` oder beliebiger OpenAI-kompatibler lokaler Endpunkt ([LM Studio](https://lmstudio.ai), llama.cpp Server, vLLM).',
           '**Empfohlene Chat-Modelle:** Llama 3.2 3B, Phi-4 Mini, Gemma 3 4B (16-GB-RAM-Systeme); Qwen3 1.7B (8 GB RAM).',
           '**Empfohlene Embedding-Modelle (nur Joplin Jarvis):** nomic-embed-text (768-dim, schnell), mxbai-embed-large (1024-dim, präziser).',
           '**Lizenzen:** Logseq AGPL 3.0; Joplin AGPL 3.0; logseq-copilot AGPL 3.0 (gleicher Autor wie Copilot for Obsidian, Logan Yang); Jarvis (Joplin) AGPL 3.0.',
@@ -991,7 +991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           cloudIf: [
             'Sie benötigen KI-Funktionen unter iOS oder Android (nicht nur Erfassung) → keines der Tools unterstützt Plugins auf Mobile in 2026; ziehen Sie Obsidian Mobile + LAN-Ollama mit Tailscale in Betracht',
             'Sie benötigen Echtzeit-Mehrbenutzer-Zusammenarbeit am selben Vault → sowohl Logseq als auch Joplin sind per Design Single-User; kollaborative Bearbeitung ist nicht ihr Modell',
-            'Sie benötigen GPT-4o-Qualität bei jeder Chat-Antwort → Cloud-Pendants (der lokale Stack erreicht ~70 % der Leistungsfähigkeit)',
+            'Sie benötigen GPT-5.5-Qualität bei jeder Chat-Antwort → Cloud-Pendants (der lokale Stack erreicht ~70 % der Leistungsfähigkeit)',
           ],
           quick: [
             'Tagesjournal + Outliner: Logseq + logseq-copilot',
@@ -1019,9 +1019,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Tool', 'KI-Plugins', 'Sync (ohne Cloud)', 'Mobile', 'Optimal für'],
         rows: [
-          { 'Tool': 'Logseq', 'KI-Plugins': 'logseq-copilot (Chat-Blöcke, Slash-Befehle), GPT-3-Plugin-Varianten', 'Sync (ohne Cloud)': 'Eingebautes Git, Syncthing, iCloud Drive, Logseq Sync (kostenpflichtig E2EE)', 'Mobile': 'Mobile App verfügbar; Plugins auf Mobile nicht unterstützt (2026)', 'Optimal für': 'Tagesjournal- + Outliner-Workflow' },
-          { 'Tool': 'Joplin', 'KI-Plugins': 'Jarvis (Chat, Zusammenfassung, Embedding-gestützte Q&A), Ollama-fähige Integrationen', 'Sync (ohne Cloud)': 'Joplin Cloud (kostenpflichtig E2EE), selbstgehosteter Joplin Server, WebDAV, Nextcloud, Dropbox, OneDrive (alle E2EE-fähig)', 'Mobile': 'Mobile App verfügbar; Plugins auf Mobile nicht unterstützt (2026)', 'Optimal für': 'Markdown-Notizbuch + E2EE-Sync' },
-          { 'Tool': 'Obsidian (Referenz)', 'KI-Plugins': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (ohne Cloud)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (kostenpflichtig E2EE)', 'Mobile': 'Mobile App unterstützt die meisten Plugins; LAN-Zugriff auf Ollama erforderlich', 'Optimal für': 'Power-User mit kostenpflichtigen Plugins / kostenpflichtiger Synchronisierung' },
+          { 'Tool': '[Logseq](https://logseq.com)', 'KI-Plugins': 'logseq-copilot (Chat-Blöcke, Slash-Befehle), GPT-3-Plugin-Varianten', 'Sync (ohne Cloud)': 'Eingebautes Git, Syncthing, iCloud Drive, Logseq Sync (kostenpflichtig E2EE)', 'Mobile': 'Mobile App verfügbar; Plugins auf Mobile nicht unterstützt (2026)', 'Optimal für': 'Tagesjournal- + Outliner-Workflow' },
+          { 'Tool': '[Joplin](https://joplinapp.org)', 'KI-Plugins': 'Jarvis (Chat, Zusammenfassung, Embedding-gestützte Q&A), [Ollama](https://ollama.com)-fähige Integrationen', 'Sync (ohne Cloud)': 'Joplin Cloud (kostenpflichtig E2EE), selbstgehosteter Joplin Server, WebDAV, Nextcloud, Dropbox, OneDrive (alle E2EE-fähig)', 'Mobile': 'Mobile App verfügbar; Plugins auf Mobile nicht unterstützt (2026)', 'Optimal für': 'Markdown-Notizbuch + E2EE-Sync' },
+          { 'Tool': '[Obsidian](https://obsidian.md) (Referenz)', 'KI-Plugins': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (ohne Cloud)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (kostenpflichtig E2EE)', 'Mobile': 'Mobile App unterstützt die meisten Plugins; LAN-Zugriff auf Ollama erforderlich', 'Optimal für': 'Power-User mit kostenpflichtigen Plugins / kostenpflichtiger Synchronisierung' },
         ],
         callouts: [
           {
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Wenn Sie Notion-Datenbanken als strukturierte Daten genutzt haben (Projekt-Tracker, CRMs etc.), ist die Migration aufwändiger als bei reinen Prosa-Seiten. Erwägen Sie, diese spezifischen Datenbanken in Notion zu behalten (ohne KI), während Sie prosa-lastige Inhalte zu Logseq oder Joplin verschieben — oder migrieren Sie die Datenbanken zu AnythingLLMs strukturiertem RAG, wo das lokale LLM sie als Dokumente abfragen kann.',
+            text: 'Wenn Sie Notion-Datenbanken als strukturierte Daten genutzt haben (Projekt-Tracker, CRMs etc.), ist die Migration aufwändiger als bei reinen Prosa-Seiten. Erwägen Sie, diese spezifischen Datenbanken in Notion zu behalten (ohne KI), während Sie prosa-lastige Inhalte zu Logseq oder Joplin verschieben — oder migrieren Sie die Datenbanken zu [AnythingLLM](https://anythingllm.com)s strukturiertem RAG, wo das lokale LLM sie als Dokumente abfragen kann.',
           },
         ],
       },
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Logseq et Joplin avec LLM locaux : notes intelligentes sans synchronisation cloud (2026)',
     seoTitle: 'Logseq + Joplin avec LLM local : notes sans cloud 2026',
     intro:
-      'Logseq et Joplin sont les deux applications de prise de notes open source qui se combinent proprement avec un LLM local en 2026 sans jamais nécessiter d\'aller-retour cloud. Logseq exécute le plugin logseq-copilot contre Ollama pour un chat natif outliner et de l\'IA dans le journal quotidien ; Joplin exécute le plugin Jarvis contre Ollama pour un chat conscient des notes, des résumés et une recherche basée sur les embeddings. Les deux sont plus respectueux du RGPD que Notion AI par architecture par défaut — Notion envoie le contenu des notes à OpenAI ; Logseq et Joplin n\'envoient rien sauf si vous le configurez ainsi. Le hic en 2026 est mobile : ni Logseq ni Joplin ne prennent en charge les plugins sur iOS ou Android, donc les fonctionnalités IA s\'exécutent uniquement sur ordinateur de bureau. Ce guide classe les deux outils selon la maturité des plugins IA, les chemins de synchronisation sans cloud, la compatibilité mobile et le chemin de migration depuis Notion, avec des étapes de configuration concrètes pour Ollama.',
+      '[Logseq](https://logseq.com) et [Joplin](https://joplinapp.org) sont les deux applications de prise de notes open source qui se combinent proprement avec un LLM local en 2026 sans jamais nécessiter d\'aller-retour cloud. Logseq exécute le plugin logseq-copilot contre [Ollama](https://ollama.com) pour un chat natif outliner et de l\'IA dans le journal quotidien ; Joplin exécute le plugin Jarvis contre Ollama pour un chat conscient des notes, des résumés et une recherche basée sur les embeddings. Les deux sont plus respectueux du RGPD que Notion AI par architecture par défaut — Notion envoie le contenu des notes à OpenAI ; Logseq et Joplin n\'envoient rien sauf si vous le configurez ainsi. Le hic en 2026 est mobile : ni Logseq ni Joplin ne prennent en charge les plugins sur iOS ou Android, donc les fonctionnalités IA s\'exécutent uniquement sur ordinateur de bureau. Ce guide classe les deux outils selon la maturité des plugins IA, les chemins de synchronisation sans cloud, la compatibilité mobile et le chemin de migration depuis Notion, avec des étapes de configuration concrètes pour Ollama.',
     metaDescription:
       'Logseq + logseq-copilot vs Joplin + Jarvis sur Ollama : alternative privée et RGPD à Notion AI. Sync sans cloud, lacune mobile expliquée. 2026.',
     twitterDescription:
@@ -1381,9 +1381,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Aperçu rapide',
         items: [
-          '**Outils traités :** Logseq (outliner, journal quotidien en premier) et Joplin (carnet Markdown pur). Obsidian est mentionné pour le contexte — son guide dédié est lié à la fin.',
+          '**Outils traités :** Logseq (outliner, journal quotidien en premier) et Joplin (carnet Markdown pur). [Obsidian](https://obsidian.md) est mentionné pour le contexte — son guide dédié est lié à la fin.',
           '**Plugins IA principaux :** logseq-copilot pour Logseq ; Jarvis (et plugins Ollama-compatibles similaires) pour Joplin.',
-          '**Backend LLM :** Ollama (recommandé) sur `http://localhost:11434/v1`, ou tout endpoint local compatible OpenAI (LM Studio, llama.cpp server, vLLM).',
+          '**Backend LLM :** Ollama (recommandé) sur `http://localhost:11434/v1`, ou tout endpoint local compatible OpenAI ([LM Studio](https://lmstudio.ai), llama.cpp server, vLLM).',
           '**Modèles de chat recommandés :** Llama 3.2 3B, Phi-4 Mini, Gemma 3 4B (systèmes 16 Go de RAM) ; Qwen3 1.7B (8 Go de RAM).',
           '**Modèles d\'embedding recommandés (Joplin Jarvis uniquement) :** nomic-embed-text (768-dim, rapide), mxbai-embed-large (1024-dim, plus précis).',
           '**Licences :** Logseq AGPL 3.0 ; Joplin AGPL 3.0 ; logseq-copilot AGPL 3.0 (même auteur que Copilot for Obsidian, Logan Yang) ; Jarvis (Joplin) AGPL 3.0.',
@@ -1419,7 +1419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           cloudIf: [
             'Vous avez besoin de fonctionnalités IA sur iOS ou Android (pas seulement la capture) → aucun des outils ne prend en charge les plugins sur mobile en 2026 ; envisagez Obsidian Mobile + Ollama LAN avec Tailscale',
             'Vous avez besoin de collaboration multi-utilisateurs en temps réel sur le même vault → Logseq comme Joplin sont mono-utilisateur par conception ; l\'édition collaborative n\'est pas dans leur modèle',
-            'Vous avez besoin de la qualité GPT-4o sur chaque réponse de chat → équivalents cloud (la pile locale atteint ~70 % des capacités)',
+            'Vous avez besoin de la qualité GPT-5.5 sur chaque réponse de chat → équivalents cloud (la pile locale atteint ~70 % des capacités)',
           ],
           quick: [
             'Journal quotidien + outliner : Logseq + logseq-copilot',
@@ -1447,9 +1447,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Outil', 'Plugins IA', 'Sync (sans cloud)', 'Mobile', 'Idéal pour'],
         rows: [
-          { 'Outil': 'Logseq', 'Plugins IA': 'logseq-copilot (blocs de chat, commandes slash), variantes du plugin GPT-3', 'Sync (sans cloud)': 'Git intégré, Syncthing, iCloud Drive, Logseq Sync (payant E2EE)', 'Mobile': 'App mobile disponible ; plugins non pris en charge sur mobile (2026)', 'Idéal pour': 'Workflow journal quotidien + outliner' },
-          { 'Outil': 'Joplin', 'Plugins IA': 'Jarvis (chat, résumé, Q&R basée sur les embeddings), intégrations Ollama-compatibles', 'Sync (sans cloud)': 'Joplin Cloud (payant E2EE), Joplin Server auto-hébergé, WebDAV, Nextcloud, Dropbox, OneDrive (tous compatibles E2EE)', 'Mobile': 'App mobile disponible ; plugins non pris en charge sur mobile (2026)', 'Idéal pour': 'Carnet Markdown + sync E2EE' },
-          { 'Outil': 'Obsidian (référence)', 'Plugins IA': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (sans cloud)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (payant E2EE)', 'Mobile': 'L\'app mobile prend en charge la plupart des plugins ; accès LAN à Ollama requis', 'Idéal pour': 'Power-users avec plugins payants / sync payante' },
+          { 'Outil': '[Logseq](https://logseq.com)', 'Plugins IA': 'logseq-copilot (blocs de chat, commandes slash), variantes du plugin GPT-3', 'Sync (sans cloud)': 'Git intégré, Syncthing, iCloud Drive, Logseq Sync (payant E2EE)', 'Mobile': 'App mobile disponible ; plugins non pris en charge sur mobile (2026)', 'Idéal pour': 'Workflow journal quotidien + outliner' },
+          { 'Outil': '[Joplin](https://joplinapp.org)', 'Plugins IA': 'Jarvis (chat, résumé, Q&R basée sur les embeddings), intégrations [Ollama](https://ollama.com)-compatibles', 'Sync (sans cloud)': 'Joplin Cloud (payant E2EE), Joplin Server auto-hébergé, WebDAV, Nextcloud, Dropbox, OneDrive (tous compatibles E2EE)', 'Mobile': 'App mobile disponible ; plugins non pris en charge sur mobile (2026)', 'Idéal pour': 'Carnet Markdown + sync E2EE' },
+          { 'Outil': '[Obsidian](https://obsidian.md) (référence)', 'Plugins IA': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (sans cloud)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (payant E2EE)', 'Mobile': 'L\'app mobile prend en charge la plupart des plugins ; accès LAN à Ollama requis', 'Idéal pour': 'Power-users avec plugins payants / sync payante' },
         ],
         callouts: [
           {
@@ -1598,7 +1598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Si vous avez utilisé les bases de données Notion comme données structurées (trackers de projet, CRM, etc.), la migration est plus complexe que pour les pages prose. Envisagez de garder ces bases spécifiques dans Notion (sans IA) tout en déplaçant le contenu prose vers Logseq ou Joplin — ou migrez les bases vers le RAG structuré d\'AnythingLLM, où le LLM local peut les interroger comme des documents.',
+            text: 'Si vous avez utilisé les bases de données Notion comme données structurées (trackers de projet, CRM, etc.), la migration est plus complexe que pour les pages prose. Envisagez de garder ces bases spécifiques dans Notion (sans IA) tout en déplaçant le contenu prose vers Logseq ou Joplin — ou migrez les bases vers le RAG structuré d\'[AnythingLLM](https://anythingllm.com), où le LLM local peut les interroger comme des documents.',
           },
         ],
       },
@@ -1715,7 +1715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Logseq と Joplin でローカル LLM：クラウド同期なしのスマートノート（2026）',
     seoTitle: 'Logseq + Joplin ローカルLLM：クラウドなしノート 2026',
     intro:
-      'Logseq と Joplin は、2026年にローカル LLM とクリーンに統合でき、クラウド往復が不要な2つのオープンソースのノートアプリです。Logseq は logseq-copilot プラグインを Ollama に対して実行し、アウトライナーネイティブなチャットと日々のジャーナル AI を提供します。Joplin は Jarvis プラグインを Ollama に対して実行し、ノート対応チャット、要約、埋め込みベースの検索を提供します。両者ともデフォルトアーキテクチャの観点から Notion AI より日本の APPI（個人情報保護法）への適合性が高い構成です — Notion はノート内容を OpenAI に送信しますが、Logseq と Joplin は設定しない限り何も送信しません。2026年の落とし穴はモバイル：Logseq も Joplin も iOS や Android でプラグインをサポートしていないため、AI 機能はデスクトップでのみ動作します。本ガイドでは両ツールを AI プラグインの成熟度、クラウドなし同期、モバイル互換性、Notion からの移行パスで評価し、Ollama 用の具体的な設定手順を示します。',
+      '[Logseq](https://logseq.com) と [Joplin](https://joplinapp.org) は、2026年にローカル LLM とクリーンに統合でき、クラウド往復が不要な2つのオープンソースのノートアプリです。Logseq は logseq-copilot プラグインを [Ollama](https://ollama.com) に対して実行し、アウトライナーネイティブなチャットと日々のジャーナル AI を提供します。Joplin は Jarvis プラグインを Ollama に対して実行し、ノート対応チャット、要約、埋め込みベースの検索を提供します。両者ともデフォルトアーキテクチャの観点から Notion AI より日本の APPI（個人情報保護法）への適合性が高い構成です — Notion はノート内容を OpenAI に送信しますが、Logseq と Joplin は設定しない限り何も送信しません。2026年の落とし穴はモバイル：Logseq も Joplin も iOS や Android でプラグインをサポートしていないため、AI 機能はデスクトップでのみ動作します。本ガイドでは両ツールを AI プラグインの成熟度、クラウドなし同期、モバイル互換性、Notion からの移行パスで評価し、Ollama 用の具体的な設定手順を示します。',
     metaDescription:
       'Logseq + logseq-copilot vs Joplin + Jarvis（Ollama 上）：プライベートな Notion AI 代替。クラウド不要同期、APPI適合、モバイル制約。2026年版。',
     twitterDescription:
@@ -1801,9 +1801,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'クイックファクト',
         items: [
-          '**対象ツール：** Logseq（アウトライナー、デイリージャーナル中心）と Joplin（プレーン Markdown ノートブック）。Obsidian は文脈用に言及 — 専用ガイドは末尾でリンク。',
+          '**対象ツール：** Logseq（アウトライナー、デイリージャーナル中心）と Joplin（プレーン Markdown ノートブック）。[Obsidian](https://obsidian.md) は文脈用に言及 — 専用ガイドは末尾でリンク。',
           '**主要 AI プラグイン：** Logseq 用は logseq-copilot。Joplin 用は Jarvis（および同様の Ollama 対応プラグイン）。',
-          '**LLM バックエンド：** `http://localhost:11434/v1` の Ollama（推奨）、または OpenAI 互換のローカルエンドポイント（LM Studio、llama.cpp server、vLLM）。',
+          '**LLM バックエンド：** `http://localhost:11434/v1` の Ollama（推奨）、または OpenAI 互換のローカルエンドポイント（[LM Studio](https://lmstudio.ai)、llama.cpp server、vLLM）。',
           '**推奨チャットモデル：** Llama 3.2 3B、Phi-4 Mini、Gemma 3 4B（16GB RAM システム）。Qwen3 1.7B（8GB RAM）。',
           '**推奨埋め込みモデル（Joplin Jarvis のみ）：** nomic-embed-text（768次元、高速）、mxbai-embed-large（1024次元、より精度高）。',
           '**ライセンス：** Logseq AGPL 3.0。Joplin AGPL 3.0。logseq-copilot AGPL 3.0（Copilot for Obsidian と同じ作者、Logan Yang）。Jarvis（Joplin）AGPL 3.0。',
@@ -1839,7 +1839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           cloudIf: [
             'iOS や Android で AI 機能が必要（キャプチャだけでなく） → 2026年時点でどちらのツールもモバイルでプラグインをサポートしません。Tailscale 経由の Obsidian Mobile + LAN Ollama を検討',
             '同じ vault での実時間マルチユーザー協業が必要 → Logseq も Joplin も設計上シングルユーザー。協業編集はモデルにない',
-            'すべてのチャット応答に GPT-4o 品質が必要 → クラウド版（ローカルスタックは約70%の能力）',
+            'すべてのチャット応答に GPT-5.5 品質が必要 → クラウド版（ローカルスタックは約70%の能力）',
           ],
           quick: [
             'デイリージャーナル + アウトライナー：Logseq + logseq-copilot',
@@ -1867,9 +1867,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['ツール', 'AI プラグイン', '同期（クラウドなし）', 'モバイル', '最適な用途'],
         rows: [
-          { 'ツール': 'Logseq', 'AI プラグイン': 'logseq-copilot（チャットブロック、スラッシュコマンド）、GPT-3 プラグイン亜種', '同期（クラウドなし）': '組み込み Git、Syncthing、iCloud Drive、Logseq Sync（有料 E2EE）', 'モバイル': 'モバイルアプリあり。モバイルではプラグイン未サポート（2026）', '最適な用途': 'デイリージャーナル + アウトライナーワークフロー' },
-          { 'ツール': 'Joplin', 'AI プラグイン': 'Jarvis（チャット、要約、埋め込みベース Q&A）、Ollama 対応統合', '同期（クラウドなし）': 'Joplin Cloud（有料 E2EE）、自己ホスト型 Joplin Server、WebDAV、Nextcloud、Dropbox、OneDrive（全て E2EE 対応可能）', 'モバイル': 'モバイルアプリあり。モバイルではプラグイン未サポート（2026）', '最適な用途': 'Markdown ノートブック + E2EE 同期' },
-          { 'ツール': 'Obsidian（参照）', 'AI プラグイン': 'Smart Connections、Copilot、Text Generator、Local GPT、BMO Chatbot', '同期（クラウドなし）': 'Git、Syncthing、iCloud Drive、Obsidian Sync（有料 E2EE）', 'モバイル': 'モバイルアプリはほとんどのプラグインをサポート。Ollama への LAN アクセスが必要', '最適な用途': '有料プラグイン / 有料同期を使うパワーユーザー' },
+          { 'ツール': '[Logseq](https://logseq.com)', 'AI プラグイン': 'logseq-copilot（チャットブロック、スラッシュコマンド）、GPT-3 プラグイン亜種', '同期（クラウドなし）': '組み込み Git、Syncthing、iCloud Drive、Logseq Sync（有料 E2EE）', 'モバイル': 'モバイルアプリあり。モバイルではプラグイン未サポート（2026）', '最適な用途': 'デイリージャーナル + アウトライナーワークフロー' },
+          { 'ツール': '[Joplin](https://joplinapp.org)', 'AI プラグイン': 'Jarvis（チャット、要約、埋め込みベース Q&A）、[Ollama](https://ollama.com) 対応統合', '同期（クラウドなし）': 'Joplin Cloud（有料 E2EE）、自己ホスト型 Joplin Server、WebDAV、Nextcloud、Dropbox、OneDrive（全て E2EE 対応可能）', 'モバイル': 'モバイルアプリあり。モバイルではプラグイン未サポート（2026）', '最適な用途': 'Markdown ノートブック + E2EE 同期' },
+          { 'ツール': '[Obsidian](https://obsidian.md)（参照）', 'AI プラグイン': 'Smart Connections、Copilot、Text Generator、Local GPT、BMO Chatbot', '同期（クラウドなし）': 'Git、Syncthing、iCloud Drive、Obsidian Sync（有料 E2EE）', 'モバイル': 'モバイルアプリはほとんどのプラグインをサポート。Ollama への LAN アクセスが必要', '最適な用途': '有料プラグイン / 有料同期を使うパワーユーザー' },
         ],
         callouts: [
           {
@@ -2020,7 +2020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Notion データベースを構造化データとして使用していた場合（プロジェクトトラッカー、CRM 等）、移行は文章ページよりも複雑です。それらの特定のデータベースを Notion に残し（AI なし）、文章中心のコンテンツを Logseq または Joplin に移動することを検討するか、データベースを AnythingLLM の構造化 RAG に移行することを検討してください — そこでローカル LLM がそれらをドキュメントとして照会できます。',
+            text: 'Notion データベースを構造化データとして使用していた場合（プロジェクトトラッカー、CRM 等）、移行は文章ページよりも複雑です。それらの特定のデータベースを Notion に残し（AI なし）、文章中心のコンテンツを Logseq または Joplin に移動することを検討するか、データベースを [AnythingLLM](https://anythingllm.com) の構造化 RAG に移行することを検討してください — そこでローカル LLM がそれらをドキュメントとして照会できます。',
           },
         ],
       },
@@ -2137,7 +2137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Logseq 与 Joplin 配合本地 LLM：无云同步的智能笔记（2026）',
     seoTitle: 'Logseq + Joplin 本地 LLM：无云同步笔记 2026',
     intro:
-      'Logseq 和 Joplin 是 2026 年两款可与本地 LLM 完美集成、无需任何云端往返的开源笔记应用。Logseq 通过 logseq-copilot 插件对接 Ollama，提供大纲器原生的聊天和每日日志 AI；Joplin 通过 Jarvis 插件对接 Ollama，提供笔记感知聊天、摘要和基于嵌入的检索。两者的默认架构都比 Notion AI 更符合数据安全法和跨境合规要求——Notion 会将笔记内容发送至 OpenAI；Logseq 和 Joplin 除非您主动配置，否则不发送任何数据。2026 年的硬限制是移动端：Logseq 和 Joplin 都不支持 iOS 或 Android 插件，因此 AI 功能仅在桌面端运行。本指南从 AI 插件成熟度、无云同步路径、移动兼容性以及从 Notion 的迁移路径对两款工具进行评分，并提供 Ollama 的具体配置步骤。',
+      '[Logseq](https://logseq.com) 和 [Joplin](https://joplinapp.org) 是 2026 年两款可与本地 LLM 完美集成、无需任何云端往返的开源笔记应用。Logseq 通过 logseq-copilot 插件对接 [Ollama](https://ollama.com)，提供大纲器原生的聊天和每日日志 AI；Joplin 通过 Jarvis 插件对接 Ollama，提供笔记感知聊天、摘要和基于嵌入的检索。两者的默认架构都比 Notion AI 更符合数据安全法和跨境合规要求——Notion 会将笔记内容发送至 OpenAI；Logseq 和 Joplin 除非您主动配置，否则不发送任何数据。2026 年的硬限制是移动端：Logseq 和 Joplin 都不支持 iOS 或 Android 插件，因此 AI 功能仅在桌面端运行。本指南从 AI 插件成熟度、无云同步路径、移动兼容性以及从 Notion 的迁移路径对两款工具进行评分，并提供 Ollama 的具体配置步骤。',
     metaDescription:
       'Logseq + logseq-copilot vs Joplin + Jarvis（基于 Ollama）：私密 Notion AI 替代方案。无云同步、数据本地化合规、移动端插件限制说明。2026 年。',
     twitterDescription:
@@ -2223,9 +2223,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '速览',
         items: [
-          '**涉及工具：** Logseq（大纲器，每日日志为主）和 Joplin（纯 Markdown 笔记本）。Obsidian 作为参照提及——其专用指南在文末链接。',
+          '**涉及工具：** Logseq（大纲器，每日日志为主）和 Joplin（纯 Markdown 笔记本）。[Obsidian](https://obsidian.md) 作为参照提及——其专用指南在文末链接。',
           '**主要 AI 插件：** Logseq 用 logseq-copilot；Joplin 用 Jarvis（以及类似的 Ollama 兼容插件）。',
-          '**LLM 后端：** Ollama（推荐）位于 `http://localhost:11434/v1`，或任何 OpenAI 兼容的本地端点（LM Studio、llama.cpp server、vLLM）。',
+          '**LLM 后端：** Ollama（推荐）位于 `http://localhost:11434/v1`，或任何 OpenAI 兼容的本地端点（[LM Studio](https://lmstudio.ai)、llama.cpp server、vLLM）。',
           '**推荐聊天模型：** Llama 3.2 3B、Phi-4 Mini、Gemma 3 4B（16GB RAM 系统）；Qwen3 1.7B（8GB RAM）。',
           '**推荐嵌入模型（仅 Joplin Jarvis）：** nomic-embed-text（768 维，速度快）、mxbai-embed-large（1024 维，更精确）。',
           '**许可：** Logseq AGPL 3.0；Joplin AGPL 3.0；logseq-copilot AGPL 3.0（与 Copilot for Obsidian 同一作者 Logan Yang）；Jarvis（Joplin）AGPL 3.0。',
@@ -2261,7 +2261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           cloudIf: [
             '您需要在 iOS 或 Android 上使用 AI 功能（不只是捕获）→ 2026 年两款工具均不支持移动端插件；考虑 Obsidian Mobile + 通过 Tailscale 的 LAN Ollama',
             '您需要同一 vault 的实时多用户协作 → Logseq 和 Joplin 都设计为单用户；协作编辑不在其模型中',
-            '您需要每次聊天回复都达到 GPT-4o 质量 → 云端等同方案（本地堆栈约为 70% 的能力）',
+            '您需要每次聊天回复都达到 GPT-5.5 质量 → 云端等同方案（本地堆栈约为 70% 的能力）',
           ],
           quick: [
             '每日日志 + 大纲器：Logseq + logseq-copilot',
@@ -2289,9 +2289,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['工具', 'AI 插件', '同步（无云）', '移动端', '最适合'],
         rows: [
-          { '工具': 'Logseq', 'AI 插件': 'logseq-copilot（聊天块、斜杠命令）、GPT-3 插件变体', '同步（无云）': '内置 Git、Syncthing、iCloud Drive、Logseq Sync（付费 E2EE）', '移动端': '提供移动应用；移动端不支持插件（2026）', '最适合': '每日日志 + 大纲器工作流' },
-          { '工具': 'Joplin', 'AI 插件': 'Jarvis（聊天、摘要、基于嵌入的问答）、Ollama 兼容集成', '同步（无云）': 'Joplin Cloud（付费 E2EE）、自托管 Joplin Server、WebDAV、Nextcloud、Dropbox、OneDrive（全部支持 E2EE）', '移动端': '提供移动应用；移动端不支持插件（2026）', '最适合': 'Markdown 笔记本 + E2EE 同步' },
-          { '工具': 'Obsidian（参照）', 'AI 插件': 'Smart Connections、Copilot、Text Generator、Local GPT、BMO Chatbot', '同步（无云）': 'Git、Syncthing、iCloud Drive、Obsidian Sync（付费 E2EE）', '移动端': '移动应用支持大多数插件；需 LAN 访问 Ollama', '最适合': '使用付费插件 / 付费同步的高级用户' },
+          { '工具': '[Logseq](https://logseq.com)', 'AI 插件': 'logseq-copilot（聊天块、斜杠命令）、GPT-3 插件变体', '同步（无云）': '内置 Git、Syncthing、iCloud Drive、Logseq Sync（付费 E2EE）', '移动端': '提供移动应用；移动端不支持插件（2026）', '最适合': '每日日志 + 大纲器工作流' },
+          { '工具': '[Joplin](https://joplinapp.org)', 'AI 插件': 'Jarvis（聊天、摘要、基于嵌入的问答）、[Ollama](https://ollama.com) 兼容集成', '同步（无云）': 'Joplin Cloud（付费 E2EE）、自托管 Joplin Server、WebDAV、Nextcloud、Dropbox、OneDrive（全部支持 E2EE）', '移动端': '提供移动应用；移动端不支持插件（2026）', '最适合': 'Markdown 笔记本 + E2EE 同步' },
+          { '工具': '[Obsidian](https://obsidian.md)（参照）', 'AI 插件': 'Smart Connections、Copilot、Text Generator、Local GPT、BMO Chatbot', '同步（无云）': 'Git、Syncthing、iCloud Drive、Obsidian Sync（付费 E2EE）', '移动端': '移动应用支持大多数插件；需 LAN 访问 Ollama', '最适合': '使用付费插件 / 付费同步的高级用户' },
         ],
         callouts: [
           {
@@ -2441,7 +2441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '如果您将 Notion 数据库用作结构化数据（项目跟踪器、CRM 等），迁移比纯散文页面更复杂。考虑将这些特定数据库保留在 Notion 中（无 AI），同时将散文内容移至 Logseq 或 Joplin——或将数据库迁移至 AnythingLLM 的结构化 RAG，本地 LLM 可作为文档查询它们。',
+            text: '如果您将 Notion 数据库用作结构化数据（项目跟踪器、CRM 等），迁移比纯散文页面更复杂。考虑将这些特定数据库保留在 Notion 中（无 AI），同时将散文内容移至 Logseq 或 Joplin——或将数据库迁移至 [AnythingLLM](https://anythingllm.com) 的结构化 RAG，本地 LLM 可作为文档查询它们。',
           },
         ],
       },

@@ -96,17 +96,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'Welche Ollama-Modelle unterstützen 128K Kontext?',
     seoTitle: 'Ollama 128K Kontext 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3.1 8B und Qwen 2.5 14B unterstützen 128K+ Kontext auf Ollama. Qwen 2.5 erreicht 1M Tokens. Voller Kontext erhöht den VRAM stark. Stand Mai 2026.',
+    metaDescription: 'Llama 3.3 8B und Qwen 3 14B unterstützen 128K+ Kontext auf Ollama. Qwen 3 erreicht 1M Tokens. Voller Kontext erhöht den VRAM stark. Stand Mai 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       de: {
         question: 'Welche Ollama-Modelle unterstützen 128K Kontext?',
-        answer: 'Llama 3.1 8B unterstützt 128K Kontext auf Ollama. Qwen 2.5 14B erreicht 1M Tokens. Hinweis: Voller Kontext erhöht den VRAM-Bedarf erheblich — ein 128K-Fenster benötigt 3–4× mehr VRAM als das Standard-4K-Fenster.',
+        answer: 'Llama 3.3 8B unterstützt 128K Kontext auf Ollama. Qwen 3 14B erreicht 1M Tokens. Hinweis: Voller Kontext erhöht den VRAM-Bedarf erheblich — ein 128K-Fenster benötigt 3–4× mehr VRAM als das Standard-4K-Fenster.',
         bullets: [
-          'Llama 3.1 8B: 128K Kontext, ~16 GB VRAM bei vollem Kontext',
-          'Qwen 2.5 14B: bis zu 1M Tokens, 24+ GB VRAM bei vollem Kontext',
+          'Llama 3.3 8B: 128K Kontext, ~16 GB VRAM bei vollem Kontext',
+          'Qwen 3 14B: bis zu 1M Tokens, 24+ GB VRAM bei vollem Kontext',
           'Setzen Sie --num-ctx 4096 für die normale Nutzung, um VRAM zu sparen',
         ],
         updatedDate: '2026-05',
@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Die meisten 7B-Ollama-Modelle werben mit 128K Kontext, liefern aber oberhalb von 32K Tokens sinkende Qualität',
-          'Llama 3.1 8B und Qwen 2.5 14B sind die zwei Modelle, die bei vollem 128K zuverlässige Qualität bieten',
+          'Llama 3.3 8B und Qwen 3 14B sind die zwei Modelle, die bei vollem 128K zuverlässige Qualität bieten',
           'Ein 128K-Kontextfenster kann den VRAM-Verbrauch fast verdreifachen — ein 7B Q4-Modell benötigt ~15 GB bei 128K statt ~5,5 GB beim Standard',
           'Setzen Sie <code>--num-ctx 4096</code> für alltägliche Aufgaben; erweitern Sie den Kontext nur, wenn Sie ihn benötigen',
         ],
@@ -127,8 +127,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Welche Modelle wirklich 128K erreichen',
         content: [
           '<strong>Stand Mai 2026 werben die meisten Ollama-Modelle mit 128K Kontext, aber nur wenige liefern bei dieser Länge nützliche Ausgabequalität.</strong> Das Problem ist der „Lost in the Middle"-Effekt: Modelle, die auf typischen Dokumentlängen trainiert wurden, haben Schwierigkeiten, Informationen tief in einem langen Kontext zu finden.',
-          'Zwei Modelle halten bei vollem 128K Kontext auf Ollama zuverlässig die Qualität: <strong>Llama 3.1 8B</strong> (nativ auf 128K trainiert) und <strong>Qwen 2.5 14B</strong> (bis zu 1M Tokens, wobei VRAM-Beschränkungen 128K zur praktischen Consumer-Grenze machen). Bei den meisten anderen 7B-Modellen nimmt die Ausgabequalität oberhalb von 32K Tokens merklich ab.',
-          'Wenn Ihre Aufgabe Dokumente mit mehr als 20.000 Wörtern umfasst, beginnen Sie mit Llama 3.1 8B. Wenn Sie die stärkste Long-Context-Qualität benötigen und 12+ GB VRAM haben, ist Qwen 2.5 14B die bessere Wahl.',
+          'Zwei Modelle halten bei vollem 128K Kontext auf Ollama zuverlässig die Qualität: <strong>Llama 3.3 8B</strong> (nativ auf 128K trainiert) und <strong>Qwen 3 14B</strong> (bis zu 1M Tokens, wobei VRAM-Beschränkungen 128K zur praktischen Consumer-Grenze machen). Bei den meisten anderen 7B-Modellen nimmt die Ausgabequalität oberhalb von 32K Tokens merklich ab.',
+          'Wenn Ihre Aufgabe Dokumente mit mehr als 20.000 Wörtern umfasst, beginnen Sie mit Llama 3.3 8B. Wenn Sie die stärkste Long-Context-Qualität benötigen und 12+ GB VRAM haben, ist Qwen 3 14B die bessere Wahl.',
         ],
       },
       body2: {
@@ -160,11 +160,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Ist 128K Kontext nützlich für das Programmieren?',
-            a: 'Ja, beim Arbeiten über große Codebasen. Einen gesamten Repository oder mehrere Dateien in den Kontext zu laden, verbessert Refactoring- und dateiübergreifende Reasoning-Aufgaben erheblich. Für das Programmieren mit 128K ist Qwen 2.5 14B das empfohlene Modell.',
+            a: 'Ja, beim Arbeiten über große Codebasen. Einen gesamten Repository oder mehrere Dateien in den Kontext zu laden, verbessert Refactoring- und dateiübergreifende Reasoning-Aufgaben erheblich. Für das Programmieren mit 128K ist Qwen 3 14B das empfohlene Modell.',
           },
           {
             q: 'Welches Modell eignet sich am besten für die Analyse langer Dokumente?',
-            a: 'Qwen 2.5 14B bei Q4_K_M ist die beste Wahl für lange Dokumente auf Ollama — es hält die Qualität bei voller Kontextlänge besser als 7B-Alternativen. Siehe <a href="/de/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">Ollama Vision-Modelle</a>, wenn Sie neben langen Dokumenten auch Bildverständnis benötigen.',
+            a: 'Qwen 3 14B bei Q4_K_M ist die beste Wahl für lange Dokumente auf Ollama — es hält die Qualität bei voller Kontextlänge besser als 7B-Alternativen. Siehe <a href="/de/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">Ollama Vision-Modelle</a>, wenn Sie neben langen Dokumenten auch Bildverständnis benötigen.',
           },
         ],
       },
@@ -174,17 +174,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'Quels modèles Ollama supportent le contexte 128K ?',
     seoTitle: 'Ollama 128K contexte 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3.1 8B et Qwen 2.5 14B supportent 128K+ contexte sur Ollama. Qwen 2.5 atteint 1M tokens. Le contexte plein augmente le VRAM. Vérifié mai 2026.',
+    metaDescription: 'Llama 3.3 8B et Qwen 3 14B supportent 128K+ contexte sur Ollama. Qwen 3 atteint 1M tokens. Le contexte plein augmente le VRAM. Vérifié mai 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       fr: {
         question: 'Quels modèles Ollama supportent le contexte 128K ?',
-        answer: 'Llama 3.1 8B supporte le contexte 128K sur Ollama. Qwen 2.5 14B atteint 1M de tokens. Attention : le contexte complet augmente fortement la VRAM — une fenêtre 128K nécessite 3–4× plus de VRAM que la fenêtre par défaut de 4K.',
+        answer: 'Llama 3.3 8B supporte le contexte 128K sur Ollama. Qwen 3 14B atteint 1M de tokens. Attention : le contexte complet augmente fortement la VRAM — une fenêtre 128K nécessite 3–4× plus de VRAM que la fenêtre par défaut de 4K.',
         bullets: [
-          'Llama 3.1 8B : contexte 128K, ~16 GB VRAM en contexte complet',
-          'Qwen 2.5 14B : jusqu\'à 1M de tokens, 24+ GB VRAM en contexte complet',
+          'Llama 3.3 8B : contexte 128K, ~16 GB VRAM en contexte complet',
+          'Qwen 3 14B : jusqu\'à 1M de tokens, 24+ GB VRAM en contexte complet',
           'Définissez --num-ctx 4096 pour l\'usage normal afin d\'économiser la VRAM',
         ],
         updatedDate: '2026-05',
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'La plupart des modèles Ollama 7B annoncent 128K de contexte mais dégradent en qualité au-delà de 32K tokens',
-          'Llama 3.1 8B et Qwen 2.5 14B sont les deux modèles qui délivrent une qualité fiable à 128K complet',
+          'Llama 3.3 8B et Qwen 3 14B sont les deux modèles qui délivrent une qualité fiable à 128K complet',
           'Une fenêtre de contexte 128K peut presque tripler l\'utilisation VRAM — un modèle 7B Q4 a besoin de ~15 GB à 128K contre ~5,5 GB par défaut',
           'Définissez <code>--num-ctx 4096</code> pour les tâches quotidiennes ; n\'étendez le contexte que lorsque nécessaire',
         ],
@@ -205,8 +205,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Les modèles qui atteignent vraiment 128K',
         content: [
           '<strong>En mai 2026, la plupart des modèles Ollama annoncent 128K de contexte, mais peu délivrent une qualité de sortie utile à cette longueur.</strong> Le problème est l\'effet "perdu au milieu" : les modèles entraînés sur des longueurs de documents typiques peinent à traiter des informations placées au cœur d\'un long contexte.',
-          'Deux modèles maintiennent fiablement la qualité à 128K complet sur Ollama : <strong>Llama 3.1 8B</strong> (entraîné nativement à 128K) et <strong>Qwen 2.5 14B</strong> (jusqu\'à 1M de tokens, bien que les contraintes VRAM rendent 128K la limite pratique pour le grand public). Pour la plupart des autres modèles 7B, la qualité de sortie se dégrade notablement au-delà de 32K tokens.',
-          'Si votre tâche implique des documents de plus de 20 000 mots, commencez par Llama 3.1 8B. Si vous avez besoin de la meilleure qualité de contexte long et disposez de 12+ GB de VRAM, Qwen 2.5 14B est le meilleur choix.',
+          'Deux modèles maintiennent fiablement la qualité à 128K complet sur Ollama : <strong>Llama 3.3 8B</strong> (entraîné nativement à 128K) et <strong>Qwen 3 14B</strong> (jusqu\'à 1M de tokens, bien que les contraintes VRAM rendent 128K la limite pratique pour le grand public). Pour la plupart des autres modèles 7B, la qualité de sortie se dégrade notablement au-delà de 32K tokens.',
+          'Si votre tâche implique des documents de plus de 20 000 mots, commencez par Llama 3.3 8B. Si vous avez besoin de la meilleure qualité de contexte long et disposez de 12+ GB de VRAM, Qwen 3 14B est le meilleur choix.',
         ],
       },
       body2: {
@@ -238,11 +238,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Le contexte 128K est-il utile pour le développement ?',
-            a: 'Oui, pour travailler sur de grandes bases de code. Intégrer un dépôt entier ou plusieurs fichiers dans le contexte améliore considérablement le refactoring et les tâches de raisonnement inter-fichiers. Pour le développement à 128K, Qwen 2.5 14B est le modèle recommandé.',
+            a: 'Oui, pour travailler sur de grandes bases de code. Intégrer un dépôt entier ou plusieurs fichiers dans le contexte améliore considérablement le refactoring et les tâches de raisonnement inter-fichiers. Pour le développement à 128K, Qwen 3 14B est le modèle recommandé.',
           },
           {
             q: 'Quel modèle est le meilleur pour l\'analyse de longs documents ?',
-            a: 'Qwen 2.5 14B en Q4_K_M est le premier choix pour les longs documents sur Ollama — il maintient mieux la qualité à pleine longueur de contexte que les alternatives 7B. Voir les <a href="/fr/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">modèles vision Ollama</a> si vous avez également besoin de compréhension d\'images avec de longs documents.',
+            a: 'Qwen 3 14B en Q4_K_M est le premier choix pour les longs documents sur Ollama — il maintient mieux la qualité à pleine longueur de contexte que les alternatives 7B. Voir les <a href="/fr/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">modèles vision Ollama</a> si vous avez également besoin de compréhension d\'images avec de longs documents.',
           },
         ],
       },
@@ -252,17 +252,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'Ollamaで128Kコンテキストに対応するモデルは？',
     seoTitle: 'Ollama 128Kコンテキスト2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3.1 8BとQwen 2.5 14BはOllamaで128K以上のコンテキストに対応。Qwen 2.5は1Mトークンに到達。フルコンテキストはVRAMを大幅に増加。2026年5月確認済み。',
+    metaDescription: 'Llama 3.3 8BとQwen 3 14BはOllamaで128K以上のコンテキストに対応。Qwen 3は1Mトークンに到達。フルコンテキストはVRAMを大幅に増加。2026年5月確認済み。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       ja: {
         question: 'Ollamaで128Kコンテキストに対応するモデルは？',
-        answer: 'Llama 3.1 8BはOllamaで128Kコンテキストに対応。Qwen 2.5 14Bは1Mトークンに到達。注意：フルコンテキストの実行はVRAMを大幅に増加させます——128Kウィンドウはデフォルトの4Kウィンドウの3〜4倍のVRAMが必要です。',
+        answer: 'Llama 3.3 8BはOllamaで128Kコンテキストに対応。Qwen 3 14Bは1Mトークンに到達。注意：フルコンテキストの実行はVRAMを大幅に増加させます——128Kウィンドウはデフォルトの4Kウィンドウの3〜4倍のVRAMが必要です。',
         bullets: [
-          'Llama 3.1 8B：128Kコンテキスト、フルコンテキスト時約16 GB VRAM',
-          'Qwen 2.5 14B：最大1Mトークン、フルコンテキスト時24+ GB VRAM',
+          'Llama 3.3 8B：128Kコンテキスト、フルコンテキスト時約16 GB VRAM',
+          'Qwen 3 14B：最大1Mトークン、フルコンテキスト時24+ GB VRAM',
           '通常使用時はVRAMを節約するため--num-ctx 4096を設定',
         ],
         updatedDate: '2026-05',
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'ほとんどの7B Ollamaモデルは128Kコンテキストを宣伝しているが、32Kトークン以上では品質が低下する',
-          'Llama 3.1 8BとQwen 2.5 14Bは128Kフルコンテキストで安定した品質を提供する2つのモデル',
+          'Llama 3.3 8BとQwen 3 14Bは128Kフルコンテキストで安定した品質を提供する2つのモデル',
           '128Kコンテキストウィンドウはデフォルトと比較してVRAM使用量をほぼ3倍にする可能性がある——7B Q4モデルはデフォルトの約5.5 GBに対し128Kで約15 GBが必要',
           '日常的なタスクには<code>--num-ctx 4096</code>を設定し、必要な時だけコンテキストを拡張する',
         ],
@@ -283,8 +283,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '実際に128Kに到達するモデル',
         content: [
           '<strong>2026年5月時点で、ほとんどのOllamaモデルは128Kコンテキストを宣伝していますが、その長さで有用な出力品質を実現するものは少数です。</strong>問題は「ロスト・イン・ザ・ミドル」効果：標準的な文書長で訓練されたモデルは、長いコンテキストの深い部分にある情報に注目するのが困難です。',
-          'Ollamaで128Kフルコンテキストの品質を安定して維持するモデルは2つ：<strong>Llama 3.1 8B</strong>（128Kでネイティブ訓練）と<strong>Qwen 2.5 14B</strong>（最大1Mトークン、ただしVRAM制約により128Kが実用的なコンシューマー上限）。他の7Bモデルの大部分は、32Kトークン以上では出力品質が著しく低下します。',
-          '20,000語以上の文書を扱うタスクにはLlama 3.1 8Bから始めてください。最高の長文コンテキスト品質が必要で12+ GB VRAMがある場合は、Qwen 2.5 14Bが優れた選択肢です。',
+          'Ollamaで128Kフルコンテキストの品質を安定して維持するモデルは2つ：<strong>Llama 3.3 8B</strong>（128Kでネイティブ訓練）と<strong>Qwen 3 14B</strong>（最大1Mトークン、ただしVRAM制約により128Kが実用的なコンシューマー上限）。他の7Bモデルの大部分は、32Kトークン以上では出力品質が著しく低下します。',
+          '20,000語以上の文書を扱うタスクにはLlama 3.3 8Bから始めてください。最高の長文コンテキスト品質が必要で12+ GB VRAMがある場合は、Qwen 3 14Bが優れた選択肢です。',
         ],
       },
       body2: {
@@ -316,11 +316,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '128Kコンテキストはコーディングに役立ちますか？',
-            a: 'はい、大規模なコードベースを扱う際に有効です。リポジトリ全体や複数ファイルをコンテキストに収めることで、リファクタリングやファイル横断的な推論タスクが大幅に改善されます。128Kでのコーディングには、Qwen 2.5 14Bが推奨モデルです。',
+            a: 'はい、大規模なコードベースを扱う際に有効です。リポジトリ全体や複数ファイルをコンテキストに収めることで、リファクタリングやファイル横断的な推論タスクが大幅に改善されます。128Kでのコーディングには、Qwen 3 14Bが推奨モデルです。',
           },
           {
             q: '長文ドキュメント分析に最適なモデルは？',
-            a: 'Q4_K_MのQwen 2.5 14BはOllamaでの長文ドキュメントにおける第一選択肢です——フルコンテキスト長での品質を7B代替より優れた形で維持します。長文ドキュメントと並行して画像理解も必要な場合は、<a href="/ja/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">Ollamaビジョンモデル</a>をご覧ください。',
+            a: 'Q4_K_MのQwen 3 14BはOllamaでの長文ドキュメントにおける第一選択肢です——フルコンテキスト長での品質を7B代替より優れた形で維持します。長文ドキュメントと並行して画像理解も必要な場合は、<a href="/ja/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">Ollamaビジョンモデル</a>をご覧ください。',
           },
         ],
       },
@@ -330,17 +330,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'Ollama上哪些模型支持128K上下文？',
     seoTitle: 'Ollama 128K上下文2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3.1 8B和Qwen 2.5 14B在Ollama上支持128K以上上下文。Qwen 2.5可达1M个token。完整上下文大幅增加VRAM需求。2026年5月更新。',
+    metaDescription: 'Llama 3.3 8B和Qwen 3 14B在Ollama上支持128K以上上下文。Qwen 3可达1M个token。完整上下文大幅增加VRAM需求。2026年5月更新。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       zh: {
         question: 'Ollama上哪些模型支持128K上下文？',
-        answer: 'Llama 3.1 8B在Ollama上支持128K上下文。Qwen 2.5 14B可达1M个token。注意：运行完整上下文会大幅增加VRAM——128K窗口比默认4K窗口需要多3–4倍VRAM。',
+        answer: 'Llama 3.3 8B在Ollama上支持128K上下文。Qwen 3 14B可达1M个token。注意：运行完整上下文会大幅增加VRAM——128K窗口比默认4K窗口需要多3–4倍VRAM。',
         bullets: [
-          'Llama 3.1 8B：128K上下文，完整上下文约需16 GB VRAM',
-          'Qwen 2.5 14B：最多1M token，完整上下文需24+ GB VRAM',
+          'Llama 3.3 8B：128K上下文，完整上下文约需16 GB VRAM',
+          'Qwen 3 14B：最多1M token，完整上下文需24+ GB VRAM',
           '日常使用设置--num-ctx 4096以节省VRAM',
         ],
         updatedDate: '2026-05',
@@ -352,7 +352,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           '大多数7B Ollama模型宣称支持128K上下文，但超过32K token后质量明显下降',
-          'Llama 3.1 8B和Qwen 2.5 14B是能在完整128K下稳定输出高质量结果的两个模型',
+          'Llama 3.3 8B和Qwen 3 14B是能在完整128K下稳定输出高质量结果的两个模型',
           '128K上下文窗口可能使VRAM用量增至近3倍——7B Q4模型在128K下需约15 GB，默认只需约5.5 GB',
           '日常任务设置<code>--num-ctx 4096</code>；仅在需要时扩展上下文',
         ],
@@ -361,8 +361,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '真正能达到128K的模型',
         content: [
           '<strong>截至2026年5月，大多数Ollama模型宣称支持128K上下文，但在该长度下能提供有效输出质量的模型很少。</strong>问题在于"中间遗失"效应：在标准文档长度上训练的模型，难以关注到长上下文深处的信息。',
-          '在Ollama上能在128K完整上下文下稳定保持质量的模型有两个：<strong>Llama 3.1 8B</strong>（原生在128K下训练）和<strong>Qwen 2.5 14B</strong>（最多1M token，但VRAM限制使128K成为消费级实用上限）。对于大多数其他7B模型，输出质量在超过32K token后会明显下降。',
-          '如果您的任务涉及超过20,000字的文档，从Llama 3.1 8B开始。如果需要最强的长上下文质量且有12+ GB VRAM，Qwen 2.5 14B是更好的选择。',
+          '在Ollama上能在128K完整上下文下稳定保持质量的模型有两个：<strong>Llama 3.3 8B</strong>（原生在128K下训练）和<strong>Qwen 3 14B</strong>（最多1M token，但VRAM限制使128K成为消费级实用上限）。对于大多数其他7B模型，输出质量在超过32K token后会明显下降。',
+          '如果您的任务涉及超过20,000字的文档，从Llama 3.3 8B开始。如果需要最强的长上下文质量且有12+ GB VRAM，Qwen 3 14B是更好的选择。',
         ],
       },
       body2: {
@@ -394,11 +394,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '128K上下文对代码开发有用吗？',
-            a: '是的，在处理大型代码库时非常有用。将整个代码仓库或多个文件纳入上下文，可以显著改善重构和跨文件推理任务。128K代码开发推荐使用Qwen 2.5 14B。',
+            a: '是的，在处理大型代码库时非常有用。将整个代码仓库或多个文件纳入上下文，可以显著改善重构和跨文件推理任务。128K代码开发推荐使用Qwen 3 14B。',
           },
           {
             q: '长文档分析最适合哪个模型？',
-            a: 'Q4_K_M的Qwen 2.5 14B是Ollama上长文档的首选——它在完整上下文长度下的质量维持能力优于7B替代品。如果还需要在长文档旁进行图像理解，请参阅<a href="/zh/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">Ollama视觉模型</a>。',
+            a: 'Q4_K_M的Qwen 3 14B是Ollama上长文档的首选——它在完整上下文长度下的质量维持能力优于7B替代品。如果还需要在长文档旁进行图像理解，请参阅<a href="/zh/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">Ollama视觉模型</a>。',
           },
         ],
       },
@@ -408,17 +408,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: '¿Qué modelos de Ollama admiten contexto de 128K?',
     seoTitle: 'Ollama contexto 128K 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3.1 8B y Qwen 2.5 14B admiten 128K de contexto o más en Ollama; Qwen 2.5 llega a 1M de tokens. El contexto completo aumenta mucho la VRAM. 2026.',
+    metaDescription: 'Llama 3.3 8B y Qwen 3 14B admiten 128K de contexto o más en Ollama; Qwen 3 llega a 1M de tokens. El contexto completo aumenta mucho la VRAM. 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
       es: {
         question: '¿Qué modelos de Ollama admiten contexto de 128K?',
-        answer: 'Llama 3.1 8B admite contexto de 128K en Ollama. Qwen 2.5 14B alcanza 1M de tokens. Nota: ejecutar el contexto completo aumenta drásticamente la VRAM — una ventana de 128K necesita entre 3 y 4 veces más VRAM que la ventana predeterminada de 4K.',
+        answer: 'Llama 3.3 8B admite contexto de 128K en Ollama. Qwen 3 14B alcanza 1M de tokens. Nota: ejecutar el contexto completo aumenta drásticamente la VRAM — una ventana de 128K necesita entre 3 y 4 veces más VRAM que la ventana predeterminada de 4K.',
         bullets: [
-          'Llama 3.1 8B: contexto de 128K, ~16 GB de VRAM con contexto completo',
-          'Qwen 2.5 14B: hasta 1M de tokens, 24+ GB de VRAM con contexto completo',
+          'Llama 3.3 8B: contexto de 128K, ~16 GB de VRAM con contexto completo',
+          'Qwen 3 14B: hasta 1M de tokens, 24+ GB de VRAM con contexto completo',
           'Establece --num-ctx 4096 para uso normal y ahorra VRAM',
         ],
         updatedDate: '2026-05',
@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'La mayoría de los modelos 7B de Ollama anuncian contexto de 128K pero su calidad se degrada por encima de los 32K tokens',
-          'Llama 3.1 8B y Qwen 2.5 14B son los dos modelos que ofrecen calidad fiable al máximo de 128K',
+          'Llama 3.3 8B y Qwen 3 14B son los dos modelos que ofrecen calidad fiable al máximo de 128K',
           'Una ventana de contexto de 128K puede casi triplicar el uso de VRAM — un modelo 7B Q4 necesita ~15 GB con 128K frente a ~5,5 GB con el valor predeterminado',
           'Establece <code>--num-ctx 4096</code> para tareas cotidianas; amplía el contexto solo cuando lo necesites',
         ],
@@ -439,8 +439,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Qué modelos realmente alcanzan 128K',
         content: [
           '<strong>A mayo de 2026, la mayoría de los modelos de Ollama anuncian contexto de 128K, pero pocos ofrecen una calidad de salida útil a esa longitud.</strong> El problema es el efecto "perdido en el medio": los modelos entrenados con longitudes típicas de documento tienen dificultades para atender información colocada profundamente en un contexto largo.',
-          'Dos modelos mantienen de forma fiable la calidad con el contexto completo de 128K en Ollama: <strong>Llama 3.1 8B</strong> (entrenado de forma nativa a 128K) y <strong>Qwen 2.5 14B</strong> (hasta 1M de tokens, aunque las limitaciones de VRAM hacen que 128K sea el límite práctico para el consumidor). Para la mayoría de los demás modelos 7B, la calidad de salida se degrada notablemente por encima de los 32K tokens.',
-          'Si tu tarea implica documentos de más de 20.000 palabras, empieza con Llama 3.1 8B. Si necesitas la máxima calidad de contexto largo y tienes 12 GB o más de VRAM, Qwen 2.5 14B es la mejor opción.',
+          'Dos modelos mantienen de forma fiable la calidad con el contexto completo de 128K en Ollama: <strong>Llama 3.3 8B</strong> (entrenado de forma nativa a 128K) y <strong>Qwen 3 14B</strong> (hasta 1M de tokens, aunque las limitaciones de VRAM hacen que 128K sea el límite práctico para el consumidor). Para la mayoría de los demás modelos 7B, la calidad de salida se degrada notablemente por encima de los 32K tokens.',
+          'Si tu tarea implica documentos de más de 20.000 palabras, empieza con Llama 3.3 8B. Si necesitas la máxima calidad de contexto largo y tienes 12 GB o más de VRAM, Qwen 3 14B es la mejor opción.',
         ],
       },
       body2: {
@@ -472,11 +472,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿El contexto de 128K es útil para la codificación?',
-            a: 'Sí, al trabajar con bases de código grandes. Introducir un repositorio completo o múltiples archivos en el contexto mejora enormemente las tareas de refactorización y razonamiento entre archivos. Para codificación con 128K, Qwen 2.5 14B es el modelo recomendado.',
+            a: 'Sí, al trabajar con bases de código grandes. Introducir un repositorio completo o múltiples archivos en el contexto mejora enormemente las tareas de refactorización y razonamiento entre archivos. Para codificación con 128K, Qwen 3 14B es el modelo recomendado.',
           },
           {
             q: '¿Qué modelo es el mejor para el análisis de documentos largos?',
-            a: 'Qwen 2.5 14B en Q4_K_M es la primera opción para documentos largos en Ollama — mantiene mejor la calidad a la longitud de contexto completa que las alternativas 7B. Consulta <a href="/es/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">los modelos de visión de Ollama</a> si también necesitas comprensión de imágenes junto con documentos largos.',
+            a: 'Qwen 3 14B en Q4_K_M es la primera opción para documentos largos en Ollama — mantiene mejor la calidad a la longitud de contexto completa que las alternativas 7B. Consulta <a href="/es/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">los modelos de visión de Ollama</a> si también necesitas comprensión de imágenes junto con documentos largos.',
           },
         ],
       },

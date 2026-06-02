@@ -511,7 +511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Ollama, GPT4All, Jan, llama.cpp auf 8-GB-RAM-Laptops mit integrierter Grafik getestet. Tokens/Sek., Speicherdruck, exakte Einstellungen. Mai 2026.',
     twitterDescription:
       '4 lokale KI-Apps, die auf 8-GB-RAM-Laptops ohne GPU laufen. Tokens/Sek., exakte Einstellungen, ehrliche Bewertungen. Mai 2026.',
-    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 2.5 1.5B'],
+    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 3 1.5B'],
     current_hardware_mentioned: [
       'Intel UHD 620',
       'Intel Iris Xe',
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Hilft mehr RAM mehr als ein CPU-Upgrade?',
-            a: 'Auf 8-GB-Systemen ist der Wechsel zu 16 GB das größte praktische Upgrade, weil es 7B–8B-Modelle wie Mistral 7B Q4 und Llama 3.1 8B Q4 freischaltet. CPU-Upgrades bringen 20–50 % mehr Tokens/Sek.; das RAM-Upgrade bringt 2–4× Qualität (Sprung von 1B–4B auf 7B–8B). Wenn Sie nur eines tun können, fügen Sie RAM hinzu.',
+            a: 'Auf 8-GB-Systemen ist der Wechsel zu 16 GB das größte praktische Upgrade, weil es 7B–8B-Modelle wie Mistral Small Q4 und Llama 3.3 8B Q4 freischaltet. CPU-Upgrades bringen 20–50 % mehr Tokens/Sek.; das RAM-Upgrade bringt 2–4× Qualität (Sprung von 1B–4B auf 7B–8B). Wenn Sie nur eines tun können, fügen Sie RAM hinzu.',
           },
           {
             q: 'Kann ich lokale KI auf einem Chromebook ausführen?',
@@ -905,7 +905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Ollama, GPT4All, Jan et llama.cpp testés sur portables 8 Go RAM avec graphiques intégrés. Tokens/s, pression mémoire, réglages exacts. Mai 2026.',
     twitterDescription:
       '4 apps d\'IA locale pour portables 8 Go RAM sans GPU. Tokens/s, réglages exacts, verdicts honnêtes. Mai 2026.',
-    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 2.5 1.5B'],
+    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 3 1.5B'],
     current_hardware_mentioned: ['Intel UHD 620', 'Intel Iris Xe', 'AMD Ryzen 5 5500U', 'Apple M1 8GB', 'Intel Core i5-8250U'],
     audience: 'Propriétaires de portables de 4 à 7 ans avec 8 Go de RAM et sans GPU dédié, choisissant leur première application d\'IA locale.',
     readTime: '11 min de lecture',
@@ -1098,7 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'L\'IA locale va-t-elle abîmer mon portable ?', a: 'Non. L\'inférence locale est un processus utilisateur normal — il ne peut pas endommager le matériel. Le pire scénario est un portable qui chauffe (90–100 °C sur ultraportables) et bride, contre quoi le firmware protège automatiquement. Pour éviter cela, utilisez un tapis de refroidissement sur les sessions prolongées, gardez la pièce sous 25 °C, et arrêtez l\'inférence si le châssis est inconfortable au toucher.' },
           { q: 'Les graphiques intégrés sont-ils suffisants ?', a: 'Sur Apple Silicon (M1+) ils sont plus que suffisants — la mémoire unifiée fait de l\'iGPU effectivement un GPU dédié bas de gamme. Sur Intel Core Ultra (Meteor Lake / Arrow Lake) ils peuvent apporter 30–60 % de vitesse en plus si vous configurez SYCL. Sur les Intel UHD / Iris Plus / AMD Vega plus anciens, les graphiques intégrés sont plus lents que le CPU et ne valent pas la peine.' },
           { q: 'Quel modèle est le plus rapide en CPU seul ?', a: 'Llama 3.2 1B Q4_0 et SmolLM 2 1.7B Q4_K_M sont les modèles utilisables les plus rapides. Llama 3.2 1B atteint 25–50 t/s sur Apple M1 et 12–25 t/s sur un CPU Ryzen ou Intel moderne. SmolLM 2 a une vitesse similaire avec un rendu d\'écriture légèrement plus soigné. Tout ce qui dépasse 4B paramètres a peu de chances de paraître rapide sur des systèmes CPU seul.' },
-          { q: 'Ajouter de la RAM aide-t-il plus qu\'un upgrade CPU ?', a: 'Sur les systèmes 8 Go, passer à 16 Go est l\'upgrade pratique le plus important parce qu\'il débloque les modèles 7B–8B comme Mistral 7B Q4 et Llama 3.1 8B Q4. Les upgrades CPU apportent 20–50 % de tokens/s en plus ; l\'upgrade RAM apporte 2–4× de qualité (saut de 1B–4B à 7B–8B). Si vous ne pouvez faire qu\'un seul changement, ajoutez de la RAM.' },
+          { q: 'Ajouter de la RAM aide-t-il plus qu\'un upgrade CPU ?', a: 'Sur les systèmes 8 Go, passer à 16 Go est l\'upgrade pratique le plus important parce qu\'il débloque les modèles 7B–8B comme Mistral Small Q4 et Llama 3.3 8B Q4. Les upgrades CPU apportent 20–50 % de tokens/s en plus ; l\'upgrade RAM apporte 2–4× de qualité (saut de 1B–4B à 7B–8B). Si vous ne pouvez faire qu\'un seul changement, ajoutez de la RAM.' },
           { q: 'Puis-je faire tourner de l\'IA locale sur un Chromebook ?', a: 'Uniquement si le mode dev Linux (Crostini) est disponible. Les quatre apps de ce guide tournent toutes dans le conteneur Linux — llama.cpp compilé depuis les sources est le plus fiable sur les Chromebooks ARM, tandis que les Chromebooks x86 (Intel) fonctionnent avec Ollama ou GPT4All. Les performances suivent le CPU sous-jacent ; un Chromebook Intel Core i3 / i5 se comporte comme le portable Windows équivalent.' },
           { q: 'Windows 10 fonctionne-t-il toujours pour l\'IA locale en 2026 ?', a: 'Oui. Les quatre apps supportent Windows 10 22H2. Ollama, GPT4All et Jan livrent des installeurs Windows signés ; llama.cpp livre des binaires Windows précompilés sur ses releases GitHub. La fin du support grand public de Windows 10 en octobre 2025 n\'empêche pas l\'installation, mais les mises à jour de sécurité ont cessé — envisagez un dual-boot Linux ou une mise à niveau vers Windows 11 pour un usage long terme.' },
           { q: 'Quel est le portable le moins cher qui fait tourner l\'IA locale convenablement ?', a: 'Un ThinkPad T14 ou Dell Latitude 5430 d\'occasion 2021–2022 avec 16 Go RAM et un Ryzen 5 5500U ou Intel i5-1235U coûte 350–450 € en 2026 et fait tourner Phi-4 Mini Q4 à 8–14 t/s. Encore moins cher : tout MacBook Air Apple M1 8 Go d\'occasion à 450–550 €, qui bat la plupart des portables x86 sur les tokens/s grâce à la mémoire unifiée.' },
@@ -1174,7 +1174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RTX 4090は不要です。Ollama、GPT4All、Jan、llama.cppを8GB RAM・統合グラフィックス搭載ノートPCでテスト。tok/秒、メモリ圧、設定を解説。2026年5月。',
     twitterDescription:
       '8GB RAM・GPUなしノートPCで動く4つのローカルAIアプリ。tok/秒、設定、率直な評価。2026年5月。',
-    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 2.5 1.5B'],
+    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 3 1.5B'],
     current_hardware_mentioned: ['Intel UHD 620', 'Intel Iris Xe', 'AMD Ryzen 5 5500U', 'Apple M1 8GB', 'Intel Core i5-8250U'],
     audience: '8GB RAM・専用GPUなしの4〜7年前のノートPCを所有し、初めてローカルAIアプリを選ぶユーザー。',
     readTime: '11分で読める',
@@ -1371,7 +1371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ローカルAIでノートPCが壊れますか？', a: 'いいえ。ローカル推論は通常のユーザー空間プロセスです — ハードウェアを破損させることはできません。最悪のケースはノートPCが熱くなり（ウルトラポータブルで90〜100°C）スロットルすることで、ファームウェアが自動的に保護します。これを避けるには、長時間セッションで冷却パッドを使用、室温を25°C以下に保ち、シャーシが触って不快なほど熱い場合は推論を停止してください。' },
           { q: '統合グラフィックスで十分ですか？', a: 'Apple Silicon（M1+）では十分以上です — ユニファイドメモリによりiGPUが事実上低価格専用GPUとして機能します。Intel Core Ultra（Meteor Lake / Arrow Lake）ではSYCLをセットアップすれば30〜60％の追加速度が得られます。旧Intel UHD / Iris Plus / AMD Vegaでは、統合グラフィックスはCPUより遅く、使う価値はありません。' },
           { q: 'CPU専用で最速のモデルは？', a: 'Llama 3.2 1B Q4_0とSmolLM 2 1.7B Q4_K_Mが最速の使用可能モデルです。Llama 3.2 1BはApple M1で25〜50 tok/秒、最新Ryzenまたは Intel CPUで12〜25 tok/秒に達します。SmolLM 2は同様の速度でやや洗練された執筆を提供します。4Bパラメータを超えるものはCPU専用システムで高速に感じる可能性が低いです。' },
-          { q: 'RAM追加はCPUアップグレードより効果的ですか？', a: '8GBシステムでは、16GBへの移行が最大の実用アップグレードです。Mistral 7B Q4やLlama 3.1 8B Q4のような7B〜8Bモデルがアンロックされるためです。CPUアップグレードは20〜50％多くのtok/秒、RAMアップグレードは2〜4倍の品質（1B〜4Bから7B〜8Bへの飛躍）を提供します。1つしかできない場合は、RAMを追加してください。' },
+          { q: 'RAM追加はCPUアップグレードより効果的ですか？', a: '8GBシステムでは、16GBへの移行が最大の実用アップグレードです。Mistral Small Q4やLlama 3.3 8B Q4のような7B〜8Bモデルがアンロックされるためです。CPUアップグレードは20〜50％多くのtok/秒、RAMアップグレードは2〜4倍の品質（1B〜4Bから7B〜8Bへの飛躍）を提供します。1つしかできない場合は、RAMを追加してください。' },
           { q: 'Chromebookでローカルai を実行できますか？', a: 'Linux dev mode（Crostini）が利用可能な場合のみ。このガイドの4アプリはすべてLinuxコンテナで動作します — ARM Chromebookではソースからコンパイルしたllama.cppが最も信頼性が高く、x86 Chromebook（Intel）はOllamaやGPT4Allで動作します。パフォーマンスは基となるCPUに対応 — Intel Core i3 / i5 Chromebookは同等のWindowsノートPCのように動作します。' },
           { q: '2026年でもWindows 10はローカルAIに使えますか？', a: 'はい。4アプリすべてがWindows 10 22H2をサポートします。Ollama、GPT4All、Janは署名付きWindowsインストーラーを提供し、llama.cppはGitHubリリースにプリビルドWindowsバイナリを提供します。2025年10月のWindows 10メインストリームサポート終了はインストールを妨げませんが、セキュリティアップデートが終わったため、長期使用にはLinuxデュアルブートやWindows 11アップグレードを検討してください。' },
           { q: 'ローカルAIをまともに動かせる最安ノートPCは？', a: '中古2021〜2022年のThinkPad T14またはDell Latitude 5430（16 GB RAM、Ryzen 5 5500UまたはIntel i5-1235U）は2026年に約¥60,000〜80,000で、Phi-4 Mini Q4を8〜14 tok/秒で動作させます。さらに安価：8 GB Apple M1 MacBook Air中古は約¥80,000〜100,000で、ユニファイドメモリにより多くのx86ノートPCをtok/秒で凌駕します。' },
@@ -1447,7 +1447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '不需要RTX 4090。Ollama、GPT4All、Jan和llama.cpp在8GB内存集成显卡笔记本上实测。tokens/秒、内存压力、精确设置。2026年5月。',
     twitterDescription:
       '4款可在8GB内存无GPU笔记本上运行的本地AI应用。tokens/秒、精确设置、坦诚评测。2026年5月。',
-    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 2.5 1.5B'],
+    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 3 1.5B'],
     current_hardware_mentioned: ['Intel UHD 620', 'Intel Iris Xe', 'AMD Ryzen 5 5500U', 'Apple M1 8GB', 'Intel Core i5-8250U'],
     audience: '拥有4至7年旧款笔记本（8GB内存，无独立GPU）选择首个本地AI应用的用户。',
     readTime: '阅读约11分钟',
@@ -1644,7 +1644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '本地AI会损坏我的笔记本吗？', a: '不会。本地推理是普通用户空间进程 — 它无法损害硬件。最坏情况是笔记本运行温度高（超便携上90–100°C）和降频，固件自动保护。要避免这种情况，长时间会话使用散热垫，保持房间在25°C以下，如果机身触摸不舒服则停止推理。' },
           { q: '集成显卡足够吗？', a: '在Apple Silicon（M1+）上绰绰有余 — 统一内存使iGPU实际上是低端独立GPU。在Intel Core Ultra（Meteor Lake / Arrow Lake）上设置SYCL可获得30–60%额外速度。在老旧Intel UHD / Iris Plus / AMD Vega上，集成显卡比CPU慢，不值得使用。' },
           { q: 'CPU专用最快的模型是什么？', a: 'Llama 3.2 1B Q4_0和SmolLM 2 1.7B Q4_K_M是最快可用模型。Llama 3.2 1B在Apple M1上达到25–50 tok/s，在现代Ryzen或Intel CPU上达到12–25 tok/s。SmolLM 2速度相似，写作稍精致。任何超过4B参数的模型在CPU专用系统上都不太可能感觉快。' },
-          { q: '加内存是否比升级CPU更有帮助？', a: '在8GB系统上，升级到16GB是最大的实用升级，因为它解锁了Mistral 7B Q4和Llama 3.1 8B Q4等7B–8B模型。CPU升级提供20–50%更多tokens/秒；内存升级提供2–4倍质量（从1B–4B跃升到7B–8B）。如果只能选一个，加内存。' },
+          { q: '加内存是否比升级CPU更有帮助？', a: '在8GB系统上，升级到16GB是最大的实用升级，因为它解锁了Mistral Small Q4和Llama 3.3 8B Q4等7B–8B模型。CPU升级提供20–50%更多tokens/秒；内存升级提供2–4倍质量（从1B–4B跃升到7B–8B）。如果只能选一个，加内存。' },
           { q: '能在Chromebook上运行本地AI吗？', a: '仅当Linux开发模式（Crostini）可用。本指南的4个应用都在Linux容器中运行 — 从源码编译的llama.cpp在ARM Chromebook上最可靠，而x86 Chromebook（基于Intel）使用Ollama或GPT4All。性能映射到底层CPU；Intel Core i3 / i5 Chromebook表现类似等效Windows笔记本。' },
           { q: '2026年Windows 10还能用于本地AI吗？', a: '是的。所有4个应用都支持Windows 10 22H2。Ollama、GPT4All和Jan提供签名的Windows安装程序；llama.cpp在其GitHub发布版中提供预构建Windows二进制文件。2025年10月Windows 10主流支持结束并不阻止安装，但安全更新已停止 — 长期使用可考虑Linux双启动或升级到Windows 11。' },
           { q: '能良好运行本地AI的最便宜笔记本是什么？', a: '二手2021–2022 ThinkPad T14或Dell Latitude 5430（16 GB内存，Ryzen 5 5500U或Intel i5-1235U）在2026年售价350–450欧元，运行Phi-4 Mini Q4达8–14 tok/s。更便宜：任何8 GB Apple M1 MacBook Air二手450–550欧元，得益于统一内存在tokens/秒上击败大多数x86笔记本。' },
@@ -1720,7 +1720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Ollama, GPT4All, Jan y llama.cpp probados en portátiles con 8 GB RAM y gráficos integrados. Tokens/s, presión de memoria, configuraciones exactas. Mayo 2026.',
     twitterDescription:
       '4 apps de IA local que funcionan en portátiles con 8 GB RAM sin GPU. Tokens/s, configuraciones exactas, veredictos honestos. Mayo 2026.',
-    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 2.5 1.5B'],
+    current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 3 1.5B'],
     current_hardware_mentioned: [
       'Intel UHD 620',
       'Intel Iris Xe',
@@ -2074,7 +2074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Añadir RAM ayuda más que actualizar la CPU?',
-            a: 'En sistemas de 8 GB, pasar a 16 GB es la actualización práctica más importante porque desbloquea modelos de 7B–8B como Mistral 7B Q4 y Llama 3.1 8B Q4. Las actualizaciones de CPU dan un 20–50% más de tokens/s; la actualización de RAM da 2–4× más calidad (salto de 1B–4B a 7B–8B). Si solo puedes hacer una cosa, añade RAM.',
+            a: 'En sistemas de 8 GB, pasar a 16 GB es la actualización práctica más importante porque desbloquea modelos de 7B–8B como Mistral Small Q4 y Llama 3.3 8B Q4. Las actualizaciones de CPU dan un 20–50% más de tokens/s; la actualización de RAM da 2–4× más calidad (salto de 1B–4B a 7B–8B). Si solo puedes hacer una cosa, añade RAM.',
           },
           {
             q: '¿Puedo ejecutar IA local en un Chromebook?',

@@ -369,7 +369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 14B',
       'Phi-4 Mini',
       'Llama 3.3 70B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'Apple M3 MacBook Air 8 GB',
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tarea', 'Mejor modelo', 'Alternativa (menor VRAM)', 'Por qué'],
         rows: [
           { 'Tarea': 'Corrección gramatical', 'Mejor modelo': 'Qwen3 14B', 'Alternativa (menor VRAM)': 'Phi-4 Mini', 'Por qué': 'Preciso, cambios innecesarios mínimos, puntuación correcta' },
-          { 'Tarea': 'Reescritura de estilo', 'Mejor modelo': 'Qwen3 14B o Llama 3.3 70B', 'Alternativa (menor VRAM)': 'Mistral 7B', 'Por qué': 'Salida de prosa natural; evita la desviación de registro de IA' },
+          { 'Tarea': 'Reescritura de estilo', 'Mejor modelo': 'Qwen3 14B o Llama 3.3 70B', 'Alternativa (menor VRAM)': 'Mistral Small', 'Por qué': 'Salida de prosa natural; evita la desviación de registro de IA' },
           { 'Tarea': 'Ajuste de tono', 'Mejor modelo': 'Llama 3.3 70B', 'Alternativa (menor VRAM)': 'Qwen3 14B', 'Por qué': 'Mejor en mantener el contenido factual al cambiar de registro' },
           { 'Tarea': 'Redacción de documentos (reemplazo de Notion AI)', 'Mejor modelo': 'Qwen3 14B', 'Alternativa (menor VRAM)': 'Phi-4 Mini', 'Por qué': 'Buena generación de estructura, sigue instrucciones de formato de documento' },
           { 'Tarea': 'Resumen de notas / preguntas y respuestas', 'Mejor modelo': 'Qwen3 14B', 'Alternativa (menor VRAM)': 'Phi-4 Mini', 'Por qué': 'Adecuado para resumir en cualquier tamaño de modelo por encima de 3B' },
@@ -726,7 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 14B',
       'Phi-4 Mini',
       'Llama 3.3 70B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'Apple M3 MacBook Air 8 GB',
@@ -928,7 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Aufgabe', 'Bestes Modell', 'Alternative (weniger VRAM)', 'Begründung'],
         rows: [
           { 'Aufgabe': 'Grammatikkorrektur', 'Bestes Modell': 'Qwen3 14B', 'Alternative (weniger VRAM)': 'Phi-4 Mini', 'Begründung': 'Genau, minimale unnötige Änderungen, korrekte Zeichensetzung' },
-          { 'Aufgabe': 'Stilumschreibung', 'Bestes Modell': 'Qwen3 14B oder Llama 3.3 70B', 'Alternative (weniger VRAM)': 'Mistral 7B', 'Begründung': 'Natürliche Prosa; vermeidet KI-Register' },
+          { 'Aufgabe': 'Stilumschreibung', 'Bestes Modell': 'Qwen3 14B oder Llama 3.3 70B', 'Alternative (weniger VRAM)': 'Mistral Small', 'Begründung': 'Natürliche Prosa; vermeidet KI-Register' },
           { 'Aufgabe': 'Tonanpassung', 'Bestes Modell': 'Llama 3.3 70B', 'Alternative (weniger VRAM)': 'Qwen3 14B', 'Begründung': 'Erhält Sachinhalt am besten bei Registerwechsel' },
           { 'Aufgabe': 'Dokumentenentwurf (Notion-AI-Ersatz)', 'Bestes Modell': 'Qwen3 14B', 'Alternative (weniger VRAM)': 'Phi-4 Mini', 'Begründung': 'Solide Strukturerzeugung, folgt Format-Anweisungen' },
           { 'Aufgabe': 'Notiz-Zusammenfassung / Q&A', 'Bestes Modell': 'Qwen3 14B', 'Alternative (weniger VRAM)': 'Phi-4 Mini', 'Begründung': 'Ausreichend für Zusammenfassung ab jeder Modellgröße über 3B' },
@@ -1079,7 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 14B',
       'Phi-4 Mini',
       'Llama 3.3 70B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'Apple M3 MacBook Air 8 GB',
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tâche', 'Meilleur modèle', 'Alternative (VRAM réduit)', 'Pourquoi'],
         rows: [
           { 'Tâche': 'Correction grammaticale', 'Meilleur modèle': 'Qwen3 14B', 'Alternative (VRAM réduit)': 'Phi-4 Mini', 'Pourquoi': 'Précis, peu de modifications inutiles, ponctuation correcte' },
-          { 'Tâche': 'Réécriture stylistique', 'Meilleur modèle': 'Qwen3 14B ou Llama 3.3 70B', 'Alternative (VRAM réduit)': 'Mistral 7B', 'Pourquoi': 'Prose naturelle ; évite la dérive de registre IA' },
+          { 'Tâche': 'Réécriture stylistique', 'Meilleur modèle': 'Qwen3 14B ou Llama 3.3 70B', 'Alternative (VRAM réduit)': 'Mistral Small', 'Pourquoi': 'Prose naturelle ; évite la dérive de registre IA' },
           { 'Tâche': 'Ajustement de ton', 'Meilleur modèle': 'Llama 3.3 70B', 'Alternative (VRAM réduit)': 'Qwen3 14B', 'Pourquoi': 'Préserve mieux le contenu factuel en changeant de registre' },
           { 'Tâche': 'Rédaction de documents (remplacement Notion AI)', 'Meilleur modèle': 'Qwen3 14B', 'Alternative (VRAM réduit)': 'Phi-4 Mini', 'Pourquoi': 'Bonne génération de structure, suit les consignes de format' },
           { 'Tâche': 'Synthèse / Q&R sur notes', 'Meilleur modèle': 'Qwen3 14B', 'Alternative (VRAM réduit)': 'Phi-4 Mini', 'Pourquoi': 'Synthèse correcte à partir de toute taille au-dessus de 3B' },
@@ -1424,7 +1424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 14B',
       'Phi-4 Mini',
       'Llama 3.3 70B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'Apple M3 MacBook Air 8 GB',
@@ -1626,7 +1626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['タスク', '最適モデル', '代替（低VRAM）', '理由'],
         rows: [
           { 'タスク': '文法修正', '最適モデル': 'Qwen3 14B', '代替（低VRAM）': 'Phi-4 Mini', '理由': '正確、不要な変更が少ない、句読点が正しい' },
-          { 'タスク': 'スタイル書き直し', '最適モデル': 'Qwen3 14B または Llama 3.3 70B', '代替（低VRAM）': 'Mistral 7B', '理由': '自然な散文出力、AIレジスターのドリフトを回避' },
+          { 'タスク': 'スタイル書き直し', '最適モデル': 'Qwen3 14B または Llama 3.3 70B', '代替（低VRAM）': 'Mistral Small', '理由': '自然な散文出力、AIレジスターのドリフトを回避' },
           { 'タスク': 'トーン調整', '最適モデル': 'Llama 3.3 70B', '代替（低VRAM）': 'Qwen3 14B', '理由': 'レジスター変更時の事実情報の保持が最も上手い' },
           { 'タスク': 'ドラフト作成（Notion AI代替）', '最適モデル': 'Qwen3 14B', '代替（低VRAM）': 'Phi-4 Mini', '理由': '良好な構造生成、文書フォーマット指示に追従' },
           { 'タスク': 'メモ要約 / Q&A', '最適モデル': 'Qwen3 14B', '代替（低VRAM）': 'Phi-4 Mini', '理由': '3B超のどのサイズでも要約には十分' },
@@ -1770,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 14B',
       'Phi-4 Mini',
       'Llama 3.3 70B',
-      'Mistral 7B',
+      'Mistral Small',
     ],
     current_hardware_mentioned: [
       'Apple M3 MacBook Air 8 GB',
@@ -1972,7 +1972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['任务', '最佳模型', '替代（更低 VRAM）', '原因'],
         rows: [
           { '任务': '语法修改', '最佳模型': 'Qwen3 14B', '替代（更低 VRAM）': 'Phi-4 Mini', '原因': '准确，少做不必要修改，标点正确' },
-          { '任务': '文风改写', '最佳模型': 'Qwen3 14B 或 Llama 3.3 70B', '替代（更低 VRAM）': 'Mistral 7B', '原因': '散文自然；避免 AI 腔漂移' },
+          { '任务': '文风改写', '最佳模型': 'Qwen3 14B 或 Llama 3.3 70B', '替代（更低 VRAM）': 'Mistral Small', '原因': '散文自然；避免 AI 腔漂移' },
           { '任务': '语气调整', '最佳模型': 'Llama 3.3 70B', '替代（更低 VRAM）': 'Qwen3 14B', '原因': '改换语域时最能保留事实内容' },
           { '任务': '文档起草（Notion AI 替代）', '最佳模型': 'Qwen3 14B', '替代（更低 VRAM）': 'Phi-4 Mini', '原因': '结构生成稳定，能跟随文档格式指令' },
           { '任务': '笔记摘要 / 问答', '最佳模型': 'Qwen3 14B', '替代（更低 VRAM）': 'Phi-4 Mini', '原因': '3B 以上模型做摘要均可胜任' },
@@ -1993,7 +1993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Grammarly 数据许可：** Grammarly 服务条款（第 5 条）授予其"全球范围、非排他、免许可费的[...]使用、复制、修改、改编、发布、翻译、分发"提交文本的权利，用于产品改进与安全。这并不隐藏，但意味着您在 Grammarly 中修改的每一句话都可能进入其训练管线。',
           '**Notion AI 数据流：** Notion 把文档内容发往 OpenAI API 用于 AI 功能。受 Notion 数据处理附录约束，提供合同层面的保护 — 但数据仍然离开了 Notion 服务器并进入 OpenAI 基础设施。',
           '**本地 LLM 数据流：** 为零。Ollama 默认绑定到 localhost。推理过程中不会建立任何出站连接。模型权重是磁盘上的静态文件。文本仅在内存中被分词、处理、丢弃。无日志、无缓存、无外部服务。',
-          '**中国《数据安全法》《个人信息保护法》合规：** 中国 2021 年颁布的《数据安全法》以及《个人信息保护法》对企业处理重要数据、个人信息提出了本地化与最小必要原则的要求。涉及国家秘密、商业秘密、未公开技术资料的写作场景，将文本发送至境外云服务（含 Grammarly、Notion AI）通常需要走数据出境安全评估，流程复杂。本地 LLM 在内网或单机运行，不发生跨境传输，是合规层面成本最低的方案。Qwen2.5（阿里通义千问）作为国产开源模型，在中文写作场景与本国合规要求下尤为适配。',
+          '**中国《数据安全法》《个人信息保护法》合规：** 中国 2021 年颁布的《数据安全法》以及《个人信息保护法》对企业处理重要数据、个人信息提出了本地化与最小必要原则的要求。涉及国家秘密、商业秘密、未公开技术资料的写作场景，将文本发送至境外云服务（含 Grammarly、Notion AI）通常需要走数据出境安全评估，流程复杂。本地 LLM 在内网或单机运行，不发生跨境传输，是合规层面成本最低的方案。Qwen3（阿里通义千问）作为国产开源模型，在中文写作场景与本国合规要求下尤为适配。',
           '**亚太地区跨境数据：** 新加坡 PDPA、韩国 PIPA、日本 APPI、澳大利亚 Privacy Act 都把数据驻留与处理者监督列为重点。跨多个 APAC 国家运营的企业（含跨国法律、医疗、金融机构）面对的是一组互不相同的合规框架，本地 LLM 通过"数据不出端点"这一统一表述，是最易解释的合规路径。',
           '**企业部署（金融/医疗/法律）：** 银行（受 GLBA 与各国央行管控）、医院（受 HIPAA、医疗信息保护条例约束）、律师事务所（受职业保密义务约束）通常无法把客户数据传给云端 AI 助手。本地 LLM 部署在企业内网（局域网集中式 Ollama 推理服务器，多人共享），可在不动现有合规架构的前提下，一次性满足多类业务的写作辅助需求。建议加密硬盘、最小权限访问、定期备份模型权重与笔记仓库。',
           '**遥测：** Grammarly 除文本内容外还采集打字行为、文档元数据与使用模式。Notion 采集交互数据与功能使用情况。Ollama 提供可关闭的匿名崩溃报告。本地 AI 应用（LM Studio、Jan）有可关闭的分析遥测 — 聊天内容从不包含在内。',

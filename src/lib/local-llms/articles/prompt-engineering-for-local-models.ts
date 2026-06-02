@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Does chain-of-thought prompting work with all local models?',
-              a: 'Chain-of-thought works with any instruction-tuned model (Llama 3.x, Qwen 2.5, Mistral Small). Base models (non-instruction-tuned) do not follow "think step-by-step" instructions reliably. For local models, CoT phrases like "Solve this step by step:" or "Reasoning:" at the start of the expected output work best.',
+              a: 'Chain-of-thought works with any instruction-tuned model (Llama 3.x, Qwen 3, Mistral Small). Base models (non-instruction-tuned) do not follow "think step-by-step" instructions reliably. For local models, CoT phrases like "Solve this step by step:" or "Reasoning:" at the start of the expected output work best.',
             },
             {
               q: 'What output format is most reliable for local LLMs?',
@@ -562,7 +562,7 @@ schema: {
             },
             {
               q: '¿Funciona el prompting por cadena de pensamiento con todos los modelos locales?',
-              a: 'La cadena de pensamiento funciona con cualquier modelo ajustado por instrucciones (Llama 3.x, Qwen 2.5, Mistral Small). Los modelos base (sin ajuste por instrucciones) no siguen instrucciones de "piensa paso a paso" de forma fiable. Para modelos locales, las frases CoT como "Resuelve esto paso a paso:" o "Razonamiento:" al inicio de la salida esperada funcionan mejor.',
+              a: 'La cadena de pensamiento funciona con cualquier modelo ajustado por instrucciones (Llama 3.x, Qwen 3, Mistral Small). Los modelos base (sin ajuste por instrucciones) no siguen instrucciones de "piensa paso a paso" de forma fiable. Para modelos locales, las frases CoT como "Resuelve esto paso a paso:" o "Razonamiento:" al inicio de la salida esperada funcionan mejor.',
             },
             {
               q: '¿Qué formato de salida es más fiable para los LLMs locales?',
@@ -673,7 +673,7 @@ schema: {
           {
             '@type': 'Question',
             name: '¿Funciona el prompting por cadena de pensamiento con todos los modelos locales?',
-            acceptedAnswer: { '@type': 'Answer', text: 'La cadena de pensamiento funciona con cualquier modelo ajustado por instrucciones (Llama 3.x, Qwen 2.5, Mistral Small). Los modelos base (sin ajuste por instrucciones) no siguen instrucciones de "piensa paso a paso" de forma fiable. Para modelos locales, las frases CoT como "Resuelve esto paso a paso:" o "Razonamiento:" al inicio de la salida esperada funcionan mejor.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'La cadena de pensamiento funciona con cualquier modelo ajustado por instrucciones (Llama 3.x, Qwen 3, Mistral Small). Los modelos base (sin ajuste por instrucciones) no siguen instrucciones de "piensa paso a paso" de forma fiable. Para modelos locales, las frases CoT como "Resuelve esto paso a paso:" o "Razonamiento:" al inicio de la salida esperada funcionan mejor.' },
           },
           {
             '@type': 'Question',
@@ -937,7 +937,7 @@ schema: {
             },
             {
               q: 'Funktioniert Gedankenketten-Prompting bei allen lokalen Modellen?',
-              a: 'Gedankenketten-Prompting funktioniert mit jedem Anweisungs-abgestimmten Modell (Llama 3.x, Qwen 2.5, Mistral Small). Basis-Modelle (nicht anweisungsabgestimmt) folgen „denke Schritt für Schritt"-Anweisungen nicht zuverlässig. Für lokale Modelle funktionieren CoT-Phrasen wie „Löse das Schritt für Schritt:" oder „Argumentation:" am Anfang der erwarteten Ausgabe am besten.',
+              a: 'Gedankenketten-Prompting funktioniert mit jedem Anweisungs-abgestimmten Modell (Llama 3.x, Qwen 3, Mistral Small). Basis-Modelle (nicht anweisungsabgestimmt) folgen „denke Schritt für Schritt"-Anweisungen nicht zuverlässig. Für lokale Modelle funktionieren CoT-Phrasen wie „Löse das Schritt für Schritt:" oder „Argumentation:" am Anfang der erwarteten Ausgabe am besten.',
             },
             {
               q: 'Welches Ausgabeformat ist für lokale LLMs am zuverlässigsten?',
@@ -1056,7 +1056,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Funktioniert Gedankenketten-Prompting bei allen lokalen Modellen?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Gedankenketten-Prompting funktioniert mit jedem Anweisungs-abgestimmten Modell (Llama 3.x, Qwen 2.5, Mistral Small). Basis-Modelle (nicht anweisungsabgestimmt) folgen „denke Schritt für Schritt"-Anweisungen nicht zuverlässig. Für lokale Modelle funktionieren CoT-Phrasen wie „Löse das Schritt für Schritt:" oder „Argumentation:" am Anfang der erwarteten Ausgabe am besten.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Gedankenketten-Prompting funktioniert mit jedem Anweisungs-abgestimmten Modell (Llama 3.x, Qwen 3, Mistral Small). Basis-Modelle (nicht anweisungsabgestimmt) folgen „denke Schritt für Schritt"-Anweisungen nicht zuverlässig. Für lokale Modelle funktionieren CoT-Phrasen wie „Löse das Schritt für Schritt:" oder „Argumentation:" am Anfang der erwarteten Ausgabe am besten.' },
           },
           {
             '@type': 'Question',
@@ -1330,7 +1330,7 @@ schema: {
             },
             {
               q: 'Le prompting par chaîne de pensées fonctionne-t-il avec tous les modèles locaux ?',
-              a: 'Le prompting par chaîne de pensées fonctionne avec tout modèle réglé sur instructions (Llama 3.x, Qwen 2.5, Mistral Small). Les modèles de base (non réglés sur instructions) ne suivent pas fiablement les instructions « pense étape par étape ». Pour les modèles locaux, les phrases CoT comme « Résous étape par étape : » ou « Raisonnement : » au début de la sortie attendue fonctionnent mieux.',
+              a: 'Le prompting par chaîne de pensées fonctionne avec tout modèle réglé sur instructions (Llama 3.x, Qwen 3, Mistral Small). Les modèles de base (non réglés sur instructions) ne suivent pas fiablement les instructions « pense étape par étape ». Pour les modèles locaux, les phrases CoT comme « Résous étape par étape : » ou « Raisonnement : » au début de la sortie attendue fonctionnent mieux.',
             },
             {
               q: 'Quel format de sortie est le plus fiable pour les LLM locaux ?',
@@ -1441,7 +1441,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Le prompting par chaîne de pensées fonctionne-t-il avec tous les modèles locaux ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Le prompting par chaîne de pensées fonctionne avec tout modèle réglé sur instructions (Llama 3.x, Qwen 2.5, Mistral Small). Les modèles de base ne suivent pas fiablement les instructions « pense étape par étape ». Pour les modèles locaux, les phrases CoT comme « Résous étape par étape : » ou « Raisonnement : » au début de la sortie attendue fonctionnent mieux.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Le prompting par chaîne de pensées fonctionne avec tout modèle réglé sur instructions (Llama 3.x, Qwen 3, Mistral Small). Les modèles de base ne suivent pas fiablement les instructions « pense étape par étape ». Pour les modèles locaux, les phrases CoT comme « Résous étape par étape : » ou « Raisonnement : » au début de la sortie attendue fonctionnent mieux.' },
           },
           {
             '@type': 'Question',
@@ -1704,7 +1704,7 @@ schema: {
             },
             {
               q: 'すべてのローカルモデルで思考の連鎖プロンプティングが機能しますか？',
-              a: '思考の連鎖は、指示調整されたモデル（Llama 3.x、Qwen 2.5、Mistral Small）で機能します。ベースモデル（指示調整なし）は「ステップバイステップで考える」という指示に確実に従いません。ローカルモデルでは、「ステップバイステップで解く：」または「推論：」のようなCoTフレーズが期待される出力の開始に最適に機能します。',
+              a: '思考の連鎖は、指示調整されたモデル（Llama 3.x、Qwen 3、Mistral Small）で機能します。ベースモデル（指示調整なし）は「ステップバイステップで考える」という指示に確実に従いません。ローカルモデルでは、「ステップバイステップで解く：」または「推論：」のようなCoTフレーズが期待される出力の開始に最適に機能します。',
             },
             {
               q: 'ローカルLLMではどの出力形式が最も信頼性がありますか？',
@@ -1815,7 +1815,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'すべてのローカルモデルで思考の連鎖プロンプティングが機能しますか？',
-            acceptedAnswer: { '@type': 'Answer', text: '思考の連鎖は、指示調整されたモデル（Llama 3.x、Qwen 2.5、Mistral Small）で機能します。ベースモデルは「ステップバイステップで考える」という指示に確実に従いません。ローカルモデルでは、「ステップバイステップで解く：」または「推論：」のようなCoTフレーズが期待される出力の開始に最適に機能します。' },
+            acceptedAnswer: { '@type': 'Answer', text: '思考の連鎖は、指示調整されたモデル（Llama 3.x、Qwen 3、Mistral Small）で機能します。ベースモデルは「ステップバイステップで考える」という指示に確実に従いません。ローカルモデルでは、「ステップバイステップで解く：」または「推論：」のようなCoTフレーズが期待される出力の開始に最適に機能します。' },
           },
           {
             '@type': 'Question',
@@ -2078,7 +2078,7 @@ schema: {
             },
             {
               q: '思维链提示词是否适用于所有本地模型？',
-              a: '思维链适用于任何指令调优模型（Llama 3.x、Qwen 2.5、Mistral Small）。基础模型（非指令调优）不能可靠地遵循"逐步思考"指示。对于本地模型，"逐步解决："或"推理："这样的CoT短语在预期输出的开始效果最佳。',
+              a: '思维链适用于任何指令调优模型（Llama 3.x、Qwen 3、Mistral Small）。基础模型（非指令调优）不能可靠地遵循"逐步思考"指示。对于本地模型，"逐步解决："或"推理："这样的CoT短语在预期输出的开始效果最佳。',
             },
             {
               q: '本地LLM最可靠的输出格式是什么？',
@@ -2189,7 +2189,7 @@ schema: {
           {
             '@type': 'Question',
             name: '思维链提示词是否适用于所有本地模型？',
-            acceptedAnswer: { '@type': 'Answer', text: '思维链适用于任何指令调优模型（Llama 3.x、Qwen 2.5、Mistral Small）。基础模型不能可靠地遵循"逐步思考"指示。对于本地模型，"逐步解决："或"推理："这样的CoT短语在预期输出的开始效果最佳。' },
+            acceptedAnswer: { '@type': 'Answer', text: '思维链适用于任何指令调优模型（Llama 3.x、Qwen 3、Mistral Small）。基础模型不能可靠地遵循"逐步思考"指示。对于本地模型，"逐步解决："或"推理："这样的CoT短语在预期输出的开始效果最佳。' },
           },
           {
             '@type': 'Question',

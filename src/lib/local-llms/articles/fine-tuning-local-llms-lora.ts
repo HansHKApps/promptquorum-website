@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             'Hu, E. et al. (2021). "LoRA: Low-Rank Adaptation of Large Language Models." https://arxiv.org/abs/2106.09685 — Original LoRA paper demonstrating 0.4% trainable parameters matching full fine-tuning quality.',
             'Dettmers, T. et al. (2023). "QLoRA: Efficient Finetuning of Quantized LLMs." https://arxiv.org/abs/2305.14314 — QLoRA paper: 4-bit quantized base model + 16-bit LoRA adapters halving VRAM requirements.',
-            'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — Fastest LoRA framework, supports Llama 3.x, Qwen2.5, Mistral with 4× training speedup.',
+            'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — Fastest LoRA framework, supports Llama 3.x, Qwen3, Mistral with 4× training speedup.',
             'Hugging Face. (2025). "TRL: Transformer Reinforcement Learning." https://github.com/huggingface/trl — SFTTrainer for supervised fine-tuning with LoRA adapter support.',
             'Test PE link content',
             'Fine-tuning works best when the foundation is strong. Before investing time in LoRA, ensure your base prompts are optimized: [prompt engineering guide](https://www.promptquorum.com/prompt-engineering) covers 80 techniques that improve output quality on untuned models.',
@@ -563,7 +563,7 @@ schema: {
           items: [
             'Hu, E. et al. (2021). "LoRA: Low-Rank Adaptation of Large Language Models." https://arxiv.org/abs/2106.09685 — Artículo original de LoRA que demuestra que el 0,4 % de parámetros entrenables iguala la calidad del fine-tuning completo.',
             'Dettmers, T. et al. (2023). "QLoRA: Efficient Finetuning of Quantized LLMs." https://arxiv.org/abs/2305.14314 — Artículo de QLoRA: modelo base cuantizado en 4 bits + adaptadores LoRA en 16 bits reducen los requisitos de VRAM a la mitad.',
-            'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — Framework LoRA más rápido, compatible con Llama 3.x, Qwen2.5, Mistral con 4× de aceleración del entrenamiento.',
+            'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — Framework LoRA más rápido, compatible con Llama 3.x, Qwen3, Mistral con 4× de aceleración del entrenamiento.',
             'Hugging Face. (2025). "TRL: Transformer Reinforcement Learning." https://github.com/huggingface/trl — SFTTrainer para fine-tuning supervisado con soporte de adaptadores LoRA.',
             'Test PE link content',
             'El fine-tuning funciona mejor cuando los fundamentos son sólidos. Antes de invertir tiempo en LoRA, asegúrate de que tus prompts base estén optimizados: la [guía de ingeniería de prompts](https://www.promptquorum.com/prompt-engineering) cubre 80 técnicas que mejoran la calidad de las salidas en modelos sin ajustar.',
@@ -931,7 +931,7 @@ schema: {
           items: [
             'Hu, E. et al. (2021). "LoRA: Low-Rank Adaptation of Large Language Models." https://arxiv.org/abs/2106.09685 — Original-LoRA-Paper demonstriert 0,4 % trainierbare Parameter, die vollständiges Fine-Tuning-Qualität erreichen.',
             'Dettmers, T. et al. (2023). "QLoRA: Efficient Finetuning of Quantized LLMs." https://arxiv.org/abs/2305.14314 — QLoRA-Paper: 4-Bit quantisiertes Basismodell + 16-Bit LoRA Adapter halbiert VRAM-Anforderungen.',
-            'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — Schnellstes LoRA-Framework, unterstützt Llama 3.x, Qwen2.5, Mistral mit 4× Trainings-Speedup.',
+            'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — Schnellstes LoRA-Framework, unterstützt Llama 3.x, Qwen3, Mistral mit 4× Trainings-Speedup.',
             'Hugging Face. (2025). "TRL: Transformer Reinforcement Learning." https://github.com/huggingface/trl — SFTTrainer für überwachtes Fine-Tuning mit LoRA Adapter-Unterstützung.',
           ],
         },
@@ -1313,7 +1313,7 @@ schema: {
           items: [
             'Hu, E. et al. (2021). "LoRA: Low-Rank Adaptation of Large Language Models." https://arxiv.org/abs/2106.09685 — Article LoRA original montrant 0,4 % de paramètres entraînables égalant la qualité du fine-tuning complet.',
             'Dettmers, T. et al. (2023). "QLoRA: Efficient Finetuning of Quantized LLMs." https://arxiv.org/abs/2305.14314 — Article QLoRA : modèle de base quantisé 4 bits + adaptateurs LoRA 16 bits réduit VRAM de moitié.',
-            'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — Framework LoRA le plus rapide, supporte Llama 3.x, Qwen2.5, Mistral avec 4× speedup.',
+            'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — Framework LoRA le plus rapide, supporte Llama 3.x, Qwen3, Mistral avec 4× speedup.',
             'Hugging Face. (2025). "TRL: Transformer Reinforcement Learning." https://github.com/huggingface/trl — SFTTrainer pour fine-tuning supervisé avec support adaptateur LoRA.',
           ],
         },
@@ -1655,7 +1655,7 @@ schema: {
           items: [
             'Hu, E. et al. (2021). "LoRA: Low-Rank Adaptation of Large Language Models." https://arxiv.org/abs/2106.09685 — 元のLoRA論文で、0.4%のトレーニング可能パラメータが完全なファインチューニング品質と一致することを示しています。',
             'Dettmers, T. et al. (2023). "QLoRA: Efficient Finetuning of Quantized LLMs." https://arxiv.org/abs/2305.14314 — QLoRA論文：4ビット量子化ベースモデル + 16ビット LoRA アダプターが VRAM 要件を半分にします。',
-            'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — 最速の LoRA フレームワークで、Llama 3.x、Qwen2.5、Mistral をサポートし、4倍のトレーニング高速化を提供します。',
+            'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — 最速の LoRA フレームワークで、Llama 3.x、Qwen3、Mistral をサポートし、4倍のトレーニング高速化を提供します。',
             'Hugging Face. (2025). "TRL: Transformer Reinforcement Learning." https://github.com/huggingface/trl — LoRA アダプター サポート付きの教師あり ファインチューニング用 SFTTrainer。',
           ],
         },
@@ -1997,7 +1997,7 @@ schema: {
           items: [
             'Hu, E. et al. (2021). "LoRA: Low-Rank Adaptation of Large Language Models." https://arxiv.org/abs/2106.09685 — 原始 LoRA 论文，展示 0.4% 可训练参数与完整微调质量相匹配。',
             'Dettmers, T. et al. (2023). "QLoRA: Efficient Finetuning of Quantized LLMs." https://arxiv.org/abs/2305.14314 — QLoRA 论文：4 位量化基础模型 + 16 位 LoRA 适配器将 VRAM 需求减半。',
-            'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — 最快的 LoRA 框架，支持 Llama 3.x、Qwen2.5、Mistral，速度快 4 倍。',
+            'Unsloth. (2026). "Unsloth: 4× Faster LoRA Training." https://github.com/unslothai/unsloth — 最快的 LoRA 框架，支持 Llama 3.x、Qwen3、Mistral，速度快 4 倍。',
             'Hugging Face. (2025). "TRL: Transformer Reinforcement Learning." https://github.com/huggingface/trl — 用于监督微调的 SFTTrainer，支持 LoRA 适配器。',
           ],
         },

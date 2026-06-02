@@ -169,9 +169,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['Modell', 'VRAM Q4', 'Getestete Geschwindigkeit'],
         rows: [
           { 'Modell': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', 'Getestete Geschwindigkeit': '~14 tok/s (Vulkan)' },
-          { 'Modell': 'Mistral 7B Q5_K_M', 'VRAM Q4': '~6 GB', 'Getestete Geschwindigkeit': '~13 tok/s (Vulkan)' },
+          { 'Modell': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', 'Getestete Geschwindigkeit': '~13 tok/s (Vulkan)' },
           { 'Modell': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', 'Getestete Geschwindigkeit': '~10 tok/s (Vulkan)' },
-          { 'Modell': 'Qwen 2.5 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Getestete Geschwindigkeit': '~9 tok/s (Vulkan)' },
+          { 'Modell': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Getestete Geschwindigkeit': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {
@@ -248,9 +248,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['Modèle', 'VRAM Q4', 'Vitesse testée'],
         rows: [
           { 'Modèle': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 Go', 'Vitesse testée': '~14 tok/s (Vulkan)' },
-          { 'Modèle': 'Mistral 7B Q5_K_M', 'VRAM Q4': '~6 Go', 'Vitesse testée': '~13 tok/s (Vulkan)' },
+          { 'Modèle': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 Go', 'Vitesse testée': '~13 tok/s (Vulkan)' },
           { 'Modèle': 'Phi-4 14B Q4', 'VRAM Q4': '~9 Go', 'Vitesse testée': '~10 tok/s (Vulkan)' },
-          { 'Modèle': 'Qwen 2.5 14B Q4_K_M', 'VRAM Q4': '~9 Go', 'Vitesse testée': '~9 tok/s (Vulkan)' },
+          { 'Modèle': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 Go', 'Vitesse testée': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {
@@ -327,9 +327,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['モデル', 'VRAM Q4', 'テスト速度'],
         rows: [
           { 'モデル': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', 'テスト速度': '~14 tok/s (Vulkan)' },
-          { 'モデル': 'Mistral 7B Q5_K_M', 'VRAM Q4': '~6 GB', 'テスト速度': '~13 tok/s (Vulkan)' },
+          { 'モデル': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', 'テスト速度': '~13 tok/s (Vulkan)' },
           { 'モデル': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', 'テスト速度': '~10 tok/s (Vulkan)' },
-          { 'モデル': 'Qwen 2.5 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'テスト速度': '~9 tok/s (Vulkan)' },
+          { 'モデル': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'テスト速度': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {
@@ -406,9 +406,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['模型', 'VRAM Q4', '测试速度'],
         rows: [
           { '模型': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', '测试速度': '~14 tok/s (Vulkan)' },
-          { '模型': 'Mistral 7B Q5_K_M', 'VRAM Q4': '~6 GB', '测试速度': '~13 tok/s (Vulkan)' },
+          { '模型': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', '测试速度': '~13 tok/s (Vulkan)' },
           { '模型': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', '测试速度': '~10 tok/s (Vulkan)' },
-          { '模型': 'Qwen 2.5 14B Q4_K_M', 'VRAM Q4': '~9 GB', '测试速度': '~9 tok/s (Vulkan)' },
+          { '模型': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', '测试速度': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {
@@ -485,9 +485,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['Modelo', 'VRAM Q4', 'Velocidad medida'],
         rows: [
           { 'Modelo': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', 'Velocidad medida': '~14 tok/s (Vulkan)' },
-          { 'Modelo': 'Mistral 7B Q5_K_M', 'VRAM Q4': '~6 GB', 'Velocidad medida': '~13 tok/s (Vulkan)' },
+          { 'Modelo': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', 'Velocidad medida': '~13 tok/s (Vulkan)' },
           { 'Modelo': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', 'Velocidad medida': '~10 tok/s (Vulkan)' },
-          { 'Modelo': 'Qwen 2.5 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Velocidad medida': '~9 tok/s (Vulkan)' },
+          { 'Modelo': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Velocidad medida': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {

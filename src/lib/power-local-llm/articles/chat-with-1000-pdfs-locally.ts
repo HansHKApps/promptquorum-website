@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Lokales RAG auf 1.000–10.000+ PDFs skalieren: Architektur, Benchmarks, Speicher und Latenz über AnythingLLM, LlamaIndex, ChromaDB und Qdrant. Mai 2026.',
     twitterDescription:
       'Wenn Standard-RAG scheitert: Skalierung von persönlichem Dokument-Chat auf 1.000-10.000 PDFs lokal. Architektur-Entscheidungsbaum + gemessene Benchmarks über vier Open-Source-Stacks. Mai 2026.',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 2.5 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       'Poweruser, Forscher, Juristen und Entwickler mit persönlichen Dokumentenbeständen von 1.000-10.000+ Dateien, die an der Skalierungsgrenze ankommen, wo Standardeinstellungen für RAG nicht mehr funktionieren.',
@@ -797,7 +797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Die geringste Reibungsoption, die bei richtiger Optimierung immer noch einen persönlichen Bestand von 1.000 Dokumenten handhabt.** AnythingLLM Desktop bringt LanceDB eingebettet, analysiert PDF/DOCX/MD nativ und spricht mit Ollama als LLM-Provider. Standardeinstellungen scheitern um 500 Dokumente; die Optimierung unten setzt sie auf 2.000-3.000.',
         items: [
-          '**LLM:** Llama 3.3 8B Q4_K_M über Ollama (5 GB RAM während Inferenz). Auf 24-GB+-Systemen verbessert Qwen 2.5 14B Q4 die Synthese deutlich.',
+          '**LLM:** Llama 3.3 8B Q4_K_M über Ollama (5 GB RAM während Inferenz). Auf 24-GB+-Systemen verbessert Qwen 3 14B Q4 die Synthese deutlich.',
           '**Embedding-Modell:** Wechsel vom Standard von AnythingLLM zu nomic-embed-text-v1.5 über Ollama. Das Standard-Embedding-Modell ist der einzige größte Grund für „AnythingLLM skaliert nicht"-Berichte.',
           '**Chunking:** 1.000 Token mit 200-Token-Überlappung, pro Workspace unter Vector Database-Einstellungen eingestellt. Das Standard 512/0 ist falsch für jeden Bestand größer als ein paar Dutzend Dokumente.',
           '**Top-K:** von Standard 4 auf 6-8 erhöhen. Bei 1.000 Dokumenten liegt der wirklich beste Chunk oft bei Rang 5-7, und der LLM kann schwache Chunks besser ignorieren als fehlende erfinden.',
@@ -1203,7 +1203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Évolution du RAG local vers 1.000-10.000+ PDF. Arborescence décisionnelle, benchmarks mesurés, stockage et latence à 100/1k/10k documents via AnythingLLM, LlamaIndex, ChromaDB, Qdrant. Mai 2026.',
     twitterDescription:
       'Quand le RAG standard échoue : évolution du chat documentaire personnel vers 1.000-10.000 PDF en local. Arborescence décisionnelle + benchmarks mesurés sur quatre piles open-source. Mai 2026.',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 2.5 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       'Utilisateurs avancés, chercheurs, juristes et développeurs disposant de corpus personnels de 1.000-10.000+ fichiers ayant atteint le seuil où les paramètres RAG standard cessent de fonctionner.',
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Option plus simple qui gère corpus personnel 1.000 documents quand correctement ajustée.** AnythingLLM Desktop bringue LanceDB intégré, parse PDF/DOCX/MD nativement, parle à Ollama comme fournisseur LLM. Paramètres défaut échouent vers 500 documents ; ajustement ci-dessous pousse à 2.000-3.000.',
         items: [
-          '**LLM** : Llama 3.3 8B Q4_K_M via Ollama (5 GB RAM lors inférence). Systèmes 24 GB+, Qwen 2.5 14B Q4 améliore notablement synthèse.',
+          '**LLM** : Llama 3.3 8B Q4_K_M via Ollama (5 GB RAM lors inférence). Systèmes 24 GB+, Qwen 3 14B Q4 améliore notablement synthèse.',
           '**Embedder** : passez défaut AnythingLLM Native à nomic-embed-text-v1.5 via Ollama. Embedder défaut est raison principale pour rapports « AnythingLLM ne scale pas ».',
           '**Chunking** : 1.000 tokens avec 200-token overlap, réglez par workspace sous Vector Database settings. Défaut 512/0 faux pour n\'importe quel corpus plus gros que quelques douzaines documents.',
           '**Top-K** : relevez défaut 4 à 6-8. À 1.000 documents, vraiment meilleur chunk souvent rang 5-7, et LLM ignore mieux chunks faibles que peut inventer manquants.',
@@ -1795,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルRAGを1,000~10,000+ PDFまでスケーリング。アーキテクチャ判定フロー、実測ベンチマーク、AnythingLLM/LlamaIndex/ChromaDB/Qdrantでの100/1k/10k ドキュメント時のストレージ・レイテンシ。2026年5月。',
     twitterDescription:
       'デフォルトRAGの限界：1,000~10,000 PDFでのローカルドキュメントチャット実装。アーキテクチャ判定フロー + 4つのオープンソーススタックでの実測ベンチマーク。2026年5月。',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 2.5 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       'パワーユーザー、研究者、法務専門家、そして1,000~10,000+ ファイルの個人ドキュメント保有者で、デフォルトRAG設定が機能しなくなるスケーリングの壁に直面している開発者',
@@ -1981,7 +1981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**正しく調整すれば1,000ドキュメントの個人コーパスを扱える最も低摩擦のオプション。** AnythingLLM Desktop は LanceDB 内蔵、PDF/DOCX/MD をネイティブ解析、LLMプロバイダとして Ollama と通信。デフォルト設定は500ドキュメント超で破綻。下記調整で2,000~3,000まで可能。',
         items: [
-          '**LLM** : Ollama 経由 Llama 3.3 8B Q4_K_M（推論時5 GB RAM）。24 GB+ システムでは Qwen 2.5 14B Q4 が大幅に合成を改善。',
+          '**LLM** : Ollama 経由 Llama 3.3 8B Q4_K_M（推論時5 GB RAM）。24 GB+ システムでは Qwen 3 14B Q4 が大幅に合成を改善。',
           '**Embedder** : AnythingLLM Native デフォルトから nomic-embed-text-v1.5（Ollama 経由）に切り替え。デフォルト embedder は「AnythingLLM はスケールしない」報告の最大理由。',
           '**チャンキング** : ワークスペースごとに Vector Database 設定で1,000トークン、200トークン重複。デフォルト512/0は数十ドキュメント超すべてで誤り。',
           '**Top-K** : デフォルト4から6~8に引き上げ。1,000ドキュメント時、本当に最良のチャンクはランク5~7にあり、LLM は弱いチャンク無視が欠落創作より得意。',
@@ -2386,7 +2386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地RAG扩展到1000-10000+个PDF。架构决策树、实测基准、存储和延迟对比，涵盖AnythingLLM、LlamaIndex、ChromaDB、Qdrant。2026年5月。',
     twitterDescription:
       '本地RAG突破瓶颈：如何将个人文档聊天系统扩展到1000-10000个PDF。包含架构决策树和四个开源堆栈的实测基准。2026年5月。',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 2.5 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       '拥有1000-10000+个文件的个人文档语料库、在默认RAG设置失效处遇到扩展瓶颈的高级用户、研究人员、律师和开发者。',
@@ -2780,7 +2780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Escala RAG local a 1.000–10.000+ PDFs: árbol de arquitectura, benchmarks, almacenamiento y latencia en AnythingLLM, LlamaIndex, ChromaDB y Qdrant.',
     twitterDescription:
       'Cuando el RAG básico falla: escalar el chat personal con documentos a 1.000-10.000 PDFs en local. Árbol de decisión de arquitectura + benchmarks medidos en cuatro stacks de código abierto. Mayo 2026.',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 2.5 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       'Usuarios avanzados, investigadores, abogados y desarrolladores con corpus personales de 1.000-10.000+ archivos que han llegado al límite de escalado donde los ajustes predeterminados de RAG dejan de funcionar.',
@@ -2966,7 +2966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La opción con menos fricción que aún gestiona un corpus personal de 1.000 documentos cuando se ajusta correctamente.** AnythingLLM Desktop incluye LanceDB integrado, analiza PDF/DOCX/MD de forma nativa y se comunica con Ollama como proveedor LLM. Los ajustes predeterminados fallan alrededor de 500 documentos; el ajuste siguiente lo eleva a 2.000-3.000.',
         items: [
-          '**LLM:** Llama 3.3 8B Q4_K_M vía Ollama (5 GB RAM durante la inferencia). En sistemas con 24 GB+, Qwen 2.5 14B Q4 mejora notablemente la síntesis.',
+          '**LLM:** Llama 3.3 8B Q4_K_M vía Ollama (5 GB RAM durante la inferencia). En sistemas con 24 GB+, Qwen 3 14B Q4 mejora notablemente la síntesis.',
           '**Embedder:** cambia del predeterminado de AnythingLLM a nomic-embed-text-v1.5 vía Ollama. El embedder predeterminado es la razón principal por la que existen informes de "AnythingLLM no escala".',
           '**Chunking:** 1.000 tokens con solapamiento de 200 tokens, configurado por workspace en los ajustes de Vector Database. El predeterminado 512/0 es incorrecto para cualquier corpus más grande que unas pocas decenas de documentos.',
           '**Top-K:** aumenta del predeterminado 4 a 6-8. Con 1.000 documentos, el mejor chunk suele estar en el rango 5-7, y el LLM puede ignorar chunks débiles mejor de lo que puede inventar los que faltan.',
