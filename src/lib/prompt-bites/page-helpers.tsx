@@ -25,6 +25,7 @@ const HOME_LABEL: Partial<Record<Lang, string>> = {
   ja: 'ホーム',
   zh: '主页',
   es: 'Inicio',
+  pt: 'Início',
 }
 
 const SLUG_ACRONYMS: Record<string, string> = {
