@@ -46,9 +46,8 @@ const PATH_PREFIX_LANG_PREFIXED_RE = new RegExp(
 export function middleware(request: NextRequest) {
   const url = request.nextUrl
 
-  // pt, ar: excluded until /pt and /ar page trees exist
-  // Re-add pt when /pt pages ship, ar when /ar pages ship
-  const VALID_NON_EN_LANGS = ['de', 'fr', 'ja', 'zh', 'es']
+  // ar: excluded until /ar page tree exists. Re-add ar when /ar pages ship.
+  const VALID_NON_EN_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt']
   const langParam = url.searchParams.get('lang')
   const isApiRoute = url.pathname.startsWith('/api/')
   const isCronRoute = url.pathname.startsWith('/cron/')
