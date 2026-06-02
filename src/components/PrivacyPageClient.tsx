@@ -26,7 +26,7 @@ interface PrivacyPageClientProps {
 }
 
 export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
-  const lang = (initialLang || useLang()) as Language
+  const lang = useLang(initialLang) as Language
   const t = translations[lang]
 
   const renderTemplate = (text: string, vars: Record<string, string> = {}) => {

@@ -318,7 +318,8 @@ const BATCH_MULTIPLIER: { [key: string]: number } = {
 };
 
 export function VramCalculator() {
-  const lang = (useLang() as Language) in VRAM_TRANSLATIONS ? (useLang() as Language) : 'en';
+  const detectedLang = useLang() as Language
+  const lang = detectedLang in VRAM_TRANSLATIONS ? detectedLang : 'en';
   const t = (VRAM_TRANSLATIONS[lang] ?? VRAM_TRANSLATIONS["en"])!;
 
   const [modelSize, setModelSize] = useState<string>('13B');

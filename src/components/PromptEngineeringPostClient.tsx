@@ -1115,10 +1115,8 @@ const THEME_COLORS: Record<string, { dot: string; badge: string; label: string }
 }
 
 function PromptEngineeringPostContent({ slug, initialLang }: Props) {
-  const clientLang = useLang() as Language
-  // Use server-resolved initialLang for first render (SEO-correct HTML),
-  // then switch to client-side lang once the hook hydrates past 'en' default.
-  const lang: Language = (clientLang !== 'en' ? clientLang : (initialLang ?? clientLang))
+  const clientLang = useLang(initialLang) as Language
+  const lang: Language = clientLang
   const key = PE_SLUG_TO_KEY[slug]
   const articleData = key ? peContent[key] : null
   const [searchQuery, setSearchQuery] = useState('')

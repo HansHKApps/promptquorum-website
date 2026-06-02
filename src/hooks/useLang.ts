@@ -20,32 +20,30 @@ export function useLang(initialLang?: Lang): Lang {
 
   useEffect(() => {
     const read = () => {
+      let newLang: Lang = 'en'
+
       // Path-prefix wins: /de/foo → 'de' regardless of query string
       const pathMatch = window.location.pathname.match(PATH_LOCALE_RE)
       if (pathMatch) {
-        const pathLang = pathMatch[1] as Lang
-        setLang(pathLang)
-        return
-      }
-
-      const params = new URLSearchParams(window.location.search)
-      const rawLang = params.get('lang')
-
-      // Treat ?lang=en same as no lang param (redirect to base URL)
-      if (rawLang === 'en' && typeof window !== 'undefined') {
-        const newUrl = window.location.pathname + window.location.hash
-        window.history.replaceState({}, '', newUrl)
-        setLang('en')
-        return
-      }
-
-      // For other languages, validate and set
-      if (rawLang && VALID_LANGS.includes(rawLang as Lang)) {
-        setLang(rawLang as Lang)
+        newLang = pathMatch[1] as Lang
       } else {
-        setLang('en')
+        const params = new URLSearchParams(window.location.search)
+        const rawLang = params.get('lang')
+
+        // Treat ?lang=en same as no lang param (redirect to base URL)
+        if (rawLang === 'en' && typeof window !== 'undefined') {
+          const newUrl = window.location.pathname + window.location.hash
+          window.history.replaceState({}, '', newUrl)
+          newLang = 'en'
+        } else if (rawLang && VALID_LANGS.includes(rawLang as Lang)) {
+          newLang = rawLang as Lang
+        }
       }
+
+      // Only update state if language has changed (prevents hydration mismatch on mobile)
+      setLang(prevLang => (newLang !== prevLang ? newLang : prevLang))
     }
+
     read()
     window.addEventListener('popstate', read)
     return () => window.removeEventListener('popstate', read)
