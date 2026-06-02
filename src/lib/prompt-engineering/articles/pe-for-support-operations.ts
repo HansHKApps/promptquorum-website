@@ -557,6 +557,175 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
 
+  pt: {
+    theme: 'Workflows & Automação',
+    title: 'Prompt engineering para operações de suporte: modelos de resposta consistentes e precisos',
+    seoTitle: 'Prompts de suporte: guia de modelos',
+    metaDescription: 'Projete prompts de suporte para triagem, escalada e controle de tom. As salvaguardas evitam erros de política e esclarecem quando escalar um caso.',
+    ogDescription: 'Como as equipes de suporte usam o prompt engineering — modelos de triagem e escalada, controles de tom e empatia, salvaguardas de conformidade de políticas e quando transferir para humanos.',
+    twitterDescription: 'PE para ops de suporte: modelos de triagem, lógica de escalada, controles de tom, salvaguardas de políticas. Respostas consistentes sem perder o toque humano.',
+    intro: 'As equipes de suporte enfrentam um desafio de prompting que a maioria dos outros casos de uso não tem: o custo de uma saída ruim não é estético — é um relacionamento com o cliente, uma violação de política ou uma exposição legal. O prompt engineering para operações de suporte significa projetar com precisão, consistência e escalada correta como objetivos principais.',
+    leadAnswerBlock: '**Os prompts de suporte precisam de restrições mais rígidas do que a maioria dos tipos de prompts porque os erros são visíveis para os clientes, sensíveis às políticas e frequentemente legalmente significativos.** A prioridade de design não é a criatividade — é a precisão, a consistência e a escalada correta quando a IA não deveria gerenciar uma solicitação.',
+    publishDate: '2026-05-02',
+    readTime: '9 min de leitura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Prompt Engineering para operações de suporte',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/pe-for-support-operations?lang=pt',
+      headline: 'Prompt engineering para operações de suporte: modelos de resposta consistentes e precisos',
+      description: 'Como as equipes de suporte projetam prompts para triagem, escalada, resolução e acompanhamento — incluindo controles de tom, salvaguardas de conformidade de políticas e padrões de transferência para humanos.',
+      datePublished: '2026-05-02',
+      inLanguage: 'pt-BR',
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/pt/api/og/pe-for-support-operations', width: 1200, height: 630 },
+      keywords: ['prompt engineering', 'operações de suporte', 'atendimento ao cliente', 'modelos de triagem', 'lógica de escalada', 'conformidade de políticas'],
+      proficiencyLevel: 'Intermediate',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    sections: {
+      key_takeaways: {
+        title: 'Pontos-chave',
+        isTldr: true,
+        items: [
+          'Os prompts de suporte requerem restrições mais rígidas do que outros tipos de prompts porque os erros são visíveis para os clientes, sensíveis às políticas e legalmente significativos.',
+          'Cada prompt de suporte deve incluir uma condição de escalada. Se a IA não sabe quando parar, ela responderá a solicitações que não deveria gerenciar.',
+          'Quatro tipos de modelos de suporte cobrem a maioria dos fluxos de trabalho de suporte: triagem, escalada, resolução e acompanhamento.',
+          'Os controles de tom requerem 3 componentes: marcador de empatia (reconheça primeiro), nível de formalidade e uma restrição que proíbe linguagem que culpa o cliente.',
+          'O padrão de transferência de IA é: reconhecer, resumir, marcar, encaminhar. Sem desculpa pela transferência — enquadre-a como uma decisão de encaminhamento, não como uma falha.',
+        ],
+      },
+      support_constraints: {
+        id: 'support-constraints',
+        title: 'Por que os prompts de suporte precisam de restrições adicionais',
+        content: [
+          '**Os prompts de suporte requerem mais restrições do que a maioria dos tipos de prompts porque o custo da falha não se limita a uma saída subótima — se estende a violações de políticas, responsabilidade legal e danos aos relacionamentos com clientes.** Três razões pelas quais os prompts de suporte exigem uma abordagem de design diferente:',
+        ],
+        items: [
+          '**Exposição a políticas:** Um agente de suporte — humano ou IA — que fala em nome de uma empresa está criando um registro. Uma resposta incorreta sobre preços, um compromisso de reembolso que excede os limites da política ou uma interpretação médica cria responsabilidade. A IA deve saber exatamente o que pode e o que não pode dizer.',
+          '**Sensibilidade ao tom:** As interações de atendimento ao cliente frequentemente começam a partir de um ponto de frustração. O tom errado — defensivo, excessivamente formal quando se espera informalidade, ou desdenhoso — pode escalar um ticket P2 para P1. Os controles de tom devem ser explícitos no prompt.',
+          '**Criticidade da escalada:** Ao contrário de uma tarefa de geração de conteúdo onde uma saída subótima pode ser revisada, um prompt de suporte que não escala quando deveria pode resultar em um ticket fechado muito cedo sobre uma reclamação legal, ou um cliente recebendo um compromisso que viola a política.',
+        ],
+        callouts: [
+          {
+            type: 'key-point',
+            label: 'Elemento obrigatório',
+            text: 'Sempre inclua uma condição de escalada em cada prompt de suporte. A condição deve ser específica: liste as palavras-chave exatas ou cenários que exigem que a IA pare de responder e encaminhe para um agente humano.',
+          },
+        ],
+      },
+      template_types: {
+        id: 'template-types',
+        title: 'Tipos de modelos de resposta de suporte',
+        content: [
+          '**Quatro tipos de modelos cobrem a maioria dos fluxos de trabalho de operações de suporte: triagem, escalada, resolução e acompanhamento.** Cada tipo de modelo tem um objetivo distinto, estrutura de saída e conjunto de restrições necessárias.',
+        ],
+        numberedItems: [
+          'Modelo de triagem: Classifique o tipo de ocorrência (faturamento / técnico / geral / conta), atribua severidade (P1 = bloqueio do negócio, P2 = impacto funcional, P3 = cosmético ou informativo) e encaminhe para a equipe correta. Formato de saída: etiqueta de classificação + decisão de encaminhamento + rascunho de mensagem de confirmação ao cliente. Restrição: a saída da triagem não deve conter nenhuma tentativa de resolução — a triagem apenas classifica e encaminha.',
+          'Modelo de escalada: Defina as condições que acionam este modelo — ameaça legal, solicitação de cancelamento de conta, menção de violação de dados, P1 repetido no mesmo problema, ou solicitação explícita do cliente por um humano. Formato de saída: mensagem de escalada ao cliente (neutra, profissional) + marcação do ticket com motivo + instrução de encaminhamento para a equipe correta. Restrição: nunca tente resolver um gatilho de escalada. Apenas reconheça e encaminhe.',
+          'Modelo de resolução: Rota estruturada — reformule o problema nos termos do cliente, aplique a cláusula de política relevante, proponha uma resolução específica, solicite confirmação do cliente. Formato de saída: rascunho de resolução + a referência de política utilizada. Restrição: a resolução não pode exceder o escopo da política. Sem promessas de preços, sem compromissos de exceções além do que a política permite explicitamente.',
+          'Modelo de acompanhamento: Gatilho: 48 horas após um ticket ser marcado como resolvido. Saída: uma breve mensagem de acompanhamento que verifica se a resolução se manteve e solicita um sinal de satisfação. A mensagem não deve reabrir o problema nem convidar reclamações — deve confirmar a resolução e solicitar confirmação.',
+        ],
+      },
+      tone_controls: {
+        id: 'tone-controls',
+        title: 'Controles de tom e empatia em prompts de suporte',
+        content: [
+          '**O tom nos prompts de suporte requer 3 controles explícitos: um marcador de empatia, uma especificação do nível de formalidade e uma restrição sobre linguagem que culpa.** Sem controles explícitos, os padrões de tom do modelo variam.',
+          '3 componentes de tom a incluir em cada prompt de suporte:',
+        ],
+        items: [
+          '**Marcador de empatia:** Instrua o modelo a reconhecer a frustração ou situação do cliente antes de abordar o problema. O padrão é: declaração de empatia → reformulação do problema → rota de resolução. Exemplo de instrução: "Comece cada resposta reconhecendo a experiência do cliente em uma frase antes de abordar o problema."',
+          '**Nível de formalidade:** Especifique o registro de formalidade nos termos do seu guia de marca (ex.: "use um tom profissional mas acessível, que corresponda à formalidade de um representante de serviço ao cliente sênior"). Não dependa de instruções vagas como "seja amigável".',
+          '**Restrição de linguagem que culpa:** Instrua explicitamente o modelo a evitar linguagem que atribua culpa ao cliente. Exemplo: "Nunca use frases que sugiram que o cliente causou o problema, mesmo que a ação do cliente tenha sido a causa direta." Teste isso em 10 exemplos de tickets difíceis onde o cliente tem culpa para verificar se a restrição se mantém.',
+        ],
+        callouts: [
+          {
+            type: 'pro-tip',
+            label: 'Teste com casos difíceis',
+            text: 'Execute prompts de tom em 10 exemplos de tickets difíceis — clientes irritados, clientes usando linguagem inapropriada, clientes que estão factualmente errados. Se o modelo falhar na restrição de linguagem que culpa ou perder o marcador de empatia em algum desses, revise a restrição antes da implantação.',
+          },
+        ],
+      },
+      guardrails: {
+        id: 'guardrails',
+        title: 'Salvaguardas de conformidade de políticas',
+        content: [
+          '**A conformidade de políticas nos prompts de suporte requer 3 tipos de salvaguardas: restrições de tópico, restrições de saída e gatilhos de escalada vinculados à detecção de palavras-chave.**',
+          '3 tipos de salvaguardas:',
+        ],
+        items: [
+          '**Restrições de tópico:** Uma lista explícita de tópicos que a IA não deve abordar em sua resposta. Exemplos comuns: interpretações legais, conselhos médicos, exceções de preços não incluídas na política padrão, comparações competitivas e detalhes de processos internos.',
+          '**Restrições de saída:** Um conjunto de saídas específicas que a IA nunca deve produzir, independentemente de como o cliente enquadrar a solicitação: sem promessas de preços, sem interpretações legais, sem conselhos médicos e sem confirmação de exceções não padrão.',
+          '**Gatilhos de escalada:** Uma lista de palavras-chave ou frases específicas que, se detectadas na mensagem do cliente, devem fazer com que a IA pare imediatamente a rota de resolução normal e produza uma saída de escalada. Exemplos: "advogado", "processo", "cancelar minha conta", "violação de dados". Formato: "Se a mensagem do cliente contiver qualquer uma das seguintes palavras ou frases: [lista de palavras-chave], não tente resolver o problema. Produza um reconhecimento de escalada e marque o ticket para [equipe]."',
+        ],
+      },
+      handoff: {
+        id: 'handoff',
+        title: 'Quando e como transferir para agentes humanos',
+        content: [
+          '**Cinco condições de gatilho sempre devem resultar em uma transferência para um agente humano: linguagem legal, cancelamento de conta, exposição de dados, P1 repetido no mesmo problema e solicitação explícita do cliente por um humano.**',
+          '5 gatilhos de transferência e o padrão de transferência:',
+        ],
+        items: [
+          '**Linguagem legal:** Qualquer mensagem que contenha palavras como "advogado", "processo", "litígio" ou "ação legal" deve acionar escalada imediata. A IA não deve se envolver com o enquadramento legal — mesmo para negá-lo ou desviá-lo. Reconheça e encaminhe.',
+          '**Cancelamento de conta:** Uma solicitação de cancelamento de conta é suficientemente arriscada para exigir gerenciamento humano. A IA pode reconhecer a solicitação e confirmar a transferência, mas não deve tentar ofertas de retenção nem processar cancelamentos sem autorização humana.',
+          '**Exposição de dados:** Qualquer menção de uma violação de dados, acesso não autorizado, comprometimento de conta ou preocupação com LGPD/GDPR deve acionar escalada. Estes têm prazos regulatórios e implicações legais que requerem tomada de decisão humana.',
+          '**P1 repetido no mesmo problema:** Se um cliente relatou o mesmo problema P1 mais de uma vez e ainda está sem resolução, um agente humano deve revisar o histórico do ticket. A IA deve marcar a repetição no ticket e encaminhar — não tentar outro ciclo de resolução.',
+          '**Solicitação explícita do cliente por um humano:** Se o cliente diz que quer falar com uma pessoa, um gerente ou um agente humano, a IA deve respeitar essa solicitação imediatamente sem tentar primeiro resolver o problema.',
+        ],
+        callouts: [
+          {
+            type: 'key-point',
+            label: 'Padrão de transferência',
+            text: 'O padrão correto de saída de transferência é: (1) Reconheça o problema do cliente em uma frase. (2) Resuma o contexto para o agente humano nas notas do ticket. (3) Marque o ticket com o motivo de escalada. (4) Encaminhe para a equipe correta. A mensagem ao cliente deve ser neutra e profissional — "Estou transferindo isso para nossa equipe de [equipe] que pode ajudá-lo melhor" — sem desculpa pela transferência.',
+          },
+        ],
+      },
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        content: 'Os prompts de suporte priorizam a precisão, a consistência e a escalada correta em vez da criatividade — os erros são visíveis para os clientes e legalmente significativos. Projete um modelo de triagem que encaminhe as ocorrências para a equipe correta (L1/L2/L3) usando regras de decisão explícitas. Codifique o tom de suporte com 3–5 amostras de marca e teste a consistência entre modelos. Adicione salvaguardas de conformidade de políticas: uma lista explícita de tópicos que a IA não deve abordar, saídas específicas que a IA nunca deve produzir (promessas de preços, interpretações legais, conselhos médicos), e gatilhos de escalada (palavras-chave como "advogado", "processo", "cancelar conta", "violação de dados"). Cinco condições de transferência requerem escalada humana imediata: linguagem legal, cancelamento de conta, exposição de dados, P1 repetido no mesmo problema, solicitação explícita do cliente por um humano. Teste todos os modelos de triagem, tom e escalada em 15+ casos limite em 2–3 modelos antes da implantação.',
+      },
+      faq: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'Por que o prompt engineering de suporte é diferente do prompt engineering geral?', a: 'Os erros de prompts de suporte são visíveis para os clientes, legalmente significativos e frequentemente sensíveis às políticas. A prioridade de design é a precisão e a escalada correta, não a criatividade. Os erros podem resultar em danos aos relacionamentos com clientes, violações de políticas ou exposição legal. Isso requer restrições mais rígidas no escopo do tópico, no formato de saída e nas regras de escalada do que a maioria dos outros tipos de prompts.' },
+          { q: 'Como projeto um prompt de triagem que encaminhe os problemas corretamente?', a: 'Defina a triagem com regras de decisão explícitas atribuídas a níveis de severidade: L1 (resolução imediata, sem necessidade de humano), L2 (investigação necessária mas assistida por IA), L3 (escalada humana necessária). Use um formato de árvore de decisão com lógica if-then-else. Teste o prompt de triagem em 15+ tickets de suporte reais para verificar o encaminhamento correto antes da implantação.' },
+          { q: 'Como codifico o tom de suporte sem soar insincero?', a: 'Forneça 3–5 exemplos de referência de respostas de suporte empáticas que correspondam à marca. Inclua descritores de tom (3 adjetivos, ex.: "profissional, caloroso, direto"). Teste o modelo em 2–3 modelos para garantir a consistência do tom. Evite frases de empatia genéricas como "Entendo sua frustração" — use reconhecimentos específicos do problema.' },
+          { q: 'Que informações de política devo incluir em um prompt de suporte?', a: 'Inclua documentos de referência para políticas comuns (política de reembolso, privacidade de dados, segurança de conta, faturamento). Para cada política, defina as saídas específicas que a IA nunca deve produzir: sem promessas de preços além das tarifas publicadas, sem interpretações legais, sem conselhos médicos, sem exceções não autorizadas. Torne essas proibições explícitas e teste o prompt em casos limite onde os clientes pedem exceções.' },
+          { q: 'Quando uma IA de suporte deve transferir para um agente humano?', a: 'Cinco condições requerem escalada humana imediata: (1) Linguagem legal (advogado, processo, etc.); (2) Solicitações de cancelamento de conta; (3) Exposição de dados ou preocupações de segurança; (4) Problemas P1 repetidos no mesmo ticket; (5) Solicitação explícita do cliente por um humano. Defina esses gatilhos explicitamente no prompt e treine as equipes de suporte para reconhecer os sinais de transferência da IA.' },
+          { q: 'Como testo um prompt de suporte antes de implantá-lo para a equipe?', a: 'Execute o prompt em pelo menos 15 tickets de suporte reais que cubram casos normais, casos limite e gatilhos de escalada. Pontue cada resposta em precisão (correção factual), conformidade (adesão a políticas), tom (empatia e adequação à marca) e escalada (encaminhamento correto). Implante apenas se a pontuação média for 1,5+ em uma escala 0–2. Teste o mesmo prompt em 2–3 modelos para verificar a consistência.' },
+        ],
+      },
+      related_reading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          { title: 'Injeção de prompts e segurança', url: '/pt/prompt-engineering/prompt-injection-and-security' },
+          { title: 'Construa seu próprio framework de prompts', url: '/pt/prompt-engineering/build-your-own-framework' },
+          { title: 'Governança de prompts em produção', url: '/pt/prompt-engineering/prompt-governance-production' },
+          { title: 'Fluxo de revisão de prompts para equipes', url: '/pt/prompt-engineering/prompt-review-workflow-for-teams' },
+          { title: 'De prompts para fluxos de trabalho repetíveis', url: '/pt/prompt-engineering/prompts-to-repeatable-workflows' },
+          { title: 'Negative prompting', url: '/pt/prompt-engineering/negative-prompting' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          { title: 'OpenAI Guide to Responsible AI in Customer Support', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
+          { title: 'Anthropic Safety Guidelines for Customer-Facing Prompts', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
+          { title: 'PromptQuorum Multi-Model Support Testing Platform', url: 'https://www.promptquorum.com/features' },
+        ],
+      },
+    },
+  },
+
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisation',
