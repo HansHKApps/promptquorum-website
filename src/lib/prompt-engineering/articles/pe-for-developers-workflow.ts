@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Writing prompts directly in application code', problem: 'Hardcoded prompts can\'t be versioned, tested, or changed without a full deployment', fix: 'Store prompts as separate files in a /prompts directory. Load them at runtime.' },
           { mistake: 'Testing only locally, never in CI/CD', problem: 'Local tests are skipped under time pressure; CI/CD gates are mandatory', fix: 'Add a Promptfoo test step to GitHub Actions. Block merge if pass rate drops below 85%.' },
           { mistake: 'No production monitoring', problem: 'Prompt quality degrades post-deployment with no visibility', fix: 'Log pass rate per prompt per day. Alert if pass rate drops 5% week-over-week.' },
-          { mistake: 'Testing on one model only', problem: 'A prompt that works on GPT-4o may fail on Claude 4.6 Sonnet', fix: 'Run your test suite against at least 2 models in CI/CD.' },
+          { mistake: 'Testing on one model only', problem: 'A prompt that works on GPT-5.5 may fail on Claude 4.6 Sonnet', fix: 'Run your test suite against at least 2 models in CI/CD.' },
         ],
       },
       key_takeaways: {

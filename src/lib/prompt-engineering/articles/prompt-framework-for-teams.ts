@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'CRAFT' },
         { '@type': 'Thing', name: 'RISEN' },
         { '@type': 'Thing', name: 'RTF' },
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'Gemini 2.5 Pro' },
         { '@type': 'Thing', name: 'PromptQuorum' },
@@ -79,7 +79,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'tldr',
         title: 'TL;DR',
         isTldr: true,
-        content: 'Teams with 3+ people or multiple use cases need a shared prompt framework to maintain consistency and reduce onboarding time. Choose CO-STAR for complex multi-step tasks with varying audience and style, CRAFT for content and brand voice work, RISEN for instructional writing, RTF for technical documentation and structured output, or build a custom framework if you modify a standard framework the same way 3+ times per workflow. Onboarding time ranges from 1 hour (CRAFT, RTF) to 2 hours (CO-STAR) to 4–8 hours (custom). Run test prompts across GPT-4o and Claude 4.6 Sonnet via PromptQuorum to catch model-specific issues early.',
+        content: 'Teams with 3+ people or multiple use cases need a shared prompt framework to maintain consistency and reduce onboarding time. Choose CO-STAR for complex multi-step tasks with varying audience and style, CRAFT for content and brand voice work, RISEN for instructional writing, RTF for technical documentation and structured output, or build a custom framework if you modify a standard framework the same way 3+ times per workflow. Onboarding time ranges from 1 hour (CRAFT, RTF) to 2 hours (CO-STAR) to 4–8 hours (custom). Run test prompts across GPT-5.5 and Claude 4.6 Sonnet via PromptQuorum to catch model-specific issues early.',
       },
       framework_vs_no_framework: {
         title: 'Should Your Team Use a Framework at All?',
@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'How to Onboard Your Team to a New Framework',
         content: [
           '**Onboarding to a new framework takes 1–2 hours of guided instruction and 1 week of supervised practice — not months of independent experimentation.** The fastest onboarding path: one 90-minute session covering the framework structure, then 5 supervised prompts with structured feedback, then 2 weeks of independent prompting with a weekly review.',
-          'Run the 5 supervised prompts across GPT-4o and Claude 4.6 Sonnet via PromptQuorum so new team members see how the framework performs across models from day one. Cross-model testing during onboarding catches component definitions that only work on one model — fixing those early prevents model-specific brittleness later.',
+          'Run the 5 supervised prompts across GPT-5.5 and Claude 4.6 Sonnet via PromptQuorum so new team members see how the framework performs across models from day one. Cross-model testing during onboarding catches component definitions that only work on one model — fixing those early prevents model-specific brittleness later.',
           'Document the framework in the team\'s prompt library with 3 annotated example prompts covering the most common use cases. Without annotated examples, new members invent their own interpretations of each component and drift from the intended structure within the first week.',
         ],
       },

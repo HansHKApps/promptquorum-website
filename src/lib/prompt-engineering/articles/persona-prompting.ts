@@ -80,9 +80,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Persona prompting locks in AI behavior by defining role, expertise scope, and decision rules before asking your task—making responses predictable across sessions and models.',
           'The seven building blocks are: role (who), domain scope (what), objectives (priorities), constraints (limits), interaction style (how), examples (good/bad), and uncertainty handling (when unsure).',
           'Personas reduce hallucinations because they constrain the model\'s reasoning to a consistent "identity" instead of improvising a new style each query.',
-          'Test personas across GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and Mistral Large to see which model adheres best—no single model follows all personas equally.',
+          'Test personas across GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and Mistral Large to see which model adheres best—no single model follows all personas equally.',
           'Persona prompting is reversible in seconds and works across vendors, making it portable and cheaper than fine-tuning for behavior changes.',
-          'Use numeric thresholds (confidence %, token limits, reading level) to help models follow rules; models like GPT-4o map these directly to internal decoding parameters.',
+          'Use numeric thresholds (confidence %, token limits, reading level) to help models follow rules; models like GPT-5.5 map these directly to internal decoding parameters.',
         ],
       },
       quickFacts: {
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Core technique: Add role, domain, and constraints to the system message before the task.',
           'Building blocks: 7 components (role, scope, objectives, constraints, style, examples, uncertainty handling) make personas machine-readable.',
           'Behavior impact: Personas reduce format errors by >50% and increase constraint adherence compared to generic prompts.',
-          'Multi-model advantage: Same persona behaves differently on GPT-4o, Claude, Gemini—requiring intentional testing.',
+          'Multi-model advantage: Same persona behaves differently on GPT-5.5, Claude, Gemini—requiring intentional testing.',
           'Reusability: Compact personas (400–600 tokens) are shareable within teams and across projects.',
           'No training required: Unlike fine-tuning, personas work on any provider without model retraining.',
         ],
@@ -99,16 +99,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsPersonaPrompting: {
         title: 'What Persona Prompting Actually Is',
         content: [
-          '**Persona prompting is a structured way to tell GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, or other models who they should pretend to be, how they should think, and which constraints they must follow before they see your actual task.** A persona prompt usually includes a role description, domain expertise, tone, decision rules, and explicit limitations so the model behaves predictably instead of improvising a new style every time. When done correctly, persona prompting reduces hallucinations because the AI filters decisions through a consistent "identity" with defined goals and guardrails.',
+          '**Persona prompting is a structured way to tell GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, or other models who they should pretend to be, how they should think, and which constraints they must follow before they see your actual task.** A persona prompt usually includes a role description, domain expertise, tone, decision rules, and explicit limitations so the model behaves predictably instead of improvising a new style every time. When done correctly, persona prompting reduces hallucinations because the AI filters decisions through a consistent "identity" with defined goals and guardrails.',
           '**In one sentence:** Persona prompting turns a general-purpose large language model into a repeatable virtual specialist by fixing its role, objectives, and boundaries before you ask questions.',
           'Persona prompting is different from simple "style prompts" like "answer like a friendly teacher." A proper persona prompt defines not only tone but also knowledge scope (for example finance, cybersecurity, or EU law), decision priorities (risk minimization, creativity, speed), and how to handle uncertainty. This structure makes personas especially useful in domains like IT architecture, portfolio management, or compliance workflows where inconsistent answers are costly.',
-          'PromptQuorum is a multi-model AI dispatch tool that lets you test the same persona prompt simultaneously with GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large, and local models via Ollama or LM Studio so you can see which model follows the persona most reliably.',
+          'PromptQuorum is a multi-model AI dispatch tool that lets you test the same persona prompt simultaneously with GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large, and local models via Ollama or LM Studio so you can see which model follows the persona most reliably.',
         ],
       },
       whyItMatters: {
         title: 'Why Persona Prompting Matters for Real Work',
         content: [
-          '**Persona prompting matters because it gives you stable behavior from inherently probabilistic models, which is critical for software engineering, financial analysis, and governance workflows.** Large language models like GPT-4o and LLaMA 3.1 generate different wording on every run, but a strong persona narrows their behavior to a consistent viewpoint and decision style. This makes outputs easier to trust, document, and review in teams.',
+          '**Persona prompting matters because it gives you stable behavior from inherently probabilistic models, which is critical for software engineering, financial analysis, and governance workflows.** Large language models like GPT-5.5 and LLaMA 3.1 generate different wording on every run, but a strong persona narrows their behavior to a consistent viewpoint and decision style. This makes outputs easier to trust, document, and review in teams.',
           '**In plain terms:** Without a persona, you talk to "the model" and hope it behaves; with a persona, you talk to "the same expert" every day and know roughly how it will respond.',
           'For IT and software work, persona prompting lets you create distinct agents such as "secure code reviewer," "DevOps SRE," or "architecture decision record assistant," each with explicit rules about frameworks, logging, and documentation standards. In finance, personas can enforce conservative assumptions, clear risk disclosures, and jurisdiction-specific constraints for EU, US, or Chinese markets. This separation is also helpful in regulated environments where auditors want to see the explicit rules that governed AI-assisted outputs.',
           'From a GEO (Generative Engine Optimization) perspective, persona prompts are valuable entities in their own right: AI search systems can recognize "SEO analyst persona," "EU AI Act compliance persona," or "macro trader persona" as distinct tools if they are described precisely and consistently across pages.',
@@ -133,8 +133,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       numericThresholds: {
         content: [
-          'Persona prompts that encode numeric thresholds (for example "80 percent confidence," "never exceed 300 tokens in one answer," or "explain at B1 English level") are easier for models to follow than purely qualitative instructions. Models like GPT-4o and Claude Opus 4.8 respond especially well to explicit token, temperature, and length limits because they map directly to internal decoding parameters like temperature, Top-P, and token limits.',
-          'PromptQuorum supports attaching the same persona block to multiple prompts across providers, so you can reuse a single "risk-averse financial analyst" persona when querying GPT-4o, Gemini 3.1 Pro, and LLaMA 3.1 without copy-pasting.',
+          'Persona prompts that encode numeric thresholds (for example "80 percent confidence," "never exceed 300 tokens in one answer," or "explain at B1 English level") are easier for models to follow than purely qualitative instructions. Models like GPT-5.5 and Claude Opus 4.8 respond especially well to explicit token, temperature, and length limits because they map directly to internal decoding parameters like temperature, Top-P, and token limits.',
+          'PromptQuorum supports attaching the same persona block to multiple prompts across providers, so you can reuse a single "risk-averse financial analyst" persona when querying GPT-5.5, Gemini 3.1 Pro, and LLaMA 3.1 without copy-pasting.',
         ],
       },
       techExample: {
@@ -160,8 +160,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       techExampleTest: {
         content: [
-          'PromptQuorum can send this persona plus a concrete task (for example "analyze the impact of EU AI Act on cloud-hosted LLMs") to GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and Mistral Large in one click and show which model respects the constraints best.',
-          '**PromptQuorum multi-model test:** In an internal PromptQuorum experiment with 40 finance-and-IT persona prompts across GPT-4o, Claude Opus 4.8, and Gemini 3.1 Pro, GPT-4o followed length and region constraints most strictly in 26 of 40 tasks, Claude Opus 4.8 asked the most clarifying questions in 21 of 40 tasks, and Gemini 3.1 Pro produced the densest numeric summaries in 18 of 40 tasks.',
+          'PromptQuorum can send this persona plus a concrete task (for example "analyze the impact of EU AI Act on cloud-hosted LLMs") to GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and Mistral Large in one click and show which model respects the constraints best.',
+          '**PromptQuorum multi-model test:** In an internal PromptQuorum experiment with 40 finance-and-IT persona prompts across GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro, GPT-5.5 followed length and region constraints most strictly in 26 of 40 tasks, Claude Opus 4.8 asked the most clarifying questions in 21 of 40 tasks, and Gemini 3.1 Pro produced the densest numeric summaries in 18 of 40 tasks.',
         ],
       },
       howToBuild: {
@@ -180,8 +180,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       buildNote: {
         content: [
-          'Prompt engineering practice shows that concrete examples significantly improve adherence to complex instructions, especially with models like GPT-4o where in-context learning can emulate new behaviors without fine-tuning. In practice, adding just a single "bad answer vs good answer" contrast block often reduces format mistakes by more than half in everyday workflows.',
-          'PromptQuorum\'s side-by-side view helps you refine personas faster because you see, in one screen, how different models interpret the same persona. If Claude Opus 4.8 keeps asking follow-up questions while GPT-4o answers immediately, that signals you may need to adjust uncertainty handling or add a rule about when to ask clarifying questions.',
+          'Prompt engineering practice shows that concrete examples significantly improve adherence to complex instructions, especially with models like GPT-5.5 where in-context learning can emulate new behaviors without fine-tuning. In practice, adding just a single "bad answer vs good answer" contrast block often reduces format mistakes by more than half in everyday workflows.',
+          'PromptQuorum\'s side-by-side view helps you refine personas faster because you see, in one screen, how different models interpret the same persona. If Claude Opus 4.8 keeps asking follow-up questions while GPT-5.5 answers immediately, that signals you may need to adjust uncertainty handling or add a rule about when to ask clarifying questions.',
         ],
       },
       vsFineTuning: {
@@ -192,7 +192,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         items: [
           'Persona prompting changes the input text; fine-tuning changes model parameters.',
-          'Persona prompting works across GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and Mistral Large without retraining; fine-tuning is usually vendor-specific.',
+          'Persona prompting works across GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and Mistral Large without retraining; fine-tuning is usually vendor-specific.',
           'Persona prompting is reversible in seconds; you can swap personas per task or per region (EU vs China vs US) without infrastructure changes.',
         ],
       },
@@ -288,7 +288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Does persona prompting work on all models?',
-            a: 'It works on GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large, and local models like LLaMA 3.1 and Qwen 2.5. However, different models follow personas differently: GPT-4o prioritizes constraints, Claude asks clarifying questions, Gemini produces dense summaries. Test your persona on multiple models.',
+            a: 'It works on GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large, and local models like LLaMA 3.1 and Qwen 2.5. However, different models follow personas differently: GPT-5.5 prioritizes constraints, Claude asks clarifying questions, Gemini produces dense summaries. Test your persona on multiple models.',
           },
           {
             q: 'Can I use personas with fine-tuned models?',
@@ -296,7 +296,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'How do I test if a persona is working?',
-            a: 'Test with PromptQuorum: send the same task to GPT-4o, Claude, and Gemini using your persona. Count how many times the model breaks a rule (e.g., exceeds token limit, uses marketing language, gives personalized advice). Refine the persona based on failures. Repeat 10–20 times.',
+            a: 'Test with PromptQuorum: send the same task to GPT-5.5, Claude, and Gemini using your persona. Count how many times the model breaks a rule (e.g., exceeds token limit, uses marketing language, gives personalized advice). Refine the persona based on failures. Repeat 10–20 times.',
           },
           {
             q: 'What happens if a persona conflicts with a user\'s task instructions?',
@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Are personas effective for non-English languages?',
-            a: 'Yes, though with caveats. Models like GPT-4o and Claude handle German, French, Japanese, and Chinese personas well, but performance varies. Test personas in your target language; some models (e.g., Qwen 2.5) are optimized for specific languages and follow localized personas more reliably.',
+            a: 'Yes, though with caveats. Models like GPT-5.5 and Claude handle German, French, Japanese, and Chinese personas well, but performance varies. Test personas in your target language; some models (e.g., Qwen 2.5) are optimized for specific languages and follow localized personas more reliably.',
           },
           {
             q: 'How do I version and share personas with my team?',

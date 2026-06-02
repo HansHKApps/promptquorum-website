@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-02',
       keywords: ['prompt library', 'prompt management', 'team prompts', 'version control prompts', 'PromptHub', 'prompt governance', 'prompt organization'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'PromptQuorum' },
         { '@type': 'Thing', name: 'Braintrust' },

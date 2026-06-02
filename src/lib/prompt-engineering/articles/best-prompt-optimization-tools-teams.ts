@@ -132,12 +132,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'PromptPerfect: UI-Based Optimization',
         content: [
           '**PromptPerfect is a SaaS prompt optimizer with a visual interface — teams paste a prompt, select a model, and receive optimized variants with quality scores, without writing code.** Designed for non-technical users (content, marketing, product teams) who need prompt improvements without learning DSPy or engineering tools.',
-          'Starter plan $9.99/month; Team plan ~$49.99/month (up to 5 users). Supports GPT-4o, Claude, Gemini, Stable Diffusion. The UI outputs optimized prompts + plain-English explanations of changes. Best for teams where most members are non-engineering. The tradeoff: less control than DSPy; no CI/CD integration; limited to preset optimization strategies.',
+          'Starter plan $9.99/month; Team plan ~$49.99/month (up to 5 users). Supports GPT-5.5, Claude, Gemini, Stable Diffusion. The UI outputs optimized prompts + plain-English explanations of changes. Best for teams where most members are non-engineering. The tradeoff: less control than DSPy; no CI/CD integration; limited to preset optimization strategies.',
         ],
         items: [
           'No-code UI: paste prompt, select model, receive optimized variant',
           'Explanation of changes: plain-English rationale for each optimization',
-          'Multi-model support: GPT-4o, Claude, Gemini, Stable Diffusion',
+          'Multi-model support: GPT-5.5, Claude, Gemini, Stable Diffusion',
         ],
       },
       vellum: {
@@ -183,7 +183,7 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: Multi-Model Dispatch for Comparison',
         content: [
-          '**PromptQuorum dispatches one prompt to 25+ AI models simultaneously and returns side-by-side outputs — the fastest way to compare how a prompt variant performs across GPT-4o, Claude, Gemini, and local LLMs before committing to a model or a version.** Unlike the evaluation tools above (which test one model at a time), PromptQuorum answers "which model handles this prompt best?" in a single run.',
+          '**PromptQuorum dispatches one prompt to 25+ AI models simultaneously and returns side-by-side outputs — the fastest way to compare how a prompt variant performs across GPT-5.5, Claude, Gemini, and local LLMs before committing to a model or a version.** Unlike the evaluation tools above (which test one model at a time), PromptQuorum answers "which model handles this prompt best?" in a single run.',
           'Use PromptQuorum as the first step before routing to Braintrust for deeper evaluation or Vellum for production A/B testing. Free tier available — no engineering setup required. Supports 25+ models including local LLMs via Ollama and LM Studio. Built-in prompt frameworks with template support. Side-by-side response comparison with consensus scoring.',
           'Best for teams evaluating whether to optimize for a specific model provider, or teams that want to benchmark the same prompt across multiple LLM options simultaneously.',
         ],
@@ -310,7 +310,7 @@ tests:
           {
             mistake: 'Using a single model as judge',
             problem:
-              'Evaluating GPT-4o outputs with GPT-4o as the scoring model inflates scores by 10–20% (model-as-judge bias).',
+              'Evaluating GPT-5.5 outputs with GPT-5.5 as the scoring model inflates scores by 10–20% (model-as-judge bias).',
             fix: 'Use a different model for scoring, or use human evaluation for the ground truth.',
           },
           {

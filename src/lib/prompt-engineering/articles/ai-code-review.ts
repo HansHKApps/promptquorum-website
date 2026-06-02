@@ -64,7 +64,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Greptile' },
           { '@type': 'SoftwareApplication', name: 'Snyk Code' },
           { '@type': 'SoftwareApplication', name: 'GitHub Copilot' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
         ],
@@ -138,7 +138,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Which AI model is best for code review?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Claude Opus 4.8 produces the most complete security analysis — identifying SQL injection vectors, missing input sanitisation, and authentication edge cases. GPT-4o produces the most actionable fix suggestions — concrete corrected code rather than descriptions. Gemini 3.1 Pro handles the largest codebases via its 10M-token context window, approximately 300,000 lines of code in a single session. For security reviews, run all three and treat convergent findings as high-confidence issues.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Claude Opus 4.8 produces the most complete security analysis — identifying SQL injection vectors, missing input sanitisation, and authentication edge cases. GPT-5.5 produces the most actionable fix suggestions — concrete corrected code rather than descriptions. Gemini 3.1 Pro handles the largest codebases via its 10M-token context window, approximately 300,000 lines of code in a single session. For security reviews, run all three and treat convergent findings as high-confidence issues.' },
           },
           {
             '@type': 'Question',
@@ -182,7 +182,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Snyk Code scores 92/100 on AI-generated code security detection — the highest benchmark score for AI-generated code vulnerability scanning',
             'AI bug triaging achieves 85–90% severity classification accuracy vs. 60–70% for manual triage, reducing triage time by 65%',
             'EU enterprises must complete a DPIA under GDPR Article 35 before deploying cloud-based AI code review tools that process source code containing personal data',
-            'All three frontier models (GPT-4o, Claude Sonnet 4.6, Gemini 3.1 Pro) now support 1M token context windows (~750,000 lines). For full large-codebase analysis without chunking, LLaMA 4 Scout supports 10M tokens locally.',
+            'All three frontier models (GPT-5.5, Claude Sonnet 4.6, Gemini 3.1 Pro) now support 1M token context windows (~750,000 lines). For full large-codebase analysis without chunking, LLaMA 4 Scout supports 10M tokens locally.',
           ],
         },
 
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           image: '/images/code-review-tool-comparison-en.svg',
-          imageCaption: 'AI code review tools compared: PromptQuorum dispatches to GPT-4o + Claude simultaneously — two models catch different bug classes than any single model alone.',
+          imageCaption: 'AI code review tools compared: PromptQuorum dispatches to GPT-5.5 + Claude simultaneously — two models catch different bug classes than any single model alone.',
         },
 
         signalToNoise: {
@@ -288,7 +288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'How Do You Perform Security-Focused AI Code Review?',
           content: [
             'AI-powered SAST (Static Application Security Testing) tools trained on real-world vulnerability datasets achieve bug detection scores of 84–92 out of 100 on AI-generated code — compared to 65% accuracy for rule-based methods and 94% for transformer-based models in deep learning benchmarks.',
-            'Transformer-based models — the architecture behind GPT-4o, Claude Opus 4.8, and dedicated code security tools — achieve 94% accuracy in bug classification benchmarks, with very low false positive rates. This represents a measurable advance over convolutional neural network (CNN) and recurrent neural network (RNN) approaches at 89%, static analysis at 72%, and rule-based methods at 65%.',
+            'Transformer-based models — the architecture behind GPT-5.5, Claude Opus 4.8, and dedicated code security tools — achieve 94% accuracy in bug classification benchmarks, with very low false positive rates. This represents a measurable advance over convolutional neural network (CNN) and recurrent neural network (RNN) approaches at 89%, static analysis at 72%, and rule-based methods at 65%.',
             'The three security-focused AI code review tools for 2026, benchmarked on AI-generated code:',
           ],
           columns: ['Tool', 'Detection Score (AI code)', 'False Positives', 'Best For'],
@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           columns: ['Model', 'Context Window', 'Lines of Code (approx.)', 'Use Case'],
           rows: [
-            { Model: 'GPT-4o (OpenAI)', 'Context Window': '1M tokens', 'Lines of Code (approx.)': '~750,000 lines', 'Use Case': 'Full-project PR review' },
+            { Model: 'GPT-5.5 (OpenAI)', 'Context Window': '1M tokens', 'Lines of Code (approx.)': '~750,000 lines', 'Use Case': 'Full-project PR review' },
             { Model: 'Claude Sonnet 4.6 (Anthropic)', 'Context Window': '1M tokens', 'Lines of Code (approx.)': '~750,000 lines', 'Use Case': 'Multi-file security review' },
             { Model: 'Gemini 3.1 Pro (Google DeepMind)', 'Context Window': '1M tokens', 'Lines of Code (approx.)': '~750,000 lines', 'Use Case': 'Large codebase analysis' },
             { Model: 'LLaMA 4 Scout (local, Meta)', 'Context Window': '10M tokens', 'Lines of Code (approx.)': '~7,500,000 lines', 'Use Case': 'Largest context, fully private' },
@@ -365,7 +365,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Brief the AI on your codebase architecture, naming conventions, and constraints before asking it to review code.** Provide a short context doc: \'This is a Next.js app. We use TypeScript strict mode, no `any` types, all components must have JSDoc, all API endpoints must have rate limiting.\' Without this, the AI makes generic comments that miss project-specific issues.',
             '**Ask AI to check for specific categories of bugs: security, performance, logic, consistency.** Instead of \'review this code,\' ask: \'Review for security vulnerabilities (inputs, auth, data exposure), then check if this pattern matches our established error handling.\' Specific questions produce more focused, useful feedback.',
             '**Use Chain-of-Thought (CoT) prompting: ask the model to trace execution before producing feedback.** For complex functions, ask \'Trace the execution for input X, then identify any logic errors.\' This makes the AI\'s reasoning transparent and catches subtle bugs humans might miss.',
-            '**Use multi-model code review for high-risk changes (auth, payments, infrastructure).** Run the same code through GPT-4o, Claude Sonnet 4.6, and Gemini 3.1 Pro. When all three flag the same issue, it\'s a strong signal. When only one model catches something, investigate carefully.',
+            '**Use multi-model code review for high-risk changes (auth, payments, infrastructure).** Run the same code through GPT-5.5, Claude Sonnet 4.6, and Gemini 3.1 Pro. When all three flag the same issue, it\'s a strong signal. When only one model catches something, investigate carefully.',
             '**Treat AI as a first-pass filter, not the final arbiter.** AI is excellent at catching obvious bugs (missing returns, type mismatches, SQL injection patterns) but can miss context-specific issues (performance implications, scaling problems, team conventions). Always have a human review AI-based feedback.',
           ],
         },
@@ -425,7 +425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Which AI model is best for code review?',
-              a: 'Claude Sonnet 4.6 produces the most complete security analysis — identifying SQL injection vectors, missing input sanitisation, and authentication edge cases. GPT-4o produces the most actionable fix suggestions — concrete corrected code rather than descriptions. All three frontier models now support 1M token context windows (~750,000 lines of code in a single session). For codebases exceeding this, LLaMA 4 Scout (10M tokens, local) is the only option without chunking. For security reviews, run all three and treat convergent findings as high-confidence issues.',
+              a: 'Claude Sonnet 4.6 produces the most complete security analysis — identifying SQL injection vectors, missing input sanitisation, and authentication edge cases. GPT-5.5 produces the most actionable fix suggestions — concrete corrected code rather than descriptions. All three frontier models now support 1M token context windows (~750,000 lines of code in a single session). For codebases exceeding this, LLaMA 4 Scout (10M tokens, local) is the only option without chunking. For security reviews, run all three and treat convergent findings as high-confidence issues.',
             },
             {
               q: 'How do I reduce false positives in AI code review?',
@@ -583,7 +583,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           columns: ['Modell', 'Context Window', 'Codezeilen (ungefähr)', 'Anwendungsfall'],
           rows: [
-            { Modell: 'GPT-4o (OpenAI)', 'Context Window': '128k tokens', 'Codezeilen (ungefähr)': '~96.000 Zeilen', 'Anwendungsfall': 'Standard PR Review' },
+            { Modell: 'GPT-5.5 (OpenAI)', 'Context Window': '128k tokens', 'Codezeilen (ungefähr)': '~96.000 Zeilen', 'Anwendungsfall': 'Standard PR Review' },
             { Modell: 'Claude Opus 4.8', 'Context Window': '200k tokens', 'Codezeilen (ungefähr)': '~150.000 Zeilen', 'Anwendungsfall': 'Multi-File Refactoring' },
             { Modell: 'Gemini 3.1 Pro', 'Context Window': '10M tokens', 'Codezeilen (ungefähr)': '~300.000 Zeilen', 'Anwendungsfall': 'Große Legacy Codebase' },
           ],
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Instruieren Sie die KI über Ihre Codebase-Architektur, bevor Sie sie um Code Review bitten.** Geben Sie einen kurzen Kontext an.',
             '**Bitten Sie KI, spezifische Kategorien von Bugs zu überprüfen: Sicherheit, Performance, Logik.** Statt "überprüfen Sie diesen Code", fragen Sie "überprüfen Sie auf Sicherheitsschwachstellen".',
             '**Verwenden Sie Chain-of-Thought Prompting: fordern Sie das Modell auf, die Ausführung zu verfolgen.**',
-            '**Verwenden Sie Multi-Model Code Review für hochriskante Änderungen.** Führen Sie den Code durch GPT-4o, Claude Opus 4.8 und Gemini 3.1 Pro aus.',
+            '**Verwenden Sie Multi-Model Code Review für hochriskante Änderungen.** Führen Sie den Code durch GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro aus.',
             '**Behandeln Sie KI als First-Pass-Filter, nicht als endgültigen Schiedsrichter.** KI ist hervorragend bei offensichtlichen Bugs, kann aber kontextabhängige Probleme übersehen.',
           ],
         },
@@ -625,7 +625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Ist KI Code Review GDPR-konform für europäische Teams?', a: 'Nicht automatisch. Das Senden von Quellcode an externe KI APIs erfordert eine Datenschutz-Folgenabschätzung unter GDPR Artikel 35. EU-Teams benötigen Self-Hosted-Bereitstellungen.' },
             { q: 'Verbessert Chain-of-Thought Prompting die Qualität von KI Code Review?', a: 'Ja — für komplexe Logik mit mehreren Conditional Branches deckt Chain-of-Thought Logik-Bugs auf, die Single-Step-Review vermisst.' },
             { q: 'Welcher Prozentsatz der KI Code Review Kommentare ist tatsächlich nützlich?', a: 'In einer achtmonatigen Überprüfung von 1.247 KI-Review-Kommentaren befassten sich nur 14% mit Logik-Bugs und Sicherheitsproblemen — den Problemen, die Production-Vorfälle verursachen.' },
-            { q: 'Welches KI Modell ist am besten für Code Review?', a: 'Claude Opus 4.8 erzeugt die vollständigste Sicherheitsanalyse. GPT-4o erzeugt die actionable Fix-Vorschläge. Gemini 3.1 Pro verarbeitet die größten Codebases.' },
+            { q: 'Welches KI Modell ist am besten für Code Review?', a: 'Claude Opus 4.8 erzeugt die vollständigste Sicherheitsanalyse. GPT-5.5 erzeugt die actionable Fix-Vorschläge. Gemini 3.1 Pro verarbeitet die größten Codebases.' },
             { q: 'Wie reduziere ich False Positives in KI Code Review?', a: 'Drei Techniken: (1) begrenzen Sie den Prompt explizit; (2) fügen Sie eine Rausch-Anweisung hinzu; (3) verwenden Sie Chain-of-Thought für komplexe Funktionen.' },
           ],
         },
@@ -743,7 +743,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Greptile' },
           { '@type': 'SoftwareApplication', name: 'Snyk Code' },
           { '@type': 'SoftwareApplication', name: 'GitHub Copilot' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
         ],
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: '¿Qué modelo de IA es mejor para la revisión de código?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Claude Opus 4.8 produce el análisis de seguridad más completo — identificando vectores de inyección SQL, falta de saneamiento de entradas y casos límite de autenticación. GPT-4o produce las sugerencias de corrección más accionables — código corregido concreto en lugar de descripciones. Para revisiones de seguridad, ejecuta los tres y trata los hallazgos convergentes como problemas de alta confianza.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Claude Opus 4.8 produce el análisis de seguridad más completo — identificando vectores de inyección SQL, falta de saneamiento de entradas y casos límite de autenticación. GPT-5.5 produce las sugerencias de corrección más accionables — código corregido concreto en lugar de descripciones. Para revisiones de seguridad, ejecuta los tres y trata los hallazgos convergentes como problemas de alta confianza.' },
           },
           {
             '@type': 'Question',
@@ -864,7 +864,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Snyk Code puntúa 92/100 en detección de seguridad de código generado por IA — la puntuación de benchmark más alta para escaneo de vulnerabilidades de código generado por IA',
             'El triaje de bugs con IA logra entre el 85 y el 90 % de precisión en clasificación de gravedad vs. el 60–70 % para el triaje manual, reduciendo el tiempo de triaje en un 65 %',
             'Las empresas de la UE deben completar una EIPD bajo el Artículo 35 del RGPD antes de desplegar herramientas de revisión de código con IA en la nube que procesen código fuente con datos personales',
-            'Los tres modelos frontier (GPT-4o, Claude Sonnet 4.6, Gemini 3.1 Pro) admiten ahora ventanas de contexto de 1M de tokens (~750.000 líneas). Para análisis de código base grande sin fragmentación, LLaMA 4 Scout admite 10M de tokens localmente.',
+            'Los tres modelos frontier (GPT-5.5, Claude Sonnet 4.6, Gemini 3.1 Pro) admiten ahora ventanas de contexto de 1M de tokens (~750.000 líneas). Para análisis de código base grande sin fragmentación, LLaMA 4 Scout admite 10M de tokens localmente.',
           ],
         },
 
@@ -894,7 +894,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           tableFormat: true,
           image: '/images/code-review-tool-comparison-es.svg',
-          imageCaption: 'Herramientas de revisión de código con IA comparadas: PromptQuorum despacha a GPT-4o + Claude simultáneamente — dos modelos detectan diferentes clases de bugs que cualquier modelo individual por separado.',
+          imageCaption: 'Herramientas de revisión de código con IA comparadas: PromptQuorum despacha a GPT-5.5 + Claude simultáneamente — dos modelos detectan diferentes clases de bugs que cualquier modelo individual por separado.',
         },
 
         signalToNoise: {
@@ -969,7 +969,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '¿Cómo se realiza una revisión de código con IA enfocada en seguridad?',
           content: [
             'Las herramientas SAST (Static Application Security Testing) impulsadas por IA entrenadas en conjuntos de datos de vulnerabilidades reales logran puntuaciones de detección de bugs de 84–92 sobre 100 en código generado por IA — en comparación con el 65 % de precisión para métodos basados en reglas y el 94 % para modelos basados en transformadores en benchmarks de aprendizaje profundo.',
-            'Los modelos basados en transformadores — la arquitectura detrás de GPT-4o, Claude Opus 4.8 y herramientas de seguridad de código dedicadas — logran el 94 % de precisión en benchmarks de clasificación de bugs, con tasas de falsos positivos muy bajas.',
+            'Los modelos basados en transformadores — la arquitectura detrás de GPT-5.5, Claude Opus 4.8 y herramientas de seguridad de código dedicadas — logran el 94 % de precisión en benchmarks de clasificación de bugs, con tasas de falsos positivos muy bajas.',
             'Las tres herramientas de revisión de código con IA enfocadas en seguridad para 2026, en benchmark de código generado por IA:',
           ],
           columns: ['Herramienta', 'Puntuación de Detección (código IA)', 'Falsos Positivos', 'Mejor Para'],
@@ -1009,7 +1009,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           columns: ['Modelo', 'Ventana de Contexto', 'Líneas de Código (aprox.)', 'Caso de Uso'],
           rows: [
-            { 'Modelo': 'GPT-4o (OpenAI)', 'Ventana de Contexto': '1M tokens', 'Líneas de Código (aprox.)': '~750.000 líneas', 'Caso de Uso': 'Revisión de PR de proyecto completo' },
+            { 'Modelo': 'GPT-5.5 (OpenAI)', 'Ventana de Contexto': '1M tokens', 'Líneas de Código (aprox.)': '~750.000 líneas', 'Caso de Uso': 'Revisión de PR de proyecto completo' },
             { 'Modelo': 'Claude Sonnet 4.6 (Anthropic)', 'Ventana de Contexto': '1M tokens', 'Líneas de Código (aprox.)': '~750.000 líneas', 'Caso de Uso': 'Revisión de seguridad multi-archivo' },
             { 'Modelo': 'Gemini 3.1 Pro (Google DeepMind)', 'Ventana de Contexto': '1M tokens', 'Líneas de Código (aprox.)': '~750.000 líneas', 'Caso de Uso': 'Análisis de código base grande' },
             { 'Modelo': 'LLaMA 4 Scout (local, Meta)', 'Ventana de Contexto': '10M tokens', 'Líneas de Código (aprox.)': '~7.500.000 líneas', 'Caso de Uso': 'Mayor contexto, totalmente privado' },
@@ -1046,7 +1046,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Informa a la IA sobre la arquitectura de tu código base, convenciones de nombres y restricciones antes de pedirle que revise código.** Proporciona un documento de contexto breve: "Esta es una app Next.js. Usamos TypeScript en modo estricto, sin tipos `any`, todos los componentes deben tener JSDoc, todos los endpoints API deben tener limitación de tasa." Sin esto, la IA hace comentarios genéricos que pierden problemas específicos del proyecto.',
             '**Pide a la IA que verifique categorías específicas de bugs: seguridad, rendimiento, lógica, consistencia.** En lugar de "revisa este código", pide: "Revisa para vulnerabilidades de seguridad (entradas, autenticación, exposición de datos), luego verifica si este patrón coincide con nuestro manejo de errores establecido." Las preguntas específicas producen retroalimentación más enfocada y útil.',
             '**Usa el prompting Chain-of-Thought (CoT): pide al modelo que trace la ejecución antes de producir retroalimentación.** Para funciones complejas, pide "Traza la ejecución para la entrada X, luego identifica cualquier error de lógica." Esto hace el razonamiento de la IA transparente y detecta bugs sutiles que los humanos podrían pasar por alto.',
-            '**Usa revisión de código multi-modelo para cambios de alto riesgo (autenticación, pagos, infraestructura).** Ejecuta el mismo código por GPT-4o, Claude Sonnet 4.6 y Gemini 3.1 Pro. Cuando los tres señalan el mismo problema, es una señal sólida. Cuando solo un modelo detecta algo, investiga cuidadosamente.',
+            '**Usa revisión de código multi-modelo para cambios de alto riesgo (autenticación, pagos, infraestructura).** Ejecuta el mismo código por GPT-5.5, Claude Sonnet 4.6 y Gemini 3.1 Pro. Cuando los tres señalan el mismo problema, es una señal sólida. Cuando solo un modelo detecta algo, investiga cuidadosamente.',
             '**Trata la IA como filtro de primera pasada, no como árbitro final.** La IA es excelente para detectar bugs obvios (returns faltantes, desajustes de tipo, patrones de inyección SQL) pero puede perder problemas específicos del contexto (implicaciones de rendimiento, problemas de escala, convenciones del equipo). Siempre ten una revisión humana de la retroalimentación basada en IA.',
           ],
         },
@@ -1106,7 +1106,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Qué modelo de IA es mejor para la revisión de código?',
-              a: 'Claude Sonnet 4.6 produce el análisis de seguridad más completo — identificando vectores de inyección SQL, falta de saneamiento de entradas y casos límite de autenticación. GPT-4o produce las sugerencias de corrección más accionables — código corregido concreto en lugar de descripciones. Los tres modelos frontier admiten ahora ventanas de contexto de 1M de tokens (~750.000 líneas de código en una sola sesión). Para revisiones de seguridad, ejecuta los tres y trata los hallazgos convergentes como problemas de alta confianza.',
+              a: 'Claude Sonnet 4.6 produce el análisis de seguridad más completo — identificando vectores de inyección SQL, falta de saneamiento de entradas y casos límite de autenticación. GPT-5.5 produce las sugerencias de corrección más accionables — código corregido concreto en lugar de descripciones. Los tres modelos frontier admiten ahora ventanas de contexto de 1M de tokens (~750.000 líneas de código en una sola sesión). Para revisiones de seguridad, ejecuta los tres y trata los hallazgos convergentes como problemas de alta confianza.',
             },
             {
               q: '¿Cómo reduzco los falsos positivos en la revisión de código con IA?',
@@ -1264,7 +1264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           columns: ['Modèle', 'Context Window', 'Lignes de Code (Approx.)', 'Cas d\'Usage'],
           rows: [
-            { Modèle: 'GPT-4o (OpenAI)', 'Context Window': '128k tokens', 'Lignes de Code (Approx.)': '~96 000 lignes', 'Cas d\'Usage': 'Révision PR Standard' },
+            { Modèle: 'GPT-5.5 (OpenAI)', 'Context Window': '128k tokens', 'Lignes de Code (Approx.)': '~96 000 lignes', 'Cas d\'Usage': 'Révision PR Standard' },
             { Modèle: 'Claude Opus 4.8', 'Context Window': '200k tokens', 'Lignes de Code (Approx.)': '~150 000 lignes', 'Cas d\'Usage': 'Refactorisation Multi-Fichier' },
             { Modèle: 'Gemini 3.1 Pro', 'Context Window': '10M tokens', 'Lignes de Code (Approx.)': '~300 000 lignes', 'Cas d\'Usage': 'Grande Base de Code Legacy' },
           ],
@@ -1293,7 +1293,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Instruisez l\'IA sur l\'architecture de votre base de code avant de lui demander une révision de code.** Fournissez un contexte bref.',
             '**Demandez à l\'IA de vérifier les catégories spécifiques de bugs : sécurité, performance, logique.** Au lieu de "examinez ce code", demandez "vérifiez les failles de sécurité".',
             '**Utilisez le prompting Chain-of-Thought : demandez au modèle de tracer l\'exécution.**',
-            '**Utilisez la révision de code multi-modèle pour les changements à haut risque.** Exécutez le code via GPT-4o, Claude Opus 4.8 et Gemini 3.1 Pro.',
+            '**Utilisez la révision de code multi-modèle pour les changements à haut risque.** Exécutez le code via GPT-5.5, Claude Opus 4.8 et Gemini 3.1 Pro.',
             '**Traitez l\'IA comme un filtre de première passe, pas comme un arbitre final.** L\'IA excelle sur les bugs évidents, mais peut manquer les problèmes contextuels.',
           ],
         },
@@ -1306,7 +1306,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'La révision de code par IA est-elle conforme au RGPD pour les équipes européennes ?', a: 'Pas automatiquement. L\'envoi de code source à des APIs IA externes nécessite une évaluation d\'impact relative à la protection des données en vertu de l\'article 35 du RGPD. Les équipes de l\'UE ont besoin de déploiements auto-hébergés.' },
             { q: 'Le prompting Chain-of-Thought améliore-t-il la qualité de la révision de code par IA ?', a: 'Oui — pour la logique complexe avec plusieurs branches conditionnelles, Chain-of-Thought découvre les bugs de logique que la révision en une étape manque.' },
             { q: 'Quel pourcentage des commentaires de révision de code par IA est réellement utile ?', a: 'Dans un examen de huit mois de 1 247 commentaires de révision par IA, seulement 14% concernaient les bugs de logique et les problèmes de sécurité — les problèmes qui causent les incidents en production.' },
-            { q: 'Quel modèle IA est le meilleur pour la révision de code ?', a: 'Claude Opus 4.8 produit l\'analyse de sécurité la plus complète. GPT-4o produit les suggestions de correctifs les plus exploitables. Gemini 3.1 Pro traite les plus grandes bases de code.' },
+            { q: 'Quel modèle IA est le meilleur pour la révision de code ?', a: 'Claude Opus 4.8 produit l\'analyse de sécurité la plus complète. GPT-5.5 produit les suggestions de correctifs les plus exploitables. Gemini 3.1 Pro traite les plus grandes bases de code.' },
             { q: 'Comment réduire les faux positifs dans la révision de code par IA ?', a: 'Trois techniques : (1) limitez explicitement le prompt ; (2) ajoutez une instruction anti-bruit ; (3) utilisez Chain-of-Thought pour les fonctions complexes.' },
           ],
         },
@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           columns: ['モデル', 'コンテキストウィンドウ', 'コード行（概算）', 'ユースケース'],
           rows: [
-            { モデル: 'GPT-4o (OpenAI)', 'コンテキストウィンドウ': '128k tokens', 'コード行（概算）': '~96,000 行', 'ユースケース': '標準PR レビュー' },
+            { モデル: 'GPT-5.5 (OpenAI)', 'コンテキストウィンドウ': '128k tokens', 'コード行（概算）': '~96,000 行', 'ユースケース': '標準PR レビュー' },
             { モデル: 'Claude Opus 4.8', 'コンテキストウィンドウ': '200k tokens', 'コード行（概算）': '~150,000 行', 'ユースケース': 'マルチファイルリファクタリング' },
             { モデル: 'Gemini 3.1 Pro', 'コンテキストウィンドウ': '10M tokens', 'コード行（概算）': '~300,000 行', 'ユースケース': '大規模レガシーコードベース' },
           ],
@@ -1519,7 +1519,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**コードレビューを依頼する前に AI にコードベースアーキテクチャについて説明します。** 簡潔なコンテキストを提供します。',
             '**AI に特定のバグカテゴリを確認するよう依頼：セキュリティ、パフォーマンス、ロジック。** 「このコードを確認してください」ではなく「セキュリティ脆弱性を確認してください」と尋ねます。',
             '**Chain-of-Thought プロンプティングを使用：モデルに実行をトレースするよう指示します。**',
-            '**高リスク変更にはマルチモデルコードレビューを使用します。** GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro 経由でコードを実行します。',
+            '**高リスク変更にはマルチモデルコードレビューを使用します。** GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro 経由でコードを実行します。',
             '**AI を最終仲裁者ではなくファーストパスフィルターとして扱います。** AI は明らかなバグに優れていますが、コンテキスト依存の問題を見落とす可能性があります。',
           ],
         },
@@ -1532,7 +1532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'AI コードレビューはEU チーム向けに GDPR 準拠ですか？', a: '自動的ではありません。ソースコードを外部AI API に送信する場合、GDPR 第35条に基づくデータ保護影響評価が必要。EU チームはセルフホスティングデプロイメントが必要。' },
             { q: 'Chain-of-Thought プロンプティングはAI コードレビュー品質を改善しますか？', a: 'はい——複数の条件ブランチを持つ複雑なロジックについて、Chain-of-Thought はワンステップレビューが見落とすロジックバグを発見。' },
             { q: 'AI コードレビューコメントのうちどのくらいの割合が実際に有用ですか？', a: '1,247件の AI レビューコメントの8ヶ月間のレビューで、わずか14%がロジックバグとセキュリティ問題に関するもの——本番インシデントを引き起こす問題。' },
-            { q: 'コードレビューに最適なAI モデルはどれですか？', a: 'Claude Opus 4.8 は最も完全なセキュリティ分析を生成。GPT-4o は最も実行可能なフィックス提案を生成。Gemini 3.1 Pro は最大のコードベースを処理。' },
+            { q: 'コードレビューに最適なAI モデルはどれですか？', a: 'Claude Opus 4.8 は最も完全なセキュリティ分析を生成。GPT-5.5 は最も実行可能なフィックス提案を生成。Gemini 3.1 Pro は最大のコードベースを処理。' },
             { q: 'AI コードレビューの誤検知をどのように削減しますか？', a: '3つのテクニック：(1) プロンプトを明示的に制限；(2) ノイズ除外指示を追加；(3) 複雑な関数に Chain-of-Thought を使用。' },
           ],
         },
@@ -1716,7 +1716,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           columns: ['模型', '上下文窗口', '代码行（约）', '用例'],
           rows: [
-            { 模型: 'GPT-4o (OpenAI)', '上下文窗口': '128k tokens', '代码行（约）': '~96,000 行', '用例': '标准 PR 审查' },
+            { 模型: 'GPT-5.5 (OpenAI)', '上下文窗口': '128k tokens', '代码行（约）': '~96,000 行', '用例': '标准 PR 审查' },
             { 模型: 'Claude Opus 4.8', '上下文窗口': '200k tokens', '代码行（约）': '~150,000 行', '用例': '多文件重构' },
             { 模型: 'Gemini 3.1 Pro', '上下文窗口': '10M tokens', '代码行（约）': '~300,000 行', '用例': '大型遗留代码库' },
           ],
@@ -1745,7 +1745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**在要求 AI 进行代码审查之前，先教 AI 了解你的代码库架构。** 提供简明的上下文。',
             '**要求 AI 检查特定的错误类别：安全、性能、逻辑。** 不要说"审查这个代码"，而是说"检查安全漏洞"。',
             '**使用思维链提示：指示模型追踪执行。**',
-            '**对高风险更改使用多模型代码审查。** 通过 GPT-4o、Claude Opus 4.8 和 Gemini 3.1 Pro 运行代码。',
+            '**对高风险更改使用多模型代码审查。** 通过 GPT-5.5、Claude Opus 4.8 和 Gemini 3.1 Pro 运行代码。',
             '**将 AI 视为第一通道过滤器，而不是最终仲裁者。** AI 擅长明显的错误，但可能会遗漏上下文相关的问题。',
           ],
         },
@@ -1758,7 +1758,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '对欧盟团队来说 AI 代码审查符合 GDPR 吗？', a: '不是自动的。将源代码发送到外部 AI API 需要根据 GDPR 第 35 条进行数据保护影响评估。欧盟团队需要自托管部署。' },
             { q: '思维链提示是否改进 AI 代码审查质量？', a: '是的——对于具有多个条件分支的复杂逻辑，思维链会发现单步审查遗漏的逻辑错误。' },
             { q: 'AI 代码审查评论中有多少百分比实际有用？', a: '在对 1,247 条 AI 审查评论的 8 个月审查中，仅 14% 涉及逻辑错误和安全问题——导致生产事件的问题。' },
-            { q: '哪个 AI 模型最适合代码审查？', a: 'Claude Opus 4.8 生成最完整的安全分析。GPT-4o 生成最可执行的修复建议。Gemini 3.1 Pro 处理最大的代码库。' },
+            { q: '哪个 AI 模型最适合代码审查？', a: 'Claude Opus 4.8 生成最完整的安全分析。GPT-5.5 生成最可执行的修复建议。Gemini 3.1 Pro 处理最大的代码库。' },
             { q: '如何减少 AI 代码审查中的误报？', a: '三种技术：(1) 明确限制提示；(2) 添加噪声排除指令；(3) 对复杂函数使用思维链。' },
           ],
         },

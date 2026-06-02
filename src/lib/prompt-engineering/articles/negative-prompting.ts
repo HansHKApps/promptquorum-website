@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Not testing constraints across models',
-              problem: 'GPT-4o, Claude, and Gemini have different compliance sensitivities. A constraint that works perfectly on one may be ignored or over-applied on another.',
+              problem: 'GPT-5.5, Claude, and Gemini have different compliance sensitivities. A constraint that works perfectly on one may be ignored or over-applied on another.',
               fix: 'Test your negative prompts on all target models. Document compliance differences. Adjust constraints for each model if needed.',
             },
           ],
@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Does negative prompting work with all AI models?',
-              a: 'Yes — GPT-4o, Claude Opus/Sonnet, and Gemini Pro all respond to hard negative constraints ("must not," "never," "do not"). Compliance varies: format bans are sometimes inconsistently applied on long outputs. Test your specific constraints with your target models.',
+              a: 'Yes — GPT-5.5, Claude Opus/Sonnet, and Gemini Pro all respond to hard negative constraints ("must not," "never," "do not"). Compliance varies: format bans are sometimes inconsistently applied on long outputs. Test your specific constraints with your target models.',
             },
             {
               q: 'How many negative constraints should I use?',
@@ -444,7 +444,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     inLanguage: 'de',
     mainEntity: [
       { '@type': 'Question', name: 'Was ist Negatives Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Negatives Prompting bedeutet, explizite „Nicht-Tun"-Regeln zu Ihren Prompts hinzuzufügen, parallel zu dem, was Sie vom Modell erwarten. Diese Regeln beschränken Inhalte (keine medizinischen Ratschläge), Ton (keine Hype-Begriffe), Struktur (keine nummerierten Listen) oder Verhalten (nie erfundene Statistiken). Jede Regel wirkt als Schutzschicht gegen bekannte Fehler.' } },
-      { '@type': 'Question', name: 'Funktioniert Negatives Prompting mit allen KI-Modellen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. GPT-4o/4.5, Claude Sonnet/Opus und Gemini Pro reagieren auf harte Negative („darf nicht", „niemals", „nicht"). Die Einhaltung variiert nach Modell und Constraint-Typ: Formatverbote werden manchmal bei langen Outputs von Gemini Pro inkonsistent angewendet. Testen Sie Ihre spezifischen Constraints mit Ihrer aktuellen Modellversion.' } },
+      { '@type': 'Question', name: 'Funktioniert Negatives Prompting mit allen KI-Modellen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. GPT-5.5/4.5, Claude Sonnet/Opus und Gemini Pro reagieren auf harte Negative („darf nicht", „niemals", „nicht"). Die Einhaltung variiert nach Modell und Constraint-Typ: Formatverbote werden manchmal bei langen Outputs von Gemini Pro inkonsistent angewendet. Testen Sie Ihre spezifischen Constraints mit Ihrer aktuellen Modellversion.' } },
       { '@type': 'Question', name: 'Wie viele negative Constraints sollte ich verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Begrenzen Sie sich auf 3–5 pro Prompt. Mehr als 5–6 Negative können Modelle verwirren, was zu ignorierten Regeln oder zögerlichen Outputs führt. Gruppieren Sie verwandte Regeln: „Verwenden Sie keine Hype-Wörter (revolutionär, disruptiv, bahnbrechend)" zählt als eine Einschränkung.' } },
       { '@type': 'Question', name: 'Ist Negatives Prompting dasselbe wie Content Filtering?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Content Filtering ist eine externe Sicherheitsebene, die bestimmte Outputs unabhängig von Prompts blockiert. Negatives Prompting ist eine In-Prompt-Technik, die die Generierung formt. Sie ergänzen sich: Filter handhaben Sicherheitsverstöße; Negatives Prompting handhabe Marke, Ton und domänenspezifische Grenzen.' } },
       { '@type': 'Question', name: 'Kann ich Negatives Prompting für kreative Aufgaben verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Für kreative Arbeiten verhindert Negatives Prompting generische Phrasen („keine Klischees"), begrenzt Strukturwahl („keine Drei-Akt-Struktur") oder schließt spezifische Referenzen aus („keine Kriegsmetaphern"). Wenden Sie dieselbe 3–5-Regel an — zu viele Negative schränken die kreative Reichweite ein.' } },
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           mistake: 'No probar las constraints entre modelos',
-          problem: 'GPT-4o, Claude y Gemini tienen diferentes sensibilidades de cumplimiento. Una constraint que funciona perfectamente en uno puede ignorarse o sobre-aplicarse en otro.',
+          problem: 'GPT-5.5, Claude y Gemini tienen diferentes sensibilidades de cumplimiento. Una constraint que funciona perfectamente en uno puede ignorarse o sobre-aplicarse en otro.',
           fix: 'Prueba tus prompts negativos en todos los modelos objetivo. Documenta las diferencias de cumplimiento. Ajusta las constraints para cada modelo si es necesario.',
         },
       ],
@@ -688,7 +688,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: '¿Funciona el negative prompting con todos los modelos de IA?',
-          a: 'Sí — GPT-4o, Claude Opus/Sonnet y Gemini Pro todos responden a las constraints negativas duras ("no debe", "nunca", "no"). El cumplimiento varía: las prohibiciones de formato a veces se aplican de forma inconsistente en las salidas largas. Prueba tus constraints específicas con tus modelos objetivo.',
+          a: 'Sí — GPT-5.5, Claude Opus/Sonnet y Gemini Pro todos responden a las constraints negativas duras ("no debe", "nunca", "no"). El cumplimiento varía: las prohibiciones de formato a veces se aplican de forma inconsistente en las salidas largas. Prueba tus constraints específicas con tus modelos objetivo.',
         },
         {
           q: '¿Cuántas constraints negativas debo usar?',
@@ -746,7 +746,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     inLanguage: 'es',
     mainEntity: [
       { '@type': 'Question', name: '¿Qué es el negative prompting?', acceptedAnswer: { '@type': 'Answer', text: 'El negative prompting significa añadir reglas explícitas de "no hacer" a tus prompts junto con lo que quieres que haga el modelo. Estas reglas restringen el contenido (sin consejos médicos), el estilo (sin palabras de hype), la estructura (sin introducción) o el comportamiento (nunca fabricar datos). Cada regla actúa como un guardrail que previene modos de fallo conocidos.' } },
-      { '@type': 'Question', name: '¿Funciona el negative prompting con todos los modelos de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. GPT-4o, Claude Opus/Sonnet y Gemini Pro todos responden a las constraints negativas duras ("no debe", "nunca", "no"). El cumplimiento varía por tipo de constraint. Prueba tus constraints específicas con tus modelos objetivo.' } },
+      { '@type': 'Question', name: '¿Funciona el negative prompting con todos los modelos de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. GPT-5.5, Claude Opus/Sonnet y Gemini Pro todos responden a las constraints negativas duras ("no debe", "nunca", "no"). El cumplimiento varía por tipo de constraint. Prueba tus constraints específicas con tus modelos objetivo.' } },
       { '@type': 'Question', name: '¿Cuántas constraints negativas debo usar?', acceptedAnswer: { '@type': 'Answer', text: 'Limita a 3-5 por prompt. Más de 5-6 puede confundir a los modelos. Agrupa reglas relacionadas: "Nunca uses palabras de hype (disruptivo, revolucionario, que cambia el juego)" cuenta como una constraint.' } },
       { '@type': 'Question', name: '¿El negative prompting es lo mismo que el filtrado de contenido?', acceptedAnswer: { '@type': 'Answer', text: 'No. El filtrado de contenido detecta y bloquea las salidas no deseadas después de la generación. El negative prompting previene las salidas no deseadas durante la generación. El filtrado ocurre downstream; el negative prompting previene el problema antes de que empiece.' } },
       { '@type': 'Question', name: '¿Puedo usar el negative prompting para el cumplimiento regulatorio?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Incrustar las constraints de cumplimiento como reglas negativas crea una trazabilidad: cada salida fue procesada a través de los mismos guardrails. Pero el negative prompting por sí solo no reemplaza la revisión legal ni los Acuerdos de Procesamiento de Datos.' } },
@@ -918,29 +918,29 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Conformité des Modèles aux Contraintes Négatives',
       content: ['**La conformité aux contraintes négatives varie selon le modèle et le type de contrainte.** Vérifiez vos contraintes spécifiques avec votre version de modèle actuelle — le comportement change entre les versions.'],
       tableFormat: true,
-      columns: ['Type de Contrainte', 'GPT-4o / GPT-4.5', 'Claude Sonnet / Opus', 'Gemini Pro'],
+      columns: ['Type de Contrainte', 'GPT-5.5 / GPT-4.5', 'Claude Sonnet / Opus', 'Gemini Pro'],
       rows: [
         {
           'Type de Contrainte': 'Mots interdits',
-          'GPT-4o / GPT-4.5': 'Haute conformité',
+          'GPT-5.5 / GPT-4.5': 'Haute conformité',
           'Claude Sonnet / Opus': 'Haute conformité',
           'Gemini Pro': 'Haute conformité',
         },
         {
           'Type de Contrainte': 'Interdictions de format (« pas de listes à puces »)',
-          'GPT-4o / GPT-4.5': 'Haute conformité',
+          'GPT-5.5 / GPT-4.5': 'Haute conformité',
           'Claude Sonnet / Opus': 'Haute conformité',
           'Gemini Pro': 'Modérée — parfois contourne sur les longs résultats',
         },
         {
           'Type de Contrainte': 'Interdictions de contenu (« pas de conseils médicaux »)',
-          'GPT-4o / GPT-4.5': 'Haute conformité (ajoute des couches de sécurité par défaut)',
+          'GPT-5.5 / GPT-4.5': 'Haute conformité (ajoute des couches de sécurité par défaut)',
           'Claude Sonnet / Opus': 'Haute conformité',
           'Gemini Pro': 'Haute conformité',
         },
         {
           'Type de Contrainte': 'Contraintes comportementales (« jamais fabriquer »)',
-          'GPT-4o / GPT-4.5': 'Modérée — utiliser avec vérification de résultat',
+          'GPT-5.5 / GPT-4.5': 'Modérée — utiliser avec vérification de résultat',
           'Claude Sonnet / Opus': 'Haute conformité — répond bien aux contraintes explicites',
           'Gemini Pro': 'Modérée — vérifier sur tâches critiques',
         },
@@ -1014,7 +1014,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Le guidage négatif fonctionne-t-il avec tous les modèles IA ?',
-          a: 'Oui — GPT-4o/4.5, Claude Sonnet/Opus, et Gemini Pro répondent tous aux contraintes négatives dures (« ne doit pas », « jamais », « ne pas »). La conformité varie selon le type de contrainte : les interdictions de format sont parfois appliquées de manière inconsistante sur les résultats longs dans Gemini Pro. Testez vos contraintes avec votre version de modèle spécifique.',
+          a: 'Oui — GPT-5.5/4.5, Claude Sonnet/Opus, et Gemini Pro répondent tous aux contraintes négatives dures (« ne doit pas », « jamais », « ne pas »). La conformité varie selon le type de contrainte : les interdictions de format sont parfois appliquées de manière inconsistante sur les résultats longs dans Gemini Pro. Testez vos contraintes avec votre version de modèle spécifique.',
         },
         {
           q: 'Combien de contraintes négatives dois-je utiliser ?',
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     inLanguage: 'fr',
     mainEntity: [
       { '@type': 'Question', name: 'Qu\'est-ce que le guidage négatif ?', acceptedAnswer: { '@type': 'Answer', text: 'Le guidage négatif consiste à ajouter des règles explicites « ne pas faire » à une invite aux côtés d\'instructions positives. Ces règles contraignent le contenu (pas de conseils médicaux), la tonalité (pas de mots hyperboliques), la structure (pas de listes à puces), ou le comportement (jamais fabriquer des données). Chaque règle agit comme un garde-fou qui prévient les modes de défaillance connus.' } },
-      { '@type': 'Question', name: 'Le guidage négatif fonctionne-t-il avec tous les modèles IA ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — GPT-4o/4.5, Claude Sonnet/Opus, et Gemini Pro répondent tous aux contraintes négatives dures (« ne doit pas », « jamais », « ne pas »). La conformité varie selon le type de contrainte : les interdictions de format sont parfois appliquées de manière inconsistante sur les résultats longs dans Gemini Pro. Testez vos contraintes avec votre version de modèle spécifique.' } },
+      { '@type': 'Question', name: 'Le guidage négatif fonctionne-t-il avec tous les modèles IA ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — GPT-5.5/4.5, Claude Sonnet/Opus, et Gemini Pro répondent tous aux contraintes négatives dures (« ne doit pas », « jamais », « ne pas »). La conformité varie selon le type de contrainte : les interdictions de format sont parfois appliquées de manière inconsistante sur les résultats longs dans Gemini Pro. Testez vos contraintes avec votre version de modèle spécifique.' } },
       { '@type': 'Question', name: 'Combien de contraintes négatives dois-je utiliser ?', acceptedAnswer: { '@type': 'Answer', text: 'Limitez-vous à 3–5 par prompt. Plus de 5–6 règles négatives peuvent confondre les modèles, causant des règles ignorées ou une résultat trop prudent. Groupez les règles connexes : « Ne pas utiliser les mots hyperboliques (révolutionnaire, disruptif, game-changing) » compte comme une contrainte.' } },
       { '@type': 'Question', name: 'Le guidage négatif est-il la même chose que le filtrage de contenu ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Le filtrage de contenu est une couche de sécurité externe qui bloque les résultats spécifiques indépendamment des instructions du prompt. Le guidage négatif est une technique in-prompt qui façonne la génération. Ils se complètent : les filtres de contenu gèrent les violations de sécurité ; le guidage négatif gère la marque, la tonalité, et les contraintes spécifiques au domaine.' } },
       { '@type': 'Question', name: 'Puis-je utiliser le guidage négatif pour les tâches créatives ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Pour le travail créatif, le guidage négatif prévient le phrasé générique (« pas de clichés »), limite les choix structurels (« pas de structure en trois actes »), ou exclut les références spécifiques (« pas de métaphores de guerre »). Appliquez la même règle 3–5 — trop de négatifs étouffent la plage créative.' } },
@@ -1264,29 +1264,29 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'ネガティブ制約へのモデル別対応',
       content: ['**ネガティブ制約への対応はモデルと制約タイプによって異なります。** 現在のモデルバージョンで特定の制約を確認してください。バージョン間でビヘイビアが変わります。'],
       tableFormat: true,
-      columns: ['制約タイプ', 'GPT-4o / GPT-4.5', 'Claude Sonnet / Opus', 'Gemini Pro'],
+      columns: ['制約タイプ', 'GPT-5.5 / GPT-4.5', 'Claude Sonnet / Opus', 'Gemini Pro'],
       rows: [
         {
           '制約タイプ': '禁止ワード',
-          'GPT-4o / GPT-4.5': '高い対応',
+          'GPT-5.5 / GPT-4.5': '高い対応',
           'Claude Sonnet / Opus': '高い対応',
           'Gemini Pro': '高い対応',
         },
         {
           '制約タイプ': 'フォーマット禁止（「箇条書きなし」）',
-          'GPT-4o / GPT-4.5': '高い対応',
+          'GPT-5.5 / GPT-4.5': '高い対応',
           'Claude Sonnet / Opus': '高い対応',
           'Gemini Pro': '中程度—長い出力で時々無視',
         },
         {
           '制約タイプ': 'コンテンツ禁止（「医学的助言なし」）',
-          'GPT-4o / GPT-4.5': '高い対応（デフォルト安全層を追加）',
+          'GPT-5.5 / GPT-4.5': '高い対応（デフォルト安全層を追加）',
           'Claude Sonnet / Opus': '高い対応',
           'Gemini Pro': '高い対応',
         },
         {
           '制約タイプ': '振る舞い制約（「絶対に作らない」）',
-          'GPT-4o / GPT-4.5': '中程度—出力確認と共に使用',
+          'GPT-5.5 / GPT-4.5': '中程度—出力確認と共に使用',
           'Claude Sonnet / Opus': '高い対応—明示的制約によく対応',
           'Gemini Pro': '中程度—重要なタスクで確認',
         },
@@ -1360,7 +1360,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'ネガティブプロンプティングはすべてのAIモデルで機能しますか?',
-          a: 'はい。GPT-4o/4.5、Claude Sonnet/Opus、Gemini Proはすべてハードなネガティブ制約（「してはいけません」「絶対にしない」「してはいけない」）に対応します。対応はモデルと制約タイプによって異なります。フォーマット禁止は時々Gemini Proの長い出力で矛盾して適用されます。現在のモデルバージョンで特定の制約をテストしてください。',
+          a: 'はい。GPT-5.5/4.5、Claude Sonnet/Opus、Gemini Proはすべてハードなネガティブ制約（「してはいけません」「絶対にしない」「してはいけない」）に対応します。対応はモデルと制約タイプによって異なります。フォーマット禁止は時々Gemini Proの長い出力で矛盾して適用されます。現在のモデルバージョンで特定の制約をテストしてください。',
         },
         {
           q: 'いくつのネガティブ制約を使用すべきですか?',
@@ -1434,7 +1434,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     inLanguage: 'ja',
     mainEntity: [
       { '@type': 'Question', name: 'ネガティブプロンプティングとは何ですか?', acceptedAnswer: { '@type': 'Answer', text: 'ネガティブプロンプティングは、プロンプトに明示的な「してはいけないこと」ルールをポジティブガイダンスと共に追加することです。これらのルールはコンテンツ（医学的助言なし）、トーン（大げさな言葉なし）、構造（箇条書きなし）、または振る舞い（データを作らない）を制約します。各ルールは既知の障害モードを防ぐ保護柵として機能します。' } },
-      { '@type': 'Question', name: 'ネガティブプロンプティングはすべてのAIモデルで機能しますか?', acceptedAnswer: { '@type': 'Answer', text: 'はい。GPT-4o/4.5、Claude Sonnet/Opus、Gemini Proはすべてハードなネガティブ制約（「してはいけません」「絶対にしない」「してはいけない」）に対応します。対応はモデルと制約タイプによって異なります。フォーマット禁止は時々Gemini Proの長い出力で矛盾して適用されます。現在のモデルバージョンで特定の制約をテストしてください。' } },
+      { '@type': 'Question', name: 'ネガティブプロンプティングはすべてのAIモデルで機能しますか?', acceptedAnswer: { '@type': 'Answer', text: 'はい。GPT-5.5/4.5、Claude Sonnet/Opus、Gemini Proはすべてハードなネガティブ制約（「してはいけません」「絶対にしない」「してはいけない」）に対応します。対応はモデルと制約タイプによって異なります。フォーマット禁止は時々Gemini Proの長い出力で矛盾して適用されます。現在のモデルバージョンで特定の制約をテストしてください。' } },
       { '@type': 'Question', name: 'いくつのネガティブ制約を使用すべきですか?', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトあたり3～5個に制限してください。5～6個以上のネガティブルールはモデルを混乱させ、ルールが無視されるか、出力が慎重になりすぎます。関連ルールをグループ化します：「大げさな言葉（革新的、破壊的、ゲームチェンジング）を使わない」は1つの制約です。' } },
       { '@type': 'Question', name: 'ネガティブプロンプティングはコンテンツフィルタリングと同じですか?', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。コンテンツフィルタリングはプロンプト指示に関係なく特定の出力をブロックする外部安全層です。ネガティブプロンプティングはイン・プロンプト技術で生成を形作ります。相互補完的です：コンテンツフィルタは安全違反を処理します。ネガティブプロンプティングはブランド、トーン、ドメイン固有制約を処理します。' } },
       { '@type': 'Question', name: 'クリエイティブタスクにネガティブプロンプティングを使用できますか?', acceptedAnswer: { '@type': 'Answer', text: 'はい。クリエイティブ作業の場合、ネガティブプロンプティングは一般的なフレーズ（「クリシェなし」）、構造的選択（「3幕構成なし」）、または特定の参照（「戦争のメタファーなし」）を防ぎます。同じ3～5ルールを適用してください。ネガティブが多すぎるとクリエイティブの範囲が制限されます。' } },
@@ -1468,7 +1468,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-04',
       readTime: '阅读约13分钟',
       next_refresh_due: '2026-11-03',
-      metaDescription: '消极提示法完整指南：为禁用词、禁止话题和格式限制添加"不要"规则。4类约束模型，含GPT-4o、Claude、Gemini合规对比。',
+      metaDescription: '消极提示法完整指南：为禁用词、禁止话题和格式限制添加"不要"规则。4类约束模型，含GPT-5.5、Claude、Gemini合规对比。',
       primaryTerm: '消极提示法',
       seoTitle: '消极提示法完全指南：用4类禁止规则控制AI输出',
       educationalLevel: 'Intermediate',

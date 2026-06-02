@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
         { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       ],
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsSPECS: {
         title: 'What the SPECS Framework Is',
         content: [
-          '**The SPECS Framework is a specification-first prompt pattern that treats every prompt like a mini requirements document instead of a casual chat message.** It is designed for tasks where accuracy, structure, and repeatability matter more than open-ended creativity. SPECS works well with models such as GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and local models, because it removes ambiguity from your instructions.',
+          '**The SPECS Framework is a specification-first prompt pattern that treats every prompt like a mini requirements document instead of a casual chat message.** It is designed for tasks where accuracy, structure, and repeatability matter more than open-ended creativity. SPECS works well with models such as GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and local models, because it removes ambiguity from your instructions.',
           'SPECS is especially useful when different people or systems must run the same prompt and get consistent results. By turning the prompt into a clear specification, you make it easier to debug issues, compare model behavior, and enforce standards across your workflows.',
         ],
       },

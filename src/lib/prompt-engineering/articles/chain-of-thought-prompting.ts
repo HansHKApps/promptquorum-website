@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Chain-of-Thought improves reasoning by 10-40% on math and logic tasks. Learn when to use prompt-level CoT vs built-in reasoning modes.',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Chain-of-Thought Prompting',
-      audience: 'Developers, data scientists, and teams building with GPT-4o, Claude, Gemini, or local LLMs',
+      audience: 'Developers, data scientists, and teams building with GPT-5.5, Claude, Gemini, or local LLMs',
       next_refresh_due: '2026-11-03',
       aboutTopics: ['Chain-of-Thought Prompting', 'Structured Reasoning', 'Prompt Engineering', 'Reasoning Models'],
       toc: [
@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Trigger phrase:** "Let\'s think step by step" (zero-shot) or worked examples (few-shot)',
             '**2026 evolution:** Built-in reasoning modes (o3, Claude extended thinking) now automate CoT internally',
             '**Cost impact:** Prompt-level CoT = more output tokens; reasoning modes = separate thinking token budget',
-            '**Best models for prompt-level CoT:** Non-reasoning models (Claude Haiku 4.5, Gemini Flash, GPT-4o mini, LLaMA 4 Scout)',
+            '**Best models for prompt-level CoT:** Non-reasoning models (Claude Haiku 4.5, Gemini Flash, GPT-5.5 mini, LLaMA 4 Scout)',
           ]
         },
         whatIsChainOfThought: {
@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'CoT vs Built-In Reasoning Models (2026)',
           content: [
             '**In 2026, the frontier models—Claude Opus 4.8, OpenAI o3, Gemini Deep Think—have built-in reasoning modes that internalize chain-of-thought automatically.** You do not need to add "think step by step" instructions on these models.',
-            '**When to use prompt-level CoT:** Non-reasoning models (Claude Haiku 4.5, GPT-4o mini, Gemini Flash, Llama 4), local LLMs, or when you want to avoid the extra cost of reasoning token budgets.',
+            '**When to use prompt-level CoT:** Non-reasoning models (Claude Haiku 4.5, GPT-5.5 mini, Gemini Flash, Llama 4), local LLMs, or when you want to avoid the extra cost of reasoning token budgets.',
             '**When to use built-in reasoning modes:** Maximum accuracy on frontier models, math-heavy tasks, complex analysis. These models bill reasoning tokens separately (usually higher rate than output tokens). Test your CoT prompts in [Anthropic\'s Console](https://docs.anthropic.com/) or [OpenAI\'s Playground](https://platform.openai.com/playground) before deploying to production.',
           ],
           columns: ['Approach', 'Best For', 'Cost', 'Transparency', 'Models'],
@@ -243,7 +243,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Model': 'Claude Sonnet 4.6', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Extended thinking', 'Best Use Case': 'Balanced accuracy/cost', 'Cost (approx.)': 'Medium' },
             { 'Model': 'Claude Haiku 4.5', 'Prompt-Level CoT': 'Recommended', 'Built-In Reasoning': 'None', 'Best Use Case': 'Fast, cost-effective reasoning', 'Cost (approx.)': 'Low' },
             { 'Model': 'OpenAI o3', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Effort levels (low, medium, high, xhigh)', 'Best Use Case': 'Competition-level problems', 'Cost (approx.)': 'Very high (reasoning token tier)' },
-            { 'Model': 'GPT-4o mini', 'Prompt-Level CoT': 'Recommended', 'Built-In Reasoning': 'None', 'Best Use Case': 'Budget-conscious deployment', 'Cost (approx.)': 'Very low' },
+            { 'Model': 'GPT-5.5 mini', 'Prompt-Level CoT': 'Recommended', 'Built-In Reasoning': 'None', 'Best Use Case': 'Budget-conscious deployment', 'Cost (approx.)': 'Very low' },
             { 'Model': 'Gemini 3.1 Pro', 'Prompt-Level CoT': 'Works', 'Built-In Reasoning': 'Deep Think (thinking_level param)', 'Best Use Case': 'Google Cloud integration', 'Cost (approx.)': 'Medium-high' },
             { 'Model': 'Gemini Flash', 'Prompt-Level CoT': 'Recommended', 'Built-In Reasoning': 'None', 'Best Use Case': 'Fast responses', 'Cost (approx.)': 'Low' },
             { 'Model': 'DeepSeek R1', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Inline reasoning in output', 'Best Use Case': 'Open-weights, on-device', 'Cost (approx.)': 'Free (open source)' },
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Auslösephrase:** „Denken wir Schritt für Schritt" (Zero-shot) oder Beispiele (Few-shot)',
         '**2026 Evolution:** Integrierte Thinking-Modi (o3, Claude Extended Thinking) automatisieren CoT intern',
         '**Kostenfolge:** Prompt-Level CoT = mehr Output-Token; Thinking-Modi = separates Thinking-Token-Budget',
-        '**Best für Prompt-Level CoT:** Nicht-Thinking-Modelle (Claude Haiku 4.5, Gemini Flash, GPT-4o mini, LLaMA 4 Scout)',
+        '**Best für Prompt-Level CoT:** Nicht-Thinking-Modelle (Claude Haiku 4.5, Gemini Flash, GPT-5.5 mini, LLaMA 4 Scout)',
       ]
     },
     whatIsChainOfThought: {
@@ -613,7 +613,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'CoT vs. integrierte Reasoning-Modelle (2026)',
       content: [
         '**2026 haben die Frontier-Modelle – Claude Opus 4.8, OpenAI o3, Gemini Deep Think – integrierte Denkmodi, die Chain-of-Thought automatisch internalisieren.** Sie müssen keine „denk Schritt für Schritt"-Anweisungen auf diesen Modellen hinzufügen.',
-        '**Wann Prompt-Level CoT verwenden:** Nicht-Thinking-Modelle (Claude Haiku 4.5, GPT-4o mini, Gemini Flash, Llama 4), lokale LLMs oder wenn Sie die zusätzlichen Kosten für Thinking-Token-Budgets vermeiden möchten.',
+        '**Wann Prompt-Level CoT verwenden:** Nicht-Thinking-Modelle (Claude Haiku 4.5, GPT-5.5 mini, Gemini Flash, Llama 4), lokale LLMs oder wenn Sie die zusätzlichen Kosten für Thinking-Token-Budgets vermeiden möchten.',
         '**Wann integrierte Thinking-Modi verwenden:** Maximale Genauigkeit auf Frontier-Modellen, mathematiklastige Aufgaben, komplexe Analysen. Diese Modelle berechnen Thinking-Token separat (üblicherweise höherer Satz als Output-Token).',
       ],
       columns: ['Ansatz', 'Am besten für', 'Kosten', 'Transparenz', 'Modelle'],
@@ -653,7 +653,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'Modell': 'Claude Sonnet 4.6', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Extended Thinking', 'Bester Anwendungsfall': 'Ausgeglichenes Kosten/Genauigkeit-Verhältnis', 'Kosten (ca.)': 'Mittel' },
         { 'Modell': 'Claude Haiku 4.5', 'Prompt-Level CoT': 'Empfohlen', 'Integriertes Thinking': 'Keine', 'Bester Anwendungsfall': 'Schnelle, kostengünstige Argumentation', 'Kosten (ca.)': 'Niedrig' },
         { 'Modell': 'OpenAI o3', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Effort-Levels (low, medium, high, xhigh)', 'Bester Anwendungsfall': 'Probleme auf Wettbewerbsniveau', 'Kosten (ca.)': 'Sehr hoch (Thinking-Token Tier)' },
-        { 'Modell': 'GPT-4o mini', 'Prompt-Level CoT': 'Empfohlen', 'Integriertes Thinking': 'Keine', 'Bester Anwendungsfall': 'Budgetbewusste Bereitstellung', 'Kosten (ca.)': 'Sehr niedrig' },
+        { 'Modell': 'GPT-5.5 mini', 'Prompt-Level CoT': 'Empfohlen', 'Integriertes Thinking': 'Keine', 'Bester Anwendungsfall': 'Budgetbewusste Bereitstellung', 'Kosten (ca.)': 'Sehr niedrig' },
         { 'Modell': 'Gemini 3.1 Pro', 'Prompt-Level CoT': 'Funktioniert', 'Integriertes Thinking': 'Deep Think (thinking_level Param)', 'Bester Anwendungsfall': 'Google Cloud Integration', 'Kosten (ca.)': 'Mittel-Hoch' },
         { 'Modell': 'Gemini Flash', 'Prompt-Level CoT': 'Empfohlen', 'Integriertes Thinking': 'Keine', 'Bester Anwendungsfall': 'Schnelle Antworten', 'Kosten (ca.)': 'Niedrig' },
         { 'Modell': 'DeepSeek R1', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Inline Reasoning in Ausgabe', 'Bester Anwendungsfall': 'Open-Weights, On-Device', 'Kosten (ca.)': 'Kostenlos (Open Source)' },
@@ -842,7 +842,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   metaDescription: 'Chain-of-Thought mejora el razonamiento entre un 10 y un 40 % en matemáticas y lógica. Aprende cuándo usar CoT frente a los modos de razonamiento integrados.',
   educationalLevel: 'Intermediate',
   primaryTerm: 'Chain-of-Thought Prompting',
-  audience: 'Desarrolladores, científicos de datos y equipos que trabajan con GPT-4o, Claude, Gemini o LLMs locales',
+  audience: 'Desarrolladores, científicos de datos y equipos que trabajan con GPT-5.5, Claude, Gemini o LLMs locales',
   next_refresh_due: '2026-11-03',
   aboutTopics: ['Chain-of-Thought Prompting', 'Razonamiento Estructurado', 'Prompt Engineering', 'Modelos de Razonamiento'],
   toc: [
@@ -907,7 +907,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Frase activadora:** "Pensemos paso a paso" (zero-shot) o ejemplos resueltos (few-shot)',
         '**Evolución en 2026:** Los modos de razonamiento integrados (o3, Claude extended thinking) automatizan CoT internamente',
         '**Impacto en costo:** CoT a nivel de prompt = más tokens de salida; modos de razonamiento = presupuesto de tokens de pensamiento separado',
-        '**Mejores modelos para CoT a nivel de prompt:** Modelos sin razonamiento (Claude Haiku 4.5, Gemini Flash, GPT-4o mini, LLaMA 4 Scout)',
+        '**Mejores modelos para CoT a nivel de prompt:** Modelos sin razonamiento (Claude Haiku 4.5, Gemini Flash, GPT-5.5 mini, LLaMA 4 Scout)',
       ]
     },
     whatIsChainOfThought: {
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'CoT vs modelos de razonamiento integrados (2026)',
       content: [
         '**En 2026, los modelos de frontera — Claude Opus 4.8, OpenAI o3, Gemini Deep Think — tienen modos de razonamiento integrados que internalizan chain-of-thought automáticamente.** No necesitas añadir instrucciones "piensa paso a paso" en estos modelos.',
-        '**Cuándo usar CoT a nivel de prompt:** Modelos sin razonamiento (Claude Haiku 4.5, GPT-4o mini, Gemini Flash, Llama 4), LLMs locales, o cuando quieres evitar el costo extra de los presupuestos de tokens de razonamiento.',
+        '**Cuándo usar CoT a nivel de prompt:** Modelos sin razonamiento (Claude Haiku 4.5, GPT-5.5 mini, Gemini Flash, Llama 4), LLMs locales, o cuando quieres evitar el costo extra de los presupuestos de tokens de razonamiento.',
         '**Cuándo usar modos de razonamiento integrados:** Máxima precisión en modelos de frontera, tareas con mucha matemática, análisis complejo. Estos modelos facturan los tokens de razonamiento por separado (normalmente a una tarifa mayor que los tokens de salida). Prueba tus prompts CoT en la [consola de Anthropic](https://docs.anthropic.com/) o en el [Playground de OpenAI](https://platform.openai.com/playground) antes de desplegarlos en producción.',
       ],
       columns: ['Enfoque', 'Mejor para', 'Costo', 'Transparencia', 'Modelos'],
@@ -1063,7 +1063,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'Modelo': 'Claude Sonnet 4.6', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Extended thinking', 'Mejor caso de uso': 'Equilibrio precisión/costo', 'Costo (aprox.)': 'Medio' },
         { 'Modelo': 'Claude Haiku 4.5', 'CoT a nivel de prompt': 'Recomendado', 'Razonamiento integrado': 'Ninguno', 'Mejor caso de uso': 'Razonamiento rápido y económico', 'Costo (aprox.)': 'Bajo' },
         { 'Modelo': 'OpenAI o3', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Niveles de esfuerzo (low, medium, high, xhigh)', 'Mejor caso de uso': 'Problemas de nivel de competición', 'Costo (aprox.)': 'Muy alto (nivel de tokens de razonamiento)' },
-        { 'Modelo': 'GPT-4o mini', 'CoT a nivel de prompt': 'Recomendado', 'Razonamiento integrado': 'Ninguno', 'Mejor caso de uso': 'Despliegue económico', 'Costo (aprox.)': 'Muy bajo' },
+        { 'Modelo': 'GPT-5.5 mini', 'CoT a nivel de prompt': 'Recomendado', 'Razonamiento integrado': 'Ninguno', 'Mejor caso de uso': 'Despliegue económico', 'Costo (aprox.)': 'Muy bajo' },
         { 'Modelo': 'Gemini 3.1 Pro', 'CoT a nivel de prompt': 'Funciona', 'Razonamiento integrado': 'Deep Think (parámetro thinking_level)', 'Mejor caso de uso': 'Integración con Google Cloud', 'Costo (aprox.)': 'Medio-alto' },
         { 'Modelo': 'Gemini Flash', 'CoT a nivel de prompt': 'Recomendado', 'Razonamiento integrado': 'Ninguno', 'Mejor caso de uso': 'Respuestas rápidas', 'Costo (aprox.)': 'Bajo' },
         { 'Modelo': 'DeepSeek R1', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Razonamiento en línea en la salida', 'Mejor caso de uso': 'Open-weights, en dispositivo', 'Costo (aprox.)': 'Gratis (código abierto)' },
@@ -1317,7 +1317,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Phrase déclencheur:** « Réfléchissons pas à pas » (Zero-shot) ou exemples (Few-shot)',
         '**Évolution 2026:** Les modes de raisonnement intégrés (o3, Claude Extended Thinking) automatisent CoT en interne',
         '**Impact sur les coûts:** CoT au niveau du prompt = plus de tokens; modes de raisonnement = budget séparé de tokens de raisonnement',
-        '**Meilleur pour CoT au niveau du prompt:** Modèles sans raisonnement intégré (Claude Haiku 4.5, Gemini Flash, GPT-4o mini, LLaMA 4 Scout)',
+        '**Meilleur pour CoT au niveau du prompt:** Modèles sans raisonnement intégré (Claude Haiku 4.5, Gemini Flash, GPT-5.5 mini, LLaMA 4 Scout)',
       ]
     },
     whatIsChainOfThought: {
@@ -1433,7 +1433,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'CoT vs modèles de raisonnement intégrés (2026)',
       content: [
         '**En 2026, les modèles frontière – Claude Opus 4.8, OpenAI o3, Gemini Deep Think – disposent de modes de raisonnement intégrés qui internalisent automatiquement le Chain-of-Thought.** Vous n\'avez pas besoin d\'ajouter des instructions « réfléchis pas à pas » sur ces modèles.',
-        '**Quand utiliser le CoT au niveau du prompt:** Modèles sans raisonnement intégré (Claude Haiku 4.5, GPT-4o mini, Gemini Flash, Llama 4), LLMs locaux, ou quand vous voulez éviter le coût supplémentaire des budgets de tokens de raisonnement.',
+        '**Quand utiliser le CoT au niveau du prompt:** Modèles sans raisonnement intégré (Claude Haiku 4.5, GPT-5.5 mini, Gemini Flash, Llama 4), LLMs locaux, ou quand vous voulez éviter le coût supplémentaire des budgets de tokens de raisonnement.',
         '**Quand utiliser les modes de raisonnement intégrés:** Précision maximale sur les modèles frontière, tâches lourdes en mathématiques, analyses complexes. Ces modèles facturent les tokens de raisonnement séparément (généralement à un taux plus élevé que les tokens de sortie).',
       ],
       columns: ['Approche', 'Meilleure pour', 'Coûts', 'Transparence', 'Modèles'],
@@ -1473,7 +1473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'Modèle': 'Claude Sonnet 4.6', 'CoT au niveau du prompt': 'Non nécessaire', 'Raisonnement intégré': 'Extended thinking', 'Meilleur cas d\'usage': 'Équilibre coûts/précision', 'Coût (approx.)': 'Moyen' },
         { 'Modèle': 'Claude Haiku 4.5', 'CoT au niveau du prompt': 'Recommandé', 'Raisonnement intégré': 'Aucun', 'Meilleur cas d\'usage': 'Raisonnement rapide et économique', 'Coût (approx.)': 'Bas' },
         { 'Modèle': 'OpenAI o3', 'CoT au niveau du prompt': 'Non nécessaire', 'Raisonnement intégré': 'Niveaux d\'effort (bas, moyen, haut, xhaut)', 'Meilleur cas d\'usage': 'Problèmes au niveau des compétitions', 'Coût (approx.)': 'Très élevé (tier tokens de raisonnement)' },
-        { 'Modèle': 'GPT-4o mini', 'CoT au niveau du prompt': 'Recommandé', 'Raisonnement intégré': 'Aucun', 'Meilleur cas d\'usage': 'Déploiement sensible aux budgets', 'Coût (approx.)': 'Très bas' },
+        { 'Modèle': 'GPT-5.5 mini', 'CoT au niveau du prompt': 'Recommandé', 'Raisonnement intégré': 'Aucun', 'Meilleur cas d\'usage': 'Déploiement sensible aux budgets', 'Coût (approx.)': 'Très bas' },
         { 'Modèle': 'Gemini 3.1 Pro', 'CoT au niveau du prompt': 'Fonctionne', 'Raisonnement intégré': 'Deep Think (param thinking_level)', 'Meilleur cas d\'usage': 'Intégration Google Cloud', 'Coût (approx.)': 'Moyen-Haut' },
         { 'Modèle': 'Gemini Flash', 'CoT au niveau du prompt': 'Recommandé', 'Raisonnement intégré': 'Aucun', 'Meilleur cas d\'usage': 'Réponses rapides', 'Coût (approx.)': 'Bas' },
         { 'Modèle': 'DeepSeek R1', 'CoT au niveau du prompt': 'Non nécessaire', 'Raisonnement intégré': 'Raisonnement inline dans la sortie', 'Meilleur cas d\'usage': 'Open-weights, on-device', 'Coût (approx.)': 'Gratuit (open source)' },
@@ -1727,7 +1727,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**トリガーフレーズ:** 「ステップバイステップで考えましょう」(Zero-shot)または実例(Few-shot)',
         '**2026年の進化:** 組み込み推論モード(o3、Claude Extended Thinking)はCoTを内部で自動化',
         '**コスト影響:** プロンプトレベルCoT = より多くの出力トークン; 推論モード = 独立した思考トークン予算',
-        '**プロンプトレベルCoTに最適:** 非推論モデル(Claude Haiku 4.5、Gemini Flash、GPT-4o mini、LLaMA 4 Scout)',
+        '**プロンプトレベルCoTに最適:** 非推論モデル(Claude Haiku 4.5、Gemini Flash、GPT-5.5 mini、LLaMA 4 Scout)',
       ]
     },
     whatIsChainOfThought: {
@@ -1846,7 +1846,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'CoT対組み込み推論モデル (2026)',
       content: [
         '**2026年、フロンティアモデル – Claude Opus 4.8、OpenAI o3、Gemini Deep Think – は、Chain-of-Thoughtを自動的に内部化する組み込み推論モードを備えています。** これらのモデルに「ステップバイステップで考えて」という指示を追加する必要はありません。',
-        '**プロンプトレベルCoTを使用する場合:** 非推論モデル(Claude Haiku 4.5、GPT-4o mini、Gemini Flash、Llama 4)、ローカルLLM、または推論トークン予算の追加コストを避けたい場合。',
+        '**プロンプトレベルCoTを使用する場合:** 非推論モデル(Claude Haiku 4.5、GPT-5.5 mini、Gemini Flash、Llama 4)、ローカルLLM、または推論トークン予算の追加コストを避けたい場合。',
         '**組み込み推論モードを使用する場合:** フロンティアモデルの最大精度、数学の重いタスク、複雑な分析。これらのモデルは推論トークンを個別に請求します(通常は出力トークンよりも高いレート)。',
       ],
       columns: ['アプローチ', '最適な用途', 'コスト', '透明性', 'モデル'],
@@ -1886,7 +1886,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'モデル': 'Claude Sonnet 4.6', 'プロンプトレベルCoT': '不要', '組み込み推論': 'Extended Thinking', 'ベストユースケース': 'バランスの取れたコスト/精度', 'コスト(約)': '中程度' },
         { 'モデル': 'Claude Haiku 4.5', 'プロンプトレベルCoT': '推奨', '組み込み推論': 'なし', 'ベストユースケース': '高速でコスト効率的な推論', 'コスト(約)': '低い' },
         { 'モデル': 'OpenAI o3', 'プロンプトレベルCoT': '不要', '組み込み推論': 'エフォートレベル(low、medium、high、xhigh)', 'ベストユースケース': '競技レベルの問題', 'コスト(約)': '非常に高い(思考トークンティア)' },
-        { 'モデル': 'GPT-4o mini', 'プロンプトレベルCoT': '推奨', '組み込み推論': 'なし', 'ベストユースケース': '予算意識の高いデプロイメント', 'コスト(約)': '非常に低い' },
+        { 'モデル': 'GPT-5.5 mini', 'プロンプトレベルCoT': '推奨', '組み込み推論': 'なし', 'ベストユースケース': '予算意識の高いデプロイメント', 'コスト(約)': '非常に低い' },
         { 'モデル': 'Gemini 3.1 Pro', 'プロンプトレベルCoT': '機能する', '組み込み推論': 'Deep Think (thinking_levelパラム)', 'ベストユースケース': 'Google Cloud統合', 'コスト(約)': '中程度~高い' },
         { 'モデル': 'Gemini Flash', 'プロンプトレベルCoT': '推奨', '組み込み推論': 'なし', 'ベストユースケース': '高速応答', 'コスト(約)': '低い' },
         { 'モデル': 'DeepSeek R1', 'プロンプトレベルCoT': '不要', '組み込み推論': '出力の内容推論', 'ベストユースケース': 'オープンウェイト、オンデバイス', 'コスト(約)': '無料(オープンソース)' },
@@ -2140,7 +2140,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**触发短语:** 「让我们逐步思考」(Zero-shot)或工作示例(Few-shot)',
         '**2026年进化:** 内置推理模式(o3、Claude Extended Thinking)自动化内部CoT',
         '**成本影响:** 提示词级CoT = 更多输出token; 推理模式 = 独立思维token预算',
-        '**提示词级CoT最优:** 非推理模型(Claude Haiku 4.5、Gemini Flash、GPT-4o mini、LLaMA 4 Scout)',
+        '**提示词级CoT最优:** 非推理模型(Claude Haiku 4.5、Gemini Flash、GPT-5.5 mini、LLaMA 4 Scout)',
       ]
     },
     whatIsChainOfThought: {
@@ -2259,7 +2259,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'CoT对内置推理模型 (2026)',
       content: [
         '**2026年，前沿模型 – Claude Opus 4.8、OpenAI o3、Gemini Deep Think – 具有内置推理模式，可自动内部化链式思维。** 你不需要在这些模型上添加「逐步思考」指令。',
-        '**何时使用提示词级CoT:** 非推理模型(Claude Haiku 4.5、GPT-4o mini、Gemini Flash、Llama 4)、本地LLM，或想避免推理token预算额外成本时。',
+        '**何时使用提示词级CoT:** 非推理模型(Claude Haiku 4.5、GPT-5.5 mini、Gemini Flash、Llama 4)、本地LLM，或想避免推理token预算额外成本时。',
         '**何时使用内置推理模式:** 前沿模型最大精度、数学密集任务、复杂分析。这些模型分别计费思维token(通常比输出token费率更高)。',
       ],
       columns: ['方法', '最适用于', '成本', '透明度', '模型'],
@@ -2299,7 +2299,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '模型': 'Claude Sonnet 4.6', '提示词级CoT': '不需要', '内置推理': 'Extended Thinking', '最佳用途': '平衡成本/精度', '成本(约)': '中等' },
         { '模型': 'Claude Haiku 4.5', '提示词级CoT': '推荐', '内置推理': '无', '最佳用途': '快速、经济推理', '成本(约)': '低' },
         { '模型': 'OpenAI o3', '提示词级CoT': '不需要', '内置推理': '努力级别(低、中、高、超高)', '最佳用途': '竞赛级问题', '成本(约)': '非常高(思维token层级)' },
-        { '模型': 'GPT-4o mini', '提示词级CoT': '推荐', '内置推理': '无', '最佳用途': '预算意识部署', '成本(约)': '非常低' },
+        { '模型': 'GPT-5.5 mini', '提示词级CoT': '推荐', '内置推理': '无', '最佳用途': '预算意识部署', '成本(约)': '非常低' },
         { '模型': 'Gemini 3.1 Pro', '提示词级CoT': '有效', '内置推理': 'Deep Think(thinking_level参数)', '最佳用途': 'Google Cloud集成', '成本(约)': '中-高' },
         { '模型': 'Gemini Flash', '提示词级CoT': '推荐', '内置推理': '无', '最佳用途': '快速响应', '成本(约)': '低' },
         { '模型': 'DeepSeek R1', '提示词级CoT': '不需要', '内置推理': '输出内的内联推理', '最佳用途': '开源、设备上', '成本(约)': '免费(开源)' },

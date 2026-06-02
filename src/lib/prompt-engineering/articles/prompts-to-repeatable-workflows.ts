@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-02',
       keywords: ['prompt workflows', 'automation templates', 'repeatable prompts', 'LangChain workflow', 'n8n prompts', 'Make automation', 'production AI workflow'],
       mentions: [
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'LangChain' },
         { '@type': 'Thing', name: 'n8n' },
@@ -97,10 +97,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Four templates cover the most common production use cases: document processing, research pipeline, code review, and customer triage.** Each template defines the trigger, the prompt chain, the output routing, and the recommended tools.',
         ],
         numberedItems: [
-          'Document Processing — trigger: new PDF upload → extract key data (dates, parties, amounts) → classify document type → route to assigned reviewer queue. Tools: n8n for orchestration + GPT-4o for extraction and classification. Output: structured JSON record written to a shared database.',
+          'Document Processing — trigger: new PDF upload → extract key data (dates, parties, amounts) → classify document type → route to assigned reviewer queue. Tools: n8n for orchestration + GPT-5.5 for extraction and classification. Output: structured JSON record written to a shared database.',
           'Research Pipeline — trigger: topic list submitted → search web sources → summarize each source → synthesize into a structured report. Tools: LangChain for multi-step orchestration + Perplexity API for web search. Output: markdown report with citations, stored in a shared folder.',
           'Code Review Loop — trigger: pull request opened → analyze diff → generate inline review comments categorized by severity → post comments to the PR. Tools: GitHub Actions for trigger + Claude 4.6 Sonnet for diff analysis. Output: PR comments posted via GitHub API.',
-          'Customer Triage — trigger: new support ticket received → classify severity (P1/P2/P3) → route to the correct queue → generate a draft first-response. Tools: Make for orchestration + PromptQuorum for multi-model dispatch (dispatch to GPT-4o for classification, Claude 4.6 Sonnet for draft generation). Output: ticket updated with severity label and draft response.',
+          'Customer Triage — trigger: new support ticket received → classify severity (P1/P2/P3) → route to the correct queue → generate a draft first-response. Tools: Make for orchestration + PromptQuorum for multi-model dispatch (dispatch to GPT-5.5 for classification, Claude 4.6 Sonnet for draft generation). Output: ticket updated with severity label and draft response.',
         ],
       },
       tools: {
@@ -108,7 +108,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**The right tool depends on whether your team prefers visual automation, code-first pipelines, or multi-model dispatch.** Use one primary tool and add PromptQuorum for model-layer decisions.',
           'Make (formerly Integromat) is a visual, no-code workflow builder. Cost: $0 for up to 1,000 operations/month, $16/month for 10,000 operations. Best for: non-technical teams, CRM and email integrations, straightforward trigger-action pipelines. Limitation: complex branching logic is harder to maintain visually at scale.',
-          'n8n is open-source and self-hostable at $0 cost. It supports code nodes for custom logic alongside visual flow building. Best for: engineering teams that want full control and data privacy. LangChain (Python and JavaScript) is a code-first framework for building multi-step prompt pipelines with memory, agents, and tool use. Best for: developers building custom applications. PromptQuorum adds multi-model dispatch and side-by-side output comparison across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro — use it at any step where model selection affects output quality.',
+          'n8n is open-source and self-hostable at $0 cost. It supports code nodes for custom logic alongside visual flow building. Best for: engineering teams that want full control and data privacy. LangChain (Python and JavaScript) is a code-first framework for building multi-step prompt pipelines with memory, agents, and tool use. Best for: developers building custom applications. PromptQuorum adds multi-model dispatch and side-by-side output comparison across GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro — use it at any step where model selection affects output quality.',
         ],
         callouts: [
           { type: 'tip', label: 'Tool selection rule', text: 'Start with Make or n8n for orchestration and add PromptQuorum at any step where you need to compare model outputs or dispatch to the best model for that step type.' },
@@ -138,7 +138,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Automate when frequency >5/week, inputs are structured, and output always routes to the same next step',
           'Three trigger types: event-based (webhook/upload), schedule-based (cron), threshold-based (metric crossing)',
           'Define a JSON output schema at every step boundary — never pass raw unstructured text between steps',
-          '4 production templates: document processing (n8n + GPT-4o), research (LangChain + Perplexity), code review (GitHub Actions + Claude 4.6 Sonnet), customer triage (Make + PromptQuorum)',
+          '4 production templates: document processing (n8n + GPT-5.5), research (LangChain + Perplexity), code review (GitHub Actions + Claude 4.6 Sonnet), customer triage (Make + PromptQuorum)',
           'Most teams reach 70–80% automation with 20–30% human review on edge cases',
         ],
       },
@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is a repeatable prompt workflow?', a: 'A repeatable prompt workflow is a prompt-based process that runs automatically when a defined triggering condition is met, routes output to the next step, and handles errors without manual intervention. Unlike a one-off prompt, a workflow does not require a human to decide when to run it or what to do with the result.' },
-          { q: 'What tools are best for building prompt workflows?', a: 'n8n is best for self-hosted, open-source workflows at $0 cost. Make (formerly Integromat) is best for visual, no-code workflows at $0–$16/month. LangChain is best for Python or JavaScript code-based pipelines with full control. PromptQuorum adds multi-model dispatch and comparison across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.' },
+          { q: 'What tools are best for building prompt workflows?', a: 'n8n is best for self-hosted, open-source workflows at $0 cost. Make (formerly Integromat) is best for visual, no-code workflows at $0–$16/month. LangChain is best for Python or JavaScript code-based pipelines with full control. PromptQuorum adds multi-model dispatch and comparison across GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro.' },
           { q: 'What is the minimum viable workflow structure?', a: 'A minimum viable workflow has 4 components: a trigger (scheduled, event-driven, or API call), a prompt execution step (calls the LLM API with the formatted prompt), an output validation step (checks format and quality requirements), and a routing step (sends output to the next system or flags for human review). Add state management and error handling as complexity grows.' },
           { q: 'How do I choose between Make, n8n, and LangChain for prompt workflows?', a: 'Use Make (formerly Integromat) for teams that need a visual no-code interface with 1,000+ app integrations — best for business automation without coding. Use n8n for teams that want no-code with self-hosted control and source access — better privacy, more flexibility. Use LangChain for developers building complex multi-step chains with memory, retrieval, and tool use in Python or JavaScript.' },
           { q: 'When should I automate a prompt workflow vs keep it manual?', a: 'Automate when: the prompt runs more than 10 times per day, the inputs follow a predictable format, the output feeds directly into another system, and the pass rate on a test set exceeds 90%. Keep manual when: the inputs are highly varied, the task requires judgment that cannot be scored automatically, or the output affects irreversible decisions (legal, financial, medical).' },

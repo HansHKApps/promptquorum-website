@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'Indirect injection via RAG documents is more common in production than direct user-input injection.',
       'Defense requires 4 layers: input filtering, output schema enforcement, privilege separation, and instruction isolation.',
       'PyRIT (Microsoft) enables multi-turn red-teaming that single-turn scanners like Garak cannot replicate.',
-      'PromptQuorum runs the same attack probes across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to detect model-specific vulnerabilities.',
+      'PromptQuorum runs the same attack probes across GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro to detect model-specific vulnerabilities.',
     ],
     toc: [
       { label: 'What Prompt Injection Is', anchor: 'what_is_injection' },
@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Four tools cover prompt security testing: Garak (open source), PyRIT (open source), manual red-teaming checklists, and PromptQuorum (cross-model comparison).** All open-source tools are free.',
           'Garak is an open-source adversarial probe library maintained by the Garak project. It includes probes for prompt injection, data leakage, jailbreaks, and toxicity. Run it from the CLI against any OpenAI-compatible API endpoint. Use Garak for automated coverage of known attack patterns.',
           'PyRIT (Python Risk Identification Toolkit) is Microsoft\'s open-source red-teaming framework. It provides structured attack orchestration, target adapters for different LLM APIs, and scoring mechanisms. Use PyRIT when you need to run multi-turn attack sequences or custom attack strategies.',
-          'PromptQuorum runs the same set of attack probes across multiple models simultaneously (e.g., GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro). This identifies which models are more susceptible to specific attack patterns and helps you make model selection decisions based on security behavior, not just output quality.',
+          'PromptQuorum runs the same set of attack probes across multiple models simultaneously (e.g., GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro). This identifies which models are more susceptible to specific attack patterns and helps you make model selection decisions based on security behavior, not just output quality.',
         ],
         callouts: [
           { type: 'tip', label: 'Garak vs PyRIT', text: 'Use Garak for broad automated coverage of 40+ known attack patterns. Use PyRIT for depth — multi-turn simulated adversarial conversations that single-turn scanners miss.' },

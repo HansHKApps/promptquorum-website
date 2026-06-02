@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor: AI-Native IDE',
           url: 'https://cursor.sh',
-          description: 'VS Code fork with built-in AI chat, model switching (GPT-4o, Claude, Gemini), and codebase-aware context. Best for developers writing both prompts and application code. Free tier or $20/month.',
+          description: 'VS Code fork with built-in AI chat, model switching (GPT-5.5, Claude, Gemini), and codebase-aware context. Best for developers writing both prompts and application code. Free tier or $20/month.',
         },
         {
           '@type': 'ListItem',
@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: 'What Makes a Good Prompt Engineering IDE?',
-        content: '**A good prompt IDE minimizes friction between idea and execution.** You should be able to switch models in seconds, see results immediately, view token counts, save prompt history, and export to code without leaving the tool.\n\nKey features to evaluate:\n\n- **Model switching:** Can you test the same prompt on GPT-4o, Claude, and Gemini in one tool?\n- **Playground mode:** Can you execute prompts without writing code?\n- **Token counter:** Does it show tokens consumed before you commit? (Token costs add up — learn [how to optimize prompts for cost](/prompt-engineering/optimize-prompts-for-cost).)\n- **Prompt history:** Can you revert to earlier versions without manual save files?\n- **Export to code:** Can you convert a working prompt into Python/JS/API format?\n- **Cost visibility:** Can you see cost-per-request during exploration?\n\nAs of April 2026, no single IDE nails all six. Developers choose based on workflow: Cursor for development speed, Playground for API exploration, Console for single-model focus, LM Studio for offline work.',
+        content: '**A good prompt IDE minimizes friction between idea and execution.** You should be able to switch models in seconds, see results immediately, view token counts, save prompt history, and export to code without leaving the tool.\n\nKey features to evaluate:\n\n- **Model switching:** Can you test the same prompt on GPT-5.5, Claude, and Gemini in one tool?\n- **Playground mode:** Can you execute prompts without writing code?\n- **Token counter:** Does it show tokens consumed before you commit? (Token costs add up — learn [how to optimize prompts for cost](/prompt-engineering/optimize-prompts-for-cost).)\n- **Prompt history:** Can you revert to earlier versions without manual save files?\n- **Export to code:** Can you convert a working prompt into Python/JS/API format?\n- **Cost visibility:** Can you see cost-per-request during exploration?\n\nAs of April 2026, no single IDE nails all six. Developers choose based on workflow: Cursor for development speed, Playground for API exploration, Console for single-model focus, LM Studio for offline work.',
         snippets: [
           { type: 'in-one-sentence', text: 'A prompt engineering IDE is any tool where you can write, test, and iterate on prompts without context-switching to a terminal or separate API client.' },
         ],
@@ -147,12 +147,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       cursor: {
         id: 'cursor-ai-native',
         title: 'Cursor: AI-Native Code + Prompt IDE',
-        content: '**Cursor is a VS Code fork optimized for AI-assisted development.** Built-in chat lets you prompt in the sidebar while coding in the editor. You can write a prompt, generate code from it, and refine both simultaneously. First-class support for GPT-4o, Claude, Gemini — switch models mid-conversation. Pair Cursor with a [prompt management platform](/prompt-engineering/best-prompt-management-platforms) to version prompts across projects.',
+        content: '**Cursor is a VS Code fork optimized for AI-assisted development.** Built-in chat lets you prompt in the sidebar while coding in the editor. You can write a prompt, generate code from it, and refine both simultaneously. First-class support for GPT-5.5, Claude, Gemini — switch models mid-conversation. Pair Cursor with a [prompt management platform](/prompt-engineering/best-prompt-management-platforms) to version prompts across projects.',
         numberedItems: [
           'Best if you write both prompts and application code',
           'Includes codebase-aware context (reads your project files)',
           'Pricing: Free tier (limited), $20/mo for unlimited',
-          'Latency: Depends on selected model (GPT-4o ~1-2s, Claude ~2-3s)',
+          'Latency: Depends on selected model (GPT-5.5 ~1-2s, Claude ~2-3s)',
         ],
         callouts: [
           { type: 'warning', label: 'Note', text: 'Cursor is cloud-only — all prompts are sent to Anthropic, OpenAI, or Google servers. Not suitable for GDPR-sensitive or confidential data without reviewing each provider\'s Data Processing Agreement.' },
@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       continueVscode: {
         id: 'vscode-continue',
         title: 'VS Code + Continue.dev: Open-Source Multi-Model',
-        content: '**Continue is an open-source VS Code extension that brings any LLM into your code editor.** Supports GPT-4o, Claude, Gemini, plus local models via Ollama. Type a prompt, hit Tab, and the model autocompletes code. No vendor lock-in. Community-maintained, fully transparent. Build a [prompt library](/prompt-engineering/build-a-prompt-library) alongside it to reuse and version your best prompts.',
+        content: '**Continue is an open-source VS Code extension that brings any LLM into your code editor.** Supports GPT-5.5, Claude, Gemini, plus local models via Ollama. Type a prompt, hit Tab, and the model autocompletes code. No vendor lock-in. Community-maintained, fully transparent. Build a [prompt library](/prompt-engineering/build-a-prompt-library) alongside it to reuse and version your best prompts.',
         numberedItems: [
           'Best for developers who want open-source and local model support',
           'Supports local Ollama, vLLM, and cloud APIs in one IDE',
@@ -175,15 +175,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       openAIPlayground: {
         id: 'openai-playground',
         title: 'OpenAI Playground: API Exploration & Testing',
-        content: '**OpenAI Playground is a web-based editor for testing GPT-4o and other OpenAI models.** Token counter shows usage in real-time. Export playground settings to API code (curl, Python, JavaScript). Built for API exploration before production deployment.',
+        content: '**OpenAI Playground is a web-based editor for testing GPT-5.5 and other OpenAI models.** Token counter shows usage in real-time. Export playground settings to API code (curl, Python, JavaScript). Built for API exploration before production deployment.',
         numberedItems: [
           'Best for API testing and token counting before code',
           'Metered billing: you pay for every token used during exploration',
-          'Model selection: GPT-4o, GPT-4 Turbo, GPT-3.5, custom fine-tunes',
+          'Model selection: GPT-5.5, GPT-5.5, custom fine-tunes',
           'Export to curl/Python/JS with one click',
         ],
         callouts: [
-          { type: 'warning', label: 'Warning', text: 'Playground tokens are billed at the same rate as production API calls. A single complex prompt with few-shot examples can cost $0.10–$0.50 per run at GPT-4o pricing. Monitor the token counter before each run.' },
+          { type: 'warning', label: 'Warning', text: 'Playground tokens are billed at the same rate as production API calls. A single complex prompt with few-shot examples can cost $0.10–$0.50 per run at GPT-5.5 pricing. Monitor the token counter before each run.' },
         ],
       },
       anthropicConsole: {
@@ -228,8 +228,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**As of April 2026, here is the breakdown.** In our workflow testing, cloud playground setup averaged under 2 minutes for first-time users, while LM Studio required approximately 45 minutes on first install (including model download). Subsequent model downloads ranged from 10 minutes (7B Q4, ~4GB) to over 90 minutes (70B Q4, ~40GB).',
         columns: ['IDE', 'Type', 'Multi-model', 'Local models', 'Token counter', 'Prompt history', 'Export to code', 'Offline', 'Price', 'Best for'],
         rows: [
-          { IDE: 'Cursor', Type: 'Desktop IDE', 'Multi-model': 'GPT-4o, Claude, Gemini', 'Local models': 'No', 'Token counter': 'Via API', 'Prompt history': 'Yes (chat)', 'Export to code': 'Yes', Offline: 'No', Price: 'Free / $20/mo', 'Best for': 'Dev building app+prompts' },
-          { IDE: 'VS Code + Continue', Type: 'Desktop IDE + ext', 'Multi-model': 'GPT-4o, Claude, Gemini, local', 'Local models': 'Yes (Ollama)', 'Token counter': 'Depends on provider', 'Prompt history': 'Manual', 'Export to code': 'Yes', Offline: 'Yes (local)', Price: 'Free (MIT)', 'Best for': 'Multi-model + open-source' },
+          { IDE: 'Cursor', Type: 'Desktop IDE', 'Multi-model': 'GPT-5.5, Claude, Gemini', 'Local models': 'No', 'Token counter': 'Via API', 'Prompt history': 'Yes (chat)', 'Export to code': 'Yes', Offline: 'No', Price: 'Free / $20/mo', 'Best for': 'Dev building app+prompts' },
+          { IDE: 'VS Code + Continue', Type: 'Desktop IDE + ext', 'Multi-model': 'GPT-5.5, Claude, Gemini, local', 'Local models': 'Yes (Ollama)', 'Token counter': 'Depends on provider', 'Prompt history': 'Manual', 'Export to code': 'Yes', Offline: 'Yes (local)', Price: 'Free (MIT)', 'Best for': 'Multi-model + open-source' },
           { IDE: 'OpenAI Playground', Type: 'Web playground', 'Multi-model': 'OpenAI only', 'Local models': 'No', 'Token counter': 'Built-in, real-time', 'Prompt history': 'Yes', 'Export to code': 'Yes (curl/Python/JS)', Offline: 'No', Price: 'Pay-per-token', 'Best for': 'API exploration' },
           { IDE: 'Claude Console', Type: 'Web playground', 'Multi-model': 'Claude only', 'Local models': 'No', 'Token counter': 'Built-in', 'Prompt history': 'Yes', 'Export to code': 'Yes (Python/JS)', Offline: 'No', Price: 'Pay-per-token', 'Best for': 'Claude-specific' },
           { IDE: 'Google AI Studio', Type: 'Web playground', 'Multi-model': 'Gemini variants', 'Local models': 'No', 'Token counter': 'Not shown', 'Prompt history': 'Yes', 'Export to code': 'Yes (Python/JS/curl)', Offline: 'No', Price: 'Free tier', 'Best for': 'Gemini + multimodal' },

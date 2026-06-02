@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'The RTF Framework: Role, Task, Format (2026)',
-      intro: 'The RTF Framework is a lightweight three-component prompt structure: Role (who the model is), Task (what to do), and Format (how to output). It works across GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and local models. Use it as your default for routine tasks—summaries, code reviews, emails, reports—and upgrade to CO-STAR or SPECS only when you need more structure.',
+      intro: 'The RTF Framework is a lightweight three-component prompt structure: Role (who the model is), Task (what to do), and Format (how to output). It works across GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and local models. Use it as your default for routine tasks—summaries, code reviews, emails, reports—and upgrade to CO-STAR or SPECS only when you need more structure.',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       readTime: '6 min read',
@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       quickFacts: [
         'RTF = Role + Task + Format — the lightest structured prompt framework (3 components vs 5-6 for CO-STAR/SPECS)',
         'Designed for routine, repeatable tasks: summaries, emails, code reviews, meeting notes',
-        'Works across GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and local models (Ollama, LM Studio)',
+        'Works across GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and local models (Ollama, LM Studio)',
         'RTF is the recommended starting framework — upgrade to CO-STAR, SPECS, or TRACE only when you hit a limitation',
         'The Format field can carry constraints and examples, making RTF more flexible than its 3-component count suggests',
         'PromptQuorum includes RTF as a built-in framework with multi-model dispatch across 25+ models',
@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Can I use RTF with local models like Ollama?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes. RTF works with any LLM, including local models run via Ollama or LM Studio. Simpler models (Mistral 7B, LLaMA 2) may be less consistent with complex Format fields, but RTF still improves output quality.',
+              text: 'Yes. RTF works with any LLM, including local models run via Ollama or LM Studio. Simpler models (Mistral Small, Llama 3.3) may be less consistent with complex Format fields, but RTF still improves output quality.',
             },
           },
           {
@@ -152,7 +152,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Can RTF enforce strict constraints like JSON output?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Partially. RTF can request "JSON format" in the Format field, and modern models (GPT-4o, Claude) usually comply. For 100% strict schema enforcement, use SPECS (which includes explicit constraints) or structured output APIs.',
+              text: 'Partially. RTF can request "JSON format" in the Format field, and modern models (GPT-5.5, Claude) usually comply. For 100% strict schema enforcement, use SPECS (which includes explicit constraints) or structured output APIs.',
             },
           },
           {
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'How does PromptQuorum use RTF?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'PromptQuorum includes RTF as a built-in framework template. Users fill in Role, Task, and Format fields, and PromptQuorum dispatches the same prompt across 25+ models (GPT-4o, Claude, Gemini, local models) for comparison and A/B testing.',
+              text: 'PromptQuorum includes RTF as a built-in framework template. Users fill in Role, Task, and Format fields, and PromptQuorum dispatches the same prompt across 25+ models (GPT-5.5, Claude, Gemini, local models) for comparison and A/B testing.',
             },
           },
           {
@@ -200,7 +200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'The Format field is where RTF adds the most value—explicit structure produces dramatically more consistent output.',
             'RTF handles 80% of everyday LLM tasks. Upgrade to CO-STAR (tone/audience), SPECS (constraints), or TRACE (reasoning) only when RTF hits a limit.',
             'Well-written RTF prompts are reusable templates. Save them and reuse 52 times a year instead of rewriting each week.',
-            'Works across GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and local models (Ollama, LM Studio).',
+            'Works across GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and local models (Ollama, LM Studio).',
             'Use PromptQuorum to test the same RTF prompt across multiple models side by side.',
           ],
         },
@@ -212,7 +212,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { type: 'in-plain-terms', text: 'Tell the AI who to be (Role), what to do (Task), and how to format the answer (Format). That\'s it. Three things. Works for 80% of everyday tasks. When it stops being enough, you graduate to CO-STAR or SPECS.' },
           ],
           content: [
-            '**The RTF Framework is a three-part prompt pattern that tells the model who it is, what to do, and exactly how the answer should look.** Instead of sending a loose question, you specify Role, Task, and Format explicitly. This works across GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and local models you run via Ollama or LM Studio.',
+            '**The RTF Framework is a three-part prompt pattern that tells the model who it is, what to do, and exactly how the answer should look.** Instead of sending a loose question, you specify Role, Task, and Format explicitly. This works across GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and local models you run via Ollama or LM Studio.',
             'RTF is intentionally minimal. With only three fields, it is easy to remember, fast to fill in, and flexible enough for many day-to-day tasks. You can treat it as a "default prompt skeleton" whenever you are not sure which specialized framework to use.',
           ],
         },
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'In PromptQuorum, the RTF Framework lets you:',
           ],
           items: [
-            'Fill in Role, Task, and Format once and send the same structured prompt to 25+ models such as GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and local models configured through Ollama or LM Studio.',
+            'Fill in Role, Task, and Format once and send the same structured prompt to 25+ models such as GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and local models configured through Ollama or LM Studio.',
             'Save RTF prompts as templates for recurring workflows—for example "weekly status summary," "customer reply draft," or "bug report recap."',
             'Share RTF templates across your team so that even non-experts can create prompts that produce consistent, structured outputs.',
             'A/B test the same RTF prompt across multiple models side by side to find the best one for your use case.',
@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Can RTF work with all language models?',
-              a: 'Yes. RTF is framework-agnostic. It works with GPT-4o, Claude, Gemini, open-source models like Llama 3.2, and local models via Ollama or LM Studio. The principles apply universally to any instruction-following LLM.',
+              a: 'Yes. RTF is framework-agnostic. It works with GPT-5.5, Claude, Gemini, open-source models like Llama 3.2, and local models via Ollama or LM Studio. The principles apply universally to any instruction-following LLM.',
             },
             {
               q: 'How do I write a good Format specification?',
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { title: 'What Is Prompt Engineering?', url: '/prompt-engineering/what-is-prompt-engineering?lang=en' },
             { title: 'Zero-Shot vs Few-Shot Prompting', url: '/prompt-engineering/zero-shot-vs-few-shot?lang=en' },
             { title: 'Constrained Prompting', url: '/prompt-engineering/constrained-prompting?lang=en' },
-            { title: 'How to Pick the Right Model: GPT-4o vs Claude vs Gemini', url: '/prompt-engineering/gpt-claude-gemini-which-model?lang=en' },
+            { title: 'How to Pick the Right Model: GPT-5.5 vs Claude vs Gemini', url: '/prompt-engineering/gpt-claude-gemini-which-model?lang=en' },
             { title: 'CO-STAR Framework', url: '/prompt-engineering/co-star-framework?lang=en' },
           ],
         },
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'Das RTF-Framework: Role, Task, Format (2026)',
-      intro: 'Das RTF-Framework ist eine schlanke dreiteilige Prompt-Struktur: Role (wer das Modell ist), Task (was zu tun ist) und Format (wie die Ausgabe aussieht). Es funktioniert über GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro und lokale Modelle. Verwenden Sie es als Standard für Routineaufgaben — Zusammenfassungen, Code-Reviews, E-Mails, Berichte — und aktualisieren Sie zu CO-STAR oder SPECS nur, wenn Sie mehr Struktur benötigen.',
+      intro: 'Das RTF-Framework ist eine schlanke dreiteilige Prompt-Struktur: Role (wer das Modell ist), Task (was zu tun ist) und Format (wie die Ausgabe aussieht). Es funktioniert über GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro und lokale Modelle. Verwenden Sie es als Standard für Routineaufgaben — Zusammenfassungen, Code-Reviews, E-Mails, Berichte — und aktualisieren Sie zu CO-STAR oder SPECS nur, wenn Sie mehr Struktur benötigen.',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       readTime: '6 Min. Lesezeit',
@@ -525,7 +525,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Kann ich RTF mit lokalen Modellen wie Ollama verwenden?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Ja. RTF funktioniert mit jedem LLM, einschließlich lokaler Modelle, die über Ollama oder LM Studio ausgeführt werden. Einfachere Modelle (Mistral 7B, LLaMA 2) können bei komplexen Format-Feldern weniger konsistent sein, aber RTF verbessert dennoch die Output-Qualität.',
+              text: 'Ja. RTF funktioniert mit jedem LLM, einschließlich lokaler Modelle, die über Ollama oder LM Studio ausgeführt werden. Einfachere Modelle (Mistral Small, Llama 3.3) können bei komplexen Format-Feldern weniger konsistent sein, aber RTF verbessert dennoch die Output-Qualität.',
             },
           },
           {
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Kann RTF strikte Constraints wie JSON-Ausgabe erzwingen?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Teilweise. RTF kann im Format-Feld „JSON-Format" anfordern, und moderne Modelle (GPT-4o, Claude) halten sich normalerweise daran. Für 100%ige strikte Schema-Erzwingung verwenden Sie SPECS (mit expliziten Constraints) oder strukturierte Output-APIs.',
+              text: 'Teilweise. RTF kann im Format-Feld „JSON-Format" anfordern, und moderne Modelle (GPT-5.5, Claude) halten sich normalerweise daran. Für 100%ige strikte Schema-Erzwingung verwenden Sie SPECS (mit expliziten Constraints) oder strukturierte Output-APIs.',
             },
           },
           {
@@ -617,7 +617,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Wie verwendet PromptQuorum RTF?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'PromptQuorum enthält RTF als integrierte Framework-Vorlage. Benutzer füllen die Felder Role, Task und Format aus, und PromptQuorum sendet denselben Prompt über 25+ Modelle (GPT-4o, Claude, Gemini, lokale Modelle) für Vergleich und A/B-Tests.',
+              text: 'PromptQuorum enthält RTF als integrierte Framework-Vorlage. Benutzer füllen die Felder Role, Task und Format aus, und PromptQuorum sendet denselben Prompt über 25+ Modelle (GPT-5.5, Claude, Gemini, lokale Modelle) für Vergleich und A/B-Tests.',
             },
           },
           {
@@ -649,7 +649,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Das Format-Feld ist das Kraftpaket von RTF — explizite Struktur erzeugt dramatisch konsistentere Ausgaben.',
             'RTF bewältigt 80% der alltäglichen LLM-Aufgaben. Aktualisieren Sie zu CO-STAR (Ton/Zielgruppe), SPECS (Constraints) oder TRACE (Begründung) nur wenn RTF an Grenzen stößt.',
             'Gut geschriebene RTF-Prompts sind wiederverwendbare Vorlagen. Speichern Sie sie und verwenden Sie sie 52 Mal pro Jahr, statt sie jede Woche neu zu schreiben.',
-            'Funktioniert über GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro und lokale Modelle (Ollama, LM Studio).',
+            'Funktioniert über GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro und lokale Modelle (Ollama, LM Studio).',
             'Verwenden Sie PromptQuorum, um denselben RTF-Prompt über mehrere Modelle nebeneinander zu testen.',
           ],
         },
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { type: 'in-plain-terms', text: 'Sagen Sie der KI, wer sie sein soll (Role), was sie tun soll (Task) und wie sie die Antwort formatieren soll (Format). Das war\'s. Drei Dinge. Funktioniert für 80% der alltäglichen Aufgaben. Wenn das nicht mehr ausreicht, wechseln Sie zu CO-STAR oder SPECS.' },
           ],
           content: [
-            '**Das RTF-Framework ist ein dreiteiliges Prompt-Muster, das dem Modell sagt, wer es ist, was es tun soll und wie die Antwort genau aussehen soll.** Statt eine lose Frage zu stellen, geben Sie Role, Task und Format explizit an. Dies funktioniert über GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro und lokale Modelle, die Sie über Ollama oder LM Studio ausführen.',
+            '**Das RTF-Framework ist ein dreiteiliges Prompt-Muster, das dem Modell sagt, wer es ist, was es tun soll und wie die Antwort genau aussehen soll.** Statt eine lose Frage zu stellen, geben Sie Role, Task und Format explizit an. Dies funktioniert über GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro und lokale Modelle, die Sie über Ollama oder LM Studio ausführen.',
             'Das RTF-Framework ist absichtlich minimal. Mit nur drei Feldern ist es leicht zu merken, schnell auszufüllen und flexibel genug für viele alltägliche Aufgaben. Sie können es als „Standard-Prompt-Gerüst" verwenden, wenn Sie nicht sicher sind, welches spezialisierte Framework Sie verwenden sollten.',
           ],
         },
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'In PromptQuorum ermöglicht Ihnen das RTF-Framework:',
           ],
           items: [
-            'Role, Task und Format einmal ausfüllen und denselben strukturierten Prompt an 25+ Modelle wie GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro und lokale Modelle senden, die über Ollama oder LM Studio konfiguriert sind.',
+            'Role, Task und Format einmal ausfüllen und denselben strukturierten Prompt an 25+ Modelle wie GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro und lokale Modelle senden, die über Ollama oder LM Studio konfiguriert sind.',
             'RTF-Prompts als Vorlagen für wiederkehrende Workflows speichern — zum Beispiel „wöchentliche Status-Zusammenfassung", „Kunden-Antwort-Entwurf" oder „Bug-Bericht-Zusammenfassung".',
             'RTF-Vorlagen über Ihr Team hinweg teilen, sodass auch Nicht-Experten Prompts erstellen können, die konsistente, strukturierte Ausgaben erzeugen.',
             'Denselben RTF-Prompt über mehrere Modelle nebeneinander testen, um den besten für Ihren Use Case zu finden.',
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Funktioniert RTF mit allen Sprachmodellen?',
-              a: 'Ja. RTF ist Framework-unabhängig. Es funktioniert mit GPT-4o, Claude, Gemini, Open-Source-Modellen wie Llama 3.2 und lokalen Modellen über Ollama oder LM Studio. Die Prinzipien gelten universell für alle Befehls-befolgenden LLMs.',
+              a: 'Ja. RTF ist Framework-unabhängig. Es funktioniert mit GPT-5.5, Claude, Gemini, Open-Source-Modellen wie Llama 3.2 und lokalen Modellen über Ollama oder LM Studio. Die Prinzipien gelten universell für alle Befehls-befolgenden LLMs.',
             },
             {
               q: 'Wie schreibe ich eine gute Format-Spezifikation?',
@@ -927,7 +927,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { title: 'Was ist Prompt Engineering?', url: '/de/prompt-engineering/what-is-prompt-engineering' },
             { title: 'Zero-Shot vs. Few-Shot-Prompting', url: '/de/prompt-engineering/zero-shot-vs-few-shot' },
             { title: 'Constrained Prompting', url: '/de/prompt-engineering/constrained-prompting' },
-            { title: 'Wie wähle ich das richtige Modell: GPT-4o vs. Claude vs. Gemini', url: '/de/prompt-engineering/gpt-claude-gemini-which-model' },
+            { title: 'Wie wähle ich das richtige Modell: GPT-5.5 vs. Claude vs. Gemini', url: '/de/prompt-engineering/gpt-claude-gemini-which-model' },
             { title: 'CO-STAR Framework', url: '/de/prompt-engineering/co-star-framework' },
           ],
         },
@@ -945,7 +945,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'El Framework RTF: Rol, Tarea, Formato (2026)',
-      intro: 'El Framework RTF es una estructura de prompt liviana de tres componentes: Rol (quién es el modelo), Tarea (qué hacer) y Formato (cómo producir el output). Funciona en GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales. Úsalo como tu predeterminado para tareas rutinarias — resúmenes, revisiones de código, emails, informes — y pasa a CO-STAR o SPECS solo cuando necesites más estructura.',
+      intro: 'El Framework RTF es una estructura de prompt liviana de tres componentes: Rol (quién es el modelo), Tarea (qué hacer) y Formato (cómo producir el output). Funciona en GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales. Úsalo como tu predeterminado para tareas rutinarias — resúmenes, revisiones de código, emails, informes — y pasa a CO-STAR o SPECS solo cuando necesites más estructura.',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       readTime: '6 min de lectura',
@@ -957,7 +957,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       quickFacts: [
         'RTF = Rol + Tarea + Formato — el framework de prompt estructurado más liviano (3 componentes vs 5-6 para CO-STAR/SPECS)',
         'Diseñado para tareas rutinarias y repetibles: resúmenes, emails, revisiones de código, notas de reuniones',
-        'Funciona en GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales (Ollama, LM Studio)',
+        'Funciona en GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales (Ollama, LM Studio)',
         'RTF es el framework de inicio recomendado — actualiza a CO-STAR, SPECS o TRACE solo cuando llegues a un límite',
         'El campo Formato puede llevar restricciones y ejemplos, haciendo RTF más flexible de lo que su conteo de 3 componentes sugiere',
         'PromptQuorum incluye RTF como framework integrado con despacho multi-modelo a través de 25+ modelos',
@@ -1002,7 +1002,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
@@ -1025,8 +1025,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: '¿Cuál es el error más común de RTF?', acceptedAnswer: { '@type': 'Answer', text: 'Dejar el Formato implícito o vago. Sin un campo de Formato explícito (ej., "3 puntos de bala, máx 50 palabras cada uno"), los modelos usan prosa por defecto. Siempre especifica el Formato.' } },
           { '@type': 'Question', name: '¿Cómo ayuda RTF con la consistencia?', acceptedAnswer: { '@type': 'Answer', text: 'Al especificar Rol, Tarea y Formato explícitamente, reduces la ambigüedad del modelo sobre lo que quieres. Esto hace el output más consistente entre modelos, ejecuciones y miembros del equipo que reutilicen el prompt.' } },
           { '@type': 'Question', name: '¿Debo guardar los prompts RTF?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Un prompt RTF bien escrito para una tarea recurrente (resumen semanal, revisión de código, borrador de email) debe guardarse como plantilla y reutilizarse. Esta es la mayor ventaja de RTF sobre escribir prompts desde cero cada vez.' } },
-          { '@type': 'Question', name: '¿Puede RTF imponer restricciones estrictas como output JSON?', acceptedAnswer: { '@type': 'Answer', text: 'Parcialmente. RTF puede solicitar "formato JSON" en el campo Formato, y los modelos modernos (GPT-4o, Claude) generalmente cumplen. Para imposición de esquema 100% estricta, usa SPECS (que incluye restricciones explícitas) o APIs de output estructurado.' } },
-          { '@type': 'Question', name: '¿Cómo usa PromptQuorum RTF?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum incluye RTF como plantilla de framework integrada. Los usuarios completan los campos Rol, Tarea y Formato, y PromptQuorum despacha el mismo prompt en 25+ modelos (GPT-4o, Claude, Gemini, modelos locales) para comparación y pruebas A/B.' } },
+          { '@type': 'Question', name: '¿Puede RTF imponer restricciones estrictas como output JSON?', acceptedAnswer: { '@type': 'Answer', text: 'Parcialmente. RTF puede solicitar "formato JSON" en el campo Formato, y los modelos modernos (GPT-5.5, Claude) generalmente cumplen. Para imposición de esquema 100% estricta, usa SPECS (que incluye restricciones explícitas) o APIs de output estructurado.' } },
+          { '@type': 'Question', name: '¿Cómo usa PromptQuorum RTF?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum incluye RTF como plantilla de framework integrada. Los usuarios completan los campos Rol, Tarea y Formato, y PromptQuorum despacha el mismo prompt en 25+ modelos (GPT-5.5, Claude, Gemini, modelos locales) para comparación y pruebas A/B.' } },
           { '@type': 'Question', name: '¿Qué te ayuda a hacer el framework RTF al hacer prompts de IA?', acceptedAnswer: { '@type': 'Answer', text: 'RTF te ayuda a estructurar prompts consistentemente al separar las preocupaciones en tres campos: quién es el modelo (Rol), qué tarea resuelve (Tarea), y cómo debe formatearse el output (Formato). Esto elimina la vaguedad y hace los prompts plantillas reutilizables.' } },
           { '@type': 'Question', name: '¿Qué significa RTF en prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'RTF significa Rol, Tarea, Formato — los tres componentes esenciales de una estructura de prompt liviana. Rol define la persona del modelo, Tarea define la acción y Formato define la estructura del output. Juntos crean el framework mínimo necesario para resultados consistentes.' } },
           { '@type': 'Question', name: '¿Cómo se compara el framework RTF con CO-STAR para prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'RTF tiene 3 componentes (Rol, Tarea, Formato) y es mínimal. CO-STAR tiene 6 componentes (Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta) y es completo. Usa RTF para tareas rutinarias; usa CO-STAR cuando el tono/audiencia/estilo sean críticos. RTF es tu predeterminado; CO-STAR es tu actualización.' } },
@@ -1043,7 +1043,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'El campo Formato es donde RTF añade más valor — la estructura explícita produce output dramáticamente más consistente.',
             'RTF maneja el 80% de las tareas LLM cotidianas. Pasa a CO-STAR (tono/audiencia), SPECS (restricciones) o TRACE (razonamiento) solo cuando RTF llegue a un límite.',
             'Los prompts RTF bien escritos son plantillas reutilizables. Guárdalos y reutilízalos 52 veces al año en lugar de reescribir cada semana.',
-            'Funciona en GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales (Ollama, LM Studio).',
+            'Funciona en GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales (Ollama, LM Studio).',
             'Usa PromptQuorum para probar el mismo prompt RTF en múltiples modelos lado a lado.',
           ],
         },
@@ -1055,7 +1055,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { type: 'in-plain-terms', text: 'Dile a la IA quién ser (Rol), qué hacer (Tarea) y cómo formatear la respuesta (Formato). Eso es todo. Tres cosas. Funciona para el 80% de las tareas cotidianas. Cuando deje de ser suficiente, pasas a CO-STAR o SPECS.' },
           ],
           content: [
-            '**El Framework RTF es un patrón de prompt de tres partes que le dice al modelo quién es, qué hacer y exactamente cómo debe verse la respuesta.** En lugar de enviar una pregunta suelta, especificas Rol, Tarea y Formato explícitamente. Esto funciona en GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales que ejecutas via Ollama o LM Studio.',
+            '**El Framework RTF es un patrón de prompt de tres partes que le dice al modelo quién es, qué hacer y exactamente cómo debe verse la respuesta.** En lugar de enviar una pregunta suelta, especificas Rol, Tarea y Formato explícitamente. Esto funciona en GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales que ejecutas via Ollama o LM Studio.',
             'RTF es intencionalmente mínimo. Con solo tres campos, es fácil de recordar, rápido de completar y lo suficientemente flexible para muchas tareas cotidianas. Puedes tratarlo como un "esqueleto de prompt predeterminado" siempre que no estés seguro de qué framework especializado usar.',
           ],
         },
@@ -1265,7 +1265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { title: 'Framework SPECS: Prompts de especificación estricta', url: '/es/prompt-engineering/specs-framework' },
             { title: 'Framework TRACE: Hacer visible el razonamiento de la IA', url: '/es/prompt-engineering/trace-framework' },
             { title: '¿Qué framework de prompt deberías usar?', url: '/es/prompt-engineering/which-framework-to-use' },
-            { title: '¿Cómo elegir el modelo correcto: GPT-4o vs Claude vs Gemini?', url: '/es/prompt-engineering/gpt-claude-gemini-which-model' },
+            { title: '¿Cómo elegir el modelo correcto: GPT-5.5 vs Claude vs Gemini?', url: '/es/prompt-engineering/gpt-claude-gemini-which-model' },
             { title: 'Framework CO-STAR', url: '/es/prompt-engineering/co-star-framework' },
           ],
         },
@@ -1283,7 +1283,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'Framework RTF : Role, Task, Format (2026)',
-      intro: 'Le Framework RTF est une structure de prompt légère à trois composants : Role (qui est le modèle), Task (quoi faire) et Format (comment formater la sortie). Il fonctionne sur GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux. Utilisez-le par défaut pour les tâches courantes — résumés, revues de code, e-mails, rapports — et passez à CO-STAR ou SPECS uniquement si vous avez besoin de plus de structure.',
+      intro: 'Le Framework RTF est une structure de prompt légère à trois composants : Role (qui est le modèle), Task (quoi faire) et Format (comment formater la sortie). Il fonctionne sur GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux. Utilisez-le par défaut pour les tâches courantes — résumés, revues de code, e-mails, rapports — et passez à CO-STAR ou SPECS uniquement si vous avez besoin de plus de structure.',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       readTime: '6 min de lecture',
@@ -1312,7 +1312,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
@@ -1396,7 +1396,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'RTF peut-il imposer des contraintes strictes comme la sortie JSON ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Partiellement. RTF peut demander « format JSON » dans le champ Format, et les modèles modernes (GPT-4o, Claude) s\'y conforment généralement. Pour 100% d\'imposition stricte de schéma, utilisez SPECS ou les APIs de sortie structurée.',
+              text: 'Partiellement. RTF peut demander « format JSON » dans le champ Format, et les modèles modernes (GPT-5.5, Claude) s\'y conforment généralement. Pour 100% d\'imposition stricte de schéma, utilisez SPECS ou les APIs de sortie structurée.',
             },
           },
           {
@@ -1420,7 +1420,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Le champ Format est la force de RTF — une structure explicite produit une sortie dramatiquement plus cohérente.',
             'RTF gère 80% des tâches LLM quotidiennes. Passez à CO-STAR (ton/audience), SPECS (contraintes) ou TRACE (raisonnement) seulement si RTF atteint ses limites.',
             'Les bons prompts RTF sont des modèles réutilisables. Enregistrez-les et réutilisez 52 fois par an au lieu de les réécrire chaque semaine.',
-            'Fonctionne sur GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux (Ollama, LM Studio).',
+            'Fonctionne sur GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux (Ollama, LM Studio).',
             'Utilisez PromptQuorum pour tester le même prompt RTF sur plusieurs modèles côte à côte.',
           ],
         },
@@ -1432,7 +1432,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { type: 'in-plain-terms', text: 'Dites à l\'IA qui être (Role), quoi faire (Task) et comment formater la réponse (Format). C\'est tout. Trois choses. Fonctionne pour 80% des tâches quotidiennes. Quand ce n\'est plus suffisant, passez à CO-STAR ou SPECS.' },
           ],
           content: [
-            '**Le Framework RTF est un modèle de prompt à trois parties qui dit au modèle qui il est, quoi faire et exactement comment la réponse doit ressembler.** Au lieu d\'envoyer une question vague, vous spécifiez explicitement Role, Task et Format. Cela fonctionne sur GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux que vous exécutez via Ollama ou LM Studio.',
+            '**Le Framework RTF est un modèle de prompt à trois parties qui dit au modèle qui il est, quoi faire et exactement comment la réponse doit ressembler.** Au lieu d\'envoyer une question vague, vous spécifiez explicitement Role, Task et Format. Cela fonctionne sur GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux que vous exécutez via Ollama ou LM Studio.',
             'RTF est volontairement minimal. Avec seulement trois champs, c\'est facile à retenir, rapide à remplir et flexible pour de nombreuses tâches quotidiennes. Vous pouvez le traiter comme un « squelette de prompt par défaut » quand vous ne savez pas quel framework spécialisé utiliser.',
           ],
         },
@@ -1648,7 +1648,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Dans PromptQuorum, le Framework RTF vous permet :',
           ],
           items: [
-            'Remplissez Role, Task et Format une fois et envoyez le même prompt structuré à 25+ modèles comme GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux configurés via Ollama ou LM Studio.',
+            'Remplissez Role, Task et Format une fois et envoyez le même prompt structuré à 25+ modèles comme GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux configurés via Ollama ou LM Studio.',
             'Enregistrez les prompts RTF comme modèles pour des workflows récurrents — par exemple « résumé de statut hebdomadaire », « brouillon de réponse client » ou « récapitulatif de rapport de bug ».',
             'Partagez les modèles RTF across votre équipe pour que même les non-experts créent des prompts qui produisent des sorties cohérentes et structurées.',
             'Testez côte à côte le même prompt RTF sur plusieurs modèles pour trouver le meilleur pour votre cas d\'usage.',
@@ -1684,7 +1684,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'RTF fonctionne-t-il avec tous les modèles de langage ?',
-              a: 'Oui. RTF est indépendant du framework. Il fonctionne avec GPT-4o, Claude, Gemini, les modèles open-source comme Llama 3.2, et les modèles locaux via Ollama ou LM Studio. Les principes s\'appliquent universellement à tous les LLMs qui suivent les instructions.',
+              a: 'Oui. RTF est indépendant du framework. Il fonctionne avec GPT-5.5, Claude, Gemini, les modèles open-source comme Llama 3.2, et les modèles locaux via Ollama ou LM Studio. Les principes s\'appliquent universellement à tous les LLMs qui suivent les instructions.',
             },
             {
               q: 'Comment rédiger une bonne spécification Format ?',
@@ -1698,7 +1698,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { title: 'Qu\'est-ce que l\'ingénierie des prompts ?', url: '/fr/prompt-engineering/what-is-prompt-engineering' },
             { title: 'Prompting Zero-Shot vs Few-Shot', url: '/fr/prompt-engineering/zero-shot-vs-few-shot' },
             { title: 'Prompting Contraint', url: '/fr/prompt-engineering/constrained-prompting' },
-            { title: 'Comment choisir le bon modèle : GPT-4o vs Claude vs Gemini', url: '/fr/prompt-engineering/gpt-claude-gemini-which-model' },
+            { title: 'Comment choisir le bon modèle : GPT-5.5 vs Claude vs Gemini', url: '/fr/prompt-engineering/gpt-claude-gemini-which-model' },
             { title: 'Framework CO-STAR', url: '/fr/prompt-engineering/co-star-framework' },
           ],
         },
@@ -1716,7 +1716,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'RTFフレームワーク：Role・Task・Formatのプロンプト構造（2026年）',
-      intro: 'RTFフレームワークは軽量な3要素プロンプト構造です。Role（モデルの役割）、Task（実行するタスク）、Format（出力形式）。GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、ローカルモデルで動作します。日常的なタスク（要約、コードレビュー、メール、レポート）に標準として使用し、より多くの構造が必要な場合のみCO-STARやSPECSにアップグレードしてください。',
+      intro: 'RTFフレームワークは軽量な3要素プロンプト構造です。Role（モデルの役割）、Task（実行するタスク）、Format（出力形式）。GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、ローカルモデルで動作します。日常的なタスク（要約、コードレビュー、メール、レポート）に標準として使用し、より多くの構造が必要な場合のみCO-STARやSPECSにアップグレードしてください。',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       readTime: '6分で読める',
@@ -1745,7 +1745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
@@ -1829,7 +1829,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'RTFはJSON出力のような厳密なConstraintを強制できますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'ある程度。Format フィールドで「JSONフォーマット」をリクエストでき、最新モデル（GPT-4o、Claude）は通常対応します。100%の厳密スキーマ強制にはSPECSまたは構造化出力APIを使用してください。',
+              text: 'ある程度。Format フィールドで「JSONフォーマット」をリクエストでき、最新モデル（GPT-5.5、Claude）は通常対応します。100%の厳密スキーマ強制にはSPECSまたは構造化出力APIを使用してください。',
             },
           },
           {
@@ -1853,7 +1853,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Format フィールドはRTFの力。明示的な構造は劇的に一貫性の高い出力を生成します。',
             'RTFは日常的なLLMタスク80%に対応。CO-STAR（トーン/オーディエンス）、SPECS（constraints）、TRACE（推論）へはRTFが限界に達した場合のみ。',
             '良いRTFプロンプトは再利用可能なテンプレート。毎週ゼロから書き直す代わりに、年間52回再利用します。',
-            'GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、ローカルモデル（Ollama、LM Studio）で動作。',
+            'GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、ローカルモデル（Ollama、LM Studio）で動作。',
             'PromptQuorumで複数モデルを並べてRTFプロンプトをテストします。',
           ],
         },
@@ -1865,7 +1865,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { type: 'in-plain-terms', text: 'AIに誰になるか（Role）、何をするか（Task）、答えをどう形式化するか（Format）を伝える。それだけ。3つのこと。日常タスク80%で機能。それ以上が必要になったらCO-STARやSPECSに移行します。' },
           ],
           content: [
-            '**RTFフレームワークは3つの部分のプロンプトパターンで、モデルに誰なのか、何をするのか、答えがどう見えるべきかを正確に伝えます。** ぼんやりした質問を送る代わりに、Role、Task、Formatを明示的に指定します。これはGPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、OllamaやLM Studioで実行するローカルモデルで動作します。',
+            '**RTFフレームワークは3つの部分のプロンプトパターンで、モデルに誰なのか、何をするのか、答えがどう見えるべきかを正確に伝えます。** ぼんやりした質問を送る代わりに、Role、Task、Formatを明示的に指定します。これはGPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、OllamaやLM Studioで実行するローカルモデルで動作します。',
             'RTFは意図的に最小化されています。3つのフィールドだけなので、覚えやすく、埋めるのが速く、多くの日常タスクに柔軟。どのスペシャライズドフレームワークを使うか分からない時の「デフォルトプロンプトスケルトン」として機能します。',
           ],
         },
@@ -2081,7 +2081,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'PromptQuorumではRTFは可能にします：',
           ],
           items: [
-            'Role、Task、Formatを一度埋めて、GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro、OllamaやLM Studioで設定したローカルモデルのような25+モデルに同じ構造化プロンプトを送信。',
+            'Role、Task、Formatを一度埋めて、GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、OllamaやLM Studioで設定したローカルモデルのような25+モデルに同じ構造化プロンプトを送信。',
             'RTFプロンプトをテンプレートで保存、反復ワークフロー用 —— 例：「週次ステータスサマリー」、「顧客返答下書き」、「バグレポート要約」。',
             'RTFテンプレートをチーム全体で共有、非エキスパートも一貫性・構造化出力を作成するプロンプトを作れます。',
             '複数モデル並べて同じRTFプロンプトをテスト、ユースケースに最良のものを見つける。',
@@ -2117,7 +2117,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '全LLMでRTF機能しますか？',
-              a: 'はい。RTFフレームワーク独立。GPT-4o、Claude、Gemini、Llama 3.2のようなOSS、OllamaやLM Studio経由ローカルモデル動作。原則全指示従順LLMに汎用。',
+              a: 'はい。RTFフレームワーク独立。GPT-5.5、Claude、Gemini、Llama 3.2のようなOSS、OllamaやLM Studio経由ローカルモデル動作。原則全指示従順LLMに汎用。',
             },
             {
               q: '良いFormat仕様をどう書きますか？',
@@ -2131,7 +2131,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { title: 'プロンプトエンジニアリングとは？', url: '/ja/prompt-engineering/what-is-prompt-engineering' },
             { title: 'Zero-Shot vs Few-Shotプロンプティング', url: '/ja/prompt-engineering/zero-shot-vs-few-shot' },
             { title: '制約付きプロンプティング', url: '/ja/prompt-engineering/constrained-prompting' },
-            { title: '正しいモデルの選び方：GPT-4o vs Claude vs Gemini', url: '/ja/prompt-engineering/gpt-claude-gemini-which-model' },
+            { title: '正しいモデルの選び方：GPT-5.5 vs Claude vs Gemini', url: '/ja/prompt-engineering/gpt-claude-gemini-which-model' },
             { title: 'CO-STARフレームワーク', url: '/ja/prompt-engineering/co-star-framework' },
           ],
         },
@@ -2149,7 +2149,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'RTF框架：Role、Task、Format的提示词结构（2026）',
-      intro: 'RTF框架是一种轻量级的三要素提示词结构：Role（模型的角色）、Task（要执行的任务）、Format（输出格式）。适用于GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro和本地模型。将其作为日常任务的默认选择——摘要、代码审查、电子邮件、报告——仅在需要更多结构时才升级到CO-STAR或SPECS。',
+      intro: 'RTF框架是一种轻量级的三要素提示词结构：Role（模型的角色）、Task（要执行的任务）、Format（输出格式）。适用于GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro和本地模型。将其作为日常任务的默认选择——摘要、代码审查、电子邮件、报告——仅在需要更多结构时才升级到CO-STAR或SPECS。',
       publishDate: '2026-03-24',
       dateModified: '2026-05-04',
       readTime: '阅读约6分钟',
@@ -2159,7 +2159,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       quickFacts: [
         'RTF = Role + Task + Format — 最轻量级的结构化提示词框架（3个组件 vs CO-STAR/SPECS的5-6个组件）',
         '为日常、重复性任务而设计：摘要、电子邮件、代码审查、会议记录',
-        '适用于GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro和本地模型（Ollama、LM Studio）',
+        '适用于GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro和本地模型（Ollama、LM Studio）',
         'RTF是推荐的起始框架 — 仅当达到限制时才升级到CO-STAR、SPECS或TRACE',
         '格式字段可以包含约束和示例，使RTF比其3个组件的数量更灵活',
         'PromptQuorum将RTF作为内置框架，支持跨25个以上模型的多模型分发',
@@ -2205,7 +2205,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
@@ -2257,7 +2257,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: '我能将RTF与Ollama等本地模型一起使用吗？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '可以。RTF适用于任何LLM，包括通过Ollama或LM Studio运行的本地模型。较简单的模型（Mistral 7B、LLaMA 2）可能在复杂Format字段上不够一致，但RTF仍能改进输出质量。',
+              text: '可以。RTF适用于任何LLM，包括通过Ollama或LM Studio运行的本地模型。较简单的模型（Mistral Small、Llama 3.3）可能在复杂Format字段上不够一致，但RTF仍能改进输出质量。',
             },
           },
           {
@@ -2289,7 +2289,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'RTF能否强制执行严格的约束，如JSON输出？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '部分可以。RTF可以在Format字段中请求"JSON格式"，现代模型（GPT-4o、Claude）通常会遵守。为了100%严格的模式强制执行，使用SPECS（包含显式约束）或结构化输出API。',
+              text: '部分可以。RTF可以在Format字段中请求"JSON格式"，现代模型（GPT-5.5、Claude）通常会遵守。为了100%严格的模式强制执行，使用SPECS（包含显式约束）或结构化输出API。',
             },
           },
           {
@@ -2297,7 +2297,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'PromptQuorum如何使用RTF？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'PromptQuorum将RTF作为内置框架模板包含在内。用户填入Role、Task和Format字段，PromptQuorum将相同的提示词分发到25个以上的模型（GPT-4o、Claude、Gemini、本地模型），用于比较和A/B测试。',
+              text: 'PromptQuorum将RTF作为内置框架模板包含在内。用户填入Role、Task和Format字段，PromptQuorum将相同的提示词分发到25个以上的模型（GPT-5.5、Claude、Gemini、本地模型），用于比较和A/B测试。',
             },
           },
           {
@@ -2329,7 +2329,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Format字段是RTF增加最大价值的地方 — 显式结构产生更加一致的输出。',
             'RTF处理80%的日常LLM任务。仅当RTF达到限制时才升级到CO-STAR（语气/受众）、SPECS（约束）或TRACE（推理）。',
             '编写良好的RTF提示词是可重复使用的模板。保存它们，一年重复使用52次，而不是每周重写一次。',
-            '适用于GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro和本地模型（Ollama、LM Studio）。',
+            '适用于GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro和本地模型（Ollama、LM Studio）。',
             '使用PromptQuorum在多个模型之间并排测试相同的RTF提示词。',
           ],
         },
@@ -2341,7 +2341,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { type: 'in-plain-terms', text: '告诉AI它是谁（Role）、要做什么（Task）以及如何格式化答案（Format）。就这样。三件事。适用于80%的日常任务。当不再足够时，您就升级到CO-STAR或SPECS。' },
           ],
           content: [
-            '**RTF框架是一个三部分提示词模式，告诉模型它是谁、要做什么，以及答案应该如何显示。** 与其发送一个松散的问题，您可以显式指定Role、Task和Format。这适用于GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro和您通过Ollama或LM Studio运行的本地模型。',
+            '**RTF框架是一个三部分提示词模式，告诉模型它是谁、要做什么，以及答案应该如何显示。** 与其发送一个松散的问题，您可以显式指定Role、Task和Format。这适用于GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro和您通过Ollama或LM Studio运行的本地模型。',
             'RTF故意保持最小化。仅有三个字段，易于记住，填写速度快，对许多日常任务足够灵活。当您不确定使用哪个专业框架时，您可以将其视为"默认提示词骨架"。',
           ],
         },
@@ -2557,7 +2557,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '在PromptQuorum中，RTF框架让您能够：',
           ],
           items: [
-            '填入Role、Task和Format一次，并将相同的结构化提示词发送到25个以上的模型，如GPT-4o、Claude Opus 4.8、Gemini 3.1 Pro以及通过Ollama或LM Studio配置的本地模型。',
+            '填入Role、Task和Format一次，并将相同的结构化提示词发送到25个以上的模型，如GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro以及通过Ollama或LM Studio配置的本地模型。',
             '将RTF提示词保存为重复工作流的模板 — 例如"每周状态摘要"、"客户回复草稿"或"错误报告摘要"。',
             '在您的团队中共享RTF模板，即使非专家也可以创建产生一致、结构化输出的提示词。',
             '在多个模型之间并排A/B测试相同的RTF提示词，以找到最适合您的用例的模型。',
@@ -2632,7 +2632,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'RTF可以与所有语言模型一起工作吗？',
-              a: '可以。RTF与框架无关。它适用于GPT-4o、Claude、Gemini、Llama 3.2等开源模型，以及通过Ollama或LM Studio的本地模型。这些原则普遍适用于任何遵循指令的LLM。',
+              a: '可以。RTF与框架无关。它适用于GPT-5.5、Claude、Gemini、Llama 3.2等开源模型，以及通过Ollama或LM Studio的本地模型。这些原则普遍适用于任何遵循指令的LLM。',
             },
             {
               q: '我如何编写一个好的Format规范？',
@@ -2646,7 +2646,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { title: '什么是提示词工程', url: '/zh/prompt-engineering/what-is-prompt-engineering' },
             { title: 'Zero-Shot vs Few-Shot提示词', url: '/zh/prompt-engineering/zero-shot-vs-few-shot' },
             { title: '约束提示词', url: '/zh/prompt-engineering/constrained-prompting' },
-            { title: '如何选择合适的模型：GPT-4o vs Claude vs Gemini', url: '/zh/prompt-engineering/gpt-claude-gemini-which-model' },
+            { title: '如何选择合适的模型：GPT-5.5 vs Claude vs Gemini', url: '/zh/prompt-engineering/gpt-claude-gemini-which-model' },
             { title: 'CO-STAR框架', url: '/zh/prompt-engineering/co-star-framework' },
           ],
         },

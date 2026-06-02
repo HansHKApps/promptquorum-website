@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'GPT-4', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'ChatGPT', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 1.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.5 Pro', url: 'https://deepmind.google' },
           { '@type': 'Organization', name: 'Google DeepMind', url: 'https://deepmind.google' },
           { '@type': 'Organization', name: 'Meta AI', url: 'https://www.meta.com' },
         ],
@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '2024–2025: From Prompt Engineering to Context Design',
           content: [
             'By 2024, a new framing began to displace the simple idea of "write a better prompt." Practitioners and researchers started referring to context engineering — the practice of orchestrating what goes into the full context window: the system prompt, retrieved documents, tool outputs, conversation history, and user input, all composed deliberately to guide model behaviour. The prompt was no longer a standalone artifact; it was one layer in a designed context.',
-            'Several developments accelerated this shift. Meta\'s Llama 3-class models (2024) made capable open-source LLMs available for private deployment, shifting some prompt engineering from cloud APIs to local infrastructure. Context windows grew to 1 million tokens or more (Gemini 1.5 Pro), making it practical to inject entire codebases, books, or document collections into a single prompt. Multi-agent frameworks like LangChain and AutoGen turned prompting into orchestration — one prompt triggers another model, which triggers a tool, which returns context to the next prompt.',
+            'Several developments accelerated this shift. Meta\'s Llama 3-class models (2024) made capable open-source LLMs available for private deployment, shifting some prompt engineering from cloud APIs to local infrastructure. Context windows grew to 1 million tokens or more (Gemini 3.5 Pro), making it practical to inject entire codebases, books, or document collections into a single prompt. Multi-agent frameworks like LangChain and AutoGen turned prompting into orchestration — one prompt triggers another model, which triggers a tool, which returns context to the next prompt.',
           ],
         },
 
@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Year': '2023 (Mar)', 'Milestone': 'GPT-4 release; multimodal prompting with images', 'Why It Matters': 'Extended prompt engineering beyond text to visual inputs and large context windows' },
             { 'Year': '2023', 'Milestone': 'Frameworks formalised: CRAFT, CO-STAR, SPECS, RISEN; official guides from OpenAI and Google', 'Why It Matters': 'Turned prompt engineering from personal craft into teachable, shareable practice' },
             { 'Year': '2023–2024', 'Milestone': 'APE paper (Zhou et al.) and DSPy framework — AI-optimised prompts', 'Why It Matters': 'LLMs shown to write prompts as well as humans; automated prompt optimisation became practical' },
-            { 'Year': '2024', 'Milestone': 'Llama 3-class models; context windows exceed 1M tokens (Gemini 1.5 Pro)', 'Why It Matters': 'Open-source LLMs for private deployment; massive context shifted focus to context engineering' },
+            { 'Year': '2024', 'Milestone': 'Llama 3-class models; context windows exceed 1M tokens (Gemini 3.5 Pro)', 'Why It Matters': 'Open-source LLMs for private deployment; massive context shifted focus to context engineering' },
             { 'Year': '2025 (Q1–Q2)', 'Milestone': 'Extended thinking / reasoning modes: Claude 4.8 Sonnet, OpenAI o3, DeepSeek R1, Gemini Deep Think', 'Why It Matters': 'Models internalize step-by-step reasoning; prompt-level CoT becomes optional on frontier models' },
             { 'Year': '2025 (Q3–Q4)', 'Milestone': 'LLaMA 4 (MoE); context windows reach 10M tokens on some models', 'Why It Matters': 'Open-weights models reach near-frontier quality; MoE architecture reduces compute costs for self-hosting' },
             { 'Year': '2026', 'Milestone': 'Context design and multi-agent orchestration replace simple prompt tweaking', 'Why It Matters': 'Prompting becomes one layer in a composed context — system-level thinking required; prompt engineering skill embedded in all AI-using roles' },
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '2024–2025: Von Prompt Engineering zu Kontext-Design',
           content: [
             'Bis 2024 begann eine neue Rahmung die einfache Idee des „besseren Prompts schreiben" zu verdrängen. Praktiker und Forscher begannen, von Context Engineering zu sprechen – der Praxis, zu orchestrieren, was in das vollständige Kontextfenster einfließt: den System-Prompt, abgerufene Dokumente, Werkzeugausgaben, Gesprächsverlauf und Benutzereingaben, alle bewusst zusammengestellt, um das Modellverhalten zu steuern. Der Prompt war kein eigenständiges Artefakt mehr; er war eine Schicht in einem gestalteten Kontext.',
-            'Mehrere Entwicklungen beschleunigten diesen Wandel. Metas Llama-3-Klasse-Modelle (2024) machten leistungsfähige Open-Source-LLMs für private Deployments verfügbar und verlagerten einen Teil des Prompt Engineerings von Cloud-APIs zu lokaler Infrastruktur. Kontextfenster wuchsen auf 1 Million Token oder mehr (Gemini 1.5 Pro), was es praktikabel machte, gesamte Codebasen, Bücher oder Dokumentensammlungen in einen einzigen Prompt einzuspeisen. Multi-Agenten-Frameworks wie LangChain und AutoGen verwandelten Prompting in Orchestrierung – ein Prompt löst ein anderes Modell aus, das ein Werkzeug auslöst, das Kontext zum nächsten Prompt zurückgibt.',
+            'Mehrere Entwicklungen beschleunigten diesen Wandel. Metas Llama-3-Klasse-Modelle (2024) machten leistungsfähige Open-Source-LLMs für private Deployments verfügbar und verlagerten einen Teil des Prompt Engineerings von Cloud-APIs zu lokaler Infrastruktur. Kontextfenster wuchsen auf 1 Million Token oder mehr (Gemini 3.5 Pro), was es praktikabel machte, gesamte Codebasen, Bücher oder Dokumentensammlungen in einen einzigen Prompt einzuspeisen. Multi-Agenten-Frameworks wie LangChain und AutoGen verwandelten Prompting in Orchestrierung – ein Prompt löst ein anderes Modell aus, das ein Werkzeug auslöst, das Kontext zum nächsten Prompt zurückgibt.',
           ],
         },
 
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Jahr': '2023 (März)', 'Meilenstein': 'GPT-4-Veröffentlichung; multimodales Prompting mit Bildern', 'Warum es wichtig ist': 'Erweiterte Prompt Engineering über Text hinaus auf visuelle Eingaben und große Kontextfenster' },
             { 'Jahr': '2023', 'Meilenstein': 'Frameworks formalisiert: CRAFT, CO-STAR, SPECS, RISEN; offizielle Leitfäden von OpenAI und Google', 'Warum es wichtig ist': 'Verwandelte Prompt Engineering von persönlichem Handwerk in lehr- und teilbare Praxis' },
             { 'Jahr': '2023–2024', 'Meilenstein': 'APE-Paper (Zhou et al.) und DSPy-Framework – KI-optimierte Prompts', 'Warum es wichtig ist': 'LLMs konnten Prompts ebenso gut schreiben wie Menschen; automatisierte Prompt-Optimierung wurde praktikabel' },
-            { 'Jahr': '2024', 'Meilenstein': 'Llama-3-Klasse-Modelle; Kontextfenster überschreiten 1M Token (Gemini 1.5 Pro)', 'Warum es wichtig ist': 'Open-Source-LLMs für private Deployments; massiver Kontext verlagerte Fokus auf Kontext-Engineering' },
+            { 'Jahr': '2024', 'Meilenstein': 'Llama-3-Klasse-Modelle; Kontextfenster überschreiten 1M Token (Gemini 3.5 Pro)', 'Warum es wichtig ist': 'Open-Source-LLMs für private Deployments; massiver Kontext verlagerte Fokus auf Kontext-Engineering' },
             { 'Jahr': '2025–2026', 'Meilenstein': 'Kontext-Design und Multi-Agenten-Orchestrierung ersetzen einfaches Prompt-Tweaking', 'Warum es wichtig ist': 'Prompting wird zu einer Schicht in einem zusammengestellten Kontext – systemisches Denken erforderlich' },
           ],
         },
@@ -695,7 +695,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '2024–2025: Del prompt engineering al context design',
           content: [
             'Para 2024, un nuevo marco comenzó a desplazar la simple idea de "escribir un mejor prompt". Los profesionales e investigadores empezaron a referirse al context engineering — la práctica de orquestar lo que entra en el context window completo: el system prompt, los documentos recuperados, los outputs de las herramientas, el historial de conversación y el input del usuario, todos compuestos deliberadamente para guiar el comportamiento del modelo. El prompt ya no era un artefacto independiente; era una capa en un contexto diseñado.',
-            'Varios desarrollos aceleraron este cambio. Los modelos de la clase Llama 3 de Meta (2024) hicieron disponibles LLMs de código abierto capaces para despliegues privados. Los context windows crecieron hasta 1 millón de tokens o más (Gemini 1.5 Pro). Los frameworks multi-agente como LangChain y AutoGen convirtieron el prompting en orquestación.',
+            'Varios desarrollos aceleraron este cambio. Los modelos de la clase Llama 3 de Meta (2024) hicieron disponibles LLMs de código abierto capaces para despliegues privados. Los context windows crecieron hasta 1 millón de tokens o más (Gemini 3.5 Pro). Los frameworks multi-agente como LangChain y AutoGen convirtieron el prompting en orquestación.',
           ],
         },
 
@@ -722,7 +722,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Año': '2023 (mar)', 'Hito': 'Lanzamiento de GPT-4; prompting multimodal con imágenes', 'Por qué importa': 'Extendió el prompt engineering más allá del texto a inputs visuales y context windows grandes' },
             { 'Año': '2023', 'Hito': 'Frameworks formalizados: CRAFT, CO-STAR, SPECS, RISEN; guías oficiales de OpenAI y Google', 'Por qué importa': 'Convirtió el prompt engineering de un arte personal en una práctica enseñable y compartible' },
             { 'Año': '2023–2024', 'Hito': 'Artículo APE (Zhou et al.) y framework DSPy — prompts optimizados por IA', 'Por qué importa': 'Los LLMs demostraron poder escribir prompts tan bien como los humanos; la optimización automática de prompts se volvió práctica' },
-            { 'Año': '2024', 'Hito': 'Modelos clase Llama 3; context windows superan 1M tokens (Gemini 1.5 Pro)', 'Por qué importa': 'LLMs de código abierto para despliegues privados; el contexto masivo desplazó el foco hacia el context engineering' },
+            { 'Año': '2024', 'Hito': 'Modelos clase Llama 3; context windows superan 1M tokens (Gemini 3.5 Pro)', 'Por qué importa': 'LLMs de código abierto para despliegues privados; el contexto masivo desplazó el foco hacia el context engineering' },
             { 'Año': '2025–2026', 'Hito': 'El context design y la orquestación multi-agente reemplazan el simple ajuste de prompts', 'Por qué importa': 'El prompting se convierte en una capa en un contexto compuesto — se requiere pensamiento a nivel de sistema' },
           ],
         },
@@ -900,7 +900,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '2024–2025 : Du prompt engineering à la conception de contexte',
           content: [
             'En 2024, un nouveau cadrage a commencé à déplacer la simple idée d\'« écrire un meilleur prompt ». Les praticiens et chercheurs ont commencé à parler d\'ingénierie de contexte — la pratique d\'orchestrer ce qui entre dans la fenêtre de contexte complète : le prompt système, les documents récupérés, les sorties d\'outils, l\'historique de conversation et l\'entrée utilisateur, tous composés délibérément pour guider le comportement du modèle. Le prompt n\'était plus un artefact autonome ; c\'était une couche dans un contexte conçu.',
-            'Plusieurs développements ont accéléré ce glissement. Les modèles de la classe Llama 3 de Meta (2024) ont rendu des LLM open source capables disponibles pour un déploiement privé, déplaçant une partie du prompt engineering des API cloud vers l\'infrastructure locale. Les fenêtres de contexte ont grandi jusqu\'à 1 million de tokens ou plus (Gemini 1.5 Pro), rendant pratique l\'injection de bases de code entières, de livres ou de collections de documents dans un seul prompt. Les frameworks multi-agents comme LangChain et AutoGen ont transformé le prompting en orchestration — un prompt déclenche un autre modèle, qui déclenche un outil, qui renvoie le contexte au prompt suivant.',
+            'Plusieurs développements ont accéléré ce glissement. Les modèles de la classe Llama 3 de Meta (2024) ont rendu des LLM open source capables disponibles pour un déploiement privé, déplaçant une partie du prompt engineering des API cloud vers l\'infrastructure locale. Les fenêtres de contexte ont grandi jusqu\'à 1 million de tokens ou plus (Gemini 3.5 Pro), rendant pratique l\'injection de bases de code entières, de livres ou de collections de documents dans un seul prompt. Les frameworks multi-agents comme LangChain et AutoGen ont transformé le prompting en orchestration — un prompt déclenche un autre modèle, qui déclenche un outil, qui renvoie le contexte au prompt suivant.',
           ],
         },
 
@@ -927,7 +927,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Année': '2023 (mars)', 'Jalon': 'Sortie de GPT-4 ; prompting multimodal avec images', 'Pourquoi c\'est important': 'A étendu le prompt engineering au-delà du texte vers les entrées visuelles et les grandes fenêtres de contexte' },
             { 'Année': '2023', 'Jalon': 'Frameworks formalisés : CRAFT, CO-STAR, SPECS, RISEN ; guides officiels d\'OpenAI et Google', 'Pourquoi c\'est important': 'A transformé le prompt engineering d\'un art personnel en pratique enseignable et partageable' },
             { 'Année': '2023–2024', 'Jalon': 'Article APE (Zhou et al.) et framework DSPy — prompts optimisés par IA', 'Pourquoi c\'est important': 'Les LLM se sont avérés capables d\'écrire des prompts aussi bien que les humains ; l\'optimisation automatisée des prompts est devenue pratique' },
-            { 'Année': '2024', 'Jalon': 'Modèles de la classe Llama 3 ; fenêtres de contexte dépassant 1M de tokens (Gemini 1.5 Pro)', 'Pourquoi c\'est important': 'LLM open source pour déploiement privé ; le contexte massif a déplacé l\'attention vers l\'ingénierie de contexte' },
+            { 'Année': '2024', 'Jalon': 'Modèles de la classe Llama 3 ; fenêtres de contexte dépassant 1M de tokens (Gemini 3.5 Pro)', 'Pourquoi c\'est important': 'LLM open source pour déploiement privé ; le contexte massif a déplacé l\'attention vers l\'ingénierie de contexte' },
             { 'Année': '2025–2026', 'Jalon': 'La conception de contexte et l\'orchestration multi-agents remplacent le simple ajustement de prompts', 'Pourquoi c\'est important': 'Le prompting devient une couche dans un contexte composé — une réflexion au niveau système est requise' },
           ],
         },
@@ -1104,7 +1104,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqTest: {
           title: 'PromptQuorum マルチモデルテスト：フレームワークのモデル間での効果',
           content: [
-            'PromptQuorumは同じタスク — CO-STARフレームワークで構造化された — をGPT-4o、Claude Opus 4.8、Gemini 1.5 Proに送信しました。3つのモデル全てが最初の試行でフォーマット準拠、長さ準拠の回答を生成しました。フレームワークなしの同じタスクは、モデル間で平均2～3回の修正ラウンドが必要でした、有用な出力に到達するために。',
+            'PromptQuorumは同じタスク — CO-STARフレームワークで構造化された — をGPT-5.5、Claude Opus 4.8、Gemini 3.5 Proに送信しました。3つのモデル全てが最初の試行でフォーマット準拠、長さ準拠の回答を生成しました。フレームワークなしの同じタスクは、モデル間で平均2～3回の修正ラウンドが必要でした、有用な出力に到達するために。',
             'PromptQuorumは、この期間に正式化された9つのフレームワーク — CO-STAR、CRAFT、RISEN、SPECS、TRACE、その他4つ — を単一のインターフェースに統合し、実践者が毎回ゼロから構築することなく各構造を適用できるようにしています。',
           ],
         },
@@ -1122,7 +1122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '2024〜2025年：プロンプトエンジニアリングからコンテキストデザインへ',
           content: [
             '2024年までに、「より良いプロンプトを書く」というシンプルなアイデアを置き換える新しいフレーミングが現れ始めました。実践者と研究者はコンテキストエンジニアリングを言及し始めました — フルコンテキストウィンドウに何が入るかを調整する実践：システムプロンプト・取得したドキュメント・ツール出力・会話履歴・ユーザー入力が、すべてモデルの動作を誘導するために意図的に組み合わされます。プロンプトはもはやスタンドアロンの成果物ではなく、設計されたコンテキストの一層でした。',
-            'いくつかの発展がこのシフトを加速しました。Metaのモデル（2024年のLlama 3クラス）はプライベート展開のための有能なオープンソースLLMを利用可能にし、一部のプロンプトエンジニアリングをクラウドAPIからローカルインフラへとシフトしました。コンテキストウィンドウは100万トークン以上（Gemini 1.5 Pro）に成長し、コードベース全体・書籍・ドキュメントコレクション全体を単一のプロンプトに注入することが実用的になりました。LangChainやAutoGenのようなマルチエージェントフレームワークはプロンプティングをオーケストレーションに変えました — 一つのプロンプトが別のモデルをトリガーし、それがツールをトリガーし、それが次のプロンプトにコンテキストを返します。',
+            'いくつかの発展がこのシフトを加速しました。Metaのモデル（2024年のLlama 3クラス）はプライベート展開のための有能なオープンソースLLMを利用可能にし、一部のプロンプトエンジニアリングをクラウドAPIからローカルインフラへとシフトしました。コンテキストウィンドウは100万トークン以上（Gemini 3.5 Pro）に成長し、コードベース全体・書籍・ドキュメントコレクション全体を単一のプロンプトに注入することが実用的になりました。LangChainやAutoGenのようなマルチエージェントフレームワークはプロンプティングをオーケストレーションに変えました — 一つのプロンプトが別のモデルをトリガーし、それがツールをトリガーし、それが次のプロンプトにコンテキストを返します。',
           ],
         },
 
@@ -1149,7 +1149,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { '年': '2023年（3月）', 'マイルストーン': 'GPT-4リリース；画像を使ったマルチモーダルプロンプティング', '重要な理由': 'プロンプトエンジニアリングをテキストを超えたビジュアル入力と大きなコンテキストウィンドウに拡張した' },
             { '年': '2023年', 'マイルストーン': 'フレームワークの体系化：CRAFT・CO-STAR・SPECS・RISEN；OpenAIとGoogleからの公式ガイド', '重要な理由': 'プロンプトエンジニアリングを個人的な技から教えられる・共有可能な実践に変えた' },
             { '年': '2023〜2024年', 'マイルストーン': 'APE論文（Zhou et al.）とDSPyフレームワーク — AIが最適化したプロンプト', '重要な理由': 'LLMが人間と同様にプロンプトを書けることが示された；自動プロンプト最適化が実用的になった' },
-            { '年': '2024年', 'マイルストーン': 'Llama 3クラスのモデル；コンテキストウィンドウが100万トークンを超える（Gemini 1.5 Pro）', '重要な理由': 'プライベート展開のためのオープンソースLLM；大規模なコンテキストがコンテキストエンジニアリングへの焦点のシフトを加速した' },
+            { '年': '2024年', 'マイルストーン': 'Llama 3クラスのモデル；コンテキストウィンドウが100万トークンを超える（Gemini 3.5 Pro）', '重要な理由': 'プライベート展開のためのオープンソースLLM；大規模なコンテキストがコンテキストエンジニアリングへの焦点のシフトを加速した' },
             { '年': '2025〜2026年', 'マイルストーン': 'コンテキストデザインとマルチエージェントオーケストレーションがシンプルなプロンプト調整に取って代わる', '重要な理由': 'プロンプティングは組み合わされたコンテキストの一層になった — システムレベルの思考が必要' },
           ],
         },
@@ -1336,7 +1336,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '2024至2025年：从提示词工程到上下文设计',
           content: [
             '到2024年，一种新的框架开始取代"写一个更好的提示词"这个简单概念。从业者和研究人员开始提及上下文工程——一种编排完整上下文窗口内容的实践：系统提示词、检索到的文档、工具输出、对话历史和用户输入，所有这些都经过精心组合以引导模型行为。提示词不再是独立的产物；它是一个设计上下文中的一层。',
-            '多项发展加速了这一转变。Meta 的 Llama 3 系列模型（2024年）使强大的开源大型语言模型可用于私有部署，将部分提示词工程从云端 API 转移到本地基础设施。上下文窗口增长到100万词元或更多（Gemini 1.5 Pro），使得将整个代码库、书籍或文档集合注入单个提示词成为可行。LangChain 和 AutoGen 等多智能体框架将提示变成了编排——一个提示词触发另一个模型，该模型触发一个工具，工具将上下文返回给下一个提示词。',
+            '多项发展加速了这一转变。Meta 的 Llama 3 系列模型（2024年）使强大的开源大型语言模型可用于私有部署，将部分提示词工程从云端 API 转移到本地基础设施。上下文窗口增长到100万词元或更多（Gemini 3.5 Pro），使得将整个代码库、书籍或文档集合注入单个提示词成为可行。LangChain 和 AutoGen 等多智能体框架将提示变成了编排——一个提示词触发另一个模型，该模型触发一个工具，工具将上下文返回给下一个提示词。',
           ],
         },
 
@@ -1363,7 +1363,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { '年份': '2023年（3月）', '里程碑': 'GPT-4 发布；支持图像的多模态提示', '重要意义': '将提示词工程延伸至文本以外的视觉输入和大型上下文窗口' },
             { '年份': '2023年', '里程碑': '框架正式化：CRAFT、CO-STAR、SPECS、RISEN；OpenAI 和 Google 发布官方指南', '重要意义': '将提示词工程从个人技巧转变为可教授、可共享的实践' },
             { '年份': '2023–2024年', '里程碑': 'APE 论文（Zhou 等人）和 DSPy 框架——AI 优化的提示词', '重要意义': '大型语言模型被证明可以像人类一样编写提示词；自动化提示词优化变得实际可行' },
-            { '年份': '2024年', '里程碑': 'Llama 3 系列模型；上下文窗口超过100万词元（Gemini 1.5 Pro）', '重要意义': '开源大型语言模型支持私有部署；超大上下文窗口将重心转移至上下文工程' },
+            { '年份': '2024年', '里程碑': 'Llama 3 系列模型；上下文窗口超过100万词元（Gemini 3.5 Pro）', '重要意义': '开源大型语言模型支持私有部署；超大上下文窗口将重心转移至上下文工程' },
             { '年份': '2025–2026年', '里程碑': '上下文设计和多智能体编排取代简单的提示词调整', '重要意义': '提示词成为组合上下文中的一层——需要系统级思维' },
           ],
         },

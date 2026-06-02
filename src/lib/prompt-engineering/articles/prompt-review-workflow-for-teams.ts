@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     intro: 'Unreviewed prompts cause 3x more production failures than reviewed ones. A structured team prompt review workflow prevents hallucinations from shipping, catches security vulnerabilities before deployment, and ensures consistency across models. This guide covers the complete workflow: triggering review gates, assembling review teams, running quality checks, and automating decision-making.',
     publishDate: '2026-04-29',
     dateModified: '2026-04-29',
-    lastFactChecked: '2026-04-30 — GPT-4o, Claude, Braintrust, GitHub Actions, GitLab CI verified',
+    lastFactChecked: '2026-04-30 — GPT-5.5, Claude, Braintrust, GitHub Actions, GitLab CI verified',
     educationalLevel: 'Intermediate',
     audience: 'Developers building with LLMs, prompt engineers, engineering team leads',
     toc: [
@@ -189,7 +189,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             'Criterion': 'Model Fit',
             'What to Check': 'Is the prompt written for the target model? Does it use model-specific features correctly?',
-            'Fail Example': 'Claude-specific instructions (thinking tags) used in a prompt deployed to GPT-4o.',
+            'Fail Example': 'Claude-specific instructions (thinking tags) used in a prompt deployed to GPT-5.5.',
             'Pass Example': 'Prompt is agnostic, or explicitly documented: "For Claude. Uses extended thinking." '
           },
         ],
@@ -342,7 +342,7 @@ require_code_owner_reviews: true`,
         faqs: [
           {
             q: 'What should a prompt review checklist include?',
-            a: 'A prompt review checklist must cover: (1) Clarity — is the instruction unambiguous? (2) Context — are enough details provided for the model to reason correctly? (3) Output format — does the prompt specify expected output structure (JSON, markdown, etc.)? (4) Constraints — are hallucination risks (factual claims) flagged? (5) Security — are prompt injection vulnerabilities possible? (6) Consistency — does the prompt match existing patterns in your codebase? (7) Model compatibility — is the prompt written for the intended model (GPT-4o, Claude, Llama, etc.)?'
+            a: 'A prompt review checklist must cover: (1) Clarity — is the instruction unambiguous? (2) Context — are enough details provided for the model to reason correctly? (3) Output format — does the prompt specify expected output structure (JSON, markdown, etc.)? (4) Constraints — are hallucination risks (factual claims) flagged? (5) Security — are prompt injection vulnerabilities possible? (6) Consistency — does the prompt match existing patterns in your codebase? (7) Model compatibility — is the prompt written for the intended model (GPT-5.5, Claude, Llama, etc.)?'
           },
           {
             q: 'Who should review prompts in a team?',
@@ -370,7 +370,7 @@ require_code_owner_reviews: true`,
           },
           {
             q: 'How often should we review existing prompts?',
-            a: 'Review prompts on these triggers: (1) Every change (code review style). (2) When deploying to a new model (e.g., migrating from GPT-4o to Claude). (3) When use case changes (e.g., prompt moves from customer-facing to internal). (4) After a production incident (hallucination, wrong output). Do NOT require review for documentation-only changes or test-only changes.'
+            a: 'Review prompts on these triggers: (1) Every change (code review style). (2) When deploying to a new model (e.g., migrating from GPT-5.5 to Claude). (3) When use case changes (e.g., prompt moves from customer-facing to internal). (4) After a production incident (hallucination, wrong output). Do NOT require review for documentation-only changes or test-only changes.'
           },
           {
             q: 'What tools help automate prompt review?',

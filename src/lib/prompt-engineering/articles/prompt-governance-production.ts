@@ -49,7 +49,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'PromptHub' },
         { '@type': 'Thing', name: 'Git' },
         { '@type': 'Thing', name: 'Braintrust' },
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'PromptQuorum' },
         { '@type': 'Thing', name: 'NIST AI Risk Management Framework' },
@@ -104,7 +104,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       ownership_model_part2: {
         content: [
-          'Add a Prompt Owner role for high-traffic production prompts. The Prompt Owner is accountable for the prompt\'s live performance across all model versions — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro — and is the first contact during incidents.',
+          'Add a Prompt Owner role for high-traffic production prompts. The Prompt Owner is accountable for the prompt\'s live performance across all model versions — GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro — and is the first contact during incidents.',
           'Avoid having the same person serve as both Author and Approver. Self-approved prompts have a significantly higher incident rate. If your team is too small for three distinct roles, at minimum require a second person\'s sign-off before any prompt reaches production.',
         ],
         callouts: [
@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         items: [
           'Gate 1 — Automated tests: the prompt must pass your regression test suite (golden set + edge cases) with a pass rate ≥ 90%. Run with Braintrust or Promptfoo. Failures block deployment automatically.',
-          'Gate 2 — Peer review: a Reviewer signs off on quality and compliance. The review checklist covers: task completeness, format compliance, safety constraints, and model-specific behavior (test on GPT-4o and Claude 4.6 Sonnet at minimum).',
+          'Gate 2 — Peer review: a Reviewer signs off on quality and compliance. The review checklist covers: task completeness, format compliance, safety constraints, and model-specific behavior (test on GPT-5.5 and Claude 4.6 Sonnet at minimum).',
           'Gate 3 — Security scan: check for injection vectors, jailbreak susceptibility, and sensitive data leakage. For internal-only prompts with no user input, this gate can be simplified to a checklist review. For prompts that process user input, run automated injection tests.',
         ],
       },
@@ -176,7 +176,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub: purpose-built prompt management with version history, reviewer workflows, and deployment tracking. $0–$49/month depending on team size.',
           'Braintrust: evaluation platform with CI/CD integration. Runs automated quality tests on every PR. Best for teams that already run automated prompt tests.',
           'Vellum: production prompt deployment with traffic management, A/B testing, and live evaluation. Best for high-traffic applications where partial rollouts reduce incident blast radius.',
-          '[PromptQuorum](/features): multi-model testing to confirm a prompt works across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro before deployment. Use during Gate 2 peer review.',
+          '[PromptQuorum](/features): multi-model testing to confirm a prompt works across GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro before deployment. Use during Gate 2 peer review.',
         ],
       },
       faq: {

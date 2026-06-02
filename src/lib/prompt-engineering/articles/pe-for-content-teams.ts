@@ -176,7 +176,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: 'What is the CRAFT framework and when should content teams use it?', a: 'CRAFT stands for Context, Role, Action, Format, and Tone. It is a structured prompt framework suited for creative and content work because it organizes the five dimensions most relevant to content outputs. Use it as the base structure for any content prompt that involves brand voice, format requirements, or multi-stakeholder review.' },
           { q: 'How many on-brand examples do I need in a brand voice prompt?', a: 'Include 2 to 3 approved content samples in the prompt. Fewer than 2 gives the model insufficient pattern signal. More than 3 can dilute the context window available for the actual task. The examples should represent the target channel and content type — do not use a LinkedIn example for an email brief.' },
           { q: 'When should a content team skip the factual accuracy review stage?', a: 'Skip the factual accuracy stage only for low-stakes content that contains no factual claims — social media captions announcing an event, short CTAs, or format-only outputs like subject line options. Any content that makes claims about products, pricing, performance, or third parties requires a factual accuracy check before publication.' },
-          { q: 'How do I set up a content template that works consistently across multiple models?', a: 'Test the same template on 2–3 models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Flash) with 10+ test runs each. Use the 5-point quality scoring rubric to evaluate consistency. If all models score 1.5+, the template is portable. If one model falls below 1.5, revise the prompt rather than adopting a model-specific version.' },
+          { q: 'How do I set up a content template that works consistently across multiple models?', a: 'Test the same template on 2–3 models (GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Flash) with 10+ test runs each. Use the 5-point quality scoring rubric to evaluate consistency. If all models score 1.5+, the template is portable. If one model falls below 1.5, revise the prompt rather than adopting a model-specific version.' },
           { q: 'What is the deployment threshold for a content prompt?', a: 'Deploy the prompt if the average score across all 5 criteria (task complete, format compliance, brand voice match, factual accuracy, CTA alignment) is 1.5 or higher (on a 0–2 scale) across 10 test runs. A score below 1.5 indicates too many partial or failing outputs for production use without review overhead.' },
         ],
       },
@@ -186,7 +186,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'CRAFT Framework: Context, Role, Action, Format, Target', url: '/prompt-engineering/craft-framework' },
           { title: 'How to Encode Brand Voice in Prompts', url: '/prompt-engineering/brand-voice-prompts' },
-          { title: 'Content Generation Workflows with GPT-4o and Claude', url: '/prompt-engineering/content-generation-workflows' },
+          { title: 'Content Generation Workflows with GPT-5.5 and Claude', url: '/prompt-engineering/content-generation-workflows' },
           { title: 'Quality Scoring and Evaluation for AI Content', url: '/prompt-engineering/quality-scoring-ai-content' },
           { title: 'Integrating AI Content Tools into Editorial Review Processes', url: '/prompt-engineering/editorial-workflow-integration' },
         ],

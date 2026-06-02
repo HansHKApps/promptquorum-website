@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'High-traffic prompts (>1,000 calls/day) need weekly scheduled audits in addition to CI/CD regression.',
       'Promptfoo is open source and costs $0. Braintrust costs $0–99/month with a collaborative UI.',
       'Prompt regression is silent: no error log, no exception — only worse output quality.',
-      'PromptQuorum runs the same test suite across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro simultaneously.',
+      'PromptQuorum runs the same test suite across GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro simultaneously.',
     ],
     toc: [
       { label: 'What Prompt Regression Testing Is', anchor: 'what_is_regression' },
@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         content: [
           '**Prompt regression is a silent quality degradation: the prompt still runs without error, but output quality has declined since the last version.** Unlike a software crash, there is no error log — users simply receive worse answers.',
-          'Regression most often happens after three types of changes: editing the system prompt wording, changing the underlying model version (e.g., from GPT-4o to a fine-tuned variant), or altering the data the prompt receives as context. For a deeper look at why seemingly harmless changes break prompts, see [how to reduce prompt brittleness](/prompt-engineering/how-to-reduce-prompt-brittleness).',
+          'Regression most often happens after three types of changes: editing the system prompt wording, changing the underlying model version (e.g., from GPT-5.5 to a fine-tuned variant), or altering the data the prompt receives as context. For a deeper look at why seemingly harmless changes break prompts, see [how to reduce prompt brittleness](/prompt-engineering/how-to-reduce-prompt-brittleness).',
           'Without a fixed test suite, teams have no baseline to compare against. The only signal is user complaints, which arrive days after the change and are difficult to attribute to a specific prompt version.',
         ],
         callouts: [
@@ -192,10 +192,10 @@ tests:
           '**Three tools cover most prompt regression testing needs: Promptfoo (open source), Braintrust (cloud platform), and PromptQuorum (multi-model comparison).** Each fits a different team profile.',
           'Promptfoo is open source, runs from the CLI, costs $0, and stores test results locally or in your own storage. It supports YAML-defined test cases, LLM-as-judge scoring, and GitHub Actions integration. Use Promptfoo if you want full local control and your team is comfortable with CLI tooling.',
           'Braintrust is a cloud platform with a collaborative UI, managed scoring infrastructure, and a free tier up to a usage threshold ($0–99/month). It provides a visual diff of prompt versions and team-level access to test history. Use Braintrust if your team needs shared visibility across multiple contributors.',
-          'PromptQuorum runs the same prompt across multiple models simultaneously (e.g., GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) and surfaces behavioral differences. Use PromptQuorum when you need to verify that a prompt change does not cause divergent behavior across models your application supports. For a head-to-head comparison, see [evaluation platform comparison guide](/prompt-engineering/prompt-evaluation-metrics).',
+          'PromptQuorum runs the same prompt across multiple models simultaneously (e.g., GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro) and surfaces behavioral differences. Use PromptQuorum when you need to verify that a prompt change does not cause divergent behavior across models your application supports. For a head-to-head comparison, see [evaluation platform comparison guide](/prompt-engineering/prompt-evaluation-metrics).',
         ],
         callouts: [
-          { type: 'insight', label: 'Multi-model testing matters', text: 'A prompt that passes on GPT-4o may silently fail on Claude 4.6 Sonnet. Run your test suite across at least 2 models before shipping any prompt change.' },
+          { type: 'insight', label: 'Multi-model testing matters', text: 'A prompt that passes on GPT-5.5 may silently fail on Claude 4.6 Sonnet. Run your test suite across at least 2 models before shipping any prompt change.' },
         ],
       },
       cadence: {
@@ -215,7 +215,7 @@ tests:
           { mistake: 'Testing only golden examples', problem: 'Golden examples rarely trigger the edge cases that cause real failures', fix: 'Always include 5+ edge cases and 3+ adversarial inputs in every test suite' },
           { mistake: 'No pass rate threshold', problem: 'Any regression can ship because there is no defined blocking condition', fix: 'Block deployment automatically if pass rate drops more than 5% from baseline' },
           { mistake: 'Manual-only testing', problem: 'Manual testing is skipped under deadline pressure — exactly when it is most needed', fix: 'Wire regression tests into CI/CD with Promptfoo or Braintrust so they run automatically on every change' },
-          { mistake: 'Testing on a single model', problem: 'A prompt that passes on GPT-4o may fail on Claude 4.6 Sonnet — single-model testing misses cross-model regressions', fix: 'Run the test suite on at least 2 models: GPT-4o and Claude 4.6 Sonnet minimum' },
+          { mistake: 'Testing on a single model', problem: 'A prompt that passes on GPT-5.5 may fail on Claude 4.6 Sonnet — single-model testing misses cross-model regressions', fix: 'Run the test suite on at least 2 models: GPT-5.5 and Claude 4.6 Sonnet minimum' },
         ],
       },
       key_takeaways: {
@@ -240,7 +240,7 @@ tests:
           { q: 'How often should you audit production prompts?', a: 'Run regression tests on every change (CI/CD), run weekly audits for high-traffic prompts (>1000 calls/day), and run monthly audits for low-traffic prompts (<100 calls/day). Block any deployment where the pass rate drops more than 5% from the established baseline.' },
           { q: 'What is a golden test set?', a: 'A golden test set is a fixed collection of input/output pairs where the expected output has been manually verified as correct. It represents the benchmark your prompt must consistently meet. Start with 10-20 pairs from real production traffic — select cases that cover your most frequent use cases and any known failure modes.' },
           { q: 'How do I know if a prompt regression is significant?', a: 'A regression is significant if the pass rate on your golden test set drops more than 5% from baseline, if any adversarial test that previously passed now fails, or if output format compliance drops on more than 2 of 10 test cases. Use absolute thresholds, not just relative ones — a single adversarial failure on a security-critical prompt is significant regardless of overall pass rate.' },
-          { q: 'Can I use PromptQuorum for regression testing?', a: 'Yes. PromptQuorum dispatches prompts to multiple models simultaneously, which makes it well-suited for multi-model regression testing. You can run a test set against GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro in parallel and compare pass rates across models to detect model-specific regressions.' },
+          { q: 'Can I use PromptQuorum for regression testing?', a: 'Yes. PromptQuorum dispatches prompts to multiple models simultaneously, which makes it well-suited for multi-model regression testing. You can run a test set against GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro in parallel and compare pass rates across models to detect model-specific regressions.' },
         ],
       },
       related_reading: {

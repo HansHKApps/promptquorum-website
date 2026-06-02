@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output', width: 1200, height: 630 },
         keywords: ['output control', 'constrained decoding', 'JSON schema', 'structured output', 'temperature', 'top-p', 'sampling parameters', 'prompt engineering'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Ollama' },
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Output control operates at three distinct levels — prompt-based, schema-based, and constrained decoding — each offering progressively stronger format guarantees at progressively higher trade-offs against reasoning quality.',
             'Prompt-based formatting instructs the model through natural language ("Return JSON with fields: name, email, score"). This works 80–95% of the time but fails silently on edge cases with no type guarantees, requiring error-handling for the 5–20% of malformed responses. Schema-based approaches (function calling / tool use) define output structure formally at 95–99% compliance — but the schema remains a strong hint, not an absolute constraint. Native constrained decoding uses finite state machines to mask invalid tokens at generation time, producing 100% schema-valid output with mathematical certainty.',
-            'The two-stage approach — letting Claude Opus 4.8 (Anthropic) or GPT-4o (OpenAI) reason freely in Stage 1, then feeding output into a small specialist structuring model (Osmosis-Structure-0.6B, trained on 500K synthetic unstructured → structured transformations) in Stage 2 — achieves format guarantees without the reasoning quality penalty of constrained decoding.',
+            'The two-stage approach — letting Claude Opus 4.8 (Anthropic) or GPT-5.5 (OpenAI) reason freely in Stage 1, then feeding output into a small specialist structuring model (Osmosis-Structure-0.6B, trained on 500K synthetic unstructured → structured transformations) in Stage 2 — achieves format guarantees without the reasoning quality penalty of constrained decoding.',
             'In one sentence: Match the level of output constraint to the task — use constrained decoding only when format correctness matters more than reasoning depth.',
           ],
           columns: ['Level', 'Compliance Rate', 'Reasoning Impact', 'Best For'],
@@ -130,8 +130,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptStructure: {
           title: 'How Do You Control Output Format via Prompt Engineering?',
           content: [
-            'Explicit output schema instructions — placed at the start of the system prompt for Claude Opus 4.8 and immediately before user content for GPT-4o — produce structured output compliance rates of 85–95% without the reasoning quality penalty of native constrained decoding.',
-            'Claude Opus 4.8 (Anthropic) responds best to output format instructions placed at the beginning of the system prompt using XML-style section labels. GPT-4o (OpenAI) performs best when the schema is placed immediately before user content using numbered format rules. Gemini 3.1 Pro (Google DeepMind) produces the most reliable structured output when the schema is restated at both start and end of the prompt.',
+            'Explicit output schema instructions — placed at the start of the system prompt for Claude Opus 4.8 and immediately before user content for GPT-5.5 — produce structured output compliance rates of 85–95% without the reasoning quality penalty of native constrained decoding.',
+            'Claude Opus 4.8 (Anthropic) responds best to output format instructions placed at the beginning of the system prompt using XML-style section labels. GPT-5.5 (OpenAI) performs best when the schema is placed immediately before user content using numbered format rules. Gemini 3.1 Pro (Google DeepMind) produces the most reliable structured output when the schema is restated at both start and end of the prompt.',
           ],
         },
 
@@ -153,8 +153,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         goodPromptGPT: {
-          title: 'What Does a Good Structured Output Prompt Look Like (GPT-4o)?',
-          content: ['**Good Prompt — GPT-4o**'],
+          title: 'What Does a Good Structured Output Prompt Look Like (GPT-5.5)?',
+          content: ['**Good Prompt — GPT-5.5**'],
           blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
         },
 
@@ -163,7 +163,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: ['Each major LLM has distinct structural preferences for output format compliance:'],
           items: [
             '**Claude Opus 4.8 (Anthropic)** — XML tags (`<output>`, `<format>`, `<constraints>`); schema at the top; "Output only the JSON, nothing else"',
-            '**GPT-4o (OpenAI)** — Numbered format rules; schema placed after the main instruction; "Respond with valid JSON. No markdown fences. No explanation."',
+            '**GPT-5.5 (OpenAI)** — Numbered format rules; schema placed after the main instruction; "Respond with valid JSON. No markdown fences. No explanation."',
             '**Gemini 3.1 Pro (Google DeepMind)** — Concise, explicit schema at both start and end; inline one-shot example of desired output format',
             '**Local models via Ollama** (LLaMA 3.1 7B, Mistral) — More sensitive to format drift; one-shot format example embedded directly in the prompt is required for reliable JSON output',
           ],
@@ -200,7 +200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Forcing JSON via constrained decoding reduces model accuracy by 2.26 percentage points on function-calling benchmarks — BAML\'s schema-aligned parsing achieved 93.63% accuracy on BFCL vs. 91.37% for OpenAI\'s strict constrained decoding on the same benchmark.',
             'The mechanism: constrained decoding applies a finite state machine that masks tokens incompatible with the current schema position. A model that wants to output `51.7` for a float field is forced to output `51` if the schema specifies integer — producing a technically valid but factually degraded result. Chain-of-Thought (CoT) prompting is incompatible with constrained decoding in this same way: including a reasoning field forces the model to escape newlines, quotes, and special characters within a JSON string — measurably degrading reasoning quality across all tested models.',
-            'The production-grade solution for systems requiring both reasoning depth and format guarantees: (1) **Stage 1** — Send to GPT-4o or Claude Opus 4.8 without constraints: "Analyse this, reason step by step, explain your logic." (2) **Stage 2** — Feed Stage 1 output to a small specialist model (Osmosis-Structure-0.6B or GPT-4o-mini with `strict: true`): "Extract the key data from this analysis and return it in this exact JSON schema."',
+            'The production-grade solution for systems requiring both reasoning depth and format guarantees: (1) **Stage 1** — Send to GPT-5.5 or Claude Opus 4.8 without constraints: "Analyse this, reason step by step, explain your logic." (2) **Stage 2** — Feed Stage 1 output to a small specialist model (Osmosis-Structure-0.6B or GPT-5.5-mini with `strict: true`): "Extract the key data from this analysis and return it in this exact JSON schema."',
             'This architecture preserves Stage 1 reasoning quality and achieves 100% format compliance in Stage 2 at a fraction of the cost of running a full frontier model in constrained mode.',
           ],
         },
@@ -208,7 +208,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'How Do the Top Models Compare on Output Format Control?',
           content: [
-            'Tested in [PromptQuorum](https://www.promptquorum.com/) — 30 output control prompts dispatched across three models: Claude Opus 4.8 achieved 93% JSON compliance using XML-tagged format instructions without constrained decoding. GPT-4o achieved 89% compliance using numbered format rules. Gemini 3.1 Pro achieved 91% compliance with schema stated at both start and end. All three models produced shorter, less complete reasoning when `strict: true` constrained decoding was enabled — consistent with the 2.26-point accuracy drop observed on the BFCL benchmark.',
+            'Tested in [PromptQuorum](https://www.promptquorum.com/) — 30 output control prompts dispatched across three models: Claude Opus 4.8 achieved 93% JSON compliance using XML-tagged format instructions without constrained decoding. GPT-5.5 achieved 89% compliance using numbered format rules. Gemini 3.1 Pro achieved 91% compliance with schema stated at both start and end. All three models produced shorter, less complete reasoning when `strict: true` constrained decoding was enabled — consistent with the 2.26-point accuracy drop observed on the BFCL benchmark.',
           ],
         },
 
@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '`frequency_penalty`: range -2.0 to 2.0 reduces proportional-to-frequency repetition; `presence_penalty`: range -2.0 to 2.0 applies a flat penalty on any previously seen token — both set to 0.3–0.5 for focused factual output',
             'Stop sequences are the only deterministic output termination mechanism — unlike negative constraints in the prompt body, they cannot be overridden by the model',
             'Temperature ranges: T = 0.0–0.3 for deterministic factual tasks; T = 0.7–1.0 for creative tasks; T > 1.2 risks incoherence in production use',
-            'Claude Opus 4.8 achieves 93% JSON compliance with XML-tagged format prompts; GPT-4o achieves 89% with numbered format rules — both without constrained decoding',
+            'Claude Opus 4.8 achieves 93% JSON compliance with XML-tagged format prompts; GPT-5.5 achieves 89% with numbered format rules — both without constrained decoding',
           ],
         },
 
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Copy-pasting Temperature settings between models',
-              problem: 'T=0.7 on GPT-4o and T=0.7 on Claude produce different probability distributions.',
+              problem: 'T=0.7 on GPT-5.5 and T=0.7 on Claude produce different probability distributions.',
               fix: 'Test each parameter setting per model in your production pipeline.'
             }
           ],
@@ -419,7 +419,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Sampling-Parameter' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Ollama' },
@@ -490,7 +490,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Ausgabekontrolle funktioniert auf drei unterschiedlichen Ebenen — prompt-basiert, schema-basiert und Constrained Decoding — wobei jede Ebene progressiv stärkere Formatgarantien bei progressiv höheren Trade-offs gegenüber der Reasoning-Qualität bietet.',
             'Prompt-basierte Formatierung weist das Modell durch natürliche Sprache an ("Return JSON with fields: name, email, score"). Dies funktioniert in 80–95 % der Fälle, schlägt aber bei Sonderfällen lautlos fehl, ohne Typgarantien, und erfordert Fehlerbehandlung für die 5–20 % fehlerhafter Antworten. Schema-basierte Ansätze (Function Calling / Tool Use) definieren die Ausgabestruktur formal bei 95–99 % Compliance — das Schema bleibt jedoch ein starker Hinweis, keine absolute Einschränkung. Natives Constrained Decoding verwendet endliche Automaten, um ungültige Tokens zur Generierungszeit zu maskieren und produziert 100 % schema-valide Ausgaben mit mathematischer Sicherheit.',
-            'Der zweistufige Ansatz — Claude Opus 4.8 (Anthropic) oder GPT-4o (OpenAI) in Stage 1 frei denken lassen, dann die Ausgabe in Stage 2 an ein kleines Spezialisierungsmodell (Osmosis-Structure-0.6B, trainiert auf 500.000 synthetischen unstrukturierten → strukturierten Transformationen) übergeben — erreicht Formatgarantien ohne den Reasoning-Qualitätsverlust von Constrained Decoding.',
+            'Der zweistufige Ansatz — Claude Opus 4.8 (Anthropic) oder GPT-5.5 (OpenAI) in Stage 1 frei denken lassen, dann die Ausgabe in Stage 2 an ein kleines Spezialisierungsmodell (Osmosis-Structure-0.6B, trainiert auf 500.000 synthetischen unstrukturierten → strukturierten Transformationen) übergeben — erreicht Formatgarantien ohne den Reasoning-Qualitätsverlust von Constrained Decoding.',
             'In einem Satz: Passen Sie den Grad der Ausgabeeinschränkung an die Aufgabe an — verwenden Sie Constrained Decoding nur, wenn Formatkorrektheit wichtiger ist als Reasoning-Tiefe.',
           ],
           columns: ['Ebene', 'Compliance-Rate', 'Reasoning-Einfluss', 'Am besten geeignet für'],
@@ -506,8 +506,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptStructure: {
           title: 'Wie steuert man das Ausgabeformat per Prompt Engineering?',
           content: [
-            'Explizite Ausgabeschema-Anweisungen — am Anfang des System-Prompts für Claude Opus 4.8 und unmittelbar vor dem User-Content für GPT-4o platziert — erzielen Compliance-Raten für strukturierten Output von 85–95 % ohne den Reasoning-Qualitätsverlust von nativem Constrained Decoding.',
-            'Claude Opus 4.8 (Anthropic) reagiert am besten auf Ausgabeformat-Anweisungen am Anfang des System-Prompts mit XML-ähnlichen Abschnittsbezeichnungen. GPT-4o (OpenAI) liefert die besten Ergebnisse, wenn das Schema unmittelbar vor dem User-Content mit nummerierten Format-Regeln platziert wird. Gemini 3.1 Pro (Google DeepMind) produziert die zuverlässigste strukturierte Ausgabe, wenn das Schema sowohl am Anfang als auch am Ende des Prompts wiederholt wird.',
+            'Explizite Ausgabeschema-Anweisungen — am Anfang des System-Prompts für Claude Opus 4.8 und unmittelbar vor dem User-Content für GPT-5.5 platziert — erzielen Compliance-Raten für strukturierten Output von 85–95 % ohne den Reasoning-Qualitätsverlust von nativem Constrained Decoding.',
+            'Claude Opus 4.8 (Anthropic) reagiert am besten auf Ausgabeformat-Anweisungen am Anfang des System-Prompts mit XML-ähnlichen Abschnittsbezeichnungen. GPT-5.5 (OpenAI) liefert die besten Ergebnisse, wenn das Schema unmittelbar vor dem User-Content mit nummerierten Format-Regeln platziert wird. Gemini 3.1 Pro (Google DeepMind) produziert die zuverlässigste strukturierte Ausgabe, wenn das Schema sowohl am Anfang als auch am Ende des Prompts wiederholt wird.',
           ],
         },
 
@@ -529,8 +529,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         goodPromptGPT: {
-          title: 'Wie sieht ein guter Structured-Output-Prompt aus (GPT-4o)?',
-          content: ['**Guter Prompt — GPT-4o**'],
+          title: 'Wie sieht ein guter Structured-Output-Prompt aus (GPT-5.5)?',
+          content: ['**Guter Prompt — GPT-5.5**'],
           blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
         },
 
@@ -539,7 +539,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: ['Jedes große LLM hat unterschiedliche strukturelle Präferenzen für die Ausgabeformat-Compliance:'],
           items: [
             '**Claude Opus 4.8 (Anthropic)** — XML-Tags (`<output>`, `<format>`, `<constraints>`); Schema am Anfang; "Gib nur das JSON aus, nichts anderes"',
-            '**GPT-4o (OpenAI)** — Nummerierte Format-Regeln; Schema nach der Hauptanweisung; "Antworte mit gültigem JSON. Keine Markdown-Fences. Keine Erklärung."',
+            '**GPT-5.5 (OpenAI)** — Nummerierte Format-Regeln; Schema nach der Hauptanweisung; "Antworte mit gültigem JSON. Keine Markdown-Fences. Keine Erklärung."',
             '**Gemini 3.1 Pro (Google DeepMind)** — Prägnantes, explizites Schema am Anfang und Ende; One-Shot-Beispiel des gewünschten Ausgabeformats direkt im Prompt',
             '**Lokale Modelle via Ollama** (LLaMA 3.1 7B, Mistral) — Empfindlicher gegenüber Format-Drift; ein One-Shot-Formatbeispiel direkt im Prompt ist für zuverlässige JSON-Ausgabe erforderlich',
           ],
@@ -576,7 +576,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Das Erzwingen von JSON via Constrained Decoding reduziert die Modellgenauigkeit um 2,26 Prozentpunkte auf Function-Calling-Benchmarks — BAMLs schema-ausgerichtetes Parsing erreichte 93,63 % Genauigkeit auf BFCL gegenüber 91,37 % für OpenAIs striktes Constrained Decoding auf dem gleichen Benchmark.',
             'Der Mechanismus: Constrained Decoding wendet einen endlichen Automaten an, der Tokens maskiert, die mit der aktuellen Schemaposition inkompatibel sind. Ein Modell, das `51,7` für ein Float-Feld ausgeben möchte, wird zur Ausgabe von `51` gezwungen, wenn das Schema Integer vorschreibt — ein technisch valides, aber faktisch degradiertes Ergebnis. Chain-of-Thought (CoT) Prompting ist auf dieselbe Weise mit Constrained Decoding inkompatibel: Das Einschließen eines Reasoning-Feldes zwingt das Modell, Zeilenumbrüche, Anführungszeichen und Sonderzeichen innerhalb eines JSON-Strings zu escapen — was die Reasoning-Qualität bei allen getesteten Modellen messbar verschlechtert.',
-            'Die produktionsreife Lösung für Systeme, die sowohl Reasoning-Tiefe als auch Formatgarantien benötigen: (1) **Stage 1** — An GPT-4o oder Claude Opus 4.8 ohne Einschränkungen senden: "Analysieren Sie dies, denken Sie schrittweise, erklären Sie Ihre Logik." (2) **Stage 2** — Stage-1-Ausgabe an ein kleines Spezialisierungsmodell (Osmosis-Structure-0.6B oder GPT-4o-mini mit `strict: true`) übergeben: "Extrahieren Sie die Schlüsseldaten aus dieser Analyse und geben Sie sie in diesem exakten JSON-Schema zurück."',
+            'Die produktionsreife Lösung für Systeme, die sowohl Reasoning-Tiefe als auch Formatgarantien benötigen: (1) **Stage 1** — An GPT-5.5 oder Claude Opus 4.8 ohne Einschränkungen senden: "Analysieren Sie dies, denken Sie schrittweise, erklären Sie Ihre Logik." (2) **Stage 2** — Stage-1-Ausgabe an ein kleines Spezialisierungsmodell (Osmosis-Structure-0.6B oder GPT-5.5-mini mit `strict: true`) übergeben: "Extrahieren Sie die Schlüsseldaten aus dieser Analyse und geben Sie sie in diesem exakten JSON-Schema zurück."',
             'Diese Architektur erhält die Stage-1-Reasoning-Qualität und erreicht 100 % Format-Compliance in Stage 2 zu einem Bruchteil der Kosten des Betriebs eines vollständigen Frontier-Modells im Constrained-Modus.',
           ],
         },
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'Wie schneiden die Top-Modelle bei der Ausgabe-Kontrolle ab?',
           content: [
-            'Getestet in [PromptQuorum](https://www.promptquorum.com/) — 30 Ausgabekontroll-Prompts über drei Modelle verteilt: Claude Opus 4.8 erreichte 93 % JSON-Compliance mit XML-getaggten Format-Anweisungen ohne Constrained Decoding. GPT-4o erreichte 89 % Compliance mit nummerierten Format-Regeln. Gemini 3.1 Pro erreichte 91 % Compliance, wenn das Schema sowohl am Anfang als auch am Ende angegeben wurde. Alle drei Modelle produzierten kürzere, weniger vollständige Reasoning-Antworten, wenn `strict: true` Constrained Decoding aktiviert war — konsistent mit dem auf dem BFCL-Benchmark beobachteten 2,26-Punkte-Genauigkeitsverlust.',
+            'Getestet in [PromptQuorum](https://www.promptquorum.com/) — 30 Ausgabekontroll-Prompts über drei Modelle verteilt: Claude Opus 4.8 erreichte 93 % JSON-Compliance mit XML-getaggten Format-Anweisungen ohne Constrained Decoding. GPT-5.5 erreichte 89 % Compliance mit nummerierten Format-Regeln. Gemini 3.1 Pro erreichte 91 % Compliance, wenn das Schema sowohl am Anfang als auch am Ende angegeben wurde. Alle drei Modelle produzierten kürzere, weniger vollständige Reasoning-Antworten, wenn `strict: true` Constrained Decoding aktiviert war — konsistent mit dem auf dem BFCL-Benchmark beobachteten 2,26-Punkte-Genauigkeitsverlust.',
           ],
         },
 
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '`frequency_penalty`: Bereich -2,0 bis 2,0 reduziert frequenzproportionale Wiederholungen; `presence_penalty`: Bereich -2,0 bis 2,0 wendet eine Pauschalstrafe auf jeden bereits gesehenen Token an — beide bei 0,3–0,5 für fokussierten sachlichen Output',
             'Stop Sequences sind der einzige deterministische Ausgabe-Abbruchmechanismus — im Gegensatz zu negativen Constraints im Prompt-Body können sie vom Modell nicht überschrieben werden',
             'Temperature-Bereiche: T = 0,0–0,3 für deterministische sachliche Aufgaben; T = 0,7–1,0 für kreative Aufgaben; T > 1,2 riskiert Inkohärenz im Produktionseinsatz',
-            'Claude Opus 4.8 erreicht 93 % JSON-Compliance mit XML-getaggten Format-Prompts; GPT-4o erreicht 89 % mit nummerierten Format-Regeln — beide ohne Constrained Decoding',
+            'Claude Opus 4.8 erreicht 93 % JSON-Compliance mit XML-getaggten Format-Prompts; GPT-5.5 erreicht 89 % mit nummerierten Format-Regeln — beide ohne Constrained Decoding',
           ],
         },
 
@@ -674,7 +674,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Temperature-Einstellungen zwischen Modellen kopieren',
-              problem: 'T=0,7 bei GPT-4o und T=0,7 bei Claude erzeugen unterschiedliche Wahrscheinlichkeitsverteilungen.',
+              problem: 'T=0,7 bei GPT-5.5 und T=0,7 bei Claude erzeugen unterschiedliche Wahrscheinlichkeitsverteilungen.',
               fix: 'Jede Parametereinstellung pro Modell in der Produktionspipeline testen.'
             }
           ],
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/es/api/og/control-the-output', width: 1200, height: 630 },
         keywords: ['control de salida', 'constrained decoding', 'JSON schema', 'salida estructurada', 'temperature', 'top-p', 'parámetros de muestreo', 'prompt engineering'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Ollama' },
@@ -853,7 +853,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'El control de salida opera en tres niveles distintos — basado en prompt, basado en schema y constrained decoding — cada uno ofreciendo garantías de formato progresivamente más fuertes con compensaciones progresivamente mayores frente a la calidad de razonamiento.',
             'El formato basado en prompt instruye al modelo mediante lenguaje natural ("Devuelve JSON con campos: nombre, email, puntuación"). Esto funciona entre el 80–95 % del tiempo, pero falla silenciosamente en casos límite sin garantías de tipo, requiriendo manejo de errores para el 5–20 % de respuestas malformadas. Los enfoques basados en schema (function calling / tool use) definen la estructura de salida formalmente con un 95–99 % de cumplimiento — pero el schema sigue siendo una sugerencia fuerte, no una constraint absoluta. El constrained decoding nativo usa máquinas de estados finita para enmascarar tokens inválidos en tiempo de generación, produciendo el 100 % de salidas válidas según el schema con certeza matemática.',
-            'El enfoque de dos etapas — dejar que Claude Opus 4.8 o GPT-4o razonen libremente en la Etapa 1, luego alimentar la salida a un modelo especializado pequeño (Osmosis-Structure-0.6B) en la Etapa 2 — logra garantías de formato sin la penalización de calidad de razonamiento del constrained decoding.',
+            'El enfoque de dos etapas — dejar que Claude Opus 4.8 o GPT-5.5 razonen libremente en la Etapa 1, luego alimentar la salida a un modelo especializado pequeño (Osmosis-Structure-0.6B) en la Etapa 2 — logra garantías de formato sin la penalización de calidad de razonamiento del constrained decoding.',
             'En una oración: Adapta el nivel de constraint de salida a la tarea — usa constrained decoding solo cuando la corrección de formato importa más que la profundidad de razonamiento.',
           ],
           columns: ['Nivel', 'Tasa de cumplimiento', 'Impacto en razonamiento', 'Mejor para'],
@@ -868,8 +868,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptStructure: {
           title: '¿Cómo controlas el formato de salida mediante prompt engineering?',
           content: [
-            'Las instrucciones explícitas de esquema de salida — colocadas al inicio del prompt del sistema para Claude Opus 4.8 e inmediatamente antes del contenido del usuario para GPT-4o — producen tasas de cumplimiento de salida estructurada del 85–95 % sin la penalización de calidad de razonamiento del constrained decoding nativo.',
-            'Claude Opus 4.8 responde mejor a las instrucciones de formato de salida colocadas al inicio del prompt del sistema usando etiquetas de sección estilo XML. GPT-4o funciona mejor cuando el schema se coloca inmediatamente antes del contenido del usuario usando reglas de formato numeradas. Gemini 3.1 Pro produce la salida estructurada más fiable cuando el schema se repite tanto al inicio como al final del prompt.',
+            'Las instrucciones explícitas de esquema de salida — colocadas al inicio del prompt del sistema para Claude Opus 4.8 e inmediatamente antes del contenido del usuario para GPT-5.5 — producen tasas de cumplimiento de salida estructurada del 85–95 % sin la penalización de calidad de razonamiento del constrained decoding nativo.',
+            'Claude Opus 4.8 responde mejor a las instrucciones de formato de salida colocadas al inicio del prompt del sistema usando etiquetas de sección estilo XML. GPT-5.5 funciona mejor cuando el schema se coloca inmediatamente antes del contenido del usuario usando reglas de formato numeradas. Gemini 3.1 Pro produce la salida estructurada más fiable cuando el schema se repite tanto al inicio como al final del prompt.',
           ],
         },
         badPrompt: {
@@ -887,8 +887,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         goodPromptGPT: {
-          title: '¿Cómo es un buen prompt de salida estructurada (GPT-4o)?',
-          content: ['**Buen prompt — GPT-4o**'],
+          title: '¿Cómo es un buen prompt de salida estructurada (GPT-5.5)?',
+          content: ['**Buen prompt — GPT-5.5**'],
           blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
         },
         modelRules: {
@@ -896,7 +896,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: ['Cada LLM principal tiene preferencias estructurales distintas para el cumplimiento del formato de salida:'],
           items: [
             '**Claude Opus 4.8 (Anthropic)** — Etiquetas XML (`<output>`, `<format>`, `<constraints>`); schema al inicio; "Devuelve solo el JSON, nada más"',
-            '**GPT-4o (OpenAI)** — Reglas de formato numeradas; schema después de la instrucción principal; "Responde con JSON válido. Sin markdown. Sin explicación."',
+            '**GPT-5.5 (OpenAI)** — Reglas de formato numeradas; schema después de la instrucción principal; "Responde con JSON válido. Sin markdown. Sin explicación."',
             '**Gemini 3.1 Pro (Google DeepMind)** — Schema conciso y explícito tanto al inicio como al final; ejemplo one-shot del formato de salida deseado en el prompt',
             '**Modelos locales vía Ollama** (LLaMA 3.1 7B, Mistral) — Más sensibles al desviamiento de formato; se requiere un ejemplo de formato one-shot directamente en el prompt para salida JSON fiable',
           ],
@@ -930,14 +930,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Forzar JSON mediante constrained decoding reduce la precisión del modelo en 2,26 puntos porcentuales en benchmarks de function calling — el parsing alineado con schema de BAML logró el 93,63 % de precisión en BFCL vs. 91,37 % para el constrained decoding estricto de OpenAI en el mismo benchmark.',
             'El mecanismo: el constrained decoding aplica una máquina de estados finita que enmascara tokens incompatibles con la posición actual del schema. Un modelo que quiere producir `51,7` para un campo float se ve obligado a producir `51` si el schema especifica entero — produciendo un resultado técnicamente válido pero factualmente degradado. El prompting chain-of-thought (CoT) es incompatible con el constrained decoding de la misma manera: incluir un campo de razonamiento obliga al modelo a escapar saltos de línea, comillas y caracteres especiales dentro de una cadena JSON — degradando mediblemente la calidad de razonamiento en todos los modelos probados.',
-            'La solución lista para producción para sistemas que requieren tanto profundidad de razonamiento como garantías de formato: (1) **Etapa 1** — Envía a GPT-4o o Claude Opus 4.8 sin constraints: "Analiza esto, razona paso a paso, explica tu lógica." (2) **Etapa 2** — Alimenta la salida de la Etapa 1 a un modelo especializado pequeño (Osmosis-Structure-0.6B o GPT-4o-mini con `strict: true`): "Extrae los datos clave de este análisis y devuélvelos en este schema JSON exacto."',
+            'La solución lista para producción para sistemas que requieren tanto profundidad de razonamiento como garantías de formato: (1) **Etapa 1** — Envía a GPT-5.5 o Claude Opus 4.8 sin constraints: "Analiza esto, razona paso a paso, explica tu lógica." (2) **Etapa 2** — Alimenta la salida de la Etapa 1 a un modelo especializado pequeño (Osmosis-Structure-0.6B o GPT-5.5-mini con `strict: true`): "Extrae los datos clave de este análisis y devuélvelos en este schema JSON exacto."',
             'Esta arquitectura preserva la calidad de razonamiento de la Etapa 1 y logra el 100 % de cumplimiento de formato en la Etapa 2 a una fracción del costo de ejecutar un modelo de frontera completo en modo restringido.',
           ],
         },
         promptquorumTest: {
           title: '¿Cómo comparan los principales modelos en control de formato de salida?',
           content: [
-            'Probado en [PromptQuorum](https://www.promptquorum.com/) — 30 prompts de control de salida despachados a tres modelos: Claude Opus 4.8 alcanzó el 93 % de cumplimiento JSON usando instrucciones de formato con etiquetas XML sin constrained decoding. GPT-4o alcanzó el 89 % de cumplimiento usando reglas de formato numeradas. Gemini 3.1 Pro alcanzó el 91 % de cumplimiento con el schema indicado tanto al inicio como al final. Los tres modelos produjeron razonamiento más corto y menos completo cuando se habilitó el constrained decoding con `strict: true` — consistente con la caída de precisión de 2,26 puntos observada en el benchmark BFCL.',
+            'Probado en [PromptQuorum](https://www.promptquorum.com/) — 30 prompts de control de salida despachados a tres modelos: Claude Opus 4.8 alcanzó el 93 % de cumplimiento JSON usando instrucciones de formato con etiquetas XML sin constrained decoding. GPT-5.5 alcanzó el 89 % de cumplimiento usando reglas de formato numeradas. Gemini 3.1 Pro alcanzó el 91 % de cumplimiento con el schema indicado tanto al inicio como al final. Los tres modelos produjeron razonamiento más corto y menos completo cuando se habilitó el constrained decoding con `strict: true` — consistente con la caída de precisión de 2,26 puntos observada en el benchmark BFCL.',
           ],
         },
         stopSequences: {
@@ -993,7 +993,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '`frequency_penalty`: rango -2,0 a 2,0 reduce la repetición proporcional a la frecuencia; `presence_penalty`: rango -2,0 a 2,0 aplica una penalización fija a cualquier token visto anteriormente — ambos a 0,3–0,5 para salida factual enfocada',
             'Las stop sequences son el único mecanismo de terminación de salida determinista — a diferencia de las constraints negativas en el cuerpo del prompt, el modelo no puede anularlas',
             'Rangos de temperature: T = 0,0–0,3 para tareas factuales deterministas; T = 0,7–1,0 para tareas creativas; T > 1,2 arriesga incoherencia en uso de producción',
-            'Claude Opus 4.8 logra el 93 % de cumplimiento JSON con prompts de formato etiquetados con XML; GPT-4o logra el 89 % con reglas de formato numeradas — ambos sin constrained decoding',
+            'Claude Opus 4.8 logra el 93 % de cumplimiento JSON con prompts de formato etiquetados con XML; GPT-5.5 logra el 89 % con reglas de formato numeradas — ambos sin constrained decoding',
           ],
         },
         commonMistakes: {
@@ -1021,7 +1021,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Copiar configuraciones de temperature entre modelos',
-              problem: 'T=0,7 en GPT-4o y T=0,7 en Claude producen distribuciones de probabilidad diferentes.',
+              problem: 'T=0,7 en GPT-5.5 y T=0,7 en Claude producen distribuciones de probabilidad diferentes.',
               fix: 'Prueba cada configuración de parámetro por modelo en tu pipeline de producción.'
             }
           ],
@@ -1137,7 +1137,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Paramètres d\'échantillonnage' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Ollama' },
@@ -1198,7 +1198,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Le contrôle des sorties opère à trois niveaux distincts — par prompt, par schéma et decoding contraint — chacun offrant des garanties de format progressivement plus fortes, au prix de compromis progressivement plus élevés sur la qualité du raisonnement.',
             'Le formatage par prompt instruit le modèle en langage naturel ("Return JSON with fields: name, email, score"). Cela fonctionne dans 80–95 % des cas mais échoue silencieusement sur les cas limites, sans garantie de type, nécessitant une gestion d\'erreurs pour les 5–20 % de réponses malformées. Les approches par schéma (function calling / tool use) définissent formellement la structure de sortie à 95–99 % de conformité — mais le schéma reste une suggestion forte, pas une contrainte absolue. Le decoding contraint natif utilise des automates à états finis pour masquer les tokens invalides lors de la génération, produisant des sorties valides à 100 % avec certitude mathématique.',
-            'L\'approche en deux étapes — laisser Claude Opus 4.8 (Anthropic) ou GPT-4o (OpenAI) raisonner librement en étape 1, puis passer la sortie à un petit modèle spécialisé (Osmosis-Structure-0.6B, entraîné sur 500 000 transformations synthétiques non structurées → structurées) en étape 2 — atteint les garanties de format sans la pénalité de qualité du decoding contraint.',
+            'L\'approche en deux étapes — laisser Claude Opus 4.8 (Anthropic) ou GPT-5.5 (OpenAI) raisonner librement en étape 1, puis passer la sortie à un petit modèle spécialisé (Osmosis-Structure-0.6B, entraîné sur 500 000 transformations synthétiques non structurées → structurées) en étape 2 — atteint les garanties de format sans la pénalité de qualité du decoding contraint.',
             'En un mot : adaptez le niveau de contrainte de sortie à la tâche — utilisez le decoding contraint uniquement quand la correction de format importe plus que la profondeur de raisonnement.',
           ],
           columns: ['Niveau', 'Taux de conformité', 'Impact sur le raisonnement', 'Idéal pour'],
@@ -1214,8 +1214,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptStructure: {
           title: 'Comment contrôler le format des sorties via le prompt engineering ?',
           content: [
-            'Des instructions de schéma de sortie explicites — placées au début du prompt système pour Claude Opus 4.8 et immédiatement avant le contenu utilisateur pour GPT-4o — produisent des taux de conformité de 85–95 % sans la pénalité de qualité du decoding contraint natif.',
-            'Claude Opus 4.8 (Anthropic) répond mieux aux instructions de format placées en début de prompt système avec des balises XML. GPT-4o (OpenAI) performe mieux avec le schéma placé juste avant le contenu utilisateur sous forme de règles numérotées. Gemini 3.1 Pro (Google DeepMind) produit les sorties structurées les plus fiables quand le schéma est rappelé en début et en fin de prompt.',
+            'Des instructions de schéma de sortie explicites — placées au début du prompt système pour Claude Opus 4.8 et immédiatement avant le contenu utilisateur pour GPT-5.5 — produisent des taux de conformité de 85–95 % sans la pénalité de qualité du decoding contraint natif.',
+            'Claude Opus 4.8 (Anthropic) répond mieux aux instructions de format placées en début de prompt système avec des balises XML. GPT-5.5 (OpenAI) performe mieux avec le schéma placé juste avant le contenu utilisateur sous forme de règles numérotées. Gemini 3.1 Pro (Google DeepMind) produit les sorties structurées les plus fiables quand le schéma est rappelé en début et en fin de prompt.',
           ],
         },
 
@@ -1237,8 +1237,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         goodPromptGPT: {
-          title: 'À quoi ressemble un bon prompt de sortie structurée (GPT-4o) ?',
-          content: ['**Bon prompt — GPT-4o**'],
+          title: 'À quoi ressemble un bon prompt de sortie structurée (GPT-5.5) ?',
+          content: ['**Bon prompt — GPT-5.5**'],
           blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
         },
 
@@ -1247,7 +1247,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: ['Chaque grand LLM a des préférences structurelles distinctes pour la conformité au format de sortie :'],
           items: [
             '**Claude Opus 4.8 (Anthropic)** — Balises XML (`<output>`, `<format>`, `<constraints>`) ; schéma en tête ; "Retourne uniquement le JSON, rien d\'autre"',
-            '**GPT-4o (OpenAI)** — Règles de format numérotées ; schéma placé après l\'instruction principale ; "Réponds avec du JSON valide. Pas de markdown. Pas d\'explication."',
+            '**GPT-5.5 (OpenAI)** — Règles de format numérotées ; schéma placé après l\'instruction principale ; "Réponds avec du JSON valide. Pas de markdown. Pas d\'explication."',
             '**Gemini 3.1 Pro (Google DeepMind)** — Schéma concis et explicite en début et fin ; exemple one-shot du format de sortie souhaité directement dans le prompt',
             '**Modèles locaux via Ollama** (LLaMA 3.1 7B, Mistral) — Plus sensibles à la dérive de format ; un exemple one-shot intégré directement dans le prompt est nécessaire pour une sortie JSON fiable',
           ],
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Forcer JSON via le decoding contraint réduit la précision du modèle de 2,26 points de pourcentage sur les benchmarks de function calling — le parsing libre aligné sur le schéma de BAML a atteint 93,63 % de précision sur BFCL contre 91,37 % pour le decoding contraint strict d\'OpenAI sur le même benchmark.',
             'Le mécanisme : le decoding contraint applique un automate qui masque les tokens incompatibles avec la position actuelle dans le schéma. Un modèle qui veut produire `51.7` pour un champ float est contraint de produire `51` si le schéma spécifie un entier — résultat techniquement valide mais factuellement dégradé. Le prompting Chain-of-Thought (CoT) est incompatible avec le decoding contraint de la même façon : inclure un champ de raisonnement force le modèle à échapper les sauts de ligne, guillemets et caractères spéciaux dans une chaîne JSON — ce qui dégrade mesurably la qualité de raisonnement.',
-            'La solution de niveau production pour les systèmes nécessitant profondeur de raisonnement et garanties de format : (1) **Étape 1** — Envoyer à GPT-4o ou Claude Opus 4.8 sans contraintes : "Analysez ceci, raisonnez étape par étape, expliquez votre logique." (2) **Étape 2** — Passer la sortie de l\'étape 1 à un petit modèle spécialisé (Osmosis-Structure-0.6B ou GPT-4o-mini avec `strict: true`) : "Extrayez les données clés de cette analyse et retournez-les dans ce schéma JSON exact."',
+            'La solution de niveau production pour les systèmes nécessitant profondeur de raisonnement et garanties de format : (1) **Étape 1** — Envoyer à GPT-5.5 ou Claude Opus 4.8 sans contraintes : "Analysez ceci, raisonnez étape par étape, expliquez votre logique." (2) **Étape 2** — Passer la sortie de l\'étape 1 à un petit modèle spécialisé (Osmosis-Structure-0.6B ou GPT-5.5-mini avec `strict: true`) : "Extrayez les données clés de cette analyse et retournez-les dans ce schéma JSON exact."',
             'Cette architecture préserve la qualité de raisonnement de l\'étape 1 et atteint 100 % de conformité de format en étape 2, à une fraction du coût d\'un modèle frontier complet en mode contraint.',
           ],
         },
@@ -1292,7 +1292,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'Comment les meilleurs modèles se comparent-ils sur le contrôle des sorties ?',
           content: [
-            'Testé dans [PromptQuorum](https://www.promptquorum.com/) — 30 prompts de contrôle des sorties répartis sur trois modèles : Claude Opus 4.8 a atteint 93 % de conformité JSON avec des instructions de format balisées XML sans decoding contraint. GPT-4o a atteint 89 % de conformité avec des règles de format numérotées. Gemini 3.1 Pro a atteint 91 % de conformité avec le schéma précisé en début et fin. Les trois modèles ont produit des raisonnements plus courts et moins complets quand `strict: true` était activé — cohérent avec la perte de 2,26 points observée sur le benchmark BFCL.',
+            'Testé dans [PromptQuorum](https://www.promptquorum.com/) — 30 prompts de contrôle des sorties répartis sur trois modèles : Claude Opus 4.8 a atteint 93 % de conformité JSON avec des instructions de format balisées XML sans decoding contraint. GPT-5.5 a atteint 89 % de conformité avec des règles de format numérotées. Gemini 3.1 Pro a atteint 91 % de conformité avec le schéma précisé en début et fin. Les trois modèles ont produit des raisonnements plus courts et moins complets quand `strict: true` était activé — cohérent avec la perte de 2,26 points observée sur le benchmark BFCL.',
           ],
         },
 
@@ -1353,7 +1353,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '`frequency_penalty` (plage -2.0 à 2.0) réduit la répétition proportionnelle à la fréquence ; `presence_penalty` (plage -2.0 à 2.0) applique une pénalité forfaitaire sur tout token déjà vu — les deux à 0.3–0.5 pour les sorties factuelles focalisées',
             'Les stop sequences sont le seul mécanisme d\'arrêt déterministe — contrairement aux contraintes négatives dans le corps du prompt, elles ne peuvent pas être outrepassées par le modèle',
             'Plages de temperature : T = 0.0–0.3 pour les tâches factuelles déterministes ; T = 0.7–1.0 pour les tâches créatives ; T > 1.2 risque l\'incohérence en production',
-            'Claude Opus 4.8 atteint 93 % de conformité JSON avec des prompts de format XML ; GPT-4o atteint 89 % avec des règles numérotées — tous deux sans decoding contraint',
+            'Claude Opus 4.8 atteint 93 % de conformité JSON avec des prompts de format XML ; GPT-5.5 atteint 89 % avec des règles numérotées — tous deux sans decoding contraint',
           ],
         },
 
@@ -1382,7 +1382,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Copier les réglages de Temperature entre modèles',
-              problem: 'T=0.7 sur GPT-4o et T=0.7 sur Claude produisent des distributions de probabilité différentes.',
+              problem: 'T=0.7 sur GPT-5.5 et T=0.7 sur Claude produisent des distributions de probabilité différentes.',
               fix: 'Tester chaque réglage de paramètre par modèle dans votre pipeline de production.'
             }
           ],
@@ -1503,7 +1503,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'サンプリングパラメータ' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Ollama' },
@@ -1564,7 +1564,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '出力制御はプロンプトベース、スキーマベース、制約デコードの3つの異なるレベルで機能します。各レベルは推論品質とのトレードオフを高めながら、段階的に強固なフォーマット保証を提供します。',
             'プロンプトベースのフォーマットは自然言語でモデルに指示します（"Return JSON with fields: name, email, score"）。これは80〜95%の確率で機能しますが、型保証がなくエッジケースでサイレントに失敗し、不正なレスポンスの5〜20%にエラー処理が必要です。スキーマベースアプローチ（function calling / tool use）は95〜99%のコンプライアンスでフォーマット構造を正式に定義しますが、スキーマは絶対的な制約ではなく強力なヒントにとどまります。ネイティブ制約デコードは有限状態機械を使用して生成時に無効なトークンをマスクし、数学的確実性で100%スキーマ準拠の出力を生成します。',
-            '2段階アプローチ — Claude Opus 4.8（Anthropic）またはGPT-4o（OpenAI）をStage 1で自由に推論させた後、出力をStage 2の小型専門構造化モデル（Osmosis-Structure-0.6B、50万件の合成非構造化→構造化変換でトレーニング済み）に渡す — は制約デコードの推論品質ペナルティなしにフォーマット保証を実現します。',
+            '2段階アプローチ — Claude Opus 4.8（Anthropic）またはGPT-5.5（OpenAI）をStage 1で自由に推論させた後、出力をStage 2の小型専門構造化モデル（Osmosis-Structure-0.6B、50万件の合成非構造化→構造化変換でトレーニング済み）に渡す — は制約デコードの推論品質ペナルティなしにフォーマット保証を実現します。',
             '一言で言えば：出力制約のレベルをタスクに合わせてください — フォーマット正確性が推論の深さより重要な場合のみ制約デコードを使用してください。',
           ],
           columns: ['レベル', 'コンプライアンス率', '推論への影響', '最適な用途'],
@@ -1580,8 +1580,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptStructure: {
           title: 'プロンプトエンジニアリングで出力形式を制御するには？',
           content: [
-            '明示的な出力スキーマ指示 — Claude Opus 4.8ではシステムプロンプトの冒頭、GPT-4oではユーザーコンテンツの直前に配置 — を使用すると、ネイティブ制約デコードの推論品質ペナルティなしに85〜95%の構造化出力コンプライアンス率を達成できます。',
-            'Claude Opus 4.8（Anthropic）は、XMLスタイルのセクションラベルを使用してシステムプロンプトの冒頭に配置された出力形式指示に最も効果的に応答します。GPT-4o（OpenAI）は、ユーザーコンテンツの直前に番号付きフォーマットルールとしてスキーマを配置すると最良の結果を出します。Gemini 3.1 Pro（Google DeepMind）は、プロンプトの冒頭と末尾の両方にスキーマを明示的に記述すると最も信頼性の高い構造化出力を生成します。',
+            '明示的な出力スキーマ指示 — Claude Opus 4.8ではシステムプロンプトの冒頭、GPT-5.5ではユーザーコンテンツの直前に配置 — を使用すると、ネイティブ制約デコードの推論品質ペナルティなしに85〜95%の構造化出力コンプライアンス率を達成できます。',
+            'Claude Opus 4.8（Anthropic）は、XMLスタイルのセクションラベルを使用してシステムプロンプトの冒頭に配置された出力形式指示に最も効果的に応答します。GPT-5.5（OpenAI）は、ユーザーコンテンツの直前に番号付きフォーマットルールとしてスキーマを配置すると最良の結果を出します。Gemini 3.1 Pro（Google DeepMind）は、プロンプトの冒頭と末尾の両方にスキーマを明示的に記述すると最も信頼性の高い構造化出力を生成します。',
           ],
         },
 
@@ -1603,8 +1603,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         goodPromptGPT: {
-          title: '優れた構造化出力プロンプトとは（GPT-4o）？',
-          content: ['**良いプロンプト — GPT-4o**'],
+          title: '優れた構造化出力プロンプトとは（GPT-5.5）？',
+          content: ['**良いプロンプト — GPT-5.5**'],
           blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
         },
 
@@ -1613,7 +1613,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: ['主要LLMはそれぞれ、出力フォーマット準拠に固有の構造的優先事項があります：'],
           items: [
             '**Claude Opus 4.8（Anthropic）** — XMLタグ（`<output>`、`<format>`、`<constraints>`）；スキーマを先頭に；「JSONのみを出力し、他は何も含めないこと」',
-            '**GPT-4o（OpenAI）** — 番号付きフォーマットルール；メイン指示の後にスキーマ；「有効なJSONで応答してください。Markdownフェンスなし。説明なし。」',
+            '**GPT-5.5（OpenAI）** — 番号付きフォーマットルール；メイン指示の後にスキーマ；「有効なJSONで応答してください。Markdownフェンスなし。説明なし。」',
             '**Gemini 3.1 Pro（Google DeepMind）** — プロンプトの冒頭と末尾に簡潔で明示的なスキーマ；プロンプト内に希望する出力形式のone-shotサンプル',
             '**Ollama経由のローカルモデル**（LLaMA 3.1 7B、Mistral）— フォーマットドリフトに敏感；信頼性の高いJSON出力にはプロンプトに直接one-shotフォーマットサンプルが必要',
           ],
@@ -1650,7 +1650,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '制約デコードによるJSONの強制は、Function Callingベンチマークでモデルの精度を2.26ポイント低下させます — BAMLのスキーマ整合解析はBFCLで93.63%の精度を達成した一方、OpenAIの厳密な制約デコードは同じベンチマークで91.37%にとどまりました。',
             'メカニズム：制約デコードは現在のスキーマ位置と互換性のないトークンをマスクする有限状態機械を適用します。スキーマがintegerを指定している場合、floatフィールドに`51.7`を出力したいモデルは`51`を出力するよう強制されます — 技術的には有効だが事実的に劣化した結果です。Chain-of-Thought（CoT）プロンプティングも同様に制約デコードと互換性がありません：推論フィールドを含めると、モデルはJSONストリング内の改行、クォート、特殊文字をエスケープするよう強制され、すべてのテストモデルで推論品質が測定可能なほど低下します。',
-            '推論の深さとフォーマット保証の両方を必要とするシステムの本番グレードソリューション：(1) **Stage 1** — 制約なしでGPT-4oまたはClaude Opus 4.8に送信：「これを分析し、ステップバイステップで推論し、ロジックを説明してください。」(2) **Stage 2** — Stage 1の出力を小型専門モデル（Osmosis-Structure-0.6BまたはGPT-4o-mini、`strict: true`）に渡す：「この分析から主要データを抽出し、この正確なJSONスキーマで返してください。」',
+            '推論の深さとフォーマット保証の両方を必要とするシステムの本番グレードソリューション：(1) **Stage 1** — 制約なしでGPT-5.5またはClaude Opus 4.8に送信：「これを分析し、ステップバイステップで推論し、ロジックを説明してください。」(2) **Stage 2** — Stage 1の出力を小型専門モデル（Osmosis-Structure-0.6BまたはGPT-5.5-mini、`strict: true`）に渡す：「この分析から主要データを抽出し、この正確なJSONスキーマで返してください。」',
             'このアーキテクチャはStage 1の推論品質を保持し、Stage 2で100%フォーマット準拠を達成します。制約モードでフロンティアモデル全体を実行するコストの何分の一かで実現できます。',
           ],
         },
@@ -1658,7 +1658,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'トップモデルの出力制御比較',
           content: [
-            '[PromptQuorum](https://www.promptquorum.com/)でテスト済み — 30件の出力制御プロンプトを3モデルに分散：Claude Opus 4.8は制約デコードなしのXMLタグ付きフォーマット指示で93%のJSON準拠を達成。GPT-4oは番号付きフォーマットルールで89%の準拠を達成。Gemini 3.1 Proはスキーマを冒頭と末尾の両方に指定すると91%の準拠を達成。`strict: true`の制約デコードが有効な場合、3モデルすべてがより短く完全性の低い推論を生成しました — BFCLベンチマークで観察された2.26ポイントの精度低下と一致します。',
+            '[PromptQuorum](https://www.promptquorum.com/)でテスト済み — 30件の出力制御プロンプトを3モデルに分散：Claude Opus 4.8は制約デコードなしのXMLタグ付きフォーマット指示で93%のJSON準拠を達成。GPT-5.5は番号付きフォーマットルールで89%の準拠を達成。Gemini 3.1 Proはスキーマを冒頭と末尾の両方に指定すると91%の準拠を達成。`strict: true`の制約デコードが有効な場合、3モデルすべてがより短く完全性の低い推論を生成しました — BFCLベンチマークで観察された2.26ポイントの精度低下と一致します。',
           ],
         },
 
@@ -1719,7 +1719,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '`frequency_penalty`：範囲 -2.0〜2.0 で頻度比例繰り返しを削減；`presence_penalty`：範囲 -2.0〜2.0 で既出トークンにフラットペナルティを適用 — フォーカスした事実出力には両方を0.3〜0.5に設定',
             'ストップシーケンスは唯一の決定論的出力終了メカニズムです — プロンプト本文のネガティブ制約とは異なり、モデルはストップシーケンスをオーバーライドできません',
             'Temperatureの範囲：T = 0.0〜0.3は決定論的な事実タスク；T = 0.7〜1.0はクリエイティブタスク；T > 1.2は本番使用で不整合のリスクがあります',
-            'Claude Opus 4.8はXMLタグ付きフォーマットプロンプトで93%のJSON準拠を達成；GPT-4oは番号付きフォーマットルールで89% — どちらも制約デコードなし',
+            'Claude Opus 4.8はXMLタグ付きフォーマットプロンプトで93%のJSON準拠を達成；GPT-5.5は番号付きフォーマットルールで89% — どちらも制約デコードなし',
           ],
         },
 
@@ -1748,7 +1748,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'モデル間でTemperature設定をコピーする',
-              problem: 'GPT-4oのT=0.7とClaudeのT=0.7は異なる確率分布を生成します。',
+              problem: 'GPT-5.5のT=0.7とClaudeのT=0.7は異なる確率分布を生成します。',
               fix: '本番パイプラインで各モデルごとにパラメータ設定をテストしてください。'
             }
           ],
@@ -1869,7 +1869,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'LLM输出格式' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'Ollama' },
@@ -1930,7 +1930,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '输出控制在三个不同级别上运作——基于Prompt、基于Schema和受限解码——每个级别在对推理质量的权衡逐步增加的同时，提供逐步更强的格式保证。',
             '基于Prompt的格式化通过自然语言指示模型（"返回JSON，字段包括：name、email、score"）。这80%至95%的情况下有效，但在边缘情况下会静默失败，无类型保证，需要为5%至20%的格式错误响应进行错误处理。基于Schema的方法（函数调用/工具使用）以95%至99%的合规率正式定义输出结构——但Schema仍是强提示而非绝对约束。原生受限解码使用有限状态机在生成时屏蔽无效词元，以数学确定性生成100%符合Schema的输出。',
-            '两阶段方法——让Claude Opus 4.8（Anthropic）或GPT-4o（OpenAI）在Stage 1自由推理，然后将输出送入Stage 2小型专业结构化模型（Osmosis-Structure-0.6B，经50万条合成非结构化→结构化转换训练）——在不受受限解码推理质量损失的情况下实现格式保证。',
+            '两阶段方法——让Claude Opus 4.8（Anthropic）或GPT-5.5（OpenAI）在Stage 1自由推理，然后将输出送入Stage 2小型专业结构化模型（Osmosis-Structure-0.6B，经50万条合成非结构化→结构化转换训练）——在不受受限解码推理质量损失的情况下实现格式保证。',
             '一句话总结：将输出约束级别与任务匹配——仅在格式正确性比推理深度更重要时使用受限解码。',
           ],
           columns: ['级别', '合规率', '对推理的影响', '最适用场景'],
@@ -1946,8 +1946,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptStructure: {
           title: '如何通过Prompt Engineering控制输出格式？',
           content: [
-            '明确的输出Schema指令——对Claude Opus 4.8放在系统Prompt开头，对GPT-4o放在用户内容之前——在不产生原生受限解码推理质量损失的情况下，可实现85%至95%的结构化输出合规率。',
-            'Claude Opus 4.8（Anthropic）对使用XML风格章节标签、置于系统Prompt开头的输出格式指令响应最佳。GPT-4o（OpenAI）在Schema以编号格式规则形式放在用户内容之前时表现最好。Gemini 3.1 Pro（Google DeepMind）在Prompt开头和结尾都明确说明Schema时生成最可靠的结构化输出。',
+            '明确的输出Schema指令——对Claude Opus 4.8放在系统Prompt开头，对GPT-5.5放在用户内容之前——在不产生原生受限解码推理质量损失的情况下，可实现85%至95%的结构化输出合规率。',
+            'Claude Opus 4.8（Anthropic）对使用XML风格章节标签、置于系统Prompt开头的输出格式指令响应最佳。GPT-5.5（OpenAI）在Schema以编号格式规则形式放在用户内容之前时表现最好。Gemini 3.1 Pro（Google DeepMind）在Prompt开头和结尾都明确说明Schema时生成最可靠的结构化输出。',
           ],
         },
 
@@ -1969,8 +1969,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         goodPromptGPT: {
-          title: '好的结构化输出Prompt是什么样的（GPT-4o）？',
-          content: ['**良好Prompt——GPT-4o**'],
+          title: '好的结构化输出Prompt是什么样的（GPT-5.5）？',
+          content: ['**良好Prompt——GPT-5.5**'],
           blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
         },
 
@@ -1979,7 +1979,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: ['各主要LLM对输出格式合规有不同的结构偏好：'],
           items: [
             '**Claude Opus 4.8（Anthropic）** — XML标签（`<output>`、`<format>`、`<constraints>`）；Schema置于顶部；"仅输出JSON，不含其他内容"',
-            '**GPT-4o（OpenAI）** — 编号格式规则；Schema置于主指令之后；"以有效JSON响应，无Markdown代码块，无解释。"',
+            '**GPT-5.5（OpenAI）** — 编号格式规则；Schema置于主指令之后；"以有效JSON响应，无Markdown代码块，无解释。"',
             '**Gemini 3.1 Pro（Google DeepMind）** — 简洁、明确的Schema出现在开头和结尾；内嵌期望输出格式的单样本示例',
             '**通过Ollama运行的本地模型**（LLaMA 3.1 7B、Mistral）— 对格式漂移更敏感；需要在Prompt中直接嵌入单样本格式示例才能可靠输出JSON',
           ],
@@ -2016,7 +2016,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '通过受限解码强制JSON输出会在函数调用基准测试上降低2.26个百分点的模型准确率——BAML的Schema对齐解析在BFCL上达到93.63%准确率，而OpenAI的严格受限解码在同一基准上仅为91.37%。',
             '机制如下：受限解码应用有限状态机屏蔽与当前Schema位置不兼容的词元。如果Schema要求整数类型但模型想输出51.7，则被强制输出51——技术上有效但事实上有偏差。链式思维（CoT）Prompt与受限解码同样不兼容：将推理字段包含在内会迫使模型在JSON字符串中转义换行符、引号和特殊字符——在所有测试模型中可测量地降低推理质量。',
-            '对于既需要推理深度又需要格式保证的系统，生产级解决方案是：(1) **Stage 1** — 不带约束发送给GPT-4o或Claude Opus 4.8："分析这个，逐步推理，解释你的逻辑。" (2) **Stage 2** — 将Stage 1输出送入小型专业模型（Osmosis-Structure-0.6B或带`strict: true`的GPT-4o-mini）："从这份分析中提取关键数据，并以此JSON Schema格式返回。"',
+            '对于既需要推理深度又需要格式保证的系统，生产级解决方案是：(1) **Stage 1** — 不带约束发送给GPT-5.5或Claude Opus 4.8："分析这个，逐步推理，解释你的逻辑。" (2) **Stage 2** — 将Stage 1输出送入小型专业模型（Osmosis-Structure-0.6B或带`strict: true`的GPT-5.5-mini）："从这份分析中提取关键数据，并以此JSON Schema格式返回。"',
             '此架构保留Stage 1推理质量，并在Stage 2以全尺寸前沿模型受限模式运行成本的一小部分实现100%格式合规。',
           ],
         },
@@ -2024,7 +2024,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: '顶级模型在输出控制上的表现如何？',
           content: [
-            '在[PromptQuorum](https://www.promptquorum.com/)中测试——30个输出控制Prompt分发到三个模型：Claude Opus 4.8使用XML标签格式指令（不启用受限解码）达到93% JSON合规率。GPT-4o使用编号格式规则达到89%合规率。Gemini 3.1 Pro在开头和结尾均说明Schema的情况下达到91%合规率。启用`strict: true`受限解码后，三个模型的推理更短、更不完整——与BFCL基准上观察到的2.26百分点准确率下降一致。',
+            '在[PromptQuorum](https://www.promptquorum.com/)中测试——30个输出控制Prompt分发到三个模型：Claude Opus 4.8使用XML标签格式指令（不启用受限解码）达到93% JSON合规率。GPT-5.5使用编号格式规则达到89%合规率。Gemini 3.1 Pro在开头和结尾均说明Schema的情况下达到91%合规率。启用`strict: true`受限解码后，三个模型的推理更短、更不完整——与BFCL基准上观察到的2.26百分点准确率下降一致。',
           ],
         },
 
@@ -2085,7 +2085,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '`frequency_penalty`：取值范围-2.0至2.0，按频率比例减少重复；`presence_penalty`：取值范围-2.0至2.0，对任何已出现词元施加固定惩罚——两者设为0.3–0.5适合聚焦型事实输出',
             '停止序列是唯一确定性的输出终止机制——与Prompt正文中的负向约束不同，模型无法覆盖它们',
             'Temperature范围：T=0.0–0.3用于确定性事实任务；T=0.7–1.0用于创意任务；T>1.2在生产使用中有不连贯风险',
-            'Claude Opus 4.8使用XML标签格式Prompt达到93% JSON合规率；GPT-4o使用编号格式规则达到89%——两者均无需受限解码',
+            'Claude Opus 4.8使用XML标签格式Prompt达到93% JSON合规率；GPT-5.5使用编号格式规则达到89%——两者均无需受限解码',
           ],
         },
 
@@ -2114,7 +2114,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: '在不同模型间复制粘贴Temperature设置',
-              problem: 'GPT-4o的T=0.7和Claude的T=0.7产生不同的概率分布。',
+              problem: 'GPT-5.5的T=0.7和Claude的T=0.7产生不同的概率分布。',
               fix: '在你的生产流水线中逐模型测试每个参数设置。'
             },
           ],

@@ -305,7 +305,7 @@ jobs:
           },
           {
             q: 'How is prompt versioning different from model versioning?',
-            a: 'Prompt versioning tracks changes to the text instructions you send to a model. Model versioning tracks which AI version (GPT-4o, Claude 3.7, Llama 4) your application calls. Both require separate version control. When you change the target model, treat it as a MAJOR prompt version bump even if the prompt text is identical — different models respond differently to the same prompt.',
+            a: 'Prompt versioning tracks changes to the text instructions you send to a model. Model versioning tracks which AI version (GPT-5.5, Claude Sonnet 4.6, Llama 4) your application calls. Both require separate version control. When you change the target model, treat it as a MAJOR prompt version bump even if the prompt text is identical — different models respond differently to the same prompt.',
           },
           {
             q: 'What is a good minimum test suite size for a production prompt?',

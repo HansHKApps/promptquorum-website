@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       quickFacts: [
         'Minimum viable test set: 20 cases — 10 happy path, 5 edge cases, 5 adversarial inputs',
         'Binary pass/fail is most actionable for structured outputs with a clear correct answer',
-        'GPT-4o and Claude Opus 4.8 score 10–20 points differently on the same prompt on average',
+        'GPT-5.5 and Claude Opus 4.8 score 10–20 points differently on the same prompt on average',
         'LLM-as-judge scoring scales to thousands of test cases without human review',
         'A 90% instruction-following rate means 1 in 10 production requests fails a constraint',
       ],
@@ -76,8 +76,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'What is instruction-following rate?', acceptedAnswer: { '@type': 'Answer', text: 'Instruction-following rate is the percentage of outputs where the model obeyed every constraint in the prompt: format, length, tone, scope, and prohibited content. A 90% rate means 1 in 10 requests fails in production. This is distinct from accuracy and must be measured separately.' } },
           { '@type': 'Question', name: 'Why does manual spot-checking fail for prompt evaluation?', acceptedAnswer: { '@type': 'Answer', text: 'Manual spot-checking is non-repeatable (different reviewers pick different examples), selection-biased (reviewers unconsciously pick cases they expect to pass), and does not scale (10 examples miss 90% of failure modes in a 100-case set). Automated test sets produce consistent, reproducible results across prompt versions and model updates.' } },
           { '@type': 'Question', name: 'How many test cases does a prompt test set need?', acceptedAnswer: { '@type': 'Answer', text: 'A minimal test set needs 20 cases: 10 happy-path inputs covering typical use, 5 edge cases testing boundaries (empty input, very long input, multilingual text), and 5 adversarial inputs designed to break the prompt. Fewer than 20 cases produces statistically unreliable pass rates that miss real failure modes.' } },
-          { '@type': 'Question', name: 'Does prompt quality differ between GPT-4o and Claude Opus 4.8?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, significantly. The same prompt regularly scores 10-20 points differently between GPT-4o and Claude Opus 4.8 due to differences in instruction-format sensitivity and system prompt handling. Always measure pass rate separately on each model you plan to deploy. A prompt that scores 95% on GPT-4o may score 80% on Claude Opus 4.8 without model-specific tuning.' } },
-          { '@type': 'Question', name: 'What is LLM-as-judge scoring and when should I use it?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge uses a capable model like GPT-4o or Claude Opus 4.8 to score outputs against a rubric prompt. The judge receives the original input, your model\'s output, and evaluation criteria, then returns a score with justification. Use LLM-as-judge for free-text outputs where binary pass/fail is insufficient. It scales to thousands of test cases without human review, making it ideal for continuous evaluation pipelines.' } },
+          { '@type': 'Question', name: 'Does prompt quality differ between GPT-5.5 and Claude Opus 4.8?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, significantly. The same prompt regularly scores 10-20 points differently between GPT-5.5 and Claude Opus 4.8 due to differences in instruction-format sensitivity and system prompt handling. Always measure pass rate separately on each model you plan to deploy. A prompt that scores 95% on GPT-5.5 may score 80% on Claude Opus 4.8 without model-specific tuning.' } },
+          { '@type': 'Question', name: 'What is LLM-as-judge scoring and when should I use it?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge uses a capable model like GPT-5.5 or Claude Opus 4.8 to score outputs against a rubric prompt. The judge receives the original input, your model\'s output, and evaluation criteria, then returns a score with justification. Use LLM-as-judge for free-text outputs where binary pass/fail is insufficient. It scales to thousands of test cases without human review, making it ideal for continuous evaluation pipelines.' } },
           { '@type': 'Question', name: 'How do you set a pass rate regression threshold?', acceptedAnswer: { '@type': 'Answer', text: 'Record the pass rate on the first test run as your baseline. A regression gate of 5 points is common: if a prompt change drops pass rate by more than 5 points compared to baseline, block the deployment. Teams typically target 85–95% pass rate for production prompts. For critical workflows (legal, medical, financial), use a 2-point regression gate instead.' } },
         ],
       },
@@ -105,8 +105,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Manual spot-checking is non-repeatable and misses edge cases — use automated test sets',
             'A minimum viable test set needs 20 cases: happy path, edge cases, and adversarial inputs',
             'Binary pass/fail is the most actionable metric for structured output prompts',
-            'LLM-as-judge (GPT-4o or Claude scoring outputs against a rubric) scales to free-text tasks',
-            'Use PromptQuorum to dispatch the same test set to GPT-4o and Claude Opus 4.8 and compare pass rates side-by-side',
+            'LLM-as-judge (GPT-5.5 or Claude scoring outputs against a rubric) scales to free-text tasks',
+            'Use PromptQuorum to dispatch the same test set to GPT-5.5 and Claude Opus 4.8 and compare pass rates side-by-side',
           ],
         },
         definition: {
@@ -162,7 +162,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         scoringRubrics: {
           id: 'scoring-rubrics',
           title: 'How Do You Score Prompt Outputs?',
-          content: '**Choose your scoring method based on output type: binary pass/fail for structured outputs, 1-5 rubric for generation tasks, and LLM-as-judge for free-text evaluation.**\n\n**Binary pass/fail** is the most actionable. Use for JSON outputs, classification results, and outputs with a clear correct answer. Pass rate = correct outputs / total test cases.\n\n**1-5 scale rubric** works for generation tasks where partial credit is meaningful. Define each score level before testing: 5 = fully correct, 4 = minor issue, 3 = acceptable with caveats, 2 = significant problem, 1 = wrong or harmful.\n\n**LLM-as-judge** uses GPT-4o or Claude Opus 4.8 to score outputs against a rubric. As of mid-2026, LLM-as-judge is the dominant approach for evaluating free-text outputs at scale. The judge prompt must specify the rubric precisely.',
+          content: '**Choose your scoring method based on output type: binary pass/fail for structured outputs, 1-5 rubric for generation tasks, and LLM-as-judge for free-text evaluation.**\n\n**Binary pass/fail** is the most actionable. Use for JSON outputs, classification results, and outputs with a clear correct answer. Pass rate = correct outputs / total test cases.\n\n**1-5 scale rubric** works for generation tasks where partial credit is meaningful. Define each score level before testing: 5 = fully correct, 4 = minor issue, 3 = acceptable with caveats, 2 = significant problem, 1 = wrong or harmful.\n\n**LLM-as-judge** uses GPT-5.5 or Claude Opus 4.8 to score outputs against a rubric. As of mid-2026, LLM-as-judge is the dominant approach for evaluating free-text outputs at scale. The judge prompt must specify the rubric precisely.',
           columns: ['Method', 'Best for', 'Scale', 'Human effort', 'Reliability'],
           rows: [
             { 'Method': 'Binary pass/fail', 'Best for': 'Structured output, classification', 'Scale': 'Any size', 'Human effort': 'Zero after setup', 'Reliability': 'High — objective' },
@@ -181,9 +181,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         multiModel: {
           id: 'multi-model',
           title: 'Does Prompt Quality Differ Across Models?',
-          content: '**Yes — the same prompt can score 20+ points differently between GPT-4o and Claude Opus 4.8, primarily due to instruction-format sensitivity and system prompt handling.**\n\nQuality gaps are largest for:\n\n- **JSON output formatting:** Claude Opus 4.8 follows complex schemas more strictly than GPT-4o\n- **Instruction priority:** GPT-4o weights the most recent instruction; Claude Opus 4.8 weights the system prompt\n- **Refusal patterns:** OpenAI and Anthropic models have different thresholds for borderline content\n\nOur evaluation of classification and formatting prompts across both models (updated through April 2026) found pass rate differences of 10–20 points, with JSON output formatting producing the largest gaps. See [how to test prompts across models](/prompt-engineering/how-to-test-prompts-across-models) for a full multi-model evaluation methodology.\n\nUse PromptQuorum to dispatch the same test set to GPT-4o, Claude Opus 4.8, and Gemini 2.5 Pro in one run and compare pass rates side-by-side.',
+          content: '**Yes — the same prompt can score 20+ points differently between GPT-5.5 and Claude Opus 4.8, primarily due to instruction-format sensitivity and system prompt handling.**\n\nQuality gaps are largest for:\n\n- **JSON output formatting:** Claude Opus 4.8 follows complex schemas more strictly than GPT-5.5\n- **Instruction priority:** GPT-5.5 weights the most recent instruction; Claude Opus 4.8 weights the system prompt\n- **Refusal patterns:** OpenAI and Anthropic models have different thresholds for borderline content\n\nOur evaluation of classification and formatting prompts across both models (updated through April 2026) found pass rate differences of 10–20 points, with JSON output formatting producing the largest gaps. See [how to test prompts across models](/prompt-engineering/how-to-test-prompts-across-models) for a full multi-model evaluation methodology.\n\nUse PromptQuorum to dispatch the same test set to GPT-5.5, Claude Opus 4.8, and Gemini 2.5 Pro in one run and compare pass rates side-by-side.',
           callouts: [
-            { type: 'warning', label: 'Warning', text: 'Do not assume a prompt that passes on GPT-4o will pass on Claude Opus 4.8. Run the same test set on every model you plan to deploy — a prompt may need model-specific tuning.' },
+            { type: 'warning', label: 'Warning', text: 'Do not assume a prompt that passes on GPT-5.5 will pass on Claude Opus 4.8. Run the same test set on every model you plan to deploy — a prompt may need model-specific tuning.' },
           ],
         },
         howToStart: {
@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Collect 20 test inputs: 8 happy-path, 6 edge cases, 6 adversarial. Write expected outputs or pass criteria for each.',
             'Choose a scoring method: binary for structured outputs, 1-5 rubric for generation, LLM-as-judge for free text.',
             'Run all 20 inputs through your current prompt and score each output. Record this pass rate as your baseline.',
-            'Dispatch the same test set to GPT-4o and Claude Opus 4.8 via PromptQuorum and compare model-level pass rates.',
+            'Dispatch the same test set to GPT-5.5 and Claude Opus 4.8 via PromptQuorum and compare model-level pass rates.',
             'Set a regression threshold: if a prompt change drops pass rate by more than 5 points, block the deployment.',
           ],
           callouts: [
@@ -218,8 +218,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Using pass rate from one model on another',
-              problem: 'The same prompt regularly scores 10-20 points differently between GPT-4o and Claude Opus 4.8. Assuming one model\'s pass rate applies to another leads to production surprises.',
-              fix: 'Run the test set separately on each model you plan to deploy. GPT-4o, Claude Opus 4.8, and Gemini 2.5 Pro all need independent evaluation.',
+              problem: 'The same prompt regularly scores 10-20 points differently between GPT-5.5 and Claude Opus 4.8. Assuming one model\'s pass rate applies to another leads to production surprises.',
+              fix: 'Run the test set separately on each model you plan to deploy. GPT-5.5, Claude Opus 4.8, and Gemini 2.5 Pro all need independent evaluation.',
             },
             {
               mistake: 'No baseline',
@@ -243,7 +243,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Related Reading',
           items: [
             '[Prompt Evaluation Metrics: What to Measure and How](/prompt-engineering/prompt-evaluation-metrics) — Breakdown of pass rate, BLEU, semantic similarity, and LLM-as-judge',
-            '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Multi-model evaluation for GPT-4o vs Claude vs Gemini',
+            '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Multi-model evaluation for GPT-5.5 vs Claude vs Gemini',
             '[How to Reduce Prompt Brittleness](/prompt-engineering/how-to-reduce-prompt-brittleness) — Output schemas, few-shot anchors, and regression gates',
             '[Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — Store test sets alongside prompts with metadata for team reuse',
             '[Best Prompt Optimization Tools for Teams](/prompt-engineering/best-prompt-optimization-tools-teams) — Tools that include test set management and pass rate tracking',
@@ -259,8 +259,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'What is instruction-following rate?', a: 'Instruction-following rate is the percentage of outputs where the model obeyed every constraint in the prompt: format, length, tone, scope, and prohibited content. A 90% rate means 1 in 10 requests fails in production. This is distinct from accuracy and must be measured separately.' },
             { q: 'Why does manual spot-checking fail for prompt evaluation?', a: 'Manual spot-checking is non-repeatable (different reviewers pick different examples), selection-biased (reviewers unconsciously pick cases they expect to pass), and does not scale (10 examples miss 90% of failure modes in a 100-case set). Automated test sets produce consistent, reproducible results across prompt versions and model updates.' },
             { q: 'How many test cases does a prompt test set need?', a: 'A minimal test set needs 20 cases: 10 happy-path inputs covering typical use, 5 edge cases testing boundaries (empty input, very long input, multilingual text), and 5 adversarial inputs designed to break the prompt. Fewer than 20 cases produces statistically unreliable pass rates that miss real failure modes.' },
-            { q: 'Does prompt quality differ between GPT-4o and Claude Opus 4.8?', a: 'Yes, significantly. The same prompt regularly scores 10-20 points differently between GPT-4o and Claude Opus 4.8 due to differences in instruction-format sensitivity and system prompt handling. Always measure pass rate separately on each model you plan to deploy. A prompt that scores 95% on GPT-4o may score 80% on Claude Opus 4.8 without model-specific tuning.' },
-            { q: 'What is LLM-as-judge scoring and when should I use it?', a: 'LLM-as-judge uses a capable model like GPT-4o or Claude Opus 4.8 to score outputs against a rubric prompt. The judge receives the original input, your model\'s output, and evaluation criteria, then returns a score with justification. Use LLM-as-judge for free-text outputs where binary pass/fail is insufficient. It scales to thousands of test cases without human review, making it ideal for continuous evaluation pipelines.' },
+            { q: 'Does prompt quality differ between GPT-5.5 and Claude Opus 4.8?', a: 'Yes, significantly. The same prompt regularly scores 10-20 points differently between GPT-5.5 and Claude Opus 4.8 due to differences in instruction-format sensitivity and system prompt handling. Always measure pass rate separately on each model you plan to deploy. A prompt that scores 95% on GPT-5.5 may score 80% on Claude Opus 4.8 without model-specific tuning.' },
+            { q: 'What is LLM-as-judge scoring and when should I use it?', a: 'LLM-as-judge uses a capable model like GPT-5.5 or Claude Opus 4.8 to score outputs against a rubric prompt. The judge receives the original input, your model\'s output, and evaluation criteria, then returns a score with justification. Use LLM-as-judge for free-text outputs where binary pass/fail is insufficient. It scales to thousands of test cases without human review, making it ideal for continuous evaluation pipelines.' },
             { q: 'How do you set a pass rate regression threshold?', a: 'Record the pass rate on the first test run as your baseline. A regression gate of 5 points is common: if a prompt change drops pass rate by more than 5 points compared to baseline, block the deployment. Teams typically target 85–95% pass rate for production prompts. For critical workflows (legal, medical, financial), use a 2-point regression gate instead.' },
           ],
         },
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       quickFacts: [
         'Minimaler Test-Set: 20 Fälle — 10 Happy-Path, 5 Edge Cases, 5 Adversarial Inputs',
         'Binary Pass/Fail ist am aussagekräftigsten für strukturierte Ausgaben mit klarer korrekter Antwort',
-        'GPT-4o und Claude Opus 4.8 unterscheiden sich durchschnittlich um 10–20 Punkte beim Scoring desselben Prompts',
+        'GPT-5.5 und Claude Opus 4.8 unterscheiden sich durchschnittlich um 10–20 Punkte beim Scoring desselben Prompts',
         'LLM-as-Judge Scoring skaliert auf Tausende Test-Fälle ohne menschliche Überprüfung',
         'Eine 90 % Instruction-Following Rate bedeutet, dass 1 von 10 Produktionsanfragen eine Einschränkung verletzt',
       ],
@@ -346,8 +346,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'Was ist Instruction-Following Rate?', acceptedAnswer: { '@type': 'Answer', text: 'Die Instruction-Following Rate ist der Prozentsatz von Ausgaben, bei denen das Modell jede Einschränkung im Prompt befolgt hat: Format, Länge, Ton, Umfang und verbotene Inhalte. Eine Rate von 90 % bedeutet, dass 1 von 10 Produktionsanfragen eine Einschränkung verletzt. Dies ist unterschiedlich von Accuracy und muss separat gemessen werden.' } },
           { '@type': 'Question', name: 'Warum funktioniert manuelles Spot-Checking nicht bei der Prompt-Bewertung?', acceptedAnswer: { '@type': 'Answer', text: 'Manuelles Spot-Checking ist nicht wiederholbar (verschiedene Reviewer wählen unterschiedliche Beispiele), auswahlverzerrend (Reviewer wählen unbewusst Fälle, von denen sie erwarten, dass sie bestehen) und nicht skalierbar (10 Beispiele verpassen 90 % der Fehlermodi in einem 100er Set). Automatisierte Test-Sets liefern konsistente, reproduzierbare Ergebnisse über Prompt-Versionen und Modell-Updates.' } },
           { '@type': 'Question', name: 'Wie viele Test-Fälle braucht ein Prompt-Test-Set?', acceptedAnswer: { '@type': 'Answer', text: 'Ein minimaler Test-Set braucht 20 Fälle: 10 Happy-Path-Eingaben für typische Nutzung, 5 Edge Cases an Grenzen (leere Eingabe, sehr lange Eingabe, mehrsprachige Texte) und 5 Adversarial Inputs. Weniger als 20 Fälle erzeugen statistisch unzuverlässige Pass-Raten, die reale Fehlerszenarien verpassen.' } },
-          { '@type': 'Question', name: 'Unterscheidet sich die Prompt-Qualität zwischen GPT-4o und Claude Opus 4.8?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, erheblich. Derselbe Prompt scored regelmäßig 10-20 Punkte unterschiedlich zwischen GPT-4o und Claude Opus 4.8 aufgrund von Unterschieden in der Instruction-Format-Sensitivität und dem System-Prompt-Handling. Messe die Pass-Rate immer separat auf jedem Modell, das du einsetzen möchtest. Ein Prompt, der auf GPT-4o 95 % scored, kann auf Claude Opus 4.8 ohne modellspezifisches Tuning 80 % scored.' } },
-          { '@type': 'Question', name: 'Was ist LLM-as-Judge Scoring und wann sollte ich es verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge nutzt ein leistungsstarkes Modell wie GPT-4o oder Claude Opus 4.8, um Ausgaben gegen eine Rubrik zu bewerten. Der Judge erhält die ursprüngliche Eingabe, deine Modell-Ausgabe und Evaluierungskriterien und liefert dann einen Score mit Begründung. Verwende LLM-as-Judge für Free-Text-Ausgaben, wo Binary Pass/Fail nicht ausreicht. Es skaliert auf Tausende Test-Fälle ohne menschliche Überprüfung, was es ideal für kontinuierliche Evaluierungs-Pipelines macht.' } },
+          { '@type': 'Question', name: 'Unterscheidet sich die Prompt-Qualität zwischen GPT-5.5 und Claude Opus 4.8?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, erheblich. Derselbe Prompt scored regelmäßig 10-20 Punkte unterschiedlich zwischen GPT-5.5 und Claude Opus 4.8 aufgrund von Unterschieden in der Instruction-Format-Sensitivität und dem System-Prompt-Handling. Messe die Pass-Rate immer separat auf jedem Modell, das du einsetzen möchtest. Ein Prompt, der auf GPT-5.5 95 % scored, kann auf Claude Opus 4.8 ohne modellspezifisches Tuning 80 % scored.' } },
+          { '@type': 'Question', name: 'Was ist LLM-as-Judge Scoring und wann sollte ich es verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge nutzt ein leistungsstarkes Modell wie GPT-5.5 oder Claude Opus 4.8, um Ausgaben gegen eine Rubrik zu bewerten. Der Judge erhält die ursprüngliche Eingabe, deine Modell-Ausgabe und Evaluierungskriterien und liefert dann einen Score mit Begründung. Verwende LLM-as-Judge für Free-Text-Ausgaben, wo Binary Pass/Fail nicht ausreicht. Es skaliert auf Tausende Test-Fälle ohne menschliche Überprüfung, was es ideal für kontinuierliche Evaluierungs-Pipelines macht.' } },
           { '@type': 'Question', name: 'Wie setzt du eine Pass-Rate Regressions-Schwelle?', acceptedAnswer: { '@type': 'Answer', text: 'Speichere die Pass-Rate aus dem ersten Test-Durchlauf als Baseline. Ein Regressions-Gate von 5 Punkten ist üblich: wenn eine Prompt-Änderung die Pass-Rate um mehr als 5 Punkte relativ zur Baseline senkt, blockiere das Deployment. Teams zielen typischerweise auf 85–95 % Pass-Rate für Produktions-Prompts ab. Für kritische Workflows (legal, medizinisch, finanziell) verwende stattdessen ein 2-Punkte-Regressions-Gate.' } },
           { '@type': 'Question', name: 'Muss ich bei der Verwendung von Prompt-Bewertung die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Wenn dein Prompt personenbezogene Daten verarbeitet, gelten DSGVO Artikel 28 (Datenverarbeitungs-Vereinbarungen) und Artikel 22 (automatisierte Entscheidungsfindung). Dokumentierte Prompt-Bewertungs-Test-Sets mit Pass-Rate-Records liefern audit-bereite Nachweise für systematische Qualitätskontrolle. Sie unterstützen auch die Erklärbarkeit, die Artikel 22 für automatisierte Entscheidungen erfordert. Speichere Test-Sets als Compliance-Dokumentation.' } },
           { '@type': 'Question', name: 'Ist Prompt-Bewertung für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Mittelständische Unternehmen profitieren von strukturierter Prompt-Bewertung, besonders wenn LLMs in kundenorientierten oder sicherheitskritischen Workflows eingesetzt werden. Ein 20er Test-Set mit dokumentierten Pass-Raten erfüllt BSI-Grundschutz-Katalog Anforderungen für Qualitätskontrolle. Der Aufwand ist niedrig (ein Test-Set mit etwa 6 Stunden Vorbereitung), und die Compliance-Dokumentation reduziert IT-Sicherheits-Audit-Fragen. Besonders relevant für Finanz-, Versicherungs- und Industrie-Mittelstand.' } },
@@ -377,8 +377,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Manuelles Spot-Checking ist nicht wiederholbar und verfehlt Edge Cases — nutze automatisierte Test-Sets',
             'Ein minimaler praktischer Test-Set braucht 20 Fälle: Happy Path, Edge Cases und Adversarial Inputs',
             'Binary Pass/Fail ist die aussagekräftigste Metrik für strukturierte Output-Prompts',
-            'LLM-as-Judge (GPT-4o oder Claude bewertet Ausgaben gegen eine Rubrik) skaliert auf Free-Text-Aufgaben',
-            'Nutze PromptQuorum, um denselben Test-Set zu GPT-4o und Claude Opus 4.8 zu leiten und Pass-Raten Seite-an-Seite zu vergleichen',
+            'LLM-as-Judge (GPT-5.5 oder Claude bewertet Ausgaben gegen eine Rubrik) skaliert auf Free-Text-Aufgaben',
+            'Nutze PromptQuorum, um denselben Test-Set zu GPT-5.5 und Claude Opus 4.8 zu leiten und Pass-Raten Seite-an-Seite zu vergleichen',
           ],
         },
         definition: {
@@ -434,7 +434,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         scoringRubrics: {
           id: 'scoring-rubrics',
           title: 'Wie bewertest du Prompt-Ausgaben?',
-          content: '**Wähle deine Scoring-Methode basierend auf Output-Typ: Binary Pass/Fail für strukturierte Ausgaben, 1-5 Rubrik für Generation-Aufgaben und LLM-as-Judge für Free-Text-Bewertung.**\n\n**Binary Pass/Fail** ist am aussagekräftigsten. Verwende für JSON-Ausgaben, Classification-Ergebnisse und Ausgaben mit klarer korrekter Antwort. Pass-Rate = korrekte Ausgaben / Gesamt-Test-Fälle.\n\n**1-5 Skala Rubrik** funktioniert für Generation-Aufgaben, wo Teilpunkte sinnvoll sind. Definiere jeden Score-Level vor dem Testen: 5 = vollständig korrekt, 4 = geringes Problem, 3 = akzeptabel mit Caveats, 2 = erhebliches Problem, 1 = falsch oder schädlich.\n\n**LLM-as-Judge** nutzt GPT-4o oder Claude Opus 4.8, um Ausgaben gegen eine Rubrik zu bewerten. Stand Mitte 2026 ist LLM-as-Judge der dominante Ansatz zur Bewertung von Free-Text-Ausgaben in großem Maßstab. Der Judge-Prompt muss die Rubrik präzise spezifizieren.',
+          content: '**Wähle deine Scoring-Methode basierend auf Output-Typ: Binary Pass/Fail für strukturierte Ausgaben, 1-5 Rubrik für Generation-Aufgaben und LLM-as-Judge für Free-Text-Bewertung.**\n\n**Binary Pass/Fail** ist am aussagekräftigsten. Verwende für JSON-Ausgaben, Classification-Ergebnisse und Ausgaben mit klarer korrekter Antwort. Pass-Rate = korrekte Ausgaben / Gesamt-Test-Fälle.\n\n**1-5 Skala Rubrik** funktioniert für Generation-Aufgaben, wo Teilpunkte sinnvoll sind. Definiere jeden Score-Level vor dem Testen: 5 = vollständig korrekt, 4 = geringes Problem, 3 = akzeptabel mit Caveats, 2 = erhebliches Problem, 1 = falsch oder schädlich.\n\n**LLM-as-Judge** nutzt GPT-5.5 oder Claude Opus 4.8, um Ausgaben gegen eine Rubrik zu bewerten. Stand Mitte 2026 ist LLM-as-Judge der dominante Ansatz zur Bewertung von Free-Text-Ausgaben in großem Maßstab. Der Judge-Prompt muss die Rubrik präzise spezifizieren.',
           columns: ['Methode', 'Best for', 'Skalierung', 'Aufwand', 'Zuverlässigkeit'],
           rows: [
             { 'Methode': 'Binary Pass/Fail', 'Best for': 'Strukturierte Ausgabe, Classification', 'Skalierung': 'Jede Größe', 'Aufwand': 'Null nach Setup', 'Zuverlässigkeit': 'Hoch — objektiv' },
@@ -453,9 +453,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         multiModel: {
           id: 'multi-model',
           title: 'Unterscheidet sich die Prompt-Qualität zwischen Modellen?',
-          content: '**Ja — derselbe Prompt kann 20+ Punkte unterschiedlich zwischen GPT-4o und Claude Opus 4.8 scored, primär aufgrund von Instruction-Format-Sensitivität und System-Prompt-Handling.**\n\nQualitätslücken sind am größten für:\n\n- **JSON-Output-Formatierung:** Claude Opus 4.8 folgt komplexen Schemas strikter als GPT-4o\n- **Instruction-Priorität:** GPT-4o gewichtet die zuletzt gegebene Anweisung; Claude Opus 4.8 gewichtet den System-Prompt\n- **Refusal-Muster:** OpenAI und Anthropic Modelle haben unterschiedliche Schwellen für Grenzfall-Inhalte\n\nUnsere Bewertung von Classification- und Formatting-Prompts über beide Modelle (aktualisiert bis April 2026) fand Pass-Rate-Unterschiede von 10–20 Punkten, wobei JSON-Output-Formatierung die größten Lücken erzeugte. Siehe [Wie man Prompts über Modelle testet](/de/prompt-engineering/how-to-test-prompts-across-models) für vollständige Multi-Model-Evaluierungs-Methodik.\n\nNutze PromptQuorum, um denselben Test-Set zu GPT-4o, Claude Opus 4.8 und Gemini 2.5 Pro in einem Durchlauf zu leiten und Pass-Raten Seite-an-Seite zu vergleichen.',
+          content: '**Ja — derselbe Prompt kann 20+ Punkte unterschiedlich zwischen GPT-5.5 und Claude Opus 4.8 scored, primär aufgrund von Instruction-Format-Sensitivität und System-Prompt-Handling.**\n\nQualitätslücken sind am größten für:\n\n- **JSON-Output-Formatierung:** Claude Opus 4.8 folgt komplexen Schemas strikter als GPT-5.5\n- **Instruction-Priorität:** GPT-5.5 gewichtet die zuletzt gegebene Anweisung; Claude Opus 4.8 gewichtet den System-Prompt\n- **Refusal-Muster:** OpenAI und Anthropic Modelle haben unterschiedliche Schwellen für Grenzfall-Inhalte\n\nUnsere Bewertung von Classification- und Formatting-Prompts über beide Modelle (aktualisiert bis April 2026) fand Pass-Rate-Unterschiede von 10–20 Punkten, wobei JSON-Output-Formatierung die größten Lücken erzeugte. Siehe [Wie man Prompts über Modelle testet](/de/prompt-engineering/how-to-test-prompts-across-models) für vollständige Multi-Model-Evaluierungs-Methodik.\n\nNutze PromptQuorum, um denselben Test-Set zu GPT-5.5, Claude Opus 4.8 und Gemini 2.5 Pro in einem Durchlauf zu leiten und Pass-Raten Seite-an-Seite zu vergleichen.',
           callouts: [
-            { type: 'warning', label: 'Warnung', text: 'Gehe nicht davon aus, dass ein Prompt, der auf GPT-4o bestanden hat, auf Claude Opus 4.8 bestehen wird. Führe denselben Test-Set auf jedem Modell aus, das du einsetzen möchtest — ein Prompt kann modellspezifisches Tuning benötigen.' },
+            { type: 'warning', label: 'Warnung', text: 'Gehe nicht davon aus, dass ein Prompt, der auf GPT-5.5 bestanden hat, auf Claude Opus 4.8 bestehen wird. Führe denselben Test-Set auf jedem Modell aus, das du einsetzen möchtest — ein Prompt kann modellspezifisches Tuning benötigen.' },
           ],
         },
         howToStart: {
@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Sammle 20 Test-Eingaben: 8 Happy-Path, 6 Edge Cases, 6 Adversarial. Schreibe erwartete Ausgaben oder Pass-Kriterien für jeden.',
             'Wähle eine Scoring-Methode: Binary für strukturierte Ausgaben, 1-5 Rubrik für Generation, LLM-as-Judge für Free Text.',
             'Führe alle 20 Eingaben durch deinen aktuellen Prompt und bewerte jede Ausgabe. Speichere diese Pass-Rate als deine Baseline.',
-            'Leite denselben Test-Set zu GPT-4o und Claude Opus 4.8 via PromptQuorum und vergleiche Model-Level-Pass-Raten.',
+            'Leite denselben Test-Set zu GPT-5.5 und Claude Opus 4.8 via PromptQuorum und vergleiche Model-Level-Pass-Raten.',
             'Setze eine Regressions-Schwelle: Wenn eine Prompt-Änderung die Pass-Rate um mehr als 5 Punkte senkt, blockiere das Deployment.',
           ],
           callouts: [
@@ -490,8 +490,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Pass-Rate von einem Modell auf ein anderes übernehmen',
-              problem: 'Derselbe Prompt scored regelmäßig 10-20 Punkte unterschiedlich zwischen GPT-4o und Claude Opus 4.8. Eine Pass-Rate von einem Modell auf ein anderes anzunehmen, führt zu Produktions-Überraschungen.',
-              fix: 'Führe den Test-Set separat auf jedem Modell aus, das du einsetzen möchtest. GPT-4o, Claude Opus 4.8 und Gemini 2.5 Pro benötigen alle unabhängige Bewertung.',
+              problem: 'Derselbe Prompt scored regelmäßig 10-20 Punkte unterschiedlich zwischen GPT-5.5 und Claude Opus 4.8. Eine Pass-Rate von einem Modell auf ein anderes anzunehmen, führt zu Produktions-Überraschungen.',
+              fix: 'Führe den Test-Set separat auf jedem Modell aus, das du einsetzen möchtest. GPT-5.5, Claude Opus 4.8 und Gemini 2.5 Pro benötigen alle unabhängige Bewertung.',
             },
             {
               mistake: 'Keine Baseline',
@@ -515,7 +515,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Weiterführende Lektüre',
           items: [
             '[Prompt-Evaluierungs-Metriken: Was gemessen werden soll und wie](/de/prompt-engineering/prompt-evaluation-metrics) — Aufschlüsselung von Pass-Rate, BLEU, semantischer Ähnlichkeit und LLM-as-Judge',
-            '[Wie man Prompts über Modelle testet](/de/prompt-engineering/how-to-test-prompts-across-models) — Multi-Model-Bewertung für GPT-4o vs Claude vs Gemini',
+            '[Wie man Prompts über Modelle testet](/de/prompt-engineering/how-to-test-prompts-across-models) — Multi-Model-Bewertung für GPT-5.5 vs Claude vs Gemini',
             '[Wie man Prompt-Sprödheit reduziert](/de/prompt-engineering/how-to-reduce-prompt-brittleness) — Output-Schemas, Few-Shot-Anker und Regressions-Gates',
             '[Prompt-Bibliothek erstellen](/de/prompt-engineering/build-a-prompt-library) — Speichere Test-Sets neben Prompts mit Metadaten für Team-Wiederverwendung',
             '[Beste Prompt-Optimierungs-Tools für Teams](/de/prompt-engineering/best-prompt-optimization-tools-teams) — Tools, die Test-Set-Management und Pass-Rate-Tracking enthalten',
@@ -531,8 +531,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Was ist Instruction-Following Rate?', a: 'Instruction-Following Rate ist der Prozentsatz von Ausgaben, bei denen das Modell jede Einschränkung im Prompt befolgt hat: Format, Länge, Ton, Umfang und verbotene Inhalte. Eine Rate von 90 % bedeutet, dass 1 von 10 Produktionsanfragen eine Einschränkung verletzt. Dies ist unterschiedlich von Accuracy und muss separat gemessen werden.' },
             { q: 'Warum funktioniert manuelles Spot-Checking nicht bei der Prompt-Bewertung?', a: 'Manuelles Spot-Checking ist nicht wiederholbar (verschiedene Reviewer wählen unterschiedliche Beispiele), auswahlverzerrend (Reviewer wählen unbewusst Fälle, von denen sie erwarten, dass sie bestehen) und nicht skalierbar (10 Beispiele verpassen 90 % der Fehlermodi in einem 100er Set). Automatisierte Test-Sets liefern konsistente, reproduzierbare Ergebnisse über Prompt-Versionen und Modell-Updates.' },
             { q: 'Wie viele Test-Fälle braucht ein Prompt-Test-Set?', a: 'Ein minimaler Test-Set braucht 20 Fälle: 10 Happy-Path-Eingaben für typische Nutzung, 5 Edge Cases an Grenzen (leere Eingabe, sehr lange Eingabe, mehrsprachige Texte) und 5 Adversarial Inputs. Weniger als 20 Fälle erzeugen statistisch unzuverlässige Pass-Raten, die reale Fehlerszenarien verpassen.' },
-            { q: 'Unterscheidet sich die Prompt-Qualität zwischen GPT-4o und Claude Opus 4.8?', a: 'Ja, erheblich. Derselbe Prompt scored regelmäßig 10-20 Punkte unterschiedlich zwischen GPT-4o und Claude Opus 4.8 aufgrund von Unterschieden in der Instruction-Format-Sensitivität und dem System-Prompt-Handling. Messe die Pass-Rate immer separat auf jedem Modell, das du einsetzen möchtest. Ein Prompt, der auf GPT-4o 95 % scored, kann auf Claude Opus 4.8 ohne modellspezifisches Tuning 80 % scored.' },
-            { q: 'Was ist LLM-as-Judge Scoring und wann sollte ich es verwenden?', a: 'LLM-as-Judge nutzt ein leistungsstarkes Modell wie GPT-4o oder Claude Opus 4.8, um Ausgaben gegen eine Rubrik zu bewerten. Der Judge erhält die ursprüngliche Eingabe, deine Modell-Ausgabe und Evaluierungskriterien und liefert dann einen Score mit Begründung. Verwende LLM-as-Judge für Free-Text-Ausgaben, wo Binary Pass/Fail nicht ausreicht. Es skaliert auf Tausende Test-Fälle ohne menschliche Überprüfung, was es ideal für kontinuierliche Evaluierungs-Pipelines macht.' },
+            { q: 'Unterscheidet sich die Prompt-Qualität zwischen GPT-5.5 und Claude Opus 4.8?', a: 'Ja, erheblich. Derselbe Prompt scored regelmäßig 10-20 Punkte unterschiedlich zwischen GPT-5.5 und Claude Opus 4.8 aufgrund von Unterschieden in der Instruction-Format-Sensitivität und dem System-Prompt-Handling. Messe die Pass-Rate immer separat auf jedem Modell, das du einsetzen möchtest. Ein Prompt, der auf GPT-5.5 95 % scored, kann auf Claude Opus 4.8 ohne modellspezifisches Tuning 80 % scored.' },
+            { q: 'Was ist LLM-as-Judge Scoring und wann sollte ich es verwenden?', a: 'LLM-as-Judge nutzt ein leistungsstarkes Modell wie GPT-5.5 oder Claude Opus 4.8, um Ausgaben gegen eine Rubrik zu bewerten. Der Judge erhält die ursprüngliche Eingabe, deine Modell-Ausgabe und Evaluierungskriterien und liefert dann einen Score mit Begründung. Verwende LLM-as-Judge für Free-Text-Ausgaben, wo Binary Pass/Fail nicht ausreicht. Es skaliert auf Tausende Test-Fälle ohne menschliche Überprüfung, was es ideal für kontinuierliche Evaluierungs-Pipelines macht.' },
             { q: 'Wie setzt du eine Pass-Rate Regressions-Schwelle?', a: 'Speichere die Pass-Rate aus dem ersten Test-Durchlauf als Baseline. Ein Regressions-Gate von 5 Punkten ist üblich: wenn eine Prompt-Änderung die Pass-Rate um mehr als 5 Punkte relativ zur Baseline senkt, blockiere das Deployment. Teams zielen typischerweise auf 85–95 % Pass-Rate für Produktions-Prompts ab. Für kritische Workflows (legal, medizinisch, finanziell) verwende stattdessen ein 2-Punkte-Regressions-Gate.' },
             { q: 'Muss ich bei der Verwendung von Prompt-Bewertung die DSGVO beachten?', a: 'Ja. Wenn dein Prompt personenbezogene Daten verarbeitet, gelten DSGVO Artikel 28 (Datenverarbeitungs-Vereinbarungen) und Artikel 22 (automatisierte Entscheidungsfindung). Dokumentierte Prompt-Bewertungs-Test-Sets mit Pass-Rate-Records liefern audit-bereite Nachweise für systematische Qualitätskontrolle. Sie unterstützen auch die Erklärbarkeit, die Artikel 22 für automatisierte Entscheidungen erfordert. Speichere Test-Sets als Compliance-Dokumentation.' },
             { q: 'Ist Prompt-Bewertung für den deutschen Mittelstand geeignet?', a: 'Ja. Mittelständische Unternehmen profitieren von strukturierter Prompt-Bewertung, besonders wenn LLMs in kundenorientierten oder sicherheitskritischen Workflows eingesetzt werden. Ein 20er Test-Set mit dokumentierten Pass-Raten erfüllt BSI-Grundschutz-Katalog Anforderungen für Qualitätskontrolle. Der Aufwand ist niedrig (ein Test-Set mit etwa 6 Stunden Vorbereitung), und die Compliance-Dokumentation reduziert IT-Sicherheits-Audit-Fragen. Besonders relevant für Finanz-, Versicherungs- und Industrie-Mittelstand.' },
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       quickFacts: [
         'Conjunto de prueba mínimo viable: 20 casos — 10 de ruta estándar, 5 casos límite, 5 entradas adversariales',
         'El pass/fail binario es el más útil para salidas estructuradas con una respuesta correcta clara',
-        'GPT-4o y Claude Opus 4.8 puntúan en promedio 10–20 puntos de forma diferente en el mismo prompt',
+        'GPT-5.5 y Claude Opus 4.8 puntúan en promedio 10–20 puntos de forma diferente en el mismo prompt',
         'La puntuación LLM-as-judge escala a miles de casos de prueba sin revisión humana',
         'Una tasa de seguimiento de instrucciones del 90 % significa que 1 de cada 10 solicitudes de producción falla una constraint',
       ],
@@ -620,8 +620,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: '¿Qué es la tasa de seguimiento de instrucciones?', acceptedAnswer: { '@type': 'Answer', text: 'La tasa de seguimiento de instrucciones es el porcentaje de salidas donde el modelo obedeció todas las constraints del prompt: formato, longitud, tono, alcance y contenido prohibido. Una tasa del 90 % significa que 1 de cada 10 solicitudes falla en producción. Es distinta de la precisión y debe medirse por separado.' } },
           { '@type': 'Question', name: '¿Por qué falla la verificación manual por muestras en la evaluación de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'La verificación manual por muestras no es reproducible (distintos revisores eligen ejemplos diferentes), está sesgada en la selección (los revisores eligen inconscientemente casos que esperan que pasen) y no escala (10 ejemplos se pierden el 90 % de los modos de fallo en un conjunto de 100 casos). Los conjuntos de prueba automatizados producen resultados consistentes y reproducibles entre versiones de prompt y actualizaciones de modelo.' } },
           { '@type': 'Question', name: '¿Cuántos casos de prueba necesita un conjunto de prueba de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Un conjunto de prueba mínimo necesita 20 casos: 10 entradas de ruta estándar que cubran el uso típico, 5 casos límite que prueben los límites (entrada vacía, entrada muy larga, texto multilingüe) y 5 entradas adversariales diseñadas para romper el prompt. Menos de 20 casos produce tasas de éxito estadísticamente poco fiables.' } },
-          { '@type': 'Question', name: '¿Difiere la calidad de los prompts entre GPT-4o y Claude Opus 4.8?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, significativamente. El mismo prompt puntúa regularmente 10–20 puntos de forma diferente entre GPT-4o y Claude Opus 4.8 debido a diferencias en la sensibilidad al formato de instrucciones y el manejo del prompt del sistema. Mide siempre la tasa de éxito por separado en cada modelo que planees desplegar.' } },
-          { '@type': 'Question', name: '¿Qué es la puntuación LLM-as-judge y cuándo debo usarla?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge usa un modelo capaz como GPT-4o o Claude Opus 4.8 para puntuar salidas contra una rúbrica. El juez recibe la entrada original, la salida de tu modelo y los criterios de evaluación, luego devuelve una puntuación con justificación. Úsalo para salidas de texto libre donde el pass/fail binario es insuficiente. Escala a miles de casos de prueba sin revisión humana.' } },
+          { '@type': 'Question', name: '¿Difiere la calidad de los prompts entre GPT-5.5 y Claude Opus 4.8?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, significativamente. El mismo prompt puntúa regularmente 10–20 puntos de forma diferente entre GPT-5.5 y Claude Opus 4.8 debido a diferencias en la sensibilidad al formato de instrucciones y el manejo del prompt del sistema. Mide siempre la tasa de éxito por separado en cada modelo que planees desplegar.' } },
+          { '@type': 'Question', name: '¿Qué es la puntuación LLM-as-judge y cuándo debo usarla?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge usa un modelo capaz como GPT-5.5 o Claude Opus 4.8 para puntuar salidas contra una rúbrica. El juez recibe la entrada original, la salida de tu modelo y los criterios de evaluación, luego devuelve una puntuación con justificación. Úsalo para salidas de texto libre donde el pass/fail binario es insuficiente. Escala a miles de casos de prueba sin revisión humana.' } },
           { '@type': 'Question', name: '¿Cómo estableces un umbral de regresión de tasa de éxito?', acceptedAnswer: { '@type': 'Answer', text: 'Registra la tasa de éxito en la primera ejecución de prueba como tu línea base. Un umbral de regresión de 5 puntos es habitual: si un cambio de prompt reduce la tasa de éxito en más de 5 puntos respecto a la línea base, bloquea el despliegue. Los equipos suelen apuntar a tasas de éxito del 85–95 % para prompts de producción.' } },
           { '@type': 'Question', name: '¿Debo tener en cuenta las regulaciones al usar evaluación de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Los sistemas de IA de alto riesgo bajo el AI Act de la UE deben demostrar procesos documentados de pruebas y garantía de calidad. Los conjuntos de prueba de evaluación de prompts y los registros de tasas de éxito proporcionan evidencia lista para auditoría. Para workflows críticos (legal, médico, financiero), usa un umbral de regresión de 2 puntos.' } },
         ],
@@ -650,8 +650,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'La verificación manual por muestras no es reproducible y pasa por alto los casos límite — usa conjuntos de prueba automatizados',
             'Un conjunto de prueba mínimo viable necesita 20 casos: ruta estándar, casos límite y entradas adversariales',
             'Pass/fail binario es la métrica más útil para prompts de salida estructurada',
-            'LLM-as-judge (GPT-4o o Claude puntúa salidas contra una rúbrica) escala a tareas de texto libre',
-            'Usa PromptQuorum para despachar el mismo conjunto de prueba a GPT-4o y Claude Opus 4.8 y comparar las tasas de éxito lado a lado',
+            'LLM-as-judge (GPT-5.5 o Claude puntúa salidas contra una rúbrica) escala a tareas de texto libre',
+            'Usa PromptQuorum para despachar el mismo conjunto de prueba a GPT-5.5 y Claude Opus 4.8 y comparar las tasas de éxito lado a lado',
           ],
         },
         definition: {
@@ -707,7 +707,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         scoringRubrics: {
           id: 'scoring-rubrics',
           title: '¿Cómo puntúas las salidas de los prompts?',
-          content: '**Elige tu método de puntuación según el tipo de salida: pass/fail binario para salidas estructuradas, rúbrica 1-5 para tareas de generación, y LLM-as-judge para evaluación de texto libre.**\n\n**Pass/fail binario** es el más útil. Úsalo para salidas JSON, resultados de clasificación y salidas con una respuesta correcta clara. Tasa de éxito = salidas correctas / total de casos de prueba.\n\n**Rúbrica de escala 1-5** funciona para tareas de generación donde el crédito parcial es significativo. Define cada nivel de puntuación antes de probar: 5 = completamente correcto, 4 = problema menor, 3 = aceptable con advertencias, 2 = problema significativo, 1 = incorrecto o dañino.\n\n**LLM-as-judge** usa GPT-4o o Claude Opus 4.8 para puntuar salidas contra una rúbrica. A mediados de 2026, LLM-as-judge es el enfoque dominante para evaluar salidas de texto libre a escala.',
+          content: '**Elige tu método de puntuación según el tipo de salida: pass/fail binario para salidas estructuradas, rúbrica 1-5 para tareas de generación, y LLM-as-judge para evaluación de texto libre.**\n\n**Pass/fail binario** es el más útil. Úsalo para salidas JSON, resultados de clasificación y salidas con una respuesta correcta clara. Tasa de éxito = salidas correctas / total de casos de prueba.\n\n**Rúbrica de escala 1-5** funciona para tareas de generación donde el crédito parcial es significativo. Define cada nivel de puntuación antes de probar: 5 = completamente correcto, 4 = problema menor, 3 = aceptable con advertencias, 2 = problema significativo, 1 = incorrecto o dañino.\n\n**LLM-as-judge** usa GPT-5.5 o Claude Opus 4.8 para puntuar salidas contra una rúbrica. A mediados de 2026, LLM-as-judge es el enfoque dominante para evaluar salidas de texto libre a escala.',
           columns: ['Método', 'Mejor para', 'Escala', 'Esfuerzo humano', 'Fiabilidad'],
           rows: [
             { 'Método': 'Pass/fail binario', 'Mejor para': 'Salida estructurada, clasificación', 'Escala': 'Cualquier tamaño', 'Esfuerzo humano': 'Cero después de la configuración', 'Fiabilidad': 'Alta — objetiva' },
@@ -726,9 +726,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         multiModel: {
           id: 'multi-model',
           title: '¿Difiere la calidad de los prompts entre modelos?',
-          content: '**Sí — el mismo prompt puede puntuar 20+ puntos de forma diferente entre GPT-4o y Claude Opus 4.8, principalmente debido a diferencias en la sensibilidad al formato de instrucciones y el manejo del prompt del sistema.**\n\nLas brechas de calidad son mayores para:\n\n- **Formato de salida JSON:** Claude Opus 4.8 sigue esquemas complejos más estrictamente que GPT-4o\n- **Prioridad de instrucciones:** GPT-4o pondera la instrucción más reciente; Claude Opus 4.8 pondera el prompt del sistema\n- **Patrones de rechazo:** Los modelos de OpenAI y Anthropic tienen diferentes umbrales para contenido límite\n\nUsa PromptQuorum para despachar el mismo conjunto de prueba a GPT-4o, Claude Opus 4.8 y Gemini 2.5 Pro en una ejecución y comparar las tasas de éxito lado a lado.',
+          content: '**Sí — el mismo prompt puede puntuar 20+ puntos de forma diferente entre GPT-5.5 y Claude Opus 4.8, principalmente debido a diferencias en la sensibilidad al formato de instrucciones y el manejo del prompt del sistema.**\n\nLas brechas de calidad son mayores para:\n\n- **Formato de salida JSON:** Claude Opus 4.8 sigue esquemas complejos más estrictamente que GPT-5.5\n- **Prioridad de instrucciones:** GPT-5.5 pondera la instrucción más reciente; Claude Opus 4.8 pondera el prompt del sistema\n- **Patrones de rechazo:** Los modelos de OpenAI y Anthropic tienen diferentes umbrales para contenido límite\n\nUsa PromptQuorum para despachar el mismo conjunto de prueba a GPT-5.5, Claude Opus 4.8 y Gemini 2.5 Pro en una ejecución y comparar las tasas de éxito lado a lado.',
           callouts: [
-            { type: 'warning', label: 'Advertencia', text: 'No asumas que un prompt que pasa en GPT-4o pasará en Claude Opus 4.8. Ejecuta el mismo conjunto de prueba en cada modelo que planees desplegar — un prompt puede necesitar ajuste específico por modelo.' },
+            { type: 'warning', label: 'Advertencia', text: 'No asumas que un prompt que pasa en GPT-5.5 pasará en Claude Opus 4.8. Ejecuta el mismo conjunto de prueba en cada modelo que planees desplegar — un prompt puede necesitar ajuste específico por modelo.' },
           ],
         },
         howToStart: {
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Recoge 20 entradas de prueba: 8 de ruta estándar, 6 casos límite, 6 adversariales. Escribe salidas esperadas o criterios de éxito para cada una.',
             'Elige un método de puntuación: binario para salidas estructuradas, rúbrica 1-5 para generación, LLM-as-judge para texto libre.',
             'Ejecuta las 20 entradas a través de tu prompt actual y puntúa cada salida. Registra esta tasa de éxito como tu línea base.',
-            'Despacha el mismo conjunto de prueba a GPT-4o y Claude Opus 4.8 vía PromptQuorum y compara las tasas de éxito por modelo.',
+            'Despacha el mismo conjunto de prueba a GPT-5.5 y Claude Opus 4.8 vía PromptQuorum y compara las tasas de éxito por modelo.',
             'Establece un umbral de regresión: si un cambio de prompt reduce la tasa de éxito en más de 5 puntos, bloquea el despliegue.',
           ],
           callouts: [
@@ -763,7 +763,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Usar la tasa de éxito de un modelo en otro',
-              problem: 'El mismo prompt puntúa regularmente 10–20 puntos de forma diferente entre GPT-4o y Claude Opus 4.8. Asumir que la tasa de éxito de un modelo aplica a otro lleva a sorpresas en producción.',
+              problem: 'El mismo prompt puntúa regularmente 10–20 puntos de forma diferente entre GPT-5.5 y Claude Opus 4.8. Asumir que la tasa de éxito de un modelo aplica a otro lleva a sorpresas en producción.',
               fix: 'Ejecuta el conjunto de prueba por separado en cada modelo que planees desplegar.',
             },
             {
@@ -788,7 +788,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Lecturas relacionadas',
           items: [
             '[Métricas de evaluación de prompts: qué medir y cómo](/es/prompt-engineering/prompt-evaluation-metrics) — Desglose de tasa de éxito, BLEU, similitud semántica y LLM-as-judge',
-            '[Cómo probar prompts entre modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Evaluación multi-modelo para GPT-4o vs Claude vs Gemini',
+            '[Cómo probar prompts entre modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Evaluación multi-modelo para GPT-5.5 vs Claude vs Gemini',
             '[Cómo reducir la fragilidad de los prompts](/es/prompt-engineering/how-to-reduce-prompt-brittleness) — Schemas de salida, anclas few-shot y umbrales de regresión',
             '[Construye una biblioteca de prompts](/es/prompt-engineering/build-a-prompt-library) — Almacena conjuntos de prueba junto a prompts con metadatos para reutilización en equipo',
             '[Mejores herramientas de optimización de prompts para equipos](/es/prompt-engineering/best-prompt-optimization-tools-teams) — Herramientas que incluyen gestión de conjuntos de prueba y seguimiento de tasas de éxito',
@@ -804,7 +804,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '¿Qué es la tasa de seguimiento de instrucciones?', a: 'La tasa de seguimiento de instrucciones es el porcentaje de salidas donde el modelo obedeció todas las constraints: formato, longitud, tono, alcance y contenido prohibido. Una tasa del 90 % significa que 1 de cada 10 solicitudes falla en producción. Es distinta de la precisión y debe medirse por separado.' },
             { q: '¿Por qué falla la verificación manual por muestras?', a: 'No es reproducible (distintos revisores eligen ejemplos diferentes), está sesgada en la selección (los revisores eligen casos que esperan que pasen) y no escala (10 ejemplos se pierden el 90 % de los modos de fallo). Los conjuntos de prueba automatizados producen resultados consistentes y reproducibles.' },
             { q: '¿Cuántos casos de prueba necesita un conjunto de prueba de prompts?', a: 'Un mínimo de 20 casos: 10 de ruta estándar, 5 casos límite y 5 adversariales. Menos de 20 produce tasas de éxito poco fiables estadísticamente.' },
-            { q: '¿Difiere la calidad de los prompts entre GPT-4o y Claude Opus 4.8?', a: 'Sí, significativamente. El mismo prompt puntúa regularmente 10–20 puntos de forma diferente. Mide siempre la tasa de éxito por separado en cada modelo que planees desplegar.' },
+            { q: '¿Difiere la calidad de los prompts entre GPT-5.5 y Claude Opus 4.8?', a: 'Sí, significativamente. El mismo prompt puntúa regularmente 10–20 puntos de forma diferente. Mide siempre la tasa de éxito por separado en cada modelo que planees desplegar.' },
             { q: '¿Qué es LLM-as-judge y cuándo debo usarlo?', a: 'LLM-as-judge usa un modelo capaz para puntuar salidas contra una rúbrica. Úsalo para salidas de texto libre donde el pass/fail binario es insuficiente. Escala a miles de casos sin revisión humana.' },
             { q: '¿Cómo estableces un umbral de regresión de tasa de éxito?', a: 'Registra la tasa de éxito en la primera ejecución como tu línea base. Un umbral de regresión de 5 puntos es habitual: si un cambio de prompt reduce la tasa en más de 5 puntos, bloquea el despliegue. Para workflows críticos (legal, médico, financiero), usa un umbral de 2 puntos.' },
             { q: '¿Debo tener en cuenta regulaciones al usar evaluación de prompts?', a: 'Sí. Los sistemas de IA de alto riesgo bajo el AI Act de la UE deben demostrar procesos documentados de pruebas. Los conjuntos de prueba y registros de tasas de éxito proporcionan evidencia lista para auditoría. Almacénalos junto a tu biblioteca de prompts.' },
@@ -844,7 +844,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       quickFacts: [
         'Ensemble de tests minimal : 20 cas — 10 chemins heureux, 5 cas limites, 5 entrées adversariales',
         'Pass/Fail binaire est plus utile pour les sorties structurées avec une réponse clairement correcte',
-        'GPT-4o et Claude Opus 4.8 diffèrent en moyenne de 10–20 points dans le scoring du même prompt',
+        'GPT-5.5 et Claude Opus 4.8 diffèrent en moyenne de 10–20 points dans le scoring du même prompt',
         'LLM-as-Judge peut évaluer des milliers de cas sans révision humaine',
         'Un taux de conformité aux instructions de 90 % signifie que 1 requête de production sur 10 viole une contrainte',
       ],
@@ -892,8 +892,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'Qu\'est-ce que le taux de conformité aux instructions ?', acceptedAnswer: { '@type': 'Answer', text: 'Le taux de conformité aux instructions est le pourcentage de sorties où le modèle a respecté chaque contrainte du prompt : format, longueur, ton, portée et contenu interdit. Un taux de 90 % signifie que 1 requête de production sur 10 viole une contrainte. C\'est distinct de la précision et doit être mesuré séparément.' } },
           { '@type': 'Question', name: 'Pourquoi la vérification manuelle échoue-t-elle pour l\'évaluation des prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'La vérification manuelle n\'est pas reproductible (différents examinateurs choisissent différents exemples), souffre de biais de sélection (les examinateurs choisissent inconsciemment des cas qu\'ils s\'attendent à voir réussir), et ne s\'adapte pas à l\'échelle (10 exemples manquent 90 % des modes de défaillance dans un ensemble de 100). Les ensembles de tests automatisés produisent des résultats cohérents et reproductibles.' } },
           { '@type': 'Question', name: 'De combien de cas de test un ensemble de tests a-t-il besoin ?', acceptedAnswer: { '@type': 'Answer', text: 'Un ensemble de tests minimal a besoin de 20 cas : 10 entrées de chemin heureux couvrant l\'usage typique, 5 cas limites testant les frontières (entrée vide, entrée très longue, texte multilingue), et 5 entrées adversariales. Moins de 20 cas produit des taux de passage statistiquement peu fiables qui manquent les vrais modes de défaillance.' } },
-          { '@type': 'Question', name: 'La qualité des prompts diffère-t-elle entre GPT-4o et Claude Opus 4.8 ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, considérablement. Le même prompt score régulièrement 10-20 points différemment entre GPT-4o et Claude Opus 4.8 en raison de différences dans la sensibilité aux formats d\'instructions et la gestion du prompt système. Mesurez toujours le taux de passage séparément sur chaque modèle que vous prévoyez de déployer. Un prompt qui score 95 % sur GPT-4o peut score 80 % sur Claude Opus 4.8 sans tuning modèle-spécifique.' } },
-          { '@type': 'Question', name: 'Qu\'est-ce que le scoring LLM-as-Judge et quand l\'utiliser ?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge utilise un modèle capable comme GPT-4o ou Claude Opus 4.8 pour évaluer les sorties contre une rubrique. Le juge reçoit l\'entrée originale, la sortie de votre modèle et les critères d\'évaluation, puis retourne un score avec justification. Utilisez LLM-as-Judge pour les sorties de texte libre où Pass/Fail binaire n\'est pas suffisant. Cela s\'adapte à des milliers de cas de test sans révision humaine, le rendant idéal pour les pipelines d\'évaluation continus.' } },
+          { '@type': 'Question', name: 'La qualité des prompts diffère-t-elle entre GPT-5.5 et Claude Opus 4.8 ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, considérablement. Le même prompt score régulièrement 10-20 points différemment entre GPT-5.5 et Claude Opus 4.8 en raison de différences dans la sensibilité aux formats d\'instructions et la gestion du prompt système. Mesurez toujours le taux de passage séparément sur chaque modèle que vous prévoyez de déployer. Un prompt qui score 95 % sur GPT-5.5 peut score 80 % sur Claude Opus 4.8 sans tuning modèle-spécifique.' } },
+          { '@type': 'Question', name: 'Qu\'est-ce que le scoring LLM-as-Judge et quand l\'utiliser ?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge utilise un modèle capable comme GPT-5.5 ou Claude Opus 4.8 pour évaluer les sorties contre une rubrique. Le juge reçoit l\'entrée originale, la sortie de votre modèle et les critères d\'évaluation, puis retourne un score avec justification. Utilisez LLM-as-Judge pour les sorties de texte libre où Pass/Fail binaire n\'est pas suffisant. Cela s\'adapte à des milliers de cas de test sans révision humaine, le rendant idéal pour les pipelines d\'évaluation continus.' } },
           { '@type': 'Question', name: 'Comment définir un seuil de régression du taux de passage ?', acceptedAnswer: { '@type': 'Answer', text: 'Enregistrez le taux de passage du premier test en tant que baseline. Un gate de régression de 5 points est courant : si une modification du prompt abaisse le taux de passage de plus de 5 points par rapport à la baseline, bloquez le déploiement. Les équipes ciblent généralement 85–95 % de taux de passage pour les prompts en production. Pour les workflows critiques (juridique, médical, financier), utilisez plutôt un gate de 2 points.' } },
           { '@type': 'Question', name: 'Comment intégrer l\'évaluation dans mon flux de travail ?', acceptedAnswer: { '@type': 'Answer', text: 'Créez un ensemble de 20 cas de test, exécutez-le une fois pour établir une baseline, puis réexécutez-le après chaque modification du prompt pour détecter les régressions. Un gate d\'au moins 5 points prévient les dégradations. Stockez les résultats avec le prompt pour la traçabilité. Les workflows à haut risque (finances, santé, légal) appliquent des gates plus stricts et utilisent LLM-as-Judge pour une évaluation continue.' } },
           { '@type': 'Question', name: 'Quels outils existent pour l\'évaluation automatisée des prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'OpenAI Evals fournit un cadre de test harness, Anthropic publie les méthodes d\'évaluation, DeepEval offre un framework open-source avec métriques et intégration CI/CD, et PromptQuorum permet de diriger les ensembles de tests sur plusieurs modèles. Le choix dépend de votre cas d\'usage et de votre complexité d\'évaluation.' } },
@@ -923,8 +923,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'La vérification manuelle n\'est pas reproductible et manque les cas limites — utilisez des ensembles de tests automatisés',
             'Un ensemble de tests minimal a besoin de 20 cas : chemins heureux, cas limites et entrées adversariales',
             'Pass/Fail binaire est la métrique la plus utile pour les prompts de sortie structurée',
-            'LLM-as-Judge (GPT-4o ou Claude évalue les sorties contre une rubrique) s\'adapte aux tâches de texte libre',
-            'Utilisez PromptQuorum pour diriger le même ensemble de tests vers GPT-4o et Claude Opus 4.8 et comparer les taux de passage côte à côte',
+            'LLM-as-Judge (GPT-5.5 ou Claude évalue les sorties contre une rubrique) s\'adapte aux tâches de texte libre',
+            'Utilisez PromptQuorum pour diriger le même ensemble de tests vers GPT-5.5 et Claude Opus 4.8 et comparer les taux de passage côte à côte',
           ],
         },
         definition: {
@@ -980,7 +980,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         scoringRubrics: {
           id: 'scoring-rubrics',
           title: 'Comment évaluer les sorties de prompts ?',
-          content: '**Choisissez votre méthode de scoring en fonction du type de sortie : Pass/Fail binaire pour les sorties structurées, rubrique 1-5 pour les tâches de génération, et LLM-as-Judge pour l\'évaluation de texte libre.**\n\n**Pass/Fail binaire** est le plus utile. Utilisez pour les sorties JSON, les résultats de classification et les sorties avec une réponse clairement correcte. Taux de passage = sorties correctes / cas de test totaux.\n\n**Rubrique 1-5** fonctionne pour les tâches de génération où le crédit partiel est significatif. Définissez chaque niveau de score avant le test : 5 = complètement correct, 4 = problème mineur, 3 = acceptable avec réserves, 2 = problème significatif, 1 = incorrect ou nuisible.\n\n**LLM-as-Judge** utilise GPT-4o ou Claude Opus 4.8 pour évaluer les sorties contre une rubrique. Depuis mi-2026, LLM-as-Judge est l\'approche dominante pour évaluer les sorties de texte libre à grande échelle. Le prompt du judge doit spécifier la rubrique avec précision.',
+          content: '**Choisissez votre méthode de scoring en fonction du type de sortie : Pass/Fail binaire pour les sorties structurées, rubrique 1-5 pour les tâches de génération, et LLM-as-Judge pour l\'évaluation de texte libre.**\n\n**Pass/Fail binaire** est le plus utile. Utilisez pour les sorties JSON, les résultats de classification et les sorties avec une réponse clairement correcte. Taux de passage = sorties correctes / cas de test totaux.\n\n**Rubrique 1-5** fonctionne pour les tâches de génération où le crédit partiel est significatif. Définissez chaque niveau de score avant le test : 5 = complètement correct, 4 = problème mineur, 3 = acceptable avec réserves, 2 = problème significatif, 1 = incorrect ou nuisible.\n\n**LLM-as-Judge** utilise GPT-5.5 ou Claude Opus 4.8 pour évaluer les sorties contre une rubrique. Depuis mi-2026, LLM-as-Judge est l\'approche dominante pour évaluer les sorties de texte libre à grande échelle. Le prompt du judge doit spécifier la rubrique avec précision.',
           columns: ['Méthode', 'Meilleur pour', 'Échelle', 'Effort', 'Fiabilité'],
           rows: [
             { 'Méthode': 'Pass/Fail binaire', 'Meilleur pour': 'Sortie structurée, classification', 'Échelle': 'Toute taille', 'Effort': 'Zéro après setup', 'Fiabilité': 'Haute — objectif' },
@@ -999,9 +999,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         multiModel: {
           id: 'multi-model',
           title: 'La qualité des prompts diffère-t-elle selon les modèles ?',
-          content: '**Oui — le même prompt peut scorer 20+ points différemment entre GPT-4o et Claude Opus 4.8, principalement en raison de la sensibilité aux formats d\'instructions et à la gestion du prompt système.**\n\nLes écarts de qualité sont plus larges pour :\n\n- **Formatage de sortie JSON:** Claude Opus 4.8 suit les schémas complexes plus strictement que GPT-4o\n- **Priorité des instructions:** GPT-4o pèse l\'instruction la plus récente; Claude Opus 4.8 pèse le prompt système\n- **Motifs de refus:** Les modèles OpenAI et Anthropic ont différents seuils pour le contenu borderline\n\nNotre évaluation des prompts de classification et de formatage sur les deux modèles (mise à jour jusqu\'en avril 2026) a trouvé des différences de taux de passage de 10–20 points, le formatage de sortie JSON produisant les plus grands écarts. Consultez [comment tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) pour la méthodologie d\'évaluation multi-modèle complète.\n\nUtilisez PromptQuorum pour diriger le même ensemble de tests vers GPT-4o, Claude Opus 4.8 et Gemini 2.5 Pro en une exécution et comparez les taux de passage côte à côte.',
+          content: '**Oui — le même prompt peut scorer 20+ points différemment entre GPT-5.5 et Claude Opus 4.8, principalement en raison de la sensibilité aux formats d\'instructions et à la gestion du prompt système.**\n\nLes écarts de qualité sont plus larges pour :\n\n- **Formatage de sortie JSON:** Claude Opus 4.8 suit les schémas complexes plus strictement que GPT-5.5\n- **Priorité des instructions:** GPT-5.5 pèse l\'instruction la plus récente; Claude Opus 4.8 pèse le prompt système\n- **Motifs de refus:** Les modèles OpenAI et Anthropic ont différents seuils pour le contenu borderline\n\nNotre évaluation des prompts de classification et de formatage sur les deux modèles (mise à jour jusqu\'en avril 2026) a trouvé des différences de taux de passage de 10–20 points, le formatage de sortie JSON produisant les plus grands écarts. Consultez [comment tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) pour la méthodologie d\'évaluation multi-modèle complète.\n\nUtilisez PromptQuorum pour diriger le même ensemble de tests vers GPT-5.5, Claude Opus 4.8 et Gemini 2.5 Pro en une exécution et comparez les taux de passage côte à côte.',
           callouts: [
-            { type: 'warning', label: 'Avertissement', text: 'Ne supposez pas qu\'un prompt qui réussit sur GPT-4o réussira sur Claude Opus 4.8. Exécutez le même ensemble de tests sur chaque modèle que vous prévoyez de déployer — un prompt peut nécessiter un tuning modèle-spécifique.' },
+            { type: 'warning', label: 'Avertissement', text: 'Ne supposez pas qu\'un prompt qui réussit sur GPT-5.5 réussira sur Claude Opus 4.8. Exécutez le même ensemble de tests sur chaque modèle que vous prévoyez de déployer — un prompt peut nécessiter un tuning modèle-spécifique.' },
           ],
         },
         howToStart: {
@@ -1013,7 +1013,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Collectez 20 entrées de test : 8 chemin heureux, 6 cas limites, 6 adversariales. Écrivez les sorties attendues ou critères de passage pour chacun.',
             'Choisissez une méthode de scoring : binaire pour sorties structurées, rubrique 1-5 pour génération, LLM-as-Judge pour texte libre.',
             'Exécutez les 20 entrées via votre prompt actuel et évaluez chaque sortie. Enregistrez ce taux de passage comme votre baseline.',
-            'Dirigez le même ensemble de tests vers GPT-4o et Claude Opus 4.8 via PromptQuorum et comparez les taux de passage au niveau du modèle.',
+            'Dirigez le même ensemble de tests vers GPT-5.5 et Claude Opus 4.8 via PromptQuorum et comparez les taux de passage au niveau du modèle.',
             'Définissez un seuil de régression : si une modification du prompt abaisse le taux de passage de plus de 5 points, bloquez le déploiement.',
           ],
           callouts: [
@@ -1036,8 +1036,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Utiliser le taux de passage d\'un modèle sur un autre',
-              problem: 'Le même prompt score régulièrement 10-20 points différemment entre GPT-4o et Claude Opus 4.8. En supposant que le taux de passage d\'un modèle s\'applique à un autre conduit à des surprises en production.',
-              fix: 'Exécutez l\'ensemble de tests séparément sur chaque modèle que vous prévoyez de déployer. GPT-4o, Claude Opus 4.8 et Gemini 2.5 Pro nécessitent tous une évaluation indépendante.',
+              problem: 'Le même prompt score régulièrement 10-20 points différemment entre GPT-5.5 et Claude Opus 4.8. En supposant que le taux de passage d\'un modèle s\'applique à un autre conduit à des surprises en production.',
+              fix: 'Exécutez l\'ensemble de tests séparément sur chaque modèle que vous prévoyez de déployer. GPT-5.5, Claude Opus 4.8 et Gemini 2.5 Pro nécessitent tous une évaluation indépendante.',
             },
             {
               mistake: 'Pas de baseline',
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Lectures connexes',
           items: [
             '[Métriques d\'évaluation des prompts : quoi mesurer et comment](/fr/prompt-engineering/prompt-evaluation-metrics) — Décomposition du taux de passage, BLEU, similarité sémantique et LLM-as-Judge',
-            '[Comment tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Évaluation multi-modèle pour GPT-4o vs Claude vs Gemini',
+            '[Comment tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Évaluation multi-modèle pour GPT-5.5 vs Claude vs Gemini',
             '[Comment réduire la fragilité des prompts](/fr/prompt-engineering/how-to-reduce-prompt-brittleness) — Schémas de sortie, ancres few-shot et gates de régression',
             '[Construire une bibliothèque de prompts](/fr/prompt-engineering/build-a-prompt-library) — Stockez les ensembles de tests aux côtés des prompts avec métadonnées pour la réutilisation d\'équipe',
             '[Meilleurs outils d\'optimisation des prompts pour les équipes](/fr/prompt-engineering/best-prompt-optimization-tools-teams) — Outils incluant la gestion des ensembles de tests et le suivi du taux de passage',
@@ -1077,8 +1077,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Qu\'est-ce que le taux de conformité aux instructions ?', a: 'Le taux de conformité aux instructions est le pourcentage de sorties où le modèle a respecté chaque contrainte du prompt : format, longueur, ton, portée et contenu interdit. Un taux de 90 % signifie que 1 requête de production sur 10 viole une contrainte. C\'est distinct de la précision et doit être mesuré séparément.' },
             { q: 'Pourquoi la vérification manuelle échoue-t-elle pour l\'évaluation des prompts ?', a: 'La vérification manuelle n\'est pas reproductible (différents examinateurs choisissent différents exemples), souffre de biais de sélection (les examinateurs choisissent inconsciemment des cas qu\'ils s\'attendent à voir réussir), et ne s\'adapte pas à l\'échelle (10 exemples manquent 90 % des modes de défaillance dans un ensemble de 100). Les ensembles de tests automatisés produisent des résultats cohérents et reproductibles.' },
             { q: 'De combien de cas de test un ensemble de tests a-t-il besoin ?', a: 'Un ensemble de tests minimal a besoin de 20 cas : 10 entrées de chemin heureux couvrant l\'usage typique, 5 cas limites testant les frontières (entrée vide, entrée très longue, texte multilingue), et 5 entrées adversariales. Moins de 20 cas produit des taux de passage statistiquement peu fiables qui manquent les vrais modes de défaillance.' },
-            { q: 'La qualité diffère-t-elle entre GPT-4o et Claude Opus 4.8 ?', a: 'Oui, considérablement. Le même prompt score régulièrement 10-20 points différemment entre GPT-4o et Claude Opus 4.8 en raison de différences dans la sensibilité aux formats d\'instructions et la gestion du prompt système. Mesurez toujours le taux de passage séparément sur chaque modèle que vous prévoyez de déployer. Un prompt qui score 95 % sur GPT-4o peut score 80 % sur Claude Opus 4.8 sans tuning modèle-spécifique.' },
-            { q: 'Qu\'est-ce que le scoring LLM-as-Judge et quand l\'utiliser ?', a: 'LLM-as-Judge utilise un modèle capable comme GPT-4o ou Claude Opus 4.8 pour évaluer les sorties contre une rubrique. Le juge reçoit l\'entrée originale, la sortie de votre modèle et les critères d\'évaluation, puis retourne un score avec justification. Utilisez LLM-as-Judge pour les sorties de texte libre où Pass/Fail binaire n\'est pas suffisant. Cela s\'adapte à des milliers de cas de test sans révision humaine, le rendant idéal pour les pipelines d\'évaluation continus.' },
+            { q: 'La qualité diffère-t-elle entre GPT-5.5 et Claude Opus 4.8 ?', a: 'Oui, considérablement. Le même prompt score régulièrement 10-20 points différemment entre GPT-5.5 et Claude Opus 4.8 en raison de différences dans la sensibilité aux formats d\'instructions et la gestion du prompt système. Mesurez toujours le taux de passage séparément sur chaque modèle que vous prévoyez de déployer. Un prompt qui score 95 % sur GPT-5.5 peut score 80 % sur Claude Opus 4.8 sans tuning modèle-spécifique.' },
+            { q: 'Qu\'est-ce que le scoring LLM-as-Judge et quand l\'utiliser ?', a: 'LLM-as-Judge utilise un modèle capable comme GPT-5.5 ou Claude Opus 4.8 pour évaluer les sorties contre une rubrique. Le juge reçoit l\'entrée originale, la sortie de votre modèle et les critères d\'évaluation, puis retourne un score avec justification. Utilisez LLM-as-Judge pour les sorties de texte libre où Pass/Fail binaire n\'est pas suffisant. Cela s\'adapte à des milliers de cas de test sans révision humaine, le rendant idéal pour les pipelines d\'évaluation continus.' },
             { q: 'Comment définir un seuil de régression du taux de passage ?', a: 'Enregistrez le taux de passage du premier test en tant que baseline. Un gate de régression de 5 points est courant : si une modification du prompt abaisse le taux de passage de plus de 5 points par rapport à la baseline, bloquez le déploiement. Les équipes ciblent généralement 85–95 % de taux de passage pour les prompts en production. Pour les workflows critiques (juridique, médical, financier), utilisez plutôt un gate de 2 points.' },
             { q: 'Comment intégrer l\'évaluation dans mon flux de travail ?', a: 'Créez un ensemble de 20 cas de test, exécutez-le une fois pour établir une baseline, puis réexécutez-le après chaque modification du prompt pour détecter les régressions. Un gate d\'au moins 5 points prévient les dégradations. Stockez les résultats avec le prompt pour la traçabilité. Les workflows à haut risque (finances, santé, légal) appliquent des gates plus stricts et utilisent LLM-as-Judge pour une évaluation continue.' },
             { q: 'Quels outils existent pour l\'évaluation automatisée des prompts ?', a: 'OpenAI Evals fournit un cadre de test harness, Anthropic publie les méthodes d\'évaluation, DeepEval offre un framework open-source avec métriques et intégration CI/CD, et PromptQuorum permet de diriger les ensembles de tests sur plusieurs modèles. Le choix dépend de votre cas d\'usage et de votre complexité d\'évaluation.' },
@@ -1118,7 +1118,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       quickFacts: [
         '最小限のテストセット: 20ケース — 10正常系、5エッジケース、5対抗的入力',
         'バイナリ Pass/Fail は正確な回答がある構造化出力に最も適切',
-        'GPT-4o と Claude Opus 4.8 は同じプロンプトで平均10～20ポイント異なるスコアをつける',
+        'GPT-5.5 と Claude Opus 4.8 は同じプロンプトで平均10～20ポイント異なるスコアをつける',
         'LLM-as-Judge スコアリングは人間レビューなしで数千ケースのテストにスケール',
         '90%の指示遵守率は、本番リクエスト10件に1件が制約違反を示す',
       ],
@@ -1154,7 +1154,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', 'name': 'LLMスコアリング' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', 'name': 'GPT-4o' },
+          { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
           { '@type': 'SoftwareApplication', 'name': 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
         ],
@@ -1339,7 +1339,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         multiModel: {
           title: 'プロンプト品質はモデル間で異なるか?',
-          content: '「このセクションでは…」はい。同じプロンプトでも、モデル間でスコアが大幅に異なります。\n\n実例: \"顧客サポート返答をまとめる\" プロンプト\n- Claude Opus 4.8: 92% パス率\n- GPT-4o: 78% パス率\n- Llama 3.2 70B: 65% パス率\n\nなぜ異なるか:\n- **訓練データが異なる** — 各モデルは異なるデータセットで訓練されており、独自のバイアスと強度を持つ\n- **トークン化が異なる** — 言語処理方法が異なり、同じプロンプト文が異なる方法で解析される\n- **アライメント方法が異なる** — 安全性とガイダンスの方法が異なり、プロンプトへの応答方法に影響する\n\n実務的な影響:\n\n1. **モデル固有のテストセット** — 本番で複数モデルを使う場合、各モデル用に別々のテストセット、またはモデル間で共有する最小コアセットを作成します\n2. **モデル固有の閾値** — Claude に 90% パス率を期待するなら、Llama には 75% でも許容可能かもしれません\n3. **信頼性ランキング** — モデルのスコアに基づいて、本番環境での使用頻度をランク付けします（高スコア = より多く使用）\n4. **段階的な導入** — 新モデルは小規模でテストし、スコアが十分に高まるまで本番展開を遅延させます\n\n「このセクションの重要なポイント」同じプロンプトがすべてのモデルで同じようにパフォーマンスするとは期待しないでください。各モデルのスコアを測定し、導入戦略を調整してください。',
+          content: '「このセクションでは…」はい。同じプロンプトでも、モデル間でスコアが大幅に異なります。\n\n実例: \"顧客サポート返答をまとめる\" プロンプト\n- Claude Opus 4.8: 92% パス率\n- GPT-5.5: 78% パス率\n- Llama 3.2 70B: 65% パス率\n\nなぜ異なるか:\n- **訓練データが異なる** — 各モデルは異なるデータセットで訓練されており、独自のバイアスと強度を持つ\n- **トークン化が異なる** — 言語処理方法が異なり、同じプロンプト文が異なる方法で解析される\n- **アライメント方法が異なる** — 安全性とガイダンスの方法が異なり、プロンプトへの応答方法に影響する\n\n実務的な影響:\n\n1. **モデル固有のテストセット** — 本番で複数モデルを使う場合、各モデル用に別々のテストセット、またはモデル間で共有する最小コアセットを作成します\n2. **モデル固有の閾値** — Claude に 90% パス率を期待するなら、Llama には 75% でも許容可能かもしれません\n3. **信頼性ランキング** — モデルのスコアに基づいて、本番環境での使用頻度をランク付けします（高スコア = より多く使用）\n4. **段階的な導入** — 新モデルは小規模でテストし、スコアが十分に高まるまで本番展開を遅延させます\n\n「このセクションの重要なポイント」同じプロンプトがすべてのモデルで同じようにパフォーマンスするとは期待しないでください。各モデルのスコアを測定し、導入戦略を調整してください。',
         },
         howToStart: {
           title: 'プロンプト品質評価の始め方',
@@ -1435,7 +1435,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       quickFacts: [
         '最小可行测试集：20个案例 — 10个正常路径、5个边界情况、5个对抗性输入',
         '二进制Pass/Fail评分最适合有明确正确答案的结构化输出',
-        'GPT-4o和Claude Opus 4.8在同一提示词上的评分平均差异10-20分',
+        'GPT-5.5和Claude Opus 4.8在同一提示词上的评分平均差异10-20分',
         'LLM-as-Judge评分可无需人工审查地扩展到数千个测试案例',
         '90%的指令遵守率意味着生产请求中有1/10会违反约束',
       ],
@@ -1471,7 +1471,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', 'name': 'LLM评分' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', 'name': 'GPT-4o' },
+          { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
           { '@type': 'SoftwareApplication', 'name': 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
         ],
@@ -1656,7 +1656,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         multiModel: {
           title: '提示词质量在模型间有差异吗？',
-          content: '是的。相同提示词在模型间通过率大幅不同。\n\n实例："总结客户支持回复"提示词\n- Claude Opus 4.8: 92%通过率\n- GPT-4o: 78%通过率\n- Llama 3.2 70B: 65%通过率\n\n为什么不同：\n- **训练数据不同** — 各模型用不同数据集训练，有独特偏见和优势\n- **分词不同** — 语言处理方法不同，相同提示词文本被不同方式解析\n- **对齐方法不同** — 安全和指导方法不同，影响对提示词的响应\n\n实务影响：\n\n1. **模型特定测试集** — 生产用多模型时，为各模型创建单独测试集或共享最小核心集\n2. **模型特定阈值** — 为Claude设定90%通过率，Llama 75%可能可接受\n3. **可靠性排名** — 基于评分，排列模型在生产中的使用频率\n4. **分阶段部署** — 新模型小规模测试，直到评分足够高才完整部署\n\n不要期望相同提示词在所有模型上表现相同。测量各模型评分并调整部署策略。',
+          content: '是的。相同提示词在模型间通过率大幅不同。\n\n实例："总结客户支持回复"提示词\n- Claude Opus 4.8: 92%通过率\n- GPT-5.5: 78%通过率\n- Llama 3.2 70B: 65%通过率\n\n为什么不同：\n- **训练数据不同** — 各模型用不同数据集训练，有独特偏见和优势\n- **分词不同** — 语言处理方法不同，相同提示词文本被不同方式解析\n- **对齐方法不同** — 安全和指导方法不同，影响对提示词的响应\n\n实务影响：\n\n1. **模型特定测试集** — 生产用多模型时，为各模型创建单独测试集或共享最小核心集\n2. **模型特定阈值** — 为Claude设定90%通过率，Llama 75%可能可接受\n3. **可靠性排名** — 基于评分，排列模型在生产中的使用频率\n4. **分阶段部署** — 新模型小规模测试，直到评分足够高才完整部署\n\n不要期望相同提示词在所有模型上表现相同。测量各模型评分并调整部署策略。',
         },
         howToStart: {
           title: '如何开始评估提示词质量',

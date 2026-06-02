@@ -171,13 +171,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Can I mix manual and automated optimization?', a: 'Yes, and this is best practice. Manual for your core task (1–3 prompts), automated for variants and scaling. Use Promptfoo to test all variants; use DSPy to generate new ones.' },
-          { q: 'Does DSPy work with all models?', a: 'DSPy works with any API-accessible model: GPT-4o, Claude, Gemini, Cohere, Ollama. It does not work with vision models yet. Local models are supported but slower.' },
+          { q: 'Does DSPy work with all models?', a: 'DSPy works with any API-accessible model: GPT-5.5, Claude, Gemini, Cohere, Ollama. It does not work with vision models yet. Local models are supported but slower.' },
           { q: 'How many labeled examples do I need for DSPy?', a: 'Minimum 30–50 for simple tasks (classification, extraction). Complex tasks (summarization, reasoning) benefit from 100–500. More examples = more robust optimization.' },
           { q: 'What is the compute cost of running DSPy?', a: 'One DSPy optimization run on 100 examples costs ~$5–20 (API calls). Running 10 candidate prompts × 100 examples = 1,000 calls = $50–200 per optimization cycle. Monthly retraining = $50–200/month.' },
           { q: 'Can I deploy a DSPy-optimized prompt in production?', a: 'Yes. DSPy outputs a plain-text prompt. Copy it to your production system (PromptQuorum, LangChain, Vellum, etc.) and serve it normally. No special DSPy runtime needed in production.' },
           { q: 'Does automated optimization guarantee better prompts?', a: 'No. If your metric is wrong, DSPy optimizes for the wrong thing. If your evaluation data is biased, DSPy learns the bias. Garbage in, garbage out.' },
           { q: 'Should I use automated optimization for creative tasks?', a: 'Not yet. Automation works best on metric-driven tasks (classification, extraction, summarization). Creative tasks (copywriting, storytelling) lack clear metrics, so manual control is better.' },
-          { q: 'Can DSPy optimize prompts for multiple models at once?', a: 'DSPy optimizes for one model at a time. To optimize for GPT-4o AND Claude, run DSPy twice (once per model) and compare results. Hybrid approach: optimize for your preferred model, then test on others manually.' },
+          { q: 'Can DSPy optimize prompts for multiple models at once?', a: 'DSPy optimizes for one model at a time. To optimize for GPT-5.5 AND Claude, run DSPy twice (once per model) and compare results. Hybrid approach: optimize for your preferred model, then test on others manually.' },
         ],
       },
 

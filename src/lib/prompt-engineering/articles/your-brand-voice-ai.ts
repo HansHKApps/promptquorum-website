@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'definition',
           title: 'Was ist Brand-Voice-AI?',
           content: [
-            '**Brand-Voice-AI ist nicht Software — es ist eine Trainingskonfiguration.** Es existiert in Jasper Brand Voice, Copy.ai, HubSpot und anderen Plattformen als ein Satz Anweisungen, den Sie schreiben, und Beispiele, die Sie bereitstellen. Das Modell selbst (GPT-4o, Claude, Gemini) kümmert sich nicht um Ihre Marke. Aber mit den richtigen Eingaben kann jedes Modell lernen, wie Ihre Marke spricht.',
+            '**Brand-Voice-AI ist nicht Software — es ist eine Trainingskonfiguration.** Es existiert in Jasper Brand Voice, Copy.ai, HubSpot und anderen Plattformen als ein Satz Anweisungen, den Sie schreiben, und Beispiele, die Sie bereitstellen. Das Modell selbst (GPT-5.5, Claude, Gemini) kümmert sich nicht um Ihre Marke. Aber mit den richtigen Eingaben kann jedes Modell lernen, wie Ihre Marke spricht.',
             '**Die Grundidee:** Nehmen Sie ein allgemeines KI-Modell und legen Sie eine Schicht Ihres Markentons, -stils und -vokabulars oben drauf, damit jede Ausgabe nach Ihnen klingt, nicht nach generischem KI-Output. Wenn Sie in [prompt](/de/prompt-engineering/what-is-prompt-engineering) schreiben „In der Stimme von Jasper" oder „Mit unserem Brand-Leitfaden", tun Sie das bereits manuell. Brand-Voice-AI automatisiert es.',
             '**In der Praxis bedeutet das:** Sie definieren 3–5 Adjektive (Sprachsäulen), sammeln Beispiele markengerechter und nicht-markengerechter Kopie, schreiben einen wiederverwendbaren Anweisungsblock und fügen ihn in Ihre Generierungs- und QA-Prompts ein. Mit jeder Iteration lernt das System Ihren Ton besser kennen.',
           ],
@@ -798,7 +798,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'definition',
           title: '¿Qué es la IA de voz de marca?',
           content: [
-            '**La IA de voz de marca no es software — es una configuración de entrenamiento.** Existe en Jasper Brand Voice, Copy.ai, HubSpot y otras plataformas como un conjunto de instrucciones que tú escribes y ejemplos que tú proporcionas. El modelo en sí (GPT-4o, Claude, Gemini) no se preocupa por tu marca. Pero con las entradas correctas, cualquier modelo puede aprender cómo habla tu marca.',
+            '**La IA de voz de marca no es software — es una configuración de entrenamiento.** Existe en Jasper Brand Voice, Copy.ai, HubSpot y otras plataformas como un conjunto de instrucciones que tú escribes y ejemplos que tú proporcionas. El modelo en sí (GPT-5.5, Claude, Gemini) no se preocupa por tu marca. Pero con las entradas correctas, cualquier modelo puede aprender cómo habla tu marca.',
             '**La idea central:** tomas un modelo de IA de uso general y añades una capa de tu tono, estilo y vocabulario de marca encima, para que cada salida suene como tú, no como una salida genérica de IA.',
             '**En la práctica, esto significa:** defines 3–5 adjetivos (pilares de voz), reúnes ejemplos de contenido en tono y fuera de tono, escribes un bloque de instrucciones reutilizable y lo insertas en tus prompts de generación y QA.',
           ],
@@ -1797,7 +1797,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'definition',
           title: '什么是品牌声音AI?',
           content: [
-            '**品牌声音AI不是软件——它是训练配置。** 它存在于Jasper Brand Voice、Copy.ai、HubSpot等中，作为你编写的指令和你提供的示例集合。模型本身（GPT-4o、Claude、Gemini）不关心你的品牌。但有了正确的输入，任何模型都可以学会你的品牌如何说话。',
+            '**品牌声音AI不是软件——它是训练配置。** 它存在于Jasper Brand Voice、Copy.ai、HubSpot等中，作为你编写的指令和你提供的示例集合。模型本身（GPT-5.5、Claude、Gemini）不关心你的品牌。但有了正确的输入，任何模型都可以学会你的品牌如何说话。',
             '**核心思想：** 取一个通用AI模型，在其上叠加你的品牌语调、风格和词汇的一层，使每个输出听起来像你而不是通用AI输出。当你手动在[提示](/zh/prompt-engineering/what-is-prompt-engineering)中写"以Jasper的声音"时，品牌声音AI就是自动化它。',
             '**实际上：** 你定义3～5个形容词，收集品牌内和品牌外的示例，编写可重用的指令块，并将其粘贴到你的生成和质量保证提示中。每次迭代，系统都会更好地学习你的语调。',
           ],

@@ -203,7 +203,7 @@ tests:
           'Unlike the four tools above (which optimize for a single model at a time), PromptQuorum answers "which model handles this prompt best?" in one run. After you discover the optimal model with PromptQuorum, then route to Braintrust for deeper evaluation, Vellum for production A/B testing, or Promptfoo for CI/CD regression prevention.',
         ],
         items: [
-          '25+ models including GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro, and local models via Ollama and LM Studio',
+          '25+ models including GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and local models via Ollama and LM Studio',
           '9 built-in prompt frameworks — TRACE, CO-STAR, CRAFT, and more',
           'Side-by-side response comparison with consensus scoring',
           'Token count per model — see cost differences before committing',

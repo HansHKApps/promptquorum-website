@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'Git' },
         { '@type': 'Thing', name: 'Notion' },
         { '@type': 'Thing', name: 'Braintrust' },
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
       ],
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Test Suite Header', whyItMatters: 'Purpose: define the acceptance criteria before writing tests. Fields: test goal (what the prompt must do), pass criteria (what output characteristics define success), golden examples (2–3 input/output pairs), known failure modes. Use when: a prompt enters the test suite. Storage: alongside the test file in Git or Braintrust project.' },
           { title: 'Decision Log', whyItMatters: 'Purpose: record design decisions that aren\'t obvious from the prompt text. Fields: decision made, alternatives considered, reason this option was chosen, date. Use when: a non-obvious design choice is made (e.g., why a specific temperature was set, why a particular constraint was added). Storage: doc linked from version block.' },
           { title: 'Change Rationale', whyItMatters: 'Purpose: explain why a prompt was changed in terms that allow the change to be reversed or replicated. Fields: problem statement (what was wrong), change made, expected improvement, measured result. Use when: a prompt is modified in response to a failure or regression. Storage: Git commit body or PromptHub change note.' },
-          { title: 'API Config Block', whyItMatters: 'Purpose: record the model parameters used in production. Fields: model (e.g., GPT-4o, Claude 4.6 Sonnet), temperature, max tokens, top_p, stop sequences, system prompt version, user prompt version. Use when: a prompt is deployed to production. Storage: deployment config file, referenced in version block.' },
+          { title: 'API Config Block', whyItMatters: 'Purpose: record the model parameters used in production. Fields: model (e.g., GPT-5.5, Claude 4.6 Sonnet), temperature, max tokens, top_p, stop sequences, system prompt version, user prompt version. Use when: a prompt is deployed to production. Storage: deployment config file, referenced in version block.' },
         ],
         callouts: [
           { type: 'insight', label: 'Template selection guide', text: 'New prompt → One-Liner Card. Modified prompt → Version Block. Tested prompt → Test Suite Header. Design decision made → Decision Log. Changed after failure → Change Rationale. Deployed to production → API Config Block.' },

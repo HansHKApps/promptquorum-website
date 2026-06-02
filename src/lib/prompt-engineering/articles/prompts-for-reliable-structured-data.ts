@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ogDescription: 'JSON mode stops malformed JSON but not missing fields or wrong types. Three prompt techniques — schema embedding, output examples, field instructions — raise reliability to 95%+ without changing your API setup.',
     twitterDescription: 'JSON mode fixes syntax, not schema compliance. Schema-in-prompt + one output example + field instructions → 95%+ structured output reliability. No API changes needed.',
     intro: '**Most structured output failures happen inside valid JSON — required fields missing, dates formatted as plain strings, enum values misspelled, nullable fields returning empty strings instead of null.** API-level JSON mode and tool_use eliminate unparseable output but do nothing for schema-compliance failures. Three prompt techniques fix what JSON mode leaves behind.',
-    leadAnswerBlock: '**Three prompt patterns raise structured output reliability to 95% or more without API changes: embedding the schema in the prompt, showing the model one valid output example, and adding field-level instructions for type, format, and null handling.** These patterns work across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro, with or without native JSON mode.',
+    leadAnswerBlock: '**Three prompt patterns raise structured output reliability to 95% or more without API changes: embedding the schema in the prompt, showing the model one valid output example, and adding field-level instructions for type, format, and null handling.** These patterns work across GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro, with or without native JSON mode.',
     publishDate: '2026-04-30',
     dateModified: '2026-04-30',
     readTime: '9 min read',
@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Write one field instruction per required field: data type, allowed format, null handling, and enum values — field instructions eliminate the ambiguity that causes type errors',
           'Use YAML instead of JSON for free-form prompting without API enforcement — models produce fewer syntax errors in YAML due to its simpler syntax',
           'Target 95%+ pass rate on a 20-case test set before deploying any structured output prompt to production; below 95%, downstream failures require a recovery process',
-          'Test every structured output prompt against at least 2 models — a prompt that passes at 95% on GPT-4o may fail at 70% on Claude 4.6 Sonnet without model-agnostic instructions',
+          'Test every structured output prompt against at least 2 models — a prompt that passes at 95% on GPT-5.5 may fail at 70% on Claude 4.6 Sonnet without model-agnostic instructions',
         ],
       },
       whatMakesReliable: {
@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Prompt Design Determines Structured Output Reliability',
         content: [
           '**JSON mode and tool_use APIs enforce parseable JSON, but they do not ensure field completeness, correct data types, or valid enum values — those failures require prompt-level fixes, not API changes.** The most common structured output failures happen inside syntactically valid JSON: required fields missing because the model treated them as optional, dates formatted as relative strings ("last Tuesday") instead of ISO 8601, enum values misspelled or abbreviated, and nullable fields returning empty strings instead of null.',
-          'Three prompt-level interventions consistently close the reliability gap. Schema embedding makes the output structure unambiguous. A single valid output example removes formatting ambiguity. Field-level instructions eliminate type and null-handling errors. Together, these three raise structured output reliability to 95%+ across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro — with or without native JSON mode.',
+          'Three prompt-level interventions consistently close the reliability gap. Schema embedding makes the output structure unambiguous. A single valid output example removes formatting ambiguity. Field-level instructions eliminate type and null-handling errors. Together, these three raise structured output reliability to 95%+ across GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro — with or without native JSON mode.',
         ],
         columns: ['Failure type', 'What causes it in the prompt', 'Prompt fix'],
         rows: [
@@ -295,11 +295,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Build a 20-case test set.** Ten happy-path inputs (typical, well-formed data), five edge cases (missing optional fields, long text, unusual values, multi-language content), five adversarial inputs (instructions embedded in field values, extreme dates, ambiguous types). Use realistic inputs from your actual data domain.',
           '**Run at temperature 0 and record pass/fail per field.** Execute all 20 cases at temperature 0 for deterministic, repeatable results. Record whether each field passes or fails in each test case — not just the overall outcome. Field-level failure patterns identify which instruction is missing.',
           '**Fix the lowest-pass-rate field and retest.** Add or strengthen one field instruction: type, format, null handling, or enum values. Re-run all 20 cases. A single targeted instruction addition typically raises overall pass rate by 5–15 percentage points. Repeat until overall pass rate reaches 95% or higher.',
-          '**Validate the prompt on a second model.** Run the full 20-case set against a second model using the same prompt. A prompt at 95%+ on GPT-4o but 70% on Claude 4.6 Sonnet is model-dependent. Either add instructions explicit enough to pass on both, or document which model the prompt is validated for and do not switch without re-testing.',
+          '**Validate the prompt on a second model.** Run the full 20-case set against a second model using the same prompt. A prompt at 95%+ on GPT-5.5 but 70% on Claude 4.6 Sonnet is model-dependent. Either add instructions explicit enough to pass on both, or document which model the prompt is validated for and do not switch without re-testing.',
         ],
         callouts: [
           { type: 'key-point', label: 'Run tests at temperature 0', text: 'Run structured output test sets at temperature 0 to get deterministic, repeatable results. A prompt that passes at temperature 0 is reliable by design — not lucky. Only increase temperature once the prompt passes at 95%+ deterministically, and then re-run the test set at the new temperature to confirm reliability holds.' },
-          { type: 'pro-tip', label: 'Use PromptQuorum for multi-model comparison', text: 'PromptQuorum runs your 20-case test set against GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro simultaneously and shows field-level pass rates side-by-side. This identifies model-dependent failures in one run instead of three.' },
+          { type: 'pro-tip', label: 'Use PromptQuorum for multi-model comparison', text: 'PromptQuorum runs your 20-case test set against GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro simultaneously and shows field-level pass rates side-by-side. This identifies model-dependent failures in one run instead of three.' },
         ],
       },
       commonMistakes: {
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Testing only against the model you developed the prompt on',
-            problem: 'Structured output reliability varies significantly across models — a prompt at 95% on GPT-4o can fail at 70% on Claude 4.6 Sonnet due to different instruction-following behavior on schema constraints',
+            problem: 'Structured output reliability varies significantly across models — a prompt at 95% on GPT-5.5 can fail at 70% on Claude 4.6 Sonnet due to different instruction-following behavior on schema constraints',
             fix: 'Run every structured output prompt against at least 2 models before treating it as model-agnostic. Use PromptQuorum or direct API calls to [test prompts across models](/prompt-engineering/how-to-test-prompts-across-models) in one step.',
           },
           {
@@ -369,7 +369,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Does the order of fields in the schema affect structured output reliability?',
-            a: 'Yes. Place required fields first and optional or nullable fields last. Models weight earlier schema elements more heavily when deciding what to include. A nullable field listed first is more likely to be omitted than a required field listed later when the model is uncertain about the value. This ordering effect is consistent across GPT-4o and Claude 4.6 Sonnet.',
+            a: 'Yes. Place required fields first and optional or nullable fields last. Models weight earlier schema elements more heavily when deciding what to include. A nullable field listed first is more likely to be omitted than a required field listed later when the model is uncertain about the value. This ordering effect is consistent across GPT-5.5 and Claude 4.6 Sonnet.',
           },
         ],
       },
@@ -377,11 +377,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Structured Output and JSON Mode: When and How to Use It](/prompt-engineering/structured-output-json-mode) — API-level JSON mode configuration for GPT-4o, Claude, and Gemini with a model compliance table',
+          '[Structured Output and JSON Mode: When and How to Use It](/prompt-engineering/structured-output-json-mode) — API-level JSON mode configuration for GPT-5.5, Claude, and Gemini with a model compliance table',
           '[Best Tools for Structured Output (2026)](/prompt-engineering/best-tools-structured-output) — Instructor, Outlines, Pydantic AI, and LangChain compared for structured extraction workflows',
           '[How To Control the Output: Format, Temperature, and Constrained Decoding](/prompt-engineering/control-the-output) — constrained decoding mechanics, temperature and top-p for structured tasks, stop sequences',
           '[How To Evaluate Prompt Quality: Metrics, Tests and Checklist](/prompt-engineering/how-to-evaluate-prompt-quality) — 20-case test set construction, binary pass/fail scoring, and LLM-as-judge rubrics',
-          '[How To Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — running the same prompt against GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to find model-specific failures',
+          '[How To Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — running the same prompt against GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro to find model-specific failures',
           '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — when to add examples to a prompt and how many to include for different task types',
         ],
       },

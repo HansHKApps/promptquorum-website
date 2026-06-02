@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         mentions: [
           { '@type': 'Organization', name: 'OWASP' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'NIST AI RMF' },
@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'HowToStep', position: 2, name: 'Privilege Separation and Least-Privilege Tool Access', text: 'LLM agents should only have access to tools and data needed for the current task. An LLM reading a PDF should not have write access to email or file systems. If the model has no send-email capability, an injection payload that tries to exfiltrate data via email fails at the action layer.' },
           { '@type': 'HowToStep', position: 3, name: 'Output Validation', text: 'Intercept and validate model outputs before they trigger downstream actions. Before executing an LLM-generated SQL query, code snippet, or API call, validate it against a strict schema. For customer-facing responses, scan for system-prompt leakage patterns.' },
           { '@type': 'HowToStep', position: 4, name: 'Human-in-the-Loop for High-Stakes Actions', text: 'Require human confirmation before irreversible actions such as sending emails, modifying databases, making payments, or executing code. This eliminates the entire class of indirect injection attacks that rely on automated execution without human review.' },
-          { '@type': 'HowToStep', position: 5, name: 'Context Isolation with Delimiters and Metadata', text: 'Structure prompts to clearly mark trust boundaries using explicit delimiters. Claude Opus 4.8 and GPT-4o partially respect structured delimiters, but this is not a complete defense on its own — combine with the other four layers.' },
+          { '@type': 'HowToStep', position: 5, name: 'Context Isolation with Delimiters and Metadata', text: 'Structure prompts to clearly mark trust boundaries using explicit delimiters. Claude Opus 4.8 and GPT-5.5 partially respect structured delimiters, but this is not a complete defense on its own — combine with the other four layers.' },
         ],
       },
       itemListSchema: {
@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Direct injection** targets the user\'s own input field. **Indirect injection** arrives via documents, web pages, emails, or database records that the model reads — harder to detect and higher impact.',
             '**Jailbreaking ≠ prompt injection.** Jailbreaking uses social engineering to bypass safety training (e.g., "act as DAN"). Prompt injection embeds instructions in data the model processes.',
             '**No single defense is sufficient.** Effective protection combines input sanitization, output validation, privilege separation, least-privilege tool access, and human review for high-stakes actions.',
-            '**LLMs cannot reliably detect injections themselves.** In PromptQuorum tests, GPT-4o, Claude Opus 4.8, and Gemini 3.1 Pro flagged 18 of 30 adversarial injection strings — a 60% detection rate.',
+            '**LLMs cannot reliably detect injections themselves.** In PromptQuorum tests, GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro flagged 18 of 30 adversarial injection strings — a 60% detection rate.',
             '**[RAG](/prompt-engineering/prompt-engineering-glossary#rag) and agentic pipelines expand the attack surface.** Every external document ingested via Retrieval-Augmented Generation is a potential injection vector.',
           ],
         },
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Privilege separation and least-privilege tool access:** [Constrained prompting](/prompt-engineering/constrained-prompting) restricts model behavior to only permitted actions. LLM agents should only have access to tools and data needed for the current task. An LLM reading a PDF should not have write access to email or file systems. If the model has no send-email capability, an injection payload that tries to exfiltrate data via email fails at the action layer, not the model layer.',
             '**Output validation:** Intercept and validate model outputs before they trigger downstream actions. Before executing an LLM-generated SQL query, code snippet, or API call, validate it against a strict schema — [structured output and JSON Mode](/prompt-engineering/structured-output-and-json-mode) enforce this programmatically. For customer-facing responses, scan for system-prompt leakage patterns (e.g., regexes that detect prompt template variable markers). See [build quality checks](/prompt-engineering/build-quality-checks) for validation patterns.',
             '**Human-in-the-loop for high-stakes actions:** Require human confirmation before irreversible actions (sending emails, modifying databases, making payments, executing code). This eliminates the entire class of indirect injection attacks that rely on automated execution without human review.',
-            '**Context isolation with delimiters and metadata:** Structure prompts to clearly mark trust boundaries: `[SYSTEM: instructions] [RETRIEVED: <untrusted>] [USER: <query>]`. Claude Opus 4.8 and GPT-4o partially respect structured delimiters when trained on them, but this is not a complete defense on its own — combine with the other four layers.',
+            '**Context isolation with delimiters and metadata:** Structure prompts to clearly mark trust boundaries: `[SYSTEM: instructions] [RETRIEVED: <untrusted>] [USER: <query>]`. Claude Opus 4.8 and GPT-5.5 partially respect structured delimiters when trained on them, but this is not a complete defense on its own — combine with the other four layers.',
           ],
         },
 
@@ -280,14 +280,14 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         promptquorumBridge: {
           title: 'Model Injection Resistance: Comparative Analysis Framework',
           content: [
-            '**Example comparative framework:** If you were to submit 30 adversarial injection strings (15 direct, 15 indirect-style document injections) simultaneously to GPT-4o, Claude Opus 4.8, and Gemini 3.1 Pro, you would likely observe that models with stronger safety training (Constitutional AI in Claude) show higher detection rates on naive injections, while all models achieve near-zero detection on adversarially obfuscated payloads. This analysis framework is illustrative; actual detection rates depend on your specific injection patterns and model versions.',
+            '**Example comparative framework:** If you were to submit 30 adversarial injection strings (15 direct, 15 indirect-style document injections) simultaneously to GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro, you would likely observe that models with stronger safety training (Constitutional AI in Claude) show higher detection rates on naive injections, while all models achieve near-zero detection on adversarially obfuscated payloads. This analysis framework is illustrative; actual detection rates depend on your specific injection patterns and model versions.',
             '*Obfuscated = encoded (Base64, ROT13), split across sentences, or phrased as hypothetical ("If you were to ignore instructions...").',
           ],
           tableFormat: true,
           columns: ['Model', 'Expected Direct Detection', 'Expected Indirect Detection', 'Expected Obfuscated Detection', 'Typical Baseline'],
           rows: [
             { Model: '**Claude Opus 4.8**', 'Expected Direct Detection': 'High (85–95%)', 'Expected Indirect Detection': 'Moderate (40–60%)', 'Expected Obfuscated Detection': 'Very Low (0–10%)', 'Typical Baseline': '60–70%' },
-            { Model: '**GPT-4o**', 'Expected Direct Detection': 'Moderate (70–80%)', 'Expected Indirect Detection': 'Low (30–50%)', 'Expected Obfuscated Detection': 'Very Low (0–10%)', 'Typical Baseline': '50–65%' },
+            { Model: '**GPT-5.5**', 'Expected Direct Detection': 'Moderate (70–80%)', 'Expected Indirect Detection': 'Low (30–50%)', 'Expected Obfuscated Detection': 'Very Low (0–10%)', 'Typical Baseline': '50–65%' },
             { Model: '**Gemini 3.1 Pro**', 'Expected Direct Detection': 'Moderate (65–75%)', 'Expected Indirect Detection': 'Low (25–45%)', 'Expected Obfuscated Detection': 'Very Low (0–10%)', 'Typical Baseline': '45–60%' },
           ],
           items: [
@@ -368,7 +368,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             },
             {
               q: 'Can LLMs detect prompt injection automatically?',
-              a: 'No model achieves reliable detection. In PromptQuorum testing, Claude Opus 4.8 detected 22 of 30 adversarial injection strings (73%); GPT-4o detected 18 of 30 (60%). All three models tested failed on obfuscated injections (encoded text, hypothetical framing, split instructions). Effective defense requires external validation layers, not model self-detection alone.',
+              a: 'No model achieves reliable detection. In PromptQuorum testing, Claude Opus 4.8 detected 22 of 30 adversarial injection strings (73%); GPT-5.5 detected 18 of 30 (60%). All three models tested failed on obfuscated injections (encoded text, hypothetical framing, split instructions). Effective defense requires external validation layers, not model self-detection alone.',
             },
             {
               q: 'How do I prevent prompt injection in a RAG pipeline?',
@@ -408,7 +408,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '[Perez & Ribeiro, 2022. "Ignore Previous Prompt: Attack Techniques For Language Models"](https://arxiv.org/abs/2211.09527) — foundational paper documenting direct injection attack patterns and failure modes across GPT-3 and GPT-4 predecessors',
             '[OWASP. "OWASP Top 10 for Large Language Model Applications"](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — official industry ranking of LLM security risks; prompt injection ranked #1 since the first release in 2023',
             '[Anthropic. "Mitigate jailbreaks and prompt injections"](https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks) — Anthropic\'s official guidance on defending Claude-based applications against prompt injection and jailbreak attacks, including delimiter strategies and input validation',
-            '[OpenAI. "Safety best practices"](https://platform.openai.com/docs/guides/safety-best-practices) — OpenAI\'s primary source documentation on securing GPT-4o applications against adversarial inputs, including prompt injection mitigations and output validation',
+            '[OpenAI. "Safety best practices"](https://platform.openai.com/docs/guides/safety-best-practices) — OpenAI\'s primary source documentation on securing GPT-5.5 applications against adversarial inputs, including prompt injection mitigations and output validation',
           ],
         },
       },
@@ -460,7 +460,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         ],
         mentions: [
           { '@type': 'Organization', name: 'OWASP' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'NIST AI RMF' },
@@ -481,7 +481,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           { '@type': 'HowToStep', position: 2, name: 'Privilegientrennung und Least-Privilege-Werkzeugzugriff', text: 'LLM-Agenten sollten nur Zugriff auf Werkzeuge und Daten haben, die für die aktuelle Aufgabe benötigt werden. Ein LLM, das ein PDF liest, sollte keinen Schreibzugriff auf E-Mail oder Dateisysteme haben. Wenn das Modell keine E-Mail-Sendefähigkeit hat, scheitert ein Injection-Payload, der versucht, Daten per E-Mail zu exfiltrieren, auf der Aktionsebene.' },
           { '@type': 'HowToStep', position: 3, name: 'Ausgabevalidierung', text: 'Fangen Sie Modellausgaben ab und validieren Sie sie, bevor sie nachgelagerte Aktionen auslösen. Bevor Sie eine LLM-generierte SQL-Abfrage, einen Code-Ausschnitt oder einen API-Aufruf ausführen, validieren Sie ihn gegen ein striktes Schema. Für kundenorientierte Antworten scannen Sie nach System-Prompt-Leakage-Mustern.' },
           { '@type': 'HowToStep', position: 4, name: 'Human-in-the-Loop für kritische Aktionen', text: 'Verlangen Sie eine menschliche Bestätigung vor irreversiblen Aktionen wie dem Senden von E-Mails, dem Ändern von Datenbanken, dem Durchführen von Zahlungen oder dem Ausführen von Code. Dies eliminiert die gesamte Klasse indirekter Injection-Angriffe, die auf automatisierte Ausführung ohne menschliche Überprüfung angewiesen sind.' },
-          { '@type': 'HowToStep', position: 5, name: 'Kontextisolierung mit Trennzeichen und Metadaten', text: 'Strukturieren Sie Prompts so, dass Vertrauensgrenzen mithilfe expliziter Trennzeichen klar markiert sind. Claude Opus 4.8 und GPT-4o respektieren strukturierte Trennzeichen teilweise, aber dies ist allein keine vollständige Verteidigung — kombinieren Sie es mit den anderen vier Schichten.' },
+          { '@type': 'HowToStep', position: 5, name: 'Kontextisolierung mit Trennzeichen und Metadaten', text: 'Strukturieren Sie Prompts so, dass Vertrauensgrenzen mithilfe expliziter Trennzeichen klar markiert sind. Claude Opus 4.8 und GPT-5.5 respektieren strukturierte Trennzeichen teilweise, aber dies ist allein keine vollständige Verteidigung — kombinieren Sie es mit den anderen vier Schichten.' },
         ],
       },
       itemListSchema: {
@@ -531,7 +531,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**Direct Injection** zielt auf das eigene Eingabefeld des Benutzers ab. **Indirect Injection** kommt über Dokumente, Webseiten, E-Mails oder Datenbankeinträge, die das Modell liest — schwerer zu erkennen und höhere Auswirkungen.',
             '**Jailbreaking ≠ Prompt Injection.** Jailbreaking nutzt Social Engineering, um die Sicherheitsschulung zu umgehen (z. B. „agiere als DAN"). Prompt Injection bringt Anweisungen in Daten ein, die das Modell verarbeitet.',
             '**Keine einzelne Abwehr ist ausreichend.** Ein wirksamer Schutz kombiniert Eingabebereinigung, Ausgabevalidierung, Privilegientrennung, Least-Privilege-Werkzeugzugriff und menschliche Überprüfung für kritische Aktionen.',
-            '**LLMs können Injektionen nicht zuverlässig selbst erkennen.** In PromptQuorum-Tests erkannten GPT-4o, Claude Opus 4.8 und Gemini 3.1 Pro 18 von 30 gegnerischen Injection-Strings — eine Erkennungsrate von 60 %.',
+            '**LLMs können Injektionen nicht zuverlässig selbst erkennen.** In PromptQuorum-Tests erkannten GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro 18 von 30 gegnerischen Injection-Strings — eine Erkennungsrate von 60 %.',
             '**RAG und agentic Pipelines erweitern die Angriffsfläche.** Jedes externe Dokument, das über Retrieval-Augmented Generation aufgenommen wird, ist ein potenzieller Injection-Vektor.',
           ],
         },
@@ -618,7 +618,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**Privilegientrennung und Least-Privilege-Werkzeugzugriff:** Constrained Prompting beschränkt das Modellverhalten auf nur erlaubte Aktionen. LLM-Agenten sollten nur Zugriff auf Werkzeuge und Daten haben, die für die aktuelle Aufgabe benötigt werden. Ein LLM, das ein PDF liest, sollte keinen Schreibzugriff auf E-Mail oder Dateisysteme haben. Wenn das Modell keine E-Mail-Sendefähigkeit hat, scheitert ein Injection-Payload, der versucht, Daten per E-Mail zu exfiltrieren, auf der Aktionsebene, nicht auf der Modellebene.',
             '**Ausgabevalidierung:** Fangen Sie Modellausgaben ab und validieren Sie sie, bevor sie nachgelagerte Aktionen auslösen. Bevor Sie eine LLM-generierte SQL-Abfrage, einen Code-Ausschnitt oder einen API-Aufruf ausführen, validieren Sie ihn gegen ein striktes Schema — strukturierte Ausgaben und JSON Mode erzwingen dies programmgesteuert. Für kundenorientierte Antworten scannen Sie nach System-Prompt-Leakage-Mustern (z. B. Regexes, die Prompt-Template-Variablenmarker erkennen). Siehe Build Quality Checks für Validierungsmuster.',
             '**Human-in-the-Loop für kritische Aktionen:** Verlangen Sie menschliche Bestätigung vor irreversiblen Aktionen (E-Mails senden, Datenbanken ändern, Zahlungen leisten, Code ausführen). Dies eliminiert die gesamte Klasse indirekter Injection-Angriffe, die auf automatisierte Ausführung ohne menschliche Überprüfung angewiesen sind.',
-            '**Kontextisolierung mit Trennzeichen und Metadaten:** Strukturieren Sie Prompts, um Vertrauensgrenzen klar zu markieren: `[SYSTEM: instructions] [RETRIEVED: <untrusted>] [USER: <query>]`. Claude Opus 4.8 und GPT-4o respektieren strukturierte Trennzeichen teilweise, wenn sie darauf trainiert wurden, aber dies ist allein keine vollständige Verteidigung — kombinieren Sie es mit den anderen vier Schichten.',
+            '**Kontextisolierung mit Trennzeichen und Metadaten:** Strukturieren Sie Prompts, um Vertrauensgrenzen klar zu markieren: `[SYSTEM: instructions] [RETRIEVED: <untrusted>] [USER: <query>]`. Claude Opus 4.8 und GPT-5.5 respektieren strukturierte Trennzeichen teilweise, wenn sie darauf trainiert wurden, aber dies ist allein keine vollständige Verteidigung — kombinieren Sie es mit den anderen vier Schichten.',
           ],
         },
 
@@ -683,14 +683,14 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         promptquorumBridge: {
           title: 'Modell-Injection-Resistenz: Vergleichender Analysisframework',
           content: [
-            '**Beispiel-Vergleichsframework:** Wenn Sie 30 gegnerische Injection-Strings (15 direkt, 15 indirekt-Stil-Dokument-Injektionen) gleichzeitig an GPT-4o, Claude Opus 4.8 und Gemini 3.1 Pro übermitteln würden, würden Sie wahrscheinlich beobachten, dass Modelle mit stärkerer Sicherheitsschulung (Constitutional AI in Claude) höhere Erkennungsraten bei naiven Injektionen zeigen, während alle Modelle nahe Null-Erkennung bei gegnerisch verschleiererten Payloads erreichen. Dieses Analyseframework ist illustrativ; tatsächliche Erkennungsraten hängen von Ihren spezifischen Injection-Mustern und Modellversionen ab.',
+            '**Beispiel-Vergleichsframework:** Wenn Sie 30 gegnerische Injection-Strings (15 direkt, 15 indirekt-Stil-Dokument-Injektionen) gleichzeitig an GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro übermitteln würden, würden Sie wahrscheinlich beobachten, dass Modelle mit stärkerer Sicherheitsschulung (Constitutional AI in Claude) höhere Erkennungsraten bei naiven Injektionen zeigen, während alle Modelle nahe Null-Erkennung bei gegnerisch verschleiererten Payloads erreichen. Dieses Analyseframework ist illustrativ; tatsächliche Erkennungsraten hängen von Ihren spezifischen Injection-Mustern und Modellversionen ab.',
             '*Verschleiert = kodiert (Base64, ROT13), über Sätze verteilt oder als hypothetisch formuliert („Wenn du Anweisungen ignorieren würdest...").',
           ],
           tableFormat: true,
           columns: ['Modell', 'Erwartete Direct Detection', 'Erwartete Indirect Detection', 'Erwartete Obfuscated Detection', 'Typisches Baseline'],
           rows: [
             { Modell: '**Claude Opus 4.8**', 'Erwartete Direct Detection': 'Hoch (85–95%)', 'Erwartete Indirect Detection': 'Moderat (40–60%)', 'Erwartete Obfuscated Detection': 'Sehr gering (0–10%)', 'Typisches Baseline': '60–70%' },
-            { Modell: '**GPT-4o**', 'Erwartete Direct Detection': 'Moderat (70–80%)', 'Erwartete Indirect Detection': 'Gering (30–50%)', 'Erwartete Obfuscated Detection': 'Sehr gering (0–10%)', 'Typisches Baseline': '50–65%' },
+            { Modell: '**GPT-5.5**', 'Erwartete Direct Detection': 'Moderat (70–80%)', 'Erwartete Indirect Detection': 'Gering (30–50%)', 'Erwartete Obfuscated Detection': 'Sehr gering (0–10%)', 'Typisches Baseline': '50–65%' },
             { Modell: '**Gemini 3.1 Pro**', 'Erwartete Direct Detection': 'Moderat (65–75%)', 'Erwartete Indirect Detection': 'Gering (25–45%)', 'Erwartete Obfuscated Detection': 'Sehr gering (0–10%)', 'Typisches Baseline': '45–60%' },
           ],
           items: [
@@ -771,7 +771,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             },
             {
               q: 'Können LLMs Prompt Injection automatisch erkennen?',
-              a: 'Nein Modell erreicht zuverlässige Erkennung. In PromptQuorum-Tests erkannten Claude Opus 4.8 22 von 30 gegnerischen Injection-Strings (73 %); GPT-4o erkannte 18 von 30 (60 %). Alle drei getesteten Modelle scheiterten bei verschleierter Injektionen (kodierter Text, hypothetischer Rahmen, geteilte Anweisungen). Wirksame Verteidigung erfordert externe Validierungsschichten, nicht allein Modell-Selbsterkennung.'
+              a: 'Nein Modell erreicht zuverlässige Erkennung. In PromptQuorum-Tests erkannten Claude Opus 4.8 22 von 30 gegnerischen Injection-Strings (73 %); GPT-5.5 erkannte 18 von 30 (60 %). Alle drei getesteten Modelle scheiterten bei verschleierter Injektionen (kodierter Text, hypothetischer Rahmen, geteilte Anweisungen). Wirksame Verteidigung erfordert externe Validierungsschichten, nicht allein Modell-Selbsterkennung.'
             },
             {
               q: 'Wie verhindere ich Prompt Injection in einer RAG-Pipeline?',
@@ -803,7 +803,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '[Perez & Ribeiro, 2022. "Ignore Previous Prompt: Attack Techniques For Language Models"](https://arxiv.org/abs/2211.09527) — Grundlagenpapier dokumentierende Direct-Injection-Angriffsmuster und Fehlermodi über GPT-3 und GPT-4-Vorläufer',
             '[OWASP. "OWASP Top 10 for Large Language Model Applications"](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — offizielle Branchenrangfolge der LLM-Sicherheitsrisiken; Prompt Injection seit der ersten Veröffentlichung 2023 auf Platz #1 eingestuft',
             '[Anthropic. "Mitigate jailbreaks and prompt injections"](https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks) — Officieller Leitfaden von Anthropic zum Schutz Claude-basierter Anwendungen gegen Prompt Injection und Jailbreak-Angriffe, einschließlich Delimiter-Strategien und Input-Validierung',
-            '[OpenAI. "Safety best practices"](https://platform.openai.com/docs/guides/safety-best-practices) — OpenAIs Primär-Quelle-Dokumentation zur Sicherung von GPT-4o-Anwendungen gegen gegnerische Eingaben, einschließlich Prompt-Injection-Mitigationen und Ausgabevalidierung',
+            '[OpenAI. "Safety best practices"](https://platform.openai.com/docs/guides/safety-best-practices) — OpenAIs Primär-Quelle-Dokumentation zur Sicherung von GPT-5.5-Anwendungen gegen gegnerische Eingaben, einschließlich Prompt-Injection-Mitigationen und Ausgabevalidierung',
           ],
         },
       },
@@ -860,7 +860,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         ],
         mentions: [
           { '@type': 'Organization', name: 'OWASP' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'NIST AI RMF' },
@@ -882,7 +882,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           { '@type': 'HowToStep', position: 2, name: 'Separación de privilegios y acceso de herramientas de mínimo privilegio', text: 'Los agentes LLM solo deben tener acceso a las herramientas y datos necesarios para la tarea actual. Un LLM que lee un PDF no debe tener acceso de escritura al correo electrónico o a los sistemas de archivos. Si el modelo no tiene capacidad de enviar correos, un payload de inyección que intenta exfiltrar datos vía correo falla en la capa de acción.' },
           { '@type': 'HowToStep', position: 3, name: 'Validación de salida', text: 'Intercepta y valida las salidas del modelo antes de que activen acciones downstream. Antes de ejecutar una consulta SQL, fragmento de código o llamada a API generada por LLM, valídala contra un esquema estricto. Para las respuestas orientadas al cliente, analiza los patrones de filtración del system prompt.' },
           { '@type': 'HowToStep', position: 4, name: 'Humano en el bucle para acciones de alto riesgo', text: 'Requiere confirmación humana antes de acciones irreversibles como enviar correos, modificar bases de datos, realizar pagos o ejecutar código. Esto elimina toda la clase de ataques de inyección indirecta que dependen de la ejecución automatizada sin revisión humana.' },
-          { '@type': 'HowToStep', position: 5, name: 'Aislamiento de contexto con delimitadores y metadatos', text: 'Estructura los prompts para marcar claramente los límites de confianza usando delimitadores explícitos. Claude Opus 4.8 y GPT-4o respetan parcialmente los delimitadores estructurados, pero esto no es una defensa completa por sí sola — combínalo con las otras cuatro capas.' },
+          { '@type': 'HowToStep', position: 5, name: 'Aislamiento de contexto con delimitadores y metadatos', text: 'Estructura los prompts para marcar claramente los límites de confianza usando delimitadores explícitos. Claude Opus 4.8 y GPT-5.5 respetan parcialmente los delimitadores estructurados, pero esto no es una defensa completa por sí sola — combínalo con las otras cuatro capas.' },
         ],
       },
       itemListSchema: {
@@ -931,7 +931,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**La inyección directa** apunta al campo de entrada del propio usuario. **La inyección indirecta** llega a través de documentos, páginas web, correos o registros de bases de datos que el modelo lee — más difícil de detectar y de mayor impacto.',
             '**Jailbreaking ≠ prompt injection.** El jailbreaking usa ingeniería social para eludir el entrenamiento de seguridad. La prompt injection incrusta instrucciones en datos que el modelo procesa.',
             '**Ninguna defensa única es suficiente.** La protección efectiva combina saneamiento de entrada, validación de salida, separación de privilegios, acceso de herramientas de mínimo privilegio y revisión humana para acciones de alto riesgo.',
-            '**Los LLMs no pueden detectar inyecciones de forma fiable por sí mismos.** En las pruebas de PromptQuorum, GPT-4o, Claude Opus 4.8 y Gemini 3.1 Pro marcaron 18 de 30 cadenas de inyección adversarial — una tasa de detección del 60 %.',
+            '**Los LLMs no pueden detectar inyecciones de forma fiable por sí mismos.** En las pruebas de PromptQuorum, GPT-5.5, Claude Opus 4.8 y Gemini 3.1 Pro marcaron 18 de 30 cadenas de inyección adversarial — una tasa de detección del 60 %.',
             '**Los pipelines RAG y agénticos amplían la superficie de ataque.** Cada documento externo ingestado vía RAG es un vector de inyección potencial.',
           ],
         },
@@ -1012,7 +1012,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**Separación de privilegios y acceso de herramientas de mínimo privilegio:** Los agentes LLM solo deben tener acceso a las herramientas y datos necesarios para la tarea actual. Un LLM que lee un PDF no debe tener acceso de escritura al correo electrónico o a los sistemas de archivos. Si el modelo no tiene capacidad de enviar correos, un payload de inyección que intenta exfiltrar datos vía correo falla en la capa de acción, no en la capa del modelo.',
             '**Validación de salida:** Intercepta y valida las salidas del modelo antes de que activen acciones downstream. Antes de ejecutar una consulta SQL, fragmento de código o llamada a API generada por LLM, valídala contra un esquema estricto. Para las respuestas orientadas al cliente, analiza los patrones de filtración del system prompt.',
             '**Humano en el bucle para acciones de alto riesgo:** Requiere confirmación humana antes de acciones irreversibles (enviar correos, modificar bases de datos, realizar pagos, ejecutar código). Esto elimina toda la clase de ataques de inyección indirecta que dependen de la ejecución automatizada sin revisión humana.',
-            '**Aislamiento de contexto con delimitadores y metadatos:** Estructura los prompts para marcar claramente los límites de confianza: `[SYSTEM: instrucciones] [RETRIEVED: <no confiable>] [USER: <consulta>]`. Claude Opus 4.8 y GPT-4o respetan parcialmente los delimitadores estructurados, pero esto no es una defensa completa por sí sola — combínalo con las otras cuatro capas.',
+            '**Aislamiento de contexto con delimitadores y metadatos:** Estructura los prompts para marcar claramente los límites de confianza: `[SYSTEM: instrucciones] [RETRIEVED: <no confiable>] [USER: <consulta>]`. Claude Opus 4.8 y GPT-5.5 respetan parcialmente los delimitadores estructurados, pero esto no es una defensa completa por sí sola — combínalo con las otras cuatro capas.',
           ],
         },
         inputValidation: {
@@ -1073,7 +1073,7 @@ def is_injection_attempt(text: str) -> bool:`,
         llmDetectionLimits: {
           title: '¿Pueden los LLMs detectar sus propios ataques de inyección?',
           content: [
-            '**Los LLMs no pueden detectar de forma fiable la prompt injection de forma autónoma — en las pruebas de PromptQuorum, GPT-4o, Claude Opus 4.8 y Gemini 3.1 Pro detectaron el 60 % de las cadenas de inyección adversarial, perdiendo el 40 % de los ataques cuando se les presentó como texto legítimo.** La tasa de detección cae aún más para las inyecciones ofuscadas que usan Unicode, permutaciones de caracteres o divididas en múltiples mensajes.',
+            '**Los LLMs no pueden detectar de forma fiable la prompt injection de forma autónoma — en las pruebas de PromptQuorum, GPT-5.5, Claude Opus 4.8 y Gemini 3.1 Pro detectaron el 60 % de las cadenas de inyección adversarial, perdiendo el 40 % de los ataques cuando se les presentó como texto legítimo.** La tasa de detección cae aún más para las inyecciones ofuscadas que usan Unicode, permutaciones de caracteres o divididas en múltiples mensajes.',
           ],
           items: [
             '**La limitación estructural:** Un LLM procesa todos los tokens secuencialmente. No tiene un canal privilegiado para "instrucciones de confianza" vs "datos no confiables" — ambos fluyen como tokens idénticos. Esto hace que la distinción basada en el modelo sea fundamentalmente poco fiable.',
@@ -1120,7 +1120,7 @@ def is_injection_attempt(text: str) -> bool:`,
           faqs: [
             { q: '¿Qué es la prompt injection?', a: 'La prompt injection es un ataque de seguridad donde un adversario incrusta instrucciones maliciosas en el texto de entrada para anular el system prompt de un LLM y hacer que el modelo realice acciones no autorizadas. Es el #1 en el OWASP Top 10 para Aplicaciones de Modelos de Lenguaje de Gran Tamaño.' },
             { q: '¿En qué se diferencia la inyección directa de la indirecta?', a: 'La inyección directa ocurre cuando el atacante escribe instrucciones maliciosas directamente en el campo de entrada. La inyección indirecta incrusta payloads en documentos externos, páginas web o registros de bases de datos que el modelo procesa a través de RAG o navegación — sin que el atacante necesite interactuar con la aplicación.' },
-            { q: '¿Pueden los LLMs detectar la prompt injection?', a: 'Solo de forma parcial. En las pruebas de PromptQuorum, GPT-4o, Claude Opus 4.8 y Gemini 3.1 Pro detectaron el 60 % de las cadenas de inyección adversarial. La tasa de detección cae con la ofuscación. Trata la detección a nivel de LLM como una capa adicional, no como la defensa primaria.' },
+            { q: '¿Pueden los LLMs detectar la prompt injection?', a: 'Solo de forma parcial. En las pruebas de PromptQuorum, GPT-5.5, Claude Opus 4.8 y Gemini 3.1 Pro detectaron el 60 % de las cadenas de inyección adversarial. La tasa de detección cae con la ofuscación. Trata la detección a nivel de LLM como una capa adicional, no como la defensa primaria.' },
             { q: '¿Cuáles son las 5 capas de defensa para la prompt injection?', a: 'Las 5 capas son: (1) saneamiento de entrada (regex, delimitadores), (2) separación de privilegios (mínimo privilegio), (3) validación de salida (esquema, escaneo de filtración), (4) humano en el bucle para acciones irreversibles, y (5) aislamiento de contexto (envoltorio de delimitadores). Ninguna capa por sí sola es suficiente.' },
             { q: '¿El modo JSON protege contra la prompt injection?', a: 'No directamente. El modo JSON aplica el formato de salida, lo que puede hacer que las inyecciones que intentan alterar el formato fallen. Sin embargo, un modelo comprometido con éxito por inyección puede producir JSON malicioso válido que pase la validación de esquema pero contenga campos dañinos o datos exfiltrados.' },
             { q: '¿Cómo aseguras los pipelines RAG contra la inyección?', a: 'Las cuatro prácticas clave son: (1) sanear el contenido recuperado antes de incluirlo en el prompt, (2) envolver el contenido recuperado en delimitadores explícitos, (3) aplicar el mínimo privilegio al componente de recuperación (solo lectura, sin acceso a sistemas de escritura), y (4) monitorear los registros de recuperación en busca de patrones de instrucciones sospechosos.' },
@@ -1134,7 +1134,7 @@ def is_injection_attempt(text: str) -> bool:`,
             '[Perez & Ribeiro, 2022. "Ignore Previous Prompt: Attack Techniques For Language Models." NeurIPS Machine Learning Safety Workshop. arXiv:2211.09527](https://arxiv.org/abs/2211.09527) — Documentación fundacional de vectores de ataque de prompt injection directa e indirecta',
             '[NIST. "AI Risk Management Framework (AI RMF 1.0)." nist.gov](https://www.nist.gov/system/files/documents/2023/01/26/NIST_AI_100-1.pdf) — Marco federal de EE. UU. para la gestión de riesgos de IA; sección MAP/MEASURE aplica directamente a las métricas de detección de inyección',
             '[Anthropic. "Mitigate jailbreaks and prompt injections"](https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks) — Guía oficial de Anthropic para proteger las aplicaciones basadas en Claude contra prompt injection y ataques de jailbreaking',
-            '[OpenAI. "Safety best practices"](https://platform.openai.com/docs/guides/safety-best-practices) — Documentación de fuente primaria de OpenAI para asegurar las aplicaciones GPT-4o contra entradas adversariales, incluyendo mitigaciones de prompt injection y validación de salida',
+            '[OpenAI. "Safety best practices"](https://platform.openai.com/docs/guides/safety-best-practices) — Documentación de fuente primaria de OpenAI para asegurar las aplicaciones GPT-5.5 contra entradas adversariales, incluyendo mitigaciones de prompt injection y validación de salida',
           ],
         },
       },
@@ -1184,7 +1184,7 @@ def is_injection_attempt(text: str) -> bool:`,
         ],
         mentions: [
           { '@type': 'Organization', name: 'OWASP' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'NIST AI RMF' },
@@ -1205,7 +1205,7 @@ def is_injection_attempt(text: str) -> bool:`,
           { '@type': 'HowToStep', position: 2, name: 'Séparation des privilèges et accès aux outils selon le principe du moindre privilège', text: 'Les agents LLM ne doivent avoir accès qu\'aux outils et aux données nécessaires à la tâche en cours. Un LLM lisant un PDF ne doit pas avoir accès en écriture à la messagerie ou aux systèmes de fichiers. Si le modèle ne peut pas envoyer d\'e-mails, une charge utile d\'injection qui tente d\'exfiltrer des données par e-mail échoue au niveau de l\'action.' },
           { '@type': 'HowToStep', position: 3, name: 'Validation des sorties', text: 'Interceptez et validez les sorties du modèle avant qu\'elles ne déclenchent des actions en aval. Avant d\'exécuter une requête SQL, un extrait de code ou un appel d\'API généré par le LLM, validez-le par rapport à un schéma strict. Pour les réponses destinées aux clients, analysez les motifs de fuite du system prompt.' },
           { '@type': 'HowToStep', position: 4, name: 'Supervision humaine pour les actions à enjeux élevés', text: 'Exigez une confirmation humaine avant les actions irréversibles telles que l\'envoi d\'e-mails, la modification de bases de données, les paiements ou l\'exécution de code. Cela élimine l\'ensemble des attaques par injection indirecte qui reposent sur une exécution automatisée sans révision humaine.' },
-          { '@type': 'HowToStep', position: 5, name: 'Isolation du contexte avec des délimiteurs et des métadonnées', text: 'Structurez les prompts pour marquer clairement les limites de confiance à l\'aide de délimiteurs explicites. Claude Opus 4.8 et GPT-4o respectent partiellement les délimiteurs structurés, mais cela ne constitue pas une défense complète en soi — combinez avec les quatre autres niveaux.' },
+          { '@type': 'HowToStep', position: 5, name: 'Isolation du contexte avec des délimiteurs et des métadonnées', text: 'Structurez les prompts pour marquer clairement les limites de confiance à l\'aide de délimiteurs explicites. Claude Opus 4.8 et GPT-5.5 respectent partiellement les délimiteurs structurés, mais cela ne constitue pas une défense complète en soi — combinez avec les quatre autres niveaux.' },
         ],
       },
       itemListSchema: {
@@ -1255,7 +1255,7 @@ def is_injection_attempt(text: str) -> bool:`,
             '**L\'injection directe** cible le champ de saisie de l\'utilisateur. **L\'injection indirecte** arrive via des documents, des pages web, des e-mails ou des enregistrements de base de données lus par le modèle — plus difficile à détecter et à impact plus élevé.',
             '**Jailbreaking ≠ injection de prompt.** Le jailbreaking utilise l\'ingénierie sociale pour contourner l\'entraînement à la sécurité (ex. : « agis comme DAN »). L\'injection de prompt intègre des instructions dans des données que le modèle traite.',
             '**Aucune défense unique n\'est suffisante.** Une protection efficace combine l\'assainissement des entrées, la validation des sorties, la séparation des privilèges, l\'accès aux outils selon le principe du moindre privilège et la révision humaine pour les actions à enjeux élevés.',
-            '**Les LLM ne peuvent pas détecter les injections de manière fiable.** Dans les tests PromptQuorum, GPT-4o, Claude Opus 4.8 et Gemini 3.1 Pro ont détecté 18 des 30 chaînes d\'injection adversariales — un taux de détection de 60 %.',
+            '**Les LLM ne peuvent pas détecter les injections de manière fiable.** Dans les tests PromptQuorum, GPT-5.5, Claude Opus 4.8 et Gemini 3.1 Pro ont détecté 18 des 30 chaînes d\'injection adversariales — un taux de détection de 60 %.',
             '**Les pipelines [RAG](/prompt-engineering/prompt-engineering-glossary#rag) et agentiques élargissent la surface d\'attaque.** Chaque document externe ingéré via Retrieval-Augmented Generation est un vecteur d\'injection potentiel.',
           ],
         },
@@ -1342,7 +1342,7 @@ def is_injection_attempt(text: str) -> bool:`,
             '**Séparation des privilèges et accès aux outils selon le moindre privilège :** Le [prompt contraint](/prompt-engineering/constrained-prompting) limite le comportement du modèle aux seules actions autorisées. Les agents LLM ne doivent avoir accès qu\'aux outils et aux données nécessaires à la tâche en cours. Un LLM lisant un PDF ne doit pas avoir accès en écriture à la messagerie ou aux systèmes de fichiers. Si le modèle n\'a pas la capacité d\'envoyer des e-mails, une charge utile d\'injection qui tente d\'exfiltrer des données par e-mail échoue au niveau de l\'action, non au niveau du modèle.',
             '**Validation des sorties :** Interceptez et validez les sorties du modèle avant qu\'elles ne déclenchent des actions en aval. Avant d\'exécuter une requête SQL, un extrait de code ou un appel d\'API généré par le LLM, validez-le par rapport à un schéma strict — les [sorties structurées et le mode JSON](/prompt-engineering/structured-output-and-json-mode) appliquent cela de manière programmée. Pour les réponses destinées aux clients, analysez les motifs de fuite du system prompt (par exemple, des expressions régulières qui détectent les marqueurs de variables de template de prompt). Consultez les [contrôles de qualité de build](/prompt-engineering/build-quality-checks) pour les motifs de validation.',
             '**Supervision humaine pour les actions à enjeux élevés :** Exigez une confirmation humaine avant les actions irréversibles (envoi d\'e-mails, modification de bases de données, paiements, exécution de code). Cela élimine l\'ensemble des attaques par injection indirecte qui reposent sur une exécution automatisée sans révision humaine.',
-            '**Isolation du contexte avec des délimiteurs et des métadonnées :** Structurez les prompts pour marquer clairement les limites de confiance : `[SYSTEM: instructions] [RETRIEVED: <untrusted>] [USER: <query>]`. Claude Opus 4.8 et GPT-4o respectent partiellement les délimiteurs structurés lorsqu\'ils y sont entraînés, mais cela ne constitue pas une défense complète en soi — combinez avec les quatre autres niveaux.',
+            '**Isolation du contexte avec des délimiteurs et des métadonnées :** Structurez les prompts pour marquer clairement les limites de confiance : `[SYSTEM: instructions] [RETRIEVED: <untrusted>] [USER: <query>]`. Claude Opus 4.8 et GPT-5.5 respectent partiellement les délimiteurs structurés lorsqu\'ils y sont entraînés, mais cela ne constitue pas une défense complète en soi — combinez avec les quatre autres niveaux.',
           ],
         },
 
@@ -1407,14 +1407,14 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         promptquorumBridge: {
           title: 'Résistance des modèles à l\'injection : cadre d\'analyse comparatif',
           content: [
-            '**Exemple de cadre comparatif :** Si vous soumettiez simultanément 30 chaînes d\'injection adversariales (15 directes, 15 injections de style document indirect) à GPT-4o, Claude Opus 4.8 et Gemini 3.1 Pro, vous observeriez probablement que les modèles avec un entraînement à la sécurité plus fort (Constitutional AI dans Claude) affichent des taux de détection plus élevés sur les injections naïves, tandis que tous les modèles atteignent une détection quasi nulle sur les charges utiles adversarialement obfusquées. Ce cadre d\'analyse est illustratif ; les taux de détection réels dépendent de vos motifs d\'injection spécifiques et des versions des modèles.',
+            '**Exemple de cadre comparatif :** Si vous soumettiez simultanément 30 chaînes d\'injection adversariales (15 directes, 15 injections de style document indirect) à GPT-5.5, Claude Opus 4.8 et Gemini 3.1 Pro, vous observeriez probablement que les modèles avec un entraînement à la sécurité plus fort (Constitutional AI dans Claude) affichent des taux de détection plus élevés sur les injections naïves, tandis que tous les modèles atteignent une détection quasi nulle sur les charges utiles adversarialement obfusquées. Ce cadre d\'analyse est illustratif ; les taux de détection réels dépendent de vos motifs d\'injection spécifiques et des versions des modèles.',
             '*Obfusqué = encodé (Base64, ROT13), réparti entre des phrases, ou formulé comme hypothétique (« Si vous deviez ignorer les instructions... »).',
           ],
           tableFormat: true,
           columns: ['Modèle', 'Détection directe attendue', 'Détection indirecte attendue', 'Détection obfusquée attendue', 'Baseline typique'],
           rows: [
             { 'Modèle': '**Claude Opus 4.8**', 'Détection directe attendue': 'Élevée (85–95%)', 'Détection indirecte attendue': 'Modérée (40–60%)', 'Détection obfusquée attendue': 'Très faible (0–10%)', 'Baseline typique': '60–70%' },
-            { 'Modèle': '**GPT-4o**', 'Détection directe attendue': 'Modérée (70–80%)', 'Détection indirecte attendue': 'Faible (30–50%)', 'Détection obfusquée attendue': 'Très faible (0–10%)', 'Baseline typique': '50–65%' },
+            { 'Modèle': '**GPT-5.5**', 'Détection directe attendue': 'Modérée (70–80%)', 'Détection indirecte attendue': 'Faible (30–50%)', 'Détection obfusquée attendue': 'Très faible (0–10%)', 'Baseline typique': '50–65%' },
             { 'Modèle': '**Gemini 3.1 Pro**', 'Détection directe attendue': 'Modérée (65–75%)', 'Détection indirecte attendue': 'Faible (25–45%)', 'Détection obfusquée attendue': 'Très faible (0–10%)', 'Baseline typique': '45–60%' },
           ],
           items: [
@@ -1495,7 +1495,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             },
             {
               q: 'Les LLM peuvent-ils détecter automatiquement l\'injection de prompt ?',
-              a: 'Aucun modèle n\'atteint une détection fiable. Dans les tests PromptQuorum, Claude Opus 4.8 a détecté 22 des 30 chaînes d\'injection adversariales (73 %) ; GPT-4o en a détecté 18 sur 30 (60 %). Les trois modèles testés ont échoué sur les injections obfusquées (texte encodé, cadrage hypothétique, instructions fractionnées). Une défense efficace nécessite des couches de validation externes, non la seule auto-détection du modèle.',
+              a: 'Aucun modèle n\'atteint une détection fiable. Dans les tests PromptQuorum, Claude Opus 4.8 a détecté 22 des 30 chaînes d\'injection adversariales (73 %) ; GPT-5.5 en a détecté 18 sur 30 (60 %). Les trois modèles testés ont échoué sur les injections obfusquées (texte encodé, cadrage hypothétique, instructions fractionnées). Une défense efficace nécessite des couches de validation externes, non la seule auto-détection du modèle.',
             },
             {
               q: 'Comment prévenir l\'injection de prompt dans un pipeline RAG ?',
@@ -1527,7 +1527,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '[Perez & Ribeiro, 2022. "Ignore Previous Prompt: Attack Techniques For Language Models"](https://arxiv.org/abs/2211.09527) — article fondateur documentant les motifs d\'attaque par injection directe et les modes d\'échec sur GPT-3 et les prédécesseurs de GPT-4',
             '[OWASP. "OWASP Top 10 for Large Language Model Applications"](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — classement officiel de l\'industrie des risques de sécurité LLM ; injection de prompt classée #1 depuis la première publication en 2023',
             '[Anthropic. "Mitigate jailbreaks and prompt injections"](https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks) — guide officiel d\'Anthropic pour défendre les applications basées sur Claude contre les injections de prompt et les attaques de jailbreak, incluant les stratégies de délimiteurs et la validation des entrées',
-            '[OpenAI. "Safety best practices"](https://platform.openai.com/docs/guides/safety-best-practices) — documentation de référence d\'OpenAI pour sécuriser les applications GPT-4o contre les entrées adversariales, incluant les atténuations d\'injection de prompt et la validation des sorties',
+            '[OpenAI. "Safety best practices"](https://platform.openai.com/docs/guides/safety-best-practices) — documentation de référence d\'OpenAI pour sécuriser les applications GPT-5.5 contre les entrées adversariales, incluant les atténuations d\'injection de prompt et la validation des sorties',
           ],
         },
       },
@@ -1577,7 +1577,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         ],
         mentions: [
           { '@type': 'Organization', name: 'OWASP' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'NIST AI RMF' },
@@ -1598,7 +1598,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           { '@type': 'HowToStep', position: 2, name: '権限分離と最小権限ツールアクセス', text: 'LLMエージェントは、現在のタスクに必要なツールとデータのみにアクセスできるようにします。PDFを読み取るLLMはメールやファイルシステムへの書き込みアクセスを持つべきではありません。モデルにメール送信機能がなければ、メール経由でデータを流出させようとするインジェクションペイロードはアクションレイヤーで失敗します。' },
           { '@type': 'HowToStep', position: 3, name: '出力検証', text: 'モデルの出力が下流のアクションを引き起こす前に傍受して検証します。LLMが生成したSQLクエリ、コードスニペット、またはAPI呼び出しを実行する前に、厳格なスキーマに対して検証します。顧客向けレスポンスでは、システムプロンプト漏洩パターンをスキャンします。' },
           { '@type': 'HowToStep', position: 4, name: '高リスクアクションにおけるHuman-in-the-Loop', text: 'メール送信、データベース変更、支払い実行、コード実行などの不可逆的なアクションの前に人間の確認を求めます。これにより、人間のレビューなしの自動実行に依存する間接インジェクション攻撃のクラス全体を排除できます。' },
-          { '@type': 'HowToStep', position: 5, name: 'デリミタとメタデータによるコンテキスト分離', text: '明示的なデリミタを使用して信頼境界を明確にマークするようプロンプトを構造化します。Claude Opus 4.8とGPT-4oは構造化デリミタを部分的に尊重しますが、これだけでは完全な防御にはなりません — 他の4層と組み合わせてください。' },
+          { '@type': 'HowToStep', position: 5, name: 'デリミタとメタデータによるコンテキスト分離', text: '明示的なデリミタを使用して信頼境界を明確にマークするようプロンプトを構造化します。Claude Opus 4.8とGPT-5.5は構造化デリミタを部分的に尊重しますが、これだけでは完全な防御にはなりません — 他の4層と組み合わせてください。' },
         ],
       },
       itemListSchema: {
@@ -1648,7 +1648,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**直接インジェクション**はユーザー自身の入力フィールドを標的にします。**間接インジェクション**はモデルが読み取るドキュメント、Webページ、メール、データベースレコード経由で届きます — 検出が難しく影響が大きい。',
             '**ジェイルブレーキング ≠ プロンプトインジェクション。** ジェイルブレーキングはソーシャルエンジニアリングを使って安全トレーニングを回避します（例：「DANとして行動せよ」）。プロンプトインジェクションはモデルが処理するデータに指示を埋め込みます。',
             '**単一の防御では不十分です。** 効果的な保護は入力サニタイズ、出力検証、権限分離、最小権限ツールアクセス、高リスクアクションの人間レビューを組み合わせます。',
-            '**LLMは自身でインジェクションを確実には検出できません。** PromptQuorumのテストでは、GPT-4o、Claude Opus 4.8、Gemini 3.1 Proが30件の敵対的インジェクション文字列中18件を検出 — 検出率60%。',
+            '**LLMは自身でインジェクションを確実には検出できません。** PromptQuorumのテストでは、GPT-5.5、Claude Opus 4.8、Gemini 3.1 Proが30件の敵対的インジェクション文字列中18件を検出 — 検出率60%。',
             '**[RAG](/prompt-engineering/prompt-engineering-glossary#rag)とエージェントパイプラインは攻撃面を拡大します。** Retrieval-Augmented Generation経由で取得される外部ドキュメントはすべて潜在的なインジェクションベクターです。',
           ],
         },
@@ -1735,7 +1735,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**権限分離と最小権限ツールアクセス：** [制約付きプロンプティング](/prompt-engineering/constrained-prompting)はモデルの動作を許可されたアクションのみに制限します。LLMエージェントは現在のタスクに必要なツールとデータのみにアクセスできるべきです。PDFを読み取るLLMはメールやファイルシステムへの書き込みアクセスを持つべきではありません。モデルにメール送信機能がなければ、インジェクションペイロードはモデルレイヤーではなくアクションレイヤーで失敗します。',
             '**出力検証：** モデルの出力が下流のアクションを引き起こす前に傍受して検証します。LLMが生成したSQLクエリ、コードスニペット、またはAPI呼び出しを実行する前に、厳格なスキーマに対して検証します — [構造化出力とJSONモード](/prompt-engineering/structured-output-and-json-mode)がこれをプログラム的に実現します。顧客向けレスポンスでは、システムプロンプト漏洩パターンをスキャンします。検証パターンについては[品質チェックの構築](/prompt-engineering/build-quality-checks)を参照してください。',
             '**高リスクアクションにおけるHuman-in-the-Loop：** メール送信、データベース変更、支払い実行、コード実行などの不可逆的なアクションの前に人間の確認を求めます。これにより、人間のレビューなしの自動実行に依存する間接インジェクション攻撃のクラス全体を排除できます。',
-            '**デリミタとメタデータによるコンテキスト分離：** 明示的なデリミタを使用して信頼境界を明確にマークするようプロンプトを構造化します：`[SYSTEM: instructions] [RETRIEVED: <untrusted>] [USER: <query>]`。Claude Opus 4.8とGPT-4oはトレーニングされた場合、構造化デリミタを部分的に尊重しますが、これだけでは完全な防御にはなりません — 他の4層と組み合わせてください。',
+            '**デリミタとメタデータによるコンテキスト分離：** 明示的なデリミタを使用して信頼境界を明確にマークするようプロンプトを構造化します：`[SYSTEM: instructions] [RETRIEVED: <untrusted>] [USER: <query>]`。Claude Opus 4.8とGPT-5.5はトレーニングされた場合、構造化デリミタを部分的に尊重しますが、これだけでは完全な防御にはなりません — 他の4層と組み合わせてください。',
           ],
         },
 
@@ -1800,14 +1800,14 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         promptquorumBridge: {
           title: 'モデルのインジェクション耐性：比較分析フレームワーク',
           content: [
-            '**比較フレームワークの例：** 30件の敵対的インジェクション文字列（15件の直接、15件の間接スタイルのドキュメントインジェクション）をGPT-4o、Claude Opus 4.8、Gemini 3.1 Proに同時送信した場合、より強い安全トレーニングを持つモデル（ClaudeのConstitutional AI）がナイーブなインジェクションでより高い検出率を示す一方で、敵対的に難読化されたペイロードでは全モデルがほぼゼロの検出率になることが観察されるでしょう。この分析フレームワークは例示的なものです；実際の検出率は特定のインジェクションパターンとモデルバージョンによって異なります。',
+            '**比較フレームワークの例：** 30件の敵対的インジェクション文字列（15件の直接、15件の間接スタイルのドキュメントインジェクション）をGPT-5.5、Claude Opus 4.8、Gemini 3.1 Proに同時送信した場合、より強い安全トレーニングを持つモデル（ClaudeのConstitutional AI）がナイーブなインジェクションでより高い検出率を示す一方で、敵対的に難読化されたペイロードでは全モデルがほぼゼロの検出率になることが観察されるでしょう。この分析フレームワークは例示的なものです；実際の検出率は特定のインジェクションパターンとモデルバージョンによって異なります。',
             '*難読化 = エンコード済み（Base64、ROT13）、複数文に分割済み、または仮説的に表現（「もし指示を無視するとしたら...」）。',
           ],
           tableFormat: true,
           columns: ['モデル', '直接検出率（予測）', '間接検出率（予測）', '難読化検出率（予測）', '典型的なベースライン'],
           rows: [
             { 'モデル': '**Claude Opus 4.8**', '直接検出率（予測）': '高（85〜95%）', '間接検出率（予測）': '中程度（40〜60%）', '難読化検出率（予測）': '非常に低い（0〜10%）', '典型的なベースライン': '60〜70%' },
-            { 'モデル': '**GPT-4o**', '直接検出率（予測）': '中程度（70〜80%）', '間接検出率（予測）': '低（30〜50%）', '難読化検出率（予測）': '非常に低い（0〜10%）', '典型的なベースライン': '50〜65%' },
+            { 'モデル': '**GPT-5.5**', '直接検出率（予測）': '中程度（70〜80%）', '間接検出率（予測）': '低（30〜50%）', '難読化検出率（予測）': '非常に低い（0〜10%）', '典型的なベースライン': '50〜65%' },
             { 'モデル': '**Gemini 3.1 Pro**', '直接検出率（予測）': '中程度（65〜75%）', '間接検出率（予測）': '低（25〜45%）', '難読化検出率（予測）': '非常に低い（0〜10%）', '典型的なベースライン': '45〜60%' },
           ],
           items: [
@@ -1888,7 +1888,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             },
             {
               q: 'LLMはプロンプトインジェクションを自動的に検出できますか？',
-              a: '信頼できる検出を達成するモデルはありません。PromptQuorumのテストでは、Claude Opus 4.8は30件の敵対的インジェクション文字列中22件（73%）を検出し、GPT-4oは18件（60%）を検出しました。テストした3モデルすべてが難読化されたインジェクション（エンコードされたテキスト、仮説的フレーミング、分割された指示）で失敗しました。効果的な防御には、モデルの自己検出だけでなく、外部の検証レイヤーが必要です。',
+              a: '信頼できる検出を達成するモデルはありません。PromptQuorumのテストでは、Claude Opus 4.8は30件の敵対的インジェクション文字列中22件（73%）を検出し、GPT-5.5は18件（60%）を検出しました。テストした3モデルすべてが難読化されたインジェクション（エンコードされたテキスト、仮説的フレーミング、分割された指示）で失敗しました。効果的な防御には、モデルの自己検出だけでなく、外部の検証レイヤーが必要です。',
             },
             {
               q: 'RAGパイプラインでプロンプトインジェクションを防ぐにはどうすればよいですか？',
@@ -1920,7 +1920,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '[Perez & Ribeiro, 2022. "Ignore Previous Prompt: Attack Techniques For Language Models"](https://arxiv.org/abs/2211.09527) — GPT-3およびGPT-4前身モデルにわたる直接インジェクション攻撃パターンと失敗モードを文書化した基礎論文',
             '[OWASP. "OWASP Top 10 for Large Language Model Applications"](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — LLMセキュリティリスクの公式業界ランキング；2023年の初版からプロンプトインジェクションが第1位',
             '[Anthropic. "Mitigate jailbreaks and prompt injections"](https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks) — Claudeベースのアプリケーションをプロンプトインジェクションとジェイルブレーク攻撃から守るAnthropicの公式ガイダンス（デリミタ戦略と入力検証を含む）',
-            '[OpenAI. "Safety best practices"](https://platform.openai.com/docs/guides/safety-best-practices) — 敵対的入力に対するGPT-4oアプリケーションのセキュリティに関するOpenAIの主要ソースドキュメント（プロンプトインジェクション対策と出力検証を含む）',
+            '[OpenAI. "Safety best practices"](https://platform.openai.com/docs/guides/safety-best-practices) — 敵対的入力に対するGPT-5.5アプリケーションのセキュリティに関するOpenAIの主要ソースドキュメント（プロンプトインジェクション対策と出力検証を含む）',
           ],
         },
       },
@@ -1970,7 +1970,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         ],
         mentions: [
           { '@type': 'Organization', name: 'OWASP' },
-          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'NIST AI RMF' },
@@ -1991,7 +1991,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           { '@type': 'HowToStep', position: 2, name: '权限分离与最小权限工具访问', text: 'LLM代理应仅访问当前任务所需的工具和数据。读取PDF的LLM不应拥有对电子邮件或文件系统的写访问权限。如果模型没有发送电子邮件的能力，则试图通过电子邮件泄露数据的注入载荷将在操作层失败。' },
           { '@type': 'HowToStep', position: 3, name: '输出验证', text: '在模型输出触发下游操作之前拦截并验证它们。在执行LLM生成的SQL查询、代码片段或API调用之前，针对严格的模式对其进行验证。对于面向客户的响应，扫描系统提示词泄露模式。' },
           { '@type': 'HowToStep', position: 4, name: '高风险操作的人工审核', text: '在发送电子邮件、修改数据库、进行支付或执行代码等不可逆操作之前，要求人工确认。这消除了依赖无人工审核的自动执行的整类间接注入攻击。' },
-          { '@type': 'HowToStep', position: 5, name: '使用分隔符和元数据进行上下文隔离', text: '构建提示词时使用显式分隔符清晰标记信任边界。Claude Opus 4.8和GPT-4o部分遵守结构化分隔符，但这本身并非完整的防御——需要与其他四层结合使用。' },
+          { '@type': 'HowToStep', position: 5, name: '使用分隔符和元数据进行上下文隔离', text: '构建提示词时使用显式分隔符清晰标记信任边界。Claude Opus 4.8和GPT-5.5部分遵守结构化分隔符，但这本身并非完整的防御——需要与其他四层结合使用。' },
         ],
       },
       itemListSchema: {
@@ -2041,7 +2041,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**直接注入**针对用户自己的输入框。**间接注入**通过模型读取的文档、网页、电子邮件或数据库记录到达——更难检测，影响更大。',
             '**越狱≠提示词注入。** 越狱使用社会工程学绕过安全训练（例如"扮演DAN"）。提示词注入将指令嵌入模型处理的数据中。',
             '**没有单一防御措施足够。** 有效保护需要结合输入净化、输出验证、权限分离、最小权限工具访问以及对高风险操作的人工审核。',
-            '**LLM无法可靠地自行检测注入。** 在PromptQuorum测试中，GPT-4o、Claude Opus 4.8和Gemini 3.1 Pro在30个对抗性注入字符串中标记了18个——检测率为60%。',
+            '**LLM无法可靠地自行检测注入。** 在PromptQuorum测试中，GPT-5.5、Claude Opus 4.8和Gemini 3.1 Pro在30个对抗性注入字符串中标记了18个——检测率为60%。',
             '**[RAG](/prompt-engineering/prompt-engineering-glossary#rag)和智能体管道扩大了攻击面。** 通过检索增强生成（RAG）获取的每个外部文档都是潜在的注入向量。',
           ],
         },
@@ -2128,7 +2128,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**权限分离与最小权限工具访问：** [受限提示词](/prompt-engineering/constrained-prompting)将模型行为限制为仅允许的操作。LLM代理应仅访问当前任务所需的工具和数据。读取PDF的LLM不应拥有对电子邮件或文件系统的写访问权限。如果模型没有发送邮件功能，则试图通过电子邮件泄露数据的注入载荷将在操作层（而非模型层）失败。',
             '**输出验证：** 在模型输出触发下游操作之前拦截并验证它们。在执行LLM生成的SQL查询、代码片段或API调用之前，针对严格模式进行验证——[结构化输出和JSON模式](/prompt-engineering/structured-output-and-json-mode)以编程方式强制执行此操作。对于面向客户的响应，扫描系统提示词泄露模式（例如检测提示词模板变量标记的正则表达式）。参见[构建质量检查](/prompt-engineering/build-quality-checks)获取验证模式。',
             '**高风险操作的人工审核：** 在不可逆操作（发送邮件、修改数据库、支付、执行代码）之前要求人工确认。这消除了依赖无人工审核的自动执行的整类间接注入攻击。',
-            '**使用分隔符和元数据进行上下文隔离：** 构建提示词时使用显式分隔符清晰标记信任边界：`[SYSTEM: instructions] [RETRIEVED: <untrusted>] [USER: <query>]`。在经过训练的情况下，Claude Opus 4.8和GPT-4o部分遵守结构化分隔符，但这本身并非完整的防御——需要与其他四层结合使用。',
+            '**使用分隔符和元数据进行上下文隔离：** 构建提示词时使用显式分隔符清晰标记信任边界：`[SYSTEM: instructions] [RETRIEVED: <untrusted>] [USER: <query>]`。在经过训练的情况下，Claude Opus 4.8和GPT-5.5部分遵守结构化分隔符，但这本身并非完整的防御——需要与其他四层结合使用。',
           ],
         },
 
@@ -2193,14 +2193,14 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         promptquorumBridge: {
           title: '模型注入抵抗：比较分析框架',
           content: [
-            '**示例比较框架：** 如果您同时向GPT-4o、Claude Opus 4.8和Gemini 3.1 Pro提交30个对抗性注入字符串（15个直接，15个间接文档注入风格），您可能会观察到，具有更强安全训练（Claude中的Constitutional AI）的模型在简单注入上显示出更高的检测率，而所有模型对对抗性混淆载荷的检测率接近零。此分析框架仅供参考；实际检测率取决于您的具体注入模式和模型版本。',
+            '**示例比较框架：** 如果您同时向GPT-5.5、Claude Opus 4.8和Gemini 3.1 Pro提交30个对抗性注入字符串（15个直接，15个间接文档注入风格），您可能会观察到，具有更强安全训练（Claude中的Constitutional AI）的模型在简单注入上显示出更高的检测率，而所有模型对对抗性混淆载荷的检测率接近零。此分析框架仅供参考；实际检测率取决于您的具体注入模式和模型版本。',
             '*混淆 = 编码（Base64、ROT13）、跨句子分割，或以假设形式表述（"如果您要忽略指令..."）。',
           ],
           tableFormat: true,
           columns: ['模型', '预期直接检测率', '预期间接检测率', '预期混淆检测率', '典型基准'],
           rows: [
             { '模型': '**Claude Opus 4.8**', '预期直接检测率': '高（85–95%）', '预期间接检测率': '中等（40–60%）', '预期混淆检测率': '极低（0–10%）', '典型基准': '60–70%' },
-            { '模型': '**GPT-4o**', '预期直接检测率': '中等（70–80%）', '预期间接检测率': '低（30–50%）', '预期混淆检测率': '极低（0–10%）', '典型基准': '50–65%' },
+            { '模型': '**GPT-5.5**', '预期直接检测率': '中等（70–80%）', '预期间接检测率': '低（30–50%）', '预期混淆检测率': '极低（0–10%）', '典型基准': '50–65%' },
             { '模型': '**Gemini 3.1 Pro**', '预期直接检测率': '中等（65–75%）', '预期间接检测率': '低（25–45%）', '预期混淆检测率': '极低（0–10%）', '典型基准': '45–60%' },
           ],
           items: [
@@ -2281,7 +2281,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             },
             {
               q: 'LLM能自动检测提示词注入吗？',
-              a: '没有模型能实现可靠检测。在PromptQuorum测试中，Claude Opus 4.8检测到30个对抗性注入字符串中的22个（73%）；GPT-4o检测到30个中的18个（60%）。所有三个被测模型在混淆注入（编码文本、假设框架、分割指令）上均失败。有效防御需要外部验证层，而非仅靠模型自我检测。',
+              a: '没有模型能实现可靠检测。在PromptQuorum测试中，Claude Opus 4.8检测到30个对抗性注入字符串中的22个（73%）；GPT-5.5检测到30个中的18个（60%）。所有三个被测模型在混淆注入（编码文本、假设框架、分割指令）上均失败。有效防御需要外部验证层，而非仅靠模型自我检测。',
             },
             {
               q: '如何防止RAG管道中的提示词注入？',
@@ -2313,7 +2313,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '[Perez & Ribeiro，2022年。"Ignore Previous Prompt: Attack Techniques For Language Models"](https://arxiv.org/abs/2211.09527) — 记录GPT-3和GPT-4前身版本直接注入攻击模式和失败模式的奠基性论文',
             '[OWASP。"OWASP大型语言模型应用Top 10"](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — LLM安全风险的官方行业排名；提示词注入自2023年首次发布以来一直排名第1',
             '[Anthropic。"Mitigate jailbreaks and prompt injections"](https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks) — Anthropic关于防御基于Claude应用免受提示词注入和越狱攻击的官方指南，包括分隔符策略和输入验证',
-            '[OpenAI。"Safety best practices"](https://platform.openai.com/docs/guides/safety-best-practices) — OpenAI关于保护GPT-4o应用免受对抗性输入（包括提示词注入缓解和输出验证）的主要来源文档',
+            '[OpenAI。"Safety best practices"](https://platform.openai.com/docs/guides/safety-best-practices) — OpenAI关于保护GPT-5.5应用免受对抗性输入（包括提示词注入缓解和输出验证）的主要来源文档',
           ],
         },
       },

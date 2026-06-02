@@ -24,9 +24,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
     primaryTerm: 'prompt engineering setup for small teams',
     aboutTopics: ['Prompt Library Management', 'Team Prompt Workflow', 'Multi-Model Prompt Testing'],
     quickFacts: [
-      'A 50-case test run across GPT-4o and Claude 4.6 Sonnet costs under $2 at April 2026 API rates ($5/1M input tokens for GPT-4o; $3/1M for Claude 4.6 Sonnet)',
+      'A 50-case test run across GPT-5.5 and Claude 4.6 Sonnet costs under $2 at April 2026 API rates ($5/1M input tokens for GPT-5.5; $3/1M for Claude 4.6 Sonnet)',
       'Git handles prompt version history with zero additional tooling — a flat YAML or JSON file in a shared repo is sufficient for teams under 15 people',
-      'GPT-4o and Claude 4.6 Sonnet produce meaningfully different outputs on creative, summarisation, and ambiguous instruction tasks — multi-model testing is required to detect divergence before it reaches users',
+      'GPT-5.5 and Claude 4.6 Sonnet produce meaningfully different outputs on creative, summarisation, and ambiguous instruction tasks — multi-model testing is required to detect divergence before it reaches users',
       'Teams of 2–5 can implement the full setup in this guide using only free tools: Git, VS Code, and a shared API key',
     ],
     toc: [
@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'Small Teams Need 3 Core Tools: Git, VS Code, and PromptQuorum',  anchor: '#tool-stack' },
       { label: 'Start a Shared Prompt Library With YAML Files in Git', anchor: '#shared-library' },
       { label: 'Version Prompts Semantically and Test Across 2 Models', anchor: '#versioning-testing' },
-      { label: 'Choose GPT-4o for Structured Output, Claude 4.6 Sonnet for Nuance', anchor: '#model-selection' },
+      { label: 'Choose GPT-5.5 for Structured Output, Claude 4.6 Sonnet for Nuance', anchor: '#model-selection' },
       { label: 'Assign One Named Owner to Every Prompt',             anchor: '#governance' },
       { label: 'Set Up Prompt Engineering in One Week: 6-Step Plan', anchor: '#how-to-start' },
       { label: '5 Common Prompt Engineering Mistakes Small Teams Make', anchor: '#common-mistakes' },
@@ -67,7 +67,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     sections: {
       tldrCallout: {
         callouts: [
-          { type: 'tldr', label: 'TL;DR', text: 'A small team prompt engineering setup needs four things: a shared YAML prompt library in Git, version control with semantic versioning, a 20-case test set with binary pass/fail scoring, and one named owner per prompt. Teams of 2–4 can skip formal review; teams of 5–15 add PR reviews. Run every production prompt against GPT-4o and Claude before deploying. Full setup takes one week.' },
+          { type: 'tldr', label: 'TL;DR', text: 'A small team prompt engineering setup needs four things: a shared YAML prompt library in Git, version control with semantic versioning, a 20-case test set with binary pass/fail scoring, and one named owner per prompt. Teams of 2–4 can skip formal review; teams of 5–15 add PR reviews. Run every production prompt against GPT-5.5 and Claude before deploying. Full setup takes one week.' },
         ],
       },
       tldr: {
@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Small teams need 4 components: a shared prompt library, Git version control, a 20-case test set, and one designated owner per prompt',
           'Teams of 2–4 people: a flat YAML file in Git is sufficient — no formal review step needed',
           'Teams of 5–15 people: add a pull request review step before merging changes to prompts used in production',
-          'Run every new or changed prompt against at least GPT-4o and Claude 4.6 Sonnet before deploying — models produce meaningfully different outputs on ambiguous and creative tasks',
+          'Run every new or changed prompt against at least GPT-5.5 and Claude 4.6 Sonnet before deploying — models produce meaningfully different outputs on ambiguous and creative tasks',
           'The minimum viable test set is 20 cases: 10 happy path, 5 edge cases, 5 adversarial inputs',
           'Designate one named owner per prompt — without clear ownership, regressions go unfixed because everyone assumes someone else will handle it',
           'PromptQuorum dispatches one prompt to multiple models simultaneously and shows pass rates side-by-side, eliminating the need to write per-model API comparison code',
@@ -134,7 +134,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'Tool': 'Git + GitHub/GitLab', 'Purpose': 'Version control for prompts and change history', 'Cost': 'Free', 'Best for': 'All team sizes' },
           { 'Tool': 'VS Code or Cursor', 'Purpose': 'Writing, editing, and previewing prompt YAML files', 'Cost': 'Free', 'Best for': 'All team sizes' },
-          { 'Tool': 'PromptQuorum', 'Purpose': 'Dispatch one prompt to GPT-4o, Claude, and Gemini simultaneously; compare pass rates side-by-side', 'Cost': 'Free tier available', 'Best for': 'Teams testing prompts across models' },
+          { 'Tool': 'PromptQuorum', 'Purpose': 'Dispatch one prompt to GPT-5.5, Claude, and Gemini simultaneously; compare pass rates side-by-side', 'Cost': 'Free tier available', 'Best for': 'Teams testing prompts across models' },
           { 'Tool': 'Langfuse or Phoenix', 'Purpose': 'Production prompt monitoring and observability', 'Cost': 'Free tier available', 'Best for': 'Teams with deployed prompts serving real users' },
           { 'Tool': 'Notion or Linear', 'Purpose': 'Lightweight prompt change tracking for non-technical stakeholders', 'Cost': 'Free tier available', 'Best for': 'Teams where non-developers also manage prompts' },
         ],
@@ -158,7 +158,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         promptExamples: [
           {
-            bad: 'Stored in Slack: "Hey, use this: \'Summarise the following text for a product manager: {{text}}\' — it works well with GPT-4o"',
+            bad: 'Stored in Slack: "Hey, use this: \'Summarise the following text for a product manager: {{text}}\' — it works well with GPT-5.5"',
             good: 'name: summarise-for-pm\nversion: 1.2.0\nowner: hans.kuepper@company.com\nmodel: gpt-4o\ntemplate: |\n  Summarise the following text for a product manager in 3–5 bullet points.\n  Focus on decisions required, not background context.\n  Text: {{text}}\nlast_tested: 2026-04-29\ntest_set_path: tests/summarise-for-pm.json',
             badLabel: 'Scattered (Slack message)',
             goodLabel: 'Library entry (prompts/summarise-for-pm.yaml)',
@@ -178,23 +178,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         callouts: [
           { type: 'key-point', label: 'Minimum test set size', text: '20 cases is the floor — fewer misses too many edge cases. Beyond 50 cases, marginal coverage gains diminish for most small-team production prompts. Start at 20 and expand only when you identify specific failure categories you need to cover.' },
-          { type: 'pro-tip', label: 'Multi-model baseline', text: 'Run your test set against both GPT-4o and Claude 4.6 Sonnet before every deploy. Models update without warning — a version bump can silently change pass rates on your specific tasks. See [How To Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) for the full comparison workflow.' },
+          { type: 'pro-tip', label: 'Multi-model baseline', text: 'Run your test set against both GPT-5.5 and Claude 4.6 Sonnet before every deploy. Models update without warning — a version bump can silently change pass rates on your specific tasks. See [How To Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) for the full comparison workflow.' },
         ],
       },
       modelSelection: {
         id: 'model-selection',
-        title: 'Choose GPT-4o for Structured Output, Claude 4.6 Sonnet for Nuance',
+        title: 'Choose GPT-5.5 for Structured Output, Claude 4.6 Sonnet for Nuance',
         content: [
-          '**Start with GPT-4o and Claude 4.6 Sonnet for most tasks — run both and compare pass rates on your specific use case before committing to one model.** The right model depends on task type, not general leaderboard rankings.',
-          '[GPT-4o from OpenAI](https://platform.openai.com/playground) and [Claude 4.6 Sonnet from Anthropic](https://docs.anthropic.com/) are the two most widely used frontier models for production prompt engineering [as of April 2026](/prompt-engineering/gpt-claude-gemini-which-model). For documents exceeding 100k tokens, add Gemini 2.5 Pro. For cost-sensitive high-volume tasks, use Claude 4.5 Haiku or GPT-4o mini.',
+          '**Start with GPT-5.5 and Claude 4.6 Sonnet for most tasks — run both and compare pass rates on your specific use case before committing to one model.** The right model depends on task type, not general leaderboard rankings.',
+          '[GPT-5.5 from OpenAI](https://platform.openai.com/playground) and [Claude 4.6 Sonnet from Anthropic](https://docs.anthropic.com/) are the two most widely used frontier models for production prompt engineering [as of April 2026](/prompt-engineering/gpt-claude-gemini-which-model). For documents exceeding 100k tokens, add Gemini 2.5 Pro. For cost-sensitive high-volume tasks, use Claude 4.5 Haiku or GPT-5.5 mini.',
         ],
         columns: ['Task type', 'Recommended model', 'Why'],
         rows: [
-          { 'Task type': 'Structured output (JSON, classification)', 'Recommended model': 'GPT-4o', 'Why': 'Reliable JSON mode, consistent instruction-following on constrained output formats' },
+          { 'Task type': 'Structured output (JSON, classification)', 'Recommended model': 'GPT-5.5', 'Why': 'Reliable JSON mode, consistent instruction-following on constrained output formats' },
           { 'Task type': 'Long-form writing, nuanced instructions', 'Recommended model': 'Claude 4.6 Sonnet', 'Why': 'Handles multi-constraint instructions with fewer literal interpretation errors' },
-          { 'Task type': 'Code generation and review', 'Recommended model': 'GPT-4o or Claude 4.6 Sonnet', 'Why': 'Both perform well — run both and compare on your specific codebase and language' },
-          { 'Task type': 'Documents over 100k tokens', 'Recommended model': 'Gemini 2.5 Pro', 'Why': '1M-token context window; GPT-4o and Claude 4.6 Sonnet both cap at 200k tokens' },
-          { 'Task type': 'High-volume cost-sensitive tasks', 'Recommended model': 'Claude 4.5 Haiku or GPT-4o mini', 'Why': 'Both are 10–20× cheaper than flagship models with acceptable quality for many production tasks' },
+          { 'Task type': 'Code generation and review', 'Recommended model': 'GPT-5.5 or Claude 4.6 Sonnet', 'Why': 'Both perform well — run both and compare on your specific codebase and language' },
+          { 'Task type': 'Documents over 100k tokens', 'Recommended model': 'Gemini 2.5 Pro', 'Why': '1M-token context window; GPT-5.5 and Claude 4.6 Sonnet both cap at 200k tokens' },
+          { 'Task type': 'High-volume cost-sensitive tasks', 'Recommended model': 'Claude 4.5 Haiku or GPT-5.5 mini', 'Why': 'Both are 10–20× cheaper than flagship models with acceptable quality for many production tasks' },
         ],
         tableFormat: true,
         callouts: [
@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'The owner is responsible for keeping the test set current when the prompt scope or success criteria change',
         ],
         callouts: [
-          { type: 'warning', label: 'When NOT to add formal review', text: 'Teams of 2–3 people with direct daily communication do not need pull request reviews for prompt changes. A Slack message — "Updated summarise-for-pm to v1.3.0, reason: GPT-4o changed how it handles bulleted list formatting" — is sufficient governance at that scale.' },
+          { type: 'warning', label: 'When NOT to add formal review', text: 'Teams of 2–3 people with direct daily communication do not need pull request reviews for prompt changes. A Slack message — "Updated summarise-for-pm to v1.3.0, reason: GPT-5.5 changed how it handles bulleted list formatting" — is sufficient governance at that scale.' },
         ],
       },
       howToStart: {
@@ -228,7 +228,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Day 2 — Create a shared prompt repository.** Create a `/prompts` folder in your existing code repository, or a dedicated new Git repo. Add a `README.md` with the required metadata fields: name, version, owner, model, template, last_tested.',
           '**Day 3 — Move your 3 most critical prompts into YAML files.** Write them with the full metadata template. Commit to the shared repo with a message like `feat(prompts): migrate summarise-for-pm to library v1.0.0`. These 3 files are your library foundation.',
           '**Day 4 — Build a 20-case test set for your most important prompt.** Ten happy-path inputs, five edge cases (unusual formatting, long inputs, missing required fields), five adversarial inputs (inputs that attempt to override prompt instructions). Define a binary pass/fail criterion for each. See [How To Evaluate Prompt Quality](/prompt-engineering/how-to-evaluate-prompt-quality) for the scoring framework.',
-          '**Day 5 — Run your test set across at least 2 models.** Use PromptQuorum or your own API calls to run the 20 cases against GPT-4o and Claude 4.6 Sonnet. Record the pass rate for each model. This baseline is the most important number your team will track — every future prompt change must match or beat it.',
+          '**Day 5 — Run your test set across at least 2 models.** Use PromptQuorum or your own API calls to run the 20 cases against GPT-5.5 and Claude 4.6 Sonnet. Record the pass rate for each model. This baseline is the most important number your team will track — every future prompt change must match or beat it.',
           '**Week 2+ — Extend the library and add review.** Move your next 5 critical prompts to YAML files. If your team is 5 or more people, add PR reviews on the `/prompts` folder. Run the full test set in CI on every merge to main. See [Build a Prompt Library](/prompt-engineering/build-a-prompt-library) for scaling guidance beyond 20 prompts.',
         ],
         callouts: [
@@ -253,7 +253,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Testing only against the model that produced the original prompt',
             problem: 'Misses model-specific failures and breaks silently when you switch models or when the original model updates its weights',
-            fix: 'Run every production prompt against at least GPT-4o and Claude 4.6 Sonnet before deploying. Use PromptQuorum to run both simultaneously in one step.',
+            fix: 'Run every production prompt against at least GPT-5.5 and Claude 4.6 Sonnet before deploying. Use PromptQuorum to run both simultaneously in one step.',
           },
           {
             mistake: 'Treating versioning as optional until something breaks',
@@ -286,11 +286,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'How do we prevent prompts from breaking when models update?',
-            a: 'Run your test set when you receive a model update notification from OpenAI or Anthropic. A 20-case test set takes under 60 seconds to run against both GPT-4o and Claude 4.6 Sonnet with PromptQuorum or a simple API script. Set a pass rate threshold — if the score drops below your baseline, investigate before deploying.',
+            a: 'Run your test set when you receive a model update notification from OpenAI or Anthropic. A 20-case test set takes under 60 seconds to run against both GPT-5.5 and Claude 4.6 Sonnet with PromptQuorum or a simple API script. Set a pass rate threshold — if the score drops below your baseline, investigate before deploying.',
           },
           {
             q: 'Which AI model should a small team standardize on?',
-            a: 'Do not standardize on one model. Run your most critical prompts on both GPT-4o and Claude 4.6 Sonnet and choose per task type. GPT-4o is more reliable for structured output such as JSON and classification. Claude 4.6 Sonnet handles nuanced multi-constraint instructions with fewer literal errors. Use Claude 4.5 Haiku or GPT-4o mini for cost-sensitive high-volume tasks.',
+            a: 'Do not standardize on one model. Run your most critical prompts on both GPT-5.5 and Claude 4.6 Sonnet and choose per task type. GPT-5.5 is more reliable for structured output such as JSON and classification. Claude 4.6 Sonnet handles nuanced multi-constraint instructions with fewer literal errors. Use Claude 4.5 Haiku or GPT-5.5 mini for cost-sensitive high-volume tasks.',
           },
           {
             q: 'How many prompts do we need before a shared library is worth building?',
@@ -312,9 +312,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '[Build a Prompt Library for Your Team](/prompt-engineering/build-a-prompt-library) — metadata structure, folder organisation, and scaling governance beyond 50 prompts',
           '[How To Evaluate Prompt Quality: Metrics, Tests & Checklist](/prompt-engineering/how-to-evaluate-prompt-quality) — 20-case test set construction, binary pass/fail scoring, and LLM-as-judge rubrics',
-          '[How To Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — running the same prompt against GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to find the best performer per task',
+          '[How To Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — running the same prompt against GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro to find the best performer per task',
           '[Best Prompt Management Platforms (2026)](/prompt-engineering/best-prompt-management-platforms) — when you outgrow Git: Braintrust, PromptHub, and Vellum compared for growing teams',
-          '[GPT-4o vs Claude vs Gemini: Which Model?](/prompt-engineering/gpt-claude-gemini-which-model) — model selection by task type, latency, cost, and context window',
+          '[GPT-5.5 vs Claude vs Gemini: Which Model?](/prompt-engineering/gpt-claude-gemini-which-model) — model selection by task type, latency, cost, and context window',
           '[Best Prompt Engineering IDEs (2026)](/prompt-engineering/best-prompt-engineering-ides) — configuring VS Code and Cursor for YAML prompt file editing with syntax highlighting and team-shared snippets',
         ],
       },
@@ -322,7 +322,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[OpenAI API Pricing (April 2026)](https://openai.com/api/pricing) — GPT-4o and GPT-4o mini input/output token rates used for cost estimates in this article',
+          '[OpenAI API Pricing (April 2026)](https://openai.com/api/pricing) — GPT-5.5 and GPT-5.5 mini input/output token rates used for cost estimates in this article',
           '[Anthropic API Pricing (April 2026)](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet and Claude 4.5 Haiku token rates',
           '[Google Gemini API Pricing (April 2026)](https://ai.google.dev/pricing) — Gemini 2.5 Pro context window and token rates',
           '[GitHub: InnerSource Fundamentals](https://resources.github.com/innersource/fundamentals/) — Principles of shared code ownership and governance applicable to shared prompt libraries',

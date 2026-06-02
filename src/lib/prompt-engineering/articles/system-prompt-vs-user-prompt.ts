@@ -28,17 +28,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       description: 'System prompts define how an AI model thinks and behaves; user prompts define what it does right now. Learn the difference and how they interact.',
       datePublished: '2026-03-22',
       dateModified: '2026-04-12',
-      keywords: ['system prompt', 'user prompt', 'prompt engineering', 'LLM behavior', 'GPT-4o', 'Claude', 'prompt structure', 'PromptQuorum'],
+      keywords: ['system prompt', 'user prompt', 'prompt engineering', 'LLM behavior', 'GPT-5.5', 'Claude', 'prompt structure', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       mentions: [
         { '@type': 'Thing', name: 'PromptQuorum' },
         { '@type': 'Thing', name: 'OpenAI' },
-        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
         { '@type': 'Thing', name: 'Anthropic' },
         { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
         { '@type': 'Thing', name: 'Google DeepMind' },
-        { '@type': 'Thing', name: 'Gemini 1.5 Pro' },
+        { '@type': 'Thing', name: 'Gemini 3.5 Pro' },
         { '@type': 'Thing', name: 'Ollama' },
       ],
       proficiencyLevel: 'Beginner',
@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'System prompts define the model\'s role, constraints, and behavior for the entire session — set once, used for all requests',
           'User prompts define the specific task for each interaction — provided by the user, changes every request',
-          'System prompts account for ~70% of behavioral consistency based on PromptQuorum testing across GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro; user prompts shape specific outputs',
+          'System prompts account for ~70% of behavioral consistency based on PromptQuorum testing across GPT-5.5, Claude 4.6 Sonnet, and Gemini 3.5 Pro; user prompts shape specific outputs',
           'Invisible system prompts in apps like ChatGPT and Claude contain hidden logic — [PromptQuorum shows you all of it](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference#promptquorum)',
           'Local LLMs (Ollama, LM Studio) with hidden system prompts cause debugging problems — solved by transparency',
           'Bad system prompts force user prompts to work harder; good system prompts make every user prompt work better',
@@ -111,11 +111,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whereTheyLive: {
         title: 'Where Do System and User Prompts Live in the API Stack?',
         content: [
-          '**System prompts live in the application layer; user prompts live in the interaction layer.** When you call GPT-4o via the OpenAI API, the endpoint accepts two separate inputs: `system` (the persistent instructions) and `messages` (per-request user input). The same is true for Claude 4.6 Sonnet via Anthropic\'s API, Gemini 1.5 Pro via Google\'s API, and any local LLM run through [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) or LM Studio.',
+          '**System prompts live in the application layer; user prompts live in the interaction layer.** When you call GPT-5.5 via the OpenAI API, the endpoint accepts two separate inputs: `system` (the persistent instructions) and `messages` (per-request user input). The same is true for Claude 4.6 Sonnet via Anthropic\'s API, Gemini 3.5 Pro via Google\'s API, and any local LLM run through [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) or LM Studio.',
           'All models support the system + user prompt pattern:',
         ],
         items: [
-          '**Model layer:** The base LLM (GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, LLaMA 3.1, Mistral Large) — all accept both system and user prompts',
+          '**Model layer:** The base LLM (GPT-5.5, Claude 4.6 Sonnet, Gemini 3.5 Pro, LLaMA 3.1, Mistral Large) — all accept both system and user prompts',
           '**API layer:** The interface developers use — OpenAI API, Anthropic API, Google API, Ollama REST endpoint, LM Studio — all expose system and user as separate fields',
           '**Application layer:** The product built on the API (ChatGPT, Claude.ai, Gemini, PromptQuorum, your custom app) — developers decide what system prompt to use',
           '**User interaction layer:** What the end user sees — the chat input, the task specification — this becomes the user prompt',
@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Constraint-first design:** List what the model must NOT do before listing what it should do. "Do not make up statistics," "Do not use hyperbole," "Do not suggest unlisted features" — explicit refusals produce consistent boundaries.',
           '**Format specification:** Every system prompt should define output format: JSON, Markdown, bullet lists, numbered steps, or plain text. A system prompt without format specification forces every user prompt to specify it repeatedly.',
           '**Scope boundaries:** Define the universe of requests you will handle. "Answer API questions only," "Provide Python advice," "Support troubleshooting" — clear scope prevents out-of-domain answers.',
-          '**Testing across models:** Test the system prompt on [multiple models — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). Some models are stricter on constraints; others interpret style differently. A robust system prompt works consistently across all three.',
+          '**Testing across models:** Test the system prompt on [multiple models — GPT-5.5, Claude 4.6 Sonnet, Gemini 3.5 Pro](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). Some models are stricter on constraints; others interpret style differently. A robust system prompt works consistently across all three.',
         ],
       },
 
@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**Trust issues:** You do not know what instructions the model is following underneath. You have no visibility into the "why" behind its responses.',
           '**Debugging problems:** Your local LLM returns unexpected output. You rewrite the user prompt. Still wrong. Without seeing the system prompt, you cannot diagnose the issue.',
-          '**Inconsistency across models:** You run the same prompt on GPT-4o and on Ollama. Different answers. Without seeing both system prompts, you cannot tell if the difference is model capability or hidden instructions.',
+          '**Inconsistency across models:** You run the same prompt on GPT-5.5 and on Ollama. Different answers. Without seeing both system prompts, you cannot tell if the difference is model capability or hidden instructions.',
           '**Regulatory and audit risk:** Enterprise deployments require transparency. If regulations demand "what instructions drove this AI decision?" and the system prompt is hidden, you cannot comply.',
         ],
       },
@@ -214,7 +214,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorumToggle: {
         title: 'The PromptQuorum System Prompt Toggle',
         content: [
-          'PromptQuorum includes a toggleable interface: "Show System Prompts." When enabled, you see the actual system prompt running on each model — GPT-4o, Claude 4.6 Sonnet, Gemini, Ollama, LM Studio, all of them. This is especially valuable when dispatching one prompt to multiple local backends simultaneously.',
+          'PromptQuorum includes a toggleable interface: "Show System Prompts." When enabled, you see the actual system prompt running on each model — GPT-5.5, Claude 4.6 Sonnet, Gemini, Ollama, LM Studio, all of them. This is especially valuable when dispatching one prompt to multiple local backends simultaneously.',
         ],
       },
 
@@ -299,7 +299,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Do all LLMs use system prompts?',
-            a: 'Yes. All major LLMs — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, Ollama models, LM Studio — support the system prompt + user prompt pattern. Some come with default system prompts; others let you define your own.'
+            a: 'Yes. All major LLMs — GPT-5.5, Claude 4.6 Sonnet, Gemini 3.5 Pro, Ollama models, LM Studio — support the system prompt + user prompt pattern. Some come with default system prompts; others let you define your own.'
           },
           {
             q: 'Can a user prompt override a system prompt?',
@@ -307,7 +307,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'What happens if there is no system prompt?',
-            a: 'The model falls back to its default training behavior. GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro all have built-in baseline behavior (helpful, harmless, honest) when no system prompt is present. The model will still respond to user prompts, but without role definition, output format constraints, or scope boundaries — results will be less consistent and less specialized.'
+            a: 'The model falls back to its default training behavior. GPT-5.5, Claude 4.6 Sonnet, and Gemini 3.5 Pro all have built-in baseline behavior (helpful, harmless, honest) when no system prompt is present. The model will still respond to user prompts, but without role definition, output format constraints, or scope boundaries — results will be less consistent and less specialized.'
           },
           {
             q: 'How do system prompts affect EU AI Act compliance?',
