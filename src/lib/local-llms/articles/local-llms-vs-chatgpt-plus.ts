@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**As of April 2026, three hardware tiers cover the range from casual 7B use to GPT-5.2-class 70B inference.** All software is free: [Ollama](/local-llms/how-to-install-ollama) (inference engine), Open WebUI (chat interface), and all open-source models (Llama, Qwen, Mistral, Gemma, Phi) are $0 to download and run.',
           ],
           items: [
-            '**Entry-level — 7B models — RTX 4060 Ti 8 GB (used, $220–260):** Runs Llama 3.1 8B, Mistral 7B, Gemma 4 9B at 25–60 tok/s. Total build including PC: $700–900.',
+            '**Entry-level — 7B models — RTX 4060 Ti 8 GB (used, $220–260):** Runs Llama 3.3 8B, Mistral Small, Gemma 4 9B at 25–60 tok/s. Total build including PC: $700–900.',
             '**Sweet spot — 13B–24B models — [RTX 5060 Ti 16 GB (new, $450–500)](/local-llms/best-budget-gpus-local-llm):** Runs Mistral Small 3.1 24B and Qwen2.5 14B at 20–40 tok/s. Total build: $900–1,200. Covers 85% of ChatGPT Plus use cases.',
             '**70B tier — GPT-5.2 class — three hardware options:**',
             '   Option A: RTX 4090 used (24 GB, ~$1,400) — runs Llama 3.3 70B at ~25 tok/s via CUDA',
@@ -162,7 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**EU/UK:** ChatGPT Plus costs €20/£17 per month; electricity costs 2–3× US rates (€0.28–0.40/kWh), making local LLM economics slightly worse. However, GDPR compliance strongly favors local LLMs — all data stays on your machine with no cross-border transfer liability under Article 44.',
             '**Germany/DACH:** BSI-Grundschutz requirements for sensitive data processing make local LLMs the compliant choice for healthcare and legal workflows. Local setups eliminate the need for EU Standard Contractual Clauses.',
             '**Japan:** APPI (Act on Protection of Personal Information) requirements favor local inference for sensitive business data. Japanese electricity rates (~¥27/kWh, ≈$0.18/kWh) add ~20% to local power costs vs US.',
-            '**China:** ChatGPT Plus is not available directly in mainland China. Local open-source models (Qwen2.5, Llama 3.1) running locally comply with the 2021 Data Security Law without CAC registration requirements.',
+            '**China:** ChatGPT Plus is not available directly in mainland China. Local open-source models (Qwen2.5, Llama 3.3) running locally comply with the 2021 Data Security Law without CAC registration requirements.',
           ],
         },
         'faqSection': {
@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Related Reading',
           items: [
             '[Local LLMs vs Claude Pro](/local-llms/local-llms-vs-claude-pro) — Privacy, cost, and quality comparison with Anthropic Claude Pro ($20/month)',
-            '[How to Install Ollama on Any OS](/local-llms/how-to-install-ollama) — Free, open-source inference engine setup for running Llama 3.1 locally in 5 minutes',
+            '[How to Install Ollama on Any OS](/local-llms/how-to-install-ollama) — Free, open-source inference engine setup for running Llama 3.3 locally in 5 minutes',
             '[Local LLM vs Cloud GPU: Cost Comparison](/local-llms/local-llm-vs-cloud-gpu-cost) — Breakeven analysis: local RTX 4070 vs Lambda Labs, Paperspace, AWS GPUs',
             '[Cloud GPU Rental Comparison: RunPod vs Vast.ai vs Lambda Labs](/local-llms/cloud-gpu-rental-comparison-2026) — Spot prices, per-provider features, and decision matrix for quick GPU bursts',
             '[Is Buying a GPU Worth It vs Paying for AI Subscriptions?](/local-llms/gpu-vs-ai-subscription-roi) — ROI calculator for GPU purchase vs ChatGPT Plus, Claude Pro, and API subscriptions',
@@ -372,7 +372,7 @@ schema: {
             '**Seit April 2026 decken drei Hardware-Ebenen die Spanne von gelegentlichem 7B-Einsatz bis zu GPT-5.2-Klasse 70B-Inferenz ab.** Alle Software ist kostenlos: [Ollama](/de/local-llms/how-to-install-ollama) (Inferenz-Engine), Open WebUI (Chat-Interface) und alle Open-Source-Modelle (Llama, Qwen, Mistral, Gemma, Phi) kosten 0€ zum Herunterladen und Ausführen.',
           ],
           items: [
-            '**Einsteiger-Level — 7B Modelle — RTX 4060 Ti 8 GB (gebraucht, 250–280€):** Führt Llama 3.1 8B, Mistral 7B, Gemma 4 9B mit 25–60 Tokens/s aus. Gesamtkomplettrechner: 700–900€.',
+            '**Einsteiger-Level — 7B Modelle — RTX 4060 Ti 8 GB (gebraucht, 250–280€):** Führt Llama 3.3 8B, Mistral Small, Gemma 4 9B mit 25–60 Tokens/s aus. Gesamtkomplettrechner: 700–900€.',
             '**Sweet Spot — 13B–24B Modelle — [RTX 5060 Ti 16 GB (neu, 450–500€)](/de/local-llms/best-budget-gpus-local-llm):** Führt Mistral Small 3.1 24B und Qwen2.5 14B mit 20–40 Tokens/s aus. Gesamtrechner: 900–1.200€. Deckt 85 % der ChatGPT Plus-Anwendungsfälle ab.',
             '**70B-Tier — GPT-5.2-Klasse — drei Hardware-Optionen:**',
             '   Option A: RTX 4090 gebraucht (24 GB, ~1.999€) — führt Llama 3.3 70B mit ~25 Tokens/s über CUDA aus',
@@ -443,7 +443,7 @@ schema: {
             '**EU/UK:** ChatGPT Plus kostet 20€/£17 pro Monat; Stromkosten 2–3× US-Raten (0,28–0,40€/kWh), machen Lokale-LLM-Ökonomie leicht ungünstiger. Allerdings bevorzugt DSGVO-Compliance stark lokale LLMs — alle Daten bleiben auf Ihrer Maschine ohne Haftung für grenzüberschreitende Übertragungen nach Artikel 44.',
             '**Deutschland/DACH:** BSI-Grundschutz-Anforderungen für sensible Datenverarbeitung machen lokale LLMs zur compliant-Wahl für Gesundheits- und Rechts-Workflows. Lokale Setups eliminieren die Notwendigkeit von EU-Standardvertragsklauseln. **DSGVO-Artikel 28**: Bei der Verwendung von Cloud-KI-Systemen wie ChatGPT Plus müssen Unternehmen EU-Standardvertragsklauseln einhalten und eine Datenschutz-Folgenabschätzung durchführen. Lokale Inference-Lösungen erfüllen diese Anforderungen automatisch.',
             '**Japan:** APPI-Anforderungen (Act on Protection of Personal Information) bevorzugen lokale Inference für sensible Business-Daten. Japanische Stromraten (~0,18€/kWh) addieren ~20 % zu lokalen Stromkosten gegenüber den USA.',
-            '**China:** ChatGPT Plus ist in Festland-China nicht direkt verfügbar. Lokale Open-Source-Modelle (Qwen2.5, Llama 3.1), die lokal laufen, erfüllen das Datensicherheitsgesetz 2021 ohne CAC-Registrierungsanforderungen.',
+            '**China:** ChatGPT Plus ist in Festland-China nicht direkt verfügbar. Lokale Open-Source-Modelle (Qwen2.5, Llama 3.3), die lokal laufen, erfüllen das Datensicherheitsgesetz 2021 ohne CAC-Registrierungsanforderungen.',
           ],
         },
         'faqSection': {
@@ -507,7 +507,7 @@ schema: {
           title: 'Weiterführende Ressourcen',
           items: [
             '[Lokale LLMs vs Claude Pro](/de/local-llms/local-llms-vs-claude-pro) — Datenschutz-, Kosten- und Qualitätsvergleich mit Anthropic Claude Pro (20€/Monat)',
-            '[Ollama auf jedem OS installieren](/de/local-llms/how-to-install-ollama) — Kostenlose Open-Source-Inference-Engine zum Ausführen von Llama 3.1 lokal in 5 Minuten',
+            '[Ollama auf jedem OS installieren](/de/local-llms/how-to-install-ollama) — Kostenlose Open-Source-Inference-Engine zum Ausführen von Llama 3.3 lokal in 5 Minuten',
             '[Lokales LLM vs Cloud GPU: Kostenvergleich](/de/local-llms/local-llm-vs-cloud-gpu-cost) — Amortisierungsanalyse: Lokale RTX 4070 vs Lambda Labs, Paperspace, AWS GPUs',
             '[Lohnt sich der GPU-Kauf vs Zahlung für AI-Abos?](/de/local-llms/gpu-vs-ai-subscription-roi) — ROI-Rechner für GPU-Kauf vs ChatGPT Plus, Claude Pro und API-Abos',
             '[Best Budget GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm) — Top bezahlbare Optionen: RTX 4060, RTX 3060, RX 6700, nach Leistung-pro-Euro bewertet',
@@ -662,7 +662,7 @@ schema: {
             '**Depuis avril 2026, trois niveaux matériels couvrent l\'étendue de l\'utilisation occasionnelle 7B à l\'inférence 70B de classe GPT-5.2.** Tous les logiciels sont gratuits : [Ollama](/fr/local-llms/how-to-install-ollama) (moteur d\'inférence), Open WebUI (interface de chat) et tous les modèles open-source (Llama, Qwen, Mistral, Gemma, Phi) coûtent 0€ à télécharger et exécuter.',
           ],
           items: [
-            '**Niveau d\'entrée — modèles 7B — RTX 4060 Ti 8 GB (occasion, 250–280€) :** Exécute Llama 3.1 8B, Mistral 7B, Gemma 4 9B à 25–60 tokens/s. Construction complète : 700–900€.',
+            '**Niveau d\'entrée — modèles 7B — RTX 4060 Ti 8 GB (occasion, 250–280€) :** Exécute Llama 3.3 8B, Mistral Small, Gemma 4 9B à 25–60 tokens/s. Construction complète : 700–900€.',
             '**Point optimal — modèles 13B–24B — [RTX 5060 Ti 16 GB (neuf, 450–500€)](/fr/local-llms/best-budget-gpus-local-llm) :** Exécute Mistral Small 3.1 24B et Qwen2.5 14B à 20–40 tokens/s. Construction complète : 900–1 200€. Couvre 85 % des cas d\'usage ChatGPT Plus.',
             '**Niveau 70B — classe GPT-5.2 — trois options matérielles :**',
             '   Option A : RTX 4090 occasion (24 GB, ~1 999€) — exécute Llama 3.3 70B à ~25 tokens/s via CUDA',
@@ -733,7 +733,7 @@ schema: {
             '**UE/UK :** ChatGPT Plus coûte 20€/£17 par mois ; les coûts d\'électricité sont 2–3× les tarifs US (0,28–0,40€/kWh), rendant les économies LLM locales légèrement moins favorables. Cependant, la conformité RGPD favorise fortement les LLMs locaux — toutes les données restent sur votre machine sans responsabilité de transfert transfrontalier selon l\'article 44.',
             '**France :** La CNIL recommande l\'inférence locale pour les données professionnelles sensibles (données financières, médicales, juridiques) afin de garantir la conformité RGPD sans nécessité de contrats standard UE avec des prestataires cloud américains.',
             '**Japon :** Les exigences APPI (Loi sur la protection des informations personnelles) favorisent l\'inférence locale pour les données commerciales sensibles. Les tarifs d\'électricité japonais (~0,18€/kWh) ajoutent ~20 % aux coûts d\'électricité locaux par rapport aux États-Unis.',
-            '**Chine :** ChatGPT Plus n\'est pas disponible directement en Chine continentale. Les modèles open-source locaux (Qwen2.5, Llama 3.1) fonctionnant localement respectent la Loi sur la sécurité des données 2021 sans exigences d\'enregistrement CAC.',
+            '**Chine :** ChatGPT Plus n\'est pas disponible directement en Chine continentale. Les modèles open-source locaux (Qwen2.5, Llama 3.3) fonctionnant localement respectent la Loi sur la sécurité des données 2021 sans exigences d\'enregistrement CAC.',
           ],
         },
         'faqSection': {
@@ -789,7 +789,7 @@ schema: {
           title: 'Lectures recommandées',
           items: [
             '[LLMs locaux vs Claude Pro](/fr/local-llms/local-llms-vs-claude-pro) — Comparaison de confidentialité, coûts et qualité avec Anthropic Claude Pro (20€/mois)',
-            '[Comment installer Ollama sur n\'importe quel OS](/fr/local-llms/how-to-install-ollama) — Moteur d\'inférence gratuit et open-source pour exécuter Llama 3.1 localement en 5 minutes',
+            '[Comment installer Ollama sur n\'importe quel OS](/fr/local-llms/how-to-install-ollama) — Moteur d\'inférence gratuit et open-source pour exécuter Llama 3.3 localement en 5 minutes',
             '[LLM local vs GPU cloud : Comparaison tarifaire](/fr/local-llms/local-llm-vs-cloud-gpu-cost) — Analyse de rentabilité : RTX 4070 local vs Lambda Labs, Paperspace, GPUs AWS',
             '[L\'achat d\'une GPU vaut-il la peine vs payer les abos IA ?](/fr/local-llms/gpu-vs-ai-subscription-roi) — Calculateur ROI pour achat GPU vs ChatGPT Plus, Claude Pro et abos API',
             '[Meilleurs GPUs pas chers pour LLMs locaux](/fr/local-llms/best-budget-gpus-local-llm) — Options abordables top : RTX 4060, RTX 3060, RX 6700, classées par performance-par-euro',
@@ -942,7 +942,7 @@ schema: {
             '**2026年4月現在、3つのハードウェアティアがカジュアルな 7B 使用から GPT-5.2 クラスの 70B 推論まで、幅広くカバーしています。** すべてのソフトウェアは無料です：[Ollama](/ja/local-llms/how-to-install-ollama)（推論エンジン）、Open WebUI（チャットインターフェース）、すべてのオープンソースモデル（Llama、Qwen、Mistral、Gemma、Phi）はダウンロードして実行するのに 0 円です。',
           ],
           items: [
-            '**エントリーレベル — 7B モデル — RTX 4060 Ti 8 GB（中古、約31,000～35,000円）：** Llama 3.1 8B、Mistral 7B、Gemma 4 9B を 25～60 tokens/s で実行。完全なビルド：約87,000～112,000円。',
+            '**エントリーレベル — 7B モデル — RTX 4060 Ti 8 GB（中古、約31,000～35,000円）：** Llama 3.3 8B、Mistral Small、Gemma 4 9B を 25～60 tokens/s で実行。完全なビルド：約87,000～112,000円。',
             '**スイートスポット — 13B～24B モデル — [RTX 5060 Ti 16 GB（新品、約94,800円）](/ja/local-llms/best-budget-gpus-local-llm)：** Mistral Small 3.1 24B および Qwen2.5 14B を 20～40 tokens/s で実行。完全なビルド：約112,000～150,000円。ChatGPT Plus ユースケースの 85％ をカバー。',
             '**70B ティア — GPT-5.2 クラス — 3つのハードウェアオプション：**',
             '   オプション A：RTX 4090 中古（24 GB、約220,000～280,000円）— CUDA 経由で Llama 3.3 70B を ~25 tokens/s で実行',
@@ -1011,7 +1011,7 @@ schema: {
           title: '地域的考慮事項',
           content: [
             '**日本（METI ガイドライン優先）：** 経済産業省（METI）は 2024 年に AI ガバナンスガイドラインを発行し、ローカル推論を機密ビジネスデータ処理の推奨プラクティスとしています。ChatGPT Plus は日本で公式には利用できません。ローカル Llama 3.3 70B は、金融機関、医療、法律事務所が日本のデータ保護規制（APPI）に準拠しながら運用する方法を提供します。',
-            '**東アジア（データ主権）：** 中国、韓国、台湾でのローカル推論は、データ跨国転送制限とデータ主権要件を完全に満たします。Qwen2.5（Alibaba）、Llama 3.1、Mistral などのオープンソースモデルは、これらの地域での完全なオンデバイス処理を可能にします。',
+            '**東アジア（データ主権）：** 中国、韓国、台湾でのローカル推論は、データ跨国転送制限とデータ主権要件を完全に満たします。Qwen2.5（Alibaba）、Llama 3.3、Mistral などのオープンソースモデルは、これらの地域での完全なオンデバイス処理を可能にします。',
             '**APPI（日本の個人情報保護法）準拠：** ローカル LLM セットアップにより、企業は個人データを国外転送することなく、機密顧客情報、医療記録、法的文書を処理できます。',
             '**企業導入：** 大企業と金融機関は、ローカル推論とオンサイト LLM デプロイメント戦略に転換しており、米国クラウドの依存を減らしています。',
           ],
@@ -1069,7 +1069,7 @@ schema: {
           title: '関連資料',
           items: [
             '[ローカル LLM vs Claude Pro](/ja/local-llms/local-llms-vs-claude-pro) — Anthropic Claude Pro（20€/月）とのプライバシー、コスト、品質比較',
-            '[すべての OS に Ollama をインストールする方法](/ja/local-llms/how-to-install-ollama) — 無料のオープンソース推論エンジンで Llama 3.1 を 5 分でローカル実行',
+            '[すべての OS に Ollama をインストールする方法](/ja/local-llms/how-to-install-ollama) — 無料のオープンソース推論エンジンで Llama 3.3 を 5 分でローカル実行',
             '[ローカル LLM vs クラウド GPU：コスト比較](/ja/local-llms/local-llm-vs-cloud-gpu-cost) — 損益分岐点分析：ローカル RTX 4070 vs Lambda Labs、Paperspace、AWS GPU',
             '[GPU 購入は AI サブスク支払いに対して価値がある？](/ja/local-llms/gpu-vs-ai-subscription-roi) — GPU 購入 vs ChatGPT Plus、Claude Pro、API サブスク用 ROI 計算機',
             '[ローカル LLM 向けベスト予算 GPU](/ja/local-llms/best-budget-gpus-local-llm) — トップ手頃なオプション：RTX 4060、RTX 3060、RX 6700、パフォーマンス/円でランク付け',
@@ -1222,7 +1222,7 @@ schema: {
             '**截至2026年4月，三个硬件层涵盖从休闲7B使用到GPT-5.2级别70B推理的范围。** 所有软件均免费：[Ollama](/zh/local-llms/how-to-install-ollama)（推理引擎）、Open WebUI（聊天界面）和所有开源模型（Llama、Qwen、Mistral、Gemma、Phi）可免费下载和运行。',
           ],
           items: [
-            '**入门级——7B模型——RTX 4060 Ti 8GB（二手，$220-260）：** 运行Llama 3.1 8B、Mistral 7B、Gemma 4 9B，速度为25-60 tokens/秒。完整构建：$700-900。',
+            '**入门级——7B模型——RTX 4060 Ti 8GB（二手，$220-260）：** 运行Llama 3.3 8B、Mistral Small、Gemma 4 9B，速度为25-60 tokens/秒。完整构建：$700-900。',
             '**黄金点——13B-24B模型——[RTX 5060 Ti 16GB（新，$450-500）](/zh/local-llms/best-budget-gpus-local-llm)：** 运行Mistral Small 3.1 24B和Qwen2.5 14B，速度为20-40 tokens/秒。完整构建：$900-1,200。覆盖85%的ChatGPT Plus用例。',
             '**70B层——GPT-5.2级别——三个硬件选项：**',
             '   选项A：RTX 4090二手（24GB，约$1,400）——通过CUDA以~25 tokens/秒运行Llama 3.3 70B',
@@ -1348,7 +1348,7 @@ schema: {
           title: '相关资源',
           items: [
             '[本地LLM vs Claude Pro](/zh/local-llms/local-llms-vs-claude-pro)——与Anthropic Claude Pro（$20/月）的隐私、成本和品质对比',
-            '[如何在任何OS上安装Ollama](/zh/local-llms/how-to-install-ollama)——免费开源推理引擎，在5分钟内本地运行Llama 3.1',
+            '[如何在任何OS上安装Ollama](/zh/local-llms/how-to-install-ollama)——免费开源推理引擎，在5分钟内本地运行Llama 3.3',
             '[本地LLM vs云GPU：成本对比](/zh/local-llms/local-llm-vs-cloud-gpu-cost)——损益分岐点分析：本地RTX 4070 vs Lambda Labs、Paperspace、AWS GPU',
             '[购买GPU是否值得vs支付AI订阅？](/zh/local-llms/gpu-vs-ai-subscription-roi)——GPU购买vs ChatGPT Plus、Claude Pro、API订阅的ROI计算器',
             '[本地LLM最佳预算GPU](/zh/local-llms/best-budget-gpus-local-llm)——顶级经济选项：RTX 4060、RTX 3060、RX 6700，按性能/美元排名',
@@ -1501,7 +1501,7 @@ schema: {
             '**En abril de 2026, tres niveles de hardware cubren el rango desde el uso casual de modelos 7B hasta la inferencia 70B de clase GPT-5.2.** Todo el software es gratuito: [Ollama](/es/local-llms/how-to-install-ollama) (motor de inferencia), Open WebUI (interfaz de chat) y todos los modelos de código abierto (Llama, Qwen, Mistral, Gemma, Phi) cuestan $0 para descargar y ejecutar.',
           ],
           items: [
-            '**Nivel de entrada — modelos 7B — RTX 4060 Ti 8 GB (usado, $220–260):** Ejecuta Llama 3.1 8B, Mistral 7B, Gemma 4 9B a 25–60 tokens/s. Equipo completo incluyendo PC: $700–900.',
+            '**Nivel de entrada — modelos 7B — RTX 4060 Ti 8 GB (usado, $220–260):** Ejecuta Llama 3.3 8B, Mistral Small, Gemma 4 9B a 25–60 tokens/s. Equipo completo incluyendo PC: $700–900.',
             '**Punto óptimo — modelos 13B–24B — [RTX 5060 Ti 16 GB (nuevo, $450–500)](/es/local-llms/best-budget-gpus-local-llm):** Ejecuta Mistral Small 3.1 24B y Qwen2.5 14B a 20–40 tokens/s. Equipo completo: $900–1,200. Cubre el 85% de los casos de uso de ChatGPT Plus.',
             '**Nivel 70B — clase GPT-5.2 — tres opciones de hardware:**',
             '   Opción A: RTX 4090 usada (24 GB, ~$1,400) — ejecuta Llama 3.3 70B a ~25 tokens/s vía CUDA',
@@ -1571,7 +1571,7 @@ schema: {
           content: [
             '**Latinoamérica:** Los precios de ChatGPT Plus varían según el país — en México es $20 USD/mes, en Argentina se aplica el tipo de cambio oficial. Los costos de electricidad en la región son generalmente más bajos que en Europa (Mexico: ~$0.07/kWh, Argentina: ~$0.04/kWh), lo que hace que la ventaja económica del LLM local sea aún mayor que en EE. UU.',
             '**España/UE:** ChatGPT Plus cuesta 20€/mes; los costos de electricidad son 2–3× los de EE. UU. (€0.28–0.40/kWh), lo que hace que la economía del LLM local sea ligeramente menos favorable. Sin embargo, el cumplimiento del RGPD favorece fuertemente los LLMs locales — todos los datos permanecen en tu máquina sin responsabilidad de transferencia transfronteriza según el artículo 44.',
-            '**China:** ChatGPT Plus no está disponible directamente en China continental. Los modelos de código abierto locales (Qwen2.5, Llama 3.1) que se ejecutan localmente cumplen con la Ley de Seguridad de Datos de 2021 sin requisitos de registro en la CAC.',
+            '**China:** ChatGPT Plus no está disponible directamente en China continental. Los modelos de código abierto locales (Qwen2.5, Llama 3.3) que se ejecutan localmente cumplen con la Ley de Seguridad de Datos de 2021 sin requisitos de registro en la CAC.',
             '**Acceso sin conexión en zonas rurales:** En regiones con conectividad limitada en Latinoamérica y España, los LLMs locales ofrecen la única opción práctica de IA sin depender de una conexión estable a internet.',
           ],
         },
@@ -1628,7 +1628,7 @@ schema: {
           title: 'Lectura relacionada',
           items: [
             '[LLMs locales vs Claude Pro](/es/local-llms/local-llms-vs-claude-pro) — Comparación de privacidad, costo y calidad con Anthropic Claude Pro ($20/mes)',
-            '[Cómo instalar Ollama en cualquier OS](/es/local-llms/how-to-install-ollama) — Motor de inferencia gratuito y de código abierto para ejecutar Llama 3.1 localmente en 5 minutos',
+            '[Cómo instalar Ollama en cualquier OS](/es/local-llms/how-to-install-ollama) — Motor de inferencia gratuito y de código abierto para ejecutar Llama 3.3 localmente en 5 minutos',
             '[LLM local vs GPU en la nube: Comparación de costos](/es/local-llms/local-llm-vs-cloud-gpu-cost) — Análisis de punto de equilibrio: RTX 4070 local vs Lambda Labs, Paperspace, GPUs de AWS',
             '[Comparación de alquiler de GPU en la nube: RunPod vs Vast.ai vs Lambda Labs](/es/local-llms/cloud-gpu-rental-comparison-2026) — Precios al contado, características por proveedor y matriz de decisión para ráfagas rápidas de GPU',
             '[¿Vale la pena comprar una GPU vs pagar suscripciones de IA?](/es/local-llms/gpu-vs-ai-subscription-roi) — Calculadora de ROI para compra de GPU vs ChatGPT Plus, Claude Pro y suscripciones de API',

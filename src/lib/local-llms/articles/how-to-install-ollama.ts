@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What Is Ollama and Why Use It?',
           content: [
             '**Ollama is an open-source inference engine that runs large language models locally.** It packages model management, the llama.cpp inference backend, and an OpenAI-compatible REST API into a single lightweight application. No Python, no conda environment, and no CUDA setup is required.',
-            'Ollama maintains a curated model library (ollama.com/library) with one-command downloads for Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5, and 100+ other models. A model is downloaded once and cached on disk -- subsequent runs start in under 5 seconds.',
+            'Ollama maintains a curated model library (ollama.com/library) with one-command downloads for Meta Llama 3.3, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5, and 100+ other models. A model is downloaded once and cached on disk -- subsequent runs start in under 5 seconds.',
             'For alternatives to Ollama, see [Local LLM One-Click Installers](/local-llms/local-llm-one-click-installers). To compare Ollama with LM Studio, see [How to Install LM Studio](/local-llms/how-to-install-lm-studio).',
           ],
         },
@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'For a first run, these three models cover different hardware profiles:',
           rows: [
             { 'Model': 'Llama 3.2 3B', 'Download Size': '~2 GB', 'RAM Required': '4 GB', 'Best For': 'First test -- any machine' },
-            { 'Model': 'Llama 3.1 8B', 'Download Size': '~4.7 GB', 'RAM Required': '8 GB', 'Best For': 'General use on most laptops' },
+            { 'Model': 'Llama 3.3 8B', 'Download Size': '~4.7 GB', 'RAM Required': '8 GB', 'Best For': 'General use on most laptops' },
             { 'Model': 'phi4-mini', 'Download Size': '~2.3 GB', 'RAM Required': '4 GB', 'Best For': 'Fast responses, low RAM' },
           ],
           columns: ['Model', 'Download Size', 'RAM Required', 'Best For'],
@@ -331,7 +331,7 @@ schema: {
           title: '¿Qué es Ollama y por qué usarlo?',
           content: [
             '**Ollama es un motor de inferencia de código abierto que ejecuta grandes modelos de lenguaje de forma local.** Integra la gestión de modelos, el backend de inferencia llama.cpp y una API REST compatible con OpenAI en una sola aplicación ligera. Sin Python, sin entorno conda y sin configuración de CUDA.',
-            'Ollama mantiene una biblioteca de modelos curada (ollama.com/library) con descargas en un solo comando para Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 y más de 100 modelos adicionales. Un modelo se descarga una vez y se almacena en caché en disco -- las ejecuciones posteriores arrancan en menos de 5 segundos.',
+            'Ollama mantiene una biblioteca de modelos curada (ollama.com/library) con descargas en un solo comando para Meta Llama 3.3, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 y más de 100 modelos adicionales. Un modelo se descarga una vez y se almacena en caché en disco -- las ejecuciones posteriores arrancan en menos de 5 segundos.',
             'Para ver alternativas a Ollama, consulta [Instaladores de LLM local con un clic](/es/local-llms/local-llm-one-click-installers). Para comparar Ollama con LM Studio, consulta [Cómo instalar LM Studio](/es/local-llms/how-to-install-lm-studio).',
           ],
         },
@@ -392,7 +392,7 @@ schema: {
           content: 'Para una primera ejecución, estos tres modelos cubren diferentes perfiles de hardware:',
           rows: [
             { 'Modelo': 'Llama 3.2 3B', 'Tamaño de descarga': '~2 GB', 'RAM necesaria': '4 GB', 'Mejor para': 'Primera prueba -- cualquier máquina' },
-            { 'Modelo': 'Llama 3.1 8B', 'Tamaño de descarga': '~4.7 GB', 'RAM necesaria': '8 GB', 'Mejor para': 'Uso general en la mayoría de portátiles' },
+            { 'Modelo': 'Llama 3.3 8B', 'Tamaño de descarga': '~4.7 GB', 'RAM necesaria': '8 GB', 'Mejor para': 'Uso general en la mayoría de portátiles' },
             { 'Modelo': 'phi4-mini', 'Tamaño de descarga': '~2.3 GB', 'RAM necesaria': '4 GB', 'Mejor para': 'Respuestas rápidas, poca RAM' },
           ],
           columns: ['Modelo', 'Tamaño de descarga', 'RAM necesaria', 'Mejor para'],
@@ -617,10 +617,10 @@ schema: {
           title: 'Was ist Ollama und warum sollte ich es nutzen?',
           content: [
             '**Ollama ist eine Open-Source-Inference-Engine, die große Sprachmodelle lokal ausführt.** Sie kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-kompatible REST-API in einer einzigen leichten Anwendung. Keine Python, keine Conda-Umgebung und kein CUDA-Setup erforderlich.',
-            'Ollama betreut eine kuratierte Modellbibliothek (ollama.com/library) mit Ein-Befehl-Downloads für Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 und über 100 weitere Modelle. Ein Modell wird einmal heruntergeladen und auf der Festplatte zwischengespeichert -- nachfolgende Ausführungen starten in unter 5 Sekunden.',
+            'Ollama betreut eine kuratierte Modellbibliothek (ollama.com/library) mit Ein-Befehl-Downloads für Meta Llama 3.3, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 und über 100 weitere Modelle. Ein Modell wird einmal heruntergeladen und auf der Festplatte zwischengespeichert -- nachfolgende Ausführungen starten in unter 5 Sekunden.',
             'Für Alternativen zu Ollama siehe [Local-LLM-One-Click-Installer](/de/local-llms/local-llm-one-click-installers). Zum Vergleich von Ollama und LM Studio siehe [So installieren Sie LM Studio](/de/local-llms/how-to-install-lm-studio).',
           ],
-          blockquote: 'In einem Satz: Ollama ist ein Tool zum Herunterladen und lokalen Ausführen von Open-Source-Sprachmodellen (wie Mistral oder Llama 3.1) auf Ihrem Computer mit nur einem Befehl.',
+          blockquote: 'In einem Satz: Ollama ist ein Tool zum Herunterladen und lokalen Ausführen von Open-Source-Sprachmodellen (wie Mistral oder Llama 3.3) auf Ihrem Computer mit nur einem Befehl.',
         },
         installMac: {
           id: 'install-on-macos',
@@ -681,7 +681,7 @@ schema: {
           content: 'Für einen ersten Durchlauf decken diese drei Modelle verschiedene Hardware-Profile ab:',
           rows: [
             { 'Modell': 'Llama 3.2 3B', 'Download-Größe': '~2 GB', 'Benötigter RAM': '4 GB', 'Am besten für': 'Erster Test -- auf jeder Maschine' },
-            { 'Modell': 'Llama 3.1 8B', 'Download-Größe': '~4,7 GB', 'Benötigter RAM': '8 GB', 'Am besten für': 'Allgemeine Nutzung auf den meisten Laptops' },
+            { 'Modell': 'Llama 3.3 8B', 'Download-Größe': '~4,7 GB', 'Benötigter RAM': '8 GB', 'Am besten für': 'Allgemeine Nutzung auf den meisten Laptops' },
             { 'Modell': 'phi4-mini', 'Download-Größe': '~2,3 GB', 'Benötigter RAM': '4 GB', 'Am besten für': 'Schnelle Antworten, niedriger RAM' },
           ],
           columns: ['Modell', 'Download-Größe', 'Benötigter RAM', 'Am besten für'],
@@ -942,10 +942,10 @@ schema: {
           title: 'Qu\'est-ce qu\'Ollama et pourquoi l\'utiliser ?',
           content: [
             '**Ollama est un moteur d\'inférence open-source qui exécute de grands modèles de langage localement.** Il combine la gestion de modèles, le backend d\'inférence llama.cpp et une API REST compatible OpenAI dans une seule application légère. Aucun Python, aucun environnement conda et aucune configuration CUDA requise.',
-            'Ollama maintient une bibliothèque de modèles triée sur le volet (ollama.com/library) avec des téléchargements en une seule commande pour Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 et plus de 100 autres modèles. Un modèle est téléchargé une fois et mis en cache sur le disque -- les exécutions ultérieures démarrent en moins de 5 secondes.',
+            'Ollama maintient une bibliothèque de modèles triée sur le volet (ollama.com/library) avec des téléchargements en une seule commande pour Meta Llama 3.3, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 et plus de 100 autres modèles. Un modèle est téléchargé une fois et mis en cache sur le disque -- les exécutions ultérieures démarrent en moins de 5 secondes.',
             'Pour les alternatives à Ollama, voir [Installateurs Local LLM en un clic](/fr/local-llms/local-llm-one-click-installers). Pour comparer Ollama avec LM Studio, voir [Installation de LM Studio](/fr/local-llms/how-to-install-lm-studio).',
           ],
-          blockquote: 'En une phrase : Ollama est un outil pour télécharger et exécuter localement des modèles de langage open-source (comme Mistral ou Llama 3.1) sur votre ordinateur avec une seule commande.',
+          blockquote: 'En une phrase : Ollama est un outil pour télécharger et exécuter localement des modèles de langage open-source (comme Mistral ou Llama 3.3) sur votre ordinateur avec une seule commande.',
         },
         installMac: {
           id: 'install-on-macos',
@@ -1006,7 +1006,7 @@ schema: {
           content: 'Pour un premier passage, ces trois modèles couvrent différents profils matériels :',
           rows: [
             { 'Modèle': 'Llama 3.2 3B', 'Taille du téléchargement': '~2 Go', 'RAM requise': '4 Go', 'Meilleur pour': 'Premier test -- toute machine' },
-            { 'Modèle': 'Llama 3.1 8B', 'Taille du téléchargement': '~4,7 Go', 'RAM requise': '8 Go', 'Meilleur pour': 'Utilisation générale sur la plupart des ordinateurs portables' },
+            { 'Modèle': 'Llama 3.3 8B', 'Taille du téléchargement': '~4,7 Go', 'RAM requise': '8 Go', 'Meilleur pour': 'Utilisation générale sur la plupart des ordinateurs portables' },
             { 'Modèle': 'phi4-mini', 'Taille du téléchargement': '~2,3 Go', 'RAM requise': '4 Go', 'Meilleur pour': 'Réponses rapides, faible RAM' },
           ],
           columns: ['Modèle', 'Taille du téléchargement', 'RAM requise', 'Meilleur pour'],
@@ -1267,10 +1267,10 @@ schema: {
           title: 'Ollama とは何か、そしてなぜ使用するのか？',
           content: [
             '**Ollama は大規模言語モデルをローカルで実行するオープンソースの推論エンジンです。** モデル管理、llama.cpp 推論バックエンド、OpenAI 互換 REST API を単一の軽量アプリケーションに結合します。Python なし、conda 環境なし、CUDA セットアップなし。',
-            'Ollama は Meta Llama 3.1、Microsoft Phi-3、Google Gemma 2、Mistral、Qwen2.5、および 100 以上の他のモデル用にワンコマンド ダウンロード機能を備えたキュレーションされたモデル ライブラリ（ollama.com/library）を保持しています。モデルは 1 回ダウンロードされてディスクにキャッシュされ、以降の実行は 5 秒以内に開始します。',
+            'Ollama は Meta Llama 3.3、Microsoft Phi-3、Google Gemma 2、Mistral、Qwen2.5、および 100 以上の他のモデル用にワンコマンド ダウンロード機能を備えたキュレーションされたモデル ライブラリ（ollama.com/library）を保持しています。モデルは 1 回ダウンロードされてディスクにキャッシュされ、以降の実行は 5 秒以内に開始します。',
             'Ollama の代わりについては、[Local LLM ワンクリック インストーラー](/ja/local-llms/local-llm-one-click-installers) を参照してください。Ollama と LM Studio を比較するには、[LM Studio のインストール方法](/ja/local-llms/how-to-install-lm-studio) を参照してください。',
           ],
-          blockquote: '一文で表すと、Ollama はオープンソース言語モデル（Mistral や Llama 2 など）をコンピュータにダウンロードしてローカルで実行するツールで、1 つのコマンドで実行できます。',
+          blockquote: '一文で表すと、Ollama はオープンソース言語モデル（Mistral や Llama 3.3 など）をコンピュータにダウンロードしてローカルで実行するツールで、1 つのコマンドで実行できます。',
         },
         installMac: {
           id: 'install-on-macos',
@@ -1331,7 +1331,7 @@ schema: {
           content: '初回実行では、これらの 3 つのモデルはさまざまなハードウェア プロファイルに対応:',
           rows: [
             { 'モデル': 'Llama 3.2 3B', 'ダウンロード サイズ': '~2 GB', '必要な RAM': '4 GB', '用途': '初回テスト - すべてのマシン' },
-            { 'モデル': 'Llama 3.1 8B', 'ダウンロード サイズ': '~4.7 GB', '必要な RAM': '8 GB', '用途': 'ほとんどのノートパソコンで一般的に使用' },
+            { 'モデル': 'Llama 3.3 8B', 'ダウンロード サイズ': '~4.7 GB', '必要な RAM': '8 GB', '用途': 'ほとんどのノートパソコンで一般的に使用' },
             { 'モデル': 'phi4-mini', 'ダウンロード サイズ': '~2.3 GB', '必要な RAM': '4 GB', '用途': '高速応答、低 RAM' },
           ],
           columns: ['モデル', 'ダウンロード サイズ', '必要な RAM', '用途'],
@@ -1592,10 +1592,10 @@ schema: {
           title: '什么是 Ollama，为什么使用它？',
           content: [
             '**Ollama 是一个开源推理引擎，在本地运行大型语言模型。** 它将模型管理、llama.cpp 推理后端和 OpenAI 兼容的 REST API 整合到一个轻量级应用程序中。无需 Python、无需 conda 环境、无需 CUDA 设置。',
-            'Ollama 维护一个精选的模型库（ollama.com/library），提供 Meta Llama 3.1、Microsoft Phi-3、Google Gemma 2、Mistral、Qwen2.5 等 100 多个模型的一键下载。模型下载一次并缓存在磁盘上 -- 后续运行在 5 秒内启动。',
+            'Ollama 维护一个精选的模型库（ollama.com/library），提供 Meta Llama 3.3、Microsoft Phi-3、Google Gemma 2、Mistral、Qwen2.5 等 100 多个模型的一键下载。模型下载一次并缓存在磁盘上 -- 后续运行在 5 秒内启动。',
             '有关 Ollama 的替代品，请参阅 [Local LLM 一键安装程序](/zh/local-llms/local-llm-one-click-installers)。要比较 Ollama 和 LM Studio，请参阅 [如何安装 LM Studio](/zh/local-llms/how-to-install-lm-studio)。',
           ],
-          blockquote: '一句话来说，Ollama 是一个工具，用于在计算机上下载和本地运行开源语言模型（如 Mistral 或 Llama 2），只需一个命令。',
+          blockquote: '一句话来说，Ollama 是一个工具，用于在计算机上下载和本地运行开源语言模型（如 Mistral 或 Llama 3.3），只需一个命令。',
         },
         installMac: {
           id: 'install-on-macos',
@@ -1656,7 +1656,7 @@ schema: {
           content: '对于初次运行，这三个模型涵盖不同的硬件配置：',
           rows: [
             { '模型': 'Llama 3.2 3B', '下载大小': '~2 GB', '所需 RAM': '4 GB', '最适合': '初次测试 -- 任何机器' },
-            { '模型': 'Llama 3.1 8B', '下载大小': '~4.7 GB', '所需 RAM': '8 GB', '最适合': '大多数笔记本电脑的一般使用' },
+            { '模型': 'Llama 3.3 8B', '下载大小': '~4.7 GB', '所需 RAM': '8 GB', '最适合': '大多数笔记本电脑的一般使用' },
             { '模型': 'phi4-mini', '下载大小': '~2.3 GB', '所需 RAM': '4 GB', '最适合': '快速响应，低 RAM' },
           ],
           columns: ['模型', '下载大小', '所需 RAM', '最适合'],

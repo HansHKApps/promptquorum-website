@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-15',
     dateModified: '2026-05-15',
     ctaText: 'Got your Mac Mini AI server running? Compare your local Llama or DeepSeek output against GPT-4, Claude, Gemini, and 22 other models in one dispatch with PromptQuorum — verify your self-hosted setup delivers cloud-quality answers for your specific use cases.',
-    current_models_mentioned: ['Llama 3.1 8B', 'Mistral 7B', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Mistral Small', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
     current_hardware_mentioned: ['M5 Pro', 'M5 Max', 'Mac Mini M5'],
     audience: 'Users wanting always-on local AI server for home/office. Technical users comfortable with terminal.',
     readTime: '12 min read',
@@ -92,7 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Config': 'Mac Mini M5 Pro 64GB ★', 'Price (2026)': '$1,199', 'Memory': '64 GB', 'Best For': 'Recommended sweet spot', 'Models Supported': '34B models comfortably' },
           { 'Config': 'Mac Mini M5 Pro 64GB + 1TB', 'Price (2026)': '$1,399', 'Memory': '64 GB', 'Best For': 'Many stored models', 'Models Supported': '50+ models on disk' },
         ],
-        note: '★ Recommended. Storage planning: Llama 3.1 8B Q4 ~5 GB per model, Whisper large-v3 ~3 GB, embedding model ~0.5 GB, ChromaDB with 10K docs ~2 GB. Typical 5-model setup: 50-80 GB. Minimum 512 GB SSD; 1 TB for power users.',
+        note: '★ Recommended. Storage planning: Llama 3.3 8B Q4 ~5 GB per model, Whisper large-v3 ~3 GB, embedding model ~0.5 GB, ChromaDB with 10K docs ~2 GB. Typical 5-model setup: 50-80 GB. Minimum 512 GB SSD; 1 TB for power users.',
       },
       setup: {
         id: 'setup',
@@ -221,14 +221,14 @@ cloudflared tunnel route dns ai-server ai.yourdomain.com
         title: 'Use Case 1: Family Home AI Server',
         content: [
           'Mac Mini sits in a closet running 24/7. Every device on the home network — phones, tablets, laptops — sends API requests to the same Ollama instance. Family of 4 with iPhones, iPads, and MacBooks all use it simultaneously.',
-          'iPhones use Shortcuts → POST to macmini.local:11434. MacBook users use Continue.dev or Raycast extensions. Set OLLAMA_NUM_PARALLEL=2 so two family members can chat simultaneously on Llama 3.1 8B.',
+          'iPhones use Shortcuts → POST to macmini.local:11434. MacBook users use Continue.dev or Raycast extensions. Set OLLAMA_NUM_PARALLEL=2 so two family members can chat simultaneously on Llama 3.3 8B.',
           'Replaces 4× ChatGPT Plus subscriptions ($80/month = $960/year). Mac Mini payback period: ~15 months. Years 2-5: pure savings.',
         ],
       },
       usecaseRAG: {
         id: 'usecases-rag',
         title: 'Use Case 2: Private RAG Document Q&A Server',
-        content: 'Stack: Ollama (Llama 3.1 8B) + nomic-embed-text + ChromaDB. All running on Mac Mini, accessible via LAN. Use cases: family documents, legal contracts, technical manuals, recipe library, medical records, research papers. All private. All searchable. All offline.',
+        content: 'Stack: Ollama (Llama 3.3 8B) + nomic-embed-text + ChromaDB. All running on Mac Mini, accessible via LAN. Use cases: family documents, legal contracts, technical manuals, recipe library, medical records, research papers. All private. All searchable. All offline.',
         codeBlock: `# Install ChromaDB via Docker
 brew install --cask docker
 docker run -d -p 8000:8000 -v ~/chromadb:/data chromadb/chroma
@@ -252,7 +252,7 @@ vectordb = Chroma.from_documents(
         id: 'usecases-voice',
         title: 'Use Case 3: Always-On Voice Assistant',
         content: [
-          'Stack on Mac Mini: whisper.cpp for STT (Metal accelerated), Ollama Llama 3.1 8B for reasoning, Piper TTS for voice output, Wyoming protocol for Home Assistant integration.',
+          'Stack on Mac Mini: whisper.cpp for STT (Metal accelerated), Ollama Llama 3.3 8B for reasoning, Piper TTS for voice output, Wyoming protocol for Home Assistant integration.',
           'Wake-word triggered via client devices (Apple HomePod via Home Assistant, or Raspberry Pi microphone arrays in each room). End-to-end latency on M5 Pro: 1.2 seconds (STT 0.3s + LLM 0.7s + TTS 0.2s).',
           'Annual electricity: $35. Comparable cloud service (Alexa Plus at $20/month): $240/year. Saves $200+ per year while keeping all voice data private.',
         ],

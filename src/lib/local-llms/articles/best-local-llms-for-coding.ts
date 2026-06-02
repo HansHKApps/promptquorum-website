@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Best Coding LLMs 2026: Qwen vs DeepSeek vs Llama Performance',
       seoTitle: 'Best Local Coding LLMs 2026: Qwen vs DeepSeek vs Llama',
       intro: 'The best local LLMs for coding in May 2026 are Kimi K2.6 (58.6 SWE-Bench Pro, MoE, Modified MIT license), Qwen 3.6 27B (77.2% SWE-bench, best dense model), and Devstral Small 24B (best agentic coding). For 8 GB machines, Qwen3 8B replaces the previous Qwen3 8B recommendation. All run locally via Ollama.',
-      metaDescription: 'Qwen 3.6 scores 77.2% SWE-bench. Compare vs DeepSeek-Coder-V3 vs Llama 3.1: VRAM, speed, benchmark scores, and best local coding LLMs for 2026.',
+      metaDescription: 'Qwen 3.6 scores 77.2% SWE-bench. Compare vs DeepSeek-Coder-V3 vs Llama 3.3: VRAM, speed, benchmark scores, and best local coding LLMs for 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**In May 2026, the best local coding models are Kimi K2.6 (58.6 SWE-Bench Pro, MoE, Modified MIT license) for maximum quality, Qwen 3.6 27B (77.2% SWE-bench, best dense model) for balanced performance, and Devstral Small 24B (best for agentic workflows). For 8 GB RAM: Qwen3 8B. All run via Ollama locally for offline, private code generation without cloud API costs.** Unlike HumanEval which tests single functions, SWE-bench (solving real GitHub issues) is now the primary benchmark for practical coding in 2026.',
       quickAnswerTop: {
@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: '#2 Qwen 3.6 27B', anchor: '#deepseek-coder-v2' },
         { label: '#3 Qwen3 8B', anchor: '#qwen25-coder-7b' },
         { label: '#4 Codestral 22B', anchor: '#starcoder2-15b' },
-        { label: '#5 Llama 3.1 8B (general fallback)', anchor: '#llama-31-8b' },
+        { label: '#5 Llama 3.3 8B (general fallback)', anchor: '#llama-31-8b' },
         { label: 'Best Coding LLMs for 8 GB VRAM', anchor: '#coding-llm-8gb-vram' },
         { label: 'Best Coding LLMs for 16 GB VRAM', anchor: '#coding-llm-16gb-vram' },
         { label: 'Best Coding LLMs for 6 GB VRAM', anchor: '#coding-llm-6gb-vram' },
@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**In 2026, SWE-bench has largely replaced HumanEval as the primary practical coding benchmark.** SWE-bench tests the model\'s ability to resolve real GitHub issues — multi-file changes, understanding codebases, writing tests — not just generating single functions. Qwen 3.6 27B scores 77.2% on SWE-bench; Kimi K2.6 scores 58.6 on SWE-Bench Pro.',
             'Code-specific models are fine-tuned on large code corpora (GitHub, Stack Overflow, documentation) and often include fill-in-the-middle (FIM) training -- the ability to complete code given both the preceding and following context, which is required for IDE autocomplete.',
-            'General-purpose models like Llama 3.1 8B score 72% on HumanEval, which is competitive. But dedicated coding models at the same size score 5-15% higher because their training data and fine-tuning prioritize code generation accuracy over general language tasks.',
+            'General-purpose models like Llama 3.3 8B score 72% on HumanEval, which is competitive. But dedicated coding models at the same size score 5-15% higher because their training data and fine-tuning prioritize code generation accuracy over general language tasks.',
           ],
           callouts: [
             { type: 'note', text: 'SWE-bench is the most relevant benchmark for real-world coding in 2026. HumanEval remains useful for single-function generation comparison, but SWE-bench better predicts development workflow performance.' },
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           callouts: [
             { type: 'warning', text: '❌ **Avoid:** Running Qwen 3.6 27B (22 GB) on machines with <20 GB free RAM. Latency becomes unusable (1–3 tokens/sec). Use Qwen3 8B or Devstral Small 24B on smaller machines.' },
-            { type: 'warning', text: '❌ **Avoid:** Using general-purpose models (Llama 3.1 8B) when you need IDE autocomplete. Only code-specific models with FIM support work for in-editor completion -- Codestral 22B, Qwen3 8B.' },
+            { type: 'warning', text: '❌ **Avoid:** Using general-purpose models (Llama 3.3 8B) when you need IDE autocomplete. Only code-specific models with FIM support work for in-editor completion -- Codestral 22B, Qwen3 8B.' },
             { type: 'insight', text: 'Beginner → intermediate → advanced is also a progression in hardware requirements. Start with Qwen3 8B (8 GB), upgrade to Devstral Small 24B (16 GB) as you add tools and workflows, graduate to Qwen 3.6 27B or Kimi K2.6 (20+ GB) only if you need maximum reasoning quality.' },
           ],
         },
@@ -416,7 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**Using HumanEval as the only benchmark for model selection:** HumanEval tests single-function Python generation. In real development, you need multi-file reasoning, test generation, and codebase understanding. SWE-bench is a better predictor of real-world coding performance. A model scoring 72% on HumanEval but 77% on SWE-bench (Qwen 3.6) will outperform a model at 87% HumanEval but untested on SWE-bench in practical workflows.',
             '**Ignoring MoE models because the total parameter count looks too large:** Kimi K2.6 has 1T total parameters but only 32B are active per token. MoE models run faster and use less VRAM than their total parameter count suggests. A 1T MoE model can run on hardware that a 70B dense model requires.',
-            '**Using a general-purpose model instead of a code-specific model:** Qwen3 8B (coding-specific) performs better on real-world tasks than Llama 3.1 8B general (general-purpose) despite similar HumanEval scores. For IDE autocomplete, always use a code-specific model with FIM support.',
+            '**Using a general-purpose model instead of a code-specific model:** Qwen3 8B (coding-specific) performs better on real-world tasks than Llama 3.3 8B general (general-purpose) despite similar HumanEval scores. For IDE autocomplete, always use a code-specific model with FIM support.',
             '**Not setting context length for multi-file review:** Ollama defaults to 2048 tokens. Most code files are 1,000-3,000 tokens. Set `PARAMETER num_ctx 32768` in your Modelfile for any coding task involving full files or multiple functions in context.',
             '**Using Q3_K_S on coding models to save RAM:** Quantization below Q4_K_M noticeably degrades code generation accuracy -- logical errors and syntax mistakes increase. For coding tasks, use Q4_K_M minimum. If RAM is tight, choose a smaller model at Q4_K_M over a larger model at Q3_K_S.',
             '**Prompt engineering determines output quality regardless of model:** Specifying language, constraints, test cases, and error handling in your prompt dramatically reduces hallucinated code. See [how to write better code with AI](https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai) for production-tested patterns.',
@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             { q: 'What is the best local LLM for coding in May 2026?', a: 'Kimi K2.6 — 58.6 SWE-Bench Pro (MoE, Modified MIT license). Best dense model: Qwen 3.6 27B — 77.2% SWE-bench, 22 GB VRAM. For 8 GB machines: Qwen3 8B. For IDE autocomplete: Codestral 22B.' },
             { q: 'What is HumanEval and why does it matter?', a: 'HumanEval is a benchmark of 164 Python programming problems. The model must generate a correct function body for each. Pass@1 (percentage solved on first attempt) is the standard metric. It is the most widely-used measure for comparing coding models.' },
-            { q: 'What is fill-in-the-middle (FIM) and which models support it?', a: 'FIM is the ability to complete code given both the code before and after the cursor -- the pattern used by IDE autocomplete. Qwen2.5-Coder, DeepSeek-Coder, and Starcoder2 all support FIM. Llama 3.1 8B general does not. For IDE integration, use an FIM-capable model.' },
+            { q: 'What is fill-in-the-middle (FIM) and which models support it?', a: 'FIM is the ability to complete code given both the code before and after the cursor -- the pattern used by IDE autocomplete. Qwen2.5-Coder, DeepSeek-Coder, and Starcoder2 all support FIM. Llama 3.3 8B general does not. For IDE integration, use an FIM-capable model.' },
             { q: 'Can local coding models replace GitHub Copilot?', a: 'Codestral 22B via Continue.dev now closely matches Copilot for most autocomplete tasks. For complex multi-file reasoning, cloud models still have an edge on the hardest 20%. Trade-off: Codestral is slower but fully private and runs locally.' },
             { q: 'How much RAM do I need for local coding LLMs?', a: 'Minimum 4 GB (tiny 3B models), practically 8 GB+ for usable coding. Recommended: 16 GB for 7B–16B models with headroom. High-end: 32 GB+ for 32B models. Use this formula: model size in GB ≈ parameter count ÷ 4 (e.g., 7B ÷ 4 ≈ 1.75 GB at FP16, ~4.7 GB at Q4_K_M).' },
             { q: 'How much context does a 500-line Python file use?', a: "Approximately 2,000-3,000 tokens for a 500-line Python file. Ollama's default 2048 token context is insufficient. Set `PARAMETER num_ctx 16384` minimum for single-file code review. For multi-file analysis, use 32768 or 65536 context." },
@@ -502,7 +502,7 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'What is the best local LLM for coding in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 -- 58.6 SWE-Bench Pro (MoE, Modified MIT license) is the best overall. Best dense model: Qwen 3.6 27B -- 77.2% SWE-bench, 22 GB VRAM. For agentic coding: Devstral Small 24B. For 8 GB machines: Qwen3 8B.' } },
           { '@type': 'Question', 'name': 'What is HumanEval and why does it matter?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HumanEval is a benchmark of 164 Python programming problems. The model must generate a correct function body for each. Pass@1 (percentage solved on first attempt) is the standard metric. It is the most widely-used measure for comparing coding models.' } },
-          { '@type': 'Question', 'name': 'What is fill-in-the-middle (FIM) and which models support it?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIM is the ability to complete code given both the code before and after the cursor -- the pattern used by IDE autocomplete. Qwen2.5-Coder, DeepSeek-Coder, and Starcoder2 all support FIM. Llama 3.1 8B general does not. For IDE integration, use an FIM-capable model.' } },
+          { '@type': 'Question', 'name': 'What is fill-in-the-middle (FIM) and which models support it?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIM is the ability to complete code given both the code before and after the cursor -- the pattern used by IDE autocomplete. Qwen2.5-Coder, DeepSeek-Coder, and Starcoder2 all support FIM. Llama 3.3 8B general does not. For IDE integration, use an FIM-capable model.' } },
           { '@type': 'Question', 'name': 'Can local coding models replace GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For function-level generation and bug explanation, Qwen2.5-Coder 32B matches or approaches Copilot quality. For real-time multi-line autocomplete in a live typing flow, Copilot remains smoother. Local models via Continue.dev provide a comparable experience for deliberate generation (request-and-review) but not keystroke-level completion.' } },
           { '@type': 'Question', 'name': 'How much context does a 500-line Python file use?', 'acceptedAnswer': { '@type': 'Answer', 'text': "Approximately 2,000-3,000 tokens for a 500-line Python file. Ollama's default 2048 token context is insufficient. Set `PARAMETER num_ctx 16384` minimum for single-file code review. For multi-file analysis, use 32768 or 65536 context." } },
           { '@type': 'Question', 'name': 'Which language does Qwen2.5-Coder support best?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Python is the primary training language. JavaScript, TypeScript, Java, C++, Go, Rust, and SQL are all well-supported. The model also handles PHP, Ruby, Swift, and Kotlin. For non-Python languages, HumanEval scores are lower but still competitive.' } },
@@ -523,7 +523,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Qwen 3.6 27B', 'description': '77.2% SWE-bench. 22 GB VRAM. Best dense model. FIM support. ollama run qwen3.6:27b', 'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding#deepseek-coder-v2' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': '72% HumanEval. 4.7 GB RAM. Best for 8 GB machines. FIM. ollama run qwen2.5-coder:7b', 'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding#qwen25-coder-7b' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Codestral 22B', 'description': '67% HumanEval. Best FIM autocomplete. 9 GB RAM. 600+ languages.', 'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding#starcoder2-15b' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': '72% HumanEval. 5.5 GB RAM. General fallback. ollama run llama3.2', 'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding#llama-31-8b' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '72% HumanEval. 5.5 GB RAM. General fallback. ollama run llama3.2', 'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding#llama-31-8b' },
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
@@ -612,7 +612,7 @@ schema: {
         { label: '#2 Qwen 3.6 27B', anchor: '#deepseek-coder-v2' },
         { label: '#3 Qwen3 8B', anchor: '#qwen25-coder-7b' },
         { label: '#4 Codestral 22B', anchor: '#starcoder2-15b' },
-        { label: '#5 Llama 3.1 8B (alternativa general)', anchor: '#llama-31-8b' },
+        { label: '#5 Llama 3.3 8B (alternativa general)', anchor: '#llama-31-8b' },
         { label: 'Mejores LLMs de programación para 8 GB VRAM', anchor: '#coding-llm-8gb-vram' },
         { label: 'Mejores LLMs de programación para 16 GB VRAM', anchor: '#coding-llm-16gb-vram' },
         { label: 'Mejores LLMs de programación para 6 GB VRAM', anchor: '#coding-llm-6gb-vram' },
@@ -690,7 +690,7 @@ schema: {
           content: [
             '**En 2026, SWE-bench ha reemplazado en gran medida a HumanEval como el benchmark práctico principal de programación.** SWE-bench evalúa la capacidad del modelo para resolver issues reales de GitHub — cambios multi-archivo, comprensión de bases de código, escritura de pruebas — no solo generación de funciones individuales. Qwen 3.6 27B puntúa 77,2% en SWE-bench; Kimi K2.6 puntúa 58.6 en SWE-Bench Pro.',
             'Los modelos específicos para código se ajustan finamente en grandes corpus de código (GitHub, Stack Overflow, documentación) y a menudo incluyen entrenamiento fill-in-the-middle (FIM) -- la capacidad de completar código dado tanto el contexto anterior como posterior, que es necesario para el autocompletado en IDE.',
-            'Los modelos de uso general como Llama 3.1 8B puntúan 72% en HumanEval, lo cual es competitivo. Pero los modelos de programación dedicados del mismo tamaño puntúan 5-15% más alto porque sus datos de entrenamiento y el ajuste fino priorizan la precisión de generación de código sobre las tareas de lenguaje general.',
+            'Los modelos de uso general como Llama 3.3 8B puntúan 72% en HumanEval, lo cual es competitivo. Pero los modelos de programación dedicados del mismo tamaño puntúan 5-15% más alto porque sus datos de entrenamiento y el ajuste fino priorizan la precisión de generación de código sobre las tareas de lenguaje general.',
           ],
           callouts: [
             { type: 'note', text: 'SWE-bench es el benchmark más relevante para programación real en 2026. HumanEval sigue siendo útil para comparación de generación de funciones individuales, pero SWE-bench predice mejor el rendimiento en flujos de trabajo de desarrollo.' },
@@ -882,7 +882,7 @@ schema: {
           ],
           callouts: [
             { type: 'warning', text: '❌ **Evitar:** Ejecutar Qwen 3.6 27B (22 GB) en máquinas con <20 GB de RAM libre. La latencia se vuelve inutilizable (1–3 tok/seg). Usa Qwen3 8B o Devstral Small 24B en máquinas más pequeñas.' },
-            { type: 'warning', text: '❌ **Evitar:** Usar modelos de uso general (Llama 3.1 8B) cuando necesitas autocompletado en IDE. Solo los modelos específicos de código con soporte FIM funcionan para el completado en el editor -- Codestral 22B, Qwen3 8B.' },
+            { type: 'warning', text: '❌ **Evitar:** Usar modelos de uso general (Llama 3.3 8B) cuando necesitas autocompletado en IDE. Solo los modelos específicos de código con soporte FIM funcionan para el completado en el editor -- Codestral 22B, Qwen3 8B.' },
             { type: 'insight', text: 'Principiante → intermedio → avanzado también es una progresión en requisitos de hardware. Comienza con Qwen3 8B (8 GB), actualiza a Devstral Small 24B (16 GB) cuando añadas herramientas y flujos de trabajo, avanza a Qwen 3.6 27B o Kimi K2.6 (20+ GB) solo si necesitas máxima calidad de razonamiento.' },
           ],
         },
@@ -934,7 +934,7 @@ schema: {
           items: [
             '**Usar HumanEval como único benchmark para selección de modelos:** HumanEval evalúa la generación de funciones Python individuales. En el desarrollo real, necesitas razonamiento multi-archivo, generación de pruebas y comprensión de bases de código. SWE-bench es un mejor predictor del rendimiento de programación real. Un modelo que puntúa 72% en HumanEval pero 77% en SWE-bench (Qwen 3.6) superará en flujos de trabajo prácticos a un modelo con 87% en HumanEval pero sin prueba en SWE-bench.',
             '**Ignorar los modelos MoE porque el conteo total de parámetros parece demasiado grande:** Kimi K2.6 tiene 1T parámetros totales pero solo 32B están activos por token. Los modelos MoE se ejecutan más rápido y usan menos VRAM de lo que sugiere su conteo total de parámetros. Un modelo MoE de 1T puede ejecutarse en el hardware que requiere un modelo denso de 70B.',
-            '**Usar un modelo de uso general en lugar de un modelo específico de código:** Qwen3 8B (específico de código) tiene mejor rendimiento en tareas reales que Llama 3.1 8B general (de uso general) a pesar de puntuaciones similares en HumanEval. Para autocompletado en IDE, usa siempre un modelo específico de código con soporte FIM.',
+            '**Usar un modelo de uso general en lugar de un modelo específico de código:** Qwen3 8B (específico de código) tiene mejor rendimiento en tareas reales que Llama 3.3 8B general (de uso general) a pesar de puntuaciones similares en HumanEval. Para autocompletado en IDE, usa siempre un modelo específico de código con soporte FIM.',
             '**No configurar la longitud del contexto para revisión multi-archivo:** Ollama tiene por defecto 2048 tokens. La mayoría de los archivos de código son de 1.000-3.000 tokens. Configura `PARAMETER num_ctx 32768` en tu Modelfile para cualquier tarea de programación que implique archivos completos o múltiples funciones en el contexto.',
             '**Usar Q3_K_S en modelos de programación para ahorrar RAM:** La cuantización por debajo de Q4_K_M degrada notablemente la precisión de generación de código -- aumentan los errores lógicos y de sintaxis. Para tareas de programación, usa Q4_K_M como mínimo. Si la RAM es ajustada, elige un modelo más pequeño a Q4_K_M en lugar de un modelo más grande a Q3_K_S.',
             '**El prompt engineering determina la calidad de salida independientemente del modelo:** Especificar el lenguaje, las restricciones, los casos de prueba y el manejo de errores en tu prompt reduce drásticamente el código alucinado. Consulta [cómo escribir mejor código con IA](https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai) para patrones probados en producción.',
@@ -966,7 +966,7 @@ schema: {
           faqs: [
             { q: '¿Cuál es el mejor LLM local para programación en mayo de 2026?', a: 'Kimi K2.6 — 58.6 SWE-Bench Pro (MoE, licencia MIT modificada). Mejor modelo denso: Qwen 3.6 27B — 77,2% SWE-bench, 22 GB de VRAM. Para máquinas de 8 GB: Qwen3 8B. Para autocompletado en IDE: Codestral 22B.' },
             { q: '¿Qué es HumanEval y por qué importa?', a: 'HumanEval es un benchmark de 164 problemas de programación en Python. El modelo debe generar un cuerpo de función correcto para cada uno. Pass@1 (porcentaje resuelto en el primer intento) es la métrica estándar. Es la medida más utilizada para comparar modelos de programación.' },
-            { q: '¿Qué es fill-in-the-middle (FIM) y qué modelos lo soportan?', a: 'FIM es la capacidad de completar código dado tanto el código antes como después del cursor -- el patrón usado por el autocompletado de IDE. Qwen2.5-Coder, DeepSeek-Coder y Starcoder2 todos soportan FIM. Llama 3.1 8B general no. Para integración con IDE, usa un modelo compatible con FIM.' },
+            { q: '¿Qué es fill-in-the-middle (FIM) y qué modelos lo soportan?', a: 'FIM es la capacidad de completar código dado tanto el código antes como después del cursor -- el patrón usado por el autocompletado de IDE. Qwen2.5-Coder, DeepSeek-Coder y Starcoder2 todos soportan FIM. Llama 3.3 8B general no. Para integración con IDE, usa un modelo compatible con FIM.' },
             { q: '¿Pueden los modelos locales de programación reemplazar a GitHub Copilot?', a: 'Codestral 22B vía Continue.dev ahora iguala a Copilot en la mayoría de las tareas de autocompletado. Para razonamiento multi-archivo complejo, los modelos en la nube todavía tienen ventaja en el 20% más difícil. Trade-off: Codestral es más lento pero completamente privado y se ejecuta localmente.' },
             { q: '¿Cuánta RAM necesito para LLMs de programación locales?', a: 'Mínimo 4 GB (modelos 3B diminutos), prácticamente 8 GB+ para programación utilizable. Recomendado: 16 GB para modelos de 7B–16B con margen. Gama alta: 32 GB+ para modelos de 32B. Usa esta fórmula: tamaño del modelo en GB ≈ conteo de parámetros ÷ 4 (p.ej., 7B ÷ 4 ≈ 1,75 GB a FP16, ~4,7 GB a Q4_K_M).' },
             { q: '¿Cuánto contexto usa un archivo Python de 500 líneas?', a: 'Aproximadamente 2.000-3.000 tokens para un archivo Python de 500 líneas. El contexto predeterminado de 2048 tokens de Ollama es insuficiente. Configura `PARAMETER num_ctx 16384` como mínimo para la revisión de código de un solo archivo. Para análisis multi-archivo, usa 32768 o 65536 de contexto.' },
@@ -1020,7 +1020,7 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Cuál es el mejor LLM local para programación en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 — 58.6 SWE-Bench Pro (MoE, licencia MIT modificada). Mejor modelo denso: Qwen 3.6 27B — 77,2% SWE-bench, 22 GB de VRAM. Para máquinas de 8 GB: Qwen3 8B (72% HumanEval, 4,7 GB de RAM).' } },
           { '@type': 'Question', 'name': '¿Qué es HumanEval y por qué importa?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HumanEval es un benchmark de 164 problemas de programación en Python. El modelo debe generar un cuerpo de función correcto para cada uno. Pass@1 (porcentaje resuelto en el primer intento) es la métrica estándar. Es la medida más utilizada para comparar modelos de programación.' } },
-          { '@type': 'Question', 'name': '¿Qué es fill-in-the-middle (FIM) y qué modelos lo soportan?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIM es la capacidad de completar código dado tanto el código antes como después del cursor -- el patrón usado por el autocompletado de IDE. Qwen2.5-Coder, DeepSeek-Coder y Starcoder2 todos soportan FIM. Llama 3.1 8B general no. Para integración con IDE, usa un modelo compatible con FIM.' } },
+          { '@type': 'Question', 'name': '¿Qué es fill-in-the-middle (FIM) y qué modelos lo soportan?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIM es la capacidad de completar código dado tanto el código antes como después del cursor -- el patrón usado por el autocompletado de IDE. Qwen2.5-Coder, DeepSeek-Coder y Starcoder2 todos soportan FIM. Llama 3.3 8B general no. Para integración con IDE, usa un modelo compatible con FIM.' } },
           { '@type': 'Question', 'name': '¿Pueden los modelos locales de programación reemplazar a GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Codestral 22B vía Continue.dev ahora iguala a Copilot en la mayoría de las tareas de autocompletado. Para razonamiento multi-archivo complejo, los modelos en la nube todavía tienen ventaja en el 20% más difícil. Trade-off: Codestral es más lento pero completamente privado y se ejecuta localmente.' } },
           { '@type': 'Question', 'name': '¿Cuánto contexto usa un archivo Python de 500 líneas?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Aproximadamente 2.000-3.000 tokens para un archivo Python de 500 líneas. El contexto predeterminado de 2048 tokens de Ollama es insuficiente. Configura `PARAMETER num_ctx 16384` como mínimo para la revisión de código de un solo archivo. Para análisis multi-archivo, usa 32768 o 65536 de contexto.' } },
           { '@type': 'Question', 'name': '¿Qué lenguaje soporta mejor Qwen2.5-Coder?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Python es el lenguaje de entrenamiento principal. JavaScript, TypeScript, Java, C++, Go, Rust y SQL están todos bien soportados. El modelo también maneja PHP, Ruby, Swift y Kotlin. Para lenguajes no Python, las puntuaciones de HumanEval son más bajas pero siguen siendo competitivas.' } },
@@ -1041,7 +1041,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Qwen 3.6 27B', 'description': '77,2% SWE-bench. 22 GB VRAM. Mejor modelo denso. Soporte FIM. ollama run qwen3.6:27b', 'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-for-coding#deepseek-coder-v2?lang=es' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': '72% HumanEval. 4,7 GB RAM. Mejor para máquinas de 8 GB. FIM. ollama run qwen2.5-coder:7b', 'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-for-coding#qwen25-coder-7b?lang=es' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Codestral 22B', 'description': '67% HumanEval. Mejor autocompletado FIM. 9 GB RAM. 600+ lenguajes.', 'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-for-coding#starcoder2-15b?lang=es' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': '72% HumanEval. 5,5 GB RAM. Alternativa general. ollama run llama3.2', 'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-for-coding#llama-31-8b?lang=es' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '72% HumanEval. 5,5 GB RAM. Alternativa general. ollama run llama3.2', 'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-for-coding#llama-31-8b?lang=es' },
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
@@ -1068,7 +1068,7 @@ schema: {
         { label: '#2 Qwen 3.6 27B', anchor: '#deepseek-coder-v2' },
         { label: '#3 Qwen3 8B', anchor: '#qwen25-coder-7b' },
         { label: '#4 Codestral 22B', anchor: '#starcoder2-15b' },
-        { label: '#5 Llama 3.1 8B (General-Purpose-Ausweichmodell)', anchor: '#llama-31-8b' },
+        { label: '#5 Llama 3.3 8B (General-Purpose-Ausweichmodell)', anchor: '#llama-31-8b' },
         { label: 'Beste Programmier-LLMs für 8 GB VRAM', anchor: '#coding-llm-8gb-vram' },
         { label: 'Beste Programmier-LLMs für 16 GB VRAM', anchor: '#coding-llm-16gb-vram' },
         { label: 'Beste Programmier-LLMs für 6 GB VRAM', anchor: '#coding-llm-6gb-vram' },
@@ -1119,7 +1119,7 @@ schema: {
             '**Best für 8 GB RAM:** Qwen3 8B — 72% HumanEval, 4,7 GB genutzt, 20–35 Tokens/Sek., FIM-Unterstützung.',
             '**Best für 16 GB RAM:** DeepSeek-Coder V2 Lite — 81% HumanEval, ~10 GB genutzt, 15–25 Tokens/Sek., MoE-effizient.',
             '**Best für IDE-Autovervollständigung:** Codestral 22B — 67% HumanEval, ~9 GB RAM, FIM-optimiert für Cursor-Completion.',
-            '**Best, wenn du Llama bereits laufen hast:** Llama 3.1 8B — 72% HumanEval, 5,5 GB RAM, äquivalent zu Qwen 7B für Alltagsaufgaben.',
+            '**Best, wenn du Llama bereits laufen hast:** Llama 3.3 8B — 72% HumanEval, 5,5 GB RAM, äquivalent zu Qwen 7B für Alltagsaufgaben.',
             '👉 **Im Zweifelsfall: Qwen3 8B** — bester Qualitäts-Geschwindigkeits-Kompromiss auf Consumer-Laptops (8–16 GB).',
             '👉 **Wenn du 20+ GB hast:** Upgrade auf Qwen2.5-Coder 32B für maximale Reasoning-Qualität.',
             '👉 **Wenn du IDE-Completion brauchst:** nutze Codestral 22B mit Continue.dev (FIM-optimiert).',
@@ -1144,7 +1144,7 @@ schema: {
           content: [
             '**Die Programmier-Performance in lokalen LLMs wird primär mit HumanEval gemessen -- einem Benchmark mit 164 Python-Programmierungsproblemen, bei dem das Modell einen korrekten Funktionstext generieren muss.** HumanEval pass@1-Scores (Prozentsatz der beim ersten Versuch gelösten Probleme) sind die Standard-Vergleichsmetrik.',
             'Codespezifische Modelle sind auf großen Code-Korpora (GitHub, Stack Overflow, Dokumentation) feinabgestimmt und beinhalten oft Fill-in-the-Middle (FIM)-Training -- die Fähigkeit, Code vervollständigen zu können, wenn sowohl der vorangehende als auch der nachfolgende Kontext vorhanden ist, was für die IDE-Autovervollständigung erforderlich ist.',
-            'General-Purpose-Modelle wie Llama 3.1 8B erzielen 72% auf HumanEval, was wettbewerbsfähig ist. Aber spezialisierte Codierungsmodelle derselben Größe erzielen 5-15% höher, weil ihr Trainingsdaten und das Fine-Tuning Codegenerierungsgenauigkeit über allgemeine Sprachaufgaben priorisieren.',
+            'General-Purpose-Modelle wie Llama 3.3 8B erzielen 72% auf HumanEval, was wettbewerbsfähig ist. Aber spezialisierte Codierungsmodelle derselben Größe erzielen 5-15% höher, weil ihr Trainingsdaten und das Fine-Tuning Codegenerierungsgenauigkeit über allgemeine Sprachaufgaben priorisieren.',
           ],
           callouts: [
             { type: 'note', text: 'HumanEval ist der Gold-Standard für den Vergleich von Codierungsmodellen. Höhere HumanEval-Scores (80%+) korrelieren mit besserer Real-World-Codegenerierungsqualität.' },
@@ -1190,11 +1190,11 @@ schema: {
         qwen25coder7: {
           title: '#3 Qwen3 8B -- Bestes Programmiermodell für 8 GB RAM',
           content: [
-            '**Qwen3 8B erreicht 72% auf HumanEval -- identisch mit dem General-Purpose-Modell Llama 3.1 8B und nutzt nur ~4,7 GB RAM.** Für Benutzer mit 8 GB RAM, die die beste Programmier-Performance ohne Kopfraum für andere Anwendungen opfern wollen, ist dies die empfohlene Wahl.',
+            '**Qwen3 8B erreicht 72% auf HumanEval -- identisch mit dem General-Purpose-Modell Llama 3.3 8B und nutzt nur ~4,7 GB RAM.** Für Benutzer mit 8 GB RAM, die die beste Programmier-Performance ohne Kopfraum für andere Anwendungen opfern wollen, ist dies die empfohlene Wahl.',
             'Es beinhaltet FIM-Unterstützung für Code-Completion-Aufgaben und ist kompatibel mit der Continue.dev VS Code-Erweiterung für lokale AI-Coding-Unterstützung.',
           ],
           callouts: [
-            { type: 'tip', text: 'FIM-Unterstützung (Fill-in-the-Middle) ist wesentlich für die IDE-Integration über Continue.dev oder Copilot. Qwen3 8B beinhaltet FIM ab Werk. Wenn du IDE-Autovervollständigung möchtest, ist dies nicht verhandelbar -- General-Purpose-Modelle wie Llama 3.1 8B unterstützen kein FIM.' },
+            { type: 'tip', text: 'FIM-Unterstützung (Fill-in-the-Middle) ist wesentlich für die IDE-Integration über Continue.dev oder Copilot. Qwen3 8B beinhaltet FIM ab Werk. Wenn du IDE-Autovervollständigung möchtest, ist dies nicht verhandelbar -- General-Purpose-Modelle wie Llama 3.3 8B unterstützen kein FIM.' },
           ],
           rows: [
             { 'Spezifikation': 'HumanEval-Score', 'Wert': '72%' },
@@ -1224,10 +1224,10 @@ schema: {
           columns: ['Spezifikation', 'Wert'],
         },
         llama318: {
-          title: '#5 Llama 3.1 8B -- Bestes General-Purpose-Ausweichmodell für Programmierung',
-          content: 'Wenn du Llama 3.1 8B bereits installiert hast und kein separates Codierungsmodell herunterladen möchtest, erreicht es 72% auf HumanEval -- identisch mit Qwen3 8B. Für Alltagsprogrammierungsaufgaben (Funktionen schreiben, Code erklären, debuggen) ist der Qualitätsunterschied zwischen Llama 3.1 8B und einem dedizierten Codierungsmodell marginal. Detaillierte Anleitungen zu VRAM-Anforderungen für diese Modelle finden Sie im [VRAM-Anforderungsleitfaden →](/de/local-llms/how-much-vram-local-llm). Wechsle zu einem Codierungsmodell spezialisiert auf komplexe Algorithmierungsaufgaben oder großflächiges Codebase-Refactoring.',
+          title: '#5 Llama 3.3 8B -- Bestes General-Purpose-Ausweichmodell für Programmierung',
+          content: 'Wenn du Llama 3.3 8B bereits installiert hast und kein separates Codierungsmodell herunterladen möchtest, erreicht es 72% auf HumanEval -- identisch mit Qwen3 8B. Für Alltagsprogrammierungsaufgaben (Funktionen schreiben, Code erklären, debuggen) ist der Qualitätsunterschied zwischen Llama 3.3 8B und einem dedizierten Codierungsmodell marginal. Detaillierte Anleitungen zu VRAM-Anforderungen für diese Modelle finden Sie im [VRAM-Anforderungsleitfaden →](/de/local-llms/how-much-vram-local-llm). Wechsle zu einem Codierungsmodell spezialisiert auf komplexe Algorithmierungsaufgaben oder großflächiges Codebase-Refactoring.',
           callouts: [
-            { type: 'insight', text: 'Llama 3.1 8B entspricht Qwen3 8B auf HumanEval (72%), aber dem Mangel an FIM (Fill-in-the-Middle)-Unterstützung. Dies macht es besser für Chat-Style-Codegenerierung (Fragen stellen), aber schlechter für IDE-Autovervollständigung (was FIM benötigt). Wähle basierend auf deinem Workflow, nicht nur auf dem Benchmark.' },
+            { type: 'insight', text: 'Llama 3.3 8B entspricht Qwen3 8B auf HumanEval (72%), aber dem Mangel an FIM (Fill-in-the-Middle)-Unterstützung. Dies macht es besser für Chat-Style-Codegenerierung (Fragen stellen), aber schlechter für IDE-Autovervollständigung (was FIM benötigt). Wähle basierend auf deinem Workflow, nicht nur auf dem Benchmark.' },
           ],
         },
         humanEvalTable: {
@@ -1237,11 +1237,11 @@ schema: {
             { 'Modell': 'Qwen 3.6 27B', 'HumanEval': '81%', 'MBPP': '71%', 'RAM': '10 GB', 'FIM': 'Ja' },
             { 'Modell': 'Qwen3 8B', 'HumanEval': '72%', 'MBPP': '68%', 'RAM': '4,7 GB', 'FIM': 'Ja' },
             { 'Modell': 'Codestral 22B', 'HumanEval': '67%', 'MBPP': '54%', 'RAM': '9 GB', 'FIM': 'Ja (primär)' },
-            { 'Modell': 'Llama 3.1 8B', 'HumanEval': '72%', 'MBPP': '68%', 'RAM': '5,5 GB', 'FIM': 'Nein' },
+            { 'Modell': 'Llama 3.3 8B', 'HumanEval': '72%', 'MBPP': '68%', 'RAM': '5,5 GB', 'FIM': 'Nein' },
           ],
           columns: ['Modell', 'HumanEval', 'MBPP', 'RAM', 'FIM'],
           image: '/images/best-local-llms-for-coding-humaneval-comparison-de.svg',
-          imageCaption: 'HumanEval-Benchmark-Scores für 5 Codierungsmodelle: Qwen2.5-Coder 32B erreicht 87%, DeepSeek-Coder V2 Lite 81%, beide Qwen 7B und Llama 3.1 8B bei 72%, und Codestral 22B bei 67%.',
+          imageCaption: 'HumanEval-Benchmark-Scores für 5 Codierungsmodelle: Qwen2.5-Coder 32B erreicht 87%, DeepSeek-Coder V2 Lite 81%, beide Qwen 7B und Llama 3.3 8B bei 72%, und Codestral 22B bei 67%.',
         },
         whichCodingModel: {
           title: 'Welches lokales Programmiermodell solltest du verwenden?',
@@ -1300,7 +1300,7 @@ schema: {
           ],
           callouts: [
             { type: 'warning', text: '❌ **Vermeiden:** Qwen 3.6 27B (22 GB) auf Maschinen mit <20 GB freiem RAM laufen lassen. Latenz wird unbrauchbar (1–3 Tokens/Sek.). Verwende Qwen3 8B oder Devstral Small 24B auf kleineren Maschinen.' },
-            { type: 'warning', text: '❌ **Vermeiden:** General-Purpose-Modelle (Llama 3.1 8B) verwenden, wenn du IDE-Autovervollständigung brauchst. Nur Code-spezifische Modelle mit FIM-Unterstützung funktionieren für In-Editor-Completion -- Codestral 22B, Qwen3 8B.' },
+            { type: 'warning', text: '❌ **Vermeiden:** General-Purpose-Modelle (Llama 3.3 8B) verwenden, wenn du IDE-Autovervollständigung brauchst. Nur Code-spezifische Modelle mit FIM-Unterstützung funktionieren für In-Editor-Completion -- Codestral 22B, Qwen3 8B.' },
             { type: 'insight', text: 'Anfänger → Fortgeschrittene → Experte ist auch eine Progression in Hardware-Anforderungen. Starte mit Qwen3 8B (8 GB), upgrade zu Devstral Small 24B (16 GB), wenn du Tools und Workflows hinzufügst, graduiere zu Qwen 3.6 27B oder Kimi K2.6 (20+ GB) nur wenn du maximale Reasoning-Qualität benötigst.' },
           ],
         },
@@ -1348,7 +1348,7 @@ schema: {
         commonMistakes: {
           title: 'Was sind häufige Fehler bei lokalen Programmiermodellen?',
           items: [
-            '**Ein General-Purpose-Modell statt eines Code-spezifischen Modells verwenden:** Qwen3 8B (72% HumanEval) ist identisch mit Llama 3.1 8B General (72% HumanEval) auf dem Benchmark -- aber Qwen2.5-Coder beinhaltet FIM (Fill-in-the-Middle)-Unterstützung, die Llama 3.1 8B General nicht hat. Für IDE-Autovervollständigung verwende immer ein Code-spezifisches Modell.',
+            '**Ein General-Purpose-Modell statt eines Code-spezifischen Modells verwenden:** Qwen3 8B (72% HumanEval) ist identisch mit Llama 3.3 8B General (72% HumanEval) auf dem Benchmark -- aber Qwen2.5-Coder beinhaltet FIM (Fill-in-the-Middle)-Unterstützung, die Llama 3.3 8B General nicht hat. Für IDE-Autovervollständigung verwende immer ein Code-spezifisches Modell.',
             '**Kontextlänge für Multi-File-Review nicht einstellen:** Ollama defaults auf 2048 Tokens. Die meisten Code-Dateien sind 1.000-3.000 Tokens. Setze `PARAMETER num_ctx 32768` für jede Programmier-Aufgabe mit ganzen Dateien oder mehreren Funktionen im Kontext.',
             '**Erwarten, dass Modelle vollständige IDEs ersetzen:** Lokale Programmiermodelle zeichnen sich durch Funktions-Level-Generierung, Bug-Erklärung und Refactoring-Vorschläge aus. Sie ersetzen LSP (Language Server Protocol) nicht für Echtzeit-Fehlererkennung oder Typenkontrolle. Verwende Continue.dev oder Cursor, um lokale Modellerzeugung mit vollständiger IDE-Werkzeugausrüstung zu kombinieren.',
             '**Q3_K_S bei Programmiermodellen verwenden, um RAM zu sparen:** Quantisierung unter Q4_K_M beeinträchtigt merklich die Code-Generierungsgenauigkeit -- logische Fehler und Syntaxfehler nehmen zu. Für Programmier-Aufgaben verwende Q4_K_M-Minimum. Wenn RAM knapp ist, wähle ein kleineres Modell bei Q4_K_M anstelle eines größeren Modells bei Q3_K_S.',
@@ -1379,7 +1379,7 @@ schema: {
           faqs: [
             { q: 'Was ist das beste lokale LLM für Programmierung 2026?', a: 'Kimi K2.6 -- 58.6 SWE-Bench Pro (MoE, Modified MIT-Lizenz) ist insgesamt am besten. Bestes dichtes Modell: Qwen 3.6 27B -- 77,2% SWE-bench, 22 GB VRAM. Für agentic Coding: Devstral Small 24B. Für 8-GB-Maschinen: Qwen3 8B.' },
             { q: 'Was ist HumanEval und warum ist es wichtig?', a: 'HumanEval ist ein Benchmark mit 164 Python-Programmierungsproblemen. Das Modell muss einen korrekten Funktionstext für jedes generieren. Pass@1 (Prozentsatz beim ersten Versuch gelöst) ist die Standard-Metrik. Es ist das am weitesten verbreitete Maß für den Vergleich von Programmierungsmodellen.' },
-            { q: 'Was ist Fill-in-the-Middle (FIM) und welche Modelle unterstützen es?', a: 'FIM ist die Fähigkeit, Code vervollständigen zu können, wenn sowohl Code vor als auch nach dem Cursor vorhanden ist -- das Muster, das von IDE-Autovervollständigung verwendet wird. Qwen2.5-Coder, DeepSeek-Coder und Starcoder2 unterstützen alle FIM. Llama 3.1 8B General nicht. Für IDE-Integration verwende ein FIM-fähiges Modell.' },
+            { q: 'Was ist Fill-in-the-Middle (FIM) und welche Modelle unterstützen es?', a: 'FIM ist die Fähigkeit, Code vervollständigen zu können, wenn sowohl Code vor als auch nach dem Cursor vorhanden ist -- das Muster, das von IDE-Autovervollständigung verwendet wird. Qwen2.5-Coder, DeepSeek-Coder und Starcoder2 unterstützen alle FIM. Llama 3.3 8B General nicht. Für IDE-Integration verwende ein FIM-fähiges Modell.' },
             { q: 'Können lokale Programmiermodelle GitHub Copilot ersetzen?', a: 'Nein für Echtzeit-Autovervollständigung; ja für absichtliche Generierung. Qwen2.5-Coder 32B (8–15 Tokens/Sek.) ist zu langsam für Tastenanschlag-Level-Completion. Aber über Continue.dev für Request-and-Review-Workflows entspricht Qwen2.5-Coder 32B der Copilot-Qualität bei Code-Generierungsaufgaben. Kompromiss: langsamer aber privat.' },
             { q: 'Wie viel RAM brauche ich für lokale Programmier-LLMs?', a: 'Minimum 4 GB (winzige 3B-Modelle), praktisch 8 GB+ für brauchbare Programmierung. Empfohlen: 16 GB für 7B–16B-Modelle mit Kopfraum. High-End: 32 GB+ für 32B-Modelle. Verwende diese Formel: Modellgröße in GB ≈ Parameterzahl ÷ 4 (z.B. 7B ÷ 4 ≈ 1,75 GB bei FP16, ~4,7 GB bei Q4_K_M).' },
             { q: 'Wie viele Tokens nutzt eine 500-zeilige Python-Datei?', a: 'Ungefähr 2.000-3.000 Tokens für eine 500-zeilige Python-Datei. Ollamaś Standard 2048-Token-Kontext ist unzureichend. Setze `PARAMETER num_ctx 16384` Minimum für Single-File-Code-Review. Für Multi-File-Analyse verwende 32768 oder 65536 Kontext.' },
@@ -1430,7 +1430,7 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'Was ist das beste lokale LLM für Programmierung 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 -- 58.6 SWE-Bench Pro (MoE, Modified MIT-Lizenz) ist insgesamt am besten. Bestes dichtes Modell: Qwen 3.6 27B -- 77,2% SWE-bench, 22 GB VRAM. Für agentic Coding: Devstral Small 24B. Für 8-GB-Maschinen: Qwen3 8B.' } },
           { '@type': 'Question', 'name': 'Was ist HumanEval und warum ist es wichtig?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HumanEval ist ein Benchmark mit 164 Python-Programmierungsproblemen. Das Modell muss einen korrekten Funktionstext für jedes generieren. Pass@1 (Prozentsatz beim ersten Versuch gelöst) ist die Standard-Metrik. Es ist das am weitesten verbreitete Maß für den Vergleich von Programmierungsmodellen.' } },
-          { '@type': 'Question', 'name': 'Was ist Fill-in-the-Middle (FIM) und welche Modelle unterstützen es?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIM ist die Fähigkeit, Code vervollständigen zu können, wenn sowohl Code vor als auch nach dem Cursor vorhanden ist -- das Muster, das von IDE-Autovervollständigung verwendet wird. Qwen2.5-Coder, DeepSeek-Coder und Starcoder2 unterstützen alle FIM. Llama 3.1 8B General nicht. Für IDE-Integration verwende ein FIM-fähiges Modell.' } },
+          { '@type': 'Question', 'name': 'Was ist Fill-in-the-Middle (FIM) und welche Modelle unterstützen es?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIM ist die Fähigkeit, Code vervollständigen zu können, wenn sowohl Code vor als auch nach dem Cursor vorhanden ist -- das Muster, das von IDE-Autovervollständigung verwendet wird. Qwen2.5-Coder, DeepSeek-Coder und Starcoder2 unterstützen alle FIM. Llama 3.3 8B General nicht. Für IDE-Integration verwende ein FIM-fähiges Modell.' } },
           { '@type': 'Question', 'name': 'Können lokale Programmiermodelle GitHub Copilot ersetzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein für Echtzeit-Autovervollständigung; ja für absichtliche Generierung. Qwen2.5-Coder 32B (8–15 Tokens/Sek.) ist zu langsam für Tastenanschlag-Level-Completion. Aber über Continue.dev für Request-and-Review-Workflows entspricht Qwen2.5-Coder 32B der Copilot-Qualität bei Code-Generierungsaufgaben. Kompromiss: langsamer aber privat.' } },
           { '@type': 'Question', 'name': 'Wie viel RAM brauche ich für lokale Programmier-LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Minimum 4 GB (winzige 3B-Modelle), praktisch 8 GB+ für brauchbare Programmierung. Empfohlen: 16 GB für 7B–16B-Modelle mit Kopfraum. High-End: 32 GB+ für 32B-Modelle. Verwende diese Formel: Modellgröße in GB ≈ Parameterzahl ÷ 4 (z.B. 7B ÷ 4 ≈ 1,75 GB bei FP16, ~4,7 GB bei Q4_K_M).' } },
           { '@type': 'Question', 'name': 'Wie viele Tokens nutzt eine 500-zeilige Python-Datei?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ungefähr 2.000-3.000 Tokens für eine 500-zeilige Python-Datei. Ollamaś Standard 2048-Token-Kontext ist unzureichend. Setze `PARAMETER num_ctx 16384` Minimum für Single-File-Code-Review. Für Multi-File-Analyse verwende 32768 oder 65536 Kontext.' } },
@@ -1456,7 +1456,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Qwen 3.6 27B', 'description': '81% HumanEval. 10 GB RAM. MoE-Architektur. FIM-Unterstützung. ollama run deepseek-coder-v2:16b', 'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-for-coding#deepseek-coder-v2' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': '72% HumanEval. 4,7 GB RAM. Best für 8-GB-Maschinen. FIM. ollama run qwen2.5-coder:7b', 'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-for-coding#qwen25-coder-7b' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Codestral 22B', 'description': '67% HumanEval. Beste FIM-Autovervollständigung. 9 GB RAM. 600+ Sprachen.', 'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-for-coding#starcoder2-15b' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': '72% HumanEval. 5,5 GB RAM. General-Purpose-Ausweichmodell. ollama run llama3.2', 'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-for-coding#llama-31-8b' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '72% HumanEval. 5,5 GB RAM. General-Purpose-Ausweichmodell. ollama run llama3.2', 'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-for-coding#llama-31-8b' },
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
@@ -1483,7 +1483,7 @@ schema: {
         { label: '#2 Qwen 3.6 27B', anchor: '#deepseek-coder-v2' },
         { label: '#3 Qwen3 8B', anchor: '#qwen25-coder-7b' },
         { label: '#4 Codestral 22B', anchor: '#starcoder2-15b' },
-        { label: '#5 Llama 3.1 8B (modèle de secours polyvalent)', anchor: '#llama-31-8b' },
+        { label: '#5 Llama 3.3 8B (modèle de secours polyvalent)', anchor: '#llama-31-8b' },
         { label: 'Meilleurs LLMs de programmation pour 8 GB VRAM', anchor: '#coding-llm-8gb-vram' },
         { label: 'Meilleurs LLMs de programmation pour 16 GB VRAM', anchor: '#coding-llm-16gb-vram' },
         { label: 'Meilleurs LLMs de programmation pour 6 GB VRAM', anchor: '#coding-llm-6gb-vram' },
@@ -1533,7 +1533,7 @@ schema: {
             '**Meilleur pour 8 GB RAM** : Qwen3 8B — 72% HumanEval, 4.5 GB utilisés, 20–35 jetons/sec, support FIM.',
             '**Meilleur pour 16 GB RAM** : DeepSeek-Coder V2 Lite — 81% HumanEval, ~10 GB utilisés, 15–25 jetons/sec, MoE efficace.',
             '**Meilleur pour autocomplétion IDE** : Codestral 22B — 67% HumanEval, ~9 GB RAM, optimisé FIM pour complétion à position du curseur.',
-            '**Meilleur si Llama est déjà en cours d\'exécution** : Llama 3.1 8B — 72% HumanEval, 5.5 GB RAM, équivalent à Qwen 7B pour les tâches quotidiennes.',
+            '**Meilleur si Llama est déjà en cours d\'exécution** : Llama 3.3 8B — 72% HumanEval, 5.5 GB RAM, équivalent à Qwen 7B pour les tâches quotidiennes.',
             '',
             '👉 **En cas de doute : utilisez Qwen3 8B** — meilleur compromis qualité-vitesse sur les ordinateurs portables grand public (8–16 GB).',
             '👉 **Si vous avez 20+ GB** : mettez à niveau vers Qwen2.5-Coder 32B pour la qualité de raisonnement maximale.',
@@ -1559,7 +1559,7 @@ schema: {
           content: [
             '**La performance de programmation dans les LLMs locaux est mesurée principalement par HumanEval — un benchmark de 164 problèmes de programmation Python où le modèle doit générer un corps de fonction correct.** Les scores HumanEval pass@1 (pourcentage de problèmes résolus à la première tentative) sont la métrique de comparaison standard.',
             'Les modèles spécifiques au code sont affinés sur de grands corpus de code (GitHub, Stack Overflow, documentation) et incluent souvent l\'entraînement Fill-in-the-Middle (FIM) — la capacité à compléter le code avec le contexte avant et après, ce qui est nécessaire pour l\'autocomplétion IDE.',
-            'Les modèles polyvalents comme Llama 3.1 8B obtiennent 72% sur HumanEval, ce qui est compétitif. Mais les modèles de codage dédiés de même taille obtiennent 5-15% de plus parce que leurs données d\'entraînement et l\'affinage priorisent la précision de génération de code par rapport aux tâches linguistiques générales.',
+            'Les modèles polyvalents comme Llama 3.3 8B obtiennent 72% sur HumanEval, ce qui est compétitif. Mais les modèles de codage dédiés de même taille obtiennent 5-15% de plus parce que leurs données d\'entraînement et l\'affinage priorisent la précision de génération de code par rapport aux tâches linguistiques générales.',
           ],
           callouts: [
             { type: 'note', text: 'HumanEval est la norme or pour comparer les modèles de codage. Les scores HumanEval plus élevés (80%+) corrèlent avec une meilleure qualité de génération de code dans le monde réel.' },
@@ -1605,11 +1605,11 @@ schema: {
         qwen25coder7: {
           title: '#3 Qwen3 8B — Meilleur modèle de programmation pour 8 GB RAM',
           content: [
-            '**Qwen3 8B atteint 72% sur HumanEval — identique au modèle polyvalent Llama 3.1 8B tout en utilisant seulement ~4.5 GB RAM.** Pour les utilisateurs avec 8 GB RAM qui veulent la meilleure performance de programmation sans sacrifier de la marge pour les autres applications, c\'est le choix recommandé.',
+            '**Qwen3 8B atteint 72% sur HumanEval — identique au modèle polyvalent Llama 3.3 8B tout en utilisant seulement ~4.5 GB RAM.** Pour les utilisateurs avec 8 GB RAM qui veulent la meilleure performance de programmation sans sacrifier de la marge pour les autres applications, c\'est le choix recommandé.',
             'Il inclut le support FIM pour les tâches de complétion de code et est compatible avec l\'extension VS Code Continue.dev pour l\'assistance de codage IA locale.',
           ],
           callouts: [
-            { type: 'tip', text: 'Le support FIM (Fill-in-the-Middle) est essentiel pour l\'intégration IDE via Continue.dev ou Copilot. Qwen3 8B inclut FIM nativement. Si vous voulez l\'autocomplétion IDE, c\'est non négociable — les modèles polyvalents comme Llama 3.1 8B ne supportent pas FIM.' },
+            { type: 'tip', text: 'Le support FIM (Fill-in-the-Middle) est essentiel pour l\'intégration IDE via Continue.dev ou Copilot. Qwen3 8B inclut FIM nativement. Si vous voulez l\'autocomplétion IDE, c\'est non négociable — les modèles polyvalents comme Llama 3.3 8B ne supportent pas FIM.' },
           ],
           rows: [
             { 'Spécification': 'Score HumanEval', 'Valeur': '72%' },
@@ -1639,10 +1639,10 @@ schema: {
           columns: ['Spécification', 'Valeur'],
         },
         llama318: {
-          title: '#5 Llama 3.1 8B — Meilleur modèle polyvalent de secours pour la programmation',
-          content: 'Si vous avez déjà Llama 3.1 8B installé et ne voulez pas télécharger un modèle de codage séparé, il obtient 72% sur HumanEval — identique à Qwen3 8B. Pour les tâches de programmation quotidiennes (écrire des fonctions, expliquer du code, déboguer), la différence de qualité entre Llama 3.1 8B et un modèle de codage dédié est marginale. Pour des conseils détaillés sur les exigences VRAM pour ces modèles, consultez le [guide des exigences VRAM →](/fr/local-llms/how-much-vram-local-llm). Basculez vers un modèle de codage spécialisé pour les tâches d\'algorithmes complexes ou les refactorisations de grandes codebases.',
+          title: '#5 Llama 3.3 8B — Meilleur modèle polyvalent de secours pour la programmation',
+          content: 'Si vous avez déjà Llama 3.3 8B installé et ne voulez pas télécharger un modèle de codage séparé, il obtient 72% sur HumanEval — identique à Qwen3 8B. Pour les tâches de programmation quotidiennes (écrire des fonctions, expliquer du code, déboguer), la différence de qualité entre Llama 3.3 8B et un modèle de codage dédié est marginale. Pour des conseils détaillés sur les exigences VRAM pour ces modèles, consultez le [guide des exigences VRAM →](/fr/local-llms/how-much-vram-local-llm). Basculez vers un modèle de codage spécialisé pour les tâches d\'algorithmes complexes ou les refactorisations de grandes codebases.',
           callouts: [
-            { type: 'insight', text: 'Llama 3.1 8B égale Qwen3 8B sur HumanEval (72%) mais manque le support FIM (Fill-in-the-Middle). Cela le rend meilleur pour la génération de code de style chat (poser des questions) mais pire pour l\'autocomplétion IDE (qui nécessite FIM). Choisissez en fonction de votre workflow, pas seulement du benchmark.' },
+            { type: 'insight', text: 'Llama 3.3 8B égale Qwen3 8B sur HumanEval (72%) mais manque le support FIM (Fill-in-the-Middle). Cela le rend meilleur pour la génération de code de style chat (poser des questions) mais pire pour l\'autocomplétion IDE (qui nécessite FIM). Choisissez en fonction de votre workflow, pas seulement du benchmark.' },
           ],
         },
         humanEvalTable: {
@@ -1652,11 +1652,11 @@ schema: {
             { 'Modèle': 'Qwen 3.6 27B', 'HumanEval': '81%', 'MBPP': '71%', 'RAM': '10 GB', 'FIM': 'Oui' },
             { 'Modèle': 'Qwen3 8B', 'HumanEval': '72%', 'MBPP': '68%', 'RAM': '4.5 GB', 'FIM': 'Oui' },
             { 'Modèle': 'Codestral 22B', 'HumanEval': '67%', 'MBPP': '54%', 'RAM': '9 GB', 'FIM': 'Oui (principal)' },
-            { 'Modèle': 'Llama 3.1 8B', 'HumanEval': '72%', 'MBPP': '68%', 'RAM': '5.5 GB', 'FIM': 'Non' },
+            { 'Modèle': 'Llama 3.3 8B', 'HumanEval': '72%', 'MBPP': '68%', 'RAM': '5.5 GB', 'FIM': 'Non' },
           ],
           columns: ['Modèle', 'HumanEval', 'MBPP', 'RAM', 'FIM'],
           image: '/images/best-local-llms-for-coding-humaneval-comparison-fr.svg',
-          imageCaption: 'Scores de benchmark HumanEval pour 5 modèles de codage : Qwen2.5-Coder 32B atteint 87%, DeepSeek-Coder V2 Lite 81%, Qwen 7B et Llama 3.1 8B à 72%, et Codestral 22B à 67%.',
+          imageCaption: 'Scores de benchmark HumanEval pour 5 modèles de codage : Qwen2.5-Coder 32B atteint 87%, DeepSeek-Coder V2 Lite 81%, Qwen 7B et Llama 3.3 8B à 72%, et Codestral 22B à 67%.',
         },
         whichCodingModel: {
           title: 'Quel modèle de programmation local utiliser?',
@@ -1666,7 +1666,7 @@ schema: {
             '**16 GB RAM** : `ollama run deepseek-coder-v2:16b` — 81% HumanEval avec seulement 10 GB RAM.',
             '**20+ GB RAM (meilleure qualité)** : `ollama run qwen2.5-coder:32b` — HumanEval le plus élevé localement disponible.',
             '**Autocomplétion IDE dans VS Code** : Codestral 22B via Continue.dev — optimisé FIM pour la complétion à position du curseur.',
-            '**Llama 3.1 8B déjà en cours d\'exécution** : ignorez le téléchargement d\'un modèle séparé — la qualité de programmation est équivalente à Qwen3 8B pour les tâches quotidiennes.',
+            '**Llama 3.3 8B déjà en cours d\'exécution** : ignorez le téléchargement d\'un modèle séparé — la qualité de programmation est équivalente à Qwen3 8B pour les tâches quotidiennes.',
           ],
           callouts: [
             { type: 'practice', text: 'Adaptez d\'abord la taille du modèle à votre matériel, puis optimisez pour votre cas d\'usage. Si vous avez 8 GB, Qwen3 8B est le meilleur choix. Ne perdez pas de temps à télécharger des modèles plus grands qui causeront une saturation mémoire. Mieux vaut un modèle qui s\'exécute que le modèle parfait qui plante.' },
@@ -1715,7 +1715,7 @@ schema: {
           ],
           callouts: [
             { type: 'warning', text: '❌ **À éviter** : Exécuter Qwen2.5-Coder 32B sur des machines avec <20 GB de RAM libre. La latence devient inutilisable (1–3 jetons/sec). Utilisez soit Qwen3 8B soit DeepSeek-Coder V2 Lite sur les machines plus petites.' },
-            { type: 'warning', text: '❌ **À éviter** : Utiliser des modèles polyvalents (Llama 3.1 8B) quand vous avez besoin d\'autocomplétion IDE. Seuls les modèles spécifiques au code avec support FIM fonctionnent pour la complétion dans l\'éditeur — Qwen2.5-Coder, DeepSeek-Coder ou Starcoder2.' },
+            { type: 'warning', text: '❌ **À éviter** : Utiliser des modèles polyvalents (Llama 3.3 8B) quand vous avez besoin d\'autocomplétion IDE. Seuls les modèles spécifiques au code avec support FIM fonctionnent pour la complétion dans l\'éditeur — Qwen2.5-Coder, DeepSeek-Coder ou Starcoder2.' },
             { type: 'insight', text: 'Débutant → intermédiaire → avancé est aussi une progression en exigences matériel. Commencez avec 7B (8 GB), mettez à niveau vers 16B (16 GB) quand vous ajoutez des outils et workflows, graduez vers 32B (20+ GB) seulement si vous avez besoin de la qualité de raisonnement maximale.' },
           ],
         },
@@ -1759,7 +1759,7 @@ schema: {
         commonMistakes: {
           title: 'Quelles sont les erreurs courantes avec les modèles de programmation locaux?',
           items: [
-            '**Utiliser un modèle polyvalent au lieu d\'un modèle spécifique au code** : Qwen3 8B (72% HumanEval) fonctionne identiquement à Llama 3.1 8B général (72% HumanEval) sur le benchmark — mais Qwen2.5-Coder inclut le support FIM (Fill-in-the-Middle) que Llama 3.1 8B général n\'a pas. Pour l\'autocomplétion IDE, utilisez toujours un modèle spécifique au code.',
+            '**Utiliser un modèle polyvalent au lieu d\'un modèle spécifique au code** : Qwen3 8B (72% HumanEval) fonctionne identiquement à Llama 3.3 8B général (72% HumanEval) sur le benchmark — mais Qwen2.5-Coder inclut le support FIM (Fill-in-the-Middle) que Llama 3.3 8B général n\'a pas. Pour l\'autocomplétion IDE, utilisez toujours un modèle spécifique au code.',
             '**Ne pas définir la longueur du contexte pour l\'examen multi-fichiers** : Ollama par défaut à 2048 jetons. La plupart des fichiers de code sont 1,000-3,000 jetons. Définissez `PARAMETER num_ctx 32768` minimum pour toute tâche de programmation impliquant des fichiers entiers ou plusieurs fonctions en contexte.',
             '**Attendre que les modèles remplacent les IDEs complets** : Les modèles de programmation locaux excellent à la génération au niveau des fonctions, l\'explication des bugs et les suggestions de refactorisation. Ils ne remplacent pas LSP (Language Server Protocol) pour la détection d\'erreurs en temps réel ou la vérification de type. Utilisez Continue.dev ou Cursor pour combiner la génération de modèle local avec l\'outillage IDE complet.',
             '**Utiliser Q3_K_S sur les modèles de programmation pour économiser RAM** : La quantification en dessous de Q4_K_M dégrade notablement la précision de génération de code — les erreurs logiques et les erreurs de syntaxe augmentent. Pour les tâches de programmation, utilisez Q4_K_M minimum. Si la RAM est serrée, choisissez un modèle plus petit à Q4_K_M plutôt qu\'un modèle plus grand à Q3_K_S.',
@@ -1790,7 +1790,7 @@ schema: {
           faqs: [
             { q: 'Quel est le meilleur LLM local pour la programmation en 2026?', a: 'Kimi K2.6 — 58.6 SWE-Bench Pro (MoE, licence MIT modifiée) est le meilleur global. Meilleur modèle dense : Qwen 3.6 27B — 77,2% SWE-bench, 22 GB VRAM. Pour la programmation agentive : Devstral Small 24B. Pour les machines 8 GB : Qwen3 8B.' },
             { q: 'Qu\'est-ce que HumanEval et pourquoi c\'est important?', a: 'HumanEval est un benchmark de 164 problèmes de programmation Python. Le modèle doit générer un corps de fonction correct pour chacun. Les scores pass@1 (pourcentage résolu à la première tentative) sont la métrique standard. C\'est la mesure la plus largement utilisée pour comparer les modèles de programmation.' },
-            { q: 'Qu\'est-ce que Fill-in-the-Middle (FIM) et quels modèles le supportent?', a: 'FIM est la capacité à compléter du code donné le code avant et après le curseur — le motif utilisé par l\'autocomplétion IDE. Qwen2.5-Coder, DeepSeek-Coder et Starcoder2 supportent tous FIM. Llama 3.1 8B général ne le fait pas. Pour l\'intégration IDE, utilisez un modèle compatible FIM.' },
+            { q: 'Qu\'est-ce que Fill-in-the-Middle (FIM) et quels modèles le supportent?', a: 'FIM est la capacité à compléter du code donné le code avant et après le curseur — le motif utilisé par l\'autocomplétion IDE. Qwen2.5-Coder, DeepSeek-Coder et Starcoder2 supportent tous FIM. Llama 3.3 8B général ne le fait pas. Pour l\'intégration IDE, utilisez un modèle compatible FIM.' },
             { q: 'Les modèles de programmation locaux peuvent-ils remplacer GitHub Copilot?', a: 'Non pour l\'autocomplétion en temps réel; oui pour la génération intentionnelle. Qwen2.5-Coder 32B (8–15 jetons/sec) est trop lent pour la complétion au niveau des touches. Mais via Continue.dev pour les workflows request-and-review, Qwen2.5-Coder 32B égale la qualité Copilot sur les tâches de génération de code. Compromis : plus lent mais privé.' },
             { q: 'Combien de RAM ai-je besoin pour les LLMs de programmation locaux?', a: 'Minimum 4 GB (petits modèles 3B), pratiquement 8 GB+ pour une programmation utilisable. Recommandé : 16 GB pour les modèles 7B–16B avec marge. Haut de gamme : 32 GB+ pour les modèles 32B. Utilisez cette formule : taille du modèle en GB ≈ nombre de paramètres ÷ 4 (ex. 7B ÷ 4 ≈ 1.75 GB à FP16, ~4.5 GB à Q4_K_M).' },
             { q: 'Les modèles de programmation locaux sont-ils assez rapides pour le développement?', a: 'Oui pour les workflows itératifs (10–50 jetons/sec). Qwen3 8B s\'exécute sur les ordinateurs portables à 20–35 jetons/sec — attendre 5–10 secondes par réponse est acceptable pour la génération par lots. Non pour l\'autocomplétion en temps réel (<1 sec requis). Pour l\'usage IDE, les modèles locaux conviennent au request-and-review, pas à la complétion au niveau des touches.' },
@@ -1836,7 +1836,7 @@ schema: {
         'mainEntity': [
           { '@type': 'Question', 'name': 'Quel est le meilleur LLM local pour la programmation en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 — 58.6 SWE-Bench Pro (MoE, licence MIT modifiée) est le meilleur global. Meilleur modèle dense : Qwen 3.6 27B — 77,2% SWE-bench, 22 GB VRAM. Pour la programmation agentive : Devstral Small 24B. Pour les machines 8 GB : Qwen3 8B.' } },
           { '@type': 'Question', 'name': 'Qu\'est-ce que HumanEval et pourquoi c\'est important?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HumanEval est un benchmark de 164 problèmes de programmation Python. Le modèle doit générer un corps de fonction correct pour chacun. Les scores pass@1 (pourcentage résolu à la première tentative) sont la métrique standard. C\'est la mesure la plus largement utilisée pour comparer les modèles de programmation.' } },
-          { '@type': 'Question', 'name': 'Qu\'est-ce que Fill-in-the-Middle (FIM) et quels modèles le supportent?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIM est la capacité à compléter du code donné le code avant et après le curseur — le motif utilisé par l\'autocomplétion IDE. Qwen2.5-Coder, DeepSeek-Coder et Starcoder2 supportent tous FIM. Llama 3.1 8B général ne le fait pas. Pour l\'intégration IDE, utilisez un modèle compatible FIM.' } },
+          { '@type': 'Question', 'name': 'Qu\'est-ce que Fill-in-the-Middle (FIM) et quels modèles le supportent?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIM est la capacité à compléter du code donné le code avant et après le curseur — le motif utilisé par l\'autocomplétion IDE. Qwen2.5-Coder, DeepSeek-Coder et Starcoder2 supportent tous FIM. Llama 3.3 8B général ne le fait pas. Pour l\'intégration IDE, utilisez un modèle compatible FIM.' } },
           { '@type': 'Question', 'name': 'Les modèles de programmation locaux peuvent-ils remplacer GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non pour l\'autocomplétion en temps réel; oui pour la génération intentionnelle. Qwen2.5-Coder 32B (8–15 jetons/sec) est trop lent pour la complétion au niveau des touches. Mais via Continue.dev pour les workflows request-and-review, Qwen2.5-Coder 32B égale la qualité Copilot sur les tâches de génération de code. Compromis : plus lent mais privé.' } },
           { '@type': 'Question', 'name': 'Combien de RAM ai-je besoin pour les LLMs de programmation locaux?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Minimum 4 GB (petits modèles 3B), pratiquement 8 GB+ pour une programmation utilisable. Recommandé : 16 GB pour les modèles 7B–16B avec marge. Haut de gamme : 32 GB+ pour les modèles 32B. Utilisez cette formule : taille du modèle en GB ≈ nombre de paramètres ÷ 4 (ex. 7B ÷ 4 ≈ 1.75 GB à FP16, ~4.5 GB à Q4_K_M).' } },
           { '@type': 'Question', 'name': 'Les modèles de programmation locaux sont-ils assez rapides pour le développement?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui pour les workflows itératifs (10–50 jetons/sec). Qwen3 8B s\'exécute sur les ordinateurs portables à 20–35 jetons/sec — attendre 5–10 secondes par réponse est acceptable pour la génération par lots. Non pour l\'autocomplétion en temps réel (<1 sec requis). Pour l\'usage IDE, les modèles locaux conviennent au request-and-review, pas à la complétion au niveau des touches.' } },
@@ -1857,7 +1857,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Qwen 3.6 27B', 'description': '81% HumanEval. 10 GB RAM. Architecture MoE. Support FIM. ollama run deepseek-coder-v2:16b', 'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-for-coding#deepseek-coder-v2' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': '72% HumanEval. 4.5 GB RAM. Meilleur pour machines 8 GB. FIM. ollama run qwen2.5-coder:7b', 'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-for-coding#qwen25-coder-7b' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Codestral 22B', 'description': '67% HumanEval. Meilleure autocomplétion FIM. 9 GB RAM. 600+ langues.', 'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-for-coding#starcoder2-15b' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': '72% HumanEval. 5.5 GB RAM. Modèle polyvalent de secours. ollama run llama3.2', 'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-for-coding#llama-31-8b' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '72% HumanEval. 5.5 GB RAM. Modèle polyvalent de secours. ollama run llama3.2', 'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-for-coding#llama-31-8b' },
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
@@ -1884,7 +1884,7 @@ schema: {
         { label: '#2 Qwen 3.6 27B', anchor: '#deepseek-coder-v2' },
         { label: '#3 Qwen3 8B', anchor: '#qwen25-coder-7b' },
         { label: '#4 Codestral 22B', anchor: '#starcoder2-15b' },
-        { label: '#5 Llama 3.1 8B（汎用フォールバック）', anchor: '#llama-31-8b' },
+        { label: '#5 Llama 3.3 8B（汎用フォールバック）', anchor: '#llama-31-8b' },
         { label: '8 GB VRAMに最適なコーディングLLM', anchor: '#coding-llm-8gb-vram' },
         { label: '16 GB VRAMに最適なコーディングLLM', anchor: '#coding-llm-16gb-vram' },
         { label: '6 GB VRAMに最適なコーディングLLM', anchor: '#coding-llm-6gb-vram' },
@@ -1916,7 +1916,7 @@ schema: {
           id: 'what-makes-coding-llm',
           title: 'コーディングに適したLLMとは？',
           content: [
-            'コーディングLLMは汎用モデルとは異なります。汎用モデル（Llama 3.1、Mistral）はテキスト生成を目的に訓練されます。一方、コーディングモデル（Qwen2.5-Coder、DeepSeek-Coder）はコードコーパスで特別に微調整されています。',
+            'コーディングLLMは汎用モデルとは異なります。汎用モデル（Llama 3.3、Mistral）はテキスト生成を目的に訓練されます。一方、コーディングモデル（Qwen2.5-Coder、DeepSeek-Coder）はコードコーパスで特別に微調整されています。',
             '**主な違い**：コーディングモデルはHumanEvalで5～15ポイント高いスコアを達成します。これは関数署名、アルゴリズム推論、API使用パターンの正確性向上を意味します。',
             '**Fill-in-the-Middle（FIM）サポート**：IDE統合には重要です。FIMはカーソル前後のコード片を指定でコード補完する能力です。Starcoder2、Qwen2.5-Coder、DeepSeek-Coderはすべてサポート。',
           ],
@@ -1974,7 +1974,7 @@ schema: {
         },
         llama31_8b: {
           id: 'llama-31-8b',
-          title: '#5 Llama 3.1 8B（汎用フォールバック）',
+          title: '#5 Llama 3.3 8B（汎用フォールバック）',
           content: [
             '**HumanEval：72%** — Qwen3 8Bと同等スコア',
             '**メモリ：5.5 GB RAM** — 8 GBマシンで安定',
@@ -1995,7 +1995,7 @@ schema: {
             { 'モデル': 'DeepSeek-Coder V2 Lite', 'HumanEval%': '81', 'メモリ(GB)': '10', '速度(tok/s)': '15-25', 'FIM': '✓' },
             { 'モデル': 'Qwen3 8B', 'HumanEval%': '72', 'メモリ(GB)': '4.7', '速度(tok/s)': '20-35', 'FIM': '✓' },
             { 'モデル': 'Codestral 22B', 'HumanEval%': '67', 'メモリ(GB)': '9', '速度(tok/s)': '18-28', 'FIM': '✓（最適）' },
-            { 'モデル': 'Llama 3.1 8B', 'HumanEval%': '72', 'メモリ(GB)': '5.5', '速度(tok/s)': '20-30', 'FIM': '✗' },
+            { 'モデル': 'Llama 3.3 8B', 'HumanEval%': '72', 'メモリ(GB)': '5.5', '速度(tok/s)': '20-30', 'FIM': '✗' },
           ],
           image: '/images/best-local-llms-for-coding-humaneval-comparison-ja.svg',
           imageCaption: '5つのコーディングモデルのHumanEvalベンチマークスコア：Qwen2.5-Coder 32Bが87%、DeepSeek-Coder V2 Lite 81%、Qwen3 8Bとllama 3.1 8Bが72%、Codestral 22Bが67%。',
@@ -2116,7 +2116,7 @@ schema: {
           numberedItems: [
             '**RAMサイズ無視**：「7Bモデルなら4 GBで十分」と誤解。実際は4.7～8 GB必要（OS、他プロセス含む）。8 GBマシンはOOM回避のため最小構成。',
             '**量子化の知識不足**：Q4_K_M vs Q5_K_Mの違い不明。品質重視ならQ5_K_M推奨（ストレージ少増）。Q4_K_Mは最小RAM。',
-            'FIM未対応モデル選択**：Llama 3.1 8Bを「IDE用」と思い込む。FIMサポートなく補完失敗。Qwen/Starcoder/DeepSeek選ぶ。',
+            'FIM未対応モデル選択**：Llama 3.3 8Bを「IDE用」と思い込む。FIMサポートなく補完失敗。Qwen/Starcoder/DeepSeek選ぶ。',
             '**オフラインテスト不実施**：ネット接続前提で開発。Ollama設定ネット不要確認せず。Ollama is offline――設定確認必須。',
             '**単一モデル過信**：87% HumanEvalでも100%成功せず。複雑タスクは複数世代実行・投票ロジック必須。',
             '**CPU性能過大評価**：M1/M2でも7Bは15～25 tok/s。「速い」は相対的。待機時間心理的許容確認。',
@@ -2178,7 +2178,7 @@ schema: {
         mainEntity: [
           { '@type': 'Question', 'name': '2026年に最高のコーディング用ローカルLLMは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6――58.6 SWE-Bench Pro（MoE、Modified MITライセンス）が総合的に最高です。最高の密集モデルはQwen 3.6 27B――77.2% SWE-bench、22 GB VRAM。エージェントコーディング：Devstral Small 24B。8 GBマシン用：Qwen3 8B。' } },
           { '@type': 'Question', 'name': 'HumanEvalとは何で、なぜ重要？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HumanEvalは164のPythonプログラミング問題から成るベンチマーク。モデルは各問題で正しい関数本体を生成する必要がある。Pass@1スコア（最初の試行で解決された割合）は標準メトリクス。コーディングモデル比較における最も広く使用されているメジャー。' } },
-          { '@type': 'Question', 'name': 'Fill-in-the-Middle（FIM）とは、どのモデルがサポート？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIMはカーソル前後のコード指定でコード補完する能力――IDEオートコンプリートで使用されるパターン。Qwen2.5-Coder、DeepSeek-Coder、Starcoder2はすべてFIMをサポート。Llama 3.1 8B汎用はサポートしない。IDE統合用にはFIM互換モデルを使用。' } },
+          { '@type': 'Question', 'name': 'Fill-in-the-Middle（FIM）とは、どのモデルがサポート？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIMはカーソル前後のコード指定でコード補完する能力――IDEオートコンプリートで使用されるパターン。Qwen2.5-Coder、DeepSeek-Coder、Starcoder2はすべてFIMをサポート。Llama 3.3 8B汎用はサポートしない。IDE統合用にはFIM互換モデルを使用。' } },
           { '@type': 'Question', 'name': 'ローカルプログラミングモデルはGitHub Copilotに代わる？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'リアルタイムオートコンプリートではいいえ。意図的なコード生成では可。Qwen2.5-Coder 32B（8～15トークン/秒）はキー単位の補完には遅い。Continue.devを経由したrequest-and-reviewワークフローでは、Qwen2.5-Coder 32Bはコード生成タスクでCopilot品質と同等。トレードオフ：遅いが非公開。' } },
           { '@type': 'Question', 'name': 'ローカルプログラミングLLMに必要なRAM？', 'acceptedAnswer': { '@type': 'Answer', 'text': '最小4 GB（小さい3Bモデル）、実用的には8 GB+。推奨：16 GBで7B～16Bモデル用余裕あり。ハイエンド：32 GB+で32Bモデル。計算式：パラメータ数GB≈パラメータ数÷4（例：7B÷4≈FP16で1.75 GB、Q4_K_Mで~4.5 GB）。' } },
           { '@type': 'Question', 'name': 'ローカルプログラミングモデルは開発に十分な速度？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、反復ワークフロー用（10～50トークン/秒）。Qwen3 8Bはラップトップで20～35トークン/秒――応答あたり5～10秒待機は一括生成に許容可。リアルタイムオートコンプリート用にはいいえ（<1秒必要）。IDE使用にはローカルモデルはrequest-and-review向き、キー単位補完ではない。' } },
@@ -2199,7 +2199,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Qwen 3.6 27B', 'description': '81% HumanEval。10 GB RAM。MoEアーキテクチャ。FIMサポート。ollama run deepseek-coder-v2:16b' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': '72% HumanEval。4.7 GB RAM。8 GBマシン用最適。FIM。ollama run qwen2.5-coder:7b' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Codestral 22B', 'description': '67% HumanEval。最高FIMオートコンプリート。9 GB RAM。600以上言語。' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': '72% HumanEval。5.5 GB RAM。汎用フォールバックモデル。ollama run llama3.2' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '72% HumanEval。5.5 GB RAM。汎用フォールバックモデル。ollama run llama3.2' },
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
@@ -2226,7 +2226,7 @@ schema: {
         { label: '#2 Qwen 3.6 27B', anchor: '#deepseek-coder-v2' },
         { label: '#3 Qwen3 8B', anchor: '#qwen25-coder-7b' },
         { label: '#4 Codestral 22B', anchor: '#starcoder2-15b' },
-        { label: '#5 Llama 3.1 8B（通用备选）', anchor: '#llama-31-8b' },
+        { label: '#5 Llama 3.3 8B（通用备选）', anchor: '#llama-31-8b' },
         { label: '8 GB显存最佳编码LLM', anchor: '#coding-llm-8gb-vram' },
         { label: '16 GB显存最佳编码LLM', anchor: '#coding-llm-16gb-vram' },
         { label: '6 GB显存最佳编码LLM', anchor: '#coding-llm-6gb-vram' },
@@ -2258,7 +2258,7 @@ schema: {
           id: 'what-makes-coding-llm',
           title: '什么是好的编码LLM？',
           content: [
-            '编码LLM与通用模型不同。通用模型（Llama 3.1、Mistral）以文本生成为目标训练。而编码模型（Qwen2.5-Coder、DeepSeek-Coder）专门在代码语料库上微调。',
+            '编码LLM与通用模型不同。通用模型（Llama 3.3、Mistral）以文本生成为目标训练。而编码模型（Qwen2.5-Coder、DeepSeek-Coder）专门在代码语料库上微调。',
             '**关键差异**：编码模型在HumanEval上得分高5～15分。这意味着函数签名、算法推理、API使用模式的准确性更高。',
             '**Fill-in-the-Middle（FIM）支持**：IDE集成的关键。FIM是给定光标前后代码片段来补全代码的能力。Starcoder2、Qwen2.5-Coder、DeepSeek-Coder都支持。',
           ],
@@ -2316,7 +2316,7 @@ schema: {
         },
         llama31_8b: {
           id: 'llama-31-8b',
-          title: '#5 Llama 3.1 8B（通用备选）',
+          title: '#5 Llama 3.3 8B（通用备选）',
           content: [
             '**HumanEval：72%** ——与Qwen3 8B得分相同',
             '**内存：5.5 GB RAM** ——8 GB机器稳定',
@@ -2337,10 +2337,10 @@ schema: {
             { '模型': 'DeepSeek-Coder V2 Lite', 'HumanEval%': '81', '内存(GB)': '10', '速度(tok/s)': '15-25', 'FIM': '✓' },
             { '模型': 'Qwen3 8B', 'HumanEval%': '72', '内存(GB)': '4.7', '速度(tok/s)': '20-35', 'FIM': '✓' },
             { '模型': 'Codestral 22B', 'HumanEval%': '67', '内存(GB)': '9', '速度(tok/s)': '18-28', 'FIM': '✓（最优）' },
-            { '模型': 'Llama 3.1 8B', 'HumanEval%': '72', '内存(GB)': '5.5', '速度(tok/s)': '20-30', 'FIM': '✗' },
+            { '模型': 'Llama 3.3 8B', 'HumanEval%': '72', '内存(GB)': '5.5', '速度(tok/s)': '20-30', 'FIM': '✗' },
           ],
           image: '/images/best-local-llms-for-coding-humaneval-comparison-zh.svg',
-          imageCaption: '5款编码模型的HumanEval基准得分：Qwen2.5-Coder 32B达87%、DeepSeek-Coder V2 Lite 81%、Qwen3 8B与Llama 3.1 8B均72%、Codestral 22B 67%。',
+          imageCaption: '5款编码模型的HumanEval基准得分：Qwen2.5-Coder 32B达87%、DeepSeek-Coder V2 Lite 81%、Qwen3 8B与Llama 3.3 8B均72%、Codestral 22B 67%。',
         },
         quickFacts: {
           id: 'quick-facts',
@@ -2458,7 +2458,7 @@ schema: {
           numberedItems: [
             '**忽视RAM大小**："7B模型4 GB够"误解。实际4.7～8 GB必需（OS、进程含）。8 GB机器为最小值，无OOM需验证。',
             '**量化知识不足**：Q4_K_M vs Q5_K_M区别不明。质量优先用Q5_K_M（存储少增）。Q4_K_M最小RAM。',
-            '**选错FIM模型**：Llama 3.1 8B当"IDE用"。FIM不支持补全失败。选Qwen/Starcoder/DeepSeek。',
+            '**选错FIM模型**：Llama 3.3 8B当"IDE用"。FIM不支持补全失败。选Qwen/Starcoder/DeepSeek。',
             '**离线测试缺失**：网络连接前提。Ollama离线验证未做。Ollama offline——配置确认必须。',
             '**单一模型过信**：87% HumanEval不是100%成功。复杂任务多代生成、投票逻辑必需。',
             '**CPU性能过估**：M1/M2亦7B是15～25 tok/s。"快"相对。等待时间心理容限确认。',
@@ -2520,7 +2520,7 @@ schema: {
         mainEntity: [
           { '@type': 'Question', 'name': '2026年最佳本地编码LLM是什么？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6——58.6 SWE-Bench Pro（MoE、修改版MIT许可证）综合最佳。最佳密集模型为Qwen 3.6 27B——77.2% SWE-bench、22 GB VRAM。代理编码：Devstral Small 24B。8 GB机器：Qwen3 8B。' } },
           { '@type': 'Question', 'name': 'HumanEval是什么，为何重要？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HumanEval是164个Python编程问题的基准。模型须为每个问题生成正确的函数体。Pass@1分数（首次尝试解决的百分比）是标准指标。编码模型比较中最广泛使用的测度。' } },
-          { '@type': 'Question', 'name': 'Fill-in-the-Middle（FIM）是什么，哪些模型支持？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIM是给定光标前后代码来补全代码的能力——IDE自动补全使用的模式。Qwen2.5-Coder、DeepSeek-Coder、Starcoder2都支持FIM。Llama 3.1 8B通用不支持。IDE集成用FIM兼容模型。' } },
+          { '@type': 'Question', 'name': 'Fill-in-the-Middle（FIM）是什么，哪些模型支持？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIM是给定光标前后代码来补全代码的能力——IDE自动补全使用的模式。Qwen2.5-Coder、DeepSeek-Coder、Starcoder2都支持FIM。Llama 3.3 8B通用不支持。IDE集成用FIM兼容模型。' } },
           { '@type': 'Question', 'name': '本地编程模型能替代GitHub Copilot吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '实时自动补全：不能。意图代码生成：可以。Qwen2.5-Coder 32B（8-15 token/秒）太慢用于按键补全。通过Continue.dev的请求-审查工作流，Qwen2.5-Coder 32B在代码生成任务上与Copilot质量相当。权衡：更慢但私密。' } },
           { '@type': 'Question', 'name': '本地编程LLM需要多少RAM？', 'acceptedAnswer': { '@type': 'Answer', 'text': '最小4 GB（小3B模型），实用8 GB+。推荐：16 GB用于7B-16B模型余地充足。高端：32 GB+用于32B模型。公式：GB数≈参数数÷4（如：7B÷4≈FP16下1.75 GB，Q4_K_M下~4.5 GB）。' } },
           { '@type': 'Question', 'name': '本地编程模型开发够快吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是，迭代工作流（10-50 token/秒）。Qwen3 8B在笔记本电脑上20-35 token/秒——每个响应等待5-10秒对批量生成可接受。实时自动补全不够快（<1秒需要）。IDE用途本地模型适合请求-审查，不适合按键补全。' } },
@@ -2541,7 +2541,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Qwen 3.6 27B', 'description': '81% HumanEval。10 GB RAM。MoE架构。FIM支持。ollama run deepseek-coder-v2:16b' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': '72% HumanEval。4.7 GB RAM。8 GB机器最优。FIM。ollama run qwen2.5-coder:7b' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Codestral 22B', 'description': '67% HumanEval。最佳FIM自动补全。9 GB RAM。600+语言。' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': '72% HumanEval。5.5 GB RAM。通用备选模型。ollama run llama3.2' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '72% HumanEval。5.5 GB RAM。通用备选模型。ollama run llama3.2' },
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',

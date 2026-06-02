@@ -1021,7 +1021,7 @@ schema: {
             'Q8: VRAM余裕がある完璧主義者向け。3%品質向上、VRAM3倍。',
             'Q2/Q3: 極めて低いメモリ(7B を 1GB で)だが、品質低下著しい。',
             'FP32/FP16: 民生ハードウェアでは不要。本番環境のみ。',
-            '推奨: Llama 3 70B → Q4 (20GB)。Mistral 7B → Q4 (3.5GB)。',
+            '推奨: Llama 3 70B → Q4 (20GB)。Mistral Small → Q4 (3.5GB)。',
           ],
         },
         'what-is-quantization': {
@@ -1161,7 +1161,7 @@ schema: {
             'Q8: 拥有剩余VRAM的完美主义者。3%质量改进，VRAM增加3倍。',
             'Q2/Q3: 极低内存(7B模型1GB)但质量严重下降。',
             'FP32/FP16: 消费级硬件不需要。仅生产使用。',
-            '推荐: Llama 3 70B → Q4 (20GB)。Mistral 7B → Q4 (3.5GB)。',
+            '推荐: Llama 3 70B → Q4 (20GB)。Mistral Small → Q4 (3.5GB)。',
           ],
         },
         'what-is-quantization': {

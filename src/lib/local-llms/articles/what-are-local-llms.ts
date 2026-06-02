@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'What Are Local LLMs? How AI Models Run on Your Hardware',
       intro: 'A local LLM is an AI language model that runs entirely on your own hardware -- no internet connection, no API calls, no data leaving your machine. You download the model weights as a file, run an inference engine like Ollama or LM Studio, and the model responds from your CPU or GPU alone. As of April 2026, the most practical models for beginners are Llama 3.2 3B and Phi-3 Mini.',
       metaDescription: 'Local LLMs run AI models on your own hardware -- no internet required. Learn what they are, how they work, and when to use them. Guide for 2026.',
-      leadAnswerBlock: '**Local LLMs run all inference on your own hardware at zero token cost with full data privacy.** Cloud APIs (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro) deliver higher quality with minimal setup.',
+      leadAnswerBlock: '**Local LLMs run all inference on your own hardware at zero token cost with full data privacy.** Cloud APIs (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) deliver higher quality with minimal setup.',
       dateModified: '2026-04-15',
       publishDate: '2026-04-04',
       audience: 'Beginners running their first local LLM on consumer hardware',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'A local LLM runs on your own CPU or GPU -- no internet, no API costs, no data sent to third-party servers.',
             'Three components are required: the model file (GGUF or safetensors format), an inference engine (Ollama, LM Studio, or llama.cpp), and optionally a chat interface.',
             'Minimum hardware: 8 GB RAM for a 7B-parameter model at 4-bit quantization. 16 GB RAM handles most everyday models comfortably.',
-            'Local models are slower than cloud APIs on consumer hardware -- a 7B model on a modern laptop produces 15-40 tokens/sec vs. ~100 tokens/sec from GPT-4o Mini via API.',
+            'Local models are slower than cloud APIs on consumer hardware -- a 7B model on a modern laptop produces 15-40 tokens/sec vs. ~100 tokens/sec from GPT-5.5 Mini via API.',
             'Best use cases: private data processing, offline work, zero recurring cost, and learning how LLMs work.',
           ],
         },
@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What Is a Local LLM?',
           content: [
             '**A local LLM (large language model) is an AI model that runs on hardware you control -- your laptop, desktop, or on-premise server.** The model weights are stored as a file on your disk, and all processing happens on your own CPU or GPU. No prompt text or response data is transmitted to any external server.',
-            'The term "local" distinguishes these models from cloud-hosted services like OpenAI GPT-4o, Anthropic Claude 4.6, or Google Gemini 3.1 Pro, which process your prompts on remote servers and return results over the internet.',
+            'The term "local" distinguishes these models from cloud-hosted services like OpenAI GPT-5.5, Anthropic Claude 4.6, or Google Gemini 3.1 Pro, which process your prompts on remote servers and return results over the internet.',
             'Local LLMs range from small 1B-parameter models that run on a phone to 70B-parameter models that require a workstation with 48 GB of VRAM. The most commonly used beginner models -- Meta Llama 3.2 3B, Microsoft Phi-3 Mini, and Google Gemma 2 2B -- run on any laptop with 8 GB of RAM.',
           ],
         },
@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'The hardware requirement depends entirely on which model you want to run and how fast you need responses.',
           rows: [
             { 'Model Size': '1B-3B parameters', 'RAM Required': '4-6 GB', 'Speed (CPU)': '20-60 tok/sec', 'Example Models': 'Llama 3.2 1B, Phi-3 Mini 3.8B' },
-            { 'Model Size': '7B-8B parameters', 'RAM Required': '6-8 GB', 'Speed (CPU)': '10-30 tok/sec', 'Example Models': 'Llama 3.1 8B, Mistral 7B' },
+            { 'Model Size': '7B-8B parameters', 'RAM Required': '6-8 GB', 'Speed (CPU)': '10-30 tok/sec', 'Example Models': 'Llama 3.3 8B, Mistral Small' },
             { 'Model Size': '13B-14B parameters', 'RAM Required': '10-12 GB', 'Speed (CPU)': '5-15 tok/sec', 'Example Models': 'Llama 3.2 13B, Qwen2.5 14B' },
             { 'Model Size': '32B-34B parameters', 'RAM Required': '20-24 GB', 'Speed (CPU)': '2-6 tok/sec', 'Example Models': 'Qwen2.5 32B, DeepSeek-R1 32B' },
             { 'Model Size': '70B+ parameters', 'RAM Required': '40-48 GB', 'Speed (CPU)': '1-3 tok/sec', 'Example Models': 'Llama 3.3 70B, Qwen2.5 72B' },
@@ -87,7 +87,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Factor': 'Privacy', 'Local LLM': 'Complete -- data never leaves your machine', 'Cloud API': 'Data processed on provider servers' },
             { 'Factor': 'Cost', 'Local LLM': '$0 per token after hardware cost', 'Cloud API': '$0.15-$15 per 1M tokens depending on model' },
             { 'Factor': 'Speed', 'Local LLM': '10-120 tok/sec on consumer hardware', 'Cloud API': '50-200 tok/sec, varies by load' },
-            { 'Factor': 'Model quality', 'Local LLM': 'Good -- competitive at 70B scale', 'Cloud API': 'Best available (GPT-4o, Claude 4.6 Sonnet)' },
+            { 'Factor': 'Model quality', 'Local LLM': 'Good -- competitive at 70B scale', 'Cloud API': 'Best available (GPT-5.5, Claude 4.6 Sonnet)' },
             { 'Factor': 'Setup time', 'Local LLM': '5-15 minutes with Ollama or LM Studio', 'Cloud API': '2-5 minutes to get an API key' },
             { 'Factor': 'Offline use', 'Local LLM': 'Yes -- works without internet', 'Cloud API': 'No -- requires active connection' },
           ],
@@ -118,8 +118,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Common Questions About Local LLMs',
           faqs: [
             {
-              q: 'Can a local LLM match GPT-4o quality?',
-              a: 'No -- not on current consumer hardware. GPT-4o and Claude 4.6 Sonnet outperform any locally-runnable model on complex reasoning, code generation, and instruction-following benchmarks. However, for summarization, translation, and everyday writing tasks, a well-quantized 13B-34B model produces results that are difficult to distinguish from frontier models.',
+              q: 'Can a local LLM match GPT-5.5 quality?',
+              a: 'No -- not on current consumer hardware. GPT-5.5 and Claude 4.6 Sonnet outperform any locally-runnable model on complex reasoning, code generation, and instruction-following benchmarks. However, for summarization, translation, and everyday writing tasks, a well-quantized 13B-34B model produces results that are difficult to distinguish from frontier models.',
             },
             {
               q: 'Do I need a GPU to run a local LLM?',
@@ -153,7 +153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             'Assuming all local models are equally private -- some interfaces or quantizations may still log data.',
             'Running models that are too large for available RAM, causing severe slowdown from disk swapping.',
-            'Not understanding that model quality varies dramatically -- not all local models match GPT-4o on complex tasks.',
+            'Not understanding that model quality varies dramatically -- not all local models match GPT-5.5 on complex tasks.',
           ],
         },
         relatedReading: {
@@ -237,7 +237,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Can local LLMs match GPT-4 quality?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Not yet for the most demanding tasks. As of April 2026, the best consumer-grade local model (Llama 3.3 70B at Q4) approaches GPT-4 Turbo on benchmarks but requires a workstation GPU with 48GB+ VRAM. 7B models run on laptops but are significantly weaker than GPT-4o.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Not yet for the most demanding tasks. As of April 2026, the best consumer-grade local model (Llama 3.3 70B at Q4) approaches GPT-4 Turbo on benchmarks but requires a workstation GPU with 48GB+ VRAM. 7B models run on laptops but are significantly weaker than GPT-5.5.' }
           },
           {
             '@type': 'Question',
@@ -264,7 +264,7 @@ schema: {
       seoTitle: '¿Qué son los LLM locales? IA que corre en tu hardware',
       intro: 'Un LLM local es un modelo de lenguaje de IA que se ejecuta completamente en tu propio hardware: sin conexión a internet, sin llamadas a API, sin datos que abandonen tu máquina. Descarga los pesos del modelo como un archivo, ejecuta un motor de inferencia como Ollama o LM Studio, y el modelo responde desde tu CPU o GPU. A partir de abril de 2026, los modelos más prácticos para principiantes son Llama 3.2 3B y Phi-3 Mini.',
       metaDescription: 'Los LLM locales ejecutan modelos de IA en tu propio hardware, sin necesidad de internet. Aprende qué son, cómo funcionan y cuándo usarlos. Guía para 2026.',
-      leadAnswerBlock: '**Los LLM locales ejecutan toda la inferencia en tu propio hardware con coste cero por token y privacidad total.** Las API en la nube (GPT-4o, Claude Opus 4.8, Gemini 3.1 Pro) ofrecen mayor calidad con una configuración mínima.',
+      leadAnswerBlock: '**Los LLM locales ejecutan toda la inferencia en tu propio hardware con coste cero por token y privacidad total.** Las API en la nube (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) ofrecen mayor calidad con una configuración mínima.',
       dateModified: '2026-04-15',
       publishDate: '2026-04-04',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
@@ -289,7 +289,7 @@ schema: {
             'Un LLM local se ejecuta en tu propia CPU o GPU: sin internet, sin costes de API, sin datos enviados a servidores de terceros.',
             'Se necesitan tres componentes: el archivo del modelo (formato GGUF o safetensors), un motor de inferencia (Ollama, LM Studio o llama.cpp) y, opcionalmente, una interfaz de chat.',
             'Hardware mínimo: 8 GB de RAM para un modelo de 7B parámetros con cuantización de 4 bits. Con 16 GB de RAM se manejan con comodidad la mayoría de los modelos cotidianos.',
-            'Los modelos locales son más lentos que las API en la nube en hardware de consumo: un modelo de 7B en un portátil moderno produce 15-40 tokens/seg frente a ~100 tokens/seg de GPT-4o Mini por API.',
+            'Los modelos locales son más lentos que las API en la nube en hardware de consumo: un modelo de 7B en un portátil moderno produce 15-40 tokens/seg frente a ~100 tokens/seg de GPT-5.5 Mini por API.',
             'Mejores casos de uso: procesamiento de datos privados, trabajo sin conexión, coste recurrente cero y aprender cómo funcionan los LLM.',
           ],
         },
@@ -297,7 +297,7 @@ schema: {
           title: '¿Qué es un LLM local?',
           content: [
             '**Un LLM local (modelo de lenguaje grande) es un modelo de IA que se ejecuta en hardware bajo tu control: tu portátil, ordenador de escritorio o servidor local.** Los pesos del modelo se almacenan como un archivo en tu disco, y todo el procesamiento ocurre en tu propia CPU o GPU. Ningún texto de los prompts ni datos de respuesta se transmite a ningún servidor externo.',
-            'El término "local" distingue estos modelos de los servicios alojados en la nube, como OpenAI GPT-4o, Anthropic Claude 4.6 o Google Gemini 3.1 Pro, que procesan tus prompts en servidores remotos y devuelven los resultados por internet.',
+            'El término "local" distingue estos modelos de los servicios alojados en la nube, como OpenAI GPT-5.5, Anthropic Claude 4.6 o Google Gemini 3.1 Pro, que procesan tus prompts en servidores remotos y devuelven los resultados por internet.',
             'Los LLM locales van desde pequeños modelos de 1B parámetros que funcionan en un teléfono hasta modelos de 70B parámetros que requieren una estación de trabajo con 48 GB de VRAM. Los modelos para principiantes más utilizados -- Meta Llama 3.2 3B, Microsoft Phi-3 Mini y Google Gemma 2 2B -- funcionan en cualquier portátil con 8 GB de RAM.',
           ],
         },
@@ -317,7 +317,7 @@ schema: {
           content: 'El requisito de hardware depende completamente del modelo que quieras ejecutar y de la velocidad de respuesta que necesites.',
           rows: [
             { 'Tamaño del modelo': '1B-3B parámetros', 'RAM necesaria': '4-6 GB', 'Velocidad (CPU)': '20-60 tok/seg', 'Modelos de ejemplo': 'Llama 3.2 1B, Phi-3 Mini 3.8B' },
-            { 'Tamaño del modelo': '7B-8B parámetros', 'RAM necesaria': '6-8 GB', 'Velocidad (CPU)': '10-30 tok/seg', 'Modelos de ejemplo': 'Llama 3.1 8B, Mistral 7B' },
+            { 'Tamaño del modelo': '7B-8B parámetros', 'RAM necesaria': '6-8 GB', 'Velocidad (CPU)': '10-30 tok/seg', 'Modelos de ejemplo': 'Llama 3.3 8B, Mistral Small' },
             { 'Tamaño del modelo': '13B-14B parámetros', 'RAM necesaria': '10-12 GB', 'Velocidad (CPU)': '5-15 tok/seg', 'Modelos de ejemplo': 'Llama 3.2 13B, Qwen2.5 14B' },
             { 'Tamaño del modelo': '32B-34B parámetros', 'RAM necesaria': '20-24 GB', 'Velocidad (CPU)': '2-6 tok/seg', 'Modelos de ejemplo': 'Qwen2.5 32B, DeepSeek-R1 32B' },
             { 'Tamaño del modelo': '70B+ parámetros', 'RAM necesaria': '40-48 GB', 'Velocidad (CPU)': '1-3 tok/seg', 'Modelos de ejemplo': 'Llama 3.3 70B, Qwen2.5 72B' },
@@ -336,7 +336,7 @@ schema: {
             { 'Factor': 'Privacidad', 'LLM local': 'Total: los datos nunca salen de tu máquina', 'API en la nube': 'Datos procesados en servidores del proveedor' },
             { 'Factor': 'Coste', 'LLM local': '$0 por token tras el coste del hardware', 'API en la nube': '$0,15-$15 por 1M de tokens según el modelo' },
             { 'Factor': 'Velocidad', 'LLM local': '10-120 tok/seg en hardware de consumo', 'API en la nube': '50-200 tok/seg, varía según la carga' },
-            { 'Factor': 'Calidad del modelo', 'LLM local': 'Buena: competitiva a escala 70B', 'API en la nube': 'La mejor disponible (GPT-4o, Claude 4.6 Sonnet)' },
+            { 'Factor': 'Calidad del modelo', 'LLM local': 'Buena: competitiva a escala 70B', 'API en la nube': 'La mejor disponible (GPT-5.5, Claude 4.6 Sonnet)' },
             { 'Factor': 'Tiempo de configuración', 'LLM local': '5-15 minutos con Ollama o LM Studio', 'API en la nube': '2-5 minutos para obtener una API key' },
             { 'Factor': 'Uso sin conexión', 'LLM local': 'Sí: funciona sin internet', 'API en la nube': 'No: requiere conexión activa' },
           ],
@@ -367,8 +367,8 @@ schema: {
           title: 'Preguntas frecuentes sobre los LLM locales',
           faqs: [
             {
-              q: '¿Puede un LLM local igualar la calidad de GPT-4o?',
-              a: 'No, no en el hardware de consumo actual. GPT-4o y Claude 4.6 Sonnet superan a cualquier modelo ejecutable localmente en razonamiento complejo, generación de código y benchmarks de seguimiento de instrucciones. Sin embargo, para tareas de resumen, traducción y escritura cotidiana, un modelo de 13B-34B bien cuantizado produce resultados difíciles de distinguir de los modelos frontier.',
+              q: '¿Puede un LLM local igualar la calidad de GPT-5.5?',
+              a: 'No, no en el hardware de consumo actual. GPT-5.5 y Claude 4.6 Sonnet superan a cualquier modelo ejecutable localmente en razonamiento complejo, generación de código y benchmarks de seguimiento de instrucciones. Sin embargo, para tareas de resumen, traducción y escritura cotidiana, un modelo de 13B-34B bien cuantizado produce resultados difíciles de distinguir de los modelos frontier.',
             },
             {
               q: '¿Necesito una GPU para ejecutar un LLM local?',
@@ -402,7 +402,7 @@ schema: {
           items: [
             'Asumir que todos los modelos locales son igualmente privados: algunas interfaces o cuantizaciones pueden seguir registrando datos.',
             'Ejecutar modelos demasiado grandes para la RAM disponible, lo que provoca una ralentización severa por intercambio de disco.',
-            'No entender que la calidad de los modelos varía drásticamente: no todos los modelos locales igualan a GPT-4o en tareas complejas.',
+            'No entender que la calidad de los modelos varía drásticamente: no todos los modelos locales igualan a GPT-5.5 en tareas complejas.',
           ],
         },
         relatedReading: {
@@ -486,7 +486,7 @@ schema: {
           {
             '@type': 'Question',
             'name': '¿Pueden los LLM locales igualar la calidad de GPT-4?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Todavía no para las tareas más exigentes. A partir de abril de 2026, el mejor modelo local para consumidores (Llama 3.3 70B en Q4) se acerca a GPT-4 Turbo en benchmarks, pero requiere una GPU de estación de trabajo con 48 GB+ de VRAM. Los modelos de 7B funcionan en portátiles, pero son significativamente más débiles que GPT-4o.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Todavía no para las tareas más exigentes. A partir de abril de 2026, el mejor modelo local para consumidores (Llama 3.3 70B en Q4) se acerca a GPT-4 Turbo en benchmarks, pero requiere una GPU de estación de trabajo con 48 GB+ de VRAM. Los modelos de 7B funcionan en portátiles, pero son significativamente más débiles que GPT-5.5.' }
           },
           {
             '@type': 'Question',
@@ -548,7 +548,7 @@ schema: {
             'LLM local = exécution sur votre CPU/GPU, zéro coût API, zéro partage de données.',
             'Trois composants : le fichier modèle (GGUF ou safetensors), un moteur d\'inférence (Ollama, LM Studio, llama.cpp), optionnellement une interface.',
             'Minimum : 8 GB RAM pour un modèle 7B en quantification 4-bit. 16 GB pour les usages courants.',
-            'Plus lent que le cloud sur consumer : 15-40 tokens/sec local vs ~100 tokens/sec avec GPT-4o Mini.',
+            'Plus lent que le cloud sur consumer : 15-40 tokens/sec local vs ~100 tokens/sec avec GPT-5.5 Mini.',
             'Cas idéaux : données sensibles, travail hors ligne, zéro coût récurrent, compréhension des LLMs.',
           ],
         },
@@ -556,7 +556,7 @@ schema: {
           title: 'Qu\'est-ce qu\'un LLM local ?',
           content: [
             '**Un LLM local est un modèle IA fonctionnant sur votre propre matériel -- laptop, desktop, serveur local.** Les poids sont stockés comme fichier, tous les calculs se font sur votre CPU ou GPU. Aucune donnée ne quitte votre machine.',
-            'Ce terme les distingue des services cloud comme GPT-4o, Claude 4.6 ou Gemini 3.1 Pro, qui traitent vos prompts sur des serveurs distants.',
+            'Ce terme les distingue des services cloud comme GPT-5.5, Claude 4.6 ou Gemini 3.1 Pro, qui traitent vos prompts sur des serveurs distants.',
             'Les LLMs locaux vont de modèles 1B sur téléphone à 70B nécessitant 48 GB VRAM. Les plus accessibles : Llama 3.2 3B, Phi-3 Mini, Gemma 2 2B (tous sur un laptop 8 GB).',
           ],
         },
@@ -574,7 +574,7 @@ schema: {
           content: 'Les besoins dépendent du modèle et de la rapidité désirée.',
           rows: [
             { 'Taille modèle': '1B-3B param.', 'RAM': '4-6 GB', 'Vitesse (CPU)': '20-60 tok/sec', 'Exemples': 'Llama 3.2 1B, Phi-3 Mini' },
-            { 'Taille modèle': '7B-8B param.', 'RAM': '6-8 GB', 'Vitesse (CPU)': '10-30 tok/sec', 'Exemples': 'Llama 3.1 8B, Mistral 7B' },
+            { 'Taille modèle': '7B-8B param.', 'RAM': '6-8 GB', 'Vitesse (CPU)': '10-30 tok/sec', 'Exemples': 'Llama 3.3 8B, Mistral Small' },
             { 'Taille modèle': '13B-14B param.', 'RAM': '10-12 GB', 'Vitesse (CPU)': '5-15 tok/sec', 'Exemples': 'Llama 3.2 13B, Qwen2.5 14B' },
             { 'Taille modèle': '32B-34B param.', 'RAM': '20-24 GB', 'Vitesse (CPU)': '2-6 tok/sec', 'Exemples': 'Qwen2.5 32B, DeepSeek-R1 32B' },
             { 'Taille modèle': '70B+ param.', 'RAM': '40-48 GB', 'Vitesse (CPU)': '1-3 tok/sec', 'Exemples': 'Llama 3.3 70B, Qwen2.5 72B' },
@@ -592,7 +592,7 @@ schema: {
             { 'Aspect': 'Confidentialité', 'LLM local': 'Totale -- données ne quittent jamais', 'API cloud': 'Traitement serveur' },
             { 'Aspect': 'Coût', 'LLM local': '0€/token (après matériel)', 'API cloud': '0.15-15€/1M tokens' },
             { 'Aspect': 'Vitesse', 'LLM local': '10-120 tok/sec', 'API cloud': '50-200 tok/sec' },
-            { 'Aspect': 'Qualité', 'LLM local': 'Bonne à 70B', 'API cloud': 'Meilleure (GPT-4o, Claude)' },
+            { 'Aspect': 'Qualité', 'LLM local': 'Bonne à 70B', 'API cloud': 'Meilleure (GPT-5.5, Claude)' },
             { 'Aspect': 'Installation', 'LLM local': '5-15 min', 'API cloud': '2-5 min clé API' },
             { 'Aspect': 'Hors ligne', 'LLM local': 'Oui', 'API cloud': 'Non' },
           ],
@@ -620,8 +620,8 @@ schema: {
           title: 'Questions fréquentes',
           faqs: [
             {
-              q: 'Un LLM local peut-il égaler GPT-4o ?',
-              a: 'Non, sur hardware consumer. GPT-4o et Claude 4.6 gagnent sur raisonnement complexe, génération code, benchmarks. Mais 13B-34B bien quantifiés font très bien summarization, traduction, écriture courante -- résultats quasi-indistinguibles.',
+              q: 'Un LLM local peut-il égaler GPT-5.5 ?',
+              a: 'Non, sur hardware consumer. GPT-5.5 et Claude 4.6 gagnent sur raisonnement complexe, génération code, benchmarks. Mais 13B-34B bien quantifiés font très bien summarization, traduction, écriture courante -- résultats quasi-indistinguibles.',
             },
             {
               q: 'Besoin d\'une GPU ?',
@@ -654,7 +654,7 @@ schema: {
           items: [
             'Supposer tout LLM local equally privé -- interfaces peuvent logger données.',
             'Lancer modèles trop gros → RAM insuffisante → disk swap → très lent.',
-            'Ignorer variation qualité modèles -- tous ne rivalisent pas GPT-4o complexe.',
+            'Ignorer variation qualité modèles -- tous ne rivalisent pas GPT-5.5 complexe.',
           ],
         },
         relatedReading: {
@@ -697,7 +697,7 @@ schema: {
             'ローカルLLM＝自分のCPU/GPUで実行、API費用ゼロ、データ外部送信なし。',
             '3つの要素：モデルファイル（GGUFまたはsafetensors形式）、推論エンジン（Ollama、LM Studio、llama.cpp）、オプションでチャットUI。',
             '最小要件：7Bパラメータモデルで4ビット量子化時8GB RAM。通常は16GB あれば十分。',
-            'コンシューマー機では遅い：ローカル7B＝15～40トークン/秒 vs GPT-4o Mini API＝約100トークン/秒。',
+            'コンシューマー機では遅い：ローカル7B＝15～40トークン/秒 vs GPT-5.5 Mini API＝約100トークン/秒。',
             'ベストユースケース：機密データ処理、オフライン作業、継続費用ゼロ、LLM理解。',
           ],
         },
@@ -705,7 +705,7 @@ schema: {
           title: 'ローカルLLMとは何か',
           content: [
             '**ローカルLLM（大規模言語モデル）は、あなたが制御するハードウェア上で実行されるAIモデルです。** ノートパソコン、デスクトップ、またはオンプレミスサーバーでも構いません。モデルの重みはファイルとしてディスク上に保存され、すべての処理はあなた自身のCPUまたはGPU上で行われます。プロンプトテキストもレスポンスデータも外部サーバーに送信されません。',
-            'こうしたモデルを「ローカル」と呼ぶのは、GPT-4o、Claude 4.6、Gemini 3.1 Proなどのクラウドサービスとの違いを強調するためです。これらクラウドサービスはプロンプトをリモートサーバーで処理してインターネット経由で結果を返します。',
+            'こうしたモデルを「ローカル」と呼ぶのは、GPT-5.5、Claude 4.6、Gemini 3.1 Proなどのクラウドサービスとの違いを強調するためです。これらクラウドサービスはプロンプトをリモートサーバーで処理してインターネット経由で結果を返します。',
             'ローカルLLMは多様です。電話で動作する1Bパラメータモデルから、48GB VRAM を要する70Bパラメータモデルまで。初心者向けの一般的なモデル--Meta Llama 3.2 3B、Microsoft Phi-3 Mini、Google Gemma 2 2B--はいずれも8GB RAMのノートパソコンで動作します。',
           ],
         },
@@ -723,7 +723,7 @@ schema: {
           content: '必要なハードウェアは、どのモデルを実行したいか、どのくらいの速度が必要かで決まります。',
           rows: [
             { 'モデルサイズ': '1B～3B パラメータ', 'RAM': '4～6GB', '速度 (CPU)': '20～60 tok/sec', '例': 'Llama 3.2 1B, Phi-3 Mini' },
-            { 'モデルサイズ': '7B～8B パラメータ', 'RAM': '6～8GB', '速度 (CPU)': '10～30 tok/sec', '例': 'Llama 3.1 8B, Mistral 7B' },
+            { 'モデルサイズ': '7B～8B パラメータ', 'RAM': '6～8GB', '速度 (CPU)': '10～30 tok/sec', '例': 'Llama 3.3 8B, Mistral Small' },
             { 'モデルサイズ': '13B～14B パラメータ', 'RAM': '10～12GB', '速度 (CPU)': '5～15 tok/sec', '例': 'Llama 3.2 13B, Qwen2.5 14B' },
             { 'モデルサイズ': '32B～34B パラメータ', 'RAM': '20～24GB', '速度 (CPU)': '2～6 tok/sec', '例': 'Qwen2.5 32B, DeepSeek-R1' },
             { 'モデルサイズ': '70B以上', 'RAM': '40～48GB', '速度 (CPU)': '1～3 tok/sec', '例': 'Llama 3.3 70B, Qwen2.5 72B' },
@@ -741,7 +741,7 @@ schema: {
             { '項目': 'プライバシー', 'ローカルLLM': '完全--データは絶対に外に出ない', 'クラウドAPI': 'プロバイダーのサーバーで処理' },
             { '項目': 'コスト', 'ローカルLLM': 'ハードウェア代後は$0/トークン', 'クラウドAPI': '$0.15～15/100万トークン' },
             { '項目': '速度', 'ローカルLLM': 'コンシューマー機で10～120 tok/sec', 'クラウドAPI': '50～200 tok/sec（負荷による）' },
-            { '項目': 'モデル品質', 'ローカルLLM': '良好--70Bスケールで競争力あり', 'クラウドAPI': '最良（GPT-4o、Claude 4.6 Sonnet）' },
+            { '項目': 'モデル品質', 'ローカルLLM': '良好--70Bスケールで競争力あり', 'クラウドAPI': '最良（GPT-5.5、Claude 4.6 Sonnet）' },
             { '項目': 'セットアップ', 'ローカルLLM': 'OllamaやLM Studioで5～15分', 'クラウドAPI': 'APIキー取得で2～5分' },
             { '項目': 'オフライン', 'ローカルLLM': 'はい--インターネット不要', 'クラウドAPI': 'いいえ--接続が必須' },
           ],
@@ -769,8 +769,8 @@ schema: {
           title: 'よくある質問',
           faqs: [
             {
-              q: 'ローカルLLMはGPT-4o の品質に達するか？',
-              a: '現在のコンシューマー機ではいいえ。GPT-4oとClaude 4.6 Sonnetは複雑な推論、コード生成、命令遵守ベンチマークで勝ります。しかし要約、翻訳、日常的な文章作成では、量子化された13B～34Bモデルは最先端モデルと区別が難しい結果を出します。',
+              q: 'ローカルLLMはGPT-5.5 の品質に達するか？',
+              a: '現在のコンシューマー機ではいいえ。GPT-5.5とClaude 4.6 Sonnetは複雑な推論、コード生成、命令遵守ベンチマークで勝ります。しかし要約、翻訳、日常的な文章作成では、量子化された13B～34Bモデルは最先端モデルと区別が難しい結果を出します。',
             },
             {
               q: 'ローカルLLM実行にGPUは必須？',
@@ -803,7 +803,7 @@ schema: {
           items: [
             'すべてのローカルLLMが等しくプライベートだと想定--インターフェースや量子化によってはデータをログ記録する可能性。',
             'RAM容量を超えるモデル実行→ディスク スワップ→著しい遅延。',
-            'モデル品質の差異を理解していない--すべてのローカルモデルが複雑タスクでGPT-4oに対抗できるわけではありません。',
+            'モデル品質の差異を理解していない--すべてのローカルモデルが複雑タスクでGPT-5.5に対抗できるわけではありません。',
           ],
         },
         relatedReading: {
@@ -846,7 +846,7 @@ schema: {
             '1. 本地LLM = 在您的CPU/GPU上运行，无API成本，无数据分享。',
             '2. 三个要素：模型文件（GGUF或safetensors格式）、推理引擎（Ollama、LM Studio、llama.cpp）、可选聊天界面。',
             '3. 最低要求：7B参数模型4位量化时8GB RAM。16GB可应对大多数日常模型。',
-            '4. 消费者硬件上较慢：本地7B=15-40tokens/秒 vs GPT-4o Mini API=约100tokens/秒。',
+            '4. 消费者硬件上较慢：本地7B=15-40tokens/秒 vs GPT-5.5 Mini API=约100tokens/秒。',
             '5. 最佳用途：敏感数据处理、离线工作、零持续成本、理解LLM。',
           ],
         },
@@ -854,7 +854,7 @@ schema: {
           title: '什么是本地LLM',
           content: [
             '**本地LLM（大型语言模型）是在您控制的硬件上运行的AI模型。** 可以是笔记本、台式机或本地服务器。模型权重存储为磁盘文件，所有处理在您自己的CPU或GPU上进行。无数据发送到外部服务器。',
-            '"本地"一词区分这些模型与OpenAI GPT-4o、Anthropic Claude 4.6、Google Gemini 3.1 Pro等云服务，云服务在远程服务器处理您的提示并通过互联网返回结果。',
+            '"本地"一词区分这些模型与OpenAI GPT-5.5、Anthropic Claude 4.6、Google Gemini 3.1 Pro等云服务，云服务在远程服务器处理您的提示并通过互联网返回结果。',
             '本地LLM种类丰富：从运行在手机上的1B参数模型到需要48GB VRAM的70B参数模型。初学者常用：Meta Llama 3.2 3B、Microsoft Phi-3 Mini、Google Gemma 2 2B（全部可在8GB RAM笔记本上运行）。',
           ],
         },
@@ -872,7 +872,7 @@ schema: {
           content: '硬件要求取决于您要运行哪个模型以及需要的速度。',
           rows: [
             { '模型大小': '1B-3B参数', 'RAM需求': '4-6 GB', '速度(CPU)': '20-60 tokens/秒', '示例模型': 'Llama 3.2 1B, Phi-3 Mini' },
-            { '模型大小': '7B-8B参数', 'RAM需求': '6-8 GB', '速度(CPU)': '10-30 tokens/秒', '示例模型': 'Llama 3.1 8B, Mistral 7B' },
+            { '模型大小': '7B-8B参数', 'RAM需求': '6-8 GB', '速度(CPU)': '10-30 tokens/秒', '示例模型': 'Llama 3.3 8B, Mistral Small' },
             { '模型大小': '13B-14B参数', 'RAM需求': '10-12 GB', '速度(CPU)': '5-15 tokens/秒', '示例模型': 'Llama 3.2 13B, Qwen2.5 14B' },
             { '模型大小': '32B-34B参数', 'RAM需求': '20-24 GB', '速度(CPU)': '2-6 tokens/秒', '示例模型': 'Qwen2.5 32B, DeepSeek-R1 32B' },
             { '模型大小': '70B+参数', 'RAM需求': '40-48 GB', '速度(CPU)': '1-3 tokens/秒', '示例模型': 'Llama 3.3 70B, Qwen2.5 72B' },
@@ -890,7 +890,7 @@ schema: {
             { '因素': '隐私', '本地LLM': '完全--数据永不离开您的机器', '云API': '在提供商服务器上处理' },
             { '因素': '成本', '本地LLM': '硬件后$0/token', '云API': '按token计费（$0.15-15/100万tokens）' },
             { '因素': '速度', '本地LLM': '消费者硬件10-120 tokens/秒', '云API': '50-200 tokens/秒（负载变化）' },
-            { '因素': '模型质量', '本地LLM': '好--70B规模有竞争力', '云API': '最好（GPT-4o、Claude 4.6 Sonnet）' },
+            { '因素': '模型质量', '本地LLM': '好--70B规模有竞争力', '云API': '最好（GPT-5.5、Claude 4.6 Sonnet）' },
             { '因素': '设置时间', '本地LLM': 'Ollama或LM Studio 5-15分钟', '云API': '获取API密钥2-5分钟' },
             { '因素': '离线使用', '本地LLM': '是--无需互联网', '云API': '否--需要活跃连接' },
           ],
@@ -918,8 +918,8 @@ schema: {
           title: '常见问题',
           faqs: [
             {
-              q: '本地LLM能达到GPT-4o的质量吗？',
-              a: '消费者硬件上不能。GPT-4o和Claude 4.6 Sonnet在复杂推理、代码生成、指令遵循基准上更优。但13B-34B良好量化的模型在摘要、翻译和日常写作中表现与前沿模型难以区分。',
+              q: '本地LLM能达到GPT-5.5的质量吗？',
+              a: '消费者硬件上不能。GPT-5.5和Claude 4.6 Sonnet在复杂推理、代码生成、指令遵循基准上更优。但13B-34B良好量化的模型在摘要、翻译和日常写作中表现与前沿模型难以区分。',
             },
             {
               q: '运行本地LLM需要GPU吗？',
@@ -952,7 +952,7 @@ schema: {
           items: [
             '1. 假设所有本地LLM隐私级别相等--某些界面或量化可能仍记录数据。',
             '2. 运行过大模型--RAM不足→磁盘交换→严重变慢。',
-            '3. 不理解模型质量差异--并非所有本地模型在复杂任务上与GPT-4o匹敌。',
+            '3. 不理解模型质量差异--并非所有本地模型在复杂任务上与GPT-5.5匹敌。',
           ],
         },
         relatedReading: {
@@ -995,7 +995,7 @@ schema: {
             'Ein lokales LLM wird auf Ihrer eigenen CPU oder GPU ausgeführt -- keine Internetverbindung, keine API-Kosten, keine Daten an Dritte.',
             'Drei Komponenten sind erforderlich: die Modelldatei (GGUF- oder safetensors-Format), eine Inferenz-Engine (Ollama, LM Studio oder llama.cpp) und optional eine Chat-Schnittstelle.',
             'Minimale Hardware: 8 GB RAM für ein 7B-Parametern-Modell mit 4-Bit-Quantisierung. 16 GB RAM eignet sich gut für die meisten alltäglichen Modelle.',
-            'Lokale Modelle sind auf Consumer-Hardware langsamer als Cloud-APIs -- ein 7B-Modell auf einem modernen Laptop erzeugt 15-40 Tokens/Sek., vs. ~100 Tokens/Sek. von GPT-4o Mini über API.',
+            'Lokale Modelle sind auf Consumer-Hardware langsamer als Cloud-APIs -- ein 7B-Modell auf einem modernen Laptop erzeugt 15-40 Tokens/Sek., vs. ~100 Tokens/Sek. von GPT-5.5 Mini über API.',
             'Best-Practice-Anwendungsfälle: Verarbeitung sensibler Daten, Offline-Arbeit, null wiederkehrende Kosten und Verständnis der LLM-Funktionsweise.',
           ],
         },
@@ -1003,7 +1003,7 @@ schema: {
           title: 'Was ist ein lokales LLM?',
           content: [
             '**Ein lokales LLM (großes Sprachmodell) ist ein KI-Modell, das auf Hardware unter Ihrer Kontrolle ausgeführt wird -- Ihrem Laptop, Desktop oder lokalen Server.** Die Modellgewichte werden als Datei auf Ihrem Datenträger gespeichert, und alle Verarbeitungsvorgänge erfolgen auf Ihrer eigenen CPU oder GPU. Keine Prompt-Texte oder Antwortdaten werden an externe Server übertragen.',
-            'Der Begriff \"lokal\" unterscheidet diese Modelle von Cloud-Diensten wie OpenAI GPT-4o, Anthropic Claude 4.6 oder Google Gemini 3.1 Pro, die Ihre Prompts auf entfernten Servern verarbeiten und Ergebnisse über das Internet zurückgeben.',
+            'Der Begriff \"lokal\" unterscheidet diese Modelle von Cloud-Diensten wie OpenAI GPT-5.5, Anthropic Claude 4.6 oder Google Gemini 3.1 Pro, die Ihre Prompts auf entfernten Servern verarbeiten und Ergebnisse über das Internet zurückgeben.',
             'Lokale LLMs reichen von kleinen 1B-Parametern-Modellen, die auf einem Telefon laufen, bis zu 70B-Parametern-Modellen, die eine Workstation mit 48 GB VRAM benötigen. Die am häufigsten verwendeten Anfänger-Modelle -- Meta Llama 3.2 3B, Microsoft Phi-3 Mini und Google Gemma 2 2B -- laufen auf jedem Laptop mit 8 GB RAM.',
           ],
         },
@@ -1021,7 +1021,7 @@ schema: {
           content: 'Die Hardware-Anforderungen hängen vollständig davon ab, welches Modell Sie ausführen möchten und wie schnell Sie Antworten benötigen.',
           rows: [
             { 'Modellgröße': '1B-3B Parameter', 'RAM erforderlich': '4-6 GB', 'Geschwindigkeit (CPU)': '20-60 Tokens/Sek.', 'Beispielmodelle': 'Llama 3.2 1B, Phi-3 Mini 3.8B' },
-            { 'Modellgröße': '7B-8B Parameter', 'RAM erforderlich': '6-8 GB', 'Geschwindigkeit (CPU)': '10-30 Tokens/Sek.', 'Beispielmodelle': 'Llama 3.1 8B, Mistral 7B' },
+            { 'Modellgröße': '7B-8B Parameter', 'RAM erforderlich': '6-8 GB', 'Geschwindigkeit (CPU)': '10-30 Tokens/Sek.', 'Beispielmodelle': 'Llama 3.3 8B, Mistral Small' },
             { 'Modellgröße': '13B-14B Parameter', 'RAM erforderlich': '10-12 GB', 'Geschwindigkeit (CPU)': '5-15 Tokens/Sek.', 'Beispielmodelle': 'Llama 3.2 13B, Qwen2.5 14B' },
             { 'Modellgröße': '32B-34B Parameter', 'RAM erforderlich': '20-24 GB', 'Geschwindigkeit (CPU)': '2-6 Tokens/Sek.', 'Beispielmodelle': 'Qwen2.5 32B, DeepSeek-R1 32B' },
             { 'Modellgröße': '70B+ Parameter', 'RAM erforderlich': '40-48 GB', 'Geschwindigkeit (CPU)': '1-3 Tokens/Sek.', 'Beispielmodelle': 'Llama 3.3 70B, Qwen2.5 72B' },
@@ -1039,7 +1039,7 @@ schema: {
             { 'Faktor': 'Datenschutz', 'Lokales LLM': 'Vollständig -- Daten verlassen nie Ihren Computer', 'Cloud-API': 'Daten werden auf Anbieter-Servern verarbeitet' },
             { 'Faktor': 'Kosten', 'Lokales LLM': '0 € pro Token nach Hardware-Kosten', 'Cloud-API': '0,15 €-15 € pro 1 Mio. Tokens je nach Modell' },
             { 'Faktor': 'Geschwindigkeit', 'Lokales LLM': '10-120 Tokens/Sek. auf Consumer-Hardware', 'Cloud-API': '50-200 Tokens/Sek., variiert je nach Last' },
-            { 'Faktor': 'Modellqualität', 'Lokales LLM': 'Gut -- wettbewerbsfähig bei 70B-Skalierung', 'Cloud-API': 'Das beste verfügbare (GPT-4o, Claude 4.6 Sonnet)' },
+            { 'Faktor': 'Modellqualität', 'Lokales LLM': 'Gut -- wettbewerbsfähig bei 70B-Skalierung', 'Cloud-API': 'Das beste verfügbare (GPT-5.5, Claude 4.6 Sonnet)' },
             { 'Faktor': 'Einrichtungszeit', 'Lokales LLM': '5-15 Minuten mit Ollama oder LM Studio', 'Cloud-API': '2-5 Minuten für einen API-Schlüssel' },
             { 'Faktor': 'Offline-Nutzung', 'Lokales LLM': 'Ja -- funktioniert ohne Internet', 'Cloud-API': 'Nein -- erfordert aktive Verbindung' },
           ],
@@ -1067,8 +1067,8 @@ schema: {
           title: 'Häufig gestellte Fragen zu lokalen LLMs',
           faqs: [
             {
-              q: 'Kann ein lokales LLM die Qualität von GPT-4o erreichen?',
-              a: 'Nein -- nicht auf aktueller Consumer-Hardware. GPT-4o und Claude 4.6 Sonnet übertreffen jedes lokal ausführbare Modell bei komplexer Argumentation, Code-Generierung und Befolgung von Anweisungen-Benchmarks. Für Zusammenfassungen, Übersetzungen und alltägliche Schreibaufgaben produziert jedoch ein gut quantisiertes 13B-34B-Modell Ergebnisse, die schwer von Top-Modellen zu unterscheiden sind.',
+              q: 'Kann ein lokales LLM die Qualität von GPT-5.5 erreichen?',
+              a: 'Nein -- nicht auf aktueller Consumer-Hardware. GPT-5.5 und Claude 4.6 Sonnet übertreffen jedes lokal ausführbare Modell bei komplexer Argumentation, Code-Generierung und Befolgung von Anweisungen-Benchmarks. Für Zusammenfassungen, Übersetzungen und alltägliche Schreibaufgaben produziert jedoch ein gut quantisiertes 13B-34B-Modell Ergebnisse, die schwer von Top-Modellen zu unterscheiden sind.',
             },
             {
               q: 'Brauche ich eine GPU, um ein lokales LLM auszuführen?',
@@ -1102,7 +1102,7 @@ schema: {
           items: [
             'Die Annahme, dass alle lokalen Modelle gleich privat sind -- einige Schnittstellen oder Quantisierungen können noch immer Daten protokollieren.',
             'Das Ausführen von Modellen, die für verfügbaren RAM zu groß sind, was zu schwerem Slowdown durch Festplattenspeicher führt.',
-            'Nicht verstehen, dass die Modellqualität drastisch variiert -- nicht alle lokalen Modelle erreichen GPT-4o auf komplexen Aufgaben.',
+            'Nicht verstehen, dass die Modellqualität drastisch variiert -- nicht alle lokalen Modelle erreichen GPT-5.5 auf komplexen Aufgaben.',
           ],
         },
         relatedReading: {

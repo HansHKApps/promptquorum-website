@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What is the best GPU for running 70B models locally?',
-              a: 'Two RTX 4090 GPUs ($3,600 total, 48 GB combined VRAM) is the best consumer option. This runs Llama 3.1 70B at Q5 quantization at ~100 tok/sec. A single RTX 6000 Ada ($5,000, 48 GB) is the professional alternative. Avoid attempting 70B on a single consumer GPU — Q2 quantization required degrades quality severely.',
+              a: 'Two RTX 4090 GPUs ($3,600 total, 48 GB combined VRAM) is the best consumer option. This runs Llama 3.3 70B at Q5 quantization at ~100 tok/sec. A single RTX 6000 Ada ($5,000, 48 GB) is the professional alternative. Avoid attempting 70B on a single consumer GPU — Q2 quantization required degrades quality severely.',
             },
             {
               q: 'How does VRAM size affect local LLM performance?',
@@ -207,7 +207,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'What is the best GPU for running 70B models locally?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Two RTX 4090 GPUs ($3,600 total, 48 GB combined VRAM) is the best consumer option. This runs Llama 3.1 70B at Q5 quantization at ~100 tok/sec. A single RTX 6000 Ada ($5,000, 48 GB) is the professional alternative.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Two RTX 4090 GPUs ($3,600 total, 48 GB combined VRAM) is the best consumer option. This runs Llama 3.3 70B at Q5 quantization at ~100 tok/sec. A single RTX 6000 Ada ($5,000, 48 GB) is the professional alternative.' },
           },
         ],
       },
@@ -353,7 +353,7 @@ schema: {
             },
             {
               q: '¿Cuál es la mejor GPU para ejecutar modelos de 70B localmente?',
-              a: 'Dos GPUs RTX 4090 ($3600 en total, 48 GB de VRAM combinada) es la mejor opción para consumidores. Esto ejecuta Llama 3.1 70B en cuantización Q5 a ~100 tok/seg. Una sola RTX 6000 Ada ($5000, 48 GB) es la alternativa profesional. Evita intentar ejecutar 70B en una sola GPU de consumo — la cuantización Q2 necesaria degrada la calidad severamente.',
+              a: 'Dos GPUs RTX 4090 ($3600 en total, 48 GB de VRAM combinada) es la mejor opción para consumidores. Esto ejecuta Llama 3.3 70B en cuantización Q5 a ~100 tok/seg. Una sola RTX 6000 Ada ($5000, 48 GB) es la alternativa profesional. Evita intentar ejecutar 70B en una sola GPU de consumo — la cuantización Q2 necesaria degrada la calidad severamente.',
             },
             {
               q: '¿Cómo afecta el tamaño de la VRAM al rendimiento de LLMs locales?',
@@ -435,7 +435,7 @@ schema: {
           {
             '@type': 'Question',
             name: '¿Cuál es la mejor GPU para ejecutar modelos de 70B localmente?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Dos GPUs RTX 4090 ($3600 en total, 48 GB de VRAM combinada) es la mejor opción para consumidores. Esto ejecuta Llama 3.1 70B en cuantización Q5 a ~100 tok/seg. Una sola RTX 6000 Ada ($5000, 48 GB) es la alternativa profesional.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Dos GPUs RTX 4090 ($3600 en total, 48 GB de VRAM combinada) es la mejor opción para consumidores. Esto ejecuta Llama 3.3 70B en cuantización Q5 a ~100 tok/seg. Una sola RTX 6000 Ada ($5000, 48 GB) es la alternativa profesional.' },
           },
         ],
       },
@@ -582,7 +582,7 @@ schema: {
             },
             {
               q: 'Welche GPU eignet sich am besten für die lokale Ausführung von 70B Modellen?',
-              a: 'Zwei RTX 4090 GPUs (€3.400 Gesamtpreis, 48 GB kombinierter VRAM) sind die beste Consumer-Option. Dies führt Llama 3.1 70B bei Q5-Quantisierung bei etwa 100 Token/Sek. aus. Eine einzelne RTX 6000 Ada (€4.800, 48 GB) ist die professionelle Alternative. Vermeiden Sie den Versuch von 70B auf einer einzelnen Consumer-GPU — erforderliche Q2-Quantisierung verschlechtert die Qualität erheblich.',
+              a: 'Zwei RTX 4090 GPUs (€3.400 Gesamtpreis, 48 GB kombinierter VRAM) sind die beste Consumer-Option. Dies führt Llama 3.3 70B bei Q5-Quantisierung bei etwa 100 Token/Sek. aus. Eine einzelne RTX 6000 Ada (€4.800, 48 GB) ist die professionelle Alternative. Vermeiden Sie den Versuch von 70B auf einer einzelnen Consumer-GPU — erforderliche Q2-Quantisierung verschlechtert die Qualität erheblich.',
             },
             {
               q: 'Wie beeinflusst die VRAM-Größe die Leistung lokaler LLMs?',
@@ -653,7 +653,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Welche GPU eignet sich am besten für die lokale Ausführung von 70B Modellen?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Zwei RTX 4090 GPUs (€3.400 Gesamtpreis, 48 GB kombinierter VRAM) sind die beste Consumer-Option. Dies führt Llama 3.1 70B bei Q5-Quantisierung bei etwa 100 Token/Sek. aus. Eine einzelne RTX 6000 Ada (€4.800, 48 GB) ist die professionelle Alternative.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Zwei RTX 4090 GPUs (€3.400 Gesamtpreis, 48 GB kombinierter VRAM) sind die beste Consumer-Option. Dies führt Llama 3.3 70B bei Q5-Quantisierung bei etwa 100 Token/Sek. aus. Eine einzelne RTX 6000 Ada (€4.800, 48 GB) ist die professionelle Alternative.' },
           },
         ],
       },
@@ -799,7 +799,7 @@ schema: {
             },
             {
               q: 'Quel est le meilleur GPU pour exécuter les modèles 70B localement ?',
-              a: 'Deux GPU RTX 4090 (3 300 € total, 48 GB VRAM combiné) est la meilleure option consumer. Cela exécute Llama 3.1 70B en quantification Q5 à ~100 tokens/sec. Une unique RTX 6000 Ada (4 800 €, 48 GB) est l\'alternative professionnelle. Évitez de tenter 70B sur une seule GPU consumer — quantification Q2 requise dégrade la qualité sévèrement.',
+              a: 'Deux GPU RTX 4090 (3 300 € total, 48 GB VRAM combiné) est la meilleure option consumer. Cela exécute Llama 3.3 70B en quantification Q5 à ~100 tokens/sec. Une unique RTX 6000 Ada (4 800 €, 48 GB) est l\'alternative professionnelle. Évitez de tenter 70B sur une seule GPU consumer — quantification Q2 requise dégrade la qualité sévèrement.',
             },
             {
               q: 'Comment la taille du VRAM affecte-t-elle la performance des LLMs locaux ?',
@@ -870,7 +870,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Quel est le meilleur GPU pour exécuter les modèles 70B localement ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Deux GPU RTX 4090 (3 300 € total, 48 GB VRAM combiné) est la meilleure option consumer. Cela exécute Llama 3.1 70B en quantification Q5 à ~100 tokens/sec. Une unique RTX 6000 Ada (4 800 €, 48 GB) est l\'alternative professionnelle.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Deux GPU RTX 4090 (3 300 € total, 48 GB VRAM combiné) est la meilleure option consumer. Cela exécute Llama 3.3 70B en quantification Q5 à ~100 tokens/sec. Une unique RTX 6000 Ada (4 800 €, 48 GB) est l\'alternative professionnelle.' },
           },
         ],
       },
@@ -1016,7 +1016,7 @@ schema: {
             },
             {
               q: 'ローカルで70Bモデルを実行するのに最適なGPUは何ですか？',
-              a: '2× RTX 4090 GPU（¥550,000合計、48 GB VRAM合計）がベストなコンシューマーオプション。これはLlama 3.1 70BをQ5量子化で約100トークン/秒で実行します。単一のRTX 6000 Ada（¥750,000、48 GB）がプロフェッショナルな代替案。単一コンシューマーGPUで70Bを試みるのは避けてください — 必要なQ2量子化は品質を著しく低下させます。',
+              a: '2× RTX 4090 GPU（¥550,000合計、48 GB VRAM合計）がベストなコンシューマーオプション。これはLlama 3.3 70BをQ5量子化で約100トークン/秒で実行します。単一のRTX 6000 Ada（¥750,000、48 GB）がプロフェッショナルな代替案。単一コンシューマーGPUで70Bを試みるのは避けてください — 必要なQ2量子化は品質を著しく低下させます。',
             },
             {
               q: 'VRAM容量はローカルLLMの性能にどう影響しますか？',
@@ -1095,7 +1095,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'ローカルで70Bモデルを実行するのに最適なGPUは何ですか？',
-            acceptedAnswer: { '@type': 'Answer', text: '2× RTX 4090 GPU（¥550,000合計、48 GB VRAM合計）がベストなコンシューマーオプション。これはLlama 3.1 70BをQ5量子化で約100トークン/秒で実行します。単一のRTX 6000 Ada（¥750,000、48 GB）がプロフェッショナルな代替案。' },
+            acceptedAnswer: { '@type': 'Answer', text: '2× RTX 4090 GPU（¥550,000合計、48 GB VRAM合計）がベストなコンシューマーオプション。これはLlama 3.3 70BをQ5量子化で約100トークン/秒で実行します。単一のRTX 6000 Ada（¥750,000、48 GB）がプロフェッショナルな代替案。' },
           },
         ],
       },
@@ -1241,7 +1241,7 @@ schema: {
             },
             {
               q: '本地运行70B模型的最佳GPU是什么？',
-              a: '2× RTX 4090 GPU（$3600总价，48 GB总VRAM）是最佳消费方案。这可在Q5量化下以约100 token/秒运行Llama 3.1 70B。单个RTX 6000 Ada（$5000，48 GB）是专业替代方案。避免在单个消费GPU上运行70B — 必要的Q2量化会严重降低质量。',
+              a: '2× RTX 4090 GPU（$3600总价，48 GB总VRAM）是最佳消费方案。这可在Q5量化下以约100 token/秒运行Llama 3.3 70B。单个RTX 6000 Ada（$5000，48 GB）是专业替代方案。避免在单个消费GPU上运行70B — 必要的Q2量化会严重降低质量。',
             },
             {
               q: 'VRAM大小如何影响本地LLM性能？',
@@ -1320,7 +1320,7 @@ schema: {
           {
             '@type': 'Question',
             name: '本地运行70B模型的最佳GPU是什么？',
-            acceptedAnswer: { '@type': 'Answer', text: '2× RTX 4090 GPU（$3600总价，48 GB总VRAM）是最佳消费方案。这可在Q5量化下以约100 token/秒运行Llama 3.1 70B。单个RTX 6000 Ada（$5000，48 GB）是专业替代方案。' },
+            acceptedAnswer: { '@type': 'Answer', text: '2× RTX 4090 GPU（$3600总价，48 GB总VRAM）是最佳消费方案。这可在Q5量化下以约100 token/秒运行Llama 3.3 70B。单个RTX 6000 Ada（$5000，48 GB）是专业替代方案。' },
           },
         ],
       },

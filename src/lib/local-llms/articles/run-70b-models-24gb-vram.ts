@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
           isTldr: true,
           items: [
-            'Llama 3.1 70B at Q4 = 35 GB (too large for 24GB). At Q3 = 26 GB (still too large). At Q2 = 17 GB (fits!).',
+            'Llama 3.3 70B at Q4 = 35 GB (too large for 24GB). At Q3 = 26 GB (still too large). At Q2 = 17 GB (fits!).',
             'Trade-off: Q2 has noticeable quality loss. ~70% of FP16 quality.',
             'Speed: 3-5 tokens/sec with 20 GB offloaded to system RAM (ultra-slow).',
             'Better option: Use 13B model at Q5, or buy a second GPU for layer splitting.',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'limits',
           title: 'The Theoretical VRAM Math',
           content: [
-            '**Llama 3.1 70B at various quantizations:**',
+            '**Llama 3.3 70B at various quantizations:**',
           ],
           rows: [
             { 'Quantization': 'FP16 (baseline)', 'Size': '140 GB', 'Fits 24GB?': 'No' },
@@ -110,9 +110,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Better Alternatives to Constrained 70B',
           content: 'Instead of struggling with 70B on limited VRAM, consider:',
           items: [
-            'Use a 13B model (Llama 3.1 13B at Q5 = 8 GB, very fast)',
+            'Use a 13B model (Llama 3.3 13B at Q5 = 8 GB, very fast)',
             'Buy a second RTX 4090 for layer splitting (2× 24GB = 48GB, 100+ tok/sec)',
-            'Use a cloud API (GPT-4o for important tasks, local for experimentation)',
+            'Use a cloud API (GPT-5.5 for important tasks, local for experimentation)',
             'Wait for more efficient models (smaller, same quality)',
           ],
         },
@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Sources',
           items: [
             'llama.cpp Quantization -- github.com/ggerganov/llama.cpp/blob/master/gguf-py/gguf/quants.py',
-            'Model Card: Llama 3.1 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
+            'Model Card: Llama 3.3 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
           ],
         },
       },
@@ -254,7 +254,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'Llama 3.1 70B bei Q4 = 35 GB (zu groß für 24GB). Bei Q3 = 26 GB (immer noch zu groß). Bei Q2 = 17 GB (passt!).',
+            'Llama 3.3 70B bei Q4 = 35 GB (zu groß für 24GB). Bei Q3 = 26 GB (immer noch zu groß). Bei Q2 = 17 GB (passt!).',
             'Trade-off: Q2 hat spürbaren Qualitätsverlust. ~70% der FP16-Qualität.',
             'Geschwindigkeit: 3-5 Token/Sek. mit 20 GB auf System-RAM ausgelagert (ultra-langsam).',
             'Bessere Option: 13B-Modell bei Q5 verwenden oder eine zweite GPU für Layer-Splitting kaufen.',
@@ -265,7 +265,7 @@ schema: {
           id: 'limits',
           title: 'Die theoretische VRAM-Mathematik',
           content: [
-            '**Llama 3.1 70B bei verschiedenen Quantisierungen:**',
+            '**Llama 3.3 70B bei verschiedenen Quantisierungen:**',
           ],
           rows: [
             { 'Quantisierung': 'FP16 (Baseline)', 'Größe': '140 GB', 'Passt in 24GB?': 'Nein' },
@@ -325,9 +325,9 @@ schema: {
           title: 'Bessere Alternativen zu beschränktem 70B',
           content: 'Statt sich mit 70B bei limitiertem VRAM abzumühen, erwägen Sie:',
           items: [
-            'Ein 13B-Modell verwenden (Llama 3.1 13B bei Q5 = 8 GB, sehr schnell)',
+            'Ein 13B-Modell verwenden (Llama 3.3 13B bei Q5 = 8 GB, sehr schnell)',
             'Eine zweite RTX 4090 für Layer-Splitting kaufen (2× 24GB = 48GB, 100+ Token/Sek.)',
-            'Eine Cloud-API verwenden (GPT-4o für wichtige Aufgaben, lokal für Experimente)',
+            'Eine Cloud-API verwenden (GPT-5.5 für wichtige Aufgaben, lokal für Experimente)',
             'Auf effizientere Modelle warten (kleiner, gleiche Qualität)',
           ],
         },
@@ -377,7 +377,7 @@ schema: {
           title: 'Quellen',
           items: [
             'llama.cpp Quantisierung -- github.com/ggerganov/llama.cpp/blob/master/gguf-py/gguf/quants.py',
-            'Model Card: Llama 3.1 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
+            'Model Card: Llama 3.3 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
           ],
         },
       },
@@ -465,7 +465,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'Llama 3.1 70B en Q4 = 35 Go (trop grand pour 24 Go). En Q3 = 26 Go (toujours trop). En Q2 = 17 Go (convient!).',
+            'Llama 3.3 70B en Q4 = 35 Go (trop grand pour 24 Go). En Q3 = 26 Go (toujours trop). En Q2 = 17 Go (convient!).',
             'Compromis : Q2 a une dégradation notable de qualité. ~70% de la qualité FP16.',
             'Vitesse : 3-5 tokens/sec avec 20 Go déchargé sur RAM système (ultra-lent).',
             'Meilleure option : utiliser un modèle 13B en Q5, ou acheter un GPU secondaire pour la division de couches.',
@@ -476,7 +476,7 @@ schema: {
           id: 'limits',
           title: 'Les mathématiques théoriques du VRAM',
           content: [
-            '**Llama 3.1 70B à différentes quantifications :**',
+            '**Llama 3.3 70B à différentes quantifications :**',
           ],
           rows: [
             { 'Quantification': 'FP16 (baseline)', 'Taille': '140 Go', 'Convient en 24 Go?': 'Non' },
@@ -536,9 +536,9 @@ schema: {
           title: 'Meilleures alternatives à un 70B contraint',
           content: 'Au lieu de vous débattre avec un 70B avec VRAM limité, considérez :',
           items: [
-            'Utiliser un modèle 13B (Llama 3.1 13B en Q5 = 8 Go, très rapide)',
+            'Utiliser un modèle 13B (Llama 3.3 13B en Q5 = 8 Go, très rapide)',
             'Acheter un GPU RTX 4090 secondaire pour la division de couches (2× 24 Go = 48 Go, 100+ tokens/sec)',
-            'Utiliser une API cloud (GPT-4o pour les tâches importantes, local pour les expériences)',
+            'Utiliser une API cloud (GPT-5.5 pour les tâches importantes, local pour les expériences)',
             'Attendre des modèles plus efficaces (plus petit, même qualité)',
           ],
         },
@@ -588,7 +588,7 @@ schema: {
           title: 'Sources',
           items: [
             'Quantification llama.cpp -- github.com/ggerganov/llama.cpp/blob/master/gguf-py/gguf/quants.py',
-            'Carte modèle : Llama 3.1 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
+            'Carte modèle : Llama 3.3 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
           ],
         },
       },
@@ -676,7 +676,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'Llama 3.1 70B Q4時 = 35GB（24GBには大きすぎる）。Q3 = 26GB（依然として大きい）。Q2 = 17GB（適切！）。',
+            'Llama 3.3 70B Q4時 = 35GB（24GBには大きすぎる）。Q3 = 26GB（依然として大きい）。Q2 = 17GB（適切！）。',
             'トレードオフ: Q2は著しい品質低下。〜70% のFP16品質。',
             '速度: システムRAMに20GBをオフロードして3-5 tokens/秒（超遅い）。',
             'より良い選択肢: Q5で13Bモデルを使用、またはレイヤー分割用に2番目のGPUを購入。',
@@ -687,7 +687,7 @@ schema: {
           id: 'limits',
           title: '理論的なVRAM計算',
           content: [
-            '**様々な量子化レベルでのLlama 3.1 70B:**',
+            '**様々な量子化レベルでのLlama 3.3 70B:**',
           ],
           rows: [
             { '量子化': 'FP16（ベースライン）', 'サイズ': '140GB', '24GBに適合？': 'いいえ' },
@@ -747,9 +747,9 @@ schema: {
           title: '制約付き70Bの代替案',
           content: 'VRAM制限で70Bと格闘する代わりに、以下を検討してください:',
           items: [
-            '13Bモデルを使用（Llama 3.1 13B Q5 = 8GB、非常に高速）',
+            '13Bモデルを使用（Llama 3.3 13B Q5 = 8GB、非常に高速）',
             'レイヤー分割用に2番目のRTX 4090を購入（2× 24GB = 48GB、100+ tokens/秒）',
-            'クラウドAPIを使用（重要なタスク用GPT-4o、実験用ローカル）',
+            'クラウドAPIを使用（重要なタスク用GPT-5.5、実験用ローカル）',
             'より効率的なモデル待機（より小さい、同じ品質）',
           ],
         },
@@ -799,7 +799,7 @@ schema: {
           title: 'ソース',
           items: [
             'llama.cpp量子化 -- github.com/ggerganov/llama.cpp/blob/master/gguf-py/gguf/quants.py',
-            'モデルカード: Llama 3.1 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
+            'モデルカード: Llama 3.3 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
           ],
         },
       },
@@ -816,7 +816,7 @@ schema: {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [
-          { '@type': 'Thing', name: 'Llama 3.1' },
+          { '@type': 'Thing', name: 'Llama 3.3' },
           { '@type': 'Thing', name: '70Bモデル' },
           { '@type': 'Thing', name: 'VRAM最適化' },
         ],
@@ -896,7 +896,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'Llama 3.1 70B Q4 = 35GB（对24GB来说太大）。Q3 = 26GB（仍然太大）。Q2 = 17GB（合适！）。',
+            'Llama 3.3 70B Q4 = 35GB（对24GB来说太大）。Q3 = 26GB（仍然太大）。Q2 = 17GB（合适！）。',
             '权衡：Q2有明显质量下降。约70%的FP16质量。',
             '速度：卸载20GB到系统RAM时3-5 tokens/秒（超级慢）。',
             '更好选项：使用Q5的13B模型，或购买第二个GPU用于层分割。',
@@ -907,7 +907,7 @@ schema: {
           id: 'limits',
           title: '理论VRAM数学',
           content: [
-            '**不同量化级别的Llama 3.1 70B:**',
+            '**不同量化级别的Llama 3.3 70B:**',
           ],
           rows: [
             { '量化': 'FP16（基准）', '大小': '140GB', '适合24GB？': '否' },
@@ -967,9 +967,9 @@ schema: {
           title: '受限70B的更好替代方案',
           content: '与其与受限VRAM的70B搏斗，考虑：',
           items: [
-            '使用13B模型（Llama 3.1 13B Q5 = 8GB，非常快）',
+            '使用13B模型（Llama 3.3 13B Q5 = 8GB，非常快）',
             '购买第二个RTX 4090用于层分割（2× 24GB = 48GB，100+ tokens/秒）',
-            '使用云API（重要任务用GPT-4o，实验用本地）',
+            '使用云API（重要任务用GPT-5.5，实验用本地）',
             '等待更高效模型（更小，相同质量）',
           ],
         },
@@ -1019,7 +1019,7 @@ schema: {
           title: '来源',
           items: [
             'llama.cpp量化 -- github.com/ggerganov/llama.cpp/blob/master/gguf-py/gguf/quants.py',
-            '模型卡：Llama 3.1 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
+            '模型卡：Llama 3.3 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
           ],
         },
       },
@@ -1036,7 +1036,7 @@ schema: {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [
-          { '@type': 'Thing', name: 'Llama 3.1' },
+          { '@type': 'Thing', name: 'Llama 3.3' },
           { '@type': 'Thing', name: '70B模型' },
           { '@type': 'Thing', name: 'VRAM优化' },
         ],
@@ -1116,7 +1116,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'Llama 3.1 70B en Q4 = 35 GB (demasiado grande para 24 GB). En Q3 = 26 GB (todavía demasiado grande). En Q2 = 17 GB (¡cabe!).',
+            'Llama 3.3 70B en Q4 = 35 GB (demasiado grande para 24 GB). En Q3 = 26 GB (todavía demasiado grande). En Q2 = 17 GB (¡cabe!).',
             'Compensación: Q2 tiene una pérdida de calidad notable. ~70% de la calidad FP16.',
             'Velocidad: 3-5 tokens/seg con 20 GB descargados a la RAM del sistema (ultra lento).',
             'Mejor opción: usar un modelo 13B en Q5, o comprar una segunda GPU para división de capas.',
@@ -1127,7 +1127,7 @@ schema: {
           id: 'limits',
           title: 'Las matemáticas teóricas del VRAM',
           content: [
-            '**Llama 3.1 70B con varias cuantizaciones:**',
+            '**Llama 3.3 70B con varias cuantizaciones:**',
           ],
           rows: [
             { 'Cuantización': 'FP16 (base)', 'Tamaño': '140 GB', '¿Cabe en 24 GB?': 'No' },
@@ -1187,9 +1187,9 @@ schema: {
           title: 'Mejores alternativas al 70B restringido',
           content: 'En lugar de luchar con un 70B con VRAM limitada, considera:',
           items: [
-            'Usar un modelo 13B (Llama 3.1 13B en Q5 = 8 GB, muy rápido)',
+            'Usar un modelo 13B (Llama 3.3 13B en Q5 = 8 GB, muy rápido)',
             'Comprar una segunda RTX 4090 para división de capas (2× 24 GB = 48 GB, más de 100 tokens/seg)',
-            'Usar una API en la nube (GPT-4o para tareas importantes, local para experimentación)',
+            'Usar una API en la nube (GPT-5.5 para tareas importantes, local para experimentación)',
             'Esperar modelos más eficientes (más pequeños, misma calidad)',
           ],
         },
@@ -1247,7 +1247,7 @@ schema: {
           title: 'Fuentes',
           items: [
             'Cuantización llama.cpp -- github.com/ggerganov/llama.cpp/blob/master/gguf-py/gguf/quants.py',
-            'Ficha del modelo: Llama 3.1 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
+            'Ficha del modelo: Llama 3.3 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
           ],
         },
       },
@@ -1268,7 +1268,7 @@ schema: {
           cssSelector: ['.article-intro', '.key-takeaways'],
         },
         about: [
-          { '@type': 'Thing', name: 'Llama 3.1' },
+          { '@type': 'Thing', name: 'Llama 3.3' },
           { '@type': 'Thing', name: 'modelos 70B' },
           { '@type': 'Thing', name: 'optimización de VRAM' },
         ],

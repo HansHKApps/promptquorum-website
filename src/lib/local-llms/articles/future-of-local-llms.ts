@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'smaller-models',
           title: 'Are 1–3B Models Reaching 7B Quality in 2026?',
           content: [
-            '**Yes — model quality per parameter is rising fast.** Phi-4 Mini 3.8B scores 68% MMLU; Llama 3.2 3B scores 58% — both rival Llama 2 7B (55% MMLU) from 2023.',
+            '**Yes — model quality per parameter is rising fast.** Phi-4 Mini 3.8B scores 68% MMLU; Llama 3.2 3B scores 58% — both rival Llama 3.3 7B (55% MMLU) from 2023.',
             'Drivers: better attention mechanisms, synthetic training data, parameter sharing, and LoRA-style compression.',
             'Implication: 1–3B models are now practical for summarization, Q&A, and code completion on 4 GB RAM hardware.',
           ],
@@ -108,7 +108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'challenges',
           title: 'What Challenges Do Local LLMs Still Face?',
           items: [
-            '**Quality gap:** Open models lag proprietary cloud models by 20–30% on benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89%. Gap narrowing but not closed before 2027–2028.',
+            '**Quality gap:** Open models lag proprietary cloud models by 20–30% on benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89%. Gap narrowing but not closed before 2027–2028.',
             '**Real-time latency:** Local inference is not suitable for <500ms real-time pipelines. An RTX 4090 generates ~150 tok/sec on 7B — good for chat, not sub-500ms APIs.',
             '**Infrastructure costs:** On-premises requires capital: $600–$2,000 GPU + cooling + maintenance. "Local is free" is a misconception — API costs shift, not disappear.',
             '**Talent shortage:** Few engineers know how to productionize vLLM, manage model updates, or optimize batch throughput. Will improve by 2027.',
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'common-mistakes',
           title: 'Common Mistakes When Planning for Local LLM Adoption',
           items: [
-            '**Overestimating model quality timelines.** 3B models do not match GPT-4o today. The gap is 20–30%. Expecting parity before 2027 leads to failed production deployments.',
+            '**Overestimating model quality timelines.** 3B models do not match GPT-5.5 today. The gap is 20–30%. Expecting parity before 2027 leads to failed production deployments.',
             '**Assuming "local is free."** On-premises AI shifts costs from API fees to hardware ($600–$2,000+), electricity (~$200/year/GPU), and DevOps time. ROI is real but not immediate.',
             '**Conflating small model with good-enough model.** 1–3B models excel at summarization and Q&A. For complex reasoning or long-form generation, they underperform 7B+ models by 20–40%.',
             '**Ignoring the cold-start problem.** Local model servers restart on crash or update. Without OLLAMA_KEEP_ALIVE settings and health checks, production systems see 10–30 sec dead periods.',
@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             {
               q: 'What is the biggest local LLM trend in 2026?',
-              a: 'Smaller models achieving higher quality per parameter. Phi-4 Mini 3.8B and Llama 3.2 3B (2026) match Llama 2 7B (2023) on benchmarks. Architectural improvements — better attention, synthetic training data, parameter sharing — are driving quality up without increasing model size.',
+              a: 'Smaller models achieving higher quality per parameter. Phi-4 Mini 3.8B and Llama 3.2 3B (2026) match Llama 3.3 7B (2023) on benchmarks. Architectural improvements — better attention, synthetic training data, parameter sharing — are driving quality up without increasing model size.',
             },
             {
               q: 'Can smartphones run local LLMs in 2026?',
@@ -151,7 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What is the quality gap between local and cloud LLMs in 2026?',
-              a: 'Local open models lag proprietary cloud models by 20–30% on benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89% MMLU. The gap is closing — 2024–2025 saw ~10–15% benchmark improvements annually. Full parity for 70B models vs GPT-4o class is not expected before 2027–2028.',
+              a: 'Local open models lag proprietary cloud models by 20–30% on benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89% MMLU. The gap is closing — 2024–2025 saw ~10–15% benchmark improvements annually. Full parity for 70B models vs GPT-5.5 class is not expected before 2027–2028.',
             },
             {
               q: 'Is local LLM inference fast enough for real-time applications?',
@@ -224,7 +224,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'What is the biggest local LLM trend in 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Smaller models achieving higher quality per parameter. Phi-4 Mini 3.8B and Llama 3.2 3B (2026) match Llama 2 7B (2023) on benchmarks via better attention, synthetic training, and parameter sharing.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Smaller models achieving higher quality per parameter. Phi-4 Mini 3.8B and Llama 3.2 3B (2026) match Llama 3.3 7B (2023) on benchmarks via better attention, synthetic training, and parameter sharing.' },
           },
           {
             '@type': 'Question',
@@ -249,7 +249,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'What is the quality gap between local and cloud LLMs in 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Local open models lag proprietary cloud models by 20–30% on benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89% MMLU. Gap is closing annually (~10–15% improvement per year). Full parity for 70B models is not expected before 2027–2028.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Local open models lag proprietary cloud models by 20–30% on benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89% MMLU. Gap is closing annually (~10–15% improvement per year). Full parity for 70B models is not expected before 2027–2028.' },
           },
           {
             '@type': 'Question',
@@ -269,7 +269,7 @@ schema: {
         name: 'Top Local LLM Trends in 2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Smaller models reaching 7B quality', description: '1–3B models (Phi-4 Mini 3.8B, Llama 3.2 3B) now match Llama 2 7B benchmarks. Practical for summarization and Q&A on 4 GB RAM.' },
+          { '@type': 'ListItem', position: 1, name: 'Smaller models reaching 7B quality', description: '1–3B models (Phi-4 Mini 3.8B, Llama 3.2 3B) now match Llama 3.3 7B benchmarks. Practical for summarization and Q&A on 4 GB RAM.' },
           { '@type': 'ListItem', position: 2, name: 'On-device AI on smartphones', description: 'iPhones A18, Snapdragon X Elite run 1–3B models at 15–30 tok/sec. Full privacy, no internet, compliant with GDPR Article 5.' },
           { '@type': 'ListItem', position: 3, name: 'Reasoning models improving accuracy', description: 'Chain-of-thought models (DeepSeek-R1, OpenAI o1) improve math/logic/multi-step accuracy by 15–30%. Trade-off: 3–5x more tokens per response.' },
           { '@type': 'ListItem', position: 4, name: 'No-code fine-tuning tools launching', description: 'GUI-based fine-tuning platforms (Unsloth, Axolotl successors) expected late 2026–2027. Currently command-line only. 7B fine-tune: 30 min expected to drop to 10 min by 2027.' },
@@ -332,7 +332,7 @@ schema: {
           id: 'smaller-models',
           title: '¿Los modelos 1–3B alcanzan calidad 7B en 2026?',
           content: [
-            '**Sí — la calidad del modelo por parámetro está aumentando rápidamente.** Phi-4 Mini 3.8B obtiene 68% en MMLU; Llama 3.2 3B obtiene 58% — ambos rivalizan con Llama 2 7B (55% MMLU) de 2023.',
+            '**Sí — la calidad del modelo por parámetro está aumentando rápidamente.** Phi-4 Mini 3.8B obtiene 68% en MMLU; Llama 3.2 3B obtiene 58% — ambos rivalizan con Llama 3.3 7B (55% MMLU) de 2023.',
             'Factores impulsores: mejores mecanismos de atención, datos de entrenamiento sintéticos, compartición de parámetros y compresión estilo LoRA.',
             'Implicación: los modelos 1–3B son ahora prácticos para resumen, preguntas y respuestas, y completado de código en hardware con 4 GB de RAM.',
           ],
@@ -378,7 +378,7 @@ schema: {
           id: 'challenges',
           title: '¿Qué retos persisten en los LLMs locales?',
           items: [
-            '**Brecha de calidad:** Los modelos abiertos quedan un 20–30% por detrás de los modelos propietarios en la nube en benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89%. La brecha se reduce pero no se cerrará antes de 2027–2028.',
+            '**Brecha de calidad:** Los modelos abiertos quedan un 20–30% por detrás de los modelos propietarios en la nube en benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89%. La brecha se reduce pero no se cerrará antes de 2027–2028.',
             '**Latencia en tiempo real:** La inferencia local no es adecuada para pipelines en tiempo real de <500ms. Una RTX 4090 genera ~150 tok/seg en 7B — bueno para chat, no para APIs sub-500ms.',
             '**Costos de infraestructura:** Lo local requiere capital: GPU 600–2.000 € + refrigeración + mantenimiento. "Lo local es gratis" es un error — los costos de API se desplazan, no desaparecen.',
             '**Escasez de talento:** Pocos ingenieros saben cómo llevar vLLM a producción, gestionar actualizaciones de modelos u optimizar el throughput por lotes. Mejorará para 2027.',
@@ -389,7 +389,7 @@ schema: {
           id: 'common-mistakes',
           title: 'Errores comunes al planificar la adopción de LLMs locales',
           items: [
-            '**Sobrestimar los cronogramas de calidad del modelo.** Los modelos 3B no igualan a GPT-4o hoy. La brecha es del 20–30%. Esperar paridad antes de 2027 lleva a despliegues en producción fallidos.',
+            '**Sobrestimar los cronogramas de calidad del modelo.** Los modelos 3B no igualan a GPT-5.5 hoy. La brecha es del 20–30%. Esperar paridad antes de 2027 lleva a despliegues en producción fallidos.',
             '**Asumir que "lo local es gratis".** La IA local desplaza los costos de las tarifas de API hacia hardware (600–2.000 €+), electricidad (~200 €/año/GPU) y tiempo de DevOps. El ROI es real pero no inmediato.',
             '**Confundir modelo pequeño con modelo suficientemente bueno.** Los modelos 1–3B destacan en resumen y preguntas y respuestas. Para razonamiento complejo o generación de texto largo, rinden un 20–40% por debajo de los modelos 7B+.',
             '**Ignorar el problema del cold-start.** Los servidores de modelos locales se reinician al bloquearse o actualizarse. Sin configuración de OLLAMA_KEEP_ALIVE ni health checks, los sistemas en producción sufren periodos muertos de 10–30 seg.',
@@ -401,7 +401,7 @@ schema: {
           faqs: [
             {
               q: '¿Cuál es la mayor tendencia de LLM local en 2026?',
-              a: 'Los modelos más pequeños logran mayor calidad por parámetro. Phi-4 Mini 3.8B y Llama 3.2 3B (2026) igualan a Llama 2 7B (2023) en benchmarks. Las mejoras arquitectónicas — mejor atención, datos de entrenamiento sintéticos, compartición de parámetros — impulsan la calidad sin aumentar el tamaño del modelo.',
+              a: 'Los modelos más pequeños logran mayor calidad por parámetro. Phi-4 Mini 3.8B y Llama 3.2 3B (2026) igualan a Llama 3.3 7B (2023) en benchmarks. Las mejoras arquitectónicas — mejor atención, datos de entrenamiento sintéticos, compartición de parámetros — impulsan la calidad sin aumentar el tamaño del modelo.',
             },
             {
               q: '¿Los smartphones pueden ejecutar LLMs locales en 2026?',
@@ -421,7 +421,7 @@ schema: {
             },
             {
               q: '¿Cuál es la brecha de calidad entre los LLMs locales y los de la nube en 2026?',
-              a: 'Los modelos abiertos locales quedan un 20–30% por detrás de los modelos propietarios en la nube en benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89% MMLU. La brecha se está cerrando — 2024–2025 vio mejoras de ~10–15% anuales. La paridad completa para modelos 70B frente a la clase GPT-4o no se espera antes de 2027–2028.',
+              a: 'Los modelos abiertos locales quedan un 20–30% por detrás de los modelos propietarios en la nube en benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89% MMLU. La brecha se está cerrando — 2024–2025 vio mejoras de ~10–15% anuales. La paridad completa para modelos 70B frente a la clase GPT-5.5 no se espera antes de 2027–2028.',
             },
             {
               q: '¿La inferencia de LLMs locales es suficientemente rápida para aplicaciones en tiempo real?',
@@ -494,7 +494,7 @@ schema: {
           {
             '@type': 'Question',
             name: '¿Cuál es la mayor tendencia de LLM local en 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Los modelos más pequeños logran mayor calidad por parámetro. Phi-4 Mini 3.8B y Llama 3.2 3B (2026) igualan a Llama 2 7B (2023) en benchmarks. Las mejoras arquitectónicas — mejor atención, datos sintéticos, compartición de parámetros — impulsan la calidad sin aumentar el tamaño del modelo.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Los modelos más pequeños logran mayor calidad por parámetro. Phi-4 Mini 3.8B y Llama 3.2 3B (2026) igualan a Llama 3.3 7B (2023) en benchmarks. Las mejoras arquitectónicas — mejor atención, datos sintéticos, compartición de parámetros — impulsan la calidad sin aumentar el tamaño del modelo.' },
           },
           {
             '@type': 'Question',
@@ -519,7 +519,7 @@ schema: {
           {
             '@type': 'Question',
             name: '¿Cuál es la brecha de calidad entre los LLMs locales y los de la nube en 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Los modelos abiertos locales quedan un 20–30% por detrás en benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89% MMLU. La brecha se cierra (~10–15% de mejora anual). La paridad completa para modelos 70B no se espera antes de 2027–2028.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Los modelos abiertos locales quedan un 20–30% por detrás en benchmarks. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89% MMLU. La brecha se cierra (~10–15% de mejora anual). La paridad completa para modelos 70B no se espera antes de 2027–2028.' },
           },
           {
             '@type': 'Question',
@@ -545,7 +545,7 @@ schema: {
         name: 'Principales tendencias de LLM local 2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Modelos más pequeños alcanzando calidad 7B', description: 'Los modelos 1–3B (Phi-4 Mini 3.8B, Llama 3.2 3B) igualan ahora los benchmarks de Llama 2 7B. Práctico para resumen y preguntas y respuestas en 4 GB de RAM.' },
+          { '@type': 'ListItem', position: 1, name: 'Modelos más pequeños alcanzando calidad 7B', description: 'Los modelos 1–3B (Phi-4 Mini 3.8B, Llama 3.2 3B) igualan ahora los benchmarks de Llama 3.3 7B. Práctico para resumen y preguntas y respuestas en 4 GB de RAM.' },
           { '@type': 'ListItem', position: 2, name: 'IA en dispositivo en smartphones', description: 'iPhone A18 y Snapdragon X Elite ejecutan modelos 1–3B a 15–30 tok/seg. Privacidad total, sin internet, cumple el Artículo 5 del GDPR.' },
           { '@type': 'ListItem', position: 3, name: 'Modelos de razonamiento mejoran la precisión', description: 'Los modelos de chain-of-thought (DeepSeek-R1, OpenAI o1) mejoran la precisión en matemáticas/lógica/multietapa un 15–30%. Compromiso: 3–5x más tokens por respuesta.' },
           { '@type': 'ListItem', position: 4, name: 'Herramientas de fine-tuning sin código se lanzan', description: 'Plataformas de fine-tuning con GUI (Unsloth, sucesores de Axolotl) esperadas para finales de 2026–2027. Actualmente solo línea de comandos. Fine-tune 7B: 30 min se espera que baje a 10 min para 2027.' },
@@ -608,7 +608,7 @@ schema: {
           id: 'smaller-models',
           title: 'Erreichen 1–3B-Modelle 7B-Qualität 2026?',
           content: [
-            '**Ja — Modellqualität pro Parameter steigt schnell.** Phi-4 Mini 3.8B erzielt 68% MMLU; Llama 3.2 3B erzielt 58% — beide konkurrieren mit Llama 2 7B (55% MMLU) von 2023.',
+            '**Ja — Modellqualität pro Parameter steigt schnell.** Phi-4 Mini 3.8B erzielt 68% MMLU; Llama 3.2 3B erzielt 58% — beide konkurrieren mit Llama 3.3 7B (55% MMLU) von 2023.',
             'Treiber: bessere Aufmerksamkeitsmechanismen, synthetische Trainingsdaten, Parameterfreigabe und LoRA-ähnliche Kompression.',
             'Implikation: 1–3B-Modelle sind jetzt praktisch für Zusammenfassung, Q&A und Code-Vervollständigung auf 4 GB RAM Hardware.',
           ],
@@ -654,7 +654,7 @@ schema: {
           id: 'challenges',
           title: 'Welche Herausforderungen bleiben für lokale LLMs?',
           items: [
-            '**Qualitätslücke:** Open-Source-Modelle hinken proprietären Cloud-Modellen um 20–30% in Benchmarks hinterher. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89%. Lücke schließt sich, aber nicht vor 2027–2028.',
+            '**Qualitätslücke:** Open-Source-Modelle hinken proprietären Cloud-Modellen um 20–30% in Benchmarks hinterher. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89%. Lücke schließt sich, aber nicht vor 2027–2028.',
             '**Real-Time-Latenz:** Lokale Inferenz ist nicht geeignet für <500ms Real-Time-Pipelines. RTX 4090 erzeugt ~150 Token/Sek. auf 7B — gut für Chat, nicht für Sub-500ms APIs.',
             '**Infrastrukturkosten:** On-Premises benötigt Kapital: 600–2.200 € GPU + Kühlung + Wartung. "Lokal ist kostenlos" ist ein Irrtum — API-Kosten verschieben sich, nicht verschwinden.',
             '**Talentmangel:** Wenige Ingenieure wissen, wie man vLLM produktiviert, Model-Updates verwaltet oder Batch-Durchsatz optimiert. Wird bis 2027 besser.',
@@ -665,7 +665,7 @@ schema: {
           id: 'common-mistakes',
           title: 'Häufige Fehler bei der Planung der lokalen LLM-Adoption',
           items: [
-            '**Modellqualitäts-Zeitpläne überschätzen.** 3B-Modelle entsprechen nicht GPT-4o heute. Die Lücke ist 20–30%. Parität vor 2027 zu erwarten führt zu gescheiterten Produktionsbereitstellungen.',
+            '**Modellqualitäts-Zeitpläne überschätzen.** 3B-Modelle entsprechen nicht GPT-5.5 heute. Die Lücke ist 20–30%. Parität vor 2027 zu erwarten führt zu gescheiterten Produktionsbereitstellungen.',
             '**Annahme "Lokal ist kostenlos."** On-Premises-KI verschiebt Kosten von API-Gebühren zu Hardware (600–2.200 €+), Stromversorgung (~200 €/Jahr/GPU) und DevOps-Zeit. ROI ist real, aber nicht unmittelbar.',
             '**Kleine Modelle mit gut-genug Modellen vermischen.** 1–3B-Modelle zeichnen sich bei Zusammenfassung und Q&A aus. Für komplexes Reasoning oder lange Textgenerierung, unterscheiden sie sich um 20–40% von 7B+ Modellen.',
             '**Cold-Start-Problem ignorieren.** Lokale Modell-Server starten bei Absturz oder Update neu. Ohne OLLAMA_KEEP_ALIVE-Einstellungen und Health Checks sehen Produktionssysteme 10–30 Sek. tote Perioden.',
@@ -677,7 +677,7 @@ schema: {
           faqs: [
             {
               q: 'Was ist der größte lokale LLM-Trend 2026?',
-              a: 'Kleinere Modelle erzielen höhere Qualität pro Parameter. Phi-4 Mini 3.8B und Llama 3.2 3B (2026) entsprechen Llama 2 7B (2023) in Benchmarks. Architekturverbesserungen — bessere Aufmerksamkeit, synthetische Trainingsdaten, Parameterfreigabe — steigern Qualität ohne Modellgröße zu erhöhen.',
+              a: 'Kleinere Modelle erzielen höhere Qualität pro Parameter. Phi-4 Mini 3.8B und Llama 3.2 3B (2026) entsprechen Llama 3.3 7B (2023) in Benchmarks. Architekturverbesserungen — bessere Aufmerksamkeit, synthetische Trainingsdaten, Parameterfreigabe — steigern Qualität ohne Modellgröße zu erhöhen.',
             },
             {
               q: 'Können Smartphones 2026 lokale LLMs durchführen?',
@@ -697,7 +697,7 @@ schema: {
             },
             {
               q: 'Was ist die Qualitätslücke zwischen lokalen und Cloud-LLMs 2026?',
-              a: 'Lokale Open-Source-Modelle hinken proprietären Cloud-Modellen um 20–30% in Benchmarks hinterher. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89% MMLU. Die Lücke schließt sich — 2024–2025 sahen ~10–15% Benchmark-Verbesserungen pro Jahr. Volle Parität für 70B-Modelle vs. GPT-4o Klasse wird nicht vor 2027–2028 erwartet.',
+              a: 'Lokale Open-Source-Modelle hinken proprietären Cloud-Modellen um 20–30% in Benchmarks hinterher. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89% MMLU. Die Lücke schließt sich — 2024–2025 sahen ~10–15% Benchmark-Verbesserungen pro Jahr. Volle Parität für 70B-Modelle vs. GPT-5.5 Klasse wird nicht vor 2027–2028 erwartet.',
             },
             {
               q: 'Ist lokale LLM-Inferenz schnell genug für Real-Time-Anwendungen?',
@@ -778,7 +778,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Was ist der größte lokale LLM-Trend 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Kleinere Modelle erzielen höhere Qualität pro Parameter. Phi-4 Mini 3.8B und Llama 3.2 3B (2026) entsprechen Llama 2 7B (2023) in Benchmarks. Architekturverbesserungen sind die Treiber, nicht Größe.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Kleinere Modelle erzielen höhere Qualität pro Parameter. Phi-4 Mini 3.8B und Llama 3.2 3B (2026) entsprechen Llama 3.3 7B (2023) in Benchmarks. Architekturverbesserungen sind die Treiber, nicht Größe.' },
           },
           {
             '@type': 'Question',
@@ -803,7 +803,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Was ist die Qualitätslücke zwischen lokalen und Cloud-LLMs?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Lokale Modelle hinken um 20–30% hinterher. Llama 3.3 70B: 80% MMLU vs GPT-4o: 89%. Schließt sich ~10–15% pro Jahr. Volle Parität erwartet nicht vor 2027–2028.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Lokale Modelle hinken um 20–30% hinterher. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89%. Schließt sich ~10–15% pro Jahr. Volle Parität erwartet nicht vor 2027–2028.' },
           },
           {
             '@type': 'Question',
@@ -839,7 +839,7 @@ schema: {
         name: 'Top lokale LLM-Trends 2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Kleinere Modelle erreichen 7B-Qualität', description: '1–3B-Modelle (Phi-4 Mini 3.8B, Llama 3.2 3B) entsprechen jetzt Llama 2 7B-Benchmarks. Praktisch für Zusammenfassung und Q&A auf 4 GB RAM.' },
+          { '@type': 'ListItem', position: 1, name: 'Kleinere Modelle erreichen 7B-Qualität', description: '1–3B-Modelle (Phi-4 Mini 3.8B, Llama 3.2 3B) entsprechen jetzt Llama 3.3 7B-Benchmarks. Praktisch für Zusammenfassung und Q&A auf 4 GB RAM.' },
           { '@type': 'ListItem', position: 2, name: 'On-Device-KI auf Smartphones', description: 'iPhones A18, Snapdragon X Elite führen 1–3B mit 15–30 Token/Sek. durch. Volle Privatsphäre, kein Internet, GDPR Artikel 5 kompatibel.' },
           { '@type': 'ListItem', position: 3, name: 'Reasoning-Modelle verbessern Genauigkeit', description: 'Chain-of-Thought-Modelle (DeepSeek-R1, OpenAI o1) verbessern Mathematik/Logik/Multi-Schritt um 15–30%. Kompromiss: 3–5× mehr Tokens pro Antwort.' },
           { '@type': 'ListItem', position: 4, name: 'No-Code Fine-Tuning-Tools starten', description: 'GUI-basierte Fine-Tuning-Plattformen (Unsloth, Axolotl-Nachfolger) erwartet Ende 2026–2027. Derzeit Kommandozeile nur. 7B Fine-Tune: 30 Min. erwartet 10 Min. bis 2027.' },
@@ -902,7 +902,7 @@ schema: {
           id: 'smaller-models',
           title: 'Les modèles 1–3B atteignent-ils la qualité 7B en 2026?',
           content: [
-            '**Oui — la qualité du modèle par paramètre augmente rapidement.** Phi-4 Mini 3.8B obtient 68% au MMLU; Llama 3.2 3B obtient 58% — tous deux rivalisent avec Llama 2 7B (55% MMLU) de 2023.',
+            '**Oui — la qualité du modèle par paramètre augmente rapidement.** Phi-4 Mini 3.8B obtient 68% au MMLU; Llama 3.2 3B obtient 58% — tous deux rivalisent avec Llama 3.3 7B (55% MMLU) de 2023.',
             'Facteurs : meilleurs mécanismes d\'attention, données d\'entraînement synthétiques, partage de paramètres et compression de style LoRA.',
             'Implication : Les modèles 1–3B sont désormais pratiques pour la synthèse, Q&A et la complétion de code sur du matériel 4 GB.',
           ],
@@ -948,7 +948,7 @@ schema: {
           id: 'challenges',
           title: 'Quels défis les LLM locaux font-ils encore face?',
           items: [
-            '**Écart de qualité :** Les modèles ouverts traînent les modèles propriétaires du cloud de 20–30% sur les benchmarks. Llama 3.3 70B : 80% MMLU vs GPT-4o : 89%. L\'écart se réduit mais ne se ferme pas avant 2027–2028.',
+            '**Écart de qualité :** Les modèles ouverts traînent les modèles propriétaires du cloud de 20–30% sur les benchmarks. Llama 3.3 70B : 80% MMLU vs GPT-5.5 : 89%. L\'écart se réduit mais ne se ferme pas avant 2027–2028.',
             '**Latence en temps réel :** L\'inférence locale ne convient pas aux pipelines en temps réel <500ms. Un RTX 4090 génère ~150 tok/s sur 7B — bon pour le chat, pas pour les API sub-500ms.',
             '**Coûts d\'infrastructure :** Sur site nécessite du capital : GPU 600–2 200 € + refroidissement + maintenance. "Local est gratuit" est une fausse idée — les coûts API changent, ne disparaissent pas.',
             '**Pénurie de talents :** Peu d\'ingénieurs savent productioniser vLLM, gérer les mises à jour de modèles ou optimiser le débit par lots. S\'améliorera d\'ici 2027.',
@@ -959,7 +959,7 @@ schema: {
           id: 'common-mistakes',
           title: 'Erreurs courantes lors de la planification de l\'adoption des LLM locaux',
           items: [
-            '**Surestimer les calendriers de qualité du modèle.** Les modèles 3B ne correspondent pas à GPT-4o aujourd\'hui. L\'écart est de 20–30%. S\'attendre à la parité avant 2027 mène à des déploiements de production échoués.',
+            '**Surestimer les calendriers de qualité du modèle.** Les modèles 3B ne correspondent pas à GPT-5.5 aujourd\'hui. L\'écart est de 20–30%. S\'attendre à la parité avant 2027 mène à des déploiements de production échoués.',
             '**Supposer que "local est gratuit".** L\'IA sur site déplace les coûts des frais d\'API vers le matériel (600–2 200 €+), l\'électricité (~200 €/année/GPU) et le temps DevOps. Le ROI est réel mais pas immédiat.',
             '**Confondre petit modèle avec modèle assez bon.** Les modèles 1–3B excellent en synthèse et Q&A. Pour le raisonnement complexe ou la génération longue, ils sous-performent les modèles 7B+ de 20–40%.',
             '**Ignorer le problème du démarrage à froid.** Les serveurs de modèles locaux redémarrent en cas de panne ou de mise à jour. Sans les paramètres OLLAMA_KEEP_ALIVE et les vérifications de santé, les systèmes de production voient 10–30 sec de périodes mortes.',
@@ -971,7 +971,7 @@ schema: {
           faqs: [
             {
               q: 'Quelle est la plus grande tendance des LLM locaux en 2026?',
-              a: 'Les modèles plus petits atteignent une qualité plus élevée par paramètre. Phi-4 Mini 3.8B et Llama 3.2 3B (2026) correspondent à Llama 2 7B (2023) sur les benchmarks. Les améliorations architecturales — meilleure attention, données d\'entraînement synthétiques, partage de paramètres — augmentent la qualité sans augmenter la taille du modèle.',
+              a: 'Les modèles plus petits atteignent une qualité plus élevée par paramètre. Phi-4 Mini 3.8B et Llama 3.2 3B (2026) correspondent à Llama 3.3 7B (2023) sur les benchmarks. Les améliorations architecturales — meilleure attention, données d\'entraînement synthétiques, partage de paramètres — augmentent la qualité sans augmenter la taille du modèle.',
             },
             {
               q: 'Les smartphones peuvent-ils exécuter des LLM locaux en 2026?',
@@ -991,7 +991,7 @@ schema: {
             },
             {
               q: 'Quel est l\'écart de qualité entre les LLM locaux et les LLM cloud en 2026?',
-              a: 'Les modèles ouverts locaux traînent les modèles propriétaires du cloud de 20–30% sur les benchmarks. Llama 3.3 70B : 80% MMLU vs GPT-4o : 89% MMLU. L\'écart se réduit — 2024–2025 a vu ~10–15% d\'améliorations de benchmark annuellement. La parité complète pour les modèles 70B par rapport à la classe GPT-4o n\'est pas attendue avant 2027–2028.',
+              a: 'Les modèles ouverts locaux traînent les modèles propriétaires du cloud de 20–30% sur les benchmarks. Llama 3.3 70B : 80% MMLU vs GPT-5.5 : 89% MMLU. L\'écart se réduit — 2024–2025 a vu ~10–15% d\'améliorations de benchmark annuellement. La parité complète pour les modèles 70B par rapport à la classe GPT-5.5 n\'est pas attendue avant 2027–2028.',
             },
             {
               q: 'L\'inférence des LLM locaux est-elle assez rapide pour les applications en temps réel?',
@@ -1064,7 +1064,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Quelle est la plus grande tendance des LLM locaux en 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Les modèles plus petits atteignent une qualité plus élevée par paramètre. Phi-4 Mini 3.8B et Llama 3.2 3B (2026) correspondent à Llama 2 7B (2023) sur les benchmarks via une meilleure attention, un entraînement synthétique et un partage de paramètres.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Les modèles plus petits atteignent une qualité plus élevée par paramètre. Phi-4 Mini 3.8B et Llama 3.2 3B (2026) correspondent à Llama 3.3 7B (2023) sur les benchmarks via une meilleure attention, un entraînement synthétique et un partage de paramètres.' },
           },
           {
             '@type': 'Question',
@@ -1089,7 +1089,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Quel est l\'écart de qualité entre les LLM locaux et les LLM cloud en 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Les modèles ouverts locaux traînent les modèles propriétaires du cloud de 20–30% sur les benchmarks. Llama 3.3 70B : 80% MMLU vs GPT-4o : 89% MMLU. L\'écart se réduit annuellement (~10–15% d\'amélioration par an). La parité complète pour les modèles 70B n\'est pas attendue avant 2027–2028.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Les modèles ouverts locaux traînent les modèles propriétaires du cloud de 20–30% sur les benchmarks. Llama 3.3 70B : 80% MMLU vs GPT-5.5 : 89% MMLU. L\'écart se réduit annuellement (~10–15% d\'amélioration par an). La parité complète pour les modèles 70B n\'est pas attendue avant 2027–2028.' },
           },
           {
             '@type': 'Question',
@@ -1115,7 +1115,7 @@ schema: {
         name: 'Top tendances LLM local 2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Modèles plus petits atteignant la qualité 7B', description: 'Les modèles 1–3B (Phi-4 Mini 3.8B, Llama 3.2 3B) correspondent maintenant aux benchmarks Llama 2 7B. Pratique pour la synthèse et Q&A sur 4 GB de RAM.' },
+          { '@type': 'ListItem', position: 1, name: 'Modèles plus petits atteignant la qualité 7B', description: 'Les modèles 1–3B (Phi-4 Mini 3.8B, Llama 3.2 3B) correspondent maintenant aux benchmarks Llama 3.3 7B. Pratique pour la synthèse et Q&A sur 4 GB de RAM.' },
           { '@type': 'ListItem', position: 2, name: 'IA sur appareil sur smartphones', description: 'Les iPhones A18 et Snapdragon X Elite exécutent les modèles 1–3B à 15–30 tok/s. Confidentialité totale, pas d\'internet, conforme à l\'article 5 du RGPD.' },
           { '@type': 'ListItem', position: 3, name: 'Modèles de raisonnement améliorant la précision', description: 'Les modèles de pensée en chaîne (DeepSeek-R1, OpenAI o1) améliorent la précision des maths/logique/multi-étapes de 15–30%. Compromis : 3–5x plus de tokens par réponse.' },
           { '@type': 'ListItem', position: 4, name: 'Outils de fine-tuning sans code lancés', description: 'Les plateformes de fine-tuning basées sur GUI (Unsloth, successeurs Axolotl) attendues fin 2026–2027. Actuellement en ligne de commande uniquement. Fine-tune 7B : 30 min attendus de tomber à 10 min d\'ici 2027.' },
@@ -1178,7 +1178,7 @@ schema: {
           id: 'smaller-models',
           title: '1–3Bモデルが7B品質到達？',
           content: [
-            '**はい、モデル品質/パラメータ上昇速い。** Phi-4 Mini 3.8B：68% MMLU、Llama 3.2 3B：58% ← 2023年Llama 2 7B（55% MMLU）に対抗。',
+            '**はい、モデル品質/パラメータ上昇速い。** Phi-4 Mini 3.8B：68% MMLU、Llama 3.2 3B：58% ← 2023年Llama 3.3 7B（55% MMLU）に対抗。',
             '駆動力：注意機構改善、合成学習データ、パラメータ共有、LoRA型圧縮。',
             '意味：1–3Bモデルは4GB RAM硬体で要約・Q&A・コード補完に実用的。',
           ],
@@ -1224,7 +1224,7 @@ schema: {
           id: 'challenges',
           title: '残る課題',
           items: [
-            '**品質ギャップ：** オープンモデルはベンチマークで独占モデル20–30%低い。Llama 3.3 70B：80% MMLU vs GPT-4o：89%。ギャップ縮小中だが2027–2028前に閉じない予測。',
+            '**品質ギャップ：** オープンモデルはベンチマークで独占モデル20–30%低い。Llama 3.3 70B：80% MMLU vs GPT-5.5：89%。ギャップ縮小中だが2027–2028前に閉じない予測。',
             '**実時間遅延：** ローカル推論は<500ms実時間パイプライン不適。RTX 4090は7B型で毎秒150トークン生成 ← チャット向き、500ms以下API不適。',
             '**インフラ費用：** オンプレミスには資本投下要：GPU 600–2 200 € +冷却 +保守。「ローカルは無料」は誤解 ← APIコスト移転、消滅しない。',
             '**人材不足：** vLLM生産化・モデル更新管理・バッチスループット最適化知るエンジニア少。2027年改善予定。',
@@ -1235,7 +1235,7 @@ schema: {
           id: 'common-mistakes',
           title: '一般的なミス',
           items: [
-            '**モデル品質タイムライン過大評価。** 3Bモデルは現在GPT-4oに非対応。ギャップ20–30%。2027年前に対等期待は本番デプロイ失敗招く。',
+            '**モデル品質タイムライン過大評価。** 3Bモデルは現在GPT-5.5に非対応。ギャップ20–30%。2027年前に対等期待は本番デプロイ失敗招く。',
             '**「ローカルは無料」仮定。** オンプレミスAIはAPI料金からハードウェア（¥95,000–300,000+）、電力（年GPU当たり約¥30,000）、DevOps時間へコスト移転。ROI実ありだが即座でない。',
             '**小型モデル = 十分モデル混同。** 1–3B型は要約・Q&A向き好。複雑推論・長編生成は7B+型より20–40%劣。',
             '**コールドスタート問題無視。** ローカルモデルサーバはクラッシュ・更新時再起動。OLLAMA_KEEP_ALIVE設定・ヘルスチェック無いと本番システムで10–30秒デッドタイム。',
@@ -1247,7 +1247,7 @@ schema: {
           faqs: [
             {
               q: '2026年ローカルLLM最大トレンド？',
-              a: '小型モデルがパラメータ当たり高品質達成。Phi-4 Mini 3.8B・Llama 3.2 3B（2026）がベンチマークでLlama 2 7B（2023）に対応。構造改善—注意機構・合成学習・パラメータ共有—がモデルサイズ増加なしで品質向上。',
+              a: '小型モデルがパラメータ当たり高品質達成。Phi-4 Mini 3.8B・Llama 3.2 3B（2026）がベンチマークでLlama 3.3 7B（2023）に対応。構造改善—注意機構・合成学習・パラメータ共有—がモデルサイズ増加なしで品質向上。',
             },
             {
               q: '2026年スマートフォンはローカルLLM実行可能？',
@@ -1267,7 +1267,7 @@ schema: {
             },
             {
               q: '2026年ローカル vs クラウドLLM品質ギャップ？',
-              a: 'ローカルオープンモデルはベンチマークで独占クラウドモデル20–30%低い。Llama 3.3 70B：80% MMLU vs GPT-4o：89% MMLU。ギャップは毎年縮小（年10–15%改善）。70Bモデルとの完全対等は2027–2028前未期待。',
+              a: 'ローカルオープンモデルはベンチマークで独占クラウドモデル20–30%低い。Llama 3.3 70B：80% MMLU vs GPT-5.5：89% MMLU。ギャップは毎年縮小（年10–15%改善）。70Bモデルとの完全対等は2027–2028前未期待。',
             },
             {
               q: 'ローカルLLM推論は実時間アプリケーション十分速？',
@@ -1340,7 +1340,7 @@ schema: {
           {
             '@type': 'Question',
             name: '2026年ローカルLLM最大トレンド？',
-            acceptedAnswer: { '@type': 'Answer', text: '小型モデルがパラメータ当たり高品質達成。Phi-4 Mini 3.8B・Llama 3.2 3B（2026）がベンチマークでLlama 2 7B（2023）に対応。構造改善—注意機構・合成学習・パラメータ共有—がモデルサイズ増加なしで品質向上。' },
+            acceptedAnswer: { '@type': 'Answer', text: '小型モデルがパラメータ当たり高品質達成。Phi-4 Mini 3.8B・Llama 3.2 3B（2026）がベンチマークでLlama 3.3 7B（2023）に対応。構造改善—注意機構・合成学習・パラメータ共有—がモデルサイズ増加なしで品質向上。' },
           },
           {
             '@type': 'Question',
@@ -1365,7 +1365,7 @@ schema: {
           {
             '@type': 'Question',
             name: '2026年ローカル vs クラウドLLM品質ギャップ？',
-            acceptedAnswer: { '@type': 'Answer', text: 'ローカルオープンモデルはベンチマークで独占クラウドモデル20–30%低い。Llama 3.3 70B：80% MMLU vs GPT-4o：89%。ギャップ毎年縮小（年10–15%改善）。完全対等は2027–2028前未期待。' },
+            acceptedAnswer: { '@type': 'Answer', text: 'ローカルオープンモデルはベンチマークで独占クラウドモデル20–30%低い。Llama 3.3 70B：80% MMLU vs GPT-5.5：89%。ギャップ毎年縮小（年10–15%改善）。完全対等は2027–2028前未期待。' },
           },
           {
             '@type': 'Question',
@@ -1391,7 +1391,7 @@ schema: {
         name: 'トップローカルLLMトレンド2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: '7B品質到達の小型モデル', description: '1–3B型（Phi-4 Mini 3.8B、Llama 3.2 3B）が今Llama 2 7Bベンチマークに対応。4GB RAM硬体で要約・Q&A実用。' },
+          { '@type': 'ListItem', position: 1, name: '7B品質到達の小型モデル', description: '1–3B型（Phi-4 Mini 3.8B、Llama 3.2 3B）が今Llama 3.3 7Bベンチマークに対応。4GB RAM硬体で要約・Q&A実用。' },
           { '@type': 'ListItem', position: 2, name: 'スマートフォン端末AI', description: 'iPhone A18、Snapdragon X Elite が1–3B型を15–30トークン/秒実行。完全プライバシー、インターネット不要、GDPR第5条対応。' },
           { '@type': 'ListItem', position: 3, name: '推論モデル精度向上', description: 'チェーンオブソート型（DeepSeek-R1、OpenAI o1）が数学/ロジック/複数ステップ精度15–30%向上。トレード：応答当たりトークン3–5倍。' },
           { '@type': 'ListItem', position: 4, name: 'ノーコードファインチューニング発表', description: 'GUI型ファインチューニングプラットフォーム（Unsloth・Axolotl後継）2026年末–2027年予定。現在コマンドラインのみ。7B型：30分 → 2027年までに10分目標。' },
@@ -1454,7 +1454,7 @@ schema: {
           id: 'smaller-models',
           title: '1–3B模型能达到7B品质吗？',
           content: [
-            '**能—模型品质/参数上升迅速。** Phi-4 Mini 3.8B得68% MMLU；Llama 3.2 3B得58%—都匹敌2023年Llama 2 7B（55% MMLU）。',
+            '**能—模型品质/参数上升迅速。** Phi-4 Mini 3.8B得68% MMLU；Llama 3.2 3B得58%—都匹敌2023年Llama 3.3 7B（55% MMLU）。',
             '驱动力：更好的注意机制、合成训练数据、参数共享、LoRA型压缩。',
             '意义：1–3B模型在4GB RAM硬件上对摘要、问答、代码完成实用。',
           ],
@@ -1500,7 +1500,7 @@ schema: {
           id: 'challenges',
           title: '本地LLM仍存在的挑战',
           items: [
-            '**品质差距：** 开放模型在基准上落后专有云模型20–30%。Llama 3.3 70B：80% MMLU vs GPT-4o：89%。差距缩小中但预期2027–2028前不会关闭。',
+            '**品质差距：** 开放模型在基准上落后专有云模型20–30%。Llama 3.3 70B：80% MMLU vs GPT-5.5：89%。差距缩小中但预期2027–2028前不会关闭。',
             '**实时延迟：** 本地推理不适合<500ms实时管道。RTX 4090在7B上生成约150令牌/秒—适合聊天，不适于500ms以下API。',
             '**基础设施成本：** 本地需资本投入：GPU 600–2 200 € +冷却 +维护。"本地免费"是误解—API成本转移，不消失。',
             '**人才缺口：** 懂vLLM生产化、管理模型更新或优化批吞吐的工程师少。2027年预期改进。',
@@ -1511,7 +1511,7 @@ schema: {
           id: 'common-mistakes',
           title: '常见错误',
           items: [
-            '**高估模型品质时间表。** 3B模型今日不匹配GPT-4o。差距20–30%。期望2027前达到平价导致生产部署失败。',
+            '**高估模型品质时间表。** 3B模型今日不匹配GPT-5.5。差距20–30%。期望2027前达到平价导致生产部署失败。',
             '**假设"本地免费"。** 本地AI将API费用成本转移至硬件（$600–$2000+）、电力（年GPU约$200）和DevOps时间。ROI实际但非即刻。',
             '**混淆小模型和足够好的模型。** 1–3B模型在摘要和问答中优秀。对复杂推理或长篇生成，它们落后7B+模型20–40%。',
             '**忽视冷启动问题。** 本地模型服务器在崩溃或更新时重启。无OLLAMA_KEEP_ALIVE设置和健康检查，生产系统见10–30秒停机时间。',
@@ -1523,7 +1523,7 @@ schema: {
           faqs: [
             {
               q: '2026年本地LLM最大趋势？',
-              a: '小型模型达到更高每参数品质。Phi-4 Mini 3.8B和Llama 3.2 3B（2026）在基准上匹配Llama 2 7B（2023）。架构改进—更好注意、合成训练、参数共享—不增加模型大小即可提升品质。',
+              a: '小型模型达到更高每参数品质。Phi-4 Mini 3.8B和Llama 3.2 3B（2026）在基准上匹配Llama 3.3 7B（2023）。架构改进—更好注意、合成训练、参数共享—不增加模型大小即可提升品质。',
             },
             {
               q: '2026年智能手机能运行本地LLM吗？',
@@ -1543,7 +1543,7 @@ schema: {
             },
             {
               q: '2026年本地与云LLM品质差距？',
-              a: '本地开放模型在基准上落后专有云模型20–30%。Llama 3.3 70B：80% MMLU vs GPT-4o：89% MMLU。差距缩小—每年约10–15%改进。70B模型与GPT-4o级别的完全平价预期不早于2027–2028。',
+              a: '本地开放模型在基准上落后专有云模型20–30%。Llama 3.3 70B：80% MMLU vs GPT-5.5：89% MMLU。差距缩小—每年约10–15%改进。70B模型与GPT-5.5级别的完全平价预期不早于2027–2028。',
             },
             {
               q: '本地LLM推理对实时应用足够快吗？',
@@ -1616,7 +1616,7 @@ schema: {
           {
             '@type': 'Question',
             name: '2026年本地LLM最大趋势？',
-            acceptedAnswer: { '@type': 'Answer', text: '小型模型达到更高每参数品质。Phi-4 Mini 3.8B和Llama 3.2 3B（2026）在基准上匹配Llama 2 7B（2023）。架构改进—更好注意、合成训练、参数共享—不增加模型大小即可提升品质。' },
+            acceptedAnswer: { '@type': 'Answer', text: '小型模型达到更高每参数品质。Phi-4 Mini 3.8B和Llama 3.2 3B（2026）在基准上匹配Llama 3.3 7B（2023）。架构改进—更好注意、合成训练、参数共享—不增加模型大小即可提升品质。' },
           },
           {
             '@type': 'Question',
@@ -1641,7 +1641,7 @@ schema: {
           {
             '@type': 'Question',
             name: '2026年本地与云LLM品质差距？',
-            acceptedAnswer: { '@type': 'Answer', text: '本地开放模型在基准上落后专有云模型20–30%。Llama 3.3 70B：80% MMLU vs GPT-4o：89%。差距缩小—每年约10–15%改进。完全平价预期不早于2027–2028。' },
+            acceptedAnswer: { '@type': 'Answer', text: '本地开放模型在基准上落后专有云模型20–30%。Llama 3.3 70B：80% MMLU vs GPT-5.5：89%。差距缩小—每年约10–15%改进。完全平价预期不早于2027–2028。' },
           },
           {
             '@type': 'Question',
@@ -1667,7 +1667,7 @@ schema: {
         name: '顶级本地LLM趋势2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: '到达7B品质的小型模型', description: '1–3B型（Phi-4 Mini 3.8B、Llama 3.2 3B）现匹配Llama 2 7B基准。4GB RAM硬件上对摘要和问答实用。' },
+          { '@type': 'ListItem', position: 1, name: '到达7B品质的小型模型', description: '1–3B型（Phi-4 Mini 3.8B、Llama 3.2 3B）现匹配Llama 3.3 7B基准。4GB RAM硬件上对摘要和问答实用。' },
           { '@type': 'ListItem', position: 2, name: '智能手机端设备AI', description: 'iPhone A18、Snapdragon X Elite以15–30令牌/秒运行1–3B型。完全隐私、无网络、符合GDPR第5条。' },
           { '@type': 'ListItem', position: 3, name: '推理模型精度提升', description: '逐步思考型（DeepSeek-R1、OpenAI o1）将数学/逻辑/多步精度提高15–30%。折衷：每个应答3–5倍令牌。' },
           { '@type': 'ListItem', position: 4, name: '无代码微调工具推出', description: 'GUI型微调平台（Unsloth、Axolotl后继）2026年末–2027年预期。当前仅命令行。7B型：30分钟 → 2027年前10分钟目标。' },

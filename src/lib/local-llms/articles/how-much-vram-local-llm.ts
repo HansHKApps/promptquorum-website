@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**3B models** (Phi, StableLM): 4 GB VRAM minimum',
             '**7B models** (Llama, Mistral, Qwen): 8 GB VRAM (Q4), 10 GB (Q5)',
-            '**13B models** (Llama 3.1, Mistral): 12 GB VRAM minimum (Q4)',
+            '**13B models** (Llama 3.3, Mistral): 12 GB VRAM minimum (Q4)',
             '**22B models** (Qwen2.5, Gemma): 16 GB VRAM (Q4)',
             '**70B models** (Llama 3.3, Qwen 3.6): 24–32 GB VRAM (Q4–Q5)',
             '**MoE models**: VRAM scales with weights you must hold in memory. Example: Qwen 3.6 35B-A3B (3B active) fits a tiny ~2 GB footprint, while Llama 4 Scout (17B active / 109B total) still needs ~55 GB at Q4 because all experts stay resident',
@@ -93,8 +93,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Model Size', 'FP32 (No Quantization)', 'Q8 (8-bit)', 'Q5 (5-bit)', 'Q4 (4-bit)', 'Recommended GPU'],
           rows: [
             { 'Model Size': '3B (Phi, StableLM)', 'FP32 (No Quantization)': '12 GB', 'Q8 (8-bit)': '6 GB', 'Q5 (5-bit)': '4 GB', 'Q4 (4-bit)': '3 GB', 'Recommended GPU': 'RTX 2060 6 GB or RTX 5070 12 GB' },
-            { 'Model Size': '7B (Llama 2, Mistral)', 'FP32 (No Quantization)': '28 GB', 'Q8 (8-bit)': '14 GB', 'Q5 (5-bit)': '9 GB', 'Q4 (4-bit)': '7 GB', 'Recommended GPU': 'RTX 3060 12 GB or RTX 5070 12 GB' },
-            { 'Model Size': '13B (Llama 2, Mistral)', 'FP32 (No Quantization)': '52 GB', 'Q8 (8-bit)': '26 GB', 'Q5 (5-bit)': '17 GB', 'Q4 (4-bit)': '13 GB', 'Recommended GPU': 'RTX 3090 24 GB or RTX 5080 16 GB' },
+            { 'Model Size': '7B (Llama 3.3, Mistral)', 'FP32 (No Quantization)': '28 GB', 'Q8 (8-bit)': '14 GB', 'Q5 (5-bit)': '9 GB', 'Q4 (4-bit)': '7 GB', 'Recommended GPU': 'RTX 3060 12 GB or RTX 5070 12 GB' },
+            { 'Model Size': '13B (Llama 3.3, Mistral)', 'FP32 (No Quantization)': '52 GB', 'Q8 (8-bit)': '26 GB', 'Q5 (5-bit)': '17 GB', 'Q4 (4-bit)': '13 GB', 'Recommended GPU': 'RTX 3090 24 GB or RTX 5080 16 GB' },
             { 'Model Size': '22B (Qwen, Gemma)', 'FP32 (No Quantization)': '88 GB', 'Q8 (8-bit)': '44 GB', 'Q5 (5-bit)': '28 GB', 'Q4 (4-bit)': '22 GB', 'Recommended GPU': 'RTX 4090 24 GB (Q4) or RTX 5090 32 GB' },
             { 'Model Size': '70B (Llama 3, Qwen)', 'FP32 (No Quantization)': '280 GB', 'Q8 (8-bit)': '140 GB', 'Q5 (5-bit)': '88 GB', 'Q4 (4-bit)': '70 GB', 'Recommended GPU': '2× RTX 4090 (24 GB each), or 1× H100 80 GB' },
             { 'Model Size': 'Qwen 3.6 35B-A3B (3B active, MoE)*', 'FP32 (No Quantization)': '12 GB', 'Q8 (8-bit)': '3 GB', 'Q5 (5-bit)': '2 GB', 'Q4 (4-bit)': '2 GB', 'Recommended GPU': 'RTX 2060 6 GB or RTX 5070 12 GB' },
@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'faqSection': {
           title: 'FAQ',
           faqs: [
-            { q: 'Can I run Mistral 7B on a 6GB GPU?', a: 'Barely, at Q4 with tight overhead. Practically, no. Buy at least 8GB. You\'ll hit OOM errors with 6GB.' },
+            { q: 'Can I run Mistral Small on a 6GB GPU?', a: 'Barely, at Q4 with tight overhead. Practically, no. Buy at least 8GB. You\'ll hit OOM errors with 6GB.' },
             { q: 'How much VRAM do I need for fine-tuning a 7B model?', a: 'For LoRA: 12-16GB. Full fine-tuning: 28GB+. Fine-tuning requires optimizer state (2-4× model VRAM), not just inference.' },
             { q: 'Is 12GB enough for Llama 3 13B?', a: 'At Q4, yes barely. At Q5 or Q8, no. 12GB is cutting it close. 16GB is comfortable.' },
             { q: 'Do I need 24GB for a 70B model?', a: 'At Q4, yes. At Q5+, no. Higher quantization (Q5, Q8) need 32GB+ for 70B.' },
@@ -227,7 +227,7 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'Can I run Mistral 7B on a 6GB GPU?',
+            'name': 'Can I run Mistral Small on a 6GB GPU?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Barely, at Q4 with tight overhead. Practically, no. Buy at least 8GB. You will hit OOM errors with 6GB.'
@@ -362,7 +362,7 @@ schema: {
           items: [
             '**Modelos 3B** (Phi, StableLM): mínimo 4 GB de VRAM',
             '**Modelos 7B** (Llama, Mistral, Qwen): 8 GB de VRAM (Q4), 10 GB (Q5)',
-            '**Modelos 13B** (Llama 3.1, Mistral): mínimo 12 GB de VRAM (Q4)',
+            '**Modelos 13B** (Llama 3.3, Mistral): mínimo 12 GB de VRAM (Q4)',
             '**Modelos 22B** (Qwen2.5, Gemma): 16 GB de VRAM (Q4)',
             '**Modelos 70B** (Llama 3.3, Qwen 3.6): 24–32 GB de VRAM (Q4–Q5)',
             '**Modelos MoE**: la VRAM escala con los pesos que debes mantener en memoria. Ejemplo: Qwen 3.6 35B-A3B (3B activos) cabe en una huella diminuta de ~2 GB, mientras que Llama 4 Scout (17B activos / 109B totales) aún necesita ~55 GB en Q4 porque todos los expertos permanecen residentes',
@@ -390,8 +390,8 @@ schema: {
           columns: ['Tamaño del modelo', 'FP32 (sin cuantización)', 'Q8 (8 bits)', 'Q5 (5 bits)', 'Q4 (4 bits)', 'GPU recomendada'],
           rows: [
             { 'Tamaño del modelo': '3B (Phi, StableLM)', 'FP32 (sin cuantización)': '12 GB', 'Q8 (8 bits)': '6 GB', 'Q5 (5 bits)': '4 GB', 'Q4 (4 bits)': '3 GB', 'GPU recomendada': 'RTX 2060 6 GB o RTX 5070 12 GB' },
-            { 'Tamaño del modelo': '7B (Llama 2, Mistral)', 'FP32 (sin cuantización)': '28 GB', 'Q8 (8 bits)': '14 GB', 'Q5 (5 bits)': '9 GB', 'Q4 (4 bits)': '7 GB', 'GPU recomendada': 'RTX 3060 12 GB o RTX 5070 12 GB' },
-            { 'Tamaño del modelo': '13B (Llama 2, Mistral)', 'FP32 (sin cuantización)': '52 GB', 'Q8 (8 bits)': '26 GB', 'Q5 (5 bits)': '17 GB', 'Q4 (4 bits)': '13 GB', 'GPU recomendada': 'RTX 3090 24 GB o RTX 5080 16 GB' },
+            { 'Tamaño del modelo': '7B (Llama 3.3, Mistral)', 'FP32 (sin cuantización)': '28 GB', 'Q8 (8 bits)': '14 GB', 'Q5 (5 bits)': '9 GB', 'Q4 (4 bits)': '7 GB', 'GPU recomendada': 'RTX 3060 12 GB o RTX 5070 12 GB' },
+            { 'Tamaño del modelo': '13B (Llama 3.3, Mistral)', 'FP32 (sin cuantización)': '52 GB', 'Q8 (8 bits)': '26 GB', 'Q5 (5 bits)': '17 GB', 'Q4 (4 bits)': '13 GB', 'GPU recomendada': 'RTX 3090 24 GB o RTX 5080 16 GB' },
             { 'Tamaño del modelo': '22B (Qwen, Gemma)', 'FP32 (sin cuantización)': '88 GB', 'Q8 (8 bits)': '44 GB', 'Q5 (5 bits)': '28 GB', 'Q4 (4 bits)': '22 GB', 'GPU recomendada': 'RTX 4090 24 GB (Q4) o RTX 5090 32 GB' },
             { 'Tamaño del modelo': '70B (Llama 3, Qwen)', 'FP32 (sin cuantización)': '280 GB', 'Q8 (8 bits)': '140 GB', 'Q5 (5 bits)': '88 GB', 'Q4 (4 bits)': '70 GB', 'GPU recomendada': '2× RTX 4090 (24 GB c/u), o 1× H100 80 GB' },
             { 'Tamaño del modelo': 'Qwen 3.6 35B-A3B (3B activos, MoE)*', 'FP32 (sin cuantización)': '12 GB', 'Q8 (8 bits)': '3 GB', 'Q5 (5 bits)': '2 GB', 'Q4 (4 bits)': '2 GB', 'GPU recomendada': 'RTX 2060 6 GB o RTX 5070 12 GB' },
@@ -464,7 +464,7 @@ schema: {
         'faqSection': {
           title: 'FAQ',
           faqs: [
-            { q: '¿Puedo ejecutar Mistral 7B en una GPU de 6 GB?', a: 'Con dificultad, en Q4 con overhead ajustado. En la práctica, no. Compra al menos 8 GB. Tendrás errores de OOM con 6 GB.' },
+            { q: '¿Puedo ejecutar Mistral Small en una GPU de 6 GB?', a: 'Con dificultad, en Q4 con overhead ajustado. En la práctica, no. Compra al menos 8 GB. Tendrás errores de OOM con 6 GB.' },
             { q: '¿Cuánta VRAM necesito para hacer fine-tuning de un modelo 7B?', a: 'Para LoRA: 12-16 GB. Fine-tuning completo: 28 GB+. El fine-tuning requiere estado del optimizador (2-4× la VRAM del modelo), no solo la inferencia.' },
             { q: '¿Son suficientes 12 GB para Llama 3 13B?', a: 'En Q4, apenas. En Q5 o Q8, no. 12 GB es muy ajustado. 16 GB es cómodo.' },
             { q: '¿Necesito 24 GB para un modelo 70B?', a: 'En Q4, sí. En Q5+, no. Una cuantización más alta (Q5, Q8) necesita 32 GB+ para 70B.' },
@@ -524,7 +524,7 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': '¿Puedo ejecutar Mistral 7B en una GPU de 6 GB?',
+            'name': '¿Puedo ejecutar Mistral Small en una GPU de 6 GB?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Con dificultad, en Q4 con overhead ajustado. En la práctica, no. Compra al menos 8 GB. Tendrás errores de OOM con 6 GB.'
@@ -772,7 +772,7 @@ schema: {
         faqSection: {
           title: 'FAQ',
           faqs: [
-            { q: 'Puis-je exécuter Mistral 7B sur une GPU 6 GB?', a: 'À peine, à Q4 avec surcharge serrée. Pratiquement, non. Achetez au moins 8 GB. Vous aurez des erreurs OOM avec 6 GB.' },
+            { q: 'Puis-je exécuter Mistral Small sur une GPU 6 GB?', a: 'À peine, à Q4 avec surcharge serrée. Pratiquement, non. Achetez au moins 8 GB. Vous aurez des erreurs OOM avec 6 GB.' },
             { q: 'Combien de VRAM ai-je besoin pour fine-tuner un modèle 7B?', a: 'Pour LoRA: 12-16 GB. Fine-tuning complet: 28 GB+. Le fine-tuning nécessite l\'état optimiseur (2-4× VRAM du modèle), pas seulement l\'inférence.' },
             { q: 'Est-ce que 12 GB est suffisant pour Llama 3 13B?', a: 'À Q4, oui à peine. À Q5 ou Q8, non. 12 GB est juste. 16 GB est confortable.' },
             { q: 'Ai-je besoin de 24 GB pour un modèle 70B?', a: 'À Q4, oui. À Q5+, non. Une quantification plus élevée (Q5, Q8) nécessite 32 GB+ pour 70B.' },
@@ -850,7 +850,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'Puis-je exécuter Mistral 7B sur une GPU 6 GB?', acceptedAnswer: { '@type': 'Answer', text: 'À peine, à Q4 avec surcharge serrée. Pratiquement, non. Achetez au moins 8 GB. Vous aurez des erreurs OOM avec 6 GB.' } },
+          { '@type': 'Question', name: 'Puis-je exécuter Mistral Small sur une GPU 6 GB?', acceptedAnswer: { '@type': 'Answer', text: 'À peine, à Q4 avec surcharge serrée. Pratiquement, non. Achetez au moins 8 GB. Vous aurez des erreurs OOM avec 6 GB.' } },
           { '@type': 'Question', name: 'Combien de VRAM ai-je besoin pour fine-tuner un modèle 7B?', acceptedAnswer: { '@type': 'Answer', text: 'Pour LoRA: 12-16 GB. Fine-tuning complet: 28 GB+. Le fine-tuning nécessite l\'état optimiseur (2-4× VRAM du modèle), pas seulement l\'inférence.' } },
           { '@type': 'Question', name: 'Est-ce que 12 GB est suffisant pour Llama 3 13B?', acceptedAnswer: { '@type': 'Answer', text: 'À Q4, oui à peine. À Q5 ou Q8, non. 12 GB est juste. 16 GB est confortable.' } },
           { '@type': 'Question', name: 'Ai-je besoin de 24 GB pour un modèle 70B?', acceptedAnswer: { '@type': 'Answer', text: 'À Q4, oui. À Q5+, non. Une quantification plus élevée (Q5, Q8) nécessite 32 GB+ pour 70B.' } },
@@ -990,7 +990,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: '6GB GPUでMistral 7Bを実行できますか?', acceptedAnswer: { '@type': 'Answer', text: 'Q4でギリギリです。実際のところ、いいえ。最低8GBを購入してください。6GBではOOMエラーが発生します。' } },
+          { '@type': 'Question', name: '6GB GPUでMistral Smallを実行できますか?', acceptedAnswer: { '@type': 'Answer', text: 'Q4でギリギリです。実際のところ、いいえ。最低8GBを購入してください。6GBではOOMエラーが発生します。' } },
           { '@type': 'Question', name: '7BモデルのファインチューニングにはどのくらいのVRAMが必要ですか?', acceptedAnswer: { '@type': 'Answer', text: 'LoRA用: 12-16GB。フルファインチューニング: 28GB以上。ファインチューニングはオプティマイザー状態(モデルVRAMの2-4倍)が必要です。' } },
           { '@type': 'Question', name: 'Llama 3 13Bに12GBで十分ですか?', acceptedAnswer: { '@type': 'Answer', text: 'Q4ではギリギリです。Q5またはQ8では、いいえ。12GBはぎりぎりです。16GBが快適です。' } },
           { '@type': 'Question', name: '70Bモデルに24GBが必要ですか?', acceptedAnswer: { '@type': 'Answer', text: 'Q4ではい。Q5以上では、いいえ。より高い量子化(Q5、Q8)は70Bに32GB以上が必要です。' } },
@@ -1079,7 +1079,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: '我可以在6GB GPU上运行Mistral 7B吗?', acceptedAnswer: { '@type': 'Answer', text: '勉强,Q4显存紧张。实际上不行。至少买8GB。6GB会导致OOM错误。' } },
+          { '@type': 'Question', name: '我可以在6GB GPU上运行Mistral Small吗?', acceptedAnswer: { '@type': 'Answer', text: '勉强,Q4显存紧张。实际上不行。至少买8GB。6GB会导致OOM错误。' } },
           { '@type': 'Question', name: '微调7B模型需要多少显存?', acceptedAnswer: { '@type': 'Answer', text: 'LoRA: 12-16GB。全微调: 28GB以上。微调需要优化器状态(模型显存的2-4倍),而不仅仅是推理。' } },
           { '@type': 'Question', name: '12GB足以运行Llama 3 13B吗?', acceptedAnswer: { '@type': 'Answer', text: 'Q4勉强足够。Q5或Q8则不够。12GB很紧张。16GB才舒适。' } },
           { '@type': 'Question', name: '70B模型需要24GB吗?', acceptedAnswer: { '@type': 'Answer', text: 'Q4需要。Q5以上则不需要。更高量子化(Q5、Q8)的70B需要32GB以上。' } },

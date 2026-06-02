@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**European languages (German, French, Spanish, Italian)**: Mistral and Llama 3.x are competitive with Qwen2.5 for EU languages; Qwen2.5 still leads on code-mixed and formal register tasks.',
             '**Japanese and Korean**: Qwen2.5 is significantly stronger -- 15-25% better on language-specific benchmarks than Llama 3.x at the same size.',
             '**Chinese (Simplified and Traditional)**: Qwen2.5 is the dominant model -- trained on the largest Chinese corpus of any open-weight model.',
-            'As of April 2026, no locally-runnable model matches GPT-4o or Claude Opus 4.8 quality in Japanese or Korean for complex tasks. Qwen2.5 is the best available locally.',
+            'As of April 2026, no locally-runnable model matches GPT-5.5 or Claude Opus 4.8 quality in Japanese or Korean for complex tasks. Qwen2.5 is the best available locally.',
           ],
         },
         whichSupport: {
@@ -62,28 +62,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         european: {
           title: 'Which Local LLMs Perform Best for European Languages?',
           content: [
-            '**For German, French, Spanish, Italian, Portuguese, Dutch, and Polish -- Qwen2.5, Mistral, and Llama 3.x all produce acceptable quality.** Mistral has a particular strength in French due to Mistral AI being a French company with French-language training data emphasis. As of April 2026, German-language benchmarks show Qwen2.5 7B leading Mistral 7B by 8-12% on instruction-following tasks in German.',
+            '**For German, French, Spanish, Italian, Portuguese, Dutch, and Polish -- Qwen2.5, Mistral, and Llama 3.x all produce acceptable quality.** Mistral has a particular strength in French due to Mistral AI being a French company with French-language training data emphasis. As of April 2026, German-language benchmarks show Qwen2.5 7B leading Mistral Small by 8-12% on instruction-following tasks in German.',
             'For GDPR-sensitive use cases in the EU, running a local model (any family) is preferable to cloud APIs for data residency reasons. German businesses using AI under the EU AI Act (effective February 2025) benefit from local inference for high-risk AI applications. Mistral AI, being a EU company, is preferred by some European organizations on governance grounds regardless of benchmark score.',
           ],
           items: [
-            '**German**: Qwen2.5 7B leads on instruction-following; Mistral 7B competitive for formal text.',
-            '**French**: Mistral 7B is competitive with Qwen2.5 7B; both well above Llama 3.1 8B.',
-            '**Spanish, Italian, Portuguese**: Qwen2.5 7B slightly ahead; Llama 3.1 8B competitive.',
-            '**Polish, Czech, Romanian**: Qwen2.5 7B leads; significant quality drop for Mistral 7B.',
+            '**German**: Qwen2.5 7B leads on instruction-following; Mistral Small competitive for formal text.',
+            '**French**: Mistral Small is competitive with Qwen2.5 7B; both well above Llama 3.3 8B.',
+            '**Spanish, Italian, Portuguese**: Qwen2.5 7B slightly ahead; Llama 3.3 8B competitive.',
+            '**Polish, Czech, Romanian**: Qwen2.5 7B leads; significant quality drop for Mistral Small.',
           ],
         },
         asian: {
           title: 'Which Local LLMs Perform Best for Japanese, Korean, and Chinese?',
           content: [
             '**Qwen2.5 dominates Asian language performance.** The model family was developed by Alibaba with massive Chinese-language training data and explicit multilingual fine-tuning for Japanese and Korean.',
-            'For Japanese: Qwen2.5 7B scores 15-20% higher than Llama 3.1 8B on JMT-bench (Japanese instruction-following benchmark). For Korean: Qwen2.5 outperforms alternatives by similar margins. For Chinese (Simplified): Qwen2.5 is in a class of its own among locally-runnable models.',
+            'For Japanese: Qwen2.5 7B scores 15-20% higher than Llama 3.3 8B on JMT-bench (Japanese instruction-following benchmark). For Korean: Qwen2.5 outperforms alternatives by similar margins. For Chinese (Simplified): Qwen2.5 is in a class of its own among locally-runnable models.',
             'As of April 2026, Japan\'s METI (Ministry of Economy, Trade and Industry) has been promoting domestic AI development, and some Japanese enterprises prefer locally-deployed models for data sovereignty. Qwen2.5 is the practical choice for Japanese-language local inference.',
           ],
           rows: [
             { 'Language': 'Chinese (Simplified)', 'Best Model': 'Qwen2.5 (any size)', 'Second Best': 'Gemma 3', 'Notes': 'Qwen2.5 dominates -- largest Chinese training corpus' },
             { 'Language': 'Japanese', 'Best Model': 'Qwen2.5 7B+', 'Second Best': 'Gemma 3 9B', 'Notes': '15-20% gap over Llama on JMT-bench' },
             { 'Language': 'Korean', 'Best Model': 'Qwen2.5 7B+', 'Second Best': 'Gemma 3 9B', 'Notes': 'Qwen2.5 significantly stronger' },
-            { 'Language': 'Traditional Chinese', 'Best Model': 'Qwen2.5', 'Second Best': 'Llama 3.1 8B', 'Notes': 'Qwen2.5 trained on both Simplified and Traditional' },
+            { 'Language': 'Traditional Chinese', 'Best Model': 'Qwen2.5', 'Second Best': 'Llama 3.3 8B', 'Notes': 'Qwen2.5 trained on both Simplified and Traditional' },
           ],
           columns: ['Language', 'Best Model', 'Second Best', 'Notes'],
         },
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Which Local LLMs Perform Best for Arabic?',
           content: [
             '**Arabic presents a unique challenge due to its right-to-left script, morphological complexity, and the large number of dialects (Modern Standard Arabic vs.** Egyptian, Gulf, Levantine). As of April 2026, Qwen2.5 and Gemma 3 are the strongest locally-runnable Arabic models.',
-            'For MSA (Modern Standard Arabic) instruction-following, Qwen2.5 14B and larger produce acceptable quality. For dialect Arabic, all local models perform significantly worse than cloud models like GPT-4o, which has broader Arabic dialect coverage.',
+            'For MSA (Modern Standard Arabic) instruction-following, Qwen2.5 14B and larger produce acceptable quality. For dialect Arabic, all local models perform significantly worse than cloud models like GPT-5.5, which has broader Arabic dialect coverage.',
           ],
         },
         howToBenchmark: {
@@ -102,29 +102,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Run m-MMLU -- the multilingual version of MMLU covering 57 subjects in multiple languages.',
             'For conversational quality: write 10 test prompts in your target language covering different task types (summarization, Q&A, translation, creative writing). Evaluate responses manually or with a native speaker.',
             'For Japanese specifically: use JMT-bench (github.com/Stability-AI/lm-evaluation-harness) which covers Japanese instruction-following.',
-            'Compare your local model against cloud APIs using [PromptQuorum](/) -- send the same multilingual prompt to your local Ollama model and GPT-4o simultaneously to quantify the quality gap on your specific use case.',
+            'Compare your local model against cloud APIs using [PromptQuorum](/) -- send the same multilingual prompt to your local Ollama model and GPT-5.5 simultaneously to quantify the quality gap on your specific use case.',
           ],
         },
         comparisonTable: {
           title: 'Multilingual Local LLM Comparison: Qwen2.5 vs Llama 3.x vs Mistral vs Gemma 3',
           rows: [
-            { 'Language Group': 'Chinese (any dialect)', 'Qwen2.5 7B': '★★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': 'Japanese', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': 'Korean', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': 'French / German', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral 7B': '★★★★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': 'Spanish / Italian', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral 7B': '★★★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': 'Arabic (MSA)', 'Qwen2.5 7B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Chinese (any dialect)', 'Qwen2.5 7B': '★★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Japanese', 'Qwen2.5 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Korean', 'Qwen2.5 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'French / German', 'Qwen2.5 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Spanish / Italian', 'Qwen2.5 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Arabic (MSA)', 'Qwen2.5 7B': '★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
           ],
-          columns: ['Language Group', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          columns: ['Language Group', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
           image: 'multilingual-llm-comparison-en.svg',
-          imageCaption: 'Multilingual LLM comparison 2026: Qwen2.5 7B leads across all Asian languages (Chinese, Japanese, Korean with ★★★★-★★★★★ ratings). Mistral 7B matches Qwen2.5 on European languages (French/German). Star ratings (1-5) reflect 2026 benchmarks.',
+          imageCaption: 'Multilingual LLM comparison 2026: Qwen2.5 7B leads across all Asian languages (Chinese, Japanese, Korean with ★★★★-★★★★★ ratings). Mistral Small matches Qwen2.5 on European languages (French/German). Star ratings (1-5) reflect 2026 benchmarks.',
         },
         commonMistakes: {
           title: 'What Are the Common Mistakes When Using Multilingual Local LLMs?',
           faqs: [
             {
               q: 'Using an English-primary model for Japanese or Chinese tasks',
-              a: 'Llama 3.1 8B and Mistral 7B produce grammatically plausible but semantically inconsistent Japanese and Chinese output. The errors are not obvious without native language knowledge. For Japanese or Chinese tasks, always use Qwen2.5 -- the quality difference is significant and measurable.',
+              a: 'Llama 3.3 8B and Mistral Small produce grammatically plausible but semantically inconsistent Japanese and Chinese output. The errors are not obvious without native language knowledge. For Japanese or Chinese tasks, always use Qwen2.5 -- the quality difference is significant and measurable.',
             },
             {
               q: 'Prompting in English when the task is in another language',
@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Does multilingual capability reduce English quality?',
-              a: 'Not significantly for Qwen2.5. Benchmarks show Qwen2.5 7B scores 74% on English MMLU -- comparable to Llama 3.1 8B at 73%. The multilingual training does not meaningfully degrade English performance at this model size.',
+              a: 'Not significantly for Qwen2.5. Benchmarks show Qwen2.5 7B scores 74% on English MMLU -- comparable to Llama 3.3 8B at 73%. The multilingual training does not meaningfully degrade English performance at this model size.',
             },
             {
               q: 'Which model is best for translation tasks locally?',
@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Idiomas europeos (alemán, francés, español, italiano)**: Mistral y Llama 3.x son competitivos con Qwen2.5 para idiomas de la UE; Qwen2.5 sigue liderando en tareas de registro formal y código mixto.',
             '**Japonés y coreano**: Qwen2.5 es significativamente más fuerte -- 15-25% mejor en benchmarks específicos de idioma que Llama 3.x en el mismo tamaño.',
             '**Chino (simplificado y tradicional)**: Qwen2.5 es el modelo dominante -- entrenado con el mayor corpus chino de cualquier modelo de pesos abiertos.',
-            'A partir de abril de 2026, ningún modelo ejecutable localmente iguala la calidad de GPT-4o o Claude Opus 4.8 en japonés o coreano para tareas complejas. Qwen2.5 es la mejor opción disponible localmente.',
+            'A partir de abril de 2026, ningún modelo ejecutable localmente iguala la calidad de GPT-5.5 o Claude Opus 4.8 en japonés o coreano para tareas complejas. Qwen2.5 es la mejor opción disponible localmente.',
           ],
         },
         whichSupport: {
@@ -225,28 +225,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         european: {
           title: '¿Qué LLM locales funcionan mejor para idiomas europeos?',
           content: [
-            '**Para alemán, francés, español, italiano, portugués, neerlandés y polaco -- Qwen2.5, Mistral y Llama 3.x producen resultados aceptables.** Mistral tiene una fortaleza particular en francés porque Mistral AI es una empresa francesa con énfasis en datos de entrenamiento en francés. A partir de abril de 2026, los benchmarks en alemán muestran que Qwen2.5 7B supera a Mistral 7B en un 8-12% en tareas de seguimiento de instrucciones en alemán.',
+            '**Para alemán, francés, español, italiano, portugués, neerlandés y polaco -- Qwen2.5, Mistral y Llama 3.x producen resultados aceptables.** Mistral tiene una fortaleza particular en francés porque Mistral AI es una empresa francesa con énfasis en datos de entrenamiento en francés. A partir de abril de 2026, los benchmarks en alemán muestran que Qwen2.5 7B supera a Mistral Small en un 8-12% en tareas de seguimiento de instrucciones en alemán.',
             'Para casos de uso sensibles al GDPR en la UE, ejecutar un modelo local (de cualquier familia) es preferible a las APIs en la nube por razones de residencia de datos. Las empresas alemanas que usan IA bajo el Reglamento de IA de la UE (vigente desde febrero de 2025) se benefician de la inferencia local para aplicaciones de IA de alto riesgo. Mistral AI, al ser una empresa de la UE, es preferida por algunas organizaciones europeas por razones de gobernanza independientemente del benchmark.',
           ],
           items: [
-            '**Alemán**: Qwen2.5 7B lidera en seguimiento de instrucciones; Mistral 7B competitivo en texto formal.',
-            '**Francés**: Mistral 7B es competitivo con Qwen2.5 7B; ambos muy por encima de Llama 3.1 8B.',
-            '**Español, italiano, portugués**: Qwen2.5 7B ligeramente adelante; Llama 3.1 8B competitivo.',
-            '**Polaco, checo, rumano**: Qwen2.5 7B lidera; caída de calidad significativa para Mistral 7B.',
+            '**Alemán**: Qwen2.5 7B lidera en seguimiento de instrucciones; Mistral Small competitivo en texto formal.',
+            '**Francés**: Mistral Small es competitivo con Qwen2.5 7B; ambos muy por encima de Llama 3.3 8B.',
+            '**Español, italiano, portugués**: Qwen2.5 7B ligeramente adelante; Llama 3.3 8B competitivo.',
+            '**Polaco, checo, rumano**: Qwen2.5 7B lidera; caída de calidad significativa para Mistral Small.',
           ],
         },
         asian: {
           title: '¿Qué LLM locales funcionan mejor para japonés, coreano y chino?',
           content: [
             '**Qwen2.5 domina el rendimiento en idiomas asiáticos.** La familia de modelos fue desarrollada por Alibaba con datos masivos de entrenamiento en chino y ajuste fino multilingue explícito para japonés y coreano.',
-            'Para japonés: Qwen2.5 7B puntúa 15-20% más alto que Llama 3.1 8B en JMT-bench (benchmark de seguimiento de instrucciones en japonés). Para coreano: Qwen2.5 supera a las alternativas por márgenes similares. Para chino (simplificado): Qwen2.5 está en una clase propia entre los modelos ejecutables localmente.',
+            'Para japonés: Qwen2.5 7B puntúa 15-20% más alto que Llama 3.3 8B en JMT-bench (benchmark de seguimiento de instrucciones en japonés). Para coreano: Qwen2.5 supera a las alternativas por márgenes similares. Para chino (simplificado): Qwen2.5 está en una clase propia entre los modelos ejecutables localmente.',
             'A partir de abril de 2026, el METI de Japón (Ministerio de Economía, Comercio e Industria) ha estado promoviendo el desarrollo doméstico de IA, y algunas empresas japonesas prefieren modelos desplegados localmente por soberanía de datos. Qwen2.5 es la opción práctica para la inferencia local en japonés.',
           ],
           rows: [
             { 'Idioma': 'Chino (simplificado)', 'Mejor modelo': 'Qwen2.5 (cualquier tamaño)', 'Segundo mejor': 'Gemma 3', 'Notas': 'Qwen2.5 domina -- mayor corpus de entrenamiento en chino' },
             { 'Idioma': 'Japonés', 'Mejor modelo': 'Qwen2.5 7B+', 'Segundo mejor': 'Gemma 3 9B', 'Notas': 'Diferencia del 15-20% sobre Llama en JMT-bench' },
             { 'Idioma': 'Coreano', 'Mejor modelo': 'Qwen2.5 7B+', 'Segundo mejor': 'Gemma 3 9B', 'Notas': 'Qwen2.5 significativamente más fuerte' },
-            { 'Idioma': 'Chino tradicional', 'Mejor modelo': 'Qwen2.5', 'Segundo mejor': 'Llama 3.1 8B', 'Notas': 'Qwen2.5 entrenado en simplificado y tradicional' },
+            { 'Idioma': 'Chino tradicional', 'Mejor modelo': 'Qwen2.5', 'Segundo mejor': 'Llama 3.3 8B', 'Notas': 'Qwen2.5 entrenado en simplificado y tradicional' },
           ],
           columns: ['Idioma', 'Mejor modelo', 'Segundo mejor', 'Notas'],
         },
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: '¿Qué LLM locales funcionan mejor para el árabe?',
           content: [
             '**El árabe presenta un desafío único por su escritura de derecha a izquierda, su complejidad morfológica y la gran cantidad de dialectos (árabe estándar moderno vs.** egipcio, del Golfo, levantino). A partir de abril de 2026, Qwen2.5 y Gemma 3 son los modelos árabes ejecutables localmente más potentes.',
-            'Para el seguimiento de instrucciones en MSA (árabe estándar moderno), Qwen2.5 14B y versiones más grandes producen calidad aceptable. Para el árabe dialectal, todos los modelos locales rinden significativamente peor que los modelos en la nube como GPT-4o, que tiene mayor cobertura de dialectos árabes.',
+            'Para el seguimiento de instrucciones en MSA (árabe estándar moderno), Qwen2.5 14B y versiones más grandes producen calidad aceptable. Para el árabe dialectal, todos los modelos locales rinden significativamente peor que los modelos en la nube como GPT-5.5, que tiene mayor cobertura de dialectos árabes.',
           ],
         },
         howToBenchmark: {
@@ -265,29 +265,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ejecuta m-MMLU -- la versión multilingue de MMLU que cubre 57 materias en varios idiomas.',
             'Para calidad conversacional: escribe 10 prompts de prueba en tu idioma objetivo que abarquen distintos tipos de tarea (resumen, preguntas y respuestas, traducción, escritura creativa). Evalúa las respuestas manualmente o con un hablante nativo.',
             'Para japonés específicamente: usa JMT-bench (github.com/Stability-AI/lm-evaluation-harness), que cubre el seguimiento de instrucciones en japonés.',
-            'Compara tu modelo local con APIs en la nube usando [PromptQuorum](/) -- envía el mismo prompt multilingue a tu modelo Ollama local y a GPT-4o simultáneamente para cuantificar la diferencia de calidad en tu caso de uso específico.',
+            'Compara tu modelo local con APIs en la nube usando [PromptQuorum](/) -- envía el mismo prompt multilingue a tu modelo Ollama local y a GPT-5.5 simultáneamente para cuantificar la diferencia de calidad en tu caso de uso específico.',
           ],
         },
         comparisonTable: {
           title: 'Comparativa de LLM locales multilingues: Qwen2.5 vs Llama 3.x vs Mistral vs Gemma 3',
           rows: [
-            { 'Grupo de idioma': 'Chino (cualquier dialecto)', 'Qwen2.5 7B': '★★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'Japonés', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'Coreano', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'Francés / Alemán', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral 7B': '★★★★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'Español / Italiano', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral 7B': '★★★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'Árabe (MSA)', 'Qwen2.5 7B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'Chino (cualquier dialecto)', 'Qwen2.5 7B': '★★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'Japonés', 'Qwen2.5 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'Coreano', 'Qwen2.5 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'Francés / Alemán', 'Qwen2.5 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'Español / Italiano', 'Qwen2.5 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'Árabe (MSA)', 'Qwen2.5 7B': '★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
           ],
-          columns: ['Grupo de idioma', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          columns: ['Grupo de idioma', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
           image: 'multilingual-llm-comparison-en.svg',
-          imageCaption: 'Comparativa de LLM multilingues 2026: Qwen2.5 7B lidera en todos los idiomas asiáticos (chino, japonés, coreano con valoraciones ★★★★-★★★★★). Mistral 7B iguala a Qwen2.5 en idiomas europeos (francés/alemán). Valoraciones en estrellas (1-5) reflejan benchmarks 2026.',
+          imageCaption: 'Comparativa de LLM multilingues 2026: Qwen2.5 7B lidera en todos los idiomas asiáticos (chino, japonés, coreano con valoraciones ★★★★-★★★★★). Mistral Small iguala a Qwen2.5 en idiomas europeos (francés/alemán). Valoraciones en estrellas (1-5) reflejan benchmarks 2026.',
         },
         commonMistakes: {
           title: '¿Cuáles son los errores comunes al usar LLM locales multilingues?',
           faqs: [
             {
               q: 'Usar un modelo con primacía en inglés para tareas en japonés o chino',
-              a: 'Llama 3.1 8B y Mistral 7B producen salidas en japonés y chino gramaticalmente plausibles pero semánticamente inconsistentes. Los errores no son evidentes sin conocimiento nativo del idioma. Para tareas en japonés o chino, usa siempre Qwen2.5 -- la diferencia de calidad es significativa y medible.',
+              a: 'Llama 3.3 8B y Mistral Small producen salidas en japonés y chino gramaticalmente plausibles pero semánticamente inconsistentes. Los errores no son evidentes sin conocimiento nativo del idioma. Para tareas en japonés o chino, usa siempre Qwen2.5 -- la diferencia de calidad es significativa y medible.',
             },
             {
               q: 'Escribir los prompts en inglés cuando la tarea es en otro idioma',
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: '¿La capacidad multilingue reduce la calidad en inglés?',
-              a: 'No de manera significativa para Qwen2.5. Los benchmarks muestran que Qwen2.5 7B puntúa 74% en MMLU en inglés -- comparable a Llama 3.1 8B con 73%. El entrenamiento multilingue no degrada de forma significativa el rendimiento en inglés en este tamaño de modelo.',
+              a: 'No de manera significativa para Qwen2.5. Los benchmarks muestran que Qwen2.5 7B puntúa 74% en MMLU en inglés -- comparable a Llama 3.3 8B con 73%. El entrenamiento multilingue no degrada de forma significativa el rendimiento en inglés en este tamaño de modelo.',
             },
             {
               q: '¿Qué modelo es mejor para tareas de traducción de forma local?',
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'about': [
           { '@type': 'Thing', 'name': 'Qwen2.5' },
           { '@type': 'Thing', 'name': 'Llama 3.x' },
-          { '@type': 'Thing', 'name': 'Mistral 7B' },
+          { '@type': 'Thing', 'name': 'Mistral Small' },
           { '@type': 'Thing', 'name': 'Gemma 3' }
         ],
         'mentions': [
@@ -402,7 +402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'HowToStep',
             'position': 5,
             'name': 'Comparar con APIs en la nube',
-            'text': 'Compara tu modelo local con APIs en la nube usando PromptQuorum -- envía el mismo prompt multilingue a tu modelo Ollama local y a GPT-4o simultáneamente para cuantificar la diferencia de calidad en tu caso de uso específico.'
+            'text': 'Compara tu modelo local con APIs en la nube usando PromptQuorum -- envía el mismo prompt multilingue a tu modelo Ollama local y a GPT-5.5 simultáneamente para cuantificar la diferencia de calidad en tu caso de uso específico.'
           }
         ]
       },
@@ -424,7 +424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿La capacidad multilingue reduce la calidad en inglés?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No de manera significativa para Qwen2.5. Los benchmarks muestran que Qwen2.5 7B puntúa 74% en MMLU en inglés -- comparable a Llama 3.1 8B con 73%. El entrenamiento multilingue no degrada de forma significativa el rendimiento en inglés en este tamaño de modelo.'
+              'text': 'No de manera significativa para Qwen2.5. Los benchmarks muestran que Qwen2.5 7B puntúa 74% en MMLU en inglés -- comparable a Llama 3.3 8B con 73%. El entrenamiento multilingue no degrada de forma significativa el rendimiento en inglés en este tamaño de modelo.'
             }
           },
           {
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Einstieg',
       title: 'Beste mehrsprachige lokale LLMs 2026: Qwen2.5 vs. Mistral',
       seoTitle: 'Beste mehrsprachige lokale LLMs 2026: Qwen2.5 vs. Mistral',
-      intro: 'Vergleich mehrsprachiger lokaler Sprachmodelle: Qwen2.5 7B dominiert asiatische Sprachen (Chinesisch, Japanisch, Koreanisch) mit 5-Stern-Bewertungen. Mistral 7B konkurriert bei europäischen Sprachen. Testen Sie schnell offline ohne API-Kosten.',
+      intro: 'Vergleich mehrsprachiger lokaler Sprachmodelle: Qwen2.5 7B dominiert asiatische Sprachen (Chinesisch, Japanisch, Koreanisch) mit 5-Stern-Bewertungen. Mistral Small konkurriert bei europäischen Sprachen. Testen Sie schnell offline ohne API-Kosten.',
       metaDescription: 'Mehrsprachige LLMs 2026: Qwen2.5 7B beste für Chinesisch/Japanisch/Koreanisch. Mistral konkurriert bei Französisch/Deutsch. Benchmarkvergleich.',
       publishDate: '2025-12-10',
       dateModified: '2026-04-11',
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             '**Qwen2.5 7B** ist das beste lokale Modell für Chinesisch, Japanisch und Koreanisch (5 Sterne für Chinesisch, 4 Sterne für Japanisch/Koreanisch).',
-            '**Mistral 7B** und **Qwen2.5 7B** konkurrieren bei europäischen Sprachen (Französisch, Deutsch, Spanisch, Italienisch) mit jeweils 4 Sternen.',
+            '**Mistral Small** und **Qwen2.5 7B** konkurrieren bei europäischen Sprachen (Französisch, Deutsch, Spanisch, Italienisch) mit jeweils 4 Sternen.',
             '**Quantisierung mit Q4_K_M** reduziert VRAM-Anforderungen um 75 % mit minimalem Genauigkeitsverlust (<1 %) -- essentiell für lokale Bereitstellung.',
             '**Lokale Verarbeitung** (Ollama, llama.cpp) eliminiert API-Kosten und Latenz; ideal für Datenvertraulichkeit und DSGVO-Compliance.',
             'Wählen Sie **Qwen2.5 für Asien**, **Mistral oder Qwen2.5 für Europa**, basierend auf Ihrem Hardware-Budget (8 GB VRAM für 7B-Modelle ausreichend).'
@@ -537,61 +537,61 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         whichSupport: {
           title: 'Welche Sprachen unterstützen lokale LLMs?',
-          content: 'Alle modernen lokalen Sprachmodelle (Qwen2.5, Llama 3.1, Mistral, Gemma) unterstützen mindestens die Top-10-Sprachen nach Sprecherinnen- und Sprecherzahl. Die Unterstützungsqualität variiert jedoch stark: Qwen2.5 dominiert asiatische Sprachen, während Mistral und Llama bei europäischen Sprachen konkurrieren.',
-          columns: ['Sprachfamilie', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          content: 'Alle modernen lokalen Sprachmodelle (Qwen2.5, Llama 3.3, Mistral, Gemma) unterstützen mindestens die Top-10-Sprachen nach Sprecherinnen- und Sprecherzahl. Die Unterstützungsqualität variiert jedoch stark: Qwen2.5 dominiert asiatische Sprachen, während Mistral und Llama bei europäischen Sprachen konkurrieren.',
+          columns: ['Sprachfamilie', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
             {
               'Sprachfamilie': 'Chinesisch (alle Dialekte)',
               'Qwen2.5 7B': '★★★★★ (5,0)',
-              'Llama 3.1 8B': '★★ (2,0)',
-              'Mistral 7B': '★ (1,0)',
+              'Llama 3.3 8B': '★★ (2,0)',
+              'Mistral Small': '★ (1,0)',
               'Gemma 3 9B': '★★★ (3,0)'
             },
             {
               'Sprachfamilie': 'Japanisch',
               'Qwen2.5 7B': '★★★★ (4,0)',
-              'Llama 3.1 8B': '★★ (2,0)',
-              'Mistral 7B': '★ (1,0)',
+              'Llama 3.3 8B': '★★ (2,0)',
+              'Mistral Small': '★ (1,0)',
               'Gemma 3 9B': '★★★ (3,0)'
             },
             {
               'Sprachfamilie': 'Koreanisch',
               'Qwen2.5 7B': '★★★★ (4,0)',
-              'Llama 3.1 8B': '★★ (2,0)',
-              'Mistral 7B': '★ (1,0)',
+              'Llama 3.3 8B': '★★ (2,0)',
+              'Mistral Small': '★ (1,0)',
               'Gemma 3 9B': '★★★ (3,0)'
             },
             {
               'Sprachfamilie': 'Französisch / Deutsch',
               'Qwen2.5 7B': '★★★★ (4,0)',
-              'Llama 3.1 8B': '★★★ (3,0)',
-              'Mistral 7B': '★★★★ (4,0)',
+              'Llama 3.3 8B': '★★★ (3,0)',
+              'Mistral Small': '★★★★ (4,0)',
               'Gemma 3 9B': '★★★ (3,0)'
             },
             {
               'Sprachfamilie': 'Spanisch / Italienisch',
               'Qwen2.5 7B': '★★★★ (4,0)',
-              'Llama 3.1 8B': '★★★ (3,0)',
-              'Mistral 7B': '★★★ (3,0)',
+              'Llama 3.3 8B': '★★★ (3,0)',
+              'Mistral Small': '★★★ (3,0)',
               'Gemma 3 9B': '★★★ (3,0)'
             },
             {
               'Sprachfamilie': 'Arabisch (MSA)',
               'Qwen2.5 7B': '★★★ (3,0)',
-              'Llama 3.1 8B': '★★ (2,0)',
-              'Mistral 7B': '★ (1,0)',
+              'Llama 3.3 8B': '★★ (2,0)',
+              'Mistral Small': '★ (1,0)',
               'Gemma 3 9B': '★★★ (3,0)'
             }
           ]
         },
         european: {
           title: 'Beste lokale LLMs für europäische Sprachen',
-          content: 'Bei europäischen Sprachen (Französisch, Deutsch, Spanisch, Italienisch) sind **Mistral 7B** und **Qwen2.5 7B** gleichwertig. Mistral hat einen Vorteil bei Französisch und Deutsch; Qwen2.5 ist bei Spanisch und Italienisch leicht besser. Beide benötigen nur 8 GB VRAM im Q4_K_M-Format.',
+          content: 'Bei europäischen Sprachen (Französisch, Deutsch, Spanisch, Italienisch) sind **Mistral Small** und **Qwen2.5 7B** gleichwertig. Mistral hat einen Vorteil bei Französisch und Deutsch; Qwen2.5 ist bei Spanisch und Italienisch leicht besser. Beide benötigen nur 8 GB VRAM im Q4_K_M-Format.',
           items: [
-            '**Mistral 7B für Französisch und Deutsch**: Mistral wurde mit französischen und deutschen Trainingsdaten trainiert und liefert native Präzision. Ideal für DSGVO-Compliance und französische Datenschutzauflagen (CNIL-konform bei lokaler Verarbeitung).',
+            '**Mistral Small für Französisch und Deutsch**: Mistral wurde mit französischen und deutschen Trainingsdaten trainiert und liefert native Präzision. Ideal für DSGVO-Compliance und französische Datenschutzauflagen (CNIL-konform bei lokaler Verarbeitung).',
             '**Qwen2.5 7B für Spanisch und Italienisch**: Qwen2.5 bietet überlegene Qualität bei romanischen Sprachen. Mit Q4_K_M-Quantisierung läuft es auf einem MacBook Pro M2 oder Standard-Linux-GPU ohne Speicherprobleme.',
-            '**Llama 3.1 8B als Fallback**: Llama 3.1 8B ist ausreichend für europäische Sprachen (3-Stern-Bewertung), aber nicht optimal. Verwenden Sie es nur, wenn Qwen2.5 oder Mistral nicht verfügbar sind.',
-            '**DACH-Spezialisten (Deutsch/Österreich/Schweiz)**: Für deutschsprachige Unternehmen: Mistral 7B erfüllt BSI-Grundschutz-Anforderungen bei lokaler Verarbeitung. Keine Datentransfers zu US-Servern erforderlich.',
+            '**Llama 3.3 8B als Fallback**: Llama 3.3 8B ist ausreichend für europäische Sprachen (3-Stern-Bewertung), aber nicht optimal. Verwenden Sie es nur, wenn Qwen2.5 oder Mistral nicht verfügbar sind.',
+            '**DACH-Spezialisten (Deutsch/Österreich/Schweiz)**: Für deutschsprachige Unternehmen: Mistral Small erfüllt BSI-Grundschutz-Anforderungen bei lokaler Verarbeitung. Keine Datentransfers zu US-Servern erforderlich.',
             '**Quantisierung: Q4_K_M ist Standard**: Verwenden Sie immer **Q4_K_M** für 7B-Modelle bei europäischen Sprachen. VRAM-Anforderung: 8 GB. Genauigkeitsverlust: <0,5 % gegenüber fp16.',
             '**Benchmarks: JMT-bench + MMLU**: Qwen2.5 und Mistral schneiden bei MMLU (Multiple-Choice-Wissenstests) mit 72-75 % Genauigkeit ab. Bei domänenspezifischen Tests (Recht, Medizin, Finanzen) sinken die Scores auf 55-70 %.'
           ]
@@ -599,25 +599,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         asian: {
           title: 'Beste lokale LLMs für asiatische Sprachen',
           content: 'Qwen2.5 7B dominiert asiatische Sprachen deutlich. Bei Chinesisch, Japanisch und Koreanisch erreicht es 4-5 Sterne, während Llama und Mistral 1-2 Sterne erhalten. Für Unternehmen in Japan, Südkorea oder China ist Qwen2.5 die einzige praktische Wahl.',
-          columns: ['Sprache', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B'],
+          columns: ['Sprache', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small'],
           rows: [
             {
               'Sprache': 'Chinesisch (vereinfacht & traditionell)',
               'Qwen2.5 7B': '★★★★★ (5,0)',
-              'Llama 3.1 8B': '★★ (2,0)',
-              'Mistral 7B': '★ (1,0)'
+              'Llama 3.3 8B': '★★ (2,0)',
+              'Mistral Small': '★ (1,0)'
             },
             {
               'Sprache': 'Japanisch (Hiragana, Kanji, Katakana)',
               'Qwen2.5 7B': '★★★★ (4,0)',
-              'Llama 3.1 8B': '★★ (2,0)',
-              'Mistral 7B': '★ (1,0)'
+              'Llama 3.3 8B': '★★ (2,0)',
+              'Mistral Small': '★ (1,0)'
             },
             {
               'Sprache': 'Koreanisch (Hangul)',
               'Qwen2.5 7B': '★★★★ (4,0)',
-              'Llama 3.1 8B': '★★ (2,0)',
-              'Mistral 7B': '★ (1,0)'
+              'Llama 3.3 8B': '★★ (2,0)',
+              'Mistral Small': '★ (1,0)'
             }
           ]
         },
@@ -638,53 +638,53 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         comparisonTable: {
           title: 'Vergleichstabelle: Qwen2.5 vs. Llama vs. Mistral vs. Gemma',
           content: 'Diese Tabelle fasst die Sprachunterstützung zusammen. Bewertungen basieren auf JMT-bench (Japanisch), MMLU (allgemein) und sprachspezifischen Evaluierungen (2026).',
-          columns: ['Sprachgruppe', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          columns: ['Sprachgruppe', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
             {
               'Sprachgruppe': 'Chinesisch (alle Dialekte)',
               'Qwen2.5 7B': '★★★★★',
-              'Llama 3.1 8B': '★★',
-              'Mistral 7B': '★',
+              'Llama 3.3 8B': '★★',
+              'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Sprachgruppe': 'Japanisch',
               'Qwen2.5 7B': '★★★★',
-              'Llama 3.1 8B': '★★',
-              'Mistral 7B': '★',
+              'Llama 3.3 8B': '★★',
+              'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Sprachgruppe': 'Koreanisch',
               'Qwen2.5 7B': '★★★★',
-              'Llama 3.1 8B': '★★',
-              'Mistral 7B': '★',
+              'Llama 3.3 8B': '★★',
+              'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Sprachgruppe': 'Französisch / Deutsch',
               'Qwen2.5 7B': '★★★★',
-              'Llama 3.1 8B': '★★★',
-              'Mistral 7B': '★★★★',
+              'Llama 3.3 8B': '★★★',
+              'Mistral Small': '★★★★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Sprachgruppe': 'Spanisch / Italienisch',
               'Qwen2.5 7B': '★★★★',
-              'Llama 3.1 8B': '★★★',
-              'Mistral 7B': '★★★',
+              'Llama 3.3 8B': '★★★',
+              'Mistral Small': '★★★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Sprachgruppe': 'Arabisch (MSA)',
               'Qwen2.5 7B': '★★★',
-              'Llama 3.1 8B': '★★',
-              'Mistral 7B': '★',
+              'Llama 3.3 8B': '★★',
+              'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             }
           ],
           image: 'multilingual-llm-comparison-de.svg',
-          imageCaption: 'Mehrsprachige LLM-Vergleichstabelle 2026: Qwen2.5 7B dominiert alle asiatischen Sprachen (Chinesisch, Japanisch, Koreanisch mit 4-5 Sternen); Mistral 7B konkurriert bei französischen und deutschen Sprachen (4 Sterne). Bewertungen basieren auf JMT-bench, MMLU und sprachspezifischen Evaluierungen.'
+          imageCaption: 'Mehrsprachige LLM-Vergleichstabelle 2026: Qwen2.5 7B dominiert alle asiatischen Sprachen (Chinesisch, Japanisch, Koreanisch mit 4-5 Sternen); Mistral Small konkurriert bei französischen und deutschen Sprachen (4 Sterne). Bewertungen basieren auf JMT-bench, MMLU und sprachspezifischen Evaluierungen.'
         },
         commonMistakes: {
           title: 'Häufige Fehler bei mehrsprachigen LLMs',
@@ -724,12 +724,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               a: 'Sie haben ähnliche Geschwindigkeit. **Ollama** ist einsteigerfreundlich (CLI, Web-UI). **llama.cpp** ist direkter und schneller für High-Performance-Setup. Für Anfänger: Ollama. Für Experten: llama.cpp.'
             },
             {
-              q: 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-4o?',
-              a: 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-4o API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-4o $30-100.'
+              q: 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-5.5?',
+              a: 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-5.5 API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-5.5 $30-100.'
             },
             {
               q: 'Kann ich ein 13B-Modell auf meinem Laptop ausführen?',
-              a: 'Nur mit Q4_K_M-Quantisierung und >16 GB RAM/VRAM. Qwen2.5 13B (Q4_K_M): ~12 GB VRAM erforderlich. Llama 3.1 70B: Nicht praktikabel auf Consumer-Hardware. Verwenden Sie 7B-Modelle für maximale Kompatibilität.'
+              a: 'Nur mit Q4_K_M-Quantisierung und >16 GB RAM/VRAM. Qwen2.5 13B (Q4_K_M): ~12 GB VRAM erforderlich. Llama 3.3 70B: Nicht praktikabel auf Consumer-Hardware. Verwenden Sie 7B-Modelle für maximale Kompatibilität.'
             },
             {
               q: 'Wie sicher sind lokale LLMs für sensible Daten?',
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Welches Modell sollte ich für Kodegenerierung in Python verwenden?',
-              a: 'Qwen2.5 7B oder Mistral 7B. Beide erreichen 85-90 % Erfolgsrate auf HumanEval (Python-Codierungsaufgaben). Für spezialisierte Code-Modelle: DeepSeek Coder 7B. Für größere Genauigkeit: Qwen2.5 32B (benötigt 20+ GB VRAM).'
+              a: 'Qwen2.5 7B oder Mistral Small. Beide erreichen 85-90 % Erfolgsrate auf HumanEval (Python-Codierungsaufgaben). Für spezialisierte Code-Modelle: DeepSeek Coder 7B. Für größere Genauigkeit: Qwen2.5 32B (benötigt 20+ GB VRAM).'
             },
             {
               q: 'Kann ich ein lokales LLM feinabstimmen, um besser in meiner Sprache zu arbeiten?',
@@ -749,7 +749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Kann ein lokales LLM bei großen Batch-Verarbeitungen (100+ Anfragen) mit OpenAI konkurrieren?',
-              a: 'Bei Latenzanforderungen: Nein. OpenAI GPT-4o ist 5-10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
+              a: 'Bei Latenzanforderungen: Nein. OpenAI GPT-5.5 ist 5-10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
             },
             {
               q: 'Sollte ich CPU- oder GPU-Inferenz verwenden?',
@@ -773,9 +773,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Für den deutschen Mittelstand (KMUs und Großunternehmen) ist die Offline-Fähigkeit entscheidend: Kein Datentransfer zu US-Servern, vollständige Kontrolle über Verarbeitungsprotokolle, BSI Grundschutz-konforme Implementierung möglich. Finanzdienstleister, Anwaltskanzleien und Gesundheitsdienstleister profitieren besonders.',
           ],
           items: [
-            '**Beste Modelle für Deutsch:** Qwen2.5-7B übertrifft Llama 3.1 bei deutschen Texten dank größerem Trainingskorpus. Mistral 7B zeigt starke Leistung bei EU-Rechtssprache. LeoLM (basierend auf Llama 2) wurde speziell auf deutschen Texten feinabgestimmt.',
+            '**Beste Modelle für Deutsch:** Qwen2.5-7B übertrifft Llama 3.3 bei deutschen Texten dank größerem Trainingskorpus. Mistral Small zeigt starke Leistung bei EU-Rechtssprache. LeoLM (basierend auf Llama 3.3) wurde speziell auf deutschen Texten feinabgestimmt.',
             '**Schweizerdeutsch und Österreichisch:** Dialekte werden von keinem lokalen LLM zuverlässig verstanden — für Hochdeutsch sind alle Topmodelle ausgezeichnet. Für Dialekterkennung: Whisper (Transkription) + Hochdeutsch-LLM ist die praktischste Pipeline.',
-            '**Deutsche Grammatikkomplexität:** Kasusdeklination, Genus, trennbare Verben — Qwen2.5 und Mistral 7B machen weniger grammatische Fehler als ältere Modelle. Für juristische oder akademische Texte: Q5_K_M-Quantisierung für bessere Präzision.',
+            '**Deutsche Grammatikkomplexität:** Kasusdeklination, Genus, trennbare Verben — Qwen2.5 und Mistral Small machen weniger grammatische Fehler als ältere Modelle. Für juristische oder akademische Texte: Q5_K_M-Quantisierung für bessere Präzision.',
             '**DSGVO und DSGVO Art. 25:** Lokale LLMs erfüllen „Privacy by Design" ohne zusätzliche Konfiguration. Für Unternehmen: Dokumentieren Sie den Einsatz im Verzeichnis von Verarbeitungstätigkeiten. Hinweis: Modellgewichte selbst unterliegen keiner DSGVO-Meldepflicht.',
             '**Community-Ressourcen:** Zend-Äquivalent für Deutschland: dev.to/t/german, Heise Developer, ct-Magazin Technik-Forum. Ollama-Installationsanleitungen auf Deutsch: ollama.com/blog (EN) — deutsche Übersetzungen auf GitHub verfügbar.',
           ],
@@ -796,8 +796,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Quellen',
           items: [
             '[Qwen2.5-Dokumentation](https://huggingface.co/Qwen) -- Offizielle Modellkarte, Benchmarks, Multilingual-Training-Details.',
-            '[Llama 3.1 Benchmarks](https://huggingface.co/meta-llama) -- Meta-Dokumentation, MMLU-Scores (Englisch, Japanisch).',
-            '[Mistral 7B Modellkarte](https://huggingface.co/mistralai/Mistral-7B) -- Training, Sprachunterstützung, Lizenzierung.',
+            '[Llama 3.3 Benchmarks](https://huggingface.co/meta-llama) -- Meta-Dokumentation, MMLU-Scores (Englisch, Japanisch).',
+            '[Mistral Small Modellkarte](https://huggingface.co/mistralai/Mistral-7B) -- Training, Sprachunterstützung, Lizenzierung.',
             '[JMT-Benchmark (Japanisch)](https://github.com/nlp-waseda/jmt-bench) -- Japanisch-Textverständnis-Benchmark für lokale Modelle.',
             '[Ollama Dokumentation](https://github.com/ollama/ollama) -- CLI, Installation, Modell-Downloads, Anfragen zu lokalen LLMs.'
           ]
@@ -823,8 +823,8 @@ schema: {
         },
         'about': [
           { '@type': 'Thing', 'name': 'Qwen2.5' },
-          { '@type': 'Thing', 'name': 'Llama 3.1' },
-          { '@type': 'Thing', 'name': 'Mistral 7B' },
+          { '@type': 'Thing', 'name': 'Llama 3.3' },
+          { '@type': 'Thing', 'name': 'Mistral Small' },
           { '@type': 'Thing', 'name': 'Gemma 3' }
         ],
         'mentions': [
@@ -897,10 +897,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-4o?',
+            'name': 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-5.5?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-4o API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-4o $30-100.'
+              'text': 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-5.5 API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-5.5 $30-100.'
             }
           },
           {
@@ -908,7 +908,7 @@ schema: {
             'name': 'Kann ich ein 13B-Modell auf meinem Laptop ausführen?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Nur mit Q4_K_M-Quantisierung und >16 GB RAM/VRAM. Qwen2.5 13B (Q4_K_M): ~12 GB VRAM erforderlich. Llama 3.1 70B: Nicht praktikabel auf Consumer-Hardware. Verwenden Sie 7B-Modelle für maximale Kompatibilität.'
+              'text': 'Nur mit Q4_K_M-Quantisierung und >16 GB RAM/VRAM. Qwen2.5 13B (Q4_K_M): ~12 GB VRAM erforderlich. Llama 3.3 70B: Nicht praktikabel auf Consumer-Hardware. Verwenden Sie 7B-Modelle für maximale Kompatibilität.'
             }
           },
           {
@@ -924,7 +924,7 @@ schema: {
             'name': 'Welches Modell sollte ich für Kodegenerierung in Python verwenden?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen2.5 7B oder Mistral 7B. Beide erreichen 85-90 % Erfolgsrate auf HumanEval (Python-Codierungsaufgaben). Für spezialisierte Code-Modelle: DeepSeek Coder 7B. Für größere Genauigkeit: Qwen2.5 32B (benötigt 20+ GB VRAM).'
+              'text': 'Qwen2.5 7B oder Mistral Small. Beide erreichen 85-90 % Erfolgsrate auf HumanEval (Python-Codierungsaufgaben). Für spezialisierte Code-Modelle: DeepSeek Coder 7B. Für größere Genauigkeit: Qwen2.5 32B (benötigt 20+ GB VRAM).'
             }
           },
           {
@@ -948,7 +948,7 @@ schema: {
             'name': 'Kann ein lokales LLM bei großen Batch-Verarbeitungen (100+ Anfragen) mit OpenAI konkurrieren?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Bei Latenzanforderungen: Nein. OpenAI GPT-4o ist 5-10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
+              'text': 'Bei Latenzanforderungen: Nein. OpenAI GPT-5.5 ist 5-10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
             }
           },
           {
@@ -1028,7 +1028,7 @@ schema: {
       theme: 'Meilleurs modèles',
       title: 'Meilleurs LLMs locaux multilingues 2026 : Qwen2.5 vs Mistral',
       seoTitle: 'Meilleurs LLMs multilingues 2026 : Qwen2.5 vs Mistral',
-      intro: 'Comparez les LLMs locaux multilingues : Qwen2.5 7B domine les langues asiatiques (chinois, japonais, coréen) avec des évaluations 5 étoiles. Mistral 7B rivalise sur les langues européennes. Testez rapidement hors ligne sans frais API.',
+      intro: 'Comparez les LLMs locaux multilingues : Qwen2.5 7B domine les langues asiatiques (chinois, japonais, coréen) avec des évaluations 5 étoiles. Mistral Small rivalise sur les langues européennes. Testez rapidement hors ligne sans frais API.',
       metaDescription: 'LLMs locaux multilingues 2026 : Qwen2.5 7B meilleur pour chinois/japonais/coréen. Mistral rivalise en français/allemand. Comparaison avec benchmarks.',
       publishDate: '2025-12-10',
       dateModified: '2026-04-11',
@@ -1053,7 +1053,7 @@ schema: {
           isTldr: true,
           items: [
             '**Qwen2.5 7B** est le meilleur modèle local pour le chinois, le japonais et le coréen (5 étoiles pour le chinois, 4 étoiles pour le japonais/coréen).',
-            '**Mistral 7B** et **Qwen2.5 7B** rivalisent sur les langues européennes (français, allemand, espagnol, italien) avec chacun 4 étoiles.',
+            '**Mistral Small** et **Qwen2.5 7B** rivalisent sur les langues européennes (français, allemand, espagnol, italien) avec chacun 4 étoiles.',
             '**Quantification avec Q4_K_M** réduit les exigences VRAM de 75 % avec une perte de précision minimale (<1 %) -- essentiel pour le déploiement local.',
             '**Traitement local** (Ollama, llama.cpp) élimine les frais API et la latence ; idéal pour la confidentialité des données et la conformité RGPD.',
             'Choisissez **Qwen2.5 pour l\'Asie**, **Mistral ou Qwen2.5 pour l\'Europe**, en fonction de votre budget matériel (8 GB VRAM suffisent pour les modèles 7B).'
@@ -1061,61 +1061,61 @@ schema: {
         },
         whichSupport: {
           title: 'Quelles langues supportent les LLMs locaux ?',
-          content: 'Tous les modèles locaux modernes (Qwen2.5, Llama 3.1, Mistral, Gemma) prennent en charge au moins les 10 principales langues par nombre de locuteurs. Cependant, la qualité du support varie considérablement : Qwen2.5 domine les langues asiatiques, tandis que Mistral et Llama rivalisent sur les langues européennes.',
-          columns: ['Groupe linguistique', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          content: 'Tous les modèles locaux modernes (Qwen2.5, Llama 3.3, Mistral, Gemma) prennent en charge au moins les 10 principales langues par nombre de locuteurs. Cependant, la qualité du support varie considérablement : Qwen2.5 domine les langues asiatiques, tandis que Mistral et Llama rivalisent sur les langues européennes.',
+          columns: ['Groupe linguistique', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
             {
               'Groupe linguistique': 'Chinois (tous les dialectes)',
               'Qwen2.5 7B': '★★★★★ (5.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)',
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               'Groupe linguistique': 'Japonais',
               'Qwen2.5 7B': '★★★★ (4.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)',
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               'Groupe linguistique': 'Coréen',
               'Qwen2.5 7B': '★★★★ (4.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)',
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               'Groupe linguistique': 'Français / Allemand',
               'Qwen2.5 7B': '★★★★ (4.0)',
-              'Llama 3.1 8B': '★★★ (3.0)',
-              'Mistral 7B': '★★★★ (4.0)',
+              'Llama 3.3 8B': '★★★ (3.0)',
+              'Mistral Small': '★★★★ (4.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               'Groupe linguistique': 'Espagnol / Italien',
               'Qwen2.5 7B': '★★★★ (4.0)',
-              'Llama 3.1 8B': '★★★ (3.0)',
-              'Mistral 7B': '★★★ (3.0)',
+              'Llama 3.3 8B': '★★★ (3.0)',
+              'Mistral Small': '★★★ (3.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               'Groupe linguistique': 'Arabe (MSA)',
               'Qwen2.5 7B': '★★★ (3.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)',
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             }
           ]
         },
         european: {
           title: 'Meilleurs LLMs locaux pour les langues européennes',
-          content: 'Pour les langues européennes (français, allemand, espagnol, italien), **Mistral 7B** et **Qwen2.5 7B** sont équivalents. Mistral a un avantage sur le français et l\'allemand ; Qwen2.5 est légèrement meilleur sur l\'espagnol et l\'italien. Les deux nécessitent seulement 8 GB VRAM au format Q4_K_M. Pour la conformité RGPD, Mistral AI étant une entreprise française, elle est recommandée par la CNIL pour le traitement local des données sensibles (financières, médicales, juridiques).',
+          content: 'Pour les langues européennes (français, allemand, espagnol, italien), **Mistral Small** et **Qwen2.5 7B** sont équivalents. Mistral a un avantage sur le français et l\'allemand ; Qwen2.5 est légèrement meilleur sur l\'espagnol et l\'italien. Les deux nécessitent seulement 8 GB VRAM au format Q4_K_M. Pour la conformité RGPD, Mistral AI étant une entreprise française, elle est recommandée par la CNIL pour le traitement local des données sensibles (financières, médicales, juridiques).',
           items: [
-            '**Mistral 7B pour le français et l\'allemand** : Mistral a été entraîné sur des données de texte français et allemand et fournit une précision native. Idéal pour la conformité RGPD et les obligations de protection des données françaises (conforme à la CNIL lors du traitement local).',
+            '**Mistral Small pour le français et l\'allemand** : Mistral a été entraîné sur des données de texte français et allemand et fournit une précision native. Idéal pour la conformité RGPD et les obligations de protection des données françaises (conforme à la CNIL lors du traitement local).',
             '**Qwen2.5 7B pour l\'espagnol et l\'italien** : Qwen2.5 offre une qualité supérieure sur les langues romanes. Avec la quantification Q4_K_M, il fonctionne sur un MacBook Pro M2 ou un GPU Linux standard sans problèmes de mémoire.',
-            '**Llama 3.1 8B en secours** : Llama 3.1 8B est suffisant pour les langues européennes (évaluation 3 étoiles), mais pas optimal. Utilisez-le uniquement si Qwen2.5 ou Mistral ne sont pas disponibles.',
-            '**Spécialistes DACH (Allemagne/Autriche/Suisse)** : Pour les organisations de langue allemande : Mistral 7B satisfait les exigences BSI-Grundschutz en traitement local. Aucun transfert de données vers des serveurs américains requis.',
+            '**Llama 3.3 8B en secours** : Llama 3.3 8B est suffisant pour les langues européennes (évaluation 3 étoiles), mais pas optimal. Utilisez-le uniquement si Qwen2.5 ou Mistral ne sont pas disponibles.',
+            '**Spécialistes DACH (Allemagne/Autriche/Suisse)** : Pour les organisations de langue allemande : Mistral Small satisfait les exigences BSI-Grundschutz en traitement local. Aucun transfert de données vers des serveurs américains requis.',
             '**Quantification : Q4_K_M est la norme** : Utilisez toujours **Q4_K_M** pour les modèles 7B sur les langues européennes. Exigence VRAM : 8 GB. Perte de précision : <0.5 % par rapport à fp16.',
             '**Benchmarks : JMT-bench + MMLU** : Qwen2.5 et Mistral obtiennent respectivement 72-75 % de précision sur MMLU (tests de connaissances à choix multiples). Sur des tests spécifiques au domaine (droit, médecine, finance), les scores baissent à 55-70 %.'
           ]
@@ -1123,25 +1123,25 @@ schema: {
         asian: {
           title: 'Meilleurs LLMs locaux pour les langues asiatiques',
           content: 'Qwen2.5 7B domine clairement les langues asiatiques. Pour le chinois, le japonais et le coréen, il obtient 4-5 étoiles, tandis que Llama et Mistral reçoivent 1-2 étoiles. Pour les organisations au Japon, en Corée du Sud ou en Chine, Qwen2.5 est le seul choix pratique.',
-          columns: ['Langue', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B'],
+          columns: ['Langue', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small'],
           rows: [
             {
               'Langue': 'Chinois (simplifié et traditionnel)',
               'Qwen2.5 7B': '★★★★★ (5.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)'
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)'
             },
             {
               'Langue': 'Japonais (Hiragana, Kanji, Katakana)',
               'Qwen2.5 7B': '★★★★ (4.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)'
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)'
             },
             {
               'Langue': 'Coréen (Hangul)',
               'Qwen2.5 7B': '★★★★ (4.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)'
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)'
             }
           ]
         },
@@ -1162,53 +1162,53 @@ schema: {
         comparisonTable: {
           title: 'Tableau comparatif : Qwen2.5 vs Llama vs Mistral vs Gemma',
           content: 'Ce tableau résume le support linguistique. Les évaluations sont basées sur JMT-bench (japonais), MMLU (général) et les évaluations spécifiques aux langues (2026).',
-          columns: ['Groupe linguistique', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          columns: ['Groupe linguistique', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
             {
               'Groupe linguistique': 'Chinois (tous les dialectes)',
               'Qwen2.5 7B': '★★★★★',
-              'Llama 3.1 8B': '★★',
-              'Mistral 7B': '★',
+              'Llama 3.3 8B': '★★',
+              'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Groupe linguistique': 'Japonais',
               'Qwen2.5 7B': '★★★★',
-              'Llama 3.1 8B': '★★',
-              'Mistral 7B': '★',
+              'Llama 3.3 8B': '★★',
+              'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Groupe linguistique': 'Coréen',
               'Qwen2.5 7B': '★★★★',
-              'Llama 3.1 8B': '★★',
-              'Mistral 7B': '★',
+              'Llama 3.3 8B': '★★',
+              'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Groupe linguistique': 'Français / Allemand',
               'Qwen2.5 7B': '★★★★',
-              'Llama 3.1 8B': '★★★',
-              'Mistral 7B': '★★★★',
+              'Llama 3.3 8B': '★★★',
+              'Mistral Small': '★★★★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Groupe linguistique': 'Espagnol / Italien',
               'Qwen2.5 7B': '★★★★',
-              'Llama 3.1 8B': '★★★',
-              'Mistral 7B': '★★★',
+              'Llama 3.3 8B': '★★★',
+              'Mistral Small': '★★★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Groupe linguistique': 'Arabe (MSA)',
               'Qwen2.5 7B': '★★★',
-              'Llama 3.1 8B': '★★',
-              'Mistral 7B': '★',
+              'Llama 3.3 8B': '★★',
+              'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             }
           ],
           image: 'multilingual-llm-comparison-fr.svg',
-          imageCaption: 'Tableau de comparaison des LLMs multilingues 2026 : Qwen2.5 7B domine toutes les langues asiatiques (chinois, japonais, coréen avec 4-5 étoiles) ; Mistral 7B rivalise sur les langues françaises et allemandes (4 étoiles). Les évaluations sont basées sur JMT-bench, MMLU et les évaluations spécifiques aux langues.'
+          imageCaption: 'Tableau de comparaison des LLMs multilingues 2026 : Qwen2.5 7B domine toutes les langues asiatiques (chinois, japonais, coréen avec 4-5 étoiles) ; Mistral Small rivalise sur les langues françaises et allemandes (4 étoiles). Les évaluations sont basées sur JMT-bench, MMLU et les évaluations spécifiques aux langues.'
         },
         commonMistakes: {
           title: 'Erreurs courantes avec les LLMs multilingues',
@@ -1248,12 +1248,12 @@ schema: {
               a: 'Ils ont une vitesse similaire. **Ollama** est convivial pour les débutants (CLI, Web UI). **llama.cpp** est plus direct et plus rapide pour la configuration haute performance. Pour les débutants : Ollama. Pour les experts : llama.cpp.'
             },
             {
-              q: 'Combien coûte l\'exécution d\'un LLM local comparé à OpenAI GPT-4o ?',
-              a: 'Utilisation locale (amortissement matériel) : 0 $ par requête (après l\'achat du matériel). API GPT-4o : 0.03 $ par 1K tokens d\'entrée, 0.06 $ par 1K tokens de sortie. Pour 1.000 requêtes par mois : local 0 $, GPT-4o 30-100 $.'
+              q: 'Combien coûte l\'exécution d\'un LLM local comparé à OpenAI GPT-5.5 ?',
+              a: 'Utilisation locale (amortissement matériel) : 0 $ par requête (après l\'achat du matériel). API GPT-5.5 : 0.03 $ par 1K tokens d\'entrée, 0.06 $ par 1K tokens de sortie. Pour 1.000 requêtes par mois : local 0 $, GPT-5.5 30-100 $.'
             },
             {
               q: 'Puis-je exécuter un modèle 13B sur mon ordinateur portable ?',
-              a: 'Seulement avec la quantification Q4_K_M et >16 GB RAM/VRAM. Qwen2.5 13B (Q4_K_M) : ~12 GB VRAM requis. Llama 3.1 70B : non pratique sur matériel grand public. Utilisez les modèles 7B pour une compatibilité maximale.'
+              a: 'Seulement avec la quantification Q4_K_M et >16 GB RAM/VRAM. Qwen2.5 13B (Q4_K_M) : ~12 GB VRAM requis. Llama 3.3 70B : non pratique sur matériel grand public. Utilisez les modèles 7B pour une compatibilité maximale.'
             },
             {
               q: 'Quel est le niveau de sécurité des LLMs locaux pour les données sensibles ?',
@@ -1261,7 +1261,7 @@ schema: {
             },
             {
               q: 'Quel modèle devrais-je utiliser pour la génération de code en Python ?',
-              a: 'Qwen2.5 7B ou Mistral 7B. Les deux obtiennent 85-90 % de taux de réussite sur HumanEval (tâches de codage Python). Pour les modèles de code spécialisés : DeepSeek Coder 7B. Pour une précision supérieure : Qwen2.5 32B (nécessite 20+ GB VRAM).'
+              a: 'Qwen2.5 7B ou Mistral Small. Les deux obtiennent 85-90 % de taux de réussite sur HumanEval (tâches de codage Python). Pour les modèles de code spécialisés : DeepSeek Coder 7B. Pour une précision supérieure : Qwen2.5 32B (nécessite 20+ GB VRAM).'
             },
             {
               q: 'Puis-je affiner un LLM local pour mieux fonctionner dans ma langue ?',
@@ -1273,7 +1273,7 @@ schema: {
             },
             {
               q: 'Un LLM local peut-il rivaliser avec OpenAI pour les traitements par lot importants (100+ requêtes) ?',
-              a: 'Pour les exigences de latence : non. OpenAI GPT-4o est 5-10x plus rapide. Pour l\'optimisation des coûts : oui, le local est plus rentable. Compromis : choisissez local pour la confidentialité/hors ligne, OpenAI pour la vitesse/précision.'
+              a: 'Pour les exigences de latence : non. OpenAI GPT-5.5 est 5-10x plus rapide. Pour l\'optimisation des coûts : oui, le local est plus rentable. Compromis : choisissez local pour la confidentialité/hors ligne, OpenAI pour la vitesse/précision.'
             },
             {
               q: 'Devrais-je utiliser l\'inférence CPU ou GPU ?',
@@ -1289,7 +1289,7 @@ schema: {
             'Pour les entreprises françaises, le RGPD (équivalent français du GDPR) impose les mêmes obligations qu\'en Allemagne. Les LLMs locaux simplifient la conformité : aucune transmission vers des serveurs américains, journaux d\'audit complets, traitement des données sensibles en toute légalité.',
           ],
           items: [
-            '**Meilleurs modèles pour le français :** Mistral 7B Instruct est le choix évident — conçu en France, entraîné sur des corpus français de haute qualité. Performances supérieures sur la syntaxe française complexe, le subjonctif, et les registres formels/informels. Qwen2.5-7B est une alternative solide pour les tâches multilingues.',
+            '**Meilleurs modèles pour le français :** Mistral Small Instruct est le choix évident — conçu en France, entraîné sur des corpus français de haute qualité. Performances supérieures sur la syntaxe française complexe, le subjonctif, et les registres formels/informels. Qwen2.5-7B est une alternative solide pour les tâches multilingues.',
             '**Français québécois vs européen :** Les modèles actuels distinguent mal les variantes. Pour un usage québécois, précisez explicitement dans votre prompt : « Réponds en français québécois informel » ou « Utilise le registre professionnel du Québec ». Mistral a tendance à produire du français européen par défaut.',
             '**Ressources communautaires FR :** Le Bon Coin Tech, Zenika Blog, OCTO Technology Blog pour les retours d\'expérience LLM en entreprise. LeMonde.fr et Le Monde Informatique couvrent régulièrement les évolutions réglementaires IA.',
             '**RGPD et IA générative :** La CNIL a publié des recommandations spécifiques sur l\'IA (2024). Les LLMs locaux satisfont par défaut au principe de minimisation des données — aucune donnée ne quitte vos serveurs. Pour les RH et la santé : exigence supplémentaire d\'une AIPD (Analyse d\'Impact).',
@@ -1311,8 +1311,8 @@ schema: {
           title: 'Sources',
           items: [
             '[Documentation Qwen2.5](https://huggingface.co/Qwen) -- Fiche modèle officielle, benchmarks, détails d\'entraînement multilingue.',
-            '[Benchmarks Llama 3.1](https://huggingface.co/meta-llama) -- Documentation Meta, scores MMLU (anglais, japonais).',
-            '[Fiche modèle Mistral 7B](https://huggingface.co/mistralai/Mistral-7B) -- Entraînement, support linguistique, licences.',
+            '[Benchmarks Llama 3.3](https://huggingface.co/meta-llama) -- Documentation Meta, scores MMLU (anglais, japonais).',
+            '[Fiche modèle Mistral Small](https://huggingface.co/mistralai/Mistral-7B) -- Entraînement, support linguistique, licences.',
             '[JMT-Benchmark (Japonais)](https://github.com/nlp-waseda/jmt-bench) -- Benchmark de compréhension de texte japonais pour modèles locaux.',
             '[Documentation Ollama](https://github.com/ollama/ollama) -- CLI, installation, téléchargements de modèles, questions sur les LLMs locaux.'
           ]
@@ -1338,8 +1338,8 @@ schema: {
         },
         'about': [
           { '@type': 'Thing', 'name': 'Qwen2.5' },
-          { '@type': 'Thing', 'name': 'Llama 3.1' },
-          { '@type': 'Thing', 'name': 'Mistral 7B' },
+          { '@type': 'Thing', 'name': 'Llama 3.3' },
+          { '@type': 'Thing', 'name': 'Mistral Small' },
           { '@type': 'Thing', 'name': 'Gemma 3' }
         ],
         'mentions': [
@@ -1412,10 +1412,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Combien coûte l\'exécution d\'un LLM local comparé à OpenAI GPT-4o ?',
+            'name': 'Combien coûte l\'exécution d\'un LLM local comparé à OpenAI GPT-5.5 ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Utilisation locale (amortissement matériel) : 0 $ par requête (après l\'achat du matériel). API GPT-4o : 0.03 $ par 1K tokens d\'entrée, 0.06 $ par 1K tokens de sortie. Pour 1.000 requêtes par mois : local 0 $, GPT-4o 30-100 $.'
+              'text': 'Utilisation locale (amortissement matériel) : 0 $ par requête (après l\'achat du matériel). API GPT-5.5 : 0.03 $ par 1K tokens d\'entrée, 0.06 $ par 1K tokens de sortie. Pour 1.000 requêtes par mois : local 0 $, GPT-5.5 30-100 $.'
             }
           },
           {
@@ -1423,7 +1423,7 @@ schema: {
             'name': 'Puis-je exécuter un modèle 13B sur mon ordinateur portable ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Seulement avec la quantification Q4_K_M et >16 GB RAM/VRAM. Qwen2.5 13B (Q4_K_M) : ~12 GB VRAM requis. Llama 3.1 70B : non pratique sur matériel grand public. Utilisez les modèles 7B pour une compatibilité maximale.'
+              'text': 'Seulement avec la quantification Q4_K_M et >16 GB RAM/VRAM. Qwen2.5 13B (Q4_K_M) : ~12 GB VRAM requis. Llama 3.3 70B : non pratique sur matériel grand public. Utilisez les modèles 7B pour une compatibilité maximale.'
             }
           },
           {
@@ -1439,7 +1439,7 @@ schema: {
             'name': 'Quel modèle devrais-je utiliser pour la génération de code en Python ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen2.5 7B ou Mistral 7B. Les deux obtiennent 85-90 % de taux de réussite sur HumanEval (tâches de codage Python). Pour les modèles de code spécialisés : DeepSeek Coder 7B. Pour une précision supérieure : Qwen2.5 32B (nécessite 20+ GB VRAM).'
+              'text': 'Qwen2.5 7B ou Mistral Small. Les deux obtiennent 85-90 % de taux de réussite sur HumanEval (tâches de codage Python). Pour les modèles de code spécialisés : DeepSeek Coder 7B. Pour une précision supérieure : Qwen2.5 32B (nécessite 20+ GB VRAM).'
             }
           },
           {
@@ -1463,7 +1463,7 @@ schema: {
             'name': 'Un LLM local peut-il rivaliser avec OpenAI pour les traitements par lot importants (100+ requêtes) ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Pour les exigences de latence : non. OpenAI GPT-4o est 5-10x plus rapide. Pour l\'optimisation des coûts : oui, le local est plus rentable. Compromis : choisissez local pour la confidentialité/hors ligne, OpenAI pour la vitesse/précision.'
+              'text': 'Pour les exigences de latence : non. OpenAI GPT-5.5 est 5-10x plus rapide. Pour l\'optimisation des coûts : oui, le local est plus rentable. Compromis : choisissez local pour la confidentialité/hors ligne, OpenAI pour la vitesse/précision.'
             }
           },
           {
@@ -1527,7 +1527,7 @@ schema: {
       theme: 'ベストモデル',
       title: 'ベスト多言語ローカルLLM 2026：Qwen2.5 vs Mistral',
       seoTitle: 'ベスト多言語ローカルLLM 2026：Qwen2.5 vs Mistral',
-      intro: '多言語ローカルLLMを比較：Qwen2.5 7Bはアジア言語（中国語、日本語、韓国語）で5つ星評価を獲得。Mistral 7Bはヨーロッパ言語で競争力あり。API費用なしでオフライン高速テスト可能。',
+      intro: '多言語ローカルLLMを比較：Qwen2.5 7Bはアジア言語（中国語、日本語、韓国語）で5つ星評価を獲得。Mistral Smallはヨーロッパ言語で競争力あり。API費用なしでオフライン高速テスト可能。',
       metaDescription: '多言語ローカルLLM 2026：Qwen2.5 7Bはアジア言語でLlamaより15-25%優勢（JMT基準）。欧州語はMistralと競争力互角。29言語、ベンチマーク比較掲載。',
       publishDate: '2025-12-10',
       dateModified: '2026-04-11',
@@ -1552,7 +1552,7 @@ schema: {
           isTldr: true,
           items: [
             '**Qwen2.5 7B** は中国語、日本語、韓国語の最適なローカルモデル（中国語5つ星、日本語/韓国語4つ星）。',
-            '**Mistral 7B** と **Qwen2.5 7B** はヨーロッパ言語で同等（フランス語、ドイツ語、スペイン語、イタリア語それぞれ4つ星）。',
+            '**Mistral Small** と **Qwen2.5 7B** はヨーロッパ言語で同等（フランス語、ドイツ語、スペイン語、イタリア語それぞれ4つ星）。',
             '**Q4_K_M量子化** はVRAM要件を75%削減し、精度損失は最小（<1%）-- ローカル展開に必須。',
             '**ローカル処理**（Ollama、llama.cpp）はAPI費用とレイテンシを排除；データ機密性とGDPR準拠に理想的。',
             'アジアなら **Qwen2.5**、ヨーロッパなら **Mistral または Qwen2.5** を選択（ハードウェア予算に基づき、7Bモデルに8GB VRAM必要）。'
@@ -1560,61 +1560,61 @@ schema: {
         },
         whichSupport: {
           title: 'ローカルLLMはどの言語をサポートしていますか？',
-          content: '全ての最新ローカルモデル（Qwen2.5、Llama 3.1、Mistral、Gemma）は最低限、話者数トップ10言語をサポート。ただしサポート品質は大きく異なる：Qwen2.5はアジア言語を支配、Mistral と Llama はヨーロッパ言語で競争。',
-          columns: ['言語グループ', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          content: '全ての最新ローカルモデル（Qwen2.5、Llama 3.3、Mistral、Gemma）は最低限、話者数トップ10言語をサポート。ただしサポート品質は大きく異なる：Qwen2.5はアジア言語を支配、Mistral と Llama はヨーロッパ言語で競争。',
+          columns: ['言語グループ', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
             {
               '言語グループ': '中国語（全言語変種）',
               'Qwen2.5 7B': '★★★★★ (5.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)',
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               '言語グループ': '日本語',
               'Qwen2.5 7B': '★★★★ (4.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)',
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               '言語グループ': '韓国語',
               'Qwen2.5 7B': '★★★★ (4.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)',
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               '言語グループ': 'フランス語 / ドイツ語',
               'Qwen2.5 7B': '★★★★ (4.0)',
-              'Llama 3.1 8B': '★★★ (3.0)',
-              'Mistral 7B': '★★★★ (4.0)',
+              'Llama 3.3 8B': '★★★ (3.0)',
+              'Mistral Small': '★★★★ (4.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               '言語グループ': 'スペイン語 / イタリア語',
               'Qwen2.5 7B': '★★★★ (4.0)',
-              'Llama 3.1 8B': '★★★ (3.0)',
-              'Mistral 7B': '★★★ (3.0)',
+              'Llama 3.3 8B': '★★★ (3.0)',
+              'Mistral Small': '★★★ (3.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               '言語グループ': 'アラビア語（MSA）',
               'Qwen2.5 7B': '★★★ (3.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)',
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             }
           ]
         },
         european: {
           title: 'ヨーロッパ言語向けベストローカルLLM',
-          content: 'フランス語、ドイツ語、スペイン語、イタリア語：**Mistral 7B** と **Qwen2.5 7B** は同等。Mistral はフランス語とドイツ語に優位；Qwen2.5 はスペイン語とイタリア語で若干優秀。両者とも Q4_K_M で 8GB VRAM のみ必要。日本でのMETI AI統治に続き、ヨーロッパでも地域データセキュリティを重視する傾向が強化。',
+          content: 'フランス語、ドイツ語、スペイン語、イタリア語：**Mistral Small** と **Qwen2.5 7B** は同等。Mistral はフランス語とドイツ語に優位；Qwen2.5 はスペイン語とイタリア語で若干優秀。両者とも Q4_K_M で 8GB VRAM のみ必要。日本でのMETI AI統治に続き、ヨーロッパでも地域データセキュリティを重視する傾向が強化。',
           items: [
-            '**Mistral 7B for フランス語とドイツ語**：Mistral はフランス語とドイツ語の訓練データで学習、ネイティブ精度を提供。GDPR準拠と地域データ保護義務に理想的。',
+            '**Mistral Small for フランス語とドイツ語**：Mistral はフランス語とドイツ語の訓練データで学習、ネイティブ精度を提供。GDPR準拠と地域データ保護義務に理想的。',
             '**Qwen2.5 7B for スペイン語とイタリア語**：Qwen2.5 はロマンス言語で優れた品質。Q4_K_M 量子化で MacBook Pro M2 または標準Linux GPU でメモリ問題なし。',
-            '**Llama 3.1 8B as フォールバック**：Llama 3.1 8B はヨーロッパ言語で十分（3つ星評価）だが最適でない。Qwen2.5 または Mistral が利用不可の場合のみ使用。',
-            '**DACH専門家（ドイツ/オーストリア/スイス）**：ドイツ語圏企業向け：Mistral 7B はローカル処理で BSI-Grundschutz 要件を満たす。米国サーバーへのデータ転送不要。',
+            '**Llama 3.3 8B as フォールバック**：Llama 3.3 8B はヨーロッパ言語で十分（3つ星評価）だが最適でない。Qwen2.5 または Mistral が利用不可の場合のみ使用。',
+            '**DACH専門家（ドイツ/オーストリア/スイス）**：ドイツ語圏企業向け：Mistral Small はローカル処理で BSI-Grundschutz 要件を満たす。米国サーバーへのデータ転送不要。',
             '**量子化：Q4_K_M は標準**：ヨーロッパ言語の 7B モデル で常に **Q4_K_M** を使用。VRAM 要件：8GB。精度低下：fp16 比 <0.5%。',
             '**ベンチマーク：JMT-bench + MMLU**：Qwen2.5 と Mistral は MMLU（多択知識テスト）で 72-75% 精度。ドメイン固有テスト（法律、医療、金融）では 55-70% に低下。'
           ]
@@ -1622,25 +1622,25 @@ schema: {
         asian: {
           title: 'アジア言語向けベストローカルLLM',
           content: 'Qwen2.5 7B はアジア言語を圧倒的に支配。中国語、日本語、韓国語で 4-5つ星達成一方、Llama と Mistral は 1-2つ星。日本、韓国、中国の企業にとって Qwen2.5 が唯一の実用的選択肢。',
-          columns: ['言語', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B'],
+          columns: ['言語', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small'],
           rows: [
             {
               '言語': '中国語（簡体字・繁体字）',
               'Qwen2.5 7B': '★★★★★ (5.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)'
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)'
             },
             {
               '言語': '日本語（ひらがな・漢字・カタカナ）',
               'Qwen2.5 7B': '★★★★ (4.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)'
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)'
             },
             {
               '言語': '韓国語（ハングル）',
               'Qwen2.5 7B': '★★★★ (4.0)',
-              'Llama 3.1 8B': '★★ (2.0)',
-              'Mistral 7B': '★ (1.0)'
+              'Llama 3.3 8B': '★★ (2.0)',
+              'Mistral Small': '★ (1.0)'
             }
           ]
         },
@@ -1661,53 +1661,53 @@ schema: {
         comparisonTable: {
           title: '比較表：Qwen2.5 vs Llama vs Mistral vs Gemma',
           content: '本表は言語サポートをまとめ。評価は JMT-bench（日本語）、MMLU（一般）、言語固有評価（2026）に基づく。',
-          columns: ['言語グループ', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          columns: ['言語グループ', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
             {
               '言語グループ': '中国語（全言語変種）',
               'Qwen2.5 7B': '★★★★★',
-              'Llama 3.1 8B': '★★',
-              'Mistral 7B': '★',
+              'Llama 3.3 8B': '★★',
+              'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               '言語グループ': '日本語',
               'Qwen2.5 7B': '★★★★',
-              'Llama 3.1 8B': '★★',
-              'Mistral 7B': '★',
+              'Llama 3.3 8B': '★★',
+              'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               '言語グループ': '韓国語',
               'Qwen2.5 7B': '★★★★',
-              'Llama 3.1 8B': '★★',
-              'Mistral 7B': '★',
+              'Llama 3.3 8B': '★★',
+              'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               '言語グループ': 'フランス語 / ドイツ語',
               'Qwen2.5 7B': '★★★★',
-              'Llama 3.1 8B': '★★★',
-              'Mistral 7B': '★★★★',
+              'Llama 3.3 8B': '★★★',
+              'Mistral Small': '★★★★',
               'Gemma 3 9B': '★★★'
             },
             {
               '言語グループ': 'スペイン語 / イタリア語',
               'Qwen2.5 7B': '★★★★',
-              'Llama 3.1 8B': '★★★',
-              'Mistral 7B': '★★★',
+              'Llama 3.3 8B': '★★★',
+              'Mistral Small': '★★★',
               'Gemma 3 9B': '★★★'
             },
             {
               '言語グループ': 'アラビア語（MSA）',
               'Qwen2.5 7B': '★★★',
-              'Llama 3.1 8B': '★★',
-              'Mistral 7B': '★',
+              'Llama 3.3 8B': '★★',
+              'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             }
           ],
           image: 'multilingual-llm-comparison-ja.svg',
-          imageCaption: '多言語LLM比較表 2026：Qwen2.5 7B はすべてのアジア言語を支配（中国語・日本語・韓国語で4-5つ星）；Mistral 7B はフランス語・ドイツ語で競争（4つ星）。評価は JMT-bench、MMLU、言語固有評価に基づく。'
+          imageCaption: '多言語LLM比較表 2026：Qwen2.5 7B はすべてのアジア言語を支配（中国語・日本語・韓国語で4-5つ星）；Mistral Small はフランス語・ドイツ語で競争（4つ星）。評価は JMT-bench、MMLU、言語固有評価に基づく。'
         },
         commonMistakes: {
           title: '多言語LLM使用時の一般的なミス',
@@ -1747,12 +1747,12 @@ schema: {
               a: '速度は同等。**Ollama** は初心者向けで使い易い（CLI、Web UI）。**llama.cpp** より直接的で高性能セットアップで高速。初心者：Ollama、エキスパート：llama.cpp。'
             },
             {
-              q: 'ローカルLLM実行 vs OpenAI GPT-4o のコスト比較？',
-              a: 'ローカル利用（ハードウェア償却後）：$0/クエリ。GPT-4o API：$0.03/1K 入力トークン、$0.06/1K 出力トークン。月 1,000 クエリ：ローカル $0、GPT-4o $30-100。'
+              q: 'ローカルLLM実行 vs OpenAI GPT-5.5 のコスト比較？',
+              a: 'ローカル利用（ハードウェア償却後）：$0/クエリ。GPT-5.5 API：$0.03/1K 入力トークン、$0.06/1K 出力トークン。月 1,000 クエリ：ローカル $0、GPT-5.5 $30-100。'
             },
             {
               q: 'ノート PC で 13B モデル実行可能？',
-              a: 'Q4_K_M 量子化と >16GB RAM/VRAM のみ。Qwen2.5 13B (Q4_K_M)：~12GB VRAM 必須。Llama 3.1 70B：コンシューマハードで非実用的。最大互換性向け 7B モデル使用。'
+              a: 'Q4_K_M 量子化と >16GB RAM/VRAM のみ。Qwen2.5 13B (Q4_K_M)：~12GB VRAM 必須。Llama 3.3 70B：コンシューマハードで非実用的。最大互換性向け 7B モデル使用。'
             },
             {
               q: 'ローカルLLM で機密データの安全性は？',
@@ -1760,7 +1760,7 @@ schema: {
             },
             {
               q: 'Python コード生成向けモデル選択？',
-              a: 'Qwen2.5 7B または Mistral 7B。両者とも HumanEval（Python コーディングタスク）で 85-90% 成功率。専門コードモデル：DeepSeek Coder 7B。高精度：Qwen2.5 32B（20+GB VRAM 必須）。'
+              a: 'Qwen2.5 7B または Mistral Small。両者とも HumanEval（Python コーディングタスク）で 85-90% 成功率。専門コードモデル：DeepSeek Coder 7B。高精度：Qwen2.5 32B（20+GB VRAM 必須）。'
             },
             {
               q: 'ローカルLLM を言語向けに微調整可能？',
@@ -1772,7 +1772,7 @@ schema: {
             },
             {
               q: '大規模バッチ処理（100+クエリ）で OpenAI と競争可能？',
-              a: 'レイテンシ要件：いいえ。OpenAI GPT-4o は 5-10x 高速。コスト最適化：はい、ローカル費用効率的。トレードオフ：プライバシー/オフラインはローカル、速度/精度は OpenAI。'
+              a: 'レイテンシ要件：いいえ。OpenAI GPT-5.5 は 5-10x 高速。コスト最適化：はい、ローカル費用効率的。トレードオフ：プライバシー/オフラインはローカル、速度/精度は OpenAI。'
             },
             {
               q: 'CPU または GPU 推論選択？',
@@ -1785,7 +1785,7 @@ schema: {
           title: '日本語対応ローカルLLM — Apple SiliconとM系チップの優位性',
           content: [
             '日本は世界有数のApple Siliconユーザー市場です。MacBookのM1〜M4チップはMLXフレームワークと組み合わせることで、同価格帯のNVIDIA GPUを超えるローカルLLM推論性能を発揮します。日本語トークン処理においても、Appleのユニファイドメモリアーキテクチャが有利に働きます。',
-            '日本語の形態素解析と漢字・かな変換は、英語中心のLLMにとって課題になりがちです。しかし最新世代のQwen2.5とLlama 3.1は、日本語コーパスへの十分な学習により、実用レベルの日本語出力を実現しています。',
+            '日本語の形態素解析と漢字・かな変換は、英語中心のLLMにとって課題になりがちです。しかし最新世代のQwen2.5とLlama 3.3は、日本語コーパスへの十分な学習により、実用レベルの日本語出力を実現しています。',
           ],
           items: [
             '**日本語に最適なモデル：** Qwen2.5-7B（アリババ製）は日本語トークンの処理精度が高く、漢字・ひらがな・カタカナの混在文に強い。LLM-JP（国立情報学研究所製）は純粋な日本語特化モデル。Swallow（東工大製）はLlamaベースの日本語ファインチューン。',
@@ -1809,8 +1809,8 @@ schema: {
           title: '出典',
           items: [
             '[Qwen2.5 ドキュメント](https://huggingface.co/Qwen) -- 公式モデルカード、ベンチマーク、多言語トレーニング詳細。',
-            '[Llama 3.1 ベンチマーク](https://huggingface.co/meta-llama) -- Meta ドキュメント、MMLU スコア（英語、日本語）。',
-            '[Mistral 7B モデルカード](https://huggingface.co/mistralai/Mistral-7B) -- トレーニング、言語サポート、ライセンス。',
+            '[Llama 3.3 ベンチマーク](https://huggingface.co/meta-llama) -- Meta ドキュメント、MMLU スコア（英語、日本語）。',
+            '[Mistral Small モデルカード](https://huggingface.co/mistralai/Mistral-7B) -- トレーニング、言語サポート、ライセンス。',
             '[JMT-Benchmark（日本語）](https://github.com/nlp-waseda/jmt-bench) -- ローカルモデル向け日本語テキスト理解ベンチマーク。',
             '[Ollama ドキュメント](https://github.com/ollama/ollama) -- CLI、インストール、モデルダウンロード、ローカルLLM質問。'
           ]
@@ -1836,8 +1836,8 @@ schema: {
         },
         'about': [
           { '@type': 'Thing', 'name': 'Qwen2.5' },
-          { '@type': 'Thing', 'name': 'Llama 3.1' },
-          { '@type': 'Thing', 'name': 'Mistral 7B' },
+          { '@type': 'Thing', 'name': 'Llama 3.3' },
+          { '@type': 'Thing', 'name': 'Mistral Small' },
           { '@type': 'Thing', 'name': 'Gemma 3' }
         ],
         'mentions': [
@@ -1912,10 +1912,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'ローカルLLM実行 vs OpenAI GPT-4o のコスト比較？',
+            'name': 'ローカルLLM実行 vs OpenAI GPT-5.5 のコスト比較？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'ローカル利用（ハードウェア償却後）：$0/クエリ。GPT-4o API：$0.03/1K 入力トークン、$0.06/1K 出力トークン。月 1,000 クエリ：ローカル $0、GPT-4o $30-100。'
+              'text': 'ローカル利用（ハードウェア償却後）：$0/クエリ。GPT-5.5 API：$0.03/1K 入力トークン、$0.06/1K 出力トークン。月 1,000 クエリ：ローカル $0、GPT-5.5 $30-100。'
             }
           },
           {
@@ -1923,7 +1923,7 @@ schema: {
             'name': 'ノート PC で 13B モデル実行可能？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Q4_K_M 量子化と >16GB RAM/VRAM のみ。Qwen2.5 13B (Q4_K_M)：~12GB VRAM 必須。Llama 3.1 70B：コンシューマハードで非実用的。最大互換性向け 7B モデル使用。'
+              'text': 'Q4_K_M 量子化と >16GB RAM/VRAM のみ。Qwen2.5 13B (Q4_K_M)：~12GB VRAM 必須。Llama 3.3 70B：コンシューマハードで非実用的。最大互換性向け 7B モデル使用。'
             }
           },
           {
@@ -1939,7 +1939,7 @@ schema: {
             'name': 'Python コード生成向けモデル選択？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen2.5 7B または Mistral 7B。両者とも HumanEval（Python コーディングタスク）で 85-90% 成功率。専門コードモデル：DeepSeek Coder 7B。高精度：Qwen2.5 32B（20+GB VRAM 必須）。'
+              'text': 'Qwen2.5 7B または Mistral Small。両者とも HumanEval（Python コーディングタスク）で 85-90% 成功率。専門コードモデル：DeepSeek Coder 7B。高精度：Qwen2.5 32B（20+GB VRAM 必須）。'
             }
           },
           {
@@ -1963,7 +1963,7 @@ schema: {
             'name': '大規模バッチ処理（100+クエリ）で OpenAI と競争可能？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'レイテンシ要件：いいえ。OpenAI GPT-4o は 5-10x 高速。コスト最適化：はい、ローカル費用効率的。トレードオフ：プライバシー/オフラインはローカル、速度/精度は OpenAI。'
+              'text': 'レイテンシ要件：いいえ。OpenAI GPT-5.5 は 5-10x 高速。コスト最適化：はい、ローカル費用効率的。トレードオフ：プライバシー/オフラインはローカル、速度/精度は OpenAI。'
             }
           },
           {
@@ -2051,7 +2051,7 @@ schema: {
           isTldr: true,
           items: [
             '**Qwen2.5 7B** 是中文、日语、韩语的最佳本地模型（中文5星，日语/韩语4星）。',
-            '**Mistral 7B** 与 **Qwen2.5 7B** 在欧洲语言上同等竞争（法语、德语、西班牙语、意大利语各4星）。',
+            '**Mistral Small** 与 **Qwen2.5 7B** 在欧洲语言上同等竞争（法语、德语、西班牙语、意大利语各4星）。',
             '**Q4_K_M量化** 将VRAM需求降低75%，精度损失最小（<1%）——本地部署的标准选择。',
             '**本地处理**（Ollama、llama.cpp）消除API费用和延迟；对数据保密性和GDPR合规性非常理想。',
             '亚洲语言选 **Qwen2.5**，欧洲语言选 **Mistral 或 Qwen2.5**（7B模型需要8GB VRAM）。'
@@ -2059,25 +2059,25 @@ schema: {
         },
         whichSupport: {
           title: '哪些本地LLM实际支持多种语言？',
-          content: '所有主流本地模型（Qwen2.5、Llama 3.1、Mistral、Gemma）至少支持前10大语言。但支持质量差异很大：Qwen2.5主导亚洲语言，Mistral和Llama在欧洲语言上具有竞争力。',
-          columns: ['语言组', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          content: '所有主流本地模型（Qwen2.5、Llama 3.3、Mistral、Gemma）至少支持前10大语言。但支持质量差异很大：Qwen2.5主导亚洲语言，Mistral和Llama在欧洲语言上具有竞争力。',
+          columns: ['语言组', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
-            { '语言组': '中文（所有方言）', 'Qwen2.5 7B': '★★★★★ (5.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
-            { '语言组': '日语', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
-            { '语言组': '韩语', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
-            { '语言组': '法语 / 德语', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★★ (3.0)', 'Mistral 7B': '★★★★ (4.0)', 'Gemma 3 9B': '★★★ (3.0)' },
-            { '语言组': '西班牙语 / 意大利语', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★★ (3.0)', 'Mistral 7B': '★★★ (3.0)', 'Gemma 3 9B': '★★★ (3.0)' },
-            { '语言组': '阿拉伯语（MSA）', 'Qwen2.5 7B': '★★★ (3.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' }
+            { '语言组': '中文（所有方言）', 'Qwen2.5 7B': '★★★★★ (5.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '日语', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '韩语', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '法语 / 德语', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.3 8B': '★★★ (3.0)', 'Mistral Small': '★★★★ (4.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '西班牙语 / 意大利语', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.3 8B': '★★★ (3.0)', 'Mistral Small': '★★★ (3.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '阿拉伯语（MSA）', 'Qwen2.5 7B': '★★★ (3.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' }
           ]
         },
         european: {
           title: '欧洲语言的最佳本地LLM',
-          content: '法语、德语、西班牙语、意大利语：**Mistral 7B** 与 **Qwen2.5 7B** 同等竞争。Mistral在法语和德语上更具优势；Qwen2.5在西班牙语和意大利语上略优。两者在Q4_K_M量化时仅需8GB VRAM。',
+          content: '法语、德语、西班牙语、意大利语：**Mistral Small** 与 **Qwen2.5 7B** 同等竞争。Mistral在法语和德语上更具优势；Qwen2.5在西班牙语和意大利语上略优。两者在Q4_K_M量化时仅需8GB VRAM。',
           items: [
-            '**Mistral 7B 适合法语和德语**：Mistral使用大量法语和德语训练数据，提供接近母语的质量。对GDPR合规和区域数据保护要求非常理想。',
+            '**Mistral Small 适合法语和德语**：Mistral使用大量法语和德语训练数据，提供接近母语的质量。对GDPR合规和区域数据保护要求非常理想。',
             '**Qwen2.5 7B 适合西班牙语和意大利语**：Qwen2.5在罗曼语系语言上质量优秀。Q4_K_M量化在MacBook Pro M2或标准Linux GPU上运行无内存问题。',
-            '**Llama 3.1 8B 作为备选**：Llama 3.1 8B在欧洲语言上表现尚可（3星评级），但非最优。仅在Qwen2.5或Mistral不可用时使用。',
-            '**DACH专业用户（德国/奥地利/瑞士）**：德语企业：Mistral 7B本地运行满足BSI-Grundschutz要求，无需向美国服务器传输数据。',
+            '**Llama 3.3 8B 作为备选**：Llama 3.3 8B在欧洲语言上表现尚可（3星评级），但非最优。仅在Qwen2.5或Mistral不可用时使用。',
+            '**DACH专业用户（德国/奥地利/瑞士）**：德语企业：Mistral Small本地运行满足BSI-Grundschutz要求，无需向美国服务器传输数据。',
             '**量化标准：Q4_K_M**：7B欧洲语言模型始终使用Q4_K_M。VRAM需求：8GB。精度下降：相比fp16 <0.5%。',
             '**基准测试：JMT-bench + MMLU**：Qwen2.5与Mistral在MMLU（多选知识测试）上达到72-75%精度。领域特定测试（法律、医疗、金融）降至55-70%。'
           ]
@@ -2085,11 +2085,11 @@ schema: {
         asian: {
           title: '日语、韩语和中文的最佳本地LLM',
           content: 'Qwen2.5 7B在亚洲语言上占据压倒性优势。中文、日语、韩语均达4-5星，而Llama和Mistral仅1-2星。对于日本、韩国、中国企业，Qwen2.5是唯一实用选择。',
-          columns: ['语言', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B'],
+          columns: ['语言', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small'],
           rows: [
-            { '语言': '中文（简体和繁体）', 'Qwen2.5 7B': '★★★★★ (5.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)' },
-            { '语言': '日语（平假名、汉字、片假名）', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)' },
-            { '语言': '韩语（韩文字母）', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral 7B': '★ (1.0)' }
+            { '语言': '中文（简体和繁体）', 'Qwen2.5 7B': '★★★★★ (5.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)' },
+            { '语言': '日语（平假名、汉字、片假名）', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)' },
+            { '语言': '韩语（韩文字母）', 'Qwen2.5 7B': '★★★★ (4.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)' }
           ]
         },
         arabic: {
@@ -2109,17 +2109,17 @@ schema: {
         comparisonTable: {
           title: '多语言本地LLM对比：Qwen2.5 vs Llama vs Mistral vs Gemma',
           content: '本表汇总语言支持情况。评级基于JMT-bench（日语）、MMLU（通用）和语言特定评估（2026年）。',
-          columns: ['语言组', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          columns: ['语言组', 'Qwen2.5 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
-            { '语言组': '中文（所有方言）', 'Qwen2.5 7B': '★★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
-            { '语言组': '日语', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
-            { '语言组': '韩语', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
-            { '语言组': '法语 / 德语', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral 7B': '★★★★', 'Gemma 3 9B': '★★★' },
-            { '语言组': '西班牙语 / 意大利语', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral 7B': '★★★', 'Gemma 3 9B': '★★★' },
-            { '语言组': '阿拉伯语（MSA）', 'Qwen2.5 7B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' }
+            { '语言组': '中文（所有方言）', 'Qwen2.5 7B': '★★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '日语', 'Qwen2.5 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '韩语', 'Qwen2.5 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '法语 / 德语', 'Qwen2.5 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '西班牙语 / 意大利语', 'Qwen2.5 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '阿拉伯语（MSA）', 'Qwen2.5 7B': '★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' }
           ],
           image: 'multilingual-llm-comparison-zh.svg',
-          imageCaption: '多语言LLM对比2026：Qwen2.5 7B主导所有亚洲语言（中文5星，日语/韩语4星）；Mistral 7B在法语/德语上竞争（4星）。评级基于JMT-bench、MMLU及语言专项评估。'
+          imageCaption: '多语言LLM对比2026：Qwen2.5 7B主导所有亚洲语言（中文5星，日语/韩语4星）；Mistral Small在法语/德语上竞争（4星）。评级基于JMT-bench、MMLU及语言专项评估。'
         },
         commonMistakes: {
           title: '使用多语言本地LLM时的常见错误',
@@ -2159,12 +2159,12 @@ schema: {
               a: '速度相当。**Ollama**更适合新手，使用简便（CLI、Web界面）。**llama.cpp**更直接，在高性能配置下更快。新手选Ollama，专家选llama.cpp。'
             },
             {
-              q: '本地LLM与OpenAI GPT-4o的费用对比？',
-              a: '本地使用（硬件折旧后）：0美元/查询。GPT-4o API：0.03美元/1K输入令牌，0.06美元/1K输出令牌。月均1,000次查询：本地0美元，GPT-4o约30-100美元。'
+              q: '本地LLM与OpenAI GPT-5.5的费用对比？',
+              a: '本地使用（硬件折旧后）：0美元/查询。GPT-5.5 API：0.03美元/1K输入令牌，0.06美元/1K输出令牌。月均1,000次查询：本地0美元，GPT-5.5约30-100美元。'
             },
             {
               q: '笔记本电脑能运行13B模型吗？',
-              a: '仅限Q4_K_M量化且RAM/VRAM>16GB时。Qwen2.5 13B (Q4_K_M)需要约12GB VRAM。Llama 3.1 70B在消费级硬件上不实际。建议使用7B模型以获得最大兼容性。'
+              a: '仅限Q4_K_M量化且RAM/VRAM>16GB时。Qwen2.5 13B (Q4_K_M)需要约12GB VRAM。Llama 3.3 70B在消费级硬件上不实际。建议使用7B模型以获得最大兼容性。'
             },
             {
               q: '本地LLM处理机密数据有多安全？',
@@ -2172,7 +2172,7 @@ schema: {
             },
             {
               q: 'Python代码生成选哪个模型？',
-              a: 'Qwen2.5 7B或Mistral 7B。两者在HumanEval（Python编程任务）上成功率均达85-90%。专用代码模型：DeepSeek Coder 7B。高精度需求：Qwen2.5 32B（需要20+GB VRAM）。'
+              a: 'Qwen2.5 7B或Mistral Small。两者在HumanEval（Python编程任务）上成功率均达85-90%。专用代码模型：DeepSeek Coder 7B。高精度需求：Qwen2.5 32B（需要20+GB VRAM）。'
             },
             {
               q: '可以为特定语言微调本地LLM吗？',
@@ -2184,7 +2184,7 @@ schema: {
             },
             {
               q: '大批量处理（100+查询）能与OpenAI竞争吗？',
-              a: '延迟要求：不能。OpenAI GPT-4o快5-10倍。成本优化：能，本地更具成本效益。权衡：隐私/离线选本地，速度/精度选OpenAI。'
+              a: '延迟要求：不能。OpenAI GPT-5.5快5-10倍。成本优化：能，本地更具成本效益。权衡：隐私/离线选本地，速度/精度选OpenAI。'
             },
             {
               q: '选CPU还是GPU推理？',
@@ -2197,7 +2197,7 @@ schema: {
           title: '繁體中文用戶指南：台灣與香港的本地LLM選擇',
           content: [
             '台灣和香港的繁體中文用戶面臨特殊挑戰：大多數中文LLM以簡體中文訓練，對繁體字的支援參差不齊。好消息是，Qwen2.5等頂尖模型已針對繁體中文做出顯著改善，而Apple Silicon在台灣的高普及率更帶來了MLX框架的天然優勢。',
-            '台灣是全球Apple Silicon最密集的市場之一（台積電製造M系列晶片，本地消費者對Apple生態系忠誠度極高）。MLX框架配合Qwen2.5或Llama 3.1，可在M1/M2/M3 MacBook上實現流暢的繁體中文推理。',
+            '台灣是全球Apple Silicon最密集的市場之一（台積電製造M系列晶片，本地消費者對Apple生態系忠誠度極高）。MLX框架配合Qwen2.5或Llama 3.3，可在M1/M2/M3 MacBook上實現流暢的繁體中文推理。',
           ],
           items: [
             '**繁體vs簡體的模型選擇：** Qwen2.5（阿里巴巴）同時支援繁體和簡體，是台港用戶首選。GLM-4（清華大學）偏重簡體但繁體可用。提示詞中明確指定「請使用繁體中文回答」可提升輸出質量。',
@@ -2221,8 +2221,8 @@ schema: {
           title: '参考资料',
           items: [
             '[Qwen2.5文档](https://huggingface.co/Qwen) -- 官方模型卡、基准测试和多语言训练详情。',
-            '[Llama 3.1基准测试](https://huggingface.co/meta-llama) -- Meta文档，MMLU分数（英语、中文）。',
-            '[Mistral 7B模型卡](https://huggingface.co/mistralai/Mistral-7B) -- 训练、语言支持、许可证。',
+            '[Llama 3.3基准测试](https://huggingface.co/meta-llama) -- Meta文档，MMLU分数（英语、中文）。',
+            '[Mistral Small模型卡](https://huggingface.co/mistralai/Mistral-7B) -- 训练、语言支持、许可证。',
             '[JMT基准（日语）](https://github.com/nlp-waseda/jmt-bench) -- 本地模型日语文本理解基准。',
             '[Ollama文档](https://github.com/ollama/ollama) -- CLI、安装、模型下载、本地LLM问题解答。'
           ]

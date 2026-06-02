@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'AMD Ryzen AI Max+ launched late 2025 with a radically new architecture for consumer mini PCs. Here is why it matters for local LLM users.',
         items: [
           '**Unified memory like Apple Silicon:** 64–128GB single memory pool shared by CPU, iGPU, and NPU. No VRAM/RAM transfer bottleneck. Models stay in fast memory, inference stays responsive.',
-          '**iGPU rivals discrete GPUs:** Radeon 8060S (RDNA 3.5) delivers RTX 4070–class compute at 1/10th the power. Llama 3.1 70B Q4 runs at 20–30 tok/s.',
+          '**iGPU rivals discrete GPUs:** Radeon 8060S (RDNA 3.5) delivers RTX 4070–class compute at 1/10th the power. Llama 3.3 70B Q4 runs at 20–30 tok/s.',
           '**50 TOPS NPU:** Dedicated neural processing unit accelerates quantized operations. Measurably faster for INT8/Q4 models vs CPU alone.',
           '**65–120W TDP:** Entire system draws less power than a single RTX 4090. Runs passively cooled or with quiet fans. No 350W PSU needed.',
           '**ROCm ecosystem maturing:** Linux support now stable (kernel 6.11+, ROCm 6.2+). Ollama, vLLM, and LM Studio all support AMD iGPU out of the box.',
@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Passive cooling not viable: Needs active fan even at moderate load. Not silent.',
           'Storage expansion: NVMe slot is M.2 2230 (short form factor), requires rare SSDs.',
         ],
-        bestFor: 'Developers running Llama 3.1/4 70B Q4 or Qwen 32B models with standard context windows. Teams buying multiple units (Minisforum offers B2B bulk pricing). EU buyers prioritizing fast shipping.',
+        bestFor: 'Developers running Llama 3.3/4 70B Q4 or Qwen 32B models with standard context windows. Teams buying multiple units (Minisforum offers B2B bulk pricing). EU buyers prioritizing fast shipping.',
         avoidIf: 'You need 128GB or plan to run 70B Q5. You want passive cooling. You need local eGPU expansion.',
         linuxCompatibility: 'ROCm 6.2+ fully supported. Kernel 6.11+ required. Ollama default install works out of box. No custom driver compilation needed.',
         whereToBuy: 'Minisforum store, Amazon DE/UK/US (often faster), local EU retailers.',
@@ -256,7 +256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Best price entry: $1,199 beats Minisforum by $400. First-time local LLM buyers can test without breaking budget.',
           'Compact size: Smallest of the four. Fits in tight spaces, portable.',
           'Low power: 65W sustained is the lowest here. Fanless or near-silent operation possible.',
-          'Decent performance: Radeon 8050S still handles Llama 3.1 13B, Mistral 24B, Qwen 14B smoothly.',
+          'Decent performance: Radeon 8050S still handles Llama 3.3 13B, Mistral 24B, Qwen 14B smoothly.',
           'Good for sampling: Want to try AMD mini PC before committing $1,600+?',
         ],
         weaknesses: [
@@ -276,8 +276,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Performance Benchmarks (Estimated May 2026)',
         content: 'Real-world benchmark data is still sparse for these new mini PCs. Below are estimates based on Ryzen AI Max+ 395 reference benchmarks. Actual performance varies by cooling, OS, and model precision.',
         items: [
-          'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
-          'Llama 3.1 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~18–22 tok/s (estimated). GMKtec EVO-X2 ~14–16 tok/s.',
+          'Llama 3.3 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
+          'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~18–22 tok/s (estimated). GMKtec EVO-X2 ~14–16 tok/s.',
           'Qwen 2.5 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
           'Note: These estimates are based on iGPU plus NPU acceleration. CPU-only inference would be 3–5x slower.',
         ],

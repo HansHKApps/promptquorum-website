@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Understand LLM quantization in 2026: Q4_K_M, Q5_K_M, Q8_0 differences. Memory savings, quality tradeoffs, model size table, recommendations per use case.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen2.5', 'Mistral'],
+      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen2.5', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**Choose quantization based on VRAM: 6–8 GB VRAM → use Q4_K_M (~4.5 GB for 7B models, 1–3% quality loss), 16 GB → Q5_K_M, 24+ GB → Q8_0 (negligible loss). Quantization reduces model weight precision from 16-bit floats to 4- or 8-bit integers, cutting RAM by 50–75%. For models larger than your GPU, add CPU offloading or multi-GPU layer splitting.**',
       audience: 'Engineers deploying local LLMs in production, optimizing for limited VRAM, or building multi-GPU systems',
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**GGUF (GPT-Generated Unified Format) is the single-file standard for quantized LLM weights, containing model weights, metadata, and tokenizer -- used by Ollama, LM Studio, and llama.cpp.** It was created by the llama.cpp project and replaces the older GGML format.',
             'A GGUF file contains: the quantized model weights, all model metadata (architecture, tokenizer, context length), and a format version number. This self-contained design means a single `.gguf` file is everything needed to run the model -- no separate tokenizer files, no configuration JSON.',
             'As of April 2026, GGUF is the standard format for Ollama, LM Studio, Jan AI, and GPT4All. When you run [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama), Ollama downloads a GGUF file internally. When LM Studio shows model file sizes, those are GGUF file sizes.',
-            'The quantization level is part of the filename: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` is a Q4_K_M quantized GGUF of Llama 3.1 8B.',
+            'The quantization level is part of the filename: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` is a Q4_K_M quantized GGUF of Llama 3.3 8B.',
           ],
           image: '/images/gguf-format-structure-en.svg',
           imageCaption: 'GGUF format contains quantized weights, model metadata (tokenizer, context length), and format version in a single self-contained file.',
@@ -224,7 +224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'LM Studio: How to Select Quantization in the UI',
           content: [
             '**LM Studio (desktop app) shows available quantization variants for each model download.** When searching for a model, you\\\'ll see multiple GGUF options: Q2_K, Q3_K_S, Q4_K_M, Q5_K_M, Q6_K, Q8_0.',
-            '**Step 1:** Open LM Studio → Navigate to the "Local Models" tab. Search for a model (e.g., "Llama 3.1 8B"). Step 2: Each model shows available quantizations. Look at the file size to estimate VRAM usage. Q4_K_M for a 7B model is usually listed as ~4.5 GB. Step 3: Click the download icon next to your chosen quantization.',
+            '**Step 1:** Open LM Studio → Navigate to the "Local Models" tab. Search for a model (e.g., "Llama 3.3 8B"). Step 2: Each model shows available quantizations. Look at the file size to estimate VRAM usage. Q4_K_M for a 7B model is usually listed as ~4.5 GB. Step 3: Click the download icon next to your chosen quantization.',
             '**Recommended defaults for LM Studio:**',
             '- **If your GPU has 6-8 GB VRAM (RTX 4060, RTX 3060 Ti, RTX 4060 Ti):** Download the Q4_K_M variant (smallest file with acceptable quality).',
             '- **If your GPU has 12-16 GB VRAM (RTX 4070, RTX 4080):** Download Q5_K_M or Q6_K (better quality, still well within VRAM).',
@@ -359,7 +359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Does quantization affect the model\'s context window?',
-              a: 'No -- quantization only affects model weight precision, not the context length. A Llama 3.1 8B model supports 128K tokens whether quantized to Q4_K_M or run at FP16. However, processing longer contexts requires more RAM regardless of quantization -- processing a 64K token context with a Q4_K_M 7B model may require 10+ GB RAM.',
+              a: 'No -- quantization only affects model weight precision, not the context length. A Llama 3.3 8B model supports 128K tokens whether quantized to Q4_K_M or run at FP16. However, processing longer contexts requires more RAM regardless of quantization -- processing a 64K token context with a Q4_K_M 7B model may require 10+ GB RAM.',
             },
             {
               q: 'What is the difference between GGUF and GPTQ quantization?',
@@ -518,7 +518,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Does quantization affect the model\'s context window?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'No -- quantization only affects model weight precision, not the context length. A Llama 3.1 8B model supports 128K tokens whether at Q4_K_M or FP16. However, processing longer contexts requires more RAM regardless of quantization level, as the KV cache scales with context size.' },
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'No -- quantization only affects model weight precision, not the context length. A Llama 3.3 8B model supports 128K tokens whether at Q4_K_M or FP16. However, processing longer contexts requires more RAM regardless of quantization level, as the KV cache scales with context size.' },
           },
           {
             '@type': 'Question',
@@ -594,7 +594,7 @@ schema: {
       metaDescription: 'Entiende la cuantización de LLM en 2026: Q4_K_M, Q5_K_M y Q8_0. Ahorro de memoria, compromisos de calidad y recomendaciones por caso de uso.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen2.5', 'Mistral'],
+      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen2.5', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**Elige la cuantización según tu VRAM: 6–8 GB → usa Q4_K_M (~4,5 GB para modelos 7B, pérdida de calidad del 1–3%), 16 GB → Q5_K_M, 24+ GB → Q8_0 (pérdida insignificante). La cuantización reduce la precisión de los pesos del modelo de floats de 16 bits a enteros de 4 u 8 bits, reduciendo la RAM entre un 50–75%. Para modelos más grandes que tu GPU, añade CPU offloading o layer splitting multi-GPU.**',
       audience: 'Ingenieros que despliegan LLMs locales en producción, optimizando para VRAM limitada o construyendo sistemas multi-GPU',
@@ -679,7 +679,7 @@ schema: {
             '**GGUF (GPT-Generated Unified Format) es el estándar de archivo único para pesos de LLM cuantizados, que contiene pesos del modelo, metadatos y tokenizador — utilizado por Ollama, LM Studio y llama.cpp.** Fue creado por el proyecto llama.cpp y reemplaza al formato GGML anterior.',
             'Un archivo GGUF contiene: los pesos del modelo cuantizados, todos los metadatos del modelo (arquitectura, tokenizador, longitud de contexto) y un número de versión del formato. Este diseño autosuficiente significa que un único archivo `.gguf` es todo lo necesario para ejecutar el modelo — sin archivos de tokenizador separados, sin JSON de configuración.',
             'A partir de abril de 2026, GGUF es el formato estándar para Ollama, LM Studio, Jan AI y GPT4All. Cuando ejecutas [`ollama pull llama3.1:8b`](/es/local-llms/how-to-install-ollama), Ollama descarga internamente un archivo GGUF. Cuando LM Studio muestra tamaños de archivos de modelos, esos son tamaños de archivos GGUF.',
-            'El nivel de cuantización es parte del nombre de archivo: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` es un GGUF cuantizado a Q4_K_M de Llama 3.1 8B.',
+            'El nivel de cuantización es parte del nombre de archivo: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` es un GGUF cuantizado a Q4_K_M de Llama 3.3 8B.',
           ],
           image: '/images/gguf-format-structure-es.svg',
           imageCaption: 'El formato GGUF contiene pesos cuantizados, metadatos del modelo (tokenizador, longitud de contexto) y versión del formato en un único archivo autosuficiente.',
@@ -737,7 +737,7 @@ schema: {
           title: 'LM Studio: cómo seleccionar la cuantización en la interfaz',
           content: [
             '**LM Studio (aplicación de escritorio) muestra las variantes de cuantización disponibles para cada descarga de modelo.** Al buscar un modelo, verás múltiples opciones GGUF: Q2_K, Q3_K_S, Q4_K_M, Q5_K_M, Q6_K, Q8_0.',
-            '**Paso 1:** Abre LM Studio → Navega a la pestaña "Modelos locales". Busca un modelo (p. ej., "Llama 3.1 8B"). Paso 2: Cada modelo muestra las cuantizaciones disponibles. Fíjate en el tamaño del archivo para estimar el uso de VRAM. Q4_K_M para un modelo 7B suele aparecer como ~4,5 GB. Paso 3: Haz clic en el ícono de descarga junto a la cuantización elegida.',
+            '**Paso 1:** Abre LM Studio → Navega a la pestaña "Modelos locales". Busca un modelo (p. ej., "Llama 3.3 8B"). Paso 2: Cada modelo muestra las cuantizaciones disponibles. Fíjate en el tamaño del archivo para estimar el uso de VRAM. Q4_K_M para un modelo 7B suele aparecer como ~4,5 GB. Paso 3: Haz clic en el ícono de descarga junto a la cuantización elegida.',
             '**Valores predeterminados recomendados para LM Studio:**',
             '- **Si tu GPU tiene 6-8 GB de VRAM (RTX 4060, RTX 3060 Ti, RTX 4060 Ti):** Descarga la variante Q4_K_M (archivo más pequeño con calidad aceptable).',
             '- **Si tu GPU tiene 12-16 GB de VRAM (RTX 4070, RTX 4080):** Descarga Q5_K_M o Q6_K (mejor calidad, aún dentro del VRAM).',
@@ -872,7 +872,7 @@ schema: {
             },
             {
               q: '¿La cuantización afecta la ventana de contexto del modelo?',
-              a: 'No — la cuantización solo afecta la precisión de los pesos del modelo, no la longitud del contexto. Un modelo Llama 3.1 8B soporta 128K tokens tanto si está cuantizado a Q4_K_M como si se ejecuta en FP16. Sin embargo, procesar contextos más largos requiere más RAM independientemente de la cuantización — procesar un contexto de 64K tokens con un modelo 7B Q4_K_M puede requerir 10+ GB de RAM.',
+              a: 'No — la cuantización solo afecta la precisión de los pesos del modelo, no la longitud del contexto. Un modelo Llama 3.3 8B soporta 128K tokens tanto si está cuantizado a Q4_K_M como si se ejecuta en FP16. Sin embargo, procesar contextos más largos requiere más RAM independientemente de la cuantización — procesar un contexto de 64K tokens con un modelo 7B Q4_K_M puede requerir 10+ GB de RAM.',
             },
             {
               q: '¿Cuál es la diferencia entre cuantización GGUF y GPTQ?',
@@ -993,7 +993,7 @@ schema: {
           {
             '@type': 'Question',
             'name': '¿La cuantización afecta la ventana de contexto del modelo?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'No — la cuantización solo afecta la precisión de los pesos del modelo, no la longitud del contexto. Un modelo Llama 3.1 8B soporta 128K tokens tanto en Q4_K_M como en FP16. Sin embargo, procesar contextos más largos requiere más RAM independientemente del nivel de cuantización.' },
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'No — la cuantización solo afecta la precisión de los pesos del modelo, no la longitud del contexto. Un modelo Llama 3.3 8B soporta 128K tokens tanto en Q4_K_M como en FP16. Sin embargo, procesar contextos más largos requiere más RAM independientemente del nivel de cuantización.' },
           },
           {
             '@type': 'Question',
@@ -1067,7 +1067,7 @@ schema: {
       metaDescription: 'Wählen Sie die richtige LLM-Quantisierung für Ihre Hardware. Q4_K_M für 6–8 GB VRAM, Q5_K_M für 16 GB, Q8_0 für 24 GB+. 2026-Leitfaden mit RAM-Tabellen.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen2.5', 'Mistral'],
+      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen2.5', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       readTime: '14 Min. Lesezeit',
       educationalLevel: 'Advanced',
@@ -1149,7 +1149,7 @@ schema: {
             '**GGUF (GPT-Generated Unified Format) ist das Dateiformat zum Speichern von quantisierten LLM-Gewichten für lokale Inference.** Es wurde vom llama.cpp-Projekt erstellt und ersetzt das ältere GGML-Format.',
             'Eine GGUF-Datei enthält: die quantisierten Modellgewichte, alle Modellmetadaten (Architektur, Tokenizer, Kontextlänge) und eine Formatversionsnummer. Dieses eigenständige Design bedeutet, dass eine einzelne `.gguf`-Datei alles ist, was zum Ausführen des Modells benötigt wird -- keine separaten Tokenizer-Dateien, kein JSON-Konfigurationscode.',
             'Ab April 2026 ist GGUF das Standard-Format für Ollama, LM Studio, Jan AI und GPT4All. Wenn Sie [`ollama pull llama3.1:8b`](/de/local-llms/how-to-install-ollama) ausführen, lädt Ollama intern eine GGUF-Datei herunter. Wenn LM Studio Modellgrößen anzeigt, sind das GGUF-Dateigr öße.',
-            'Die Quantisierungsstufe ist Teil des Dateinamens: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` ist eine Q4_K_M-quantisierte GGUF von Llama 3.1 8B.',
+            'Die Quantisierungsstufe ist Teil des Dateinamens: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` ist eine Q4_K_M-quantisierte GGUF von Llama 3.3 8B.',
           ],
           image: '/images/gguf-format-structure-de.svg',
           imageCaption: 'GGUF-Format enthält quantisierte Gewichte, Modellmetadaten (Tokenizer, Kontextlänge) und Formatversion in einer eigenständigen Datei.',
@@ -1207,7 +1207,7 @@ schema: {
           title: 'LM Studio: Quantisierung in der Benutzeroberfläche wählen',
           content: [
             '**LM Studio (Desktop-App) zeigt verfügbare Quantisierungsvarianten für jeden Modell-Download an.** Bei der Suche nach einem Modell werden mehrere GGUF-Optionen angezeigt: Q2_K, Q3_K_S, Q4_K_M, Q5_K_M, Q6_K, Q8_0.',
-            '**Schritt 1:** Öffnen Sie LM Studio → Navigieren Sie zur Registerkarte "Lokale Modelle". Suchen Sie nach einem Modell (z.B. "Llama 3.1 8B"). Schritt 2: Jedes Modell zeigt verfügbare Quantisierungen. Schauen Sie sich die Dateigröße an, um den VRAM-Verbrauch zu schätzen. Q4_K_M für ein 7B-Modell ist normalerweise ~4,5 GB aufgeführt. Schritt 3: Klicken Sie auf das Download-Symbol neben Ihrer gewählten Quantisierung.',
+            '**Schritt 1:** Öffnen Sie LM Studio → Navigieren Sie zur Registerkarte "Lokale Modelle". Suchen Sie nach einem Modell (z.B. "Llama 3.3 8B"). Schritt 2: Jedes Modell zeigt verfügbare Quantisierungen. Schauen Sie sich die Dateigröße an, um den VRAM-Verbrauch zu schätzen. Q4_K_M für ein 7B-Modell ist normalerweise ~4,5 GB aufgeführt. Schritt 3: Klicken Sie auf das Download-Symbol neben Ihrer gewählten Quantisierung.',
             '**Empfohlene Voreinstellungen für LM Studio:**',
             '- **Wenn Ihre GPU 6–8 GB VRAM hat (RTX 4060, RTX 3060 Ti, RTX 4060 Ti):** Laden Sie die Q4_K_M-Variante herunter (kleinste Dateigröße mit akzeptabler Qualität).',
             '- **Wenn Ihre GPU 12–16 GB VRAM hat (RTX 4070, RTX 4080):** Laden Sie Q5_K_M oder Q6_K herunter (bessere Qualität, immer noch gut im VRAM).',
@@ -1333,7 +1333,7 @@ schema: {
             },
             {
               q: 'Beeinflusst Quantisierung das Kontextfenster des Modells?',
-              a: 'Nein -- Quantisierung beeinflusst nur die Gewichtspräzision des Modells, nicht die Kontextlänge. Ein Llama 3.1 8B-Modell unterstützt 128K Token, ob quantisiert auf Q4_K_M oder bei FP16 ausgeführt. Das Verarbeiten längerer Kontexte erfordert jedoch unabhängig von Quantisierung mehr RAM -- das Verarbeiten eines 64K-Token-Kontexts mit einem Q4_K_M 7B-Modell kann 10+ GB RAM erfordern.',
+              a: 'Nein -- Quantisierung beeinflusst nur die Gewichtspräzision des Modells, nicht die Kontextlänge. Ein Llama 3.3 8B-Modell unterstützt 128K Token, ob quantisiert auf Q4_K_M oder bei FP16 ausgeführt. Das Verarbeiten längerer Kontexte erfordert jedoch unabhängig von Quantisierung mehr RAM -- das Verarbeiten eines 64K-Token-Kontexts mit einem Q4_K_M 7B-Modell kann 10+ GB RAM erfordern.',
             },
             {
               q: 'Was ist der Unterschied zwischen GGUF und GPTQ-Quantisierung?',
@@ -1578,7 +1578,7 @@ schema: {
       metaDescription: 'Choisissez la bonne quantification LLM pour votre matériel. Q4_K_M pour 6–8 GB VRAM, Q5_K_M pour 16 GB, Q8_0 pour 24 GB+. Guide 2026 avec tables RAM.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen2.5', 'Mistral'],
+      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen2.5', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       readTime: '14 min de lecture',
       educationalLevel: 'Advanced',
@@ -1660,7 +1660,7 @@ schema: {
             '**GGUF (GPT-Generated Unified Format) est le format de fichier utilisé pour stocker les poids LLM quantifiés pour l\'inférence locale.** Il a été créé par le projet llama.cpp et remplace le format GGML plus ancien.',
             'Un fichier GGUF contient : les poids du modèle quantifiés, toutes les métadonnées du modèle (architecture, tokenizer, longueur du contexte) et un numéro de version du format. Cette conception autonome signifie qu\'un seul fichier `.gguf` est tout ce qui est nécessaire pour exécuter le modèle -- pas de fichiers tokenizer séparés, pas de JSON de configuration.',
             'En avril 2026, GGUF est le format standard pour Ollama, LM Studio, Jan AI et GPT4All. Lorsque vous exécutez [`ollama pull llama3.1:8b`](/fr/local-llms/how-to-install-ollama), Ollama télécharge en interne un fichier GGUF. Lorsque LM Studio affiche les tailles de modèle, ce sont les tailles de fichier GGUF.',
-            'Le niveau de quantification fait partie du nom de fichier : `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` est une GGUF quantifiée en Q4_K_M de Llama 3.1 8B.',
+            'Le niveau de quantification fait partie du nom de fichier : `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` est une GGUF quantifiée en Q4_K_M de Llama 3.3 8B.',
           ],
           image: '/images/gguf-format-structure-fr.svg',
           imageCaption: 'Format GGUF contenant les poids quantifiés, les métadonnées du modèle (tokenizer, longueur de contexte) et la version du format dans un seul fichier autonome.',
@@ -1812,7 +1812,7 @@ schema: {
             },
             {
               q: 'La quantification affecte-t-elle la fenêtre de contexte du modèle ?',
-              a: 'Non -- la quantification n\'affecte que la précision des poids du modèle, pas la longueur du contexte. Un modèle Llama 3.1 8B prend en charge 128K tokens, qu\'il soit quantifié en Q4_K_M ou exécuté en FP16. Cependant, traiter des contextes plus longs nécessite plus de RAM indépendamment de la quantification.',
+              a: 'Non -- la quantification n\'affecte que la précision des poids du modèle, pas la longueur du contexte. Un modèle Llama 3.3 8B prend en charge 128K tokens, qu\'il soit quantifié en Q4_K_M ou exécuté en FP16. Cependant, traiter des contextes plus longs nécessite plus de RAM indépendamment de la quantification.',
             },
             {
               q: 'Quelle est la différence entre la quantification GGUF et GPTQ ?',
@@ -2039,7 +2039,7 @@ schema: {
       metaDescription: 'ハードウェアに適したLLM量子化を選択してください。Q4_K_Mは6～8GB VRAM、Q5_K_Mは16GB、Q8_0は24GB以上向け。2026年RAMテーブル付きガイド。',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen2.5', 'Mistral'],
+      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen2.5', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       readTime: '14分で読める',
       educationalLevel: 'Advanced',
@@ -2121,7 +2121,7 @@ schema: {
             '**GGUF（GPT-Generated Unified Format）は、ローカル推論用の量子化LLM重みを保存するためのファイル形式です。** llama.cpプロジェクトによって作成され、古いGGML形式の置き換えです。',
             'GGUFファイルには以下が含まれます：量子化されたモデルの重み、すべてのモデルメタデータ（アーキテクチャ、トークナイザー、コンテキスト長）、およびフォーマットバージョン番号。このスタンドアロン設計により、単一の`.gguf`ファイルがモデルを実行するために必要なすべてです -- 別のトークナイザーファイルや設定JSONは不要です。',
             '2026年4月の時点で、GGUFはOllama、LM Studio、Jan AI、GPT4Allの標準形式です。`ollama pull llama3.1:8b`を実行すると、Ollamaは内部的にGGUFファイルをダウンロードします。LM Studioがモデルファイルサイズを表示する場合、それはGGUFファイルサイズです。',
-            '量子化レベルはファイル名の一部です：`Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`はLlama 3.1 8BのQ4_K_M量子化GGUFです。',
+            '量子化レベルはファイル名の一部です：`Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`はLlama 3.3 8BのQ4_K_M量子化GGUFです。',
           ],
           image: '/images/gguf-format-structure-ja.svg',
           imageCaption: 'GGUF形式は、量子化された重み、モデルメタデータ（トークナイザー、コンテキスト長）、フォーマットバージョンを1つの自己完結的なファイルで保持します。',
@@ -2273,7 +2273,7 @@ schema: {
             },
             {
               q: '量子化はモデルのコンテキストウィンドウに影響しますか？',
-              a: 'いいえ -- 量子化はモデル重み精度にのみ影響し、コンテキスト長には影響しません。Llama 3.1 8Bモデルは、Q4_K_Mに量子化されてもFP16で実行されても128Kトークンをサポートします。ただし、より長いコンテキストを処理するには、量子化に関わらずより多くのRAMが必要です -- Q4_K_M 7Bモデルで64Kトークンコンテキストを処理すると、10GB以上のRAMが必要になることもあります。',
+              a: 'いいえ -- 量子化はモデル重み精度にのみ影響し、コンテキスト長には影響しません。Llama 3.3 8Bモデルは、Q4_K_Mに量子化されてもFP16で実行されても128Kトークンをサポートします。ただし、より長いコンテキストを処理するには、量子化に関わらずより多くのRAMが必要です -- Q4_K_M 7Bモデルで64Kトークンコンテキストを処理すると、10GB以上のRAMが必要になることもあります。',
             },
             {
               q: 'GGUF量子化とGPTQ量子化の違いは何ですか？',
@@ -2499,7 +2499,7 @@ schema: {
       metaDescription: '为您的硬件选择合适的LLM量化。Q4_K_M适合6-8GB显存，Q5_K_M适合16GB，Q8_0适合24GB以上。2026年含RAM表格的指南。',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
-      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen2.5', 'Mistral'],
+      current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen2.5', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       readTime: '阅读约14分钟',
       educationalLevel: 'Advanced',
@@ -2581,7 +2581,7 @@ schema: {
             '**GGUF（GPT生成统一格式）是用于本地推理存储量化LLM权重的文件格式。** 由llama.cpp项目创建，取代了较旧的GGML格式。',
             'GGUF文件包含：量化的模型权重、所有模型元数据（架构、分词器、上下文长度）和格式版本号。这种自包含设计意味着单个`.gguf`文件是运行模型所需的全部内容----无需单独的分词器文件，无需配置JSON。',
             '截至2026年4月，GGUF是Ollama、LM Studio、Jan AI和GPT4All的标准格式。运行`ollama pull llama3.1:8b`时，Ollama内部下载GGUF文件。LM Studio显示模型文件大小时，这些就是GGUF文件大小。',
-            '量化级别是文件名的一部分：`Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`是Llama 3.1 8B的Q4_K_M量化GGUF。',
+            '量化级别是文件名的一部分：`Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`是Llama 3.3 8B的Q4_K_M量化GGUF。',
           ],
           image: '/images/gguf-format-structure-zh.svg',
           imageCaption: 'GGUF格式包含量化权重、模型元数据（分词器、上下文长度）和格式版本，全部在一个独立文件中。',
@@ -2733,7 +2733,7 @@ schema: {
             },
             {
               q: '量化会影响模型的上下文窗口吗？',
-              a: '不会----量化仅影响模型权重精度，不影响上下文长度。Llama 3.1 8B模型支持128K代币，无论是量化到Q4_K_M还是在FP16下运行。但是，处理更长的上下文需要更多RAM，不管量化如何----用Q4_K_M 7B模型处理64K代币上下文可能需要10GB+RAM。',
+              a: '不会----量化仅影响模型权重精度，不影响上下文长度。Llama 3.3 8B模型支持128K代币，无论是量化到Q4_K_M还是在FP16下运行。但是，处理更长的上下文需要更多RAM，不管量化如何----用Q4_K_M 7B模型处理64K代币上下文可能需要10GB+RAM。',
             },
             {
               q: 'GGUF和GPTQ量化有什么区别？',

@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
           isTldr: true,
           items: [
-            'Local 7B models need more explicit guidance than GPT-4o. Longer prompts, clearer instructions.',
+            'Local 7B models need more explicit guidance than GPT-5.5. Longer prompts, clearer instructions.',
             'Chain-of-thought ("Let me think step by step") improves reasoning accuracy by 10-20%.',
             'Always specify output format (JSON, Markdown, plain text). Unstructured outputs are unpredictable.',
             'Few-shot examples (1-3) work better than zero-shot for local models. More examples = better consistency.',
@@ -65,14 +65,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'differences',
           title: 'How Are Local Models Different?',
           rows: [
-            { 'Aspect': 'Context window', 'GPT-5.2 (ChatGPT Plus)': '128K tokens', 'Local 7B (Llama 3.1 8B)': '4K–128K tokens', 'Local 70B (Llama 3.3)': '128K tokens' },
-            { 'Aspect': 'Instruction following', 'GPT-5.2 (ChatGPT Plus)': 'Excellent', 'Local 7B (Llama 3.1 8B)': 'Good with explicit prompts', 'Local 70B (Llama 3.3)': 'Very good' },
-            { 'Aspect': 'Few-shot learning', 'GPT-5.2 (ChatGPT Plus)': '1–2 examples', 'Local 7B (Llama 3.1 8B)': '3–5 examples needed', 'Local 70B (Llama 3.3)': '2–3 examples' },
-            { 'Aspect': 'Reasoning', 'GPT-5.2 (ChatGPT Plus)': 'Multi-step implicit', 'Local 7B (Llama 3.1 8B)': 'Step-by-step explicit required', 'Local 70B (Llama 3.3)': 'Moderate implicit' },
-            { 'Aspect': 'System prompt', 'GPT-5.2 (ChatGPT Plus)': 'Handled by API', 'Local 7B (Llama 3.1 8B)': 'Must configure per tool', 'Local 70B (Llama 3.3)': 'Must configure per tool' },
-            { 'Aspect': 'Temperature default', 'GPT-5.2 (ChatGPT Plus)': '1.0 (API)', 'Local 7B (Llama 3.1 8B)': '0.8 (Ollama default)', 'Local 70B (Llama 3.3)': '0.8 (Ollama default)' },
+            { 'Aspect': 'Context window', 'GPT-5.2 (ChatGPT Plus)': '128K tokens', 'Local 7B (Llama 3.3 8B)': '4K–128K tokens', 'Local 70B (Llama 3.3)': '128K tokens' },
+            { 'Aspect': 'Instruction following', 'GPT-5.2 (ChatGPT Plus)': 'Excellent', 'Local 7B (Llama 3.3 8B)': 'Good with explicit prompts', 'Local 70B (Llama 3.3)': 'Very good' },
+            { 'Aspect': 'Few-shot learning', 'GPT-5.2 (ChatGPT Plus)': '1–2 examples', 'Local 7B (Llama 3.3 8B)': '3–5 examples needed', 'Local 70B (Llama 3.3)': '2–3 examples' },
+            { 'Aspect': 'Reasoning', 'GPT-5.2 (ChatGPT Plus)': 'Multi-step implicit', 'Local 7B (Llama 3.3 8B)': 'Step-by-step explicit required', 'Local 70B (Llama 3.3)': 'Moderate implicit' },
+            { 'Aspect': 'System prompt', 'GPT-5.2 (ChatGPT Plus)': 'Handled by API', 'Local 7B (Llama 3.3 8B)': 'Must configure per tool', 'Local 70B (Llama 3.3)': 'Must configure per tool' },
+            { 'Aspect': 'Temperature default', 'GPT-5.2 (ChatGPT Plus)': '1.0 (API)', 'Local 7B (Llama 3.3 8B)': '0.8 (Ollama default)', 'Local 70B (Llama 3.3)': '0.8 (Ollama default)' },
           ],
-          columns: ['Aspect', 'GPT-5.2 (ChatGPT Plus)', 'Local 7B (Llama 3.1 8B)', 'Local 70B (Llama 3.3)'],
+          columns: ['Aspect', 'GPT-5.2 (ChatGPT Plus)', 'Local 7B (Llama 3.3 8B)', 'Local 70B (Llama 3.3)'],
         },
         chainOfThought: {
           id: 'chain-of-thought',
@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'structured-output',
           title: 'Why Is Specifying Output Format Critical for Local Models?',
           content: [
-            '**Specifying exact output format (JSON, Markdown, plain text) is critical for local models because they produce unpredictable outputs without explicit instructions.** Cloud models like GPT-4o can infer intent from vague requests; local 7B–13B models cannot. For [local RAG systems that need structured document extraction](/local-llms/local-rag-2026), JSON format specifications prevent parsing errors and increase extraction accuracy 30–40%.',
+            '**Specifying exact output format (JSON, Markdown, plain text) is critical for local models because they produce unpredictable outputs without explicit instructions.** Cloud models like GPT-5.5 can infer intent from vague requests; local 7B–13B models cannot. For [local RAG systems that need structured document extraction](/local-llms/local-rag-2026), JSON format specifications prevent parsing errors and increase extraction accuracy 30–40%.',
             '**Example:** "Extract entities from the text" might return narrative text instead of a list.',
             '**Better:** "Extract entities as JSON with keys: person, location, organization".',
           ],
@@ -190,16 +190,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Common Questions About Local LLM Prompting',
           faqs: [
             {
-              q: 'Why do local LLMs need more explicit prompts than GPT-4o?',
-              a: 'Local 7B–13B models have fewer parameters and less diverse training data than GPT-4o (1.8T parameters estimated). They cannot infer ambiguous intent as well. Explicit instructions — format, role, step-by-step reasoning — compensate for this gap. Chain-of-thought prompting improves local model accuracy by 10–20% on reasoning tasks.',
+              q: 'Why do local LLMs need more explicit prompts than GPT-5.5?',
+              a: 'Local 7B–13B models have fewer parameters and less diverse training data than GPT-5.5 (1.8T parameters estimated). They cannot infer ambiguous intent as well. Explicit instructions — format, role, step-by-step reasoning — compensate for this gap. Chain-of-thought prompting improves local model accuracy by 10–20% on reasoning tasks.',
             },
             {
               q: 'How many few-shot examples should I include in prompts for local LLMs?',
-              a: '3–5 examples are optimal for local 7B models. GPT-4o typically needs only 1–2 examples. More examples improve consistency but consume context window tokens (4K–32K tokens depending on the model). For Llama 3.2 8B with a 4K context window, limit to 3 examples plus your task. For models with 32K+ context, 5 examples is safe.',
+              a: '3–5 examples are optimal for local 7B models. GPT-5.5 typically needs only 1–2 examples. More examples improve consistency but consume context window tokens (4K–32K tokens depending on the model). For Llama 3.2 8B with a 4K context window, limit to 3 examples plus your task. For models with 32K+ context, 5 examples is safe.',
             },
             {
               q: 'Does chain-of-thought prompting work with all local models?',
-              a: 'Chain-of-thought works with any instruction-tuned model (Llama 3.x, Qwen 2.5, Mistral 7B). Base models (non-instruction-tuned) do not follow "think step-by-step" instructions reliably. For local models, CoT phrases like "Solve this step by step:" or "Reasoning:" at the start of the expected output work best.',
+              a: 'Chain-of-thought works with any instruction-tuned model (Llama 3.x, Qwen 2.5, Mistral Small). Base models (non-instruction-tuned) do not follow "think step-by-step" instructions reliably. For local models, CoT phrases like "Solve this step by step:" or "Reasoning:" at the start of the expected output work best.',
             },
             {
               q: 'What output format is most reliable for local LLMs?',
@@ -305,7 +305,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'How many few-shot examples should I include in prompts for local LLMs?',
-            acceptedAnswer: { '@type': 'Answer', text: '3–5 examples are optimal for local 7B models. GPT-5.2 typically needs only 1–2 examples. More examples improve consistency but consume context window tokens (4K–128K tokens depending on the model). For Llama 3.1 8B with a 4K context window, limit to 3 examples plus your task. For models with 32K+ context, 5 examples is safe.' },
+            acceptedAnswer: { '@type': 'Answer', text: '3–5 examples are optimal for local 7B models. GPT-5.2 typically needs only 1–2 examples. More examples improve consistency but consume context window tokens (4K–128K tokens depending on the model). For Llama 3.3 8B with a 4K context window, limit to 3 examples plus your task. For models with 32K+ context, 5 examples is safe.' },
           },
           {
             '@type': 'Question',
@@ -405,7 +405,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'Los modelos locales 7B necesitan más orientación explícita que GPT-4o. Prompts más largos, instrucciones más claras.',
+            'Los modelos locales 7B necesitan más orientación explícita que GPT-5.5. Prompts más largos, instrucciones más claras.',
             'El prompting por cadena de pensamiento ("Déjame pensar paso a paso") mejora la precisión del razonamiento un 10–20%.',
             'Siempre especifica el formato de salida (JSON, Markdown, texto plano). Las salidas sin estructura son impredecibles.',
             'Los ejemplos few-shot (1–3) funcionan mejor que zero-shot en modelos locales. Más ejemplos = mayor consistencia.',
@@ -428,14 +428,14 @@ schema: {
           id: 'differences',
           title: '¿En qué se diferencian los modelos locales?',
           rows: [
-            { 'Aspecto': 'Ventana de contexto', 'GPT-5.2 (ChatGPT Plus)': '128K tokens', 'Local 7B (Llama 3.1 8B)': '4K–128K tokens', 'Local 70B (Llama 3.3)': '128K tokens' },
-            { 'Aspecto': 'Seguimiento de instrucciones', 'GPT-5.2 (ChatGPT Plus)': 'Excelente', 'Local 7B (Llama 3.1 8B)': 'Bueno con prompts explícitos', 'Local 70B (Llama 3.3)': 'Muy bueno' },
-            { 'Aspecto': 'Aprendizaje few-shot', 'GPT-5.2 (ChatGPT Plus)': '1–2 ejemplos', 'Local 7B (Llama 3.1 8B)': '3–5 ejemplos necesarios', 'Local 70B (Llama 3.3)': '2–3 ejemplos' },
-            { 'Aspecto': 'Razonamiento', 'GPT-5.2 (ChatGPT Plus)': 'Implícito en múltiples pasos', 'Local 7B (Llama 3.1 8B)': 'Paso a paso explícito requerido', 'Local 70B (Llama 3.3)': 'Implícito moderado' },
-            { 'Aspecto': 'System prompt', 'GPT-5.2 (ChatGPT Plus)': 'Gestionado por la API', 'Local 7B (Llama 3.1 8B)': 'Configurar por herramienta', 'Local 70B (Llama 3.3)': 'Configurar por herramienta' },
-            { 'Aspecto': 'Temperatura por defecto', 'GPT-5.2 (ChatGPT Plus)': '1.0 (API)', 'Local 7B (Llama 3.1 8B)': '0.8 (defecto Ollama)', 'Local 70B (Llama 3.3)': '0.8 (defecto Ollama)' },
+            { 'Aspecto': 'Ventana de contexto', 'GPT-5.2 (ChatGPT Plus)': '128K tokens', 'Local 7B (Llama 3.3 8B)': '4K–128K tokens', 'Local 70B (Llama 3.3)': '128K tokens' },
+            { 'Aspecto': 'Seguimiento de instrucciones', 'GPT-5.2 (ChatGPT Plus)': 'Excelente', 'Local 7B (Llama 3.3 8B)': 'Bueno con prompts explícitos', 'Local 70B (Llama 3.3)': 'Muy bueno' },
+            { 'Aspecto': 'Aprendizaje few-shot', 'GPT-5.2 (ChatGPT Plus)': '1–2 ejemplos', 'Local 7B (Llama 3.3 8B)': '3–5 ejemplos necesarios', 'Local 70B (Llama 3.3)': '2–3 ejemplos' },
+            { 'Aspecto': 'Razonamiento', 'GPT-5.2 (ChatGPT Plus)': 'Implícito en múltiples pasos', 'Local 7B (Llama 3.3 8B)': 'Paso a paso explícito requerido', 'Local 70B (Llama 3.3)': 'Implícito moderado' },
+            { 'Aspecto': 'System prompt', 'GPT-5.2 (ChatGPT Plus)': 'Gestionado por la API', 'Local 7B (Llama 3.3 8B)': 'Configurar por herramienta', 'Local 70B (Llama 3.3)': 'Configurar por herramienta' },
+            { 'Aspecto': 'Temperatura por defecto', 'GPT-5.2 (ChatGPT Plus)': '1.0 (API)', 'Local 7B (Llama 3.3 8B)': '0.8 (defecto Ollama)', 'Local 70B (Llama 3.3)': '0.8 (defecto Ollama)' },
           ],
-          columns: ['Aspecto', 'GPT-5.2 (ChatGPT Plus)', 'Local 7B (Llama 3.1 8B)', 'Local 70B (Llama 3.3)'],
+          columns: ['Aspecto', 'GPT-5.2 (ChatGPT Plus)', 'Local 7B (Llama 3.3 8B)', 'Local 70B (Llama 3.3)'],
         },
         chainOfThought: {
           id: 'chain-of-thought',
@@ -459,7 +459,7 @@ schema: {
           id: 'structured-output',
           title: '¿Por qué es crítico especificar el formato de salida en los modelos locales?',
           content: [
-            '**Especificar el formato de salida exacto (JSON, Markdown, texto plano) es crítico para los modelos locales porque producen salidas impredecibles sin instrucciones explícitas.** Los modelos cloud como GPT-4o pueden inferir la intención de peticiones vagas; los modelos locales 7B–13B no pueden. Para los [sistemas RAG locales que necesitan extracción de documentos estructurada](/es/local-llms/local-rag-2026), las especificaciones de formato JSON previenen errores de parseo y aumentan la precisión de extracción un 30–40%.',
+            '**Especificar el formato de salida exacto (JSON, Markdown, texto plano) es crítico para los modelos locales porque producen salidas impredecibles sin instrucciones explícitas.** Los modelos cloud como GPT-5.5 pueden inferir la intención de peticiones vagas; los modelos locales 7B–13B no pueden. Para los [sistemas RAG locales que necesitan extracción de documentos estructurada](/es/local-llms/local-rag-2026), las especificaciones de formato JSON previenen errores de parseo y aumentan la precisión de extracción un 30–40%.',
             '**Ejemplo:** "Extrae entidades del texto" podría devolver texto narrativo en lugar de una lista.',
             '**Mejor:** "Extrae entidades como JSON con claves: persona, lugar, organización".',
           ],
@@ -553,16 +553,16 @@ schema: {
           title: 'Preguntas frecuentes sobre el prompting de LLMs locales',
           faqs: [
             {
-              q: '¿Por qué los LLMs locales necesitan prompts más explícitos que GPT-4o?',
-              a: 'Los modelos locales 7B–13B tienen menos parámetros y datos de entrenamiento menos diversos que GPT-4o (se estima 1.8T parámetros). No pueden inferir la intención ambigua tan bien. Las instrucciones explícitas —formato, rol, razonamiento paso a paso— compensan esta diferencia. El prompting por cadena de pensamiento mejora la precisión de los modelos locales un 10–20% en tareas de razonamiento.',
+              q: '¿Por qué los LLMs locales necesitan prompts más explícitos que GPT-5.5?',
+              a: 'Los modelos locales 7B–13B tienen menos parámetros y datos de entrenamiento menos diversos que GPT-5.5 (se estima 1.8T parámetros). No pueden inferir la intención ambigua tan bien. Las instrucciones explícitas —formato, rol, razonamiento paso a paso— compensan esta diferencia. El prompting por cadena de pensamiento mejora la precisión de los modelos locales un 10–20% en tareas de razonamiento.',
             },
             {
               q: '¿Cuántos ejemplos few-shot debo incluir en los prompts para LLMs locales?',
-              a: '3–5 ejemplos son óptimos para los modelos locales 7B. GPT-4o normalmente solo necesita 1–2 ejemplos. Más ejemplos mejoran la consistencia pero consumen tokens de la ventana de contexto (4K–32K tokens según el modelo). Para Llama 3.2 8B con una ventana de contexto de 4K, limita a 3 ejemplos más tu tarea. Para modelos con contexto de 32K+, 5 ejemplos son seguros.',
+              a: '3–5 ejemplos son óptimos para los modelos locales 7B. GPT-5.5 normalmente solo necesita 1–2 ejemplos. Más ejemplos mejoran la consistencia pero consumen tokens de la ventana de contexto (4K–32K tokens según el modelo). Para Llama 3.2 8B con una ventana de contexto de 4K, limita a 3 ejemplos más tu tarea. Para modelos con contexto de 32K+, 5 ejemplos son seguros.',
             },
             {
               q: '¿Funciona el prompting por cadena de pensamiento con todos los modelos locales?',
-              a: 'La cadena de pensamiento funciona con cualquier modelo ajustado por instrucciones (Llama 3.x, Qwen 2.5, Mistral 7B). Los modelos base (sin ajuste por instrucciones) no siguen instrucciones de "piensa paso a paso" de forma fiable. Para modelos locales, las frases CoT como "Resuelve esto paso a paso:" o "Razonamiento:" al inicio de la salida esperada funcionan mejor.',
+              a: 'La cadena de pensamiento funciona con cualquier modelo ajustado por instrucciones (Llama 3.x, Qwen 2.5, Mistral Small). Los modelos base (sin ajuste por instrucciones) no siguen instrucciones de "piensa paso a paso" de forma fiable. Para modelos locales, las frases CoT como "Resuelve esto paso a paso:" o "Razonamiento:" al inicio de la salida esperada funcionan mejor.',
             },
             {
               q: '¿Qué formato de salida es más fiable para los LLMs locales?',
@@ -668,12 +668,12 @@ schema: {
           {
             '@type': 'Question',
             name: '¿Cuántos ejemplos few-shot debo incluir en los prompts para LLMs locales?',
-            acceptedAnswer: { '@type': 'Answer', text: '3–5 ejemplos son óptimos para los modelos locales 7B. GPT-5.2 normalmente solo necesita 1–2 ejemplos. Más ejemplos mejoran la consistencia pero consumen tokens de la ventana de contexto (4K–128K tokens según el modelo). Para Llama 3.1 8B con una ventana de contexto de 4K, limita a 3 ejemplos más tu tarea. Para modelos con contexto de 32K+, 5 ejemplos son seguros.' },
+            acceptedAnswer: { '@type': 'Answer', text: '3–5 ejemplos son óptimos para los modelos locales 7B. GPT-5.2 normalmente solo necesita 1–2 ejemplos. Más ejemplos mejoran la consistencia pero consumen tokens de la ventana de contexto (4K–128K tokens según el modelo). Para Llama 3.3 8B con una ventana de contexto de 4K, limita a 3 ejemplos más tu tarea. Para modelos con contexto de 32K+, 5 ejemplos son seguros.' },
           },
           {
             '@type': 'Question',
             name: '¿Funciona el prompting por cadena de pensamiento con todos los modelos locales?',
-            acceptedAnswer: { '@type': 'Answer', text: 'La cadena de pensamiento funciona con cualquier modelo ajustado por instrucciones (Llama 3.x, Qwen 2.5, Mistral 7B). Los modelos base (sin ajuste por instrucciones) no siguen instrucciones de "piensa paso a paso" de forma fiable. Para modelos locales, las frases CoT como "Resuelve esto paso a paso:" o "Razonamiento:" al inicio de la salida esperada funcionan mejor.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'La cadena de pensamiento funciona con cualquier modelo ajustado por instrucciones (Llama 3.x, Qwen 2.5, Mistral Small). Los modelos base (sin ajuste por instrucciones) no siguen instrucciones de "piensa paso a paso" de forma fiable. Para modelos locales, las frases CoT como "Resuelve esto paso a paso:" o "Razonamiento:" al inicio de la salida esperada funcionan mejor.' },
           },
           {
             '@type': 'Question',
@@ -779,7 +779,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'Lokale 7B-Modelle benötigen explizitere Anleitung als GPT-4o. Längere Prompts, klarere Anweisungen.',
+            'Lokale 7B-Modelle benötigen explizitere Anleitung als GPT-5.5. Längere Prompts, klarere Anweisungen.',
             'Gedankenketten-Prompting („Lass mich Schritt für Schritt denken") verbessert die Genauigkeit um 10–20%.',
             'Geben Sie immer das Ausgabeformat an (JSON, Markdown, Klartext). Unstrukturierte Ausgaben sind unvorhersehbar.',
             'Few-Shot-Beispiele (1–3) funktionieren besser als Zero-Shot bei lokalen Modellen. Mehr Beispiele = bessere Konsistenz.',
@@ -802,14 +802,14 @@ schema: {
           id: 'differences',
           title: 'Wie unterscheiden sich lokale Modelle?',
           rows: [
-            { 'Aspekt': 'Kontextfenster', 'GPT-5.2 (ChatGPT Plus)': '128K Token', 'Lokal 7B (Llama 3.1 8B)': '4K–128K Token', 'Lokal 70B (Llama 3.3)': '128K Token' },
-            { 'Aspekt': 'Anweisungsfolge', 'GPT-5.2 (ChatGPT Plus)': 'Ausgezeichnet', 'Lokal 7B (Llama 3.1 8B)': 'Gut mit expliziten Prompts', 'Lokal 70B (Llama 3.3)': 'Sehr gut' },
-            { 'Aspekt': 'Few-Shot-Lernen', 'GPT-5.2 (ChatGPT Plus)': '1–2 Beispiele', 'Lokal 7B (Llama 3.1 8B)': '3–5 Beispiele notwendig', 'Lokal 70B (Llama 3.3)': '2–3 Beispiele' },
-            { 'Aspekt': 'Argumentation', 'GPT-5.2 (ChatGPT Plus)': 'Mehrstufig implizit', 'Lokal 7B (Llama 3.1 8B)': 'Schritt-für-Schritt explizit erforderlich', 'Lokal 70B (Llama 3.3)': 'Moderat implizit' },
-            { 'Aspekt': 'System-Prompt', 'GPT-5.2 (ChatGPT Plus)': 'Von API behandelt', 'Lokal 7B (Llama 3.1 8B)': 'Pro Tool konfigurieren', 'Lokal 70B (Llama 3.3)': 'Pro Tool konfigurieren' },
-            { 'Aspekt': 'Temperaturstandard', 'GPT-5.2 (ChatGPT Plus)': '1,0 (API)', 'Lokal 7B (Llama 3.1 8B)': '0,8 (Ollama-Standard)', 'Lokal 70B (Llama 3.3)': '0,8 (Ollama-Standard)' },
+            { 'Aspekt': 'Kontextfenster', 'GPT-5.2 (ChatGPT Plus)': '128K Token', 'Lokal 7B (Llama 3.3 8B)': '4K–128K Token', 'Lokal 70B (Llama 3.3)': '128K Token' },
+            { 'Aspekt': 'Anweisungsfolge', 'GPT-5.2 (ChatGPT Plus)': 'Ausgezeichnet', 'Lokal 7B (Llama 3.3 8B)': 'Gut mit expliziten Prompts', 'Lokal 70B (Llama 3.3)': 'Sehr gut' },
+            { 'Aspekt': 'Few-Shot-Lernen', 'GPT-5.2 (ChatGPT Plus)': '1–2 Beispiele', 'Lokal 7B (Llama 3.3 8B)': '3–5 Beispiele notwendig', 'Lokal 70B (Llama 3.3)': '2–3 Beispiele' },
+            { 'Aspekt': 'Argumentation', 'GPT-5.2 (ChatGPT Plus)': 'Mehrstufig implizit', 'Lokal 7B (Llama 3.3 8B)': 'Schritt-für-Schritt explizit erforderlich', 'Lokal 70B (Llama 3.3)': 'Moderat implizit' },
+            { 'Aspekt': 'System-Prompt', 'GPT-5.2 (ChatGPT Plus)': 'Von API behandelt', 'Lokal 7B (Llama 3.3 8B)': 'Pro Tool konfigurieren', 'Lokal 70B (Llama 3.3)': 'Pro Tool konfigurieren' },
+            { 'Aspekt': 'Temperaturstandard', 'GPT-5.2 (ChatGPT Plus)': '1,0 (API)', 'Lokal 7B (Llama 3.3 8B)': '0,8 (Ollama-Standard)', 'Lokal 70B (Llama 3.3)': '0,8 (Ollama-Standard)' },
           ],
-          columns: ['Aspekt', 'GPT-5.2 (ChatGPT Plus)', 'Lokal 7B (Llama 3.1 8B)', 'Lokal 70B (Llama 3.3)'],
+          columns: ['Aspekt', 'GPT-5.2 (ChatGPT Plus)', 'Lokal 7B (Llama 3.3 8B)', 'Lokal 70B (Llama 3.3)'],
         },
         chainOfThought: {
           id: 'chain-of-thought',
@@ -833,7 +833,7 @@ schema: {
           id: 'structured-output',
           title: 'Warum ist die Angabe des Ausgabeformats für lokale Modelle kritisch?',
           content: [
-            '**Die Angabe des exakten Ausgabeformats (JSON, Markdown, Klartext) ist für lokale Modelle kritisch, da sie ohne explizite Anweisungen unvorhersehbare Ausgaben erzeugen.** Cloud-Modelle wie GPT-4o können Absichten aus vagen Anfragen ableiten; lokale 7B–13B-Modelle können das nicht. Für [lokale RAG-Systeme, die strukturierte Dokumentextraktion benötigen](/de/local-llms/local-rag-2026), verhindern JSON-Formatspezifikationen Parsing-Fehler und erhöhen die Extraktionsgenauigkeit um 30–40%.',
+            '**Die Angabe des exakten Ausgabeformats (JSON, Markdown, Klartext) ist für lokale Modelle kritisch, da sie ohne explizite Anweisungen unvorhersehbare Ausgaben erzeugen.** Cloud-Modelle wie GPT-5.5 können Absichten aus vagen Anfragen ableiten; lokale 7B–13B-Modelle können das nicht. Für [lokale RAG-Systeme, die strukturierte Dokumentextraktion benötigen](/de/local-llms/local-rag-2026), verhindern JSON-Formatspezifikationen Parsing-Fehler und erhöhen die Extraktionsgenauigkeit um 30–40%.',
             '**Beispiel:** „Extrahiere Entitäten aus dem Text" könnte Narrativtext statt einer Liste zurückgeben.',
             '**Besser:** „Extrahiere Entitäten als JSON mit Schlüsseln: Person, Ort, Organisation".',
           ],
@@ -928,16 +928,16 @@ schema: {
           title: 'Häufig gestellte Fragen zum lokalen LLM-Prompting',
           faqs: [
             {
-              q: 'Warum benötigen lokale LLMs explizitere Prompts als GPT-4o?',
-              a: 'Lokale 7B–13B-Modelle haben weniger Parameter und diversere Trainingsdaten als GPT-4o (geschätzt 1,8T Parameter). Sie können mehrdeutige Absichten nicht so gut ableiten. Explizite Anweisungen – Format, Rolle, Schritt-für-Schritt-Argumentation – kompensieren diese Lücke. Gedankenketten-Prompting verbessert die Genauigkeit lokaler Modelle um 10–20% bei Argumentationsaufgaben.',
+              q: 'Warum benötigen lokale LLMs explizitere Prompts als GPT-5.5?',
+              a: 'Lokale 7B–13B-Modelle haben weniger Parameter und diversere Trainingsdaten als GPT-5.5 (geschätzt 1,8T Parameter). Sie können mehrdeutige Absichten nicht so gut ableiten. Explizite Anweisungen – Format, Rolle, Schritt-für-Schritt-Argumentation – kompensieren diese Lücke. Gedankenketten-Prompting verbessert die Genauigkeit lokaler Modelle um 10–20% bei Argumentationsaufgaben.',
             },
             {
               q: 'Wie viele Few-Shot-Beispiele sollte ich in Prompts für lokale LLMs einbeziehen?',
-              a: '3–5 Beispiele sind optimal für lokale 7B-Modelle. GPT-4o benötigt typischerweise nur 1–2 Beispiele. Mehr Beispiele verbessern die Konsistenz, verbrauchen aber Kontextfenster-Token (4K–32K Token je nach Modell). Für Llama 3.2 8B mit 4K-Kontextfenster sollten Sie auf 3 Beispiele plus Ihre Aufgabe begrenzen. Für Modelle mit 32K+-Kontext sind 5 Beispiele sicher.',
+              a: '3–5 Beispiele sind optimal für lokale 7B-Modelle. GPT-5.5 benötigt typischerweise nur 1–2 Beispiele. Mehr Beispiele verbessern die Konsistenz, verbrauchen aber Kontextfenster-Token (4K–32K Token je nach Modell). Für Llama 3.2 8B mit 4K-Kontextfenster sollten Sie auf 3 Beispiele plus Ihre Aufgabe begrenzen. Für Modelle mit 32K+-Kontext sind 5 Beispiele sicher.',
             },
             {
               q: 'Funktioniert Gedankenketten-Prompting bei allen lokalen Modellen?',
-              a: 'Gedankenketten-Prompting funktioniert mit jedem Anweisungs-abgestimmten Modell (Llama 3.x, Qwen 2.5, Mistral 7B). Basis-Modelle (nicht anweisungsabgestimmt) folgen „denke Schritt für Schritt"-Anweisungen nicht zuverlässig. Für lokale Modelle funktionieren CoT-Phrasen wie „Löse das Schritt für Schritt:" oder „Argumentation:" am Anfang der erwarteten Ausgabe am besten.',
+              a: 'Gedankenketten-Prompting funktioniert mit jedem Anweisungs-abgestimmten Modell (Llama 3.x, Qwen 2.5, Mistral Small). Basis-Modelle (nicht anweisungsabgestimmt) folgen „denke Schritt für Schritt"-Anweisungen nicht zuverlässig. Für lokale Modelle funktionieren CoT-Phrasen wie „Löse das Schritt für Schritt:" oder „Argumentation:" am Anfang der erwarteten Ausgabe am besten.',
             },
             {
               q: 'Welches Ausgabeformat ist für lokale LLMs am zuverlässigsten?',
@@ -1051,12 +1051,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'Wie viele Few-Shot-Beispiele sollte ich in Prompts für lokale LLMs einbeziehen?',
-            acceptedAnswer: { '@type': 'Answer', text: '3–5 Beispiele sind optimal für lokale 7B-Modelle. GPT-5.2 benötigt typischerweise nur 1–2 Beispiele. Mehr Beispiele verbessern die Konsistenz, verbrauchen aber Kontextfenster-Token (4K–128K Token je nach Modell). Für Llama 3.1 8B mit 4K-Kontextfenster sollten Sie auf 3 Beispiele plus Ihre Aufgabe begrenzen. Für Modelle mit 32K+-Kontext sind 5 Beispiele sicher.' },
+            acceptedAnswer: { '@type': 'Answer', text: '3–5 Beispiele sind optimal für lokale 7B-Modelle. GPT-5.2 benötigt typischerweise nur 1–2 Beispiele. Mehr Beispiele verbessern die Konsistenz, verbrauchen aber Kontextfenster-Token (4K–128K Token je nach Modell). Für Llama 3.3 8B mit 4K-Kontextfenster sollten Sie auf 3 Beispiele plus Ihre Aufgabe begrenzen. Für Modelle mit 32K+-Kontext sind 5 Beispiele sicher.' },
           },
           {
             '@type': 'Question',
             name: 'Funktioniert Gedankenketten-Prompting bei allen lokalen Modellen?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Gedankenketten-Prompting funktioniert mit jedem Anweisungs-abgestimmten Modell (Llama 3.x, Qwen 2.5, Mistral 7B). Basis-Modelle (nicht anweisungsabgestimmt) folgen „denke Schritt für Schritt"-Anweisungen nicht zuverlässig. Für lokale Modelle funktionieren CoT-Phrasen wie „Löse das Schritt für Schritt:" oder „Argumentation:" am Anfang der erwarteten Ausgabe am besten.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Gedankenketten-Prompting funktioniert mit jedem Anweisungs-abgestimmten Modell (Llama 3.x, Qwen 2.5, Mistral Small). Basis-Modelle (nicht anweisungsabgestimmt) folgen „denke Schritt für Schritt"-Anweisungen nicht zuverlässig. Für lokale Modelle funktionieren CoT-Phrasen wie „Löse das Schritt für Schritt:" oder „Argumentation:" am Anfang der erwarteten Ausgabe am besten.' },
           },
           {
             '@type': 'Question',
@@ -1172,7 +1172,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'Les modèles locaux 7B exigent des instructions plus explicites que GPT-4o. Prompts plus longs, instructions plus claires.',
+            'Les modèles locaux 7B exigent des instructions plus explicites que GPT-5.5. Prompts plus longs, instructions plus claires.',
             'Le prompting par chaîne de pensées (« Laisse-moi penser étape par étape ») améliore la précision du raisonnement de 10–20%.',
             'Spécifiez toujours le format de sortie (JSON, Markdown, texte brut). Les sorties non structurées sont imprévisibles.',
             'Les exemples Few-Shot (1–3) fonctionnent mieux que Zero-Shot pour les modèles locaux. Plus d\'exemples = meilleure cohérence.',
@@ -1195,14 +1195,14 @@ schema: {
           id: 'differences',
           title: 'Comment les modèles locaux diffèrent-ils ?',
           rows: [
-            { 'Aspect': 'Fenêtre de contexte', 'GPT-5.2 (ChatGPT Plus)': '128K tokens', 'Local 7B (Llama 3.1 8B)': '4K–128K tokens', 'Local 70B (Llama 3.3)': '128K tokens' },
-            { 'Aspect': 'Suivi des instructions', 'GPT-5.2 (ChatGPT Plus)': 'Excellent', 'Local 7B (Llama 3.1 8B)': 'Bon avec prompts explicites', 'Local 70B (Llama 3.3)': 'Très bon' },
-            { 'Aspect': 'Apprentissage Few-Shot', 'GPT-5.2 (ChatGPT Plus)': '1–2 exemples', 'Local 7B (Llama 3.1 8B)': '3–5 exemples nécessaires', 'Local 70B (Llama 3.3)': '2–3 exemples' },
-            { 'Aspect': 'Raisonnement', 'GPT-5.2 (ChatGPT Plus)': 'Multi-étapes implicite', 'Local 7B (Llama 3.1 8B)': 'Étape par étape explicite requis', 'Local 70B (Llama 3.3)': 'Implicite modéré' },
-            { 'Aspect': 'Prompt système', 'GPT-5.2 (ChatGPT Plus)': 'Traité par l\'API', 'Local 7B (Llama 3.1 8B)': 'Configurer par outil', 'Local 70B (Llama 3.3)': 'Configurer par outil' },
-            { 'Aspect': 'Température par défaut', 'GPT-5.2 (ChatGPT Plus)': '1.0 (API)', 'Local 7B (Llama 3.1 8B)': '0.8 (défaut Ollama)', 'Local 70B (Llama 3.3)': '0.8 (défaut Ollama)' },
+            { 'Aspect': 'Fenêtre de contexte', 'GPT-5.2 (ChatGPT Plus)': '128K tokens', 'Local 7B (Llama 3.3 8B)': '4K–128K tokens', 'Local 70B (Llama 3.3)': '128K tokens' },
+            { 'Aspect': 'Suivi des instructions', 'GPT-5.2 (ChatGPT Plus)': 'Excellent', 'Local 7B (Llama 3.3 8B)': 'Bon avec prompts explicites', 'Local 70B (Llama 3.3)': 'Très bon' },
+            { 'Aspect': 'Apprentissage Few-Shot', 'GPT-5.2 (ChatGPT Plus)': '1–2 exemples', 'Local 7B (Llama 3.3 8B)': '3–5 exemples nécessaires', 'Local 70B (Llama 3.3)': '2–3 exemples' },
+            { 'Aspect': 'Raisonnement', 'GPT-5.2 (ChatGPT Plus)': 'Multi-étapes implicite', 'Local 7B (Llama 3.3 8B)': 'Étape par étape explicite requis', 'Local 70B (Llama 3.3)': 'Implicite modéré' },
+            { 'Aspect': 'Prompt système', 'GPT-5.2 (ChatGPT Plus)': 'Traité par l\'API', 'Local 7B (Llama 3.3 8B)': 'Configurer par outil', 'Local 70B (Llama 3.3)': 'Configurer par outil' },
+            { 'Aspect': 'Température par défaut', 'GPT-5.2 (ChatGPT Plus)': '1.0 (API)', 'Local 7B (Llama 3.3 8B)': '0.8 (défaut Ollama)', 'Local 70B (Llama 3.3)': '0.8 (défaut Ollama)' },
           ],
-          columns: ['Aspect', 'GPT-5.2 (ChatGPT Plus)', 'Local 7B (Llama 3.1 8B)', 'Local 70B (Llama 3.3)'],
+          columns: ['Aspect', 'GPT-5.2 (ChatGPT Plus)', 'Local 7B (Llama 3.3 8B)', 'Local 70B (Llama 3.3)'],
         },
         chainOfThought: {
           id: 'chain-of-thought',
@@ -1226,7 +1226,7 @@ schema: {
           id: 'structured-output',
           title: 'Pourquoi spécifier le format de sortie est-il critique pour les modèles locaux ?',
           content: [
-            '**Spécifier le format de sortie exact (JSON, Markdown, texte brut) est critique pour les modèles locaux car ils produisent des sorties imprévisibles sans instructions explicites.** Les modèles cloud comme GPT-4o peuvent déduire l\'intention de demandes vagues ; les modèles locaux 7B–13B ne le peuvent pas. Pour les [systèmes RAG locaux qui nécessitent une extraction de documents structurée](/fr/local-llms/local-rag-2026), les spécifications de format JSON préviennent les erreurs d\'analyse et augmentent la précision d\'extraction de 30–40%.',
+            '**Spécifier le format de sortie exact (JSON, Markdown, texte brut) est critique pour les modèles locaux car ils produisent des sorties imprévisibles sans instructions explicites.** Les modèles cloud comme GPT-5.5 peuvent déduire l\'intention de demandes vagues ; les modèles locaux 7B–13B ne le peuvent pas. Pour les [systèmes RAG locaux qui nécessitent une extraction de documents structurée](/fr/local-llms/local-rag-2026), les spécifications de format JSON préviennent les erreurs d\'analyse et augmentent la précision d\'extraction de 30–40%.',
             '**Exemple :** « Extrais les entités du texte » pourrait retourner du texte narratif au lieu d\'une liste.',
             '**Mieux :** « Extrais les entités en JSON avec clés : personne, lieu, organisation ».',
           ],
@@ -1321,16 +1321,16 @@ schema: {
           title: 'Questions fréquemment posées sur le prompting des LLM locaux',
           faqs: [
             {
-              q: 'Pourquoi les LLM locaux ont-ils besoin de prompts plus explicites que GPT-4o ?',
-              a: 'Les modèles locaux 7B–13B ont moins de paramètres et des données d\'entraînement moins diversifiées que GPT-4o (estimé 1,8T paramètres). Ils ne peuvent pas déduire les intentions ambiguës aussi bien. Les instructions explicites — format, rôle, raisonnement étape par étape — comblent cette lacune. Le prompting par chaîne de pensées améliore la précision des modèles locaux de 10–20% sur les tâches de raisonnement.',
+              q: 'Pourquoi les LLM locaux ont-ils besoin de prompts plus explicites que GPT-5.5 ?',
+              a: 'Les modèles locaux 7B–13B ont moins de paramètres et des données d\'entraînement moins diversifiées que GPT-5.5 (estimé 1,8T paramètres). Ils ne peuvent pas déduire les intentions ambiguës aussi bien. Les instructions explicites — format, rôle, raisonnement étape par étape — comblent cette lacune. Le prompting par chaîne de pensées améliore la précision des modèles locaux de 10–20% sur les tâches de raisonnement.',
             },
             {
               q: 'Combien d\'exemples Few-Shot devrais-je inclure dans les prompts pour les LLM locaux ?',
-              a: '3–5 exemples sont optimaux pour les modèles locaux 7B. GPT-4o a généralement besoin de seulement 1–2 exemples. Plus d\'exemples améliorent la cohérence mais consomment les tokens de fenêtre de contexte (4K–32K tokens selon le modèle). Pour Llama 3.2 8B avec une fenêtre de contexte 4K, limitez-vous à 3 exemples plus votre tâche. Pour les modèles avec 32K+ contexte, 5 exemples sont sûrs.',
+              a: '3–5 exemples sont optimaux pour les modèles locaux 7B. GPT-5.5 a généralement besoin de seulement 1–2 exemples. Plus d\'exemples améliorent la cohérence mais consomment les tokens de fenêtre de contexte (4K–32K tokens selon le modèle). Pour Llama 3.2 8B avec une fenêtre de contexte 4K, limitez-vous à 3 exemples plus votre tâche. Pour les modèles avec 32K+ contexte, 5 exemples sont sûrs.',
             },
             {
               q: 'Le prompting par chaîne de pensées fonctionne-t-il avec tous les modèles locaux ?',
-              a: 'Le prompting par chaîne de pensées fonctionne avec tout modèle réglé sur instructions (Llama 3.x, Qwen 2.5, Mistral 7B). Les modèles de base (non réglés sur instructions) ne suivent pas fiablement les instructions « pense étape par étape ». Pour les modèles locaux, les phrases CoT comme « Résous étape par étape : » ou « Raisonnement : » au début de la sortie attendue fonctionnent mieux.',
+              a: 'Le prompting par chaîne de pensées fonctionne avec tout modèle réglé sur instructions (Llama 3.x, Qwen 2.5, Mistral Small). Les modèles de base (non réglés sur instructions) ne suivent pas fiablement les instructions « pense étape par étape ». Pour les modèles locaux, les phrases CoT comme « Résous étape par étape : » ou « Raisonnement : » au début de la sortie attendue fonctionnent mieux.',
             },
             {
               q: 'Quel format de sortie est le plus fiable pour les LLM locaux ?',
@@ -1436,12 +1436,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'Combien d\'exemples Few-Shot devrais-je inclure dans les prompts pour les LLM locaux ?',
-            acceptedAnswer: { '@type': 'Answer', text: '3–5 exemples sont optimaux pour les modèles locaux 7B. GPT-5.2 a généralement besoin de seulement 1–2 exemples. Plus d\'exemples améliorent la cohérence mais consomment les tokens de fenêtre de contexte (4K–128K tokens selon le modèle). Pour Llama 3.1 8B avec une fenêtre de contexte 4K, limitez-vous à 3 exemples plus votre tâche. Pour les modèles avec 32K+ contexte, 5 exemples sont sûrs.' },
+            acceptedAnswer: { '@type': 'Answer', text: '3–5 exemples sont optimaux pour les modèles locaux 7B. GPT-5.2 a généralement besoin de seulement 1–2 exemples. Plus d\'exemples améliorent la cohérence mais consomment les tokens de fenêtre de contexte (4K–128K tokens selon le modèle). Pour Llama 3.3 8B avec une fenêtre de contexte 4K, limitez-vous à 3 exemples plus votre tâche. Pour les modèles avec 32K+ contexte, 5 exemples sont sûrs.' },
           },
           {
             '@type': 'Question',
             name: 'Le prompting par chaîne de pensées fonctionne-t-il avec tous les modèles locaux ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Le prompting par chaîne de pensées fonctionne avec tout modèle réglé sur instructions (Llama 3.x, Qwen 2.5, Mistral 7B). Les modèles de base ne suivent pas fiablement les instructions « pense étape par étape ». Pour les modèles locaux, les phrases CoT comme « Résous étape par étape : » ou « Raisonnement : » au début de la sortie attendue fonctionnent mieux.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Le prompting par chaîne de pensées fonctionne avec tout modèle réglé sur instructions (Llama 3.x, Qwen 2.5, Mistral Small). Les modèles de base ne suivent pas fiablement les instructions « pense étape par étape ». Pour les modèles locaux, les phrases CoT comme « Résous étape par étape : » ou « Raisonnement : » au début de la sortie attendue fonctionnent mieux.' },
           },
           {
             '@type': 'Question',
@@ -1547,7 +1547,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'ローカル7Bモデルは、GPT-4oより明示的なガイダンスが必要です。より長いプロンプト、より明確な指示。',
+            'ローカル7Bモデルは、GPT-5.5より明示的なガイダンスが必要です。より長いプロンプト、より明確な指示。',
             '思考の連鎖（「ステップバイステップで考えさせる」）は、推論精度を10～20%向上させます。',
             '常に出力形式を指定してください（JSON、Markdown、プレーンテキスト）。構造化されていない出力は予測不可能です。',
             'Few-Shotサンプル（1～3個）はローカルモデルでZero-Shotより優れています。サンプル数が多いほど一貫性が向上します。',
@@ -1570,14 +1570,14 @@ schema: {
           id: 'differences',
           title: 'ローカルモデルはどのように異なりますか？',
           rows: [
-            { 'アスペクト': 'コンテキストウィンドウ', 'GPT-5.2 (ChatGPT Plus)': '128Kトークン', 'ローカル7B (Llama 3.1 8B)': '4K～128Kトークン', 'ローカル70B (Llama 3.3)': '128Kトークン' },
-            { 'アスペクト': '指示の遵守', 'GPT-5.2 (ChatGPT Plus)': '優秀', 'ローカル7B (Llama 3.1 8B)': '明示的なプロンプトで良好', 'ローカル70B (Llama 3.3)': '非常に良好' },
-            { 'アスペクト': 'Few-Shot学習', 'GPT-5.2 (ChatGPT Plus)': '1～2例', 'ローカル7B (Llama 3.1 8B)': '3～5例が必要', 'ローカル70B (Llama 3.3)': '2～3例' },
-            { 'アスペクト': '推論', 'GPT-5.2 (ChatGPT Plus)': 'マルチステップ暗黙的', 'ローカル7B (Llama 3.1 8B)': 'ステップバイステップ明示的に必要', 'ローカル70B (Llama 3.3)': '中程度の暗黙的' },
-            { 'アスペクト': 'システムプロンプト', 'GPT-5.2 (ChatGPT Plus)': 'APIで処理', 'ローカル7B (Llama 3.1 8B)': 'ツール別に設定', 'ローカル70B (Llama 3.3)': 'ツール別に設定' },
-            { 'アスペクト': 'デフォルト温度', 'GPT-5.2 (ChatGPT Plus)': '1.0 (API)', 'ローカル7B (Llama 3.1 8B)': '0.8 (Ollamaデフォルト)', 'ローカル70B (Llama 3.3)': '0.8 (Ollamaデフォルト)' },
+            { 'アスペクト': 'コンテキストウィンドウ', 'GPT-5.2 (ChatGPT Plus)': '128Kトークン', 'ローカル7B (Llama 3.3 8B)': '4K～128Kトークン', 'ローカル70B (Llama 3.3)': '128Kトークン' },
+            { 'アスペクト': '指示の遵守', 'GPT-5.2 (ChatGPT Plus)': '優秀', 'ローカル7B (Llama 3.3 8B)': '明示的なプロンプトで良好', 'ローカル70B (Llama 3.3)': '非常に良好' },
+            { 'アスペクト': 'Few-Shot学習', 'GPT-5.2 (ChatGPT Plus)': '1～2例', 'ローカル7B (Llama 3.3 8B)': '3～5例が必要', 'ローカル70B (Llama 3.3)': '2～3例' },
+            { 'アスペクト': '推論', 'GPT-5.2 (ChatGPT Plus)': 'マルチステップ暗黙的', 'ローカル7B (Llama 3.3 8B)': 'ステップバイステップ明示的に必要', 'ローカル70B (Llama 3.3)': '中程度の暗黙的' },
+            { 'アスペクト': 'システムプロンプト', 'GPT-5.2 (ChatGPT Plus)': 'APIで処理', 'ローカル7B (Llama 3.3 8B)': 'ツール別に設定', 'ローカル70B (Llama 3.3)': 'ツール別に設定' },
+            { 'アスペクト': 'デフォルト温度', 'GPT-5.2 (ChatGPT Plus)': '1.0 (API)', 'ローカル7B (Llama 3.3 8B)': '0.8 (Ollamaデフォルト)', 'ローカル70B (Llama 3.3)': '0.8 (Ollamaデフォルト)' },
           ],
-          columns: ['アスペクト', 'GPT-5.2 (ChatGPT Plus)', 'ローカル7B (Llama 3.1 8B)', 'ローカル70B (Llama 3.3)'],
+          columns: ['アスペクト', 'GPT-5.2 (ChatGPT Plus)', 'ローカル7B (Llama 3.3 8B)', 'ローカル70B (Llama 3.3)'],
         },
         chainOfThought: {
           id: 'chain-of-thought',
@@ -1601,7 +1601,7 @@ schema: {
           id: 'structured-output',
           title: 'ローカルモデルでは出力形式の指定が重要なのはなぜですか？',
           content: [
-            '**正確な出力形式（JSON、Markdown、プレーンテキスト）を指定することは、ローカルモデルが明示的な指示なしに予測不可能な出力を生成するため、ローカルモデルにとって重要です。** GPT-4oのようなクラウドモデルは、あいまいなリクエストから意図を推測できます。ローカル7B～13Bモデルはそうできません。[構造化されたドキュメント抽出が必要なローカルRAGシステム](/ja/local-llms/local-rag-2026)では、JSON形式の仕様がパースエラーを防ぎ、抽出精度を30～40%向上させます。',
+            '**正確な出力形式（JSON、Markdown、プレーンテキスト）を指定することは、ローカルモデルが明示的な指示なしに予測不可能な出力を生成するため、ローカルモデルにとって重要です。** GPT-5.5のようなクラウドモデルは、あいまいなリクエストから意図を推測できます。ローカル7B～13Bモデルはそうできません。[構造化されたドキュメント抽出が必要なローカルRAGシステム](/ja/local-llms/local-rag-2026)では、JSON形式の仕様がパースエラーを防ぎ、抽出精度を30～40%向上させます。',
             '**例：** 「テキストからエンティティを抽出する」はリストではなくナラティブテキストを返す可能性があります。',
             '**より良い：** 「エンティティをJSONで抽出します。キー：person、location、organization」。',
           ],
@@ -1695,16 +1695,16 @@ schema: {
           title: 'ローカルLLMプロンプティングについてよくある質問',
           faqs: [
             {
-              q: 'ローカルLLMがGPT-4oより明示的なプロンプトを必要とするのはなぜですか？',
-              a: 'ローカル7B～13Bモデルはパラメータが少なく、GPT-4oよりトレーニングデータが多様（推定1.8Tパラメータ）です。彼らはあいまいな意図を推測できません。明示的な指示（形式、ロール、ステップバイステップの推論）がこのギャップを補償します。思考の連鎖プロンプティングは、推論タスクでローカルモデルの精度を10～20%向上させます。',
+              q: 'ローカルLLMがGPT-5.5より明示的なプロンプトを必要とするのはなぜですか？',
+              a: 'ローカル7B～13Bモデルはパラメータが少なく、GPT-5.5よりトレーニングデータが多様（推定1.8Tパラメータ）です。彼らはあいまいな意図を推測できません。明示的な指示（形式、ロール、ステップバイステップの推論）がこのギャップを補償します。思考の連鎖プロンプティングは、推論タスクでローカルモデルの精度を10～20%向上させます。',
             },
             {
               q: 'ローカルLLMのプロンプトに何個のFew-Shotサンプルを含める必要がありますか？',
-              a: 'ローカル7Bモデルでは3～5個のサンプルが最適です。GPT-4oは通常1～2個のサンプルのみが必要です。より多くのサンプルは一貫性を改善しますが、コンテキストウィンドウトークンを消費します（モデルによって4K～32Kトークン）。4Kコンテキストウィンドウを持つLlama 3.2 8Bの場合、3つのサンプル+タスクに制限してください。32K+コンテキストを持つモデルの場合、5個のサンプルは安全です。',
+              a: 'ローカル7Bモデルでは3～5個のサンプルが最適です。GPT-5.5は通常1～2個のサンプルのみが必要です。より多くのサンプルは一貫性を改善しますが、コンテキストウィンドウトークンを消費します（モデルによって4K～32Kトークン）。4Kコンテキストウィンドウを持つLlama 3.2 8Bの場合、3つのサンプル+タスクに制限してください。32K+コンテキストを持つモデルの場合、5個のサンプルは安全です。',
             },
             {
               q: 'すべてのローカルモデルで思考の連鎖プロンプティングが機能しますか？',
-              a: '思考の連鎖は、指示調整されたモデル（Llama 3.x、Qwen 2.5、Mistral 7B）で機能します。ベースモデル（指示調整なし）は「ステップバイステップで考える」という指示に確実に従いません。ローカルモデルでは、「ステップバイステップで解く：」または「推論：」のようなCoTフレーズが期待される出力の開始に最適に機能します。',
+              a: '思考の連鎖は、指示調整されたモデル（Llama 3.x、Qwen 2.5、Mistral Small）で機能します。ベースモデル（指示調整なし）は「ステップバイステップで考える」という指示に確実に従いません。ローカルモデルでは、「ステップバイステップで解く：」または「推論：」のようなCoTフレーズが期待される出力の開始に最適に機能します。',
             },
             {
               q: 'ローカルLLMではどの出力形式が最も信頼性がありますか？',
@@ -1810,12 +1810,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'ローカルLLMのプロンプトに何個のFew-Shotサンプルを含める必要がありますか？',
-            acceptedAnswer: { '@type': 'Answer', text: 'ローカル7Bモデルでは3～5個のサンプルが最適です。GPT-5.2は通常1～2個のサンプルのみが必要です。より多くのサンプルは一貫性を改善しますが、コンテキストウィンドウトークンを消費します（モデルによって4K～128Kトークン）。4Kコンテキストウィンドウを持つLlama 3.1 8Bの場合、3つのサンプル+タスクに制限してください。32K+コンテキストを持つモデルの場合、5個のサンプルは安全です。' },
+            acceptedAnswer: { '@type': 'Answer', text: 'ローカル7Bモデルでは3～5個のサンプルが最適です。GPT-5.2は通常1～2個のサンプルのみが必要です。より多くのサンプルは一貫性を改善しますが、コンテキストウィンドウトークンを消費します（モデルによって4K～128Kトークン）。4Kコンテキストウィンドウを持つLlama 3.3 8Bの場合、3つのサンプル+タスクに制限してください。32K+コンテキストを持つモデルの場合、5個のサンプルは安全です。' },
           },
           {
             '@type': 'Question',
             name: 'すべてのローカルモデルで思考の連鎖プロンプティングが機能しますか？',
-            acceptedAnswer: { '@type': 'Answer', text: '思考の連鎖は、指示調整されたモデル（Llama 3.x、Qwen 2.5、Mistral 7B）で機能します。ベースモデルは「ステップバイステップで考える」という指示に確実に従いません。ローカルモデルでは、「ステップバイステップで解く：」または「推論：」のようなCoTフレーズが期待される出力の開始に最適に機能します。' },
+            acceptedAnswer: { '@type': 'Answer', text: '思考の連鎖は、指示調整されたモデル（Llama 3.x、Qwen 2.5、Mistral Small）で機能します。ベースモデルは「ステップバイステップで考える」という指示に確実に従いません。ローカルモデルでは、「ステップバイステップで解く：」または「推論：」のようなCoTフレーズが期待される出力の開始に最適に機能します。' },
           },
           {
             '@type': 'Question',
@@ -1921,7 +1921,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            '本地7B模型需要比GPT-4o更明确的指导。更长的提示、更清晰的指示。',
+            '本地7B模型需要比GPT-5.5更明确的指导。更长的提示、更清晰的指示。',
             '思维链（"让我逐步思考"）将推理准确率提高10-20%。',
             '始终指定输出格式（JSON、Markdown、纯文本）。非结构化输出是不可预测的。',
             '少样本示例（1-3个）对本地模型比零样本效果更好。更多示例=更好的一致性。',
@@ -1944,14 +1944,14 @@ schema: {
           id: 'differences',
           title: '本地模型有何不同？',
           rows: [
-            { '方面': '上下文窗口', 'GPT-5.2 (ChatGPT Plus)': '128K token', '本地7B (Llama 3.1 8B)': '4K-128K token', '本地70B (Llama 3.3)': '128K token' },
-            { '方面': '指令遵循', 'GPT-5.2 (ChatGPT Plus)': '优秀', '本地7B (Llama 3.1 8B)': '明确提示下良好', '本地70B (Llama 3.3)': '非常好' },
-            { '方面': '少样本学习', 'GPT-5.2 (ChatGPT Plus)': '1-2个示例', '本地7B (Llama 3.1 8B)': '需要3-5个示例', '本地70B (Llama 3.3)': '2-3个示例' },
-            { '方面': '推理', 'GPT-5.2 (ChatGPT Plus)': '多步隐式', '本地7B (Llama 3.1 8B)': '逐步显式必需', '本地70B (Llama 3.3)': '中等隐式' },
-            { '方面': '系统提示词', 'GPT-5.2 (ChatGPT Plus)': 'API处理', '本地7B (Llama 3.1 8B)': '按工具配置', '本地70B (Llama 3.3)': '按工具配置' },
-            { '方面': '默认温度', 'GPT-5.2 (ChatGPT Plus)': '1.0 (API)', '本地7B (Llama 3.1 8B)': '0.8 (Ollama默认)', '本地70B (Llama 3.3)': '0.8 (Ollama默认)' },
+            { '方面': '上下文窗口', 'GPT-5.2 (ChatGPT Plus)': '128K token', '本地7B (Llama 3.3 8B)': '4K-128K token', '本地70B (Llama 3.3)': '128K token' },
+            { '方面': '指令遵循', 'GPT-5.2 (ChatGPT Plus)': '优秀', '本地7B (Llama 3.3 8B)': '明确提示下良好', '本地70B (Llama 3.3)': '非常好' },
+            { '方面': '少样本学习', 'GPT-5.2 (ChatGPT Plus)': '1-2个示例', '本地7B (Llama 3.3 8B)': '需要3-5个示例', '本地70B (Llama 3.3)': '2-3个示例' },
+            { '方面': '推理', 'GPT-5.2 (ChatGPT Plus)': '多步隐式', '本地7B (Llama 3.3 8B)': '逐步显式必需', '本地70B (Llama 3.3)': '中等隐式' },
+            { '方面': '系统提示词', 'GPT-5.2 (ChatGPT Plus)': 'API处理', '本地7B (Llama 3.3 8B)': '按工具配置', '本地70B (Llama 3.3)': '按工具配置' },
+            { '方面': '默认温度', 'GPT-5.2 (ChatGPT Plus)': '1.0 (API)', '本地7B (Llama 3.3 8B)': '0.8 (Ollama默认)', '本地70B (Llama 3.3)': '0.8 (Ollama默认)' },
           ],
-          columns: ['方面', 'GPT-5.2 (ChatGPT Plus)', '本地7B (Llama 3.1 8B)', '本地70B (Llama 3.3)'],
+          columns: ['方面', 'GPT-5.2 (ChatGPT Plus)', '本地7B (Llama 3.3 8B)', '本地70B (Llama 3.3)'],
         },
         chainOfThought: {
           id: 'chain-of-thought',
@@ -1975,7 +1975,7 @@ schema: {
           id: 'structured-output',
           title: '为什么在本地模型中指定输出格式至关重要？',
           content: [
-            '**指定确切的输出格式（JSON、Markdown、纯文本）对本地模型至关重要，因为没有明确指示它们会产生不可预测的输出。** 像GPT-4o这样的云模型可以从模糊请求推断意图；本地7B-13B模型则不能。对于[需要结构化文档提取的本地RAG系统](/zh/local-llms/local-rag-2026)，JSON格式规范可防止解析错误并将提取准确率提高30-40%。',
+            '**指定确切的输出格式（JSON、Markdown、纯文本）对本地模型至关重要，因为没有明确指示它们会产生不可预测的输出。** 像GPT-5.5这样的云模型可以从模糊请求推断意图；本地7B-13B模型则不能。对于[需要结构化文档提取的本地RAG系统](/zh/local-llms/local-rag-2026)，JSON格式规范可防止解析错误并将提取准确率提高30-40%。',
             '**示例：** "从文本中提取实体"可能返回叙述文本而不是列表。',
             '**更好：** "以JSON格式提取实体，键为：人员、位置、组织"。',
           ],
@@ -2069,16 +2069,16 @@ schema: {
           title: '本地LLM提示工程常见问题',
           faqs: [
             {
-              q: '为什么本地LLM需要比GPT-4o更明确的提示？',
-              a: '本地7B-13B模型的参数少于GPT-4o（估计1.8T参数），训练数据多样性较低。它们无法像GPT-4o那样推断模糊意图。明确的指示（格式、角色、逐步推理）弥补了这一差距。思维链提示在推理任务上将本地模型准确率提高10-20%。',
+              q: '为什么本地LLM需要比GPT-5.5更明确的提示？',
+              a: '本地7B-13B模型的参数少于GPT-5.5（估计1.8T参数），训练数据多样性较低。它们无法像GPT-5.5那样推断模糊意图。明确的指示（格式、角色、逐步推理）弥补了这一差距。思维链提示在推理任务上将本地模型准确率提高10-20%。',
             },
             {
               q: '我应该在本地LLM的提示中包含多少个少样本示例？',
-              a: '本地7B模型的最优值为3-5个示例。GPT-4o通常只需1-2个示例。更多示例改进一致性但消耗上下文窗口token（根据模型4K-32K token）。对于具有4K上下文窗口的Llama 3.2 8B，限制为3个示例加任务。对于具有32K+上下文的模型，5个示例是安全的。',
+              a: '本地7B模型的最优值为3-5个示例。GPT-5.5通常只需1-2个示例。更多示例改进一致性但消耗上下文窗口token（根据模型4K-32K token）。对于具有4K上下文窗口的Llama 3.2 8B，限制为3个示例加任务。对于具有32K+上下文的模型，5个示例是安全的。',
             },
             {
               q: '思维链提示词是否适用于所有本地模型？',
-              a: '思维链适用于任何指令调优模型（Llama 3.x、Qwen 2.5、Mistral 7B）。基础模型（非指令调优）不能可靠地遵循"逐步思考"指示。对于本地模型，"逐步解决："或"推理："这样的CoT短语在预期输出的开始效果最佳。',
+              a: '思维链适用于任何指令调优模型（Llama 3.x、Qwen 2.5、Mistral Small）。基础模型（非指令调优）不能可靠地遵循"逐步思考"指示。对于本地模型，"逐步解决："或"推理："这样的CoT短语在预期输出的开始效果最佳。',
             },
             {
               q: '本地LLM最可靠的输出格式是什么？',
@@ -2184,12 +2184,12 @@ schema: {
           {
             '@type': 'Question',
             name: '我应该在本地LLM的提示中包含多少个少样本示例？',
-            acceptedAnswer: { '@type': 'Answer', text: '本地7B模型的最优值为3-5个示例。GPT-5.2通常只需1-2个示例。更多示例改进一致性但消耗上下文窗口token（根据模型4K-128K token）。对于具有4K上下文窗口的Llama 3.1 8B，限制为3个示例加任务。对于具有32K+上下文的模型，5个示例是安全的。' },
+            acceptedAnswer: { '@type': 'Answer', text: '本地7B模型的最优值为3-5个示例。GPT-5.2通常只需1-2个示例。更多示例改进一致性但消耗上下文窗口token（根据模型4K-128K token）。对于具有4K上下文窗口的Llama 3.3 8B，限制为3个示例加任务。对于具有32K+上下文的模型，5个示例是安全的。' },
           },
           {
             '@type': 'Question',
             name: '思维链提示词是否适用于所有本地模型？',
-            acceptedAnswer: { '@type': 'Answer', text: '思维链适用于任何指令调优模型（Llama 3.x、Qwen 2.5、Mistral 7B）。基础模型不能可靠地遵循"逐步思考"指示。对于本地模型，"逐步解决："或"推理："这样的CoT短语在预期输出的开始效果最佳。' },
+            acceptedAnswer: { '@type': 'Answer', text: '思维链适用于任何指令调优模型（Llama 3.x、Qwen 2.5、Mistral Small）。基础模型不能可靠地遵循"逐步思考"指示。对于本地模型，"逐步解决："或"推理："这样的CoT短语在预期输出的开始效果最佳。' },
           },
           {
             '@type': 'Question',

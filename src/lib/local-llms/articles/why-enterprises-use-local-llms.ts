@@ -110,7 +110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What Are Common Objections to Local LLMs?',
           content: 'Objection 1: "Local models are less capable than GPT-4"',
           items: [
-            '**True, but:** Llama 3.1 70B matches GPT-4 (2023) on most benchmarks. For enterprises needing 80% GPT-4 quality at 1/10 cost, local is viable.',
+            '**True, but:** Llama 3.3 70B matches GPT-4 (2023) on most benchmarks. For enterprises needing 80% GPT-4 quality at 1/10 cost, local is viable.',
             '',
             'Objection 2: "We need the latest models for competitive advantage"',
             '',
@@ -370,7 +370,7 @@ schema: {
           title: '¿Cuáles son las objeciones comunes a los LLMs locales?',
           content: 'Objeción 1: "Los modelos locales son menos capaces que GPT-4"',
           items: [
-            '**Cierto, pero:** Llama 3.1 70B iguala a GPT-4 (2023) en la mayoría de los benchmarks. Para empresas que necesitan el 80% de la calidad de GPT-4 a 1/10 del costo, la opción local es viable.',
+            '**Cierto, pero:** Llama 3.3 70B iguala a GPT-4 (2023) en la mayoría de los benchmarks. Para empresas que necesitan el 80% de la calidad de GPT-4 a 1/10 del costo, la opción local es viable.',
             '',
             'Objeción 2: "Necesitamos los modelos más recientes para tener ventaja competitiva"',
             '',
@@ -630,7 +630,7 @@ schema: {
           title: 'Was sind häufige Einwände gegen lokale LLMs?',
           content: 'Einwand 1: "Lokale Modelle sind weniger leistungsfähig als GPT-4"',
           items: [
-            '**Wahr, aber:** Llama 3.1 70B stimmt mit GPT-4 (2023) bei den meisten Benchmarks überein. Für Unternehmen, die 80% GPT-4-Qualität zu 1/10 Kosten benötigen, ist lokal praktikabel.',
+            '**Wahr, aber:** Llama 3.3 70B stimmt mit GPT-4 (2023) bei den meisten Benchmarks überein. Für Unternehmen, die 80% GPT-4-Qualität zu 1/10 Kosten benötigen, ist lokal praktikabel.',
             '',
             'Einwand 2: "Wir brauchen die neuesten Modelle für Wettbewerbsvorteil"',
             '',
@@ -868,7 +868,7 @@ schema: {
           title: 'Quelles sont les objections courantes aux LLM locaux ?',
           content: 'Objection 1 : "Les modèles locaux sont moins capables que GPT-4"',
           items: [
-            '**Vrai, mais :** Llama 3.1 70B correspond à GPT-4 (2023) sur la plupart des benchmarks. Pour les entreprises ayant besoin de 80% de qualité GPT-4 au 1/10 du coût, local est viable.',
+            '**Vrai, mais :** Llama 3.3 70B correspond à GPT-4 (2023) sur la plupart des benchmarks. Pour les entreprises ayant besoin de 80% de qualité GPT-4 au 1/10 du coût, local est viable.',
             '',
             'Objection 2 : "Nous avons besoin des derniers modèles pour un avantage compétitif"',
             '',
@@ -1106,7 +1106,7 @@ schema: {
           title: 'ローカルLLMに対する一般的な異議は何ですか？',
           content: '異議1：「ローカルモデルはGPT-4より機能が低い」',
           items: [
-            '**本当ですが、** Llama 3.1 70BはほとんどのベンチマークでGPT-4（2023）と一致します。80% GPT-4品質が必要な1/10コストのエンタープライズの場合、ローカルは実行可能です。',
+            '**本当ですが、** Llama 3.3 70BはほとんどのベンチマークでGPT-4（2023）と一致します。80% GPT-4品質が必要な1/10コストのエンタープライズの場合、ローカルは実行可能です。',
             '',
             '異議2：「競争上の優位性のために最新のモデルが必要です」',
             '',
@@ -1344,7 +1344,7 @@ schema: {
           title: '本地LLM的常见反对意见是什么？',
           content: '异议1："本地模型的能力不如GPT-4"',
           items: [
-            '**真实，但是：** Llama 3.1 70B在大多数基准测试中与GPT-4（2023）相匹配。对于需要80% GPT-4质量且只需1/10成本的企业，本地是可行的。',
+            '**真实，但是：** Llama 3.3 70B在大多数基准测试中与GPT-4（2023）相匹配。对于需要80% GPT-4质量且只需1/10成本的企业，本地是可行的。',
             '',
             '异议2："我们需要最新的模型以获得竞争优势"',
             '',

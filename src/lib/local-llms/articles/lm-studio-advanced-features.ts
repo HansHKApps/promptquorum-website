@@ -348,7 +348,7 @@ schema: {
               'Kompetenzstufe': 'Anfänger',
               'Worauf Sie sich konzentrieren sollten': 'Modellauswahl + Chat',
               'Was Sie ignorieren sollten': 'Quantisierung, Kontextlänge, Batching, GPU-Zuweisung',
-              'Empfehlung': 'Laden Sie Llama 3.2 7B, Qwen2.5 7B oder Mistral 7B über den Browser herunter, beginnen Sie zu chatten. Lassen Sie alle Einstellungen auf den Standardwerten. Die App übernimmt die Ressourcenverwaltung für Sie.',
+              'Empfehlung': 'Laden Sie Llama 3.2 7B, Qwen2.5 7B oder Mistral Small über den Browser herunter, beginnen Sie zu chatten. Lassen Sie alle Einstellungen auf den Standardwerten. Die App übernimmt die Ressourcenverwaltung für Sie.',
               'Grund': 'Das Ändern von Einstellungen ohne Verständnis führt zu Abstürzen, CUDA-Fehlern oder unerwartetem Verlangsamen.',
             },
             {
@@ -721,7 +721,7 @@ schema: {
               'Niveau': 'Débutants',
               'Concentrez-vous sur': 'Sélection modèle + chat',
               'Ignorez': 'Quantification, contexte, batching, allocation GPU',
-              'Recommandation': 'Téléchargez Llama 3.2 7B, Qwen2.5 7B ou Mistral 7B, commencez à chatter. Laissez tous les paramètres par défaut. L\'app gère ressources pour vous.',
+              'Recommandation': 'Téléchargez Llama 3.2 7B, Qwen2.5 7B ou Mistral Small, commencez à chatter. Laissez tous les paramètres par défaut. L\'app gère ressources pour vous.',
               'Pourquoi': 'Modifier paramètres sans compréhension cause crashes, erreurs CUDA ou ralentissements inattendus.',
             },
             {

@@ -226,7 +226,7 @@ while True:
           { config: 'M3/M4 base', model: 'distil-large-v3', realtime: '12–15×', useCase: 'Better quality, still fast' },
           { config: 'M5 base 32GB', model: 'large-v3-turbo', realtime: '14–18×', useCase: 'Speed + quality' },
           { config: 'M5 Pro 36–64GB', model: 'large-v3', realtime: '10–12×', useCase: 'Maximum accuracy' },
-          { config: 'M5 Pro + concurrent LLM', model: 'large-v3 + Llama 3.1 8B', realtime: '10×', useCase: 'Voice assistant' },
+          { config: 'M5 Pro + concurrent LLM', model: 'large-v3 + Llama 3.3 8B', realtime: '10×', useCase: 'Voice assistant' },
           { config: 'M5 Max 128GB', model: 'large-v3 + LLM + TTS', realtime: '12–14×', useCase: 'Full multimodal stack' },
         ],
         note: 'For real-time voice assistant: use small or large-v3-turbo for lowest latency. For meeting/podcast transcription: use large-v3 for maximum accuracy (1–2 second delay acceptable).'

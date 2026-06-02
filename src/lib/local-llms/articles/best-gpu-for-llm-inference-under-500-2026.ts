@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: 'What is the best GPU for running LLMs locally under $500?',
       answer: 'The RTX 4060 Ti 16GB (~$420) offers the best balance of VRAM, speed, and power draw for running 7B–14B models. For 30B models, a used RTX 3090 (24 GB, ~$440) is the better buy. AMD users should consider the RX 7800 XT 16GB (~$370).',
       bullets: [
-        'RTX 4060 Ti 16GB: best overall — 16 GB VRAM, 165 W, ~55 tok/s on Llama 3.1 8B Q4',
+        'RTX 4060 Ti 16GB: best overall — 16 GB VRAM, 165 W, ~55 tok/s on Llama 3.3 8B Q4',
         'RTX 3090 (used): 24 GB VRAM, runs 30B Q4 — best VRAM per dollar',
         'RX 7800 XT 16GB: best AMD option with full ROCm / Ollama support',
         'Intel Arc B580 12GB: best budget pick at ~$280 for 7B model users',
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'RTX 4060 Ti 16GB — Best Overall',
-            content: 'The NVIDIA GeForce RTX 4060 Ti 16GB is the clear winner for local LLM inference under $500. Its 16 GB GDDR6 VRAM handles Qwen2.5 14B, Llama 3.1 14B, and Mistral 12B at Q8 quality with no swapping. The Ada Lovelace architecture\'s 288 GB/s memory bandwidth delivers 45–60 tok/s on 7B Q4 models and 18–25 tok/s on 14B Q8 with Ollama. At 165 W TDP, it runs comfortably on any 650 W PSU. Price: ~$420 new, ~$330–360 used.',
+            content: 'The NVIDIA GeForce RTX 4060 Ti 16GB is the clear winner for local LLM inference under $500. Its 16 GB GDDR6 VRAM handles Qwen2.5 14B, Llama 3.3 14B, and Mistral 12B at Q8 quality with no swapping. The Ada Lovelace architecture\'s 288 GB/s memory bandwidth delivers 45–60 tok/s on 7B Q4 models and 18–25 tok/s on 14B Q8 with Ollama. At 165 W TDP, it runs comfortably on any 650 W PSU. Price: ~$420 new, ~$330–360 used.',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16GB on Amazon', url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB' },
               { label: 'RTX 4060 Ti 16GB on Newegg', url: 'https://www.newegg.com/p/pl?d=RTX+4060+Ti+16GB' },
@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'NVIDIA RTX 3090 (Used) — Best for 30B Models',
-            content: 'A used RTX 3090 costs $420–460 and delivers 24 GB GDDR6X — more VRAM than any new GPU under $500. That 24 GB enables Mixtral 8x7B (47B total, MoE) at Q4, Qwen2.5 32B at Q4, and Llama 3.1 70B split with CPU offload. Memory bandwidth is 936 GB/s — more than 3× the 4060 Ti — so inference on large models is faster than the numbers suggest. Downsides: 350 W TDP requires a 750 W+ PSU and good case airflow. Buy from reputable sellers (eBay, Facebook Marketplace) and verify VRAM health with gpu-burn.',
+            content: 'A used RTX 3090 costs $420–460 and delivers 24 GB GDDR6X — more VRAM than any new GPU under $500. That 24 GB enables Mixtral 8x22B (47B total, MoE) at Q4, Qwen2.5 32B at Q4, and Llama 3.3 70B split with CPU offload. Memory bandwidth is 936 GB/s — more than 3× the 4060 Ti — so inference on large models is faster than the numbers suggest. Downsides: 350 W TDP requires a 750 W+ PSU and good case airflow. Buy from reputable sellers (eBay, Facebook Marketplace) and verify VRAM health with gpu-burn.',
             affiliateLinks: [
               { label: 'RTX 3090 on eBay (verified sellers)', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090' },
             ],
@@ -70,7 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'AMD RX 7800 XT 16GB — Best AMD Option',
-            content: 'The AMD Radeon RX 7800 XT offers 16 GB GDDR6 at ~$360–390. Ollama\'s ROCm backend works out of the box on Linux for this card; Windows ROCm support is improving but still requires extra setup. Benchmark: ~38–48 tok/s on Llama 3.1 8B Q4 — roughly 15% slower than the RTX 4060 Ti on the same model due to lower memory bandwidth (576 GB/s vs 288 GB/s per size). If you already run Linux and want to avoid NVIDIA, the RX 7800 XT delivers identical VRAM headroom at a lower price.',
+            content: 'The AMD Radeon RX 7800 XT offers 16 GB GDDR6 at ~$360–390. Ollama\'s ROCm backend works out of the box on Linux for this card; Windows ROCm support is improving but still requires extra setup. Benchmark: ~38–48 tok/s on Llama 3.3 8B Q4 — roughly 15% slower than the RTX 4060 Ti on the same model due to lower memory bandwidth (576 GB/s vs 288 GB/s per size). If you already run Linux and want to avoid NVIDIA, the RX 7800 XT delivers identical VRAM headroom at a lower price.',
             affiliateLinks: [
               { label: 'RX 7800 XT 16GB on Amazon', url: 'https://www.amazon.com/s?k=RX+7800+XT' },
             ],
@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Intel Arc B580 12GB — Best Budget Pick',
-            content: 'The Intel Arc B580 12GB launched at $249 and remains under $299 in 2026. It runs Ollama via the SYCL/oneAPI backend on Linux and Windows. Performance is solid for 7B models: ~28–35 tok/s on Llama 3.1 8B Q4. The 12 GB VRAM cap limits you to 13B Q4 models — the same constraint as the RTX 4070 but at $130 less. For a first GPU or secondary inference machine, the Arc B580 is a smart entry. Intel\'s driver support has improved significantly since launch.',
+            content: 'The Intel Arc B580 12GB launched at $249 and remains under $299 in 2026. It runs Ollama via the SYCL/oneAPI backend on Linux and Windows. Performance is solid for 7B models: ~28–35 tok/s on Llama 3.3 8B Q4. The 12 GB VRAM cap limits you to 13B Q4 models — the same constraint as the RTX 4070 but at $130 less. For a first GPU or secondary inference machine, the Arc B580 is a smart entry. Intel\'s driver support has improved significantly since launch.',
             affiliateLinks: [
               { label: 'Intel Arc B580 12GB on Amazon', url: 'https://www.amazon.com/s?k=Intel+Arc+B580' },
               { label: 'Intel Arc B580 12GB on Newegg', url: 'https://www.newegg.com/p/pl?d=Intel+Arc+B580' },
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Performance Comparison — 2026 Test Results',
         content: 'Benchmarks measured with Ollama 0.6.x, llama.cpp server, models from HuggingFace. Test system: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD.',
         tableData: {
-          headers: ['GPU', 'VRAM', 'Price (May 2026)', 'Llama 3.1 8B Q4 tok/s', 'Qwen2.5 14B Q8 tok/s', 'Max Model (Q4)'],
+          headers: ['GPU', 'VRAM', 'Price (May 2026)', 'Llama 3.3 8B Q4 tok/s', 'Qwen2.5 14B Q8 tok/s', 'Max Model (Q4)'],
           rows: [
             ['RTX 4060 Ti 16GB', '16 GB', '~$420', '55 tok/s', '22 tok/s', '30B (Q4)'],
             ['RTX 3090 (used)', '24 GB', '~$440', '72 tok/s', '38 tok/s', '70B (Q4, partial offload)'],

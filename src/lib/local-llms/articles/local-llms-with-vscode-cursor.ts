@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             'VS Code uses Continue.dev extension to connect to local models (Ollama, LM Studio, vLLM).',
             'Cursor is a VS Code fork with built-in local model support. No extension needed.',
-            '**Best local models for code**: Qwen2.5-Coder 7B, Llama Code 13B, or Mistral 7B.',
+            '**Best local models for code**: Qwen2.5-Coder 7B, Llama Code 13B, or Mistral Small.',
             'Expect 2-5 second completion latency on consumer GPUs with 7B models.',
             'As of April 2026, local code completions are practical for personal use, not yet production-grade for teams.',
           ],
@@ -64,7 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           rows: [
             { 'Model': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'Best balance, fastest' },
             { 'Model': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'General coding' },
-            { 'Model': 'Mistral 7B', 'HumanEval': '61%', 'VRAM': '4.5 GB', 'Speed': 'Very fast', 'Best For': 'Lightweight, EU servers' },
+            { 'Model': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4.5 GB', 'Speed': 'Very fast', 'Best For': 'Lightweight, EU servers' },
             { 'Model': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', 'Speed': 'Medium', 'Best For': 'Better quality on 16GB machines' },
             { 'Model': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Speed': 'Fast', 'Best For': 'Lightweight alternative' },
           ],
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**Not tuning debounce latency.** If completions feel "laggy", increase debounceWaitMs (e.g., to 400 ms) to avoid showing incomplete suggestions.',
             '**Using a model too large for your VRAM.** A 13B model + editor overhead can use 12+ GB. On 8GB machines, stick with 7B models.',
-            '**Expecting cloud-level code quality.** GPT-4o is significantly better at code than any 7B model. Local completions are 70-80% of cloud quality.',
+            '**Expecting cloud-level code quality.** GPT-5.5 is significantly better at code than any 7B model. Local completions are 70-80% of cloud quality.',
             '**Running inference on CPU.** CPU completions are impractical (5-10 second latency). GPU is required for usable completions.',
           ],
         },
@@ -278,7 +278,7 @@ schema: {
           items: [
             'VS Code nutzt die Continue.dev-Erweiterung, um sich mit lokalen Modellen zu verbinden (Ollama, LM Studio, vLLM).',
             'Cursor ist ein VS Code-Fork mit eingebauter lokaler Modellunterstützung. Keine Erweiterung erforderlich.',
-            '**Beste lokale Modelle für Code**: Qwen2.5-Coder 7B, Llama Code 13B oder Mistral 7B.',
+            '**Beste lokale Modelle für Code**: Qwen2.5-Coder 7B, Llama Code 13B oder Mistral Small.',
             'Erwarten Sie 2-5 Sekunden Vervollständigungslatenz auf Consumer-GPUs mit 7B-Modellen.',
             'Stand April 2026 sind lokale Code-Completions für Einzelnutzer praktisch, noch nicht produktionsreif für Teams.',
           ],
@@ -305,7 +305,7 @@ schema: {
           rows: [
             { 'Modell': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Geschwindigkeit': 'Schnell', 'Beste für': 'Beste Balance, schnellste' },
             { 'Modell': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4,7 GB', 'Geschwindigkeit': 'Schnell', 'Beste für': 'Allgemeine Programmierung' },
-            { 'Modell': 'Mistral 7B', 'HumanEval': '61%', 'VRAM': '4,5 GB', 'Geschwindigkeit': 'Sehr schnell', 'Beste für': 'Leichtgewicht, EU-Server' },
+            { 'Modell': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4,5 GB', 'Geschwindigkeit': 'Sehr schnell', 'Beste für': 'Leichtgewicht, EU-Server' },
             { 'Modell': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8,5 GB', 'Geschwindigkeit': 'Mittel', 'Beste für': 'Bessere Qualität bei 16GB-Maschinen' },
             { 'Modell': 'DeepSeek-Coder 6,7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Geschwindigkeit': 'Schnell', 'Beste für': 'Leichtgewicht-Alternative' },
           ],
@@ -342,7 +342,7 @@ schema: {
           items: [
             '**Keine Debounce-Latenz-Optimierung**: Falls Vervollständigungen sich "langsam" anfühlen, erhöhen Sie debounceWaitMs (z.B. auf 400 ms), um unvollständige Vorschläge zu vermeiden.',
             '**Verwendung eines für Ihren VRAM zu großen Modells**: Ein 13B-Modell + Editor-Overhead kann 12+ GB verwenden. Bei 8GB-Maschinen bleiben Sie mit 7B-Modellen.',
-            '**Erwartung von Cloud-Level-Code-Qualität**: GPT-4o ist deutlich besser bei Code als jedes 7B-Modell. Lokale Vervollständigungen sind 70-80% der Cloud-Qualität.',
+            '**Erwartung von Cloud-Level-Code-Qualität**: GPT-5.5 ist deutlich besser bei Code als jedes 7B-Modell. Lokale Vervollständigungen sind 70-80% der Cloud-Qualität.',
             '**Ausführung von Inferenz auf CPU**: CPU-Vervollständigungen sind unpraktisch (5-10 Sekunden Latenz). GPU ist erforderlich für nutzbare Vervollständigungen.',
           ],
         },
@@ -372,7 +372,7 @@ schema: {
           title: 'Lokale LLMs für deutsche Entwickler: DSGVO, Cursor Pro und Privacy',
           content: [
             'Für deutsche Softwareentwickler ist Cursor Pro ein zweischneidiges Schwert: Leistungsstarke KI-Features, aber Code wird an US-Server übertragen. Bei Projekten mit personenbezogenen Daten, Kundendaten oder vertraulichem Quellcode ist dies nach DSGVO Art. 28 (Auftragsverarbeitung) problematisch ohne entsprechenden DPA mit Anthropic/OpenAI.',
-            'Die datenschutzkonforme Alternative: Continue.dev mit lokalem LLM (Ollama + DeepSeek Coder oder Qwen2.5-Coder). Kein Code verlässt das Gerät, kein DPA nötig, BSI Grundschutz-kompatibel. Abstriche bei der Modellqualität gegenüber Claude 3.5 Sonnet sind bei einigen Tasks spürbar, bei anderen nicht.',
+            'Die datenschutzkonforme Alternative: Continue.dev mit lokalem LLM (Ollama + DeepSeek Coder oder Qwen2.5-Coder). Kein Code verlässt das Gerät, kein DPA nötig, BSI Grundschutz-kompatibel. Abstriche bei der Modellqualität gegenüber Claude Sonnet 4.6 sind bei einigen Tasks spürbar, bei anderen nicht.',
           ],
           items: [
             '**DSGVO und Cursor Pro:** Cursor überträgt Code-Snippets zur KI-Verarbeitung. Für Open-Source-Projekte unproblematisch. Für Projekte mit Gesundheits-, Finanz- oder personenbezogenen Daten: Cursor Business mit EU Data Residency-Option prüfen oder auf lokale Alternative wechseln.',
@@ -434,7 +434,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code nutzt die Continue.dev-Erweiterung, um sich mit lokalen Modellen zu verbinden (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor ist ein VS Code-Fork mit eingebauter lokaler Modellunterstützung. Keine Erweiterung erforderlich.' },
-          { '@type': 'ListItem', position: 3, name: '**Beste lokale Modelle für Code**: Qwen2.5-Coder 7B, Llama Code 13B oder Mistral 7B.' },
+          { '@type': 'ListItem', position: 3, name: '**Beste lokale Modelle für Code**: Qwen2.5-Coder 7B, Llama Code 13B oder Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Erwarten Sie 2-5 Sekunden Vervollständigungslatenz auf Consumer-GPUs mit 7B-Modellen.' },
           { '@type': 'ListItem', position: 5, name: 'Stand April 2026 sind lokale Code-Completions für Einzelnutzer praktisch, noch nicht produktionsreif für Teams.' },
         ],
@@ -467,7 +467,7 @@ schema: {
           items: [
             'VS Code utilise l\'extension Continue.dev pour se connecter aux modèles locaux (Ollama, LM Studio, vLLM).',
             'Cursor est un fork VS Code avec support de modèle local intégré. Aucune extension requise.',
-            '**Meilleurs modèles locaux pour le code** : Qwen2.5-Coder 7B, Llama Code 13B ou Mistral 7B.',
+            '**Meilleurs modèles locaux pour le code** : Qwen2.5-Coder 7B, Llama Code 13B ou Mistral Small.',
             'Attendez-vous à 2-5 secondes de latence de complétude sur les GPU grand public avec des modèles 7B.',
             'Depuis avril 2026, les complétions de code locales sont pratiques pour usage personnel, pas encore prêtes pour la production d\'équipe.',
           ],
@@ -494,7 +494,7 @@ schema: {
           rows: [
             { 'Modèle': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'RAM': '4,7 Go', 'Vitesse': 'Rapide', 'Meilleur pour': 'Meilleur équilibre, le plus rapide' },
             { 'Modèle': 'Llama Code 7B', 'HumanEval': '69%', 'RAM': '4,7 Go', 'Vitesse': 'Rapide', 'Meilleur pour': 'Codage général' },
-            { 'Modèle': 'Mistral 7B', 'HumanEval': '61%', 'RAM': '4,5 Go', 'Vitesse': 'Très rapide', 'Meilleur pour': 'Léger, serveurs UE' },
+            { 'Modèle': 'Mistral Small', 'HumanEval': '61%', 'RAM': '4,5 Go', 'Vitesse': 'Très rapide', 'Meilleur pour': 'Léger, serveurs UE' },
             { 'Modèle': 'Llama Code 13B', 'HumanEval': '74%', 'RAM': '8,5 Go', 'Vitesse': 'Moyen', 'Meilleur pour': 'Meilleure qualité sur 16Go' },
             { 'Modèle': 'DeepSeek-Coder 6,7B', 'HumanEval': '68%', 'RAM': '4 Go', 'Vitesse': 'Rapide', 'Meilleur pour': 'Alternative légère' },
           ],
@@ -531,7 +531,7 @@ schema: {
           items: [
             '**Ne pas optimiser la latence de debounce** : Si les complétions semblent « lentes », augmentez debounceWaitMs (par exemple à 400 ms) pour éviter les suggestions incomplètes.',
             '**Utiliser un modèle trop grand pour votre RAM** : Un modèle 13B + surcharge d\'éditeur peut utiliser 12+ Go. Sur les machines 8Go, restez avec les modèles 7B.',
-            '**Attendre une qualité de code au niveau du cloud** : GPT-4o est bien meilleur pour le code que n\'importe quel modèle 7B. Les complétions locales représentent 70-80% de la qualité cloud.',
+            '**Attendre une qualité de code au niveau du cloud** : GPT-5.5 est bien meilleur pour le code que n\'importe quel modèle 7B. Les complétions locales représentent 70-80% de la qualité cloud.',
             '**Exécution de l\'inférence sur CPU** : Les complétions CPU sont impratiques (latence 5-10 secondes). GPU est requis pour les complétions utilisables.',
           ],
         },
@@ -607,7 +607,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code utilise l\'extension Continue.dev pour se connecter aux modèles locaux (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor est un fork VS Code avec support de modèle local intégré. Aucune extension requise.' },
-          { '@type': 'ListItem', position: 3, name: '**Meilleurs modèles locaux pour le code** : Qwen2.5-Coder 7B, Llama Code 13B ou Mistral 7B.' },
+          { '@type': 'ListItem', position: 3, name: '**Meilleurs modèles locaux pour le code** : Qwen2.5-Coder 7B, Llama Code 13B ou Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Attendez-vous à 2-5 secondes de latence de complétude sur les GPU grand public avec des modèles 7B.' },
           { '@type': 'ListItem', position: 5, name: 'Depuis avril 2026, les complétions de code locales sont pratiques pour usage personnel, pas encore prêtes pour la production d\'équipe.' },
         ],
@@ -640,7 +640,7 @@ schema: {
           items: [
             'VS CodeはContinue.dev拡張機能を使用してローカルモデル（Ollama、LM Studio、vLLM）に接続します。',
             'Cursorはビルトインのローカルモデルサポート付きのVS Codeフォークです。拡張機能は不要です。',
-            '**コードの最高のローカルモデル**：Qwen2.5-Coder 7B、Llama Code 13B、またはMistral 7B。',
+            '**コードの最高のローカルモデル**：Qwen2.5-Coder 7B、Llama Code 13B、またはMistral Small。',
             '7Bモデルを使用したコンシューマーGPUで2〜5秒の補完レイテンシを予想してください。',
             '2026年4月現在、ローカルコード補完は個人使用に実用的ですが、チーム向けはまだ本番レベルではありません。',
           ],
@@ -667,7 +667,7 @@ schema: {
           rows: [
             { 'モデル': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', '速度': '速い', '最適：': '最高のバランス、最速' },
             { 'モデル': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', '速度': '速い', '最適：': '一般的なコーディング' },
-            { 'モデル': 'Mistral 7B', 'HumanEval': '61%', 'VRAM': '4.5 GB', '速度': '非常に速い', '最適：': '軽量、EUサーバー' },
+            { 'モデル': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4.5 GB', '速度': '非常に速い', '最適：': '軽量、EUサーバー' },
             { 'モデル': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', '速度': '中程度', '最適：': '16GBマシンで品質向上' },
             { 'モデル': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', '速度': '速い', '最適：': '軽量代替案' },
           ],
@@ -704,7 +704,7 @@ schema: {
           items: [
             '**Debounceレイテンシを調整しない**：補完が「遅い」と感じたら、debounceWaitMsを増やす（例えば400 ms）して不完全な提案を表示しない。',
             '**VRAMに対して大きすぎるモデルを使用**：13Bモデル+エディタオーバーヘッドは12+ GB使用できる。8GBマシンでは7Bモデルを使用。',
-            '**クラウドレベルのコード品質を期待**：GPT-4oはどの7Bモデルよりもコードで大幅に優れている。ローカル補完はクラウド品質の70〜80%。',
+            '**クラウドレベルのコード品質を期待**：GPT-5.5はどの7Bモデルよりもコードで大幅に優れている。ローカル補完はクラウド品質の70〜80%。',
             '**CPUで推論を実行**：CPU補完は非実用的（5〜10秒レイテンシ）。GPUは有用な補完に必要。',
           ],
         },
@@ -795,7 +795,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS CodeはContinue.dev拡張機能を使用してローカルモデル（Ollama、LM Studio、vLLM）に接続します。' },
           { '@type': 'ListItem', position: 2, name: 'Cursorはビルトインのローカルモデルサポート付きのVS Codeフォークです。拡張機能は不要です。' },
-          { '@type': 'ListItem', position: 3, name: '**コードの最高のローカルモデル**：Qwen2.5-Coder 7B、Llama Code 13B、またはMistral 7B。' },
+          { '@type': 'ListItem', position: 3, name: '**コードの最高のローカルモデル**：Qwen2.5-Coder 7B、Llama Code 13B、またはMistral Small。' },
           { '@type': 'ListItem', position: 4, name: '7Bモデルを使用したコンシューマーGPUで2〜5秒の補完レイテンシを予想。' },
           { '@type': 'ListItem', position: 5, name: '2026年4月現在、ローカルコード補完は個人使用に実用的ですが、チーム向けはまだ本番レベルではありません。' },
         ],
@@ -828,7 +828,7 @@ schema: {
           items: [
             'VS Code使用Continue.dev扩展连接到本地模型（Ollama、LM Studio、vLLM）。',
             'Cursor是一个VS Code分支，具有内置的本地模型支持。无需扩展。',
-            '**最佳代码本地模型**：Qwen2.5-Coder 7B、Llama Code 13B或Mistral 7B。',
+            '**最佳代码本地模型**：Qwen2.5-Coder 7B、Llama Code 13B或Mistral Small。',
             '使用7B模型在消费者GPU上预期2-5秒补全延迟。',
             '截至2026年4月，本地代码补全对个人使用很实用，但对团队还不是生产级。',
           ],
@@ -855,7 +855,7 @@ schema: {
           rows: [
             { '模型': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', '显存': '4.7 GB', '速度': '快速', '最佳用途': '最佳平衡、最快' },
             { '模型': 'Llama Code 7B', 'HumanEval': '69%', '显存': '4.7 GB', '速度': '快速', '最佳用途': '通用编码' },
-            { '模型': 'Mistral 7B', 'HumanEval': '61%', '显存': '4.5 GB', '速度': '非常快', '最佳用途': '轻量、EU服务器' },
+            { '模型': 'Mistral Small', 'HumanEval': '61%', '显存': '4.5 GB', '速度': '非常快', '最佳用途': '轻量、EU服务器' },
             { '模型': 'Llama Code 13B', 'HumanEval': '74%', '显存': '8.5 GB', '速度': '中等', '最佳用途': '16GB机器质量更好' },
             { '模型': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', '显存': '4 GB', '速度': '快速', '最佳用途': '轻量替代品' },
           ],
@@ -892,7 +892,7 @@ schema: {
           items: [
             '**不调整去抖延迟**：如果补全感觉"迟缓"，增加debounceWaitMs（例如400毫秒）以避免显示不完整建议。',
             '**使用对您的显存来说过大的模型**：13B模型+编辑器开销可使用12+ GB。在8GB机器上，使用7B模型。',
-            '**期望云级代码质量**：GPT-4o在代码方面比任何7B模型好得多。本地补全达到云质量的70-80%。',
+            '**期望云级代码质量**：GPT-5.5在代码方面比任何7B模型好得多。本地补全达到云质量的70-80%。',
             '**在CPU上运行推理**：CPU补全不实用（5-10秒延迟）。显存对有用补全是必需的。',
           ],
         },
@@ -968,7 +968,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code使用Continue.dev扩展连接到本地模型（Ollama、LM Studio、vLLM）。' },
           { '@type': 'ListItem', position: 2, name: 'Cursor是一个VS Code分支，具有内置的本地模型支持。无需扩展。' },
-          { '@type': 'ListItem', position: 3, name: '**最佳代码本地模型**：Qwen2.5-Coder 7B、Llama Code 13B或Mistral 7B。' },
+          { '@type': 'ListItem', position: 3, name: '**最佳代码本地模型**：Qwen2.5-Coder 7B、Llama Code 13B或Mistral Small。' },
           { '@type': 'ListItem', position: 4, name: '在消费者GPU上使用7B模型时，预期2-5秒补全延迟。' },
           { '@type': 'ListItem', position: 5, name: '截至2026年4月，本地代码补全对个人使用很实用，但对团队还不是生产级。' },
         ],
@@ -1003,7 +1003,7 @@ schema: {
           items: [
             'VS Code usa la extensión Continue.dev para conectarse a modelos locales (Ollama, LM Studio, vLLM).',
             'Cursor es un fork de VS Code con soporte nativo para modelos locales. No necesitas ninguna extensión.',
-            '**Mejores modelos locales para código**: Qwen2.5-Coder 7B, Llama Code 13B o Mistral 7B.',
+            '**Mejores modelos locales para código**: Qwen2.5-Coder 7B, Llama Code 13B o Mistral Small.',
             'Espera una latencia de completación de 2-5 segundos en GPUs de consumo con modelos 7B.',
             'A partir de abril de 2026, las completaciones de código locales son prácticas para uso personal, pero aún no están listas para producción en equipos.',
           ],
@@ -1030,7 +1030,7 @@ schema: {
           rows: [
             { 'Modelo': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Mejor equilibrio, más veloz' },
             { 'Modelo': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4,7 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Programación general' },
-            { 'Modelo': 'Mistral 7B', 'HumanEval': '61%', 'VRAM': '4,5 GB', 'Velocidad': 'Muy rápido', 'Ideal para': 'Ligero, servidores UE' },
+            { 'Modelo': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4,5 GB', 'Velocidad': 'Muy rápido', 'Ideal para': 'Ligero, servidores UE' },
             { 'Modelo': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8,5 GB', 'Velocidad': 'Medio', 'Ideal para': 'Mejor calidad en máquinas de 16 GB' },
             { 'Modelo': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Alternativa ligera' },
           ],
@@ -1067,7 +1067,7 @@ schema: {
           items: [
             '**No ajustar la latencia de debounce**: Si las completaciones se sienten "lentas", aumenta debounceWaitMs (por ejemplo, a 400 ms) para evitar mostrar sugerencias incompletas.',
             '**Usar un modelo demasiado grande para tu VRAM**: Un modelo 13B más la sobrecarga del editor puede usar más de 12 GB. En máquinas de 8 GB, quédate con modelos 7B.',
-            '**Esperar calidad de código al nivel de la nube**: GPT-4o es significativamente mejor en código que cualquier modelo 7B. Las completaciones locales representan el 70-80% de la calidad de la nube.',
+            '**Esperar calidad de código al nivel de la nube**: GPT-5.5 es significativamente mejor en código que cualquier modelo 7B. Las completaciones locales representan el 70-80% de la calidad de la nube.',
             '**Ejecutar la inferencia en CPU**: Las completaciones en CPU son poco prácticas (latencia de 5-10 segundos). La GPU es necesaria para obtener completaciones utilizables.',
           ],
         },
@@ -1143,7 +1143,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code usa la extensión Continue.dev para conectarse a modelos locales (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor es un fork de VS Code con soporte nativo para modelos locales. No necesitas ninguna extensión.' },
-          { '@type': 'ListItem', position: 3, name: '**Mejores modelos locales para código**: Qwen2.5-Coder 7B, Llama Code 13B o Mistral 7B.' },
+          { '@type': 'ListItem', position: 3, name: '**Mejores modelos locales para código**: Qwen2.5-Coder 7B, Llama Code 13B o Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Espera una latencia de completación de 2-5 segundos en GPUs de consumo con modelos 7B.' },
           { '@type': 'ListItem', position: 5, name: 'A partir de abril de 2026, las completaciones de código locales son prácticas para uso personal, pero aún no están listas para producción en equipos.' },
         ],

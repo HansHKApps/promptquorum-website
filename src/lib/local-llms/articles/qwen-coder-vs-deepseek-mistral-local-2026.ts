@@ -127,11 +127,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Why Local Coding Models Caught Up',
         content: [
           'For the first three years of the LLM era, cloud models led local models on every coding benchmark by 10–20 percentage points. That gap closed in 2025–2026 as open-weight models scaled into the 27–72B parameter range with coding-specific training on large code corpora.',
-          'Qwen 3.6 27B, released April 2026, achieved 77.2% SWE-bench — a benchmark that tests whether models can resolve real GitHub issues in open-source codebases. This score compares directly to Claude Sonnet 4.6 (~72%) and GPT-4o (~73%), both significantly larger and cloud-only. The architectural insight is that focused coding pre-training on filtered code data (Alibaba published 3T code tokens for Qwen 3) compensates for the parameter size gap.',
+          'Qwen 3.6 27B, released April 2026, achieved 77.2% SWE-bench — a benchmark that tests whether models can resolve real GitHub issues in open-source codebases. This score compares directly to Claude Sonnet 4.6 (~72%) and GPT-5.5 (~73%), both significantly larger and cloud-only. The architectural insight is that focused coding pre-training on filtered code data (Alibaba published 3T code tokens for Qwen 3) compensates for the parameter size gap.',
           'Three factors drove the convergence: (1) high-quality code training data at scale, (2) RLHF tuned on real software engineering tasks rather than generic instruction following, and (3) improved GGUF quantization that preserves coding ability at Q4 precision better than earlier quantization methods.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen 3.6 27B scores 77.2% SWE-bench locally — matching or beating Claude Sonnet 4.6 and GPT-4o on real-world GitHub issue resolution.' },
+          { type: 'one-sentence', text: 'Qwen 3.6 27B scores 77.2% SWE-bench locally — matching or beating Claude Sonnet 4.6 and GPT-5.5 on real-world GitHub issue resolution.' },
           { type: 'plain-terms', text: 'SWE-bench tests whether an AI can actually fix bugs in real open-source codebases like Django, Flask, and NumPy. A score of 77.2% means the model resolved 77 out of 100 real GitHub issues without human help.' },
         ],
       },

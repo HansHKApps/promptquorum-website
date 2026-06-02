@@ -838,7 +838,7 @@ schema: {
       content: '**Fehlerhafte oder wiederholte Ausgabe bedeutet fast immer, dass Sie die falsche Modell-Variante verwenden.** Base-Modelle ohne Instruct-Format erzeugen Müll; Instruct-Modelle sind für Gespräche trainiert.',
       items: [
         '**Verwenden Sie die Instruct-Variante**: bei Ollama, ersetzen Sie `llama3.1:8b` mit `llama3.1:8b-instruct`. Die "-instruct"-Variante versteht Befehle und antwortet richtig.',
-        '**LM Studio Chat-Vorlage überprüfen**: Model-Einstellungen → Chat Format. Wählen Sie das richtige Format für das Modell (z.B. "Llama 2 Chat" für Llama-Modelle).',
+        '**LM Studio Chat-Vorlage überprüfen**: Model-Einstellungen → Chat Format. Wählen Sie das richtige Format für das Modell (z.B. "Llama 3.3 Chat" für Llama-Modelle).',
         '**System-Prompt überprüfen**: manchmal hat ein fehlerhafter System-Prompt (z.B. zu lange, zirkulär) Auswirkung auf die Ausgabe. Versuchen Sie einen generischen Prompt: "You are a helpful assistant."',
       ],
     },

@@ -27,13 +27,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'xinference openai compatible api',
     ],
     current_models_mentioned: [
-      'Llama 3.1 8B Instruct',
-      'Llama 3.1 70B Instruct',
+      'Llama 3.3 8B Instruct',
+      'Llama 3.3 70B Instruct',
       'Qwen 2.5 7B Instruct',
       'Qwen 2.5 72B Instruct',
       'ChatGLM4 9B',
-      'Mistral 7B Instruct v0.3',
-      'Mixtral 8x7B Instruct',
+      'Mistral Small Instruct v0.3',
+      'Mixtral 8x22B Instruct',
     ],
     current_hardware_mentioned: [
       '5 GB VRAM',
@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What models does Xinference support?',
-        answer: 'Xinference natively supports Llama 3.1 (8B and 70B), Qwen 2.5 (0.5B to 72B), ChatGLM4 (9B), Mistral 7B v0.3, Mixtral 8x7B, and 30+ other families. Each launches with a single `xinference launch` command and serves via an OpenAI-compatible REST API at localhost:9997.',
+        answer: 'Xinference natively supports Llama 3.3 (8B and 70B), Qwen 2.5 (0.5B to 72B), ChatGLM4 (9B), Mistral Small v0.3, Mixtral 8x22B, and 30+ other families. Each launches with a single `xinference launch` command and serves via an OpenAI-compatible REST API at localhost:9997.',
         bullets: [
           'Install: `pip install "xinference[all]"` — includes CUDA, llama.cpp, and transformers backends',
           'Start server: `xinference-local` — web UI opens at http://localhost:9997',
@@ -100,14 +100,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'mixtral-instruct-v0.1 8x7B', 'Family': 'Mistral AI', 'VRAM (Q4)': '~26 GB', 'Best Backend': 'vLLM', 'Best For': 'High-quality multilingual' },
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Xinference natively supports Llama 3.1 (8B/70B), Qwen 2.5 (7B/72B), ChatGLM4 9B, Mistral 7B v0.3, and Mixtral 8x7B — each launchable with a single CLI command.' },
+          { type: 'one-sentence', text: 'Xinference natively supports Llama 3.3 (8B/70B), Qwen 2.5 (7B/72B), ChatGLM4 9B, Mistral Small v0.3, and Mixtral 8x22B — each launchable with a single CLI command.' },
           { type: 'plain-terms', text: 'VRAM is the memory on your GPU. A model that needs 6 GB of VRAM needs a GPU with at least that much — like an RTX 3060 (12 GB) or RTX 4060 (8 GB). If your GPU is smaller, use the llama.cpp backend with a Q4 quantization, which cuts memory use roughly in half.' },
         ],
         faqs: [
-          { q: 'Does Xinference support Llama 3.1?', a: 'Yes. Use `--model-name llama-3.1-instruct` with `--model-size-in-billions 8` for the 8B variant or `70` for the 70B. Both use the transformers backend by default; switch to llama.cpp with `--model-engine llama.cpp` and `--quantization q4_k_m` for CPU or low-VRAM use.' },
-          { q: 'Does Xinference support Qwen 2.5?', a: 'Yes. Qwen 2.5 Instruct is registered as `qwen2.5-instruct`. Sizes 0.5B, 1.5B, 3B, 7B, 14B, 32B, and 72B are all available. The 7B variant runs in ~6 GB of VRAM and handles Chinese, Japanese, Korean, and English with comparable quality to Llama 3.1 8B.' },
+          { q: 'Does Xinference support Llama 3.3?', a: 'Yes. Use `--model-name llama-3.1-instruct` with `--model-size-in-billions 8` for the 8B variant or `70` for the 70B. Both use the transformers backend by default; switch to llama.cpp with `--model-engine llama.cpp` and `--quantization q4_k_m` for CPU or low-VRAM use.' },
+          { q: 'Does Xinference support Qwen 2.5?', a: 'Yes. Qwen 2.5 Instruct is registered as `qwen2.5-instruct`. Sizes 0.5B, 1.5B, 3B, 7B, 14B, 32B, and 72B are all available. The 7B variant runs in ~6 GB of VRAM and handles Chinese, Japanese, Korean, and English with comparable quality to Llama 3.3 8B.' },
           { q: 'Does Xinference support ChatGLM?', a: 'Yes. ChatGLM3 (`chatglm3`), ChatGLM4 (`chatglm4`), and the vision variant ChatGLM4-Vision (`chatglm4v`) are all registered. ChatGLM4 9B is the recommended choice for Chinese-language tasks in 2026.' },
-          { q: 'Does Xinference support Mistral?', a: 'Yes. `mistral-instruct-v0.3` (7B) and `mixtral-instruct-v0.1` (8x7B MoE) are both registered. For function calling and JSON output, Mistral 7B v0.3 is the best small-model option in Xinference.' },
+          { q: 'Does Xinference support Mistral?', a: 'Yes. `mistral-instruct-v0.3` (7B) and `mixtral-instruct-v0.1` (8x7B MoE) are both registered. For function calling and JSON output, Mistral Small v0.3 is the best small-model option in Xinference.' },
         ],
       },
       install: {
@@ -139,13 +139,13 @@ xinference-local --host 0.0.0.0 --port 9997`,
         id: 'launch-models',
         title: 'Launch Llama 3, Qwen, ChatGLM, and Mistral',
         content: 'Use `xinference launch` to deploy any registered model. The pattern is always the same: `--model-name` sets the model family, `--model-size-in-billions` sets the parameter count, and `--model-engine` selects the backend. Once launched, Xinference returns a model UID that you use in API calls.',
-        codeBlock: `# Llama 3.1 8B Instruct (GPU, transformers backend)
+        codeBlock: `# Llama 3.3 8B Instruct (GPU, transformers backend)
 xinference launch \\
   --model-name llama-3.1-instruct \\
   --model-engine transformers \\
   --model-size-in-billions 8
 
-# Llama 3.1 8B Instruct (CPU, Q4_K_M quantization)
+# Llama 3.3 8B Instruct (CPU, Q4_K_M quantization)
 xinference launch \\
   --model-name llama-3.1-instruct \\
   --model-engine llama.cpp \\
@@ -164,13 +164,13 @@ xinference launch \\
   --model-engine transformers \\
   --model-size-in-billions 9
 
-# Mistral 7B Instruct v0.3 (GPU)
+# Mistral Small Instruct v0.3 (GPU)
 xinference launch \\
   --model-name mistral-instruct-v0.3 \\
   --model-engine transformers \\
   --model-size-in-billions 7
 
-# Mixtral 8x7B Instruct (vLLM backend, requires 26+ GB VRAM)
+# Mixtral 8x22B Instruct (vLLM backend, requires 26+ GB VRAM)
 xinference launch \\
   --model-name mixtral-instruct-v0.1 \\
   --model-engine vllm \\
@@ -247,7 +247,7 @@ print(embedding.data[0].embedding[:5])`,
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is Xinference?', a: 'Xinference (Xorbits Inference) is an open-source model serving framework that runs Llama 3, Qwen, ChatGLM, Mistral, and 30+ other families locally via an OpenAI-compatible API. It supports GPU, CPU (via llama.cpp), and multi-GPU cluster deployments.' },
-          { q: 'What models does Xinference support in 2026?', a: 'Xinference registers 200+ model configurations. The most popular in 2026 are Llama 3.1 8B/70B Instruct, Qwen 2.5 7B/72B Instruct, ChatGLM4 9B, Mistral 7B Instruct v0.3, and Mixtral 8x7B Instruct. Run `xinference registrations --model-type LLM` to see the full list.' },
+          { q: 'What models does Xinference support in 2026?', a: 'Xinference registers 200+ model configurations. The most popular in 2026 are Llama 3.3 8B/70B Instruct, Qwen 2.5 7B/72B Instruct, ChatGLM4 9B, Mistral Small Instruct v0.3, and Mixtral 8x22B Instruct. Run `xinference registrations --model-type LLM` to see the full list.' },
           { q: 'How does Xinference download model weights?', a: 'On the first `xinference launch` for each model, Xinference downloads weights from Hugging Face or ModelScope (configurable). Weights are cached locally so subsequent launches are instant. Set `XINFERENCE_HOME` to control the cache directory.' },
           { q: 'Does Xinference work on Windows?', a: 'Yes, via pip on Python 3.9+. The llama.cpp backend works on Windows CPU without additional dependencies. For GPU support on Windows, install CUDA 12.x and the matching PyTorch wheel before installing Xinference.' },
           { q: 'Can I use Xinference for RAG?', a: 'Yes. Launch a BGE or E5 embedding model (`xinference launch --model-name bge-base-en-v1.5 --model-type embedding`) alongside your LLM. Both share the same API endpoint — your RAG pipeline calls the embedding endpoint for indexing and the chat endpoint for generation.' },
@@ -272,7 +272,7 @@ print(embedding.data[0].embedding[:5])`,
       '@type': 'FAQPage',
       'mainEntity': [
         { '@type': 'Question', 'name': 'What is Xinference?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Xinference (Xorbits Inference) is an open-source model serving framework that runs Llama 3, Qwen, ChatGLM, Mistral, and 30+ other families locally via an OpenAI-compatible API.' } },
-        { '@type': 'Question', 'name': 'What models does Xinference support in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Xinference registers 200+ model configurations. The most popular are Llama 3.1 8B/70B Instruct, Qwen 2.5 7B/72B Instruct, ChatGLM4 9B, Mistral 7B Instruct v0.3, and Mixtral 8x7B Instruct.' } },
+        { '@type': 'Question', 'name': 'What models does Xinference support in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Xinference registers 200+ model configurations. The most popular are Llama 3.3 8B/70B Instruct, Qwen 2.5 7B/72B Instruct, ChatGLM4 9B, Mistral Small Instruct v0.3, and Mixtral 8x22B Instruct.' } },
         { '@type': 'Question', 'name': 'Does Xinference support Llama 3?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Use --model-name llama-3.1-instruct with --model-size-in-billions 8 for the 8B variant. Switch to llama.cpp with --quantization q4_k_m for CPU or low-VRAM use.' } },
         { '@type': 'Question', 'name': 'Does Xinference support ChatGLM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. ChatGLM3, ChatGLM4, and ChatGLM4-Vision are all registered. ChatGLM4 9B is the recommended choice for Chinese-language tasks in 2026.' } },
         { '@type': 'Question', 'name': 'Can I use Xinference for RAG?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Launch a BGE embedding model alongside your LLM — both share the same API endpoint. Your RAG pipeline calls the embedding endpoint for indexing and the chat endpoint for generation.' } },
@@ -285,13 +285,13 @@ print(embedding.data[0].embedding[:5])`,
       'description': 'The seven most-requested model configurations in Xinference with VRAM requirements',
       'numberOfItems': 7,
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B Instruct', 'description': 'Meta — ~6 GB VRAM (Q4), best for English general-purpose tasks' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.1 70B Instruct', 'description': 'Meta — ~40 GB VRAM, high-quality English output via vLLM backend' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.3 8B Instruct', 'description': 'Meta — ~6 GB VRAM (Q4), best for English general-purpose tasks' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.3 70B Instruct', 'description': 'Meta — ~40 GB VRAM, high-quality English output via vLLM backend' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Qwen 2.5 7B Instruct', 'description': 'Alibaba — ~6 GB VRAM (Q4), multilingual, CJK, coding' },
         { '@type': 'ListItem', 'position': 4, 'name': 'Qwen 2.5 72B Instruct', 'description': 'Alibaba — ~40 GB VRAM, large-scale CJK tasks via vLLM' },
         { '@type': 'ListItem', 'position': 5, 'name': 'ChatGLM4 9B', 'description': 'Zhipu AI — ~7 GB VRAM, Chinese enterprise tasks' },
-        { '@type': 'ListItem', 'position': 6, 'name': 'Mistral 7B Instruct v0.3', 'description': 'Mistral AI — ~5 GB VRAM (Q4), European languages and function calling' },
-        { '@type': 'ListItem', 'position': 7, 'name': 'Mixtral 8x7B Instruct', 'description': 'Mistral AI — ~26 GB VRAM, high-quality multilingual via vLLM' },
+        { '@type': 'ListItem', 'position': 6, 'name': 'Mistral Small Instruct v0.3', 'description': 'Mistral AI — ~5 GB VRAM (Q4), European languages and function calling' },
+        { '@type': 'ListItem', 'position': 7, 'name': 'Mixtral 8x22B Instruct', 'description': 'Mistral AI — ~26 GB VRAM, high-quality multilingual via vLLM' },
       ],
     },
   },
