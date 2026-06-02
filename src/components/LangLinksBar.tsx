@@ -21,6 +21,7 @@ export function LangLinksBar({ cluster, slug, availableLangs, initialLang }: Lan
     { code: 'ja', flag: '🇯🇵' },
     { code: 'zh', flag: '🇨🇳' },
     { code: 'es', flag: '🇪🇸' },
+    { code: 'pt', flag: '🇧🇷' },
   ]
 
   const buildHref = (lang: Language): string => {
