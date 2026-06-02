@@ -607,6 +607,203 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
 
+  pt: {
+    theme: 'Tools & Platforms',
+    title: 'Otimização manual vs automatizada de prompts: quando iterar, quando automatizar',
+    seoTitle: 'Otimização manual vs automatizada: escolha sua abordagem',
+    metaDescription: 'Otimização manual vs automatizada de prompts: escolha conforme o número de prompts e recursos. Quando iterar manualmente e quando automatizar. Com framework.',
+    intro: '**A otimização de prompts pode ser manual (você reescreve o prompt) ou automatizada (um framework reescreve por você).** A otimização manual oferece controle, mas escala somente até ~50 prompts em produção. A otimização automatizada (DSPy, TextGrad, Promptfoo) escala para 100+ prompts, mas requer dados de treinamento rotulados e definições de métricas. Este guia mostra quando usar cada abordagem e como elas funcionam juntas.',
+    publishDate: '2026-04-26',
+    readTime: '9 min de leitura',
+    educationalLevel: 'Intermediate',
+    audience: 'Desenvolvedores e engenheiros de prompts que escolhem entre iteração manual e automação',
+    primaryTerm: 'otimização de prompts',
+    aboutTopics: ['otimização de prompts', 'DSPy', 'automação', 'escalabilidade'],
+    leadAnswerBlock: '**Manual vs automatizado é uma decisão de escala.** Manual: mais rápido para tarefas individuais, controle total, mas não escala além de 50 prompts. Automatizado: mais lento para configurar, requer métricas de avaliação, mas escala para 100+ prompts. A escolha depende de: (1) Quantos prompts você tem em produção? (2) Você tem exemplos rotulados? (3) A otimização é pontual ou contínua?',
+    quickFacts: [
+      'Otimização manual: 2–4 iterações por prompt, controle total, sem dados de treinamento necessários, adequada para <50 prompts em produção',
+      'Otimização automatizada: 1–2 ciclos de aprendizado, requer exemplos rotulados + métricas, escala para 100+ prompts, configurada em dias não semanas',
+      'Abordagem híbrida: comece manualmente, avance para automatizado quando tiver 20+ prompts em produção e dados de avaliação',
+      'O DSPy ensina o modelo a se otimizar — cada execução de otimização gera melhores candidatos sem reescritas manuais',
+      'Limiar de decisão: <50 prompts = manual. 50–100 prompts = híbrido. 100+ prompts = automatizado.',
+      'Diferença de custo: manual (tempo de engenharia) vs automatizado (cómputo + rotulação de dados). Automatizado vence para equipes que publicam 20+ variantes de prompts',
+    ],
+    toc: [
+      { label: 'Principais conclusões', anchor: 'key-takeaways' },
+      { label: 'Manual vs automatizado: comparativo rápido', anchor: 'manual-vs-automated-comparison' },
+      { label: 'Quando a otimização manual vence', anchor: 'when-manual-wins' },
+      { label: 'Quando a otimização automatizada vence', anchor: 'when-automated-wins' },
+      { label: 'Ferramentas: DSPy, TextGrad, Promptfoo comparados', anchor: 'tools-dspy-textgrad-promptfoo' },
+      { label: 'Fluxo de trabalho híbrido: manual + automatizado juntos', anchor: 'hybrid-workflow' },
+      { label: 'Análise de custos: manual vs automatizado', anchor: 'cost-analysis' },
+      { label: 'Erros comuns', anchor: 'common-mistakes' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+      { label: 'Leituras relacionadas', anchor: 'related-reading' },
+      { label: 'Fontes', anchor: 'sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Otimização manual vs automatizada de prompts: quando iterar, quando automatizar',
+      description: 'Otimização manual vs automatizada de prompts: escolha conforme o número de prompts. Framework de decisão de escalabilidade.',
+      datePublished: '2026-04-26',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/manual-vs-automated-prompt-optimization?lang=pt',
+      inLanguage: 'pt-BR',
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+      keywords: ['otimização de prompts', 'otimização manual', 'otimização automatizada', 'DSPy', 'TextGrad', 'Promptfoo', 'escalabilidade LLM'],
+      about: [
+        { '@type': 'Thing', name: 'Otimização manual de prompts' },
+        { '@type': 'Thing', name: 'Otimização automatizada de prompts' },
+        { '@type': 'Thing', name: 'DSPy' },
+        { '@type': 'Thing', name: 'TextGrad' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Manual vs automatizado: comparativo de recursos',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Otimização manual', description: 'Reescrita humana de prompts com base em falhas de testes. Controle total, sem dados de treinamento necessários, escala até ~50 prompts.' },
+        { '@type': 'ListItem', position: 2, name: 'DSPy (Automatizado)', description: 'Framework da Stanford que ensina o modelo a se otimizar. Escala para 100+ prompts. Requer uma métrica.' },
+        { '@type': 'ListItem', position: 3, name: 'TextGrad (Automatizado)', description: 'Otimização de prompts baseada em gradientes: calcula quais palavras alterar para melhorar o score. Avançado, nível pesquisa.' },
+        { '@type': 'ListItem', position: 4, name: 'Promptfoo (Híbrido)', description: 'Ferramenta CLI para testes, detecção de regressões e comparação manual A/B. Não é automação completa, mas estrutura o trabalho manual.' },
+        { '@type': 'ListItem', position: 5, name: 'Fluxo de trabalho híbrido', description: 'Manual para 1–3 prompts, automatizado para variantes em escala. Ideal para equipes que publicam múltiplas versões de prompts.' },
+      ],
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        title: 'Principais conclusões',
+        items: [
+          'Otimização manual = você reescreve o prompt. Boa para <50 prompts e controle total; não escala.',
+          'Otimização automatizada = um framework reescreve o prompt por você. Boa para >100 prompts; requer dados rotulados e uma métrica.',
+          'Híbrido = comece manualmente, avance para automatizado quando tiver dados de avaliação e >20 prompts em produção.',
+          'Ferramentas: DSPy (melhor para pesquisa e escala), TextGrad (avançado/pesquisa), Promptfoo (testes + manual, não automação completa).',
+          'Ponto de equilíbrio de custo: ~50 prompts. Abaixo disso, manual é mais rápido. Acima, automatizado economiza tempo de engenharia.',
+          'Sempre comece com manual em uma única tarefa, gere dados de avaliação, depois passe para automatizado para variantes e escalonamento.',
+        ],
+      },
+
+      comparison: {
+        title: 'Manual vs automatizado: comparativo rápido',
+        content: '**Escolha com base em três fatores: número de prompts, dados de avaliação e necessidades de escala.** A otimização manual é reescrever um prompt com base em falhas de testes — é controle direto, mas não escala além de ~50 prompts em produção. A otimização automatizada usa frameworks (DSPy, TextGrad) para reescrever prompts algoritmicamente — escala para 100+, mas requer dados rotulados e métricas. Um terceiro passo de validação — executar o mesmo prompt em múltiplos modelos usando uma [plataforma de otimização de prompts](/features) — confirma qual versão se generaliza melhor antes de se comprometer com produção.',
+        columns: ['Fator', 'Otimização manual', 'Otimização automatizada'],
+        rows: [
+          { 'Fator': 'Ideal para N prompts', 'Otimização manual': '<50 (foco em controle)', 'Otimização automatizada': '100+ (foco em escala)' },
+          { 'Fator': 'Dados de treinamento necessários', 'Otimização manual': 'Não', 'Otimização automatizada': 'Sim (50–500 exemplos)' },
+          { 'Fator': 'Tempo de configuração', 'Otimização manual': '1–2 horas por prompt', 'Otimização automatizada': '2–5 dias uma vez' },
+          { 'Fator': 'Custo por prompt', 'Otimização manual': '$1.000–5.000 (trabalho)', 'Otimização automatizada': '$100–500 (cómputo + rótulos)' },
+        ],
+      },
+
+      manualWins: {
+        title: 'Quando a otimização manual vence',
+        items: [
+          'Menos de 50 prompts em produção — o overhead de configurar dados e métricas não vale a pena',
+          'Tarefas novas ou pontuais — você ainda não conhece a direção de otimização, então a intuição humana é mais rápida',
+          'Requisitos de controle rígidos — conformidade, voz de marca, escrita criativa — onde você precisa aprovar cada mudança',
+          'Equipes pequenas (<5 pessoas) — a iteração manual é rápida e os membros da equipe entendem as razões das mudanças',
+          'Dados de avaliação limitados — você tem <50 exemplos rotulados, então o treinamento automatizado superajustaria',
+        ],
+      },
+
+      automatedWins: {
+        title: 'Quando a otimização automatizada vence',
+        items: [
+          'Mais de 100 prompts em produção — o custo da iteração manual de engenharia torna-se proibitivo',
+          'Testes de variantes em escala — você precisa de 10+ versões de prompts para testes A/B; a automação as gera mais rápido que a reescrita humana',
+          'Otimização contínua — os prompts se degradam com o tempo conforme as entradas do usuário mudam; sistemas automatizados podem retreinar mensalmente',
+          'Fluxos de trabalho baseados em métricas — sua tarefa tem uma métrica de sucesso clara (precisão, BLEU, avaliação de juiz LLM), não qualidade subjetiva',
+          'Equipes grandes (10+) — o overhead de coordenação de mudanças manuais se torna alto; a automação torna a otimização reproduzível',
+        ],
+      },
+
+      tools: {
+        title: 'Ferramentas: DSPy, TextGrad, Promptfoo comparados',
+        content: '**Três ferramentas principais suportam a otimização automatizada ou semi-automatizada:**',
+        columns: ['Ferramenta', 'Abordagem', 'Maturidade', 'Escala', 'Ideal para'],
+        rows: [
+          { 'Ferramenta': 'DSPy (Stanford)', 'Abordagem': 'Otimização de prompts por aprendizado', 'Maturidade': 'Pronto para produção (código aberto)', 'Escala': '50–500 prompts', 'Ideal para': 'Equipes que escalam variantes de prompts' },
+          { 'Ferramenta': 'TextGrad', 'Abordagem': 'Reescrita de prompts baseada em gradientes', 'Maturidade': 'Pesquisa (novo, ainda não em produção)', 'Escala': '10–100 prompts', 'Ideal para': 'Pesquisa, otimização de ponta' },
+          { 'Ferramenta': 'Promptfoo', 'Abordagem': 'Testes + detecção de regressões (assistido manualmente)', 'Maturidade': 'Pronto para produção (código aberto)', 'Escala': 'Qualquer tamanho', 'Ideal para': 'Testes CI/CD, não automação completa' },
+        ],
+      },
+
+      hybrid: {
+        title: 'Fluxo de trabalho híbrido: manual + automatizado juntos',
+        content: 'O mundo real é híbrido. Comece com otimização manual para construir intuição e dados de avaliação. Avance para automatizado quando tiver escala.',
+        numberedItems: [
+          'Semanas 1–4: otimização manual de 1–3 prompts core. Gere 50+ exemplos rotulados por prompt.',
+          'Semanas 4–8: construa métrica de avaliação (precisão, BLEU ou juiz LLM). Execute testes A/B do Promptfoo para validar o trabalho manual.',
+          'Semana 8+: configure o DSPy. Retreine no conjunto de dados de avaliação crescente. Adicione novas variantes de prompts via automação.',
+          'Produção: implante variantes otimizadas pelo DSPy. Use o Promptfoo para testes de regressão a cada commit.',
+        ],
+      },
+
+      costAnalysis: {
+        title: 'Análise de custos: manual vs automatizado',
+        content: '**Em quantos prompts o automatizado se torna mais barato que o manual?** O ponto de equilíbrio é aproximadamente 50–80 prompts.',
+        items: [
+          'Custo manual por prompt: 4–8 horas de tempo de engenharia × $150/hora = $600–1.200 de trabalho direto. Adicione pesquisa, testes, documentação = $1.500–5.000 total por prompt.',
+          'Custo automatizado único: configuração do DSPy = $2.000–5.000 (2–5 dias de engenharia + cómputo). Depois custo por prompt = $100–300 (cómputo + rotulação).',
+          'Ponto de equilíbrio: com ~60 prompts, custo total automatizado = $2.000 + (60 × $200) = $14.000. Custo total manual = 60 × $3.000 = $180.000. Automatizado vence por 13×.',
+          'Abaixo de 30 prompts: manual é mais rápido e barato. O overhead da automação não se justifica.',
+          'Acima de 100 prompts: automatizado é 5–10× mais barato que manual.',
+        ],
+      },
+
+      mistakes: {
+        title: 'Erros comuns',
+        items: [
+          'Executar o DSPy sem dados rotulados — o DSPy aprende com exemplos. Sem 50+ pares rotulados (entrada, saída), treina com ruído. Comece com iterações manuais, documente os pares, depois use-os como dados de treinamento.',
+          'Escolher uma métrica vaga — o DSPy e o TextGrad requerem métricas quantificadas (precisão, F1, BLEU). Métricas vagas como "qualidade" não podem guiar a otimização. Defina o sucesso: precisão no conjunto de teste, correspondência de substring ou juiz LLM >8/10.',
+          'Esperar que a automação descubra técnicas novas — o DSPy otimiza texto dentro de estruturas conhecidas, mas não descobrirá chain-of-thought ou exemplos few-shot por conta própria. Você deve definir a estrutura (assinatura de tarefa) primeiro.',
+          'Configurar automação para <30 prompts — o overhead de automação (configuração, rotulação, métricas) é 2–5 semanas. Para <30 prompts, a iteração manual é 2–4× mais rápida. Passe para automação nos 50+ prompts.',
+          'Automatizar sem monitoramento contínuo — os prompts se degradam conforme as entradas do usuário mudam. Retreine mensalmente: novas entradas → conjunto de avaliação atualizado → execute novamente o DSPy → teste → implante. Trate a otimização como contínua, não pontual.',
+        ],
+      },
+
+      faq: {
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'Posso combinar otimização manual e automatizada?', a: 'Sim, e esta é a melhor prática. Manual para sua tarefa core (1–3 prompts), automatizado para variantes e escala. Use o Promptfoo para testar todas as variantes; use o DSPy para gerar novas.' },
+          { q: 'O DSPy funciona com todos os modelos?', a: 'O DSPy funciona com qualquer modelo acessível via API: GPT-5.5, Claude, Gemini, Cohere, Ollama. Ainda não funciona com modelos de visão. Modelos locais são suportados, mas mais lentos.' },
+          { q: 'Quantos exemplos rotulados preciso para o DSPy?', a: 'Mínimo 30–50 para tarefas simples (classificação, extração). Tarefas complexas (resumo, raciocínio) se beneficiam de 100–500. Mais exemplos = otimização mais robusta.' },
+          { q: 'Qual é o custo de cómputo de executar o DSPy?', a: 'Uma execução de otimização do DSPy em 100 exemplos custa ~$5–20 (chamadas de API). Executar 10 prompts candidatos × 100 exemplos = 1.000 chamadas = $50–200 por ciclo de otimização. Retreinamento mensal = $50–200/mês.' },
+          { q: 'Posso implantar em produção um prompt otimizado pelo DSPy?', a: 'Sim. O DSPy retorna um prompt em texto simples. Copie-o para seu sistema de produção (PromptQuorum, LangChain, Vellum, etc.) e sirva-o normalmente. Nenhum runtime especial do DSPy é necessário em produção.' },
+          { q: 'A otimização automatizada garante prompts melhores?', a: 'Não. Se sua métrica estiver errada, o DSPy otimiza para o errado. Se seus dados de avaliação tiverem viés, o DSPy aprende o viés. Lixo entra, lixo sai.' },
+          { q: 'Devo usar otimização automatizada para tarefas criativas?', a: 'Ainda não. A automação funciona melhor em tarefas baseadas em métricas (classificação, extração, resumo). Tarefas criativas (redação publicitária, narrativa) carecem de métricas claras, então o controle manual é melhor.' },
+          { q: 'O DSPy pode otimizar prompts para múltiplos modelos ao mesmo tempo?', a: 'O DSPy otimiza para um modelo por vez. Para otimizar tanto para GPT-5.5 quanto para Claude, execute o DSPy duas vezes (uma por modelo) e compare os resultados. Abordagem híbrida: otimize para seu modelo preferido, depois teste manualmente em outros.' },
+        ],
+      },
+
+      relatedReading: {
+        title: 'Leituras relacionadas',
+        items: [
+          '[Fundamentos da otimização de prompts: 6 alavancas core](/pt/prompt-engineering/fundamentals-of-prompt-optimization)',
+          '[Melhores ferramentas de otimização de prompts para equipes 2026](/pt/prompt-engineering/best-prompt-optimization-tools-for-teams)',
+          '[Métricas de avaliação de prompts: como medir a qualidade de prompts](/pt/prompt-engineering/prompt-evaluation-metrics)',
+          '[Melhores ferramentas de testes e avaliação de prompts 2026](/pt/prompt-engineering/best-prompt-testing-evaluation-tools)',
+          '[Configuração de prompt engineering para equipes pequenas](/pt/prompt-engineering/prompt-engineering-setup-small-teams)',
+          '[Zero-Shot vs Few-Shot Prompting: quando usar cada um](/pt/prompt-engineering/zero-shot-vs-few-shot)',
+        ],
+      },
+
+      sources: {
+        title: 'Fontes',
+        items: [
+          'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
+          'Valmeekam, K., et al. (2024). "TextGrad: Automatic Differentiation via Text." arXiv:2406.07496',
+          'Promptfoo GitHub: https://github.com/promptfoo/promptfoo',
+          'Schulhoff, S., et al. (2024). "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
+        ],
+      },
+    },
+  },
+
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Tools & Platforms',

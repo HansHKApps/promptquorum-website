@@ -650,6 +650,242 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
 
+  pt: {
+    freshness_tier: 'evergreen',
+    theme: 'Frameworks',
+    title: 'Construa seu próprio framework de prompts: processo de 5 etapas',
+    seoTitle: 'Criar um framework de prompts personalizado: 5 etapas',
+    intro: 'Quando os frameworks existentes — CO-STAR, CRAFT, RISEN — não se adaptam ao seu fluxo de trabalho, construir um framework de prompts personalizado dá à sua equipe uma estrutura reutilizável e testável. Este guia cobre quando construir vs. adotar, o processo de 5 etapas e um exemplo prático.',
+    metaDescription: 'Aprenda quando e como criar um framework de prompts próprio: processo de 5 etapas do objetivo à documentação. Com o exemplo REPAIR para equipes de suporte.',
+    ogDescription: 'Construa um framework de prompts personalizado em 5 etapas: defina o objetivo, identifique 3-6 componentes, teste em 10 prompts, refine, documente. Testes entre modelos com PromptQuorum.',
+    twitterDescription: 'Os frameworks padrão não se encaixam? Construa o seu em 5 etapas. Exemplo REPAIR para equipes de suporte. 3-6 componentes, validação com 10 prompts.',
+    publishDate: '2026-05-02',
+    readTime: '12 min de leitura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'Framework de Prompts Personalizado',
+    leadAnswerBlock: '**Um framework de prompts personalizado é um modelo estruturado que você projeta para um caso de uso específico quando os frameworks padrão (CO-STAR, CRAFT, RISEN) exigem modificações constantes.** Construa-o quando repetir as mesmas 3 ou mais adaptações em cada prompt de um determinado fluxo de trabalho.',
+    quickFacts: [
+      'Construa um framework personalizado quando adicionar as mesmas 3+ modificações a cada prompt de um fluxo de trabalho',
+      '3-6 componentes: menos é uma técnica, mais gera atrito e é omitido',
+      'Teste em 10 prompts reais antes de documentar — frameworks construídos a partir da teoria falham na prática',
+      'O framework REPAIR reduziu o onboarding de 2 semanas para 3 dias para uma equipe de suporte',
+      'As pontuações de consistência melhoraram de 64% para 89% no primeiro mês',
+      'Teste entre modelos no GPT-5.5 e Claude 4.6 Sonnet antes de padronizar',
+    ],
+    toc: [
+      { label: 'Framework vs. Técnica', anchor: 'framework_vs_technique' },
+      { label: 'Quando construir um framework personalizado', anchor: 'when_to_build' },
+      { label: 'Construir um framework personalizado: processo de 5 etapas', anchor: 'five_step_process' },
+      { label: 'Exemplo: Framework REPAIR para equipes de suporte', anchor: 'support_example' },
+      { label: 'Erros comuns ao construir frameworks personalizados', anchor: 'common_mistakes' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+      { label: 'Leituras relacionadas', anchor: 'related_reading' },
+      { label: 'Fontes', anchor: 'sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/build-your-own-framework?lang=pt',
+      inLanguage: 'pt-BR',
+      headline: 'Construa seu próprio framework de prompts: processo de 5 etapas',
+      description: 'Aprenda quando e como construir um framework de prompts personalizado: processo de 5 etapas desde o objetivo até a documentação. Com o exemplo REPAIR para equipes de suporte.',
+      datePublished: '2026-05-02',
+      dateModified: '2026-05-02',
+      keywords: ['framework de prompts personalizado', 'construir framework de prompts', 'framework de prompt engineering', 'design de prompts', 'prompts em equipe'],
+      mentions: [
+        { '@type': 'Thing', name: 'CO-STAR' },
+        { '@type': 'Thing', name: 'CRAFT' },
+        { '@type': 'Thing', name: 'RISEN' },
+        { '@type': 'Thing', name: 'GPT-5.5' },
+        { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
+        { '@type': 'Thing', name: 'PromptQuorum' },
+      ],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-your-own-framework', width: 1200, height: 630 },
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        content: [
+          'Construa um framework de prompts personalizado quando adicionar repetidamente os mesmos 3+ componentes a cada prompt de um fluxo de trabalho. Use 3-6 componentes, teste em 10 prompts reais antes de documentar e verifique a confiabilidade entre modelos. O exemplo REPAIR mostra como uma equipe de suporte reduziu o onboarding de 2 semanas para 3 dias.',
+        ],
+      },
+      key_takeaways: {
+        title: 'Pontos-chave',
+        items: [
+          'Construa um framework personalizado quando adicionar os mesmos 3+ componentes a cada prompt de um fluxo de trabalho',
+          'Use 3-6 componentes: menos é uma técnica, mais gera atrito',
+          'Teste em 10 prompts reais antes de documentar',
+          'Verifique a confiabilidade entre modelos no GPT-5.5 e Claude 4.6 Sonnet antes de padronizar',
+          'Salve a especificação do framework no controle de versão com um modelo e 3 exemplos anotados',
+          'Meça o tempo de onboarding e as pontuações de consistência para confirmar que o framework funciona',
+        ],
+      },
+      framework_vs_technique: {
+        title: 'Framework vs. Técnica: qual é a diferença?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Um framework de prompts é um modelo estrutural que define quais componentes pertencem a cada prompt; uma técnica é um padrão aplicado dentro de um desses componentes.' },
+          { type: 'in-plain-terms', text: 'Pense em um framework como o andaime de cada prompt — define as seções. Uma técnica é o que você faz dentro de uma seção, como pedir ao modelo que raciocine passo a passo.' },
+        ],
+        content: [
+          '**Um framework de prompts é um modelo estrutural que define quais componentes pertencem a cada prompt; uma técnica é um padrão aplicado dentro de um desses componentes.** O chain-of-thought prompting é uma técnica — você o aplica dentro do componente "tarefa" de um framework. O CO-STAR é um framework — define 6 componentes que estruturam todo o prompt.',
+          'A distinção importa porque frameworks e técnicas resolvem problemas diferentes. Um framework resolve a consistência: todos na sua equipe produzem prompts com a mesma estrutura. Uma técnica resolve a capacidade: muda como o modelo aborda uma etapa específica no processo de raciocínio.',
+          'Use um framework existente (CO-STAR, CRAFT, RISEN, RTF) quando o tipo de tarefa corresponder ao que o framework foi projetado para. Construa um personalizado quando adicionar repetidamente os mesmos componentes específicos do domínio que os frameworks existentes não incluem.',
+        ],
+        callouts: [
+          { type: 'insight', label: 'Distinção-chave', text: 'Frameworks resolvem a consistência na equipe. Técnicas resolvem a capacidade dentro de uma etapa individual do prompt. Ambos são necessários; nenhum substitui o outro.' },
+        ],
+      },
+      when_to_build: {
+        title: 'Quando construir um framework de prompts personalizado',
+        content: [
+          '**Construa um framework personalizado quando aplicar as mesmas 3+ modificações a um framework padrão para cada prompt de um determinado fluxo de trabalho.** Se você sempre adiciona uma âncora de conformidade, requisito de citação e glossário de terminologia — esses são componentes, não adições ad hoc.',
+          'Sinais de que você precisa de um framework personalizado:',
+        ],
+        items: [
+          'Você adiciona os mesmos campos a cada prompt que nenhum framework padrão inclui',
+          'Sua equipe produz prompts inconsistentes apesar de usar CO-STAR ou CRAFT',
+          'Novos membros da equipe levam mais de uma semana para escrever prompts aceitáveis',
+          'Seus prompts têm em média mais de 600 palavras porque você continua explicando o mesmo contexto',
+          'Você criou um "prompt base" que todos copiam e adaptam manualmente',
+        ],
+      },
+      when_to_build_part2: {
+        content: [
+          'Sinais de que você deve ficar com os frameworks existentes:',
+        ],
+        items: [
+          'Seus prompts cobrem casos de uso diversos e não relacionados (sem padrão consistente)',
+          'Você escreve menos de 10 prompts por semana neste fluxo de trabalho',
+          'Um framework existente já se encaixa com ajustes menores',
+          'Sua equipe tem menos de 3 pessoas escrevendo prompts',
+        ],
+      },
+      five_step_process: {
+        title: 'Construir um framework de prompts personalizado: processo de 5 etapas',
+        content: [
+          '**O processo de 5 etapas: defina o objetivo → identifique componentes → teste em 10 prompts → refine → documente.** Cada etapa tem um critério de saída claro. Não pule para a etapa 5 — documentar um framework não testado cria falsa confiança.',
+        ],
+        numberedItems: [
+          { title: 'Defina o objetivo em uma frase', whyItMatters: 'Escreva exatamente qual resultado este framework deve produzir de forma confiável. Exemplo: "Gerar um e-mail de primeira resposta a um ticket de suporte que classifique a gravidade, faça referência à nossa política e proponha um caminho de resolução." Essa frase governa cada decisão de componente.' },
+          { title: 'Identifique 3-6 componentes obrigatórios', whyItMatters: 'Liste os elementos de entrada que cada prompt neste fluxo de trabalho precisa. Comece escrevendo 5 prompts de memória, depois extraia o que têm em comum. Adições comuns além dos frameworks padrão: âncora de política, restrição de persona, vocabulário de domínio, esquema de saída, condição de escalonamento.' },
+          { title: 'Aplique em 10 prompts reais', whyItMatters: 'Use prompts reais do seu fluxo de trabalho — não exemplos inventados. Pontue cada resultado: ele atinge o objetivo? Quais componentes faltaram? Quais foram ignorados? Execute os mesmos prompts no GPT-5.5 e Claude 4.6 Sonnet via PromptQuorum para confirmar a confiabilidade entre modelos.' },
+          { title: 'Refine a lista de componentes', whyItMatters: 'Remova componentes que apareceram em menos de 7 de 10 prompts — eles pertencem a prompts específicos, não ao framework. Adicione componentes que você improvisou em 5+ casos. Execute novamente o teste de 10 prompts com o framework revisado antes de passar para a etapa 5.' },
+          { title: 'Documente e padronize', whyItMatters: 'Escreva uma especificação de uma página: nome do framework (acrônimo opcional), definição de cada componente, um modelo com marcadores de posição e 3 prompts de exemplo anotados. Salve no controle de versão (Git ou PromptHub). Distribua a especificação antes de pedir a qualquer pessoa que use o framework.' },
+        ],
+        callouts: [
+          { type: 'warning', label: 'Não pule a etapa 3', text: 'Frameworks construídos sem testar 10 prompts reais quase sempre incluem componentes que soam importantes mas são omitidos sob pressão de tempo. Teste primeiro, documente depois.' },
+        ],
+      },
+      support_example: {
+        title: 'Exemplo: Construir um framework para uma equipe de suporte',
+        content: [
+          '**O framework personalizado de uma equipe de suporte — chamado REPAIR — consiste em 5 componentes: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** Frameworks padrão como CO-STAR e CRAFT não incluem lógica de escalonamento nem ancoragem de políticas, que cada prompt de suporte exige.',
+          'A equipe começou ao notar que adicionava manualmente os mesmos elementos a cada prompt CO-STAR: o nível de função específico do agente, a política SLA aplicável e um caminho de escalonamento condicional se o problema ultrapassasse o escopo de nível 1. Após 3 semanas, essas adições foram formalizadas como componentes do framework.',
+          'O modelo REPAIR resultante:',
+        ],
+        items: [
+          'R (Role): "You are a tier-1 support agent for [Product]. Your authority covers [scope]."',
+          'E (Escalation): "If the issue involves [condition], escalate to tier-2. Do not attempt resolution."',
+          'P (Policy anchor): "Apply policy [ID] for [issue type]. Quote the relevant clause in your response."',
+          'A (Action path): "Classify the issue, confirm understanding, propose resolution, request confirmation."',
+          'I (Intent confirmation): "End every response with: \'Does this address your issue, or would you like me to escalate?\'"',
+        ],
+      },
+      support_example_part2: {
+        content: [
+          'O tempo para integrar novos agentes caiu de 2 semanas para 3 dias após o framework REPAIR ser documentado e adicionado à biblioteca de prompts da equipe. As pontuações de consistência de prompts (medidas via avaliação do Braintrust) melhoraram de 64% para 89% no primeiro mês.',
+          'Use um framework personalizado quando puder nomear o padrão claramente e mostrar que ele se aplica ao seu fluxo de trabalho. Evite nomear um framework apenas por tê-lo — uma estrutura consistente de 4 componentes sem nome que você usa diariamente é um framework mesmo sem acrônimo.',
+        ],
+        callouts: [
+          { type: 'tip', label: 'Meça o impacto', text: 'Rastreie o tempo de onboarding e as pontuações de consistência antes e depois de implementar um framework personalizado. Se nenhum melhorar em 4 semanas, o framework precisa de refinamento — não de mais documentação.' },
+        ],
+      },
+      common_mistakes: {
+        title: 'Erros comuns ao construir frameworks personalizados',
+        content: [
+          '**O erro mais comum é construir um framework antes de testar manualmente 20+ prompts reais.** Frameworks construídos a partir da teoria em vez de padrões observados incluem componentes que soam importantes mas são omitidos na prática.',
+        ],
+        mistakes: [
+          {
+            mistake: 'Muitos componentes (7+)',
+            problem: 'Os escritores omitem seções sob pressão de tempo, quebrando a consistência.',
+            fix: 'Limite a 6 componentes. Mova campos específicos do domínio para extensões do prompt, não para o framework central.',
+          },
+          {
+            mistake: 'Copiar um framework padrão e renomeá-lo',
+            problem: 'Um CO-STAR renomeado não é um framework personalizado — é CO-STAR com sobrecarga extra de branding.',
+            fix: 'Formalize um framework somente quando tiver pelo menos 2 componentes que não existam em nenhum framework padrão.',
+          },
+          {
+            mistake: 'Sem conjunto de testes antes de documentar',
+            problem: 'Você documenta um framework que não sobrevive ao contato com prompts reais.',
+            fix: 'Execute 10 prompts reais através do framework rascunho antes de escrever a especificação. Ajuste com base no que falha.',
+          },
+          {
+            mistake: 'Não testar entre modelos',
+            problem: 'Um framework que funciona no GPT-5.5 pode produzir resultados diferentes no Claude 4.6 Sonnet se depender de comportamentos implícitos específicos do GPT.',
+            fix: 'Teste em pelo menos 2 modelos via PromptQuorum. Documente qualquer ajuste específico por modelo na especificação do framework.',
+          },
+          {
+            mistake: 'Sem controle de versão',
+            problem: 'O framework se desvia à medida que os membros da equipe o editam informalmente, criando versões inconsistentes.',
+            fix: 'Salve a especificação do framework no Git ou PromptHub com um número de versão. Exija revisão de PR para qualquer alteração de componente.',
+          },
+        ],
+      },
+      faq: {
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'O que é um framework de prompts?', a: 'Um framework de prompts é um modelo estrutural que define quais componentes incluir em um prompt e em que ordem. Exemplos incluem CO-STAR e CRAFT. Os frameworks melhoram a consistência e reduzem o tempo gasto escrevendo prompts do zero.' },
+          { q: 'Quando devo construir um framework personalizado em vez de usar CO-STAR ou CRAFT?', a: 'Construa um personalizado quando modificar um framework existente das mesmas 3+ formas para cada prompt de um fluxo de trabalho. Se você sempre adiciona uma restrição de política, uma âncora de persona e uma lista de vocabulário de domínio ao CO-STAR — essas adições devem se tornar componentes de primeiro nível do seu próprio framework.' },
+          { q: 'Quantos componentes um framework de prompts personalizado deve ter?', a: 'Use 3-6 componentes. Menos de 3 é uma técnica, não um framework. Mais de 6 cria atrito — os escritores de prompts omitem seções. Se você precisar de mais de 6, divida em dois frameworks especializados para diferentes tipos de tarefas.' },
+          { q: 'Como testo se meu framework personalizado funciona?', a: 'Aplique o framework a 10 prompts representativos e pontue os resultados de acordo com 3 critérios: completude da tarefa, conformidade de formato e consistência de qualidade. Um framework funcional deve pontuar 8/10 ou melhor nos três. Use PromptQuorum para testar o mesmo framework entre GPT-5.5, Claude 4.6 Sonnet e Gemini 2.5 Pro.' },
+          { q: 'Um framework personalizado pode funcionar em diferentes modelos de IA?', a: 'Sim, se for projetado corretamente. Frameworks agnósticos ao modelo evitam sintaxe específica do modelo e se baseiam em componentes universais (definição de tarefa, restrições, formato de saída). Teste seu framework em pelo menos GPT-5.5 e Claude 4.6 Sonnet antes de finalizá-lo.' },
+          { q: 'Como nomeio um framework de prompts personalizado?', a: 'Nomear com um acrônimo (como REPAIR) o torna memorável e ajuda no onboarding. Escolha letras que correspondam aos 3-6 componentes em ordem. O teste do acrônimo: um novo membro da equipe consegue lembrar todos os componentes apenas com o nome?' },
+          { q: 'Como faço versões de um framework personalizado?', a: 'Salve cada versão do framework em um arquivo com data (ex: repair-v1-2026-05.md) em seu diretório de biblioteca de prompts. Marque mudanças importantes (componente adicionado/removido) como versões maiores. Marque refinamentos (atualizações de definição) como versões menores. Documente o motivo de cada mudança junto ao arquivo de versão.' },
+          { q: 'Posso combinar múltiplos frameworks existentes?', a: 'Você pode combinar componentes de CO-STAR, CRAFT e RISEN — mas trate o resultado como um novo framework personalizado, não como um híbrido. Nomeie-o, documente-o e teste-o como se fosse original. Combinar sem formalizar apenas cria um padrão ad hoc não documentado.' },
+        ],
+      },
+      related_reading: {
+        title: 'Leituras relacionadas',
+        items: [
+          { title: 'Framework CO-STAR: Componentes e quando usá-lo', url: '/pt/prompt-engineering/co-star-framework' },
+          { title: 'Framework CRAFT: Contexto, Papel, Ação, Formato, Objetivo', url: '/pt/prompt-engineering/craft-framework' },
+          { title: 'Framework RISEN: Papel, Instruções, Etapas, Objetivo Final, Restrição', url: '/pt/prompt-engineering/risen-framework' },
+          { title: 'Qual framework de prompts você deve usar?', url: '/pt/prompt-engineering/which-framework-to-use' },
+          { title: 'Seleção de framework de prompts para equipes', url: '/pt/prompt-engineering/prompt-framework-selection-for-teams' },
+          { title: 'Configuração de prompt engineering para equipes pequenas', url: '/pt/prompt-engineering/pe-setup-small-teams' },
+        ],
+      },
+      sources: {
+        title: 'Fontes',
+        items: [
+          { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
+          { title: 'Anthropic Prompt Engineering Documentation', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
+          { title: 'PromptQuorum Multi-Model Testing', url: 'https://www.promptquorum.com/features' },
+        ],
+      },
+
+      faqSection: {
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'Qual é a diferença entre uma técnica de prompt e um framework de prompt?', a: 'Uma técnica é uma instrução ou método único (por exemplo, "pense passo a passo"). Um framework é uma estrutura reutilizável com 3+ componentes que define como os prompts devem ser construídos. Frameworks são repetíveis; técnicas são ad hoc.' },
+          { q: 'Quando devo construir um framework personalizado em vez de usar CO-STAR, CRAFT ou RISEN?', a: 'Construa-o quando aplicar repetidamente as mesmas 3+ modificações a um framework existente para cada prompt de um fluxo de trabalho. Se você sempre adiciona uma restrição de política, terminologia de domínio e esquema de saída ao CO-STAR, esses devem se tornar componentes do seu próprio framework.' },
+          { q: 'Um framework personalizado pode funcionar em diferentes modelos de IA?', a: 'Sim, se for projetado corretamente. Evite sintaxe específica do modelo e construa em torno de componentes universais (tarefa, restrições, formato de saída). Teste no GPT-5.5 e Claude antes de finalizar. Se o framework precisar de reformulação por modelo, simplifique-o.' },
+          { q: 'Quantos componentes meu framework personalizado deve ter?', a: 'Use 3-6 componentes. Menos de 3 é uma técnica, não um framework. Mais de 6 cria atrito e os escritores omitem seções. Se precisar de mais, divida em dois frameworks especializados para diferentes tipos de tarefas.' },
+          { q: 'Como testo se meu framework personalizado realmente funciona?', a: 'Aplique-o a 10 prompts representativos do seu fluxo de trabalho. Pontue os resultados de acordo com três critérios: (1) completude da tarefa, (2) conformidade de formato, (3) consistência de qualidade. Um framework funcional pontua 8/10 ou melhor nos três. Teste entre múltiplos modelos usando PromptQuorum.' },
+          { q: 'Como devo nomear um framework personalizado?', a: 'Use um acrônimo que mapeie seus componentes em ordem (como REPAIR). O teste do acrônimo: um novo membro da equipe consegue lembrar todos os componentes apenas com o nome? Se não, simplifique sua lista de componentes.' },
+          { q: 'Posso combinar componentes de CO-STAR, CRAFT e RISEN?', a: 'Sim, mas trate-o como um novo framework, não como um híbrido. Nomeie-o, documente-o, teste-o e salve no controle de versão. Combinar sem formalizar apenas cria um padrão ad hoc não documentado.' },
+          { q: 'Como faço versões de um framework personalizado?', a: 'Salve cada versão em um arquivo com data (ex: repair-v1-2026-05.md) em sua biblioteca de prompts. Marque mudanças importantes (componente adicionado/removido) como versões maiores. Marque refinamentos (atualizações de definição) como versões menores. Documente o motivo de cada mudança.' },
+          { q: 'O que devo documentar para meu framework personalizado?', a: 'Escreva uma especificação de uma página: (1) nome e objetivo do framework, (2) definições de 3-6 componentes com exemplos, (3) um modelo preenchível, (4) 3 prompts de exemplo completos e anotados usando o framework. Salve no controle de versão junto à sua biblioteca de prompts.' },
+          { q: 'Como faço minha equipe usar o framework personalizado que criei?', a: 'Comece com uma sessão de 30 minutos usando exemplos de tarefas reais. Teste juntos em 2-3 prompts. Crie uma especificação de uma página compartilhável. Rastreie métricas de conformidade e impacto (taxa de sucesso de tarefas, consistência de resultados) durante o primeiro mês. Itere com base no feedback.' },
+        ],
+      },
+    },
+  },
+
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Frameworks',

@@ -1596,7 +1596,7 @@ while True:
       headline: 'WeChat + LLM local: Guia para desenvolvedores 2026',
       description: 'Conecte o WeChat a um LLM local usando o WeChatFerry e o Ollama. Três padrões de integração, recomendações de modelos, configuração de servidor mini PC e conformidade com a DSL chinesa.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/wechat-local-llm-integration-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
@@ -1616,7 +1616,7 @@ while True:
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       mainEntity: [
         { '@type': 'Question', name: 'O WeChatFerry funciona com o WeChat para Mac?', acceptedAnswer: { '@type': 'Answer', text: 'Não. O WeChatFerry intercepta as DLLs do cliente WeChat PC do Windows e não é compatível com o WeChat para Mac. No Mac, use uma VM do Windows ou um padrão de webhook HTTP.' } },
         { '@type': 'Question', name: 'Qual modelo do Ollama é melhor para chats em chinês no WeChat?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — desenvolvido pela Alibaba com tokenização CJK nativa, 5.5 GB de VRAM e entre 30–40% mais eficiente com texto em chinês que Llama ou Mistral.' } },

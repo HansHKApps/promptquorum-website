@@ -3097,7 +3097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Agentes de IA locais em 2026: o que realmente funciona (e o que ainda falha)',
       description: '6 stacks de agentes de IA locais testados em 5 tarefas reais. 2 funcionam de forma confiável, 3 falham de maneiras que os demos escondem, 1 é inutilizável. Cline, LangGraph, AutoGPT e MetaGPT avaliados.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/autonomous-local-agents-actually-work?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

@@ -3389,7 +3389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Melhores monitores para desenvolvimento de IA e trabalho com LLM 2026',
       description: 'Quatro categorias de monitores comparadas para desenvolvimento de IA e LLM: 4K de 27 polegadas, ultrawide de 34 polegadas, super-ultrawide de 40 polegadas e 1440p econômico, com uma recomendação para cada estilo de trabalho.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-monitors-ai-development-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

@@ -3103,7 +3103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       url: 'https://www.promptquorum.com/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag?lang=pt',
       speakable: {
         '@type': 'SpeakableSpecification',
@@ -3127,7 +3127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        inLanguage: 'pt',
+        inLanguage: 'pt-BR',
         mainEntity: [
           {
             '@type': 'Question',

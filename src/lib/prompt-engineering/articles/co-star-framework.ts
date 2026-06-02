@@ -969,6 +969,303 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    pt: {
+      freshness_tier: 'evergreen',
+      theme: 'Frameworks',
+      title: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência, Resposta — Guia Completo',
+      seoTitle: 'Framework CO-STAR: Estruture Prompts Complexos em 6 Passos',
+      metaDescription: 'Os 6 campos do CO-STAR dão controle sobre cada variável de saída: voz, tom, audiência, formato. Modelos completos e tabela comparativa vs CRAFT, RISEN.',
+      ogDescription: 'CO-STAR: framework de prompt de 6 componentes. Domine o controle de voz e tom.',
+      twitterDescription: 'CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência, Resposta. Controle cada aspecto da qualidade e voz da saída de IA.',
+      intro: 'O Framework CO-STAR é um formato de prompt estruturado que ajuda você a projetar instruções claras e de múltiplas etapas para tarefas complexas ao definir Contexto, Objetivo, Estilo, Tom, Audiência e Resposta em uma única mensagem coerente. No PromptQuorum, o Framework CO-STAR está disponível como opção integrada que qualquer usuário pode selecionar e aplicar em todos os modelos compatíveis.',
+      publishDate: '2026-03-24',
+      readTime: '8 min de leitura',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Framework CO-STAR',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/co-star-framework?lang=pt',
+        inLanguage: 'pt-BR',
+        headline: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência, Resposta',
+        description: 'Como funciona o Framework CO-STAR (Contexto, Objetivo, Estilo, Tom, Audiência, Resposta), quando usá-lo e como o PromptQuorum o oferece como opção integrada.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-05-04',
+        keywords: ['Framework CO-STAR', 'Contexto Objetivo Estilo Tom Audiência Resposta', 'frameworks de prompt', 'prompt engineering', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Frameworks de Prompt' },
+          { '@type': 'Thing', name: 'Modelos de Linguagem de Grande Escala' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          { '@type': 'Question', name: 'O que significa CO-STAR?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR significa Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. Cada letra representa um componente de um prompt de IA estruturado. Juntos, os seis componentes dão ao modelo um briefing completo — equivalente ao que um escritor humano precisaria para produzir a saída correta na primeira tentativa.' } },
+          { '@type': 'Question', name: 'Quando devo usar CO-STAR em vez de um prompt mais simples?', acceptedAnswer: { '@type': 'Answer', text: 'Use CO-STAR quando múltiplas dimensões importam ao mesmo tempo — quando a saída precisa de uma estrutura específica E tom E deve ser calibrada para uma audiência particular. Se você só precisa de uma resposta factual ou um formato simples, um prompt mais curto ou abordagem de uma etapa é suficiente.' } },
+          { '@type': 'Question', name: 'Em que o CO-STAR difere do CRAFT?', acceptedAnswer: { '@type': 'Answer', text: 'Ambos são frameworks de prompt estruturados mas com ênfases diferentes. CO-STAR (Contexto, Objetivo, Estilo, Tom, Audiência, Resposta) foca nas dimensões de comunicação — quem lê, como deve se sentir. CRAFT (Contexto, Papel, Ação, Formato, Objetivo) foca na execução de tarefas — qual papel o modelo desempenha e que ação realiza.' } },
+          { '@type': 'Question', name: 'Em que o CO-STAR difere do SPECS?', acceptedAnswer: { '@type': 'Answer', text: 'SPECS (Situação, Problema, Exemplos, Restrições, Estilo) está orientado à resolução de problemas — começa de um problema e trabalha em direção a uma solução. CO-STAR está orientado à comunicação — começa de uma audiência e trabalha em direção à mensagem correta.' } },
+          { '@type': 'Question', name: 'Posso usar CO-STAR com modelos locais via Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. CO-STAR é uma técnica no nível do prompt — funciona com qualquer modelo que siga instruções. Os modelos locais respondem à mesma estrutura de seis componentes. Modelos menores podem lidar com menos restrições simultâneas, então priorize os 3-4 componentes mais importantes se usar um modelo abaixo de 7B parâmetros.' } },
+          { '@type': 'Question', name: 'Preciso dos seis componentes CO-STAR em cada prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Não. Contexto e Objetivo são essenciais. Estilo, Tom, Audiência e Resposta melhoram a qualidade mas podem ser omitidos para tarefas simples. Comece com Contexto + Objetivo + Resposta como o prompt CO-STAR mínimo viável.' } },
+          { '@type': 'Question', name: 'Posso combinar CO-STAR com Chain-of-Thought ou APE?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. CO-STAR define O QUE o modelo deve produzir e COMO deve se sentir. Chain-of-Thought ou APE definem como o modelo deve PENSAR. Você pode usar CO-STAR para o briefing e adicionar "Pense passo a passo antes de produzir a resposta final" como instrução adicional.' } },
+          { '@type': 'Question', name: 'O que significa CO-STAR em prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR significa Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. Esses seis componentes trabalham juntos para dar ao modelo de IA um briefing completo.' } },
+          { '@type': 'Question', name: 'Como se usa o método CO-STAR para escrever um prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Preencha cada um dos seis campos CO-STAR: escreva o contexto, estabeleça seu objetivo, especifique o estilo, escolha o tom, identifique a audiência e defina o formato de resposta. Envie os seis componentes juntos como um prompt ao modelo de IA.' } },
+          { '@type': 'Question', name: 'Quais são as melhores alternativas ao framework CO-STAR?', acceptedAnswer: { '@type': 'Answer', text: 'As principais alternativas incluem RTF (Papel, Tarefa, Formato — mais simples, 3 componentes), CRAFT (Contexto, Papel, Ação, Formato, Objetivo — orientado a tarefas), SPECS (Situação, Problema, Exemplos, Restrições, Estilo — resolução de problemas) e TRACE (Tarefa, Requisitos, Ações, Contexto, Exemplos — orientado ao raciocínio).' } },
+          { '@type': 'Question', name: 'Como o CO-STAR se compara ao RISEN, CRAFT e outros frameworks?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR (6 componentes, centrado na audiência) é para tarefas com muita comunicação. CRAFT (5 componentes, orientado ao papel) é para a execução de tarefas. RISEN enfatiza o papel e os objetivos. SPECS foca na resolução de problemas com restrições. TRACE adiciona transparência ao raciocínio.' } },
+        ],
+      },
+      sections: {
+        whatIsCOSTAR: {
+          title: 'O que é o Framework CO-STAR',
+          content: [
+            '**O Framework CO-STAR é um padrão de prompt engineering para instruções complexas onde você precisa que os modelos entendam não apenas o que fazer, mas como, para quem e em que estilo.** Em vez de escrever uma única frase vaga, você divide seu prompt em componentes CO-STAR explícitos para que todos os modelos de linguagem recebam um briefing completo.',
+            'O acrônimo se expande tipicamente como:',
+          ],
+          items: [
+            'Contexto: Informações de fundo e fatos relevantes.',
+            'Objetivo: O único objetivo principal da tarefa.',
+            'Estilo: Preferências estruturais ou retóricas (por exemplo "explicação passo a passo").',
+            'Tom: O sabor emocional ou a voz (por exemplo "formal", "amigável", "direto").',
+            'Audiência: Quem irá ler ou usar a saída.',
+            'Resposta: O formato exato de saída que você espera.',
+          ],
+        },
+        whyCOSTARWorks: {
+          title: 'Por que o Framework CO-STAR funciona',
+          content: [
+            '**O Framework CO-STAR funciona porque reflete como os humanos escrevem bons briefings: torna o modelo ciente do contexto, objetivo e audiência antes de começar a gerar.** Quando esses elementos são explícitos, o modelo não precisa inferi-los de uma instrução curta e ambígua.',
+            'Isso leva a vários benefícios práticos:',
+          ],
+          items: [
+            'Maior consistência entre execuções, porque a mesma estrutura é reutilizada.',
+            'Colaboração mais fácil, pois o prompt se lê como uma especificação compartilhada.',
+            'Melhor comparabilidade entre modelos, porque todos os provedores veem o mesmo detalhamento.',
+          ],
+        },
+        components: {
+          title: 'Os Componentes CO-STAR em Detalhe',
+          content: [
+            '**Um prompt CO-STAR sólido inclui os seis componentes, cada um escrito como uma instrução ou frase curta e clara.** Você pode formatá-los como linhas rotuladas ou como um parágrafo estruturado.',
+            'Descrições típicas dos componentes:',
+          ],
+          items: [
+            'Contexto: Do que trata a tarefa, o que já aconteceu e quaisquer restrições ou fontes de dados.',
+            'Objetivo: Uma declaração concisa de como é o sucesso.',
+            'Estilo: Se você quer uma narrativa, uma lista, um guia passo a passo ou outra estrutura.',
+            'Tom: Se a voz deve ser formal, neutra, conversacional ou outra.',
+            'Audiência: O grupo específico ao qual você está se dirigindo, incluindo seu papel e nível de conhecimento.',
+            'Resposta: O formato necessário, como cabeçalhos, marcadores, limite de comprimento ou campos JSON.',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Exemplo: Prompt CO-STAR ruim vs bom',
+          content: [
+            '**O valor do Framework CO-STAR fica claro quando você compara um prompt não estruturado com um prompt baseado em CO-STAR para a mesma tarefa.**',
+            '**[Prompt Ruim]**',
+            '"Explique as APIs para nossos clientes."',
+            '**[Prompt Bom]**',
+            '"Contexto: Oferecemos uma plataforma SaaS e estamos adicionando uma API para que os clientes possam integrar nosso produto com suas ferramentas internas. Muitos deles são usuários empresariais não técnicos. Objetivo: Explicar o que é uma API e por que importa para o nosso produto, de uma forma que reduza o medo e incentive a adoção. Estilo: Use seções curtas com cabeçalhos H2 e marcadores para ideias-chave. Inclua uma analogia simples do mundo real. Tom: Claro, tranquilizador e não técnico. Evite jargão onde possível e explique os termos técnicos necessários. Audiência: Usuários empresariais e gerentes sem experiência em programação. Resposta: Artigo de 700-900 palavras com introdução, 3-4 seções principais e uma conclusão curta que os convide a falar com seu gerente de conta."',
+          ],
+        },
+        whenToUse: {
+          title: 'Quando usar o Framework CO-STAR',
+          content: [
+            '**Você deve usar o Framework CO-STAR quando enfrenta tarefas com múltiplas restrições onde audiência, estrutura e tom importam ao mesmo tempo.** Isso inclui muitos fluxos de trabalho comuns em produto, marketing, sucesso do cliente e educação.',
+            'Casos de uso típicos:',
+          ],
+          items: [
+            'Escrever documentação de produtos ou guias de integração.',
+            'Criar artigos educacionais ou explicadores para audiências não especializadas.',
+            'Redigir memorandos internos estruturados, notas de estratégia ou documentos de políticas.',
+            'Preparar macros de suporte ou conteúdo do centro de ajuda que deve ser consistente em tom.',
+          ],
+        },
+        howToWrite: {
+          title: 'Como escrever um prompt CO-STAR na prática',
+          content: [
+            '**Escrever um prompt CO-STAR é simples se você pensar nisso como preencher seis linhas de um briefing e depois enviá-las juntas como uma instrução.**',
+            'Um modelo genérico se parece com isso:',
+          ],
+          items: [
+            'Contexto: [O que está acontecendo, sobre o que é, contexto relevante.]',
+            'Objetivo: [Único objetivo principal para este prompt.]',
+            'Estilo: [Estrutura preferida, como marcadores, narrativa ou passo a passo.]',
+            'Tom: [Voz e sensação emocional que você deseja.]',
+            'Audiência: [Quem lerá isso e o que eles sabem.]',
+            'Resposta: [Formato exato, comprimento e requisitos especiais.]',
+          ],
+        },
+        howPQImplements: {
+          title: 'Como o PromptQuorum implementa o Framework CO-STAR',
+          content: [
+            '**O PromptQuorum é uma ferramenta de despacho de IA multi-modelo que inclui o Framework CO-STAR como uma de suas opções de prompt integradas para que os usuários possam aplicar o prompting Contexto–Objetivo–Estilo–Tom–Audiência–Resposta sem memorizar o padrão.**',
+            'Dentro do PromptQuorum, você pode:',
+          ],
+          items: [
+            'Preencher os campos CO-STAR para uma tarefa e despachar o prompt resultante para múltiplos modelos de linguagem, incluindo opções proprietárias e de código aberto.',
+            'Salvar prompts CO-STAR como modelos para fluxos de trabalho recorrentes, como atualizações de documentação, anúncios de recursos ou resumos trimestrais.',
+            'Compartilhar esses modelos com sua equipe para que todos usem a mesma estrutura, mesmo que sejam novos em prompt engineering.',
+          ],
+        },
+        usingCOSTARWithOthers: {
+          title: 'Usar CO-STAR junto a outros frameworks',
+          content: [
+            '**Você deve posicionar o Framework CO-STAR junto a outros frameworks de prompt atribuindo a cada um um papel claro no seu fluxo de trabalho.**',
+            'Uma estratégia simples é:',
+          ],
+          items: [
+            'Use CO-STAR para explicações estruturadas, guias e peças de comunicação.',
+            'Use CRAFT quando focar em marketing puro e voz da marca para canais específicos.',
+            'Use frameworks de uma etapa ou estilo especificação para saídas com formato estrito como relatórios ou JSON.',
+            'Use frameworks orientados ao raciocínio como Analisar–Planejar–Executar quando quiser que o modelo exponha seu pensamento intermediário.',
+          ],
+        },
+
+        keyTakeaways: {
+          title: 'Pontos-chave',
+          isTldr: true,
+          content: [
+            '**CO-STAR** = Contexto, Objetivo, Estilo, Tom, Audiência, Resposta — seis componentes rotulados que eliminam as suposições dos prompts de IA',
+            'CO-STAR é mais forte para **tarefas de comunicação com múltiplas restrições** onde audiência, estrutura e tom importam simultaneamente',
+            'O framework reflete como os humanos escrevem bons briefings: tornar o contexto, objetivo e audiência explícitos antes que o modelo comece a gerar',
+            'Os prompts CO-STAR são portáteis em todos os modelos de linguagem — APIs na nuvem e modelos locais',
+            'Use CO-STAR para documentação, guias de integração, explicadores, memorandos internos e conteúdo do centro de ajuda',
+            'Para tarefas de raciocínio puro, use APE ou Chain-of-Thought. Para tarefas simples de uma saída, use Single-Step.',
+          ],
+        },
+
+        quickFacts: {
+          title: 'Dados rápidos',
+          items: [
+            '**CO-STAR =** Contexto, Objetivo, Estilo, Tom, Audiência, Resposta',
+            '**Melhor para:** Tarefas de comunicação com múltiplas restrições (documentação, explicadores, integração, memorandos)',
+            '**Componentes:** 6 — mais que APE (3), comparável a CRAFT (5) e SPECS (5)',
+            '**Mínimo viável:** Contexto + Objetivo + Resposta (3 de 6)',
+            '**Ponto forte:** Consciência de Audiência e Tom — CO-STAR é o framework mais centrado na audiência',
+            '**Funciona em:** Todos os modelos de linguagem — nuvem e local',
+          ],
+        },
+
+        frameworkComparison: {
+          title: 'CO-STAR vs Outros Frameworks de Prompt',
+          columns: ['Framework', 'Componentes', 'Foco', 'Melhor Para'],
+          rows: [
+            { 'Framework': 'CO-STAR', 'Componentes': '6 (Contexto, Objetivo, Estilo, Tom, Audiência, Resposta)', 'Foco': 'Comunicação centrada na audiência', 'Melhor Para': 'Documentação, explicadores, conteúdo para clientes' },
+            { 'Framework': 'CRAFT', 'Componentes': '5 (Contexto, Papel, Ação, Formato, Objetivo)', 'Foco': 'Execução de tarefas definida por papel', 'Melhor Para': 'Marketing, conteúdo específico por canal' },
+            { 'Framework': 'SPECS', 'Componentes': '5 (Situação, Problema, Exemplos, Restrições, Estilo)', 'Foco': 'Resolução de problemas com exemplos', 'Melhor Para': 'Tarefas analíticas, resolução de problemas' },
+            { 'Framework': 'APE', 'Componentes': '3 (Analisar, Planejar, Executar)', 'Foco': 'Raciocínio visível', 'Melhor Para': 'Análise complexa, estratégia, revisão de código' },
+            { 'Framework': 'RTF', 'Componentes': '3 (Papel, Tarefa, Formato)', 'Foco': 'Estrutura mínima', 'Melhor Para': 'Tarefas rápidas, saídas simples' },
+            { 'Framework': 'Single-Step', 'Componentes': '1 (uma instrução)', 'Foco': 'Velocidade', 'Melhor Para': 'Tarefas simples e bem definidas' },
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Erros comuns com o Framework CO-STAR',
+          numberedItems: [
+            '**Escrever o Contexto como uma única frase vaga.** Por que prejudica: "Somos uma empresa SaaS" diz ao modelo quase nada. Solução: Inclua contexto específico: que produto, que problema, o que já aconteceu, quais dados estão disponíveis.',
+            '**Confundir Estilo e Tom.** Por que prejudica: Estilo = estrutura (marcadores, cabeçalhos, passo a passo). Tom = voz (formal, amigável, urgente). Solução: Estilo responde "como parece?" Tom responde "como soa?" Mantenha-os em linhas separadas.',
+            '**Omitir a Audiência para documentos internos.** Por que prejudica: "Interno" não é uma audiência. Um memorando para engenheiros se lê diferente de um memorando para o CFO. Solução: Nomeie o papel do leitor, seu nível de conhecimento e o que ele fará com a saída.',
+            '**Tornar a Resposta vaga demais ("um documento").** Por que prejudica: O modelo escolhe seu próprio comprimento, estrutura e formato — que muda em cada execução. Solução: Especifique o formato (marcadores, cabeçalhos, JSON), comprimento (número de palavras ou seções) e requisitos estruturais (introdução, conclusão, CTA).',
+          ],
+        },
+
+        expandedFAQ: {
+          title: 'Perguntas frequentes',
+          faqs: [
+            {
+              q: 'O que significa CO-STAR?',
+              a: 'CO-STAR significa Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. Cada letra representa um componente de um prompt de IA estruturado. Juntos, os seis componentes dão ao modelo um briefing completo — equivalente ao que um escritor humano precisaria para produzir a saída correta na primeira tentativa.'
+            },
+            {
+              q: 'Quando devo usar CO-STAR em vez de um prompt mais simples?',
+              a: 'Use CO-STAR quando múltiplas dimensões importam ao mesmo tempo — quando a saída precisa de uma estrutura específica E tom E deve ser calibrada para uma audiência particular. Se você só precisa de uma resposta factual ou um formato simples, um prompt mais curto ou abordagem de uma etapa é suficiente.'
+            },
+            {
+              q: 'Em que o CO-STAR difere do CRAFT?',
+              a: 'Ambos são frameworks de prompt estruturados mas com ênfases diferentes. CO-STAR (Contexto, Objetivo, Estilo, Tom, Audiência, Resposta) foca nas dimensões de comunicação — quem lê, como deve se sentir. CRAFT (Contexto, Papel, Ação, Formato, Objetivo) foca na execução de tarefas — qual papel o modelo desempenha e que ação realiza.'
+            },
+            {
+              q: 'Em que o CO-STAR difere do SPECS?',
+              a: 'SPECS (Situação, Problema, Exemplos, Restrições, Estilo) está orientado à resolução de problemas — começa de um problema e trabalha em direção a uma solução. CO-STAR está orientado à comunicação — começa de uma audiência e trabalha em direção à mensagem correta.'
+            },
+            {
+              q: 'Posso usar CO-STAR com modelos locais via Ollama?',
+              a: 'Sim. CO-STAR é uma técnica no nível do prompt — funciona com qualquer modelo que siga instruções. Os modelos locais respondem à mesma estrutura de seis componentes.'
+            },
+            {
+              q: 'Preciso dos seis componentes CO-STAR em cada prompt?',
+              a: 'Não. Contexto e Objetivo são essenciais. Estilo, Tom, Audiência e Resposta melhoram a qualidade mas podem ser omitidos para tarefas simples. Comece com Contexto + Objetivo + Resposta como o prompt CO-STAR mínimo viável.'
+            },
+            {
+              q: 'Posso combinar CO-STAR com Chain-of-Thought ou APE?',
+              a: 'Sim. CO-STAR define O QUE o modelo deve produzir e COMO deve se sentir. Chain-of-Thought ou APE definem como o modelo deve PENSAR. Você pode usar CO-STAR para o briefing e adicionar "Pense passo a passo antes de produzir a resposta final" como instrução adicional.'
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Fontes',
+          items: [
+            '[White et al. (2023). "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." arXiv:2302.11382](https://arxiv.org/abs/2302.11382)',
+            '[Anthropic. "Prompt Engineering Guide." docs.anthropic.com](https://docs.anthropic.com)',
+            '[OpenAI. "Prompt Engineering Guide." platform.openai.com](https://platform.openai.com/docs/guides/prompt-engineering)',
+            '[Google. "Gemini API: Prompting Strategies." ai.google.dev](https://ai.google.dev)',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Leituras relacionadas',
+          items: [
+            '[Qual framework de prompt você deve usar?](/pt/prompt-engineering/which-prompt-framework-should-you-use)',
+            '[Framework CRAFT](/pt/prompt-engineering/craft-framework)',
+            '[Framework SPECS](/pt/prompt-engineering/specs-framework)',
+            '[Framework APE](/pt/prompt-engineering/ape-framework)',
+            '[5 Blocos de Construção que Todo Prompt Precisa](/pt/prompt-engineering/5-building-blocks-every-prompt-needs)',
+            '[Prompting de Persona](/pt/prompt-engineering/persona-prompting)',
+          ],
+        },
+
+        howToStart: {
+          title: 'Como usar o Framework CO-STAR',
+          numberedItems: [
+            '**Contexto:** Forneça informações de fundo relevantes que o modelo precisa. Exemplo: "Oferecemos uma plataforma SaaS adicionando uma API. Muitos clientes são usuários empresariais não técnicos."',
+            '**Objetivo:** Diga o que você quer em uma frase. Exemplo: "Explique o que é uma API e por que importa, de uma forma que reduza o medo e incentive a adoção."',
+            '**Estilo:** Especifique a estrutura. Exemplo: "Use seções curtas com cabeçalhos H2 e marcadores. Inclua uma analogia simples do mundo real."',
+            '**Tom:** Defina a voz e o registro emocional. Exemplo: "Claro, tranquilizador e não técnico. Evite jargão; explique os termos técnicos necessários."',
+            '**Audiência:** Nomeie quem lerá a saída e seu nível de conhecimento. Exemplo: "Usuários empresariais e gerentes sem experiência em programação."',
+            '**Resposta:** Indique o formato exato, o comprimento e o entregável. Exemplo: "Artigo de 700-900 palavras com introdução, 3-4 seções principais e uma conclusão convidando-os a contatar seu gerente de conta."',
+          ],
+        },
+
+        faqSection: {
+          title: 'Perguntas frequentes',
+          faqs: [
+            { q: 'O que significa CO-STAR?', a: 'CO-STAR significa Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. É um framework de seis partes que ajuda você a escrever prompts claros e estruturados ao definir explicitamente cada elemento que influencia como o modelo produz a saída.' },
+            { q: 'Em que o CO-STAR difere do Chain-of-Thought?', a: 'Chain-of-Thought pede ao modelo "pensar passo a passo". CO-STAR define O QUE deve ser a saída e COMO deve se sentir. Eles resolvem problemas diferentes: CoT melhora o raciocínio; CO-STAR melhora a consistência da saída e o alinhamento com a audiência.' },
+            { q: 'Quando devo usar CO-STAR em vez de prompts mais simples?', a: 'Use CO-STAR quando a qualidade da saída depende do alinhamento com a audiência, o tom, o estilo ou o formato. Para perguntas factuais simples, prompts mais simples são suficientes.' },
+            { q: 'Posso usar CO-STAR com qualquer modelo de linguagem?', a: 'Sim. CO-STAR funciona com todos os principais modelos de linguagem: APIs proprietárias, modelos de código aberto e modelos locais como Ollama. O framework é agnóstico ao modelo.' },
+            { q: 'Devo seguir CO-STAR exatamente?', a: 'Não. CO-STAR é um guia, não um modelo rígido. Omita componentes que não se aplicam à sua tarefa, reordene-os ou combine-os com outros frameworks.' },
+            { q: 'Como sei se meu prompt CO-STAR é eficaz?', a: 'Teste-o em 3-5 entradas representativas e verifique: (1) A saída corresponde ao estilo especificado? (2) O tom é consistente com seu briefing? (3) A resposta aborda a audiência que você nomeou?' },
+            { q: 'Posso combinar CO-STAR com outros frameworks?', a: 'Sim. CO-STAR define O QUE e COMO deve se sentir a saída. Chain-of-Thought ou APE definem COMO o modelo deve PENSAR.' },
+            { q: 'Devo colocar os elementos CO-STAR em uma ordem específica?', a: 'Não é exigida uma ordem estrita. Comece com Objetivo para que o modelo saiba o que você quer. Depois adicione Contexto, Audiência, Estilo e Tom conforme necessário.' },
+            { q: 'Preciso dos seis componentes CO-STAR?', a: 'Não. Contexto e Objetivo são essenciais. Estilo, Tom, Audiência e Resposta melhoram a qualidade mas podem ser omitidos para tarefas simples.' },
+            { q: 'O CO-STAR funciona com modelos locais como Ollama?', a: 'Sim, absolutamente. CO-STAR é uma técnica no nível do prompt — funciona com qualquer modelo que siga instruções.' },
+          ],
+        },
+      },
+    },
     fr: {
       freshness_tier: 'evergreen',
       theme: 'Frameworks',

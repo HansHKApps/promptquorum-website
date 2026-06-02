@@ -992,6 +992,338 @@ export const article: Partial<Record<Language, PEArticle>> = {
       }
     }
   },
+
+  pt: {
+    theme: 'Tools & Platforms',
+    title: 'Melhores ferramentas para Structured Output e JSON Mode (2026)',
+    seoTitle: 'Melhores ferramentas de Structured Output e JSON Mode 2026',
+    metaDescription: '6 ferramentas de structured output comparadas: Instructor, Outlines, Pydantic AI, LangChain, Marvin e PromptQuorum. Preços e suporte a modelos locais.',
+    ogTitle: 'Melhores ferramentas para Structured Output e JSON Mode (2026)',
+    ogDescription: '6 ferramentas de structured output LLM comparadas: Instructor para tentativas, Outlines para constrained decoding, Pydantic AI para agentes. Teste consistência com PromptQuorum.',
+    twitterTitle: 'Melhores ferramentas para Structured Output e JSON Mode (2026)',
+    twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs LangChain vs Marvin — qual ferramenta de structured output se encaixa com seu stack? Comparativo lado a lado (2026).',
+    intro: '**Seis ferramentas dominam o structured output em 2026: Instructor para extração Pydantic, Outlines para constrained decoding, Pydantic AI para agentes type-safe, LangChain para APIs unificadas, Marvin para extração baseada em decoradores e PromptQuorum para testes multi-modelo. Cada uma resolve um gargalo diferente do fluxo de trabalho.**',
+    publishDate: '2026-04-30',
+    lastFactChecked: '2026-04-30 — todos os preços, links do GitHub e comparativos de recursos verificados contra documentação oficial',
+    readTime: '10 min de leitura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'ferramentas de structured output para LLMs',
+    aboutTopics: ['ferramentas de structured output', 'bibliotecas de validação LLM', 'conformidade de esquemas'],
+    audience: 'Desenvolvedores que constroem aplicações LLM em produção com requisitos de structured output',
+    toc: [
+      { label: 'Problemas que cada ferramenta resolve', anchor: '#which-problem-each-tool-solves' },
+      { label: 'Instructor: extração Pydantic', anchor: '#instructor' },
+      { label: 'Outlines: constrained decoding', anchor: '#outlines' },
+      { label: 'Pydantic AI: agentes type-safe', anchor: '#pydantic-ai' },
+      { label: 'LangChain: APIs unificadas', anchor: '#langchain-structured-output' },
+      { label: 'Marvin: extração baseada em decoradores', anchor: '#marvin' },
+      { label: 'PromptQuorum: testes multi-modelo', anchor: '#promptquorum' },
+      { label: 'Comparativo lado a lado', anchor: '#side-by-side-comparison' },
+      { label: 'Escolhendo a ferramenta certa', anchor: '#how-to-choose' },
+      { label: 'Adicionando structured output passo a passo', anchor: '#how-to-add-structured-output' },
+      { label: 'Erros comuns de structured output', anchor: '#common-mistakes' },
+      { label: 'Perguntas frequentes', anchor: '#faq' },
+    ],
+    leadAnswerBlock: '**Escolha conforme onde seus modelos executam: Instructor e Pydantic AI para fluxos de trabalho API-first com tentativas e type safety; Outlines para conformidade garantizada do esquema em modelos locais; LangChain para equipes que já usam chains ou agentes; Marvin para prototipagem rápida baseada em decoradores; PromptQuorum para testes de consistência no GPT, Claude e Gemini antes da produção.**',
+    quickFacts: [
+      'Instructor suporta 20+ provedores LLM (OpenAI, Anthropic, Google, Ollama, vLLM)',
+      'Outlines garante conformidade do esquema no momento da geração de tokens (0% de alucinações)',
+      'Pydantic AI executa completamente async e suporta validação de conversas multi-turn',
+      'with_structured_output() do LangChain envolve uniformemente 6+ APIs de provedores principais',
+      'Sintaxe de decorador Marvin: @marvin.fn assinatura → vinculação automática de chamada LLM',
+      'PromptQuorum testa o mesmo prompt em 25+ modelos para consistência'
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Melhores ferramentas para Structured Output e JSON Mode (2026)',
+      description: 'Compara seis bibliotecas para structured output LLM: Instructor, Outlines, Pydantic AI, LangChain, Marvin e PromptQuorum. Classificadas por conformidade de esquema, suporte de linguagem, compatibilidade com modelos locais e preços.',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-04-30',
+      dateModified: '2026-04-30',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/best-tools-structured-output-json?lang=pt',
+      inLanguage: 'pt-BR',
+      proficiencyLevel: 'Advanced',
+      about: [
+        { '@type': 'Thing', name: 'Bibliotecas de Structured Output' },
+        { '@type': 'Thing', name: 'Validação de Esquemas' },
+        { '@type': 'Thing', name: 'Wrappers de API LLM' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Instructor' },
+        { '@type': 'SoftwareApplication', name: 'Outlines' },
+        { '@type': 'SoftwareApplication', name: 'Pydantic AI' },
+        { '@type': 'SoftwareApplication', name: 'LangChain' },
+        { '@type': 'SoftwareApplication', name: 'Marvin' },
+        { '@type': 'SoftwareApplication', name: 'PromptQuorum' }
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Melhores ferramentas de structured output LLM (2026)',
+      description: 'Seis bibliotecas líderes para forçar structured output de modelos de linguagem.',
+      numberOfItems: 6,
+      inLanguage: 'pt-BR',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Instructor', description: 'Biblioteca Python/TypeScript para extração baseada em Pydantic de qualquer LLM. Open-source Apache 2.0.' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'Biblioteca de constrained decoding para conformidade garantizada do esquema em modelos locais.' },
+        { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: 'Framework de agentes type-safe com validação de structured output integrada.' },
+        { '@type': 'ListItem', position: 4, name: 'LangChain', description: 'Camada de API unificada para structured output no OpenAI, Anthropic, Google e modelos locais.' },
+        { '@type': 'ListItem', position: 5, name: 'Marvin', description: 'Framework baseado em decoradores que converte assinaturas de funções Python em chamadas LLM com tipos.' },
+        { '@type': 'ListItem', position: 6, name: 'PromptQuorum', description: 'Plataforma de testes multi-modelo para validar a consistência do structured output no GPT, Claude e Gemini.' }
+      ]
+    },
+    sections: {
+      keyTakeaways: {
+        isTldr: true,
+        callouts: [
+          {
+            type: 'tip',
+            label: 'TL;DR',
+            text: 'Use Instructor para extração Python com tentativas. Use Outlines para conformidade garantizada do esquema em modelos locais. Use Pydantic AI para agentes multi-turn type-safe. Use LangChain se já estiver nesse ecossistema. Use Marvin para prototipagem rápida. Use PromptQuorum para testar a consistência do structured output em todos os modelos antes da produção.'
+          }
+        ],
+        items: [
+          '**Instructor** é a opção Python mais popular — esquemas Pydantic, tentativas automáticas, suporta qualquer API LLM',
+          '**Outlines** garante conformidade do esquema em modelos locais via constrained decoding — risco zero de alucinações',
+          '**Pydantic AI** adiciona type safety a conversas de agentes multi-turn com structured output de primeira classe',
+          '**with_structured_output() do LangChain** unifica o structured output nas APIs da OpenAI, Anthropic e Google',
+          '**Marvin** usa decoradores para prototipagem rápida — converte assinaturas de funções Python em chamadas LLM com tipos',
+          '**PromptQuorum** testa a consistência do structured output em todos os modelos antes da implantação em produção'
+        ]
+      },
+      whichProblem: {
+        id: 'which-problem-each-tool-solves',
+        title: 'Problemas que cada ferramenta resolve',
+        content: '**O structured output requer resolver três problemas interdependentes: definição de esquema, conformidade na API e validação.** Diferentes ferramentas atacam esses problemas de formas diferentes. Instructor gerencia os três em Python com tentativas. Outlines elimina a etapa de validação via constrained decoding. Pydantic AI adiciona type safety para agentes. LangChain envolve as APIs do fornecedor. Marvin prioriza a velocidade do desenvolvedor. PromptQuorum valida a consistência entre todos os modelos.',
+        columns: ['Problema', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
+        rows: [
+          { 'Problema': 'Definir esquema', 'Instructor': 'Modelos Pydantic', 'Outlines': 'JSON Schema / GBNF', 'Pydantic AI': 'Modelos Pydantic', 'LangChain': 'Definições de ferramenta', 'Marvin': 'Decoradores Python' },
+          { 'Problema': 'Forçar na chamada API', 'Instructor': 'Tentativa + validação', 'Outlines': 'Restrição em nível de token', 'Pydantic AI': 'API + validação', 'LangChain': 'Modo JSON do fornecedor', 'Marvin': 'Injeção de prompt' },
+          { 'Problema': 'Validar resposta', 'Instructor': 'Automático', 'Outlines': 'Garantido na geração', 'Pydantic AI': 'Verificado por tipo', 'LangChain': 'Manual', 'Marvin': 'Automático' }
+        ]
+      },
+      instructor: {
+        id: 'instructor',
+        title: 'Instructor: extração Pydantic',
+        content: '**Instructor é a biblioteca de structured output mais adotada. Envolve qualquer API LLM — OpenAI GPT-4.5, Claude 4.8, Gemini, Ollama, vLLM — e retorna modelos Pydantic validados em vez de texto simples.** Instructor gerencia tentativas automaticamente quando a validação falha, tornando-o adequado para produção sem tratamento adicional de erros.',
+        items: [
+          'Compatível com 20+ provedores LLM (OpenAI, Anthropic, Google, modelos locais via Ollama/vLLM)',
+          'Esquemas Pydantic v2: type hints, regras de validação, descrições de docstring integradas no esquema',
+          'Tentativa automática com backoff em falha de validação — sem necessidade de tratamento manual de erros',
+          'Funciona em Python e TypeScript (via adaptador Node.js)',
+          'Open-source Apache 2.0, mantido ativamente',
+          'Preços: Gratuito (sem custo adicional além das chamadas à API LLM)'
+        ],
+        codeLanguage: 'python',
+        codeBlock: 'import instructor\nfrom pydantic import BaseModel\nfrom openai import OpenAI\n\nclass User(BaseModel):\n    name: str\n    age: int\n\nclient = instructor.from_openai(OpenAI())\nuser = client.chat.completions.create(\n    model="gpt-4o",\n    response_model=User,\n    messages=[{"role": "user", "content": "Extract: John is 25 years old"}]\n)\n# user.name == "John", user.age == 25'
+      },
+      outlines: {
+        id: 'outlines',
+        title: 'Outlines: constrained decoding',
+        content: '**Outlines força a conformidade do esquema no momento da geração de tokens via constrained decoding. Em vez de gerar tokens e depois validar, Outlines limita os tokens válidos em cada etapa para corresponder ao seu esquema.** Isso garante 100% de conformidade do esquema com risco zero de alucinações, tornando-o ideal para modelos locais.',
+        items: [
+          'Funciona com llama.cpp, vLLM, transformers, NVIDIA NIM e qualquer modelo HuggingFace',
+          'Definições de esquema em formato JSON Schema ou GBNF (GGML BNF)',
+          'Conformidade do esquema garantida — sem necessidade de validação pós-geração ou tentativas',
+          'Mais rápido que validação baseada em tentativas (menos tokens desperdiçados)',
+          'Gratuito e open-source (Apache 2.0)',
+          'Ideal para implantação local e fluxos de trabalho sensíveis ao custo'
+        ]
+      },
+      pydanticAi: {
+        id: 'pydantic-ai',
+        title: 'Pydantic AI: agentes type-safe',
+        content: '**Pydantic AI é um framework novo (2025) que combina modelos Pydantic com suporte de primeira classe para conversas de agentes multi-turn. Ele adiciona type safety completo a loops de agentes enquanto força structured output em cada turno.** Projetado para fluxos de trabalho Python async.',
+        items: [
+          'Sistema de tipos Pydantic v2 — suporte completo de IDE e verificação de tipos',
+          'Structured output integrado em cada etapa do agente',
+          'Design async-first para aplicações de alto desempenho',
+          'Suporta OpenAI GPT, Anthropic Claude, Google Gemini e modelos locais via Ollama',
+          'Chamadas de ferramentas integradas — defina ferramentas como funções Python com type hints',
+          'Gratuito (sem custo adicional além das chamadas à API LLM)'
+        ]
+      },
+      langchain: {
+        id: 'langchain-structured-output',
+        title: 'LangChain: APIs unificadas',
+        content: '**LangChain 0.1+ adicionou with_structured_output() a todos os principais modelos de chat. Isso unifica o structured output no OpenAI, Anthropic, Google e modelos locais por trás de uma única API.** Se sua equipe já usa chains ou agentes LangChain, este é o caminho mais fácil para o structured output.',
+        items: [
+          'API unificada: um método .with_structured_output() funciona em todos os provedores',
+          'Converte automaticamente as definições de ferramentas do LangChain para formatos de esquema específicos do fornecedor',
+          'Integra-se perfeitamente com chains, agentes e fluxos de trabalho executáveis',
+          'Suporta modelos Pydantic, TypedDict e definições de esquema OpenAI',
+          'Parte do ecossistema LangChain (sem dependências adicionais)',
+          'Ideal para equipes já investidas em LangChain'
+        ]
+      },
+      marvin: {
+        id: 'marvin',
+        title: 'Marvin: extração baseada em decoradores',
+        content: '**Marvin usa decoradores Python para converter assinaturas de funções em chamadas LLM com tipos. Você define uma assinatura de função com type hints, decora com @marvin.fn e o Marvin gerencia automaticamente a geração de prompts e a validação do structured output.** O caminho mais rápido da ideia ao código funcional.',
+        items: [
+          'Sintaxe de decorador: @marvin.fn converte assinaturas Python em prompts LLM',
+          'Funciona com OpenAI, Anthropic, Google e modelos locais',
+          'Os type hints são convertidos em esquema — mínimo de boilerplate',
+          'Validação e tratamento de erros integrados',
+          'Adequado para prototipagem e fluxos de trabalho pequenos a médios',
+          'Gratuito (preços a confirmar em abril de 2026)'
+        ]
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'PromptQuorum: testes multi-modelo',
+        content: '**PromptQuorum não é uma biblioteca de structured output em si, mas uma plataforma de testes para validar a consistência do structured output entre modelos.** Execute o mesmo prompt simultaneamente contra GPT-4.5, Claude 4.8 Opus, Gemini 3.1 Pro e 20+ modelos mais. Meça a conformidade do esquema, a latência e o custo por modelo.',
+        items: [
+          'Despacho multi-modelo em uma única chamada de API — teste um prompt contra 25+ modelos',
+          'Métricas de conformidade de structured output — taxa de aprovação, latência, custo por modelo',
+          'Identifica modelos que alucinam com seu esquema — evite implantar em modelos pouco confiáveis',
+          'Modo de consenso — encontre acordos entre execuções de modelos independentes',
+          'Funciona com Instructor, Outlines, Pydantic AI, LangChain ou APIs LLM brutas',
+          'Tier gratuito disponível, preços enterprise para testes de alto volume'
+        ]
+      },
+      comparison: {
+        id: 'side-by-side-comparison',
+        title: 'Comparativo lado a lado',
+        columns: ['Ferramenta', 'Ideal para', 'Formato de esquema', 'Linguagem', 'Modelos locais', 'Preço', 'Curva de aprendizado'],
+        rows: [
+          { 'Ferramenta': 'Instructor', 'Ideal para': 'APIs Python + tentativas', 'Formato de esquema': 'Modelos Pydantic', 'Linguagem': 'Python/TypeScript', 'Modelos locais': 'Sim (Ollama)', 'Preço': 'Gratuito', 'Curva de aprendizado': 'Baixa' },
+          { 'Ferramenta': 'Outlines', 'Ideal para': 'Implantação de modelos locais', 'Formato de esquema': 'JSON Schema/GBNF', 'Linguagem': 'Python', 'Modelos locais': 'Sim (nativo)', 'Preço': 'Gratuito', 'Curva de aprendizado': 'Média' },
+          { 'Ferramenta': 'Pydantic AI', 'Ideal para': 'Agentes type-safe', 'Formato de esquema': 'Modelos Pydantic', 'Linguagem': 'Python', 'Modelos locais': 'Sim (Ollama)', 'Preço': 'Gratuito', 'Curva de aprendizado': 'Baixa' },
+          { 'Ferramenta': 'LangChain', 'Ideal para': 'Chains + agentes', 'Formato de esquema': 'Definições de ferramenta', 'Linguagem': 'Python/JS', 'Modelos locais': 'Sim', 'Preço': 'Gratuito', 'Curva de aprendizado': 'Média' },
+          { 'Ferramenta': 'Marvin', 'Ideal para': 'Prototipagem rápida', 'Formato de esquema': 'Type hints', 'Linguagem': 'Python', 'Modelos locais': 'Sim', 'Preço': 'Gratuito', 'Curva de aprendizado': 'Muito baixa' },
+          { 'Ferramenta': 'PromptQuorum', 'Ideal para': 'Testes multi-modelo', 'Formato de esquema': 'API-agnóstico', 'Linguagem': 'API-first', 'Modelos locais': 'Via proxy OpenAI', 'Preço': 'Gratuito + enterprise', 'Curva de aprendizado': 'Baixa' }
+        ]
+      },
+      decision: {
+        id: 'how-to-choose',
+        title: 'Escolhendo a ferramenta certa',
+        content: 'Comece respondendo três perguntas: (1) Você já usa LangChain? (2) Você precisa de suporte a modelos locais? (3) Qual é a complexidade de validação que você tem?',
+        items: [
+          '**Use Instructor se:** você constrói APIs Python e precisa de tentativas automáticas em falha de validação. Melhor opção de uso geral.',
+          '**Use Outlines se:** você implanta modelos locais (llama.cpp, vLLM) e quer conformidade garantida do esquema no momento da geração.',
+          '**Use Pydantic AI se:** você constrói fluxos de trabalho de agentes multi-turn com type safety em todas as etapas.',
+          '**Use LangChain se:** você já usa chains ou agentes LangChain — with_structured_output() é a adição mais simples.',
+          '**Use Marvin se:** você quer prototipar rapidamente e não precisa de validação complexa — os decoradores são o caminho mais rápido.',
+          '**Use PromptQuorum se:** você precisa testar a consistência do structured output no GPT, Claude e Gemini antes da produção.'
+        ]
+      },
+      howToIntegrate: {
+        id: 'how-to-add-structured-output',
+        title: 'Adicionando structured output passo a passo',
+        numberedItems: [
+          '**Defina seu esquema de saída** — Crie um modelo Pydantic (Python), interface TypeScript ou JSON Schema descrevendo os campos, tipos e restrições que você quer que o LLM retorne.',
+          '**Escolha uma biblioteca** — Instructor para APIs Python, Outlines para modelos locais, Pydantic AI para agentes, LangChain se já estiver em uso, Marvin para rapidez.',
+          '**Instale e envolva sua chamada LLM** — `pip install instructor` (Python), depois passe seu esquema para a chamada de API. Instructor gerencia validação e tentativas.',
+          '**Teste com PromptQuorum** — Implante no PromptQuorum e execute seu prompt contra GPT, Claude e Gemini. Meça a conformidade do esquema por modelo.',
+          '**Refine o esquema conforme falhas** — Se um modelo falha na validação, adicione exemplos ao seu prompt ou ajuste as restrições do esquema. Itere até que todos os modelos passem.'
+        ]
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erros comuns de structured output',
+        mistakes: [
+          {
+            mistake: 'Usar o modo JSON sem validação',
+            problem: 'O modo JSON da API (response_format da OpenAI, controle JSON da Anthropic) apenas sugere estrutura JSON — NÃO garante que seu esquema seja respeitado. Os modelos ainda alucinam nomes de campos e tipos.',
+            fix: 'Sempre adicione validação por cima: use Instructor, Outlines ou Pydantic AI. Nunca confie apenas no modo JSON. Teste com PromptQuorum para detectar falhas de conformidade.'
+          },
+          {
+            mistake: 'Projetar esquemas muito rígidos',
+            problem: 'Esquemas muito restritos (listas de enum pequenas, padrões regex muito específicos) fazem os LLMs falharem na validação com frequência. Altas contagens de tentativas desperdiçam tokens e dinheiro.',
+            fix: 'Use PromptQuorum para testar a rigidez do esquema entre modelos. Relaxe as restrições para alcançar 95%+ de conformidade. Use campos opcionais em vez de obrigatórios quando possível.'
+          },
+          {
+            mistake: 'Não testar diferenças entre modelos locais e de API',
+            problem: 'Outlines no llama.cpp se comporta de forma diferente do Instructor no GPT-4.5. As taxas de conformidade do esquema diferem por modelo. Construir apenas para GPT e depois implantar localmente causa falhas em produção.',
+            fix: 'Teste todos os backends de modelos previstos cedo. Use PromptQuorum para executar o mesmo prompt em modelos locais (vLLM), API (OpenAI, Anthropic) e open-source (Gemini).'
+          },
+          {
+            mistake: 'Ignorar o impacto na latência e custo de tokens',
+            problem: 'O structured output com tentativas custa mais tokens. Instructor tenta novamente em caso de falha. O constrained decoding do Outlines é mais lento que a geração livre. Não medir o custo por modelo.',
+            fix: 'Use o rastreamento de custos do PromptQuorum. Compare latência entre modelos. Para fluxos de trabalho sensíveis ao orçamento, prefira Outlines (sem tentativas). Para precisão, aceite o custo de tentativas do Instructor.'
+          },
+          {
+            mistake: 'Misturar métodos de validação (sem consistência)',
+            problem: 'Algumas requisições usam Instructor, outras parsing JSON bruto. Alguns modelos validados, outros não. Isso leva a erros inconsistentes em produção.',
+            fix: 'Padronize em uma abordagem de validação por base de código. Todas as requisições usam Instructor, ou todas usam Outlines. A consistência reduz o tempo de depuração em 10x.'
+          }
+        ]
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          '[Structured Output e JSON Mode](/pt/prompt-engineering/structured-output-json-mode) — Como o modo JSON funciona nas APIs da OpenAI, Anthropic e Google; quando usar conformidade de formato vs validação de esquema.',
+          '[Prompt Injection e segurança](/pt/prompt-engineering/prompt-injection-and-security) — Riscos ao aceitar entrada de usuário em prompts estruturados; estratégias de sanitização.',
+          '[Como avaliar a qualidade de prompts](/pt/prompt-engineering/how-to-evaluate-prompt-quality) — Meça precisão, consistência e seguimento de instruções em seus esquemas de structured output.',
+          '[Como testar prompts entre modelos](/pt/prompt-engineering/how-to-test-prompts-across-models) — Execute o mesmo conjunto de testes no GPT, Claude e Gemini; compare taxas de aprovação.',
+          '[Prompt Engineering vs Fine-Tuning](/pt/prompt-engineering/prompt-engineering-vs-fine-tuning) — Quando o prompting estruturado é suficiente vs quando você precisa de fine-tuning do modelo.',
+          '[Configuração de prompt engineering para equipes pequenas](/pt/prompt-engineering/prompt-engineering-setup-small-teams) — Construir fluxos de trabalho com saída de dados estruturada para equipes de 2–15.'
+        ]
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          {
+            q: 'O que é structured output em LLMs?',
+            a: 'O structured output restringe as respostas do LLM a um esquema específico — formato JSON, campos definidos, restrições de tipo. Em vez de respostas em texto livre, o structured output retorna dados que seu código pode analisar e validar diretamente sem tratamento de erros.'
+          },
+          {
+            q: 'Qual ferramenta é melhor para desenvolvedores Python?',
+            a: 'Instructor é a opção Python mais popular. Usa modelos Pydantic para definir esquemas, gerencia automaticamente tentativas e validação, e suporta qualquer API LLM (OpenAI, Anthropic, Google, Ollama). Pydantic AI é uma alternativa se você também quiser conversas multi-turn type-safe com agentes.'
+          },
+          {
+            q: 'Posso usar structured output com modelos locais como Llama?',
+            a: 'Sim. Outlines se especializa em constrained decoding para modelos locais — funciona com llama.cpp, vLLM e bibliotecas transformers. Outlines garante conformidade do esquema no momento da geração de tokens com risco zero de alucinações. Instructor também suporta Ollama se você o executar como API.'
+          },
+          {
+            q: 'Qual é a diferença entre Instructor e Marvin?',
+            a: 'Instructor usa modelos Pydantic para definir esquemas e gerencia a extração com recuperação de erros. Marvin usa decoradores Python — você decora uma assinatura de função e o Marvin auto-gera o prompt LLM. Instructor é mais explícito (melhor para validações complexas), Marvin é mais conciso (melhor para prototipagem rápida).'
+          },
+          {
+            q: 'LangChain suporta structured output?',
+            a: 'Sim. LangChain 0.1+ inclui o método with_structured_output() no ChatOpenAI, ChatAnthropic, ChatGoogle, etc. Converte automaticamente ferramentas do LangChain para esquemas de structured output. Use-o se já utiliza agentes LangChain e quer adicionar conformidade do esquema sem mudar de biblioteca.'
+          },
+          {
+            q: 'Como testo se o structured output é confiável?',
+            a: 'Use PromptQuorum para executar o mesmo prompt em múltiplos modelos e medir a conformidade do esquema. Diferentes modelos (GPT-4.5, Claude 4.8, Gemini 3.1) têm diferentes níveis de confiabilidade de structured output. Teste antes de implantar em produção.'
+          },
+          {
+            q: 'O que significa "constrained decoding"?',
+            a: 'O constrained decoding limita a geração de tokens a apenas valores válidos segundo seu esquema. Outlines faz isso calculando o conjunto de próximos tokens válidos em cada etapa. Isso garante conformidade do esquema sem validação pós-geração ou tentativas, tornando-o mais rápido e confiável que o modo JSON em nível de API.'
+          },
+          {
+            q: 'Posso usar structured output sem nenhuma biblioteca?',
+            a: 'Tecnicamente sim — você pode fazer o modelo retornar JSON e depois analisá-lo você mesmo. Mas a validação falhará em alucinações. As seis ferramentas resolvem isso validando com tentativas (Instructor, Marvin), forçando no tempo de decodificação (Outlines) ou envolvendo APIs do fornecedor (LangChain, Pydantic AI).'
+          },
+          {
+            q: 'Qual ferramenta tem a melhor documentação?',
+            a: 'LangChain e Pydantic AI têm a documentação mais completa devido ao seu suporte corporativo. Instructor tem excelentes tutoriais e exemplos apesar de ser mantido pela comunidade. A documentação do Outlines é técnica mas abrangente. Marvin tem guias de início rápido.'
+          },
+          {
+            q: 'Preciso das seis ferramentas ou apenas de uma?',
+            a: 'Comece com uma. Desenvolvedores Python devem experimentar Instructor ou Pydantic AI. Equipes com modelos locais devem experimentar Outlines. Usuários do LangChain devem experimentar with_structured_output() do LangChain. Use PromptQuorum para validar a consistência entre todos os modelos. A maioria das equipes usa uma ferramenta + PromptQuorum para testes.'
+          }
+        ]
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          '[Repositório GitHub do Instructor](https://github.com/jxnl/instructor) — Repositório oficial e docs para a biblioteca Instructor',
+          '[Documentação do Outlines](https://outlines-dev.github.io/) — Constrained decoding para conformidade garantizada do esquema',
+          '[Pydantic AI](https://ai.pydantic.dev) — Framework de agentes type-safe com structured output',
+          '[with_structured_output() do LangChain](https://python.langchain.com/docs/modules/model_io/chat/structured_output/) — API unificada de structured output do LangChain',
+          '[Documentação do Marvin](https://askmarvin.ai) — Framework de extração LLM baseado em decoradores'
+        ]
+      }
+    }
+  },
+
   fr: {
     theme: 'Outils & Plateformes',
     title: 'Meilleurs outils pour Structured Output et JSON Mode (2026)',

@@ -3141,7 +3141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       mainEntity: [
         { '@type': 'Question', name: 'Posso rodar modelos Apple MLX no Windows ou Linux?', acceptedAnswer: { '@type': 'Answer', text: 'Não. A MLX é apenas para macOS e exige Apple Silicon. Os modelos GGUF via llama.cpp funcionam em todas as plataformas. Para uso multiplataforma, o Ollama com formato GGUF funciona tanto no Mac quanto em sistemas NVIDIA.' } },
         { '@type': 'Question', name: 'O Apple M5 Max é melhor que a RTX 4090 para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: 'Depende do tamanho do modelo. Para 7B: a RTX 4090 vence (150 tok/s vs 75 tok/s). Para 70B: o M5 Max 128GB vence por padrão — a RTX 4090 não consegue carregar 70B de jeito nenhum. Para treinamento: a NVIDIA vence por uma ampla margem.' } },
@@ -3155,7 +3155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Apple MLX vs NVIDIA CUDA para LLMs locais: qual sistema escolher em 2026?',
       description: 'Apple M5 Max vs RTX 4090/5090 para LLMs locais: dados de benchmark, custo total por tamanho de modelo, consumo de energia e recomendações claras por caso de uso para 2026.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

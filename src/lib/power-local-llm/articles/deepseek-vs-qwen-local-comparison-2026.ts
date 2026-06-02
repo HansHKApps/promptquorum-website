@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description:
         'DeepSeek-R1 destilado vs Qwen3 LLM local: comparativo direto de VRAM, MMLU, MATH-500 e HumanEval. Qual modelo rodar em cada nível de hardware em 2026.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
@@ -1071,7 +1071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       mainEntity: [
         { '@type': 'Question', name: 'O DeepSeek-R1 é o mesmo que os modelos destilados?', acceptedAnswer: { '@type': 'Answer', text: 'Não. O DeepSeek-R1 é o modelo MoE de 671B. As versões destiladas (7B, 14B, 32B) são modelos densos independentes treinados para replicar seu estilo de raciocínio — práticos para uso local.' } },
         { '@type': 'Question', name: 'DeepSeek e Qwen usam a mesma VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Sim, no mesmo nível de quantização. Ambos os modelos 7B precisam de 5,5 GB em Q4_K_M; ambos os 32B precisam de 20,5 GB. A escolha é por força de tarefa, não por VRAM.' } },

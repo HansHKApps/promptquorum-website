@@ -1144,6 +1144,460 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
 
+    pt: {
+      theme: 'Use Cases',
+      title: 'Revisão de Código com IA 2026: Melhores Ferramentas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
+      intro: 'As ferramentas de revisão de código com IA detectam entre 42% e 85% dos bugs em tempo de execução durante revisões automatizadas — mais que o dobro da taxa de detecção abaixo de 20% das ferramentas de análise estática tradicional. O desafio crítico é a relação sinal/ruído: 64% dos comentários de revisão de IA tratam de estilo em vez de bugs de lógica, o que provoca o colapso da adoção por desenvolvedores. Prompts com escopo que priorizam explicitamente segurança e lógica sobre formatação invertem essa proporção e atingem taxas de ação do desenvolvedor superiores a 50%.',
+      publishDate: '2026-03-24',
+      toc: [
+        { label: 'Pontos-chave', anchor: 'key-takeaways' },
+        { label: 'O que a revisão de código com IA realmente faz', anchor: 'what-it-does' },
+        { label: 'Comparativo de ferramentas de revisão de código com IA', anchor: 'tools' },
+        { label: 'O problema sinal/ruído', anchor: 'signal-noise' },
+        { label: 'Como escrever prompts para revisão de código com IA', anchor: 'prompts' },
+        { label: 'O framework de prompts para revisão de código', anchor: 'framework' },
+        { label: 'Prompts ruins vs. bons', anchor: 'bad-vs-good' },
+        { label: 'Chain-of-Thought para lógica complexa', anchor: 'cot' },
+        { label: 'Revisão de código com IA focada em segurança', anchor: 'security' },
+        { label: 'Triagem de bugs com IA', anchor: 'bug-triaging' },
+        { label: 'Janela de contexto e cobertura da base de código', anchor: 'context' },
+        { label: 'Considerações globais e regionais', anchor: 'regional' },
+        { label: 'Como usar IA para revisão de código', anchor: 'how-to' },
+        { label: 'Erros comuns', anchor: 'common-mistakes' },
+        { label: 'Leitura relacionada', anchor: 'related-reading' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Fontes', anchor: 'sources' },
+      ],
+      seoTitle: 'Revisão de Código IA 2026: Snyk vs Greptile vs CodeRabbit',
+      metaDescription: 'Snyk vs Greptile vs CodeRabbit comparados: detectam de 42% a 85% dos bugs versus 20% do SAST. Benchmarks, preços e quando usar cada ferramenta.',
+      ogTitle: 'Revisão de Código com IA 2026: Melhores Ferramentas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
+      ogDescription: '64% dos comentários de revisão de código com IA são ruído de estilo; apenas 14% detectam bugs reais. Aqui está o framework de prompts de 5 partes que inverte essa proporção — mais comparativo de ferramentas e benchmarks de segurança.',
+      twitterTitle: 'Revisão de Código com IA 2026: Melhores Ferramentas + Framework de Prompts',
+      twitterDescription: 'Revisão de código com IA: 85% de detecção de bugs (Greptile) vs. 20% para SAST tradicional. Framework de prompts de 5 partes incluído.',
+      readTime: '11 min de leitura',
+      educationalLevel: 'Intermediate',
+      aboutTopics: ['Revisão de código com IA', 'CodeRabbit', 'Análise estática'],
+      howToName: 'Como usar IA para revisão de código',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/ai-code-review?lang=pt',
+        inLanguage: 'pt-BR',
+        headline: 'Revisão de Código com IA 2026: Melhores Ferramentas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
+        description: 'A revisão de código com IA detecta de 42% a 85% dos bugs em tempo de execução vs. menos de 20% para SAST. CodeRabbit, Greptile e Snyk comparados. Inclui framework de prompts de 5 partes para reduzir o ruído em 3×.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-05-04',
+        proficiencyLevel: 'Intermediate',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 630 },
+        keywords: ['revisão de código com IA', 'ferramentas de revisão de código', 'CodeRabbit', 'Greptile', 'análise estática', 'SAST', 'GitHub Copilot', 'prompt engineering', 'testes de segurança'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'CodeRabbit' },
+          { '@type': 'SoftwareApplication', name: 'Greptile' },
+          { '@type': 'SoftwareApplication', name: 'Snyk Code' },
+          { '@type': 'SoftwareApplication', name: 'GitHub Copilot' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
+        ],
+        about: [
+          { '@type': 'Thing', name: 'Ferramentas de revisão de código com IA', description: 'Ferramentas de software automatizadas que analisam PRs e identificam bugs, vulnerabilidades de segurança e problemas de estilo' },
+          { '@type': 'Thing', name: 'Problema sinal/ruído', description: 'O desafio de que 64% dos comentários de revisão de IA tratam de problemas de estilo em vez de bugs de lógica' },
+          { '@type': 'Thing', name: 'Prompt engineering para revisão de código', description: 'Técnicas para estruturar instruções de IA que priorizem descobertas de lógica e segurança sobre comentários de estilo' },
+          { '@type': 'Thing', name: 'Prompting Chain-of-Thought', description: 'O método de pedir aos modelos de IA que rastreiem caminhos de execução passo a passo antes de identificar bugs' },
+          { '@type': 'Thing', name: 'Automação de revisão de código', description: 'Integração de ferramentas de revisão de código com IA em pipelines CI/CD e fluxos de trabalho de pull requests' },
+          { '@type': 'Thing', name: 'Revisão de código com IA em conformidade com LGPD', description: 'Abordagens para usar revisão de código com IA cumprindo os requisitos brasileiros de proteção de dados' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways']
+        }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Como usar IA para revisão de código',
+        inLanguage: 'pt-BR',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Informar a IA sobre a arquitetura da base de código e as restrições' },
+          { '@type': 'HowToStep', position: 2, name: 'Solicitar categorias específicas de bugs, não uma revisão genérica' },
+          { '@type': 'HowToStep', position: 3, name: 'Usar Chain-of-Thought para rastrear caminhos de execução' },
+          { '@type': 'HowToStep', position: 4, name: 'Executar revisão multi-modelo para mudanças de alto risco' },
+          { '@type': 'HowToStep', position: 5, name: 'Tratar a IA como filtro de primeira passagem, não como árbitro final' },
+        ],
+      },
+      quickFacts: [
+        '**Maior detecção de bugs:** Greptile com 85% (indexação da base de código completa) — mas maior ruído em comentários',
+        '**Melhor adoção:** CodeRabbit — mais de 2M de repositórios, mais de 13M de PRs processados, R$60–120/dev/mês',
+        '**Melhor pontuação de segurança:** Snyk Code + DeepCode AI — 92/100 em vulnerabilidades de código gerado por IA',
+        '**O problema de sinal:** 64% dos comentários de revisão de IA são ruído de estilo; apenas 14% detectam bugs de lógica/segurança',
+        '**A solução:** Prompts com escopo (framework de 5 partes) invertem a proporção → taxa de ação do desenvolvedor superior a 50%',
+        '**Janelas de contexto (maio 2026):** Todos os modelos frontier suportam agora 1M de tokens (~750K linhas de código)',
+      ],
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Qual é a ferramenta de revisão de código com IA mais precisa em 2026?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Greptile atinge a maior taxa de detecção de bugs com 85% e uma taxa de falsos positivos abaixo de 3%, usando indexação completa da base de código em vez de análise apenas do diff do PR. Para revisão de segurança de código gerado por IA, Snyk Code + DeepCode AI pontua 92/100 em benchmarks de detecção. CodeRabbit lidera em adoção de mercado com mais de 2 milhões de repositórios conectados, mas detecta 46% dos bugs em tempo de execução — uma taxa menor que equilibra precisão com volume significativamente menor de comentários.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quanto a revisão de código com IA reduz o tempo de revisão?',
+            acceptedAnswer: { '@type': 'Answer', text: 'As ferramentas de revisão de código com IA reduzem o tempo total de revisão em 40%, aumentam as taxas de merge de PRs em 39% e reduzem os bugs em produção em 62% em estudos de equipes controlados. A triagem de bugs com IA reduz especificamente o tempo de triagem em 65%, com o tempo de resolução melhorando entre 30% e 40% em relação aos métodos manuais.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Como a revisão de código com IA se compara à análise estática tradicional (SAST)?',
+            acceptedAnswer: { '@type': 'Answer', text: 'As ferramentas SAST tradicionais baseadas em regras detectam menos de 20% dos bugs em tempo de execução significativos e produzem altas taxas de falsos positivos. O SAST impulsionado por IA treinado em conjuntos de dados de vulnerabilidades atinge pontuações de detecção de 84–92/100 em código gerado por IA. Modelos baseados em transformadores alcançam 94% de precisão em benchmarks de classificação de bugs vs. 65% para métodos baseados em regras.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'A revisão de código com IA está em conformidade com a LGPD para equipes brasileiras?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Não automaticamente. Enviar código-fonte contendo lógica de processamento de dados pessoais para APIs de IA externas requer uma avaliação de impacto de proteção de dados sob a LGPD (Lei Geral de Proteção de Dados). Equipes brasileiras que exigem conformidade estrita devem usar implantações auto-hospedadas — CodeRabbit oferece on-premise para equipes com 500+ assentos; modelos Mistral AI são implantáveis localmente via Ollama sem egress para nuvem.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'O prompting Chain-of-Thought melhora a qualidade da revisão de código com IA?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Sim — para lógica complexa com múltiplos ramos condicionais, o prompting Chain-of-Thought (CoT) pede ao modelo que rastreie o fluxo de dados por cada caminho de execução antes de gerar descobertas. Isso revela bugs de lógica que a correspondência de padrões perde, porque o modelo deve modelar explicitamente cada caminho que um valor nulo ou tipo de entrada inesperado pode percorrer pela função. CoT é mais valioso para funções sensíveis à segurança e gerenciamento complexo de estado.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Que porcentagem dos comentários de revisão de código com IA é realmente útil?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Em uma auditoria de 8 meses de 1.247 comentários de revisão de IA em 340 PRs, apenas 14% tratavam de bugs de lógica e problemas de segurança — os problemas que causam incidentes em produção. 64% tratavam de estilo, duplicação e cobertura de testes. Ferramentas com menos de 60% de comentários acionáveis veem o colapso da adoção por desenvolvedores. Prompts com escopo que excluem explicitamente comentários de estilo invertem essa proporção e atingem taxas de ação do desenvolvedor acima de 50%.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual modelo de IA é melhor para revisão de código?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Claude Sonnet 4.6 produz a análise de segurança mais completa — identificando vetores de injeção SQL, falta de sanitização de entradas e casos extremos de autenticação. GPT-5.5 produz as sugestões de correção mais acionáveis — código corrigido concreto em vez de descrições. Os três modelos frontier suportam agora janelas de contexto de 1M de tokens (~750.000 linhas de código em uma única sessão). Para revisões de segurança, execute os três e trate as descobertas convergentes como problemas de alta confiança.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Como reduzo os falsos positivos na revisão de código com IA?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Três técnicas: (1) delimitar o prompt explicitamente — "revisar apenas para bugs de lógica, vulnerabilidades de segurança e regressões de desempenho; NÃO comentar sobre estilo ou nomes"; (2) adicionar uma instrução de ruído — "se não encontrar nada em uma categoria, escreva Nada encontrado, não adicione comentários de preenchimento"; (3) usar Chain-of-Thought para funções complexas — peça ao modelo que rastreie os caminhos de execução antes de produzir descobertas.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Como integro a revisão de código com IA em nosso pipeline CI/CD?',
+            acceptedAnswer: { '@type': 'Answer', text: 'As ferramentas de revisão de código com IA se integram diretamente em pipelines CI/CD do GitHub, GitLab, Bitbucket e Azure DevOps instalando o bot do fornecedor e concedendo acesso ao repositório. CodeRabbit, Greptile e Snyk Code oferecem integrações com GitHub Actions / GitLab CI que são acionadas em cada pull request. Melhor prática: configure a revisão de IA para executar em paralelo com outras verificações (linting, testes unitários) — as descobertas de IA bloqueiam o merge apenas para problemas críticos de segurança.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'A revisão de código com IA pode detectar vulnerabilidades de segurança melhor que ferramentas SAST dedicadas?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Sim — as ferramentas SAST impulsionadas por IA (Snyk Code, Semgrep Enterprise, CodeQL) alcançam de 84% a 92% de precisão de detecção em código gerado por IA, comparado a 65% para análise estática baseada em regras. No entanto, o SAST tradicional é melhor para verificações de alto volume em bases de código grandes. Melhor prática: use ferramentas SAST leves (linting) para velocidade, complemente com revisão de IA para análise de segurança profunda em mudanças de alto risco (autenticação, pagamentos, infraestrutura).' },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Comparativo de ferramentas de revisão de código com IA 2026',
+        inLanguage: 'pt-BR',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Greptile', description: '85% de detecção de bugs. Menos de 3% de falsos positivos. Contexto de base de código completa. R$150/dev/mês.' },
+          { '@type': 'ListItem', position: 2, name: 'Qodo', description: '78% de detecção de bugs. Poucos falsos positivos. Contexto multi-repositório. A partir de R$95/dev/mês.' },
+          { '@type': 'ListItem', position: 3, name: 'CodeRabbit', description: '46% de detecção de bugs. 10–15% de falsos positivos. Contexto diff de PR. R$60–120/dev/mês.' },
+          { '@type': 'ListItem', position: 4, name: 'Cursor Bugbot', description: '42% de detecção de bugs. Menos de 15% de falsos positivos. Contexto diff de PR. R$200 acima da base do Cursor.' },
+          { '@type': 'ListItem', position: 5, name: 'GitHub Copilot', description: 'Detecção básica. Menos de 15% de falsos positivos. Contexto em nível de arquivo. R$50–195 (incluído).' },
+        ],
+      },
+      sections: {
+
+        tldr: {
+          title: 'Pontos-chave',
+          isTldr: true,
+          items: [
+            'As ferramentas de revisão de código com IA detectam entre 42% e 85% dos bugs em tempo de execução vs. menos de 20% para SAST tradicional — CodeRabbit com 46% lidera para revisões em nível de PR; Greptile com 85% lidera para análise de base de código completa',
+            '64% dos comentários de revisão de IA tratam de estilo e duplicação; apenas 14% tratam de bugs de lógica e segurança — prompts com escopo são necessários para inverter essa proporção',
+            'Modelos baseados em transformadores alcançam 94% de precisão em benchmarks de classificação de bugs; aprendizado profundo (CNN/RNN) alcança 89%; SAST baseado em regras alcança 65%',
+            'Snyk Code pontua 92/100 em detecção de segurança de código gerado por IA — a pontuação de benchmark mais alta para verificação de vulnerabilidades de código gerado por IA',
+            'A triagem de bugs com IA alcança entre 85% e 90% de precisão na classificação de gravidade vs. 60–70% para triagem manual, reduzindo o tempo de triagem em 65%',
+            'Empresas brasileiras devem seguir a LGPD (Lei Geral de Proteção de Dados) e podem precisar de avaliação de impacto antes de implantar ferramentas de revisão de código com IA na nuvem que processem código-fonte com dados pessoais',
+            'Os três modelos frontier (GPT-5.5, Claude Sonnet 4.6, Gemini 3.1 Pro) suportam agora janelas de contexto de 1M de tokens (~750.000 linhas). Para análise de base de código grande sem fragmentação, LLaMA 4 Scout suporta 10M de tokens localmente.',
+          ],
+        },
+
+        definition: {
+          title: 'O que a revisão de código com IA realmente faz',
+          content: [
+            'As ferramentas de revisão de código com IA analisam pull requests, detectam bugs de lógica, sinalizam vulnerabilidades de segurança, aplicam padrões de codificação e geram sugestões de correção acionáveis — operando em segundos em vez das horas exigidas pela revisão manual por pares.',
+            'A revisão de código por pares tradicional é a tarefa mais demorada nos fluxos de trabalho de desenvolvimento de software, exigindo que engenheiros sênior alternem entre seu próprio trabalho e a avaliação do código de outros. As ferramentas de revisão de código com IA se integram diretamente em pipelines CI/CD e fluxos de trabalho de pull request — GitHub, GitLab, Bitbucket e Azure DevOps — e começam a analisar o código no momento em que um PR é aberto, sem esperar que um revisor humano esteja disponível.',
+            'Em uma sentença: a revisão de código com IA não é um substituto para o julgamento humano — é um filtro de primeira passagem que revela problemas antes que os revisores humanos cheguem, para que os engenheiros dediquem o tempo de revisão à lógica e à arquitetura em vez de nomes de variáveis.',
+          ],
+        },
+
+        toolComparison: {
+          title: 'Ferramentas de revisão de código com IA: qual usar',
+          content: [
+            'CodeRabbit lidera o mercado com mais de 2 milhões de repositórios conectados e mais de 13 milhões de PRs processados; GitHub Copilot Code Review é o ponto de entrada com menor atrito para equipes que já usam GitHub; Greptile atinge a maior taxa de detecção de bugs mediante indexação completa da base de código.',
+            'CodeRabbit é a ferramenta de revisão de código com IA mais amplamente implantada em 2026, com suporte para GitHub, GitLab, Bitbucket e Azure DevOps — a única ferramenta importante com verdadeira cobertura multiplataforma. Greptile com 85% de detecção de bugs é a mais alta no benchmark — mas ao custo da maior saída de ruído. CodeRabbit com 46% de detecção é a melhor escolha para equipes onde a fadiga de revisão já é um problema.',
+          ],
+          columns: ['Ferramenta', 'Detecção de Bugs', 'Taxa de Falsos Positivos', 'Profundidade de Contexto', 'Preço/Dev/Mês'],
+          rows: [
+            { 'Ferramenta': 'Greptile', 'Detecção de Bugs': '85%', 'Taxa de Falsos Positivos': 'Menos de 3%', 'Profundidade de Contexto': 'Base de código completa', 'Preço/Dev/Mês': '$30' },
+            { 'Ferramenta': 'Qodo', 'Detecção de Bugs': '78%', 'Taxa de Falsos Positivos': 'Baixa', 'Profundidade de Contexto': 'Multi-repositório', 'Preço/Dev/Mês': 'A partir de $19' },
+            { 'Ferramenta': 'CodeRabbit', 'Detecção de Bugs': '46%', 'Taxa de Falsos Positivos': '10–15%', 'Profundidade de Contexto': 'Diff de PR', 'Preço/Dev/Mês': '$12–24' },
+            { 'Ferramenta': 'Cursor Bugbot', 'Detecção de Bugs': '42%', 'Taxa de Falsos Positivos': 'Menos de 15%', 'Profundidade de Contexto': 'Diff de PR', 'Preço/Dev/Mês': '$40 (acima da base do Cursor)' },
+            { 'Ferramenta': 'GitHub Copilot', 'Detecção de Bugs': 'Básica', 'Taxa de Falsos Positivos': 'Menos de 15%', 'Profundidade de Contexto': 'Nível de arquivo', 'Preço/Dev/Mês': '$10–39 (incluído)' },
+            { 'Ferramenta': 'SAST Tradicional', 'Detecção de Bugs': 'Menos de 20%', 'Taxa de Falsos Positivos': 'Alta', 'Profundidade de Contexto': 'Baseado em regras', 'Preço/Dev/Mês': 'Variável' },
+          ],
+          tableFormat: true,
+          image: '/images/code-review-tool-comparison-pt.svg',
+          imageCaption: 'Ferramentas de revisão de código com IA comparadas: PromptQuorum despacha para GPT-5.5 + Claude simultaneamente — dois modelos detectam diferentes classes de bugs do que qualquer modelo individual sozinho.',
+        },
+
+        signalToNoise: {
+          title: 'Por que a relação sinal/ruído é um problema na revisão de código com IA?',
+          content: [
+            'As ferramentas de revisão de código com IA atualmente detectam problemas de estilo com precisão próxima a 100% enquanto detectam bugs críticos em tempo de execução com 42–46% — criando um problema de volume de comentários que provoca o colapso da adoção por desenvolvedores.',
+            'Uma auditoria interna de oito meses de 1.247 comentários de revisão de IA em 340 pull requests encontrou: ~64% de todos os comentários de revisão de IA tratavam de estilo, duplicação e cobertura de testes. Apenas ~14% dos comentários tratavam de bugs de lógica e problemas de segurança — os problemas que causam incidentes em produção. Ferramentas com menos de 60% de comentários acionáveis veem o colapso da adoção por desenvolvedores, pois os engenheiros começam a ignorar todos os comentários, incluindo as descobertas críticas.',
+            'A causa raiz são os dados de treinamento: os modelos de IA são treinados em bases de código onde as infrações de estilo superam amplamente os erros de lógica. O modelo aprende a mostrar o que vê com mais frequência — não o que mais importa.',
+            'Um sistema de revisão de IA ajustado, com prompt engineering que instrui especificamente o modelo a priorizar lógica e segurança sobre estilo, atingiu uma taxa de ação do desenvolvedor de 52% — igualando e superando ligeiramente a taxa de ação de 50% das revisões de código lideradas por humanos em mais de 10.000 comentários analisados.',
+            '**Em uma sentença:** O problema sinal/ruído significa que as ferramentas de revisão de código com IA geram 64% de comentários de estilo mas apenas 14% de descobertas acionáveis de segurança/lógica — exigindo prompts com escopo para inverter essa proporção e atingir adoção por desenvolvedores superior a 50%.',
+          ],
+          callouts: [
+            { type: 'warning', label: 'Aviso', text: 'Equipes que implantam revisão de código com IA com configurações padrão e sem personalização de prompts veem o colapso da adoção por desenvolvedores em 3–6 meses. Os engenheiros começam a ignorar TODOS os comentários — incluindo as descobertas críticas de segurança — porque 64% dos comentários são ruído. Sempre configure prioridades de revisão explícitas antes de implantar para a equipe.' },
+          ],
+        },
+
+        promptStructure: {
+          title: 'Como escrever prompts para revisão de código com IA',
+          content: [
+            'Prompts com escopo e contexto rico — especificando linguagem, framework, prioridades de revisão e formato de saída — reduzem os falsos positivos e melhoram a qualidade do sinal; prompts vagos como "revise este código" produzem saídas genéricas com muito ruído.',
+            'O prompt engineering é a prática de estruturar instruções de IA para restringir e direcionar a saída do modelo. Para revisão de código, a variável mais impactante é o escopo explícito: quando você diz ao modelo exatamente quais classes de problemas priorizar, ele produz menos comentários de estilo e mais descobertas de lógica e segurança.',
+          ],
+          image: '/images/code-review-workflow-pt.svg',
+          imageCaption: 'Fluxo de trabalho de revisão de código com IA estruturado: adicionar contexto de função e especificar o foco de revisão (segurança, desempenho, estilo) aumenta a taxa de descobertas acionáveis em 3×.',
+        },
+
+        promptFramework: {
+          title: 'Qual é o framework de prompts para revisão de código?',
+          content: [
+            'Use esta estrutura para qualquer solicitação de revisão de código com IA:',
+            '**Em termos simples:** O framework é um modelo de cinco partes (função, escopo, contexto, formato de saída, instrução de ruído) que transforma solicitações de revisão de código vagas em prompts estruturados que produzem resultados 10× melhores ao restringir explicitamente no que a IA deve se concentrar.',
+          ],
+          items: [
+            '**Função** — "Você é um engenheiro de software sênior com experiência em segurança de [linguagem/framework]."',
+            '**Escopo** — "Revise apenas para: (1) bugs de lógica, (2) casos extremos ausentes, (3) vulnerabilidades de segurança, (4) regressões de desempenho. NÃO comente sobre estilo, nomes ou formatação."',
+            '**Contexto** — "Linguagem: TypeScript. Framework: Next.js 14. Este endpoint lida com dados de usuário autenticado — trate todas as entradas como não confiáveis."',
+            '**Formato de saída** — "Para cada problema: declare a gravidade (Crítico / Alto / Médio), cite a linha específica, explique o risco e forneça um trecho de código corrigido."',
+            '**Instrução de ruído** — "Se não encontrar nada em uma categoria, escreva \'Nada encontrado\' — não adicione comentários de preenchimento."',
+          ],
+          callouts: [
+            { type: 'pro-tip', label: 'Dica Pro', text: 'A linha mais impactante que você pode adicionar a qualquer prompt de revisão de código com IA é: "NÃO comente sobre estilo, nomes ou formatação." Essa única restrição reduz o ruído de comentários em mais de 60% e força o modelo a se concentrar em bugs de lógica e problemas de segurança — as descobertas que realmente previnem incidentes em produção.' },
+          ],
+        },
+
+        badGoodPrompts: {
+          title: 'Qual é a diferença entre um prompt de revisão de código ruim e um bom?',
+          content: ['**[Prompt ruim]**'],
+          blockquote: 'Revise este código.',
+        },
+
+        goodPrompt: {
+          title: 'Como é um bom prompt de revisão de código?',
+          content: ['**[Prompt bom]**'],
+          blockquote: 'Você é um engenheiro TypeScript sênior especializado em segurança. Revise a seguinte rota API do Next.js para: (1) riscos de bypass de autenticação, (2) vetores de injeção SQL ou NoSQL, (3) falta de validação de entradas, (4) promessas rejeitadas não tratadas. Não comente sobre estilo ou nomes de variáveis. Para cada problema encontrado: declare a gravidade (Crítico / Alto / Médio), cite a linha, explique por que é explorável e forneça uma versão corrigida. Se não houver problemas em uma categoria, escreva \'Nada encontrado\'.',
+        },
+
+        promptOutcome: {
+          content: [
+            'O prompt estruturado produz um relatório de segurança pronto para triagem. O prompt aberto produz 12 comentários sobre nomes de variáveis e uma descoberta de segurança enterrada que o engenheiro nunca lê.',
+          ],
+        },
+
+        chainOfThought: {
+          title: 'Como o Chain-of-Thought melhora a revisão de lógica complexa?',
+          content: [
+            'O prompting Chain-of-Thought (CoT) — pedir ao modelo que rastreie o fluxo de dados por cada função antes de produzir descobertas — revela bugs de lógica que a revisão de etapa única perde, porque o modelo deve modelar explicitamente o caminho de execução em vez de fazer correspondência de padrões contra assinaturas de erro comuns.',
+            'Use esta extensão para qualquer função com lógica condicional complexa: "Antes de identificar bugs: rastreie os dados de entrada por cada ramo desta função passo a passo. Identifique cada caminho onde um valor nulo, string vazia ou tipo inesperado poderia se propagar. Em seguida, liste cada caminho que atinge um estado não tratado."',
+          ],
+        },
+
+        security: {
+          title: 'Como realizar revisão de código com IA focada em segurança?',
+          content: [
+            'As ferramentas SAST (Static Application Security Testing) impulsionadas por IA treinadas em conjuntos de dados de vulnerabilidades reais alcançam pontuações de detecção de bugs de 84–92 de 100 em código gerado por IA — comparado a 65% de precisão para métodos baseados em regras e 94% para modelos baseados em transformadores em benchmarks de aprendizado profundo.',
+            'Modelos baseados em transformadores — a arquitetura por trás do GPT-5.5, Claude Opus 4.8 e ferramentas de segurança de código dedicadas — alcançam 94% de precisão em benchmarks de classificação de bugs, com taxas de falsos positivos muito baixas.',
+            'As três ferramentas de revisão de código com IA focadas em segurança para 2026, em benchmark de código gerado por IA:',
+          ],
+          columns: ['Ferramenta', 'Pontuação de Detecção (código IA)', 'Falsos Positivos', 'Ideal Para'],
+          rows: [
+            { 'Ferramenta': 'Snyk Code + DeepCode AI', 'Pontuação de Detecção (código IA)': '92/100', 'Falsos Positivos': 'Volume mais baixo', 'Ideal Para': 'Equipes com entregas diárias com integração IDE' },
+            { 'Ferramenta': 'Semgrep Enterprise', 'Pontuação de Detecção (código IA)': '87/100', 'Falsos Positivos': 'Baixo', 'Ideal Para': 'Policy-as-code; pacotes de regras YAML personalizadas' },
+            { 'Ferramenta': 'GitHub Advanced Security (CodeQL)', 'Pontuação de Detecção (código IA)': '84/100', 'Falsos Positivos': 'Médio', 'Ideal Para': 'Organizações GitHub-first; cobertura semântica profunda' },
+          ],
+          tableFormat: true,
+          image: '/images/code-review-security-steps-pt.svg',
+          imageCaption: 'Quatro categorias de segurança para prompts de revisão de código com IA: injeção, autenticação, segredos codificados e erros de lógica de negócios — cada uma requer um enquadramento de prompt diferente.',
+        },
+
+        securityDetails: {
+          content: [
+            'Snyk Code detecta injeção SQL, cross-site scripting (XSS), padrões criptográficos fracos e credenciais codificadas em tempo real enquanto os desenvolvedores escrevem o código — antes mesmo de um PR ser aberto. CodeQL realiza análise semântica usando uma Árvore de Sintaxe Abstrata (AST), sendo capaz de detectar cadeias de vulnerabilidades complexas de múltiplas etapas que ferramentas de correspondência de padrões perdem.',
+          ],
+        },
+
+        bugTriaging: {
+          title: 'O que é triagem de bugs com IA?',
+          content: [
+            'A triagem de bugs impulsionada por IA alcança entre 85% e 90% de precisão na classificação de gravidade — comparado a 60–70% para métodos manuais — enquanto reduz o tempo de triagem em 65% e recorta os falsos positivos em até 60%.',
+            'A triagem de bugs com IA é a etapa posterior à detecção: classificar bugs por gravidade, prever o impacto em produção e encaminhar problemas ao engenheiro correto. Um estudo de Khaleefulla et al. demonstrou que sistemas de triagem impulsionados por IA alcançaram mais de 85% de precisão na classificação de bugs e 82% de precisão na previsão de prioridade — reduzindo o tempo médio de triagem em 65%.',
+            'O tempo de resolução (TTR) melhora entre 30% e 40% em comparação com os métodos manuais, com o ganho principal proveniente da classificação e do encaminhamento mais rápidos em vez de uma correção mais rápida.',
+          ],
+          callouts: [
+            { type: 'info', label: 'Você sabia?', text: 'A triagem de bugs com IA alcança entre 85% e 90% de precisão na classificação de gravidade vs. 60–70% para triagem manual. A principal economia de tempo não está na correção mais rápida — está na classificação e no encaminhamento mais rápidos. Os engenheiros dedicam menos tempo debatendo prioridade e mais tempo resolvendo os problemas que importam.' },
+          ],
+        },
+
+        contextWindow: {
+          title: 'Por que o tamanho da janela de contexto determina a cobertura da base de código?',
+          content: [
+            'A janela de contexto de um modelo determina quanto de sua base de código ele pode analisar simultaneamente — a diferença entre revisar um único arquivo, um diff de PR completo e um repositório inteiro determina quais bugs são detectáveis.',
+            'Em maio de 2026, a lacuna de janela de contexto entre modelos foi fechada — os três modelos frontier suportam 1M de tokens. A diferenciação agora é entre modelos na nuvem (1M, baseados em API) e modelos locais (LLaMA 4 Scout com 10M de tokens, totalmente privado — sem que o código saia da sua infraestrutura).',
+          ],
+          columns: ['Modelo', 'Janela de Contexto', 'Linhas de Código (aprox.)', 'Caso de Uso'],
+          rows: [
+            { 'Modelo': 'GPT-5.5 (OpenAI)', 'Janela de Contexto': '1M tokens', 'Linhas de Código (aprox.)': '~750.000 linhas', 'Caso de Uso': 'Revisão de PR de projeto completo' },
+            { 'Modelo': 'Claude Sonnet 4.6 (Anthropic)', 'Janela de Contexto': '1M tokens', 'Linhas de Código (aprox.)': '~750.000 linhas', 'Caso de Uso': 'Revisão de segurança multi-arquivo' },
+            { 'Modelo': 'Gemini 3.1 Pro (Google DeepMind)', 'Janela de Contexto': '1M tokens', 'Linhas de Código (aprox.)': '~750.000 linhas', 'Caso de Uso': 'Análise de base de código grande' },
+            { 'Modelo': 'LLaMA 4 Scout (local, Meta)', 'Janela de Contexto': '10M tokens', 'Linhas de Código (aprox.)': '~7.500.000 linhas', 'Caso de Uso': 'Maior contexto, totalmente privado' },
+          ],
+          tableFormat: true,
+        },
+
+        globalContext: {
+          title: 'Como as regulamentações regionais afetam a revisão de código com IA?',
+          content: [
+            'Empresas europeias que enviam código-fonte para APIs de IA externas devem realizar uma Avaliação de Impacto de Proteção de Dados (AIPD) sob o Artigo 35 do GDPR antes da implantação — o código-fonte contendo lógica de processamento de dados pessoais é classificado como processamento automatizado de alto risco. A CNIL (autoridade francesa de proteção de dados) confirmou em janeiro de 2026 que tanto o GDPR quanto a Lei de IA da UE se aplicam simultaneamente à revisão de código assistida por IA quando dados pessoais são processados. Para equipes da UE, CodeRabbit e Augment Code oferecem implantação on-premise/auto-hospedada para equipes com 500+ assentos.',
+            'Equipes de desenvolvimento chinesas usam Qwen3 (Alibaba) e DeepSeek V4 Flash como modelos de revisão de código implantáveis localmente, ambos compatíveis com comentários de código em chinês. Empresas japonesas sob as diretrizes de governança de dados do METI implantam fluxos de trabalho de revisão de código baseados em LLaMA 4 Scout ou LLaMA 3.3 localmente via Ollama — LLaMA 4 Scout requer ~55 GB de VRAM para inferência, sem chamadas de API externas.',
+            'Para o Brasil, a LGPD (Lei Geral de Proteção de Dados) exige que empresas realizem avaliações de impacto antes de enviar código contendo dados pessoais para APIs de IA na nuvem. A ANPD (Autoridade Nacional de Proteção de Dados) publicou diretrizes aplicáveis em 2025 sobre o uso de IA no processamento de dados pessoais.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Leitura relacionada',
+          items: [
+            '[Escreva código melhor com IA](/pt/prompt-engineering/write-better-code-with-ai) — como estruturar prompts para geração de código que produz saídas revisáveis',
+            '[O que é Prompt Engineering?](/pt/prompt-engineering/what-is-prompt-engineering) — técnicas fundamentais para escrever instruções de IA estruturadas',
+            '[Limitações da IA — O que os LLMs não podem fazer](/pt/prompt-engineering/ai-limitations-what-llms-cant-do) — a razão arquitetural pela qual a revisão de código com IA produz falsos positivos',
+            '[Chain-of-Thought Prompting](/pt/prompt-engineering/chain-of-thought-prompting) — a técnica de raciocínio usada para rastrear caminhos de execução',
+            '[Prompt Injection e Segurança](/pt/prompt-engineering/prompt-injection-and-security) — vulnerabilidades de segurança em fluxos de trabalho de desenvolvimento assistido por IA',
+            '[RAG Explicado](/pt/prompt-engineering/rag-explained) — como ferramentas de indexação de base de código completa como Greptile usam recuperação para estender o contexto',
+            '[Melhores LLMs locais para revisão de código](/pt/local-llms/best-local-llms-code-review) — alternativas de modelos locais para revisão de código privada',
+            '[Melhores LLMs locais para programação](/pt/local-llms/best-local-llms-for-coding) — Kimi K2.6, Qwen 3.6, Devstral classificados para tarefas de programação',
+            '[Prompting Restrito](/pt/prompt-engineering/constrained-prompting) — a técnica por trás da instrução "NÃO comente sobre estilo"',
+          ],
+        },
+        howToStart: {
+          title: 'Como usar IA para revisão de código',
+          numberedItems: [
+            '**Informe a IA sobre a arquitetura da sua base de código, convenções de nomenclatura e restrições antes de pedir que ela revise o código.** Forneça um documento de contexto breve: "Este é um aplicativo Next.js. Usamos TypeScript em modo estrito, sem tipos `any`, todos os componentes devem ter JSDoc, todos os endpoints de API devem ter limitação de taxa." Sem isso, a IA faz comentários genéricos que perdem problemas específicos do projeto.',
+            '**Peça à IA que verifique categorias específicas de bugs: segurança, desempenho, lógica, consistência.** Em vez de "revise este código", peça: "Revise para vulnerabilidades de segurança (entradas, autenticação, exposição de dados), depois verifique se este padrão corresponde ao nosso tratamento de erros estabelecido." Perguntas específicas produzem feedback mais focado e útil.',
+            '**Use o prompting Chain-of-Thought (CoT): peça ao modelo que rastreie a execução antes de produzir feedback.** Para funções complexas, peça "Rastreie a execução para a entrada X, depois identifique quaisquer erros de lógica." Isso torna o raciocínio da IA transparente e detecta bugs sutis que os humanos podem perder.',
+            '**Use revisão de código multi-modelo para mudanças de alto risco (autenticação, pagamentos, infraestrutura).** Execute o mesmo código pelo GPT-5.5, Claude Sonnet 4.6 e Gemini 3.1 Pro. Quando os três sinalizam o mesmo problema, é um sinal sólido. Quando apenas um modelo detecta algo, investigue com cuidado.',
+            '**Trate a IA como filtro de primeira passagem, não como árbitro final.** A IA é excelente para detectar bugs óbvios (returns ausentes, incompatibilidades de tipo, padrões de injeção SQL) mas pode perder problemas específicos do contexto (implicações de desempenho, problemas de escala, convenções da equipe). Sempre tenha uma revisão humana do feedback baseado em IA.',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Erros comuns na revisão de código com IA',
+          mistakes: [
+            {
+              mistake: 'Implantar revisão de IA com configurações padrão e sem personalização de prompts.',
+              problem: 'A revisão de IA padrão produz 64% de comentários de estilo. Os desenvolvedores ignoram todos os comentários em semanas. As descobertas críticas de segurança ficam enterradas.',
+              fix: 'Use o framework de prompts de 5 partes. Exclua explicitamente estilo/nomes. Delimite para lógica, segurança e desempenho.',
+            },
+            {
+              mistake: 'Usar a revisão de código com IA como única camada de revisão.',
+              problem: 'A IA detecta entre 42% e 85% dos bugs — não 100%. Problemas específicos do contexto (implicações de escala, convenções da equipe, erros de lógica de negócios) exigem julgamento humano.',
+              fix: 'A IA é o filtro de primeira passagem. Os revisores humanos se concentram em arquitetura, lógica de negócios e os 15–58% de bugs que a IA perde.',
+            },
+            {
+              mistake: 'Revisar apenas diffs de PR sem contexto da base de código.',
+              problem: 'Bugs causados por interações entre arquivos são invisíveis para ferramentas que veem apenas as linhas alteradas. Uma mudança de função que quebra um chamador em outro arquivo não será detectada.',
+              fix: 'Use ferramentas de indexação de base de código completa (Greptile, Qodo) para mudanças de alto risco. Reserve ferramentas apenas de diff (CodeRabbit, Copilot) para PRs de baixo risco.',
+            },
+            {
+              mistake: 'Não medir a taxa de ação do desenvolvedor nos comentários de IA.',
+              problem: 'Sem rastrear qual porcentagem dos comentários de IA os desenvolvedores agem, você não pode saber se a ferramenta está produzindo valor ou ruído. As equipes assumem que a revisão de IA está funcionando quando pode já ter entrado em colapso.',
+              fix: 'Rastreie a taxa de ação mensalmente. Se estiver abaixo de 40%, reduza o escopo do prompt. Se estiver abaixo de 20%, a ferramenta está produzindo ruído puro — reconfigure ou substitua.',
+            },
+          ],
+        },
+
+        faq: {
+          title: 'FAQ sobre revisão de código com IA',
+          faqs: [
+            {
+              q: 'Qual é a ferramenta de revisão de código com IA mais precisa em 2026?',
+              a: 'Greptile atinge a maior taxa de detecção de bugs com 85% e uma taxa de falsos positivos abaixo de 3%, usando indexação completa da base de código em vez de análise apenas do diff do PR. Para revisão de segurança de código gerado por IA, Snyk Code + DeepCode AI pontua 92/100 em benchmarks de detecção. CodeRabbit lidera em adoção de mercado com mais de 2 milhões de repositórios conectados, mas detecta 46% dos bugs — uma taxa menor que equilibra precisão com significativamente menor ruído de comentários.',
+            },
+            {
+              q: 'Quanto a revisão de código com IA reduz o tempo de revisão?',
+              a: 'As ferramentas de revisão de código com IA reduzem o tempo total de revisão em 40%, aumentam as taxas de merge de PRs em 39% e reduzem os bugs em produção em 62% em estudos de equipes controlados. A triagem de bugs com IA reduz especificamente o tempo de triagem em 65%, com o tempo de resolução melhorando entre 30% e 40% em relação aos métodos manuais.',
+            },
+            {
+              q: 'Como a revisão de código com IA se compara à análise estática tradicional (SAST)?',
+              a: 'As ferramentas SAST tradicionais baseadas em regras detectam menos de 20% dos bugs em tempo de execução significativos e produzem altas taxas de falsos positivos. O SAST impulsionado por IA treinado em conjuntos de dados de vulnerabilidades atinge pontuações de detecção de 84–92/100 em código gerado por IA. Modelos baseados em transformadores alcançam 94% de precisão em benchmarks de classificação de bugs vs. 65% para métodos baseados em regras.',
+            },
+            {
+              q: 'A revisão de código com IA está em conformidade com a LGPD para equipes brasileiras?',
+              a: 'Não automaticamente. Enviar código-fonte contendo lógica de processamento de dados pessoais para APIs de IA externas requer avaliação de impacto sob a LGPD. A ANPD publicou diretrizes aplicáveis sobre o uso de IA no processamento de dados pessoais. Equipes brasileiras que exigem conformidade estrita devem usar implantações auto-hospedadas.',
+            },
+            {
+              q: 'O prompting Chain-of-Thought melhora a qualidade da revisão de código com IA?',
+              a: 'Sim — para lógica complexa com múltiplos ramos condicionais, o prompting Chain-of-Thought (CoT) pede ao modelo que rastreie o fluxo de dados por cada caminho de execução antes de gerar descobertas. Isso revela bugs de lógica que a correspondência de padrões perde, porque o modelo deve modelar explicitamente cada caminho que um valor nulo ou tipo de entrada inesperado pode percorrer pela função. CoT é mais valioso para funções sensíveis à segurança e gerenciamento complexo de estado.',
+            },
+            {
+              q: 'Que porcentagem dos comentários de revisão de código com IA é realmente útil?',
+              a: 'Em uma auditoria de 8 meses de 1.247 comentários de revisão de IA em 340 PRs, apenas 14% tratavam de bugs de lógica e problemas de segurança — os problemas que causam incidentes em produção. 64% tratavam de estilo, duplicação e cobertura de testes. Ferramentas com menos de 60% de comentários acionáveis veem o colapso da adoção por desenvolvedores. Prompts com escopo que excluem explicitamente comentários de estilo invertem essa proporção e atingem taxas de ação do desenvolvedor acima de 50%.',
+            },
+            {
+              q: 'Qual modelo de IA é melhor para revisão de código?',
+              a: 'Claude Sonnet 4.6 produz a análise de segurança mais completa — identificando vetores de injeção SQL, falta de sanitização de entradas e casos extremos de autenticação. GPT-5.5 produz as sugestões de correção mais acionáveis — código corrigido concreto em vez de descrições. Os três modelos frontier suportam agora janelas de contexto de 1M de tokens (~750.000 linhas de código em uma única sessão). Para revisões de segurança, execute os três e trate as descobertas convergentes como problemas de alta confiança.',
+            },
+            {
+              q: 'Como reduzo os falsos positivos na revisão de código com IA?',
+              a: 'Três técnicas: (1) delimitar o prompt explicitamente — "revisar apenas para bugs de lógica, vulnerabilidades de segurança e regressões de desempenho; NÃO comentar sobre estilo ou nomes"; (2) adicionar uma instrução de ruído — "se não encontrar nada em uma categoria, escreva Nada encontrado, não adicione comentários de preenchimento"; (3) usar Chain-of-Thought para funções complexas — peça ao modelo que rastreie os caminhos de execução antes de produzir descobertas.',
+            },
+            {
+              q: 'Como integro a revisão de código com IA em nosso pipeline CI/CD?',
+              a: 'As ferramentas de revisão de código com IA se integram diretamente em pipelines CI/CD do GitHub, GitLab, Bitbucket e Azure DevOps instalando o bot do fornecedor e concedendo acesso ao repositório. CodeRabbit, Greptile e Snyk Code oferecem integrações com GitHub Actions / GitLab CI que são acionadas em cada pull request. Melhor prática: configure a revisão de IA para executar em paralelo com outras verificações (linting, testes unitários) — as descobertas de IA bloqueiam o merge apenas para problemas críticos de segurança.',
+            },
+            {
+              q: 'A revisão de código com IA pode detectar vulnerabilidades de segurança melhor que ferramentas SAST dedicadas?',
+              a: 'Sim — as ferramentas SAST impulsionadas por IA (Snyk Code, Semgrep Enterprise, CodeQL) alcançam de 84% a 92% de precisão de detecção em código gerado por IA, comparado a 65% para análise estática baseada em regras. No entanto, o SAST tradicional é melhor para verificações de alto volume em bases de código grandes. Melhor prática: use ferramentas SAST leves (linting) para velocidade, complemente com revisão de IA para análise de segurança profunda em mudanças de alto risco.',
+            },
+            {
+              q: 'Posso executar a revisão de código com IA localmente para código totalmente privado?',
+              a: 'Sim. Devstral Small 24B (Mistral AI, 16 GB de RAM) e LLaMA 4 Scout (~55 GB VRAM, contexto de 10M) executam totalmente on-premises via Ollama. Nenhum código é transmitido para APIs externas. Para equipes brasileiras que exigem conformidade com a LGPD sem avaliação de impacto, a implantação local elimina completamente a preocupação com o processamento de dados. A qualidade é inferior aos modelos frontier na nuvem em análise de segurança complexa, mas suficiente para a maioria das revisões em nível de PR.',
+            },
+            {
+              q: 'Qual é a melhor ferramenta de revisão de código com IA para equipes pequenas (menos de 10 desenvolvedores)?',
+              a: 'GitHub Copilot Code Review é a opção com menor atrito — se sua equipe já paga pelo Copilot (R$50–195/mês), a revisão de PR está incluída sem custo adicional. O tier gratuito do CodeRabbit cobre repositórios de código aberto. Promptfoo (gratuito, código aberto) pode automatizar asserções de revisão de código em CI/CD. Para equipes abaixo de 10, evite ferramentas de R$150+/dev/mês até que o volume de revisão justifique o custo.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Fontes e leituras adicionais',
+          items: [
+            '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — guia técnico de prompts com escopo para reduzir falsos positivos e melhorar o sinal',
+            '[Sanjay, 2025. "Best AI Code Security Tools 2025: Snyk vs Semgrep vs CodeQL"](https://sanj.dev/post/ai-code-security-tools-comparison) — benchmark do T3 2025 de três ferramentas SAST líderes em código gerado por IA',
+            '[DigitalApplied, 2025. "AI Code Review Automation: Complete Guide"](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) — benchmarks do setor: 42–85% de detecção de bugs, 40% de economia de tempo, 62% menos bugs em produção',
+            '**Nota:** Os preços das ferramentas e os benchmarks de detecção foram verificados em maio de 2026. A revisão de código com IA é um mercado em rápida evolução — verifique os preços atuais nos sites dos fornecedores antes de comprar.',
+          ],
+        },
+
+      },
+    },
+
     fr: {
       theme: 'Use Cases',
       title: 'Révision de Code par IA : Outils, Taux d\'Hallucinations et Workflows de Vérification',

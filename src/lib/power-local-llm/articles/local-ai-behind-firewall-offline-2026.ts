@@ -841,7 +841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'IA local atrás de um firewall: guia de implantação offline 2026',
       description: 'Implante LLMs locais offline atrás de um firewall: lista de verificação prévia, fluxo de trabalho air-gap com Ollama e llama.cpp, dimensionamento de NAS e notas de conformidade.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-behind-firewall-offline-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       mainEntity: [
         { '@type': 'Question', name: 'O Ollama faz alguma chamada de rede ao executar offline?', acceptedAnswer: { '@type': 'Answer', text: 'O Ollama contata ollama.com apenas para baixar ou atualizar modelos. Executar com um cache local e OLLAMA_MODELS configurado não gera nenhuma conexão de saída.' } },
         { '@type': 'Question', name: 'Qual é o menor modelo que lida bem com texto em português offline?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B em Q4_K_M (5,5 GB de VRAM). Tokenização nativa em português, 50-80 tok/s em uma RTX 3060.' } },

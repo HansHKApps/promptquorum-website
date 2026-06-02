@@ -1987,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'IA local para e-mail e calendário: triagem sem API na nuvem (2026)',
       description: 'Como automatizar a redação de e-mails, o resumo da caixa de entrada e a gestão do calendário com um LLM local. Ollama, integração IMAP e automação de comunicação com privacidade.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-email-and-calendar-automation?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

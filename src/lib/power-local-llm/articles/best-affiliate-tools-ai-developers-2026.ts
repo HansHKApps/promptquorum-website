@@ -1673,7 +1673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Melhores programas de afiliados para desenvolvedores de IA: ganhe enquanto constrói (2026)',
       description: 'Sete programas de afiliados para desenvolvedores de IA: NordVPN (até 100%), Coursera (até 45%), RunPod (10%), DataCamp (25%), v0/Vercel (30% recorrente), Cursor e Amazon Associates (1–4%).',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-affiliate-tools-ai-developers-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

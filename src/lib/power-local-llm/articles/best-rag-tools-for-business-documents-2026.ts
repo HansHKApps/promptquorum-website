@@ -927,7 +927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       mainEntity: [
         {
           '@type': 'Question',
@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       name: 'Melhores ferramentas RAG para documentos corporativos 2026',
       numberOfItems: 5,
       itemListElement: [
@@ -977,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-rag-tools-for-business-documents-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },

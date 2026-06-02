@@ -836,7 +836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       mainEntity: [
         {
           '@type': 'Question',
@@ -867,7 +867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     howToSchema: {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       name: 'Criar um bot de WeChat com LLM local',
       step: [
         { '@type': 'HowToStep', name: 'Instalar o Ollama e baixar o Qwen3 7B', text: 'Baixe o Ollama e execute: ollama pull qwen2.5:7b' },
@@ -883,7 +883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Bot de WeChat com LLM local: assistente pessoal 2026',
       description: 'Crie um bot assistente pessoal no WeChat com WeChatFerry e Ollama no Windows — completamente local, sem API na nuvem.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/wechat-bot-local-llm-personal-assistant-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',

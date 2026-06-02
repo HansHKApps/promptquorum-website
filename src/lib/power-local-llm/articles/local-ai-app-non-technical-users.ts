@@ -2514,7 +2514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '5 apps de IA local que funcionam sem terminal (2026)',
       description: 'Zero comandos de terminal. Sem Python. Sem Docker. 5 apps de IA local que um usuário não técnico pode instalar em 10 minutos. Testados com iniciantes reais em 2026.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-app-non-technical-users?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
       author: { '@type': 'Person', 'name': 'Hans Kuepper' },
