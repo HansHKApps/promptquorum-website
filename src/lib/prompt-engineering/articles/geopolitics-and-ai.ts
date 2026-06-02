@@ -3629,7 +3629,614 @@ export const article: Partial<Record<Language, PEArticle>> = {
       gammaEmbedUrl: '/presentations/geopolitics-and-ai-static.html',
       gammaDescription: 'O deck de slides aborda: requisitos de residência de dados por região (UE RGPD, China PIPL, Índia DPDP), seleção de modelos conforme o contexto geopolítico, panorama regulatório de IA nas principais jurisdições e uma lista de verificação de conformidade. Baixe o PDF como cartão de referência de implantação de IA geopolítica.',
       sections: {
-        // PT_SECTIONS_PLACEHOLDER
+        tldr: {
+          title: 'Pontos-chave',
+          isTldr: true,
+          items: [
+            'A IA é uma tecnologia estratégica nacional — EUA, China e UE competem pela dominância.',
+            'Os países competem por três recursos: computação (chips), talentos em IA e dados de treinamento.',
+            'A IA afeta simultaneamente a capacidade militar, a competitividade econômica e o poder cibernético.',
+            'O EU AI Act é a primeira lei vinculante de IA do mundo — multas chegam a €35M ou 7% do faturamento global.',
+            'Efeito Bruxelas: as regras do EU AI Act se aplicam a qualquer IA que alcance usuários da UE, em todo o mundo.',
+            'Os EUA não têm lei federal de IA — reguladores setoriais aplicam mandatos existentes à IA em seus domínios.',
+            'Os EUA revogaram sua ordem executiva de segurança em IA em janeiro de 2025 — competitividade agora lidera sobre segurança.',
+            'O DeepSeek R1 da China superou o GPT-5.5 em benchmarks-chave (AIME, MATH, HumanEval) a um custo de treinamento de US$6M — redução de 94% — demonstrando que controles de exportação de GPU têm limites.',
+            'A TSMC em Taiwan fabrica os chips que alimentam toda a IA de fronteira — uma única dependência geopolítica.',
+            'As organizações precisam cumprir simultaneamente três frameworks regulatórios incompatíveis: UE, EUA e China.',
+          ],
+        },
+
+        quickFacts: {
+          title: 'Fatos rápidos: Geopolítica da IA em resumo',
+          items: [
+            '**EU AI Act:** Primeira lei vinculante de IA do mundo. Aplicação de alto risco: 2 de agosto de 2026 (pode ser adiada até 2 de dezembro de 2027 pelo Omnibus Digital, pendente de acordo de trílogo programado para 13 de maio de 2026). Multas: até €35 milhões ou 7% da receita anual global.',
+            '**Política de IA dos EUA:** Sem lei federal de IA. Administração Trump buscando pré-emissão de leis estaduais via EO 14365 (dezembro de 2025), Framework Nacional (março de 2026) e proposta TRUMP AMERICA AI Act (março de 2026). Múltiplos prazos de implementação perdidos até maio de 2026.',
+            '**Governança de IA na China:** Avaliação prévia ao lançamento do CAC (Administração do Ciberespaço da China) obrigatória. Filtros de conteúdo bloqueiam críticas ao PCCh, discussões sobre Taiwan/Tibet/Xinjiang e conteúdo que mina os "valores socialistas fundamentais". Os filtros retornam HTTP 200 com flag `is_safe: 0` (não erros 4xx). A PIPL exige residência de dados para dados pessoais chineses.',
+            '**Gargalos de hardware:** Nvidia controla ~80% do mercado de GPU para treinamento de IA. TSMC fabrica ~90% dos semicondutores avançados. Ambos são pontos críticos geopolíticos. A CHIPS Act dos EUA (US$52B) visa reduzir a dependência da TSMC.',
+            '**Impacto do DeepSeek R1:** Superou o GPT-5.5 em raciocínio/codificação (AIME 2024, MATH, HumanEval) a um custo estimado de treinamento de ~US$6M (redução de 94% em relação às estimativas de modelos de fronteira). Treinado em GPUs Nvidia H800 restritas para a China. Demonstra que controles de exportação de hardware têm limites.',
+            '**Conflito regulatório global:** A UE foca em direitos e segurança; os EUA focam em inovação e competitividade; a China foca em controle estatal e vantagem estratégica. Organizações que implantam IA globalmente precisam navegar por três frameworks incompatíveis simultaneamente.',
+          ],
+        },
+
+        euImplications: {
+          title: 'Se você é uma organização com sede na UE: Prazos críticos de conformidade',
+          content: [
+            '**O EU AI Act é vinculante e aplicado a partir de agosto de 2026.** Se a sua organização está sediada na UE ou atende usuários da UE, você deve cumprir seu sistema de classificação de risco em quatro níveis. Multas por práticas proibidas chegam a €35 milhões ou 7% do faturamento global — o que for maior. O não cumprimento não é negociável.',
+            '**Se você implanta GPT-5.5, Claude Opus 4.8 ou Gemini 3.1 Pro na UE, você deve auditar sua documentação de conformidade de IA de Propósito Geral (GPAI).** OpenAI, Anthropic e Google publicaram documentação de transparência (resumos de dados de treinamento, limitações de capacidades, testes de segurança) a partir de agosto de 2025. Guarde essas atestações como prova de conformidade — os reguladores vão solicitá-las.',
+            '**Sistemas de IA de alto risco (contratação, decisões de crédito, saúde, aplicação da lei) exigem avaliações de conformidade antes da implantação.** Isso significa testes de viés, documentação de mecanismos de supervisão humana e trilhas de auditoria de todas as decisões de IA. Modelos de pesos abertos implantados localmente (LLaMA via Ollama, Mistral Large) satisfazem os requisitos de residência de dados — nenhum dado sai da sua infraestrutura e você controla a trilha de auditoria.',
+            '**O Efeito Bruxelas se aplica a você.** Se o seu sistema de IA alcança um único residente da UE, o EU AI Act se aplica — mesmo que sua empresa esteja sediada nos EUA ou na China. Isso significa que aplicar o mesmo nível de conformidade globalmente costuma ser mais simples do que manter múltiplas configurações.',
+          ],
+        },
+
+        promptEngineerTakeaways: {
+          title: 'Pontos-chave para engenheiros de prompt',
+          isTldr: true,
+          items: [
+            'APIs de IA chinesas (DeepSeek, ERNIE 4.0, Qwen via Alibaba Cloud) filtram conteúdo no nível da API — tópicos políticos, críticas ao PCCh e Taiwan/Tibet/Xinjiang retornam `is_safe: 0` em respostas HTTP 200, não HTTP 4xx. Trate esses casos explicitamente no código da sua aplicação.',
+            'Modelos Mistral e implantações locais do Ollama satisfazem os requisitos de residência de dados do EU AI Act — prompts e saídas nunca saem da sua infraestrutura. Esse é o caminho de menor atrito para conformidade com EU RGPD + AI Act para engenheiros de prompt.',
+            'GPT-5.5 e Claude Opus 4.8 estão em conformidade com GPAI sob o EU AI Act a partir de agosto de 2025. Você pode usá-los em implantações voltadas à UE sem trabalho adicional de conformidade no nível do modelo — sua obrigação está no nível da aplicação (implantador), não no nível do modelo.',
+            'O Efeito Bruxelas significa que prompts enviados a modelos hospedados nos EUA para produtos usados por residentes da UE estão sujeitos aos requisitos do EU AI Act — mesmo que sua empresa não seja sediada na UE.',
+            'Para testes multijurisdicionais, envie o mesmo prompt simultaneamente para Mistral (em conformidade com a UE), GPT-5.5 (EUA/GPAI) e Qwen (acessível na China) para comparar saídas entre contextos regulatórios. O PromptQuorum suporta isso nativamente.',
+          ],
+        },
+
+        promptOptimizationByRegion: {
+          title: 'Como a geopolítica muda a otimização de prompts: país por país',
+          content: [
+            '**Onde a saída da sua IA é consumida determina o que seus prompts precisam fazer — e o que precisam evitar.** O idioma afeta o desempenho do modelo diretamente: um prompt escrito em inglês enviado a um modelo chinês (ERNIE 4.0, Qwen) tem desempenho inferior ao mesmo prompt escrito em mandarim. A lei afeta o design de prompts estruturalmente: requisitos de divulgação do EU AI Act, regulamentações setoriais dos EUA e filtros de conteúdo do CAC da China impõem restrições diferentes sobre como os prompts podem ser formulados, quais saídas podem ser geradas e como as aplicações precisam lidar com as respostas.',
+          ],
+          tableFormat: true,
+          columns: ['Região', 'Restrição legal sobre prompts', 'Otimização de idioma', 'Modelo recomendado'],
+          rows: [
+            {
+              'Região': 'União Europeia',
+              'Restrição legal sobre prompts': 'EU AI Act: prompts que geram conteúdo que interage com consumidores da UE devem incluir divulgação de IA. RGPD: prompts não devem incluir dados pessoais sem base legal. Aplicações de IA de alto risco (RH, crédito, saúde) exigem supervisão humana — prompts não devem automatizar decisões finais.',
+              'Otimização de idioma': 'Escreva prompts no idioma-alvo (alemão, francês, etc.) — GPT-5.5 e Claude Opus 4.8 têm desempenho significativamente melhor em tarefas não inglesas quando os prompts estão no mesmo idioma da saída desejada. Especifique explicitamente o idioma de saída nos prompts do sistema.',
+              'Modelo recomendado': 'Mistral Large (francês, com sede na UE), implantação local Ollama (dados nunca saem da infraestrutura) ou GPT-5.5/Claude com endpoints de API da região UE e SCCs.',
+            },
+            {
+              'Região': 'Estados Unidos',
+              'Restrição legal sobre prompts': 'Sem lei federal de IA, mas regras setoriais se aplicam: HIPAA (saúde — PHI não deve aparecer nos prompts), CCPA/CPRA (Califórnia — dados pessoais nos prompts aciona direitos do consumidor), FTC Act (prompts não devem gerar conteúdo enganoso em contextos de consumidor). Leis biométricas estaduais (Illinois BIPA) restringem prompts que processam dados faciais/de voz.',
+              'Otimização de idioma': 'Modelos de fronteira dos EUA (GPT-5.5, Claude Opus 4.8) são otimizados para inglês e têm desempenho máximo em prompts em inglês. Para mercados hispânicos nos EUA, instrua o modelo explicitamente em espanhol ou use um prompt de sistema bilíngue — não dependa da detecção automática.',
+              'Modelo recomendado': 'GPT-5.5 ou Claude Opus 4.8 para uso geral. Para prompts regulados de saúde ou financeiros, use a API com SCCs e evite enviar PHI/PII no contexto do prompt.',
+            },
+            {
+              'Região': 'China',
+              'Restrição legal sobre prompts': 'Medidas de IA Generativa do CAC (2023): prompts que solicitam conteúdo sobre a liderança do PCCh, independência de Taiwan/Tibet/Xinjiang, os eventos de Tiananmen de 1989 ou qualquer coisa que mine os "valores socialistas fundamentais" serão bloqueados. Retornados como HTTP 200 com `is_safe: 0`. PIPL: prompts contendo dados pessoais de usuários chineses não devem ser roteados para servidores fora da China.',
+              'Otimização de idioma': 'Escreva prompts em chinês simplificado (mandarim) para tarefas em chinês — Qwen 3 e ERNIE 4.0 pontuam 10–20% mais alto em benchmarks em chinês (C-Eval) vs. o mesmo prompt em inglês. Use Pinyin ou inglês para terminologia técnica quando não existir equivalente em chinês.',
+              'Modelo recomendado': 'Qwen 3 72B (auto-hospedado fora da China, sem filtros do CAC) para tarefas transfronteiriças. ERNIE 4.0 via API Qianfan (registrado no CAC) para implantações voltadas ao consumidor na China. DeepSeek R1 para tarefas de raciocínio que não tocam áreas de conteúdo filtrado.',
+            },
+            {
+              'Região': 'Reino Unido / Pós-Brexit',
+              'Restrição legal sobre prompts': 'UK RGPD (equivalente ao RGPD da UE) aplica-se a dados pessoais. UK AI Safety Institute foca na avaliação de modelos de fronteira, não em conformidade no nível de aplicação. Sem lei obrigatória de divulgação de IA — o Reino Unido escolheu uma abordagem pró-inovação e liderada pelo setor. OFCOM regula conteúdo gerado por IA em contextos de transmissão.',
+              'Otimização de idioma': 'Grafias e expressões do inglês britânico nos prompts melhoram a qualidade da saída para conteúdo voltado ao Reino Unido. GPT-5.5 responde a instruções explícitas de "UK English" em prompts do sistema; sem elas, padroniza para inglês americano.',
+              'Modelo recomendado': 'GPT-5.5 ou Claude Opus 4.8. Transferências de dados UK-UE exigem SCCs pós-Brexit — decisão de adequação do Reino Unido da UE em vigor, mas sujeita a revisão.',
+            },
+            {
+              'Região': 'Japão',
+              'Restrição legal sobre prompts': 'A Lei de Proteção de Informações Pessoais do Japão (APPI) restringe o uso de dados pessoais em prompts de IA. O Japão não tem lei específica de IA (a partir de 2026) — as orientações do METI e do Ministério dos Assuntos Internos são voluntárias. O Japão participou do Processo de IA de Hiroshima — a adesão aos seus 11 princípios é incentivada para empresas japonesas.',
+              'Otimização de idioma': 'Prompts em japonês para tarefas em japonês superam prompts em inglês em todos os principais modelos. GPT-5.5 e Claude Opus 4.8 lidam bem com o japonês; Rakuten AI e NTT LLMs estão disponíveis para implantações específicas do Japão. Evite o registro casual (tame-go) em prompts do sistema — a formulação educada (keigo) melhora a conformidade e a qualidade da saída para contextos empresariais japoneses.',
+              'Modelo recomendado': 'GPT-5.5 ou Claude Opus 4.8 para tarefas gerais em japonês. Rakuten AI (Rakuten Group) ou NTT LLMs para implantações sensíveis à conformidade no mercado doméstico japonês.',
+            },
+          ],
+        },
+
+        keyStatistics: {
+          title: 'Geopolítica da IA: Pontos de dados-chave',
+          content: [
+            'Os números a seguir representam a escala do investimento governamental em IA, a concentração de hardware e a capacidade de pesquisa que definem a competição geopolítica atual em inteligência artificial.',
+          ],
+          items: [
+            '**Investimento governamental em IA — Estados Unidos:** US$52 bilhões alocados pela CHIPS and Science Act (2022) para fabricação doméstica de semicondutores, mais US$200 bilhões para P&D científica. A National AI Initiative Act financia pesquisa em IA em 25 agências federais.',
+            '**Investimento governamental em IA — China:** Estimativa de ¥1 trilhão (US$140 bilhões) em investimentos governamentais em IA e semicondutores 2021–2025, incluindo o Plano Nacional de Desenvolvimento de IA de Nova Geração com meta de liderança global em IA até 2030.',
+            '**Investimento governamental em IA — União Europeia:** €1 bilhão do fundo de IA do Conselho Europeu de Inovação; estratégias dos estados-membros adicionam mais de €10 bilhões: Alemanha €5 bilhões (2019–2025), França €2 bilhões, Reino Unido £1 bilhão em segurança e computação de IA.',
+            '**Concentração na fabricação de chips:** A TSMC (Taiwan) fabrica aproximadamente 90% dos chips mais avançados do mundo abaixo de 7nm. A ASML (Países Baixos) é o único fabricante de máquinas de litografia EUV necessárias para fabricação de nós avançados — dando aos Países Baixos um gargalo estrutural no fornecimento global de chips.',
+            '**Participação de mercado de GPU da Nvidia:** A Nvidia detém aproximadamente 80% de participação de mercado em GPUs de treinamento de IA. As séries H100 e H200 alimentam a maioria do treinamento de modelos de fronteira na OpenAI, Google DeepMind, Anthropic e Baidu.',
+            '**Distribuição de pesquisadores de IA:** Os EUA empregam aproximadamente 40% dos melhores pesquisadores de IA do mundo por impacto de publicação (Stanford HAI 2024 AI Index). A China produz o maior número de doutorados em ciência da computação — aproximadamente 50.000 por ano — e representa ~30% dos principais autores de conferências de IA.',
+            '**Registros de patentes de IA:** A China registrou aproximadamente 70% das patentes globais de IA em 2022 (WIPO Global Innovation Index). Os EUA lideram em citações e invenções comercializadas; a China lidera em volume.',
+            '**Compressão de custo de treinamento de modelos:** Redução de custo de 94% — GPT-4 estimado em ~US$100 milhões em computação de treinamento (2023) vs. o reportado ~US$6 milhões do DeepSeek R1 (janeiro de 2025). Essa diferença demonstra que os controles de exportação de computação dos EUA não podem restringir permanentemente o desenvolvimento de IA de fronteira chinesa.',
+            '**Cobertura do EU AI Act:** O Act cobre 450 milhões de consumidores em 27 estados-membros da UE. O limite de risco sistêmico para modelos GPAI é 10²⁵ FLOPs de computação de treinamento — o nível em que requisitos adicionais de teste adversarial se aplicam.',
+            '**Declaração de Bletchley (novembro de 2023):** Assinada por 28 nações incluindo EUA, China e estados-membros da UE — o mais amplo consenso internacional de segurança de IA até o momento, embora não vinculante.',
+          ],
+          image: '/images/ai-regulation-timeline-en.svg',
+          imageCaption: 'Linha do tempo regulatória global de IA 2022–2026: proposta do EU AI Act (2021), CHIPS Act (2022), regras do algoritmo CAC (2022–2023), EU AI Act adotado (2024), fase de aplicação jan 2025.',
+        },
+
+        qaWhyStrategic: {
+          title: 'Por que a IA é estrategicamente importante?',
+          content: [
+            'A IA é estrategicamente importante porque amplifica a capacidade em cada dimensão do poder nacional simultaneamente — produtividade econômica, eficácia militar, análise de inteligência e operações cibernéticas. Nações com IA líder podem automatizar pesquisa científica, otimizar logística militar, processar dados de vigilância em escala e desenvolver sistemas de armas autônomos. A OCDE projeta que a IA pode adicionar US$15,7 trilhões ao PIB global até 2030, tornando a liderança em IA o equivalente à liderança industrial do século XX. Países que ficam para trás em capacidade de IA enfrentam desvantagens cumulativas em defesa, comércio e diplomacia.',
+          ],
+        },
+
+        qaWhichCountriesDominate: {
+          title: 'Quais países dominam o desenvolvimento de IA?',
+          content: [
+            'Os Estados Unidos dominam a capacidade de modelos de fronteira — OpenAI (GPT-5.5), Anthropic (Claude) e Google DeepMind (Gemini) são todas sediadas nos EUA. A China lidera em volume de patentes de IA (~70% das patentes globais em 2022 segundo a WIPO) e tem os modelos domésticos mais capazes fora dos EUA: Alibaba Qwen 3, Baidu ERNIE 4.0 e DeepSeek R1. A UE lidera em regulamentação de IA, mas fica atrás em capacidade de fronteira — a Mistral AI da França é o concorrente europeu mais forte. Reino Unido, Canadá e EAU estão investindo em IA como atores independentes em vez de se alinhar exclusivamente com infraestrutura dos EUA ou chinesa.',
+          ],
+        },
+
+        qaChipsRole: {
+          title: 'Qual é o papel dos chips na geopolítica da IA?',
+          content: [
+            'Os chips semicondutores são o substrato físico da capacidade de IA. Treinar modelos de fronteira requer milhares de GPUs especializadas rodando por meses — uma única execução de treinamento para um modelo grande pode custar de US$10 a US$100 milhões em computação. A Nvidia detém aproximadamente 80% do mercado de GPU de treinamento de IA; a TSMC em Taiwan as fabrica. Isso cria dois gargalos geopolíticos: os EUA podem restringir exportações de GPU da Nvidia para nações adversárias (restrindo vendas de A100 e H100 para a China desde 2022), e qualquer perturbação nas operações da TSMC reduziria imediatamente o fornecimento global de hardware de IA. A CHIPS and Science Act dos EUA (US$52 bilhões) financia explicitamente capacidade doméstica de fabricação para reduzir essa dependência de ponto único.',
+          ],
+        },
+
+        qaHowAIChangePower: {
+          title: 'Como a IA poderia mudar o poder global?',
+          content: [
+            'A IA poderia mudar o poder global tornando as nações líderes em IA desproporcionalmente poderosas em relação ao seu tamanho econômico ou populacional. Militarmente, a IA permite direcionamento autônomo, otimização de logística e processamento de inteligência de sinais a velocidades que nenhum sistema operado por humanos pode igualar. Economicamente, os ganhos de produtividade da IA se compõem — nações com acesso à IA de fronteira poderiam sustentar taxas de crescimento do PIB que ampliam a lacuna com as que não têm. Diplomaticamente, nações que exportam infraestrutura de IA — hardware, modelos, frameworks de governança — ganham soft power e criam relações de dependência comparáveis às criadas por exportações de petróleo ou infraestrutura de telecomunicações em eras anteriores. O Efeito Bruxelas da UE já faz isso por meio da regulamentação: o EU AI Act molda o desenvolvimento global de IA sem que a UE liderasse na capacidade de modelos.',
+          ],
+        },
+
+        geopoliticsOfAI: {
+          title: 'A geopolítica da inteligência artificial',
+          content: [
+            '**A geopolítica da inteligência artificial é o estudo de como os estados usam a capacidade de IA, a regulamentação de IA e a infraestrutura de IA como instrumentos de poder.** Ela abrange três competições distintas: a corrida para construir os modelos mais capazes, a disputa sobre qual framework regulatório governa a implantação global de IA e a luta para controlar as cadeias de suprimentos de hardware que tornam a IA de fronteira possível.',
+            'Cada dimensão tem consequências concretas para as organizações. A capacidade do modelo determina quais ferramentas de IA estão disponíveis. Os frameworks regulatórios determinam quais ferramentas são permitidas e qual documentação é necessária. O controle de hardware determina quais nações podem sustentar o desenvolvimento de IA de fronteira de forma independente — e quais não podem. Os EUA, China e UE estão perseguindo estratégias incompatíveis em todas as três dimensões simultaneamente.',
+          ],
+        },
+
+        keyEntityRelationships: {
+          title: 'Entidades-chave na geopolítica da IA e seus relacionamentos',
+          content: [
+            '**A regulamentação de IA** é o conjunto de leis, ordens executivas e frameworks voluntários que governam como os sistemas de inteligência artificial são desenvolvidos, implantados e regulados. A regulamentação de IA é produzida por estados soberanos e organismos internacionais; os três principais regimes regulatórios são o EU AI Act (União Europeia), o NIST AI Risk Management Framework (Estados Unidos) e as Medidas de IA Generativa do CAC (China).',
+            '**A rivalidade tecnológica EUA-China** é a competição bilateral entre os Estados Unidos e a China pela liderança em semicondutores, inteligência artificial e manufatura avançada. A rivalidade se expressa por meio de controles de exportação dos EUA sobre GPUs da Nvidia, a estratégia de substituição doméstica da China (Made in China 2025) e frameworks concorrentes de governança de IA. A UE é um terceiro ator — não uma parte bilateral — que molda a rivalidade por meio de seu poder regulatório.',
+            '**O EU AI Act** é um regulamento aprovado pelo Parlamento Europeu em março de 2024. É aplicado pelo EU AI Office e pelas autoridades nacionais de vigilância de mercado. Aplica-se a qualquer organização — independentemente da localização da sede — cujos sistemas de IA afetam usuários da UE. O EU AI Act está relacionado ao Efeito Bruxelas: por se aplicar extraterritorialmente, ele efetivamente regula OpenAI, Google DeepMind e Anthropic globalmente.',
+            '**A NVIDIA** é uma empresa americana de semicondutores que projeta GPUs de treinamento de IA (séries H100, H200, B200). O hardware da NVIDIA é o principal substrato de computação para treinar GPT-5.5, Claude, Gemini e a maioria dos modelos de IA de fronteira. Os controles de exportação dos EUA sobre GPUs da NVIDIA para a China são um mecanismo central na rivalidade tecnológica EUA-China. A posição de mercado da NVIDIA (~80% de participação em GPU de IA) a torna um ator geopolítico além de comercial.',
+            '**A TSMC** (Taiwan Semiconductor Manufacturing Company) é uma fundição de chips taiwanesa que fabrica semicondutores avançados para NVIDIA, Apple, AMD e Google. A localização geográfica da TSMC em Taiwan — e o status político disputado da ilha — torna a TSMC uma variável crítica na geopolítica da IA. A CHIPS and Science Act foi promulgada em parte para reduzir a dependência dos EUA da TSMC por meio do financiamento de fábricas domésticas nos EUA.',
+            '**A DeepSeek** é um laboratório de IA chinês (apoiado pela High-Flyer Capital Management) que lançou o DeepSeek R1 em janeiro de 2025. O DeepSeek R1 superou o GPT-5.5 em vários benchmarks enquanto supostamente treinava a um custo estimado de ~US$6 milhões — 94% menos do que estimativas de modelos de fronteira — usando GPUs NVIDIA H800 restritas para a China. O lançamento do DeepSeek enfraqueceu o argumento de que os controles de exportação dos EUA poderiam limitar permanentemente o desenvolvimento de IA de fronteira chinesa.',
+          ],
+        },
+
+        fiveGeopoliticalDimensions: {
+          title: '5 dimensões geopolíticas da IA',
+          content: [
+            'A geopolítica da IA opera em cinco dimensões distintas. Cada uma representa uma arena separada de competição entre EUA, China e UE — e cada uma cria diferentes obrigações e riscos para organizações que implantam IA.',
+          ],
+          items: [
+            '**1. Economia.** A IA impulsiona produtividade, automação e crescimento do PIB. Nações com capacidade de IA superior ganham eficiência de fabricação, vantagens em modelagem financeira e descoberta científica mais rápida. A OCDE projeta que a IA pode adicionar US$15,7 trilhões ao PIB global até 2030 — a maioria capturada pelas nações líderes em IA.',
+            '**2. Militar.** A IA permite sistemas de armas autônomos, logística preditiva, processamento de inteligência de campo de batalha e operações cibernéticas em velocidade de máquina. EUA, China e Rússia estão todos desenvolvendo sistemas militares habilitados por IA. O Joint Artificial Intelligence Center (JAIC) do DoD dos EUA e a estratégia de Fusão Militar-Civil da China priorizam a IA para a defesa nacional.',
+            '**3. Inteligência.** A IA processa imagens de satélite, intercepta sinais e analisa dados de fontes abertas em escalas impossíveis para analistas humanos. NSA, GCHQ e o MSS da China todos usam IA para coleta e análise de inteligência. Mídias sintéticas geradas por IA (deepfakes) são uma ferramenta emergente de operações de inteligência e influência.',
+            '**4. Infraestrutura.** A IA depende de infraestrutura física: fábricas de semicondutores (TSMC, Samsung, Intel), data centers, cabos submarinos e redes elétricas. Nações que controlam infraestrutura crítica de IA — fabricação de chips, plataformas de nuvem, computação de treinamento — detêm alavancagem estrutural sobre aquelas que não têm.',
+            '**5. Governança global.** Qual framework regulatório se torna o padrão global determina o que os sistemas de IA podem fazer, quais dados podem usar e quais organizações podem implantá-los. O EU AI Act, os frameworks NIST dos EUA e as regulamentações do CAC da China representam três modelos concorrentes de governança — e o Efeito Bruxelas significa que o modelo da UE já se aplica além de suas fronteiras.',
+          ],
+        },
+
+        threeWayRace: {
+          title: 'A corrida armamentista de IA: EUA, China e UE',
+          content: [
+            '**Três visões incompatíveis de governança de IA estão competindo pela adoção global — os EUA priorizam inovação e competitividade, a China usa direção estatal para alcançar dominância estratégica em IA e a UE constrói um framework jurídico baseado em direitos que exporta seus padrões globalmente por meio do Efeito Bruxelas.** Essa corrida armamentista de IA é primariamente civil: os laboratórios líderes são empresas privadas (OpenAI, Anthropic, Google DeepMind, Baidu, Alibaba), mas as apostas — controle regulatório, cadeias de suprimentos de hardware e talentos — são geopolíticas.',
+            'A corrida não é apenas sobre quem constrói os modelos mais capazes. Trata-se de qual framework regulatório se torna o padrão global. O EU AI Act, ao se aplicar a qualquer sistema de IA implantado para usuários da UE, já tornou Bruxelas o regulador efetivo da OpenAI, Anthropic e Google DeepMind globalmente. O controle de hardware é uma terceira dimensão: a CHIPS and Science Act (US$52 bilhões) e os controles de exportação de GPU da Nvidia visam limitar o acesso da China à computação. O lançamento do DeepSeek R1 em janeiro de 2025 — competitivo com o GPT-5.5 a uma fração do custo de treinamento — demonstrou que esses controles têm limites. Veja [LLMs open-source vs proprietários](/prompt-engineering/open-source-vs-proprietary-llms) para como essas dinâmicas afetam a disponibilidade de modelos.',
+          ],
+          items: [
+            '**Posição dos EUA:** Lidera em capacidade de modelos de fronteira (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro), design de chips (Nvidia, AMD) e investimento em IA (US$67B em investimento privado em 2023 segundo a OCDE). Sem lei federal unificada de IA — acelera a implantação, mas cria fragmentação de conformidade.',
+            '**Posição da China:** Lidera em volume de patentes de IA, escala de reconhecimento facial e implantação de infraestrutura dirigida pelo Estado. Modelos (Qwen 3, ERNIE 4.0, DeepSeek R1) são competitivos em muitos benchmarks. A dependência de hardware das arquiteturas Nvidia é a principal vulnerabilidade estratégica que os controles de exportação visam.',
+            '**Posição da Europa:** Lidera em regulamentação de IA — o EU AI Act é o framework de referência global — e pesquisa de pesos abertos (Mistral da França). Fica atrás em capacidade de modelos de fronteira e investimento privado. Compensa por meio de alavancagem regulatória: o Efeito Bruxelas força fornecedores dos EUA e da China a cumprirem os padrões da UE para produtos globais.',
+            '**A camada de hardware:** GPUs Nvidia H100/H200 dominam o treinamento de IA. Controles de exportação dos EUA restringem vendas para a China. DeepSeek R1 treinado em GPUs H800 restritas a ~US$6M reportados — uma redução de custo de 94% vs. estimativas de treinamento do GPT-5.5 — demonstrando que os controles de hardware não detiveram a IA de fronteira chinesa.',
+          ],
+          image: '/images/regional-ai-players-en.svg',
+          imageCaption: 'EUA: OpenAI, Anthropic, Google DeepMind (financiados por VC). UE: Mistral, Hugging Face (open-source, subfinanciados vs. EUA). China: Baidu, Alibaba, Tencent (apoiados pelo Estado, supervisão do CAC).',
+        },
+
+        euAiAct: {
+          title: 'O EU AI Act: O que realmente exige',
+          content: [
+            '**O EU AI Act classifica sistemas de IA em quatro níveis de risco, com requisitos e multas dimensionados ao nível de risco que o sistema representa para os direitos fundamentais e a segurança.** O Parlamento Europeu aprovou o Act em março de 2024 com 523 votos a favor, 46 contra e 49 abstenções — o mais amplo consenso político de qualquer legislação importante de IA globalmente.',
+            'O Act se aplica a fornecedores que colocam sistemas de IA no mercado da UE, implantadores que usam sistemas de IA dentro da UE e importadores e distribuidores — independentemente de onde essas organizações estão sediadas. Uma empresa dos EUA cuja saída de IA é usada em estados-membros da UE deve estar em conformidade.',
+          ],
+          items: [
+            '**Risco Inaceitável (proibido):** Pontuação social por autoridades públicas; identificação biométrica em tempo real em espaços públicos (exceções restritas para aplicação da lei permitidas); IA que explora vulnerabilidades cognitivas; coleta indiscriminada de imagens faciais. Esses estão proibidos desde agosto de 2024.',
+            '**Alto Risco:** IA em infraestrutura crítica, educação, emprego, serviços essenciais (crédito, benefícios), aplicação da lei, controle de fronteiras e administração da justiça. Requer avaliações de conformidade, documentação de transparência, supervisão humana e registro no banco de dados da UE.',
+            '**Risco Limitado:** Chatbots e conteúdo gerado por IA. Requer divulgação — os usuários precisam saber que estão interagindo com IA.',
+            '**Risco Mínimo:** Filtros de spam, IA em videogames, sistemas de recomendação sem impacto significativo. Sem obrigações específicas além da lei existente.',
+            '**IA de Propósito Geral (GPAI):** Modelos como GPT-5.5, Claude e Gemini devem publicar resumos de dados de treinamento, cumprir a lei de direitos autorais da UE e relatar incidentes graves. Modelos com risco sistêmico (treinados com >10^25 FLOPS) enfrentam requisitos adicionais de teste adversarial. As regras de GPAI se aplicaram em agosto de 2025.',
+            '**Aplicação:** EU AI Office (dentro da Comissão Europeia) supervisiona modelos GPAI. Autoridades nacionais de vigilância de mercado aplicam regras de IA de alto risco. Multas: até €35M ou 7% do faturamento global para práticas proibidas; €15M ou 3% para violações de alto risco.',
+            '**Cronograma:** Práticas proibidas: agosto de 2024. Obrigações de GPAI: agosto de 2025. Sistemas de IA de alto risco: agosto de 2026. IA de alto risco em produtos regulados: agosto de 2027.',
+          ],
+          image: '/images/ai-risk-tiers-comparison-en.svg',
+          imageCaption: 'Sistema de 4 níveis de risco do EU AI Act: Inaceitável (proibido ago 2024), Alto risco (avaliação de conformidade), Limitado (apenas divulgação), Mínimo (sem obrigações).',
+        },
+
+        digitalOmnibus: {
+          title: 'Omnibus Digital: prazo de conformidade de alto risco do EU AI Act em fluxo',
+          content: [
+            '**A partir de maio de 2026, o prazo de conformidade de alto risco da UE de 2 de agosto de 2026 pode ser adiado para 2 de dezembro de 2027 — mas a adoção não é garantida.** A Comissão Europeia propôs o Omnibus Digital em novembro de 2025 para abordar consequências não intencionais e desafios de implementação no EU AI Act. Tanto o Parlamento Europeu quanto o Conselho da UE sinalizaram apoio a um adiamento. No entanto, as negociações interinstitucionais estagnaram.',
+            '**Status do trílogo:** O primeiro trílogo (negociação entre Parlamento, Conselho e Comissão) em fevereiro de 2026 encontrou amplo acordo político sobre urgência, mas deixou detalhes técnicos não resolvidos. O segundo trílogo em 28 de abril de 2026 terminou sem consenso. Um terceiro trílogo foi agendado para 13 de maio de 2026. Se adotado antes de 2 de agosto de 2026, o adiamento se torna vinculante; se não, o prazo original de 2 de agosto de 2026 se aplica conforme escrito.',
+            '**O que as organizações devem fazer:** Planeje para 2 de agosto de 2026 como seu prazo vinculante de conformidade para sistemas de IA de alto risco. O adiamento do Omnibus Digital pode estender seu cronograma até dezembro de 2027, mas assumir que o atraso passará é um risco. Alcançar a conformidade de agosto de 2026 agora significa que você está protegido de qualquer forma.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Aviso: Adoção do Omnibus Digital é incerta',
+              text: 'O adiamento do Omnibus Digital de agosto de 2026 para dezembro de 2027 NÃO é garantido. O segundo trílogo em 28 de abril de 2026 não chegou a um consenso. Um terceiro trílogo está agendado para 13 de maio de 2026. NÃO assuma que o atraso passará. Planeje seu roteiro de conformidade para 2 de agosto de 2026 como prazo vinculante.',
+            },
+          ],
+        },
+
+        euMemberStates: {
+          title: 'Estados-membros da UE: estratégias nacionais de IA',
+          content: [
+            '**Cada estado-membro da UE adotou uma estratégia nacional de IA, mas os níveis de investimento, áreas de foco e ritmo de implementação variam significativamente.** França e Alemanha lideram em financiamento; os estados nórdicos lideram em frameworks de governança; os estados da Europa Central e Oriental estão integrando cada vez mais a IA em defesa e administração pública.',
+          ],
+          items: [
+            '**Alemanha:** Estratégia Federal de IA (Nationale KI-Strategie), atualizada em 2023. €5 bilhões investidos em pesquisa, infraestrutura e talentos em IA de 2019 a 2025 por meio de programas federais. Seis centros de competência em IA estabelecidos em grandes universidades. Debates no Bundestag sobre responsabilidade de IA em andamento. Fraunhofer Society e DFKI (Centro de Pesquisa Alemão para Inteligência Artificial) são instituições de pesquisa-chave.',
+            '**França:** €2 bilhões de investimento público em IA anunciado pelo presidente Macron (2024). France AI (órgão de coordenação governamental) gerencia a estratégia nacional. Paris sediou a AI Action Summit em fevereiro de 2025 — a primeira cúpula de governança de IA em nível G7 sob a presidência francesa da UE. CNRS e INRIA lideram a pesquisa acadêmica em IA. A França apoia a IA de pesos abertos como alternativa estratégica à dependência de API dos EUA.',
+            '**Países Baixos:** Atualização da Estratégia Nacional de IA em 2024, sandbox de regulamentação de IA operado pela ACM (Autoridade para Consumidores e Mercados). Amsterdã abriga o cluster de IA da SURF (rede nacional de pesquisa). A Autoridade Holandesa de Proteção de Dados (AP) emitiu orientações de aplicação do RGPD especificamente para sistemas de IA.',
+            '**Polônia:** O Programa Nacional de Desenvolvimento de IA se concentra em IA para defesa, cibersegurança e administração pública. A Polônia está entre os maiores gastos per capita em tecnologia de defesa na OTAN e integra IA na aquisição militar. Varsóvia abriga um ecossistema crescente de startups de IA, em parte impulsionado pela realocação de talentos tecnológicos ucranianos pós-2022.',
+            '**Espanha:** A Estratégia Nacional de IA da Espanha (ENIA) aloca €600 milhões de 2021 a 2025. A pesquisa do Real Instituto Elcano sobre IA e geopolítica é citada internacionalmente. A Espanha estabeleceu a AESIA (Agência Espanhola de Supervisão da Inteligência Artificial) — o primeiro regulador nacional de IA da UE, estabelecido em 2023.',
+            '**Suécia:** A Comissão Sueca de IA publicou seu relatório em 2024 com mais de 60 recomendações cobrindo educação, implantação no setor público e inovação. Vinnova (agência de inovação da Suécia) financia pesquisa em IA. A Suécia abriga os sistemas de recomendação de IA do Spotify e a gestão de estoque orientada por IA da H&M — frequentemente citados como estudos de caso de adoção de IA no setor privado.',
+            '**Itália:** A Itália deteve a presidência do G7 em 2024, que produziu o Código de Conduta do Processo de IA de Hiroshima — 11 princípios orientadores para desenvolvedores avançados de IA, adotados pelas nações do G7. A Garante da Itália (autoridade de proteção de dados) bloqueou temporariamente o ChatGPT em março de 2023 por preocupações com o RGPD — resolvido posteriormente depois que a OpenAI implementou medidas de transparência. Essa foi a primeira restrição nacional ao ChatGPT na UE.',
+          ],
+        },
+
+        franceMistral: {
+          title: 'França e Mistral: construindo independência europeia em IA',
+          content: [
+            '**A França está construindo um contraponto estratégico à dominância dos EUA em IA por meio de investimento público e da Mistral AI — posicionando modelos de pesos abertos como o caminho da Europa para a soberania em IA.** A Mistral representa a alternativa mais viável da UE ao GPT-5.5 e ao Claude, e o investimento de €2 bilhões da França em IA é explicitamente projetado para financiar empresas como a Mistral e reduzir a dependência da OpenAI, Google e Anthropic.',
+            '**Mistral AI (fundada em 2023):** Fundada por Arthur Mensch, Guillaume Blanc e Tim Caron — todos ex-funcionários da Meta. A Mistral lançou o Mistral Small (pesos abertos) em setembro de 2023, seguido pelo Mistral Large 2 (competitivo com GPT-5.5 em muitas tarefas). O Mistral Large 2 pontua 81,2% no MMLU vs. 88,7% do GPT-5.5, mas equipara modelos proprietários em classificação, sumarização e tarefas de extração. Janela de contexto de 123K tokens. Licenciado sob a Licença de Comunidade Mistral (permite uso comercial; restrições de nomenclatura para derivados semelhantes ao LLaMA).',
+            '**Por que a França escolheu pesos abertos:** A posição da França é que APIs proprietárias criam dependência de fornecedor, riscos de residência de dados e dependência de longo prazo de empresas dos EUA. Modelos de pesos abertos podem ser implantados em infraestrutura europeia, mantendo dados dentro das jurisdições da UE e evitando atrito com RGPD/AI Act com provedores de nuvem dos EUA.',
+            '**Apoio governamental:** Apoio do governo francês via La Caisse des Dépôts et Placements (fundo de investimento estatal) e subsídios diretos. A Mistral recebeu financiamento Série B de €385 milhões (fevereiro de 2024) com apoio de investidores estratégicos franceses. Posicionada como um "campeão europeu" em IA — semelhante a como a Airbus foi construída como um contrapeso aeroespacial europeu à Boeing.',
+          ],
+        },
+
+        nonEuEurope: {
+          title: 'Europa não-UE: Reino Unido, Suíça, Noruega, Ucrânia',
+          content: [
+            '**Quatro grandes estados europeus não pertencentes à UE escolheram caminhos distintos de governança de IA, nenhum dos quais se alinha completamente com o EU AI Act — criando um panorama regulatório europeu fragmentado.** Para organizações que operam em jurisdições europeias, isso significa que as pilhas de conformidade diferem entre estados-membros da UE e países vizinhos.',
+          ],
+          items: [
+            '**Reino Unido:** Pós-Brexit, o Reino Unido escolheu uma abordagem pró-inovação e liderada pelo setor sem legislação específica de IA a partir de 2026. Os reguladores existentes (FCA, ICO, Ofcom, CMA) aplicam seus mandatos setoriais à IA. O UK AI Safety Institute (AISI), estabelecido em novembro de 2023 após a AI Safety Summit em Bletchley Park, conduz avaliações de modelos de fronteira e publica relatórios de segurança. O governo do Reino Unido comprometeu £900 milhões para infraestrutura de computação de IA. Organizações do Reino Unido não estão sujeitas ao EU AI Act, mas muitas cumprem voluntariamente para manter o acesso ao mercado da UE.',
+            '**Suíça:** A Suíça mantém neutralidade em IA — sem lei nacional de IA, sem planos para uma. O Conselho Federal depende da legislação existente (proteção de dados, responsabilidade de produto, regulamentação setorial). A Suíça abriga o UN AI for Good Summit em Genebra anualmente, os programas de IA para ciência do CERN e grandes instituições de pesquisa europeias (ETH Zurique, EPFL). A neutralidade suíça se estende à governança de IA: o país participa dos Princípios de IA da OCDE, mas não se alinha nem com a abordagem regulatória da UE nem com o enquadramento de competitividade dos EUA.',
+            '**Noruega:** A Noruega participa do Espaço Econômico Europeu (EEE), o que significa que o EU AI Act se aplica quando é incorporado ao Acordo EEE — um processo em andamento. O Fundo de Pensão Global do Governo da Noruega (o maior fundo soberano do mundo, ~US$1,8 trilhão) publicou critérios de investimento em IA, exigindo que as empresas do portfólio divulguem políticas de governança de IA. A Equinor (empresa estatal de energia) implantou IA para otimização de campos de petróleo. A Autoridade Norueguesa de Proteção de Dados (Datatilsynet) tem sido ativa na aplicação do RGPD relacionada à IA.',
+            '**Ucrânia:** A Ucrânia é a implantadora mais ativa de IA em um contexto de conflito real. O exército ucraniano usa IA para direcionamento de drones, inteligência de sinais, análise de imagens de satélite e otimização de logística. O Ministério da Transformação Digital (Мінцифра) assinou acordos de cooperação em IA com a UE e os EUA. A Ucrânia solicitou adesão à UE em 2022 e está alinhando sua legislação digital — incluindo a governança de IA — com os padrões da UE como parte dos requisitos de adesão.',
+          ],
+        },
+
+        usStrategy: {
+          title: 'Estratégia dos EUA: Ordens Executivas, CHIPS Act, pré-emissão de leis estaduais',
+          content: [
+            '**Os Estados Unidos não têm lei federal de IA, e a revogação em 2025 pela administração Trump da Ordem Executiva de Segurança de IA de Biden reverteu o principal framework federal de segurança — deslocando a política de IA dos EUA totalmente para a competitividade.** Isso cria uma lacuna regulatória entre EUA e UE que afeta a aquisição de IA transatlântica e o compartilhamento de dados.',
+          ],
+          items: [
+            '**Ordem Executiva de Biden sobre Segurança de IA (outubro de 2023):** Exigiu que desenvolvedores de IA de fronteira compartilhassem resultados de testes de segurança com o governo dos EUA, estabeleceu padrões de segurança de IA do NIST, abordou IA em infraestrutura crítica e segurança nacional. Revogada pelo presidente Trump em janeiro de 2025.',
+            '**Plano de Ação de IA Trump (2025):** Substitui a EO de Biden com foco em remover barreiras regulatórias ao desenvolvimento de IA, manter a liderança dos EUA sobre a China e promover a exportação de IA para nações aliadas. Sem requisitos obrigatórios de relatórios de segurança para desenvolvedores de IA.',
+            '**Ordem Executiva 14365: Garantindo um Framework de Política Nacional para IA (11 de dezembro de 2025):** Estabelece uma Força-Tarefa de Litígio de IA dentro do Departamento de Justiça para contestar leis estaduais de IA nos tribunais. Direciona o Secretário de Comércio (prazo de 90 dias) a identificar e publicar leis estaduais de IA "onerosas". Autoriza a retenção de fundos federais de infraestrutura de banda larga BEAD de estados com leis de IA "onerosas". O objetivo explícito é a pré-emissão federal de leis estaduais de IA.',
+            '**Framework Nacional de IA da Casa Branca (20 de março de 2026):** Um framework abrangente cobrindo 7 áreas de política, incluindo proteção de crianças, salvaguarda de comunidades, proteção de réplicas digitais, prevenção de censura governamental, desenvolvimento da força de trabalho, pré-emissão de lei estadual e promoção de inovação leve.',
+            '**TRUMP AMERICA AI Act (18 de março de 2026, Senadora Marsha Blackburn):** Um projeto de discussão legislativa de 291 páginas que codifica a governança federal de IA, estabelece padrões nacionais sobre dados de treinamento e deepfakes, e inclui requisitos de "dever de cuidado" para desenvolvedores de IA.',
+            '**CHIPS and Science Act (US$52 bilhões):** Assinada em agosto de 2022. Financia fabricação doméstica de semicondutores, P&D e desenvolvimento de força de trabalho. Reduz a dependência dos EUA da TSMC de Taiwan para chips avançados. Intel, TSMC e Samsung estão construindo fábricas nos EUA com financiamento da CHIPS Act.',
+            '**Controles de exportação em hardware de IA:** A administração Biden restringiu exportações de GPUs avançadas Nvidia A100 e H100 para a China e outros países de preocupação. As restrições foram expandidas em outubro de 2023 e outubro de 2024. A Nvidia criou chips específicos para a China (A800, H800) que se enquadravam nos limites de exportação — esses também foram posteriormente restritos.',
+            '**NIST AI Risk Management Framework (AI RMF 1.0):** Publicado em janeiro de 2023. Um framework voluntário — não legalmente vinculante — cobrindo a confiabilidade da IA em sete dimensões. Amplamente adotado por agências federais dos EUA e grandes empresas como base de conformidade.',
+          ],
+        },
+
+        chinaStrategy: {
+          title: 'Estratégia de IA da China: Made in China 2025, regulamentações do CAC, DeepSeek',
+          content: [
+            '**A estratégia de IA da China combina política industrial dirigida pelo Estado, regulamentação doméstica restritiva de conteúdo e diplomacia internacional agressiva em IA — uma combinação que produziu modelos de fronteira competitivos apesar dos controles de exportação de hardware dos EUA.** A abordagem da China trata a IA principalmente como uma capacidade estratégica para o desenvolvimento econômico, a segurança nacional e a governança social.',
+          ],
+          items: [
+            '**Made in China 2025 e Plano Nacional de Desenvolvimento de IA de Nova Geração (2017):** O plano de IA da China de 2017 visava a liderança global em IA até 2030 em pesquisa, talentos, desenvolvimento de produtos e regulamentação. Alocou US$15 bilhões em financiamento estatal e estabeleceu benchmarks para produção de patentes de IA, citações de pesquisa e receita da indústria. A IA é designada como uma tecnologia estratégica central juntamente com semicondutores e computação quântica.',
+            '**Regulamentações de algoritmos do CAC (março de 2022):** Exigiram que todos os sistemas de recomendação baseados em algoritmos que servem usuários chineses se registrassem no CAC, divulgassem como os algoritmos funcionam e permitissem que os usuários optassem por não receber recomendações personalizadas. Estendido à IA generativa em julho de 2023 — todos os serviços de IA generativa devem se registrar, passar por uma avaliação de segurança e garantir que as saídas se alinhem com os "valores socialistas fundamentais".',
+            '**DeepSeek R1 (janeiro de 2025):** Lançado pela DeepSeek (um laboratório de IA chinês apoiado pelo hedge fund High-Flyer), o R1 superou o GPT-5.5 em vários benchmarks, incluindo AIME 2024 (79,8%), MATH-500 (97,3%) e tarefas de codificação HumanEval. Treinado em GPUs Nvidia H800 — a variante específica para a China dentro dos limites de controle de exportação — com custo estimado de treinamento de ~US$6 milhões. O lançamento desencadeou uma queda significativa no preço das ações da Nvidia e acelerou debates de política dos EUA sobre a eficácia dos controles de exportação de hardware.',
+            '**Chips Huawei Ascend:** Os chips Ascend 910B e 910C da Huawei estão posicionados como alternativas domésticas às GPUs Nvidia para treinamento de IA. O desempenho permanece abaixo do Nvidia H100 na maioria dos benchmarks, mas suficiente para treinar modelos de médio porte. Grandes empresas de tecnologia chinesas (Baidu, Alibaba, ByteDance) começaram a migrar algumas cargas de trabalho para o Ascend para reduzir a dependência da Nvidia.',
+            '**Diplomacia de IA da Belt and Road:** A China exporta infraestrutura de vigilância de IA (reconhecimento facial, sistemas de cidade inteligente) para nações em desenvolvimento por meio de parcerias BRI. Os fornecedores incluem Huawei, Alibaba Cloud e ZTE. Isso exporta normas de governança de IA chinesas para países parceiros, criando um ecossistema paralelo de padrões de IA fora do framework OCDE/UE.',
+            '**Principais modelos de IA chineses:** Alibaba Qwen 3, Baidu ERNIE 4.0, ByteDance Doubao, Z.ai GLM-4. Esses são competitivos em tarefas em chinês e cada vez mais em benchmarks multilíngues. O Qwen de pesos abertos atraiu desenvolvedores internacionais.',
+          ],
+        },
+
+        chinaModelsAccessibility: {
+          title: 'China para engenheiros de prompt: quais modelos estão disponíveis',
+          content: [
+            '**Se o seu produto atende usuários na China, você está operando em um ecossistema de IA distinto com diferentes modelos disponíveis, filtros de conteúdo obrigatórios e um requisito de aprovação pré-lançamento sem equivalente na UE ou nos EUA.** Modelos estrangeiros — GPT-5.5, Claude, Gemini — são inacessíveis da China continental sem uma VPN. Suas opções são limitadas a alternativas registradas domesticamente.',
+            '**Modelos disponíveis na China:** Alibaba Qwen 3 (pesos abertos, 7B–72B, contexto de 128K, API via Alibaba Cloud), Baidu ERNIE 4.0 (API via plataforma Qianfan), ByteDance Doubao (API via Volcano Engine), Z.ai GLM-4 (API via plataforma Z.ai) e DeepSeek R1/V3 (API via plataforma DeepSeek). O Qwen 3 72B é a opção de pesos abertos mais forte — você pode auto-hospedá-lo fora da China enquanto o usa para tarefas em chinês. Pontua dentro de 5 pontos percentuais do GPT-5.5 no MMLU e supera em benchmarks específicos do chinês (C-Eval).',
+          ],
+        },
+
+        chinaContentFilters: {
+          title: 'Filtros de conteúdo e requisitos do CAC: restrições críticas',
+          content: [
+            '**Todos os serviços de IA generativa na China devem cumprir as Medidas de IA Generativa do CAC (2023).** As restrições de conteúdo são aplicadas no nível do modelo e da API, não apenas por lei. Os serviços devem implementar filtros que bloqueiem saídas sobre: críticas à liderança do PCCh, discussões sobre independência de Taiwan/Tibet/Xinjiang, eventos históricos politicamente sensíveis (4 de junho de 1989), conteúdo que mine os "valores socialistas fundamentais" e material que o CAC considere uma ameaça à segurança do Estado. Esses filtros estão integrados à API — você não pode configurá-los para fora.',
+            '**Detalhe crítico de implementação:** Solicitações que acionam filtros retornam HTTP 200 (não HTTP 4xx) com um flag `is_safe: 0` no corpo da resposta — não um erro tradicional. Isso requer tratamento explícito no nível da aplicação no seu código. Se você chamar ERNIE 4.0 ou DeepSeek com um prompt filtrado, a API retorna uma resposta HTTP válida com saída sanitizada ou um flag de erro, não um status 4xx.',
+            '**A avaliação de segurança do CAC pré-lançamento é obrigatória.** Antes de qualquer serviço de IA generativa voltado ao consumidor lançar na China, o fornecedor deve concluir uma avaliação do CAC (45–90 dias). A avaliação requer: fontes de dados de treinamento, documentação de filtragem de conteúdo, teste de saídas de amostra e autocertificação de conformidade. Empresas estrangeiras não podem se candidatar diretamente — você precisa de uma entidade da China continental ou parceiro licenciado (Alibaba Cloud, Tencent Cloud) como fornecedor registrado.',
+          ],
+          callouts: [
+            {
+              type: 'did-you-know',
+              label: 'Você sabia: filtros do CAC retornam HTTP 200, não 4xx',
+              text: 'Quando o conteúdo é filtrado pela Administração do Ciberespaço da China (CAC), APIs reguladas (Baidu ERNIE, DeepSeek) retornam HTTP 200 com um flag `is_safe: 0` no corpo da resposta — NÃO um erro HTTP 4xx. Aplicações que verificam apenas códigos de status HTTP ignorarão respostas censuradas ou vazias silenciosamente. Sempre verifique o campo `is_safe` nas respostas da API antes de renderizar resultados para os usuários finais.',
+            },
+          ],
+        },
+
+        chinaDataResidencyAPIs: {
+          title: 'Residência de dados PIPL, APIs práticas e exemplos de implantação',
+          content: [
+            '**A Lei de Proteção de Informações Pessoais (PIPL, 2021) é sua restrição vinculante.** A PIPL exige que os dados pessoais coletados de usuários chineses permaneçam na China ou passem por uma avaliação de segurança governamental antes da transferência transfronteiriça. Se a sua aplicação de IA processa dados pessoais de usuários chineses e os envia para uma API de modelo fora da China, você viola a PIPL. A solução prática: roteie o tráfego de usuários da China por meio de inferência hospedada no continente (Alibaba Cloud, Tencent Cloud, Huawei Cloud) para que os dados pessoais nunca saiam da jurisdição chinesa.',
+            '**API ERNIE 4.0 da Baidu (detalhes práticos):** Acessível via plataforma Qianfan (千帆). Preços: ¥0,12 por 1K tokens (entrada/saída) para ERNIE 4.0 Turbo a partir de 2026. Aceita prompts do sistema, suporta chamadas de função, retorna respostas estruturadas em JSON. Limites de taxa: 60 QPM no nível padrão. Erros de filtro de conteúdo retornam HTTP 200 com flag `is_safe: 0` — requer tratamento explícito de erros no nível da aplicação.',
+            '**Qwen 3 como solução híbrida:** Para equipes que servem usuários chineses e internacionais, o Qwen 3 (pesos abertos, Apache 2.0) é a ponte mais prática. Implante o Qwen 3 72B na sua infraestrutura fora da China para usuários internacionais (sem filtros do CAC), use a API da Alibaba Cloud para o segmento da China sob o registro CAC da Alibaba. Janela de contexto de 128K, competitivo em tarefas multilíngues.',
+          ],
+          items: [
+            '**Exemplo de prompt (seguro):** "Quais são as principais disposições das Medidas de IA Generativa da China (2023) e qual documentação uma empresa deve preparar antes de lançar um serviço de IA generativa na China?" — Funciona porque solicita informações regulatórias factuais sem tocar em áreas proibidas. O DeepSeek R1 lida com análise regulatória de forma confiável.',
+            '**Exemplo de prompt (filtrado):** "Compare os sistemas políticos de Taiwan e da China continental" aciona `is_safe: 0` em APIs do CAC. Reformule: "Compare o PIB per capita e o volume de comércio de Taiwan e da China continental" — desloca o foco para a economia.',
+            '**Exemplo de prompt (vantagem do Qwen 3):** "Resuma este documento regulatório chinês e identifique três obrigações de conformidade para uma empresa estrangeira de IA." O Qwen 3 72B (auto-hospedado fora da China) lida com documentos jurídicos em chinês sem filtros do CAC — melhor opção para fluxos de trabalho de conformidade transfronteiriços.',
+          ],
+        },
+
+        regulatoryComparison: {
+          title: 'Regulamentação global de IA: UE vs. EUA vs. China comparados',
+          content: [
+            '**Os três principais frameworks regulatórios de IA diferem fundamentalmente em filosofia, força legal e alcance internacional.** Entender essas diferenças é essencial para organizações que operam em múltiplas jurisdições ou usam ferramentas de IA de fornecedores sediados em diferentes blocos regulatórios.',
+          ],
+          tableFormat: true,
+          columns: ['Dimensão', 'União Europeia', 'Estados Unidos', 'China'],
+          rows: [
+            { 'Dimensão': 'Abordagem principal', 'União Europeia': 'Framework jurídico baseado em direitos — AI Act classifica sistemas por risco aos direitos fundamentais', 'Estados Unidos': 'Setorial, inovação-primeiro — reguladores existentes aplicam mandatos de domínio à IA; sem lei federal de IA', 'China': 'Dirigido pelo Estado, controle-primeiro — IA serve objetivos de desenvolvimento nacional e governança social' },
+            { 'Dimensão': 'Legislação-chave', 'União Europeia': 'EU AI Act (2024) — conformidade obrigatória; RGPD aplica-se a dados de treinamento e saídas de IA', 'Estados Unidos': 'Sem lei federal de IA. NIST AI RMF (voluntário). EO 14110 (Biden, revogada 2025); Plano de Ação de IA (Trump 2025)', 'China': 'Regulamentações de Recomendação de Algoritmos (2022); Medidas de IA Generativa (2023); ambas aplicadas pelo CAC' },
+            { 'Dimensão': 'Framework de risco', 'União Europeia': '4 níveis: Inaceitável (proibido), Alto (avaliação de conformidade obrigatória), Limitado (divulgação), Mínimo (sem obrigações específicas)', 'Estados Unidos': 'NIST AI RMF voluntário — 7 dimensões de confiabilidade; sem hierarquização obrigatória', 'China': 'Avaliação de segurança obrigatória para serviços de IA generativa antes da implantação; o conteúdo deve se alinhar com os "valores socialistas fundamentais"' },
+            { 'Dimensão': 'Multa máxima', 'União Europeia': '€35M ou 7% do faturamento anual global para práticas proibidas; €15M ou 3% para violações de alto risco', 'Estados Unidos': 'Sem multa federal específica de IA. FTC pode processar práticas injustas/enganosas; penalidades estaduais variam', 'China': 'Até ¥100.000 por violação sob regras de algoritmo; suspensão de serviço para IA generativa não conforme' },
+            { 'Dimensão': 'Proteção de dados', 'União Europeia': 'RGPD + AI Act — treinamento de IA em dados pessoais requer base legal; saídas que afetam dados pessoais requerem conformidade com o RGPD', 'Estados Unidos': 'Setorial: HIPAA (saúde), CCPA/CPRA (Califórnia), FERPA (educação); sem equivalente federal ao RGPD', 'China': 'PIPL (Lei de Proteção de Informações Pessoais, 2021) aplica-se; agências de segurança do Estado retêm direitos de acesso a dados' },
+            { 'Dimensão': 'Aplicações proibidas', 'União Europeia': 'Pontuação social por autoridades públicas; vigilância biométrica pública em tempo real; IA que explora vulnerabilidades cognitivas; coleta indiscriminada de imagens faciais', 'Estados Unidos': 'Sem aplicações de IA proibidas federalmente; algumas proibições estaduais (ex.: Illinois BIPA em biometria)', 'China': 'Conteúdo que mina a liderança do PCCh, autoridade do Estado ou "valores socialistas fundamentais"; deepfakes exigem divulgação' },
+            { 'Dimensão': 'Órgão de aplicação', 'União Europeia': 'EU AI Office (modelos GPAI) + autoridades nacionais de vigilância de mercado (IA de alto risco) + Autoridades de Proteção de Dados (interseção RGPD)', 'Estados Unidos': 'FTC (proteção ao consumidor), FDA (IA médica), CFPB (IA financeira), EEOC (IA de emprego), NIST (padrões)', 'China': 'Administração do Ciberespaço da China (CAC) — aplicador principal; MIIT e SAMR para IA específica do setor' },
+            { 'Dimensão': 'Alcance internacional', 'União Europeia': 'Efeito Bruxelas — aplica-se a qualquer IA colocada no mercado da UE ou cuja saída seja usada na UE; extraterritorial por design', 'Estados Unidos': 'Controles de exportação em hardware de IA afetam cadeias de suprimentos globais; sem regulamentação extraterritorial de conteúdo', 'China': 'Exportações de IA da BRI espalham normas de governança de IA chinesas; Grande Firewall limita o acesso doméstico a serviços de IA estrangeiros' },
+          ],
+          image: '/images/ai-three-region-framework-en.svg',
+          imageCaption: 'UE aplica regras baseadas em direitos (EU AI Act, multas de €35M); EUA favorece supervisão setorial voluntária (NIST RMF); China aplica controle estatal via aprovação do CAC.',
+        },
+
+        globalPowerCompetition: {
+          title: 'IA e competição global de poder',
+          content: [
+            '**A IA é agora uma dimensão primária da competição entre grandes potências — moldando estruturas de aliança, política de exportação de tecnologia e as regras que governam o comércio internacional em sistemas de IA.** A competição não é simplesmente bilateral (EUA vs. China); envolve um terceiro polo na UE, um terreno médio contestado de nações não alinhadas e uma série de fóruns multilaterais (G7, G20, ONU, OCDE) produzindo frameworks concorrentes de governança.',
+            'Para organizações que operam internacionalmente, a competição global de poder em IA cria quatro riscos práticos: conformidade com controles de exportação (qual hardware e software de IA pode ser transferido para quais países), restrições de aquisição (quais fornecedores de IA podem ser usados para contratos governamentais), requisitos de soberania de dados (onde a inferência de IA em dados sensíveis pode ocorrer) e fragmentação regulatória (manter conformidade com regras da UE, EUA e China simultaneamente quando conflitam).',
+          ],
+          items: [
+            '**Governança de IA baseada em aliança:** Os EUA coordenaram controles de exportação de IA com nações aliadas incluindo Países Baixos (controles de litografia ASML), Japão (restrições de exportação de chips avançados) e Reino Unido (colaboração do AI Safety Institute). Isso cria uma "aliança de IA" informal com regras de acesso a tecnologia compartilhadas.',
+            '**Nações não alinhadas:** Índia, Brasil, EAU e Arábia Saudita estão investindo em capacidade doméstica de IA para evitar dependência de infraestrutura de IA dos EUA ou chinesa. A iniciativa BharatGPT da Índia e o modelo Falcon dos EAU (Technology Innovation Institute) são exemplos de estratégias deliberadas de soberania em IA.',
+            '**Governança multilateral:** O Processo de IA de Hiroshima do G7 (2023), o relatório do Órgão Consultivo de IA da ONU (2024) e os Princípios de IA da OCDE (atualizados em 2024) representam trilhas paralelas de governança internacional — todos voluntários, todos concorrendo com a abordagem juridicamente vinculante da UE.',
+            '**Risco de relações internacionais:** Organizações que usam ferramentas de IA de fornecedores em nações adversárias geopolíticas enfrentam riscos secundários: exposição reputacional, desqualificação futura de aquisições e potencial responsabilidade regulatória se as disposições de acesso do governo do fornecedor conflitarem com a lei local de proteção de dados.',
+          ],
+        },
+
+        organizationsImplications: {
+          title: 'Riscos geopolíticos de IA: o que isso significa para as organizações',
+          content: [
+            '**Para organizações que implantam IA, a competição geopolítica se traduz em quatro decisões operacionais concretas: quais ferramentas de IA são permitidas, onde os dados podem ser armazenados, qual documentação de conformidade é necessária e com que velocidade as regulamentações mudarão.** Essas decisões diferem significativamente dependendo se a organização está sediada na UE, opera em mercados da UE ou usa fornecedores de IA dos EUA ou da China.',
+            'O PromptQuorum suporta seleção de modelos com consciência de conformidade — envie prompts a modelos em conformidade com a UE (Mistral, Ollama local) e modelos de fronteira dos EUA simultaneamente, permitindo que você compare opções em conformidade com o EU AI Act versus alternativas proprietárias sem infraestrutura separada.',
+            'As dinâmicas geopolíticas que moldam a disponibilidade de modelos tornam a questão open-source vs. proprietário especialmente relevante. Para uma comparação completa de quando o open-source vence e quando os modelos proprietários valem o custo, veja [LLMs open-source vs. proprietários](https://www.promptquorum.com/pt/prompt-engineering/open-source-vs-proprietary-llms).',
+          ],
+          items: [
+            '**Organizações sediadas na UE:** Precisam cumprir o EU AI Act diretamente. Sistemas de IA de alto risco (RH, crédito, saúde, serviços públicos) exigem avaliações de conformidade, documentação de supervisão humana e registro no banco de dados de IA da UE antes de agosto de 2026. Toda IA que lida com dados pessoais deve cumprir o RGPD — incluindo pipelines de treinamento de IA e processamento de saídas.',
+            '**Organizações não pertencentes à UE que atendem usuários da UE:** Sujeitas ao Efeito Bruxelas — o EU AI Act aplica-se às suas saídas de IA se alcançarem usuários da UE. Modelos GPAI usados em produtos voltados à UE devem cumprir obrigações de transparência (a partir de agosto de 2025). O não cumprimento acarreta as mesmas multas que os violadores sediados na UE.',
+            '**Ferramentas de IA dos EUA em implantações na UE:** GPT-5.5, Claude Opus 4.8 e Gemini 3.1 Pro são todos classificados como modelos GPAI. OpenAI, Anthropic e Google publicaram documentação de conformidade GPAI do EU AI Act. Organizações que usam essas ferramentas em sistemas de IA de alto risco (como implantadores) permanecem responsáveis por suas próprias avaliações de conformidade — a conformidade GPAI do fornecedor não cobre a sua implantação.',
+            '**Ferramentas de IA chinesas:** DeepSeek R1 e outros modelos chineses estão disponíveis internacionalmente, mas carregam risco adicional de aquisição para organizações da UE e dos EUA — a residência de dados é incerta, o fornecedor está sujeito a regulamentações de conteúdo do CAC e a Administração do Ciberespaço da China pode compelir a divulgação de dados. Organizações governamentais e de infraestrutura crítica em estados-membros da UE e da OTAN estão restringindo ou proibindo o uso de ferramentas de IA chinesas.',
+            '**Residência de dados:** O RGPD da UE restringe a transferência de dados pessoais para países sem decisões de "adequação" ou salvaguardas apropriadas. A inferência de IA em dados pessoais usando fornecedores dos EUA requer Cláusulas Contratuais Padrão (SCCs) ou depende do EU-US Data Privacy Framework (2023). A transferência para a China não tem decisão de adequação — salvaguardas contratuais precisam estar em vigor e são difíceis de aplicar.',
+            '**Decisões de aquisição:** Agências federais dos EUA estão proibidas de usar IA de entidades chinesas designadas. Vários estados-membros da UE (Alemanha, França, Países Baixos) emitiram orientações restringindo ferramentas de IA chinesas em aquisições governamentais. Para organizações do setor privado, a política de aquisição deve abordar a jurisdição dos dados de treinamento do fornecedor de IA, práticas de moderação de conteúdo e disposições de acesso governamental.',
+            '**Monitorando mudanças regulatórias:** O ritmo da regulamentação de IA é alto. A reversão de 2025 da administração Trump da EO de Biden, o cronograma de aplicação gradual do EU AI Act e as atualizações contínuas das regras do CAC da China significam que o status de conformidade pode mudar em meses. As organizações devem designar um proprietário de governança de IA e assinar o boletim informativo do EU AI Office e as atualizações do OECD AI Policy Observatory.',
+          ],
+          image: '/images/compliance-burden-comparison-en.svg',
+          imageCaption: 'UE: custo de conformidade de US$500K–US$2M+, 6–12 meses, regras prescritivas. EUA: US$50K–US$300K, 2–4 meses, voluntário. China: US$200K–US$1M+, aprovação do CAC incerta.',
+        },
+
+        qaWhatIsAIGeopolitics: {
+          title: 'O que é geopolítica da IA?',
+          content: [
+            'A geopolítica da IA é o estudo de como a inteligência artificial afeta as relações de poder global entre estados — incluindo competição econômica, capacidades militares, influência regulatória e liderança tecnológica. Ela abrange três competições simultâneas: quais nações constroem os modelos mais capazes, quais frameworks regulatórios governam a implantação global de IA e quais países controlam as cadeias de suprimentos de semicondutores que tornam a IA de fronteira possível. Para as organizações, a geopolítica da IA determina quais ferramentas são legalmente permitidas, onde os dados podem ser processados e quais fornecedores carregam risco de aquisição.',
+          ],
+        },
+
+        qaWhoIsWinning: {
+          title: 'Quem está vencendo a corrida global de IA?',
+          content: [
+            'Os Estados Unidos lideram em capacidade de modelos de fronteira — GPT-5.5 (OpenAI), Claude (Anthropic) e Gemini (Google DeepMind) — e em investimento privado em IA (US$67 bilhões em 2023 segundo dados da OCDE). A China lidera em registros de patentes de IA, escala de implantação dirigida pelo Estado e desenvolvimento de modelos domésticos; o DeepSeek R1 igualou o GPT-5.5 em benchmarks-chave em janeiro de 2025. A União Europeia lidera em regulamentação de IA — o EU AI Act é o framework de referência global — mas fica atrás em capacidade de modelos de fronteira e investimento privado em relação ao seu tamanho econômico. Nenhum único ator lidera nas três dimensões simultaneamente.',
+          ],
+        },
+
+        qaWhatIsBrusselsEffect: {
+          title: 'O que é o Efeito Bruxelas na IA?',
+          content: [
+            'O Efeito Bruxelas descreve como as regulamentações da UE se tornam padrões globais de fato porque empresas multinacionais consideram operacionalmente mais simples aplicar o padrão mais rigoroso em todo o mundo em vez de manter pilhas de conformidade separadas por jurisdição. O EU AI Act aplica-se a qualquer sistema de IA colocado no mercado da UE ou cuja saída alcance usuários da UE — forçando OpenAI, Google DeepMind e Anthropic a cumprirem as obrigações de transparência da UE para seus produtos globais, não apenas versões específicas para a UE. O mesmo mecanismo tornou o RGPD um padrão global de privacidade.',
+          ],
+        },
+
+        qaHowChinaRegulates: {
+          title: 'Como a China regula a inteligência artificial?',
+          content: [
+            'A China regula a IA por meio da Administração do Ciberespaço da China (CAC). As Regulamentações de Recomendação de Algoritmos (2022) exigem a rotulagem de conteúdo curado algoritmicamente. As Medidas de IA Generativa (2023) exigem uma avaliação de segurança do CAC — um processo de 45–90 dias — antes de qualquer serviço de IA generativa voltado ao consumidor poder ser lançado na China, e determinam que as saídas de IA se alinhem com os "valores socialistas fundamentais". Modelos de IA estrangeiros (GPT-5.5, Claude, Gemini) são inacessíveis da China continental sem ferramentas de contorno. As alternativas domésticas incluem Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao e DeepSeek.',
+          ],
+        },
+
+        qaWhatEUAIActRequires: {
+          title: 'O que o EU AI Act exige das organizações?',
+          content: [
+            'O EU AI Act classifica sistemas de IA em quatro níveis de risco com obrigações dimensionadas. Práticas proibidas — pontuação social por autoridades públicas, vigilância biométrica em tempo real em espaços públicos — estão proibidas desde agosto de 2024. Sistemas de IA de alto risco usados em emprego, avaliação de crédito, saúde ou aplicação da lei exigem avaliações de conformidade, documentação de supervisão humana e registro no banco de dados de IA da UE antes de agosto de 2026. Modelos de IA de Propósito Geral (GPT-5.5, Claude, Gemini) devem publicar resumos de dados de treinamento e cumprir a lei de direitos autorais da UE — regras que se aplicaram a partir de agosto de 2025. Todas as organizações que atendem usuários da UE devem estar em conformidade, independentemente de onde estão sediadas.',
+          ],
+        },
+
+        qaExportControls: {
+          title: 'Como os controles de exportação dos EUA afetam o desenvolvimento de IA?',
+          content: [
+            'Os controles de exportação dos EUA restringem a venda de GPUs Nvidia avançadas — incluindo A100 e H100 — para a China, visando limitar a capacidade da China de treinar modelos de IA de fronteira. Os controles são aplicados por meio das Regulamentações de Administração de Exportações (EAR) e se aplicam a produtos da Nvidia, AMD e Intel acima de limites de computação especificados. O lançamento do DeepSeek R1 em janeiro de 2025 demonstrou os limites dessa abordagem: treinado em GPUs H800 restritas para a China a uma fração do custo reportado de modelos dos EUA comparáveis, igualou o GPT-5.5 em benchmarks AIME 2024, MATH-500 e HumanEval. Os controles de exportação diminuem, mas não detiveram o desenvolvimento de IA de fronteira chinesa.',
+          ],
+        },
+
+        qaTSMCRole: {
+          title: 'Qual é o papel da TSMC na geopolítica da IA?',
+          content: [
+            'A TSMC (Taiwan Semiconductor Manufacturing Company) fabrica os chips avançados que alimentam a IA de fronteira — as GPUs H100 e H200 da Nvidia, as TPUs do Google e o Neural Engine da Apple são todos fabricados nas instalações da TSMC em Taiwan. Nenhuma outra empresa fabrica atualmente chips em nós de processo comparáveis (3nm, 2nm) em escala. Isso torna a TSMC um ponto único de dependência na infraestrutura global de IA: os controles de exportação dos EUA dependem de a TSMC não fornecer nós avançados a fabricantes de chips chineses, e qualquer perturbação ao status político de Taiwan restringiria imediatamente o fornecimento global de hardware de IA. A CHIPS and Science Act dos EUA (US$52 bilhões) financia capacidade doméstica de fabricação nos EUA especificamente para reduzir essa dependência.',
+          ],
+        },
+
+        qaUSEUChinaDifferences: {
+          title: 'Quais são as principais diferenças entre as estratégias de IA dos EUA, UE e China?',
+          content: [
+            'As três principais estratégias de IA diferem fundamentalmente em filosofia, estrutura legal e alcance internacional. Os EUA priorizam inovação e competitividade por meio da liderança do setor privado sem lei federal de IA — reguladores setoriais existentes (FTC, FDA, EEOC) aplicam mandatos existentes à IA em seus domínios. A UE prioriza a proteção dos direitos fundamentais por meio de um framework legal horizontal obrigatório — o EU AI Act — que se aplica extraterritorialmente a qualquer IA que alcance usuários da UE. A China prioriza o controle estatal e o desenvolvimento nacional por meio de regulamentação obrigatória de conteúdo e avaliações de segurança pré-lançamento aplicadas pelo CAC. Essas abordagens são estruturalmente incompatíveis: organizações que operam nas três jurisdições precisam navegar por requisitos conflitantes simultaneamente.',
+          ],
+        },
+
+        defEUAIAct: {
+          title: 'Definição: EU AI Act',
+          content: 'A primeira regulamentação abrangente e juridicamente vinculante de IA do mundo, aprovada pelo Parlamento Europeu em março de 2024. Classifica sistemas de IA em quatro níveis de risco (Inaceitável, Alto, Limitado, Mínimo) com obrigações dimensionadas. Práticas proibidas a partir de agosto de 2024; obrigações de transparência de IA de Propósito Geral a partir de agosto de 2025; requisitos de sistemas de alto risco a partir de agosto de 2026. Multas chegam a €35 milhões ou 7% do faturamento global. Aplica-se extraterritorialmente a qualquer IA que alcance usuários da UE.',
+        },
+
+        defBrusselsEffect: {
+          title: 'Definição: Efeito Bruxelas',
+          content: 'O fenômeno pelo qual as regulamentações da UE se tornam padrões globais de fato porque empresas multinacionais consideram mais simples aplicar um padrão rigoroso em todo o mundo em vez de manter pilhas de conformidade separadas por jurisdição. O RGPD se tornou um padrão global de privacidade por meio do Efeito Bruxelas. O EU AI Act está fazendo o mesmo: OpenAI, Anthropic e Google precisam cumprir os requisitos do EU AI Act para seus produtos globais, não apenas versões específicas para a UE.',
+        },
+
+        defHighRiskAI: {
+          title: 'Definição: Sistema de IA de alto risco',
+          content: 'Sob o EU AI Act, um sistema de IA cuja falha ou mau funcionamento pode causar danos significativos aos direitos fundamentais. Exemplos: IA usada em decisões de contratação, avaliação de crédito, diagnóstico de saúde, aplicação da lei, acesso a serviços públicos e avaliação educacional. A IA de alto risco requer avaliações de conformidade, documentação de supervisão humana, controles de qualidade de dados de treinamento e registro no banco de dados de IA da UE antes da implantação.',
+        },
+
+        defGPAI: {
+          title: 'Definição: IA de Propósito Geral (GPAI)',
+          content: 'Um sistema de IA treinado em dados amplos com uma arquitetura geral (não especializada ou específica de domínio) que pode ser adaptado para uma ampla gama de tarefas downstream. GPT-5.5, Claude Opus 4.8 e Gemini 3.1 Pro são modelos GPAI. Sob o EU AI Act, modelos GPAI com computação de treinamento >10^25 FLOP enfrentam obrigações de transparência incluindo resumos de dados de treinamento, documentação de capacidades e conformidade com direitos autorais.',
+        },
+
+        defCAC: {
+          title: 'Definição: Administração do Ciberespaço da China (CAC)',
+          content: 'O principal órgão regulatório da China para governança de internet, ciberespaço e IA. Aplica as Regulamentações de Recomendação de Algoritmos (2022) e as Medidas de IA Generativa (2023). Exige avaliações de segurança antes que serviços de IA generativa sejam lançados na China, determina filtros de conteúdo que bloqueiam críticas ao PCCh e tópicos politicamente sensíveis, e pode compelir a divulgação de dados de fornecedores de IA.',
+        },
+
+        defDataSovereignty: {
+          title: 'Definição: Soberania de dados',
+          content: 'O princípio de que os dados estão sujeitos às leis do país onde estão localizados ou gerados, e que as organizações podem manter o controle total sobre os dados sem transferi-los para jurisdições estrangeiras. O RGPD da UE e o EU AI Act tratam a soberania de dados como um requisito de conformidade: o processamento de dados pessoais deve cumprir a lei da UE mesmo que o processamento ocorra fora da UE, se os titulares dos dados forem residentes da UE.',
+        },
+
+        defAlgorithmRecs: {
+          title: 'Definição: Regulamentações de Recomendação de Algoritmos (China)',
+          content: 'A regulamentação da China de 2022 que exige que plataformas que usam algoritmos para recomendar conteúdo rotulem e divulguem publicamente a curadoria algorítmica. Aplica-se a redes sociais, feeds de notícias, recomendação de vídeo e mecanismos de busca. Exige que os usuários recebam opções para desativar as recomendações algorítmicas. Aplicada pelo CAC para aumentar a transparência e a supervisão governamental da distribuição de conteúdo algorítmico.',
+        },
+
+        defSCCs: {
+          title: 'Definição: Cláusulas Contratuais Padrão (SCCs)',
+          content: 'Modelos de contrato pré-aprovados emitidos pela Comissão Europeia que permitem que as organizações transfiram dados pessoais da UE para jurisdições não adequadas (como EUA ou China) enquanto reivindicam conformidade com o RGPD. As SCCs colocam obrigações contratuais no importador de dados para proteger os dados sob os padrões da UE. A eficácia é questionada: o sistema judiciário da UE questionou se as SCCs protegem contra vigilância governamental nos EUA e em outros países.',
+        },
+
+        politicianQuotes: {
+          title: 'O que os políticos estão dizendo',
+          content: [
+            '**A IA se tornou uma questão política de primeiro nível nos três blocos regulatórios, com líderes enquadrando-a como uma questão de sobrevivência econômica, valores democráticos e segurança nacional.** As declarações abaixo são extraídas de discursos oficiais e registros parlamentares.',
+          ],
+        },
+
+        quoteVonDerLeyen: {
+          title: '',
+          blockquote: 'A inteligência artificial é a tecnologia definitória do nosso tempo. A Europa deve moldá-la — não apenas adotá-la. Queremos uma IA que trabalhe para as pessoas, não o contrário.',
+          blockquoteSource: 'Ursula von der Leyen, Presidente da Comissão Europeia — Discurso sobre estratégia europeia de IA, 2024',
+        },
+
+        quoteVestager: {
+          title: '',
+          blockquote: 'O AI Act é o primeiro framework legal abrangente do mundo para inteligência artificial. Coloca as pessoas e sua segurança no centro — não apenas a tecnologia. É assim que a inovação responsável se parece.',
+          blockquoteSource: 'Margrethe Vestager, ex-Vice-Presidente Executiva da Comissão Europeia — Parlamento Europeu, março de 2024',
+        },
+
+        quoteBreton: {
+          title: '',
+          blockquote: 'O AI Act é uma conquista histórica. A Europa é o primeiro continente a estabelecer um framework jurídico claro para IA. Segurança e inovação não são opostos — andam juntos. Mostramos isso ao mundo.',
+          blockquoteSource: 'Thierry Breton, ex-Comissário Europeu para o Mercado Interno — Comissão Europeia, março de 2024',
+        },
+
+        quoteMacron: {
+          title: '',
+          blockquote: 'A França quer ser uma nação líder em IA na Europa. Paris sediará a AI Action Summit. Estamos investindo em IA aberta, confiável e sustentável — e convidamos o mundo a se juntar a nós.',
+          blockquoteSource: 'Emmanuel Macron, Presidente da França — Anúncio da AI Action Summit, 2024',
+        },
+
+        quoteSunak: {
+          title: '',
+          blockquote: 'O Reino Unido trabalhará com parceiros ao redor do mundo para garantir que a IA seja segura. Bletchley Park é onde esta conversa começa — mas não deve terminar aqui.',
+          blockquoteSource: '[Rishi Sunak, ex-Primeiro-Ministro do Reino Unido — AI Safety Summit, Bletchley Park, novembro de 2023](https://www.gov.uk/government/speeches/pm-speech-at-the-ai-safety-summit-1-november-2023)',
+        },
+
+        quoteScholz: {
+          title: '',
+          blockquote: 'A Alemanha quer se tornar um dos principais locais de IA da Europa. Estamos investindo em pesquisa de IA, infraestrutura digital e nas pessoas que construirão a próxima geração de sistemas inteligentes.',
+          blockquoteSource: 'Olaf Scholz, ex-Chanceler Federal da Alemanha — Atualização da Estratégia Nacional de IA, 2024',
+        },
+
+        faq: {
+          title: 'Perguntas frequentes',
+          faqs: [
+            { q: 'O que é o EU AI Act e quando se aplica?', a: 'O EU AI Act é a primeira lei abrangente de IA do mundo, aprovada pelo Parlamento Europeu em março de 2024. Práticas proibidas se aplicam a partir de agosto de 2024. Obrigações de modelos GPAI (para modelos GPT-5.5, Claude, classe Gemini) aplicam-se a partir de agosto de 2025. Requisitos de sistemas de IA de alto risco aplicam-se a partir de agosto de 2026. Aplica-se a qualquer organização que coloque IA no mercado da UE ou use IA que afete residentes da UE.' },
+            { q: 'O EU AI Act se aplica a empresas não pertencentes à UE?', a: 'Sim. O EU AI Act tem alcance extraterritorial — aplica-se a qualquer fornecedor cujas saídas de IA são usadas na UE, independentemente de onde o fornecedor está sediado. Uma empresa dos EUA cujo produto de IA é usado por residentes da UE precisa estar em conformidade. Este é o mesmo princípio extraterritorial que tornou o RGPD um padrão global.' },
+            { q: 'Quais são as multas por violar o EU AI Act?', a: 'Multas de até €35 milhões ou 7% do faturamento anual global (o que for maior) por práticas de IA proibidas. Até €15 milhões ou 3% por violações de IA de alto risco. Até €7,5 milhões ou 1% por fornecer informações incorretas às autoridades de aplicação. O maior percentual ou valor fixo se aplica.' },
+            { q: 'Quais aplicações de IA são proibidas sob o EU AI Act?', a: 'Proibidas (Risco Inaceitável): sistemas de pontuação social por autoridades públicas; identificação biométrica em tempo real em espaços públicos (com exceções restritas); IA que explora vulnerabilidades psicológicas; coleta indiscriminada de imagens faciais da internet. Essas estão proibidas desde agosto de 2024.' },
+            { q: 'Como a regulamentação de IA dos EUA difere da UE?', a: 'Os EUA não têm lei federal de IA. Reguladores setoriais existentes (FTC, FDA, CFPB, EEOC) aplicam seus mandatos existentes à IA em seus domínios. A Ordem Executiva de Segurança de IA de Biden (outubro de 2023) foi revogada em janeiro de 2025 e substituída por um Plano de Ação de IA focado em competitividade. O NIST AI Risk Management Framework é voluntário. A regulamentação dos EUA é reativa e específica do setor; a regulamentação da UE é proativa e horizontal.' },
+            { q: 'O DeepSeek é seguro para usar em organizações da UE?', a: 'O DeepSeek está sujeito a regulamentações do CAC (Administração do Ciberespaço da China), o que significa que o governo chinês pode compelir a divulgação de dados. A política de privacidade do DeepSeek afirma que os dados são armazenados em servidores na China. Para organizações da UE que processam dados pessoais, usar o DeepSeek requer salvaguardas de transferência de dados em conformidade com o RGPD (SCCs), que são difíceis de aplicar contra a lei chinesa. Organizações governamentais e de infraestrutura crítica em estados-membros da UE geralmente evitam ferramentas de IA chinesas.' },
+            { q: 'O que é o Efeito Bruxelas?', a: 'O Efeito Bruxelas descreve como as regulamentações da UE se tornam padrões globais de fato porque empresas multinacionais preferem um padrão rigoroso à manutenção de conformidade separada para cada jurisdição. O RGPD se tornou um padrão global de privacidade dessa forma. O EU AI Act está fazendo o mesmo para a IA — OpenAI, Anthropic e Google precisam cumprir os requisitos GPAI do EU AI Act para seus produtos globais, não apenas versões específicas para a UE.' },
+            { q: 'O que a AI Safety Summit de Bletchley Park alcançou?', a: 'A AI Safety Summit de novembro de 2023 em Bletchley Park produziu a Declaração de Bletchley — assinada por 28 países incluindo EUA, China e estados-membros da UE — reconhecendo que a IA de fronteira apresenta riscos sérios e requer cooperação internacional. A cúpula estabeleceu o UK AI Safety Institute (AISI) e iniciou uma série de institutos globais de segurança de IA nos EUA e em outros lugares. A participação da China foi notável dado as tensões geopolíticas mais amplas.' },
+            { q: 'Como a França apoia a IA de forma diferente da Alemanha?', a: 'A França prioriza o posicionamento internacional de alto perfil (AI Action Summit em Paris, fevereiro de 2025) e a pesquisa de IA de pesos abertos por meio do INRIA e CNRS, com €2 bilhões em investimento público. A Alemanha foca na IA industrial aplicada por meio da Fraunhofer Society e DFKI, com €5 bilhões investidos 2019–2025, e enfatiza frameworks de governança e responsabilidade de IA por meio da legislação federal. Ambas têm estratégias nacionais de IA, mas com diferentes ênfases setoriais.' },
+            { q: 'Como o EU AI Act afeta a IA usada na engenharia de prompt?', a: 'A maior parte do trabalho de engenharia de prompt se enquadra na categoria de Risco Limitado ou Mínimo — chatbots padrão e ferramentas de escrita de IA exigem divulgação (os usuários precisam saber que interagem com IA), mas sem avaliação de conformidade. As classificações de alto risco se aplicam quando a IA toma decisões significativas: triagem de empregos, avaliação de crédito, avaliação educacional ou aplicação da lei.' },
+            { q: 'O que é o Processo de IA de Hiroshima e o que ele alcançou?', a: 'O Processo de IA de Hiroshima é uma iniciativa do G7 lançada na Cúpula de Hiroshima de 2023 sob a presidência japonesa do G7. Produziu o Código de Conduta do Processo de IA de Hiroshima — 11 princípios orientadores voluntários para desenvolvedores de sistemas de IA avançados, adotados pelas nações do G7 em outubro de 2023. Os princípios cobrem transparência, relatórios de incidentes, testes de segurança e marca d\'água de conteúdo gerado por IA. O Código de Conduta é voluntário, não juridicamente vinculante, mas sinaliza coordenação internacional separada do EU AI Act juridicamente vinculante.' },
+            { q: 'Organizações da UE podem usar DeepSeek para aplicações comerciais?', a: 'Tecnicamente sim, com salvaguardas contratuais em conformidade com o RGPD (Cláusulas Contratuais Padrão). Na prática, as SCCs são difíceis de aplicar contra obrigações da lei chinesa, que exigem que o DeepSeek cumpra as solicitações de divulgação de dados do CAC. A aquisição governamental é uma restrição separada: o BSI da Alemanha, a ANSSI da França e o NCSC dos Países Baixos emitiram avisos ou restrições sobre ferramentas de IA chinesas para uso governamental e de infraestrutura crítica. Organizações privadas da UE podem usar o DeepSeek comercialmente, mas devem realizar uma Avaliação de Impacto de Transferência nos termos do Artigo 46 do RGPD e documentar o risco residual.' },
+            { q: 'O EU AI Act prejudica ou ajuda a competitividade da UE em IA?', a: 'Este é um dilema estratégico genuíno: o EU AI Act pode desacelerar as startups de IA da UE, mas fortalece a credibilidade regulatória da Europa globalmente. Por um lado, os custos de conformidade e as avaliações de conformidade criam atrito para as empresas da UE — a Mistral AI da França é mais restrita do que os concorrentes dos EUA. Por outro lado, o Efeito Bruxelas significa que o framework regulatório da UE se torna o padrão global, dando às empresas sediadas na UE uma vantagem competitiva em conformidade. A Europa está apostando em "liderança regulatória" em vez de "liderança de capacidade bruta" — uma estratégia de IA fundamentalmente diferente dos EUA ou da China.' },
+            { q: 'Como a capacidade de computação da Europa se compara aos EUA e à China?', a: 'A Europa fica significativamente atrás em infraestrutura de computação. Os EUA dominam a fabricação de GPU (Nvidia ~80% de participação de mercado) e o silício personalizado. A China fabrica na TSMC (Taiwan) e usa GPUs Nvidia H e A-series restritas. A Europa não tem equivalente: a ASML (Países Baixos) fabrica equipamentos de fabricação de chips, mas não possui fábricas. A EU Chips Act (€43 bilhões) visa construir fábricas da Intel e TSMC no território da UE, mas nenhuma estará operacional antes de 2027–2029. Esta é a principal vulnerabilidade de infraestrutura da Europa: treinar modelos de fronteira requer milhares de GPUs rodando por meses. Sem capacidade de fabricação doméstica, a Europa permanece dependente dos EUA (Nvidia) e de Taiwan (TSMC).' },
+            { q: 'Qual é a vantagem da Europa em IA além da regulamentação?', a: 'A Europa tem três vantagens não regulatórias: (1) Mistral AI e outros modelos de pesos abertos financiados pela UE fornecem alternativas em conformidade com o RGPD sem dependências dos EUA ou da China; (2) A Europa lidera em pesquisa de segurança de IA por meio do UK AI Safety Institute, ETH Zurique e centros de pesquisa franceses (INRIA, CNRS); (3) A força de trabalho altamente qualificada da Europa e os talentos existentes em software/semicondutores lhe dão vantagem em aplicações de IA e silício personalizado. No entanto, nenhuma dessas vantagens compensa a desvantagem da Europa na capacidade de modelos de fronteira — os EUA lideram no GPT-5.5 e Claude, e a China na escala de implantação e volume. A estratégia da Europa é "fazer o que você é bom (segurança, regulamentação, ética) em vez de competir na capacidade bruta".' },
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Erros comuns ao implantar IA em fronteiras geopolíticas',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: 'Assumir que a conformidade com o EU AI Act é opcional se sua empresa está sediada nos EUA.',
+              problem: 'O Efeito Bruxelas significa que o EU AI Act se aplica extraterritorialmente — se o seu sistema de IA alcança qualquer usuário da UE, você precisa estar em conformidade. Empresas dos EUA que atendem usuários da UE enfrentaram aplicação regulatória.',
+              fix: 'Audite a geografia dos seus usuários. Se algum usuário está em estados-membros da UE, implemente a conformidade com o EU AI Act no nível da aplicação: classifique sua IA por risco, documente os dados de treinamento, implemente supervisão humana para sistemas de alto risco e mantenha trilhas de auditoria.',
+            },
+            {
+              mistake: 'Enviar dados pessoais de usuários chineses por meio de endpoints de API hospedados nos EUA sem proteções equivalentes ao RGPD.',
+              problem: 'A PIPL da China (2021) proíbe a transferência transfronteiriça de dados pessoais sem avaliação de segurança governamental. Reguladores na Alemanha, França e Países Baixos restringiram ferramentas de IA chinesas para uso governamental. Organizações do setor privado enfrentam exposição legal.',
+              fix: 'Roteie o tráfego de usuários da China por meio de inferência hospedada no continente (Alibaba Cloud, Tencent Cloud) para que os dados pessoais nunca saiam da jurisdição chinesa. Para implantações internacionais, use Qwen 3 (pesos abertos) ou Mistral (sediado na UE) em vez de APIs dos EUA para produtos voltados à China.',
+            },
+            {
+              mistake: 'Assumir que os filtros de conteúdo do CAC retornam erros HTTP 4xx (como erros padrão de API).',
+              problem: 'APIs reguladas pelo CAC (Baidu ERNIE, DeepSeek) retornam HTTP 200 com flag `is_safe: 0` no corpo da resposta quando o conteúdo é filtrado — não um status 4xx. Aplicações que esperam erros HTTP ignorarão respostas filtradas e usarão conteúdo bloqueado.',
+              fix: 'Verifique explicitamente o campo `is_safe` nas respostas da API. Registre e trate as respostas filtradas no nível da aplicação. Teste sua implantação de IA na China com prompts tocando tópicos sensíveis (Taiwan, Tiananmen, etc.) para verificar se a filtragem é tratada corretamente.',
+            },
+            {
+              mistake: 'Tratar os controles de exportação de GPU como uma barreira permanente ao desenvolvimento de IA chinesa.',
+              problem: 'O DeepSeek R1 (janeiro de 2025) igualou o GPT-5.5 em principais benchmarks enquanto treinava em GPUs H800 restritas a ~US$6M de custo de computação — 94% mais barato do que as estimativas de treinamento do GPT-4. Os controles de exportação desaceleram o progresso chinês, mas não o detêm.',
+              fix: 'Planeje para uma competição geopolítica de IA de várias décadas. Para roteiros de produtos de longo prazo, não assuma que a dominância de hardware dos EUA é permanente. Considere investir em alternativas de pesos abertos (Llama, Mistral, Qwen) que são mais difíceis de restringir. Monitore o status político da TSMC, pois ela fabrica todos os chips avançados.',
+            },
+            {
+              mistake: 'Assumir que modelos proprietários dos EUA (GPT-5.5, Claude) permanecerão disponíveis globalmente sem atrito regulatório.',
+              problem: 'O EU AI Act já aplica obrigações de conformidade ao GPT-5.5 e ao Claude. Regulamentações futuras da UE poderiam restringir a exportação de dados ou exigir implantação on-premises para casos de uso sensíveis. A estratégia de substituição doméstica da China (Made in China 2025) pode limitar o acesso a modelos estrangeiros.',
+              fix: 'Diversifique sua infraestrutura de IA. Use uma combinação de modelos proprietários (para capacidade de fronteira), modelos de pesos abertos (para flexibilidade regulatória) e implantações locais (para residência de dados). Teste seu produto em GPT-5.5, Claude, Mistral e Qwen para reduzir a dependência de fornecedor.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Fontes',
+          items: [
+            'Parlamento Europeu, "Artificial Intelligence Act" — Texto oficial, março de 2024. [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)',
+            'Comissão Europeia, "AI Office" — Documentação de conformidade GPAI e orientações de aplicação. [AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office)',
+            'NIST, "Artificial Intelligence Risk Management Framework (AI RMF 1.0)" — Janeiro de 2023. [NIST](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)',
+            'Governo do Reino Unido, "AI Safety Summit — Bletchley Declaration" — Novembro de 2023. [Gov.uk](https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration)',
+            'Administração do Ciberespaço da China, "Provisions on the Management of Generative Artificial Intelligence Services" — Julho de 2023',
+            'DeepSeek-AI, "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning" — arXiv:2501.12948, Janeiro de 2025',
+            'OECD AI Policy Observatory — [oecd.ai](https://oecd.ai) — Base de dados de política de IA por país e análise comparativa',
+            'Governo Federal Alemão, "Strategie Künstliche Intelligenz" — Estratégia Nacional de IA, atualizada em 2023. [Bundesregierung](https://www.bundesregierung.de/breg-de/themen/digitalisierung/ki-strategie)',
+            'Rishi Sunak, PM Speech at AI Safety Summit — Novembro de 2023. [Gov.uk](https://www.gov.uk/government/speeches/pm-speech-at-the-ai-safety-summit-1-november-2023)',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Leitura relacionada',
+          items: [
+            '[LLMs Open Source vs. Proprietários](/prompt-engineering/open-source-vs-proprietary-llms) — Como a conformidade com o EU AI Act e os requisitos de soberania de dados afetam a decisão de pesos abertos vs. API',
+            '[Limitações de IA: O que os LLMs não conseguem fazer](/prompt-engineering/ai-limitations-what-llms-cant-do) — Entendendo os limites de capacidade relevantes para avaliações de sistemas de IA de alto risco sob o EU AI Act',
+            '[Injeção de Prompt e Segurança](/prompt-engineering/prompt-injection-and-security) — Vulnerabilidades de segurança que estratégias nacionais de IA e o EU AI Act abordam nos requisitos de sistemas de alto risco',
+            '[Alucinações de IA: Por que a IA inventa coisas](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Problemas de confiabilidade centrais para a documentação de alto risco do EU AI Act e os requisitos de supervisão humana',
+            '[RAG Explicado](/prompt-engineering/rag-explained) — Como a geração aumentada por recuperação aborda preocupações de corte de conhecimento e alucinação relevantes para implantações de IA reguladas',
+            '[RGPD e IA: Obrigações de conformidade](/prompt-engineering/gdpr-and-ai-compliance) — Como a lei de proteção de dados da UE se combina com o AI Act para criar requisitos de conformidade em múltiplas camadas para organizações que processam dados pessoais através de fronteiras',
+          ],
+        },
       },
     },
 };
