@@ -1242,6 +1242,354 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    pt: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-09-24',
+      theme: 'Fundamentals',
+      title: 'Verificações de qualidade de código IA no CI/CD: detectar alucinações e dependências fabricadas',
+      seoTitle: 'Qualidade de código IA: detectar alucinações no CI/CD',
+      metaDescription: 'Adicione gates de qualidade com IA ao seu pipeline CI/CD: validação de dependências, verificação de APIs, detecção de slopsquatting e revisão multi-modelo.',
+      ogTitle: '3 formas como o código gerado por IA quebra seu CI/CD — e como corrigir',
+      ogDescription: 'O código gerado por IA compila corretamente mas inventa pacotes que não existem e chama APIs que nunca foram construídas. Testes e lint tradicionais não detectam isso. Aprenda a construir gates que peguem esses erros.',
+      twitterTitle: 'Seu CI/CD não detecta alucinações de IA. Veja o que adicionar',
+      twitterDescription: 'Código IA alucina pacotes, APIs e lógica. Seu CI/CD não pega. Adicione estes 5 gates. Framework + checklist.',
+      intro: '**O código gerado por IA falha nos gates de qualidade tradicionais em escala: estudos e relatórios do setor encontram consistentemente que programas escritos por IA contêm vulnerabilidades exploráveis em taxas significativamente mais altas do que código revisado por humanos, e uma fração mensurável de pacotes ou APIs sugeridos por IA simplesmente não existem.** Para manter essas alucinações fora da produção, as verificações de qualidade de build devem evoluir de gates genéricos de "testes + cobertura" para pipelines conscientes de IA que detectem APIs irreais, dependências falsas e lógica confiante mas incorreta antes do merge.',
+      publishDate: '2026-03-24',
+      readTime: '10 min de leitura',
+      educationalLevel: 'Intermediate',
+      audience: 'Líderes de equipes de desenvolvimento e engenheiros DevOps que integram assistentes de codificação IA em pipelines CI/CD de produção',
+      primaryTerm: 'Verificações de qualidade de código IA',
+      aboutTopics: ['Segurança CI/CD', 'Alucinações de código IA', 'Validação de dependências'],
+      toc: [
+        { label: 'Pontos-chave', anchor: '#key-takeaways' },
+        { label: 'O que muda quando a IA escreve seu código?', anchor: '#what-changes' },
+        { label: 'Quais tipos de alucinações seus gates devem pegar?', anchor: '#hallucination-types' },
+        { label: 'Como é uma arquitetura CI/CD de gate consciente de IA?', anchor: '#architecture' },
+        { label: 'Quais verificações concretas você deve adicionar?', anchor: '#concrete-checks' },
+        { label: 'Como você lida com alucinações no pipeline?', anchor: '#hallucination-handling' },
+        { label: 'Como tornar as verificações de qualidade IA amigáveis ao desenvolvedor?', anchor: '#developer-friendly' },
+        { label: 'Exemplo: Estender um gate clássico para código IA', anchor: '#example' },
+        { label: 'Passo a passo: como configurar verificações de qualidade conscientes de IA?', anchor: '#how-to-start' },
+        { label: 'Erros comuns a evitar', anchor: '#common-mistakes' },
+        { label: 'Considerações regionais', anchor: '#regional-context' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Leituras relacionadas', anchor: '#related-reading' },
+        { label: 'Fontes', anchor: '#sources' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Verificações de qualidade de código IA no CI/CD: detectar alucinações e dependências fabricadas',
+        description: 'Projete gates de qualidade CI/CD para código gerado por IA. Inclui detecção de alucinações, validação de dependências, gates de segurança e práticas amigáveis ao desenvolvedor.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-04-29',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/build-quality-checks?lang=pt',
+        inLanguage: 'pt-BR',
+        keywords: ['gates de qualidade', 'CI/CD', 'alucinações IA', 'revisão de código', 'escaneamento de segurança', 'validação de dependências', 'verificações de build'],
+        proficiencyLevel: 'Intermediate',
+        audience: { '@type': 'Audience', audienceType: 'Líderes de equipes de desenvolvimento e engenheiros DevOps que integram assistentes de codificação IA' },
+        about: [
+          { '@type': 'Thing', name: 'Qualidade de código IA' },
+          { '@type': 'Thing', name: 'Pipelines CI/CD' },
+          { '@type': 'Thing', name: 'Detecção de alucinações' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'SAST' },
+          { '@type': 'SoftwareApplication', name: 'DAST' },
+          { '@type': 'SoftwareApplication', name: 'Snyk' },
+          { '@type': 'SoftwareApplication', name: 'Bandit' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          { '@type': 'Question', name: 'O que é uma verificação de qualidade de build consciente de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Uma verificação de qualidade de build consciente de IA é um gate CI/CD projetado para detectar modos de falha específicos do código gerado por IA: APIs alucinadas, nomes de pacotes fabricados e erros lógicos que compilam mas violam os requisitos. Ao contrário dos gates tradicionais de lint e cobertura, essas verificações confirmam que pacotes referenciados realmente existem e que APIs invocadas correspondem às suas definições reais de SDK ou serviço.' } },
+          { '@type': 'Question', name: 'Em que o código gerado por IA difere do código escrito por humanos em termos de risco de qualidade?', acceptedAnswer: { '@type': 'Answer', text: 'O código gerado por IA introduz modos de falha estruturais que o código escrito por humanos raramente apresenta: nomes de pacotes inventados que não existem em nenhum registro, chamadas de métodos ausentes das suas versões de SDK e código que satisfaz testes superficiais enquanto implementa incorrectamente os requisitos de forma silenciosa.' } },
+          { '@type': 'Question', name: 'Como detecto nomes de pacotes alucinados no meu pipeline CI/CD?', acceptedAnswer: { '@type': 'Answer', text: 'Adicione uma etapa de validação de dependências que verifique se cada pacote importado realmente existe em seu registro de destino (npm, PyPI, Maven, etc.) antes de executar os testes. Implemente-a como um hook de pré-commit ou um job CI que chama a API do registro.' } },
+          { '@type': 'Question', name: 'Quais verificações de segurança devo adicionar para código gerado por IA?', acceptedAnswer: { '@type': 'Answer', text: 'Execute ferramentas SAST como Bandit (Python), ESLint-Security (JavaScript) ou Snyk em cada arquivo modificado. Exija zero novos achados altos ou críticos em caminhos de código modificados por IA. Exija revisão manual de segurança para código gerado por IA que toque autenticação, pagamentos, recursos de administração ou dados pessoais.' } },
+          { '@type': 'Question', name: 'Uma API alucinada é o mesmo que um erro em tempo de execução?', acceptedAnswer: { '@type': 'Answer', text: 'Uma API alucinada é mais sutil do que um simples erro em tempo de execução. Refere-se a um modelo inventando um método, parâmetro ou opção de configuração que não existe no SDK ou serviço real — código que parece correto e passa na compilação mas lança exceção em tempo de execução ou degrada o comportamento silenciosamente.' } },
+          { '@type': 'Question', name: 'Posso usar ferramentas de IA para revisar código gerado por IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. A verificação cruzada multi-modelo é um padrão eficaz: um modelo gera código, um modelo diferente o revisa. Áreas onde o modelo revisor expressa incerteza ou discorda do gerador podem ser sinalizadas para atenção humana. Isso funciona melhor em caminhos de risco crítico como autenticação, processamento de pagamentos ou configuração de infraestrutura.' } },
+          { '@type': 'Question', name: 'Como introduzo verificações de qualidade conscientes de IA sem atrasar minha equipe?', acceptedAnswer: { '@type': 'Answer', text: 'Inicie todas as novas regras no modo de aviso para coletar dados antes de bloquear merges. Explique claramente os motivos de falha nas mensagens de erro com links para documentação. Permita exceções documentadas para que as equipes possam continuar em casos incomuns mas válidos enquanto deixam uma trilha de auditoria.' } },
+          { '@type': 'Question', name: 'O que é slopsquatting e por que é perigoso para o desenvolvimento assistido por IA?', acceptedAnswer: { '@type': 'Answer', text: 'O slopsquatting ocorre quando um modelo de IA inventa um nome de pacote que soa plausível mas não existe em nenhum registro. Se um atacante registrar mais tarde esse nome com código malicioso, qualquer desenvolvedor que executar npm install ou pip install nele executa o payload do atacante.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Como construir verificações de qualidade conscientes de IA',
+        inLanguage: 'pt-BR',
+        step: [
+          { '@type': 'HowToStep', name: 'Adicionar uma etapa de validação de dependências', text: 'Verifique se todos os pacotes importados realmente existem em seu gerenciador de pacotes. Confirme que cada instrução import ou require se resolve para um pacote real em npm, pip, PyPI ou seu registro interno.' },
+          { '@type': 'HowToStep', name: 'Escanear padrões de alucinação', text: 'Execute um linter ou script personalizado que verifique cada chamada de API contra a documentação real do SDK ou serviço. Sinalize chamadas para métodos ou endpoints que não existem em sua base de código ou versões de SDK.' },
+          { '@type': 'HowToStep', name: 'Adicionar um gate focado em segurança', text: 'Execute ferramentas SAST como Bandit (Python), ESLint-Security (JavaScript) ou Snyk em arquivos alterados. Escaneie padrões de injeção SQL, regras CORS excessivamente amplas, credenciais hardcoded e desserialização insegura.' },
+          { '@type': 'HowToStep', name: 'Usar validação multi-modelo para caminhos críticos', text: 'Para código que toca autenticação, pagamentos ou infraestrutura, execute o código através de múltiplos modelos de IA perguntando se ele corresponde à lógica pretendida e se há riscos de segurança.' },
+          { '@type': 'HowToStep', name: 'Exigir revisão humana de código focada na lógica', text: 'Gates automatizados detectam alucinações óbvias. Os revisores de código devem verificar: isso faz o que foi pretendido? Os casos extremos são tratados? A abordagem é adequada para o caso de uso?' },
+        ],
+      },
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: 'Pontos-chave',
+          isTldr: true,
+          items: [
+            'O código gerado por IA introduz novos modos de falha — APIs alucinadas, dependências fabricadas e lógica que quebra os requisitos — que os gates de qualidade tradicionais não foram projetados para detectar.',
+            'Trate alucinações como um risco estrutural: assuma que elas ocorrerão onde quer que a IA possa escrever ou refatorar código, e projete testes e políticas para detectá-las.',
+            'Uma arquitetura de gate consciente de IA empilha verificações de pré-commit, políticas de nível de PR, análise mais profunda no CI, gates de segurança e dependências, e feedback em tempo de execução.',
+            'Verificações concretas específicas de IA incluem verificações de existência de dependências, verificações de realidade de APIs, limites de cobertura mais altos em código novo e gates de segurança mais rígidos em arquivos modificados por IA.',
+            'Gates amigáveis ao desenvolvedor explicam falhas claramente, diferenciam avisos de bloqueios rígidos, suportam exceções documentadas e são ajustados para minimizar falsos positivos ruidosos.',
+          ],
+        },
+        definition: {
+          id: 'what-changes',
+          title: 'O que muda quando a IA escreve seu código?',
+          content: [
+            '**Quando a IA escreve código, os gates de qualidade devem se defender contra uma nova classe de problemas: APIs alucinadas, dependências fabricadas e padrões que parecem corretos mas falham em tempo de execução ou sob ataque.** Isso é estruturalmente diferente do que lint e testes unitários foram projetados para detectar.',
+            'A partir do segundo trimestre de 2026, esses problemas são reportados consistentemente em diferentes linguagens e modelos. Problemas observados com código gerado por IA incluem:',
+          ],
+          items: [
+            '**Vulnerabilidades de segurança:** estudos e relatórios do setor encontram consistentemente que soluções de IA para problemas comuns de programação contêm bugs exploráveis em taxas mais altas do que código revisado por humanos, especialmente em validação de entrada, autenticação e criptografia.',
+            '**Pacotes fabricados:** modelos de linguagem às vezes recomendam bibliotecas ou nomes de pacotes que não existem no ecossistema, abrindo a porta para ataques de "typosquatting/slopsquatting" se atacantes registrarem esses nomes mais tarde.',
+            '**APIs e funções alucinadas:** modelos podem inventar métodos, parâmetros ou flags de configuração que parecem plausíveis mas estão ausentes em seus SDKs reais ou serviços internos.',
+            '**Lógica em conflito com os requisitos:** código que compila e passa em testes superficiais mas faz algo errado em comparação com os requisitos originais.',
+            '**Padrões inseguros por padrão:** uso de padrões inseguros como regras CORS amplas, validação JWT permissiva, políticas de senha fracas ou log de depuração de dados sensíveis.',
+          ],
+          callouts: [
+            { type: 'key-point', label: 'Dados rápidos', text: '≥80% de cobertura recomendado para linhas geradas por IA. Arquitetura de gate de 5 estágios: pré-commit → revisão de PR → CI → segurança → monitoramento em tempo de execução. Zero novos achados altos/críticos exigidos em arquivos alterados.' },
+            { type: 'warning', label: 'Risco de slopsquatting', text: 'Quando um modelo de IA inventa um nome de pacote, atacantes podem registrar esse nome com código malicioso. Uma vez que sua equipe execute npm install ou pip install nele, o pacote executa código arbitrário em seu ambiente de build.' },
+          ],
+        },
+        definitionConclusion: {
+          content: [
+            'Verificações tradicionais (lint, testes unitários, limites de cobertura) detectam parte disso, mas não foram projetadas para comportamento alucinado confiante.',
+          ],
+        },
+        hallucinations: {
+          id: 'hallucination-types',
+          title: 'Quais tipos de alucinações seus gates devem detectar?',
+          content: [
+            '**Alucinações de código não são apenas erros de sintaxe; incluem fabricações lógicas, estruturais e em nível de dependências que frequentemente passam por verificações superficiais.** Projetar gates eficazes requer entender cada categoria.',
+            'Categorias comuns para projetar:',
+          ],
+          items: [
+            '**Alucinações lógicas:** algoritmos incorretos, tratamento de casos extremos ausente, código de "caminho feliz" que quebra com dados reais.',
+            '**Erros de mapeamento/tipo:** suposições incorretas sobre tipos ou mapeamentos entre objetos do domínio, levando a corrupção sutil de dados.',
+            '**Confusão de nomes:** nomes de variáveis ou funções trocados ou mal usados de formas que ainda compilam mas violam as regras do domínio.',
+            '**Alucinações de recursos:** uso ilimitado de memória ou CPU (por exemplo, carregando tabelas inteiras na memória), ignorando restrições de desempenho.',
+            '**Alucinações de API/biblioteca:** chamadas para métodos, endpoints ou opções de configuração que não estão presentes em suas versões de bibliotecas ou serviços.',
+            '**Alucinações de segurança:** código que parece estruturado e "seguro" mas silenciosamente omite verificações essenciais como autorização, sanitização ou limitação de taxa.',
+          ],
+          snippets: [
+            { type: 'in-one-sentence', text: 'Uma alucinação de código é qualquer saída gerada por IA — um nome de pacote, método de API, flag de configuração ou algoritmo — que não corresponde a nada que realmente exista ou funcione em seu ambiente.' },
+            { type: 'in-plain-terms', text: 'Pense nisso como uma IA dando confiadamente direções para uma rua que não existe. As direções parecem plausíveis, mas segui-las não leva a lugar nenhum — ou a algum lugar perigoso.' },
+          ],
+          callouts: [
+            { type: 'key-point', label: 'Estrutural vs. Sintático', text: 'Uma chamada de API alucinada compila corretamente e passa na análise estática. Somente a execução em tempo de execução ou lint com conhecimento de SDK a detecta. É por isso que camadas adicionais além de lint e testes unitários são necessárias.' },
+          ],
+        },
+        hallucinationsConclusion: {
+          content: [
+            'Um sistema de build robusto deve assumir que esses problemas aparecerão onde quer que a IA possa escrever ou refatorar código.',
+          ],
+        },
+        architecture: {
+          id: 'architecture',
+          title: 'Como é uma arquitetura de gate CI/CD consciente de IA?',
+          content: [
+            '**As verificações de qualidade de build conscientes de IA devem formar um gate de múltiplos estágios: filtros de pré-commit, verificações de política em nível de PR, análise profunda no CI e monitoramento pós-implantação.** Nenhum estágio único detecta todos os modos de falha.',
+            'Uma arquitetura prática:',
+          ],
+          items: [
+            '**Hooks de pré-commit / locais** — Impõe formatação e lint de linha de base. Opcionalmente, proíbe fazer commit diretamente de grandes diffs gerados por IA sem um breve resumo escrito por humanos das alterações.',
+            '**Gate de qualidade de pull request** — Adiciona verificações específicas de IA sobre as normais: testes unitários, limites de cobertura, estilo, análise estática convencional, mais verificações conscientes de IA (detectar pacotes desconhecidos ou inexistentes, verificar que APIs referenciadas existem, sinalizar novos endpoints sem testes).',
+            '**Análise CI mais profunda** — Executa suites de testes estendidas e testes baseados em propriedades para código modificado por IA. Aplica scanners de segurança (SAST/DAST) com foco em caminhos de código recém-modificados. Analisa complexidade e possíveis pontos críticos de desempenho.',
+            '**Detecção de padrões e desvios** — Compara novo código com padrões estabelecidos do projeto: arquitetura, tratamento de erros, log. Sinaliza código que diverge fortemente de seus idiomas habituais.',
+            '**Gates de segurança e dependências** — Exige "zero novas vulnerabilidades altas ou críticas" de suas ferramentas de segurança em linhas alteradas. Bloqueia builds se novas dependências não estão aprovadas, não estão fixadas ou vêm de fontes suspeitas.',
+            '**Monitoramento em tempo de execução e feedback** — Rastreia taxas de erro, latência e uso de recursos para endpoints recentemente modificados por alterações assistidas por IA. Alimente incidentes de volta em prompts e regras de qualidade para fortalecer gates ao longo do tempo.',
+          ],
+          callouts: [
+            { type: 'pro-tip', label: 'Comece com validação de dependências', text: 'Implemente verificações de existência de dependências primeiro — maior ROI, mais fácil de adicionar e zero falsos positivos. Cada gate subsequente deve ser mensurável e ajustável antes de o próximo ser introduzido.' },
+          ],
+        },
+        architectureConclusion: {
+          content: [
+            'Essa abordagem em camadas trata o código gerado por IA como uma categoria de risco de primeira classe em vez de apenas "mais código".',
+          ],
+        },
+        concreteChecks: {
+          id: 'concrete-checks',
+          title: 'Quais verificações concretas você deve adicionar para código gerado por IA?',
+          content: [
+            '**Para tornar os gates de qualidade conscientes de IA, adicione verificações explícitas para alucinações, fabricação de dependências e padrões inseguros por padrão sobre suas regras existentes de testes e cobertura.**',
+            'Exemplos de políticas aplicáveis:',
+          ],
+          items: [
+            '**Testes e cobertura** — Cobertura mínima para linhas novas ou alteradas (por exemplo, ≥80%). Testes obrigatórios para todos os novos endpoints públicos, jobs em segundo plano ou funções exportadas.',
+            '**Gates de segurança** — Sem novos achados altos/críticos de SAST ou scanners de dependências em código alterado. Exija revisão manual para código gerado por IA que toque autenticação, pagamentos, recursos de administração ou dados pessoais.',
+            '**Verificações de sanidade de dependências** — Novos pacotes devem existir no registro de destino e atender aos sinais mínimos de maturidade (downloads, estrelas, data da última publicação) a menos que estejam explicitamente na lista de permissões.',
+            '**Verificações de realidade de APIs** — Análise estática para garantir que todos os métodos e endpoints invocados existem em sua base de código ou SDK documentado.',
+            '**Verificações de padrões e desempenho** — Impõe wrappers padrão de tratamento de erros e log. Sinaliza funções recém-adicionadas com complexidade incomumente alta ou padrões óbvios de O(n²)/O(n³) em caminhos de dados grandes.',
+          ],
+          callouts: [
+            { type: 'best-practice', label: 'Limite de cobertura', text: 'Aplique um limite de cobertura mais rígido para linhas geradas por IA do que para código legado. Código legado com 60% de cobertura pode ser aceitável; código gerado por IA recentemente deve atingir ≥80% antes do merge.' },
+          ],
+        },
+        concreteChecksConclusion: {
+          content: [
+            'Muitas dessas verificações podem ser implementadas como "política como código" em seu sistema CI, linters personalizados ou plugins especializados.',
+          ],
+        },
+        hallucinationHandling: {
+          id: 'hallucination-handling',
+          title: 'Como você lida com alucinações explicitamente no pipeline?',
+          content: [
+            '**Alucinações são uma classe de defeito estrutural, não bugs temporários; seu sistema de build deve assumir que elas acontecem e focar em detecção e contenção.**',
+            'Estratégias práticas:',
+          ],
+          items: [
+            '**Verificação baseada em execução** — Não dependa apenas da compilação. Execute testes direcionados que estressem o código gerado por IA com casos extremos, entradas inválidas e dados aleatorizados. Testes baseados em propriedades são particularmente eficazes para detectar erros de lógica e mapeamento.',
+            '**Ancoragem com contexto real** — Ao usar IA para propor alterações, forneça esquemas reais, especificações de API e arquivos de configuração como contexto. Isso reduz a chance de funções e parâmetros inventados.',
+            '**Análise estática híbrida + IA** — Combine análise estática convencional com revisão baseada em IA. Ferramentas estáticas são boas em análise de fluxo de dados; revisores de IA são bons para ler intenção e detectar incompatibilidades de requisitos de nível superior.',
+            '**Verificação cruzada multi-modelo** — Para alterações importantes, faça um modelo gerar código e um modelo diferente revisá-lo. Áreas onde os revisores discordam ou expressam baixa confiança podem ser sinalizadas para atenção humana.',
+            '**Listas negras e regras de alucinação** — À medida que você descobre padrões alucinados recorrentes — nomes de pacotes falsos, flags inventados, endpoints inventados — codifique-os como regras explícitas. Aparições futuras causam então uma falha automática de build ou um aviso forte.',
+          ],
+          callouts: [
+            { type: 'warning', label: 'Compilação ≠ Correção', text: 'Uma função gerada por IA pode compilar corretamente, passar em todos os testes existentes e ainda implementar silenciosamente um requisito incorretamente. Sempre teste novos caminhos de código com pelo menos um teste que falharia se a lógica fosse invertida ou sutilmente errada.' },
+          ],
+        },
+        hallucinationHandlingConclusion: {
+          content: [
+            'Ao tratar alucinações como uma classe esperada de defeito, você pode projetar testes e gates que as detectem de forma confiável.',
+          ],
+        },
+        developerFriendly: {
+          id: 'developer-friendly',
+          title: 'Como tornar as verificações de qualidade IA amigáveis ao desenvolvedor?',
+          content: [
+            '**Gates de qualidade só funcionam se os desenvolvedores confiam neles; verificações conscientes de IA devem ser transparentes, explicar falhas claramente e evitar falsos positivos ruidosos.**',
+            'Diretrizes:',
+          ],
+          items: [
+            '**Explique o "porquê" de cada falha** — Mensagens de erro devem mostrar exatamente qual linha ou pacote violou qual regra, e idealmente ter um link para documentação sobre como corrigir ou substituir.',
+            '**Diferencie bloqueios rígidos de avisos** — Para novas regras, comece no modo de "aviso" para coletar dados e reduzir frustração; promova para "bloqueio" somente quando a relação sinal-ruído for aceitável.',
+            '**Permita exceções documentadas** — Algumas alterações geradas por IA serão conscientemente arriscadas ou incomuns. Forneça um mecanismo de exceção documentado para que as equipes possam continuar quando apropriado enquanto deixam uma trilha de auditoria.',
+            '**Meça falsos positivos e itere** — Rastreie com que frequência um gate bloqueia alterações válidas ou força trabalho desnecessário. Ajuste limites, refine regras ou reduza o escopo onde necessário.',
+            '**Exponha dashboards específicos de IA** — Mostre quantos problemas foram detectados relacionados ao código gerado por IA, quantas vulnerabilidades foram evitadas e com que frequência dependências alucinadas foram bloqueadas.',
+          ],
+          callouts: [
+            { type: 'pro-tip', label: 'Implantação com aviso primeiro', text: 'Sempre introduza um novo gate no modo de aviso por pelo menos um sprint antes de torná-lo bloqueante. Isso permite medir a relação sinal-ruído e construir confiança do desenvolvedor antes que ele comece a quebrar builds.' },
+          ],
+        },
+        developerFriendlyConclusion: {
+          content: [
+            'Um bom pipeline consciente de IA parece uma rede de segurança, não um percurso de obstáculos arbitrário.',
+          ],
+        },
+        example: {
+          id: 'example',
+          title: 'Exemplo: Estender um gate clássico para código gerado por IA',
+          content: [
+            '**Você pode evoluir um gate existente de "testes + cobertura + lint" para um gate consciente de IA adicionando verificações direcionadas por cima.** Não é necessária uma reconstrução completa do pipeline.',
+            'Gate de linha de base:',
+          ],
+          items: [
+            'Executar testes unitários.',
+            'Impor cobertura geral mínima.',
+            'Executar linters e formatters.',
+          ],
+        },
+        exampleExtension: {
+          content: ['Extensão consciente de IA:'],
+          items: [
+            '**Cobertura de código novo/alterado:** exija um limite de cobertura mais alto para novas linhas do que para código legado.',
+            '**Verificação de dependências:** falhe se um novo pacote for desconhecido, não aprovado ou obviamente suspeito.',
+            '**Verificação de realidade de APIs:** escaneie chamadas para funções ou endpoints que não existem em sua base de código ou versões oficiais do SDK.',
+            '**Escaneamento de segurança:** exija zero achados altos/críticos em arquivos alterados.',
+            '**Rótulo de revisão manual:** se a IA contribuiu mais de N linhas em um arquivo, exija aprovação humana explícita de um desenvolvedor sênior antes do merge.',
+          ],
+        },
+        exampleConclusion: {
+          content: [
+            'Essa abordagem evita uma reconstrução completa do seu processo enquanto direciona diretamente os riscos específicos da IA.',
+          ],
+        },
+        howToStart: {
+          id: 'how-to-start',
+          title: 'Passo a passo: como configurar verificações de qualidade conscientes de IA?',
+          numberedItems: [
+            '**Adicione uma etapa de validação de dependências: verifique se todos os pacotes importados realmente existem em seu gerenciador de pacotes.** Antes de executar os testes, confirme que cada pacote mencionado em instruções `import` ou `require` existe em npm, pip, PyPI ou seu registro interno. Alucinações de IA frequentemente inventam nomes de pacotes que soam plausíveis.',
+            '**Escaneie padrões comuns de alucinação: APIs inexistentes, funções com assinaturas erradas e flags de configuração fabricados.** Execute um linter ou script personalizado verificando se cada chamada de API corresponde à documentação real do SDK ou serviço.',
+            '**Adicione um gate focado em segurança: SAST mais verificações explícitas para vulnerabilidades comuns em código IA.** Use ferramentas como Bandit (Python), ESLint-Security (JavaScript) ou Snyk. Também escaneie: padrões de injeção SQL, regras CORS excessivamente amplas, credenciais hardcoded, desserialização insegura.',
+            '**Use validação de código multi-modelo para caminhos críticos (auth, pagamentos, infraestrutura).** Antes do merge, execute seu código através de múltiplos modelos de IA perguntando "Este código corresponde à lógica pretendida? Há riscos de segurança?" Sinalize divergências.',
+            '**Exija revisão humana de código com foco na lógica vs. sintaxe.** Gates automatizados detectam alucinações óbvias. Os revisores de código devem verificar: isso faz o que foi pretendido? Os casos extremos são tratados? A abordagem é adequada para o caso de uso?',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Erros comuns a evitar',
+          mistakes: [
+            { mistake: 'Tratar o código gerado por IA como equivalente ao código escrito por humanos em risco de qualidade', problem: 'Os limites padrão de lint e testes unitários são calibrados para código escrito e revisado por humanos. O código gerado por IA pode passar em todos os gates tradicionais enquanto contém APIs alucinadas, pacotes fabricados e lógica silenciosamente errada.', fix: 'Aplique um nível de risco separado para código gerado ou modificado por IA. Use limites de cobertura mais rígidos (≥80% para novas linhas), exija escaneamentos de segurança em todos os arquivos modificados por IA e adicione verificações de existência de dependências.' },
+            { mistake: 'Depender da compilação como prova de correção', problem: 'O código gerado por IA compila corretamente mesmo quando invoca métodos que não existem, importa pacotes não registrados ou implementa lógica que viola requisitos. A compilação é necessária mas insuficiente.', fix: 'Adicione validação em tempo de execução: testes baseados em propriedades, testes de casos extremos e testes de integração que falhariam se a lógica fosse sutilmente errada.' },
+            { mistake: 'Não verificar se os pacotes sugeridos realmente existem no registro', problem: 'Modelos de linguagem frequentemente inventam nomes de pacotes plausíveis quando não conhecem o correto. Desenvolvedores que executam npm install ou pip install em um nome alucinado podem instalar um pacote malicioso registrado mais tarde por um atacante (slopsquatting).', fix: 'Execute uma etapa de validação de dependências que chame a API do registro npm/PyPI/Maven para cada nova importação de pacote. Falhe o build se o pacote não puder ser resolvido ou não tiver histórico de publicação.' },
+            { mistake: 'Iniciar novos gates no modo de bloqueio sem dados', problem: 'Um novo gate introduzido como bloqueador rígido encontrará falsos positivos, criando atrito e erosão da confiança do desenvolvedor. As equipes buscarão contornar ou remover o gate.', fix: 'Execute cada novo gate no modo de aviso por pelo menos um sprint. Meça a relação sinal-ruído, corrija falsos positivos e só promova para bloqueio quando o gate for demonstravelmente confiável.' },
+            { mistake: 'Omitir dashboards e métricas específicos de IA', problem: 'Sem visibilidade sobre quantos problemas relacionados a alucinações foram detectados, as equipes não podem justificar a sobrecarga dos gates conscientes de IA ou ajustá-los efetivamente.', fix: 'Instrumente seu CI para marcar problemas por categoria. Exponha um resumo semanal de problemas detectados por categoria.' },
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Considerações regionais para qualidade de código IA',
+          content: [
+            '**Os requisitos regulatórios afetam quais verificações de qualidade conscientes de IA são obrigatórias versus recomendadas dependendo da sua região de implantação.** As seguintes distinções se aplicam a partir de 2026.',
+          ],
+          items: [
+            '**UE (RGPD / NIS2):** O Artigo 25 do RGPD (proteção de dados por design) exige que o código que processa dados pessoais seja revisado e validado antes da implantação. A Diretiva NIS2 exige adicionalmente controles de segurança da cadeia de suprimentos que cobrem validação de dependências para operadores de infraestrutura crítica.',
+            '**Estados Unidos (SOC 2 / FedRAMP):** Auditorias SOC 2 Tipo II exigem processos documentados de gerenciamento de mudanças. Código gerado por IA mesclado sem revisão humana rastreável pode criar achados de auditoria. Sistemas autorizados pelo FedRAMP devem passar em escaneamentos SAST e documentar todas as dependências de terceiros.',
+            '**Japão (Diretrizes de governança de IA do METI 2024):** As diretrizes do METI recomendam governança de IA baseada em risco, incluindo processos de garantia de qualidade para código gerado por IA. Implantações empresariais devem documentar controles de detecção de alucinações.',
+            '**China (Lei de cibersegurança / Lei de segurança de dados 2021):** Pipelines de desenvolvimento para sistemas que processam dados de usuários chineses devem cumprir obrigações de revisão de segurança. Código gerado por IA que toca informações pessoais requer revisão sob a PIPL.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'FAQ',
+          faqs: [
+            { q: 'O que é uma verificação de qualidade de build consciente de IA?', a: 'Uma verificação de qualidade de build consciente de IA é um gate CI/CD projetado para detectar modos de falha específicos do código gerado por IA: APIs alucinadas, nomes de pacotes fabricados e erros lógicos que compilam mas violam os requisitos.' },
+            { q: 'Em que o código gerado por IA difere do código escrito por humanos em risco de qualidade?', a: 'O código gerado por IA introduz modos de falha estruturais que o código escrito por humanos raramente apresenta: nomes de pacotes inventados, chamadas de métodos ausentes das suas versões de SDK e código que satisfaz testes superficiais enquanto implementa incorretamente os requisitos.' },
+            { q: 'Como detecto nomes de pacotes alucinados no meu pipeline CI/CD?', a: 'Adicione uma etapa de validação de dependências que verifique se cada pacote importado realmente existe em seu registro de destino antes de executar os testes. Pacotes que não podem ser resolvidos ou não têm histórico de publicação devem falhar o build imediatamente.' },
+            { q: 'Quais verificações de segurança devo adicionar para código gerado por IA?', a: 'Execute ferramentas SAST como Bandit (Python), ESLint-Security (JavaScript) ou Snyk em cada arquivo modificado. Exija zero novos achados altos ou críticos em caminhos de código modificados por IA.' },
+            { q: 'Uma API alucinada é o mesmo que um erro em tempo de execução?', a: 'Uma API alucinada é mais sutil do que um simples erro em tempo de execução. Refere-se a um modelo inventando um método, parâmetro ou opção de configuração que não existe no SDK ou serviço real.' },
+            { q: 'Posso usar ferramentas de IA para revisar código gerado por IA?', a: 'Sim. A verificação cruzada multi-modelo é um padrão eficaz: um modelo gera código, um modelo diferente o revisa. Isso funciona melhor em caminhos de risco crítico como autenticação, processamento de pagamentos ou configuração de infraestrutura.' },
+            { q: 'Como introduzo verificações de qualidade conscientes de IA sem atrasar minha equipe?', a: 'Inicie todas as novas regras no modo de aviso para coletar dados antes de bloquear merges. Permita exceções documentadas para que as equipes possam continuar em casos incomuns mas válidos enquanto deixam uma trilha de auditoria.' },
+            { q: 'O que é slopsquatting e por que é perigoso?', a: 'O slopsquatting ocorre quando um modelo de IA inventa um nome de pacote que soa plausível mas não existe em nenhum registro. Se um atacante registrar mais tarde esse nome com código malicioso, qualquer desenvolvedor que o instalar via npm install ou pip install executa o payload do atacante.' },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Leituras relacionadas',
+          items: [
+            '[Escreva melhor código com IA](/pt/prompt-engineering/write-better-code-with-ai) — como estruturar prompts para geração de código que produz saída revisável',
+            '[Revisão de código IA: ferramentas e verificação](/pt/prompt-engineering/ai-code-review) — usando IA para revisar qualidade de código e segurança',
+            '[O que é prompt engineering?](/pt/prompt-engineering/what-is-prompt-engineering) — princípios fundamentais para saída confiável de IA',
+            '[Injeção de prompts e segurança](/pt/prompt-engineering/prompt-injection-and-security) — padrões de ataque que afetam pipelines de desenvolvimento assistido por IA',
+            '[Alucinações de IA: como pará-las](/pt/prompt-engineering/ai-hallucinations-how-to-stop) — técnicas para reduzir alucinações em saídas geradas por IA',
+            '[Como avaliar a qualidade do prompt](/pt/prompt-engineering/how-to-evaluate-prompt-quality) — frameworks de avaliação aplicáveis à qualidade de geração de código',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fontes',
+          items: [
+            '[OWASP Top 10 para Aplicações LLM](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — OWASP, 2025. Riscos de segurança específicos para código gerado por LLM e desenvolvimento assistido por IA.',
+            '[Documentação do GitHub CodeQL](https://codeql.github.com/docs/) — GitHub. Motor de análise estática usado para escaneamento de segurança de caminhos de código modificados por IA.',
+            '[Snyk State of Open Source Security Report](https://snyk.io/reports/state-of-open-source-security/) — Snyk, 2024–2025. Relatório anual sobre vulnerabilidades de dependências e riscos da cadeia de suprimentos.',
+            '[NIST AI Risk Management Framework (AI RMF 1.0)](https://airc.nist.gov/Home) — NIST, 2023. Framework para gerenciar riscos de sistemas de IA incluindo qualidade de código e governança.',
+          ],
+        },
+      },
+    },
     fr: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-24',
