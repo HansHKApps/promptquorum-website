@@ -438,6 +438,84 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Model Comparisons',
+    title: 'Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B: qual rodar localmente?',
+    seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026',
+    metaDescription: 'Llama 3.3 8B: 4,9 GB de VRAM. Qwen 3 14B: 9,3 GB, MMLU 74,8%. Mistral Small 24B: 14,4 GB, MMLU 81%. Escolha pelo nível de VRAM. Resposta rápida.',
+    publishDate: '2026-05-23',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-23',
+    quickAnswerTop: {
+      pt: {
+        question: 'Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B: qual devo rodar localmente?',
+        answer: 'Escolha pelo VRAM: Llama 3.3 8B (4,9 GB), Qwen 3 14B (9,3 GB), Mistral Small 3.1 24B (14,4 GB). Qwen 14B ganha com 12 GB de VRAM. Mistral Small 24B ganha acima de 16 GB em tarefas de raciocínio.',
+        bullets: [
+          'Llama 3.3 8B Q4_K_M: 4,9 GB de VRAM, ~45 tok/s na RTX 4090, MMLU 66,6% — melhor para placas de 6–8 GB',
+          'Qwen 3 14B Q4_K_M: 9,3 GB de VRAM, ~28 tok/s, MMLU 74,8% — ponto ideal para placas de 12 GB',
+          'Mistral Small 3.1 24B Q4_K_M: 14,4 GB de VRAM, ~20 tok/s, MMLU ~81% — apenas para placas de 16 GB ou mais',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Llama 3.3 8B em Q4_K_M usa 4,9 GB de VRAM e roda a ~45 tok/s na RTX 4090 — o único modelo viável deste grupo para placas de 6 GB',
+          'Qwen 3 14B em Q4_K_M usa 9,3 GB e pontua 74,8% no MMLU — o ponto ideal para placas de 12 GB como RTX 3060 12 GB ou RTX 4060 Ti 16 GB',
+          'Mistral Small 3.1 24B em Q4_K_M usa 14,4 GB e alcança ~81% no MMLU — viável apenas em placas de 16 GB (RTX 4080, RTX 3090, RTX 4090)',
+          'Para codificação em 12 GB: Qwen 3 Coder 14B. Para raciocínio multilíngue em 16 GB+: Mistral Small 3.1 24B. Abaixo de 10 GB: Llama 3.3 8B.',
+        ],
+      },
+      body1: {
+        title: 'Requisitos de VRAM: qual placa roda qual modelo',
+        content: [
+          'A escolha entre esses três modelos é principalmente uma decisão de VRAM. Em quantização Q4_K_M: Llama 3.3 8B usa 4,9 GB, Qwen 3 14B usa 9,3 GB e Mistral Small 3.1 24B usa 14,4 GB. Isso se corresponde diretamente a três níveis de GPU: placas de 6–8 GB (apenas Llama 3.3 8B), placas de 10–12 GB (Qwen 3 14B) e placas de 16+ GB (Mistral Small 24B).',
+          'Velocidade na RTX 4090 em Q4_K_M: Llama 3.3 8B roda a aproximadamente 45 tok/s, Qwen 3 14B a ~28 tok/s e Mistral Small 3.1 24B a ~20 tok/s. Em uma RTX 3060 12 GB, apenas Llama 3.3 8B e Qwen 3 14B cabem — Mistral Small 24B requer no mínimo uma placa de 16 GB para evitar derramamento para a RAM da CPU.',
+          'A diferença nos benchmarks é significativa: o MMLU 81% do Mistral Small 24B supera o Llama 3.3 8B em 14 pontos e o Qwen 3 14B em 6 pontos. Em tarefas complexas de raciocínio em várias etapas e seguimento de instruções, essa lacuna é perceptível na prática.',
+        ],
+        columns: ['Modelo', 'VRAM (Q4_K_M)', 'Velocidade (RTX 4090)', 'MMLU', 'GPU mínima'],
+        rows: [
+          { 'Modelo': 'Llama 3.3 8B', 'VRAM (Q4_K_M)': '4,9 GB', 'Velocidade (RTX 4090)': '~45 tok/s', 'MMLU': '66,6%', 'GPU mínima': 'RTX 3060 6 GB' },
+          { 'Modelo': 'Qwen 3 14B', 'VRAM (Q4_K_M)': '9,3 GB', 'Velocidade (RTX 4090)': '~28 tok/s', 'MMLU': '74,8%', 'GPU mínima': 'RTX 3060 12 GB' },
+          { 'Modelo': 'Mistral Small 3.1 24B', 'VRAM (Q4_K_M)': '14,4 GB', 'Velocidade (RTX 4090)': '~20 tok/s', 'MMLU': '~81%', 'GPU mínima': 'RTX 4080 16 GB' },
+        ],
+      },
+      body2: {
+        title: 'Qualidade vs VRAM: quando cada modelo ganha',
+        content: [
+          '<strong>Llama 3.3 8B ganha em eficiência de VRAM.</strong> Com 4,9 GB Q4_K_M, é o único modelo deste grupo que cabe em uma placa de 6 GB com margem para uma janela de contexto de 4k tokens. Pontua 66,6% no MMLU e oferece respostas interativas rápidas (~45 tok/s na RTX 4090). Para chat, consultas rápidas de codificação e uso diário em hardware limitado, é a escolha correta.',
+          '<strong>Qwen 3 14B ganha com 12 GB de VRAM.</strong> Seu MMLU de 74,8% o coloca bem acima do Llama 3.3 8B em raciocínio e codificação — e cabe no nível de GPU prosumer mais comum. A variante Qwen Coder 14B (mesmo tamanho, otimizado para código) pontua aproximadamente 78% no HumanEval. Se seu uso principal é codificação e você tem uma placa de 12 GB, Qwen 3 14B é a resposta.',
+          '<strong>Mistral Small 3.1 24B ganha em qualidade quando a VRAM permite.</strong> Seu MMLU de 81% e sólido desempenho multilíngue o tornam a principal escolha para placas de 16 GB. Lida com raciocínio de forma longa, tarefas de saída estruturada e conjuntos de instruções complexos de forma mais confiável do que os modelos da classe 14B. Em uma RTX 4090 24 GB, cabe em Q5_K_M para qualidade ainda melhor.',
+          'Para uma comparação direta da classe 14B, consulte a comparação <a href="/pt/prompt-bites/qwen-14b-vs-llama-8b" class="text-primary hover:underline">Qwen 14B vs Llama 8B</a>, que inclui detalhes de benchmarks de codificação.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas: Mistral Small 24B vs Qwen 14B vs Llama 8B',
+        faqs: [
+          {
+            q: 'Mistral Small 24B consegue rodar em uma RTX 3060 12 GB?',
+            a: 'Não. Mistral Small 3.1 24B em Q4_K_M requer 14,4 GB de VRAM, excedendo a RTX 3060 12 GB. Baixar para Q2_K reduz para aproximadamente 7,6 GB, mas causa degradação significativa de qualidade. Para a RTX 3060 12 GB, Qwen 3 14B Q4_K_M (9,3 GB) é a escolha correta — deixa 2,7 GB de margem para o contexto.',
+          },
+          {
+            q: 'Mistral Small 24B é melhor que Qwen 3 14B para codificação?',
+            a: 'Para codificação geral, Mistral Small 24B tem uma leve vantagem devido ao seu tamanho maior. No entanto, Qwen 3 Coder 14B (a variante Qwen otimizada para código) é competitivo com Mistral Small 24B no HumanEval e cabe em 12 GB de VRAM. Se o seu orçamento é uma placa de 16 GB e você precisa de raciocínio e codificação, Mistral Small 24B ganha. Em 12 GB, Qwen Coder 14B é a melhor compensação.',
+          },
+          {
+            q: 'Qual modelo devo usar em uma GPU de 16 GB como a RTX 4080?',
+            a: 'Mistral Small 3.1 24B Q4_K_M com 14,4 GB cabe com 1,6 GB de margem — suficiente para uma janela de contexto de 2k. Supera o Qwen 3 14B nos benchmarks de raciocínio. Alternativamente, Qwen 3 32B em Q3_K_M cabe em aproximadamente 13,5 GB e compete com Mistral Small 24B em tarefas de codificação, oferecendo mais parâmetros.',
+          },
+          {
+            q: 'Como o Llama 3.3 8B se compara ao Llama 3.2?',
+            a: 'Llama 3.2 8B não foi lançado — a série 3.2 introduziu apenas as variantes 1B, 3B e multimodais 11B/90B. Llama 3.3 8B continua sendo o modelo de referência 8B padrão do Llama. Para uso apenas de texto com 6–8 GB de VRAM, Llama 3.3 8B é a escolha atualmente recomendada nesta classe de tamanho.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Model Comparisons',
     title: 'Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B: ¿cuál ejecutar en local?',

@@ -122,6 +122,50 @@ const COPY: Partial<Record<Lang, Copy>> = {
     alwaysOn: 'Siempre activas',
     save: 'Guardar preferencias',
   },
+  pt: {
+    intro: 'Usamos cookies e tecnologias semelhantes para entender como os visitantes utilizam este site. Escolha o que ativar — você pode alterar isso a qualquer momento em «Configurações de cookies» no rodapé.',
+    policy: 'Política de Privacidade',
+    rejectAll: 'Rejeitar tudo',
+    customize: 'Personalizar',
+    acceptAll: 'Aceitar tudo',
+    essential: 'Essenciais',
+    essentialDesc: 'Necessários para o funcionamento do site (por exemplo, seu idioma e sua escolha de consentimento).',
+    analytics: 'Análise',
+    analyticsDesc: 'Google Analytics, Umami, Vercel Analytics, Microsoft Clarity — estatísticas de uso anônimas.',
+    marketing: 'Marketing',
+    marketingDesc: 'Personalização de anúncios e sinais de remarketing (nenhum ativo no momento).',
+    alwaysOn: 'Sempre ativo',
+    save: 'Salvar preferências',
+  },
+  ar: {
+    intro: 'نستخدم ملفات تعريف الارتباط وتقنيات مماثلة لفهم كيفية استخدام الزوار لهذا الموقع. اختر ما تريد تفعيله — يمكنك تغيير ذلك في أي وقت عبر «إعدادات ملفات تعريف الارتباط» في تذييل الصفحة.',
+    policy: 'سياسة الخصوصية',
+    rejectAll: 'رفض الكل',
+    customize: 'تخصيص',
+    acceptAll: 'قبول الكل',
+    essential: 'ضرورية',
+    essentialDesc: 'مطلوبة لكي يعمل الموقع (مثل لغتك واختيار الموافقة).',
+    analytics: 'التحليلات',
+    analyticsDesc: 'Google Analytics وUmami وVercel Analytics وMicrosoft Clarity — إحصاءات استخدام مجهولة الهوية.',
+    marketing: 'التسويق',
+    marketingDesc: 'تخصيص الإعلانات وإشارات إعادة التسويق (لا يوجد نشط حاليًا).',
+    alwaysOn: 'مفعّل دائمًا',
+    save: 'حفظ التفضيلات',
+  },
+}
+
+const VALID_LANGS: Lang[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+
+// The middleware auto-detects the visitor's language (Accept-Language) and stores it
+// in the `pq_lang` cookie. On URLs without a path locale (/de/…) or ?lang= param —
+// e.g. a returning visitor landing on bare "/" — useLang() reports 'en', so the
+// consent prompt would show in English even though the site knows the user's language.
+// Read the cookie as a fallback so the prompt appears in the language of the user.
+function readLangCookie(): Lang | null {
+  if (typeof document === 'undefined') return null
+  const match = document.cookie.match(/(?:^|;\s*)pq_lang=([a-z]{2})(?:;|$)/)
+  const value = match?.[1] as Lang | undefined
+  return value && VALID_LANGS.includes(value) ? value : null
 }
 
 function gtagConsent(r: ConsentRecord) {
@@ -182,12 +226,21 @@ function isStale(r: ConsentRecord): boolean {
 }
 
 function CookieBannerInner() {
-  const lang = useLang()
+  const urlLang = useLang()
+  const [cookieLang, setCookieLang] = useState<Lang | null>(null)
+  // Prefer the language explicit in the URL (matches the page the visitor is on);
+  // otherwise fall back to the pq_lang cookie set by the middleware; else English.
+  const lang: Lang = urlLang !== 'en' ? urlLang : (cookieLang ?? 'en')
   const c = (COPY[lang] ?? COPY.en)!
+  const isRtl = lang === 'ar'
   const [visible, setVisible] = useState(false)
   const [showCustom, setShowCustom] = useState(false)
   const [analyticsOn, setAnalyticsOn] = useState(false)
   const [marketingOn, setMarketingOn] = useState(false)
+
+  useEffect(() => {
+    setCookieLang(readLangCookie())
+  }, [])
 
   useEffect(() => {
     const stored = readConsent()
@@ -252,10 +305,11 @@ function CookieBannerInner() {
     <div
       role="dialog"
       aria-label="Cookie consent"
+      dir={isRtl ? 'rtl' : 'ltr'}
       style={{
         position: 'fixed',
         bottom: '16px',
-        left: '16px',
+        ...(isRtl ? { right: '16px' } : { left: '16px' }),
         zIndex: 9998,
         background: '#1C1B1F',
         border: '1px solid #49454F',

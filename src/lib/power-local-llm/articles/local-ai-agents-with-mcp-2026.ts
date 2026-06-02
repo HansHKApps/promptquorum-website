@@ -2640,4 +2640,437 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
 },
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Local AI Agents & Tool Use',
+    title: 'Conecte o Ollama a bancos de dados e APIs com MCP: configuração de agentes locais 2026',
+    seoTitle: 'Ollama + MCP local 2026: conecte IA a bancos de dados e APIs',
+    intro:
+      'O Model Context Protocol (MCP) é a camada que faltava entre um modelo Ollama local e o restante da sua máquina. Com um único arquivo de configuração e um modelo que suporta tool calling, o mesmo agente pode consultar um banco de dados Postgres, ler e escrever arquivos em um diretório isolado, controlar um navegador sem cabeça e abrir pull requests no GitHub — tudo rodando no seu laptop, tudo offline. Este guia percorre o processo completo com um modelo de segurança que não assume que você confia no modelo.',
+    metaDescription:
+      'Configure agentes de IA locais em 2026 com Ollama e MCP: filesystem, SQLite/Postgres, navegador, servidor GitHub, JSON funcional e um modelo de sandboxing.',
+    twitterDescription:
+      'Ollama local + MCP = um agente de IA que lê arquivos, consulta bancos de dados e controla um navegador — completamente offline. Configs funcionais, os quatro servidores essenciais e um modelo de segurança que não confia no modelo.',
+    current_models_mentioned: [
+      'Gemma 4 27B',
+      'GLM-5.1 32B',
+      'Qwen3 32B',
+      'Qwen3-Coder 30B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'Apple M5 Max 64 GB',
+      'NVIDIA RTX 4090 24 GB',
+    ],
+    audience:
+      'Desenvolvedores e usuários com conhecimentos técnicos que executam LLMs locais via Ollama e querem um modelo que possa fazer coisas reais — consultar bancos de dados, editar arquivos, automatizar navegadores — sem enviar nada a um provedor na nuvem.',
+    readTime: '15 min de leitura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'agente MCP local',
+    targetKeywords: [
+      'mcp ollama português',
+      'configurar servidor mcp local',
+      'model context protocol local',
+      'ollama tool calling 2026',
+      'agente ia local mcp',
+      'mcp sem claude desktop',
+    ],
+    leadAnswerBlock:
+      '**O Model Context Protocol (MCP) permite que um modelo Ollama local chame ferramentas — ler um arquivo, executar uma consulta SQL, clicar em um link, abrir um pull request — através de uma interface JSON-RPC padrão que qualquer cliente compatível com MCP (Goose, Cline, Continue.dev, LM Studio em 2026) pode usar. Em 2026 não é necessário Claude Desktop nem nenhuma conta na nuvem. Execute o Ollama, instale um cliente MCP, coloque um arquivo de configuração `mcp.json` com os servidores que quiser e um modelo com tool calling (Gemma 4, GLM-5.1, Qwen3, Llama 3.3) se torna um agente que opera na sua máquina com as permissões que você controla.**',
+    quickAnswerTop: {
+      pt: {
+        question: 'Posso executar agentes de IA locais com MCP e Ollama em 2026?',
+        answer:
+          'Sim — e a configuração agora é tão simples que dá para fazer em uma tarde. Execute o Ollama com um modelo com tool calling (Gemma 4, GLM-5.1, Qwen3 ou Llama 3.3 70B), instale um cliente compatível com MCP (Goose é o CLI mais direto; Cline, Continue.dev e LM Studio adicionaram suporte MCP no início de 2026) e adicione servidores MCP para as capacidades que você precisa — `filesystem` para arquivos, `sqlite` ou `postgres` para bancos de dados, `puppeteer` ou `playwright` para automação de navegador, `github` para gestão de repositórios. O protocolo é o mesmo que o Claude Desktop usa; a única diferença é o modelo e o cliente. Mantenha a segurança limitando o servidor filesystem a um único diretório, mantendo o banco de dados em somente leitura por padrão e nunca aprovando automaticamente ferramentas de escrita ou shell.',
+        bullets: [
+          'MCP é aberto e funciona completamente em local — não é necessário Claude Desktop, conta Anthropic nem chamadas à nuvem.',
+          'Ollama fornece o modelo; um cliente MCP (Goose, Cline, Continue.dev, LM Studio) conecta o Ollama com os servidores MCP via JSON-RPC.',
+          'Quatro servidores de referência cobrem a maioria dos fluxos de trabalho reais: filesystem, SQLite/Postgres, Puppeteer/Playwright (navegador) e GitHub.',
+          'A confiabilidade do tool calling é uma propriedade do modelo: Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B lidam com MCP sem problemas. Modelos abaixo de 7B geralmente emitem tool calls malformados.',
+          'Modelo de segurança: limite o acesso ao filesystem a um diretório, execute os servidores de banco de dados em somente leitura e coloque cada ferramenta de escrita ou shell atrás de uma aprovação explícita.',
+          'Custo: $0 em gastos de API, mas os tokens são consumidos localmente — os loops de agente são intensivos em tokens, então use um modelo com contexto de 32K+ e uma máquina que consiga executá-lo em velocidade útil.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Principais destaques', anchor: '#key-takeaways' },
+      { label: 'Fatos rápidos', anchor: '#quick-facts' },
+      { label: 'O que o MCP desbloqueia', anchor: '#what-mcp-unlocks' },
+      { label: 'Comparativo de servidores MCP', anchor: '#server-comparison' },
+      { label: 'Arquitetura: como as peças se encaixam', anchor: '#architecture' },
+      { label: 'Configuração: Ollama + Goose em 15 minutos', anchor: '#setup' },
+      { label: 'Servidor Filesystem', anchor: '#filesystem-server' },
+      { label: 'Servidores SQLite e Postgres', anchor: '#database-server' },
+      { label: 'Servidor de navegador (Puppeteer / Playwright)', anchor: '#browser-server' },
+      { label: 'Servidor GitHub', anchor: '#github-server' },
+      { label: 'Modelo de segurança', anchor: '#security-model' },
+      { label: 'MCP local vs Claude Desktop', anchor: '#vs-claude-desktop' },
+      { label: 'Escolher um modelo com tool calling', anchor: '#picking-model' },
+      { label: 'MCP vs Function Calling simples', anchor: '#mcp-vs-function-calling' },
+      { label: 'Erros comuns', anchor: '#common-mistakes' },
+      { label: 'Fontes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leituras relacionadas', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-with-mcp-2026-static.html',
+    gammaDescription:
+      'A apresentação cobre: como o MCP converte um modelo Ollama local em um agente que consulta bancos de dados, lê arquivos, controla um navegador e abre pull requests — tudo offline; os quatro servidores de referência (filesystem, SQLite/Postgres, navegador, GitHub) com dificuldade de configuração e nível de risco; um guia de configuração do Goose em 6 passos; um modelo de segurança que não confia no LLM; e uma comparação direta com o Claude Desktop. Baixe o PDF como cartão de referência de agente MCP local.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**MCP é um protocolo JSON-RPC 2.0 para ferramentas.** Um modelo (via um cliente) se conecta a um ou mais servidores MCP; cada servidor expõe Tools (funções invocáveis), Resources (dados legíveis) e Prompts (templates). O formato de wire é idêntico tanto se o cliente for Claude Desktop, Goose, Cline, Continue.dev ou LM Studio.',
+          '**O Ollama não fala MCP diretamente — um cliente MCP envolve o Ollama.** O Goose (Block) é o CLI open source mais simples com suporte nativo ao Ollama; Cline, Continue.dev e LM Studio adicionaram suporte de cliente MCP no início de 2026.',
+          '**Quatro servidores de referência cobrem a maioria dos casos de uso:** `filesystem` (ler/escrever em um diretório isolado), `sqlite` e `postgres` (consultar bancos de dados, somente leitura por padrão), `puppeteer` ou `playwright` (controlar um navegador sem cabeça) e `github` (gestão de repositórios e PRs com um personal access token).',
+          '**A confiabilidade do tool calling escala com o tamanho e o treinamento do modelo.** Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B lidam com MCP sem problemas em Q4_K_M. Modelos abaixo de 7B geralmente emitem tool calls malformados e bloqueiam o loop.',
+          '**O modelo de segurança assume que o modelo não é confiável.** Limite o servidor filesystem a um único diretório, execute o servidor de banco de dados com um role de somente leitura, nunca aprove automaticamente `execute_command` nem `write_file` e revise o log de auditoria após sessões longas.',
+          '**MCP local vs Claude Desktop:** protocolo idêntico, ecossistema de servidores idêntico. O stack local substitui o modelo na nuvem por um offline — privacidade, sem custo por token e sem limites de velocidade, em troca de um modelo um pouco menos capaz e de gerenciar você mesmo a configuração de segurança.',
+          '**O custo é $0 em tarifas de API, mas real em tokens.** Os loops de agente podem consumir entre 30K e 80K tokens para uma única tarefa de múltiplas etapas. Use um modelo com contexto de pelo menos 32K; 128K é confortável.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Fatos rápidos',
+        items: [
+          '**Protocolo:** JSON-RPC 2.0 sobre stdio (subprocesso local) ou HTTP/SSE (remoto). Os agentes locais usam quase exclusivamente stdio.',
+          '**Mantido por:** Anthropic (especificação open source); servidores de referência mantidos em `modelcontextprotocol/servers` no GitHub mais um ecossistema de terceiros em crescimento.',
+          '**Clientes locais em 2026:** Goose (Block), Cline (extensão do VS Code), Continue.dev (VS Code/JetBrains), LM Studio (aplicação de desktop), mais várias ferramentas CLI.',
+          '**Modelos Ollama compatíveis:** qualquer modelo com treinamento nativo de tool calling. Em maio de 2026: Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.',
+          '**Transporte padrão:** stdio para processos locais; HTTP/SSE apenas quando você precisa compartilhar um servidor entre máquinas ou agentes.',
+          '**A configuração vive em um único arquivo:** `~/.config/goose/config.yaml` (Goose), o bloco MCP de `~/.continue/config.json` (Continue.dev) ou `mcpServers` na interface de configuração do Cline. A mesma estrutura em todos: nome do servidor, comando, args, variáveis de ambiente.',
+          '**Claude Desktop não é necessário.** O protocolo é anterior às histórias de exclusividade do Claude Desktop; todos os servidores de referência têm licença MIT/Apache e funcionam com qualquer cliente compatível.',
+        ],
+      },
+      whatMcpUnlocks: {
+        id: 'what-mcp-unlocks',
+        title: 'O que o MCP realmente desbloqueia para um modelo local',
+        content:
+          '**Um LLM local sem ferramentas só pode responder com texto. Com MCP, o mesmo modelo pode agir na sua máquina.** A mudança é a diferença entre um chatbot e um agente.',
+        items: [
+          '**"Encontre todos os TODOs neste repositório, agrupe-os por arquivo e escreva um resumo em Markdown em `notes/todos.md`."** — o servidor `filesystem` lê, o modelo agrupa, o mesmo servidor escreve. Uma única ida e volta de ponta a ponta.',
+          '**"Mostre-me os 10 melhores clientes por receita neste trimestre e faça um gráfico."** — o servidor `postgres` executa o SQL (role de somente leitura), o modelo resume e escreve um CSV via `filesystem` para sua ferramenta de gráficos.',
+          '**"Abra a capa do Hacker News, encontre as três principais histórias de IA, resuma-as e adicione-as à minha lista de leitura."** — o servidor `puppeteer` controla um navegador sem cabeça, o modelo extrai e resume, `filesystem` adiciona.',
+          '**"Abra um PR draft com o título `chore: bump deps` contra meu fork e ligue a execução de CI com falha."** — o servidor `github` cria o PR, obtém a execução e escreve o link na descrição.',
+          '**"Olhe as últimas 100 linhas de `events.db` e diga-me quais IDs de usuário são responsáveis pelo novo pico de erros."** — o servidor `sqlite` consulta; o modelo raciocina; você lê a resposta no painel de chat.',
+          'Cada um desses é um fluxo de trabalho de frase para ação que antes exigia um modelo na nuvem com ferramentas hospedadas ou um script escrito à mão. O MCP é a camada que permite reutilizar os mesmos servidores entre clientes e o mesmo modelo entre servidores.',
+        ],
+      },
+      serverComparison: {
+        id: 'server-comparison',
+        title: 'Comparativo dos quatro servidores MCP mais usados',
+        content:
+          'Os servidores de referência a seguir cobrem o longo alcance de "quero que meu modelo local faça algo real". Todos são open source e rodam como subprocessos locais iniciados pelo seu cliente MCP.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Comece com o servidor filesystem (5 minutos, baixo risco), adicione um servidor SQLite para trabalho com dados, adicione um servidor de navegador apenas quando precisar e traga o GitHub uma vez que você confie no modelo na sua máquina.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Quatro servidores cobrem 90% do que você vai querer que um agente local faça. O servidor filesystem lê e escreve arquivos em uma pasta que você escolhe. O servidor SQLite ou Postgres executa consultas contra um banco de dados. O servidor de navegador controla uma janela real do Chromium para que o modelo possa ler páginas que requerem JavaScript. O servidor GitHub abre issues e PRs nos seus repositórios.',
+          },
+        ],
+        columns: ['Servidor MCP', 'O que habilita', 'Dificuldade de configuração', 'Nível de risco', 'Ideal para'],
+        rows: [
+          { 'Servidor MCP': 'Filesystem', 'O que habilita': 'Ler e escrever arquivos dentro de um diretório isolado', 'Dificuldade de configuração': 'Fácil (um caminho na allowlist)', 'Nível de risco': 'Médio — limite o escopo com cuidado', 'Ideal para': 'Automação pessoal, anotações, resumo de repositórios' },
+          { 'Servidor MCP': 'SQLite', 'O que habilita': 'Consultar um arquivo de banco de dados SQLite local', 'Dificuldade de configuração': 'Fácil (caminho para o arquivo .db)', 'Nível de risco': 'Baixo em somente leitura; médio com escritas', 'Ideal para': 'Exploração de dados, análise de logs, prototipagem' },
+          { 'Servidor MCP': 'Postgres', 'O que habilita': 'Consultar um banco de dados Postgres via string de conexão', 'Dificuldade de configuração': 'Médio (role + URL)', 'Nível de risco': 'Médio — use um role de somente leitura', 'Ideal para': 'Exploração de dados de produção, relatórios, protótipos BI' },
+          { 'Servidor MCP': 'Puppeteer / Playwright', 'O que habilita': 'Controlar um Chromium sem cabeça ou visível para navegação, scraping, preenchimento de formulários', 'Dificuldade de configuração': 'Difícil (binários do navegador, seletores, latência)', 'Nível de risco': 'Alto — pode enviar formulários, clicar em qualquer coisa', 'Ideal para': 'Pesquisa, scraping, testes de regressão' },
+          { 'Servidor MCP': 'GitHub', 'O que habilita': 'Listar repositórios, ler arquivos, abrir issues e PRs', 'Dificuldade de configuração': 'Fácil (PAT em variável de ambiente)', 'Nível de risco': 'Médio — limite o token a repositórios específicos', 'Ideal para': 'Fluxos de trabalho de desenvolvimento, triagem, rascunhos de PR' },
+          { 'Servidor MCP': 'Custom', 'O que habilita': 'Qualquer coisa que você possa expressar como ferramentas JSON-RPC', 'Dificuldade de configuração': 'Difícil (escreva seu próprio servidor)', 'Nível de risco': 'Variável', 'Ideal para': 'APIs internas, sistemas de nicho, código de integração' },
+        ],
+      },
+      architecture: {
+        id: 'architecture',
+        title: 'Como as peças se encaixam',
+        content:
+          '**Três processos, um protocolo compartilhado.** O modelo vive no Ollama, o cliente fala MCP e cada servidor expõe um pequeno conjunto de ferramentas. Cada tool call salta do cliente para o servidor, é executado localmente e retorna JSON.',
+        items: [
+          '**Ollama** roda como serviço em segundo plano em `127.0.0.1:11434` e serve o modelo via uma API compatível com OpenAI. Não sabe o que é MCP — simplesmente responde às completações de chat e emite tool calls quando o modelo os solicita.',
+          '**O cliente MCP** (Goose, Cline, Continue.dev, LM Studio) é a ponte. Fala com o Ollama para o modelo e com os servidores MCP para as ferramentas. Quando o modelo emite um tool call, o cliente o roteia para o servidor correto, obtém o resultado e o retorna à conversa.',
+          '**Os servidores MCP** são subprocessos independentes, um por capacidade. Falam JSON-RPC 2.0 sobre stdio. Cada servidor anuncia uma lista de Tools, Resources e Prompts; o cliente os combina na superfície de ferramentas que é apresentada ao modelo.',
+          '**O transporte stdio mantém tudo local.** O servidor é iniciado pelo cliente, se comunica via seu stdin/stdout e termina quando o cliente termina. Nada vai pela rede a menos que o servidor em si abra uma conexão (o servidor de navegador o faz; os servidores de filesystem e banco de dados não).',
+          '**O modelo vê uma lista plana de ferramentas.** Da perspectiva do modelo não há servidores — apenas uma lista de nomes de ferramentas como `filesystem.read_file`, `sqlite.query`, `puppeteer.navigate`. O cliente gerencia o roteamento.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'A arquitetura é idêntica à do Claude Desktop. As diferenças são o modelo (um modelo Ollama local em vez do Claude) e o cliente (Goose/Cline/Continue.dev/LM Studio em vez do Claude Desktop). Os servidores MCP são os mesmos servidores.',
+          },
+        ],
+      },
+      setup: {
+        id: 'setup',
+        title: 'Configuração: Ollama + Goose em 15 minutos',
+        content:
+          '**O Goose é o caminho mais simples para um agente MCP local funcional em 2026.** É um CLI open source do Block com suporte nativo ao Ollama, uma interface de chat interativa e um único arquivo de configuração para todos os seus servidores MCP.',
+        items: [
+          '**Passo 1 — instale o Ollama.** Baixe em ollama.com/download (macOS/Windows/Linux). Confirme que o serviço está rodando com `curl http://127.0.0.1:11434/api/tags`.',
+          '**Passo 2 — baixe um modelo com tool calling.** Escolha entre Gemma 4 27B (`gemma4:27b`), GLM-5.1 32B (`glm5:32b`), Qwen3 32B (`qwen3:32b`) ou Llama 3.3 70B (`llama3.3:70b`). 16 GB de memória unificada ou 12 GB de VRAM lidam confortavelmente com 27B–32B em Q4_K_M.',
+          '**Passo 3 — instale o Goose.** `pipx install goose-ai` (macOS, Linux) ou baixe o instalador na página de releases do Goose. O CLI se instala como `goose`.',
+          '**Passo 4 — configure o Ollama como provedor.** Execute `goose configure`, escolha `ollama` como provedor, defina o modelo que você baixou e o host como `http://127.0.0.1:11434`. O Goose escreve isso em `~/.config/goose/config.yaml`.',
+          '**Passo 5 — adicione o servidor MCP de filesystem.** Edite `~/.config/goose/config.yaml` para adicionar um bloco `mcpServers` (exemplo de configuração abaixo). Reinicie `goose session` e peça que liste os arquivos no seu diretório de teste.',
+          '**Passo 6 — verifique com uma tarefa real.** Teste `goose session` e peça "Faça uma lista de cada arquivo Markdown em `notes/`, com título e número de palavras, e escreva o resultado em `notes/index.md`." Se o agente ler, resumir e escrever de volta, o loop funciona.',
+        ],
+        codeBlock:
+          '# 1. Pull a tool-calling model\nollama pull gemma4:27b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:27b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Se você já usa Cline ou Continue.dev, pule o Goose e use-os — ambos adicionaram suporte a servidor MCP em suas versões do início de 2026. O painel "MCP Servers" do Cline instala os servidores de referência com um clique; o Continue.dev lê `mcpServers` de `~/.continue/config.json` (mesma estrutura que o bloco de configuração do Goose abaixo). O modelo e os servidores são os mesmos; apenas o aplicativo host muda.',
+          },
+        ],
+      },
+      filesystemServer: {
+        id: 'filesystem-server',
+        title: 'Servidor Filesystem: ler e escrever em um diretório isolado',
+        content:
+          '**O servidor filesystem é o primeiro a instalar e o mais fácil de limitar com segurança.** Expõe `read_file`, `write_file`, `list_directory`, `move_file`, `search_files` e `create_directory` — tudo restrito a um ou mais caminhos na allowlist.',
+        items: [
+          '**Instalação:** o servidor de referência é `@modelcontextprotocol/server-filesystem`, executado via `npx -y` (sem instalação global necessária). Goose, Cline e Continue.dev o iniciam automaticamente a partir do bloco de configuração.',
+          '**Caminhos na allowlist:** o servidor aceita um ou mais argumentos de diretório e rejeita operações fora deles. Sempre passe um caminho explícito e estreito — nunca `~` nem `/`.',
+          '**Ferramentas expostas:** `read_file`, `read_multiple_files`, `write_file`, `edit_file` (substituições por linha), `list_directory`, `search_files`, `move_file`, `create_directory`, `directory_tree`. O modelo as vê como `filesystem.read_file` e assim por diante.',
+          '**Conveniência de uso:** `directory_tree` retorna uma árvore JSON; ideal para o modelo se orientar antes de ler arquivos específicos. `search_files` faz uma busca recursiva similar ao grep.',
+          '**Superfície de risco:** o servidor respeita a allowlist, mas dentro dela tem leitura/escrita completa. Trate a allowlist como a única barreira e escolha um diretório workspace dedicado em vez da sua pasta home.',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml\nmcpServers:\n  filesystem:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-filesystem"\n      - "/Users/you/agent-workspace"\n    env: {}',
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Nunca coloque `/` nem seu diretório home na allowlist. Crie uma pasta `agent-workspace` dedicada, coloque cópias dos arquivos que quer que o agente toque e deixe-o operar apenas dentro dessa pasta. Se o agente falhar, o raio de explosão para em um diretório.',
+          },
+        ],
+      },
+      databaseServer: {
+        id: 'database-server',
+        title: 'Servidores SQLite e Postgres: consultar dados reais',
+        content:
+          '**Os servidores de banco de dados convertem o modelo em um analista júnior que pode responder perguntas respaldadas por dados reais — desde que você o mantenha em somente leitura.** Ambos os servidores de referência incluem uma ferramenta `query` e (opcionalmente) uma ferramenta `write_query`.',
+        items: [
+          '**Servidor SQLite (`@modelcontextprotocol/server-sqlite`)** recebe um caminho para um arquivo `.db`. Útil para análise de logs, prototipagem de esquemas e exploração de exports sem necessidade de subir um banco de dados.',
+          '**Servidor Postgres (`@modelcontextprotocol/server-postgres`)** recebe uma string de conexão. O padrão recomendado é criar um role de somente leitura dedicado para o agente e usar a string de conexão desse role.',
+          '**Ferramentas expostas:** `query` (apenas SELECT quando configurado como somente leitura), `list_tables`, `describe_table`. O servidor Postgres adiciona `list_schemas`.',
+          '**Consciência do esquema:** peça ao agente que "liste as tabelas e descreva as cinco mais usadas" antes de fazer perguntas analíticas — o modelo é muito mais preciso quando chamou `describe_table` do que quando adivinha os nomes das colunas.',
+          '**Custo:** as consultas vão diretamente ao seu banco de dados. Um `SELECT *` malformado de uma tabela com 100M de linhas é o mesmo acidente aqui que seria de um humano — mantenha o role em um pool de conexões separado com um statement timeout.',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml\nmcpServers:\n  sqlite:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-sqlite"\n      - "--db-path"\n      - "/Users/you/data/events.db"\n    env: {}\n\n  postgres:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-postgres"\n      - "postgresql://agent_ro@127.0.0.1:5432/analytics"\n    env:\n      PGPASSWORD: "${PG_AGENT_PASSWORD}"',
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Crie o role do Postgres uma vez e não dê nada mais ao agente: `CREATE ROLE agent_ro WITH LOGIN PASSWORD \'…\'; GRANT CONNECT ON DATABASE analytics TO agent_ro; GRANT USAGE ON SCHEMA public TO agent_ro; GRANT SELECT ON ALL TABLES IN SCHEMA public TO agent_ro; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO agent_ro;` Em seguida adicione `statement_timeout = 30s` ao role. O agente não pode escrever, não pode excluir e não pode rodar indefinidamente.',
+          },
+        ],
+      },
+      browserServer: {
+        id: 'browser-server',
+        title: 'Servidor de navegador: controlar o Chromium com Puppeteer ou Playwright',
+        content:
+          '**O servidor de navegador é o mais poderoso e o mais perigoso dos quatro.** Lança um Chromium real e expõe navegação, cliques, preenchimento de formulários e capturas de tela — ou seja, pode fazer tudo que você faz em um navegador, incluindo enviar formulários.',
+        items: [
+          '**Servidores de referência:** `@modelcontextprotocol/server-puppeteer` (mais leve, sem cabeça por padrão) e `@modelcontextprotocol/server-playwright` (mais pesado, suporta múltiplos navegadores). Para agentes locais, o Puppeteer é suficiente.',
+          '**Ferramentas expostas:** `navigate`, `screenshot`, `click`, `fill`, `select`, `evaluate` (executar JavaScript), `get_page_content`. O modelo usa `get_page_content` para ler texto estruturado e `screenshot` para confirmar visualmente.',
+          '**Latência:** sessões de navegador reais levam entre 1 e 5 segundos por ação. Uma navegação de múltiplos passos pode facilmente consumir 30–60 segundos e dezenas de milhares de tokens porque o conteúdo das páginas é grande. Use uma janela de contexto de 32K+.',
+          '**Seletores:** o modelo tem que escolher os seletores CSS. Modelos menores erram com frequência; um modelo de 27B+ com tool calling lida com os padrões comuns de forma confiável. Mantenha as tarefas delimitadas.',
+          '**Os casos de uso corretos:** pesquisa (abrir a página, resumir, adicionar a notas), testes de regressão (navegar, clicar, captura de tela) e preenchimento de formulários em páginas que você controla. Os casos incorretos: qualquer coisa onde um clique errado na web ao vivo tenha consequências.',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml\nmcpServers:\n  puppeteer:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-puppeteer"\n    env:\n      PUPPETEER_HEADLESS: "true"\n      # Block obviously dangerous endpoints at the OS firewall level\n      # rather than relying on the agent to refuse them.',
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Nunca passe credenciais ao servidor de navegador. Se precisar de uma sessão autenticada, passe ao agente um perfil de navegador pré-autenticado (via `userDataDir`) e nunca o deixe navegar para sites de alto impacto (banco, e-mail, consoles de nuvem, formulários de pagamento). O modelo não tem julgamento sobre o que um botão faz — ele vê texto e clica. Trate-o como um estagiário sem contexto e sem recurso.',
+          },
+        ],
+      },
+      githubServer: {
+        id: 'github-server',
+        title: 'Servidor GitHub: repositórios, issues e PRs a partir de um modelo local',
+        content:
+          '**O servidor GitHub converte o trabalho em linguagem natural sobre repositórios em chamadas de API.** É o mais simples dos quatro de configurar e o mais fácil de limitar pelas permissões do personal access token (PAT).',
+        items: [
+          '**Instalação:** `@modelcontextprotocol/server-github`, executado com um PAT na variável de ambiente `GITHUB_PERSONAL_ACCESS_TOKEN`. O token é a única autenticação.',
+          '**Ferramentas expostas:** `search_repositories`, `get_file_contents`, `create_or_update_file`, `create_pull_request`, `list_issues`, `create_issue`, `add_issue_comment`, `merge_pull_request`, mais dezenas adicionais.',
+          '**Limite o escopo do PAT.** Use um PAT de granularidade fina limitado a repositórios específicos com as permissões mínimas necessárias (Read para navegar, Write para criar PRs/issues). Não use um PAT clássico com `repo` para um agente experimental.',
+          '**Fluxos de trabalho reais:** triagem ("leia os últimos 20 issues abertos, agrupe-os, proponha labels"), rascunhos ("leia o README e abra um PR corrigindo erros de digitação"), relatórios ("quais PRs estão inativos esta semana").',
+          '**Superfície de risco:** o agente pode criar issues e PRs, comentá-los e (com permissões de escrita) fazer push de commits. Desative as ferramentas de merge a menos que você confie tanto no modelo quanto no fluxo de trabalho.',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml\nmcpServers:\n  github:\n    command: npx\n    args:\n      - "-y"\n      - "@modelcontextprotocol/server-github"\n    env:\n      GITHUB_PERSONAL_ACCESS_TOKEN: "${GH_AGENT_PAT}"\n      # Fine-grained PAT scoped to one or two test repos,\n      # not your personal account-wide classic token.',
+        codeLanguage: 'yaml',
+      },
+      securityModel: {
+        id: 'security-model',
+        title: 'Um modelo de segurança que não confia no modelo',
+        content:
+          '**O modelo mental correto é "o LLM é um estagiário sem confiança com as chaves que você lhe dá".** As capacidades vêm dos servidores e das superfícies que você inclui na allowlist — não do julgamento do modelo.',
+        items: [
+          '**Limite o servidor filesystem a um diretório.** Nunca `~` nem `/`. Escolha uma pasta `agent-workspace/` e coloque cópias dos arquivos que o agente precisa tocar. Se o agente falhar, o pior caso é uma pasta.',
+          '**Execute os servidores de banco de dados em somente leitura por padrão.** Um role `agent_ro` dedicado com permissões apenas de `SELECT` e um statement timeout de 30 segundos elimina toda uma classe de incidentes.',
+          '**Coloque cada ferramenta de escrita ou shell atrás de uma aprovação explícita.** Goose, Cline e Continue.dev admitem regras de aprovação por ferramenta. Permita as ferramentas de leitura por padrão; exija aprovação para `write_file`, `edit_file`, `execute_command`, `create_pull_request` e qualquer ação do navegador que envie formulários.',
+          '**Use o log de auditoria.** Cada cliente MCP registra os tool calls e os resultados. Após uma sessão longa, revise o log: você vai detectar o modelo tentando coisas que não esperava.',
+          '**Limite o acesso de terceiros com tokens de escopo estreito.** PATs do GitHub limitados a dois repositórios de teste. Roles de Postgres de somente leitura. Sessões de navegador sem credenciais.',
+          '**Isole o agente para trabalho com dados sensíveis.** Desative o acesso à rede no host enquanto o agente está rodando quando trabalhar com dados privados.',
+          '**Trate a seleção de servidores MCP como qualquer escolha de dependência.** Os servidores de referência são bem mantidos; muitos servidores de terceiros não são. Leia o código do servidor antes de instalar um que precise de credenciais.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Um hábito útil de recuperação pós-falha: antes de uma tarefa de agente não trivial, faça `git stash` (ou `git checkout -b agent/<task>`). Após a tarefa, revise o diff, mantenha as partes que quer e descarte o resto.',
+          },
+        ],
+      },
+      vsClaudeDesktop: {
+        id: 'vs-claude-desktop',
+        title: 'MCP local vs Claude Desktop: o que muda, o que permanece',
+        content:
+          '**O protocolo e os servidores são idênticos. Apenas o modelo e o cliente mudam.** Esta é exatamente a razão pela qual o MCP importa — seu investimento em ferramentas se porta limpa entre configurações locais e na nuvem.',
+        columns: ['Camada', 'Claude Desktop', 'Ollama local + Goose'],
+        rows: [
+          { 'Camada': 'Modelo', 'Claude Desktop': 'Claude (Anthropic, na nuvem)', 'Ollama local + Goose': 'Gemma 4, GLM-5.1, Qwen3 ou Llama 3.3 (local)' },
+          { 'Camada': 'Cliente', 'Claude Desktop': 'Aplicativo Claude Desktop', 'Ollama local + Goose': 'Goose, Cline, Continue.dev ou LM Studio' },
+          { 'Camada': 'Servidores', 'Claude Desktop': 'Os mesmos servidores MCP', 'Ollama local + Goose': 'Os mesmos servidores MCP' },
+          { 'Camada': 'Protocolo', 'Claude Desktop': 'MCP (JSON-RPC 2.0)', 'Ollama local + Goose': 'MCP (JSON-RPC 2.0)' },
+          { 'Camada': 'Custo por solicitação', 'Claude Desktop': 'Gasto de API por token', 'Ollama local + Goose': '$0 — inferência local' },
+          { 'Camada': 'Privacidade', 'Claude Desktop': 'A conversa vai para a Anthropic', 'Ollama local + Goose': 'Fica na máquina' },
+          { 'Camada': 'Limites de velocidade', 'Claude Desktop': 'Aplicam-se os limites da API', 'Ollama local + Goose': 'Limitado apenas pelo desempenho do hardware' },
+          { 'Camada': 'Qualidade do tool calling', 'Claude Desktop': 'A melhor da categoria', 'Ollama local + Goose': 'Boa com modelos de 27B+; degrada rapidamente abaixo de 7B' },
+          { 'Camada': 'Requer internet', 'Claude Desktop': 'Sim', 'Ollama local + Goose': 'Apenas se um servidor fizer requisições (ex.: o navegador)' },
+          { 'Camada': 'Tempo de configuração', 'Claude Desktop': '5 minutos', 'Ollama local + Goose': '15 minutos (uma única vez)' },
+        ],
+      },
+      pickingModel: {
+        id: 'picking-model',
+        title: 'Escolher um modelo com tool calling para MCP local',
+        content:
+          '**A confiabilidade do tool calling escala com o tamanho e o treinamento do modelo, não com o harness.** Um modelo que emite tool calls malformados no Cline os emitirá no Goose pela mesma razão.',
+        items: [
+          '**Gemma 4 27B (`gemma4:27b`)** — o treinamento de tool calling do Google é o melhor da categoria para esse tamanho. Cabe em 16 GB de memória unificada ou 24 GB de VRAM em Q4_K_M.',
+          '**GLM-5.1 32B (`glm5:32b`)** — o modelo da Zhipu tem confiabilidade de tool calling muito alta e uma janela de contexto de 128K nativa.',
+          '**Qwen3 32B (`qwen3:32b`)** — equilibrado; o 32B denso lida com MCP sem problemas. **Qwen3-Coder 30B (`qwen3-coder:30b`)** é a melhor opção se seu trabalho de agente é orientado a código.',
+          '**Llama 3.3 70B (`llama3.3:70b`)** — o maior teto, mas o mais pesado. 48 GB+ de memória unificada ou 2× 24 GB de GPUs em Q4_K_M.',
+          '**Evite para trabalho com MCP:** qualquer coisa abaixo de 7B e qualquer modelo de uso geral sem treinamento explícito de tool calling.',
+        ],
+      },
+      mcpVsFunctionCalling: {
+        id: 'mcp-vs-function-calling',
+        title: 'MCP vs Function Calling simples: qual é a diferença',
+        content:
+          '**O function calling é o que o modelo emite. O MCP é o protocolo que permite que clientes e ferramentas se encontrem.** Vivem em camadas diferentes e cooperam; um não substitui o outro.',
+        items: [
+          '**O function calling** é a capacidade do lado do LLM: o modelo emite um objeto JSON estruturado descrevendo o nome da ferramenta e os argumentos.',
+          '**O MCP** fica acima: padroniza como as ferramentas são descritas, descobertas, invocadas e retornadas entre processos.',
+          '**O benefício é a interoperabilidade.** Escreva o servidor filesystem uma vez; Claude Desktop, Goose, Cline, Continue.dev e LM Studio todos o usam sem mudanças. Troque o modelo de Claude para Gemma 4; o servidor não muda.',
+          '**Você pode fazer agentes com function calling puro.** Você reimplementará handlers de filesystem, banco de dados e navegador por projeto. Com MCP, essas são dependências prontas para uso.',
+          '**Para scripts pontuais, o function calling puro é mais simples.** Para qualquer coisa que queira reutilizar entre projetos ou modelos, o MCP é o caminho de menor esforço.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erros comuns ao configurar MCP local',
+        items: [
+          '**Erro 1: usar um modelo pequeno de propósito geral.** Modelos abaixo de 7B (e a maioria dos modelos gerais de 7B–13B sem fine-tuning de tool calling) emitem tool calls malformados. Use um modelo de 27B+ ajustado para tool calling e pare de lutar com o harness.',
+          '**Erro 2: colocar seu diretório home na allowlist.** As allowlists de `~` "apenas para testes" sobrevivem até o uso rotineiro. Crie um `agent-workspace` dedicado desde o início.',
+          '**Erro 3: deixar o servidor de banco de dados em modo leitura/escrita.** Uma consulta `DELETE` redigida por um agente autoconfiante em uma tabela real é exatamente o incidente que isso evita. Faça de `agent_ro` seu role padrão.',
+          '**Erro 4: aprovar automaticamente cada ferramenta.** O botão "aprovar tudo" é conveniente e perigoso. Aprove automaticamente as ferramentas de leitura (`read_file`, `list_directory`, `query`); sempre exija aprovação para as ferramentas de escrita/shell/PR.',
+          '**Erro 5: usar um modelo com contexto de 32K para trabalho de navegador de múltiplos passos.** O conteúdo da página é grande; um agente que navega três páginas pode esgotar os 32K tokens antes de raciocinar. Use um modelo com contexto de 128K para tarefas intensivas no navegador.',
+          '**Erro 6: assumir que o agente tem julgamento.** Não tem. O modelo não tem conceito de "este é o banco de dados de produção" ou "este PR vai ser implantado". As permissões são sua única barreira.',
+          '**Erro 7: instalar todos os servidores de referência desde o início.** Mais ferramentas = prompt de sistema maior = seleção de ferramentas mais lenta e menos confiável. Comece com `filesystem`. Adicione os demais apenas quando tiver um fluxo de trabalho que os precise.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          '[Especificação do Model Context Protocol](https://modelcontextprotocol.io/) — Especificação oficial, esquema JSON-RPC, definições de transporte e ciclo de vida.',
+          '[Repositório GitHub modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) — Servidores de referência (filesystem, sqlite, postgres, github, puppeteer, etc.) e sua documentação de configuração.',
+          '[Documentação do projeto Goose](https://block.github.io/goose/) — Instalação do CLI, configuração do provedor Ollama, sintaxe de configuração de servidores MCP.',
+          '[Biblioteca de modelos Ollama](https://ollama.com/library) — Modelos locais disponíveis, indicadores de suporte de tool calling e níveis de quantização referenciados neste guia.',
+          '[Repositório GitHub do Cline](https://github.com/cline/cline) — Implementação do cliente MCP para VS Code, painel de servidores MCP.',
+          '[Documentação do Continue.dev](https://docs.continue.dev/) — Referência do bloco de configuração `mcpServers` para o cliente Continue.dev.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'O que é MCP e por que importa para a IA local?',
+            a: 'O Model Context Protocol (MCP) é um protocolo aberto JSON-RPC 2.0 que permite que um cliente (Goose, Cline, Continue.dev, LM Studio, Claude Desktop) conecte um modelo de linguagem a servidores de ferramentas de forma uniforme. Importa para a IA local porque padroniza a camada que converte um modelo de chat em um agente — escreva um servidor de ferramentas uma vez e use-o sob qualquer cliente e qualquer modelo, incluindo um modelo Ollama local.',
+          },
+          {
+            q: 'O MCP funciona sem Claude Desktop?',
+            a: 'Sim. O protocolo é aberto e completamente independente do Claude Desktop. Em 2026, Goose, Cline, Continue.dev e LM Studio oferecem implementações de cliente MCP que funcionam com modelos Ollama locais. Os servidores de referência (filesystem, sqlite, postgres, puppeteer, github) funcionam sem mudanças sob qualquer cliente compatível.',
+          },
+          {
+            q: 'Quais modelos locais suportam MCP melhor?',
+            a: 'Em maio de 2026, as opções mais confiáveis são Gemma 4 27B, GLM-5.1 32B, Qwen3 32B (ou Qwen3-Coder 30B para trabalho orientado a código) e Llama 3.3 70B. Os quatro têm treinamento explícito de tool calling e emitem JSON de function calling limpo que os clientes MCP podem rotear. Modelos abaixo de 7B (e a maioria dos modelos gerais sem fine-tuning de tool calling) produzem regularmente tool calls malformados.',
+          },
+          {
+            q: 'O MCP é seguro? O agente pode excluir meus arquivos?',
+            a: 'Pode se você permitir. A segurança vem de como você configura os servidores, não do protocolo. O servidor filesystem só opera dentro dos caminhos que você coloca na allowlist — limite-o a um diretório `agent-workspace` dedicado. O servidor de banco de dados funciona em somente leitura quando você usa um role apenas de SELECT. Sempre exija aprovação explícita para as ferramentas de escrita, shell e PR; aprove automaticamente apenas as operações de leitura.',
+          },
+          {
+            q: 'Posso escrever meu próprio servidor MCP?',
+            a: 'Sim — e os SDKs tornam isso simples. Os SDKs oficiais de TypeScript e Python (`@modelcontextprotocol/sdk` e `mcp`) lidam com o encanamento JSON-RPC. Você define ferramentas com seus JSON Schemas e uma função handler, e o SDK as expõe via stdio. Um servidor de propósito único (uma ou duas ferramentas que envolvem uma API interna) é um arquivo de 50–100 linhas.',
+          },
+          {
+            q: 'O MCP funciona no Windows?',
+            a: 'Sim. Ollama, Goose, Cline, Continue.dev e LM Studio todos funcionam no Windows. Os servidores MCP rodam como subprocessos de Node.js ou Python; ambos os ambientes de execução são totalmente compatíveis com Windows. O único detalhe específico da plataforma é o tratamento de caminhos — use barras para frente na configuração ou escape corretamente as barras invertidas.',
+          },
+          {
+            q: 'Como faço sandbox das tool calls do MCP?',
+            a: 'Três camadas cobrem a maior parte do risco. Primeiro, limite cada servidor estreitamente no nível de configuração: filesystem a um diretório, banco de dados a um role de somente leitura, GitHub a um PAT de granularidade fina para repositórios de teste. Segundo, use as regras de aprovação por ferramenta do cliente: aprovação automática para leituras, aprovação exigida para escritas. Terceiro, mantenha o agente dentro de um workspace compatível com `git stash` para que qualquer ação destrutiva seja desfazível via git.',
+          },
+          {
+            q: 'Os agentes MCP podem fazer requisições HTTP?',
+            a: 'Sim, através de servidores específicos. O servidor de navegador (puppeteer ou playwright) controla um Chromium real que faz as requisições que o modelo navega. Vários servidores de terceiros expõem ferramentas `http_get`/`http_post` de forma mais direta. Os servidores de filesystem e banco de dados não fazem requisições de rede; operam apenas em recursos locais.',
+          },
+          {
+            q: 'O MCP funciona com o Ollama nativamente ou precisa de um wrapper?',
+            a: 'O Ollama em si não fala MCP — serve uma API de chat compatível com OpenAI. Você precisa de um cliente (Goose, Cline, Continue.dev, LM Studio) para fazer a ponte entre a API de chat do Ollama e os servidores MCP. O cliente roteia os tool calls do modelo para o servidor MCP correto e retorna os resultados à conversa.',
+          },
+          {
+            q: 'Qual é a diferença entre MCP e function calling?',
+            a: 'O function calling é o LLM emitindo JSON estruturado com o nome de uma ferramenta e seus argumentos — é uma capacidade do modelo. O MCP é o protocolo que permite que os servidores de ferramentas e os clientes descrevam, descubram, invoquem e retornem essas ferramentas entre processos — é uma camada de interoperabilidade. Cooperam: o cliente converte as definições de ferramentas do MCP para o formato de function calling do modelo, o modelo emite um function call, o cliente mapeia a chamada de volta para um servidor MCP e o servidor a executa.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Melhores modelos locais para tool calling em 2026](/pt/power-local-llm/best-local-models-tool-calling-2026) — benchmarks comparativos para os modelos recomendados acima (Gemma 4, GLM-5.1, Qwen3, Llama 3.3).',
+          '[Os agentes locais autônomos realmente funcionam](/pt/power-local-llm/autonomous-local-agents-actually-work) — uma verificação da realidade sobre o que um agente MCP local pode e não pode fazer de forma confiável em uma tarefa de longa duração.',
+          '[Continue.dev vs Cline vs Aider: o melhor agente de código local em 2026](/pt/power-local-llm/continue-dev-vs-cline-vs-aider-local) — contexto de agente adjacente para trabalho orientado a código; Cline e Continue.dev também são clientes MCP.',
+          '[Melhores LLMs locais em 2026](/pt/local-llms/best-local-llms-2026) — referência de modelos para o panorama mais amplo de pesos abertos.',
+          '[Substitua o Zapier com agentes de IA locais](/pt/power-local-llm/replace-zapier-with-local-ai-agents) — framework de automação de fluxos de trabalho para o mesmo stack MCP.',
+          '[Hub de Power Local LLM](/pt/power-local-llm) — biblioteca completa de guias.',
+        ],
+      },
+    },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Conecte o Ollama a bancos de dados e APIs com MCP: configuração de agentes locais 2026',
+      description: 'Guia de configuração para agentes de IA locais em 2026 usando Ollama e Model Context Protocol (MCP). Filesystem, SQLite/Postgres, navegador, servidor GitHub, configuração JSON funcional e um modelo de sandboxing que não confia no LLM.',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-agents-with-mcp-2026?lang=pt',
+      inLanguage: 'pt-BR',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
 }

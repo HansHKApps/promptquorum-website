@@ -779,6 +779,153 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Hardware-Specific',
+    title: 'Melhor SSD para carregamento rápido de modelos em 2026?',
+    seoTitle: 'Melhor SSD para carregamento rápido de modelos LLM 2026',
+    metaDescription: 'Melhor SSD para carregamento rápido de modelos LLM: um NVMe PCIe Gen4 como o Samsung 990 Pro 2 TB. Leitura sequencial alta carrega modelos de vários GB na RAM em segundos.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Samsung 990 Pro 2 TB'],
+    educationalLevel: 'Intermediate',
+    audience: 'Usuários de LLM local frustrados com tempos de carregamento lentos',
+    affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
+    siblingBites: ['best-gpu-under-600-local-llm', 'best-mini-pc-for-local-llm'],
+    is_living_page: false,
+    readTime: '4 min de leitura',
+    leadAnswerBlock:
+      'O melhor SSD para carregamento rápido de modelos LLM é um NVMe PCIe Gen4 como o Samsung 990 Pro 2 TB. Sua alta velocidade de leitura sequencial (~7.000 MB/s) carrega arquivos de modelo de vários GB na RAM em segundos, reduzindo o tempo de inicialização a frio de um modelo 14B de ~30 segundos (SSD SATA) para menos de 5 segundos.',
+    toc: [
+      { label: 'Melhor opção: Samsung 990 Pro 2 TB', anchor: '#best-pick' },
+      { label: 'Tipos de SSD comparados para carregamento de modelos', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leitura relacionada', anchor: '#related' },
+    ],
+    intro:
+      'O carregamento de modelos é limitado pela velocidade de leitura sequencial: um modelo 14B Q4 ocupa ~9 GB em disco, e o tempo de cópia para a RAM é a espera entre trocas de modelo. Um SSD NVMe rápido faz essa espera desaparecer.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual SSD oferece o carregamento mais rápido de modelos LLM locais?',
+        answer: 'Samsung 990 Pro 2 TB a 7.450 MB/s carrega um modelo 7B Q4 em menos de 2 segundos. Melhor relação preço-velocidade para armazenamento de modelos de IA.',
+        bullets: [
+          'Um modelo 7B Q4_K_M (~4,1 GB) carrega em ~0,8 s em um 990 Pro vs ~3,5 s em um SSD SATA.',
+          'Qualquer NVMe Gen4 funciona — WD Black SN850X e Seagate FireCuda 530 são alternativas próximas.',
+          'Coloque o cache de modelos do Ollama (~/ollama/models) no NVMe, não na unidade do sistema operacional.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Melhor opção: Samsung 990 Pro 2 TB (PCIe Gen4 NVMe) — ~7.000 MB/s de leitura sequencial carrega um modelo 14B na RAM em menos de 5 segundos',
+          'SSDs NVMe PCIe Gen4 carregam arquivos de modelos grandes 7–10x mais rápido do que SSDs SATA',
+          '2 TB é o mínimo prático quando se mantém mais de dois ou três modelos quantizados em disco',
+          'Unidades Gen5 são mais rápidas no papel, mas a vantagem importa menos para o carregamento de LLM do que para benchmarks puros',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'Melhor opção: Samsung 990 Pro 2 TB (PCIe Gen4 NVMe)',
+        content: [
+          '<strong>O Samsung 990 Pro 2 TB é o melhor SSD para carregamento rápido de modelos LLM porque seus ~7.000 MB/s de leitura sequencial carregam um modelo 14B Q4 (~9 GB) na RAM em menos de 5 segundos.</strong> Um SSD SATA a ~550 MB/s leva mais de 15 segundos para o mesmo modelo. Em um HDD lento, a espera supera um minuto.',
+          'PCIe Gen4 NVMe é o ponto ideal. Samsung 990 Pro, WD Black SN850X e Crucial T500 ficam todos próximos de 7.000 MB/s de leitura sequencial a preços similares. Unidades Gen5 atingem picos mais altos, mas o ganho para carregamento de modelos é pequeno — e Gen5 requer uma placa-mãe compatível.',
+          'Compre 2 TB ou mais. Depois de acumular alguns modelos quantizados (7B, 8B, 13B, 14B em múltiplas quantizações), 1 TB se preenche rapidamente. 2 TB deixam espaço para o SO, frameworks e uma dúzia de modelos sem precisar rotacionar downloads. Para preços atuais, consulte os anúncios dos varejistas — os preços de NVMe mudam semana a semana.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com.br/s?k=Samsung+990+Pro+2TB',
+            productName: 'Samsung 990 Pro 2 TB',
+            productCategory: 'ssd',
+            label: 'Ver preço do Samsung 990 Pro 2 TB na Amazon.com.br',
+          },
+          {
+            url: 'https://www.kabum.com.br/busca/Samsung-990-Pro-2TB',
+            productName: 'Samsung 990 Pro 2 TB',
+            productCategory: 'ssd',
+            label: 'Ver preço do Samsung 990 Pro 2 TB no KaBuM!',
+          },
+          {
+            url: 'https://www.amazon.com.br/s?k=WD+Black+SN850X+2TB',
+            productName: 'WD Black SN850X 2 TB',
+            productCategory: 'ssd',
+            label: 'Ver preço do WD Black SN850X 2 TB na Amazon.com.br',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Tipos de SSD comparados para carregamento de modelos LLM',
+        content: [
+          '<strong>A velocidade de leitura sequencial é o único número que importa para o carregamento de modelos.</strong> A tabela abaixo mostra quanto tempo cada unidade leva para carregar um modelo 14B Q4 (~9 GB) do disco para a RAM — aproximado, sem overhead do sistema.',
+        ],
+        columns: ['Tipo de unidade', 'Leitura sequencial', 'Tempo de carga modelo 9 GB', 'Veredicto'],
+        rows: [
+          {
+            'Tipo de unidade': 'PCIe Gen4 NVMe (ex. Samsung 990 Pro)',
+            'Leitura sequencial': '~7.000 MB/s',
+            'Tempo de carga modelo 9 GB': '~1,5 s (teórico), ~3-5 s (real)',
+            'Veredicto': 'Melhor opção',
+          },
+          {
+            'Tipo de unidade': 'PCIe Gen3 NVMe',
+            'Leitura sequencial': '~3.500 MB/s',
+            'Tempo de carga modelo 9 GB': '~3-7 s',
+            'Veredicto': 'Aceitável',
+          },
+          {
+            'Tipo de unidade': 'SSD SATA',
+            'Leitura sequencial': '~550 MB/s',
+            'Tempo de carga modelo 9 GB': '~17-25 s',
+            'Veredicto': 'Lento — atualize se possível',
+          },
+          {
+            'Tipo de unidade': 'HDD (7200 RPM)',
+            'Leitura sequencial': '~150 MB/s',
+            'Tempo de carga modelo 9 GB': '~60-90 s',
+            'Veredicto': 'Evitar para LLMs',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre SSDs para LLMs locais',
+        faqs: [
+          {
+            q: 'Um SSD mais rápido acelera a inferência?',
+            a: 'Não. Uma vez que o modelo é carregado na RAM ou VRAM, a velocidade de inferência depende da largura de banda de memória e da GPU, não do SSD. Um SSD rápido acelera apenas o carregamento inicial ao iniciar o modelo ou ao trocar entre modelos.',
+          },
+          {
+            q: 'Vale a pena o PCIe Gen5 em relação ao Gen4 para LLMs?',
+            a: 'Para o carregamento de modelos, o ganho é pequeno. Unidades Gen5 atingem acima de 12.000 MB/s, mas o tempo de carregamento de um modelo de 9 GB cai de ~1,5 s para menos de 1 s — a maioria dos usuários não vai notar. Gen5 também custa mais e precisa de um slot Gen5 na placa-mãe.',
+          },
+          {
+            q: 'Quanta capacidade de SSD preciso para LLMs locais?',
+            a: '2 TB é um mínimo confortável. Alguns modelos 14B quantizados podem usar 30–50 GB combinados, e você normalmente quer vários modelos em disco para alternar entre casos de uso. 1 TB se preenche rapidamente quando também tem SO, frameworks e dados do usuário.',
+          },
+          {
+            q: 'A unidade do sistema operacional precisa ser o mesmo SSD?',
+            a: 'Não. Você pode colocar o SO em uma unidade e os arquivos de modelo em um NVMe rápido separado. É uma configuração comum. Basta apontar o Ollama ou LM Studio para o diretório de modelos na unidade rápida.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'Leitura relacionada',
+        items: [
+          '[Melhor GPU por menos de $600 para LLMs locais](/pt/prompt-bites/best-gpu-under-600-local-llm) — combine um SSD rápido com a GPU certa',
+          '[Melhor mini PC para LLM local](/pt/prompt-bites/best-mini-pc-for-local-llm) — muitos mini PCs incluem SSDs mais lentos',
+          '[Quanta RAM um modelo 7B precisa?](/pt/prompt-bites/how-much-ram-for-7b-model) — a RAM importa mais do que o SSD para a velocidade de inferência',
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Hardware-Specific',
     title: '¿Mejor SSD para cargar modelos rápido en 2026?',

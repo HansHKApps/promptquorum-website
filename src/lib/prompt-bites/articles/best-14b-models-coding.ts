@@ -511,4 +511,81 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Model Comparisons',
+    title: '¿El mejor modelo 14B para coding?',
+    seoTitle: 'Melhores modelos 14B para programação 2026 | PromptQuorum',
+    metaDescription: 'Qwen 3 Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73% com 10 GB. Resposta rápida do PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual é o melhor modelo 14B para programação?',
+        answer: 'Qwen 3 Coder 14B é o melhor modelo de programação 14B para uso local, com 78,4% no HumanEval e 10 GB de VRAM em quantização Q4_K_M. DeepSeek Coder 14B é uma alternativa sólida com requisitos de VRAM semelhantes.',
+        bullets: [
+          'Qwen 3 Coder 14B Q4_K_M: ~10 GB VRAM, maior pontuação HumanEval',
+          'DeepSeek Coder 14B: alternativa sólida, pegada de VRAM semelhante',
+          'Ambos superam modelos 14B genéricos em conclusão de código e depuração',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Qwen 3 Coder 14B Q4_K_M usa ~10 GB de VRAM e alcança a maior pontuação HumanEval entre modelos de programação 14B locais',
+          'DeepSeek Coder 14B é uma alternativa competitiva que fica a menos de 3 pontos do Qwen na maioria dos benchmarks de código',
+          'Ambos os modelos superam significativamente modelos 14B de propósito geral em conclusão de código, depuração e geração de docstrings',
+          'Com mais de 10 GB de VRAM, prefira o Qwen 3 Coder; abaixo de 8 GB, use um coder especializado de 7B',
+        ],
+      },
+      body1: {
+        title: 'Qwen 3 Coder 14B lidera no HumanEval',
+        content: [
+          '<strong>Em maio de 2026, Qwen 3 Coder 14B com quantização Q4_K_M pontua 78,4% no HumanEval — a maior pontuação de qualquer modelo 14B disponível via Ollama ou llama.cpp.</strong> O modelo foi ajustado em mais de 5 trilhões de tokens de dados focados em código, o que distingue seu desempenho em conclusão de múltiplas etapas e geração de casos de teste.',
+          'DeepSeek Coder 14B pontua 75,1% no HumanEval em condições idênticas de Q4_K_M. A diferença é pequena o suficiente para que o DeepSeek Coder seja uma escolha válida, especialmente se você já o tem em cache ou está familiarizado com seu estilo de saída.',
+          'StarCoder2 15B é a terceira opção para trabalho de código open-source especializado. Treinado no The Stack v2, pontua aproximadamente 73% no HumanEval com ~10 GB VRAM Q4_K_M. Seus pontos fortes são tarefas de contribuição open-source, busca de código em grandes repositórios e refatoração estruturada — casos de uso onde seu corpus de treinamento dá vantagem sobre modelos de instrução gerais.',
+        ],
+        columns: ['Modelo', 'HumanEval', 'VRAM (Q4_K_M)'],
+        rows: [
+          { 'Modelo': 'Qwen 3 Coder 14B', 'HumanEval': '78,4%', 'VRAM (Q4_K_M)': '~10 GB' },
+          { 'Modelo': 'DeepSeek Coder 14B', 'HumanEval': '75,1%', 'VRAM (Q4_K_M)': '~10 GB' },
+          { 'Modelo': 'StarCoder2 15B', 'HumanEval': '~73%', 'VRAM (Q4_K_M)': '~10 GB' },
+        ],
+      },
+      body2: {
+        title: 'A margem de VRAM determina qual escolher',
+        content: [
+          'Tanto o Qwen 3 Coder 14B quanto o DeepSeek Coder 14B requerem aproximadamente 10 GB de VRAM em Q4_K_M, deixando apenas 2 GB de margem em uma placa de 12 GB. <strong>Esta margem é apertada para sessões de contexto longo: com 8k de contexto, o uso de VRAM sobe para ~11,5 GB.</strong> Se seu fluxo de trabalho envolve arquivos grandes, prefira uma placa com 16 GB ou mais.',
+          'Para janelas de contexto abaixo de 4k tokens — o caso comum para conclusão de código em arquivo único — todos os três modelos funcionam confortavelmente em uma RTX 3060 12 GB ou RTX 3080 Ti 12 GB. A velocidade é de aproximadamente 14–18 tok/s para Qwen e DeepSeek Coder; StarCoder2 15B roda em rendimento semelhante dado seu consumo de VRAM comparável. Prefira StarCoder2 quando seu fluxo de trabalho se concentra em busca em escala de repositório ou padrões de contribuição open-source.',
+          'Para uma comparação mais ampla de modelos de programação em outros tamanhos e níveis de VRAM, consulte o guia do <a href="/pt/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">melhor LLM de programação para 12 GB de VRAM</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre modelos de programação 14B',
+        faqs: [
+          {
+            q: 'O Qwen 3 Coder 14B pode rodar com 8 GB de VRAM?',
+            a: 'Não de forma confiável. Em Q4_K_M o modelo requer ~10 GB de VRAM. Você poderia usar Q3_K_M para encaixá-lo em 8 GB, mas a queda de qualidade é perceptível. Uma opção melhor para 8 GB de VRAM é Qwen 3 Coder 7B ou DeepSeek Coder 7B.',
+          },
+          {
+            q: 'Como Qwen 3 Coder 14B se compara ao DeepSeek Coder 14B em tarefas reais?',
+            a: 'Na conclusão de Python e TypeScript, Qwen 3 Coder lidera por 3–5 pontos percentuais. Em linguagens menos comuns como Rust ou Go, a diferença diminui. DeepSeek Coder tem cobertura de treinamento mais ampla em mais linguagens de programação.',
+          },
+          {
+            q: 'Um modelo de programação 14B é melhor do que um modelo genérico de 34B para código?',
+            a: 'Para tarefas específicas de código, Qwen 3 Coder 14B tipicamente supera um modelo genérico de 34B apesar de ser menor, por causa de seu pré-treinamento focado em programação. Consulte a <a href="/pt/prompt-bites/qwen-coder-vs-deepseek-coder" class="text-primary hover:underline">comparação Qwen Coder vs DeepSeek Coder</a> para dados detalhados de benchmarks.',
+          },
+          {
+            q: 'Qual quantização devo usar para um modelo de programação 14B?',
+            a: 'Q4_K_M é a recomendação padrão: preserva ~97% da qualidade FP16 a aproximadamente 40% do custo de VRAM. Q5_K_M adiciona ~1 GB de VRAM por um teto de qualidade marginalmente maior, valendo a pena apenas se você tiver 12+ GB de VRAM e executar contextos curtos.',
+          },
+        ],
+      },
+    },
+  },
 }

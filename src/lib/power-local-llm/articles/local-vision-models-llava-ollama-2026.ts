@@ -3105,4 +3105,636 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
      },
 },
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-14',
+    dateModified: '2026-05-14',
+    next_refresh_due: '2026-11-14',
+    theme: 'Voice, Speech & Multimodal',
+    title: 'Modelos de visão locais 2026: LLaVA, Llama 3.2 Vision, Qwen2-VL e configuração multimodal com Ollama',
+    seoTitle: 'Melhores modelos de visão locais 2026: LLaVA e Qwen2-VL',
+    intro:
+      'Os modelos visão-linguagem (VLM) aceitam imagens e texto como entrada e retornam texto — para OCR de documentos, perguntas e respostas sobre imagens, análise de capturas de tela e leitura de gráficos, tudo localmente. Em 2026, a forma mais simples de executar VLMs é via Ollama: baixe um modelo, envie uma imagem e obtenha uma descrição ou resposta. Este guia compara os principais modelos de visão locais (LLaVA 1.6, Llama 3.2 Vision, MiniCPM-V 2.6, Moondream 2, Qwen2-VL, InternVL 2.5), explica a configuração do Ollama passo a passo e associa cada modelo ao seu melhor caso de uso conforme os requisitos de VRAM e os benchmarks de qualidade.',
+    metaDescription:
+      'Perguntas sobre imagens, OCR e análise de capturas offline em 2026. Benchmark: LLaVA 1.6, Llama 3.2 Vision, Qwen2-VL e MiniCPM-V. VRAM e setup com Ollama.',
+    twitterDescription:
+      'Modelos de visão locais 2026: LLaVA, Llama 3.2 Vision, MiniCPM-V via Ollama. Perguntas sobre imagens, OCR, análise de capturas — 100% offline. Guia de VRAM e passos de configuração.',
+    audience:
+      'Desenvolvedores que precisam de compreensão de imagens localmente sem APIs na nuvem — para processamento de documentos, análise de capturas, ferramentas de acessibilidade, sistemas de inventário ou fluxos de trabalho com imagens sensíveis.',
+    readTime: '11 min de leitura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'modelo de visão local',
+    targetKeywords: [
+      'modelo de visão local 2026',
+      'LLaVA Ollama configuração',
+      'executar modelo de visão localmente',
+      'llama 3.2 vision local',
+      'MiniCPM-V local',
+      'qwen2-vl local',
+      'qwen2-vl ollama',
+      'melhor modelo de visão local',
+      'compreensão de imagens offline',
+      'modelo multimodal local',
+      'ollama modelo de visão',
+    ],
+    current_models_mentioned: [
+      'LLaVA 1.6 (7B and 13B)',
+      'Llama 3.2 Vision 11B',
+      'Llama 3.2 Vision 90B',
+      'MiniCPM-V 2.6 (8B)',
+      'Moondream 2 (1.9B)',
+      'Qwen2-VL 7B',
+      'Qwen2-VL 72B',
+      'InternVL 2.5 (8B)',
+      'PaliGemma 2 3B',
+      'SmolVLM 2.2B',
+    ],
+    current_hardware_mentioned: [
+      '2 GB VRAM',
+      '6 GB VRAM',
+      '8 GB VRAM',
+      '16 GB VRAM',
+      '64 GB VRAM',
+      'Apple M-series (unified memory)',
+    ],
+    leadAnswerBlock:
+      '**Para a maioria dos desenvolvedores com 6–8 GB de VRAM, MiniCPM-V 2.6 (8B) ou LLaVA 1.6 7B via Ollama é o ponto de partida recomendado em 2026.** Ambos funcionam com ~6 GB de VRAM, suportam OCR de documentos, perguntas sobre imagens e análise de capturas de tela, e estão disponíveis com um único comando do Ollama. Para a melhor qualidade geral com 8–16 GB de VRAM, Llama 3.2 Vision 11B é o melhor modelo de visão local e o VLM local mais potente. Com apenas 2 GB de VRAM disponíveis, Moondream 2 (1.9B) é a única opção prática. Todos os modelos funcionam 100% offline uma vez baixados; nenhuma chave de API ou conta na nuvem é necessária.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Quais são os melhores modelos de visão locais para usar com Ollama em 2026?',
+        answer:
+          'O melhor modelo de visão local depende da sua VRAM e do caso de uso. Com 6–8 GB de VRAM, MiniCPM-V 2.6 oferece o melhor equilíbrio entre precisão OCR e compreensão geral de imagens. Com 8–16 GB de VRAM, Llama 3.2 Vision 11B é a primeira opção para Q&A visual geral e análise de documentos. Com 2 GB de VRAM, Moondream 2 é a única alternativa — rápido, mas com capacidade limitada. InternVL 2.5 é o melhor para capturas de tela de UI e gráficos, embora tenha menos integração com Ollama do que os demais.',
+        bullets: [
+          'Menos de 4 GB de VRAM → Moondream 2 (1.9B): rápido, compreensão limitada de imagens complexas. Também: PaliGemma 2 3B (~3 GB) e SmolVLM 2.2B (~2 GB).',
+          '6 GB de VRAM → MiniCPM-V 2.6, LLaVA 1.6 7B ou Qwen2-VL 7B (melhor para OCR multilíngue): melhor equilíbrio entre qualidade e hardware.',
+          '8–16 GB de VRAM → Llama 3.2 Vision 11B: o melhor VLM local para fotografias e documentos em geral.',
+          '64+ GB (ou Apple M-series) → Llama 3.2 Vision 90B ou Qwen2-VL 72B: melhor qualidade local, desempenho próximo à nuvem.',
+          'Configuração: `ollama pull llama3.2-vision` depois `ollama run llama3.2-vision "Descreva esta imagem" --image foto.jpg`.',
+          'Melhor para OCR: Qwen2-VL 7B ≈ MiniCPM-V 2.6 > Llama 3.2 Vision 11B > LLaVA 1.6 — forte na extração de texto de documentos.',
+          'Melhor para UI / capturas de tela: InternVL 2.5 — treinado especificamente com capturas de código e UI.',
+        ],
+        updatedDate: '2026-05-14',
+      },
+    },
+    toc: [
+      { label: 'Principais destaques', anchor: '#key-takeaways' },
+      { label: 'Fatos rápidos', anchor: '#quick-facts' },
+      { label: 'O que são os modelos visão-linguagem?', anchor: '#what-are-vlms' },
+      { label: 'Tabela comparativa de modelos', anchor: '#model-comparison' },
+      { label: 'Teste de precisão real: extração de faturas', anchor: '#invoice-accuracy-test' },
+      { label: 'Suporte multi-imagem', anchor: '#multi-image-support' },
+      { label: 'Configuração com Ollama (passo a passo)', anchor: '#ollama-setup' },
+      { label: 'Caso de uso 1: OCR e extração de documentos', anchor: '#use-case-ocr' },
+      { label: 'Caso de uso 2: Perguntas e respostas sobre imagens', anchor: '#use-case-qa' },
+      { label: 'Caso de uso 3: Capturas de tela e análise de UI', anchor: '#use-case-screenshot' },
+      { label: 'Caso de uso 4: Leitura de gráficos e diagramas', anchor: '#use-case-chart' },
+      { label: 'Caso de uso 5: Análise de quadros de vídeo', anchor: '#use-case-video' },
+      { label: 'VRAM e verificação de desempenho real', anchor: '#vram-reality' },
+      { label: 'Modelos de visão locais vs GPT-5.5 Vision', anchor: '#local-vs-gpt4o' },
+      { label: 'Análise detalhada do LLaVA', anchor: '#llava-deep-dive' },
+      { label: 'Qwen2-VL — Melhor OCR multilíngue', anchor: '#qwen2vl-deep-dive' },
+      { label: 'Como escolher seu modelo de visão', anchor: '#how-to-choose' },
+      { label: 'Perguntas frequentes', anchor: '#faq' },
+      { label: 'Fontes', anchor: '#sources' },
+      { label: 'Leitura relacionada', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Llama 3.2 Vision 11B é o melhor modelo de visão local para a maioria dos desenvolvedores com 8–16 GB de VRAM.** Lida com fotografias, documentos e conteúdo misto com a melhor precisão de sua categoria e está disponível diretamente via Ollama.',
+          '**MiniCPM-V 2.6 (8B) é a primeira opção para OCR de documentos com 6 GB de VRAM.** Seus dados de treinamento incluem escaneamentos de documentos em alta resolução, tornando-o mais preciso do que LLaVA em tabelas, faturas e texto denso.',
+          '**LLaVA 1.6 7B é o VLM local mais documentado e testado pela comunidade.** É a opção de propósito geral mais segura se você precisa de abundantes exemplos, tutoriais e recursos de solução de problemas.',
+          '**Moondream 2 (1.9B) é a única opção prática com menos de 4 GB de VRAM.** Rápido e compacto, mas tem dificuldades com cenas complexas, texto denso e leitura precisa de gráficos.',
+          '**InternVL 2.5 (8B) é o mais potente para capturas de código e análise de UI.** Seu treinamento incluiu capturas do GitHub, maquetes de UI e saídas de execução de código.',
+          '**Todos os modelos estão disponíveis via Ollama com um único comando `pull`.** Nenhuma conversão de modelos, quantização nem configuração de Python é necessária.',
+          '**Nenhum desses modelos se aproxima da qualidade do GPT-5.5 Vision.** Os VLMs locais em 2026 são uma sólida opção de nível 2 — excelentes para documentos estruturados e fotografias claras, mais fracos com escrita à mão e gráficos complexos.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Fatos rápidos',
+        items: [
+          '**O que os VLMs fazem:** Aceitam imagem + texto como entrada → produzem texto. Não são geradores de imagens — esses modelos *compreendem* imagens.',
+          '**Suporte no Ollama:** Todos os modelos desta comparação têm integração oficial ou comunitária no Ollama a partir de maio de 2026.',
+          '**Menor modelo utilizável:** Moondream 2 com 1.9B parâmetros, ~2 GB de VRAM.',
+          '**Maior modelo local prático:** Llama 3.2 Vision 90B com ~64 GB de memória unificada (Apple M-series ou multi-GPU).',
+          '**Formato de entrada de imagem:** JPEG, PNG, WebP aceitos. A resolução máxima varia por modelo (tipicamente 1024×1024 a 4096×4096).',
+          '**Precisão OCR:** Qwen2-VL 7B ≈ MiniCPM-V 2.6 > Llama 3.2 Vision 11B > LLaVA 1.6 13B > LLaVA 1.6 7B > Moondream 2.',
+          '**Multimodal ≠ rápido:** Os modelos de visão adicionam um encoder visual ao LLM — espere uma geração de tokens ~30–60% mais lenta do que um modelo apenas de texto do mesmo número de parâmetros.',
+        ],
+      },
+      whatAreVLMs: {
+        id: 'what-are-vlms',
+        title: 'O que são os modelos visão-linguagem (VLMs)?',
+        content:
+          'Um modelo visão-linguagem (VLM) é uma rede neural que processa simultaneamente entradas de imagem e texto e produz texto como saída. A arquitetura padrão combina um encoder visual (tipicamente CLIP ou SigLIP) com um decodificador de linguagem (um LLM), conectados por uma camada de projeção que mapeia as características da imagem para o espaço de tokens que o LLM compreende.',
+        items: [
+          '**Como se diferenciam dos geradores de imagens:** Stable Diffusion, FLUX e DALL-E 3 são geradores de texto para imagem — produzem imagens a partir de prompts de texto. Os VLMs são modelos de imagem para texto — descrevem, analisam e respondem perguntas sobre imagens.',
+          '**Como se diferenciam das ferramentas OCR tradicionais:** O OCR tradicional (Tesseract, PaddleOCR) extrai texto de documentos estruturados via reconhecimento de padrões. Os VLMs compreendem o contexto — podem descrever o significado de uma tabela, responder perguntas sobre um gráfico ou identificar objetos em uma fotografia.',
+          '**Por que executá-los localmente:** Documentos privados (prontuários médicos, escaneamentos jurídicos, extratos financeiros), capturas de tela proprietárias (painéis internos, código-fonte), ou qualquer fluxo de trabalho onde enviar imagens para APIs na nuvem apresenta problemas de conformidade ou confidencialidade.',
+          '**O que não conseguem fazer:** Gerar imagens, executar código mostrado em capturas de tela nem acessar a internet. Os VLMs apenas produzem texto baseado no que é visível na imagem.',
+        ],
+      },
+      modelComparison: {
+        id: 'model-comparison',
+        title: 'Modelos de visão locais disponíveis — Tabela comparativa',
+        content:
+          'Comparação dos cinco modelos de visão locais mais capazes disponíveis via Ollama ou inferência direta em maio de 2026. Os dados de VRAM correspondem a variantes quantizadas em 4 bits (Q4), salvo indicação contrária.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Para 6–8 GB de VRAM: MiniCPM-V 2.6 para OCR de documentos, Llama 3.2 Vision 11B para Q&A de imagens em geral — ambos executam localmente via Ollama.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Pense no Moondream como a opção leve que cabe em qualquer lugar mas compreende menos; LLaVA como a escolha segura e geral; MiniCPM-V como o especialista em OCR; Llama 3.2 Vision como o melhor em geral; InternVL como o especialista em capturas de UI e código.',
+          },
+        ],
+        columns: ['Modelo', 'Parâmetros', 'VRAM (Q4)', 'Tipos de imagem', 'Qualidade', 'Via Ollama?'],
+        rows: [
+          {
+            'Modelo': 'Moondream 2',
+            'Parâmetros': '1.9B',
+            'VRAM (Q4)': '~2 GB',
+            'Tipos de imagem': 'Fotos simples',
+            'Qualidade': 'Básica',
+            'Via Ollama?': 'Sim',
+          },
+          {
+            'Modelo': 'LLaVA 1.6 7B',
+            'Parâmetros': '7B',
+            'VRAM (Q4)': '~6 GB',
+            'Tipos de imagem': 'Fotos, docs, gráficos',
+            'Qualidade': 'Boa',
+            'Via Ollama?': 'Sim',
+          },
+          {
+            'Modelo': 'LLaVA 1.6 13B',
+            'Parâmetros': '13B',
+            'VRAM (Q4)': '~10 GB',
+            'Tipos de imagem': 'Fotos, docs, gráficos',
+            'Qualidade': 'Muito boa',
+            'Via Ollama?': 'Sim',
+          },
+          {
+            'Modelo': 'MiniCPM-V 2.6',
+            'Parâmetros': '8B',
+            'VRAM (Q4)': '~6 GB',
+            'Tipos de imagem': 'Fotos, docs, OCR',
+            'Qualidade': 'Muito boa',
+            'Via Ollama?': 'Sim',
+          },
+          {
+            'Modelo': 'Llama 3.2 Vision 11B',
+            'Parâmetros': '11B',
+            'VRAM (Q4)': '~8 GB',
+            'Tipos de imagem': 'Fotos, docs',
+            'Qualidade': 'Excelente',
+            'Via Ollama?': 'Sim',
+          },
+          {
+            'Modelo': 'Llama 3.2 Vision 90B',
+            'Parâmetros': '90B',
+            'VRAM (Q4)': '~64 GB',
+            'Tipos de imagem': 'Fotos, docs, complexo',
+            'Qualidade': 'Melhor local',
+            'Via Ollama?': 'Sim',
+          },
+          {
+            'Modelo': 'InternVL 2.5 8B',
+            'Parâmetros': '8B',
+            'VRAM (Q4)': '~8 GB',
+            'Tipos de imagem': 'Docs, gráficos, UI, código',
+            'Qualidade': 'Excelente (UI/gráficos)',
+            'Via Ollama?': 'Comunidade',
+          },
+          {
+            'Modelo': 'Qwen2-VL 7B',
+            'Parâmetros': '7B',
+            'VRAM (Q4)': '~6 GB',
+            'Tipos de imagem': 'Fotos, docs, OCR, multilíngue',
+            'Qualidade': 'Excelente',
+            'Via Ollama?': 'Sim',
+          },
+          {
+            'Modelo': 'Qwen2-VL 72B',
+            'Parâmetros': '72B',
+            'VRAM (Q4)': '~48 GB',
+            'Tipos de imagem': 'Fotos, docs, complexo',
+            'Qualidade': 'Melhor (open-source)',
+            'Via Ollama?': 'Sim',
+          },
+          {
+            'Modelo': 'PaliGemma 2 3B',
+            'Parâmetros': '3B',
+            'VRAM (Q4)': '~3 GB',
+            'Tipos de imagem': 'Fotos, docs',
+            'Qualidade': 'Boa',
+            'Via Ollama?': 'Comunidade',
+          },
+          {
+            'Modelo': 'SmolVLM 2.2B',
+            'Parâmetros': '2.2B',
+            'VRAM (Q4)': '~2 GB',
+            'Tipos de imagem': 'Fotos simples, descrições',
+            'Qualidade': 'Básica+',
+            'Via Ollama?': 'Comunidade',
+          },
+        ],
+      },
+      invoiceAccuracyTest: {
+        id: 'invoice-accuracy-test',
+        title: 'Teste de precisão real: extração de faturas',
+        content:
+          'Comparação da precisão dos modelos de visão locais em uma tarefa de extração de documentos estruturados. Teste: extrair 5 campos (nome do fornecedor, data, total, valor de imposto, número de linhas) da mesma fatura de amostra.',
+        columns: ['Modelo', 'Fornecedor', 'Data', 'Total', 'Imposto', 'Linhas', 'Pontuação'],
+        rows: [
+          { 'Modelo': 'Moondream 2', 'Fornecedor': '✓', 'Data': '✓', 'Total': '✗', 'Imposto': '✗', 'Linhas': '✗', 'Pontuação': '2/5' },
+          { 'Modelo': 'LLaVA 1.6 7B', 'Fornecedor': '✓', 'Data': '✓', 'Total': '✓', 'Imposto': '✗', 'Linhas': '✓', 'Pontuação': '4/5' },
+          { 'Modelo': 'MiniCPM-V 2.6', 'Fornecedor': '✓', 'Data': '✓', 'Total': '✓', 'Imposto': '✓', 'Linhas': '✓', 'Pontuação': '5/5' },
+          { 'Modelo': 'Qwen2-VL 7B', 'Fornecedor': '✓', 'Data': '✓', 'Total': '✓', 'Imposto': '✓', 'Linhas': '✓', 'Pontuação': '5/5' },
+          { 'Modelo': 'Llama 3.2 11B', 'Fornecedor': '✓', 'Data': '✓', 'Total': '✓', 'Imposto': '✓', 'Linhas': '✓', 'Pontuação': '5/5' },
+          { 'Modelo': 'GPT-5.5 Vision', 'Fornecedor': '✓', 'Data': '✓', 'Total': '✓', 'Imposto': '✓', 'Linhas': '✓', 'Pontuação': '5/5' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Resultados obtidos com uma única fatura de teste. Sua precisão variará conforme a qualidade do documento, a tipografia e a complexidade do layout. Sempre verifique os números extraídos contra os documentos originais.',
+          },
+        ],
+      },
+      multiImageSupport: {
+        id: 'multi-image-support',
+        title: 'Suporte multi-imagem',
+        content:
+          'Nem todos os modelos de visão locais aceitam múltiplas imagens em uma única solicitação. O suporte multi-imagem é importante para o processamento de documentos (enviar todas as páginas de um PDF de várias páginas) e tarefas de comparação visual.',
+        columns: ['Função', 'Moondream', 'LLaVA 7B', 'MiniCPM-V', 'Qwen2-VL', 'LLaVA 13B', 'Llama 3.2 Vision', 'InternVL'],
+        rows: [
+          {
+            'Função': 'Entrada multi-imagem',
+            'Moondream': 'Não',
+            'LLaVA 7B': 'Não',
+            'MiniCPM-V': 'Sim (até 4)',
+            'Qwen2-VL': 'Sim (até 8)',
+            'LLaVA 13B': 'Não',
+            'Llama 3.2 Vision': 'Sim (multi-página)',
+            'InternVL': 'Sim',
+          },
+        ],
+        items: [
+          'MiniCPM-V 2.6 aceita até 4 imagens por prompt; Qwen2-VL suporta até 8. LLaVA e Moondream aceitam apenas uma imagem por solicitação.',
+          '**Quando o multi-imagem importa:** Enviar todas as páginas de um PDF de várias páginas para extração completa do documento. Comparar duas fotos de produto lado a lado. Analisar capturas de tela antes/depois em um único prompt.',
+        ],
+      },
+      ollamaSetup: {
+        id: 'ollama-setup',
+        title: 'Configuração com Ollama — passo a passo',
+        content:
+          'Ollama é a forma mais simples de executar modelos de visão locais. Uma vez instalado, os modelos de visão funcionam com um único comando pull e aceitam imagens via flag da CLI ou a API HTTP.',
+        items: [
+          '**Passo 1 — Instalar o Ollama:** Baixe em ollama.com para macOS, Linux ou Windows. A instalação leva menos de 2 minutos.',
+          '**Passo 2 — Baixar um modelo de visão:** `ollama pull llama3.2-vision` (11B, ~8 GB de download) ou `ollama pull moondream` (1.9B, ~2 GB) para configurações com pouca VRAM.',
+          '**Passo 3 — Usar via CLI:** `ollama run llama3.2-vision "O que há nesta imagem?" --image /caminho/para/foto.jpg`',
+          '**Passo 4 — Usar a API HTTP:** Faça um POST para `http://localhost:11434/api/generate` com a imagem como string em Base64 no array `images`.',
+          '**Passo 5 — Exemplo em Python:** Use a biblioteca `requests` com codificação Base64 — veja o bloco de código abaixo.',
+        ],
+        codeBlock: `import base64
+import requests
+
+def ask_vision_model(image_path: str, prompt: str, model: str = "llama3.2-vision") -> str:
+    with open(image_path, "rb") as f:
+        image_b64 = base64.b64encode(f.read()).decode("utf-8")
+
+    response = requests.post(
+        "http://localhost:11434/api/generate",
+        json={
+            "model": model,
+            "prompt": prompt,
+            "images": [image_b64],
+            "stream": False,
+        },
+    )
+    return response.json()["response"]
+
+# Exemplo de uso
+result = ask_vision_model("fatura.png", "Extraia todas as linhas de itens e totais desta fatura.")
+print(result)`,
+        codeLanguage: 'python',
+      },
+      useCaseOcr: {
+        id: 'use-case-ocr',
+        title: 'Caso de uso 1: OCR e extração de documentos',
+        content:
+          '**Os VLMs superam o OCR tradicional em documentos semiestruturados** — faturas, recibos, contratos e tabelas onde o layout importa tanto quanto o texto em si.',
+        items: [
+          '**O que funciona bem:** Faturas escaneadas, capturas de PDF, notas manuscritas em letra de forma, tabelas com bordas claras, cartões de visita.',
+          '**O que funciona pior:** Texto manuscrito em cursiva, escaneamentos abaixo de 150 DPI, JPEG com muita compressão, texto sobreposto.',
+          '**Melhores modelos para OCR:** MiniCPM-V 2.6 (maior precisão OCR na categoria de 6 GB), Llama 3.2 Vision 11B (melhor para tipos de documentos mistos).',
+          '**Prompt engineering para OCR:** "Extraia todo o texto deste documento exatamente como está escrito, preservando as quebras de linha." Ou: "Retorne o conteúdo desta fatura como JSON com os campos: fornecedor, data, linhas[], total."',
+          '**Vs. OCR tradicional:** Os VLMs são mais lentos, mas mais semânticos. Tesseract é mais rápido para a extração de texto puro de documentos limpos. Use VLMs quando precisar de extração de dados estruturados, não apenas texto simples.',
+        ],
+      },
+      useCaseQA: {
+        id: 'use-case-qa',
+        title: 'Caso de uso 2: Perguntas e respostas sobre imagens',
+        content:
+          '**Para a compreensão geral de cenas, descrições de produtos e Q&A visual, Llama 3.2 Vision 11B é o modelo local recomendado.**',
+        items: [
+          '**Descrição de cenas:** "O que há nesta foto?" — objetos, pessoas, atividades, ambiente, atmosfera.',
+          '**Catalogação de produtos:** Processe fotos de produtos com um template de prompt como "Descreva este produto: cor, forma, material, estado." Útil para inventário de e-commerce sem APIs na nuvem.',
+          '**Acessibilidade:** Gere texto alternativo para imagens em escala. Com precisão suficiente para conformidade de acessibilidade em fotos de produtos padrão.',
+          '**Melhores modelos:** LLaVA 1.6 13B ou Llama 3.2 Vision 11B para Q&A geral sobre fotos.',
+          '**Consideração de velocidade:** Em uma GPU de 6 GB, Llama 3.2 Vision 11B Q4 gera ~8–12 tokens/segundo para respostas sobre imagens.',
+        ],
+      },
+      useCaseScreenshot: {
+        id: 'use-case-screenshot',
+        title: 'Caso de uso 3: Capturas de tela e análise de UI',
+        content:
+          '**Para analisar capturas de tela de aplicações, mensagens de erro e painéis, InternVL 2.5 é o modelo local mais potente.**',
+        items: [
+          '**Fluxos de trabalho para desenvolvedores:** Envie capturas de mensagens de erro ao modelo: "O que está errado nesta captura de tela e como você corrigiria?"',
+          '**Geração de relatórios de bugs:** Gere automaticamente descrições de bugs a partir de capturas de tela com um prompt estruturado.',
+          '**Monitoramento de painéis:** Analise capturas de tela de painéis de monitoramento em busca de anomalias.',
+          '**Testes de acessibilidade:** Compare capturas antes e depois de mudanças na UI para verificar as propriedades de acessibilidade visual.',
+          '**Melhores modelos:** InternVL 2.5 8B (melhor compreensão de UI), MiniCPM-V 2.6 (segunda opção, com suporte do Ollama).',
+        ],
+      },
+      useCaseChart: {
+        id: 'use-case-chart',
+        title: 'Caso de uso 4: Leitura de gráficos e diagramas',
+        content:
+          '**Extrair dados de gráficos de barras, linhas e tabelas é possível, mas requer um prompting cuidadoso.** Todos os VLMs locais são mais fracos na leitura de gráficos do que na descrição de fotos.',
+        items: [
+          '**O que funciona:** Ler rótulos de eixos, identificar tendências, comparar alturas relativas de barras, ler valores de tabelas com fontes claras.',
+          '**O que não é confiável:** Extração numérica precisa de gráficos contínuos, porcentagens de gráficos de pizza sem rótulos explícitos.',
+          '**Estratégia de prompt:** "Descreva a tendência mostrada neste gráfico de linhas" funciona melhor do que "Qual é o valor exato em março de 2026?"',
+          '**Melhores modelos para gráficos:** InternVL 2.5 (melhor compreensão de gráficos), Llama 3.2 Vision 11B (bom em gráficos com rótulos claros).',
+          '**Nota sobre limitações:** Nenhum VLM local em 2026 extrai de forma confiável números precisos de gráficos visualmente complexos.',
+        ],
+      },
+      useCaseVideo: {
+        id: 'use-case-video',
+        title: 'Caso de uso 5: Análise de quadros de vídeo',
+        content:
+          '**Os modelos de visão locais podem analisar vídeo processando quadros individuais** — extraia quadros com ffmpeg, envie-os ao modelo de visão e encadeie com um LLM de texto para resumir entre quadros.',
+        items: [
+          '**Extração de quadros:** Use ffmpeg para extrair a 1fps: `ffmpeg -i video.mp4 -vf fps=1 frames/frame_%04d.jpg`',
+          '**Análise por quadro:** Execute cada quadro pelo modelo de visão com um prompt consistente.',
+          '**Resumo entre quadros:** Colete todas as descrições de quadros e passe-as a um LLM de texto com um prompt de resumo.',
+          '**Casos de uso:** Revisão de câmeras de segurança, análise de gravações de aulas, inspeção de qualidade na fabricação.',
+          '**Melhores modelos para quadros de vídeo:** Llama 3.2 Vision 11B para qualidade, LLaVA 1.6 7B para velocidade.',
+          '**Realidade de velocidade:** A 1 quadro/segundo de extração e ~1 segundo por quadro de inferência em uma RTX 4070, um vídeo de 10 minutos leva ~20–30 minutos para ser completamente processado.',
+        ],
+        codeBlock: `import base64
+import subprocess
+import os
+import requests
+
+def extract_frames(video_path: str, output_dir: str, fps: int = 1) -> list[str]:
+    os.makedirs(output_dir, exist_ok=True)
+    subprocess.run([
+        "ffmpeg", "-i", video_path,
+        "-vf", f"fps={fps}",
+        f"{output_dir}/frame_%04d.jpg",
+        "-y"
+    ], check=True)
+    return sorted([
+        os.path.join(output_dir, f)
+        for f in os.listdir(output_dir)
+        if f.endswith(".jpg")
+    ])
+
+def analyze_frame(image_path: str, model: str = "llama3.2-vision") -> str:
+    with open(image_path, "rb") as f:
+        image_b64 = base64.b64encode(f.read()).decode("utf-8")
+    response = requests.post(
+        "http://localhost:11434/api/generate",
+        json={
+            "model": model,
+            "prompt": "Descreva o que está acontecendo neste quadro em uma frase.",
+            "images": [image_b64],
+            "stream": False,
+        },
+    )
+    return response.json()["response"]
+
+frames = extract_frames("aula.mp4", "frames/", fps=1)
+descriptions = [analyze_frame(f) for f in frames]
+print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
+        codeLanguage: 'python',
+      },
+      vramReality: {
+        id: 'vram-reality',
+        title: 'VRAM e verificação de desempenho real',
+        content:
+          'Os modelos de visão locais adicionam um encoder visual ao LLM base, o que aumenta tanto os requisitos de VRAM quanto o tempo de inferência em comparação com os modelos apenas de texto.',
+        columns: ['Modelo', 'VRAM (Q4)', 'Tokens/s (RTX 4070)', 'Tokens/s (M5 Pro 36GB)', 'Apto para produção?'],
+        rows: [
+          {
+            'Modelo': 'Moondream 2 (1.9B)',
+            'VRAM (Q4)': '~2 GB',
+            'Tokens/s (RTX 4070)': '~25–35',
+            'Tokens/s (M5 Pro 36GB)': '~30–40',
+            'Apto para produção?': 'Sim — para tarefas simples',
+          },
+          {
+            'Modelo': 'LLaVA 1.6 7B',
+            'VRAM (Q4)': '~6 GB',
+            'Tokens/s (RTX 4070)': '~15–20',
+            'Tokens/s (M5 Pro 36GB)': '~18–25',
+            'Apto para produção?': 'Sim — propósito geral',
+          },
+          {
+            'Modelo': 'MiniCPM-V 2.6 (8B)',
+            'VRAM (Q4)': '~6 GB',
+            'Tokens/s (RTX 4070)': '~12–18',
+            'Tokens/s (M5 Pro 36GB)': '~15–20',
+            'Apto para produção?': 'Sim — OCR e documentos',
+          },
+          {
+            'Modelo': 'Llama 3.2 Vision 11B',
+            'VRAM (Q4)': '~8 GB',
+            'Tokens/s (RTX 4070)': '~10–14',
+            'Tokens/s (M5 Pro 36GB)': '~12–16',
+            'Apto para produção?': 'Sim — melhor qualidade geral',
+          },
+          {
+            'Modelo': 'LLaVA 1.6 13B',
+            'VRAM (Q4)': '~10 GB',
+            'Tokens/s (RTX 4070)': '~8–12',
+            'Tokens/s (M5 Pro 36GB)': '~10–14',
+            'Apto para produção?': 'Sim — com GPU de 12 GB',
+          },
+          {
+            'Modelo': 'Llama 3.2 Vision 90B',
+            'VRAM (Q4)': '~64 GB',
+            'Tokens/s (RTX 4070)': 'N/A (requer multi-GPU ou M-Max)',
+            'Tokens/s (M5 Pro 36GB)': 'N/A (requer M5 Max 128GB+)',
+            'Apto para produção?': 'Apenas Apple Silicon de alta gama',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'A velocidade de geração de tokens para os modelos de visão é mais lenta do que para os modelos apenas de texto do mesmo tamanho, porque o encoder visual adiciona uma sobrecarga computacional significativa no primeiro token de imagem.',
+          },
+          {
+            type: 'note',
+            text: 'A memória unificada do Apple Silicon permite executar modelos maiores (até 90B em M5 Max 128GB) que não cabem na VRAM de uma GPU dedicada. A velocidade é ligeiramente inferior à de uma GPU NVIDIA equivalente, mas sem limitação de VRAM.',
+          },
+        ],
+      },
+      localVsGpt4o: {
+        id: 'local-vs-gpt4o',
+        title: 'Como os modelos de visão locais se comparam ao GPT-5.5 Vision',
+        content:
+          'Os VLMs locais fecharam significativamente a lacuna em documentos estruturados, mas ainda ficam atrás do GPT-5.5 Vision em tarefas complexas e ambíguas.',
+        items: [
+          '**Documentos estruturados (faturas, formulários):** Os modelos locais a 80–90% da qualidade do GPT-5.5 — suficiente para uso em produção com documentos limpos e bem formatados.',
+          '**Cenas complexas, imagens ambíguas:** Os modelos locais a 50–70% do GPT-5.5 — lacuna de qualidade notável.',
+          '**Reconhecimento de escrita à mão:** Os modelos locais são significativamente mais fracos, especialmente com cursiva.',
+          '**Extração de dados de gráficos:** Pouco confiável tanto em modelos locais quanto no GPT-5.5, mas o GPT-5.5 é mais preciso em valores numéricos exatos.',
+          '**Custo:** GPT-5.5 Vision a $0,01–0,03 por imagem vs $0 localmente. 10.000 imagens/mês = $100–300 economizados com modelos locais.',
+          '**Privacidade:** Os modelos locais processam imagens no dispositivo — nenhum dado sai da máquina.',
+          '**Velocidade:** Os modelos locais a 10–20 tok/s vs GPT-5.5 a 30–80 tok/s, mas o local não tem latência de rede para processamento em lote.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Para o processamento em produção de faturas e formulários com entrada limpa, os VLMs locais (Llama 3.2 Vision 11B, Qwen2-VL 7B) podem substituir o GPT-5.5 Vision a custo zero. Para tudo que envolva escrita à mão, análise de cenas complexas ou conteúdo ambíguo, o GPT-5.5 ainda é superior.',
+          },
+        ],
+      },
+      llavaDeepDive: {
+        id: 'llava-deep-dive',
+        title: 'Análise detalhada do LLaVA',
+        content:
+          '**LLaVA (Large Language and Vision Assistant) é a arquitetura VLM de código aberto fundamental.** Lançada pela Universidade de Wisconsin-Madison e Microsoft Research em 2023, estabeleceu o padrão de encoder CLIP + decodificador LLM que a maioria dos VLMs locais modernos segue.',
+        items: [
+          '**Arquitetura:** Encoder visual CLIP ViT-L/14 + decodificador de texto Llama-2 ou Mistral, conectados por uma camada de projeção linear simples.',
+          '**LLaVA 1.5 vs 1.6:** A versão 1.6 (lançada no início de 2024) adicionou suporte para entrada em alta resolução via patches dinâmicos, melhorando significativamente a precisão de OCR e a leitura de gráficos.',
+          '**Forças:** Amplo conhecimento geral, bem documentado, comunidade ampla, extensa integração com Ollama.',
+          '**Fraquezas:** OCR mais fraco do que MiniCPM-V 2.6, análise de UI mais fraca do que InternVL 2.5, superado em geral por Llama 3.2 Vision 11B em benchmarks de qualidade.',
+          '**Por que ainda é recomendado:** LLaVA 1.6 tem a comunidade mais grande, a maior quantidade de tutoriais e os mais exemplos de prompts de todos os VLMs locais.',
+        ],
+      },
+      qwen2VlDeepDive: {
+        id: 'qwen2vl-deep-dive',
+        title: 'Qwen2-VL — Melhor OCR multilíngue e desempenho em documentos',
+        content:
+          '**Qwen2-VL é o modelo visão-linguagem da Alibaba e a opção de código aberto mais potente em benchmarks de documentos em 2026.**',
+        items: [
+          '**Arquitetura:** Suporte de resolução dinâmica até 4096×4096 — significativamente maior do que LLaVA 1.6 (672×672) ou Llama 3.2 Vision (1120×1120).',
+          '**OCR multilíngue:** O melhor da categoria para chinês, japonês, coreano e inglês.',
+          '**7B vs 72B:** O 7B cabe em ~6 GB de VRAM (Q4) e é competitivo com Llama 3.2 Vision 11B na maioria das tarefas com documentos. O 72B usa ~48 GB e lidera a maioria dos benchmarks de código aberto.',
+          '**Instalação no Ollama:** `ollama pull qwen2-vl:7b` — disponível diretamente na biblioteca de modelos do Ollama.',
+          '**Suporte multi-imagem:** Aceita até 8 imagens por solicitação — a maior capacidade multi-imagem de todos os modelos desta comparação.',
+          '**Página do modelo:** [Qwen2-VL 7B no Hugging Face](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct)',
+        ],
+      },
+      howToChoose: {
+        id: 'how-to-choose',
+        title: 'Como escolher seu modelo de visão',
+        content:
+          'Uma árvore de decisão baseada em VRAM para selecionar o modelo de visão local adequado:',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Escolha seu modelo primeiro pela VRAM (2→4→6→8→16 GB), depois refine pelo caso de uso (OCR, UI, Q&A geral ou máxima qualidade).',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Menos de 4 GB: apenas Moondream. 6 GB: MiniCPM-V para documentos, LLaVA 7B para fotos. 8–16 GB: Llama 3.2 Vision 11B para quase tudo. 64+ GB: Llama 3.2 Vision 90B para a melhor qualidade local.',
+          },
+        ],
+        items: [
+          '**Menos de 4 GB de VRAM:** Moondream 2 (1.9B) — única opção viável a 2 GB. Além do Moondream 2, PaliGemma 2 (3B) e SmolVLM (2.2B) são alternativas viáveis.',
+          '**6 GB de VRAM:** MiniCPM-V 2.6 para OCR de documentos e processamento de faturas. LLaVA 1.6 7B para Q&A geral sobre fotos onde o suporte comunitário importa. Qwen2-VL 7B para OCR multilíngue.',
+          '**8–16 GB de VRAM:** Llama 3.2 Vision 11B é a recomendação clara — melhor qualidade geral nesta categoria de VRAM.',
+          '**16+ GB de VRAM:** LLaVA 1.6 13B adiciona mais capacidade para a compreensão de cenas complexas. InternVL 2.5 8B se seu caso de uso principal são capturas de UI ou código.',
+          '**64+ GB de memória unificada (Apple M-Max/Ultra, multi-GPU):** Llama 3.2 Vision 90B para a melhor qualidade de VLM local disponível. Qwen2-VL 72B é uma alternativa com as melhores pontuações em benchmarks de código aberto.',
+          '**Sempre verifique os números:** Independentemente do modelo, contraste qualquer valor numérico extraído de gráficos ou tabelas com os dados originais.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          {
+            q: 'Posso usar LLaVA ou Llama 3.2 Vision sem Ollama?',
+            a: 'Sim. Você pode executar LLaVA e Llama 3.2 Vision diretamente usando llama.cpp (com suporte de visão), a biblioteca transformers (com o cartão de modelo apropriado) ou LM Studio. Ollama é recomendado pela simplicidade.',
+          },
+          {
+            q: 'O Llama 3.2 Vision suporta entrada PDF direta?',
+            a: 'Nenhum VLM local aceita PDF diretamente. Primeiro você deve converter as páginas do PDF em imagens (usando pdf2image, pypdfium2 ou similar) e então enviar cada página como uma solicitação de imagem separada.',
+          },
+          {
+            q: 'Como os modelos de visão locais se comparam ao GPT-5.5 Vision?',
+            a: 'GPT-5.5 Vision ainda é significativamente melhor em cenas ambíguas, escrita à mão, infográficos complexos e tarefas que requerem conhecimento do mundo. Llama 3.2 Vision 11B se aproxima do GPT-5.5 em documentos estruturados (faturas, formulários, fotos claras) mas fica para trás em imagens matizadas ou ambíguas.',
+          },
+          {
+            q: 'Qual resolução de imagem os VLMs locais suportam?',
+            a: 'LLaVA 1.6 suporta até 672×672 de resolução efetiva (com patches dinâmicos). MiniCPM-V 2.6 suporta até 1792×1792. Llama 3.2 Vision suporta resolução variável até 1120×1120. Para os melhores resultados de OCR, envie imagens de documentos a 150+ DPI.',
+          },
+          {
+            q: 'Posso fazer fine-tuning de um modelo de visão local com minhas próprias imagens?',
+            a: 'Sim, mas o fine-tuning de VLMs requer mais recursos do que o fine-tuning de LLMs apenas de texto. O fine-tuning do LLaVA está bem documentado usando a base de código de treinamento original. Para a maioria dos casos de uso, o prompt engineering sozinho é suficiente sem necessidade de fine-tuning.',
+          },
+          {
+            q: 'Qual é o melhor modelo de visão local para 8 GB de VRAM?',
+            a: 'Llama 3.2 Vision 11B (Q4 quantizado cabe em ~8 GB) para uso geral. Qwen2-VL 7B se o OCR multilíngue é a necessidade principal. Ambos disponíveis via Ollama com um único comando pull.',
+          },
+          {
+            q: 'LLaVA vs MiniCPM-V — qual é melhor para OCR?',
+            a: 'MiniCPM-V 2.6 é mais preciso em OCR de documentos, especialmente em tabelas densas e escaneamentos a alto DPI. LLaVA 1.6 está melhor documentado e tem mais suporte comunitário.',
+          },
+          {
+            q: 'Os modelos de visão locais conseguem ler escrita à mão?',
+            a: 'Escrita à mão em letra de forma (letras em bloco): sim, com precisão moderada em Llama 3.2 Vision 11B e MiniCPM-V 2.6. Escrita em cursiva: pouco confiável em todos os modelos locais. GPT-5.5 Vision é significativamente melhor com cursiva.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          '[Página do projeto LLaVA](https://llava-vl.github.io) — Fichas de modelo LLaVA 1.5 e 1.6, detalhes de arquitetura e descrição do dataset de treinamento.',
+          '[Llama 3.2 Vision no Hugging Face](https://huggingface.co/meta-llama) — Lançamento oficial do modelo pela Meta, ficha de modelo e cifras de benchmark.',
+          '[MiniCPM-V 2.6 no Hugging Face](https://huggingface.co/openbmb/MiniCPM-V-2_6) — Ficha de modelo da OpenBMB, benchmarks de OCR e instruções de fine-tuning.',
+          '[Moondream no GitHub](https://github.com/vikhyat/moondream) — Descrição de arquitetura, scripts de inferência e download do modelo.',
+          '[InternVL 2.5 no Hugging Face](https://huggingface.co/OpenGVLab/InternVL2_5-8B) — Ficha de modelo da OpenGVLab, pontuações de benchmark em documentos e tarefas de UI.',
+          '[Documentação do Ollama](https://ollama.com) — Suporte de modelos de visão, referência de API e biblioteca de modelos.',
+          '[Qwen2-VL no Hugging Face](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct) — Ficha de modelo Qwen2-VL da Alibaba, detalhes de arquitetura e benchmarks de OCR multilíngue.',
+          '[PaliGemma 2 no Hugging Face](https://huggingface.co/google/paligemma2-3b-pt-448) — Ficha de modelo PaliGemma 2 3B do Google.',
+          '[SmolVLM no Hugging Face](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct) — Ficha de modelo SmolVLM da HuggingFace e instruções de inferência.',
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          '[Pipeline de IA multimodal local 2026](/pt/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Combine modelos de visão com STT e TTS em um stack multimodal local completo.',
+          '[Reconhecimento de voz local 2026: Whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison-2026) — Adicione entrada de voz para complementar a saída de visão.',
+          '[TTS local e clonagem de voz 2026](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Adicione saída de voz para ler em voz alta as respostas do VLM.',
+          '[Como instalar Ollama](/pt/local-llms/how-to-install-ollama) — Pré-requisito: configuração e instalação do Ollama.',
+          '[Guia de hardware para LLMs locais 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Requisitos de VRAM e RAM para a inferência de modelos de visão.',
+        ],
+      },
+    },
+       schema: {
+       '@context': 'https://schema.org',
+       '@type': 'TechArticle',
+       headline: 'Modelos de visão locais 2026: LLaVA, Llama 3.2 Vision, Qwen2-VL e configuração multimodal com Ollama',
+       description: 'Perguntas sobre imagens, OCR e análise de capturas de tela offline em 2026. Benchmark: LLaVA 1.6, Llama 3.2 Vision, Qwen2-VL, MiniCPM-V. Guia de VRAM e passos de configuração com Ollama.',
+       url: 'https://www.promptquorum.com/pt/power-local-llm/local-vision-models-llava-ollama-2026?lang=pt',
+       inLanguage: 'pt-BR',
+       datePublished: '2026-05-24',
+       dateModified: '2026-05-24',
+       author: { '@type': 'Person', name: 'Hans Kuepper' },
+       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+     },
+  },
 }

@@ -409,6 +409,78 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Tool Comparisons',
+    title: 'Como converter modelos do Ollama para o formato MLX',
+    seoTitle: 'Converter modelos do Ollama para MLX 2026 | PromptQuorum',
+    metaDescription: 'Você não pode converter modelos do Ollama para MLX diretamente. Use pesos do Hugging Face + mlx-lm convert. A maioria dos modelos populares já tem versão MLX pré-convertida.',
+    publishDate: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: ['Llama 3', 'Qwen', 'Mistral'],
+    current_hardware_mentioned: ['Apple Silicon'],
+    educationalLevel: 'Intermediate',
+    audience: 'Desenvolvedores Mac que querem modelos no formato MLX do ecossistema Ollama',
+    parentArticle: '/local-llms/apple-silicon-local-llm-guide-2026',
+    siblingBites: ['mlx-vs-ollama-vs-llamacpp', 'ollama-mlx-apple-silicon', 'ollama-vs-lm-studio'],
+    is_living_page: false,
+    quickAnswerTop: {
+      pt: {
+        question: 'Como você converte um modelo do Ollama para o formato MLX?',
+        answer: 'Você não pode converter modelos do Ollama diretamente para MLX. Em vez disso, baixe os pesos GGUF ou SafeTensors originais do Hugging Face e converta com mlx-lm convert. Para a maioria dos modelos populares (Llama 3, Qwen, Mistral), versões MLX pré-convertidas já existem no Hugging Face sob a organização mlx-community.',
+        bullets: [
+          'Você não pode converter modelos do Ollama diretamente — o formato do modelo é diferente',
+          'Modelos MLX pré-convertidos existem em huggingface.co/mlx-community para a maioria dos modelos populares',
+          'Para converter você mesmo: baixe do Hugging Face, depois execute mlx_lm.convert',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Você não pode converter modelos Ollama GGUF diretamente para MLX — precisa começar com os pesos originais do Hugging Face',
+          'Modelos populares já têm versões MLX em huggingface.co/mlx-community — pesquise seu modelo primeiro antes de converter',
+          'Para converter: baixe os pesos do Hugging Face, depois execute `mlx_lm.convert --model-path <caminho> -o <saída>`',
+        ],
+      },
+      body1: {
+        title: 'Por que você não pode converter diretamente?',
+        content: [
+          'Os modelos do Ollama estão no formato GGUF (quantizados de 4–8 bits). MLX requer os pesos originais de 16 bits do Hugging Face porque precisa re-quantizar com algoritmos nativos do Apple Silicon.',
+          'Se você tentar converter diretamente do GGUF, perde informação de precisão durante a quantização e o resultado é de qualidade inferior.',
+          'A solução: começar com os pesos não quantizados do Hugging Face e deixar o mlx-lm re-quantizar otimizando para Metal no Apple Silicon.',
+        ],
+      },
+      body2: {
+        title: 'Como converter (se necessário)',
+        content: [
+          '<strong>Primeira tentativa: pesquise seu modelo na mlx-community.</strong> Execute: `pip install mlx-lm` e depois `python -m mlx_lm.generate --model mlx-community/model-name-4bit`. Se funcionar, já está pré-convertido.',
+          '<strong>Se não estiver disponível, converta você mesmo:</strong> baixe os pesos originais com `git clone https://huggingface.co/owner/model`, depois execute `mlx_lm.convert --model-path ./model -o ./mlx_model` (isso leva 5–10 minutos).',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Perguntas rápidas sobre conversão do Ollama para MLX',
+        faqs: [
+          {
+            q: 'Onde encontro modelos MLX pré-convertidos?',
+            a: 'No Hugging Face sob a organização mlx-community: huggingface.co/mlx-community. Pesquise seu modelo (Llama, Qwen, Mistral, etc.). Se não estiver lá, você precisará converter você mesmo.',
+          },
+          {
+            q: 'Quanto tempo demora a conversão?',
+            a: 'Tipicamente 5–10 minutos para um modelo 7B em um M5 Pro. Modelos maiores podem levar 20+ minutos. A conversão é uma operação única — o modelo resultante é armazenado localmente.',
+          },
+          {
+            q: 'Qual quantização devo usar ao converter para MLX?',
+            a: 'Para a maioria dos modelos 7B–14B em memória unificada de 16 GB, use quantização de 4 bits (é o padrão para o flag `-q`). Isso produz um modelo de ~4 GB que funciona bem nos chips M1/M2/M3/M4. Use quantização de 8 bits apenas se tiver 32+ GB de memória e precisar de maior qualidade de saída.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Tool Comparisons',
     title: 'Cómo convertir modelos de Ollama a formato MLX',

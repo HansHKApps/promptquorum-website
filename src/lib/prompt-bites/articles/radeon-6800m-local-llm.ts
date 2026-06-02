@@ -444,6 +444,85 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Hardware-Specific',
+    title: 'Você pode executar LLMs locais em uma Radeon RX 6800M?',
+    seoTitle: 'Radeon 6800M para LLM local? | Prompt Bites | PromptQuorum',
+    metaDescription: 'Sim: a Radeon RX 6800M (12 GB VRAM) executa LLMs via ROCm no Linux ou llama.cpp em todas as plataformas. Llama 3 8B Q4 roda a ~12 tok/s. Suporte ROCm no Windows é limitado.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Você pode executar LLMs locais em uma Radeon RX 6800M?',
+        answer: 'Sim. A Radeon RX 6800M tem 12 GB de VRAM GDDR6 e pode executar LLMs locais. No Linux, use ROCm para aceleração GPU. No Windows, use llama.cpp com Vulkan ou fallback para CPU. Llama 3 8B Q4_K_M roda a ~12 tok/s no Linux com ROCm.',
+        bullets: [
+          'Linux + ROCm: aceleração GPU completa, ~12 tok/s no Llama 3 8B Q4',
+          'Windows: use llama.cpp com backend Vulkan para descarga parcial na GPU',
+          '12 GB de VRAM suporta modelos de até 14B em Q4_K_M',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Radeon RX 6800M é um chip RDNA 2 móvel com 12 GB de VRAM — NÃO é a RX 6800 desktop; suporte ROCm para RDNA 2 móvel tem sido historicamente inconsistente',
+          'Backend Vulkan (Ollama ou llama.cpp) é o caminho multiplataforma mais confiável; Linux + ROCm dá maior velocidade (~12 tok/s) quando funciona',
+          'Velocidades Vulkan são 30–40% mais lentas que CUDA em placas NVIDIA equivalentes — espere ~14 tok/s no Llama 3 8B vs ~25 tok/s em uma placa NVIDIA de 12 GB',
+          'Sempre rode com cabo: GPUs AMD móveis sofrem throttle na bateria e a inferência LLM roda 40–50% mais lenta',
+        ],
+      },
+      body1: {
+        title: 'O que a Radeon 6800M pode realmente executar',
+        content: [
+          'Em maio de 2026, <strong>a Radeon RX 6800M é um chip RDNA 2 móvel com 12 GB de VRAM GDDR6 — não é a RX 6800 desktop, que usa um die de GPU diferente com cobertura de suporte ROCm diferente.</strong> Com 12 GB, a 6800M cabe modelos de até 14B em Q4_K_M sem offloading de camadas, igualando a capacidade de uma RTX 3060 desktop de 12 GB.',
+          'O suporte ROCm para chips RDNA 2 móveis tem sido historicamente inconsistente — verifique a matriz oficial de suporte GPU da AMD ROCm antes de depender dela. No Linux onde o ROCm funciona, o Ollama detecta automaticamente a 6800M e o Llama 3 8B Q4_K_M atinge aproximadamente 12 tok/s. O backend Vulkan no Ollama ou llama.cpp roda tanto no Windows quanto no Linux sem dependência de ROCm e é o caminho multiplataforma mais confiável.',
+          'Velocidades Vulkan são 30–40% menores que CUDA em hardware NVIDIA equivalente: o mesmo modelo que roda a ~25 tok/s em uma RTX 3060 12 GB atinge ~14 tok/s na 6800M via Vulkan. Para uma comparação com um rig CUDA de 8 GB de VRAM, veja a <a href="/pt/prompt-bites/best-models-amd-5700x-3070ti" class="text-primary hover:underline">comparação do rig AMD 5700X + RTX 3070 Ti</a>.',
+        ],
+        columns: ['Modelo', 'VRAM Q4', 'Velocidade testada'],
+        rows: [
+          { 'Modelo': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', 'Velocidade testada': '~14 tok/s (Vulkan)' },
+          { 'Modelo': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', 'Velocidade testada': '~13 tok/s (Vulkan)' },
+          { 'Modelo': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', 'Velocidade testada': '~10 tok/s (Vulkan)' },
+          { 'Modelo': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Velocidade testada': '~9 tok/s (Vulkan)' },
+        ],
+      },
+      body2: {
+        title: 'Configurando LLMs locais na 6800M',
+        content: [
+          '<strong>No Linux, instale o Ollama — ele inclui suporte Vulkan por padrão e detecta automaticamente a 6800M.</strong> Se o ROCm estiver funcionando no seu chip específico (verifique a matriz de suporte GPU AMD ROCm), o Ollama o usará automaticamente e entregará aproximadamente 12 tok/s no Llama 3 8B Q4_K_M em vez do baseline Vulkan.',
+          'No Windows, ROCm nativo não está disponível de forma confiável para a 6800M. Use o Ollama com suporte Vulkan ou baixe um binário Vulkan pré-compilado do llama.cpp e carregue seu GGUF com <code>-ngl 33</code> para fazer offload de camadas para a GPU. WSL2 com passthrough de GPU é outra opção para acessar os benefícios exclusivos do ROCm no Linux sem dual boot.',
+          'Sempre rode com cabo — GPUs AMD móveis sofrem throttle agressivo na bateria e a velocidade de inferência LLM cai 40–50% sem alimentação. Para a comparação completa de GPUs entre NVIDIA e AMD, veja o <a href="/pt/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">guia das melhores GPUs para LLMs locais</a>.',
+        ],
+        callouts: [{ type: 'tip', text: 'Teste sua configuração: execute <code>ollama run llama3:8b</code> e verifique o uso da GPU com <code>rocm-smi</code> (se ROCm) ou verifique <code>ollama ps</code>. Se o modelo cair para CPU, confirme a detecção de GPU com <code>ollama info</code>.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre Radeon 6800M e LLMs locais',
+        faqs: [
+          {
+            q: 'A Radeon 6800M suporta ROCm oficialmente?',
+            a: 'O suporte ROCm para chips RDNA 2 móveis tem sido historicamente inconsistente. Placas RDNA 2 desktop (RX 6800, RX 6900 XT) estão oficialmente listadas na matriz de suporte GPU AMD ROCm; a 6800M móvel é um chip diferente. Verifique a página de compatibilidade ROCm da AMD para o status atual antes de depender da aceleração ROCm.',
+          },
+          {
+            q: 'A 6800M é mais rápida que a RTX 3070 Mobile para LLMs?',
+            a: 'Os 12 GB de VRAM da 6800M versus 8 GB na maioria das configurações RTX 3070 Mobile importam mais para acomodação do modelo do que para velocidade bruta. Com o mesmo tamanho de modelo, a RTX 3070 Mobile se beneficia de melhor integração de drivers CUDA no Windows. No Linux com ROCm funcionando na 6800M, a diferença de velocidade diminui.',
+          },
+          {
+            q: 'Posso usar truques de memória unificada estilo Apple Silicon no AMD móvel?',
+            a: 'Não. A 6800M usa VRAM GDDR6 dedicada separada da RAM do sistema — não há pooling de memória equivalente à arquitetura de memória unificada da série M da Apple. Todos os 12 GB são exclusivos da GPU; a RAM do sistema não é endereçável como VRAM adicional.',
+          },
+          {
+            q: 'Quão quente fica a 6800M executando LLMs continuamente?',
+            a: 'Espere 80–90°C sob carga de inferência sustentada, semelhante a uma sessão de jogos. Throttling térmico acima de ~100°C reduzirá a velocidade de inferência. Use Radeon Software (Windows) ou CoreCtrl (Linux) para definir um perfil de undervolting e garantir boa ventilação.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Hardware-Specific',
     title: '¿Puedes ejecutar LLMs locales en una Radeon RX 6800M?',

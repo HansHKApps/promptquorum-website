@@ -881,4 +881,144 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Hardware-Specific',
+    title: 'Melhor GPU por menos de $600 para LLMs locais em 2026?',
+    seoTitle: 'Melhor GPU por menos de $600 para LLM local 2026',
+    metaDescription: 'Melhor GPU abaixo de $600 para LLMs locais: RTX 4060 Ti 16 GB (~$424 nova). 16 GB de VRAM é o ponto ideal para modelos 14B. Instantâneo de preços de maio 2026.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['RTX 4060 Ti 16 GB', 'RTX 3060 12 GB'],
+    educationalLevel: 'Intermediate',
+    audience: 'Compradores com orçamento de $600 escolhendo uma GPU para modelos locais de 14B',
+    affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
+    siblingBites: ['best-gpu-under-300-local-llm', 'best-ollama-models-rtx-3060-12gb'],
+    is_living_page: false,
+    readTime: '4 min de leitura',
+    leadAnswerBlock:
+      'A melhor GPU por menos de $600 para LLMs locais é a NVIDIA RTX 4060 Ti 16 GB (~$424 nova, $290 usada em maio de 2026). Seus 16 GB de VRAM são o ponto ideal: executam modelos 14B em Q4 com margem de contexto, consomem apenas 165 W e foram menos afetados pela alta de preços de 2026.',
+    toc: [
+      { label: 'Melhor escolha: RTX 4060 Ti 16 GB', anchor: '#best-pick' },
+      { label: 'RTX 4060 Ti 16 GB vs RTX 3060 12 GB', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leituras relacionadas', anchor: '#related' },
+    ],
+    intro:
+      'Um orçamento de $600 desbloqueia 16 GB de VRAM, e 16 GB é o limite onde os modelos 14B funcionam confortavelmente em Q4. A NVIDIA RTX 4060 Ti 16 GB é a placa que atinge esse limite mais próxima do preço de lançamento.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual é a melhor GPU por menos de $600 para LLMs locais?',
+        answer: 'RTX 4060 Ti 16 GB a ~$424 é o ponto ideal — 16 GB de VRAM lida com modelos 14B em quantização Q5 com folga.',
+        bullets: [
+          '16 GB de VRAM executa Qwen 32B em Q3_K_M (~13 GB) — um nível acima das GPUs de 12 GB.',
+          'RTX 4070 12 GB a $550-599 é mais rápida, mas tem 4 GB menos de VRAM; priorize VRAM sobre velocidade.',
+          'Evite a RTX 3090 24 GB usada a menos que esteja abaixo de $300 — consome 350 W vs 165 W da 4060 Ti.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Melhor escolha: NVIDIA RTX 4060 Ti 16 GB a ~$424 nova, $290 usada (maio 2026) — 16 GB de VRAM para modelos 14B em Q4',
+          '16 GB é o ponto ideal: um modelo 14B em Q4 precisa de ~9-10 GB, deixando 6 GB para contexto e ferramentas',
+          'A RTX 4060 Ti 16 GB consome apenas 165 W — funciona com a maioria das fontes de alimentação existentes sem upgrade',
+          'Foi a GPU menos afetada pela escassez de memória de 2026, por isso permanece mais próxima do preço sugerido de venda',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'Melhor escolha: NVIDIA RTX 4060 Ti 16 GB',
+        content: [
+          '<strong>A NVIDIA RTX 4060 Ti 16 GB é a melhor GPU por menos de $600 para LLMs locais porque 16 GB de VRAM é o ponto ideal para os modelos 14B — suficiente para executá-los em Q4 com margem para uma janela de contexto ampla.</strong> A ~$424 nova e $290 usada em maio de 2026, fica confortavelmente dentro do orçamento.',
+          'Um modelo 14B em Q4_K_M precisa de aproximadamente 9-10 GB de VRAM. Os 16 GB da RTX 4060 Ti deixam 6 GB para a janela de contexto e overhead de execução — suficiente para um contexto de 16K tokens sem recorrer ao lento CPU offload. Uma placa de 12 GB executa o mesmo modelo mas com quase nenhuma margem de contexto.',
+          'A RTX 4060 Ti 16 GB também consome apenas 165 W, então se encaixa na maioria das configurações existentes sem necessidade de upgrade da fonte de alimentação. Escolha uma RTX 3060 12 GB usada somente se ficar abaixo de $300 e aceitar limites estreitos de contexto. Gaste mais somente se precisar especificamente de modelos 33B ou 70B.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB',
+            productName: 'NVIDIA RTX 4060 Ti 16GB',
+            productCategory: 'gpu',
+            priceRange: '290-424',
+            label: 'Ver preço da RTX 4060 Ti 16GB na Amazon',
+          },
+          {
+            url: 'https://www.newegg.com/p/pl?d=RTX+4060+Ti+16GB',
+            productName: 'NVIDIA RTX 4060 Ti 16GB',
+            productCategory: 'gpu',
+            priceRange: '290-424',
+            label: 'Ver preço da RTX 4060 Ti 16GB na Newegg',
+          },
+          {
+            url: 'https://www.bestbuy.com/site/searchpage.jsp?st=RTX+4060+Ti+16GB',
+            productName: 'NVIDIA RTX 4060 Ti 16GB',
+            productCategory: 'gpu',
+            priceRange: '290-424',
+            label: 'Ver preço da RTX 4060 Ti 16GB na Best Buy',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'RTX 4060 Ti 16 GB vs RTX 3060 12 GB',
+        content: [
+          '<strong>Os 4 GB extras de VRAM são o que separa uma configuração 14B confortável de uma apertada.</strong> Os preços abaixo são um instantâneo de maio de 2026 nos EUA — a escassez de memória de 2026 mantém os preços voláteis, então verifique antes de comprar.',
+        ],
+        columns: ['GPU', 'VRAM', 'Preço (maio 2026)', 'Modelo maior', 'Consumo'],
+        rows: [
+          {
+            'GPU': 'RTX 4060 Ti 16 GB',
+            'VRAM': '16 GB',
+            'Preço (maio 2026)': '$424 nova / $290 usada',
+            'Modelo maior': '14B em Q4, contexto longo',
+            'Consumo': '165 W',
+          },
+          {
+            'GPU': 'RTX 3060 12 GB',
+            'VRAM': '12 GB',
+            'Preço (maio 2026)': '$150-250 usada',
+            'Modelo maior': '14B em Q4, contexto curto',
+            'Consumo': '170 W',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre GPUs por menos de $600 para LLMs locais',
+        faqs: [
+          {
+            q: 'Por que 16 GB de VRAM é o ponto ideal para LLMs locais?',
+            a: 'Um modelo 14B com quantização Q4 usa aproximadamente 9-10 GB de VRAM. Com 16 GB, os 6 GB restantes acomodam a janela de contexto e o overhead de execução, permitindo um contexto de 16K tokens sem CPU offload. Uma placa de 12 GB executa o modelo, mas deixa quase nenhuma margem de contexto.',
+          },
+          {
+            q: 'A RTX 4060 Ti 16 GB é melhor do que uma RTX 4070 Ti Super usada?',
+            a: 'Para os modelos, a RTX 4070 Ti Super também tem 16 GB e executa os modelos 14B mais rápido. Mas a ~$770 usada em maio de 2026 supera em muito os $600. Abaixo de $600, a RTX 4060 Ti 16 GB é a escolha; a 4070 Ti Super só faz sentido se seu orçamento for maior.',
+          },
+          {
+            q: 'A RTX 4060 Ti 16 GB precisa de upgrade de fonte de alimentação?',
+            a: 'Normalmente não. Consome 165 W, menos do que a RTX 3060. A maioria das configurações com uma fonte de 500 W ou mais pode usá-la sem alterações. Confirme se sua fonte tem o conector de 8 pinos necessário.',
+          },
+          {
+            q: 'A RTX 4060 Ti 16 GB consegue executar um modelo de 30B?',
+            a: 'Um modelo 30B em Q4 precisa de aproximadamente 18-20 GB de VRAM, então não cabe completamente em 16 GB. Funcionará com CPU offload parcial em velocidade muito menor. Para modelos de 30B, considere placas de 24 GB.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Melhor GPU por menos de $300 para LLMs locais](/pt/prompt-bites/best-gpu-under-300-local-llm) — o nível econômico: RTX 3060 12 GB usada',
+          '[Melhor LLM local para programação com 12 GB de VRAM](/pt/prompt-bites/best-local-llm-coding-12gb-vram) — seleção de modelos para placas de 12-16 GB',
+          '[Guia de compra de GPU para LLMs locais 2026](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — a comparação completa de oito GPUs em todas as faixas de orçamento',
+        ],
+      },
+    },
+  },
 }

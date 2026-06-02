@@ -434,6 +434,90 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Tool Comparisons',
+    title: 'Ollama vs LM Studio: Qual você deve escolher?',
+    seoTitle: 'Ollama vs LM Studio | Prompt Bites | PromptQuorum',
+    metaDescription: 'Se você usa terminal e desenvolve com APIs, escolha Ollama. Se prefere GUI e quer apenas conversar com modelos, use LM Studio. Resposta rápida do PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: 'Intermediate',
+    audience: 'Desenvolvedores escolhendo entre Ollama e LM Studio',
+    parentArticle: '/local-llms/ollama-vs-lm-studio',
+    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama'],
+    is_living_page: false,
+    quickAnswerTop: {
+      pt: {
+        question: 'Ollama vs LM Studio: qual você deve escolher?',
+        answer: 'Se você usa terminal e desenvolve com APIs, escolha Ollama. Se prefere uma GUI e quer apenas conversar com modelos, use LM Studio. Ambos são gratuitos e executam modelos localmente.',
+        bullets: [
+          'Ollama: CLI-first, API compatível com OpenAI, ferramenta para desenvolvedores',
+          'LM Studio: GUI desktop, modelos via arrastar e soltar, amigável para iniciantes',
+          'Ambos funcionam no Mac, Windows e Linux',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Ollama executa como um serviço CLI em segundo plano na porta 11434 — inicie com `ollama serve`, baixe modelos com `ollama pull`, consulte via curl ou qualquer cliente compatível com OpenAI',
+          'LM Studio é um aplicativo GUI desktop — baixe em lmstudio.ai, navegue e carregue modelos com um clique, janela de chat integrada inclusa',
+          'Ambos usam llama.cpp e GGUF por baixo dos panos, portanto a velocidade de geração de tokens é quase idêntica para o mesmo modelo e quantização',
+        ],
+      },
+      body1: {
+        title: 'Onde cada ferramenta se destaca',
+        content: [
+          '<strong>Ollama se destaca para desenvolvedores: sem overhead de GUI, integra com aplicativos Python e JavaScript via sua API REST compatível com OpenAI, e executa headless em servidores Linux.</strong> LM Studio se destaca para iniciantes: sua loja de modelos integrada permite baixar e executar um modelo em menos de três minutos sem tocar no terminal.',
+          'Ambas as ferramentas usam llama.cpp por baixo dos panos, portanto o modelo em si executa de forma idêntica. A escolha é de fluxo de trabalho: linha de comando vs interface visual. A tabela abaixo mapeia cinco dimensões práticas à ferramenta que cada uma maneja melhor.',
+        ],
+        columns: ['Característica', 'Ollama', 'LM Studio'],
+        rows: [
+          { 'Característica': 'Método de instalação', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'Instalador GUI' },
+          { 'Característica': 'Interface de chat', 'Ollama': 'Nenhuma (apenas API)', 'LM Studio': 'Integrada' },
+          { 'Característica': 'Servidor API', 'Ollama': 'REST, porta 11434', 'LM Studio': 'REST, porta 1234' },
+          { 'Característica': 'Gerenciamento de modelos', 'Ollama': '`ollama pull <model>`', 'LM Studio': 'Navegar + clicar' },
+          { 'Característica': 'Melhor para', 'Ollama': 'Desenvolvedores + servidores', 'LM Studio': 'Iniciantes + uso de chat' },
+        ],
+      },
+      body2: {
+        title: 'Quando usar ambos',
+        content: [
+          'Você pode executar Ollama e LM Studio simultaneamente. Use o LM Studio para navegar e testar novos modelos, depois mude para Ollama assim que souber qual modelo quer integrar em um aplicativo Python ou JavaScript.',
+          'Ollama usa por padrão a porta 11434, LM Studio usa por padrão a porta 1234 — eles não conflitam por padrão. Se você personalizou alguma porta, defina a variável de ambiente OLLAMA_HOST ou altere a porta do servidor do LM Studio em Configurações.',
+          'Para o guia completo cobrindo instalação, seleção de modelos e ajuste de desempenho, consulte a <a href="/pt/local-llms/ollama-vs-lm-studio" class="text-primary hover:underline">comparação aprofundada Ollama vs LM Studio</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre Ollama vs LM Studio',
+        faqs: [
+          {
+            q: 'Ollama e LM Studio podem funcionar ao mesmo tempo?',
+            a: 'Sim. Ollama usa por padrão a porta 11434, LM Studio usa por padrão a porta 1234, então eles não conflitam por padrão. Você só precisa alterar uma porta se personalizou uma delas.',
+          },
+          {
+            q: 'Qual é mais rápido — Ollama ou LM Studio?',
+            a: 'O desempenho é quase idêntico porque ambos usam llama.cpp por baixo dos panos para executar modelos GGUF. A diferença na velocidade de geração de tokens entre os dois é inferior a 5% para o mesmo modelo e nível de quantização.',
+          },
+          {
+            q: 'LM Studio tem uma interface de linha de comando?',
+            a: 'LM Studio não tem CLI para executar modelos. É um aplicativo apenas para desktop. Se você precisa de acesso CLI ou quer integrar inferência de modelo em scripts, use Ollama.',
+          },
+          {
+            q: 'Posso usar Ollama completamente sem GUI?',
+            a: 'Sim. Ollama foi projetado para uso headless e em servidores. Ele executa como serviço systemd no Linux, não tem dependências de GUI e pode ser combinado com uma interface de chat baseada em navegador se necessário. Veja <a href="/pt/prompt-bites/jan-vs-lm-studio" class="text-primary hover:underline">Jan vs LM Studio</a> para uma comparação das opções de GUI desktop.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Tool Comparisons',
     title: 'Ollama vs LM Studio: ¿Cuál deberías elegir?',

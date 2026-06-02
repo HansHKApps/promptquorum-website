@@ -716,6 +716,141 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Tool Comparisons',
+    title: 'RunPod vs Vast.ai: Qual é mais barato em 2026?',
+    seoTitle: 'RunPod vs Vast.ai preços 2026 | Prompt Bites',
+    metaDescription: 'Vast.ai é mais barato em GPUs spot/interruptíveis; RunPod é mais confiável para cargas sustentadas. Snapshot de tarifas por hora de maio de 2026; verifique as tarifas atuais.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['RTX 4090', 'A100', 'H100'],
+    educationalLevel: 'Intermediate',
+    audience: 'Desenvolvedores escolhendo entre RunPod e Vast.ai para alugar GPUs',
+    affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
+    siblingBites: ['cloud-gpu-cost-per-hour', 'best-gpu-under-600-local-llm'],
+    is_living_page: false,
+    readTime: '4 min de leitura',
+    leadAnswerBlock:
+      'Vast.ai é mais barato para aluguéis de GPU spot e interruptíveis; RunPod é mais confiável para cargas de trabalho sustentadas. O mercado peer-to-peer do Vast.ai empurra os preços abaixo dos preços gerenciados do RunPod, mas as instâncias podem ser reclamadas. Escolha Vast.ai para experimentos curtos, RunPod para treinamento em produção.',
+    toc: [
+      { label: 'Melhor opção por caso de uso', anchor: '#best-pick' },
+      { label: 'Tarifas por hora RunPod vs Vast.ai', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leituras relacionadas', anchor: '#related' },
+    ],
+    intro:
+      'RunPod e Vast.ai alugam GPUs por hora, mas com modelos diferentes. RunPod é uma nuvem gerenciada com preços fixos. Vast.ai é um mercado peer-to-peer onde hosts individuais definem os preços — geralmente mais baixos, às vezes interruptíveis. A escolha depende da duração da carga de trabalho e das necessidades de confiabilidade.',
+    quickAnswerTop: {
+      pt: {
+        question: 'RunPod vs Vast.ai — qual é mais barato para alugar GPU na nuvem?',
+        answer: 'Vast.ai é mais barato para instâncias spot (RTX 4090 a ~$0,15/hr vs RunPod ~$0,44/hr). RunPod é mais confiável com disponibilidade garantida.',
+        bullets: [
+          'Vast.ai spot RTX 4090: $0,10-0,25/hr; sob demanda: $0,50-0,80/hr.',
+          'RunPod Secure Cloud RTX 4090: $0,44/hr — sem cold starts, disponibilidade garantida.',
+          'Use Vast.ai para trabalhos de inferência em lote; RunPod para sessões interativas ou APIs de produção.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Vast.ai costuma ser mais barato em GPUs spot/interruptíveis, especialmente placas de consumo como RTX 4090',
+          'RunPod oferece tempo de atividade mais previsível e canal de suporte unificado — melhor para cargas sustentadas ou de produção',
+          'As tarifas do Vast.ai variam por host; verifique as listagens atuais antes de reservar — os intervalos abaixo são aproximações de maio de 2026',
+          'Para trabalho tolerante a interrupções (fine-tuning, inferência em lote), Vast.ai geralmente vence no custo; para produção ao vivo, RunPod é a opção mais segura',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'Melhor opção: Vast.ai pelo preço, RunPod pela confiabilidade',
+        content: [
+          '<strong>Vast.ai é a melhor opção se seu objetivo é a menor tarifa horária e você pode tolerar interrupções; RunPod é a melhor opção se sua carga de trabalho deve rodar sem interrupções.</strong> Os dois serviços atendem necessidades diferentes — não há um único vencedor.',
+          'O modelo de mercado do Vast.ai faz com que hosts individuais compitam no preço, o que empurra as tarifas de GPUs de consumo (RTX 4090, RTX 3090) bem abaixo das tarifas de nuvem gerenciada. A contrapartida é a interruptibilidade — um host pode reclamar a instância com pouco aviso. Isso é adequado para execuções de fine-tuning com checkpoints, inferência em lote ou experimentos pontuais.',
+          'RunPod opera uma nuvem de datacenter gerenciada com tempo de atividade consistente, equipe de suporte unificada e preços previsíveis. É mais caro por hora, mas evita a variância que vem com um mercado peer. Escolha RunPod para endpoints de API de produção, trabalhos de treinamento de longa duração ou qualquer carga de trabalho onde uma parada repentina seja custosa.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.vast.ai',
+            productName: 'Vast.ai',
+            productCategory: 'cloud-gpu',
+            label: 'Verificar tarifas atuais de GPU no Vast.ai',
+          },
+          {
+            url: 'https://www.runpod.io',
+            productName: 'RunPod',
+            productCategory: 'cloud-gpu',
+            label: 'Verificar tarifas atuais de GPU no RunPod',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Tarifas horárias aproximadas RunPod vs Vast.ai',
+        content: [
+          '<strong>As tarifas abaixo são intervalos aproximados em maio de 2026 — verifique os dashboards ao vivo antes de reservar.</strong> As tarifas do Vast.ai variam por host e região; o extremo inferior geralmente é interruptível.',
+        ],
+        columns: ['GPU', 'Vast.ai (aprox.)', 'RunPod (aprox.)', 'Notas'],
+        rows: [
+          {
+            'GPU': 'RTX 4090 24 GB',
+            'Vast.ai (aprox.)': '$0,30-0,55/hr',
+            'RunPod (aprox.)': '$0,60-0,80/hr',
+            'Notas': 'Vast geralmente mais barato em placas de consumo',
+          },
+          {
+            'GPU': 'A100 80 GB',
+            'Vast.ai (aprox.)': '$0,90-1,40/hr',
+            'RunPod (aprox.)': '$1,20-1,90/hr',
+            'Notas': 'Placa de datacenter; diferença é menor',
+          },
+          {
+            'GPU': 'H100 80 GB',
+            'Vast.ai (aprox.)': '$2,20-3,50/hr',
+            'RunPod (aprox.)': '$2,70-4,00/hr',
+            'Notas': 'High-end; disponibilidade variável',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre RunPod e Vast.ai',
+        faqs: [
+          {
+            q: 'Vast.ai é sempre mais barato que RunPod?',
+            a: 'Normalmente sim, mas nem sempre. Vast.ai é um mercado, então os preços variam por host e hora do dia. Em GPUs de consumo como a RTX 4090, Vast.ai costuma ser 30–50% mais barato. Em placas de datacenter, a diferença diminui.',
+          },
+          {
+            q: 'O que significa "interruptível" no Vast.ai?',
+            a: 'Uma instância interruptível pode ser reclamada pelo host com pouco aviso — geralmente 5–30 segundos. Você perde qualquer estado não salvo. Use interruptível apenas para cargas de trabalho que fazem checkpoint com frequência ou que podem recomeçar do zero.',
+          },
+          {
+            q: 'Qual serviço é melhor para fazer fine-tuning de um modelo?',
+            a: 'Para fine-tuning pontual com checkpoints, Vast.ai geralmente vence no custo. Para execuções de treinamento longas e contínuas onde reinicializações são caras, a confiabilidade do RunPod vale a tarifa horária mais alta.',
+          },
+          {
+            q: 'Esses preços incluem armazenamento e largura de banda?',
+            a: 'Não. Ambas as plataformas cobram separadamente pelo armazenamento persistente e largura de banda de saída. Inclua esses custos no total, especialmente para grandes pesos de modelos ou conjuntos de dados.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Quanto custa uma GPU na nuvem por hora?](/pt/prompt-bites/cloud-gpu-cost-per-hour) — visão geral mais ampla do mercado entre provedores',
+          '[Melhor GPU por menos de $600 para LLMs locais](/pt/prompt-bites/best-gpu-under-600-local-llm) — quando comprar uma placa é melhor que alugar',
+          '[Guia de compra de GPU para LLMs locais 2026](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — contexto da decisão comprar vs. alugar',
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Tool Comparisons',
     title: 'RunPod vs Vast.ai: ¿Cuál es más barato en 2026?',

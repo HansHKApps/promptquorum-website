@@ -398,6 +398,92 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Hardware Guides',
+    title: 'Você pode executar um LLM local em um telefone Xperia?',
+    seoTitle: 'LLM local no Xperia Japão 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Xperia 1 VI (12 GB) executa Phi-4 Q4 e Rinna 3.6B; Xperia 5 V (8 GB) roda modelos 3B; Xperia 10 VI (6 GB), apenas TinyLlama. MLC Chat, sem root.',
+    publishDate: '2026-05-27',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-27',
+    quickAnswerTop: {
+      pt: {
+        question: 'Você pode executar um LLM local em um telefone Xperia?',
+        answer: 'Sim — o Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3) executa Rinna 3.6B e Phi-4 Q4 via MLC Chat. O Xperia 5 V (8 GB) gerencia modelos leves. O Xperia 10 VI (6 GB) está limitado ao TinyLlama e Gemma 2B.',
+        bullets: [
+          'Xperia 1 VI: 12 GB RAM — executa Phi-4 Q4, Rinna 3.6B, Qwen3-3B',
+          'Xperia 5 V: 8 GB RAM — executa Rinna 3.6B e Gemma 2B Q4',
+          'Xperia 10 VI: 6 GB RAM — apenas TinyLlama e Gemma 2B',
+          'Sony não inclui recursos no estilo Galaxy AI — um LLM local via MLC Chat preenche essa lacuna',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3) é o único Xperia que executa modelos 7B+ de forma confiável — use-o para Phi-4 Q4 e Qwen3-3B',
+          'Xperia 5 V (8 GB RAM) gerencia modelos 3B incluindo Rinna 3.6B e Gemma 2B Q4 sem problemas',
+          'Xperia 10 VI (6 GB RAM) está limitado a modelos sub-2B — TinyLlama 1.1B e Gemma 2B são o teto prático',
+          'Sony não inclui recursos de IA On-Device — MLC Chat ou PocketPal AI do Google Play é a substituição prática',
+          'O consumo de bateria é de aproximadamente 15% por hora com a tela ligada durante inferência contínua no Xperia 1 VI; use o modo avião para reduzir o consumo',
+        ],
+      },
+      body1: {
+        title: 'Compatibilidade por modelo Xperia',
+        content: [
+          '<strong>Em maio de 2026, três modelos Xperia atuais suportam inferência LLM local, com capacidade determinada inteiramente por RAM e chipset — o Xperia 1 VI lidera, o Xperia 5 V cobre o mid-range e o Xperia 10 VI está limitado aos menores modelos.</strong> A Sony não pré-instala assistentes de IA On-Device (ao contrário do Samsung Galaxy AI), então aplicativos LLM locais são a única rota para IA privada e offline nos dispositivos Xperia.',
+          'O Xperia 1 VI é o único Xperia capaz de executar modelos 7B+ quantizados. Seu SoC Snapdragon 8 Gen 3 e 12 GB de RAM LPDDR5X dão espaço para Phi-4 Q4 (14B quantizado para ~8 GB) e Qwen3-3B junto com o uso cotidiano de aplicativos. O Xperia 5 V com Snapdragon 8 Gen 2 e 8 GB de RAM é o ponto ideal para modelos 3B — Rinna 3.6B e Gemma 2B Q4 rodam de forma confiável. O Xperia 10 VI usa o Snapdragon 6 Gen 1 mid-range com apenas 6 GB de RAM; nesse nível, fique com TinyLlama 1.1B ou Gemma 2B — modelos maiores travam ou causam erros OOM durante o carregamento.',
+          'Use Xperia 1 VI para modelos 7B+; Xperia 5 V para modelos 3B; fique com modelos sub-2B no Xperia 10 VI.',
+          'Para instruções de configuração de aplicativos, veja nosso <a href="/pt/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">guia de aplicativos LLM Android para o Japão</a>.',
+        ],
+        columns: ['Modelo Xperia', 'RAM / Chip', 'Modelos recomendados'],
+        rows: [
+          { 'Modelo Xperia': 'Xperia 1 VI', 'RAM / Chip': '12 GB / Snapdragon 8 Gen 3', 'Modelos recomendados': 'Phi-4 Q4, Rinna 3.6B, Qwen3-3B' },
+          { 'Modelo Xperia': 'Xperia 5 V', 'RAM / Chip': '8 GB / Snapdragon 8 Gen 2', 'Modelos recomendados': 'Rinna 3.6B, Gemma 2B Q4' },
+          { 'Modelo Xperia': 'Xperia 10 VI', 'RAM / Chip': '6 GB / Snapdragon 6 Gen 1', 'Modelos recomendados': 'TinyLlama 1.1B, apenas Gemma 2B' },
+        ],
+      },
+      body2: {
+        title: 'Guia de configuração em 3 passos',
+        content: [
+          '<strong>Instalar um LLM local em um Xperia leva três passos e menos de 30 minutos, incluindo o tempo de download do modelo.</strong> O processo não requer acesso root, modo desenvolvedor ou configurações especiais do Xperia — funciona inteiramente por meio do gerenciamento padrão de aplicativos e arquivos Android.',
+          'Passo 1: Instale MLC Chat ou PocketPal AI do Google Play (Google Playストア). Ambos são gratuitos e disponíveis no Japão sem VPN ou contorno de região. MLC Chat é mais rápido até a primeira inferência; PocketPal AI suporta uma gama mais ampla de arquivos de modelo GGUF do Hugging Face.',
+          'Passo 2: Baixe seu modelo via Wi-Fi. Os tamanhos de download variam: TinyLlama 1.1B Q4 tem aproximadamente 0,7 GB, Rinna 3.6B Q4 tem aproximadamente 2 GB, Gemma 2B Q4 tem aproximadamente 1,5 GB e Phi-4 Q4 tem aproximadamente 8 GB. Use um Xperia com 128 GB ou mais de armazenamento para o Phi-4. Feche todos os outros aplicativos antes de carregar o Phi-4 Q4 — ele usa aproximadamente 8 GB dos 12 GB de RAM do Xperia 1 VI e requer o máximo de memória disponível para carregar sem travar. Não baixe por dados móveis — os arquivos são grandes.',
+          'Passo 3: Mude o teclado para entrada em japonês. Gboard com japonês habilitado ou ATOK (popular no Japão para uso profissional) funcionam diretamente com MLC Chat e PocketPal AI — você digita em japonês, o modelo responde em japonês. Nenhuma configuração extra é necessária para que a entrada em japonês funcione.',
+          'Nota sobre bateria: espere aproximadamente 15% de consumo de bateria por hora com a tela ligada durante inferência contínua no Xperia 1 VI. Habilite o modo avião (機内モード) durante sessões de inferência para reduzir o consumo de rádio em segundo plano. Sony Xperia AI Agent (atualmente em beta) conecta-se a serviços de IA em nuvem — LLM local via MLC Chat é a única forma de executar inferência de IA inteiramente no Xperia sem enviar dados para servidores externos. Para um guia completo de configuração de LLM Android, veja <a href="/pt/power-local-llm/run-ai-on-tablet-ipad-android" class="text-primary hover:underline">executar IA em tablets e telefones Android</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre LLMs no Xperia',
+        faqs: [
+          {
+            q: 'Um LLM local funciona no Xperia 10 VI?',
+            a: 'Apenas TinyLlama 1.1B e Gemma 2B Q4. O Xperia 10 VI tem 6 GB de RAM e um Snapdragon 6 Gen 1 — modelos maiores travam ou produzem erros de falta de memória durante o carregamento. Não tente Rinna 3.6B ou qualquer modelo 7B no Xperia 10 VI.',
+          },
+          {
+            q: 'Quanto armazenamento um modelo precisa no Xperia?',
+            a: 'Rinna 3.6B Q4 requer aproximadamente 2 GB de armazenamento. Phi-4 Q4 requer aproximadamente 8 GB. TinyLlama 1.1B Q4 requer aproximadamente 0,7 GB. Use um Xperia com 128 GB ou mais para o Phi-4; 64 GB de armazenamento são suficientes para Rinna 3.6B e Gemma 2B.',
+          },
+          {
+            q: 'Quanto de bateria consome executar um LLM no Xperia?',
+            a: 'Aproximadamente 15% de bateria por hora com a tela ligada durante inferência contínua no Xperia 1 VI em desempenho total. No Xperia 5 V com Rinna 3.6B, espere consumo similar. Habilite o modo avião (機内モード) para reduzir o uso de rádio em segundo plano e diminuir o consumo total em 2–4% por hora.',
+          },
+          {
+            q: 'Funciona offline no Xperia?',
+            a: 'Sim — totalmente offline após o download inicial do modelo. MLC Chat e PocketPal AI não requerem conexão à internet, chave de API ou conta Sony uma vez que o modelo esteja armazenado no dispositivo. Nenhum dado sai do seu telefone durante a inferência.',
+          },
+          {
+            q: 'Qual é a diferença entre Sony Xperia AI Agent e um LLM local?',
+            a: 'Sony Xperia AI Agent (beta) encaminha solicitações por servidores de IA em nuvem — seus prompts e respostas passam pela infraestrutura da Sony ou de terceiros. Um LLM local executado via MLC Chat opera inteiramente no chip Snapdragon do Xperia — os dados nunca saem do dispositivo. Essa abordagem On-Device é a alternativa de conformidade com privacidade para usuários que lidam com dados sensíveis sob regulamentos de proteção de dados.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Hardware Guides',
     title: '¿Puedes ejecutar un LLM local en un teléfono Xperia?',

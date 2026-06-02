@@ -404,6 +404,84 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Ollama',
+    title: 'Quais modelos do Ollama suportam contexto de 128K?',
+    seoTitle: 'Ollama contexto 128K 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Llama 3.3 8B e Qwen 3 14B suportam 128K+ de contexto no Ollama; Qwen 3 chega a 1M de tokens. O contexto completo aumenta muito a VRAM. 2026.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Quais modelos do Ollama suportam contexto de 128K?',
+        answer: 'Llama 3.3 8B suporta contexto de 128K no Ollama. Qwen 3 14B chega a 1M de tokens. Nota: executar o contexto completo aumenta drasticamente a VRAM — uma janela de 128K precisa de 3 a 4 vezes mais VRAM que a janela padrão de 4K.',
+        bullets: [
+          'Llama 3.3 8B: contexto de 128K, ~16 GB de VRAM com contexto completo',
+          'Qwen 3 14B: até 1M de tokens, 24+ GB de VRAM com contexto completo',
+          'Defina --num-ctx 4096 para uso normal e economize VRAM',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'A maioria dos modelos 7B do Ollama anuncia contexto de 128K, mas a qualidade se degrada acima de 32K tokens',
+          'Llama 3.3 8B e Qwen 3 14B são os dois modelos que oferecem qualidade confiável no máximo de 128K',
+          'Uma janela de contexto de 128K pode quase triplicar o uso de VRAM — um modelo 7B Q4 precisa de ~15 GB com 128K frente a ~5,5 GB no padrão',
+          'Defina <code>--num-ctx 4096</code> para tarefas cotidianas; expanda o contexto apenas quando necessário',
+        ],
+      },
+      body1: {
+        title: 'Quais modelos realmente alcançam 128K',
+        content: [
+          '<strong>Em maio de 2026, a maioria dos modelos do Ollama anuncia contexto de 128K, mas poucos oferecem qualidade de saída útil nesse comprimento.</strong> O problema é o efeito "perdido no meio": modelos treinados em comprimentos típicos de documentos têm dificuldade em processar informações colocadas fundo em um contexto longo.',
+          'Dois modelos mantêm de forma confiável a qualidade no contexto completo de 128K no Ollama: <strong>Llama 3.3 8B</strong> (nativamente treinado a 128K) e <strong>Qwen 3 14B</strong> (até 1M de tokens, embora as restrições de VRAM tornem 128K o limite prático para o consumidor). Para a maioria dos outros modelos 7B, a qualidade de saída se degrada notavelmente acima de 32K tokens.',
+          'Se sua tarefa envolve documentos com mais de 20.000 palavras, comece com Llama 3.3 8B. Se precisar da melhor qualidade de contexto longo e tiver 12+ GB de VRAM, Qwen 3 14B é a melhor opção.',
+        ],
+      },
+      body2: {
+        title: 'O custo de VRAM do contexto longo',
+        content: [
+          'Expandir a janela de contexto aumenta significativamente o uso de VRAM. <strong>O KV-cache, que armazena o estado de atenção para todos os tokens no contexto, pode usar tanta VRAM quanto os próprios pesos do modelo com contexto de 128K.</strong>',
+          'A tabela abaixo mostra como a VRAM do KV-cache escala para um modelo 7B em Q4_K_M. Esses números assumem modelos usando grouped query attention (GQA) — modelos sem GQA usam significativamente mais KV-cache.',
+          'Para economizar VRAM em tarefas cotidianas, defina <code>--num-ctx 4096</code> ao executar o Ollama. Expanda para 32K ou 128K apenas quando sua tarefa específica exigir. Para o guia completo sobre LLMs locais de contexto longo, consulte o <a href="/pt/local-llms/long-context-local-llms" class="text-primary hover:underline">guia de LLMs locais de contexto longo</a>.',
+        ],
+        columns: ['Comprimento de contexto', 'KV-Cache (7B)', 'VRAM total (7B Q4)'],
+        rows: [
+          { 'Comprimento de contexto': '4K (padrão)', 'KV-Cache (7B)': '~0,5 GB', 'VRAM total (7B Q4)': '~5,5 GB' },
+          { 'Comprimento de contexto': '16K', 'KV-Cache (7B)': '~1,5 GB', 'VRAM total (7B Q4)': '~6,5 GB' },
+          { 'Comprimento de contexto': '32K', 'KV-Cache (7B)': '~3 GB', 'VRAM total (7B Q4)': '~8 GB' },
+          { 'Comprimento de contexto': '128K', 'KV-Cache (7B)': '~10 GB', 'VRAM total (7B Q4)': '~15 GB' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre os modelos de contexto longo',
+        faqs: [
+          {
+            q: 'Como ativar o contexto de 128K no Ollama?',
+            a: 'Adicione <code>--num-ctx 131072</code> ao seu comando de execução: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Sem essa opção, o Ollama usa por padrão 2048–4096 tokens independentemente da capacidade máxima do modelo.',
+          },
+          {
+            q: 'Por que o contexto longo usa tanta VRAM?',
+            a: 'O KV-cache armazena o estado de atenção para cada token no contexto. Com 128K tokens, esse cache pode ser tão grande quanto os próprios pesos do modelo. Um modelo 7B em Q4 precisa de ~5,5 GB para os pesos, mas de ~10 GB de KV-cache com contexto de 128K.',
+          },
+          {
+            q: 'O contexto de 128K é útil para codificação?',
+            a: 'Sim, ao trabalhar com grandes bases de código. Incluir um repositório inteiro ou vários arquivos no contexto melhora enormemente as tarefas de refatoração e raciocínio entre arquivos. Para codificação com 128K, Qwen 3 14B é o modelo recomendado.',
+          },
+          {
+            q: 'Qual modelo é melhor para análise de documentos longos?',
+            a: 'Qwen 3 14B em Q4_K_M é a primeira opção para documentos longos no Ollama — mantém melhor a qualidade no comprimento de contexto completo do que as alternativas 7B. Consulte <a href="/pt/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">os modelos de visão do Ollama</a> se também precisar de compreensão de imagens junto com documentos longos.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Ollama',
     title: '¿Qué modelos de Ollama admiten contexto de 128K?',

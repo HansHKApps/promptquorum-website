@@ -1378,4 +1378,251 @@ while True:
       ],
     },
   },
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-26',
+    dateModified: '2026-05-26',
+    next_refresh_due: '2026-11-26',
+    theme: 'Local AI Agents & Tool Use',
+    title: 'WeChat + LLM local: Guia para desenvolvedores 2026',
+    seoTitle: 'Integração WeChat com LLM local 2026 | Ponte API Ollama',
+    intro:
+      'Conectar o WeChat a um LLM local dá a você um assistente de IA privado que responde no aplicativo de mensagens mais usado do mundo — sem enviar uma única mensagem a uma API de nuvem. Este guia cobre três padrões de integração (WeChatFerry no Windows, ponte HTTP webhook, servidor mini PC sempre ativo), ajuda você a escolher o modelo Qwen certo para chats em chinês e mostra como a inferência local atende à Lei de Segurança de Dados da China.',
+    metaDescription:
+      'Conecte o WeChat a um LLM local em 2026. Três padrões: WeChatFerry, HTTP webhook, servidor Ollama em mini PC. Qwen3 7B para chinês. Sem API de nuvem.',
+    twitterDescription:
+      'Crie uma ponte WeChat + LLM local: WeChatFerry, HTTP webhook ou servidor mini PC. Qwen3 7B para chinês. Sem API de nuvem.',
+    gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
+    readTime: '11 min de leitura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'integração WeChat LLM local',
+    targetKeywords: [
+      'wechat llm local 2026',
+      'wechat ollama integração',
+      'bot wechat ia local',
+      'wechatferry qwen2.5',
+      'wechat llm python local',
+    ],
+    leadAnswerBlock:
+      '**Conecte o WeChat a um LLM local rodando o Ollama em um mini PC sempre ativo, depois faça a ponte das mensagens do WeChat para a API HTTP do Ollama via WeChatFerry (Windows) ou um listener de webhook. O Qwen3 7B Q4_K_M é o melhor modelo para chats em chinês no WeChat — tokenização CJK nativa, 5.5 GB de VRAM e 8–15 tok/s em hardware modesto.**',
+    quickAnswerTop: {
+      pt: {
+        question: 'Como conecto o WeChat a um LLM local?',
+        answer:
+          'Rode o Ollama em um mini PC (ou localhost), instale o WeChatFerry para interceptar as mensagens do cliente WeChat PC, escreva uma ponte Python que envia as mensagens para a API HTTP do Ollama em localhost:11434 e retorne a resposta do LLM ao chat. O Qwen3 7B Q4_K_M é o modelo recomendado para chats em chinês.',
+        bullets: [
+          'WeChatFerry: hook do WeChat somente para Windows; a abordagem mais confiável para 2026',
+          'API HTTP do Ollama: POST para /api/generate — sem credenciais de nuvem necessárias',
+          'Qwen3 7B Q4_K_M: 5.5 GB VRAM, tokenização CJK nativa, 8–15 tok/s',
+          'Servidor mini PC: o Minisforum UM890 Pro roda 24/7 a ~35 W para chat sempre ativo',
+          'Privacidade: zero dados transmitidos aos servidores do WeChat ou a qualquer API de LLM',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'Conecte o WeChat a um LLM local usando o WeChatFerry e o Ollama — as mensagens permanecem no seu hardware, sem necessidade de API de nuvem.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'Este guia mostra como fazer o WeChat responder automaticamente usando um modelo de IA local que roda no seu próprio computador ou mini PC, sem que nenhum dado saia da sua rede.',
+      },
+    ],
+    toc: [
+      { label: 'Pontos-chave', anchor: 'tldr' },
+      { label: 'Padrões de integração', anchor: 'integration-patterns' },
+      { label: 'Configuração do WeChatFerry', anchor: 'wechatferry' },
+      { label: 'Ponte API Ollama', anchor: 'ollama-bridge' },
+      { label: 'Servidor mini PC', anchor: 'mini-pc-server' },
+      { label: 'Escolha do modelo para chinês', anchor: 'model-choice' },
+      { label: 'Gestão de chats em grupo', anchor: 'group-chat' },
+      { label: 'Privacidade e conformidade legal', anchor: 'privacy' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+    ],
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'O WeChatFerry (Windows) é o hook mais confiável para o cliente WeChat PC em 2026: roda ao lado do WeChat sem modificar seu binário',
+          'O Ollama expõe uma API HTTP local na porta 11434: um script Python de 10 linhas roteia mensagens do WeChat para qualquer modelo carregado',
+          'Qwen3 7B Q4_K_M: recomendado para chats em chinês — 5.5 GB de VRAM, tokenização CJK nativa, 8–15 tok/s em mini PC',
+          'Servidor mini PC sempre ativo (Minisforum UM890 Pro, ~35 W): mantém o bot disponível 24/7 para chats em grupo e pessoais',
+          'Inferência local: zero dados transmitidos à nuvem — atende ao Artigo 31 da Lei de Segurança de Dados da China para dados pessoais',
+        ],
+      },
+      integrationPatterns: {
+        id: 'integration-patterns',
+        title: 'Três padrões de integração WeChat + LLM',
+        content: [
+          '**Padrão 1 — WeChatFerry + Ollama (Windows):** O mais estável. O WeChatFerry intercepta o cliente oficial do WeChat PC e expõe um SDK Python. As mensagens chegam como eventos; seu script chama a API HTTP do Ollama e devolve a resposta. Funciona para chats pessoais e em grupo. Requer Windows com o WeChat PC instalado.',
+          '**Padrão 2 — Ponte HTTP webhook:** Rode um servidor HTTP local que recebe callbacks de webhook de um gateway WeChat de terceiros. Mais complexo de configurar, mas funciona em múltiplas plataformas. Adequado para empresas com infraestrutura de WeChat Official Account.',
+          '**Padrão 3 — Ollama + encaminhamento Open WebUI:** Use o recurso de notificação do WeChat do Open WebUI (quando disponível) para enviar resumos ou respostas a uma conta pessoal do WeChat. Leve e sem necessidade de hook, mas só suporta notificações em um sentido.',
+          'Para a maioria dos usuários — especialmente na China com contas pessoais — o Padrão 1 (WeChatFerry + Ollama) é a opção certa para 2026.',
+        ],
+      },
+      wechatferry: {
+        id: 'wechatferry',
+        title: 'Configuração do WeChatFerry: passo a passo',
+        numberedItems: [
+          'Instale o WeChat PC (versão oficial de weixin.qq.com) no Windows',
+          'Instale o WeChatFerry: `pip install wcferry` (Python 3.10+)',
+          'Inicie o daemon do WeChatFerry: `python -m wcferry.daemon`',
+          'Escreva o manipulador de mensagens: `from wcferry import Wcf; wcf = Wcf(); wcf.enable_receiving_msg()`',
+          'No loop de mensagens, faça POST para o Ollama: `requests.post("http://localhost:11434/api/generate", json={"model":"qwen2.5:7b","prompt":msg.content})`',
+          'Envie a resposta: `wcf.send_text(response["response"], msg.roomid or msg.sender)`',
+          'Teste com uma mensagem pessoal; verifique que a resposta aparece no WeChat em 2–5 segundos',
+        ],
+        codeBlock: `import requests
+from wcferry import Wcf
+
+wcf = Wcf()
+wcf.enable_receiving_msg()
+
+while True:
+    msg = wcf.get_msg()
+    if msg and msg.from_self() is False:
+        resp = requests.post(
+            "http://localhost:11434/api/generate",
+            json={"model": "qwen2.5:7b", "prompt": msg.content, "stream": False}
+        ).json()
+        wcf.send_text(resp["response"], msg.roomid or msg.sender)`,
+        codeLanguage: 'python',
+      },
+      ollamaBridge: {
+        id: 'ollama-bridge',
+        title: 'API HTTP do Ollama: endpoints principais',
+        content: [
+          'O Ollama roda um servidor REST local em `http://localhost:11434` após `ollama serve`. Nenhuma autenticação é necessária para conexões locais.',
+          '**Geração (turno único):** `POST /api/generate` — corpo: `{model, prompt, stream: false}` — retorna `{response, done}`',
+          '**Chat (multi-turno):** `POST /api/chat` — corpo: `{model, messages: [{role, content}]}` — mantém o contexto da conversa entre chamadas',
+          '**Listar modelos:** `GET /api/tags` — retorna todos os modelos instalados com seus tamanhos',
+          'Para a integração com o WeChat, use `/api/chat` com um histórico de conversa rotativo (últimas 10 mensagens) para manter o contexto durante uma sessão.',
+        ],
+      },
+      miniPcServer: {
+        id: 'mini-pc-server',
+        title: 'Mini PC como servidor WeChat LLM sempre ativo',
+        content: [
+          'Um mini PC dedicado e sempre ativo mantém seu bot do WeChat funcionando sem ocupar um laptop ou estação de trabalho.',
+          '**Minisforum UM890 Pro (Recomendado):** AMD Ryzen 9 8945HS, 32–64 GB DDR5, iGPU AMD Radeon 780M. Roda o Qwen3 7B a ~8 tok/s via ROCm no Linux. Consumo: ~35 W em repouso, ~65 W sob inferência. Preço: ~$350–$450.',
+          '**Mac Mini M4:** Apple Silicon M4, 16–32 GB de memória unificada, ~18 tok/s em modelos 7B via MLX. Consumo: ~20 W em repouso. A opção mais silenciosa. Preço: ~$599.',
+          '**Dica de configuração:** Ative o início automático — adicione `ollama serve` e seu script de ponte WeChatFerry ao systemd (Linux) ou ao Agendador de Tarefas do Windows. O bot então se recupera automaticamente após cada queda de energia.',
+        ],
+        comparisonTable: {
+          columns: ['Dispositivo', 'RAM', 'Velocidade (7B)', 'Consumo', 'Preço (USD)'],
+          rows: [
+            { 'Dispositivo': 'Minisforum UM890 Pro', 'RAM': '32–64 GB', 'Velocidade (7B)': '~8 tok/s', 'Consumo': '35–65 W', 'Preço (USD)': '$350–$450' },
+            { 'Dispositivo': 'Mac Mini M4',          'RAM': '16–32 GB', 'Velocidade (7B)': '~18 tok/s','Consumo': '20–40 W', 'Preço (USD)': '$599+' },
+            { 'Dispositivo': 'Beelink SER8',         'RAM': '32 GB',    'Velocidade (7B)': '~8 tok/s', 'Consumo': '30–55 W', 'Preço (USD)': '$280–$330' },
+          ],
+        },
+      },
+      modelChoice: {
+        id: 'model-choice',
+        title: 'Melhores modelos para chats em chinês no WeChat',
+        content: [
+          '**Qwen3 7B Q4_K_M (Primeira escolha):** Desenvolvido pela Alibaba com tokenização CJK nativa. 5.5 GB de VRAM, 8–15 tok/s. Entende expressões idiomáticas chinesas, referências clássicas e frases coloquiais muito melhor que os modelos centrados no Ocidente. Instalação: `ollama pull qwen2.5:7b`.',
+          '**Qwen3 14B Q4_K_M:** Para conversas mais ricas quando há um mini PC com 12–16 GB de RAM disponível. 9.5 GB de VRAM, 4–8 tok/s. Notavelmente melhor em raciocínio matizado em chinês e contexto multi-turno.',
+          '**DeepSeek-R1-Distill-Qwen-7B:** Bom para responder perguntas e explicações passo a passo em chinês. Ligeiramente mais fraco em conversa casual que o Qwen3 7B.',
+          '**Evitar:** Llama 3 e Mistral — os tokenizadores centrados no Ocidente usam 2–3× mais tokens para texto em chinês, o que gera respostas mais lentas e truncamento em mensagens longas.',
+        ],
+      },
+      groupChat: {
+        id: 'group-chat',
+        title: 'Gestão de chats em grupo',
+        content: [
+          'Os chats em grupo do WeChat exigem gerenciar as menções @. O WeChatFerry expõe `msg.is_at` para detectar quando o bot é mencionado.',
+          'Boa prática: responder apenas quando `msg.is_at` for True ou quando a mensagem começa com uma palavra-chave de ativação. Responder a cada mensagem do grupo gera ruído e ativa os limites de taxa anti-bot do WeChat.',
+          'Limite de taxa: o WeChat pode limitar contas que enviem mais de ~30 mensagens por minuto. Adicione um atraso de 2–3 segundos entre as respostas do bot em contextos de grupo.',
+          'Gestão do contexto: para chats em grupo, mantenha históricos de conversa separados por usuário (indexados por `msg.sender`) para evitar misturar o contexto entre participantes.',
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'Privacidade e conformidade com a Lei de Segurança de Dados da China',
+        content: [
+          'A inferência local significa que os prompts, as respostas e o histórico de conversa nunca saem do seu hardware. Nem os servidores da Tencent no WeChat nem qualquer API de LLM na nuvem processam o conteúdo.',
+          '**Lei de Segurança de Dados da China (DSL, 2021) Artigo 31:** Exige que os dados pessoais coletados ou usados em território chinês permaneçam sob a jurisdição da China. Rodar seu próprio LLM local garante que a inferência não seja roteada por provedores de nuvem estrangeiros (OpenAI, Anthropic, Google).',
+          '**Lei de Cibersegurança Artigo 37:** Os operadores de infraestruturas de informação crítica devem armazenar os dados em território nacional. A inferência local satisfaz esse requisito para casos de uso pessoais e de pequenas e médias empresas.',
+          '**O que isto NÃO cobre:** Os metadados das mensagens do WeChat (quem enviou para quem, marcas de tempo) permanecem nos servidores da Tencent conforme os Termos de Serviço do WeChat — a inferência local não pode mudar isso. Para privacidade total, use uma plataforma de mensagens local em vez do WeChat.',
+          '**Nota para leitores no Brasil:** A LGPD (Lei Geral de Proteção de Dados) Artigo 39 exige que o operador trate os dados pessoais conforme as instruções do controlador. Rodar LLMs locais evita a necessidade de um contrato de tratamento com qualquer fornecedor de LLM — uma simplificação significativa de conformidade junto à ANPD.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          {
+            q: 'O WeChatFerry funciona com o WeChat para Mac?',
+            a: 'Não. O WeChatFerry intercepta as DLLs do cliente WeChat PC do Windows e não é compatível com o WeChat para Mac. No Mac, use uma VM do Windows ou um dos padrões de webhook HTTP.',
+          },
+          {
+            q: 'A Tencent pode banir minha conta por usar um bot?',
+            a: 'Os Termos de Serviço do WeChat proíbem o envio em massa de mensagens automatizadas. Os bots pessoais com taxas de resposta semelhantes às humanas (1–5 mensagens por minuto) raramente provocam banimentos. Evite o envio em massa, o spam em grupos ou usar o bot para promoção comercial.',
+          },
+          {
+            q: 'Qual modelo do Ollama é melhor para texto em chinês?',
+            a: 'Qwen3 7B Q4_K_M. Desenvolvido pela Alibaba com tokenização CJK nativa — entre 30–40% mais eficiente com texto em chinês que os modelos Llama ou Mistral.',
+          },
+          {
+            q: 'Posso rodar isso em um laptop?',
+            a: 'Sim. Um laptop com 16 GB de RAM roda o Qwen3 7B confortavelmente a 8–15 tok/s apenas com CPU. A latência de resposta é de 3–8 segundos por mensagem, aceitável para chat.',
+          },
+          {
+            q: 'A inferência local atende à Lei de Segurança de Dados da China?',
+            a: 'Para o conteúdo da inferência (prompts e respostas), sim — nenhum dado sai do seu hardware. Os metadados das mensagens do WeChat continuam residindo nos servidores da Tencent conforme seus ToS.',
+          },
+          {
+            q: 'Como gerencio conversas multi-turno?',
+            a: 'Armazene o histórico de conversa como uma lista Python com dicts {role, content} indexados por remetente. Passe as últimas 10–15 mensagens para /api/chat em cada requisição para manter o contexto.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: 'Leituras relacionadas',
+        items: [
+          '[Bot do WeChat com LLM local: Guia de assistente pessoal](/pt/power-local-llm/wechat-bot-local-llm-personal-assistant-2026) — Análise aprofundada do WeChatFerry para assistentes pessoais',
+          '[Melhor mini PC para LLM local](/pt/prompt-bites/best-mini-pc-for-local-llm) — Comparativo de hardware para servidores LLM sempre ativos',
+          '[Agentes de IA local com MCP 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — Amplie os bots do WeChat com uso de ferramentas e automação',
+          '[Substitua o Zapier por agentes de IA local](/pt/power-local-llm/replace-zapier-with-local-ai-agents) — Fluxos de automação acionados por eventos do WeChat',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'WeChat + LLM local: Guia para desenvolvedores 2026',
+      description: 'Conecte o WeChat a um LLM local usando o WeChatFerry e o Ollama. Três padrões de integração, recomendações de modelos, configuração de servidor mini PC e conformidade com a DSL chinesa.',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/wechat-local-llm-integration-2026?lang=pt',
+      inLanguage: 'pt',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      about: [
+        { '@type': 'Thing', name: 'Integração WeChat API' },
+        { '@type': 'Thing', name: 'Implantação de LLM local' },
+        { '@type': 'Thing', name: 'Conformidade de IA na China' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'WeChatFerry' },
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+        { '@type': 'SoftwareApplication', name: 'Qwen3 7B' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'pt',
+      mainEntity: [
+        { '@type': 'Question', name: 'O WeChatFerry funciona com o WeChat para Mac?', acceptedAnswer: { '@type': 'Answer', text: 'Não. O WeChatFerry intercepta as DLLs do cliente WeChat PC do Windows e não é compatível com o WeChat para Mac. No Mac, use uma VM do Windows ou um padrão de webhook HTTP.' } },
+        { '@type': 'Question', name: 'Qual modelo do Ollama é melhor para chats em chinês no WeChat?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — desenvolvido pela Alibaba com tokenização CJK nativa, 5.5 GB de VRAM e entre 30–40% mais eficiente com texto em chinês que Llama ou Mistral.' } },
+        { '@type': 'Question', name: 'A Tencent pode me banir por usar um bot?', acceptedAnswer: { '@type': 'Answer', text: 'Os bots pessoais com taxas de resposta semelhantes às humanas (1–5 mensagens por minuto) raramente provocam banimentos. Evite o envio em massa ou a promoção comercial através do bot.' } },
+        { '@type': 'Question', name: 'A inferência local com um LLM atende à Lei de Segurança de Dados da China?', acceptedAnswer: { '@type': 'Answer', text: 'Para o conteúdo da inferência, sim — nenhum prompt ou resposta sai do seu hardware. Os metadados do WeChat continuam residindo nos servidores da Tencent conforme seus ToS.' } },
+      ],
+    },
+  },
 }

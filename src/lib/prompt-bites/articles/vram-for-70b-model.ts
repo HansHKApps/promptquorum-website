@@ -391,6 +391,82 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Quantization & VRAM',
+    title: 'Quanta VRAM um modelo 70B precisa?',
+    seoTitle: 'VRAM para 70B: 3 opções 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Um modelo 70B em Q4_K_M precisa de ~40 GB de VRAM. Opções: dois RTX 3090 (48 GB), M5 Max com 128 GB de memória unificada ou GPU na nuvem. Resposta rápida do PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Quanta VRAM um modelo 70B precisa?',
+        answer: 'Um modelo 70B em Q4_K_M precisa de aproximadamente 40 GB de VRAM. Opções de consumo: dois RTX 3090 (48 GB no total), M5 Max com 128 GB de memória unificada ou aluguel de GPU na nuvem.',
+        bullets: [
+          'Q4_K_M 70B: ~40 GB de VRAM necessários',
+          'Dois RTX 3090 (48 GB no total): opção de desktop de consumo',
+          'M5 Max com 128 GB de memória unificada: melhor experiência em um único equipamento',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Um modelo 70B em Q4_K_M precisa de aproximadamente 40 GB de VRAM',
+          'Opções de hardware de consumo: dois RTX 3090 (48 GB) ou Apple M5 Max com 128 GB de memória unificada',
+          'Para uso ocasional de menos de 5 horas por semana, o aluguel de GPU na nuvem a $0,50–$1,50/hora é mais barato que comprar hardware',
+        ],
+      },
+      body1: {
+        title: 'Opções de hardware para executar um modelo 70B',
+        content: [
+          'Em maio de 2026, <strong>um modelo 70B em Q4_K_M representa aproximadamente 40 GB de pesos comprimidos — 1,7× uma RTX 4090 individual e 1,6× uma RTX 3090 individual.</strong> Por isso 70B é o nível mais difícil de executar localmente: ele cruza a fronteira entre GPUs de consumo (máx. 24 GB) e hardware de workstation. Existem três caminhos, cada um com diferentes trade-offs.',
+          'Apple M5 Max com 128 GB de memória unificada é a opção de equipamento único mais fluida — sem gargalo PCIe entre a memória CPU e GPU, e o macOS gerencia a alocação automaticamente. Dois RTX 3090 funcionam, mas exigem um desktop de nível workstation e configuração cuidadosa de drivers.',
+        ],
+        columns: ['Hardware', 'VRAM total', 'Velocidade'],
+        rows: [
+          { 'Hardware': 'Dois RTX 3090', 'VRAM total': '48 GB', 'Velocidade': '~8 tok/s' },
+          { 'Hardware': 'RTX 3090 + offload CPU', 'VRAM total': '24 GB + 32 GB RAM', 'Velocidade': '~3 tok/s' },
+          { 'Hardware': 'Apple M5 Max 128 GB', 'VRAM total': '128 GB unificada', 'Velocidade': '~15 tok/s' },
+          { 'Hardware': 'RunPod H100 (nuvem)', 'VRAM total': '80 GB', 'Velocidade': '~50 tok/s' },
+        ],
+      },
+      body2: {
+        title: 'Quando a nuvem faz mais sentido que o local',
+        content: [
+          'O aluguel de GPU na nuvem para inferência 70B custa $0,50–$1,50 por hora no RunPod e Lambda Labs em maio de 2026. Uma configuração de dois RTX 3090 custa $1.500–$2.500 em hardware, que amortiza para os custos de nuvem apenas após 1.500–3.000 horas de uso.',
+          'Para equipes ou indivíduos que usam modelos 70B menos de 5 horas por semana, o aluguel na nuvem é tanto mais barato quanto mais fácil de manter. O 70B local se justifica para casos de uso sensíveis à privacidade (sem dados saindo do seu hardware) ou inferência de alta frequência sustentada onde os custos de nuvem se acumulam rapidamente. Para modelos menores que cabem em GPUs de consumo, veja <a href="/pt/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">o guia de níveis de VRAM</a>.',
+          'Para uma análise completa das estratégias de implantação 70B, veja <a href="/pt/local-llms/run-70b-models-24gb-vram" class="text-primary hover:underline">como executar modelos 70B com 24 GB de VRAM</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre VRAM para modelos 70B',
+        faqs: [
+          {
+            q: 'Um único RTX 3090 pode executar um modelo 70B?',
+            a: 'Parcialmente. Um único RTX 3090 (24 GB) pode executar 70B com offload para CPU, mas a velocidade cai para ~3 tok/s — muito lento para uso interativo. A inferência GPU completa para 70B requer 40+ GB de VRAM combinada.',
+          },
+          {
+            q: 'Posso executar um modelo 70B em um MacBook?',
+            a: 'Apenas no M3 Max, M4 Max, M4 Ultra ou M5 Max com 128 GB de memória unificada. Um MacBook com 32 GB de RAM não pode executar 70B em Q4. Veja <a href="/pt/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">o guia de dimensionamento de RAM</a> para alternativas com modelos menores.',
+          },
+          {
+            q: 'Existe uma forma mais barata de executar modelos 70B localmente?',
+            a: 'Sim — use quantização Q2_K para reduzir o modelo 70B para ~21 GB de VRAM, mas a qualidade degrada significativamente. Alternativamente, modelos 34B em Q5 oferecem 80–90% da qualidade do 70B com metade da necessidade de VRAM.',
+          },
+          {
+            q: 'Como a VRAM do 70B se compara a um modelo 13B?',
+            a: 'Um modelo 13B em Q4 precisa de ~9 GB de VRAM vs ~40 GB para 70B. Para a maioria das tarefas — chat, codificação, resumo — um modelo 13–14B em Q5 cobre a diferença. Veja <a href="/pt/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">requisitos de VRAM por tamanho de modelo</a>.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Quantization & VRAM',
     title: '¿Cuánta VRAM necesita un modelo 70B?',

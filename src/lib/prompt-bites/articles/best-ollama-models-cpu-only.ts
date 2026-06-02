@@ -476,4 +476,81 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Ollama',
+    title: 'Melhores modelos Ollama somente para CPU?',
+    seoTitle: 'Melhores modelos Ollama sem GPU 2026 | PromptQuorum',
+    metaDescription: 'Phi-4 Mini Q4 é o melhor modelo Ollama somente para CPU: 4 GB de RAM, ~5 tok/s. Llama 3 8B Q4 pede 8 GB. Gemma 2B é o mais rápido na CPU (~6 tok/s). Sem GPU.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Melhores modelos Ollama somente para CPU?',
+        answer: 'Sem GPU, o Phi-4 Mini em Q4 oferece o melhor equilíbrio entre qualidade e velocidade na CPU. O Llama 3 8B Q4 funciona com 8 GB de RAM ou mais. O Gemma 2B é a opção mais rápida na CPU.',
+        bullets: [
+          'Phi-4 Mini Q4: melhor relação qualidade/velocidade na CPU, requer 4 GB de RAM',
+          'Llama 3 8B Q4: melhor qualidade, requer 8 GB de RAM (mais lento)',
+          'Gemma 2B: inferência CPU mais rápida, 2 GB de RAM',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'A inferência na CPU é 5–10× mais lenta do que na GPU — espere entre 3 e 6 tok/s em uma CPU desktop moderna de 8 núcleos',
+          'Phi-4 Mini Q4 é a melhor escolha somente para CPU: 4 GB de RAM, ~5 tok/s, excelente qualidade de raciocínio',
+          'Gemma 2B é o mais rápido na CPU (~6 tok/s), mas oferece qualidade de raciocínio inferior ao Phi-4 Mini',
+          'A inferência na CPU é prática para trabalhos em lote e consultas individuais; muito lenta para chat interativo',
+        ],
+      },
+      body1: {
+        title: 'A realidade da velocidade na CPU',
+        content: [
+          '<strong>Em maio de 2026, a inferência na CPU roda a 3–6 tokens por segundo em uma CPU desktop moderna de 8 núcleos — aproximadamente 5–10× mais lenta do que uma GPU de médio porte.</strong> Um modelo 7B em Q4 produz aproximadamente uma palavra a cada 200–300 milissegundos na CPU.',
+          'Essa velocidade é aceitável para dois casos de uso: processamento em lote noturno, como resumir documentos ou classificar dados, e consultas individuais onde uma espera de 30 segundos é aceitável. Para chat interativo ou completação de código em tempo real, a inferência na CPU é muito lenta para ser prática.',
+          'A restrição fundamental é a largura de banda de memória, não a velocidade de clock da CPU. CPUs de consumo leem a RAM a 40–80 GB/s. Uma GPU dedicada lê a VRAM a 400–900 GB/s. A inferência de LLM escala diretamente com a largura de banda de memória — por isso até uma GPU de médio porte produz inferência dramaticamente mais rápida do que uma CPU de alto desempenho.',
+        ],
+      },
+      body2: {
+        title: 'Os 3 melhores modelos para uso somente com CPU',
+        content: [
+          'O modelo correto somente para CPU depende de se você prioriza qualidade ou velocidade. <strong>Phi-4 Mini Q4 oferece o melhor equilíbrio — entrega qualidade de raciocínio próxima ao Llama 3 8B precisando de apenas 4 GB de RAM e rodando notavelmente mais rápido.</strong>',
+          'Gemma 2B é a única opção viável quando a RAM está limitada a 2 GB. Alcança ~6 tok/s na CPU, mas produz respostas de qualidade notavelmente inferior em tarefas de raciocínio de várias etapas em comparação com o Phi-4 Mini.',
+          'Para a comparação completa de configurações somente com CPU, incluindo requisitos de RAM e otimizações no nível do sistema operacional, consulte o <a href="/pt/local-llms/best-cpu-only-llm" class="text-primary hover:underline">guia dos melhores LLMs somente para CPU</a>.',
+        ],
+        columns: ['Modelo', 'RAM necessária', 'Velocidade na CPU'],
+        rows: [
+          { 'Modelo': 'Phi-4 Mini Q4', 'RAM necessária': '4 GB', 'Velocidade na CPU': '~4–5 tok/s' },
+          { 'Modelo': 'Llama 3 8B Q4', 'RAM necessária': '8 GB', 'Velocidade na CPU': '~3 tok/s' },
+          { 'Modelo': 'Gemma 2B', 'RAM necessária': '2 GB', 'Velocidade na CPU': '~6 tok/s' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre LLMs somente para CPU',
+        faqs: [
+          {
+            q: 'Quanta RAM preciso para o Ollama somente com CPU?',
+            a: 'Mínimo de 2 GB para Gemma 2B. 4 GB para Phi-4 Mini Q4. 8 GB para Llama 3 8B Q4. Adicione 1–2 GB acima do tamanho do modelo para a sobrecarga do sistema operacional e do runtime do Ollama.',
+          },
+          {
+            q: 'Por que a inferência na CPU é tão mais lenta do que na GPU?',
+            a: 'A inferência de LLM é limitada pela largura de banda de memória. CPUs de consumo leem a RAM a 40–80 GB/s. Uma GPU de médio porte lê a VRAM a 400–900 GB/s. Essa diferença de largura de banda de 10× se traduz diretamente em geração de tokens 5–10× mais lenta.',
+          },
+          {
+            q: 'Posso usar o Ollama em um laptop sem GPU dedicada?',
+            a: 'Sim. O Ollama roda automaticamente na CPU quando nenhuma GPU é detectada. Espere 3–5 tok/s em uma CPU moderna de laptop. Consulte <a href="/pt/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">os melhores modelos Ollama agora</a> para recomendações por nível de GPU se você atualizar mais tarde.',
+          },
+          {
+            q: 'Quais CPUs são mais rápidas para inferência de LLM local?',
+            a: 'Os chips Apple M-series (M3, M4) usam arquitetura de memória unificada e alcançam 15–30 tok/s em modelos 7B — muito superiores às CPUs x86 em inferência somente com CPU. Entre as CPUs x86, as que têm maior largura de banda de memória e grande cache L3 têm o melhor desempenho.',
+          },
+        ],
+      },
+    },
+  },
 }

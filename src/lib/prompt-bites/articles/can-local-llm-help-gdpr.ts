@@ -397,6 +397,89 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Privacy & Security',
+    title: 'Um LLM local pode ajudar com a conformidade do RGPD?',
+    seoTitle: 'LLM local ajuda com o RGPD? 2026 | PromptQuorum',
+    metaDescription: 'Sim: executar um LLM de código aberto localmente elimina o problema de transferência do Artigo 44 do RGPD. Melhores modelos para organizações com dados sensíveis em 2026.',
+    publishDate: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    quickAnswerTop: {
+      pt: {
+        question: 'Um LLM local pode ajudar com a conformidade do RGPD?',
+        answer: 'Sim — executar um modelo de pesos abertos localmente elimina a transferência de dados para países terceiros do Artigo 44 que torna a IA em nuvem legalmente complexa sob o RGPD, o que significa que seus prompts e respostas nunca saem do seu servidor. Modelos locais como Qwen 3 14B ou Llama 4 Scout podem lidar com textos de RH, jurídico e médico inteiramente nas instalações.',
+        bullets: [
+          'Sem transferência = sem problema do Artigo 44: o maior obstáculo do RGPD para a IA em nuvem desaparece',
+          'Artigo 25 (privacidade desde o design) satisfeito: os dados nunca saem da sua jurisdição por arquitetura',
+          'O melhor para 12 GB de VRAM: Qwen 3 14B Q4_K_M via Ollama — versátil e com capacidade de código',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'O problema central do RGPD com a IA em nuvem é o Artigo 44: qualquer prompt com dados pessoais enviado a um servidor fora da UE é uma transferência para país terceiro que exige base legal',
+          'LLMs locais eliminam a transferência por completo — sem transferência não há problema com o Artigo 44, independentemente do conteúdo do prompt',
+          'O Artigo 25 do RGPD (privacidade desde o design) fica diretamente satisfeito: sua infraestrutura processa dados dentro da sua jurisdição por padrão',
+          'Ponto de partida prático: Qwen 3 14B Q4_K_M via Ollama em uma GPU com 12 GB de VRAM — processa resumos de RH, rascunhos jurídicos e textos médicos com qualidade de produção',
+        ],
+      },
+      body1: {
+        title: 'O problema do RGPD com a IA em nuvem — e por que o uso local o resolve',
+        content: [
+          '<strong>Toda vez que você envia um prompt para um LLM em nuvem (ChatGPT, Claude, Gemini), qualquer dado pessoal nesse prompt é transferido para um servidor fora da UE. O Artigo 44 do RGPD exige uma base legal para essa transferência — tipicamente Cláusulas Contratuais Padrão mais uma Avaliação de Impacto da Transferência. Essa é a carga de conformidade que a IA em nuvem cria. Os LLMs locais a eliminam ao remover completamente a transferência.</strong>',
+          'Quando um modelo local roda no seu próprio hardware, o processamento de dados ocorre dentro da jurisdição. O modelo recebe seu prompt e gera uma resposta inteiramente na sua CPU ou GPU — nenhuma chamada de rede sai do seu prédio. Isso satisfaz o Artigo 44 (sem transferência, sem necessidade de base legal), o Artigo 25 (privacidade desde o design: sua arquitetura padrão impede a transferência externa), e o Artigo 5(1)(f) (integridade e confidencialidade dos dados: os dados são processados apenas por sistemas sob seu controle).',
+          'Isso não é uma tecnicidade ou contorno — é a arquitetura de privacidade desde o design que os reguladores do RGPD descrevem. Quando as instituições da UE publicam orientações sobre IA e RGPD, o processamento local é consistentemente identificado como o modelo de implantação de menor risco.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Um LLM local ajuda na conformidade do RGPD ao eliminar completamente a transferência para país terceiro do Artigo 44 — nenhum dado jamais sai do seu servidor, portanto não é necessária base legal para transferência internacional.' },
+          { type: 'plain-terms', text: 'A IA em nuvem envia suas perguntas para servidores no exterior. O RGPD restringe isso. Um modelo de IA local processa tudo no seu próprio computador — os dados nunca viajam, portanto as regras do RGPD sobre dados que saem da UE simplesmente não se aplicam.' },
+        ],
+      },
+      body2: {
+        title: 'Quais modelos locais são práticos para trabalho regulado pelo RGPD',
+        content: [
+          '<strong>Três modelos de pesos abertos cobrem os principais fluxos de trabalho regulados pelo RGPD em 2026. Para RH geral, jurídico e redação de documentos: Qwen 3 14B Q4_K_M (precisa de 10–12 GB de VRAM). Para análise de código e documentação técnica: Qwen 3 Coder 14B (mesmo VRAM, mais forte em saída estruturada). Para organizações com uma única GPU ou hardware mais limitado: Qwen 3 8B Q4_K_M (6–8 GB de VRAM).</strong>',
+          'Todos os três rodam via Ollama com um único comando e não exigem conectividade em nuvem após o download único do modelo. O download é feito uma vez do Hugging Face via HTTPS e pode ser feito em uma máquina air-gapped via mídia física. Depois: totalmente offline.',
+          'Para organizações maiores que precisam de qualidade próxima à fronteira: Llama 4 Scout (17B MoE) cabe em 24 GB de VRAM com uma janela de contexto de 10M tokens — adequado para processar contratos longos, documentos de política de RH ou registros médicos em um único contexto.',
+        ],
+        columns: ['Fluxo de trabalho', 'Modelo recomendado', 'VRAM necessária', 'Comando Ollama'],
+        rows: [
+          { 'Fluxo de trabalho': 'Documentos de RH, resumos', 'Modelo recomendado': 'Qwen 3 14B Q4_K_M', 'VRAM necessária': '10–12 GB', 'Comando Ollama': 'ollama run qwen2.5:14b' },
+          { 'Fluxo de trabalho': 'Redação jurídica, contratos', 'Modelo recomendado': 'Qwen 3 14B Q4_K_M', 'VRAM necessária': '10–12 GB', 'Comando Ollama': 'ollama run qwen2.5:14b' },
+          { 'Fluxo de trabalho': 'Código, documentação técnica', 'Modelo recomendado': 'Qwen 3 Coder 14B', 'VRAM necessária': '10–12 GB', 'Comando Ollama': 'ollama run qwen2.5-coder:14b' },
+          { 'Fluxo de trabalho': 'Orçamento / 8 GB VRAM', 'Modelo recomendado': 'Qwen 3 8B Q4_K_M', 'VRAM necessária': '6–8 GB', 'Comando Ollama': 'ollama run qwen3:8b' },
+          { 'Fluxo de trabalho': 'Documentos longos (>100K tokens)', 'Modelo recomendado': 'Llama 4 Scout', 'VRAM necessária': '24 GB', 'Comando Ollama': 'ollama run llama4:scout' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas: LLMs locais e o RGPD',
+        faqs: [
+          {
+            q: 'Usar um LLM local significa que não tenho nenhuma obrigação sob o RGPD?',
+            a: 'Não. As obrigações do RGPD se aplicam sempre que você processa dados pessoais, independentemente do uso de IA. Um LLM local reduz o risco de transferência do Artigo 44, mas não elimina obrigações como manter um registro de tratamentos do Artigo 30, obter base legal de tratamento e garantir a minimização de dados. Resolve um dos problemas mais difíceis do RGPD (transferências internacionais) — não todos.',
+          },
+          {
+            q: 'Posso usar o Ollama em um ambiente corporativo para conformidade com o RGPD?',
+            a: 'Sim. O Ollama é um runtime de inferência local sem telemetria em nuvem para tráfego de inferência (verifique a documentação do Ollama para a política de telemetria atual sobre downloads de modelos). Em uma configuração corporativa: desative as atualizações automáticas de modelos, documente a versão do Ollama e os checksums dos modelos no seu registro de tratamentos do Artigo 30 e execute em um segmento de rede isolado. Consulte o <a href="/pt/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">guia completo de configuração do Qwen para o RGPD</a> para uma lista de verificação completa.',
+          },
+          {
+            q: 'Um LLM local é suficiente para processar dados médicos ou jurídicos sob o RGPD?',
+            a: 'Do ponto de vista do direito de transferência: sim — o processamento local elimina o principal obstáculo do RGPD. Você ainda precisa satisfazer as bases legais substantivas para o tratamento dessa categoria de dados (Artigo 9 para dados médicos, Artigo 6 para dados pessoais em geral). Executar um LLM local não substitui uma base legal válida ou uma Avaliação de Impacto na Proteção de Dados quando necessária.',
+          },
+          {
+            q: 'Os pesos de LLMs de código aberto carregam risco do RGPD por seus dados de treinamento?',
+            a: 'Potencialmente. Se um modelo foi treinado com dados pessoais obtidos sem consentimento (uma preocupação comum para os primeiros LLMs), implantá-lo poderia criar responsabilidade indireta sob o RGPD. Para uso em produção, prefira modelos com procedência documentada dos dados de treinamento: Qwen 3 (Alibaba Tongyi), Llama 4 (Meta) ou Mistral (europeu). Evite modelos com dados de treinamento não divulgados em ambientes de alto risco do RGPD.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Privacy & Security',
     title: '¿Puede un LLM local ayudar con el cumplimiento del RGPD?',

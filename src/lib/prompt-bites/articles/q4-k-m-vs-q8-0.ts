@@ -396,6 +396,83 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Quantization & VRAM',
+    title: 'Q4_K_M vs Q8_0: qual escolher?',
+    seoTitle: 'Q4_K_M vs Q8_0: qual? 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Use Q4_K_M com 8 GB de VRAM ou menos. Use Q8_0 com 12+ GB. Q4_K_M oferece 95% da qualidade do Q8_0 à metade do tamanho. Resposta rápida do PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      pt: {
+        question: 'Q4_K_M vs Q8_0: qual escolher?',
+        answer: 'Use Q4_K_M com 8 GB de VRAM ou menos. Use Q8_0 com 12+ GB. Q4_K_M oferece 95% da qualidade do Q8_0 aproximadamente à metade do tamanho de arquivo.',
+        bullets: [
+          'Q4_K_M: ~5–6 GB para modelos 7B, ideal para 8 GB de VRAM',
+          'Q8_0: ~8–9 GB para modelos 7B, precisa de 12+ GB de VRAM',
+          'A diferença de qualidade é inferior a 5% no uso real',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '8 GB de VRAM ou menos: use Q4_K_M — oferece 95% da qualidade do Q8_0 aproximadamente à metade do tamanho de arquivo',
+          '12+ GB de VRAM: Q8_0 vale a pena para qualidade quase de precisão total sem penalidade de velocidade',
+          'Para a maioria dos usuários que usam Ollama diariamente, Q4_K_M é a escolha certa',
+        ],
+      },
+      body1: {
+        title: 'O veredicto rápido',
+        content: [
+          'Em maio de 2026, <strong>Q8_0 representa ~99% da qualidade de precisão total. Q4_K_M representa ~92%.</strong> A diferença de 7 pontos é invisível em chat, codificação e resumo — três tarefas que cobrem 95% do uso de LLM local. Q8_0 só se sobressai em recuperação factual de documentos longos, matemática de múltiplas etapas e código que requer sintaxe exata em 500+ linhas.',
+          'Q4_K_M é a opção padrão correta porque a qualidade extra do Q8_0 só aparece em casos extremos: geração longa com recuperação factual exata ou raciocínio matemático que requer maior precisão. Para todo o resto, Q4_K_M equivale ao Q8_0 na prática.',
+          'Se você já está usando Q4_K_M e seus resultados parecem errados, o problema quase nunca é a quantização — é o tamanho do modelo ou a estrutura do prompt.',
+        ],
+      },
+      body2: {
+        title: 'Comparação lado a lado',
+        content: [
+          'A tabela abaixo compara Q4_K_M e Q8_0 para um modelo 7B. Ambos os formatos funcionam com Ollama, LM Studio e llama.cpp sem nenhuma configuração especial.',
+          'Para contexto sobre o que Q4_K_M significa e como funciona a compressão k-quant, veja o <a href="/pt/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">guia explicativo do Q4_K_M</a>. Para a referência completa de quantização, veja <a href="/pt/local-llms/quantization-levels-comparison" class="text-primary hover:underline">níveis de quantização comparados</a>.',
+          '<strong>Três tarefas revelam a lacuna de qualidade do Q4_K_M: recuperação de documentos longos (50+ páginas), matemática de múltiplas etapas com estado intermediário e geração de código com 300+ linhas.</strong> Para essas tarefas, a precisão extra do Q8_0 evita os pequenos erros de deriva que se acumulam em saídas longas. Para todo o resto — chat, código com menos de 200 linhas, perguntas e respostas, resumo — a lacuna é invisível. Para uma revisão antes de decidir, veja <a href="/pt/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">o que Q4_K_M significa</a>.',
+        ],
+        columns: ['Métrica', 'Q4_K_M', 'Q8_0'],
+        rows: [
+          { 'Métrica': 'Tamanho do arquivo (modelo 7B)', 'Q4_K_M': '~4,1 GB', 'Q8_0': '~7,7 GB' },
+          { 'Métrica': 'VRAM necessária (7B)', 'Q4_K_M': '5–6 GB', 'Q8_0': '8–9 GB' },
+          { 'Métrica': 'Qualidade vs precisão total', 'Q4_K_M': '~92%', 'Q8_0': '~99%' },
+          { 'Métrica': 'Melhor para', 'Q4_K_M': '6–8 GB VRAM', 'Q8_0': '12+ GB VRAM' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Respostas rápidas sobre Q4_K_M vs Q8_0',
+        faqs: [
+          {
+            q: 'Q8_0 é notavelmente melhor que Q4_K_M?',
+            a: 'Apenas em casos extremos — matemática complexa de múltiplas etapas, recuperação de citações exatas em documentos longos ou saídas muito longas. Para chat, codificação e resumo (que cobrem 95% do uso), a maioria dos usuários não percebe a diferença.',
+          },
+          {
+            q: 'Q8_0 é mais rápido que Q4_K_M?',
+            a: 'Não. Q8_0 é maior e requer mais largura de banda de memória, tornando-o levemente mais lento por token que Q4_K_M. Velocidade e qualidade favorecem Q4_K_M para configurações com VRAM limitada. Veja <a href="/pt/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">o que Q4_K_M significa</a> para o motivo subjacente.',
+          },
+          {
+            q: 'Posso alternar entre Q4_K_M e Q8_0 para diferentes tarefas?',
+            a: 'Apenas baixando e executando diferentes tags de modelo. No Ollama: <code>ollama pull llama3:8b-q4_K_M</code> e <code>ollama pull llama3:8b-q8_0</code> são downloads separados. Você alterna especificando a tag em <code>ollama run</code>.',
+          },
+          {
+            q: 'E Q4_K_S — vale a pena usar em vez de Q4_K_M?',
+            a: 'Q4_K_S economiza cerca de 300 MB em relação ao Q4_K_M, mas oferece qualidade inferior. Use Q4_K_S apenas se sua VRAM for muito limitada e Q4_K_M não couber. Em quase todos os casos, Q4_K_M é a melhor escolha.',
+          },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Quantization & VRAM',
     title: 'Q4_K_M vs Q8_0: ¿cuál elegir?',

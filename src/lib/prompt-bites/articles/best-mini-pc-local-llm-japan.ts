@@ -592,6 +592,124 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Hardware Guides',
+    title: 'Qual é o melhor mini PC para LLMs locais disponível no Japão?',
+    seoTitle: 'Mini PC para LLMs Japão 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Beelink SER7 (~¥70.000), MINISFORUM UM790 Pro (~¥85.000), GMKtec NucBox K6 (~¥65.000): os 3 melhores mini PCs para LLMs locais no Japão. 32 GB DDR5, Vulkan.',
+    publishDate: '2026-05-27',
+    dateModified: '2026-05-27',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-27',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Beelink SER7', 'MINISFORUM UM790 Pro', 'GMKtec NucBox K6', 'Ryzen 7 7840HS', 'Ryzen 9 7940HS'],
+    educationalLevel: 'Intermediate',
+    audience: 'Usuários no Japão comprando um mini PC para inferência de LLM local',
+    affiliateDisclosure: true,
+    parentArticle: '/pt/prompt-bites/best-mini-pc-for-local-llm',
+    siblingBites: ['best-ollama-models-cpu-only', 'mac-mini-m4-local-llm'],
+    is_living_page: false,
+    leadAnswerBlock:
+      'O melhor mini PC para LLMs locais no Japão é o Beelink SER7 (Ryzen 7 7840HS, 32 GB DDR5) a ~¥70.000 na Amazon.co.jp. O Ollama funciona sem configuração; a iGPU AMD Radeon 780M é compatível com aceleração Vulkan.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual é o melhor mini PC para LLMs locais disponível no Japão?',
+        answer: 'O melhor mini PC para LLMs locais no Japão é o Beelink SER7 (Ryzen 7 7840HS, 32 GB DDR5) a ~¥70.000 na Amazon.co.jp. O Ollama funciona sem configuração; a iGPU AMD Radeon 780M é compatível com aceleração Vulkan.',
+        bullets: [
+          'Beelink SER7: melhor opção geral a ~¥70.000 (~$450 USD), ~10 tok/s em 7B Q4, silencioso o suficiente para uso em apartamento',
+          'MINISFORUM UM790 Pro: opção de potência a ~¥85.000 (~$540 USD), ~12 tok/s, expansível para 64 GB DDR5',
+          'GMKtec NucBox K6: opção econômica a ~¥65.000 (~$420 USD), ~9 tok/s — evite para uso intensivo frequente',
+          'Pule qualquer modelo com apenas 16 GB de RAM — insuficiente para modelos 7B com contexto de 8K+',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Beelink SER7 (Ryzen 7 7840HS, 32 GB DDR5) é o melhor mini PC geral para LLMs locais no Japão a ~¥70.000 na Amazon.co.jp — o Ollama funciona sem configuração',
+          'MINISFORUM UM790 Pro (Ryzen 9 7940HS, 32 GB DDR5) é a opção de potência a ~¥85.000 — suporta expansão para 64 GB DDR5 para modelos 13B+',
+          'GMKtec NucBox K6 (Ryzen 7 7840HS, 32 GB DDR5) é a opção econômica a ~¥65.000 — mesmo CPU que o Beelink, mas esquenta mais sob carga contínua',
+          'Os três aceitam entrada de 100–240V — nenhum adaptador de tensão necessário para as tomadas japonesas de 100V',
+          'Os três têm iGPU AMD Radeon 780M com suporte Vulkan — o Ollama usa Vulkan para inferência acelerada por GPU nos três',
+          'Pule qualquer mini PC com apenas 16 GB de RAM — um modelo 7B preenche a RAM no contexto de 8K',
+        ],
+      },
+      body1: {
+        id: 'top-3',
+        title: 'Os 3 melhores mini PCs disponíveis no Japão',
+        content: [
+          '<strong>Em maio de 2026, três mini PCs AMD com 32 GB de RAM DDR5 são as melhores opções para inferência de LLM local disponíveis na Amazon.co.jp e nos principais varejistas japoneses — todos com preços entre ¥65.000 e ¥85.000.</strong> Cada um inclui um APU da série Ryzen 7000 com gráficos integrados AMD Radeon 780M. O Ollama suporta aceleração Vulkan no Radeon 780M, o que significa que os três executam inferência acelerada por GPU sem GPU dedicada nem configuração especial de drivers no Linux.',
+          'A tabela abaixo compara os três modelos em CPU, RAM, preço no Japão e velocidade de inferência medida em um modelo 7B Q4. Preços em maio de 2026 — verifique antes de comprar.',
+        ],
+        columns: ['Modelo', 'CPU + RAM', 'Preço no Japão', 'Velocidade LLM (7B Q4)'],
+        rows: [
+          { 'Modelo': 'Beelink SER7', 'CPU + RAM': 'Ryzen 7 7840HS + 32 GB DDR5', 'Preço no Japão': '~¥70.000', 'Velocidade LLM (7B Q4)': '~10 tok/s' },
+          { 'Modelo': 'MINISFORUM UM790 Pro', 'CPU + RAM': 'Ryzen 9 7940HS + 32 GB DDR5', 'Preço no Japão': '~¥85.000', 'Velocidade LLM (7B Q4)': '~12 tok/s' },
+          { 'Modelo': 'GMKtec NucBox K6', 'CPU + RAM': 'Ryzen 7 7840HS + 32 GB DDR5', 'Preço no Japão': '~¥65.000', 'Velocidade LLM (7B Q4)': '~9 tok/s' },
+        ],
+        subsections: [
+          {
+            title: 'Beelink SER7 — Melhor opção geral',
+            text: 'Ideal para: a maioria dos usuários que buscam inferência 7B confiável em uma máquina compacta e silenciosa. O SER7 fica abaixo de 30 dB em repouso — adequado para uso em apartamentos japoneses. Evite se: precisar executar modelos 13B+ regularmente; nesse caso, opte pela variante de 64 GB de RAM. <a href="https://www.amazon.co.jp/s?k=Beelink+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Ver na Amazon.co.jp</a>',
+          },
+          {
+            title: 'MINISFORUM UM790 Pro — Opção de potência',
+            text: 'Ideal para: usuários avançados que querem margem para expandir para 64 GB DDR5 para modelos de 13B e 30B. O Ryzen 9 7940HS entrega ~12 tok/s em um modelo 7B Q4 — o mais rápido dos três. Evite se: o orçamento for a principal preocupação; o sobrecusto de ¥15.000 sobre o Beelink traz velocidade, mas não uma diferença dramática em 7B. <a href="https://www.amazon.co.jp/s?k=MINISFORUM+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Ver na Amazon.co.jp</a>',
+          },
+          {
+            title: 'GMKtec NucBox K6 — Opção econômica',
+            text: 'Ideal para: compradores com orçamento que querem a mesma plataforma Ryzen 7 7840HS do Beelink SER7 por ¥5.000 menos. Evite se: planeja sessões de LLM intensivas frequentes — o NucBox K6 esquenta notavelmente mais do que o Beelink SER7 sob carga de inferência contínua. <a href="https://www.amazon.co.jp/s?k=GMKtec+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Ver na Amazon.co.jp</a>',
+          },
+          {
+            title: 'Pule: qualquer modelo com apenas 16 GB de RAM',
+            text: 'Um mini PC com apenas 16 GB de RAM é insuficiente para inferência de modelos 7B com contexto útil. O arquivo do modelo 7B Q4 carrega com ~4 GB, mas a RAM enche rapidamente com janelas de contexto de 8K+ — o sistema começa a fazer swap para o NVMe e o throughput cai para menos de 2 tok/s. Compre no mínimo 32 GB.',
+          },
+        ],
+        note: 'Para inferência baseada em GPU no Japão, consulte nosso <a href="/pt/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">guia de preços de GPU no Japão</a>.',
+      },
+      body2: {
+        id: 'buyers-guide',
+        title: 'Guia de compra para o Japão',
+        content: [
+          '<strong>Antes de comprar um mini PC para LLMs locais no Japão, quatro decisões de hardware são importantes: RAM, armazenamento, compatibilidade elétrica e ruído.</strong> Os três modelos recomendados atendem a todos os requisitos.',
+          'RAM: 32 GB é o mínimo para inferência de modelos 7B com contexto de 8K+. Um modelo 7B Q4 carrega com ~4 GB; os buffers de contexto, o sistema operacional e os processos em segundo plano consomem o restante de um sistema de 16 GB antes que a janela de contexto se preencha. 32 GB fornece margem confiável para modelos 7B e permite executar duas sessões simultâneas.',
+          'Armazenamento: SSD NVMe de 512 GB ou mais. Os arquivos de modelo têm 4–8 GB cada. Uma unidade de 512 GB armazena 6–8 modelos com espaço para o sistema operacional. As três máquinas recomendadas vêm com 512 GB NVMe e suportam unidades de reposição M.2 2280 disponíveis na Yodobashi Camera (ヨドバシカメラ) e na Amazon.co.jp.',
+          'Energia: os três mini PCs aceitam entrada CA de 100–240V. As tomadas japonesas funcionam a 100V 50/60 Hz — nenhum adaptador de tensão é necessário. Os adaptadores de alimentação incluídos são projetados para o padrão japonês.',
+          'Ruído: os três funcionam abaixo de 35 dB em repouso. Sob carga de inferência (CPU + iGPU ativos), o Beelink SER7 e o MINISFORUM UM790 Pro ficam abaixo de 38 dB. O GMKtec NucBox K6 pode atingir 42 dB sob carga contínua. Os três são silenciosos o suficiente para um escritório doméstico em apartamento japonês.',
+          'Aceleração Vulkan: a iGPU AMD Radeon 780M nos três suporta Vulkan. O Ollama no Linux usa Vulkan para descarregar a inferência para a iGPU, aumentando o throughput de ~4 tok/s (somente CPU) para ~10 tok/s (iGPU via Vulkan). No Windows, o Ollama usa DirectML para a mesma iGPU — o desempenho é semelhante.',
+          'Matriz de decisão: comprador com orçamento → GMKtec NucBox K6 (~¥65.000); a maioria dos usuários → Beelink SER7 (~¥70.000); usuários avançados que precisam de expansão para 64 GB → MINISFORUM UM790 Pro (~¥85.000).',
+          'Onde comprar no Japão: a Amazon.co.jp tem os três com entrega Prime. A Yodobashi Camera (ヨドバシカメラ) online tem o Beelink SER7 e o MINISFORUM UM790 Pro. Use o Kakaku.com (価格.com) para comparação de preços em tempo real entre varejistas japoneses antes de pedir.',
+          '<em>Divulgação: Este artigo contém links de afiliado. Podemos ganhar uma comissão se você comprar por meio desses links, sem custo adicional para você.</em>',
+          'Consulte a comparação completa de hardware no guia principal: <a href="/pt/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">Melhor Mini PC para LLM Local</a>. Para configurações somente de GPU, consulte <a href="/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">Melhores GPUs econômicas para LLM local</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Perguntas frequentes sobre mini PCs para LLMs locais no Japão',
+        faqs: [
+          {
+            q: 'Esses mini PCs estão disponíveis na Yodobashi Camera (ヨドバシ)?',
+            a: 'A disponibilidade na Yodobashi Camera (ヨドバシ) varia por modelo e filial. A Amazon.co.jp e a compra direta dos fabricantes são mais confiáveis para o Beelink SER7, MINISFORUM UM790 Pro e GMKtec NucBox K6 — os três são mini PCs fabricados em Shenzhen que são distribuídos principalmente por canais online no Japão. Use o Kakaku.com para verificar o estoque atual entre os varejistas.',
+          },
+          {
+            q: 'Esses mini PCs são compatíveis com as tomadas japonesas de 100V?',
+            a: 'Sim. Os três — Beelink SER7, MINISFORUM UM790 Pro e GMKtec NucBox K6 — são fornecidos com adaptadores de alimentação projetados para entrada CA de 100–240V. As tomadas japonesas funcionam a 100V 50/60 Hz. Nenhum conversor de tensão ou transformador elevador é necessário.',
+          },
+          {
+            q: '16 GB de RAM é suficiente para LLMs locais?',
+            a: 'Não. 16 GB de RAM é insuficiente para inferência de modelos 7B com contexto de 8K+. O arquivo do modelo 7B Q4 carrega com ~4 GB, mas os buffers de contexto crescem com o comprimento da conversa. Com contexto de 8K, a RAM do sistema se preenche e a inferência cai para throughput quase nulo à medida que o sistema operacional faz swap para o NVMe. Compre no mínimo 32 GB.',
+          },
+          {
+            q: 'Mini PC vs Mac mini M4 — qual é melhor para LLMs locais no Japão?',
+            a: 'O Mac mini M4 é mais rápido com ~18 tok/s contra ~10 tok/s do Beelink SER7, e custa ~¥98.000 no Japão. Compre o Mac mini M4 se seu orçamento permitir e você usar macOS — a arquitetura de memória unificada da Apple e a aceleração Metal GPU são mais eficientes do que AMD Vulkan nesses mini PCs. Compre o Beelink SER7 se precisar do Windows, preferir AMD/Vulkan, ou quiser economizar ¥28.000.',
+          },
+        ],
+      },
+    },
+  },
   zh: {
     theme: 'Hardware Guides',
     title: '日本可以买到的最适合本地LLM的迷你电脑是什么？',

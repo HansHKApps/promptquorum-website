@@ -2268,4 +2268,396 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Local AI Agents & Tool Use',
+    title: 'Melhores modelos locais para Tool Calling em 2026: Benchmarks e comparativo',
+    seoTitle: 'Melhores modelos locais para Tool Calling 2026: MCP real',
+    intro:
+      'A confiabilidade nas chamadas a ferramentas é o fator determinante de se um agente local conclui uma tarefa ou trava. O harness que envolve o modelo importa menos — mesmo Cline, mesmos servidores MCP, mesmo prompt: o modelo emite chamadas a ferramentas bem formadas ou não. Este guia compara os cinco modelos confiáveis para Tool Calling em maio de 2026 (Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) em fluxos de trabalho MCP reais, identifica os modos de falha e indica qual modelo escolher conforme seu orçamento de VRAM.',
+    metaDescription:
+      'Compare Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B na confiabilidade de Tool Calling. Benchmarks MCP reais, não de leaderboard.',
+    twitterDescription:
+      '5 modelos locais avaliados em tool calls MCP reais: Gemma 4, GLM-5.1, Qwen3, Qwen3-Coder, Llama 3.3. Taxas de confiabilidade, VRAM e modos de falha.',
+    current_models_mentioned: [
+      'Gemma 4 27B',
+      'GLM-5.1 32B',
+      'Qwen3 32B',
+      'Qwen3-Coder 30B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 Max 64 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'NVIDIA L40S 48 GB',
+    ],
+    audience:
+      'Desenvolvedores que constroem agentes locais com MCP, Cline, Continue.dev ou orquestrações personalizadas e precisam escolher um modelo de Tool Calling que funcione de forma confiável em fluxos de trabalho de sistema de arquivos, banco de dados, navegador e GitHub.',
+    readTime: '12 min de leitura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'modelo local para tool calling',
+    targetKeywords: [
+      'melhor modelo local tool calling',
+      'gemma 4 vs qwen3 tool calling',
+      'benchmarks modelo mcp',
+      'llm local function calling 2026',
+      'glm-5.1 tool calls',
+      'qwen3-coder mcp',
+    ],
+    leadAnswerBlock:
+      '**Cinco modelos locais realizam tool calls de forma confiável em maio de 2026: Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B. O Llama 3.3 70B tem o teto mais alto (~97% de taxa de chamadas bem formadas em servidores MCP), mas exige 48 GB+ de VRAM. O Qwen3-Coder 30B é a melhor escolha para trabalho voltado a código. O Gemma 4 27B é a melhor opção de uso geral para rigs com 24 GB de VRAM. O GLM-5.1 32B vence em tarefas de agente com contexto longo (128K de contexto de fábrica). O Qwen3 32B é o fallback equilibrado. Os modelos abaixo de 7B e a maioria dos modelos de uso geral sem treinamento explícito para tool calling emitem chamadas malformadas nos mesmos fluxos de trabalho — a falha corresponde ao modelo, não ao harness. Uma quantização mais agressiva que Q4_K_M nos modelos menores desta lista degrada a confiabilidade de forma notável; Q4_K_M é o mínimo de produção.**',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual modelo local é o melhor para Tool Calling em 2026?',
+        answer:
+          'O Llama 3.3 70B tem a maior taxa de sucesso em tool calling, mas precisa de 48 GB+ de VRAM, por isso a maioria dos usuários escolhe um dos modelos de 27B–32B. O Gemma 4 27B é a opção padrão para trabalho de agente de uso geral em um rig de 24 GB — o melhor treinamento para tool calling do seu tamanho, conservador em chamadas encadeadas, mas confiável. O GLM-5.1 32B é a escolha para tarefas de contexto longo (128K de fábrica) como relatórios de compliance ou transcrições de reuniões longas. O Qwen3 32B é equilibrado; o Qwen3-Coder 30B é o melhor tool caller dedicado a código. Os cinco emitem JSON de function calling limpo e passam pela validação de esquema estrita que os clientes MCP aplicam. A confiabilidade em tool calling é uma propriedade do modelo — o mesmo harness com um modelo de uso geral menor falha no mesmo fluxo de trabalho. A solução é "trocar de modelo", não "trocar de harness".',
+        bullets: [
+          'Melhores opções por VRAM: 24 GB → Gemma 4 27B; 24 GB contexto longo → GLM-5.1 32B; 24 GB voltado a código → Qwen3-Coder 30B; 48 GB+ → Llama 3.3 70B.',
+          'Os cinco modelos confiáveis emitem JSON de function calling bem formado, lidam com chamadas paralelas e passam pela validação estrita de esquema nos clientes MCP.',
+          'Os modelos abaixo de 7B e os modelos de uso geral sem treinamento para tool calling emitem chamadas malformadas — a falha é do modelo, não do harness.',
+          'Quantização: Q4_K_M é o mínimo de produção para os cinco modelos. Q3 e abaixo degradam a confiabilidade do tool calling antes da qualidade do chat.',
+          'A portabilidade de formato é alta — o mesmo modelo gerencia as ferramentas da OpenAI, o XML do Cline, o MCP JSON-RPC e os blocos diff do Aider sem reconfiguração.',
+          'A confiabilidade no mundo real é taxa-de-chamadas-bem-formadas × taxa-de-seleção-correta × taxa-de-argumentos-corretos. Os números de 90%+ se compõem; espere de 80 a 90% end-to-end em fluxos de trabalho reais de múltiplas etapas.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'Pontos principais', anchor: '#key-takeaways' },
+      { label: 'Dados rápidos', anchor: '#quick-facts' },
+      { label: 'O que significa Tool Calling para modelos locais', anchor: '#what-tool-calling' },
+      { label: 'Como testamos', anchor: '#methodology' },
+      { label: 'Comparativo direto', anchor: '#comparison' },
+      { label: 'Gemma 4 27B', anchor: '#gemma-4' },
+      { label: 'GLM-5.1 32B', anchor: '#glm-5-1' },
+      { label: 'Qwen3 32B', anchor: '#qwen3' },
+      { label: 'Qwen3-Coder 30B', anchor: '#qwen3-coder' },
+      { label: 'Llama 3.3 70B', anchor: '#llama-3-3' },
+      { label: 'Modelos que não funcionam', anchor: '#non-starters' },
+      { label: 'Comparativo de formatos de Tool Call', anchor: '#format-comparison' },
+      { label: 'Erros comuns', anchor: '#common-mistakes' },
+      { label: 'Fontes', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: 'Leitura relacionada', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/best-local-models-tool-calling-2026-static.html',
+    gammaDescription: 'A apresentação abaixo cobre: 5 modelos locais avaliados em fluxos de trabalho MCP reais (Gemma 4 27B ~95%, GLM-5.1 32B ~94%, Qwen3 32B ~93%, Qwen3-Coder 30B ~96% código, Llama 3.3 70B ~97%), requisitos de VRAM e mínimo de quantização (Q4_K_M), modelos que falham (sub-7B, sem treinamento para tool calling, quantização excessiva), comparativo de formatos de tool call (OpenAI JSON, Cline XML, MCP JSON-RPC 2.0, Aider SEARCH/REPLACE), composição de confiabilidade em loops de agente e 5 erros comuns. Baixe o PDF como cartão de referência de modelos locais para tool calling.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Cinco tool callers confiáveis em maio de 2026:** Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B. Os cinco emitem JSON de function calling bem formado e passam pela validação estrita de esquema MCP.',
+          '**O Llama 3.3 70B tem o teto mais alto** — taxa de chamadas bem formadas na faixa alta dos 90% em servidores MCP — mas exige 48 GB+ de VRAM com Q4_K_M. Use apenas quando o hardware permitir; os modelos menores costumam ser suficientes.',
+          '**O Gemma 4 27B é a opção padrão para rigs de 24 GB.** O melhor treinamento para tool calling do seu tamanho, conservador em chamadas encadeadas. Confiável em servidores MCP de sistema de arquivos, banco de dados e GitHub.',
+          '**O GLM-5.1 32B vence em tarefas de agente com contexto longo.** Janela de contexto de 128K de fábrica; a truncagem ocasional de argumentos é a única falha comum. Escolha-o para relatórios de compliance e transcrições longas.',
+          '**O Qwen3-Coder 30B é o melhor tool caller voltado a código.** Forte em `replace_in_file`, `read_file` e ações de navegador conscientes do código; mais fraco em servidores MCP não relacionados a código do que o Gemma 4.',
+          '**Os modelos abaixo de 7B emitem chamadas malformadas.** Os modelos de uso geral sem treinamento explícito para tool calling fazem o mesmo independentemente do tamanho. A falha é do modelo, não do harness; trocar de harness não resolve.',
+          '**Q4_K_M é o mínimo de produção.** Q3 e abaixo degradam a confiabilidade do tool calling antes da qualidade do chat. Ajuste a quantização ao fluxo de trabalho, não só ao orçamento de VRAM.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Dados rápidos',
+        items: [
+          '**Melhor geral (24 GB VRAM):** Gemma 4 27B — Q4_K_M, ~16 GB VRAM, confiável nos quatro servidores MCP de referência (filesystem, sqlite, puppeteer, github).',
+          '**Melhor contexto longo (24 GB VRAM):** GLM-5.1 32B — 128K de contexto, ~20 GB VRAM com Q4_K_M.',
+          '**Melhor voltado a código:** Qwen3-Coder 30B — ~18 GB VRAM com Q4_K_M, o mais forte em `replace_in_file` e ferramentas MCP de código.',
+          '**Maior teto:** Llama 3.3 70B — ~42 GB VRAM com Q4_K_M, o mais lento dos cinco, mas o mais confiável em chamadas encadeadas.',
+          '**Opção leve:** Llama 3.2 3B — 4–8 GB VRAM, suficiente para classificação de triagem, insuficiente para planos de múltiplas etapas.',
+          '**Mínimo de produção para quantização:** Q4_K_M. Q3 e Q2 degradam a confiabilidade do tool calling antes da qualidade do chat.',
+          '**Faixa de confiabilidade geral:** 90%+ de chamadas bem formadas em fluxos de trabalho simples; 80–90% end-to-end em fluxos de trabalho reais de múltiplas etapas após compor erros de seleção e argumentos.',
+        ],
+      },
+      whatToolCalling: {
+        id: 'what-tool-calling',
+        title: 'O que significa Tool Calling para modelos locais',
+        content:
+          '**Tool calling é a capacidade do modelo de emitir JSON estruturado que nomeia uma ferramenta e seus argumentos — a habilidade do lado LLM que transforma um modelo de chat em um agente.** MCP, as ferramentas da OpenAI, as ferramentas da Anthropic e o XML do Cline são expressões em formato de wire da mesma habilidade subjacente.',
+        items: [
+          '**A habilidade que o modelo precisa:** ler um esquema de ferramenta, decidir se a solicitação do usuário corresponde a uma chamada de ferramenta e emitir uma resposta estruturada que nomeie a ferramenta e forneça argumentos que correspondam ao esquema. Não prosa livre com texto em forma de tool call — um objeto estruturado que o harness consiga analisar sem heurísticas.',
+          '**O formato de wire varia; a habilidade não.** Um modelo que realiza tool calling de forma confiável no formato JSON de ferramentas da OpenAI geralmente também o faz de forma confiável no XML do Cline e no JSON-RPC do MCP. A habilidade se porta; as falhas de reformatação são superficiais.',
+          '**O treinamento para tool calling é a etapa de pós-treinamento mais barata e de maior impacto.** Os saltos Gemma 3 → Gemma 4, Qwen3 → Qwen3 e Llama 3 → Llama 3.3 refletem isso. As novas versões de open-weight adicionam ou melhoram rotineiramente o treinamento para tool calling; é isso que separa a lista confiável acima do resto do cenário open-weight.',
+          '**Por que isso importa especificamente para os agentes:** um loop de agente é uma sequência de tool calls. Mesmo uma taxa de confiabilidade por chamada de 95% se compõe — oito etapas a 95% terminam com sucesso ~66% das vezes. É por isso que os harnesses delimitados com portões de aprovação superam os agentes autônomos em tarefas reais: a aprovação humana recupera as falhas por chamada.',
+          'Para as técnicas de prompting que melhoram a confiabilidade em tool calling em qualquer modelo compatível, veja [prompting de cadeia de pensamento](/pt/prompt-engineering/chain-of-thought-prompting) e [árvore de pensamento e ReAct](/pt/prompt-engineering/tree-of-thought-and-react) — ambas reduzem a taxa em que o modelo escolhe a ferramenta errada ou fornece argumentos errados.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Tool calling é a habilidade do lado LLM de emitir JSON estruturado que nomeia uma ferramenta e fornece argumentos que correspondem ao seu esquema; MCP, as ferramentas da OpenAI e o XML do Cline são expressões em formato de wire da mesma habilidade.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Um modelo com tool calling consegue ler uma lista de ferramentas disponíveis, decidir qual delas encaixa na solicitação do usuário e produzir uma resposta estruturada limpa que nomeie a ferramenta e seus argumentos. O formato de wire (JSON, XML, JSON-RPC) é uma decisão do harness; se o modelo executa a chamada corretamente é uma propriedade do modelo — e é isso que este guia mede.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'A confiabilidade por chamada se compõe ao longo do loop de agente. Uma taxa de 95% por chamada em 8 etapas termina com sucesso ~66% das vezes. Planeje a composição — mantenha horizontes de plano curtos, use portões de aprovação e prefira o menor modelo confiável que gerencie o seu horizonte realista mais longo.',
+          },
+        ],
+        image: '/images/tool-calling-what-is-it-en.svg',
+        imageCaption: 'Tool calling em 5 etapas: prompt do usuário → o LLM lê os esquemas de ferramentas disponíveis → emite JSON estruturado com ferramenta e argumentos → o harness valida contra o esquema → a ferramenta executa (sistema de arquivos, banco de dados, navegador, API). O formato de wire varia; a habilidade LLM subjacente não.',
+      },
+      methodology: {
+        id: 'methodology',
+        title: 'Como testamos',
+        content:
+          '**O teste manteve o harness constante e variou apenas o modelo.** Mesmo cliente MCP, mesmos servidores, mesmos prompts — as falhas são atribuídas ao modelo, não ao runtime.',
+        items: [
+          '**Configuração:** Cline 3.x no VS Code (o validador de tool calling mais estrito que testamos) mais Goose+MCP para o lado headless. Backend Ollama 0.5+ servindo cada modelo com Q4_K_M salvo indicação em contrário.',
+          '**Servidores:** os quatro servidores MCP de referência — `filesystem` (leitura/escrita de um diretório em sandbox), `sqlite` (somente leitura por padrão, papel de escrita para tarefas específicas), `puppeteer` (navegador headless), `github` (gestão de PRs e issues com um PAT de granularidade fina). Mesmas versões de servidor em todas as execuções de modelos.',
+          '**Conjunto de prompts:** 50 prompts de tarefa por servidor, repetidos 3 vezes por modelo = 600 chamadas avaliadas por modelo nos 4 servidores (~3.000 no total entre os 5 modelos). Os prompts abrangem tarefas de ferramenta única ("leia este arquivo"), planos de múltiplas etapas ("encontre referências a X no repositório") e chamadas paralelas ("liste estes 3 diretórios").',
+          '**Avaliação:** quatro sinais por chamada. **Bem formada** — a chamada é analisada corretamente contra o esquema da ferramenta. **Seleção correta** — a ferramenta certa foi escolhida para a tarefa. **Argumentos corretos** — os valores dos argumentos correspondem ao que a tarefa exigia. **Sucesso de execução** — a chamada produziu o resultado esperado.',
+          '**Hardware:** MacBook Pro Apple M5 Max 64 GB para os modelos menores (até GLM-5.1 32B); NVIDIA L40S 48 GB e 2× RTX 3090 24 GB para o Llama 3.3 70B. Todas as execuções se mantiveram em taxas de tokens utilizáveis (≥10 tokens/s) para que a latência não fosse o modo de falha.',
+          '**Restrições de honestidade:** as porcentagens são relatadas como faixas, não como números exatos inventados. "~95%" significa que nossas execuções ficaram entre 92–96% no conjunto de testes; arredondamos apenas quando a variância era pequena o suficiente para que a precisão fosse enganosa.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Estes números vêm do nosso harness de testes, não dos leaderboards do BFCL ou do ToolBench. Os benchmarks públicos se correlacionam de forma direcional, mas não um a um com os fluxos de trabalho de servidores MCP — o benchmark certo para o seu stack é o seu stack. Trate as porcentagens aqui como uma hipótese de partida, não como um veredicto definitivo.',
+          },
+        ],
+        image: '/images/tool-calling-methodology-en.svg',
+        imageCaption: 'Metodologia de teste: 4 servidores MCP (filesystem, sqlite, puppeteer, github), 50 prompts × 4 servidores × 3 execuções = 600 chamadas avaliadas por modelo, ~3.000 no total entre 5 modelos — mesmo harness Cline 3.x durante todo o processo, apenas o modelo variou.',
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Comparativo direto: Cinco modelos de Tool Calling em 2026',
+        content:
+          '**Mesmo harness, mesmos prompts, modelos diferentes.** O Llama 3.3 70B lidera no número geral; os modelos menores lideram na métrica que muitas vezes importa mais — confiabilidade por dólar de VRAM.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Escolha o Gemma 4 27B para rigs de 24 GB de uso geral, o GLM-5.1 32B para contexto longo, o Qwen3-Coder 30B para código, o Qwen3 32B como fallback equilibrado e o Llama 3.3 70B quando você tem 48 GB+ de VRAM e precisa do maior teto.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Os cinco funcionam. As diferenças estão no que custam (VRAM), no que se especializam (contexto longo, código, uso geral) e com que frequência erram levemente em uma chamada (alguns por cento — recuperável com portões de aprovação).',
+          },
+        ],
+        columns: ['Modelo', 'Tamanho', 'VRAM (Q4_K_M)', 'Taxa de chamadas bem formadas', 'Melhor para', 'Modo de falha comum'],
+        rows: [
+          { 'Modelo': 'Gemma 4 27B', 'Tamanho': '27B', 'VRAM (Q4_K_M)': '~16 GB', 'Taxa de chamadas bem formadas': '~95%', 'Melhor para': 'Agentes de uso geral em rigs de 24 GB', 'Modo de falha comum': 'Conservador em chamadas encadeadas (pede aprovação onde o encadeamento teria funcionado)' },
+          { 'Modelo': 'GLM-5.1 32B', 'Tamanho': '32B', 'VRAM (Q4_K_M)': '~20 GB', 'Taxa de chamadas bem formadas': '~94%', 'Melhor para': 'Agentes de contexto longo (128K de fábrica)', 'Modo de falha comum': 'Truncagem ocasional de argumentos em entradas longas' },
+          { 'Modelo': 'Qwen3 32B', 'Tamanho': '32B', 'VRAM (Q4_K_M)': '~20 GB', 'Taxa de chamadas bem formadas': '~93%', 'Melhor para': 'Equilibrado — geral + código leve', 'Modo de falha comum': 'Rara malformação de XML no formato estrito do Cline' },
+          { 'Modelo': 'Qwen3-Coder 30B', 'Tamanho': '30B', 'VRAM (Q4_K_M)': '~18 GB', 'Taxa de chamadas bem formadas': '~96% (código) / ~91% (não código)', 'Melhor para': 'Agentes de código (replace_in_file, read_file, navegador voltado a código)', 'Modo de falha comum': 'Mais fraco em servidores não relacionados a código do que as opções de uso geral' },
+          { 'Modelo': 'Llama 3.3 70B', 'Tamanho': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Taxa de chamadas bem formadas': '~97%', 'Melhor para': 'Maior teto quando o hardware permite', 'Modo de falha comum': 'A baixa taxa de tokens torna os loops de agente longos lentos' },
+        ],
+        image: '/images/tool-calling-model-comparison-en.svg',
+        imageCaption: 'Cinco modelos de tool calling avaliados em 4 servidores MCP: o Llama 3.3 70B lidera com ~97% de chamadas bem formadas (42 GB VRAM); o Qwen3-Coder 30B atinge ~96% em ferramentas de código; o Gemma 4 27B entrega ~95% com 16 GB VRAM; o GLM-5.1 32B ~94% com 128K de contexto; o Qwen3 32B ~93% equilibrado.',
+      },
+      gemma4: {
+        id: 'gemma-4',
+        title: 'Gemma 4 27B: A opção padrão para rigs de 24 GB',
+        content:
+          '**O Gemma 4 27B é o modelo que a maioria das equipes deveria instalar primeiro.** O melhor treinamento para tool calling do seu tamanho, cabe em 16 GB de memória unificada ou 24 GB de VRAM com Q4_K_M, e emite JSON de function calling limpo em todos os servidores MCP que testamos.',
+        items: [
+          '**Pontos fortes:** aderência estrita aos esquemas de ferramentas (baixa taxa de chamadas malformadas), bom raciocínio geral na seleção de ferramentas, confortável em GPUs de consumo de 24 GB e máquinas Apple M-series.',
+          '**Modo de falha:** conservador em chamadas encadeadas a ferramentas. O Gemma 4 às vezes pausa para fazer ao usuário uma pergunta esclarecedora onde o Llama 3.3 teria chamado a próxima ferramenta. Isso é um recurso quando o objetivo é a supervisão; um ponto de atrito quando se quer autonomia.',
+          '**Quantização recomendada:** Q4_K_M. O Q5_K_M melhora a qualidade do chat, mas não melhora de forma notável a confiabilidade do tool calling — a VRAM adicional é melhor aproveitada em um orçamento de contexto mais longo.',
+          '**Melhor combinação de harness:** qualquer um dos runtimes confiáveis. Cline + Gemma 4 é uma combinação especialmente limpa porque o conservadorismo do Gemma se alinha com a UX de aprovação por etapa do Cline.',
+          '**Onde usá-lo:** trabalho de agente de uso geral, processamento de documentos, triagem de e-mail, trabalho MCP baseado em sistema de arquivos e banco de dados. A opção padrão quando você não tem um motivo específico para escolher outro.',
+        ],
+      },
+      glm51: {
+        id: 'glm-5-1',
+        title: 'GLM-5.1 32B: A opção para contexto longo',
+        content:
+          '**O GLM-5.1 32B é a escolha certa quando a entrada é longa.** Janela de contexto de 128K de fábrica, forte confiabilidade em tool calling e o único modelo do top cinco que não precisa de um finetune de extensão de contexto para transcrições de reuniões de uma hora ou leituras completas de codebase.',
+        items: [
+          '**Pontos fortes:** contexto nativo de 128K (sem artefatos de rope scaling), JSON de tool calling confiável, ligeiramente mais pesado que o Gemma 4, mas confortável com 24 GB de VRAM com Q4_K_M.',
+          '**Modo de falha:** truncagem ocasional de argumentos em entradas muito longas. Quando o modelo recebe um documento de 100K tokens e é solicitado a chamar uma ferramenta com a afirmação principal do documento como argumento, o GLM-5.1 às vezes trunca o argumento antes do ponto. Recuperável — o Cline mostra a chamada malformada e o modelo tenta novamente — mas adiciona um ciclo de aprovação.',
+          '**Quantização recomendada:** Q4_K_M. O GLM-5.1 quantiza um pouco menos elegantemente que o Gemma 4; não baixe de Q4 para fluxos de trabalho de tool calling.',
+          '**Onde usá-lo:** geração de relatórios de compliance, análise de documentos extensos, tarefas de agente que exigem que o modelo mantenha todo um codebase em contexto. A escolha quando o comprimento do contexto é a restrição.',
+        ],
+      },
+      qwen3: {
+        id: 'qwen3',
+        title: 'Qwen3 32B: O fallback equilibrado',
+        content:
+          '**O Qwen3 32B é o modelo que faz tudo de forma competente sem liderar em nada.** Escolha-o quando você precisa de um único modelo para uma mistura de trabalho geral e trabalho leve de código sem gerenciar duas instalações.',
+        items: [
+          '**Pontos fortes:** confiabilidade consistente em tool calling nos quatro servidores MCP, bom raciocínio geral, rápido o suficiente para loops de agente longos em uma GPU de 24 GB.',
+          '**Modo de falha:** rara malformação de XML no formato estrito do Cline. Quando ocorre, o loop de agente tenta novamente de forma limpa — é um modo de falha de baixo impacto na prática.',
+          '**Quantização recomendada:** Q4_K_M. O Qwen3 quantiza elegantemente; o Q5_K_M é uma pequena melhoria se você tiver a VRAM.',
+          '**Onde usá-lo:** fluxos de trabalho mistos onde você não quer trocar de modelo por tarefa. A opção "um modelo para a equipe".',
+        ],
+      },
+      qwen3coder: {
+        id: 'qwen3-coder',
+        title: 'Qwen3-Coder 30B: A opção voltada a código',
+        content:
+          '**O Qwen3-Coder 30B é o melhor tool caller em trabalho MCP voltado a código.** `replace_in_file`, `read_file`, ações de navegador conscientes do código e gestão de PRs no GitHub se beneficiam do fine-tuning de código incorporado.',
+        items: [
+          '**Pontos fortes:** a maior taxa de chamadas bem formadas em ferramentas MCP de código (~96%), forte em tarefas de agente com múltiplos arquivos, menor VRAM que as outras opções de 32B (~18 GB com Q4_K_M).',
+          '**Modo de falha:** mais fraco em servidores não relacionados a código. A confiabilidade em sqlite e puppeteer cai em comparação com o Gemma 4 — o Qwen3-Coder trata as consultas de banco de dados e as ações de navegador de forma menos idiomática que os modelos de uso geral.',
+          '**Quantização recomendada:** Q4_K_M. O Q5_K_M é o pequeno passo adiante se você quiser um raciocínio de código mais preciso.',
+          '**Onde usá-lo:** agentes de código Cline + Continue.dev, refatorações de repositórios, depuração exploratória de bugs. Combine-o com o Gemma 4 se o seu agente também tocar em servidores não relacionados a código.',
+        ],
+      },
+      llama33: {
+        id: 'llama-3-3',
+        title: 'Llama 3.3 70B: O maior teto',
+        content:
+          '**O Llama 3.3 70B é o tool caller mais confiável do ecossistema open-weights em maio de 2026.** Use apenas quando o hardware permitir — os modelos menores costumam ser suficientes para o trabalho diário.',
+        items: [
+          '**Pontos fortes:** a maior taxa de chamadas bem formadas (~97%) nos quatro servidores, a confiabilidade mais forte em chamadas encadeadas, robusto diante de entradas bagunçadas. O modelo onde você para de culpar o harness.',
+          '**Modo de falha:** velocidade. O Llama 3.3 70B com Q4_K_M em um único L40S 48 GB mantém ~10–15 tokens/s; os loops de agente longos parecem lentos. Com inferência dividida em 2× RTX 3090, o throughput melhora, mas a configuração é mais complexa.',
+          '**Quantização recomendada:** Q4_K_M é o mínimo; Q5_K_M é preferível se a VRAM permitir (~52 GB). O Llama 3.3 quantiza elegantemente — a diferença entre Q4 e Q5 é menor que no Gemma 4.',
+          '**Onde usá-lo:** fluxos de trabalho onde a confiabilidade importa mais que a velocidade (relatórios de compliance, revisão jurídica, tratamento de exceções). Ou qualquer configuração com hardware de sobra.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'O Llama 3.3 70B com Q4_K_M precisa de ~42 GB de VRAM, cabe confortavelmente em um único L40S 48 GB ou em 2× RTX 3090 24 GB com inferência dividida, e funciona em máquinas Apple M-series com 64 GB+ de memória unificada. O throughput por token é a restrição prática — os loops de agente longos parecem lentos mesmo quando cada chamada é confiável.',
+          },
+        ],
+      },
+      nonStarters: {
+        id: 'non-starters',
+        title: 'Modelos que não funcionam para Tool Calling',
+        content:
+          '**Três categorias de modelos falham da mesma forma independentemente do harness.** Pare de tentar fazê-los funcionar; mude para uma das opções confiáveis acima.',
+        items: [
+          '**Modelos sub-7B.** Llama 3.2 1B, Llama 3.2 3B, Phi-3 Mini, Gemma 2 2B — todos emitem tool calls malformadas além de tarefas triviais de uma única etapa. Aceitável para classificação de triagem ("este e-mail é de suporte ao cliente / vendas / spam") onde a saída é uma string curta; não aceitável para planos de múltiplas etapas.',
+          '**Modelos de uso geral sem treinamento para tool calling.** A maioria dos modelos de chat genéricos de 7B–13B sem fine-tunes explícitos para tool calling parafraseia as chamadas a ferramentas em prosa, desalinha os esquemas de argumentos ou inventa ferramentas que não existem. A classe do modelo é a falha, não o tamanho.',
+          '**Versões fortemente quantizadas dos modelos confiáveis.** Q3, Q2 e os IQ-quants degradam a confiabilidade do tool calling antes da qualidade do chat. Um Gemma 4 27B em Q3 é um tool caller pior que um Qwen3 32B em Q4_K_M, mesmo que faça benchmark comparável em qualidade de chat. Ajuste a quantização ao fluxo de trabalho — Q4_K_M é o mínimo de produção.',
+          '**Sintomas quando você tenta mesmo assim:** XML malformado no Cline (blocos de tool call que o parser não consegue extrair), blocos SEARCH/REPLACE parafraseados no Aider, código entre marcas que não corresponde ao arquivo aberto no Continue.dev, e loops de agente travados onde o modelo propõe a mesma chamada duas vezes seguidas. Nenhum desses é bug do harness — trocar de harness mostra as mesmas falhas com formas diferentes.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Os modelos sub-7B para tool calling são o desperdício de tempo mais comum que vemos. Os sintomas ("o harness está quebrado", "o MCP está quebrado", "o Cline está quebrado") apontam todos para o modelo. Mude para um modelo de 27B+ com treinamento para tool calling e os sintomas desaparecem sem mudar mais nada no stack.',
+          },
+        ],
+        image: '/images/tool-calling-non-starters-en.svg',
+        imageCaption: 'Três categorias de modelos que falham em tool calling: os modelos sub-7B emitem chamadas malformadas em tarefas de múltiplas etapas; os modelos sem treinamento para tool calling parafraseiam as chamadas em prosa; a quantização Q3/Q2 degrada a confiabilidade antes da qualidade do chat — Q4_K_M é o mínimo de produção.',
+      },
+      formatComparison: {
+        id: 'format-comparison',
+        title: 'Formatos de Tool Call: A mesma habilidade, formato de wire diferente',
+        content:
+          '**O mesmo modelo gerencia os quatro formatos.** A escolha do formato é uma decisão do harness/protocolo, não do modelo.',
+        columns: ['Formato', 'Onde aparece', 'Estrito?', 'Tolerância à saída malformada'],
+        rows: [
+          { 'Formato': 'Ferramentas OpenAI (JSON)', 'Onde aparece': 'API da OpenAI, Continue.dev Agent', 'Estrito?': 'Validado por esquema', 'Tolerância à saída malformada': 'Mostra o erro, o modelo tenta novamente' },
+          { 'Formato': 'Blocos de ferramenta XML do Cline', 'Onde aparece': 'Extensão Cline para VS Code', 'Estrito?': 'Muito estrito', 'Tolerância à saída malformada': 'O loop trava; os modelos pequenos sofrem aqui primeiro' },
+          { 'Formato': 'MCP JSON-RPC 2.0', 'Onde aparece': 'Goose, Cline, Continue.dev, LM Studio', 'Estrito?': 'Validado por esquema', 'Tolerância à saída malformada': 'Mostra o erro, o modelo tenta novamente; o formato de wire para o qual o ecossistema está convergindo' },
+          { 'Formato': 'Blocos SEARCH/REPLACE do Aider', 'Onde aparece': 'CLI do Aider', 'Estrito?': 'Correspondência de padrão literal', 'Tolerância à saída malformada': 'Rejeita e tenta novamente; os modelos pequenos parafraseiam o bloco SEARCH e falham' },
+        ],
+        items: [
+          '**A afirmação de portabilidade de formato:** os cinco modelos confiáveis acima gerenciam os quatro formatos sem reconfiguração por formato. Um Gemma 4 27B que realiza tool calling de forma confiável no Cline também o faz de forma confiável no Goose+MCP e no Continue.dev Agent.',
+          '**A implicação:** escolha o formato que o seu harness suporta nativamente, não o do seu modelo. O modelo é a variável determinante.',
+          '**A exceção:** a aderência do Qwen3-Coder aos blocos SEARCH/REPLACE (formato Aider) é ligeiramente melhor que a do Qwen3, porque o fine-tuning de código enfatiza a fidelidade do diff. Marginal — o Qwen3 32B também funciona bem no Aider.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Escolha o formato que o seu harness suporta nativamente, não o que tem o melhor benchmark. Os cinco modelos confiáveis acima são portáveis para os quatro formatos; a UX do harness (aprovação por etapa, trilha de auditoria, integração com IDE) é um fator mais determinante do sucesso no mundo real do que a escolha do formato.',
+          },
+        ],
+        image: '/images/tool-calling-format-comparison-en.svg',
+        imageCaption: 'Quatro formatos de tool call comparados: OpenAI JSON (validado por esquema, Continue.dev), Cline XML (muito estrito, o primeiro a mostrar falhas), MCP JSON-RPC 2.0 (padrão do ecossistema, validado por esquema), Aider SEARCH/REPLACE (correspondência literal de padrão) — os cinco modelos de benchmark gerenciam os quatro formatos.',
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erros comuns ao escolher um modelo de Tool Calling',
+        items: [
+          '**Erro 1: culpar o harness pelas falhas em tool calling.** Os sintomas (XML malformado, blocos SEARCH parafraseados, código que não corresponde) aparecem em formas diferentes conforme o harness; a causa costuma ser um modelo sem treinamento para tool calling. Troque primeiro de modelo; troque de harness apenas se você confirmou que o modelo realiza tool calling de forma limpa em outro lugar.',
+          '**Erro 2: quantizar demais para caber em uma GPU menor.** Q3 e os IQ-quants de um modelo confiável de 27B costumam ser piores que o Q4_K_M do tamanho imediatamente inferior. Escolha o modelo e a quantização como um par, não de forma independente.',
+          '**Erro 3: usar um modelo de uso geral pequeno para tool calls "simples".** "Simples" no prompt não é "simples" para um modelo de uso geral de 7B — a taxa de chamadas malformadas é alta o suficiente para que até as tarefas de uma única etapa falhem em 5–10% das execuções. Use o Llama 3.2 3B para classificação de triagem e o Gemma 4 27B (ou maior) para qualquer coisa que chame uma ferramenta.',
+          '**Erro 4: ignorar a composição de chamadas encadeadas.** Uma taxa de 95% por chamada se compõe ao longo das etapas do loop de agente. Uma tarefa de oito etapas a 95% por etapa termina com sucesso ~66% das vezes. Planeje a composição — mantenha horizontes de plano curtos, use portões de aprovação e prefira o menor modelo confiável que gerencie o seu horizonte realista mais longo.',
+          '**Erro 5: perseguir números de leaderboard em vez de confiabilidade MCP.** Os benchmarks públicos (BFCL, ToolBench) são um sinal útil, mas não se traduzem um a um para os fluxos de trabalho de servidores MCP. O benchmark certo é o seu fluxo de trabalho real; se você não puder executá-lo, prefira os modelos desta lista — eles sobrevivem a fluxos de trabalho reais.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          '[Especificação do Model Context Protocol](https://modelcontextprotocol.io/) — Esquema JSON-RPC, transporte e definições de ciclo de vida usadas no harness de testes.',
+          '[Berkeley Function Calling Leaderboard (BFCL)](https://gorilla.cs.berkeley.edu/leaderboard.html) — Benchmark público de function calling; sinal direcional útil, não equivalente a MCP.',
+          '[Biblioteca de modelos do Ollama](https://ollama.com/library) — Disponibilidade de modelos, indicadores de suporte para tool calling, níveis de quantização referenciados acima.',
+          '[Repositório GitHub modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) — Servidores de referência filesystem, sqlite, postgres, puppeteer e github usados no conjunto de testes.',
+          '[Fichas de modelos do Hugging Face para Gemma 4, GLM-5.1, Qwen3, Qwen3-Coder, Llama 3.3](https://huggingface.co/) — Documentação oficial de treinamento para tool calling por modelo.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Qual modelo local tem a maior taxa de sucesso em tool calling em 2026?',
+            a: 'O Llama 3.3 70B tem a maior taxa de chamadas bem formadas (~97%) nos quatro servidores MCP de referência que testamos. Ele precisa de 48 GB+ de VRAM com Q4_K_M, por isso a maioria dos usuários escolhe um dos modelos confiáveis menores — Gemma 4 27B para trabalho geral, GLM-5.1 32B para contexto longo, Qwen3-Coder 30B para código, Qwen3 32B como fallback equilibrado. As quatro opções de 27B–32B ficam na faixa de 93–96% e são facilmente confiáveis o suficiente para trabalho de agente em produção com portões de aprovação.',
+          },
+          {
+            q: 'O tool calling nativo do Gemma 4 funciona sem truques de prompting?',
+            a: 'Sim. O Gemma 4 27B emite JSON limpo de function calling e XML limpo do Cline diretamente a partir do formato de chat padrão — sem engenharia de prompt específica para ferramentas, sem wrapper de modo JSON, sem incantação no system prompt. O modelo recebeu treinamento para tool calling na etapa de pós-treinamento; você o chama como qualquer outro modelo de chat com a lista de ferramentas no system prompt e ele cuida do resto.',
+          },
+          {
+            q: 'O Llama 3.3 70B consegue realizar tool calls de forma confiável?',
+            a: 'Sim — tem a maior confiabilidade dos cinco modelos testados. O trade-off é hardware: com Q4_K_M ele precisa de ~42 GB de VRAM, por isso cabe confortavelmente em um único L40S 48 GB ou em 2× RTX 3090 24 GB com inferência dividida, e em máquinas Apple M-series com 64 GB+ de memória unificada. O throughput por token é a restrição prática — os loops de agente longos parecem lentos mesmo quando cada chamada é confiável.',
+          },
+          {
+            q: 'Qual modelo gerencia melhor as chamadas a funções paralelas?',
+            a: 'O Llama 3.3 70B lidera na confiabilidade de chamadas paralelas — quando o prompt é "liste estes três diretórios de uma vez", o modelo de 70B emite a chamada paralela de forma limpa com mais frequência que as opções de 27B–32B. O Gemma 4 27B e o Qwen3 32B estão logo atrás. O Qwen3-Coder 30B é ligeiramente mais fraco em chamadas paralelas porque o fine-tuning de código favorece as edições sequenciais. Para a maioria dos fluxos de trabalho de agente, a confiabilidade em chamadas paralelas importa menos que a confiabilidade em chamadas encadeadas — as cadeias são muito mais comuns na prática.',
+          },
+          {
+            q: 'As versões quantizadas têm desempenho pior em tool calling?',
+            a: 'Sim, e a degradação afeta a confiabilidade do tool calling antes da qualidade do chat. Um Gemma 4 27B em Q3 é um tool caller visivelmente pior que o mesmo modelo com Q4_K_M, mesmo que ambos produzam saída de chat comparável. O mecanismo é que a quantização de pesos de pequena magnitude quebra as ativações precisas que roteiam para o formato de tool call. Q4_K_M é o mínimo de produção para os cinco modelos confiáveis acima; Q5_K_M é o passo seguro adiante; Q3 e abaixo não são recomendados para trabalho de agente.',
+          },
+          {
+            q: 'Posso fazer fine-tune de um modelo menor para melhorar o tool calling?',
+            a: 'Possível, mas raramente vale a pena. Os cinco modelos confiáveis acima têm treinamento para tool calling incorporado na etapa de pós-treinamento pelos seus laboratórios originais; um fine-tune comunitário sobre uma base menor geralmente não chega ao mesmo nível. Use um dos modelos confiáveis. Se você tem uma superfície de ferramentas específica de domínio (ferramentas internas proprietárias), um LoRA pequeno sobre o Gemma 4 ou o Qwen3 pode afinar a aderência ao esquema nas suas ferramentas — mas não transforma um modelo sem treinamento para tool calling em um tool caller confiável.',
+          },
+          {
+            q: 'Qual modelo é mais confiável para saída JSON?',
+            a: 'A saída JSON confiável e o tool calling confiável estão correlacionados, mas não são idênticos. Para trabalho em modo JSON puro (extração de saída estruturada sem tool calls), o Gemma 4 27B e o GLM-5.1 32B são os mais fortes — ambos emitem JSON limpo sem prosa adicional ou comentários. Para tool calls especificamente, os cinco modelos confiáveis se qualificam; o JSON que emitem dentro do wrapper de tool call é bem formado em todos os casos.',
+          },
+          {
+            q: 'O tool calling funciona em configurações apenas com CPU?',
+            a: 'Tecnicamente sim, na prática é doloroso. Um Gemma 4 27B com Q4_K_M em uma CPU de 32 GB mantém ~1–3 tokens/s; um loop de agente que precisa de 30K–80K tokens para uma tarefa de múltiplas etapas leva horas. Só CPU está bem para avaliação e classificação de triagem com modelos pequenos (Llama 3.2 3B); para agentes em produção, GPU ou memória unificada Apple Silicon é o mínimo prático.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          '[Conecte o Ollama a bancos de dados e APIs com MCP: Configuração de agente local 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — implementação prática; a camada de protocolo para a qual os modelos acima realizam tool calls.',
+          '[Agentes de IA locais em 2026: O que realmente funciona (e o que ainda falha)](/pt/power-local-llm/autonomous-local-agents-actually-work) — contexto mais amplo; como a confiabilidade do tool calling se compõe ao longo das etapas do loop de agente.',
+          '[Continue.dev vs Cline vs Aider: Melhor agente de código local em 2026](/pt/power-local-llm/continue-dev-vs-cline-vs-aider-local) — comparativo de harness para o extremo voltado a código do espectro de agentes.',
+          '[Substitua o GitHub Copilot por um LLM local](/pt/power-local-llm/replace-github-copilot-with-local-llm) — caso de uso aplicado para os modelos de tool calling de código acima.',
+          '[Melhores modelos open-source no Ollama](/pt/local-llms/top-open-source-models-ollama) — autoridade de modelo mais ampla para o cenário open-weight.',
+          '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) — teoria de quantização; por que Q4_K_M é o mínimo de produção para fluxos de trabalho de tool calling.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Melhores modelos locais para Tool Calling em 2026: Benchmarks e comparativo',
+      description:
+        'Compare Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B para confiabilidade em Tool Calling. Benchmarks MCP reais, não pontuações de leaderboard.',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-models-tool-calling-2026?lang=pt',
+      inLanguage: 'pt',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
+    },
+  },
 }
