@@ -971,6 +971,207 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+
+    pt: {
+      theme: 'Fundamentals',
+      title: 'Limitações da IA: O que os LLMs não podem fazer em 2026',
+      intro: 'Os grandes modelos de linguagem têm oito limites rígidos que nenhuma quantidade de fine-tuning, escala ou prompt engineering pode eliminar: sem dados em tempo real, alucinações confiantes, raciocínio fraco de múltiplas etapas, limites da janela de contexto, sem memória, sem ações no mundo real, viés de treinamento e sem autoverificação. Cada modelo — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e as alternativas de código aberto — compartilha essas restrições estruturais. Este guia cobre cada limite com o workaround de engenharia que funciona em produção.',
+      publishDate: '2026-03-24',
+      seoTitle: 'Limitações e workarounds de LLMs 2026: 8 restrições-chave',
+      metaDescription: 'Todos os LLMs compartilham 8 limites estruturais: sem dados em tempo real, alucinações, limites de contexto, sem memória. Aprenda os workarounds para cada restrição.',
+      readTime: '11 min de leitura',
+      educationalLevel: 'Intermediate',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/ai-limitations-what-llms-cant-do?lang=pt',
+        inLanguage: 'pt-BR',
+        headline: 'Limitações da IA — O que os LLMs não podem fazer',
+        description: 'Os oito limites estruturais dos grandes modelos de linguagem: cortes de conhecimento, alucinação, sem dados em tempo real, janelas de contexto, sem memória persistente, viés e a incapacidade de verificar saídas.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-05-01',
+        keywords: ['limitações da IA', 'limitações de LLM', 'o que os LLMs não podem fazer', 'falhas de grandes modelos de linguagem', 'alucinação', 'corte de conhecimento', 'janela de contexto', 'prompt engineering'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: {
+          '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com',
+          logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        name: 'Oito limites rígidos dos grandes modelos de linguagem',
+        description: 'As restrições estruturais compartilhadas por cada LLM independentemente do tamanho do modelo ou abordagem de treinamento, com a causa raiz e o principal workaround para cada uma',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Corte de conhecimento', description: 'Causa raiz: dados de treinamento estáticos com uma data final. Gravidade: alta para eventos atuais. Workaround: RAG ou colar fatos atuais diretamente no prompt.' },
+          { '@type': 'ListItem', position: 2, name: 'Alucinação', description: 'Causa raiz: previsão de tokens baseada em padrões de treinamento, não busca da verdade. Gravidade: alta para fatos específicos, citações e números. Workaround: fundamentar os prompts com material fonte e validar as saídas contra fontes primárias.' },
+          { '@type': 'ListItem', position: 3, name: 'Sem raciocínio confiável de múltiplas etapas', description: 'Causa raiz: sem memória de trabalho ou estado entre previsões de tokens. Gravidade: média, melhora significativamente com prompting chain-of-thought. Workaround: usar prompting chain-of-thought ou direcionar a aritmética para um interpretador de código.' },
+          { '@type': 'ListItem', position: 4, name: 'Limites da janela de contexto', description: 'Causa raiz: a atenção do transformer tem um limite rígido de tokens. Gravidade: média para documentos longos. Workaround: RAG, chunking, sumarização.' },
+          { '@type': 'ListItem', position: 5, name: 'Sem memória persistente', description: 'Causa raiz: arquitetura sem estado — cada sessão começa a partir de um contexto em branco. Gravidade: média para fluxos de trabalho de várias sessões. Workaround: injeção de memória em nível de aplicação usando bancos de dados vetoriais ou resumos de conversa.' },
+          { '@type': 'ListItem', position: 6, name: 'Sem capacidade de ação no mundo real', description: 'Causa raiz: os LLMs por padrão produzem apenas texto. Gravidade: alta para tarefas autônomas. Workaround: uso de ferramentas/chamada de função disponível no GPT-5.5, Claude Opus 4.8 e Gemini 3.1 Pro.' },
+          { '@type': 'ListItem', position: 7, name: 'Viés nos dados de treinamento', description: 'Causa raiz: o corpus de treinamento é principalmente conteúdo em inglês, ocidental e da internet pré-2025. Gravidade: média, varia por idioma e domínio. Workaround: fornecer contexto, terminologia e exemplos específicos do domínio explicitamente no prompt.' },
+          { '@type': 'ListItem', position: 8, name: 'Não pode autoverificar as saídas', description: 'Causa raiz: sem acesso à verdade fundamental — os modelos só podem avaliar consistência com padrões de treinamento, não precisão factual. Gravidade: alta para afirmações factuais. Workaround: validação externa contra fontes primárias autorizadas antes de publicar.' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'pt-BR',
+        name: 'Como projetar prompts que levam em conta as limitações dos LLMs',
+        description: 'Uma abordagem de cinco etapas para escrever prompts que funcionem de forma confiável apesar dos limites estruturais dos grandes modelos de linguagem.',
+        totalTime: 'PT10M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Identifique a limitação relevante', text: 'Antes de escrever seu prompt, determine qual limitação se aplica: corte de conhecimento, raciocínio, memória ou verificação de saída.' },
+          { '@type': 'HowToStep', position: 2, name: 'Forneça contexto de fundamentação', text: 'Cole os fatos, documentos ou dados relevantes que o modelo precisa. Nunca assuma que o modelo tem conhecimento atual ou preciso.' },
+          { '@type': 'HowToStep', position: 3, name: 'Use chain-of-thought para tarefas de raciocínio', text: 'Adicione "Pense passo a passo" ou numere as etapas de raciocínio explicitamente quando a tarefa envolver lógica ou cálculo de múltiplas etapas.' },
+          { '@type': 'HowToStep', position: 4, name: 'Instrua o modelo a sinalizar incerteza', text: 'Peça ao modelo que diga "Não tenho certeza" ou marque qualquer afirmação que não possa verificar a partir do contexto fornecido.' },
+          { '@type': 'HowToStep', position: 5, name: 'Valide as saídas contra fontes primárias', text: 'Nunca publique saída de LLM sobre afirmações factuais sem verificar números-chave, datas e citações contra fontes autorizadas.' },
+        ],
+      },
+      sections: {
+        definition: {
+          title: 'As 8 limitações estruturais dos LLMs',
+          content: [
+            '**Os grandes modelos de linguagem têm oito limites rígidos que se aplicam independentemente do tamanho do modelo, do fornecedor ou da abordagem de treinamento.** Esses não são bugs — são propriedades estruturais de como os LLMs são projetados. Cada workaround abaixo é uma solução de produção testada, não uma teoria.',
+            'Essas restrições se aplicam universalmente: GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, LLaMA 3.1, Mistral Large e todos os modelos de código aberto são igualmente afetados. O prompt engineering pode mitigar o impacto dessas limitações, mas não pode eliminá-las.',
+          ],
+        },
+        tldr: {
+          title: 'Pontos-chave',
+          isTldr: true,
+          items: [
+            'Os LLMs têm 8 limites estruturais universais: corte de conhecimento, alucinação, raciocínio fraco de múltiplas etapas, limites da janela de contexto, sem memória persistente, sem ações no mundo real, viés de treinamento e sem autoverificação',
+            'Nenhum modelo — GPT-5.5, Claude, Gemini ou código aberto — elimina essas restrições',
+            'O prompt engineering pode mitigar o impacto, mas não pode eliminar nenhuma das 8 limitações',
+            'Cada limitação tem um workaround de produção testado: RAG para o corte de conhecimento, chain-of-thought para o raciocínio, chamada de ferramentas para as ações',
+            'Entender essas limitações é a base do prompt engineering eficaz — você sabe o que esperar e quando usar ferramentas complementares',
+          ],
+        },
+        limit1: {
+          title: 'Limitação 1: Corte de conhecimento',
+          content: [
+            '**Os LLMs são treinados em dados com uma data final específica — conhecida como o corte de conhecimento ou corte de treinamento.** Qualquer evento, mudança de preço, novo lançamento de produto ou atualização regulatória após essa data é invisível para o modelo.',
+            'Cortes de conhecimento em 2026: GPT-5.5 (OpenAI): outubro de 2024. Claude Opus 4.8 (Anthropic): início de 2025. Gemini 3.1 Pro (Google DeepMind): início de 2025.',
+          ],
+          items: [
+            '**Workaround principal: RAG (Retrieval-Augmented Generation).** Antes de enviar a solicitação, recupere fatos atuais relevantes de uma fonte confiável e injete-os no contexto do prompt. O modelo responde com base nessa informação em vez de nos seus dados de treinamento desatualizados.',
+            '**Workaround secundário: Colagem de contexto direta.** Para tarefas únicas, simplesmente cole o texto atualizado relevante no prompt. "Aqui está o estado atual: [cole o texto]" efetivamente substitui o conhecimento desatualizado.',
+            '**Sinal de aviso.** Se seu aplicativo depende de fatos atuais (preços, estatísticas, nomes de pessoas), planeje o RAG desde o início. O prompting sem RAG produzirá informações desatualizadas com total confiança.',
+          ],
+        },
+        limit2: {
+          title: 'Limitação 2: Alucinação',
+          content: [
+            '**Os LLMs preveem o próximo token com base na probabilidade estatística — eles não verificam fatos em relação a nenhum banco de dados.** Isso produz alucinações: afirmações falsas ou fabricadas entregues com plena confiança. Citações inventadas, URLs falsos, estatísticas incorretas e detalhes biográficos errados são formas comuns.',
+          ],
+          items: [
+            '**Workaround principal: Fundamentação com material fonte.** Forneça os fatos específicos no prompt usando "De acordo com os dados abaixo: [dados]." Isso ancora as respostas em material verificado em vez do conhecimento do modelo.',
+            '**Workaround secundário: Restrições explícitas.** Adicione instruções como "Use apenas informações do contexto fornecido. Não adicione informações externas. Se não tiver certeza, diga \'Não tenho essa informação.\'". Isso desativa a tendência do modelo de preencher lacunas.',
+            '**Workaround terciário: Consenso multi-modelo.** Envie o mesmo prompt para 3+ modelos independentes. Se um modelo afirma algo que os outros não confirmam, isso é um sinal de verificação.',
+          ],
+        },
+        limit3: {
+          title: 'Limitação 3: Sem raciocínio confiável de múltiplas etapas',
+          content: [
+            '**Os LLMs não têm memória de trabalho real — não podem manter resultados intermediários entre as previsões de tokens.** Em tarefas de aritmética, lógica e raciocínio, isso produz erros acumulados: o modelo pode calcular incorretamente na etapa 3 e construir sobre essa base incorreta para as etapas 4–8.',
+          ],
+          items: [
+            '**Workaround principal: Prompting chain-of-thought.** Adicione "Pense passo a passo antes de dar sua resposta final" ou enumere as etapas explicitamente. Isso externaliza o raciocínio para a janela de contexto do modelo, tornando as etapas intermediárias visíveis e verificáveis.',
+            '**Workaround secundário: Direcionar para um interpretador de código.** Para aritmética, estatísticas ou lógica determinista, instrua o modelo a produzir código Python e execute-o. O código não alucina — produz os resultados matemáticos corretos.',
+          ],
+        },
+        limit4: {
+          title: 'Limitação 4: Limites da janela de contexto',
+          content: [
+            '**Cada LLM tem um máximo de tokens que pode processar em uma única chamada de inferência — combinando o system prompt, o histórico de conversa, os documentos e a mensagem atual.** Exceder esse limite trunca o contexto anterior, degradando a qualidade da saída.',
+          ],
+          items: [
+            '**Workaround principal: RAG com chunking.** Em vez de passar o documento completo no prompt, divida os documentos em fragmentos, indexe os fragmentos em um banco de dados vetorial e recupere apenas os mais relevantes para cada solicitação.',
+            '**Workaround secundário: Sumarização conversacional.** Em conversas de múltiplos turnos, após cada 5 turnos, peça ao modelo que resuma o histórico da conversa e substitua o histórico completo por esse resumo. Isso reduz o uso de tokens mantendo o contexto crítico.',
+          ],
+        },
+        limit5: {
+          title: 'Limitação 5: Sem memória persistente',
+          content: [
+            '**Cada chamada à API de LLM começa com um contexto em branco.** O modelo não recorda conversas anteriores, preferências do usuário, documentos anteriores nem quaisquer resultados de sessões passadas. Cada sessão começa do zero.',
+          ],
+          items: [
+            '**Workaround principal: Injeção de memória em nível de aplicação.** Use um banco de dados vetorial (Pinecone, Weaviate, pgvector) para armazenar resumos de conversas anteriores e informações relevantes do usuário. No início de cada sessão, recupere e injete o contexto relevante no system prompt.',
+            '**Workaround secundário: Resumos de sessão.** Ao final de cada sessão, instrua o modelo a resumir os pontos-chave e as decisões. Armazene esse resumo e comece a próxima sessão injetando-o.',
+          ],
+        },
+        limit6: {
+          title: 'Limitação 6: Sem capacidade de ação no mundo real',
+          content: [
+            '**Os LLMs por padrão produzem apenas texto — eles não podem chamar APIs, ler bancos de dados, enviar e-mails, interagir com páginas web nem realizar qualquer ação real por si mesmos.** "Fazer algo" para um LLM significa produzir texto que descreve como fazê-lo.',
+          ],
+          items: [
+            '**Workaround: Chamada de ferramentas / chamada de função.** As APIs de LLM modernas (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) suportam uso de ferramentas, onde o modelo pode solicitar a execução de funções definidas pelo desenvolvedor. O modelo gera uma chamada de ferramenta estruturada; seu código executa a ação real e retorna o resultado ao modelo.',
+          ],
+        },
+        limit7: {
+          title: 'Limitação 7: Viés nos dados de treinamento',
+          content: [
+            '**O corpus de treinamento de cada LLM de propósito geral é predominantemente conteúdo da internet em inglês de antes de 2025.** Isso cria vieses sistemáticos no conhecimento do modelo, no estilo de raciocínio e nas suposições culturais.',
+          ],
+          items: [
+            '**Workaround principal: Fornecimento explícito de contexto.** Para prompts específicos do domínio, inclua terminologia relevante, convenções de nomenclatura ou conhecimento especializado diretamente no prompt. "No contexto da regulamentação bancária brasileira, onde \'LGPD\' se refere a..." substitui as associações de treinamento genéricas.',
+            '**Workaround secundário: Exemplos no idioma alvo.** Para prompting em idioma não inglês, inclua exemplos da saída desejada nesse idioma. Os modelos seguem exemplos de forma mais confiável do que instruções em prosa para comportamentos específicos do idioma.',
+          ],
+        },
+        limit8: {
+          title: 'Limitação 8: Não pode autoverificar as saídas',
+          content: [
+            '**Os LLMs não têm acesso à verdade fundamental.** Eles não podem verificar se o que produzem é factualmente preciso — só podem avaliar se é consistente com os padrões de treinamento. Uma afirmação incorreta pode ser tão internamente coerente quanto uma correta.',
+          ],
+          items: [
+            '**Workaround principal: Validação externa.** Nunca publique saída de LLM sobre afirmações factuais sem verificar os números-chave, datas, nomes e citações contra fontes primárias autorizadas.',
+            '**Workaround secundário: Prompting de autocrítica.** Após a saída inicial, peça ao modelo que revise sua própria saída em busca de inconsistências: "Revise sua resposta. Identifique quaisquer afirmações que possam estar incorretas ou que você não possa verificar a partir do contexto fornecido." Os modelos frequentemente detectam seus próprios erros quando solicitados a refletir.',
+          ],
+        },
+        regionalContext: {
+          title: 'Como as limitações dos LLMs variam por região',
+          content: [
+            '**As limitações dos LLMs são estruturalmente universais, mas variam em gravidade por idioma, região e ambiente regulatório.** Organizações da UE que operam sob a Lei de IA da UE (2024) devem documentar as limitações da IA nas avaliações de risco para casos de uso de alto risco.',
+            'No Brasil, a LGPD e as diretrizes da ANPD exigem que as organizações documentem as limitações dos sistemas de IA quando eles processam dados pessoais — incluindo alucinações e viés como riscos potenciais.',
+            'No Japão, Fujitsu Takane e Line HyperCLOVA X mostram desempenho mais forte em tarefas em japonês do que modelos multilíngues gerais, mas todas as restrições estruturais se aplicam de forma idêntica.',
+          ],
+        },
+        relatedReading: {
+          title: 'Leitura relacionada',
+          items: [
+            '[RAG explicado](/pt/prompt-engineering/rag-explained) — o principal workaround para cortes de conhecimento e alucinações',
+            '[Alucinações de IA — Por que a IA inventa coisas](/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — análise profunda da limitação 2',
+            '[Janelas de Contexto explicadas — Por que a IA esquece](/pt/prompt-engineering/context-windows-explained-why-ai-forgets) — detalhamento detalhado dos limites de tokens',
+            '[Como os LLMs realmente funcionam](/pt/prompt-engineering/how-llms-actually-work) — a arquitetura transformer, a tokenização e o RLHF que geram esses limites',
+          ],
+        },
+        faq: {
+          title: 'Perguntas frequentes',
+          faqs: [
+            { q: 'Quais são as principais coisas que os LLMs não podem fazer?', a: 'Os LLMs não podem acessar dados em tempo real, verificar suas próprias saídas, reter memória entre sessões, realizar ações no mundo real sem ferramentas de scaffolding nem raciocinar de forma confiável por meio de lógica de múltiplas etapas sem prompting chain-of-thought. Essas são restrições estruturais que se aplicam a todos os modelos.' },
+            { q: 'Por que os LLMs alucinam?', a: 'A alucinação é estrutural: os LLMs preveem o próximo token estatisticamente mais provável com base nos dados de treinamento, não a verdade verificada. Quando o sinal de treinamento para um fato específico é escasso, o modelo gera uma invenção plausível sem sinalizar incerteza. Fundamentar os prompts com material fonte explícito reduz, mas não elimina, a alucinação.' },
+            { q: 'O GPT-5.5 pode acessar a internet?', a: 'O GPT-5.5 na API padrão não pode acessar a internet. A interface ChatGPT oferece uma ferramenta de navegação opcional, mas a API do modelo base tem um corte de treinamento de outubro de 2024 e sem recuperação em tempo real. Sempre confirme se há uma camada de uso de ferramentas ativa na sua integração específica antes de assumir que o modelo tem dados atuais.' },
+            { q: 'Como os cortes de conhecimento diferem entre GPT-5.5, Claude e Gemini?', a: 'A partir de 2026: OpenAI GPT-5.5 tem um corte de treinamento de outubro de 2024; Anthropic Claude Opus 4.8 e Google Gemini 3.1 Pro têm cortes do início de 2025. Os três modelos podem ter conhecimento impreciso sobre eventos próximos aos seus cortes, pois a cobertura de treinamento dos meses mais recentes é escassa.' },
+            { q: 'Posso contornar as limitações dos LLMs por meio de melhor prompting?', a: 'O prompting reduz o impacto das limitações, mas não as elimina. O prompting chain-of-thought melhora a precisão do raciocínio. Fornecer fatos no prompt mitiga os cortes de conhecimento. As instruções de incerteza explícitas reduzem a confiança da alucinação. Mas o prompting não pode dar a um modelo acesso a dados em tempo real, memória real ou capacidade de ações no mundo real.' },
+            { q: 'Os modelos ajustados têm as mesmas limitações?', a: 'Sim. O fine-tuning ajusta o estilo, o foco do domínio ou o comportamento de seguimento de instruções — não adiciona acesso a dados em tempo real, raciocínio real ou memória persistente. Um GPT-5.5 ajustado retém o mesmo corte de conhecimento e o mesmo risco de alucinação que o modelo base.' },
+            { q: 'Qual é a diferença entre uma limitação de LLM e um bug?', a: 'Um bug é um erro não intencional que pode ser corrigido com uma atualização de software. Uma limitação é uma propriedade estrutural de como o modelo funciona. A alucinação, os cortes de conhecimento e os limites da janela de contexto são limitações — surgem da arquitetura transformer e do processo de treinamento e não podem ser corrigidos com patches, apenas contornados por meio do design do sistema.' },
+            { q: 'Qual LLM tem menos limitações?', a: 'Nenhum modelo elimina nenhuma das oito restrições estruturais — elas são universais para a arquitetura transformer. Gemini 3.1 Pro tem a maior janela de contexto (2 milhões de tokens) e mitiga melhor a limitação 4. Claude Opus 4.8 reconhece os cortes de conhecimento de forma mais confiável, mitigando assim o risco de alucinação. GPT-5.5 se destaca no uso de ferramentas (workaround para a limitação 6). Escolha com base no seu gargalo específico, não em qual modelo está "menos limitado".' },
+            { q: 'Como as limitações diferem entre modelos de código aberto e proprietários em 2026?', a: 'Modelos de código aberto (LLaMA 3.1, Mistral Large, Qwen 3) e proprietários (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) enfrentam restrições estruturais idênticas. As diferenças estão na gravidade e no custo: os modelos proprietários tipicamente têm contextos maiores, melhor seguimento de instruções e atualizações de treinamento mais frequentes. Nenhuma categoria elimina nenhuma das oito limitações.' },
+          ],
+        },
+        sources: {
+          title: 'Fontes e leituras adicionais',
+          items: [
+            '[Ji, Z. et al. (2023). "Survey of Hallucination in Natural Language Generation." ACM Computing Surveys.](https://dl.acm.org/doi/10.1145/3571730) — taxonomia abrangente dos tipos de alucinação de LLM e estratégias de mitigação',
+            '[Bubeck, S. et al. (2023). "Sparks of Artificial General Intelligence: Early experiments with GPT-4." arXiv:2303.12528.](https://arxiv.org/abs/2303.12528) — avaliação sistemática das capacidades e limitações do GPT-4',
+            '[Liu, N. et al. (2023). "Lost in the Middle: How Language Models Use Long Contexts." arXiv:2307.03172.](https://arxiv.org/abs/2307.03172) — evidência de degradação do desempenho na recuperação do meio do contexto',
+          ],
+        },
+      },
+    },
+
     fr: {
       theme: 'Fundamentals',
       title: 'Limitations de l\'IA : Ce que les LLMs ne peuvent pas faire en 2026',
