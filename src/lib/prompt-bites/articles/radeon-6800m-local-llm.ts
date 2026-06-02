@@ -90,9 +90,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['Model', 'VRAM Q4', 'Tested Speed'],
         rows: [
           { 'Model': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', 'Tested Speed': '~14 tok/s (Vulkan)' },
-          { 'Model': 'Mistral 7B Q5_K_M', 'VRAM Q4': '~6 GB', 'Tested Speed': '~13 tok/s (Vulkan)' },
+          { 'Model': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', 'Tested Speed': '~13 tok/s (Vulkan)' },
           { 'Model': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', 'Tested Speed': '~10 tok/s (Vulkan)' },
-          { 'Model': 'Qwen 2.5 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Tested Speed': '~9 tok/s (Vulkan)' },
+          { 'Model': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Tested Speed': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {

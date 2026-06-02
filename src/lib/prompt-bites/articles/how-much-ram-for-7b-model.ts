@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
-    current_models_mentioned: ['Mistral 7B', 'Llama 3 8B'],
+    current_models_mentioned: ['Mistral Small', 'Llama 3 8B'],
     current_hardware_mentioned: [],
     educationalLevel: 'Beginner',
     audience: 'Developers estimating hardware requirements for local LLMs',

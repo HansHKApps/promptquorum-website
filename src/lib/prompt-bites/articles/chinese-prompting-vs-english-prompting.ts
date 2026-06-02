@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**Qwen2.5 7B/14B/32B:** Best native Chinese support. Use Chinese for conversational prompts. Use English system prompts for reasoning-heavy tasks.',
           '**DeepSeek-R1-Distill (all sizes):** Strong with both languages. English system prompt + Chinese user query is the optimal setup.',
           '**Llama 3 8B/70B:** Avoid Chinese prompts. The tokeniser fragments Chinese into byte tokens — replies are often awkward or hallucinated Chinese. Use English and request Chinese output explicitly.',
-          '**Mistral 7B:** Weakest Chinese support. Stick to English prompts.',
+          '**Mistral Small:** Weakest Chinese support. Stick to English prompts.',
           '**ChatGLM4 (local via Ollama):** Designed for Chinese — native CJK tokenisation, best Chinese creative writing output. Weaker at English reasoning.',
         ],
       },

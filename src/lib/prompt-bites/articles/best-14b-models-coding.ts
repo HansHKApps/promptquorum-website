@@ -6,11 +6,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: 'Best 14B Model for Coding?',
     seoTitle: 'Best 14B Models for Coding 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Qwen 2.5 Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73% at 10 GB. Quick answer from PromptQuorum.',
+    metaDescription: 'Qwen 3 Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73% at 10 GB. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
-    current_models_mentioned: ['Qwen 2.5 Coder 14B', 'DeepSeek Coder 14B'],
+    current_models_mentioned: ['Qwen 3 Coder 14B', 'DeepSeek Coder 14B'],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Developers choosing a 14B coding model for local use',
@@ -20,9 +20,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best 14B model for coding?',
-        answer: 'Qwen 2.5 Coder 14B is the top 14B coding model for local use, scoring 78.4% on HumanEval and running in 10 GB VRAM at Q4_K_M quantization. It fits in 10 GB VRAM at Q4_K_M and scores highest on HumanEval among 14B models. DeepSeek Coder 14B is a strong alternative with similar VRAM requirements.',
+        answer: 'Qwen 3 Coder 14B is the top 14B coding model for local use, scoring 78.4% on HumanEval and running in 10 GB VRAM at Q4_K_M quantization. It fits in 10 GB VRAM at Q4_K_M and scores highest on HumanEval among 14B models. DeepSeek Coder 14B is a strong alternative with similar VRAM requirements.',
         bullets: [
-          'Qwen 2.5 Coder 14B Q4_K_M: ~10 GB VRAM, top HumanEval score',
+          'Qwen 3 Coder 14B Q4_K_M: ~10 GB VRAM, top HumanEval score',
           'DeepSeek Coder 14B: strong alternative, similar VRAM footprint',
           'Both beat generic 14B models on code completion and debugging',
         ],
@@ -30,9 +30,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Bestes 14B-Modell für Coding?',
-        answer: 'Qwen 2.5 Coder 14B ist das beste 14B-Coding-Modell für den lokalen Einsatz, mit 78,4% HumanEval-Score und 10 GB VRAM bei Q4_K_M-Quantisierung. Es passt mit Q4_K_M in 10 GB VRAM und erzielt den höchsten HumanEval-Score unter den 14B-Modellen. DeepSeek Coder 14B ist eine starke Alternative mit ähnlichem VRAM-Bedarf.',
+        answer: 'Qwen 3 Coder 14B ist das beste 14B-Coding-Modell für den lokalen Einsatz, mit 78,4% HumanEval-Score und 10 GB VRAM bei Q4_K_M-Quantisierung. Es passt mit Q4_K_M in 10 GB VRAM und erzielt den höchsten HumanEval-Score unter den 14B-Modellen. DeepSeek Coder 14B ist eine starke Alternative mit ähnlichem VRAM-Bedarf.',
         bullets: [
-          'Qwen 2.5 Coder 14B Q4_K_M: ~10 GB VRAM, bester HumanEval-Score',
+          'Qwen 3 Coder 14B Q4_K_M: ~10 GB VRAM, bester HumanEval-Score',
           'DeepSeek Coder 14B: starke Alternative, ähnlicher VRAM-Bedarf',
           'Beide übertreffen generische 14B-Modelle bei Code-Vervollständigung und Debugging',
         ],
@@ -40,9 +40,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Meilleur modèle 14B pour le coding ?',
-        answer: 'Qwen 2.5 Coder 14B est le meilleur modèle de coding 14B pour une utilisation locale, avec un score HumanEval de 78,4% et 10 Go de VRAM en Q4_K_M. Il tient en 10 Go de VRAM en Q4_K_M et obtient le meilleur score HumanEval parmi les modèles 14B. DeepSeek Coder 14B est une alternative solide avec des besoins en VRAM similaires.',
+        answer: 'Qwen 3 Coder 14B est le meilleur modèle de coding 14B pour une utilisation locale, avec un score HumanEval de 78,4% et 10 Go de VRAM en Q4_K_M. Il tient en 10 Go de VRAM en Q4_K_M et obtient le meilleur score HumanEval parmi les modèles 14B. DeepSeek Coder 14B est une alternative solide avec des besoins en VRAM similaires.',
         bullets: [
-          'Qwen 2.5 Coder 14B Q4_K_M : ~10 Go de VRAM, meilleur score HumanEval',
+          'Qwen 3 Coder 14B Q4_K_M : ~10 Go de VRAM, meilleur score HumanEval',
           'DeepSeek Coder 14B : alternative solide, empreinte VRAM similaire',
           'Les deux surpassent les modèles 14B génériques sur la complétion de code et le débogage',
         ],
@@ -50,9 +50,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: 'コーディングに最適な14Bモデルは？',
-        answer: 'Qwen 2.5 Coder 14Bはローカル利用の14Bコーディングモデルの中でトップで、HumanEvalで78.4%を達成し、Q4_K_M量子化で10 GB VRAMで動作します。Q4_K_Mで10 GB VRAMに収まり、14Bモデル中でHumanEvalスコアが最高です。DeepSeek Coder 14Bは同様のVRAM要件を持つ強力な代替モデルです。',
+        answer: 'Qwen 3 Coder 14Bはローカル利用の14Bコーディングモデルの中でトップで、HumanEvalで78.4%を達成し、Q4_K_M量子化で10 GB VRAMで動作します。Q4_K_Mで10 GB VRAMに収まり、14Bモデル中でHumanEvalスコアが最高です。DeepSeek Coder 14Bは同様のVRAM要件を持つ強力な代替モデルです。',
         bullets: [
-          'Qwen 2.5 Coder 14B Q4_K_M：~10 GB VRAM、最高のHumanEvalスコア',
+          'Qwen 3 Coder 14B Q4_K_M：~10 GB VRAM、最高のHumanEvalスコア',
           'DeepSeek Coder 14B：強力な代替、同様のVRAM使用量',
           '両者ともコード補完とデバッグで汎用14Bモデルを上回る',
         ],
@@ -60,9 +60,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '编程最佳14B模型是哪款？',
-        answer: 'Qwen 2.5 Coder 14B 是本地使用的最佳14B编程模型，HumanEval 得分78.4%，Q4_K_M 量化仅需10 GB VRAM。Q4_K_M量化后仅需10 GB VRAM，在14B模型中 HumanEval 得分最高。DeepSeek Coder 14B 是 VRAM 需求相近的有力替代。',
+        answer: 'Qwen 3 Coder 14B 是本地使用的最佳14B编程模型，HumanEval 得分78.4%，Q4_K_M 量化仅需10 GB VRAM。Q4_K_M量化后仅需10 GB VRAM，在14B模型中 HumanEval 得分最高。DeepSeek Coder 14B 是 VRAM 需求相近的有力替代。',
         bullets: [
-          'Qwen 2.5 Coder 14B Q4_K_M：~10 GB VRAM，HumanEval 最高分',
+          'Qwen 3 Coder 14B Q4_K_M：~10 GB VRAM，HumanEval 最高分',
           'DeepSeek Coder 14B：有力替代，VRAM 需求相近',
           '两者在代码补全和调试上均优于通用14B模型',
         ],
@@ -74,22 +74,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Qwen 2.5 Coder 14B Q4_K_M uses ~10 GB VRAM and achieves the highest HumanEval score among local 14B coding models',
+          'Qwen 3 Coder 14B Q4_K_M uses ~10 GB VRAM and achieves the highest HumanEval score among local 14B coding models',
           'DeepSeek Coder 14B is a competitive alternative that scores within 3 points of Qwen on most code benchmarks',
           'Both models significantly outperform general-purpose 14B models on code completion, debugging, and docstring generation',
-          'If VRAM is above 10 GB, prefer Qwen 2.5 Coder; below 8 GB, drop to a specialized 7B coder instead',
+          'If VRAM is above 10 GB, prefer Qwen 3 Coder; below 8 GB, drop to a specialized 7B coder instead',
         ],
       },
       body1: {
-        title: 'Qwen 2.5 Coder 14B Leads on HumanEval',
+        title: 'Qwen 3 Coder 14B Leads on HumanEval',
         content: [
-          '<strong>As of May 2026, Qwen 2.5 Coder 14B at Q4_K_M quantization scores 78.4% on HumanEval — the highest of any 14B model available through Ollama or llama.cpp.</strong> The model was fine-tuned on over 5 trillion tokens of code-focused data, which distinguishes its performance on multi-step completion and test-case generation.',
+          '<strong>As of May 2026, Qwen 3 Coder 14B at Q4_K_M quantization scores 78.4% on HumanEval — the highest of any 14B model available through Ollama or llama.cpp.</strong> The model was fine-tuned on over 5 trillion tokens of code-focused data, which distinguishes its performance on multi-step completion and test-case generation.',
           'DeepSeek Coder 14B scores 75.1% on HumanEval under identical Q4_K_M conditions. The gap is small enough that DeepSeek Coder is a valid choice, particularly if you already have it cached or are familiar with its output style.',
           'StarCoder2 15B is the third pick for open-source code-focused work. Trained on The Stack v2, it scores approximately 73% on HumanEval at ~10 GB VRAM Q4_K_M. Its strengths are open-source contribution tasks, code search across large repositories, and structured refactoring — use cases where its training corpus gives it an edge over general instruction-tuned models.',
         ],
         columns: ['Model', 'HumanEval', 'VRAM (Q4_K_M)'],
         rows: [
-          { 'Model': 'Qwen 2.5 Coder 14B', 'HumanEval': '78.4%', 'VRAM (Q4_K_M)': '~10 GB' },
+          { 'Model': 'Qwen 3 Coder 14B', 'HumanEval': '78.4%', 'VRAM (Q4_K_M)': '~10 GB' },
           { 'Model': 'DeepSeek Coder 14B', 'HumanEval': '75.1%', 'VRAM (Q4_K_M)': '~10 GB' },
           { 'Model': 'StarCoder2 15B', 'HumanEval': '~73%', 'VRAM (Q4_K_M)': '~10 GB' },
         ],
@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'VRAM Headroom Determines Which to Pick',
         content: [
-          'Both Qwen 2.5 Coder 14B and DeepSeek Coder 14B require approximately 10 GB VRAM at Q4_K_M, leaving only 2 GB headroom on a 12 GB card. <strong>This margin is tight for long-context sessions: at 8k context, VRAM usage climbs to ~11.5 GB.</strong> If your workflow involves large files, prefer a card with 16+ GB.',
+          'Both Qwen 3 Coder 14B and DeepSeek Coder 14B require approximately 10 GB VRAM at Q4_K_M, leaving only 2 GB headroom on a 12 GB card. <strong>This margin is tight for long-context sessions: at 8k context, VRAM usage climbs to ~11.5 GB.</strong> If your workflow involves large files, prefer a card with 16+ GB.',
           'For context windows below 4k tokens — the common case for single-file code completion — all three models run comfortably on an RTX 3060 12 GB or RTX 3080 Ti 12 GB. Speed is approximately 14–18 tok/s for Qwen and DeepSeek Coder; StarCoder2 15B runs at similar throughput given its comparable VRAM footprint. Prefer StarCoder2 when your workflow centers on repository-scale search or open-source contribution patterns.',
           'For a broader comparison of coding models at other sizes and VRAM tiers, see the <a href="/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">best coding LLM for 12 GB VRAM</a> guide.',
         ],
@@ -107,16 +107,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quick Answers About 14B Coding Models',
         faqs: [
           {
-            q: 'Can Qwen 2.5 Coder 14B run on 8 GB VRAM?',
-            a: 'Not reliably. At Q4_K_M the model requires ~10 GB VRAM. You could use Q3_K_M to squeeze it into 8 GB, but the quality drop is noticeable. A better option for 8 GB VRAM is Qwen 2.5 Coder 7B or DeepSeek Coder 7B.',
+            q: 'Can Qwen 3 Coder 14B run on 8 GB VRAM?',
+            a: 'Not reliably. At Q4_K_M the model requires ~10 GB VRAM. You could use Q3_K_M to squeeze it into 8 GB, but the quality drop is noticeable. A better option for 8 GB VRAM is Qwen 3 Coder 7B or DeepSeek Coder 7B.',
           },
           {
-            q: 'How does Qwen 2.5 Coder 14B compare to DeepSeek Coder 14B on real tasks?',
-            a: 'On Python and TypeScript completion, Qwen 2.5 Coder leads by 3–5 percentage points. On lower-resource languages like Rust or Go, the gap narrows. DeepSeek Coder has broader training coverage across more programming languages.',
+            q: 'How does Qwen 3 Coder 14B compare to DeepSeek Coder 14B on real tasks?',
+            a: 'On Python and TypeScript completion, Qwen 3 Coder leads by 3–5 percentage points. On lower-resource languages like Rust or Go, the gap narrows. DeepSeek Coder has broader training coverage across more programming languages.',
           },
           {
             q: 'Is a 14B coding model better than a 34B general model for code?',
-            a: 'For code-specific tasks, Qwen 2.5 Coder 14B typically outperforms a generic 34B model despite being smaller, because of its coding-focused pretraining. See the <a href="/prompt-bites/qwen-coder-vs-deepseek-coder" class="text-primary hover:underline">Qwen Coder vs DeepSeek Coder comparison</a> for detailed benchmark data.',
+            a: 'For code-specific tasks, Qwen 3 Coder 14B typically outperforms a generic 34B model despite being smaller, because of its coding-focused pretraining. See the <a href="/prompt-bites/qwen-coder-vs-deepseek-coder" class="text-primary hover:underline">Qwen Coder vs DeepSeek Coder comparison</a> for detailed benchmark data.',
           },
           {
             q: 'What quantization should I use for a 14B coding model?',

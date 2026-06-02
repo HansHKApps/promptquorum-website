@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Which models have pre-converted MLX versions?',
-            a: 'The mlx-community organization covers most major models: Llama 3, Qwen 2.5, Mistral, Phi-3/4, Gemma 2, and many fine-tunes. Both 4-bit and 8-bit quantized versions are usually available. Visit huggingface.co/mlx-community and search by model family name.',
+            a: 'The mlx-community organization covers most major models: Llama 3, Qwen 3, Mistral, Phi-3/4, Gemma 2, and many fine-tunes. Both 4-bit and 8-bit quantized versions are usually available. Visit huggingface.co/mlx-community and search by model family name.',
           },
           {
             q: 'What quantization should I use when converting to MLX?',

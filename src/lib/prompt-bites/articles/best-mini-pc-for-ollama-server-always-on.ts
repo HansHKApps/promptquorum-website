@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — Best Overall',
-            content: 'The Minisforum UM890 Pro runs the AMD Ryzen 9 8945HS (8-core, up to 5.2 GHz) and supports up to 96 GB DDR5-5600 dual-channel RAM — enough to load Llama 3.1 70B at Q4 entirely in RAM. The Radeon 780M iGPU (12 RDNA3 CUs) accelerates 7B and 13B models at 8–14 tok/s via ROCm. CPU-only 7B Q4 speed: ~12–18 tok/s. Idle power: ~15 W. Load (GPU active): ~35–45 W. Price: ~$450 (32 GB) to $550 (64 GB).',
+            content: 'The Minisforum UM890 Pro runs the AMD Ryzen 9 8945HS (8-core, up to 5.2 GHz) and supports up to 96 GB DDR5-5600 dual-channel RAM — enough to load Llama 3.3 70B at Q4 entirely in RAM. The Radeon 780M iGPU (12 RDNA3 CUs) accelerates 7B and 13B models at 8–14 tok/s via ROCm. CPU-only 7B Q4 speed: ~12–18 tok/s. Idle power: ~15 W. Load (GPU active): ~35–45 W. Price: ~$450 (32 GB) to $550 (64 GB).',
             affiliateLinks: [
               { label: 'Minisforum UM890 Pro on Amazon', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
               { label: 'Minisforum UM890 Pro on Minisforum.com', url: 'https://minisforum.com/products/UM890-Pro.html' },
@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             ['Beelink SER8', '25 W', '~$2.70/mo'],
             ['Mac Mini M4 Pro', '25 W', '~$2.70/mo'],
             ['Desktop RTX 4060 Ti (comparison)', '200 W', '~$21.60/mo'],
-            ['Cloud API (GPT-4o-mini, 1M tok/day)', 'N/A', '~$45–90/mo'],
+            ['Cloud API (GPT-5.5-mini, 1M tok/day)', 'N/A', '~$45–90/mo'],
           ],
         },
       },
@@ -105,7 +105,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Can a mini PC run 13B or larger models at useful speed?',
-            a: 'Yes — with enough RAM. The Minisforum UM890 Pro with 64 GB runs Llama 3.1 13B Q8 entirely in RAM at ~8–12 tok/s CPU-only. With the Radeon 780M iGPU accelerating, Q4 models run at 10–18 tok/s — usable for background summarization or API calls. Interactive chat benefits from at least 12–15 tok/s. For 30B+ models, the Mac Mini M4 Pro (48 GB unified memory) is the only mini PC option under $1500.',
+            a: 'Yes — with enough RAM. The Minisforum UM890 Pro with 64 GB runs Llama 3.3 13B Q8 entirely in RAM at ~8–12 tok/s CPU-only. With the Radeon 780M iGPU accelerating, Q4 models run at 10–18 tok/s — usable for background summarization or API calls. Interactive chat benefits from at least 12–15 tok/s. For 30B+ models, the Mac Mini M4 Pro (48 GB unified memory) is the only mini PC option under $1500.',
           },
           {
             q: 'Does Ollama work well as a network server on a mini PC?',

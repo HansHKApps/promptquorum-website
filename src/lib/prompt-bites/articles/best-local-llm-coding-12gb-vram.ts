@@ -6,11 +6,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     title: 'Best Local LLM for Coding with 12 GB VRAM?',
     seoTitle: 'Best Coding LLM for 12 GB 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Qwen 2.5 Coder 14B Q4_K_M: top coding model for 12 GB VRAM at ~10 GB, highest HumanEval. DeepSeek 14B Q4 alternative. Both fit RTX 3060/3080 Ti 12 GB.',
+    metaDescription: 'Qwen 3 Coder 14B Q4_K_M: top coding model for 12 GB VRAM at ~10 GB, highest HumanEval. DeepSeek 14B Q4 alternative. Both fit RTX 3060/3080 Ti 12 GB.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
-    current_models_mentioned: ['Qwen 2.5 Coder 14B', 'DeepSeek Coder 14B'],
+    current_models_mentioned: ['Qwen 3 Coder 14B', 'DeepSeek Coder 14B'],
     current_hardware_mentioned: ['RTX 3060 12 GB', 'RTX 3080 Ti 12 GB'],
     educationalLevel: 'Intermediate',
     audience: 'Developers with 12 GB VRAM GPUs choosing a coding model',
@@ -20,9 +20,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best local LLM for coding with 12 GB VRAM?',
-        answer: 'Qwen 2.5 Coder 14B Q4_K_M is the best coding model for 12 GB VRAM GPUs, achieving the highest HumanEval scores among 14B models while using ~10 GB VRAM on RTX 3060 and RTX 3080 Ti. It uses ~10 GB VRAM and scores highest on HumanEval among models that fit this constraint. DeepSeek Coder 14B is a strong alternative.',
+        answer: 'Qwen 3 Coder 14B Q4_K_M is the best coding model for 12 GB VRAM GPUs, achieving the highest HumanEval scores among 14B models while using ~10 GB VRAM on RTX 3060 and RTX 3080 Ti. It uses ~10 GB VRAM and scores highest on HumanEval among models that fit this constraint. DeepSeek Coder 14B is a strong alternative.',
         bullets: [
-          'Qwen 2.5 Coder 14B Q4_K_M: ~10 GB VRAM, top coding benchmark for this size',
+          'Qwen 3 Coder 14B Q4_K_M: ~10 GB VRAM, top coding benchmark for this size',
           'DeepSeek Coder 14B Q4_K_M: similar VRAM, competitive on code completion',
           'Both fit RTX 3060 12 GB and RTX 3080 Ti 12 GB',
         ],
@@ -30,9 +30,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Bestes lokales LLM für Coding mit 12 GB VRAM?',
-        answer: 'Qwen 2.5 Coder 14B Q4_K_M ist das beste Coding-Modell für 12-GB-VRAM-GPUs, erreicht die höchsten HumanEval-Scores unter 14B-Modellen und benötigt ~10 GB VRAM auf RTX 3060 und RTX 3080 Ti. Es benötigt ~10 GB VRAM und erzielt den höchsten HumanEval-Score unter Modellen, die in dieses Limit passen. DeepSeek Coder 14B ist eine starke Alternative.',
+        answer: 'Qwen 3 Coder 14B Q4_K_M ist das beste Coding-Modell für 12-GB-VRAM-GPUs, erreicht die höchsten HumanEval-Scores unter 14B-Modellen und benötigt ~10 GB VRAM auf RTX 3060 und RTX 3080 Ti. Es benötigt ~10 GB VRAM und erzielt den höchsten HumanEval-Score unter Modellen, die in dieses Limit passen. DeepSeek Coder 14B ist eine starke Alternative.',
         bullets: [
-          'Qwen 2.5 Coder 14B Q4_K_M: ~10 GB VRAM, bester Coding-Benchmark für diese Größe',
+          'Qwen 3 Coder 14B Q4_K_M: ~10 GB VRAM, bester Coding-Benchmark für diese Größe',
           'DeepSeek Coder 14B Q4_K_M: ähnlicher VRAM, wettbewerbsfähig bei Code-Vervollständigung',
           'Beide passen auf RTX 3060 12 GB und RTX 3080 Ti 12 GB',
         ],
@@ -40,9 +40,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Meilleur LLM local pour le coding avec 12 Go de VRAM ?',
-        answer: 'Qwen 2.5 Coder 14B Q4_K_M est le meilleur modèle de coding pour les GPU 12 Go, obtient les meilleurs scores HumanEval parmi les modèles 14B tout en utilisant ~10 Go de VRAM sur RTX 3060 et RTX 3080 Ti. Il utilise ~10 Go de VRAM et obtient le meilleur score HumanEval parmi les modèles qui tiennent dans cette contrainte. DeepSeek Coder 14B est une alternative solide.',
+        answer: 'Qwen 3 Coder 14B Q4_K_M est le meilleur modèle de coding pour les GPU 12 Go, obtient les meilleurs scores HumanEval parmi les modèles 14B tout en utilisant ~10 Go de VRAM sur RTX 3060 et RTX 3080 Ti. Il utilise ~10 Go de VRAM et obtient le meilleur score HumanEval parmi les modèles qui tiennent dans cette contrainte. DeepSeek Coder 14B est une alternative solide.',
         bullets: [
-          'Qwen 2.5 Coder 14B Q4_K_M : ~10 Go de VRAM, meilleur benchmark de coding pour cette taille',
+          'Qwen 3 Coder 14B Q4_K_M : ~10 Go de VRAM, meilleur benchmark de coding pour cette taille',
           'DeepSeek Coder 14B Q4_K_M : VRAM similaire, compétitif sur la complétion de code',
           'Les deux tiennent sur RTX 3060 12 Go et RTX 3080 Ti 12 Go',
         ],
@@ -50,9 +50,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: '12 GB VRAMでコーディングに最適なローカルLLMは？',
-        answer: 'Qwen 2.5 Coder 14B Q4_K_MはRTX 3060とRTX 3080 Ti上で12 GB VRAMの最良コーディングモデルで、14Bモデル中で最高のHumanEvalスコアを達成しながら~10 GB VRAMを使用します。~10 GB VRAMを使用し、この制約に収まるモデルの中でHumanEvalスコアが最高です。DeepSeek Coder 14Bは強力な代替です。',
+        answer: 'Qwen 3 Coder 14B Q4_K_MはRTX 3060とRTX 3080 Ti上で12 GB VRAMの最良コーディングモデルで、14Bモデル中で最高のHumanEvalスコアを達成しながら~10 GB VRAMを使用します。~10 GB VRAMを使用し、この制約に収まるモデルの中でHumanEvalスコアが最高です。DeepSeek Coder 14Bは強力な代替です。',
         bullets: [
-          'Qwen 2.5 Coder 14B Q4_K_M：~10 GB VRAM、このサイズでコーディングベンチマーク最高',
+          'Qwen 3 Coder 14B Q4_K_M：~10 GB VRAM、このサイズでコーディングベンチマーク最高',
           'DeepSeek Coder 14B Q4_K_M：同様のVRAM、コード補完で競争力あり',
           '両者ともRTX 3060 12 GBおよびRTX 3080 Ti 12 GBに収まる',
         ],
@@ -60,9 +60,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '12 GB VRAM 编程最佳本地 LLM 是哪款？',
-        answer: 'Qwen 2.5 Coder 14B Q4_K_M 是12 GB VRAM显卡的最佳编程模型，在14B模型中 HumanEval 得分最高，RTX 3060和RTX 3080 Ti上仅占约10 GB VRAM。使用约10 GB VRAM，在符合此约束的模型中 HumanEval 得分最高。DeepSeek Coder 14B 是有力替代。',
+        answer: 'Qwen 3 Coder 14B Q4_K_M 是12 GB VRAM显卡的最佳编程模型，在14B模型中 HumanEval 得分最高，RTX 3060和RTX 3080 Ti上仅占约10 GB VRAM。使用约10 GB VRAM，在符合此约束的模型中 HumanEval 得分最高。DeepSeek Coder 14B 是有力替代。',
         bullets: [
-          'Qwen 2.5 Coder 14B Q4_K_M：~10 GB VRAM，该尺寸编程基准最高分',
+          'Qwen 3 Coder 14B Q4_K_M：~10 GB VRAM，该尺寸编程基准最高分',
           'DeepSeek Coder 14B Q4_K_M：VRAM 相近，代码补全竞争力强',
           '两者均适配 RTX 3060 12 GB 和 RTX 3080 Ti 12 GB',
         ],
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Qwen 2.5 Coder 14B Q4_K_M: ~9–10 GB VRAM, high-70s on HumanEval — the top coding pick for any 12 GB GPU',
+          'Qwen 3 Coder 14B Q4_K_M: ~9–10 GB VRAM, high-70s on HumanEval — the top coding pick for any 12 GB GPU',
           '12 GB is the VRAM threshold that unlocks the 14B coding tier; 8 GB cards cap at 7B models, which score noticeably lower on coding benchmarks',
           'Set --num-ctx 8192 minimum for coding work — the default 2048-token context truncates most real source files',
           'NVIDIA 12 GB cards deliver ~22 tok/s on these models; AMD 12 GB cards with ROCm at ~16 tok/s',
@@ -84,12 +84,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'The Coding Pick for 12 GB',
         content: [
           'As of May 2026, <strong>a 14B coding model at Q4_K_M uses 9–10 GB VRAM — making 12 GB the minimum tier that reliably fits the highest-scoring coding models.</strong> 8 GB cards cap at 7B models, which score noticeably lower on HumanEval than their 14B counterparts.',
-          'Qwen 2.5 Coder 14B Q4_K_M is the top pick — it leads consistently on Python and TypeScript tasks. DeepSeek Coder 14B is a close alternative for polyglot work across 80+ languages. Both use ~9–10 GB VRAM and run at ~14 tok/s on an RTX 3060 12 GB. The RTX 3080 Ti 12 GB pushes these to ~18 tok/s thanks to its higher memory bandwidth (912 GB/s vs 360 GB/s).',
+          'Qwen 3 Coder 14B Q4_K_M is the top pick — it leads consistently on Python and TypeScript tasks. DeepSeek Coder 14B is a close alternative for polyglot work across 80+ languages. Both use ~9–10 GB VRAM and run at ~14 tok/s on an RTX 3060 12 GB. The RTX 3080 Ti 12 GB pushes these to ~18 tok/s thanks to its higher memory bandwidth (912 GB/s vs 360 GB/s).',
           'If you are working with an 8 GB rig and need a 14B model without upgrading, see the <a href="/prompt-bites/best-models-amd-5700x-3070ti" class="text-primary hover:underline">best LLMs for AMD 5700X + RTX 3070 Ti</a> for the 8 GB compromise options.',
         ],
         columns: ['Model', 'VRAM at Q4', 'Best For'],
         rows: [
-          { 'Model': 'Qwen 2.5 Coder 14B Q4_K_M', 'VRAM at Q4': '~9–10 GB', 'Best For': 'Python, TypeScript, Go (top pick)' },
+          { 'Model': 'Qwen 3 Coder 14B Q4_K_M', 'VRAM at Q4': '~9–10 GB', 'Best For': 'Python, TypeScript, Go (top pick)' },
           { 'Model': 'DeepSeek Coder 14B Q4_K_M', 'VRAM at Q4': '~9–10 GB', 'Best For': '80+ languages, polyglot work' },
           { 'Model': 'StarCoder2 15B Q4', 'VRAM at Q4': '~9.5 GB', 'Best For': 'Open-source contribution, code search' },
           { 'Model': 'Llama 3 8B Q5_K_M', 'VRAM at Q4': '~6 GB', 'Best For': 'Lighter fallback if 14B feels slow' },
@@ -110,8 +110,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quick Answers About Coding LLMs for 12 GB VRAM',
         faqs: [
           {
-            q: 'Does Qwen 2.5 Coder fit on RTX 4060 Ti 8 GB?',
-            a: 'No — Qwen 2.5 Coder 14B at Q4_K_M uses ~9–10 GB, which exceeds 8 GB VRAM. Dropping to Q3_K_M (~7 GB) allows it to fit, but output quality degrades noticeably on code completion tasks.',
+            q: 'Does Qwen 3 Coder fit on RTX 4060 Ti 8 GB?',
+            a: 'No — Qwen 3 Coder 14B at Q4_K_M uses ~9–10 GB, which exceeds 8 GB VRAM. Dropping to Q3_K_M (~7 GB) allows it to fit, but output quality degrades noticeably on code completion tasks.',
           },
           {
             q: 'Should I use Q4_K_M or Q5_K_M for coding on 12 GB?',
@@ -123,7 +123,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Can I use fill-in-the-middle (FIM) with these models on Ollama?',
-            a: 'Yes. Qwen 2.5 Coder and DeepSeek Coder both support FIM natively. Ollama exposes it via the <code>/api/generate</code> endpoint using the <code>suffix</code> field. Both run FIM within the normal VRAM budget on 12 GB cards.',
+            a: 'Yes. Qwen 3 Coder and DeepSeek Coder both support FIM natively. Ollama exposes it via the <code>/api/generate</code> endpoint using the <code>suffix</code> field. Both run FIM within the normal VRAM budget on 12 GB cards.',
           },
         ],
       },

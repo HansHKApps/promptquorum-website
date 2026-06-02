@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           headers: ['Tool', 'Setup', 'Best Model', 'Privacy', 'Cost'],
           rows: [
             ['Ollama + Open WebUI', 'CLI + Docker', 'Qwen2.5 72B, Llama 3.3 70B', '100% local', 'Free'],
-            ['Jan', 'Desktop app', 'Qwen2.5 14B, Mistral 7B', '100% local', 'Free'],
+            ['Jan', 'Desktop app', 'Qwen2.5 14B, Mistral Small', '100% local', 'Free'],
             ['LM Studio', 'Desktop app', 'Any GGUF model', '100% local', 'Free'],
             ['Groq (free tier)', 'API/web', 'Llama 3.3 70B, Gemma2 27B', 'Cloud (limited retention)', 'Free (rate-limited)'],
             ['AnythingLLM', 'Desktop/Docker', 'Any Ollama model', '100% local', 'Free (Enterprise: $$$)'],
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ollamaWebui: {
         heading: 'Ollama + Open WebUI — Best Full Replacement',
-        body: 'Ollama handles model management and serves a local API. Open WebUI provides a browser interface that closely mirrors the ChatGPT experience: conversation history, system prompts, file uploads, image generation (with Stable Diffusion backend), and web search (via SearXNG plugin).\n\nOn a machine with 16GB RAM or 8GB VRAM, Qwen2.5 14B runs at 15–25 tokens/second — fast enough for comfortable interactive use. With 24GB VRAM (RTX 4090, RTX 3090), Qwen2.5 72B Q4_K_M matches GPT-4o on most reasoning tasks.\n\n**One-command setup:**\n```bash\ncurl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\ndocker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main\n```',
+        body: 'Ollama handles model management and serves a local API. Open WebUI provides a browser interface that closely mirrors the ChatGPT experience: conversation history, system prompts, file uploads, image generation (with Stable Diffusion backend), and web search (via SearXNG plugin).\n\nOn a machine with 16GB RAM or 8GB VRAM, Qwen2.5 14B runs at 15–25 tokens/second — fast enough for comfortable interactive use. With 24GB VRAM (RTX 4090, RTX 3090), Qwen2.5 72B Q4_K_M matches GPT-5.5 on most reasoning tasks.\n\n**One-command setup:**\n```bash\ncurl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\ndocker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main\n```',
         pros: ['Full ChatGPT-like interface', 'Model history and system prompts', 'File upload and web search plugins', 'Free with no rate limits'],
         cons: ['Requires Docker for Open WebUI', 'Setup takes 15–30 minutes', 'Performance depends on local hardware'],
         verdict: 'Best overall ChatGPT Plus replacement for users comfortable with basic terminal commands.',
@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Can open-source local models match ChatGPT Plus quality?',
-            a: 'Qwen2.5 72B and Llama 3.3 70B running locally match GPT-4o performance on most reasoning, coding, and writing benchmarks. They require 24GB+ VRAM for full quality. Smaller 14B models are noticeably weaker than GPT-4o but strong enough for most everyday tasks.',
+            a: 'Qwen2.5 72B and Llama 3.3 70B running locally match GPT-5.5 performance on most reasoning, coding, and writing benchmarks. They require 24GB+ VRAM for full quality. Smaller 14B models are noticeably weaker than GPT-5.5 but strong enough for most everyday tasks.',
           },
           {
             q: 'What hardware do I need to run a free ChatGPT alternative locally?',
@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'Can open-source local models match ChatGPT Plus quality?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 72B and Llama 3.3 70B match GPT-4o on most benchmarks and require 24GB+ VRAM. 14B models are strong for everyday tasks.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 72B and Llama 3.3 70B match GPT-5.5 on most benchmarks and require 24GB+ VRAM. 14B models are strong for everyday tasks.' },
         },
       ],
     },

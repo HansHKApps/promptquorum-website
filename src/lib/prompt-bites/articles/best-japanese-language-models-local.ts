@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Do Llama and Mistral support Japanese?',
-            a: 'Basic support only. Llama 3.1 8B includes some Japanese training data but performs 30–40% worse than Japanese-specific models on Japanese-language benchmarks. Mistral 7B has minimal Japanese training data and is not recommended for Japanese tasks. Use ELYZA-7B (Llama fine-tune) or Rinna 3.6B for reliable Japanese output.',
+            a: 'Basic support only. Llama 3.3 8B includes some Japanese training data but performs 30–40% worse than Japanese-specific models on Japanese-language benchmarks. Mistral Small has minimal Japanese training data and is not recommended for Japanese tasks. Use ELYZA-7B (Llama fine-tune) or Rinna 3.6B for reliable Japanese output.',
           },
           {
             q: 'Does quantization hurt Japanese quality?',

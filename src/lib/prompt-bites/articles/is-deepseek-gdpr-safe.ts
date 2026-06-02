@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>The open-weight DeepSeek models (R1, V3, Coder V2) are a separate product from the API. They are released under Apache 2.0 and can be downloaded and run locally with no connection to DeepSeek servers.</strong> Running local weights eliminates the GDPR Article 44 transfer problem entirely — the same way local Qwen or local Llama does.',
           'Local DeepSeek R1 7B or 8B runs comfortably via Ollama on a 6–8 GB VRAM GPU. The performance is excellent: R1 is one of the strongest reasoning models available at the 7B tier. For coding tasks, DeepSeek Coder V2 is available in smaller variants.',
-          'The one remaining question for local DeepSeek: model training. DeepSeek has not published full details of what data was used to train these models. For high-assurance environments (healthcare, legal, government), this uncertainty may be relevant even for local deployment. Qwen 2.5 (Alibaba/Tongyi) and Llama 4 (Meta) provide more transparency about training data provenance.',
+          'The one remaining question for local DeepSeek: model training. DeepSeek has not published full details of what data was used to train these models. For high-assurance environments (healthcare, legal, government), this uncertainty may be relevant even for local deployment. Qwen 3 (Alibaba/Tongyi) and Llama 4 (Meta) provide more transparency about training data provenance.',
         ],
         columns: ['Deployment', 'GDPR Risk', 'Reason', 'Recommended Action'],
         rows: [
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Which LLM is safest for GDPR-regulated data?',
-            a: 'For maximum GDPR safety: any local open-weight model (Qwen 2.5, Llama 4, DeepSeek R1 local) running offline with no external API calls. Among these, Qwen 2.5 and Llama 4 have more transparent training data provenance. See the <a href="/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">full GDPR LLM risk comparison</a> for a structured decision tool.',
+            a: 'For maximum GDPR safety: any local open-weight model (Qwen 3, Llama 4, DeepSeek R1 local) running offline with no external API calls. Among these, Qwen 3 and Llama 4 have more transparent training data provenance. See the <a href="/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">full GDPR LLM risk comparison</a> for a structured decision tool.',
           },
         ],
       },

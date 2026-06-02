@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>As of May 2026, the latest stable Ollama release is listed at github.com/ollama/ollama/releases — that page shows the exact version number and release notes. This page is updated monthly — last verified May 2026.</strong>',
           'Run <code>ollama --version</code> in a terminal to see your installed build. The output is one line. If the GitHub releases page shows a higher version number, your install is behind.',
-          'New model families — including Llama 3.1 and Qwen 3 — require a minimum Ollama version to load correctly. Recent releases also include faster GGUF loading and better multi-GPU context handling — improvements that compound across daily use.',
+          'New model families — including Llama 3.3 and Qwen 3 — require a minimum Ollama version to load correctly. Recent releases also include faster GGUF loading and better multi-GPU context handling — improvements that compound across daily use.',
         ],
       },
       body2: {

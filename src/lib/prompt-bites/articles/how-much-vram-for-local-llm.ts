@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
-    current_models_mentioned: ['Phi-4 Mini', 'Llama 3 8B', 'Mistral 7B', 'Qwen 14B'],
+    current_models_mentioned: ['Phi-4 Mini', 'Llama 3 8B', 'Mistral Small', 'Qwen 14B'],
     current_hardware_mentioned: ['RTX 3060', 'RTX 3050'],
     educationalLevel: 'Beginner',
     audience: 'Developers and enthusiasts running local LLMs',
@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '4 GB: Phi-4 Mini Q4, Gemma 2 2B',
           '6 GB: Llama 3 8B Q4_K_M',
-          '8–12 GB: Mistral 7B Q5, Qwen 14B Q4',
+          '8–12 GB: Mistral Small Q5, Qwen 14B Q4',
         ],
         updatedDate: '2026-05',
       },
@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '4 GB: Phi-4 Mini Q4, Gemma 2 2B',
           '6 GB: Llama 3 8B Q4_K_M',
-          '8–12 GB: Mistral 7B Q5, Qwen 14B Q4',
+          '8–12 GB: Mistral Small Q5, Qwen 14B Q4',
         ],
         updatedDate: '2026-05',
       },
@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '4 Go : Phi-4 Mini Q4, Gemma 2 2B',
           '6 Go : Llama 3 8B Q4_K_M',
-          '8–12 Go : Mistral 7B Q5, Qwen 14B Q4',
+          '8–12 Go : Mistral Small Q5, Qwen 14B Q4',
         ],
         updatedDate: '2026-05',
       },
@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '4 GB: Phi-4 Mini Q4, Gemma 2 2B',
           '6 GB: Llama 3 8B Q4_K_M',
-          '8–12 GB: Mistral 7B Q5, Qwen 14B Q4',
+          '8–12 GB: Mistral Small Q5, Qwen 14B Q4',
         ],
         updatedDate: '2026-05',
       },
@@ -64,7 +64,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '4 GB：Phi-4 Mini Q4，Gemma 2 2B',
           '6 GB：Llama 3 8B Q4_K_M',
-          '8–12 GB：Mistral 7B Q5，Qwen 14B Q4',
+          '8–12 GB：Mistral Small Q5，Qwen 14B Q4',
         ],
         updatedDate: '2026-05',
       },
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '4 GB: Phi-4 Mini Q4, Gemma 2 2B',
           '6 GB: Llama 3 8B Q4_K_M',
-          '8–12 GB: Mistral 7B Q5, Qwen 14B Q4',
+          '8–12 GB: Mistral Small Q5, Qwen 14B Q4',
         ],
         updatedDate: '2026-05',
       },
@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'VRAM': '4 GB', 'Best Model at Q4_K_M': 'Phi-4 Mini Q4', 'Speed': '~25 tok/s' },
           { 'VRAM': '6 GB', 'Best Model at Q4_K_M': 'Llama 3 8B Q4_K_M', 'Speed': '~20 tok/s' },
-          { 'VRAM': '8 GB', 'Best Model at Q4_K_M': 'Mistral 7B Q5_K_M', 'Speed': '~18 tok/s' },
+          { 'VRAM': '8 GB', 'Best Model at Q4_K_M': 'Mistral Small Q5_K_M', 'Speed': '~18 tok/s' },
           { 'VRAM': '12 GB', 'Best Model at Q4_K_M': 'Qwen 14B Q4_K_M', 'Speed': '~15 tok/s' },
           { 'VRAM': '16+ GB', 'Best Model at Q4_K_M': 'Qwen 32B Q4 or Llama 70B partial', 'Speed': '~8 tok/s' },
         ],
@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Is 8 GB VRAM enough for local LLMs?',
-            a: 'Yes. 8 GB runs Llama 3 8B at Q5_K_M at around 18 tokens per second, or Mistral 7B at Q5_K_M with headroom to spare. Most day-to-day chat and coding tasks are well-covered at this tier.',
+            a: 'Yes. 8 GB runs Llama 3 8B at Q5_K_M at around 18 tokens per second, or Mistral Small at Q5_K_M with headroom to spare. Most day-to-day chat and coding tasks are well-covered at this tier.',
           },
           {
             q: 'Can I run a 7B model on 4 GB VRAM?',

@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Best Pick: Used NVIDIA RTX 3060 12 GB',
         content: [
-          '<strong>The used NVIDIA RTX 3060 12 GB is the best GPU under $300 for local LLMs because 12 GB of VRAM plus zero-setup CUDA support gives you a working LLM box in minutes.</strong> At $150-250 in the May 2026 used market, it runs Mistral 7B, Llama 3 8B, and Qwen3 8B at 15-20 tokens per second, and most 13B models at Q4.',
+          '<strong>The used NVIDIA RTX 3060 12 GB is the best GPU under $300 for local LLMs because 12 GB of VRAM plus zero-setup CUDA support gives you a working LLM box in minutes.</strong> At $150-250 in the May 2026 used market, it runs Mistral Small, Llama 3 8B, and Qwen3 8B at 15-20 tokens per second, and most 13B models at Q4.',
           'The RTX 3060 wins on software. Ollama and llama.cpp detect NVIDIA GPUs via CUDA automatically on Windows and Linux — no driver hunting, no ROCm. The AMD RX 6700 XT ($130-200 used) saves $30-80 and matches the 12 GB capacity, but ROCm setup on Linux typically costs 3-5 hours and is unsupported on Windows for fast inference.',
           'Choose the RX 6700 XT only if budget is the single deciding factor and you are comfortable on Linux. For everyone else, the RTX 3060 12 GB is the safer first GPU. Avoid the 6 GB RTX 3060 variant — it looks identical in listings but only fits 3B models.',
         ],

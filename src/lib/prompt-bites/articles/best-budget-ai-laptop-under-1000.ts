@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Best Pick: A Ryzen 7 Laptop with 16 GB RAM',
         content: [
-          '<strong>The best budget AI laptop under $1,000 is a Ryzen 7 (or equivalent Intel Core i7) with 16 GB of RAM — it runs 3B and 7-8B models on CPU at usable speeds.</strong> Models like Mistral 7B, Llama 3.2 3B, and Phi-3 Mini run at 3-7 tokens per second on CPU inference, slow but acceptable for short prompts.',
+          '<strong>The best budget AI laptop under $1,000 is a Ryzen 7 (or equivalent Intel Core i7) with 16 GB of RAM — it runs 3B and 7-8B models on CPU at usable speeds.</strong> Models like Mistral Small, Llama 3.2 3B, and Phi-3 Mini run at 3-7 tokens per second on CPU inference, slow but acceptable for short prompts.',
           'The catch: this tier means CPU-only inference. Most laptops under $1,000 either ship without a discrete GPU or with a 4 GB GPU that is too small for serious LLM work. CPU inference is fine for experimentation, learning, and short tasks; it is slow for long generations.',
           'If GPU-accelerated inference is your priority, the under-$1,000 tier is too tight. Save for a MacBook Air M-series — its unified memory architecture turns RAM into usable LLM memory and delivers far higher tokens per second than any sub-$1,000 Windows laptop. For pricing on specific models, check current listings.',
         ],

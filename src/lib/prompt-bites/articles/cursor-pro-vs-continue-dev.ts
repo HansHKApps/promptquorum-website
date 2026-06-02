@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Can I use Continue.dev with a local Ollama model?',
-            a: 'Yes — that is a primary use case. Install Ollama, pull a coding model like Qwen 2.5 Coder, and point Continue.dev at the local Ollama endpoint. No API key required.',
+            a: 'Yes — that is a primary use case. Install Ollama, pull a coding model like Qwen 3 Coder, and point Continue.dev at the local Ollama endpoint. No API key required.',
           },
           {
             q: 'Which is cheaper at heavy daily use?',

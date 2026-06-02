@@ -9,12 +9,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     type: 'comparison',
     title: 'Best Cloud GPU for LLM Fine-Tuning Under $1/Hour (2026)',
     seoTitle: 'Best Cloud GPU Fine-Tuning Under $1/Hour 2026',
-    metaDescription: 'Fine-tune Llama 3.1 8B or Qwen2.5 14B for under $1/hour on RunPod, Vast.ai, or Lambda Labs. Cheapest GPU options, actual costs, and provider comparison.',
+    metaDescription: 'Fine-tune Llama 3.3 8B or Qwen2.5 14B for under $1/hour on RunPod, Vast.ai, or Lambda Labs. Cheapest GPU options, actual costs, and provider comparison.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
     parentArticle: '/local-llms/cloud-gpu-rental-comparison-2026',
-    leadAnswerBlock: '**For fine-tuning Llama 3.1 8B or Qwen2.5 14B with QLoRA in 2026, a single A40 48GB on RunPod spot at $0.44/hr or an RTX 4090 24GB on Vast.ai at $0.32–0.48/hr both work well under $1/hour. A full fine-tuning run costs $2–8 total.**',
+    leadAnswerBlock: '**For fine-tuning Llama 3.3 8B or Qwen2.5 14B with QLoRA in 2026, a single A40 48GB on RunPod spot at $0.44/hr or an RTX 4090 24GB on Vast.ai at $0.32–0.48/hr both work well under $1/hour. A full fine-tuning run costs $2–8 total.**',
     quickAnswerTop: {
       question: 'What is the cheapest cloud GPU for fine-tuning a local LLM?',
       answer: 'RunPod A40 48GB spot at $0.44/hr or Vast.ai RTX 4090 at $0.32–0.48/hr are the cheapest reliable options for QLoRA fine-tuning of 7B–14B models. A typical fine-tuning run of 1,000 steps with a 1K-sample dataset takes 2–4 hours, costing $1–2 total.',
@@ -84,9 +84,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         tableData: {
           headers: ['Task', 'GPU Needed', 'Duration', 'Platform', 'Total Cost'],
           rows: [
-            ['Llama 3.1 8B QLoRA, 1K samples, 1K steps', 'RTX 4090 (24 GB)', '~2 hrs', 'RunPod spot ($0.44/hr)', '~$0.88'],
+            ['Llama 3.3 8B QLoRA, 1K samples, 1K steps', 'RTX 4090 (24 GB)', '~2 hrs', 'RunPod spot ($0.44/hr)', '~$0.88'],
             ['Qwen2.5 14B QLoRA, 5K samples, 3K steps', 'A40 48GB', '~5 hrs', 'RunPod spot ($0.44/hr)', '~$2.20'],
-            ['Llama 3.1 70B QLoRA-4bit, 1K samples', 'A100 80GB', '~8 hrs', 'RunPod ($1.49/hr)', '~$11.92'],
+            ['Llama 3.3 70B QLoRA-4bit, 1K samples', 'A100 80GB', '~8 hrs', 'RunPod ($1.49/hr)', '~$11.92'],
             ['Qwen2.5-Coder 7B, SQL dataset, 10K steps', 'RTX 3090 (24 GB)', '~4 hrs', 'Vast.ai ($0.28/hr)', '~$1.12'],
           ],
         },
