@@ -3033,7 +3033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Guia de aluguel de GPU na nuvem 2026: RunPod vs Lambda vs Vast.ai',
       description: 'Guia de aluguel GPU cloud 2026: RunPod, Vast.ai, Lambda Labs comparados. Preços por hora para A100, H100, RTX 4090. Quando alugar uma GPU é melhor que comprar hardware próprio.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/cloud-gpu-rental-guide-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

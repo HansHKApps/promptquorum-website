@@ -1410,7 +1410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       mainEntity: [
         {
           '@type': 'Question',
@@ -1457,7 +1457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       name: 'Melhores LLMs de codificação local 2026: DeepSeek vs Qwen',
       numberOfItems: 5,
       itemListElement: [
@@ -1479,7 +1479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/pt/power-local-llm/deepseek-vs-qwen-coding-local-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       about: [
         { '@type': 'Thing', name: 'DeepSeek-V3' },
         { '@type': 'Thing', name: 'Qwen3-Coder' },

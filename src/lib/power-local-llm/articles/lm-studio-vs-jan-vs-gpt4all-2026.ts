@@ -1936,7 +1936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'LM Studio vs Jan vs GPT4All 2026: testados em M5 + RTX 4070',
       description: '3 apps de IA de desktop testados em MacBook M5 e RTX 4070. O LM Studio vence em velocidade, o Jan em UX, o GPT4All em simplicidade. Comparativo completo com benchmarks.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
       author: { '@type': 'Person', 'name': 'Hans Kuepper' },

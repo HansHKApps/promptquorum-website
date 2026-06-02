@@ -12,6 +12,7 @@ import { PROMPT_BITES_SLUG_TO_KEY } from './slugs'
 import { isPromptBitePublished, isPromptBitesHubPublished, PROMPT_BITES_PUBLISHED_SLUGS } from './published'
 import { promptBitesAlternates, promptBitesHubPath, promptBitesArticlePath } from './metadata-helpers'
 import { getHubMetadata } from './hub-metadata'
+import { toOutputLocale } from '@/lib/i18n/constants'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -125,7 +126,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    inLanguage: lang,
+    inLanguage: toOutputLocale(lang),
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: HOME_LABEL[lang], item: BASE },
       { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: `${BASE}${promptBitesHubPath(lang)}` },
@@ -218,7 +219,7 @@ export async function buildHubPageElement(lang: Lang) {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    inLanguage: lang,
+    inLanguage: toOutputLocale(lang),
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: HOME_LABEL[lang], item: BASE },
       { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: `${BASE}${promptBitesHubPath(lang)}` },

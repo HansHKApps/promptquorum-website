@@ -3253,7 +3253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         height: 630,
       },
       description: 'IA de voz totalmente offline no iPhone e Android em 2026. Whisper STT local + LLM local + Piper TTS. Configuração no iPhone, Android e híbrida; latência, bateria, privacidade.',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',

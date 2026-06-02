@@ -3523,7 +3523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-08',
       dateModified: '2026-05-08',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-llm-apps-android-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=pt',
       author: {
         '@type': 'Person',

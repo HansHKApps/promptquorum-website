@@ -2117,7 +2117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Substitua o GitHub Copilot por um LLM local: configuração + comparativo de custos 2026',
       description: '$0/mês vs $20/mês. Continue.dev + Qwen3-Coder vs GitHub Copilot. Teste real em projeto Next.js. Guia de configuração, cálculo de custos, veredito honesto.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/replace-github-copilot-with-local-llm?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

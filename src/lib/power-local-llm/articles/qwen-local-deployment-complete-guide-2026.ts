@@ -2002,7 +2002,7 @@ docker run --gpus all \\
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       mainEntity: [
         {
           '@type': 'Question',
@@ -2061,7 +2061,7 @@ docker run --gpus all \\
       description:
         'Implante Qwen 7B a 72B em produção: servidor API Docker Compose, configuração multi-GPU, benchmarks de hardware e comparação de custos com a Alibaba Cloud.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/qwen-local-deployment-complete-guide-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -2082,7 +2082,7 @@ docker run --gpus all \\
     howToSchema: {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       name: 'Como implantar o Qwen como servidor API de produção com Docker',
       step: [
         { '@type': 'HowToStep', name: 'Instale o Docker e o Docker Compose', position: 1 },

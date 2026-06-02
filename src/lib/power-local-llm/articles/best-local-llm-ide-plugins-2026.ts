@@ -1085,7 +1085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-llm-ide-plugins-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },

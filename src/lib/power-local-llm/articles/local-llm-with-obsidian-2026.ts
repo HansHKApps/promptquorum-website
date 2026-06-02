@@ -3153,7 +3153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Obsidian + LLM Local: 5 Plugins que Transformam seu Vault em um Segundo Cérebro (2026)',
       description: 'Cinco plugins do Obsidian testados com Ollama local em 2026: Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot. Melhor combinação, escala do vault e sincronização móvel.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-with-obsidian-2026?lang=pt',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
