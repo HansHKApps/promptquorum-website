@@ -515,6 +515,172 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
 
+  pt: {
+    theme: 'Workflows & Automação',
+    title: 'Fluxo de trabalho de prompt engineering para desenvolvedores: configuração de IDE, testes e integração CI/CD',
+    seoTitle: 'Prompt engineering para desenvolvedores: IDE e CI/CD',
+    metaDescription: 'Fluxo de trabalho de prompts em 5 etapas: Cursor/VS Code, Promptfoo em 30s, versionamento em Git, gate CI/CD a 85%, monitoramento em produção.',
+    ogDescription: 'Fluxo de trabalho de prompts para desenvolvedores: IDE Cursor ou VS Code, loop de teste local de 30 segundos, versionamento Git, gate CI/CD com GitHub Actions, monitoramento de qualidade em produção.',
+    twitterDescription: 'Escrever → testar em 30s → versionar → gate CI/CD → monitorar. O fluxo de trabalho de prompts em 5 etapas. Cursor + Promptfoo + Git.',
+    publishDate: '2026-05-02',
+    readTime: '12 min de leitura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'Fluxo de trabalho de prompt engineering',
+    intro: '**Os desenvolvedores precisam de um fluxo de trabalho de prompt engineering que se encaixe em seu processo de desenvolvimento existente — controle de versões, CI/CD e testes locais — não de um ecossistema de ferramentas separado.** O fluxo de trabalho cobre 5 etapas: escrever, testar localmente, versionar, controlar em CI/CD e monitorar em produção.',
+    leadAnswerBlock: '**Os desenvolvedores precisam de um fluxo de trabalho de prompt engineering que se encaixe em seu processo de desenvolvimento existente — controle de versões, CI/CD e testes locais — não de um ecossistema de ferramentas separado.** O fluxo de trabalho cobre 5 etapas.',
+    quickFacts: [
+      'O loop de teste local com Promptfoo leva menos de 30 segundos: escrever, testar em 3 entradas, comparar com a linha de base, confirmar.',
+      'Armazene os prompts como arquivos .txt ou .ts em um diretório /prompts. Nomeie os arquivos: [tarefa]-[versão].txt (ex.: customer-support-v3.txt).',
+      'Limite do gate CI/CD: comece em 85% de taxa de aprovação, suba para 95% após 3 meses de testes estáveis.',
+      'Cursor é o IDE recomendado para desenvolvedores TypeScript/Python. VS Code + Continue.dev para requisitos de código aberto/modelos locais.',
+      'Em produção, registre o identificador do prompt, o modelo, a latência, a contagem de tokens e a pontuação de qualidade por resposta.',
+      'Alerte se a pontuação de qualidade cair mais de 10% em uma janela deslizante de 24 horas.',
+    ],
+    toc: [
+      { label: 'Configuração de IDE para prompt engineering', anchor: 'ide_setup' },
+      { label: 'O loop de teste local', anchor: 'local_test_loop' },
+      { label: 'Armazenar prompts em controle de versões', anchor: 'version_control' },
+      { label: 'Gates CI/CD para prompts', anchor: 'cicd_gates' },
+      { label: 'Monitoramento em produção para prompts', anchor: 'production_monitoring' },
+      { label: 'Erros comuns', anchor: 'common_mistakes' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+      { label: 'Leitura relacionada', anchor: 'related_reading' },
+      { label: 'Fontes', anchor: 'sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Fluxo de trabalho de prompt engineering para desenvolvedores: configuração de IDE, testes e integração CI/CD',
+      description: 'Fluxo de trabalho de prompt engineering para desenvolvedores: configuração de IDE, loop de teste local, controle de versões Git, gates CI/CD e monitoramento em produção.',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/pe-for-developers-workflow?lang=pt',
+      datePublished: '2026-05-02',
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 630 },
+      inLanguage: 'pt-BR',
+    },
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        content: 'O fluxo de trabalho de prompt engineering para desenvolvedores tem 5 etapas: escrever no Cursor ou VS Code, executar um loop de teste local com Promptfoo em menos de 30 segundos, versionar os prompts como arquivos .txt ou .ts em /prompts, controlar as mudanças em CI/CD com um fluxo do GitHub Actions que bloqueia se a taxa de aprovação cair abaixo de 85%, e monitorar a qualidade em produção com alertas para quedas de 10%. Use o PromptQuorum para testar em vários modelos.',
+      },
+      ide_setup: {
+        id: 'ide-setup',
+        title: 'Configuração de IDE para prompt engineering',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Cursor e VS Code com Continue.dev são os dois IDEs que cobrem a maioria das necessidades de prompt engineering para desenvolvedores, com Cursor para fluxos de trabalho com API na nuvem e Continue.dev para requisitos de código aberto e modelos locais.' },
+          { type: 'in-plain-terms', text: 'Escolha o IDE em que você já passa a maior parte do tempo. Se você usa TypeScript ou Python e chama APIs na nuvem (OpenAI, Anthropic, Google), o Cursor adiciona menos fricção. Se você precisa executar modelos localmente ou tem requisitos de código aberto, o VS Code com Continue.dev é a opção certa.' },
+        ],
+        content: [
+          '**Dois IDEs cobrem a maioria das necessidades de prompt engineering para desenvolvedores: Cursor (integração nativa de IA, prompts como cidadãos de primeira classe) e VS Code com Continue.dev (código aberto, suporte de modelos locais).** A escolha depende da sua linguagem principal e dos requisitos de acesso ao modelo.',
+          'O Cursor trata os arquivos de prompt de forma nativa — você pode referenciar, editar e testar prompts diretamente no editor junto com o código da sua aplicação. Ele tem integração nativa com APIs compatíveis com OpenAI e suporta bem TypeScript e Python. Use o Cursor se você trabalha principalmente nessas linguagens.',
+          'O VS Code com Continue.dev é de código aberto, suporta modelos locais via Ollama e funciona com qualquer ecossistema de linguagens. O Continue.dev fornece preenchimento e modificação de prompts no editor. Use o VS Code + Continue.dev para requisitos de código aberto ou quando precisar executar modelos localmente.',
+        ],
+        callouts: [
+          { type: 'tip', label: 'Cursor para velocidade de iteração de prompts', text: 'O Cursor permite executar Claude 4.6 Sonnet diretamente sobre arquivos de prompt a partir do editor. Isso reduz o ciclo de escrita-teste de minutos para segundos para equipes que já usam o Cursor para código.' },
+        ],
+      },
+      local_test_loop: {
+        id: 'local-test-loop',
+        title: 'O loop de teste local',
+        content: [
+          '**O loop de teste local tem 4 passos: escrever o prompt, testá-lo em 3 entradas representativas, comparar com a linha de base e confirmar se passa.** Este loop deve levar menos de 30 segundos com o Promptfoo configurado localmente.',
+          'Passo 1: Escrever ou editar o prompt no seu IDE. Passo 2: Executar o prompt em 3 entradas representativas — uma entrada típica, um caso limite e uma que causou uma falha anteriormente. Passo 3: Comparar a saída com a linha de base (a última versão confirmada). Passo 4: Se a qualidade se mantiver ou melhorar, confirmar com uma mensagem convencional.',
+          'Para configurar o Promptfoo para o loop local: instalar com `npm install -g promptfoo`, criar um `promptfooconfig.yaml` na raiz do projeto com 3 casos de teste e um avaliador LLM-as-judge. Executar `promptfoo eval`. O tempo total de configuração é menos de 15 minutos para um prompt existente.',
+        ],
+        callouts: [
+          { type: 'warning', label: 'A comparação com a linha de base não é opcional', text: 'Sem comparar com uma linha de base, um prompt que se degrada em casos limite pode continuar "passando" nos testes se o limite absoluto for suficientemente baixo. Sempre compare com a última versão implantada.' },
+        ],
+      },
+      version_control: {
+        id: 'version-control',
+        title: 'Armazenar prompts em controle de versões',
+        content: [
+          '**Armazene os prompts como arquivos `.txt` ou `.ts` em um diretório `/prompts` na raiz do repositório.** Versionar os prompts no Git dá a você os mesmos benefícios de versionar código: histórico completo, blame, rollback e revisão baseada em PR.',
+          'Convenção de nomes: `[tarefa]-[versão].txt` — por exemplo, `customer-support-v3.txt`, `email-draft-v1.txt`. Use números de versão sequenciais, não datas. Quando um prompt é retirado, mova-o para `/prompts/archive/` em vez de excluí-lo.',
+          'Formato de mensagem de confirmação para mudanças de prompt: use commits convencionais — `feat: add few-shot examples to customer-support prompt`, `fix: reduce hallucination in email-draft prompt`. Tag Git para versões em produção: após cada implantação bem-sucedida em produção, faça o tag do commit com `prompts/[tarefa]/[versão]`.',
+        ],
+        callouts: [
+          { type: 'insight', label: 'Os prompts são código', text: 'Trate os arquivos de prompt com a mesma disciplina que os arquivos de código: revisão por PR, autores nomeados, versionamento semântico e nunca exclua — mova para /prompts/archive/ em vez disso.' },
+        ],
+      },
+      cicd_gates: {
+        id: 'cicd-gates',
+        title: 'Gates CI/CD para prompts',
+        content: [
+          '**Adicione um fluxo do GitHub Actions que execute o Promptfoo ou o Braintrust em cada pull request e falhe o build se a taxa de aprovação cair abaixo de um limite.** Comece o limite em 85% e aumente para 95% após 3 meses de testes estáveis.',
+          'Estrutura do fluxo do GitHub Actions: crie `.github/workflows/prompt-test.yml` com um job que seja ativado em `pull_request`, instale o Promptfoo, execute `promptfoo eval --config promptfooconfig.yaml` e falhe se o código de saída for diferente de zero.',
+          'Estratégia de limite: comece em 85% para permitir alguma variância enquanto detecta regressões importantes. Após 3 meses de testes estáveis sem falsos falhos, suba para 95%. Adicione o job prompt-test como verificação de status obrigatória na configuração de proteção de branches do repositório.',
+        ],
+      },
+      production_monitoring: {
+        id: 'production-monitoring',
+        title: 'Monitoramento em produção para prompts',
+        content: [
+          '**Registre as entradas e saídas dos prompts, execute um pontuador de qualidade em cada resposta e configure alertas para quedas de pontuação de qualidade superiores a 10% em uma janela deslizante de 24 horas.** Monitore todos os prompts que gerenciam dados do usuário.',
+          'O que registrar: identificador e versão do prompt, nome do modelo, contagem de tokens de entrada, contagem de tokens de saída, latência em milissegundos e uma pontuação de qualidade de um avaliador. Para prompts que gerenciam dados pessoais, registre um hash da entrada em vez da entrada bruta para evitar armazenar PII nos registros.',
+          'Opções de pontuação de qualidade: o Braintrust fornece um avaliador baseado na nuvem com pontuação por resposta e painéis. Para uma abordagem auto-hospedada, execute uma chamada leve de LLM-as-judge em uma amostra de 10% das respostas. Acione um alerta se a pontuação média de qualidade cair mais de 10% em comparação com a média deslizante de 7 dias.',
+        ],
+      },
+      common_mistakes: {
+        id: 'common-mistakes',
+        title: 'Erros comuns em fluxos de trabalho de prompts para desenvolvedores',
+        mistakes: [
+          { mistake: 'Escrever prompts diretamente no código da aplicação', problem: 'Os prompts codificados não podem ser versionados, testados nem alterados sem uma implantação completa', fix: 'Armazene os prompts como arquivos separados em um diretório /prompts. Carregue-os em tempo de execução.' },
+          { mistake: 'Testar apenas localmente, nunca em CI/CD', problem: 'Os testes locais são pulados sob pressão de tempo; os gates CI/CD são obrigatórios', fix: 'Adicione uma etapa de teste com Promptfoo ao GitHub Actions. Bloqueie o merge se a taxa de aprovação cair abaixo de 85%.' },
+          { mistake: 'Sem monitoramento em produção', problem: 'A qualidade dos prompts se degrada após a implantação sem visibilidade', fix: 'Registre a taxa de aprovação por prompt por dia. Alerte se a taxa de aprovação cair 5% semana a semana.' },
+          { mistake: 'Testar com um único modelo', problem: 'Um prompt que funciona no GPT-5.5 pode falhar no Claude 4.6 Sonnet', fix: 'Execute sua suite de testes em pelo menos 2 modelos em CI/CD.' },
+        ],
+      },
+      key_takeaways: {
+        id: 'key-takeaways',
+        title: 'Pontos-chave',
+        items: [
+          'Use Cursor para TypeScript/Python com APIs na nuvem. Use VS Code + Continue.dev para modelos locais ou requisitos de código aberto.',
+          'O loop de teste local tem 4 passos: escrever, testar em 3 entradas representativas, comparar com a linha de base, confirmar se passa. Objetivo: menos de 30 segundos com Promptfoo.',
+          'Armazene os prompts como arquivos .txt ou .ts em /prompts. Convenção de nomes [tarefa]-[versão].txt. Faça o tag das versões implantadas em produção no Git.',
+          'Adicione um gate CI/CD com GitHub Actions que falhe o build se a taxa de aprovação cair abaixo de 85%. Suba para 95% após 3 meses de testes estáveis.',
+          'Em produção, registre o identificador do prompt, o modelo, a contagem de tokens, a latência e a pontuação de qualidade. Alerte sobre quedas de pontuação de qualidade superiores a 10% em 24 horas.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'Qual IDE é melhor para o prompt engineering?', a: 'O Cursor é o IDE recomendado para desenvolvedores que trabalham principalmente em TypeScript ou Python e querem integração nativa de IA. O VS Code com Continue.dev é recomendado se você precisar de suporte de modelos locais ou requisitos de código aberto.' },
+          { q: 'Como você deve armazenar os prompts no controle de versões?', a: 'Armazene os prompts como arquivos .txt ou .ts em um diretório /prompts. Convenção de nomes: [tarefa]-[versão].txt. Use o formato de commits convencionais para mudanças de prompts. Adicione tags Git para cada versão implantada em produção.' },
+          { q: 'Como você configura um gate CI/CD para prompts?', a: 'Adicione uma etapa de fluxo do GitHub Actions que execute o Promptfoo em cada pull request. Falhe o build se a taxa de aprovação cair abaixo do limite — comece em 85% e suba para 95% após 3 meses de testes estáveis.' },
+          { q: 'O que você deve registrar para o monitoramento de prompts em produção?', a: 'Registre as entradas do prompt (ou um hash se contiverem PII), respostas do modelo, latência, contagem de tokens e pontuação de qualidade de um avaliador. Mantenha os registros por pelo menos 30 dias.' },
+          { q: 'Como armazeno os prompts em um repositório Git?', a: 'Armazene cada prompt como um arquivo de texto simples em `/prompts/[tema]/`. Nomeie os arquivos com slug e versão: `classify-intent-v2.txt`. Adicione YAML frontmatter com: versão, autor, data, modelo e descrição.' },
+          { q: 'O que é um gate CI/CD para prompts?', a: 'Um gate CI/CD é uma etapa de teste automatizado que executa sua suite de testes de prompts em cada PR e bloqueia o merge se a taxa de aprovação cair abaixo do seu limite (tipicamente 85%). Implemente-o no GitHub Actions usando a CLI do Promptfoo: `npx promptfoo eval --threshold 0.85`.' },
+          { q: 'Qual IDE é melhor para o prompt engineering?', a: 'O Cursor é o melhor IDE para o prompt engineering porque permite executar Claude 4.6 Sonnet diretamente sobre arquivos de prompt a partir do editor. O VS Code com Continue.dev é uma boa alternativa para equipes que precisam de ferramentas de código aberto.' },
+        ],
+      },
+      related_reading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          { title: 'Melhores IDEs para prompt engineering', url: '/prompt-engineering/best-prompt-engineering-ides' },
+          { title: 'Controle de versões de prompts', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Fluxo de revisão de prompts para equipes', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
+          { title: 'Melhores ferramentas de teste de prompts', url: '/prompt-engineering/best-prompt-testing-tools' },
+          { title: 'Configuração de prompt engineering para equipes pequenas', url: '/prompt-engineering/pe-setup-small-teams' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          { title: 'Cursor IDE Documentation', url: 'https://docs.cursor.com' },
+          { title: 'Continue.dev Documentation (GitHub)', url: 'https://github.com/continuedev/continue' },
+          { title: 'Promptfoo CLI Documentation', url: 'https://www.promptfoo.dev/docs' },
+        ],
+      },
+    },
+  },
+
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Workflows et automatisation',

@@ -1259,6 +1259,324 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       },
     },
+    pt: {
+      theme: 'Fundamentals',
+      title: 'Os 5 blocos de construção que todo prompt precisa',
+      seoTitle: '5 blocos de construção para cada prompt de IA',
+      intro: '**Todo prompt de IA eficaz precisa de cinco blocos de construção: papel e contexto, tarefa/instrução, entrada e exemplos, restrições e formato de saída — se um faltar, os resultados serão inconsistentes, mal formatados ou alucinados.**',
+      metaDescription: 'Todo bom prompt de IA precisa de 5 partes: papel, tarefa, entrada, restrições e formato. Se faltar um, a qualidade cai. Modelo pronto para copiar.',
+      publishDate: '2026-03-01',
+      readTime: '8 min de leitura',
+      educationalLevel: 'Beginner',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Os 5 blocos de construção que todo prompt precisa',
+        description: 'Os 5 blocos de construção de todo prompt: papel e contexto, tarefa/instrução, entrada e exemplos, restrições e formato de saída. Com esses cinco componentes, cada prompt de IA se torna confiável e repetível.',
+        datePublished: '2026-03-01',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/5-building-blocks-every-prompt-needs?lang=pt',
+        inLanguage: 'pt-BR',
+        proficiencyLevel: 'Beginner',
+        keywords: ['estrutura do prompt', 'blocos de construção do prompt', 'papel e contexto', 'formato de saída', 'restrições do prompt', 'exemplos few-shot', 'prompt engineering', 'modelos de linguagem'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        mentions: [
+          { '@type': 'Thing', name: 'Language Models' },
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'CO-STAR framework' },
+          { '@type': 'Thing', name: 'CRAFT framework' },
+        ],
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'AI Prompt Structure' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Eu realmente preciso dos 5 blocos de construção em cada prompt?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Não. Tarefas simples e unívocas frequentemente precisam apenas de uma tarefa/instrução e um formato de saída. Adicione papel e contexto quando o domínio ou a audiência forem relevantes. Adicione restrições quando os erros forem custosos. Adicione exemplos quando a precisão do formato for crítica. Comece com o mínimo e adicione blocos apenas quando a saída não atender ao seu padrão.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'O papel é mais importante do que o contexto ou vice-versa?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Eles funcionam como dupla — nenhum é suficiente sozinho. O papel sem contexto produz saídas genéricas de especialista. O contexto sem papel produz saídas situacionalmente conscientes, mas tonalmente inconsistentes. Para a maioria das tarefas, uma frase que combine ambos funciona bem: "Você é um [papel] que ajuda [audiência] com [tarefa do domínio]."' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Posso manter os prompts curtos e incluir os 5 blocos de construção?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Sim. Cada bloco pode ser expresso em uma única frase. Um prompt completo de cinco blocos pode ter menos de 100 palavras. A brevidade não é o problema — a vagueza sim. Um prompt curto e preciso com os cinco elementos supera consistentemente um longo e prolixo sem nenhum deles.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual é a diferença entre contexto e exemplos?',
+            acceptedAnswer: { '@type': 'Answer', text: 'O contexto descreve a situação, o domínio e a audiência — é informação de fundo que enquadra a tarefa. Os exemplos são pares de entrada/saída de amostra que mostram ao modelo como é uma resposta correta. O contexto diz ao modelo onde ele está; os exemplos mostram o que ele deve produzir.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'O formato de saída importa se eu estou apenas fazendo uma pergunta simples?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Para perguntas conversacionais, especificar o formato é opcional. Para qualquer saída que será usada em etapas posteriores — inserida em um documento, processada por código, publicada ou reutilizada por membros da equipe — especificar o formato é essencial. É a diferença entre um resultado e um resultado utilizável.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Onde vão as restrições quando uso um framework como CRAFT ou CO-STAR?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Cada framework importante tem um campo que se mapeia para restrições — "Restrictions" no CRAFT, "Tone & Style" no CO-STAR, "Constraints" no SPECS. Se o seu framework não tiver um campo de restrições explícito, adicione as restrições no final como uma seção "Não" separada — todos os modelos lidam com isso de forma confiável.' },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'pt-BR',
+        name: 'Como construir um prompt com os 5 blocos de construção',
+        totalTime: 'PT5M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Estabeleça o papel e o contexto', text: 'Diga ao modelo quem ele é e a quem ajuda. Uma frase: "Você é um [papel] que ajuda [audiência]."' },
+          { '@type': 'HowToStep', position: 2, name: 'Escreva a tarefa/instrução', text: 'Indique a ação exata que o modelo deve realizar usando um verbo. "Resumir", "classificar", "traduzir", "gerar".' },
+          { '@type': 'HowToStep', position: 3, name: 'Adicione entrada e exemplos', text: 'Forneça os dados ou conteúdo com que o modelo trabalhará. Adicione um ou dois exemplos se o formato precisar ser preciso.' },
+          { '@type': 'HowToStep', position: 4, name: 'Estabeleça as restrições', text: 'Liste o que o modelo não pode fazer, os limites de comprimento e todas as regras de saída.' },
+          { '@type': 'HowToStep', position: 5, name: 'Especifique o formato de saída', text: 'Defina a forma exata da saída: JSON, lista com marcadores, tabela, parágrafo, passos numerados.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        name: '5 blocos de construção que todo prompt de IA precisa',
+        description: 'Os cinco componentes estruturais que todo prompt de IA confiável contém: papel, tarefa, entrada e exemplos, restrições e formato de saída.',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Bloco 1: Papel e contexto', description: 'Diz ao modelo quem ele é e a quem ajuda. Estabelece a expertise do domínio e a consciência da audiência.' },
+          { '@type': 'ListItem', position: 2, name: 'Bloco 2: Tarefa/instrução', description: 'A declaração explícita do que o modelo deve fazer, com um verbo de ação claro.' },
+          { '@type': 'ListItem', position: 3, name: 'Bloco 3: Entrada e exemplos', description: 'Os dados ou conteúdo com que o modelo trabalha, mais exemplos opcionais que mostram como são as saídas corretas.' },
+          { '@type': 'ListItem', position: 4, name: 'Bloco 4: Restrições', description: 'Regras que o modelo deve seguir — limites de comprimento, conteúdo proibido, restrições de estilo.' },
+          { '@type': 'ListItem', position: 5, name: 'Bloco 5: Formato de saída', description: 'A estrutura exata da saída: JSON, lista com marcadores, tabela, parágrafo de texto ou passos numerados.' },
+        ],
+      },
+      sections: {
+        definition: {
+          title: 'Quais são os 5 blocos de construção de um prompt?',
+          content: [
+            '**Os 5 blocos de construção que todo prompt precisa são: papel e contexto, tarefa/instrução, entrada e exemplos, restrições e formato de saída.** Esses cinco componentes são a estrutura mínima que distingue um prompt confiável e repetível de uma pergunta vaga que produz resultados inconsistentes.',
+            'Cada bloco resolve um tipo diferente de erro. Papel e contexto diz ao modelo quem ele é e em que situação está. Tarefa/instrução diz exatamente o que fazer. Entrada e exemplos dão o material bruto e o padrão de aprendizado. As restrições estabelecem as regras. O formato de saída fixa a forma da resposta. Juntos, não deixam nada ao acaso para o modelo.',
+          ],
+        },
+        badVsGood: {
+          content: [
+            '**Sem os 5 blocos de construção (vago):**\n> Resuma este relatório.',
+            '**Com os 5 blocos de construção (completo):**\n> Você é um analista de negócios sênior (papel). Resuma as principais descobertas do relatório do T3 abaixo (tarefa). [Texto do relatório] (entrada). Use apenas fatos do relatório; máx. 200 palavras; tom formal (restrições). Retorne 3 pontos com marcadores sob "Principais descobertas" (formato de saída).',
+          ],
+        },
+        tldr: {
+          title: 'Pontos-chave',
+          isTldr: true,
+          items: [
+            'Papel e contexto: diga ao modelo quem ele é e em que domínio opera',
+            'Tarefa/instrução: especifique exatamente o que o modelo deve produzir — específico e verificável',
+            'Entrada e exemplos: forneça os dados brutos e os pares de exemplo entrada/saída que o modelo precisa',
+            'Restrições: estabeleça as regras — o que o modelo deve e não deve fazer',
+            'Formato de saída: especifique a forma exata da resposta — JSON, marcadores, tabela ou texto corrido',
+          ],
+        },
+        quickFacts: {
+          title: 'Referência rápida',
+          content: 'Um guia de referência rápida dos 5 blocos e quando usá-los:',
+          items: [
+            '**Os 5 blocos:** Papel e contexto → Tarefa/instrução → Entrada e exemplos → Restrições → Formato de saída',
+            '**Prompt mínimo viável:** Tarefa + formato de saída (2 blocos) para tarefas simples',
+            '**Maior alavancagem:** Uma restrição como "use apenas as informações fornecidas" reduz drasticamente o risco de alucinação',
+            '**Funciona em:** Todos os principais modelos de linguagem e todos os LLMs locais via Ollama, LM Studio ou similares',
+            '**Corresponde a:** CRAFT, CO-STAR, SPECS, RTF e qualquer outro framework importante — nomes diferentes, os mesmos blocos',
+          ],
+        },
+        whyMatters: {
+          title: 'Por que esses 5 blocos de construção importam?',
+          content: [
+            'O modelo de cinco blocos reflete o consenso convergente dos guias de prompt engineering da OpenAI, Google, Anthropic e praticantes independentes. Papel, instruções, exemplos, restrições e formato de saída aparecem — sob nomes diferentes — em cada framework importante publicado desde 2023. Não é coincidência: são as informações mínimas que um modelo probabilístico precisa para produzir um resultado útil e consistente.',
+            'O valor para o negócio é claro. A falta de papel e contexto produz respostas genéricas que precisam ser reescritas. A falta de restrições aumenta o risco de alucinação e gera saídas fora da marca. A falta de formato de saída significa resultados que não podem ser usados ou copiados diretamente. O modelo de 5 blocos aborda os três tipos de erros simultaneamente e aplica-se igualmente a todos os modelos de linguagem e LLMs locais.',
+          ],
+        },
+        block1: {
+          title: 'O que o bloco Papel e contexto faz?',
+          content: [
+            '**Papel** diz ao modelo que persona ou expertise ele deve assumir. **Contexto** comunica a situação, o domínio e a audiência em que opera. São agrupados porque funcionam como dupla — o papel é quem o modelo é, e o contexto é o ambiente que define o que "bom" significa para essa tarefa.',
+            'Quando o papel e o contexto são omitidos, o modelo responde de uma perspectiva genérica — não especialmente útil para ninguém. Com eles, o mesmo modelo se torna o consultor tributário experiente respondendo uma pergunta sobre declarações de IVA, o redator júnior escrevendo para uma audiência de 19 anos, ou o analista de dados resumindo um relatório trimestral. A saída é calibrada para a situação real.',
+          ],
+          items: [
+            '**Especifique o domínio:** "Você é um redator B2B SaaS" é mais útil do que "Você é um escritor"',
+            '**Inclua a audiência:** "Explique isso para um CFO não técnico" restringe o vocabulário e o nível de detalhe',
+            '**Ancore o nível de expertise:** "Aja como um engenheiro de segurança sênior" produz uma saída diferente de "Aja como um engenheiro de segurança"',
+            '**Indique a situação quando relevante:** "Você está revisando um primeiro rascunho" versus "Você está escrevendo do zero" muda o foco do modelo',
+          ],
+        },
+        block1Link: {
+          content: 'Para entender como o role prompting evoluiu à medida que os modelos melhoraram em seguir instruções, consulte [How Prompt Engineering Evolved](/pt/prompt-engineering/how-prompt-engineering-evolved).',
+        },
+        block2: {
+          title: 'O que é o bloco Tarefa/instrução?',
+          content: [
+            '**O bloco tarefa/instrução é a declaração explícita do que o modelo deve fazer.** É o bloco mais importante — todos os outros o apoiam. Uma instrução clara, específica e verificável reduz a ambiguidade a quase zero. Uma instrução vaga é a causa mais comum de saídas de IA deficientes em todos os modelos e casos de uso.',
+            'As recomendações de melhores práticas atuais enfatizam tornar a tarefa orientada a ações e observável: use um verbo, nomeie o resultado e descreva um critério de sucesso quando possível. "Escreva um resumo" é uma tarefa. "Resuma o seguinte artigo em 3 pontos com marcadores, cada um com menos de 20 palavras" é uma tarefa com uma saída verificável. A diferença na qualidade da saída é substancial.',
+          ],
+          items: [
+            '❌ Fraco: "Escreva algo sobre este tópico"',
+            '✅ Forte: "Escreva uma publicação no LinkedIn de 150 palavras sobre as vantagens do prompt engineering para executivos não técnicos"',
+            '❌ Fraco: "Analise estes dados"',
+            '✅ Forte: "Identifique as 3 principais tendências neste conjunto de dados e ordene-as por impacto na receita, do maior para o menor"',
+          ],
+        },
+        block3: {
+          title: 'O que é o bloco Entrada e exemplos?',
+          content: [
+            '**O bloco entrada e exemplos fornece ao modelo os dados brutos com que trabalhar (entrada) e exemplos de como é uma boa saída (exemplos few-shot).** A entrada é o que o modelo processa — um documento, um fragmento de código, uma lista de dados, uma conversa. Os exemplos são pares de entrada/saída de amostra que mostram o padrão exato de formato ou raciocínio que você quer.',
+            'Os exemplos produzem o maior retorno na qualidade da saída para prompts de formato preciso. Um exemplo de entrada/saída de amostra é frequentemente mais eficaz do que dois parágrafos de instruções em prosa descrevendo o mesmo padrão.',
+          ],
+          items: [
+            '**Entrada sem exemplos** — use quando o padrão de saída for óbvio ou o modelo já souber o formato (zero-shot)',
+            '**Entrada com um exemplo** — use quando precisar de um formato específico ou tom que não seja o padrão do modelo (one-shot)',
+            '**Entrada com 2–3 exemplos** — use para formatos complexos, extrações precisas ou classificação (few-shot)',
+            '**Mais de 3 exemplos** — raramente necessário; adiciona custo de tokens sem melhoria proporcional de qualidade',
+          ],
+        },
+        block4: {
+          title: 'O que são as restrições?',
+          content: [
+            '**As restrições são as regras que o modelo deve seguir — os limites explícitos sobre o que pode e não pode fazer em sua resposta.** Sem restrições, os modelos cobrem todos os ângulos, adicionam qualificações desnecessárias e produzem saídas que precisam ser editadas. Restrições bem escolhidas são o bloco de maior impacto para o aumento da confiabilidade.',
+            'Tipos comuns: limites de comprimento ("máx. 100 palavras"), restrições de fonte ("use apenas os dados fornecidos"), restrições de estilo ("sem jargão"), restrições de tom ("tom formal, sem emojis"), exclusões de conteúdo ("não inclua preços"), restrições de estrutura ("sem parágrafos de introdução").',
+          ],
+          items: [
+            '**Restrições de comprimento:** "Máx. 3 frases", "Exatamente 5 pontos com marcadores", "Abaixo de 250 palavras"',
+            '**Restrições de fonte:** "Use apenas as informações do documento", "Não invente dados"',
+            '**Restrições de formato:** "Sem emojis", "Apenas Markdown", "Sem caracteres especiais"',
+            '**Restrições de tom:** "Tom formal e neutro", "Evite linguagem de marketing"',
+            '**Restrições de conteúdo:** "Não mencione concorrentes", "Evite afirmações absolutas"',
+          ],
+        },
+        block5: {
+          title: 'O que é o formato de saída?',
+          content: [
+            '**O formato de saída especifica a estrutura exata da resposta do modelo.** É o bloco mais fácil de incluir e mais frequentemente omitido. Sem ele, os modelos escolhem sua própria estrutura — que pode variar a cada execução, não ser compatível com a próxima etapa do fluxo de trabalho ou exigir edição significativa antes de ser útil.',
+            'O formato de saída não controla apenas a aparência da resposta — controla sua utilizabilidade. Uma resposta em JSON pode ser analisada diretamente. Uma resposta em formato de tabela pode ser copiada para um documento. Uma lista numerada pode ser seguida passo a passo. Uma resposta em prosa não estruturada requer que alguém a reformate depois.',
+          ],
+          items: [
+            '**Listas com marcadores** — para comparações, passos, características',
+            '**Passos numerados** — para instruções, processos, tutoriais',
+            '**Tabelas** — para comparações lado a lado, dados com várias colunas',
+            '**JSON** — para saída processável por código ou integração de sistemas',
+            '**Markdown** — para conteúdo que será renderizado em uma interface de usuário',
+            '**Parágrafo de texto** — para explicações, narrativas, respostas conversacionais',
+          ],
+        },
+        promptTemplate: {
+          title: 'Modelo de prompt de 5 blocos pronto para copiar',
+          content: [
+            'Copie este modelo e preencha cada seção com os detalhes da sua tarefa:',
+            '**PAPEL E CONTEXTO:** Você é um [papel] que ajuda [audiência] com [tarefa do domínio].',
+            '**TAREFA/INSTRUÇÃO:** [Verbo de ação] [resultado específico] para [propósito/destino].',
+            '**ENTRADA:** [Forneça os dados, o documento ou o conteúdo aqui]',
+            '**RESTRIÇÕES:** [Liste as regras: sem X, máx. Y palavras, apenas Z fonte]',
+            '**FORMATO DE SAÍDA:** [Especifique a estrutura: JSON, lista, tabela, parágrafo]',
+          ],
+        },
+        frameworksMapping: {
+          title: 'Como os 5 blocos se mapeiam com CRAFT, CO-STAR e SPECS',
+          content: 'Cada framework de prompt importante usa os mesmos cinco blocos sob nomes diferentes. Entender a correspondência permite transferir prompts entre frameworks sem reescrever do zero.',
+          columns: ['Bloco de construção', 'CRAFT', 'CO-STAR', 'SPECS'],
+          rows: [
+            { 'Bloco de construção': 'Papel e contexto', 'CRAFT': 'Context', 'CO-STAR': 'Context + Audience', 'SPECS': 'Situation' },
+            { 'Bloco de construção': 'Tarefa/instrução', 'CRAFT': 'Role + Action', 'CO-STAR': 'Objective', 'SPECS': 'Purpose' },
+            { 'Bloco de construção': 'Entrada e exemplos', 'CRAFT': 'Format (exemplos implícitos)', 'CO-STAR': 'Style (exemplos como parte do contexto)', 'SPECS': 'Examples' },
+            { 'Bloco de construção': 'Restrições', 'CRAFT': 'Restrictions', 'CO-STAR': 'Tone + Style', 'SPECS': 'Constraints' },
+            { 'Bloco de construção': 'Formato de saída', 'CRAFT': 'Tone + Format', 'CO-STAR': 'Response', 'SPECS': 'Style + Format' },
+          ],
+        },
+        commonMistakes: {
+          title: 'Erros comuns com estruturas de blocos',
+          mistakes: [
+            {
+              mistake: 'Usar o mesmo prompt genérico para todas as tarefas.',
+              problem: 'Um prompt sem papel nem contexto produz saídas genéricas que precisam ser reescritas para cada caso de uso.',
+              fix: 'Crie variantes de prompts específicos do domínio para seus casos de uso mais frequentes. O papel e o contexto variam mais entre tipos de tarefas do que qualquer outro bloco.',
+            },
+            {
+              mistake: 'Omitir restrições até que algo dê errado.',
+              problem: 'Os modelos preencherão o espaço não especificado com suas próprias escolhas — que podem incluir alucinações, formatação excessiva ou conteúdo fora da marca.',
+              fix: 'Adicione restrições preventivamente. O custo de adicionar uma restrição é um par de tokens; o custo de omiti-la é uma saída inutilizável.',
+            },
+            {
+              mistake: 'Não especificar o formato de saída.',
+              problem: 'A resposta chega em um formato que não é compatível com a próxima etapa do fluxo de trabalho — exigindo conversão manual.',
+              fix: 'Sempre especifique o formato quando a saída for usada em etapas posteriores. "Em formato JSON", "como lista com marcadores Markdown" ou "em uma tabela com colunas X, Y, Z" são especificações completas.',
+            },
+          ],
+        },
+        howToStart: {
+          title: 'Como construir um prompt (passo a passo)',
+          numberedItems: [
+            '**Comece com a tarefa.** Escreva uma frase que descreva exatamente o que você quer que o modelo produza. Use um verbo de ação: resumir, classificar, traduzir, gerar, extrair. Se não conseguir escrevê-la em uma frase, a tarefa é muito vaga.',
+            '**Adicione papel e contexto.** Quem é o modelo neste prompt? A quem ele ajuda? Uma frase: "Você é um [papel] que ajuda [audiência] com [domínio]." Se sua tarefa não requer expertise específica do domínio ou consciência da audiência, omita este bloco.',
+            '**Inclua sua entrada.** Forneça os dados, documentos ou conteúdo reais com que o modelo deve trabalhar. Se você não tem entrada agora, mantenha um espaço reservado: "[Cole o texto aqui]".',
+            '**Adicione restrições.** Liste o que o modelo não deve fazer: limites de comprimento, restrições de fonte, restrições de tom, conteúdo proibido. Uma ou duas restrições bem escolhidas produzem mais melhoria de qualidade do que adicionar mais instruções ao bloco de tarefa.',
+            '**Especifique o formato de saída.** Em que forma você precisa da resposta? Lista com marcadores? JSON? Tabela? Parágrafo? Se o formato não importa para esta tarefa, omita este bloco.',
+          ],
+        },
+        faq: {
+          title: 'Perguntas frequentes',
+          faqs: [
+            {
+              q: 'Eu realmente preciso dos 5 blocos de construção em cada prompt?',
+              a: 'Não. Tarefas simples e unívocas frequentemente precisam apenas de uma tarefa/instrução e um formato de saída. Adicione papel e contexto quando o domínio ou a audiência forem relevantes. Adicione restrições quando os erros forem custosos. Adicione exemplos quando a precisão do formato for crítica. Comece com o mínimo e adicione blocos apenas quando a saída não atender ao seu padrão.',
+            },
+            {
+              q: 'O papel é mais importante do que o contexto ou vice-versa?',
+              a: 'Eles funcionam como dupla — nenhum é suficiente sozinho. O papel sem contexto produz saídas genéricas de especialista. O contexto sem papel produz saídas situacionalmente conscientes, mas tonalmente inconsistentes. Para a maioria das tarefas, uma frase que combine ambos funciona bem: "Você é um [papel] que ajuda [audiência] com [tarefa do domínio]."',
+            },
+            {
+              q: 'Posso manter os prompts curtos e incluir os 5 blocos de construção?',
+              a: 'Sim. Cada bloco pode ser expresso em uma única frase. Um prompt completo de cinco blocos pode ter menos de 100 palavras. A brevidade não é o problema — a vagueza sim. Um prompt curto e preciso com os cinco elementos supera consistentemente um longo e prolixo sem nenhum deles.',
+            },
+            {
+              q: 'Qual é a diferença entre contexto e exemplos?',
+              a: 'O contexto descreve a situação, o domínio e a audiência — é informação de fundo que enquadra a tarefa. Os exemplos são pares de entrada/saída de amostra que mostram ao modelo como é uma resposta correta. O contexto diz ao modelo onde ele está; os exemplos mostram o que ele deve produzir.',
+            },
+            {
+              q: 'Onde vão as restrições quando uso um framework como CRAFT ou CO-STAR?',
+              a: 'Cada framework importante tem um campo que se mapeia para restrições — "Restrictions" no CRAFT, "Tone & Style" no CO-STAR, "Constraints" no SPECS. Se o seu framework não tiver um campo de restrições explícito, adicione as restrições no final como uma seção "Não" separada — todos os modelos lidam com isso de forma confiável.',
+            },
+            {
+              q: 'O formato de saída importa se eu estou apenas fazendo uma pergunta simples?',
+              a: 'Para perguntas conversacionais, especificar o formato é opcional. Para qualquer saída que será usada em etapas posteriores — inserida em um documento, processada por código, publicada ou reutilizada por membros da equipe — especificar o formato é essencial. É a diferença entre um resultado e um resultado utilizável.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Leitura relacionada',
+          items: [
+            '[How Prompt Engineering Evolved](/pt/prompt-engineering/how-prompt-engineering-evolved) — Dos primeiros modelos de seguimento de instruções aos sistemas de raciocínio atuais: como as técnicas de prompting evoluíram com as capacidades dos modelos.',
+            '[Zero-Shot vs. Few-Shot Prompting](/pt/prompt-engineering/zero-shot-vs-few-shot) — Quando usar exemplos e quando omiti-los: escolher a abordagem de prompting correta para a tarefa.',
+            '[AI Hallucinations: Why AI Makes Things Up](/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Por que as restrições e os exemplos importam: as causas raíz das alucinações e as contramedidas baseadas em evidências.',
+            '[Which Prompt Framework Should You Use?](/pt/prompt-engineering/which-prompt-framework-should-you-use) — Comparação de CRAFT, CO-STAR, SPECS e outros: escolher um framework que se adapte ao seu caso de uso.',
+          ],
+        },
+        sources: {
+          title: 'Fontes e leituras adicionais',
+          items: [
+            '[Crafting Effective Prompts: Guidelines and Best Practices — OpenAI](https://platform.openai.com/docs/guides/prompt-engineering) — Guia oficial de prompt engineering da OpenAI, incluindo melhores práticas para prompts baseados em papéis e estruturados.',
+            '[Prompt Injection Threats & Mitigations — OWASP](https://owasp.org/www-community/attacks/Prompt_Injection) — Implicações de segurança dos prompts não estruturados e recomendações de restrições.',
+            '[A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT — White et al., 2023](https://arxiv.org/abs/2302.11382) — Catálogo abrangente de padrões de design de prompts, incluindo técnicas estruturadas e baseadas em papéis diretamente aplicáveis ao modelo de cinco blocos.',
+          ],
+        },
+      },
+    },
     fr: {
       freshness_tier: 'evergreen',
       theme: 'Fondamentaux',

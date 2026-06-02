@@ -767,6 +767,299 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
   },
 },
+    pt: {
+  theme: 'Techniques',
+  title: 'Negative Prompting: diga à IA o que ela NÃO deve fazer',
+  intro: 'O negative prompting é uma técnica em que você diz ao modelo o que ele deve evitar — conteúdo, estilo, estrutura ou comportamentos — para que as saídas se mantenham dentro de limites claros. Ele atua como uma "camada de proteção" sobre suas instruções habituais.',
+  seoTitle: 'Negative Prompting 2026: proteja suas saídas de IA',
+  metaDescription: 'O negative prompting diz à IA o que evitar: conteúdo, estilo, estrutura e comportamentos. Previne saídas indesejadas. Guia completo com exemplos de prompts.',
+  publishDate: '2026-03-26',
+  readTime: '13 min de leitura',
+  educationalLevel: 'Intermediate',
+  audience: 'Desenvolvedores, equipes de conteúdo e engenheiros de prompts empresariais que constroem guardrails de IA',
+  primaryTerm: 'Negative Prompting',
+  aboutTopics: ['Negative Prompting', 'Prompt Engineering', 'Guardrails de IA'],
+  leadAnswerBlock: '**O negative prompting significa adicionar regras explícitas de "não fazer" a um prompt: restringe o conteúdo, o estilo, a estrutura e o comportamento. Cada falha de IA que você já viu pode se tornar um guardrail permanente. Combine 3–5 restrições negativas claras com instruções positivas para a especificação de prompt mais precisa.**',
+  quickFacts: [
+    'O negative prompting cobre 4 dimensões: conteúdo ("sem conselhos médicos"), estilo ("sem palavras de hype"), estrutura ("sem introdução") e comportamento ("nunca fabricar estatísticas")',
+    'Os prompts que combinam instruções positivas e negativas reduzem os padrões de saída indesejados em comparação com prompts apenas positivos',
+    'A regra 3-5: mais de 5-6 restrições negativas em um único prompt podem confundir os modelos e causar saídas incompletas ou hesitantes',
+    'A linguagem direta funciona: "não deve", "nunca", "não" supera "tente evitar", "prefira não", "se possível omita"',
+    'O negative prompting é a base dos guardrails de IA empresarial — cada lista de conformidade se mapeia a uma regra de "não fazer"',
+    'O PromptQuorum permite blocos de restrições negativas reutilizáveis em todos os modelos — defina uma vez, aplique em todo lugar',
+  ],
+  toc: [
+    { label: 'Pontos-chave', anchor: 'key-takeaways' },
+    { label: 'O que é o negative prompting', anchor: 'what-is-negative-prompting' },
+    { label: 'Por que importa', anchor: 'why-it-matters' },
+    { label: 'O que você pode restringir', anchor: 'what-you-can-constrain' },
+    { label: 'Exemplo: sem e com negative prompting', anchor: 'example' },
+    { label: 'Quando usar o negative prompting', anchor: 'when-to-use' },
+    { label: 'Como usar o negative prompting', anchor: 'how-to-use' },
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Negative Prompting: diga à IA o que ela NÃO deve fazer',
+    description: 'O que é o negative prompting, por que importa e como usar regras explícitas de "não fazer" para manter as saídas de IA dentro de limites seguros e alinhados à marca.',
+    datePublished: '2026-03-26',
+    url: 'https://www.promptquorum.com/pt/prompt-engineering/negative-prompting?lang=pt',
+    inLanguage: 'pt-BR',
+    keywords: ['negative prompting', 'prompt engineering', 'guardrails', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: 'Prompt Engineering' },
+      { '@type': 'Thing', name: 'Large Language Models' },
+      { '@type': 'Thing', name: 'Guardrails' },
+    ],
+    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+  },
+  sections: {
+    whatIsNegativePrompting: {
+      title: 'O que é o negative prompting',
+      content: [
+        '**O negative prompting significa adicionar regras explícitas de "não fazer" aos seus prompts junto com o que você quer que o modelo faça.** Em vez de descrever apenas a saída desejada, você também especifica tópicos, tons, formatos ou erros indesejados.',
+        'Essas instruções negativas podem cobrir frases proibidas, categorias de conteúdo não permitidas, opiniões fora dos limites ou simplesmente estilos que você não quer (por exemplo "sem piadas", "sem emojis" ou "evite palavras de hype"). Quanto mais claras as regras de "não fazer", mais fácil será para o modelo se manter alinhado.',
+      ],
+    },
+    whyItMatters: {
+      title: 'Por que o negative prompting importa',
+      content: [
+        '**O negative prompting importa porque as saídas do mundo real são restringidas não apenas por objetivos, mas por limites — de marca, legais, de segurança e de qualidade.** Um bom resultado frequentemente é "correto e dentro dos limites", não apenas "útil".',
+        'As instruções negativas ajudam você a:',
+      ],
+      items: [
+        'Prevenir modos de falha específicos que você já viu, como exagero, especulação ou avisos de isenção de responsabilidade indesejados.',
+        'Aplicar regras de marca e tom diretamente no prompt, como evitar jargão ou adjetivos proibidos.',
+        'Reduzir a edição manual, já que muitas correções comuns podem ser antecipadas com uma orientação clara de "não fazer".',
+      ],
+    },
+    useNote: {
+      content: [
+        'Bem utilizado, o negative prompting converte erros passados em guardrails reutilizáveis.',
+      ],
+    },
+    whatYouCanConstrain: {
+      title: 'O que você pode restringir com prompts negativos',
+      content: [
+        '**Você pode aplicar o negative prompting ao conteúdo, ao estilo, à estrutura e ao comportamento.** O objetivo é ser específico o suficiente para que o modelo saiba exatamente o que evitar.',
+        'Restrições negativas comuns:',
+      ],
+      items: [
+        'Conteúdo: "Não incluir conselhos médicos", "não mencionar concorrentes", "não fornecer conclusões legais".',
+        'Estilo: "Não usar palavras de hype como \'revolucionário\' ou \'que muda o jogo\'", "sem emojis", "evitar o sarcasmo".',
+        'Estrutura: "Não adicionar uma seção de introdução", "não usar listas numeradas", "não incluir uma conclusão".',
+        'Comportamento: "Não fabricar estatísticas", "se não tiver certeza, diga que não tem certeza em vez de adivinhar".',
+      ],
+    },
+    combiningNote: {
+      content: [
+        'Combinar instruções positivas e negativas dá a você uma especificação de prompt muito mais precisa.',
+      ],
+    },
+    example: {
+      title: 'Exemplo: sem e com negative prompting',
+      content: [
+        '**O efeito do negative prompting fica claro quando você compara um prompt genérico com um que codifica regras explícitas de "não fazer".** Aqui está um exemplo de descrição de produto.',
+        '**[Prompt deficiente]**',
+        '"Escreva uma descrição de produto para nosso novo painel de análise."',
+        '**[Prompt melhorado]**',
+        '"Você é um profissional de marketing B2B. Tarefa: Escreva uma descrição de produto para nosso novo painel de análise voltado a gestores de operações. Restrições (negative prompting): Não use palavras de hype como "revolucionário", "disruptivo" ou "que muda o jogo". Não mencione concorrentes nem nos compare com outras ferramentas. Não prometa funcionalidades futuras; descreva apenas o que existe hoje. Não exceda 180 palavras. Formato de saída: 1 parágrafo curto para o resumo, seguido de 3 pontos para os principais benefícios."',
+        'A versão "melhorada" codifica as armadilhas conhecidas (hype, especulação, comparações) diretamente nas instruções, reduzindo a necessidade de limpeza manual.',
+      ],
+    },
+    whenToUse: {
+      title: 'Quando usar o negative prompting',
+      content: [
+        '**Você deve usar o negative prompting sempre que tiver exemplos claros do que nunca mais quer ver.** É especialmente útil em workflows repetíveis onde os mesmos erros continuam aparecendo.',
+        'Casos de uso típicos:',
+      ],
+      items: [
+        'Comunicação com clientes onde o tom, as afirmações e as promessas devem se manter dentro de diretrizes estritas.',
+        'Contextos regulamentados (finanças, saúde, jurídico) onde certos tipos de conselhos ou formulações devem ser evitados.',
+        'Documentação interna ou relatórios que não devem incluir detalhes confidenciais, dados pessoais ou especulações.',
+        'Conteúdo público onde você quer evitar tópicos sensíveis, opiniões políticas ou linguagem controversa.',
+      ],
+    },
+    productionNote: {
+      content: [
+        'Para experimentos rápidos e de baixo risco, você pode manter o negative prompting leve. À medida que os prompts amadurecem para workflows de produção, sua lista de regras de "não fazer" geralmente cresce.',
+      ],
+    },
+    inPromptQuorum: {
+      title: 'Negative prompting no PromptQuorum',
+      content: [
+        '**O PromptQuorum é uma ferramenta de despacho de IA multi-modelo onde o negative prompting pode ser incorporado a frameworks reutilizáveis em vez de ser reescrito a cada vez.** Você pode definir restrições negativas padrão uma vez e aplicá-las a muitas tarefas.',
+        'No PromptQuorum você pode:',
+      ],
+      items: [
+        'Adicionar blocos de negative prompting (por exemplo "frases proibidas", "conteúdo vedado", "restrições de estilo") a frameworks como SPECS, RTF ou CRAFT para que sempre sejam aplicados.',
+        'Manter listas compartilhadas de regras de "não fazer" para sua marca ou equipe, garantindo guardrails consistentes em todos os prompts e modelos.',
+        'Executar o mesmo prompt com restrições negativas em diferentes modelos para ver qual provedor adere melhor aos seus limites.',
+      ],
+    },
+    pqConversion: {
+      content: [
+        'Ao tratar o negative prompting como parte de sua arquitetura de prompts, o PromptQuorum ajuda você a converter erros passados em restrições duradouras e reutilizáveis.',
+      ],
+    },
+    howToStart: {
+      title: 'Como usar o negative prompting',
+      numberedItems: [
+        '**Identifique o que você não quer na saída: palavras, tons, estilos ou abordagens específicos.** Exemplo: "Não usar palavras de marketing. Não fazer promessas. Não referenciar concorrentes."',
+        '**Formule os negativos explicitamente usando linguagem de "não", "não deve", "nunca".** Os negativos suaves como "evitar se possível" são menos eficazes. Seja direto: "Nunca use as palavras \'disruptivo\', \'que muda o jogo\' ou \'impulsionado por IA\'."',
+        '**Forneça exemplos negativos: mostre ao modelo exatamente o que você não quer.** Exemplo: "Não escreva assim: \'Desbloqueie um crescimento explosivo com nossa solução de IA.\' Não escreva assim: \'Nossa plataforma de ponta usa machine learning.\' Escreva assim: [forneça exemplo positivo]."',
+        '**Combine orientação positiva e negativa.** Não diga apenas o que evitar — diga também o que fazer em vez disso. Exemplo: "Não use linguagem de hype. Em vez disso, foque em benefícios específicos e mensuráveis."',
+        '**Use o negative prompting com moderação — às vezes pode confundir o modelo.** A orientação positiva ("escreva de forma clara e técnica") frequentemente funciona melhor do que os negativos abundantes ("não seja vago, não simplifique, não omita detalhes"). Equilibre ambas as abordagens.',
+      ],
+    },
+    calloutBoxes: {
+      title: 'Pontos-chave em destaque',
+      id: 'callouts',
+      callouts: [
+        {
+          type: 'warning',
+          label: 'Os guardrails não são políticas',
+          text: 'O negative prompting é um controle técnico, não um substituto para política. Ele previne algumas falhas, mas não pode substituir o julgamento humano, a revisão jurídica ou os processos de conformidade. Use-o como uma camada entre muitas, não como a única camada.',
+        },
+        {
+          type: 'pro-tip',
+          label: 'Acompanhe cada "não fazer" com um "faça isso em vez disso"',
+          text: 'Os negativos sem acompanhamento confundem os modelos ("Não seja vago"). Os negativos acompanhados os orientam ("Não seja vago; seja específico com datas, números e exemplos"). Cada restrição funciona melhor com uma alternativa positiva.',
+        },
+        {
+          type: 'key-point',
+          label: 'Máximo 3-5 restrições — mais quebra o modelo',
+          text: 'Além de 5-6 restrições negativas, os modelos começam a duvidar ou a ignorar as restrições por completo. Listas de restrições longas (7+) podem produzir saídas excessivamente cautelosas, incompletas ou evasivas. Mantenha o foco.',
+        },
+        {
+          type: 'did-you-know',
+          label: 'As equipes de conformidade adoram guardrails reutilizáveis',
+          text: 'Depois de codificar as restrições regulatórias, de marca ou de segurança como blocos de negative prompting reutilizáveis, as auditorias se tornam mais fáceis. Você pode demonstrar que cada saída passou pelos mesmos guardrails — isso é ouro em uma auditoria.',
+        },
+      ],
+    },
+    commonMistakes: {
+      title: 'Erros comuns com o negative prompting',
+      id: 'common-mistakes',
+      mistakes: [
+        {
+          mistake: 'Escrever muitas restrições negativas',
+          problem: 'Mais de 5-6 regras de "não fazer" sobrecarregam o modelo. Ele começa a duvidar, ignorar algumas restrições ou produzir uma saída excessivamente cautelosa.',
+          fix: 'Limite a 3-5 restrições focadas por prompt. Agrupe regras relacionadas: "Nunca use palavras de hype (disruptivo, revolucionário, que muda o jogo)" conta como uma restrição.',
+        },
+        {
+          mistake: 'Combinar negativos sem alternativas positivas',
+          problem: 'Dizer "não seja vago" sem dizer "em vez disso, seja específico com datas e números" deixa o modelo adivinhando.',
+          fix: 'Sempre acompanhe: "Não use linguagem vaga. Em vez disso, inclua datas, números ou resultados mensuráveis específicos."',
+        },
+        {
+          mistake: 'Usar linguagem negativa suave',
+          problem: '"Tente evitar", "prefira não", "se possível omita" são interpretados como sugestões, não como regras. Os modelos os ignoram.',
+          fix: 'Use negativos diretos: "não deve", "nunca", "não", "proibido". Os modelos seguem a linguagem direta.',
+        },
+        {
+          mistake: 'Definir restrições inatingíveis',
+          problem: '"Nunca mencione o concorrente" quando uma comparação é necessária cria expectativas impossíveis.',
+          fix: 'Torne as restrições específicas e realistas. Exemplo: "Não nomeie concorrentes; em vez disso, faça referência às capacidades."',
+        },
+        {
+          mistake: 'Não testar as restrições entre modelos',
+          problem: 'GPT-5.5, Claude e Gemini têm diferentes sensibilidades de conformidade. Uma restrição que funciona perfeitamente em um pode ser ignorada ou super-aplicada em outro.',
+          fix: 'Teste seus prompts negativos em todos os modelos-alvo. Documente as diferenças de conformidade. Ajuste as restrições para cada modelo se necessário.',
+        },
+      ],
+    },
+    faqSection: {
+      title: 'Perguntas frequentes',
+      id: 'faq',
+      faqs: [
+        {
+          q: 'O que é o negative prompting?',
+          a: 'O negative prompting significa adicionar regras explícitas de "não fazer" a um prompt junto com instruções positivas. Essas regras restringem o conteúdo (sem conselhos médicos), o estilo (sem palavras de hype), a estrutura (sem introdução) ou o comportamento (nunca fabricar dados). Cada regra atua como um guardrail que previne modos de falha conhecidos.',
+        },
+        {
+          q: 'O negative prompting funciona com todos os modelos de IA?',
+          a: 'Sim — GPT-5.5, Claude Opus/Sonnet e Gemini Pro respondem a restrições negativas diretas ("não deve", "nunca", "não"). A conformidade varia: as proibições de formato às vezes são aplicadas de forma inconsistente em saídas longas. Teste suas restrições específicas com seus modelos-alvo.',
+        },
+        {
+          q: 'Quantas restrições negativas devo usar?',
+          a: 'Limite a 3-5 por prompt. Mais de 5-6 pode confundir os modelos, provocar restrições ignoradas ou uma saída excessivamente cautelosa. Agrupe regras relacionadas: "Nunca use palavras de hype (disruptivo, revolucionário, que muda o jogo)" conta como uma restrição.',
+        },
+        {
+          q: 'O negative prompting é o mesmo que filtragem de conteúdo?',
+          a: 'Não. A filtragem de conteúdo detecta e bloqueia saídas indesejadas após a geração. O negative prompting previne saídas indesejadas durante a geração, dizendo ao modelo antecipadamente o que evitar. A filtragem ocorre downstream; o negative prompting previne o problema antes que ele comece.',
+        },
+        {
+          q: 'Posso usar o negative prompting para conformidade (LGPD, HIPAA)?',
+          a: 'Sim. Incorporar restrições de conformidade em modelos como regras negativas cria uma trilha de auditoria: cada saída foi processada pelos mesmos guardrails. Isso é valioso para auditorias, mas o negative prompting sozinho não substitui a revisão jurídica nem os Acordos de Processamento de Dados.',
+        },
+        {
+          q: 'O que acontece se eu combinar negative prompting com exemplos few-shot?',
+          a: 'A combinação funciona bem. Mostre exemplos positivos do que você quer, depois adicione restrições negativas para o que evitar. Os exemplos ancoram o modelo; as restrições o impedem de se desviar. Use ambos juntos para o maior controle.',
+        },
+      ],
+    },
+    relatedReading: {
+      title: 'Leitura relacionada',
+      id: 'related-reading',
+      items: [
+        { title: 'Prompt injection e segurança', url: '/pt/prompt-engineering/prompt-injection-and-security' },
+        { title: 'Constrained prompting', url: '/pt/prompt-engineering/constrained-prompting' },
+        { title: 'Como testar prompts entre modelos', url: '/pt/prompt-engineering/how-to-test-prompts-across-models' },
+        { title: 'Método de prompt de etapa única', url: '/pt/prompt-engineering/single-prompt-method' },
+      ],
+    },
+    sources: {
+      title: 'Fontes',
+      id: 'sources',
+      items: [
+        'Ye, J., et al. (2023). "In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. https://arxiv.org/abs/2310.06835 — Como os modelos processam e aplicam restrições em entradas longas.',
+      ],
+    },
+  },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    inLanguage: 'pt-BR',
+    name: 'Como usar o negative prompting',
+    totalTime: 'PT8M',
+    step: [
+      { '@type': 'HowToStep', position: 1, name: 'Identifique o que você não quer na saída', text: 'Identifique o que você não quer na saída: palavras, tons, estilos ou abordagens específicos. Exemplo: "Não usar palavras de marketing. Não fazer promessas. Não referenciar concorrentes."' },
+      { '@type': 'HowToStep', position: 2, name: 'Formule os negativos explicitamente', text: 'Formule os negativos explicitamente usando linguagem de "não", "não deve", "nunca". Os negativos suaves são menos eficazes. Seja direto: "Nunca use as palavras \'disruptivo\', \'que muda o jogo\' ou \'impulsionado por IA\'."' },
+      { '@type': 'HowToStep', position: 3, name: 'Forneça exemplos negativos', text: 'Forneça exemplos negativos: mostre ao modelo exatamente o que você não quer. Exemplo: "Não escreva assim: \'Desbloqueie um crescimento explosivo com nossa solução de IA.\' Escreva assim: [forneça exemplo positivo]."' },
+      { '@type': 'HowToStep', position: 4, name: 'Combine orientação positiva e negativa', text: 'Combine orientação positiva e negativa. Não diga apenas o que evitar — diga também o que fazer em vez disso. Exemplo: "Não use linguagem de hype. Em vez disso, foque em benefícios específicos e mensuráveis."' },
+      { '@type': 'HowToStep', position: 5, name: 'Use o negative prompting com moderação', text: 'Use o negative prompting com moderação — às vezes pode confundir o modelo. A orientação positiva ("escreva de forma clara e técnica") frequentemente funciona melhor do que os negativos abundantes. Equilibre ambas as abordagens.' },
+    ],
+  },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'pt-BR',
+    mainEntity: [
+      { '@type': 'Question', name: 'O que é o negative prompting?', acceptedAnswer: { '@type': 'Answer', text: 'O negative prompting significa adicionar regras explícitas de "não fazer" aos seus prompts junto com o que você quer que o modelo faça. Essas regras restringem o conteúdo (sem conselhos médicos), o estilo (sem palavras de hype), a estrutura (sem introdução) ou o comportamento (nunca fabricar dados). Cada regra atua como um guardrail que previne modos de falha conhecidos.' } },
+      { '@type': 'Question', name: 'O negative prompting funciona com todos os modelos de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. GPT-5.5, Claude Opus/Sonnet e Gemini Pro respondem a restrições negativas diretas ("não deve", "nunca", "não"). A conformidade varia por tipo de restrição. Teste suas restrições específicas com seus modelos-alvo.' } },
+      { '@type': 'Question', name: 'Quantas restrições negativas devo usar?', acceptedAnswer: { '@type': 'Answer', text: 'Limite a 3-5 por prompt. Mais de 5-6 pode confundir os modelos. Agrupe regras relacionadas: "Nunca use palavras de hype (disruptivo, revolucionário, que muda o jogo)" conta como uma restrição.' } },
+      { '@type': 'Question', name: 'O negative prompting é o mesmo que filtragem de conteúdo?', acceptedAnswer: { '@type': 'Answer', text: 'Não. A filtragem de conteúdo detecta e bloqueia saídas indesejadas após a geração. O negative prompting previne saídas indesejadas durante a geração. A filtragem ocorre downstream; o negative prompting previne o problema antes que ele comece.' } },
+      { '@type': 'Question', name: 'Posso usar o negative prompting para conformidade regulatória?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Incorporar restrições de conformidade como regras negativas cria uma trilha de auditoria: cada saída foi processada pelos mesmos guardrails. Mas o negative prompting sozinho não substitui a revisão jurídica nem os Acordos de Processamento de Dados.' } },
+      { '@type': 'Question', name: 'O que acontece se eu combinar negative prompting com exemplos few-shot?', acceptedAnswer: { '@type': 'Answer', text: 'A combinação funciona bem. Mostre exemplos positivos do que você quer, depois adicione restrições negativas para o que evitar. Os exemplos ancoram o modelo; as restrições o impedem de se desviar. Use ambos juntos para o maior controle.' } },
+    ],
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    inLanguage: 'pt-BR',
+    name: 'Negative prompting vs prompting positivo: comparação de eficácia',
+    numberOfItems: 4,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Apenas positivo', description: '"Escreva com clareza, seja específico, use tom profissional"' },
+      { '@type': 'ListItem', position: 2, name: 'Apenas negativo', description: '"Não seja vago, não use jargão, mantenha-se no tópico"' },
+      { '@type': 'ListItem', position: 3, name: 'Positivo + Negativo (3–5 restrições)', description: '"Escreva X, no tom Y; não Z"' },
+      { '@type': 'ListItem', position: 4, name: 'Negativo abundante (7+ restrições)', description: '7+ regras de "não fazer" com orientação positiva mínima' },
+    ],
+  },
+},
     fr: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',

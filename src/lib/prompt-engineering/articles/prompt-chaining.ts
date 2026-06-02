@@ -938,6 +938,244 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    pt: {
+      theme: 'Techniques',
+      title: 'Prompt chaining: como dividir tarefas grandes em etapas vencedoras',
+      intro: 'O prompt chaining é uma técnica onde você divide uma tarefa complexa em vários prompts menores e alimenta a saída de uma etapa para a próxima. Isso permite construir fluxos de trabalho de IA de múltiplas etapas confiáveis em vez de depender de um único prompt excessivamente complicado.',
+      publishDate: '2026-03-26',
+      seoTitle: 'Prompt Chaining: divida tarefas complexas em etapas focadas',
+      metaDescription: 'O prompt chaining divide tarefas complexas em etapas focadas, melhorando a precisão ao separar compreensão, planejamento e geração. Aprenda a projetar fluxos de trabalho de IA de múltiplas etapas confiáveis.',
+      readTime: '8 min de leitura',
+      educationalLevel: 'Intermediate',
+      audience: 'Desenvolvedores e equipes que constroem fluxos de trabalho de IA',
+      primaryTerm: 'Prompt Chaining',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'url': 'https://www.promptquorum.com/pt/prompt-engineering/prompt-chaining?lang=pt',
+        headline: 'Prompt Chaining: como dividir tarefas grandes em etapas vencedoras',
+        description: 'O que é o prompt chaining, por que importa e como projetar fluxos de trabalho de IA de múltiplas etapas que são mais fáceis de controlar e reutilizar.',
+        datePublished: '2026-03-26',
+        keywords: ['prompt chaining', 'prompt engineering', 'fluxos de trabalho de IA', 'PromptQuorum'],
+        proficiencyLevel: 'Intermediate',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'Fluxos de Trabalho de IA' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
+        },
+      },
+      sections: {
+        whatIsPromptChaining: {
+          title: 'O que é o prompt chaining',
+          content: [
+            '**O prompt chaining significa conectar vários prompts para que cada um realize uma subtarefa focada e passe seu resultado para a frente.** Em vez de pedir ao modelo que "faça tudo de uma vez", você cria uma sequência como "analisar → estruturar → gerar → revisar."',
+            'Cada etapa tem uma entrada clara, um formato de saída claro e uma responsabilidade estreita. A cadeia como um todo se comporta mais como um pipeline ou fluxo de trabalho do que como um chat, tornando-a mais fácil de depurar, manter e reutilizar.',
+          ],
+          image: '/images/prompt-chaining-basic-flow-pt.svg',
+          imageCaption: 'Diagrama que mostra como o prompt chaining divide uma tarefa complexa em chamadas LLM sequenciais com saídas intermediárias que alimentam a próxima etapa.',
+        },
+        whyItMatters: {
+          title: 'Por que o prompt chaining importa',
+          content: [
+            '**O prompt chaining importa porque a maioria das tarefas do mundo real é complexa demais ou frágil demais para um único prompt gerenciar bem.** Quando você separa compreensão, planejamento, geração e verificação em etapas distintas, você reduz os erros e ganha controle.',
+            'Os benefícios incluem:',
+          ],
+          items: [
+            'Maior precisão, porque cada etapa está otimizada para uma função específica.',
+            'Resolução de problemas mais fácil, já que você pode ver exatamente onde uma cadeia se quebra.',
+            'Mais reutilização, já que etapas individuais (como "resumir entrada" ou "extrair entidades") podem ser compartilhadas entre diferentes fluxos de trabalho.',
+          ],
+        },
+        additionalBenefit: {
+          content: [
+            'Para as equipes, as cadeias de prompts se tornam blocos de construção em sistemas de IA maiores em vez de conversas pontuais.',
+          ],
+          image: '/images/prompt-chaining-patterns-pt.svg',
+          imageCaption: 'Padrões típicos de prompt chaining: fluxos de trabalho sequenciais, de bifurcação e map-reduce usados em pipelines LLM de produção.',
+        },
+        keyTakeaways: {
+          title: 'Pontos-chave',
+          items: [
+            '**O prompt chaining** divide tarefas complexas em prompts sequenciais onde a saída de cada etapa é alimentada para a próxima — como um pipeline de dados, não um chat.',
+            'Padrões comuns: Analisar → Planejar → Redigir → Refinar, Extrair → Transformar → Resumir, Gerar → Criticar → Melhorar.',
+            'Cadeias de 3–5 etapas dão o melhor resultado. Abaixo de 3, você não ganha muito. Acima de 7, você está sobre-engenhando.',
+            'Teste cada etapa de forma independente antes de conectá-las. Depure as cadeias inspecionando as saídas intermediárias.',
+            'As cadeias reduzem as taxas de alucinação entre 35–45% frente a prompts complexos individuais (testes internos do PromptQuorum, 50+ tarefas).',
+            'Compensação: 2–5× mais chamadas à API, mas os ganhos de qualidade e a facilidade de depuração justificam o custo para os fluxos de trabalho de produção.',
+            'Em 2026, os frameworks agênticos (LangChain, CrewAI, agentes gerenciados do Claude) levaram o prompt chaining para produção — orquestre cadeias programaticamente com gerenciamento de erros integrado.',
+          ],
+        },
+        quickFacts: {
+          title: 'Fatos rápidos',
+          content: [
+            '⚡ **O que é:** Divide tarefas complexas em prompts sequenciais; a saída da etapa N se torna a entrada da etapa N+1',
+            '⚡ **Comprimento ótimo:** 3–5 etapas. Abaixo de 3 = pouco benefício. Acima de 7 = sobre-engenharia.',
+            '⚡ **Redução de alucinações:** 35–45% frente a prompts individuais (PromptQuorum, teste de 50+ tarefas)',
+            '⚡ **Compensação de custo:** 2–5× mais chamadas à API, mas a qualidade + depurabilidade justificam',
+            '⚡ **Padrões comuns:** Analisar → Planejar → Redigir → Refinar; Extrair → Transformar → Resumir; Gerar → Criticar → Melhorar',
+            '⚡ **Frameworks 2026:** LangChain, DSPy, CrewAI, agentes gerenciados do Claude — todos levam o prompt chaining para produção',
+          ],
+        },
+        typicalPatterns: {
+          title: 'Padrões típicos de cadeias de prompts',
+          content: [
+            '**A maioria das cadeias de prompts usa alguns padrões recorrentes que você pode adaptar aos seus próprios fluxos de trabalho.** A estrutura exata depende do seu objetivo, mas a lógica permanece semelhante.',
+            'Os padrões comuns incluem:',
+          ],
+          items: [
+            'Analisar → Planejar → Redigir → Refinar: para escrever artigos, relatórios ou estratégias.',
+            'Extrair → Transformar → Resumir: para processar documentos brutos, logs ou tickets.',
+            'Classificar → Encaminhar → Gerar: para classificar entradas e enviá-las para prompts especializados.',
+            'Gerar → Criticar → Melhorar: para refinamento iterativo de copy, código ou designs.',
+          ],
+        },
+        chainImplementation: {
+          content: [
+            'Você pode implementar essas cadeias de forma síncrona (passo a passo em uma única sessão) ou como jobs separados orquestrados pela sua aplicação.',
+          ],
+          image: '/images/prompt-chaining-example-pt.svg',
+          imageCaption: 'Exemplo trabalhado de uma cadeia de prompts: extrair entidades, classificar a intenção e então gerar uma resposta estruturada em três etapas LLM.',
+        },
+        example: {
+          title: 'Exemplo: prompt único vs cadeia de prompts',
+          content: [
+            '**O valor do prompt chaining é mais fácil de ver quando você compara um único prompt complexo com uma cadeia curta que aborda o mesmo trabalho.** Aqui está um exemplo para produzir um changelog orientado ao cliente.',
+            '**[Prompt deficiente]**',
+            '"Leia estas notas de versão e escreva um changelog amigável para nossos usuários."',
+            '**[Cadeia de prompts melhorada]**',
+            '**Etapa 1 – Extrair mudanças**',
+            '"Você é um engenheiro de versões. Extraia todas as mudanças visíveis para o usuário das notas de versão brutas e liste-as como pontos agrupados por área de funcionalidade."',
+            '**Etapa 2 – Classificar o impacto**',
+            '"Você é um gestor de produto. Para cada ponto, rotule-o como `correção de bug`, `melhoria` ou `nova funcionalidade`, e adicione uma nota interna curta sobre por que importa."',
+            '**Etapa 3 – Gerar changelog**',
+            '"Você é um redator de customer success. Usando a lista rotulada, escreva um email de changelog orientado ao usuário com um breve parágrafo introdutório e 3–6 pontos. Foque nos benefícios, não nos detalhes internos."',
+            'Ao encadear essas etapas, você torna cada prompt mais simples, mais testável e mais reutilizável.',
+          ],
+        },
+        whenToUse: {
+          title: 'Quando usar o prompt chaining',
+          content: [
+            '**Você deve usar o prompt chaining sempre que uma tarefa se decomponha naturalmente em etapas que podem falhar ou mudar de forma independente.** Se você se encontrar escrevendo um prompt muito longo e frágil com muitas condições "se", geralmente é um sinal de que você precisa de uma cadeia.',
+            'Casos de uso típicos:',
+          ],
+          items: [
+            'Pipelines de produção de conteúdo (pesquisar → esquematizar → redigir → editar).',
+            'Pipelines de dados (ingerir → limpar → extrair → enriquecer → resumir).',
+            'Suporte a decisões (coletar fatos → gerar opções → avaliar compensações → recomendar).',
+            'Fluxos de trabalho de produto como integração, automação de suporte e geração de documentos.',
+          ],
+        },
+        whenSinglePrompt: {
+          content: [
+            'Para tarefas pequenas e pontuais, um único prompt geralmente é suficiente. Para qualquer coisa que você espera executar repetidamente ou em escala, o chaining oferece mais controle.',
+          ],
+        },
+        proTipModelSelection: {
+          title: '🔍 Dica pro: Otimização de custos',
+          content: [
+            'Use um modelo barato e rápido (Claude Haiku 4.5, GPT-5.5 mini, Gemini Flash) para as etapas de extração e classificação, e um modelo de fronteira (Claude Opus 4.8, GPT-5.5) apenas para as etapas de geração e revisão. Isso reduz o custo da cadeia entre 60–70% com perda mínima de qualidade nas etapas mecânicas.',
+          ],
+        },
+        comparisonTable: {
+          title: 'Prompt único vs cadeia de prompts vs framework agêntico',
+          content: [
+            'É assim que o prompt chaining se compara com os prompts individuais e os frameworks agênticos modernos:',
+          ],
+          columns: ['Dimensão', 'Prompt único', 'Cadeia de prompts (manual)', 'Framework agêntico (LangChain, etc.)'],
+          rows: [
+            { 'Dimensão': 'Gerenciamento de complexidade', 'Prompt único': 'Baixo — falha em tarefas de múltiplas etapas', 'Cadeia de prompts (manual)': 'Alto — cada etapa focada', 'Framework agêntico (LangChain, etc.)': 'Alto — orquestrado com gerenciamento de erros' },
+            { 'Dimensão': 'Depuração', 'Prompt único': 'Difícil — caixa preta', 'Cadeia de prompts (manual)': 'Boa — inspecione saídas intermediárias', 'Framework agêntico (LangChain, etc.)': 'A melhor — rastreamento e logging integrados' },
+            { 'Dimensão': 'Taxa de alucinação', 'Prompt único': 'Maior', 'Cadeia de prompts (manual)': '35–45% menor (testes PromptQuorum)', 'Framework agêntico (LangChain, etc.)': 'Similar às cadeias manuais' },
+            { 'Dimensão': 'Chamadas à API', 'Prompt único': '1', 'Cadeia de prompts (manual)': '3–5 tipicamente', 'Framework agêntico (LangChain, etc.)': '3–10+ (inclui tentativas, chamadas de ferramentas)' },
+            { 'Dimensão': 'Esforço de configuração', 'Prompt único': 'Mínimo', 'Cadeia de prompts (manual)': 'Moderado — projetar cadeia, testar cada etapa', 'Framework agêntico (LangChain, etc.)': 'Maior — instalar framework, configurar ferramentas' },
+            { 'Dimensão': 'Reutilizabilidade', 'Prompt único': 'Baixa — monolítica', 'Cadeia de prompts (manual)': 'Alta — as etapas são modulares', 'Framework agêntico (LangChain, etc.)': 'A mais alta — as etapas são componentes componíveis' },
+            { 'Dimensão': 'Recuperação de erros', 'Prompt único': 'Nenhuma', 'Cadeia de prompts (manual)': 'Manual (adicionar validação por etapa)', 'Framework agêntico (LangChain, etc.)': 'Integrada (tentativas, fallbacks, encaminhamento)' },
+            { 'Dimensão': 'Melhor para', 'Prompt único': 'Tarefas simples e pontuais', 'Cadeia de prompts (manual)': 'Pipelines de conteúdo/dados de produção', 'Framework agêntico (LangChain, etc.)': 'Fluxos de trabalho agênticos complexos com uso de ferramentas' },
+          ],
+        },
+        agenticOrchestration: {
+          title: 'Prompt chaining vs frameworks agênticos (2026)',
+          content: [
+            'O artigo anterior descreve o prompt chaining como uma técnica manual. Em 2026, os frameworks agênticos levaram esse padrão para produção:',
+            '**LangChain / LangGraph:** Defina as etapas da cadeia como funções Python, conecte-as com entradas/saídas tipadas, lógica de reintento integrada e rastreamento (LangSmith).',
+            '**DSPy (Stanford):** Compila cadeias de prompts em pipelines otimizados. Ajusta automaticamente os prompts em cada etapa com base em métricas de avaliação.',
+            '**CrewAI:** Cadeias multi-agente onde cada "agente" é uma etapa da cadeia com sua própria persona, ferramentas e responsabilidades.',
+            '**Agentes gerenciados do Claude (Anthropic, 2026):** Orquestração do lado do servidor de fluxos de trabalho de múltiplas etapas com execução de ferramentas em sandbox.',
+            '**OpenAI Assistants API:** Cadeias de múltiplos turnos com estado com gerenciamento de arquivos, execução de código e chamadas de funções integrados.',
+            '**Ponto-chave:** O prompt chaining manual (copiar e colar entre etapas) é adequado para protótipos e fluxos de trabalho pequenos. Para sistemas de produção que processam centenas de solicitações, use um framework.',
+            '**Ângulo PromptQuorum:** O PromptQuorum pode ser usado como a camada de despacho dentro desses frameworks — envie cada etapa da cadeia para o modelo ótimo (modelo barato para extração, modelo de fronteira para geração, modelo local para dados sensíveis).',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'Prompt chaining no PromptQuorum',
+          content: [
+            '**O PromptQuorum é uma ferramenta de despacho de IA multi-modelo que se encaixa naturalmente com o prompt chaining porque você pode padronizar cada etapa e executá-la em vários modelos.** Em vez de um único prompt monolítico, você define uma série de prompts respaldados por frameworks e os conecta no seu fluxo de trabalho.',
+            'Com o PromptQuorum você pode:',
+          ],
+          items: [
+            'Usar frameworks diferentes em diferentes etapas — por exemplo, SPECS para extração estruturada, TRACE para raciocínio e CRAFT para o copy final.',
+            'Executar etapas-chave em paralelo entre modelos (como GPT-5.5, Claude Opus 4.8 e Gemini 3.1 Pro) para comparar como cada um gerencia a extração, o planejamento ou a geração.',
+            'Salvar cada etapa como um modelo para que as cadeias sejam fáceis de reconstruir, modificar ou compartilhar com sua equipe.',
+          ],
+        },
+        pqClosing: {
+          content: [
+            'No PromptQuorum, o prompt chaining se torna uma forma de construir fluxos de trabalho repetíveis que qualquer membro da equipe pode executar de forma confiável.',
+          ],
+        },
+        howToStart: {
+          title: 'Como usar o prompt chaining',
+          numberedItems: [
+            '**Identifique onde sua tarefa atual tem múltiplas etapas ou partes que frequentemente falham.** Analise onde seu prompt atual falha com mais frequência. É a análise? A geração? O formato de saída?',
+            '**Divida o fluxo de trabalho em 3–5 etapas lógicas.** Exemplo para um pipeline de conteúdo: Etapa 1: Resumo de pesquisa → Etapa 2: Esboço → Etapa 3: Primeiro rascunho → Etapa 4: Revisão de SEO.',
+            '**Projete um prompt focado para cada etapa com uma responsabilidade estreita.** Cada etapa deve: caber em <300 tokens de instruções, ter um formato de saída claro, não tentar fazer demais.',
+            '**Teste cada etapa de forma independente antes de conectá-las.** Execute a etapa 1 com várias entradas. A saída é consistente? O formato funciona como entrada para a etapa 2?',
+            '**Conecte as etapas e valide a cadeia completa.** Execute 5–10 exemplos de ponta a ponta. Inspecione as saídas intermediárias para detectar onde a qualidade se degrada.',
+          ],
+        },
+        faqSection: {
+          title: 'Perguntas frequentes',
+          faqs: [
+            { q: 'Em que se diferencia o prompt chaining de um único prompt complexo?', a: 'Um único prompt complexo tenta fazer tudo de uma vez (analisar, planejar, gerar, verificar). O prompt chaining separa isso em etapas. Os prompts únicos são mais simples, mas menos confiáveis para tarefas complexas. As cadeias são mais transparentes e testáveis, mas requerem mais configuração e chamadas à API.' },
+            { q: 'Quantas etapas deve ter uma cadeia de prompts?', a: 'A maioria das cadeias eficazes tem 3–5 etapas. Cada etapa deve ser suficientemente simples para caber em um prompt claro (menos de 500 tokens de instruções). Mais de 7 etapas normalmente significa sobre-engenharia.' },
+            { q: 'Quando devo usar prompt chaining vs fine-tuning?', a: 'Use chaining quando quiser decompor uma tarefa complexa em fases gerenciáveis. Use fine-tuning quando um único modelo tem um desempenho sistematicamente insuficiente em uma tarefa e você tem dados de treinamento. Não são mutuamente exclusivos — você pode encadear modelos com fine-tuning.' },
+            { q: 'O prompt chaining é o mesmo que usar um system prompt?', a: 'Não. Um system prompt estabelece o comportamento global uma vez. O prompt chaining decompõe uma tarefa em múltiplas etapas com prompts separados para cada uma. Você pode combinar ambos: um system prompt estabelece a persona, o chaining gerencia a decomposição de tarefas.' },
+            { q: 'Como testo cada etapa em uma cadeia de forma isolada?', a: 'Escreva dados de teste para a etapa 1, execute-a de forma isolada, verifique o formato de saída. Então use isso como entrada para a etapa 2, teste-a sozinha. Não conecte as etapas até que cada uma tenha sucesso de forma isolada. Isso torna a depuração mais rápida.' },
+            { q: 'O que acontece se uma etapa na minha cadeia falhar?', a: 'A cadeia inteira normalmente para. Para gerenciar isso: adicione validação após cada etapa para detectar erros cedo. Implemente fallbacks. Opcionalmente: encaminhe os erros para um humano para revisão em vez de falhar.' },
+            { q: 'Devo considerar regulamentações ao usar prompt chaining?', a: 'Sim. O prompt chaining até oferece vantagens de conformidade: você pode controlar onde os dados sensíveis são processados (local vs. nuvem), e cada etapa é auditável. Em cenários como o processamento de dados de clientes: use modelos locais para a extração, modelos na nuvem apenas para as etapas não sensíveis.' },
+            { q: 'O prompt chaining é adequado para empresas de médio porte?', a: 'Absolutamente. O prompt chaining é ideal para empresas de médio porte: reduz custos usando modelos mais baratos para tarefas rotineiras, melhor controle para conformidade e depuração mais fácil. Muitas empresas de médio porte usam cadeias de prompts para produção de conteúdo, processamento de dados e suporte ao cliente — com modelos locais ou mistos para a privacidade.' },
+          ],
+        },
+        sources: {
+          title: 'Fontes e leituras adicionais',
+          items: [
+            '[Wu et al. (2022). "AI Chains: Transparent and Controllable Human-AI Interaction by Chaining Large Language Model Prompts." CHI 2022.](https://arxiv.org/abs/2305.17066) — Trabalho fundamental sobre padrões de encadeamento LLM e transparência.',
+            '[Chase, H. (2022). "LangChain: Building applications with LLMs through composability." GitHub.](https://github.com/langchain-ai/langchain) — Framework de encadeamento de código aberto em sistemas de produção.',
+            '[Khattab et al. (2023). "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714.](https://arxiv.org/abs/2310.03714) — Otimização de pipelines de prompts programáticos e ajuste automático.',
+            '[Anthropic. (2026). "Tool Use and Multi-Step Workflows — Claude API Documentation."](https://docs.anthropic.com) — Orquestração do lado do servidor de prompts encadeados com uso de ferramentas.',
+            '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — Padrões de encadeamento baseados em API para GPT-5.5.',
+          ],
+        },
+        relatedReading: {
+          title: 'Leitura relacionada',
+          items: [
+            '[Chain-of-thought prompting](/pt/prompt-engineering/chain-of-thought-prompting) — CoT é raciocínio de prompt único; o chaining sequencia múltiplos prompts.',
+            '[Tree-of-thought e ReAct](/pt/prompt-engineering/tree-of-thought-and-react) — ReAct é um padrão de chaining específico (Loop Raciocinar → Agir → Observar).',
+            '[Constrained prompting](/pt/prompt-engineering/constrained-prompting) — Restrinja o formato de saída em cada etapa da cadeia para handoffs confiáveis.',
+            '[Persona prompting](/pt/prompt-engineering/persona-prompting) — Personas diferentes em cada etapa da cadeia (analista → escritor → editor).',
+            '[Framework RTF](/pt/prompt-engineering/rtf-framework) — Role-Task-Format se mapeia naturalmente para etapas individuais da cadeia.',
+            '[Tokens, custos e limites](/pt/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — As cadeias usam 2–5× mais tokens; impacto nos custos.',
+            '[GPT, Claude ou Gemini?](/pt/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Diferentes modelos em diferentes etapas da cadeia.',
+          ],
+        },
+      },
+    },
     fr: {
       freshness_tier: 'evergreen',
       theme: 'Techniques',

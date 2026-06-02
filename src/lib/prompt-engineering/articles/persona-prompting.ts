@@ -879,6 +879,204 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   },
+  pt: {
+    theme: 'Techniques',
+    title: 'Persona Prompting: dê um papel à sua IA e veja como ela melhora',
+    intro: 'O persona prompting é a prática de definir um papel claro, uma visão de mundo e um comportamento para um modelo de IA, de modo que ele responda de forma consistente como um especialista ou personagem específico em muitos prompts e sessões.',
+    seoTitle: 'Persona Prompting: comportamento especializado e consistente',
+    metaDescription: 'Domine o persona prompting para IA estável sem fine-tuning. Aprenda os 7 blocos de construção, modelos e teste personas no GPT, Claude, Gemini.',
+    publishDate: '2026-03-26',
+    readTime: '13 min de leitura',
+    educationalLevel: 'Intermediate',
+    audience: 'Engenheiros de software, gestores de produto, equipes que implantam assistentes de IA em escala',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/pt/prompt-engineering/persona-prompting?lang=pt',
+      headline: 'Persona Prompting: dê um papel à sua IA e veja como ela melhora',
+      description: 'O que é o persona prompting, por que importa, os blocos de construção fundamentais, exemplos práticos e como testar personas em vários modelos de IA.',
+      datePublished: '2026-03-26',
+      keywords: ['persona prompting', 'prompt engineering', 'comportamento de IA', 'prompting baseado em papéis', 'PromptQuorum'],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'Prompt Engineering' },
+        { '@type': 'Thing', name: 'Large Language Models' },
+        { '@type': 'Thing', name: 'Design de Personas' },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Persona Prompting', description: 'Apenas altera o texto de entrada; funciona em todos os provedores; reversível em segundos; melhor para papéis multi-domínio e testes.' },
+        { '@type': 'ListItem', position: 2, name: 'Fine-Tuning', description: 'Altera os pesos do modelo; específico do provedor; requer retreinamento para mudanças; melhor para estilos especializados e proprietários.' },
+        { '@type': 'ListItem', position: 3, name: 'System Prompt', description: 'Configuração no nível da API; específico do provedor; escopo limitado; melhor para regras globais aplicadas a todas as solicitações.' },
+        { '@type': 'ListItem', position: 4, name: 'RAG (Geração Aumentada por Recuperação)', description: 'Camada de recuperação agnóstica ao modelo; requer infraestrutura; melhor para ancoragem em fatos e tarefas intensivas em conhecimento.' },
+        { '@type': 'ListItem', position: 5, name: 'System Prompt + Persona', description: 'Combina regras no nível de sistema com persona específica da tarefa; abordagem híbrida; melhor para empresas que precisam tanto de governança quanto de flexibilidade.' },
+      ],
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        title: 'Pontos-chave',
+        numberedItems: [
+          'O persona prompting fixa o comportamento da IA definindo o papel, o escopo de expertise e as regras de decisão antes de fazer sua tarefa — tornando as respostas previsíveis entre sessões e modelos.',
+          'Os sete blocos de construção são: papel (quem), escopo do domínio (o quê), objetivos (prioridades), restrições (limites), estilo de interação (como), exemplos (bom/ruim) e gerenciamento de incerteza (quando não tem certeza).',
+          'As personas reduzem as alucinações porque restringem o raciocínio do modelo a uma "identidade" consistente em vez de improvisar um novo estilo a cada consulta.',
+          'Teste as personas no GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e Mistral Large para ver qual modelo adere melhor — nenhum modelo único segue todas as personas igualmente.',
+          'O persona prompting é reversível em segundos e funciona entre provedores, tornando-o portátil e mais barato do que o fine-tuning para mudanças de comportamento.',
+          'Use limites numéricos (% de confiança, limites de tokens, nível de leitura) para ajudar os modelos a seguir as regras; modelos como GPT-5.5 mapeiam isso diretamente para parâmetros de decodificação internos.',
+        ],
+      },
+      quickFacts: {
+        title: 'Fatos rápidos',
+        items: [
+          'Técnica central: Adicione papel, domínio e restrições à mensagem do sistema antes da tarefa.',
+          'Blocos de construção: 7 componentes (papel, escopo, objetivos, restrições, estilo, exemplos, gerenciamento de incerteza) tornam as personas legíveis por máquinas.',
+          'Impacto no comportamento: As personas reduzem os erros de formato em >50% e aumentam a adesão às restrições em comparação com prompts genéricos.',
+          'Vantagem multi-modelo: A mesma persona se comporta de forma diferente no GPT-5.5, Claude, Gemini — exigindo testes intencionais.',
+          'Reutilizabilidade: Personas compactas (400–600 tokens) são compartilháveis dentro das equipes e entre projetos.',
+          'Sem treinamento necessário: Ao contrário do fine-tuning, as personas funcionam em qualquer provedor sem retreinamento do modelo.',
+        ],
+      },
+      whatIsPersonaPrompting: {
+        title: 'O que é realmente o persona prompting',
+        content: [
+          '**O persona prompting é uma forma estruturada de dizer ao GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro ou outros modelos quem eles devem fingir ser, como devem pensar e quais restrições devem seguir antes de ver sua tarefa real.** Um prompt de persona normalmente inclui uma descrição do papel, expertise do domínio, tom, regras de decisão e limitações explícitas para que o modelo se comporte de forma previsível em vez de improvisar um novo estilo a cada vez.',
+          '**Em uma frase:** O persona prompting converte um LLM de propósito geral em um especialista virtual repetível fixando seu papel, objetivos e limites antes de fazer perguntas.',
+          'O persona prompting é diferente de simples "prompts de estilo" como "responda como um professor amigável". Um prompt de persona adequado define não apenas o tom, mas também o escopo do conhecimento, as prioridades de decisão e como gerenciar a incerteza.',
+          'O PromptQuorum é uma ferramenta de despacho de IA multi-modelo que permite testar o mesmo prompt de persona simultaneamente com GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large e modelos locais via Ollama para ver qual modelo segue a persona de forma mais confiável.',
+        ],
+      },
+      whyItMatters: {
+        title: 'Por que o persona prompting importa para o trabalho real',
+        content: [
+          '**O persona prompting importa porque dá a você um comportamento estável de modelos inerentemente probabilísticos, o que é crítico para engenharia de software, análise financeira e fluxos de trabalho de governança.**',
+          '**Em termos simples:** Sem uma persona, você fala com "o modelo" e espera que ele se comporte; com uma persona, você fala com "o mesmo especialista" todos os dias e sabe aproximadamente como ele responderá.',
+          'Para trabalho de TI e software, o persona prompting permite criar agentes distintos como "revisor de código seguro", "SRE de DevOps" ou "assistente de registro de decisões de arquitetura", cada um com regras explícitas sobre frameworks, logging e padrões de documentação.',
+        ],
+      },
+      buildingBlocks: {
+        title: 'Blocos de construção fundamentais de um prompt de persona sólido',
+        content: [
+          '**Um prompt de persona sólido sempre inclui pelo menos cinco blocos de construção: papel, escopo do conhecimento, objetivos, restrições e regras de interação.** Adicionar exemplos explícitos e comportamento em caso de falha (o que fazer quando não tem certeza) melhora ainda mais a confiabilidade.',
+          'Os sete blocos de construção de um prompt de persona são: papel, escopo do domínio, objetivos, restrições, estilo de interação, exemplos e gerenciamento de incerteza.',
+          'Isso é o que cada bloco faz na prática:',
+        ],
+        items: [
+          'Papel: "Você é um arquiteto de nuvem sênior com 10+ anos de experiência em Kubernetes e redes de confiança zero."',
+          'Escopo do domínio: "Foque em AWS, Azure e Google Cloud; ignore mainframes on-premises a menos que sejam mencionados explicitamente."',
+          'Objetivos: "Otimize para segurança e manutenibilidade primeiro, custo segundo e desempenho terceiro."',
+          'Restrições: "Sem afirmações especulativas, sem conselhos legais ou médicos, sempre indique suposições e limitações."',
+          'Estilo de interação: "Passos curtos e numerados, sem linguagem de marketing, sem emojis, máximo 3 frases por parágrafo."',
+          'Exemplos: Uma ou duas respostas de exemplo concretas que mostrem a profundidade e estrutura desejadas.',
+          'Gerenciamento de incerteza: "Se você tiver menos de 80% de confiança, faça perguntas esclarecedoras antes de responder."',
+        ],
+      },
+      numericThresholds: {
+        content: [
+          'Os prompts de persona que codificam limites numéricos (por exemplo "80% de confiança", "nunca exceda 300 tokens em uma resposta" ou "explique no nível de inglês B1") são mais fáceis de seguir para os modelos do que as instruções puramente qualitativas.',
+          'O PromptQuorum suporta anexar o mesmo bloco de persona a vários prompts entre provedores, para que você possa reutilizar uma única persona de "analista financeiro conservador" ao consultar GPT-5.5, Gemini 3.1 Pro e LLaMA 3.1 sem copiar e colar.',
+        ],
+      },
+      techExample: {
+        title: 'Exemplo: Persona técnica para TI e finanças',
+        content: [
+          '**Uma persona prática para trabalho de TI e finanças define um perfil de risco conservador, limites claros do stack técnico e regras estritas para citar fontes ou suposições.**',
+          '**[Prompt de persona deficiente]**',
+          '"Você é uma IA útil. Explique tópicos de tecnologia e finanças de forma simples e seja amigável."',
+          '**[Prompt de persona melhorado]**',
+          '"Você é um analista sênior de TI e finanças com 15+ anos de experiência em arquitetura de software, mercados de capitais e trading de commodities. Foque na análise factual, evite o hype e separe sempre os dados da interpretação. Use português claro, máximo 3 frases por parágrafo e sem emojis. Quando a evidência for fraca ou tiver mais de 12 meses, rotule-a explicitamente como \'antiga\' e proponha quais novos dados seriam necessários. Priorize perspectivas da UE, Rússia e Alemanha ao falar de regulação; mencione China e EUA onde for relevante. Nunca dê conselhos de investimento personalizados; em vez disso, descreva cenários, mecanismos e fatores de risco."',
+        ],
+      },
+      techExampleBreakdown: {
+        content: [
+          'Esta persona codifica:',
+        ],
+        items: [
+          'Expertise multi-domínio (software, mercados, commodities).',
+          'Foco regional (UE, Rússia, Alemanha, mais China e EUA).',
+          'Regras de comportamento (rotular dados antigos, evitar hype, sem emojis).',
+          'Limite de conformidade (sem conselhos de investimento personalizados).',
+        ],
+      },
+      techExampleTest: {
+        content: [
+          'O PromptQuorum pode enviar esta persona mais uma tarefa concreta (por exemplo "analise o impacto do AI Act da UE nos LLMs hospedados na nuvem") para GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e Mistral Large em um clique e mostrar qual modelo respeita melhor as restrições.',
+        ],
+      },
+      howToBuild: {
+        title: 'Como construir sua própria persona passo a passo',
+        content: [
+          '**Você pode construir uma persona robusta em cinco etapas: defina o trabalho, escolha as restrições, adicione exemplos, teste entre modelos e refine com base nas falhas.** Trate o design de personas como um processo iterativo.',
+          'Etapas para construir uma persona:',
+        ],
+        numberedItems: [
+          'Defina o trabalho: "Esta persona é para o caso de uso X: por exemplo revisão de código multi-modelo, planejamento de cenários macroeconômicos ou resumo de notícias consciente do risco."',
+          'Selecione o escopo do domínio: "Inclua ou exclua certos frameworks, classes de ativos ou jurisdições explicitamente."',
+          'Escolha as restrições: "Decida sobre o tom, o comprimento dos parágrafos, as expectativas de citação e os limites de confiança."',
+          'Crie duas interações de exemplo: "Mostre uma resposta ideal e uma falha a evitar."',
+          'Teste e refine: "Execute pelo menos 10–20 prompts reais e edite a persona sempre que o modelo quebrar uma regra."',
+        ],
+      },
+      buildNote: {
+        content: [
+          'A prática do prompt engineering mostra que os exemplos concretos melhoram significativamente a adesão a instruções complexas. Na prática, adicionar apenas um bloco de contraste "resposta ruim vs resposta boa" frequentemente reduz os erros de formato em mais da metade.',
+          'A visualização lado a lado do PromptQuorum ajuda a refinar personas mais rapidamente porque você vê, em uma única tela, como diferentes modelos interpretam a mesma persona.',
+        ],
+      },
+      vsFineTuning: {
+        title: 'Persona prompting vs fine-tuning vs system prompts',
+        content: [
+          '**O persona prompting é uma alternativa leve ao fine-tuning e à configuração no nível de sistema quando você quer mudanças de comportamento sem treinar seu próprio modelo.**',
+          'Persona prompting vs outras abordagens:',
+        ],
+        items: [
+          'O persona prompting altera o texto de entrada; o fine-tuning altera os parâmetros do modelo.',
+          'O persona prompting funciona no GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e Mistral Large sem retreinamento; o fine-tuning geralmente é específico do provedor.',
+          'O persona prompting é reversível em segundos; você pode trocar personas por tarefa ou por região (UE vs China vs EUA) sem mudanças de infraestrutura.',
+        ],
+      },
+      faqSection: {
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'Qual deve ser o comprimento de um prompt de persona?', a: 'As personas mais eficazes têm 200–600 tokens. Comece com 200–300 tokens para papel, domínio, objetivos e 1–2 restrições. Adicione exemplos e gerenciamento de incerteza quando a complexidade exigir. Personas >1000 tokens frequentemente confundem os modelos; mantenha-as concisas e testáveis.' },
+          { q: 'O persona prompting funciona em todos os modelos?', a: 'Funciona no GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large e modelos locais como LLaMA 3.1 e Qwen 3. No entanto, diferentes modelos seguem as personas de forma diferente: GPT-5.5 prioriza as restrições, Claude faz perguntas esclarecedoras, Gemini cria resumos numéricos densos. Teste sua persona em vários modelos.' },
+          { q: 'Posso usar personas com modelos com fine-tuning?', a: 'Sim. As personas funcionam como uma camada de texto sobre os modelos com fine-tuning. Um modelo com fine-tuning já codifica o conhecimento e o estilo do domínio; um prompt de persona pode refinar ou redirecionar esse comportamento para tarefas específicas. Os dois se complementam.' },
+          { q: 'Como testo se uma persona funciona?', a: 'Teste com o PromptQuorum: envie a mesma tarefa para GPT-5.5, Claude e Gemini com sua persona. Conte quantas vezes o modelo quebra uma regra (por exemplo excede o limite de tokens, usa linguagem de marketing, dá conselhos personalizados). Refine a persona com base nas falhas. Repita 10–20 vezes.' },
+          { q: 'O que acontece se uma persona entra em conflito com as instruções de tarefa do usuário?', a: 'As instruções de tarefa geralmente ganham. Se uma persona diz "máximo 3 frases", mas o usuário pede 1000 palavras, os modelos tipicamente seguem a solicitação explícita do usuário. Para evitar isso, torne as personas flexíveis: "Aponte para 3 frases por parágrafo, a menos que a tarefa exija explicitamente algo diferente."' },
+          { q: 'As personas podem ajudar com as alucinações?', a: 'Parcialmente. Uma persona que diz "cite fontes, reconheça a incerteza quando a confiança é <80%, marque as suposições" reduz as alucinações dando ao modelo regras explícitas. No entanto, as personas não podem anular a natureza fundamentalmente probabilística do modelo. Combine com RAG ou verificação de fatos para máxima confiabilidade.' },
+          { q: 'As personas são eficazes para idiomas além do inglês?', a: 'Sim, embora com ressalvas. Modelos como GPT-5.5 e Claude gerenciam bem as personas em alemão, francês, japonês e chinês, mas o desempenho varia. Teste as personas no seu idioma alvo; alguns modelos (por exemplo Qwen 3) são otimizados para idiomas específicos.' },
+          { q: 'Como versiono e compartilho personas com minha equipe?', a: 'Salve as personas em um documento compartilhado (Markdown, JSON ou biblioteca do PromptQuorum) com histórico de versões. Exemplo: "v2.1: Arquiteto Cloud Sênior — restrição de Zero-Trust adicionada, regra de afirmações especulativas removida." Aplique o controle de versões e rastreie as mudanças de raciocínio.' },
+          { q: 'Devo considerar as regulamentações ao usar persona prompting?', a: 'Sim. O persona prompting é uma forma de processamento de dados. Garanta que seus prompts de persona não contenham dados pessoais sensíveis (nomes, endereços, dados de saúde). A inferência de IA local (por exemplo com Ollama em hardware local) satisfaz os requisitos de privacidade e conformidade.' },
+          { q: 'O persona prompting é adequado para empresas de médio porte?', a: 'Sim, especialmente para empresas de médio porte. O persona prompting permite cumprir os padrões de segurança de TI, aplicar requisitos regulatórios específicos (LGPD, NIS2) e versioná-los. Muitas empresas de médio porte usam personas com modelos locais (LLaMA, Ollama) para manter a soberania de dados.' },
+        ],
+      },
+      sources: {
+        title: 'Fontes e leituras adicionais',
+        items: [
+          '[Wei et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS.](https://arxiv.org/abs/2201.11903)',
+          '[Kojima et al. (2022). "Large Language Models are Zero-Shot Reasoners." NeurIPS.](https://arxiv.org/abs/2205.11916)',
+          '[Brown et al. (2020). "Language Models are Few-Shot Learners." OpenAI.](https://arxiv.org/abs/2005.14165)',
+          '[Touvron et al. (2023). "LLaMA: Open and Efficient Foundation Language Models." arXiv.](https://arxiv.org/abs/2302.13971)',
+          '[Documentação do PromptQuorum: Testes de Personas Multi-Modelo.](https://www.promptquorum.com/docs/multi-model-testing)',
+        ],
+      },
+      relatedReading: {
+        title: 'Leitura relacionada',
+        items: [
+          '[Como escrever prompts claros para IA](/pt/prompt-engineering/how-to-write-clear-prompts) — Domine os fundamentos antes de avançar para as personas.',
+          '[Negative prompting: diga à IA o que ela NÃO deve fazer](/pt/prompt-engineering/negative-prompting) — Combine personas com restrições explícitas para maior controle.',
+          '[Frameworks de prompt: chain-of-thought e mais além](/pt/prompt-engineering/chain-of-thought-prompting) — Aprenda técnicas de raciocínio estruturado que funcionam com personas.',
+          '[System prompts: a base do comportamento de IA](/pt/prompt-engineering/system-prompts) — Entenda como as personas se encaixam na arquitetura de sistema mais ampla.',
+          '[Fine-tuning vs prompt engineering: quando usar cada um](/pt/prompt-engineering/fine-tuning-vs-prompting) — Decida se as personas ou o fine-tuning são o certo para o seu caso de uso.',
+          '[Testando modelos de IA entre provedores](/pt/prompt-engineering/testing-ai-models) — Aprenda a comparar sistematicamente o desempenho das personas.',
+        ],
+      },
+    },
+  },
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Techniques',
