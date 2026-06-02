@@ -125,6 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Provider Comparison Table (May 2026)',
         content: 'All seven providers offer GDPR compliance. Pricing verified May 2026 and updated monthly.',
+        columns: ['Provider', 'HQ', 'DataCenters', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'BestFor'],
         rows: [
           {
             Provider: 'Hetzner GPU',
@@ -485,6 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Tabla comparativa de proveedores (Mayo 2026)',
         content: 'Los siete proveedores ofrecen cumplimiento del RGPD. Precios verificados en mayo de 2026 y actualizados mensualmente.',
+        columns: ['Proveedor', 'Sede', 'CentrosDeDatos', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'MejorPara'],
         rows: [
           {
             Proveedor: 'Hetzner GPU',
@@ -845,6 +847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Anbietervergleich (Mai 2026)',
         content: 'Alle sieben Anbieter bieten DSGVO-Konformität. Preisgestaltung im Mai 2026 überprüft und monatlich aktualisiert.',
+        columns: ['Anbieter', 'Sitz', 'Rechenzentren', 'AVV', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'AmBestenFür'],
         rows: [
           {
             Anbieter: 'Hetzner GPU',
@@ -1228,6 +1231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Tableau de comparaison des fournisseurs (mai 2026)',
         content: 'Tous les sept fournisseurs proposent la conformité RGPD. Tarification vérifiée mai 2026 et mise à jour mensuellement.',
+        columns: ['Fournisseur', 'Siège', 'DataCenters', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'PourQui'],
         rows: [
           {
             Fournisseur: 'Hetzner GPU',
@@ -1589,6 +1593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'プロバイダー比較表（2026年5月）',
         content: 'すべての7つのプロバイダーがGDPR準拠を提供しています。2026年5月に価格を検証し、毎月更新されます。',
+        columns: ['プロバイダー', '本社', 'データセンター', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', '最適'],
         rows: [
           {
             プロバイダー: 'Hetzner GPU',
@@ -1950,6 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '提供商对比表（2026年5月）',
         content: '所有七个提供商都提供GDPR合规性。价格已在2026年5月验证，每月更新。',
+        columns: ['提供商', '总部', '数据中心', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', '最适合'],
         rows: [
           {
             提供商: 'Hetzner GPU',

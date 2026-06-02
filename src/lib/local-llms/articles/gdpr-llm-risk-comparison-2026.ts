@@ -120,29 +120,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'The table below summarizes the GDPR risk profile of each deployment option. Higher scores indicate higher legal and operational risk.',
         ],
-        tableData: {
-          headers: ['Deployment', 'Data Residency', 'Training-Data Jurisdiction', 'ToS Retention Risk', 'SCC / TIA Required?', 'Overall Risk Level'],
-          rows: [
-            {
-              cells: ['DeepSeek API', 'China (Alibaba Cloud)', 'China (PIPL)', 'Explicitly reserves right to share with authorities', 'Yes, but ineffective (no EU-China adequacy)', '🔴 Highest'],
-            },
-            {
-              cells: ['Claude API (US)', 'US (Virginia)', 'US', 'Anthropic commits to deletion on request; 30-day default retention', 'Yes, requires SCC + TIA', '🟠 Medium-High'],
-            },
-            {
-              cells: ['GPT-5.5 (US)', 'US (multiple regions)', 'US', 'OpenAI may retain for model improvement; policy opaque', 'Yes, requires SCC + TIA', '🟠 Medium-High'],
-            },
-            {
-              cells: ['Claude (EU data residency)', 'EU (Ireland or Germany)', 'US (Anthropic), data stays EU', 'Anthropic commits to EU-only residency + GDPR compliance', 'Yes, SCC adequate due to EU processing', '🟡 Medium'],
-            },
-            {
-              cells: ['Llama 4 Scout (local)', 'Your hardware (LAN)', 'Open-source, no commercial retention', 'You control retention via local logs only', 'No', '🟢 Lowest'],
-            },
-            {
-              cells: ['Qwen 3 14B (local)', 'Your hardware (LAN)', 'Open-source (Apache 2.0), no commercial retention', 'You control retention via local logs only', 'No', '🟢 Lowest'],
-            },
-          ],
-        },
+        columns: ['Deployment', 'Data Residency', 'Training-Data Jurisdiction', 'ToS Retention Risk', 'SCC / TIA Required?', 'Overall Risk Level'],
+        rows: [
+          { Deployment: 'DeepSeek API', 'Data Residency': 'China (Alibaba Cloud)', 'Training-Data Jurisdiction': 'China (PIPL)', 'ToS Retention Risk': 'Explicitly reserves right to share with authorities', 'SCC / TIA Required?': 'Yes, but ineffective (no EU-China adequacy)', 'Overall Risk Level': '🔴 Highest' },
+          { Deployment: 'Claude API (US)', 'Data Residency': 'US (Virginia)', 'Training-Data Jurisdiction': 'US', 'ToS Retention Risk': 'Anthropic commits to deletion on request; 30-day default retention', 'SCC / TIA Required?': 'Yes, requires SCC + TIA', 'Overall Risk Level': '🟠 Medium-High' },
+          { Deployment: 'GPT-5.5 (US)', 'Data Residency': 'US (multiple regions)', 'Training-Data Jurisdiction': 'US', 'ToS Retention Risk': 'OpenAI may retain for model improvement; policy opaque', 'SCC / TIA Required?': 'Yes, requires SCC + TIA', 'Overall Risk Level': '🟠 Medium-High' },
+          { Deployment: 'Claude (EU data residency)', 'Data Residency': 'EU (Ireland or Germany)', 'Training-Data Jurisdiction': 'US (Anthropic), data stays EU', 'ToS Retention Risk': 'Anthropic commits to EU-only residency + GDPR compliance', 'SCC / TIA Required?': 'Yes, SCC adequate due to EU processing', 'Overall Risk Level': '🟡 Medium' },
+          { Deployment: 'Llama 4 Scout (local)', 'Data Residency': 'Your hardware (LAN)', 'Training-Data Jurisdiction': 'Open-source, no commercial retention', 'ToS Retention Risk': 'You control retention via local logs only', 'SCC / TIA Required?': 'No', 'Overall Risk Level': '🟢 Lowest' },
+          { Deployment: 'Qwen 3 14B (local)', 'Data Residency': 'Your hardware (LAN)', 'Training-Data Jurisdiction': 'Open-source (Apache 2.0), no commercial retention', 'ToS Retention Risk': 'You control retention via local logs only', 'SCC / TIA Required?': 'No', 'Overall Risk Level': '🟢 Lowest' },
+        ],
       },
       modelVerdicts: {
         id: 'model-verdicts',
@@ -302,29 +288,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'La siguiente tabla resume el perfil de riesgo RGPD de cada opción de despliegue. Una puntuación más alta indica mayor riesgo legal y operativo.',
         ],
-        tableData: {
-          headers: ['Despliegue', 'Residencia de datos', 'Jurisdicción de datos de entrenamiento', 'Riesgo de retención en ToS', '¿SCC / TIA requerida?', 'Nivel de riesgo global'],
-          rows: [
-            {
-              cells: ['DeepSeek API', 'China (Alibaba Cloud)', 'China (PIPL)', 'Se reserva explícitamente el derecho a compartir datos con las autoridades', 'Sí, pero ineficaz (sin adecuación UE-China)', '🔴 Mayor'],
-            },
-            {
-              cells: ['Claude API (EE. UU.)', 'EE. UU. (Virginia)', 'EE. UU.', 'Anthropic se compromete a eliminar los datos bajo petición; retención por defecto de 30 días', 'Sí, requiere SCC + TIA', '🟠 Medio-alto'],
-            },
-            {
-              cells: ['GPT-5.5 (EE. UU.)', 'EE. UU. (múltiples regiones)', 'EE. UU.', 'OpenAI puede retener datos para mejorar el modelo; política opaca', 'Sí, requiere SCC + TIA', '🟠 Medio-alto'],
-            },
-            {
-              cells: ['Claude (residencia de datos UE)', 'UE (Irlanda o Alemania)', 'EE. UU. (Anthropic), datos permanecen en la UE', 'Anthropic se compromete a residencia solo en la UE + cumplimiento RGPD', 'Sí, SCC adecuada por procesamiento en la UE', '🟡 Medio'],
-            },
-            {
-              cells: ['Llama 4 Scout (local)', 'Tu hardware (LAN)', 'Código abierto, sin retención comercial', 'Tú controlas la retención solo a través de logs locales', 'No', '🟢 Menor'],
-            },
-            {
-              cells: ['Qwen 3 14B (local)', 'Tu hardware (LAN)', 'Código abierto (Apache 2.0), sin retención comercial', 'Tú controlas la retención solo a través de logs locales', 'No', '🟢 Menor'],
-            },
-          ],
-        },
+        columns: ['Despliegue', 'Residencia de datos', 'Jurisdicción de datos de entrenamiento', 'Riesgo de retención en ToS', '¿SCC / TIA requerida?', 'Nivel de riesgo global'],
+        rows: [
+          { Despliegue: 'DeepSeek API', 'Residencia de datos': 'China (Alibaba Cloud)', 'Jurisdicción de datos de entrenamiento': 'China (PIPL)', 'Riesgo de retención en ToS': 'Se reserva explícitamente el derecho a compartir datos con las autoridades', '¿SCC / TIA requerida?': 'Sí, pero ineficaz (sin adecuación UE-China)', 'Nivel de riesgo global': '🔴 Mayor' },
+          { Despliegue: 'Claude API (EE. UU.)', 'Residencia de datos': 'EE. UU. (Virginia)', 'Jurisdicción de datos de entrenamiento': 'EE. UU.', 'Riesgo de retención en ToS': 'Anthropic se compromete a eliminar los datos bajo petición; retención por defecto de 30 días', '¿SCC / TIA requerida?': 'Sí, requiere SCC + TIA', 'Nivel de riesgo global': '🟠 Medio-alto' },
+          { Despliegue: 'GPT-5.5 (EE. UU.)', 'Residencia de datos': 'EE. UU. (múltiples regiones)', 'Jurisdicción de datos de entrenamiento': 'EE. UU.', 'Riesgo de retención en ToS': 'OpenAI puede retener datos para mejorar el modelo; política opaca', '¿SCC / TIA requerida?': 'Sí, requiere SCC + TIA', 'Nivel de riesgo global': '🟠 Medio-alto' },
+          { Despliegue: 'Claude (residencia de datos UE)', 'Residencia de datos': 'UE (Irlanda o Alemania)', 'Jurisdicción de datos de entrenamiento': 'EE. UU. (Anthropic), datos permanecen en la UE', 'Riesgo de retención en ToS': 'Anthropic se compromete a residencia solo en la UE + cumplimiento RGPD', '¿SCC / TIA requerida?': 'Sí, SCC adecuada por procesamiento en la UE', 'Nivel de riesgo global': '🟡 Medio' },
+          { Despliegue: 'Llama 4 Scout (local)', 'Residencia de datos': 'Tu hardware (LAN)', 'Jurisdicción de datos de entrenamiento': 'Código abierto, sin retención comercial', 'Riesgo de retención en ToS': 'Tú controlas la retención solo a través de logs locales', '¿SCC / TIA requerida?': 'No', 'Nivel de riesgo global': '🟢 Menor' },
+          { Despliegue: 'Qwen 3 14B (local)', 'Residencia de datos': 'Tu hardware (LAN)', 'Jurisdicción de datos de entrenamiento': 'Código abierto (Apache 2.0), sin retención comercial', 'Riesgo de retención en ToS': 'Tú controlas la retención solo a través de logs locales', '¿SCC / TIA requerida?': 'No', 'Nivel de riesgo global': '🟢 Menor' },
+        ],
       },
       modelVerdicts: {
         id: 'model-verdicts',

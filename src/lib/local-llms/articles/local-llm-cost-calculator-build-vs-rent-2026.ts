@@ -68,45 +68,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudPricing: {
         heading: 'Cloud GPU Pricing in 2026',
         body: 'Cloud GPU pricing varies significantly by provider, GPU tier, and commitment type. Spot pricing (preemptible) is 40–70% cheaper than on-demand but can be interrupted.',
-        tableData: {
-          headers: ['GPU', 'VRAM', 'Provider', 'Spot $/hr', 'On-Demand $/hr'],
-          rows: [
-            ['RTX 4090', '24 GB', 'RunPod', '$0.28–0.44', '$0.74'],
-            ['RTX 4090', '24 GB', 'Vast.ai', '$0.32–0.48', '$0.89'],
-            ['A40', '48 GB', 'RunPod', '$0.44–0.64', '$1.14'],
-            ['A100 80GB', '80 GB', 'Lambda Labs', '$1.29', '$2.49'],
-            ['H100 SXM', '80 GB', 'RunPod', '$2.39', '$3.49'],
-          ],
-        },
+        columns: ['GPU', 'VRAM', 'Provider', 'Spot $/hr', 'On-Demand $/hr'],
+        rows: [
+          { GPU: 'RTX 4090', VRAM: '24 GB', Provider: 'RunPod', 'Spot $/hr': '$0.28–0.44', 'On-Demand $/hr': '$0.74' },
+          { GPU: 'RTX 4090', VRAM: '24 GB', Provider: 'Vast.ai', 'Spot $/hr': '$0.32–0.48', 'On-Demand $/hr': '$0.89' },
+          { GPU: 'A40', VRAM: '48 GB', Provider: 'RunPod', 'Spot $/hr': '$0.44–0.64', 'On-Demand $/hr': '$1.14' },
+          { GPU: 'A100 80GB', VRAM: '80 GB', Provider: 'Lambda Labs', 'Spot $/hr': '$1.29', 'On-Demand $/hr': '$2.49' },
+          { GPU: 'H100 SXM', VRAM: '80 GB', Provider: 'RunPod', 'Spot $/hr': '$2.39', 'On-Demand $/hr': '$3.49' },
+        ],
       },
       buildCosts: {
         heading: 'Local Hardware Build Costs 2026',
         body: 'A complete local LLM workstation includes GPU, CPU, motherboard, RAM, storage, PSU, and case. Here are three complete builds with total system costs.',
-        tableData: {
-          headers: ['Build', 'GPU', 'VRAM', 'Total Cost', 'Models Supported'],
-          rows: [
-            ['Budget', 'RTX 3090 (used)', '24 GB', '~$1,200', 'Up to 30B Q4'],
-            ['Recommended', 'RTX 4090', '24 GB', '~$3,200', 'Up to 34B Q4, 7B full'],
-            ['Power', 'RTX 4090 + 3090', '48 GB', '~$5,000', 'Up to 70B Q4'],
-            ['Mac Mini M4 Pro', 'M4 Pro (unified)', '48 GB', '~$2,000', 'Up to 70B Q4 via MLX'],
-          ],
-        },
+        columns: ['Build', 'GPU', 'VRAM', 'Total Cost', 'Models Supported'],
+        rows: [
+          { Build: 'Budget', GPU: 'RTX 3090 (used)', VRAM: '24 GB', 'Total Cost': '~$1,200', 'Models Supported': 'Up to 30B Q4' },
+          { Build: 'Recommended', GPU: 'RTX 4090', VRAM: '24 GB', 'Total Cost': '~$3,200', 'Models Supported': 'Up to 34B Q4, 7B full' },
+          { Build: 'Power', GPU: 'RTX 4090 + 3090', VRAM: '48 GB', 'Total Cost': '~$5,000', 'Models Supported': 'Up to 70B Q4' },
+          { Build: 'Mac Mini M4 Pro', GPU: 'M4 Pro (unified)', VRAM: '48 GB', 'Total Cost': '~$2,000', 'Models Supported': 'Up to 70B Q4 via MLX' },
+        ],
       },
       calculator: {
         heading: 'Break-Even Calculator',
         body: 'Use this table to find your break-even point. Monthly hours = average daily use × 30 days.',
-        tableData: {
-          headers: ['Monthly Hours', 'Cloud Cost/mo (RTX 4090 @ $0.50/hr)', 'Time to Recover $3,200 RTX 4090 Build'],
-          rows: [
-            ['10 hr/mo', '$5/mo', 'Never (53 years)'],
-            ['30 hr/mo', '$15/mo', '18 years'],
-            ['50 hr/mo', '$25/mo', '10.7 years'],
-            ['120 hr/mo (4hr/day)', '$60/mo', '4.4 years'],
-            ['240 hr/mo (8hr/day)', '$120/mo', '2.2 years'],
-            ['480 hr/mo (16hr/day)', '$240/mo', '13 months'],
-            ['720 hr/mo (24hr/day)', '$360/mo', '9 months'],
-          ],
-        },
+        columns: ['Monthly Hours', 'Cloud Cost/mo (RTX 4090 @ $0.50/hr)', 'Time to Recover $3,200 RTX 4090 Build'],
+        rows: [
+          { 'Monthly Hours': '10 hr/mo', 'Cloud Cost/mo (RTX 4090 @ $0.50/hr)': '$5/mo', 'Time to Recover $3,200 RTX 4090 Build': 'Never (53 years)' },
+          { 'Monthly Hours': '30 hr/mo', 'Cloud Cost/mo (RTX 4090 @ $0.50/hr)': '$15/mo', 'Time to Recover $3,200 RTX 4090 Build': '18 years' },
+          { 'Monthly Hours': '50 hr/mo', 'Cloud Cost/mo (RTX 4090 @ $0.50/hr)': '$25/mo', 'Time to Recover $3,200 RTX 4090 Build': '10.7 years' },
+          { 'Monthly Hours': '120 hr/mo (4hr/day)', 'Cloud Cost/mo (RTX 4090 @ $0.50/hr)': '$60/mo', 'Time to Recover $3,200 RTX 4090 Build': '4.4 years' },
+          { 'Monthly Hours': '240 hr/mo (8hr/day)', 'Cloud Cost/mo (RTX 4090 @ $0.50/hr)': '$120/mo', 'Time to Recover $3,200 RTX 4090 Build': '2.2 years' },
+          { 'Monthly Hours': '480 hr/mo (16hr/day)', 'Cloud Cost/mo (RTX 4090 @ $0.50/hr)': '$240/mo', 'Time to Recover $3,200 RTX 4090 Build': '13 months' },
+          { 'Monthly Hours': '720 hr/mo (24hr/day)', 'Cloud Cost/mo (RTX 4090 @ $0.50/hr)': '$360/mo', 'Time to Recover $3,200 RTX 4090 Build': '9 months' },
+        ],
       },
       electricityCost: {
         heading: 'Electricity: The Hidden Local Cost',
@@ -471,45 +465,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudPricing: {
         heading: 'Precios de GPU Cloud en 2026',
         body: 'Los precios de GPU cloud varían significativamente según el proveedor, el nivel de GPU y el tipo de compromiso. Los precios spot (interrumpibles) son un 40–70 % más baratos que los bajo demanda, pero pueden interrumpirse.',
-        tableData: {
-          headers: ['GPU', 'VRAM', 'Proveedor', 'Spot $/hr', 'Bajo Demanda $/hr'],
-          rows: [
-            ['RTX 4090', '24 GB', 'RunPod', '$0,28–0,44', '$0,74'],
-            ['RTX 4090', '24 GB', 'Vast.ai', '$0,32–0,48', '$0,89'],
-            ['A40', '48 GB', 'RunPod', '$0,44–0,64', '$1,14'],
-            ['A100 80GB', '80 GB', 'Lambda Labs', '$1,29', '$2,49'],
-            ['H100 SXM', '80 GB', 'RunPod', '$2,39', '$3,49'],
-          ],
-        },
+        columns: ['GPU', 'VRAM', 'Proveedor', 'Spot $/hr', 'Bajo Demanda $/hr'],
+        rows: [
+          { GPU: 'RTX 4090', VRAM: '24 GB', Proveedor: 'RunPod', 'Spot $/hr': '$0,28–0,44', 'Bajo Demanda $/hr': '$0,74' },
+          { GPU: 'RTX 4090', VRAM: '24 GB', Proveedor: 'Vast.ai', 'Spot $/hr': '$0,32–0,48', 'Bajo Demanda $/hr': '$0,89' },
+          { GPU: 'A40', VRAM: '48 GB', Proveedor: 'RunPod', 'Spot $/hr': '$0,44–0,64', 'Bajo Demanda $/hr': '$1,14' },
+          { GPU: 'A100 80GB', VRAM: '80 GB', Proveedor: 'Lambda Labs', 'Spot $/hr': '$1,29', 'Bajo Demanda $/hr': '$2,49' },
+          { GPU: 'H100 SXM', VRAM: '80 GB', Proveedor: 'RunPod', 'Spot $/hr': '$2,39', 'Bajo Demanda $/hr': '$3,49' },
+        ],
       },
       buildCosts: {
         heading: 'Costos de Hardware Local en 2026',
         body: 'Una workstation LLM local completa incluye GPU, CPU, placa base, RAM, almacenamiento, PSU y carcasa. Aquí hay tres configuraciones completas con costos totales del sistema.',
-        tableData: {
-          headers: ['Configuración', 'GPU', 'VRAM', 'Costo Total', 'Modelos Compatibles'],
-          rows: [
-            ['Económica', 'RTX 3090 (usada)', '24 GB', '~$1.200', 'Hasta 30B Q4'],
-            ['Recomendada', 'RTX 4090', '24 GB', '~$3.200', 'Hasta 34B Q4, 7B completo'],
-            ['Potencia', 'RTX 4090 + 3090', '48 GB', '~$5.000', 'Hasta 70B Q4'],
-            ['Mac Mini M4 Pro', 'M4 Pro (unificada)', '48 GB', '~$2.000', 'Hasta 70B Q4 vía MLX'],
-          ],
-        },
+        columns: ['Configuración', 'GPU', 'VRAM', 'Costo Total', 'Modelos Compatibles'],
+        rows: [
+          { 'Configuración': 'Económica', GPU: 'RTX 3090 (usada)', VRAM: '24 GB', 'Costo Total': '~$1.200', 'Modelos Compatibles': 'Hasta 30B Q4' },
+          { 'Configuración': 'Recomendada', GPU: 'RTX 4090', VRAM: '24 GB', 'Costo Total': '~$3.200', 'Modelos Compatibles': 'Hasta 34B Q4, 7B completo' },
+          { 'Configuración': 'Potencia', GPU: 'RTX 4090 + 3090', VRAM: '48 GB', 'Costo Total': '~$5.000', 'Modelos Compatibles': 'Hasta 70B Q4' },
+          { 'Configuración': 'Mac Mini M4 Pro', GPU: 'M4 Pro (unificada)', VRAM: '48 GB', 'Costo Total': '~$2.000', 'Modelos Compatibles': 'Hasta 70B Q4 vía MLX' },
+        ],
       },
       calculator: {
         heading: 'Calculadora de Punto de Equilibrio',
         body: 'Usa esta tabla para encontrar tu punto de equilibrio. Horas mensuales = uso diario promedio × 30 días.',
-        tableData: {
-          headers: ['Horas Mensuales', 'Costo Cloud/mes (RTX 4090 @ 0,50 $/hr)', 'Tiempo para Recuperar $3.200 RTX 4090'],
-          rows: [
-            ['10 hr/mes', '$5/mes', 'Nunca (53 años)'],
-            ['30 hr/mes', '$15/mes', '18 años'],
-            ['50 hr/mes', '$25/mes', '10,7 años'],
-            ['120 hr/mes (4hr/día)', '$60/mes', '4,4 años'],
-            ['240 hr/mes (8hr/día)', '$120/mes', '2,2 años'],
-            ['480 hr/mes (16hr/día)', '$240/mes', '13 meses'],
-            ['720 hr/mes (24hr/día)', '$360/mes', '9 meses'],
-          ],
-        },
+        columns: ['Horas Mensuales', 'Costo Cloud/mes (RTX 4090 @ 0,50 $/hr)', 'Tiempo para Recuperar $3.200 RTX 4090'],
+        rows: [
+          { 'Horas Mensuales': '10 hr/mes', 'Costo Cloud/mes (RTX 4090 @ 0,50 $/hr)': '$5/mes', 'Tiempo para Recuperar $3.200 RTX 4090': 'Nunca (53 años)' },
+          { 'Horas Mensuales': '30 hr/mes', 'Costo Cloud/mes (RTX 4090 @ 0,50 $/hr)': '$15/mes', 'Tiempo para Recuperar $3.200 RTX 4090': '18 años' },
+          { 'Horas Mensuales': '50 hr/mes', 'Costo Cloud/mes (RTX 4090 @ 0,50 $/hr)': '$25/mes', 'Tiempo para Recuperar $3.200 RTX 4090': '10,7 años' },
+          { 'Horas Mensuales': '120 hr/mes (4hr/día)', 'Costo Cloud/mes (RTX 4090 @ 0,50 $/hr)': '$60/mes', 'Tiempo para Recuperar $3.200 RTX 4090': '4,4 años' },
+          { 'Horas Mensuales': '240 hr/mes (8hr/día)', 'Costo Cloud/mes (RTX 4090 @ 0,50 $/hr)': '$120/mes', 'Tiempo para Recuperar $3.200 RTX 4090': '2,2 años' },
+          { 'Horas Mensuales': '480 hr/mes (16hr/día)', 'Costo Cloud/mes (RTX 4090 @ 0,50 $/hr)': '$240/mes', 'Tiempo para Recuperar $3.200 RTX 4090': '13 meses' },
+          { 'Horas Mensuales': '720 hr/mes (24hr/día)', 'Costo Cloud/mes (RTX 4090 @ 0,50 $/hr)': '$360/mes', 'Tiempo para Recuperar $3.200 RTX 4090': '9 meses' },
+        ],
       },
       electricityCost: {
         heading: 'Electricidad: El Costo Local Oculto',

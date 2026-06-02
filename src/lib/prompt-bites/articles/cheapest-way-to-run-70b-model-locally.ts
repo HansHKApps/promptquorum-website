@@ -64,31 +64,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       vramRequirements: {
         heading: '70B Model Memory Requirements',
         body: 'How much memory you actually need depends on quantization level.',
-        tableData: {
-          headers: ['Quantization', 'Size on Disk', 'RAM/VRAM Needed', 'Quality vs FP16'],
-          rows: [
-            ['FP16 (full)', '~140 GB', '140+ GB', '100% (reference)'],
-            ['Q8_0', '~70 GB', '72+ GB', '~99%'],
-            ['Q4_K_M', '~42 GB', '44+ GB', '~96%'],
-            ['Q4_0', '~38 GB', '40+ GB', '~94%'],
-            ['Q3_K_M', '~32 GB', '34+ GB', '~90%'],
-            ['Q2_K', '~25 GB', '27+ GB', '~82%'],
-          ],
-        },
+        columns: ['Quantization', 'Size on Disk', 'RAM/VRAM Needed', 'Quality vs FP16'],
+        rows: [
+          { 'Quantization': 'FP16 (full)', 'Size on Disk': '~140 GB', 'RAM/VRAM Needed': '140+ GB', 'Quality vs FP16': '100% (reference)' },
+          { 'Quantization': 'Q8_0', 'Size on Disk': '~70 GB', 'RAM/VRAM Needed': '72+ GB', 'Quality vs FP16': '~99%' },
+          { 'Quantization': 'Q4_K_M', 'Size on Disk': '~42 GB', 'RAM/VRAM Needed': '44+ GB', 'Quality vs FP16': '~96%' },
+          { 'Quantization': 'Q4_0', 'Size on Disk': '~38 GB', 'RAM/VRAM Needed': '40+ GB', 'Quality vs FP16': '~94%' },
+          { 'Quantization': 'Q3_K_M', 'Size on Disk': '~32 GB', 'RAM/VRAM Needed': '34+ GB', 'Quality vs FP16': '~90%' },
+          { 'Quantization': 'Q2_K', 'Size on Disk': '~25 GB', 'RAM/VRAM Needed': '27+ GB', 'Quality vs FP16': '~82%' },
+        ],
       },
       options: {
         heading: 'Cheapest Hardware Options Compared',
         body: 'All prices are 2026 US market estimates. Used GPU prices vary — check eBay and Facebook Marketplace for current rates.',
-        tableData: {
-          headers: ['Option', 'Total Cost', 'Speed (70B Q4)', 'Power', 'Quantization'],
-          rows: [
-            ['Mac Mini M4 Pro 48GB', '~$2,000', '12–18 tok/s', '45W', 'Q4_K_M (fits fully)'],
-            ['Dual RTX 3090 used', '~$2,200', '20–35 tok/s', '650W', 'Q4_K_M (split across GPUs)'],
-            ['CPU 128GB DDR5', '~$1,800', '1–3 tok/s', '150W', 'Q4_K_M'],
-            ['RTX 4090 + CPU offload', '~$1,800', '8–12 tok/s', '500W', 'Q4_K_M (partial GPU)'],
-            ['Mac Studio M4 Max 128GB', '~$3,000', '25–35 tok/s', '75W', 'Q8_0 (fits fully)'],
-          ],
-        },
+        columns: ['Option', 'Total Cost', 'Speed (70B Q4)', 'Power', 'Quantization'],
+        rows: [
+          { 'Option': 'Mac Mini M4 Pro 48GB', 'Total Cost': '~$2,000', 'Speed (70B Q4)': '12–18 tok/s', 'Power': '45W', 'Quantization': 'Q4_K_M (fits fully)' },
+          { 'Option': 'Dual RTX 3090 used', 'Total Cost': '~$2,200', 'Speed (70B Q4)': '20–35 tok/s', 'Power': '650W', 'Quantization': 'Q4_K_M (split across GPUs)' },
+          { 'Option': 'CPU 128GB DDR5', 'Total Cost': '~$1,800', 'Speed (70B Q4)': '1–3 tok/s', 'Power': '150W', 'Quantization': 'Q4_K_M' },
+          { 'Option': 'RTX 4090 + CPU offload', 'Total Cost': '~$1,800', 'Speed (70B Q4)': '8–12 tok/s', 'Power': '500W', 'Quantization': 'Q4_K_M (partial GPU)' },
+          { 'Option': 'Mac Studio M4 Max 128GB', 'Total Cost': '~$3,000', 'Speed (70B Q4)': '25–35 tok/s', 'Power': '75W', 'Quantization': 'Q8_0 (fits fully)' },
+        ],
       },
       macMini: {
         heading: 'Mac Mini M4 Pro 48GB — Best Value for 70B',

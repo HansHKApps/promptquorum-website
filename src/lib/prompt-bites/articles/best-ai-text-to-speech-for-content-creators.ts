@@ -63,16 +63,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       comparison: {
         heading: 'AI TTS Tools Compared',
         body: 'Key metrics for content creators: voice naturalness, cloning capability, cost per 1000 words, and whether it runs locally.',
-        tableData: {
-          headers: ['Tool', 'Type', 'Voice Cloning', 'Cost', 'Best For'],
-          rows: [
-            ['ElevenLabs', 'Cloud', 'Yes (instant)', '$5–$22/mo', 'Professional voiceovers'],
-            ['Kokoro-82M', 'Local', 'No', 'Free', 'Budget creators, unlimited use'],
-            ['Piper TTS', 'Local', 'No (fixed voices)', 'Free', 'High-volume batch generation'],
-            ['Coqui XTTS v2', 'Local', 'Yes (6-sec clip)', 'Free', 'Custom voice cloning offline'],
-            ['PlayHT', 'Cloud', 'Yes (ultra-realistic)', '$31–$99/mo', 'Podcast narration'],
-          ],
-        },
+        columns: ['Tool', 'Type', 'Voice Cloning', 'Cost', 'Best For'],
+        rows: [
+          { 'Tool': 'ElevenLabs', 'Type': 'Cloud', 'Voice Cloning': 'Yes (instant)', 'Cost': '$5–$22/mo', 'Best For': 'Professional voiceovers' },
+          { 'Tool': 'Kokoro-82M', 'Type': 'Local', 'Voice Cloning': 'No', 'Cost': 'Free', 'Best For': 'Budget creators, unlimited use' },
+          { 'Tool': 'Piper TTS', 'Type': 'Local', 'Voice Cloning': 'No (fixed voices)', 'Cost': 'Free', 'Best For': 'High-volume batch generation' },
+          { 'Tool': 'Coqui XTTS v2', 'Type': 'Local', 'Voice Cloning': 'Yes (6-sec clip)', 'Cost': 'Free', 'Best For': 'Custom voice cloning offline' },
+          { 'Tool': 'PlayHT', 'Type': 'Cloud', 'Voice Cloning': 'Yes (ultra-realistic)', 'Cost': '$31–$99/mo', 'Best For': 'Podcast narration' },
+        ],
       },
       elevenlabs: {
         heading: 'ElevenLabs — Best Cloud TTS for Content Creators',
@@ -464,16 +462,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       comparison: {
         heading: 'Comparativa de herramientas TTS de IA',
         body: 'Métricas clave para creadores de contenido: naturalidad de la voz, capacidad de clonación, coste por 1000 palabras y si se ejecuta en local.',
-        tableData: {
-          headers: ['Herramienta', 'Tipo', 'Clonación de voz', 'Coste', 'Mejor para'],
-          rows: [
-            ['ElevenLabs', 'Cloud', 'Sí (instantánea)', '$5–$22/mes', 'Voiceovers profesionales'],
-            ['Kokoro-82M', 'Local', 'No', 'Gratuito', 'Creadores con presupuesto, uso ilimitado'],
-            ['Piper TTS', 'Local', 'No (voces fijas)', 'Gratuito', 'Generación en lote de alto volumen'],
-            ['Coqui XTTS v2', 'Local', 'Sí (clip de 6s)', 'Gratuito', 'Clonación de voz personalizada offline'],
-            ['PlayHT', 'Cloud', 'Sí (ultra-realista)', '$31–$99/mes', 'Narración de podcast'],
-          ],
-        },
+        columns: ['Herramienta', 'Tipo', 'Clonación de voz', 'Coste', 'Mejor para'],
+        rows: [
+          { 'Herramienta': 'ElevenLabs', 'Tipo': 'Cloud', 'Clonación de voz': 'Sí (instantánea)', 'Coste': '$5–$22/mes', 'Mejor para': 'Voiceovers profesionales' },
+          { 'Herramienta': 'Kokoro-82M', 'Tipo': 'Local', 'Clonación de voz': 'No', 'Coste': 'Gratuito', 'Mejor para': 'Creadores con presupuesto, uso ilimitado' },
+          { 'Herramienta': 'Piper TTS', 'Tipo': 'Local', 'Clonación de voz': 'No (voces fijas)', 'Coste': 'Gratuito', 'Mejor para': 'Generación en lote de alto volumen' },
+          { 'Herramienta': 'Coqui XTTS v2', 'Tipo': 'Local', 'Clonación de voz': 'Sí (clip de 6s)', 'Coste': 'Gratuito', 'Mejor para': 'Clonación de voz personalizada offline' },
+          { 'Herramienta': 'PlayHT', 'Tipo': 'Cloud', 'Clonación de voz': 'Sí (ultra-realista)', 'Coste': '$31–$99/mes', 'Mejor para': 'Narración de podcast' },
+        ],
       },
       elevenlabs: {
         heading: 'ElevenLabs — Mejor TTS cloud para creadores de contenido',
@@ -605,16 +601,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       comparison: {
         heading: 'Comparativo de ferramentas TTS de IA',
         body: 'Métricas-chave para criadores de conteúdo: naturalidade da voz, capacidade de clonagem, custo por 1000 palavras e se funciona localmente.',
-        tableData: {
-          headers: ['Ferramenta', 'Tipo', 'Clonagem de voz', 'Custo', 'Melhor para'],
-          rows: [
-            ['ElevenLabs', 'Nuvem', 'Sim (instantânea)', '$5–$22/mês', 'Narração profissional'],
-            ['Kokoro-82M', 'Local', 'Não', 'Gratuito', 'Criadores com orçamento, uso ilimitado'],
-            ['Piper TTS', 'Local', 'Não (vozes fixas)', 'Gratuito', 'Geração em lote de alto volume'],
-            ['Coqui XTTS v2', 'Local', 'Sim (clipe de 6s)', 'Gratuito', 'Clonagem de voz personalizada offline'],
-            ['PlayHT', 'Nuvem', 'Sim (ultra-realista)', '$31–$99/mês', 'Narração de podcast'],
-          ],
-        },
+        columns: ['Ferramenta', 'Tipo', 'Clonagem de voz', 'Custo', 'Melhor para'],
+        rows: [
+          { 'Ferramenta': 'ElevenLabs', 'Tipo': 'Nuvem', 'Clonagem de voz': 'Sim (instantânea)', 'Custo': '$5–$22/mês', 'Melhor para': 'Narração profissional' },
+          { 'Ferramenta': 'Kokoro-82M', 'Tipo': 'Local', 'Clonagem de voz': 'Não', 'Custo': 'Gratuito', 'Melhor para': 'Criadores com orçamento, uso ilimitado' },
+          { 'Ferramenta': 'Piper TTS', 'Tipo': 'Local', 'Clonagem de voz': 'Não (vozes fixas)', 'Custo': 'Gratuito', 'Melhor para': 'Geração em lote de alto volume' },
+          { 'Ferramenta': 'Coqui XTTS v2', 'Tipo': 'Local', 'Clonagem de voz': 'Sim (clipe de 6s)', 'Custo': 'Gratuito', 'Melhor para': 'Clonagem de voz personalizada offline' },
+          { 'Ferramenta': 'PlayHT', 'Tipo': 'Nuvem', 'Clonagem de voz': 'Sim (ultra-realista)', 'Custo': '$31–$99/mês', 'Melhor para': 'Narração de podcast' },
+        ],
       },
       elevenlabs: {
         heading: 'ElevenLabs — Melhor TTS em nuvem para criadores de conteúdo',

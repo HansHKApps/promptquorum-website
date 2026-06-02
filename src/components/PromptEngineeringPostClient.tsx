@@ -449,7 +449,7 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
       }
       // Internal links: use Next.js Link with language path prefix
       let finalUrl = url
-      if (lang !== 'en' && url.startsWith('/') && !url.includes('?lang=')) {
+      if (lang !== 'en' && url.startsWith('/') && !url.includes('?lang=') && !url.startsWith(`/${lang}/`)) {
         // Prepend language prefix before anchor fragment (#) if present
         if (url.includes('#')) {
           const [basePath, anchor] = url.split('#')
