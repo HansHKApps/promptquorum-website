@@ -103,6 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'Quick Comparison Table',
         content: 'Head-to-head pricing and features (May 2026). Prices are hourly rates; most providers bill per-second, so actual costs depend on runtime.',
+        columns: ['Provider', 'RTX 4090', 'A100 80GB', 'H100 80GB', 'Uptime SLA', 'Billing', 'Free Credits', 'EU Region'],
         rows: [
           {
             'Provider': '[RunPod](https://www.runpod.io)',
@@ -248,6 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr-compliant-list',
         title: 'GDPR-Compliant Cloud GPU Providers (EU Native)',
         content: 'These providers have EU data centers and can sign DPAs for EU personal data processing.',
+        columns: ['Provider', 'Location', 'DPA', 'Note'],
         rows: [
           {
             'Provider': '[Hetzner GPU](https://www.hetzner.com)',
@@ -388,6 +390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'pricing-breakdown',
         title: 'Pricing Breakdown by GPU (May 2026)',
         content: 'Hourly rental rates for common GPUs across the three platforms. Actual cost depends on runtime (RunPod per-minute, Vast.ai per-second, Lambda Labs per-hour with per-minute final billing).',
+        columns: ['GPU', 'RunPod', 'Vast.ai', 'Lambda Labs'],
         rows: [
           {
             'GPU': '[RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/)',
@@ -601,6 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'Tabla de Comparación Rápida',
         content: 'Comparativa directa de precios y características (mayo de 2026). Los precios son tarifas por hora; la mayoría de los proveedores cobran por segundo, por lo que el coste real depende del tiempo de ejecución. Los precios pueden variar según tu país.',
+        columns: ['Proveedor', 'RTX 4090', 'A100 80GB', 'H100 80GB', 'SLA Uptime', 'Facturación', 'Créditos Gratis', 'Región EU'],
         rows: [
           {
             'Proveedor': '[RunPod](https://www.runpod.io)',
@@ -746,6 +750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr-compliant-list',
         title: 'Proveedores de GPU en la Nube Conformes con GDPR (Nativos EU)',
         content: 'Estos proveedores tienen centros de datos en la EU y pueden firmar DPAs para el procesamiento de datos personales EU.',
+        columns: ['Proveedor', 'Ubicación', 'DPA', 'Nota'],
         rows: [
           {
             'Proveedor': '[Hetzner GPU](https://www.hetzner.com)',
@@ -886,6 +891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'pricing-breakdown',
         title: 'Desglose de Precios por GPU (Mayo 2026)',
         content: 'Tarifas de alquiler por hora para GPUs comunes en las tres plataformas. El coste real depende del tiempo de ejecución (RunPod por minuto, Vast.ai por segundo, Lambda Labs por hora con facturación final por minuto). Los precios pueden variar según tu país.',
+        columns: ['GPU', 'RunPod', 'Vast.ai', 'Lambda Labs'],
         rows: [
           {
             'GPU': '[RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/)',
@@ -1117,6 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'Schneller Vergleich',
         content: 'Direkter Vergleich von Preisen und Funktionen (Mai 2026). Alle Preise in USD (Anbieter rechnen in USD); EUR-Äquivalente sind Schätzungen zum Wechselkurs 1 USD ≈ 0,93 EUR. Die meisten Anbieter berechnen pro Sekunde, daher hängen die tatsächlichen Kosten von der Laufzeit ab.',
+        columns: ['Anbieter', 'RTX 4090', 'A100 80GB', 'H100 80GB', 'Verfügbarkeits-SLA', 'Abrechnung', 'Kostenlose Credits', 'EU-Region'],
         rows: [
           {
             'Anbieter': '[RunPod](https://www.runpod.io)',
@@ -1194,6 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr-compliant-list',
         title: 'DSGVO-konforme Cloud-GPU-Anbieter (EU-nativ)',
         content: 'Diese Anbieter haben EU-Rechenzentren und können Auftragsverarbeitungsverträge (AVV) für die Verarbeitung personenbezogener EU-Daten unterzeichnen.',
+        columns: ['Anbieter', 'Standort', 'AVV', 'Anmerkung'],
         rows: [
           {
             'Anbieter': '[Hetzner GPU](https://www.hetzner.com)',
@@ -1530,6 +1538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'Tableau de comparaison rapide',
         content: 'Comparaison directe des prix et fonctionnalités (mai 2026). Tous les prix en USD (les fournisseurs facturent en USD) ; les équivalents EUR sont des estimations au taux de change 1 USD ≈ 0,93 EUR. La plupart des fournisseurs facturent par seconde, donc les coûts réels dépendent du temps d\'exécution.',
+        columns: ['Fournisseur', 'RTX 4090', 'A100 80GB', 'H100 80GB', 'SLA Disponibilité', 'Facturation', 'Crédits gratuits', 'Région UE'],
         rows: [
           {
             'Fournisseur': '[RunPod](https://www.runpod.io)',
@@ -1607,6 +1616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr-compliant-list',
         title: 'Fournisseurs de GPU cloud conformes au RGPD (natifs UE)',
         content: 'Ces fournisseurs disposent de centres de données UE et peuvent signer des DPA pour le traitement des données personnelles UE.',
+        columns: ['Fournisseur', 'Localisation', 'DPA', 'Note'],
         rows: [
           {
             'Fournisseur': '[Hetzner GPU](https://www.hetzner.com)',
@@ -1892,6 +1902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'クイック比較表',
         content: '価格と機能の直接比較(2026年5月)。すべての価格はUSD(プロバイダーはUSDで課金)。価格は時間レート。ほとんどのプロバイダーは秒単位で課金するため、実際のコストは実行時間に依存します。',
+        columns: ['プロバイダー', 'RTX 4090', 'A100 80GB', 'H100 80GB', '稼働率SLA', '課金', '無料クレジット', 'EUリージョン'],
         rows: [
           {
             'プロバイダー': '[RunPod](https://www.runpod.io)',
@@ -1969,6 +1980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr-compliant-list',
         title: 'GDPR対応クラウドGPUプロバイダー(EU企業)',
         content: 'これらのプロバイダーはEUデータセンターを持ち、EU個人データ処理用のDPAに署名できます。',
+        columns: ['プロバイダー', '場所', 'DPA', '注記'],
         rows: [
           {
             'プロバイダー': '[Hetzner GPU](https://www.hetzner.com)',
@@ -2254,6 +2266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: '快速对比表',
         content: '价格和功能的直接对比(2026年5月)。所有价格均为美元(提供商以美元计费)。价格为小时费率;大多数提供商按秒计费,因此实际成本取决于运行时间。',
+        columns: ['提供商', 'RTX 4090', 'A100 80GB', 'H100 80GB', '稼働率SLA', '计费', '免费积分', 'EU区域'],
         rows: [
           {
             '提供商': '[RunPod](https://www.runpod.io)',
@@ -2331,6 +2344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr-compliant-list',
         title: 'GDPR合规云GPU提供商(EU原生)',
         content: '这些提供商拥有EU数据中心,可以签署EU个人数据处理的DPA。',
+        columns: ['提供商', '位置', 'DPA', '注释'],
         rows: [
           {
             '提供商': '[Hetzner GPU](https://www.hetzner.com)',

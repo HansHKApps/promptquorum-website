@@ -743,13 +743,13 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
 
           {/* In One Sentence / In Plain Terms */}
           <div className="grid sm:grid-cols-2 gap-4 my-5 max-w-3xl">
-            <div className="border border-primary/15 rounded-xl p-4 bg-card">
+            <div className="border-l-2 border-primary/40 pl-4 py-1">
               <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">
                 {HUB_IN_ONE_SENTENCE_LABEL[lang] ?? HUB_IN_ONE_SENTENCE_LABEL['en']}
               </p>
               <p className="text-sm text-text-secondary">{HUB_IN_ONE_SENTENCE[lang] ?? HUB_IN_ONE_SENTENCE['en']}</p>
             </div>
-            <div className="border border-primary/15 rounded-xl p-4 bg-card">
+            <div className="border-l-2 border-primary/40 pl-4 py-1">
               <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">
                 {HUB_IN_PLAIN_TERMS_LABEL[lang] ?? HUB_IN_PLAIN_TERMS_LABEL['en']}
               </p>

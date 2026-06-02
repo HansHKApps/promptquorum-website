@@ -52,16 +52,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       comparison: {
         heading: 'Free ChatGPT Plus Alternatives Compared',
         body: 'Key differences for users switching from ChatGPT Plus.',
-        tableData: {
-          headers: ['Tool', 'Setup', 'Best Model', 'Privacy', 'Cost'],
-          rows: [
-            ['Ollama + Open WebUI', 'CLI + Docker', 'Qwen3 72B, Llama 3.3 70B', '100% local', 'Free'],
-            ['Jan', 'Desktop app', 'Qwen3 14B, Mistral Small', '100% local', 'Free'],
-            ['LM Studio', 'Desktop app', 'Any GGUF model', '100% local', 'Free'],
-            ['Groq (free tier)', 'API/web', 'Llama 3.3 70B, Gemma2 27B', 'Cloud (limited retention)', 'Free (rate-limited)'],
-            ['AnythingLLM', 'Desktop/Docker', 'Any Ollama model', '100% local', 'Free (Enterprise: $$$)'],
-          ],
-        },
+        columns: ['Tool', 'Setup', 'Best Model', 'Privacy', 'Cost'],
+        rows: [
+          { 'Tool': 'Ollama + Open WebUI', 'Setup': 'CLI + Docker', 'Best Model': 'Qwen3 72B, Llama 3.3 70B', 'Privacy': '100% local', 'Cost': 'Free' },
+          { 'Tool': 'Jan', 'Setup': 'Desktop app', 'Best Model': 'Qwen3 14B, Mistral Small', 'Privacy': '100% local', 'Cost': 'Free' },
+          { 'Tool': 'LM Studio', 'Setup': 'Desktop app', 'Best Model': 'Any GGUF model', 'Privacy': '100% local', 'Cost': 'Free' },
+          { 'Tool': 'Groq (free tier)', 'Setup': 'API/web', 'Best Model': 'Llama 3.3 70B, Gemma2 27B', 'Privacy': 'Cloud (limited retention)', 'Cost': 'Free (rate-limited)' },
+          { 'Tool': 'AnythingLLM', 'Setup': 'Desktop/Docker', 'Best Model': 'Any Ollama model', 'Privacy': '100% local', 'Cost': 'Free (Enterprise: $$$)' },
+        ],
       },
       ollamaWebui: {
         heading: 'Ollama + Open WebUI — Best Full Replacement',

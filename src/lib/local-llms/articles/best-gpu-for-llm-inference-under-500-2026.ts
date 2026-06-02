@@ -97,16 +97,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarkTable: {
         title: 'Performance Comparison — 2026 Test Results',
         content: 'Benchmarks measured with Ollama 0.6.x, llama.cpp server, models from HuggingFace. Test system: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD.',
-        tableData: {
-          headers: ['GPU', 'VRAM', 'Price (May 2026)', 'Llama 3.3 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Max Model (Q4)'],
-          rows: [
-            ['RTX 4060 Ti 16GB', '16 GB', '~$420', '55 tok/s', '22 tok/s', '30B (Q4)'],
-            ['RTX 3090 (used)', '24 GB', '~$440', '72 tok/s', '38 tok/s', '70B (Q4, partial offload)'],
-            ['RX 7800 XT 16GB', '16 GB', '~$375', '43 tok/s', '18 tok/s', '30B (Q4)'],
-            ['RTX 4070 12GB', '12 GB', '~$400', '78 tok/s', 'VRAM limited', '13B (Q4)'],
-            ['Intel Arc B580 12GB', '12 GB', '~$280', '31 tok/s', 'VRAM limited', '13B (Q4)'],
-          ],
-        },
+        columns: ['GPU', 'VRAM', 'Price (May 2026)', 'Llama 3.3 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Max Model (Q4)'],
+        rows: [
+          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', 'Price (May 2026)': '~$420', 'Llama 3.3 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', 'Max Model (Q4)': '30B (Q4)' },
+          { GPU: 'RTX 3090 (used)', VRAM: '24 GB', 'Price (May 2026)': '~$440', 'Llama 3.3 8B Q4 tok/s': '72 tok/s', 'Qwen3 14B Q8 tok/s': '38 tok/s', 'Max Model (Q4)': '70B (Q4, partial offload)' },
+          { GPU: 'RX 7800 XT 16GB', VRAM: '16 GB', 'Price (May 2026)': '~$375', 'Llama 3.3 8B Q4 tok/s': '43 tok/s', 'Qwen3 14B Q8 tok/s': '18 tok/s', 'Max Model (Q4)': '30B (Q4)' },
+          { GPU: 'RTX 4070 12GB', VRAM: '12 GB', 'Price (May 2026)': '~$400', 'Llama 3.3 8B Q4 tok/s': '78 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM limited', 'Max Model (Q4)': '13B (Q4)' },
+          { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Price (May 2026)': '~$280', 'Llama 3.3 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM limited', 'Max Model (Q4)': '13B (Q4)' },
+        ],
       },
       methodology: {
         title: 'How We Selected and Tested These GPUs',
@@ -148,16 +146,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       softwareCompat: {
         title: 'Software Compatibility by GPU',
         content: 'All five GPUs run Ollama and llama.cpp. Differences emerge in advanced tools:',
-        tableData: {
-          headers: ['GPU', 'Ollama', 'LM Studio', 'vLLM', 'Text Gen WebUI', 'CUDA Fine-Tuning'],
-          rows: [
-            ['RTX 4060 Ti 16GB', '✅', '✅', '✅', '✅', '✅'],
-            ['RTX 3090 (used)', '✅', '✅', '✅', '✅', '✅'],
-            ['RX 7800 XT 16GB', '✅ (Linux)', '✅', '⚠️ partial', '⚠️ partial', '❌'],
-            ['RTX 4070 12GB', '✅', '✅', '✅', '✅', '✅'],
-            ['Intel Arc B580 12GB', '✅ (SYCL)', '⚠️ beta', '❌', '⚠️ partial', '❌'],
-          ],
-        },
+        columns: ['GPU', 'Ollama', 'LM Studio', 'vLLM', 'Text Gen WebUI', 'CUDA Fine-Tuning'],
+        rows: [
+          { GPU: 'RTX 4060 Ti 16GB', Ollama: '✅', 'LM Studio': '✅', vLLM: '✅', 'Text Gen WebUI': '✅', 'CUDA Fine-Tuning': '✅' },
+          { GPU: 'RTX 3090 (used)', Ollama: '✅', 'LM Studio': '✅', vLLM: '✅', 'Text Gen WebUI': '✅', 'CUDA Fine-Tuning': '✅' },
+          { GPU: 'RX 7800 XT 16GB', Ollama: '✅ (Linux)', 'LM Studio': '✅', vLLM: '⚠️ partial', 'Text Gen WebUI': '⚠️ partial', 'CUDA Fine-Tuning': '❌' },
+          { GPU: 'RTX 4070 12GB', Ollama: '✅', 'LM Studio': '✅', vLLM: '✅', 'Text Gen WebUI': '✅', 'CUDA Fine-Tuning': '✅' },
+          { GPU: 'Intel Arc B580 12GB', Ollama: '✅ (SYCL)', 'LM Studio': '⚠️ beta', vLLM: '❌', 'Text Gen WebUI': '⚠️ partial', 'CUDA Fine-Tuning': '❌' },
+        ],
       },
       powerAndCooling: {
         title: 'Power Draw and System Requirements',
@@ -348,16 +344,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarkTable: {
         title: 'Comparación de rendimiento — Resultados de pruebas 2026',
         content: 'Benchmarks medidos con Ollama 0.6.x, servidor llama.cpp, modelos de HuggingFace. Sistema de prueba: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD.',
-        tableData: {
-          headers: ['GPU', 'VRAM', 'Precio (mayo 2026)', 'Llama 3.3 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Modelo máximo (Q4)'],
-          rows: [
-            ['RTX 4060 Ti 16GB', '16 GB', '~$420', '55 tok/s', '22 tok/s', '30B (Q4)'],
-            ['RTX 3090 (segunda mano)', '24 GB', '~$440', '72 tok/s', '38 tok/s', '70B (Q4, descarga parcial)'],
-            ['RX 7800 XT 16GB', '16 GB', '~$375', '43 tok/s', '18 tok/s', '30B (Q4)'],
-            ['RTX 4070 12GB', '12 GB', '~$400', '78 tok/s', 'Limitado por VRAM', '13B (Q4)'],
-            ['Intel Arc B580 12GB', '12 GB', '~$280', '31 tok/s', 'Limitado por VRAM', '13B (Q4)'],
-          ],
-        },
+        columns: ['GPU', 'VRAM', 'Precio (mayo 2026)', 'Llama 3.3 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Modelo máximo (Q4)'],
+        rows: [
+          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', 'Precio (mayo 2026)': '~$420', 'Llama 3.3 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', 'Modelo máximo (Q4)': '30B (Q4)' },
+          { GPU: 'RTX 3090 (segunda mano)', VRAM: '24 GB', 'Precio (mayo 2026)': '~$440', 'Llama 3.3 8B Q4 tok/s': '72 tok/s', 'Qwen3 14B Q8 tok/s': '38 tok/s', 'Modelo máximo (Q4)': '70B (Q4, descarga parcial)' },
+          { GPU: 'RX 7800 XT 16GB', VRAM: '16 GB', 'Precio (mayo 2026)': '~$375', 'Llama 3.3 8B Q4 tok/s': '43 tok/s', 'Qwen3 14B Q8 tok/s': '18 tok/s', 'Modelo máximo (Q4)': '30B (Q4)' },
+          { GPU: 'RTX 4070 12GB', VRAM: '12 GB', 'Precio (mayo 2026)': '~$400', 'Llama 3.3 8B Q4 tok/s': '78 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado por VRAM', 'Modelo máximo (Q4)': '13B (Q4)' },
+          { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Precio (mayo 2026)': '~$280', 'Llama 3.3 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado por VRAM', 'Modelo máximo (Q4)': '13B (Q4)' },
+        ],
       },
       methodology: {
         title: 'Cómo seleccionamos y probamos estas GPU',
@@ -399,16 +393,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       softwareCompat: {
         title: 'Compatibilidad de software por GPU',
         content: 'Las cinco GPU ejecutan Ollama y llama.cpp. Las diferencias aparecen en herramientas avanzadas:',
-        tableData: {
-          headers: ['GPU', 'Ollama', 'LM Studio', 'vLLM', 'Text Gen WebUI', 'Fine-Tuning CUDA'],
-          rows: [
-            ['RTX 4060 Ti 16GB', '✅', '✅', '✅', '✅', '✅'],
-            ['RTX 3090 (segunda mano)', '✅', '✅', '✅', '✅', '✅'],
-            ['RX 7800 XT 16GB', '✅ (Linux)', '✅', '⚠️ parcial', '⚠️ parcial', '❌'],
-            ['RTX 4070 12GB', '✅', '✅', '✅', '✅', '✅'],
-            ['Intel Arc B580 12GB', '✅ (SYCL)', '⚠️ beta', '❌', '⚠️ parcial', '❌'],
-          ],
-        },
+        columns: ['GPU', 'Ollama', 'LM Studio', 'vLLM', 'Text Gen WebUI', 'Fine-Tuning CUDA'],
+        rows: [
+          { GPU: 'RTX 4060 Ti 16GB', Ollama: '✅', 'LM Studio': '✅', vLLM: '✅', 'Text Gen WebUI': '✅', 'Fine-Tuning CUDA': '✅' },
+          { GPU: 'RTX 3090 (segunda mano)', Ollama: '✅', 'LM Studio': '✅', vLLM: '✅', 'Text Gen WebUI': '✅', 'Fine-Tuning CUDA': '✅' },
+          { GPU: 'RX 7800 XT 16GB', Ollama: '✅ (Linux)', 'LM Studio': '✅', vLLM: '⚠️ parcial', 'Text Gen WebUI': '⚠️ parcial', 'Fine-Tuning CUDA': '❌' },
+          { GPU: 'RTX 4070 12GB', Ollama: '✅', 'LM Studio': '✅', vLLM: '✅', 'Text Gen WebUI': '✅', 'Fine-Tuning CUDA': '✅' },
+          { GPU: 'Intel Arc B580 12GB', Ollama: '✅ (SYCL)', 'LM Studio': '⚠️ beta', vLLM: '❌', 'Text Gen WebUI': '⚠️ parcial', 'Fine-Tuning CUDA': '❌' },
+        ],
       },
       powerAndCooling: {
         title: 'Consumo energético y requisitos del sistema',
