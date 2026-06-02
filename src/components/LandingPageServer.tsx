@@ -509,7 +509,7 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
         </div>
       </section>
 
-      <BlogSectionClient />
+      <BlogSectionClient initialLang={lang as any} />
 
       {/* Waitlist CTA Section */}
       <section id="waitlist" className="py-20 px-4 sm:px-6 bg-surface">

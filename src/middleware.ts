@@ -51,6 +51,16 @@ export function middleware(request: NextRequest) {
   const isApiRoute = url.pathname.startsWith('/api/')
   const isCronRoute = url.pathname.startsWith('/cron/')
 
+  // First-party analytics proxy (Umami: /lib/s/script.js + /lib/s/api/send).
+  // This path is rewritten to cloud.umami.is in next.config.ts to bypass ad blockers.
+  // It must NEVER be touched by language redirects — a 302 on the /lib/s/api/send
+  // event beacon sends it to /<lang>/lib/s/api/send (404) and the event is lost.
+  // Unlike the Vercel (/api/data) and Clarity (/api/clarity) proxies, this lives
+  // under /lib/ so it is not covered by the isApiRoute guard. Bail out early.
+  if (url.pathname.startsWith('/lib/')) {
+    return NextResponse.next()
+  }
+
   // FIX 0: PE framework slugs → /frameworks/ canonical URL
   // These articles declare /frameworks/X as canonical but are also indexed via /prompt-engineering/X
   // causing "Duplicate without user-selected canonical" in GSC. Redirect to canonical.

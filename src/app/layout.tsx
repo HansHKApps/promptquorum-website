@@ -229,6 +229,11 @@ gtag('consent', 'default', {
   'ad_user_data': 'denied',
   'ad_personalization': 'denied',
   'wait_for_update': 500
+});
+gtag('js', new Date());
+gtag('config', 'G-8DQ4B3DXBS', {
+  'anonymize_ip': true,
+  'allow_ad_personalization_signals': false
 });`,
           }}
         />
@@ -244,18 +249,14 @@ gtag('consent', 'default', {
           <CookieBanner />
           <PushPromptBanner />
 
-          {/* GA4 external loader — deferred to afterInteractive */}
+          {/* GA4 external loader — deferred to afterInteractive. Config runs from the
+              inline head script (gtag calls queue in dataLayer before this loads), so no
+              onLoad handler is needed — root layout is a Server Component and cannot pass
+              function props to a client component during prerendering. */}
           <Script
             id="ga4-loader"
             strategy="afterInteractive"
             src="https://www.googletagmanager.com/gtag/js?id=G-8DQ4B3DXBS"
-            onLoad={() => {
-              window.gtag?.('js', new Date())
-              window.gtag?.('config', 'G-8DQ4B3DXBS', {
-                'anonymize_ip': true,
-                'allow_ad_personalization_signals': false
-              })
-            }}
           />
 
           {/* Umami, Microsoft Clarity, and Vercel Analytics/Speed Insights all load inside
