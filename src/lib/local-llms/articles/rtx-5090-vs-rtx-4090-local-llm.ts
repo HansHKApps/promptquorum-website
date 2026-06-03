@@ -526,17 +526,17 @@ schema: {
       itemListSchema: {},
     },
     // VERIFY: pre-existing data bug — the fr/ja/zh blocks above contain mismatched "budget GPU" content (RTX 3060/4060 Ti), NOT RTX 5090 vs 4090. pt below was translated from the correct en/es/de blocks. fr/ja/zh need a separate fix (out of scope: PT-only task).
-    // VERIFY: GPU prices kept in USD (es model). Brazilian import taxes inflate GPU prices substantially — consider BRL pricing + local retailer (Kabum/Pichau) before publish.
+    // VERIFY: preços de GPU em BRL refletem o varejo brasileiro (jun/2026): RTX 5090 ~R$ 20.000, RTX 4090 usada ~R$ 11.000, RTX 5080 ~R$ 10.000 (Kabum/Pichau/Mercado Livre). Variam por loja e câmbio. O "custo por token" foi recomputado a partir dos preços em BRL — confirmar metodologia/valores antes de publicar.
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: 'RTX 5090 vs RTX 4090 para Inferência de LLM Local',
       seoTitle: 'RTX 5090 vs RTX 4090: Qual GPU para LLMs Locais em 2026?',
-      intro: '**Para LLMs locais, a RTX 5090 é 20-25% mais rápida que a RTX 4090, mas custa US$ 1.000 a mais.** Em abril de 2026, a escolha depende de você rodar modelos 70B (a 5090 vence) ou modelos 7B-13B (a 4090 já é exagero). Se você já tem uma 4090, fazer upgrade não compensa. Se for comprar nova, a RTX 5080 oferece melhor relação desempenho-preço.',
+      intro: '**Para LLMs locais, a RTX 5090 é 20-25% mais rápida que a RTX 4090, mas custa cerca de R$ 9.000 a mais.** Em abril de 2026, a escolha depende de você rodar modelos 70B (a 5090 vence) ou modelos 7B-13B (a 4090 já é exagero). Se você já tem uma 4090, fazer upgrade não compensa. Se for comprar nova, a RTX 5080 oferece melhor relação desempenho-preço.',
       metaDescription: 'RTX 5090 vs RTX 4090 para LLMs locais: comparação de velocidade, análise de VRAM, custo por desempenho, quando fazer upgrade.',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',
-      leadAnswerBlock: '**Para LLMs locais, a RTX 5090 é 20-25% mais rápida que a RTX 4090, mas custa US$ 1.000 a mais. Em abril de 2026, a escolha depende de você rodar modelos 70B (a 5090 vence) ou modelos 7B-13B (a 4090 já é exagero).**',
+      leadAnswerBlock: '**Para LLMs locais, a RTX 5090 é 20-25% mais rápida que a RTX 4090, mas custa cerca de R$ 9.000 a mais. Em abril de 2026, a escolha depende de você rodar modelos 70B (a 5090 vence) ou modelos 7B-13B (a 4090 já é exagero).**',
       audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam fluxos de trabalho com LLMs locais',
       readTime: '6 min de leitura',
       educationalLevel: 'Intermediate',
@@ -557,10 +557,10 @@ schema: {
           items: [
             'A RTX 5090 é ~20-25% mais rápida que a RTX 4090 para inferência de LLM local (medida em tokens/seg).',
             'Ambas as placas têm 24 GB de VRAM — idêntico para trabalho com LLMs. A vantagem de velocidade da 5090 vem da maior largura de banda de memória e da melhor eficiência de shaders.',
-            'A RTX 5090 custa US$ 1.000 a mais (US$ 1.999 vs. US$ 999 por uma 4090 usada). O ganho de desempenho por preço não justifica o upgrade se você já tem uma 4090.',
+            'A RTX 5090 custa cerca de R$ 9.000 a mais (~R$ 20.000 vs. ~R$ 11.000 por uma 4090 usada). O ganho de desempenho por preço não justifica o upgrade se você já tem uma 4090.',
             'Para modelos 7B-13B: a 4090 é exagero. Você atingirá limites de CPU ou refrigeração antes de saturar a GPU.',
             'Para modelos 70B: a 5090 se destaca. Pode rodar 2-3 modelos 70B menores em paralelo ou um único 70B com lotes maiores.',
-            'A RTX 5080 (US$ 999) costuma oferecer melhor custo-benefício que a 5090 para LLMs locais, a menos que você precise de configurações com GPU dupla.',
+            'A RTX 5080 (~R$ 10.000) costuma oferecer melhor custo-benefício que a 5090 para LLMs locais, a menos que você precise de configurações com GPU dupla.',
           ],
         },
         'speed-diff': {
@@ -585,8 +585,8 @@ schema: {
           id: 'cost-per-token',
           title: 'Custo por token: qual é realmente mais barata?',
           items: [
-            '**RTX 4090 usada: ~US$ 999-1.299**. Atinge 36 tokens/seg no Llama 70B. Custo por token: US$ 27-36 por milhão de tokens.',
-            '**RTX 5090 nova: US$ 1.999**. Atinge 45 tokens/seg no Llama 70B. Custo por token: US$ 44 por milhão de tokens.',
+            '**RTX 4090 usada: ~R$ 10.000-13.000**. Atinge 36 tokens/seg no Llama 70B. Custo por token (amortizado): ~R$ 270-360 por milhão de tokens.',
+            '**RTX 5090 nova: ~R$ 20.000**. Atinge 45 tokens/seg no Llama 70B. Custo por token (amortizado): ~R$ 440 por milhão de tokens.',
             '**Veredito: a 4090 é mais barata por token gerado,** não porque seja mais rápida, mas porque é mais barata de comprar.',
           ],
         },
@@ -595,8 +595,8 @@ schema: {
           title: 'Quando você deve realmente fazer upgrade da 4090 para a 5090?',
           content: [
             '**Nunca faça upgrade para inferência de 7B-13B.** A 4090 é exagero para esses modelos. De qualquer forma você ficará limitado por CPU ou refrigeração.',
-            '**Faça upgrade se:** você roda inferência 70B com GPU dupla (2× 4090 = US$ 2.500 vs. 2× 5090 = US$ 4.000), precisa de 45+ tokens/seg em modelos 70B, ou tem gargalo de largura de banda de memória em cargas de trabalho multi-batch.',
-            '**Melhor alternativa:** adicione uma segunda RTX 4090 por US$ 1.200 em vez de migrar para a 5090. Duas 4090 em paralelo dão ~72 tokens/seg (não 90, mas perto o suficiente pela metade do custo).',
+            '**Faça upgrade se:** você roda inferência 70B com GPU dupla (2× 4090 = ~R$ 22.000 vs. 2× 5090 = ~R$ 40.000), precisa de 45+ tokens/seg em modelos 70B, ou tem gargalo de largura de banda de memória em cargas de trabalho multi-batch.',
+            '**Melhor alternativa:** adicione uma segunda RTX 4090 por ~R$ 11.000 em vez de migrar para a 5090. Duas 4090 em paralelo dão ~72 tokens/seg (não 90, mas perto o suficiente por um custo bem menor).',
           ],
         },
         'mistakes': {
@@ -612,12 +612,12 @@ schema: {
           id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
-            { q: 'Vale a pena a RTX 5090 para rodar o Llama 3 70B?', a: 'Só se você precisar de 45+ tokens/seg. A 4090 entrega 36, o que é "suficiente" para a maioria. Os 9 tokens/seg extras custam US$ 1.000.' },
-            { q: 'Devo comprar uma RTX 5090 ou duas RTX 4090?', a: 'Duas 4090 (~US$ 2.500 usadas) superam a 5090 (US$ 1.999) em velocidade e flexibilidade. Você pode rodar vários modelos em paralelo. A 5090 tem configuração mais simples, mas é mais cara.' },
+            { q: 'Vale a pena a RTX 5090 para rodar o Llama 3 70B?', a: 'Só se você precisar de 45+ tokens/seg. A 4090 entrega 36, o que é "suficiente" para a maioria. Os 9 tokens/seg extras custam cerca de R$ 9.000.' },
+            { q: 'Devo comprar uma RTX 5090 ou duas RTX 4090?', a: 'Duas 4090 (~R$ 22.000 usadas) superam a 5090 (~R$ 20.000) em velocidade e flexibilidade. Você pode rodar vários modelos em paralelo. A 5090 tem configuração mais simples, mas é mais cara.' },
             { q: 'A RTX 5090 tem mais VRAM que a 4090?', a: 'Não. Ambas têm 24 GB. O GDDR7 é mais rápido por byte, mas para LLMs o GDDR6X (4090) é suficiente.' },
-            { q: 'Os preços da 5090 vão cair como os da 4090?', a: 'Sim, com o tempo. A 4090 custava US$ 1.499 no lançamento (2022) e agora vale US$ 999 usada (2026). Espere a 5090 chegar a US$ 1.200-1.500 usada em 2-3 anos.' },
+            { q: 'Os preços da 5090 vão cair como os da 4090?', a: 'Sim, com o tempo. A 4090 chegou a custar ~R$ 13.000 no lançamento e agora vale ~R$ 11.000 usada (2026). Espere a 5090 chegar a ~R$ 12.000-15.000 usada em 2-3 anos.' },
             { q: 'Posso usar a RTX 5090 com uma fonte de 750 W?', a: 'Por pouco. A RTX 5090 consome 575 W sozinha. Combine com uma fonte de 850 W ou 1000 W para evitar queda de tensão sob carga.' },
-            { q: 'A RTX 5080 tem melhor custo-benefício que a 5090?', a: 'Sim, para a maioria. A 5080 (US$ 999) atinge 80% da velocidade da 5090 pela metade do preço. Para LLMs locais, a 5080 é o ponto ideal.' },
+            { q: 'A RTX 5080 tem melhor custo-benefício que a 5090?', a: 'Sim, para a maioria. A 5080 (~R$ 10.000) atinge 80% da velocidade da 5090 pela metade do preço. Para LLMs locais, a 5080 é o ponto ideal.' },
             { q: 'Quanto mais rápida é a 5090 em modelos multimodais como o Qwen-VL 70B?', a: 'Um ganho semelhante de 20-25%. O processamento multimodal ainda é limitado por memória, então a vantagem de largura de banda da 5090 ajuda, mas não de forma dramática.' },
           ],
         },
@@ -667,12 +667,12 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Vale a pena a RTX 5090 para rodar o Llama 3 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Só se você precisar de 45+ tokens/seg. A 4090 entrega 36, o que é "suficiente" para a maioria. Os 9 tokens/seg extras custam US$ 1.000.' } },
-          { '@type': 'Question', 'name': 'Devo comprar uma RTX 5090 ou duas RTX 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Duas 4090 (~US$ 2.500 usadas) superam a 5090 (US$ 1.999) em velocidade e flexibilidade. Você pode rodar vários modelos em paralelo. A 5090 tem configuração mais simples, mas é mais cara.' } },
+          { '@type': 'Question', 'name': 'Vale a pena a RTX 5090 para rodar o Llama 3 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Só se você precisar de 45+ tokens/seg. A 4090 entrega 36, o que é "suficiente" para a maioria. Os 9 tokens/seg extras custam cerca de R$ 9.000.' } },
+          { '@type': 'Question', 'name': 'Devo comprar uma RTX 5090 ou duas RTX 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Duas 4090 (~R$ 22.000 usadas) superam a 5090 (~R$ 20.000) em velocidade e flexibilidade. Você pode rodar vários modelos em paralelo. A 5090 tem configuração mais simples, mas é mais cara.' } },
           { '@type': 'Question', 'name': 'A RTX 5090 tem mais VRAM que a 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não. Ambas têm 24 GB. O GDDR7 é mais rápido por byte, mas para LLMs o GDDR6X (4090) é suficiente.' } },
-          { '@type': 'Question', 'name': 'Os preços da 5090 vão cair como os da 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, com o tempo. A 4090 custava US$ 1.499 no lançamento (2022) e agora vale US$ 999 usada (2026). Espere a 5090 chegar a US$ 1.200-1.500 usada em 2-3 anos.' } },
+          { '@type': 'Question', 'name': 'Os preços da 5090 vão cair como os da 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, com o tempo. A 4090 chegou a custar ~R$ 13.000 no lançamento e agora vale ~R$ 11.000 usada (2026). Espere a 5090 chegar a ~R$ 12.000-15.000 usada em 2-3 anos.' } },
           { '@type': 'Question', 'name': 'Posso usar a RTX 5090 com uma fonte de 750 W?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Por pouco. A RTX 5090 consome 575 W sozinha. Combine com uma fonte de 850 W ou 1000 W para evitar queda de tensão sob carga.' } },
-          { '@type': 'Question', 'name': 'A RTX 5080 tem melhor custo-benefício que a 5090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, para a maioria. A 5080 (US$ 999) atinge 80% da velocidade da 5090 pela metade do preço. Para LLMs locais, a 5080 é o ponto ideal.' } },
+          { '@type': 'Question', 'name': 'A RTX 5080 tem melhor custo-benefício que a 5090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, para a maioria. A 5080 (~R$ 10.000) atinge 80% da velocidade da 5090 pela metade do preço. Para LLMs locais, a 5080 é o ponto ideal.' } },
         ],
       },
       itemListSchema: {
@@ -683,7 +683,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Diferenças de velocidade', 'description': 'A RTX 5090 é 20-25% mais rápida que a RTX 4090 para inferência de LLM local (medida em tokens/seg).' },
           { '@type': 'ListItem', 'position': 2, 'name': 'VRAM e especificações', 'description': 'Ambas as placas têm 24 GB de VRAM (idêntico para trabalho com LLMs). A vantagem de velocidade da 5090 vem da maior largura de banda de memória e da melhor eficiência de shaders.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Custo-benefício', 'description': 'A RTX 5090 custa US$ 1.000 a mais (US$ 1.999 vs. US$ 999 por uma 4090 usada). O ganho de desempenho por preço não justifica o upgrade se você já tem uma 4090.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Custo-benefício', 'description': 'A RTX 5090 custa cerca de R$ 9.000 a mais (~R$ 20.000 vs. ~R$ 11.000 por uma 4090 usada). O ganho de desempenho por preço não justifica o upgrade se você já tem uma 4090.' },
         ],
       },
     },

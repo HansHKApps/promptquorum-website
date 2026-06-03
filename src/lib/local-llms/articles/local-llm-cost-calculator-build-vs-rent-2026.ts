@@ -672,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: '本地LLM成本计算器：自建 vs 云租GPU 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'zh' },
   },
-  // VERIFY: artigo de afiliados — preços mantidos em USD (modelo do bloco es) e links apontam para Amazon.com/RunPod/Apple globais. Política de localização de afiliados pede preços em BRL e varejistas brasileiros (Amazon.com.br, Kabum, Pichau). Localizar antes de publicar.
+  // VERIFY: modelo de TCO mantido em USD de propósito — GPU em nuvem (RunPod/Lambda/Vast.ai) é cobrada em dólar mundialmente, então o cálculo de ponto de equilíbrio precisa de moeda única para ser coerente (converter só o hardware quebraria as tabelas de retorno). Preços de hardware no varejo brasileiro foram adicionados em BRL como contexto na seção "Custos de Hardware Local" e a eletricidade usa tarifa do Brasil. Links de afiliado ainda apontam para lojas globais — trocar por Amazon.com.br/Kabum/Pichau antes de publicar.
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
@@ -750,7 +750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       buildCosts: {
         heading: 'Custos de Hardware Local em 2026',
-        body: 'Uma workstation de LLM local completa inclui GPU, CPU, placa-mãe, RAM, armazenamento, fonte e gabinete. Veja três configurações completas com os custos totais do sistema.',
+        body: 'Uma workstation de LLM local completa inclui GPU, CPU, placa-mãe, RAM, armazenamento, fonte e gabinete. Veja três configurações completas com os custos totais do sistema (em USD, padrão do mercado global de hardware).\n\n**No varejo brasileiro (jun/2026, Kabum/Pichau/Mercado Livre):** RTX 3090 usada ~R$ 6.000; build RTX 4090 completo ~R$ 17.000; build RTX 4090 + 3090 ~R$ 22.000; Mac Mini M4 Pro 48 GB ~R$ 18.000. Os impostos de importação elevam bastante os preços ante os valores em dólar — confira o câmbio e a loja antes de comprar.',
         columns: ['Configuração', 'GPU', 'VRAM', 'Custo Total', 'Modelos Suportados'],
         rows: [
           { 'Configuração': 'Econômica', GPU: 'RTX 3090 (usada)', VRAM: '24 GB', 'Custo Total': '~US$ 1.200', 'Modelos Suportados': 'Até 30B Q4' },

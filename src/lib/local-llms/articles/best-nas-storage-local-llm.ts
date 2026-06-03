@@ -472,8 +472,8 @@ schema: {
       theme: 'Privacy & Business',
       title: 'Melhor NAS e Armazenamento para Modelos de IA Local',
       seoTitle: 'NAS para LLMs Locais: RAID 6, Backup e Redundância',
-      // VERIFY: preços em USD (modelo do bloco es). Avaliar localização para BRL (R$) e disponibilidade de varejistas no Brasil (Synology/QNAP/Backblaze) antes de publicar.
-      intro: '**Um NAS (Network-Attached Storage) mantém sua biblioteca de modelos organizada, com backup e acessível em qualquer máquina.** Em abril de 2026, o armazenamento RAID 6 (tolerância a falha de 2 discos) com backups automatizados é essencial para equipes de LLMs locais em produção. Orçamento: US$ 1.500-3.000 para 4-8 TB de capacidade utilizável. Os preços podem variar conforme o seu país.',
+      // VERIFY: preços de hardware em BRL refletem o varejo brasileiro (NAS/HDDs têm alta carga tributária); valores são estimativas de jun/2026 e variam por loja (Kabum/Pichau/Mercado Livre) e câmbio. Serviços de nuvem (Backblaze B2, AWS S3) permanecem em USD pois são cobrados em dólar globalmente. Confirmar antes de publicar.
+      intro: '**Um NAS (Network-Attached Storage) mantém sua biblioteca de modelos organizada, com backup e acessível em qualquer máquina.** Em abril de 2026, o armazenamento RAID 6 (tolerância a falha de 2 discos) com backups automatizados é essencial para equipes de LLMs locais em produção. Orçamento: R$ 9.000-18.000 para 4-8 TB de capacidade utilizável no varejo brasileiro. Os preços variam conforme a loja e o câmbio.',
       metaDescription: 'Melhor NAS para LLMs locais: redundância RAID 6, estratégia de backup e organização da biblioteca de modelos. Compare Synology, QNAP e TrueNAS.',
       publishDate: '2026-04-05',
       leadAnswerBlock: '**Um NAS (Network-Attached Storage) mantém sua biblioteca de modelos organizada, com backup e acessível em qualquer máquina. Em abril de 2026, o armazenamento RAID 6 (tolerância a falha de 2 discos) com backups automatizados é essencial para equipes de LLMs locais em produção.**',
@@ -520,7 +520,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Melhor NAS para LLMs locais: Synology, QNAP ou TrueNAS?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'O Synology DS420+ é a melhor opção para equipes com orçamento limitado (US$ 1.000 no total com os discos). QNAP TS-464C2U para necessidades de desempenho. TrueNAS SCALE para recursos ZFS avançados e implantação open-source.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'O Synology DS420+ é a melhor opção para equipes com orçamento limitado (~R$ 9.700 no total com os discos, no varejo brasileiro). QNAP TS-464C2U para necessidades de desempenho. TrueNAS SCALE para recursos ZFS avançados e implantação open-source.' }
           }
         ]
       },
@@ -540,23 +540,23 @@ schema: {
           isTldr: true,
           items: [
             '**NAS (Network-Attached Storage):** Armazenamento centralizado acessível pela rede. RAID 6 (2 discos podem falhar simultaneamente).',
-            '**Melhor opção econômica:** Synology DS420+ de 4 baias, US$ 400 (apenas hardware). 4× 4 TB WD Red Pro = US$ 600. Total US$ 1.000 para 8 TB utilizáveis. Os preços podem variar conforme o seu país.',
-            '**Melhor desempenho:** QNAP TS-464C2U ou TrueNAS SCALE em rede de 10 Gbps. Custo: US$ 2.000+.',
+            '**Melhor opção econômica:** Synology DS420+ de 4 baias, ~R$ 4.500 (apenas hardware, na Kabum/Mercado Livre). 4× 4 TB WD Red Pro = ~R$ 5.200. Total ~R$ 9.700 para 8 TB utilizáveis. Os preços variam conforme a loja e o câmbio.',
+            '**Melhor desempenho:** QNAP TS-464C2U ou TrueNAS SCALE em rede de 10 Gbps. Custo: R$ 12.000+.',
             '**Armazenamento de modelos:** Mantenha todos os modelos quantizados (arquivos .gguf) no NAS. Um modelo 70B = 35 GB; armazene mais de 10 modelos.',
-            '**Backup:** Backup diário para a nuvem (Backblaze B2 = US$ 6/mês ilimitado). Ou discos USB externos (offline, seguro).',
+            '**Backup:** Backup diário para a nuvem (Backblaze B2 = US$ 6/mês ilimitado, cobrado em dólar). Ou discos USB externos (offline, seguro).',
             '**Latência de rede:** NAS na mesma LAN que o servidor de inferência = <10 ms de latência (aceitável). Pela internet = lento demais.',
             '**Redundância:** RAID 6 protege contra 2 falhas de disco. Ainda assim, faça backups externos (ransomware, roubo).',
-            '**Comparação de custos:** NAS de 8 TB = US$ 1.000 de pagamento único + US$ 6/mês de backup. Armazenamento em nuvem = US$ 50-100/mês indefinidamente.',
+            '**Comparação de custos:** NAS de 8 TB = ~R$ 9.700 de pagamento único + US$ 6/mês de backup (Backblaze, em dólar). Armazenamento em nuvem = US$ 50-100/mês indefinidamente.',
           ],
         },
         'comparison': {
           title: 'NAS vs SSD local vs Armazenamento em nuvem',
           rows: [
             { '0': 'Opção', '1': 'Capacidade', '2': 'Custo', '3': 'Velocidade', '4': 'Redundância', '5': 'Ideal para' },
-            { '0': 'SSD local', '1': '2TB', '2': 'US$ 200', '3': 'Rápida', '4': 'Nenhuma', '5': 'Máquina única, acesso rápido' },
-            { '0': 'NAS (RAID 6)', '1': '8TB', '2': 'US$ 1.000', '3': 'Média', '4': 'Boa', '5': 'Equipes, acesso compartilhado' },
+            { '0': 'SSD local', '1': '2TB', '2': 'R$ 1.200', '3': 'Rápida', '4': 'Nenhuma', '5': 'Máquina única, acesso rápido' },
+            { '0': 'NAS (RAID 6)', '1': '8TB', '2': 'R$ 9.700', '3': 'Média', '4': 'Boa', '5': 'Equipes, acesso compartilhado' },
             { '0': 'Nuvem (AWS S3)', '1': 'Ilimitada', '2': 'US$ 50+/mês', '3': 'Lenta', '4': 'Excelente', '5': 'Acesso remoto, modelos arquivados' },
-            { '0': 'USB externo', '1': '4TB', '2': 'US$ 150', '3': 'Lenta', '4': 'Nenhuma', '5': 'Backup offline, portátil' },
+            { '0': 'USB externo', '1': '4TB', '2': 'R$ 900', '3': 'Lenta', '4': 'Nenhuma', '5': 'Backup offline, portátil' },
           ],
           columns: ['Opção', 'Capacidade', 'Custo', 'Velocidade', 'Redundância', 'Ideal para'],
         },
@@ -564,9 +564,9 @@ schema: {
           title: 'Recomendações de NAS por caso de uso',
           content: [
             '**Desenvolvedor individual (1-5 máquinas):** Dispense o NAS. Use SSD local + backup em USB externo.',
-            '**Equipe pequena (5-10 usuários):** Synology DS420+ ou QNAP TS-432PX. 4 baias, 10 Gbps opcional. US$ 1.000-1.500.',
-            '**Equipe média (10-50):** Synology DS720+ ou QNAP TS-464C2U. 10 Gbps duplo, cache SSD. US$ 1.500-2.500.',
-            '**Equipe grande (50+):** TrueNAS SCALE em hardware empresarial. Build personalizado. US$ 3.000+.',
+            '**Equipe pequena (5-10 usuários):** Synology DS420+ ou QNAP TS-432PX. 4 baias, 10 Gbps opcional. R$ 9.000-13.000.',
+            '**Equipe média (10-50):** Synology DS720+ ou QNAP TS-464C2U. 10 Gbps duplo, cache SSD. R$ 13.000-20.000.',
+            '**Equipe grande (50+):** TrueNAS SCALE em hardware empresarial. Build personalizado. R$ 20.000+.',
             '**Para equipes com requisitos de conformidade (saúde, finanças):** TrueNAS (open-source, auditável). Synology/QNAP são proprietários.',
           ],
         },
