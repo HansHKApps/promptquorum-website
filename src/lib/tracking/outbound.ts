@@ -74,13 +74,6 @@ export function trackOutboundClick(p: OutboundClickParams): void {
   } catch {
     // silent
   }
-
-  // GA4
-  try {
-    ;(window as any).gtag?.('event', 'outbound_click', payload)
-  } catch {
-    // silent
-  }
 }
 
 // Alternative: use sendBeacon for guaranteed delivery when page unloads

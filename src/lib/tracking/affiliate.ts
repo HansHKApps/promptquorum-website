@@ -88,16 +88,6 @@ export function trackAffiliateClick(p: AffiliateClickParams): void {
   } catch (err) {
     if (process.env.NODE_ENV === 'development') console.warn('[affiliate] vercel track failed:', err)
   }
-
-  try {
-    ;(window as unknown as { gtag?: (...args: unknown[]) => void }).gtag?.(
-      'event',
-      'affiliate_click',
-      payload,
-    )
-  } catch (err) {
-    if (process.env.NODE_ENV === 'development') console.warn('[affiliate] gtag failed:', err)
-  }
 }
 
 // Affiliate disclosure shown near the top of each affiliate page.

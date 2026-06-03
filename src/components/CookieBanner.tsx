@@ -168,17 +168,6 @@ function readLangCookie(): Lang | null {
   return value && VALID_LANGS.includes(value) ? value : null
 }
 
-function gtagConsent(r: ConsentRecord) {
-  if (typeof window === 'undefined') return
-  const w = window as Window & { gtag?: (...args: unknown[]) => void }
-  w.gtag?.('consent', 'update', {
-    analytics_storage: r.analytics ? 'granted' : 'denied',
-    ad_storage: r.marketing ? 'granted' : 'denied',
-    ad_user_data: r.marketing ? 'granted' : 'denied',
-    ad_personalization: r.marketing ? 'granted' : 'denied',
-  })
-}
-
 function readConsent(): ConsentRecord | null {
   if (typeof window === 'undefined') return null
   const raw = localStorage.getItem(STORAGE_KEY)
@@ -244,9 +233,7 @@ function CookieBannerInner() {
 
   useEffect(() => {
     const stored = readConsent()
-    if (stored && !isStale(stored)) {
-      gtagConsent(stored)
-    } else {
+    if (!stored || isStale(stored)) {
       setVisible(true)
     }
 
@@ -262,7 +249,6 @@ function CookieBannerInner() {
 
   function commit(r: ConsentRecord) {
     writeConsent(r, lang)
-    gtagConsent(r)
     setVisible(false)
   }
 
