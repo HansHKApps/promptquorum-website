@@ -1027,6 +1027,297 @@ jobs:
     },
   },
 
+  pt: {
+    freshness_tier: 'evergreen',
+    theme: 'Operações e Governança de Equipe',
+    title: 'Controle de versão de prompts: rastreamento, rollback e fluxos de trabalho em equipe',
+    intro: 'Prompts sem controle de versão falham silenciosamente — sem histórico de alterações, não há caminho de rollback quando uma atualização de prompt degrada a qualidade da saída ou quebra os parsers posteriores. O versionamento semântico (MAJOR.MINOR.PATCH), fluxos de trabalho de branches do Git, testes de regressão automatizados e changelogs estruturados aplicam aos prompts a mesma disciplina que as equipes de software já usam para o código.',
+    publishDate: '2026-04-30',
+    dateModified: '2026-04-30',
+    educationalLevel: 'Advanced',
+    audience: 'Desenvolvedores que gerenciam prompts LLM em produção, engenheiros de prompts, líderes de equipes de engenharia',
+    primaryTerm: 'Controle de Versão de Prompts',
+    readTime: '10 min de leitura',
+    seoTitle: 'Controle de versão de prompts: Git, Semver e rollback',
+    metaDescription: 'Prompts sem controle de versão falham em silêncio: sem rollback nem histórico. Aplique o versionamento MAJOR.MINOR.PATCH e Git a cada alteração de prompt.',
+    leadAnswerBlock: '**O controle de versão de prompts rastreia cada alteração de um prompt de IA usando versionamento semântico (MAJOR.MINOR.PATCH) e fluxos de trabalho do Git. Ele permite rollback instantâneo, colaboração em equipe e detecção de regressões — a mesma disciplina aplicada ao código, agora aplicada a prompts.**',
+    quickFacts: [
+      'Versionamento semântico para prompts: MAJOR em alterações de formato de saída que quebram compatibilidade, MINOR em melhorias de qualidade, PATCH em correções de erros tipográficos/esclarecimentos',
+      'Um git revert em um prompt leva segundos; re-testar sem histórico de versões leva horas',
+      'Os changelogs de prompts requerem 5 campos: versão, data, autor, tipo de alteração (MAJOR/MINOR/PATCH) e delta de saída esperado',
+      'Execute testes de regressão automatizados contra ≥10 casos de teste golden em cada PR de prompt antes da revisão manual',
+      'Três padrões de branching para prompts: feature/ (nova capacidade), fix/ (regressão), experiment/ (teste A/B)',
+    ],
+    toc: [
+      { label: 'Por que controle de versões', anchor: 'why-version-control' },
+      { label: 'Versionamento semântico para prompts', anchor: 'semantic-versioning' },
+      { label: 'Configuração do fluxo de trabalho no Git', anchor: 'git-workflow' },
+      { label: 'Requisitos do changelog', anchor: 'changelog' },
+      { label: 'Estratégias de rollback', anchor: 'rollback' },
+      { label: 'Colaboração em equipe', anchor: 'team-collaboration' },
+      { label: 'Testes automatizados', anchor: 'automated-testing' },
+      { label: 'Erros comuns', anchor: 'mistakes' },
+      { label: 'Conformidade e auditoria', anchor: 'regional-considerations' },
+      { label: 'FAQ', anchor: 'faq' },
+      { label: 'Leitura relacionada', anchor: 'related-reading' },
+      { label: 'Fontes', anchor: 'sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Controle de versão de prompts: rastreamento, rollback e fluxos de trabalho em equipe',
+      description: 'Prompts sem controle de versão falham silenciosamente — sem histórico não há rollback. Aplique o versionamento MAJOR.MINOR.PATCH, fluxos de trabalho do Git e testes de regressão automatizados a cada alteração de prompt.',
+      datePublished: '2026-04-30',
+      dateModified: '2026-04-30',
+      inLanguage: 'pt-BR',
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/prompt-version-control-workflows',
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      keywords: ['controle de versão de prompts', 'versionamento de prompts', 'fluxo de trabalho Git para prompts', 'gerenciamento de alterações de prompts', 'como versionar prompts de IA'],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'git' },
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'PromptLayer' },
+        { '@type': 'SoftwareApplication', name: 'GitHub Actions' },
+      ],
+      about: [
+        { '@type': 'Thing', name: 'Controle de versão de prompts', description: 'Um sistema para rastrear cada alteração de um prompt de IA, permitir o rollback para qualquer versão anterior e registrar o autor e o motivo de cada modificação' },
+        { '@type': 'Thing', name: 'Versionamento semântico para prompts', description: 'Aplicação do versionamento MAJOR.MINOR.PATCH a prompts de IA: MAJOR para alterações de formato de saída que quebram compatibilidade, MINOR para melhorias de qualidade, PATCH para correções de erros tipográficos/esclarecimentos' },
+        { '@type': 'Thing', name: 'Rollback de prompt', description: 'O processo de reverter um prompt de IA para uma versão previamente aprovada usando git revert, feature flags ou substituições de variáveis de ambiente' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Métodos de rollback de prompts',
+      inLanguage: 'pt-BR',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'git revert', description: 'Rollback padrão: cria um novo commit que desfaz a alteração problemática. Imediato, baixo risco, histórico de auditoria completo. Recomendado para todos os rollbacks que não sejam de emergência.' },
+        { '@type': 'ListItem', position: 2, name: 'Alternância de feature flag', description: 'Muda o flag para a versão anterior do prompt sem necessidade de implantação. Zero tempo de inatividade, execução em segundos. Requer que os feature flags estejam implantados previamente.' },
+        { '@type': 'ListItem', position: 3, name: 'Substituição de variável de ambiente', description: 'Substitui o conteúdo do prompt via variável de ambiente sem uma implantação de código. Rota de hotfix mais rápida; risco médio, pois as alterações ignoram o fluxo de trabalho de revisão normal.' },
+      ],
+    },
+    sections: {
+      tldrCallout: {
+        callouts: [
+          {
+            type: 'tldr',
+            label: 'TL;DR',
+            text: 'Aplique o versionamento MAJOR.MINOR.PATCH e os fluxos de trabalho do Git a cada prompt. Cada alteração abre um PR, cada PR executa testes de regressão automatizados e cada merge é marcado com uma versão. O rollback é um `git revert` — executa em segundos, com o histórico de auditoria completo preservado.',
+          },
+        ],
+      },
+      tldr: {
+        title: 'Pontos principais',
+        isTldr: true,
+        content: [
+          '**Resumo:** O controle de versão de prompts aplica o versionamento semântico (MAJOR.MINOR.PATCH) e os fluxos de trabalho do Git a prompts de IA. Cada alteração cria um PR, cada PR executa testes de regressão automatizados e cada merge é marcado com uma versão. O rollback é um `git revert`. Sem controle de versão, as quedas de qualidade em produção são indetectáveis e irrecuperáveis.',
+        ],
+        items: [
+          'Aplique MAJOR.MINOR.PATCH aos prompts: MAJOR para alterações de formato de saída que quebram compatibilidade, MINOR para melhorias de qualidade, PATCH para correções de erros tipográficos/redação',
+          'Armazene os prompts em um diretório `/prompts/` no Git — trate-os como código, não como configuração',
+          'Cada alteração de prompt abre um PR; os testes de regressão automatizados são executados em cada PR antes da revisão manual',
+          'Um changelog de prompt requer 5 campos: versão, data, autor, tipo de alteração e delta de saída esperado',
+          'Rollback usando `git revert` (padrão), feature flags (sem tempo de inatividade) ou substituição de variável de ambiente (hotfix)',
+          'Atribua um proprietário de prompt por área funcional para evitar conflitos de merge e responsabilidades pouco claras',
+          'Um golden test set de 10–20 entradas representativas é o mínimo para qualquer prompt de produção',
+        ],
+      },
+      whyVersionControl: {
+        id: 'why-version-control',
+        title: 'Por que o controle de versão de prompts previne as regressões silenciosas',
+        content: [
+          '**Sem controle de versão, uma alteração de prompt que degrada a qualidade da saída não deixa rastro — sem log de erro, sem diff, sem caminho de rollback.** O modelo retorna respostas plausíveis, mas incorretas, em vez de lançar exceções. Quando a queda de qualidade é detectada (por reclamações de usuários, métricas de precisão ou erros de parsing posteriores), o prompt original pode ter sido perdido.',
+          'Três modos de falha que o controle de versão previne: (1) Regressão silenciosa — uma alteração de redação muda sutilmente o comportamento do modelo, degradando a qualidade da saída em milhares de solicitações antes que alguém perceba. (2) Armadilha sem rollback — sem histórico, restaurar o prompt anterior exige reconstruí-lo da memória ou de logs de implantação antigos. (3) Conflito durante a colaboração — dois engenheiros editam o mesmo prompt de forma independente e um sobrescreve a alteração do outro sem registro do que foi perdido.',
+        ],
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'O controle de versão de prompts é um sistema que rastreia cada alteração de um prompt de IA, permite o rollback para qualquer versão anterior e registra o autor e o motivo de cada modificação.',
+          },
+        ],
+        callouts: [
+          { type: 'Warning', label: 'Regressão silenciosa', text: 'Os prompts falham silenciosamente — retornam respostas plausíveis, mas incorretas, em vez de erros. Seus logs de erro não detectarão quedas de qualidade. Somente testes de regressão contra um golden test set farão isso.' },
+        ],
+      },
+      semanticVersioning: {
+        id: 'semantic-versioning',
+        title: 'Como o versionamento semântico funciona para prompts de IA',
+        content: [
+          '**O versionamento MAJOR.MINOR.PATCH indica a cada chamador se uma alteração de prompt é segura de adotar sem re-testar seu código posterior.** MAJOR significa que o formato de saída mudou (os parsers posteriores quebrarão). MINOR significa que a qualidade melhorou, mas o formato é estável. PATCH significa que apenas a redação ou a clareza mudou sem impacto no comportamento.',
+        ],
+        columns: ['Tipo de alteração', 'Quando incrementar', 'Exemplo', 'Compatível com versões anteriores?'],
+        rows: [
+          { 'Tipo de alteração': 'MAJOR', 'Quando incrementar': 'O formato de saída muda — de JSON para markdown, novos campos obrigatórios, remoção de campos', 'Exemplo': 'v1.2.0 → v2.0.0', 'Compatível com versões anteriores?': 'Não — atualize todos os chamadores' },
+          { 'Tipo de alteração': 'MINOR', 'Quando incrementar': 'Melhoria de qualidade, otimização de latência, melhor seguimento de instruções', 'Exemplo': 'v1.2.0 → v1.3.0', 'Compatível com versões anteriores?': 'Sim — seguro de adotar' },
+          { 'Tipo de alteração': 'PATCH', 'Quando incrementar': 'Correção de erro tipográfico, esclarecimento, redação menor que não altera o comportamento do modelo', 'Exemplo': 'v1.2.0 → v1.2.1', 'Compatível com versões anteriores?': 'Sim — sem alteração de comportamento esperada' },
+        ],
+        callouts: [
+          { type: 'Key Point', label: 'Gatilho MAJOR', text: 'Incremente MAJOR toda vez que o código posterior que analisa a saída do seu prompt quebraria. Se a saída muda de um array JSON para uma lista markdown, isso é um incremento MAJOR, mesmo que o conteúdo seja idêntico.' },
+          { type: 'Pro Tip', label: 'Tag no Git', text: 'Marque cada versão após o merge: `git tag v2.1.0 -m "Raciocínio de extração de datas melhorado"`. Isso cria uma referência permanente para rollback.' },
+        ],
+      },
+      gitWorkflow: {
+        id: 'git-workflow',
+        title: 'Como configurar um fluxo de trabalho do Git para alterações de prompts',
+        content: [
+          '**O fluxo de trabalho padrão é: criar branch → editar prompt → executar testes de regressão → abrir PR → fazer merge e marcar.** Cada etapa reflete uma alteração de código de software — porque um prompt é código.',
+        ],
+        numberedItems: [
+          'Crie um feature branch: `git checkout -b feature/add-json-output`. Use prefixos `feature/` (nova capacidade), `fix/` (correção de regressão) ou `experiment/` (teste A/B).',
+          'Edite o arquivo de prompt em `/prompts/[nome].txt`. Atualize o comentário de versão no início: `# version: 2.0.0 | changed: JSON output format | author: joao`.',
+          'Execute o conjunto de regressão automatizado contra seu golden test set (mínimo 10 casos). Os testes devem cobrir: validação de formato, comparação de saída contra respostas golden, flag de alucinação e latência. Todos os testes devem passar antes de abrir um PR.',
+          'Abra um PR com uma descrição que cubra: o que mudou, por quê, qual incremento de versão (MAJOR/MINOR/PATCH) e o delta de saída esperado. O revisor verifica: clareza, risco de alucinação, formato de saída e segurança.',
+          'Após aprovação, faça merge para main e marque a versão: `git tag v2.0.0 -m "JSON output format — MAJOR"` e depois `git push origin v2.0.0`.',
+        ],
+        codeBlock: `# .github/workflows/prompt-regression.yml
+name: Prompt Regression Tests
+on:
+  pull_request:
+    paths:
+      - 'prompts/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run prompt regression tests
+        run: npm run test:prompts
+        env:
+          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}`,
+        codeLanguage: 'yaml',
+        callouts: [
+          { type: 'Pro Tip', label: 'Estrutura de diretórios', text: 'Armazene os prompts em `/prompts/` e os fixtures de teste em `/prompts/tests/`. Isso os torna revisáveis como artefatos independentes, separados do código da aplicação, enquanto permanecem no mesmo repositório.' },
+        ],
+      },
+      changelog: {
+        id: 'changelog',
+        title: 'O que cada entrada do changelog de um prompt deve incluir',
+        content: [
+          '**Uma entrada do changelog de um prompt requer 5 campos: versão, data, autor, tipo de alteração e delta de saída esperado.** O delta de saída é o campo mais importante: descreve como a resposta do modelo diferirá após a alteração, para que os chamadores posteriores saibam o que atualizar.',
+        ],
+        columns: ['Campo', 'Obrigatório', 'Exemplo'],
+        rows: [
+          { 'Campo': 'version', 'Obrigatório': 'Sim', 'Exemplo': '`v2.1.0`' },
+          { 'Campo': 'date', 'Obrigatório': 'Sim', 'Exemplo': '`2026-04-30`' },
+          { 'Campo': 'author', 'Obrigatório': 'Sim', 'Exemplo': '`joao.silva@empresa.com.br`' },
+          { 'Campo': 'change type', 'Obrigatório': 'Sim', 'Exemplo': '`MINOR — raciocínio de extração de datas melhorado`' },
+          { 'Campo': 'expected output delta', 'Obrigatório': 'Sim', 'Exemplo': '`Os campos de data agora usam consistentemente ISO 8601 (YYYY-MM-DD). Anterior: MM/DD/YYYY em ~30% dos casos limite.`' },
+        ],
+        codeBlock: `## [v2.1.0] — 2026-04-30
+
+**Author:** joao.silva@empresa.com.br
+**Change type:** MINOR — improved date extraction reasoning
+**Expected output delta:** Date fields now consistently use ISO 8601 format (YYYY-MM-DD).
+  Previous behavior: returned MM/DD/YYYY in ~30% of edge cases.
+  Backwards-compatible — parsers accepting ISO 8601 require no update.
+
+**Test results:** 18/18 golden test cases passed (previously 15/18).`,
+        codeLanguage: 'markdown',
+        callouts: [
+          { type: 'Best Practice', label: 'Escreva o changelog primeiro', text: 'Escreva a entrada do changelog antes de escrever a alteração do prompt — isso o obriga a esclarecer a intenção. Se você não consegue descrever o delta de saída esperado, ainda não entende o que está mudando.' },
+        ],
+      },
+      rollback: {
+        id: 'rollback',
+        title: 'Quando e como reverter um prompt para uma versão anterior',
+        content: [
+          '**`git revert` é o caminho padrão de rollback — cria um novo commit que desfaz a alteração problemática sem apagar o histórico.** Conheça os gatilhos de rollback e adapte o método à urgência.',
+          'Gatilhos de rollback: (1) Queda de qualidade em produção detectada via métricas de precisão ou relatórios de usuários. (2) Problema de segurança encontrado no prompt implantado. (3) Atualização de versão do modelo quebra a compatibilidade com o prompt existente. (4) Lógica de negócio alterada tornando incorreto o formato de saída anterior.',
+        ],
+        columns: ['Método de rollback', 'Velocidade', 'Risco', 'Quando usar'],
+        rows: [
+          { 'Método de rollback': '`git revert <commit>`', 'Velocidade': 'Segundos para criar, minutos para implantar', 'Risco': 'Baixo — cria um commit de reversão documentado', 'Quando usar': 'Rollback padrão sem emergência; preserva o histórico de auditoria completo' },
+          { 'Método de rollback': 'Alternância de feature flag', 'Velocidade': 'Segundos — sem necessidade de implantação', 'Risco': 'Baixo — sem tempo de inatividade se os flags estiverem pré-implantados', 'Quando usar': 'Quando a seleção do prompt já está atrás de um flag e o sistema de flags está ativo' },
+          { 'Método de rollback': 'Substituição de variável de ambiente', 'Velocidade': 'Segundos — sem implantação de código', 'Risco': 'Médio — ignora o fluxo de trabalho de revisão normal', 'Quando usar': 'Apenas para hotfix de emergência; faça acompanhamento imediato com um PR de `git revert` adequado' },
+        ],
+        callouts: [
+          { type: 'Warning', label: 'Teste antes do rollback', text: 'Nunca faça rollback sem primeiro executar os testes de regressão — você pode reintroduzir um bug previamente corrigido.' },
+        ],
+      },
+      teamCollaboration: {
+        id: 'team-collaboration',
+        title: 'Como as equipes colaboram em alterações de prompts sem conflitos',
+        content: [
+          '**A propriedade previne os conflitos de merge: atribua um proprietário de prompt por área funcional, e todas as alterações nesse prompt requerem a revisão desse proprietário.** Sem propriedade clara, dois engenheiros editam o mesmo prompt em paralelo e o merge posterior sobrescreve silenciosamente a alteração anterior.',
+          'Dois padrões de repositório funcionam para equipes: (1) Monorepo com diretório `/prompts/` — melhor quando os prompts estão intimamente acoplados a um único serviço. (2) Repositório ou pacote de prompts dedicado — melhor quando os prompts são compartilhados entre múltiplos serviços.',
+        ],
+        callouts: [
+          { type: 'Best Practice', label: 'Modelo de propriedade', text: 'Atribua um proprietário de prompt por área funcional. Cada alteração nesse prompt passa pela revisão desse proprietário — sem exceções.' },
+        ],
+      },
+      automatedTesting: {
+        id: 'automated-testing',
+        title: 'O que os testes automatizados detectam antes que uma alteração de prompt seja implantada',
+        content: [
+          '**Os testes de regressão detectam quebras de formato; o LLM-as-judge detecta quedas de qualidade.** Quatro tipos de teste cobrem os principais modos de falha antes que uma alteração de prompt chegue à produção.',
+          'Os quatro tipos de teste: (1) Validação de formato — verifica se a saída corresponde ao schema esperado. Executa em milissegundos, detecta 60–70% das alterações problemáticas. (2) Comparação de golden set — compara a saída com respostas corretas verificadas manualmente em 10–20 entradas representativas. (3) Flag de alucinação — detecta afirmações factuais na saída não baseadas no contexto fornecido. (4) Verificação de latência — verifica se o tempo de resposta mediano permanece dentro de um intervalo aceitável (por exemplo, p95 ≤ 3s).',
+        ],
+        callouts: [
+          { type: 'Key Point', label: 'Conjunto de testes mínimo', text: 'Um golden test set de 10–20 entradas representativas é o mínimo para qualquer prompt de produção. Cubra: caminho feliz, casos limite (entrada vazia/muito longa), entradas adversariais e modos de falha conhecidos.' },
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: 'Erros comuns no controle de versão de prompts',
+        mistakes: [
+          { mistake: 'Sem esquema de versionamento desde o primeiro dia', problem: 'Alterações problemáticas silenciosas são implantadas quando a equipe cresce e múltiplos engenheiros editam prompts sem uma convenção de versionamento compartilhada', fix: 'Adote MAJOR.MINOR.PATCH desde o primeiro prompt em produção' },
+          { mistake: 'Armazenar os prompts dentro do código da aplicação em vez de um diretório `/prompts/`', problem: 'Os prompts enterrados no código da aplicação não podem ser revisados, testados nem versionados de forma independente', fix: 'Mova todos os prompts para `/prompts/` com os fixtures de teste em `/prompts/tests/`' },
+          { mistake: 'Sem requisito de changelog por PR', problem: 'Quando uma regressão aparece semanas depois, não há registro do que mudou, quando nem por quê', fix: 'Torne obrigatória uma entrada em CHANGELOG.md como requisito do PR por meio de uma verificação de CI' },
+          { mistake: 'Testar apenas o caminho feliz', problem: 'Os casos limite que funcionam na versão anterior falham silenciosamente após uma alteração de prompt', fix: 'Exija um mínimo de 10 casos de teste golden incluindo pelo menos 2 casos limite e 1 entrada adversarial' },
+          { mistake: 'Fazer rollback sem executar testes de regressão', problem: 'A versão revertida reintroduz um bug que a alteração agora revertida havia corrigido', fix: 'Sempre execute o conjunto de regressão completo antes de fazer merge de um PR de reversão' },
+        ],
+      },
+      regionalConsiderations: {
+        id: 'regional-considerations',
+        title: 'Requisitos de conformidade e auditoria para alterações de prompts',
+        content: [
+          'A LGPD (Lei Geral de Proteção de Dados, Lei nº 13.709/2018) e as diretrizes da ANPD exigem transparência e responsabilização nos processos automatizados que afetam indivíduos. Um histórico de versões de prompts controlado com autor, data, tipo de alteração e registros de aprovação satisfaz o requisito de rastreabilidade sem ferramentas adicionais.',
+          'O EU AI Act, aplicável a sistemas de alto risco em saúde, finanças, RH e infraestruturas críticas, exige rastreabilidade para saídas de IA em domínios regulados. Equipes de saúde e finanças que operam sob regulações setoriais específicas tipicamente requerem mais de 12 meses de histórico de versões de prompts com armazenamento à prova de adulteração.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'O que é controle de versão de prompts?', a: 'O controle de versão de prompts é um sistema que rastreia cada alteração de um prompt de IA, permite o rollback para qualquer versão anterior e registra o autor e o motivo de cada modificação. Aplica o versionamento semântico (MAJOR.MINOR.PATCH) aos prompts: MAJOR para alterações de formato de saída que quebram compatibilidade, MINOR para melhorias de qualidade, PATCH para correções de erros tipográficos/redação.' },
+          { q: 'Preciso de um repositório Git separado para prompts ou posso usar meu repositório de aplicação existente?', a: 'Para equipes de menos de 5 engenheiros ou menos de 20 prompts: use um diretório /prompts/ no seu repositório de aplicação existente. Para equipes maiores ou quando os prompts são compartilhados entre múltiplos serviços: um repositório de prompts dedicado oferece propriedade mais clara, versionamento independente e controle de acesso.' },
+          { q: 'Em que o versionamento de prompts difere do versionamento de modelos?', a: 'O versionamento de prompts rastreia as alterações nas instruções de texto que você envia a um modelo. O versionamento de modelos rastreia qual versão de IA sua aplicação chama. Ambos requerem controle de versão separado. Quando você muda o modelo de destino, trate-o como um incremento MAJOR da versão do prompt.' },
+          { q: 'Qual é o tamanho mínimo recomendado de um conjunto de testes para um prompt de produção?', a: '10–20 casos de teste golden é o mínimo. Cubra: caminho feliz, casos limite (entrada vazia, entrada muito longa), entradas adversariais e modos de falha conhecidos.' },
+          { q: 'Como gerencio o versionamento quando o mesmo prompt é usado em diferentes modelos?', a: 'Mantenha um histórico de versões separado por combinação prompt+modelo. Use um cabeçalho de metadados no arquivo de prompt: `# version: 2.1.0 | model: gpt-4o`. Ao implantar em um novo modelo, crie um novo arquivo variante em vez de sobrescrever o existente.' },
+          { q: 'Cada alteração de redação deve incrementar a versão?', a: 'Sim — cada alteração incrementa a versão em algum nível. Correções de erros tipográficos: PATCH. Melhorias de qualidade sem alterações de formato: MINOR. Alterações de formato/estrutura que quebram os parsers posteriores: MAJOR. Nunca omita o incremento de versão.' },
+          { q: 'Quais ferramentas suportam o controle de versão de prompts de forma nativa?', a: 'Braintrust, PromptLayer e Vellum fornecem versionamento nativo de prompts. PromptQuorum adiciona validação multi-modelo — execute um prompt versionado em mais de 25 provedores para confirmar consistência antes da implantação.' },
+          { q: 'Como faço rollback de um prompt se não uso Git?', a: 'Se você usa uma plataforma de gerenciamento de prompts (Braintrust, Vellum, PromptLayer), use o histórico de versões integrado para reverter para a versão aprovada anterior. No futuro, adicione pelo menos um arquivo CHANGELOG.md — mesmo sem Git, isso dá a você uma referência de rollback.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          '[Fluxo de revisão de prompts para equipes](/pt/prompt-engineering/prompt-review-workflow-for-teams) — Lista de verificação de 7 pontos e gates CI/CD para revisar alterações de prompts antes da implantação',
+          '[Verificações de qualidade de build para saídas LLM](/pt/prompt-engineering/build-quality-checks) — Verificações de qualidade automatizadas que são executadas como parte do gate de PR de prompts',
+          '[Como testar prompts em múltiplos modelos](/pt/prompt-engineering/how-to-test-prompts-across-models) — Testes de regressão multi-modelo para validar a consistência do prompt antes da implantação',
+          '[Alucinações de IA: como detê-las](/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Técnicas de detecção de alucinações para a etapa de testes automatizados no fluxo de trabalho de controle de versão',
+          '[Framework RTF para prompts](/pt/prompt-engineering/rtf-framework) — Formato de prompt estruturado que simplifica o versionamento ao tornar o formato de saída explícito',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          '[Semantic Versioning Specification (semver.org)](https://semver.org/) — Especificação canônica MAJOR.MINOR.PATCH, diretamente aplicável ao versionamento de prompts',
+          '[Git Documentation: git revert](https://git-scm.com/docs/git-revert) — Referência oficial para o mecanismo de rollback principal',
+          '[Braintrust: Prompt Evaluation and Versioning Guide](https://www.braintrust.dev/docs/guides/evals) — Guia técnico sobre versionamento de prompts, testes automatizados e integração CI/CD',
+        ],
+      },
+    },
+  },
+
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Opérations d\'équipe & Gouvernance',
