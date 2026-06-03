@@ -34,6 +34,7 @@ const HUB_HEADLINE: Partial<Record<Language, string>> = {
   ja: 'ローカルLLMの質問への迅速な回答',
   zh: '本地LLM问题的快速解答',
   es: 'Respuestas rápidas a preguntas sobre LLM locales',
+  pt: 'Respostas rápidas para perguntas sobre LLMs locais',
 }
 
 const COUNT = PROMPT_BITES_PUBLISHED_SLUGS.size
@@ -45,6 +46,7 @@ const HUB_SUBTITLE: Partial<Record<Language, string>> = {
   ja: `${COUNT}の短答ガイド。VRAM要件、Ollamaのおすすめ、ハードウェア比較、セットアップのヒント — 60秒以内に回答。`,
   zh: `${COUNT}篇简答指南。显存要求、Ollama推荐、硬件对比和设置技巧 — 60秒内解答。`,
   es: `${COUNT} guías de respuesta rápida. Requisitos de VRAM, recomendaciones de Ollama, comparativas de hardware y consejos de configuración — respondidas en 60 segundos o menos.`,
+  pt: `${COUNT} guias de resposta rápida. Requisitos de VRAM, recomendações de Ollama, comparações de hardware e dicas de configuração — respondidos em 60 segundos ou menos.`,
 }
 
 const VRAM_TABLE_HEADERS: Partial<Record<Language, { vram: string; model: string; quant: string; useCase: string }>> = {
@@ -54,6 +56,7 @@ const VRAM_TABLE_HEADERS: Partial<Record<Language, { vram: string; model: string
   ja: { vram: 'VRAM', model: 'ベストモデル（2026年5月）', quant: '量化', useCase: 'ユースケース' },
   zh: { vram: 'VRAM', model: '最佳模型（2026年5月）', quant: '量化', useCase: '使用场景' },
   es: { vram: 'VRAM', model: 'Mejor modelo (mayo de 2026)', quant: 'Cuantización', useCase: 'Caso de uso' },
+  pt: { vram: 'VRAM', model: 'Melhor modelo (maio de 2026)', quant: 'Quantização', useCase: 'Caso de uso' },
 }
 
 const VRAM_TABLE_ROWS: Partial<Record<Language, Array<{ vram: string; model: string; quant: string; useCase: string }>>> = {
@@ -110,6 +113,15 @@ const VRAM_TABLE_ROWS: Partial<Record<Language, Array<{ vram: string; model: str
     { vram: '16 GB', model: 'Qwen 32B', quant: 'Q4_K_M', useCase: 'Tareas complejas de varios pasos' },
     { vram: '24 GB', model: 'Llama 70B', quant: 'Q4_K_M (parcial)', useCase: 'Calidad casi de producción' },
     { vram: '48+ GB', model: 'Llama 70B', quant: 'Q5_K_M o superior', useCase: 'Modelos de precisión completa' },
+  ],
+  pt: [
+    { vram: '4 GB', model: 'Phi-4 Mini', quant: 'Q4', useCase: 'Chat básico, tarefas pequenas' },
+    { vram: '6 GB', model: 'Llama 3 8B', quant: 'Q4_K_M', useCase: 'Chat e programação no dia a dia' },
+    { vram: '8 GB', model: 'Mistral 7B', quant: 'Q5_K_M', useCase: 'Equilíbrio entre qualidade e velocidade' },
+    { vram: '12 GB', model: 'Qwen 14B', quant: 'Q4_K_M', useCase: 'Programação e raciocínio' },
+    { vram: '16 GB', model: 'Qwen 32B', quant: 'Q4_K_M', useCase: 'Tarefas complexas de várias etapas' },
+    { vram: '24 GB', model: 'Llama 70B', quant: 'Q4_K_M (parcial)', useCase: 'Qualidade quase de produção' },
+    { vram: '48+ GB', model: 'Llama 70B', quant: 'Q5_K_M ou superior', useCase: 'Modelos de precisão total' },
   ],
 }
 
@@ -174,12 +186,22 @@ const DEEPDIVE_LINKS: Partial<Record<Language, Record<string, { text: string; hr
     'Prompt Engineering': { text: 'Análisis a fondo: Framework de prompts CO-STAR', href: '/es/prompt-engineering/co-star-framework' },
     'Privacy & Compliance': { text: 'Análisis a fondo: Manifiesto de RGPD y privacidad', href: '/es/local-llms/qwen-gdpr-privacy-manifesto-2026' },
   },
+  pt: {
+    'Quantization & VRAM': { text: 'Aprofundamento: Quantização explicada', href: '/pt/local-llms/llm-quantization-explained' },
+    'Ollama': { text: 'Aprofundamento: Melhores modelos open source com Ollama', href: '/pt/local-llms/top-open-source-models-ollama' },
+    'Tool Comparisons': { text: 'Aprofundamento: Ollama vs LM Studio', href: '/pt/local-llms/ollama-vs-lm-studio' },
+    'Model Comparisons': { text: 'Aprofundamento: Qwen vs Llama vs Mistral', href: '/pt/local-llms/qwen-vs-llama-vs-mistral' },
+    'Hardware-Specific': { text: 'Aprofundamento: Melhores GPUs econômicas para LLM local', href: '/pt/local-llms/best-budget-gpus-local-llm' },
+    'Quick Answers': { text: 'Aprofundamento: Quanta VRAM para um LLM local', href: '/pt/local-llms/how-much-vram-local-llm' },
+    'Prompt Engineering': { text: 'Aprofundamento: Framework de prompts CO-STAR', href: '/pt/prompt-engineering/co-star-framework' },
+    'Privacy & Compliance': { text: 'Aprofundamento: Manifesto de GDPR e privacidade', href: '/pt/local-llms/qwen-gdpr-privacy-manifesto-2026' },
+  },
 }
 
 const EDUCATIONAL_LEVEL: Record<string, Partial<Record<Language, string>>> = {
-  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级', es: 'Principiante' },
-  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio' },
-  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级', es: 'Avanzado' },
+  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante' },
+  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio', pt: 'Intermediário' },
+  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级', es: 'Avanzado', pt: 'Avançado' },
 }
 
 function promptBitesArticleHref(lang: Language, slug: string): string {
@@ -211,6 +233,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     ja: 'ローカルLLM向けVRAMと量化の決定木',
     zh: '本地LLM显存与量化决策树',
     es: 'Árbol de decisión de VRAM y cuantización para LLM locales',
+    pt: 'Árvore de decisão de VRAM e quantização para LLMs locais',
   },
   'ollama': {
     en: 'Ollama model picker guide for local LLM selection',
@@ -219,6 +242,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     ja: 'ローカルLLM選択のためのOllamaモデルピッカーガイド',
     zh: 'Ollama本地LLM模型选择指南',
     es: 'Guía de selección de modelos Ollama para LLM locales',
+    pt: 'Guia de seleção de modelos Ollama para LLMs locais',
   },
   'tool-comparisons': {
     en: 'Local LLM tool comparison matrix: Ollama, LM Studio, Jan',
@@ -227,6 +251,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     ja: 'ローカルLLMツール比較マトリクス：Ollama、LM Studio、Jan',
     zh: '本地LLM工具对比矩阵：Ollama、LM Studio、Jan',
     es: 'Matriz comparativa de herramientas LLM locales: Ollama, LM Studio, Jan',
+    pt: 'Matriz de comparação de ferramentas de LLM local: Ollama, LM Studio, Jan',
   },
   'model-comparisons': {
     en: 'Local LLM model size comparison chart',
@@ -235,6 +260,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     ja: 'ローカルLLMモデルサイズ比較チャート',
     zh: '本地LLM模型规模对比图',
     es: 'Gráfico comparativo del tamaño de modelos LLM locales',
+    pt: 'Gráfico comparativo do tamanho de modelos de LLM local',
   },
   'hardware-specific': {
     en: 'GPU VRAM tier guide for local LLM hardware selection',
@@ -243,6 +269,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     ja: 'ローカルLLMハードウェア選択のためのGPU VRAMティアガイド',
     zh: '本地LLM硬件选择GPU显存档位指南',
     es: 'Guía de niveles de VRAM de GPU para elegir hardware de LLM local',
+    pt: 'Guia de níveis de VRAM de GPU para escolher hardware de LLM local',
   },
   'quick-answers': {
     en: 'VRAM quick reference table for local LLMs',
@@ -251,6 +278,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     ja: 'ローカルLLM向けVRAMクイックリファレンステーブル',
     zh: '本地LLM显存快速参考表',
     es: 'Tabla de referencia rápida de VRAM para LLM locales',
+    pt: 'Tabela de referência rápida de VRAM para LLMs locais',
   },
   'prompt-engineering': {
     en: 'Prompt Bites overview — quick answers to local LLM questions',
@@ -259,6 +287,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     ja: 'Prompt Bites概要 — ローカルLLMの質問への迅速な回答',
     zh: 'Prompt Bites概览 — 本地LLM问题快速解答',
     es: 'Resumen de Prompt Bites — respuestas rápidas a preguntas sobre LLM locales',
+    pt: 'Visão geral do Prompt Bites — respostas rápidas para perguntas sobre LLMs locais',
   },
   'privacy-compliance': {
     en: 'GPU and VRAM guide for privacy-first local LLM deployment',
@@ -267,6 +296,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     ja: 'プライバシー優先のローカルLLM展開のためのGPU・VRAMガイド',
     zh: '隐私优先本地LLM部署的GPU和显存指南',
     es: 'Guía de GPU y VRAM para despliegue de LLM local centrado en la privacidad',
+    pt: 'Guia de GPU e VRAM para implantação de LLM local com foco em privacidade',
   },
 }
 
@@ -293,7 +323,7 @@ export function PromptBitesHubClient({ lang }: Props) {
 
         {/* Cross-language links */}
         <div className="flex justify-center mb-12">
-          <LangLinksBar cluster="prompt-bites" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es"]} initialLang={lang} />
+          <LangLinksBar cluster="prompt-bites" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es", "pt"]} initialLang={lang} />
         </div>
 
         {/* VRAM Reference Table */}

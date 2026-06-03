@@ -195,6 +195,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: 'クイック回答',
       zh: '快速解答',
       es: 'Respuestas rápidas',
+      pt: 'Respostas rápidas',
     },
     description: {
       en: 'Yes/no and one-number answers: RAM limits, laptop recommendations.',
@@ -203,6 +204,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: 'はい/いいえと1つの数字の回答：RAMの制限、ノートPC推奨。',
       zh: '是/否和单数字答案：RAM限制、笔记本推荐。',
       es: 'Respuestas de sí/no y un solo número: límites de RAM, recomendaciones de laptops.',
+      pt: 'Respostas de sim/não e de um único número: limites de RAM, recomendações de notebooks.',
     },
     articleSlugs: [
       'can-you-run-rag-on-2gb-ram',
@@ -222,6 +224,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: 'プロンプトエンジニアリング',
       zh: '提示词工程',
       es: 'Ingeniería de prompts',
+      pt: 'Engenharia de prompts',
     },
     description: {
       en: 'Quick definitions and best-of lists for prompt engineering concepts.',
@@ -230,6 +233,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: 'プロンプトエンジニアリングの概念の簡単な定義とベストリスト。',
       zh: '提示词工程概念的快速定义和最佳列表。',
       es: 'Definiciones rápidas y mejores listas para conceptos de ingeniería de prompts.',
+      pt: 'Definições rápidas e listas dos melhores para conceitos de engenharia de prompts.',
     },
     articleSlugs: [
       'co-star-prompt-framework',
@@ -248,6 +252,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: 'プライバシーとコンプライアンス',
       zh: '隐私与合规',
       es: 'Privacidad y cumplimiento normativo',
+      pt: 'Privacidade e conformidade',
     },
     description: {
       en: 'GDPR compliance, data sovereignty, and privacy-safe local AI deployment.',
@@ -256,6 +261,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: 'GDPRへの準拠、データ主権、プライバシーを守るローカルAIの展開。',
       zh: 'GDPR合规性、数据主权以及隐私安全的本地AI部署。',
       es: 'Cumplimiento del RGPD, soberanía de datos y despliegue de IA local con privacidad garantizada.',
+      pt: 'Conformidade com o GDPR, soberania de dados e implantação de IA local com privacidade garantida.',
     },
     articleSlugs: [
       'is-qwen-gdpr-compliant',
