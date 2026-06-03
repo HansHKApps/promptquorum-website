@@ -836,4 +836,341 @@ schema: {
         relatedReading: { id: 'related-reading', title: '相关阅读', items: ['[如何安装Ollama](/zh/local-llms/how-to-install-ollama) -- 安装和设置', '[如何安装LM Studio](/zh/local-llms/how-to-install-lm-studio) -- GUI替代方案', '[初学者最佳本地LLM模型](/zh/local-llms/best-beginner-local-llm-models) -- 基于硬件的模型推荐', '[什么是本地LLM？](/zh/local-llms/what-are-local-llms) -- 核心概念', '[本地LLM设置故障排除](/zh/local-llms/troubleshooting-local-llm-setup) -- 修复慢推理和常见错误', '[本地LLM OpenAI兼容API](/zh/local-llms/local-llm-openai-compatible-api) -- 将Ollama连接到Python和其他应用程序', '您的第一个本地LLM正在运行。现在学习如何有效地提示它：[什么是提示工程](https://www.promptquorum.com/zh/prompt-engineering/what-is-prompt-engineering)教授基础知识。'] },
       },
     },
+    pt: {
+      freshness_tier: 'semi_annual',
+      theme: 'Getting Started',
+      title: 'Rode seu primeiro LLM local em 10 minutos: da instalação à primeira resposta',
+      seoTitle: 'Rode seu primeiro LLM local em 10 minutos (passo a passo)',
+      intro: 'Rodar seu primeiro LLM local com o Ollama leva menos de 10 minutos. Instale o Ollama, execute um comando para baixar um modelo e comece a conversar no seu terminal — sem chave de API, sem conta e sem conexão à internet após o download inicial. A partir de abril de 2026, o modelo mais rápido para iniciantes é o Llama 3.2 3B, com 25-45 tokens/seg em uma CPU moderna de notebook.',
+      metaDescription: 'Rode seu primeiro LLM local em 10 minutos com o Ollama: instale, baixe um modelo 3B e obtenha a resposta. Sem chave de API nem internet após o download.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**Rodar seu primeiro LLM local leva menos de 10 minutos com o Ollama. Instale o Ollama, execute um comando para baixar um modelo e comece a conversar no seu terminal — sem chave de API, sem conta e sem conexão à internet após o download inicial.**',
+      audience: 'Iniciantes rodando seu primeiro LLM local em hardware de consumo',
+      readTime: '7 min de leitura',
+      heroComponent: 'LLMImageSelector',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM',
+      toc: [
+        { label: 'Pontos principais', anchor: '#key-takeaways' },
+        { label: 'Passo 1: Instalar o Ollama', anchor: '#step-1-install-ollama' },
+        { label: 'Passo 2: Escolher seu primeiro modelo', anchor: '#step-2-choose-your-first-model' },
+        { label: 'Passo 3: Baixar o modelo', anchor: '#step-3-pull-the-model' },
+        { label: 'Passo 4: Rodar e conversar', anchor: '#step-4-run-and-chat' },
+        { label: 'O que esperar: velocidade e qualidade', anchor: '#what-to-expect' },
+        { label: 'Além do terminal', anchor: '#beyond-the-terminal' },
+        { label: 'Contexto regional', anchor: '#regional-context' },
+        { label: 'Perguntas frequentes', anchor: '#faq' },
+        { label: 'Erros comuns', anchor: '#common-mistakes' },
+        { label: 'Leituras relacionadas', anchor: '#related-reading' },
+        { label: 'Fontes', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'O caminho mais rápido: instale o Ollama → execute `ollama run llama3.2` → converse no seu terminal. Tempo total: menos de 5 minutos com uma conexão rápida.',
+            'Para máquinas com 8 GB de RAM: comece com `llama3.2:3b` (download de 2 GB) ou `phi4-mini` (2,3 GB). Ambos funcionam em qualquer notebook moderno.',
+            'Espere 15-40 tokens/seg na CPU e 60-120 tokens/seg em uma GPU intermediária ou Apple Silicon.',
+            'As primeiras respostas podem parecer mais lentas que as APIs em nuvem — os modelos locais trocam velocidade por privacidade e custo zero.',
+            'Após o download inicial do modelo, tudo funciona offline. Não é preciso internet para as sessões seguintes.',
+          ],
+        },
+        step1: {
+          title: 'Passo 1: Instalar o Ollama',
+          content: 'O Ollama é a forma mais rápida de rodar um LLM local. Instale-o com um comando ou um download de 2 minutos:',
+          codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download',
+          codeLanguage: 'bash',
+        },
+        step1Detail: {
+          title: 'Verificar se o Ollama está em execução',
+          content: 'Após a instalação, confirme que o Ollama está ativo:',
+          codeBlock: 'curl http://localhost:11434\n# Expected output: Ollama is running',
+          codeLanguage: 'bash',
+        },
+        step2: {
+          title: 'Passo 2: Escolher seu primeiro modelo',
+          content: 'Escolha um modelo conforme a RAM disponível. Na dúvida, comece com `llama3.2:3b` — funciona em qualquer máquina com 4 GB de RAM e produz resultados úteis:',
+          rows: [
+            { 'Sua RAM': '4 GB', 'Modelo recomendado': 'llama3.2:1b', 'Tamanho do download': '~1,3 GB', 'Por quê': 'O menor modelo Llama que ainda é útil' },
+            { 'Sua RAM': '8 GB', 'Modelo recomendado': 'Llama 3.2 3B', 'Tamanho do download': '~2 GB', 'Por quê': 'Melhor relação qualidade/tamanho para iniciantes' },
+            { 'Sua RAM': '8-16 GB', 'Modelo recomendado': 'Llama 3.3 8B', 'Tamanho do download': '~4,7 GB', 'Por quê': 'Modelo de propósito geral de alto desempenho' },
+            { 'Sua RAM': '16+ GB', 'Modelo recomendado': 'mistral:7b ou qwen2.5:7b', 'Tamanho do download': '~4-5 GB', 'Por quê': 'Qualidade competitiva, inferência rápida' },
+          ],
+          columns: ['Sua RAM', 'Modelo recomendado', 'Tamanho do download', 'Por quê'],
+        },
+        step3: {
+          title: 'Passo 3: Baixar o modelo',
+          content: 'Baixe o modelo com `ollama pull`. O modelo é salvo em `~/.ollama/models` e só precisa ser baixado uma vez:',
+          codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b',
+          codeLanguage: 'bash',
+        },
+        step3Progress: {
+          title: 'Como é o download?',
+          content: 'O Ollama mostra o progresso do download no terminal. Um modelo `llama3.2:3b` leva 2-5 minutos em uma conexão de banda larga típica. O modelo é armazenado comprimido — os 2 GB baixados se expandem para cerca de 2,3 GB em disco.',
+          codeBlock: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess',
+          codeLanguage: 'text',
+        },
+        step4: {
+          id: 'step-4-run-and-chat',
+          title: 'Passo 4: Rodar o modelo e enviar seu primeiro prompt',
+          content: 'Inicie uma sessão de chat interativa:',
+          codeBlock: 'ollama run llama3.2\n\n# Ollama loads the model and shows a prompt:\n>>> Send a message (/? for help)',
+          codeLanguage: 'bash',
+        },
+        step4Chat: {
+          title: 'Sua primeira conversa',
+          content: 'Digite uma mensagem e pressione Enter. O modelo transmite a resposta token por token:',
+          codeBlock: '>>> What are local LLMs?\n\nLocal LLMs (large language models) are AI models that run entirely\non your own hardware -- your laptop, desktop, or server. Unlike cloud\nservices such as ChatGPT or Claude, local LLMs process everything\nlocally with no data sent to external servers...',
+          codeLanguage: 'text',
+        },
+        whatToExpect: {
+          id: 'what-to-expect',
+          title: 'O que esperar: velocidade, qualidade e limitações',
+          content: [
+            '**Velocidade** varia conforme o hardware. Em um notebook de 2023 (sem GPU): espere 15-25 tokens/seg para um modelo 3B e 8-15 tokens/seg para um 8B. No Apple M3 Pro: 50-80 tokens/seg para 8B. Em uma NVIDIA RTX 4070 Ti: 90-130 tokens/seg para 8B.',
+            '**Qualidade** do `llama3.2:3b` é nitidamente inferior ao GPT-5.5 ou ao Claude Opus 4.8 em tarefas complexas. Para resumos, perguntas e respostas simples e explicação de código, o resultado é útil. Para raciocínio em várias etapas ou escrita longa, faça upgrade para um modelo 8B ou 13B.',
+            '**Janela de contexto**: o `llama3.2:3b` suporta 128K tokens por padrão no Ollama. Na prática, a qualidade se degrada após ~16K tokens em uma única conversa.',
+            '**Atraso na primeira resposta**: a primeira resposta após `ollama run` inclui o tempo de carregamento do modelo (5-30 segundos). As respostas seguintes na mesma sessão são mais rápidas.',
+          ],
+        },
+        beyondTerminal: {
+          id: 'beyond-the-terminal',
+          title: 'Como usar seu LLM local além do terminal?',
+          content: 'O chat no terminal do Ollama é útil para testes, mas a maioria dos casos de uso reais precisa de uma interface melhor:',
+          items: [
+            '**Open WebUI**: uma interface web completa para o Ollama. Rode com Docker: `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main`. Acesse em http://localhost:3000.',
+            '**LM Studio**: se você prefere uma GUI de desktop, [Como instalar o LM Studio](/pt/local-llms/how-to-install-lm-studio) cobre a configuração completa. O chat integrado do LM Studio é polido e suporta histórico de conversas.',
+            '**Integração via API**: a API do Ollama em `localhost:11434` é compatível com o SDK da OpenAI. Qualquer aplicação que aceite uma URL base da OpenAI pode se conectar ao seu modelo local.',
+            '**VS Code / Cursor**: extensões como o Continue.dev se conectam ao Ollama e fornecem assistência de codificação com IA local diretamente no seu editor.',
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Rodar seu primeiro LLM local: contexto regional',
+          content: [
+            '**UE / GDPR e Brasil / LGPD**: rodar um LLM local com o Ollama significa que nenhum dado de prompt, contexto ou saída sai da sua máquina — os mecanismos de transferência do Artigo 46 do GDPR não se aplicam, e a LGPD brasileira (Lei nº 13.709/2018) é atendida pelo mesmo princípio de não transferência. Para profissionais que lidam com dados pessoais, esta é a alternativa que preserva a privacidade frente às APIs de IA em nuvem. Seu primeiro modelo local (llama3.2:3b) usa 2 GB de disco, gera zero chamadas de API externas e cumpre por design as diretrizes de minimização de dados.',
+            '**Japão (METI)**: as diretrizes de governança de IA do METI exigem documentar onde a inferência de IA ocorre. Sua primeira configuração do Ollama cria um ambiente local completo e auditável: arquivos de modelo armazenados em ~/.ollama/models com nomes de arquivo específicos de versão, sem dependências de API externas, e inferência verificável via `ollama ps`. Profissionais japoneses que rodam Llama ou Qwen3 localmente podem documentar a versão exata do modelo e o hardware para os fins de conformidade do METI.',
+            '**China**: para fluxos de trabalho em chinês, substitua o llama3.2:3b por qwen2.5:3b como primeiro modelo: `ollama pull qwen2.5:3b`. O Qwen3 processa texto em chinês 30-40% mais eficientemente em tokens que o Llama, produzindo melhores resultados no mesmo nível de hardware. Os comandos ollama pull e run são idênticos.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas frequentes ao rodar seu primeiro LLM local',
+          faqs: [
+            {
+              q: 'A resposta do modelo está muito lenta — isso é normal?',
+              a: 'Em hardware apenas com CPU, 8-20 tokens/seg é normal para um modelo 7B. Cada token equivale a cerca de 0,75 palavra. A 10 tokens/seg, uma resposta de 100 palavras leva uns 13 segundos. Para acelerar a inferência, use um modelo menor (3B em vez de 8B), ative o offload para GPU se tiver uma compatível, ou use o nível de quantização Q4_K_M, que é a configuração mais rápida habitual.',
+            },
+            {
+              q: 'Posso rodar dois modelos ao mesmo tempo?',
+              a: 'O Ollama pode manter vários modelos carregados simultaneamente se você tiver RAM suficiente. Por padrão, o Ollama descarrega um modelo após 5 minutos de inatividade. Você pode mudar isso com a variável de ambiente OLLAMA_KEEP_ALIVE. Rodar dois modelos 7B ao mesmo tempo exige ~16 GB de RAM.',
+            },
+            {
+              q: 'Como paro o Ollama para que ele não rode em segundo plano?',
+              a: 'No macOS: clique no ícone da lhama na barra de menus e selecione Sair. No Linux: execute `systemctl stop ollama`. No Windows: clique com o botão direito no ícone da bandeja do sistema e selecione Sair. Para evitar que o Ollama inicie no login, remova-o dos seus itens de inicialização.',
+            },
+            {
+              q: 'Qual é a forma mais fácil de rodar um LLM local pela primeira vez?',
+              a: 'Instale o Ollama (ollama.com), execute `ollama pull llama3.2:3b` e depois `ollama run llama3.2:3b`. É isso. Três comandos, 2-5 minutos e você tem um modelo de IA funcionando na sua máquina sem precisar de internet após o download inicial.',
+            },
+            {
+              q: 'Como sei se meu LLM local está funcionando corretamente?',
+              a: 'Execute `ollama ps` no terminal. Se o modelo estiver em execução, ele aparecerá na lista com nome, tamanho e uso de memória. Envie um prompt simples como "Quanto é 2+2?" — se responder "4", o modelo está funcionando corretamente.',
+            },
+            {
+              q: 'Meu computador precisa de uma GPU para rodar um LLM local?',
+              a: 'Não. Os LLMs locais rodam na CPU. Uma GPU torna a inferência 5-10 vezes mais rápida, mas apenas com CPU já dá conta para aprender e para muitos casos de uso reais. Notebooks modernos com Apple M1/M2, AMD Ryzen ou Intel de 12ª geração conseguem rodar modelos 3B-7B em velocidades razoáveis (10-30 tokens/seg).',
+            },
+            {
+              q: 'Quanto espaço em disco um LLM local ocupa?',
+              a: 'O `llama3.2:1b` ocupa 1,3 GB, o `llama3.2:3b` ocupa 2 GB, o `llama3.1:8b` ocupa 4,7 GB. Esses são os tamanhos comprimidos como o Ollama os armazena. Após carregá-los na RAM para a inferência, os tamanhos diferem (consulte [Quanta VRAM para LLM local](/pt/local-llms/how-much-vram-local-llm) para mais detalhes).',
+            },
+            {
+              q: 'Posso usar meu LLM local sem conexão à internet?',
+              a: 'Sim, totalmente. Baixe o modelo uma vez com o Ollama (exige internet) e depois rode-o localmente para sempre sem internet. Perfeito para redes privadas, aviões ou ambientes totalmente offline.',
+            },
+            {
+              q: 'Qual é a diferença entre um LLM local e o ChatGPT?',
+              a: 'O ChatGPT roda nos servidores da OpenAI. Os LLMs locais rodam na sua máquina. Local = nenhum dado sai do seu dispositivo, privacidade total, sem custos de API. ChatGPT = melhor qualidade em tarefas complexas, exige internet e uma assinatura paga. Ambos têm vantagens e desvantagens.',
+            },
+            {
+              q: 'Qual é o melhor primeiro modelo para testar com o Ollama?',
+              a: '`ollama pull llama3.2:3b` — pesa 2 GB, funciona em qualquer notebook moderno, produz respostas competentes e é o ponto de partida recomendado pelo Ollama. Depois de testá-lo, consulte [Melhores modelos LLM locais para iniciantes](/pt/local-llms/best-beginner-local-llm-models) para alternativas conforme seu hardware.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'Próximos passos após sua primeira execução',
+          content: 'Agora que você tem um LLM local funcionando, explore o que ele consegue fazer. Para entender quais modelos rendem melhor com seu hardware, consulte [Melhores modelos LLM locais para iniciantes](/pt/local-llms/best-beginner-local-llm-models). Para dicas de desempenho específicas para notebooks, consulte [Como rodar LLMs locais em um notebook](/pt/local-llms/local-llm-on-laptop). Para boas práticas de privacidade e segurança, consulte a [Lista de verificação de segurança e privacidade de LLM local](/pt/local-llms/local-llm-security-privacy-checklist).',
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fontes',
+          items: [
+            '[**Biblioteca de modelos do Ollama**](https://ollama.com/library) -- Lista oficial de modelos disponíveis para download e suas especificações',
+            '[**Repositório do Ollama no GitHub**](https://github.com/ollama/ollama) -- Código-fonte aberto, documentação e rastreamento de problemas',
+            '[**Ficha do modelo Meta Llama 3.2**](https://llama.meta.com/) -- Especificações oficiais, dados de treinamento e benchmarks de desempenho',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Erros comuns após sua primeira execução',
+          items: [
+            'Confundir a contagem de tokens com a velocidade — um modelo 7B que gera 100 tokens a 20 tokens/seg leva 5 segundos, não é instantâneo.',
+            'Rodar a inferência enquanto o sistema está ocupado com outras tarefas, reduzindo significativamente os tokens/seg efetivos.',
+            'Não verificar os limites da janela de contexto — a maioria dos modelos para iniciantes suporta 2K-8K tokens, não os 100K+ dos modelos de fronteira.',
+            'Esperar respostas instantâneas na primeira execução — a primeira resposta inclui o tempo de carregamento do modelo (5-30 segundos). As respostas seguintes na mesma sessão são 2-5 vezes mais rápidas.',
+            'Usar a tag de modelo errada — `llama3.1:8b-text` é o modo de completação de texto base e produzirá loops/repetições infinitos. Use tags `-instruct` como `llama3.1:8b-instruct` para chat.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Leituras relacionadas',
+          items: [
+            '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) -- Instalação e configuração',
+            '[Como instalar o LM Studio](/pt/local-llms/how-to-install-lm-studio) -- Alternativa com GUI',
+            '[Melhores modelos LLM locais para iniciantes](/pt/local-llms/best-beginner-local-llm-models) -- Recomendações de modelos conforme seu hardware',
+            '[O que são LLMs locais?](/pt/local-llms/what-are-local-llms) -- Conceitos básicos e como funcionam',
+            '[Solução de problemas de configuração de LLM local](/pt/local-llms/troubleshooting-local-llm-setup) -- Resolva inferência lenta, GPU não detectada e erros comuns',
+            '[API compatível com OpenAI para LLM local](/pt/local-llms/local-llm-openai-compatible-api) -- Conecte o Ollama em execução ao Python e a outras aplicações',
+            'Seu primeiro LLM local está em execução. Agora aprenda a escrever prompts de forma eficaz: [o que é engenharia de prompts](https://www.promptquorum.com/pt/prompt-engineering/what-is-prompt-engineering) ensina os fundamentos.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Rode seu primeiro LLM local em 10 minutos (passo a passo)',
+        'description': 'Rode seu primeiro LLM local em menos de 10 minutos com o Ollama: instale, baixe um modelo 3B e obtenha uma resposta — sem chave de API nem conta após o download.',
+        'url': 'https://www.promptquorum.com/pt/local-llms/run-first-local-llm?lang=pt',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-18',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'Llama 3.2' },
+          { '@type': 'Thing', 'name': 'Local LLM' },
+          { '@type': 'Thing', 'name': 'Configuração de modelos de IA' },
+          { '@type': 'Thing', 'name': 'Comandos de terminal' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Como rodar seu primeiro LLM local em 10 minutos',
+        'totalTime': 'PT10M',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Instalar o Ollama', 'text': 'Baixe e instale o Ollama em ollama.ai. Verifique a instalação com `ollama --version`.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Escolher seu primeiro modelo', 'text': 'Selecione um modelo para iniciantes conforme seu hardware: Llama 3.2 3B (4 GB de RAM), Phi 2.5 (8 GB) ou Mistral Small (16 GB).' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Baixar o modelo', 'text': 'Execute `ollama pull llama3.2:3b` para baixar o modelo. Aguarde a conclusão.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Rodar e conversar', 'text': 'Execute `ollama run llama3.2:3b` para iniciar o modelo e começar a conversar no seu terminal.' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Testar com seu primeiro prompt', 'text': 'Digite seu primeiro prompt (p. ex., "Olá, o que é um LLM?") e pressione Enter. Observe o tempo de resposta e a qualidade.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'A resposta do modelo está muito lenta — isso é normal?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Em hardware apenas com CPU, 8-20 tokens/seg é normal para um modelo 7B. Cada token equivale a cerca de 0,75 palavra. A 10 tokens/seg, uma resposta de 100 palavras leva uns 13 segundos. Para acelerar a inferência, use um modelo menor (3B em vez de 8B), ative o offload para GPU se tiver uma compatível, ou use o nível de quantização Q4_K_M, que é a configuração mais rápida habitual.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso rodar dois modelos ao mesmo tempo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Ollama pode manter vários modelos carregados simultaneamente se você tiver RAM suficiente. Por padrão, o Ollama descarrega um modelo após 5 minutos de inatividade. Você pode mudar isso com a variável de ambiente OLLAMA_KEEP_ALIVE. Rodar dois modelos 7B ao mesmo tempo exige ~16 GB de RAM.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como paro o Ollama para que ele não rode em segundo plano?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No macOS: clique no ícone da lhama na barra de menus e selecione Sair. No Linux: execute `systemctl stop ollama`. No Windows: clique com o botão direito no ícone da bandeja do sistema e selecione Sair. Para evitar que o Ollama inicie no login, remova-o dos seus itens de inicialização.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a forma mais fácil de rodar um LLM local pela primeira vez?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Instale o Ollama (ollama.com), execute `ollama pull llama3.2:3b` e depois `ollama run llama3.2:3b`. É isso. Três comandos, 2-5 minutos e você tem um modelo de IA funcionando na sua máquina sem precisar de internet após o download inicial.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como sei se meu LLM local está funcionando corretamente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Execute `ollama ps` no terminal. Se o modelo estiver em execução, ele aparecerá na lista com nome, tamanho e uso de memória. Envie um prompt simples como "Quanto é 2+2?" — se responder "4", o modelo está funcionando corretamente.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Meu computador precisa de uma GPU para rodar um LLM local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. Os LLMs locais rodam na CPU. Uma GPU torna a inferência 5-10 vezes mais rápida, mas apenas com CPU já dá conta para aprender e para muitos casos de uso reais. Notebooks modernos com Apple M1/M2, AMD Ryzen ou Intel de 12ª geração conseguem rodar modelos 3B-7B em velocidades razoáveis (10-30 tokens/seg).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quanto espaço em disco um LLM local ocupa?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O `llama3.2:1b` ocupa 1,3 GB, o `llama3.2:3b` ocupa 2 GB, o `llama3.1:8b` ocupa 4,7 GB. Esses são os tamanhos comprimidos como o Ollama os armazena. Após carregá-los na RAM para a inferência, os tamanhos diferem.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar meu LLM local sem conexão à internet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, totalmente. Baixe o modelo uma vez com o Ollama (exige internet) e depois rode-o localmente para sempre sem internet. Perfeito para redes privadas, aviões ou ambientes totalmente offline.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a diferença entre um LLM local e o ChatGPT?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O ChatGPT roda nos servidores da OpenAI. Os LLMs locais rodam na sua máquina. Local = nenhum dado sai do seu dispositivo, privacidade total, sem custos de API. ChatGPT = melhor qualidade em tarefas complexas, exige internet e uma assinatura paga. Ambos têm vantagens e desvantagens.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o melhor primeiro modelo para testar com o Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '`ollama pull llama3.2:3b` — pesa 2 GB, funciona em qualquer notebook moderno, produz respostas competentes e é o ponto de partida recomendado pelo Ollama. Depois de testá-lo, consulte os melhores modelos LLM locais para iniciantes para alternativas conforme seu hardware.'
+            }
+          },
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Melhores primeiros modelos de LLM local por RAM',
+        'numberOfItems': 4,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB de RAM. Download de 1,3 GB. O menor modelo Llama que ainda é útil.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 GB de RAM. Download de 2 GB. Melhor relação qualidade-tamanho para iniciantes.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 GB de RAM. Download de 4,7 GB. Alto desempenho de propósito geral.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b ou qwen2.5:7b', 'description': '16+ GB de RAM. Download de 4-5 GB. Qualidade competitiva.' },
+        ]
+      },
+    },
   };
