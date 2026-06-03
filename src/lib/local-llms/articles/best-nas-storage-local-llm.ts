@@ -467,4 +467,181 @@ schema: {
         sources: { title: '参考来源', items: ['Synology & QNAP官方文档：RAID配置与重建时间', 'TrueNAS文档：ZFS冗余与备份策略', 'Backblaze B2定价与加密规范'] },
       },
     },
+    pt: {
+      freshness_tier: 'annual',
+      theme: 'Privacy & Business',
+      title: 'Melhor NAS e Armazenamento para Modelos de IA Local',
+      seoTitle: 'NAS para LLMs Locais: RAID 6, Backup e Redundância',
+      // VERIFY: preços em USD (modelo do bloco es). Avaliar localização para BRL (R$) e disponibilidade de varejistas no Brasil (Synology/QNAP/Backblaze) antes de publicar.
+      intro: '**Um NAS (Network-Attached Storage) mantém sua biblioteca de modelos organizada, com backup e acessível em qualquer máquina.** Em abril de 2026, o armazenamento RAID 6 (tolerância a falha de 2 discos) com backups automatizados é essencial para equipes de LLMs locais em produção. Orçamento: US$ 1.500-3.000 para 4-8 TB de capacidade utilizável. Os preços podem variar conforme o seu país.',
+      metaDescription: 'Melhor NAS para LLMs locais: redundância RAID 6, estratégia de backup e organização da biblioteca de modelos. Compare Synology, QNAP e TrueNAS.',
+      publishDate: '2026-04-05',
+      leadAnswerBlock: '**Um NAS (Network-Attached Storage) mantém sua biblioteca de modelos organizada, com backup e acessível em qualquer máquina. Em abril de 2026, o armazenamento RAID 6 (tolerância a falha de 2 discos) com backups automatizados é essencial para equipes de LLMs locais em produção.**',
+      audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam fluxos de trabalho com LLMs locais',
+      readTime: '8 min de leitura',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'NAS Storage',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'NAS para LLMs Locais: RAID 6, Backup e Redundância',
+        'description': 'Melhor NAS para LLMs locais: redundância RAID 6, estratégia de backup e organização da biblioteca de modelos. Compare Synology, QNAP e TrueNAS.',
+        'url': 'https://www.promptquorum.com/pt/local-llms/best-nas-storage-local-llm?lang=pt',
+        'datePublished': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Melhor NAS para LLMs Locais',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'SSD Local', 'description': 'Capacidade de 2 TB, acesso rápido, sem redundância. Ideal para uma única máquina.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'NAS com RAID 6', 'description': 'Capacidade de 8 TB, acesso compartilhado, tolerância a falha de 2 discos. Ideal para equipes.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Armazenamento em nuvem (AWS S3)', 'description': 'Capacidade ilimitada, acesso remoto, excelente redundância. Ideal para modelos arquivados.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Disco USB externo', 'description': 'Capacidade de 4 TB, portátil, backup offline. Ideal para armazenamento seguro sem conexão.' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'O que é um NAS e por que preciso dele para LLMs locais?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Um NAS (Network-Attached Storage) mantém sua biblioteca de modelos organizada, com backup e acessível em qualquer máquina. É essencial para equipes de LLMs locais em produção que gerenciam vários modelos e usuários.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é RAID 6 e por que é recomendado para NAS?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'O RAID 6 oferece redundância na qual 2 discos podem falhar simultaneamente sem perda de dados. É essencial para sistemas em produção, para proteger contra falhas de disco.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Melhor NAS para LLMs locais: Synology, QNAP ou TrueNAS?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'O Synology DS420+ é a melhor opção para equipes com orçamento limitado (US$ 1.000 no total com os discos). QNAP TS-464C2U para necessidades de desempenho. TrueNAS SCALE para recursos ZFS avançados e implantação open-source.' }
+          }
+        ]
+      },
+      toc: [
+        { label: 'Pontos principais', anchor: '#tldr' },
+        { label: 'NAS vs SSD local vs Armazenamento em nuvem', anchor: '#comparison' },
+        { label: 'Recomendações de NAS por caso de uso', anchor: '#recommendations' },
+        { label: 'Configuração de RAID e Redundância', anchor: '#raid' },
+        { label: 'Estratégia de Backup', anchor: '#backup' },
+        { label: 'Organização da Biblioteca de Modelos', anchor: '#organization' },
+        { label: 'Erros comuns com NAS', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**NAS (Network-Attached Storage):** Armazenamento centralizado acessível pela rede. RAID 6 (2 discos podem falhar simultaneamente).',
+            '**Melhor opção econômica:** Synology DS420+ de 4 baias, US$ 400 (apenas hardware). 4× 4 TB WD Red Pro = US$ 600. Total US$ 1.000 para 8 TB utilizáveis. Os preços podem variar conforme o seu país.',
+            '**Melhor desempenho:** QNAP TS-464C2U ou TrueNAS SCALE em rede de 10 Gbps. Custo: US$ 2.000+.',
+            '**Armazenamento de modelos:** Mantenha todos os modelos quantizados (arquivos .gguf) no NAS. Um modelo 70B = 35 GB; armazene mais de 10 modelos.',
+            '**Backup:** Backup diário para a nuvem (Backblaze B2 = US$ 6/mês ilimitado). Ou discos USB externos (offline, seguro).',
+            '**Latência de rede:** NAS na mesma LAN que o servidor de inferência = <10 ms de latência (aceitável). Pela internet = lento demais.',
+            '**Redundância:** RAID 6 protege contra 2 falhas de disco. Ainda assim, faça backups externos (ransomware, roubo).',
+            '**Comparação de custos:** NAS de 8 TB = US$ 1.000 de pagamento único + US$ 6/mês de backup. Armazenamento em nuvem = US$ 50-100/mês indefinidamente.',
+          ],
+        },
+        'comparison': {
+          title: 'NAS vs SSD local vs Armazenamento em nuvem',
+          rows: [
+            { '0': 'Opção', '1': 'Capacidade', '2': 'Custo', '3': 'Velocidade', '4': 'Redundância', '5': 'Ideal para' },
+            { '0': 'SSD local', '1': '2TB', '2': 'US$ 200', '3': 'Rápida', '4': 'Nenhuma', '5': 'Máquina única, acesso rápido' },
+            { '0': 'NAS (RAID 6)', '1': '8TB', '2': 'US$ 1.000', '3': 'Média', '4': 'Boa', '5': 'Equipes, acesso compartilhado' },
+            { '0': 'Nuvem (AWS S3)', '1': 'Ilimitada', '2': 'US$ 50+/mês', '3': 'Lenta', '4': 'Excelente', '5': 'Acesso remoto, modelos arquivados' },
+            { '0': 'USB externo', '1': '4TB', '2': 'US$ 150', '3': 'Lenta', '4': 'Nenhuma', '5': 'Backup offline, portátil' },
+          ],
+          columns: ['Opção', 'Capacidade', 'Custo', 'Velocidade', 'Redundância', 'Ideal para'],
+        },
+        'recommendations': {
+          title: 'Recomendações de NAS por caso de uso',
+          content: [
+            '**Desenvolvedor individual (1-5 máquinas):** Dispense o NAS. Use SSD local + backup em USB externo.',
+            '**Equipe pequena (5-10 usuários):** Synology DS420+ ou QNAP TS-432PX. 4 baias, 10 Gbps opcional. US$ 1.000-1.500.',
+            '**Equipe média (10-50):** Synology DS720+ ou QNAP TS-464C2U. 10 Gbps duplo, cache SSD. US$ 1.500-2.500.',
+            '**Equipe grande (50+):** TrueNAS SCALE em hardware empresarial. Build personalizado. US$ 3.000+.',
+            '**Para equipes com requisitos de conformidade (saúde, finanças):** TrueNAS (open-source, auditável). Synology/QNAP são proprietários.',
+          ],
+        },
+        'raid': {
+          title: 'Configuração de RAID e Redundância',
+          content: [
+            '**RAID 1 (espelhamento):** 2 discos, dados copiados. Se 1 falhar, use o outro. Utilizável = 50% (2× 4 TB = 4 TB utilizáveis).',
+            '**RAID 5 (striping + paridade):** 3+ discos. Se 1 falhar, reconstrói a partir da paridade. Utilizável = 67% (3× 4 TB = 8 TB utilizáveis). Reconstrução lenta.',
+            '**RAID 6 (paridade dupla):** 4+ discos. Se 2 falharem, os dados ficam seguros. Utilizável = 50% (4× 4 TB = 8 TB utilizáveis). Recomendado para produção.',
+            '**RAID 10 (espelho + stripe):** 4 discos espelhados em pares. Rápido, caro. 50% utilizável.',
+            '**Recomendação:** RAID 6 para equipes. Equilibra redundância, custo e velocidade.',
+          ],
+        },
+        'backup': {
+          title: 'Estratégia de Backup',
+          content: [
+            '**Regra de backup:** 3-2-1 (3 cópias, 2 tipos de mídia, 1 externa).',
+            '- NAS = primário (no local).',
+            '- USB externo = secundário (no local, mas fisicamente separado).',
+            '- Nuvem (Backblaze B2) = backup externo (offsite).',
+            '**Frequência:** Incremental diário, completo semanal. Automatizado com rsync + cron.',
+            '**Teste de recuperação:** Simulação mensal de restauração. Restaure um modelo de amostra do backup e verifique a integridade.',
+          ],
+        },
+        'organization': {
+          title: 'Organização da Biblioteca de Modelos',
+          content: [
+            '/models/',
+            '  /llama3/',
+            '    /llama3-7b-instruct-q4.gguf',
+            '    /llama3-13b-instruct-q4.gguf',
+            '    /llama3-70b-instruct-q4.gguf',
+            '  /mistral/',
+            '    /mistral-7b-instruct-q4.gguf',
+            '  /quantization-sources/',
+            '    /llama3-70b-f32.safetensors (backup em precisão total)',
+            '**Convenção de nomes:** [modelo]-[params]-[formato]-[quantização].gguf',
+            '**Checksums:** Guarde hashes SHA256 de cada modelo. Verifique no download para detectar corrupção.',
+          ],
+        },
+        'mistakes': {
+          title: 'Erros comuns com NAS',
+          items: [
+            'RAID 5 em discos grandes. O tempo de reconstrução é de 24-48 horas; alta probabilidade de falha de um segundo disco durante a reconstrução. Use RAID 6.',
+            'Sem backups. Uma falha de hardware do NAS = perda de todos os modelos. Backups externos são obrigatórios.',
+            'RAID subdimensionado. Compre 8 TB quando achar que 4 TB é suficiente. Os modelos crescem rapidamente.',
+          ],
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            { q: 'Devo usar o NAS para inferência ou apenas para armazenamento?', a: 'Apenas armazenamento. Mantenha a inferência na GPU local. O NAS pela rede é lento demais para inferência em tempo real.' },
+            { q: 'Posso usar um notebook antigo como NAS?', a: 'Sim, mas o consumo de energia é alto (20W+). Um NAS dedicado usa 10-15W. Compensa ao longo de 3+ anos.' },
+            { q: 'O backup na nuvem (Backblaze) é seguro para arquivos de modelos?', a: 'Sim, com criptografia. O Backblaze usa AES-256 em repouso. Os dados são privados (o Backblaze não consegue lê-los).' },
+            { q: 'Quanto tempo leva a reconstrução do RAID 6?', a: '~24 horas para 8 TB. Durante a reconstrução, se um segundo disco falhar, os dados são perdidos. Raro, mas possível; monitore ativamente.' },
+            { q: 'Posso usar Synology + TrueNAS juntos?', a: 'Sim. Synology para velocidade/facilidade, TrueNAS para conformidade/auditoria. Mas é exagero, a menos que você precise dos dois.' },
+            { q: 'Preciso de rede de 10 Gbps para o NAS?', a: 'Não. Gigabit (1 Gbps) é suficiente para transferências de modelos (1 hora para um modelo 70B de 35 GB). 10 Gbps é para equipes com mais de 20 usuários.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Leituras relacionadas',
+          items: [
+            '[Configuração de LLM local para equipes](/pt/local-llms/local-llm-setup-for-teams)',
+            '[Fluxo de trabalho offline seguro com LLM local](/pt/local-llms/secure-offline-local-llm-workflow)',
+            '[LLM local privado para dados sensíveis](/pt/local-llms/private-local-llm-sensitive-data)',
+          ],
+        },
+        'sources': {
+          title: 'Fontes',
+          items: [
+            'Documentação oficial da Synology e QNAP: configuração de RAID e tempos de reconstrução',
+            'Documentação do TrueNAS: redundância ZFS e estratégias de backup',
+            'Especificações de preços e criptografia do Backblaze B2',
+          ],
+        },
+      },
+    },
   };

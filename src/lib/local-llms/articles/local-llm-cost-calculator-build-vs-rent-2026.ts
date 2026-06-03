@@ -672,4 +672,207 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: '本地LLM成本计算器：自建 vs 云租GPU 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'zh' },
   },
+  // VERIFY: artigo de afiliados — preços mantidos em USD (modelo do bloco es) e links apontam para Amazon.com/RunPod/Apple globais. Política de localização de afiliados pede preços em BRL e varejistas brasileiros (Amazon.com.br, Kabum, Pichau). Localizar antes de publicar.
+  pt: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Cost & Comparisons',
+    title: 'Calculadora de Custo de LLM Local: Montar vs Alugar 2026',
+    seoTitle: 'Calculadora de Custo de LLM Local 2026: Montar vs Alugar',
+    metaDescription: 'Comparação de custo montar vs alugar LLM 2026. Calculadora completa de TCO para workstation com GPU local vs nuvem RunPod/Lambda Labs — equilíbrio em ~1.800 horas de GPU.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**Para equipes que rodam LLMs mais de 4 horas por dia, montar uma workstation RTX 4090 local atinge o ponto de equilíbrio frente ao aluguel de GPU em nuvem em 12–18 meses e é mais barata no longo prazo. Abaixo de 50 horas/mês, a nuvem vence pela flexibilidade e pela ausência de custo inicial.**',
+    quickAnswerTop: {
+      question: 'É mais barato montar um servidor de LLM local ou alugar GPU na nuvem?',
+      answer: 'A GPU em nuvem vence abaixo de 50 horas/mês (US$ 0,35–0,90/h). O hardware local vence acima de 4 horas/dia de uso — uma workstation RTX 4090 de US$ 1.800 se paga em 12–18 meses frente aos preços spot do RunPod.',
+      bullets: [
+        'GPU em nuvem: sem custo inicial, ideal para uso ocasional (< 50 h/mês)',
+        'RTX 4090 local: ponto de equilíbrio após ~1.800 horas de GPU',
+        'Mac Mini M4 Pro local: ponto de equilíbrio após ~1.200 horas de GPU',
+        'A eletricidade acrescenta US$ 0,02–0,08/h aos custos locais',
+        'Custos ocultos da nuvem: taxas de egress, armazenamento, cobrança por computação ociosa',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'Montar uma workstation de LLM local fica mais barato que alugar GPU na nuvem após aproximadamente 1.800 horas de uso acumulado.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'Esta calculadora compara o custo total de propriedade de uma máquina com GPU local frente ao pagamento por hora em plataformas de nuvem como RunPod ou Lambda Labs.',
+      },
+    ],
+    affiliateLinks: [
+      {
+        productName: 'RunPod GPU Rental',
+        url: 'https://www.runpod.io',
+        productCategory: 'cloud-gpu',
+      },
+      {
+        productName: 'RTX 4090 (Amazon)',
+        url: 'https://www.amazon.com/s?k=RTX+4090',
+        productCategory: 'gpu',
+      },
+      {
+        productName: 'Mac Mini M4 Pro',
+        url: 'https://www.apple.com/shop/buy-mac/mac-mini',
+        productCategory: 'hardware',
+      },
+    ],
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'GPU em nuvem custa US$ 0,35–2,50/h conforme o nível da GPU e o provedor',
+          'Workstation RTX 4090 local: ~US$ 3.200 de custo total (GPU + sistema)',
+          'Ponto de equilíbrio: 1.800 horas acumuladas a uma tarifa média de nuvem de US$ 0,50/h',
+          'Mac Mini M4 Pro 48GB: US$ 2.000 de entrada, equilíbrio em ~1.200 horas de nuvem',
+          'A eletricidade acrescenta US$ 0,03–0,08/h aos custos operacionais locais',
+          'A nuvem vence para cargas de trabalho irregulares, ocasionais ou experimentais',
+          'O local vence para inferência diária contínua, uso com dados sensíveis ou fine-tuning',
+        ],
+      },
+      cloudPricing: {
+        heading: 'Preços de GPU em Nuvem em 2026',
+        body: 'Os preços de GPU em nuvem variam significativamente conforme o provedor, o nível de GPU e o tipo de compromisso. Os preços spot (interrompíveis) são 40–70% mais baratos que os sob demanda, mas podem ser interrompidos.',
+        columns: ['GPU', 'VRAM', 'Provedor', 'Spot US$/h', 'Sob Demanda US$/h'],
+        rows: [
+          { GPU: 'RTX 4090', VRAM: '24 GB', Provedor: 'RunPod', 'Spot US$/h': 'US$ 0,28–0,44', 'Sob Demanda US$/h': 'US$ 0,74' },
+          { GPU: 'RTX 4090', VRAM: '24 GB', Provedor: 'Vast.ai', 'Spot US$/h': 'US$ 0,32–0,48', 'Sob Demanda US$/h': 'US$ 0,89' },
+          { GPU: 'A40', VRAM: '48 GB', Provedor: 'RunPod', 'Spot US$/h': 'US$ 0,44–0,64', 'Sob Demanda US$/h': 'US$ 1,14' },
+          { GPU: 'A100 80GB', VRAM: '80 GB', Provedor: 'Lambda Labs', 'Spot US$/h': 'US$ 1,29', 'Sob Demanda US$/h': 'US$ 2,49' },
+          { GPU: 'H100 SXM', VRAM: '80 GB', Provedor: 'RunPod', 'Spot US$/h': 'US$ 2,39', 'Sob Demanda US$/h': 'US$ 3,49' },
+        ],
+      },
+      buildCosts: {
+        heading: 'Custos de Hardware Local em 2026',
+        body: 'Uma workstation de LLM local completa inclui GPU, CPU, placa-mãe, RAM, armazenamento, fonte e gabinete. Veja três configurações completas com os custos totais do sistema.',
+        columns: ['Configuração', 'GPU', 'VRAM', 'Custo Total', 'Modelos Suportados'],
+        rows: [
+          { 'Configuração': 'Econômica', GPU: 'RTX 3090 (usada)', VRAM: '24 GB', 'Custo Total': '~US$ 1.200', 'Modelos Suportados': 'Até 30B Q4' },
+          { 'Configuração': 'Recomendada', GPU: 'RTX 4090', VRAM: '24 GB', 'Custo Total': '~US$ 3.200', 'Modelos Suportados': 'Até 34B Q4, 7B completo' },
+          { 'Configuração': 'Potência', GPU: 'RTX 4090 + 3090', VRAM: '48 GB', 'Custo Total': '~US$ 5.000', 'Modelos Suportados': 'Até 70B Q4' },
+          { 'Configuração': 'Mac Mini M4 Pro', GPU: 'M4 Pro (unificada)', VRAM: '48 GB', 'Custo Total': '~US$ 2.000', 'Modelos Suportados': 'Até 70B Q4 via MLX' },
+        ],
+      },
+      calculator: {
+        heading: 'Calculadora de Ponto de Equilíbrio',
+        body: 'Use esta tabela para encontrar seu ponto de equilíbrio. Horas mensais = uso médio diário × 30 dias.',
+        columns: ['Horas Mensais', 'Custo Nuvem/mês (RTX 4090 @ US$ 0,50/h)', 'Tempo para Recuperar US$ 3.200 da RTX 4090'],
+        rows: [
+          { 'Horas Mensais': '10 h/mês', 'Custo Nuvem/mês (RTX 4090 @ US$ 0,50/h)': 'US$ 5/mês', 'Tempo para Recuperar US$ 3.200 da RTX 4090': 'Nunca (53 anos)' },
+          { 'Horas Mensais': '30 h/mês', 'Custo Nuvem/mês (RTX 4090 @ US$ 0,50/h)': 'US$ 15/mês', 'Tempo para Recuperar US$ 3.200 da RTX 4090': '18 anos' },
+          { 'Horas Mensais': '50 h/mês', 'Custo Nuvem/mês (RTX 4090 @ US$ 0,50/h)': 'US$ 25/mês', 'Tempo para Recuperar US$ 3.200 da RTX 4090': '10,7 anos' },
+          { 'Horas Mensais': '120 h/mês (4h/dia)', 'Custo Nuvem/mês (RTX 4090 @ US$ 0,50/h)': 'US$ 60/mês', 'Tempo para Recuperar US$ 3.200 da RTX 4090': '4,4 anos' },
+          { 'Horas Mensais': '240 h/mês (8h/dia)', 'Custo Nuvem/mês (RTX 4090 @ US$ 0,50/h)': 'US$ 120/mês', 'Tempo para Recuperar US$ 3.200 da RTX 4090': '2,2 anos' },
+          { 'Horas Mensais': '480 h/mês (16h/dia)', 'Custo Nuvem/mês (RTX 4090 @ US$ 0,50/h)': 'US$ 240/mês', 'Tempo para Recuperar US$ 3.200 da RTX 4090': '13 meses' },
+          { 'Horas Mensais': '720 h/mês (24h/dia)', 'Custo Nuvem/mês (RTX 4090 @ US$ 0,50/h)': 'US$ 360/mês', 'Tempo para Recuperar US$ 3.200 da RTX 4090': '9 meses' },
+        ],
+      },
+      electricityCost: {
+        heading: 'Eletricidade: O Custo Local Oculto',
+        // VERIFY: tarifa de energia do Brasil (~R$ 0,80/kWh) é estimativa — varia muito por distribuidora e bandeira tarifária; confirmar antes de publicar.
+        body: 'Uma RTX 4090 em execução consome 350–450 W sob carga de inferência. Com o consumo do sistema, espere 400–550 W no total.\n\n- **Média EUA (12¢/kWh):** US$ 0,048–0,066/h\n- **Média UE (32¢/kWh):** US$ 0,128–0,176/h\n- **Média Brasil (~R$ 0,80/kWh):** R$ 0,32–0,44/h\n\nO Mac Mini M4 Pro consome apenas 30–60 W sob carga de LLM — cerca de US$ 0,004–0,008/h nos EUA. Isso melhora drasticamente a economia de ponto de equilíbrio frente a uma workstation com GPU em regiões com alto custo de energia.',
+      },
+      hiddenCloudCosts: {
+        heading: 'Custos Ocultos da Nuvem a Considerar',
+        body: 'Os preços anunciados de GPU em nuvem não incluem todos os custos. Considere estes ao comparar:\n\n- **Armazenamento:** US$ 0,10–0,50/GB/mês para os pesos do modelo (um modelo 14B Q4 = ~9 GB = US$ 0,90–4,50/mês)\n- **Largura de banda de saída (egress):** Transferir as saídas do modelo de volta para a sua aplicação\n- **Computação ociosa:** Instâncias deixadas em execução cobram preço cheio\n- **Tempo de configuração:** Cada sessão na nuvem precisa carregar o modelo (5–15 min para modelos 70B)\n- **Risco de interrupção:** Instâncias spot podem ser encerradas no meio de uma geração\n\nCom o armazenamento do modelo e o tempo ocioso, os custos efetivos reais da nuvem costumam ser 1,3–1,7× a tarifa de GPU anunciada.',
+      },
+      whenToRent: {
+        heading: 'Quando Alugar na Nuvem Faz Mais Sentido',
+        body: '**Escolha o aluguel de GPU em nuvem quando:**\n\n- Você usa LLMs menos de 4 horas por dia\n- Você precisa de um nível de GPU que não pode comprar (H100, A100 80 GB)\n- Sua carga de trabalho é esporádica (execuções de fine-tuning de 1-2 dias por mês)\n- Você precisa de várias GPUs para inferência distribuída temporariamente\n- Você está em um país com alto custo de energia e roda apenas modelos 7B\n- Você quer testar uma carga de trabalho antes de investir em hardware\n\n**Escolha hardware local quando:**\n\n- Você roda inferência 4+ horas por dia para a sua equipe\n- Você processa documentos privados ou sensíveis que não podem sair da sua rede\n- Você precisa da menor latência possível para aplicações em tempo real\n- Seu orçamento permite um investimento inicial de US$ 2.000–5.000',
+      },
+      macMiniCase: {
+        heading: 'O Estudo de Caso do Mac Mini M4 Pro',
+        body: 'O Mac Mini M4 Pro com 48 GB de memória unificada representa uma proposta de valor incomum: US$ 2.000 por um equivalente a 48 GB de VRAM que consome apenas 30–60 W. A 8 horas/dia, US$ 0,006/h de eletricidade (EUA), ele roda modelos 70B Q4 a 12–18 tokens/segundo.\n\nPonto de equilíbrio frente ao RunPod A40 spot (US$ 0,54/h):\n- 8 horas/dia × 30 dias = 240 h/mês\n- Nuvem: 240 × US$ 0,54 = US$ 130/mês\n- Ponto de equilíbrio: US$ 2.000 ÷ US$ 130 = **15 meses**\n\nPara usuários que pagam tarifas de energia mais altas, o consumo médio de 45 W do Mac Mini acrescenta muito pouco por hora — ainda dramaticamente mais barato que as tarifas de GPU em nuvem.',
+        affiliateLinks: [
+          {
+            productName: 'Mac Mini M4 Pro',
+            url: 'https://www.apple.com/shop/buy-mac/mac-mini',
+            productCategory: 'hardware',
+          },
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: 'Qual é o ponto de equilíbrio de uma workstation de LLM local vs GPU em nuvem?',
+            a: 'Uma workstation RTX 4090 (US$ 3.200 no total) atinge o equilíbrio frente a uma GPU em nuvem a US$ 0,50/h em aproximadamente 6.400 horas acumuladas. A 8 horas/dia, são 2,2 anos. A 16 horas/dia (servidor compartilhado da equipe), são 13 meses.',
+          },
+          {
+            q: 'O custo de eletricidade afeta significativamente a comparação?',
+            a: 'Nos EUA (12¢/kWh), a eletricidade acrescenta ~US$ 0,05/h aos custos locais — é pouco. Em regiões com energia cara, pode acrescentar mais de US$ 0,15/h, o que reduz significativamente a vantagem local. O consumo de 45 W do Mac Mini M4 Pro mantém os custos de eletricidade baixos mesmo em países com tarifas altas.',
+          },
+          {
+            q: 'RunPod ou Vast.ai é mais barato para fine-tuning ocasional?',
+            a: 'O Vast.ai costuma ser 10–20% mais barato que o RunPod nos preços spot, mas o RunPod tem melhor disponibilidade (uptime) e um recurso de pods gerenciados. Para uso ocasional (< 20 horas/mês), os preços spot do Vast.ai são a opção de menor custo. Para cargas de trabalho que exigem confiabilidade, o RunPod Community Cloud é a melhor escolha.',
+          },
+          {
+            q: 'E quanto à depreciação do hardware local?',
+            a: 'O hardware de GPU se deprecia 20–40% em 3 anos. Uma RTX 4090 comprada por US$ 1.700 pode ser revendida por US$ 900–1.200 em 2028. Levando isso em conta, o custo real do hardware local após 3 anos é (preço de compra − valor de revenda + eletricidade). Para a workstation RTX 4090: (US$ 3.200 − US$ 1.200 + US$ 180 de eletricidade a 8h/dia nos EUA) = ~US$ 2.180 em 3 anos vs. nuvem a US$ 0,50/h × 8h/dia × 365 × 3 = US$ 4.380.',
+          },
+          {
+            q: 'Quanto custa rodar um modelo 70B localmente?',
+            a: 'Um modelo 70B Q4_K_M requer 48 GB de VRAM/memória unificada. Opções de hardware: RTX 3090 dupla (US$ 2.000), Mac Mini M4 Pro 48 GB (US$ 2.000) ou Mac Studio M4 Max 128 GB (US$ 3.000). A eletricidade a 8h/dia nos EUA acrescenta US$ 45–90/ano. Rodar o mesmo modelo no RunPod A40 spot a 8h/dia custa ~US$ 1.300/ano.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Qual é o ponto de equilíbrio de uma workstation de LLM local vs GPU em nuvem?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Uma workstation RTX 4090 (US$ 3.200 no total) atinge o equilíbrio frente a uma GPU em nuvem a US$ 0,50/h em aproximadamente 6.400 horas acumuladas — 2,2 anos a 8 horas/dia ou 13 meses a 16 horas/dia.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'É mais barato montar um servidor de LLM local ou alugar GPU na nuvem?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'A GPU em nuvem vence abaixo de 50 horas/mês. O hardware local vence acima de 4 horas/dia de uso — uma workstation RTX 4090 se paga em 12–18 meses frente aos preços spot do RunPod.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Quanto custa rodar um modelo 70B localmente?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Um modelo 70B Q4_K_M requer 48 GB de VRAM. Hardware: RTX 3090 dupla ou Mac Mini M4 Pro 48 GB (~US$ 2.000). A eletricidade acrescenta US$ 45–90/ano a 8h/dia nos EUA.',
+          },
+        },
+      ],
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'Calculadora de Custo de LLM Local: Montar vs Alugar 2026',
+      description: 'Comparação completa de TCO entre workstation com GPU local e aluguel de GPU em nuvem para rodar LLMs em 2026.',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      url: 'https://www.promptquorum.com/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=pt',
+      inLanguage: 'pt-BR',
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      about: [
+        { '@type': 'Thing', name: 'Custo de LLM local' },
+        { '@type': 'Thing', name: 'GPU em nuvem vs hardware local' },
+        { '@type': 'Thing', name: 'Ponto de equilíbrio de GPU' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'RunPod' },
+        { '@type': 'SoftwareApplication', name: 'Lambda Labs' },
+        { '@type': 'SoftwareApplication', name: 'Vast.ai' },
+      ],
+    },
+  },
 }

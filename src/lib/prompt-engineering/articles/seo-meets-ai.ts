@@ -1326,6 +1326,117 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
 
+    pt: {
+      theme: 'Use Cases',
+      title: 'SEO e IA: Como a GEO Está Substituindo o Manual Tradicional',
+      seoTitle: 'SEO e IA: como GEO faz ChatGPT citar seu conteúdo',
+      intro: '**A Otimização para Mecanismos Generativos (GEO) é a prática de estruturar conteúdo para que mecanismos de busca com IA (ChatGPT, Perplexity, Gemini, Claude) o citem ao sintetizar respostas — substituindo o objetivo tradicional do SEO de aparecer entre os links azuis do Google por um novo objetivo: ser nomeado entre as 2–7 fontes que uma IA cita por resposta.**\n\nGEO não substitui o SEO tradicional; adiciona uma segunda camada de otimização para um cenário de busca onde assistentes de IA lidam com mais de 40% das interações de pesquisa.',
+      metaDescription: 'GEO faz a IA citar seu conteúdo. O tráfego de IA cresceu 796% e converte 54% vs 45% orgânico. O schema eleva as citações em 340%.',
+      publishDate: '2026-03-23',
+      dateModified: '2026-04-28',
+      readTime: '8 min de leitura',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Generative Engine Optimization',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'SEO e IA: Como a GEO Está Substituindo o Manual Tradicional',
+        description: 'GEO faz a IA citar seu conteúdo. Aprenda as técnicas que aumentam citações em mecanismos de busca com IA como ChatGPT, Perplexity e Gemini.',
+        datePublished: '2026-03-23',
+        dateModified: '2026-04-28',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/seo-meets-ai-how-geo-is-replacing-the-traditional-playbook',
+        inLanguage: 'pt-BR',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        keywords: ['GEO', 'Generative Engine Optimization', 'SEO para IA', 'prompt engineering', 'PromptQuorum'],
+      },
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: 'Principais Conclusões',
+          isTldr: true,
+          items: [
+            'GEO = otimização para mecanismos de busca com IA como ChatGPT, Perplexity e Gemini — diferente de SEO que foca em links azuis do Google.',
+            'O tráfego de IA cresce em média 796% ano a ano e converte 54% vs 45% do orgânico — maior intenção de compra.',
+            'As seis técnicas principais de GEO: respostas diretas, dados verificáveis, schema JSON-LD, headings com perguntas, citações acadêmicas e links profundos.',
+            'Crawlers de IA (GPTBot, Claude-Web, PerplexityBot) seguem as mesmas regras de robots.txt. Bloqueie acidentalmente e você desaparece das respostas de IA.',
+            'O schema aumenta as citações de IA em até 340% — especialmente FAQPage, HowTo e Article.',
+            'GEO e SEO compartilham os mesmos fundamentos: velocidade, links de qualidade, cobertura de tópicos. GEO adiciona estrutura de resposta direta e schema sobre eles.',
+          ],
+        },
+        geoVsSeo: {
+          id: 'geo-vs-seo-two-different-games',
+          title: 'GEO vs SEO: Dois Jogos Diferentes',
+          snippets: [
+            { type: 'in-one-sentence', text: 'SEO faz você aparecer nos links azuis do Google; GEO faz a IA te citar quando sintetiza respostas para usuários.' },
+            { type: 'in-plain-terms', text: 'Quando alguém pergunta ao ChatGPT "qual ferramenta de prompt engineering devo usar?", o ChatGPT cita 2–7 fontes. GEO é o trabalho de aparecer nessas citações.' },
+          ],
+          content: [
+            '**SEO faz você aparecer nos resultados de busca; GEO faz a IA te citar quando ela sintetiza respostas.** São camadas diferentes do mesmo funil de conteúdo.',
+          ],
+          tableFormat: true,
+          columns: ['Dimensão', 'SEO Tradicional', 'GEO (Otimização para Motores Generativos)'],
+          rows: [
+            { 'Dimensão': 'Objetivo', 'SEO Tradicional': 'Aparecer na primeira página do Google', 'GEO (Otimização para Motores Generativos)': 'Ser citado em respostas de IA' },
+            { 'Dimensão': 'Sinal de sucesso', 'SEO Tradicional': 'Posição no ranking, CTR', 'GEO (Otimização para Motores Generativos)': 'Frequência de citação em ChatGPT/Perplexity/Gemini' },
+            { 'Dimensão': 'Alavancas técnicas', 'SEO Tradicional': 'Backlinks, velocidade, palavras-chave', 'GEO (Otimização para Motores Generativos)': 'Schema JSON-LD, resposta direta, citações verificáveis' },
+            { 'Dimensão': 'Comportamento do usuário', 'SEO Tradicional': 'Clique em link, visite o site', 'GEO (Otimização para Motores Generativos)': 'IA sintetiza resposta, cita fonte' },
+          ],
+        },
+        whyAITrafficConverts: {
+          id: 'why-ai-traffic-converts-differently',
+          title: 'Por que o Tráfego de IA Converte de Forma Diferente',
+          content: [
+            '**O tráfego de IA converte 54% vs 45% do orgânico porque os usuários chegam com intenção mais alta — já filtraram informações e chegam prontos para agir.**',
+          ],
+          items: [
+            'Usuários de IA já tiveram sua pergunta respondida e chegam com intenção específica.',
+            'As citações de IA são vistas como endosso — "a IA recomendou este site".',
+            'Menor volume de tráfego mas maior qualidade de lead do que SEO de cauda longa.',
+          ],
+        },
+        technicalFoundations: {
+          id: 'what-are-the-technical-foundations-of-geo',
+          title: 'Quais são os Fundamentos Técnicos da GEO?',
+          content: [
+            '**Os fundamentos técnicos da GEO são: schema JSON-LD, robots.txt correto, respostas diretas e dados verificáveis.** SEO e GEO compartilham a mesma base — velocidade do site, links de qualidade, cobertura de tópicos — mas GEO adiciona camadas específicas.',
+          ],
+          items: [
+            '**Schema JSON-LD:** FAQPage, HowTo, Article e BreadcrumbList são os schemas mais citados por mecanismos de IA. Aumentam as citações em até 340%.',
+            '**Respostas diretas:** A primeira frase de cada seção deve responder diretamente à pergunta do heading. Mecanismos de IA pegam essas frases literalmente.',
+            '**Dados verificáveis:** Afirmações com números, fontes citadas e metodologia clara recebem citação preferencial.',
+            '**Robots.txt correto:** Crawlers de IA (GPTBot, Claude-Web, PerplexityBot) seguem robots.txt. Bloqueie acidentalmente e você desaparece.',
+          ],
+        },
+        howToOptimize: {
+          id: 'how-to-optimize-content-for-geo',
+          title: 'Como Otimizar Conteúdo para GEO',
+          numberedItems: [
+            '**Responda diretamente na primeira frase de cada seção.** Mecanismos de IA pegam a primeira frase direta. "X é Y" supera "Nesta seção, exploraremos X..."',
+            '**Adicione schema FAQPage e HowTo.** Esses dois schemas têm a maior taxa de citação de IA entre os tipos de schema.',
+            '**Desbloqueie crawlers de IA no robots.txt.** Verifique se GPTBot, Claude-Web, PerplexityBot, Google-Extended não estão bloqueados.',
+            '**Cite fontes verificáveis com dados específicos.** "Aumentou 43% (Fonte: Harvard Business Review 2024)" supera "aumentou significativamente".',
+            '**Use headings como perguntas.** "Como X funciona?" como H2 alinha com como mecanismos de busca com IA processam consultas.',
+          ],
+        },
+        relatedReading: {
+          title: 'Leituras Relacionadas',
+          items: [
+            { title: 'O que é Prompt Engineering?', url: '/pt/prompt-engineering/what-is-prompt-engineering' },
+            { title: 'Saída Estruturada em LLMs', url: '/pt/prompt-engineering/structured-output-json-mode' },
+          ],
+        },
+        sources: {
+          title: 'Fontes e Leituras Adicionais',
+          items: [
+            'Aggarwal, S., et al. (2023). "GEO: Generative Engine Optimization." arXiv:2311.09735',
+            'SimilarWeb. (2025). AI Traffic Benchmark Report.',
+            'Google Developers. (2024). Schema.org JSON-LD Documentation.',
+          ],
+        },
+      },
+    },
+
     fr: {
       theme: 'Use Cases',
       freshness_tier: 'semi_annual',

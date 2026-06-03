@@ -1120,6 +1120,113 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
     },
+    pt: {
+      theme: 'Frameworks',
+      title: 'O Método de Prompt de Passo Único',
+      intro: 'O Método de Prompt de Passo Único é um framework de prompt mínimo onde você descreve toda a tarefa em uma instrução cuidadosamente estruturada em vez de construir uma conversa de múltiplos turnos. Esse método reduz a sobrecarga, facilita a comparação de resultados entre modelos e é o framework de início padrão no PromptQuorum para novos usuários.',
+      publishDate: '2026-03-24',
+      seoTitle: 'Método de Prompt de Passo Único: 5 Blocos e Exemplos',
+      metaDescription: 'Aprenda o Método de Prompt de Passo Único: inclua papel, objetivo, contexto, restrições e formato de saída em uma única mensagem. Prompts estruturados superam instruções vagas.',
+      readTime: '8 min de leitura',
+      educationalLevel: 'Intermediate',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/the-single-step-prompt-method',
+        inLanguage: 'pt-BR',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        headline: 'O Método de Prompt de Passo Único',
+        description: 'Como o Método de Prompt de Passo Único funciona, quando usá-lo e como o PromptQuorum o usa como framework principal para novos usuários.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-05-04',
+        keywords: ['Método de Prompt de Passo Único', 'frameworks de prompt', 'prompt engineering', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Frameworks de Prompt' },
+          { '@type': 'Thing', name: 'Grandes Modelos de Linguagem' },
+        ],
+      },
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: 'Principais Conclusões',
+          isTldr: true,
+          items: [
+            'O Método de Passo Único inclui cinco blocos em um único prompt: Papel, Objetivo, Contexto, Restrições e Formato de Saída.',
+            'Supera prompts vagos e conversas de múltiplos turnos para tarefas bem definidas onde você já conhece os requisitos.',
+            'É o framework de início padrão no PromptQuorum — você preenche os cinco campos e o sistema os monta em uma instrução bem formada.',
+            'Mude para CO-STAR quando tom e audiência forem críticos, SPECS quando schema for necessário, TRACE quando raciocínio explícito importar.',
+            'Funciona com GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e modelos locais via Ollama ou LM Studio.',
+          ],
+        },
+        whatIsMethod: {
+          id: 'what-is-single-step',
+          title: 'O que é o Método de Prompt de Passo Único?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'O Método de Passo Único é um prompt estruturado de cinco partes — Papel, Objetivo, Contexto, Restrições, Formato — que embala uma tarefa completa em uma única instrução clara.' },
+            { type: 'in-plain-terms', text: 'Em vez de conversar com a IA para refinar uma resposta, você especifica tudo de uma vez: quem ela é, o que fazer, com quais informações, quais limites e como formatar a resposta.' },
+          ],
+          content: [
+            '**O Método de Prompt de Passo Único é um padrão estruturado que empacota todos os detalhes de uma tarefa em um único prompt cuidadosamente escrito.** Em vez de começar com uma pergunta vaga e refinar por turnos de conversa, você especifica o resultado completo upfront.',
+          ],
+        },
+        fiveBlocks: {
+          id: 'five-building-blocks',
+          title: 'Os Cinco Blocos de Construção',
+          content: [
+            '**Um prompt de passo único eficaz inclui cinco componentes que juntos eliminam a ambiguidade e produzem saída consistente.** Cada bloco responde a uma pergunta diferente sobre a tarefa.',
+          ],
+          items: [
+            '**Papel:** Quem a IA deve ser. "Você é um gerente de produto sênior." Define expertise e perspectiva.',
+            '**Objetivo:** O que a IA deve fazer. "Analise este roadmap de produto e identifique as três maiores lacunas de risco." Declaração de tarefa concreta.',
+            '**Contexto:** Informações de fundo relevantes. Dados do produto, público-alvo, restrições do negócio, conteúdo de referência.',
+            '**Restrições:** O que deve e não deve fazer. "Não recomende mudanças que aumentem o custo de desenvolvimento. Concentre-se nos três principais riscos."',
+            '**Formato de Saída:** Como a resposta deve ser estruturada. "Markdown, três seções (Risco, Impacto, Mitigação), máximo de 300 palavras."',
+          ],
+        },
+        whenToUse: {
+          id: 'when-to-use',
+          title: 'Quando Usar o Método de Passo Único',
+          content: [
+            '**Use o Método de Passo Único quando você tiver uma tarefa bem definida com requisitos claros.** É mais eficiente do que conversas de múltiplos turnos quando você já sabe o que precisa.',
+          ],
+          items: [
+            'Tarefas com escopo fixo: resumos, análises, geração de código, redação de conteúdo.',
+            'Fluxos de trabalho repetíveis onde o mesmo prompt é usado em diferentes entradas.',
+            'Comparações entre modelos onde você precisa do mesmo prompt para ir para múltiplos modelos.',
+            'Integração de API onde cada chamada deve ser autossuficiente sem estado de conversa.',
+          ],
+        },
+        howToStart: {
+          id: 'how-to-use',
+          title: 'Como Usar o Método de Passo Único',
+          numberedItems: [
+            '**Defina seu objetivo com precisão antes de escrever o prompt.** Tarefas vagas produzem prompts vagos. "Analise este código por vulnerabilidades de segurança e produza uma lista priorizada de problemas com sugestões de correção" é uma tarefa definida.',
+            '**Escreva o Papel primeiro.** A perspectiva que o modelo adota muda dramaticamente o tipo de resposta. "Você é um engenheiro de segurança sênior" produz análises diferentes de "Você é um professor de programação".',
+            '**Coloque o Contexto após o Papel, antes do Objetivo.** Modelos processam informações sequencialmente — contexto antes da tarefa produz melhor utilização.',
+            '**Seja explícito sobre o Formato.** "Markdown, lista numerada, máximo de 200 palavras" é melhor do que "seja conciso".',
+            '**Teste com pelo menos três entradas diferentes** antes de salvar o prompt como template.',
+          ],
+        },
+        relatedReading: {
+          title: 'Leituras Relacionadas',
+          items: [
+            { title: 'Framework RTF', url: '/pt/prompt-engineering/rtf-framework' },
+            { title: 'Framework CO-STAR', url: '/pt/prompt-engineering/co-star-framework' },
+            { title: 'Framework SPECS', url: '/pt/prompt-engineering/specs-framework' },
+          ],
+        },
+        sources: {
+          title: 'Fontes',
+          items: [
+            'Schulhoff, L., et al. (2024). Prompt Engineering Guide. [https://www.promptingguide.ai](https://www.promptingguide.ai)',
+            'OpenAI. (2026). Prompt Engineering Best Practices. [https://platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
+          ],
+        },
+      },
+    },
     fr: {
       freshness_tier: 'evergreen',
       theme: 'Frameworks',

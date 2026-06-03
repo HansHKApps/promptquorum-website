@@ -660,6 +660,118 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
 
+    pt: {
+      theme: 'Fundamentals',
+      title: 'Temperatura e Top-P: Controle a Criatividade da IA',
+      intro: 'Temperatura e top-p controlam quão aventureiras ou conservadoras são as escolhas de palavras da IA. Ajustando esses parâmetros, você equilibra criatividade versus confiabilidade — valores mais altos produzem saídas surpreendentes e variadas; valores mais baixos produzem saídas seguras e previsíveis.',
+      publishDate: '2026-03-22',
+      seoTitle: 'Temperatura e Top-P 2026: ajuste criatividade e precisão',
+      metaDescription: 'Temperatura 0–2 e Top-P 0,1–1,0: defina criatividade e precisão da IA. Guia prático com valores ideais para escrita criativa, código e chat.',
+      readTime: '9 min de leitura',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Temperatura e Top-P: Controle a Criatividade da IA',
+        description: 'Temperatura e top-p controlam a aleatoriedade das saídas de LLM. Aprenda os valores ideais para cada caso de uso e como ajustar esses parâmetros.',
+        datePublished: '2026-03-22',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/temperature-and-top-p-control-ai-creativity',
+        inLanguage: 'pt-BR',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        keywords: ['temperatura IA', 'top-p', 'amostragem nucleus', 'prompt engineering', 'criatividade IA', 'PromptQuorum'],
+      },
+      sections: {
+        tldr: {
+          title: 'Principais Conclusões',
+          isTldr: true,
+          items: [
+            'Temperatura controla quão aleatória é a saída do modelo: 0 = determinístico, 1,0 = altamente variável, 2,0 = caótico.',
+            'Top-p (nucleus sampling) restringe as escolhas de palavras aos tokens mais prováveis que somam p% de probabilidade. Temperatura e top-p se combinam — ajuste apenas um de cada vez.',
+            'Para tarefas factuais e código: temperatura 0–0,3. Para brainstorming e escrita criativa: 0,7–1,2. Para narrativa altamente criativa: 1,2–2,0.',
+            'Temperatura 0 NÃO é 100% determinística — sementes aleatórias de hardware ainda podem variar. Mas é a mais próxima que você consegue.',
+            'Top-p 0,9 é o padrão seguro para a maioria dos casos. Top-p 0,1–0,3 força respostas ultraconservadoras. Top-p 1,0 = sem filtragem.',
+          ],
+        },
+        whatIsTemperature: {
+          title: 'O que é Temperatura?',
+          content: [
+            '**Temperatura é um parâmetro que controla o quanto o modelo se desvia das escolhas de palavras de maior probabilidade ao gerar texto.** Uma temperatura mais baixa faz o modelo jogar com segurança — sempre escolhendo as palavras mais prováveis. Uma temperatura mais alta injeta aleatoriedade — tornando a saída mais variada, mas menos previsível.',
+            'A escala de temperatura vai de 0 a 2 na maioria das APIs: 0 = completamente determinístico (ou tão próximo quanto possível), 1,0 = configuração padrão equilibrada, 2,0 = altamente aleatório e por vezes incoerente.',
+          ],
+        },
+        whatIsTopP: {
+          title: 'O que é Top-P (Nucleus Sampling)?',
+          content: [
+            '**Top-p, também chamado de nucleus sampling, restringe as escolhas de palavras do modelo ao menor conjunto de tokens cujas probabilidades combinadas somam pelo menos p%.** Em vez de selecionar entre todos os tokens possíveis (que podem incluir escolhas de baixa qualidade), o modelo considera apenas os tokens dentro do "núcleo" de probabilidade.',
+            'Top-p 0,9 significa: considere apenas os tokens que juntos representam 90% da probabilidade total. Ignore os 10% inferiores de candidatos improváveis.',
+          ],
+        },
+        temperatureTable: {
+          title: 'Valores de Temperatura por Caso de Uso',
+          tableFormat: true,
+          columns: ['Faixa de Temperatura', 'Comportamento', 'Melhor para'],
+          rows: [
+            { 'Faixa de Temperatura': '0,0 – 0,3', 'Comportamento': 'Determinístico, conservador, previsível', 'Melhor para': 'Perguntas factuais, extração de dados, classificação, código de produção' },
+            { 'Faixa de Temperatura': '0,3 – 0,7', 'Comportamento': 'Balanceado, ligeiramente variável', 'Melhor para': 'Resumo, resposta a e-mail, resposta geral de chatbot' },
+            { 'Faixa de Temperatura': '0,7 – 1,2', 'Comportamento': 'Criativo, variado, menos previsível', 'Melhor para': 'Brainstorming, geração de ideias, escrita criativa, diálogo de personagem' },
+            { 'Faixa de Temperatura': '1,2 – 2,0', 'Comportamento': 'Altamente aleatório, experimental', 'Melhor para': 'Ficção experimental, poesia, exploração criativa extrema. Use com cautela.' },
+          ],
+        },
+        topPTable: {
+          title: 'Valores de Top-P por Caso de Uso',
+          tableFormat: true,
+          columns: ['Valor de Top-P', 'Efeito', 'Melhor para'],
+          rows: [
+            { 'Valor de Top-P': '0,1 – 0,3', 'Efeito': 'Ultra-conservador — apenas as escolhas de palavras mais seguras', 'Melhor para': 'Conteúdo jurídico ou médico de alto risco onde segurança é crítica' },
+            { 'Valor de Top-P': '0,7 – 0,9', 'Efeito': 'Padrão equilibrado — boa variedade sem incoerência', 'Melhor para': 'Chat de propósito geral, redação de negócios, respostas de suporte ao cliente' },
+            { 'Valor de Top-P': '1,0', 'Efeito': 'Sem filtragem — todos os tokens são considerados', 'Melhor para': 'Geralmente não recomendado — aumenta o risco de saída sem sentido' },
+          ],
+        },
+        howToStart: {
+          title: 'Como Ajustar Temperatura e Top-P',
+          numberedItems: [
+            '**Comece com temperatura 0 para tarefas factuais e código.** Se você precisar de resultados consistentes e reproduzíveis — extração de dados, análise de código, perguntas factuais — comece com temperatura 0.',
+            '**Use temperatura 0,7–1,0 para conteúdo criativo.** Para brainstorming, geração de ideias, escrita criativa ou diálogo de personagens, aumente a temperatura para 0,7–1,2.',
+            '**Ajuste top-p para 0,9 como seu padrão seguro.** Top-p 0,9 fornece boa variedade sem permitir saídas altamente improváveis. Reduza para 0,7 se quiser respostas mais conservadoras.',
+            '**Ajuste apenas temperatura OU top-p de cada vez.** Alterar ambos simultaneamente torna impossível saber qual parâmetro causou a mudança de comportamento.',
+            '**Teste múltiplos valores usando o PromptQuorum.** Execute o mesmo prompt com temperatura 0,3, 0,7 e 1,0 e compare as saídas lado a lado para encontrar o equilíbrio certo para seu caso de uso.',
+          ],
+        },
+        faqSection: {
+          title: 'Perguntas Frequentes',
+          faqs: [
+            {
+              q: 'Qual temperatura devo usar para código?',
+              a: 'Use temperatura 0–0,3 para código. Você quer que o modelo escolha as soluções de codificação mais prováveis e corretas, não variação criativa. Temperatura mais alta introduz bugs e padrões de código não convencionais.',
+            },
+            {
+              q: 'Qual a diferença entre temperatura e top-p?',
+              a: 'Temperatura escala as probabilidades de todos os tokens — tornando a distribuição mais plana (mais aleatória) ou mais nítida (mais determinística). Top-p filtra os tokens de baixa probabilidade definindo um limite percentual de probabilidade acumulada. Ambos controlam a aleatoriedade mas por mecanismos diferentes.',
+            },
+            {
+              q: 'Temperatura 0 é completamente determinística?',
+              a: 'Quase, mas não completamente. Temperatura 0 seleciona o token de maior probabilidade a cada etapa, mas sementes aleatórias de hardware e arredondamento de ponto flutuante podem introduzir variação mínima. Na prática, temperatura 0 é muito consistente entre execuções.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Leituras Relacionadas',
+          items: [
+            '[Self-Consistency Prompting](/pt/prompt-engineering/self-consistency-prompting) — usa temperatura alta para gerar caminhos de raciocínio diversos',
+            '[Tokens, Custos e Limites](/pt/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+          ],
+        },
+        sources: {
+          title: 'Fontes',
+          items: [
+            '[OpenAI, 2024. "API reference: Temperature and top_p parameters"](https://platform.openai.com/docs/api-reference/chat/create)',
+            '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751)',
+            '[Anthropic, 2024. "Claude: How to Work with Prompts"](https://docs.anthropic.com/)',
+          ],
+        },
+      },
+    },
+
     fr: {
       theme: 'Fondamentaux',
       title: 'Température et Top-P : Contrôle la créativité de l\'IA',
