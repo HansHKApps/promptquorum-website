@@ -834,6 +834,262 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       ]
     }
   }
+}, pt: {
+  theme: 'Tools & Platforms',
+  title: 'Ferramentas de teste e avaliação de prompts 2026: Promptfoo vs Braintrust vs DeepEval', // VERIFY
+  seoTitle: 'Ferramentas de teste e avaliação de prompts 2026: Promptfoo vs Braintrust vs DeepEval', // VERIFY
+  metaDescription: 'O Promptfoo detecta regressões em segundos (grátis). O Braintrust executa evals em lote com juízes humanos ($500/mês). O DeepEval pontua RAG com métricas RAGAS. O LangSmith rastreia falhas. O Phoenix monitora produção. Comparativo completo do pipeline.', // VERIFY
+  ogTitle: 'Promptfoo em segundos. Braintrust em horas. De qual você precisa?', // VERIFY
+  ogDescription: 'Testes CI/CD rápidos vs evals em lote vs scoring RAG vs tracing vs monitoramento. 5 ferramentas, 5 tarefas. Tabela comparativa incluída.', // VERIFY
+  twitterTitle: 'Ferramentas de teste de prompts 2026: o pipeline de 5 etapas comparado', // VERIFY
+  twitterDescription: 'A autoavaliação infla os scores em 10–20%. Está testando o GPT-5.5? Pontue com o Claude. O stack completo: Promptfoo → Braintrust → DeepEval → LangSmith → Phoenix.', // VERIFY
+  intro: '**O teste de prompts se divide em dois: testes unitários rápidos (Promptfoo) em segundos e evals em lote lentos (Braintrust) em minutos.** O Promptfoo roda no CI/CD e detecta regressões a cada commit.\n\n**O Braintrust avalia offline com juízes humanos.** O DeepEval adiciona métricas RAGAS para pipelines RAG. Este guia mostra quando usar cada um e como eles funcionam juntos.', // VERIFY
+  publishDate: '2026-04-10',
+  dateModified: '2026-04-10',
+  lastFactChecked: '2026-04-28',
+  readTime: '8 min de leitura', // VERIFY
+  freshness_tier: 'semi_annual',
+  next_refresh_due: '2026-10-10',
+  educationalLevel: 'Intermediate',
+  primaryTerm: 'ferramentas de teste de prompts', // VERIFY
+  audience: 'Engenheiros DevOps, engenheiros de ML e equipes de plataforma que constroem pipelines de teste de LLM', // VERIFY
+  aboutTopics: ['teste de prompts', 'avaliação', 'teste CI/CD', 'teste de regressão'], // VERIFY
+  toc: [
+    { label: 'Pontos principais', anchor: 'key-takeaways' }, // VERIFY
+    { label: 'Por que testar prompts?', anchor: 'why-test-prompts' }, // VERIFY
+    { label: 'Promptfoo: teste CI/CD rápido', anchor: 'promptfoo-fast-cicd-testing' }, // VERIFY
+    { label: 'Braintrust: evals em lote lentos', anchor: 'braintrust-slow-batch-evaluations' }, // VERIFY
+    { label: 'DeepEval: RAGAS para pipelines RAG', anchor: 'deepeval-ragas-for-rag-pipelines' }, // VERIFY
+    { label: 'LangSmith: tracing de cadeias multietapa', anchor: 'langsmith-tracing-multi-step-chains' }, // VERIFY
+    { label: 'Phoenix: observabilidade para apps LLM', anchor: 'phoenix-observability-for-llm-apps' }, // VERIFY
+    { label: 'PromptQuorum: comparação de modelos antes dos testes', anchor: 'promptquorum' }, // VERIFY
+    { label: 'Tabela comparativa', anchor: 'comparison-table' }, // VERIFY
+    { label: 'Como escolher', anchor: 'how-to-choose' }, // VERIFY
+    { label: 'Por que os testes de prompts falham?', anchor: 'common-mistakes' }, // VERIFY
+    { label: 'Leituras relacionadas', anchor: 'related-reading' }, // VERIFY
+    { label: 'FAQ', anchor: 'faq' }, // VERIFY
+    { label: 'Fontes', anchor: 'sources' } // VERIFY
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Ferramentas de teste de prompts 2026: Promptfoo, Braintrust, DeepEval', // VERIFY
+    description: 'Teste prompts rapidamente no CI/CD com o Promptfoo, avalie offline com o Braintrust, meça pipelines RAG com o DeepEval.', // VERIFY
+    datePublished: '2026-04-10',
+    dateModified: '2026-04-10',
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    url: 'https://www.promptquorum.com/pt/prompt-engineering/best-prompt-testing-evaluation-tools',
+    inLanguage: 'pt',
+    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
+    educationalLevel: 'Intermediate',
+    proficiencyLevel: 'Intermediate',
+    about: [
+      { '@type': 'Thing', 'name': 'Prompt Testing' },
+      { '@type': 'Thing', 'name': 'LLM Evaluation' },
+      { '@type': 'Thing', 'name': 'CI/CD Testing' }
+    ]
+  },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'pt',
+    mainEntity: [
+      { '@type': 'Question', name: 'O que é teste de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'O teste de prompts verifica se seus outputs de LLM correspondem a uma resposta de referência ou passam por uma regra LLM-as-judge. Os testes rápidos (unitários) verificam um único prompt em segundos. Os testes lentos (em lote) avaliam um dataset offline em minutos ou horas.' } }, // VERIFY
+      { '@type': 'Question', name: 'Quando devo testar prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Teste sempre que mudar um prompt, especialmente antes de fazer deploy em produção. Use teste CI/CD a cada commit e avaliação em lote para a aprovação final.' } }, // VERIFY
+      { '@type': 'Question', name: 'Qual é a diferença entre Promptfoo e Braintrust?', acceptedAnswer: { '@type': 'Answer', text: 'O Promptfoo é open-source, CLI-first e construído para pipelines CI/CD (rápido, grátis). O Braintrust é SaaS, baseado na web, para avaliação offline com juízes humanos e LLM (lento, completo).' } }, // VERIFY
+      { '@type': 'Question', name: 'O que são métricas RAGAS?', acceptedAnswer: { '@type': 'Answer', text: 'RAGAS mede a qualidade de recuperação, relevância do contexto e correção da resposta em pipelines RAG. O DeepEval implementa RAGAS.' } }, // VERIFY
+      { '@type': 'Question', name: 'Posso usar várias ferramentas juntas?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Use o Promptfoo no CI/CD para feedback rápido, o Braintrust para avaliação em lote final, o DeepEval para métricas RAG e o LangSmith para tracing de cadeias multietapa.' } }, // VERIFY
+      { '@type': 'Question', name: 'Qual ferramenta é gratuita?', acceptedAnswer: { '@type': 'Answer', text: 'O Promptfoo é open-source e gratuito. O DeepEval é gratuito com evals na nuvem pagos opcionais. O Phoenix é open-source e gratuito. O Braintrust e o LangSmith oferecem tiers gratuitos.' } }, // VERIFY
+      { '@type': 'Question', name: 'Como configuro o Promptfoo no CI/CD?', acceptedAnswer: { '@type': 'Answer', text: 'Escreva uma configuração YAML com seus prompts e casos de teste, execute promptfoo eval no seu pipeline CI (GitHub Actions, GitLab CI) e faça o build falhar se os scores caírem abaixo de um limite.' } }, // VERIFY
+      { '@type': 'Question', name: 'O que é um LLM-as-judge?', acceptedAnswer: { '@type': 'Answer', text: 'Um LLM-as-judge usa outro LLM (GPT-5.5, Claude) para pontuar seu output conforme uma rubrica. Escala a avaliação sem revisão humana, mas pode ter viés. A maioria das ferramentas o suporta.' } } // VERIFY
+    ]
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    inLanguage: 'pt',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Promptfoo: teste CI/CD rápido', url: 'https://promptfoo.dev' }, // VERIFY
+      { '@type': 'ListItem', position: 2, name: 'Braintrust: evals em lote lentos', url: 'https://braintrust.dev' }, // VERIFY
+      { '@type': 'ListItem', position: 3, name: 'DeepEval: RAGAS para pipelines RAG', url: 'https://deepeval.trychasm.com' }, // VERIFY
+      { '@type': 'ListItem', position: 4, name: 'LangSmith: tracing de cadeias multietapa', url: 'https://smith.langchain.com' }, // VERIFY
+      { '@type': 'ListItem', position: 5, name: 'Phoenix: observabilidade para apps LLM', url: 'https://arize.com/phoenix' } // VERIFY
+    ]
+  },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    'name': 'Como escolher seu stack de teste de prompts', // VERIFY
+    'description': 'Um guia de 6 passos para selecionar a combinação certa de ferramentas de teste de prompts para sua aplicação LLM.', // VERIFY
+    'step': [
+      { '@type': 'HowToStep', 'position': 1, 'name': 'Comece com o Promptfoo', 'text': 'Todos: comece com o Promptfoo (grátis) no seu pipeline CI/CD. Execute testes a cada commit. Isso é inegociável.' }, // VERIFY
+      { '@type': 'HowToStep', 'position': 2, 'name': 'Adicione o Braintrust para aprovação em produção', 'text': 'Fazendo deploy em produção: adicione o Braintrust para eval em lote final com aprovação humana antes do lançamento.' }, // VERIFY
+      { '@type': 'HowToStep', 'position': 3, 'name': 'Adicione o DeepEval para pipelines RAG', 'text': 'Pipelines RAG: adicione o DeepEval para métricas RAGAS específicas de recuperação.' }, // VERIFY
+      { '@type': 'HowToStep', 'position': 4, 'name': 'Adicione o LangSmith para cadeias multietapa', 'text': 'Cadeias multietapa: adicione o LangSmith para tracing. Quando o Promptfoo detecta uma regressão, o LangSmith mostra onde a cadeia quebrou.' }, // VERIFY
+      { '@type': 'HowToStep', 'position': 5, 'name': 'Adicione o Phoenix para monitoramento em produção', 'text': 'Monitoramento em produção: adicione o Phoenix para observabilidade em tempo real — latência, custo e detecção de deriva.' }, // VERIFY
+      { '@type': 'HowToStep', 'position': 6, 'name': 'Use o PromptQuorum para seleção de modelo', 'text': 'Seleção de modelo: execute o PromptQuorum primeiro para comparar modelos nos seus prompts específicos antes de construir suites de teste.' } // VERIFY
+    ]
+  },
+  sections: {
+    keyTakeaways: {
+      isTldr: true,
+      items: [
+        'Use o Promptfoo para teste CI/CD (segundos, open-source, detecta regressões)', // VERIFY
+        'Use o Braintrust para eval final (minutos a horas, juízes humanos + LLM, fluxo de trabalho offline)', // VERIFY
+        'Use o DeepEval para evals específicos de RAG (métricas RAGAS, recuperação + contexto + síntese)', // VERIFY
+        'Use o LangSmith para tracing (depure cadeias multietapa, entenda a causa raiz da falha)', // VERIFY
+        'Use o PromptQuorum para comparação multimodelo (qual modelo testar, lado a lado em segundos)', // VERIFY
+        'Combine ferramentas: Promptfoo no CI → Braintrust para aprovação → LangSmith para depuração', // VERIFY
+        'O LLM-as-judge escala evals sem humanos, mas pode ter viés — valide contra um gold standard' // VERIFY
+      ]
+    },
+    whyTestPrompts: {
+      title: 'Por que testar prompts?', // VERIFY
+      content: '**Este guia foca exclusivamente em ferramentas de teste e avaliação.** Para o panorama completo de ferramentas de prompt engineering, consulte [Melhores ferramentas de prompt engineering 2026](/pt/prompt-engineering/best-prompt-engineering-tools-2026). Para recursos de colaboração em equipe, consulte [Melhores ferramentas de otimização de prompts para equipes](/pt/prompt-engineering/best-prompt-optimization-tools-for-teams).\n\n**Mudanças de prompts quebram a produção.** Uma única reformulação pode reduzir a precisão em 5–10%, perder edge cases ou mudar o tom. Em abril de 2026, a maioria das empresas não testa prompts de forma alguma, enviando mudanças ad-hoc. O teste detecta regressões antes que cheguem aos usuários. Existem dois fluxos de trabalho: testes unitários rápidos no [CI/CD](/pt/prompt-engineering/ci-cd-for-prompts) (segundos, automatizados) e evals em lote lentos offline (minutos a horas, revisão humana). Sem testes, você não pode iterar com segurança.', // VERIFY
+      snippets: [
+        { type: 'in-one-sentence', text: 'O teste de prompts é a verificação automatizada de que os outputs de LLM atendem a um limite de qualidade antes de fazer deploy.' }, // VERIFY
+        { type: 'in-plain-terms', text: 'Pense nisso como testes unitários para seus prompts: você define o que significa "correto" e então executa cada commit por esse padrão.' } // VERIFY
+      ],
+      callouts: [
+        { type: 'Warning', label: 'Não pule os testes', text: 'Fazer deploy sem testes de prompts é como as equipes descobrem regressões pelos usuários, não pelo CI. Mesmo 5 casos de teste por prompt detectam 80% das regressões comuns.' } // VERIFY
+      ]
+    },
+    promptfoo: {
+      title: 'Promptfoo: teste CI/CD rápido', // VERIFY
+      content: '**O Promptfoo é open-source, CLI-first e construído para pipelines CI/CD.** Roda em segundos, detecta regressões a cada commit e faz o build falhar se os scores caírem. Escreva uma configuração YAML com prompts e casos de teste, execute promptfoo eval e obtenha um score. O Promptfoo suporta similaridade de strings, regex, [LLM-as-judge](/pt/prompt-engineering/llm-as-judge-evaluation) e graders personalizados.', // VERIFY
+      snippets: [
+        { type: 'in-one-sentence', text: 'O Promptfoo é uma ferramenta CLI gratuita e open-source que executa testes de regressão de prompts em pipelines CI/CD em segundos.' } // VERIFY
+      ],
+      callouts: [
+        { type: 'Pro Tip', label: 'Comece aqui', text: 'O Promptfoo é o caminho mais rápido para o teste de prompts CI/CD: um arquivo YAML, um comando CLI. A integração em um pipeline existente do GitHub Actions leva ~15 minutos.' } // VERIFY
+      ],
+      numberedItems: [
+        'Use o Promptfoo se você faz deploy com frequência (diariamente/semanalmente)', // VERIFY
+        'Ideal para conjuntos de teste pequenos (100–500 casos)', // VERIFY
+        'Preços: Grátis (open-source, licença MIT)' // VERIFY
+      ]
+    },
+    braintrust: {
+      title: 'Braintrust: evals em lote lentos', // VERIFY
+      content: '**Use o Braintrust se você precisa de revisão humana e tracking de baseline antes da produção.** Roda mais devagar (5–30 minutos para 1.000 casos de teste, 4+ horas com revisão humana completa), mas suporta avaliação completa: registra cada chamada LLM, habilita comparação lado a lado e rastreia regressões de baseline. Integra-se com LangChain, LLamaIndex e código personalizado.', // VERIFY
+      numberedItems: [
+        'Use o Braintrust para aprovação final antes do lançamento', // VERIFY
+        'Ideal para conjuntos de teste grandes (1.000+) e revisão humana', // VERIFY
+        'Preços: ~$500/mês para equipes com requisitos de eval' // VERIFY
+      ]
+    },
+    deepeval: {
+      title: 'DeepEval: RAGAS para pipelines RAG', // VERIFY
+      content: '**Use o DeepEval se você constrói [pipelines RAG](/pt/prompt-engineering/rag-explained) e precisa de pontuações separadas para qualidade de recuperação e geração.** O DeepEval é uma biblioteca Python que mede a qualidade RAG com métricas RAGAS, decompondo o sucesso em três dimensões: qualidade de recuperação, relevância do contexto e correção da resposta. Roda como código Python ou via dashboard web.', // VERIFY
+      numberedItems: [
+        'Use o DeepEval se você usa arquiteturas RAG', // VERIFY
+        'Mede recuperação + síntese separadamente', // VERIFY
+        'Preços: Grátis com evals na nuvem pagos opcionais' // VERIFY
+      ]
+    },
+    langsmith: {
+      title: 'LangSmith: tracing de cadeias multietapa', // VERIFY
+      content: '**Use o LangSmith se você precisa depurar cadeias multietapa e encontrar onde as falhas ocorrem.** O LangSmith rastreia cada chamada LLM, mede latência e custo, e permite que você se aprofunde em cada passo para identificar gargalos. Quando o Promptfoo detecta uma regressão, o LangSmith mostra exatamente onde na sua cadeia (recuperação → síntese → ranking) a falha ocorreu. Integração nativa com [LangChain](/pt/local-llms/local-ai-agents-langgraph-ollama).', // VERIFY
+      callouts: [
+        { type: 'Warning', label: 'Privacidade de dados', text: 'O LangSmith envia traces para servidores na nuvem da Arize AI. Se seus prompts contêm PII ou dados proprietários, revise as opções de residência de dados do LangSmith ou use o tier Enterprise self-hosted.' } // VERIFY
+      ],
+      numberedItems: [
+        'Use o LangSmith para depurar cadeias multietapa', // VERIFY
+        'Essencial se você usa LangChain', // VERIFY
+        'Preços: Tier gratuito, $50+/mês para armazenamento' // VERIFY
+      ]
+    },
+    phoenix: {
+      title: 'Phoenix: observabilidade para apps LLM', // VERIFY
+      content: '**Use o Phoenix se você precisa de observabilidade em produção: monitoramento do desempenho de prompts em tempo real.** O Phoenix (da Arize AI) registra prompts, respostas, embeddings e latência. Open-source e self-hostable. Complemento recomendado ao Promptfoo (teste) e ao Braintrust (evals).', // VERIFY
+      numberedItems: [
+        'Use o Phoenix para observabilidade em produção', // VERIFY
+        'Open-source e gratuito (Apache 2.0)', // VERIFY
+        'Pode ser self-hosted ou gerenciado na nuvem' // VERIFY
+      ]
+    },
+    promptquorum: {
+      id: 'promptquorum',
+      title: 'PromptQuorum: comparação multimodelo antes dos testes', // VERIFY
+      content: '**Use o PromptQuorum para comparar como o mesmo prompt funciona no GPT-5.5, Claude, Gemini e LLMs locais em um único despacho — antes de se comprometer com um modelo para sua suite de testes.** O Promptfoo e o Braintrust testam um modelo por vez. O PromptQuorum responde a "contra qual modelo eu deveria estar testando?" em segundos.', // VERIFY
+      numberedItems: [
+        'Use o PromptQuorum como primeiro passo antes de configurar suites de teste do Promptfoo', // VERIFY
+        'Compare 25+ modelos lado a lado com scoring por consenso', // VERIFY
+        'Preços: Tier gratuito + créditos' // VERIFY
+      ]
+    },
+    comparisonTable: {
+      id: 'comparison-table',
+      title: 'Tabela comparativa: matriz de recursos', // VERIFY
+      content: '**Em abril de 2026, este é o detalhamento dos recursos:**', // VERIFY
+      columns: ['Ferramenta', 'Velocidade', 'Caso de uso', 'CI/CD', 'Revisão humana', 'Preços'], // VERIFY
+      rows: [
+        { Ferramenta: 'Promptfoo', Velocidade: 'Segundos', 'Caso de uso': 'Testes unitários, regressão', 'CI/CD': '✅ Nativo', 'Revisão humana': '✗ Não', Preços: 'Grátis (MIT)' }, // VERIFY
+        { Ferramenta: 'Braintrust', Velocidade: 'Minutos–horas', 'Caso de uso': 'Eval em lote, aprovação', 'CI/CD': '✓ API', 'Revisão humana': '✅ Sim', Preços: '~$500/mês' }, // VERIFY
+        { Ferramenta: 'DeepEval', Velocidade: 'Minutos', 'Caso de uso': 'Scoring de pipelines RAG', 'CI/CD': '✓ Python', 'Revisão humana': '✗ Não', Preços: 'Grátis + nuvem paga' }, // VERIFY
+        { Ferramenta: 'LangSmith', Velocidade: 'Tempo real', 'Caso de uso': 'Tracing, depuração', 'CI/CD': '✓ API', 'Revisão humana': '✗ Não', Preços: 'Grátis / $50+/mês' }, // VERIFY
+        { Ferramenta: 'Phoenix', Velocidade: 'Tempo real', 'Caso de uso': 'Monitoramento em produção', 'CI/CD': '✓ API', 'Revisão humana': '✗ Não', Preços: 'Grátis (Apache 2.0)' }, // VERIFY
+        { Ferramenta: 'PromptQuorum', Velocidade: 'Segundos', 'Caso de uso': 'Comparação multimodelo', 'CI/CD': '✗ Não', 'Revisão humana': '✓ Lado a lado', Preços: 'Grátis + créditos' } // VERIFY
+      ]
+    },
+    howToChoose: {
+      id: 'how-to-choose',
+      title: 'Como escolher seu stack de teste', // VERIFY
+      numberedItems: [
+        'Todos: comece com o Promptfoo (grátis) no seu pipeline CI/CD. Execute testes a cada commit. Isso é inegociável.', // VERIFY
+        'Fazendo deploy em produção: adicione o Braintrust para eval em lote final com aprovação humana antes do lançamento.', // VERIFY
+        'Pipelines RAG: adicione o DeepEval para métricas RAGAS específicas de recuperação. O Promptfoo testa todo o pipeline; o DeepEval diagnostica a camada de recuperação.', // VERIFY
+        'Cadeias multietapa: adicione o LangSmith para tracing. Quando o Promptfoo detecta uma regressão, o LangSmith mostra onde quebrou na cadeia.', // VERIFY
+        'Monitoramento em produção: adicione o Phoenix para observabilidade em tempo real — latência, custo e detecção de deriva.', // VERIFY
+        'Seleção de modelo: execute o PromptQuorum primeiro para comparar modelos nos seus prompts específicos antes de construir suites de teste.' // VERIFY
+      ]
+    },
+    commonMistakes: {
+      id: 'common-mistakes',
+      title: 'Por que os testes de prompts falham?', // VERIFY
+      mistakes: [
+        { mistake: 'Testar apenas o happy path', problem: 'Os edge cases (entrada vazia, entrada muito longa, instruções contraditórias) causam mais de 30% das falhas em produção.', fix: 'Teste pelo menos 20 casos representativos por cenário, incluindo entradas adversariais.' }, // VERIFY
+        { mistake: 'Não testar regressões', problem: 'Uma mudança de prompt que melhora um caso costuma quebrar outros três. Sem comparação de baseline, você faz deploy às cegas.', fix: 'Execute o conjunto de testes antigo contra cada nova versão. Reverta se mais de 10% dos casos caírem abaixo do limite.' }, // VERIFY
+        { mistake: 'Pontuar com o mesmo LLM que você está testando', problem: 'A autoavaliação infla os scores em 10–20%. O GPT-5.5 pontuando o próprio output não é verificação independente.', fix: 'Use um modelo diferente para pontuar. Teste o GPT-5.5 → pontue com o Claude. Ou use juízes humanos para o ground truth.' }, // VERIFY
+        { mistake: 'Ignorar a latência e o custo na avaliação', problem: 'Um prompt 10% mais preciso que é 2× mais lento pode não valer a pena fazer deploy.', fix: 'Rastreie qualidade, latência E custo por output. O Helicone ou o Phoenix adicionam visibilidade de custos.' } // VERIFY
+      ]
+    },
+    relatedReading: {
+      title: 'Leituras relacionadas', // VERIFY
+      items: [
+        '[Braintrust vs PromptHub vs Vellum vs Promptfoo: qual usar?](/pt/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)', // VERIFY
+        '[Melhores ferramentas de prompt engineering 2026: classificadas por caso de uso](/pt/prompt-engineering/best-prompt-engineering-tools-2026)', // VERIFY
+        '[Melhores ferramentas de otimização de prompts para equipes 2026](/pt/prompt-engineering/best-prompt-optimization-tools-for-teams)', // VERIFY
+        '[Prompt engineering vs fine-tuning: como decidir](/pt/prompt-engineering/prompt-engineering-vs-fine-tuning)', // VERIFY
+        '[Otimização manual vs automatizada de prompts 2026](/pt/prompt-engineering/manual-vs-automated-prompt-optimization)', // VERIFY
+        '[Zero-Shot vs Few-Shot Prompting: quando usar cada um](/pt/prompt-engineering/zero-shot-vs-few-shot)' // VERIFY
+      ]
+    },
+    faq: {
+      title: 'FAQ', // VERIFY
+      faqs: [
+        { q: 'O que é teste de prompts?', a: 'O teste de prompts verifica se seus outputs de LLM correspondem a uma resposta de referência ou passam por uma regra LLM-as-judge. Os testes rápidos (unitários) verificam um único prompt em segundos. Os testes lentos (em lote) avaliam um dataset offline em minutos ou horas.' }, // VERIFY
+        { q: 'Quando devo testar prompts?', a: 'Teste sempre que mudar um prompt, especialmente antes de fazer deploy em produção. Use teste CI/CD a cada commit e avaliação em lote para a aprovação final.' }, // VERIFY
+        { q: 'Qual é a diferença entre Promptfoo e Braintrust?', a: 'O Promptfoo é open-source, CLI-first e construído para pipelines CI/CD (rápido, grátis). O Braintrust é SaaS, baseado na web, para avaliação offline com juízes humanos e LLM (lento, completo).' }, // VERIFY
+        { q: 'O que são métricas RAGAS?', a: 'RAGAS (Retrieval-Augmented Generation Assessment) mede três aspectos dos pipelines RAG: qualidade de recuperação, relevância do contexto e correção da resposta. O DeepEval implementa RAGAS.' }, // VERIFY
+        { q: 'Posso usar várias ferramentas juntas?', a: 'Sim. Use o Promptfoo no CI/CD para feedback rápido, o Braintrust para avaliação em lote final, o DeepEval para métricas específicas de RAG e o LangSmith para tracing de cadeias multietapa.' }, // VERIFY
+        { q: 'Qual ferramenta é gratuita?', a: 'O Promptfoo é open-source e gratuito. O DeepEval é gratuito com evals na nuvem pagos opcionais. O Phoenix é open-source e gratuito. O Braintrust e o LangSmith oferecem tiers gratuitos.' }, // VERIFY
+        { q: 'Como configuro o Promptfoo no CI/CD?', a: 'Escreva uma configuração YAML com seus prompts e casos de teste, execute promptfoo eval no seu pipeline CI (GitHub Actions, GitLab CI) e faça o build falhar se os scores caírem abaixo de um limite.' }, // VERIFY
+        { q: 'O que é um LLM-as-judge?', a: 'Um LLM-as-judge usa outro LLM (GPT-5.5, Claude) para pontuar seu output conforme uma rubrica. Escala a avaliação sem revisão humana, mas pode ter viés. A maioria das ferramentas o suporta.' } // VERIFY
+      ]
+    },
+    sources: {
+      title: 'Fontes', // VERIFY
+      items: [
+        '[Promptfoo GitHub](https://github.com/promptfoo/promptfoo) — framework de teste de prompts CI/CD open-source; base para afirmações de velocidade e recursos', // VERIFY
+        '[Braintrust Documentation](https://docs.braintrust.dev) — plataforma de avaliação em lote; base para afirmações de revisão humana e juízes LLM', // VERIFY
+        '[DeepEval RAGAS Metrics](https://docs.deepeval.trychasm.com) — biblioteca de avaliação RAG; base para o detalhamento de métricas RAGAS', // VERIFY
+        '[LangSmith Tracing Guide](https://docs.smith.langchain.com) — tracing e depuração de LangChain; base para afirmações de cadeias multietapa', // VERIFY
+        '[Phoenix Documentation](https://docs.arize.com/phoenix) — observabilidade LLM open-source; base para afirmações de recursos de monitoramento' // VERIFY
+      ]
+    }
+  }
 }, fr: {
   theme: 'Outils & Plateformes',
   title: 'Outils de test et évaluation de prompts 2026 : Promptfoo vs Braintrust vs DeepEval',
