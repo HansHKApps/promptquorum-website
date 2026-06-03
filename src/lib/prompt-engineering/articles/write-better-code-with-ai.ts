@@ -1281,6 +1281,238 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
 
+    pt: {
+      theme: 'Use Cases',
+      title: 'Como Escrever Código Melhor com IA: Prompts, Modelos e Segurança em 2026',
+      intro: '**Para escrever código melhor com IA em 2026: use um prompt estruturado (função, objetivo, restrições, formato de saída, casos extremos), defina a Temperatura em 0,1–0,2 para produção, encaminhe tarefas de backend para Claude 4.8 e tarefas de algoritmo para GPT-5, e execute cada saída por um linter de segurança antes do deploy.**\n\nFerramentas de codificação com IA reduzem o tempo de desenvolvimento em 30–75% — mas apenas quando o desenvolvedor escreve prompts estruturados, não perguntas casuais. A qualidade da saída do modelo é diretamente determinada por quão explicitamente você especifica a função, as restrições e a saída esperada. Em abril de 2026, Claude 4.8 Opus lidera em código de backend e rastreamento de bugs, GPT-5 lidera em design de algoritmos, e LLaMA 4 via Ollama roda completamente no seu próprio hardware com 8 GB de RAM.\n\nA IA ainda introduz vulnerabilidades de segurança em 45% do código gerado — tornando a revisão e o linting inegociáveis antes do deploy.',
+      publishDate: '2026-03-22',
+      readTime: '15 min de leitura',
+      seoTitle: 'Escrever Código Melhor com IA: Prompts, Modelos e Segurança (2026)',
+      metaDescription: 'IA reduz o tempo de codificação em 30–75% com prompts estruturados. Compare Claude, GPT-5.5 e Gemini para tarefas de código. 45% do código de IA tem falhas de segurança — aprenda fluxos de trabalho seguros.',
+      educationalLevel: 'Intermediate',
+      aboutTopics: ['Codificação assistida por IA', 'Geração de código', 'Prompt engineering'],
+      howToName: 'Como escrever prompts que produzem código melhor',
+      toc: [
+        { label: 'A resposta direta: a qualidade do prompt determina a qualidade do código', anchor: '#the-direct-answer-prompt-quality-determines-code-quality' },
+        { label: 'Qual modelo de IA usar para tarefas de codificação', anchor: '#which-ai-model-to-use-for-coding-tasks' },
+        { label: 'Como escrever prompts que produzem código melhor', anchor: '#how-to-write-prompts-that-produce-better-code' },
+        { label: 'Como o prompting Chain-of-Thought melhora a depuração?', anchor: '#how-does-chain-of-thought-prompting-improve-debugging' },
+        { label: 'Como injetar regras de codificação como instruções persistentes', anchor: '#how-to-inject-coding-rules-as-persistent-instructions' },
+        { label: 'Qual ferramenta de codificação com IA tem a menor taxa de alucinação?', anchor: '#which-ai-coding-tool-has-the-lowest-hallucination-rate' },
+        { label: 'O problema de segurança: o que a IA erra', anchor: '#the-security-problem-what-ai-gets-wrong' },
+        { label: 'O método de verificação cruzada multi-modelo', anchor: '#the-multi-model-cross-check-method' },
+        { label: 'Como os ajustes de Temperatura e janela de contexto afetam a qualidade do código?', anchor: '#how-do-temperature-and-context-window-settings-affect-code-quality' },
+        { label: 'Erros comuns ao usar IA para código', anchor: '#common-mistakes-when-using-ai-for-code' },
+        { label: 'Leitura relacionada', anchor: '#related-reading' },
+        { label: 'Fluxo de trabalho passo a passo: escrever código melhor com IA', anchor: '#step-by-step-workflow-write-better-code-with-ai' },
+        { label: 'Perguntas frequentes', anchor: '#frequently-asked-questions' },
+        { label: 'Fontes e leituras adicionais', anchor: '#sources-further-reading' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        inLanguage: 'pt-BR',
+        headline: 'Como Escrever Código Melhor com IA: Prompts, Modelos e Segurança em 2026',
+        description: 'Domine a geração de código com IA com prompts estruturados, comparativo de modelos e fluxos de trabalho de segurança. Aprenda configurações de temperatura, modelos locais e como evitar 45% das alucinações.',
+        datePublished: '2026-03-22',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        keywords: 'codificação com IA, prompt engineering, geração de código, Claude, GPT-5, Gemini 3, vulnerabilidades de segurança, temperatura, janela de contexto',
+        about: [
+          { '@type': 'Thing', name: 'Geração de código com IA' },
+          { '@type': 'Thing', name: 'Prompt engineering' },
+          { '@type': 'Thing', name: 'Segurança de código' },
+        ],
+        image: 'https://www.promptquorum.com/pt/api/og/write-better-code-with-ai',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/write-better-code-with-ai?lang=pt',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'pt-BR',
+        name: 'Como escrever prompts que produzem código melhor',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Definir a função', text: 'Especifique sua função: "Você é um Senior Python Backend Engineer." A definição da função ancora a expertise do modelo.' },
+          { '@type': 'HowToStep', position: 2, name: 'Especificar o objetivo', text: 'Defina o que você quer: "Escreva um endpoint REST API" ou "Depure esta função."' },
+          { '@type': 'HowToStep', position: 3, name: 'Estabelecer as restrições', text: 'Liste os requisitos: "Use FastAPI. Sem bibliotecas de validação externas. Trate campos ausentes com HTTP 422."' },
+          { '@type': 'HowToStep', position: 4, name: 'Definir o formato de saída', text: 'Especifique o que deve ser retornado: "Retorne apenas o código Python. Sem explicação em prosa."' },
+          { '@type': 'HowToStep', position: 5, name: 'Enumerar os casos extremos', text: 'Descreva os casos extremos: "Trate strings vazias e valores nulos em todos os campos."' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          { '@type': 'Question', name: 'Qual é o melhor modelo de IA para escrever código em 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Claude 4.8 Opus (Anthropic) oferece os resultados mais consistentes para código de backend, design de API e rastreamento de bugs. GPT-5 (OpenAI) tem ligeira vantagem em design de algoritmos. Para bases de código sensíveis à privacidade, LLaMA 4 8B rodando localmente via Ollama gera zero chamadas de API externas.' } },
+          { '@type': 'Question', name: 'É seguro fazer deploy de código gerado por IA diretamente?', acceptedAnswer: { '@type': 'Answer', text: 'Não. IA introduz vulnerabilidades de segurança em 45% dos casos de código gerado. Todo código gerado por IA deve ser revisado por um desenvolvedor e escaneado com um linter de segurança antes do deploy em produção.' } },
+          { '@type': 'Question', name: 'Qual temperatura devo usar para geração de código com IA?', acceptedAnswer: { '@type': 'Answer', text: 'Defina a Temperatura em 0,1–0,2 para geração de código de produção. Use Temperatura 0,7–0,9 apenas para brainstorming de abordagens algorítmicas.' } },
+          { '@type': 'Question', name: 'Posso enviar código-fonte relevante para LGPD a modelos de IA na nuvem?', acceptedAnswer: { '@type': 'Answer', text: 'Não, se dados pessoais forem processados. A LGPD exige medidas técnicas de proteção no processamento de dados pessoais. Use LLaMA 4 8B via Ollama para inferência local sem chamadas de API externas.' } },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: 'Principais conclusões',
+          isTldr: true,
+          items: [
+            'IA reduz o tempo de escrita de código em 30–75% — mas apenas quando os prompts são estruturados com função, objetivo, restrições, formato de saída e casos extremos',
+            'Claude 4.8 Opus (Anthropic) lidera em código de backend, design de API e rastreamento de bugs; GPT-5 (OpenAI) lidera em design de algoritmos e raciocínio em múltiplas etapas',
+            'Prompting Chain-of-Thought (CoT) — "raciocine passo a passo antes de gerar código" — torna a lógica do modelo inspecionável e reduz erros de depuração',
+            'IA introduz vulnerabilidades de segurança em 45% do código gerado; sempre execute linters de segurança antes do deploy',
+            'Defina a Temperatura (T) em 0,1–0,2 para código de produção; use 0,7–0,9 apenas para brainstorming algorítmico exploratório',
+            'LLaMA 4 8B via Ollama roda localmente com 8 GB de RAM — zero dados saem da sua máquina, adequado para bases de código sensíveis à privacidade e conformidade com a LGPD',
+          ],
+        },
+        directAnswer: {
+          title: 'A resposta direta: a qualidade do prompt determina a qualidade do código',
+          content: [
+            '**A saída de qualquer sessão de codificação com IA é tão boa quanto a instrução que você dá — um prompt vago produz código vago, um prompt estruturado produz código pronto para produção.** LLMs não "entendem" seu projeto; eles preveem o próximo token mais provável com base em padrões aprendidos de bilhões de linhas de código.',
+            'Isso significa que seu prompt é um contrato de arquitetura, não uma pergunta casual. Quando você especifica a linguagem de programação, as entradas/saídas esperadas e os casos extremos, você obtém código consistentemente mais próximo de estar pronto para produção.',
+          ],
+        },
+        modelComparison: {
+          title: 'Qual modelo de IA usar para tarefas de codificação',
+          content: [
+            '**Em abril de 2026, diferentes modelos se destacam em diferentes tarefas de codificação — encaminhar seu prompt para o modelo certo reduz erros e custos de tokens.**',
+          ],
+          tableFormat: true,
+          columns: ['Tarefa', 'Melhor modelo', 'Por quê'],
+          rows: [
+            { 'Tarefa': 'Geração de componentes React', 'Melhor modelo': 'Claude 4.8 Opus', 'Por quê': 'Forte desempenho; tratamento preciso de JSX e props' },
+            { 'Tarefa': 'Correção de bugs', 'Melhor modelo': 'Claude 4.8 Opus', 'Por quê': 'Saída de rastreamento passo a passo superior para depuração de múltiplos arquivos' },
+            { 'Tarefa': 'Design de algoritmos', 'Melhor modelo': 'GPT-5', 'Por quê': 'Ligeira vantagem em soluções algorítmicas criativas' },
+            { 'Tarefa': 'Análise de documentos longos/base de código', 'Melhor modelo': 'Gemini 3 Pro', 'Por quê': 'Lida com contextos de até 2M tokens' },
+            { 'Tarefa': 'Inferência local (privacidade)', 'Melhor modelo': 'LLaMA 4 via Ollama', 'Por quê': 'Zero dados saem da sua máquina; o modelo 8B requer 8 GB de RAM' },
+          ],
+        },
+        promptStructure: {
+          title: 'Como escrever prompts que produzem código melhor',
+          content: [
+            '**Prompts estruturados produzem medidavelmente menos erros do que solicitações abertas.** O princípio central: minimize a especulação do modelo. Especifique a linguagem de programação, o runtime alvo, os casos extremos e o formato de saída esperado explicitamente.',
+          ],
+          numberedItems: [
+            '**Função** — "Você é um Senior Python Backend Engineer."',
+            '**Objetivo** — "Escreva um endpoint REST API que aceita um payload JSON e o valida."',
+            '**Restrições** — "Use FastAPI. Sem bibliotecas de validação externas. Trate campos ausentes com HTTP 422."',
+            '**Formato de saída** — "Retorne apenas o código Python. Sem explicação em prosa."',
+            '**Casos extremos** — "Trate strings vazias e valores nulos em todos os campos."',
+          ],
+        },
+        chainOfThought: {
+          title: 'Como o prompting Chain-of-Thought melhora a depuração de código?',
+          content: [
+            '**O prompting CoT — pedindo ao modelo que raciocine passo a passo antes de produzir uma resposta final — reduz erros de depuração por meio da inspecionabilidade da lógica do modelo.** Para depuração, isso significa que o modelo rastreia o caminho do erro explicitamente, permitindo que você identifique exatamente onde a lógica falha.',
+          ],
+        },
+        rules: {
+          title: 'Como injetar regras de codificação como instruções persistentes',
+          content: [
+            '**Regras — conjuntos curtos de instruções explícitas em prompts de sistema ou configuração de projeto — tornam as ferramentas de codificação com IA consistentes entre sessões.** Ferramentas modernas (Cursor, GitHub Copilot, Claude Code) suportam regras de nível de projeto que persistem em todas as interações.',
+          ],
+          items: [
+            'Sempre use TypeScript em modo estrito. Sem tipo `any`.',
+            'Nunca instale novos pacotes — use apenas as dependências existentes no package.json.',
+            'Todas as funções devem ter comentários JSDoc.',
+            'Sempre leia `ARCHITECTURE.md` antes de gerar novos componentes.',
+          ],
+        },
+        codingTools: {
+          title: 'Qual ferramenta de codificação com IA tem a menor taxa de alucinação?',
+          content: [
+            '**Uma alucinação em codificação com IA refere-se à saída gerada que parece plausível, mas faz referência a funções, bibliotecas ou APIs inexistentes.** Cursor reporta a menor taxa de alucinação com ~10–15% devido à indexação RAG de nível de projeto.',
+          ],
+          tableFormat: true,
+          columns: ['Ferramenta', 'Taxa de alucinação', 'Consciência de arquitetura', 'Adequado para'],
+          rows: [
+            { 'Ferramenta': 'GitHub Copilot', 'Taxa de alucinação': '~15–20%', 'Consciência de arquitetura': 'Contexto de nível de arquivo', 'Adequado para': 'Desenvolvedores individuais, código repetitivo' },
+            { 'Ferramenta': 'Cursor', 'Taxa de alucinação': '~10–15%', 'Consciência de arquitetura': 'Indexação RAG de nível de projeto', 'Adequado para': 'Equipes que querem um IDE nativo de IA' },
+            { 'Ferramenta': 'Claude Code (Anthropic)', 'Taxa de alucinação': 'Baixa em tarefas estruturadas', 'Consciência de arquitetura': 'Contexto completo da base de código', 'Adequado para': 'Backend, refatoração de múltiplos arquivos' },
+            { 'Ferramenta': 'Qwen Code (Alibaba)', 'Taxa de alucinação': 'Variável', 'Consciência de arquitetura': 'Implantável localmente', 'Adequado para': 'Pesquisa, controle total da infraestrutura' },
+          ],
+        },
+        security: {
+          title: 'O problema de segurança: o que a IA erra',
+          content: [
+            '**Em abril de 2026, IA gera código com vulnerabilidades de segurança em 45% dos casos.** Um relatório da Veracode de 2025 mostrou que LLMs escolhem a implementação insegura em vez da segura 45% das vezes.',
+          ],
+          items: [
+            '**Dependências alucinadas** — modelos recomendam importar pacotes que não existem. Atacantes exploram isso via "slopsquatting" — registram o nome do pacote alucinado com código malicioso.',
+            '**Implementações inseguras** — IA reproduz padrões inseguros dos dados de treinamento (riscos de injeção SQL, sanitização inadequada de entradas, padrões fracos de criptografia).',
+            '**Casos extremos ausentes** — erros de robustez ocorrem quando o código gerado não trata entradas inesperadas.',
+          ],
+        },
+        multiModelCheck: {
+          title: 'O método de verificação cruzada multi-modelo',
+          content: [
+            '**Executar o mesmo prompt em múltiplos modelos simultaneamente reduz a probabilidade de aceitar uma dependência alucinada ou uma implementação insegura.** PromptQuorum é uma ferramenta de despacho de IA multi-modelo que envia um prompt a múltiplos provedores de IA simultaneamente e mostra todas as respostas lado a lado.',
+          ],
+        },
+        parameters: {
+          title: 'Como os ajustes de Temperatura e janela de contexto afetam a qualidade do código?',
+          content: [
+            '**Temperatura (T) controla a aleatoriedade da saída de IA: para geração de código, T = 0,0–0,3 produz saída determinística e conservadora; T = 0,7–1,0 aumenta a variação criativa mas também a taxa de erros.**',
+          ],
+          tableFormat: true,
+          columns: ['Modelo', 'Janela de contexto', 'Significado'],
+          rows: [
+            { 'Modelo': 'GPT-5', 'Janela de contexto': '128k tokens', 'Significado': '~96.000 linhas de código visíveis por sessão' },
+            { 'Modelo': 'Claude 4.8 Opus', 'Janela de contexto': '200k tokens', 'Significado': 'Maior contexto da base de código; melhor para refatoração de múltiplos arquivos' },
+            { 'Modelo': 'Gemini 3 Pro', 'Janela de contexto': '2M tokens', 'Significado': 'Análise completa da base de código para projetos grandes' },
+          ],
+        },
+        commonMistakes: {
+          title: 'Erros comuns ao usar IA para código',
+          content: ['**Evite estes erros comuns ao trabalhar com ferramentas de codificação com IA:**'],
+          items: [
+            '**Tratar a saída de IA como pronta para deploy** — IA gera código de aparência plausível, não código verificado. Vulnerabilidades de segurança aparecem em 45% do código gerado por IA.',
+            '**Prompts vagos para tarefas complexas** — "Escreva um sistema de login" gera padrões inseguros. Sempre seja específico com o framework, as restrições e o formato de saída.',
+            '**Ignorar o ajuste de Temperatura** — a Temperatura padrão na maioria das plataformas é 0,7–1,0 — incorreto para código. Defina a Temperatura em 0,1–0,2 para produção.',
+            '**Aceitar nomes de pacotes alucinados** — IA recomenda bibliotecas inexistentes 20% das vezes. Sempre verifique no PyPI ou npm antes de instalar.',
+            '**Não fornecer o contexto do código existente** — IA gera código que entra em conflito com sua arquitetura se não puder ver seus padrões existentes.',
+          ],
+        },
+        relatedReading: {
+          title: 'Leitura relacionada',
+          items: [
+            '[Chain-of-Thought Prompting](/pt/prompt-engineering/chain-of-thought-prompting) — raciocínio passo a passo para tarefas de lógica e depuração',
+            '[Temperatura e Top-P explicados](/pt/prompt-engineering/temperature-and-top-p-control-ai-creativity) — como os parâmetros de aleatoriedade afetam cada saída do modelo',
+            '[Prompt Injection e Segurança](/pt/prompt-engineering/prompt-injection-and-security) — riscos de segurança em fluxos de trabalho de desenvolvimento assistidos por IA',
+            '[O que é Prompt Engineering?](/pt/prompt-engineering/what-is-prompt-engineering) — definição completa e conceitos centrais',
+          ],
+        },
+        howToStart: {
+          title: 'Fluxo de trabalho passo a passo: escrever código melhor com IA',
+          numberedItems: [
+            '**Defina sua função e restrições antecipadamente.** Antes de escrever a solicitação, especifique a função, o framework alvo e quaisquer restrições de arquitetura.',
+            '**Estruture seu prompt com função, objetivo, restrições e formato de saída.** Use um modelo consistente: Função → Objetivo → Restrições → Formato de saída → Casos extremos.',
+            '**Use o prompting Chain-of-Thought (CoT) para tarefas de depuração.** Peça ao modelo "rastreie a execução passo a passo" antes de gerar a correção final.',
+            '**Defina a Temperatura (T) em 0,1–0,2 para código de produção.** Reserve T = 0,7–0,9 apenas para brainstorming algorítmico.',
+            '**Execute o código por um linter de segurança e verificação cruzada multi-modelo.** Nunca faça deploy de código gerado por IA sem um scanner de segurança e verificação via PromptQuorum.',
+          ],
+        },
+        faq: {
+          title: 'Perguntas frequentes',
+          faqs: [
+            { q: 'Qual é o melhor modelo de IA para escrever código em 2026?', a: 'Claude 4.8 Opus (Anthropic) produz os resultados mais consistentes para código de backend, design de API e rastreamento de bugs. GPT-5 (OpenAI) tem ligeira vantagem em design de algoritmos. Para bases de código sensíveis à privacidade, LLaMA 4 8B rodando localmente via Ollama gera zero chamadas de API externas.' },
+            { q: 'É seguro fazer deploy de código gerado por IA diretamente?', a: 'Não. IA introduz vulnerabilidades de segurança em 45% dos casos de código gerado, incluindo implementações inseguras e nomes de pacotes alucinados. Todo código gerado por IA deve ser revisado e escaneado antes do deploy em produção.' },
+            { q: 'Qual temperatura devo usar para geração de código com IA?', a: 'Defina a Temperatura em 0,1–0,2 para geração de código de produção. Use Temperatura 0,7–0,9 apenas para brainstorming algorítmico.' },
+            { q: 'O que são dependências alucinadas em codificação com IA?', a: 'Nomes de pacotes ou bibliotecas que o modelo recomenda mas que na verdade não existem. IA recomenda bibliotecas inexistentes 20% das vezes. Sempre verifique cada pacote recomendado no PyPI ou npm.' },
+            { q: 'Posso usar ferramentas de codificação com IA com LLMs locais para privacidade?', a: 'Sim. LLaMA 4 8B rodando via Ollama em uma máquina com 8 GB de RAM gera zero chamadas de API externas. É adequado para bases de código com algoritmos proprietários ou código que não pode sair da sua infraestrutura.' },
+            { q: 'Posso enviar código-fonte relevante para a LGPD a modelos de IA na nuvem?', a: 'Não, se dados pessoais forem processados. A LGPD exige medidas técnicas de proteção no processamento de dados pessoais. Use LLaMA 4 8B via Ollama para inferência local sem chamadas de API externas.' },
+          ],
+        },
+        sources: {
+          title: 'Fontes e leituras adicionais',
+          items: [
+            '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — artigo fundamental sobre raciocínio passo a passo em LLMs',
+            '[Veracode, 2025. "AI Code Security Report"](https://www.securitymagazine.com/articles/101801-ai-introduces-security-vulnerabilities-within-code-in-45-of-cases) — documenta a taxa de vulnerabilidades de 45% em código gerado por IA',
+            '[METR, 2025. "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"](https://www.infoq.com/news/2025/07/ai-productivity/) — estudo de campo sobre o impacto da IA na produtividade de desenvolvedores',
+          ],
+        },
+      },
+    },
+
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',

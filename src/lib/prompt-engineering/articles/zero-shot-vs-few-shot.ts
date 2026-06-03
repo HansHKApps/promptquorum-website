@@ -363,6 +363,118 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
 },
+    pt: {
+  theme: 'Techniques',
+  title: 'Zero-Shot vs. Few-Shot Prompting',
+  seoTitle: 'Zero-Shot vs. Few-Shot Prompting 2026: qual usar',
+  intro: 'O Zero-Shot Prompting não usa exemplos no prompt e depende inteiramente do pré-treinamento do modelo, enquanto o Few-Shot Prompting incorpora alguns exemplos para que o modelo possa imitar um padrão desejado.',
+  publishDate: '2026-03-26',
+  readTime: '6 min de leitura',
+  educationalLevel: 'Intermediate',
+  primaryTerm: 'Zero-Shot e Few-Shot Prompting',
+  metaDescription: 'Compare zero-shot e few-shot prompting. Quando usar cada técnica. Aprenda requisitos de contexto, trade-offs de precisão e melhores práticas para ambos os métodos.',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Zero-Shot vs. Few-Shot Prompting',
+    description: 'Uma comparação prática do zero-shot e few-shot prompting, quando usar cada técnica e como o PromptQuorum ajuda a escolher a estratégia certa.',
+    datePublished: '2026-03-26',
+    keywords: ['Zero-Shot Prompting', 'Few-Shot Prompting', 'prompt engineering', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    url: 'https://www.promptquorum.com/pt/prompt-engineering/zero-shot-vs-few-shot?lang=pt',
+    inLanguage: 'pt-BR',
+  },
+  sections: {
+    whatIsZeroShot: {
+      title: 'O que é Zero-Shot Prompting',
+      content: [
+        '**O Zero-Shot Prompting pede ao modelo que resolva uma tarefa usando apenas uma instrução clara e sem exemplos no prompt.** O modelo se apoia em seu conhecimento geral e nas capacidades de seguimento de instruções aprendidas durante o pré-treinamento e o alinhamento.',
+        'Zero-Shot é rápido de configurar porque você não precisa projetar ou curar pares de exemplos. Funciona bem para tarefas amplas como P&R genérica, classificação simples, sumarização ou tradução direta, onde as instruções sozinhas geralmente são suficientes.',
+      ],
+    },
+    whatIsFewShot: {
+      title: 'O que é Few-Shot Prompting',
+      content: [
+        '**O Few-Shot Prompting adiciona um pequeno número de exemplos de entrada-saída à instrução para que o modelo possa inferir o padrão da tarefa a partir de demonstrações concretas.** Na prática, few-shot geralmente significa entre dois e dez exemplos.',
+        'Esses exemplos atuam como um mini conjunto de treinamento dentro do prompt, orientando como o modelo deve interpretar tarefas ambíguas, formatos especializados ou linguagem específica de domínio. O Few-Shot Prompting é especialmente útil quando você precisa de um estilo, esquema ou comportamento específico que instruções genéricas não capturam.',
+      ],
+    },
+    keyDifferences: {
+      title: 'Diferenças principais: Zero-Shot vs. Few-Shot',
+      content: [
+        '**O Zero-Shot e o Few-Shot Prompting diferem principalmente no esforço de configuração, na precisão em tarefas específicas e na escalabilidade entre muitos casos de uso.** Ambos dependem do mesmo modelo subjacente, mas trocam o esforço de design de exemplos por melhor alinhamento de tarefa.',
+      ],
+      columns: ['Dimensão', 'Zero-Shot', 'Few-Shot'],
+      rows: [
+        { 'Dimensão': 'Exemplos no prompt', 'Zero-Shot': 'Nenhum', 'Few-Shot': '2–10+ exemplos representativos' },
+        { 'Dimensão': 'Velocidade de configuração', 'Zero-Shot': 'Muito rápida; sem curadoria de exemplos', 'Few-Shot': 'Mais lenta; exemplos devem ser selecionados e mantidos' },
+        { 'Dimensão': 'Requisitos de dados', 'Zero-Shot': 'Sem exemplos rotulados necessários', 'Few-Shot': 'Requer pelo menos alguns exemplos rotulados' },
+        { 'Dimensão': 'Precisão em tarefas específicas', 'Zero-Shot': 'Frequentemente menor ou mais genérica', 'Few-Shot': 'Tipicamente maior e mais consistente em domínios específicos' },
+        { 'Dimensão': 'Escalabilidade entre tarefas', 'Zero-Shot': 'Altamente escalável, fácil de adicionar novas tarefas', 'Few-Shot': 'Menos escalável; cada tarefa pode precisar de seus próprios exemplos' },
+      ],
+    },
+    whenToUseZeroShot: {
+      title: 'Quando usar Zero-Shot',
+      content: [
+        '**Você deve usar o Zero-Shot Prompting quando precisa de velocidade, não tem exemplos rotulados e sua tarefa é razoavelmente geral.** Esse padrão funciona bem como primeira passagem ou linha de base.',
+        'Cenários típicos de Zero-Shot:',
+      ],
+      items: [
+        'P&R geral, resumos simples e classificação básica de sentimentos.',
+        'Experimentação rápida quando você ainda está descobrindo a forma da tarefa.',
+        'Novos domínios ou idiomas onde você não tem exemplos curados.',
+      ],
+    },
+    whenToUseFewShot: {
+      title: 'Quando usar Few-Shot',
+      content: [
+        '**Você deve usar o Few-Shot Prompting quando a tarefa é especializada, sensível ao formato ou de alto risco, e você pode fornecer bons exemplos.** Nesses casos, os exemplos melhoram significativamente a confiabilidade em relação às instruções puras.',
+        'Cenários comuns de Few-Shot:',
+      ],
+      items: [
+        'Classificação ou extração específica de domínio (jurídica, médica, financeira) onde rótulos precisos e terminologia importam.',
+        'Tarefas com esquemas estritos, como extração de JSON estruturado de texto desordenado.',
+        'Tarefas multilíngues ou de localização onde alguns exemplos por idioma ajudam a lidar com expressões idiomáticas e estilo.',
+      ],
+    },
+    example: {
+      title: 'Exemplo: Prompt Zero-Shot vs. Few-Shot',
+      content: [
+        '**A diferença prática entre zero-shot e few-shot aparece claramente quando você compara prompts para a mesma tarefa.** Aqui classificamos tickets de suporte por intenção.',
+        '**[Prompt Ruim – Sem estrutura]**',
+        '"Olhe para este ticket de suporte e me diga do que se trata."',
+        '**[Prompt Zero-Shot]**',
+        '"Classifique o seguinte ticket de suporte em uma dessas categorias: `billing_issue`, `login_problem`, `feature_request`, `bug_report` ou `other`. Ticket: "Tentei redefinir minha senha três vezes hoje e o link sempre diz que expirou." Retorne apenas o nome da categoria."',
+        '**[Prompt Few-Shot]**',
+        '"Classifique cada ticket de suporte em uma dessas categorias: `billing_issue`, `login_problem`, `feature_request`, `bug_report` ou `other`. Retorne apenas o nome da categoria. Exemplo 1: Ticket: "Você me cobrou duas vezes este mês pela mesma assinatura." Rótulo: `billing_issue` Exemplo 2: Ticket: "Sempre que clico em \'exportar relatório\' nada acontece, mesmo após atualizar a página." Rótulo: `bug_report` Exemplo 3: Ticket: "Vocês poderiam adicionar suporte para exportar relatórios diretamente para o Google Sheets?" Rótulo: `feature_request` Agora classifique este ticket: "Tentei redefinir minha senha três vezes hoje e o link sempre diz que expirou."',
+        'A versão Few-Shot mostra o padrão explicitamente, o que geralmente melhora a qualidade de classificação para tickets ambíguos ou com muito ruído.',
+      ],
+    },
+    howPQHelps: {
+      title: 'Como o PromptQuorum ajuda você a escolher',
+      content: [
+        '**O PromptQuorum é uma ferramenta de despacho de IA multi-modelo que permite testar prompts Zero-Shot e Few-Shot em múltiplos provedores em um único lugar.** Você pode enviar o mesmo prompt apenas com instruções e o mesmo prompt com exemplos para modelos como GPT-5.5, Claude Opus 4.8 e Gemini 3.1 Pro em paralelo.',
+        'Dentro do PromptQuorum, você pode:',
+      ],
+      items: [
+        'Começar com prompts Zero-Shot usando frameworks como Single Step, RTF ou CO-STAR para obter linhas de base rápidas.',
+        'Atualizar para prompts Few-Shot incorporando exemplos representativos em frameworks como SPECS quando você precisa de maior controle.',
+        'Salvar as versões Zero-Shot e Few-Shot como modelos e comparar precisão, latência e custos de tokens entre modelos ao longo do tempo.',
+      ],
+    },
+    howToStart: {
+      title: 'Como escolher entre Zero-Shot e Few-Shot Prompting',
+      numberedItems: [
+        '**Para tarefas rotineiras e simples, comece com Zero-Shot (sem exemplos).** Exemplo: "Classifique esta avaliação como positiva ou negativa." Se a precisão for suficiente, Zero-Shot é mais rápido e econômico.',
+        '**Quando o desempenho Zero-Shot é baixo (< 80% de precisão ou qualidade), adicione 2–5 exemplos Few-Shot.** Mostre ao modelo 2–3 avaliações positivas e 2–3 negativas com os rótulos corretos. Few-Shot ensina com exemplos.',
+        '**Para tarefas com distinções sutis ou padrões raros, adicione 5–10 exemplos (Few-Shot+).** Se sua tarefa requer detectar sarcasmo, viés prejudicial ou nuances específicas de domínio, mais exemplos ajudam.',
+        '**Escolha exemplos que abranjam o intervalo de entradas que você espera.** Se você está classificando avaliações de produtos, inclua exemplos entusiastas, mornos e negativos. Não mostre apenas os casos fáceis.',
+        '**Meça o benefício do Few-Shot em um conjunto de teste antes de adotá-lo em produção.** Execute o mesmo prompt com 0 exemplos e com 5 exemplos em 50 casos de teste. Se Few-Shot adicionar 10 ou mais pontos percentuais de precisão, inclua exemplos. Se o ganho for < 5%, mantenha Zero-Shot.',
+      ],
+    },
+  },
+},
     fr: {
   theme: 'Techniques',
   title: 'Zero-Shot vs. Few-Shot Prompting',
