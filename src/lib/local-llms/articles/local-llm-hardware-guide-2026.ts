@@ -1286,6 +1286,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/local-llm-hardware-guide-2026',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
+        'dateModified': '2026-06-03',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
