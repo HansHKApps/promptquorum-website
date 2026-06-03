@@ -9,18 +9,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'The Complete Local LLM Software Directory: 70+ Tools to Run AI on Your Own Hardware (2026)',
-    seoTitle: 'Best Local LLM Tools 2026: 87 Apps Across 9 Categories',
+    seoTitle: 'Local LLM Tools 2026: 87-App Directory + Latest Updates',
     affiliateDisclosure: true,
     intro:
       'The local-LLM ecosystem in 2026 is large enough that picking the wrong tool first costs hours, not minutes. This directory catalogues 87 actively-maintained projects across nine layers — runtimes, desktop apps, web UIs, coding assistants, RAG systems, agent frameworks, voice and multimodal, mobile clients, and specialized productivity plugins — with the description, licence, and primary URL for each. Use it as the "what exists" map before you commit to a stack; every category ends with a link to the deeper PromptQuorum comparison guide for that layer.',
     metaDescription:
-      '87 tools for running LLMs locally: Ollama, LM Studio, GPT4All, Jan.ai, plus mobile, RAG, voice & agent frameworks. Licences and links, May 2026.',
+      '87 tools for running LLMs locally: Ollama, LM Studio, GPT4All, Jan.ai, plus mobile, RAG, voice & agents. Licences, links & latest versions. Updated June 2026.',
     twitterDescription:
-      '87 local-LLM tools across 9 categories — runtimes, desktop apps, web UIs, coding agents, RAG, multi-agent frameworks, voice, mobile. Licences and links. The "what exists" map before you commit to a stack.',
+      '87 local-LLM tools across 9 categories — runtimes, desktop apps, web UIs, coding agents, RAG, multi-agent frameworks, voice, mobile. Licences, links & latest versions, updated June 2026. The "what exists" map before you commit to a stack.',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'For RAG: AnythingLLM (easiest), PrivateGPT (offline-leaning), Open WebUI (built-in RAG inside the chat UI).',
           'For mobile: MLC Chat or PocketPal AI on Android, Private LLM or Enchanted on iOS — all run actually-useful 2-4B models on flagship phones.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-03',
       },
     },
     toc: [
@@ -144,9 +144,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Description': 'Beginner-friendly with strong CPU-only support', 'License': 'MIT' },
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Description': 'RAG and document chat with built-in vector store', 'License': 'MIT' },
           { 'Tool': '**Msty**', 'Link': '[msty.app](https://msty.app)', 'Description': 'Clean consumer UX, multi-provider support', 'License': 'Free (closed)' },
-          { 'Tool': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', 'Description': 'Multi-provider desktop AI with extensive customization', 'License': 'Apache 2.0' },
-          { 'Tool': '**Faraday**', 'Link': '[faraday.dev](https://faraday.dev)', 'Description': 'Character chat and roleplay desktop client', 'License': 'Free (closed)' },
-          { 'Tool': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', 'Description': 'Native macOS/iOS minimal Ollama client', 'License': 'MIT' },
+          { 'Tool': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', 'Description': 'Multi-provider desktop AI with extensive customization', 'License': 'AGPL 3.0' },
+          { 'Tool': '**Backyard AI**', 'Link': '[backyard.ai](https://backyard.ai)', 'Description': 'Character chat and roleplay desktop client', 'License': 'Free (closed)' },
+          { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Description': 'Native macOS/iOS minimal Ollama client', 'License': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Description': 'Enterprise-feature-heavy desktop and server', 'License': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Description': 'Lets local LLM control your computer and execute code', 'License': 'AGPL 3.0' },
         ],
@@ -267,8 +267,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Description': 'Local speech recognition, runs on CPU or GPU', 'License': 'MIT' },
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Description': 'Fast Whisper transcription via CTranslate2', 'License': 'MIT' },
           { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'Description': 'Lightweight local text-to-speech', 'License': 'MIT' },
-          { 'Tool': '**Coqui TTS**', 'Link': '[coqui.ai](https://coqui.ai)', 'Description': 'Open-source voice synthesis with multiple model options', 'License': 'MPL 2.0' },
-          { 'Tool': '**XTTS v2**', 'Link': '[docs.coqui.ai/en/latest/models/xtts.html](https://docs.coqui.ai/en/latest/models/xtts.html)', 'Description': 'Voice cloning with multilingual support', 'License': 'CPML' },
+          { 'Tool': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', 'Description': 'Open-source voice synthesis with multiple model options', 'License': 'MPL 2.0' },
+          { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'Description': 'Voice cloning with multilingual support', 'License': 'CPML' },
           { 'Tool': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'Description': 'Generative voice with non-speech sounds', 'License': 'MIT' },
           { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'Description': 'High-quality natural-sounding TTS', 'License': 'MIT' },
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Description': 'Local vision + language model', 'License': 'Apache 2.0' },
@@ -289,7 +289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLM Farm**', 'Link': '[github.com/guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)', 'Description': 'iOS local LLM with model browser', 'License': 'MIT' },
           { 'Tool': '**Layla**', 'Link': '[layla-network.ai](https://layla-network.ai)', 'Description': 'Android-first local LLM app', 'License': 'Free (closed)' },
           { 'Tool': '**Maid**', 'Link': '[github.com/Mobile-Artificial-Intelligence/maid](https://github.com/Mobile-Artificial-Intelligence/maid)', 'Description': 'Open-source Flutter mobile LLM app', 'License': 'MIT' },
-          { 'Tool': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', 'Description': 'Native iOS/macOS Ollama client', 'License': 'MIT' },
+          { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Description': 'Native iOS/macOS Ollama client', 'License': 'Apache 2.0' },
           { 'Tool': '**Chapper**', 'Link': '[prevolut.uk](https://prevolut.uk)', 'Description': 'Native Ollama and LM Studio mobile client', 'License': 'Free' },
           { 'Tool': '**RikkaHub**', 'Link': '[github.com/rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)', 'Description': 'Open-source Android local AI', 'License': 'MIT' },
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Description': 'Remote access to your local AnythingLLM workspace', 'License': 'MIT' },
@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'How This Directory Stays Current',
         content:
-          '**This directory is reviewed every six months** (next refresh: November 2026). Inclusion criteria: project is actively maintained (commits in the last 90 days), has a verifiable open-source licence or a clear commercial-use statement, and either holds meaningful user share in 2026 or fills a layer that would otherwise be empty. Projects that go inactive for more than two release cycles are removed; new entrants that pass the criteria are added at the next review. To suggest a project for inclusion, open an issue or PR against the PromptQuorum repository — include the project URL, licence, and a one-sentence description in the format above.',
+          '**This directory is reviewed every six months — last reviewed June 2026, next refresh November 2026.** The June 2026 pass reverified every link and corrected several project names and licences: Faraday is now Backyard AI, the maintained Coqui TTS fork moved to Idiap, and Cherry Studio is AGPL 3.0. Inclusion criteria: project is actively maintained (commits in the last 90 days), has a verifiable open-source licence or a clear commercial-use statement, and either holds meaningful user share in 2026 or fills a layer that would otherwise be empty. Projects that go inactive for more than two release cycles are removed; new entrants that pass the criteria are added at the next review. To suggest a project for inclusion, open an issue or PR against the PromptQuorum repository — include the project URL, licence, and a one-sentence description in the format above.',
       },
       sources: {
         id: 'sources',
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Are any of these commercial-licensed (not free for commercial use)?',
-            a: 'A handful: LM Studio, Msty, Faraday, Layla, and Cursor are closed-source — generally free to use but not redistributable, and commercial terms vary. Private LLM is paid. AGPL-licensed tools (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) are free for any use including commercial, but the AGPL terms require source disclosure if you modify and host them publicly. Apache 2.0 and MIT projects (the majority) are usable in any context including commercial without attribution constraints beyond the licence text.',
+            a: 'A handful: LM Studio, Msty, Backyard AI, Layla, and Cursor are closed-source — generally free to use but not redistributable, and commercial terms vary. Private LLM is paid. AGPL-licensed tools (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) are free for any use including commercial, but the AGPL terms require source disclosure if you modify and host them publicly. Apache 2.0 and MIT projects (the majority) are usable in any context including commercial without attribution constraints beyond the licence text.',
           },
           {
             q: 'Which tools support Apple Silicon (M-series chips) natively?',
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How often does this directory get updated?',
-            a: 'Every six months — the next scheduled refresh is November 2026. Mid-cycle changes (a project goes inactive, a new tool gains meaningful share, a licence changes) get patched into the existing entry. Entirely new categories or layers wait for a refresh to keep the structure stable. The "Sources" section above lists the community indexes used to spot-check what the ecosystem is actually doing between refreshes.',
+            a: 'Every six months — last reviewed June 2026, the next scheduled refresh is November 2026. Mid-cycle changes (a project goes inactive, a new tool gains meaningful share, a licence changes) get patched into the existing entry. Entirely new categories or layers wait for a refresh to keep the structure stable. The "Sources" section above lists the community indexes used to spot-check what the ecosystem is actually doing between refreshes.',
           },
         ],
       },
@@ -421,18 +421,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Das vollständige lokale LLM Software-Verzeichnis: 70+ Tools für KI auf eigener Hardware (2026)',
-    seoTitle: 'Lokales LLM Software-Verzeichnis 2026: 70+ Tools',
+    seoTitle: 'Lokale LLM-Tools 2026: 87-App-Verzeichnis + Updates',
     affiliateDisclosure: true,
     intro:
       'Das lokale LLM-Ökosystem ist 2026 so groß geworden, dass die falsche Tool-Wahl am Anfang Stunden, nicht Minuten kostet. Dieses Verzeichnis katalogisiert 87 aktiv gepflegte Projekte in neun Schichten — Laufzeitumgebungen, Desktop-Apps, Web-UIs, Coding-Assistenten, RAG-Systeme, Agenten-Frameworks, Sprache und Multimodal, Mobile-Clients und spezialisierte Produktivitäts-Plugins — jeweils mit Beschreibung, Lizenz und primärer URL. Verwenden Sie es als Übersichtskarte des Ist-Zustands, bevor Sie sich für einen Stack entscheiden; jede Kategorie endet mit einem Link zum vertiefenden PromptQuorum-Vergleichsartikel für diese Schicht.',
     metaDescription:
-      '87 lokale-LLM-Tools in 9 Kategorien: Runtimes, Desktop-Apps, Web-UIs, Coding-Agenten, RAG, Multiagenten, Sprache, Mobile — mit Lizenzen und Links. 2026.',
+      '87 lokale-LLM-Tools in 9 Kategorien: Runtimes, Desktop-Apps, Web-UIs, Coding-Agenten, RAG, Multiagenten, Sprache, Mobile — mit Lizenzen, Links & aktuellen Versionen. Stand Juni 2026.',
     twitterDescription:
-      '87 lokale-LLM-Tools in 9 Kategorien — Laufzeiten, Desktop-Apps, Web-UIs, Coding-Agenten, RAG, Multi-Agenten-Frameworks, Sprache, Mobile. Lizenzen und Links. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
+      '87 lokale-LLM-Tools in 9 Kategorien — Laufzeiten, Desktop-Apps, Web-UIs, Coding-Agenten, RAG, Multi-Agenten-Frameworks, Sprache, Mobile. Lizenzen, Links & aktuelle Versionen, Stand Juni 2026. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Für RAG: AnythingLLM (am einfachsten), PrivateGPT (offline-fokussiert), Open WebUI (integriertes RAG in der Chat-Oberfläche).',
           'Für Mobile: MLC Chat oder PocketPal AI auf Android, Private LLM oder Enchanted auf iOS — alle führen praxistaugliche 2-4B-Modelle auf aktuellen Smartphones aus.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-03',
       },
     },
     toc: [
@@ -556,9 +556,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Beschreibung': 'Einsteigerfreundlich mit starker CPU-only-Unterstützung', 'Lizenz': 'MIT' },
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Beschreibung': 'RAG und Dokumenten-Chat mit integriertem Vektorspeicher', 'Lizenz': 'MIT' },
           { 'Tool': '**Msty**', 'Link': '[msty.app](https://msty.app)', 'Beschreibung': 'Übersichtliche Consumer-UX, Multi-Provider-Unterstützung', 'Lizenz': 'Kostenlos (proprietär)' },
-          { 'Tool': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', 'Beschreibung': 'Multi-Provider-Desktop-KI mit umfangreicher Anpassbarkeit', 'Lizenz': 'Apache 2.0' },
-          { 'Tool': '**Faraday**', 'Link': '[faraday.dev](https://faraday.dev)', 'Beschreibung': 'Desktop-Client für Charakter-Chat und Rollenspiel', 'Lizenz': 'Kostenlos (proprietär)' },
-          { 'Tool': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', 'Beschreibung': 'Nativer macOS/iOS-Minimal-Client für Ollama', 'Lizenz': 'MIT' },
+          { 'Tool': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', 'Beschreibung': 'Multi-Provider-Desktop-KI mit umfangreicher Anpassbarkeit', 'Lizenz': 'AGPL 3.0' },
+          { 'Tool': '**Backyard AI**', 'Link': '[backyard.ai](https://backyard.ai)', 'Beschreibung': 'Desktop-Client für Charakter-Chat und Rollenspiel', 'Lizenz': 'Kostenlos (proprietär)' },
+          { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Beschreibung': 'Nativer macOS/iOS-Minimal-Client für Ollama', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Beschreibung': 'Funktionsreiche Enterprise-Desktop- und Serveranwendung', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Beschreibung': 'Erlaubt einem lokalen LLM, Ihren Computer zu steuern und Code auszuführen', 'Lizenz': 'AGPL 3.0' },
         ],
@@ -679,8 +679,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Beschreibung': 'Lokale Spracherkennung, läuft auf CPU oder GPU', 'Lizenz': 'MIT' },
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Beschreibung': 'Schnelle Whisper-Transkription via CTranslate2', 'Lizenz': 'MIT' },
           { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'Beschreibung': 'Schlanke lokale Text-to-Speech-Lösung', 'Lizenz': 'MIT' },
-          { 'Tool': '**Coqui TTS**', 'Link': '[coqui.ai](https://coqui.ai)', 'Beschreibung': 'Open-Source-Sprachsynthese mit mehreren Modelloptionen', 'Lizenz': 'MPL 2.0' },
-          { 'Tool': '**XTTS v2**', 'Link': '[docs.coqui.ai/en/latest/models/xtts.html](https://docs.coqui.ai/en/latest/models/xtts.html)', 'Beschreibung': 'Voice-Cloning mit mehrsprachiger Unterstützung', 'Lizenz': 'CPML' },
+          { 'Tool': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', 'Beschreibung': 'Open-Source-Sprachsynthese mit mehreren Modelloptionen', 'Lizenz': 'MPL 2.0' },
+          { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'Beschreibung': 'Voice-Cloning mit mehrsprachiger Unterstützung', 'Lizenz': 'CPML' },
           { 'Tool': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'Beschreibung': 'Generative Sprachsynthese mit Nicht-Sprach-Tönen', 'Lizenz': 'MIT' },
           { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'Beschreibung': 'Hochwertige, natürlich klingende TTS', 'Lizenz': 'MIT' },
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Beschreibung': 'Lokales Vision-und-Sprache-Modell', 'Lizenz': 'Apache 2.0' },
@@ -701,7 +701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLM Farm**', 'Link': '[github.com/guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)', 'Beschreibung': 'iOS-Client für lokale LLMs mit Modell-Browser', 'Lizenz': 'MIT' },
           { 'Tool': '**Layla**', 'Link': '[layla-network.ai](https://layla-network.ai)', 'Beschreibung': 'Android-first App für lokale LLMs', 'Lizenz': 'Kostenlos (proprietär)' },
           { 'Tool': '**Maid**', 'Link': '[github.com/Mobile-Artificial-Intelligence/maid](https://github.com/Mobile-Artificial-Intelligence/maid)', 'Beschreibung': 'Open-Source-Flutter-App für mobile LLMs', 'Lizenz': 'MIT' },
-          { 'Tool': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', 'Beschreibung': 'Nativer iOS/macOS-Client für Ollama', 'Lizenz': 'MIT' },
+          { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Beschreibung': 'Nativer iOS/macOS-Client für Ollama', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**Chapper**', 'Link': '[prevolut.uk](https://prevolut.uk)', 'Beschreibung': 'Nativer Mobile-Client für Ollama und LM Studio', 'Lizenz': 'Kostenlos' },
           { 'Tool': '**RikkaHub**', 'Link': '[github.com/rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)', 'Beschreibung': 'Open-Source Android-App für lokale KI', 'Lizenz': 'MIT' },
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Beschreibung': 'Fernzugriff auf Ihren lokalen AnythingLLM-Arbeitsbereich', 'Lizenz': 'MIT' },
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Aktualität des Verzeichnisses',
         content:
-          '**Dieses Verzeichnis wird alle sechs Monate überprüft** (nächste Aktualisierung: November 2026). Aufnahmekriterien: Das Projekt wird aktiv gepflegt (Commits in den letzten 90 Tagen), verfügt über eine nachweisbare Open-Source-Lizenz oder eine klare Aussage zur kommerziellen Nutzbarkeit, und hat entweder einen relevanten Nutzeranteil im Jahr 2026 oder füllt eine Schicht aus, die sonst leer bliebe. Projekte, die länger als zwei Release-Zyklen inaktiv bleiben, werden entfernt; neue Einträge, die die Kriterien erfüllen, werden bei der nächsten Überprüfung aufgenommen. Einen Vorschlag für die Aufnahme können Sie über ein Issue oder einen Pull Request im PromptQuorum-Repository einreichen — bitte Projekt-URL, Lizenz und eine Kurzbeschreibung im Format der Tabellen oben beifügen.\n\n**Hinweis für DACH-Unternehmen:** Für Organisationen in Deutschland, Österreich und der Schweiz empfiehlt sich der Einsatz von Tools mit MIT- oder Apache-2.0-Lizenz, da diese die klarste Rechtsgrundlage für den kommerziellen Einsatz bieten. Bei der Verarbeitung personenbezogener Daten ist zu prüfen, ob lokale Inferenz als Auftragsverarbeitung im Sinne von Art. 28 DSGVO einzustufen ist — in der Regel liegt sie außerhalb des Anwendungsbereichs, solange keine Daten das lokale System verlassen. Der BSI-Grundschutz-Katalog (insbesondere die Bausteine SYS und APP) bietet einen praxisnahen Rahmen für die Absicherung von Self-Hosted-LLM-Infrastruktur in deutschen Unternehmen.',
+          '**Dieses Verzeichnis wird alle sechs Monate überprüft — zuletzt im Juni 2026, nächste Aktualisierung November 2026.** Beim Durchgang im Juni 2026 wurden alle Links erneut geprüft und mehrere Projektnamen und Lizenzen korrigiert: Faraday heißt jetzt Backyard AI, der gepflegte Coqui-TTS-Fork wird von Idiap betreut und Cherry Studio steht unter AGPL 3.0. Aufnahmekriterien: Das Projekt wird aktiv gepflegt (Commits in den letzten 90 Tagen), verfügt über eine nachweisbare Open-Source-Lizenz oder eine klare Aussage zur kommerziellen Nutzbarkeit, und hat entweder einen relevanten Nutzeranteil im Jahr 2026 oder füllt eine Schicht aus, die sonst leer bliebe. Projekte, die länger als zwei Release-Zyklen inaktiv bleiben, werden entfernt; neue Einträge, die die Kriterien erfüllen, werden bei der nächsten Überprüfung aufgenommen. Einen Vorschlag für die Aufnahme können Sie über ein Issue oder einen Pull Request im PromptQuorum-Repository einreichen — bitte Projekt-URL, Lizenz und eine Kurzbeschreibung im Format der Tabellen oben beifügen.\n\n**Hinweis für DACH-Unternehmen:** Für Organisationen in Deutschland, Österreich und der Schweiz empfiehlt sich der Einsatz von Tools mit MIT- oder Apache-2.0-Lizenz, da diese die klarste Rechtsgrundlage für den kommerziellen Einsatz bieten. Bei der Verarbeitung personenbezogener Daten ist zu prüfen, ob lokale Inferenz als Auftragsverarbeitung im Sinne von Art. 28 DSGVO einzustufen ist — in der Regel liegt sie außerhalb des Anwendungsbereichs, solange keine Daten das lokale System verlassen. Der BSI-Grundschutz-Katalog (insbesondere die Bausteine SYS und APP) bietet einen praxisnahen Rahmen für die Absicherung von Self-Hosted-LLM-Infrastruktur in deutschen Unternehmen.',
       },
       sources: {
         id: 'sources',
@@ -785,7 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sind einige dieser Tools kommerziell lizenziert (nicht frei für kommerzielle Nutzung)?',
-            a: 'Eine Handvoll: LM Studio, Msty, Faraday, Layla und Cursor sind proprietär — in der Regel kostenlos nutzbar, aber nicht weiterverteilbar; kommerzielle Konditionen variieren je Anbieter. Private LLM ist kostenpflichtig. AGPL-lizenzierte Tools (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) sind für jeden Zweck einschließlich kommerzieller Nutzung frei, die AGPL-Bedingungen verlangen jedoch Quelloffenlegung, wenn Sie sie modifiziert öffentlich hosten. Apache-2.0- und MIT-Projekte (die Mehrheit) sind in jedem Kontext einschließlich kommerzieller Nutzung ohne wesentliche Auflagen verwendbar.',
+            a: 'Eine Handvoll: LM Studio, Msty, Backyard AI, Layla und Cursor sind proprietär — in der Regel kostenlos nutzbar, aber nicht weiterverteilbar; kommerzielle Konditionen variieren je Anbieter. Private LLM ist kostenpflichtig. AGPL-lizenzierte Tools (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) sind für jeden Zweck einschließlich kommerzieller Nutzung frei, die AGPL-Bedingungen verlangen jedoch Quelloffenlegung, wenn Sie sie modifiziert öffentlich hosten. Apache-2.0- und MIT-Projekte (die Mehrheit) sind in jedem Kontext einschließlich kommerzieller Nutzung ohne wesentliche Auflagen verwendbar.',
           },
           {
             q: 'Welche Tools unterstützen Apple Silicon (M-Serie) nativ?',
@@ -809,7 +809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie häufig wird dieses Verzeichnis aktualisiert?',
-            a: 'Alle sechs Monate — die nächste planmäßige Aktualisierung ist im November 2026. Zwischenzeitliche Änderungen (ein Projekt wird inaktiv, ein neues Tool gewinnt relevanten Marktanteil, eine Lizenz ändert sich) werden als Patch in den bestehenden Eintrag eingepflegt. Vollständig neue Kategorien oder Schichten warten auf die Überarbeitung, um die Struktur stabil zu halten.',
+            a: 'Alle sechs Monate — zuletzt überprüft im Juni 2026, die nächste planmäßige Aktualisierung ist im November 2026. Zwischenzeitliche Änderungen (ein Projekt wird inaktiv, ein neues Tool gewinnt relevanten Marktanteil, eine Lizenz ändert sich) werden als Patch in den bestehenden Eintrag eingepflegt. Vollständig neue Kategorien oder Schichten warten auf die Überarbeitung, um die Struktur stabil zu halten.',
           },
           {
             q: 'Muss ich bei der Verwendung dieser Tools die DSGVO beachten?',
@@ -841,18 +841,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Le répertoire complet des logiciels LLM locaux : 70+ outils pour faire tourner l\'IA sur votre propre matériel (2026)',
-    seoTitle: 'Répertoire de logiciels LLM locaux 2026 : 70+ outils',
+    seoTitle: 'Outils LLM locaux 2026 : 87 apps + mises à jour',
     affiliateDisclosure: true,
     intro:
       'L\'écosystème LLM local en 2026 est assez vaste pour que le mauvais choix initial coûte des heures. Ce répertoire recense 87 projets activement maintenus en neuf couches — runtimes, applications bureau, interfaces web, assistants de codage, systèmes RAG, frameworks d\'agents, voix et multimodal, clients mobiles, plugins de productivité — avec description, licence et URL pour chacun. Utilisez-le comme carte d\'orientation avant de vous engager dans une stack.',
     metaDescription:
-      '87 outils LLM locaux en 9 catégories : runtimes, apps bureau, interfaces web, agents de codage, RAG, multi-agents, voix, mobile — avec licences et liens. 2026.',
+      '87 outils LLM locaux en 9 catégories : runtimes, apps bureau, interfaces web, agents de codage, RAG, multi-agents, voix, mobile — avec licences, liens & versions à jour. Mis à jour en juin 2026.',
     twitterDescription:
-      '87 outils LLM locaux en 9 catégories — runtimes, apps bureau, interfaces web, agents de codage, RAG, multi-agents, voix, mobile. Licences et liens. La carte d\'orientation avant de choisir votre stack.',
+      '87 outils LLM locaux en 9 catégories — runtimes, apps bureau, interfaces web, agents de codage, RAG, multi-agents, voix, mobile. Licences, liens & versions à jour, juin 2026. La carte d\'orientation avant de choisir votre stack.',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pour le RAG : AnythingLLM (le plus simple), PrivateGPT (hors ligne), Open WebUI (RAG intégré dans l\'interface de chat).',
           'Sur mobile : MLC Chat ou PocketPal AI sur Android, Private LLM ou Enchanted sur iOS — tous exécutent des modèles 2-4B utilisables sur les téléphones haut de gamme.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-03',
       },
     },
     toc: [
@@ -976,9 +976,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Description': 'Accessible aux débutants, excellent support CPU uniquement', 'Licence': 'MIT' },
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Description': 'RAG et chat sur documents avec store vectoriel intégré', 'Licence': 'MIT' },
           { 'Tool': '**Msty**', 'Link': '[msty.app](https://msty.app)', 'Description': 'UX grand public épurée, support multi-fournisseurs', 'Licence': 'Gratuit (propriétaire)' },
-          { 'Tool': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', 'Description': 'IA bureau multi-fournisseurs avec personnalisation étendue', 'Licence': 'Apache 2.0' },
-          { 'Tool': '**Faraday**', 'Link': '[faraday.dev](https://faraday.dev)', 'Description': 'Client bureau pour le chat de personnages et le jeu de rôle', 'Licence': 'Gratuit (propriétaire)' },
-          { 'Tool': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', 'Description': 'Client Ollama minimal natif macOS/iOS', 'Licence': 'MIT' },
+          { 'Tool': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', 'Description': 'IA bureau multi-fournisseurs avec personnalisation étendue', 'Licence': 'AGPL 3.0' },
+          { 'Tool': '**Backyard AI**', 'Link': '[backyard.ai](https://backyard.ai)', 'Description': 'Client bureau pour le chat de personnages et le jeu de rôle', 'Licence': 'Gratuit (propriétaire)' },
+          { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Description': 'Client Ollama minimal natif macOS/iOS', 'Licence': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Description': 'Application bureau et serveur riche en fonctionnalités enterprise', 'Licence': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Description': 'Permet à un LLM local de contrôler votre ordinateur et d\'exécuter du code', 'Licence': 'AGPL 3.0' },
         ],
@@ -1099,8 +1099,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Description': 'Reconnaissance vocale locale, fonctionne sur CPU ou GPU', 'Licence': 'MIT' },
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Description': 'Transcription Whisper rapide via CTranslate2', 'Licence': 'MIT' },
           { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'Description': 'Synthèse vocale locale légère', 'Licence': 'MIT' },
-          { 'Tool': '**Coqui TTS**', 'Link': '[coqui.ai](https://coqui.ai)', 'Description': 'Synthèse vocale open source avec plusieurs options de modèles', 'Licence': 'MPL 2.0' },
-          { 'Tool': '**XTTS v2**', 'Link': '[docs.coqui.ai/en/latest/models/xtts.html](https://docs.coqui.ai/en/latest/models/xtts.html)', 'Description': 'Clonage vocal avec support multilingue', 'Licence': 'CPML' },
+          { 'Tool': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', 'Description': 'Synthèse vocale open source avec plusieurs options de modèles', 'Licence': 'MPL 2.0' },
+          { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'Description': 'Clonage vocal avec support multilingue', 'Licence': 'CPML' },
           { 'Tool': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'Description': 'Synthèse vocale générative avec sons non-verbaux', 'Licence': 'MIT' },
           { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'Description': 'TTS naturelle de haute qualité', 'Licence': 'MIT' },
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Description': 'Modèle local vision + langage', 'Licence': 'Apache 2.0' },
@@ -1121,7 +1121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLM Farm**', 'Link': '[github.com/guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)', 'Description': 'Client iOS pour LLM locaux avec navigateur de modèles', 'Licence': 'MIT' },
           { 'Tool': '**Layla**', 'Link': '[layla-network.ai](https://layla-network.ai)', 'Description': 'Application LLM local d\'abord Android', 'Licence': 'Gratuit (propriétaire)' },
           { 'Tool': '**Maid**', 'Link': '[github.com/Mobile-Artificial-Intelligence/maid](https://github.com/Mobile-Artificial-Intelligence/maid)', 'Description': 'Application Flutter mobile open source pour LLM', 'Licence': 'MIT' },
-          { 'Tool': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', 'Description': 'Client Ollama natif iOS/macOS', 'Licence': 'MIT' },
+          { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Description': 'Client Ollama natif iOS/macOS', 'Licence': 'Apache 2.0' },
           { 'Tool': '**Chapper**', 'Link': '[prevolut.uk](https://prevolut.uk)', 'Description': 'Client mobile natif pour Ollama et LM Studio', 'Licence': 'Gratuit' },
           { 'Tool': '**RikkaHub**', 'Link': '[github.com/rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)', 'Description': 'IA locale Android open source', 'Licence': 'MIT' },
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Description': 'Accès distant à votre espace de travail AnythingLLM local', 'Licence': 'MIT' },
@@ -1173,7 +1173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Mise à jour du répertoire',
         content:
-          '**Ce répertoire est révisé tous les six mois** (prochaine mise à jour : novembre 2026). Critères d\'inclusion : le projet est activement maintenu (commits dans les 90 derniers jours), dispose d\'une licence open source vérifiable ou d\'une déclaration claire sur l\'usage commercial, et détient soit une part d\'utilisateurs significative en 2026, soit occupe une couche qui serait autrement vide. Les projets inactifs depuis plus de deux cycles de version sont supprimés ; les nouveaux entrants satisfaisant les critères sont ajoutés à la prochaine révision. Pour suggérer un projet, ouvrez une issue ou une PR dans le dépôt PromptQuorum — indiquez l\'URL du projet, la licence et une description d\'une phrase dans le format des tableaux ci-dessus.\n\nLa CNIL recommande le recours à l\'IA locale pour le traitement de données professionnelles sensibles (données médicales, juridiques, financières) afin de limiter les transferts hors de l\'espace économique européen.',
+          '**Ce répertoire est révisé tous les six mois — dernière révision en juin 2026, prochaine mise à jour en novembre 2026.** La révision de juin 2026 a revérifié tous les liens et corrigé plusieurs noms de projets et licences : Faraday s\'appelle désormais Backyard AI, le fork Coqui TTS maintenu est hébergé par Idiap et Cherry Studio est sous AGPL 3.0. Critères d\'inclusion : le projet est activement maintenu (commits dans les 90 derniers jours), dispose d\'une licence open source vérifiable ou d\'une déclaration claire sur l\'usage commercial, et détient soit une part d\'utilisateurs significative en 2026, soit occupe une couche qui serait autrement vide. Les projets inactifs depuis plus de deux cycles de version sont supprimés ; les nouveaux entrants satisfaisant les critères sont ajoutés à la prochaine révision. Pour suggérer un projet, ouvrez une issue ou une PR dans le dépôt PromptQuorum — indiquez l\'URL du projet, la licence et une description d\'une phrase dans le format des tableaux ci-dessus.\n\nLa CNIL recommande le recours à l\'IA locale pour le traitement de données professionnelles sensibles (données médicales, juridiques, financières) afin de limiter les transferts hors de l\'espace économique européen.',
       },
       sources: {
         id: 'sources',
@@ -1205,7 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Certains de ces outils sont-ils sous licence commerciale (non libres pour un usage commercial) ?',
-            a: 'Quelques-uns : LM Studio, Msty, Faraday, Layla et Cursor sont propriétaires — généralement gratuits à l\'usage mais non redistribuables, et les conditions commerciales varient. Private LLM est payant. Les outils sous licence AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) sont libres pour tout usage y compris commercial, mais les conditions AGPL exigent la divulgation du code source si vous les modifiez et les hébergez publiquement. Les projets Apache 2.0 et MIT (la majorité) sont utilisables dans tout contexte sans contraintes significatives.',
+            a: 'Quelques-uns : LM Studio, Msty, Backyard AI, Layla et Cursor sont propriétaires — généralement gratuits à l\'usage mais non redistribuables, et les conditions commerciales varient. Private LLM est payant. Les outils sous licence AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) sont libres pour tout usage y compris commercial, mais les conditions AGPL exigent la divulgation du code source si vous les modifiez et les hébergez publiquement. Les projets Apache 2.0 et MIT (la majorité) sont utilisables dans tout contexte sans contraintes significatives.',
           },
           {
             q: 'Quels outils supportent Apple Silicon (puces M) nativement ?',
@@ -1229,7 +1229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'À quelle fréquence ce répertoire est-il mis à jour ?',
-            a: 'Tous les six mois — la prochaine révision planifiée est en novembre 2026. Les modifications intermédiaires (un projet devient inactif, un nouvel outil gagne des parts de marché, une licence change) sont intégrées comme correctifs. Les nouvelles catégories attendent une révision pour maintenir la stabilité de la structure. La section « Sources » liste les index communautaires utilisés pour surveiller l\'écosystème entre les révisions.',
+            a: 'Tous les six mois — dernière révision en juin 2026, la prochaine révision planifiée est en novembre 2026. Les modifications intermédiaires (un projet devient inactif, un nouvel outil gagne des parts de marché, une licence change) sont intégrées comme correctifs. Les nouvelles catégories attendent une révision pour maintenir la stabilité de la structure. La section « Sources » liste les index communautaires utilisés pour surveiller l\'écosystème entre les révisions.',
           },
         ],
       },
@@ -1253,18 +1253,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'ローカルLLMソフトウェア完全ディレクトリ：自分のハードウェアでAIを動かす70以上のツール（2026年版）',
-    seoTitle: 'ローカルLLMソフトウェア一覧2026：70以上のツールを網羅',
+    seoTitle: 'ローカルLLMツール2026：87アプリ一覧・最新アップデート',
     affiliateDisclosure: true,
     intro:
       '2026年のローカルLLMエコシステムは、最初に間違ったツールを選ぶだけで数時間を無駄にするほど広大です。このディレクトリでは、ランタイム・デスクトップアプリ・Web UI・コーディングアシスタント・RAGシステム・エージェントフレームワーク・音声/マルチモーダル・モバイルクライアント・専門プラグインの9層にわたる87のプロジェクトを、説明・ライセンス・URLとともに掲載しています。スタックを決める前の「何が存在するか」を把握するための地図としてご活用ください。',
     metaDescription:
-      'ローカルLLMツール87件を9カテゴリで網羅：ランタイム、デスクトップアプリ、Web UI、コーディングエージェント、RAG、マルチエージェント、音声、モバイル。ライセンス情報とリンク付き。2026年版。',
+      'ローカルLLMツール87件を9カテゴリで網羅：ランタイム、デスクトップアプリ、Web UI、コーディングエージェント、RAG、マルチエージェント、音声、モバイル。ライセンス情報・リンク・最新バージョン付き。2026年6月更新。',
     twitterDescription:
-      'ローカルLLMツール87件を9カテゴリで網羅 — ランタイム、デスクトップアプリ、Web UI、コーディングエージェント、RAG、マルチエージェントフレームワーク、音声、モバイル。ライセンスとリンク付き。スタックを決める前の「全体像」マップです。',
+      'ローカルLLMツール87件を9カテゴリで網羅 — ランタイム、デスクトップアプリ、Web UI、コーディングエージェント、RAG、マルチエージェントフレームワーク、音声、モバイル。ライセンス・リンク・最新版付き、2026年6月更新。スタックを決める前の「全体像」マップです。',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -1294,7 +1294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RAG用：AnythingLLM（最も簡単）、PrivateGPT（オフライン重視）、Open WebUI（チャットUIにRAG内蔵）。',
           'モバイル用：AndroidはMLC ChatまたはPocketPal AI、iOSはPrivate LLMまたはEnchanted — いずれもフラッグシップ機で実用的な2-4Bモデルを動作。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-03',
       },
     },
     toc: [
@@ -1388,9 +1388,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', '概要': '初心者向け。CPU onlyでの動作が強力', 'ライセンス': 'MIT' },
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', '概要': 'ベクターストア内蔵のRAGとドキュメントチャット', 'ライセンス': 'MIT' },
           { 'Tool': '**Msty**', 'Link': '[msty.app](https://msty.app)', '概要': 'すっきりしたコンシューマーUX。マルチプロバイダー対応', 'ライセンス': '無料（プロプライエタリ）' },
-          { 'Tool': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', '概要': '豊富なカスタマイズのマルチプロバイダーデスクトップAI', 'ライセンス': 'Apache 2.0' },
-          { 'Tool': '**Faraday**', 'Link': '[faraday.dev](https://faraday.dev)', '概要': 'キャラクターチャットとロールプレイ向けデスクトップクライアント', 'ライセンス': '無料（プロプライエタリ）' },
-          { 'Tool': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', '概要': 'ネイティブmacOS/iOS向け最小限のOllamaクライアント', 'ライセンス': 'MIT' },
+          { 'Tool': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', '概要': '豊富なカスタマイズのマルチプロバイダーデスクトップAI', 'ライセンス': 'AGPL 3.0' },
+          { 'Tool': '**Backyard AI**', 'Link': '[backyard.ai](https://backyard.ai)', '概要': 'キャラクターチャットとロールプレイ向けデスクトップクライアント', 'ライセンス': '無料（プロプライエタリ）' },
+          { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '概要': 'ネイティブmacOS/iOS向け最小限のOllamaクライアント', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '概要': 'エンタープライズ機能が充実したデスクトップ・サーバーアプリ', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '概要': 'ローカルLLMがコンピュータを操作しコードを実行できる', 'ライセンス': 'AGPL 3.0' },
         ],
@@ -1511,8 +1511,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', '概要': 'CPUまたはGPUで動作するローカル音声認識', 'ライセンス': 'MIT' },
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', '概要': 'CTranslate2を使った高速Whisper文字起こし', 'ライセンス': 'MIT' },
           { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', '概要': '軽量ローカルテキスト読み上げ', 'ライセンス': 'MIT' },
-          { 'Tool': '**Coqui TTS**', 'Link': '[coqui.ai](https://coqui.ai)', '概要': '複数モデル対応オープンソース音声合成', 'ライセンス': 'MPL 2.0' },
-          { 'Tool': '**XTTS v2**', 'Link': '[docs.coqui.ai/en/latest/models/xtts.html](https://docs.coqui.ai/en/latest/models/xtts.html)', '概要': '多言語対応の音声クローニング', 'ライセンス': 'CPML' },
+          { 'Tool': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', '概要': '複数モデル対応オープンソース音声合成', 'ライセンス': 'MPL 2.0' },
+          { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', '概要': '多言語対応の音声クローニング', 'ライセンス': 'CPML' },
           { 'Tool': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', '概要': '非言語音を含む生成音声合成', 'ライセンス': 'MIT' },
           { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', '概要': '高品質な自然音声TTS', 'ライセンス': 'MIT' },
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', '概要': 'ローカルビジョン + 言語モデル', 'ライセンス': 'Apache 2.0' },
@@ -1533,7 +1533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLM Farm**', 'Link': '[github.com/guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)', '概要': 'モデルブラウザ付きiOSローカルLLM', 'ライセンス': 'MIT' },
           { 'Tool': '**Layla**', 'Link': '[layla-network.ai](https://layla-network.ai)', '概要': 'Android優先のローカルLLMアプリ', 'ライセンス': '無料（プロプライエタリ）' },
           { 'Tool': '**Maid**', 'Link': '[github.com/Mobile-Artificial-Intelligence/maid](https://github.com/Mobile-Artificial-Intelligence/maid)', '概要': 'オープンソースFlutterモバイルLLMアプリ', 'ライセンス': 'MIT' },
-          { 'Tool': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', '概要': 'ネイティブiOS/macOS Ollamaクライアント', 'ライセンス': 'MIT' },
+          { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '概要': 'ネイティブiOS/macOS Ollamaクライアント', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**Chapper**', 'Link': '[prevolut.uk](https://prevolut.uk)', '概要': 'OllamaとLM Studio対応のネイティブモバイルクライアント', 'ライセンス': '無料' },
           { 'Tool': '**RikkaHub**', 'Link': '[github.com/rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)', '概要': 'オープンソースAndroidローカルAI', 'ライセンス': 'MIT' },
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', '概要': 'ローカルAnythingLLMワークスペースへのリモートアクセス', 'ライセンス': 'MIT' },
@@ -1585,7 +1585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'ディレクトリの最新性について',
         content:
-          '**このディレクトリは6か月ごとに見直されます**（次回更新：2026年11月）。掲載基準：直近90日間にコミットがあり活発にメンテナンスされていること、検証可能なオープンソースライセンスまたは商用利用の明確な声明があること、2026年に有意なユーザーシェアを持つか空白層を埋めることです。2リリースサイクル以上非活性なプロジェクトは削除し、基準を満たす新規エントリーは次回見直し時に追加します。掲載提案はPromptQuorumリポジトリのissueまたはPRで受け付けています — プロジェクトURL、ライセンス、上記テーブル形式の一文説明を添えてください。\n\n**日本・アジア太平洋地域のご利用について：** 経済産業省（METI）の「AI事業者ガイドライン」（2024年）は、企業がAI活用においてデータガバナンスとリスク管理を適切に実施することを求めています。ローカル推論はデータを自社システム内に留めるため、個人情報保護法（APPI）およびアジア太平洋地域のデータ越境規制（日本・シンガポール・マレーシア・韓国）への準拠において構造的に有利な構成です。エンタープライズ展開では、METIガイドラインに基づくリスク評価と、使用ツールのライセンス確認（特に商用利用時のAGPL条項）を推奨します。',
+          '**このディレクトリは6か月ごとに見直されます（最終見直し：2026年6月、次回更新：2026年11月）。** 2026年6月の見直しでは全リンクを再確認し、複数のプロジェクト名とライセンスを修正しました：FaradayはBackyard AIに改称、メンテナンスされているCoqui TTSフォークはIdiapがホスト、Cherry StudioはAGPL 3.0です。掲載基準：直近90日間にコミットがあり活発にメンテナンスされていること、検証可能なオープンソースライセンスまたは商用利用の明確な声明があること、2026年に有意なユーザーシェアを持つか空白層を埋めることです。2リリースサイクル以上非活性なプロジェクトは削除し、基準を満たす新規エントリーは次回見直し時に追加します。掲載提案はPromptQuorumリポジトリのissueまたはPRで受け付けています — プロジェクトURL、ライセンス、上記テーブル形式の一文説明を添えてください。\n\n**日本・アジア太平洋地域のご利用について：** 経済産業省（METI）の「AI事業者ガイドライン」（2024年）は、企業がAI活用においてデータガバナンスとリスク管理を適切に実施することを求めています。ローカル推論はデータを自社システム内に留めるため、個人情報保護法（APPI）およびアジア太平洋地域のデータ越境規制（日本・シンガポール・マレーシア・韓国）への準拠において構造的に有利な構成です。エンタープライズ展開では、METIガイドラインに基づくリスク評価と、使用ツールのライセンス確認（特に商用利用時のAGPL条項）を推奨します。',
       },
       sources: {
         id: 'sources',
@@ -1617,7 +1617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '商用ライセンス（商用利用不可）のツールはありますか？',
-            a: '一部あります：LM Studio、Msty、Faraday、Layla、Cursorはプロプライエタリ — 通常は無料使用可能ですが再配布不可で、商用条件はベンダーによって異なります。Private LLMは有料です。AGPLライセンスのツール（Jan、KoboldCpp、text-generation-webui、SillyTavern、Khoj、Open Interpreter、Copilot for Obsidian）は商用を含むあらゆる目的に無料ですが、変更して公開ホスティングする場合はソースコードの開示が必要です。Apache 2.0とMITプロジェクト（大多数）は商用を含むあらゆる場面で実質的な制約なく使用できます。',
+            a: '一部あります：LM Studio、Msty、Backyard AI、Layla、Cursorはプロプライエタリ — 通常は無料使用可能ですが再配布不可で、商用条件はベンダーによって異なります。Private LLMは有料です。AGPLライセンスのツール（Jan、KoboldCpp、text-generation-webui、SillyTavern、Khoj、Open Interpreter、Copilot for Obsidian）は商用を含むあらゆる目的に無料ですが、変更して公開ホスティングする場合はソースコードの開示が必要です。Apache 2.0とMITプロジェクト（大多数）は商用を含むあらゆる場面で実質的な制約なく使用できます。',
           },
           {
             q: 'Apple Silicon（Mシリーズ）をネイティブサポートするツールはどれですか？',
@@ -1641,7 +1641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'このディレクトリはどのくらいの頻度で更新されますか？',
-            a: '6か月ごと — 次回の予定更新は2026年11月です。中間の変更（プロジェクトが非活性になった、新しいツールが有意なシェアを獲得した、ライセンスが変わった）は既存エントリーへのパッチとして適用されます。新しいカテゴリや層は構造の安定性を保つため更新を待ちます。「参考文献」セクションに更新間のエコシステム監視に使用するコミュニティインデックスを掲載しています。',
+            a: '6か月ごと — 最終見直しは2026年6月、次回の予定更新は2026年11月です。中間の変更（プロジェクトが非活性になった、新しいツールが有意なシェアを獲得した、ライセンスが変わった）は既存エントリーへのパッチとして適用されます。新しいカテゴリや層は構造の安定性を保つため更新を待ちます。「参考文献」セクションに更新間のエコシステム監視に使用するコミュニティインデックスを掲載しています。',
           },
         ],
       },
@@ -1665,18 +1665,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: '本地LLM软件完整目录：70+款工具，在自有硬件上运行AI（2026）',
-    seoTitle: '本地LLM软件目录2026：70+工具一览',
+    seoTitle: '本地LLM工具2026：87款应用目录·最新更新',
     affiliateDisclosure: true,
     intro:
       '2026年本地LLM生态系统已足够庞大，选错工具会浪费数小时而不只是几分钟。本目录整理了87个活跃维护的项目，覆盖九个层级——运行时、桌面应用、Web界面、编程助手、RAG系统、智能体框架、语音与多模态、移动端客户端以及专业化生产力插件——每项附有描述、许可证和主要链接。在确定技术栈之前，将其作为"现有工具"全景图使用；每个类别末尾附有PromptQuorum该层详细对比指南的链接。',
     metaDescription:
-      '87个本地LLM工具，涵盖9大类：运行时、桌面应用、Web界面、编程助手、RAG、多智能体、语音、移动端——含许可证与链接。2026年版。',
+      '87个本地LLM工具，涵盖9大类：运行时、桌面应用、Web界面、编程助手、RAG、多智能体、语音、移动端——含许可证、链接与最新版本。2026年6月更新。',
     twitterDescription:
-      '87个本地LLM工具，9大类别——运行时、桌面应用、Web界面、编程助手、RAG、多智能体框架、语音、移动端。含许可证与链接。确定技术栈前的"现有工具"全景图。',
+      '87个本地LLM工具，9大类别——运行时、桌面应用、Web界面、编程助手、RAG、多智能体框架、语音、移动端。含许可证、链接与最新版本，2026年6月更新。确定技术栈前的"现有工具"全景图。',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -1706,7 +1706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '文档问答：AnythingLLM（最简单）、PrivateGPT（偏离线）、Open WebUI（聊天界面内置RAG）。',
           '移动端：Android选MLC Chat或PocketPal AI，iOS选Private LLM或Enchanted——均可在旗舰手机上实际运行2-4B模型。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-03',
       },
     },
     toc: [
@@ -1800,9 +1800,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', '描述': '面向初学者，纯CPU运行支持优秀', '许可证': 'MIT' },
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', '描述': '内置向量存储的RAG与文档问答工具', '许可证': 'MIT' },
           { 'Tool': '**Msty**', 'Link': '[msty.app](https://msty.app)', '描述': '简洁的消费级UX，支持多提供商', '许可证': '免费（闭源）' },
-          { 'Tool': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', '描述': '支持多提供商、高度可定制的桌面AI工具', '许可证': 'Apache 2.0' },
-          { 'Tool': '**Faraday**', 'Link': '[faraday.dev](https://faraday.dev)', '描述': '角色聊天与角色扮演桌面客户端', '许可证': '免费（闭源）' },
-          { 'Tool': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', '描述': 'macOS/iOS原生的极简Ollama客户端', '许可证': 'MIT' },
+          { 'Tool': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', '描述': '支持多提供商、高度可定制的桌面AI工具', '许可证': 'AGPL 3.0' },
+          { 'Tool': '**Backyard AI**', 'Link': '[backyard.ai](https://backyard.ai)', '描述': '角色聊天与角色扮演桌面客户端', '许可证': '免费（闭源）' },
+          { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '描述': 'macOS/iOS原生的极简Ollama客户端', '许可证': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '描述': '企业功能丰富的桌面与服务器方案', '许可证': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '描述': '允许本地LLM操控电脑并执行代码', '许可证': 'AGPL 3.0' },
         ],
@@ -1923,8 +1923,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', '描述': '本地语音识别，支持CPU或GPU运行', '许可证': 'MIT' },
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', '描述': '通过CTranslate2实现的快速Whisper转录', '许可证': 'MIT' },
           { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', '描述': '轻量级本地文字转语音', '许可证': 'MIT' },
-          { 'Tool': '**Coqui TTS**', 'Link': '[coqui.ai](https://coqui.ai)', '描述': '支持多模型的开源语音合成', '许可证': 'MPL 2.0' },
-          { 'Tool': '**XTTS v2**', 'Link': '[docs.coqui.ai/en/latest/models/xtts.html](https://docs.coqui.ai/en/latest/models/xtts.html)', '描述': '支持多语言的语音克隆', '许可证': 'CPML' },
+          { 'Tool': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', '描述': '支持多模型的开源语音合成', '许可证': 'MPL 2.0' },
+          { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', '描述': '支持多语言的语音克隆', '许可证': 'CPML' },
           { 'Tool': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', '描述': '支持非语音声音的生成式语音', '许可证': 'MIT' },
           { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', '描述': '高质量自然音色TTS', '许可证': 'MIT' },
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', '描述': '本地视觉+语言模型', '许可证': 'Apache 2.0' },
@@ -1945,7 +1945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLM Farm**', 'Link': '[github.com/guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)', '描述': '带模型浏览器的iOS本地LLM', '许可证': 'MIT' },
           { 'Tool': '**Layla**', 'Link': '[layla-network.ai](https://layla-network.ai)', '描述': 'Android优先的本地LLM应用', '许可证': '免费（闭源）' },
           { 'Tool': '**Maid**', 'Link': '[github.com/Mobile-Artificial-Intelligence/maid](https://github.com/Mobile-Artificial-Intelligence/maid)', '描述': '开源Flutter移动端LLM应用', '许可证': 'MIT' },
-          { 'Tool': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', '描述': 'iOS/macOS原生Ollama客户端', '许可证': 'MIT' },
+          { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '描述': 'iOS/macOS原生Ollama客户端', '许可证': 'Apache 2.0' },
           { 'Tool': '**Chapper**', 'Link': '[prevolut.uk](https://prevolut.uk)', '描述': 'Ollama和LM Studio的原生移动客户端', '许可证': '免费' },
           { 'Tool': '**RikkaHub**', 'Link': '[github.com/rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)', '描述': '开源Android本地AI', '许可证': 'MIT' },
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', '描述': '远程访问本地AnythingLLM工作区', '许可证': 'MIT' },
@@ -1997,7 +1997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: '本目录如何保持及时更新',
         content:
-          '**中国（数据安全法）：** 中国2021年《数据安全法》对数据本地化处理和跨境传输有明确规定。本地推理在技术上直接满足合规需求——模型权重和推理计算全部在本地完成，数据不经过任何第三方云服务器。对于需要处理中文企业文本的场景（金融报告、医疗记录、法律合同），在中文理解和指令遵循方面具有针对性优化的模型是本地部署的可选方案，可在满足数据留存要求的同时实现文档理解与知识问答。\n\n**亚太地区（数据跨境合规）：** 亚太地区各经济体正在建立和完善数据本地化框架。本地推理是满足跨境数据传输限制的技术路径——在本地运行模型意味着推理输入和输出不需要离开所在司法管辖区。对于在多个亚太市场运营的企业，在每个合规区域内部署独立的本地LLM实例，是规避数据主权合规风险的实践路径之一。\n\n**企业部署（金融、医疗、法律）：** 在受监管行业，金融机构、医院和律所通常面临严格的数据外发限制。本地LLM部署——尤其是与RAG系统结合后——可在不向外部云服务发送任何敏感数据的前提下实现文档理解、合同分析和知识库问答等用例。本目录每六个月审查一次（下次更新：2026年11月）。纳入标准：项目在过去90天内活跃维护、具备可验证的开源许可证或明确的商业使用声明，并在2026年拥有一定用户基础或填补了某一层的空缺。如需建议纳入某个项目，请向PromptQuorum仓库提交issue或PR，附上项目URL、许可证及上述格式的一句话描述。',
+          '**中国（数据安全法）：** 中国2021年《数据安全法》对数据本地化处理和跨境传输有明确规定。本地推理在技术上直接满足合规需求——模型权重和推理计算全部在本地完成，数据不经过任何第三方云服务器。对于需要处理中文企业文本的场景（金融报告、医疗记录、法律合同），在中文理解和指令遵循方面具有针对性优化的模型是本地部署的可选方案，可在满足数据留存要求的同时实现文档理解与知识问答。\n\n**亚太地区（数据跨境合规）：** 亚太地区各经济体正在建立和完善数据本地化框架。本地推理是满足跨境数据传输限制的技术路径——在本地运行模型意味着推理输入和输出不需要离开所在司法管辖区。对于在多个亚太市场运营的企业，在每个合规区域内部署独立的本地LLM实例，是规避数据主权合规风险的实践路径之一。\n\n**企业部署（金融、医疗、法律）：** 在受监管行业，金融机构、医院和律所通常面临严格的数据外发限制。本地LLM部署——尤其是与RAG系统结合后——可在不向外部云服务发送任何敏感数据的前提下实现文档理解、合同分析和知识库问答等用例。本目录每六个月审查一次（最近审查：2026年6月，下次更新：2026年11月）。2026年6月的审查重新核实了所有链接，并修正了若干项目名称与许可证：Faraday已更名为Backyard AI，维护中的Coqui TTS分支现由Idiap托管，Cherry Studio采用AGPL 3.0。纳入标准：项目在过去90天内活跃维护、具备可验证的开源许可证或明确的商业使用声明，并在2026年拥有一定用户基础或填补了某一层的空缺。如需建议纳入某个项目，请向PromptQuorum仓库提交issue或PR，附上项目URL、许可证及上述格式的一句话描述。',
       },
       sources: {
         id: 'sources',
@@ -2029,7 +2029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '这些工具中是否有商业许可限制？',
-            a: '部分工具有限制：LM Studio、Msty、Faraday、Layla和Cursor是闭源软件——通常免费使用但不可再分发，商业条款各异。Private LLM需付费。AGPL许可工具（Jan、KoboldCpp、text-generation-webui、SillyTavern、Khoj、Open Interpreter、Copilot for Obsidian）可用于任何用途包括商业用途，但AGPL条款要求在公开托管修改版本时披露源代码。Apache 2.0和MIT项目（占多数）在任何场景下均可使用，无需超出许可证文本范围的归因要求。',
+            a: '部分工具有限制：LM Studio、Msty、Backyard AI、Layla和Cursor是闭源软件——通常免费使用但不可再分发，商业条款各异。Private LLM需付费。AGPL许可工具（Jan、KoboldCpp、text-generation-webui、SillyTavern、Khoj、Open Interpreter、Copilot for Obsidian）可用于任何用途包括商业用途，但AGPL条款要求在公开托管修改版本时披露源代码。Apache 2.0和MIT项目（占多数）在任何场景下均可使用，无需超出许可证文本范围的归因要求。',
           },
           {
             q: '哪些工具原生支持Apple Silicon（M系列芯片）？',
@@ -2053,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '本目录多久更新一次？',
-            a: '每六个月更新一次——下次计划更新为2026年11月。中期变化（项目失活、新工具取得显著份额、许可证变更）将以补丁形式应用到现有条目。全新类别或层级等待定期更新以保持结构稳定。上方"参考来源"部分列出了更新之间用于监测生态系统动态的社区索引。',
+            a: '每六个月更新一次——最近审查为2026年6月，下次计划更新为2026年11月。中期变化（项目失活、新工具取得显著份额、许可证变更）将以补丁形式应用到现有条目。全新类别或层级等待定期更新以保持结构稳定。上方"参考来源"部分列出了更新之间用于监测生态系统动态的社区索引。',
           },
         ],
       },
@@ -2077,18 +2077,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'El directorio completo de software LLM local: 70+ herramientas para ejecutar IA en tu propio hardware (2026)',
-    seoTitle: 'Mejores herramientas LLM local 2026: 87 apps en 9 categorías',
+    seoTitle: 'Herramientas LLM local 2026: 87 apps + últimas novedades',
     affiliateDisclosure: true,
     intro:
       'El ecosistema de LLM local en 2026 es lo suficientemente amplio como para que elegir la herramienta incorrecta al inicio cueste horas, no minutos. Este directorio cataloga 87 proyectos en mantenimiento activo en nueve capas — runtimes, aplicaciones de escritorio, interfaces web, asistentes de código, sistemas RAG, frameworks de agentes, voz y multimodal, clientes móviles y plugins de productividad especializados — con descripción, licencia y URL principal para cada uno. Úsalo como el mapa de "qué existe" antes de comprometerte con un stack; cada categoría termina con un enlace a la guía de comparación más detallada de PromptQuorum para esa capa.',
     metaDescription:
-      '87 herramientas para ejecutar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, más móvil, RAG, voz y frameworks de agentes. Licencias y enlaces, mayo 2026.',
+      '87 herramientas para ejecutar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, más móvil, RAG, voz y frameworks de agentes. Licencias, enlaces y últimas versiones. Actualizado en junio de 2026.',
     twitterDescription:
-      '87 herramientas LLM local en 9 categorías — runtimes, apps de escritorio, interfaces web, agentes de código, RAG, frameworks multiagente, voz, móvil. Licencias y enlaces. El mapa de "qué existe" antes de elegir tu stack.',
+      '87 herramientas LLM local en 9 categorías — runtimes, apps de escritorio, interfaces web, agentes de código, RAG, frameworks multiagente, voz, móvil. Licencias, enlaces y últimas versiones, junio de 2026. El mapa de "qué existe" antes de elegir tu stack.',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -2118,7 +2118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para RAG: AnythingLLM (el más fácil), PrivateGPT (orientado a offline), Open WebUI (RAG integrado dentro de la interfaz de chat).',
           'Para móvil: MLC Chat o PocketPal AI en Android, Private LLM o Enchanted en iOS — todos ejecutan modelos 2-4B realmente útiles en teléfonos de gama alta.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-03',
       },
     },
     toc: [
@@ -2212,9 +2212,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Descripción': 'Apto para principiantes con fuerte soporte de solo CPU', 'Licencia': 'MIT' },
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Descripción': 'RAG y chat de documentos con almacén vectorial integrado', 'Licencia': 'MIT' },
           { 'Tool': '**Msty**', 'Link': '[msty.app](https://msty.app)', 'Descripción': 'UX de consumidor limpia, soporte multi-proveedor', 'Licencia': 'Gratuito (cerrado)' },
-          { 'Tool': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', 'Descripción': 'IA de escritorio multi-proveedor con personalización extensa', 'Licencia': 'Apache 2.0' },
-          { 'Tool': '**Faraday**', 'Link': '[faraday.dev](https://faraday.dev)', 'Descripción': 'Cliente de escritorio para chat de personajes y juego de rol', 'Licencia': 'Gratuito (cerrado)' },
-          { 'Tool': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', 'Descripción': 'Cliente Ollama mínimo nativo de macOS/iOS', 'Licencia': 'MIT' },
+          { 'Tool': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', 'Descripción': 'IA de escritorio multi-proveedor con personalización extensa', 'Licencia': 'AGPL 3.0' },
+          { 'Tool': '**Backyard AI**', 'Link': '[backyard.ai](https://backyard.ai)', 'Descripción': 'Cliente de escritorio para chat de personajes y juego de rol', 'Licencia': 'Gratuito (cerrado)' },
+          { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Descripción': 'Cliente Ollama mínimo nativo de macOS/iOS', 'Licencia': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Descripción': 'Escritorio y servidor con muchas funciones enterprise', 'Licencia': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Descripción': 'Permite que un LLM local controle tu computadora y ejecute código', 'Licencia': 'AGPL 3.0' },
         ],
@@ -2335,8 +2335,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Descripción': 'Reconocimiento de voz local, funciona en CPU o GPU', 'Licencia': 'MIT' },
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Descripción': 'Transcripción rápida de Whisper mediante CTranslate2', 'Licencia': 'MIT' },
           { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'Descripción': 'Síntesis de texto a voz local ligera', 'Licencia': 'MIT' },
-          { 'Tool': '**Coqui TTS**', 'Link': '[coqui.ai](https://coqui.ai)', 'Descripción': 'Síntesis de voz open-source con múltiples opciones de modelos', 'Licencia': 'MPL 2.0' },
-          { 'Tool': '**XTTS v2**', 'Link': '[docs.coqui.ai/en/latest/models/xtts.html](https://docs.coqui.ai/en/latest/models/xtts.html)', 'Descripción': 'Clonación de voz con soporte multilingüe', 'Licencia': 'CPML' },
+          { 'Tool': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', 'Descripción': 'Síntesis de voz open-source con múltiples opciones de modelos', 'Licencia': 'MPL 2.0' },
+          { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'Descripción': 'Clonación de voz con soporte multilingüe', 'Licencia': 'CPML' },
           { 'Tool': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'Descripción': 'Voz generativa con sonidos que no son habla', 'Licencia': 'MIT' },
           { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'Descripción': 'TTS de alta calidad y sonido natural', 'Licencia': 'MIT' },
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Descripción': 'Modelo local de visión + lenguaje', 'Licencia': 'Apache 2.0' },
@@ -2357,7 +2357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLM Farm**', 'Link': '[github.com/guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)', 'Descripción': 'LLM local para iOS con explorador de modelos', 'Licencia': 'MIT' },
           { 'Tool': '**Layla**', 'Link': '[layla-network.ai](https://layla-network.ai)', 'Descripción': 'App LLM local orientada a Android', 'Licencia': 'Gratuito (cerrado)' },
           { 'Tool': '**Maid**', 'Link': '[github.com/Mobile-Artificial-Intelligence/maid](https://github.com/Mobile-Artificial-Intelligence/maid)', 'Descripción': 'App Flutter móvil open-source para LLM', 'Licencia': 'MIT' },
-          { 'Tool': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', 'Descripción': 'Cliente Ollama nativo de iOS/macOS', 'Licencia': 'MIT' },
+          { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Descripción': 'Cliente Ollama nativo de iOS/macOS', 'Licencia': 'Apache 2.0' },
           { 'Tool': '**Chapper**', 'Link': '[prevolut.uk](https://prevolut.uk)', 'Descripción': 'Cliente móvil nativo para Ollama y LM Studio', 'Licencia': 'Gratuito' },
           { 'Tool': '**RikkaHub**', 'Link': '[github.com/rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)', 'Descripción': 'IA local Android de código abierto', 'Licencia': 'MIT' },
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Descripción': 'Acceso remoto a tu espacio de trabajo local de AnythingLLM', 'Licencia': 'MIT' },
@@ -2409,7 +2409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Cómo se mantiene actualizado este directorio',
         content:
-          '**Este directorio se revisa cada seis meses** (próxima actualización: noviembre de 2026). Criterios de inclusión: el proyecto está en mantenimiento activo (commits en los últimos 90 días), tiene una licencia open-source verificable o una declaración clara de uso comercial, y o bien tiene una cuota de usuarios significativa en 2026 o llena una capa que de otro modo estaría vacía. Los proyectos que quedan inactivos durante más de dos ciclos de versión se eliminan; los nuevos participantes que cumplan los criterios se añaden en la próxima revisión. Para sugerir un proyecto para su inclusión, abre un issue o PR contra el repositorio de PromptQuorum — incluye la URL del proyecto, la licencia y una descripción de una oración en el formato anterior.',
+          '**Este directorio se revisa cada seis meses — última revisión en junio de 2026, próxima actualización en noviembre de 2026.** La revisión de junio de 2026 verificó de nuevo todos los enlaces y corrigió varios nombres de proyectos y licencias: Faraday ahora es Backyard AI, el fork mantenido de Coqui TTS está alojado por Idiap y Cherry Studio es AGPL 3.0. Criterios de inclusión: el proyecto está en mantenimiento activo (commits en los últimos 90 días), tiene una licencia open-source verificable o una declaración clara de uso comercial, y o bien tiene una cuota de usuarios significativa en 2026 o llena una capa que de otro modo estaría vacía. Los proyectos que quedan inactivos durante más de dos ciclos de versión se eliminan; los nuevos participantes que cumplan los criterios se añaden en la próxima revisión. Para sugerir un proyecto para su inclusión, abre un issue o PR contra el repositorio de PromptQuorum — incluye la URL del proyecto, la licencia y una descripción de una oración en el formato anterior.',
       },
       sources: {
         id: 'sources',
@@ -2441,7 +2441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Alguna de estas herramientas tiene licencia comercial (no gratuita para uso comercial)?',
-            a: 'Algunas: LM Studio, Msty, Faraday, Layla y Cursor son de código cerrado — generalmente gratuitas para usar pero no redistribuibles, y los términos comerciales varían. Private LLM es de pago. Las herramientas con licencia AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) son gratuitas para cualquier uso incluyendo comercial, pero los términos AGPL requieren divulgar el código fuente si las modificas y las alojas públicamente. Los proyectos Apache 2.0 y MIT (la mayoría) son utilizables en cualquier contexto incluyendo comercial sin restricciones de atribución más allá del texto de la licencia.',
+            a: 'Algunas: LM Studio, Msty, Backyard AI, Layla y Cursor son de código cerrado — generalmente gratuitas para usar pero no redistribuibles, y los términos comerciales varían. Private LLM es de pago. Las herramientas con licencia AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) son gratuitas para cualquier uso incluyendo comercial, pero los términos AGPL requieren divulgar el código fuente si las modificas y las alojas públicamente. Los proyectos Apache 2.0 y MIT (la mayoría) son utilizables en cualquier contexto incluyendo comercial sin restricciones de atribución más allá del texto de la licencia.',
           },
           {
             q: '¿Qué herramientas soportan Apple Silicon (chips de la serie M) de forma nativa?',
@@ -2465,7 +2465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Con qué frecuencia se actualiza este directorio?',
-            a: 'Cada seis meses — la próxima actualización programada es en noviembre de 2026. Los cambios intermedios (un proyecto queda inactivo, una nueva herramienta gana cuota significativa, una licencia cambia) se aplican como parches a la entrada existente. Las categorías o capas completamente nuevas esperan a una revisión para mantener estable la estructura. La sección "Fuentes" arriba lista los índices comunitarios utilizados para monitorear lo que el ecosistema está haciendo entre revisiones.',
+            a: 'Cada seis meses — última revisión en junio de 2026, la próxima actualización programada es en noviembre de 2026. Los cambios intermedios (un proyecto queda inactivo, una nueva herramienta gana cuota significativa, una licencia cambia) se aplican como parches a la entrada existente. Las categorías o capas completamente nuevas esperan a una revisión para mantener estable la estructura. La sección "Fuentes" arriba lista los índices comunitarios utilizados para monitorear lo que el ecosistema está haciendo entre revisiones.',
           },
         ],
       },
@@ -2489,11 +2489,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'El directorio completo de software LLM local: 70+ herramientas para ejecutar IA en tu propio hardware (2026)',
-      description: '87 herramientas para ejecutar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, más móvil, RAG, voz y frameworks de agentes. Licencias y enlaces, mayo 2026.',
+      description: '87 herramientas para ejecutar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, más móvil, RAG, voz y frameworks de agentes. Licencias, enlaces y últimas versiones. Actualizado en junio de 2026.',
       url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory-2026?lang=es',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-06-03',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
@@ -2501,18 +2501,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'O diretório completo de software LLM local: 70+ ferramentas para executar IA no seu próprio hardware (2026)',
-    seoTitle: 'Melhores ferramentas LLM local 2026: 87 apps em 9 categorias',
+    seoTitle: 'Ferramentas LLM local 2026: 87 apps + últimas novidades',
     affiliateDisclosure: true,
     intro:
       'O ecossistema de LLM local em 2026 é suficientemente amplo para que escolher a ferramenta errada no início custe horas, não minutos. Este diretório cataloga 87 projetos em manutenção ativa em nove camadas — runtimes, aplicativos de desktop, interfaces web, assistentes de código, sistemas RAG, frameworks de agentes, voz e multimodal, clientes móveis e plugins de produtividade especializados — com descrição, licença e URL principal para cada um. Use-o como o mapa de "o que existe" antes de se comprometer com um stack; cada categoria termina com um link para o guia de comparação mais detalhado do PromptQuorum para essa camada.',
     metaDescription:
-      '87 ferramentas para executar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, mais mobile, RAG, voz e frameworks de agentes. Licenças e links, maio 2026.',
+      '87 ferramentas para executar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, mais mobile, RAG, voz e frameworks de agentes. Licenças, links e versões mais recentes. Atualizado em junho de 2026.',
     twitterDescription:
-      '87 ferramentas LLM local em 9 categorias — runtimes, apps de desktop, interfaces web, agentes de código, RAG, frameworks multiagente, voz, mobile. Licenças e links. O mapa de "o que existe" antes de escolher seu stack.',
+      '87 ferramentas LLM local em 9 categorias — runtimes, apps de desktop, interfaces web, agentes de código, RAG, frameworks multiagente, voz, mobile. Licenças, links e versões mais recentes, junho de 2026. O mapa de "o que existe" antes de escolher seu stack.',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -2542,7 +2542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para RAG: AnythingLLM (o mais fácil), PrivateGPT (orientado a offline), Open WebUI (RAG integrado dentro da interface de chat).',
           'Para mobile: MLC Chat ou PocketPal AI no Android, Private LLM ou Enchanted no iOS — todos executam modelos 2–4B realmente úteis em telefones de alta gama.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-03',
       },
     },
     toc: [
@@ -2636,9 +2636,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Descrição': 'Adequado para iniciantes com forte suporte de apenas CPU', 'Licença': 'MIT' },
           { 'Ferramenta': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Descrição': 'RAG e chat de documentos com armazenamento vetorial integrado', 'Licença': 'MIT' },
           { 'Ferramenta': '**Msty**', 'Link': '[msty.app](https://msty.app)', 'Descrição': 'UX de consumidor limpa, suporte multi-provedor', 'Licença': 'Grátis (fechado)' },
-          { 'Ferramenta': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', 'Descrição': 'IA de desktop multi-provedor com personalização extensiva', 'Licença': 'Apache 2.0' },
-          { 'Ferramenta': '**Faraday**', 'Link': '[faraday.dev](https://faraday.dev)', 'Descrição': 'Cliente de desktop para chat de personagens e roleplay', 'Licença': 'Grátis (fechado)' },
-          { 'Ferramenta': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', 'Descrição': 'Cliente Ollama mínimo nativo de macOS/iOS', 'Licença': 'MIT' },
+          { 'Ferramenta': '**Cherry Studio**', 'Link': '[cherry-ai.com](https://cherry-ai.com)', 'Descrição': 'IA de desktop multi-provedor com personalização extensiva', 'Licença': 'AGPL 3.0' },
+          { 'Ferramenta': '**Backyard AI**', 'Link': '[backyard.ai](https://backyard.ai)', 'Descrição': 'Cliente de desktop para chat de personagens e roleplay', 'Licença': 'Grátis (fechado)' },
+          { 'Ferramenta': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Descrição': 'Cliente Ollama mínimo nativo de macOS/iOS', 'Licença': 'Apache 2.0' },
           { 'Ferramenta': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Descrição': 'Desktop e servidor com muitos recursos enterprise', 'Licença': 'Apache 2.0' },
           { 'Ferramenta': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Descrição': 'Permite que um LLM local controle seu computador e execute código', 'Licença': 'AGPL 3.0' },
         ],
@@ -2759,8 +2759,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Descrição': 'Reconhecimento de voz local, funciona em CPU ou GPU', 'Licença': 'MIT' },
           { 'Ferramenta': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Descrição': 'Transcrição rápida do Whisper via CTranslate2', 'Licença': 'MIT' },
           { 'Ferramenta': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'Descrição': 'Síntese de texto para voz local leve', 'Licença': 'MIT' },
-          { 'Ferramenta': '**Coqui TTS**', 'Link': '[coqui.ai](https://coqui.ai)', 'Descrição': 'Síntese de voz open-source com múltiplas opções de modelos', 'Licença': 'MPL 2.0' },
-          { 'Ferramenta': '**XTTS v2**', 'Link': '[docs.coqui.ai/en/latest/models/xtts.html](https://docs.coqui.ai/en/latest/models/xtts.html)', 'Descrição': 'Clonagem de voz com suporte multilíngue', 'Licença': 'CPML' },
+          { 'Ferramenta': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', 'Descrição': 'Síntese de voz open-source com múltiplas opções de modelos', 'Licença': 'MPL 2.0' },
+          { 'Ferramenta': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'Descrição': 'Clonagem de voz com suporte multilíngue', 'Licença': 'CPML' },
           { 'Ferramenta': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'Descrição': 'Voz generativa com sons que não são fala', 'Licença': 'MIT' },
           { 'Ferramenta': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'Descrição': 'TTS de alta qualidade e som natural', 'Licença': 'MIT' },
           { 'Ferramenta': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Descrição': 'Modelo local de visão + linguagem', 'Licença': 'Apache 2.0' },
@@ -2781,7 +2781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**LLM Farm**', 'Link': '[github.com/guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)', 'Descrição': 'LLM local para iOS com explorador de modelos', 'Licença': 'MIT' },
           { 'Ferramenta': '**Layla**', 'Link': '[layla-network.ai](https://layla-network.ai)', 'Descrição': 'App LLM local orientada a Android', 'Licença': 'Grátis (fechado)' },
           { 'Ferramenta': '**Maid**', 'Link': '[github.com/Mobile-Artificial-Intelligence/maid](https://github.com/Mobile-Artificial-Intelligence/maid)', 'Descrição': 'App Flutter móvel open-source para LLM', 'Licença': 'MIT' },
-          { 'Ferramenta': '**Enchanted**', 'Link': '[enchantedlabs.ai](https://enchantedlabs.ai)', 'Descrição': 'Cliente Ollama nativo de iOS/macOS', 'Licença': 'MIT' },
+          { 'Ferramenta': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Descrição': 'Cliente Ollama nativo de iOS/macOS', 'Licença': 'Apache 2.0' },
           { 'Ferramenta': '**Chapper**', 'Link': '[prevolut.uk](https://prevolut.uk)', 'Descrição': 'Cliente móvel nativo para Ollama e LM Studio', 'Licença': 'Grátis' },
           { 'Ferramenta': '**RikkaHub**', 'Link': '[github.com/rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)', 'Descrição': 'IA local Android de código aberto', 'Licença': 'MIT' },
           { 'Ferramenta': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Descrição': 'Acesso remoto ao seu espaço de trabalho local do AnythingLLM', 'Licença': 'MIT' },
@@ -2833,7 +2833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Como este diretório se mantém atualizado',
         content:
-          '**Este diretório é revisado a cada seis meses** (próxima atualização: novembro de 2026). Critérios de inclusão: o projeto está em manutenção ativa (commits nos últimos 90 dias), tem uma licença open-source verificável ou uma declaração clara de uso comercial, e ou tem uma participação de usuários significativa em 2026 ou preenche uma camada que de outra forma estaria vazia. Os projetos que ficam inativos por mais de dois ciclos de versão são removidos; os novos participantes que atendem aos critérios são adicionados na próxima revisão. Para sugerir um projeto para inclusão, abra um issue ou PR contra o repositório do PromptQuorum — inclua a URL do projeto, a licença e uma descrição de uma sentença no formato acima.',
+          '**Este diretório é revisado a cada seis meses — última revisão em junho de 2026, próxima atualização em novembro de 2026.** A revisão de junho de 2026 reverificou todos os links e corrigiu vários nomes de projetos e licenças: Faraday agora é Backyard AI, o fork mantido do Coqui TTS é hospedado pela Idiap e o Cherry Studio é AGPL 3.0. Critérios de inclusão: o projeto está em manutenção ativa (commits nos últimos 90 dias), tem uma licença open-source verificável ou uma declaração clara de uso comercial, e ou tem uma participação de usuários significativa em 2026 ou preenche uma camada que de outra forma estaria vazia. Os projetos que ficam inativos por mais de dois ciclos de versão são removidos; os novos participantes que atendem aos critérios são adicionados na próxima revisão. Para sugerir um projeto para inclusão, abra um issue ou PR contra o repositório do PromptQuorum — inclua a URL do projeto, a licença e uma descrição de uma sentença no formato acima.',
       },
       sources: {
         id: 'sources',
@@ -2865,7 +2865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Alguma dessas ferramentas tem licença comercial (não gratuita para uso comercial)?',
-            a: 'Algumas: LM Studio, Msty, Faraday, Layla e Cursor são de código fechado — geralmente gratuitas para usar mas não redistribuíveis, e os termos comerciais variam. Private LLM é pago. As ferramentas com licença AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) são gratuitas para qualquer uso incluindo comercial, mas os termos AGPL exigem divulgar o código-fonte se você as modificar e hospedar publicamente. Os projetos Apache 2.0 e MIT (a maioria) são utilizáveis em qualquer contexto incluindo comercial sem restrições de atribuição além do texto da licença.',
+            a: 'Algumas: LM Studio, Msty, Backyard AI, Layla e Cursor são de código fechado — geralmente gratuitas para usar mas não redistribuíveis, e os termos comerciais variam. Private LLM é pago. As ferramentas com licença AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) são gratuitas para qualquer uso incluindo comercial, mas os termos AGPL exigem divulgar o código-fonte se você as modificar e hospedar publicamente. Os projetos Apache 2.0 e MIT (a maioria) são utilizáveis em qualquer contexto incluindo comercial sem restrições de atribuição além do texto da licença.',
           },
           {
             q: 'Quais ferramentas suportam Apple Silicon (chips da série M) nativamente?',
@@ -2889,7 +2889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Com que frequência este diretório é atualizado?',
-            a: 'A cada seis meses — a próxima atualização programada é em novembro de 2026. As mudanças intermediárias (um projeto fica inativo, uma nova ferramenta ganha participação significativa, uma licença muda) são aplicadas como patches à entrada existente. Categorias ou camadas completamente novas aguardam uma revisão para manter a estrutura estável.',
+            a: 'A cada seis meses — última revisão em junho de 2026, a próxima atualização programada é em novembro de 2026. As mudanças intermediárias (um projeto fica inativo, uma nova ferramenta ganha participação significativa, uma licença muda) são aplicadas como patches à entrada existente. Categorias ou camadas completamente novas aguardam uma revisão para manter a estrutura estável.',
           },
         ],
       },
@@ -2913,11 +2913,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'O diretório completo de software LLM local: 70+ ferramentas para executar IA no seu próprio hardware (2026)',
-      description: '87 ferramentas para executar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, mais mobile, RAG, voz e frameworks de agentes. Licenças e links, maio 2026.',
+      description: '87 ferramentas para executar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, mais mobile, RAG, voz e frameworks de agentes. Licenças, links e versões mais recentes. Atualizado em junho de 2026.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-software-directory-2026?lang=pt',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-06-03',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },

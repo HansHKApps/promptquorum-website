@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-07-01',
       next_refresh_due: '2026-06-30',
-      last_full_refresh: '2026-06-01',
+      last_full_refresh: '2026-06-03',
       current_models_mentioned: ['Qwen 3.6 27B', 'qwen3:30b', 'qwen3-coder:30b', 'Kimi K2.6', 'gpt-oss:20b', 'gpt-oss:120b', 'DeepSeek-R1', 'Gemma 4', 'GLM-5.1', 'Llama 4 Scout', 'Devstral Small 24B', 'Mistral Small', 'Phi-4 Mini'],
       current_benchmarks_used: ['SWE-bench', 'SWE-Bench Pro', 'HumanEval', 'MATH'],
       theme: 'Best Models',
@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Agent tasks and tool calling**: `ollama run gemma4:e4b` -- Released April 2, 2026. Built-in tool calling + vision support. Recommended for local agents, function calling, and structured output. 6 GB RAM.',
             '**Reasoning and math**: `ollama run deepseek-r1:7b` -- chain-of-thought model, best local math performance at 7B.',
             '**Multilingual**: `ollama run qwen3:7b` -- 29+ native languages, strongest non-English support, 76% HumanEval.',
-            '**Image understanding**: `ollama run gemma4:e4b` -- vision + tool calling (May 2026). Or `ollama run llama3.2-vision:11b` for dedicated vision.',
+            '**Image understanding**: `ollama run gemma4:e4b` -- vision + tool calling (June 2026). Or `ollama run llama3.2-vision:11b` for dedicated vision.',
             '**Fast and lightweight**: `ollama run gemma2:2b` -- fastest CPU inference, 1.7 GB RAM.',
             '**High quality (16 GB RAM)**: `ollama run mistral-small3.1` -- near-70B quality at 14 GB RAM.',
             '**Embedding generation**: `ollama run nomic-embed-text` -- 137M parameter embedding model for RAG pipelines.',
@@ -175,7 +175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         newApril2026: {
           id: 'new-may-2026',
-          title: 'New Ollama Models — May 2026 Releases',
+          title: 'New Ollama Models — June 2026 Releases',
           content: 'Confirm availability with `ollama pull <model>` before building workflows. New models appear in the Ollama library within days of release at ollama.com/library.',
           rows: [
             { 'Model': '[kimi-k2.6](https://huggingface.co/moonshotai)', 'Released': 'April 20, 2026', 'Best For': 'Frontier coding (SWE-Bench Pro 58.6), MoE (32B/1T), Modified MIT', 'Ollama Command': 'ollama run kimi-k2.6' },
@@ -357,7 +357,7 @@ schema: {
         'description': 'Looking for new Ollama models? See the latest June 2026 releases, what is new, and which models are worth using for chat, coding, and reasoning.',
         'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=en',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-03',
         'proficiencyLevel': 'Beginner',
         'about': [
           { '@type': 'Thing', 'name': 'Best Ollama models 2026' },
@@ -383,7 +383,7 @@ schema: {
           { '@type': 'ListItem', 'position': 5, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'Best reasoning. 5 GB RAM. 52% MATH vs 28% Mistral Small. ollama run deepseek-r1:7b' },
           { '@type': 'ListItem', 'position': 6, 'name': 'gemma4:e4b', 'url': 'https://ollama.com/library/gemma4', 'description': 'Best vision/multimodal (E4B+). Tool calling + vision. ~6 GB RAM. ollama run gemma4:e4b' },
           { '@type': 'ListItem', 'position': 7, 'name': 'Llama 4 Scout', 'url': 'https://ollama.com/library/llama4', 'description': 'Best long-context (10M tokens) + large multimodal. MoE 17B active/109B total. ~55 GB at Q4. ollama run llama4:scout' },
-          { '@type': 'ListItem', 'position': 8, 'name': 'Devstral Small 24B', 'url': 'https://ollama.com/library/devstral-small', 'description': 'Best agentic coding May 2026. Multi-file edits, debugging. 16 GB RAM. ollama run devstral-small:24b' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Devstral Small 24B', 'url': 'https://ollama.com/library/devstral-small', 'description': 'Best agentic coding June 2026. Multi-file edits, debugging. 16 GB RAM. ollama run devstral-small:24b' },
           { '@type': 'ListItem', 'position': 9, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': 'Best quality 16 GB tier. 14 GB RAM. 74% HumanEval. Apache 2.0. ollama run mistral-small3.1' },
           { '@type': 'ListItem', 'position': 10, 'name': 'gemma2:2b', 'url': 'https://ollama.com/library/gemma2', 'description': 'Fastest and lightest. 1.7 GB RAM. Best CPU inference. ollama run gemma2:2b' },
           { '@type': 'ListItem', 'position': 11, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': 'Best reasoning under 4 GB. 2.5 GB RAM. 70% HumanEval. ollama run phi4-mini' },
@@ -491,7 +491,7 @@ schema: {
       theme: 'Best Models',
       title: '10 Mejores LLMs de Código Abierto para Ollama en 2026 (Clasificados y Probados)',
       seoTitle: 'Mejores Modelos Ollama 2026: Top 10 LLMs de Código Abierto',
-      intro: 'Los modelos más descargados en Ollama en 2026 son Llama 4 Scout y Llama 3.x (los más populares en general), Qwen3 (el de mayor crecimiento, mejor en programación), Gemma 4 (mejor para agentes y tool calling), Mistral (el más eficiente) y DeepSeek-R1 (mejor en razonamiento). Novedades de mayo de 2026: Kimi K2.6 (MoE, licencia MIT, programación de primer nivel), Qwen 3.6 (77,2% SWE-bench) y GLM-5.1.',
+      intro: 'Los modelos más descargados en Ollama en 2026 son Llama 4 Scout y Llama 3.x (los más populares en general), Qwen3 (el de mayor crecimiento, mejor en programación), Gemma 4 (mejor para agentes y tool calling), Mistral (el más eficiente) y DeepSeek-R1 (mejor en razonamiento). Novedades de junio de 2026: Kimi K2.6 (MoE, licencia MIT, programación de primer nivel), Qwen 3.6 (77,2% SWE-bench) y GLM-5.1.',
       metaDescription: 'Compara los 10 mejores LLMs de código abierto para Ollama en 2026: Llama 3.3 70B, Qwen 3, Mistral y DeepSeek. Benchmarks, requisitos de RAM y setup.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**El mejor modelo general en hardware de consumo es Qwen 3.6 27B (77,2% SWE-bench, cabe en 24 GB con Q4). Otras opciones destacadas: Kimi K2.6 (programación de frontera), gpt-oss:20b (mejor pequeño / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (razonamiento), Gemma 4 (visión/tool calling) y Llama 4 Scout (contexto largo 10M / multimodal). Los más descargados en general siguen siendo la familia Llama. Novedades de 2026: Kimi K2.6, Qwen 3.6 27B, GLM-5.1 y gpt-oss.**',
@@ -570,7 +570,7 @@ schema: {
         { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: 'Modelos más populares en Ollama', anchor: '#most-popular-models-on-ollama' },
         { label: 'Mejores modelos por caso de uso', anchor: '#top-models-by-category' },
-        { label: 'Novedades de mayo de 2026', anchor: '#new-may-2026' },
+        { label: 'Novedades de junio de 2026', anchor: '#new-may-2026' },
         { label: '¿Qué es DeepSeek-R1?', anchor: '#deepseek-r1' },
         { label: 'Modelos de visión en Ollama', anchor: '#vision-models' },
         { label: 'Tabla comparativa Top 10 completa', anchor: '#full-top-10-comparison' },
@@ -616,7 +616,7 @@ schema: {
           id: 'most-popular-models-on-ollama',
           title: '¿Qué modelos son más populares en Ollama en 2026?',
           content: [
-            '**La popularidad en Ollama se mide por el número de descargas visibles en la página de biblioteca de cada modelo.** A partir de mayo de 2026, los modelos más descargados siguen siendo dominados por la familia Llama de Meta -- Llama 3.2 3B es el modelo más descargado en general, en gran parte por su uso como modelo de prueba en la primera instalación. Sin embargo, Llama 4 Scout ha escalado rápidamente desde su lanzamiento en abril de 2026.',
+            '**La popularidad en Ollama se mide por el número de descargas visibles en la página de biblioteca de cada modelo.** A partir de junio de 2026, los modelos más descargados siguen siendo dominados por la familia Llama de Meta -- Llama 3.2 3B es el modelo más descargado en general, en gran parte por su uso como modelo de prueba en la primera instalación. Sin embargo, Llama 4 Scout ha escalado rápidamente desde su lanzamiento en abril de 2026.',
             'Qwen3 es la familia de modelos de mayor crecimiento en la biblioteca de Ollama, con Qwen3 y la nueva variante densa Qwen 3.6 desplazando rápidamente a Qwen3. DeepSeek-R1 experimentó grandes picos de descargas tras su lanzamiento y sigue siendo muy descargado para tareas de razonamiento.',
             'Meta lanzó **Llama 4** en abril de 2026 con las variantes Scout (17B activos, 109B total, MoE) y Maverick (17B activos, 400B total). Llama 4 Scout ya es estable en la biblioteca de Ollama (`ollama pull llama4:scout`). La familia Llama 4 usa arquitectura Mixture-of-Experts (MoE) — solo 17B parámetros están activos por token, pero con 109B parámetros totales Scout necesita ~55 GB de VRAM con Q4 (cabe en 24 GB solo a 1,78 bits, ~20 tok/s). Las características destacadas de Scout son su ventana de contexto de 10M tokens y su entrada multimodal, no su ajuste a hardware de consumo. Para configuraciones ligeras (8 GB de RAM), Llama 3.2 3B sigue siendo el modelo inicial más sencillo. El ecosistema de Ollama se expandió significativamente en abril de 2026. Kimi K2.6 (Moonshot AI, licencia Modified MIT, 32B activos / 1T total MoE) obtuvo SWE-Bench Pro 58.6, empatando con GPT-5.5. Qwen 3.6 27B alcanzó el 77,2% SWE-bench como el mejor modelo general en hardware de consumo (cabe en 24 GB con Q4). El gpt-oss:20b de OpenAI (21B total / 3,6B activos MoE) se ejecuta en 16 GB a ~nivel o3-mini con razonamiento ajustable. Ollama v0.24.0 añadió soporte para Gemma 4 con mejoras de pensamiento y tool calling. La biblioteca de Ollama ahora referencia más de 4.500 modelos.',
           ],
@@ -638,7 +638,7 @@ schema: {
             '**Tareas de agentes y tool calling**: `ollama run gemma4:e4b` -- Lanzado el 2 de abril de 2026. Tool calling integrado + soporte de visión. Recomendado para agentes locales, llamadas a funciones y salida estructurada. 6 GB de RAM.',
             '**Razonamiento y matemáticas**: `ollama run deepseek-r1:7b` -- modelo chain-of-thought, mejor rendimiento matemático local a 7B.',
             '**Multilingüe**: `ollama run qwen3:7b` -- 29+ idiomas nativos, soporte no inglés más sólido, 76% HumanEval.',
-            '**Comprensión de imágenes**: `ollama run gemma4:e4b` -- visión + tool calling (mayo de 2026). O `ollama run llama3.2-vision:11b` para visión dedicada.',
+            '**Comprensión de imágenes**: `ollama run gemma4:e4b` -- visión + tool calling (junio de 2026). O `ollama run llama3.2-vision:11b` para visión dedicada.',
             '**Rápido y ligero**: `ollama run gemma2:2b` -- inferencia CPU más rápida, 1,7 GB de RAM.',
             '**Alta calidad (16 GB de RAM)**: `ollama run mistral-small3.1` -- calidad cercana a 70B con 14 GB de RAM.',
             '**Generación de embeddings**: `ollama run nomic-embed-text` -- modelo de embeddings de 137M de parámetros para pipelines RAG.',
@@ -649,7 +649,7 @@ schema: {
         },
         newApril2026: {
           id: 'new-may-2026',
-          title: 'Nuevos modelos Ollama — Lanzamientos de mayo de 2026',
+          title: 'Nuevos modelos Ollama — Lanzamientos de junio de 2026',
           content: 'Confirma la disponibilidad con `ollama pull <modelo>` antes de construir flujos de trabajo. Los nuevos modelos aparecen en la biblioteca de Ollama a los pocos días de su lanzamiento en ollama.com/library.',
           rows: [
             { 'Modelo': '[kimi-k2.6](https://huggingface.co/moonshotai)', 'Lanzamiento': '20 de abril de 2026', 'Mejor para': 'Programación de frontera (SWE-Bench Pro 58.6), MoE (32B/1T), Modified MIT', 'Comando Ollama': 'ollama run kimi-k2.6' },
@@ -678,7 +678,7 @@ schema: {
         visionModels: {
           id: 'vision-models',
           title: '¿Qué modelos de Ollama admiten entrada de imágenes?',
-          content: 'A partir de mayo de 2026, estos modelos en Ollama admiten entrada de imágenes (multimodal): Gemma 4 admite tanto visión COMO tool calling — único entre los modelos de visión en Ollama.',
+          content: 'A partir de junio de 2026, estos modelos en Ollama admiten entrada de imágenes (multimodal): Gemma 4 admite tanto visión COMO tool calling — único entre los modelos de visión en Ollama.',
           rows: [
             { 'Modelo': '[llama3.2-vision:11b](https://ollama.com/library/llama3.3)', 'RAM': '~8 GB', 'Soporte de imágenes': 'Sí', 'Comando Ollama': 'ollama run llama3.2-vision:11b' },
             { 'Modelo': '[llama3.2-vision:90b](https://ollama.com/library/llama3.3)', 'RAM': '~55 GB', 'Soporte de imágenes': 'Sí', 'Comando Ollama': 'ollama run llama3.2-vision:90b' },
@@ -770,7 +770,7 @@ schema: {
           faqs: [
             {
               q: '¿Cuántos modelos hay en la biblioteca de Ollama?',
-              a: 'A partir de mayo de 2026, la biblioteca de Ollama contiene aproximadamente más de 4.500 modelos (contribuciones curadas + de la comunidad) con soporte oficial. Hugging Face aloja miles de modelos GGUF adicionales que se pueden cargar mediante Ollama usando Modelfiles personalizados.',
+              a: 'A partir de junio de 2026, la biblioteca de Ollama contiene aproximadamente más de 4.500 modelos (contribuciones curadas + de la comunidad) con soporte oficial. Hugging Face aloja miles de modelos GGUF adicionales que se pueden cargar mediante Ollama usando Modelfiles personalizados.',
             },
             {
               q: '¿Puedo usar modelos de Hugging Face directamente en Ollama?',
@@ -827,11 +827,11 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'NewsArticle',
-        'headline': 'Nuevos modelos Ollama mayo de 2026: Últimos lanzamientos y actualizaciones',
-        'description': '¿Buscas nuevos modelos de Ollama? Consulta los últimos lanzamientos de mayo de 2026, qué hay de nuevo y qué modelos vale la pena usar para chat, programación y razonamiento.',
+        'headline': 'Nuevos modelos Ollama junio de 2026: Últimos lanzamientos y actualizaciones',
+        'description': '¿Buscas nuevos modelos de Ollama? Consulta los últimos lanzamientos de junio de 2026, qué hay de nuevo y qué modelos vale la pena usar para chat, programación y razonamiento.',
         'url': 'https://www.promptquorum.com/es/local-llms/top-open-source-models-ollama?lang=es',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-03',
         'proficiencyLevel': 'Beginner',
         'about': [
           { '@type': 'Thing', 'name': 'Mejores modelos Ollama 2026' },
@@ -857,7 +857,7 @@ schema: {
           { '@type': 'ListItem', 'position': 5, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'Mejor razonamiento. 5 GB de RAM. 52% MATH vs 28% Mistral Small. ollama run deepseek-r1:7b' },
           { '@type': 'ListItem', 'position': 6, 'name': 'gemma4:e4b', 'url': 'https://ollama.com/library/gemma4', 'description': 'Mejor visión/multimodal (E4B+). Tool calling + visión. ~6 GB de RAM. ollama run gemma4:e4b' },
           { '@type': 'ListItem', 'position': 7, 'name': 'Llama 4 Scout', 'url': 'https://ollama.com/library/llama4', 'description': 'Mejor contexto largo (10M tokens) + multimodal grande. MoE 17B activos/109B total. ~55 GB con Q4. ollama run llama4:scout' },
-          { '@type': 'ListItem', 'position': 8, 'name': 'Devstral Small 24B', 'url': 'https://ollama.com/library/devstral-small', 'description': 'Mejor programación agéntica mayo de 2026. Ediciones de múltiples archivos, depuración. 16 GB de RAM. ollama run devstral-small:24b' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Devstral Small 24B', 'url': 'https://ollama.com/library/devstral-small', 'description': 'Mejor programación agéntica junio de 2026. Ediciones de múltiples archivos, depuración. 16 GB de RAM. ollama run devstral-small:24b' },
           { '@type': 'ListItem', 'position': 9, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': 'Mejor calidad en el nivel de 16 GB. 14 GB de RAM. 74% HumanEval. Apache 2.0. ollama run mistral-small3.1' },
           { '@type': 'ListItem', 'position': 10, 'name': 'gemma2:2b', 'url': 'https://ollama.com/library/gemma2', 'description': 'El más rápido y ligero. 1,7 GB de RAM. Mejor inferencia en CPU. ollama run gemma2:2b' },
           { '@type': 'ListItem', 'position': 11, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': 'Mejor razonamiento por debajo de 4 GB. 2,5 GB de RAM. 70% HumanEval. ollama run phi4-mini' },
@@ -872,7 +872,7 @@ schema: {
             'name': '¿Cuántos modelos hay en la biblioteca de Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'A partir de mayo de 2026, la biblioteca de Ollama contiene aproximadamente más de 4.500 modelos (contribuciones curadas + de la comunidad) con soporte oficial. Hugging Face aloja miles de modelos GGUF adicionales que se pueden cargar mediante Ollama usando Modelfiles personalizados.',
+              'text': 'A partir de junio de 2026, la biblioteca de Ollama contiene aproximadamente más de 4.500 modelos (contribuciones curadas + de la comunidad) con soporte oficial. Hugging Face aloja miles de modelos GGUF adicionales que se pueden cargar mediante Ollama usando Modelfiles personalizados.',
             }
           },
           {
@@ -965,7 +965,7 @@ schema: {
       theme: 'Best Models',
       title: '10 Melhores LLMs de Código Aberto para Ollama em 2026 (Classificados e Testados)',
       seoTitle: 'Melhores Modelos Ollama 2026: Top 10 LLMs de Código Aberto',
-      intro: 'Os modelos mais baixados no Ollama em 2026 são Llama 4 Scout e Llama 3.x (os mais populares em geral), Qwen3 (o de maior crescimento, melhor em programação), Gemma 4 (melhor para agentes e tool calling), Mistral (o mais eficiente) e DeepSeek-R1 (melhor em raciocínio). Novidades de maio de 2026: Kimi K2.6 (MoE, licença MIT, programação de primeiro nível), Qwen 3.6 (77,2% SWE-bench) e GLM-5.1.',
+      intro: 'Os modelos mais baixados no Ollama em 2026 são Llama 4 Scout e Llama 3.x (os mais populares em geral), Qwen3 (o de maior crescimento, melhor em programação), Gemma 4 (melhor para agentes e tool calling), Mistral (o mais eficiente) e DeepSeek-R1 (melhor em raciocínio). Novidades de junho de 2026: Kimi K2.6 (MoE, licença MIT, programação de primeiro nível), Qwen 3.6 (77,2% SWE-bench) e GLM-5.1.',
       metaDescription: 'Compare os 10 melhores LLMs de código aberto para Ollama em 2026: Llama 3.3 70B, Qwen 3, Mistral e DeepSeek. Benchmarks, requisitos de RAM e configuração.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**O melhor modelo geral em hardware de consumo é o Qwen 3.6 27B (77,2% SWE-bench, cabe em 24 GB com Q4). Outras opções destacadas: Kimi K2.6 (programação frontier), gpt-oss:20b (melhor pequeno / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (raciocínio), Gemma 4 (visão/tool calling) e Llama 4 Scout (contexto longo 10M / multimodal).**',
@@ -1074,7 +1074,7 @@ schema: {
           id: 'most-popular',
           title: 'Die beliebtesten Modelle auf Ollama',
           content: [
-            '**Ollama verfügt über eine vollständig öffentlich zugängliche Download-Statistik.** Nach Daten aus Mai 2026:',
+            '**Ollama verfügt über eine vollständig öffentlich zugängliche Download-Statistik.** Nach Daten aus Juni 2026:',
             '**Llama 3.2 3B** ist immer noch das am häufigsten heruntergeladene Modell insgesamt, großteils aufgrund seiner Verwendung als Standard-Testmodell beim ersten Install. Llama 4 Scout ist jedoch seit März 2026 schnell in den Rankings aufgestiegen und ist jetzt die bevorzugte Wahl für Qualität.',
             '**Qwen3 und Qwen 3.6** sind die am schnellsten wachsende Modellfamilie in der Ollama-Bibliothek, mit Qwen3 und dem neuen Qwen 3.6 dicht Variante schnell Qwen3 verdrängt. DeepSeek-R1 sah große Spitzen nach der Veröffentlichung und bleibt für Reasoning-Aufgaben stark heruntergeladen.',
             '**Llama 4 Scout** wurde von Meta im April 2026 mit Scout (17B aktiv, 109B gesamt, MoE) und Maverick (17B aktiv, 400B gesamt) Varianten veröffentlicht. Llama 4 Scout ist jetzt stabil in der Ollama-Bibliothek (`ollama pull llama4:scout`). Die Llama 4 Familie nutzt Mixture-of-Experts (MoE) Architektur – nur 17B Parameter sind pro Token aktiv, aber mit 109B Gesamtparametern benötigt Scout ~55 GB VRAM bei Q4 (passt in 24 GB nur bei 1,78-Bit, ~20 tok/s). Scouts Stärken sind das 10M-Token-Kontextfenster und multimodale Eingabe, nicht die Consumer-Hardware-Tauglichkeit. Für leichte Setups (8 GB RAM) bleibt Llama 3.2 3B das einfachste Einstiegsmodell. Das Ollama-Ökosystem expandierte erheblich im April 2026. Kimi K2.6 (Moonshot AI, Modified MIT-Lizenz, 32B aktiv / 1T gesamt MoE) erreichte SWE-Bench Pro 58.6 und liegt damit gleichauf mit GPT-5.5. Qwen 3.6 27B erzielte 77,2% SWE-bench als das beste Modell fuer Consumer-Hardware (passt in 24 GB bei Q4). OpenAIs Open-Weight gpt-oss:20b (21B gesamt / 3,6B aktiv MoE) läuft in 16 GB auf ~o3-mini-Niveau mit einstellbarem Reasoning. Ollama v0.24.0 fügte Gemma 4 Unterstützung mit Thinking- und Tool-Calling-Verbesserungen hinzu. Die Ollama-Bibliothek referenziert jetzt 4.500+ Modelle.',
@@ -1096,12 +1096,12 @@ schema: {
             '**Agent-Aufgaben und Tool-Calling**: `ollama run gemma4:e4b` -- Veröffentlicht 2. April 2026. Built-in Tool-Calling + Vision-Unterstützung. Empfohlen für lokale Agenten, Function-Calling und strukturierte Ausgabe. 6 GB RAM.',
             '**Reasoning und Mathematik**: `ollama run deepseek-r1:7b` -- Chain-of-Thought-Modell, beste lokale Mathe-Leistung bei 7B.',
             '**Mehrsprachig**: `ollama run qwen3:7b` -- 29+ native Sprachen, stärkste nicht-englische Unterstützung, 76% HumanEval.',
-            '**Bildverarbeitung**: `ollama run gemma4:e4b` -- Vision + Tool Calling (Mai 2026). Oder `ollama run llama3.2-vision:11b` für dedizierte Vision.',
+            '**Bildverarbeitung**: `ollama run gemma4:e4b` -- Vision + Tool Calling (Juni 2026). Oder `ollama run llama3.2-vision:11b` für dedizierte Vision.',
             '**Schnell und leichtgewichtig**: `ollama run gemma2:2b` -- schnellste CPU-Inferenz, 1,7 GB RAM.',
             '**Hohe Qualität (16 GB RAM)**: `ollama run mistral-small3.1` -- nahe 70B Qualität bei 14 GB RAM.',
           ],
           image: '/images/ollama-model-by-use-case-de.svg',
-          imageCaption: 'Ollama-Modellauswahl nach Anwendungsfall: Mai 2026. Chat: llama4:scout, Codierung: qwen3.6:27b, Reasoning: deepseek-r1:7b.',
+          imageCaption: 'Ollama-Modellauswahl nach Anwendungsfall: Juni 2026. Chat: llama4:scout, Codierung: qwen3.6:27b, Reasoning: deepseek-r1:7b.',
         },
         deepseekR1: {
           id: 'deepseek-r1',
@@ -1128,7 +1128,7 @@ schema: {
         visionModels: {
           id: 'vision-models',
           title: 'Vision-Modelle auf Ollama',
-          content: 'Mai 2026: Diese Modelle auf Ollama unterstützen Bildeingabe (multimodal). Gemma 4 unterstützt sowohl Vision ALS AUCH Tool Calling – einzigartig unter Vision-Modellen auf Ollama.',
+          content: 'Juni 2026: Diese Modelle auf Ollama unterstützen Bildeingabe (multimodal). Gemma 4 unterstützt sowohl Vision ALS AUCH Tool Calling – einzigartig unter Vision-Modellen auf Ollama.',
           columns: ['Modell', 'RAM', 'Bildunterstützung', 'Ollama Befehl'],
           image: '/images/ollama-vision-models-comparison-de.svg',
           imageCaption: '5 Ollama-Vision-Modelle für Bildeingabe. Gemma 4 E4B (6 GB) mit Tool Calling. Llama 3.2 Vision 11B (8 GB) für dedizierte Vision. Alle lokal.',
@@ -1277,7 +1277,7 @@ schema: {
         'description': 'Die beliebtesten Open-Source-Modelle auf Ollama im April 2026: Llama am meisten heruntergeladen, Qwen3 am schnellsten wachsend, DeepSeek-R1 für Reasoning.',
         'url': 'https://www.promptquorum.com/de/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-03',
         'author': {
           '@type': 'Person',
           'name': 'Hans Kuepper',
@@ -1454,7 +1454,7 @@ schema: {
         mostPopular: {
           title: 'Les modèles les plus populaires sur Ollama',
           content: [
-            '**Ollama dispose de statistiques de téléchargement entièrement publiques.** Selon les données de mai 2026 :',
+            '**Ollama dispose de statistiques de téléchargement entièrement publiques.** Selon les données de juin 2026 :',
             '**Llama 3.2 3B** reste le modèle le plus téléchargé au total, largement dû à son utilisation comme modèle de test standard lors de la première installation. Pour la qualité sur materiel grand public, Qwen 3.6 27B (77,2% SWE-bench, tient en 24 Go en Q4) est désormais le meilleur choix global.',
             '**Qwen3 et Qwen 3.6** sont la famille de modèles la plus en forte croissance dans la bibliothèque Ollama, avec Qwen3 et la nouvelle variante dense Qwen 3.6 déplaçant rapidement Qwen3. DeepSeek-R1 a connu des pics majeurs après sa sortie et reste très téléchargé pour les tâches de raisonnement.',
             '**Llama 4 Scout** a été lancé par Meta en avril 2026 avec les variantes Scout (17B actif, 109B au total, MoE) et Maverick (17B actif, 400B au total). Llama 4 Scout est maintenant stable dans la bibliothèque Ollama (`ollama pull llama4:scout`). La famille Llama 4 utilise une architecture Mixture-of-Experts (MoE) – seuls 17B paramètres sont actifs par token, mais avec 109B paramètres au total Scout nécessite ~55 Go VRAM en Q4 (tient en 24 Go uniquement en 1,78 bit, ~20 tok/s). Les atouts de Scout sont sa fenêtre de contexte de 10M tokens et son entrée multimodale, pas son adéquation au materiel grand public. L\'écosystème Ollama s\'est considérablement étendu en avril 2026. Kimi K2.6 (Moonshot AI, licence Modified MIT, 32B actif / 1T au total MoE) a obtenu SWE-Bench Pro 58.6, à égalité avec GPT-5.5. Qwen 3.6 27B a atteint 77,2% SWE-bench en tant que meilleur modèle global sur materiel grand public (tient en 24 Go en Q4). Le gpt-oss:20b d\'OpenAI (21B au total / 3,6B actif MoE) tourne en 16 Go au ~niveau o3-mini avec raisonnement reglable. Ollama v0.24.0 a ajouté le support de Gemma 4 avec des améliorations de pensée et d\'appel d\'outils. La bibliothèque Ollama référence maintenant 4 500+ modèles.',
@@ -1475,12 +1475,12 @@ schema: {
             '**Tâches d\'agent et appel d\'outils** : `ollama run gemma4:e4b` -- Lancé le 2 avril 2026. Support d\'appel d\'outils intégré + vision. Recommandé pour les agents locaux, l\'appel de fonctions et la sortie structurée. 6 Go RAM.',
             '**Raisonnement et mathématiques** : `ollama run deepseek-r1:7b` -- modèle de chaîne de pensée, meilleure performance mathématique locale à 7B.',
             '**Multilingue** : `ollama run qwen3:7b` -- 29+ langues natives, support non-anglais le plus fort, 76% HumanEval.',
-            '**Compréhension d\'images** : `ollama run gemma4:e4b` -- vision + appel d\'outils (mai 2026). Ou `ollama run llama3.2-vision:11b` pour une vision dédiée.',
+            '**Compréhension d\'images** : `ollama run gemma4:e4b` -- vision + appel d\'outils (juin 2026). Ou `ollama run llama3.2-vision:11b` pour une vision dédiée.',
             '**Rapide et léger** : `ollama run gemma2:2b` -- inférence CPU la plus rapide, 1,7 Go RAM.',
             '**Haute qualité (16 Go RAM)** : `ollama run mistral-small3.1` -- qualité proche de 70B à 14 Go RAM.',
           ],
           image: '/images/ollama-model-by-use-case-fr.svg',
-          imageCaption: 'Sélection Ollama par cas d\'usage : mai 2026. Chat : llama4:scout, codage : qwen3.6:27b, raisonnement : deepseek-r1:7b.',
+          imageCaption: 'Sélection Ollama par cas d\'usage : juin 2026. Chat : llama4:scout, codage : qwen3.6:27b, raisonnement : deepseek-r1:7b.',
         },
         deepseekR1: {
           title: 'DeepSeek-R1 : Percée en raisonnement',
@@ -1650,7 +1650,7 @@ schema: {
         'description': 'Les modèles open source Ollama les plus populaires en avril 2026 : Llama le plus téléchargé, Qwen3 en plus forte croissance, DeepSeek-R1 pour le raisonnement.',
         'url': 'https://www.promptquorum.com/fr/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-03',
         'author': {
           '@type': 'Person',
           'name': 'Hans Kuepper',
@@ -1827,7 +1827,7 @@ schema: {
         mostPopular: {
           title: 'Ollama最人気モデル',
           content: [
-            '**Ollamaは完全公開ダウンロード統計を提供。** 2026年5月データより：',
+            '**Ollamaは完全公開ダウンロード統計を提供。** 2026年6月データより：',
             '**Llama 3.2 3B**は全体で最多ダウンロード。主にチュートリアルとして使用。コンシューマー向け品質では、Qwen 3.6 27B（77.2% SWE-bench、Q4で24GBに収まる）が現在の総合最良の選択。',
             '**Qwen3・Qwen 3.6**はOllama ライブラリで最速成長のモデルファミリー。Qwen3と新しいQwen 3.6密度バリアントがQwen3を急速に置き換え。DeepSeek-R1はリリース後に大きなスパイクを記録し、推論タスク向けに常に高ダウンロード状態。',
             '**Meta Llama 4** 2026年4月リリースでScout（17B活性、109B合計、MoE）とMaverick（17B活性、400B合計）を展開。Ollama ライブラリで安定済み（`ollama pull llama4:scout`）。Llama 4はMoEアーキテクチャを採用し、トークンあたり17Bのみが活性だが、109B合計のためScoutはQ4で~55GB VRAMが必要（24GBは1.78ビットのみ、~20 tok/s）。Scoutの強みは10Mトークンのコンテキストとマルチモーダル入力であり、コンシューマーハードウェアへの適合性ではない。Ollama エコシステムは2026年4月に大幅拡張。Kimi K2.6（Moonshot AI、Modified MIT、32B活性/1T合計MoE）はSWE-Bench Pro 58.6を記録しGPT-5.5と同等。Qwen 3.6 27Bは77.2% SWE-benchでコンシューマー向け総合最高を達成（Q4で24GBに収まる）。OpenAIのオープンウェイトgpt-oss:20b（21B合計/3.6B活性MoE）は16GBで~o3-miniレベル、推論調整可能で動作。Ollama v0.24.0がGemma 4サポートと思考・ツール呼び出しの改善を追加。Ollama ライブラリは4,500+モデルを参照。',
@@ -1848,12 +1848,12 @@ schema: {
             '**エージェント・ツール呼び出し**：`ollama run gemma4:e4b` -- 2026年4月2日リリース。組み込みツール呼び出し+ビジョンサポート。ローカルエージェント、機能呼び出し、構造出力推奨。6GB RAM。',
             '**推論・数学**：`ollama run deepseek-r1:7b` -- Chain-of-Thoughtモデル、ローカル数学最高性能at 7B。',
             '**多言語**：`ollama run qwen3:7b` -- 29+言語対応、非英語対応最強、76% HumanEval。',
-            '**画像理解**：`ollama run gemma4:e4b` -- Vision + Tool Calling（2026年5月）。または `ollama run llama3.2-vision:11b`専用Vision。',
+            '**画像理解**：`ollama run gemma4:e4b` -- Vision + Tool Calling（2026年6月）。または `ollama run llama3.2-vision:11b`専用Vision。',
             '**高速・軽量**：`ollama run gemma2:2b` -- 最速CPU推論、1.7GB RAM。',
             '**高品質（16GB RAM）**：`ollama run mistral-small3.1` -- 70B品質に近い14GB RAM。',
           ],
           image: '/images/ollama-model-by-use-case-ja.svg',
-          imageCaption: '用途別Ollamaモデル選択：2026年5月。チャット：llama4:scout、コーディング：qwen3.6:27b、推論：deepseek-r1:7b。',
+          imageCaption: '用途別Ollamaモデル選択：2026年6月。チャット：llama4:scout、コーディング：qwen3.6:27b、推論：deepseek-r1:7b。',
         },
         deepseekR1: {
           title: 'DeepSeek-R1：推論ブレークスルー',
@@ -2023,7 +2023,7 @@ schema: {
         'description': '2026年4月のOllama最人気オープンソースモデル：Llamaが最多DL、Qwen3が急成長、DeepSeek-R1が推論最強。',
         'url': 'https://www.promptquorum.com/ja/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-03',
         'author': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -2206,7 +2206,7 @@ schema: {
           codeLanguage: 'bash',
         },
         mostPopular: {
-          title: '最受欢迎的模型（2026年5月）',
+          title: '最受欢迎的模型（2026年6月）',
           content: [
             '**Llama 3.2 3B** 仍为总下载量最高，主要作为初安装测试模型。在消费级硬件品质方面，Qwen 3.6 27B（77.2% SWE-bench、Q4下可装入24GB）现为综合最佳选择。',
             '**Qwen3和Qwen 3.6** 是Ollama库中增长最快的模型家族，Qwen3和新的Qwen 3.6密集变体正在快速取代Qwen3。DeepSeek-R1在发布后出现大幅增长，并保持推理任务的高下载量。',
@@ -2228,12 +2228,12 @@ schema: {
             '**代理和工具调用**：`ollama run gemma4:e4b` -- 2026年4月2日发布。内置工具调用+视觉支持。推荐本地代理、函数调用、结构化输出。6GB RAM。',
             '**推理和数学**：`ollama run deepseek-r1:7b` -- Chain-of-Thought模型，7B最高本地数学性能。',
             '**多语言**：`ollama run qwen3:7b` -- 29+本地语言，最强非英文支持，76% HumanEval。',
-            '**图像理解**：`ollama run gemma4:e4b` -- 视觉+工具调用（2026年5月）。或`ollama run llama3.2-vision:11b`专用视觉。',
+            '**图像理解**：`ollama run gemma4:e4b` -- 视觉+工具调用（2026年6月）。或`ollama run llama3.2-vision:11b`专用视觉。',
             '**快速轻量**：`ollama run gemma2:2b` -- 最快CPU推理，1.7GB RAM。',
             '**高质量（16GB显存）**：`ollama run mistral-small3.1` -- 70B品质14GB显存。',
           ],
           image: '/images/ollama-model-by-use-case-zh.svg',
-          imageCaption: '按用途选择Ollama：2026年5月。聊天llama4:scout，编码qwen3.6:27b，推理deepseek-r1:7b。',
+          imageCaption: '按用途选择Ollama：2026年6月。聊天llama4:scout，编码qwen3.6:27b，推理deepseek-r1:7b。',
         },
         deepseekR1: {
           title: 'DeepSeek-R1：2026年推理最强的模型',
@@ -2376,7 +2376,7 @@ schema: {
         'description': '2026年4月，Ollama最受欢迎的开源模型包括Llama 3.3（下载最多）、Qwen3（增长最快）、DeepSeek-R1（推理最强）。',
         'url': 'https://www.promptquorum.com/zh/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-03',
         'author': {
           '@type': 'Organization',
           'name': 'PromptQuorum',

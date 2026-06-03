@@ -11,11 +11,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-07-01',
       next_refresh_due: '2026-06-30',
+      last_full_refresh: '2026-06-03',
       theme: 'Hardware & Performance',
       title: 'Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared',
       seoTitle: 'LLM Hardware Requirements 2026: 4GB to 70B VRAM Guide',
-      intro: 'Running local LLMs requires matching your GPU\'s VRAM to the model you want to run. As of May 2026, a 7B model needs 8-9 GB VRAM at Q8, a 14B model needs 15 GB, and most 70B models need 39 GB at Q4_K_M -- more than a single RTX 4090 holds. This guide covers specific model recommendations for 12 GB, 16 GB, and 24 GB VRAM tiers, CPU-only inference on 16 GB system RAM, llama.cpp speed settings for RTX 4070 Ti, and full hardware build configurations.',
-      metaDescription: 'LLM hardware VRAM requirements by model: 4-5GB tier, 7B (8-9GB), 13B (16GB), 70B (40GB+). GPU guide, RTX vs Apple Silicon, Q4_K_M quantization — May 2026.',
+      intro: 'Running local LLMs requires matching your GPU\'s VRAM to the model you want to run. As of June 2026, a 7B model needs 8-9 GB VRAM at Q8, a 14B model needs 15 GB, and most 70B models need 39 GB at Q4_K_M -- more than a single RTX 4090 holds. This guide covers specific model recommendations for 12 GB, 16 GB, and 24 GB VRAM tiers, CPU-only inference on 16 GB system RAM, llama.cpp speed settings for RTX 4070 Ti, and full hardware build configurations.',
+      metaDescription: 'LLM hardware VRAM requirements by model: 4-5GB tier, 7B (8-9GB), 13B (16GB), 70B (40GB+). GPU guide, RTX vs Apple Silicon, Q4_K_M quantization — June 2026.',
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Intermediate',
@@ -45,7 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '70B models (Llama 3.3): 40-48 GB VRAM — Dual RTX 4090 or Mac M5 Max 128 GB',
             'Apple tip: unified memory acts as VRAM — M5 Max 128 GB handles 70B easily',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-06-03',
         },
         de: {
           question: 'Welche Hardware brauche ich fuer ein lokales LLM 2026?',
@@ -57,7 +58,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '70B-Modelle: 40-48 GB VRAM — Dual RTX 4090 oder Mac M4 Max 128 GB',
             'Apple Silicon Tipp: Unified Memory fungiert als VRAM',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-06-03',
         },
         fr: {
           question: 'Quel materiel faut-il pour un LLM local en 2026 ?',
@@ -69,7 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Modeles 70B: 40-48 Go VRAM — Dual RTX 4090 ou Mac M4 Max 128 Go',
             'Conseil: la memoire unifiee Apple sert de VRAM',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-06-03',
         },
         ja: {
           question: '2026年にローカルLLMを実行するのに必要なハードウェアは？',
@@ -81,7 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '70B モデル（Llama 3.3）：40-48 GB VRAM — デュアル RTX 4090 または Mac M4 Max 128 GB',
             'Apple のヒント：ユニファイドメモリは VRAM として機能 — M4 Max 128 GB は 70B を簡単に処理',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-06-03',
         },
         zh: {
           question: '2026年运行本地LLM需要什么硬件？',
@@ -93,10 +94,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '70B 模型（Llama 3.3）：40-48 GB 显存 — 双 RTX 4090 或 Mac M4 Max 128 GB',
             'Apple提示：统一内存用作VRAM — M4 Max 128GB可轻松处理70B',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-06-03',
         },
       },
-      lastUpdated: '2026-06-01',
+      lastUpdated: '2026-06-03',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'Best GPUs to Buy — 2026 Recommendations', anchor: '#best-gpus-to-buy' },
@@ -210,7 +211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: 'Which GPU Tier Matches Your Workload?',
-          content: '**As of May 2026, NVIDIA GPUs deliver the highest tokens/sec for local LLM inference across all price points.** The sections below each tier give specific model recommendations. For a detailed benchmark comparison, see the [best GPUs for local LLM guide](/local-llms/best-gpus-for-local-llms).',
+          content: '**As of June 2026, NVIDIA GPUs deliver the highest tokens/sec for local LLM inference across all price points.** The sections below each tier give specific model recommendations. For a detailed benchmark comparison, see the [best GPUs for local LLM guide](/local-llms/best-gpus-for-local-llms).',
           columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Speed'],
           rows: [
             { 'Tier': 'Budget ($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Best For': '7-13B models', 'Speed': '~80 tok/s' },
@@ -222,14 +223,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Tier': 'Desktop AI ($3,999)', 'GPU': 'NVIDIA DGX Spark', 'VRAM': '128 GB', 'Best For': 'Any model, unified', 'Speed': '18-28 tok/s' },
           ],
           callouts: [
-            { type: 'keyPoint', text: 'As of May 2026, the RTX 50-series (Blackwell) is the current generation. RTX 5090 (32 GB) is future-proof for 70B models. RTX 4090 remains excellent value for existing buyers.' },
+            { type: 'keyPoint', text: 'As of June 2026, the RTX 50-series (Blackwell) is the current generation. RTX 5090 (32 GB) is future-proof for 70B models. RTX 4090 remains excellent value for existing buyers.' },
           ],
           image: '/images/gpu-tier-comparison-en.svg',
           imageCaption: 'GPU tier recommendations: $600 RTX 4070 Ti (12GB, 7-13B models, 80 tok/s), $1,200 RTX 4080 (16GB, 13-30B, 120 tok/s), $1,800 RTX 4090 (24GB, 70B, 150 tok/s), $2,000 RTX 5090 (32GB, 70B+, 200 tok/s), $3,999 DGX Spark (128GB, any model). GPU choice matters 10× more than CPU.',
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'Best Local LLMs by VRAM Tier (May 2026)',
+          title: 'Best Local LLMs by VRAM Tier (June 2026)',
           content: [
             '**Use this as a quick lookup by your GPU\'s VRAM tier:**',
             'All models listed below are open-weights — downloadable, fine-tunable, and free to run locally. If you\'re choosing between open-weights and proprietary APIs, see our [open-source vs proprietary LLMs comparison](/prompt-engineering/open-source-vs-proprietary-llms) for cost and performance trade-offs at different token volumes.',
@@ -327,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Which Models Run Well on 16 GB System RAM Without a GPU?',
           content: [
             '**Without a GPU, a machine with 16 GB system RAM can run 3B-7B models at 8-20 tokens/sec using CPU inference.** The bottleneck is memory bandwidth, not RAM capacity -- CPUs have far lower bandwidth than GPUs, which is why inference is 5-10× slower.',
-            'On 16 GB system RAM, the practical rule is: model file size + 4 GB OS overhead ≤ 16 GB. A 7B model at Q4_K_M (4.9 GB) fits, but leaves little headroom for long contexts. The table below shows realistic options as of May 2026.',
+            'On 16 GB system RAM, the practical rule is: model file size + 4 GB OS overhead ≤ 16 GB. A 7B model at Q4_K_M (4.9 GB) fits, but leaves little headroom for long contexts. The table below shows realistic options as of June 2026.',
             'For a complete speed-optimized model guide covering CPU-only, 4 GB, 6 GB, and 8 GB VRAM tiers with real benchmarks, see **[Fastest Local LLMs for Low-End PCs](/local-llms/fastest-local-llms-low-end-pcs)**.',
           ],
           rows: [
@@ -447,8 +448,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'dgx-spark',
           title: 'NVIDIA DGX Spark: 128 GB Desktop AI Computer',
           content: [
-            '**The NVIDIA DGX Spark ($3,999) is the only consumer desktop as of May 2026 that fits Llama 3.3 70B at Q8_0 entirely in unified memory.**',
-            'Built on the GB10 Grace Blackwell Superchip, the DGX Spark launched in late 2025 as a compact desktop AI computer with 128 GB LPDDR5x unified memory. As of May 2026, the DGX Spark also runs Llama 4 Scout and Maverick entirely in memory, as well as Kimi K2.6 (quantized), making it suitable for multi-GPU setups at this tier.',
+            '**The NVIDIA DGX Spark ($3,999) is the only consumer desktop as of June 2026 that fits Llama 3.3 70B at Q8_0 entirely in unified memory.**',
+            'Built on the GB10 Grace Blackwell Superchip, the DGX Spark launched in late 2025 as a compact desktop AI computer with 128 GB LPDDR5x unified memory. As of June 2026, the DGX Spark also runs Llama 4 Scout and Maverick entirely in memory, as well as Kimi K2.6 (quantized), making it suitable for multi-GPU setups at this tier.',
           ],
           columns: ['Spec', 'Value'],
           rows: [
@@ -481,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'regional-context',
           title: 'What Regional Compliance Rules Apply to Local LLM Hardware?',
           content: [
-            '**EU (GDPR + EU AI Act):** Running LLMs locally keeps all inference data within your infrastructure, eliminating cross-border data transfer concerns under GDPR Article 44. As of May 2026, EU enterprises deploying LLMs for customer data processing must ensure models never phone home -- local hardware removes this risk entirely. EU AI Act high-risk system obligations apply from August 2, 2026 (pending Digital Omnibus which may delay to December 2027). Local hardware satisfies data residency requirements by default.',
+            '**EU (GDPR + EU AI Act):** Running LLMs locally keeps all inference data within your infrastructure, eliminating cross-border data transfer concerns under GDPR Article 44. As of June 2026, EU enterprises deploying LLMs for customer data processing must ensure models never phone home -- local hardware removes this risk entirely. EU AI Act high-risk system obligations apply from August 2, 2026 (pending Digital Omnibus which may delay to December 2027). Local hardware satisfies data residency requirements by default.',
             '**Japan (APPI):** Japan\'s Act on the Protection of Personal Information (APPI) revision (2022) requires data minimization for AI processing. On-premises LLM hardware on a RTX 4090 workstation satisfies this requirement for document processing and customer support automation.',
             '**China:** China\'s Cyberspace Administration of China (CAC) Generative AI Regulations (2023) require domestically-deployed AI models to undergo registration. Running local hardware with open-weight models avoids API-based compliance exposure for internal enterprise use.',
           ],
@@ -588,7 +589,7 @@ schema: {
         'description': 'What GPU do you need for local LLMs? See exact requirements for 7B–70B models, real RTX 4070–5090 benchmarks, and avoid wasting money.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=en',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-03',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -675,8 +676,8 @@ schema: {
       theme: 'Hardware & Performance',
       title: 'Hardware para LLMs Locales 2026: GPU vs Mini PC vs Mac Comparado',
       seoTitle: 'Requisitos Hardware LLM 2026: Guía 4GB a 70B VRAM',
-      intro: 'Ejecutar LLMs locales requiere ajustar la VRAM de tu GPU al modelo que quieres usar. A mayo de 2026, un modelo 7B necesita 8-9 GB de VRAM en Q8, un modelo 14B necesita 15 GB, y la mayoría de los modelos 70B necesitan 39 GB en Q4_K_M — más de lo que cabe en una RTX 4090. Esta guía cubre recomendaciones específicas de modelos para los niveles de 12 GB, 16 GB y 24 GB de VRAM, inferencia solo con CPU en 16 GB de RAM del sistema, configuración de velocidad de llama.cpp para RTX 4070 Ti y configuraciones completas de hardware.',
-      metaDescription: 'Requisitos VRAM por modelo de LLM: nivel 4-5GB, 7B (8-9GB), 13B (16GB), 70B (40GB+). Guía GPU, RTX vs Apple Silicon, cuantización Q4_K_M — mayo 2026.',
+      intro: 'Ejecutar LLMs locales requiere ajustar la VRAM de tu GPU al modelo que quieres usar. A junio de 2026, un modelo 7B necesita 8-9 GB de VRAM en Q8, un modelo 14B necesita 15 GB, y la mayoría de los modelos 70B necesitan 39 GB en Q4_K_M — más de lo que cabe en una RTX 4090. Esta guía cubre recomendaciones específicas de modelos para los niveles de 12 GB, 16 GB y 24 GB de VRAM, inferencia solo con CPU en 16 GB de RAM del sistema, configuración de velocidad de llama.cpp para RTX 4070 Ti y configuraciones completas de hardware.',
+      metaDescription: 'Requisitos VRAM por modelo de LLM: nivel 4-5GB, 7B (8-9GB), 13B (16GB), 70B (40GB+). Guía GPU, RTX vs Apple Silicon, cuantización Q4_K_M — junio 2026.',
       publishDate: '2026-04-04',
       readTime: '13 min de lectura',
       educationalLevel: 'Intermediate',
@@ -695,7 +696,7 @@ schema: {
         label: 'Mejores GPUs económicas para LLMs locales →',
         href: '/local-llms/best-budget-gpus-local-llm',
       },
-      lastUpdated: '2026-06-01',
+      lastUpdated: '2026-06-03',
       toc: [
         { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: 'Mejores GPUs para comprar — Recomendaciones 2026', anchor: '#best-gpus-to-buy' },
@@ -808,7 +809,7 @@ schema: {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: '¿Qué nivel de GPU se ajusta a tu carga de trabajo?',
-          content: '**A mayo de 2026, las GPUs NVIDIA ofrecen los tokens/seg más altos para inferencia de LLMs locales en todos los rangos de precio.** Las secciones siguientes dan recomendaciones específicas de modelos. Para una comparación detallada de benchmarks, consulta la [guía de mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms).',
+          content: '**A junio de 2026, las GPUs NVIDIA ofrecen los tokens/seg más altos para inferencia de LLMs locales en todos los rangos de precio.** Las secciones siguientes dan recomendaciones específicas de modelos. Para una comparación detallada de benchmarks, consulta la [guía de mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms).',
           columns: ['Nivel', 'GPU', 'VRAM', 'Ideal para', 'Velocidad'],
           rows: [
             { 'Nivel': 'Económica ($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Ideal para': 'Modelos 7-13B', 'Velocidad': '~80 tok/s' },
@@ -820,14 +821,14 @@ schema: {
             { 'Nivel': 'Desktop IA ($3.999)', 'GPU': 'NVIDIA DGX Spark', 'VRAM': '128 GB', 'Ideal para': 'Cualquier modelo, unificada', 'Velocidad': '18-28 tok/s' },
           ],
           callouts: [
-            { type: 'keyPoint', text: 'A mayo de 2026, la serie RTX 50 (Blackwell) es la generación actual. La RTX 5090 (32 GB) está lista para el futuro con modelos 70B. La RTX 4090 sigue siendo excelente valor para compradores actuales.' },
+            { type: 'keyPoint', text: 'A junio de 2026, la serie RTX 50 (Blackwell) es la generación actual. La RTX 5090 (32 GB) está lista para el futuro con modelos 70B. La RTX 4090 sigue siendo excelente valor para compradores actuales.' },
           ],
           image: '/images/gpu-tier-comparison-es.svg',
           imageCaption: 'Recomendaciones por nivel de GPU: $600 RTX 4070 Ti (12 GB, modelos 7-13B, 80 tok/s), $1.200 RTX 4080 (16 GB, 13-30B, 120 tok/s), $1.800 RTX 4090 (24 GB, 70B, 150 tok/s), $2.000 RTX 5090 (32 GB, 70B+, 200 tok/s), $3.999 DGX Spark (128 GB, cualquier modelo). La elección de GPU importa 10 veces más que la CPU.',
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'Mejores LLMs locales por nivel de VRAM (mayo 2026)',
+          title: 'Mejores LLMs locales por nivel de VRAM (junio 2026)',
           content: [
             '**Usa esto como referencia rápida según el nivel de VRAM de tu GPU:**',
             'Todos los modelos listados a continuación son de pesos abiertos — descargables, ajustables y gratuitos para ejecutar localmente. Si estás eligiendo entre pesos abiertos y APIs propietarias, consulta nuestra [comparación de LLMs de código abierto vs propietarios](/es/prompt-engineering/open-source-vs-proprietary-llms) para evaluar costos y rendimiento.',
@@ -925,7 +926,7 @@ schema: {
           title: '¿Qué modelos funcionan bien con 16 GB de RAM del sistema sin GPU?',
           content: [
             '**Sin GPU, una máquina con 16 GB de RAM del sistema puede ejecutar modelos 3B-7B a 8-20 tokens/s usando inferencia CPU.** El cuello de botella es el ancho de banda de memoria, no la capacidad de RAM — las CPUs tienen un ancho de banda mucho menor que las GPUs, razón por la cual la inferencia es 5-10 veces más lenta.',
-            'Con 16 GB de RAM del sistema, la regla práctica es: tamaño del archivo del modelo + 4 GB de overhead del SO ≤ 16 GB. Un modelo 7B en Q4_K_M (4,9 GB) cabe, pero deja poco margen para contextos largos. La tabla a continuación muestra opciones realistas a mayo de 2026.',
+            'Con 16 GB de RAM del sistema, la regla práctica es: tamaño del archivo del modelo + 4 GB de overhead del SO ≤ 16 GB. Un modelo 7B en Q4_K_M (4,9 GB) cabe, pero deja poco margen para contextos largos. La tabla a continuación muestra opciones realistas a junio de 2026.',
             'Para una guía completa de modelos optimizados por velocidad que cubre solo CPU, 4 GB, 6 GB y 8 GB de VRAM con benchmarks reales, consulta **[LLMs Locales Más Rápidos para PCs de Gama Baja](/es/local-llms/fastest-local-llms-low-end-pcs)**.',
           ],
           rows: [
@@ -1045,8 +1046,8 @@ schema: {
           id: 'dgx-spark',
           title: 'NVIDIA DGX Spark: Computadora de IA de escritorio con 128 GB',
           content: [
-            '**El NVIDIA DGX Spark ($3.999) es la única computadora de escritorio de consumidor a mayo de 2026 que cabe Llama 3.3 70B en Q8_0 completamente en memoria unificada.**',
-            'Construido sobre el GB10 Grace Blackwell Superchip, el DGX Spark se lanzó a finales de 2025 como una computadora de IA de escritorio compacta con 128 GB LPDDR5x de memoria unificada. A mayo de 2026, el DGX Spark también ejecuta Llama 4 Scout y Maverick completamente en memoria, así como Kimi K2.6 (cuantizado), lo que lo hace adecuado para configuraciones a este nivel.',
+            '**El NVIDIA DGX Spark ($3.999) es la única computadora de escritorio de consumidor a junio de 2026 que cabe Llama 3.3 70B en Q8_0 completamente en memoria unificada.**',
+            'Construido sobre el GB10 Grace Blackwell Superchip, el DGX Spark se lanzó a finales de 2025 como una computadora de IA de escritorio compacta con 128 GB LPDDR5x de memoria unificada. A junio de 2026, el DGX Spark también ejecuta Llama 4 Scout y Maverick completamente en memoria, así como Kimi K2.6 (cuantizado), lo que lo hace adecuado para configuraciones a este nivel.',
           ],
           columns: ['Especificación', 'Valor'],
           rows: [
@@ -1079,7 +1080,7 @@ schema: {
           id: 'regional-context',
           title: '¿Qué reglas de cumplimiento regional aplican al hardware de LLMs locales?',
           content: [
-            '**UE (GDPR + AI Act de la UE):** Ejecutar LLMs localmente mantiene todos los datos de inferencia dentro de tu infraestructura, eliminando las preocupaciones de transferencia de datos transfronteriza bajo el Artículo 44 del GDPR. A mayo de 2026, las empresas de la UE que despliegan LLMs para el procesamiento de datos de clientes deben asegurarse de que los modelos nunca se conecten a servidores externos — el hardware local elimina este riesgo por completo. Las obligaciones del AI Act de la UE para sistemas de alto riesgo aplican desde el 2 de agosto de 2026 (pendiente del Digital Omnibus que puede retrasar hasta diciembre de 2027). El hardware local cumple los requisitos de residencia de datos por defecto.',
+            '**UE (GDPR + AI Act de la UE):** Ejecutar LLMs localmente mantiene todos los datos de inferencia dentro de tu infraestructura, eliminando las preocupaciones de transferencia de datos transfronteriza bajo el Artículo 44 del GDPR. A junio de 2026, las empresas de la UE que despliegan LLMs para el procesamiento de datos de clientes deben asegurarse de que los modelos nunca se conecten a servidores externos — el hardware local elimina este riesgo por completo. Las obligaciones del AI Act de la UE para sistemas de alto riesgo aplican desde el 2 de agosto de 2026 (pendiente del Digital Omnibus que puede retrasar hasta diciembre de 2027). El hardware local cumple los requisitos de residencia de datos por defecto.',
             '**Japón (APPI):** La revisión (2022) de la Ley de Protección de Información Personal (APPI) de Japón requiere minimización de datos para el procesamiento de IA. El hardware LLM en las instalaciones con una estación de trabajo RTX 4090 satisface este requisito para el procesamiento de documentos y automatización de soporte al cliente.',
             '**China:** Las Regulaciones de IA Generativa de la Administración del Ciberespacio de China (CAC) (2023) requieren que los modelos de IA desplegados domésticamente sean registrados. Ejecutar hardware local con modelos de pesos abiertos evita la exposición de cumplimiento basada en API para uso empresarial interno.',
           ],
@@ -1186,7 +1187,7 @@ schema: {
         'description': '¿Qué GPU necesitas para LLMs locales? Consulta los requisitos exactos para modelos 7B–70B, benchmarks reales RTX 4070–5090 y evita desperdiciar dinero.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-hardware-guide-2026?lang=es',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-03',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1260,8 +1261,8 @@ schema: {
       theme: 'Hardware & Performance',
       title: 'Hardware para LLMs Locais 2026: GPU vs Mini PC vs Mac Comparados',
       seoTitle: 'Requisitos de Hardware LLM 2026: Guia de 4GB a 70B VRAM',
-      intro: 'Executar LLMs locais requer ajustar a VRAM da sua GPU ao modelo que você quer usar. A partir de maio de 2026, um modelo 7B precisa de 8–9 GB de VRAM em Q8, um modelo 14B precisa de 15 GB, e a maioria dos modelos 70B precisa de 39 GB em Q4_K_M — mais do que cabe em uma RTX 4090. Este guia cobre recomendações específicas de modelos para os níveis de 12 GB, 16 GB e 24 GB de VRAM, inferência somente CPU em 16 GB de RAM do sistema, configuração de velocidade do llama.cpp para RTX 4070 Ti e configurações completas de hardware.',
-      metaDescription: 'Requisitos de VRAM por modelo de LLM: nível 4-5GB, 7B (8-9GB), 13B (16GB), 70B (40GB+). Guia de GPU, RTX vs Apple Silicon, quantização Q4_K_M — maio 2026.',
+      intro: 'Executar LLMs locais requer ajustar a VRAM da sua GPU ao modelo que você quer usar. A partir de junho de 2026, um modelo 7B precisa de 8–9 GB de VRAM em Q8, um modelo 14B precisa de 15 GB, e a maioria dos modelos 70B precisa de 39 GB em Q4_K_M — mais do que cabe em uma RTX 4090. Este guia cobre recomendações específicas de modelos para os níveis de 12 GB, 16 GB e 24 GB de VRAM, inferência somente CPU em 16 GB de RAM do sistema, configuração de velocidade do llama.cpp para RTX 4070 Ti e configurações completas de hardware.',
+      metaDescription: 'Requisitos de VRAM por modelo de LLM: nível 4-5GB, 7B (8-9GB), 13B (16GB), 70B (40GB+). Guia de GPU, RTX vs Apple Silicon, quantização Q4_K_M — junho 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Para executar LLMs locais: 7B requer 8–9 GB de VRAM (Q8) ou 5 GB (Q4_K_M), 13B requer 15 GB, 70B requer 39 GB em Q4_K_M. GPU recomendada por faixa: RTX 4070 Ti (12 GB, R$ 3.200–3.800), RTX 4090 (24 GB, R$ 9.500–12.000), Apple Silicon M4 Pro (48 GB unificada). Sem GPU: CPU + 16 GB de RAM executa modelos 7B a 5–8 tok/s.**',
       audience: 'Desenvolvedores e entusiastas que planejam ou otimizam hardware para inferência de LLM local',
@@ -1281,10 +1282,11 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Hardware para LLMs Locais 2026: GPU vs Mini PC vs Mac Comparados',
-        'description': 'Requisitos de VRAM por modelo de LLM. GPU por faixa de preço, Apple Silicon vs NVIDIA, inferência somente CPU. Guia de hardware para modelos 7B a 70B. Maio 2026.',
+        'description': 'Requisitos de VRAM por modelo de LLM. GPU por faixa de preço, Apple Silicon vs NVIDIA, inferência somente CPU. Guia de hardware para modelos 7B a 70B. Junho 2026.',
         'url': 'https://www.promptquorum.com/pt/local-llms/local-llm-hardware-guide-2026',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
+        'dateModified': '2026-06-03',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
@@ -1309,8 +1311,8 @@ schema: {
       theme: 'Hardware & Performance',
       title: '70B LLM Hardware-Anforderungen 2026: VRAM, GPU & Build Guide',
       seoTitle: 'LLM Hardware-Anforderungen 2026: 4GB bis 70B VRAM Guide',
-      intro: 'Um lokale LLMs auszuführen, müssen Sie drei Komponenten verstehen: GPU (optional, aber empfohlen), CPU und RAM. Im Mai 2026 benötigt ein 7B-Parameter-Modell mindestens 8 GB RAM, während ein 70B-Modell 40+ GB benötigt. Dieser Leitfaden behandelt echte Hardware-Empfehlungen für RTX 5090, 4090, Apple Silicon und Budget-Builds sowie VRAM-Mathematik zur Berechnung der Anforderungen für jede Modellgröße.',
-      metaDescription: 'LLM Hardware VRAM-Anforderungen nach Modell: 4-5GB Tier, 7B (8-9GB), 13B (16GB), 70B (40GB+). GPU-Guide, RTX vs Apple Silicon — Mai 2026.',
+      intro: 'Um lokale LLMs auszuführen, müssen Sie drei Komponenten verstehen: GPU (optional, aber empfohlen), CPU und RAM. Im Juni 2026 benötigt ein 7B-Parameter-Modell mindestens 8 GB RAM, während ein 70B-Modell 40+ GB benötigt. Dieser Leitfaden behandelt echte Hardware-Empfehlungen für RTX 5090, 4090, Apple Silicon und Budget-Builds sowie VRAM-Mathematik zur Berechnung der Anforderungen für jede Modellgröße.',
+      metaDescription: 'LLM Hardware VRAM-Anforderungen nach Modell: 4-5GB Tier, 7B (8-9GB), 13B (16GB), 70B (40GB+). GPU-Guide, RTX vs Apple Silicon — Juni 2026.',
       publishDate: '2026-04-04',
       readTime: '13 Min. Lesezeit',
       educationalLevel: 'Intermediate',
@@ -1329,7 +1331,7 @@ schema: {
         label: 'Beste Budget-GPUs für lokale LLMs →',
         href: '/local-llms/best-budget-gpus-local-llm',
       },
-      lastUpdated: '2026-06-01',
+      lastUpdated: '2026-06-03',
       toc: [
         { label: 'Wichtige Erkenntnisse', anchor: '#key-takeaways' },
         { label: 'VRAM-Mathematik für ein beliebiges Modell', anchor: '#vram-math' },
@@ -1394,7 +1396,7 @@ schema: {
         },
         gpuRecommendations: {
           title: 'Welche GPU sollten Sie kaufen?',
-          content: ['Ab Mai 2026 dominiert NVIDIA die Local LLM-Performance. Hier sind Tier-Empfehlungen:', 'Hardware bestimmt, welche Modelle Sie ausführen können; Prompt Engineering bestimmt, wie gut sie performen. Ein gut strukturierter Prompt bei einem 7B-Modell übertrifft oft einen schlecht konzipierten Prompt bei einem 70B-Modell. Im [vollständigen Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering) finden Sie Techniken, die die Ausgabequalität bei jeder Parameterzahl maximieren.'],
+          content: ['Ab Juni 2026 dominiert NVIDIA die Local LLM-Performance. Hier sind Tier-Empfehlungen:', 'Hardware bestimmt, welche Modelle Sie ausführen können; Prompt Engineering bestimmt, wie gut sie performen. Ein gut strukturierter Prompt bei einem 7B-Modell übertrifft oft einen schlecht konzipierten Prompt bei einem 70B-Modell. Im [vollständigen Prompt-Engineering-Guide](https://www.promptquorum.com/prompt-engineering) finden Sie Techniken, die die Ausgabequalität bei jeder Parameterzahl maximieren.'],
           rows: [
             { 'Tier': 'Budget (600 €)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Best für': '7-13B Modelle', 'Leistung': 'Schnell (80 tokens/sec)' },
             { 'Tier': 'Mittelklasse (1200 €)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', 'Best für': '13-30B Modelle', 'Leistung': 'Sehr schnell (120 tokens/sec)' },
@@ -1558,10 +1560,10 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Lokale LLM Hardware 2026: GPU VRAM-Rechner & Benchmarks',
-        'description': 'Lokale LLM Hardware-Anleitung: GPU-, CPU- und RAM-Anforderungen für 7B- und 70B-Modelle. VRAM-Rechner, Benchmarks, Optimierung. Kostenlos in Beta -- Mai 2026.',
+        'description': 'Lokale LLM Hardware-Anleitung: GPU-, CPU- und RAM-Anforderungen für 7B- und 70B-Modelle. VRAM-Rechner, Benchmarks, Optimierung. Kostenlos in Beta -- Juni 2026.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-hardware-guide-2026',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-03',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1623,7 +1625,7 @@ schema: {
       title: 'Exigences Matériel 70B LLM 2026: VRAM, GPU & Guide Build',
       seoTitle: 'Exigences Hardware LLM 2026: Guide VRAM 4GB à 70B',
       intro: 'Exécuter des LLM locaux nécessite de comprendre trois composants: GPU (facultatif mais recommandé), CPU et RAM. En avril 2026, un modèle 7B à paramètres a besoin d\'un minimum de 8 GB de RAM, tandis qu\'un modèle 70B a besoin de 40+ GB. Ce guide couvre les recommandations matérielles réelles pour RTX 5090, 4090, Apple Silicon et les builds économiques, ainsi que les mathématiques VRAM pour calculer les exigences pour n\'importe quelle taille de modèle.',
-      metaDescription: 'Exigences VRAM par modèle LLM: niveau 4-5GB, 7B (8-9GB), 13B (16GB), 70B (40GB+). Guide GPU, RTX vs Apple Silicon, quantification Q4_K_M — mai 2026.',
+      metaDescription: 'Exigences VRAM par modèle LLM: niveau 4-5GB, 7B (8-9GB), 13B (16GB), 70B (40GB+). Guide GPU, RTX vs Apple Silicon, quantification Q4_K_M — juin 2026.',
       nextStep: {
         text: 'Vous connaissez vos besoins matériels ? Trouvez maintenant le meilleur GPU budget pour les LLMs locaux.',
         label: 'Meilleures GPUs budget pour les LLMs locaux →',
@@ -1857,10 +1859,10 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Guide Matériel LLM Local 2026: Calculateur VRAM & Benchmarks',
-        'description': 'Guide matériel local LLM: exigences GPU, CPU et RAM pour modèles 7B et 70B. Calculateur VRAM, benchmarks, optimisation. Gratuit en bêta - - mai 2026.',
+        'description': 'Guide matériel local LLM: exigences GPU, CPU et RAM pour modèles 7B et 70B. Calculateur VRAM, benchmarks, optimisation. Gratuit en bêta - - juin 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-hardware-guide-2026',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-03',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1921,8 +1923,8 @@ schema: {
       theme: 'Hardware & Performance',
       title: '70B LLMハードウェア要件2026：VRAM、GPU & ビルドガイド',
       seoTitle: 'LLMハードウェア要件2026：4GB～70B VRAM・GPU完全ガイド',
-      intro: 'ローカルLLMを実行するには、GPU（オプションですが推奨）、CPU、RAMの3つのコンポーネントを理解する必要があります。2026年5月現在、7Bパラメータモデルには最小8 GB RAMが必要で、70Bモデルには40+ GB必要です。このガイドでは、RTX 5090、4090、Apple Silicon、予算ビルドの実際のハードウェアレコメンデーション、およびあらゆるモデルサイズの要件を計算するためのVRAM数学をカバーしています。',
-      metaDescription: 'LLM VRAM要件：4-5GBティア、7B（8-9GB）、13B（16GB）、70B（40GB+）。RTX vs Apple Silicon GPU選択ガイド、Q4_K_M量子化方式 — 2026年5月',
+      intro: 'ローカルLLMを実行するには、GPU（オプションですが推奨）、CPU、RAMの3つのコンポーネントを理解する必要があります。2026年6月現在、7Bパラメータモデルには最小8 GB RAMが必要で、70Bモデルには40+ GB必要です。このガイドでは、RTX 5090、4090、Apple Silicon、予算ビルドの実際のハードウェアレコメンデーション、およびあらゆるモデルサイズの要件を計算するためのVRAM数学をカバーしています。',
+      metaDescription: 'LLM VRAM要件：4-5GBティア、7B（8-9GB）、13B（16GB）、70B（40GB+）。RTX vs Apple Silicon GPU選択ガイド、Q4_K_M量子化方式 — 2026年6月',
       nextStep: {
         text: 'ハードウェアの要件がわかりましたか？次はローカルLLM向けの最良の予算GPUを見つけましょう。',
         label: 'ローカルLLM向けベスト予算GPU →',
@@ -1992,7 +1994,7 @@ schema: {
         },
         gpuRecommendations: {
           title: 'どのGPUを購入すべきか?',
-          content: ['2026年5月現在、NVIDIAはローカルLLMパフォーマンスを支配しています。レコメンデーション:', 'ハードウェアは実行できるモデルを決定し、プロンプトエンジニアリングはそのパフォーマンスを決定します。7Bモデルへの適切なプロンプトは、70Bモデルへの雑なプロンプトを上回ることがよくあります。どのパラメータ数でも出力品質を最大化するテクニックについては、[プロンプトエンジニアリングガイド完全版](https://www.promptquorum.com/prompt-engineering)をご覧ください。'],
+          content: ['2026年6月現在、NVIDIAはローカルLLMパフォーマンスを支配しています。レコメンデーション:', 'ハードウェアは実行できるモデルを決定し、プロンプトエンジニアリングはそのパフォーマンスを決定します。7Bモデルへの適切なプロンプトは、70Bモデルへの雑なプロンプトを上回ることがよくあります。どのパラメータ数でも出力品質を最大化するテクニックについては、[プロンプトエンジニアリングガイド完全版](https://www.promptquorum.com/prompt-engineering)をご覧ください。'],
           rows: [
             { 'ティア': '予算 (¥95,000)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', '最適用途': '7-13B モデル', 'パフォーマンス': '高速 (80 トークン/秒)' },
             { 'ティア': '中級 (¥180,000)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', '最適用途': '13-30B モデル', 'パフォーマンス': '非常に高速 (120 トークン/秒)' },
@@ -2153,10 +2155,10 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'ローカルLLMハードウェア2026: GPU VRAM計算機ベンチマーク',
-        'description': 'ローカルLLMハードウェアガイド: 7Bおよび70Bモデルの GPU、CPU、RAM要件。VRAM計算機、ベンチマーク、最適化。無料ベータ版 -- 2026年5月。',
+        'description': 'ローカルLLMハードウェアガイド: 7Bおよび70Bモデルの GPU、CPU、RAM要件。VRAM計算機、ベンチマーク、最適化。無料ベータ版 -- 2026年6月。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-hardware-guide-2026',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-03',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -2217,8 +2219,8 @@ schema: {
       theme: 'Hardware & Performance',
       title: '70B LLM硬件要求2026：VRAM、GPU及构建指南',
       seoTitle: '2026年LLM硬件需求指南：4-5GB到70B VRAM完整配置',
-      intro: '运行本地LLM需要理解三个组件：GPU（可选但推荐）、CPU和RAM。截至2026年5月，7B参数模型需要最少8 GB RAM，而70B模型需要40+ GB。本指南涵盖RTX 5090、4090、Apple Silicon和预算构建的实际硬件建议，以及用于计算任何模型大小的需求的VRAM数学。',
-      metaDescription: 'LLM硬件VRAM需求：4-5GB级、7B（8-9GB）、13B（16GB）、70B（40GB+）。GPU选择指南、RTX vs Apple Silicon、Q4_K_M量化方式 — 2026年5月',
+      intro: '运行本地LLM需要理解三个组件：GPU（可选但推荐）、CPU和RAM。截至2026年6月，7B参数模型需要最少8 GB RAM，而70B模型需要40+ GB。本指南涵盖RTX 5090、4090、Apple Silicon和预算构建的实际硬件建议，以及用于计算任何模型大小的需求的VRAM数学。',
+      metaDescription: 'LLM硬件VRAM需求：4-5GB级、7B（8-9GB）、13B（16GB）、70B（40GB+）。GPU选择指南、RTX vs Apple Silicon、Q4_K_M量化方式 — 2026年6月',
       nextStep: {
         text: '了解了硬件需求？现在找到本地LLM最佳预算GPU。',
         label: '本地LLM最佳预算GPU →',
@@ -2253,7 +2255,7 @@ schema: {
             '**16 GB VRAM (RTX 4080、RTX 5070 Ti、RTX 5080)**：Mistral Small 3.1 24B Q4_K_M (~13 GB, 55 tok/s) 或 Devstral Small 24B Q4_K_M (~16 GB) 用于代理编码。',
             '**24 GB VRAM (RTX 5090、RTX 4090、Tesla L40)**：Qwen 3.6 27B Q4_K_M (~16 GB, 77.2% SWE-bench 最佳密集编码模型) 或 DeepSeek-R1 32B Q4_K_M (~19 GB, 最佳推理)。',
             '**Mac硬件**：M5 Pro (64GB统一内存, 307GB/s) 和 M5 Max (128GB统一内存, 460-614GB/s) 现已推出。M5 Max可轻松运行70B模型。',
-            '截至2026年5月，GPU价格已稳定。在LLM速度方面，GPU VRAM比CPU/RAM关键10倍以上。',
+            '截至2026年6月，GPU价格已稳定。在LLM速度方面，GPU VRAM比CPU/RAM关键10倍以上。',
           ],
         },
         bestGPUs: {
@@ -2288,7 +2290,7 @@ schema: {
         },
         gpuRecommendations: {
           title: '应该购买哪个GPU？',
-          content: ['截至2026年5月，NVIDIA主导本地LLM性能。以下是分层建议：', '硬件决定你能运行哪些模型，提示词工程决定它们的表现。一个结构良好的提示词作用于7B模型，通常优于粗糙的提示词作用于70B模型。请查看[完整的Prompt工程指南](https://www.promptquorum.com/prompt-engineering)，了解在任何参数量下最大化输出质量的技术。'],
+          content: ['截至2026年6月，NVIDIA主导本地LLM性能。以下是分层建议：', '硬件决定你能运行哪些模型，提示词工程决定它们的表现。一个结构良好的提示词作用于7B模型，通常优于粗糙的提示词作用于70B模型。请查看[完整的Prompt工程指南](https://www.promptquorum.com/prompt-engineering)，了解在任何参数量下最大化输出质量的技术。'],
           rows: [
             { '层级': '预算 ($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', '最佳适用': '7-13B 模型', '性能': '快速 (80 token/sec)' },
             { '层级': '中端 ($1200)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', '最佳适用': '13-30B 模型', '性能': '非常快速 (120 token/sec)' },
@@ -2443,10 +2445,10 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': '本地LLM硬件2026：GPU VRAM计算器和基准测试',
-        'description': '本地LLM硬件指南：7B和70B模型的GPU、CPU、RAM需求。VRAM计算器、基准测试、优化。免费测试版 -- 2026年5月。',
+        'description': '本地LLM硬件指南：7B和70B模型的GPU、CPU、RAM需求。VRAM计算器、基准测试、优化。免费测试版 -- 2026年6月。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-hardware-guide-2026',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-03',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
