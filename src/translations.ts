@@ -133,7 +133,7 @@ export const translations = {
     privacyS2Row1_3: "Beta launch notification; product update emails",
     privacyS2Row1_4: "Consent (Art. 6(1)(a) GDPR)",
     privacyS2Row2_1: "Anonymous usage analytics",
-    privacyS2Row2_2: "Google Analytics 4 (GA4) cookie",
+    privacyS2Row2_2: "Cookieless analytics (Umami, Vercel Analytics, Microsoft Clarity)",
     privacyS2Row2_3: "Understand which pages are visited; improve the site",
     privacyS2Row2_4: "Legitimate interest (Art. 6(1)(f) GDPR) — see §7",
     privacyS2Closure: "We do not collect names, phone numbers, payment information, IP addresses stored beyond session-level aggregation, or any special-category data under Art. 9 GDPR.",
@@ -143,7 +143,7 @@ export const translations = {
     privacyS3Sub1: "Consent — email address",
     privacyS3Para1: "When you enter your email and click \"Join Waitlist\", you give us explicit consent to contact you with beta launch announcements and product updates. Consent is the lawful basis under Art. 6(1)(a) GDPR. You may withdraw consent at any time by clicking the unsubscribe link in any email we send, or by emailing {{email}}. Withdrawal of consent does not affect the lawfulness of processing before withdrawal.",
     privacyS3Sub2: "Legitimate interest — analytics",
-    privacyS3Para2: "We use Google Analytics 4 to understand how visitors interact with the site in aggregate. We have assessed that this interest is not overridden by your interests or rights, given that: (a) we use IP anonymisation; (b) data is aggregated and not used to identify individuals; and (c) you can opt out via browser settings or the Google Analytics Opt-out Browser Add-on. If you prefer, you can email us to request we stop processing analytics data associated with your visit.",
+    privacyS3Para2: "We use privacy-friendly analytics — Umami, Vercel Analytics, and Microsoft Clarity (in cookieless mode) — to understand how visitors use the site in aggregate. Device access (ePrivacy): these tools set no cookies and neither read from nor write to your terminal device, so they require no consent under the ePrivacy Directive. Data processing (GDPR): only aggregated, non-identifying usage data is processed, on the basis of our legitimate interest under Art. 6(1)(f) GDPR; you can object to this processing at any time by emailing us.",
 
     // Section 4
     privacyS4Title: "Data processors and third parties",
@@ -182,13 +182,13 @@ export const translations = {
     privacyS5Title: "International data transfers",
     privacyS5Intro: "Some of our processors are based in the United States. Transfers of personal data from the European Economic Area (EEA) or the United Kingdom (UK) to the United States are subject to appropriate safeguards:",
     privacyS5Bullet1: "Resend: Transfer is covered by Standard Contractual Clauses (SCCs) adopted by the European Commission under GDPR Art. 46(2)(c). Resend's Data Processing Agreement is available at resend.com/legal/dpa.",
-    privacyS5Bullet2: "Google Analytics: Google LLC participates in the EU–US Data Privacy Framework. Transfer is additionally covered by SCCs. Google's data transfer documentation is available at business.safety.google/gdpr.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) and Vercel Analytics / Speed Insights (Vercel Inc.) are US-based and operate cookielessly. Transfers are safeguarded by Standard Contractual Clauses (SCCs) under GDPR Art. 46; Microsoft additionally participates in the EU–US Data Privacy Framework. Umami is hosted in the EU, so no transfer occurs.",
     privacyS5Closure: "You may request a copy of the applicable SCCs by emailing {{email}}.",
 
     // Section 6
     privacyS6Title: "Data retention",
     privacyS6Para1: "We retain your email address for 24 months from the date of submission, or until you unsubscribe — whichever comes first. After this period, your email address is permanently deleted from all systems, including our email service provider's list.",
-    privacyS6Para2: "Anonymised Google Analytics data is retained for 14 months (the minimum configurable retention period in GA4). No personal data is retained in GA4.",
+    privacyS6Para2: "Our cookieless analytics tools store only aggregated, non-identifying data; no personal data that identifies you is retained. Microsoft Clarity stores anonymised session data in line with its standard retention period.",
     privacyS6Para3: "Resend retains transactional email logs for up to 30 days. Audience contact records (your email address and subscription status) are retained for as long as your subscription is active, or until you request deletion.",
 
     // Section 7
@@ -214,8 +214,8 @@ export const translations = {
     privacyS7Row4SetBy: "PromptQuorum (localStorage)",
     privacyS7Row4Purpose: "Stores your cookie consent choice (granted, denied, or per-category) so we do not ask again on every page",
     privacyS7Row4Duration: "12 months (re-prompts after expiry)",
-    privacyS7Para2: "We do not use tracking pixels, fingerprinting, or third-party advertising cookies. To opt out of Google Analytics tracking, install the Google Analytics Opt-out Browser Add-on or configure your browser to block cookies from *.google-analytics.com.",
-    privacyS7Para3: "Cookie consent under § 25 TDDDG (Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz, formerly TTDSG): this site requires your opt-in consent before any non-essential cookies or similar device-storage technologies are set. Analytics and marketing categories are denied by default until you accept them. You can change or withdraw your consent at any time via the \"Cookie Settings\" link in the footer. TODO: name the competent national supervisory authority once operator domicile is finalized.",
+    privacyS7Para2: "We do not use tracking pixels, fingerprinting, or third-party advertising cookies. Our analytics tools (Umami, Vercel Analytics, Microsoft Clarity) operate cookielessly and set no cookies on your device; no consent is required for them.",
+    privacyS7Para3: "Consent under the ePrivacy Directive (2002/58/EC): our analytics tools (Umami, Vercel Analytics, Microsoft Clarity) are cookieless and neither read from nor write to your terminal device, so they require no consent. For any non-essential device storage, we request your consent beforehand; you can change or withdraw it at any time via the \"Cookie Settings\" link in the footer. The competent supervisory authority is the Hessian Commissioner for Data Protection and Freedom of Information (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
 
     // Section 8
     privacyS8Title: "Your rights under GDPR",
@@ -240,7 +240,7 @@ export const translations = {
 
     // Section 9
     privacyS9Title: "Right to lodge a complaint",
-    privacyS9Para1: "If you believe we have not handled your personal data in accordance with applicable law, you have the right to lodge a complaint with your local supervisory authority. In the EU, find your national authority at edpb.europa.eu. In the UK, the supervisory authority is the Information Commissioner's Office (ICO).",
+    privacyS9Para1: "If you believe we have not handled your personal data in accordance with applicable law, you have the right to lodge a complaint with your local supervisory authority. Our competent supervisory authority is the Hessian Commissioner for Data Protection and Freedom of Information (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI). In the EU, you can also find your national authority at edpb.europa.eu. In the UK, the supervisory authority is the Information Commissioner's Office (ICO).",
     privacyS9Para2: "We would appreciate the opportunity to address your concern directly before you escalate to a supervisory authority — please contact us at {{email}} first.",
 
     // Section 10
@@ -414,7 +414,7 @@ export const translations = {
     privacyS2Row1_3: "Beta-Start-Benachrichtigung; Produkt-Update-E-Mails",
     privacyS2Row1_4: "Einwilligung (Art. 6(1)(a) DSGVO)",
     privacyS2Row2_1: "Anonyme Nutzungsanalytik",
-    privacyS2Row2_2: "Google Analytics 4 (GA4) Cookie",
+    privacyS2Row2_2: "Cookielose Analyse (Umami, Vercel Analytics, Microsoft Clarity)",
     privacyS2Row2_3: "Verstehen, welche Seiten besucht werden; Website verbessern",
     privacyS2Row2_4: "Berechtigtes Interesse (Art. 6(1)(f) DSGVO) — siehe §7",
     privacyS2Closure: "Wir sammeln keine Namen, Telefonnummern, Zahlungsinformationen, IP-Adressen, die über die Aggregation auf Sitzungsebene hinaus gespeichert werden, oder spezielle Kategorien von Daten gemäß Art. 9 DSGVO.",
@@ -424,7 +424,7 @@ export const translations = {
     privacyS3Sub1: "Einwilligung — E-Mail-Adresse",
     privacyS3Para1: "Wenn Sie Ihre E-Mail eingeben und auf \"Warteliste beitreten\" klicken, erteilen Sie uns ausdrückliche Zustimmung, Sie mit Beta-Start-Ankündigungen und Produkt-Updates zu kontaktieren. Die Einwilligung ist die rechtliche Grundlage nach Art. 6(1)(a) DSGVO. Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie auf den Abmeldelink in einer E-Mail klicken, die wir Ihnen senden, oder indem Sie uns unter {{email}} anschreiben. Der Widerruf der Einwilligung hat keine Auswirkungen auf die Rechtmäßigkeit der Verarbeitung vor dem Widerruf.",
     privacyS3Sub2: "Berechtigtes Interesse — Analytik",
-    privacyS3Para2: "Wir verwenden Google Analytics 4, um zu verstehen, wie Besucher insgesamt mit der Website interagieren. Wir haben bewertet, dass dieses Interesse nicht durch Ihre Interessen oder Rechte überschrieben wird, da: (a) wir IP-Anonymisierung verwenden; (b) Daten aggregiert werden und nicht zur Identifizierung von Personen verwendet werden; und (c) Sie sich über Browser-Einstellungen oder das Google Analytics Opt-out-Browser-Add-on abmelden können. Wenn Sie möchten, können Sie uns eine E-Mail schreiben, um die Verarbeitung von Analysedaten zu Ihrem Besuch einzustellen.",
+    privacyS3Para2: "Wir verwenden datenschutzfreundliche Analysewerkzeuge – Umami, Vercel Analytics und Microsoft Clarity (im cookielosen Modus) –, um die Nutzung der Website in aggregierter Form zu verstehen. Endgerätezugriff (§ 25 TDDDG): Diese Werkzeuge setzen keine Cookies und greifen weder lesend noch schreibend auf Ihr Endgerät zu, sodass hierfür keine Einwilligung nach § 25 TDDDG erforderlich ist. Datenverarbeitung (DSGVO): Verarbeitet werden ausschließlich aggregierte, nicht identifizierende Nutzungsdaten auf Grundlage unseres berechtigten Interesses gemäß Art. 6 Abs. 1 lit. f DSGVO; Sie können dieser Verarbeitung jederzeit per E-Mail widersprechen.",
 
     // Section 4
     privacyS4Title: "Datenverarbeiter und Dritte",
@@ -463,13 +463,13 @@ export const translations = {
     privacyS5Title: "Internationale Datenübertragungen",
     privacyS5Intro: "Einige unserer Verarbeiter sind in den USA ansässig. Übertragungen personenbezogener Daten aus dem Europäischen Wirtschaftsraum (EWR) oder dem Vereinigten Königreich (UK) in die USA unterliegen angemessenen Schutzmaßnahmen:",
     privacyS5Bullet1: "Resend: Die Übertragung wird durch Standardvertragsklauseln (SVK) abgedeckt, die von der Europäischen Kommission unter DSGVO Art. 46(2)(c) angenommen wurden. Die Datenverarbeitungsvereinbarung von Resend ist unter resend.com/legal/dpa verfügbar.",
-    privacyS5Bullet2: "Google Analytics: Google LLC nimmt am EU-USA-Datenschutzrahmen teil. Die Übertragung ist zusätzlich durch SVK abgedeckt. Die Datenübertragungsdokumentation von Google ist unter business.safety.google/gdpr verfügbar.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) und Vercel Analytics / Speed Insights (Vercel Inc.) haben ihren Sitz in den USA und arbeiten cookielos. Übermittlungen sind durch Standardvertragsklauseln (SVK) gemäß Art. 46 DSGVO abgesichert; Microsoft ist zusätzlich dem EU-USA-Datenschutzrahmen beigetreten. Umami wird in der EU gehostet, sodass keine Übermittlung stattfindet.",
     privacyS5Closure: "Sie können eine Kopie der geltenden SVK anfordern, indem Sie {{email}} eine E-Mail senden.",
 
     // Section 6
     privacyS6Title: "Datenspeicherung",
     privacyS6Para1: "Wir speichern Ihre E-Mail-Adresse 24 Monate lang ab dem Einreichungsdatum oder bis zur Abmeldung — je nachdem, was zuerst eintritt. Nach diesem Zeitraum wird Ihre E-Mail-Adresse dauerhaft aus allen Systemen gelöscht, einschließlich der Liste unseres E-Mail-Dienstanbieters.",
-    privacyS6Para2: "Anonymisierte Google Analytics-Daten werden 14 Monate lang gespeichert (die minimale konfigurierbare Aufbewahrungsdauer in GA4). Keine personenbezogenen Daten werden in GA4 gespeichert.",
+    privacyS6Para2: "Unsere cookielosen Analysewerkzeuge speichern ausschließlich aggregierte, nicht identifizierende Daten; es werden keine personenbezogenen Daten gespeichert, die Sie identifizieren. Microsoft Clarity speichert anonymisierte Sitzungsdaten gemäß seiner Standard-Aufbewahrungsfrist.",
     privacyS6Para3: "Resend speichert Transaktions-E-Mail-Logs bis zu 30 Tage lang. Zielgruppen-Kontaktdatensätze (Ihre E-Mail-Adresse und Ihr Abonnementstatus) werden so lange gespeichert, wie Ihr Abonnement aktiv ist, oder bis Sie die Löschung anfordern.",
 
     // Section 7
@@ -495,8 +495,8 @@ export const translations = {
     privacyS7Row4SetBy: "PromptQuorum (localStorage)",
     privacyS7Row4Purpose: "Speichert Ihre Cookie-Einwilligung (erteilt, abgelehnt oder pro Kategorie), damit wir Sie nicht auf jeder Seite erneut fragen",
     privacyS7Row4Duration: "12 Monate (danach erneute Abfrage)",
-    privacyS7Para2: "Wir verwenden keine Tracking-Pixel, Fingerprinting oder Tracking-Cookies von Dritten. Um sich vom Google Analytics-Tracking abzumelden, installieren Sie das Google Analytics Opt-out-Browser-Add-on oder konfigurieren Sie Ihren Browser so, dass er Cookies von *.google-analytics.com blockiert.",
-    privacyS7Para3: "Cookie-Einwilligung gemäß § 25 TDDDG (Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz, vormals TTDSG): Diese Website setzt nicht-essentielle Cookies oder ähnliche Speichertechnologien erst nach Ihrer ausdrücklichen Einwilligung. Analyse- und Marketing-Kategorien sind standardmäßig deaktiviert, bis Sie sie akzeptieren. Sie können Ihre Einwilligung jederzeit über den Link \"Cookie-Einstellungen\" im Footer ändern oder widerrufen. TODO: zuständige nationale Aufsichtsbehörde nennen, sobald der Sitz des Verantwortlichen festgelegt ist.",
+    privacyS7Para2: "Wir verwenden keine Tracking-Pixel, kein Fingerprinting und keine Werbe-Cookies von Dritten. Unsere Analysewerkzeuge (Umami, Vercel Analytics, Microsoft Clarity) arbeiten cookielos und setzen keine Cookies auf Ihrem Gerät; eine Einwilligung ist hierfür nicht erforderlich.",
+    privacyS7Para3: "Einwilligung gemäß § 25 TDDDG (Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz, vormals TTDSG): Unsere Analysewerkzeuge (Umami, Vercel Analytics, Microsoft Clarity) arbeiten cookielos und greifen weder lesend noch schreibend auf Ihr Endgerät zu; hierfür ist keine Einwilligung nach § 25 TDDDG erforderlich. Für nicht-essentielle Speichertechnologien auf Ihrem Endgerät holen wir vorher Ihre Einwilligung ein; Sie können diese jederzeit über den Link \"Cookie-Einstellungen\" im Footer ändern oder widerrufen. Zuständige Aufsichtsbehörde ist der Hessische Beauftragte für Datenschutz und Informationsfreiheit (HBDI).",
 
     // Section 8
     privacyS8Title: "Ihre Rechte nach der DSGVO",
@@ -521,7 +521,7 @@ export const translations = {
 
     // Section 9
     privacyS9Title: "Recht zur Beschwerde",
-    privacyS9Para1: "Wenn Sie glauben, dass wir Ihre personenbezogenen Daten nicht in Übereinstimmung mit geltendem Recht behandelt haben, haben Sie das Recht, eine Beschwerde bei Ihrer zuständigen Aufsichtsbehörde einzureichen. In der EU finden Sie Ihre nationale Behörde unter edpb.europa.eu. Im Vereinigten Königreich ist die Aufsichtsbehörde das Information Commissioner's Office (ICO).",
+    privacyS9Para1: "Wenn Sie glauben, dass wir Ihre personenbezogenen Daten nicht in Übereinstimmung mit geltendem Recht behandelt haben, haben Sie das Recht, eine Beschwerde bei Ihrer zuständigen Aufsichtsbehörde einzureichen. Unsere zuständige Aufsichtsbehörde ist der Hessische Beauftragte für Datenschutz und Informationsfreiheit (HBDI). In der EU finden Sie Ihre nationale Behörde unter edpb.europa.eu. Im Vereinigten Königreich ist die Aufsichtsbehörde das Information Commissioner's Office (ICO).",
     privacyS9Para2: "Wir würden es begrüßen, die Gelegenheit zu haben, Ihre Besorgnis direkt zu adressieren, bevor Sie sich an eine Aufsichtsbehörde wenden — bitte kontaktieren Sie uns zuerst unter {{email}}.",
 
     // Section 10
@@ -695,7 +695,7 @@ export const translations = {
     privacyS2Row1_3: "Notification de lancement bêta; e-mails de mise à jour des produits",
     privacyS2Row1_4: "Consentement (Art. 6(1)(a) RGPD)",
     privacyS2Row2_1: "Analytique d'utilisation anonyme",
-    privacyS2Row2_2: "Cookie Google Analytics 4 (GA4)",
+    privacyS2Row2_2: "Analyse sans cookies (Umami, Vercel Analytics, Microsoft Clarity)",
     privacyS2Row2_3: "Comprendre quelles pages sont visitées; améliorer le site",
     privacyS2Row2_4: "Intérêt légitime (Art. 6(1)(f) RGPD) — voir §7",
     privacyS2Closure: "Nous ne collectons pas les noms, les numéros de téléphone, les informations de paiement, les adresses IP stockées au-delà de l'agrégation au niveau de la session, ou toute catégorie particulière de données en vertu de l'art. 9 RGPD.",
@@ -705,7 +705,7 @@ export const translations = {
     privacyS3Sub1: "Consentement — adresse e-mail",
     privacyS3Para1: "Lorsque vous entrez votre e-mail et cliquez sur \"Rejoindre la liste d'attente\", vous nous donnez un consentement explicite pour vous contacter avec les annonces de lancement bêta et les mises à jour de produits. Le consentement est le fondement juridique en vertu de l'art. 6(1)(a) RGPD. Vous pouvez retirer votre consentement à tout moment en cliquant sur le lien de désinscription dans tout e-mail que nous vous envoyons, ou en nous envoyant un e-mail à {{email}}. Le retrait du consentement n'affecte pas la licéité du traitement avant le retrait.",
     privacyS3Sub2: "Intérêt légitime — analytique",
-    privacyS3Para2: "Nous utilisons Google Analytics 4 pour comprendre comment les visiteurs interagissent avec le site globalement. Nous avons évalué que cet intérêt n'est pas remis en cause par vos intérêts ou vos droits, étant donné que: (a) nous utilisons l'anonymisation des adresses IP; (b) les données sont agrégées et ne sont pas utilisées pour identifier les individus; et (c) vous pouvez vous désabonner via les paramètres du navigateur ou le module complémentaire Google Analytics Opt-out. Si vous préférez, vous pouvez nous envoyer un e-mail pour demander l'arrêt du traitement des données d'analyse associées à votre visite.",
+    privacyS3Para2: "Nous utilisons des outils d'analyse respectueux de la vie privée — Umami, Vercel Analytics et Microsoft Clarity (en mode sans cookies) — afin de comprendre, de manière agrégée, comment les visiteurs utilisent le site. Accès à l'appareil (ePrivacy) : ces outils ne déposent aucun cookie et n'effectuent aucune lecture ni écriture sur votre terminal, de sorte qu'aucun consentement n'est requis au titre de la directive ePrivacy. Traitement des données (RGPD) : seules des données d'utilisation agrégées et non identifiantes sont traitées, sur la base de notre intérêt légitime au titre de l'art. 6(1)(f) du RGPD ; vous pouvez vous opposer à ce traitement à tout moment en nous écrivant.",
 
     // Section 4
     privacyS4Title: "Sous-traitants et tiers",
@@ -744,13 +744,13 @@ export const translations = {
     privacyS5Title: "Transferts de données internationaux",
     privacyS5Intro: "Certains de nos sous-traitants sont basés aux États-Unis. Les transferts de données personnelles de l'Espace économique européen (EEE) ou du Royaume-Uni (RU) vers les États-Unis sont soumis à des garanties appropriées:",
     privacyS5Bullet1: "Resend: Le transfert est couvert par les clauses contractuelles types (CCT) adoptées par la Commission européenne en vertu de l'art. 46(2)(c) du RGPD. L'accord de traitement des données de Resend est disponible à resend.com/legal/dpa.",
-    privacyS5Bullet2: "Google Analytics: Google LLC participe au cadre de confidentialité des données UE-États-Unis. Le transfert est également couvert par les CCT. La documentation de transfert de données de Google est disponible à business.safety.google/gdpr.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) et Vercel Analytics / Speed Insights (Vercel Inc.) sont basés aux États-Unis et fonctionnent sans cookies. Les transferts sont encadrés par les clauses contractuelles types (CCT) au titre de l'art. 46 du RGPD ; Microsoft adhère en outre au cadre de protection des données UE–États-Unis (EU–US Data Privacy Framework). Umami est hébergé dans l'UE, de sorte qu'aucun transfert n'a lieu.",
     privacyS5Closure: "Vous pouvez demander une copie des CCT applicables en envoyant un e-mail à {{email}}.",
 
     // Section 6
     privacyS6Title: "Conservation des données",
     privacyS6Para1: "Nous conservons votre adresse e-mail pendant 24 mois à partir de la date de soumission, ou jusqu'à ce que vous vous désabonniez — selon ce qui se produit en premier. Après cette période, votre adresse e-mail est définitivement supprimée de tous les systèmes, y compris la liste de notre fournisseur de services de messagerie.",
-    privacyS6Para2: "Les données Google Analytics anonymisées sont conservées pendant 14 mois (la période minimale de conservation configurable dans GA4). Aucune donnée personnelle n'est conservée dans GA4.",
+    privacyS6Para2: "Nos outils d'analyse sans cookies ne conservent que des données agrégées et non identifiantes ; aucune donnée personnelle permettant de vous identifier n'est conservée. Microsoft Clarity conserve des données de session anonymisées conformément à sa durée de conservation standard.",
     privacyS6Para3: "Resend conserve les journaux de courrier électronique transactionnel jusqu'à 30 jours. Les dossiers de contact d'audience (votre adresse e-mail et votre statut d'abonnement) sont conservés aussi longtemps que votre abonnement est actif, ou jusqu'à ce que vous demandiez la suppression.",
 
     // Section 7
@@ -776,8 +776,8 @@ export const translations = {
     privacyS7Row4SetBy: "PromptQuorum (localStorage)",
     privacyS7Row4Purpose: "Stocke votre choix de consentement aux cookies (accepté, refusé ou par catégorie) afin de ne pas vous redemander sur chaque page",
     privacyS7Row4Duration: "12 mois (nouvelle demande à expiration)",
-    privacyS7Para2: "Nous n'utilisons pas de pixels de suivi, de prise d'empreinte digitale ou de cookies publicitaires tiers. Pour refuser le suivi Google Analytics, installez le module complémentaire Google Analytics Opt-out ou configurez votre navigateur pour bloquer les cookies de *.google-analytics.com.",
-    privacyS7Para3: "Consentement aux cookies au titre du § 25 TDDDG (Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz, anciennement TTDSG) : ce site exige votre consentement explicite avant de placer tout cookie non essentiel ou technologie de stockage similaire. Les catégories Analyses et Marketing sont refusées par défaut tant que vous ne les acceptez pas. Vous pouvez modifier ou retirer votre consentement à tout moment via le lien « Paramètres des cookies » dans le pied de page. TODO : nommer l'autorité de contrôle nationale compétente une fois le domicile de l'exploitant fixé.",
+    privacyS7Para2: "Nous n'utilisons pas de pixels de suivi, de prise d'empreinte numérique ni de cookies publicitaires tiers. Nos outils d'analyse (Umami, Vercel Analytics, Microsoft Clarity) fonctionnent sans cookies et ne déposent aucun cookie sur votre appareil ; aucun consentement n'est requis pour ces outils.",
+    privacyS7Para3: "Consentement au titre de la directive ePrivacy (2002/58/CE) : nos outils d'analyse (Umami, Vercel Analytics, Microsoft Clarity) fonctionnent sans cookies et n'effectuent aucune lecture ni écriture sur votre terminal ; aucun consentement n'est donc requis. Pour tout stockage non essentiel sur votre appareil, nous recueillons votre consentement au préalable ; vous pouvez le modifier ou le retirer à tout moment via le lien « Paramètres des cookies » dans le pied de page. L'autorité de contrôle compétente est le Commissaire de Hesse à la protection des données et à la liberté de l'information (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
 
     // Section 8
     privacyS8Title: "Vos droits en vertu du RGPD",
@@ -802,7 +802,7 @@ export const translations = {
 
     // Section 9
     privacyS9Title: "Droit de déposer plainte",
-    privacyS9Para1: "Si vous pensez que nous n'avons pas traité vos données personnelles conformément à la loi applicable, vous avez le droit de déposer plainte auprès de votre autorité de contrôle compétente. Dans l'UE, trouvez votre autorité nationale à edpb.europa.eu. Au Royaume-Uni, l'autorité de contrôle est le Bureau du commissaire à l'information (ICO).",
+    privacyS9Para1: "Si vous pensez que nous n'avons pas traité vos données personnelles conformément à la loi applicable, vous avez le droit de déposer plainte auprès de votre autorité de contrôle locale. Notre autorité de contrôle compétente est le Commissaire de Hesse à la protection des données et à la liberté de l'information (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI). Dans l'UE, vous pouvez également trouver votre autorité nationale à edpb.europa.eu. Au Royaume-Uni, l'autorité de contrôle est l'Information Commissioner's Office (ICO).",
     privacyS9Para2: "Nous apprécierions l'occasion de résoudre directement votre préoccupation avant de l'escalader auprès d'une autorité de contrôle — veuillez d'abord nous contacter à {{email}}.",
 
     // Section 10
@@ -976,7 +976,7 @@ export const translations = {
     privacyS2Row1_3: "ベータ版起動通知; 製品更新メール",
     privacyS2Row1_4: "同意(GDPR第6条(1)(a))",
     privacyS2Row2_1: "匿名使用分析",
-    privacyS2Row2_2: "Google Analytics 4 (GA4)クッキー",
+    privacyS2Row2_2: "クッキーレス分析（Umami、Vercel Analytics、Microsoft Clarity）",
     privacyS2Row2_3: "訪問されたページを理解する; サイトを改善する",
     privacyS2Row2_4: "正当な利益(GDPR第6条(1)(f)) — §7を参照",
     privacyS2Closure: "私たちは名前、電話番号、支払い情報、セッションレベルの集約を超えて保存されたIPアドレス、またはGDPR第9条の特別カテゴリーのデータを収集しません。",
@@ -986,7 +986,7 @@ export const translations = {
     privacyS3Sub1: "同意 — メールアドレス",
     privacyS3Para1: "メールを入力して\"ウェイティングリストに参加\"をクリックすると、ベータ版起動アナウンスと製品更新であなたに連絡する明示的な同意を与えます。同意はGDPR第6条(1)(a)に基づく法的根拠です。あなたが送信した電子メール内の登録解除リンクをクリックするか、{{email}}にメールを送信することで、いつでも同意を撤回できます。同意の撤回は、撤回前の処理の適法性に影響しません。",
     privacyS3Sub2: "正当な利益 — 分析",
-    privacyS3Para2: "私たちはGoogle Analytics 4を使用して、訪問者がサイトとどのようにやり取りするかを総合的に理解します。(a)IP匿名化を使用していること、(b)データが集約されており個人を特定するために使用されていないこと、および(c)ブラウザ設定またはGoogle Analytics Opt-out Browser Add-onを通じてオプトアウトできることを考慮して、この利益があなたの利益または権利によって置き換えられないと評価しました。ご希望の場合は、{{email}}にメールを送信して、あなたの訪問に関連する分析データの処理を停止するよう要求できます。",
+    privacyS3Para2: "当サイトでは、プライバシーに配慮した分析ツール（Umami、Vercel Analytics、Microsoft Clarity（クッキーレスモード））を使用し、訪問者のサイト利用状況を集計ベースで把握しています。端末へのアクセス（ePrivacy）：これらのツールはクッキーを一切設定せず、お客様の端末への読み取りも書き込みも行わないため、ePrivacy指令に基づく同意は必要ありません。データ処理（GDPR）：処理されるのは集計された識別不能な利用データのみであり、当社の正当な利益（GDPR第6条(1)(f)）に基づきます。この処理にはいつでもメールで異議を申し立てることができます。",
 
     // Section 4
     privacyS4Title: "データ処理業者と第三者",
@@ -1025,13 +1025,13 @@ export const translations = {
     privacyS5Title: "国際的なデータ転送",
     privacyS5Intro: "私たちの処理業者の一部は米国に拠点を置いています。ヨーロッパ経済地域(EEA)または英国(UK)から米国への個人データの転送には、適切な保護措置が適用されます:",
     privacyS5Bullet1: "Resend: 転送はGDPR第46条(2)(c)の下で欧州委員会により採択された標準契約条項(SCC)によってカバーされています。Resendのデータ処理契約はresend.com/legal/dpaで利用可能です。",
-    privacyS5Bullet2: "Google Analytics: Google LLCはEU-US Data Privacy Frameworkに参加しています。転送はさらにSCCでカバーされています。Googleのデータ転送ドキュメンテーションはbusiness.safety.google/gdprで利用可能です。",
+    privacyS5Bullet2: "Microsoft Clarity（Microsoft Corporation）およびVercel Analytics / Speed Insights（Vercel Inc.）は米国に拠点を置き、クッキーレスで動作します。移転はGDPR第46条に基づく標準契約条項（SCC）によって保護されており、MicrosoftはさらにEU–米国データプライバシーフレームワーク（EU–US Data Privacy Framework）に参加しています。UmamiはEU内でホストされているため、移転は発生しません。",
     privacyS5Closure: "{{email}}にメールを送信することで、適用されるSCCのコピーをリクエストできます。",
 
     // Section 6
     privacyS6Title: "データ保持",
     privacyS6Para1: "提出日から24ヶ月間、またはあなたが登録を解除するまで — どちらか先に来たかに関わらず、あなたのメールアドレスを保持します。このその後、あなたのメールアドレスは、電子メールサービスプロバイダーのリストを含むすべてのシステムから完全に削除されます。",
-    privacyS6Para2: "匿名化されたGoogle Analyticsデータは14ヶ月間保持されます(GA4の最小設定可能保持期間)。個人データはGA4に保持されません。",
+    privacyS6Para2: "当社のクッキーレス分析ツールは、集計された識別不能なデータのみを保存し、お客様を識別する個人データは一切保持しません。Microsoft Clarityは、標準の保持期間に従って匿名化されたセッションデータを保存します。",
     privacyS6Para3: "Resendは最大30日間トランザクションメールログを保持します。オーディエンス連絡先レコード(あなたのメールアドレスとサブスクリプションステータス)は、あなたのサブスクリプションがアクティブである限り、またはあなたが削除をリクエストするまで保持されます。",
 
     // Section 7
@@ -1057,8 +1057,8 @@ export const translations = {
     privacyS7Row4SetBy: "PromptQuorum (localStorage)",
     privacyS7Row4Purpose: "クッキーへの同意（許可、拒否、またはカテゴリ別）を保存し、各ページで再度確認しないようにします",
     privacyS7Row4Duration: "12ヶ月（期限切れ後に再確認）",
-    privacyS7Para2: "私たちはトラッキングピクセル、フィンガープリンティング、またはサードパーティの広告クッキーを使用していません。Google Analyticsトラッキングをオプトアウトするには、Google Analytics Opt-out Browser Add-onをインストールするか、ブラウザを構成して*.google-analytics.comからのクッキーをブロックしてください。",
-    privacyS7Para3: "§25 TDDDG（Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz、旧TTDSG）に基づくクッキー同意：当サイトは、非必須のクッキーまたは同様の端末ストレージ技術を設定する前に、お客様の明示的な同意を必要とします。解析およびマーケティングカテゴリは、お客様が承認するまでデフォルトで拒否されています。フッターの「Cookie設定」リンクからいつでも同意を変更または撤回できます。TODO: 運営者の所在地が確定次第、所管の国家監督機関を明記すること。",
+    privacyS7Para2: "当社はトラッキングピクセル、フィンガープリンティング、第三者の広告クッキーを使用していません。当社の分析ツール（Umami、Vercel Analytics、Microsoft Clarity）はクッキーレスで動作し、お客様の端末にクッキーを一切設定しないため、これらについて同意は必要ありません。",
+    privacyS7Para3: "ePrivacy指令（2002/58/EC）に基づく同意：当社の分析ツール（Umami、Vercel Analytics、Microsoft Clarity）はクッキーレスであり、お客様の端末への読み取りも書き込みも行わないため、同意は必要ありません。非必須の端末ストレージについては、事前にお客様の同意を取得します。同意はフッターの「Cookie設定」リンクからいつでも変更または撤回できます。所管の監督当局は、ヘッセン州データ保護・情報自由監督官（Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI）です。",
 
     // Section 8
     privacyS8Title: "GDPRの下での権利",
@@ -1083,7 +1083,7 @@ export const translations = {
 
     // Section 9
     privacyS9Title: "苦情を申し立てる権利",
-    privacyS9Para1: "あなたの個人データが適用法に従って処理されていないと信じている場合は、地域の監督当局に苦情を申し立てる権利があります。EUでは、あなたの国の当局をedpb.europa.euで見つけることができます。英国では、監督当局は情報コミッショナーオフィス(ICO)です。",
+    privacyS9Para1: "当社がお客様の個人データを適用法に従って取り扱っていないとお考えの場合、地域の監督当局に苦情を申し立てる権利があります。当社の所管監督当局は、ヘッセン州データ保護・情報自由監督官（Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI）です。EUでは、あなたの国の当局をedpb.europa.euで見つけることができます。英国では、監督当局は情報コミッショナーオフィス(ICO)です。",
     privacyS9Para2: "監督当局にエスカレートする前に、あなたの懸念に直接対処する機会をいただきたいと思います — まず{{email}}でご連絡ください。",
 
     // Section 10
@@ -1257,7 +1257,7 @@ export const translations = {
     privacyS2Row1_3: "测试版启动通知; 产品更新电子邮件",
     privacyS2Row1_4: "同意(GDPR第6条(1)(a))",
     privacyS2Row2_1: "匿名使用分析",
-    privacyS2Row2_2: "Google Analytics 4 (GA4)Cookie",
+    privacyS2Row2_2: "无Cookie分析（Umami、Vercel Analytics、Microsoft Clarity）",
     privacyS2Row2_3: "了解访问的页面; 改进网站",
     privacyS2Row2_4: "合法利益(GDPR第6条(1)(f)) — 参见§7",
     privacyS2Closure: "我们不收集姓名、电话号码、付款信息、超过会话级别汇总存储的IP地址或GDPR第9条下的任何特殊类别数据。",
@@ -1267,7 +1267,7 @@ export const translations = {
     privacyS3Sub1: "同意 — 电子邮件地址",
     privacyS3Para1: "当您输入电子邮件地址并点击\"加入候补名单\"时,您明确同意我们使用测试版启动公告和产品更新与您联系。同意是GDPR第6条(1)(a)下的法律依据。您可以通过点击我们发送给您的任何电子邮件中的取消订阅链接或向{{email}}发送电子邮件,随时撤回您的同意。撤回同意不影响撤回前处理的合法性。",
     privacyS3Sub2: "合法利益 — 分析",
-    privacyS3Para2: "我们使用Google Analytics 4来总体了解访问者如何与该网站互动。我们已评估该利益不会被您的利益或权利所覆盖,原因如下:(a)我们使用IP匿名化;(b)数据被汇总,不用于识别个人;且(c)您可以通过浏览器设置或Google Analytics选择退出浏览器扩展程序进行选择退出。如果您愿意,可以向{{email}}发送电子邮件,要求我们停止处理与您访问相关的分析数据。",
+    privacyS3Para2: "我们使用注重隐私的分析工具（Umami、Vercel Analytics 和 Microsoft Clarity（无Cookie模式）），以汇总方式了解访问者如何使用本网站。设备访问（ePrivacy）：这些工具不设置任何Cookie，既不读取也不写入您的终端设备，因此依据ePrivacy指令无需征得同意。数据处理（GDPR）：仅处理汇总的、不可识别身份的使用数据，依据我们的合法利益（GDPR第6(1)(f)条）；您可以随时通过电子邮件反对此项处理。",
 
     // Section 4
     privacyS4Title: "数据处理人和第三方",
@@ -1306,13 +1306,13 @@ export const translations = {
     privacyS5Title: "国际数据转移",
     privacyS5Intro: "我们的一些处理人位于美国。从欧洲经济区(EEA)或英国(UK)向美国转移个人数据受适当的保护措施约束:",
     privacyS5Bullet1: "Resend: 转移受欧盟委员会在GDPR第46条(2)(c)下采用的标准合同条款(SCC)的保护。Resend的数据处理协议可在resend.com/legal/dpa获取。",
-    privacyS5Bullet2: "Google Analytics: Google LLC参与欧盟-美国数据隐私框架。转移还受SCC保护。Google的数据转移文档可在business.safety.google/gdpr获取。",
+    privacyS5Bullet2: "Microsoft Clarity（Microsoft Corporation）和 Vercel Analytics / Speed Insights（Vercel Inc.）位于美国，以无Cookie方式运行。数据传输受GDPR第46条下的标准合同条款（SCC）保护；Microsoft还参与了欧盟–美国数据隐私框架（EU–US Data Privacy Framework）。Umami托管在欧盟境内，因此不发生数据传输。",
     privacyS5Closure: "您可以通过向{{email}}发送电子邮件来请求适用SCC的副本。",
 
     // Section 6
     privacyS6Title: "数据保留",
     privacyS6Para1: "从提交之日起24个月或直到您取消订阅为止(以较早者为准),我们保留您的电子邮件地址。在此期间之后,您的电子邮件地址将从所有系统(包括我们的电子邮件服务提供商列表)中永久删除。",
-    privacyS6Para2: "匿名Google Analytics数据保留14个月(GA4的最低可配置保留期)。GA4中不保留任何个人数据。",
+    privacyS6Para2: "我们的无Cookie分析工具仅存储汇总的、不可识别身份的数据；不会保留任何可识别您身份的个人数据。Microsoft Clarity 按照其标准保留期限存储匿名化的会话数据。",
     privacyS6Para3: "Resend保留最多30天的事务性电子邮件日志。受众联系记录(您的电子邮件地址和订阅状态)只要您的订阅处于活跃状态就保留,或直到您请求删除。",
 
     // Section 7
@@ -1338,8 +1338,8 @@ export const translations = {
     privacyS7Row4SetBy: "PromptQuorum (localStorage)",
     privacyS7Row4Purpose: "存储您的 Cookie 同意选择（允许、拒绝或按类别），以免我们在每个页面重复询问",
     privacyS7Row4Duration: "12 个月（到期后重新询问）",
-    privacyS7Para2: "我们不使用跟踪像素、指纹识别或第三方广告Cookie。要选择退出Google Analytics跟踪,请安装Google Analytics Opt-out Browser Add-on或配置浏览器以阻止来自*.google-analytics.com的Cookie。",
-    privacyS7Para3: "依据 § 25 TDDDG（Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz，前身为 TTDSG）的 Cookie 同意：本网站在设置任何非必要 Cookie 或类似设备存储技术之前，需获得您的明确同意。分析和营销类别在您接受之前默认拒绝。您可以随时通过页脚的\"Cookie 设置\"链接更改或撤回您的同意。TODO：运营者所在地确定后，写明所属国家的主管监管机构。",
+    privacyS7Para2: "我们不使用跟踪像素、指纹识别或第三方广告Cookie。我们的分析工具（Umami、Vercel Analytics、Microsoft Clarity）以无Cookie方式运行，不会在您的设备上设置任何Cookie；因此无需征得同意。",
+    privacyS7Para3: "依据ePrivacy指令（2002/58/EC）的同意：我们的分析工具（Umami、Vercel Analytics、Microsoft Clarity）不使用Cookie，既不读取也不写入您的终端设备，因此无需征得同意。对于任何非必要的设备存储，我们会事先征得您的同意；您可以随时通过页脚的\"Cookie 设置\"链接更改或撤回同意。主管监管机构是黑森州数据保护与信息自由专员（Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI）。",
 
     // Section 8
     privacyS8Title: "根据GDPR的权利",
@@ -1364,7 +1364,7 @@ export const translations = {
 
     // Section 9
     privacyS9Title: "提出投诉的权利",
-    privacyS9Para1: "如果您认为我们未能按照适用法律处理您的个人数据,您有权向您的当地监管机构提出投诉。在欧盟,请在edpb.europa.eu找到您的国家机构。在英国,监管机构是信息专员办公室(ICO)。",
+    privacyS9Para1: "如果您认为我们未能按照适用法律处理您的个人数据,您有权向您的当地监管机构提出投诉。我们的主管监管机构是黑森州数据保护与信息自由专员（Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI）。在欧盟,请在edpb.europa.eu找到您的国家机构。在英国,监管机构是信息专员办公室(ICO)。",
     privacyS9Para2: "在向监管机构提交投诉前,我们希望有机会直接解决您的疑虑 — 请先在{{email}}联系我们。",
 
     // Section 10
@@ -1538,7 +1538,7 @@ export const translations = {
     privacyS2Row1_3: "Notificación de lanzamiento beta; emails de actualización del producto",
     privacyS2Row1_4: "Consentimiento (Art. 6(1)(a) RGPD)",
     privacyS2Row2_1: "Analítica de uso anónima",
-    privacyS2Row2_2: "Cookie de Google Analytics 4 (GA4)",
+    privacyS2Row2_2: "Analítica sin cookies (Umami, Vercel Analytics, Microsoft Clarity)",
     privacyS2Row2_3: "Entender qué páginas se visitan; mejorar el sitio",
     privacyS2Row2_4: "Interés legítimo (Art. 6(1)(f) RGPD) — ver §7",
     privacyS2Closure: "No recopilamos nombres, números de teléfono, información de pago, direcciones IP almacenadas más allá de la agregación a nivel de sesión, ni datos de categorías especiales según el Art. 9 del RGPD.",
@@ -1548,7 +1548,7 @@ export const translations = {
     privacyS3Sub1: "Consentimiento — dirección de email",
     privacyS3Para1: "Cuando introduces tu email y haces clic en \"Unirse a la lista de espera\", nos das consentimiento explícito para contactarte con anuncios de lanzamiento beta y actualizaciones del producto. El consentimiento es la base jurídica según el Art. 6(1)(a) del RGPD. Puedes retirar el consentimiento en cualquier momento haciendo clic en el enlace de cancelación de suscripción de cualquier email que te enviemos, o enviando un email a {{email}}. La retirada del consentimiento no afecta a la licitud del tratamiento anterior.",
     privacyS3Sub2: "Interés legítimo — analítica",
-    privacyS3Para2: "Utilizamos Google Analytics 4 para entender cómo interactúan los visitantes con el sitio en general. Hemos evaluado que este interés no está superado por tus intereses o derechos, dado que: (a) utilizamos anonimización de IP; (b) los datos son agregados y no se usan para identificar personas; y (c) puedes rechazarlo mediante la configuración del navegador o el complemento de exclusión de Google Analytics. Si lo prefieres, puedes enviarnos un email para solicitar que dejemos de procesar los datos analíticos asociados a tu visita.",
+    privacyS3Para2: "Utilizamos herramientas de analítica respetuosas con la privacidad —Umami, Vercel Analytics y Microsoft Clarity (en modo sin cookies)— para entender de forma agregada cómo usan el sitio los visitantes. Acceso al dispositivo (ePrivacy): estas herramientas no establecen ninguna cookie y no leen ni escriben en tu dispositivo, por lo que no requieren consentimiento en virtud de la Directiva ePrivacy. Tratamiento de datos (RGPD): solo se tratan datos de uso agregados y no identificativos, sobre la base de nuestro interés legítimo (art. 6(1)(f) del RGPD); puedes oponerte a este tratamiento en cualquier momento escribiéndonos un correo.",
 
     // Section 4
     privacyS4Title: "Encargados del tratamiento y terceros",
@@ -1587,13 +1587,13 @@ export const translations = {
     privacyS5Title: "Transferencias internacionales de datos",
     privacyS5Intro: "Algunos de nuestros encargados del tratamiento tienen su sede en Estados Unidos. Las transferencias de datos personales desde el Espacio Económico Europeo (EEE) o el Reino Unido (RU) a Estados Unidos están sujetas a garantías adecuadas:",
     privacyS5Bullet1: "Resend: la transferencia está cubierta por Cláusulas Contractuales Tipo (CCT) adoptadas por la Comisión Europea en virtud del Art. 46(2)(c) del RGPD. El Acuerdo de Tratamiento de Datos de Resend está disponible en resend.com/legal/dpa.",
-    privacyS5Bullet2: "Google Analytics: Google LLC participa en el Marco de Privacidad de Datos UE-EE.UU. La transferencia también está cubierta por CCT. La documentación de transferencia de datos de Google está disponible en business.safety.google/gdpr.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) y Vercel Analytics / Speed Insights (Vercel Inc.) tienen su sede en Estados Unidos y funcionan sin cookies. Las transferencias están protegidas por las cláusulas contractuales tipo (CCT) en virtud del art. 46 del RGPD; además, Microsoft participa en el Marco de Privacidad de Datos UE–EE. UU. (EU–US Data Privacy Framework). Umami está alojado en la UE, por lo que no se produce ninguna transferencia.",
     privacyS5Closure: "Puedes solicitar una copia de las CCT aplicables enviando un email a {{email}}.",
 
     // Section 6
     privacyS6Title: "Conservación de datos",
     privacyS6Para1: "Conservamos tu dirección de email durante 24 meses desde la fecha de envío, o hasta que canceles la suscripción — lo que ocurra primero. Después de este período, tu dirección de email se elimina permanentemente de todos los sistemas, incluida la lista de nuestro proveedor de servicios de email.",
-    privacyS6Para2: "Los datos anonimizados de Google Analytics se conservan durante 14 meses (el período de retención mínimo configurable en GA4). No se conservan datos personales en GA4.",
+    privacyS6Para2: "Nuestras herramientas de analítica sin cookies solo almacenan datos agregados y no identificativos; no se conserva ningún dato personal que te identifique. Microsoft Clarity almacena datos de sesión anonimizados conforme a su periodo de conservación estándar.",
     privacyS6Para3: "Resend conserva los registros de email transaccional hasta 30 días. Los registros de contacto de audiencia (tu dirección de email y estado de suscripción) se conservan mientras tu suscripción esté activa, o hasta que solicites la eliminación.",
 
     // Section 7
@@ -1619,8 +1619,8 @@ export const translations = {
     privacyS7Row4SetBy: "PromptQuorum (localStorage)",
     privacyS7Row4Purpose: "Almacena tu elección de consentimiento de cookies (aceptado, denegado o por categoría) para no preguntarte en cada página",
     privacyS7Row4Duration: "12 meses (nueva solicitud al expirar)",
-    privacyS7Para2: "No utilizamos píxeles de rastreo, fingerprinting ni cookies de publicidad de terceros. Para rechazar el rastreo de Google Analytics, instala el complemento de exclusión del navegador de Google Analytics o configura tu navegador para bloquear cookies de *.google-analytics.com.",
-    privacyS7Para3: "Consentimiento de cookies según el § 25 TDDDG (Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz, antes TTDSG): este sitio requiere tu consentimiento explícito antes de establecer cualquier cookie no esencial o tecnología de almacenamiento similar en tu dispositivo. Las categorías de analítica y marketing están denegadas por defecto hasta que las aceptes. Puedes cambiar o retirar tu consentimiento en cualquier momento desde el enlace \"Configuración de cookies\" en el pie de página. TODO: nombrar la autoridad supervisora nacional competente una vez confirmado el domicilio del operador.",
+    privacyS7Para2: "No utilizamos píxeles de rastreo, fingerprinting ni cookies publicitarias de terceros. Nuestras herramientas de analítica (Umami, Vercel Analytics, Microsoft Clarity) funcionan sin cookies y no establecen ninguna cookie en tu dispositivo; no se requiere consentimiento para ellas.",
+    privacyS7Para3: "Consentimiento en virtud de la Directiva ePrivacy (2002/58/CE): nuestras herramientas de analítica (Umami, Vercel Analytics, Microsoft Clarity) funcionan sin cookies y no leen ni escriben en tu dispositivo, por lo que no requieren consentimiento. Para cualquier almacenamiento no esencial en tu dispositivo, solicitamos tu consentimiento previo; puedes cambiarlo o retirarlo en cualquier momento desde el enlace \"Configuración de cookies\" en el pie de página. La autoridad supervisora competente es el Comisionado de Hesse para la Protección de Datos y la Libertad de Información (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
 
     // Section 8
     privacyS8Title: "Tus derechos bajo el RGPD",
@@ -1645,7 +1645,7 @@ export const translations = {
 
     // Section 9
     privacyS9Title: "Derecho a presentar una reclamación",
-    privacyS9Para1: "Si crees que no hemos gestionado tus datos personales conforme a la legislación aplicable, tienes derecho a presentar una reclamación ante tu autoridad supervisora local. En la UE, encuentra tu autoridad nacional en edpb.europa.eu. En el Reino Unido, la autoridad supervisora es la Oficina del Comisionado de Información (ICO).",
+    privacyS9Para1: "Si crees que no hemos gestionado tus datos personales conforme a la legislación aplicable, tienes derecho a presentar una reclamación ante tu autoridad supervisora local. Nuestra autoridad supervisora competente es el Comisionado de Hesse para la Protección de Datos y la Libertad de Información (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI). En la UE, encuentra tu autoridad nacional en edpb.europa.eu. En el Reino Unido, la autoridad supervisora es la Oficina del Comisionado de Información (ICO).",
     privacyS9Para2: "Agradeceríamos la oportunidad de abordar tu preocupación directamente antes de que la escales a una autoridad supervisora — por favor, contáctanos primero en {{email}}.",
 
     // Section 10
@@ -1819,7 +1819,7 @@ export const translations = {
     privacyS2Row1_3: "Notificação de lançamento beta; e-mails de atualização do produto",
     privacyS2Row1_4: "Consentimento (Art. 6(1)(a) GDPR / Art. 7 LGPD)",
     privacyS2Row2_1: "Análise de uso anônima",
-    privacyS2Row2_2: "Cookie do Google Analytics 4 (GA4)",
+    privacyS2Row2_2: "Análise sem cookies (Umami, Vercel Analytics, Microsoft Clarity)",
     privacyS2Row2_3: "Entender quais páginas são visitadas; melhorar o site",
     privacyS2Row2_4: "Interesse legítimo (Art. 6(1)(f) GDPR / Art. 10 LGPD) — ver §7",
     privacyS2Closure: "Não coletamos nomes, números de telefone, informações de pagamento, endereços IP armazenados além da agregação em nível de sessão, nem dados de categorias especiais nos termos do Art. 9 do GDPR / Art. 11 da LGPD.",
@@ -1829,7 +1829,7 @@ export const translations = {
     privacyS3Sub1: "Consentimento — endereço de e-mail",
     privacyS3Para1: "Quando você insere seu e-mail e clica em \"Entrar na lista de espera\", nos dá consentimento explícito para contatá-lo com anúncios de lançamento beta e atualizações do produto. O consentimento é a base jurídica nos termos do Art. 6(1)(a) do GDPR e do Art. 7 da LGPD. Você pode retirar o consentimento a qualquer momento clicando no link de cancelamento de inscrição em qualquer e-mail que enviamos, ou enviando um e-mail para {{email}}. A retirada do consentimento não afeta a licitude do tratamento anterior.",
     privacyS3Sub2: "Interesse legítimo — análise",
-    privacyS3Para2: "Usamos o Google Analytics 4 para entender como os visitantes interagem com o site em conjunto. Avaliamos que esse interesse não é superado pelos seus interesses ou direitos, considerando que: (a) utilizamos anonimização de IP; (b) os dados são agregados e não usados para identificar indivíduos; e (c) você pode cancelar por meio das configurações do navegador ou do complemento de exclusão do Google Analytics. Se preferir, pode nos enviar um e-mail para solicitar que paremos de processar os dados de análise associados à sua visita.",
+    privacyS3Para2: "Usamos ferramentas de análise que respeitam a privacidade — Umami, Vercel Analytics e Microsoft Clarity (em modo sem cookies) — para entender, de forma agregada, como os visitantes usam o site. Acesso ao dispositivo (ePrivacy): essas ferramentas não definem nenhum cookie e não leem nem gravam no seu dispositivo, portanto não exigem consentimento nos termos da Diretiva ePrivacy. Tratamento de dados (GDPR): são tratados apenas dados de uso agregados e não identificáveis, com base em nosso interesse legítimo (art. 6(1)(f) do GDPR); você pode se opor a esse tratamento a qualquer momento enviando um e-mail para nós.",
 
     // Section 4
     privacyS4Title: "Processadores de dados e terceiros",
@@ -1868,13 +1868,13 @@ export const translations = {
     privacyS5Title: "Transferências internacionais de dados",
     privacyS5Intro: "Alguns de nossos processadores estão sediados nos Estados Unidos. As transferências de dados pessoais da Área Econômica Europeia (AEE) ou do Reino Unido (RU) para os Estados Unidos estão sujeitas a salvaguardas adequadas:",
     privacyS5Bullet1: "Resend: a transferência é coberta por Cláusulas Contratuais Padrão (CCPs) adotadas pela Comissão Europeia nos termos do Art. 46(2)(c) do GDPR. O Contrato de Processamento de Dados da Resend está disponível em resend.com/legal/dpa.",
-    privacyS5Bullet2: "Google Analytics: o Google LLC participa do Estrutura de Privacidade de Dados UE-EUA. A transferência é adicionalmente coberta por CCPs. A documentação de transferência de dados do Google está disponível em business.safety.google/gdpr.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) e Vercel Analytics / Speed Insights (Vercel Inc.) ficam nos Estados Unidos e operam sem cookies. As transferências são protegidas por cláusulas contratuais padrão (SCCs) nos termos do art. 46 do GDPR; além disso, a Microsoft participa do Quadro de Privacidade de Dados UE–EUA (EU–US Data Privacy Framework). O Umami é hospedado na UE, portanto nenhuma transferência ocorre.",
     privacyS5Closure: "Você pode solicitar uma cópia das CCPs aplicáveis enviando um e-mail para {{email}}.",
 
     // Section 6
     privacyS6Title: "Retenção de dados",
     privacyS6Para1: "Retemos seu endereço de e-mail por 24 meses a partir da data de envio, ou até que você cancele a inscrição — o que ocorrer primeiro. Após esse período, seu endereço de e-mail é excluído permanentemente de todos os sistemas, incluindo a lista do nosso provedor de serviços de e-mail.",
-    privacyS6Para2: "Os dados anonimizados do Google Analytics são retidos por 14 meses (o período mínimo de retenção configurável no GA4). Nenhum dado pessoal é retido no GA4.",
+    privacyS6Para2: "Nossas ferramentas de análise sem cookies armazenam apenas dados agregados e não identificáveis; nenhum dado pessoal que identifique você é retido. O Microsoft Clarity armazena dados de sessão anonimizados de acordo com seu período de retenção padrão.",
     privacyS6Para3: "A Resend retém registros de e-mail transacional por até 30 dias. Os registros de contato de audiência (seu endereço de e-mail e status de assinatura) são retidos enquanto sua assinatura estiver ativa, ou até que você solicite a exclusão.",
 
     // Section 7
@@ -1900,8 +1900,8 @@ export const translations = {
     privacyS7Row4SetBy: "PromptQuorum (localStorage)",
     privacyS7Row4Purpose: "Armazena sua escolha de consentimento de cookies (concedido, negado ou por categoria) para não perguntar novamente em cada página",
     privacyS7Row4Duration: "12 meses (novo pedido após expiração)",
-    privacyS7Para2: "Não usamos pixels de rastreamento, impressão digital ou cookies de publicidade de terceiros. Para cancelar o rastreamento do Google Analytics, instale o complemento de exclusão do navegador do Google Analytics ou configure seu navegador para bloquear cookies de *.google-analytics.com.",
-    privacyS7Para3: "Consentimento de cookies nos termos do § 25 TDDDG (Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz, anteriormente TTDSG): este site requer seu consentimento antes de definir qualquer cookie não essencial ou tecnologia de armazenamento semelhante. As categorias de análise e marketing são negadas por padrão até que você as aceite. Você pode alterar ou retirar seu consentimento a qualquer momento pelo link \"Configurações de cookies\" no rodapé. TODO: nomear a autoridade supervisora nacional competente após confirmação do domicílio do operador.",
+    privacyS7Para2: "Não usamos pixels de rastreamento, fingerprinting nem cookies de publicidade de terceiros. Nossas ferramentas de análise (Umami, Vercel Analytics, Microsoft Clarity) operam sem cookies e não definem nenhum cookie no seu dispositivo; nenhum consentimento é necessário para elas.",
+    privacyS7Para3: "Consentimento nos termos da Diretiva ePrivacy (2002/58/CE): nossas ferramentas de análise (Umami, Vercel Analytics, Microsoft Clarity) funcionam sem cookies e não leem nem gravam no seu dispositivo, portanto não exigem consentimento. Para qualquer armazenamento não essencial no seu dispositivo, solicitamos seu consentimento previamente; você pode alterá-lo ou retirá-lo a qualquer momento pelo link \"Configurações de cookies\" no rodapé. A autoridade de controle competente é o Comissário de Hesse para a Proteção de Dados e a Liberdade de Informação (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
 
     // Section 8
     privacyS8Title: "Seus direitos sob a LGPD e o GDPR",
@@ -1926,7 +1926,7 @@ export const translations = {
 
     // Section 9
     privacyS9Title: "Direito de apresentar uma reclamação",
-    privacyS9Para1: "Se você acredita que não tratamos seus dados pessoais de acordo com a lei aplicável, tem o direito de apresentar uma reclamação à autoridade supervisora competente. No Brasil, a autoridade é a Agência Nacional de Proteção de Dados (ANPD) em gov.br/anpd. Na UE, encontre sua autoridade nacional em edpb.europa.eu. No Reino Unido, a autoridade supervisora é o Information Commissioner's Office (ICO).",
+    privacyS9Para1: "Se você acredita que não tratamos seus dados pessoais de acordo com a lei aplicável, tem o direito de apresentar uma reclamação à autoridade supervisora competente. Nossa autoridade de controle competente na UE é o Comissário de Hesse para a Proteção de Dados e a Liberdade de Informação (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI). No Brasil, a autoridade é a Agência Nacional de Proteção de Dados (ANPD) em gov.br/anpd. Na UE, encontre sua autoridade nacional em edpb.europa.eu. No Reino Unido, a autoridade supervisora é o Information Commissioner's Office (ICO).",
     privacyS9Para2: "Gostaríamos da oportunidade de abordar sua preocupação diretamente antes de escalar para uma autoridade supervisora — entre em contato conosco primeiro em {{email}}.",
 
     // Section 10
