@@ -27,23 +27,23 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default async function EsHowItWorksPage() {
+export default async function PtHowItWorksPage() {
   const schemaArray = [
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      'name': 'Cómo funciona PromptQuorum — Escribir, Optimizar, Enviar, Quorum',
+      'name': 'Como funciona o PromptQuorum — Escrever, Otimizar, Enviar, Quorum',
       'url': 'https://www.promptquorum.com/pt/how-it-works',
-      'inLanguage': 'pt',
-      'description': 'Guía completa del flujo de trabajo de 4 etapas de PromptQuorum: escritura estructurada de prompts con 9 frameworks, optimización impulsada por LLM, envío con un clic a 25+ servicios de IA y análisis Quorum multi-modelo.',
+      'inLanguage': 'pt-BR',
+      'description': 'Guia completo do fluxo de trabalho de 4 etapas do PromptQuorum: escrita estruturada de prompts com 9 frameworks, otimização impulsionada por LLM, envio com um clique para 25+ serviços de IA e análise Quorum multi-modelo.',
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://www.promptquorum.com/es' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Cómo funciona', 'item': 'https://www.promptquorum.com/pt/how-it-works' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Início', 'item': 'https://www.promptquorum.com/pt' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Como funciona', 'item': 'https://www.promptquorum.com/pt/how-it-works' },
       ],
     },
   ]

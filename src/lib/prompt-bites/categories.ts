@@ -25,6 +25,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: '量子化 & VRAM',
       zh: '量化与显存',
       es: 'Cuantización y VRAM',
+      pt: 'Quantização e VRAM',
     },
     description: {
       en: 'How much memory you need, which quantization format to pick, and VRAM decision trees.',
@@ -33,6 +34,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: '必要なメモリ量、選ぶべき量子化形式、VRAMの意思決定ツリー。',
       zh: '所需内存量、选择哪种量化格式以及VRAM决策树。',
       es: 'Cuánta memoria necesita, qué formato de cuantización elegir y árboles de decisión de VRAM.',
+      pt: 'Quanta memória você precisa, qual formato de quantização escolher e árvores de decisão de VRAM.',
     },
     articleSlugs: [
       'how-much-vram-for-local-llm',
@@ -58,6 +60,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: 'Ollama',
       zh: 'Ollama',
       es: 'Ollama',
+      pt: 'Ollama',
     },
     description: {
       en: 'Latest versions, best models, context windows, vision, and CPU-only use.',
@@ -66,6 +69,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: '最新バージョン、おすすめモデル、コンテキストウィンドウ、ビジョン、CPUのみの使用。',
       zh: '最新版本、最佳模型、上下文窗口、视觉和纯CPU使用。',
       es: 'Versiones más recientes, mejores modelos, ventanas de contexto, visión y uso solo con CPU.',
+      pt: 'Versões mais recentes, melhores modelos, janelas de contexto, visão e uso somente com CPU.',
     },
     articleSlugs: [
       'ollama-latest-version',
@@ -88,6 +92,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: 'ツール比較',
       zh: '工具比较',
       es: 'Comparativas de herramientas',
+      pt: 'Comparações de ferramentas',
     },
     description: {
       en: 'Two-way comparisons: Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
@@ -96,6 +101,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: '二者比較：Ollama vs LM Studio、Jan vs LM Studio、Qwen vs DeepSeek。',
       zh: '双向对比：Ollama vs LM Studio、Jan vs LM Studio、Qwen vs DeepSeek。',
       es: 'Comparaciones uno a uno: Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
+      pt: 'Comparações diretas: Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
     },
     articleSlugs: [
       'qwen-coder-vs-deepseek-coder',

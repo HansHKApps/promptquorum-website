@@ -40,7 +40,7 @@ export default function EsAboutPage() {
               'url': 'https://www.promptquorum.com/pt/about',
               'name': 'About PromptQuorum',
               'description': 'PromptQuorum is a privacy-first, multi-model AI dispatch and consensus tool built by Hans Kuepper.',
-              'inLanguage': 'pt',
+              'inLanguage': 'pt-BR',
               'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
             },
             {
@@ -65,8 +65,8 @@ export default function EsAboutPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://www.promptquorum.com/es' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'Acerca de', 'item': 'https://www.promptquorum.com/pt/about' },
+                { '@type': 'ListItem', 'position': 1, 'name': 'Início', 'item': 'https://www.promptquorum.com/pt' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'Sobre', 'item': 'https://www.promptquorum.com/pt/about' },
               ],
             },
           ]),
@@ -228,7 +228,7 @@ export default function EsAboutPage() {
 
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
-            <Link href="/es" className="text-primary hover:text-primary/80 font-medium text-sm">← Inicio</Link>
+            <Link href="/pt" className="text-primary hover:text-primary/80 font-medium text-sm">← Início</Link>
             <Link href="/pt/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
             <Link href="/pt/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
             <Link href="/pt/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>

@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default async function EsFeaturesPage() {
+export default async function PtFeaturesPage() {
   return (
     <>
       <FeaturesPageClient initialLang="pt" />
@@ -38,10 +38,10 @@ export default async function EsFeaturesPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              'name': 'Características de PromptQuorum — Prompt Engineering, Envío Multi-Modelo, Análisis Quorum',
+              'name': 'Recursos do PromptQuorum — Prompt Engineering, Envio Multi-Modelo, Análise Quorum',
               'url': 'https://www.promptquorum.com/pt/features',
-              'description': 'Explora las características de PromptQuorum: 9 frameworks de prompt, optimización de IA, envío a 25+ servicios de IA, análisis de consenso multi-modelo, detección de alucinaciones, soporte de LLM local y privacidad total.',
-              'inLanguage': 'pt',
+              'description': 'Explore os recursos do PromptQuorum: 9 frameworks de prompt, otimização por IA, envio para 25+ serviços de IA, análise de consenso multi-modelo, detecção de alucinações, suporte a LLM local e privacidade total.',
+              'inLanguage': 'pt-BR',
               'datePublished': '2026-04-05',
               'dateModified': '2026-04-05',
               'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
@@ -55,8 +55,8 @@ export default async function EsFeaturesPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://www.promptquorum.com/es' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'Características', 'item': 'https://www.promptquorum.com/pt/features' },
+                { '@type': 'ListItem', 'position': 1, 'name': 'Início', 'item': 'https://www.promptquorum.com/pt' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'Recursos', 'item': 'https://www.promptquorum.com/pt/features' },
               ],
             },
           ]),
