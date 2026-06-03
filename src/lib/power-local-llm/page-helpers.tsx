@@ -361,6 +361,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
     ja: 'Power Local LLM: AI アプリを自分のハードウェアでプライベート実行 (2026)',
     zh: 'Power Local LLM：在自己的硬件上私密运行 AI 应用（2026）',
     es: 'Power Local LLM: Ejecuta Apps de IA Privadas en Tu Propio Hardware (2026)',
+    pt: 'Power Local LLM: Rode Apps de IA Privados no Seu Próprio Hardware (2026)',
   }
   const descByLang: Partial<Record<Lang, string>> = {
     en: 'Stop paying for SaaS AI tools. Run coding assistants, RAG systems, agents, and creative apps fully offline with local LLMs. 35 guides, tested workflows, 2026 stack.',
@@ -369,6 +370,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
     ja: 'SaaS AI ツールへの支払いを止めましょう。コーディングアシスタント、RAG、エージェント、創作アプリをローカル LLM で完全オフラインで実行。',
     zh: '停止为 SaaS AI 工具付费。使用本地 LLM 完全离线运行编码助手、RAG 系统、代理和创意应用。',
     es: 'Deja de pagar por herramientas IA SaaS. Ejecuta asistentes de código, sistemas RAG, agentes y aplicaciones creativas completamente offline con LLMs locales. 35 guías, flujos de trabajo probados, stack 2026.',
+    pt: 'Pare de pagar por ferramentas de IA SaaS. Rode assistentes de código, sistemas RAG, agentes e apps criativos totalmente offline com LLMs locais. 35 guias, fluxos de trabalho testados, stack 2026.',
   }
 
   const isPublished = isPowerLLMHubPublished(lang)
@@ -397,8 +399,8 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
 }
 
 export async function buildHubPageElement(lang: Lang) {
-  if (lang === 'en' || lang === 'de' || lang === 'fr' || lang === 'ja' || lang === 'zh' || lang === 'es') {
-    return renderLocalizedHub(lang as 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es')
+  if (lang === 'en' || lang === 'de' || lang === 'fr' || lang === 'ja' || lang === 'zh' || lang === 'es' || lang === 'pt') {
+    return renderLocalizedHub(lang as 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt')
   }
   return renderComingSoon({ lang, kind: 'hub' })
 }
@@ -1020,9 +1022,58 @@ const HUB_THEME_TEXT_ES: Array<{ badge: string; question: string; description: s
   },
 ]
 
+// PT theme text — same index order as HUB_THEMES
+const HUB_THEME_TEXT_PT: Array<{ badge: string; question: string; description: string }> = [
+  {
+    badge: 'Visão Geral e Referência',
+    question: 'Visão Geral e Referência: Por Onde Começar no Ecossistema de LLMs Locais?',
+    description: 'Um diretório de todas as ferramentas de LLM local que valem a pena conhecer — runtimes, apps de desktop, interfaces web, assistentes de código, sistemas RAG, frameworks de agentes, ferramentas de voz/multimodal, mobile e plugins de produtividade. O mapa do "o que existe" antes de você se comprometer com um stack.',
+  },
+  {
+    badge: 'Apps de Desktop Mais Fáceis',
+    question: 'Apps de Desktop Mais Fáceis: Qual App de IA Local Você Deve Instalar Primeiro?',
+    description: 'Apps tipo ChatGPT que você baixa e roda. Sem terminal. Melhor ponto de entrada para iniciantes. LM Studio, Jan e GPT4All testados lado a lado em velocidade, UX e privacidade.',
+  },
+  {
+    badge: 'RAG e Chat com Documentos',
+    question: 'RAG e Chat com Documentos: Como Você Conversa Localmente com Seus Próprios PDFs?',
+    description: 'Bases de conhecimento pessoais que nunca saem do seu dispositivo. AnythingLLM, PrivateGPT e Open WebUI testados em corpora reais. Escolhas de modelos de embedding para conteúdo jurídico, de pesquisa e técnico.',
+  },
+  {
+    badge: 'Assistentes de Código',
+    question: 'Assistentes de Código: Um LLM Local Pode Realmente Substituir o GitHub Copilot?',
+    description: 'Continue.dev, Cline, Aider e Qwen3-Coder testados contra o GitHub Copilot em projetos reais de Next.js, Python e Rust. Cálculo de custos, guias de configuração e veredictos honestos sobre diferenças de qualidade.',
+  },
+  {
+    badge: 'Agentes de IA Locais e Tool-Calling',
+    question: 'Agentes de IA Locais e Tool-Calling: Quais Fluxos de Trabalho Realmente Funcionam sem a Nuvem?',
+    description: 'MCP, tool-calling, agentes autônomos — a fronteira de 2026. Relatos honestos sobre o que roda de forma confiável (e o que ainda falha). Substituir o Zapier por agentes auto-hospedados e padrões em conformidade com a UE.',
+  },
+  {
+    badge: 'Criativo e Roleplay',
+    question: 'Criativo e Roleplay: Quais Modelos Locais Escrevem Como um Humano?',
+    description: 'Ficção, diálogos, worldbuilding, roteiros — testados em mais de 50 prompts criativos. SillyTavern vs Agnai vs RisuAI para trabalho de personagens. O veredicto honesto sobre modelos sem censura para escrita criativa legítima.',
+  },
+  {
+    badge: 'LLMs Mobile e Edge',
+    question: 'LLMs Mobile e Edge: Você Consegue Rodar IA de Verdade Offline no Seu Celular?',
+    description: 'iPhone, Android, iPad, Pixel — testados em dispositivos reais em 2026. Phi-4 Mini, Gemma 3 4B, SmolLM testados em velocidade e qualidade. Assistentes de voz e pipelines offline baseados em Whisper.',
+  },
+  {
+    badge: 'Produtividade e Ferramentas de Conhecimento',
+    question: 'Produtividade: Como Você Integra IA Local ao Seu Fluxo de Trabalho Diário?',
+    description: 'Integrações com Obsidian, Logseq e Joplin. Automação de e-mail e calendário. Substitua o Grammarly e o Notion AI por modelos locais. O stack completo de base de conhecimento pessoal para mais de 10.000 itens.',
+  },
+  {
+    badge: 'Voz, Fala e Multimodal',
+    question: 'Voz e Multimodal: Como Você Constrói um Pipeline Totalmente Offline de Voz e Visão?',
+    description: 'STT local com whisper.cpp e faster-whisper. TTS local com Piper, Coqui e XTTS v2. Modelos de visão (LLaVA, Llama 3.2 Vision) via Ollama. Assistentes de voz totalmente offline e pipelines multimodais — sem microfone na nuvem.',
+  },
+]
+
 type HubHeroL10n = { h1: string; intro: string; introBold: string; keyTakeaways: string[] }
 
-const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es', HubHeroL10n> = {
+const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt', HubHeroL10n> = {
   en: {
     h1: 'Power Local LLM — Build a Private AI Stack That Replaces Your SaaS Bills',
     intro: 'Local LLMs are no longer just chatbots. In 2026 they run inside your code editor, query your private documents, automate workflows, and replace tools you currently pay monthly for.',
@@ -1095,6 +1146,18 @@ const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es', HubHeroL10n
       'Privacidad, arbitraje de costos y confiabilidad offline son las tres fuerzas impulsoras de la adopción.',
     ],
   },
+  pt: {
+    h1: 'Power Local LLM — Construa um Stack de IA Privado que Substitui Suas Contas de SaaS',
+    intro: 'LLMs locais já não são apenas chatbots. Em 2026 eles rodam dentro do seu editor de código, consultam seus documentos privados, automatizam fluxos de trabalho e substituem ferramentas que você paga mensalmente hoje.',
+    introBold: 'Se você consegue rodar o Ollama ou o LM Studio, você substitui 5 a 10 assinaturas de SaaS antes do fim do mês.',
+    keyTakeaways: [
+      'Ecossistema de LLM local em 2026 = ferramentas de chat, sistemas RAG, agentes de código, apps criativos, inferência em mobile e agentes de tool-calling.',
+      'Melhores pontos de entrada: LM Studio (iniciantes), Ollama + Open WebUI (equilíbrio), Continue.dev (programadores).',
+      'A maior virada de 2026: harnesses de codificação agentic substituindo contas de API na nuvem de US$ 200/mês.',
+      'LLMs mobile e edge são o segmento que mais cresce — rodando em celulares, tablets e NPUs.',
+      'Privacidade, arbitragem de custos e confiabilidade offline são as três forças que impulsionam a adoção.',
+    ],
+  },
 }
 
 type HubLabelsL10n = {
@@ -1105,7 +1168,7 @@ type HubLabelsL10n = {
   relatedReadingLinks: Array<{ href: string; label: string }>
 }
 
-const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es', HubLabelsL10n> = {
+const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt', HubLabelsL10n> = {
   en: {
     faqHeading: 'Frequently Asked Questions',
     keyTakeawaysLabel: 'Key Takeaways',
@@ -1178,9 +1241,21 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es', HubLabels
       { href: '/prompt-engineering/rag-explained?lang=es', label: 'RAG Explicado' },
     ],
   },
+  pt: {
+    faqHeading: 'Perguntas Frequentes',
+    keyTakeawaysLabel: 'Pontos-Chave',
+    lastUpdatedLabel: 'Última atualização:',
+    relatedReadingHeading: 'Leituras Relacionadas',
+    relatedReadingLinks: [
+      { href: '/local-llms/local-llm-hardware-guide-2026?lang=pt', label: 'Guia de Hardware para LLM Local 2026' },
+      { href: '/local-llms/best-local-llms-2026?lang=pt', label: 'Melhores LLMs Locais em 2026' },
+      { href: '/local-llms/llamacpp-vs-ollama-vs-vllm?lang=pt', label: 'llama.cpp vs Ollama vs vLLM' },
+      { href: '/prompt-engineering/rag-explained?lang=pt', label: 'RAG Explicado' },
+    ],
+  },
 }
 
-const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es', HubFaq[]> = {
+const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt', HubFaq[]> = {
   en: [
     { q: 'What is a local LLM and how is it different from ChatGPT?', a: 'A local LLM runs entirely on your own hardware — phone, laptop, desktop, or server — without sending prompts to any cloud service. ChatGPT runs on OpenAI servers and sends your prompts there. Local LLMs are private, work offline, and have no per-token cost; ChatGPT is faster on rare topics and requires no setup.' },
     { q: 'Do I need a powerful computer to run local LLMs?', a: 'No. 4 GB RAM and an integrated GPU is enough for small models like Phi-4 Mini or Gemma 3 4B. 16 GB RAM and a midrange GPU (RTX 3060 12 GB or M3 Pro) covers most everyday workflows. Heavy power users want 24+ GB VRAM.' },
@@ -1255,9 +1330,21 @@ const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es', HubFaq[]> =
     { q: '¿Los LLMs locales funcionan completamente offline?', a: 'Sí — una vez que el modelo se descarga, toda la inferencia es local. Útil para viajes, redes restringidas, entornos seguros y en cualquier lugar donde el internet sea confiable.' },
     { q: '¿Cuál es el mejor stack de LLM local para empresas en la UE?', a: 'Para cumplimiento GDPR/Ley de IA de la UE: Ollama o vLLM ejecutándose en hardware dedicado, emparejado con Jan (UI), Continue.dev (codificación) y AnythingLLM (RAG). Todo open source, todo auditable, todo on-prem. Mistral Large es una alternativa fuerte alojada en la UE para configuraciones híbridas.' },
   ],
+  pt: [
+    { q: 'O que é um LLM local e como ele difere do ChatGPT?', a: 'Um LLM local roda inteiramente no seu próprio hardware — celular, notebook, computador ou servidor — sem enviar prompts para nenhum serviço na nuvem. O ChatGPT roda nos servidores da OpenAI e envia seus prompts para lá. LLMs locais são privados, funcionam offline e não têm custo por token; o ChatGPT é mais rápido em temas raros e não exige configuração.' },
+    { q: 'Preciso de um computador potente para rodar LLMs locais?', a: 'Não. 4 GB de RAM e uma GPU integrada bastam para modelos pequenos como Phi-4 Mini ou Gemma 3 4B. 16 GB de RAM e uma GPU intermediária (RTX 3060 12 GB ou M3 Pro) cobrem a maioria dos fluxos de trabalho do dia a dia. Usuários avançados querem 24+ GB de VRAM.' },
+    { q: 'LLMs locais são tão bons quanto ChatGPT ou Claude?', a: 'Para tarefas do dia a dia (chat, resumo, código comum) a diferença é de 5-15% em 2026. Para raciocínio de fronteira e conhecimento muito obscuro, os modelos na nuvem ainda lideram. O equilíbrio custo-qualidade favorece o local para a maioria dos usuários com dados privados ou sensíveis.' },
+    { q: 'Posso rodar LLMs locais no meu celular?', a: 'Sim. Apps como LLM Farm e Private LLM rodam Phi-4 Mini e Gemma 3 4B em iPhone 16+ e aparelhos Android de ponta. O desempenho é de 8-15 tokens/seg — utilizável para chat, redação de rascunhos e consulta offline.' },
+    { q: 'Quanto custa rodar um LLM local?', a: 'Depois do hardware, o custo marginal é só eletricidade — geralmente US$ 1-3/mês para uso moderado. O investimento em hardware varia de US$ 0 (notebook que você já tem) a cerca de US$ 2.000 para uma máquina de alto desempenho. Comparado a assinaturas de SaaS de US$ 20-200/mês, o retorno costuma vir em 8-24 meses.' },
+    { q: 'Meus dados são realmente privados ao usar LLMs locais?', a: 'Sim — desde que o app não envie prompts por telemetria, o que a maioria não faz. Verificável com apps open source (Jan, GPT4All, Ollama), onde você pode auditar o tráfego de rede. O arquivo do modelo em si não "liga para casa" — são apenas pesos no disco.' },
+    { q: 'Qual é o app de LLM local mais fácil para iniciantes?', a: 'O GPT4All tem a instalação mais simples (um clique, roda com 8 GB de RAM). O LM Studio é o mais completo em recursos. O Jan é o melhor para privacidade. Veja a comparação dedicada LM Studio vs Jan vs GPT4All para benchmarks de cada um.' },
+    { q: 'LLMs locais podem substituir meu assistente de código?', a: 'Sim. Continue.dev + Ollama + Qwen3-Coder alcança 90-95% da qualidade do GitHub Copilot no trabalho diário de TypeScript e Python, com privacidade total do código. Os requisitos de hardware são RTX 3060 12 GB ou Mac M3 Pro+.' },
+    { q: 'LLMs locais funcionam totalmente offline?', a: 'Sim — uma vez que o modelo é baixado, toda a inferência é local. Útil para viagens, redes restritas, ambientes seguros e qualquer lugar onde a internet seja instável.' },
+    { q: 'Qual é o melhor stack de LLM local para empresas na UE?', a: 'Para conformidade com GDPR/Lei de IA da UE: Ollama ou vLLM rodando em hardware dedicado, combinado com Jan (UI), Continue.dev (codificação) e AnythingLLM (RAG). Tudo open source, tudo auditável, tudo on-prem. O Mistral Large é uma forte alternativa hospedada na UE para configurações híbridas.' },
+  ],
 }
 
-function PowerArticleCard({ slug, dot, lang }: { slug: string; dot: string; lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' }) {
+function PowerArticleCard({ slug, dot, lang }: { slug: string; dot: string; lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' }) {
   const hasContent =
     !!powerLLMContent[slug]?.['en'] &&
     Object.keys(powerLLMContent[slug]?.['en']?.sections ?? {}).length > 0
@@ -1310,12 +1397,12 @@ function PowerArticleCard({ slug, dot, lang }: { slug: string; dot: string; lang
   )
 }
 
-function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es') {
+function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt') {
   const lastUpdated = '2026-05-07'
   const hero = HUB_HERO_L10N[lang]
   const faqs = HUB_FAQS_L10N[lang]
   const labels = HUB_LABELS_L10N[lang]
-  const dateLocale = lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'ja' ? 'ja-JP' : lang === 'zh' ? 'zh-CN' : lang === 'es' ? 'es-ES' : 'en-US'
+  const dateLocale = lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'ja' ? 'ja-JP' : lang === 'zh' ? 'zh-CN' : lang === 'es' ? 'es-ES' : lang === 'pt' ? 'pt-BR' : 'en-US'
 
   const hubFaqSchema = {
     '@context': 'https://schema.org',
@@ -1330,7 +1417,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es') {
   const hubBreadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    inLanguage: lang,
+    inLanguage: lang === 'pt' ? 'pt-BR' : lang,
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: HOME_LABEL[lang], item: BASE },
       { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: `${BASE}${powerLLMHubPath(lang)}` },
@@ -1411,7 +1498,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es') {
 
           {/* Themed sections — one per category */}
           {HUB_THEMES.map((theme, idx) => {
-            const themeText = lang === 'de' ? HUB_THEME_TEXT_DE[idx] : lang === 'fr' ? HUB_THEME_TEXT_FR[idx] : lang === 'ja' ? HUB_THEME_TEXT_JA[idx] : lang === 'zh' ? HUB_THEME_TEXT_ZH[idx] : lang === 'es' ? HUB_THEME_TEXT_ES[idx] : theme
+            const themeText = lang === 'de' ? HUB_THEME_TEXT_DE[idx] : lang === 'fr' ? HUB_THEME_TEXT_FR[idx] : lang === 'ja' ? HUB_THEME_TEXT_JA[idx] : lang === 'zh' ? HUB_THEME_TEXT_ZH[idx] : lang === 'es' ? HUB_THEME_TEXT_ES[idx] : lang === 'pt' ? HUB_THEME_TEXT_PT[idx] : theme
             return (
               <section key={theme.id} id={theme.id} className="mb-16">
                 <div className="flex items-center gap-3 mb-2">

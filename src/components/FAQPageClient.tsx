@@ -73,6 +73,17 @@ const T = {
     ctaBtn: 'Unirse a la lista de espera',
     back: '← Volver al inicio',
   },
+  pt: {
+    h1: 'FAQ do PromptQuorum: Frameworks, Privacidade, Modelos de IA e Primeiros Passos',
+    subtitle: 'Tudo o que você precisa saber sobre o PromptQuorum, preços, privacidade e como começar.',
+    founderH2: 'Sobre o fundador',
+    founderTitle: 'Fundador e desenvolvedor, PromptQuorum',
+    founderBio: 'Hans Kuepper é um desenvolvedor independente baseado em Baden-Württemberg, Alemanha, que fala quatro idiomas e já trabalhou em mais de 20 países. Ele criou o PromptQuorum porque as equipes precisam de uma camada de verificação para as respostas geradas por IA — uma forma de detectar alucinações comparando os resultados de múltiplos modelos. A privacidade não é negociável: seus prompts e chaves de API nunca passam pelos servidores do PromptQuorum.',
+    ctaH2: 'Entre na lista de espera para acesso antecipado',
+    ctaDesc: 'O acesso antecipado inclui recursos premium vitalícios e suporte prioritário. Seja um dos primeiros a experimentar o PromptQuorum quando ele for lançado.',
+    ctaBtn: 'Entrar na lista de espera',
+    back: '← Voltar ao início',
+  },
 }
 
 function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
