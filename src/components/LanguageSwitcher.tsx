@@ -38,8 +38,9 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
   const current = languageCodes.find(l => l.code === currentLang) || languageCodes[0]
 
   const handleLanguageChange = (lang: Language) => {
-    // PT and AR have no page trees yet — redirect to EN instead of a 404.
-    const COMING_SOON_LANGS: Language[] = ['pt', 'ar']
+    // AR has no page tree yet — redirect to EN instead of a 404.
+    // PT is live (path-prefix routed like JA/ZH/DE/FR/ES) and handled below.
+    const COMING_SOON_LANGS: Language[] = ['ar']
     if (COMING_SOON_LANGS.includes(lang)) {
       window.location.href = window.location.origin + '/'
       return
@@ -115,7 +116,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
 
     // --- Check 3: Home page (/, /de, /de/, /fr, /fr/, /ja, /ja/, /zh, /zh/, /es, /es/) ---
     // Handle home page path-prefix for all non-EN languages.
-    const isHome = pathname === '/' || pathname === '/de' || pathname === '/de/' || pathname === '/fr' || pathname === '/fr/' || pathname === '/ja' || pathname === '/ja/' || pathname === '/zh' || pathname === '/zh/' || pathname === '/es' || pathname === '/es/'
+    const isHome = pathname === '/' || pathname === '/de' || pathname === '/de/' || pathname === '/fr' || pathname === '/fr/' || pathname === '/ja' || pathname === '/ja/' || pathname === '/zh' || pathname === '/zh/' || pathname === '/es' || pathname === '/es/' || pathname === '/pt' || pathname === '/pt/'
     if (isHome) {
       if (lang === 'en') {
         window.location.href = window.location.origin + '/'
