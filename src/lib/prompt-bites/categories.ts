@@ -127,6 +127,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: 'モデル比較',
       zh: '模型比较',
       es: 'Comparativas de modelos',
+      pt: 'Comparações de modelos',
     },
     description: {
       en: 'Best 14B models, MoE models, mini PCs, and head-to-head model matchups.',
@@ -135,6 +136,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: '最高の14Bモデル、MoEモデル、ミニPC、直接対決のモデル比較。',
       zh: '最佳14B模型、MoE模型、迷你PC及正面对决模型比较。',
       es: 'Mejores modelos 14B, modelos MoE, mini PCs y comparativas directas entre modelos.',
+      pt: 'Melhores modelos 14B, modelos MoE, mini PCs e confrontos diretos entre modelos.',
     },
     articleSlugs: [
       'qwen-14b-vs-llama-8b',
@@ -156,6 +158,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: 'ハードウェア別',
       zh: '特定硬件',
       es: 'Hardware específico',
+      pt: 'Hardware específico',
     },
     description: {
       en: 'Hardware picks and buying-guide bites: GPU recommendations by budget, mini-PCs, SSDs, cloud GPUs, and eGPUs.',
@@ -164,6 +167,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       ja: 'ハードウェアの選び方と購入ガイド：予算別GPU推奨、ミニPC、SSD、クラウドGPU、eGPU。',
       zh: '硬件选择和购买指南：按预算推荐GPU、迷你PC、SSD、云GPU和eGPU。',
       es: 'Recomendaciones de hardware y guías de compra: GPUs por presupuesto, mini-PCs, SSDs, GPUs en la nube y eGPUs.',
+      pt: 'Escolhas de hardware e guias de compra: recomendações de GPU por orçamento, mini PCs, SSDs, GPUs na nuvem e eGPUs.',
     },
     articleSlugs: [
       'best-local-llm-coding-12gb-vram',

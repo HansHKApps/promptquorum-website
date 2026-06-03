@@ -219,6 +219,15 @@ export default async function RootLayout({
             })
           }}
         />
+
+        {/* Microsoft Clarity — cookieless mode (consentv2 storage denied), runs for all
+            visitors. No cookies are set, so no consent is required (§ 25 TDDDG). */}
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="/api/clarity/tag/wtwpeavhum";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wtwpeavhum");window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'denied'});`,
+          }}
+        />
       </head>
       <body>
         <Providers>
@@ -231,8 +240,19 @@ export default async function RootLayout({
           <CookieBanner />
           <PushPromptBanner />
 
-          {/* Umami, Microsoft Clarity, and Vercel Analytics/Speed Insights all load inside
-              ConsentedAnalytics — only after the visitor grants Analytics consent. */}
+          {/* Cookieless analytics — load for every visitor, no consent required.
+              Umami (cookieless by design), Vercel Analytics + Speed Insights (cookieless),
+              and Microsoft Clarity (cookieless consentv2, loaded in <head> above).
+              GA4 removed. ConsentedAnalytics is a no-op stub kept for reversibility. */}
+          <Script
+            id="umami-script"
+            strategy="afterInteractive"
+            src="/lib/s/script.js"
+            data-website-id="1a0d1160-11ea-4882-a110-90fd9e5ebb75"
+            data-host-url="/lib/s"
+          />
+          <Analytics endpoint="/api/data" scriptSrc="/api/data/script.js" />
+          <SpeedInsights />
           <ConsentedAnalytics />
         </Providers>
       </body>
