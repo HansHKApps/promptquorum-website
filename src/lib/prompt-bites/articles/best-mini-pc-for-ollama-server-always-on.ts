@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Melhor macOS — 48 GB de memória unificada, ~$1399' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Melhor Mini PC para Servidor Ollama Sempre Ligado 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'pt' },
+    schema: { '@type': 'TechArticle', headline: 'Melhor Mini PC para Servidor Ollama Sempre Ligado 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'pt-BR' },
   },
   zh: {
     freshness_tier: 'semi_annual',

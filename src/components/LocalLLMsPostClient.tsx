@@ -77,6 +77,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Accueil',
     ja: 'ホーム',
     zh: '主页',
+    pt: 'Início',
   },
   breadcrumbHub: {
     en: 'Local LLMs',
@@ -84,6 +85,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'LLMs locaux',
     ja: 'ローカルLLM',
     zh: '本地LLM',
+    pt: 'LLMs locais',
   },
   snippetOneSentence: {
     en: '📍 In One Sentence',

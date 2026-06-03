@@ -677,6 +677,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 5, name: 'PlayHT', description: 'Melhor TTS em nuvem para narração de podcast' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Melhor IA de texto para voz para criadores de conteúdo 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-ai-text-to-speech-for-content-creators', inLanguage: 'pt' },
+    schema: { '@type': 'TechArticle', headline: 'Melhor IA de texto para voz para criadores de conteúdo 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-ai-text-to-speech-for-content-creators', inLanguage: 'pt-BR' },
   },
 }

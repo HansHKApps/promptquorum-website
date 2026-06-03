@@ -668,7 +668,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       description: 'Top 5 VPNs para desenvolvedores de IA na China: HuggingFace, GitHub, Docker Hub. Testes de velocidade e confiabilidade do GFW.',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/pt/prompt-bites/best-vpn-for-ai-development-china-2026',

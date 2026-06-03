@@ -880,7 +880,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     url: 'https://www.promptquorum.com/pt/prompt-engineering/best-prompt-testing-evaluation-tools',
-    inLanguage: 'pt',
+    inLanguage: 'pt-BR',
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
     educationalLevel: 'Intermediate',
     proficiencyLevel: 'Intermediate',
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    inLanguage: 'pt',
+    inLanguage: 'pt-BR',
     mainEntity: [
       { '@type': 'Question', name: 'O que é teste de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'O teste de prompts verifica se seus outputs de LLM correspondem a uma resposta de referência ou passam por uma regra LLM-as-judge. Os testes rápidos (unitários) verificam um único prompt em segundos. Os testes lentos (em lote) avaliam um dataset offline em minutos ou horas.' } }, // VERIFY
       { '@type': 'Question', name: 'Quando devo testar prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Teste sempre que mudar um prompt, especialmente antes de fazer deploy em produção. Use teste CI/CD a cada commit e avaliação em lote para a aprovação final.' } }, // VERIFY
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
   itemListSchema: {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    inLanguage: 'pt',
+    inLanguage: 'pt-BR',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Promptfoo: teste CI/CD rápido', url: 'https://promptfoo.dev' }, // VERIFY
       { '@type': 'ListItem', position: 2, name: 'Braintrust: evals em lote lentos', url: 'https://braintrust.dev' }, // VERIFY

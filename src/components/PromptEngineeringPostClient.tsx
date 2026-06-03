@@ -1071,7 +1071,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     es: '← Volver a Prompt Engineering',
   },
   breadcrumbHome: {
-    en: 'Home', de: 'Startseite', fr: 'Accueil', ja: 'ホーム', zh: '主页', es: 'Inicio',
+    en: 'Home', de: 'Startseite', fr: 'Accueil', ja: 'ホーム', zh: '主页', es: 'Inicio', pt: 'Início',
   },
   breadcrumbHub: {
     en: 'Prompt Engineering',
@@ -1080,6 +1080,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: 'プロンプトエンジニアリング',
     zh: '提示词工程',
     es: 'Prompt Engineering',
+    pt: 'Prompt Engineering',
   },
   levelLabel: {
     en: 'Level', de: 'Niveau', fr: 'Niveau', ja: 'レベル', zh: '级别', es: 'Nivel',

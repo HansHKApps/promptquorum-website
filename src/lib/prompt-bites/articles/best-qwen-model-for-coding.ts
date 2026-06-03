@@ -616,7 +616,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       headline: 'Qual é o melhor modelo Qwen para programar? 7B vs 14B vs 32B',
       description: 'Comparativo de tamanhos do Qwen3-Coder: 7B com 5,5 GB de VRAM (79,7% HumanEval), 14B com 9,5 GB (88,0%), 32B com 20,5 GB (91,5%). Escolha o tamanho certo para seu hardware.',
       url: 'https://www.promptquorum.com/pt/prompt-bites/best-qwen-model-for-coding',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
@@ -628,7 +628,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       mainEntity: [
         { '@type': 'Question', name: 'Qual é o melhor modelo Qwen para programar com 8 GB de VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B Q4_K_M — cabe em 5,5 GB de VRAM, HumanEval 79,7%, 8–15 tok/s.' } },
         { '@type': 'Question', name: 'Qual é o melhor modelo Qwen para programar com 12–16 GB de VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 14B Q4_K_M — 9,5 GB de VRAM, HumanEval 88,0%, a melhor relação qualidade/VRAM da família.' } },

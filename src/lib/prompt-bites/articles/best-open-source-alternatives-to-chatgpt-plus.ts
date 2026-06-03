@@ -547,6 +547,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 5, name: 'AnythingLLM', description: 'Melhor para equipes e Q&A de documentos' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Melhores Alternativas Open Source ao ChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'pt' },
+    schema: { '@type': 'TechArticle', headline: 'Melhores Alternativas Open Source ao ChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'pt-BR' },
   },
 }

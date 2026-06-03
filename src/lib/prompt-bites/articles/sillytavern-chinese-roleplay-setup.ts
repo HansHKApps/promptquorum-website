@@ -1381,7 +1381,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       url: 'https://www.promptquorum.com/pt/prompt-bites/sillytavern-chinese-roleplay-setup',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
@@ -1399,7 +1399,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       mainEntity: [
         {
           '@type': 'Question',

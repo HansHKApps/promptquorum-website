@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       headline: 'Requisitos de hardware do DeepSeek V3 localmente: é possível?',
       description: 'DeepSeek V3 (671B MoE) precisa de ~400 GB de RAM — inviável para consumo. Alternativas destiladas práticas para cada nível de VRAM.',
       url: 'https://www.promptquorum.com/pt/prompt-bites/deepseek-v3-local-hardware-requirements',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       mainEntity: [
         { '@type': 'Question', name: 'Quanta RAM o DeepSeek V3 precisa para rodar localmente?', acceptedAnswer: { '@type': 'Answer', text: 'Aproximadamente 400 GB de RAM em quantização Q4_K_M — inviável para hardware de consumo.' } },
         { '@type': 'Question', name: 'Qual é a melhor alternativa local ao DeepSeek V3?', acceptedAnswer: { '@type': 'Answer', text: 'DS-R1-Distill-Qwen-32B com 20,5 GB de VRAM e 94% MATH-500 — supera o V3 completo nos benchmarks de matemática.' } },

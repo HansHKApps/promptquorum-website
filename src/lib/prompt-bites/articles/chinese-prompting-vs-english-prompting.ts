@@ -720,7 +720,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       headline: 'Prompts em chinês vs inglês para LLMs locais 2026',
       description: 'Tokenização CJK: 30–50% menos tokens no Qwen3. System prompts em inglês para melhor raciocínio. Técnica mista recomendada.',
       url: 'https://www.promptquorum.com/pt/prompt-bites/chinese-prompting-vs-english-prompting',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
@@ -732,7 +732,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      inLanguage: 'pt',
+      inLanguage: 'pt-BR',
       mainEntity: [
         { '@type': 'Question', name: 'É melhor o prompting em chinês ou em inglês para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: 'Instruções em inglês + diretiva em chinês é o ideal. O chinês economiza 30–50% de tokens; o inglês produz melhor raciocínio.' } },
         { '@type': 'Question', name: 'Qual idioma usar para os system prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Inglês, mesmo em modelos nativos em chinês como o Qwen3. System prompts em inglês sempre produzem melhor seguimento de instruções.' } },

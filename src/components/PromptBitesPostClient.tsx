@@ -28,6 +28,7 @@ const BREADCRUMB_LABELS: Partial<Record<Language, Record<string, string>>> = {
   ja: { home: 'ホーム', hub: 'Prompt Bites' },
   zh: { home: '主页', hub: 'Prompt Bites' },
   es: { home: 'Inicio', hub: 'Prompt Bites' },
+  pt: { home: 'Início', hub: 'Prompt Bites' },
 }
 
 const BACK_LABEL: Partial<Record<Language, string>> = {

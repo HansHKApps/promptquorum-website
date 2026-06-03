@@ -800,6 +800,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: o que funciona em 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'pt' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: o que funciona em 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'pt-BR' },
   },
 }

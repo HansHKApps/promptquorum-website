@@ -16289,7 +16289,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        inLanguage: 'pt',
+        inLanguage: 'pt-BR',
         url: 'https://www.promptquorum.com/pt/blog/eu-companies-local-qwen-gdpr-shift',
         mainEntity: [
           {
