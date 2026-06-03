@@ -761,6 +761,244 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
     },
+    pt: {
+      theme: 'Techniques',
+      title: 'Self-Consistency Prompting: Gere Múltiplas Respostas, Escolha a Mais Consistente',
+      intro: '**O self-consistency prompting gera 5–20 caminhos de raciocínio independentes para a mesma pergunta e seleciona a resposta que aparece com mais frequência.** Em vez de confiar em uma única resposta de IA (que pode estar errada), você faz a pergunta várias vezes com temperaturas mais altas e deixa a votação por maioria decidir. Essa técnica simples melhora a precisão em matemática, lógica e análise de múltiplos passos em 15–25 pontos percentuais.',
+      leadAnswerBlock: '**Self-consistency prompting: faça ao modelo a mesma pergunta 5–20 vezes com temperatura alta (0,7–1,0) para gerar caminhos de raciocínio diversos, depois escolha a resposta majoritária. A técnica melhorou a precisão em matemática de 56% (chain-of-thought único) para 74% (self-consistency com 40 amostras) no artigo original. Funciona em todos os modelos. Trade-off: 5–20× mais tokens por tarefa.**',
+      publishDate: '2026-03-26',
+      dateModified: '2026-05-04',
+      readTime: '12 min de leitura',
+      educationalLevel: 'Intermediate',
+      audience: 'Desenvolvedores criando pipelines de raciocínio de IA confiáveis, analistas tomando decisões críticas com IA, pesquisadores em prompt engineering',
+      seoTitle: 'Self-Consistency Prompting: Várias Respostas, Escolha a Melhor',
+      metaDescription: 'O self-consistency prompting gera 5–20 caminhos de raciocínio e escolhe a resposta majoritária. Melhora a precisão em matemática de 56% para 74%.',
+      primaryTerm: 'Self-Consistency Prompting',
+      quickFacts: [
+        '**Técnica:** Gere 5–20 caminhos de raciocínio independentes para a mesma pergunta, depois selecione a resposta mais frequente por votação por maioria.',
+        '**Artigo:** Wang et al. (2023), "Self-Consistency Improves Chain of Thought Reasoning in Language Models," ICLR 2023.',
+        '**Resultado principal:** Precisão matemática GSM8K melhorou de 56% (chain-of-thought único) para 74% (self-consistency com 40 amostras) — uma melhoria relativa de 32%.',
+        '**Requisito de temperatura:** Deve ser definida em 0,7–1,0 (temperatura=0 produz saídas idênticas, anulando o propósito).',
+        '**Número de amostras:** 5–10 amostras é o ponto ideal; retornos decrescentes além de 20 amostras.',
+        '**Custo:** 5–20× mais tokens por tarefa; justificado apenas para raciocínio de alto risco onde precisão importa mais que custo.',
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Self-Consistency Prompting: Gere Múltiplas Respostas, Escolha a Mais Consistente',
+        description: 'O self-consistency prompting melhora a precisão da IA em matemática, lógica e análise gerando múltiplos caminhos de raciocínio e selecionando a resposta majoritária.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-05-04',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/self-consistency-prompting',
+        inLanguage: 'pt-BR',
+        keywords: ['self-consistency prompting', 'prompt engineering', 'prompts de raciocínio', 'votação por maioria', 'chain-of-thought', 'melhora de precisão', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Grandes Modelos de Linguagem' },
+          { '@type': 'Thing', name: 'Raciocínio' },
+          { '@type': 'Thing', name: 'Self-Consistency' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: 'Principais Conclusões',
+          isTldr: true,
+          content: [
+            '**Self-consistency** gera 5–20 respostas independentes ao mesmo prompt, depois seleciona a conclusão por votação por maioria — convertendo uma resposta pouco confiável em um consenso estatisticamente robusto.',
+            'A técnica foi introduzida por Wang et al. (2023) e melhorou a precisão em problemas de matemática GSM8K de 56% (chain-of-thought único) para 74% (self-consistency com 40 amostras).',
+            'Use temperatura mais alta (0,7–1,0) para gerar caminhos de raciocínio diversos — temperatura baixa produz saídas idênticas, anulando o propósito.',
+            'Melhor para: matemática, lógica, análise de múltiplos passos e qualquer tarefa onde execuções únicas sejam observavelmente instáveis.',
+            'Trade-off: 5–20× mais tokens consumidos por tarefa — use apenas quando precisão importa mais que custo.',
+            'PromptQuorum estende esse conceito entre modelos: em vez de amostrar um modelo várias vezes, despacha para vários modelos e compara o consenso.',
+            'Self-consistency captura instabilidade de amostragem; consenso multi-modelo captura vieses específicos do modelo. Combine ambos para máxima confiabilidade.',
+          ],
+        },
+        whatIsSelfConsistency: {
+          title: 'O que é Self-Consistency Prompting',
+          content: [
+            '**Self-consistency prompting significa amostrar várias respostas independentes ao mesmo prompt e selecionar a conclusão mais consistente.** Em vez de um único chain of thought, você obtém múltiplos, potencialmente diferentes caminhos.',
+            'A ideia é simples: se o modelo raciocina de várias maneiras diferentes e a maioria dos caminhos converge para a mesma resposta, essa resposta é mais confiável do que uma única execução. Se os caminhos divergem, você sabe que o problema é ambíguo ou difícil e precisa de revisão mais detalhada.',
+            'O self-consistency foi introduzido por Wang et al. em 2023 (ICLR) e mostrou melhorias dramáticas de precisão em matemática, lógica e tarefas de raciocínio.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Por que o Self-Consistency Prompting Importa',
+          content: [
+            '**O self-consistency prompting importa porque modelos de linguagem podem ser instáveis em tarefas de raciocínio difícil — pequenas mudanças na amostragem podem inverter a resposta.** Ao examinar um conjunto de tentativas em vez de uma, você reduz o impacto de qualquer alucinação ou erro isolado.',
+          ],
+          items: [
+            'Problemas de matemática e lógica.',
+            'Questões analíticas de múltiplos passos.',
+            'Decisões com trade-offs sutis onde pequenos erros de raciocínio mudam o resultado.',
+            'Qualquer raciocínio específico de domínio onde a precisão de passagem única esteja abaixo de 90%.',
+          ],
+          callouts: [
+            { type: 'pro-tip', label: 'Dica Pro', text: 'Você não precisa comparar manualmente 10 saídas. Adicione uma etapa de agregação final: cole todas as N respostas em um novo prompt e pergunte "Estas são 10 respostas para a mesma pergunta. Qual resposta aparece com mais frequência? Declare a resposta de consenso e seu nível de confiança." O modelo faz a votação por você.' },
+          ],
+        },
+        accuracyExample: {
+          title: 'O que os Números Mostram',
+          content: [
+            'O artigo original de Wang et al. (2023) demonstrou self-consistency em raciocínio aritmético (benchmark GSM8K). Os resultados mostram um padrão claro:',
+            'O padrão: cada amostra adicional melhora a precisão, mas com retornos decrescentes. Ir de 1 para 5 amostras dá o maior ganho (+10 pontos percentuais). Ir de 20 para 40 adiciona apenas 2 pontos percentuais.',
+          ],
+          columns: ['Método', 'Precisão GSM8K', 'Amostras', 'Multiplicador de custo'],
+          rows: [
+            { 'Método': 'Prompting padrão (sem chain-of-thought)', 'Precisão GSM8K': '18%', 'Amostras': '1', 'Multiplicador de custo': '1×' },
+            { 'Método': 'Chain-of-thought (passagem única)', 'Precisão GSM8K': '56%', 'Amostras': '1', 'Multiplicador de custo': '1,5×' },
+            { 'Método': 'Self-consistency (5 amostras)', 'Precisão GSM8K': '66%', 'Amostras': '5', 'Multiplicador de custo': '7,5×' },
+            { 'Método': 'Self-consistency (10 amostras)', 'Precisão GSM8K': '70%', 'Amostras': '10', 'Multiplicador de custo': '15×' },
+            { 'Método': 'Self-consistency (20 amostras)', 'Precisão GSM8K': '72%', 'Amostras': '20', 'Multiplicador de custo': '30×' },
+            { 'Método': 'Self-consistency (40 amostras)', 'Precisão GSM8K': '74%', 'Amostras': '40', 'Multiplicador de custo': '60×' },
+          ],
+          tableFormat: true,
+          callouts: [
+            { type: 'info', label: 'Você Sabia?', text: 'Self-consistency melhorou a precisão matemática GSM8K de 56% para 74% — uma melhoria relativa de 32% — simplesmente fazendo a mesma pergunta várias vezes e escolhendo a resposta majoritária. Sem mudanças no modelo, sem fine-tuning, sem novos dados.' },
+          ],
+        },
+        howItWorks: {
+          title: 'Como o Self-Consistency Prompting Funciona na Prática',
+          content: [
+            '**Na prática, o self-consistency prompting segue um padrão de duas fases: gerar respostas diversas e depois agregá-las.**',
+            'Um fluxo típico:',
+          ],
+          numberedItems: [
+            'Use um prompt de estilo raciocínio (frequentemente com instruções de chain-of-thought) e defina a temperatura em 0,7–1,0 para que o modelo produza explicações variadas.',
+            'Execute o mesmo prompt várias vezes (por exemplo 5–20) e colete todas as respostas finais. Cada execução deve ser independente.',
+            'Agregue: conte qual resposta aparece com mais frequência, ou agrupe respostas similares. Use a resposta majoritária como resultado final.',
+            'Opcionalmente, peça ao modelo para reconciliar desacordos: "Estas são 10 respostas para a mesma pergunta. Qual aparece com mais frequência? Razões para desacordo?" Isso adiciona metadados de confiança.',
+          ],
+        },
+        selfConsistencyVsMultiModel: {
+          title: 'Self-Consistency vs Consenso Multi-Modelo',
+          content: [
+            'Self-consistency amostra o MESMO modelo várias vezes. Consenso multi-modelo amostra DIFERENTES modelos uma vez cada. Ambos aplicam o mesmo princípio — votação por maioria sobre caminhos de raciocínio diversos — mas capturam diferentes modos de falha.',
+            'PromptQuorum habilita consenso multi-modelo nativamente — despacha um prompt para vários modelos e compara. Para decisões críticas, combine ambos.',
+          ],
+          columns: ['Abordagem', 'Como funciona', 'O que captura', 'Pontos cegos'],
+          rows: [
+            { 'Abordagem': 'Self-consistency (modelo único)', 'Como funciona': 'Mesmo prompt, mesmo modelo, 5–20 execuções em T=0,7+', 'O que captura': 'Instabilidade de amostragem, erros aleatórios', 'Pontos cegos': 'Viés sistemático do modelo (mesmo viés em cada amostra)' },
+            { 'Abordagem': 'Consenso multi-modelo', 'Como funciona': 'Mesmo prompt, modelos diferentes, 1 execução cada', 'O que captura': 'Vieses específicos do modelo, pontos cegos arquiteturais', 'Pontos cegos': 'Todos os modelos podem compartilhar a mesma lacuna de dados de treinamento' },
+            { 'Abordagem': 'Combinado (mais forte)', 'Como funciona': 'Vários modelos × várias amostras cada', 'O que captura': 'Tanto erros aleatórios QUANTO vieses sistemáticos', 'Pontos cegos': 'Custo: N modelos × M amostras = N×M chamadas de API' },
+          ],
+          tableFormat: true,
+        },
+        whenToUse: {
+          title: 'Quando Usar Self-Consistency Prompting',
+          content: [
+            '**Você deve usar self-consistency prompting quando o custo de uma resposta errada é alto e a tarefa envolve raciocínio não trivial.**',
+            'Bons candidatos incluem:',
+          ],
+          items: [
+            'Questões analíticas que impulsionam decisões de negócios ou técnicas.',
+            'Tarefas de codificação complexas onde erros lógicos são custosos.',
+            'Raciocínio educacional ou de estilo exame onde as etapas intermediárias importam.',
+            'Qualquer fluxo de trabalho onde você já observou que execuções únicas são instáveis.',
+            'Problemas de matemática, quebra-cabeças lógicos, síntese de pesquisa, análise financeira.',
+          ],
+          columns: ['Técnica', 'Amostras', 'Custo', 'Melhor para', 'Ganho de precisão'],
+          rows: [
+            { 'Técnica': 'Resposta única (linha de base)', 'Amostras': '1', 'Custo': '1×', 'Melhor para': 'Tarefas simples, baixo risco', 'Ganho de precisão': '—' },
+            { 'Técnica': 'Chain-of-thought', 'Amostras': '1', 'Custo': '~1,5×', 'Melhor para': 'Matemática, lógica, passo a passo', 'Ganho de precisão': 'Moderado (+5–10 pp)' },
+            { 'Técnica': 'Self-consistency', 'Amostras': '5–20', 'Custo': '7,5–30×', 'Melhor para': 'Raciocínio difícil, alto risco', 'Ganho de precisão': 'Grande (+18 pp no GSM8K)' },
+            { 'Técnica': 'Consenso multi-modelo', 'Amostras': '3–5 modelos', 'Custo': '3–5×', 'Melhor para': 'Capturar vieses específicos do modelo', 'Ganho de precisão': 'Moderado-Grande' },
+            { 'Técnica': 'Ambos combinados', 'Amostras': '5 × 3 modelos', 'Custo': '15×', 'Melhor para': 'Máxima confiabilidade', 'Ganho de precisão': 'Mais alta' },
+          ],
+          tableFormat: true,
+          callouts: [
+            { type: 'warning', label: 'Aviso', text: 'Self-consistency com temperatura 0 é inútil — cada amostra produz a saída idêntica. Você deve definir a temperatura em 0,7 ou maior para gerar a variação que torna a votação por maioria informativa. Este é o erro de implementação mais comum.' },
+          ],
+        },
+        commonMistakes: {
+          title: 'Erros Comuns com Self-Consistency Prompting',
+          content: [
+            'Aqui estão as armadilhas que prejudicam o self-consistency e como evitá-las:',
+          ],
+          items: [
+            '**Usar temperatura 0 (modo determinístico).** Por que prejudica: cada amostra é idêntica. Votação em 10 respostas idênticas não diz nada. Solução: defina temperatura em 0,7–1,0.',
+            '**Usar self-consistency para perguntas factuais simples.** Por que prejudica: "Qual é a capital da França?" produz "Paris" sempre. Você gastou 10× os tokens sem ganho de precisão. Solução: reserve self-consistency para tarefas onde precisão de passagem única esteja abaixo de 90%.',
+            '**Gerar poucas amostras (2–3).** Por que prejudica: com 2 amostras que divergem, você não tem desempate. Solução: use pelo menos 5 amostras.',
+            '**Votar no texto completo da resposta em vez da resposta final.** Solução: extraia apenas a resposta final (exija formato "Resposta: X") e vote sobre isso.',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'Self-Consistency Prompting no PromptQuorum',
+          content: [
+            '**PromptQuorum é uma ferramenta de despacho de IA multi-modelo que complementa naturalmente o self-consistency prompting ao permitir que você gere e compare múltiplas respostas facilmente.**',
+            'Com PromptQuorum, você pode:',
+          ],
+          items: [
+            'Reutilizar um framework focado em raciocínio (como TRACE ou APE) e executá-lo várias vezes por modelo para coletar cadeias de pensamento diversas.',
+            'Executar o mesmo prompt de raciocínio em vários modelos em paralelo para ver se convergem para a mesma resposta.',
+            'Salvar fluxos de trabalho de self-consistency como templates para que sua equipe possa aplicar repetidamente "amostrar várias vezes, depois agregar".',
+          ],
+        },
+        howToStart: {
+          title: 'Como Usar Self-Consistency Prompting',
+          numberedItems: [
+            '**Para tarefas de raciocínio complexas, gere múltiplas saídas (5–10) do mesmo prompt com diferentes sementes aleatórias.** Faça a mesma pergunta ao modelo 5 vezes. Você obterá 5 respostas diferentes.',
+            '**Analise as saídas para encontrar padrões consistentes (o "consenso").** Se 4 de 5 respostas concordam em uma resposta, esse acordo é seu sinal de confiança.',
+            '**Use self-consistency para detectar alucinações em tarefas de pesquisa e conhecimento.**',
+            '**Defina a temperatura (T) mais alta (0,7–1,0) para incentivar saídas diversas.** Temperaturas mais baixas (T = 0) produzem a mesma saída determinística sempre, anulando o propósito.',
+            '**Implemente self-consistency em pipelines de produção onde o custo permitir.** Executar 5–10× mais gerações é caro, mas para decisões críticas, o sinal de consenso justifica o custo.',
+          ],
+        },
+        relatedReading: {
+          title: 'Leituras Relacionadas',
+          items: [
+            '[Chain-of-Thought Prompting](/pt/prompt-engineering/chain-of-thought-prompting)',
+            '[Temperatura e Top-P](/pt/prompt-engineering/temperature-and-top-p-control-ai-creativity)',
+            '[Alucinações de IA: Como detectar e parar](/pt/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them)',
+          ],
+        },
+        sources: {
+          title: 'Fontes',
+          items: [
+            '[Wang et al. (2023). "Self-Consistency Improves Chain of Thought Reasoning in Language Models." ICLR 2023. arXiv:2203.11171](https://arxiv.org/abs/2203.11171)',
+            '[Wei et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903](https://arxiv.org/abs/2201.11903)',
+            '[Anthropic. "Prompt Engineering Guide." docs.anthropic.com](https://docs.anthropic.com)',
+          ],
+        },
+        faqSection: {
+          title: 'Perguntas Frequentes',
+          faqs: [
+            { q: 'O que é self-consistency prompting?', a: 'Self-consistency prompting é uma técnica onde você gera múltiplas respostas independentes para a mesma pergunta — cada uma com seu próprio caminho de raciocínio — e depois seleciona a resposta que aparece com mais frequência. Introduzida por Wang et al. (2023) e melhora significativamente a precisão em matemática, lógica e tarefas de raciocínio de múltiplos passos.' },
+            { q: 'Quantas amostras preciso para self-consistency?', a: 'Para a maioria das tarefas, 5–10 amostras fornecem a melhor relação precisão-custo. O artigo original mostrou precisão melhorando rapidamente de 1 para 5 amostras, depois retornos decrescentes além de 20. Comece com 5; aumente para 10–20 apenas para decisões de alto risco.' },
+            { q: 'Qual temperatura devo usar para self-consistency?', a: 'Defina temperatura em 0,7–1,0. A técnica requer caminhos de raciocínio diversos — se temperatura for 0 (determinístico), cada amostra produz a saída idêntica e a votação não tem sentido.' },
+            { q: 'Como o PromptQuorum se relaciona com self-consistency?', a: 'PromptQuorum aplica o mesmo princípio de consenso entre diferentes modelos em vez de dentro de um. Em vez de perguntar ao mesmo modelo 10 vezes, você pergunta a 5 modelos diferentes uma vez cada e compara suas respostas. Onde concordam, a confiança é alta. Isso captura vieses específicos do modelo que o self-consistency de um único modelo não consegue detectar.' },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          { '@type': 'Question', name: 'O que é self-consistency prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Self-consistency prompting é uma técnica onde você gera múltiplas respostas independentes para a mesma pergunta e seleciona a que aparece com mais frequência. Em vez de confiar em uma resposta de IA, você confia no consenso de muitas.' } },
+          { '@type': 'Question', name: 'Quantas amostras preciso?', acceptedAnswer: { '@type': 'Answer', text: 'Para a maioria das tarefas, 5–10 amostras fornecem a melhor relação precisão-custo. Comece com 5; aumente para 10–20 apenas para decisões de alto risco.' } },
+          { '@type': 'Question', name: 'Qual temperatura devo usar?', acceptedAnswer: { '@type': 'Answer', text: 'Defina temperatura em 0,7–1,0. A técnica requer caminhos de raciocínio diversos — se temperatura for 0, cada amostra produz saída idêntica e a votação não tem sentido.' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Self-Consistency Prompting vs Outras Técnicas',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Resposta única (linha de base)', description: 'Uma execução, 1× custo, tarefas simples' },
+          { '@type': 'ListItem', position: 2, name: 'Chain-of-thought', description: 'Uma execução com raciocínio, ~1,5× custo, tarefas moderadas' },
+          { '@type': 'ListItem', position: 3, name: 'Self-consistency', description: '5–20 execuções com votação, 7,5–30× custo, raciocínio difícil' },
+          { '@type': 'ListItem', position: 4, name: 'Consenso multi-modelo', description: '3–5 modelos, 3–5× custo, capturar vieses do modelo' },
+          { '@type': 'ListItem', position: 5, name: 'Ambos combinados', description: '5 amostras × 3 modelos, 15× custo, máxima confiabilidade' },
+        ],
+      },
+    },
     fr: {
       freshness_tier: 'evergreen',
       theme: 'Techniques',

@@ -1279,6 +1279,364 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    pt: {
+      theme: 'Frameworks',
+      title: 'O Framework RTF: Papel, Tarefa, Formato (2026)',
+      intro: 'O Framework RTF é uma estrutura de prompt leve de três componentes: Papel (quem é o modelo), Tarefa (o que fazer) e Formato (como produzir a saída). Funciona com GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e modelos locais. Use-o como padrão para tarefas rotineiras — resumos, revisões de código, e-mails, relatórios — e migre para CO-STAR ou SPECS somente quando precisar de mais estrutura.',
+      publishDate: '2026-03-24',
+      readTime: '6 min de leitura',
+      seoTitle: 'Framework RTF: Estrutura de Prompt Papel, Tarefa, Formato',
+      metaDescription: 'RTF = Papel + Tarefa + Formato. A estrutura de prompt de 3 campos que supera abordagens verbosas em tarefas rotineiras. Templates, exemplos e guia de migração.',
+      ogDescription: 'RTF: framework de prompt de 3 componentes. Papel, Tarefa, Formato. Aprenda por quê.',
+      twitterDescription: 'RTF = Papel + Tarefa + Formato. Estrutura de prompt mais simples para tarefas rotineiras. Por que equipes escolhem isso em vez de frameworks complexos.',
+      leadAnswerBlock: '**RTF = Papel, Tarefa, Formato. Três componentes, zero sobrecarga. Defina quem é o modelo, o que deve fazer e como a resposta deve parecer. Use-o como padrão para tarefas rotineiras — resumos, revisões de código, e-mails, notas de reunião. Mude para CO-STAR quando tom/audiência importam, SPECS quando schema importa, TRACE quando raciocínio importa. RTF é o framework mais leve que ainda impõe estrutura.**',
+      quickFacts: [
+        'RTF = Papel + Tarefa + Formato — o framework de prompt estruturado mais leve (3 componentes vs 5-6 para CO-STAR/SPECS)',
+        'Projetado para tarefas rotineiras e repetíveis: resumos, e-mails, revisões de código, notas de reunião',
+        'Funciona com GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e modelos locais (Ollama, LM Studio)',
+        'RTF é o framework de início recomendado — migre para CO-STAR, SPECS ou TRACE somente quando atingir uma limitação',
+        'O campo Formato pode carregar restrições e exemplos, tornando RTF mais flexível do que seu número de 3 componentes sugere',
+        'O PromptQuorum inclui RTF como framework integrado com despacho multi-modelo para 25+ modelos',
+      ],
+      toc: [
+        { label: 'Principais Conclusões', anchor: 'key-takeaways' },
+        { label: 'O que é o Framework RTF?', anchor: 'what-is-rtf-framework' },
+        { label: 'Os Três Componentes RTF', anchor: 'three-components' },
+        { label: 'Por que RTF é Útil', anchor: 'why-rtf-useful' },
+        { label: 'Exemplo: Prompt RTF ruim vs bom', anchor: 'bad-vs-good' },
+        { label: 'Quando Usar RTF', anchor: 'when-to-use' },
+        { label: 'Quando RTF não é a Escolha Certa', anchor: 'when-not-to-use' },
+        { label: 'Tabelas de Comparação', anchor: 'comparison-tables' },
+        { label: 'Como Escrever um Prompt RTF', anchor: 'how-to-write' },
+        { label: 'Cinco Exemplos Reais de RTF', anchor: 'five-examples' },
+        { label: 'Combinando RTF com Outros Frameworks', anchor: 'combining-rtf' },
+        { label: 'Erros Comuns de RTF', anchor: 'common-mistakes' },
+        { label: 'Como o PromptQuorum Implementa RTF', anchor: 'promptquorum-implementation' },
+        { label: 'Perguntas Frequentes', anchor: 'faq' },
+        { label: 'Fontes', anchor: 'sources' },
+      ],
+      educationalLevel: 'Intermediate',
+      audience: 'Desenvolvedores construindo aplicações LLM, gerentes de produto projetando fluxos de trabalho de IA, equipes construindo ferramentas com IA',
+      primaryTerm: 'Framework RTF',
+      aboutTopics: ['Prompting RTF', 'Frameworks de Prompt', 'Prompt Engineering'],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'O Framework RTF: Papel, Tarefa, Formato (2026)',
+        description: 'Como o Framework RTF (Papel, Tarefa, Formato) funciona, quando usá-lo e como o PromptQuorum oferece RTF como opção integrada.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-05-04',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/rtf-framework',
+        inLanguage: 'pt-BR',
+        keywords: ['Framework RTF', 'Papel Tarefa Formato', 'frameworks de prompt', 'prompt engineering', 'PromptQuorum', 'prompting LLM'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Framework RTF' },
+          { '@type': 'Thing', name: 'Frameworks de Prompt' },
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+      },
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: 'Principais Conclusões',
+          isTldr: true,
+          items: [
+            'RTF = Papel (quem é o modelo), Tarefa (o que fazer), Formato (como produzir a saída). Três componentes simples.',
+            'Use RTF como padrão para tarefas rotineiras: resumos, revisões de código, e-mails, relatórios, notas de reunião.',
+            'O campo Formato é onde RTF agrega mais valor — estrutura explícita produz saída dramaticamente mais consistente.',
+            'RTF lida com 80% das tarefas LLM cotidianas. Migre para CO-STAR (tom/audiência), SPECS (restrições) ou TRACE (raciocínio) somente quando RTF atingir um limite.',
+            'Prompts RTF bem escritos são templates reutilizáveis. Salve-os e reutilize 52 vezes por ano em vez de reescrever toda semana.',
+            'Funciona com GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e modelos locais (Ollama, LM Studio).',
+            'Use o PromptQuorum para testar o mesmo prompt RTF em vários modelos lado a lado.',
+          ],
+        },
+        whatIsRTFFramework: {
+          id: 'what-is-rtf-framework',
+          title: 'O que é o Framework RTF?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'RTF é um esqueleto de prompt de três partes — Papel, Tarefa, Formato — que dá ao modelo estrutura suficiente para tarefas rotineiras sem a sobrecarga de frameworks maiores.' },
+            { type: 'in-plain-terms', text: 'Diga à IA quem ser (Papel), o que fazer (Tarefa) e como formatar a resposta (Formato). É isso. Três coisas. Funciona para 80% das tarefas cotidianas. Quando não for mais suficiente, você migra para CO-STAR ou SPECS.' },
+          ],
+          content: [
+            '**O Framework RTF é um padrão de prompt de três partes que diz ao modelo quem ele é, o que fazer e exatamente como a resposta deve parecer.** Em vez de enviar uma pergunta solta, você especifica Papel, Tarefa e Formato explicitamente. Isso funciona com GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e modelos locais que você executa via Ollama ou LM Studio.',
+            'RTF é intencionalmente mínimo. Com apenas três campos, é fácil de lembrar, rápido de preencher e flexível o suficiente para muitas tarefas cotidianas. Você pode tratá-lo como um "esqueleto de prompt padrão" sempre que não tiver certeza de qual framework especializado usar.',
+          ],
+        },
+        threeComponents: {
+          id: 'three-components',
+          title: 'Os Três Componentes RTF',
+          content: [
+            '**Um prompt RTF sólido define claramente cada um dos três componentes para que o modelo não tenha ambiguidade sobre seu trabalho.** Você pode escrevê-los como linhas rotuladas ou como uma frase que ainda contenha as três partes.',
+            'Definições típicas:',
+          ],
+          items: [
+            'Papel: A perspectiva ou experiência que o modelo deve adotar (por exemplo "Você é um analista de dados sênior").',
+            'Tarefa: A ação concreta que você quer, descrita em uma ou duas frases.',
+            'Formato: A estrutura, comprimento e estilo da saída (por exemplo "3 tópicos mais um resumo de 2 frases").',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Formato É o Diferencial',
+              text: 'Papel e Tarefa são óbvios — a maioria das pessoas já diz o que quer. Formato é onde RTF agrega valor real. "3 tópicos, máx 50 palavras cada, markdown" produz saída dramaticamente mais consistente do que "me dê um resumo". O campo Formato é a arma secreta do RTF.',
+            },
+          ],
+        },
+        whyRTFUseful: {
+          id: 'why-rtf-useful',
+          title: 'Por que RTF é Útil',
+          content: [
+            '**O Framework RTF é útil porque lhe dá a maioria dos benefícios de frameworks mais complexos com quase nenhuma sobrecarga.** Ele força você a tomar três decisões — quem, o quê e como — antes de enviar um prompt.',
+            'Vantagens práticas incluem:',
+          ],
+          items: [
+            'Escrita de prompts mais rápida do que frameworks de múltiplas seções para trabalho rotineiro.',
+            'Melhor consistência entre modelos e execuções, já que o formato é sempre explícito.',
+            'Onboarding fácil para colegas de equipe que podem aprender RTF em alguns minutos e reutilizá-lo em todo lugar.',
+          ],
+        },
+        badVsGood: {
+          id: 'bad-vs-good',
+          title: 'Exemplo: Prompt RTF ruim vs bom',
+          promptExamples: [
+            {
+              bad: 'Resuma esta reunião.',
+              good: 'Papel: Você é um gerente de operações resumindo uma reunião de status do projeto para a liderança sênior. Tarefa: Leia a transcrição e identifique as principais decisões, riscos abertos e próximos passos discutidos na reunião. Formato: Produza um resumo em Markdown com três seções (`Decisões`, `Riscos`, `Próximos passos`). Em cada seção, use 3-5 tópicos. Mantenha o resumo total abaixo de 250 palavras.',
+              badLabel: 'Solicitação não estruturada',
+              goodLabel: 'Prompt RTF',
+            },
+          ],
+          content: [
+            'A versão RTF diz ao modelo exatamente como pensar sobre o conteúdo e como empacotar o resultado para que outros possam usá-lo imediatamente.',
+          ],
+        },
+        whenToUse: {
+          id: 'when-to-use',
+          title: 'Quando Usar RTF',
+          content: [
+            '**Você deve usar o Framework RTF quando quiser um padrão simples e reutilizável que ainda imponha clareza e estrutura.** É um bom padrão sempre que você não precisar de especificações longas ou rastros de raciocínio de múltiplos passos.',
+            'Casos de uso típicos incluem:',
+          ],
+          items: [
+            'Relatórios curtos, recapitulações e resumos para e-mails ou chat.',
+            'Redigir respostas para clientes ou partes internas com estrutura clara.',
+            'Gerar pequenos trechos de código ou refatorações com formato de saída especificado.',
+            'Peças de conteúdo rápidas como descrições de produtos, entradas de FAQ ou listas de verificação simples.',
+          ],
+        },
+        whenNotToUse: {
+          id: 'when-not-to-use',
+          title: 'Quando RTF não é a Escolha Certa',
+          tableFormat: true,
+          columns: ['Cenário', 'Limitação do RTF', 'Use em vez disso'],
+          rows: [
+            { 'Cenário': 'Conteúdo voltado ao cliente onde tom e audiência são críticos', 'Limitação do RTF': 'Sem campo explícito de Audiência ou Tom', 'Use em vez disso': 'CO-STAR (inclui Estilo, Audiência, Tom) ou CRAFT (Restrições, Papel, Audiência, Formato, Tom)' },
+            { 'Cenário': 'Imposição estrita de estrutura ou schema de dados necessária', 'Limitação do RTF': 'Campo Formato pode solicitar JSON mas não oferece sintaxe de restrições', 'Use em vez disso': 'SPECS (inclui campo de Restrições explícito)' },
+            { 'Cenário': 'Raciocínio de múltiplos passos ou lógica de decisão necessária', 'Limitação do RTF': 'Sem campo de raciocínio passo a passo explícito', 'Use em vez disso': 'TRACE (inclui Gatilho, Resposta, Ação, Consequência, Avaliação)' },
+            { 'Cenário': 'Fluxos de trabalho complexos com lógica condicional', 'Limitação do RTF': 'Único Papel/Tarefa/Formato por prompt', 'Use em vez disso': 'APE (Ação, Processo, Exemplos) ou fluxos de trabalho multi-turno personalizados' },
+          ],
+        },
+        comparisonTables: {
+          id: 'comparison-tables',
+          title: 'Tabelas de Comparação',
+          content: [
+            '**Como RTF se compara com outros frameworks principais:**',
+          ],
+        },
+        dimensionComparison: {
+          title: 'Comparação por Dimensão',
+          tableFormat: true,
+          columns: ['Dimensão', 'RTF', 'CO-STAR', 'SPECS', 'TRACE'],
+          rows: [
+            { 'Dimensão': 'Número de campos', 'RTF': '3 (Papel, Tarefa, Formato)', 'CO-STAR': '6 (Contexto, Objetivo, Estilo, Audiência, Resposta, Tom)', 'SPECS': '5 (Configurações, Persona, Exemplos, Padrão, Restrições)', 'TRACE': '5 (Gatilho, Resposta, Ação, Consequência, Avaliação)' },
+            { 'Dimensão': 'Tempo de configuração', 'RTF': '30 segundos', 'CO-STAR': '2-3 minutos', 'SPECS': '3-5 minutos', 'TRACE': '2-3 minutos' },
+            { 'Dimensão': 'Melhor para', 'RTF': 'Tarefas rotineiras e repetíveis', 'CO-STAR': 'Controle de tom e audiência', 'SPECS': 'Schemas e restrições rígidas', 'TRACE': 'Passos de raciocínio explícitos' },
+            { 'Dimensão': 'Consistência da saída', 'RTF': 'Boa', 'CO-STAR': 'Excelente', 'SPECS': 'Excelente', 'TRACE': 'Boa' },
+            { 'Dimensão': 'Requer exemplos?', 'RTF': 'Não', 'CO-STAR': 'Opcional', 'SPECS': 'Sim (padrões sólidos)', 'TRACE': 'Não' },
+          ],
+        },
+        pairwiseComparison: {
+          title: 'Comparação em Pares (RTF vs Outros)',
+          tableFormat: true,
+          columns: ['Comparação', 'Vencedor', 'Por quê'],
+          rows: [
+            { 'Comparação': 'RTF vs CO-STAR', 'Vencedor': 'CO-STAR (se audiência importa)', 'Por quê': 'CO-STAR inclui campos explícitos de Audiência e Tom. RTF força o tom no Papel ou Formato, o que fica complicado. Se você não se importa com voz, RTF é mais rápido.' },
+            { 'Comparação': 'RTF vs SPECS', 'Vencedor': 'SPECS (se restrições rígidas são necessárias)', 'Por quê': 'SPECS inclui um campo de Restrições dedicado e espera exemplos. RTF pode solicitar restrições no Formato mas carece de sintaxe estruturada. SPECS vence para JSON, CSV ou dados estruturados.' },
+            { 'Comparação': 'RTF vs TRACE', 'Vencedor': 'TRACE (se raciocínio importa)', 'Por quê': 'TRACE modela explicitamente causa e efeito (Gatilho → Resposta → Ação → Consequência). RTF não tem campo de passos de raciocínio. Use TRACE para lógica complexa, RTF para saída simples.' },
+            { 'Comparação': 'RTF vs Chain-of-Thought', 'Vencedor': 'Complementares', 'Por quê': 'RTF define papel e formato de saída. CoT melhora o raciocínio. Combine-os: use RTF para estruturar o prompt, adicione "pense passo a passo" para matemática ou lógica complexas.' },
+          ],
+        },
+        howToWrite: {
+          id: 'how-to-write',
+          title: 'Como Escrever um Prompt RTF',
+          numberedItems: [
+            '**Papel: Defina quem a IA está desempenhando.** Papéis específicos superam genéricos. Ruim: "Você é útil." Bom: "Você é um engenheiro backend sênior revisando código por regressões de desempenho." Quanto mais específico, mais consistente a saída.',
+            '**Tarefa: Declare o que a IA deve fazer.** Seja concreto. Ruim: "Resuma isso." Bom: "Identifique as três principais decisões, riscos abertos e próximos passos discutidos."',
+            '**Formato: Especifique estrutura, comprimento e estilo.** É aqui que RTF agrega valor. Ruim: (Formato ausente). Bom: "3 tópicos, máx 50 palavras cada, markdown, abaixo de 200 palavras no total."',
+            '**Separe Tarefa e Formato.** Misture-os em um bloco e nenhum fica com especificidade suficiente. Mantenha-os distintos.',
+            '**Sempre inclua Formato, mesmo quando parecer óbvio.** Sem ele, os modelos padrão para parágrafos em prosa.',
+          ],
+        },
+        fiveExamples: {
+          id: 'five-examples',
+          title: 'Cinco Exemplos Reais de RTF',
+          content: ['Aqui estão cinco prompts RTF prontos para produção para fluxos de trabalho comuns:'],
+        },
+        example1: {
+          title: 'Exemplo 1: Resumo de Status Semanal',
+          content: [
+            '**Papel:** Você é um gerente de operações escrevendo um resumo de status semanal para a liderança executiva.',
+            '**Tarefa:** Resuma o progresso do projeto desta semana, as principais decisões tomadas, os riscos identificados e as prioridades da próxima semana.',
+            '**Formato:** Markdown, quatro seções (Resumo, Decisões, Riscos, Próxima Semana), 3-5 tópicos por seção, máx 300 palavras.',
+          ],
+        },
+        example2: {
+          title: 'Exemplo 2: Feedback de Revisão de Código',
+          content: [
+            '**Papel:** Você é um engenheiro backend sênior revisando código por manutenibilidade, desempenho e segurança.',
+            '**Tarefa:** Revise este bloco de código e identifique quaisquer problemas, sugira melhorias e avalie a qualidade geral.',
+            '**Formato:** Markdown, três seções (Problemas Encontrados, Melhorias, Avaliação de Qualidade 1-5), blocos de código para exemplos.',
+          ],
+        },
+        example3: {
+          title: 'Exemplo 3: Rascunho de E-mail ao Cliente',
+          content: [
+            '**Papel:** Você é um gerente de sucesso do cliente redigindo uma resposta profissional e empática a uma reclamação do cliente.',
+            '**Tarefa:** Aborde a preocupação, peça desculpas quando apropriado, explique a resolução e restaure a confiança.',
+            '**Formato:** Formato de e-mail (saudação, 2-3 parágrafos, fechamento), tom profissional, 150-250 palavras.',
+          ],
+        },
+        example4: {
+          title: 'Exemplo 4: Notas de Reunião para Itens de Ação',
+          content: [
+            '**Papel:** Você é um coordenador de projetos extraindo itens de ação de notas de reunião brutas.',
+            '**Tarefa:** Identifique as decisões tomadas, os riscos discutidos e os próximos passos com responsáveis e prazos.',
+            '**Formato:** Markdown com três seções (Decisões, Riscos, Itens de Ação), itens de ação como listas de verificação com responsável e data de vencimento.',
+          ],
+        },
+        example5: {
+          title: 'Exemplo 5: Documentação de Produto para Usuários Não Técnicos',
+          content: [
+            '**Papel:** Você é um redator técnico explicando um recurso a usuários não técnicos em linguagem simples.',
+            '**Tarefa:** Explique o que este recurso faz, por que eles podem querer usá-lo e como usá-lo em três passos simples.',
+            '**Formato:** 1 frase de introdução, 3 passos numerados com exemplos, 1 frase de conclusão. Evite jargão.',
+          ],
+        },
+        combiningRTF: {
+          id: 'combining-rtf',
+          title: 'Combinando RTF com Outros Frameworks',
+          content: [
+            '**Você deve combinar o Framework RTF com outros frameworks tratando RTF como seu padrão leve e mudando para frameworks mais pesados quando as restrições aumentam.** Um padrão prático é:',
+          ],
+          items: [
+            'Comece com RTF para a maioria das novas tarefas onde você só precisa de estrutura clara rapidamente.',
+            'Mova para SPECS quando precisar de schemas rígidos, exemplos e restrições.',
+            'Use TRACE ou APE quando quiser passos de raciocínio explícitos antes da resposta final.',
+            'Use frameworks criativos como CRAFT quando audiência e tom forem centrais.',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Erros Comuns de RTF',
+          mistakes: [
+            {
+              mistake: 'Papel vago — "Você é um assistente útil"',
+              problem: '"Assistente útil" é o padrão. Não acrescenta nada. Um papel vago significa que o modelo escolhe sua própria perspectiva, que varia entre execuções.',
+              fix: 'Seja específico: "Você é um engenheiro backend sênior" ou "Você é um gerente de marketing B2B focado em CFOs." Quanto mais específico o papel, mais consistente a saída.',
+            },
+            {
+              mistake: 'Tarefa e Formato misturados em um blob',
+              problem: '"Resuma esta reunião em tópicos" conflate tarefa e formato. Quando misturados, nenhum fica com especificidade suficiente.',
+              fix: 'Separe-os: Tarefa = "Identifique decisões, riscos e próximos passos." Formato = "Markdown, 3 seções, 3-5 tópicos cada, abaixo de 250 palavras."',
+            },
+            {
+              mistake: 'Formato completamente ausente',
+              problem: 'Sem um campo de Formato explícito, o modelo padrão para parágrafos em prosa — que pode não ser o que você precisa.',
+              fix: 'Sempre especifique o Formato. Mesmo "Formato: 3 tópicos" é melhor do que nada.',
+            },
+            {
+              mistake: 'Usar RTF para tarefas que precisam de controle de audiência/tom',
+              problem: 'RTF não tem campo de Audiência ou Tom. Se você está escrevendo conteúdo voltado ao cliente onde a voz importa, RTF força você a colocar o tom no Papel ou Formato.',
+              fix: 'Mude para CRAFT (que tem campos explícitos de Audiência e Tom) ou CO-STAR quando a voz importar.',
+            },
+            {
+              mistake: 'Nunca salvar prompts RTF como templates',
+              problem: 'Escrever o mesmo prompt RTF de "resumo de reunião" do zero toda semana desperdiça tempo e introduz inconsistência.',
+              fix: 'Salve prompts RTF funcionando como templates nomeados no PromptQuorum. Reutilize-os trocando apenas os dados de entrada.',
+            },
+          ],
+        },
+        promptquorumImplementation: {
+          id: 'promptquorum-implementation',
+          title: 'Como o PromptQuorum Implementa o Framework RTF',
+          content: [
+            '**O PromptQuorum é uma ferramenta de despacho de IA multi-modelo que inclui o Framework RTF como uma de suas estruturas de prompt integradas para que os usuários possam aplicar prompting Papel–Tarefa–Formato de maneira consistente.** Quando você escolhe a opção RTF no PromptQuorum, a interface expõe campos para Papel, Tarefa e Formato e os monta em uma única instrução bem formada.',
+            'No PromptQuorum, o Framework RTF permite que você:',
+          ],
+          items: [
+            'Preencha Papel, Tarefa e Formato uma vez e envie o mesmo prompt estruturado para 25+ modelos como GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e modelos locais configurados via Ollama ou LM Studio.',
+            'Salve prompts RTF como templates para fluxos de trabalho recorrentes — por exemplo "resumo de status semanal", "rascunho de resposta ao cliente" ou "recapitulação de bug report".',
+            'Compartilhe templates RTF com sua equipe para que mesmo não especialistas possam criar prompts que produzam saídas consistentes e estruturadas.',
+            'Teste o mesmo prompt RTF em vários modelos lado a lado para encontrar o melhor para seu caso de uso.',
+          ],
+        },
+        faqSection: {
+          title: 'Perguntas Frequentes',
+          id: 'faq',
+          faqs: [
+            {
+              q: 'O que significa RTF?',
+              a: 'RTF significa Papel (Role), Tarefa (Task), Formato (Format) — uma estrutura de prompt de três partes onde Papel define quem o modelo deve ser, Tarefa especifica o que o modelo deve fazer, e Formato descreve a estrutura da saída desejada.',
+            },
+            {
+              q: 'Como RTF é diferente de CO-STAR?',
+              a: 'RTF é mínimo e focado em três campos: Papel, Tarefa, Formato. CO-STAR é mais abrangente, adicionando Contexto, Estilo, Audiência e Tom. Use RTF para tarefas rápidas e diretas; use CO-STAR quando audiência e tom importam.',
+            },
+            {
+              q: 'Quando devo usar RTF?',
+              a: 'Use RTF quando precisar de saída estruturada de um papel claramente definido. Exemplos: resumir reuniões, gerar código, escrever e-mails em formato específico ou criar documentação. RTF é ideal para fluxos de trabalho baseados em templates.',
+            },
+            {
+              q: 'Posso combinar RTF com outros frameworks?',
+              a: 'Sim. Você pode usar RTF para geração de saída inicial, então aplicar RISEN para refinamento iterativo. Ou combine RTF com Chain-of-Thought para adicionar raciocínio. Misture e combine frameworks para fluxos de trabalho complexos.',
+            },
+            {
+              q: 'O RTF funciona com todos os modelos de linguagem?',
+              a: 'Sim. RTF é agnóstico quanto ao framework. Funciona com GPT-5.5, Claude, Gemini, modelos open-source como Llama 3.2 e modelos locais via Ollama ou LM Studio. Os princípios se aplicam universalmente a qualquer LLM que siga instruções.',
+            },
+          ],
+        },
+        relatedReading: {
+          items: [
+            { title: 'Chain-of-Thought Prompting', url: '/pt/prompt-engineering/chain-of-thought-prompting' },
+            { title: 'O que é Prompt Engineering?', url: '/pt/prompt-engineering/what-is-prompt-engineering' },
+            { title: 'Framework CO-STAR', url: '/pt/prompt-engineering/co-star-framework' },
+          ],
+        },
+        sources: {
+          items: [
+            'Schulhoff, L., et al. (2024). Prompt Engineering Guide. [https://www.promptingguide.ai](https://www.promptingguide.ai)',
+            'Brown, T. B., et al. (2020). "Language Models are Few-Shot Learners." OpenAI. arXiv:2005.14165',
+            'OpenAI. (2026). Prompt Engineering Best Practices. [https://platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
+            'Anthropic. (2026). Prompt Engineering — Claude API Documentation. [https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering)',
+          ],
+        },
+      },
+    },
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',

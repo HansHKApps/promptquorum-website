@@ -3,7 +3,7 @@
 // Generated: 2026-04-26T09:45:32.245Z
 
 import type { Language } from "@/lib/blog/blogContent";
-import { contextWindowsDe, contextWindowsFr, contextWindowsJa, contextWindowsZh, contextWindowsEs } from "@/lib/prompt-engineering/contextWindowsTranslations";
+import { contextWindowsDe, contextWindowsFr, contextWindowsJa, contextWindowsZh, contextWindowsEs, contextWindowsPt } from "@/lib/prompt-engineering/contextWindowsTranslations";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
 
@@ -318,6 +318,78 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sections: contextWindowsEs
+    },
+    pt: {
+      theme: 'Fundamentals',
+      title: 'Janelas de contexto explicadas: Por que a IA esquece (e o que fazer)',
+      intro: 'Os LLMs não têm memória de longo prazo — eles apenas "veem" uma janela deslizante de tokens recentes. Aprenda por que a IA esquece o contexto, como estruturar prompts para ficar dentro dos limites e como gerenciar janelas de contexto em modelos na nuvem e locais.',
+      publishDate: '2026-03-22',
+      seoTitle: 'Janelas de contexto 2026: por que a IA esquece e como gerenciar',
+      metaDescription: 'As janelas de contexto limitam a entrada dos LLMs: ultrapasse o limite e as mensagens antigas desaparecem. Aprenda a controlar isso no GPT-5.5, Claude e Ollama.',
+      readTime: '11 min de leitura',
+      educationalLevel: 'Beginner',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/context-windows-explained',
+        inLanguage: 'pt-BR',
+        headline: 'Janelas de contexto explicadas: Por que a IA esquece (e o que fazer)',
+        description: 'Os LLMs não têm memória de longo prazo — eles apenas "veem" uma janela deslizante de tokens recentes. Aprenda por que a IA esquece o contexto, como estruturar prompts e estratégias práticas para gerenciar janelas de contexto em diferentes modelos.',
+        datePublished: '2026-03-22',
+        dateModified: '2026-03-22',
+        keywords: ['janela de contexto', 'tokens', 'memória LLM', 'design de prompts', 'a IA esquece', 'limites de contexto'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/pt/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          { '@type': 'Question', name: 'O modelo lembra dos meus chats anteriores?', acceptedAnswer: { '@type': 'Answer', text: 'Não. Cada nova sessão de conversa começa com zero histórico. O modelo só vê os tokens dentro da janela de contexto atual. Se você quiser fazer referência a um chat anterior, precisa copiar as partes relevantes para a conversa atual.' } },
+          { '@type': 'Question', name: 'Por que a IA ignorou uma instrução que dei há 20 mensagens?', acceptedAnswer: { '@type': 'Answer', text: 'Essa instrução provavelmente saiu da janela de contexto. O modelo não a vê mais, portanto não pode segui-la. Solução: repita as instruções críticas no seu prompt do sistema ou peça ao modelo que recapitule e reinsira a instrução no meio da conversa.' } },
+          { '@type': 'Question', name: 'Uma janela de contexto maior é sempre melhor?', acceptedAnswer: { '@type': 'Answer', text: 'Não. Uma janela maior permite incluir mais conteúdo, mas também aumenta o custo (mais tokens a processar) e, para modelos locais, o uso de VRAM. Escolha uma janela de contexto adequada à sua tarefa: 4k para perguntas e respostas simples, 32k para conversas longas, 128k+ para análise de documentos. Maior não é "melhor" — *adequado* é melhor.' } },
+          { '@type': 'Question', name: 'Como sei quando atingi o limite de contexto?', acceptedAnswer: { '@type': 'Answer', text: 'As respostas do modelo mudam de tom, contradizem instruções anteriores ou perdem o rastro de detalhes definidos antes. Use a verificação de estouro de contexto do PromptQuorum antes de enviar — ele avisa quando você está se aproximando do limite.' } },
+          { '@type': 'Question', name: 'Como o tamanho da janela de contexto afeta a VRAM em modelos locais?', acceptedAnswer: { '@type': 'Answer', text: 'Um modelo 7B (quantização Q4_K_M) precisa de ~5 GB de VRAM a 4k de contexto, ~8–10 GB a 32k e ~12–14 GB a 128k. O aumento não é estritamente linear. Consulte a calculadora de VRAM do PromptQuorum para conhecer o limite do seu hardware.' } },
+          { '@type': 'Question', name: 'Ferramentas como o PromptQuorum podem evitar o estouro de contexto?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O PromptQuorum verifica a contagem de tokens do seu prompt, a janela de contexto configurada e o limite real do seu modelo, e então avisa antes do envio se o estouro for provável. Você pode então reduzir ou resumir antes de continuar.' } },
+          { '@type': 'Question', name: 'Modelos diferentes lidam de forma diferente com contextos longos?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O Claude Opus 4.8 mantém bem o foco em 200k tokens. O GPT-5.5 é sólido em 128k. Modelos menores (por exemplo, LLaMA 3.1 7B) às vezes perdem a coerência do raciocínio além de 8k–16k, mesmo que sua janela de contexto seja tecnicamente maior. A abordagem mais segura: teste seu modelo e tarefa específicos.' } },
+          { '@type': 'Question', name: 'Qual é a diferença entre janela de contexto e memória do modelo?', acceptedAnswer: { '@type': 'Answer', text: 'A janela de contexto é o buffer ativo de tokens que o modelo lê em cada inferência — ela contém sua conversa atual. A memória do modelo (pesos) é fixa após o treinamento e contém padrões gerais da linguagem. Uma janela de contexto amplia o que o modelo pode referenciar em uma resposta; os pesos do modelo não podem ser alterados em tempo de execução.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'pt-BR',
+        name: 'Como gerenciar janelas de contexto nos seus prompts',
+        description: 'Seis passos para ficar dentro dos limites de contexto dos LLMs: verifique os limites do modelo, coloque as instruções no início, resuma conversas longas, processe documentos em seções, monitore o estouro e ajuste o tamanho do contexto do LLM local à VRAM disponível.',
+        totalTime: 'PT10M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Verifique o tamanho da janela de contexto do seu modelo', text: 'GPT-5.5 = 128k tokens, Claude Opus 4.8 = 200k tokens, Gemini 3.1 Pro = 2M tokens. Modelos locais variam (tipicamente 4k–128k). Conheça seu limite antes de começar.' },
+          { '@type': 'HowToStep', position: 2, name: 'Coloque as instruções críticas no início do prompt do sistema', text: 'Posicione primeiro as restrições inegociáveis e as definições de função. Assim que um turno sai do contexto, as instruções enterradas 20 turnos depois ficam invisíveis para o modelo.' },
+          { '@type': 'HowToStep', position: 3, name: 'Resuma conversas longas antes de continuar', text: 'A cada 10–15 trocas, pergunte ao modelo: "Quais são as 5 decisões mais importantes que tomamos?" Em seguida, use esse resumo como contexto para o seu próximo turno.' },
+          { '@type': 'HowToStep', position: 4, name: 'Para documentos longos, processe em seções, não como um todo', text: 'Divida um relatório de 100 páginas em capítulos. Faça perguntas focadas por capítulo e depois combine os resumos no final.' },
+          { '@type': 'HowToStep', position: 5, name: 'Monitore o estouro de contexto antes de enviar', text: 'Use o PromptQuorum ou conte manualmente: (contexto disponível) − (tokens do prompt do sistema) − (tokens de saída esperados) = (tokens de entrada máximos). Fique dentro desse orçamento.' },
+          { '@type': 'HowToStep', position: 6, name: 'Para LLMs locais, ajuste a janela de contexto à sua VRAM', text: 'O tamanho da janela de contexto impulsiona o crescimento da VRAM do cache KV. Um modelo 7B (Q4_K_M) usa ~8–10 GB a 32k de contexto e ~12–14 GB a 128k. Teste o limite do seu hardware em vez de maximizar tudo automaticamente.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        name: 'Tamanhos de janela de contexto por modelo — 2026',
+        description: 'Comparação dos tamanhos de janela de contexto nos principais LLMs, incluindo GPT-5.5, Claude Opus, Gemini e modelos locais via Ollama.',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'GPT-5.5 mini', description: '4k tokens (≈ 3.000 palavras)' },
+          { '@type': 'ListItem', position: 2, name: 'GPT-5.5', description: '128k tokens (≈ 96.000 palavras)' },
+          { '@type': 'ListItem', position: 3, name: 'Claude Opus 4.8', description: '200k tokens (≈ 150.000 palavras)' },
+          { '@type': 'ListItem', position: 4, name: 'Gemini 3.1 Pro', description: '2.000.000 tokens (≈ 1.500.000 palavras)' },
+          { '@type': 'ListItem', position: 5, name: 'Modelos locais (Ollama, LM Studio)', description: 'Configurável de 4k a 128k+, limitado pela VRAM disponível' },
+        ],
+      },
+      sections: contextWindowsPt
     },
     fr: {
       theme: 'Fundamentals',

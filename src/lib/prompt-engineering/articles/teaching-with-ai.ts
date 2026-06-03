@@ -1636,6 +1636,113 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
 
+    pt: {
+      specific_year: 2026,
+      theme: 'Use Cases',
+      title: 'Ensinar com IA em 2026: Estudo Harvard Mostra 2× Mais Aprendizado — Ferramentas, Prompts e Guia da Lei de IA da UE',
+      intro: '**Para ensinar eficazmente com IA em 2026: use um prompt estruturado de cinco componentes (papel, objetivo, contexto do aluno, restrições, formato de saída), escolha uma ferramenta adaptada à tarefa (Khanmigo para tutoria, MagicSchool para planejamento de aulas, Claude Sonnet 4.6 ou GPT-5.5 para geração de conteúdo), defina temperatura em 0,1–0,2 para conteúdo factual.** Um ensaio clínico randomizado de Harvard de 2024 descobriu que a tutoria com IA produziu ganhos de aprendizado mais do que o dobro dos de salas de aula de aprendizado ativo — em 18% menos tempo de estudo.',
+      publishDate: '2026-03-23',
+      dateModified: '2026-05-04',
+      readTime: '8 min de leitura',
+      seoTitle: 'Ensinar com IA em 2026: Guia de 2× Mais Aprendizado',
+      metaDescription: 'Estudo Harvard: tutoria com IA dobra aprendizado em 18% menos tempo. Ferramentas: Khanmigo, MagicSchool e Claude. Com guia de conformidade para escolas.',
+      educationalLevel: 'Beginner',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Ensinar com IA em 2026: Estudo Harvard Mostra 2× Mais Aprendizado',
+        description: 'Como ensinar eficazmente com IA em 2026. Ferramentas, prompts e conformidade legal para educadores.',
+        datePublished: '2026-03-23',
+        dateModified: '2026-05-04',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/teaching-with-ai-tools-guide-2026',
+        inLanguage: 'pt-BR',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        keywords: ['IA na educação', 'Khanmigo', 'MagicSchool', 'tutoria com IA', 'prompt engineering para educadores', '2026'],
+      },
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: 'Principais Conclusões',
+          isTldr: true,
+          items: [
+            'Tutoria com IA produziu ganhos de aprendizado mais do dobro dos de salas de aula de aprendizado ativo, em 18% menos tempo de estudo (ECA Harvard, n=194, 2024).',
+            'Em maio de 2026, 85% dos professores americanos e 86% dos alunos usaram IA durante o ano letivo.',
+            'O desafio não é adoção mas estrutura: prompts vagos produzem resultados inutilizáveis; prompts estruturados economizam 5–13 horas por semana.',
+            'Prompt de cinco componentes para professores: Papel, Objetivo, Contexto do aluno, Restrições, Formato de saída.',
+            'Para escolas brasileiras: verifique os termos de serviço de cada ferramenta e as políticas de processamento de dados de menores conforme a LGPD (Lei 13.709/2018).',
+          ],
+        },
+        whatAITeachingToolsDo: {
+          id: 'what-ai-teaching-tools-actually-do',
+          title: 'O que as ferramentas de ensino com IA realmente fazem',
+          content: [
+            '**As ferramentas de IA para ensino fazem três coisas: tutoria adaptativa, suporte ao professor e administração.** Elas não substituem professores — elas amplificam a capacidade do professor de fornecer instrução personalizada em escala.',
+          ],
+          items: [
+            '**Khanmigo:** Tutoria baseada em Sócrates para alunos do K–12. Se recusa a dar respostas diretas — guia o aluno ao longo do raciocínio.',
+            '**MagicSchool:** 60+ ferramentas para professores: diferenciação, planejamento de aulas, comunicação com pais, IEPs.',
+            '**Claude Sonnet 4.6 / GPT-5.5:** Modelos de propósito geral. Mais flexíveis mas sem proteções incorporadas para uso estudantil.',
+          ],
+        },
+        fiveComponentPrompt: {
+          id: 'the-five-component-teacher-prompt',
+          title: 'O Prompt de Professor de Cinco Componentes',
+          content: [
+            '**Um prompt de professor eficaz inclui cinco componentes que juntos eliminam a ambiguidade e produzem materiais utilizáveis.**',
+          ],
+          numberedItems: [
+            '**Papel:** "Você é um professor experiente do ensino fundamental focado em matemática do 5º ano."',
+            '**Objetivo:** "Crie um plano de aula de 45 minutos sobre frações."',
+            '**Contexto do aluno:** "Turma de 28 alunos, nível misto, 6 alunos abaixo do nível de série em operações numéricas."',
+            '**Restrições:** "Sem tecnologia — sem vídeos, sem quizzes online. Apenas recursos impressos."',
+            '**Formato de saída:** "Markdown: Objetivos (3 pontos), Materiais, Sequência de atividades (cronometradas), Verificações de avaliação."',
+          ],
+        },
+        doesAITutoringWork: {
+          id: 'does-ai-tutoring-improve-learning-outcomes',
+          title: 'A tutoria com IA melhora os resultados de aprendizado?',
+          content: [
+            '**Sim — com nuances importantes.** O estudo de Harvard de 2024 (Kestin et al., n=194) comparou instrução com IA com instrução de aprendizado ativo em física universitária. O grupo de IA: 2,4× maiores ganhos de aprendizado, 18% menos tempo de estudo.',
+          ],
+        },
+        regionalCompliance: {
+          id: 'eu-ai-act-schools',
+          title: 'Conformidade Legal para Escolas (LGPD e Lei de IA da UE)',
+          content: [
+            '**Para escolas brasileiras:** A LGPD (Lei 13.709/2018) exige consentimento específico para processamento de dados de menores. Ferramentas que processam dados de alunos menores de 18 anos requerem consentimento dos responsáveis legais.',
+            '**Para escolas da UE:** A Lei de IA da UE classifica sistemas de IA usados em instituições de ensino para avaliação de desempenho como de "alto risco". Requisitos obrigatórios: registro do sistema, documentação técnica, supervisão humana em decisões de avaliação, e treinamento de alfabetização em IA para o pessoal (Artigo 4).',
+          ],
+        },
+        howToStart: {
+          id: 'step-by-step-integrating-ai-into-your-teaching',
+          title: 'Passo a Passo: Integrar IA no Seu Ensino',
+          numberedItems: [
+            '**Comece com geração de conteúdo, não com avaliação.** O menor risco de IA na educação é gerar rascunhos de materiais que você revisa antes do uso.',
+            '**Use o prompt de cinco componentes para cada solicitação.** Papel + Objetivo + Contexto do aluno + Restrições + Formato.',
+            '**Defina temperatura em 0,1–0,2 para conteúdo factual.** Para materiais de educação em ciências, matemática ou história, use temperatura baixa.',
+            '**Verifique a conformidade com LGPD antes de compartilhar dados de alunos com qualquer ferramenta.** Nunca insira nomes completos de alunos ou informações de IEP/504 em ferramentas de IA a menos que haja DPA adequado.',
+            '**Itere sobre prompts que não funcionam.** Se a saída for genérica, adicione mais contexto do aluno.',
+          ],
+        },
+        relatedReading: {
+          title: 'Leituras Relacionadas',
+          items: [
+            { title: 'O que é Prompt Engineering?', url: '/pt/prompt-engineering/what-is-prompt-engineering' },
+            { title: 'Temperatura e Top-P', url: '/pt/prompt-engineering/temperature-and-top-p-control-ai-creativity' },
+          ],
+        },
+        sources: {
+          title: 'Fontes',
+          items: [
+            'Kestin, G., et al. (2024). "Comparing AI tutoring to in-person active learning for physics." ECA, Harvard University. arXiv:2404.09955',
+            'Hoover, E. (2024). "85% of US K–12 Teachers Used AI Last Year." EdWeek Research Center.',
+            'Regulamento da UE 2024/1689 (Lei de IA da UE). Artigos 4, 6, 13.',
+          ],
+        },
+      },
+    },
+
     fr: {
   freshness_tier: 'annual',
   theme: 'Use Cases',
