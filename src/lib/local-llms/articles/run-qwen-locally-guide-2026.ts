@@ -6,20 +6,20 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-16',
+    next_refresh_due: '2026-12-03',
     theme: 'Getting Started',
     title: 'How to Run Qwen 3 Locally in 2026: Ollama + LM Studio Setup Guide',
     seoTitle: 'Run Qwen 3 Locally 2026: Ollama & LM Studio Setup Guide',
     intro: 'Qwen 3.6 27B runs on a single consumer GPU (16 GB VRAM) via Ollama or LM Studio. Setup takes under 10 minutes. This guide covers model selection, hardware requirements, Ollama CLI installation, LM Studio GUI setup, the critical num_ctx fix, power consumption and TCO, and how to connect local Qwen to PromptQuorum for multi-model dispatch.',
     metaDescription: 'Step-by-step setup for Qwen 3.6 27B on Ollama or LM Studio: hardware requirements (16 GB VRAM), num_ctx fix (critical), power consumption, and PromptQuorum integration.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-06-03',
     readTime: '10 min read',
     educationalLevel: 'Beginner',
     audience: 'Developers setting up a local LLM for the first time, EU teams seeking GDPR-compliant AI',
     primaryTerm: 'run Qwen 3 locally 2026',
     ctaText: 'Join the PromptQuorum Waitlist →',
-    leadAnswerBlock: '**Run `ollama pull qwen3:27b` on any machine with 16 GB VRAM or Apple Silicon with 32+ GB unified memory. For GUI access, use LM Studio. Both run Qwen 3.6 27B fully offline. Critical: set `num_ctx` to 32768 or higher — Ollama\'s default of 2048 tokens truncates most real-world tasks.**',
+    leadAnswerBlock: '**Run `ollama pull qwen3.6:27b` on any machine with 16 GB VRAM or Apple Silicon with 32+ GB unified memory. For GUI access, use LM Studio. Both run Qwen 3.6 27B fully offline. Critical: set `num_ctx` to 32768 or higher — Ollama\'s default of 2048 tokens truncates most real-world tasks.**',
     nextStep: {
       text: 'Qwen is running locally. Now explore the best UIs that make it usable.',
       label: 'Best Local LLM Frontends 2026 →',
@@ -28,11 +28,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'How do I run Qwen 3 locally in 2026?',
-        answer: 'Install Ollama, run `ollama pull qwen3:27b`, then `ollama run qwen3:27b`. For GUI: download LM Studio, search "Qwen 3 27B", download the Q4_K_M GGUF file. Critical: set num_ctx to 32768 in Ollama (default 2048 is too small). For GDPR-compliant team use, connect via PromptQuorum\'s local Ollama dispatch endpoint.',
+        answer: 'Install Ollama, run `ollama pull qwen3.6:27b`, then `ollama run qwen3.6:27b`. For GUI: download LM Studio, search "Qwen 3 27B", download the Q4_K_M GGUF file. Critical: set num_ctx to 32768 in Ollama (default 2048 is too small). For GDPR-compliant team use, connect via PromptQuorum\'s local Ollama dispatch endpoint.',
         bullets: [
           'Minimum hardware: 16 GB VRAM (RTX 4080) or Apple Silicon with 32 GB unified memory',
           'Ollama install: brew install ollama (Mac) or curl install.sh (Linux/Windows)',
-          'Pull model: ollama pull qwen3:27b (downloads Qwen 3.6 27B Q4_K_M ~17 GB)',
+          'Pull model: ollama pull qwen3.6:27b (downloads Qwen 3.6 27B Q4_K_M ~17 GB)',
           'Fix context: set num_ctx 32768 in Modelfile — default 2048 is too small',
           'LM Studio alternative: GUI-based, no CLI required, same model quality',
         ],
@@ -40,11 +40,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Wie fuehre ich Qwen 3 lokal in 2026 aus?',
-        answer: 'Installiere Ollama, fuehre `ollama pull qwen3:27b` aus, dann `ollama run qwen3:27b`. Fuer eine GUI: Lade LM Studio herunter, suche "Qwen 3 27B", lade die Q4_K_M GGUF-Datei herunter. Wichtig: Setze num_ctx auf 32768 in Ollama (Standardwert 2048 ist zu klein). Fuer DSGVO-konformen Team-Betrieb verbinde ueber den lokalen Ollama-Dispatch-Endpoint von PromptQuorum.',
+        answer: 'Installiere Ollama, fuehre `ollama pull qwen3.6:27b` aus, dann `ollama run qwen3.6:27b`. Fuer eine GUI: Lade LM Studio herunter, suche "Qwen 3 27B", lade die Q4_K_M GGUF-Datei herunter. Wichtig: Setze num_ctx auf 32768 in Ollama (Standardwert 2048 ist zu klein). Fuer DSGVO-konformen Team-Betrieb verbinde ueber den lokalen Ollama-Dispatch-Endpoint von PromptQuorum.',
         bullets: [
           'Mindest-Hardware: 16 GB VRAM (RTX 4080) oder Apple Silicon mit 32 GB Unified Memory',
           'Ollama-Installation: brew install ollama (Mac) oder install.sh (Linux/Windows)',
-          'Modell laden: ollama pull qwen3:27b (laedt Qwen 3.6 27B Q4_K_M ~17 GB)',
+          'Modell laden: ollama pull qwen3.6:27b (laedt Qwen 3.6 27B Q4_K_M ~17 GB)',
           'Kontext korrigieren: num_ctx 32768 im Modelfile setzen — Standard 2048 ist zu klein',
           'LM Studio Alternative: GUI-basiert, kein CLI noetig, gleiche Modellqualitaet',
         ],
@@ -52,11 +52,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Comment exécuter Qwen 3 localement en 2026 ?',
-        answer: 'Installez Ollama, exécutez `ollama pull qwen3:27b`, puis `ollama run qwen3:27b`. Pour GUI : téléchargez LM Studio, recherchez "Qwen 3 27B", téléchargez le fichier GGUF Q4_K_M. Critique : définissez num_ctx à 32768 dans Ollama (2048 par défaut est trop petit). Pour une utilisation d\'équipe conforme RGPD, connectez via l\'endpoint de dispatch Ollama local de PromptQuorum.',
+        answer: 'Installez Ollama, exécutez `ollama pull qwen3.6:27b`, puis `ollama run qwen3.6:27b`. Pour GUI : téléchargez LM Studio, recherchez "Qwen 3 27B", téléchargez le fichier GGUF Q4_K_M. Critique : définissez num_ctx à 32768 dans Ollama (2048 par défaut est trop petit). Pour une utilisation d\'équipe conforme RGPD, connectez via l\'endpoint de dispatch Ollama local de PromptQuorum.',
         bullets: [
           'Matériel minimum : 16 Go VRAM (RTX 4080) ou Apple Silicon avec 32 Go mémoire unifiée',
           'Installation Ollama : brew install ollama (Mac) ou install.sh (Linux/Windows)',
-          'Télécharger le modèle : ollama pull qwen3:27b (~17 Go)',
+          'Télécharger le modèle : ollama pull qwen3.6:27b (~17 Go)',
           'Corriger le contexte : num_ctx 32768 dans Modelfile — 2048 par défaut est trop petit',
           'Alternative LM Studio : interface graphique, pas de CLI requis',
         ],
@@ -64,11 +64,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: '2026年にQwen 3をローカルで実行するには？',
-        answer: 'Ollamaをインストールし、`ollama pull qwen3:27b`を実行してから`ollama run qwen3:27b`。GUIの場合：LM Studioをダウンロードし、「Qwen 3 27B」を検索、Q4_K_M GGUFファイルをダウンロード。重要：Ollamaのnum_ctxを32768に設定（デフォルトの2048は小さすぎる）。GDPRに準拠したチーム利用にはPromptQuorumのローカルOllamaディスパッチエンドポイント経由で接続。',
+        answer: 'Ollamaをインストールし、`ollama pull qwen3.6:27b`を実行してから`ollama run qwen3.6:27b`。GUIの場合：LM Studioをダウンロードし、「Qwen 3 27B」を検索、Q4_K_M GGUFファイルをダウンロード。重要：Ollamaのnum_ctxを32768に設定（デフォルトの2048は小さすぎる）。GDPRに準拠したチーム利用にはPromptQuorumのローカルOllamaディスパッチエンドポイント経由で接続。',
         bullets: [
           '最小ハードウェア：16 GB VRAM（RTX 4080）または32 GBユニファイドメモリのApple Silicon',
           'Ollamaインストール：brew install ollama（Mac）またはinstall.sh（Linux/Windows）',
-          'モデル取得：ollama pull qwen3:27b（Qwen 3.6 27B Q4_K_M約17 GBをダウンロード）',
+          'モデル取得：ollama pull qwen3.6:27b（Qwen 3.6 27B Q4_K_M約17 GBをダウンロード）',
           'コンテキスト修正：Modelfileにてnum_ctx 32768を設定 — デフォルト2048は小さすぎる',
           'LM Studio代替：GUIベース、CLI不要、同等のモデル品質',
         ],
@@ -76,11 +76,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '2026年如何在本地运行Qwen 3？',
-        answer: '安装Ollama，运行`ollama pull qwen3:27b`，然后`ollama run qwen3:27b`。GUI方式：下载LM Studio，搜索"Qwen 3 27B"，下载Q4_K_M GGUF文件。关键：将Ollama中的num_ctx设置为32768（默认2048太小）。如需GDPR合规团队使用，通过PromptQuorum的本地Ollama调度端点连接。',
+        answer: '安装Ollama，运行`ollama pull qwen3.6:27b`，然后`ollama run qwen3.6:27b`。GUI方式：下载LM Studio，搜索"Qwen 3 27B"，下载Q4_K_M GGUF文件。关键：将Ollama中的num_ctx设置为32768（默认2048太小）。如需GDPR合规团队使用，通过PromptQuorum的本地Ollama调度端点连接。',
         bullets: [
           '最低硬件：16 GB显存（RTX 4080）或32 GB统一内存的Apple Silicon',
           'Ollama安装：brew install ollama（Mac）或install.sh（Linux/Windows）',
-          '拉取模型：ollama pull qwen3:27b（下载Qwen 3.6 27B Q4_K_M约17 GB）',
+          '拉取模型：ollama pull qwen3.6:27b（下载Qwen 3.6 27B Q4_K_M约17 GB）',
           '修复上下文：在Modelfile中设置num_ctx 32768 — 默认2048太小',
           'LM Studio替代方案：GUI界面，无需CLI，模型质量相同',
         ],
@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Critical fix**: Ollama defaults to `num_ctx 2048`. This truncates most real-world prompts. Set `num_ctx 32768` in your Modelfile or via the API `num_ctx` parameter.',
           '**Hardware**: 16 GB VRAM minimum (RTX 4080). Apple Silicon M4 Pro (48 GB) or M5 Max (128 GB) are the recommended EU-hosted inference options.',
           '**GDPR**: Once running locally, no data leaves your machine. No SCCs, no data processing agreements needed beyond your own infrastructure policy.',
-          '**PromptQuorum integration**: Set `OLLAMA_BASE_URL=http://localhost:11434/v1` and `LOCAL_LLM_MODEL=qwen3:27b` in PromptQuorum\'s local dispatch settings — separate from the Anthropic API config.',
+          '**PromptQuorum integration**: Set `OLLAMA_BASE_URL=http://localhost:11434/v1` and `LOCAL_LLM_MODEL=qwen3.6:27b` in PromptQuorum\'s local dispatch settings — separate from the Anthropic API config.',
         ],
       },
       whyLocal: {
@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Model', 'VRAM', 'Tokens/sec (RTX 4090)', 'Best For'],
         tableFormat: true,
-        note: 'Q4_K_M is the recommended quantization for most users — best quality-to-size ratio. Q8_0 offers higher quality at higher VRAM cost. Always use the explicit tag (qwen3:27b, not qwen3) to ensure you download the 27B model.',
+        note: 'Q4_K_M is the recommended quantization for most users — best quality-to-size ratio. Q8_0 offers higher quality at higher VRAM cost. Always use the explicit tag (qwen3.6:27b, not qwen3) to ensure you download the 27B model.',
       },
       hardware: {
         id: 'hardware',
@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         numberedItems: [
           { title: 'Install Ollama', whyItMatters: 'Ollama handles model downloads, GGUF format, and provides an OpenAI-compatible local API.' },
-          { title: 'Pull the Qwen 3.6 27B model with explicit tag', whyItMatters: 'Use qwen3:27b explicitly. The bare `qwen3` tag defaults to 8B — not the 27B model this guide targets.' },
+          { title: 'Pull the Qwen 3.6 27B model with explicit tag', whyItMatters: 'Use qwen3.6:27b explicitly. The bare `qwen3` tag defaults to 8B — not the 27B model this guide targets.' },
           { title: 'Create a Modelfile with correct context length', whyItMatters: 'The default num_ctx of 2048 tokens is too small for real-world coding tasks. 32768 tokens handles most files and conversations.' },
           { title: 'Build the custom model and run it', whyItMatters: 'Creates a Qwen 3.6 27B instance with the extended context window. Verify with a test prompt.' },
           { title: 'Test the API endpoint', whyItMatters: 'Ollama exposes an OpenAI-compatible API at localhost:11434/v1. Use this endpoint to connect LLM clients, IDEs, and PromptQuorum.' },
@@ -186,13 +186,13 @@ curl -fsSL https://ollama.com/install.sh | sh
 # Windows — download from https://ollama.com/download
 
 # Step 2 — Pull Qwen 3.6 27B (explicit tag required)
-ollama pull qwen3:27b
+ollama pull qwen3.6:27b
 # Downloads Qwen 3.6 27B Q4_K_M (~17 GB)
 # Note: 'ollama pull qwen3' without a tag downloads the 8B model
 
 # Step 3 — Create Modelfile with correct num_ctx
 cat > Modelfile <<'EOF'
-FROM qwen3:27b
+FROM qwen3.6:27b
 PARAMETER num_ctx 32768
 PARAMETER temperature 0.7
 EOF
@@ -238,7 +238,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         codeBlock: `// LM Studio local server config (exported JSON)
 {
-  "model": "qwen3-27b-q4_k_m",
+  "model": "qwen3.6-27b-q4_k_m",
   "server": {
     "host": "localhost",
     "port": 1234,
@@ -264,15 +264,15 @@ curl http://localhost:11434/v1/chat/completions \\
 # Set in your .env or PromptQuorum settings panel
 
 OLLAMA_BASE_URL=http://localhost:11434/v1
-LOCAL_LLM_MODEL=qwen3:27b
+LOCAL_LLM_MODEL=qwen3.6:27b
 
 # Example routing rules (PromptQuorum dispatch):
-# - task_type: code       → model: qwen3:27b  (local Ollama, GDPR-safe)
+# - task_type: code       → model: qwen3.6:27b  (local Ollama, GDPR-safe)
 # - task_type: analysis   → model: claude-sonnet-4-6 (Anthropic API, separate config)
-# - task_type: private    → model: qwen3:27b  (local Ollama, no cloud egress)`,
+# - task_type: private    → model: qwen3.6:27b  (local Ollama, no cloud egress)`,
         codeLanguage: 'bash',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Connect PromptQuorum to local Qwen by setting OLLAMA_BASE_URL to http://localhost:11434/v1 and LOCAL_LLM_MODEL to qwen3:27b in the local dispatch settings.' },
+          { type: 'one-sentence', text: 'Connect PromptQuorum to local Qwen by setting OLLAMA_BASE_URL to http://localhost:11434/v1 and LOCAL_LLM_MODEL to qwen3.6:27b in the local dispatch settings.' },
         ],
       },
       troubleshooting: {
@@ -286,7 +286,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           '**LM Studio shows "failed to load model"**: Insufficient VRAM. Reduce Q4_K_M context length to 16384 or switch to Qwen 3 14B.',
           '**PromptQuorum returns authentication error**: Set `OLLAMA_BASE_URL=http://localhost:11434/v1` in PromptQuorum\'s local LLM settings. If a key is required by the form, enter any non-empty string — Ollama does not require API key authentication.',
           '**Ollama uses CPU instead of GPU**: On NVIDIA: confirm CUDA drivers are installed (`nvidia-smi` should show the GPU). On Mac: Ollama uses Metal automatically — no configuration needed. If Metal is not active, reinstall Ollama from ollama.com.',
-          '**Model download stalls or fails**: Large models (Qwen 3.6 27B ~17 GB) time out on slow connections. Run `ollama pull qwen3:27b` again — Ollama resumes from where it left off. Alternatively, download the GGUF directly from [Hugging Face](https://huggingface.co/Qwen) and use `ollama create` with a local path in the Modelfile FROM clause.',
+          '**Model download stalls or fails**: Large models (Qwen 3.6 27B ~17 GB) time out on slow connections. Run `ollama pull qwen3.6:27b` again — Ollama resumes from where it left off. Alternatively, download the GGUF directly from [Hugging Face](https://huggingface.co/Qwen) and use `ollama create` with a local path in the Modelfile FROM clause.',
         ],
         callouts: [
           { type: 'tip', text: 'Run `ollama ps` to see which models are currently loaded in VRAM and how much memory each is consuming. Use `ollama stop qwen3-32k` to unload a model before switching to a larger one.' },
@@ -317,7 +317,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — 2026 Comparison](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3.6 vs Claude Sonnet 4.6 vs DeepSeek — 2026 Comparison](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[Why EU Companies Are Switching to Local Qwen](/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Qwen Coder vs DeepSeek vs Mistral — Coding Benchmark 2026](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[Local AI Production Deployment: Building a Privacy-First Customer Service Agent](https://www.youtube.com/watch?v=W1f9bWj4pAE) — Rob Braxman case study covering hardware trade-offs, memory management, and real-world performance for self-hosted AI agents.',
@@ -333,7 +333,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           { q: 'Why does Ollama truncate my prompts?', a: 'Ollama defaults to num_ctx 2048 tokens (~1,500 words). This is too small for most real-world coding tasks. You must set num_ctx to at least 32768 in your Modelfile. Create a Modelfile with `PARAMETER num_ctx 32768`, then run `ollama create qwen3-32k -f Modelfile` to build a model instance with the correct context window.' },
           { q: 'Is running Qwen locally GDPR compliant?', a: 'Yes — local inference is the most GDPR-compliant AI architecture possible. When Qwen runs on your hardware, no data is transferred to any third party. GDPR Article 44 restrictions on international data transfers do not apply because there is no data transfer. Your internal data processing agreement applies, but no SCCs or adequacy decisions are needed for the AI layer.' },
           { q: 'Can Qwen 3 run on CPU only?', a: 'Yes, via llama.cpp or Ollama on a system without a GPU. CPU inference is significantly slower — typically 1–5 tokens/second on a modern CPU for Qwen 3.6 27B. For production use, GPU or Apple Silicon is required. For occasional use or testing on a laptop without dedicated GPU, CPU inference works but is impractical for real-time conversation.' },
-          { q: 'How do I update Qwen to the latest version?', a: 'Run `ollama pull qwen3:27b` again. Ollama checks if a newer version is available and downloads only the changed layers. You do not need to recreate your Modelfile — the model tag (qwen3:27b) always points to the latest 27B release. In LM Studio, check the model library for updates and re-download if a newer GGUF version is available.' },
+          { q: 'How do I update Qwen to the latest version?', a: 'Run `ollama pull qwen3.6:27b` again. Ollama checks if a newer version is available and downloads only the changed layers. You do not need to recreate your Modelfile — the model tag (qwen3.6:27b) always points to the latest 27B release. In LM Studio, check the model library for updates and re-download if a newer GGUF version is available.' },
           { q: 'Can I use Claude Code with local Qwen?', a: 'Yes. Claude Code is Anthropic\'s CLI for coding with Claude. To use it with local Qwen 3.6 27B, install the free Claude Code Proxy, point it to your LM Studio instance (localhost:1234), then configure Claude Code to route requests through the proxy (localhost:8082). Your code remains fully local — no Anthropic API key is required.' },
           { q: 'Do I need an Anthropic API key to run Claude Code with local Qwen?', a: 'No. When using Claude Code with a local LLM via the proxy, the Anthropic API key is not used. The proxy intercepts Claude Code\'s requests and routes them to your LM Studio server instead. You only need the API key if you choose to also use Anthropic\'s Claude API for other tasks in parallel.' },
           { q: 'What\'s the difference between the Claude Code Proxy and Ollama?', a: 'Ollama is a local LLM runtime that manages model downloads, quantization, context configuration, and exposes an OpenAI-compatible API (localhost:11434/v1). The Claude Code Proxy is a lightweight bridge that connects Claude Code specifically to any local LLM (Ollama, LM Studio, or llama.cpp). Both can run simultaneously: Ollama handles the model, the proxy handles the Claude Code client connection. Alternatively, use LM Studio as your runtime instead of Ollama — the proxy works with both.' },
@@ -344,20 +344,20 @@ LOCAL_LLM_MODEL=qwen3:27b
   },
   es: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-16',
+    next_refresh_due: '2026-12-03',
     theme: 'Getting Started',
     title: 'Cómo ejecutar Qwen 3 localmente en 2026: Guía de configuración Ollama + LM Studio',
     seoTitle: 'Ejecutar Qwen 3 en local 2026: Ollama y LM Studio',
     intro: 'Qwen 3.6 27B se ejecuta en una sola GPU de consumo (16 GB VRAM) a través de Ollama o LM Studio. La configuración tarda menos de 10 minutos. Esta guía cubre la selección del modelo, los requisitos de hardware, la instalación de Ollama CLI, la configuración GUI de LM Studio, la corrección crítica de num_ctx, el consumo eléctrico y TCO, y cómo conectar Qwen local a PromptQuorum para despacho multi-modelo.',
     metaDescription: 'Configura Qwen 3.6 27B en Ollama o LM Studio: hardware (16 GB VRAM), corrección num_ctx (crítica), consumo eléctrico e integración con PromptQuorum.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-06-03',
     readTime: '10 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Desarrolladores que configuran un LLM local por primera vez, equipos en la UE que buscan IA conforme al RGPD',
     primaryTerm: 'run Qwen 3 locally 2026',
     ctaText: 'Unirse a la lista de espera de PromptQuorum →',
-    leadAnswerBlock: '**Ejecuta `ollama pull qwen3:27b` en cualquier máquina con 16 GB VRAM o Apple Silicon con 32+ GB de memoria unificada. Para acceso GUI, usa LM Studio. Ambos ejecutan Qwen 3.6 27B completamente sin conexión. Crítico: establece `num_ctx` en 32768 o superior — el valor predeterminado de 2048 tokens de Ollama trunca la mayoría de las tareas reales.**',
+    leadAnswerBlock: '**Ejecuta `ollama pull qwen3.6:27b` en cualquier máquina con 16 GB VRAM o Apple Silicon con 32+ GB de memoria unificada. Para acceso GUI, usa LM Studio. Ambos ejecutan Qwen 3.6 27B completamente sin conexión. Crítico: establece `num_ctx` en 32768 o superior — el valor predeterminado de 2048 tokens de Ollama trunca la mayoría de las tareas reales.**',
     nextStep: {
       text: 'Qwen está corriendo localmente. Ahora explora las mejores interfaces que lo hacen usable.',
       label: 'Mejores frontends de LLM local 2026 →',
@@ -366,11 +366,11 @@ LOCAL_LLM_MODEL=qwen3:27b
     quickAnswerTop: {
       es: {
         question: '¿Cómo ejecuto Qwen 3 localmente en 2026?',
-        answer: 'Instala Ollama, ejecuta `ollama pull qwen3:27b`, luego `ollama run qwen3:27b`. Para GUI: descarga LM Studio, busca "Qwen 3 27B", descarga el archivo GGUF Q4_K_M. Crítico: establece num_ctx en 32768 en Ollama (el valor predeterminado 2048 es demasiado pequeño). Para uso en equipo conforme al RGPD, conecta a través del endpoint de despacho local de Ollama de PromptQuorum.',
+        answer: 'Instala Ollama, ejecuta `ollama pull qwen3.6:27b`, luego `ollama run qwen3.6:27b`. Para GUI: descarga LM Studio, busca "Qwen 3 27B", descarga el archivo GGUF Q4_K_M. Crítico: establece num_ctx en 32768 en Ollama (el valor predeterminado 2048 es demasiado pequeño). Para uso en equipo conforme al RGPD, conecta a través del endpoint de despacho local de Ollama de PromptQuorum.',
         bullets: [
           'Hardware mínimo: 16 GB VRAM (RTX 4080) o Apple Silicon con 32 GB de memoria unificada',
           'Instalación de Ollama: brew install ollama (Mac) o curl install.sh (Linux/Windows)',
-          'Descargar modelo: ollama pull qwen3:27b (descarga Qwen 3.6 27B Q4_K_M ~17 GB)',
+          'Descargar modelo: ollama pull qwen3.6:27b (descarga Qwen 3.6 27B Q4_K_M ~17 GB)',
           'Corregir contexto: establece num_ctx 32768 en el Modelfile — el valor predeterminado 2048 es demasiado pequeño',
           'Alternativa LM Studio: basado en GUI, sin CLI requerido, misma calidad de modelo',
         ],
@@ -399,7 +399,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           '**Corrección crítica**: Ollama usa `num_ctx 2048` por defecto. Esto trunca la mayoría de los prompts reales. Establece `num_ctx 32768` en tu Modelfile o mediante el parámetro `num_ctx` de la API.',
           '**Hardware**: mínimo 16 GB VRAM (RTX 4080). Apple Silicon M4 Pro (48 GB) o M5 Max (128 GB) son las opciones de inferencia recomendadas para equipos en la UE.',
           '**RGPD**: una vez en ejecución local, ningún dato sale de tu máquina. No se necesitan SCCs ni acuerdos de procesamiento de datos más allá de tu propia política de infraestructura.',
-          '**Integración con PromptQuorum**: establece `OLLAMA_BASE_URL=http://localhost:11434/v1` y `LOCAL_LLM_MODEL=qwen3:27b` en la configuración de despacho local de PromptQuorum — separado de la configuración de la API de Anthropic.',
+          '**Integración con PromptQuorum**: establece `OLLAMA_BASE_URL=http://localhost:11434/v1` y `LOCAL_LLM_MODEL=qwen3.6:27b` en la configuración de despacho local de PromptQuorum — separado de la configuración de la API de Anthropic.',
         ],
       },
       whyLocal: {
@@ -433,7 +433,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         ],
         columns: ['Modelo', 'VRAM', 'Tokens/seg (RTX 4090)', 'Mejor para'],
         tableFormat: true,
-        note: 'Q4_K_M es la cuantización recomendada para la mayoría de los usuarios — mejor relación calidad-tamaño. Q8_0 ofrece mayor calidad a mayor costo de VRAM. Usa siempre la etiqueta explícita (qwen3:27b, no qwen3) para asegurarte de descargar el modelo 27B.',
+        note: 'Q4_K_M es la cuantización recomendada para la mayoría de los usuarios — mejor relación calidad-tamaño. Q8_0 ofrece mayor calidad a mayor costo de VRAM. Usa siempre la etiqueta explícita (qwen3.6:27b, no qwen3) para asegurarte de descargar el modelo 27B.',
       },
       hardware: {
         id: 'hardware',
@@ -461,7 +461,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         ],
         numberedItems: [
           { title: 'Instalar Ollama', whyItMatters: 'Ollama gestiona las descargas de modelos, el formato GGUF y proporciona una API local compatible con OpenAI.' },
-          { title: 'Descargar el modelo Qwen 3.6 27B con etiqueta explícita', whyItMatters: 'Usa qwen3:27b de forma explícita. La etiqueta simple `qwen3` descarga por defecto el modelo 8B — no el modelo 27B al que apunta esta guía.' },
+          { title: 'Descargar el modelo Qwen 3.6 27B con etiqueta explícita', whyItMatters: 'Usa qwen3.6:27b de forma explícita. La etiqueta simple `qwen3` descarga por defecto el modelo 8B — no el modelo 27B al que apunta esta guía.' },
           { title: 'Crear un Modelfile con la longitud de contexto correcta', whyItMatters: 'El num_ctx predeterminado de 2048 tokens es demasiado pequeño para tareas reales de programación. 32768 tokens maneja la mayoría de archivos y conversaciones.' },
           { title: 'Construir el modelo personalizado y ejecutarlo', whyItMatters: 'Crea una instancia de Qwen 3.6 27B con la ventana de contexto extendida. Verifica con un prompt de prueba.' },
           { title: 'Probar el endpoint de la API', whyItMatters: 'Ollama expone una API compatible con OpenAI en localhost:11434/v1. Usa este endpoint para conectar clientes LLM, IDEs y PromptQuorum.' },
@@ -476,13 +476,13 @@ curl -fsSL https://ollama.com/install.sh | sh
 # Windows — download from https://ollama.com/download
 
 # Step 2 — Pull Qwen 3.6 27B (explicit tag required)
-ollama pull qwen3:27b
+ollama pull qwen3.6:27b
 # Downloads Qwen 3.6 27B Q4_K_M (~17 GB)
 # Note: 'ollama pull qwen3' without a tag downloads the 8B model
 
 # Step 3 — Create Modelfile with correct num_ctx
 cat > Modelfile <<'EOF'
-FROM qwen3:27b
+FROM qwen3.6:27b
 PARAMETER num_ctx 32768
 PARAMETER temperature 0.7
 EOF
@@ -528,7 +528,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         codeBlock: `// LM Studio local server config (exported JSON)
 {
-  "model": "qwen3-27b-q4_k_m",
+  "model": "qwen3.6-27b-q4_k_m",
   "server": {
     "host": "localhost",
     "port": 1234,
@@ -554,15 +554,15 @@ curl http://localhost:11434/v1/chat/completions \\
 # Set in your .env or PromptQuorum settings panel
 
 OLLAMA_BASE_URL=http://localhost:11434/v1
-LOCAL_LLM_MODEL=qwen3:27b
+LOCAL_LLM_MODEL=qwen3.6:27b
 
 # Example routing rules (PromptQuorum dispatch):
-# - task_type: code       → model: qwen3:27b  (local Ollama, GDPR-safe)
+# - task_type: code       → model: qwen3.6:27b  (local Ollama, GDPR-safe)
 # - task_type: analysis   → model: claude-sonnet-4-6 (Anthropic API, separate config)
-# - task_type: private    → model: qwen3:27b  (local Ollama, no cloud egress)`,
+# - task_type: private    → model: qwen3.6:27b  (local Ollama, no cloud egress)`,
         codeLanguage: 'bash',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Conecta PromptQuorum a Qwen local estableciendo OLLAMA_BASE_URL en http://localhost:11434/v1 y LOCAL_LLM_MODEL en qwen3:27b en los ajustes de despacho local.' },
+          { type: 'one-sentence', text: 'Conecta PromptQuorum a Qwen local estableciendo OLLAMA_BASE_URL en http://localhost:11434/v1 y LOCAL_LLM_MODEL en qwen3.6:27b en los ajustes de despacho local.' },
         ],
       },
       troubleshooting: {
@@ -576,7 +576,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           '**LM Studio muestra "error al cargar el modelo"**: VRAM insuficiente. Reduce la longitud de contexto Q4_K_M a 16384 o cambia a Qwen 3 14B.',
           '**PromptQuorum devuelve error de autenticación**: establece `OLLAMA_BASE_URL=http://localhost:11434/v1` en los ajustes de LLM local de PromptQuorum. Si el formulario requiere una clave, introduce cualquier cadena no vacía — Ollama no requiere autenticación por clave de API.',
           '**Ollama usa CPU en lugar de GPU**: en NVIDIA: confirma que los drivers CUDA están instalados (`nvidia-smi` debe mostrar la GPU). En Mac: Ollama usa Metal automáticamente — no se necesita configuración. Si Metal no está activo, reinstala Ollama desde ollama.com.',
-          '**La descarga del modelo se detiene o falla**: los modelos grandes (Qwen 3.6 27B ~17 GB) pueden agotar el tiempo de espera en conexiones lentas. Ejecuta `ollama pull qwen3:27b` de nuevo — Ollama reanuda desde donde se detuvo. Alternativamente, descarga el GGUF directamente desde [Hugging Face](https://huggingface.co/Qwen) y usa `ollama create` con una ruta local en la cláusula FROM del Modelfile.',
+          '**La descarga del modelo se detiene o falla**: los modelos grandes (Qwen 3.6 27B ~17 GB) pueden agotar el tiempo de espera en conexiones lentas. Ejecuta `ollama pull qwen3.6:27b` de nuevo — Ollama reanuda desde donde se detuvo. Alternativamente, descarga el GGUF directamente desde [Hugging Face](https://huggingface.co/Qwen) y usa `ollama create` con una ruta local en la cláusula FROM del Modelfile.',
         ],
         callouts: [
           { type: 'tip', text: 'Ejecuta `ollama ps` para ver qué modelos están actualmente cargados en VRAM y cuánta memoria consume cada uno. Usa `ollama stop qwen3-32k` para descargar un modelo antes de cambiar a uno más grande.' },
@@ -607,7 +607,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Comparativa 2026](/es/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3.6 vs Claude Sonnet 4.6 vs DeepSeek — Comparativa 2026](/es/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[Por qué las empresas de la UE están cambiando a Qwen local](/es/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Qwen Coder vs DeepSeek vs Mistral — Benchmark de programación 2026](/es/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[Local AI Production Deployment: Building a Privacy-First Customer Service Agent](https://www.youtube.com/watch?v=W1f9bWj4pAE) — Estudio de caso de Rob Braxman sobre compensaciones de hardware, gestión de memoria y rendimiento en producción para agentes de IA autoalojados.',
@@ -623,7 +623,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           { q: '¿Por qué Ollama trunca mis prompts?', a: 'Ollama usa por defecto num_ctx de 2048 tokens (~1500 palabras). Esto es demasiado pequeño para la mayoría de las tareas reales de programación. Debes establecer num_ctx en al menos 32768 en tu Modelfile. Crea un Modelfile con `PARAMETER num_ctx 32768`, luego ejecuta `ollama create qwen3-32k -f Modelfile` para construir una instancia del modelo con la ventana de contexto correcta.' },
           { q: '¿Es conforme al RGPD ejecutar Qwen localmente?', a: 'Sí — la inferencia local es la arquitectura de IA más conforme al RGPD posible. Cuando Qwen corre en tu hardware, ningún dato se transfiere a terceros. Las restricciones del artículo 44 del RGPD sobre transferencias internacionales de datos no aplican porque no hay transferencia de datos. Tu acuerdo interno de procesamiento de datos aplica, pero no se necesitan SCCs ni decisiones de adecuación para la capa de IA.' },
           { q: '¿Puede Qwen 3 ejecutarse solo en CPU?', a: 'Sí, mediante llama.cpp o Ollama en un sistema sin GPU. La inferencia en CPU es significativamente más lenta — típicamente 1–5 tokens/segundo en una CPU moderna para Qwen 3.6 27B. Para uso en producción, se requiere GPU o Apple Silicon. Para uso ocasional o pruebas en un portátil sin GPU dedicada, la inferencia en CPU funciona pero es impráctica para conversación en tiempo real.' },
-          { q: '¿Cómo actualizo Qwen a la última versión?', a: 'Ejecuta `ollama pull qwen3:27b` de nuevo. Ollama verifica si hay una versión más nueva disponible y descarga solo las capas modificadas. No necesitas recrear tu Modelfile — la etiqueta del modelo (qwen3:27b) siempre apunta a la última versión 27B. En LM Studio, comprueba la biblioteca de modelos en busca de actualizaciones y vuelve a descargar si hay una versión GGUF más nueva disponible.' },
+          { q: '¿Cómo actualizo Qwen a la última versión?', a: 'Ejecuta `ollama pull qwen3.6:27b` de nuevo. Ollama verifica si hay una versión más nueva disponible y descarga solo las capas modificadas. No necesitas recrear tu Modelfile — la etiqueta del modelo (qwen3.6:27b) siempre apunta a la última versión 27B. En LM Studio, comprueba la biblioteca de modelos en busca de actualizaciones y vuelve a descargar si hay una versión GGUF más nueva disponible.' },
           { q: '¿Puedo usar Claude Code con Qwen local?', a: 'Sí. Claude Code es el CLI de Anthropic para programar con Claude. Para usarlo con Qwen 3.6 27B local, instala el proxy gratuito de Claude Code, apúntalo a tu instancia de LM Studio (localhost:1234) y luego configura Claude Code para enrutar solicitudes a través del proxy (localhost:8082). Tu código permanece completamente local — no se requiere clave de API de Anthropic.' },
           { q: '¿Necesito una clave de API de Anthropic para ejecutar Claude Code con Qwen local?', a: 'No. Al usar Claude Code con un LLM local a través del proxy, la clave de API de Anthropic no se utiliza. El proxy intercepta las solicitudes de Claude Code y las enruta a tu servidor de LM Studio en su lugar. Solo necesitas la clave de API si decides usar también la API de Claude de Anthropic para otras tareas en paralelo.' },
           { q: '¿Cuál es la diferencia entre el proxy de Claude Code y Ollama?', a: 'Ollama es un runtime de LLM local que gestiona descargas de modelos, cuantización, configuración de contexto y expone una API compatible con OpenAI (localhost:11434/v1). El proxy de Claude Code es un puente ligero que conecta Claude Code específicamente a cualquier LLM local (Ollama, LM Studio o llama.cpp). Ambos pueden ejecutarse simultáneamente: Ollama gestiona el modelo, el proxy gestiona la conexión del cliente de Claude Code. Alternativamente, usa LM Studio como runtime en lugar de Ollama — el proxy funciona con ambos.' },
@@ -639,14 +639,14 @@ LOCAL_LLM_MODEL=qwen3:27b
       url: 'https://www.promptquorum.com/es/local-llms/run-qwen-locally-guide-2026?lang=es',
       inLanguage: 'es',
       datePublished: '2026-05-16',
-      dateModified: '2026-05-16',
+      dateModified: '2026-06-03',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
   pt: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-16',
+    next_refresh_due: '2026-12-03',
     theme: 'Getting Started',
     title: 'Como executar o Qwen 3 localmente em 2026: Guia Ollama + LM Studio',
     seoTitle: 'Executar o Qwen 3 local 2026: Ollama e LM Studio',
@@ -658,7 +658,7 @@ LOCAL_LLM_MODEL=qwen3:27b
     audience: 'Desenvolvedores configurando um LLM local pela primeira vez, equipes que buscam IA em conformidade com LGPD/GDPR',
     primaryTerm: 'executar Qwen 3 localmente 2026',
     ctaText: 'Entrar na lista de espera do PromptQuorum →',
-    leadAnswerBlock: '**Execute `ollama pull qwen3:27b` em qualquer máquina com 16 GB de VRAM ou Apple Silicon com 32+ GB de memória unificada. Para acesso GUI, use o LM Studio. Ambos executam o Qwen 3.6 27B completamente offline. Crítico: defina `num_ctx` como 32768 ou superior — o valor padrão de 2048 tokens do Ollama trunca a maioria das tarefas reais.**',
+    leadAnswerBlock: '**Execute `ollama pull qwen3.6:27b` em qualquer máquina com 16 GB de VRAM ou Apple Silicon com 32+ GB de memória unificada. Para acesso GUI, use o LM Studio. Ambos executam o Qwen 3.6 27B completamente offline. Crítico: defina `num_ctx` como 32768 ou superior — o valor padrão de 2048 tokens do Ollama trunca a maioria das tarefas reais.**',
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
       { label: 'Por que executar o Qwen localmente em 2026', anchor: '#why-local' },
@@ -687,7 +687,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Como executo o Qwen 3 localmente em 2026?', a: 'Instale o Ollama, execute `ollama pull qwen3:27b`, depois `ollama run qwen3:27b`. Para GUI: baixe o LM Studio, pesquise "Qwen 3 27B", baixe o arquivo GGUF Q4_K_M. Crítico: defina num_ctx como 32768 no Ollama (o padrão 2048 é muito pequeno).' },
+          { q: 'Como executo o Qwen 3 localmente em 2026?', a: 'Instale o Ollama, execute `ollama pull qwen3.6:27b`, depois `ollama run qwen3.6:27b`. Para GUI: baixe o LM Studio, pesquise "Qwen 3 27B", baixe o arquivo GGUF Q4_K_M. Crítico: defina num_ctx como 32768 no Ollama (o padrão 2048 é muito pequeno).' },
           { q: 'Qual hardware preciso para o Qwen 3.6 27B?', a: 'Mínimo: 16 GB de VRAM (RTX 4080) ou Apple Silicon com 32 GB de memória unificada. Recomendado: RTX 4090 (24 GB) ou M3 Max 48 GB para melhor desempenho.' },
           { q: 'Ollama ou LM Studio — qual devo usar?', a: 'Ollama se você quer um endpoint de API headless (para scripts, IDE plugins, PromptQuorum). LM Studio se você quer uma interface de chat visual sem precisar da linha de comando.' },
           { q: 'Por que o Ollama trunca meus prompts?', a: 'O Ollama usa `num_ctx 2048` por padrão, o que limita a janela de contexto a ~1.500 palavras. Para tarefas reais, defina `num_ctx 32768` no Modelfile ou passe `"num_ctx": 32768` na chamada da API.' },
@@ -709,20 +709,20 @@ LOCAL_LLM_MODEL=qwen3:27b
   },
   de: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-16',
+    next_refresh_due: '2026-12-03',
     theme: 'Getting Started',
     title: 'Qwen 3 lokal ausführen 2026: Vollständige Anleitung mit Ollama und LM Studio',
     seoTitle: 'Qwen 3 lokal ausführen 2026: Ollama & LM Studio Setup',
     intro: 'Qwen 3.6 27B läuft auf einer einzelnen Consumer-GPU (16 GB VRAM) über Ollama oder LM Studio. Die Einrichtung dauert weniger als 10 Minuten. Dieser Leitfaden deckt Modellauswahl, Hardware-Anforderungen, Ollama-CLI-Installation, LM Studio GUI-Setup, die entscheidende num_ctx-Korrektur, Stromverbrauch und TCO sowie die Verbindung mit PromptQuorum für Multi-Modell-Dispatch ab.',
     metaDescription: 'Qwen lokal ausführen 2026: Anleitung mit Ollama und LM Studio. Hardware-Anforderungen, Modellauswahl und Performance-Tuning für Qwen 3.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-06-03',
     readTime: '10 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Entwickler, die erstmals ein lokales LLM einrichten; EU-Teams auf der Suche nach DSGVO-konformer KI',
     primaryTerm: 'run Qwen 3 locally 2026',
     ctaText: 'Zur PromptQuorum-Warteliste anmelden →',
-    leadAnswerBlock: '**Führen Sie `ollama pull qwen3:27b` auf jedem Rechner mit 16 GB VRAM oder Apple Silicon mit 32+ GB Unified Memory aus. Für den GUI-Zugriff verwenden Sie LM Studio. Beide führen Qwen 3.6 27B vollständig offline aus. Wichtig: Setzen Sie `num_ctx` auf 32768 oder höher — Ollamas Standard von 2048 Token kürzt die meisten realen Aufgaben ab.**',
+    leadAnswerBlock: '**Führen Sie `ollama pull qwen3.6:27b` auf jedem Rechner mit 16 GB VRAM oder Apple Silicon mit 32+ GB Unified Memory aus. Für den GUI-Zugriff verwenden Sie LM Studio. Beide führen Qwen 3.6 27B vollständig offline aus. Wichtig: Setzen Sie `num_ctx` auf 32768 oder höher — Ollamas Standard von 2048 Token kürzt die meisten realen Aufgaben ab.**',
     nextStep: {
       text: 'Qwen läuft lokal. Entdecken Sie jetzt die besten Benutzeroberflächen.',
       label: 'Beste lokale LLM-Frontends 2026 →',
@@ -731,11 +731,11 @@ LOCAL_LLM_MODEL=qwen3:27b
     quickAnswerTop: {
       de: {
         question: 'Wie führe ich Qwen 3 lokal in 2026 aus?',
-        answer: 'Installieren Sie Ollama, führen Sie `ollama pull qwen3:27b` aus, dann `ollama run qwen3:27b`. Für eine GUI: Laden Sie LM Studio herunter, suchen Sie „Qwen 3 27B", laden Sie die Q4_K_M GGUF-Datei herunter. Wichtig: Setzen Sie num_ctx auf 32768 in Ollama (Standardwert 2048 ist zu klein). Für DSGVO-konformen Team-Betrieb verbinden Sie über den lokalen Ollama-Dispatch-Endpunkt von PromptQuorum.',
+        answer: 'Installieren Sie Ollama, führen Sie `ollama pull qwen3.6:27b` aus, dann `ollama run qwen3.6:27b`. Für eine GUI: Laden Sie LM Studio herunter, suchen Sie „Qwen 3 27B", laden Sie die Q4_K_M GGUF-Datei herunter. Wichtig: Setzen Sie num_ctx auf 32768 in Ollama (Standardwert 2048 ist zu klein). Für DSGVO-konformen Team-Betrieb verbinden Sie über den lokalen Ollama-Dispatch-Endpunkt von PromptQuorum.',
         bullets: [
           'Mindest-Hardware: 16 GB VRAM (RTX 4080) oder Apple Silicon mit 32 GB Unified Memory',
           'Ollama-Installation: brew install ollama (Mac) oder install.sh (Linux/Windows)',
-          'Modell laden: ollama pull qwen3:27b (lädt Qwen 3.6 27B Q4_K_M ~17 GB)',
+          'Modell laden: ollama pull qwen3.6:27b (lädt Qwen 3.6 27B Q4_K_M ~17 GB)',
           'Kontext korrigieren: num_ctx 32768 im Modelfile setzen — Standard 2048 ist zu klein',
           'LM Studio Alternative: GUI-basiert, kein CLI nötig, gleiche Modellqualität',
         ],
@@ -764,7 +764,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           '**Kritische Korrektur**: Ollama verwendet standardmäßig `num_ctx 2048`. Dieser Wert ist zu klein für reale Aufgaben. Setzen Sie `num_ctx 32768` in Ihrem Modelfile.',
           '**Hardware**: Mindestens 16 GB VRAM (RTX 4080). Apple Silicon M4 Pro (48 GB) oder M5 Max (128 GB) sind die empfohlenen EU-hosted Inference-Optionen.',
           '**DSGVO**: Sobald lokal ausgeführt, verlassen keine Daten Ihren Rechner. Keine SCCs oder Datenverarbeitungsverträge mit Dritten erforderlich.',
-          '**PromptQuorum-Integration**: Setzen Sie `OLLAMA_BASE_URL=http://localhost:11434/v1` und `LOCAL_LLM_MODEL=qwen3:27b` in den lokalen Dispatch-Einstellungen von PromptQuorum — getrennt von der Anthropic-API-Konfiguration.',
+          '**PromptQuorum-Integration**: Setzen Sie `OLLAMA_BASE_URL=http://localhost:11434/v1` und `LOCAL_LLM_MODEL=qwen3.6:27b` in den lokalen Dispatch-Einstellungen von PromptQuorum — getrennt von der Anthropic-API-Konfiguration.',
         ],
       },
       whyLocal: {
@@ -795,7 +795,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         ],
         columns: ['Modell', 'VRAM', 'Token/Sek. (RTX 4090)', 'Empfohlen für'],
         tableFormat: true,
-        note: 'Q4_K_M ist die empfohlene Quantisierung für die meisten Anwender — bestes Qualitäts-/Größenverhältnis. Q8_0 bietet höhere Qualität bei höherem VRAM-Bedarf. Verwenden Sie stets den expliziten Tag (qwen3:27b, nicht qwen3), um sicherzustellen, dass das 27B-Modell heruntergeladen wird.',
+        note: 'Q4_K_M ist die empfohlene Quantisierung für die meisten Anwender — bestes Qualitäts-/Größenverhältnis. Q8_0 bietet höhere Qualität bei höherem VRAM-Bedarf. Verwenden Sie stets den expliziten Tag (qwen3.6:27b, nicht qwen3), um sicherzustellen, dass das 27B-Modell heruntergeladen wird.',
       },
       hardware: {
         id: 'hardware',
@@ -823,7 +823,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         ],
         numberedItems: [
           { title: 'Ollama installieren', whyItMatters: 'Ollama verwaltet Modell-Downloads, das GGUF-Format und stellt eine OpenAI-kompatible lokale API bereit.' },
-          { title: 'Qwen 3.6 27B mit explizitem Tag herunterladen', whyItMatters: 'Verwenden Sie qwen3:27b explizit. Der bare Tag `qwen3` lädt standardmäßig das 8B-Modell — nicht das 27B-Modell, auf das sich diese Anleitung bezieht.' },
+          { title: 'Qwen 3.6 27B mit explizitem Tag herunterladen', whyItMatters: 'Verwenden Sie qwen3.6:27b explizit. Der bare Tag `qwen3` lädt standardmäßig das 8B-Modell — nicht das 27B-Modell, auf das sich diese Anleitung bezieht.' },
           { title: 'Modelfile mit korrekter Kontextlänge erstellen', whyItMatters: 'Der Standard-num_ctx von 2048 Token ist zu klein für reale Coding-Aufgaben. 32768 Token verarbeiten die meisten Dateien und Konversationen.' },
           { title: 'Eigenes Modell erstellen und starten', whyItMatters: 'Erstellt eine Qwen 3.6 27B Instanz mit erweitertem Kontextfenster. Überprüfen Sie mit einer Test-Anfrage.' },
           { title: 'API-Endpunkt testen', whyItMatters: 'Ollama stellt eine OpenAI-kompatible API unter localhost:11434/v1 bereit. Verwenden Sie diesen Endpunkt, um LLM-Clients, IDEs und PromptQuorum zu verbinden.' },
@@ -838,13 +838,13 @@ curl -fsSL https://ollama.com/install.sh | sh
 # Windows — download from https://ollama.com/download
 
 # Step 2 — Pull Qwen 3.6 27B (explicit tag required)
-ollama pull qwen3:27b
+ollama pull qwen3.6:27b
 # Downloads Qwen 3.6 27B Q4_K_M (~17 GB)
 # Note: 'ollama pull qwen3' without a tag downloads the 8B model
 
 # Step 3 — Create Modelfile with correct num_ctx
 cat > Modelfile <<'EOF'
-FROM qwen3:27b
+FROM qwen3.6:27b
 PARAMETER num_ctx 32768
 PARAMETER temperature 0.7
 EOF
@@ -887,7 +887,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         codeBlock: `// LM Studio local server config (exported JSON)
 {
-  "model": "qwen3-27b-q4_k_m",
+  "model": "qwen3.6-27b-q4_k_m",
   "server": {
     "host": "localhost",
     "port": 1234,
@@ -913,15 +913,15 @@ curl http://localhost:11434/v1/chat/completions \\
 # Set in your .env or PromptQuorum settings panel
 
 OLLAMA_BASE_URL=http://localhost:11434/v1
-LOCAL_LLM_MODEL=qwen3:27b
+LOCAL_LLM_MODEL=qwen3.6:27b
 
 # Example routing rules (PromptQuorum dispatch):
-# - task_type: code       → model: qwen3:27b  (local Ollama, GDPR-safe)
+# - task_type: code       → model: qwen3.6:27b  (local Ollama, GDPR-safe)
 # - task_type: analysis   → model: claude-sonnet-4-6 (Anthropic API, separate config)
-# - task_type: private    → model: qwen3:27b  (local Ollama, no cloud egress)`,
+# - task_type: private    → model: qwen3.6:27b  (local Ollama, no cloud egress)`,
         codeLanguage: 'bash',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Verbinden Sie PromptQuorum mit lokalem Qwen, indem Sie OLLAMA_BASE_URL auf http://localhost:11434/v1 und LOCAL_LLM_MODEL auf qwen3:27b in den lokalen Dispatch-Einstellungen setzen.' },
+          { type: 'one-sentence', text: 'Verbinden Sie PromptQuorum mit lokalem Qwen, indem Sie OLLAMA_BASE_URL auf http://localhost:11434/v1 und LOCAL_LLM_MODEL auf qwen3.6:27b in den lokalen Dispatch-Einstellungen setzen.' },
         ],
       },
       troubleshooting: {
@@ -935,7 +935,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           '**LM Studio zeigt „Modell konnte nicht geladen werden"**: Unzureichender VRAM. Reduzieren Sie die Q4_K_M Kontextlänge auf 16384 oder wechseln Sie zu Qwen 3 14B.',
           '**PromptQuorum gibt Authentifizierungsfehler zurück**: Setzen Sie `OLLAMA_BASE_URL=http://localhost:11434/v1` in den lokalen LLM-Einstellungen von PromptQuorum. Falls das Formular einen Key verlangt, geben Sie eine beliebige nicht-leere Zeichenkette ein — Ollama benötigt keine API-Key-Authentifizierung.',
           '**Ollama verwendet CPU statt GPU**: Bei NVIDIA: Prüfen Sie, dass CUDA-Treiber installiert sind (`nvidia-smi` sollte die GPU anzeigen). Auf Mac: Ollama verwendet automatisch Metal — keine Konfiguration nötig. Wenn Metal nicht aktiv ist, installieren Sie Ollama von ollama.com neu.',
-          '**Modell-Download stoppt oder schlägt fehl**: Große Modelle (Qwen 3.6 27B ~17 GB) können bei langsamen Verbindungen zeitüberschreiten. Führen Sie `ollama pull qwen3:27b` erneut aus — Ollama setzt ab der letzten Position fort. Alternativ laden Sie das GGUF direkt von [Hugging Face](https://huggingface.co/Qwen) herunter und verwenden Sie `ollama create` mit einem lokalen Pfad in der FROM-Klausel des Modelfile.',
+          '**Modell-Download stoppt oder schlägt fehl**: Große Modelle (Qwen 3.6 27B ~17 GB) können bei langsamen Verbindungen zeitüberschreiten. Führen Sie `ollama pull qwen3.6:27b` erneut aus — Ollama setzt ab der letzten Position fort. Alternativ laden Sie das GGUF direkt von [Hugging Face](https://huggingface.co/Qwen) herunter und verwenden Sie `ollama create` mit einem lokalen Pfad in der FROM-Klausel des Modelfile.',
         ],
         callouts: [
           { type: 'tip', text: 'Führen Sie `ollama ps` aus, um zu sehen, welche Modelle aktuell in den VRAM geladen sind und wie viel Speicher jedes verbraucht. Verwenden Sie `ollama stop qwen3-32k`, um ein Modell zu entladen, bevor Sie zu einem größeren wechseln.' },
@@ -966,7 +966,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Qwen 3 vs. Claude Sonnet 4.6 vs. DeepSeek R2 — Vergleich 2026](/de/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3.6 vs. Claude Sonnet 4.6 vs. DeepSeek — Vergleich 2026](/de/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[Warum EU-Unternehmen auf lokales Qwen umsteigen](/de/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Qwen Coder vs. DeepSeek vs. Mistral — Coding-Benchmark 2026](/de/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[Alle Local-LLM-Guides](/de/local-llms)',
@@ -981,7 +981,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           { q: 'Warum kürzt Ollama meine Anfragen ab?', a: 'Ollama verwendet standardmäßig num_ctx 2048 Token (~1.500 Wörter). Das ist zu wenig für die meisten realen Coding-Aufgaben. Sie müssen num_ctx auf mindestens 32768 in Ihrem Modelfile setzen. Erstellen Sie ein Modelfile mit `PARAMETER num_ctx 32768`, dann führen Sie `ollama create qwen3-32k -f Modelfile` aus, um eine Modellinstanz mit dem richtigen Kontextfenster zu erstellen.' },
           { q: 'Ist die lokale Ausführung von Qwen DSGVO-konform?', a: 'Ja — lokale Inferenz ist die DSGVO-konformste KI-Architektur. Wenn Qwen auf Ihrer Hardware läuft, werden keine Daten an Dritte übertragen. DSGVO Art. 44 Beschränkungen für internationale Datenübermittlungen greifen nicht, da keine Übermittlung stattfindet. Ihr interner Datenverarbeitungsvertrag gilt, aber für die KI-Schicht sind keine SCCs oder Angemessenheitsbeschlüsse erforderlich.' },
           { q: 'Kann Qwen 3 ausschließlich auf der CPU ausgeführt werden?', a: 'Ja, über llama.cpp oder Ollama auf einem System ohne GPU. CPU-Inferenz ist deutlich langsamer — typischerweise 1–5 Token/Sekunde auf einer modernen CPU für Qwen 3.6 27B. Für den Produktiveinsatz ist GPU oder Apple Silicon erforderlich. Für gelegentliche Nutzung oder Tests auf einem Laptop ohne dedizierte GPU funktioniert CPU-Inferenz, ist aber für Echtzeit-Konversation unpraktisch.' },
-          { q: 'Wie aktualisiere ich Qwen auf die neueste Version?', a: 'Führen Sie `ollama pull qwen3:27b` erneut aus. Ollama prüft, ob eine neuere Version verfügbar ist, und lädt nur die geänderten Layer herunter. Sie müssen Ihr Modelfile nicht neu erstellen — der Model-Tag (qwen3:27b) zeigt immer auf die neueste 27B-Version. In LM Studio prüfen Sie die Modellbibliothek auf Updates und laden bei Bedarf eine neuere GGUF-Version herunter.' },
+          { q: 'Wie aktualisiere ich Qwen auf die neueste Version?', a: 'Führen Sie `ollama pull qwen3.6:27b` erneut aus. Ollama prüft, ob eine neuere Version verfügbar ist, und lädt nur die geänderten Layer herunter. Sie müssen Ihr Modelfile nicht neu erstellen — der Model-Tag (qwen3.6:27b) zeigt immer auf die neueste 27B-Version. In LM Studio prüfen Sie die Modellbibliothek auf Updates und laden bei Bedarf eine neuere GGUF-Version herunter.' },
           { q: 'Muss ich bei der lokalen Ausführung von Qwen die DSGVO beachten?', a: 'Ja, aber der Aufwand ist deutlich geringer als bei Cloud-KI. Bei lokaler Inferenz verarbeiten Sie Daten auf Ihrer eigenen Infrastruktur — kein Auftragsverarbeitungsvertrag mit einem Drittanbieter (Art. 28) und kein Angemessenheitsbeschluss (Art. 44) für die KI-Schicht erforderlich. Sie müssen die Verarbeitung jedoch in Ihrem Verzeichnis von Verarbeitungstätigkeiten (VVT) dokumentieren. BSI-Grundschutz-Kataloge empfehlen lokale KI-Inferenz für Verarbeitungen mit Schutzbedarf „hoch" und „sehr hoch".' },
           { q: 'Ist lokales Qwen 3 für den deutschen Mittelstand geeignet?', a: 'Ja. Der Mac Mini M4 Pro (48 GB) für ca. 1.599 € bietet den besten Einstiegspunkt für mittelständische Unternehmen: lautloser Bürobetrieb, keine zusätzliche Strominfrastruktur, DSGVO-Konformität durch Design ohne separaten SCC-Prozess. Für Code-Generierung eines 5-köpfigen Entwicklungsteams (10 Mio. Token/Tag) amortisiert sich die Hardware gegenüber Claude Sonnet 4.6 API-Preisen in ca. 3 Monaten. Die BSI-Grundschutz-Konformität vereinfacht sich, weil keine personenbezogenen Daten die Unternehmensinfrastruktur verlassen.' },
         ],
@@ -990,20 +990,20 @@ LOCAL_LLM_MODEL=qwen3:27b
   },
   fr: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-16',
+    next_refresh_due: '2026-12-03',
     theme: 'Getting Started',
     title: 'Comment Exécuter Qwen 3 Localement en 2026 : Guide Ollama + LM Studio',
     seoTitle: 'Exécuter Qwen 3 localement 2026 : Guide de configuration',
     intro: 'Qwen 3.6 27B fonctionne sur un seul GPU grand public (16 Go VRAM) via Ollama ou LM Studio. La configuration prend moins de 10 minutes. Ce guide couvre la sélection du modèle, les exigences matérielles, l\'installation CLI Ollama, la configuration GUI LM Studio, la correction critique num_ctx, la consommation d\'énergie et TCO, ainsi que la connexion à PromptQuorum pour un dispatch multi-modèle.',
     metaDescription: 'Guide complet : Qwen 3.6 27B sur Ollama ou LM Studio. Matériel requis (16 Go VRAM), correction num_ctx (crucial), consommation électrique et intégration PromptQuorum.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-06-03',
     readTime: '10 min de lecture',
     educationalLevel: 'Beginner',
     audience: 'Développeurs configurant un LLM local pour la première fois, équipes UE cherchant une IA conforme au RGPD',
     primaryTerm: 'run Qwen 3 locally 2026',
     ctaText: 'Rejoindre la liste d\'attente PromptQuorum →',
-    leadAnswerBlock: '**Exécutez `ollama pull qwen3:27b` sur n\'importe quelle machine avec 16 Go VRAM ou Apple Silicon avec 32+ Go de mémoire unifiée. Pour un accès GUI, utilisez LM Studio. Les deux exécutent Qwen 3.6 27B entièrement hors ligne. Important : définissez `num_ctx` à 32 768 ou supérieur — la valeur par défaut d\'Ollama de 2 048 tokens tronque la plupart des tâches réelles.**',
+    leadAnswerBlock: '**Exécutez `ollama pull qwen3.6:27b` sur n\'importe quelle machine avec 16 Go VRAM ou Apple Silicon avec 32+ Go de mémoire unifiée. Pour un accès GUI, utilisez LM Studio. Les deux exécutent Qwen 3.6 27B entièrement hors ligne. Important : définissez `num_ctx` à 32 768 ou supérieur — la valeur par défaut d\'Ollama de 2 048 tokens tronque la plupart des tâches réelles.**',
     nextStep: {
       text: 'Qwen fonctionne en local. Découvrez maintenant les meilleures interfaces.',
       label: 'Meilleures interfaces LLM locales 2026 →',
@@ -1012,11 +1012,11 @@ LOCAL_LLM_MODEL=qwen3:27b
     quickAnswerTop: {
       fr: {
         question: 'Comment exécuter Qwen 3 localement en 2026 ?',
-        answer: 'Installez Ollama, exécutez `ollama pull qwen3:27b`, puis `ollama run qwen3:27b`. Pour GUI : téléchargez LM Studio, recherchez « Qwen 3 27B », téléchargez le fichier GGUF Q4_K_M. Important : définissez num_ctx à 32 768 dans Ollama (2 048 par défaut est trop petit). Pour un usage d\'équipe conforme au RGPD, connectez via l\'endpoint de dispatch Ollama local de PromptQuorum.',
+        answer: 'Installez Ollama, exécutez `ollama pull qwen3.6:27b`, puis `ollama run qwen3.6:27b`. Pour GUI : téléchargez LM Studio, recherchez « Qwen 3 27B », téléchargez le fichier GGUF Q4_K_M. Important : définissez num_ctx à 32 768 dans Ollama (2 048 par défaut est trop petit). Pour un usage d\'équipe conforme au RGPD, connectez via l\'endpoint de dispatch Ollama local de PromptQuorum.',
         bullets: [
           'Matériel minimum : 16 Go VRAM (RTX 4080) ou Apple Silicon avec 32 Go de mémoire unifiée',
           'Installation Ollama : brew install ollama (Mac) ou install.sh (Linux/Windows)',
-          'Télécharger le modèle : ollama pull qwen3:27b (~17 Go)',
+          'Télécharger le modèle : ollama pull qwen3.6:27b (~17 Go)',
           'Corriger le contexte : num_ctx 32 768 dans le Modelfile — 2 048 par défaut est trop petit',
           'Alternative LM Studio : interface graphique, pas de CLI requis, même qualité de modèle',
         ],
@@ -1045,7 +1045,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           '**Correction critique** : Ollama utilise `num_ctx 2048` par défaut. Définissez `num_ctx 32768` dans votre Modelfile.',
           '**Matériel** : 16 Go VRAM minimum (RTX 4080). Apple Silicon M4 Pro (48 Go) ou M5 Max (128 Go) sont les options d\'inférence hébergées en UE recommandées.',
           '**RGPD** : une fois exécuté localement, aucune donnée ne quitte votre machine. Aucune SCC ni accord de traitement de données n\'est requis au-delà de votre propre politique d\'infrastructure.',
-          '**Intégration PromptQuorum** : définissez `OLLAMA_BASE_URL=http://localhost:11434/v1` et `LOCAL_LLM_MODEL=qwen3:27b` dans les paramètres de dispatch local de PromptQuorum — distinct de la configuration API Anthropic.',
+          '**Intégration PromptQuorum** : définissez `OLLAMA_BASE_URL=http://localhost:11434/v1` et `LOCAL_LLM_MODEL=qwen3.6:27b` dans les paramètres de dispatch local de PromptQuorum — distinct de la configuration API Anthropic.',
         ],
       },
       whyLocal: {
@@ -1076,7 +1076,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         ],
         columns: ['Modèle', 'VRAM', 'Tokens/sec (RTX 4090)', 'Recommandé pour'],
         tableFormat: true,
-        note: 'Q4_K_M est la quantification recommandée pour la plupart des utilisateurs — meilleur rapport qualité/taille. Q8_0 offre une meilleure qualité à un coût VRAM plus élevé. Utilisez toujours le tag explicite (qwen3:27b, pas qwen3) pour vous assurer de télécharger le modèle 27B.',
+        note: 'Q4_K_M est la quantification recommandée pour la plupart des utilisateurs — meilleur rapport qualité/taille. Q8_0 offre une meilleure qualité à un coût VRAM plus élevé. Utilisez toujours le tag explicite (qwen3.6:27b, pas qwen3) pour vous assurer de télécharger le modèle 27B.',
       },
       hardware: {
         id: 'hardware',
@@ -1104,7 +1104,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         ],
         numberedItems: [
           { title: 'Installer Ollama', whyItMatters: 'Ollama gère les téléchargements de modèles, le format GGUF et fournit une API locale compatible OpenAI.' },
-          { title: 'Télécharger Qwen 3.6 27B avec le tag explicite', whyItMatters: 'Utilisez qwen3:27b explicitement. Le tag simple `qwen3` télécharge par défaut le modèle 8B — pas le modèle 27B ciblé dans ce guide.' },
+          { title: 'Télécharger Qwen 3.6 27B avec le tag explicite', whyItMatters: 'Utilisez qwen3.6:27b explicitement. Le tag simple `qwen3` télécharge par défaut le modèle 8B — pas le modèle 27B ciblé dans ce guide.' },
           { title: 'Créer un Modelfile avec la longueur de contexte correcte', whyItMatters: 'Le num_ctx par défaut de 2 048 tokens est trop petit pour les tâches de codage réelles. 32 768 tokens couvrent la plupart des fichiers et conversations.' },
           { title: 'Construire le modèle personnalisé et le lancer', whyItMatters: 'Crée une instance Qwen 3.6 27B avec la fenêtre de contexte étendue. Vérifiez avec une requête de test.' },
           { title: 'Tester l\'endpoint API', whyItMatters: 'Ollama expose une API compatible OpenAI sur localhost:11434/v1. Utilisez cet endpoint pour connecter des clients LLM, des IDE et PromptQuorum.' },
@@ -1119,13 +1119,13 @@ curl -fsSL https://ollama.com/install.sh | sh
 # Windows — download from https://ollama.com/download
 
 # Step 2 — Pull Qwen 3.6 27B (explicit tag required)
-ollama pull qwen3:27b
+ollama pull qwen3.6:27b
 # Downloads Qwen 3.6 27B Q4_K_M (~17 GB)
 # Note: 'ollama pull qwen3' without a tag downloads the 8B model
 
 # Step 3 — Create Modelfile with correct num_ctx
 cat > Modelfile <<'EOF'
-FROM qwen3:27b
+FROM qwen3.6:27b
 PARAMETER num_ctx 32768
 PARAMETER temperature 0.7
 EOF
@@ -1168,7 +1168,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         codeBlock: `// LM Studio local server config (exported JSON)
 {
-  "model": "qwen3-27b-q4_k_m",
+  "model": "qwen3.6-27b-q4_k_m",
   "server": {
     "host": "localhost",
     "port": 1234,
@@ -1194,15 +1194,15 @@ curl http://localhost:11434/v1/chat/completions \\
 # Set in your .env or PromptQuorum settings panel
 
 OLLAMA_BASE_URL=http://localhost:11434/v1
-LOCAL_LLM_MODEL=qwen3:27b
+LOCAL_LLM_MODEL=qwen3.6:27b
 
 # Example routing rules (PromptQuorum dispatch):
-# - task_type: code       → model: qwen3:27b  (local Ollama, GDPR-safe)
+# - task_type: code       → model: qwen3.6:27b  (local Ollama, GDPR-safe)
 # - task_type: analysis   → model: claude-sonnet-4-6 (Anthropic API, separate config)
-# - task_type: private    → model: qwen3:27b  (local Ollama, no cloud egress)`,
+# - task_type: private    → model: qwen3.6:27b  (local Ollama, no cloud egress)`,
         codeLanguage: 'bash',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Connectez PromptQuorum à Qwen local en définissant OLLAMA_BASE_URL sur http://localhost:11434/v1 et LOCAL_LLM_MODEL sur qwen3:27b dans les paramètres de dispatch local.' },
+          { type: 'one-sentence', text: 'Connectez PromptQuorum à Qwen local en définissant OLLAMA_BASE_URL sur http://localhost:11434/v1 et LOCAL_LLM_MODEL sur qwen3.6:27b dans les paramètres de dispatch local.' },
         ],
       },
       troubleshooting: {
@@ -1216,7 +1216,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           '**LM Studio affiche « échec du chargement du modèle »** : VRAM insuffisant. Réduisez la longueur de contexte Q4_K_M à 16 384 ou passez à Qwen 3 14B.',
           '**PromptQuorum renvoie une erreur d\'authentification** : définissez `OLLAMA_BASE_URL=http://localhost:11434/v1` dans les paramètres LLM local de PromptQuorum. Si le formulaire exige une clé, saisissez n\'importe quelle chaîne non vide — Ollama ne requiert pas d\'authentification par clé API.',
           '**Ollama utilise le CPU au lieu du GPU** : sur NVIDIA, vérifiez que les pilotes CUDA sont installés (`nvidia-smi` doit afficher le GPU). Sur Mac, Ollama utilise Metal automatiquement — aucune configuration nécessaire. Si Metal n\'est pas actif, réinstallez Ollama depuis ollama.com.',
-          '**Le téléchargement du modèle s\'arrête ou échoue** : les grands modèles (Qwen 3.6 27B ~17 Go) peuvent expirer sur les connexions lentes. Exécutez à nouveau `ollama pull qwen3:27b` — Ollama reprend là où il s\'est arrêté. Sinon, téléchargez le GGUF directement depuis [Hugging Face](https://huggingface.co/Qwen) et utilisez `ollama create` avec un chemin local dans la clause FROM du Modelfile.',
+          '**Le téléchargement du modèle s\'arrête ou échoue** : les grands modèles (Qwen 3.6 27B ~17 Go) peuvent expirer sur les connexions lentes. Exécutez à nouveau `ollama pull qwen3.6:27b` — Ollama reprend là où il s\'est arrêté. Sinon, téléchargez le GGUF directement depuis [Hugging Face](https://huggingface.co/Qwen) et utilisez `ollama create` avec un chemin local dans la clause FROM du Modelfile.',
         ],
         callouts: [
           { type: 'tip', text: 'Exécutez `ollama ps` pour voir quels modèles sont actuellement chargés en VRAM et combien de mémoire chacun consomme. Utilisez `ollama stop qwen3-32k` pour décharger un modèle avant de passer à un plus grand.' },
@@ -1247,7 +1247,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         id: 'related-reading',
         title: 'Lectures connexes',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Comparatif 2026](/fr/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3.6 vs Claude Sonnet 4.6 vs DeepSeek — Comparatif 2026](/fr/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[Pourquoi les entreprises UE passent à Qwen local](/fr/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Qwen Coder vs DeepSeek vs Mistral — Benchmark codage 2026](/fr/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[Tous les guides LLM local](/fr/local-llms)',
@@ -1262,27 +1262,27 @@ LOCAL_LLM_MODEL=qwen3:27b
           { q: 'Pourquoi Ollama tronque-t-il mes requêtes ?', a: 'Ollama utilise num_ctx 2 048 tokens par défaut (~1 500 mots). C\'est insuffisant pour la plupart des tâches de codage réelles. Vous devez définir num_ctx à au moins 32 768 dans votre Modelfile. Créez un Modelfile avec `PARAMETER num_ctx 32768`, puis exécutez `ollama create qwen3-32k -f Modelfile` pour créer une instance avec la fenêtre de contexte correcte.' },
           { q: 'L\'exécution locale de Qwen est-elle conforme au RGPD ?', a: 'Oui — l\'inférence locale est l\'architecture IA la plus conforme au RGPD. Lorsque Qwen s\'exécute sur votre matériel, aucune donnée n\'est transmise à un tiers. Les restrictions de l\'article 44 du RGPD sur les transferts internationaux ne s\'appliquent pas car il n\'y a pas de transfert. Votre accord de traitement interne s\'applique, mais aucune SCC ni décision d\'adéquation n\'est nécessaire pour la couche IA.' },
           { q: 'Qwen 3 peut-il fonctionner uniquement sur CPU ?', a: 'Oui, via llama.cpp ou Ollama sur un système sans GPU. L\'inférence CPU est nettement plus lente — typiquement 1–5 tokens/seconde pour Qwen 3.6 27B sur un CPU moderne. Pour un usage en production, GPU ou Apple Silicon est requis. Pour des tests occasionnels sur un ordinateur portable sans GPU dédié, l\'inférence CPU fonctionne mais reste impraticable pour la conversation en temps réel.' },
-          { q: 'Comment mettre à jour Qwen vers la dernière version ?', a: 'Exécutez à nouveau `ollama pull qwen3:27b`. Ollama vérifie si une version plus récente est disponible et télécharge uniquement les layers modifiés. Vous n\'avez pas besoin de recréer votre Modelfile — le tag (qwen3:27b) pointe toujours vers la dernière version 27B. Dans LM Studio, vérifiez les mises à jour dans la bibliothèque de modèles et téléchargez à nouveau si une version GGUF plus récente est disponible.' },
+          { q: 'Comment mettre à jour Qwen vers la dernière version ?', a: 'Exécutez à nouveau `ollama pull qwen3.6:27b`. Ollama vérifie si une version plus récente est disponible et télécharge uniquement les layers modifiés. Vous n\'avez pas besoin de recréer votre Modelfile — le tag (qwen3.6:27b) pointe toujours vers la dernière version 27B. Dans LM Studio, vérifiez les mises à jour dans la bibliothèque de modèles et téléchargez à nouveau si une version GGUF plus récente est disponible.' },
         ],
       },
     },
   },
   ja: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-16',
+    next_refresh_due: '2026-12-03',
     theme: 'Getting Started',
     title: '2026年にQwen 3をローカルで実行する方法：Ollama + LM Studioセットアップガイド',
     seoTitle: '2026年Qwen 3ローカル実行：設定完全ガイド',
     intro: 'Qwen 3.6 27BはOllamaまたはLM Studioを使って、単一の消費者向けGPU（16 GB VRAM）上で動作します。セットアップは10分以内に完了します。このガイドでは、モデルの選択、ハードウェア要件、Ollama CLIのインストール、LM Studio GUIのセットアップ、重要なnum_ctxの修正、電力消費とTCO、PromptQuorumへの接続をマルチモデルディスパッチとともに解説します。',
     metaDescription: '2026年にQwen 3をローカルで実行する方法：OllamaとLM Studioのステップバイステップセットアップ、ハードウェア要件、num_ctx修正、TCOとPromptQuorum統合。2026年5月更新。',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-06-03',
     readTime: '10分で読めます',
     educationalLevel: 'Beginner',
     audience: '初めてローカルLLMを構築する開発者、GDPRに準拠したAIを求めるEUチーム',
     primaryTerm: 'run Qwen 3 locally 2026',
     ctaText: 'PromptQuorumウェイトリストに登録 →',
-    leadAnswerBlock: '**16 GB VRAMまたはApple Silicon（32 GB以上の統合メモリ）を搭載したマシンで`ollama pull qwen3:27b`を実行してください。GUIアクセスにはLM Studioを使用します。どちらもQwen 3.6 27Bを完全オフラインで実行できます。重要：`num_ctx`を32768以上に設定してください — Ollamaのデフォルトは2048トークンで、ほとんどの実際のタスクを切り捨ててしまいます。**',
+    leadAnswerBlock: '**16 GB VRAMまたはApple Silicon（32 GB以上の統合メモリ）を搭載したマシンで`ollama pull qwen3.6:27b`を実行してください。GUIアクセスにはLM Studioを使用します。どちらもQwen 3.6 27Bを完全オフラインで実行できます。重要：`num_ctx`を32768以上に設定してください — Ollamaのデフォルトは2048トークンで、ほとんどの実際のタスクを切り捨ててしまいます。**',
     nextStep: {
       text: 'Qwenがローカルで動いています。次は使いやすくする最良のUIを探しましょう。',
       label: 'おすすめローカルLLMフロントエンド2026 →',
@@ -1291,11 +1291,11 @@ LOCAL_LLM_MODEL=qwen3:27b
     quickAnswerTop: {
       ja: {
         question: '2026年にQwen 3をローカルで実行するには？',
-        answer: 'Ollamaをインストールし、`ollama pull qwen3:27b`を実行してから`ollama run qwen3:27b`。GUIの場合：LM Studioをダウンロードし、「Qwen 3 27B」を検索、Q4_K_M GGUFファイルをダウンロード。重要：Ollamaのnum_ctxを32768に設定（デフォルトの2048は小さすぎる）。GDPRに準拠したチーム利用にはPromptQuorumのローカルOllamaディスパッチエンドポイント経由で接続。',
+        answer: 'Ollamaをインストールし、`ollama pull qwen3.6:27b`を実行してから`ollama run qwen3.6:27b`。GUIの場合：LM Studioをダウンロードし、「Qwen 3 27B」を検索、Q4_K_M GGUFファイルをダウンロード。重要：Ollamaのnum_ctxを32768に設定（デフォルトの2048は小さすぎる）。GDPRに準拠したチーム利用にはPromptQuorumのローカルOllamaディスパッチエンドポイント経由で接続。',
         bullets: [
           '最小ハードウェア：16 GB VRAM（RTX 4080）または32 GBユニファイドメモリのApple Silicon',
           'Ollamaインストール：brew install ollama（Mac）またはinstall.sh（Linux/Windows）',
-          'モデル取得：ollama pull qwen3:27b（Qwen 3.6 27B Q4_K_M約17 GBをダウンロード）',
+          'モデル取得：ollama pull qwen3.6:27b（Qwen 3.6 27B Q4_K_M約17 GBをダウンロード）',
           'コンテキスト修正：Modelfileにてnum_ctx 32768を設定 — デフォルト2048は小さすぎる',
           'LM Studio代替：GUIベース、CLI不要、同等のモデル品質',
         ],
@@ -1324,7 +1324,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           '**重要な修正**：Ollamaのデフォルトは`num_ctx 2048`です。Modelfileにて`num_ctx 32768`を設定してください。',
           '**ハードウェア**：最低16 GB VRAM（RTX 4080）。Apple Silicon M4 Pro（48 GB）またはM5 Max（128 GB）が推奨のローカル推論オプションです。',
           '**GDPR/個人情報保護**：ローカルで実行すると、データが一切外部サーバーに送信されません。SCCや第三者とのデータ処理契約は不要です。',
-          '**PromptQuorum統合**：PromptQuorumのローカルディスパッチ設定で`OLLAMA_BASE_URL=http://localhost:11434/v1`と`LOCAL_LLM_MODEL=qwen3:27b`を設定します — Anthropic API設定とは別です。',
+          '**PromptQuorum統合**：PromptQuorumのローカルディスパッチ設定で`OLLAMA_BASE_URL=http://localhost:11434/v1`と`LOCAL_LLM_MODEL=qwen3.6:27b`を設定します — Anthropic API設定とは別です。',
         ],
       },
       whyLocal: {
@@ -1355,7 +1355,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         ],
         columns: ['モデル', 'VRAM', 'トークン/秒（RTX 4090）', '推奨用途'],
         tableFormat: true,
-        note: 'Q4_K_Mはほとんどのユーザーにとってはおすすめの量子化です — 品質とサイズの最良のバランスを提供します。Q8_0はより高いVRAMコストでより高い品質を提供します。必ず明示的なタグ（qwen3:27b、qwen3ではなく）を使用して27Bモデルをダウンロードしてください。',
+        note: 'Q4_K_Mはほとんどのユーザーにとってはおすすめの量子化です — 品質とサイズの最良のバランスを提供します。Q8_0はより高いVRAMコストでより高い品質を提供します。必ず明示的なタグ（qwen3.6:27b、qwen3ではなく）を使用して27Bモデルをダウンロードしてください。',
       },
       hardware: {
         id: 'hardware',
@@ -1383,7 +1383,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         ],
         numberedItems: [
           { title: 'Ollamaをインストールする', whyItMatters: 'Ollamaはモデルのダウンロード、GGUFフォーマット、OpenAI互換のローカルAPIを管理します。' },
-          { title: '明示的なタグでQwen 3.6 27Bを取得する', whyItMatters: 'qwen3:27bを明示的に使用してください。タグなしの`qwen3`はデフォルトで8Bモデルをダウンロードします — このガイドで対象としている27Bモデルではありません。' },
+          { title: '明示的なタグでQwen 3.6 27Bを取得する', whyItMatters: 'qwen3.6:27bを明示的に使用してください。タグなしの`qwen3`はデフォルトで8Bモデルをダウンロードします — このガイドで対象としている27Bモデルではありません。' },
           { title: '正しいコンテキスト長でModelfileを作成する', whyItMatters: 'デフォルトのnum_ctx 2048トークンは実際のコーディングタスクには小さすぎます。32768トークンでほとんどのファイルと会話を処理できます。' },
           { title: 'カスタムモデルをビルドして実行する', whyItMatters: '拡張されたコンテキストウィンドウを持つQwen 3.6 27Bインスタンスを作成します。テストプロンプトで確認してください。' },
           { title: 'APIエンドポイントをテストする', whyItMatters: 'OllamaはlocalHost:11434/v1でOpenAI互換APIを公開します。このエンドポイントを使用してLLMクライアント、IDE、PromptQuorumを接続します。' },
@@ -1398,13 +1398,13 @@ curl -fsSL https://ollama.com/install.sh | sh
 # Windows — download from https://ollama.com/download
 
 # Step 2 — Pull Qwen 3.6 27B (explicit tag required)
-ollama pull qwen3:27b
+ollama pull qwen3.6:27b
 # Downloads Qwen 3.6 27B Q4_K_M (~17 GB)
 # Note: 'ollama pull qwen3' without a tag downloads the 8B model
 
 # Step 3 — Create Modelfile with correct num_ctx
 cat > Modelfile <<'EOF'
-FROM qwen3:27b
+FROM qwen3.6:27b
 PARAMETER num_ctx 32768
 PARAMETER temperature 0.7
 EOF
@@ -1447,7 +1447,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         codeBlock: `// LM Studio local server config (exported JSON)
 {
-  "model": "qwen3-27b-q4_k_m",
+  "model": "qwen3.6-27b-q4_k_m",
   "server": {
     "host": "localhost",
     "port": 1234,
@@ -1473,15 +1473,15 @@ curl http://localhost:11434/v1/chat/completions \\
 # Set in your .env or PromptQuorum settings panel
 
 OLLAMA_BASE_URL=http://localhost:11434/v1
-LOCAL_LLM_MODEL=qwen3:27b
+LOCAL_LLM_MODEL=qwen3.6:27b
 
 # Example routing rules (PromptQuorum dispatch):
-# - task_type: code       → model: qwen3:27b  (local Ollama, GDPR-safe)
+# - task_type: code       → model: qwen3.6:27b  (local Ollama, GDPR-safe)
 # - task_type: analysis   → model: claude-sonnet-4-6 (Anthropic API, separate config)
-# - task_type: private    → model: qwen3:27b  (local Ollama, no cloud egress)`,
+# - task_type: private    → model: qwen3.6:27b  (local Ollama, no cloud egress)`,
         codeLanguage: 'bash',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'ローカルディスパッチ設定でOLLAMA_BASE_URLをhttp://localhost:11434/v1に、LOCAL_LLM_MODELをqwen3:27bに設定することで、PromptQuorumをローカルQwenに接続できます。' },
+          { type: 'one-sentence', text: 'ローカルディスパッチ設定でOLLAMA_BASE_URLをhttp://localhost:11434/v1に、LOCAL_LLM_MODELをqwen3.6:27bに設定することで、PromptQuorumをローカルQwenに接続できます。' },
         ],
       },
       troubleshooting: {
@@ -1495,7 +1495,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           '**LM Studioが「モデルの読み込みに失敗」と表示**：VRAMが不足しています。Q4_K_Mのコンテキスト長を16384に削減するか、Qwen 3 14Bに切り替えてください。',
           '**PromptQuorumが認証エラーを返す**：PromptQuorumのローカルLLM設定で`OLLAMA_BASE_URL=http://localhost:11434/v1`を設定してください。フォームがキーを要求する場合、任意の空でない文字列を入力してください — OllamaはAPIキー認証を必要としません。',
           '**OllamaがGPUの代わりにCPUを使用する**：NVIDIAの場合：CUDAドライバーがインストールされているか確認してください（`nvidia-smi`でGPUが表示されるはず）。Macの場合：OllamaはMetalを自動的に使用します — 設定は不要です。Metalが有効でない場合、ollama.comからOllamaを再インストールしてください。',
-          '**モデルのダウンロードが停止または失敗する**：大きなモデル（Qwen 3.6 27B 〜17 GB）は遅い接続でタイムアウトする場合があります。`ollama pull qwen3:27b`を再実行してください — Ollamaは中断した場所から再開します。または、[Hugging Face](https://huggingface.co/Qwen)から直接GGUFをダウンロードし、ModelfileのFROM句でローカルパスを使用して`ollama create`を実行してください。',
+          '**モデルのダウンロードが停止または失敗する**：大きなモデル（Qwen 3.6 27B 〜17 GB）は遅い接続でタイムアウトする場合があります。`ollama pull qwen3.6:27b`を再実行してください — Ollamaは中断した場所から再開します。または、[Hugging Face](https://huggingface.co/Qwen)から直接GGUFをダウンロードし、ModelfileのFROM句でローカルパスを使用して`ollama create`を実行してください。',
         ],
         callouts: [
           { type: 'tip', text: '`ollama ps`を実行して、現在VRAMに読み込まれているモデルとそれぞれのメモリ消費量を確認してください。より大きなモデルに切り替える前に`ollama stop qwen3-32k`でモデルをアンロードしてください。' },
@@ -1526,7 +1526,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — 2026年比較](/ja/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3.6 vs Claude Sonnet 4.6 vs DeepSeek — 2026年比較](/ja/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[EU企業がローカルQwenに移行する理由](/ja/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Qwen Coder vs DeepSeek vs Mistral — コーディングベンチマーク2026](/ja/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[すべてのローカルLLMガイド](/ja/local-llms)',
@@ -1541,27 +1541,27 @@ LOCAL_LLM_MODEL=qwen3:27b
           { q: 'なぜOllamaがプロンプトを切り捨てるのですか？', a: 'Ollamaはデフォルトでnum_ctx 2048トークン（約1500語）を使用します。これはほとんどの実際のコーディングタスクには小さすぎます。Modelfileでnum_ctxを少なくとも32768に設定する必要があります。`PARAMETER num_ctx 32768`でModelfileを作成し、`ollama create qwen3-32k -f Modelfile`を実行して正しいコンテキストウィンドウを持つモデルインスタンスを作成してください。' },
           { q: 'Qwenをローカルで実行することはGDPRに準拠していますか？', a: 'はい — ローカル推論は最もGDPRに準拠したAIアーキテクチャです。QwenがハードウェアP上で実行される場合、データは第三者に転送されません。データ転送がないため、GDPR第44条の国際データ転送制限は適用されません。内部のデータ処理契約は適用されますが、AIレイヤーにはSCCや十分性認定は必要ありません。' },
           { q: 'Qwen 3はCPUのみで実行できますか？', a: 'はい、GPUなしのシステムでllama.cppまたはOllamaを使用して実行できます。CPU推論は大幅に遅くなります — Qwen 3.6 27Bの場合、現代のCPUで通常1〜5トークン/秒です。本番用途にはGPUまたはApple Siliconが必要です。専用GPUのないラップトップでの時々の使用やテストにはCPU推論は機能しますが、リアルタイムの会話には実用的ではありません。' },
-          { q: 'Qwenを最新バージョンに更新するには？', a: '`ollama pull qwen3:27b`を再実行してください。Ollamaは新しいバージョンが利用可能かどうかを確認し、変更されたレイヤーのみをダウンロードします。Modelfileを再作成する必要はありません — モデルタグ（qwen3:27b）は常に最新の27Bリリースを指します。LM Studioではモデルライブラリのアップデートを確認し、新しいGGUFバージョンが利用可能であれば再ダウンロードしてください。' },
+          { q: 'Qwenを最新バージョンに更新するには？', a: '`ollama pull qwen3.6:27b`を再実行してください。Ollamaは新しいバージョンが利用可能かどうかを確認し、変更されたレイヤーのみをダウンロードします。Modelfileを再作成する必要はありません — モデルタグ（qwen3.6:27b）は常に最新の27Bリリースを指します。LM Studioではモデルライブラリのアップデートを確認し、新しいGGUFバージョンが利用可能であれば再ダウンロードしてください。' },
         ],
       },
     },
   },
   zh: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-16',
+    next_refresh_due: '2026-12-03',
     theme: 'Getting Started',
     title: '2026年如何在本地运行Qwen 3：Ollama + LM Studio完整设置指南',
     seoTitle: '本地运行Qwen 3：2026年完整配置指南',
     intro: 'Qwen 3.6 27B通过Ollama或LM Studio在单个消费级GPU（16 GB显存）上运行，零API成本。设置耗时不到10分钟。本指南涵盖模型选择、硬件要求、Ollama CLI安装、LM Studio GUI设置、关键的num_ctx修复、功耗与TCO分析，以及连接到PromptQuorum实现多模型调度。',
     metaDescription: 'Qwen 3.6 27B在Ollama和LM Studio的完整配置。硬件要求（16GB显存）、num_ctx关键修复、功耗分析、PromptQuorum集成步骤详解。',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-06-03',
     readTime: '阅读约10分钟',
     educationalLevel: 'Beginner',
     audience: '首次搭建本地LLM的开发者，寻求GDPR合规AI方案的欧盟团队',
     primaryTerm: 'run Qwen 3 locally 2026',
     ctaText: '加入PromptQuorum候补名单 →',
-    leadAnswerBlock: '**在任何配备16 GB显存或32 GB以上统一内存Apple Silicon的机器上运行`ollama pull qwen3:27b`。GUI访问推荐使用LM Studio。两者均可完全离线运行Qwen 3.6 27B。重要：将`num_ctx`设置为32768或更高——Ollama默认的2048 token会截断大多数实际任务。**',
+    leadAnswerBlock: '**在任何配备16 GB显存或32 GB以上统一内存Apple Silicon的机器上运行`ollama pull qwen3.6:27b`。GUI访问推荐使用LM Studio。两者均可完全离线运行Qwen 3.6 27B。重要：将`num_ctx`设置为32768或更高——Ollama默认的2048 token会截断大多数实际任务。**',
     nextStep: {
       text: 'Qwen已在本地运行。现在探索最好的UI界面。',
       label: '2026年最佳本地LLM前端 →',
@@ -1570,11 +1570,11 @@ LOCAL_LLM_MODEL=qwen3:27b
     quickAnswerTop: {
       zh: {
         question: '2026年如何在本地运行Qwen 3？',
-        answer: '安装Ollama，运行`ollama pull qwen3:27b`，然后`ollama run qwen3:27b`。GUI方式：下载LM Studio，搜索"Qwen 3 27B"，下载Q4_K_M GGUF文件。关键：将Ollama中的num_ctx设置为32768（默认2048太小）。如需GDPR合规团队使用，通过PromptQuorum的本地Ollama调度端点连接。',
+        answer: '安装Ollama，运行`ollama pull qwen3.6:27b`，然后`ollama run qwen3.6:27b`。GUI方式：下载LM Studio，搜索"Qwen 3 27B"，下载Q4_K_M GGUF文件。关键：将Ollama中的num_ctx设置为32768（默认2048太小）。如需GDPR合规团队使用，通过PromptQuorum的本地Ollama调度端点连接。',
         bullets: [
           '最低硬件：16 GB显存（RTX 4080）或32 GB统一内存的Apple Silicon',
           'Ollama安装：brew install ollama（Mac）或install.sh（Linux/Windows）',
-          '拉取模型：ollama pull qwen3:27b（下载Qwen 3.6 27B Q4_K_M约17 GB）',
+          '拉取模型：ollama pull qwen3.6:27b（下载Qwen 3.6 27B Q4_K_M约17 GB）',
           '修复上下文：在Modelfile中设置num_ctx 32768 — 默认2048太小',
           'LM Studio替代方案：GUI界面，无需CLI，模型质量相同',
         ],
@@ -1603,7 +1603,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           '**关键修复**：Ollama默认`num_ctx 2048`。在Modelfile中设置`num_ctx 32768`。',
           '**硬件**：最低16 GB显存（RTX 4080）。48 GB统一内存的Apple Silicon M4 Pro或M5 Max（128 GB）是推荐的本地推理选项。',
           '**数据隐私**：本地运行后，任何数据都不会离开您的机器。无需与第三方签署数据处理协议。',
-          '**PromptQuorum集成**：在PromptQuorum本地调度设置中配置`OLLAMA_BASE_URL=http://localhost:11434/v1`和`LOCAL_LLM_MODEL=qwen3:27b`——与Anthropic API配置相互独立。',
+          '**PromptQuorum集成**：在PromptQuorum本地调度设置中配置`OLLAMA_BASE_URL=http://localhost:11434/v1`和`LOCAL_LLM_MODEL=qwen3.6:27b`——与Anthropic API配置相互独立。',
         ],
       },
       whyLocal: {
@@ -1634,7 +1634,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         ],
         columns: ['型号', 'VRAM', '令牌/秒（RTX 4090）', '推荐用途'],
         tableFormat: true,
-        note: 'Q4_K_M是大多数用户的推荐量化方式——最佳的质量与体积比。Q8_0以更高的显存成本提供更高质量。始终使用显式标签（qwen3:27b，而非qwen3）以确保下载的是27B模型。',
+        note: 'Q4_K_M是大多数用户的推荐量化方式——最佳的质量与体积比。Q8_0以更高的显存成本提供更高质量。始终使用显式标签（qwen3.6:27b，而非qwen3）以确保下载的是27B模型。',
       },
       hardware: {
         id: 'hardware',
@@ -1662,7 +1662,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         ],
         numberedItems: [
           { title: '安装Ollama', whyItMatters: 'Ollama管理模型下载、GGUF格式，并提供OpenAI兼容的本地API。' },
-          { title: '使用显式标签拉取Qwen 3.6 27B', whyItMatters: '明确使用qwen3:27b。不带标签的`qwen3`默认下载8B模型——不是本指南目标的27B模型。' },
+          { title: '使用显式标签拉取Qwen 3.6 27B', whyItMatters: '明确使用qwen3.6:27b。不带标签的`qwen3`默认下载8B模型——不是本指南目标的27B模型。' },
           { title: '创建包含正确上下文长度的Modelfile', whyItMatters: '默认的num_ctx 2048 token对于实际代码任务太小。32768 token可处理大多数文件和对话。' },
           { title: '构建自定义模型并运行', whyItMatters: '创建具有扩展上下文窗口的Qwen 3.6 27B实例。使用测试提示词验证。' },
           { title: '测试API端点', whyItMatters: 'Ollama在localhost:11434/v1暴露OpenAI兼容API。使用此端点连接LLM客户端、IDE和PromptQuorum。' },
@@ -1677,13 +1677,13 @@ curl -fsSL https://ollama.com/install.sh | sh
 # Windows — download from https://ollama.com/download
 
 # Step 2 — Pull Qwen 3.6 27B (explicit tag required)
-ollama pull qwen3:27b
+ollama pull qwen3.6:27b
 # Downloads Qwen 3.6 27B Q4_K_M (~17 GB)
 # Note: 'ollama pull qwen3' without a tag downloads the 8B model
 
 # Step 3 — Create Modelfile with correct num_ctx
 cat > Modelfile <<'EOF'
-FROM qwen3:27b
+FROM qwen3.6:27b
 PARAMETER num_ctx 32768
 PARAMETER temperature 0.7
 EOF
@@ -1726,7 +1726,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         codeBlock: `// LM Studio local server config (exported JSON)
 {
-  "model": "qwen3-27b-q4_k_m",
+  "model": "qwen3.6-27b-q4_k_m",
   "server": {
     "host": "localhost",
     "port": 1234,
@@ -1752,15 +1752,15 @@ curl http://localhost:11434/v1/chat/completions \\
 # Set in your .env or PromptQuorum settings panel
 
 OLLAMA_BASE_URL=http://localhost:11434/v1
-LOCAL_LLM_MODEL=qwen3:27b
+LOCAL_LLM_MODEL=qwen3.6:27b
 
 # Example routing rules (PromptQuorum dispatch):
-# - task_type: code       → model: qwen3:27b  (local Ollama, GDPR-safe)
+# - task_type: code       → model: qwen3.6:27b  (local Ollama, GDPR-safe)
 # - task_type: analysis   → model: claude-sonnet-4-6 (Anthropic API, separate config)
-# - task_type: private    → model: qwen3:27b  (local Ollama, no cloud egress)`,
+# - task_type: private    → model: qwen3.6:27b  (local Ollama, no cloud egress)`,
         codeLanguage: 'bash',
         snippetBlocks: [
-          { type: 'one-sentence', text: '在本地调度设置中将OLLAMA_BASE_URL设为http://localhost:11434/v1、LOCAL_LLM_MODEL设为qwen3:27b，即可将PromptQuorum连接到本地Qwen。' },
+          { type: 'one-sentence', text: '在本地调度设置中将OLLAMA_BASE_URL设为http://localhost:11434/v1、LOCAL_LLM_MODEL设为qwen3.6:27b，即可将PromptQuorum连接到本地Qwen。' },
         ],
       },
       troubleshooting: {
@@ -1774,7 +1774,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           '**LM Studio显示"加载模型失败"**：显存不足。将Q4_K_M上下文长度减少到16384或切换到Qwen 3 14B。',
           '**PromptQuorum返回认证错误**：在PromptQuorum的本地LLM设置中设置`OLLAMA_BASE_URL=http://localhost:11434/v1`。如果表单需要密钥，输入任意非空字符串——Ollama不需要API密钥认证。',
           '**Ollama使用CPU而非GPU**：NVIDIA：确认已安装CUDA驱动（`nvidia-smi`应显示GPU）。Mac：Ollama自动使用Metal——无需配置。如果Metal未激活，从ollama.com重新安装Ollama。',
-          '**模型下载停滞或失败**：大型模型（Qwen 3.6 27B约17 GB）在慢速连接上可能超时。再次运行`ollama pull qwen3:27b`——Ollama从中断处继续。或者，直接从[Hugging Face](https://huggingface.co/Qwen)下载GGUF，并在Modelfile的FROM子句中使用本地路径运行`ollama create`。',
+          '**模型下载停滞或失败**：大型模型（Qwen 3.6 27B约17 GB）在慢速连接上可能超时。再次运行`ollama pull qwen3.6:27b`——Ollama从中断处继续。或者，直接从[Hugging Face](https://huggingface.co/Qwen)下载GGUF，并在Modelfile的FROM子句中使用本地路径运行`ollama create`。',
         ],
         callouts: [
           { type: 'tip', text: '运行`ollama ps`查看当前加载到显存中的模型及每个模型消耗的内存。切换到更大模型前使用`ollama stop qwen3-32k`卸载模型。' },
@@ -1805,7 +1805,7 @@ LOCAL_LLM_MODEL=qwen3:27b
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — 2026年全面对比](/zh/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3.6 vs Claude Sonnet 4.6 vs DeepSeek — 2026年全面对比](/zh/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[欧盟企业为何转向本地Qwen](/zh/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Qwen Coder vs DeepSeek vs Mistral — 代码基准测试2026](/zh/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[所有本地LLM指南](/zh/local-llms)',
@@ -1820,7 +1820,7 @@ LOCAL_LLM_MODEL=qwen3:27b
           { q: '为什么Ollama会截断我的提示词？', a: 'Ollama默认使用num_ctx 2048 token（约1500个词）。这对大多数实际代码任务来说太小了。您必须在Modelfile中将num_ctx设置为至少32768。创建包含`PARAMETER num_ctx 32768`的Modelfile，然后运行`ollama create qwen3-32k -f Modelfile`以构建具有正确上下文窗口的模型实例。' },
           { q: '在本地运行Qwen是否符合GDPR？', a: '是的——本地推理是最符合GDPR的AI架构。当Qwen在您的硬件上运行时，没有数据传输给任何第三方。GDPR第44条关于国际数据传输的限制不适用，因为没有数据传输。您的内部数据处理协议适用，但AI层不需要SCC或充分性决定。' },
           { q: 'Qwen 3可以仅在CPU上运行吗？', a: '可以，通过llama.cpp或Ollama在没有GPU的系统上运行。CPU推理速度明显较慢——Qwen 3.6 27B在现代CPU上通常为1–5令牌/秒。生产使用需要GPU或Apple Silicon。对于没有专用GPU的笔记本电脑上的偶尔使用或测试，CPU推理有效但对实时对话不实用。' },
-          { q: '如何将Qwen更新到最新版本？', a: '再次运行`ollama pull qwen3:27b`。Ollama检查是否有更新版本并仅下载更改的层。您不需要重新创建Modelfile——模型标签（qwen3:27b）始终指向最新的27B版本。在LM Studio中，检查模型库中的更新，如果有更新的GGUF版本可用则重新下载。' },
+          { q: '如何将Qwen更新到最新版本？', a: '再次运行`ollama pull qwen3.6:27b`。Ollama检查是否有更新版本并仅下载更改的层。您不需要重新创建Modelfile——模型标签（qwen3.6:27b）始终指向最新的27B版本。在LM Studio中，检查模型库中的更新，如果有更新的GGUF版本可用则重新下载。' },
         ],
       },
     },
