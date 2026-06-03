@@ -745,6 +745,264 @@ schema: {
         ],
       },
     },
+    pt: {
+      freshness_tier: 'semi_annual',
+      theme: 'Advanced Techniques',
+      title: 'Prompt Engineering para LLMs locais 2026: CoT e Few-Shot',
+      seoTitle: 'Prompt Engineering para LLMs locais 2026: CoT e Few-Shot',
+      intro: 'Modelos locais de 7B–13B respondem de forma diferente a prompts do que o GPT-5.2 ou Claude. Eles precisam de estrutura explícita, instruções mais claras e 3–5 exemplos few-shot onde modelos na nuvem precisam de apenas 1–2. Em abril de 2026, técnicas comprovadas incluem prompting por cadeia de pensamento (+10–20% de precisão), definição de papéis, formatação de saída estruturada (JSON) e configuração de system prompt no Ollama e LM Studio.',
+      metaDescription: 'Cadeia de pensamento aumenta a precisão de modelos 7B em 10–20%. Few-shot (3–5 exemplos) supera zero-shot em 15–25%. Guia de system prompt para Ollama e LM Studio.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**LLMs locais (modelos 7B-13B) respondem de forma diferente a prompts do que APIs na nuvem. Eles precisam de estrutura explícita, instruções mais claras e menos dependência de aprendizado em contexto.**',
+      audience: 'Iniciantes executando seu primeiro LLM local em hardware de consumo',
+      readTime: '11 min de leitura',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'prompt engineering',
+      toc: [
+        { label: 'Principais conclusões', anchor: '#key-takeaways' },
+        { label: 'Fatos rápidos', anchor: '#quick-facts' },
+        { label: 'Diferenças em relação a LLMs na nuvem', anchor: '#differences' },
+        { label: 'Prompting por cadeia de pensamento', anchor: '#chain-of-thought' },
+        { label: 'Formatação de saída estruturada', anchor: '#structured-output' },
+        { label: 'Definição de papéis', anchor: '#roles' },
+        { label: 'Formatos de system prompt por ferramenta', anchor: '#system-prompt-formats' },
+        { label: 'Temperatura, Top-P e Repeat Penalty', anchor: '#temperature-sampling' },
+        { label: 'Few-Shot vs Zero-Shot', anchor: '#few-shot' },
+        { label: 'Erros comuns', anchor: '#common-mistakes' },
+        { label: 'Considerações regionais', anchor: '#regional-context' },
+        { label: 'Perguntas frequentes', anchor: '#faq' },
+        { label: 'Leitura relacionada', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Modelos locais de 7B precisam de orientação mais explícita do que o GPT-5.5. Prompts mais longos, instruções mais claras.',
+            'Prompting por cadeia de pensamento ("Deixe-me pensar passo a passo") melhora a precisão de raciocínio em 10–20%.',
+            'Sempre especifique o formato de saída (JSON, Markdown, texto simples). Saídas não estruturadas são imprevisíveis.',
+            'Exemplos few-shot (1–3) funcionam melhor que zero-shot em modelos locais. Mais exemplos = maior consistência.',
+            'Definição de papéis ("Você é um especialista em Python") melhora respostas específicas de domínio.',
+          ],
+        },
+        quickFacts: {
+          id: 'quick-facts',
+          title: 'Fatos rápidos',
+          items: [
+            '**Melhoria de precisão com CoT:** 10–20% de melhoria em tarefas de raciocínio',
+            '**Requisito few-shot:** Modelos locais 7B precisam de 3–5 exemplos vs. 1–2 de APIs na nuvem',
+            '**Consumo de contexto:** Cada exemplo usa 50–200 tokens',
+            '**Impacto da temperatura:** Reduzir de 0,8 para 0,3 melhora a precisão factual em 15–25%',
+            '**Diferença de tamanho do modelo:** Modelos 7B precisam de mais orientação explícita do que modelos 70B',
+            '**Consistência do formato de saída:** Especificações JSON melhoram a confiabilidade em 30–40%',
+          ],
+        },
+        differences: {
+          id: 'differences',
+          title: 'Como os modelos locais são diferentes?',
+          rows: [
+            { 'Aspecto': 'Janela de contexto', 'GPT-5.2 (ChatGPT Plus)': '128K tokens', 'Local 7B (Llama 3.3 8B)': '4K–128K tokens', 'Local 70B (Llama 3.3)': '128K tokens' },
+            { 'Aspecto': 'Seguimento de instruções', 'GPT-5.2 (ChatGPT Plus)': 'Excelente', 'Local 7B (Llama 3.3 8B)': 'Bom com prompts explícitos', 'Local 70B (Llama 3.3)': 'Muito bom' },
+            { 'Aspecto': 'Aprendizado few-shot', 'GPT-5.2 (ChatGPT Plus)': '1–2 exemplos', 'Local 7B (Llama 3.3 8B)': '3–5 exemplos necessários', 'Local 70B (Llama 3.3)': '2–3 exemplos' },
+            { 'Aspecto': 'Raciocínio', 'GPT-5.2 (ChatGPT Plus)': 'Implícito em múltiplas etapas', 'Local 7B (Llama 3.3 8B)': 'Passo a passo explícito necessário', 'Local 70B (Llama 3.3)': 'Implícito moderado' },
+            { 'Aspecto': 'System prompt', 'GPT-5.2 (ChatGPT Plus)': 'Gerenciado pela API', 'Local 7B (Llama 3.3 8B)': 'Configurar por ferramenta', 'Local 70B (Llama 3.3)': 'Configurar por ferramenta' },
+            { 'Aspecto': 'Temperatura padrão', 'GPT-5.2 (ChatGPT Plus)': '1,0 (API)', 'Local 7B (Llama 3.3 8B)': '0,8 (padrão Ollama)', 'Local 70B (Llama 3.3)': '0,8 (padrão Ollama)' },
+          ],
+          columns: ['Aspecto', 'GPT-5.2 (ChatGPT Plus)', 'Local 7B (Llama 3.3 8B)', 'Local 70B (Llama 3.3)'],
+        },
+        chainOfThought: {
+          id: 'chain-of-thought',
+          title: 'Como o prompting por cadeia de pensamento melhora a precisão?',
+          content: [
+            '**O prompting por cadeia de pensamento (CoT) pede ao LLM que mostre seu raciocínio passo a passo antes de responder.** Essa técnica é especialmente eficaz para modelos locais de 7B–13B porque eles carecem da capacidade de raciocínio implícito de modelos na nuvem maiores. Para um problema matemático como "17 × 24", modelos locais sem CoT frequentemente erram. Com raciocínio passo a passo explícito, eles decompõem o problema em partes e atingem 10–20% de precisão maior.',
+            '**Sem CoT:** "Quanto é 17 × 24?" → O modelo responde diretamente, muitas vezes errado.',
+            '**Com CoT:** "Resolva passo a passo: 17 × 24" → O modelo mostra: 17 × 20 = 340, 17 × 4 = 68, total = 408. Mais preciso.',
+            'Saiba como essa técnica se estende a [agentes de IA locais que usam raciocínio internamente](/pt/local-llms/local-ai-agents-langgraph-ollama) para selecionar ferramentas.',
+          ],
+          callouts: [
+            { type: '💡', text: 'Dica profissional: CoT funciona melhor quando você inicia a saída com raciocínio parcial. Exemplo: "Deixe-me decompor isso passo a passo: primeiro, percebo..."' },
+          ],
+          codeBlock: '# Prompt com CoT\nprompt = """\nYou will answer a question by thinking step-by-step.\nLet me think about this:\n\nQuestion: Why do local LLMs require more explicit prompting than cloud APIs?\n\nThinking:\n1. First, consider the differences in model size...\n2. Then, think about training data and fine-tuning...\n3. Finally, consider the architecture and inference optimization...\n\nAnswer:\n"""\n\n# This guides the model to reason through the problem',
+          codeLanguage: 'python',
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O prompting por cadeia de pensamento instrui o modelo a decompor o raciocínio em etapas explícitas antes de responder, melhorando a precisão em 10–20% em tarefas complexas.' },
+          ],
+        },
+        structuredOutput: {
+          id: 'structured-output',
+          title: 'Por que especificar o formato de saída é crítico para modelos locais?',
+          content: [
+            '**Especificar o formato de saída exato (JSON, Markdown, texto simples) é crítico para modelos locais porque eles produzem saídas imprevisíveis sem instruções explícitas.** Modelos na nuvem como o GPT-5.5 podem inferir intenção a partir de solicitações vagas; modelos locais de 7B–13B não conseguem. Para [sistemas RAG locais que precisam de extração de documentos estruturada](/pt/local-llms/local-rag-2026), especificações de formato JSON evitam erros de parsing e aumentam a precisão de extração em 30–40%.',
+            '**Exemplo:** "Extraia entidades do texto" pode retornar texto narrativo em vez de uma lista.',
+            '**Melhor:** "Extraia entidades como JSON com chaves: pessoa, local, organização".',
+          ],
+          callouts: [
+            { type: '⚠️', text: 'Problema comum: Modelos locais às vezes se recusam a gerar JSON puro. Adicione "Gere APENAS JSON, sem bloco markdown" ao prompt para contornar isso.' },
+          ],
+          codeBlock: '# Bad: ambiguous output\nprompt = "Summarize this text"\n\n# Good: explicit format\nprompt = """\nSummarize the text in EXACTLY 3 bullet points.\nFormat as a JSON list:\n{\n  "summary": [\n    "- Point 1",\n    "- Point 2",\n    "- Point 3"\n  ]\n}\n"""',
+          codeLanguage: 'python',
+        },
+        roles: {
+          id: 'roles',
+          title: 'Como a atribuição de papéis melhora as respostas de modelos locais?',
+          content: [
+            '**Atribuir um papel específico ("Você é um especialista em Python com 10 anos de experiência") melhora dramaticamente as respostas específicas de domínio em comparação com prompts genéricos.** Essa técnica, chamada de prompting de persona, ancora a geração de respostas do modelo a um domínio de expertise específico. Modelos locais respondem 15–25% melhor à definição de papéis do que modelos na nuvem, porque carecem do alinhamento RLHF robusto que permite que prompts genéricos funcionem. Exemplos:',
+            '- "Você é um especialista em Python" → melhores explicações de código',
+            '- "Você é um pesquisador médico" → respostas biomédicas mais detalhadas',
+            '- "Você é um analista cético" → pensamento mais crítico',
+            'Combine a definição de papéis com [fine-tuning para um alinhamento de domínio ainda mais forte](/pt/local-llms/fine-tuning-local-llms-lora) se você implanta em muitos casos de uso.',
+          ],
+          callouts: [
+            { type: '🎯', text: 'Boa prática: A especificidade importa. "Você é um especialista" é fraco; "Você é um especialista em Python com 10 anos de experiência backend, focado em padrões async/await" é forte.' },
+          ],
+          snippetBlocks: [
+            { type: 'plain-terms', text: 'Em termos simples, o prompting de persona diz ao modelo qual "chapéu" usar ao responder. Um chapéu de especialista em Python produz código diferente (e melhor) do que um chapéu de assistente genérico.' },
+          ],
+        },
+        systemPromptFormats: {
+          id: 'system-prompt-formats',
+          title: 'Como configurar system prompts no Ollama, LM Studio e llama.cpp?',
+          content: [
+            '**O system prompt define o papel e as restrições do modelo antes da mensagem do usuário, e cada ferramenta (Ollama, LM Studio, llama.cpp) requer um formato diferente para configurá-lo.**',
+          ],
+          codeBlock: '# Ollama (Modelfile)\nFROM llama3.1:8b\nSYSTEM """You are a Python expert with 10 years experience. Answer only Python questions. Provide code examples. Use type hints."""\nPARAMETER temperature 0.7\nPARAMETER top_p 0.9\nPARAMETER repeat_penalty 1.1\n\n# Ollama (API / OpenAI SDK)\nresponse = client.chat.completions.create(\n  model="llama3.1:8b",\n  messages=[\n    {"role": "system", "content": "You are a Python expert..."},\n    {"role": "user", "content": "Write a FastAPI endpoint"}\n  ],\n  temperature=0.7\n)\n\n# LM Studio (GUI)\n# Settings → System Prompt field (paste your prompt)\n# Or via API at localhost:1234 — identical format to Ollama\n\n# llama.cpp (CLI)\n./main -m llama-3.1-8b.gguf \\\n  --system-prompt "You are a Python expert..." \\\n  --temp 0.7 --top-p 0.9 --repeat-penalty 1.1 \\\n  -p "Write a FastAPI endpoint"',
+          codeLanguage: 'bash',
+        },
+        temperatureSampling: {
+          id: 'temperature-sampling',
+          title: 'Como temperatura e parâmetros de amostragem impactam a qualidade da saída?',
+          content: [
+            '**Ajustar temperatura, top_p e repeat_penalty tem mais impacto na qualidade da saída de modelos locais 7B do que a redação do prompt, e modelos locais requerem padrões diferentes das APIs na nuvem.**',
+            '**Insight chave para modelos locais:** A temperatura padrão do Ollama (0,8) é maior do que o padrão da API da OpenAI (1,0 com amostragem nucleus). Reduzir a temperatura para 0,3–0,5 melhora dramaticamente a precisão factual em modelos locais 7B. Para tarefas de codificação, defina a temperatura como 0,1–0,2 e repeat_penalty como 1,0 (código precisa de padrões repetitivos como imports e chamadas de função).',
+          ],
+          callouts: [
+            { type: '📌', text: 'Ponto chave: Temperatura é um multiplicador sobre logits. Em 0,0, sempre escolhe o token de maior probabilidade. Acima de 1,0, a aleatoriedade aumenta. Modelos locais saturam acima de 1,5 de temperatura.' },
+          ],
+          rows: [
+            { 'Parâmetro': 'temperature', 'O que controla': 'Aleatoriedade', 'Padrão (Ollama)': '0,8', 'Recomendado': '0,3–0,5 para factual, 0,7–0,9 para criativo' },
+            { 'Parâmetro': 'top_p', 'O que controla': 'Diversidade de vocabulário', 'Padrão (Ollama)': '0,9', 'Recomendado': '0,8 para consistente, 0,95 para variado' },
+            { 'Parâmetro': 'repeat_penalty', 'O que controla': 'Evitar repetição', 'Padrão (Ollama)': '1,1', 'Recomendado': '1,1–1,2 para chat, 1,0 para código' },
+          ],
+          columns: ['Parâmetro', 'O que controla', 'Padrão (Ollama)', 'Recomendado'],
+        },
+        fewShot: {
+          id: 'few-shot',
+          title: 'Por que modelos locais precisam de mais exemplos few-shot do que APIs na nuvem?',
+          content: [
+            '**Fornecer 3–5 exemplos (aprendizado few-shot) a modelos locais melhora a consistência da saída em 15–25% a mais do que zero-shot, enquanto modelos na nuvem precisam de apenas 1–2 exemplos.**',
+            'Modelos locais se beneficiam de mais exemplos porque têm menos parâmetros e dados de treinamento menos diversos. O aprendizado few-shot é uma técnica de aprendizado em contexto que mostra ao modelo o padrão de entrada/saída esperado antes de pedir que ele resolva a tarefa real.',
+          ],
+          callouts: [
+            { type: '🛠️', text: 'Dica de implementação: Variar exemplos (1 fácil, 1 médio, 1 difícil) funciona melhor do que 3 similares. A diversidade melhora a generalização e evita o overfitting a padrões específicos.' },
+          ],
+          codeBlock: '# Few-shot prompt\nprompt = """\nClassify sentiment. Examples:\n\n"I love this product!" → positive\n"Worst experience ever" → negative\n"It\'s okay, nothing special" → neutral\n\nNow classify: "This is amazing!"\nAnswer: """\n\n# Model learns format and style from examples',
+          codeLanguage: 'python',
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Erros comuns em prompt engineering',
+          items: [
+            '**Prompts extensos sem estrutura.** Instruções dispersas confundem modelos locais. Seja conciso e explícito.',
+            '**Não usar cadeia de pensamento.** CoT melhora a precisão em 10–20%. Sempre use em tarefas de raciocínio.',
+            '**Assumir que um prompt serve para tudo.** Itere e teste. Pequenas mudanças de redação causam grandes variações na saída.',
+            '**Ignorar o formato de saída.** Sem especificação explícita de formato, as saídas são imprevisíveis.',
+            '**Usar definições de papéis vagas.** "Você é um especialista" é vago. "Você é um especialista em Python com 10 anos de experiência" é melhor.',
+          ],
+          callouts: [
+            { type: '📍', text: 'Você sabia? Os prompts mais eficazes iteram 3–5 versões. O prompting de modelos locais não é "configurar e esquecer" — pequenos refinamentos se acumulam em ganhos significativos de precisão.' },
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Considerações regionais para prompt engineering',
+          content: [
+            '**UE (GDPR):** Ao implantar prompt engineering para modelos locais em infraestrutura da UE, certifique-se de que todos os dados de treinamento usados para iterar prompts estejam em conformidade com os princípios de minimização de dados do GDPR. Não exporte consultas de usuários para APIs externas para testes; itere localmente.',
+            '**Japão (APPI):** Empresas japonesas que usam LLMs locais para dados de clientes devem implementar registro de auditoria explícito de todos os prompts e respostas. A qualidade do prompt impacta diretamente a segurança dos dados — prompts mal projetados podem expor informações sensíveis nas saídas.',
+            '**Brasil (LGPD):** Implantações de LLM local para empresas brasileiras que processam dados pessoais devem estar em conformidade com a Lei Geral de Proteção de Dados (LGPD). Executar modelos localmente mantém os dados no hardware da organização, eliminando transferências internacionais que exigiriam salvaguardas adicionais sob a supervisão da ANPD.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas comuns sobre prompting de LLMs locais',
+          faqs: [
+            {
+              q: 'Por que LLMs locais precisam de prompts mais explícitos do que o GPT-5.5?',
+              a: 'Modelos locais de 7B–13B têm menos parâmetros e dados de treinamento menos diversos do que o GPT-5.5. Eles não conseguem inferir intenção ambígua tão bem. Instruções explícitas — formato, papel, raciocínio passo a passo — compensam essa lacuna. O prompting por cadeia de pensamento melhora a precisão de modelos locais em 10–20% em tarefas de raciocínio.',
+            },
+            {
+              q: 'Quantos exemplos few-shot devo incluir em prompts para LLMs locais?',
+              a: '3–5 exemplos são ótimos para modelos locais 7B. O GPT-5.5 normalmente precisa de apenas 1–2 exemplos. Mais exemplos melhoram a consistência, mas consomem tokens da janela de contexto. Para Llama 3.2 8B com janela de contexto de 4K, limite a 3 exemplos mais sua tarefa. Para modelos com contexto de 32K+, 5 exemplos são seguros.',
+            },
+            {
+              q: 'O prompting por cadeia de pensamento funciona com todos os modelos locais?',
+              a: 'A cadeia de pensamento funciona com qualquer modelo ajustado por instrução (Llama 3.x, Qwen 3, Mistral Small). Modelos base não seguem instruções de "pense passo a passo" de forma confiável. Para modelos locais, frases CoT como "Resolva passo a passo:" no início da saída esperada funcionam melhor.',
+            },
+            {
+              q: 'Qual formato de saída é mais confiável para LLMs locais?',
+              a: 'JSON é o formato de saída estruturado mais confiável para LLMs locais. Especifique o esquema JSON exato no prompt. Cabeçalhos Markdown (##) são confiáveis para seções. Evite solicitar XML ou formatos personalizados — modelos locais os tratam de forma inconsistente.',
+            },
+            {
+              q: 'Como evito que um LLM local saia do tópico?',
+              a: 'Adicione uma restrição explícita ao system prompt: "Responda APENAS sobre [tópico]. Se perguntado sobre qualquer outra coisa, diga: Só posso ajudar com [tópico]." Para o Ollama, use o campo de system prompt. Para llama.cpp, adicione como mensagem de sistema.',
+            },
+            {
+              q: 'Qual é a diferença entre prompting zero-shot e few-shot para modelos locais?',
+              a: 'Zero-shot não fornece exemplos; few-shot fornece 2–5 exemplos rotulados antes da tarefa. Para modelos locais 7B, few-shot supera consistentemente zero-shot em tarefas de classificação e extração em 15–25% de precisão. Zero-shot funciona bem para tarefas de geração (resumo, tradução).',
+            },
+            {
+              q: 'Como testo e itero prompts para modelos locais?',
+              a: 'Teste com 5–10 exemplos diversos. Mude uma variável de cada vez (papel, formato ou instrução CoT). Meça a precisão antes/depois. Use 2–3 exemplos fáceis e 2–3 difíceis. Itere em ciclos de 3–5 variações de prompt. Documente prompts funcionais para reutilização.',
+            },
+            {
+              q: 'Devo fazer prompt engineering ou fine-tuning para uma tarefa específica?',
+              a: 'Faça prompt engineering primeiro (rápido, gratuito, iterativo). Se a precisão estabilizar após 20+ variações de prompt, então faça fine-tuning. O fine-tuning requer 500+ exemplos específicos da tarefa e 1–4 horas de treinamento. Para tarefas de propósito geral, o prompt engineering geralmente é suficiente.',
+            },
+            {
+              q: 'Como os system prompts diferem das instruções do usuário em LLMs locais?',
+              a: 'System prompts definem o papel e as restrições do modelo antes da mensagem do usuário e fazem parte da estrutura da solicitação. Instruções do usuário fazem parte da conversa. System prompts são mais confiáveis do que incorporar instruções nas mensagens do usuário. Para modelos locais, um system prompt bem escrito melhora a consistência em 15–25%.',
+            },
+            {
+              q: 'Posso usar o mesmo prompt em diferentes modelos locais?',
+              a: 'Parcialmente. Estrutura CoT básica e definições de papéis se transferem entre modelos (Llama, Qwen, Mistral). No entanto, cada modelo requer ajuste de prompt para resultados ótimos. Modelos maiores (70B) são mais tolerantes a variações de prompt do que modelos menores (7B).',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Leitura relacionada',
+          items: [
+            '[Prompting por cadeia de pensamento explicado](/pt/prompt-engineering/chain-of-thought-prompting) -- Raciocínio estruturado para melhores saídas.',
+            '[Fine-Tuning de LLMs locais com LoRA](/pt/local-llms/fine-tuning-local-llms-lora) -- Quando adaptar modelos além do prompt engineering.',
+            '[RAG local 2026: Geração aumentada por recuperação](/pt/local-llms/local-rag-2026) -- Aumente prompts com recuperação de documentos para melhor contexto.',
+            '[Agentes de IA locais com LangGraph e Ollama](/pt/local-llms/local-ai-agents-langgraph-ollama) -- Agentes usam prompting internamente para seleção de ferramentas.',
+            '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) -- Configure seu ambiente de LLM local.',
+            '[Melhores LLMs locais open-source 2026](/pt/local-llms/top-open-source-models-ollama) -- Escolha o modelo certo para suas necessidades de prompting.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fontes',
+          items: [
+            '[Chain-of-Thought Prompting Paper (Wei et al.)](https://arxiv.org/abs/2201.11903) — Pesquisa seminal sobre raciocínio por meio de instruções passo a passo.',
+            '[Prompt Engineering Guide (DAIR-AI)](https://github.com/dair-ai/Prompt-Engineering-Guide) — Coleção abrangente de técnicas de prompting e melhores práticas.',
+            '[Ollama Modelfile Reference](https://github.com/ollama/ollama/blob/main/docs/modelfile.md) — Documentação oficial para system prompts, parâmetros e criação de modelos personalizados.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Prompt Engineering para LLMs locais 2026: Cadeia de Pensamento, Few-Shot e System Prompts',
+        description: 'A cadeia de pensamento aumenta a precisão de modelos locais 7B em 10–20%. Few-shot (3–5 exemplos) supera zero-shot em 15–25%. Formatos de system prompt para Ollama, LM Studio e llama.cpp incluídos.',
+        url: 'https://www.promptquorum.com/pt/local-llms/prompt-engineering-for-local-models',
+        inLanguage: 'pt-BR',
+        datePublished: '2026-04-04',
+        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        proficiencyLevel: 'Advanced',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+    },
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Fortgeschrittene Techniken',

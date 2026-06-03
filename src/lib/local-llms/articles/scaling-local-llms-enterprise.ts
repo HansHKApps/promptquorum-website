@@ -514,6 +514,120 @@ schema: {
         ],
       },
     },
+    pt: {
+      freshness_tier: 'semi_annual',
+      theme: 'Enterprise',
+      title: 'Escalando LLMs locais na empresa: Implantação em produção multi-usuário e multi-GPU',
+      seoTitle: 'LLMs locais em escala empresarial',
+      intro: 'Escalar de uma única máquina para produção implica: balanceamento de carga multi-usuário, redundância, monitoramento e recuperação de desastres. A partir de abril de 2026, implantações empresariais usam Kubernetes para orquestrar 5-50 GPUs em pods de inferência, atendendo 50-500 usuários simultâneos com 99,9% de disponibilidade.',
+      metaDescription: 'Escale LLMs locais: Kubernetes, balanceamento de carga, redundância, monitoramento. Implantação multi-GPU em produção.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**Escalar de uma única máquina para produção implica: balanceamento de carga multi-usuário, redundância, monitoramento e recuperação de desastres. A partir de abril de 2026, implantações empresariais usam Kubernetes para orquestrar 5-50 GPUs em pods de inferência, atendendo 50-500 usuários simultâneos com 99,9% de disponibilidade.**',
+      audience: 'Engenheiros implantando LLMs locais em ambientes de produção ou empresariais',
+      readTime: '12 min de leitura',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'escalamento empresarial',
+      toc: [
+        { label: 'Principais conclusões', anchor: '#key-takeaways' },
+        { label: 'Arquitetura: de máquina única ao sistema distribuído', anchor: '#architecture' },
+        { label: 'Balanceamento de carga e roteamento', anchor: '#load-balancing' },
+        { label: 'Redundância e failover', anchor: '#redundancy' },
+        { label: 'Monitoramento e observabilidade', anchor: '#monitoring' },
+        { label: 'Otimização de custos em escala', anchor: '#cost' },
+        { label: 'Erros comuns ao escalar na empresa', anchor: '#common-mistakes' },
+        { label: 'Leitura relacionada', anchor: '#related-reading' },
+        { label: 'Fontes', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**Máquina única:** 1 GPU, 10-50 usuários simultâneos, configuração simples.',
+            '**Escala empresarial:** Kubernetes + vLLM, 5-50 GPUs, 50-500 usuários simultâneos.',
+            '**LGPD/ANPD:** Implantações locais mantêm dados pessoais no hardware da organização, eliminando transferências internacionais e risco regulatório.',
+            '**Monitoramento:** GPU utilization, request queue depth e tokens/seg são as métricas principais.',
+            '**Custo:** Implantação local tem custo marginal próximo a zero após o hardware vs. $3-15/1M tokens de APIs na nuvem.',
+          ],
+        },
+        architecture: {
+          id: 'architecture',
+          title: 'Arquitetura: de máquina única ao sistema distribuído',
+          content: [
+            '**Uma única máquina com 1-2 GPUs serve 10-50 usuários simultâneos com latência aceitável para a maioria das cargas de trabalho empresariais.** Para escalar além disso, a abordagem padrão em 2026 é Kubernetes com vLLM como servidor de inferência, balanceamento de carga via nginx ou Traefik, e auto-scaling baseado em comprimento da fila de requisições.',
+            'A decisão de escalar deve ser baseada em dados reais de utilização, não em estimativas antecipadas. Comece com uma única máquina e meça antes de adicionar GPUs.',
+          ],
+        },
+        loadBalancing: {
+          id: 'load-balancing',
+          title: 'Balanceamento de carga e roteamento',
+          content: [
+            '**O vLLM com múltiplas réplicas atrás de um load balancer é o padrão para implantações de 5+ GPUs.** Use round-robin para requisições de similar comprimento, ou roteamento baseado em comprimento de fila para cargas de trabalho heterogêneas.',
+          ],
+        },
+        redundancy: {
+          id: 'redundancy',
+          title: 'Redundância e failover',
+          content: [
+            '**Para 99,9% de disponibilidade, você precisa de pelo menos 2 instâncias de inferência com failover automático.** Kubernetes gerencia a reinicialização de pods, mas você deve configurar health checks no endpoint `/health` do vLLM e definir `readinessProbe` adequado.',
+          ],
+        },
+        monitoring: {
+          id: 'monitoring',
+          title: 'Monitoramento e observabilidade',
+          content: [
+            '**As métricas críticas para monitorar são: GPU utilization (target: 70-85%), request queue depth (alerta se > 50), tokens/seg (baseline por modelo), e latência P95 (alerta se > 10 segundos).**',
+          ],
+        },
+        cost: {
+          id: 'cost',
+          title: 'Otimização de custos em escala',
+          content: [
+            '**O custo marginal de tokens em implantação local é próximo a zero após o hardware.** Para equipes de 50+ pessoas gerando 100M tokens/mês, a implantação local vs. Claude Sonnet 4.6 ($3/1M tokens = $300/mês) normalmente se paga em 6-12 meses.',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Erros comuns ao escalar na empresa',
+          items: [
+            '**Super-provisionar GPUs antes de medir a carga real.** Comece com uma máquina e escale baseado em dados. A maioria das equipes subestima quantos usuários uma única GPU consegue atender.',
+            '**Não configurar `num_ctx` adequado.** O padrão de 2048 tokens do Ollama é insuficiente para a maioria dos casos de uso empresariais. Defina no mínimo 8192.',
+            '**Ignorar conformidade com LGPD/ANPD.** Para empresas brasileiras processando dados pessoais de clientes, o DPO deve ser consultado antes de implantar qualquer LLM — local ou na nuvem.',
+            '**Não implementar logging de auditoria.** Registre prompts, respostas e metadados de usuário para conformidade regulatória e debugging.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Leitura relacionada',
+          items: [
+            '[Segurança de LLM local offline](/pt/local-llms/secure-offline-local-llm-workflow) — Fluxo de trabalho seguro para dados sensíveis.',
+            '[Por que empresas usam LLMs locais](/pt/local-llms/why-enterprises-use-local-llms) — Casos de uso e ROI empresarial.',
+            '[RAG local 2026](/pt/local-llms/local-rag-2026) — Recuperação aumentada por recuperação para contexto empresarial.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fontes',
+          items: [
+            '[vLLM Documentation](https://docs.vllm.ai) — Servidor de inferência de alto desempenho para LLMs.',
+            '[Kubernetes Documentation](https://kubernetes.io/docs) — Orquestração de contêineres para implantações em escala.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Escalando LLMs locais na empresa: Implantação em produção multi-usuário e multi-GPU',
+        description: 'Escale LLMs locais em produção: Kubernetes, balanceamento de carga, redundância, monitoramento. Conformidade com LGPD/ANPD incluída.',
+        url: 'https://www.promptquorum.com/pt/local-llms/scaling-local-llms-enterprise',
+        inLanguage: 'pt-BR',
+        datePublished: '2026-04-04',
+        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        proficiencyLevel: 'Advanced',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+    },
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',

@@ -849,6 +849,112 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
     },
   },
+  pt: {
+    title: 'Melhor assistente de código IA para LLM local 2026: Cursor vs Continue.dev vs Cody comparados',
+    seoTitle: 'Melhor assistente de código IA para LLM local 2026',
+    metaDescription: 'Compare 5 assistentes de código IA com suporte LLM local nativo: Ollama, LM Studio, privacidade, preços. Cursor vs Continue.dev vs Cody—verificado maio 2026.',
+    intro: 'Assistentes de código IA como Cursor, Continue.dev e Sourcegraph Cody tornaram-se ferramentas essenciais para desenvolvedores. No entanto, a maioria dos comparativos omite um aspecto-chave: quais ferramentas realmente suportam LLMs locais? Este guia compara cinco assistentes de código IA líderes especificamente para desenvolvedores que querem integração com Ollama, LM Studio ou llama.cpp -- não apenas APIs na nuvem. Cobrimos preços, profundidade de configuração de LLM local, suporte de IDE e implicações reais de privacidade.',
+    publishDate: '2026-05-17',
+    theme: 'light',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-17',
+    educationalLevel: 'Intermediate',
+    leadAnswerBlock: '**Escolha Continue.dev para uma solução gratuita, open source e com a melhor integração de Ollama e LM Studio. Escolha Cursor (US$ 20/mês) para o autocompletado mais refinado e fluxos de trabalho híbridos nuvem+local. Escolha Sourcegraph Cody (US$ 9/usuário/mês) para equipes que precisam de contexto de todo o repositório. Escolha Tabnine (US$ 12/mês) para treinamento orientado à privacidade. Escolha Windsurf (US$ 0-15/mês) para a alternativa em ascensão com fluxo de trabalho Cascade.** Tudo verificado em maio 2026.',
+    sections: {
+      updateNotice: {
+        id: 'update-notice',
+        title: '🔄 Atualização de maio 2026',
+        content: 'As cinco ferramentas foram testadas com configurações LLM locais (Ollama + Qwen 3 Coder 14B). Preços verificados em todos os provedores. A integração LLM local do Windsurf (Codeium) foi testada e confirmada como funcional. Continue.dev continua liderando para desenvolvedores local-first. Próxima atualização: junho 2026.',
+        callouts: [
+          { type: '📋 Dados verificados', text: 'Todos os preços, recursos e afirmações de integração LLM local foram verificados em maio 2026. Testamos cada ferramenta mensalmente com configurações reais do Ollama.' },
+        ],
+      },
+      verdictBox: {
+        id: 'verdict-picks',
+        title: '🏆 Nossas escolhas -- maio 2026',
+        content: 'Cinco vencedores para cinco prioridades distintas.',
+        callouts: [
+          {
+            type: '🥇 MELHOR NO GERAL: Continue.dev',
+            text: 'Por que: Gratuito, open source, integração de primeira classe com Ollama e LM Studio. Suporte para VS Code e JetBrains. Sem pegadinha -- verdadeiramente o melhor para LLMs locais.',
+          },
+          {
+            type: '💎 MELHOR UX / CONFIGURAÇÃO MAIS RÁPIDA: Cursor',
+            text: 'Por que: US$ 20/mês dá a experiência de codificação IA mais refinada. Suporte LLM local via configuração de endpoint OpenAI personalizado. A qualidade do autocompletado é excepcional.',
+          },
+          {
+            type: '👥 MELHOR PARA EQUIPES: Sourcegraph Cody',
+            text: 'Por que: US$ 9/usuário/mês. Contexto de todo o repositório para tarefas de refatoração. Recursos de administração de equipe e conformidade normativa. Suporte LLM local via Ollama.',
+          },
+          {
+            type: '🔒 MELHOR PARA PRIVACIDADE / LGPD: Tabnine',
+            text: 'Por que: US$ 12/mês ou opção self-hosted. Treinado apenas com código sob licenças permissivas. Certificado SOC 2 Type 2. Melhor opção quando conformidade com LGPD não é negociável.',
+          },
+          {
+            type: '🚀 ESTRELA EM ASCENSÃO: Windsurf (Codeium)',
+            text: 'Por que: Nível gratuito disponível, US$ 15/mês para pro. Fluxo de trabalho Cascade para codificação agêntica. Suporte LLM local adicionado no final de 2025.',
+          },
+        ],
+      },
+      whyLocalLlmMatters: {
+        id: 'why-local-llm',
+        title: 'Por que os assistentes de código IA precisam de suporte LLM local',
+        content: 'A maioria dos comparativos de ferramentas de codificação IA ignora uma realidade crucial: a privacidade do código. GitHub Copilot, o modo nuvem do Cursor e outras ferramentas enviam seu código a servidores de terceiros para processamento. Para código proprietário, trabalhos protegidos por NDA, ou setores regulados (incluindo empresas sujeitas à LGPD no Brasil), isso é um impedimento definitivo.\n\nQuatro razões para se preocupar com suporte LLM local em ferramentas de codificação IA:\n\n**Privacidade / LGPD.** Seu código nunca sai da sua máquina. Algoritmos proprietários, tokens de segurança, dados de clientes e lógica de negócios permanecem locais.\n\n**Custo.** Ferramentas de codificação IA na nuvem cobram US$ 10-20/mês e frequentemente têm limites de tokens. LLMs locais têm custo marginal zero após o investimento em hardware.\n\n**Trabalho offline.** Viagens de trem, voos, sites de clientes sem internet. As ferramentas na nuvem ficam inúteis. LLMs locais funcionam em qualquer lugar.\n\n**Latência.** A ida e volta para a nuvem adiciona 200-500ms por completado. Modelos locais em M5 Max ou RTX 4090 respondem em 50-150ms.',
+        items: [
+          'O código proprietário permanece na sua máquina',
+          'Custo marginal zero por completado (custo de hardware amortizado)',
+          'Funciona offline e em redes air-gapped',
+          'Latência mais rápida: 50-150ms local vs 200-500ms nuvem',
+          'Sem limites de tokens nem throttling de uso',
+          'Conformidade com LGPD: nenhum dado de código enviado a terceiros',
+        ],
+      },
+      comparisonTableSection: {
+        id: 'comparison-table-main',
+        title: 'Tabela comparativa de assistentes de código IA (maio 2026)',
+        tableFormat: true,
+        columns: ['Ferramenta', 'Preço', 'Suporte LLM local', 'IDEs', 'Melhor para'],
+        rows: [
+          { 'Ferramenta': 'Continue.dev', 'Preço': 'Gratuito (open source)', 'Suporte LLM local': '⭐⭐⭐⭐⭐ Nativo', 'IDEs': 'VS Code, JetBrains', 'Melhor para': 'Local-first, sem custo' },
+          { 'Ferramenta': 'Cursor', 'Preço': 'US$ 20/mês', 'Suporte LLM local': '⭐⭐⭐⭐ Via endpoint', 'IDEs': 'Cursor (fork VS Code)', 'Melhor para': 'UX refinada, híbrido' },
+          { 'Ferramenta': 'Sourcegraph Cody', 'Preço': 'US$ 9/usuário/mês', 'Suporte LLM local': '⭐⭐⭐ Via Ollama', 'IDEs': 'VS Code, JetBrains, Neovim', 'Melhor para': 'Equipes, contexto de repositório' },
+          { 'Ferramenta': 'Tabnine', 'Preço': 'US$ 12/mês', 'Suporte LLM local': '⭐⭐⭐⭐ Self-hosted', 'IDEs': 'Todos os principais', 'Melhor para': 'Privacidade, LGPD, enterprise' },
+          { 'Ferramenta': 'Windsurf', 'Preço': 'Gratuito / US$ 15/mês', 'Suporte LLM local': '⭐⭐⭐ Recente', 'IDEs': 'Windsurf (fork VS Code)', 'Melhor para': 'Codificação agêntica, iniciantes' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'Qual assistente de código IA funciona melhor com LLMs locais?', a: 'Continue.dev é o vencedor claro para desenvolvedores que priorizam o local -- foi construído com Ollama e LM Studio como alvos principais. Cursor é melhor para fluxos de trabalho híbridos (nuvem + local ocasional).' },
+          { q: 'O Continue.dev funciona com Ollama em português?', a: 'Sim. O Continue.dev funciona com qualquer modelo Ollama, incluindo modelos com suporte em português como Qwen3 7B e Llama 3.3 7B. A interface do IDE permanece em inglês, mas as sugestões de código podem ser geradas em português.' },
+          { q: 'Qual assistente de código é melhor para conformidade com a LGPD?', a: 'Tabnine com opção self-hosted é a melhor escolha para conformidade com a LGPD. Continue.dev com LLMs locais também garante que nenhum código saia da organização. Evite ferramentas cloud-only para código que contém dados pessoais.' },
+          { q: 'O Cursor suporta LLMs locais?', a: 'Sim, via configuração de endpoint OpenAI personalizado. Configure o Ollama como backend e aponte o Cursor para localhost:11434. Não é tão simples quanto o Continue.dev, mas funciona bem.' },
+          { q: 'Continue.dev vs Cursor: qual é melhor para uma startup brasileira?', a: 'Continue.dev para equipes conscientes de privacidade e LGPD -- gratuito, local-first, sem dados enviados a terceiros. Cursor para equipes que priorizam velocidade de desenvolvimento e UX refinada e aceitam dados na nuvem.' },
+        ],
+      },
+      relatedArticles: {
+        id: 'related',
+        title: 'Artigos relacionados',
+        items: [
+          '[Melhores LLMs locais para programação 2026](/pt/local-llms/best-local-llms-for-coding)',
+          '[Melhores LLMs locais 2026](/pt/local-llms/best-local-llms-2026)',
+          '[Como instalar Ollama](/pt/local-llms/how-to-install-ollama)',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'Melhor assistente de código IA para LLM local 2026',
+      'description': 'Compare 5 assistentes de código IA com suporte LLM local nativo: Ollama, LM Studio, privacidade, preços. Cursor vs Continue.dev vs Cody -- verificado maio 2026.',
+      'url': 'https://www.promptquorum.com/pt/local-llms/best-ai-coding-assistant-local-llm',
+      'inLanguage': 'pt-BR',
+      'datePublished': '2026-05-17',
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+    },
+  },
   de: {
     title: 'Bester KI-Coding-Assistent für Local LLM 2026: Cursor, Continue.dev und Cody im Vergleich',
     seoTitle: 'Beste KI-Coding-Assistenten für Local LLM 2026',

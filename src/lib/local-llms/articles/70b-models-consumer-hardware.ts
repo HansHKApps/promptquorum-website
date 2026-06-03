@@ -596,6 +596,240 @@ schema: {
         ],
       },
     },
+    pt: {
+      theme: 'Best Models',
+      title: 'Como rodar LLMs de 70B em hardware de consumo 2026: RAM e GPU',
+      seoTitle: '70B em hardware de consumo 2026: guia de RAM e GPU',
+      intro: 'Rodar um modelo de 70B parâmetros localmente requer 40-48 GB de RAM com quantização Q4_K_M. Isso é possível em: Macs Apple Silicon com 64 GB de memória unificada, estações de trabalho com 64 GB DDR5, ou máquinas que combinam uma GPU NVIDIA de 24 GB com 32 GB de RAM do sistema usando layer offloading. Em abril de 2026, Llama 3.3 70B e Qwen3 72B são os dois principais modelos 70B disponíveis.',
+      metaDescription: 'Rode Llama 3.3 e Qwen3 70B localmente: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading e benchmarks. Guia de hardware completo — abril 2026.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**Rodar um modelo de 70B parâmetros localmente requer 40-48 GB de RAM com quantização Q4_K_M. Isso é possível em: Macs Apple Silicon com 64 GB de memória unificada, estações de trabalho com 64 GB DDR5, ou máquinas que combinam uma GPU NVIDIA de 24 GB com 32 GB de RAM do sistema usando layer offloading.**',
+      audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam fluxos de trabalho com LLMs locais',
+      readTime: '9 min de leitura',
+      educationalLevel: 'Intermediate',
+      primaryTerm: '70B LLM local hardware de consumo',
+      toc: [
+        { label: 'Pontos-chave', anchor: '#key-takeaways' },
+        { label: 'Qual hardware pode rodar um modelo 70B?', anchor: '#what-hardware' },
+        { label: 'Requisitos de RAM por quantização', anchor: '#ram-requirements' },
+        { label: 'Apple Silicon: melhor opção de consumo', anchor: '#apple-silicon' },
+        { label: 'NVIDIA DGX Spark: opção com 128 GB unificados', anchor: '#dgx-spark' },
+        { label: 'GPU NVIDIA + Layer Offloading', anchor: '#nvidia-layer-offloading' },
+        { label: 'Inferência 70B somente com CPU', anchor: '#cpu-only' },
+        { label: 'Qual modelo 70B você deve rodar?', anchor: '#which-model' },
+        { label: 'Contexto regional', anchor: '#regional-context' },
+        { label: 'Erros comuns', anchor: '#common-mistakes' },
+        { label: 'Leitura relacionada', anchor: '#related-reading' },
+        { label: 'Perguntas frequentes', anchor: '#faq' },
+        { label: 'Fontes', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Quantização Q4_K_M: Llama 3.3 70B requer ~40 GB de RAM; Qwen3 72B requer ~43 GB de RAM.',
+            '**Hardware de consumo mais simples**: Apple Mac Studio M2 Ultra (64 GB unificados) ou MacBook Pro M5 Max (64 GB) -- aceleração GPU completa, sem layer offloading necessário.',
+            '**Opção NVIDIA**: RTX 4090 (24 GB VRAM) + 32 GB de RAM do sistema com layer offloading no Ollama funciona com a maioria dos modelos 70B, embora 20-30% das camadas rodem na CPU.',
+            '**70B somente com CPU**: possível com 64 GB de RAM, mas produz 1-3 tok/s -- marginalmente utilizável para tarefas em lote, não para chat interativo.',
+            'Em abril de 2026, um modelo 70B local iguala a qualidade do GPT-4 (2023) e é o único caminho acessível ao consumidor para esse nível de qualidade sem custos de nuvem.',
+          ],
+        },
+        whatHardware: {
+          title: 'Qual hardware pode rodar um LLM local de 70B?',
+          content: [
+            '**Um modelo 70B com quantização Q4_K_M requer aproximadamente 40-43 GB de memória acessível ao mecanismo de inferência.** Isso pode vir de VRAM da GPU, memória unificada do sistema (Apple Silicon), RAM do sistema, ou uma combinação via layer offloading.',
+          ],
+          image: '/images/70b-hardware-comparison.svg',
+          imageCaption: 'Comparação de hardware: Apple Silicon M5 Max atinge 25-35 tok/s sem offloading, enquanto NVIDIA RTX 4090 com layer offloading chega a 10-18 tok/s, e a inferência 70B somente com CPU produz apenas 1-3 tok/s.',
+          rows: [
+            { 'Hardware': 'Apple M5 Max (64 GB unificados)', 'Pode rodar 70B?': 'Sim -- GPU completa', 'Velocidade (70B Q4)': '20-30 tok/s', 'Notas': 'Melhor opção de laptop de consumo' },
+            { 'Hardware': 'Apple M2 Ultra (64 GB unificados)', 'Pode rodar 70B?': 'Sim -- GPU completa', 'Velocidade (70B Q4)': '25-35 tok/s', 'Notas': 'Configuração base do Mac Studio' },
+            { 'Hardware': 'Apple M2 Ultra (192 GB unificados)', 'Pode rodar 70B?': 'Sim -- GPU completa', 'Velocidade (70B Q4)': '30-40 tok/s', 'Notas': 'Roda Q8_0 com folga' },
+            { 'Hardware': 'NVIDIA DGX Spark (128 GB unificados)', 'Pode rodar 70B?': 'Sim -- GPU completa', 'Velocidade (70B Q4)': '18-28 tok/s', 'Notas': 'Q8_0 cabe (70 GB). Ideal para fluxos CUDA.' },
+            { 'Hardware': 'NVIDIA RTX 4090 (24 GB) + 32 GB RAM', 'Pode rodar 70B?': 'Sim -- com offloading', 'Velocidade (70B Q4)': '10-18 tok/s', 'Notas': '~60% camadas na GPU, ~40% na CPU' },
+            { 'Hardware': 'NVIDIA RTX 4080 (16 GB) + 32 GB RAM', 'Pode rodar 70B?': 'Apenas offloading parcial', 'Velocidade (70B Q4)': '5-10 tok/s', 'Notas': 'Apenas ~35% das camadas na GPU' },
+            { 'Hardware': '64 GB RAM, somente CPU', 'Pode rodar 70B?': 'Sim -- somente CPU', 'Velocidade (70B Q4)': '1-3 tok/s', 'Notas': 'Impraticável para uso interativo' },
+          ],
+          columns: ['Hardware', 'Pode rodar 70B?', 'Velocidade (70B Q4)', 'Notas'],
+        },
+        ramByQuant: {
+          title: 'Quanta RAM um modelo 70B precisa em cada nível de quantização?',
+          image: '/images/70b-quantization-tradeoff.svg',
+          imageCaption: 'Curva de compromisso de quantização: Q4_K_M (recomendado) requer 40-43 GB de RAM com apenas 1-3% de perda de qualidade em relação ao FP16, equilibrando praticidade e desempenho para hardware de consumo.',
+          rows: [
+            { 'Quantização': 'FP16 (precisão completa)', 'RAM necessária': '~140 GB', 'Qualidade': 'Qualidade de referência', 'Prático?': 'Não -- apenas servidores' },
+            { 'Quantização': 'Q8_0', 'RAM necessária': '~70 GB', 'Qualidade': 'Quase sem perda', 'Prático?': 'Apenas Mac Ultra 192 GB' },
+            { 'Quantização': 'Q5_K_M', 'RAM necessária': '~50 GB', 'Qualidade': 'Perda mínima', 'Prático?': 'Mac Ultra 64 GB, apertado' },
+            { 'Quantização': 'Q4_K_M', 'RAM necessária': '~40-43 GB', 'Qualidade': 'Perda baixa -- recomendado', 'Prático?': 'Sim -- opção mais viável' },
+            { 'Quantização': 'Q3_K_S', 'RAM necessária': '~30 GB', 'Qualidade': 'Perda moderada', 'Prático?': 'Sim -- possível em máquinas de 32 GB' },
+            { 'Quantização': 'Q2_K', 'RAM necessária': '~22 GB', 'Qualidade': 'Perda alta', 'Prático?': 'Não recomendado' },
+          ],
+          columns: ['Quantização', 'RAM necessária', 'Qualidade', 'Prático?'],
+        },
+        appleSilicon: {
+          title: 'Por que o Apple Silicon é a melhor opção de consumo para modelos 70B?',
+          content: [
+            '**O Apple Silicon usa memória unificada -- a CPU e a GPU compartilham o mesmo pool de memória física.** Um MacBook Pro M5 Max com 64 GB de memória unificada pode rodar um modelo 70B em Q4_K_M inteiramente na GPU, atingindo 20-30 tok/s sem o overhead do layer offloading.',
+            'Em hardware NVIDIA, a GPU e a RAM do sistema são separadas. Uma GPU com 24 GB de VRAM só pode alojar ~60% de um modelo 70B em Q4_K_M; as camadas restantes rodam na CPU, criando um gargalo de largura de banda de memória que reduz a velocidade para 10-18 tok/s.',
+            'Em abril de 2026, o Mac Studio M2 Ultra (64 GB, ~R$ 10.000 ou US$ 2.000 recondicionado) é o caminho mais econômico para inferência 70B local em velocidade utilizável. Um novo MacBook Pro M5 Max de 64 GB custa aproximadamente US$ 3.500.',
+          ],
+        },
+        dgxSpark: {
+          title: 'NVIDIA DGX Spark: 128 GB de memória unificada para modelos 70B',
+          content: [
+            '**O NVIDIA DGX Spark (US$ 3.999) é um computador de IA compacto lançado em outubro de 2025, baseado no GB10 Grace Blackwell Superchip com 128 GB de memória unificada LPDDR5x.** Sua arquitetura de memória unificada significa que GPU e CPU compartilham o mesmo pool de 128 GB -- semelhante ao Apple Silicon, mas com aceleração CUDA.',
+            'Com 128 GB de memória unificada, o DGX Spark roda Llama 3.3 70B e Qwen3 72B em Q8_0 (70 GB -- qualidade quase sem perda). A velocidade de inferência para 70B em Q8_0 é de aproximadamente 18-28 tok/s.',
+          ],
+          rows: [
+            { 'Especificação': 'Memória', 'Valor': '128 GB unificados LPDDR5x' },
+            { 'Especificação': '70B em Q8_0', 'Valor': 'Sim -- qualidade quase sem perda' },
+            { 'Especificação': 'Velocidade de inferência 70B', 'Valor': '18-28 tok/s' },
+            { 'Especificação': 'Tamanho máximo de modelo', 'Valor': '~200B parâmetros em FP4' },
+            { 'Especificação': 'Preço', 'Valor': 'US$ 3.999 (NVIDIA direto / Amazon)' },
+            { 'Especificação': 'Comando Ollama', 'Valor': 'ollama run llama3.3:70b' },
+          ],
+          columns: ['Especificação', 'Valor'],
+        },
+        nvidiaOffload: {
+          title: 'Como funciona GPU NVIDIA + layer offloading para modelos 70B?',
+          content: 'Ollama e llama.cpp suportam dividir um modelo entre a VRAM da GPU e a RAM do sistema. Camadas carregadas na VRAM rodam em velocidade GPU; camadas na RAM do sistema rodam em velocidade CPU:',
+          image: '/images/70b-layer-offloading.svg',
+          imageCaption: 'Arquitetura de layer offloading: GPU RTX 4090 (24 GB) armazena ~60% das camadas (1-48) a 10-18 tok/s, enquanto a RAM do sistema (32 GB) armazena as camadas restantes (49-80) rodando em velocidade CPU (2-5 tok/s), atingindo 10-18 tok/s no total.',
+          codeBlock: '# Ollama automatically offloads as many layers as fit in VRAM\n# To explicitly control layers:\nollama run llama3.3:70b\n\n# Check how many layers are on GPU:\nollama ps\n# Output shows: llama3.3:70b  ...  23/80 GPU layers\n\n# For llama.cpp directly:\n./llama-cli -m llama-3.3-70b-q4_k_m.gguf \\\n  -ngl 40   # number of layers to offload to GPU\n  --ctx-size 4096',
+          codeLanguage: 'bash',
+        },
+        cpuOnly: {
+          title: 'A inferência 70B somente com CPU é prática?',
+          content: [
+            '**Um modelo 70B em Q4_K_M em uma CPU de muitos núcleos (AMD Threadripper, Intel Xeon) com 64 GB de RAM produz 1-3 tokens/s.** A 2 tok/s, uma resposta de 200 palavras leva aproximadamente 75 segundos.',
+            'Isso é impraticável para chat interativo, mas utilizável para processamento em lote -- resumir documentos, gerar relatórios ou processar arquivos durante a noite. Para uso interativo, o hardware mínimo prático é uma máquina capaz de atingir 8+ tok/s, o que requer Apple Silicon ou layer offloading com GPU NVIDIA.',
+          ],
+        },
+        which70b: {
+          title: 'Qual modelo 70B você deve rodar localmente?',
+          rows: [
+            { 'Modelo': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'Ideal para': 'Tarefas gerais em inglês, seguimento de instruções' },
+            { 'Modelo': 'Qwen3 72B', 'MMLU': '84%', 'HumanEval': '87%', 'Ideal para': 'Código, multilíngue (29 idiomas)' },
+            { 'Modelo': 'Mistral Large 123B', 'MMLU': '84%', 'HumanEval': '80%', 'Ideal para': 'Requer 80+ GB -- apenas estações de trabalho' },
+          ],
+          columns: ['Modelo', 'MMLU', 'HumanEval', 'Ideal para'],
+        },
+        regionalContext: {
+          title: 'Rodar modelos 70B localmente: contexto regional',
+          content: [
+            '**Brasil / LGPD**: Um modelo local de 70B representa o teto prático de qualidade de IA executável de forma privada. Para empresas brasileiras que processam dados sensíveis -- documentos jurídicos, prontuários médicos, análises financeiras -- um modelo 70B rodando localmente entrega qualidade GPT-4 2023 com conformidade total com a LGPD (Lei Geral de Proteção de Dados, Lei nº 13.709/2018). Nenhum prompt, contexto ou saída sai da infraestrutura da organização. A ANPD (Autoridade Nacional de Proteção de Dados) recomenda minimização de transferências internacionais de dados.',
+            '**UE / RGPD**: Para empresas europeias que processam dados sensíveis, um modelo 70B local entrega qualidade GPT-4 2023 com conformidade RGPD completa. Nenhum dado sai da infraestrutura da organização.',
+            '**China**: Qwen3 72B (Alibaba) rodando localmente satisfaz a localização de dados sob a Lei de Segurança de Dados da China (数据安全法) com 84% de qualidade MMLU.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Quais são os erros comuns ao rodar modelos 70B em hardware de consumo?',
+          faqs: [
+            {
+              q: 'Comprar uma GPU com menos de 24 GB de VRAM esperando desempenho 70B completo',
+              a: 'Uma RTX 4070 Ti (12 GB de VRAM) só pode alojar ~30% de um modelo 70B em Q4_K_M na VRAM. Os 70% restantes rodam na CPU, resultando em 3-5 tok/s -- quase tão lento quanto inferência apenas com CPU. Para modelos 70B, 24 GB de VRAM (RTX 4090) é o mínimo prático para aceleração GPU útil. Abaixo disso, considere rodar um modelo de 34B.',
+            },
+            {
+              q: 'Não usar layer offloading no Ollama',
+              a: 'Por padrão, se um modelo 70B não cabe inteiramente na VRAM, o Ollama recorre à inferência somente com CPU. Configure as camadas GPU explicitamente com `OLLAMA_GPU_LAYERS=999` -- o Ollama fará offloading de quantas camadas couberem na VRAM e rodará o restante na CPU, o que é significativamente mais rápido do que inferência totalmente na CPU.',
+            },
+            {
+              q: 'Usar Q4_K_M quando Q3_K_S se encaixaria melhor no hardware disponível',
+              a: 'Em máquinas com 32-40 GB de RAM, Q4_K_M para um modelo 70B pode ser muito apertado (deixando margem insuficiente para o SO). Q3_K_S reduz a RAM para ~30 GB com perda de qualidade moderada. Execute `ollama ps` após carregar o modelo -- se você ver uso de swap, reduza para Q3_K_S.',
+            },
+            {
+              q: 'Esperar a mesma velocidade do Apple Silicon de uma configuração NVIDIA com offloading',
+              a: 'O layer offloading no NVIDIA cria um gargalo de largura de banda de memória entre VRAM e RAM do sistema. RTX 4090 com offloading produz 10-18 tok/s vs 20-30 tok/s no M5 Max. Para velocidade equivalente, o Apple Silicon é a melhor escolha de consumo. Para fluxos de trabalho CUDA (ajuste fino, kernels personalizados), o NVIDIA é necessário.',
+            },
+            {
+              q: 'Rodar Q4_K_M no DGX Spark em vez de Q8_0',
+              a: 'O DGX Spark tem 128 GB -- suficiente para Q8_0 (70 GB). Usar Q4_K_M desperdiça qualidade disponível. Em qualquer máquina com 80 GB ou mais, rode Q8_0 para modelos 70B.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Leitura relacionada',
+          items: [
+            '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) -- tabela completa de GPU e RAM por tamanho de modelo, incluindo requisitos de hardware para 70B',
+            '[Melhores LLMs locais 2026](/pt/local-llms/best-local-llms-2026) -- rankings de benchmarks para ambos os modelos 70B e alternativas intermediárias com menos de 40 GB de RAM',
+            '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) -- configuração completa incluindo layer offloading para GPUs NVIDIA',
+            '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) -- entenda Q4_K_M vs Q8_0 e por que Q8_0 é a escolha certa em máquinas de 128 GB',
+            '[PC para LLM local por menos de US$ 1.000](/pt/local-llms/local-llm-pc-build-1000) -- guia de hardware econômico para modelos 7B-13B quando o hardware para 70B está fora do orçamento',
+            '[Qwen vs Llama vs Mistral](/pt/local-llms/qwen-vs-llama-vs-mistral) -- comparação detalhada de benchmarks de ambos os modelos 70B em cada categoria de tarefa',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas frequentes sobre rodar modelos 70B em hardware de consumo',
+          faqs: [
+            {
+              q: 'Qual é o hardware mais barato que pode rodar um modelo 70B de forma utilizável?',
+              a: 'Em abril de 2026, um Mac Studio M2 Ultra usado (64 GB de memória unificada) por ~US$ 2.000 é o caminho mais econômico para inferência 70B a 25+ tok/s. Uma máquina nova equivalente seria o MacBook Pro M5 Max de 64 GB (~US$ 3.500). Um desktop com NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) custa ~US$ 3.000-4.000 no total, mas produz inferência mais lenta devido ao layer offloading.',
+            },
+            {
+              q: 'Posso rodar um modelo 70B em duas GPUs?',
+              a: 'Sim -- llama.cpp e Ollama suportam inferência multi-GPU em hardware NVIDIA. Duas RTX 4090 (48 GB de VRAM total) cabem um modelo 70B em Q4_K_M inteiramente na VRAM. O Ollama gerencia multi-GPU automaticamente quando várias GPUs estão presentes. O paralelismo de tensor no llama.cpp (`--tensor-split`) controla como as camadas são distribuídas.',
+            },
+            {
+              q: 'Como a qualidade local 70B se compara ao GPT-5.5?',
+              a: 'Nos benchmarks MMLU e HumanEval, Llama 3.3 70B (82%, 88%) e Qwen3 72B (84%, 87%) igualam ou superam ligeiramente as pontuações do GPT-4 (2023). GPT-5.5 (2024) pontua mais alto em tarefas de raciocínio intensivo. Para seguimento geral de instruções, resumo e geração de código, os modelos locais 70B são competitivos com o GPT-5.5 na maioria das tarefas.',
+            },
+            {
+              q: 'O Ollama suporta rodar modelos 70B automaticamente?',
+              a: 'Sim. Rodar `ollama run llama3.3:70b` baixa e executa o modelo com layer offloading automático de GPU. O Ollama detecta a VRAM disponível e a RAM do sistema, faz offloading de quantas camadas for possível para a GPU e roda o restante na CPU. Nenhuma configuração manual é necessária para uso básico.',
+            },
+            {
+              q: 'Quanto de eletricidade o rodar de um modelo 70B consome?',
+              a: 'Um Mac Studio M2 Ultra rodando inferência 70B consome aproximadamente 30-50 W. Um desktop NVIDIA RTX 4090 sob carga consome 350-450 W. A R$ 0,75/kWh (tarifa média brasileira), a inferência 70B contínua em uma RTX 4090 custa aproximadamente R$ 0,26-0,34 por hora. O Apple Silicon é 7-10× mais eficiente energeticamente para essa carga de trabalho.',
+            },
+            {
+              q: 'Modelos 70B valem a pena em comparação com modelos 13B para tarefas do dia a dia?',
+              a: 'Para raciocínio complexo, análise de documentos longos e escrita refinada, sim -- a diferença de qualidade é perceptível. Para resumo simples, perguntas e respostas e classificação, um modelo de 13B ou até 7B produz saída praticamente idêntica. Rode ambos no seu caso de uso específico com o [PromptQuorum](/) para quantificar a diferença de qualidade antes de investir em hardware para 70B.',
+            },
+            {
+              q: 'O que é o NVIDIA DGX Spark e vale a pena para inferência 70B?',
+              a: 'O DGX Spark (US$ 3.999) é o computador de IA compacto de mesa da NVIDIA com 128 GB de memória unificada. Roda modelos 70B em Q8_0 (qualidade quase sem perda) sem restrições de quantização. Velocidade: 18-28 tok/s. Comparado a um Mac Studio M2 Ultra (~US$ 2.000 recondicionado, 64 GB): o DGX Spark custa ~US$ 2.000 a mais por inferência de maior qualidade e suporte CUDA. Para inferência 70B pura, o Mac Studio é mais econômico. Para fluxos de trabalho CUDA (ajuste fino, kernels personalizados), o DGX Spark é melhor.',
+            },
+            {
+              q: 'Posso fazer fine-tuning de um modelo 70B em hardware de consumo?',
+              a: 'O fine-tuning completo requer aproximadamente 3× a memória de inferência para ajuste LoRA (~120-130 GB de VRAM). Isso supera todo o hardware de consumo, exceto o DGX Spark (128 GB -- apenas viável para runs pequenos de LoRA com quantização de 4 bits). Para fine-tuning de 70B, provedores de GPU na nuvem (RunPod, Lambda Labs, Vast.ai) são mais práticos. O hardware de consumo lida com fine-tuning de 7B-13B de forma confiável.',
+            },
+            {
+              q: 'Qual é a melhor quantização para 70B no Apple Silicon?',
+              a: 'Em um Mac de 64 GB (M5 Max ou M2 Ultra): Q4_K_M (~40 GB) deixa 24 GB para o SO -- confortável. Q5_K_M (~50 GB) deixa 14 GB -- apertado, mas viável. Q8_0 (~70 GB) excede 64 GB -- apenas viável em configurações de 96 GB ou 128 GB. Em um Mac de 128 GB: Q8_0 é recomendado para qualidade quase sem perda sem penalidade de velocidade.',
+            },
+            {
+              q: 'O Ollama escolhe automaticamente a melhor quantização?',
+              a: 'Não. `ollama run llama3.3:70b` baixa o Q4_K_M padrão. Especifique explicitamente para melhor qualidade: `ollama run llama3.3:70b:q5_k_m` ou `ollama run llama3.3:70b:q8_0`. Verifique a memória disponível com `ollama ps` após carregar -- se o modelo couber confortavelmente, atualize para o próximo nível de quantização.',
+            },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fontes',
+          items: [
+            'Documentação de GPU Offloading do llama.cpp -- github.com/ggerganov/llama.cpp/blob/master/docs/backend/CUDA.md',
+            'Biblioteca de modelos do Ollama -- ollama.com/library/llama3.3',
+            'Benchmarks de inferência Apple M5 Max -- github.com/ggerganov/llama.cpp/discussions (thread de benchmarks da comunidade)',
+            'Meta Llama 3.3 Model Card -- huggingface.co/meta-llama/Llama-3.3-70B-Instruct',
+            'NVIDIA DGX Spark -- nvidia.com/en-us/products/workstations/dgx-spark/',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Como rodar LLMs de 70B em hardware de consumo 2026: RAM e GPU',
+        'description': 'Rode Llama 3.3 e Qwen3 70B localmente: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Guia de hardware completo -- abril 2026.',
+        'url': 'https://www.promptquorum.com/pt/local-llms/70b-models-consumer-hardware',
+        'inLanguage': 'pt-BR',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      },
+    },
     de: {
   theme: 'Beste Modelle',
   title: 'So führst du 70B Local LLM Modelle auf Consumer Hardware 2026 aus',

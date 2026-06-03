@@ -518,6 +518,207 @@ dispatch_rules:
       },
     },
   },
+  pt: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-16',
+    theme: 'Best Models',
+    title: 'Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2: LLM Local vs Nuvem 2026',
+    seoTitle: 'Qwen 3 vs Claude 4.6 vs DeepSeek R2: Comparação 2026',
+    intro: 'O Qwen 3.6 27B atinge 92,1% no HumanEval e 77,2% no SWE-bench localmente com 16 GB de VRAM. O Claude Sonnet 4.6 alcança 89,4% no HumanEval sem requisitos de hardware. O DeepSeek R2 oferece raciocínio frontier a $0,14/1M tokens de entrada. Esta comparação cobre dados de benchmarks, jurisdição GDPR da UE, cálculos de custo por token e o problema da camada de despacho que torna obsoletas as estratégias de modelo único em 2026.',
+    metaDescription: 'Compare Qwen 3.6 27B (92,1% HumanEval, 16 GB VRAM), Claude Sonnet 4.6 (89,4%, $3/1M) e DeepSeek R2 ($0,14/1M). LGPD, custo e hardware 2026.',
+    publishDate: '2026-05-16',
+    readTime: '10 min de leitura',
+    educationalLevel: 'Intermediate',
+    audience: 'Desenvolvedores e equipes escolhendo entre LLMs locais e na nuvem para fluxos de trabalho em produção',
+    primaryTerm: 'Qwen vs Claude vs DeepSeek local 2026',
+    leadAnswerBlock: '**O Qwen 3.6 27B lidera em código open-weight com 92,1% HumanEval e funciona com 16 GB de VRAM. O Claude Sonnet 4.6 oferece 89,4% HumanEval sem custo de hardware. O DeepSeek R2 é a opção frontier mais barata a $0,14/1M tokens. Para conformidade com LGPD/GDPR, apenas a implantação local (Qwen via Ollama) garante a residência de dados. A melhor estratégia em 2026 é o roteamento por despacho: Qwen local para tarefas sensíveis, nuvem para escalar.**',
+    ctaText: 'Pronto para construir sua estratégia de despacho?',
+    ctaButton: 'Entrar na lista de espera →',
+    ctaHref: '/waitlist',
+    toc: [
+      { label: 'Principais conclusões', anchor: '#key-takeaways' },
+      { label: 'Panorama de LLM local em 2026', anchor: '#landscape-2026' },
+      { label: 'Resumo de benchmarks', anchor: '#benchmark-snapshot' },
+      { label: 'Realidade do hardware', anchor: '#hardware-reality' },
+      { label: 'LGPD, GDPR e jurisdição', anchor: '#gdpr-eu' },
+      { label: 'Custo por 1M de tokens', anchor: '#cost-comparison' },
+      { label: 'O problema da camada de despacho', anchor: '#dispatch-layer' },
+      { label: 'Veredicto', anchor: '#verdict' },
+      { label: 'Leitura relacionada', anchor: '#related-reading' },
+      { label: 'Perguntas frequentes', anchor: '#faq' },
+    ],
+    comparisonTable: {
+      columns: ['Modelo', 'HumanEval', 'SWE-bench', 'MMLU', 'VRAM / Configuração', 'Custo (Entrada)', 'Residência de dados'],
+      rows: [
+        { Modelo: 'Qwen 3.6 27B (local)', HumanEval: '92,1%', 'SWE-bench': '77,2%', MMLU: '86,4%', 'VRAM / Configuração': '16 GB VRAM', 'Custo (Entrada)': 'R$0/1M após hardware', 'Residência de dados': '✅ No dispositivo' },
+        { Modelo: 'Claude Sonnet 4.6 (API)', HumanEval: '89,4%', 'SWE-bench': '~72%', MMLU: '88,1%', 'VRAM / Configuração': 'Nenhum', 'Custo (Entrada)': '$3/1M tokens', 'Residência de dados': '⚠️ Servidores US da Anthropic' },
+        { Modelo: 'DeepSeek R2 (API)', HumanEval: '91,6%', 'SWE-bench': '~75%', MMLU: '87,8%', 'VRAM / Configuração': 'Nenhum', 'Custo (Entrada)': '$0,14/1M tokens', 'Residência de dados': '❌ Processamento na China' },
+        { Modelo: 'Qwen 3.6 27B (nuvem)', HumanEval: '92,1%', 'SWE-bench': '77,2%', MMLU: '86,4%', 'VRAM / Configuração': 'Nenhum', 'Custo (Entrada)': '~$0,30/1M tokens', 'Residência de dados': '⚠️ Dependente de região Alibaba Cloud' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Líder em benchmarks de código**: Qwen 3.6 27B atinge 92,1% HumanEval e 77,2% SWE-bench — igualando ou superando o Claude Sonnet 4.6 (89,4%) em uma GPU de consumo.',
+          '**Custo mínimo**: DeepSeek R2 custa $0,14/1M tokens de entrada. Claude Sonnet 4.6 custa $3/1M. Qwen local custa R$0/1M após o investimento único em hardware.',
+          '**LGPD/GDPR**: Apenas a implantação local elimina o risco de transferência transfronteiriça de dados. Dados permanecem no hardware da organização.',
+          '**A abordagem de despacho**: Nenhum modelo único vence em todas as tarefas. Uma camada de despacho roteia tarefas de código para o Qwen local, raciocínio complexo para o Claude e trabalhos de alto volume para o DeepSeek.',
+          '**Requisito de hardware**: Qwen 3.6 27B com quantização Q4_K_M cabe em 16 GB de VRAM. Uma RTX 3090 ou RTX 4080 é suficiente.',
+        ],
+      },
+      landscape: {
+        id: 'landscape-2026',
+        title: 'Panorama de LLM local em 2026',
+        content: [
+          'A lacuna entre LLMs locais e na nuvem foi efetivamente fechada no início de 2026. A família Qwen 3, lançada pela Alibaba Cloud em abril de 2026, introduziu modelos densos que igualam o desempenho frontier da nuvem com especificações de hardware de consumo. O Qwen 3.6 27B atinge pontuações de benchmark dentro de 2–3 pontos percentuais do Claude Sonnet 4.6 em tarefas de código, com custo marginal zero após o hardware.',
+          'Esta comparação foca em três modelos representativos: Qwen 3.6 27B como o campeão local open-weight, Claude Sonnet 4.6 como o benchmark de API na nuvem e DeepSeek R2 como a alternativa de API otimizada em custo. A análise cobre benchmarks de código, restrições de hardware, conformidade regulatória e o argumento econômico do roteamento por despacho.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Qwen 3.6 27B atinge 92,1% HumanEval executando localmente com 16 GB de VRAM, igualando os 89,4% do Claude Sonnet 4.6 sem custos de API na nuvem.' },
+          { type: 'plain-terms', text: 'Um LLM local é um modelo de IA que funciona no seu próprio computador ou servidor. Seus prompts e respostas nunca saem do seu hardware, o que significa que não há dados enviados para provedores de nuvem, sem faturamento por token e conformidade LGPD/GDPR por padrão.' },
+        ],
+      },
+      benchmarks: {
+        id: 'benchmark-snapshot',
+        title: 'Resumo de benchmarks',
+        content: 'Os benchmarks são medidos em condições padronizadas. HumanEval testa a correção na geração de código Python. SWE-bench testa a resolução de issues reais do GitHub. MMLU testa a amplitude do conhecimento multidisciplinar.',
+        rows: [
+          { Benchmark: 'HumanEval (código Python)', 'Qwen 3.6 27B': '92,1%', 'Claude Sonnet 4.6': '89,4%', 'DeepSeek R2': '91,6%' },
+          { Benchmark: 'SWE-bench (issues do GitHub)', 'Qwen 3.6 27B': '77,2%', 'Claude Sonnet 4.6': '~72%', 'DeepSeek R2': '~75%' },
+          { Benchmark: 'MMLU (amplitude de conhecimento)', 'Qwen 3.6 27B': '86,4%', 'Claude Sonnet 4.6': '88,1%', 'DeepSeek R2': '87,8%' },
+          { Benchmark: 'MATH (nível competição)', 'Qwen 3.6 27B': '88,7%', 'Claude Sonnet 4.6': '91,2%', 'DeepSeek R2': '93,1%' },
+        ],
+        columns: ['Benchmark', 'Qwen 3.6 27B', 'Claude Sonnet 4.6', 'DeepSeek R2'],
+        tableFormat: true,
+      },
+      hardware: {
+        id: 'hardware-reality',
+        title: 'Realidade do hardware',
+        content: [
+          'O Qwen 3.6 27B requer aproximadamente 15,8 GB de VRAM com quantização Q4_K_M, cabendo em uma única RTX 3090 (24 GB), RTX 4080 (16 GB) ou RTX 4090 (24 GB). O Apple Silicon M3 Max com 48 GB de memória unificada o executa a 35–40 tokens/segundo via MLX. Um Mac Mini M4 Pro com 48 GB de memória unificada (~R$ 9.000) é um servidor de inferência econômico.',
+          'O investimento inicial em hardware substitui o custo da API na nuvem. Com 10M tokens/dia (uma equipe de desenvolvimento típica de 5 pessoas), o Claude Sonnet 4.6 custa $30/dia ou ~$900/mês. Um sistema RTX 4080 a ~R$ 7.000 de custo em hardware atinge o ponto de equilíbrio em menos de 2 meses nesse volume de uso.',
+        ],
+        items: [
+          'RTX 3090 (24 GB VRAM) — executa Qwen 3.6 27B em Q4_K_M, ~28 tokens/segundo',
+          'RTX 4080 (16 GB VRAM) — mínimo para Qwen 3.6 27B, ~24 tokens/segundo',
+          'RTX 4090 (24 GB VRAM) — margem confortável, ~35 tokens/segundo',
+          'Apple Silicon M3 Max (48 GB memória unificada) — 35–40 tokens/segundo via MLX, silencioso, eficiente',
+          'Apple Silicon M4 Pro (48 GB memória unificada) — 40+ tokens/segundo, formato Mac Mini',
+        ],
+      },
+      gdpr: {
+        id: 'gdpr-eu',
+        title: 'LGPD, GDPR e jurisdição',
+        content: [
+          'A Lei Geral de Proteção de Dados (LGPD) do Brasil e o GDPR da UE impõem restrições à transferência de dados pessoais para servidores externos. Para empresas brasileiras e europeias que usam APIs de IA na nuvem, cada prompt que contém dados pessoais (nomes, e-mails, detalhes de contratos) constitui uma transferência de dados para os servidores do provedor.',
+          'A implantação local do Qwen elimina completamente essa categoria de risco de conformidade. Os dados permanecem no hardware da organização, nunca saem da infraestrutura da empresa e não requerem mecanismos de transferência adicionais. Para organizações de saúde, jurídicas, serviços financeiros e setor público, a implantação local é a arquitetura de menor risco. A ANPD supervisiona a aplicação da LGPD no Brasil — executar modelos localmente coloca os dados inteiramente sob controle direto da organização.',
+          'O processamento de dados do DeepSeek R2 ocorre em servidores na República Popular da China. A Comissão da UE não emitiu uma decisão de adequação para a China. O uso do DeepSeek R2 com dados pessoais de cidadãos brasileiros ou da UE sem salvaguardas adequadas pode constituir violação da LGPD ou GDPR.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'A implantação local do Qwen elimina o risco de transferência transfronteiriça de dados porque todo o processamento ocorre em hardware controlado pela organização, em conformidade com a LGPD e as diretrizes da ANPD.' },
+          { type: 'plain-terms', text: 'LGPD significa: se seus prompts contêm nomes, e-mails ou qualquer dado pessoal, e você os envia para uma IA na nuvem, isso é uma transferência de dados para outro país. LLMs locais evitam isso completamente porque os dados nunca saem do seu servidor.' },
+        ],
+      },
+      cost: {
+        id: 'cost-comparison',
+        title: 'Custo por 1M de tokens',
+        content: 'O preço por token determina a economia dos LLMs na nuvem em escala.',
+        rows: [
+          { Modelo: 'DeepSeek R2', 'Entrada ($/1M)': '$0,14', 'Saída ($/1M)': '$0,55', 'Mensal a 300M tokens': '$42', 'Seguro LGPD/GDPR': '❌' },
+          { Modelo: 'Qwen 3.6 (nuvem, Alibaba)', 'Entrada ($/1M)': '~$0,30', 'Saída ($/1M)': '~$0,90', 'Mensal a 300M tokens': '$90', 'Seguro LGPD/GDPR': '⚠️ Dependente de região' },
+          { Modelo: 'Claude Sonnet 4.6', 'Entrada ($/1M)': '$3,00', 'Saída ($/1M)': '$15,00', 'Mensal a 300M tokens': '$900', 'Seguro LGPD/GDPR': '⚠️ Requer mecanismos de transferência' },
+          { Modelo: 'Qwen 3.6 27B (local)', 'Entrada ($/1M)': '$0 (após hardware)', 'Saída ($/1M)': '$0', 'Mensal a 300M tokens': '$0', 'Seguro LGPD/GDPR': '✅' },
+        ],
+        columns: ['Modelo', 'Entrada ($/1M)', 'Saída ($/1M)', 'Mensal a 300M tokens', 'Seguro LGPD/GDPR'],
+        tableFormat: true,
+      },
+      dispatch: {
+        id: 'dispatch-layer',
+        title: 'O problema da camada de despacho',
+        content: [
+          'Escolher um único modelo para todas as tarefas é economicamente ineficiente em 2026. Tarefas de código que se beneficiam do treinamento SWE-bench do Qwen 3.6, síntese de alto volume que roda barato no DeepSeek R2, e raciocínio complexo de múltiplas etapas que justifica o premium de qualidade do Claude Sonnet 4.6 requerem lógicas de roteamento diferentes.',
+          'Uma camada de despacho — software que classifica os prompts entrantes e os roteia para o modelo apropriado — captura os benefícios de qualidade de múltiplos modelos enquanto minimiza o custo por tarefa.',
+        ],
+        codeBlock: `# Example routing configuration for a mixed coding + analysis team
+
+dispatch_rules:
+  - task_type: code_generation
+    primary_model: qwen_local
+    fallback: claude_sonnet_46
+    conditions:
+      - prompt_contains: ["function", "class", "def", "async"]
+      - token_budget: < 100000  # Local cost is zero
+
+  - task_type: documentation
+    primary_model: deepseek_r2
+    fallback: qwen_local
+    conditions:
+      - prompt_contains: ["document", "write", "explain"]
+      - frequency: high_volume
+
+  - task_type: legal_analysis
+    primary_model: claude_sonnet_46
+    conditions:
+      - prompt_contains: ["contract", "liability", "compliance"]
+      - data_sensitivity: personal_data
+
+  - task_type: summarization
+    primary_model: deepseek_r2
+    cost_threshold: < $0.01_per_task
+
+  - task_type: default
+    primary_model: qwen_local
+    fallback_chain: [claude_sonnet_46, deepseek_r2]`,
+        codeLanguage: 'YAML',
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'Veredicto',
+        content: [
+          'Para equipes de desenvolvimento, a resposta em 2026 não é "Qwen ou Claude ou DeepSeek" — é "Qwen para tarefas privadas/de código, com fallback para a nuvem para desempenho e raciocínio frontier". A pontuação de 92,1% HumanEval e a arquitetura LGPD/GDPR-by-design do Qwen 3.6 27B o tornam a opção padrão para geração de código em hardware local.',
+          'O Claude Sonnet 4.6 ainda é o líder em qualidade para tarefas complexas de raciocínio. O preço de $0,14/1M do DeepSeek R2 é atraente para tarefas de alto volume não sensíveis, mas não pode ser usado para dados pessoais brasileiros ou da UE sem risco legal significativo.',
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          '[Como executar o Qwen 3 localmente — Guia completo de configuração 2026](/pt/local-llms/run-qwen-locally-guide-2026)',
+          '[Manifesto de privacidade de LLM local 2026](/pt/local-llms/qwen-gdpr-privacy-manifesto-2026)',
+          '[Melhores LLMs locais para código 2026](/pt/local-llms/best-local-llms-for-coding)',
+          '[Entre na lista de espera do PromptQuorum](/waitlist)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'O Qwen 3.6 27B é melhor que o Claude Sonnet 4.6?', a: 'Em benchmarks de código (HumanEval, SWE-bench), o Qwen 3.6 27B supera o Claude Sonnet 4.6 em maio de 2026: 92,1% vs 89,4% HumanEval, 77,2% vs ~72% SWE-bench. O Claude Sonnet 4.6 lidera em MMLU (88,1% vs 86,4%) e MATH (91,2% vs 88,7%). Para fluxos de trabalho de código, o Qwen 3.6 27B local é a melhor opção.' },
+          { q: 'Posso usar o DeepSeek R2 com dados cobertos pela LGPD?', a: 'Não, sem salvaguardas legais significativas. O DeepSeek R2 processa dados em servidores na China. A ANPD e a LGPD impõem restrições à transferência de dados pessoais de brasileiros para países sem nível adequado de proteção. Consulte seu DPO antes de usar o DeepSeek R2 com qualquer dado pessoal.' },
+          { q: 'Qual hardware preciso para executar o Qwen 3.6 27B localmente?', a: 'Mínimo: RTX 4080 (16 GB VRAM) com quantização Q4_K_M. Recomendado: RTX 4090 (24 GB) ou Apple Silicon M3/M4 Max com 48 GB de memória unificada.' },
+          { q: 'Como criar uma camada de despacho entre modelos locais e na nuvem?', a: 'Use classificação de tarefas para rotear prompts para o modelo apropriado. Defina regras de roteamento (ex.: tarefas de código → Qwen local via Ollama, análise complexa → API do Claude Sonnet 4.6). Implemente a lógica de despacho na camada de aplicação.' },
+          { q: 'O Qwen 3 tem licença Apache 2.0?', a: 'A maioria dos modelos Qwen 3 usa a licença Apache 2.0, que permite uso comercial sem royalties. O modelo Qwen 3 72B usa a Qwen Research License, com restrições em implantação comercial em grande escala. Verifique sempre a licença na página do Hugging Face antes de implantar em produção.' },
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/pt/local-llms/qwen-vs-claude-vs-deepseek-local-2026',
+      inLanguage: 'pt-BR',
+      headline: 'Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2: LLM Local vs Nuvem 2026',
+      description: 'Compare Qwen 3.6 27B (92,1% HumanEval, 16 GB VRAM), Claude Sonnet 4.6 (89,4%, $3/1M) e DeepSeek R2 ($0,14/1M). Conformidade LGPD/GDPR, custo e análise de hardware para 2026.',
+      author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+      datePublished: '2026-05-16',
+      publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        'cssSelector': ['.article-intro', '.key-takeaways'],
+      },
+    },
+  },
   de: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
