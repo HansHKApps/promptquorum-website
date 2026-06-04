@@ -414,6 +414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Power Local LLM Hub](/power-local-llm) — full guide library across all 9 layers.',
           '[Best Local LLM IDE Plugins (2026)](/power-local-llm/best-local-llm-ide-plugins-2026) — Continue.dev, Cline, Aider: setup and local model configuration.',
           '[Best RAG Tools for Business Documents (2026)](/power-local-llm/best-rag-tools-for-business-documents-2026) — AnythingLLM, PrivateGPT, LlamaIndex: enterprise document Q&A stacks.',
+          '[Diretório de Software LLM Local 2026 (Português)](/pt/power-local-llm/local-llm-software-directory-2026) — versão em português deste guia',
         ],
       },
     },

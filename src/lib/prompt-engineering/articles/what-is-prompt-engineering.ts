@@ -295,6 +295,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Techniques: Chain-of-Thought Prompting — Make AI Show Its Reasoning] — the step-by-step technique that improves accuracy',
             '[Frameworks: CO-STAR Framework] — a structured template that organizes the fundamentals into a proven sequence',
             '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — the eight structural constraints every LLM shares and the engineering workaround for each',
+            '[O Que É Engenharia de Prompts (Português)](/pt/prompt-engineering/what-is-prompt-engineering) — versão em português deste guia',
           ],
         },
 

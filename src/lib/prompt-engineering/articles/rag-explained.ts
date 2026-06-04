@@ -312,6 +312,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Best Prompt Engineering Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026) — testing and evaluation tools for RAG pipelines including Braintrust, Arize, and LangSmith',
             '[AI Limitations — What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — understanding why RAG is necessary to overcome LLM knowledge cutoff and hallucination limits',
             '[Build Quality Checks](/prompt-engineering/build-quality-checks) — validation patterns for RAG output including hallucination detection and source verification',
+            '[RAG Explicado (Português)](/pt/prompt-engineering/rag-explained) — versão em português deste guia',
           ],
         },
         faq: {

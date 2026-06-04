@@ -148,6 +148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLM Security and Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) -- 12-step audit for running local LLMs safely in regulated and privacy-sensitive environments',
             '[Tokens, Costs and Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) -- detailed breakdown of cloud API pricing and when local models become more cost-effective',
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) -- where to start if switching from cloud APIs to local inference for the first time',
+            '[LLMs Locais vs APIs na Nuvem (Português)](/pt/local-llms/local-llms-vs-cloud-apis) — versão em português deste guia',
           ],
         },
         faqSection: {

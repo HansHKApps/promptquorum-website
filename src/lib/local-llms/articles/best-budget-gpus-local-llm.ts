@@ -172,6 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Apple Silicon M5 for Local LLMs](/local-llms/apple-silicon-m5-local-llm) — Complete M5 Pro/Max guide: benchmarks, Mac configurations, memory tiers, and which Mac to buy for local inference.',
             '[Apple Silicon vs NVIDIA GPU for Local LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — Full cost and performance comparison: when a Mac beats a budget GPU.',
             '[Best Models for Apple Silicon 2026](/local-llms/best-models-apple-silicon-2026) — Model recommendations for 16GB–128GB unified memory tiers.',
+            '[Melhores GPUs Econômicas para LLMs Locais (Português)](/pt/local-llms/best-budget-gpus-local-llm) — versão em português deste guia',
             'For Japan-specific GPU pricing, Akihabara retailers, and used market options on Mercari and Yahoo Auctions, see our <a href="/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">best value GPU for local LLMs in Japan guide</a>.',
           ],
         },

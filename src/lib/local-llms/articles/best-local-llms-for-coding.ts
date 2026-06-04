@@ -441,6 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Small Local LLM Models](/local-llms/small-local-llm-models) -- sub-4B coding models when 7B+ is too large for available hardware',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- set up any coding model from this page in under 5 minutes',
             'For local LLMs optimized specifically for the Japanese language, including Rinna 3.6B, ELYZA-7B, and CyberAgent CALM3, see our <a href="/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">guide to the best local LLMs for Japanese</a>.',
+            '[Melhores LLMs Locais para Programação (Português)](/pt/local-llms/best-local-llms-for-coding) — versão em português deste guia',
           ],
         },
         faqSection: {

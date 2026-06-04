@@ -224,6 +224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best Local RAG Tools](/local-llms/best-local-rag-tools) -- Deep dive into Open WebUI RAG and other document-based LLM tools.',
             '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) -- How to use the API directly from code.',
             '[Local LLMs with VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) -- Setup Continue.dev and VS Code integrations.',
+            '[Melhores Interfaces para LLMs Locais (Português)](/pt/local-llms/best-local-llm-frontends) — versão em português deste guia',
           ],
         },
         sources: {

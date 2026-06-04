@@ -170,6 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Prompt Engineering Guide](/prompt-engineering) -- Optimize prompts for RAG.',
             '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) -- Expose RAG as API.',
             '[Fine-Tuning Local LLMs LoRA](/local-llms/fine-tuning-local-llms-lora) -- Combine fine-tuning with RAG.',
+            '[RAG Local 2026 (Português)](/pt/local-llms/local-rag-2026) — versão em português deste guia',
           ],
         },
         sources: {

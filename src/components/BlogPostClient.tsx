@@ -67,7 +67,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
 
   // Get translated metadata
   const postId = SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]
-  const metadata = blogMetadata[postId as keyof typeof blogMetadata]?.[lang as 'en' | 'de' | 'fr' | 'ja' | 'zh'] || blogMetadata[postId as keyof typeof blogMetadata]?.['en']
+  const metadata = blogMetadata[postId as keyof typeof blogMetadata]?.[lang as 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'pt' | 'es' | 'ar'] || blogMetadata[postId as keyof typeof blogMetadata]?.['en']
 
   return (
     <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6">

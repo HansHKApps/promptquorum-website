@@ -445,6 +445,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — step-by-step reasoning technique for accuracy improvement',
             '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — when to add examples as the optimization lever',
             '[Build a Prompt Library That Saves Hours](/prompt-engineering/build-a-prompt-library) — persisting optimized prompts as team assets',
+            '[Fundamentos de Otimização de Prompts (Português)](/pt/prompt-engineering/fundamentals-of-prompt-optimization) — versão em português deste guia',
           ],
         },
 

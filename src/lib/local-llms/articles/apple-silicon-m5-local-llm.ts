@@ -361,6 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption)',
           '[Best Local LLMs 2026](/local-llms/best-local-llms-2026)',
           '[Local LLM on Laptop](/local-llms/local-llm-on-laptop)',
+          '[Apple Silicon M5 para LLM Local (Português)](/pt/local-llms/apple-silicon-m5-local-llm) — versão em português deste guia',
         ],
       },
     },

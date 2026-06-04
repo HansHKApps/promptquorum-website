@@ -205,6 +205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- VRAM and GPU requirements to run 70B models including dual RTX 4090 and Mac Studio configs',
             '[MLX vs Ollama vs llama.cpp on Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Framework comparison for Apple Silicon: speed, setup time, and ecosystem trade-offs.',
             '[Best AMD Mini PCs for Local LLM 2026](/local-llms/best-amd-mini-pc-local-llm-2026) -- AMD Ryzen AI Max+ 395: 64–128GB unified memory, 50 TOPS NPU, $1,200–2,500.',
+            '[Melhores LLMs Locais em 2026 (Português)](/pt/local-llms/best-local-llms-2026) — versão em português deste guia',
           ],
         },
         faqSection: {

@@ -1,0 +1,69 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <rect x="20" y="12" width="760" height="396" rx="12" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="400" y="46" font-family="system-ui,-apple-system,sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Melhores Modelos Locais de Código Aberto 2026</text>
+  <text x="400" y="68" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Classificados por capacidade — de hardware consumer a workstation</text>
+
+  <!-- Top row: 3 cards at x=36, 280, 524 — width=228, height=128 -->
+
+  <!-- Card 1: Llama 4 Scout -->
+  <rect x="36" y="84" width="228" height="128" rx="10" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="36" y="84" width="228" height="6" rx="10" fill="#6750A4"/>
+  <rect x="36" y="84" width="228" height="10" fill="#6750A4"/>
+  <rect x="36" y="90" width="228" height="4" fill="#6750A4"/>
+  <text x="150" y="110" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Llama 4 Scout</text>
+  <text x="150" y="128" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">109B MoE · 17B parâmetros ativos</text>
+  <text x="150" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">VRAM: 40 GB+</text>
+  <rect x="64" y="158" width="172" height="22" rx="5" fill="#E8DEF8"/>
+  <text x="150" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">Ideal para: Raciocínio &amp; Chat</text>
+  <text x="150" y="200" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Meta · Apache 2.0</text>
+
+  <!-- Card 2: Qwen3.5 72B -->
+  <rect x="280" y="84" width="228" height="128" rx="10" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="280" y="84" width="228" height="10" rx="5" fill="#6750A4"/>
+  <rect x="280" y="89" width="228" height="5" fill="#6750A4"/>
+  <text x="394" y="110" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Qwen3.5 72B</text>
+  <text x="394" y="128" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">72B denso · Precisão completa</text>
+  <text x="394" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">VRAM: 40 GB+</text>
+  <rect x="308" y="158" width="172" height="22" rx="5" fill="#E8DEF8"/>
+  <text x="394" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">Ideal para: Código &amp; Multilíngue</text>
+  <text x="394" y="200" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Alibaba · Apache 2.0</text>
+
+  <!-- Card 3: DeepSeek V3 -->
+  <rect x="524" y="84" width="228" height="128" rx="10" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="524" y="84" width="228" height="10" rx="5" fill="#6750A4"/>
+  <rect x="524" y="89" width="228" height="5" fill="#6750A4"/>
+  <text x="638" y="110" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">DeepSeek V3</text>
+  <text x="638" y="128" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">671B MoE · 37B parâmetros ativos</text>
+  <text x="638" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">VRAM: 48 GB+</text>
+  <rect x="552" y="158" width="172" height="22" rx="5" fill="#E8DEF8"/>
+  <text x="638" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">Ideal para: Matemática &amp; Análise</text>
+  <text x="638" y="200" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#49454F" text-anchor="middle">DeepSeek · Licença MIT</text>
+
+  <!-- Bottom row: 2 cards centered at x=158, 414 — width=228 -->
+
+  <!-- Card 4: Mistral 7B -->
+  <rect x="158" y="228" width="228" height="128" rx="10" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="158" y="228" width="228" height="10" rx="5" fill="#7D5260"/>
+  <rect x="158" y="233" width="228" height="5" fill="#7D5260"/>
+  <text x="272" y="254" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Mistral 7B</text>
+  <text x="272" y="272" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">7B denso · Atenção de janela deslizante</text>
+  <text x="272" y="292" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">VRAM: 8 GB — ~80 tok/s GPU</text>
+  <rect x="186" y="302" width="172" height="22" rx="5" fill="#F3EEF7"/>
+  <text x="272" y="317" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#7D5260" text-anchor="middle">Ideal para: Velocidade &amp; Eficiência</text>
+  <text x="272" y="344" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Mistral AI · Apache 2.0</text>
+
+  <!-- Card 5: Phi-3.5 Mini -->
+  <rect x="414" y="228" width="228" height="128" rx="10" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="414" y="228" width="228" height="10" rx="5" fill="#7D5260"/>
+  <rect x="414" y="233" width="228" height="5" fill="#7D5260"/>
+  <text x="528" y="254" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Phi-3.5 Mini</text>
+  <text x="528" y="272" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">3,8B denso · Design compacto</text>
+  <text x="528" y="292" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">VRAM: 4 GB — ~100 tok/s GPU</text>
+  <rect x="442" y="302" width="172" height="22" rx="5" fill="#F3EEF7"/>
+  <text x="528" y="317" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#7D5260" text-anchor="middle">Ideal para: Dispositivos com VRAM baixo</text>
+  <text x="528" y="344" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Microsoft · Licença MIT</text>
+
+  <text x="400" y="396" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Todos os modelos disponíveis via Ollama · Execute ollama pull [nome-do-modelo] para começar</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

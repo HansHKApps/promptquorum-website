@@ -246,6 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- GPU and RAM requirements to move from 3B to 7B to 13B models as your hardware allows',
             '[Qwen Local Deployment Guide (2026)](/local-llms/qwen-local-deployment-guide-2026) -- Beginner-friendly Qwen3 7B setup via Ollama: one command to running.',
             '[Best Open-Source Alternatives to ChatGPT Plus](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- No-code frontends for first-time local LLM users.',
+            '[Melhores Modelos LLM para Iniciantes (Português)](/pt/local-llms/best-beginner-local-llm-models) — versão em português deste guia',
           ],
         },
         faqSection: {

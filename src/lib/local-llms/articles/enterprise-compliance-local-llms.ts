@@ -162,6 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[On-Prem Air-Gapped Local LLM](/local-llms/on-prem-air-gapped-local-llm) -- Maximum security for classified data.',
             '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) -- Production deployment with compliance controls.',
             '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) -- Compliance verification steps.',
+            '[Conformidade de LLMs Locais para Empresas (Português)](/pt/local-llms/enterprise-compliance-local-llms) — versão em português deste guia',
           ],
         },
         sources: {

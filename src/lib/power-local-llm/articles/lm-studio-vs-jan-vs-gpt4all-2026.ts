@@ -255,6 +255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best Local LLMs in 2026](/local-llms/best-local-llms-2026) — model recommendations to load into any of these apps.',
           '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — pick the right hardware before picking the app.',
           '[Power Local LLM Hub](/power-local-llm) — full guide library.',
+          '[LM Studio vs Jan vs GPT4All 2026 (Português)](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — versão em português deste guia',
         ],
       },
     },

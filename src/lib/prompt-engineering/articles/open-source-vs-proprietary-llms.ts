@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Was ist ein proprietäres LLM?',
           content: [
             '**Proprietäre LLMs sind geschlossene Modelle, auf die nur über API zugegriffen werden kann — der Vendor kontrolliert die Gewichte, Trainingsdaten, Safety-Alignment und alle Updates.** OpenAI (GPT-5.5), Anthropic (Claude Opus 4.8), Google (Gemini 3.1 Pro) und Mistral API sind proprietär. Sie können keine Gewichte herunterladen, Trainingsdaten anzeigen, lokal Inferenz ausführen oder die Modellgewichte direkt anpassen.',
-            '**Die Preisgestaltung ist Pro-Token-API-Billing auf einem Vendor-kontrollierten Server.** GPT-5.5 kostet $5 pro 1 Million Input-Token und $15 pro 1 Million Output-Token. Claude Opus 4.8 kostet $3/$15. Gemini 3.1 Pro kostet $1,25/$2,50 (≤200K Kontext). Sie haben keine Infrastrukturkosten, können aber die monatliche Ausgabe nicht genau vorhersagen — Kosten skalieren mit Nutzung.',
+            '**Die Preisgestaltung ist Pro-Token-API-Billing auf einem Vendor-kontrollierten Server.** GPT-5.5 kostet $5 pro 1 Million Input-Token und $15 pro 1 Million Output-Token. Claude Opus 4.8 kostet $5/$25. Gemini 3.1 Pro kostet $1,25/$2,50 (≤200K Kontext). Sie haben keine Infrastrukturkosten, können aber die monatliche Ausgabe nicht genau vorhersagen — Kosten skalieren mit Nutzung.',
             '**Proprietäre Vendor behalten Kontrolle über Modell-Updates, Verhalten und Alignment.** Wenn OpenAI GPT-5.5 aktualisiert, erhalten Sie automatisch die neue Version. Safety-Alignment, Constitutional AI und Instruction-Following sind Vendor-Verantwortlichkeiten. Für regulierte Branchen kann dies Compliance vereinfachen — der Vendor behält Audit-Trails und veröffentlichte Safety-Praktiken.',
           ],
         },
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Modell', 'Typ', 'Kontextfenster', 'Ungefähre Kosten', 'Am besten für'],
           rows: [
             { 'Modell': 'GPT-5.5', 'Typ': 'Proprietär', 'Kontextfenster': '128K Token', 'Ungefähre Kosten': '$5/$15 pro 1 Million Input/Output-Token', 'Am besten für': 'Tool-Integration, Agents, Multimodal-Reasoning' },
-            { 'Modell': 'Claude Opus 4.8', 'Typ': 'Proprietär', 'Kontextfenster': '200K Token', 'Ungefähre Kosten': '$3/$15 pro 1 Million Input/Output-Token', 'Am besten für': 'Schreiben, Code Review, strukturiertes Reasoning' },
+            { 'Modell': 'Claude Opus 4.8', 'Typ': 'Proprietär', 'Kontextfenster': '1M Token', 'Ungefähre Kosten': '$5/$25 pro 1 Million Input/Output-Token', 'Am besten für': 'Schreiben, Code Review, strukturiertes Reasoning' },
             { 'Modell': 'Gemini 3.1 Pro', 'Typ': 'Proprietär', 'Kontextfenster': '2M Token', 'Ungefähre Kosten': '$1,25/$2,50 pro 1 Million Input/Output-Token (≤200K)', 'Am besten für': 'Langdokument-Forschung, Google-Integration' },
             { 'Modell': 'LLaMA 3.1 70B', 'Typ': 'Open-Weights', 'Kontextfenster': '131K Token', 'Ungefähre Kosten': '~$2/Stunde auf A100 GPU (Self-Hosted)', 'Am besten für': 'Datenschutz, Fine-Tuning, Kosten in großem Maßstab' },
             { 'Modell': 'Mistral Large 2', 'Typ': 'Open-Weights', 'Kontextfenster': '123K Token', 'Ungefähre Kosten': '~$2/Stunde auf A100 GPU (Self-Hosted)', 'Am besten für': 'Europäische Bereitstellungen, wettbewerbsfähiges Reasoning' },
@@ -907,7 +907,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Proprietäre LLMs werden ausschließlich über Vendor-kontrollierte APIs zugegriffen; Modellgewichte werden nie veröffentlicht und können nicht heruntergeladen, geändert oder lokal bereitgestellt werden.** Benutzer zahlen Pro-Token-API-Billing und akzeptieren Vendor-Kontrolle über Modell-Updates, Sicherheitsrichtlinien und Leistungsmerkmale.',
             '**OpenAIs GPT-5.5 bleibt der Reasoning-Leiter.** GPT-5.5 unterstützt 128K Token-Kontextfenster mit Training-Cutoff Oktober 2024. Es zeichnet sich bei Tool-Use, Agent-Workflows, Multimodal-Input (Bilder, Text) und komplexem Multi-Step-Reasoning aus. API-Preisgestaltung: $5 pro 1 Million Input-Token, $15 pro 1 Million Output-Token (März 2026 Raten). GPT-5.5 ist nur API; Gewichte werden nie veröffentlicht. Siehe [wie Kontextfenster Ihr AI-System beeinflussen](/de/prompt-engineering/context-windows-explained-why-ai-forgets), um Trade-Offs zu verstehen.',
-            '**Anthropics Claude Opus 4.8 dominiert Schreib- und Code-Qualitäts-Benchmarks.** Claude unterstützt 200K Token-Kontext — 2× größer als GPT-5.5 — ermöglicht längere Dokumente und erweiterte Gespräche. Training-Datums-Cutoff: Anfang 2025. API-Preisgestaltung: $3 pro 1 Million Input-Token, $15 pro 1 Million Output-Token. Claude bietet kein öffentliches Fine-Tuning. Anthropic priorisiert Interpretierbarkeit und Safety-Alignment gegenüber Benchmark-Maximierung.',
+            '**Anthropics Claude Opus 4.8 dominiert Schreib- und Code-Qualitäts-Benchmarks.** Claude unterstützt 1M Token-Kontext — 8× größer als GPT-5.5 — ermöglicht längere Dokumente und erweiterte Gespräche. Training-Datums-Cutoff: Anfang 2025. API-Preisgestaltung: $3 pro 1 Million Input-Token, $15 pro 1 Million Output-Token. Claude bietet kein öffentliches Fine-Tuning. Anthropic priorisiert Interpretierbarkeit und Safety-Alignment gegenüber Benchmark-Maximierung.',
             '**Googles Gemini 3.1 Pro bietet das größte Kontextfenster: 2M Token.** Dies ermöglicht vollständiges Buch-Längen-Dokument-Verarbeitung, erschöpfende Forschung und erweiterte Multi-Turn-Gespräche. Preisgestaltung: $1,25 pro 1 Million Input-Token (≤200K Kontext), $10 pro 1 Million Output-Token; höhere Raten für >200K Kontext. Gemini integriert sich tief mit Google Workspace, Calendar, Gmail und Web-Suche. Training-Datums-Cutoff: Oktober 2024. Fine-Tuning ist für Gemini-Modelle verfügbar.',
           ],
         },
@@ -2385,7 +2385,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '独自LLMとは何ですか？',
           content: [
             '**独自LLMはAPIを通じてのみアクセスできるクローズドモデルです — ベンダーがウェイト・学習データ・安全アライメント・すべての更新を管理します。** OpenAI（GPT-5.5）・Anthropic（Claude Opus 4.8）・Google（Gemini 3.1 Pro）・Mistral APIは独自モデルです。ウェイトをダウンロードしたり、学習データを確認したり、ローカルで推論を実行したり、モデルウェイトを直接カスタマイズしたりすることはできません。',
-            '**価格はベンダー管理サーバーでのトークン単位のAPI課金です。** GPT-5.5は入力100万トークンあたり$5、出力100万トークンあたり$15です。Claude Opus 4.8は$3/$15。Gemini 3.1 Proは$1.25/$2.50（200K以下のコンテキスト）。インフラコストはかかりませんが、月額コストを正確に予測することはできず、コストは使用量に応じてスケールします。',
+            '**価格はベンダー管理サーバーでのトークン単位のAPI課金です。** GPT-5.5は入力100万トークンあたり$5、出力100万トークンあたり$15です。Claude Opus 4.8は$5/$25。Gemini 3.1 Proは$1.25/$2.50（200K以下のコンテキスト）。インフラコストはかかりませんが、月額コストを正確に予測することはできず、コストは使用量に応じてスケールします。',
             '**独自ベンダーはモデルの更新・挙動・アライメントを管理します。** OpenAIがGPT-5.5を更新すると、新しいバージョンが自動的に適用されます。安全アライメント・Constitutional AI・指示への従い方はベンダーの責任です。規制産業では、これがコンプライアンスを簡素化する場合があります — ベンダーが監査証跡と公開された安全慣行を維持します。',
           ],
         },
@@ -2467,7 +2467,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['モデル', 'タイプ', 'コンテキストウィンドウ', '概算コスト', '最適なユースケース'],
           rows: [
             { 'モデル': 'GPT-5.5', 'タイプ': '独自', 'コンテキストウィンドウ': '128Kトークン', '概算コスト': '入力/出力100万トークンあたり$5/$15', '最適なユースケース': 'ツール統合・エージェント・マルチモーダル推論' },
-            { 'モデル': 'Claude Opus 4.8', 'タイプ': '独自', 'コンテキストウィンドウ': '200Kトークン', '概算コスト': '入力/出力100万トークンあたり$3/$15', '最適なユースケース': 'ライティング・コードレビュー・構造化推論' },
+            { 'モデル': 'Claude Opus 4.8', 'タイプ': '独自', 'コンテキストウィンドウ': '1Mトークン', '概算コスト': '入力/出力100万トークンあたり$5/$25', '最適なユースケース': 'ライティング・コードレビュー・構造化推論' },
             { 'モデル': 'Gemini 3.1 Pro', 'タイプ': '独自', 'コンテキストウィンドウ': '200万トークン', '概算コスト': '入力/出力100万トークンあたり$1.25/$2.50（200K以下）', '最適なユースケース': '長文書調査・Google統合' },
             { 'モデル': 'LLaMA 3.1 70B', 'タイプ': 'オープンウェイト', 'コンテキストウィンドウ': '131Kトークン', '概算コスト': 'A100 GPU（セルフホスト）で約$2/時間', '最適なユースケース': 'プライバシー・ファインチューニング・大規模コスト削減' },
             { 'モデル': 'Mistral Large 2', 'タイプ': 'オープンウェイト', 'コンテキストウィンドウ': '123Kトークン', '概算コスト': 'A100 GPU（セルフホスト）で約$2/時間', '最適なユースケース': 'ヨーロッパ向けデプロイ・競争力のある推論' },
@@ -2492,7 +2492,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**独自LLMはベンダー管理のAPIを通じてのみアクセスできます。モデルウェイトは決してリリースされず、ダウンロード・修正・ローカルデプロイはできません。** ユーザーはトークン単位のAPI課金を支払い、モデルの更新・安全ポリシー・パフォーマンス特性に関するベンダーの管理を受け入れます。',
             '**OpenAIのGPT-5.5は推論のリーダーとして地位を維持しています。** GPT-5.5は2024年10月の学習カットオフで128Kトークンのコンテキストをサポートしています。ツール使用・エージェントワークフロー・マルチモーダル入力（画像・テキスト）・複雑な多段階推論で優れています。APIの価格：入力100万トークンあたり$5、出力100万トークンあたり$15（2026年3月現在）。GPT-5.5はAPIのみです。[コンテキストウィンドウがAIシステムにどう影響するか](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)を参照して、トレードオフを理解してください。',
-            '**AnthropicのClaude Opus 4.8はライティングとコード品質ベンチマークで支配的です。** Claudeは200Kトークンのコンテキストをサポートしており、GPT-5.5の2倍で、より長い文書と長い会話が可能です。学習データのカットオフ：2025年初頭。APIの価格：入力100万トークンあたり$3、出力100万トークンあたり$15。Claudeは公開のファインチューニングを提供していません。Anthropicはベンチマーク最大化よりも解釈可能性と安全アライメントを優先しています。',
+            '**AnthropicのClaude Opus 4.8はライティングとコード品質ベンチマークで支配的です。** Claudeは1Mトークンのコンテキストをサポートしており、GPT-5.5の約8倍で、より長い文書と長い会話が可能です。学習データのカットオフ：2025年初頭。APIの価格：入力100万トークンあたり$5、出力100万トークンあたり$25。Claudeは公開のファインチューニングを提供していません。Anthropicはベンチマーク最大化よりも解釈可能性と安全アライメントを優先しています。',
             '**GoogleのGemini 3.1 Proは最大のコンテキストウィンドウを提供しています：200万トークン。** これにより、本の長さの文書処理・徹底的な調査・長い多ターンの会話が可能になります。価格：入力100万トークンあたり$1.25（200K以下のコンテキスト）、出力100万トークンあたり$10。200K超のコンテキストには高い料金が適用されます。GeminiはGoogle Workspace・Calendar・Gmail・Webサーチと深く統合されています。学習データのカットオフ：2024年10月。GeminiモデルのファインチューニングはGoogleが提供しています。',
           ],
         },
@@ -2936,7 +2936,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '什么是专有LLM？',
           content: [
             '**专有LLM是封闭模型，只能通过API访问——供应商控制权重、训练数据、安全对齐和所有更新。** OpenAI（GPT-5.5）、Anthropic（Claude Opus 4.8）、Google（Gemini 3.1 Pro）和Mistral API都是专有的。您无法下载权重、查看训练数据、在本地运行推理或直接定制模型权重。',
-            '**定价为供应商控制服务器上的按token API计费。** GPT-5.5的输入费用为每百万token 5美元，输出为每百万token 15美元。Claude Opus 4.8为3美元/15美元。Gemini 3.1 Pro为1.25美元/2.50美元（≤200K上下文）。您没有基础设施成本，但无法精确预测每月支出——成本随使用量扩展。',
+            '**定价为供应商控制服务器上的按token API计费。** GPT-5.5的输入费用为每百万token 5美元，输出为每百万token 15美元。Claude Opus 4.8为5美元/25美元。Gemini 3.1 Pro为1.25美元/2.50美元（≤200K上下文）。您没有基础设施成本，但无法精确预测每月支出——成本随使用量扩展。',
             '**专有供应商对模型更新、行为和对齐保持控制。** 当OpenAI更新GPT-5.5时，您会自动获得新版本。安全对齐、Constitutional AI和指令遵循是供应商的责任。对于受监管行业，这可以简化合规——供应商维护审计跟踪和已发布的安全实践。',
           ],
         },
@@ -3018,7 +3018,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['模型', '类型', '上下文窗口', '大致成本', '最适用场景'],
           rows: [
             { '模型': 'GPT-5.5', '类型': '专有', '上下文窗口': '128K个token', '大致成本': '输入/输出每百万token 5/15美元', '最适用场景': '工具集成、智能体、多模态推理' },
-            { '模型': 'Claude Opus 4.8', '类型': '专有', '上下文窗口': '200K个token', '大致成本': '输入/输出每百万token 3/15美元', '最适用场景': '写作、代码审查、结构化推理' },
+            { '模型': 'Claude Opus 4.8', '类型': '专有', '上下文窗口': '100万个token', '大致成本': '输入/输出每百万token 5/25美元', '最适用场景': '写作、代码审查、结构化推理' },
             { '模型': 'Gemini 3.1 Pro', '类型': '专有', '上下文窗口': '200万个token', '大致成本': '输入/输出每百万token 1.25/2.50美元（≤200K）', '最适用场景': '长文档研究、Google集成' },
             { '模型': 'LLaMA 3.1 70B', '类型': '开放权重', '上下文窗口': '131K个token', '大致成本': '在A100 GPU上约每小时2美元（自托管）', '最适用场景': '隐私保护、微调、规模化成本' },
             { '模型': 'Mistral Large 2', '类型': '开放权重', '上下文窗口': '123K个token', '大致成本': '在A100 GPU上约每小时2美元（自托管）', '最适用场景': '欧洲部署、有竞争力的推理' },
@@ -3043,7 +3043,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**专有LLM完全通过供应商控制的API访问；模型权重从不发布，无法下载、修改或在本地部署。** 用户按token API计费，并接受供应商对模型更新、安全策略和性能特性的控制。',
             '**OpenAI的GPT-5.5仍然是推理领域的领导者。** GPT-5.5支持128K token上下文，训练截止日期为2024年10月。它在工具使用、智能体工作流、多模态输入（图像、文本）和复杂多步骤推理方面表现出色。API定价：每百万输入token 5美元，每百万输出token 15美元（2026年3月价格）。GPT-5.5仅限API；权重从不发布。参见[上下文窗口如何影响您的AI系统](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)以了解权衡。',
-            '**Anthropic的Claude Opus 4.8在写作和代码质量基准上占据主导地位。** Claude支持200K token上下文——是GPT-5.5的2倍——能够处理更长的文档和更长的对话。训练数据截止日期：2025年初。API定价：每百万输入token 3美元，每百万输出token 15美元。Claude不提供公开微调。Anthropic将可解释性和安全对齐置于基准最大化之上。',
+            '**Anthropic的Claude Opus 4.8在写作和代码质量基准上占据主导地位。** Claude支持100万token上下文——是GPT-5.5的约8倍——能够处理更长的文档和更长的对话。训练数据截止日期：2025年初。API定价：每百万输入token 3美元，每百万输出token 15美元。Claude不提供公开微调。Anthropic将可解释性和安全对齐置于基准最大化之上。',
             '**Google的Gemini 3.1 Pro提供最大的上下文窗口：200万token。** 这使得处理完整书籍长度的文档、详尽研究和扩展多轮对话成为可能。定价：每百万输入token 1.25美元（≤200K上下文），每百万输出token 10美元；超过200K上下文时价格更高。Gemini与Google Workspace、日历、Gmail和网络搜索深度集成。训练数据截止日期：2024年10月。Gemini模型可进行微调。',
           ],
         },

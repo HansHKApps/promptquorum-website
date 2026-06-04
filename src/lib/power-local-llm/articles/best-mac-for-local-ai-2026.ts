@@ -483,6 +483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Compare Apple Silicon across the whole M-series line](/local-llms/apple-silicon-local-llm-guide-2026) — how M1 through M5 Max compare on unified memory and bandwidth.',
           '[Work out how much unified memory each model size needs](/local-llms/how-much-unified-memory-for-local-llm) — the complete memory-by-model-size method behind the quick formula here.',
           '[Compare Apple Silicon against NVIDIA GPUs for local LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — when a Mac wins on capacity and when an NVIDIA card wins on raw speed.',
+          '[Melhor Mac para IA Local 2026 (Português)](/pt/power-local-llm/best-mac-for-local-ai-2026) — versão em português deste guia',
         ],
       },
     },

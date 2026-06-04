@@ -213,6 +213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Enterprise Compliance with Local LLMs](/local-llms/enterprise-compliance-local-llms)',
             '[Hardware Guide for Compliance-Grade LLM Deployment](/local-llms/local-llm-hardware-guide-2026)',
             '[How Much VRAM for Sensitive Data Processing](/local-llms/how-much-vram-local-llm)',
+            '[LLM Local para Dados Sensíveis (Português)](/pt/local-llms/private-local-llm-sensitive-data) — versão em português deste guia',
           ],
         },
         'sources': {

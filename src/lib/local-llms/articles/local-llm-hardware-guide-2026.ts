@@ -568,6 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best GPU for Local LLM Inference Under $500 (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026) -- RTX 4060 Ti 16 GB vs RX 7900 GRE: ranked by tok/sec per dollar.',
             '[Best AI Workstation Build for Local LLM (2026)](/power-local-llm/best-workstation-build-local-ai-2026) -- Full component list for 70B inference: GPU, CPU, RAM, PSU.',
             '[DeepSeek v3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) -- Minimum VRAM to run DeepSeek v3 full and quantized variants.',
+            '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
           ],
         },
         sources: {

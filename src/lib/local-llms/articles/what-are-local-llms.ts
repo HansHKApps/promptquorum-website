@@ -165,6 +165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) -- RAM-matched model recommendations',
             '[Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis) -- Full comparison of trade-offs',
             'Understanding what local LLMs are is the first step. Understanding how to use them effectively is the second: [prompt engineering guide](https://www.promptquorum.com/prompt-engineering) covers 80 techniques.',
+            '[O Que São LLMs Locais (Português)](/pt/local-llms/what-are-local-llms) — versão em português deste guia',
           ],
         },
       },

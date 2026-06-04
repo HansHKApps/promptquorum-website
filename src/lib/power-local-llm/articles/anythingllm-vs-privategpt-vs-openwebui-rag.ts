@@ -481,6 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RAG Explained: How to Ground AI Answers in Real Data (2026)](/prompt-engineering/rag-explained) — the concept layer for retrieval-augmented generation.',
           '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — sizing GPU and RAM for RAG workloads.',
           '[Power Local LLM Hub](/power-local-llm) — full guide library.',
+          '[AnythingLLM vs PrivateGPT vs OpenWebUI (Português)](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — versão em português deste guia',
         ],
       },
     },

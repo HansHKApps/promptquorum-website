@@ -162,6 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[M5 Pro vs M5 Max LLM Benchmarks 2026](/local-llms/m5-pro-max-llm-benchmarks-2026) -- Tokens/sec and power measurements across every Apple Silicon chip tier.',
             '[Apple Silicon for Local LLMs: Complete Guide](/local-llms/apple-silicon-local-llm-guide-2026) -- M1 to M5 Max: unified memory vs VRAM, Metal GPU, framework selection.',
             '[Apple Silicon M5 for Local LLM 2026](/local-llms/apple-silicon-m5-local-llm) -- If you prefer unified memory architecture, see our deep dive on M5 Pro vs M5 Max performance.',
+            '[Melhores GPUs para LLMs Locais (Português)](/pt/local-llms/best-gpus-for-local-llms) — versão em português deste guia',
           ],
         },
         sources: {

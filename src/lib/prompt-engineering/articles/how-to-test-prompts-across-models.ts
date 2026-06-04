@@ -1321,7 +1321,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { 'Dimension': '**指示の厳格さ**', 'GPT-5.5': '非常に厳格；JSONスキーマ指示を適用', 'Claude Opus 4.8': 'カジュアルな表現に寛容', 'Gemini 3.5 Pro': '中程度；構造化モードを尊重', 'Llama 3.3 70B': '低い；形式的な指示を無視' },
           { 'Dimension': '**JSON信頼性**', 'GPT-5.5': 'スキーマあり~95%有効', 'Claude Opus 4.8': '~90%有効', 'Gemini 3.5 Pro': '~92%有効', 'Llama 3.3 70B': '~70%有効' },
           { 'Dimension': '**リファザル厳格性**', 'GPT-5.5': '中程度', 'Claude Opus 4.8': '高い——境界ケースを拒否', 'Gemini 3.5 Pro': '中程度', 'Llama 3.3 70B': '低い' },
-          { 'Dimension': '**コンテキストウィンドウ**', 'GPT-5.5': '128Kトークン', 'Claude Opus 4.8': '200Kトークン', 'Gemini 3.5 Pro': '1Mトークン', 'Llama 3.3 70B': '4Kトークン（ベース）' },
+          { 'Dimension': '**コンテキストウィンドウ**', 'GPT-5.5': '128Kトークン', 'Claude Opus 4.8': '1Mトークン', 'Gemini 3.5 Pro': '1Mトークン', 'Llama 3.3 70B': '4Kトークン（ベース）' },
           { 'Dimension': '**入力コスト**', 'GPT-5.5': '$5 / 1Mトークン', 'Claude Opus 4.8': '$3 / 1Mトークン', 'Gemini 3.5 Pro': '$3.50 / 1Mトークン', 'Llama 3.3 70B': '$0（ローカル）' },
           { 'Dimension': '**出力コスト**', 'GPT-5.5': '$15 / 1Mトークン', 'Claude Opus 4.8': '$15 / 1Mトークン', 'Gemini 3.5 Pro': '$10.50 / 1Mトークン', 'Llama 3.3 70B': '$0（ローカル）' },
           { 'Dimension': '**推論レイテンシ**', 'GPT-5.5': '~1〜2秒', 'Claude Opus 4.8': '~2〜3秒', 'Gemini 3.5 Pro': '~3〜5秒', 'Llama 3.3 70B': '~10〜30秒（CPU）' },

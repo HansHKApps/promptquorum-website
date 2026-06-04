@@ -307,6 +307,7 @@ schema: {
             '[Prompt Engineering for Local LLMs](/local-llms/prompt-engineering-for-local-models) -- Optimize prompts for models running through either tool.',
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) -- Reasoning technique that improves output from both Ollama and LM Studio.',
             '[Constrained Prompting](/prompt-engineering/constrained-prompting) -- Control output format via the API or chat interface.',
+            '[Ollama vs LM Studio (Português)](/pt/local-llms/ollama-vs-lm-studio) — versão em português deste guia',
           ],
         },
         sources: {

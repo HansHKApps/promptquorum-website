@@ -440,6 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Build a Local Voice Assistant on Your Phone: Whisper + Local LLM](/power-local-llm/voice-assistant-local-mobile-offline) — extends these apps with offline voice input/output.',
           '[Best Local AI App for Low-End PCs](/power-local-llm/best-local-ai-app-low-end-pc) — desktop alternative for users who want a more capable home machine to remote-connect to.',
           '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory-2026) — directory of every local-LLM tool worth knowing across all platforms.',
+          '[Melhores Apps LLM Local para iPhone 2026 (Português)](/pt/power-local-llm/best-local-llm-apps-iphone-2026) — versão em português deste guia',
         ],
       },
     },

@@ -259,6 +259,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Constrained Prompting: Limit Model Outputs](/prompt-engineering/constrained-prompting?lang=en)',
             '[How to Build a Multi-Model Dispatch System](/prompt-engineering/multi-model-dispatch?lang=en)',
             '[Prompt Testing & Evaluation Framework](/prompt-engineering/prompt-testing?lang=en)',
+            '[Cadeia de Raciocínio em Prompts (Português)](/pt/prompt-engineering/chain-of-thought-prompting) — versão em português deste guia',
           ],
         },
         faqSection: {

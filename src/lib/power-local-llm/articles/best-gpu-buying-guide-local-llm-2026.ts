@@ -585,6 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[See which models run on a budget RTX 3060 12 GB](/local-llms/best-budget-gpus-local-llm) — model-by-model speeds for the budget tier, including the 6 GB versus 12 GB split.',
           '[Compare the RTX 5090 and RTX 4090 head-to-head](/local-llms/rtx-5090-vs-rtx-4090-local-llm) — when the RTX 5090 upgrade is worth it and when the RTX 4090 is enough.',
           '[Understand how Q4_K_M quantization sets VRAM cost](/local-llms/llm-quantization-explained) — why Q4_K_M is the default and how quantization changes the VRAM math.',
+          '[Guia de Compra de GPU para LLM Local 2026 (Português)](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — versão em português deste guia',
         ],
       },
     },

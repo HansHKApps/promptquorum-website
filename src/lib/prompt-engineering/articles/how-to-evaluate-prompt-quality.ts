@@ -248,6 +248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — Store test sets alongside prompts with metadata for team reuse',
             '[Best Prompt Optimization Tools for Teams](/prompt-engineering/best-prompt-optimization-tools-teams) — Tools that include test set management and pass rate tracking',
             '[Fundamentals of Prompt Optimization](/prompt-engineering/fundamentals-of-prompt-optimization) — Core techniques to improve accuracy and instruction-following rate',
+            '[Como Avaliar Qualidade de Prompts (Português)](/pt/prompt-engineering/how-to-evaluate-prompt-quality) — versão em português deste guia',
           ],
         },
         faq: {

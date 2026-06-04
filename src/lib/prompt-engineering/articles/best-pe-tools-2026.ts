@@ -317,7 +317,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — When examples help evals vs hurt them',
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — Complex reasoning tasks where eval metrics matter most',
             '[Prompt Chaining](/prompt-engineering/prompt-chaining) — Multi-step workflows benefiting from LangSmith tracing',
-            '[Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting) — Constraint techniques that reduce hallucinations these tools are built to detect'
+            '[Negative Prompting: Tell the AI What NOT to Do](/prompt-engineering/negative-prompting) — Constraint techniques that reduce hallucinations these tools are built to detect',
+            '[Melhores Ferramentas de Prompt Engineering 2026 (Português)](/pt/prompt-engineering/best-pe-tools-2026) — versão em português deste guia',
           ]
         },
         faq: {

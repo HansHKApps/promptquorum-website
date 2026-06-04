@@ -224,6 +224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Is Buying a GPU Worth It vs Paying for AI Subscriptions?](/local-llms/gpu-vs-ai-subscription-roi) — ROI calculator for GPU purchase vs ChatGPT Plus, Claude Pro, and API subscriptions',
             '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm) — Top affordable options: RTX 4060, RTX 3060, RX 6700, ranked by performance-per-dollar',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Comprehensive GPU and RAM recommendations for every model size and budget',
+            '[LLMs Locais vs ChatGPT Plus (Português)](/pt/local-llms/local-llms-vs-chatgpt-plus) — versão em português deste guia',
           ],
         },
         'sources': {

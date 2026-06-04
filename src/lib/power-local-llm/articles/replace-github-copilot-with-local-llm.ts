@@ -300,6 +300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best Local LLMs in 2026](/local-llms/best-local-llms-2026) — full open-model landscape.',
           '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — what GPU to buy.',
           '[Power Local LLM Hub](/power-local-llm) — full guide library.',
+          '[Substitua o GitHub Copilot por LLM Local (Português)](/pt/power-local-llm/replace-github-copilot-with-local-llm) — versão em português deste guia',
         ],
       },
     },

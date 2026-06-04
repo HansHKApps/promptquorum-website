@@ -328,6 +328,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[APE Framework](/prompt-engineering/ape-framework) — reasoning-focused framework (Analyze, Plan, Execute)',
             '[5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — the universal building blocks CO-STAR organizes',
             '[Persona Prompting](/prompt-engineering/persona-prompting) — deep dive into the role/audience dimension CO-STAR touches',
+            '[Framework CO-STAR (Português)](/pt/prompt-engineering/co-star-framework) — versão em português deste guia',
           ],
         },
 

@@ -200,6 +200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLM One-Click Installers](/local-llms/local-llm-one-click-installers) -- Alternative tools to Ollama',
             '[MLX vs Ollama vs llama.cpp on Mac 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Framework comparison for Apple Silicon: speed, setup time, and ecosystem trade-offs.',
             'Ollama is now installed and ready. The next challenge: writing prompts that get good results. Start here: [what is prompt engineering](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering) covers fundamentals in plain language.',
+            '[Como Instalar o Ollama (Português)](/pt/local-llms/how-to-install-ollama) — versão em português deste guia',
           ],
         },
       },
