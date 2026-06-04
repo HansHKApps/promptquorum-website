@@ -1190,6 +1190,66 @@ const HUB_PRESENTATION_PDF: Record<string, string> = {
   pt: 'Baixar cartão de referência de LLMs locais (PDF)',
 }
 
+const HUB_FIGCAPTION_VRAM: Record<string, string> = {
+  en: 'VRAM requirements at Q4_K_M quantization — 8 GB runs 7B models at 50–80 tok/s; 40 GB+ required for 70B models like Llama 4 Scout.',
+  de: 'VRAM-Anforderungen bei Q4_K_M-Quantisierung — 8 GB führt 7B-Modelle mit 50–80 Tok/s aus; 40 GB+ erforderlich für 70B-Modelle wie Llama 4 Scout.',
+  fr: 'Besoins en VRAM avec quantification Q4_K_M — 8 Go pour les modèles 7B à 50–80 tok/s ; 40 Go+ requis pour les modèles 70B comme Llama 4 Scout.',
+  ja: 'Q4_K_M量子化でのVRAM要件 — 8 GBで7Bモデルを50–80 tok/sで実行；70BモデルのLlama 4 Scoutなどには40 GB以上が必要。',
+  zh: 'Q4_K_M量化下的VRAM要求 — 8 GB以50–80 tok/s运行7B模型；70B模型如Llama 4 Scout需要40 GB+。',
+  es: 'Requisitos de VRAM con cuantización Q4_K_M — 8 GB ejecuta modelos 7B a 50–80 tok/s; se requieren 40 GB+ para modelos 70B como Llama 4 Scout.',
+  pt: 'Requisitos de VRAM com quantização Q4_K_M — 8 GB executa modelos 7B a 50–80 tok/s; 40 GB+ necessários para modelos 70B como Llama 4 Scout.',
+}
+
+const HUB_FIGCAPTION_CLOUD: Record<string, string> = {
+  en: 'Local LLMs cost $0/token after hardware purchase; cloud APIs charge $0.15–$60 per 1M tokens with better average quality and zero setup.',
+  de: 'Lokale LLMs kosten $0/Token nach Hardware-Kauf; Cloud-APIs berechnen $0,15–$60 pro 1M Token mit besserer Qualität und ohne Einrichtung.',
+  fr: 'Les LLMs locaux coûtent $0/token après achat du matériel ; les APIs cloud facturent $0,15–$60 pour 1M tokens avec une meilleure qualité moyenne.',
+  ja: 'ローカルLLMはハードウェア購入後$0/トークン；クラウドAPIは1Mトークンあたり$0.15〜$60で平均品質が高く設定不要。',
+  zh: '本地LLM在硬件购买后每token费用为$0；云API每1M token收取$0.15–$60，平均质量更高且无需设置。',
+  es: 'Los LLMs locales cuestan $0/token tras la compra del hardware; las APIs cloud cobran $0,15–$60 por 1M tokens con mejor calidad media y configuración cero.',
+  pt: 'LLMs locais custam $0/token após a compra do hardware; APIs cloud cobram $0,15–$60 por 1M tokens com melhor qualidade média e zero configuração.',
+}
+
+const HUB_FIGCAPTION_MODELS: Record<string, string> = {
+  en: 'Top open-source local models 2026: Llama 4 Scout, Qwen3.5 72B, DeepSeek V3 (workstation) and Mistral 7B, Phi-3.5 Mini (consumer hardware).',
+  de: 'Top Open-Source-Lokalmodelle 2026: Llama 4 Scout, Qwen3.5 72B, DeepSeek V3 (Workstation) und Mistral 7B, Phi-3.5 Mini (Consumer-Hardware).',
+  fr: 'Meilleurs modèles locaux open source 2026 : Llama 4 Scout, Qwen3.5 72B, DeepSeek V3 (workstation) et Mistral 7B, Phi-3.5 Mini (hardware grand public).',
+  ja: '2026年トップオープンソースローカルモデル：Llama 4 Scout、Qwen3.5 72B、DeepSeek V3（ワークステーション）とMistral 7B、Phi-3.5 Mini（コンシューマーハードウェア）。',
+  zh: '2026年顶级开源本地模型：Llama 4 Scout、Qwen3.5 72B、DeepSeek V3（工作站）以及Mistral 7B、Phi-3.5 Mini（消费级硬件）。',
+  es: 'Mejores modelos locales open-source 2026: Llama 4 Scout, Qwen3.5 72B, DeepSeek V3 (workstation) y Mistral 7B, Phi-3.5 Mini (hardware de consumo).',
+  pt: 'Melhores modelos locais de código aberto 2026: Llama 4 Scout, Qwen3.5 72B, DeepSeek V3 (workstation) e Mistral 7B, Phi-3.5 Mini (hardware consumer).',
+}
+
+const HUB_FIGCAPTION_OLLAMA: Record<string, string> = {
+  en: 'Ollama terminal: two commands install and run Llama 3.2 locally — from zero to 60 tokens/sec in under 10 minutes.',
+  de: 'Ollama-Terminal: Zwei Befehle installieren und starten Llama 3.2 lokal — von null auf 60 Token/s in unter 10 Minuten.',
+  fr: 'Terminal Ollama : deux commandes pour installer et exécuter Llama 3.2 localement — de zéro à 60 tokens/sec en moins de 10 minutes.',
+  ja: 'Ollamaターミナル：2つのコマンドでLlama 3.2をローカルにインストール・実行 — 10分以内にゼロから60トークン/秒へ。',
+  zh: 'Ollama终端：两条命令本地安装并运行Llama 3.2 — 10分钟内从零到60 token/s。',
+  es: 'Terminal de Ollama: dos comandos instalan y ejecutan Llama 3.2 localmente — de cero a 60 tokens/seg en menos de 10 minutos.',
+  pt: 'Terminal Ollama: dois comandos instalam e executam o Llama 3.2 localmente — do zero a 60 tokens/s em menos de 10 minutos.',
+}
+
+const HUB_FIGCAPTION_PQ: Record<string, string> = {
+  en: 'PromptQuorum dispatches one prompt simultaneously to your local Ollama model and 25+ cloud APIs — compare results side-by-side in one view.',
+  de: 'PromptQuorum sendet einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-APIs — vergleichen Sie Ergebnisse nebeneinander in einer Ansicht.',
+  fr: 'PromptQuorum envoie un prompt simultanément à votre modèle Ollama local et à 25+ APIs cloud — comparez les résultats côte à côte en une seule vue.',
+  ja: 'PromptQuorumはローカルOllamaモデルと25以上のクラウドAPIに同時にプロンプトを送信 — 1つの画面で結果を並べて比較。',
+  zh: 'PromptQuorum同时将一个提示词发送到您的本地Ollama模型和25+个云API — 在一个视图中并排比较结果。',
+  es: 'PromptQuorum envía un prompt simultáneamente a tu modelo Ollama local y a 25+ APIs cloud — compara los resultados lado a lado en una sola vista.',
+  pt: 'O PromptQuorum envia um prompt simultaneamente ao seu modelo Ollama local e a 25+ APIs cloud — compare os resultados lado a lado em uma única visualização.',
+}
+
+const HUB_BOTTOM_FAQ_TITLE: Record<string, string> = {
+  en: 'Frequently Asked Questions About Local LLMs',
+  de: 'Häufig gestellte Fragen zu lokalen LLMs',
+  fr: 'Questions fréquentes sur les LLMs locaux',
+  ja: 'ローカルLLMに関するよくある質問',
+  zh: '关于本地LLM的常见问题',
+  es: 'Preguntas frecuentes sobre LLMs locales',
+  pt: 'Perguntas frequentes sobre LLMs locais',
+}
+
 const HUB_FAQS_BOTTOM: { q: string; a: string }[] = [
   {
     q: 'What is a local LLM?',
@@ -1412,7 +1472,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
               height={420}
             />
             <figcaption className="mt-2 text-xs text-text-secondary text-center">
-              VRAM requirements at Q4_K_M quantization — 8 GB runs 7B models at 50–80 tok/s; 40 GB+ required for 70B models like Llama 4 Scout.
+              {HUB_FIGCAPTION_VRAM[lang] ?? HUB_FIGCAPTION_VRAM['en']}
             </figcaption>
           </figure>
 

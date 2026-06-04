@@ -57,11 +57,11 @@ function BlogIndexInner({ initialLang }: { initialLang?: import("@/hooks/useLang
         {/* Blog Grid */}
         <div className="grid md:grid-cols-2 gap-6">
           {blogPosts.map(({ key, slug }) => {
-            const post = blogMetadata[key][lang as 'en' | 'de' | 'fr' | 'ja' | 'zh'] || blogMetadata[key].en
+            const post = blogMetadata[key][lang as 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'] || blogMetadata[key].en
             return (
               <Link
                 key={key}
-                href={`/blog/${slug}`}
+                href={lang === 'en' ? `/blog/${slug}` : `/${lang}/blog/${slug}`}
                 className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:border-purple-200 transition-all"
               >
                 <div className="p-6">
