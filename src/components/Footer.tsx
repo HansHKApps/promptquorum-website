@@ -31,6 +31,7 @@ const ACTIVE_LANGS: { code: Language; label: string }[] = [
   { code: 'ja', label: '日本語' },
   { code: 'zh', label: '中文' },
   { code: 'es', label: 'Español' },
+  { code: 'pt', label: 'Português' },
 ]
 
 const FOOTER_COPY: Record<Language, Record<string, string>> = {

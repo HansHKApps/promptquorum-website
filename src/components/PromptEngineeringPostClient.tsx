@@ -1047,12 +1047,12 @@ const POST_UI: Record<string, Record<string, string>> = {
     es: 'Última actualización:',
   },
   ctaText: {
-    en: 'Apply these techniques across 25+ AI models simultaneously with PromptQuorum.',
-    de: 'Wenden Sie diese Techniken gleichzeitig mit 25+ KI-Modellen in PromptQuorum an.',
-    fr: 'Appliquez ces techniques simultanément sur plus de 25 modèles d\'IA avec PromptQuorum.',
-    ja: 'これらのテクニックをPromptQuorumで25以上のAIモデルに同時に適用しましょう。',
-    zh: '使用PromptQuorum将这些技术同时应用于25+个AI模型。',
-    es: 'Aplica estas técnicas en más de 25 modelos de IA simultáneamente con PromptQuorum.',
+    en: 'Apply these techniques with a local LLM or your own API keys — PromptQuorum works with any backend.',
+    de: 'Wenden Sie diese Techniken mit einem lokalen LLM oder eigenen API-Schlüsseln an — PromptQuorum funktioniert mit jedem Backend.',
+    fr: 'Appliquez ces techniques avec un LLM local ou vos propres clés API — PromptQuorum fonctionne avec n\'importe quel backend.',
+    ja: 'これらのテクニックをローカルLLMまたは独自のAPIキーで適用しましょう — PromptQuorumはあらゆるバックエンドに対応します。',
+    zh: '使用本地LLM或您自己的API密钥应用这些技术 — PromptQuorum适用于任何后端。',
+    es: 'Aplica estas técnicas con un LLM local o tus propias claves de API — PromptQuorum funciona con cualquier backend.',
   },
   ctaButton: {
     en: 'Try PromptQuorum free →',

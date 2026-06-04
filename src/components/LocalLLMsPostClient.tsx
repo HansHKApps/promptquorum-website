@@ -51,11 +51,11 @@ const POST_UI: Record<string, Record<string, string>> = {
     zh: '最后更新:',
   },
   ctaText: {
-    en: 'Compare your local LLM against 25+ cloud models simultaneously with PromptQuorum.',
-    de: 'Vergleichen Sie Ihr lokales LLM gleichzeitig mit 25+ Cloud-Modellen in PromptQuorum.',
-    fr: 'Comparez votre LLM local avec 25+ modèles cloud simultanément avec PromptQuorum.',
-    ja: 'PromptQuorumで、ローカルLLMを25以上のクラウドモデルと同時に比較しましょう。',
-    zh: '使用PromptQuorum将您的本地LLM与25+个云模型同时进行比较。',
+    en: 'Run PromptQuorum with a local LLM, your own API keys, or both — you pick the backend.',
+    de: 'Nutzen Sie PromptQuorum mit einem lokalen LLM, eigenen API-Schlüsseln oder beidem — Sie wählen das Backend.',
+    fr: 'Utilisez PromptQuorum avec un LLM local, vos propres clés API, ou les deux — vous choisissez le backend.',
+    ja: 'ローカルLLM、独自のAPIキー、またはその両方でPromptQuorumを使用できます — バックエンドはあなたが選択します。',
+    zh: '使用本地LLM、您自己的API密钥或两者运行PromptQuorum — 您来决定使用哪个后端。',
   },
   ctaButton: {
     en: 'Join the PromptQuorum Waitlist →',

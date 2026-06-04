@@ -288,10 +288,10 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
         {/* Footer CTA */}
         <div className="mt-16 pt-8 border-t border-text-tertiary">
           <h3 className="text-center text-2xl font-bold text-text-primary mb-2">
-            Build your GDPR-compliant AI stack on EU hardware
+            Your backend, your choice — local LLM or API keys
           </h3>
           <p className="text-center text-text-secondary mb-6 max-w-2xl mx-auto">
-            PromptQuorum dispatches between local Qwen and cloud models — keeping personal data on EU infrastructure while preserving access to frontier reasoning when needed.
+            PromptQuorum works with local models and cloud API keys alike. Bring your own Ollama setup or connect any provider's API key — you decide which LLM runs your prompts.
           </p>
           <div className="text-center">
             <a
