@@ -132,8 +132,8 @@ export default async function EsLocalLLMsArticlePage({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: 'LLMs Locales', item: 'https://www.promptquorum.com/pt/local-llms' },
+      { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://www.promptquorum.com' },
+      { '@type': 'ListItem', position: 2, name: 'LLMs locais', item: 'https://www.promptquorum.com/pt/local-llms' },
       { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrl },
     ],
   }
