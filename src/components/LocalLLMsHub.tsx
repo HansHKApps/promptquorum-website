@@ -1748,6 +1748,8 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
                 : lang === 'fr' ? 'Connexe : Guide de Prompt Engineering'
                 : lang === 'ja' ? '関連：プロンプトエンジニアリングガイド'
                 : lang === 'zh' ? '相关推荐：Prompt工程指南'
+                : lang === 'es' ? 'Relacionado: Guía de Prompt Engineering'
+                : lang === 'pt' ? 'Relacionado: Guia de Prompt Engineering'
                 : 'Related: Prompt Engineering Guide'}
             </p>
             <p className="text-sm text-text-secondary leading-relaxed">
@@ -1759,6 +1761,10 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
                 ? 'ローカルモデルを動かすことがステップ1です。そこから優れた出力を得ることがステップ2です。プロンプトエンジニアリングガイドは、温度やコンテキストウィンドウなどの基礎から、Chain-of-Thought・RAG・チームガバナンスなどの高度な手法まで、9つのトピックにわたる80のテクニックを解説しています。すべてのテクニックはローカルモデルで使用できます。'
                 : lang === 'zh'
                 ? '运行本地模型是第一步，从中获取出色输出是第二步。Prompt工程指南涵盖9个主题的80项技术——从温度和上下文窗口等基础知识，到思维链、RAG和团队治理等高级方法。每项技术都适用于本地模型。'
+                : lang === 'es'
+                ? 'Ejecutar un modelo local es el primer paso. Obtener una excelente salida de él es el segundo. La guía de Prompt Engineering cubre 80 técnicas en 9 temas — desde fundamentos como temperatura y ventanas de contexto hasta métodos avanzados como chain-of-thought, RAG y gobernanza de equipos. Cada técnica funciona con modelos locales.'
+                : lang === 'pt'
+                ? 'Executar um modelo local é o primeiro passo. Obter uma ótima saída dele é o segundo. O guia de Prompt Engineering cobre 80 técnicas em 9 tópicos — de fundamentos como temperatura e janelas de contexto a métodos avançados como chain-of-thought, RAG e governança de equipes. Cada técnica funciona com modelos locais.'
                 : 'Running a local model is step one. Getting great output from it is step two. The Prompt Engineering guide covers 80 techniques across 9 topics — from fundamentals like temperature and context windows to advanced methods like chain-of-thought, RAG, and team governance. Every technique works with local models.'}
             </p>
           </div>
