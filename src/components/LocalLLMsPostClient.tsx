@@ -852,7 +852,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         )}
 
         <div id="facts-disclaimer">
-          <FactsDisclaimer />
+          <FactsDisclaimer lang={lang} />
         </div>
 
         {/* Footer CTA */}

@@ -1037,6 +1037,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: '[Hans Kuepper](/about) 著 · PromptQuorumの創設者、マルチモデルAIディスパッチツール · PromptQuorum',
     zh: '[Hans Kuepper](/about) 作者 · PromptQuorum创始人，多模型AI调度工具 · PromptQuorum',
     es: 'Por [Hans Kuepper](/about) · Fundador de PromptQuorum, herramienta de despacho multi-modelo · PromptQuorum',
+    pt: 'Por [Hans Kuepper](/about) · Fundador do PromptQuorum, ferramenta de despacho multi-modelo de IA · PromptQuorum',
   },
   lastUpdated: {
     en: 'Last updated:',
@@ -1045,6 +1046,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: '最終更新:',
     zh: '最后更新:',
     es: 'Última actualización:',
+    pt: 'Última atualização:',
   },
   ctaText: {
     en: 'Apply these techniques with a local LLM or your own API keys — PromptQuorum works with any backend.',
@@ -1053,6 +1055,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: 'これらのテクニックをローカルLLMまたは独自のAPIキーで適用しましょう — PromptQuorumはあらゆるバックエンドに対応します。',
     zh: '使用本地LLM或您自己的API密钥应用这些技术 — PromptQuorum适用于任何后端。',
     es: 'Aplica estas técnicas con un LLM local o tus propias claves de API — PromptQuorum funciona con cualquier backend.',
+    pt: 'Aplique estas técnicas com um LLM local ou suas próprias chaves de API — o PromptQuorum funciona com qualquer backend.',
   },
   ctaButton: {
     en: 'Try PromptQuorum free →',
@@ -1061,6 +1064,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: 'PromptQuorumを無料で試す →',
     zh: '免费试用PromptQuorum →',
     es: 'Prueba PromptQuorum gratis →',
+    pt: 'Experimente o PromptQuorum gratuitamente →',
   },
   backLink: {
     en: '← Back to Prompt Engineering',

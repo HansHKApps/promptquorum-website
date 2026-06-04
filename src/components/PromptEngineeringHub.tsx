@@ -989,6 +989,9 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
               : lang === 'fr' ? 'Explorer les LLMs locaux →'
               : lang === 'ja' ? 'ローカルLLMを見る →'
               : lang === 'zh' ? '探索本地LLMs →'
+              : lang === 'pt' ? 'Explorar LLMs locais →'
+              : lang === 'es' ? 'Explorar LLMs locales →'
+              : lang === 'ar' ? 'استكشف LLMs المحلية ←'
               : 'Explore Local LLMs →'}
           </Link>
         </div>
