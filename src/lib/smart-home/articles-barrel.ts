@@ -13,6 +13,12 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
 
+// Category 2 — Local-First Smart Home
+import { article as a_local_smart_home_complete_guide } from './articles/local-smart-home-complete-guide'
+// Category 3 — Local AI & LLMs in the Smart Home
+import { article as a_local_llm_smart_home_complete_guide } from './articles/local-llm-smart-home-complete-guide'
+
 export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
-  // (empty — no articles authored yet)
+  'local-smart-home-complete-guide':      a_local_smart_home_complete_guide,
+  'local-llm-smart-home-complete-guide':  a_local_llm_smart_home_complete_guide,
 }
