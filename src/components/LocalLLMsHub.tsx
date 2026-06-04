@@ -1575,7 +1575,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
             height={420}
           />
           <figcaption className="mt-2 text-xs text-text-secondary text-center">
-            Local LLMs cost $0/token after hardware purchase; cloud APIs charge $0.15–$60 per 1M tokens with better average quality and zero setup.
+            {HUB_FIGCAPTION_CLOUD[lang] ?? HUB_FIGCAPTION_CLOUD['en']}
           </figcaption>
         </figure>
 
