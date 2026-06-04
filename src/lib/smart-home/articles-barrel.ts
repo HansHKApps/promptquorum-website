@@ -23,6 +23,12 @@ import { article as a_smart_home_for_beginners_where_to_start } from './articles
 import { article as a_smart_home_privacy_risks } from './articles/smart-home-privacy-risks'
 // Category 2 — Local-First Smart Home
 import { article as a_local_smart_home_complete_guide } from './articles/local-smart-home-complete-guide'
+import { article as a_home_assistant_getting_started } from './articles/home-assistant-getting-started'
+import { article as a_why_local_smart_home_beats_cloud } from './articles/why-local-smart-home-beats-cloud'
+import { article as a_best_hardware_for_local_smart_home } from './articles/best-hardware-for-local-smart-home'
+import { article as a_private_smart_home_gdpr } from './articles/private-smart-home-gdpr'
+import { article as a_matter_local_control_guide } from './articles/matter-local-control-guide'
+import { article as a_migrating_from_cloud_to_local_smart_home } from './articles/migrating-from-cloud-to-local-smart-home'
 // Category 3 — Local AI & LLMs in the Smart Home
 import { article as a_local_llm_smart_home_complete_guide } from './articles/local-llm-smart-home-complete-guide'
 import { article as a_home_assistant_ollama_integration } from './articles/home-assistant-ollama-integration'
@@ -43,6 +49,12 @@ export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticl
   'smart-home-privacy-risks':             a_smart_home_privacy_risks,
   // Category 2 — Local-First Smart Home
   'local-smart-home-complete-guide':      a_local_smart_home_complete_guide,
+  'home-assistant-getting-started':       a_home_assistant_getting_started,
+  'why-local-smart-home-beats-cloud':     a_why_local_smart_home_beats_cloud,
+  'best-hardware-for-local-smart-home':   a_best_hardware_for_local_smart_home,
+  'private-smart-home-gdpr':              a_private_smart_home_gdpr,
+  'matter-local-control-guide':           a_matter_local_control_guide,
+  'migrating-from-cloud-to-local-smart-home': a_migrating_from_cloud_to_local_smart_home,
   'local-llm-smart-home-complete-guide':  a_local_llm_smart_home_complete_guide,
   'home-assistant-ollama-integration':    a_home_assistant_ollama_integration,
   'local-voice-assistant-smart-home':     a_local_voice_assistant_smart_home,
