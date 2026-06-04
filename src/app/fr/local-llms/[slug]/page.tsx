@@ -5,6 +5,7 @@ import { llmContent } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
 const SLUG_ACRONYMS: Record<string, string> = {
   llms: 'LLMs',
@@ -87,7 +88,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: pageTitle.length <= 45 ? `${pageTitle} | PromptQuorum` : pageTitle,
     description: metaDesc,
-    alternates: generateAlternates(`/local-llms/${slug}`, lang, hasTranslation, availableLangsForMeta, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates(`/local-llms/${slug}`, lang, hasTranslation, availableLangsForMeta, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: pageTitle,
       description: metaDesc,

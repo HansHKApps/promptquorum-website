@@ -958,6 +958,9 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
                 : lang === 'fr' ? '🔍 Vous utilisez des modèles locaux ?'
                 : lang === 'ja' ? '🔍 ローカルモデルを実行中ですか？'
                 : lang === 'zh' ? '🔍 正在运行本地模型？'
+                : lang === 'pt' ? '🔍 Executando modelos locais?'
+                : lang === 'es' ? '🔍 ¿Ejecutando modelos locales?'
+                : lang === 'ar' ? '🔍 هل تشغّل نماذج محلية؟'
                 : '🔍 Running Local Models?'}
             </p>
             <p className="text-sm text-text-secondary leading-relaxed">
@@ -969,6 +972,12 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
                 ? 'Ollama、LM Studio、またはllama.cppでローカルLLMを実行している場合、このガイドのすべてのテクニックが適用されます。ハードウェアガイド・モデル比較・セットアップ手順についてはローカルLLMセクションをご覧ください。'
                 : lang === 'zh'
                 ? '如果你正在使用Ollama、LM Studio或llama.cpp运行本地LLM，本指南中的每项技术都适用。请查看本地LLMs板块获取硬件指南、模型比较和安装说明。'
+                : lang === 'pt'
+                ? 'Se você está executando LLMs locais com Ollama, LM Studio ou llama.cpp, cada técnica deste guia se aplica. Consulte a seção de LLMs locais para guias de hardware, comparações de modelos e instruções de configuração — depois volte aqui para técnicas de prompting.'
+                : lang === 'es'
+                ? 'Si estás ejecutando LLMs locales con Ollama, LM Studio o llama.cpp, cada técnica de esta guía aplica. Consulta la sección de LLMs locales para guías de hardware, comparaciones de modelos e instrucciones de configuración — luego vuelve aquí para técnicas de prompting.'
+                : lang === 'ar'
+                ? 'إذا كنت تشغّل نماذج LLM المحلية باستخدام Ollama أو LM Studio أو llama.cpp، فإن كل تقنية في هذا الدليل تنطبق عليك. راجع قسم LLMs المحلية للحصول على أدلة الأجهزة ومقارنات النماذج وتعليمات الإعداد — ثم عد إلى هنا لتقنيات Prompting.'
                 : 'If you\'re running local LLMs with Ollama, LM Studio, or llama.cpp, every technique in this guide applies. See the Local LLMs section for hardware guides, model comparisons, and setup instructions — then come back here for prompting techniques.'}
             </p>
           </div>
@@ -980,6 +989,9 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
               : lang === 'fr' ? 'Explorer les LLMs locaux →'
               : lang === 'ja' ? 'ローカルLLMを見る →'
               : lang === 'zh' ? '探索本地LLMs →'
+              : lang === 'pt' ? 'Explorar LLMs locais →'
+              : lang === 'es' ? 'Explorar LLMs locales →'
+              : lang === 'ar' ? 'استكشف LLMs المحلية ←'
               : 'Explore Local LLMs →'}
           </Link>
         </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import Link from 'next/link'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -10,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.aboutMetaTitle,
     description: t.aboutMetaDescription,
-    alternates: generateAlternates('/about', lang, true, undefined, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates('/about', lang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: t.aboutMetaTitle,
       description: t.aboutMetaDescription,

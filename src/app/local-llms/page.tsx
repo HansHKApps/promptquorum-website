@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { LocalLLMsHub } from '@/components/LocalLLMsHub'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { truncateTitle } from '@/lib/utils'
 import { generateLocalLlmsJsonLd } from '@/lib/local-llms/schema'
 import { buildLLMHubData } from '@/lib/local-llms/hub-data'
@@ -16,7 +17,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: truncateTitle(t.localLlmsHubTitle),
     description: t.localLlmsHubDescription,
-    alternates: generateAlternates('/local-llms', selectedLang, true, undefined, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates('/local-llms', selectedLang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: t.localLlmsHubTitle,
       description: t.localLlmsHubDescription,

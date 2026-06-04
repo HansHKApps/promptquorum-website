@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { OptimizationShowcase } from '@/components/OptimizationShowcase'
 import Link from 'next/link'
 
@@ -18,7 +19,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: t.featuresOptimizationMetaTitle,
     description: t.featuresOptimizationMetaDescription,
-    alternates: generateAlternates('/features/optimization', selectedLang, true, undefined, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates('/features/optimization', selectedLang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: t.featuresOptimizationMetaTitle,
       description: t.featuresOptimizationMetaDescription,

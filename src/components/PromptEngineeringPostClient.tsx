@@ -1037,6 +1037,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: '[Hans Kuepper](/about) 著 · PromptQuorumの創設者、マルチモデルAIディスパッチツール · PromptQuorum',
     zh: '[Hans Kuepper](/about) 作者 · PromptQuorum创始人，多模型AI调度工具 · PromptQuorum',
     es: 'Por [Hans Kuepper](/about) · Fundador de PromptQuorum, herramienta de despacho multi-modelo · PromptQuorum',
+    pt: 'Por [Hans Kuepper](/about) · Fundador do PromptQuorum, ferramenta de despacho multi-modelo de IA · PromptQuorum',
   },
   lastUpdated: {
     en: 'Last updated:',
@@ -1045,14 +1046,16 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: '最終更新:',
     zh: '最后更新:',
     es: 'Última actualización:',
+    pt: 'Última atualização:',
   },
   ctaText: {
-    en: 'Apply these techniques across 25+ AI models simultaneously with PromptQuorum.',
-    de: 'Wenden Sie diese Techniken gleichzeitig mit 25+ KI-Modellen in PromptQuorum an.',
-    fr: 'Appliquez ces techniques simultanément sur plus de 25 modèles d\'IA avec PromptQuorum.',
-    ja: 'これらのテクニックをPromptQuorumで25以上のAIモデルに同時に適用しましょう。',
-    zh: '使用PromptQuorum将这些技术同时应用于25+个AI模型。',
-    es: 'Aplica estas técnicas en más de 25 modelos de IA simultáneamente con PromptQuorum.',
+    en: 'Apply these techniques with a local LLM or your own API keys — PromptQuorum works with any backend.',
+    de: 'Wenden Sie diese Techniken mit einem lokalen LLM oder eigenen API-Schlüsseln an — PromptQuorum funktioniert mit jedem Backend.',
+    fr: 'Appliquez ces techniques avec un LLM local ou vos propres clés API — PromptQuorum fonctionne avec n\'importe quel backend.',
+    ja: 'これらのテクニックをローカルLLMまたは独自のAPIキーで適用しましょう — PromptQuorumはあらゆるバックエンドに対応します。',
+    zh: '使用本地LLM或您自己的API密钥应用这些技术 — PromptQuorum适用于任何后端。',
+    es: 'Aplica estas técnicas con un LLM local o tus propias claves de API — PromptQuorum funciona con cualquier backend.',
+    pt: 'Aplique estas técnicas com um LLM local ou suas próprias chaves de API — o PromptQuorum funciona com qualquer backend.',
   },
   ctaButton: {
     en: 'Try PromptQuorum free →',
@@ -1061,6 +1064,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: 'PromptQuorumを無料で試す →',
     zh: '免费试用PromptQuorum →',
     es: 'Prueba PromptQuorum gratis →',
+    pt: 'Experimente o PromptQuorum gratuitamente →',
   },
   backLink: {
     en: '← Back to Prompt Engineering',
@@ -1069,6 +1073,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: '← プロンプトエンジニアリングに戻る',
     zh: '← 返回提示词工程',
     es: '← Volver a Prompt Engineering',
+    pt: '← Voltar ao Prompt Engineering',
   },
   breadcrumbHome: {
     en: 'Home', de: 'Startseite', fr: 'Accueil', ja: 'ホーム', zh: '主页', es: 'Inicio', pt: 'Início',
@@ -1083,18 +1088,27 @@ const POST_UI: Record<string, Record<string, string>> = {
     pt: 'Prompt Engineering',
   },
   levelLabel: {
-    en: 'Level', de: 'Niveau', fr: 'Niveau', ja: 'レベル', zh: '级别', es: 'Nivel',
+    en: 'Level', de: 'Niveau', fr: 'Niveau', ja: 'レベル', zh: '级别', es: 'Nivel', pt: 'Nível',
   },
   audienceLabel: {
-    en: 'Audience', de: 'Zielgruppe', fr: 'Public', ja: '対象読者', zh: '目标读者', es: 'Audiencia',
+    en: 'Audience', de: 'Zielgruppe', fr: 'Public', ja: '対象読者', zh: '目标读者', es: 'Audiencia', pt: 'Público',
+  },
+  quickFactsLabel: {
+    en: 'Quick Facts',
+    de: 'Schnellfakten',
+    fr: 'Faits rapides',
+    ja: 'クイックファクト',
+    zh: '快速事实',
+    es: 'Datos rápidos',
+    pt: 'Fatos rápidos',
   },
 }
 
 const LEVEL_DISPLAY: Record<string, Record<string, string>> = {
-  Beginner: { en: 'Beginner', de: 'Einsteiger', fr: 'Débutant', ja: '初級', zh: '初级', es: 'Principiante' },
-  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio' },
-  Advanced: { en: 'Advanced', de: 'Experte', fr: 'Avancé', ja: '上級', zh: '高级', es: 'Avanzado' },
-  Technical: { en: 'Technical', de: 'Technisch', fr: 'Technique', ja: '技術', zh: '技术', es: 'Técnico' },
+  Beginner: { en: 'Beginner', de: 'Einsteiger', fr: 'Débutant', ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante' },
+  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio', pt: 'Intermediário' },
+  Advanced: { en: 'Advanced', de: 'Experte', fr: 'Avancé', ja: '上級', zh: '高级', es: 'Avanzado', pt: 'Avançado' },
+  Technical: { en: 'Technical', de: 'Technisch', fr: 'Technique', ja: '技術', zh: '技术', es: 'Técnico', pt: 'Técnico' },
 }
 
 // Map language codes to their locale strings for date formatting
@@ -1105,6 +1119,7 @@ const LANGUAGE_TO_LOCALE: Record<string, string> = {
   fr: 'fr-FR',
   ja: 'ja-JP',
   zh: 'zh-CN',
+  pt: 'pt-BR',
 }
 
 const THEME_COLORS: Record<string, { dot: string; badge: string; label: string }> = {
@@ -1432,7 +1447,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         {/* Quick Facts block — numeric highlights, rendered between Key Takeaways and TOC (Rule 27) */}
         {(article as any).quickFacts && (article as any).quickFacts.length > 0 && (
           <div className="border border-primary/20 bg-primary/3 rounded-xl p-5 my-6">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">⚡ Quick Facts</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">⚡ {POST_UI.quickFactsLabel[lang] ?? POST_UI.quickFactsLabel['en']}</p>
             <ul className="space-y-1.5">
               {((article as any).quickFacts as string[]).map((fact: string, i: number) => (
                 <li key={i} className="flex gap-3 text-sm text-text-secondary">

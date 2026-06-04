@@ -451,7 +451,7 @@ schema: {
       freshness_tier: 'annual',
       theme: 'GPU Buying Guides',
       title: 'GPUs usadas para LLMs locais: As melhores opções por preço',
-      seoTitle: 'GPUs usadas para LLMs locais: RTX 3060, 3080, 4090',
+      seoTitle: 'Melhores GPUs usadas para LLMs locais: RTX 3060, 3080, 4090 — Guia de compra',
       intro: '**As GPUs usadas oferecem uma economia de 30-50% em relação às novas, com risco mínimo de desempenho em modelos de confiabilidade comprovada como a RTX 3060 12GB e a RTX 3080.** Em abril de 2026, o mercado de usados está repleto de placas ex-mineração e ex-gaming a preços estáveis. Comprar usado faz sentido para seu primeiro setup ou ao atualizar; placas de mineração são arriscadas a menos que você possa testá-las in loco.',
       metaDescription: 'Melhores GPUs usadas para LLMs locais: RTX 3060, 3080, 3090, 4090. Onde comprar, avaliação de riscos e como fazer benchmarks.',
       publishDate: '2026-04-05',
@@ -461,47 +461,197 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'GPU usada',
       toc: [
-        { label: 'Principais conclusões', anchor: '#tldr' },
-        { label: 'Comparação de custo: RTX 3060 vs 3080 vs 4090', anchor: '#cost-comparison' },
-        { label: 'Onde comprar GPUs usadas', anchor: '#where-to-buy' },
-        { label: 'GPUs de mineração: riscos', anchor: '#mining-gpu-risks' },
-        { label: 'Como fazer benchmark antes de comprar', anchor: '#benchmark' },
+        { label: 'Resumo', anchor: '#tldr' },
+        { label: 'Quais GPUs usadas são mais seguras para comprar?', anchor: '#safest-cards' },
+        { label: 'Quanto pagar por GPUs usadas?', anchor: '#pricing' },
+        { label: 'Placas de mineração vs. gaming: qual a diferença?', anchor: '#mining-vs-gaming' },
+        { label: 'Onde comprar GPUs usadas?', anchor: '#where-to-buy' },
+        { label: 'Como testar uma GPU usada antes de comprar?', anchor: '#testing' },
+        { label: 'Erros comuns ao comprar GPUs usadas', anchor: '#mistakes' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
       ],
       sections: {
         tldr: {
-          id: 'tldr',
+          id: 'key-takeaways',
           isTldr: true,
           items: [
-            '**RTX 3060 12GB** (R$ 1.200-1.500 usada): melhor para começar — 12 GB de VRAM, baixo risco, abundante no mercado de usados.',
-            '**RTX 3080 10GB** (R$ 1.800-2.200 usada): 10 GB de VRAM, boa velocidade. Opção sólida para modelos 7B-13B.',
-            '**RTX 4090 24GB** (R$ 6.000-8.000 usada): premium — execute modelos 32B+ com qualidade máxima.',
-            '**GPUs de mineração**: evite a menos que possa testar in loco — risco de falha de 10-20% vs 2-3% para placas de gaming.',
-            '**Economia típica**: 30-50% vs nova. Comprar de vendedores particulares no Mercado Livre ou OLX geralmente oferece o melhor preço.',
+            'RTX 3060 12GB usada (R$ 1.200-1.500) e RTX 3080 10GB usada (R$ 1.800-2.200) são as apostas mais seguras — alto volume no mercado, preços estáveis, saúde de VRAM comprovada.',
+            'Placas de mineração são 30% mais baratas, mas apresentam risco de degradação de VRAM de 10-20%. Compre apenas se puder fazer teste de estresse in loco por 2 horas ou mais.',
+            'Placas de gaming (vendas de rigs ex-gaming) são mais seguras que as de mineração. O gaming casual não estressa o VRAM como a mineração 24/7.',
+            'Mercado Livre e OLX com proteção ao comprador, grupos do Facebook com teste in loco e Craigslist (somente local, teste pessoalmente) são suas melhores fontes.',
+            'Antes de fechar a compra, execute o MemtestG80 (teste de memória de GPU) por 1-2 horas. VRAM com defeito é detectada imediatamente.',
+            'Desconte 5-10% no preço de placas com histórico desconhecido. Se uma oferta parece boa demais, a placa provavelmente tem problemas.',
+            'Evite placas ex-servidor/data center (RTX A100, L40S) a menos que tenha certeza do estado — funcionam em temperaturas altas e podem ter danos por limitação térmica.',
+          ],
+        },
+        'safest-cards': {
+          id: 'safest-cards',
+          title: 'Quais GPUs usadas são mais seguras para comprar?',
+          items: [
+            '**RTX 3060 12GB** (R$ 1.200-1.500): Grande volume no mercado de usados. VRAM confiável. Arquitetura mais antiga significa menos falhas. Escolha segura.',
+            '**RTX 3080 10GB** (R$ 1.800-2.200): Placa de gaming popular. Histórico sólido de VRAM. 10GB é utilizável (apertado para alguns modelos 70B). Segura.',
+            '**RTX 4090 24GB** (R$ 7.000-8.000): Preço premium, mas alto volume de revenda = dados sobre taxas de falha. Falhas de VRAM raras. Segura se bem precificada.',
+            '**RTX 3090 24GB** (R$ 4.000-5.000): High-end, cara, proporcionalmente menos falhas. Boa opção se encontrar uma abaixo de R$ 4.500.',
+          ],
+        },
+        'pricing': {
+          id: 'pricing',
+          title: 'Quanto pagar por GPUs usadas?',
+          content: [
+            '**Referência: MSRP de varejo vs.** mercado de usados (abril de 2026).',
+          ],
+          items: [
+            'RTX 3060 12GB: MSRP R$ 1.800 → Usada R$ 1.200-1.500 (17-33% de desconto)',
+            'RTX 3080 10GB: MSRP R$ 3.500 → Usada R$ 1.800-2.200 (37-49% de desconto)',
+            'RTX 4090 24GB: MSRP R$ 9.000 → Usada R$ 7.000-8.000 (11-22% de desconto, desconto menor por ser mais recente)',
+          ],
+        },
+        'mining-vs-gaming': {
+          id: 'mining-vs-gaming',
+          title: 'Placas de mineração vs. gaming: qual a diferença?',
+          content: [
+            '**Placas de mineração** funcionaram 24/7 por 1-3 anos com carga computacional máxima. O estresse por ciclos térmicos é brutal para o VRAM. Há 10-20% de chance de erros de VRAM hoje em dia.',
+            '**Placas de gaming** funcionaram de forma intermitente (4-8 h/dia) com carga variável. Menos estresse. O VRAM dura mais. Mais seguras.',
+            'Visualmente: placas de mineração costumam mostrar sinais de uso intenso (poeira, danos térmicos, etiquetas descascadas). Placas de gaming têm aparência mais limpa.',
+            'Preço: placas de mineração são R$ 300-600 mais baratas pelo mesmo modelo. Não vale o risco a menos que você as teste in loco.',
+          ],
+        },
+        'where-to-buy': {
+          id: 'where-to-buy',
+          title: 'Onde comprar GPUs usadas?',
+          items: [
+            '**Mercado Livre**: Melhor proteção ao comprador. Avaliações do vendedor visíveis. Frete incluso. Possibilidade de devolução se chegar com defeito (DOA). Leva 1-2 semanas.',
+            '**OLX / grupos do Facebook**: Vendas locais, teste in loco antes do pagamento. Sem risco de frete. Disponibilidade imediata. Maior oferta que outras plataformas.',
+            '**Hardware.com.br / fóruns**: Preços mais baixos. Comunidade técnica. Risco moderado de golpes. Use apenas se puder verificar o histórico do vendedor.',
+            '**Lojas de informática locais com usados**: Costumam ter estoque de segunda mão. Você pode perguntar sobre a política de devolução. Preços 10-15% mais altos que o Mercado Livre, mas maior confiança.',
+          ],
+        },
+        'testing': {
+          id: 'testing',
+          title: 'Como testar uma GPU usada antes de comprar?',
+          content: [
+            '**1. Inspeção visual: verifique danos físicos, componentes queimados e capacitores com vazamento.**',
+            '2. Instale em um sistema de teste: inicialize o sistema operacional, execute o GPU-Z. Verifique as velocidades de clock (devem corresponder às especificações) e as leituras de temperatura.',
+            '3. Execute o MemtestG80 (gratuito): aloque 90% do VRAM e execute por 1-2 horas. Memória com defeito aparece como erros.',
+            '4. Execute o FurMark (teste de estresse): 30 minutos com carga máxima. A placa não deve travar nem fazer throttling grave.',
+            '5. Verifique a largura de banda do VRAM (CrystalDiskInfo ou GPU-Z): compare com as especificações. Significativamente inferior = potencial degradação.',
+            'Se comprar no Mercado Livre ou OLX, exija que o vendedor realize esse teste e forneça capturas de tela como evidência.',
+          ],
+        },
+        'mistakes': {
+          id: 'mistakes',
+          title: 'Erros comuns ao comprar GPUs usadas',
+          items: [
+            'Comprar uma RTX 3080 de mineração com "R$ 1.000 de desconto do MSRP" sem testá-la — o VRAM costuma estar degradado e mostra erros sob carga.',
+            'Assumir que "como nova" equivale a VRAM saudável — aparência estética não equivale à saúde dos componentes. Faça sempre um teste de estresse.',
+            'Pagar o frete de uma GPU sem proteção ao comprador (fora do Mercado Livre) — se chegar com defeito, você não tem recurso.',
           ],
         },
         faqSection: {
           id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
-            { q: 'Qual é a melhor GPU usada para LLMs locais em 2026?', a: 'RTX 3060 12GB para iniciantes (~R$ 1.200-1.500): 12 GB de VRAM, baixo risco, amplo suporte no Ollama. RTX 3090 24GB para usuários avançados que precisam executar modelos 32B. Evite GPUs de mineração sem teste prévio.' },
-            { q: 'As GPUs usadas são confiáveis para LLMs locais?', a: 'Placas de gaming usadas têm histórico de confiabilidade alto. GPUs de mineração têm risco de falha de 10-20% devido ao uso de 24/7 em alta carga. Sempre teste com um benchmark de estresse (como FurMark) antes de usar para LLMs.' },
-            { q: 'Onde comprar GPUs usadas no Brasil?', a: 'Mercado Livre e OLX têm os maiores volumes. Grupos do Facebook (Hardware Usado Brasil) e fóruns como Hardware.com.br também têm listagens. Prefira vendedores com avaliações positivas e solicite fotos do `nvidia-smi` mostrando temperatura e uso normal.' },
-            { q: 'Devo comprar RTX 3090 ou RTX 4090 usada?', a: 'RTX 4090 se puder pagar (~R$ 7.000-8.000 usada). Melhor eficiência energética, arquitetura mais recente. A RTX 3090 (~R$ 4.000-5.000 usada) ainda é capaz para modelos 32B, mas a diferença de preço diminuiu em 2026.' },
+            { q: 'Vale a pena comprar uma GPU de mineração usada com grande desconto?', a: 'Somente se puder testá-la in loco por 2 horas ou mais com o MemtestG80. Caso contrário, não. O desconto (R$ 300-600) não compensa o risco de falha de 20%.' },
+            { q: 'Como posso saber se uma GPU usada foi uma placa de mineração?', a: 'Em muitos casos não é possível determinar apenas pelas fotos. Pergunte ao vendedor. Procure danos térmicos (descoloração perto dos capacitores) ou poeira excessiva. Se foi usada para mineração, peça o endereço da pool de mineração.' },
+            { q: 'Qual é a geração RTX mais antiga que devo comprar usada?', a: 'A série RTX 2000 (2060, 2080) é muito antiga (2018). Compre apenas por menos de R$ 400. A série RTX 3000 (2020-2021) é o ponto de partida seguro.' },
+            { q: 'Devo comprar uma RTX 4070 ou RTX 3080 usada?', a: 'A RTX 3080 (10GB, R$ 1.800-2.200 usada) oferece melhor custo-benefício para LLMs locais do que a 4070 (12GB, R$ 2.500-3.000 usada). A 4070 é mais recente, mas apenas 15% mais rápida.' },
+            { q: 'Posso devolver uma GPU usada no Mercado Livre se ela falhar após 1 mês?', a: 'Depende da política do vendedor. A maioria permite devoluções em 14 dias. Após 30 dias, você fica por sua conta a menos que haja um defeito de fabricação (raro em placas usadas).' },
+            { q: 'Vale a pena pagar 20% a mais por uma GPU com proteção de devolução?', a: 'Sim. Custa cerca de R$ 150-250 em uma GPU de R$ 1.500, mas evita perder R$ 1.500 se a placa falhar após a compra.' },
+            { q: 'Devo comprar uma RTX 3090 ou RTX 4090 usada?', a: 'RTX 4090 se puder pagar (R$ 7.000-8.000 usada). Melhor eficiência energética, arquitetura mais recente. A RTX 3090 (R$ 4.000-5.000 usada) ainda é capaz para modelos 32B, mas a diferença de preço diminuiu em 2026.' },
+          ],
+        },
+        'relatedReading': {
+          id: 'related-reading',
+          title: 'Leituras relacionadas',
+          items: [
+            '[Melhores GPUs econômicas para LLMs locais](/pt/local-llms/best-budget-gpus-local-llm)',
+            '[RTX 5090 vs RTX 4090](/pt/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
+            '[Melhores GPUs para LLMs locais](/pt/local-llms/best-gpus-for-local-llms)',
+            '[Guia de hardware para LLMs locais 2026](/pt/local-llms/local-llm-hardware-guide-2026)',
+          ],
+        },
+        'sources': {
+          id: 'sources',
+          title: 'Fontes',
+          items: [
+            'Histórico de preços de GPUs no Mercado Livre e dados do mercado (abril de 2026)',
+            'Documentação do MemtestG80 e ferramentas de teste de estresse de GPU para validação de VRAM',
+            'Banco de dados de especificações GPU-Z para valores de referência térmicos e de velocidade de clock',
           ],
         },
       },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'GPUs usadas para LLMs locais: As melhores opções por preço',
+        headline: 'Melhores GPUs usadas para LLMs locais: Guia de compra RTX 3060, 3080, 4090',
         description: 'Melhores GPUs usadas para LLMs locais: RTX 3060, 3080, 3090, 4090. Onde comprar, avaliação de riscos e como fazer benchmarks.',
         url: 'https://www.promptquorum.com/pt/local-llms/used-gpus-for-local-llms',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-05',
+        dateModified: '2026-04-19',
         author: { '@type': 'Person', name: 'Hans Kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'GPUs usadas' },
+          { '@type': 'Thing', name: 'Guia de compra de GPU' },
+          { '@type': 'Thing', name: 'Teste de GPU' },
+          { '@type': 'Thing', name: 'Inferência local de LLM' },
+        ],
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        educationalLevel: 'Intermediate',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        url: 'https://www.promptquorum.com/pt/local-llms/used-gpus-for-local-llms',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Vale a pena comprar uma GPU de mineração usada com grande desconto?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Somente se puder testá-la in loco por 2 horas ou mais com o MemtestG80. Caso contrário, não. O desconto (R$ 300-600) não compensa o risco de falha de 20%.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Como posso saber se uma GPU usada foi uma placa de mineração?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Em muitos casos não é possível determinar apenas pelas fotos. Pergunte ao vendedor. Procure danos térmicos (descoloração perto dos capacitores) ou poeira excessiva. Se foi usada para mineração, peça o endereço da pool de mineração.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual é a geração RTX mais antiga que devo comprar usada?',
+            acceptedAnswer: { '@type': 'Answer', text: 'A série RTX 2000 (2060, 2080) é muito antiga (2018). Compre apenas por menos de R$ 400. A série RTX 3000 (2020-2021) é o ponto de partida seguro.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Devo comprar uma RTX 4070 ou RTX 3080 usada?',
+            acceptedAnswer: { '@type': 'Answer', text: 'A RTX 3080 (10GB, R$ 1.800-2.200 usada) oferece melhor custo-benefício para LLMs locais do que a 4070 (12GB, R$ 2.500-3.000 usada). A 4070 é mais recente, mas apenas 15% mais rápida.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Posso devolver uma GPU usada no Mercado Livre se ela falhar após 1 mês?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Depende da política do vendedor. A maioria permite devoluções em 14 dias. Após 30 dias, você fica por sua conta a menos que haja um defeito de fabricação (raro em placas usadas).' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Vale a pena pagar 20% a mais por uma GPU com proteção de devolução?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Sim. Custa cerca de R$ 150-250 em uma GPU de R$ 1.500, mas evita perder R$ 1.500 se a placa falhar após a compra.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Devo comprar uma RTX 3090 ou RTX 4090 usada?',
+            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090 se puder pagar (R$ 7.000-8.000 usada). Melhor eficiência energética, arquitetura mais recente. A RTX 3090 (R$ 4.000-5.000 usada) ainda é capaz para modelos 32B, mas a diferença de preço diminuiu em 2026.' }
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        url: 'https://www.promptquorum.com/pt/local-llms/used-gpus-for-local-llms',
+        name: 'GPUs usadas para LLMs locais: Comparação de custos e confiabilidade',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Comparação de custos: RTX 3060 (R$ 1.200-1.500 usada) vs RTX 3080 (R$ 1.800-2.200) vs RTX 4090 (R$ 7.000-8.000) — economia de 30-50% vs nova.' },
+          { '@type': 'ListItem', position: 2, name: 'Dados de confiabilidade: RTX 3060 12GB e RTX 3080 10GB têm alto volume de revenda e saúde de VRAM comprovada. Placas de mineração apresentam risco de falha de 10-20%.' },
+          { '@type': 'ListItem', position: 3, name: 'Modelos de GPU usada recomendados: RTX 3060 12GB (a mais segura para começar), RTX 3080 10GB (VRAM sólida), RTX 4090 24GB (premium, falhas raras).' },
+        ],
       },
     },
     de: {

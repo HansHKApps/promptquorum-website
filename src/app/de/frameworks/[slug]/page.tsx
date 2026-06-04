@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { FRAMEWORKS, FRAMEWORK_SLUGS, getFramework } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
 const COMPLEXITY_COLOR: Record<string, string> = {
   Low: 'text-green-400 bg-green-400/10 border-green-400/30',
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: fwTitle,
     description: fwDesc,
-    alternates: generateAlternates(`/frameworks/${fw.slug}`, lang, true, undefined, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates(`/frameworks/${fw.slug}`, lang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       type: 'article',
       url: `https://www.promptquorum.com/de/frameworks/${fw.slug}`,

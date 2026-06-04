@@ -7,6 +7,7 @@ import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { themes } from '@/lib/prompt-engineering/themes'
 import { LEARNING_PATHS, TRENDING_TERMS_2026 } from '@/lib/prompt-engineering/learningPaths'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { toOutputLocale } from '@/lib/i18n/constants'
 import { getPEGeoEntities, type Language } from '@/lib/geo-schema'
 import { truncateTitle } from '@/lib/utils'
@@ -155,7 +156,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     ...(isGlossary && {
       keywords: ['prompt engineering glossary', 'AI terms', 'LLM glossary', 'Chain-of-Thought', 'RAG definition', 'prompt injection', 'function calling', 'few-shot prompting', 'temperature AI', 'context window'],
     }),
-    alternates: generateAlternates(canonicalPath, selectedLang, hasTranslation, availableLangsForMeta, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates(canonicalPath, selectedLang, hasTranslation, availableLangsForMeta, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: isGlossary ? 'Prompt Engineering Glossary: 100 Essential Terms (2026)' : ogTitle,
       description: isGlossary ? 'Essential glossary: 100 prompt engineering terms with definitions, real-world examples, and 400+ citations. Core concepts, agents, safety, RAG, evaluation. Free beta.' : ogDesc,

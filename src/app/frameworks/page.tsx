@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { translations } from '@/translations'
 import { FRAMEWORKS } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const sp = await searchParams
@@ -14,7 +15,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: t.frameworksMetaTitle,
     description: t.frameworksMetaDescription,
-    alternates: generateAlternates('/frameworks', selectedLang, true, undefined, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates('/frameworks', selectedLang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: t.frameworksMetaTitle,
       description: t.frameworksMetaDescription,
