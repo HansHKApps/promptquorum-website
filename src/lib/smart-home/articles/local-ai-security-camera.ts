@@ -190,4 +190,1138 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'Lokale KI-Sicherheitskameras mit Frigate (2026)',
+    seoTitle: 'Frigate lokale KI-Kameras 2026: Private Erkennung',
+    intro:
+      'Frigate führt lokale KI-Objekt- und Personenerkennung auf Ihren Kamera-Feeds aus – ohne Cloud und ohne Abonnement – und integriert sich direkt in Home Assistant. Dieser Leitfaden behandelt das Datenschutzproblem von Cloud-Kameras, was Frigate tut, die Hardware, die die Erkennung beschleunigt (eine Coral-TPU oder GPU), die Home-Assistant-Integration, Benachrichtigungen und wie sich die Kosten zu Abo-Kameras verhalten.',
+    metaDescription:
+      'Private KI-Sicherheitskameras mit Frigate betreiben: lokale Objekt- und Personenerkennung, ohne Cloud, ohne Abonnement. Hardware, Home-Assistant-Setup und Kosten vs Cloud.',
+    twitterDescription:
+      'Frigate gibt Ihnen private KI-Sicherheitskameras: lokale Personen-/Objekterkennung, ohne Cloud, ohne Abonnement, integriert mit Home Assistant.',
+    readTime: '9 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    audience: 'Home-Assistant-Nutzer, die private KI-Kameraerkennung aufbauen',
+    primaryTerm: 'Frigate local AI camera',
+    targetKeywords: [
+      'frigate lokale ki-kamera home assistant',
+      'frigate home assistant',
+      'lokale ki-sicherheitskamera',
+      'private sicherheitskamera ohne cloud',
+      'frigate coral tpu',
+    ],
+    leadAnswerBlock:
+      '**Frigate ist ein quelloffener lokaler NVR, der KI-Objekt- und Personenerkennung auf Ihren Kamera-Feeds vollständig auf Ihrer eigenen Hardware ausführt – ohne Cloud, ohne Abonnement – und sich in Home Assistant integriert.** Eine Coral-TPU oder GPU beschleunigt die Erkennung, sodass sie in Echtzeit bleibt.',
+    quickAnswerTop: {
+      de: {
+        question: 'Was ist Frigate und wie liefert es private KI-Kameras?',
+        answer:
+          'Frigate ist quelloffene Netzwerk-Videorekorder-Software, die KI-Objekt- und Personenerkennung lokal auf RTSP-Kamerastreams durchführt – ohne Cloud und ohne Abonnement. Sie integriert sich für Benachrichtigungen und Automatisierungen in Home Assistant. Eine Google-Coral-TPU oder eine GPU übernimmt die Erkennung effizient, sodass mehrere Kameras in Echtzeit laufen.',
+        bullets: [
+          'Lokale KI-Erkennung auf Ihrer eigenen Hardware – ohne Cloud',
+          'Kein Abonnement; einmalige Hardwarekosten',
+          'Funktioniert mit Standard-RTSP-Kameras',
+          'Integriert sich für Alarme und Automatisierungen in Home Assistant',
+          'Eine Coral-TPU oder GPU hält die Erkennung in Echtzeit',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Kurzfassung', anchor: 'tldr' },
+      { label: 'Das Cloud-Kamera-Problem', anchor: 'cloud-problem' },
+      { label: 'Was Frigate tut', anchor: 'what-frigate-does' },
+      { label: 'Hardware', anchor: 'hardware' },
+      { label: 'Home-Assistant-Integration', anchor: 'ha-integration' },
+      { label: 'Benachrichtigungen und Automatisierungen', anchor: 'notifications' },
+      { label: 'Kosten vs Cloud-Kameras', anchor: 'cost' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Frigate führt lokale KI-Personen- und Objekterkennung auf Ihren Kamera-Feeds ohne Cloud und ohne Abonnement aus und integriert sich in Home Assistant.' },
+      { type: 'plain-terms', content: 'Die meisten smarten Kameras senden Video an eine Firmen-Cloud und verlangen eine monatliche Gebühr für KI-Erkennung und Verlauf. Frigate übernimmt die KI-Erkennung stattdessen auf Ihrer eigenen Hardware, sodass die Aufnahmen zu Hause bleiben und es kein Abonnement gibt. Es funktioniert mit Standardkameras und bindet sich in Home Assistant ein.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Kurzfassung',
+        isTldr: true,
+        items: [
+          'Frigate ist quelloffene lokale NVR-Software mit eingebauter KI-Objekt-/Personenerkennung',
+          'Die Erkennung läuft auf Ihrer Hardware – Aufnahmen verlassen das Haus nie, kein Abonnement',
+          'Funktioniert mit Standard-RTSP-Kameras (kabelgebundene PoE-Kameras sind am zuverlässigsten)',
+          'Eine Google-Coral-TPU oder eine GPU beschleunigt die Erkennung, sodass viele Kameras in Echtzeit laufen',
+          'Integriert sich für Benachrichtigungen, Schnappschüsse und Automatisierungen in Home Assistant',
+          'Einmalige Hardwarekosten ersetzen wiederkehrende Cloud-Kamera-Gebühren',
+        ],
+      },
+      cloudProblem: {
+        id: 'cloud-problem',
+        title: 'Das Datenschutzproblem von Cloud-Kameras',
+        content:
+          '**Cloud-Kameras laden Ihre Aufnahmen zu einem Hersteller hoch und sperren KI-Erkennung und Videoverlauf oft hinter einem Abonnement.** Das bedeutet, Ihr Heimvideo liegt auf fremden Servern und hört auf zu funktionieren, wenn Sie kündigen.',
+        items: [
+          '**Aufnahmen extern:** Aufzeichnungen liegen in einem Hersteller-Rechenzentrum, Datenlecks und Richtlinienänderungen ausgesetzt – siehe [Smart-Home-Datenschutzrisiken](/de/smart-home/smart-home-privacy-risks).',
+          '**Abonnements:** Personenerkennung und Aufnahmeverlauf erfordern in der Regel eine monatliche Gebühr.',
+          '**Lock-in:** Funktionen können verschwinden, wenn der Hersteller Tarife ändert oder den Dienst einstellt.',
+        ],
+      },
+      whatFrigateDoes: {
+        id: 'what-frigate-does',
+        title: 'Was Frigate tut',
+        content:
+          '**Frigate nimmt Kamerastreams auf, führt lokal KI-Erkennung aus, um Personen, Fahrzeuge und Objekte zu identifizieren, und zeichnet nur relevante Clips auf.** Es stellt Ereignisse und Schnappschüsse Home Assistant bereit.',
+        items: [
+          'Echtzeit-Objekterkennung auf RTSP-Streams, die Fehlbewegungen (Bäume, Schatten) herausfiltert.',
+          'Zeichnet Ereignis-Clips und Schnappschüsse lokal auf; Sie steuern die Aufbewahrung.',
+          'Zonen und Objektfilter reduzieren Rauschen – etwa nur bei Personen in der Einfahrt alarmieren.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Welche Hardware braucht Frigate?',
+        content:
+          '**Frigate führt die Erkennung effizient auf einer Google-Coral-TPU oder einer GPU aus; reine CPU-Erkennung funktioniert, begrenzt aber die Anzahl betreibbarer Kameras.** Kombinieren Sie es mit einem Host mit genug Speicher für Aufnahmen.',
+        items: [
+          '**Coral-TPU:** Ein Google-Coral-USB- oder -M.2-Beschleuniger bewältigt die Erkennung für mehrere Kameras bei geringem Stromverbrauch.',
+          '**GPU:** Eine dedizierte GPU beschleunigt die Erkennung ebenfalls und ist nützlich, wenn Sie bereits ein lokales LLM auf demselben Gerät betreiben – siehe [beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home).',
+          '**Speicher:** Planen Sie lokalen Datenträger für Ereignisaufnahmen; kabelgebundene PoE-Kameras liefern die zuverlässigsten Streams.',
+          '**Ein Gerät:** Frigate kann sich einen Mini-PC mit Home Assistant teilen – siehe [beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai).',
+        ],
+      },
+      haIntegration: {
+        id: 'ha-integration',
+        title: 'Home-Assistant-Integration',
+        content:
+          '**Frigate integriert sich in Home Assistant, sodass Erkennungen zu Entitäten werden, auf die Sie automatisieren können.** Installieren Sie Frigate, dann fügen Sie die Frigate-Integration in Home Assistant hinzu.',
+        numberedItems: [
+          'Betreiben Sie Frigate (als Add-on oder Container) und richten Sie es auf Ihre Kamera-RTSP-Streams.',
+          'Konfigurieren Sie Detektoren (Coral/GPU) und Erkennungszonen in der Frigate-Konfiguration.',
+          'Fügen Sie die Frigate-Integration in Home Assistant hinzu, um Kamera- und Erkennungs-Entitäten bereitzustellen.',
+          'Nutzen Sie die Erkennungs-Entitäten in Automatisierungen und Dashboards.',
+        ],
+      },
+      notifications: {
+        id: 'notifications',
+        title: 'Benachrichtigungen und Automatisierungen',
+        content:
+          '**Nutzen Sie Frigate-Erkennungsereignisse, um lokale Benachrichtigungen mit Schnappschuss zu senden und Automatisierungen auszulösen – kein Cloud-Benachrichtigungsdienst nötig.** Kombinieren Sie es bei Bedarf mit einem lokalen LLM für natürlichsprachliche Alarme.',
+        items: [
+          'Senden Sie eine Schnappschuss-Benachrichtigung, wenn eine Person in einer bestimmten Zone erkannt wird.',
+          'Lösen Sie Licht oder Sirenen bei Erkennung als deterministische Automatisierung aus.',
+          'Übergeben Sie ein Ereignis optional an ein lokales LLM für eine natürlichsprachliche Zusammenfassung – siehe [KI-Automatisierungen mit einem lokalen LLM](/de/smart-home/ai-automations-local-llm).',
+        ],
+      },
+      cost: {
+        id: 'cost',
+        title: 'Kosten vs Cloud-Kameras',
+        content:
+          '**Frigate ersetzt wiederkehrende Cloud-Kamera-Gebühren durch einmalige Hardwarekosten (Beschleuniger + Speicher).** Mit der Zeit ist ein abofreies lokales Setup günstiger und hält Aufnahmen privat.',
+        columns: ['Aspekt', 'Cloud-Kameras', 'Frigate (lokal)'],
+        rows: [
+          { 'Aspekt': 'Datenschutz', 'Cloud-Kameras': 'Aufnahmen auf Hersteller-Servern', 'Frigate (lokal)': 'Aufnahmen bleiben zu Hause' },
+          { 'Aspekt': 'Abonnement', 'Cloud-Kameras': 'Monatsgebühr für KI + Verlauf', 'Frigate (lokal)': 'Keine' },
+          { 'Aspekt': 'Erkennung', 'Cloud-Kameras': 'Cloud-KI', 'Frigate (lokal)': 'Lokale KI (Coral/GPU)' },
+          { 'Aspekt': 'Offline', 'Cloud-Kameras': 'Eingeschränkt ohne Internet', 'Frigate (lokal)': 'Funktioniert in Ihrem LAN' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'Brauche ich eine Coral-TPU für Frigate?', a: 'Nicht zwingend, aber empfohlen. Eine Google-Coral-TPU bewältigt KI-Erkennung für mehrere Kameras effizient und stromsparend. Eine GPU funktioniert auch, und reine CPU-Erkennung ist möglich, begrenzt aber, wie viele Kameras Sie in Echtzeit betreiben können.' },
+          { q: 'Funktioniert Frigate offline?', a: 'Ja. Erkennung, Aufnahme und Home-Assistant-Benachrichtigungen laufen alle in Ihrem lokalen Netzwerk, sodass Frigate bei einem Internetausfall weiterarbeitet. Nur das Fernansehen von außerhalb des Hauses benötigt Konnektivität.' },
+          { q: 'Welche Kameras funktionieren mit Frigate?', a: 'Frigate funktioniert mit Kameras, die einen RTSP-Stream bereitstellen, was die meisten IP- und PoE-Kameras abdeckt. Kabelgebundene PoE-Kameras liefern die zuverlässigsten Streams für kontinuierliche Erkennung.' },
+          { q: 'Gibt es ein Abonnement für Frigate?', a: 'Nein. Frigate ist quelloffen und läuft auf Ihrer Hardware ohne Abonnement. Sie zahlen einmalige Kosten für einen Erkennungs-Beschleuniger und Speicher statt wiederkehrender Cloud-Gebühren.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Der komplette Leitfaden zum lokalen Smart Home](/de/smart-home/local-smart-home-complete-guide) – wo lokale Kameras in den Stack passen',
+          '[Beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home) – Beschleuniger und Speicher',
+          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) – ein Gerät für Frigate + HA',
+          '[Smart-Home-Datenschutzrisiken](/de/smart-home/smart-home-privacy-risks) – das Problem, das lokale Kameras lösen',
+          '[Ollama installieren](/de/local-llms/how-to-install-ollama) – clusterübergreifend: ein lokales Modell auf demselben Gerät betreiben',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Lokale KI-Sicherheitskameras mit Frigate (2026)',
+      description: 'Private KI-Sicherheitskameras mit Frigate betreiben: lokale Objekt- und Personenerkennung, ohne Cloud, ohne Abonnement. Hardware, Home-Assistant-Setup und Kosten vs Cloud.',
+      url: 'https://www.promptquorum.com/de/smart-home/local-ai-security-camera',
+      inLanguage: 'de',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'KI-Sicherheitskamera' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'de',
+      mainEntity: [
+        { '@type': 'Question', name: 'Brauche ich eine Coral-TPU für Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'Nicht zwingend, aber empfohlen. Eine Google-Coral-TPU bewältigt KI-Erkennung für mehrere Kameras effizient und stromsparend. Eine GPU funktioniert auch; reine CPU-Erkennung ist möglich, begrenzt aber die Kameraanzahl.' } },
+        { '@type': 'Question', name: 'Funktioniert Frigate offline?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Erkennung, Aufnahme und Home-Assistant-Benachrichtigungen laufen in Ihrem lokalen Netzwerk, sodass Frigate bei einem Internetausfall weiterarbeitet.' } },
+        { '@type': 'Question', name: 'Welche Kameras funktionieren mit Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'Kameras, die einen RTSP-Stream bereitstellen, was die meisten IP- und PoE-Kameras abdeckt. Kabelgebundene PoE-Kameras liefern die zuverlässigsten Streams.' } },
+        { '@type': 'Question', name: 'Gibt es ein Abonnement für Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Frigate ist quelloffen und läuft auf Ihrer Hardware ohne Abonnement – einmalige Kosten für einen Beschleuniger und Speicher statt Cloud-Gebühren.' } },
+      ],
+    },
+  },
+
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'Cámaras de Seguridad con IA Local con Frigate (2026)',
+    seoTitle: 'Cámaras IA Local con Frigate 2026: Detección Privada',
+    intro:
+      'Frigate ejecuta detección local de objetos y personas con IA sobre tus cámaras, sin nube y sin suscripción, integrándose directamente en Home Assistant. Esta guía cubre el problema de privacidad de las cámaras en la nube, qué hace Frigate, el hardware que acelera la detección (una Coral TPU o GPU), la integración con Home Assistant, las notificaciones y cómo se compara el coste con las cámaras de suscripción.',
+    metaDescription:
+      'Ejecuta cámaras de seguridad con IA privadas con Frigate: detección local de objetos y personas, sin nube, sin suscripción. Hardware, configuración de Home Assistant y coste vs nube.',
+    twitterDescription:
+      'Frigate te da cámaras de seguridad con IA privadas: detección local de personas/objetos, sin nube, sin suscripción, integrada con Home Assistant.',
+    readTime: '9 min de lectura',
+    educationalLevel: 'Intermediate',
+    audience: 'Usuarios de Home Assistant que montan detección de cámaras con IA privada',
+    primaryTerm: 'Frigate local AI camera',
+    targetKeywords: [
+      'frigate cámara ia local home assistant',
+      'frigate home assistant',
+      'cámara de seguridad ia local',
+      'cámara de seguridad privada sin nube',
+      'frigate coral tpu',
+    ],
+    leadAnswerBlock:
+      '**Frigate es un NVR local de código abierto que ejecuta detección de objetos y personas con IA sobre tus cámaras enteramente en tu propio hardware —sin nube, sin suscripción— y se integra con Home Assistant.** Una Coral TPU o GPU acelera la detección para que se mantenga en tiempo real.',
+    quickAnswerTop: {
+      es: {
+        question: '¿Qué es Frigate y cómo da cámaras con IA privadas?',
+        answer:
+          'Frigate es software de grabador de vídeo en red de código abierto que realiza detección de objetos y personas con IA localmente sobre streams de cámaras RTSP, sin nube y sin suscripción. Se integra con Home Assistant para notificaciones y automatizaciones. Una Google Coral TPU o una GPU maneja la detección con eficiencia para que varias cámaras corran en tiempo real.',
+        bullets: [
+          'Detección con IA local en tu propio hardware — sin nube',
+          'Sin suscripción; coste de hardware único',
+          'Funciona con cámaras RTSP estándar',
+          'Se integra con Home Assistant para alertas y automatizaciones',
+          'Una Coral TPU o GPU mantiene la detección en tiempo real',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Resumen', anchor: 'tldr' },
+      { label: 'El problema de las cámaras en la nube', anchor: 'cloud-problem' },
+      { label: 'Qué hace Frigate', anchor: 'what-frigate-does' },
+      { label: 'Hardware', anchor: 'hardware' },
+      { label: 'Integración con Home Assistant', anchor: 'ha-integration' },
+      { label: 'Notificaciones y automatizaciones', anchor: 'notifications' },
+      { label: 'Coste vs cámaras en la nube', anchor: 'cost' },
+      { label: 'Preguntas frecuentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Frigate ejecuta detección local de personas y objetos con IA sobre tus cámaras sin nube y sin suscripción, integrándose con Home Assistant.' },
+      { type: 'plain-terms', content: 'La mayoría de las cámaras inteligentes envían vídeo a una nube de empresa y cobran una cuota mensual por la detección con IA y el historial. Frigate hace la detección con IA en tu propio hardware, así que las grabaciones se quedan en casa y no hay suscripción. Funciona con cámaras estándar y se conecta a Home Assistant.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Resumen',
+        isTldr: true,
+        items: [
+          'Frigate es software de NVR local de código abierto con detección de objetos/personas con IA incorporada',
+          'La detección corre en tu hardware — las grabaciones nunca salen de casa, sin suscripción',
+          'Funciona con cámaras RTSP estándar (las cámaras PoE con cable son las más fiables)',
+          'Una Google Coral TPU o una GPU acelera la detección para que muchas cámaras corran en tiempo real',
+          'Se integra con Home Assistant para notificaciones, capturas y automatizaciones',
+          'Un coste de hardware único reemplaza las cuotas recurrentes de las cámaras en la nube',
+        ],
+      },
+      cloudProblem: {
+        id: 'cloud-problem',
+        title: 'El problema de privacidad de las cámaras en la nube',
+        content:
+          '**Las cámaras en la nube suben tus grabaciones a un fabricante y a menudo bloquean la detección con IA y el historial de vídeo tras una suscripción.** Eso significa que tu vídeo del hogar vive en los servidores de otro y deja de funcionar si cancelas.',
+        items: [
+          '**Grabaciones fuera de casa:** las grabaciones están en un centro de datos del fabricante, expuestas a brechas y cambios de políticas — consulta [riesgos de privacidad del smart home](/es/smart-home/smart-home-privacy-risks).',
+          '**Suscripciones:** la detección de personas y el historial de grabación suelen requerir una cuota mensual.',
+          '**Dependencia:** las funciones pueden desaparecer si el fabricante cambia los planes o cierra el servicio.',
+        ],
+      },
+      whatFrigateDoes: {
+        id: 'what-frigate-does',
+        title: 'Qué hace Frigate',
+        content:
+          '**Frigate ingiere los streams de cámaras, ejecuta la detección con IA localmente para identificar personas, vehículos y objetos, y graba solo los clips que importan.** Expone eventos y capturas a Home Assistant.',
+        items: [
+          'Detección de objetos en tiempo real sobre streams RTSP, filtrando el movimiento falso (árboles, sombras).',
+          'Graba clips de eventos y capturas localmente; tú controlas la retención.',
+          'Las zonas y los filtros de objetos reducen el ruido — por ejemplo, alertar solo de personas en la entrada.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: '¿Qué hardware necesita Frigate?',
+        content:
+          '**Frigate ejecuta la detección con eficiencia en una Google Coral TPU o una GPU; la detección solo por CPU funciona pero limita cuántas cámaras puedes ejecutar.** Combínalo con un host que tenga almacenamiento suficiente para las grabaciones.',
+        items: [
+          '**Coral TPU:** un acelerador Google Coral USB o M.2 maneja la detección para varias cámaras con bajo consumo.',
+          '**GPU:** una GPU discreta también acelera la detección y es útil si ya ejecutas un LLM local en el mismo equipo — consulta [mejor hardware para un smart home local](/es/smart-home/best-hardware-for-local-smart-home).',
+          '**Almacenamiento:** planifica disco local para las grabaciones de eventos; las cámaras PoE con cable dan los streams más fiables.',
+          '**Un equipo:** Frigate puede compartir un mini PC con Home Assistant — consulta [mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai).',
+        ],
+      },
+      haIntegration: {
+        id: 'ha-integration',
+        title: 'Integración con Home Assistant',
+        content:
+          '**Frigate se integra con Home Assistant para que las detecciones se conviertan en entidades sobre las que puedes automatizar.** Instala Frigate, luego añade la integración de Frigate en Home Assistant.',
+        numberedItems: [
+          'Ejecuta Frigate (como add-on o contenedor) y apúntalo a los streams RTSP de tus cámaras.',
+          'Configura los detectores (Coral/GPU) y las zonas de detección en la configuración de Frigate.',
+          'Añade la integración de Frigate en Home Assistant para exponer las entidades de cámara y detección.',
+          'Usa las entidades de detección en automatizaciones y paneles.',
+        ],
+      },
+      notifications: {
+        id: 'notifications',
+        title: 'Notificaciones y automatizaciones',
+        content:
+          '**Usa los eventos de detección de Frigate para enviar notificaciones locales con una captura y disparar automatizaciones — sin servicio de notificación en la nube.** Combínalo con un LLM local para alertas en lenguaje natural si quieres.',
+        items: [
+          'Envía una notificación con captura cuando se detecta una persona en una zona específica.',
+          'Dispara luces o sirenas en la detección como automatización determinista.',
+          'Opcionalmente pasa un evento a un LLM local para un resumen en lenguaje natural — consulta [automatizaciones con IA con un LLM local](/es/smart-home/ai-automations-local-llm).',
+        ],
+      },
+      cost: {
+        id: 'cost',
+        title: 'Coste vs cámaras en la nube',
+        content:
+          '**Frigate reemplaza las cuotas recurrentes de las cámaras en la nube por un coste de hardware único (acelerador + almacenamiento).** Con el tiempo, una configuración local sin suscripción es más barata y mantiene las grabaciones privadas.',
+        columns: ['Aspecto', 'Cámaras en la nube', 'Frigate (local)'],
+        rows: [
+          { 'Aspecto': 'Privacidad', 'Cámaras en la nube': 'Grabaciones en servidores del fabricante', 'Frigate (local)': 'Las grabaciones se quedan en casa' },
+          { 'Aspecto': 'Suscripción', 'Cámaras en la nube': 'Cuota mensual por IA + historial', 'Frigate (local)': 'Ninguna' },
+          { 'Aspecto': 'Detección', 'Cámaras en la nube': 'IA en la nube', 'Frigate (local)': 'IA local (Coral/GPU)' },
+          { 'Aspecto': 'Sin conexión', 'Cámaras en la nube': 'Limitada sin internet', 'Frigate (local)': 'Funciona en tu LAN' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          { q: '¿Necesito una Coral TPU para Frigate?', a: 'No estrictamente, pero se recomienda. Una Google Coral TPU maneja la detección con IA para varias cámaras con eficiencia y bajo consumo. Una GPU también sirve, y la detección solo por CPU es posible pero limita cuántas cámaras puedes ejecutar en tiempo real.' },
+          { q: '¿Funciona Frigate sin conexión?', a: 'Sí. La detección, la grabación y las notificaciones de Home Assistant corren en tu red local, así que Frigate sigue funcionando durante una caída de internet. Solo la visualización remota desde fuera del hogar necesita conectividad.' },
+          { q: '¿Qué cámaras funcionan con Frigate?', a: 'Frigate funciona con cámaras que proporcionan un stream RTSP, lo que cubre la mayoría de las cámaras IP y PoE. Las cámaras PoE con cable dan los streams más fiables para la detección continua.' },
+          { q: '¿Hay una suscripción para Frigate?', a: 'No. Frigate es de código abierto y corre en tu hardware sin suscripción. Pagas un coste único por un acelerador de detección y almacenamiento en lugar de cuotas recurrentes en la nube.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[La guía completa del smart home local](/es/smart-home/local-smart-home-complete-guide) — dónde encajan las cámaras locales en el stack',
+          '[Mejor hardware para un smart home local](/es/smart-home/best-hardware-for-local-smart-home) — aceleradores y almacenamiento',
+          '[Mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) — un equipo para Frigate + HA',
+          '[Riesgos de privacidad del smart home](/es/smart-home/smart-home-privacy-risks) — el problema que resuelven las cámaras locales',
+          '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) — entre clústeres: ejecuta un modelo local en el mismo equipo',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Cámaras de Seguridad con IA Local con Frigate (2026)',
+      description: 'Ejecuta cámaras de seguridad con IA privadas con Frigate: detección local de objetos y personas, sin nube, sin suscripción. Hardware, configuración de Home Assistant y coste vs nube.',
+      url: 'https://www.promptquorum.com/es/smart-home/local-ai-security-camera',
+      inLanguage: 'es',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Cámara de seguridad con IA' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'es',
+      mainEntity: [
+        { '@type': 'Question', name: '¿Necesito una Coral TPU para Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'No estrictamente, pero se recomienda. Una Google Coral TPU maneja la detección con IA para varias cámaras con eficiencia y bajo consumo. Una GPU también sirve; solo CPU es posible pero limita el número de cámaras.' } },
+        { '@type': 'Question', name: '¿Funciona Frigate sin conexión?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. La detección, la grabación y las notificaciones de Home Assistant corren en tu red local, así que Frigate sigue funcionando durante una caída de internet.' } },
+        { '@type': 'Question', name: '¿Qué cámaras funcionan con Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'Cámaras que proporcionan un stream RTSP, lo que cubre la mayoría de las cámaras IP y PoE. Las cámaras PoE con cable dan los streams más fiables.' } },
+        { '@type': 'Question', name: '¿Hay una suscripción para Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'No. Frigate es de código abierto y corre en tu hardware sin suscripción — un coste único por un acelerador y almacenamiento en lugar de cuotas en la nube.' } },
+      ],
+    },
+  },
+
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'Caméras de Sécurité à IA Locale avec Frigate (2026)',
+    seoTitle: 'Caméras IA Locale Frigate 2026 : Détection Privée',
+    intro:
+      'Frigate exécute la détection locale d\'objets et de personnes par IA sur vos flux de caméras, sans cloud et sans abonnement, en s\'intégrant directement à Home Assistant. Ce guide couvre le problème de confidentialité des caméras cloud, ce que fait Frigate, le matériel qui accélère la détection (un Coral TPU ou un GPU), l\'intégration à Home Assistant, les notifications et la comparaison de coût avec les caméras à abonnement.',
+    metaDescription:
+      'Exécutez des caméras de sécurité à IA privées avec Frigate : détection locale d\'objets et de personnes, sans cloud, sans abonnement. Matériel, configuration Home Assistant et coût vs cloud.',
+    twitterDescription:
+      'Frigate vous donne des caméras de sécurité à IA privées : détection locale de personnes/objets, sans cloud, sans abonnement, intégrée à Home Assistant.',
+    readTime: '9 min de lecture',
+    educationalLevel: 'Intermediate',
+    audience: 'Utilisateurs de Home Assistant construisant une détection de caméra IA privée',
+    primaryTerm: 'Frigate local AI camera',
+    targetKeywords: [
+      'frigate caméra ia locale home assistant',
+      'frigate home assistant',
+      'caméra de sécurité ia locale',
+      'caméra de sécurité privée sans cloud',
+      'frigate coral tpu',
+    ],
+    leadAnswerBlock:
+      '**Frigate est un NVR local open source qui exécute la détection d\'objets et de personnes par IA sur vos flux de caméras entièrement sur votre propre matériel — sans cloud, sans abonnement — et s\'intègre à Home Assistant.** Un Coral TPU ou un GPU accélère la détection pour qu\'elle reste en temps réel.',
+    quickAnswerTop: {
+      fr: {
+        question: 'Qu\'est-ce que Frigate et comment offre-t-il des caméras IA privées ?',
+        answer:
+          'Frigate est un logiciel d\'enregistreur vidéo réseau open source qui réalise la détection d\'objets et de personnes par IA localement sur les flux de caméras RTSP, sans cloud et sans abonnement. Il s\'intègre à Home Assistant pour les notifications et automatisations. Un Google Coral TPU ou un GPU gère la détection efficacement pour que plusieurs caméras tournent en temps réel.',
+        bullets: [
+          'Détection IA locale sur votre propre matériel — sans cloud',
+          'Sans abonnement ; coût matériel unique',
+          'Fonctionne avec des caméras RTSP standard',
+          'S\'intègre à Home Assistant pour alertes et automatisations',
+          'Un Coral TPU ou un GPU garde la détection en temps réel',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'En bref', anchor: 'tldr' },
+      { label: 'Le problème des caméras cloud', anchor: 'cloud-problem' },
+      { label: 'Ce que fait Frigate', anchor: 'what-frigate-does' },
+      { label: 'Matériel', anchor: 'hardware' },
+      { label: 'Intégration à Home Assistant', anchor: 'ha-integration' },
+      { label: 'Notifications et automatisations', anchor: 'notifications' },
+      { label: 'Coût vs caméras cloud', anchor: 'cost' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Frigate exécute la détection locale de personnes et d\'objets par IA sur vos flux de caméras sans cloud et sans abonnement, en s\'intégrant à Home Assistant.' },
+      { type: 'plain-terms', content: 'La plupart des caméras connectées envoient la vidéo à un cloud d\'entreprise et facturent un abonnement mensuel pour la détection IA et l\'historique. Frigate fait la détection IA sur votre propre matériel à la place, donc les images restent chez vous et il n\'y a pas d\'abonnement. Il fonctionne avec des caméras standard et se branche sur Home Assistant.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'En bref',
+        isTldr: true,
+        items: [
+          'Frigate est un logiciel de NVR local open source avec détection IA d\'objets/personnes intégrée',
+          'La détection tourne sur votre matériel — les images ne quittent jamais la maison, sans abonnement',
+          'Fonctionne avec des caméras RTSP standard (les caméras PoE filaires sont les plus fiables)',
+          'Un Google Coral TPU ou un GPU accélère la détection pour que de nombreuses caméras tournent en temps réel',
+          'S\'intègre à Home Assistant pour notifications, captures et automatisations',
+          'Un coût matériel unique remplace les frais récurrents des caméras cloud',
+        ],
+      },
+      cloudProblem: {
+        id: 'cloud-problem',
+        title: 'Le problème de confidentialité des caméras cloud',
+        content:
+          '**Les caméras cloud téléversent vos images vers un fabricant et verrouillent souvent la détection IA et l\'historique vidéo derrière un abonnement.** Cela signifie que votre vidéo domestique vit sur les serveurs d\'un tiers et cesse de fonctionner si vous résiliez.',
+        items: [
+          '**Images hors site :** les enregistrements résident dans un centre de données du fabricant, exposés aux fuites et changements de politique — voir [risques de confidentialité de la maison connectée](/fr/smart-home/smart-home-privacy-risks).',
+          '**Abonnements :** la détection de personnes et l\'historique d\'enregistrement nécessitent généralement un abonnement mensuel.',
+          '**Verrouillage :** les fonctions peuvent disparaître si le fabricant change de formules ou ferme le service.',
+        ],
+      },
+      whatFrigateDoes: {
+        id: 'what-frigate-does',
+        title: 'Ce que fait Frigate',
+        content:
+          '**Frigate ingère les flux de caméras, exécute la détection IA localement pour identifier personnes, véhicules et objets, et n\'enregistre que les clips qui comptent.** Il expose événements et captures à Home Assistant.',
+        items: [
+          'Détection d\'objets en temps réel sur les flux RTSP, filtrant les faux mouvements (arbres, ombres).',
+          'Enregistre clips d\'événements et captures localement ; vous contrôlez la rétention.',
+          'Les zones et filtres d\'objets réduisent le bruit — par exemple, n\'alerter que sur les personnes dans l\'allée.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Quel matériel Frigate nécessite-t-il ?',
+        content:
+          '**Frigate exécute la détection efficacement sur un Google Coral TPU ou un GPU ; la détection CPU seule fonctionne mais limite le nombre de caméras.** Associez-le à un hôte disposant d\'assez de stockage pour les enregistrements.',
+        items: [
+          '**Coral TPU :** un accélérateur Google Coral USB ou M.2 gère la détection pour plusieurs caméras à faible consommation.',
+          '**GPU :** un GPU discret accélère aussi la détection et est utile si vous exécutez déjà un LLM local sur la même machine — voir [meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home).',
+          '**Stockage :** prévoyez un disque local pour les enregistrements d\'événements ; les caméras PoE filaires donnent les flux les plus fiables.',
+          '**Une machine :** Frigate peut partager un mini-PC avec Home Assistant — voir [meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai).',
+        ],
+      },
+      haIntegration: {
+        id: 'ha-integration',
+        title: 'Intégration à Home Assistant',
+        content:
+          '**Frigate s\'intègre à Home Assistant pour que les détections deviennent des entités sur lesquelles automatiser.** Installez Frigate, puis ajoutez l\'intégration Frigate dans Home Assistant.',
+        numberedItems: [
+          'Exécutez Frigate (en add-on ou conteneur) et pointez-le vers les flux RTSP de vos caméras.',
+          'Configurez les détecteurs (Coral/GPU) et les zones de détection dans la configuration de Frigate.',
+          'Ajoutez l\'intégration Frigate dans Home Assistant pour exposer les entités de caméra et de détection.',
+          'Utilisez les entités de détection dans les automatisations et tableaux de bord.',
+        ],
+      },
+      notifications: {
+        id: 'notifications',
+        title: 'Notifications et automatisations',
+        content:
+          '**Utilisez les événements de détection de Frigate pour envoyer des notifications locales avec une capture et déclencher des automatisations — aucun service de notification cloud requis.** Combinez avec un LLM local pour des alertes en langage naturel si vous le souhaitez.',
+        items: [
+          'Envoyez une notification avec capture lorsqu\'une personne est détectée dans une zone spécifique.',
+          'Déclenchez lumières ou sirènes à la détection comme automatisation déterministe.',
+          'Transmettez éventuellement un événement à un LLM local pour un résumé en langage clair — voir [automatisations IA avec un LLM local](/fr/smart-home/ai-automations-local-llm).',
+        ],
+      },
+      cost: {
+        id: 'cost',
+        title: 'Coût vs caméras cloud',
+        content:
+          '**Frigate remplace les frais récurrents des caméras cloud par un coût matériel unique (accélérateur + stockage).** Avec le temps, une configuration locale sans abonnement est moins chère et garde les images privées.',
+        columns: ['Aspect', 'Caméras cloud', 'Frigate (local)'],
+        rows: [
+          { 'Aspect': 'Confidentialité', 'Caméras cloud': 'Images sur les serveurs du fabricant', 'Frigate (local)': 'Les images restent chez vous' },
+          { 'Aspect': 'Abonnement', 'Caméras cloud': 'Frais mensuels pour IA + historique', 'Frigate (local)': 'Aucun' },
+          { 'Aspect': 'Détection', 'Caméras cloud': 'IA cloud', 'Frigate (local)': 'IA locale (Coral/GPU)' },
+          { 'Aspect': 'Hors ligne', 'Caméras cloud': 'Limitée sans internet', 'Frigate (local)': 'Fonctionne sur votre LAN' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'Ai-je besoin d\'un Coral TPU pour Frigate ?', a: 'Pas strictement, mais c\'est recommandé. Un Google Coral TPU gère la détection IA pour plusieurs caméras efficacement et à faible consommation. Un GPU fonctionne aussi, et la détection CPU seule est possible mais limite le nombre de caméras que vous pouvez exécuter en temps réel.' },
+          { q: 'Frigate fonctionne-t-il hors ligne ?', a: 'Oui. Détection, enregistrement et notifications Home Assistant tournent tous sur votre réseau local, donc Frigate continue de fonctionner lors d\'une coupure internet. Seule la visualisation à distance depuis l\'extérieur nécessite une connectivité.' },
+          { q: 'Quelles caméras fonctionnent avec Frigate ?', a: 'Frigate fonctionne avec les caméras fournissant un flux RTSP, ce qui couvre la plupart des caméras IP et PoE. Les caméras PoE filaires donnent les flux les plus fiables pour une détection continue.' },
+          { q: 'Y a-t-il un abonnement pour Frigate ?', a: 'Non. Frigate est open source et tourne sur votre matériel sans abonnement. Vous payez un coût unique pour un accélérateur de détection et du stockage au lieu de frais cloud récurrents.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Le guide complet de la maison connectée locale](/fr/smart-home/local-smart-home-complete-guide) — où s\'insèrent les caméras locales dans le stack',
+          '[Meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home) — accélérateurs et stockage',
+          '[Meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) — une machine pour Frigate + HA',
+          '[Risques de confidentialité de la maison connectée](/fr/smart-home/smart-home-privacy-risks) — le problème que résolvent les caméras locales',
+          '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) — inter-clusters : exécuter un modèle local sur la même machine',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Caméras de Sécurité à IA Locale avec Frigate (2026)',
+      description: 'Exécutez des caméras de sécurité à IA privées avec Frigate : détection locale d\'objets et de personnes, sans cloud, sans abonnement. Matériel, configuration Home Assistant et coût vs cloud.',
+      url: 'https://www.promptquorum.com/fr/smart-home/local-ai-security-camera',
+      inLanguage: 'fr',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Caméra de sécurité IA' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'fr',
+      mainEntity: [
+        { '@type': 'Question', name: 'Ai-je besoin d\'un Coral TPU pour Frigate ?', acceptedAnswer: { '@type': 'Answer', text: 'Pas strictement, mais c\'est recommandé. Un Google Coral TPU gère la détection IA pour plusieurs caméras efficacement et à faible consommation. Un GPU fonctionne aussi ; le CPU seul est possible mais limite le nombre de caméras.' } },
+        { '@type': 'Question', name: 'Frigate fonctionne-t-il hors ligne ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Détection, enregistrement et notifications Home Assistant tournent sur votre réseau local, donc Frigate continue de fonctionner lors d\'une coupure internet.' } },
+        { '@type': 'Question', name: 'Quelles caméras fonctionnent avec Frigate ?', acceptedAnswer: { '@type': 'Answer', text: 'Les caméras fournissant un flux RTSP, ce qui couvre la plupart des caméras IP et PoE. Les caméras PoE filaires donnent les flux les plus fiables.' } },
+        { '@type': 'Question', name: 'Y a-t-il un abonnement pour Frigate ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Frigate est open source et tourne sur votre matériel sans abonnement — un coût unique pour un accélérateur et du stockage au lieu de frais cloud.' } },
+      ],
+    },
+  },
+
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'Frigate によるローカルAIセキュリティカメラ（2026）',
+    seoTitle: 'Frigate ローカルAIカメラ 2026：プライベート検出',
+    intro:
+      'Frigate は、クラウドなし・サブスクなしで、あなたのカメラ映像にローカルAIの物体・人物検出を実行し、Home Assistant に直接統合します。本ガイドは、クラウドカメラのプライバシー問題、Frigate の機能、検出を高速化するハードウェア（Coral TPU または GPU）、Home Assistant 統合、通知、そしてサブスク型カメラとのコスト比較を扱います。',
+    metaDescription:
+      'Frigate でプライベートなAIセキュリティカメラを：ローカルの物体・人物検出、クラウドなし、サブスクなし。ハードウェア、Home Assistant 設定、クラウドとのコスト比較。',
+    twitterDescription:
+      'Frigate はプライベートなAIセキュリティカメラを提供：ローカルの人物・物体検出、クラウドなし、サブスクなし、Home Assistant と統合。',
+    readTime: '9分で読める',
+    educationalLevel: 'Intermediate',
+    audience: 'プライベートなAIカメラ検出を構築する Home Assistant ユーザー',
+    primaryTerm: 'Frigate local AI camera',
+    targetKeywords: [
+      'frigate ローカルAIカメラ home assistant',
+      'frigate home assistant',
+      'ローカルAI セキュリティカメラ',
+      'プライベート セキュリティカメラ クラウドなし',
+      'frigate coral tpu',
+    ],
+    leadAnswerBlock:
+      '**Frigate はオープンソースのローカル NVR で、あなたのカメラ映像に対する物体・人物のAI検出を完全に自分のハードウェアで実行し——クラウドなし、サブスクなし——Home Assistant と統合します。** Coral TPU または GPU が検出を高速化し、リアルタイムを保ちます。',
+    quickAnswerTop: {
+      ja: {
+        question: 'Frigate とは何で、どうやってプライベートなAIカメラを実現しますか？',
+        answer:
+          'Frigate はオープンソースのネットワークビデオレコーダーソフトで、RTSP カメラストリームに対する物体・人物のAI検出をローカルで行い、クラウドもサブスクもありません。通知や自動化のため Home Assistant と統合します。Google Coral TPU または GPU が検出を効率的に処理し、複数のカメラをリアルタイムで動かします。',
+        bullets: [
+          '自分のハードウェアでのローカルAI検出——クラウドなし',
+          'サブスクなし；一度きりのハードウェア費用',
+          '標準的な RTSP カメラで動作',
+          '通知と自動化のため Home Assistant と統合',
+          'Coral TPU または GPU が検出をリアルタイムに保つ',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '要点まとめ', anchor: 'tldr' },
+      { label: 'クラウドカメラの問題', anchor: 'cloud-problem' },
+      { label: 'Frigate の機能', anchor: 'what-frigate-does' },
+      { label: 'ハードウェア', anchor: 'hardware' },
+      { label: 'Home Assistant 統合', anchor: 'ha-integration' },
+      { label: '通知と自動化', anchor: 'notifications' },
+      { label: 'クラウドカメラとのコスト比較', anchor: 'cost' },
+      { label: 'よくある質問', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Frigate は、クラウドなし・サブスクなしであなたのカメラ映像にローカルAIの人物・物体検出を実行し、Home Assistant と統合します。' },
+      { type: 'plain-terms', content: '多くのスマートカメラは映像を企業のクラウドへ送り、AI検出や履歴に月額料金を課します。Frigate は代わりにAI検出を自分のハードウェアで行うため、映像は家にとどまり、サブスクはありません。標準的なカメラで動作し、Home Assistant に接続します。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '要点まとめ',
+        isTldr: true,
+        items: [
+          'Frigate は AI 物体/人物検出を内蔵したオープンソースのローカル NVR ソフト',
+          '検出は自分のハードウェアで動く——映像は家を出ず、サブスクなし',
+          '標準的な RTSP カメラで動作（有線 PoE カメラが最も信頼できる）',
+          'Google Coral TPU または GPU が検出を高速化し、多数のカメラをリアルタイムで動かす',
+          '通知、スナップショット、自動化のため Home Assistant と統合',
+          '一度きりのハードウェア費用が、クラウドカメラの継続料金を置き換える',
+        ],
+      },
+      cloudProblem: {
+        id: 'cloud-problem',
+        title: 'クラウドカメラのプライバシー問題',
+        content:
+          '**クラウドカメラはあなたの映像をメーカーにアップロードし、AI検出や映像履歴をしばしばサブスクの背後に閉じ込めます。** つまり、あなたの家の映像は他者のサーバー上にあり、解約すると動かなくなります。',
+        items: [
+          '**映像が外部に：** 録画はメーカーのデータセンターにあり、漏えいやポリシー変更にさらされます——[スマートホームのプライバシーリスク](/ja/smart-home/smart-home-privacy-risks)を参照。',
+          '**サブスク：** 人物検出や録画履歴は通常、月額料金を要します。',
+          '**ロックイン：** メーカーがプランを変えたりサービスを終了したりすると、機能が消える可能性があります。',
+        ],
+      },
+      whatFrigateDoes: {
+        id: 'what-frigate-does',
+        title: 'Frigate の機能',
+        content:
+          '**Frigate はカメラストリームを取り込み、ローカルでAI検出を実行して人物・車両・物体を識別し、重要なクリップだけを録画します。** イベントとスナップショットを Home Assistant に公開します。',
+        items: [
+          'RTSP ストリームでのリアルタイム物体検出。誤検知（木、影）を除外します。',
+          'イベントクリップとスナップショットをローカルに録画；保持期間はあなたが管理します。',
+          'ゾーンと物体フィルターがノイズを減らします——例：私道にいる人物のみ通知。',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Frigate にはどんなハードウェアが必要ですか？',
+        content:
+          '**Frigate は Google Coral TPU または GPU で検出を効率的に実行します；CPU のみの検出も動きますが、動かせるカメラ数が制限されます。** 録画に十分なストレージを持つホストと組み合わせましょう。',
+        items: [
+          '**Coral TPU：** Google Coral の USB または M.2 アクセラレーターが、低消費電力で複数カメラの検出を処理します。',
+          '**GPU：** 専用 GPU も検出を高速化し、同じ機器で既にローカル LLM を動かしているなら有用です——[ローカルスマートホームに最適なハードウェア](/ja/smart-home/best-hardware-for-local-smart-home)を参照。',
+          '**ストレージ：** イベント録画用のローカルディスクを計画しましょう；有線 PoE カメラが最も信頼できるストリームを提供します。',
+          '**一台：** Frigate は Home Assistant とミニPCを共有できます——[Home Assistant＋ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai)を参照。',
+        ],
+      },
+      haIntegration: {
+        id: 'ha-integration',
+        title: 'Home Assistant 統合',
+        content:
+          '**Frigate は Home Assistant と統合し、検出を自動化に使えるエンティティにします。** Frigate をインストールし、Home Assistant で Frigate 統合を追加します。',
+        numberedItems: [
+          'Frigate を（アドオンまたはコンテナとして）動かし、カメラの RTSP ストリームを指定します。',
+          'Frigate 設定で検出器（Coral/GPU）と検出ゾーンを構成します。',
+          'Home Assistant で Frigate 統合を追加し、カメラと検出のエンティティを公開します。',
+          '検出エンティティを自動化やダッシュボードで使います。',
+        ],
+      },
+      notifications: {
+        id: 'notifications',
+        title: '通知と自動化',
+        content:
+          '**Frigate の検出イベントで、スナップショット付きのローカル通知を送り、自動化を起動します——クラウド通知サービスは不要です。** 望むなら、ローカル LLM と組み合わせて自然言語のアラートにできます。',
+        items: [
+          '特定のゾーンで人物が検出されたら、スナップショット通知を送ります。',
+          '検出時に照明やサイレンを起動する、決定論的な自動化として。',
+          '必要なら、イベントをローカル LLM に渡して自然言語の要約に——[ローカルLLMによるAI自動化](/ja/smart-home/ai-automations-local-llm)を参照。',
+        ],
+      },
+      cost: {
+        id: 'cost',
+        title: 'クラウドカメラとのコスト比較',
+        content:
+          '**Frigate はクラウドカメラの継続料金を、一度きりのハードウェア費用（アクセラレーター＋ストレージ）に置き換えます。** 時間が経つほど、サブスクなしのローカル構成は安く、映像をプライベートに保ちます。',
+        columns: ['観点', 'クラウドカメラ', 'Frigate（ローカル）'],
+        rows: [
+          { '観点': 'プライバシー', 'クラウドカメラ': '映像はメーカーのサーバー', 'Frigate（ローカル）': '映像は家にとどまる' },
+          { '観点': 'サブスク', 'クラウドカメラ': 'AI＋履歴に月額料金', 'Frigate（ローカル）': 'なし' },
+          { '観点': '検出', 'クラウドカメラ': 'クラウドAI', 'Frigate（ローカル）': 'ローカルAI（Coral/GPU）' },
+          { '観点': 'オフライン', 'クラウドカメラ': 'インターネットなしでは限定的', 'Frigate（ローカル）': 'あなたの LAN で動作' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          { q: 'Frigate に Coral TPU は必要ですか？', a: '厳密には不要ですが、推奨です。Google Coral TPU は複数カメラのAI検出を効率的かつ低消費電力で処理します。GPU でも動き、CPU のみの検出も可能ですが、リアルタイムで動かせるカメラ数が制限されます。' },
+          { q: 'Frigate はオフラインで動きますか？', a: 'はい。検出、録画、Home Assistant の通知はすべてローカルネットワークで動くため、Frigate はインターネット障害中も動き続けます。家の外からのリモート視聴だけが接続を必要とします。' },
+          { q: 'どのカメラが Frigate で動きますか？', a: 'Frigate は RTSP ストリームを提供するカメラで動き、これは大半の IP・PoE カメラを網羅します。有線 PoE カメラが継続的な検出に最も信頼できるストリームを提供します。' },
+          { q: 'Frigate にサブスクはありますか？', a: 'いいえ。Frigate はオープンソースで、サブスクなしであなたのハードウェアで動きます。継続的なクラウド料金の代わりに、検出アクセラレーターとストレージに一度きりの費用を払います。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[ローカルスマートホーム完全ガイド](/ja/smart-home/local-smart-home-complete-guide) — ローカルカメラが構成のどこに収まるか',
+          '[ローカルスマートホームに最適なハードウェア](/ja/smart-home/best-hardware-for-local-smart-home) — アクセラレーターとストレージ',
+          '[Home Assistant＋ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai) — Frigate＋HA を一台で',
+          '[スマートホームのプライバシーリスク](/ja/smart-home/smart-home-privacy-risks) — ローカルカメラが解決する問題',
+          '[Ollama のインストール方法](/ja/local-llms/how-to-install-ollama) — クラスター横断：同じ機器でローカルモデルを動かす',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Frigate によるローカルAIセキュリティカメラ（2026）',
+      description: 'Frigate でプライベートなAIセキュリティカメラを：ローカルの物体・人物検出、クラウドなし、サブスクなし。ハードウェア、Home Assistant 設定、クラウドとのコスト比較。',
+      url: 'https://www.promptquorum.com/ja/smart-home/local-ai-security-camera',
+      inLanguage: 'ja',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'AIセキュリティカメラ' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ja',
+      mainEntity: [
+        { '@type': 'Question', name: 'Frigate に Coral TPU は必要ですか？', acceptedAnswer: { '@type': 'Answer', text: '厳密には不要ですが、推奨です。Google Coral TPU は複数カメラのAI検出を効率的かつ低消費電力で処理します。GPU でも動き、CPU のみも可能ですがカメラ数が制限されます。' } },
+        { '@type': 'Question', name: 'Frigate はオフラインで動きますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。検出、録画、Home Assistant の通知はローカルネットワークで動くため、インターネット障害中も動き続けます。' } },
+        { '@type': 'Question', name: 'どのカメラが Frigate で動きますか？', acceptedAnswer: { '@type': 'Answer', text: 'RTSP ストリームを提供するカメラで動き、大半の IP・PoE カメラを網羅します。有線 PoE カメラが最も信頼できるストリームを提供します。' } },
+        { '@type': 'Question', name: 'Frigate にサブスクはありますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。Frigate はオープンソースで、サブスクなしで動きます——クラウド料金の代わりにアクセラレーターとストレージへの一度きりの費用です。' } },
+      ],
+    },
+  },
+
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'Câmeras de Segurança com IA Local com Frigate (2026)',
+    seoTitle: 'Câmeras IA Local com Frigate 2026: Detecção Privada',
+    intro:
+      'O Frigate executa detecção local de objetos e pessoas com IA nos feeds das suas câmeras, sem nuvem e sem assinatura, integrando-se diretamente ao Home Assistant. Este guia cobre o problema de privacidade das câmeras na nuvem, o que o Frigate faz, o hardware que acelera a detecção (uma Coral TPU ou GPU), a integração com o Home Assistant, as notificações e como o custo se compara ao das câmeras por assinatura.',
+    metaDescription:
+      'Rode câmeras de segurança com IA privadas com o Frigate: detecção local de objetos e pessoas, sem nuvem, sem assinatura. Hardware, configuração do Home Assistant e custo vs nuvem.',
+    twitterDescription:
+      'O Frigate dá câmeras de segurança com IA privadas: detecção local de pessoas/objetos, sem nuvem, sem assinatura, integrada ao Home Assistant.',
+    readTime: '9 min de leitura',
+    educationalLevel: 'Intermediate',
+    audience: 'Usuários do Home Assistant construindo detecção de câmera com IA privada',
+    primaryTerm: 'Frigate local AI camera',
+    targetKeywords: [
+      'frigate câmera ia local home assistant',
+      'frigate home assistant',
+      'câmera de segurança ia local',
+      'câmera de segurança privada sem nuvem',
+      'frigate coral tpu',
+    ],
+    leadAnswerBlock:
+      '**O Frigate é um NVR local de código aberto que executa detecção de objetos e pessoas com IA nos feeds das suas câmeras inteiramente no seu próprio hardware — sem nuvem, sem assinatura — e se integra ao Home Assistant.** Uma Coral TPU ou GPU acelera a detecção para que ela permaneça em tempo real.',
+    quickAnswerTop: {
+      pt: {
+        question: 'O que é o Frigate e como ele dá câmeras com IA privadas?',
+        answer:
+          'O Frigate é um software gravador de vídeo em rede de código aberto que realiza detecção de objetos e pessoas com IA localmente em streams de câmeras RTSP, sem nuvem e sem assinatura. Ele se integra ao Home Assistant para notificações e automações. Uma Google Coral TPU ou uma GPU lida com a detecção com eficiência para que várias câmeras rodem em tempo real.',
+        bullets: [
+          'Detecção com IA local no seu próprio hardware — sem nuvem',
+          'Sem assinatura; custo de hardware único',
+          'Funciona com câmeras RTSP padrão',
+          'Integra-se ao Home Assistant para alertas e automações',
+          'Uma Coral TPU ou GPU mantém a detecção em tempo real',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Resumo', anchor: 'tldr' },
+      { label: 'O problema das câmeras na nuvem', anchor: 'cloud-problem' },
+      { label: 'O que o Frigate faz', anchor: 'what-frigate-does' },
+      { label: 'Hardware', anchor: 'hardware' },
+      { label: 'Integração com o Home Assistant', anchor: 'ha-integration' },
+      { label: 'Notificações e automações', anchor: 'notifications' },
+      { label: 'Custo vs câmeras na nuvem', anchor: 'cost' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'O Frigate executa detecção local de pessoas e objetos com IA nos feeds das suas câmeras sem nuvem e sem assinatura, integrando-se ao Home Assistant.' },
+      { type: 'plain-terms', content: 'A maioria das câmeras inteligentes envia vídeo para uma nuvem de empresa e cobra uma taxa mensal por detecção com IA e histórico. O Frigate faz a detecção com IA no seu próprio hardware, então as gravações ficam em casa e não há assinatura. Ele funciona com câmeras padrão e se conecta ao Home Assistant.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Resumo',
+        isTldr: true,
+        items: [
+          'O Frigate é um software de NVR local de código aberto com detecção de objetos/pessoas com IA embutida',
+          'A detecção roda no seu hardware — as gravações nunca saem de casa, sem assinatura',
+          'Funciona com câmeras RTSP padrão (câmeras PoE com fio são as mais confiáveis)',
+          'Uma Google Coral TPU ou uma GPU acelera a detecção para que muitas câmeras rodem em tempo real',
+          'Integra-se ao Home Assistant para notificações, capturas e automações',
+          'Um custo de hardware único substitui as taxas recorrentes das câmeras na nuvem',
+        ],
+      },
+      cloudProblem: {
+        id: 'cloud-problem',
+        title: 'O problema de privacidade das câmeras na nuvem',
+        content:
+          '**Câmeras na nuvem enviam suas gravações a um fabricante e muitas vezes bloqueiam a detecção com IA e o histórico de vídeo atrás de uma assinatura.** Isso significa que o vídeo do seu lar vive nos servidores de outra pessoa e para de funcionar se você cancelar.',
+        items: [
+          '**Gravações fora de casa:** as gravações ficam em um data center do fabricante, expostas a vazamentos e mudanças de política — veja [riscos de privacidade da casa inteligente](/pt/smart-home/smart-home-privacy-risks).',
+          '**Assinaturas:** a detecção de pessoas e o histórico de gravação normalmente exigem uma taxa mensal.',
+          '**Dependência:** os recursos podem desaparecer se o fabricante mudar os planos ou encerrar o serviço.',
+        ],
+      },
+      whatFrigateDoes: {
+        id: 'what-frigate-does',
+        title: 'O que o Frigate faz',
+        content:
+          '**O Frigate ingere os streams das câmeras, executa a detecção com IA localmente para identificar pessoas, veículos e objetos, e grava apenas os clipes que importam.** Ele expõe eventos e capturas ao Home Assistant.',
+        items: [
+          'Detecção de objetos em tempo real nos streams RTSP, filtrando o movimento falso (árvores, sombras).',
+          'Grava clipes de eventos e capturas localmente; você controla a retenção.',
+          'Zonas e filtros de objetos reduzem o ruído — por exemplo, alertar só sobre pessoas na garagem.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Que hardware o Frigate precisa?',
+        content:
+          '**O Frigate executa a detecção com eficiência em uma Google Coral TPU ou uma GPU; a detecção só por CPU funciona, mas limita quantas câmeras você pode rodar.** Combine-o com um host que tenha armazenamento suficiente para as gravações.',
+        items: [
+          '**Coral TPU:** um acelerador Google Coral USB ou M.2 lida com a detecção para várias câmeras com baixo consumo.',
+          '**GPU:** uma GPU dedicada também acelera a detecção e é útil se você já roda um LLM local na mesma máquina — veja [melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home).',
+          '**Armazenamento:** planeje disco local para as gravações de eventos; câmeras PoE com fio dão os streams mais confiáveis.',
+          '**Uma máquina:** o Frigate pode compartilhar um mini PC com o Home Assistant — veja [melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai).',
+        ],
+      },
+      haIntegration: {
+        id: 'ha-integration',
+        title: 'Integração com o Home Assistant',
+        content:
+          '**O Frigate se integra ao Home Assistant para que as detecções se tornem entidades sobre as quais você pode automatizar.** Instale o Frigate, depois adicione a integração do Frigate no Home Assistant.',
+        numberedItems: [
+          'Rode o Frigate (como add-on ou contêiner) e aponte-o para os streams RTSP das suas câmeras.',
+          'Configure os detectores (Coral/GPU) e as zonas de detecção na configuração do Frigate.',
+          'Adicione a integração do Frigate no Home Assistant para expor as entidades de câmera e detecção.',
+          'Use as entidades de detecção em automações e painéis.',
+        ],
+      },
+      notifications: {
+        id: 'notifications',
+        title: 'Notificações e automações',
+        content:
+          '**Use os eventos de detecção do Frigate para enviar notificações locais com uma captura e disparar automações — sem serviço de notificação na nuvem.** Combine com um LLM local para alertas em linguagem natural, se quiser.',
+        items: [
+          'Envie uma notificação com captura quando uma pessoa é detectada em uma zona específica.',
+          'Dispare luzes ou sirenes na detecção como automação determinística.',
+          'Opcionalmente passe um evento a um LLM local para um resumo em linguagem natural — veja [automações de IA com um LLM local](/pt/smart-home/ai-automations-local-llm).',
+        ],
+      },
+      cost: {
+        id: 'cost',
+        title: 'Custo vs câmeras na nuvem',
+        content:
+          '**O Frigate substitui as taxas recorrentes das câmeras na nuvem por um custo de hardware único (acelerador + armazenamento).** Com o tempo, uma configuração local sem assinatura é mais barata e mantém as gravações privadas.',
+        columns: ['Aspecto', 'Câmeras na nuvem', 'Frigate (local)'],
+        rows: [
+          { 'Aspecto': 'Privacidade', 'Câmeras na nuvem': 'Gravações em servidores do fabricante', 'Frigate (local)': 'As gravações ficam em casa' },
+          { 'Aspecto': 'Assinatura', 'Câmeras na nuvem': 'Taxa mensal por IA + histórico', 'Frigate (local)': 'Nenhuma' },
+          { 'Aspecto': 'Detecção', 'Câmeras na nuvem': 'IA na nuvem', 'Frigate (local)': 'IA local (Coral/GPU)' },
+          { 'Aspecto': 'Offline', 'Câmeras na nuvem': 'Limitada sem internet', 'Frigate (local)': 'Funciona na sua LAN' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'Preciso de uma Coral TPU para o Frigate?', a: 'Não estritamente, mas é recomendado. Uma Google Coral TPU lida com a detecção com IA para várias câmeras com eficiência e baixo consumo. Uma GPU também serve, e a detecção só por CPU é possível, mas limita quantas câmeras você pode rodar em tempo real.' },
+          { q: 'O Frigate funciona offline?', a: 'Sim. A detecção, a gravação e as notificações do Home Assistant rodam na sua rede local, então o Frigate continua funcionando durante uma queda de internet. Só a visualização remota de fora do lar precisa de conectividade.' },
+          { q: 'Quais câmeras funcionam com o Frigate?', a: 'O Frigate funciona com câmeras que fornecem um stream RTSP, o que cobre a maioria das câmeras IP e PoE. Câmeras PoE com fio dão os streams mais confiáveis para detecção contínua.' },
+          { q: 'Há uma assinatura para o Frigate?', a: 'Não. O Frigate é de código aberto e roda no seu hardware sem assinatura. Você paga um custo único por um acelerador de detecção e armazenamento em vez de taxas recorrentes na nuvem.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[O guia completo da casa inteligente local](/pt/smart-home/local-smart-home-complete-guide) — onde as câmeras locais se encaixam no stack',
+          '[Melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home) — aceleradores e armazenamento',
+          '[Melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) — uma máquina para Frigate + HA',
+          '[Riscos de privacidade da casa inteligente](/pt/smart-home/smart-home-privacy-risks) — o problema que as câmeras locais resolvem',
+          '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) — entre clusters: rodar um modelo local na mesma máquina',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Câmeras de Segurança com IA Local com Frigate (2026)',
+      description: 'Rode câmeras de segurança com IA privadas com o Frigate: detecção local de objetos e pessoas, sem nuvem, sem assinatura. Hardware, configuração do Home Assistant e custo vs nuvem.',
+      url: 'https://www.promptquorum.com/pt/smart-home/local-ai-security-camera',
+      inLanguage: 'pt-BR',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Câmera de segurança com IA' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'pt-BR',
+      mainEntity: [
+        { '@type': 'Question', name: 'Preciso de uma Coral TPU para o Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'Não estritamente, mas é recomendado. Uma Google Coral TPU lida com a detecção com IA para várias câmeras com eficiência e baixo consumo. Uma GPU também serve; só por CPU é possível, mas limita o número de câmeras.' } },
+        { '@type': 'Question', name: 'O Frigate funciona offline?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. A detecção, a gravação e as notificações do Home Assistant rodam na sua rede local, então o Frigate continua funcionando durante uma queda de internet.' } },
+        { '@type': 'Question', name: 'Quais câmeras funcionam com o Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'Câmeras que fornecem um stream RTSP, o que cobre a maioria das câmeras IP e PoE. Câmeras PoE com fio dão os streams mais confiáveis.' } },
+        { '@type': 'Question', name: 'Há uma assinatura para o Frigate?', acceptedAnswer: { '@type': 'Answer', text: 'Não. O Frigate é de código aberto e roda no seu hardware sem assinatura — um custo único por um acelerador e armazenamento em vez de taxas na nuvem.' } },
+      ],
+    },
+  },
+
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: '用 Frigate 的本地 AI 安防摄像头（2026）',
+    seoTitle: 'Frigate 本地 AI 摄像头 2026：私密检测',
+    intro:
+      'Frigate 在你的摄像头画面上进行本地 AI 物体与人物检测，无云端、无订阅，并直接集成到 Home Assistant。本指南讲解云端摄像头的隐私问题、Frigate 的功能、加速检测的硬件（Coral TPU 或 GPU）、Home Assistant 集成、通知，以及与订阅式摄像头的成本对比。',
+    metaDescription:
+      '用 Frigate 运行私密的 AI 安防摄像头：本地物体与人物检测，无云端、无订阅。硬件、Home Assistant 配置，以及与云端的成本对比。',
+    twitterDescription:
+      'Frigate 给你私密的 AI 安防摄像头：本地人物/物体检测，无云端、无订阅，与 Home Assistant 集成。',
+    readTime: '阅读约9分钟',
+    educationalLevel: 'Intermediate',
+    audience: '构建私密 AI 摄像头检测的 Home Assistant 用户',
+    primaryTerm: 'Frigate local AI camera',
+    targetKeywords: [
+      'frigate 本地AI摄像头 home assistant',
+      'frigate home assistant',
+      '本地AI 安防摄像头',
+      '私密安防摄像头 无云端',
+      'frigate coral tpu',
+    ],
+    leadAnswerBlock:
+      '**Frigate 是一个开源的本地 NVR，完全在你自己的硬件上对摄像头画面进行 AI 物体与人物检测——无云端、无订阅——并与 Home Assistant 集成。** Coral TPU 或 GPU 加速检测，使其保持实时。',
+    quickAnswerTop: {
+      zh: {
+        question: 'Frigate 是什么，它如何提供私密的 AI 摄像头？',
+        answer:
+          'Frigate 是一款开源的网络视频录像软件，在 RTSP 摄像头流上本地进行 AI 物体与人物检测，无云端、无订阅。它与 Home Assistant 集成以实现通知和自动化。一块 Google Coral TPU 或一块 GPU 能高效处理检测，使多路摄像头实时运行。',
+        bullets: [
+          '在你自己硬件上的本地 AI 检测——无云端',
+          '无订阅；一次性硬件成本',
+          '兼容标准 RTSP 摄像头',
+          '与 Home Assistant 集成以实现告警和自动化',
+          'Coral TPU 或 GPU 让检测保持实时',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '要点速览', anchor: 'tldr' },
+      { label: '云端摄像头的问题', anchor: 'cloud-problem' },
+      { label: 'Frigate 的功能', anchor: 'what-frigate-does' },
+      { label: '硬件', anchor: 'hardware' },
+      { label: 'Home Assistant 集成', anchor: 'ha-integration' },
+      { label: '通知与自动化', anchor: 'notifications' },
+      { label: '与云端摄像头的成本对比', anchor: 'cost' },
+      { label: '常见问题', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Frigate 在你的摄像头画面上进行本地 AI 人物与物体检测，无云端、无订阅，并与 Home Assistant 集成。' },
+      { type: 'plain-terms', content: '大多数智能摄像头把视频发送到企业云端，并就 AI 检测和历史收取月费。Frigate 则在你自己的硬件上做 AI 检测，因此录像留在家中，而且没有订阅。它兼容标准摄像头，并接入 Home Assistant。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '要点速览',
+        isTldr: true,
+        items: [
+          'Frigate 是内置 AI 物体/人物检测的开源本地 NVR 软件',
+          '检测在你的硬件上运行——录像从不离开家门，无订阅',
+          '兼容标准 RTSP 摄像头（有线 PoE 摄像头最可靠）',
+          '一块 Google Coral TPU 或一块 GPU 加速检测，使多路摄像头实时运行',
+          '与 Home Assistant 集成以实现通知、快照和自动化',
+          '一次性硬件成本取代云端摄像头的持续费用',
+        ],
+      },
+      cloudProblem: {
+        id: 'cloud-problem',
+        title: '云端摄像头的隐私问题',
+        content:
+          '**云端摄像头把你的录像上传到厂商，并常常把 AI 检测和视频历史锁在订阅之后。** 这意味着你家的视频存在别人的服务器上，一旦取消就会停止工作。',
+        items: [
+          '**录像在异地：** 录像存放在厂商数据中心，面临泄露和政策变更——参见[智能家居隐私风险](/zh/smart-home/smart-home-privacy-risks)。',
+          '**订阅：** 人物检测和录制历史通常需要月费。',
+          '**锁定：** 如果厂商更改套餐或关停服务，功能可能消失。',
+        ],
+      },
+      whatFrigateDoes: {
+        id: 'what-frigate-does',
+        title: 'Frigate 的功能',
+        content:
+          '**Frigate 接入摄像头流，在本地运行 AI 检测以识别人、车辆和物体，并只录制重要的片段。** 它把事件和快照暴露给 Home Assistant。',
+        items: [
+          '在 RTSP 流上进行实时物体检测，过滤虚假移动（树木、阴影）。',
+          '在本地录制事件片段和快照；保留时长由你控制。',
+          '区域和物体过滤器可减少噪声——例如，只对车道上的人物告警。',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Frigate 需要什么硬件？',
+        content:
+          '**Frigate 在 Google Coral TPU 或 GPU 上高效运行检测；仅用 CPU 的检测也可行，但会限制你能运行的摄像头数量。** 把它与一台有足够存储用于录像的主机搭配。',
+        items: [
+          '**Coral TPU：** 一块 Google Coral USB 或 M.2 加速器能以低功耗处理多路摄像头的检测。',
+          '**GPU：** 独立 GPU 同样加速检测，若你已在同一台机器上运行本地 LLM 则尤为有用——参见[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home)。',
+          '**存储：** 为事件录像规划本地磁盘；有线 PoE 摄像头提供最可靠的流。',
+          '**一台机器：** Frigate 可与 Home Assistant 共用一台迷你 PC——参见[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai)。',
+        ],
+      },
+      haIntegration: {
+        id: 'ha-integration',
+        title: 'Home Assistant 集成',
+        content:
+          '**Frigate 与 Home Assistant 集成，使检测变成你可以据以做自动化的实体。** 安装 Frigate，然后在 Home Assistant 中添加 Frigate 集成。',
+        numberedItems: [
+          '运行 Frigate（作为加载项或容器），并把它指向你摄像头的 RTSP 流。',
+          '在 Frigate 配置中设置检测器（Coral/GPU）和检测区域。',
+          '在 Home Assistant 中添加 Frigate 集成，以暴露摄像头和检测实体。',
+          '在自动化和仪表盘中使用这些检测实体。',
+        ],
+      },
+      notifications: {
+        id: 'notifications',
+        title: '通知与自动化',
+        content:
+          '**用 Frigate 的检测事件发送带快照的本地通知并触发自动化——无需云端通知服务。** 如果愿意，可与本地 LLM 结合，生成自然语言告警。',
+        items: [
+          '当在特定区域检测到人物时，发送一条带快照的通知。',
+          '在检测时触发灯光或警报器，作为确定性自动化。',
+          '可选地把事件传给本地 LLM 以生成自然语言摘要——参见[用本地LLM实现AI自动化](/zh/smart-home/ai-automations-local-llm)。',
+        ],
+      },
+      cost: {
+        id: 'cost',
+        title: '与云端摄像头的成本对比',
+        content:
+          '**Frigate 用一次性硬件成本（加速器 + 存储）取代云端摄像头的持续费用。** 随时间推移，无订阅的本地配置更便宜，并让录像保持私密。',
+        columns: ['方面', '云端摄像头', 'Frigate（本地）'],
+        rows: [
+          { '方面': '隐私', '云端摄像头': '录像在厂商服务器', 'Frigate（本地）': '录像留在家中' },
+          { '方面': '订阅', '云端摄像头': 'AI + 历史的月费', 'Frigate（本地）': '无' },
+          { '方面': '检测', '云端摄像头': '云端 AI', 'Frigate（本地）': '本地 AI（Coral/GPU）' },
+          { '方面': '离线', '云端摄像头': '无网络时受限', 'Frigate（本地）': '在你的局域网上工作' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          { q: 'Frigate 需要 Coral TPU 吗？', a: '不是严格必需，但建议使用。一块 Google Coral TPU 能以高效率、低功耗处理多路摄像头的 AI 检测。GPU 也可以，仅用 CPU 的检测也可行，但会限制你能实时运行的摄像头数量。' },
+          { q: 'Frigate 能离线工作吗？', a: '能。检测、录制和 Home Assistant 通知都在你的本地网络上运行，因此 Frigate 在断网时仍可工作。只有来自家庭之外的远程查看才需要连通性。' },
+          { q: '哪些摄像头可与 Frigate 配合？', a: 'Frigate 兼容提供 RTSP 流的摄像头，这涵盖了大多数 IP 和 PoE 摄像头。有线 PoE 摄像头为持续检测提供最可靠的流。' },
+          { q: 'Frigate 有订阅吗？', a: '没有。Frigate 是开源的，在你的硬件上运行，无订阅。你为检测加速器和存储支付一次性费用，而不是持续的云端费用。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[本地智能家居完整指南](/zh/smart-home/local-smart-home-complete-guide) — 本地摄像头在堆栈中的位置',
+          '[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home) — 加速器与存储',
+          '[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai) — 用一台机器跑 Frigate + HA',
+          '[智能家居隐私风险](/zh/smart-home/smart-home-privacy-risks) — 本地摄像头所解决的问题',
+          '[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) — 跨集群：在同一台机器上运行本地模型',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '用 Frigate 的本地 AI 安防摄像头（2026）',
+      description: '用 Frigate 运行私密的 AI 安防摄像头：本地物体与人物检测，无云端、无订阅。硬件、Home Assistant 配置，以及与云端的成本对比。',
+      url: 'https://www.promptquorum.com/zh/smart-home/local-ai-security-camera',
+      inLanguage: 'zh',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'AI 安防摄像头' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'zh',
+      mainEntity: [
+        { '@type': 'Question', name: 'Frigate 需要 Coral TPU 吗？', acceptedAnswer: { '@type': 'Answer', text: '不是严格必需，但建议使用。一块 Google Coral TPU 能以高效率、低功耗处理多路摄像头的 AI 检测。GPU 也可以；仅用 CPU 可行但会限制摄像头数量。' } },
+        { '@type': 'Question', name: 'Frigate 能离线工作吗？', acceptedAnswer: { '@type': 'Answer', text: '能。检测、录制和 Home Assistant 通知都在你的本地网络上运行，因此 Frigate 在断网时仍可工作。' } },
+        { '@type': 'Question', name: '哪些摄像头可与 Frigate 配合？', acceptedAnswer: { '@type': 'Answer', text: '兼容提供 RTSP 流的摄像头，涵盖大多数 IP 和 PoE 摄像头。有线 PoE 摄像头提供最可靠的流。' } },
+        { '@type': 'Question', name: 'Frigate 有订阅吗？', acceptedAnswer: { '@type': 'Answer', text: '没有。Frigate 是开源的，在你的硬件上运行，无订阅——为加速器和存储支付一次性费用，而非持续云端费用。' } },
+      ],
+    },
+  },
 }
