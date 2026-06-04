@@ -1,0 +1,42 @@
+// Maps URL slugs to article keys for the Smart Home cluster.
+// All 25 slugs from the build plan are registered here; only those with content in
+// articles-barrel.ts will render real content — the rest fall through to the
+// "Coming Soon" template at the article page level.
+//
+// Sitemap picks up published slugs automatically via published.ts; the whole cluster
+// is sitemap-excluded until launch (see EXCLUDED_PATH_PREFIXES in sitemap.xml/route.ts).
+
+export const SMART_HOME_SLUG_TO_KEY: Record<string, string> = {
+  // Category 1 — Smart Home Foundations (general traffic doors)
+  'what-is-a-smart-home':                          'what-is-a-smart-home',
+  'history-of-smart-home-technology':              'history-of-smart-home-technology',
+  'smart-home-ecosystems-compared':                'smart-home-ecosystems-compared',
+  'smart-home-protocols-explained':                'smart-home-protocols-explained',
+  'best-smart-home-devices-2026':                  'best-smart-home-devices-2026',
+  'smart-home-for-beginners-where-to-start':       'smart-home-for-beginners-where-to-start',
+  'smart-home-privacy-risks':                      'smart-home-privacy-risks',
+
+  // Category 2 — Local-First Smart Home (the core moat)
+  'local-smart-home-complete-guide':               'local-smart-home-complete-guide',
+  'home-assistant-getting-started':                'home-assistant-getting-started',
+  'why-local-smart-home-beats-cloud':              'why-local-smart-home-beats-cloud',
+  'best-hardware-for-local-smart-home':            'best-hardware-for-local-smart-home',
+  'private-smart-home-gdpr':                       'private-smart-home-gdpr',
+  'matter-local-control-guide':                    'matter-local-control-guide',
+  'migrating-from-cloud-to-local-smart-home':      'migrating-from-cloud-to-local-smart-home',
+
+  // Category 3 — Local AI & LLMs in the Smart Home (the explosive intersection)
+  'local-llm-smart-home-complete-guide':           'local-llm-smart-home-complete-guide',
+  'home-assistant-ollama-integration':             'home-assistant-ollama-integration',
+  'local-voice-assistant-smart-home':              'local-voice-assistant-smart-home',
+  'local-whisper-home-assistant':                  'local-whisper-home-assistant',
+  'ai-automations-local-llm':                      'ai-automations-local-llm',
+  'local-ai-security-camera':                      'local-ai-security-camera',
+  'best-local-llm-models-smart-home':              'best-local-llm-models-smart-home',
+
+  // Category 4 — Decision & Comparison Pages (conversion + CTR)
+  'home-assistant-vs-alexa-vs-google':             'home-assistant-vs-alexa-vs-google',
+  'best-mini-pc-home-assistant-local-ai':          'best-mini-pc-home-assistant-local-ai',
+  'local-vs-cloud-voice-assistant':                'local-vs-cloud-voice-assistant',
+  'smart-home-without-subscriptions':              'smart-home-without-subscriptions',
+}

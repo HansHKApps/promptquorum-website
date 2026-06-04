@@ -26,6 +26,7 @@ const NOINDEX_PAGES = new Set([
 const EXCLUDED_PATH_PREFIXES = [
   '/power-local-llm',
   '/prompt-bites',
+  '/smart-home', // Smart Home cluster: noindex + sitemap-excluded until launch (Phase 3 flip)
 ]
 
 function hasRealContent(contentMap: Record<string, any>, key: string): boolean {
