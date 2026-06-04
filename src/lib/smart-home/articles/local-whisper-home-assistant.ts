@@ -184,4 +184,1102 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'Lokales Sprache-zu-Text fürs Smart Home: Whisper + HA (2026)',
+    seoTitle: 'Whisper + Home Assistant 2026: Lokales-STT-Leitfaden',
+    intro:
+      'Lokales Whisper gibt Home Assistant privates Sprache-zu-Text ohne Cloud: Sie wählen eine Whisper-Modellgröße für Ihren Kompromiss aus Genauigkeit, Tempo und Hardware und verbinden es dann über das Wyoming-Protokoll mit Assist. Dieser Leitfaden behandelt, warum lokales STT wichtig ist, die Whisper-Modellgrößen, die Wyoming-Einrichtung, den Hardware-Bedarf und wie Sie die Genauigkeit abstimmen.',
+    metaDescription:
+      'Lokales Sprache-zu-Text zu Home Assistant mit Whisper hinzufügen: Modellgrößen, Hardware-Bedarf, Genauigkeit vs Tempo und Wyoming-Einrichtung. Private, offline Transkription.',
+    twitterDescription:
+      'Privates Sprache-zu-Text für Home Assistant mit lokalem Whisper: eine Modellgröße wählen, über Wyoming verbinden, Genauigkeit abstimmen. Keine Cloud.',
+    readTime: '8 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    audience: 'Home-Assistant-Nutzer, die lokales Sprache-zu-Text konfigurieren',
+    primaryTerm: 'local Whisper Home Assistant',
+    targetKeywords: [
+      'whisper home assistant lokales stt',
+      'home assistant sprache zu text',
+      'lokales stt home assistant',
+      'faster-whisper home assistant',
+      'whisper modellgröße home assistant',
+    ],
+    leadAnswerBlock:
+      '**Lokales Whisper gibt Home Assistant privates Sprache-zu-Text: Installieren Sie das Whisper-Add-on, wählen Sie eine zu Ihrer Hardware passende Modellgröße und verbinden Sie es über das Wyoming-Protokoll mit Assist.** Kleinere Modelle sind schneller; größere sind genauer. Nichts wird an einen Cloud-Dienst gesendet.',
+    quickAnswerTop: {
+      de: {
+        question: 'Wie füge ich Home Assistant lokales Sprache-zu-Text hinzu?',
+        answer:
+          'Installieren Sie das Whisper-(faster-whisper-)Add-on in Home Assistant, wählen Sie eine Modellgröße, und es registriert sich als Wyoming-Sprache-zu-Text-Dienst. Wählen Sie es in Ihrer Assist-Pipeline. Die Transkription läuft dann vollständig auf Ihrer Hardware, sodass kein Audio das Haus verlässt.',
+        bullets: [
+          'Das Whisper-Add-on (faster-whisper) installieren',
+          'Eine Modellgröße wählen: tiny/base/small/medium/large',
+          'Es verbindet sich über das Wyoming-Protokoll mit Assist',
+          'Kleiner = schneller auf der CPU; größer = genauer',
+          'Mehrsprachige Transkription ohne Cloud',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Kurzfassung', anchor: 'tldr' },
+      { label: 'Warum lokales STT', anchor: 'why-local-stt' },
+      { label: 'Whisper-Modellgrößen', anchor: 'model-sizes' },
+      { label: 'Wyoming-Einrichtung', anchor: 'wyoming-setup' },
+      { label: 'Hardware-Bedarf', anchor: 'hardware' },
+      { label: 'Genauigkeit abstimmen', anchor: 'tuning' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Installieren Sie das Whisper-Add-on in Home Assistant, wählen Sie eine zur Hardware passende Modellgröße und verbinden Sie es für privates Sprache-zu-Text über Wyoming mit Assist.' },
+      { type: 'plain-terms', content: 'Sprache-zu-Text verwandelt Ihre gesprochenen Worte in Text, auf den der Assistent reagieren kann. Whisper ist ein offenes Spracherkennungsmodell, das lokal läuft, sodass Ihre Sprachaufnahmen anders als bei Cloud-Assistenten Ihre Hardware nie verlassen. Die Hauptwahl ist die Modellgröße: größer ist genauer, braucht aber mehr Rechenleistung.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Kurzfassung',
+        isTldr: true,
+        items: [
+          'Whisper ist ein offenes Sprache-zu-Text-Modell, das lokal läuft – kein Audio verlässt Ihre Hardware',
+          'Nutzen Sie das Whisper-(faster-whisper-)Add-on; es verbindet sich über Wyoming mit Assist',
+          'Modellgrößen reichen tiny → base → small → medium → large; größer ist genauer, langsamer',
+          'Auf reiner CPU-Hardware bevorzugen Sie tiny/base/small; eine GPU macht medium/large praktikabel',
+          'Whisper ist mehrsprachig, sodass nicht-englische Befehle ohne Cloud-Dienst transkribiert werden',
+          'Stimmen Sie Genauigkeit mit einem besseren Mikrofon und dem richtigen Modell ab, bevor Sie größer werden',
+        ],
+      },
+      whyLocalStt: {
+        id: 'why-local-stt',
+        title: 'Warum lokales Sprache-zu-Text nutzen?',
+        content:
+          '**Lokales Sprache-zu-Text hält Ihre Sprachaufnahmen auf Ihrer eigenen Hardware, sodass kein Audio an einen Dritten hochgeladen wird.** Es funktioniert auch offline und hat keine Kosten pro Anfrage.',
+        items: [
+          '**Datenschutz:** Cloud-Assistenten übertragen und behalten eventuell Aufnahmen; lokales Whisper nicht – siehe [Smart-Home-Datenschutzrisiken](/de/smart-home/smart-home-privacy-risks).',
+          '**Offline:** Die Transkription funktioniert bei Internetausfällen.',
+          '**Keine Gebühren:** Für lokale Transkription gibt es keine Nutzungsgebühr.',
+        ],
+      },
+      modelSizes: {
+        id: 'model-sizes',
+        title: 'Welche Whisper-Modellgröße sollten Sie nutzen?',
+        content:
+          '**Wählen Sie das kleinste Whisper-Modell, das auf Ihrer Hardware akzeptable Genauigkeit liefert – tiny/base/small für reine CPU, medium/large, wenn Sie eine GPU haben.** Größere Modelle verbessern die Genauigkeit bei Akzenten und verrauschtem Audio auf Kosten des Tempos.',
+        columns: ['Modell', 'Relative Genauigkeit', 'Relatives Tempo', 'Am besten für'],
+        rows: [
+          { 'Modell': 'tiny', 'Relative Genauigkeit': 'Am niedrigsten', 'Relatives Tempo': 'Am schnellsten', 'Am besten für': 'Stromsparende CPU, kurze Befehle' },
+          { 'Modell': 'base', 'Relative Genauigkeit': 'Niedrig', 'Relatives Tempo': 'Sehr schnell', 'Am besten für': 'Raspberry Pi, einfache Phrasen' },
+          { 'Modell': 'small', 'Relative Genauigkeit': 'Gut', 'Relatives Tempo': 'Schnell', 'Am besten für': 'Mini-PC-CPU, Alltagsnutzung' },
+          { 'Modell': 'medium', 'Relative Genauigkeit': 'Hoch', 'Relatives Tempo': 'Mäßig', 'Am besten für': 'GPU oder starke CPU' },
+          { 'Modell': 'large', 'Relative Genauigkeit': 'Am höchsten', 'Relatives Tempo': 'Am langsamsten', 'Am besten für': 'GPU, Akzente/laute Räume' },
+        ],
+        items: [
+          'Nutzen Sie small als Standard auf einer Mini-PC-CPU; wechseln Sie nur zu medium/large, wenn die Genauigkeit fehlt.',
+          'Nutzen Sie tiny/base auf einem Raspberry Pi, um die Latenz nutzbar zu halten.',
+        ],
+      },
+      wyomingSetup: {
+        id: 'wyoming-setup',
+        title: 'Wyoming-Einrichtung',
+        content:
+          '**Das Whisper-Add-on stellt einen Wyoming-Endpunkt bereit, den Assist für Sprache-zu-Text nutzt.** Die Einrichtung ist: installieren → Modell wählen → in der Pipeline auswählen.',
+        numberedItems: [
+          'Installieren Sie das Whisper-(faster-whisper-)Add-on aus dem Add-on-Store.',
+          'Stellen Sie die Modellgröße in der Add-on-Konfiguration ein und starten Sie es.',
+          'Das Add-on registriert sich automatisch als Wyoming-Sprache-zu-Text-Dienst.',
+          'Setzen Sie unter Einstellungen → Sprachassistenten Whisper als STT-Engine für Ihre Assist-Pipeline.',
+          'Testen Sie die Transkription über die Assist-Debug-Tools, bevor Sie Sprach-Hardware hinzufügen.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Hardware-Bedarf',
+        content:
+          '**Whisper läuft für kleine Modelle auf der CPU und profitiert bei medium/large-Modellen von einer GPU.** Passen Sie die Modellgröße an das Gerät an, das es hostet.',
+        items: [
+          'Raspberry Pi: bleiben Sie bei tiny/base für akzeptable Latenz.',
+          'Mini-PC (CPU): small funktioniert gut; medium ist möglich, aber langsamer – siehe [beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home).',
+          'Mit einer GPU/NPU: medium und large werden für hohe Genauigkeit praktikabel.',
+          'Sie können Whisper über Wyoming auf einer separaten, leistungsfähigeren Maschine betreiben, wenn Ihr Hub ein Pi ist.',
+        ],
+      },
+      tuning: {
+        id: 'tuning',
+        title: 'Genauigkeit abstimmen',
+        content:
+          '**Verbessern Sie ein gutes Mikrofon und das richtige Modell, bevor Sie zum größten Whisper greifen.** Die Audioqualität zählt bei Heimbefehlen oft mehr als die Modellgröße.',
+        items: [
+          'Nutzen Sie ein hochwertiges Mikrofon oder Sprach-Satelliten-Hardware nahe am Sprecher.',
+          'Reduzieren Sie Hintergrundgeräusche dort, wo das Mikrofon sitzt.',
+          'Stellen Sie die korrekte Sprache im Add-on ein, um Fehltranskriptionen zu vermeiden.',
+          'Erhöhen Sie die Modellgröße jeweils um eine Stufe und testen Sie erneut, statt zu large zu springen.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'Welches Whisper-Modell sollte ich für Home Assistant nutzen?', a: 'Nutzen Sie small als Standard auf einer Mini-PC-CPU, tiny oder base auf einem Raspberry Pi und medium oder large nur, wenn Sie eine GPU haben und höhere Genauigkeit bei Akzenten oder lauten Räumen brauchen. Erhöhen Sie jeweils eine Stufe und testen Sie erneut.' },
+          { q: 'Brauche ich eine GPU für lokales Whisper?', a: 'Nein für small und kleiner – die laufen auf der CPU. Eine GPU macht vor allem medium- und large-Modelle schnell genug für die Echtzeitnutzung. Sie können Whisper auch über das Wyoming-Protokoll auf eine leistungsfähigere Maschine auslagern.' },
+          { q: 'Wie genau ist lokales Whisper offline?', a: 'Die Genauigkeit ist mit dem richtigen Modell und einem guten Mikrofon stark; größere Modelle bewältigen Akzente und Rauschen besser. Für klare Heimbefehle ist das small-Modell auf einem Mini-PC meist genau genug, und es läuft vollständig offline.' },
+          { q: 'Ist lokales Whisper mehrsprachig?', a: 'Ja. Whisper unterstützt viele Sprachen, sodass nicht-englische Befehle lokal ohne Cloud-Dienst transkribiert werden. Stellen Sie die Sprache in der Add-on-Konfiguration für die besten Ergebnisse ein.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Einen vollständig lokalen Sprachassistenten bauen](/de/smart-home/local-voice-assistant-smart-home) – der vollständige Sprach-Stack, in den Whisper passt',
+          '[Ihr Smart Home mit einem lokalen LLM betreiben](/de/smart-home/local-llm-smart-home-complete-guide) – das LLM-Gehirn hinzufügen',
+          '[Beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home) – das Gerät dimensionieren, das Whisper betreibt',
+          '[Ollama installieren](/de/local-llms/how-to-install-ollama) – clusterübergreifend: Modell- und Hardware-Tiefe',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Lokales Sprache-zu-Text fürs Smart Home: Whisper + HA (2026)',
+      description: 'Lokales Sprache-zu-Text zu Home Assistant mit Whisper hinzufügen: Modellgrößen, Hardware-Bedarf, Genauigkeit vs Tempo und Wyoming-Einrichtung. Private, offline Transkription.',
+      url: 'https://www.promptquorum.com/de/smart-home/local-whisper-home-assistant',
+      inLanguage: 'de',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Sprache-zu-Text' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'de',
+      mainEntity: [
+        { '@type': 'Question', name: 'Welches Whisper-Modell sollte ich für Home Assistant nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'small als Standard auf einer Mini-PC-CPU, tiny oder base auf einem Raspberry Pi und medium oder large nur mit einer GPU, wenn Sie höhere Genauigkeit bei Akzenten oder Rauschen brauchen.' } },
+        { '@type': 'Question', name: 'Brauche ich eine GPU für lokales Whisper?', acceptedAnswer: { '@type': 'Answer', text: 'Nein für small und kleiner – die laufen auf der CPU. Eine GPU macht vor allem medium und large schnell genug für die Echtzeitnutzung. Sie können Whisper auch über Wyoming auslagern.' } },
+        { '@type': 'Question', name: 'Wie genau ist lokales Whisper offline?', acceptedAnswer: { '@type': 'Answer', text: 'Stark mit dem richtigen Modell und Mikrofon; größere Modelle bewältigen Akzente und Rauschen besser. Das small-Modell auf einem Mini-PC ist für klare Heimbefehle meist genau genug, vollständig offline.' } },
+        { '@type': 'Question', name: 'Ist lokales Whisper mehrsprachig?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Whisper unterstützt viele Sprachen, sodass nicht-englische Befehle lokal ohne Cloud transkribiert werden. Stellen Sie die Sprache in der Add-on-Konfiguration ein.' } },
+      ],
+    },
+  },
+
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'Voz-a-Texto Local para Smart Homes: Whisper + HA (2026)',
+    seoTitle: 'Whisper + Home Assistant 2026: Guía de STT Local',
+    intro:
+      'Whisper local da a Home Assistant voz-a-texto privado sin nube: eliges un tamaño de modelo Whisper para tu equilibrio de precisión, velocidad y hardware, y luego lo conectas a Assist sobre el protocolo Wyoming. Esta guía cubre por qué importa el STT local, los tamaños de modelo Whisper, la configuración de Wyoming, las necesidades de hardware y cómo ajustar la precisión.',
+    metaDescription:
+      'Añade voz-a-texto local a Home Assistant con Whisper: tamaños de modelo, necesidades de hardware, precisión vs velocidad y configuración de Wyoming. Transcripción privada y offline.',
+    twitterDescription:
+      'Voz-a-texto privado para Home Assistant con Whisper local: elige un tamaño de modelo, conecta sobre Wyoming, ajusta la precisión. Sin nube.',
+    readTime: '8 min de lectura',
+    educationalLevel: 'Intermediate',
+    audience: 'Usuarios de Home Assistant que configuran voz-a-texto local',
+    primaryTerm: 'local Whisper Home Assistant',
+    targetKeywords: [
+      'whisper home assistant stt local',
+      'home assistant voz a texto',
+      'stt local home assistant',
+      'faster-whisper home assistant',
+      'tamaño de modelo whisper home assistant',
+    ],
+    leadAnswerBlock:
+      '**Whisper local da a Home Assistant voz-a-texto privado: instala el add-on de Whisper, elige un tamaño de modelo que se ajuste a tu hardware y conéctalo a Assist sobre el protocolo Wyoming.** Los modelos más pequeños son más rápidos; los más grandes son más precisos. Nada se envía a un servicio en la nube.',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cómo añado voz-a-texto local a Home Assistant?',
+        answer:
+          'Instala el add-on de Whisper (faster-whisper) en Home Assistant, elige un tamaño de modelo, y se registra como un servicio de voz-a-texto Wyoming. Selecciónalo en tu pipeline de Assist. La transcripción corre entonces enteramente en tu hardware, así que ningún audio sale de casa.',
+        bullets: [
+          'Instala el add-on de Whisper (faster-whisper)',
+          'Elige un tamaño de modelo: tiny/base/small/medium/large',
+          'Se conecta a Assist vía el protocolo Wyoming',
+          'Más pequeño = más rápido en CPU; más grande = más preciso',
+          'Transcripción multilingüe sin nube',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Resumen', anchor: 'tldr' },
+      { label: 'Por qué STT local', anchor: 'why-local-stt' },
+      { label: 'Tamaños de modelo Whisper', anchor: 'model-sizes' },
+      { label: 'Configuración de Wyoming', anchor: 'wyoming-setup' },
+      { label: 'Necesidades de hardware', anchor: 'hardware' },
+      { label: 'Ajustar la precisión', anchor: 'tuning' },
+      { label: 'Preguntas frecuentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Instala el add-on de Whisper en Home Assistant, elige un tamaño de modelo para tu hardware y conéctalo a Assist sobre Wyoming para voz-a-texto privado.' },
+      { type: 'plain-terms', content: 'La voz-a-texto convierte tus palabras habladas en texto sobre el que el asistente puede actuar. Whisper es un modelo abierto de reconocimiento de voz que corre localmente, así que a diferencia de los asistentes en la nube, tus grabaciones de voz nunca salen de tu hardware. La elección principal es el tamaño del modelo: más grande es más preciso pero necesita más cómputo.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Resumen',
+        isTldr: true,
+        items: [
+          'Whisper es un modelo abierto de voz-a-texto que corre localmente — ningún audio sale de tu hardware',
+          'Usa el add-on de Whisper (faster-whisper); se conecta a Assist sobre Wyoming',
+          'Los tamaños de modelo van tiny → base → small → medium → large; más grande es más preciso, más lento',
+          'En hardware solo-CPU, prefiere tiny/base/small; una GPU hace práctico medium/large',
+          'Whisper es multilingüe, así que los comandos en otros idiomas se transcriben sin un servicio en la nube',
+          'Ajusta la precisión con un mejor micrófono y el modelo correcto antes de ir más grande',
+        ],
+      },
+      whyLocalStt: {
+        id: 'why-local-stt',
+        title: '¿Por qué usar voz-a-texto local?',
+        content:
+          '**La voz-a-texto local mantiene tus grabaciones de voz en tu propio hardware, así que ningún audio se sube a un tercero.** También funciona sin conexión y no tiene coste por petición.',
+        items: [
+          '**Privacidad:** los asistentes en la nube transmiten y pueden retener grabaciones; Whisper local no — consulta [riesgos de privacidad del smart home](/es/smart-home/smart-home-privacy-risks).',
+          '**Sin conexión:** la transcripción funciona durante caídas de internet.',
+          '**Sin cuotas:** no hay cargo por uso para la transcripción local.',
+        ],
+      },
+      modelSizes: {
+        id: 'model-sizes',
+        title: '¿Qué tamaño de modelo Whisper deberías usar?',
+        content:
+          '**Elige el modelo Whisper más pequeño que dé una precisión aceptable en tu hardware — tiny/base/small para solo-CPU, medium/large cuando tienes una GPU.** Los modelos más grandes mejoran la precisión con acentos y audio ruidoso a costa de la velocidad.',
+        columns: ['Modelo', 'Precisión relativa', 'Velocidad relativa', 'Mejor para'],
+        rows: [
+          { 'Modelo': 'tiny', 'Precisión relativa': 'La más baja', 'Velocidad relativa': 'La más rápida', 'Mejor para': 'CPU de bajo consumo, comandos cortos' },
+          { 'Modelo': 'base', 'Precisión relativa': 'Baja', 'Velocidad relativa': 'Muy rápida', 'Mejor para': 'Raspberry Pi, frases simples' },
+          { 'Modelo': 'small', 'Precisión relativa': 'Buena', 'Velocidad relativa': 'Rápida', 'Mejor para': 'CPU de mini PC, uso diario' },
+          { 'Modelo': 'medium', 'Precisión relativa': 'Alta', 'Velocidad relativa': 'Moderada', 'Mejor para': 'GPU o CPU potente' },
+          { 'Modelo': 'large', 'Precisión relativa': 'La más alta', 'Velocidad relativa': 'La más lenta', 'Mejor para': 'GPU, acentos/salas ruidosas' },
+        ],
+        items: [
+          'Usa small como predeterminado en una CPU de mini PC; pasa a medium/large solo si falta precisión.',
+          'Usa tiny/base en una Raspberry Pi para mantener la latencia usable.',
+        ],
+      },
+      wyomingSetup: {
+        id: 'wyoming-setup',
+        title: 'Configuración de Wyoming',
+        content:
+          '**El add-on de Whisper expone un endpoint Wyoming que Assist usa para voz-a-texto.** La configuración es instalar → elegir modelo → seleccionar en el pipeline.',
+        numberedItems: [
+          'Instala el add-on de Whisper (faster-whisper) desde la tienda de add-ons.',
+          'Fija el tamaño de modelo en la configuración del add-on e inícialo.',
+          'El add-on se registra como un servicio de voz-a-texto Wyoming automáticamente.',
+          'En Ajustes → Asistentes de voz, fija Whisper como el motor STT para tu pipeline de Assist.',
+          'Prueba la transcripción desde las herramientas de depuración de Assist antes de añadir hardware de voz.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Necesidades de hardware',
+        content:
+          '**Whisper corre en CPU para modelos pequeños y se beneficia de una GPU para modelos medium/large.** Ajusta el tamaño del modelo al equipo que lo aloja.',
+        items: [
+          'Raspberry Pi: quédate con tiny/base para una latencia aceptable.',
+          'Mini PC (CPU): small funciona bien; medium es posible pero más lento — consulta [mejor hardware para un smart home local](/es/smart-home/best-hardware-for-local-smart-home).',
+          'Con una GPU/NPU: medium y large se vuelven prácticos para alta precisión.',
+          'Puedes ejecutar Whisper en una máquina separada más potente vía Wyoming si tu hub es una Pi.',
+        ],
+      },
+      tuning: {
+        id: 'tuning',
+        title: 'Ajustar la precisión',
+        content:
+          '**Mejora un buen micrófono y el modelo correcto antes de recurrir al Whisper más grande.** La calidad del audio suele importar más que el tamaño del modelo para los comandos del hogar.',
+        items: [
+          'Usa un micrófono de calidad o hardware de satélite de voz cerca del hablante.',
+          'Reduce el ruido de fondo donde está el micrófono.',
+          'Fija el idioma correcto en el add-on para evitar transcripciones erróneas.',
+          'Sube un tamaño de modelo cada vez y vuelve a probar en vez de saltar a large.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          { q: '¿Qué modelo Whisper debería usar para Home Assistant?', a: 'Usa small como predeterminado en una CPU de mini PC, tiny o base en una Raspberry Pi, y medium o large solo si tienes una GPU y necesitas mayor precisión con acentos o salas ruidosas. Sube un tamaño cada vez y vuelve a probar.' },
+          { q: '¿Necesito una GPU para Whisper local?', a: 'No para small y por debajo — esos corren en CPU. Una GPU principalmente hace los modelos medium y large lo bastante rápidos para uso en tiempo real. También puedes descargar Whisper a una máquina más potente sobre el protocolo Wyoming.' },
+          { q: '¿Qué tan preciso es Whisper local sin conexión?', a: 'La precisión es fuerte con el modelo correcto y un buen micrófono; los modelos más grandes manejan mejor los acentos y el ruido. Para comandos del hogar claros, el modelo small en un mini PC suele ser lo bastante preciso, y corre totalmente sin conexión.' },
+          { q: '¿Es Whisper local multilingüe?', a: 'Sí. Whisper admite muchos idiomas, así que los comandos en otros idiomas se transcriben localmente sin ningún servicio en la nube. Fija el idioma en la configuración del add-on para mejores resultados.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Montar un asistente de voz totalmente local](/es/smart-home/local-voice-assistant-smart-home) — el stack de voz completo en el que encaja Whisper',
+          '[Ejecutar tu smart home con un LLM local](/es/smart-home/local-llm-smart-home-complete-guide) — añadir el cerebro LLM',
+          '[Mejor hardware para un smart home local](/es/smart-home/best-hardware-for-local-smart-home) — dimensionar el equipo que ejecuta Whisper',
+          '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) — entre clústeres: profundidad de modelo y hardware',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Voz-a-Texto Local para Smart Homes: Whisper + HA (2026)',
+      description: 'Añade voz-a-texto local a Home Assistant con Whisper: tamaños de modelo, necesidades de hardware, precisión vs velocidad y configuración de Wyoming. Transcripción privada y offline.',
+      url: 'https://www.promptquorum.com/es/smart-home/local-whisper-home-assistant',
+      inLanguage: 'es',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Voz-a-texto' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'es',
+      mainEntity: [
+        { '@type': 'Question', name: '¿Qué modelo Whisper debería usar para Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'small como predeterminado en una CPU de mini PC, tiny o base en una Raspberry Pi, y medium o large solo con una GPU cuando necesitas mayor precisión con acentos o ruido.' } },
+        { '@type': 'Question', name: '¿Necesito una GPU para Whisper local?', acceptedAnswer: { '@type': 'Answer', text: 'No para small y por debajo — esos corren en CPU. Una GPU principalmente hace medium y large lo bastante rápidos para uso en tiempo real. También puedes descargar Whisper sobre Wyoming.' } },
+        { '@type': 'Question', name: '¿Qué tan preciso es Whisper local sin conexión?', acceptedAnswer: { '@type': 'Answer', text: 'Fuerte con el modelo correcto y un buen micrófono; los modelos más grandes manejan mejor acentos y ruido. El modelo small en un mini PC suele ser lo bastante preciso para comandos del hogar claros, totalmente sin conexión.' } },
+        { '@type': 'Question', name: '¿Es Whisper local multilingüe?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Whisper admite muchos idiomas, así que los comandos en otros idiomas se transcriben localmente sin nube. Fija el idioma en la configuración del add-on.' } },
+      ],
+    },
+  },
+
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'Reconnaissance Vocale Locale pour la Maison Connectée : Whisper + HA (2026)',
+    seoTitle: 'Whisper + Home Assistant 2026 : Guide STT Local',
+    intro:
+      'Whisper local donne à Home Assistant une reconnaissance vocale privée sans cloud : vous choisissez une taille de modèle Whisper selon votre compromis précision, vitesse et matériel, puis vous le reliez à Assist via le protocole Wyoming. Ce guide couvre pourquoi la STT locale compte, les tailles de modèle Whisper, la configuration Wyoming, les besoins matériels et comment régler la précision.',
+    metaDescription:
+      'Ajoutez la reconnaissance vocale locale à Home Assistant avec Whisper : tailles de modèle, besoins matériels, précision vs vitesse et configuration Wyoming. Transcription privée et hors ligne.',
+    twitterDescription:
+      'Reconnaissance vocale privée pour Home Assistant avec Whisper local : choisir une taille de modèle, relier via Wyoming, régler la précision. Sans cloud.',
+    readTime: '8 min de lecture',
+    educationalLevel: 'Intermediate',
+    audience: 'Utilisateurs de Home Assistant configurant la reconnaissance vocale locale',
+    primaryTerm: 'local Whisper Home Assistant',
+    targetKeywords: [
+      'whisper home assistant stt local',
+      'home assistant reconnaissance vocale',
+      'stt local home assistant',
+      'faster-whisper home assistant',
+      'taille de modèle whisper home assistant',
+    ],
+    leadAnswerBlock:
+      '**Whisper local donne à Home Assistant une reconnaissance vocale privée : installez l\'add-on Whisper, choisissez une taille de modèle adaptée à votre matériel et reliez-le à Assist via le protocole Wyoming.** Les modèles plus petits sont plus rapides ; les plus grands sont plus précis. Rien n\'est envoyé à un service cloud.',
+    quickAnswerTop: {
+      fr: {
+        question: 'Comment ajouter la reconnaissance vocale locale à Home Assistant ?',
+        answer:
+          'Installez l\'add-on Whisper (faster-whisper) dans Home Assistant, choisissez une taille de modèle, et il s\'enregistre comme service de reconnaissance vocale Wyoming. Sélectionnez-le dans votre pipeline Assist. La transcription tourne alors entièrement sur votre matériel, donc aucun audio ne quitte la maison.',
+        bullets: [
+          'Installez l\'add-on Whisper (faster-whisper)',
+          'Choisissez une taille de modèle : tiny/base/small/medium/large',
+          'Il se relie à Assist via le protocole Wyoming',
+          'Plus petit = plus rapide sur CPU ; plus grand = plus précis',
+          'Transcription multilingue sans cloud',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'En bref', anchor: 'tldr' },
+      { label: 'Pourquoi la STT locale', anchor: 'why-local-stt' },
+      { label: 'Tailles de modèle Whisper', anchor: 'model-sizes' },
+      { label: 'Configuration Wyoming', anchor: 'wyoming-setup' },
+      { label: 'Besoins matériels', anchor: 'hardware' },
+      { label: 'Régler la précision', anchor: 'tuning' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Installez l\'add-on Whisper dans Home Assistant, choisissez une taille de modèle pour votre matériel et reliez-le à Assist via Wyoming pour une reconnaissance vocale privée.' },
+      { type: 'plain-terms', content: 'La reconnaissance vocale transforme vos paroles en texte sur lequel l\'assistant peut agir. Whisper est un modèle ouvert de reconnaissance vocale qui tourne localement, donc contrairement aux assistants cloud, vos enregistrements vocaux ne quittent jamais votre matériel. Le choix principal est la taille du modèle : plus grand est plus précis mais demande plus de calcul.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'En bref',
+        isTldr: true,
+        items: [
+          'Whisper est un modèle ouvert de reconnaissance vocale qui tourne localement — aucun audio ne quitte votre matériel',
+          'Utilisez l\'add-on Whisper (faster-whisper) ; il se relie à Assist via Wyoming',
+          'Les tailles de modèle vont tiny → base → small → medium → large ; plus grand est plus précis, plus lent',
+          'Sur du matériel CPU seul, préférez tiny/base/small ; un GPU rend medium/large pratique',
+          'Whisper est multilingue, donc les commandes non anglaises se transcrivent sans service cloud',
+          'Réglez la précision avec un meilleur micro et le bon modèle avant de passer à plus grand',
+        ],
+      },
+      whyLocalStt: {
+        id: 'why-local-stt',
+        title: 'Pourquoi utiliser la reconnaissance vocale locale ?',
+        content:
+          '**La reconnaissance vocale locale garde vos enregistrements vocaux sur votre propre matériel, donc aucun audio n\'est téléversé vers un tiers.** Elle fonctionne aussi hors ligne et n\'a aucun coût par requête.',
+        items: [
+          '**Confidentialité :** les assistants cloud transmettent et peuvent conserver les enregistrements ; Whisper local non — voir [risques de confidentialité de la maison connectée](/fr/smart-home/smart-home-privacy-risks).',
+          '**Hors ligne :** la transcription fonctionne pendant les coupures internet.',
+          '**Sans frais :** il n\'y a aucun coût d\'utilisation pour la transcription locale.',
+        ],
+      },
+      modelSizes: {
+        id: 'model-sizes',
+        title: 'Quelle taille de modèle Whisper choisir ?',
+        content:
+          '**Choisissez le plus petit modèle Whisper qui donne une précision acceptable sur votre matériel — tiny/base/small pour CPU seul, medium/large quand vous avez un GPU.** Les plus grands modèles améliorent la précision sur les accents et l\'audio bruyant au prix de la vitesse.',
+        columns: ['Modèle', 'Précision relative', 'Vitesse relative', 'Idéal pour'],
+        rows: [
+          { 'Modèle': 'tiny', 'Précision relative': 'La plus faible', 'Vitesse relative': 'La plus rapide', 'Idéal pour': 'CPU basse consommation, commandes courtes' },
+          { 'Modèle': 'base', 'Précision relative': 'Faible', 'Vitesse relative': 'Très rapide', 'Idéal pour': 'Raspberry Pi, phrases simples' },
+          { 'Modèle': 'small', 'Précision relative': 'Bonne', 'Vitesse relative': 'Rapide', 'Idéal pour': 'CPU de mini-PC, usage quotidien' },
+          { 'Modèle': 'medium', 'Précision relative': 'Élevée', 'Vitesse relative': 'Modérée', 'Idéal pour': 'GPU ou CPU puissant' },
+          { 'Modèle': 'large', 'Précision relative': 'La plus élevée', 'Vitesse relative': 'La plus lente', 'Idéal pour': 'GPU, accents/pièces bruyantes' },
+        ],
+        items: [
+          'Utilisez small par défaut sur un CPU de mini-PC ; passez à medium/large seulement si la précision manque.',
+          'Utilisez tiny/base sur une Raspberry Pi pour garder une latence utilisable.',
+        ],
+      },
+      wyomingSetup: {
+        id: 'wyoming-setup',
+        title: 'Configuration Wyoming',
+        content:
+          '**L\'add-on Whisper expose un point d\'accès Wyoming que Assist utilise pour la reconnaissance vocale.** La configuration est : installer → choisir le modèle → sélectionner dans le pipeline.',
+        numberedItems: [
+          'Installez l\'add-on Whisper (faster-whisper) depuis le magasin d\'add-ons.',
+          'Définissez la taille du modèle dans la configuration de l\'add-on et démarrez-le.',
+          'L\'add-on s\'enregistre automatiquement comme service de reconnaissance vocale Wyoming.',
+          'Dans Paramètres → Assistants vocaux, définissez Whisper comme moteur STT pour votre pipeline Assist.',
+          'Testez la transcription depuis les outils de débogage d\'Assist avant d\'ajouter du matériel vocal.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Besoins matériels',
+        content:
+          '**Whisper tourne sur CPU pour les petits modèles et profite d\'un GPU pour les modèles medium/large.** Adaptez la taille du modèle à la machine qui l\'héberge.',
+        items: [
+          'Raspberry Pi : restez sur tiny/base pour une latence acceptable.',
+          'Mini-PC (CPU) : small fonctionne bien ; medium est possible mais plus lent — voir [meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home).',
+          'Avec un GPU/NPU : medium et large deviennent pratiques pour une haute précision.',
+          'Vous pouvez exécuter Whisper sur une machine séparée plus puissante via Wyoming si votre hub est une Pi.',
+        ],
+      },
+      tuning: {
+        id: 'tuning',
+        title: 'Régler la précision',
+        content:
+          '**Améliorez un bon micro et le bon modèle avant de recourir au plus gros Whisper.** La qualité audio compte souvent plus que la taille du modèle pour les commandes domestiques.',
+        items: [
+          'Utilisez un micro de qualité ou du matériel de satellite vocal près du locuteur.',
+          'Réduisez le bruit de fond là où se trouve le micro.',
+          'Définissez la bonne langue dans l\'add-on pour éviter les mauvaises transcriptions.',
+          'Montez d\'une taille de modèle à la fois et retestez plutôt que de sauter à large.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'Quel modèle Whisper utiliser pour Home Assistant ?', a: 'Utilisez small par défaut sur un CPU de mini-PC, tiny ou base sur une Raspberry Pi, et medium ou large seulement si vous avez un GPU et avez besoin d\'une meilleure précision sur les accents ou les pièces bruyantes. Montez d\'une taille à la fois et retestez.' },
+          { q: 'Ai-je besoin d\'un GPU pour Whisper local ?', a: 'Non pour small et en dessous — ceux-ci tournent sur CPU. Un GPU rend surtout les modèles medium et large assez rapides pour un usage en temps réel. Vous pouvez aussi déporter Whisper sur une machine plus puissante via le protocole Wyoming.' },
+          { q: 'Quelle est la précision de Whisper local hors ligne ?', a: 'La précision est forte avec le bon modèle et un bon micro ; les plus grands modèles gèrent mieux les accents et le bruit. Pour des commandes domestiques claires, le modèle small sur un mini-PC est généralement assez précis, et il tourne entièrement hors ligne.' },
+          { q: 'Whisper local est-il multilingue ?', a: 'Oui. Whisper prend en charge de nombreuses langues, donc les commandes non anglaises se transcrivent localement sans aucun service cloud. Définissez la langue dans la configuration de l\'add-on pour de meilleurs résultats.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Construire un assistant vocal entièrement local](/fr/smart-home/local-voice-assistant-smart-home) — la pile vocale complète dans laquelle Whisper s\'insère',
+          '[Faire tourner votre maison connectée sur un LLM local](/fr/smart-home/local-llm-smart-home-complete-guide) — ajouter le cerveau LLM',
+          '[Meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home) — dimensionner la machine qui exécute Whisper',
+          '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) — inter-clusters : profondeur de modèle et matériel',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Reconnaissance Vocale Locale pour la Maison Connectée : Whisper + HA (2026)',
+      description: 'Ajoutez la reconnaissance vocale locale à Home Assistant avec Whisper : tailles de modèle, besoins matériels, précision vs vitesse et configuration Wyoming. Transcription privée et hors ligne.',
+      url: 'https://www.promptquorum.com/fr/smart-home/local-whisper-home-assistant',
+      inLanguage: 'fr',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Reconnaissance vocale' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'fr',
+      mainEntity: [
+        { '@type': 'Question', name: 'Quel modèle Whisper utiliser pour Home Assistant ?', acceptedAnswer: { '@type': 'Answer', text: 'small par défaut sur un CPU de mini-PC, tiny ou base sur une Raspberry Pi, et medium ou large seulement avec un GPU quand vous avez besoin d\'une meilleure précision sur les accents ou le bruit.' } },
+        { '@type': 'Question', name: 'Ai-je besoin d\'un GPU pour Whisper local ?', acceptedAnswer: { '@type': 'Answer', text: 'Non pour small et en dessous — ceux-ci tournent sur CPU. Un GPU rend surtout medium et large assez rapides pour un usage en temps réel. Vous pouvez aussi déporter Whisper via Wyoming.' } },
+        { '@type': 'Question', name: 'Quelle est la précision de Whisper local hors ligne ?', acceptedAnswer: { '@type': 'Answer', text: 'Forte avec le bon modèle et un bon micro ; les plus grands modèles gèrent mieux les accents et le bruit. Le modèle small sur un mini-PC est généralement assez précis pour des commandes claires, entièrement hors ligne.' } },
+        { '@type': 'Question', name: 'Whisper local est-il multilingue ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Whisper prend en charge de nombreuses langues, donc les commandes non anglaises se transcrivent localement sans cloud. Définissez la langue dans la configuration de l\'add-on.' } },
+      ],
+    },
+  },
+
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'スマートホーム向けのローカル音声認識：Whisper + HA（2026）',
+    seoTitle: 'Whisper + Home Assistant 2026：ローカルSTTガイド',
+    intro:
+      'ローカル Whisper は、Home Assistant にクラウドなしのプライベートな音声認識を与えます：精度・速度・ハードウェアの兼ね合いで Whisper のモデルサイズを選び、Wyoming プロトコルで Assist につなぎます。本ガイドは、ローカル STT がなぜ重要か、Whisper のモデルサイズ、Wyoming の設定、ハードウェア要件、そして精度の調整方法を扱います。',
+    metaDescription:
+      'Whisper で Home Assistant にローカル音声認識を追加：モデルサイズ、ハードウェア要件、精度対速度、Wyoming 設定。プライベートでオフラインの文字起こし。',
+    twitterDescription:
+      'ローカル Whisper で Home Assistant にプライベートな音声認識を：モデルサイズを選び、Wyoming でつなぎ、精度を調整。クラウドなし。',
+    readTime: '8分で読める',
+    educationalLevel: 'Intermediate',
+    audience: 'ローカル音声認識を構成する Home Assistant ユーザー',
+    primaryTerm: 'local Whisper Home Assistant',
+    targetKeywords: [
+      'whisper home assistant ローカルstt',
+      'home assistant 音声認識',
+      'ローカルstt home assistant',
+      'faster-whisper home assistant',
+      'whisper モデルサイズ home assistant',
+    ],
+    leadAnswerBlock:
+      '**ローカル Whisper は Home Assistant にプライベートな音声認識を与えます：Whisper アドオンをインストールし、ハードウェアに合うモデルサイズを選び、Wyoming プロトコルで Assist につなぎます。** 小さいモデルほど速く、大きいモデルほど高精度。クラウドサービスへは何も送られません。',
+    quickAnswerTop: {
+      ja: {
+        question: 'Home Assistant にローカル音声認識をどう追加しますか？',
+        answer:
+          'Home Assistant に Whisper（faster-whisper）アドオンをインストールし、モデルサイズを選ぶと、Wyoming の音声認識サービスとして登録されます。Assist パイプラインでそれを選びます。文字起こしは完全にあなたのハードウェアで動くため、音声は家を出ません。',
+        bullets: [
+          'Whisper（faster-whisper）アドオンをインストール',
+          'モデルサイズを選ぶ：tiny/base/small/medium/large',
+          'Wyoming プロトコルで Assist につながる',
+          '小さいほど CPU で速く；大きいほど高精度',
+          'クラウドなしの多言語文字起こし',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '要点まとめ', anchor: 'tldr' },
+      { label: 'なぜローカル STT か', anchor: 'why-local-stt' },
+      { label: 'Whisper のモデルサイズ', anchor: 'model-sizes' },
+      { label: 'Wyoming の設定', anchor: 'wyoming-setup' },
+      { label: 'ハードウェア要件', anchor: 'hardware' },
+      { label: '精度の調整', anchor: 'tuning' },
+      { label: 'よくある質問', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Home Assistant に Whisper アドオンをインストールし、ハードウェアに合うモデルサイズを選び、プライベートな音声認識のため Wyoming で Assist につなぎます。' },
+      { type: 'plain-terms', content: '音声認識は、あなたの話した言葉を、アシスタントが行動できるテキストに変えます。Whisper はローカルで動くオープンな音声認識モデルなので、クラウドアシスタントと違い、あなたの音声録音はハードウェアを決して離れません。主な選択はモデルサイズで、大きいほど高精度ですがより多くの計算を要します。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '要点まとめ',
+        isTldr: true,
+        items: [
+          'Whisper はローカルで動くオープンな音声認識モデル——音声はあなたのハードウェアを出ない',
+          'Whisper（faster-whisper）アドオンを使う；Wyoming で Assist につながる',
+          'モデルサイズは tiny → base → small → medium → large；大きいほど高精度・低速',
+          'CPU のみのハードウェアでは tiny/base/small を；GPU があれば medium/large が実用的',
+          'Whisper は多言語対応なので、英語以外の命令もクラウドサービスなしで文字起こしされる',
+          '大きくする前に、より良いマイクと適切なモデルで精度を調整する',
+        ],
+      },
+      whyLocalStt: {
+        id: 'why-local-stt',
+        title: 'なぜローカル音声認識を使うのか？',
+        content:
+          '**ローカル音声認識はあなたの音声録音を自分のハードウェアに保つため、音声が第三者へアップロードされません。** オフラインでも動き、リクエストごとのコストもありません。',
+        items: [
+          '**プライバシー：** クラウドアシスタントは録音を送信し保持し得ますが、ローカル Whisper はしません——[スマートホームのプライバシーリスク](/ja/smart-home/smart-home-privacy-risks)を参照。',
+          '**オフライン：** 文字起こしはインターネット障害中も動きます。',
+          '**料金なし：** ローカルの文字起こしに利用料はありません。',
+        ],
+      },
+      modelSizes: {
+        id: 'model-sizes',
+        title: 'どの Whisper モデルサイズを使うべきか？',
+        content:
+          '**あなたのハードウェアで許容できる精度を出す最小の Whisper モデルを選びましょう——CPU のみなら tiny/base/small、GPU があるなら medium/large。** 大きなモデルは、速度を犠牲に、アクセントや雑音の多い音声で精度を上げます。',
+        columns: ['モデル', '相対精度', '相対速度', '最適な用途'],
+        rows: [
+          { 'モデル': 'tiny', '相対精度': '最低', '相対速度': '最速', '最適な用途': '低消費電力CPU、短い命令' },
+          { 'モデル': 'base', '相対精度': '低', '相対速度': '非常に速い', '最適な用途': 'Raspberry Pi、簡単なフレーズ' },
+          { 'モデル': 'small', '相対精度': '良好', '相対速度': '速い', '最適な用途': 'ミニPCのCPU、日常利用' },
+          { 'モデル': 'medium', '相対精度': '高い', '相対速度': '中程度', '最適な用途': 'GPU または強力なCPU' },
+          { 'モデル': 'large', '相対精度': '最高', '相対速度': '最も遅い', '最適な用途': 'GPU、アクセント/騒がしい部屋' },
+        ],
+        items: [
+          'ミニPCのCPUでは small を既定にし、精度が足りない場合のみ medium/large へ移ります。',
+          'Raspberry Pi ではレイテンシを使える範囲に保つため tiny/base を使います。',
+        ],
+      },
+      wyomingSetup: {
+        id: 'wyoming-setup',
+        title: 'Wyoming の設定',
+        content:
+          '**Whisper アドオンは、Assist が音声認識に使う Wyoming エンドポイントを公開します。** 設定は、インストール → モデルを選ぶ → パイプラインで選択、です。',
+        numberedItems: [
+          'アドオンストアから Whisper（faster-whisper）アドオンをインストールします。',
+          'アドオン設定でモデルサイズを設定し、起動します。',
+          'アドオンは自動的に Wyoming の音声認識サービスとして登録されます。',
+          '設定 → 音声アシスタント で、Assist パイプラインの STT エンジンに Whisper を設定します。',
+          '音声ハードウェアを追加する前に、Assist のデバッグツールから文字起こしをテストします。',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'ハードウェア要件',
+        content:
+          '**Whisper は小型モデルなら CPU で動き、medium/large モデルでは GPU が役立ちます。** モデルサイズを、それをホストする機器に合わせましょう。',
+        items: [
+          'Raspberry Pi：許容できるレイテンシのため tiny/base にとどめます。',
+          'ミニPC（CPU）：small はよく動きます；medium は可能ですがより遅い——[ローカルスマートホームに最適なハードウェア](/ja/smart-home/best-hardware-for-local-smart-home)を参照。',
+          'GPU/NPU があれば：medium と large が高精度に実用的になります。',
+          'ハブが Pi なら、Wyoming 経由で Whisper を別のより強力なマシンで動かせます。',
+        ],
+      },
+      tuning: {
+        id: 'tuning',
+        title: '精度の調整',
+        content:
+          '**最大の Whisper に手を伸ばす前に、良いマイクと適切なモデルを整えましょう。** 家庭の命令では、モデルサイズより音質が重要なことが多いです。',
+        items: [
+          '話者の近くに、質の良いマイクや音声サテライト機器を使います。',
+          'マイクのある場所の背景雑音を減らします。',
+          '誤認識を避けるため、アドオンで正しい言語を設定します。',
+          'large に飛ばず、モデルサイズを一段ずつ上げて再テストします。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          { q: 'Home Assistant にどの Whisper モデルを使うべきですか？', a: 'ミニPCのCPUでは small を既定に、Raspberry Pi では tiny か base を、そして GPU があり、アクセントや騒がしい部屋でより高い精度が必要な場合のみ medium か large を使いましょう。一段ずつ上げて再テストします。' },
+          { q: 'ローカル Whisper に GPU は必要ですか？', a: 'small 以下には不要です——それらは CPU で動きます。GPU は主に medium と large をリアルタイム利用に十分な速さにします。Wyoming プロトコルで Whisper をより強力なマシンに逃がすこともできます。' },
+          { q: 'ローカル Whisper はオフラインでどれくらい正確ですか？', a: '適切なモデルと良いマイクなら精度は高く、大きなモデルほどアクセントや雑音をうまく扱います。明瞭な家庭の命令には、ミニPC上の small モデルで通常十分な精度で、完全にオフラインで動きます。' },
+          { q: 'ローカル Whisper は多言語対応ですか？', a: 'はい。Whisper は多くの言語に対応するため、英語以外の命令もクラウドサービスなしでローカルに文字起こしされます。最良の結果のため、アドオン設定で言語を設定しましょう。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[完全ローカルの音声アシスタントを作る](/ja/smart-home/local-voice-assistant-smart-home) — Whisper が収まる完全な音声スタック',
+          '[ローカルLLMでスマートホームを動かす](/ja/smart-home/local-llm-smart-home-complete-guide) — LLM の頭脳を加える',
+          '[ローカルスマートホームに最適なハードウェア](/ja/smart-home/best-hardware-for-local-smart-home) — Whisper を動かす機器のサイズ選び',
+          '[Ollama のインストール方法](/ja/local-llms/how-to-install-ollama) — クラスター横断：モデルとハードウェアの詳細',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'スマートホーム向けのローカル音声認識：Whisper + HA（2026）',
+      description: 'Whisper で Home Assistant にローカル音声認識を追加：モデルサイズ、ハードウェア要件、精度対速度、Wyoming 設定。プライベートでオフラインの文字起こし。',
+      url: 'https://www.promptquorum.com/ja/smart-home/local-whisper-home-assistant',
+      inLanguage: 'ja',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: '音声認識' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ja',
+      mainEntity: [
+        { '@type': 'Question', name: 'Home Assistant にどの Whisper モデルを使うべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'ミニPCのCPUでは small を既定に、Raspberry Pi では tiny か base、そして GPU があり高い精度が必要なときのみ medium か large を。一段ずつ上げて再テストします。' } },
+        { '@type': 'Question', name: 'ローカル Whisper に GPU は必要ですか？', acceptedAnswer: { '@type': 'Answer', text: 'small 以下には不要で、CPU で動きます。GPU は主に medium と large をリアルタイム利用に十分速くします。Wyoming で別マシンに逃がすこともできます。' } },
+        { '@type': 'Question', name: 'ローカル Whisper はオフラインでどれくらい正確ですか？', acceptedAnswer: { '@type': 'Answer', text: '適切なモデルと良いマイクなら高精度で、大きなモデルほどアクセントや雑音に強いです。明瞭な命令にはミニPC上の small で通常十分、完全にオフラインです。' } },
+        { '@type': 'Question', name: 'ローカル Whisper は多言語対応ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。多くの言語に対応するため、英語以外もクラウドなしでローカルに文字起こしされます。アドオン設定で言語を設定しましょう。' } },
+      ],
+    },
+  },
+
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'Voz-para-Texto Local para Casas Inteligentes: Whisper + HA (2026)',
+    seoTitle: 'Whisper + Home Assistant 2026: Guia de STT Local',
+    intro:
+      'O Whisper local dá ao Home Assistant voz-para-texto privado sem nuvem: você escolhe um tamanho de modelo Whisper para o seu equilíbrio de precisão, velocidade e hardware, e depois o conecta ao Assist sobre o protocolo Wyoming. Este guia cobre por que o STT local importa, os tamanhos de modelo Whisper, a configuração do Wyoming, as necessidades de hardware e como ajustar a precisão.',
+    metaDescription:
+      'Adicione voz-para-texto local ao Home Assistant com o Whisper: tamanhos de modelo, necessidades de hardware, precisão vs velocidade e configuração do Wyoming. Transcrição privada e offline.',
+    twitterDescription:
+      'Voz-para-texto privado para o Home Assistant com Whisper local: escolha um tamanho de modelo, conecte sobre Wyoming, ajuste a precisão. Sem nuvem.',
+    readTime: '8 min de leitura',
+    educationalLevel: 'Intermediate',
+    audience: 'Usuários do Home Assistant configurando voz-para-texto local',
+    primaryTerm: 'local Whisper Home Assistant',
+    targetKeywords: [
+      'whisper home assistant stt local',
+      'home assistant voz para texto',
+      'stt local home assistant',
+      'faster-whisper home assistant',
+      'tamanho de modelo whisper home assistant',
+    ],
+    leadAnswerBlock:
+      '**O Whisper local dá ao Home Assistant voz-para-texto privado: instale o add-on do Whisper, escolha um tamanho de modelo que caiba no seu hardware e conecte-o ao Assist sobre o protocolo Wyoming.** Modelos menores são mais rápidos; modelos maiores são mais precisos. Nada é enviado a um serviço na nuvem.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Como adiciono voz-para-texto local ao Home Assistant?',
+        answer:
+          'Instale o add-on do Whisper (faster-whisper) no Home Assistant, escolha um tamanho de modelo, e ele se registra como um serviço de voz-para-texto Wyoming. Selecione-o no seu pipeline do Assist. A transcrição então roda inteiramente no seu hardware, então nenhum áudio sai de casa.',
+        bullets: [
+          'Instale o add-on do Whisper (faster-whisper)',
+          'Escolha um tamanho de modelo: tiny/base/small/medium/large',
+          'Ele se conecta ao Assist via o protocolo Wyoming',
+          'Menor = mais rápido na CPU; maior = mais preciso',
+          'Transcrição multilíngue sem nuvem',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Resumo', anchor: 'tldr' },
+      { label: 'Por que STT local', anchor: 'why-local-stt' },
+      { label: 'Tamanhos de modelo Whisper', anchor: 'model-sizes' },
+      { label: 'Configuração do Wyoming', anchor: 'wyoming-setup' },
+      { label: 'Necessidades de hardware', anchor: 'hardware' },
+      { label: 'Ajustar a precisão', anchor: 'tuning' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Instale o add-on do Whisper no Home Assistant, escolha um tamanho de modelo para o seu hardware e conecte-o ao Assist sobre Wyoming para voz-para-texto privado.' },
+      { type: 'plain-terms', content: 'A voz-para-texto transforma suas palavras faladas em texto sobre o qual o assistente pode agir. O Whisper é um modelo aberto de reconhecimento de fala que roda localmente, então, ao contrário dos assistentes na nuvem, suas gravações de voz nunca saem do seu hardware. A escolha principal é o tamanho do modelo: maior é mais preciso, mas precisa de mais processamento.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Resumo',
+        isTldr: true,
+        items: [
+          'O Whisper é um modelo aberto de voz-para-texto que roda localmente — nenhum áudio sai do seu hardware',
+          'Use o add-on do Whisper (faster-whisper); ele se conecta ao Assist sobre Wyoming',
+          'Os tamanhos de modelo vão tiny → base → small → medium → large; maior é mais preciso, mais lento',
+          'Em hardware só-CPU, prefira tiny/base/small; uma GPU torna medium/large práticos',
+          'O Whisper é multilíngue, então comandos em outros idiomas são transcritos sem um serviço na nuvem',
+          'Ajuste a precisão com um microfone melhor e o modelo certo antes de ir maior',
+        ],
+      },
+      whyLocalStt: {
+        id: 'why-local-stt',
+        title: 'Por que usar voz-para-texto local?',
+        content:
+          '**A voz-para-texto local mantém suas gravações de voz no seu próprio hardware, então nenhum áudio é enviado a um terceiro.** Ela também funciona offline e não tem custo por requisição.',
+        items: [
+          '**Privacidade:** assistentes na nuvem transmitem e podem reter gravações; o Whisper local não — veja [riscos de privacidade da casa inteligente](/pt/smart-home/smart-home-privacy-risks).',
+          '**Offline:** a transcrição funciona durante quedas de internet.',
+          '**Sem taxas:** não há cobrança por uso para a transcrição local.',
+        ],
+      },
+      modelSizes: {
+        id: 'model-sizes',
+        title: 'Que tamanho de modelo Whisper você deve usar?',
+        content:
+          '**Escolha o menor modelo Whisper que dê uma precisão aceitável no seu hardware — tiny/base/small para só-CPU, medium/large quando você tem uma GPU.** Modelos maiores melhoram a precisão em sotaques e áudio ruidoso ao custo da velocidade.',
+        columns: ['Modelo', 'Precisão relativa', 'Velocidade relativa', 'Melhor para'],
+        rows: [
+          { 'Modelo': 'tiny', 'Precisão relativa': 'A mais baixa', 'Velocidade relativa': 'A mais rápida', 'Melhor para': 'CPU de baixo consumo, comandos curtos' },
+          { 'Modelo': 'base', 'Precisão relativa': 'Baixa', 'Velocidade relativa': 'Muito rápida', 'Melhor para': 'Raspberry Pi, frases simples' },
+          { 'Modelo': 'small', 'Precisão relativa': 'Boa', 'Velocidade relativa': 'Rápida', 'Melhor para': 'CPU de mini PC, uso diário' },
+          { 'Modelo': 'medium', 'Precisão relativa': 'Alta', 'Velocidade relativa': 'Moderada', 'Melhor para': 'GPU ou CPU forte' },
+          { 'Modelo': 'large', 'Precisão relativa': 'A mais alta', 'Velocidade relativa': 'A mais lenta', 'Melhor para': 'GPU, sotaques/salas ruidosas' },
+        ],
+        items: [
+          'Use small como padrão em uma CPU de mini PC; passe para medium/large só se faltar precisão.',
+          'Use tiny/base em uma Raspberry Pi para manter a latência utilizável.',
+        ],
+      },
+      wyomingSetup: {
+        id: 'wyoming-setup',
+        title: 'Configuração do Wyoming',
+        content:
+          '**O add-on do Whisper expõe um endpoint Wyoming que o Assist usa para voz-para-texto.** A configuração é instalar → escolher modelo → selecionar no pipeline.',
+        numberedItems: [
+          'Instale o add-on do Whisper (faster-whisper) da loja de add-ons.',
+          'Defina o tamanho do modelo na configuração do add-on e inicie-o.',
+          'O add-on se registra como um serviço de voz-para-texto Wyoming automaticamente.',
+          'Em Configurações → Assistentes de voz, defina o Whisper como o motor STT do seu pipeline do Assist.',
+          'Teste a transcrição pelas ferramentas de depuração do Assist antes de adicionar hardware de voz.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Necessidades de hardware',
+        content:
+          '**O Whisper roda na CPU para modelos pequenos e se beneficia de uma GPU para modelos medium/large.** Ajuste o tamanho do modelo à máquina que o hospeda.',
+        items: [
+          'Raspberry Pi: fique com tiny/base para uma latência aceitável.',
+          'Mini PC (CPU): small funciona bem; medium é possível mas mais lento — veja [melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home).',
+          'Com uma GPU/NPU: medium e large se tornam práticos para alta precisão.',
+          'Você pode rodar o Whisper em uma máquina separada mais potente via Wyoming se o seu hub for uma Pi.',
+        ],
+      },
+      tuning: {
+        id: 'tuning',
+        title: 'Ajustar a precisão',
+        content:
+          '**Melhore um bom microfone e o modelo certo antes de recorrer ao maior Whisper.** A qualidade do áudio muitas vezes importa mais que o tamanho do modelo para comandos do lar.',
+        items: [
+          'Use um microfone de qualidade ou hardware de satélite de voz perto de quem fala.',
+          'Reduza o ruído de fundo onde o microfone fica.',
+          'Defina o idioma correto no add-on para evitar transcrições erradas.',
+          'Suba um tamanho de modelo por vez e teste de novo em vez de pular para large.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'Qual modelo Whisper devo usar para o Home Assistant?', a: 'Use small como padrão em uma CPU de mini PC, tiny ou base em uma Raspberry Pi, e medium ou large só se você tiver uma GPU e precisar de maior precisão com sotaques ou salas ruidosas. Suba um tamanho por vez e teste de novo.' },
+          { q: 'Preciso de uma GPU para o Whisper local?', a: 'Não para small e abaixo — esses rodam na CPU. Uma GPU principalmente torna os modelos medium e large rápidos o bastante para uso em tempo real. Você também pode descarregar o Whisper para uma máquina mais potente sobre o protocolo Wyoming.' },
+          { q: 'Quão preciso é o Whisper local offline?', a: 'A precisão é forte com o modelo certo e um bom microfone; modelos maiores lidam melhor com sotaques e ruído. Para comandos do lar claros, o modelo small em um mini PC costuma ser preciso o bastante, e roda totalmente offline.' },
+          { q: 'O Whisper local é multilíngue?', a: 'Sim. O Whisper suporta muitos idiomas, então comandos em outros idiomas são transcritos localmente sem nenhum serviço na nuvem. Defina o idioma na configuração do add-on para melhores resultados.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Montar um assistente de voz totalmente local](/pt/smart-home/local-voice-assistant-smart-home) — o stack de voz completo em que o Whisper se encaixa',
+          '[Rodar sua casa inteligente em um LLM local](/pt/smart-home/local-llm-smart-home-complete-guide) — adicionar o cérebro LLM',
+          '[Melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home) — dimensionar a máquina que roda o Whisper',
+          '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) — entre clusters: profundidade de modelo e hardware',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Voz-para-Texto Local para Casas Inteligentes: Whisper + HA (2026)',
+      description: 'Adicione voz-para-texto local ao Home Assistant com o Whisper: tamanhos de modelo, necessidades de hardware, precisão vs velocidade e configuração do Wyoming. Transcrição privada e offline.',
+      url: 'https://www.promptquorum.com/pt/smart-home/local-whisper-home-assistant',
+      inLanguage: 'pt-BR',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Voz-para-texto' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'pt-BR',
+      mainEntity: [
+        { '@type': 'Question', name: 'Qual modelo Whisper devo usar para o Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'small como padrão em uma CPU de mini PC, tiny ou base em uma Raspberry Pi, e medium ou large só com uma GPU quando você precisa de maior precisão com sotaques ou ruído.' } },
+        { '@type': 'Question', name: 'Preciso de uma GPU para o Whisper local?', acceptedAnswer: { '@type': 'Answer', text: 'Não para small e abaixo — esses rodam na CPU. Uma GPU principalmente torna medium e large rápidos o bastante para uso em tempo real. Você também pode descarregar o Whisper sobre Wyoming.' } },
+        { '@type': 'Question', name: 'Quão preciso é o Whisper local offline?', acceptedAnswer: { '@type': 'Answer', text: 'Forte com o modelo certo e um bom microfone; modelos maiores lidam melhor com sotaques e ruído. O modelo small em um mini PC costuma ser preciso o bastante para comandos claros, totalmente offline.' } },
+        { '@type': 'Question', name: 'O Whisper local é multilíngue?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O Whisper suporta muitos idiomas, então comandos em outros idiomas são transcritos localmente sem nuvem. Defina o idioma na configuração do add-on.' } },
+      ],
+    },
+  },
+
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: '智能家居的本地语音转文字：Whisper + HA（2026）',
+    seoTitle: 'Whisper + Home Assistant 2026：本地 STT 指南',
+    intro:
+      '本地 Whisper 为 Home Assistant 提供无云端的私密语音转文字：你按精度、速度和硬件的取舍选择一个 Whisper 模型大小，然后经由 Wyoming 协议把它连接到 Assist。本指南讲解本地 STT 为何重要、Whisper 的模型大小、Wyoming 配置、硬件需求，以及如何调优精度。',
+    metaDescription:
+      '用 Whisper 为 Home Assistant 添加本地语音转文字：模型大小、硬件需求、精度对速度，以及 Wyoming 配置。私密、离线的转写。',
+    twitterDescription:
+      '用本地 Whisper 为 Home Assistant 实现私密语音转文字：选择模型大小、经由 Wyoming 连接、调优精度。无云端。',
+    readTime: '阅读约8分钟',
+    educationalLevel: 'Intermediate',
+    audience: '配置本地语音转文字的 Home Assistant 用户',
+    primaryTerm: 'local Whisper Home Assistant',
+    targetKeywords: [
+      'whisper home assistant 本地stt',
+      'home assistant 语音转文字',
+      '本地stt home assistant',
+      'faster-whisper home assistant',
+      'whisper 模型大小 home assistant',
+    ],
+    leadAnswerBlock:
+      '**本地 Whisper 为 Home Assistant 提供私密语音转文字：安装 Whisper 加载项，选择一个适合你硬件的模型大小，并经由 Wyoming 协议把它连接到 Assist。** 更小的模型更快；更大的模型更准。没有任何东西被发送到云服务。',
+    quickAnswerTop: {
+      zh: {
+        question: '我该如何为 Home Assistant 添加本地语音转文字？',
+        answer:
+          '在 Home Assistant 中安装 Whisper（faster-whisper）加载项，选择一个模型大小，它便会注册为一个 Wyoming 语音转文字服务。在你的 Assist 流水线中选择它。转写随后完全在你的硬件上运行，因此没有音频离开家门。',
+        bullets: [
+          '安装 Whisper（faster-whisper）加载项',
+          '选择一个模型大小：tiny/base/small/medium/large',
+          '它经由 Wyoming 协议连接到 Assist',
+          '越小在 CPU 上越快；越大越准',
+          '无云端的多语言转写',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '要点速览', anchor: 'tldr' },
+      { label: '为何选本地 STT', anchor: 'why-local-stt' },
+      { label: 'Whisper 模型大小', anchor: 'model-sizes' },
+      { label: 'Wyoming 配置', anchor: 'wyoming-setup' },
+      { label: '硬件需求', anchor: 'hardware' },
+      { label: '调优精度', anchor: 'tuning' },
+      { label: '常见问题', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '在 Home Assistant 中安装 Whisper 加载项，为你的硬件选一个模型大小，并经由 Wyoming 把它连接到 Assist，以实现私密的语音转文字。' },
+      { type: 'plain-terms', content: '语音转文字把你说出的话变成助手可据以行动的文本。Whisper 是一个在本地运行的开源语音识别模型，因此与云端助手不同，你的语音录音从不离开你的硬件。主要的选择是模型大小：越大越准，但需要更多算力。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '要点速览',
+        isTldr: true,
+        items: [
+          'Whisper 是一个在本地运行的开源语音转文字模型——没有音频离开你的硬件',
+          '使用 Whisper（faster-whisper）加载项；它经由 Wyoming 连接到 Assist',
+          '模型大小为 tiny → base → small → medium → large；越大越准、越慢',
+          '在仅 CPU 的硬件上，优先 tiny/base/small；有 GPU 时 medium/large 才实用',
+          'Whisper 支持多语言，因此非英语命令也能在没有云服务的情况下转写',
+          '在加大之前，先用更好的麦克风和合适的模型来调优精度',
+        ],
+      },
+      whyLocalStt: {
+        id: 'why-local-stt',
+        title: '为何使用本地语音转文字？',
+        content:
+          '**本地语音转文字把你的语音录音留在你自己的硬件上，因此没有音频被上传给第三方。** 它还能离线工作，并且没有按次费用。',
+        items: [
+          '**隐私：** 云端助手会传输并可能保留录音；本地 Whisper 不会——参见[智能家居隐私风险](/zh/smart-home/smart-home-privacy-risks)。',
+          '**离线：** 转写在断网期间也能工作。',
+          '**无费用：** 本地转写没有使用费。',
+        ],
+      },
+      modelSizes: {
+        id: 'model-sizes',
+        title: '你该使用哪个 Whisper 模型大小？',
+        content:
+          '**选择能在你硬件上给出可接受精度的最小 Whisper 模型——仅 CPU 用 tiny/base/small，有 GPU 用 medium/large。** 更大的模型在口音和嘈杂音频上提升精度，但以速度为代价。',
+        columns: ['模型', '相对精度', '相对速度', '最适合'],
+        rows: [
+          { '模型': 'tiny', '相对精度': '最低', '相对速度': '最快', '最适合': '低功耗 CPU、短命令' },
+          { '模型': 'base', '相对精度': '低', '相对速度': '非常快', '最适合': 'Raspberry Pi、简单短语' },
+          { '模型': 'small', '相对精度': '良好', '相对速度': '快', '最适合': '迷你 PC 的 CPU、日常使用' },
+          { '模型': 'medium', '相对精度': '高', '相对速度': '中等', '最适合': 'GPU 或强力 CPU' },
+          { '模型': 'large', '相对精度': '最高', '相对速度': '最慢', '最适合': 'GPU、口音/嘈杂房间' },
+        ],
+        items: [
+          '在迷你 PC 的 CPU 上以 small 为默认；仅在精度不足时才换到 medium/large。',
+          '在 Raspberry Pi 上用 tiny/base 以保持延迟可用。',
+        ],
+      },
+      wyomingSetup: {
+        id: 'wyoming-setup',
+        title: 'Wyoming 配置',
+        content:
+          '**Whisper 加载项会暴露一个 Wyoming 端点，供 Assist 用于语音转文字。** 配置流程是：安装 → 选择模型 → 在流水线中选择。',
+        numberedItems: [
+          '从加载项商店安装 Whisper（faster-whisper）加载项。',
+          '在加载项配置中设置模型大小并启动它。',
+          '加载项会自动注册为一个 Wyoming 语音转文字服务。',
+          '在 设置 → 语音助手 中，把 Whisper 设为你 Assist 流水线的 STT 引擎。',
+          '在添加语音硬件之前，从 Assist 的调试工具测试转写。',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: '硬件需求',
+        content:
+          '**Whisper 的小型模型在 CPU 上运行，medium/large 模型则受益于 GPU。** 把模型大小匹配到托管它的机器。',
+        items: [
+          'Raspberry Pi：保持 tiny/base 以获得可接受的延迟。',
+          '迷你 PC（CPU）：small 运行良好；medium 可行但更慢——参见[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home)。',
+          '配 GPU/NPU 时：medium 和 large 在高精度下变得实用。',
+          '若你的中枢是 Pi，可经由 Wyoming 在一台更强的独立机器上运行 Whisper。',
+        ],
+      },
+      tuning: {
+        id: 'tuning',
+        title: '调优精度',
+        content:
+          '**在动用最大的 Whisper 之前，先改善一只好麦克风和合适的模型。** 对家庭命令而言，音质往往比模型大小更重要。',
+        items: [
+          '在说话者附近使用优质麦克风或语音卫星硬件。',
+          '降低麦克风所在处的背景噪声。',
+          '在加载项中设置正确的语言以避免转写错误。',
+          '一次只上调一个模型大小并重新测试，而不是直接跳到 large。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          { q: 'Home Assistant 该用哪个 Whisper 模型？', a: '在迷你 PC 的 CPU 上以 small 为默认，在 Raspberry Pi 上用 tiny 或 base，仅当你有 GPU 并需要在口音或嘈杂房间获得更高精度时才用 medium 或 large。一次上调一个大小并重新测试。' },
+          { q: '本地 Whisper 需要 GPU 吗？', a: 'small 及以下不需要——它们在 CPU 上运行。GPU 主要让 medium 和 large 模型足够快以供实时使用。你也可以经由 Wyoming 协议把 Whisper 卸载到一台更强的机器。' },
+          { q: '本地 Whisper 离线时有多准？', a: '配合合适的模型和好麦克风，精度很高；更大的模型能更好地处理口音和噪声。对清晰的家庭命令，迷你 PC 上的 small 模型通常已足够准确，并且完全离线运行。' },
+          { q: '本地 Whisper 支持多语言吗？', a: '支持。Whisper 支持许多语言，因此非英语命令也能在没有任何云服务的情况下在本地转写。在加载项配置中设置语言以获得最佳结果。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[搭建完全本地的语音助手](/zh/smart-home/local-voice-assistant-smart-home) — Whisper 所归属的完整语音堆栈',
+          '[用本地LLM运行你的智能家居](/zh/smart-home/local-llm-smart-home-complete-guide) — 加入 LLM 大脑',
+          '[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home) — 为运行 Whisper 的机器选规模',
+          '[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) — 跨集群：模型与硬件细节',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '智能家居的本地语音转文字：Whisper + HA（2026）',
+      description: '用 Whisper 为 Home Assistant 添加本地语音转文字：模型大小、硬件需求、精度对速度，以及 Wyoming 配置。私密、离线的转写。',
+      url: 'https://www.promptquorum.com/zh/smart-home/local-whisper-home-assistant',
+      inLanguage: 'zh',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: '语音转文字' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'zh',
+      mainEntity: [
+        { '@type': 'Question', name: 'Home Assistant 该用哪个 Whisper 模型？', acceptedAnswer: { '@type': 'Answer', text: '在迷你 PC 的 CPU 上以 small 为默认，在 Raspberry Pi 上用 tiny 或 base，仅当你有 GPU 并需要在口音或噪声中更高精度时才用 medium 或 large。' } },
+        { '@type': 'Question', name: '本地 Whisper 需要 GPU 吗？', acceptedAnswer: { '@type': 'Answer', text: 'small 及以下不需要——它们在 CPU 上运行。GPU 主要让 medium 和 large 足够快以供实时使用。也可经由 Wyoming 把 Whisper 卸载到更强的机器。' } },
+        { '@type': 'Question', name: '本地 Whisper 离线时有多准？', acceptedAnswer: { '@type': 'Answer', text: '配合合适模型和好麦克风精度很高；更大的模型更好地处理口音和噪声。迷你 PC 上的 small 通常已足够准确，并完全离线运行。' } },
+        { '@type': 'Question', name: '本地 Whisper 支持多语言吗？', acceptedAnswer: { '@type': 'Answer', text: '支持。Whisper 支持许多语言，因此非英语命令也能在没有云服务的情况下在本地转写。在加载项配置中设置语言。' } },
+      ],
+    },
+  },
 }
