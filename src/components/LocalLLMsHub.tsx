@@ -1776,6 +1776,8 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
               : lang === 'fr' ? 'Explorer le Guide de Prompt Engineering →'
               : lang === 'ja' ? 'プロンプトエンジニアリングガイドを見る →'
               : lang === 'zh' ? '探索Prompt工程指南 →'
+              : lang === 'es' ? 'Explorar la Guía de Prompt Engineering →'
+              : lang === 'pt' ? 'Explorar o Guia de Prompt Engineering →'
               : 'Explore the Prompt Engineering Guide →'}
           </Link>
         </div>
