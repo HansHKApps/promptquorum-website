@@ -1636,7 +1636,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
             height={420}
           />
           <figcaption className="mt-2 text-xs text-text-secondary text-center">
-            Top open-source local models 2026: Llama 4 Scout, Qwen3.5 72B, DeepSeek V3 (workstation) and Mistral 7B, Phi-3.5 Mini (consumer hardware).
+            {HUB_FIGCAPTION_MODELS[lang] ?? HUB_FIGCAPTION_MODELS['en']}
           </figcaption>
         </figure>
 
@@ -1666,7 +1666,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
             height={420}
           />
           <figcaption className="mt-2 text-xs text-text-secondary text-center">
-            Ollama terminal: two commands install and run Llama 3.2 locally — from zero to 60 tokens/sec in under 10 minutes.
+            {HUB_FIGCAPTION_OLLAMA[lang] ?? HUB_FIGCAPTION_OLLAMA['en']}
           </figcaption>
         </figure>
 
@@ -1696,7 +1696,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
             height={420}
           />
           <figcaption className="mt-2 text-xs text-text-secondary text-center">
-            PromptQuorum dispatches one prompt simultaneously to your local Ollama model and 25+ cloud APIs — compare results side-by-side in one view.
+            {HUB_FIGCAPTION_PQ[lang] ?? HUB_FIGCAPTION_PQ['en']}
           </figcaption>
         </figure>
 
@@ -1728,7 +1728,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
         {/* Bottom FAQ */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold text-text-primary mb-8">
-            Frequently Asked Questions About Local LLMs
+            {HUB_BOTTOM_FAQ_TITLE[lang] ?? HUB_BOTTOM_FAQ_TITLE['en']}
           </h2>
           <div className="space-y-6">
             {HUB_FAQS_BOTTOM.map((faq, i) => (
