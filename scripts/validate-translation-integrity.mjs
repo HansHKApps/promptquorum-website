@@ -28,19 +28,37 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ARTICLES_DIR = path.resolve(__dirname, '..', 'src', 'lib', 'power-local-llm', 'articles');
 
-const CANONICAL_THEMES = new Set([
-  'Overview & Reference',
-  'Easiest Desktop Apps',
-  'RAG & Document Chat',
-  'Coding Assistants',
-  'Local AI Agents & Tool Use',
-  'Creative & Roleplay',
-  'Mobile & Edge LLMs',
-  'Productivity & Knowledge Tools',
-  'Voice, Speech & Multimodal',
-]);
+// Each path-based-locale cluster that ships inline-multilingual article files is
+// validated here with its OWN canonical theme set. The theme strings must match the
+// THEME_COLORS keys in that cluster's *PostClient.tsx, or the page 500s on render.
+const CLUSTERS = [
+  {
+    name: 'power-local-llm',
+    articlesDir: path.resolve(__dirname, '..', 'src', 'lib', 'power-local-llm', 'articles'),
+    canonicalThemes: new Set([
+      'Overview & Reference',
+      'Easiest Desktop Apps',
+      'RAG & Document Chat',
+      'Coding Assistants',
+      'Local AI Agents & Tool Use',
+      'Creative & Roleplay',
+      'Mobile & Edge LLMs',
+      'Productivity & Knowledge Tools',
+      'Voice, Speech & Multimodal',
+    ]),
+  },
+  {
+    name: 'smart-home',
+    articlesDir: path.resolve(__dirname, '..', 'src', 'lib', 'smart-home', 'articles'),
+    canonicalThemes: new Set([
+      'Smart Home Foundations',
+      'Local-First Smart Home',
+      'Local AI & LLMs in the Smart Home',
+      'Decision & Comparison',
+    ]),
+  },
+];
 
 /**
  * Match a TOP-LEVEL field declaration like `    theme: 'value',`.
@@ -74,19 +92,19 @@ function extractField(content, field) {
   return out;
 }
 
-function validateFile(absPath, errors) {
+function validateFile(absPath, errors, canonicalThemes) {
   const file = path.relative(process.cwd(), absPath);
   const content = fs.readFileSync(absPath, 'utf-8');
 
   // CHECK 1 — every theme must be canonical
   const themes = extractField(content, 'theme');
   for (const m of themes) {
-    if (!CANONICAL_THEMES.has(m.value)) {
+    if (!canonicalThemes.has(m.value)) {
       errors.push({
         file,
         line: m.line,
         field: 'theme',
-        problem: `value '${m.value}' is not in CANONICAL_THEMES. Allowed: ${[...CANONICAL_THEMES].map(t => `'${t}'`).join(', ')}`,
+        problem: `value '${m.value}' is not in CANONICAL_THEMES. Allowed: ${[...canonicalThemes].map(t => `'${t}'`).join(', ')}`,
       });
     }
   }
@@ -135,22 +153,31 @@ function validateFile(absPath, errors) {
 }
 
 function main() {
-  if (!fs.existsSync(ARTICLES_DIR)) {
-    console.error(`✗ Articles directory not found: ${ARTICLES_DIR}`);
-    process.exit(1);
+  const errors = [];
+  let totalFiles = 0;
+  const summary = [];
+
+  for (const cluster of CLUSTERS) {
+    // A cluster with no articles/ dir yet (e.g. a fresh scaffold) has nothing to
+    // validate — skip it rather than failing the build.
+    if (!fs.existsSync(cluster.articlesDir)) {
+      summary.push(`${cluster.name}: 0 (no articles/ dir yet)`);
+      continue;
+    }
+
+    const files = fs
+      .readdirSync(cluster.articlesDir)
+      .filter(f => f.endsWith('.ts') && !f.endsWith('.d.ts'))
+      .map(f => path.join(cluster.articlesDir, f))
+      .sort();
+
+    for (const f of files) validateFile(f, errors, cluster.canonicalThemes);
+    totalFiles += files.length;
+    summary.push(`${cluster.name}: ${files.length}`);
   }
 
-  const files = fs
-    .readdirSync(ARTICLES_DIR)
-    .filter(f => f.endsWith('.ts') && !f.endsWith('.d.ts'))
-    .map(f => path.join(ARTICLES_DIR, f))
-    .sort();
-
-  const errors = [];
-  for (const f of files) validateFile(f, errors);
-
   if (errors.length === 0) {
-    console.log(`✓ Translation integrity check passed (${files.length} articles validated)`);
+    console.log(`✓ Translation integrity check passed (${totalFiles} articles validated — ${summary.join(', ')})`);
     process.exit(0);
   }
 

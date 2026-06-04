@@ -25,28 +25,45 @@ import { setTimeout as sleep } from 'node:timers/promises'
 const PORT = process.env.NOINDEX_TEST_PORT || '3017'
 const HOST = `http://127.0.0.1:${PORT}`
 const READY_TIMEOUT_MS = 60_000
-const SLUGS_FILE = 'src/lib/power-local-llm/slugs.ts'
-const PUBLISHED_FILE = 'src/lib/power-local-llm/published.ts'
 const LOCALE_PREFIXES = ['', '/de', '/fr', '/ja', '/zh']
 const NON_CLUSTER_PROBES = ['/', '/local-llms/llm-quantization-explained']
-// Mirrors isPowerLLMHubPublished() in published.ts — all langs now published
-const PUBLISHED_HUB_LANGS = new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'])
 
-function readSlugs() {
-  const src = readFileSync(SLUGS_FILE, 'utf8')
+// Each path-based-locale cluster enforces the same robots contract: published EN
+// slugs (and published hub langs) must be indexed; everything else must be noindex.
+const CLUSTERS = [
+  {
+    name: 'power-local-llm',
+    basePath: '/power-local-llm',
+    slugsFile: 'src/lib/power-local-llm/slugs.ts',
+    publishedFile: 'src/lib/power-local-llm/published.ts',
+    // Mirrors isPowerLLMHubPublished() — all langs published.
+    hubPublishedLangs: new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']),
+  },
+  {
+    name: 'smart-home',
+    basePath: '/smart-home',
+    slugsFile: 'src/lib/smart-home/slugs.ts',
+    publishedFile: 'src/lib/smart-home/published.ts',
+    // Mirrors isSmartHomeHubPublished() — unpublished cluster-wide until launch.
+    hubPublishedLangs: new Set(),
+  },
+]
+
+function readSlugs(slugsFile) {
+  const src = readFileSync(slugsFile, 'utf8')
   // Lines like:   'slug-name': 'key-name',  (whitespace after colon is optional)
   const re = /^\s+'([a-z0-9-]+)':\s*'[a-z0-9-]+',?\s*$/gm
   const slugs = []
   let m
   while ((m = re.exec(src)) !== null) slugs.push(m[1])
   if (slugs.length === 0) {
-    throw new Error(`Failed to parse slugs from ${SLUGS_FILE}`)
+    throw new Error(`Failed to parse slugs from ${slugsFile}`)
   }
   return slugs
 }
 
-function readPublishedSlugs() {
-  const src = readFileSync(PUBLISHED_FILE, 'utf8')
+function readPublishedSlugs(publishedFile) {
+  const src = readFileSync(publishedFile, 'utf8')
   // Match quoted slug lines inside POWER_LLM_PUBLISHED_SLUGS set literal
   const re = /^\s+'([a-z0-9-]+)',?\s*$/gm
   const slugs = new Set()
@@ -147,8 +164,11 @@ async function main() {
     process.exit(1)
   }
 
-  const slugs = readSlugs()
-  console.log(`▶ Loaded ${slugs.length} slugs from ${SLUGS_FILE}`)
+  for (const cluster of CLUSTERS) {
+    cluster.slugs = readSlugs(cluster.slugsFile)
+    cluster.publishedSlugs = readPublishedSlugs(cluster.publishedFile)
+    console.log(`▶ Loaded ${cluster.slugs.length} slugs for ${cluster.name} from ${cluster.slugsFile}`)
+  }
 
   console.log(`▶ Starting next start on port ${PORT}…`)
   // detached: true puts the server in its own process group so we can signal
@@ -215,32 +235,32 @@ async function main() {
   const failures = []
   let passed = 0
 
-  // Cluster article URLs — published EN slugs must be indexed; everything else noindex.
-  const publishedSlugs = readPublishedSlugs()
-  for (const locale of LOCALE_PREFIXES) {
-    const lang = locale.slice(1) || 'en'
-    for (const slug of slugs) {
-      const isPublished = publishedSlugs.has(slug)
-      const url = `${HOST}${locale}/power-local-llm/${slug}`
+  // Per cluster: article URLs (published EN slugs indexed, else noindex) + hub pages
+  // (published hub langs indexed, else noindex).
+  for (const cluster of CLUSTERS) {
+    for (const locale of LOCALE_PREFIXES) {
+      for (const slug of cluster.slugs) {
+        const isPublished = cluster.publishedSlugs.has(slug)
+        const url = `${HOST}${locale}${cluster.basePath}/${slug}`
+        const result = await checkUrl(url, isPublished ? 'index' : 'noindex')
+        if (result.ok) {
+          passed++
+        } else {
+          failures.push(result)
+        }
+      }
+    }
+
+    for (const locale of LOCALE_PREFIXES) {
+      const lang = locale.slice(1) || 'en'
+      const isPublished = cluster.hubPublishedLangs.has(lang)
+      const url = `${HOST}${locale}${cluster.basePath}`
       const result = await checkUrl(url, isPublished ? 'index' : 'noindex')
       if (result.ok) {
         passed++
       } else {
         failures.push(result)
       }
-    }
-  }
-
-  // Cluster hub pages — EN and DE hubs are published (indexed); FR/JA/ZH are noindex.
-  for (const locale of LOCALE_PREFIXES) {
-    const lang = locale.slice(1) || 'en'
-    const isPublished = PUBLISHED_HUB_LANGS.has(lang)
-    const url = `${HOST}${locale}/power-local-llm`
-    const result = await checkUrl(url, isPublished ? 'index' : 'noindex')
-    if (result.ok) {
-      passed++
-    } else {
-      failures.push(result)
     }
   }
 
