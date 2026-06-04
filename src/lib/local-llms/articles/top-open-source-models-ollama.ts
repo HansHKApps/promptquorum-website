@@ -969,6 +969,21 @@ schema: {
       metaDescription: 'Compare os 10 melhores LLMs de código aberto para Ollama em 2026: Llama 3.3 70B, Qwen 3, Mistral e DeepSeek. Benchmarks, requisitos de RAM e configuração.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**O melhor modelo geral em hardware de consumo é o Qwen 3.6 27B (77,2% SWE-bench, cabe em 24 GB com Q4). Outras opções destacadas: Kimi K2.6 (programação frontier), gpt-oss:20b (melhor pequeno / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (raciocínio), Gemma 4 (visão/tool calling) e Llama 4 Scout (contexto longo 10M / multimodal).**',
+      quickAnswerTop: {
+        pt: {
+          question: 'Quais são os melhores modelos de código aberto para Ollama em junho de 2026?', // VERIFY
+          answer: 'Os principais modelos de código aberto do Ollama em junho de 2026 são Qwen 3.6 27B (melhor geral em hardware de consumo, 24 GB Q4), Kimi K2.6 (melhor programação, MoE frontier), gpt-oss:20b (melhor pequeno / 16 GB, raciocínio ajustável), qwen3:30b (equilibrado), Llama 4 Scout (melhor contexto longo 10M / multimodal) e DeepSeek-R1 (melhor raciocínio). Instale qualquer um com: ollama pull <nome-do-modelo>', // VERIFY
+          bullets: [
+            '→Qwen 3.6 27B — melhor geral em hardware de consumo, 77,2% SWE-bench, cabe em 24 GB com Q4', // VERIFY
+            '→Kimi K2.6 — programação frontier (SWE-Bench Pro 58.6), MoE (32B ativo/1T total), Modified MIT', // VERIFY
+            '→gpt-oss:20b — melhor modelo pequeno, roda em 16 GB, nível ~o3-mini, raciocínio ajustável', // VERIFY
+            '→qwen3:30b — modelo equilibrado para tudo; qwen3-coder:30b para autocompletar código', // VERIFY
+            '→Llama 4 Scout — contexto longo (10M tokens) + multimodal, ~55 GB com Q4', // VERIFY
+            '→DeepSeek-R1 — melhor raciocínio/matemática; gpt-oss:20b para raciocínio ajustável', // VERIFY
+          ],
+          updatedDate: '2026-05-17',
+        },
+      },
       readTime: '14 min de leitura',
       educationalLevel: 'Beginner',
       primaryTerm: 'melhores modelos Ollama 2026',

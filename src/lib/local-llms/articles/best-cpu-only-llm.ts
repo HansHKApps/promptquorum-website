@@ -533,6 +533,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
       current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
       leadAnswerBlock: '**A inferência somente com CPU funciona bem para modelos de 3-13B em processadores modernos. Melhores opções: Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/s na CPU) para chat geral, Gemma 3 2B (1,5 GB, a mais rápida) para tarefas críticas de velocidade, e Llama 3.2 3B (2 GB, equilibrada) para qualidade. Use Ollama ou llama.cpp com modo CPU. A inferência CPU é 10-30× mais lenta que a GPU, mas não usa VRAM de vídeo dedicada -- apenas RAM do sistema.**',
+      quickAnswerTop: {
+        pt: {
+          question: 'Posso rodar um LLM sem GPU e quais modelos funcionam somente na CPU?', // VERIFY
+          answer: 'Sim, as CPUs modernas conseguem rodar modelos de 3–13B com eficiência. As velocidades da CPU são de 8–15 tokens/s contra 50–200 tokens/s na GPU, mas você usa zero VRAM. Melhores modelos somente CPU: Phi-4 Mini (3.8B, 2.3 GB), Gemma 3 2B (1.5 GB, a mais rápida), Llama 3.2 3B (2 GB, qualidade equilibrada).', // VERIFY
+          bullets: [
+            'Phi-4 Mini (3.8B, 2.3 GB) — melhor modelo de CPU no geral, 12 tokens/s no i7-12700, 1–3% de perda de qualidade em relação ao FP16', // VERIFY
+            'Gemma 3 2B (1.5 GB) — a mais rápida na CPU, 15 tokens/s, excelente para chat em tempo real com 8 GB de RAM', // VERIFY
+            'Llama 3.2 3B (2 GB) — melhor equilíbrio entre qualidade e velocidade, 10 tokens/s em CPU moderna', // VERIFY
+            'Mistral Small Q4 (4.5 GB) — maior, mas ainda viável na CPU com 16+ GB de RAM, 5 tokens/s', // VERIFY
+            'Ative o modo somente CPU no Ollama ou llama.cpp — instrui a ferramenta a usar a RAM do sistema, não a VRAM', // VERIFY
+          ],
+          updatedDate: '2026-05-07',
+        },
+      },
       audience: 'Usuários com hardware antigo, usuários de Raspberry Pi e quem não tem GPU dedicada e busca inferência local de LLM prática.',
       readTime: '8 min de leitura',
       educationalLevel: 'Beginner',

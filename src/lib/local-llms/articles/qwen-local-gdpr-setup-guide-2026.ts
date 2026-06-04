@@ -741,6 +741,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     readTime: '9 min de leitura',
+    quickAnswerTop: {
+      pt: {
+        question: 'Como configuro o Qwen localmente para conformidade com o GDPR?', // VERIFY
+        answer: 'Instale o Ollama, rode ollama run qwen2.5:14b em uma máquina com 12 GB de VRAM, bloqueie todas as chamadas de rede de saída do processo de inferência, ative a criptografia de disco completa e registre hashes de prompt/resposta (não o conteúdo) para o seu registro de tratamento do Artigo 30. Tempo total de configuração: menos de 30 minutos.', // VERIFY
+        bullets: [
+          'Hardware: RTX 3080 / RTX 4070 / qualquer GPU com 12 GB de VRAM — mínimo para o Qwen 3 14B em Q4', // VERIFY
+          'Isolamento: restrinja a porta do Ollama (11434) apenas à LAN via firewall; desabilite a telemetria em .ollama/config', // VERIFY
+          'Registro do Artigo 30: registre nome do modelo, quantização, carimbo de data/hora e hash do prompt — nunca dados pessoais em texto bruto', // VERIFY
+        ],
+        updatedDate: '2026-05', // VERIFY
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',

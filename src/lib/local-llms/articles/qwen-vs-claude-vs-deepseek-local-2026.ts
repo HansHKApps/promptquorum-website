@@ -532,6 +532,20 @@ dispatch_rules:
     audience: 'Desenvolvedores e equipes escolhendo entre LLMs locais e na nuvem para fluxos de trabalho em produção',
     primaryTerm: 'Qwen vs Claude vs DeepSeek local 2026',
     leadAnswerBlock: '**O Qwen 3.6 27B lidera em código open-weight com 92,1% HumanEval e funciona com 16 GB de VRAM. O Claude Sonnet 4.6 oferece 89,4% HumanEval sem custo de hardware. O DeepSeek R2 é a opção frontier mais barata a $0,14/1M tokens. Para conformidade com LGPD/GDPR, apenas a implantação local (Qwen via Ollama) garante a residência de dados. A melhor estratégia em 2026 é o roteamento por despacho: Qwen local para tarefas sensíveis, nuvem para escalar.**',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qwen 3.6 vs Claude Sonnet 4.6 vs DeepSeek R2 — qual devo usar em 2026?', // VERIFY
+        answer: 'Maio de 2026: o Qwen 3.6 27B atinge 92,1% no HumanEval e 77,2% no SWE-bench localmente com 16 GB de VRAM — em conformidade com a GDPR e com custo zero por token. O Claude Sonnet 4.6 atinge 89,4% no HumanEval, sem necessidade de hardware, a $3/1M tokens de entrada. O DeepSeek R2 é o mais barato a $0,14/1M tokens, mas os dados saem da UE. Melhor estratégia: despachar o Qwen localmente para tarefas sensíveis e a API na nuvem para picos de throughput.', // VERIFY
+        bullets: [
+          'Qwen 3.6 27B — 92,1% HumanEval, 77,2% SWE-bench, 16 GB VRAM, €0 por token após o hardware', // VERIFY
+          'Claude Sonnet 4.6 — 89,4% HumanEval, sem necessidade de hardware, $3/1M tokens de entrada', // VERIFY
+          'DeepSeek R2 — raciocínio frontier, $0,14/1M tokens, dados processados fora da UE', // VERIFY
+          'GDPR Artigo 44: apenas o Qwen local garante a residência de dados na UE por design', // VERIFY
+          'Despacho multimodelo (PromptQuorum) roteia tarefas para o modelo certo automaticamente', // VERIFY
+        ],
+        updatedDate: '2026-05-16',
+      },
+    },
     ctaText: 'Pronto para construir sua estratégia de despacho?',
     ctaButton: 'Entrar na lista de espera →',
     ctaHref: '/waitlist',

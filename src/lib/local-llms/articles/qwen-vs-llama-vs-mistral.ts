@@ -927,6 +927,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publishDate: '2026-04-04',
       next_refresh_due: '2026-06-30',
       leadAnswerBlock: '**O Qwen 3.6 27B é o melhor em geral em hardware de consumo: líder em programação densa (77,2% SWE-bench), cabe em 24 GB a Q4. O Llama 4 Scout é a opção para contexto longo/multimodal (17B ativo, MoE, contexto 10M) mas requer ~55 GB de VRAM a Q4. O Mistral Small 3.1 24B oferece a melhor qualidade por VRAM a 14 GB.**',
+      quickAnswerTop: {
+        pt: {
+          question: 'Qwen vs Llama vs Mistral — qual LLM local devo usar em 2026?', // VERIFY
+          answer: 'Junho de 2026: o Qwen 3.6 27B é o melhor em geral em hardware de consumo (77,2% SWE-bench, cabe em 24 GB a Q4). O Llama 4 Scout é a opção para contexto longo/multimodal (17B ativo, contexto 10M) mas requer ~55 GB de VRAM a Q4. O Llama 3.3 70B continua forte para raciocínio em inglês. O Mistral Small 3.1 é o melhor para qualidade por RAM. Todos executam via Ollama.', // VERIFY
+          bullets: [
+            'Qwen 3.6 27B — melhor em geral em hardware de consumo, melhor programação densa (77,2% SWE-bench), cabe em 24 GB a Q4', // VERIFY
+            'Llama 4 Scout 17B (MoE) — opção para contexto longo (10M tokens) e multimodal, ~55 GB de VRAM a Q4', // VERIFY
+            'Mistral Small 3.1 24B — melhor relação qualidade-RAM (14 GB), 79% MMLU', // VERIFY
+            'Para programação: Qwen 3.6 ou Devstral. Para contexto longo/multimodal: Scout. Para RAM: Mistral.', // VERIFY
+            'Todos via Ollama: ollama pull qwen3 / llama4 / mistral', // VERIFY
+          ],
+          updatedDate: '2026-06-01',
+        },
+      },
       readTime: '12 min de leitura',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Qwen vs Llama vs Mistral 2026',

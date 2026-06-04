@@ -710,6 +710,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock: '**A API da DeepSeek apresenta o maior risco de GDPR entre os principais LLMs por causa da lei chinesa de acesso a dados (PIPL); Qwen e Llama executados localmente têm risco igualmente baixo; as APIs de Claude e GPT-5.5 com residência na UE têm risco médio e exigem Cláusulas Contratuais Padrão (SCCs).**',
     current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 4.6', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual LLM é mais seguro sob o GDPR?', // VERIFY
+        answer: 'Qwen 3 14B ou Llama 4 Scout executados localmente no seu próprio hardware — nenhum dado sai da sua jurisdição, sem transferência do Artigo 44, sem SCC ou TIA necessária. A API da DeepSeek é a de maior risco porque os servidores obedecem à lei chinesa de dados (PIPL). As APIs de Claude e GPT-5.5 exigem residência de dados na UE + SCCs para conformidade de risco médio.', // VERIFY
+        bullets: [
+          'Qwen local: menor risco. Sem transferência, pesos Apache 2.0, 12–24 GB VRAM, configuração em <30 min.', // VERIFY
+          'DeepSeek API: maior risco. Jurisdição PIPL, sem adequação da UE, os ToS permitem compartilhamento de dados determinado pelo Estado.', // VERIFY
+          'Claude/GPT EU+SCC: risco médio. Contratos de residência + SCCs ajudam, mas ainda envolvem transferência.', // VERIFY
+        ],
+        updatedDate: '2026-05',
+      },
+    },
     toc: [
       { label: 'Quatro vetores de risco GDPR para LLMs', anchor: 'risk-vectors' },
       { label: 'Matriz de risco: comparação modelo a modelo', anchor: 'risk-matrix' },

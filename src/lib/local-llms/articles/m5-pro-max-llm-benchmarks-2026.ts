@@ -549,6 +549,21 @@ print(f"Time to first token: ~{elapsed - tokens * (elapsed/tokens):.2f}s")`,
     primaryTerm: 'benchmarks LLM M5 Pro M5 Max',
     targetKeywords: ['benchmarks M5 Pro', 'benchmarks M5 Max', 'comparativo tok/s', 'desempenho LLM Apple Silicon'],
     leadAnswerBlock: '**M5 Pro (307 GB/s) atinge 50–60 tok/s no Llama 3.3 8B Q4; M5 Max (614 GB/s) atinge 100–120 tok/s no mesmo modelo graças ao dobro de largura de banda. Em modelos 70B, M5 Pro chega a 8–12 tok/s (Q4), M5 Max chega a 15–20 tok/s (Q5). A vantagem de 2× na largura de banda se traduz diretamente em 2× de velocidade de geração. Whisper large-v3 funciona a 10–12× tempo real no M5 Pro, 12–14× no M5 Max (aceleração Metal).**',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual a velocidade do M5 Pro vs M5 Max para inferência de LLM local?', // VERIFY
+        answer: 'M5 Pro (64GB): Llama 3.3 8B Q4 a 50–60 tok/s; 70B Q4 a 8–12 tok/s. M5 Max (128GB): Llama 3.3 8B Q4 a 100–120 tok/s; 70B Q5 a 15–20 tok/s. O M5 Max é cerca de 2× mais rápido devido ao dobro de largura de banda de memória (614 GB/s vs 307 GB/s).', // VERIFY
+        bullets: [
+          'M5 Pro 64GB: 50–60 tok/s em modelos 8B, 8–12 tok/s em 70B Q4', // VERIFY
+          'M5 Max 128GB: 100–120 tok/s em modelos 8B, 15–20 tok/s em 70B Q5', // VERIFY
+          'A velocidade escala com a largura de banda de memória, não com os núcleos da GPU — o M5 Max tem 2× de largura de banda = 2× de velocidade', // VERIFY
+          'Whisper STT: 10–12× tempo real (M5 Pro), 12–14× tempo real (M5 Max)', // VERIFY
+          'Consumo: M5 Pro 25–45W sob carga de LLM; M5 Max 60–100W', // VERIFY
+          'M5 Pro tem melhor custo-benefício se você roda modelos 8B/13B; M5 Max só se justifica para modelos 70B', // VERIFY
+        ],
+        updatedDate: '2026-05-15',
+      },
+    },
     toc: [
       { label: 'Pontos principais', anchor: '#key-takeaways' },
       { label: 'Especificações M5 Pro vs M5 Max', anchor: '#specs' },
