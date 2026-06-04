@@ -1105,10 +1105,10 @@ const POST_UI: Record<string, Record<string, string>> = {
 }
 
 const LEVEL_DISPLAY: Record<string, Record<string, string>> = {
-  Beginner: { en: 'Beginner', de: 'Einsteiger', fr: 'Débutant', ja: '初級', zh: '初级', es: 'Principiante' },
-  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio' },
-  Advanced: { en: 'Advanced', de: 'Experte', fr: 'Avancé', ja: '上級', zh: '高级', es: 'Avanzado' },
-  Technical: { en: 'Technical', de: 'Technisch', fr: 'Technique', ja: '技術', zh: '技术', es: 'Técnico' },
+  Beginner: { en: 'Beginner', de: 'Einsteiger', fr: 'Débutant', ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante' },
+  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio', pt: 'Intermediário' },
+  Advanced: { en: 'Advanced', de: 'Experte', fr: 'Avancé', ja: '上級', zh: '高级', es: 'Avanzado', pt: 'Avançado' },
+  Technical: { en: 'Technical', de: 'Technisch', fr: 'Technique', ja: '技術', zh: '技术', es: 'Técnico', pt: 'Técnico' },
 }
 
 // Map language codes to their locale strings for date formatting
@@ -1119,6 +1119,7 @@ const LANGUAGE_TO_LOCALE: Record<string, string> = {
   fr: 'fr-FR',
   ja: 'ja-JP',
   zh: 'zh-CN',
+  pt: 'pt-BR',
 }
 
 const THEME_COLORS: Record<string, { dot: string; badge: string; label: string }> = {

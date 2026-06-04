@@ -283,7 +283,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
           </div>
         </article>
 
-        <FactsDisclaimer />
+        <FactsDisclaimer lang={lang} />
 
         {/* Footer CTA */}
         <div className="mt-16 pt-8 border-t border-text-tertiary">
