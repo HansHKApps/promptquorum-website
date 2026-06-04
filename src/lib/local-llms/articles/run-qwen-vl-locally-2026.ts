@@ -717,6 +717,20 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
     primaryTerm: 'executar Qwen2-VL localmente',
     ctaText: 'Entrar na lista de espera do PromptQuorum →',
     leadAnswerBlock: '**Execute `ollama pull qwen2-vl:7b` em qualquer máquina com 8 GB de VRAM para ler documentos em chinês, japonês e idiomas mistos localmente.** O Qwen2-VL é o modelo de visão aberto mais poderoso para OCR multilíngue — cada imagem é processada na sua máquina, sem upload para a nuvem.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Como executo o Qwen2-VL localmente em 2026?', // VERIFY
+        answer: 'Instale o Ollama, execute `ollama pull qwen2-vl:7b`, depois `ollama run qwen2-vl:7b` e digite o caminho de um arquivo de imagem no seu prompt. Para uma interface gráfica, use o LM Studio: busque "Qwen2-VL 7B", baixe a variante GGUF Q4_K_M e anexe imagens pelo ícone de imagem. O Qwen2-VL 7B precisa de ~6 GB de VRAM e lê documentos, capturas de tela e gráficos totalmente offline.', // VERIFY
+        bullets: [
+          'Hardware mínimo: 8 GB de VRAM (RTX 4060, RTX 3060 12 GB) ou Apple Silicon com 16 GB de memória unificada', // VERIFY
+          'Baixar modelo: ollama pull qwen2-vl:7b (baixa o Qwen2-VL 7B Q4_K_M ~6 GB)', // VERIFY
+          'Anexar imagens: digite o caminho do arquivo no prompt (CLI) ou envie um array base64 de images (API)', // VERIFY
+          'Pontos fortes: OCR de documentos em chinês, japonês e coreano — supera o LLaVA e o Llama 3.2 Vision', // VERIFY
+          'Tamanhos: 2B (~3 GB de VRAM), 7B (~6 GB, recomendado), 72B (~48 GB)', // VERIFY
+        ],
+        updatedDate: '2026-05-22',
+      },
+    },
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
       { label: 'Por que Qwen2-VL para visão local', anchor: '#why-qwen2-vl' },

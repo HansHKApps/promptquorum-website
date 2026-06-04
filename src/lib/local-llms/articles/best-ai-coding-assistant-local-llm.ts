@@ -860,6 +860,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-17',
     educationalLevel: 'Intermediate',
     leadAnswerBlock: '**Escolha Continue.dev para uma solução gratuita, open source e com a melhor integração de Ollama e LM Studio. Escolha Cursor (US$ 20/mês) para o autocompletado mais refinado e fluxos de trabalho híbridos nuvem+local. Escolha Sourcegraph Cody (US$ 9/usuário/mês) para equipes que precisam de contexto de todo o repositório. Escolha Tabnine (US$ 12/mês) para treinamento orientado à privacidade. Escolha Windsurf (US$ 0-15/mês) para a alternativa em ascensão com fluxo de trabalho Cascade.** Tudo verificado em maio 2026.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual assistente de código IA funciona melhor com LLMs locais?', // VERIFY
+        answer: 'Continue.dev é o vencedor claro para desenvolvedores que priorizam o local -- foi construído com Ollama e LM Studio como alvos principais. Cursor é melhor para fluxos de trabalho híbridos (nuvem + local ocasional). Cody e Tabnine oferecem suporte local, mas são cloud-first. Windsurf é a alternativa em ascensão com integração LLM local mais recente.', // VERIFY
+        bullets: [
+          'Continue.dev: Gratuito, open source, suporte nativo Ollama/LM Studio', // VERIFY
+          'Cursor: US$ 20/mês, UX refinada, LLM local via endpoint OpenAI personalizado', // VERIFY
+          'Sourcegraph Cody: US$ 59/usuário/mês (somente enterprise), contexto de repositório, recursos de equipe', // VERIFY
+          'Tabnine: US$ 39/usuário/mês, treinamento orientado à privacidade, opção self-hosted', // VERIFY
+          'Windsurf: Nível gratuito + US$ 15/mês Pro, fluxo de trabalho Cascade, suporte local mais recente', // VERIFY
+        ],
+      },
+    },
     sections: {
       updateNotice: {
         id: 'update-notice',

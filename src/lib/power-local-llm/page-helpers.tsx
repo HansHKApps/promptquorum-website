@@ -92,6 +92,12 @@ const COMING_SOON_COPY: Partial<Record<Lang, { badge: string; bodyArticle: strin
     bodyHub: 'El centro Power Local LLM estará disponible en este idioma pronto. Consulta la versión en inglés a continuación.',
     back: '← Ver versión en inglés',
   },
+  pt: {
+    badge: 'Em breve', // VERIFY
+    bodyArticle: 'Este artigo está em preparação. Explore a versão em inglês do hub Power Local LLM enquanto isso.', // VERIFY
+    bodyHub: 'O hub Power Local LLM estará disponível neste idioma em breve. Confira a versão em inglês abaixo.', // VERIFY
+    back: '← Ver versão em inglês', // VERIFY
+  },
 }
 
 // ─── ARTICLE PAGE ───────────────────────────────────────────────────────────

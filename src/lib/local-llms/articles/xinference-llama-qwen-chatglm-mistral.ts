@@ -595,6 +595,19 @@ print(embedding.data[0].embedding[:5])`,
     audience: 'Desenvolvedores e engenheiros de ML que precisam de um servidor de inferência multi-modelo local que gerencie Llama 3, Qwen, ChatGLM, Mistral e modelos de embeddings via uma API compatível com OpenAI unificada',
     primaryTerm: 'modelos compatíveis com Xinference',
     leadAnswerBlock: '**O Xinference suporta Llama 3, Qwen 3, ChatGLM4, Mistral e mais de 30 famílias de modelos via API compatível com OpenAI. Instale com `pip install xinference[all]` e lance qualquer modelo com `xi launch --model-name <nome> --model-type LLM`.**',
+    quickAnswerTop: {
+      pt: {
+        question: 'Quais modelos o Xinference suporta?', // VERIFY
+        answer: 'O Xinference suporta nativamente Llama 3.3 (8B e 70B), Qwen 3 (0,5B a 72B), ChatGLM4 (9B), Mistral Small v0.3, Mixtral 8x22B e mais de 30 famílias adicionais. Cada modelo é lançado com um único comando `xinference launch` e servido via uma API REST compatível com OpenAI em localhost:9997.', // VERIFY
+        bullets: [
+          'Instalação: `pip install "xinference[all]"` — inclui os backends CUDA, llama.cpp e transformers', // VERIFY
+          'Iniciar servidor: `xinference-local` — a interface web abre em http://localhost:9997', // VERIFY
+          'Lançar modelo: `xinference launch --model-name llama-3.1-instruct --model-engine transformers --model-size-in-billions 8`', // VERIFY
+          'Endpoint da API: `http://localhost:9997/v1` — substituto direto para qualquer cliente da API da OpenAI', // VERIFY
+        ],
+        updatedDate: '2026-05-23',
+      },
+    },
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
       { label: 'Por que usar Xinference em vez de Ollama?', anchor: '#vs-ollama' },
