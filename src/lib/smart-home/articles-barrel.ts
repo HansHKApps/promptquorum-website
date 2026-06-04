@@ -13,6 +13,14 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
 
+// Category 1 — Smart Home Foundations
+import { article as a_what_is_a_smart_home } from './articles/what-is-a-smart-home'
+import { article as a_history_of_smart_home_technology } from './articles/history-of-smart-home-technology'
+import { article as a_smart_home_ecosystems_compared } from './articles/smart-home-ecosystems-compared'
+import { article as a_smart_home_protocols_explained } from './articles/smart-home-protocols-explained'
+import { article as a_best_smart_home_devices_2026 } from './articles/best-smart-home-devices-2026'
+import { article as a_smart_home_for_beginners_where_to_start } from './articles/smart-home-for-beginners-where-to-start'
+import { article as a_smart_home_privacy_risks } from './articles/smart-home-privacy-risks'
 // Category 2 — Local-First Smart Home
 import { article as a_local_smart_home_complete_guide } from './articles/local-smart-home-complete-guide'
 // Category 3 — Local AI & LLMs in the Smart Home
@@ -25,6 +33,15 @@ import { article as a_local_ai_security_camera } from './articles/local-ai-secur
 import { article as a_best_local_llm_models_smart_home } from './articles/best-local-llm-models-smart-home'
 
 export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
+  // Category 1 — Smart Home Foundations
+  'what-is-a-smart-home':                 a_what_is_a_smart_home,
+  'history-of-smart-home-technology':     a_history_of_smart_home_technology,
+  'smart-home-ecosystems-compared':       a_smart_home_ecosystems_compared,
+  'smart-home-protocols-explained':       a_smart_home_protocols_explained,
+  'best-smart-home-devices-2026':         a_best_smart_home_devices_2026,
+  'smart-home-for-beginners-where-to-start': a_smart_home_for_beginners_where_to_start,
+  'smart-home-privacy-risks':             a_smart_home_privacy_risks,
+  // Category 2 — Local-First Smart Home
   'local-smart-home-complete-guide':      a_local_smart_home_complete_guide,
   'local-llm-smart-home-complete-guide':  a_local_llm_smart_home_complete_guide,
   'home-assistant-ollama-integration':    a_home_assistant_ollama_integration,
