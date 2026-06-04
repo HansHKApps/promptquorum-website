@@ -189,4 +189,1132 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'Warum ein lokales Smart Home 2026 die Cloud schlägt',
+    seoTitle: 'Lokal vs Cloud Smart Home: Warum lokal gewinnt (2026)',
+    intro:
+      'Ein lokales Smart Home schlägt die Cloud bei Zuverlässigkeit, Datenschutz, Kosten und Langlebigkeit: Es funktioniert weiter, wenn Internet oder Hersteller-Cloud ausfallen, sammelt keine Daten, braucht keine Abonnements und kann nicht durch eine Cloud-Abschaltung unbrauchbar werden. Dieser Leitfaden begründet das ehrlich, inklusive des einen echten Kompromisses – des Einrichtungsaufwands.',
+    metaDescription:
+      'Warum ein lokales Smart Home 2026 die Cloud schlägt: Zuverlässigkeit, Datenschutz, keine Abonnements, keine unbrauchbaren Geräte und Tempo – mit dem einen ehrlichen Kompromiss.',
+    twitterDescription:
+      'Lokales Smart Home vs Cloud: offline-fähig, keine Abonnements, keine unbrauchbaren Geräte, voller Datenschutz. Der ehrliche Fall für lokal 2026.',
+    readTime: '8 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    audience: 'Menschen, die lokale gegen Cloud-Steuerung abwägen',
+    primaryTerm: 'local vs cloud smart home',
+    targetKeywords: [
+      'lokal vs cloud smart home',
+      'warum lokales smart home',
+      'cloud smart home probleme',
+      'smart home ohne cloud vorteile',
+      'lokales smart home zuverlässigkeit',
+    ],
+    leadAnswerBlock:
+      '**Ein lokales Smart Home schlägt die Cloud, weil es weiterläuft, wenn Internet oder Hersteller-Cloud ausfallen, keine Daten sammelt, keine Abonnements braucht und nicht durch eine Cloud-Abschaltung unbrauchbar werden kann.** Der einzige echte Kompromiss ist mehr Einrichtungsaufwand am Anfang.',
+    quickAnswerTop: {
+      de: {
+        question: 'Warum ist ein lokales Smart Home besser als die Cloud?',
+        answer:
+          'Ein lokales Smart Home hält Geräte und Automatisierungen bei Internet- oder Hersteller-Cloud-Ausfällen am Laufen, hält Ihre Daten auf Ihrer eigenen Hardware, vermeidet Abonnements und ist nicht gefährdet, wenn ein Hersteller seine Cloud einstellt. Cloud-Setups sind einfacher zu starten, tauschen aber Zuverlässigkeit, Datenschutz und Langlebigkeit ein. Der lokale Kompromiss ist mehr Einrichtungsaufwand.',
+        bullets: [
+          'Zuverlässigkeit: offline-fähig, keine Abhängigkeit von einem Hersteller-Server',
+          'Datenschutz: keine Nutzungs-, Sprach- oder Kameradaten, die das Haus verlassen',
+          'Kosten: keine Abonnements, einmalige Hardware',
+          'Langlebigkeit: eine Cloud-Abschaltung kann lokale Geräte nicht unbrauchbar machen',
+          'Kompromiss: mehr Einrichtungsaufwand am Anfang',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Kurzfassung', anchor: 'tldr' },
+      { label: 'Zuverlässigkeit', anchor: 'reliability' },
+      { label: 'Datenschutz', anchor: 'privacy' },
+      { label: 'Keine Abonnements', anchor: 'no-subscriptions' },
+      { label: 'Keine erzwungene Obsoleszenz', anchor: 'longevity' },
+      { label: 'Tempo', anchor: 'speed' },
+      { label: 'Der ehrliche Kompromiss', anchor: 'trade-off' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Ein lokales Smart Home funktioniert offline, sammelt keine Daten, braucht keine Abonnements und kann nicht durch eine Cloud-Abschaltung unbrauchbar werden – zum Preis von mehr Einrichtungsaufwand.' },
+      { type: 'plain-terms', content: 'Cloud-Smart-Homes sind einfach, bis das Internet ausfällt, ein Abonnement auftaucht oder das Unternehmen eine Produkt-Cloud abschaltet und Ihre Geräte den Dienst einstellen. Ein lokales Smart Home vermeidet alle drei, weil alles auf Hardware läuft, die Ihnen gehört. Der Haken: Sie erledigen mehr von der Einrichtung selbst.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Kurzfassung',
+        isTldr: true,
+        items: [
+          'Zuverlässigkeit: lokale Geräte und Automatisierungen laufen bei Ausfällen weiter',
+          'Datenschutz: keine Nutzungs-, Sprach- oder Kameradaten verlassen Ihr Zuhause',
+          'Kosten: keine Abonnements – Sie zahlen einmalige Hardwarekosten',
+          'Langlebigkeit: eine Hersteller-Cloud-Abschaltung kann lokale Geräte nicht unbrauchbar machen',
+          'Tempo: lokale Befehle sparen den Internet-Umweg',
+          'Kompromiss: mehr Einrichtungsaufwand am Anfang als bei Plug-and-Play-Cloud',
+        ],
+      },
+      reliability: {
+        id: 'reliability',
+        title: 'Zuverlässigkeit: Es funktioniert offline',
+        content:
+          '**Ein lokales Smart Home funktioniert weiter, wenn Internet oder Hersteller-Cloud ausfallen, weil Befehle nie Ihr Netzwerk verlassen.** Cloud-Setups verlieren in einem Ausfall die meisten Funktionen.',
+        items: [
+          'Licht, Schlösser, Sensoren und Automatisierungen laufen auf Ihrem lokalen Hub.',
+          'Keine Abhängigkeit davon, dass ein entfernter Server online ist.',
+          'Wählen Sie lokal, wenn Zuverlässigkeit bei Ausfällen zählt – siehe [der komplette Leitfaden zum lokalen Smart Home](/de/smart-home/local-smart-home-complete-guide).',
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'Datenschutz: Daten bleiben zu Hause',
+        content:
+          '**Lokale Steuerung hält Nutzungsdaten, Sprachaufnahmen und Kamerafeeds auf Ihrer eigenen Hardware und entfernt den externen Verarbeiter.** Cloud-Geräte senden diese Daten an Hersteller-Server.',
+        items: [
+          'Keine Nutzungsprotokolle oder Aufnahmen werden hochgeladen – siehe [Smart-Home-Datenschutzrisiken](/de/smart-home/smart-home-privacy-risks).',
+          'Lokale Sprache und KI halten selbst Ihre gesprochenen Befehle zu Hause.',
+          'Wählen Sie lokal, wenn Datenschutz Priorität hat.',
+        ],
+      },
+      noSubscriptions: {
+        id: 'no-subscriptions',
+        title: 'Keine Abonnements',
+        content:
+          '**Lokale Setups vermeiden die wiederkehrenden Gebühren, die Cloud-Ökosysteme an Kameraspeicher und Premium-Funktionen knüpfen.** Sie zahlen einmal für Hardware statt monatlich.',
+        items: [
+          'Lokale Kameraaufzeichnung (Frigate) hat kein Abonnement – siehe [lokale KI-Sicherheitskameras](/de/smart-home/local-ai-security-camera).',
+          'Automatisierungen und Steuerung sind auf einem lokalen Hub kostenlos.',
+          'Für den vollständigen gebührenfreien Ansatz siehe [Smart Home ohne Abonnements](/de/smart-home/smart-home-without-subscriptions).',
+        ],
+      },
+      longevity: {
+        id: 'longevity',
+        title: 'Keine erzwungene Obsoleszenz',
+        content:
+          '**Ein lokales Gerät kann nicht unbrauchbar werden, wenn ein Hersteller seine Cloud abschaltet, weil es diese Cloud zum Funktionieren nicht benötigt.** Cloud-Geräte können Kernfunktionen über Nacht verlieren.',
+        items: [
+          'Lokale Geräte laufen unabhängig von geschäftlichen Entscheidungen des Herstellers weiter.',
+          'Kein Risiko, dass ein eingestellter Dienst Ihre Hardware deaktiviert.',
+          'Diese Langlebigkeit ist ein Kerngrund, warum Nutzer zu lokaler Steuerung wechseln.',
+        ],
+      },
+      speed: {
+        id: 'speed',
+        title: 'Tempo',
+        content:
+          '**Lokale Befehle sparen den Internet-Umweg zu einem Hersteller-Server und reagieren daher oft schneller.** Der Unterschied ist bei Automatisierungen und direkter Steuerung am deutlichsten.',
+        items: [
+          'Kein Cloud-Hop bedeutet geringere Latenz für lokale Aktionen.',
+          'Automatisierungen lösen bei lokalen Sensorereignissen sofort aus.',
+          'Die lokale Sprachlatenz hängt von der Hardware ab – siehe [lokale vs Cloud-Sprachassistenten](/de/smart-home/local-vs-cloud-voice-assistant).',
+        ],
+      },
+      tradeOff: {
+        id: 'trade-off',
+        title: 'Der ehrliche Kompromiss: Einrichtungsaufwand',
+        content:
+          '**Der echte Nachteil von lokal ist mehr Einrichtungsaufwand am Anfang: Sie betreiben den Hub, koppeln Geräte und bauen Automatisierungen selbst.** Für viele sind Datenschutz und Zuverlässigkeit das wert.',
+        columns: ['Aspekt', 'Lokal', 'Cloud'],
+        rows: [
+          { 'Aspekt': 'Zuverlässigkeit', 'Lokal': 'Offline-fähig', 'Cloud': 'Braucht Internet/Cloud' },
+          { 'Aspekt': 'Datenschutz', 'Lokal': 'Daten bleiben zu Hause', 'Cloud': 'Daten auf Hersteller-Servern' },
+          { 'Aspekt': 'Kosten', 'Lokal': 'Einmalige Hardware', 'Cloud': 'Mögliche Abonnements' },
+          { 'Aspekt': 'Langlebigkeit', 'Lokal': 'Nicht cloud-abhängig', 'Cloud': 'Abschaltungsrisiko' },
+          { 'Aspekt': 'Tempo', 'Lokal': 'Kein Cloud-Umweg', 'Cloud': 'Cloud-Latenz' },
+          { 'Aspekt': 'Einrichtungsaufwand', 'Lokal': 'Höher', 'Cloud': 'Geringer' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'Was passiert, wenn eine Smart-Home-Cloud abgeschaltet wird?', a: 'Cloud-abhängige Geräte können Kernfunktionen verlieren, wenn ein Hersteller die Produkt-Cloud einstellt, manchmal werden sie unbrauchbar. Lokale Geräte sind nicht betroffen, weil sie diese Cloud zum Betrieb nicht benötigen – ein zentraler Grund, lokale Steuerung zu wählen.' },
+          { q: 'Ist ein lokales Smart Home schneller?', a: 'Oft ja. Lokale Befehle sparen den Internet-Umweg zu einem Hersteller-Server, sodass direkte Steuerungen und Automatisierungen schnell reagieren. Die lokale Sprachlatenz hängt von Ihrer Hardware und Modellgröße ab statt von Netzwerkbedingungen.' },
+          { q: 'Ist lokal langfristig wirklich günstiger?', a: 'Meist. Lokale Setups vermeiden wiederkehrende Abonnements für Kameraspeicher und Premium-Funktionen, sodass sie nach den einmaligen Hardwarekosten mit der Zeit günstiger sind als Cloud-Ökosysteme mit Monatsgebühren.' },
+          { q: 'Was ist der Nachteil, lokal zu gehen?', a: 'Der Hauptnachteil ist mehr Einrichtungsaufwand am Anfang – Sie installieren den Hub, koppeln Geräte und bauen Automatisierungen selbst. Einmal konfiguriert, ist ein lokales System wartungsarm und nicht von einer Hersteller-Cloud abhängig.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Der komplette Leitfaden zum lokalen Smart Home](/de/smart-home/local-smart-home-complete-guide) – wie man es baut',
+          '[Smart-Home-Ökosysteme im Vergleich](/de/smart-home/smart-home-ecosystems-compared) – lokale vs Cloud-Plattformen',
+          '[Smart Home ohne Abonnements](/de/smart-home/smart-home-without-subscriptions) – der gebührenfreie Ansatz',
+          '[Smart-Home-Datenschutzrisiken](/de/smart-home/smart-home-privacy-risks) – der Datenschutz-Fall im Detail',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Warum ein lokales Smart Home 2026 die Cloud schlägt',
+      description: 'Warum ein lokales Smart Home 2026 die Cloud schlägt: Zuverlässigkeit, Datenschutz, keine Abonnements, keine unbrauchbaren Geräte und Tempo – mit dem einen ehrlichen Kompromiss.',
+      url: 'https://www.promptquorum.com/de/smart-home/why-local-smart-home-beats-cloud',
+      inLanguage: 'de',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Lokales Smart Home' }, { '@type': 'Thing', name: 'Cloud Smart Home' }, { '@type': 'Thing', name: 'Zuverlässigkeit der Heimautomatisierung' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'de',
+      mainEntity: [
+        { '@type': 'Question', name: 'Was passiert, wenn eine Smart-Home-Cloud abgeschaltet wird?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud-abhängige Geräte können Kernfunktionen verlieren oder unbrauchbar werden, wenn ein Hersteller die Produkt-Cloud einstellt. Lokale Geräte sind nicht betroffen, weil sie diese Cloud nicht benötigen.' } },
+        { '@type': 'Question', name: 'Ist ein lokales Smart Home schneller?', acceptedAnswer: { '@type': 'Answer', text: 'Oft. Lokale Befehle sparen den Internet-Umweg, sodass direkte Steuerungen und Automatisierungen schnell reagieren. Die Sprachlatenz hängt von der Hardware ab, nicht vom Netzwerk.' } },
+        { '@type': 'Question', name: 'Ist lokal langfristig wirklich günstiger?', acceptedAnswer: { '@type': 'Answer', text: 'Meist. Lokale Setups vermeiden wiederkehrende Abonnements, sodass sie nach den einmaligen Hardwarekosten günstiger sind als Cloud-Ökosysteme mit Monatsgebühren.' } },
+        { '@type': 'Question', name: 'Was ist der Nachteil, lokal zu gehen?', acceptedAnswer: { '@type': 'Answer', text: 'Mehr Einrichtungsaufwand am Anfang – Sie installieren den Hub, koppeln Geräte und bauen Automatisierungen selbst. Einmal konfiguriert, ist es wartungsarm und nicht cloud-abhängig.' } },
+      ],
+    },
+  },
+
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'Por Qué un Smart Home Local Supera a la Nube en 2026',
+    seoTitle: 'Local vs Nube: Por Qué Gana lo Local (2026)',
+    intro:
+      'Un smart home local supera a la nube en fiabilidad, privacidad, coste y longevidad: sigue funcionando cuando se cae internet o la nube del fabricante, no recopila datos, no necesita suscripciones y no puede quedar inutilizado por un cierre de la nube. Esta guía expone el caso con honestidad, incluido el único compromiso real: el esfuerzo de configuración.',
+    metaDescription:
+      'Por qué un smart home local supera a la nube en 2026: fiabilidad, privacidad, sin suscripciones, sin dispositivos inutilizados y velocidad — con el único compromiso honesto.',
+    twitterDescription:
+      'Smart home local vs nube: funciona sin conexión, sin suscripciones, sin dispositivos inutilizados, total privacidad. El caso honesto de lo local en 2026.',
+    readTime: '8 min de lectura',
+    educationalLevel: 'Intermediate',
+    audience: 'Personas que sopesan el control local frente al de la nube',
+    primaryTerm: 'local vs cloud smart home',
+    targetKeywords: [
+      'local vs nube smart home',
+      'por qué smart home local',
+      'problemas smart home nube',
+      'beneficios smart home sin nube',
+      'fiabilidad smart home local',
+    ],
+    leadAnswerBlock:
+      '**Un smart home local supera a la nube porque sigue funcionando cuando se cae internet o la nube del fabricante, no recopila datos, no necesita suscripciones y no puede quedar inutilizado por un cierre de la nube.** El único compromiso real es más esfuerzo de configuración al principio.',
+    quickAnswerTop: {
+      es: {
+        question: '¿Por qué es mejor un smart home local que la nube?',
+        answer:
+          'Un smart home local mantiene dispositivos y automatizaciones funcionando durante caídas de internet o de la nube del fabricante, mantiene tus datos en tu propio hardware, evita suscripciones y no corre riesgo si un fabricante discontinúa su nube. Las configuraciones en la nube son más fáciles de empezar, pero ceden fiabilidad, privacidad y longevidad. El compromiso local es más esfuerzo de configuración.',
+        bullets: [
+          'Fiabilidad: funciona sin conexión, sin depender de un servidor del fabricante',
+          'Privacidad: ningún dato de uso, voz o cámara sale de casa',
+          'Coste: sin suscripciones, hardware único',
+          'Longevidad: un cierre de la nube no puede inutilizar dispositivos locales',
+          'Compromiso: más esfuerzo de configuración al principio',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Resumen', anchor: 'tldr' },
+      { label: 'Fiabilidad', anchor: 'reliability' },
+      { label: 'Privacidad', anchor: 'privacy' },
+      { label: 'Sin suscripciones', anchor: 'no-subscriptions' },
+      { label: 'Sin obsolescencia forzada', anchor: 'longevity' },
+      { label: 'Velocidad', anchor: 'speed' },
+      { label: 'El compromiso honesto', anchor: 'trade-off' },
+      { label: 'Preguntas frecuentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Un smart home local funciona sin conexión, no recopila datos, no necesita suscripciones y no puede quedar inutilizado por un cierre de la nube — a cambio de más esfuerzo de configuración.' },
+      { type: 'plain-terms', content: 'Los smart homes en la nube son fáciles hasta que se cae internet, aparece una suscripción o la empresa cierra una nube de producto y tus dispositivos dejan de funcionar. Un smart home local evita las tres cosas porque todo corre en hardware que te pertenece. La pega: haces más de la configuración tú.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Resumen',
+        isTldr: true,
+        items: [
+          'Fiabilidad: los dispositivos y automatizaciones locales siguen funcionando durante caídas',
+          'Privacidad: ningún dato de uso, voz o cámara sale de tu casa',
+          'Coste: sin suscripciones — pagas costes de hardware únicos',
+          'Longevidad: un cierre de la nube del fabricante no puede inutilizar dispositivos locales',
+          'Velocidad: los comandos locales se ahorran el viaje por internet',
+          'Compromiso: más esfuerzo de configuración al principio que la nube plug-and-play',
+        ],
+      },
+      reliability: {
+        id: 'reliability',
+        title: 'Fiabilidad: funciona sin conexión',
+        content:
+          '**Un smart home local sigue funcionando cuando se cae internet o la nube del fabricante, porque los comandos nunca salen de tu red.** Las configuraciones en la nube pierden la mayoría de funciones en una caída.',
+        items: [
+          'Luces, cerraduras, sensores y automatizaciones corren en tu hub local.',
+          'Sin depender de que un servidor remoto esté activo.',
+          'Elige local si la fiabilidad durante caídas importa — consulta [la guía completa del smart home local](/es/smart-home/local-smart-home-complete-guide).',
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'Privacidad: los datos se quedan en casa',
+        content:
+          '**El control local mantiene los datos de uso, las grabaciones de voz y el vídeo de cámaras en tu propio hardware, eliminando al procesador externo.** Los dispositivos en la nube envían esos datos a servidores del fabricante.',
+        items: [
+          'No se suben registros de uso ni grabaciones — consulta [riesgos de privacidad del smart home](/es/smart-home/smart-home-privacy-risks).',
+          'La voz y la IA locales mantienen incluso tus comandos hablados en casa.',
+          'Elige local si la privacidad es una prioridad.',
+        ],
+      },
+      noSubscriptions: {
+        id: 'no-subscriptions',
+        title: 'Sin suscripciones',
+        content:
+          '**Las configuraciones locales evitan las cuotas recurrentes que los ecosistemas en la nube atan al almacenamiento de cámara y a las funciones premium.** Pagas una vez por hardware en lugar de mensualmente.',
+        items: [
+          'La grabación local de cámaras (Frigate) no tiene suscripción — consulta [cámaras de seguridad con IA local](/es/smart-home/local-ai-security-camera).',
+          'Las automatizaciones y el control son gratuitos en un hub local.',
+          'Para el enfoque completo sin cuotas, consulta [smart home sin suscripciones](/es/smart-home/smart-home-without-subscriptions).',
+        ],
+      },
+      longevity: {
+        id: 'longevity',
+        title: 'Sin obsolescencia forzada',
+        content:
+          '**Un dispositivo local no puede quedar inutilizado porque un fabricante cierre su nube, ya que no depende de esa nube para funcionar.** Los dispositivos en la nube pueden perder funciones clave de un día para otro.',
+        items: [
+          'Los dispositivos locales siguen funcionando sin importar las decisiones de negocio del fabricante.',
+          'Sin riesgo de que un servicio discontinuado desactive tu hardware.',
+          'Esta longevidad es una razón central por la que los usuarios pasan al control local.',
+        ],
+      },
+      speed: {
+        id: 'speed',
+        title: 'Velocidad',
+        content:
+          '**Los comandos locales se ahorran el viaje de ida y vuelta por internet a un servidor del fabricante, así que a menudo responden más rápido.** La diferencia se nota más en automatizaciones y controles directos.',
+        items: [
+          'Sin salto a la nube significa menor latencia para las acciones locales.',
+          'Las automatizaciones se disparan al instante con eventos de sensores locales.',
+          'La latencia de voz local depende del hardware — consulta [asistentes de voz local vs nube](/es/smart-home/local-vs-cloud-voice-assistant).',
+        ],
+      },
+      tradeOff: {
+        id: 'trade-off',
+        title: 'El compromiso honesto: esfuerzo de configuración',
+        content:
+          '**El verdadero inconveniente de lo local es más esfuerzo de configuración al principio: ejecutas el hub, emparejas dispositivos y construyes automatizaciones tú.** Para muchos, la privacidad y la fiabilidad lo valen.',
+        columns: ['Aspecto', 'Local', 'Nube'],
+        rows: [
+          { 'Aspecto': 'Fiabilidad', 'Local': 'Funciona sin conexión', 'Nube': 'Necesita internet/nube' },
+          { 'Aspecto': 'Privacidad', 'Local': 'Los datos se quedan en casa', 'Nube': 'Datos en servidores del fabricante' },
+          { 'Aspecto': 'Coste', 'Local': 'Hardware único', 'Nube': 'Posibles suscripciones' },
+          { 'Aspecto': 'Longevidad', 'Local': 'No depende de la nube', 'Nube': 'Riesgo de cierre' },
+          { 'Aspecto': 'Velocidad', 'Local': 'Sin viaje a la nube', 'Nube': 'Latencia de la nube' },
+          { 'Aspecto': 'Esfuerzo de configuración', 'Local': 'Mayor', 'Nube': 'Menor' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          { q: '¿Qué pasa cuando se cierra una nube de smart home?', a: 'Los dispositivos dependientes de la nube pueden perder funciones clave o quedar inutilizados cuando un fabricante discontinúa la nube del producto. Los dispositivos locales no se ven afectados porque no dependen de esa nube para operar, una razón clave para elegir local.' },
+          { q: '¿Es más rápido un smart home local?', a: 'A menudo, sí. Los comandos locales se ahorran el viaje por internet a un servidor del fabricante, así que controles directos y automatizaciones responden rápido. La latencia de voz local depende de tu hardware y el tamaño del modelo, no de la red.' },
+          { q: '¿Es local realmente más barato a largo plazo?', a: 'Normalmente. Las configuraciones locales evitan suscripciones recurrentes para almacenamiento de cámara y funciones premium, así que tras el coste único de hardware son más baratas con el tiempo que los ecosistemas en la nube con cuotas mensuales.' },
+          { q: '¿Cuál es el inconveniente de ir local?', a: 'El principal inconveniente es más esfuerzo de configuración al principio: instalas el hub, emparejas dispositivos y construyes automatizaciones tú. Una vez configurado, un sistema local es de bajo mantenimiento y no depende de la nube de ningún fabricante.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[La guía completa del smart home local](/es/smart-home/local-smart-home-complete-guide) — cómo construirlo',
+          '[Ecosistemas de smart home comparados](/es/smart-home/smart-home-ecosystems-compared) — plataformas locales vs nube',
+          '[Smart home sin suscripciones](/es/smart-home/smart-home-without-subscriptions) — el enfoque sin cuotas',
+          '[Riesgos de privacidad del smart home](/es/smart-home/smart-home-privacy-risks) — el caso de privacidad en detalle',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Por Qué un Smart Home Local Supera a la Nube en 2026',
+      description: 'Por qué un smart home local supera a la nube en 2026: fiabilidad, privacidad, sin suscripciones, sin dispositivos inutilizados y velocidad — con el único compromiso honesto.',
+      url: 'https://www.promptquorum.com/es/smart-home/why-local-smart-home-beats-cloud',
+      inLanguage: 'es',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Smart home local' }, { '@type': 'Thing', name: 'Smart home en la nube' }, { '@type': 'Thing', name: 'Fiabilidad de la domótica' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'es',
+      mainEntity: [
+        { '@type': 'Question', name: '¿Qué pasa cuando se cierra una nube de smart home?', acceptedAnswer: { '@type': 'Answer', text: 'Los dispositivos dependientes de la nube pueden perder funciones clave o quedar inutilizados cuando un fabricante discontinúa la nube del producto. Los dispositivos locales no se ven afectados porque no dependen de esa nube.' } },
+        { '@type': 'Question', name: '¿Es más rápido un smart home local?', acceptedAnswer: { '@type': 'Answer', text: 'A menudo. Los comandos locales se ahorran el viaje por internet, así que controles directos y automatizaciones responden rápido. La latencia de voz depende del hardware, no de la red.' } },
+        { '@type': 'Question', name: '¿Es local realmente más barato a largo plazo?', acceptedAnswer: { '@type': 'Answer', text: 'Normalmente. Las configuraciones locales evitan suscripciones recurrentes, así que tras el coste único de hardware son más baratas que los ecosistemas en la nube con cuotas mensuales.' } },
+        { '@type': 'Question', name: '¿Cuál es el inconveniente de ir local?', acceptedAnswer: { '@type': 'Answer', text: 'Más esfuerzo de configuración al principio: instalas el hub, emparejas dispositivos y construyes automatizaciones tú. Una vez configurado es de bajo mantenimiento y no depende de la nube.' } },
+      ],
+    },
+  },
+
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'Pourquoi une Maison Connectée Locale Bat le Cloud en 2026',
+    seoTitle: 'Local vs Cloud : Pourquoi le Local Gagne (2026)',
+    intro:
+      'Une maison connectée locale bat le cloud sur la fiabilité, la confidentialité, le coût et la longévité : elle continue de fonctionner quand internet ou le cloud du fabricant tombe, ne collecte aucune donnée, ne nécessite aucun abonnement et ne peut pas être rendue inutilisable par une fermeture de cloud. Ce guide expose le cas honnêtement, y compris le seul vrai compromis : l\'effort de configuration.',
+    metaDescription:
+      'Pourquoi une maison connectée locale bat le cloud en 2026 : fiabilité, confidentialité, sans abonnement, sans appareils inutilisables et rapidité — avec le seul compromis honnête.',
+    twitterDescription:
+      'Maison connectée locale vs cloud : fonctionne hors ligne, sans abonnement, sans appareils inutilisables, confidentialité totale. Le cas honnête du local en 2026.',
+    readTime: '8 min de lecture',
+    educationalLevel: 'Intermediate',
+    audience: 'Personnes pesant le contrôle local face au cloud',
+    primaryTerm: 'local vs cloud smart home',
+    targetKeywords: [
+      'local vs cloud maison connectée',
+      'pourquoi maison connectée locale',
+      'problèmes maison connectée cloud',
+      'avantages maison connectée sans cloud',
+      'fiabilité maison connectée locale',
+    ],
+    leadAnswerBlock:
+      '**Une maison connectée locale bat le cloud car elle continue de fonctionner quand internet ou le cloud du fabricant tombe, ne collecte aucune donnée, ne nécessite aucun abonnement et ne peut pas être rendue inutilisable par une fermeture de cloud.** Le seul vrai compromis est plus d\'effort de configuration au départ.',
+    quickAnswerTop: {
+      fr: {
+        question: 'Pourquoi une maison connectée locale est-elle meilleure que le cloud ?',
+        answer:
+          'Une maison connectée locale garde les appareils et les automatisations en fonctionnement pendant les coupures d\'internet ou de cloud du fabricant, garde vos données sur votre propre matériel, évite les abonnements et n\'est pas en danger si un fabricant abandonne son cloud. Les configurations cloud sont plus faciles à démarrer mais sacrifient fiabilité, confidentialité et longévité. Le compromis local est plus d\'effort de configuration.',
+        bullets: [
+          'Fiabilité : fonctionne hors ligne, sans dépendre d\'un serveur du fabricant',
+          'Confidentialité : aucune donnée d\'usage, de voix ou de caméra ne quitte la maison',
+          'Coût : sans abonnement, matériel unique',
+          'Longévité : une fermeture de cloud ne peut pas rendre les appareils locaux inutilisables',
+          'Compromis : plus d\'effort de configuration au départ',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'En bref', anchor: 'tldr' },
+      { label: 'Fiabilité', anchor: 'reliability' },
+      { label: 'Confidentialité', anchor: 'privacy' },
+      { label: 'Sans abonnement', anchor: 'no-subscriptions' },
+      { label: 'Sans obsolescence forcée', anchor: 'longevity' },
+      { label: 'Rapidité', anchor: 'speed' },
+      { label: 'Le compromis honnête', anchor: 'trade-off' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Une maison connectée locale fonctionne hors ligne, ne collecte aucune donnée, ne nécessite aucun abonnement et ne peut pas être rendue inutilisable par une fermeture de cloud — au prix de plus d\'effort de configuration.' },
+      { type: 'plain-terms', content: 'Les maisons connectées cloud sont faciles jusqu\'à ce qu\'internet tombe, qu\'un abonnement apparaisse ou que l\'entreprise ferme un cloud de produit et que vos appareils cessent de fonctionner. Une maison connectée locale évite ces trois écueils car tout tourne sur du matériel qui vous appartient. Le hic : vous faites plus de la configuration vous-même.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'En bref',
+        isTldr: true,
+        items: [
+          'Fiabilité : les appareils et automatisations locaux continuent de fonctionner pendant les coupures',
+          'Confidentialité : aucune donnée d\'usage, de voix ou de caméra ne quitte votre maison',
+          'Coût : sans abonnement — vous payez des coûts matériels uniques',
+          'Longévité : une fermeture de cloud du fabricant ne peut pas rendre les appareils locaux inutilisables',
+          'Rapidité : les commandes locales s\'épargnent l\'aller-retour internet',
+          'Compromis : plus d\'effort de configuration au départ que le cloud prêt à l\'emploi',
+        ],
+      },
+      reliability: {
+        id: 'reliability',
+        title: 'Fiabilité : elle fonctionne hors ligne',
+        content:
+          '**Une maison connectée locale continue de fonctionner quand internet ou le cloud du fabricant tombe, car les commandes ne quittent jamais votre réseau.** Les configurations cloud perdent la plupart des fonctions lors d\'une coupure.',
+        items: [
+          'Lumières, serrures, capteurs et automatisations tournent sur votre hub local.',
+          'Aucune dépendance à la disponibilité d\'un serveur distant.',
+          'Choisissez le local si la fiabilité pendant les coupures compte — voir [le guide complet de la maison connectée locale](/fr/smart-home/local-smart-home-complete-guide).',
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'Confidentialité : les données restent à la maison',
+        content:
+          '**Le contrôle local garde les données d\'usage, les enregistrements vocaux et les flux de caméra sur votre propre matériel, supprimant le sous-traitant externe.** Les appareils cloud envoient ces données aux serveurs du fabricant.',
+        items: [
+          'Aucun journal d\'usage ni enregistrement n\'est téléversé — voir [risques de confidentialité de la maison connectée](/fr/smart-home/smart-home-privacy-risks).',
+          'La voix et l\'IA locales gardent même vos commandes vocales à la maison.',
+          'Choisissez le local si la confidentialité est une priorité.',
+        ],
+      },
+      noSubscriptions: {
+        id: 'no-subscriptions',
+        title: 'Sans abonnement',
+        content:
+          '**Les configurations locales évitent les frais récurrents que les écosystèmes cloud attachent au stockage des caméras et aux fonctions premium.** Vous payez une fois pour le matériel au lieu de chaque mois.',
+        items: [
+          'L\'enregistrement local des caméras (Frigate) n\'a pas d\'abonnement — voir [caméras de sécurité à IA locale](/fr/smart-home/local-ai-security-camera).',
+          'Les automatisations et le contrôle sont gratuits sur un hub local.',
+          'Pour l\'approche entièrement sans frais, voir [maison connectée sans abonnement](/fr/smart-home/smart-home-without-subscriptions).',
+        ],
+      },
+      longevity: {
+        id: 'longevity',
+        title: 'Sans obsolescence forcée',
+        content:
+          '**Un appareil local ne peut pas être rendu inutilisable parce qu\'un fabricant ferme son cloud, car il ne dépend pas de ce cloud pour fonctionner.** Les appareils cloud peuvent perdre des fonctions clés du jour au lendemain.',
+        items: [
+          'Les appareils locaux continuent de fonctionner quelles que soient les décisions commerciales du fabricant.',
+          'Aucun risque qu\'un service abandonné désactive votre matériel.',
+          'Cette longévité est une raison centrale du passage au contrôle local.',
+        ],
+      },
+      speed: {
+        id: 'speed',
+        title: 'Rapidité',
+        content:
+          '**Les commandes locales s\'épargnent l\'aller-retour internet vers un serveur du fabricant, elles répondent donc souvent plus vite.** La différence est la plus nette pour les automatisations et les commandes directes.',
+        items: [
+          'Pas de saut cloud signifie une latence plus faible pour les actions locales.',
+          'Les automatisations se déclenchent instantanément sur les événements de capteurs locaux.',
+          'La latence de la voix locale dépend du matériel — voir [assistants vocaux local vs cloud](/fr/smart-home/local-vs-cloud-voice-assistant).',
+        ],
+      },
+      tradeOff: {
+        id: 'trade-off',
+        title: 'Le compromis honnête : l\'effort de configuration',
+        content:
+          '**Le véritable inconvénient du local est plus d\'effort de configuration au départ : vous exécutez le hub, appairez les appareils et construisez les automatisations vous-même.** Pour beaucoup, la confidentialité et la fiabilité le valent.',
+        columns: ['Aspect', 'Local', 'Cloud'],
+        rows: [
+          { 'Aspect': 'Fiabilité', 'Local': 'Fonctionne hors ligne', 'Cloud': 'Nécessite internet/cloud' },
+          { 'Aspect': 'Confidentialité', 'Local': 'Les données restent à la maison', 'Cloud': 'Données sur les serveurs du fabricant' },
+          { 'Aspect': 'Coût', 'Local': 'Matériel unique', 'Cloud': 'Abonnements possibles' },
+          { 'Aspect': 'Longévité', 'Local': 'Pas de dépendance au cloud', 'Cloud': 'Risque de fermeture' },
+          { 'Aspect': 'Rapidité', 'Local': 'Pas d\'aller-retour cloud', 'Cloud': 'Latence du cloud' },
+          { 'Aspect': 'Effort de configuration', 'Local': 'Plus élevé', 'Cloud': 'Plus faible' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'Que se passe-t-il quand un cloud de maison connectée ferme ?', a: 'Les appareils dépendants du cloud peuvent perdre des fonctions clés ou devenir inutilisables quand un fabricant abandonne le cloud du produit. Les appareils locaux ne sont pas affectés car ils ne dépendent pas de ce cloud pour fonctionner — une raison clé de choisir le local.' },
+          { q: 'Une maison connectée locale est-elle plus rapide ?', a: 'Souvent, oui. Les commandes locales s\'épargnent l\'aller-retour internet vers un serveur du fabricant, donc les commandes directes et les automatisations répondent vite. La latence de la voix locale dépend de votre matériel et de la taille du modèle, pas des conditions réseau.' },
+          { q: 'Le local est-il vraiment moins cher à long terme ?', a: 'Généralement. Les configurations locales évitent les abonnements récurrents pour le stockage des caméras et les fonctions premium, donc après le coût matériel unique, elles sont moins chères avec le temps que les écosystèmes cloud à frais mensuels.' },
+          { q: 'Quel est l\'inconvénient de passer au local ?', a: 'Le principal inconvénient est plus d\'effort de configuration au départ : vous installez le hub, appairez les appareils et construisez les automatisations vous-même. Une fois configuré, un système local demande peu d\'entretien et ne dépend du cloud d\'aucun fabricant.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Le guide complet de la maison connectée locale](/fr/smart-home/local-smart-home-complete-guide) — comment la construire',
+          '[Écosystèmes de maison connectée comparés](/fr/smart-home/smart-home-ecosystems-compared) — plateformes locales vs cloud',
+          '[Maison connectée sans abonnement](/fr/smart-home/smart-home-without-subscriptions) — l\'approche sans frais',
+          '[Risques de confidentialité de la maison connectée](/fr/smart-home/smart-home-privacy-risks) — le cas de confidentialité en détail',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Pourquoi une Maison Connectée Locale Bat le Cloud en 2026',
+      description: 'Pourquoi une maison connectée locale bat le cloud en 2026 : fiabilité, confidentialité, sans abonnement, sans appareils inutilisables et rapidité — avec le seul compromis honnête.',
+      url: 'https://www.promptquorum.com/fr/smart-home/why-local-smart-home-beats-cloud',
+      inLanguage: 'fr',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Maison connectée locale' }, { '@type': 'Thing', name: 'Maison connectée cloud' }, { '@type': 'Thing', name: 'Fiabilité de la domotique' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'fr',
+      mainEntity: [
+        { '@type': 'Question', name: 'Que se passe-t-il quand un cloud de maison connectée ferme ?', acceptedAnswer: { '@type': 'Answer', text: 'Les appareils dépendants du cloud peuvent perdre des fonctions clés ou devenir inutilisables quand un fabricant abandonne le cloud du produit. Les appareils locaux ne sont pas affectés.' } },
+        { '@type': 'Question', name: 'Une maison connectée locale est-elle plus rapide ?', acceptedAnswer: { '@type': 'Answer', text: 'Souvent. Les commandes locales s\'épargnent l\'aller-retour internet, donc les commandes directes et automatisations répondent vite. La latence vocale dépend du matériel, pas du réseau.' } },
+        { '@type': 'Question', name: 'Le local est-il vraiment moins cher à long terme ?', acceptedAnswer: { '@type': 'Answer', text: 'Généralement. Les configurations locales évitent les abonnements récurrents, donc après le coût matériel unique, elles sont moins chères que les écosystèmes cloud à frais mensuels.' } },
+        { '@type': 'Question', name: 'Quel est l\'inconvénient de passer au local ?', acceptedAnswer: { '@type': 'Answer', text: 'Plus d\'effort de configuration au départ : vous installez le hub, appairez les appareils et construisez les automatisations. Une fois configuré, il demande peu d\'entretien et ne dépend pas du cloud.' } },
+      ],
+    },
+  },
+
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'なぜ2026年にローカルスマートホームはクラウドに勝るのか',
+    seoTitle: 'ローカル対クラウド：なぜローカルが勝つか（2026）',
+    intro:
+      'ローカルスマートホームは、信頼性・プライバシー・コスト・寿命でクラウドに勝ります：インターネットやメーカーのクラウドが落ちても動き続け、データを収集せず、サブスク不要で、クラウド終了で使えなくなることもありません。本ガイドは、唯一の本当のトレードオフ——設定の手間——も含めて、正直にその根拠を示します。',
+    metaDescription:
+      'なぜ2026年にローカルスマートホームはクラウドに勝るのか：信頼性、プライバシー、サブスク不要、使えなくなる機器なし、そして速度——唯一の正直なトレードオフとともに。',
+    twitterDescription:
+      'ローカルスマートホーム対クラウド：オフライン動作、サブスク不要、使えなくなる機器なし、完全なプライバシー。2026年のローカルの正直な根拠。',
+    readTime: '8分で読める',
+    educationalLevel: 'Intermediate',
+    audience: 'ローカルとクラウドの制御を比較検討する人',
+    primaryTerm: 'local vs cloud smart home',
+    targetKeywords: [
+      'ローカル 対 クラウド スマートホーム',
+      'なぜ ローカル スマートホーム',
+      'クラウド スマートホーム 問題',
+      'スマートホーム クラウド不要 利点',
+      'ローカル スマートホーム 信頼性',
+    ],
+    leadAnswerBlock:
+      '**ローカルスマートホームがクラウドに勝るのは、インターネットやメーカーのクラウドが落ちても動き続け、データを収集せず、サブスク不要で、クラウド終了で使えなくなることがないからです。** 唯一の本当のトレードオフは、最初の設定の手間が増えることです。',
+    quickAnswerTop: {
+      ja: {
+        question: 'なぜローカルスマートホームはクラウドより良いのですか？',
+        answer:
+          'ローカルスマートホームは、インターネットやメーカークラウドの障害中も機器と自動化を動かし続け、データを自分のハードウェアに保ち、サブスクを避け、メーカーがクラウドを終了しても危険にさらされません。クラウド構成は始めやすい一方で、信頼性・プライバシー・寿命を犠牲にします。ローカルのトレードオフは設定の手間です。',
+        bullets: [
+          '信頼性：オフラインで動作、メーカーのサーバーに依存しない',
+          'プライバシー：利用・音声・カメラのデータが家を出ない',
+          'コスト：サブスク不要、一度きりのハードウェア',
+          '寿命：クラウド終了でローカル機器が使えなくなることはない',
+          'トレードオフ：最初の設定の手間が増える',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '要点まとめ', anchor: 'tldr' },
+      { label: '信頼性', anchor: 'reliability' },
+      { label: 'プライバシー', anchor: 'privacy' },
+      { label: 'サブスク不要', anchor: 'no-subscriptions' },
+      { label: '強制的な陳腐化なし', anchor: 'longevity' },
+      { label: '速度', anchor: 'speed' },
+      { label: '正直なトレードオフ', anchor: 'trade-off' },
+      { label: 'よくある質問', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'ローカルスマートホームはオフラインで動作し、データを収集せず、サブスク不要で、クラウド終了で使えなくなることもありません——設定の手間が増える代わりに。' },
+      { type: 'plain-terms', content: 'クラウド型スマートホームは、インターネットが落ちる・サブスクが現れる・企業が製品クラウドを終了して機器が止まる、までは簡単です。ローカルスマートホームはこの三つすべてを避けます。すべてが自分の所有するハードウェアで動くからです。難点は、設定をより多く自分で行うことです。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '要点まとめ',
+        isTldr: true,
+        items: [
+          '信頼性：ローカルの機器と自動化は障害中も動き続ける',
+          'プライバシー：利用・音声・カメラのデータが家を出ない',
+          'コスト：サブスク不要——一度きりのハードウェア費用を払う',
+          '寿命：メーカークラウドの終了でローカル機器が使えなくなることはない',
+          '速度：ローカルの命令はインターネットの往復を省く',
+          'トレードオフ：プラグアンドプレイのクラウドより最初の設定の手間が多い',
+        ],
+      },
+      reliability: {
+        id: 'reliability',
+        title: '信頼性：オフラインで動作する',
+        content:
+          '**ローカルスマートホームは、命令がネットワークを出ないため、インターネットやメーカークラウドが落ちても動き続けます。** クラウド構成は障害時に多くの機能を失います。',
+        items: [
+          '照明・施錠・センサー・自動化はローカルハブ上で動きます。',
+          '遠隔サーバーがオンラインであることへの依存はありません。',
+          '障害時の信頼性が重要ならローカルを選びましょう——[ローカルスマートホーム完全ガイド](/ja/smart-home/local-smart-home-complete-guide)を参照。',
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'プライバシー：データは家にとどまる',
+        content:
+          '**ローカル制御は、利用データ・音声録音・カメラ映像を自分のハードウェアに保ち、外部処理者を取り除きます。** クラウド機器はこれらのデータをメーカーのサーバーへ送ります。',
+        items: [
+          '利用ログや録画はアップロードされません——[スマートホームのプライバシーリスク](/ja/smart-home/smart-home-privacy-risks)を参照。',
+          'ローカル音声とAIは、あなたの音声命令さえ家にとどめます。',
+          'プライバシーが最優先ならローカルを選びましょう。',
+        ],
+      },
+      noSubscriptions: {
+        id: 'no-subscriptions',
+        title: 'サブスク不要',
+        content:
+          '**ローカル構成は、クラウドエコシステムがカメラ保存やプレミアム機能に課す継続課金を避けます。** 月額ではなく一度だけハードウェアに払います。',
+        items: [
+          'ローカルのカメラ録画（Frigate）はサブスクなし——[ローカルAIセキュリティカメラ](/ja/smart-home/local-ai-security-camera)を参照。',
+          '自動化と制御はローカルハブ上で無料です。',
+          '完全に料金不要のやり方は[サブスクなしのスマートホーム](/ja/smart-home/smart-home-without-subscriptions)を参照。',
+        ],
+      },
+      longevity: {
+        id: 'longevity',
+        title: '強制的な陳腐化なし',
+        content:
+          '**ローカル機器は、メーカーがクラウドを終了しても使えなくなりません。動作にそのクラウドを必要としないからです。** クラウド機器は一夜で主要機能を失い得ます。',
+        items: [
+          'ローカル機器はメーカーの事業判断に関わらず動き続けます。',
+          '終了したサービスがあなたのハードウェアを無効化するリスクはありません。',
+          'この寿命の長さは、ユーザーがローカル制御へ移る中心的な理由です。',
+        ],
+      },
+      speed: {
+        id: 'speed',
+        title: '速度',
+        content:
+          '**ローカルの命令はメーカーのサーバーへのインターネット往復を省くため、しばしばより速く応答します。** 違いは自動化と直接操作で最も顕著です。',
+        items: [
+          'クラウドへのホップがないため、ローカル動作のレイテンシが低くなります。',
+          '自動化はローカルのセンサーイベントで即座に起動します。',
+          'ローカル音声のレイテンシはハードウェア次第——[ローカル対クラウドの音声アシスタント](/ja/smart-home/local-vs-cloud-voice-assistant)を参照。',
+        ],
+      },
+      tradeOff: {
+        id: 'trade-off',
+        title: '正直なトレードオフ：設定の手間',
+        content:
+          '**ローカルの本当の難点は、最初の設定の手間が増えることです：ハブを動かし、機器をペアリングし、自動化を自分で作ります。** 多くの人にとって、プライバシーと信頼性はそれに値します。',
+        columns: ['観点', 'ローカル', 'クラウド'],
+        rows: [
+          { '観点': '信頼性', 'ローカル': 'オフラインで動作', 'クラウド': 'インターネット/クラウドが必要' },
+          { '観点': 'プライバシー', 'ローカル': 'データは家にとどまる', 'クラウド': 'データはメーカーのサーバー' },
+          { '観点': 'コスト', 'ローカル': '一度きりのハードウェア', 'クラウド': 'サブスクの可能性' },
+          { '観点': '寿命', 'ローカル': 'クラウド非依存', 'クラウド': '終了リスク' },
+          { '観点': '速度', 'ローカル': 'クラウド往復なし', 'クラウド': 'クラウドのレイテンシ' },
+          { '観点': '設定の手間', 'ローカル': '多い', 'クラウド': '少ない' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          { q: 'スマートホームのクラウドが終了するとどうなりますか？', a: 'クラウド依存の機器は、メーカーが製品クラウドを終了すると主要機能を失うことがあり、使えなくなることもあります。ローカル機器は動作にそのクラウドを必要としないため影響を受けません——ローカル制御を選ぶ重要な理由です。' },
+          { q: 'ローカルスマートホームは速いですか？', a: 'しばしば速いです。ローカルの命令はメーカーのサーバーへのインターネット往復を省くため、直接操作や自動化が素早く応答します。ローカル音声のレイテンシはネットワーク状況ではなく、ハードウェアとモデルサイズ次第です。' },
+          { q: 'ローカルは長期的に本当に安いですか？', a: '通常は安いです。ローカル構成はカメラ保存やプレミアム機能の継続課金を避けるため、一度きりのハードウェア費用の後は、月額のクラウドエコシステムより時間とともに安くなります。' },
+          { q: 'ローカルにする難点は何ですか？', a: '主な難点は最初の設定の手間です——ハブを設置し、機器をペアリングし、自動化を自分で作ります。一度構成すれば、ローカルシステムは手間が少なく、どのメーカーのクラウドにも依存しません。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[ローカルスマートホーム完全ガイド](/ja/smart-home/local-smart-home-complete-guide) — その作り方',
+          '[スマートホームのエコシステム比較](/ja/smart-home/smart-home-ecosystems-compared) — ローカル対クラウドのプラットフォーム',
+          '[サブスクなしのスマートホーム](/ja/smart-home/smart-home-without-subscriptions) — 料金不要のやり方',
+          '[スマートホームのプライバシーリスク](/ja/smart-home/smart-home-privacy-risks) — プライバシーの根拠を詳しく',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'なぜ2026年にローカルスマートホームはクラウドに勝るのか',
+      description: 'なぜ2026年にローカルスマートホームはクラウドに勝るのか：信頼性、プライバシー、サブスク不要、使えなくなる機器なし、そして速度——唯一の正直なトレードオフとともに。',
+      url: 'https://www.promptquorum.com/ja/smart-home/why-local-smart-home-beats-cloud',
+      inLanguage: 'ja',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'ローカルスマートホーム' }, { '@type': 'Thing', name: 'クラウドスマートホーム' }, { '@type': 'Thing', name: 'ホームオートメーションの信頼性' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ja',
+      mainEntity: [
+        { '@type': 'Question', name: 'スマートホームのクラウドが終了するとどうなりますか？', acceptedAnswer: { '@type': 'Answer', text: 'クラウド依存の機器は製品クラウドの終了で主要機能を失い、使えなくなることもあります。ローカル機器はそのクラウドを必要としないため影響を受けません。' } },
+        { '@type': 'Question', name: 'ローカルスマートホームは速いですか？', acceptedAnswer: { '@type': 'Answer', text: 'しばしば速いです。ローカルの命令はインターネット往復を省くため、直接操作や自動化が素早く応答します。音声のレイテンシはハードウェア次第です。' } },
+        { '@type': 'Question', name: 'ローカルは長期的に本当に安いですか？', acceptedAnswer: { '@type': 'Answer', text: '通常は安いです。継続課金を避けるため、一度きりのハードウェア費用の後は月額のクラウドより時間とともに安くなります。' } },
+        { '@type': 'Question', name: 'ローカルにする難点は何ですか？', acceptedAnswer: { '@type': 'Answer', text: '主に最初の設定の手間です——ハブ設置、機器のペアリング、自動化づくりを自分で行います。構成後は手間が少なくクラウド非依存です。' } },
+      ],
+    },
+  },
+
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'Por Que uma Casa Inteligente Local Supera a Nuvem em 2026',
+    seoTitle: 'Local vs Nuvem: Por Que o Local Ganha (2026)',
+    intro:
+      'Uma casa inteligente local supera a nuvem em confiabilidade, privacidade, custo e longevidade: continua funcionando quando a internet ou a nuvem do fabricante cai, não coleta dados, não precisa de assinaturas e não pode ser inutilizada por um encerramento de nuvem. Este guia apresenta o caso com honestidade, incluindo o único compromisso real: o esforço de configuração.',
+    metaDescription:
+      'Por que uma casa inteligente local supera a nuvem em 2026: confiabilidade, privacidade, sem assinaturas, sem dispositivos inutilizados e velocidade — com o único compromisso honesto.',
+    twitterDescription:
+      'Casa inteligente local vs nuvem: funciona offline, sem assinaturas, sem dispositivos inutilizados, total privacidade. O caso honesto do local em 2026.',
+    readTime: '8 min de leitura',
+    educationalLevel: 'Intermediate',
+    audience: 'Pessoas pesando o controle local frente ao da nuvem',
+    primaryTerm: 'local vs cloud smart home',
+    targetKeywords: [
+      'local vs nuvem casa inteligente',
+      'por que casa inteligente local',
+      'problemas casa inteligente nuvem',
+      'benefícios casa inteligente sem nuvem',
+      'confiabilidade casa inteligente local',
+    ],
+    leadAnswerBlock:
+      '**Uma casa inteligente local supera a nuvem porque continua funcionando quando a internet ou a nuvem do fabricante cai, não coleta dados, não precisa de assinaturas e não pode ser inutilizada por um encerramento de nuvem.** O único compromisso real é mais esforço de configuração no início.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Por que uma casa inteligente local é melhor que a nuvem?',
+        answer:
+          'Uma casa inteligente local mantém dispositivos e automações funcionando durante quedas de internet ou da nuvem do fabricante, mantém seus dados no seu próprio hardware, evita assinaturas e não corre risco se um fabricante descontinuar sua nuvem. Configurações na nuvem são mais fáceis de começar, mas abrem mão de confiabilidade, privacidade e longevidade. O compromisso local é mais esforço de configuração.',
+        bullets: [
+          'Confiabilidade: funciona offline, sem depender de um servidor do fabricante',
+          'Privacidade: nenhum dado de uso, voz ou câmera sai de casa',
+          'Custo: sem assinaturas, hardware único',
+          'Longevidade: um encerramento de nuvem não pode inutilizar dispositivos locais',
+          'Compromisso: mais esforço de configuração no início',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Resumo', anchor: 'tldr' },
+      { label: 'Confiabilidade', anchor: 'reliability' },
+      { label: 'Privacidade', anchor: 'privacy' },
+      { label: 'Sem assinaturas', anchor: 'no-subscriptions' },
+      { label: 'Sem obsolescência forçada', anchor: 'longevity' },
+      { label: 'Velocidade', anchor: 'speed' },
+      { label: 'O compromisso honesto', anchor: 'trade-off' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Uma casa inteligente local funciona offline, não coleta dados, não precisa de assinaturas e não pode ser inutilizada por um encerramento de nuvem — ao custo de mais esforço de configuração.' },
+      { type: 'plain-terms', content: 'Casas inteligentes na nuvem são fáceis até a internet cair, surgir uma assinatura ou a empresa encerrar uma nuvem de produto e seus dispositivos pararem. Uma casa inteligente local evita as três coisas porque tudo roda em hardware que é seu. O porém: você faz mais da configuração.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Resumo',
+        isTldr: true,
+        items: [
+          'Confiabilidade: dispositivos e automações locais continuam funcionando durante quedas',
+          'Privacidade: nenhum dado de uso, voz ou câmera sai da sua casa',
+          'Custo: sem assinaturas — você paga custos de hardware únicos',
+          'Longevidade: um encerramento da nuvem do fabricante não pode inutilizar dispositivos locais',
+          'Velocidade: comandos locais economizam a ida e volta pela internet',
+          'Compromisso: mais esforço de configuração no início que a nuvem plug-and-play',
+        ],
+      },
+      reliability: {
+        id: 'reliability',
+        title: 'Confiabilidade: funciona offline',
+        content:
+          '**Uma casa inteligente local continua funcionando quando a internet ou a nuvem do fabricante cai, porque os comandos nunca saem da sua rede.** Configurações na nuvem perdem a maioria das funções em uma queda.',
+        items: [
+          'Luzes, fechaduras, sensores e automações rodam no seu hub local.',
+          'Sem depender de um servidor remoto estar no ar.',
+          'Escolha local se a confiabilidade durante quedas importa — veja [o guia completo da casa inteligente local](/pt/smart-home/local-smart-home-complete-guide).',
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'Privacidade: os dados ficam em casa',
+        content:
+          '**O controle local mantém os dados de uso, as gravações de voz e as imagens de câmeras no seu próprio hardware, eliminando o processador externo.** Dispositivos na nuvem enviam esses dados a servidores do fabricante.',
+        items: [
+          'Nenhum registro de uso ou gravação é enviado — veja [riscos de privacidade da casa inteligente](/pt/smart-home/smart-home-privacy-risks).',
+          'A voz e a IA locais mantêm até seus comandos de voz em casa.',
+          'Escolha local se a privacidade é uma prioridade.',
+        ],
+      },
+      noSubscriptions: {
+        id: 'no-subscriptions',
+        title: 'Sem assinaturas',
+        content:
+          '**Configurações locais evitam as taxas recorrentes que os ecossistemas na nuvem prendem ao armazenamento de câmera e a recursos premium.** Você paga uma vez por hardware em vez de mensalmente.',
+        items: [
+          'A gravação local de câmeras (Frigate) não tem assinatura — veja [câmeras de segurança com IA local](/pt/smart-home/local-ai-security-camera).',
+          'Automações e controle são gratuitos em um hub local.',
+          'Para a abordagem totalmente sem taxas, veja [casa inteligente sem assinaturas](/pt/smart-home/smart-home-without-subscriptions).',
+        ],
+      },
+      longevity: {
+        id: 'longevity',
+        title: 'Sem obsolescência forçada',
+        content:
+          '**Um dispositivo local não pode ser inutilizado porque um fabricante encerra sua nuvem, pois ele não depende dessa nuvem para funcionar.** Dispositivos na nuvem podem perder funções principais de um dia para o outro.',
+        items: [
+          'Dispositivos locais continuam funcionando independentemente das decisões de negócio do fabricante.',
+          'Sem risco de um serviço descontinuado desativar seu hardware.',
+          'Essa longevidade é uma razão central para os usuários migrarem ao controle local.',
+        ],
+      },
+      speed: {
+        id: 'speed',
+        title: 'Velocidade',
+        content:
+          '**Comandos locais economizam a ida e volta pela internet a um servidor do fabricante, então muitas vezes respondem mais rápido.** A diferença é mais notável em automações e controles diretos.',
+        items: [
+          'Sem salto à nuvem significa menor latência para ações locais.',
+          'Automações disparam instantaneamente com eventos de sensores locais.',
+          'A latência de voz local depende do hardware — veja [assistentes de voz local vs nuvem](/pt/smart-home/local-vs-cloud-voice-assistant).',
+        ],
+      },
+      tradeOff: {
+        id: 'trade-off',
+        title: 'O compromisso honesto: esforço de configuração',
+        content:
+          '**A real desvantagem do local é mais esforço de configuração no início: você roda o hub, pareia dispositivos e constrói automações.** Para muitos, a privacidade e a confiabilidade valem isso.',
+        columns: ['Aspecto', 'Local', 'Nuvem'],
+        rows: [
+          { 'Aspecto': 'Confiabilidade', 'Local': 'Funciona offline', 'Nuvem': 'Precisa de internet/nuvem' },
+          { 'Aspecto': 'Privacidade', 'Local': 'Os dados ficam em casa', 'Nuvem': 'Dados em servidores do fabricante' },
+          { 'Aspecto': 'Custo', 'Local': 'Hardware único', 'Nuvem': 'Possíveis assinaturas' },
+          { 'Aspecto': 'Longevidade', 'Local': 'Não depende da nuvem', 'Nuvem': 'Risco de encerramento' },
+          { 'Aspecto': 'Velocidade', 'Local': 'Sem ida e volta à nuvem', 'Nuvem': 'Latência da nuvem' },
+          { 'Aspecto': 'Esforço de configuração', 'Local': 'Maior', 'Nuvem': 'Menor' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'O que acontece quando uma nuvem de casa inteligente é encerrada?', a: 'Dispositivos dependentes da nuvem podem perder funções principais ou ficar inutilizados quando um fabricante descontinua a nuvem do produto. Dispositivos locais não são afetados porque não dependem dessa nuvem para operar — uma razão-chave para escolher local.' },
+          { q: 'Uma casa inteligente local é mais rápida?', a: 'Muitas vezes, sim. Comandos locais economizam a ida e volta pela internet a um servidor do fabricante, então controles diretos e automações respondem rápido. A latência de voz local depende do seu hardware e do tamanho do modelo, não das condições da rede.' },
+          { q: 'O local é realmente mais barato a longo prazo?', a: 'Geralmente. Configurações locais evitam assinaturas recorrentes para armazenamento de câmera e recursos premium, então após o custo único de hardware são mais baratas ao longo do tempo que ecossistemas na nuvem com taxas mensais.' },
+          { q: 'Qual a desvantagem de ir local?', a: 'A principal desvantagem é mais esforço de configuração no início: você instala o hub, pareia dispositivos e constrói automações. Uma vez configurado, um sistema local é de baixa manutenção e não depende da nuvem de nenhum fabricante.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[O guia completo da casa inteligente local](/pt/smart-home/local-smart-home-complete-guide) — como construí-la',
+          '[Ecossistemas de casa inteligente comparados](/pt/smart-home/smart-home-ecosystems-compared) — plataformas locais vs nuvem',
+          '[Casa inteligente sem assinaturas](/pt/smart-home/smart-home-without-subscriptions) — a abordagem sem taxas',
+          '[Riscos de privacidade da casa inteligente](/pt/smart-home/smart-home-privacy-risks) — o caso de privacidade em detalhe',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Por Que uma Casa Inteligente Local Supera a Nuvem em 2026',
+      description: 'Por que uma casa inteligente local supera a nuvem em 2026: confiabilidade, privacidade, sem assinaturas, sem dispositivos inutilizados e velocidade — com o único compromisso honesto.',
+      url: 'https://www.promptquorum.com/pt/smart-home/why-local-smart-home-beats-cloud',
+      inLanguage: 'pt-BR',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Casa inteligente local' }, { '@type': 'Thing', name: 'Casa inteligente na nuvem' }, { '@type': 'Thing', name: 'Confiabilidade da automação residencial' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'pt-BR',
+      mainEntity: [
+        { '@type': 'Question', name: 'O que acontece quando uma nuvem de casa inteligente é encerrada?', acceptedAnswer: { '@type': 'Answer', text: 'Dispositivos dependentes da nuvem podem perder funções principais ou ficar inutilizados quando um fabricante descontinua a nuvem do produto. Dispositivos locais não são afetados.' } },
+        { '@type': 'Question', name: 'Uma casa inteligente local é mais rápida?', acceptedAnswer: { '@type': 'Answer', text: 'Muitas vezes. Comandos locais economizam a ida e volta pela internet, então controles diretos e automações respondem rápido. A latência de voz depende do hardware, não da rede.' } },
+        { '@type': 'Question', name: 'O local é realmente mais barato a longo prazo?', acceptedAnswer: { '@type': 'Answer', text: 'Geralmente. Configurações locais evitam assinaturas recorrentes, então após o custo único de hardware são mais baratas que ecossistemas na nuvem com taxas mensais.' } },
+        { '@type': 'Question', name: 'Qual a desvantagem de ir local?', acceptedAnswer: { '@type': 'Answer', text: 'Mais esforço de configuração no início: você instala o hub, pareia dispositivos e constrói automações. Depois de configurado é de baixa manutenção e não depende da nuvem.' } },
+      ],
+    },
+  },
+
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: '为何2026年本地智能家居胜过云端',
+    seoTitle: '本地对云端：为何本地胜出（2026）',
+    intro:
+      '本地智能家居在可靠性、隐私、成本和寿命上胜过云端：在断网或厂商云端故障时仍可运行，不收集数据，不需要订阅，也不会因云端关停而变砖。本指南诚实地陈述论据，包括唯一真正的取舍——配置投入。',
+    metaDescription:
+      '为何2026年本地智能家居胜过云端：可靠性、隐私、免订阅、不会变砖的设备，以及速度——以及那个唯一诚实的取舍。',
+    twitterDescription:
+      '本地智能家居对云端：可离线、免订阅、设备不变砖、完全隐私。2026年本地的诚实论据。',
+    readTime: '阅读约8分钟',
+    educationalLevel: 'Intermediate',
+    audience: '在本地与云端控制之间权衡的人',
+    primaryTerm: 'local vs cloud smart home',
+    targetKeywords: [
+      '本地 对 云端 智能家居',
+      '为何 本地 智能家居',
+      '云端 智能家居 问题',
+      '智能家居 无云端 好处',
+      '本地 智能家居 可靠性',
+    ],
+    leadAnswerBlock:
+      '**本地智能家居之所以胜过云端，是因为在断网或厂商云端故障时仍可运行、不收集数据、不需要订阅，也不会因云端关停而变砖。** 唯一真正的取舍是前期配置投入更多。',
+    quickAnswerTop: {
+      zh: {
+        question: '为什么本地智能家居比云端更好？',
+        answer:
+          '本地智能家居在断网或厂商云端故障期间仍能让设备和自动化运行，把数据留在你自己的硬件上，避免订阅，并且不会因厂商停用其云端而受影响。云端配置更易上手，但牺牲了可靠性、隐私和寿命。本地的取舍是配置投入更多。',
+        bullets: [
+          '可靠性：可离线运行，不依赖厂商服务器',
+          '隐私：没有使用、语音或摄像头数据离开家门',
+          '成本：免订阅，一次性硬件',
+          '寿命：云端关停无法让本地设备变砖',
+          '取舍：前期配置投入更多',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '要点速览', anchor: 'tldr' },
+      { label: '可靠性', anchor: 'reliability' },
+      { label: '隐私', anchor: 'privacy' },
+      { label: '免订阅', anchor: 'no-subscriptions' },
+      { label: '没有强制淘汰', anchor: 'longevity' },
+      { label: '速度', anchor: 'speed' },
+      { label: '诚实的取舍', anchor: 'trade-off' },
+      { label: '常见问题', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '本地智能家居可离线运行、不收集数据、不需要订阅，也不会因云端关停而变砖——代价是配置投入更多。' },
+      { type: 'plain-terms', content: '云端智能家居一直很省心，直到断网、出现订阅，或公司关停某个产品云端、你的设备随之停摆。本地智能家居避免这三种情况，因为一切都运行在属于你的硬件上。代价是：你要自己做更多配置。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '要点速览',
+        isTldr: true,
+        items: [
+          '可靠性：本地设备与自动化在故障期间仍可运行',
+          '隐私：没有使用、语音或摄像头数据离开你家',
+          '成本：免订阅——你支付一次性硬件成本',
+          '寿命：厂商云端关停无法让本地设备变砖',
+          '速度：本地命令省去互联网往返',
+          '取舍：前期配置投入比即插即用的云端更多',
+        ],
+      },
+      reliability: {
+        id: 'reliability',
+        title: '可靠性：它可离线运行',
+        content:
+          '**本地智能家居在断网或厂商云端故障时仍能运行，因为命令从不离开你的网络。** 云端配置在故障时会失去大部分功能。',
+        items: [
+          '灯光、门锁、传感器和自动化都在你的本地中枢上运行。',
+          '不依赖某台远程服务器在线。',
+          '若看重故障期间的可靠性就选本地——参见[本地智能家居完整指南](/zh/smart-home/local-smart-home-complete-guide)。',
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: '隐私：数据留在家中',
+        content:
+          '**本地控制把使用数据、语音录音和摄像头画面留在你自己的硬件上，去除外部处理方。** 云端设备会把这些数据发送到厂商服务器。',
+        items: [
+          '不上传使用日志或录像——参见[智能家居隐私风险](/zh/smart-home/smart-home-privacy-risks)。',
+          '本地语音与 AI 连你说出的命令都留在家中。',
+          '若隐私是首要，就选本地。',
+        ],
+      },
+      noSubscriptions: {
+        id: 'no-subscriptions',
+        title: '免订阅',
+        content:
+          '**本地配置避免了云端生态对摄像头存储和高级功能附加的持续收费。** 你一次性为硬件付费，而非按月。',
+        items: [
+          '本地摄像头录制（Frigate）没有订阅——参见[本地 AI 安防摄像头](/zh/smart-home/local-ai-security-camera)。',
+          '在本地中枢上，自动化和控制都是免费的。',
+          '完全免费的做法参见[无订阅的智能家居](/zh/smart-home/smart-home-without-subscriptions)。',
+        ],
+      },
+      longevity: {
+        id: 'longevity',
+        title: '没有强制淘汰',
+        content:
+          '**本地设备不会因厂商关停其云端而变砖，因为它的运行并不依赖那个云端。** 云端设备可能一夜之间失去核心功能。',
+        items: [
+          '无论厂商的商业决定如何，本地设备都照常运行。',
+          '不存在某项停用的服务让你的硬件失效的风险。',
+          '这种长寿命是用户转向本地控制的核心原因之一。',
+        ],
+      },
+      speed: {
+        id: 'speed',
+        title: '速度',
+        content:
+          '**本地命令省去到厂商服务器的互联网往返，因此往往响应更快。** 在自动化和直接控制中差异最为明显。',
+        items: [
+          '没有云端跳转意味着本地操作的延迟更低。',
+          '自动化会随本地传感器事件即时触发。',
+          '本地语音的延迟取决于硬件——参见[本地对云端的语音助手](/zh/smart-home/local-vs-cloud-voice-assistant)。',
+        ],
+      },
+      tradeOff: {
+        id: 'trade-off',
+        title: '诚实的取舍：配置投入',
+        content:
+          '**本地真正的缺点是前期配置投入更多：你要运行中枢、配对设备并自己搭建自动化。** 对很多人而言，隐私和可靠性值得这些投入。',
+        columns: ['方面', '本地', '云端'],
+        rows: [
+          { '方面': '可靠性', '本地': '可离线运行', '云端': '需要互联网/云端' },
+          { '方面': '隐私', '本地': '数据留在家中', '云端': '数据在厂商服务器' },
+          { '方面': '成本', '本地': '一次性硬件', '云端': '可能的订阅' },
+          { '方面': '寿命', '本地': '不依赖云端', '云端': '关停风险' },
+          { '方面': '速度', '本地': '无云端往返', '云端': '云端延迟' },
+          { '方面': '配置投入', '本地': '更多', '云端': '更少' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          { q: '智能家居云端关停会怎样？', a: '当厂商停用产品云端时，依赖云端的设备可能失去核心功能，甚至变得不可用。本地设备不受影响，因为它们的运行并不依赖那个云端——这是选择本地的关键原因。' },
+          { q: '本地智能家居更快吗？', a: '通常更快。本地命令省去到厂商服务器的互联网往返，因此直接控制和自动化响应迅速。本地语音的延迟取决于你的硬件和模型规模，而非网络状况。' },
+          { q: '本地长期真的更便宜吗？', a: '通常是。本地配置避免了摄像头存储和高级功能的持续订阅，因此在一次性硬件成本之后，随时间推移比按月收费的云端生态更便宜。' },
+          { q: '转向本地的缺点是什么？', a: '主要缺点是前期配置投入更多：你要安装中枢、配对设备并自己搭建自动化。一旦配置完成，本地系统维护成本低，且不依赖任何厂商云端。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[本地智能家居完整指南](/zh/smart-home/local-smart-home-complete-guide) — 如何搭建',
+          '[智能家居生态系统对比](/zh/smart-home/smart-home-ecosystems-compared) — 本地对云端平台',
+          '[无订阅的智能家居](/zh/smart-home/smart-home-without-subscriptions) — 免费的做法',
+          '[智能家居隐私风险](/zh/smart-home/smart-home-privacy-risks) — 详细的隐私论据',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '为何2026年本地智能家居胜过云端',
+      description: '为何2026年本地智能家居胜过云端：可靠性、隐私、免订阅、不会变砖的设备，以及速度——以及那个唯一诚实的取舍。',
+      url: 'https://www.promptquorum.com/zh/smart-home/why-local-smart-home-beats-cloud',
+      inLanguage: 'zh',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '本地智能家居' }, { '@type': 'Thing', name: '云端智能家居' }, { '@type': 'Thing', name: '家庭自动化可靠性' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'zh',
+      mainEntity: [
+        { '@type': 'Question', name: '智能家居云端关停会怎样？', acceptedAnswer: { '@type': 'Answer', text: '当厂商停用产品云端时，依赖云端的设备可能失去核心功能甚至不可用。本地设备不受影响，因为它们不依赖那个云端。' } },
+        { '@type': 'Question', name: '本地智能家居更快吗？', acceptedAnswer: { '@type': 'Answer', text: '通常更快。本地命令省去互联网往返，因此直接控制和自动化响应迅速。语音延迟取决于硬件，而非网络。' } },
+        { '@type': 'Question', name: '本地长期真的更便宜吗？', acceptedAnswer: { '@type': 'Answer', text: '通常是。本地配置避免持续订阅，因此在一次性硬件成本之后，比按月收费的云端生态更便宜。' } },
+        { '@type': 'Question', name: '转向本地的缺点是什么？', acceptedAnswer: { '@type': 'Answer', text: '主要是前期配置投入更多：你要安装中枢、配对设备并自己搭建自动化。配置完成后维护成本低，且不依赖云端。' } },
+      ],
+    },
+  },
 }
