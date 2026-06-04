@@ -187,4 +187,1120 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: 'Matter, Thread, Zigbee, Z-Wave: Protokolle erklärt (2026)',
+    seoTitle: 'Smart-Home-Protokolle erklärt (2026)',
+    intro:
+      'Smart-Home-Protokolle bestimmen, wie Ihre Geräte kommunizieren, wie weit sie reichen und ob sie lokal funktionieren. Dieser verständliche Leitfaden erklärt Zigbee, Z-Wave, Thread und Matter – ihre Reichweite, ihren Stromverbrauch, ihre Interoperabilität und welche standardmäßig lokal sind –, damit Sie die richtigen für ein zuverlässiges, privates Setup wählen.',
+    metaDescription:
+      'Matter, Thread, Zigbee, Z-Wave verständlich erklärt: Reichweite, Strom, Mesh, Interoperabilität und welche standardmäßig lokal sind. Das richtige Protokoll wählen.',
+    twitterDescription:
+      'Zigbee vs Z-Wave vs Thread vs Matter: verständlicher Leitfaden zu Reichweite, Strom, Interoperabilität und welche Protokolle standardmäßig lokal sind.',
+    readTime: '8 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    audience: 'Menschen, die Smart-Home-Geräte nach Protokoll wählen',
+    primaryTerm: 'smart home protocols',
+    targetKeywords: [
+      'matter thread zigbee z-wave unterschied',
+      'smart home protokolle erklärt',
+      'zigbee vs z-wave',
+      'was ist matter smart home',
+      'thread protokoll smart home',
+    ],
+    leadAnswerBlock:
+      '**Zigbee und Z-Wave sind ausgereifte stromsparende Mesh-Protokolle, Thread ist das moderne IP-basierte stromsparende Mesh, und Matter ist der Standard auf Anwendungsebene, der über Thread, WLAN und Ethernet läuft, um Geräte zu vereinheitlichen.** Zigbee, Z-Wave und Thread sind standardmäßig lokal; Matter kann über einen lokalen Controller lokal laufen.',
+    quickAnswerTop: {
+      de: {
+        question: 'Was ist der Unterschied zwischen Matter, Thread, Zigbee und Z-Wave?',
+        answer:
+          'Zigbee und Z-Wave sind etablierte stromsparende drahtlose Mesh-Protokolle für Sensoren und Steuerungen. Thread ist ein neueres IP-basiertes stromsparendes Mesh. Matter ist kein Funk, sondern ein Standard, der über Thread, WLAN und Ethernet läuft, damit Geräte verschiedener Marken zusammenarbeiten. Zigbee, Z-Wave und Thread sind standardmäßig lokal.',
+        bullets: [
+          'Zigbee: 2.4 GHz offenes Mesh, riesige Geräteauswahl',
+          'Z-Wave: Sub-GHz-Mesh, weniger Störungen, gute Reichweite',
+          'Thread: modernes IP-basiertes stromsparendes Mesh',
+          'Matter: ein Standard über Thread/WLAN/Ethernet, kein Funk',
+          'Zigbee, Z-Wave, Thread sind standardmäßig lokal',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Kurzfassung', anchor: 'tldr' },
+      { label: 'Warum Protokolle wichtig sind', anchor: 'why-protocols' },
+      { label: 'Zigbee', anchor: 'zigbee' },
+      { label: 'Z-Wave', anchor: 'z-wave' },
+      { label: 'Thread', anchor: 'thread' },
+      { label: 'Matter (der Vereinheitlicher)', anchor: 'matter' },
+      { label: 'Welches wählen', anchor: 'which-to-choose' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Zigbee und Z-Wave sind ausgereifte stromsparende Mesh-Funks, Thread ist das moderne IP-basierte Mesh, und Matter ist ein Standard, der darüber läuft, um Geräte zu vereinheitlichen.' },
+      { type: 'plain-terms', content: 'Protokolle sind die Sprachen, die Smart-Home-Geräte sprechen. Zigbee und Z-Wave sind ältere, zuverlässige drahtlose Meshes. Thread ist ein neueres Mesh auf Basis von Internet-Standards. Matter ist überhaupt kein Funk – es ist ein gemeinsamer Standard, der Geräte verschiedener Marken zusammenarbeiten lässt, und kann ohne Cloud laufen.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Kurzfassung',
+        isTldr: true,
+        items: [
+          'Zigbee: 2.4 GHz offenes Mesh mit der breitesten Geräteauswahl; benötigt einen Koordinator',
+          'Z-Wave: Sub-GHz-Mesh mit weniger Störungen und guter Reichweite; ausgereift und zuverlässig',
+          'Thread: modernes IP-basiertes stromsparendes Mesh, das viel von Matter trägt',
+          'Matter: ein Standard auf Anwendungsebene (kein Funk) über Thread, WLAN und Ethernet',
+          'Zigbee, Z-Wave und Thread sind standardmäßig lokal; Matter läuft lokal über einen lokalen Controller',
+          'Wählen Sie nach Geräteverfügbarkeit und ob Sie Sub-GHz-Reichweite (Z-Wave) oder breite Auswahl (Zigbee) wollen',
+        ],
+      },
+      whyProtocols: {
+        id: 'why-protocols',
+        title: 'Warum Protokolle wichtig sind',
+        content:
+          '**Das Protokoll eines Geräts bestimmt seine Reichweite, Akkulaufzeit, Zuverlässigkeit und ob es ohne Cloud funktionieren kann.** Kompatible Protokolle zu wählen vermeidet eine Schublade voller inkompatibler Geräte.',
+        items: [
+          '**Zuverlässigkeit:** Mesh-Protokolle leiten Signale zwischen Geräten weiter und erweitern die Abdeckung.',
+          '**Lokale Steuerung:** Lokale Protokolle funktionieren über einen Hub ohne Internet – siehe [der komplette Leitfaden zum lokalen Smart Home](/de/smart-home/local-smart-home-complete-guide).',
+          '**Kompatibilität:** Ein Hub, der die Protokolle Ihrer Geräte spricht, verbindet sie miteinander.',
+        ],
+      },
+      zigbee: {
+        id: 'zigbee',
+        title: 'Zigbee',
+        content:
+          '**Zigbee ist ein offenes 2.4-GHz-stromsparendes Mesh-Protokoll mit der breitesten Auswahl an erschwinglichen Geräten.** Es benötigt einen Koordinator (einen USB-Stick oder Hub) und leitet über netzbetriebene Geräte weiter.',
+        items: [
+          'Riesiges Ökosystem aus Leuchtmitteln, Sensoren, Steckdosen und Schaltern.',
+          'Teilt das 2.4-GHz-Band mit WLAN, daher ist die Platzierung wichtig.',
+          'Standardmäßig lokal über einen Zigbee-Koordinator an Ihrem Hub.',
+        ],
+      },
+      zwave: {
+        id: 'z-wave',
+        title: 'Z-Wave',
+        content:
+          '**Z-Wave ist ein Sub-GHz-stromsparendes Mesh-Protokoll mit weniger Störungen und guter Reichweite, bekannt für zuverlässige Steuergeräte.** Es nutzt ein anderes Frequenzband als WLAN und Zigbee.',
+        items: [
+          'Arbeitet in Sub-GHz-Bändern (regionale Frequenzen) und vermeidet die 2.4-GHz-Überlastung.',
+          'Starker Ruf für zuverlässige Schlösser, Sensoren und Steuerungen.',
+          'Standardmäßig lokal über einen Z-Wave-Controller.',
+        ],
+      },
+      thread: {
+        id: 'thread',
+        title: 'Thread',
+        content:
+          '**Thread ist ein modernes IPv6-basiertes stromsparendes Mesh, das jedem Gerät eine IP-Adresse gibt und viel von Matter trägt.** Es benötigt einen Thread-Border-Router, um sich mit Ihrem Netzwerk zu verbinden.',
+        items: [
+          'IP-basiert, lässt sich daher sauber in moderne Netzwerke integrieren.',
+          'Benötigt einen Thread-Border-Router (in manchen Hubs und Lautsprechern eingebaut).',
+          'Eine Grundlage für Matter-Geräte – siehe [Matter lokale Steuerung](/de/smart-home/matter-local-control-guide).',
+        ],
+      },
+      matter: {
+        id: 'matter',
+        title: 'Matter: Der Vereinheitlicher',
+        content:
+          '**Matter ist ein Standard auf Anwendungsebene – kein Funk –, der über Thread, WLAN und Ethernet läuft, damit Geräte verschiedener Marken interoperabel sind.** Es kann über einen lokalen Controller lokal laufen und so die Cloud-Abhängigkeit verringern.',
+        items: [
+          'Matter standardisiert, wie Geräte markenübergreifend beschrieben und gesteuert werden.',
+          'Es läuft auf Thread (stromsparende Geräte) oder WLAN/Ethernet (netzbetriebene Geräte).',
+          'Lokale Steuerung ist mit einem lokalen Matter-Controller wie Home Assistant möglich.',
+        ],
+      },
+      whichToChoose: {
+        id: 'which-to-choose',
+        title: 'Welches Protokoll sollten Sie wählen?',
+        content:
+          '**Wählen Sie Zigbee für die breiteste erschwingliche Geräteauswahl, Z-Wave für Sub-GHz-Reichweite und weniger Störungen und Matter-über-Thread für zukunftssichere Interoperabilität.** Ein Hub wie Home Assistant kann sie alle sprechen.',
+        columns: ['Protokoll', 'Band / Reichweite', 'Strom', 'Mesh', 'Standardmäßig lokal', 'Reife'],
+        rows: [
+          { 'Protokoll': 'Zigbee', 'Band / Reichweite': '2.4 GHz, mittel', 'Strom': 'Niedrig', 'Mesh': 'Ja', 'Standardmäßig lokal': 'Ja', 'Reife': 'Ausgereift' },
+          { 'Protokoll': 'Z-Wave', 'Band / Reichweite': 'Sub-GHz, gut', 'Strom': 'Niedrig', 'Mesh': 'Ja', 'Standardmäßig lokal': 'Ja', 'Reife': 'Ausgereift' },
+          { 'Protokoll': 'Thread', 'Band / Reichweite': '2.4 GHz, mittel', 'Strom': 'Niedrig', 'Mesh': 'Ja', 'Standardmäßig lokal': 'Ja', 'Reife': 'Wachsend' },
+          { 'Protokoll': 'Matter', 'Band / Reichweite': 'Über Thread/WLAN', 'Strom': 'Variiert', 'Mesh': 'Über Thread', 'Standardmäßig lokal': 'Mit lokalem Controller', 'Reife': 'Wachsend' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'Ist Matter ein Protokoll oder ein Standard?', a: 'Matter ist ein Standard auf Anwendungsebene, kein Funkprotokoll. Es definiert, wie Geräte beschrieben und gesteuert werden, und läuft auf Transportschichten wie Thread, WLAN und Ethernet – deshalb kann es Geräte verschiedener Marken vereinheitlichen.' },
+          { q: 'Brauche ich Thread?', a: 'Nur wenn Sie Thread-basierte oder Matter-über-Thread-Geräte nutzen, die einen Thread-Border-Router benötigen. Viele Hubs und manche Lautsprecher enthalten einen. Zigbee- und Z-Wave-Geräte nutzen kein Thread und brauchen stattdessen ihren eigenen Koordinator.' },
+          { q: 'Zigbee vs Z-Wave – was ist besser?', a: 'Zigbee bietet die breiteste, günstigste Geräteauswahl im 2.4-GHz-Band; Z-Wave nutzt Sub-GHz-Frequenzen mit weniger Störungen und guter Reichweite. Wählen Sie Zigbee für die Geräteauswahl und Z-Wave für Zuverlässigkeit in überlasteten 2.4-GHz-Umgebungen.' },
+          { q: 'Sind diese Protokolle lokal oder Cloud?', a: 'Zigbee, Z-Wave und Thread sind standardmäßig lokal und funktionieren über einen Hub ohne Internet. Matter kann über einen lokalen Controller lokal laufen, obwohl manche Matter-Geräte auch Cloud-Funktionen bieten können.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Matter & lokale Steuerung](/de/smart-home/matter-local-control-guide) – Matter und Thread ohne Cloud-Bridges nutzen',
+          '[Home Assistant: Erste Schritte](/de/smart-home/home-assistant-getting-started) – ein Hub, der all diese Protokolle spricht',
+          '[Smart-Home-Ökosysteme im Vergleich](/de/smart-home/smart-home-ecosystems-compared) – Plattformen auf Basis dieser Protokolle',
+          '[Der komplette Leitfaden zum lokalen Smart Home](/de/smart-home/local-smart-home-complete-guide) – das Local-First-Gesamtbild',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Matter, Thread, Zigbee, Z-Wave: Protokolle erklärt (2026)',
+      description: 'Matter, Thread, Zigbee, Z-Wave verständlich erklärt: Reichweite, Strom, Mesh, Interoperabilität und welche standardmäßig lokal sind. Das richtige Protokoll wählen.',
+      url: 'https://www.promptquorum.com/de/smart-home/smart-home-protocols-explained',
+      inLanguage: 'de',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'de',
+      mainEntity: [
+        { '@type': 'Question', name: 'Ist Matter ein Protokoll oder ein Standard?', acceptedAnswer: { '@type': 'Answer', text: 'Matter ist ein Standard auf Anwendungsebene, kein Funk. Es definiert, wie Geräte beschrieben und gesteuert werden, und läuft über Transportschichten wie Thread, WLAN und Ethernet.' } },
+        { '@type': 'Question', name: 'Brauche ich Thread?', acceptedAnswer: { '@type': 'Answer', text: 'Nur für Thread-basierte oder Matter-über-Thread-Geräte, die einen Thread-Border-Router benötigen. Zigbee- und Z-Wave-Geräte nutzen kein Thread.' } },
+        { '@type': 'Question', name: 'Zigbee vs Z-Wave – was ist besser?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee bietet die breiteste günstige Auswahl im 2.4-GHz-Band; Z-Wave nutzt Sub-GHz mit weniger Störungen und guter Reichweite. Wählen Sie nach Geräteauswahl vs. Störungen.' } },
+        { '@type': 'Question', name: 'Sind diese Protokolle lokal oder Cloud?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee, Z-Wave und Thread sind standardmäßig lokal über einen Hub. Matter kann über einen lokalen Controller lokal laufen.' } },
+      ],
+    },
+  },
+
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: 'Matter, Thread, Zigbee, Z-Wave: Protocolos Explicados (2026)',
+    seoTitle: 'Protocolos del Smart Home Explicados (2026)',
+    intro:
+      'Los protocolos del smart home deciden cómo se comunican tus dispositivos, hasta dónde llegan y si funcionan localmente. Esta guía en lenguaje claro explica Zigbee, Z-Wave, Thread y Matter —su alcance, consumo, interoperabilidad y cuáles son locales por defecto— para que elijas los adecuados para una configuración fiable y privada.',
+    metaDescription:
+      'Matter, Thread, Zigbee, Z-Wave explicados en lenguaje claro: alcance, consumo, mesh, interoperabilidad y cuáles son locales por defecto. Elige el protocolo correcto.',
+    twitterDescription:
+      'Zigbee vs Z-Wave vs Thread vs Matter: guía clara sobre alcance, consumo, interoperabilidad y qué protocolos son locales por defecto.',
+    readTime: '8 min de lectura',
+    educationalLevel: 'Intermediate',
+    audience: 'Personas que eligen dispositivos de smart home por protocolo',
+    primaryTerm: 'smart home protocols',
+    targetKeywords: [
+      'diferencia matter thread zigbee z-wave',
+      'protocolos smart home explicados',
+      'zigbee vs z-wave',
+      'qué es matter smart home',
+      'protocolo thread smart home',
+    ],
+    leadAnswerBlock:
+      '**Zigbee y Z-Wave son protocolos mesh de bajo consumo maduros, Thread es el mesh moderno de bajo consumo basado en IP, y Matter es el estándar de capa de aplicación que corre sobre Thread, Wi-Fi y Ethernet para unificar dispositivos.** Zigbee, Z-Wave y Thread son locales por defecto; Matter puede correr localmente mediante un controlador local.',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cuál es la diferencia entre Matter, Thread, Zigbee y Z-Wave?',
+        answer:
+          'Zigbee y Z-Wave son protocolos mesh inalámbricos de bajo consumo establecidos para sensores y controles. Thread es un mesh más nuevo de bajo consumo basado en IP. Matter no es una radio sino un estándar que corre sobre Thread, Wi-Fi y Ethernet para que dispositivos de distintas marcas funcionen juntos. Zigbee, Z-Wave y Thread son locales por defecto.',
+        bullets: [
+          'Zigbee: mesh abierto de 2.4 GHz, enorme gama de dispositivos',
+          'Z-Wave: mesh sub-GHz, menos interferencias, buen alcance',
+          'Thread: mesh moderno de bajo consumo basado en IP',
+          'Matter: un estándar sobre Thread/Wi-Fi/Ethernet, no una radio',
+          'Zigbee, Z-Wave, Thread son locales por defecto',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Resumen', anchor: 'tldr' },
+      { label: 'Por qué importan los protocolos', anchor: 'why-protocols' },
+      { label: 'Zigbee', anchor: 'zigbee' },
+      { label: 'Z-Wave', anchor: 'z-wave' },
+      { label: 'Thread', anchor: 'thread' },
+      { label: 'Matter (el unificador)', anchor: 'matter' },
+      { label: 'Cuál elegir', anchor: 'which-to-choose' },
+      { label: 'Preguntas frecuentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Zigbee y Z-Wave son radios mesh de bajo consumo maduras, Thread es el mesh moderno basado en IP, y Matter es un estándar que corre sobre ellos para unificar dispositivos.' },
+      { type: 'plain-terms', content: 'Los protocolos son los idiomas que hablan los dispositivos del smart home. Zigbee y Z-Wave son mesh inalámbricas más antiguas y fiables. Thread es un mesh más nuevo construido sobre estándares de internet. Matter no es una radio en absoluto: es un estándar común que permite que dispositivos de distintas marcas funcionen juntos, y puede correr sin la nube.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Resumen',
+        isTldr: true,
+        items: [
+          'Zigbee: mesh abierto de 2.4 GHz con el ecosistema de dispositivos más amplio; necesita un coordinador',
+          'Z-Wave: mesh sub-GHz con menos interferencias y buen alcance; maduro y fiable',
+          'Thread: mesh moderno de bajo consumo basado en IP que sustenta buena parte de Matter',
+          'Matter: un estándar de capa de aplicación (no una radio) sobre Thread, Wi-Fi y Ethernet',
+          'Zigbee, Z-Wave y Thread son locales por defecto; Matter corre localmente mediante un controlador local',
+          'Elige por disponibilidad de dispositivos y si quieres alcance sub-GHz (Z-Wave) o amplia variedad (Zigbee)',
+        ],
+      },
+      whyProtocols: {
+        id: 'why-protocols',
+        title: 'Por qué importan los protocolos',
+        content:
+          '**El protocolo que usa un dispositivo determina su alcance, su duración de batería, su fiabilidad y si puede funcionar sin la nube.** Elegir protocolos compatibles evita un cajón de aparatos incompatibles.',
+        items: [
+          '**Fiabilidad:** los protocolos mesh retransmiten señales entre dispositivos, ampliando la cobertura.',
+          '**Control local:** los protocolos locales funcionan mediante un hub sin internet — consulta [la guía completa del smart home local](/es/smart-home/local-smart-home-complete-guide).',
+          '**Compatibilidad:** un hub que habla los protocolos de tus dispositivos los une entre sí.',
+        ],
+      },
+      zigbee: {
+        id: 'zigbee',
+        title: 'Zigbee',
+        content:
+          '**Zigbee es un protocolo mesh abierto de 2.4 GHz y bajo consumo con la mayor variedad de dispositivos asequibles.** Necesita un coordinador (un stick USB o un hub) y retransmite a través de dispositivos con alimentación de red.',
+        items: [
+          'Enorme ecosistema de bombillas, sensores, enchufes e interruptores.',
+          'Comparte la banda de 2.4 GHz con el Wi-Fi, así que la ubicación importa.',
+          'Local por defecto mediante un coordinador Zigbee en tu hub.',
+        ],
+      },
+      zwave: {
+        id: 'z-wave',
+        title: 'Z-Wave',
+        content:
+          '**Z-Wave es un protocolo mesh sub-GHz de bajo consumo con menos interferencias y buen alcance, conocido por dispositivos de control fiables.** Usa una banda de frecuencia distinta del Wi-Fi y Zigbee.',
+        items: [
+          'Opera en bandas sub-GHz (frecuencias regionales), evitando la congestión de 2.4 GHz.',
+          'Sólida reputación de cerraduras, sensores y controles fiables.',
+          'Local por defecto mediante un controlador Z-Wave.',
+        ],
+      },
+      thread: {
+        id: 'thread',
+        title: 'Thread',
+        content:
+          '**Thread es un mesh moderno de bajo consumo basado en IPv6 que da una dirección IP a cada dispositivo y sustenta buena parte de Matter.** Necesita un router de borde Thread para conectarse a tu red.',
+        items: [
+          'Basado en IP, así que se integra limpiamente con las redes modernas.',
+          'Requiere un router de borde Thread (incorporado en algunos hubs y altavoces).',
+          'Una base para los dispositivos Matter — consulta [control local con Matter](/es/smart-home/matter-local-control-guide).',
+        ],
+      },
+      matter: {
+        id: 'matter',
+        title: 'Matter: el unificador',
+        content:
+          '**Matter es un estándar de capa de aplicación —no una radio— que corre sobre Thread, Wi-Fi y Ethernet para que dispositivos de distintas marcas interoperen.** Puede correr localmente mediante un controlador local, reduciendo la dependencia de la nube.',
+        items: [
+          'Matter estandariza cómo se describen y controlan los dispositivos entre marcas.',
+          'Corre sobre Thread (dispositivos de bajo consumo) o Wi-Fi/Ethernet (dispositivos con alimentación de red).',
+          'El control local es posible con un controlador Matter local como Home Assistant.',
+        ],
+      },
+      whichToChoose: {
+        id: 'which-to-choose',
+        title: '¿Qué protocolo deberías elegir?',
+        content:
+          '**Elige Zigbee por la mayor variedad de dispositivos asequibles, Z-Wave por el alcance sub-GHz y menos interferencias, y Matter-sobre-Thread por una interoperabilidad a prueba de futuro.** Un hub como Home Assistant puede hablarlos todos.',
+        columns: ['Protocolo', 'Banda / alcance', 'Consumo', 'Mesh', 'Local por defecto', 'Madurez'],
+        rows: [
+          { 'Protocolo': 'Zigbee', 'Banda / alcance': '2.4 GHz, medio', 'Consumo': 'Bajo', 'Mesh': 'Sí', 'Local por defecto': 'Sí', 'Madurez': 'Maduro' },
+          { 'Protocolo': 'Z-Wave', 'Banda / alcance': 'Sub-GHz, bueno', 'Consumo': 'Bajo', 'Mesh': 'Sí', 'Local por defecto': 'Sí', 'Madurez': 'Maduro' },
+          { 'Protocolo': 'Thread', 'Banda / alcance': '2.4 GHz, medio', 'Consumo': 'Bajo', 'Mesh': 'Sí', 'Local por defecto': 'Sí', 'Madurez': 'En crecimiento' },
+          { 'Protocolo': 'Matter', 'Banda / alcance': 'Sobre Thread/Wi-Fi', 'Consumo': 'Variable', 'Mesh': 'Vía Thread', 'Local por defecto': 'Con controlador local', 'Madurez': 'En crecimiento' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          { q: '¿Matter es un protocolo o un estándar?', a: 'Matter es un estándar de capa de aplicación, no una radio. Define cómo se describen y controlan los dispositivos y corre sobre capas de transporte como Thread, Wi-Fi y Ethernet, por eso puede unificar dispositivos de distintas marcas.' },
+          { q: '¿Necesito Thread?', a: 'Solo si usas dispositivos basados en Thread o Matter-sobre-Thread, que necesitan un router de borde Thread. Muchos hubs y algunos altavoces incluyen uno. Los dispositivos Zigbee y Z-Wave no usan Thread y en su lugar necesitan su propio coordinador.' },
+          { q: 'Zigbee vs Z-Wave, ¿cuál es mejor?', a: 'Zigbee ofrece la mayor variedad de dispositivos asequibles en la banda de 2.4 GHz; Z-Wave usa frecuencias sub-GHz con menos interferencias y buen alcance. Elige Zigbee por variedad de dispositivos y Z-Wave por fiabilidad en entornos de 2.4 GHz congestionados.' },
+          { q: '¿Estos protocolos son locales o nube?', a: 'Zigbee, Z-Wave y Thread son locales por defecto y funcionan mediante un hub sin internet. Matter puede correr localmente mediante un controlador local, aunque algunos dispositivos Matter también pueden ofrecer funciones en la nube.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Matter y control local](/es/smart-home/matter-local-control-guide) — usar Matter y Thread sin puentes en la nube',
+          '[Home Assistant: primeros pasos](/es/smart-home/home-assistant-getting-started) — un hub que habla todos estos protocolos',
+          '[Ecosistemas de smart home comparados](/es/smart-home/smart-home-ecosystems-compared) — plataformas basadas en estos protocolos',
+          '[La guía completa del smart home local](/es/smart-home/local-smart-home-complete-guide) — la imagen local-first',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Matter, Thread, Zigbee, Z-Wave: Protocolos Explicados (2026)',
+      description: 'Matter, Thread, Zigbee, Z-Wave explicados en lenguaje claro: alcance, consumo, mesh, interoperabilidad y cuáles son locales por defecto. Elige el protocolo correcto.',
+      url: 'https://www.promptquorum.com/es/smart-home/smart-home-protocols-explained',
+      inLanguage: 'es',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'es',
+      mainEntity: [
+        { '@type': 'Question', name: '¿Matter es un protocolo o un estándar?', acceptedAnswer: { '@type': 'Answer', text: 'Matter es un estándar de capa de aplicación, no una radio. Define cómo se describen y controlan los dispositivos y corre sobre capas de transporte como Thread, Wi-Fi y Ethernet.' } },
+        { '@type': 'Question', name: '¿Necesito Thread?', acceptedAnswer: { '@type': 'Answer', text: 'Solo si usas dispositivos basados en Thread o Matter-sobre-Thread, que necesitan un router de borde Thread. Los dispositivos Zigbee y Z-Wave no usan Thread.' } },
+        { '@type': 'Question', name: 'Zigbee vs Z-Wave, ¿cuál es mejor?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee ofrece la mayor variedad asequible en 2.4 GHz; Z-Wave usa sub-GHz con menos interferencias y buen alcance. Elige según variedad de dispositivos o interferencias.' } },
+        { '@type': 'Question', name: '¿Estos protocolos son locales o nube?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee, Z-Wave y Thread son locales por defecto mediante un hub. Matter puede correr localmente mediante un controlador local.' } },
+      ],
+    },
+  },
+
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: 'Matter, Thread, Zigbee, Z-Wave : Protocoles Expliqués (2026)',
+    seoTitle: 'Protocoles de la Maison Connectée Expliqués (2026)',
+    intro:
+      'Les protocoles de la maison connectée déterminent comment vos appareils communiquent, jusqu\'où ils portent et s\'ils fonctionnent localement. Ce guide en langage clair explique Zigbee, Z-Wave, Thread et Matter — leur portée, leur consommation, leur interopérabilité et lesquels sont locaux par défaut — pour que vous choisissiez les bons pour une installation fiable et privée.',
+    metaDescription:
+      'Matter, Thread, Zigbee, Z-Wave expliqués en langage clair : portée, consommation, mesh, interopérabilité et lesquels sont locaux par défaut. Choisissez le bon protocole.',
+    twitterDescription:
+      'Zigbee vs Z-Wave vs Thread vs Matter : guide clair sur la portée, la consommation, l\'interopérabilité et quels protocoles sont locaux par défaut.',
+    readTime: '8 min de lecture',
+    educationalLevel: 'Intermediate',
+    audience: 'Personnes choisissant des appareils de maison connectée par protocole',
+    primaryTerm: 'smart home protocols',
+    targetKeywords: [
+      'différence matter thread zigbee z-wave',
+      'protocoles maison connectée expliqués',
+      'zigbee vs z-wave',
+      'qu\'est-ce que matter maison connectée',
+      'protocole thread maison connectée',
+    ],
+    leadAnswerBlock:
+      '**Zigbee et Z-Wave sont des protocoles mesh basse consommation matures, Thread est le mesh moderne basse consommation basé sur IP, et Matter est le standard de couche application qui tourne sur Thread, Wi-Fi et Ethernet pour unifier les appareils.** Zigbee, Z-Wave et Thread sont locaux par défaut ; Matter peut tourner localement via un contrôleur local.',
+    quickAnswerTop: {
+      fr: {
+        question: 'Quelle est la différence entre Matter, Thread, Zigbee et Z-Wave ?',
+        answer:
+          'Zigbee et Z-Wave sont des protocoles mesh sans fil basse consommation établis pour les capteurs et les commandes. Thread est un mesh plus récent basse consommation basé sur IP. Matter n\'est pas une radio mais un standard qui tourne sur Thread, Wi-Fi et Ethernet pour que des appareils de marques différentes fonctionnent ensemble. Zigbee, Z-Wave et Thread sont locaux par défaut.',
+        bullets: [
+          'Zigbee : mesh ouvert 2.4 GHz, énorme gamme d\'appareils',
+          'Z-Wave : mesh sub-GHz, moins d\'interférences, bonne portée',
+          'Thread : mesh moderne basse consommation basé sur IP',
+          'Matter : un standard sur Thread/Wi-Fi/Ethernet, pas une radio',
+          'Zigbee, Z-Wave, Thread sont locaux par défaut',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'En bref', anchor: 'tldr' },
+      { label: 'Pourquoi les protocoles comptent', anchor: 'why-protocols' },
+      { label: 'Zigbee', anchor: 'zigbee' },
+      { label: 'Z-Wave', anchor: 'z-wave' },
+      { label: 'Thread', anchor: 'thread' },
+      { label: 'Matter (l\'unificateur)', anchor: 'matter' },
+      { label: 'Lequel choisir', anchor: 'which-to-choose' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Zigbee et Z-Wave sont des radios mesh basse consommation matures, Thread est le mesh moderne basé sur IP, et Matter est un standard qui tourne par-dessus pour unifier les appareils.' },
+      { type: 'plain-terms', content: 'Les protocoles sont les langages que parlent les appareils de la maison connectée. Zigbee et Z-Wave sont des meshes sans fil plus anciens et fiables. Thread est un mesh plus récent bâti sur des standards internet. Matter n\'est pas du tout une radio — c\'est un standard commun qui permet à des appareils de marques différentes de fonctionner ensemble, et il peut tourner sans le cloud.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'En bref',
+        isTldr: true,
+        items: [
+          'Zigbee : mesh ouvert 2.4 GHz avec l\'écosystème d\'appareils le plus large ; nécessite un coordinateur',
+          'Z-Wave : mesh sub-GHz avec moins d\'interférences et bonne portée ; mature et fiable',
+          'Thread : mesh moderne basse consommation basé sur IP qui sous-tend une grande partie de Matter',
+          'Matter : un standard de couche application (pas une radio) sur Thread, Wi-Fi et Ethernet',
+          'Zigbee, Z-Wave et Thread sont locaux par défaut ; Matter tourne localement via un contrôleur local',
+          'Choisissez selon la disponibilité des appareils et si vous voulez la portée sub-GHz (Z-Wave) ou un large choix (Zigbee)',
+        ],
+      },
+      whyProtocols: {
+        id: 'why-protocols',
+        title: 'Pourquoi les protocoles comptent',
+        content:
+          '**Le protocole d\'un appareil détermine sa portée, son autonomie, sa fiabilité et s\'il peut fonctionner sans le cloud.** Choisir des protocoles compatibles évite un tiroir d\'appareils incompatibles.',
+        items: [
+          '**Fiabilité :** les protocoles mesh relaient les signaux entre appareils, étendant la couverture.',
+          '**Contrôle local :** les protocoles locaux fonctionnent via un hub sans internet — voir [le guide complet de la maison connectée locale](/fr/smart-home/local-smart-home-complete-guide).',
+          '**Compatibilité :** un hub qui parle les protocoles de vos appareils les relie entre eux.',
+        ],
+      },
+      zigbee: {
+        id: 'zigbee',
+        title: 'Zigbee',
+        content:
+          '**Zigbee est un protocole mesh ouvert 2.4 GHz basse consommation avec la plus large gamme d\'appareils abordables.** Il nécessite un coordinateur (une clé USB ou un hub) et relaie via les appareils alimentés sur secteur.',
+        items: [
+          'Énorme écosystème d\'ampoules, capteurs, prises et interrupteurs.',
+          'Partage la bande 2.4 GHz avec le Wi-Fi, le placement compte donc.',
+          'Local par défaut via un coordinateur Zigbee sur votre hub.',
+        ],
+      },
+      zwave: {
+        id: 'z-wave',
+        title: 'Z-Wave',
+        content:
+          '**Z-Wave est un protocole mesh sub-GHz basse consommation avec moins d\'interférences et une bonne portée, réputé pour ses appareils de commande fiables.** Il utilise une bande de fréquence différente du Wi-Fi et de Zigbee.',
+        items: [
+          'Opère dans des bandes sub-GHz (fréquences régionales), évitant la congestion 2.4 GHz.',
+          'Solide réputation de serrures, capteurs et commandes fiables.',
+          'Local par défaut via un contrôleur Z-Wave.',
+        ],
+      },
+      thread: {
+        id: 'thread',
+        title: 'Thread',
+        content:
+          '**Thread est un mesh moderne basse consommation basé sur IPv6 qui donne une adresse IP à chaque appareil et sous-tend une grande partie de Matter.** Il nécessite un routeur de bordure Thread pour se connecter à votre réseau.',
+        items: [
+          'Basé sur IP, il s\'intègre proprement aux réseaux modernes.',
+          'Nécessite un routeur de bordure Thread (intégré à certains hubs et enceintes).',
+          'Une base pour les appareils Matter — voir [contrôle local avec Matter](/fr/smart-home/matter-local-control-guide).',
+        ],
+      },
+      matter: {
+        id: 'matter',
+        title: 'Matter : l\'unificateur',
+        content:
+          '**Matter est un standard de couche application — pas une radio — qui tourne sur Thread, Wi-Fi et Ethernet pour que des appareils de marques différentes interopèrent.** Il peut tourner localement via un contrôleur local, réduisant la dépendance au cloud.',
+        items: [
+          'Matter standardise la façon dont les appareils sont décrits et commandés entre marques.',
+          'Il tourne sur Thread (appareils basse consommation) ou Wi-Fi/Ethernet (appareils sur secteur).',
+          'Le contrôle local est possible avec un contrôleur Matter local comme Home Assistant.',
+        ],
+      },
+      whichToChoose: {
+        id: 'which-to-choose',
+        title: 'Quel protocole choisir ?',
+        content:
+          '**Choisissez Zigbee pour le plus large choix d\'appareils abordables, Z-Wave pour la portée sub-GHz et moins d\'interférences, et Matter-sur-Thread pour une interopérabilité pérenne.** Un hub comme Home Assistant peut tous les parler.',
+        columns: ['Protocole', 'Bande / portée', 'Consommation', 'Mesh', 'Local par défaut', 'Maturité'],
+        rows: [
+          { 'Protocole': 'Zigbee', 'Bande / portée': '2.4 GHz, moyenne', 'Consommation': 'Faible', 'Mesh': 'Oui', 'Local par défaut': 'Oui', 'Maturité': 'Mature' },
+          { 'Protocole': 'Z-Wave', 'Bande / portée': 'Sub-GHz, bonne', 'Consommation': 'Faible', 'Mesh': 'Oui', 'Local par défaut': 'Oui', 'Maturité': 'Mature' },
+          { 'Protocole': 'Thread', 'Bande / portée': '2.4 GHz, moyenne', 'Consommation': 'Faible', 'Mesh': 'Oui', 'Local par défaut': 'Oui', 'Maturité': 'En croissance' },
+          { 'Protocole': 'Matter', 'Bande / portée': 'Sur Thread/Wi-Fi', 'Consommation': 'Variable', 'Mesh': 'Via Thread', 'Local par défaut': 'Avec contrôleur local', 'Maturité': 'En croissance' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'Matter est-il un protocole ou un standard ?', a: 'Matter est un standard de couche application, pas une radio. Il définit comment les appareils sont décrits et commandés et tourne sur des couches de transport comme Thread, Wi-Fi et Ethernet — c\'est pourquoi il peut unifier des appareils de marques différentes.' },
+          { q: 'Ai-je besoin de Thread ?', a: 'Seulement si vous utilisez des appareils basés sur Thread ou Matter-sur-Thread, qui nécessitent un routeur de bordure Thread. De nombreux hubs et certaines enceintes en intègrent un. Les appareils Zigbee et Z-Wave n\'utilisent pas Thread et nécessitent plutôt leur propre coordinateur.' },
+          { q: 'Zigbee vs Z-Wave, lequel est meilleur ?', a: 'Zigbee offre le plus large choix d\'appareils abordables sur la bande 2.4 GHz ; Z-Wave utilise des fréquences sub-GHz avec moins d\'interférences et une bonne portée. Choisissez Zigbee pour le choix d\'appareils et Z-Wave pour la fiabilité dans des environnements 2.4 GHz encombrés.' },
+          { q: 'Ces protocoles sont-ils locaux ou cloud ?', a: 'Zigbee, Z-Wave et Thread sont locaux par défaut et fonctionnent via un hub sans internet. Matter peut tourner localement via un contrôleur local, même si certains appareils Matter peuvent aussi offrir des fonctions cloud.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Matter & contrôle local](/fr/smart-home/matter-local-control-guide) — utiliser Matter et Thread sans ponts cloud',
+          '[Home Assistant : premiers pas](/fr/smart-home/home-assistant-getting-started) — un hub qui parle tous ces protocoles',
+          '[Écosystèmes de maison connectée comparés](/fr/smart-home/smart-home-ecosystems-compared) — plateformes bâties sur ces protocoles',
+          '[Le guide complet de la maison connectée locale](/fr/smart-home/local-smart-home-complete-guide) — la vue d\'ensemble local-first',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Matter, Thread, Zigbee, Z-Wave : Protocoles Expliqués (2026)',
+      description: 'Matter, Thread, Zigbee, Z-Wave expliqués en langage clair : portée, consommation, mesh, interopérabilité et lesquels sont locaux par défaut. Choisissez le bon protocole.',
+      url: 'https://www.promptquorum.com/fr/smart-home/smart-home-protocols-explained',
+      inLanguage: 'fr',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'fr',
+      mainEntity: [
+        { '@type': 'Question', name: 'Matter est-il un protocole ou un standard ?', acceptedAnswer: { '@type': 'Answer', text: 'Matter est un standard de couche application, pas une radio. Il définit comment les appareils sont décrits et commandés et tourne sur des couches de transport comme Thread, Wi-Fi et Ethernet.' } },
+        { '@type': 'Question', name: 'Ai-je besoin de Thread ?', acceptedAnswer: { '@type': 'Answer', text: 'Seulement pour les appareils basés sur Thread ou Matter-sur-Thread, qui nécessitent un routeur de bordure Thread. Les appareils Zigbee et Z-Wave n\'utilisent pas Thread.' } },
+        { '@type': 'Question', name: 'Zigbee vs Z-Wave, lequel est meilleur ?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee offre le plus large choix abordable sur 2.4 GHz ; Z-Wave utilise le sub-GHz avec moins d\'interférences et une bonne portée. Choisissez selon le choix d\'appareils ou les interférences.' } },
+        { '@type': 'Question', name: 'Ces protocoles sont-ils locaux ou cloud ?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee, Z-Wave et Thread sont locaux par défaut via un hub. Matter peut tourner localement via un contrôleur local.' } },
+      ],
+    },
+  },
+
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: 'Matter・Thread・Zigbee・Z-Wave：プロトコル解説（2026）',
+    seoTitle: 'スマートホームのプロトコル解説（2026）',
+    intro:
+      'スマートホームのプロトコルは、機器がどう通信し、どこまで届き、ローカルで動くかを決めます。本ガイドは分かりやすく Zigbee、Z-Wave、Thread、Matter を解説します——到達距離、消費電力、相互運用性、どれが標準でローカルか——信頼でき、プライベートな構成のために正しいものを選べます。',
+    metaDescription:
+      'Matter・Thread・Zigbee・Z-Wave を分かりやすく解説：到達距離、消費電力、メッシュ、相互運用、どれが標準でローカルか。正しいプロトコルを選ぶ。',
+    twitterDescription:
+      'Zigbee 対 Z-Wave 対 Thread 対 Matter：到達距離、消費電力、相互運用、どのプロトコルが標準でローカルかを分かりやすく解説。',
+    readTime: '8分で読める',
+    educationalLevel: 'Intermediate',
+    audience: 'プロトコルでスマートホーム機器を選ぶ人',
+    primaryTerm: 'smart home protocols',
+    targetKeywords: [
+      'matter thread zigbee z-wave 違い',
+      'スマートホーム プロトコル 解説',
+      'zigbee 対 z-wave',
+      'matter とは スマートホーム',
+      'thread プロトコル スマートホーム',
+    ],
+    leadAnswerBlock:
+      '**Zigbee と Z-Wave は成熟した低消費電力のメッシュプロトコル、Thread は現代的な IP ベースの低消費電力メッシュ、Matter は機器を統一するために Thread・Wi-Fi・Ethernet 上で動くアプリケーション層の規格です。** Zigbee・Z-Wave・Thread は標準でローカル；Matter はローカルコントローラー経由でローカル動作できます。',
+    quickAnswerTop: {
+      ja: {
+        question: 'Matter・Thread・Zigbee・Z-Wave の違いは何ですか？',
+        answer:
+          'Zigbee と Z-Wave は、センサーや制御向けに確立した低消費電力の無線メッシュプロトコルです。Thread はより新しい IP ベースの低消費電力メッシュです。Matter は無線ではなく、Thread・Wi-Fi・Ethernet 上で動き、異なるブランドの機器を協調させる規格です。Zigbee・Z-Wave・Thread は標準でローカルです。',
+        bullets: [
+          'Zigbee：2.4 GHz のオープンなメッシュ、膨大な機器対応',
+          'Z-Wave：サブ GHz メッシュ、干渉が少なく到達距離が良い',
+          'Thread：現代的な IP ベースの低消費電力メッシュ',
+          'Matter：Thread/Wi-Fi/Ethernet 上の規格であって無線ではない',
+          'Zigbee・Z-Wave・Thread は標準でローカル',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '要点まとめ', anchor: 'tldr' },
+      { label: 'プロトコルが重要な理由', anchor: 'why-protocols' },
+      { label: 'Zigbee', anchor: 'zigbee' },
+      { label: 'Z-Wave', anchor: 'z-wave' },
+      { label: 'Thread', anchor: 'thread' },
+      { label: 'Matter（統一役）', anchor: 'matter' },
+      { label: 'どれを選ぶか', anchor: 'which-to-choose' },
+      { label: 'よくある質問', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Zigbee と Z-Wave は成熟した低消費電力メッシュ無線、Thread は現代的な IP ベースのメッシュ、Matter はその上で動いて機器を統一する規格です。' },
+      { type: 'plain-terms', content: 'プロトコルはスマートホーム機器が話す言語です。Zigbee と Z-Wave は古くからの信頼できる無線メッシュ。Thread はインターネット標準の上に作られた新しいメッシュ。Matter は無線ではなく、異なるブランドの機器を協調させる共通規格で、クラウドなしで動作できます。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '要点まとめ',
+        isTldr: true,
+        items: [
+          'Zigbee：最も広い機器エコシステムを持つ 2.4 GHz のオープンなメッシュ；コーディネーターが必要',
+          'Z-Wave：干渉が少なく到達距離が良いサブ GHz メッシュ；成熟して信頼できる',
+          'Thread：Matter の多くを支える現代的な IP ベースの低消費電力メッシュ',
+          'Matter：Thread・Wi-Fi・Ethernet 上のアプリケーション層規格（無線ではない）',
+          'Zigbee・Z-Wave・Thread は標準でローカル；Matter はローカルコントローラー経由でローカル動作',
+          '機器の入手性と、サブ GHz の到達距離（Z-Wave）か幅広い選択肢（Zigbee）かで選ぶ',
+        ],
+      },
+      whyProtocols: {
+        id: 'why-protocols',
+        title: 'プロトコルが重要な理由',
+        content:
+          '**機器が使うプロトコルは、その到達距離、電池寿命、信頼性、そしてクラウドなしで動けるかを決めます。** 互換性のあるプロトコルを選べば、非互換のガジェットでいっぱいの引き出しを避けられます。',
+        items: [
+          '**信頼性：** メッシュプロトコルは機器間で信号を中継し、カバー範囲を広げます。',
+          '**ローカル制御：** ローカルプロトコルはインターネットなしにハブ経由で動作します——[ローカルスマートホーム完全ガイド](/ja/smart-home/local-smart-home-complete-guide)を参照。',
+          '**互換性：** あなたの機器のプロトコルを話すハブが、それらをまとめます。',
+        ],
+      },
+      zigbee: {
+        id: 'zigbee',
+        title: 'Zigbee',
+        content:
+          '**Zigbee は、手頃な機器の選択肢が最も広い、オープンな 2.4 GHz 低消費電力メッシュプロトコルです。** コーディネーター（USB スティックまたはハブ）が必要で、電源接続機器を介して中継します。',
+        items: [
+          '電球、センサー、プラグ、スイッチの巨大なエコシステム。',
+          '2.4 GHz 帯を Wi-Fi と共有するため、設置場所が重要。',
+          'ハブ上の Zigbee コーディネーター経由で標準でローカル。',
+        ],
+      },
+      zwave: {
+        id: 'z-wave',
+        title: 'Z-Wave',
+        content:
+          '**Z-Wave は、干渉が少なく到達距離が良いサブ GHz の低消費電力メッシュプロトコルで、信頼できる制御機器で知られています。** Wi-Fi や Zigbee とは別の周波数帯を使います。',
+        items: [
+          'サブ GHz 帯（地域ごとの周波数）で動作し、2.4 GHz の混雑を避けます。',
+          '信頼できるロック、センサー、制御機器としての確かな評価。',
+          'Z-Wave コントローラー経由で標準でローカル。',
+        ],
+      },
+      thread: {
+        id: 'thread',
+        title: 'Thread',
+        content:
+          '**Thread は、各機器に IP アドレスを与え、Matter の多くを支える現代的な IPv6 ベースの低消費電力メッシュです。** ネットワークに接続するには Thread ボーダールーターが必要です。',
+        items: [
+          'IP ベースなので、現代のネットワークときれいに統合できます。',
+          'Thread ボーダールーターが必要（一部のハブやスピーカーに内蔵）。',
+          'Matter 機器の基盤——[Matter のローカル制御](/ja/smart-home/matter-local-control-guide)を参照。',
+        ],
+      },
+      matter: {
+        id: 'matter',
+        title: 'Matter：統一役',
+        content:
+          '**Matter は無線ではなくアプリケーション層の規格で、Thread・Wi-Fi・Ethernet 上で動き、異なるブランドの機器を相互運用させます。** ローカルコントローラー経由でローカル動作でき、クラウド依存を減らせます。',
+        items: [
+          'Matter は、機器の記述と制御の仕方をブランド横断で標準化します。',
+          'Thread（低消費電力機器）または Wi-Fi/Ethernet（電源接続機器）上で動きます。',
+          'Home Assistant のようなローカル Matter コントローラーでローカル制御が可能です。',
+        ],
+      },
+      whichToChoose: {
+        id: 'which-to-choose',
+        title: 'どのプロトコルを選ぶべきか',
+        content:
+          '**手頃な機器の選択肢が最も広いなら Zigbee、サブ GHz の到達距離と少ない干渉なら Z-Wave、将来を見据えた相互運用なら Matter-over-Thread を選びましょう。** Home Assistant のようなハブはこれらすべてを話せます。',
+        columns: ['プロトコル', '帯域 / 到達距離', '消費電力', 'メッシュ', '標準でローカル', '成熟度'],
+        rows: [
+          { 'プロトコル': 'Zigbee', '帯域 / 到達距離': '2.4 GHz、中程度', '消費電力': '低い', 'メッシュ': 'あり', '標準でローカル': 'はい', '成熟度': '成熟' },
+          { 'プロトコル': 'Z-Wave', '帯域 / 到達距離': 'サブ GHz、良好', '消費電力': '低い', 'メッシュ': 'あり', '標準でローカル': 'はい', '成熟度': '成熟' },
+          { 'プロトコル': 'Thread', '帯域 / 到達距離': '2.4 GHz、中程度', '消費電力': '低い', 'メッシュ': 'あり', '標準でローカル': 'はい', '成熟度': '拡大中' },
+          { 'プロトコル': 'Matter', '帯域 / 到達距離': 'Thread/Wi-Fi 上', '消費電力': '可変', 'メッシュ': 'Thread 経由', '標準でローカル': 'ローカルコントローラーで', '成熟度': '拡大中' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          { q: 'Matter はプロトコルですか、規格ですか？', a: 'Matter はアプリケーション層の規格であって、無線プロトコルではありません。機器の記述と制御の仕方を定義し、Thread・Wi-Fi・Ethernet のような搬送層の上で動きます。だからこそ異なるブランドの機器を統一できます。' },
+          { q: 'Thread は必要ですか？', a: 'Thread ボーダールーターを必要とする Thread ベースまたは Matter-over-Thread 機器を使う場合だけです。多くのハブや一部のスピーカーに内蔵されています。Zigbee と Z-Wave の機器は Thread を使わず、代わりに専用のコーディネーターが必要です。' },
+          { q: 'Zigbee と Z-Wave、どちらが良いですか？', a: 'Zigbee は 2.4 GHz 帯で最も広く手頃な機器を提供します；Z-Wave はサブ GHz の周波数を使い、干渉が少なく到達距離が良好です。機器の選択肢なら Zigbee、混雑した 2.4 GHz 環境での信頼性なら Z-Wave を選びましょう。' },
+          { q: 'これらのプロトコルはローカルですか、クラウドですか？', a: 'Zigbee・Z-Wave・Thread は標準でローカルで、インターネットなしにハブ経由で動きます。Matter はローカルコントローラー経由でローカル動作できますが、一部の Matter 機器はクラウド機能も提供する場合があります。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[Matter とローカル制御](/ja/smart-home/matter-local-control-guide) — クラウドブリッジなしで Matter と Thread を使う',
+          '[Home Assistant 入門](/ja/smart-home/home-assistant-getting-started) — これらすべてのプロトコルを話すハブ',
+          '[スマートホームのエコシステム比較](/ja/smart-home/smart-home-ecosystems-compared) — これらのプロトコル上のプラットフォーム',
+          '[ローカルスマートホーム完全ガイド](/ja/smart-home/local-smart-home-complete-guide) — ローカルファーストの全体像',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Matter・Thread・Zigbee・Z-Wave：プロトコル解説（2026）',
+      description: 'Matter・Thread・Zigbee・Z-Wave を分かりやすく解説：到達距離、消費電力、メッシュ、相互運用、どれが標準でローカルか。正しいプロトコルを選ぶ。',
+      url: 'https://www.promptquorum.com/ja/smart-home/smart-home-protocols-explained',
+      inLanguage: 'ja',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ja',
+      mainEntity: [
+        { '@type': 'Question', name: 'Matter はプロトコルですか、規格ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Matter はアプリケーション層の規格であって無線ではありません。機器の記述と制御を定義し、Thread・Wi-Fi・Ethernet のような搬送層の上で動きます。' } },
+        { '@type': 'Question', name: 'Thread は必要ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Thread ボーダールーターを必要とする Thread ベースまたは Matter-over-Thread 機器を使う場合だけです。Zigbee と Z-Wave の機器は Thread を使いません。' } },
+        { '@type': 'Question', name: 'Zigbee と Z-Wave、どちらが良いですか？', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee は 2.4 GHz 帯で最も広く手頃な選択肢を提供；Z-Wave はサブ GHz で干渉が少なく到達距離が良好です。選択肢か干渉かで選びましょう。' } },
+        { '@type': 'Question', name: 'これらのプロトコルはローカルですか、クラウドですか？', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee・Z-Wave・Thread は標準でハブ経由のローカル。Matter はローカルコントローラー経由でローカル動作できます。' } },
+      ],
+    },
+  },
+
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: 'Matter, Thread, Zigbee, Z-Wave: Protocolos Explicados (2026)',
+    seoTitle: 'Protocolos da Casa Inteligente Explicados (2026)',
+    intro:
+      'Os protocolos da casa inteligente decidem como seus dispositivos se comunicam, até onde alcançam e se funcionam localmente. Este guia em linguagem clara explica Zigbee, Z-Wave, Thread e Matter — seu alcance, consumo, interoperabilidade e quais são locais por padrão — para que você escolha os certos para uma configuração confiável e privada.',
+    metaDescription:
+      'Matter, Thread, Zigbee, Z-Wave explicados em linguagem clara: alcance, consumo, mesh, interoperabilidade e quais são locais por padrão. Escolha o protocolo certo.',
+    twitterDescription:
+      'Zigbee vs Z-Wave vs Thread vs Matter: guia claro sobre alcance, consumo, interoperabilidade e quais protocolos são locais por padrão.',
+    readTime: '8 min de leitura',
+    educationalLevel: 'Intermediate',
+    audience: 'Pessoas escolhendo dispositivos de casa inteligente por protocolo',
+    primaryTerm: 'smart home protocols',
+    targetKeywords: [
+      'diferença matter thread zigbee z-wave',
+      'protocolos casa inteligente explicados',
+      'zigbee vs z-wave',
+      'o que é matter casa inteligente',
+      'protocolo thread casa inteligente',
+    ],
+    leadAnswerBlock:
+      '**Zigbee e Z-Wave são protocolos mesh de baixo consumo maduros, Thread é o mesh moderno de baixo consumo baseado em IP, e Matter é o padrão de camada de aplicação que roda sobre Thread, Wi-Fi e Ethernet para unificar dispositivos.** Zigbee, Z-Wave e Thread são locais por padrão; o Matter pode rodar localmente por meio de um controlador local.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual a diferença entre Matter, Thread, Zigbee e Z-Wave?',
+        answer:
+          'Zigbee e Z-Wave são protocolos mesh sem fio de baixo consumo estabelecidos para sensores e controles. Thread é um mesh mais novo de baixo consumo baseado em IP. O Matter não é um rádio, mas um padrão que roda sobre Thread, Wi-Fi e Ethernet para que dispositivos de marcas diferentes funcionem juntos. Zigbee, Z-Wave e Thread são locais por padrão.',
+        bullets: [
+          'Zigbee: mesh aberto de 2.4 GHz, enorme variedade de dispositivos',
+          'Z-Wave: mesh sub-GHz, menos interferência, bom alcance',
+          'Thread: mesh moderno de baixo consumo baseado em IP',
+          'Matter: um padrão sobre Thread/Wi-Fi/Ethernet, não um rádio',
+          'Zigbee, Z-Wave, Thread são locais por padrão',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Resumo', anchor: 'tldr' },
+      { label: 'Por que os protocolos importam', anchor: 'why-protocols' },
+      { label: 'Zigbee', anchor: 'zigbee' },
+      { label: 'Z-Wave', anchor: 'z-wave' },
+      { label: 'Thread', anchor: 'thread' },
+      { label: 'Matter (o unificador)', anchor: 'matter' },
+      { label: 'Qual escolher', anchor: 'which-to-choose' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Zigbee e Z-Wave são rádios mesh de baixo consumo maduros, Thread é o mesh moderno baseado em IP, e o Matter é um padrão que roda sobre eles para unificar dispositivos.' },
+      { type: 'plain-terms', content: 'Protocolos são os idiomas que os dispositivos da casa inteligente falam. Zigbee e Z-Wave são meshes sem fio mais antigos e confiáveis. Thread é um mesh mais novo construído sobre padrões da internet. O Matter não é um rádio: é um padrão comum que permite que dispositivos de marcas diferentes funcionem juntos, e pode rodar sem a nuvem.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Resumo',
+        isTldr: true,
+        items: [
+          'Zigbee: mesh aberto de 2.4 GHz com o ecossistema de dispositivos mais amplo; precisa de um coordenador',
+          'Z-Wave: mesh sub-GHz com menos interferência e bom alcance; maduro e confiável',
+          'Thread: mesh moderno de baixo consumo baseado em IP que sustenta boa parte do Matter',
+          'Matter: um padrão de camada de aplicação (não um rádio) sobre Thread, Wi-Fi e Ethernet',
+          'Zigbee, Z-Wave e Thread são locais por padrão; o Matter roda localmente por meio de um controlador local',
+          'Escolha pela disponibilidade de dispositivos e se você quer alcance sub-GHz (Z-Wave) ou ampla variedade (Zigbee)',
+        ],
+      },
+      whyProtocols: {
+        id: 'why-protocols',
+        title: 'Por que os protocolos importam',
+        content:
+          '**O protocolo que um dispositivo usa determina seu alcance, sua duração de bateria, sua confiabilidade e se ele pode funcionar sem a nuvem.** Escolher protocolos compatíveis evita uma gaveta cheia de aparelhos incompatíveis.',
+        items: [
+          '**Confiabilidade:** protocolos mesh retransmitem sinais entre dispositivos, ampliando a cobertura.',
+          '**Controle local:** protocolos locais funcionam por meio de um hub sem internet — veja [o guia completo da casa inteligente local](/pt/smart-home/local-smart-home-complete-guide).',
+          '**Compatibilidade:** um hub que fala os protocolos dos seus dispositivos os une.',
+        ],
+      },
+      zigbee: {
+        id: 'zigbee',
+        title: 'Zigbee',
+        content:
+          '**O Zigbee é um protocolo mesh aberto de 2.4 GHz e baixo consumo com a maior variedade de dispositivos acessíveis.** Precisa de um coordenador (um pen drive USB ou hub) e retransmite por meio de dispositivos ligados à tomada.',
+        items: [
+          'Enorme ecossistema de lâmpadas, sensores, tomadas e interruptores.',
+          'Compartilha a faixa de 2.4 GHz com o Wi-Fi, então o posicionamento importa.',
+          'Local por padrão por meio de um coordenador Zigbee no seu hub.',
+        ],
+      },
+      zwave: {
+        id: 'z-wave',
+        title: 'Z-Wave',
+        content:
+          '**O Z-Wave é um protocolo mesh sub-GHz de baixo consumo com menos interferência e bom alcance, conhecido por dispositivos de controle confiáveis.** Usa uma faixa de frequência diferente do Wi-Fi e do Zigbee.',
+        items: [
+          'Opera em faixas sub-GHz (frequências regionais), evitando o congestionamento de 2.4 GHz.',
+          'Forte reputação de fechaduras, sensores e controles confiáveis.',
+          'Local por padrão por meio de um controlador Z-Wave.',
+        ],
+      },
+      thread: {
+        id: 'thread',
+        title: 'Thread',
+        content:
+          '**O Thread é um mesh moderno de baixo consumo baseado em IPv6 que dá um endereço IP a cada dispositivo e sustenta boa parte do Matter.** Precisa de um roteador de borda Thread para se conectar à sua rede.',
+        items: [
+          'Baseado em IP, então se integra de forma limpa às redes modernas.',
+          'Requer um roteador de borda Thread (embutido em alguns hubs e caixas de som).',
+          'Uma base para os dispositivos Matter — veja [controle local com Matter](/pt/smart-home/matter-local-control-guide).',
+        ],
+      },
+      matter: {
+        id: 'matter',
+        title: 'Matter: o unificador',
+        content:
+          '**O Matter é um padrão de camada de aplicação — não um rádio — que roda sobre Thread, Wi-Fi e Ethernet para que dispositivos de marcas diferentes interoperem.** Pode rodar localmente por meio de um controlador local, reduzindo a dependência da nuvem.',
+        items: [
+          'O Matter padroniza como os dispositivos são descritos e controlados entre marcas.',
+          'Roda sobre Thread (dispositivos de baixo consumo) ou Wi-Fi/Ethernet (dispositivos ligados à tomada).',
+          'O controle local é possível com um controlador Matter local como o Home Assistant.',
+        ],
+      },
+      whichToChoose: {
+        id: 'which-to-choose',
+        title: 'Qual protocolo você deve escolher?',
+        content:
+          '**Escolha o Zigbee pela maior variedade de dispositivos acessíveis, o Z-Wave pelo alcance sub-GHz e menos interferência, e o Matter-sobre-Thread por interoperabilidade à prova de futuro.** Um hub como o Home Assistant pode falar todos eles.',
+        columns: ['Protocolo', 'Faixa / alcance', 'Consumo', 'Mesh', 'Local por padrão', 'Maturidade'],
+        rows: [
+          { 'Protocolo': 'Zigbee', 'Faixa / alcance': '2.4 GHz, médio', 'Consumo': 'Baixo', 'Mesh': 'Sim', 'Local por padrão': 'Sim', 'Maturidade': 'Maduro' },
+          { 'Protocolo': 'Z-Wave', 'Faixa / alcance': 'Sub-GHz, bom', 'Consumo': 'Baixo', 'Mesh': 'Sim', 'Local por padrão': 'Sim', 'Maturidade': 'Maduro' },
+          { 'Protocolo': 'Thread', 'Faixa / alcance': '2.4 GHz, médio', 'Consumo': 'Baixo', 'Mesh': 'Sim', 'Local por padrão': 'Sim', 'Maturidade': 'Em crescimento' },
+          { 'Protocolo': 'Matter', 'Faixa / alcance': 'Sobre Thread/Wi-Fi', 'Consumo': 'Variável', 'Mesh': 'Via Thread', 'Local por padrão': 'Com controlador local', 'Maturidade': 'Em crescimento' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'O Matter é um protocolo ou um padrão?', a: 'O Matter é um padrão de camada de aplicação, não um rádio. Ele define como os dispositivos são descritos e controlados e roda sobre camadas de transporte como Thread, Wi-Fi e Ethernet — por isso pode unificar dispositivos de marcas diferentes.' },
+          { q: 'Preciso de Thread?', a: 'Apenas se você usa dispositivos baseados em Thread ou Matter-sobre-Thread, que precisam de um roteador de borda Thread. Muitos hubs e algumas caixas de som incluem um. Dispositivos Zigbee e Z-Wave não usam Thread e, em vez disso, precisam do próprio coordenador.' },
+          { q: 'Zigbee vs Z-Wave, qual é melhor?', a: 'O Zigbee oferece a maior variedade de dispositivos acessíveis na faixa de 2.4 GHz; o Z-Wave usa frequências sub-GHz com menos interferência e bom alcance. Escolha o Zigbee pela variedade de dispositivos e o Z-Wave pela confiabilidade em ambientes de 2.4 GHz congestionados.' },
+          { q: 'Esses protocolos são locais ou nuvem?', a: 'Zigbee, Z-Wave e Thread são locais por padrão e funcionam por meio de um hub sem internet. O Matter pode rodar localmente por meio de um controlador local, embora alguns dispositivos Matter também possam oferecer recursos na nuvem.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Matter e controle local](/pt/smart-home/matter-local-control-guide) — usar Matter e Thread sem pontes na nuvem',
+          '[Home Assistant: primeiros passos](/pt/smart-home/home-assistant-getting-started) — um hub que fala todos esses protocolos',
+          '[Ecossistemas de casa inteligente comparados](/pt/smart-home/smart-home-ecosystems-compared) — plataformas baseadas nesses protocolos',
+          '[O guia completo da casa inteligente local](/pt/smart-home/local-smart-home-complete-guide) — o panorama local-first',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Matter, Thread, Zigbee, Z-Wave: Protocolos Explicados (2026)',
+      description: 'Matter, Thread, Zigbee, Z-Wave explicados em linguagem clara: alcance, consumo, mesh, interoperabilidade e quais são locais por padrão. Escolha o protocolo certo.',
+      url: 'https://www.promptquorum.com/pt/smart-home/smart-home-protocols-explained',
+      inLanguage: 'pt-BR',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'pt-BR',
+      mainEntity: [
+        { '@type': 'Question', name: 'O Matter é um protocolo ou um padrão?', acceptedAnswer: { '@type': 'Answer', text: 'O Matter é um padrão de camada de aplicação, não um rádio. Define como os dispositivos são descritos e controlados e roda sobre camadas de transporte como Thread, Wi-Fi e Ethernet.' } },
+        { '@type': 'Question', name: 'Preciso de Thread?', acceptedAnswer: { '@type': 'Answer', text: 'Apenas para dispositivos baseados em Thread ou Matter-sobre-Thread, que precisam de um roteador de borda Thread. Dispositivos Zigbee e Z-Wave não usam Thread.' } },
+        { '@type': 'Question', name: 'Zigbee vs Z-Wave, qual é melhor?', acceptedAnswer: { '@type': 'Answer', text: 'O Zigbee oferece a maior variedade acessível em 2.4 GHz; o Z-Wave usa sub-GHz com menos interferência e bom alcance. Escolha pela variedade de dispositivos ou pela interferência.' } },
+        { '@type': 'Question', name: 'Esses protocolos são locais ou nuvem?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee, Z-Wave e Thread são locais por padrão por meio de um hub. O Matter pode rodar localmente por meio de um controlador local.' } },
+      ],
+    },
+  },
+
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: 'Matter、Thread、Zigbee、Z-Wave：协议详解（2026）',
+    seoTitle: '智能家居协议详解（2026）',
+    intro:
+      '智能家居协议决定你的设备如何通信、能传多远，以及是否本地工作。本指南用通俗语言讲解 Zigbee、Z-Wave、Thread 和 Matter——它们的覆盖范围、功耗、互操作性，以及哪些默认本地——帮助你为可靠且私密的配置选对协议。',
+    metaDescription:
+      'Matter、Thread、Zigbee、Z-Wave 通俗讲解：覆盖范围、功耗、网状、互操作，以及哪些默认本地。选对协议。',
+    twitterDescription:
+      'Zigbee 对 Z-Wave 对 Thread 对 Matter：用通俗语言讲解覆盖范围、功耗、互操作，以及哪些协议默认本地。',
+    readTime: '阅读约8分钟',
+    educationalLevel: 'Intermediate',
+    audience: '按协议选购智能家居设备的人',
+    primaryTerm: 'smart home protocols',
+    targetKeywords: [
+      'matter thread zigbee z-wave 区别',
+      '智能家居协议 详解',
+      'zigbee 对 z-wave',
+      'matter 是什么 智能家居',
+      'thread 协议 智能家居',
+    ],
+    leadAnswerBlock:
+      '**Zigbee 和 Z-Wave 是成熟的低功耗网状协议，Thread 是现代基于 IP 的低功耗网状，Matter 是运行在 Thread、Wi-Fi 和以太网之上、用于统一设备的应用层标准。** Zigbee、Z-Wave、Thread 默认本地；Matter 可经由本地控制器本地运行。',
+    quickAnswerTop: {
+      zh: {
+        question: 'Matter、Thread、Zigbee 和 Z-Wave 有什么区别？',
+        answer:
+          'Zigbee 和 Z-Wave 是面向传感器和控制的成熟低功耗无线网状协议。Thread 是较新的基于 IP 的低功耗网状。Matter 不是无线电，而是运行在 Thread、Wi-Fi 和以太网之上、让不同品牌设备协同工作的标准。Zigbee、Z-Wave 和 Thread 默认本地。',
+        bullets: [
+          'Zigbee：2.4 GHz 开放网状，设备种类极广',
+          'Z-Wave：亚 GHz 网状，干扰更少，覆盖更好',
+          'Thread：现代基于 IP 的低功耗网状',
+          'Matter：运行在 Thread/Wi-Fi/以太网之上的标准，并非无线电',
+          'Zigbee、Z-Wave、Thread 默认本地',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '要点速览', anchor: 'tldr' },
+      { label: '协议为何重要', anchor: 'why-protocols' },
+      { label: 'Zigbee', anchor: 'zigbee' },
+      { label: 'Z-Wave', anchor: 'z-wave' },
+      { label: 'Thread', anchor: 'thread' },
+      { label: 'Matter（统一者）', anchor: 'matter' },
+      { label: '该选哪个', anchor: 'which-to-choose' },
+      { label: '常见问题', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Zigbee 和 Z-Wave 是成熟的低功耗网状无线电，Thread 是现代基于 IP 的网状，Matter 是运行在它们之上、用于统一设备的标准。' },
+      { type: 'plain-terms', content: '协议是智能家居设备所说的“语言”。Zigbee 和 Z-Wave 是较老且可靠的无线网状。Thread 是建立在互联网标准之上的较新网状。Matter 根本不是无线电——它是一个共同标准，让不同品牌的设备协同工作，并且可以不依赖云端运行。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '要点速览',
+        isTldr: true,
+        items: [
+          'Zigbee：拥有最广设备生态的 2.4 GHz 开放网状；需要一个协调器',
+          'Z-Wave：干扰更少、覆盖更好的亚 GHz 网状；成熟可靠',
+          'Thread：支撑 Matter 很大一部分的现代基于 IP 的低功耗网状',
+          'Matter：运行在 Thread、Wi-Fi 和以太网之上的应用层标准（并非无线电）',
+          'Zigbee、Z-Wave、Thread 默认本地；Matter 经由本地控制器本地运行',
+          '按设备可得性，以及你想要亚 GHz 覆盖（Z-Wave）还是广泛选择（Zigbee）来选',
+        ],
+      },
+      whyProtocols: {
+        id: 'why-protocols',
+        title: '协议为何重要',
+        content:
+          '**设备所用的协议决定其覆盖范围、电池寿命、可靠性，以及能否在没有云端的情况下工作。** 选择兼容的协议，可以避免一抽屉互不兼容的设备。',
+        items: [
+          '**可靠性：** 网状协议在设备之间中继信号，扩大覆盖。',
+          '**本地控制：** 本地协议经由中枢在无网络时工作——参见[本地智能家居完整指南](/zh/smart-home/local-smart-home-complete-guide)。',
+          '**兼容性：** 能说你设备协议的中枢，会把它们连到一起。',
+        ],
+      },
+      zigbee: {
+        id: 'zigbee',
+        title: 'Zigbee',
+        content:
+          '**Zigbee 是一种开放的 2.4 GHz 低功耗网状协议，拥有最广泛的实惠设备选择。** 它需要一个协调器（USB 接收器或中枢），并通过市电供电设备中继。',
+        items: [
+          '由灯泡、传感器、插座和开关组成的庞大生态。',
+          '与 Wi-Fi 共享 2.4 GHz 频段，因此摆放位置很重要。',
+          '经由中枢上的 Zigbee 协调器默认本地。',
+        ],
+      },
+      zwave: {
+        id: 'z-wave',
+        title: 'Z-Wave',
+        content:
+          '**Z-Wave 是一种亚 GHz 低功耗网状协议，干扰更少、覆盖更好，以可靠的控制设备著称。** 它使用与 Wi-Fi 和 Zigbee 不同的频段。',
+        items: [
+          '工作在亚 GHz 频段（各地区频率），避开 2.4 GHz 拥堵。',
+          '在可靠门锁、传感器和控制设备方面口碑扎实。',
+          '经由 Z-Wave 控制器默认本地。',
+        ],
+      },
+      thread: {
+        id: 'thread',
+        title: 'Thread',
+        content:
+          '**Thread 是一种现代基于 IPv6 的低功耗网状，为每个设备分配 IP 地址，并支撑 Matter 的很大一部分。** 它需要一个 Thread 边界路由器来接入你的网络。',
+        items: [
+          '基于 IP，因此能与现代网络干净地整合。',
+          '需要 Thread 边界路由器（内置于部分中枢和音箱）。',
+          'Matter 设备的基础——参见[Matter 本地控制](/zh/smart-home/matter-local-control-guide)。',
+        ],
+      },
+      matter: {
+        id: 'matter',
+        title: 'Matter：统一者',
+        content:
+          '**Matter 是一个应用层标准——并非无线电——运行在 Thread、Wi-Fi 和以太网之上，让不同品牌的设备互操作。** 它可经由本地控制器本地运行，降低云端依赖。',
+        items: [
+          'Matter 统一了跨品牌描述与控制设备的方式。',
+          '它运行在 Thread（低功耗设备）或 Wi-Fi/以太网（市电供电设备）之上。',
+          '借助像 Home Assistant 这样的本地 Matter 控制器即可实现本地控制。',
+        ],
+      },
+      whichToChoose: {
+        id: 'which-to-choose',
+        title: '你该选择哪个协议？',
+        content:
+          '**要最广泛的实惠设备选择就选 Zigbee，要亚 GHz 覆盖与更少干扰就选 Z-Wave，要面向未来的互操作就选 Matter-over-Thread。** 像 Home Assistant 这样的中枢能把它们全都说清。',
+        columns: ['协议', '频段 / 覆盖', '功耗', '网状', '默认本地', '成熟度'],
+        rows: [
+          { '协议': 'Zigbee', '频段 / 覆盖': '2.4 GHz，中等', '功耗': '低', '网状': '是', '默认本地': '是', '成熟度': '成熟' },
+          { '协议': 'Z-Wave', '频段 / 覆盖': '亚 GHz，良好', '功耗': '低', '网状': '是', '默认本地': '是', '成熟度': '成熟' },
+          { '协议': 'Thread', '频段 / 覆盖': '2.4 GHz，中等', '功耗': '低', '网状': '是', '默认本地': '是', '成熟度': '增长中' },
+          { '协议': 'Matter', '频段 / 覆盖': '基于 Thread/Wi-Fi', '功耗': '不定', '网状': '经由 Thread', '默认本地': '配本地控制器', '成熟度': '增长中' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          { q: 'Matter 是协议还是标准？', a: 'Matter 是应用层标准，不是无线电协议。它定义设备如何被描述与控制，并运行在 Thread、Wi-Fi、以太网等传输层之上——这正是它能统一不同品牌设备的原因。' },
+          { q: '我需要 Thread 吗？', a: '只有当你使用需要 Thread 边界路由器的 Thread 设备或 Matter-over-Thread 设备时才需要。许多中枢和部分音箱内置了它。Zigbee 和 Z-Wave 设备不使用 Thread，而是需要各自的协调器。' },
+          { q: 'Zigbee 与 Z-Wave 哪个更好？', a: 'Zigbee 在 2.4 GHz 频段提供最广泛、最实惠的设备选择；Z-Wave 使用亚 GHz 频率，干扰更少、覆盖更好。要设备选择就选 Zigbee，要在拥堵的 2.4 GHz 环境中保持可靠就选 Z-Wave。' },
+          { q: '这些协议是本地还是云端？', a: 'Zigbee、Z-Wave 和 Thread 默认本地，经由中枢在无网络时工作。Matter 可经由本地控制器本地运行，尽管某些 Matter 设备也可能提供云端功能。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[Matter 与本地控制](/zh/smart-home/matter-local-control-guide) — 在不经云端网桥的情况下使用 Matter 和 Thread',
+          '[Home Assistant 入门](/zh/smart-home/home-assistant-getting-started) — 能说所有这些协议的中枢',
+          '[智能家居生态系统对比](/zh/smart-home/smart-home-ecosystems-compared) — 建立在这些协议之上的平台',
+          '[本地智能家居完整指南](/zh/smart-home/local-smart-home-complete-guide) — 本地优先全貌',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Matter、Thread、Zigbee、Z-Wave：协议详解（2026）',
+      description: 'Matter、Thread、Zigbee、Z-Wave 通俗讲解：覆盖范围、功耗、网状、互操作，以及哪些默认本地。选对协议。',
+      url: 'https://www.promptquorum.com/zh/smart-home/smart-home-protocols-explained',
+      inLanguage: 'zh',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'zh',
+      mainEntity: [
+        { '@type': 'Question', name: 'Matter 是协议还是标准？', acceptedAnswer: { '@type': 'Answer', text: 'Matter 是应用层标准，不是无线电。它定义设备如何被描述与控制，并运行在 Thread、Wi-Fi、以太网等传输层之上。' } },
+        { '@type': 'Question', name: '我需要 Thread 吗？', acceptedAnswer: { '@type': 'Answer', text: '只有当你使用需要 Thread 边界路由器的 Thread 设备或 Matter-over-Thread 设备时才需要。Zigbee 和 Z-Wave 设备不使用 Thread。' } },
+        { '@type': 'Question', name: 'Zigbee 与 Z-Wave 哪个更好？', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee 在 2.4 GHz 提供最广泛实惠的选择；Z-Wave 使用亚 GHz，干扰更少、覆盖更好。按设备选择或干扰情况来选。' } },
+        { '@type': 'Question', name: '这些协议是本地还是云端？', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee、Z-Wave 和 Thread 默认经由中枢本地。Matter 可经由本地控制器本地运行。' } },
+      ],
+    },
+  },
 }
