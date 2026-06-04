@@ -189,4 +189,1132 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'Von einem Cloud-Smart-Home zu lokaler Steuerung migrieren (2026)',
+    seoTitle: 'Alexa zu Home Assistant migrieren: lokal (2026)',
+    intro:
+      'Von einem Cloud-Smart-Home zu lokaler Steuerung zu migrieren bedeutet, Ihre Cloud-Abhängigkeiten zu prüfen, Geräte auf einen lokalen Hub zu verschieben und Cloud-Assistenten außer Dienst zu stellen. Dieser Schritt-für-Schritt-Leitfaden zeigt, wie Sie prüfen, welche Geräte lokal können, wann ersetzen statt neu koppeln, wie Sie zu Home Assistant wechseln und einen lokalen Sprachassistenten anstelle von Alexa oder Google hinzufügen.',
+    metaDescription:
+      'Von einem Cloud-Smart-Home zu lokaler Steuerung migrieren: Abhängigkeiten prüfen, Geräte zu Home Assistant verschieben, Alexa/Google außer Dienst stellen, lokale Sprache hinzufügen. Schritt für Schritt.',
+    twitterDescription:
+      'Von Alexa/Google zu einem lokalen Smart Home wechseln: Cloud-Abhängigkeiten prüfen, Geräte neu koppeln oder ersetzen, zu Home Assistant wechseln, lokale Sprache hinzufügen.',
+    readTime: '9 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    audience: 'Bestehende Cloud-Smart-Home-Nutzer, die zu lokaler Steuerung wechseln',
+    primaryTerm: 'migrate cloud to local smart home',
+    targetKeywords: [
+      'von alexa zu home assistant migrieren',
+      'cloud zu lokal smart home',
+      'alexa durch home assistant ersetzen',
+      'smart home auf lokal umstellen',
+      'google home verlassen',
+    ],
+    leadAnswerBlock:
+      '**Migrieren Sie, indem Sie Ihre Cloud-Abhängigkeiten prüfen, lokal-fähige Geräte zu Home Assistant verschieben (wo möglich neu koppeln, wo nicht ersetzen) und Alexa oder Google zugunsten eines lokalen Sprachassistenten außer Dienst stellen.** Tun Sie das Raum für Raum, damit das Zuhause durchgehend funktioniert.',
+    quickAnswerTop: {
+      de: {
+        question: 'Wie migriere ich von einem Cloud-Smart-Home zu lokaler Steuerung?',
+        answer:
+          'Listen Sie Ihre Geräte auf und welche von einer Cloud abhängen, verschieben Sie lokal-fähige Geräte (Zigbee, Z-Wave, Matter, lokales WLAN) auf Home Assistant durch Neukopplung, ersetzen Sie nur-Cloud-Geräte mit der Zeit und stellen Sie Alexa oder Google außer Dienst, indem Sie einen lokalen Sprachassistenten hinzufügen. Migrieren Sie schrittweise, Raum für Raum.',
+        bullets: [
+          'Prüfen, welche Geräte von einer Hersteller-Cloud abhängen',
+          'Lokal-fähige Geräte neu mit Home Assistant koppeln',
+          'Nur-Cloud-Geräte schrittweise ersetzen',
+          'Lokale Sprache als Ersatz für Alexa/Google hinzufügen',
+          'Raum für Raum migrieren, um Ausfälle zu vermeiden',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Kurzfassung', anchor: 'tldr' },
+      { label: 'Cloud-Abhängigkeiten prüfen', anchor: 'audit' },
+      { label: 'Welche Geräte lokal können', anchor: 'which-local' },
+      { label: 'Ersetzen vs neu koppeln', anchor: 'replace-repair' },
+      { label: 'Zu Home Assistant wechseln', anchor: 'move-ha' },
+      { label: 'Alexa/Google außer Dienst stellen', anchor: 'retire' },
+      { label: 'Lokale Sprache hinzufügen', anchor: 'local-voice' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Migrieren Sie zu lokal, indem Sie Cloud-Abhängigkeiten prüfen, lokal-fähige Geräte neu mit Home Assistant koppeln, nur-Cloud-Geräte ersetzen und lokale Sprache hinzufügen.' },
+      { type: 'plain-terms', content: 'Von einem Cloud-Smart-Home zu einem lokalen zu wechseln bedeutet nicht, alles wegzuwerfen. Viele Geräte sprechen bereits lokale Protokolle und müssen nur neu mit einem lokalen Hub gekoppelt werden. Die nur-Cloud-Geräte ersetzen Sie mit der Zeit und tauschen Ihren Cloud-Sprachassistenten gegen einen lokalen.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Kurzfassung',
+        isTldr: true,
+        items: [
+          'Beginnen Sie mit der Prüfung, welche Geräte von einer Hersteller-Cloud abhängen',
+          'Lokal-fähige Geräte (Zigbee, Z-Wave, Matter, lokales WLAN) lassen sich neu mit Home Assistant koppeln',
+          'Ersetzen Sie nur-Cloud-Geräte schrittweise statt alle auf einmal',
+          'Verschieben Sie Steuerung und Automatisierungen auf einen lokalen Home-Assistant-Hub',
+          'Stellen Sie Alexa/Google außer Dienst, indem Sie einen lokalen Sprachassistenten hinzufügen',
+          'Migrieren Sie Raum für Raum, damit das Zuhause durchgehend funktioniert',
+        ],
+      },
+      audit: {
+        id: 'audit',
+        title: 'Ihre Cloud-Abhängigkeiten prüfen',
+        content:
+          '**Listen Sie jedes Gerät auf und notieren Sie, welche eine Hersteller-Cloud zum Funktionieren brauchen.** Das zeigt Ihnen, was lokal neu gekoppelt werden kann und was ersetzt werden muss.',
+        numberedItems: [
+          'Inventarisieren Sie Ihre Geräte nach Raum und Marke.',
+          'Notieren Sie das Protokoll, das jedes nutzt (Zigbee, Z-Wave, Matter, WLAN).',
+          'Markieren Sie Geräte, die für die Grundsteuerung ein Cloud-Konto verlangen.',
+          'Ermitteln Sie, welche Automatisierungen derzeit in einer Hersteller-Cloud laufen.',
+        ],
+      },
+      whichLocal: {
+        id: 'which-local',
+        title: 'Welche Geräte lokal können',
+        content:
+          '**Geräte mit Zigbee, Z-Wave, Matter oder einer lokalen WLAN-API können auf lokale Steuerung umziehen; nur-Cloud-Geräte können das in der Regel nicht ohne Ersatz.** Prüfen Sie zuerst das Protokoll.',
+        items: [
+          'Zigbee- und Z-Wave-Geräte koppeln sich neu an einen Koordinator an Ihrem Hub.',
+          'Matter-Geräte lassen sich in einen lokalen Controller einbinden – siehe [Matter lokale Steuerung](/de/smart-home/matter-local-control-guide).',
+          'Lokale-WLAN-Geräte mit dokumentierter lokaler API lassen sich lokal steuern.',
+        ],
+      },
+      replaceRepair: {
+        id: 'replace-repair',
+        title: 'Ersetzen vs neu koppeln',
+        content:
+          '**Koppeln Sie lokal-fähige Geräte neu an Ihren Hub; ersetzen Sie nur-Cloud-Geräte mit der Zeit, wie das Budget es erlaubt.** Ersetzen Sie zuerst die Cloud-Geräte mit dem höchsten Datenschutzrisiko.',
+        columns: ['Gerätetyp', 'Kann lokal?', 'Wie'],
+        rows: [
+          { 'Gerätetyp': 'Zigbee/Z-Wave-Leuchtmittel & -Sensoren', 'Kann lokal?': 'Ja', 'Wie': 'Neu an einen Koordinator am Hub koppeln' },
+          { 'Gerätetyp': 'Matter-Geräte', 'Kann lokal?': 'Ja', 'Wie': 'In einen lokalen Controller einbinden' },
+          { 'Gerätetyp': 'Lokale-WLAN-Geräte (lokale API)', 'Kann lokal?': 'Ja', 'Wie': 'Über Integration hinzufügen' },
+          { 'Gerätetyp': 'Nur-Cloud-Kameras', 'Kann lokal?': 'Oft nein', 'Wie': 'Durch lokale RTSP + Frigate ersetzen' },
+          { 'Gerätetyp': 'Cloud-Sprachassistenten', 'Kann lokal?': 'Ersetzen', 'Wie': 'Lokalen Sprachassistenten hinzufügen' },
+        ],
+      },
+      moveHa: {
+        id: 'move-ha',
+        title: 'Zu Home Assistant wechseln',
+        content:
+          '**Richten Sie Home Assistant als Ihren lokalen Hub ein und migrieren Sie Geräte und Automatisierungen darauf.** Das wird zur Steuerungsebene, die die Hersteller-Cloud ersetzt.',
+        items: [
+          'Installieren Sie Home Assistant und fügen Sie einen Zigbee-/Z-Wave-Koordinator hinzu – siehe [Home Assistant: Erste Schritte](/de/smart-home/home-assistant-getting-started).',
+          'Koppeln Sie Geräte neu und bauen Sie Automatisierungen lokal nach.',
+          'Bestätigen Sie, dass alles offline funktioniert, bevor Sie Cloud-Dienste außer Dienst stellen.',
+        ],
+      },
+      retire: {
+        id: 'retire',
+        title: 'Alexa/Google außer Dienst stellen',
+        content:
+          '**Sobald lokale Steuerung und ein lokaler Sprachassistent funktionieren, stellen Sie die Cloud-Assistenten und -Konten außer Dienst.** Tun Sie das zuletzt, damit Sie während des Übergangs die Sprachsteuerung behalten.',
+        items: [
+          'Prüfen Sie, ob die lokale Steuerung abdeckt, wofür Sie Alexa/Google genutzt haben.',
+          'Entfernen Sie Geräte aus den Hersteller-Apps und deaktivieren Sie die Konten.',
+          'Behalten Sie deterministische Sicherheits-Automatisierungen auf dem lokalen Hub.',
+        ],
+      },
+      localVoice: {
+        id: 'local-voice',
+        title: 'Lokale Sprache hinzufügen',
+        content:
+          '**Ersetzen Sie Cloud-Sprache durch einen lokalen Assistenten, damit Sie freihändige Steuerung ohne die Cloud behalten.** Das ist der letzte Schritt einer vollständigen Migration.',
+        items: [
+          'Bauen Sie einen lokalen Sprachassistenten mit Assist + Whisper + Piper – siehe [der Leitfaden zum lokalen Sprachassistenten](/de/smart-home/local-voice-assistant-smart-home).',
+          'Fügen Sie ein lokales LLM für natürlichsprachliches Verstehen hinzu – siehe [Ihr Smart Home mit einem lokalen LLM betreiben](/de/smart-home/local-llm-smart-home-complete-guide).',
+          'Für den vollständigen Zielzustand siehe [der komplette Leitfaden zum lokalen Smart Home](/de/smart-home/local-smart-home-complete-guide).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'Kann ich meine vorhandenen Geräte behalten?', a: 'Viele davon, ja. Geräte mit Zigbee, Z-Wave, Matter oder einer lokalen WLAN-API lassen sich neu mit einem lokalen Hub wie Home Assistant koppeln. Nur nur-Cloud-Geräte, die für die Grundsteuerung ein Hersteller-Konto verlangen, müssen mit der Zeit ersetzt werden.' },
+          { q: 'Was kann nicht lokal werden?', a: 'Nur-Cloud-Geräte, die vollständig von einer Hersteller-Cloud abhängen – oft manche Kameras, Türklingeln und proprietäre Ökosysteme – können in der Regel nicht lokal werden und müssen durch lokal-fähige Alternativen ersetzt werden, etwa RTSP-Kameras mit Frigate.' },
+          { q: 'Wie lange dauert die Migration?', a: 'Das hängt von der Größe Ihres Setups ab, aber Raum für Raum zu migrieren verteilt die Arbeit und vermeidet Ausfälle. Viele verschieben den Kern-Hub und ein paar Räume an einem Wochenende und ersetzen nur-Cloud-Geräte dann über Wochen schrittweise.' },
+          { q: 'Verliere ich die Sprachsteuerung bei der Migration?', a: 'Nein, wenn Sie einen lokalen Sprachassistenten hinzufügen, bevor Sie den Cloud-Assistenten außer Dienst stellen. Ein lokaler Stack aus Assist, Whisper und Piper, optional mit einem lokalen LLM, ersetzt Alexa oder Google für freihändige Steuerung ohne die Cloud.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Home Assistant: Erste Schritte](/de/smart-home/home-assistant-getting-started) – den Ziel-Hub einrichten',
+          '[Der komplette Leitfaden zum lokalen Smart Home](/de/smart-home/local-smart-home-complete-guide) – der Endzustand',
+          '[Einen vollständig lokalen Sprachassistenten bauen](/de/smart-home/local-voice-assistant-smart-home) – Alexa/Google ersetzen',
+          '[Matter & lokale Steuerung](/de/smart-home/matter-local-control-guide) – Geräte lokal einbinden',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Von einem Cloud-Smart-Home zu lokaler Steuerung migrieren (2026)',
+      description: 'Von einem Cloud-Smart-Home zu lokaler Steuerung migrieren: Abhängigkeiten prüfen, Geräte zu Home Assistant verschieben, Alexa/Google außer Dienst stellen, lokale Sprache hinzufügen. Schritt für Schritt.',
+      url: 'https://www.promptquorum.com/de/smart-home/migrating-from-cloud-to-local-smart-home',
+      inLanguage: 'de',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Smart-Home-Migration' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Lokale Steuerung' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'de',
+      mainEntity: [
+        { '@type': 'Question', name: 'Kann ich meine vorhandenen Geräte behalten?', acceptedAnswer: { '@type': 'Answer', text: 'Viele davon. Geräte mit Zigbee, Z-Wave, Matter oder einer lokalen WLAN-API lassen sich neu mit einem lokalen Hub koppeln. Nur nur-Cloud-Geräte, die ein Hersteller-Konto für die Grundsteuerung brauchen, müssen ersetzt werden.' } },
+        { '@type': 'Question', name: 'Was kann nicht lokal werden?', acceptedAnswer: { '@type': 'Answer', text: 'Nur-Cloud-Geräte, die vollständig von einer Hersteller-Cloud abhängen – oft manche Kameras und Türklingeln – müssen in der Regel durch lokal-fähige Alternativen wie RTSP-Kameras mit Frigate ersetzt werden.' } },
+        { '@type': 'Question', name: 'Wie lange dauert die Migration?', acceptedAnswer: { '@type': 'Answer', text: 'Das hängt von der Setup-Größe ab, aber Raum für Raum zu migrieren vermeidet Ausfälle. Viele verschieben den Kern-Hub und ein paar Räume an einem Wochenende und ersetzen nur-Cloud-Geräte über Wochen.' } },
+        { '@type': 'Question', name: 'Verliere ich die Sprachsteuerung bei der Migration?', acceptedAnswer: { '@type': 'Answer', text: 'Nein, wenn Sie einen lokalen Sprachassistenten hinzufügen, bevor Sie den Cloud-Assistenten außer Dienst stellen. Assist, Whisper und Piper, optional mit einem lokalen LLM, ersetzen Alexa oder Google ohne die Cloud.' } },
+      ],
+    },
+  },
+
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'Cómo Migrar de un Smart Home en la Nube al Control Local (2026)',
+    seoTitle: 'Migrar de Alexa a Home Assistant: Control Local (2026)',
+    intro:
+      'Migrar de un smart home en la nube al control local significa auditar tus dependencias de la nube, mover los dispositivos a un hub local y retirar los asistentes en la nube. Esta guía paso a paso muestra cómo auditar, qué dispositivos pueden ir a local, cuándo reemplazar frente a re-emparejar, cómo pasar a Home Assistant y cómo añadir un asistente de voz local en lugar de Alexa o Google.',
+    metaDescription:
+      'Migra de un smart home en la nube al control local: audita dependencias, mueve dispositivos a Home Assistant, retira Alexa/Google y añade voz local. Paso a paso.',
+    twitterDescription:
+      'Pasa de Alexa/Google a un smart home local: audita dependencias de la nube, re-empareja o reemplaza dispositivos, cambia a Home Assistant, añade voz local.',
+    readTime: '9 min de lectura',
+    educationalLevel: 'Intermediate',
+    audience: 'Usuarios de smart home en la nube que pasan al control local',
+    primaryTerm: 'migrate cloud to local smart home',
+    targetKeywords: [
+      'migrar de alexa a home assistant',
+      'de nube a local smart home',
+      'reemplazar alexa con home assistant',
+      'pasar smart home a local',
+      'dejar google home',
+    ],
+    leadAnswerBlock:
+      '**Migra auditando tus dependencias de la nube, moviendo los dispositivos con capacidad local a Home Assistant (re-emparejando donde se pueda, reemplazando donde no) y retirando Alexa o Google en favor de un asistente de voz local.** Hazlo habitación por habitación para que la casa siga funcionando durante todo el proceso.',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cómo migro de un smart home en la nube al control local?',
+        answer:
+          'Lista tus dispositivos y cuáles dependen de una nube, mueve los dispositivos con capacidad local (Zigbee, Z-Wave, Matter, Wi-Fi local) a Home Assistant re-emparejándolos, reemplaza los dispositivos solo-nube con el tiempo y retira Alexa o Google añadiendo un asistente de voz local. Migra de forma gradual, una habitación a la vez.',
+        bullets: [
+          'Audita qué dispositivos dependen de una nube del fabricante',
+          'Re-empareja los dispositivos con capacidad local a Home Assistant',
+          'Reemplaza los dispositivos solo-nube de forma gradual',
+          'Añade voz local para reemplazar Alexa/Google',
+          'Migra habitación por habitación para evitar caídas',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Resumen', anchor: 'tldr' },
+      { label: 'Auditar dependencias de la nube', anchor: 'audit' },
+      { label: 'Qué dispositivos pueden ir a local', anchor: 'which-local' },
+      { label: 'Reemplazar vs re-emparejar', anchor: 'replace-repair' },
+      { label: 'Pasar a Home Assistant', anchor: 'move-ha' },
+      { label: 'Retirar Alexa/Google', anchor: 'retire' },
+      { label: 'Añadir voz local', anchor: 'local-voice' },
+      { label: 'Preguntas frecuentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Migra a local auditando las dependencias de la nube, re-emparejando los dispositivos con capacidad local a Home Assistant, reemplazando los solo-nube y añadiendo voz local.' },
+      { type: 'plain-terms', content: 'Cambiar de un smart home en la nube a uno local no significa tirarlo todo. Muchos dispositivos ya hablan protocolos locales y solo necesitan re-emparejarse a un hub local. Reemplazas los solo-nube con el tiempo y cambias tu asistente de voz en la nube por uno local.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Resumen',
+        isTldr: true,
+        items: [
+          'Empieza auditando qué dispositivos dependen de una nube del fabricante',
+          'Los dispositivos con capacidad local (Zigbee, Z-Wave, Matter, Wi-Fi local) pueden re-emparejarse a Home Assistant',
+          'Reemplaza los dispositivos solo-nube de forma gradual en vez de todos a la vez',
+          'Mueve el control y las automatizaciones a un hub local de Home Assistant',
+          'Retira Alexa/Google añadiendo un asistente de voz local',
+          'Migra habitación por habitación para que la casa siga funcionando',
+        ],
+      },
+      audit: {
+        id: 'audit',
+        title: 'Audita tus dependencias de la nube',
+        content:
+          '**Lista cada dispositivo y anota cuáles necesitan una nube del fabricante para funcionar.** Esto te dice qué puede re-emparejarse en local y qué debe reemplazarse.',
+        numberedItems: [
+          'Inventaria tus dispositivos por habitación y marca.',
+          'Anota el protocolo que usa cada uno (Zigbee, Z-Wave, Matter, Wi-Fi).',
+          'Marca los dispositivos que requieren una cuenta en la nube para el control básico.',
+          'Identifica qué automatizaciones corren actualmente en una nube del fabricante.',
+        ],
+      },
+      whichLocal: {
+        id: 'which-local',
+        title: 'Qué dispositivos pueden ir a local',
+        content:
+          '**Los dispositivos que usan Zigbee, Z-Wave, Matter o una API de Wi-Fi local pueden pasar al control local; los solo-nube en general no pueden sin reemplazo.** Comprueba primero el protocolo.',
+        items: [
+          'Los dispositivos Zigbee y Z-Wave se re-emparejan a un coordinador en tu hub.',
+          'Los dispositivos Matter pueden vincularse a un controlador local — consulta [control local con Matter](/es/smart-home/matter-local-control-guide).',
+          'Los dispositivos de Wi-Fi local con una API local documentada pueden controlarse en local.',
+        ],
+      },
+      replaceRepair: {
+        id: 'replace-repair',
+        title: 'Reemplazar vs re-emparejar',
+        content:
+          '**Re-empareja los dispositivos con capacidad local a tu hub; reemplaza los solo-nube con el tiempo según lo permita el presupuesto.** Prioriza reemplazar primero los dispositivos en la nube de mayor riesgo de privacidad.',
+        columns: ['Tipo de dispositivo', '¿Puede ir a local?', 'Cómo'],
+        rows: [
+          { 'Tipo de dispositivo': 'Bombillas y sensores Zigbee/Z-Wave', '¿Puede ir a local?': 'Sí', 'Cómo': 'Re-emparejar a un coordinador en el hub' },
+          { 'Tipo de dispositivo': 'Dispositivos Matter', '¿Puede ir a local?': 'Sí', 'Cómo': 'Vincular a un controlador local' },
+          { 'Tipo de dispositivo': 'Dispositivos de Wi-Fi local (API local)', '¿Puede ir a local?': 'Sí', 'Cómo': 'Añadir vía integración' },
+          { 'Tipo de dispositivo': 'Cámaras solo-nube', '¿Puede ir a local?': 'A menudo no', 'Cómo': 'Reemplazar con RTSP local + Frigate' },
+          { 'Tipo de dispositivo': 'Asistentes de voz en la nube', '¿Puede ir a local?': 'Reemplazar', 'Cómo': 'Añadir asistente de voz local' },
+        ],
+      },
+      moveHa: {
+        id: 'move-ha',
+        title: 'Pasar a Home Assistant',
+        content:
+          '**Configura Home Assistant como tu hub local y migra los dispositivos y automatizaciones a él.** Se convierte en el plano de control que reemplaza la nube del fabricante.',
+        items: [
+          'Instala Home Assistant y añade un coordinador Zigbee/Z-Wave — consulta [Home Assistant: primeros pasos](/es/smart-home/home-assistant-getting-started).',
+          'Re-empareja los dispositivos y reconstruye las automatizaciones en local.',
+          'Confirma que todo funciona sin conexión antes de retirar los servicios en la nube.',
+        ],
+      },
+      retire: {
+        id: 'retire',
+        title: 'Retirar Alexa/Google',
+        content:
+          '**Una vez que el control local y un asistente de voz local funcionen, retira los asistentes y cuentas en la nube.** Hazlo en último lugar para mantener el control por voz durante la transición.',
+        items: [
+          'Verifica que el control local cubra para lo que usabas Alexa/Google.',
+          'Elimina los dispositivos de las apps del fabricante y desactiva las cuentas.',
+          'Mantén las automatizaciones de seguridad deterministas en el hub local.',
+        ],
+      },
+      localVoice: {
+        id: 'local-voice',
+        title: 'Añadir voz local',
+        content:
+          '**Reemplaza la voz en la nube por un asistente local para mantener el control manos libres sin la nube.** Es el paso final de una migración completa.',
+        items: [
+          'Construye un asistente de voz local con Assist + Whisper + Piper — consulta [la guía del asistente de voz local](/es/smart-home/local-voice-assistant-smart-home).',
+          'Añade un LLM local para la comprensión de lenguaje natural — consulta [ejecutar tu smart home con un LLM local](/es/smart-home/local-llm-smart-home-complete-guide).',
+          'Para el estado de destino completo, consulta [la guía completa del smart home local](/es/smart-home/local-smart-home-complete-guide).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          { q: '¿Puedo conservar mis dispositivos actuales?', a: 'Muchos de ellos, sí. Los dispositivos que usan Zigbee, Z-Wave, Matter o una API de Wi-Fi local pueden re-emparejarse a un hub local como Home Assistant. Solo los dispositivos solo-nube que requieren una cuenta del fabricante para el control básico necesitan reemplazarse con el tiempo.' },
+          { q: '¿Qué no puede ir a local?', a: 'Los dispositivos solo-nube que dependen por completo de una nube del fabricante —a menudo algunas cámaras, timbres y ecosistemas propietarios— en general no pueden ir a local y necesitan reemplazarse por alternativas con capacidad local, como cámaras RTSP emparejadas con Frigate.' },
+          { q: '¿Cuánto tarda la migración?', a: 'Varía con el tamaño de tu configuración, pero migrar habitación por habitación reparte el trabajo y evita caídas. Mucha gente mueve el hub principal y unas pocas habitaciones en un fin de semana, y luego reemplaza los dispositivos solo-nube de forma gradual durante semanas.' },
+          { q: '¿Pierdo el control por voz al migrar?', a: 'No, si añades un asistente de voz local antes de retirar el de la nube. Un stack local de Assist, Whisper y Piper, opcionalmente con un LLM local, reemplaza a Alexa o Google para el control manos libres sin la nube.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Home Assistant: primeros pasos](/es/smart-home/home-assistant-getting-started) — configura el hub de destino',
+          '[La guía completa del smart home local](/es/smart-home/local-smart-home-complete-guide) — el estado final',
+          '[Montar un asistente de voz totalmente local](/es/smart-home/local-voice-assistant-smart-home) — reemplazar Alexa/Google',
+          '[Matter y control local](/es/smart-home/matter-local-control-guide) — vincular dispositivos en local',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Cómo Migrar de un Smart Home en la Nube al Control Local (2026)',
+      description: 'Migra de un smart home en la nube al control local: audita dependencias, mueve dispositivos a Home Assistant, retira Alexa/Google y añade voz local. Paso a paso.',
+      url: 'https://www.promptquorum.com/es/smart-home/migrating-from-cloud-to-local-smart-home',
+      inLanguage: 'es',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Migración de smart home' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Control local' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'es',
+      mainEntity: [
+        { '@type': 'Question', name: '¿Puedo conservar mis dispositivos actuales?', acceptedAnswer: { '@type': 'Answer', text: 'Muchos. Los dispositivos que usan Zigbee, Z-Wave, Matter o una API de Wi-Fi local pueden re-emparejarse a un hub local. Solo los solo-nube que requieren una cuenta del fabricante para el control básico necesitan reemplazarse.' } },
+        { '@type': 'Question', name: '¿Qué no puede ir a local?', acceptedAnswer: { '@type': 'Answer', text: 'Los dispositivos solo-nube que dependen por completo de una nube del fabricante —a menudo algunas cámaras y timbres— en general necesitan reemplazarse por alternativas con capacidad local como cámaras RTSP con Frigate.' } },
+        { '@type': 'Question', name: '¿Cuánto tarda la migración?', acceptedAnswer: { '@type': 'Answer', text: 'Varía con el tamaño, pero migrar habitación por habitación evita caídas. Mucha gente mueve el hub principal y unas pocas habitaciones en un fin de semana, y reemplaza los solo-nube durante semanas.' } },
+        { '@type': 'Question', name: '¿Pierdo el control por voz al migrar?', acceptedAnswer: { '@type': 'Answer', text: 'No, si añades un asistente de voz local antes de retirar el de la nube. Assist, Whisper y Piper, opcionalmente con un LLM local, reemplazan a Alexa o Google sin la nube.' } },
+      ],
+    },
+  },
+
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'Comment Migrer d\'une Maison Connectée Cloud vers le Contrôle Local (2026)',
+    seoTitle: 'Migrer d\'Alexa à Home Assistant : Contrôle Local (2026)',
+    intro:
+      'Migrer d\'une maison connectée cloud vers le contrôle local signifie auditer vos dépendances cloud, déplacer les appareils vers un hub local et mettre les assistants cloud hors service. Ce guide pas à pas montre comment auditer, quels appareils peuvent passer en local, quand remplacer plutôt que réappairer, comment passer à Home Assistant et comment ajouter un assistant vocal local à la place d\'Alexa ou Google.',
+    metaDescription:
+      'Migrez d\'une maison connectée cloud vers le contrôle local : auditez les dépendances, déplacez les appareils vers Home Assistant, mettez Alexa/Google hors service, ajoutez la voix locale. Pas à pas.',
+    twitterDescription:
+      'Passez d\'Alexa/Google à une maison connectée locale : auditez les dépendances cloud, réappairez ou remplacez les appareils, passez à Home Assistant, ajoutez la voix locale.',
+    readTime: '9 min de lecture',
+    educationalLevel: 'Intermediate',
+    audience: 'Utilisateurs de maison connectée cloud passant au contrôle local',
+    primaryTerm: 'migrate cloud to local smart home',
+    targetKeywords: [
+      'migrer d\'alexa à home assistant',
+      'cloud vers local maison connectée',
+      'remplacer alexa par home assistant',
+      'passer maison connectée en local',
+      'quitter google home',
+    ],
+    leadAnswerBlock:
+      '**Migrez en auditant vos dépendances cloud, en déplaçant les appareils à capacité locale vers Home Assistant (en réappairant quand c\'est possible, en remplaçant sinon) et en mettant Alexa ou Google hors service au profit d\'un assistant vocal local.** Faites-le pièce par pièce pour que la maison continue de fonctionner tout du long.',
+    quickAnswerTop: {
+      fr: {
+        question: 'Comment migrer d\'une maison connectée cloud vers le contrôle local ?',
+        answer:
+          'Listez vos appareils et lesquels dépendent d\'un cloud, déplacez les appareils à capacité locale (Zigbee, Z-Wave, Matter, Wi-Fi local) vers Home Assistant en les réappairant, remplacez les appareils tout-cloud au fil du temps et mettez Alexa ou Google hors service en ajoutant un assistant vocal local. Migrez progressivement, une pièce à la fois.',
+        bullets: [
+          'Auditez quels appareils dépendent d\'un cloud du fabricant',
+          'Réappairez les appareils à capacité locale à Home Assistant',
+          'Remplacez les appareils tout-cloud progressivement',
+          'Ajoutez la voix locale pour remplacer Alexa/Google',
+          'Migrez pièce par pièce pour éviter les coupures',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'En bref', anchor: 'tldr' },
+      { label: 'Auditer les dépendances cloud', anchor: 'audit' },
+      { label: 'Quels appareils peuvent passer en local', anchor: 'which-local' },
+      { label: 'Remplacer vs réappairer', anchor: 'replace-repair' },
+      { label: 'Passer à Home Assistant', anchor: 'move-ha' },
+      { label: 'Mettre Alexa/Google hors service', anchor: 'retire' },
+      { label: 'Ajouter la voix locale', anchor: 'local-voice' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Migrez vers le local en auditant les dépendances cloud, en réappairant les appareils à capacité locale à Home Assistant, en remplaçant les tout-cloud et en ajoutant la voix locale.' },
+      { type: 'plain-terms', content: 'Passer d\'une maison connectée cloud à une maison locale ne signifie pas tout jeter. Beaucoup d\'appareils parlent déjà des protocoles locaux et ont juste besoin d\'être réappairés à un hub local. Vous remplacez les tout-cloud au fil du temps et échangez votre assistant vocal cloud contre un local.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'En bref',
+        isTldr: true,
+        items: [
+          'Commencez par auditer quels appareils dépendent d\'un cloud du fabricant',
+          'Les appareils à capacité locale (Zigbee, Z-Wave, Matter, Wi-Fi local) peuvent être réappairés à Home Assistant',
+          'Remplacez les appareils tout-cloud progressivement plutôt que tous d\'un coup',
+          'Déplacez le contrôle et les automatisations vers un hub local Home Assistant',
+          'Mettez Alexa/Google hors service en ajoutant un assistant vocal local',
+          'Migrez pièce par pièce pour que la maison continue de fonctionner',
+        ],
+      },
+      audit: {
+        id: 'audit',
+        title: 'Auditez vos dépendances cloud',
+        content:
+          '**Listez chaque appareil et notez lesquels ont besoin d\'un cloud du fabricant pour fonctionner.** Cela vous indique ce qui peut être réappairé en local et ce qui doit être remplacé.',
+        numberedItems: [
+          'Inventoriez vos appareils par pièce et par marque.',
+          'Notez le protocole utilisé par chacun (Zigbee, Z-Wave, Matter, Wi-Fi).',
+          'Repérez les appareils qui exigent un compte cloud pour le contrôle de base.',
+          'Identifiez quelles automatisations tournent actuellement dans un cloud du fabricant.',
+        ],
+      },
+      whichLocal: {
+        id: 'which-local',
+        title: 'Quels appareils peuvent passer en local',
+        content:
+          '**Les appareils utilisant Zigbee, Z-Wave, Matter ou une API Wi-Fi locale peuvent passer au contrôle local ; les appareils tout-cloud ne le peuvent généralement pas sans remplacement.** Vérifiez d\'abord le protocole.',
+        items: [
+          'Les appareils Zigbee et Z-Wave se réappairent à un coordinateur sur votre hub.',
+          'Les appareils Matter peuvent s\'appairer à un contrôleur local — voir [contrôle local avec Matter](/fr/smart-home/matter-local-control-guide).',
+          'Les appareils Wi-Fi local avec une API locale documentée peuvent être contrôlés en local.',
+        ],
+      },
+      replaceRepair: {
+        id: 'replace-repair',
+        title: 'Remplacer vs réappairer',
+        content:
+          '**Réappairez les appareils à capacité locale à votre hub ; remplacez les tout-cloud au fil du temps selon le budget.** Priorisez le remplacement des appareils cloud au plus haut risque de confidentialité d\'abord.',
+        columns: ['Type d\'appareil', 'Peut passer en local ?', 'Comment'],
+        rows: [
+          { 'Type d\'appareil': 'Ampoules et capteurs Zigbee/Z-Wave', 'Peut passer en local ?': 'Oui', 'Comment': 'Réappairer à un coordinateur sur le hub' },
+          { 'Type d\'appareil': 'Appareils Matter', 'Peut passer en local ?': 'Oui', 'Comment': 'Appairer à un contrôleur local' },
+          { 'Type d\'appareil': 'Appareils Wi-Fi local (API locale)', 'Peut passer en local ?': 'Oui', 'Comment': 'Ajouter via intégration' },
+          { 'Type d\'appareil': 'Caméras tout-cloud', 'Peut passer en local ?': 'Souvent non', 'Comment': 'Remplacer par RTSP local + Frigate' },
+          { 'Type d\'appareil': 'Assistants vocaux cloud', 'Peut passer en local ?': 'Remplacer', 'Comment': 'Ajouter un assistant vocal local' },
+        ],
+      },
+      moveHa: {
+        id: 'move-ha',
+        title: 'Passer à Home Assistant',
+        content:
+          '**Configurez Home Assistant comme votre hub local et migrez-y les appareils et automatisations.** Cela devient le plan de contrôle qui remplace le cloud du fabricant.',
+        items: [
+          'Installez Home Assistant et ajoutez un coordinateur Zigbee/Z-Wave — voir [Home Assistant : premiers pas](/fr/smart-home/home-assistant-getting-started).',
+          'Réappairez les appareils et reconstruisez les automatisations en local.',
+          'Confirmez que tout fonctionne hors ligne avant de mettre les services cloud hors service.',
+        ],
+      },
+      retire: {
+        id: 'retire',
+        title: 'Mettre Alexa/Google hors service',
+        content:
+          '**Une fois le contrôle local et un assistant vocal local fonctionnels, mettez les assistants et comptes cloud hors service.** Faites-le en dernier pour garder le contrôle vocal pendant la transition.',
+        items: [
+          'Vérifiez que le contrôle local couvre ce pour quoi vous utilisiez Alexa/Google.',
+          'Retirez les appareils des apps du fabricant et désactivez les comptes.',
+          'Gardez les automatisations de sécurité déterministes sur le hub local.',
+        ],
+      },
+      localVoice: {
+        id: 'local-voice',
+        title: 'Ajouter la voix locale',
+        content:
+          '**Remplacez la voix cloud par un assistant local pour garder le contrôle mains libres sans le cloud.** C\'est la dernière étape d\'une migration complète.',
+        items: [
+          'Construisez un assistant vocal local avec Assist + Whisper + Piper — voir [le guide de l\'assistant vocal local](/fr/smart-home/local-voice-assistant-smart-home).',
+          'Ajoutez un LLM local pour la compréhension du langage naturel — voir [faire tourner votre maison connectée sur un LLM local](/fr/smart-home/local-llm-smart-home-complete-guide).',
+          'Pour l\'état de destination complet, voir [le guide complet de la maison connectée locale](/fr/smart-home/local-smart-home-complete-guide).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'Puis-je garder mes appareils existants ?', a: 'Beaucoup d\'entre eux, oui. Les appareils utilisant Zigbee, Z-Wave, Matter ou une API Wi-Fi locale peuvent être réappairés à un hub local comme Home Assistant. Seuls les appareils tout-cloud qui exigent un compte du fabricant pour le contrôle de base doivent être remplacés au fil du temps.' },
+          { q: 'Qu\'est-ce qui ne peut pas passer en local ?', a: 'Les appareils tout-cloud qui dépendent entièrement d\'un cloud du fabricant — souvent certaines caméras, sonnettes et écosystèmes propriétaires — ne peuvent généralement pas passer en local et doivent être remplacés par des alternatives à capacité locale, comme des caméras RTSP appairées avec Frigate.' },
+          { q: 'Combien de temps prend la migration ?', a: 'Cela varie avec la taille de votre installation, mais migrer pièce par pièce répartit le travail et évite les coupures. Beaucoup déplacent le hub principal et quelques pièces en un week-end, puis remplacent les appareils tout-cloud progressivement sur des semaines.' },
+          { q: 'Est-ce que je perds le contrôle vocal en migrant ?', a: 'Non, si vous ajoutez un assistant vocal local avant de mettre celui du cloud hors service. Un stack local d\'Assist, Whisper et Piper, optionnellement avec un LLM local, remplace Alexa ou Google pour le contrôle mains libres sans le cloud.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Home Assistant : premiers pas](/fr/smart-home/home-assistant-getting-started) — configurer le hub de destination',
+          '[Le guide complet de la maison connectée locale](/fr/smart-home/local-smart-home-complete-guide) — l\'état final',
+          '[Construire un assistant vocal entièrement local](/fr/smart-home/local-voice-assistant-smart-home) — remplacer Alexa/Google',
+          '[Matter et contrôle local](/fr/smart-home/matter-local-control-guide) — appairer les appareils en local',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Comment Migrer d\'une Maison Connectée Cloud vers le Contrôle Local (2026)',
+      description: 'Migrez d\'une maison connectée cloud vers le contrôle local : auditez les dépendances, déplacez les appareils vers Home Assistant, mettez Alexa/Google hors service, ajoutez la voix locale. Pas à pas.',
+      url: 'https://www.promptquorum.com/fr/smart-home/migrating-from-cloud-to-local-smart-home',
+      inLanguage: 'fr',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Migration de maison connectée' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Contrôle local' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'fr',
+      mainEntity: [
+        { '@type': 'Question', name: 'Puis-je garder mes appareils existants ?', acceptedAnswer: { '@type': 'Answer', text: 'Beaucoup. Les appareils utilisant Zigbee, Z-Wave, Matter ou une API Wi-Fi locale peuvent être réappairés à un hub local. Seuls les tout-cloud qui exigent un compte du fabricant pour le contrôle de base doivent être remplacés.' } },
+        { '@type': 'Question', name: 'Qu\'est-ce qui ne peut pas passer en local ?', acceptedAnswer: { '@type': 'Answer', text: 'Les appareils tout-cloud qui dépendent entièrement d\'un cloud du fabricant — souvent certaines caméras et sonnettes — doivent généralement être remplacés par des alternatives à capacité locale comme des caméras RTSP avec Frigate.' } },
+        { '@type': 'Question', name: 'Combien de temps prend la migration ?', acceptedAnswer: { '@type': 'Answer', text: 'Cela varie avec la taille, mais migrer pièce par pièce évite les coupures. Beaucoup déplacent le hub principal et quelques pièces en un week-end, puis remplacent les tout-cloud sur des semaines.' } },
+        { '@type': 'Question', name: 'Est-ce que je perds le contrôle vocal en migrant ?', acceptedAnswer: { '@type': 'Answer', text: 'Non, si vous ajoutez un assistant vocal local avant de retirer celui du cloud. Assist, Whisper et Piper, optionnellement avec un LLM local, remplacent Alexa ou Google sans le cloud.' } },
+      ],
+    },
+  },
+
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'クラウドのスマートホームからローカル制御へ移行する方法（2026）',
+    seoTitle: 'Alexa から Home Assistant へ移行：ローカル制御（2026）',
+    intro:
+      'クラウドのスマートホームからローカル制御へ移行するとは、クラウド依存を棚卸しし、機器をローカルハブへ移し、クラウドアシスタントを退役させることです。本ステップバイステップのガイドは、棚卸しの方法、どの機器がローカル化できるか、交換と再ペアリングのどちらにすべきか、Home Assistant への移行方法、そして Alexa や Google の代わりにローカル音声アシスタントを追加する方法を示します。',
+    metaDescription:
+      'クラウドのスマートホームからローカル制御へ移行：依存を棚卸し、機器を Home Assistant へ移し、Alexa/Google を退役させ、ローカル音声を追加。順を追って。',
+    twitterDescription:
+      'Alexa/Google からローカルスマートホームへ：クラウド依存を棚卸しし、機器を再ペアリングまたは交換し、Home Assistant へ切り替え、ローカル音声を追加。',
+    readTime: '9分で読める',
+    educationalLevel: 'Intermediate',
+    audience: 'ローカル制御へ移行する既存のクラウドスマートホームユーザー',
+    primaryTerm: 'migrate cloud to local smart home',
+    targetKeywords: [
+      'alexa から home assistant 移行',
+      'クラウドからローカル スマートホーム',
+      'alexa を home assistant に置き換え',
+      'スマートホーム ローカル化',
+      'google home をやめる',
+    ],
+    leadAnswerBlock:
+      '**クラウド依存を棚卸しし、ローカル対応機器を Home Assistant へ移し（可能なら再ペアリング、無理なら交換）、Alexa や Google をローカル音声アシスタントに置き換えて退役させることで移行します。** 家が一貫して機能し続けるよう、部屋ごとに進めましょう。',
+    quickAnswerTop: {
+      ja: {
+        question: 'クラウドのスマートホームからローカル制御へどう移行しますか？',
+        answer:
+          '機器とそのうちどれがクラウドに依存するかを一覧にし、ローカル対応機器（Zigbee、Z-Wave、Matter、ローカル Wi-Fi）を再ペアリングして Home Assistant へ移し、クラウド専用機器を時間をかけて交換し、ローカル音声アシスタントを追加して Alexa や Google を退役させます。部屋ごとに、段階的に移行しましょう。',
+        bullets: [
+          'どの機器がメーカーのクラウドに依存するか棚卸しする',
+          'ローカル対応機器を Home Assistant に再ペアリングする',
+          'クラウド専用機器を段階的に交換する',
+          'Alexa/Google を置き換えるローカル音声を追加する',
+          'ダウンタイムを避けるため部屋ごとに移行する',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '要点まとめ', anchor: 'tldr' },
+      { label: 'クラウド依存を棚卸し', anchor: 'audit' },
+      { label: 'どの機器がローカル化できるか', anchor: 'which-local' },
+      { label: '交換 対 再ペアリング', anchor: 'replace-repair' },
+      { label: 'Home Assistant へ移行', anchor: 'move-ha' },
+      { label: 'Alexa/Google を退役', anchor: 'retire' },
+      { label: 'ローカル音声を追加', anchor: 'local-voice' },
+      { label: 'よくある質問', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'クラウド依存を棚卸しし、ローカル対応機器を Home Assistant へ再ペアリングし、クラウド専用機器を交換し、ローカル音声を追加して、ローカルへ移行します。' },
+      { type: 'plain-terms', content: 'クラウドのスマートホームからローカルへ切り替えるのは、すべてを捨てることではありません。多くの機器はすでにローカルプロトコルを話し、ローカルハブへ再ペアリングするだけで済みます。クラウド専用機器は時間をかけて交換し、クラウド音声アシスタントをローカルのものに替えます。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '要点まとめ',
+        isTldr: true,
+        items: [
+          'まず、どの機器がメーカーのクラウドに依存するかを棚卸しする',
+          'ローカル対応機器（Zigbee、Z-Wave、Matter、ローカル Wi-Fi）は Home Assistant に再ペアリングできる',
+          'クラウド専用機器は一度にではなく段階的に交換する',
+          '制御と自動化をローカルの Home Assistant ハブへ移す',
+          'ローカル音声アシスタントを追加して Alexa/Google を退役させる',
+          '家が一貫して機能し続けるよう、部屋ごとに移行する',
+        ],
+      },
+      audit: {
+        id: 'audit',
+        title: 'クラウド依存を棚卸しする',
+        content:
+          '**各機器を一覧にし、どれが機能のためにメーカーのクラウドを必要とするか記録しましょう。** これで、ローカルで再ペアリングできるものと交換が必要なものが分かります。',
+        numberedItems: [
+          '機器を部屋とブランドごとに棚卸しします。',
+          '各機器が使うプロトコル（Zigbee、Z-Wave、Matter、Wi-Fi）を記録します。',
+          '基本制御にクラウドアカウントを要する機器に印を付けます。',
+          '現在どの自動化がメーカーのクラウドで動いているか特定します。',
+        ],
+      },
+      whichLocal: {
+        id: 'which-local',
+        title: 'どの機器がローカル化できるか',
+        content:
+          '**Zigbee、Z-Wave、Matter、またはローカル Wi-Fi API を使う機器はローカル制御へ移せます；クラウド専用機器は概して交換なしには移せません。** まずプロトコルを確認しましょう。',
+        items: [
+          'Zigbee と Z-Wave の機器はハブ上のコーディネーターへ再ペアリングします。',
+          'Matter 機器はローカルコントローラーへコミッショニングできます——[Matter のローカル制御](/ja/smart-home/matter-local-control-guide)を参照。',
+          '文書化されたローカル API を備えるローカル Wi-Fi 機器はローカルで制御できます。',
+        ],
+      },
+      replaceRepair: {
+        id: 'replace-repair',
+        title: '交換 対 再ペアリング',
+        content:
+          '**ローカル対応機器はハブへ再ペアリングし、クラウド専用機器は予算が許す範囲で時間をかけて交換しましょう。** プライバシーリスクが最も高いクラウド機器を最初に交換することを優先します。',
+        columns: ['機器の種類', 'ローカル化できるか', '方法'],
+        rows: [
+          { '機器の種類': 'Zigbee/Z-Wave の電球＆センサー', 'ローカル化できるか': '可', '方法': 'ハブ上のコーディネーターへ再ペアリング' },
+          { '機器の種類': 'Matter 機器', 'ローカル化できるか': '可', '方法': 'ローカルコントローラーへコミッショニング' },
+          { '機器の種類': 'ローカル Wi-Fi 機器（ローカル API）', 'ローカル化できるか': '可', '方法': '統合で追加' },
+          { '機器の種類': 'クラウド専用カメラ', 'ローカル化できるか': 'しばしば不可', '方法': 'ローカル RTSP + Frigate で交換' },
+          { '機器の種類': 'クラウド音声アシスタント', 'ローカル化できるか': '交換', '方法': 'ローカル音声アシスタントを追加' },
+        ],
+      },
+      moveHa: {
+        id: 'move-ha',
+        title: 'Home Assistant へ移行',
+        content:
+          '**Home Assistant をローカルハブとしてセットアップし、機器と自動化をそこへ移しましょう。** これがメーカーのクラウドを置き換える制御の中枢になります。',
+        items: [
+          'Home Assistant をインストールし、Zigbee/Z-Wave コーディネーターを追加します——[Home Assistant 入門](/ja/smart-home/home-assistant-getting-started)を参照。',
+          '機器を再ペアリングし、自動化をローカルで作り直します。',
+          'クラウドサービスを退役させる前に、すべてがオフラインで動くことを確認します。',
+        ],
+      },
+      retire: {
+        id: 'retire',
+        title: 'Alexa/Google を退役させる',
+        content:
+          '**ローカル制御とローカル音声アシスタントが動いたら、クラウドアシスタントとアカウントを退役させましょう。** 移行中も音声制御を保つため、これは最後に行います。',
+        items: [
+          'ローカル制御が、Alexa/Google で使っていたことをカバーするか確認します。',
+          'メーカーのアプリから機器を削除し、アカウントを無効化します。',
+          '決定論的な安全自動化はローカルハブに残します。',
+        ],
+      },
+      localVoice: {
+        id: 'local-voice',
+        title: 'ローカル音声を追加',
+        content:
+          '**クラウド音声をローカルアシスタントに置き換え、クラウドなしでハンズフリー制御を保ちましょう。** これは完全移行の最終ステップです。',
+        items: [
+          'Assist + Whisper + Piper でローカル音声アシスタントを作ります——[ローカル音声アシスタントのガイド](/ja/smart-home/local-voice-assistant-smart-home)を参照。',
+          '自然言語理解のためにローカル LLM を追加します——[ローカルLLMでスマートホームを動かす](/ja/smart-home/local-llm-smart-home-complete-guide)を参照。',
+          '到達すべき最終形は[ローカルスマートホーム完全ガイド](/ja/smart-home/local-smart-home-complete-guide)を参照。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          { q: '今ある機器を残せますか？', a: '多くは残せます。Zigbee、Z-Wave、Matter、またはローカル Wi-Fi API を使う機器は、Home Assistant のようなローカルハブへ再ペアリングできます。基本制御にメーカーのアカウントを要するクラウド専用機器だけは、時間をかけて交換が必要です。' },
+          { q: 'ローカル化できないものは何ですか？', a: 'メーカーのクラウドに完全に依存するクラウド専用機器——しばしば一部のカメラ、ドアベル、独自エコシステム——は概してローカル化できず、Frigate と組み合わせる RTSP カメラのようなローカル対応の代替品への交換が必要です。' },
+          { q: '移行にはどれくらいかかりますか？', a: '構成の規模によりますが、部屋ごとに移行すれば作業が分散し、ダウンタイムを避けられます。多くの人は中心となるハブと数部屋を週末に移し、その後クラウド専用機器を数週間かけて段階的に交換します。' },
+          { q: '移行すると音声制御を失いますか？', a: 'いいえ、クラウドのものを退役させる前にローカル音声アシスタントを追加すれば失いません。Assist、Whisper、Piper のローカルスタック（任意でローカル LLM を加える）が、クラウドなしのハンズフリー制御で Alexa や Google を置き換えます。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[Home Assistant 入門](/ja/smart-home/home-assistant-getting-started) — 移行先のハブを設定する',
+          '[ローカルスマートホーム完全ガイド](/ja/smart-home/local-smart-home-complete-guide) — 最終形',
+          '[完全ローカルの音声アシスタントを作る](/ja/smart-home/local-voice-assistant-smart-home) — Alexa/Google を置き換える',
+          '[Matter とローカル制御](/ja/smart-home/matter-local-control-guide) — 機器をローカルでコミッショニングする',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'クラウドのスマートホームからローカル制御へ移行する方法（2026）',
+      description: 'クラウドのスマートホームからローカル制御へ移行：依存を棚卸し、機器を Home Assistant へ移し、Alexa/Google を退役させ、ローカル音声を追加。順を追って。',
+      url: 'https://www.promptquorum.com/ja/smart-home/migrating-from-cloud-to-local-smart-home',
+      inLanguage: 'ja',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'スマートホームの移行' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'ローカル制御' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ja',
+      mainEntity: [
+        { '@type': 'Question', name: '今ある機器を残せますか？', acceptedAnswer: { '@type': 'Answer', text: '多くは残せます。Zigbee、Z-Wave、Matter、またはローカル Wi-Fi API を使う機器は、ローカルハブへ再ペアリングできます。基本制御にメーカーのアカウントを要するクラウド専用機器だけ交換が必要です。' } },
+        { '@type': 'Question', name: 'ローカル化できないものは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'メーカーのクラウドに完全に依存するクラウド専用機器——しばしば一部のカメラやドアベル——は概して、Frigate と組み合わせる RTSP カメラのようなローカル対応品への交換が必要です。' } },
+        { '@type': 'Question', name: '移行にはどれくらいかかりますか？', acceptedAnswer: { '@type': 'Answer', text: '構成の規模によりますが、部屋ごとに移行すればダウンタイムを避けられます。多くは中心のハブと数部屋を週末に移し、その後クラウド専用機器を数週間かけて交換します。' } },
+        { '@type': 'Question', name: '移行すると音声制御を失いますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ、クラウドのものを退役させる前にローカル音声アシスタントを追加すれば失いません。Assist、Whisper、Piper（任意でローカル LLM）が Alexa や Google をクラウドなしで置き換えます。' } },
+      ],
+    },
+  },
+
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'Como Migrar de uma Casa Inteligente na Nuvem para o Controle Local (2026)',
+    seoTitle: 'Migrar da Alexa para o Home Assistant: Controle Local (2026)',
+    intro:
+      'Migrar de uma casa inteligente na nuvem para o controle local significa auditar suas dependências da nuvem, mover os dispositivos para um hub local e aposentar os assistentes na nuvem. Este guia passo a passo mostra como auditar, quais dispositivos podem ir para o local, quando substituir em vez de reparear, como passar para o Home Assistant e como adicionar um assistente de voz local no lugar da Alexa ou do Google.',
+    metaDescription:
+      'Migre de uma casa inteligente na nuvem para o controle local: audite dependências, mova dispositivos para o Home Assistant, aposente Alexa/Google e adicione voz local. Passo a passo.',
+    twitterDescription:
+      'Saia da Alexa/Google para uma casa inteligente local: audite dependências da nuvem, repareie ou substitua dispositivos, mude para o Home Assistant, adicione voz local.',
+    readTime: '9 min de leitura',
+    educationalLevel: 'Intermediate',
+    audience: 'Usuários de casa inteligente na nuvem mudando para o controle local',
+    primaryTerm: 'migrate cloud to local smart home',
+    targetKeywords: [
+      'migrar da alexa para o home assistant',
+      'da nuvem para local casa inteligente',
+      'substituir alexa por home assistant',
+      'passar casa inteligente para local',
+      'sair do google home',
+    ],
+    leadAnswerBlock:
+      '**Migre auditando suas dependências da nuvem, movendo os dispositivos com capacidade local para o Home Assistant (repareando onde for possível, substituindo onde não for) e aposentando a Alexa ou o Google em favor de um assistente de voz local.** Faça isso cômodo por cômodo para que a casa continue funcionando o tempo todo.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Como migro de uma casa inteligente na nuvem para o controle local?',
+        answer:
+          'Liste seus dispositivos e quais dependem de uma nuvem, mova os dispositivos com capacidade local (Zigbee, Z-Wave, Matter, Wi-Fi local) para o Home Assistant repareando-os, substitua os dispositivos só-nuvem ao longo do tempo e aposente a Alexa ou o Google adicionando um assistente de voz local. Migre gradualmente, um cômodo de cada vez.',
+        bullets: [
+          'Audite quais dispositivos dependem de uma nuvem do fabricante',
+          'Repareie os dispositivos com capacidade local ao Home Assistant',
+          'Substitua os dispositivos só-nuvem gradualmente',
+          'Adicione voz local para substituir Alexa/Google',
+          'Migre cômodo por cômodo para evitar interrupções',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'Resumo', anchor: 'tldr' },
+      { label: 'Auditar dependências da nuvem', anchor: 'audit' },
+      { label: 'Quais dispositivos podem ir para o local', anchor: 'which-local' },
+      { label: 'Substituir vs reparear', anchor: 'replace-repair' },
+      { label: 'Passar para o Home Assistant', anchor: 'move-ha' },
+      { label: 'Aposentar Alexa/Google', anchor: 'retire' },
+      { label: 'Adicionar voz local', anchor: 'local-voice' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Migre para o local auditando as dependências da nuvem, repareando os dispositivos com capacidade local ao Home Assistant, substituindo os só-nuvem e adicionando voz local.' },
+      { type: 'plain-terms', content: 'Mudar de uma casa inteligente na nuvem para uma local não significa jogar tudo fora. Muitos dispositivos já falam protocolos locais e só precisam ser repareados a um hub local. Você substitui os só-nuvem ao longo do tempo e troca seu assistente de voz na nuvem por um local.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Resumo',
+        isTldr: true,
+        items: [
+          'Comece auditando quais dispositivos dependem de uma nuvem do fabricante',
+          'Dispositivos com capacidade local (Zigbee, Z-Wave, Matter, Wi-Fi local) podem ser repareados ao Home Assistant',
+          'Substitua os dispositivos só-nuvem gradualmente em vez de todos de uma vez',
+          'Mova o controle e as automações para um hub local do Home Assistant',
+          'Aposente Alexa/Google adicionando um assistente de voz local',
+          'Migre cômodo por cômodo para que a casa continue funcionando',
+        ],
+      },
+      audit: {
+        id: 'audit',
+        title: 'Audite suas dependências da nuvem',
+        content:
+          '**Liste cada dispositivo e anote quais precisam de uma nuvem do fabricante para funcionar.** Isso lhe diz o que pode ser repareado localmente e o que precisa ser substituído.',
+        numberedItems: [
+          'Faça um inventário dos seus dispositivos por cômodo e marca.',
+          'Anote o protocolo que cada um usa (Zigbee, Z-Wave, Matter, Wi-Fi).',
+          'Sinalize os dispositivos que exigem uma conta na nuvem para o controle básico.',
+          'Identifique quais automações rodam atualmente em uma nuvem do fabricante.',
+        ],
+      },
+      whichLocal: {
+        id: 'which-local',
+        title: 'Quais dispositivos podem ir para o local',
+        content:
+          '**Dispositivos que usam Zigbee, Z-Wave, Matter ou uma API de Wi-Fi local podem passar para o controle local; os só-nuvem geralmente não podem sem substituição.** Verifique primeiro o protocolo.',
+        items: [
+          'Dispositivos Zigbee e Z-Wave são repareados a um coordenador no seu hub.',
+          'Dispositivos Matter podem ser emparelhados a um controlador local — veja [controle local com Matter](/pt/smart-home/matter-local-control-guide).',
+          'Dispositivos de Wi-Fi local com uma API local documentada podem ser controlados localmente.',
+        ],
+      },
+      replaceRepair: {
+        id: 'replace-repair',
+        title: 'Substituir vs reparear',
+        content:
+          '**Repareie os dispositivos com capacidade local ao seu hub; substitua os só-nuvem ao longo do tempo conforme o orçamento permitir.** Priorize substituir primeiro os dispositivos na nuvem de maior risco de privacidade.',
+        columns: ['Tipo de dispositivo', 'Pode ir para o local?', 'Como'],
+        rows: [
+          { 'Tipo de dispositivo': 'Lâmpadas e sensores Zigbee/Z-Wave', 'Pode ir para o local?': 'Sim', 'Como': 'Reparear a um coordenador no hub' },
+          { 'Tipo de dispositivo': 'Dispositivos Matter', 'Pode ir para o local?': 'Sim', 'Como': 'Emparelhar a um controlador local' },
+          { 'Tipo de dispositivo': 'Dispositivos de Wi-Fi local (API local)', 'Pode ir para o local?': 'Sim', 'Como': 'Adicionar via integração' },
+          { 'Tipo de dispositivo': 'Câmeras só-nuvem', 'Pode ir para o local?': 'Muitas vezes não', 'Como': 'Substituir por RTSP local + Frigate' },
+          { 'Tipo de dispositivo': 'Assistentes de voz na nuvem', 'Pode ir para o local?': 'Substituir', 'Como': 'Adicionar assistente de voz local' },
+        ],
+      },
+      moveHa: {
+        id: 'move-ha',
+        title: 'Passar para o Home Assistant',
+        content:
+          '**Configure o Home Assistant como seu hub local e migre os dispositivos e automações para ele.** Ele se torna o plano de controle que substitui a nuvem do fabricante.',
+        items: [
+          'Instale o Home Assistant e adicione um coordenador Zigbee/Z-Wave — veja [Home Assistant: primeiros passos](/pt/smart-home/home-assistant-getting-started).',
+          'Repareie os dispositivos e reconstrua as automações localmente.',
+          'Confirme que tudo funciona offline antes de aposentar os serviços na nuvem.',
+        ],
+      },
+      retire: {
+        id: 'retire',
+        title: 'Aposentar Alexa/Google',
+        content:
+          '**Quando o controle local e um assistente de voz local funcionarem, aposente os assistentes e contas na nuvem.** Faça isso por último para manter o controle por voz durante a transição.',
+        items: [
+          'Verifique se o controle local cobre aquilo para que você usava Alexa/Google.',
+          'Remova os dispositivos dos apps do fabricante e desative as contas.',
+          'Mantenha as automações de segurança determinísticas no hub local.',
+        ],
+      },
+      localVoice: {
+        id: 'local-voice',
+        title: 'Adicionar voz local',
+        content:
+          '**Substitua a voz na nuvem por um assistente local para manter o controle mãos-livres sem a nuvem.** É o passo final de uma migração completa.',
+        items: [
+          'Monte um assistente de voz local com Assist + Whisper + Piper — veja [o guia do assistente de voz local](/pt/smart-home/local-voice-assistant-smart-home).',
+          'Adicione um LLM local para a compreensão de linguagem natural — veja [rodar sua casa inteligente em um LLM local](/pt/smart-home/local-llm-smart-home-complete-guide).',
+          'Para o estado de destino completo, veja [o guia completo da casa inteligente local](/pt/smart-home/local-smart-home-complete-guide).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'Posso manter meus dispositivos atuais?', a: 'Muitos deles, sim. Dispositivos que usam Zigbee, Z-Wave, Matter ou uma API de Wi-Fi local podem ser repareados a um hub local como o Home Assistant. Só os dispositivos só-nuvem que exigem uma conta do fabricante para o controle básico precisam ser substituídos ao longo do tempo.' },
+          { q: 'O que não pode ir para o local?', a: 'Dispositivos só-nuvem que dependem inteiramente de uma nuvem do fabricante — muitas vezes algumas câmeras, campainhas e ecossistemas proprietários — geralmente não podem ir para o local e precisam ser substituídos por alternativas com capacidade local, como câmeras RTSP emparelhadas com o Frigate.' },
+          { q: 'Quanto tempo leva a migração?', a: 'Varia com o tamanho da sua configuração, mas migrar cômodo por cômodo distribui o trabalho e evita interrupções. Muitas pessoas movem o hub principal e alguns cômodos em um fim de semana e depois substituem os dispositivos só-nuvem gradualmente ao longo de semanas.' },
+          { q: 'Perco o controle por voz ao migrar?', a: 'Não, se você adicionar um assistente de voz local antes de aposentar o da nuvem. Um stack local de Assist, Whisper e Piper, opcionalmente com um LLM local, substitui a Alexa ou o Google para o controle mãos-livres sem a nuvem.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Home Assistant: primeiros passos](/pt/smart-home/home-assistant-getting-started) — configure o hub de destino',
+          '[O guia completo da casa inteligente local](/pt/smart-home/local-smart-home-complete-guide) — o estado final',
+          '[Montar um assistente de voz totalmente local](/pt/smart-home/local-voice-assistant-smart-home) — substituir Alexa/Google',
+          '[Matter e controle local](/pt/smart-home/matter-local-control-guide) — emparelhar dispositivos localmente',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Como Migrar de uma Casa Inteligente na Nuvem para o Controle Local (2026)',
+      description: 'Migre de uma casa inteligente na nuvem para o controle local: audite dependências, mova dispositivos para o Home Assistant, aposente Alexa/Google e adicione voz local. Passo a passo.',
+      url: 'https://www.promptquorum.com/pt/smart-home/migrating-from-cloud-to-local-smart-home',
+      inLanguage: 'pt-BR',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Migração de casa inteligente' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Controle local' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'pt-BR',
+      mainEntity: [
+        { '@type': 'Question', name: 'Posso manter meus dispositivos atuais?', acceptedAnswer: { '@type': 'Answer', text: 'Muitos. Dispositivos que usam Zigbee, Z-Wave, Matter ou uma API de Wi-Fi local podem ser repareados a um hub local. Só os só-nuvem que exigem uma conta do fabricante para o controle básico precisam ser substituídos.' } },
+        { '@type': 'Question', name: 'O que não pode ir para o local?', acceptedAnswer: { '@type': 'Answer', text: 'Dispositivos só-nuvem que dependem inteiramente de uma nuvem do fabricante — muitas vezes algumas câmeras e campainhas — geralmente precisam ser substituídos por alternativas com capacidade local como câmeras RTSP com Frigate.' } },
+        { '@type': 'Question', name: 'Quanto tempo leva a migração?', acceptedAnswer: { '@type': 'Answer', text: 'Varia com o tamanho, mas migrar cômodo por cômodo evita interrupções. Muitos movem o hub principal e alguns cômodos em um fim de semana e substituem os só-nuvem ao longo de semanas.' } },
+        { '@type': 'Question', name: 'Perco o controle por voz ao migrar?', acceptedAnswer: { '@type': 'Answer', text: 'Não, se você adicionar um assistente de voz local antes de aposentar o da nuvem. Assist, Whisper e Piper, opcionalmente com um LLM local, substituem a Alexa ou o Google sem a nuvem.' } },
+      ],
+    },
+  },
+
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: '如何从云端智能家居迁移到本地控制（2026）',
+    seoTitle: '从 Alexa 迁移到 Home Assistant：本地控制（2026）',
+    intro:
+      '从云端智能家居迁移到本地控制，意味着审查你的云端依赖、把设备迁移到本地中枢，并退役云端助手。本分步指南展示如何审查、哪些设备可以本地化、何时应替换而非重新配对、如何迁移到 Home Assistant，以及如何用本地语音助手取代 Alexa 或 Google。',
+    metaDescription:
+      '从云端智能家居迁移到本地控制：审查依赖、把设备迁移到 Home Assistant、退役 Alexa/Google，并添加本地语音。分步进行。',
+    twitterDescription:
+      '从 Alexa/Google 转向本地智能家居：审查云端依赖、重新配对或替换设备、切换到 Home Assistant、添加本地语音。',
+    readTime: '阅读约9分钟',
+    educationalLevel: 'Intermediate',
+    audience: '转向本地控制的既有云端智能家居用户',
+    primaryTerm: 'migrate cloud to local smart home',
+    targetKeywords: [
+      '从 alexa 迁移到 home assistant',
+      '云端到本地 智能家居',
+      '用 home assistant 替换 alexa',
+      '智能家居 本地化',
+      '离开 google home',
+    ],
+    leadAnswerBlock:
+      '**通过审查你的云端依赖、把支持本地的设备迁移到 Home Assistant（能重新配对就重新配对，不能就替换），并用本地语音助手取代 Alexa 或 Google 来完成迁移。** 按房间逐个进行，让家在整个过程中持续可用。',
+    quickAnswerTop: {
+      zh: {
+        question: '我该如何从云端智能家居迁移到本地控制？',
+        answer:
+          '列出你的设备以及其中哪些依赖云端，把支持本地的设备（Zigbee、Z-Wave、Matter、本地 Wi-Fi）通过重新配对迁移到 Home Assistant，随时间替换仅限云端的设备，并通过添加本地语音助手来退役 Alexa 或 Google。逐个房间、循序渐进地迁移。',
+        bullets: [
+          '审查哪些设备依赖厂商云端',
+          '把支持本地的设备重新配对到 Home Assistant',
+          '逐步替换仅限云端的设备',
+          '添加本地语音以取代 Alexa/Google',
+          '按房间迁移以避免停摆',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '要点速览', anchor: 'tldr' },
+      { label: '审查云端依赖', anchor: 'audit' },
+      { label: '哪些设备可以本地化', anchor: 'which-local' },
+      { label: '替换对重新配对', anchor: 'replace-repair' },
+      { label: '迁移到 Home Assistant', anchor: 'move-ha' },
+      { label: '退役 Alexa/Google', anchor: 'retire' },
+      { label: '添加本地语音', anchor: 'local-voice' },
+      { label: '常见问题', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '通过审查云端依赖、把支持本地的设备重新配对到 Home Assistant、替换仅限云端的设备并添加本地语音，迁移到本地。' },
+      { type: 'plain-terms', content: '从云端智能家居切换到本地，并不意味着把一切都扔掉。许多设备已经会说本地协议，只需重新配对到本地中枢。你随时间替换仅限云端的设备，并把云端语音助手换成本地的。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '要点速览',
+        isTldr: true,
+        items: [
+          '先审查哪些设备依赖厂商云端',
+          '支持本地的设备（Zigbee、Z-Wave、Matter、本地 Wi-Fi）可重新配对到 Home Assistant',
+          '逐步替换仅限云端的设备，而不是一次全换',
+          '把控制和自动化迁移到本地的 Home Assistant 中枢',
+          '通过添加本地语音助手退役 Alexa/Google',
+          '按房间迁移，让家持续可用',
+        ],
+      },
+      audit: {
+        id: 'audit',
+        title: '审查你的云端依赖',
+        content:
+          '**列出每台设备，并记录哪些需要厂商云端才能工作。** 这会告诉你哪些可以在本地重新配对、哪些必须替换。',
+        numberedItems: [
+          '按房间和品牌盘点你的设备。',
+          '记录每台设备使用的协议（Zigbee、Z-Wave、Matter、Wi-Fi）。',
+          '标记基础控制就要求云端账户的设备。',
+          '确认当前哪些自动化运行在厂商云端。',
+        ],
+      },
+      whichLocal: {
+        id: 'which-local',
+        title: '哪些设备可以本地化',
+        content:
+          '**使用 Zigbee、Z-Wave、Matter 或本地 Wi-Fi API 的设备可以转向本地控制；仅限云端的设备通常不替换就无法本地化。** 先检查协议。',
+        items: [
+          'Zigbee 和 Z-Wave 设备重新配对到你中枢上的协调器。',
+          'Matter 设备可配网到本地控制器——参见[Matter 本地控制](/zh/smart-home/matter-local-control-guide)。',
+          '带文档化本地 API 的本地 Wi-Fi 设备可在本地控制。',
+        ],
+      },
+      replaceRepair: {
+        id: 'replace-repair',
+        title: '替换对重新配对',
+        content:
+          '**把支持本地的设备重新配对到你的中枢；在预算允许的情况下随时间替换仅限云端的设备。** 优先先替换隐私风险最高的云端设备。',
+        columns: ['设备类型', '能否本地化？', '方式'],
+        rows: [
+          { '设备类型': 'Zigbee/Z-Wave 灯泡与传感器', '能否本地化？': '能', '方式': '重新配对到中枢上的协调器' },
+          { '设备类型': 'Matter 设备', '能否本地化？': '能', '方式': '配网到本地控制器' },
+          { '设备类型': '本地 Wi-Fi 设备（本地 API）', '能否本地化？': '能', '方式': '经由集成添加' },
+          { '设备类型': '仅限云端的摄像头', '能否本地化？': '通常不能', '方式': '用本地 RTSP + Frigate 替换' },
+          { '设备类型': '云端语音助手', '能否本地化？': '替换', '方式': '添加本地语音助手' },
+        ],
+      },
+      moveHa: {
+        id: 'move-ha',
+        title: '迁移到 Home Assistant',
+        content:
+          '**把 Home Assistant 设置为你的本地中枢，并把设备和自动化迁移到它上面。** 它将成为取代厂商云端的控制中枢。',
+        items: [
+          '安装 Home Assistant 并添加一个 Zigbee/Z-Wave 协调器——参见[Home Assistant 入门](/zh/smart-home/home-assistant-getting-started)。',
+          '重新配对设备，并在本地重建自动化。',
+          '在退役云端服务之前，确认一切都能离线工作。',
+        ],
+      },
+      retire: {
+        id: 'retire',
+        title: '退役 Alexa/Google',
+        content:
+          '**一旦本地控制和本地语音助手可用，就退役云端助手和账户。** 把这一步放到最后，以便在过渡期间保留语音控制。',
+        items: [
+          '确认本地控制涵盖了你用 Alexa/Google 做的事。',
+          '从厂商应用中移除设备，并停用账户。',
+          '把确定性的安全自动化保留在本地中枢上。',
+        ],
+      },
+      localVoice: {
+        id: 'local-voice',
+        title: '添加本地语音',
+        content:
+          '**用本地助手取代云端语音，从而在没有云端的情况下保留免手控制。** 这是完整迁移的最后一步。',
+        items: [
+          '用 Assist + Whisper + Piper 搭建本地语音助手——参见[本地语音助手指南](/zh/smart-home/local-voice-assistant-smart-home)。',
+          '为自然语言理解添加本地 LLM——参见[用本地LLM运行你的智能家居](/zh/smart-home/local-llm-smart-home-complete-guide)。',
+          '完整的最终形态参见[本地智能家居完整指南](/zh/smart-home/local-smart-home-complete-guide)。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          { q: '我能保留现有设备吗？', a: '很多都能。使用 Zigbee、Z-Wave、Matter 或本地 Wi-Fi API 的设备可以重新配对到像 Home Assistant 这样的本地中枢。只有那些基础控制就要求厂商账户的仅限云端设备，才需要随时间替换。' },
+          { q: '哪些无法本地化？', a: '完全依赖厂商云端的仅限云端设备——常见的有部分摄像头、门铃和专有生态——通常无法本地化，需要替换为支持本地的替代品，例如搭配 Frigate 的 RTSP 摄像头。' },
+          { q: '迁移需要多久？', a: '这取决于你配置的规模，但按房间迁移能分摊工作并避免停摆。许多人在一个周末迁移核心中枢和几个房间，然后在数周内逐步替换仅限云端的设备。' },
+          { q: '迁移时会失去语音控制吗？', a: '不会，只要你在退役云端助手之前先添加本地语音助手。由 Assist、Whisper 和 Piper 组成的本地堆栈（可选搭配本地 LLM）可在无云端的情况下取代 Alexa 或 Google 实现免手控制。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[Home Assistant 入门](/zh/smart-home/home-assistant-getting-started) — 设置目标中枢',
+          '[本地智能家居完整指南](/zh/smart-home/local-smart-home-complete-guide) — 最终形态',
+          '[搭建完全本地的语音助手](/zh/smart-home/local-voice-assistant-smart-home) — 取代 Alexa/Google',
+          '[Matter 与本地控制](/zh/smart-home/matter-local-control-guide) — 在本地为设备配网',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '如何从云端智能家居迁移到本地控制（2026）',
+      description: '从云端智能家居迁移到本地控制：审查依赖、把设备迁移到 Home Assistant、退役 Alexa/Google，并添加本地语音。分步进行。',
+      url: 'https://www.promptquorum.com/zh/smart-home/migrating-from-cloud-to-local-smart-home',
+      inLanguage: 'zh',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '智能家居迁移' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '本地控制' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'zh',
+      mainEntity: [
+        { '@type': 'Question', name: '我能保留现有设备吗？', acceptedAnswer: { '@type': 'Answer', text: '很多都能。使用 Zigbee、Z-Wave、Matter 或本地 Wi-Fi API 的设备可重新配对到本地中枢。只有基础控制就要求厂商账户的仅限云端设备才需要替换。' } },
+        { '@type': 'Question', name: '哪些无法本地化？', acceptedAnswer: { '@type': 'Answer', text: '完全依赖厂商云端的仅限云端设备——常见的有部分摄像头和门铃——通常需替换为支持本地的替代品，例如搭配 Frigate 的 RTSP 摄像头。' } },
+        { '@type': 'Question', name: '迁移需要多久？', acceptedAnswer: { '@type': 'Answer', text: '取决于规模，但按房间迁移能避免停摆。许多人在一个周末迁移核心中枢和几个房间，然后在数周内替换仅限云端的设备。' } },
+        { '@type': 'Question', name: '迁移时会失去语音控制吗？', acceptedAnswer: { '@type': 'Answer', text: '不会，只要在退役云端助手前先添加本地语音助手。由 Assist、Whisper 和 Piper 组成的本地堆栈（可选本地 LLM）可在无云端下取代 Alexa 或 Google。' } },
+      ],
+    },
+  },
 }
