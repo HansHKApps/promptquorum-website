@@ -407,6 +407,12 @@ ollama pull aya-expanse:32b         # traducción`,
       fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      pt: {
+        question: 'Qual modelo de LLM devo rodar no meu Mac?', // VERIFY
+        answer: '16 GB → Phi-4. 36 GB → Llama 3.3 8B ou Qwen3 14B. 64 GB → Qwen3 34B. 128 GB → Llama 3.3 70B. Desempenho: 30-40 tok/s (8B), 15-20 tok/s (34B), 12-18 tok/s (70B) no M5 Pro.', // VERIFY
+        bullets: ['16 GB: Phi-4 3.8B', '36 GB: Llama 3.3 8B Q8 (38 tok/s)', '64 GB: Qwen3 34B Q5 (18 tok/s)', '128 GB: Llama 3.3 70B Q5 (14–16 tok/s)', 'Use quantização: Q4/Q5 são o padrão', 'Todos disponíveis via Ollama'], // VERIFY
+        updatedDate: '2026-05-15',
+      },
     },
     toc: [
       { label: 'Melhor modelo por nível de memória', anchor: '#by-tier' },

@@ -18,6 +18,7 @@ export const HUB_METADATA: HubMetadataConfig = {
     ja: 'ローカル LLM：{{count}} の VRAM・Ollama・GPU の質問と回答',
     zh: '本地 LLM：{{count}} 个 VRAM、Ollama 和 GPU 的问答',
     es: 'Consejos LLM Local: {{count}} Respuestas sobre VRAM, Ollama y GPU',
+    pt: 'Dicas de LLM Local: {{count}} Respostas sobre VRAM, Ollama e GPU', // VERIFY
   },
   descriptions: {
     en: '{{count}} quick answers: VRAM requirements, Ollama vs LM Studio, quantization levels, best GPUs under $600, and local LLM setup tips for developers and hobbyists.',
@@ -26,6 +27,7 @@ export const HUB_METADATA: HubMetadataConfig = {
     ja: '{{count}}の質問への回答：VRAM要件、Ollama vs LM Studio、量化レベル、600ドル以下のGPU、ローカルLLM設定のコツと実用的なアドバイス。',
     zh: '{{count}}个问题的答案：VRAM要求、Ollama vs LM Studio、量化级别、600美元以下的最佳GPU、本地LLM配置技巧和实用建议。',
     es: '{{count}} respuestas sobre LLM local: VRAM, Ollama vs LM Studio, métodos de cuantización, mejores GPU bajo $600, y consejos prácticos de configuración.',
+    pt: '{{count}} respostas sobre LLM local: VRAM, Ollama vs LM Studio, métodos de quantização, melhores GPUs abaixo de $600, e dicas práticas de configuração.', // VERIFY
   },
 }
 

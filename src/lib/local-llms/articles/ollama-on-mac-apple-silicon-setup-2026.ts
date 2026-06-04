@@ -1042,6 +1042,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      pt: {
+        question: 'Como instalo o Ollama no Mac?', // VERIFY
+        answer: '`brew install ollama`. GPU Metal automática. `ollama pull model_name` para baixar. `ollama run model_name` para conversar. API REST: `localhost:11434`.', // VERIFY
+        bullets: ['`brew install ollama` (2 min)', 'GPU Metal automática', '`ollama pull llama2` (download)', '`ollama run llama2` (conversar)', 'API REST na :11434', 'Múltiplos modelos: use `OLLAMA_MAX_LOADED_MODELS`'], // VERIFY
+        updatedDate: '2026-05-15', // VERIFY
+      },
     },
     toc: [
       { label: 'Configuração rápida', anchor: '#quick-setup' },

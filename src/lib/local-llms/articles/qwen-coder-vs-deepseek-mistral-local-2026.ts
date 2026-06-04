@@ -806,6 +806,20 @@ DEEPSEEK_MODEL=deepseek-chat
     audience: 'Desenvolvedores de software que escolhem um LLM local de código para seus fluxos de trabalho diários',
     primaryTerm: 'benchmark LLM local de código 2026',
     leadAnswerBlock: '**O Qwen 3.6 27B lidera os benchmarks de código local em maio de 2026: 92,1% HumanEval, 77,2% SWE-bench, 84,3% MBPP. O DeepSeek Coder fica 0,5 pp atrás no HumanEval, mas é 21× mais barato como API em nuvem. O Mistral Devstral se destaca em tarefas agênticas de várias etapas. Para conformidade com o GDPR na UE, apenas o Qwen local mantém o código fora de servidores em nuvem. Para código em escala otimizado em custo, despache tarefas privadas para o Qwen local e tarefas não sensíveis para o DeepSeek Coder.**',
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual é o melhor LLM local de código em 2026 — Qwen 3.6, DeepSeek Coder ou Mistral Devstral?', // VERIFY
+        answer: 'Maio de 2026: o Qwen 3.6 27B alcança 77,2% no SWE-bench localmente em 16 GB de VRAM. O DeepSeek Coder alcança 91,6% no HumanEval como API em nuvem a US$ 0,14/1M tokens. O Mistral Devstral Small 24B alcança 90,1% no HumanEval e lidera em tarefas agênticas de vários arquivos. Para desenvolvimento na UE em conformidade com o GDPR, o Qwen 3.6 27B local é o vencedor claro.', // VERIFY
+        bullets: [
+          'Qwen 3.6 27B — 92,1% HumanEval, 77,2% SWE-bench, 84,3% MBPP, 16 GB de VRAM local', // VERIFY
+          'DeepSeek Coder — 91,6% HumanEval, ~75% SWE-bench, US$ 0,14/1M tokens API em nuvem', // VERIFY
+          'Mistral Devstral Small 24B — 90,1% HumanEval, melhor para tarefas agênticas, 14 GB de VRAM', // VERIFY
+          'GDPR: apenas o Qwen 3.6 local mantém o código em hardware da UE por design', // VERIFY
+          'Estratégia de despacho: Qwen local para tarefas privadas/GDPR, DeepSeek para código público em volume', // VERIFY
+        ],
+        updatedDate: '2026-05-16',
+      },
+    },
     toc: [
       { label: 'Pontos principais', anchor: '#key-takeaways' },
       { label: 'Por que os modelos locais alcançaram os da nuvem', anchor: '#local-caught-up' },

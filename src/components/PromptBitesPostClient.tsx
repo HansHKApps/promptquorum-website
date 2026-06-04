@@ -38,6 +38,7 @@ const BACK_LABEL: Partial<Record<Language, string>> = {
   ja: '← Prompt Bites に戻る',
   zh: '← 返回 Prompt Bites',
   es: '← Volver a Prompt Bites',
+  pt: '← Voltar para Prompt Bites', // VERIFY
 }
 
 const QUICK_ANSWER_LABEL: Partial<Record<Language, string>> = {
@@ -47,6 +48,7 @@ const QUICK_ANSWER_LABEL: Partial<Record<Language, string>> = {
   ja: 'クイック回答',
   zh: '快速回答',
   es: 'Respuesta rápida',
+  pt: 'Resposta rápida', // VERIFY
 }
 
 const UPDATED_LABEL: Partial<Record<Language, string>> = {
@@ -56,6 +58,7 @@ const UPDATED_LABEL: Partial<Record<Language, string>> = {
   ja: '更新:',
   zh: '更新于:',
   es: 'Actualizado:',
+  pt: 'Atualizado:', // VERIFY
 }
 
 const KEY_TAKEAWAYS_LABEL: Partial<Record<Language, string>> = {
@@ -65,6 +68,7 @@ const KEY_TAKEAWAYS_LABEL: Partial<Record<Language, string>> = {
   ja: '重要なポイント',
   zh: '关键要点',
   es: 'Puntos clave',
+  pt: 'Pontos principais', // VERIFY
 }
 
 const GO_DEEPER_HEADING: Partial<Record<Language, string>> = {
@@ -74,6 +78,7 @@ const GO_DEEPER_HEADING: Partial<Record<Language, string>> = {
   ja: '詳しく読みたいですか？',
   zh: '想了解完整详情？',
   es: '¿Quieres el desglose completo?',
+  pt: 'Quer a análise completa?', // VERIFY
 }
 
 const READ_FULL_GUIDE: Partial<Record<Language, string>> = {
@@ -83,6 +88,7 @@ const READ_FULL_GUIDE: Partial<Record<Language, string>> = {
   ja: 'コンプリートガイドを読む →',
   zh: '阅读完整指南 →',
   es: 'Leer la guía completa →',
+  pt: 'Ler o guia completo →', // VERIFY
 }
 
 const RELATED_BITES_LABEL: Partial<Record<Language, string>> = {
@@ -92,12 +98,13 @@ const RELATED_BITES_LABEL: Partial<Record<Language, string>> = {
   ja: '関連する Prompt Bites',
   zh: '相关 Prompt Bites',
   es: 'Prompt Bites relacionados',
+  pt: 'Prompt Bites relacionados', // VERIFY
 }
 
 const EDUCATIONAL_LEVEL: Record<string, Partial<Record<Language, string>>> = {
-  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级', es: 'Principiante' },
-  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio' },
-  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级', es: 'Avanzado' },
+  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante' }, // VERIFY
+  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio', pt: 'Intermediário' }, // VERIFY
+  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级', es: 'Avanzado', pt: 'Avançado' }, // VERIFY
 }
 
 function GoDeeper({ parentArticle, siblingBites, lang }: {

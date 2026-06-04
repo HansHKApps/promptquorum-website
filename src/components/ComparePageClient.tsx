@@ -967,6 +967,149 @@ const content: Partial<Record<Lang, CompareText>> = {
     ctaSubtext: 'Beta lanzando en julio de 2026. Los usuarios de acceso anticipado obtienen incorporación prioritaria, acceso directo al desarrollador y ¡una herramienta de poder gratuita!',
     ctaButton: 'Únete a la lista de espera →',
   },
+  pt: {
+    breadcrumbHome: 'Início', // VERIFY
+    breadcrumbCompare: 'Comparar', // VERIFY
+    updatedDate: 'Atualizado em março de 2026', // VERIFY
+    h1: 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo —', // VERIFY
+    h1Highlight: 'Ferramentas multi-LLM comparadas', // VERIFY
+    introPara: 'A ferramenta multi-LLM adequada depende de você precisar de envio simultâneo para todos os modelos, pontuação de consenso automatizada, privacidade por meio de LLM local com Ollama ou LM Studio, ou simplesmente uma visão comparativa lado a lado. Esta página compara as cinco principais opções em 2026 — PromptQuorum, Poe, LM Arena, OpenMark e AiZolo — com uma tabela de recursos, análise por ferramenta e um guia de decisão.', // VERIFY
+    disclaimerLabel: 'Nota de precisão:', // VERIFY
+    disclaimer: ' As informações de recursos e preços foram verificadas em março de 2026 e são fornecidas de boa-fé com base na documentação pública de cada produto. Os produtos mudam com frequência — verifique os recursos atuais diretamente com cada fornecedor. Se você acha que alguma informação desta página está incorreta ou desatualizada, ', // VERIFY
+    disclaimerContact: 'entre em contato', // VERIFY
+    disclaimerContactSuffix: ' e corrigiremos imediatamente. Esta comparação é produzida pela PromptQuorum e reflete nossa perspectiva como participante neste mercado.', // VERIFY
+
+    atAGlanceH2: 'Em resumo', // VERIFY
+    atAGlanceItems: [
+      'PromptQuorum: Ideal para pontuação de consenso + privacidade local com Ollama/LM Studio', // VERIFY
+      'Poe: Ideal para simplicidade + amplitude (GPT-4o, Claude, Gemini, milhares de bots)', // VERIFY
+      'LM Arena: Ideal para benchmarking acadêmico + rankings de modelos impulsionados pela comunidade', // VERIFY
+      'OpenMark: Ideal para análise de custo/qualidade de API em mais de 100 modelos', // VERIFY
+      'AiZolo: Ideal para fluxos de trabalho de conteúdo multi-modelo a baixo custo ($9,90/mês)' // VERIFY
+    ],
+    seeAlsoH2: 'Veja também', // VERIFY
+    seeAlsoLinks: [
+      { label: 'Como funciona o PromptQuorum', url: '/how-it-works' }, // VERIFY
+      { label: 'Melhores práticas de Prompt Engineering', url: '/prompt-engineering' }, // VERIFY
+      { label: 'LLMs locais vs APIs na nuvem', url: '/local-llms/local-llms-vs-cloud-apis' }, // VERIFY
+      { label: 'Recursos e capacidades', url: '/features' } // VERIFY
+    ],
+    sourcesH2: 'Fontes', // VERIFY
+    sourcesList: [
+      'PromptQuorum: promptquorum.com', // VERIFY
+      'Poe: poe.com', // VERIFY
+      'LM Arena: lmarena.ai', // VERIFY
+      'OpenMark: openmark.ai', // VERIFY
+      'AiZolo: aizolo.com' // VERIFY
+    ],
+
+    jumpLinks: [
+      ['#comparison-table', 'Tabela comparativa'], // VERIFY
+      ['#promptquorum', 'PromptQuorum'], // VERIFY
+      ['#poe', 'Poe'], // VERIFY
+      ['#lmarena', 'LM Arena'], // VERIFY
+      ['#openmark', 'OpenMark'], // VERIFY
+      ['#aizolo', 'AiZolo'], // VERIFY
+      ['#faq', 'FAQ'], // VERIFY
+    ],
+
+    introH2: 'O que é uma ferramenta de comparação multi-LLM?', // VERIFY
+    introDefinition: 'Uma ferramenta de comparação multi-LLM envia o mesmo prompt para vários modelos de linguagem grandes de forma simultânea e exibe as respostas lado a lado, permitindo que os usuários avaliem as diferenças em raciocínio, precisão e estilo entre sistemas de IA — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large e outros — sem trocar de aba nem repetir a entrada.', // VERIFY
+    introPara1: 'Nenhum modelo de IA individual é autoritativo para todas as tarefas em 2026. GPT-4o, Claude 4.6 Sonnet e Gemini 2.5 Pro têm dados de treinamento, vieses arquiteturais e pontos fortes de raciocínio diferentes. Uma resposta que parece correta de um modelo pode ser contradita, nuançada ou significativamente ampliada por outro.', // VERIFY
+    introPara2: 'As cinco ferramentas comparadas aqui representam as principais abordagens disponíveis atualmente: plataformas de consumo (Poe by Quora), benchmarks comunitários (LM Arena), suítes de avaliação para desenvolvedores (OpenMark), espaços de trabalho multi-modelo unificados (AiZolo) e plataformas de pontuação de consenso (PromptQuorum). Cada uma serve a um fluxo de trabalho diferente.', // VERIFY
+
+    tableH2: 'Quais são as diferenças principais entre 5 ferramentas multi-LLM?', // VERIFY
+    tablePara: 'A tabela a seguir compara as cinco ferramentas nos recursos mais importantes para fluxos de trabalho multi-LLM profissionais — envio simultâneo, pontuação de consenso, suporte a LLM local, controle de chave de API e preços.', // VERIFY
+    tableToolCol: 'Ferramenta', // VERIFY
+    tableDispatchCol: 'Envio simultâneo', // VERIFY
+    tableConsensusCol: 'Pontuação de consenso', // VERIFY
+    tableLocalCol: 'LLM local', // VERIFY
+    tableApiCol: 'Controle de chave API', // VERIFY
+    tablePriceCol: 'Preço', // VERIFY
+    tableFootnote: '✓ Sim · ~ Parcial · ✗ Não · Baseado em documentação pública, março de 2026. Os preços e recursos mudam — verifique com cada fornecedor. Esta comparação é produzida pela PromptQuorum.', // VERIFY
+
+    pqH2: 'O que torna o PromptQuorum diferente de seus concorrentes?', // VERIFY
+    pqBestFor: 'Ideal para: desenvolvedores e usuários avançados', // VERIFY
+    pqTags: ['Beta · Julho de 2026', 'promptquorum.com', 'Chaves API necessárias', 'Ollama + LM Studio'], // VERIFY
+    pqPara1: '**O PromptQuorum é a única ferramenta entre as analisadas que combina o envio simultâneo de prompts com a pontuação de consenso automatizada.** Você escreve um prompt, seleciona seus modelos — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large e modelos que rodam localmente — e o PromptQuorum os envia a todos em paralelo. O Quorum Verdict então analisa onde os modelos concordam, onde divergem e o que esses padrões significam para a confiabilidade da resposta.', // VERIFY
+    pqPara2: 'O recurso definidor é o suporte a LLM local. Por meio da integração com Ollama e LM Studio, o PromptQuorum inclui modelos que rodam localmente — o LLaMA 3.1 7B requer 8 GB de RAM; o 13B requer 16 GB — no envio, de modo que prompts sensíveis nunca saem da sua máquina. Para profissionais do direito, profissionais de saúde, analistas financeiros e desenvolvedores que trabalham com código proprietário, isso não é opcional.', // VERIFY
+    pqPara3: 'O PromptQuorum exige que os usuários tragam suas próprias chaves de API da OpenAI, Anthropic, Google e Mistral. Isso mantém os dados sob seu controle, os custos transparentes e o uso vinculado aos seus próprios termos comerciais com cada fornecedor.', // VERIFY
+    pqH3: 'Quem deveria usar o PromptQuorum?', // VERIFY
+    pqH3Para: 'O PromptQuorum foi projetado para desenvolvedores que avaliam qual modelo integrar a um pipeline de produção, pesquisadores que precisam de validação cruzada de descobertas entre modelos e profissionais cujo trabalho envolve informações confidenciais que não podem ser enviadas a servidores na nuvem de terceiros.', // VERIFY
+
+    poeH2: 'Poe — acesso casual a vários modelos e exploração de bots', // VERIFY
+    poeBestFor: 'Ideal para: uso casual / consumidor', // VERIFY
+    poeTags: ['poe.com', 'Grátis / $19,99/mês', 'iOS, Android, Web', 'Milhões de usuários'], // VERIFY
+    poePara1: '**O Poe, criado pela Quora, é a maior plataforma multi-modelo de IA com acesso a GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Llama, Grok e milhares de bots criados por usuários a partir de uma única interface.** É a melhor opção para usuários que querem acesso amplo a modelos de IA sem gerenciar chaves de API.', // VERIFY
+    poePara2: 'O Poe não oferece envio simultâneo — os usuários alternam entre modelos ou comparam dois de cada vez, em vez de enviar um prompt para todos os modelos em paralelo. Não há pontuação de consenso nem análise automatizada de concordância de respostas. Todo o processamento é na nuvem, o que o torna inadequado para trabalho com informações sensíveis.', // VERIFY
+    poeH3: 'Poe vs PromptQuorum: diferenças principais', // VERIFY
+    poeH3Para: 'O Poe é melhor para a exploração casual, a descoberta de bots e a conversa sem gerenciamento de chaves de API. O PromptQuorum é melhor para a avaliação controlada de prompts, a análise de consenso e os fluxos de trabalho com LLM local. Eles atendem a casos de uso fundamentalmente diferentes: o Poe é uma plataforma de consumo; o PromptQuorum é uma ferramenta de avaliação profissional.', // VERIFY
+
+    lmH2: 'LM Arena — benchmarking de modelos impulsionado pela comunidade', // VERIFY
+    lmBestFor: 'Ideal para: benchmarking comunitário', // VERIFY
+    lmTags: ['lmarena.ai', 'Grátis', 'Somente web', 'Sistema de votação humana'], // VERIFY
+    lmPara1: '**A LM Arena (antiga Chatbot Arena) é o leaderboard de modelos de IA mais citado, utilizando ratings Elo derivados de milhões de votos de preferência humana.** Os usuários enviam prompts e votam em qual de dois modelos anônimos produziu a melhor resposta.', // VERIFY
+    lmPara2: 'A LM Arena exibe dois modelos lado a lado e coleta um voto de preferência humana — não fornece análise de consenso automatizada, não suporta LLMs locais e não permite selecionar modelos específicos no modo de comparação principal. É uma plataforma de benchmarking, não uma ferramenta de fluxo de trabalho.', // VERIFY
+    lmH3: 'LM Arena vs PromptQuorum: diferenças principais', // VERIFY
+    lmH3Para: 'A LM Arena é melhor para entender as tendências agregadas de preferência humana no setor. O PromptQuorum é melhor para avaliar seus prompts específicos em seus modelos escolhidos com uma análise consistente e automatizada. A LM Arena diz a você o que a multidão prefere; o PromptQuorum diz a você o que seu prompt produz em cada modelo que importa para você.', // VERIFY
+
+    omH2: 'OpenMark — benchmarking determinístico de custo e qualidade', // VERIFY
+    omBestFor: 'Ideal para: análise de custo/qualidade', // VERIFY
+    omTags: ['openmark.ai', 'Nível gratuito / créditos', 'Mais de 100 modelos', 'Pontuação determinística'], // VERIFY
+    omPara1: '**O OpenMark é uma ferramenta de benchmarking voltada para desenvolvedores que executa prompts contra mais de 100 modelos de IA simultaneamente e pontua os resultados de maneira determinística — o mesmo prompt sempre produz o mesmo resultado classificado.** Mostra exatamente quanto cada modelo custa por prompt junto com as pontuações de qualidade.', // VERIFY
+    omPara2: 'O OpenMark é sólido em amplitude (mais de 100 modelos) e transparência de custos, mas não produz um veredito de consenso — pontua cada modelo individualmente em vez de analisar padrões de concordância. Não suporta LLMs locais por meio de Ollama ou LM Studio.', // VERIFY
+    omH3: 'OpenMark vs PromptQuorum: diferenças principais', // VERIFY
+    omH3Para: 'O OpenMark responde "qual modelo individual funciona melhor para esta tarefa e a que custo". O PromptQuorum responde "quanto os modelos concordam neste prompt e o que significa sua discordância?". Ambos exigem chaves de API; o OpenMark suporta mais de 100 modelos; o PromptQuorum adiciona de forma única a inferência de LLM local e a pontuação de consenso.', // VERIFY
+
+    azH2: 'AiZolo — espaço de trabalho multi-modelo para equipes de conteúdo', // VERIFY
+    azBestFor: 'Ideal para: equipes de conteúdo', // VERIFY
+    azTags: ['aizolo.com', 'A partir de $9,90/mês', 'GPT-4o, Claude, Gemini, Grok', 'Biblioteca de prompts'], // VERIFY
+    azPara1: '**O AiZolo é um espaço de trabalho multi-modelo unificado projetado para criadores de conteúdo e equipes de marketing, com envio simultâneo para GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro e Grok em paralelo.** A partir de março de 2026, os planos começavam a partir de $9,90/mês — verifique o preço atual em aizolo.com.', // VERIFY
+    azPara2: 'O AiZolo não oferece pontuação de consenso — exibe as respostas lado a lado, mas deixa a análise para o usuário. Suporta apenas quatro modelos na nuvem, sem opção de LLM local. É uma ferramenta de fluxo de trabalho de produção de conteúdo, não uma plataforma de avaliação técnica.', // VERIFY
+    azH3: 'AiZolo vs PromptQuorum: diferenças principais', // VERIFY
+    azH3Para: 'O AiZolo é melhor para equipes de conteúdo que precisam de um espaço de trabalho de escrita multi-modelo acessível para uso diário. O PromptQuorum é melhor para usuários avançados que precisam de análise de consenso automatizada, privacidade com LLM local e acesso controlado por chave de API a um conjunto mais amplo de modelos, incluindo sistemas de código aberto.', // VERIFY
+
+    chooseH2: 'Qual ferramenta multi-LLM você deveria usar?', // VERIFY
+    chooseItems: [
+      { label: 'Escolha o PromptQuorum', desc: 'se você precisa de pontuação de consenso entre modelos, suporte a LLM local para trabalho com informações sensíveis ou um fluxo de avaliação controlado com suas próprias chaves de API.', highlight: true }, // VERIFY
+      { label: 'Escolha o Poe', desc: 'se você quer acesso fácil a GPT-4o, Claude 4.6 Sonnet, Gemini e milhares de bots para conversa casual e exploração sem gerenciar chaves de API.' }, // VERIFY
+      { label: 'Escolha a LM Arena', desc: 'se você quer contribuir ou estudar os dados de preferência de modelos impulsionados pela comunidade e os rankings Elo do setor.' }, // VERIFY
+      { label: 'Escolha o OpenMark', desc: 'se você é um desenvolvedor que seleciona um modelo para uma aplicação de produção e precisa de pontuação de qualidade determinística com dados de custo transparentes em mais de 100 modelos.' }, // VERIFY
+      { label: 'Escolha o AiZolo', desc: 'se você é um criador de conteúdo ou profissional de marketing que precisa de um espaço de trabalho multi-modelo acessível e bem projetado para fluxos de trabalho de escrita diários.' }, // VERIFY
+    ],
+
+    faqH2: 'Perguntas frequentes', // VERIFY
+    faqs: [
+      {
+        q: 'Qual é a melhor ferramenta para comparar o mesmo prompt em vários LLMs simultaneamente?', // VERIFY
+        a: 'O PromptQuorum é a única ferramenta analisada aqui que combina o envio simultâneo com a pontuação de consenso automatizada. Poe, AiZolo e OpenMark oferecem respostas lado a lado, mas nenhum produz um Quorum Verdict — uma análise automatizada de onde GPT-4o, Claude 4.6 Sonnet e outros modelos concordam ou divergem. Para usuários que precisam de mais do que uma comparação visual lado a lado, o PromptQuorum é a opção projetada especificamente para isso. Informações de recursos verificadas em março de 2026.', // VERIFY
+      },
+      {
+        q: 'Qual ferramenta multi-LLM suporta LLMs locais como Ollama e LM Studio?', // VERIFY
+        a: 'O PromptQuorum é a única ferramenta analisada que suporta inferência de LLM local por meio de Ollama e LM Studio. Rodar modelos localmente — o LLaMA 3.1 7B precisa de 8 GB de RAM, o 13B precisa de 16 GB — significa que prompts sensíveis nunca saem da sua máquina. Poe, LM Arena, OpenMark e AiZolo operam como serviços exclusivamente na nuvem segundo sua documentação pública a partir de março de 2026.', // VERIFY
+      },
+      {
+        q: 'O que é a pontuação de consenso no contexto das ferramentas multi-LLM?', // VERIFY
+        a: 'A pontuação de consenso é uma análise automatizada de quanto os modelos de IA independentes concordam em um prompt dado. O Quorum Verdict do PromptQuorum pontua a concordância entre todos os modelos enviados — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro e outros — identifica pontos específicos de divergência e interpreta o que essas divergências indicam sobre a confiabilidade da resposta. Um alto consenso entre modelos independentes é um sinal sólido de que uma resposta é provavelmente correta.', // VERIFY
+      },
+      {
+        q: 'Qual é a diferença entre o PromptQuorum e o Poe ou a LM Arena?', // VERIFY
+        a: 'O Poe (da Quora) é uma plataforma de chat de consumo para alternar entre modelos um de cada vez. A LM Arena utiliza votação coletiva para classificar o desempenho individual dos modelos. O PromptQuorum é único: envia para todos os modelos selecionados simultaneamente e analisa automaticamente onde concordam ou divergem por meio da pontuação de consenso. O Poe foi criado para a conversa; a LM Arena para o benchmarking; o PromptQuorum para a avaliação controlada e a detecção de alucinações.', // VERIFY
+      },
+      {
+        q: 'Preciso das minhas próprias chaves de API para usar o PromptQuorum?', // VERIFY
+        a: 'Sim. O PromptQuorum exige que os usuários tragam suas próprias chaves de API da OpenAI (GPT-4o), Anthropic (Claude 4.6 Sonnet), Google (Gemini 2.5 Pro), Mistral e outros fornecedores. Esse design mantém seus dados sob seu controle, os custos transparentes e o uso vinculado aos seus próprios acordos comerciais com cada fornecedor. Também permite o suporte a LLM local por meio de Ollama e LM Studio para inferência totalmente privada.', // VERIFY
+      },
+      {
+        q: 'O PromptQuorum é gratuito?', // VERIFY
+        a: 'Sim. O PromptQuorum está em beta gratuito a partir de julho de 2026. Todas as funções — envio simultâneo, pontuação de consenso, detecção de alucinações e exportação em vários formatos — são gratuitas. Após a beta, o preço escalará conforme o uso da API com um modelo de pagamento por uso. Você traz suas próprias chaves de API, então controla os custos diretamente com cada fornecedor.', // VERIFY
+      },
+    ],
+
+    ctaH2: 'Entre na lista de espera do PromptQuorum', // VERIFY
+    ctaSubtext: 'Beta lançando em julho de 2026. Os usuários de acesso antecipado obtêm integração prioritária, acesso direto ao desenvolvedor e uma ferramenta de poder gratuita!', // VERIFY
+    ctaButton: 'Entre na lista de espera →', // VERIFY
+  },
 }
 
 // ---------------------------------------------------------------------------
@@ -980,6 +1123,13 @@ const TABLE_ROWS: Partial<Record<Lang, { pq: string[], poe: string[], lm: string
     lm:  ['~ Solo 2 modelos', '~ Solo votación humana', '✗ Solo nube', '✗ No', 'Gratis'],
     om:  ['✓ Paralelo', '~ Puntuación determinista', '✗ Solo nube', '✓ Sí', 'Nivel gratuito / créditos'],
     az:  ['✓ Sí', '✗ No', '✗ Solo nube', '✓ Sí', 'Desde $9,90/mes'],
+  },
+  pt: {
+    pq:  ['✓ Sim', '✓ Quorum Verdict', '✓ Ollama + LM Studio', '✓ Suas chaves', 'Beta gratuito'], // VERIFY
+    poe: ['~ Sequencial / limitado', '✗ Não', '✗ Somente nuvem', '~ Limitado', 'Grátis / $19,99/mês'], // VERIFY
+    lm:  ['~ Apenas 2 modelos', '~ Apenas votação humana', '✗ Somente nuvem', '✗ Não', 'Grátis'], // VERIFY
+    om:  ['✓ Paralelo', '~ Pontuação determinística', '✗ Somente nuvem', '✓ Sim', 'Nível gratuito / créditos'], // VERIFY
+    az:  ['✓ Sim', '✗ Não', '✗ Somente nuvem', '✓ Sim', 'A partir de $9,90/mês'], // VERIFY
   },
 }
 const DEFAULT_ROWS = {

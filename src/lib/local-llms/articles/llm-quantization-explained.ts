@@ -1074,6 +1074,20 @@ schema: {
       readTime: '14 min de leitura',
       educationalLevel: 'Advanced',
       primaryTerm: 'quantização de LLM e otimização de VRAM',
+      quickAnswerTop: {
+        pt: {
+          question: 'O que é a quantização Q4_K_M e qual formato devo usar?', // VERIFY
+          answer: 'Q4_K_M é uma quantização de 4 bits que reduz a VRAM em ~70% com apenas 1–3% de perda de qualidade. Escolha com base na sua VRAM: 6–8 GB → Q4_K_M (~4,5 GB para modelos 7B), 16 GB → Q5_K_M, 24+ GB → Q8_0.', // VERIFY
+          bullets: [
+            'Q4_K_M (4 bits) — melhor padrão, ~4,5 GB para modelos 7B, 1–3% de perda de qualidade', // VERIFY
+            'Q5_K_M (5 bits) — perda mínima, ~5,7 GB para 7B, recomendado para 16+ GB de VRAM', // VERIFY
+            'Q8_0 (8 bits) — perda insignificante, ~7,7 GB para 7B, para qualidade máxima em GPUs de ponta', // VERIFY
+            'Q3_K_S (3 bits) — compressão extrema, ~3,3 GB para 7B, aceitável para 4–5 GB de VRAM', // VERIFY
+            'O formato GGUF armazena os pesos quantizados para Ollama, LM Studio e llama.cpp', // VERIFY
+          ],
+          updatedDate: '2026-05-06',
+        },
+      },
       toc: [
         { label: 'Pontos principais', anchor: '#key-takeaways' },
         { label: 'O que é quantização de LLM?', anchor: '#what-is-llm-quantization' },

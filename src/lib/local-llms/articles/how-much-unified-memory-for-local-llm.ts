@@ -448,6 +448,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '10 min de leitura',
     educationalLevel: 'Beginner',
     primaryTerm: 'unified memory sizing local LLMs',
+    quickAnswerTop: {
+      pt: {
+        question: 'De quanta memória de Mac eu preciso para LLMs locais?', // VERIFY
+        answer: '16GB: apenas modelos 7B (justo). 36GB: 13B com conforto. 64GB: 34B com conforto. 128GB: 70B com conforto. A memória não é atualizável após a compra. 36GB é o mínimo recomendado; não compre menos que 32GB.', // VERIFY
+        bullets: [
+          '16GB → modelos 7B (justo)', // VERIFY
+          '36GB → modelos 13B (confortável), 34B Q4 (justo)', // VERIFY
+          '64GB → 34B Q5 (confortável), 70B Q3 (no limite)', // VERIFY
+          '128GB → 70B Q5 (confortável)', // VERIFY
+          'Acrescente 4-8GB para o overhead do macOS', // VERIFY
+          'Não é possível atualizar após a compra — compre o máximo que puder pagar', // VERIFY
+        ],
+        updatedDate: '2026-05-15',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',

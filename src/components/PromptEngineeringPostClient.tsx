@@ -87,6 +87,17 @@ const JUMP_SECTION_LABELS: Partial<Record<Language, Record<string, string>>> = {
     advancedTechniques: 'Técnicas de razonamiento',
     metricsProduction: 'Métricas & Producción',
   },
+  pt: {
+    jumpToSection: 'Ir para a seção', // VERIFY
+    learningPaths: 'Trilhas de aprendizado', // VERIFY
+    trending2026: 'Tendências em 2026', // VERIFY
+    corePrompting: 'Prompting básico', // VERIFY
+    agentsOrchestration: 'Agentes & Orquestração', // VERIFY
+    safetyAlignment: 'Segurança & Alinhamento', // VERIFY
+    evalsTesting: 'Avaliação & Testes', // VERIFY
+    advancedTechniques: 'Técnicas de raciocínio', // VERIFY
+    metricsProduction: 'Métricas & Produção', // VERIFY
+  },
 }
 
 // Presentation UI translations
@@ -127,6 +138,12 @@ const PRESENTATION_UI: Partial<Record<Language, { heading: string; description: 
     savePdf: '↓ Guardar como PDF',
     fallbackDescription: 'La presentación cubre los conceptos clave, los ajustes de parámetros y los casos de uso de este artículo. Descarga el PDF como tarjeta de referencia.',
   },
+  pt: {
+    heading: 'Resumo visual', // VERIFY
+    description: 'Prefere slides a ler? Navegue por esta apresentação interativa com todos os conceitos-chave, ajustes e casos de uso — e salve como PDF de referência.', // VERIFY
+    savePdf: '↓ Salvar como PDF', // VERIFY
+    fallbackDescription: 'A apresentação cobre os conceitos-chave, os ajustes de parâmetros e os casos de uso deste artigo. Baixe o PDF como cartão de referência.', // VERIFY
+  },
 }
 
 // Widget UI translations
@@ -155,6 +172,10 @@ const WIDGET_UI: Partial<Record<Language, { heading: string; description: string
     heading: 'Guía de auditoría interactiva',
     description: 'Evalúa tu nivel de preparación actual con nuestra guía interactiva. Responde unas preguntas rápidas para obtener una puntuación, recomendaciones priorizadas y un plan de acción descargable.',
   },
+  pt: {
+    heading: 'Guia de auditoria interativo', // VERIFY
+    description: 'Avalie seu nível de preparação atual com nosso guia interativo. Responda algumas perguntas rápidas para obter uma pontuação, recomendações priorizadas e um plano de ação para baixar.', // VERIFY
+  },
 }
 
 // Section header translations
@@ -165,6 +186,7 @@ const SECTION_HEADER_LABELS: Partial<Record<Language, Record<string, string>>> =
   ja: { keyTakeaways: '重要なポイント', tableOfContents: '目次' },
   zh: { keyTakeaways: '关键要点', tableOfContents: '目录' },
   es: { keyTakeaways: 'Puntos clave', tableOfContents: 'Contenido' },
+  pt: { keyTakeaways: 'Pontos principais', tableOfContents: 'Conteúdo' }, // VERIFY
 }
 
 // Maps article display titles to their URL slugs
@@ -355,6 +377,28 @@ const TOP_20_TERMS: Partial<Record<Language, Array<{ term: string; anchor: strin
     { term: 'Context Engineering', anchor: 'term-context-engineering', description: 'Estructurar estratégicamente la ventana de contexto para priorizar información importante.' },
     { term: 'Latency', anchor: 'term-latency', description: 'El tiempo de espera entre enviar un prompt y recibir la respuesta completa.' },
     { term: 'Cost Optimization', anchor: 'term-cost-optimization', description: 'Técnicas como selección de modelo, caché de prompts y procesamiento por lotes para reducir el gasto.' },
+  ],
+  pt: [
+    { term: 'RAG (Retrieval-Augmented Generation)', anchor: 'term-rag-retrieval-augmented-generation', description: 'Conectar LLMs a bases de conhecimento externas para que respondam com base em dados reais.' }, // VERIFY
+    { term: 'Chain-of-Thought (CoT)', anchor: 'term-chain-of-thought-prompting', description: 'Pedir ao modelo que mostre seu raciocínio passo a passo antes de dar a resposta final.' }, // VERIFY
+    { term: 'AI Agent', anchor: 'term-ai-agent', description: 'Sistema de IA autônomo que planeja tarefas, chama ferramentas e itera até alcançar um objetivo.' }, // VERIFY
+    { term: 'Prompt Injection', anchor: 'term-prompt-injection', description: 'Ataque em que uma entrada não confiável engana um LLM para que ignore suas instruções originais.' }, // VERIFY
+    { term: 'Few-Shot Prompting', anchor: 'term-few-shot-prompting', description: 'Incluir 2–5 exemplos do comportamento desejado no prompt para que o modelo aprenda o padrão.' }, // VERIFY
+    { term: 'Fine-Tuning', anchor: 'term-fine-tuning', description: 'Retreinar um modelo com dados específicos da tarefa para melhorar seu desempenho.' }, // VERIFY
+    { term: 'Embeddings', anchor: 'term-embeddings', description: 'Converter texto ou imagens em vetores numéricos que capturam o significado semântico.' }, // VERIFY
+    { term: 'Vector Database', anchor: 'term-vector-database', description: 'Banco de dados especializado que armazena e recupera embeddings por similaridade.' }, // VERIFY
+    { term: 'Hallucination', anchor: 'term-hallucination', description: 'Quando um LLM gera informações falsas com aparente confiança, inventando fatos ou citações.' }, // VERIFY
+    { term: 'Context Window', anchor: 'term-context-window', description: 'O número máximo de tokens que um LLM pode processar em uma única solicitação (ex.: GPT-4o: 128k).' }, // VERIFY
+    { term: 'Temperature', anchor: 'term-temperature-and-top-p', description: 'Ajuste que controla a aleatoriedade: baixo (0.0) = previsível, alto (1.0) = criativo.' }, // VERIFY
+    { term: 'Zero-Shot Prompting', anchor: 'term-zero-shot-prompting', description: 'Pedir ao modelo que realize uma tarefa sem nenhum exemplo — a abordagem base.' }, // VERIFY
+    { term: 'Tool Calling', anchor: 'term-tool-calling', description: 'Permitir que um LLM chame APIs externas, execute código ou acione ações.' }, // VERIFY
+    { term: 'Guardrails', anchor: 'term-guardrails', description: 'Sistemas de segurança que filtram entradas e saídas nocivas para prevenir uso indevido.' }, // VERIFY
+    { term: 'LLM Evaluation', anchor: 'term-llm-evaluation', description: 'Medir a qualidade do modelo usando benchmarks, avaliações humanas ou métricas automáticas.' }, // VERIFY
+    { term: 'Prompt Engineering', anchor: 'term-prompt-engineering', description: 'A arte de escrever instruções precisas para obter respostas exatas e úteis de modelos de IA.' }, // VERIFY
+    { term: 'Multi-Agent Systems', anchor: 'term-multi-agent-systems', description: 'Múltiplos agentes de IA independentes trabalhando em paralelo ou em sequência para resolver problemas complexos.' }, // VERIFY
+    { term: 'Context Engineering', anchor: 'term-context-engineering', description: 'Estruturar estrategicamente a janela de contexto para priorizar informações importantes.' }, // VERIFY
+    { term: 'Latency', anchor: 'term-latency', description: 'O tempo de espera entre enviar um prompt e receber a resposta completa.' }, // VERIFY
+    { term: 'Cost Optimization', anchor: 'term-cost-optimization', description: 'Técnicas como seleção de modelo, cache de prompts e processamento em lote para reduzir o gasto.' }, // VERIFY
   ],
 }
 

@@ -2759,6 +2759,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         updatedDate: '2026-05-08',
       },
+      pt: {
+        question: 'Qual é a melhor combinação de plugins do Obsidian para LLMs locais em 2026?', // VERIFY
+        answer:
+          'Smart Connections + Copilot for Obsidian é a combinação recomendada. O Smart Connections cuida da busca semântica do vault com embeddings locais (nomic-embed-text ou mxbai-embed-large via Ollama); o Copilot fornece a barra lateral de chat configurada contra o endpoint compatível com OpenAI do Ollama. Juntos eles cobrem a descoberta de notas relacionadas e o chat com contexto do vault — cerca de 80% dos casos de uso do "segundo cérebro". Adicione o Text Generator como terceiro plugin para geração baseada em templates. Local GPT e BMO Chatbot são alternativas mais leves ao Copilot para usuários que querem uma experiência só de chat mais simples. Os cinco plugins funcionam com qualquer modelo do Ollama; o modelo de chat recomendado em 2026 é Llama 3.2 3B ou Phi-4 Mini para sistemas de 16 GB de RAM.', // VERIFY
+        bullets: [
+          'Smart Connections — busca semântica + barra lateral de notas relacionadas. Melhor para vinculação em todo o vault.', // VERIFY
+          'Copilot for Obsidian — barra lateral de chat com contexto do vault. Melhor para consultas conversacionais.', // VERIFY
+          'Text Generator — geração baseada em templates com variáveis de frontmatter. Melhor para fluxos de trabalho repetíveis (notas diárias, resumos de reunião).', // VERIFY
+          'Local GPT — chat com privacidade em primeiro lugar com a nota atual. Alternativa mais leve ao Copilot.', // VERIFY
+          'BMO Chatbot — chat minimalista com contexto do vault. Melhor para usuários que querem um único plugin de chat sem a superfície de recursos do Copilot.', // VERIFY
+          'Modelos recomendados do Ollama: Llama 3.2 3B (chat), Phi-4 Mini (chat, menor), nomic-embed-text ou mxbai-embed-large (embeddings para o Smart Connections).', // VERIFY
+          'Ressalva de sincronização móvel: os embeddings do Smart Connections vivem em .smart-env/ — sincronize via Obsidian Sync, regenere por dispositivo com iCloud ou Git.', // VERIFY
+        ],
+        updatedDate: '2026-05-08',
+      },
     },
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },

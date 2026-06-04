@@ -577,6 +577,12 @@ while True:
     leadAnswerBlock: '**Whisper large-v3 no M5 Pro: 10-12× tempo real. GPU Metal automático. Large-v3-turbo equilibra velocidade + precisão a 14-18×. Sem custo, totalmente offline.**',
     quickAnswerTop: {
       en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      pt: {
+        question: 'Qual é a velocidade do Whisper no Mac?', // VERIFY
+        answer: 'Whisper tiny: 48–60× tempo real. Small: 22–34× tempo real. Large-v3: 5–14× tempo real (M1→M5 Pro). Large-v3-turbo: 14–18× tempo real no M5 base.', // VERIFY
+        bullets: ['Tiny: 48–60× tempo real (rápido, menor precisão)', 'Small: 22–34× tempo real (equilibrado)', 'Large-v3-turbo: 14–18× tempo real (melhor velocidade/qualidade)', 'Large-v3: 5–14× tempo real (melhor precisão)', 'Aceleração por GPU Metal automática', 'Custo zero, totalmente offline'], // VERIFY
+        updatedDate: '2026-05-15',
+      },
       de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },

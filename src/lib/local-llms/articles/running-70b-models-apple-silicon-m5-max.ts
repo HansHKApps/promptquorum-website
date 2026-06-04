@@ -805,6 +805,21 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
     primaryTerm: 'modelos 70B Apple Silicon',
     ctaText: 'Você executa o Llama 3.3 70B localmente no seu M5 Max? Compare suas respostas locais com GPT-5.5, Claude Sonnet 4.6 e outros modelos na nuvem com o PromptQuorum.',
     leadAnswerBlock: '**O M5 Max 128GB executa o Llama 3.3 70B a 15–20 tok/s (Q4_K_M) ou 12–16 tok/s (Q5_K_M). O 70B Q5 obtém 86,1 no MMLU — apenas 3% abaixo do GPT-5.5 (88,7) — enquanto roda localmente a $0/mês. É o único hardware de consumo que carrega modelos 70B sem configurações multi-GPU complexas. A configuração leva menos de 10 minutos com o Ollama.**',
+    quickAnswerTop: {
+      pt: {
+        question: 'Posso executar modelos 70B no M5 Max 128GB?', // VERIFY
+        answer: 'Sim. O Llama 3.3 70B Q5_K_M roda a 12–16 tok/s. Q4_K_M a 15–20 tok/s. Q8_0 a 8–12 tok/s (qualidade sem perdas). Todos cabem em 128GB de memória unificada. A configuração leva 10 minutos com o Ollama. O 70B Q5 iguala a qualidade do GPT-5.5 em 3% nos benchmarks padrão.', // VERIFY
+        bullets: [
+          '70B Q4_K_M: 42 GB, 15–20 tok/s, boa qualidade', // VERIFY
+          '70B Q5_K_M: 49 GB, 12–16 tok/s, muito boa (recomendado)', // VERIFY
+          '70B Q8_0: 74 GB, 8–12 tok/s, qualidade sem perdas', // VERIFY
+          'Única opção de consumo sem complexidade multi-GPU', // VERIFY
+          'MMLU: 70B Q5 = 86,1 vs GPT-5.5 = 88,7 (lacuna de 3%)', // VERIFY
+          'Configuração: brew install ollama && ollama pull llama3.1:70b', // VERIFY
+        ],
+        updatedDate: '2026-05-15',
+      },
+    },
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
       { label: 'Por que o M5 Max para modelos 70B', anchor: '#why-m5-max' },

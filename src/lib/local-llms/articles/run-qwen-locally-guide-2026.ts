@@ -659,6 +659,20 @@ LOCAL_LLM_MODEL=qwen3.6:27b
     primaryTerm: 'executar Qwen 3 localmente 2026',
     ctaText: 'Entrar na lista de espera do PromptQuorum →',
     leadAnswerBlock: '**Execute `ollama pull qwen3.6:27b` em qualquer máquina com 16 GB de VRAM ou Apple Silicon com 32+ GB de memória unificada. Para acesso GUI, use o LM Studio. Ambos executam o Qwen 3.6 27B completamente offline. Crítico: defina `num_ctx` como 32768 ou superior — o valor padrão de 2048 tokens do Ollama trunca a maioria das tarefas reais.**',
+    quickAnswerTop: {
+      pt: {
+        question: 'Como executo o Qwen 3 localmente em 2026?', // VERIFY
+        answer: 'Instale o Ollama, execute `ollama pull qwen3.6:27b`, depois `ollama run qwen3.6:27b`. Para GUI: baixe o LM Studio, procure por "Qwen 3 27B", baixe o arquivo GGUF Q4_K_M. Crítico: defina num_ctx como 32768 no Ollama (o padrão 2048 é pequeno demais). Para uso em equipe em conformidade com a LGPD/GDPR, conecte-se através do endpoint de despacho local do Ollama da PromptQuorum.', // VERIFY
+        bullets: [
+          'Hardware mínimo: 16 GB de VRAM (RTX 4080) ou Apple Silicon com 32 GB de memória unificada', // VERIFY
+          'Instalação do Ollama: brew install ollama (Mac) ou curl install.sh (Linux/Windows)', // VERIFY
+          'Baixar modelo: ollama pull qwen3.6:27b (baixa o Qwen 3.6 27B Q4_K_M ~17 GB)', // VERIFY
+          'Corrigir contexto: defina num_ctx como 32768 no Modelfile — o padrão 2048 é pequeno demais', // VERIFY
+          'Alternativa LM Studio: baseado em GUI, sem CLI necessário, mesma qualidade de modelo', // VERIFY
+        ],
+        updatedDate: '2026-05-16',
+      },
+    },
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
       { label: 'Por que executar o Qwen localmente em 2026', anchor: '#why-local' },

@@ -1269,6 +1269,20 @@ schema: {
       readTime: '12 min de leitura',
       educationalLevel: 'Intermediate',
       primaryTerm: 'hardware para LLM local',
+      quickAnswerTop: {
+        pt: {
+          question: 'Qual hardware eu preciso para rodar um LLM local em 2026?', // VERIFY
+          answer: 'Para rodar um LLM local em 2026 você precisa, no mínimo, de uma GPU com 8 GB de VRAM (NVIDIA RTX 3060 ou Apple M2) para modelos 7B, 24 GB de VRAM para modelos 13B e 48 GB+ para modelos 70B. O Apple Silicon (M3/M4/M5) tem o melhor custo-benefício para a maioria dos usuários graças à memória unificada.', // VERIFY
+          bullets: [
+            'Modelos 7B (Mistral, Phi-4 Mini): 8 GB de VRAM — RTX 3060, RTX 4060, Mac M2', // VERIFY
+            'Modelos 13B (Llama 3.2): 16-24 GB de VRAM — RTX 3090, RTX 4080, Mac M3 Pro', // VERIFY
+            'Modelos 33B (Qwen3): 24-32 GB de VRAM — RTX 4090, Mac M3 Max', // VERIFY
+            'Modelos 70B (Llama 3.3): 40-48 GB de VRAM — Dual RTX 4090 ou Mac M5 Max 128 GB', // VERIFY
+            'Dica Apple: a memória unificada funciona como VRAM — o M5 Max 128 GB roda 70B com folga', // VERIFY
+          ],
+          updatedDate: '2026-06-03',
+        },
+      },
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
         { label: 'Requisitos de VRAM por tamanho de modelo', anchor: '#vram-requirements' },
