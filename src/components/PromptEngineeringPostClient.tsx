@@ -1073,6 +1073,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: '← プロンプトエンジニアリングに戻る',
     zh: '← 返回提示词工程',
     es: '← Volver a Prompt Engineering',
+    pt: '← Voltar ao Prompt Engineering',
   },
   breadcrumbHome: {
     en: 'Home', de: 'Startseite', fr: 'Accueil', ja: 'ホーム', zh: '主页', es: 'Inicio', pt: 'Início',
@@ -1087,10 +1088,19 @@ const POST_UI: Record<string, Record<string, string>> = {
     pt: 'Prompt Engineering',
   },
   levelLabel: {
-    en: 'Level', de: 'Niveau', fr: 'Niveau', ja: 'レベル', zh: '级别', es: 'Nivel',
+    en: 'Level', de: 'Niveau', fr: 'Niveau', ja: 'レベル', zh: '级别', es: 'Nivel', pt: 'Nível',
   },
   audienceLabel: {
-    en: 'Audience', de: 'Zielgruppe', fr: 'Public', ja: '対象読者', zh: '目标读者', es: 'Audiencia',
+    en: 'Audience', de: 'Zielgruppe', fr: 'Public', ja: '対象読者', zh: '目标读者', es: 'Audiencia', pt: 'Público',
+  },
+  quickFactsLabel: {
+    en: 'Quick Facts',
+    de: 'Schnellfakten',
+    fr: 'Faits rapides',
+    ja: 'クイックファクト',
+    zh: '快速事实',
+    es: 'Datos rápidos',
+    pt: 'Fatos rápidos',
   },
 }
 
@@ -1436,7 +1446,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         {/* Quick Facts block — numeric highlights, rendered between Key Takeaways and TOC (Rule 27) */}
         {(article as any).quickFacts && (article as any).quickFacts.length > 0 && (
           <div className="border border-primary/20 bg-primary/3 rounded-xl p-5 my-6">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">⚡ Quick Facts</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">⚡ {POST_UI.quickFactsLabel[lang] ?? POST_UI.quickFactsLabel['en']}</p>
             <ul className="space-y-1.5">
               {((article as any).quickFacts as string[]).map((fact: string, i: number) => (
                 <li key={i} className="flex gap-3 text-sm text-text-secondary">
