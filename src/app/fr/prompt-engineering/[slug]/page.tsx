@@ -4,6 +4,7 @@ import { PromptEngineeringPostClient } from '@/components/PromptEngineeringPostC
 import { peContent } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: pageTitle.length <= 45 ? `${pageTitle} | PromptQuorum` : pageTitle,
     description: metaDesc,
-    alternates: generateAlternates(`/prompt-engineering/${slug}`, lang, hasTranslation, availableLangsForMeta, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates(`/prompt-engineering/${slug}`, lang, hasTranslation, availableLangsForMeta, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: pageTitle,
       description: metaDesc,

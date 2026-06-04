@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { FRAMEWORKS, FRAMEWORK_SLUGS, getFramework } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
 export function generateStaticParams() {
   return FRAMEWORK_SLUGS.map(slug => ({ slug }))
@@ -24,7 +25,7 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
   return {
     title: fwTitle,
     description: fwDesc,
-    alternates: generateAlternates(`/frameworks/${fw.slug}`, selectedLang, true, undefined, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates(`/frameworks/${fw.slug}`, selectedLang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       type: 'article',
       url: `https://www.promptquorum.com/frameworks/${fw.slug}`,

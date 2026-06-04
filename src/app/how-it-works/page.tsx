@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { HowItWorksPageClient } from '@/components/HowItWorksPageClient'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { toOutputLocale } from '@/lib/i18n/constants'
 
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
@@ -14,7 +15,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: t.howItWorksMetaTitle,
     description: t.howItWorksMetaDescription,
-    alternates: generateAlternates('/how-it-works', selectedLang, true, undefined, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates('/how-it-works', selectedLang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: t.howItWorksMetaTitle,
       description: t.howItWorksMetaDescription,

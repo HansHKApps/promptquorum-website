@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { PromptEngineeringHub } from '@/components/PromptEngineeringHub'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { toOutputLocale } from '@/lib/i18n/constants'
 import { peContent } from '@/lib/prompt-engineering/content'
 import type { Language } from '@/translations'
@@ -17,7 +18,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: truncateTitle(t.promptEngineeringHubTitle),
     description: t.promptEngineeringHubDescription,
-    alternates: generateAlternates('/prompt-engineering', selectedLang, true, undefined, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates('/prompt-engineering', selectedLang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: t.promptEngineeringHubTitle,
       description: t.promptEngineeringHubOgDescription ?? t.promptEngineeringHubDescription,

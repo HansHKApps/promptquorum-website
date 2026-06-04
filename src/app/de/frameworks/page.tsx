@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { translations } from '@/translations'
 import { FRAMEWORKS } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
 const COMPLEXITY_COLOR: Record<string, string> = {
   Low: 'text-green-400 bg-green-400/10 border-green-400/30',
@@ -17,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.frameworksMetaTitle,
     description: t.frameworksMetaDescription,
-    alternates: generateAlternates('/frameworks', lang, true, undefined, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates('/frameworks', lang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: t.frameworksMetaTitle,
       description: t.frameworksMetaDescription,

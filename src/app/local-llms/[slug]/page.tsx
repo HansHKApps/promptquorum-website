@@ -7,6 +7,7 @@ import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { llmThemes } from '@/lib/local-llms/themes'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { getLocalLLMGeoEntities, type Language } from '@/lib/geo-schema'
 
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
@@ -123,7 +124,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   return {
     title: pageTitle.length <= 45 ? `${pageTitle} | PromptQuorum` : pageTitle,
     description: metaDesc,
-    alternates: generateAlternates(`/local-llms/${slug}`, selectedLang, hasTranslation, availableLangsForMeta, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates(`/local-llms/${slug}`, selectedLang, hasTranslation, availableLangsForMeta, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: pageTitle,
       description: metaDesc,

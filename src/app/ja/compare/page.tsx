@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { ComparePageClient } from '@/components/ComparePageClient'
 import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'ja'
@@ -10,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.compareMetaTitle,
     description: t.compareMetaDescription,
-    alternates: generateAlternates('/compare', lang, true, undefined, ['ja', 'zh', 'de', 'fr']),
+    alternates: generateAlternates('/compare', lang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       title: t.compareMetaTitle,
       description: t.compareMetaDescription,
