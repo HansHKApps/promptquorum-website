@@ -37,6 +37,11 @@ import { article as a_local_whisper_home_assistant } from './articles/local-whis
 import { article as a_ai_automations_local_llm } from './articles/ai-automations-local-llm'
 import { article as a_local_ai_security_camera } from './articles/local-ai-security-camera'
 import { article as a_best_local_llm_models_smart_home } from './articles/best-local-llm-models-smart-home'
+// Category 4 — Decision & Comparison
+import { article as a_home_assistant_vs_alexa_vs_google } from './articles/home-assistant-vs-alexa-vs-google'
+import { article as a_best_mini_pc_home_assistant_local_ai } from './articles/best-mini-pc-home-assistant-local-ai'
+import { article as a_local_vs_cloud_voice_assistant } from './articles/local-vs-cloud-voice-assistant'
+import { article as a_smart_home_without_subscriptions } from './articles/smart-home-without-subscriptions'
 
 export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // Category 1 — Smart Home Foundations
@@ -62,4 +67,9 @@ export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticl
   'ai-automations-local-llm':             a_ai_automations_local_llm,
   'local-ai-security-camera':             a_local_ai_security_camera,
   'best-local-llm-models-smart-home':     a_best_local_llm_models_smart_home,
+  // Category 4 — Decision & Comparison
+  'home-assistant-vs-alexa-vs-google':    a_home_assistant_vs_alexa_vs_google,
+  'best-mini-pc-home-assistant-local-ai': a_best_mini_pc_home_assistant_local_ai,
+  'local-vs-cloud-voice-assistant':       a_local_vs_cloud_voice_assistant,
+  'smart-home-without-subscriptions':     a_smart_home_without_subscriptions,
 }
