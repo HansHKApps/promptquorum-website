@@ -12,7 +12,7 @@ function detectLangFromHeader(acceptLanguage: string, supported: string[]): stri
 // Clusters routed via path-prefix locales for ALL non-EN langs (separate src/app/{de,fr,ja,zh}/<cluster>/ trees).
 // Keep in sync with PATH_LOCALE_CLUSTERS in src/components/LanguageSwitcher.tsx,
 // NOINDEX_PATH_PREFIXES in src/app/layout.tsx, and EXCLUDED_PATH_PREFIXES in src/app/sitemap.ts.
-const PATH_LOCALE_CLUSTERS = ['power-local-llm', 'prompt-bites']
+const PATH_LOCALE_CLUSTERS = ['power-local-llm', 'prompt-bites', 'smart-home']
 
 // Clusters routed via /ja/, /zh/, /de/, and /fr/ path-prefixes for Japanese, Chinese, German, and French.
 // All non-EN languages now use path-prefix routing.

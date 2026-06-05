@@ -50,7 +50,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
     document.cookie = `pq_lang=${lang}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`
     // Path-prefix-routed clusters for ALL non-EN langs (e.g. power-local-llm).
     // Keep in sync with PATH_LOCALE_CLUSTERS in src/middleware.ts.
-    const PATH_LOCALE_CLUSTERS = ['power-local-llm', 'prompt-bites']
+    const PATH_LOCALE_CLUSTERS = ['power-local-llm', 'prompt-bites', 'smart-home']
 
     // Path-prefix-routed clusters for all non-EN languages (JA, ZH, DE, FR).
     // Keep in sync with PATH_PREFIX_LANG_CLUSTERS in src/middleware.ts.

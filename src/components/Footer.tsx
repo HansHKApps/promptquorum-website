@@ -116,6 +116,14 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
 
   const NON_EN_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const
 
+  // Roots that are path-prefix routed for all non-EN langs (/de/<path>, …).
+  // Keep in sync with PATH_LOCALE_CLUSTERS + PATH_PREFIX_LANG_CLUSTERS in src/middleware.ts.
+  const PATH_PREFIX_ROOTS = [
+    'power-local-llm', 'prompt-bites', 'smart-home',
+    'prompt-engineering', 'local-llms', 'blog', 'frameworks',
+    'compare', 'features', 'how-it-works', 'faq', 'about', 'privacy',
+  ]
+
   const hrefFor = (code: Language) => {
     let basePath = pathname
     let wasPathPrefixed = false
@@ -139,10 +147,16 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
       return qs ? `${basePath}?${qs}` : basePath
     }
 
-    if (wasPathPrefixed) {
+    // Path-prefix routing: home and any path under a path-prefix-routed root resolve to
+    // /<lang>/<path> (subdirectory), mirroring the in-article "Read in:" links — never ?lang=.
+    const isPathPrefixRouted =
+      basePath === '/' ||
+      PATH_PREFIX_ROOTS.some((c) => basePath === `/${c}` || basePath.startsWith(`/${c}/`))
+    if (wasPathPrefixed || isPathPrefixRouted) {
       return `/${code}${basePath}`
     }
 
+    // Legacy fallback for English-only/static paths that have no /<lang>/ route.
     const params = new URLSearchParams(searchParams)
     params.set('lang', code)
     return `${basePath}?${params.toString()}`
