@@ -5,9 +5,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    affiliateDisclosure: true,
     title: 'Best Hardware for a Local Smart Home + Local AI (2026)',
     seoTitle: 'Best Hardware for Local Smart Home + AI (2026)',
     intro:
@@ -91,7 +92,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Great for device control, automations, and a small local voice setup.',
           'LLM inference on a Pi is limited to very small, slow models.',
-          'Choose a Pi if you want basics at low cost and power.',
+          'Choose a Pi if you want basics at low cost and power. Example: Raspberry Pi 5 (8GB), or the pre-built Home Assistant Green appliance.',
+        ],
+        affiliateLinks: [
+          { label: 'Raspberry Pi 5 (8GB) on Amazon', url: 'https://www.amazon.com/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green on Amazon', url: 'https://www.amazon.com/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -102,7 +107,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Run Home Assistant, a small LLM via Ollama, Whisper, and Frigate together.',
           'Prioritise RAM and a capable integrated GPU or NPU for lower latency.',
-          'For specific picks, see [best mini PCs for Home Assistant + local AI](/smart-home/best-mini-pc-home-assistant-local-ai) and the cross-cluster [best mini PCs for local LLMs](/local-llms/best-mini-pcs-local-llm).',
+          'For specific picks, see [best mini PCs for Home Assistant + local AI](/smart-home/best-mini-pc-home-assistant-local-ai) and the cross-cluster [best mini PCs for local LLMs](/local-llms/best-mini-pcs-local-llm). Example: Beelink SER8 (Ryzen 7 8845HS) for a 7B model, or Beelink EQ14 (Intel N150) for a low-power build.',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink SER8 (Ryzen 7 8845HS) on Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Intel N150) on Amazon', url: 'https://www.amazon.com/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -113,7 +122,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Good for combining storage with home automation services.',
           'Check the NAS has the CPU/RAM headroom for your add-ons.',
-          'LLM inference on a NAS depends on its hardware — many lack a capable GPU.',
+          'LLM inference on a NAS depends on its hardware — many lack a capable GPU. Example: Synology DS925+ or DS225+; UGREEN NASync models ship a built-in local LLM option.',
+        ],
+        affiliateLinks: [
+          { label: 'Synology DS925+ on Amazon', url: 'https://www.amazon.com/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+ on Amazon', url: 'https://www.amazon.com/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync on Amazon', url: 'https://www.amazon.com/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -171,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Home Assistant hardware' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Local LLM' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -191,9 +205,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    affiliateDisclosure: true,
     title: 'Beste Hardware für ein lokales Smart Home + lokale KI (2026)',
     seoTitle: 'Beste Hardware: lokales Smart Home + KI (2026)',
     intro:
@@ -277,7 +292,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Hervorragend für Gerätesteuerung, Automatisierungen und ein kleines lokales Sprach-Setup.',
           'LLM-Inferenz auf einem Pi ist auf sehr kleine, langsame Modelle begrenzt.',
-          'Wählen Sie einen Pi, wenn Sie Grundlagen bei niedrigen Kosten und Stromverbrauch wollen.',
+          'Wählen Sie einen Pi, wenn Sie Grundlagen bei niedrigen Kosten und Stromverbrauch wollen. Beispiel: Raspberry Pi 5 (8GB) oder das vorkonfigurierte Home Assistant Green.',
+        ],
+        affiliateLinks: [
+          { label: 'Raspberry Pi 5 (8GB) bei Amazon.de', url: 'https://www.amazon.de/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green bei Amazon.de', url: 'https://www.amazon.de/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -288,7 +307,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Betreiben Sie Home Assistant, ein kleines LLM über Ollama, Whisper und Frigate zusammen.',
           'Priorisieren Sie RAM und eine leistungsfähige integrierte GPU oder NPU für geringere Latenz.',
-          'Für konkrete Empfehlungen siehe [beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) und clusterübergreifend [beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm).',
+          'Für konkrete Empfehlungen siehe [beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) und clusterübergreifend [beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm). Beispiel: Beelink SER8 (Ryzen 7 8845HS) für ein 7B-Modell oder Beelink EQ14 (Intel N150) für einen stromsparenden Aufbau.',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink SER8 (Ryzen 7 8845HS) bei Amazon.de', url: 'https://www.amazon.de/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Intel N150) bei Amazon.de', url: 'https://www.amazon.de/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -299,7 +322,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Gut, um Speicher mit Heimautomatisierungsdiensten zu kombinieren.',
           'Prüfen Sie, ob das NAS CPU-/RAM-Reserven für Ihre Add-ons hat.',
-          'LLM-Inferenz auf einem NAS hängt von seiner Hardware ab – vielen fehlt eine leistungsfähige GPU.',
+          'LLM-Inferenz auf einem NAS hängt von seiner Hardware ab – vielen fehlt eine leistungsfähige GPU. Beispiel: Synology DS925+ oder DS225+; UGREEN-NASync-Modelle bieten ein integriertes lokales LLM.',
+        ],
+        affiliateLinks: [
+          { label: 'Synology DS925+ bei Amazon.de', url: 'https://www.amazon.de/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+ bei Amazon.de', url: 'https://www.amazon.de/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync bei Amazon.de', url: 'https://www.amazon.de/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -357,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Home-Assistant-Hardware' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini-PC' }, { '@type': 'Thing', name: 'Lokales LLM' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -377,9 +405,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    affiliateDisclosure: true,
     title: 'Mejor Hardware para un Smart Home Local + IA Local (2026)',
     seoTitle: 'Mejor Hardware: Smart Home Local + IA (2026)',
     intro:
@@ -463,7 +492,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Estupenda para control de dispositivos, automatizaciones y una pequeña configuración de voz local.',
           'La inferencia de LLM en una Pi se limita a modelos muy pequeños y lentos.',
-          'Elige una Pi si quieres lo básico con bajo coste y consumo.',
+          'Elige una Pi si quieres lo básico con bajo coste y consumo. Ejemplo: Raspberry Pi 5 (8GB) o el equipo preconfigurado Home Assistant Green.',
+        ],
+        affiliateLinks: [
+          { label: 'Raspberry Pi 5 (8GB) en Amazon.es', url: 'https://www.amazon.es/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green en Amazon.es', url: 'https://www.amazon.es/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -474,7 +507,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Ejecuta Home Assistant, un LLM pequeño vía Ollama, Whisper y Frigate juntos.',
           'Prioriza la RAM y una GPU integrada o NPU capaz para menor latencia.',
-          'Para opciones concretas, consulta [mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) y, entre clústeres, [mejores mini PC para LLM locales](/es/local-llms/best-mini-pcs-local-llm).',
+          'Para opciones concretas, consulta [mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) y, entre clústeres, [mejores mini PC para LLM locales](/es/local-llms/best-mini-pcs-local-llm). Ejemplo: Beelink SER8 (Ryzen 7 8845HS) para un modelo 7B, o Beelink EQ14 (Intel N150) para un equipo de bajo consumo.',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink SER8 (Ryzen 7 8845HS) en Amazon.es', url: 'https://www.amazon.es/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Intel N150) en Amazon.es', url: 'https://www.amazon.es/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -485,7 +522,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Bueno para combinar almacenamiento con servicios de domótica.',
           'Comprueba que el NAS tenga margen de CPU/RAM para tus complementos.',
-          'La inferencia de LLM en un NAS depende de su hardware: muchos carecen de una GPU capaz.',
+          'La inferencia de LLM en un NAS depende de su hardware: muchos carecen de una GPU capaz. Ejemplo: Synology DS925+ o DS225+; los modelos UGREEN NASync incluyen una opción de LLM local integrada.',
+        ],
+        affiliateLinks: [
+          { label: 'Synology DS925+ en Amazon.es', url: 'https://www.amazon.es/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+ en Amazon.es', url: 'https://www.amazon.es/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync en Amazon.es', url: 'https://www.amazon.es/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -543,7 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Hardware de Home Assistant' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'LLM local' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -563,9 +605,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    affiliateDisclosure: true,
     title: 'Meilleur Matériel pour une Maison Connectée Locale + IA Locale (2026)',
     seoTitle: 'Meilleur Matériel : Maison Connectée Locale + IA (2026)',
     intro:
@@ -649,7 +692,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Parfaite pour le contrôle des appareils, les automatisations et une petite configuration vocale locale.',
           'L\'inférence de LLM sur une Pi se limite à des modèles très petits et lents.',
-          'Choisissez une Pi si vous voulez les bases à faible coût et faible consommation.',
+          'Choisissez une Pi si vous voulez les bases à faible coût et faible consommation. Exemple : Raspberry Pi 5 (8 Go) ou l\'appareil préconfiguré Home Assistant Green.',
+        ],
+        affiliateLinks: [
+          { label: 'Raspberry Pi 5 (8 Go) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -660,7 +707,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Faites tourner Home Assistant, un petit LLM via Ollama, Whisper et Frigate ensemble.',
           'Priorisez la RAM et un GPU intégré ou NPU capable pour une latence plus faible.',
-          'Pour des choix précis, voir [meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) et, inter-clusters, [meilleurs mini-PC pour LLM locaux](/fr/local-llms/best-mini-pcs-local-llm).',
+          'Pour des choix précis, voir [meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) et, inter-clusters, [meilleurs mini-PC pour LLM locaux](/fr/local-llms/best-mini-pcs-local-llm). Exemple : Beelink SER8 (Ryzen 7 8845HS) pour un modèle 7B, ou Beelink EQ14 (Intel N150) pour un montage basse consommation.',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink SER8 (Ryzen 7 8845HS) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Intel N150) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -671,7 +722,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Bon pour combiner stockage et services de domotique.',
           'Vérifiez que le NAS a la marge CPU/RAM pour vos add-ons.',
-          'L\'inférence de LLM sur un NAS dépend de son matériel — beaucoup n\'ont pas de GPU capable.',
+          'L\'inférence de LLM sur un NAS dépend de son matériel — beaucoup n\'ont pas de GPU capable. Exemple : Synology DS925+ ou DS225+ ; les modèles UGREEN NASync intègrent une option de LLM local.',
+        ],
+        affiliateLinks: [
+          { label: 'Synology DS925+ sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+ sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync sur Amazon.fr', url: 'https://www.amazon.fr/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -729,7 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Matériel Home Assistant' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini-PC' }, { '@type': 'Thing', name: 'LLM local' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -749,9 +805,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    affiliateDisclosure: true,
     title: 'ローカルスマートホーム + ローカルAIに最適なハードウェア（2026）',
     seoTitle: '最適なハードウェア：ローカルSH + AI（2026）',
     intro:
@@ -835,7 +892,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '機器制御、自動化、小規模なローカル音声構成に最適。',
           'Pi 上の LLM 推論は非常に小さく遅いモデルに限られます。',
-          '低コスト・低消費電力で基本が欲しいなら Pi を選びましょう。',
+          '低コスト・低消費電力で基本が欲しいなら Pi を選びましょう。例：Raspberry Pi 5（8GB）、または完成品の Home Assistant Green。',
+        ],
+        affiliateLinks: [
+          { label: 'Raspberry Pi 5（8GB）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -846,7 +907,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant、Ollama 経由の小型 LLM、Whisper、Frigate を一緒に動かせます。',
           'より低いレイテンシのために RAM と高性能な統合GPUまたはNPUを優先します。',
-          '具体的な候補は[Home Assistant＋ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai)、クラスター横断で[ローカルLLMに最適なミニPC](/ja/local-llms/best-mini-pcs-local-llm)を参照。',
+          '具体的な候補は[Home Assistant＋ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai)、クラスター横断で[ローカルLLMに最適なミニPC](/ja/local-llms/best-mini-pcs-local-llm)を参照。例：7B モデルには Beelink SER8（Ryzen 7 8845HS）、低消費電力構成には Beelink EQ14（Intel N150）。',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink SER8（Ryzen 7 8845HS）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14（Intel N150）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -857,7 +922,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'ストレージとホームオートメーションのサービスを組み合わせるのに適します。',
           'NAS にアドオン用の CPU/RAM の余裕があるか確認しましょう。',
-          'NAS 上の LLM 推論はそのハードウェア次第——多くは高性能な GPU を欠きます。',
+          'NAS 上の LLM 推論はそのハードウェア次第——多くは高性能な GPU を欠きます。例：Synology DS925+ または DS225+；UGREEN NASync モデルはローカル LLM を内蔵します。',
+        ],
+        affiliateLinks: [
+          { label: 'Synology DS925+ をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+ をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -915,7 +985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Home Assistant ハードウェア' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'ミニPC' }, { '@type': 'Thing', name: 'ローカルLLM' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -935,9 +1005,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    affiliateDisclosure: true,
     title: 'Melhor Hardware para uma Casa Inteligente Local + IA Local (2026)',
     seoTitle: 'Melhor Hardware: Casa Inteligente Local + IA (2026)',
     intro:
@@ -1021,7 +1092,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Ótima para controle de dispositivos, automações e uma pequena configuração de voz local.',
           'A inferência de LLM em uma Pi se limita a modelos muito pequenos e lentos.',
-          'Escolha uma Pi se você quer o básico com baixo custo e consumo.',
+          'Escolha uma Pi se você quer o básico com baixo custo e consumo. Exemplo: Raspberry Pi 5 (8GB) ou o aparelho pré-montado Home Assistant Green.',
+        ],
+        affiliateLinks: [
+          { label: 'Raspberry Pi 5 (8GB) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -1032,7 +1107,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Rode o Home Assistant, um LLM pequeno via Ollama, Whisper e Frigate juntos.',
           'Priorize a RAM e uma GPU integrada ou NPU capaz para menor latência.',
-          'Para escolhas específicas, veja [melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) e, entre clusters, [melhores mini PCs para LLMs locais](/pt/local-llms/best-mini-pcs-local-llm).',
+          'Para escolhas específicas, veja [melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) e, entre clusters, [melhores mini PCs para LLMs locais](/pt/local-llms/best-mini-pcs-local-llm). Exemplo: Beelink SER8 (Ryzen 7 8845HS) para um modelo 7B, ou Beelink EQ14 (Intel N150) para uma montagem de baixo consumo.',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink SER8 (Ryzen 7 8845HS) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Intel N150) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -1043,7 +1122,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Bom para combinar armazenamento com serviços de automação residencial.',
           'Verifique se o NAS tem folga de CPU/RAM para seus complementos.',
-          'A inferência de LLM em um NAS depende do hardware dele — muitos não têm uma GPU capaz.',
+          'A inferência de LLM em um NAS depende do hardware dele — muitos não têm uma GPU capaz. Exemplo: Synology DS925+ ou DS225+; os modelos UGREEN NASync trazem uma opção de LLM local integrada.',
+        ],
+        affiliateLinks: [
+          { label: 'Synology DS925+ na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+ na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -1101,7 +1185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Hardware do Home Assistant' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'LLM local' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -1121,9 +1205,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    affiliateDisclosure: true,
     title: '本地智能家居 + 本地 AI 的最佳硬件（2026）',
     seoTitle: '最佳硬件：本地智能家居 + AI（2026）',
     intro:
@@ -1207,7 +1292,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '非常适合设备控制、自动化以及小规模本地语音配置。',
           'Pi 上的 LLM 推理仅限非常小且缓慢的模型。',
-          '若你想以低成本、低功耗实现基础功能，就选 Pi。',
+          '若你想以低成本、低功耗实现基础功能，就选 Pi。示例：Raspberry Pi 5（8GB），或预装成品 Home Assistant Green。',
+        ],
+        affiliateLinks: [
+          { label: 'Raspberry Pi 5（8GB）在 Amazon 查看', url: 'https://www.amazon.com/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green 在 Amazon 查看', url: 'https://www.amazon.com/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -1218,7 +1307,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '可同时运行 Home Assistant、经由 Ollama 的小型 LLM、Whisper 和 Frigate。',
           '优先内存和强力集成 GPU 或 NPU 以降低延迟。',
-          '具体选择参见[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai)，以及跨集群的[本地 LLM 的最佳迷你 PC](/zh/local-llms/best-mini-pcs-local-llm)。',
+          '具体选择参见[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai)，以及跨集群的[本地 LLM 的最佳迷你 PC](/zh/local-llms/best-mini-pcs-local-llm)。示例：7B 模型用 Beelink SER8（Ryzen 7 8845HS），低功耗搭建用 Beelink EQ14（Intel N150）。',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink SER8（Ryzen 7 8845HS）在 Amazon 查看', url: 'https://www.amazon.com/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14（Intel N150）在 Amazon 查看', url: 'https://www.amazon.com/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -1229,7 +1322,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '适合把存储与家庭自动化服务结合在一起。',
           '检查 NAS 是否有足够的 CPU/内存余量来跑你的附加项。',
-          'NAS 上的 LLM 推理取决于其硬件——许多缺少强力 GPU。',
+          'NAS 上的 LLM 推理取决于其硬件——许多缺少强力 GPU。示例：Synology DS925+ 或 DS225+；UGREEN NASync 机型内置本地 LLM 选项。',
+        ],
+        affiliateLinks: [
+          { label: 'Synology DS925+ 在 Amazon 查看', url: 'https://www.amazon.com/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+ 在 Amazon 查看', url: 'https://www.amazon.com/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync 在 Amazon 查看', url: 'https://www.amazon.com/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -1287,7 +1385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Home Assistant 硬件' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: '迷你 PC' }, { '@type': 'Thing', name: '本地 LLM' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },

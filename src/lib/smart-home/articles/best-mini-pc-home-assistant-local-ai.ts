@@ -5,9 +5,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
     title: 'Best Mini PCs for Home Assistant + Local AI (2026)',
     seoTitle: 'Best Mini PC for Home Assistant + Local AI in 2026',
     intro:
@@ -88,9 +89,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Three classes cover most needs: low-power N-series for light AI, Ryzen/Core i-series with a strong iGPU for a 7B model, and NPU-equipped mini PCs for efficient on-device AI.** Pick by the model size you want.',
         items: [
-          '**Low-power Intel N-series:** efficient and cheap; runs Home Assistant and a very small model, slower on AI.',
-          '**AMD Ryzen / Intel Core i-series with strong iGPU:** more RAM and graphics headroom for a 7B model at usable latency.',
-          '**NPU-equipped mini PCs:** newer machines with a neural processing unit accelerate on-device AI efficiently.',
+          '**Low-power Intel N-series:** efficient and cheap; runs Home Assistant and a very small model, slower on AI. Example: Beelink EQ14 or GMKtec G3 Plus (Intel N150).',
+          '**AMD Ryzen / Intel Core i-series with strong iGPU:** more RAM and graphics headroom for a 7B model at usable latency. Example: Beelink SER8 (Ryzen 7 8845HS, Radeon 780M) or Minisforum UM890 Pro.',
+          '**NPU-equipped mini PCs:** newer machines with a neural processing unit; the strong integrated GPU — not the NPU — does the local-LLM work, while the NPU helps vision tasks like Frigate. Example: GEEKOM A9 Max (Ryzen AI 9 HX 370).',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink EQ14 (Intel N150) on Amazon', url: 'https://www.amazon.com/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'GMKtec G3 Plus (Intel N150) on Amazon', url: 'https://www.amazon.com/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Ryzen 7 8845HS) on Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Minisforum UM890 Pro on Amazon', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max (Ryzen AI 9 HX 370) on Amazon', url: 'https://www.amazon.com/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
       },
       comparison: {
@@ -161,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Local LLM' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -181,9 +189,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
     title: 'Beste Mini-PCs für Home Assistant + lokale KI (2026)',
     seoTitle: 'Bester Mini-PC für Home Assistant + lokale KI 2026',
     intro:
@@ -264,9 +273,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Drei Klassen decken die meisten Bedürfnisse ab: stromsparende N-Serie für leichte KI, Ryzen/Core-i mit starker iGPU für ein 7B-Modell und NPU-bestückte Mini-PCs für effiziente On-Device-KI.** Wählen Sie nach der gewünschten Modellgröße.',
         items: [
-          '**Stromsparende Intel-N-Serie:** effizient und günstig; betreibt Home Assistant und ein sehr kleines Modell, langsamer bei KI.',
-          '**AMD Ryzen / Intel Core i mit starker iGPU:** mehr RAM- und Grafik-Reserve für ein 7B-Modell bei nutzbarer Latenz.',
-          '**NPU-bestückte Mini-PCs:** neuere Maschinen mit einer Neural Processing Unit beschleunigen On-Device-KI effizient.',
+          '**Stromsparende Intel-N-Serie:** effizient und günstig; betreibt Home Assistant und ein sehr kleines Modell, langsamer bei KI. Beispiel: Beelink EQ14 oder GMKtec G3 Plus (Intel N150).',
+          '**AMD Ryzen / Intel Core i mit starker iGPU:** mehr RAM- und Grafik-Reserve für ein 7B-Modell bei nutzbarer Latenz. Beispiel: Beelink SER8 (Ryzen 7 8845HS, Radeon 780M) oder Minisforum UM890 Pro.',
+          '**NPU-bestückte Mini-PCs:** neuere Maschinen mit einer Neural Processing Unit; die starke integrierte GPU – nicht die NPU – erledigt die lokale LLM-Arbeit, während die NPU bei Bildaufgaben wie Frigate hilft. Beispiel: GEEKOM A9 Max (Ryzen AI 9 HX 370).',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink EQ14 (Intel N150) bei Amazon.de', url: 'https://www.amazon.de/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'GMKtec G3 Plus (Intel N150) bei Amazon.de', url: 'https://www.amazon.de/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Ryzen 7 8845HS) bei Amazon.de', url: 'https://www.amazon.de/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Minisforum UM890 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max (Ryzen AI 9 HX 370) bei Amazon.de', url: 'https://www.amazon.de/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
       },
       comparison: {
@@ -337,7 +353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Mini-PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Lokales LLM' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -357,9 +373,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
     title: 'Mejores Mini PC para Home Assistant + IA Local (2026)',
     seoTitle: 'Mejor Mini PC para Home Assistant + IA Local en 2026',
     intro:
@@ -440,9 +457,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Tres clases cubren la mayoría de las necesidades: serie N de bajo consumo para IA ligera, Ryzen/Core i con iGPU fuerte para un modelo 7B, y mini PC con NPU para IA eficiente en el dispositivo.** Elige por el tamaño de modelo que quieras.',
         items: [
-          '**Serie N de Intel de bajo consumo:** eficiente y barata; ejecuta Home Assistant y un modelo muy pequeño, más lenta en IA.',
-          '**AMD Ryzen / Intel Core i con iGPU fuerte:** más RAM y margen gráfico para un modelo 7B con latencia usable.',
-          '**Mini PC con NPU:** máquinas más nuevas con una unidad de procesamiento neuronal aceleran la IA en el dispositivo de forma eficiente.',
+          '**Serie N de Intel de bajo consumo:** eficiente y barata; ejecuta Home Assistant y un modelo muy pequeño, más lenta en IA. Ejemplo: Beelink EQ14 o GMKtec G3 Plus (Intel N150).',
+          '**AMD Ryzen / Intel Core i con iGPU fuerte:** más RAM y margen gráfico para un modelo 7B con latencia usable. Ejemplo: Beelink SER8 (Ryzen 7 8845HS, Radeon 780M) o Minisforum UM890 Pro.',
+          '**Mini PC con NPU:** máquinas más nuevas con una unidad de procesamiento neuronal; la GPU integrada fuerte — no la NPU — hace el trabajo del LLM local, mientras que la NPU ayuda en tareas de visión como Frigate. Ejemplo: GEEKOM A9 Max (Ryzen AI 9 HX 370).',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink EQ14 (Intel N150) en Amazon.es', url: 'https://www.amazon.es/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'GMKtec G3 Plus (Intel N150) en Amazon.es', url: 'https://www.amazon.es/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Ryzen 7 8845HS) en Amazon.es', url: 'https://www.amazon.es/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Minisforum UM890 Pro en Amazon.es', url: 'https://www.amazon.es/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max (Ryzen AI 9 HX 370) en Amazon.es', url: 'https://www.amazon.es/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
       },
       comparison: {
@@ -513,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'LLM local' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -533,9 +557,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
     title: 'Meilleurs Mini-PC pour Home Assistant + IA Locale (2026)',
     seoTitle: 'Meilleur Mini-PC pour Home Assistant + IA Locale 2026',
     intro:
@@ -616,9 +641,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Trois classes couvrent la plupart des besoins : série N basse consommation pour l\'IA légère, Ryzen/Core i avec iGPU puissant pour un modèle 7B, et mini-PC à NPU pour une IA efficace sur l\'appareil.** Choisissez par la taille de modèle voulue.',
         items: [
-          '**Série N d\'Intel basse consommation :** efficace et bon marché ; fait tourner Home Assistant et un très petit modèle, plus lente en IA.',
-          '**AMD Ryzen / Intel Core i avec iGPU puissant :** plus de RAM et de marge graphique pour un modèle 7B à latence utilisable.',
-          '**Mini-PC à NPU :** des machines plus récentes avec une unité de traitement neuronal accélèrent l\'IA sur l\'appareil efficacement.',
+          '**Série N d\'Intel basse consommation :** efficace et bon marché ; fait tourner Home Assistant et un très petit modèle, plus lente en IA. Exemple : Beelink EQ14 ou GMKtec G3 Plus (Intel N150).',
+          '**AMD Ryzen / Intel Core i avec iGPU puissant :** plus de RAM et de marge graphique pour un modèle 7B à latence utilisable. Exemple : Beelink SER8 (Ryzen 7 8845HS, Radeon 780M) ou Minisforum UM890 Pro.',
+          '**Mini-PC à NPU :** des machines plus récentes avec une unité de traitement neuronal ; l\'iGPU puissant — et non le NPU — fait le travail du LLM local, tandis que le NPU aide aux tâches de vision comme Frigate. Exemple : GEEKOM A9 Max (Ryzen AI 9 HX 370).',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink EQ14 (Intel N150) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'GMKtec G3 Plus (Intel N150) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Ryzen 7 8845HS) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Minisforum UM890 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max (Ryzen AI 9 HX 370) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
       },
       comparison: {
@@ -689,7 +721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Mini-PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'LLM local' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -709,9 +741,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
     title: 'Home Assistant + ローカルAIに最適なミニPC（2026）',
     seoTitle: 'Home Assistant + ローカルAIに最適なミニPC 2026年版ガイド',
     intro:
@@ -792,9 +825,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**三つのクラスが大半のニーズを満たします：軽い AI には低消費電力の N シリーズ、7B モデルには強力な iGPU 付きの Ryzen/Core i、効率的なオンデバイス AI には NPU 搭載のミニPC。** 欲しいモデルサイズで選びましょう。',
         items: [
-          '**低消費電力の Intel N シリーズ：** 効率的で安い；Home Assistant と非常に小さなモデルを動かし、AI では遅め。',
-          '**強力な iGPU 付きの AMD Ryzen / Intel Core i：** 使えるレイテンシで 7B モデルを動かすための、より多い RAM とグラフィックの余裕。',
-          '**NPU 搭載のミニPC：** ニューラル処理ユニットを備えた新しめのマシンが、オンデバイス AI を効率的に高速化します。',
+          '**低消費電力の Intel N シリーズ：** 効率的で安い；Home Assistant と非常に小さなモデルを動かし、AI では遅め。例：Beelink EQ14 または GMKtec G3 Plus（Intel N150）。',
+          '**強力な iGPU 付きの AMD Ryzen / Intel Core i：** 使えるレイテンシで 7B モデルを動かすための、より多い RAM とグラフィックの余裕。例：Beelink SER8（Ryzen 7 8845HS、Radeon 780M）または Minisforum UM890 Pro。',
+          '**NPU 搭載のミニPC：** ニューラル処理ユニットを備えた新しめのマシン；ローカル LLM の処理は強力な統合 GPU が担い、NPU ではありません。NPU は Frigate のような映像タスクで役立ちます。例：GEEKOM A9 Max（Ryzen AI 9 HX 370）。',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink EQ14（Intel N150）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'GMKtec G3 Plus（Intel N150）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8（Ryzen 7 8845HS）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Minisforum UM890 Pro をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max（Ryzen AI 9 HX 370）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
       },
       comparison: {
@@ -865,7 +905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'ミニPC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'ローカルLLM' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -885,9 +925,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
     title: 'Melhores Mini PCs para Home Assistant + IA Local (2026)',
     seoTitle: 'Melhor Mini PC para Home Assistant + IA Local em 2026',
     intro:
@@ -968,9 +1009,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Três classes cobrem a maioria das necessidades: série N de baixo consumo para IA leve, Ryzen/Core i com iGPU forte para um modelo 7B, e mini PCs com NPU para IA eficiente no dispositivo.** Escolha pelo tamanho de modelo que você quer.',
         items: [
-          '**Série N da Intel de baixo consumo:** eficiente e barata; roda o Home Assistant e um modelo muito pequeno, mais lenta na IA.',
-          '**AMD Ryzen / Intel Core i com iGPU forte:** mais RAM e folga gráfica para um modelo 7B com latência utilizável.',
-          '**Mini PCs com NPU:** máquinas mais novas com uma unidade de processamento neural aceleram a IA no dispositivo de forma eficiente.',
+          '**Série N da Intel de baixo consumo:** eficiente e barata; roda o Home Assistant e um modelo muito pequeno, mais lenta na IA. Exemplo: Beelink EQ14 ou GMKtec G3 Plus (Intel N150).',
+          '**AMD Ryzen / Intel Core i com iGPU forte:** mais RAM e folga gráfica para um modelo 7B com latência utilizável. Exemplo: Beelink SER8 (Ryzen 7 8845HS, Radeon 780M) ou Minisforum UM890 Pro.',
+          '**Mini PCs com NPU:** máquinas mais novas com uma unidade de processamento neural; a iGPU forte — não a NPU — faz o trabalho do LLM local, enquanto a NPU ajuda em tarefas de visão como o Frigate. Exemplo: GEEKOM A9 Max (Ryzen AI 9 HX 370).',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink EQ14 (Intel N150) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'GMKtec G3 Plus (Intel N150) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Ryzen 7 8845HS) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Minisforum UM890 Pro na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max (Ryzen AI 9 HX 370) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
       },
       comparison: {
@@ -1041,7 +1089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'LLM local' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -1061,9 +1109,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
     title: 'Home Assistant + 本地 AI 的最佳迷你 PC（2026）',
     seoTitle: '2026年最佳迷你 PC：Home Assistant 加本地大语言模型',
     intro:
@@ -1144,9 +1193,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**三类涵盖大多数需求：轻量 AI 用低功耗 N 系列，7B 模型用配强力 iGPU 的 Ryzen/Core i，高效的设备端 AI 用配 NPU 的迷你 PC。** 按你想要的模型大小选择。',
         items: [
-          '**低功耗 Intel N 系列：** 高效又便宜；运行 Home Assistant 和一个非常小的模型，AI 上较慢。',
-          '**配强力 iGPU 的 AMD Ryzen / Intel Core i：** 更多内存和显示余量，能以可用延迟运行 7B 模型。',
-          '**配 NPU 的迷你 PC：** 配备神经处理单元的较新机器能高效加速设备端 AI。',
+          '**低功耗 Intel N 系列：** 高效又便宜；运行 Home Assistant 和一个非常小的模型，AI 上较慢。示例：Beelink EQ14 或 GMKtec G3 Plus（Intel N150）。',
+          '**配强力 iGPU 的 AMD Ryzen / Intel Core i：** 更多内存和显示余量，能以可用延迟运行 7B 模型。示例：Beelink SER8（Ryzen 7 8845HS、Radeon 780M）或 Minisforum UM890 Pro。',
+          '**配 NPU 的迷你 PC：** 配备神经处理单元的较新机器；本地 LLM 由强力的集成 GPU 承担，而非 NPU，NPU 在 Frigate 等视觉任务上有帮助。示例：GEEKOM A9 Max（Ryzen AI 9 HX 370）。',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink EQ14（Intel N150）在 Amazon 查看', url: 'https://www.amazon.com/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'GMKtec G3 Plus（Intel N150）在 Amazon 查看', url: 'https://www.amazon.com/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8（Ryzen 7 8845HS）在 Amazon 查看', url: 'https://www.amazon.com/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Minisforum UM890 Pro 在 Amazon 查看', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max（Ryzen AI 9 HX 370）在 Amazon 查看', url: 'https://www.amazon.com/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
       },
       comparison: {
@@ -1217,7 +1273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: '迷你 PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '本地 LLM' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
