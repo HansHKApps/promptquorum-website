@@ -96,9 +96,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Example: Home Assistant Green (pre-built hub); add a SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E) or the Home Assistant Connect ZBT-2 for Zigbee/Thread/Matter.',
         ],
         affiliateLinks: [
-          { label: 'Home Assistant Green on Amazon', url: 'https://www.amazon.com/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
-          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E) on Amazon', url: 'https://www.amazon.com/s?k=SONOFF+ZBDongle-E', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
-          { label: 'Home Assistant Connect ZBT-2 on Amazon', url: 'https://www.amazon.com/s?k=Home+Assistant+Connect+ZBT-2', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E)', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
+          { label: 'Home Assistant Connect ZBT-2', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
         ],
       },
       lighting: {
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Philips Hue Zigbee bulbs on Amazon', url: 'https://www.amazon.com/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb' },
-          { label: 'IKEA TRÅDFRI Zigbee bulbs on Amazon', url: 'https://www.amazon.com/s?k=IKEA+TRADFRI+bulb', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'IKEA TRÅDFRI Zigbee bulbs', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
         ],
       },
       locksSensors: {
@@ -129,9 +129,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Example: Yale Assure Lock (Z-Wave) for the lock; Aqara P1 motion and SONOFF SNZB-04P door/window sensors (Zigbee).',
         ],
         affiliateLinks: [
-          { label: 'Yale Assure Lock (Z-Wave) on Amazon', url: 'https://www.amazon.com/s?k=Yale+Assure+Lock+Z-Wave', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
-          { label: 'Aqara P1 motion sensor on Amazon', url: 'https://www.amazon.com/s?k=Aqara+P1+motion+sensor', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
-          { label: 'SONOFF SNZB-04P door/window sensor on Amazon', url: 'https://www.amazon.com/s?k=SONOFF+SNZB-04P', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
+          { label: 'Yale Assure Lock (Z-Wave)', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
+          { label: 'Aqara P1 motion sensor', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
+          { label: 'SONOFF SNZB-04P door/window sensor', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
         ],
       },
       camerasPlugs: {
@@ -146,10 +146,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Example: Reolink RLC-810A or an Amcrest PoE camera (RTSP, Frigate-compatible); SONOFF or ThirdReality Zigbee smart plugs.',
         ],
         affiliateLinks: [
-          { label: 'Reolink RLC-810A (4K PoE) on Amazon', url: 'https://www.amazon.com/s?k=Reolink+RLC-810A', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
+          { label: 'Reolink RLC-810A (4K PoE)', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
           { label: 'Amcrest PoE camera on Amazon', url: 'https://www.amazon.com/s?k=Amcrest+PoE+camera', productName: 'Amcrest PoE camera', productCategory: 'Security camera' },
-          { label: 'SONOFF Zigbee smart plug on Amazon', url: 'https://www.amazon.com/s?k=SONOFF+Zigbee+plug', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
-          { label: 'ThirdReality Zigbee smart plug on Amazon', url: 'https://www.amazon.com/s?k=ThirdReality+Zigbee+plug', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'SONOFF Zigbee smart plug', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'ThirdReality Zigbee smart plug', url: 'https://thirdreality.com/product/smart-plug-gen2-with-energy-monitoring/', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
         ],
       },
       starterKit: {
@@ -309,9 +309,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Beispiel: Home Assistant Green (vorkonfigurierter Hub); ergänzen Sie einen SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E) oder den Home Assistant Connect ZBT-2 für Zigbee/Thread/Matter.',
         ],
         affiliateLinks: [
-          { label: 'Home Assistant Green bei Amazon.de', url: 'https://www.amazon.de/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
-          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E) bei Amazon.de', url: 'https://www.amazon.de/s?k=SONOFF+ZBDongle-E', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
-          { label: 'Home Assistant Connect ZBT-2 bei Amazon.de', url: 'https://www.amazon.de/s?k=Home+Assistant+Connect+ZBT-2', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E)', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
+          { label: 'Home Assistant Connect ZBT-2', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
         ],
       },
       lighting: {
@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Philips Hue Zigbee-Leuchtmittel bei Amazon.de', url: 'https://www.amazon.de/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb' },
-          { label: 'IKEA TRÅDFRI Zigbee-Leuchtmittel bei Amazon.de', url: 'https://www.amazon.de/s?k=IKEA+TRADFRI+bulb', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'IKEA TRÅDFRI Zigbee-Leuchtmittel', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
         ],
       },
       locksSensors: {
@@ -342,9 +342,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Beispiel: Yale Assure Lock (Z-Wave) als Schloss; Aqara P1 Bewegungs- und SONOFF SNZB-04P Tür/Fenster-Sensoren (Zigbee).',
         ],
         affiliateLinks: [
-          { label: 'Yale Assure Lock (Z-Wave) bei Amazon.de', url: 'https://www.amazon.de/s?k=Yale+Assure+Lock+Z-Wave', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
-          { label: 'Aqara P1 Bewegungssensor bei Amazon.de', url: 'https://www.amazon.de/s?k=Aqara+P1+motion+sensor', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
-          { label: 'SONOFF SNZB-04P Tür/Fenster-Sensor bei Amazon.de', url: 'https://www.amazon.de/s?k=SONOFF+SNZB-04P', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
+          { label: 'Yale Assure Lock (Z-Wave)', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
+          { label: 'Aqara P1 Bewegungssensor', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
+          { label: 'SONOFF SNZB-04P Tür/Fenster-Sensor', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
         ],
       },
       camerasPlugs: {
@@ -359,10 +359,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Beispiel: Reolink RLC-810A oder eine Amcrest PoE-Kamera (RTSP, Frigate-kompatibel); SONOFF- oder ThirdReality-Zigbee-Steckdosen.',
         ],
         affiliateLinks: [
-          { label: 'Reolink RLC-810A (4K PoE) bei Amazon.de', url: 'https://www.amazon.de/s?k=Reolink+RLC-810A', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
+          { label: 'Reolink RLC-810A (4K PoE)', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
           { label: 'Amcrest PoE-Kamera bei Amazon.de', url: 'https://www.amazon.de/s?k=Amcrest+PoE+camera', productName: 'Amcrest PoE camera', productCategory: 'Security camera' },
-          { label: 'SONOFF Zigbee-Steckdose bei Amazon.de', url: 'https://www.amazon.de/s?k=SONOFF+Zigbee+plug', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
-          { label: 'ThirdReality Zigbee-Steckdose bei Amazon.de', url: 'https://www.amazon.de/s?k=ThirdReality+Zigbee+plug', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'SONOFF Zigbee-Steckdose', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'ThirdReality Zigbee-Steckdose', url: 'https://thirdreality.com/product/smart-plug-gen2-with-energy-monitoring/', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
         ],
       },
       starterKit: {
@@ -522,9 +522,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ejemplo: Home Assistant Green (hub preconfigurado); añade un SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E) o el Home Assistant Connect ZBT-2 para Zigbee/Thread/Matter.',
         ],
         affiliateLinks: [
-          { label: 'Home Assistant Green en Amazon.es', url: 'https://www.amazon.es/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
-          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E) en Amazon.es', url: 'https://www.amazon.es/s?k=SONOFF+ZBDongle-E', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
-          { label: 'Home Assistant Connect ZBT-2 en Amazon.es', url: 'https://www.amazon.es/s?k=Home+Assistant+Connect+ZBT-2', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E)', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
+          { label: 'Home Assistant Connect ZBT-2', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
         ],
       },
       lighting: {
@@ -540,7 +540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Bombillas Zigbee Philips Hue en Amazon.es', url: 'https://www.amazon.es/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb' },
-          { label: 'Bombillas Zigbee IKEA TRÅDFRI en Amazon.es', url: 'https://www.amazon.es/s?k=IKEA+TRADFRI+bulb', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'Bombillas Zigbee IKEA TRÅDFRI', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
         ],
       },
       locksSensors: {
@@ -555,9 +555,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ejemplo: Yale Assure Lock (Z-Wave) para la cerradura; sensores Aqara P1 de movimiento y SONOFF SNZB-04P de puerta/ventana (Zigbee).',
         ],
         affiliateLinks: [
-          { label: 'Yale Assure Lock (Z-Wave) en Amazon.es', url: 'https://www.amazon.es/s?k=Yale+Assure+Lock+Z-Wave', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
-          { label: 'Sensor de movimiento Aqara P1 en Amazon.es', url: 'https://www.amazon.es/s?k=Aqara+P1+motion+sensor', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
-          { label: 'Sensor de puerta/ventana SONOFF SNZB-04P en Amazon.es', url: 'https://www.amazon.es/s?k=SONOFF+SNZB-04P', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
+          { label: 'Yale Assure Lock (Z-Wave)', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
+          { label: 'Sensor de movimiento Aqara P1', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
+          { label: 'Sensor de puerta/ventana SONOFF SNZB-04P', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
         ],
       },
       camerasPlugs: {
@@ -572,10 +572,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ejemplo: Reolink RLC-810A o una cámara PoE Amcrest (RTSP, compatible con Frigate); enchufes Zigbee SONOFF o ThirdReality.',
         ],
         affiliateLinks: [
-          { label: 'Reolink RLC-810A (4K PoE) en Amazon.es', url: 'https://www.amazon.es/s?k=Reolink+RLC-810A', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
+          { label: 'Reolink RLC-810A (4K PoE)', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
           { label: 'Cámara PoE Amcrest en Amazon.es', url: 'https://www.amazon.es/s?k=Amcrest+PoE+camera', productName: 'Amcrest PoE camera', productCategory: 'Security camera' },
-          { label: 'Enchufe Zigbee SONOFF en Amazon.es', url: 'https://www.amazon.es/s?k=SONOFF+Zigbee+plug', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
-          { label: 'Enchufe Zigbee ThirdReality en Amazon.es', url: 'https://www.amazon.es/s?k=ThirdReality+Zigbee+plug', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'Enchufe Zigbee SONOFF', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'Enchufe Zigbee ThirdReality', url: 'https://thirdreality.com/product/smart-plug-gen2-with-energy-monitoring/', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
         ],
       },
       starterKit: {
@@ -735,9 +735,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Exemple : Home Assistant Green (hub préassemblé) ; ajoutez un SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E) ou le Home Assistant Connect ZBT-2 pour Zigbee/Thread/Matter.',
         ],
         affiliateLinks: [
-          { label: 'Home Assistant Green sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
-          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=SONOFF+ZBDongle-E', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
-          { label: 'Home Assistant Connect ZBT-2 sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Home+Assistant+Connect+ZBT-2', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E)', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
+          { label: 'Home Assistant Connect ZBT-2', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
         ],
       },
       lighting: {
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Ampoules Zigbee Philips Hue sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb' },
-          { label: 'Ampoules Zigbee IKEA TRÅDFRI sur Amazon.fr', url: 'https://www.amazon.fr/s?k=IKEA+TRADFRI+bulb', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'Ampoules Zigbee IKEA TRÅDFRI', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
         ],
       },
       locksSensors: {
@@ -768,9 +768,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Exemple : Yale Assure Lock (Z-Wave) pour la serrure ; capteurs Aqara P1 de mouvement et SONOFF SNZB-04P de porte/fenêtre (Zigbee).',
         ],
         affiliateLinks: [
-          { label: 'Yale Assure Lock (Z-Wave) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Yale+Assure+Lock+Z-Wave', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
-          { label: 'Capteur de mouvement Aqara P1 sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Aqara+P1+motion+sensor', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
-          { label: 'Capteur de porte/fenêtre SONOFF SNZB-04P sur Amazon.fr', url: 'https://www.amazon.fr/s?k=SONOFF+SNZB-04P', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
+          { label: 'Yale Assure Lock (Z-Wave)', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
+          { label: 'Capteur de mouvement Aqara P1', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
+          { label: 'Capteur de porte/fenêtre SONOFF SNZB-04P', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
         ],
       },
       camerasPlugs: {
@@ -785,10 +785,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Exemple : Reolink RLC-810A ou une caméra PoE Amcrest (RTSP, compatible Frigate) ; prises Zigbee SONOFF ou ThirdReality.',
         ],
         affiliateLinks: [
-          { label: 'Reolink RLC-810A (4K PoE) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Reolink+RLC-810A', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
+          { label: 'Reolink RLC-810A (4K PoE)', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
           { label: 'Caméra PoE Amcrest sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Amcrest+PoE+camera', productName: 'Amcrest PoE camera', productCategory: 'Security camera' },
-          { label: 'Prise Zigbee SONOFF sur Amazon.fr', url: 'https://www.amazon.fr/s?k=SONOFF+Zigbee+plug', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
-          { label: 'Prise Zigbee ThirdReality sur Amazon.fr', url: 'https://www.amazon.fr/s?k=ThirdReality+Zigbee+plug', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'Prise Zigbee SONOFF', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'Prise Zigbee ThirdReality', url: 'https://thirdreality.com/product/smart-plug-gen2-with-energy-monitoring/', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
         ],
       },
       starterKit: {
@@ -948,9 +948,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '例：Home Assistant Green（完成品ハブ）；Zigbee/Thread/Matter には SONOFF Zigbee 3.0 USB Dongle Plus（ZBDongle-E）または Home Assistant Connect ZBT-2 を追加。',
         ],
         affiliateLinks: [
-          { label: 'Home Assistant Green をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
-          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus（ZBDongle-E）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=SONOFF+ZBDongle-E', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
-          { label: 'Home Assistant Connect ZBT-2 をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Home+Assistant+Connect+ZBT-2', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus（ZBDongle-E）', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
+          { label: 'Home Assistant Connect ZBT-2', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
         ],
       },
       lighting: {
@@ -966,7 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Philips Hue Zigbee 電球 をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb' },
-          { label: 'IKEA TRÅDFRI Zigbee 電球 をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=IKEA+TRADFRI+bulb', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'IKEA TRÅDFRI Zigbee 電球', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
         ],
       },
       locksSensors: {
@@ -981,9 +981,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '例：ロックには Yale Assure Lock（Z-Wave）；Aqara P1 人感センサーと SONOFF SNZB-04P ドア/窓センサー（Zigbee）。',
         ],
         affiliateLinks: [
-          { label: 'Yale Assure Lock（Z-Wave）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Yale+Assure+Lock+Z-Wave', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
-          { label: 'Aqara P1 人感センサー をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Aqara+P1+motion+sensor', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
-          { label: 'SONOFF SNZB-04P ドア/窓センサー をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=SONOFF+SNZB-04P', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
+          { label: 'Yale Assure Lock（Z-Wave）', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
+          { label: 'Aqara P1 人感センサー', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
+          { label: 'SONOFF SNZB-04P ドア/窓センサー', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
         ],
       },
       camerasPlugs: {
@@ -998,10 +998,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '例：Reolink RLC-810A または Amcrest PoE カメラ（RTSP、Frigate 対応）；SONOFF または ThirdReality の Zigbee プラグ。',
         ],
         affiliateLinks: [
-          { label: 'Reolink RLC-810A（4K PoE）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Reolink+RLC-810A', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
+          { label: 'Reolink RLC-810A（4K PoE）', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
           { label: 'Amcrest PoE カメラ をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Amcrest+PoE+camera', productName: 'Amcrest PoE camera', productCategory: 'Security camera' },
-          { label: 'SONOFF Zigbee プラグ をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=SONOFF+Zigbee+plug', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
-          { label: 'ThirdReality Zigbee プラグ をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=ThirdReality+Zigbee+plug', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'SONOFF Zigbee プラグ', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'ThirdReality Zigbee プラグ', url: 'https://thirdreality.com/product/smart-plug-gen2-with-energy-monitoring/', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
         ],
       },
       starterKit: {
@@ -1161,9 +1161,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Exemplo: Home Assistant Green (hub pré-montado); adicione um SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E) ou o Home Assistant Connect ZBT-2 para Zigbee/Thread/Matter.',
         ],
         affiliateLinks: [
-          { label: 'Home Assistant Green na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
-          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=SONOFF+ZBDongle-E', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
-          { label: 'Home Assistant Connect ZBT-2 na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Home+Assistant+Connect+ZBT-2', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E)', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
+          { label: 'Home Assistant Connect ZBT-2', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
         ],
       },
       lighting: {
@@ -1179,7 +1179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Lâmpadas Zigbee Philips Hue na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb' },
-          { label: 'Lâmpadas Zigbee IKEA TRÅDFRI na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=IKEA+TRADFRI+bulb', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'Lâmpadas Zigbee IKEA TRÅDFRI', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
         ],
       },
       locksSensors: {
@@ -1194,9 +1194,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Exemplo: Yale Assure Lock (Z-Wave) para a fechadura; sensores Aqara P1 de movimento e SONOFF SNZB-04P de porta/janela (Zigbee).',
         ],
         affiliateLinks: [
-          { label: 'Yale Assure Lock (Z-Wave) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Yale+Assure+Lock+Z-Wave', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
-          { label: 'Sensor de movimento Aqara P1 na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Aqara+P1+motion+sensor', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
-          { label: 'Sensor de porta/janela SONOFF SNZB-04P na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=SONOFF+SNZB-04P', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
+          { label: 'Yale Assure Lock (Z-Wave)', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
+          { label: 'Sensor de movimento Aqara P1', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
+          { label: 'Sensor de porta/janela SONOFF SNZB-04P', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
         ],
       },
       camerasPlugs: {
@@ -1211,10 +1211,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Exemplo: Reolink RLC-810A ou uma câmera PoE Amcrest (RTSP, compatível com Frigate); tomadas Zigbee SONOFF ou ThirdReality.',
         ],
         affiliateLinks: [
-          { label: 'Reolink RLC-810A (4K PoE) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Reolink+RLC-810A', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
+          { label: 'Reolink RLC-810A (4K PoE)', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
           { label: 'Câmera PoE Amcrest na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Amcrest+PoE+camera', productName: 'Amcrest PoE camera', productCategory: 'Security camera' },
-          { label: 'Tomada Zigbee SONOFF na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=SONOFF+Zigbee+plug', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
-          { label: 'Tomada Zigbee ThirdReality na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=ThirdReality+Zigbee+plug', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'Tomada Zigbee SONOFF', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'Tomada Zigbee ThirdReality', url: 'https://thirdreality.com/product/smart-plug-gen2-with-energy-monitoring/', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
         ],
       },
       starterKit: {
@@ -1374,9 +1374,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '示例：Home Assistant Green（成品中枢）；为 Zigbee/Thread/Matter 添加 SONOFF Zigbee 3.0 USB Dongle Plus（ZBDongle-E）或 Home Assistant Connect ZBT-2。',
         ],
         affiliateLinks: [
-          { label: 'Home Assistant Green 在 Amazon 查看', url: 'https://www.amazon.com/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
-          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus（ZBDongle-E）在 Amazon 查看', url: 'https://www.amazon.com/s?k=SONOFF+ZBDongle-E', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
-          { label: 'Home Assistant Connect ZBT-2 在 Amazon 查看', url: 'https://www.amazon.com/s?k=Home+Assistant+Connect+ZBT-2', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus（ZBDongle-E）', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
+          { label: 'Home Assistant Connect ZBT-2', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
         ],
       },
       lighting: {
@@ -1392,7 +1392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Philips Hue Zigbee 灯泡 在 Amazon 查看', url: 'https://www.amazon.com/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb' },
-          { label: 'IKEA TRÅDFRI Zigbee 灯泡 在 Amazon 查看', url: 'https://www.amazon.com/s?k=IKEA+TRADFRI+bulb', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'IKEA TRÅDFRI Zigbee 灯泡', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
         ],
       },
       locksSensors: {
@@ -1407,9 +1407,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '示例：门锁用 Yale Assure Lock（Z-Wave）；Aqara P1 人体传感器和 SONOFF SNZB-04P 门窗传感器（Zigbee）。',
         ],
         affiliateLinks: [
-          { label: 'Yale Assure Lock（Z-Wave）在 Amazon 查看', url: 'https://www.amazon.com/s?k=Yale+Assure+Lock+Z-Wave', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
-          { label: 'Aqara P1 人体传感器 在 Amazon 查看', url: 'https://www.amazon.com/s?k=Aqara+P1+motion+sensor', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
-          { label: 'SONOFF SNZB-04P 门窗传感器 在 Amazon 查看', url: 'https://www.amazon.com/s?k=SONOFF+SNZB-04P', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
+          { label: 'Yale Assure Lock（Z-Wave）', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
+          { label: 'Aqara P1 人体传感器', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
+          { label: 'SONOFF SNZB-04P 门窗传感器', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
         ],
       },
       camerasPlugs: {
@@ -1424,10 +1424,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '示例：Reolink RLC-810A 或 Amcrest PoE 摄像头（RTSP，兼容 Frigate）；SONOFF 或 ThirdReality 的 Zigbee 智能插座。',
         ],
         affiliateLinks: [
-          { label: 'Reolink RLC-810A（4K PoE）在 Amazon 查看', url: 'https://www.amazon.com/s?k=Reolink+RLC-810A', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
+          { label: 'Reolink RLC-810A（4K PoE）', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
           { label: 'Amcrest PoE 摄像头 在 Amazon 查看', url: 'https://www.amazon.com/s?k=Amcrest+PoE+camera', productName: 'Amcrest PoE camera', productCategory: 'Security camera' },
-          { label: 'SONOFF Zigbee 智能插座 在 Amazon 查看', url: 'https://www.amazon.com/s?k=SONOFF+Zigbee+plug', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
-          { label: 'ThirdReality Zigbee 智能插座 在 Amazon 查看', url: 'https://www.amazon.com/s?k=ThirdReality+Zigbee+plug', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'SONOFF Zigbee 智能插座', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'ThirdReality Zigbee 智能插座', url: 'https://thirdreality.com/product/smart-plug-gen2-with-energy-monitoring/', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
         ],
       },
       starterKit: {

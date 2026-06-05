@@ -95,8 +95,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Choose a Pi if you want basics at low cost and power. Example: Raspberry Pi 5 (8GB), or the pre-built Home Assistant Green appliance.',
         ],
         affiliateLinks: [
-          { label: 'Raspberry Pi 5 (8GB) on Amazon', url: 'https://www.amazon.com/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
-          { label: 'Home Assistant Green on Amazon', url: 'https://www.amazon.com/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'Raspberry Pi 5 (8GB)', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -110,8 +110,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'For specific picks, see [best mini PCs for Home Assistant + local AI](/smart-home/best-mini-pc-home-assistant-local-ai) and the cross-cluster [best mini PCs for local LLMs](/local-llms/best-mini-pcs-local-llm). Example: Beelink SER8 (Ryzen 7 8845HS) for a 7B model, or Beelink EQ14 (Intel N150) for a low-power build.',
         ],
         affiliateLinks: [
-          { label: 'Beelink SER8 (Ryzen 7 8845HS) on Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
-          { label: 'Beelink EQ14 (Intel N150) on Amazon', url: 'https://www.amazon.com/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Ryzen 7 8845HS)', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Intel N150)', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -125,9 +125,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'LLM inference on a NAS depends on its hardware — many lack a capable GPU. Example: Synology DS925+ or DS225+; UGREEN NASync models ship a built-in local LLM option.',
         ],
         affiliateLinks: [
-          { label: 'Synology DS925+ on Amazon', url: 'https://www.amazon.com/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
-          { label: 'Synology DS225+ on Amazon', url: 'https://www.amazon.com/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
-          { label: 'UGREEN NASync on Amazon', url: 'https://www.amazon.com/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
+          { label: 'Synology DS925+', url: 'https://www.synology.com/en-us/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+', url: 'https://www.synology.com/en-us/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -295,8 +295,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wählen Sie einen Pi, wenn Sie Grundlagen bei niedrigen Kosten und Stromverbrauch wollen. Beispiel: Raspberry Pi 5 (8GB) oder das vorkonfigurierte Home Assistant Green.',
         ],
         affiliateLinks: [
-          { label: 'Raspberry Pi 5 (8GB) bei Amazon.de', url: 'https://www.amazon.de/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
-          { label: 'Home Assistant Green bei Amazon.de', url: 'https://www.amazon.de/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'Raspberry Pi 5 (8GB)', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -310,8 +310,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Für konkrete Empfehlungen siehe [beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) und clusterübergreifend [beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm). Beispiel: Beelink SER8 (Ryzen 7 8845HS) für ein 7B-Modell oder Beelink EQ14 (Intel N150) für einen stromsparenden Aufbau.',
         ],
         affiliateLinks: [
-          { label: 'Beelink SER8 (Ryzen 7 8845HS) bei Amazon.de', url: 'https://www.amazon.de/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
-          { label: 'Beelink EQ14 (Intel N150) bei Amazon.de', url: 'https://www.amazon.de/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Ryzen 7 8845HS)', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Intel N150)', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -325,9 +325,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'LLM-Inferenz auf einem NAS hängt von seiner Hardware ab – vielen fehlt eine leistungsfähige GPU. Beispiel: Synology DS925+ oder DS225+; UGREEN-NASync-Modelle bieten ein integriertes lokales LLM.',
         ],
         affiliateLinks: [
-          { label: 'Synology DS925+ bei Amazon.de', url: 'https://www.amazon.de/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
-          { label: 'Synology DS225+ bei Amazon.de', url: 'https://www.amazon.de/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
-          { label: 'UGREEN NASync bei Amazon.de', url: 'https://www.amazon.de/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
+          { label: 'Synology DS925+', url: 'https://www.synology.com/en-us/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+', url: 'https://www.synology.com/en-us/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -495,8 +495,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Elige una Pi si quieres lo básico con bajo coste y consumo. Ejemplo: Raspberry Pi 5 (8GB) o el equipo preconfigurado Home Assistant Green.',
         ],
         affiliateLinks: [
-          { label: 'Raspberry Pi 5 (8GB) en Amazon.es', url: 'https://www.amazon.es/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
-          { label: 'Home Assistant Green en Amazon.es', url: 'https://www.amazon.es/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'Raspberry Pi 5 (8GB)', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -510,8 +510,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para opciones concretas, consulta [mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) y, entre clústeres, [mejores mini PC para LLM locales](/es/local-llms/best-mini-pcs-local-llm). Ejemplo: Beelink SER8 (Ryzen 7 8845HS) para un modelo 7B, o Beelink EQ14 (Intel N150) para un equipo de bajo consumo.',
         ],
         affiliateLinks: [
-          { label: 'Beelink SER8 (Ryzen 7 8845HS) en Amazon.es', url: 'https://www.amazon.es/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
-          { label: 'Beelink EQ14 (Intel N150) en Amazon.es', url: 'https://www.amazon.es/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Ryzen 7 8845HS)', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Intel N150)', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -525,9 +525,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La inferencia de LLM en un NAS depende de su hardware: muchos carecen de una GPU capaz. Ejemplo: Synology DS925+ o DS225+; los modelos UGREEN NASync incluyen una opción de LLM local integrada.',
         ],
         affiliateLinks: [
-          { label: 'Synology DS925+ en Amazon.es', url: 'https://www.amazon.es/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
-          { label: 'Synology DS225+ en Amazon.es', url: 'https://www.amazon.es/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
-          { label: 'UGREEN NASync en Amazon.es', url: 'https://www.amazon.es/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
+          { label: 'Synology DS925+', url: 'https://www.synology.com/en-us/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+', url: 'https://www.synology.com/en-us/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -695,8 +695,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Choisissez une Pi si vous voulez les bases à faible coût et faible consommation. Exemple : Raspberry Pi 5 (8 Go) ou l\'appareil préconfiguré Home Assistant Green.',
         ],
         affiliateLinks: [
-          { label: 'Raspberry Pi 5 (8 Go) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
-          { label: 'Home Assistant Green sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'Raspberry Pi 5 (8 Go)', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -710,8 +710,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pour des choix précis, voir [meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) et, inter-clusters, [meilleurs mini-PC pour LLM locaux](/fr/local-llms/best-mini-pcs-local-llm). Exemple : Beelink SER8 (Ryzen 7 8845HS) pour un modèle 7B, ou Beelink EQ14 (Intel N150) pour un montage basse consommation.',
         ],
         affiliateLinks: [
-          { label: 'Beelink SER8 (Ryzen 7 8845HS) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
-          { label: 'Beelink EQ14 (Intel N150) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Ryzen 7 8845HS)', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Intel N150)', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -725,9 +725,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'L\'inférence de LLM sur un NAS dépend de son matériel — beaucoup n\'ont pas de GPU capable. Exemple : Synology DS925+ ou DS225+ ; les modèles UGREEN NASync intègrent une option de LLM local.',
         ],
         affiliateLinks: [
-          { label: 'Synology DS925+ sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
-          { label: 'Synology DS225+ sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
-          { label: 'UGREEN NASync sur Amazon.fr', url: 'https://www.amazon.fr/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
+          { label: 'Synology DS925+', url: 'https://www.synology.com/en-us/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+', url: 'https://www.synology.com/en-us/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -895,8 +895,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '低コスト・低消費電力で基本が欲しいなら Pi を選びましょう。例：Raspberry Pi 5（8GB）、または完成品の Home Assistant Green。',
         ],
         affiliateLinks: [
-          { label: 'Raspberry Pi 5（8GB）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
-          { label: 'Home Assistant Green をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'Raspberry Pi 5（8GB）', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -910,8 +910,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '具体的な候補は[Home Assistant＋ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai)、クラスター横断で[ローカルLLMに最適なミニPC](/ja/local-llms/best-mini-pcs-local-llm)を参照。例：7B モデルには Beelink SER8（Ryzen 7 8845HS）、低消費電力構成には Beelink EQ14（Intel N150）。',
         ],
         affiliateLinks: [
-          { label: 'Beelink SER8（Ryzen 7 8845HS）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
-          { label: 'Beelink EQ14（Intel N150）をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8（Ryzen 7 8845HS）', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14（Intel N150）', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -925,9 +925,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NAS 上の LLM 推論はそのハードウェア次第——多くは高性能な GPU を欠きます。例：Synology DS925+ または DS225+；UGREEN NASync モデルはローカル LLM を内蔵します。',
         ],
         affiliateLinks: [
-          { label: 'Synology DS925+ をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
-          { label: 'Synology DS225+ をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
-          { label: 'UGREEN NASync をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
+          { label: 'Synology DS925+', url: 'https://www.synology.com/en-us/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+', url: 'https://www.synology.com/en-us/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -1095,8 +1095,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Escolha uma Pi se você quer o básico com baixo custo e consumo. Exemplo: Raspberry Pi 5 (8GB) ou o aparelho pré-montado Home Assistant Green.',
         ],
         affiliateLinks: [
-          { label: 'Raspberry Pi 5 (8GB) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
-          { label: 'Home Assistant Green na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'Raspberry Pi 5 (8GB)', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -1110,8 +1110,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para escolhas específicas, veja [melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) e, entre clusters, [melhores mini PCs para LLMs locais](/pt/local-llms/best-mini-pcs-local-llm). Exemplo: Beelink SER8 (Ryzen 7 8845HS) para um modelo 7B, ou Beelink EQ14 (Intel N150) para uma montagem de baixo consumo.',
         ],
         affiliateLinks: [
-          { label: 'Beelink SER8 (Ryzen 7 8845HS) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
-          { label: 'Beelink EQ14 (Intel N150) na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Ryzen 7 8845HS)', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Intel N150)', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -1125,9 +1125,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A inferência de LLM em um NAS depende do hardware dele — muitos não têm uma GPU capaz. Exemplo: Synology DS925+ ou DS225+; os modelos UGREEN NASync trazem uma opção de LLM local integrada.',
         ],
         affiliateLinks: [
-          { label: 'Synology DS925+ na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
-          { label: 'Synology DS225+ na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
-          { label: 'UGREEN NASync na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
+          { label: 'Synology DS925+', url: 'https://www.synology.com/en-us/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+', url: 'https://www.synology.com/en-us/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
@@ -1295,8 +1295,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '若你想以低成本、低功耗实现基础功能，就选 Pi。示例：Raspberry Pi 5（8GB），或预装成品 Home Assistant Green。',
         ],
         affiliateLinks: [
-          { label: 'Raspberry Pi 5（8GB）在 Amazon 查看', url: 'https://www.amazon.com/s?k=Raspberry+Pi+5+8GB', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
-          { label: 'Home Assistant Green 在 Amazon 查看', url: 'https://www.amazon.com/s?k=Home+Assistant+Green', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'Raspberry Pi 5（8GB）', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
         ],
       },
       miniPc: {
@@ -1310,8 +1310,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '具体选择参见[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai)，以及跨集群的[本地 LLM 的最佳迷你 PC](/zh/local-llms/best-mini-pcs-local-llm)。示例：7B 模型用 Beelink SER8（Ryzen 7 8845HS），低功耗搭建用 Beelink EQ14（Intel N150）。',
         ],
         affiliateLinks: [
-          { label: 'Beelink SER8（Ryzen 7 8845HS）在 Amazon 查看', url: 'https://www.amazon.com/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
-          { label: 'Beelink EQ14（Intel N150）在 Amazon 查看', url: 'https://www.amazon.com/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8（Ryzen 7 8845HS）', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14（Intel N150）', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
         ],
       },
       nas: {
@@ -1325,9 +1325,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NAS 上的 LLM 推理取决于其硬件——许多缺少强力 GPU。示例：Synology DS925+ 或 DS225+；UGREEN NASync 机型内置本地 LLM 选项。',
         ],
         affiliateLinks: [
-          { label: 'Synology DS925+ 在 Amazon 查看', url: 'https://www.amazon.com/s?k=Synology+DS925', productName: 'Synology DS925+', productCategory: 'NAS' },
-          { label: 'Synology DS225+ 在 Amazon 查看', url: 'https://www.amazon.com/s?k=Synology+DS225', productName: 'Synology DS225+', productCategory: 'NAS' },
-          { label: 'UGREEN NASync 在 Amazon 查看', url: 'https://www.amazon.com/s?k=UGREEN+NASync', productName: 'UGREEN NASync', productCategory: 'NAS' },
+          { label: 'Synology DS925+', url: 'https://www.synology.com/en-us/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+', url: 'https://www.synology.com/en-us/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS' },
         ],
       },
       server: {
