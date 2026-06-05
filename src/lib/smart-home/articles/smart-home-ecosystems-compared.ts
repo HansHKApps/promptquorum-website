@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Smart Home Ecosystems Compared (2026): Alexa vs Google vs Apple vs HA',
-    seoTitle: 'Smart Home Ecosystems Compared (2026)',
+    seoTitle: 'Smart Home Platforms 2026: Alexa, Google Home, Apple, and HA',
     intro:
       'The four major smart home ecosystems — Amazon Alexa, Google Home, Apple Home, and Home Assistant — differ most on privacy and local control. This comparison covers device support, privacy, local control, voice, cost, and lock-in, and recommends a platform by user type, with Home Assistant positioned as the local and private champion.',
     metaDescription:
@@ -199,11 +199,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Smart-Home-Ökosysteme im Vergleich (2026): Alexa, Google, Apple, HA',
-    seoTitle: 'Smart-Home-Ökosysteme im Vergleich (2026)',
+    seoTitle: 'Smart-Home-Ökosysteme 2026: Alexa, Google Home, Apple, HA',
     intro:
       'Die vier großen Smart-Home-Ökosysteme – Amazon Alexa, Google Home, Apple Home und Home Assistant – unterscheiden sich am stärksten bei Datenschutz und lokaler Steuerung. Dieser Vergleich behandelt Geräteunterstützung, Datenschutz, lokale Steuerung, Sprache, Kosten und Lock-in und empfiehlt eine Plattform je nach Nutzertyp, wobei Home Assistant als lokaler und privater Champion positioniert wird.',
     metaDescription:
-      'Alexa vs Google Home vs Apple Home vs Home Assistant: Geräteunterstützung, Datenschutz, lokale Steuerung, Sprache, Kosten und Lock-in im Vergleich. Wahl nach Nutzertyp.',
+      'Alexa, Google Home, Apple Home und Home Assistant im Vergleich: Datenschutz, lokale Steuerung, Kosten und Lock-in. Plattform nach Nutzertyp wählen.',
     twitterDescription:
       'Alexa vs Google vs Apple Home vs Home Assistant: Datenschutz, lokale Steuerung, Geräte, Sprache, Kosten und Lock-in im Vergleich. Welche Plattform passt zu Ihnen?',
     readTime: '9 Min. Lesezeit',
@@ -359,7 +359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Smart-Home-Ökosysteme im Vergleich (2026): Alexa, Google, Apple, HA',
-      description: 'Alexa vs Google Home vs Apple Home vs Home Assistant: Geräteunterstützung, Datenschutz, lokale Steuerung, Sprache, Kosten und Lock-in im Vergleich. Wahl nach Nutzertyp.',
+      description: 'Alexa, Google Home, Apple Home und Home Assistant im Vergleich: Datenschutz, lokale Steuerung, Kosten und Lock-in. Plattform nach Nutzertyp wählen.',
       url: 'https://www.promptquorum.com/de/smart-home/smart-home-ecosystems-compared',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Ecosistemas de Smart Home Comparados (2026): Alexa, Google, Apple, HA',
-    seoTitle: 'Ecosistemas de Smart Home Comparados (2026)',
+    seoTitle: 'Ecosistemas de Smart Home 2026: Alexa, Google, Apple, HA',
     intro:
       'Los cuatro grandes ecosistemas de smart home —Amazon Alexa, Google Home, Apple Home y Home Assistant— se diferencian sobre todo en privacidad y control local. Esta comparación cubre compatibilidad de dispositivos, privacidad, control local, voz, coste y dependencia, y recomienda una plataforma por tipo de usuario, con Home Assistant posicionado como el campeón local y privado.',
     metaDescription:
@@ -579,11 +579,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Écosystèmes de Maison Connectée Comparés (2026) : Alexa, Google, Apple, HA',
-    seoTitle: 'Écosystèmes de Maison Connectée Comparés (2026)',
+    seoTitle: 'Écosystèmes Maison Connectée 2026 : Alexa, Google, Apple, HA',
     intro:
       'Les quatre grands écosystèmes de maison connectée — Amazon Alexa, Google Home, Apple Home et Home Assistant — diffèrent surtout par la confidentialité et le contrôle local. Cette comparaison couvre la prise en charge des appareils, la confidentialité, le contrôle local, la voix, le coût et le verrouillage, et recommande une plateforme par type d\'utilisateur, en positionnant Home Assistant comme le champion local et privé.',
     metaDescription:
-      'Alexa vs Google Home vs Apple Home vs Home Assistant : prise en charge, confidentialité, contrôle local, voix, coût et verrouillage comparés. Choix par type d\'utilisateur.',
+      'Alexa, Google Home, Apple Home et Home Assistant comparés : confidentialité, contrôle local, appareils, coût et verrouillage. Choisissez selon votre priorité.',
     twitterDescription:
       'Alexa vs Google vs Apple Home vs Home Assistant : confidentialité, contrôle local, appareils, voix, coût et verrouillage comparés. Quelle plateforme vous convient ?',
     readTime: '9 min de lecture',
@@ -739,7 +739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Écosystèmes de Maison Connectée Comparés (2026) : Alexa, Google, Apple, HA',
-      description: 'Alexa vs Google Home vs Apple Home vs Home Assistant : prise en charge, confidentialité, contrôle local, voix, coût et verrouillage comparés. Choix par type d\'utilisateur.',
+      description: 'Alexa, Google Home, Apple Home et Home Assistant comparés : confidentialité, contrôle local, appareils, coût et verrouillage. Choisissez selon votre priorité.',
       url: 'https://www.promptquorum.com/fr/smart-home/smart-home-ecosystems-compared',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'スマートホームのエコシステム比較（2026）：Alexa・Google・Apple・HA',
-    seoTitle: 'スマートホームのエコシステム比較（2026）',
+    seoTitle: 'スマートホームのエコシステム比較（2026年版）：4大プラットフォーム',
     intro:
       '4大スマートホームエコシステム——Amazon Alexa、Google Home、Apple Home、Home Assistant——は、プライバシーとローカル制御で最も大きく異なります。本比較では機器対応、プライバシー、ローカル制御、音声、コスト、ロックインを扱い、ユーザータイプ別にプラットフォームを推奨し、Home Assistant をローカルかつプライベートの王者として位置づけます。',
     metaDescription:
@@ -963,7 +963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Os quatro grandes ecossistemas de casa inteligente — Amazon Alexa, Google Home, Apple Home e Home Assistant — diferem mais em privacidade e controle local. Esta comparação cobre suporte a dispositivos, privacidade, controle local, voz, custo e dependência, e recomenda uma plataforma por tipo de usuário, posicionando o Home Assistant como o campeão local e privado.',
     metaDescription:
-      'Alexa vs Google Home vs Apple Home vs Home Assistant: suporte a dispositivos, privacidade, controle local, voz, custo e dependência comparados. Escolha por tipo de usuário.',
+      'Alexa, Google Home, Apple Home e Home Assistant comparados: privacidade, controle local, dispositivos, custo e dependência. Escolha por tipo de usuário.',
     twitterDescription:
       'Alexa vs Google vs Apple Home vs Home Assistant: privacidade, controle local, dispositivos, voz, custo e dependência comparados. Qual plataforma combina com você?',
     readTime: '9 min de leitura',
@@ -1119,7 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Ecossistemas de Casa Inteligente Comparados (2026): Alexa, Google, Apple, HA',
-      description: 'Alexa vs Google Home vs Apple Home vs Home Assistant: suporte a dispositivos, privacidade, controle local, voz, custo e dependência comparados. Escolha por tipo de usuário.',
+      description: 'Alexa, Google Home, Apple Home e Home Assistant comparados: privacidade, controle local, dispositivos, custo e dependência. Escolha por tipo de usuário.',
       url: 'https://www.promptquorum.com/pt/smart-home/smart-home-ecosystems-compared',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1149,7 +1149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: '智能家居生态系统对比（2026）：Alexa、Google、Apple、HA',
-    seoTitle: '智能家居生态系统对比（2026）',
+    seoTitle: '智能家居生态系统2026年度深度对比：隐私保护、本地控制与锁定分析',
     intro:
       '四大智能家居生态系统——Amazon Alexa、Google Home、Apple Home 和 Home Assistant——最大的差异在于隐私和本地控制。本对比涵盖设备支持、隐私、本地控制、语音、成本和锁定，并按用户类型推荐平台，将 Home Assistant 定位为本地与私密的冠军。',
     metaDescription:

@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Die beste Hardware für ein lokales Smart Home hängt davon ab, ob Sie auch ein lokales LLM betreiben wollen: Ein Raspberry Pi bewältigt die Grundlagen, während ein Mini-PC die bessere Wahl ist, wenn Sie Home Assistant plus lokale KI auf einem Gerät wollen. Dieser Leitfaden vergleicht Pi, Mini-PC, NAS und dedizierten Server und hilft bei der Wahl zwischen nur-HA und HA-plus-KI – mit Verweis nach außen für VRAM-Details.',
     metaDescription:
-      'Beste Hardware für ein lokales Smart Home plus lokale KI 2026: Raspberry Pi vs Mini-PC vs NAS vs Server. Für Home Assistant allein oder HA plus ein lokales LLM wählen.',
+      'Beste Hardware für lokales Smart Home + KI 2026: Raspberry Pi vs Mini-PC vs NAS vs Server — für Home Assistant allein oder HA plus lokales LLM.',
     twitterDescription:
       'Hardware für ein lokales Smart Home: Pi vs Mini-PC vs NAS vs Server. Pi für Grundlagen, Mini-PC, wenn Sie auch ein lokales LLM betreiben wollen. 2026-Leitfaden.',
     readTime: '9 Min. Lesezeit',
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Beste Hardware für ein lokales Smart Home + lokale KI (2026)',
-      description: 'Beste Hardware für ein lokales Smart Home plus lokale KI 2026: Raspberry Pi vs Mini-PC vs NAS vs Server. Für Home Assistant allein oder HA plus ein lokales LLM wählen.',
+      description: 'Beste Hardware für lokales Smart Home + KI 2026: Raspberry Pi vs Mini-PC vs NAS vs Server — für Home Assistant allein oder HA plus lokales LLM.',
       url: 'https://www.promptquorum.com/de/smart-home/best-hardware-for-local-smart-home',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Le meilleur matériel pour une maison connectée locale dépend de si vous voulez aussi exécuter un LLM local : une Raspberry Pi gère les bases, tandis qu\'un mini-PC est le meilleur choix si vous voulez Home Assistant plus l\'IA locale sur une seule machine. Ce guide compare Pi, mini-PC, NAS et serveur dédié, et vous aide à choisir entre HA-seul et HA-plus-IA, avec un lien vers l\'extérieur pour la profondeur de VRAM.',
     metaDescription:
-      'Meilleur matériel pour une maison connectée locale plus IA locale en 2026 : Raspberry Pi vs mini-PC vs NAS vs serveur. Choisir pour Home Assistant seul ou HA plus un LLM local.',
+      'Meilleur matériel maison connectée locale + IA 2026 : Raspberry Pi vs mini-PC vs NAS vs serveur — Home Assistant seul ou HA plus LLM local.',
     twitterDescription:
       'Matériel pour une maison connectée locale : Pi vs mini-PC vs NAS vs serveur. Pi pour les bases, mini-PC si vous voulez aussi un LLM local. Guide 2026.',
     readTime: '9 min de lecture',
@@ -723,7 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Meilleur Matériel pour une Maison Connectée Locale + IA Locale (2026)',
-      description: 'Meilleur matériel pour une maison connectée locale plus IA locale en 2026 : Raspberry Pi vs mini-PC vs NAS vs serveur. Choisir pour Home Assistant seul ou HA plus un LLM local.',
+      description: 'Meilleur matériel maison connectée locale + IA 2026 : Raspberry Pi vs mini-PC vs NAS vs serveur — Home Assistant seul ou HA plus LLM local.',
       url: 'https://www.promptquorum.com/fr/smart-home/best-hardware-for-local-smart-home',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルスマートホームに最適なハードウェアは、ローカルLLMも動かしたいかどうかで決まります：Raspberry Pi は基本を担い、Home Assistant とローカルAIを一台で動かしたいならミニPCがより良い選択です。本ガイドは Pi、ミニPC、NAS、専用サーバーを比較し、HAのみか HA＋AI かの選択を助けます——VRAM の詳細は外部リンクへ。',
     metaDescription:
-      'ローカルスマートホーム＋ローカルAIに最適なハードウェア（2026）：Raspberry Pi 対 ミニPC 対 NAS 対 サーバー。Home Assistant 単体か、HA＋ローカルLLMかで選ぶ。',
+      'ローカル smart home と AI に最適な hardware（2026）：Raspberry Pi 対 mini PC 対 NAS 対 server。HA 単体か HA+local LLM か。',
     twitterDescription:
       'ローカルスマートホームのハードウェア：Pi 対 ミニPC 対 NAS 対 サーバー。基本は Pi、ローカルLLMも動かすならミニPC。2026年ガイド。',
     readTime: '9分で読める',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'ローカルスマートホーム + ローカルAIに最適なハードウェア（2026）',
-      description: 'ローカルスマートホーム＋ローカルAIに最適なハードウェア（2026）：Raspberry Pi 対 ミニPC 対 NAS 対 サーバー。Home Assistant 単体か、HA＋ローカルLLMかで選ぶ。',
+      description: 'ローカル smart home と AI に最適な hardware（2026）：Raspberry Pi 対 mini PC 対 NAS 対 server。HA 単体か HA+local LLM か。',
       url: 'https://www.promptquorum.com/ja/smart-home/best-hardware-for-local-smart-home',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -943,7 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O melhor hardware para uma casa inteligente local depende de se você também quer rodar um LLM local: uma Raspberry Pi dá conta do básico, enquanto um mini PC é a melhor escolha se você quer Home Assistant mais IA local em um único equipamento. Este guia compara Pi, mini PC, NAS e servidor dedicado, e ajuda a escolher entre só-HA e HA-mais-IA, com link externo para a profundidade de VRAM.',
     metaDescription:
-      'Melhor hardware para uma casa inteligente local mais IA local em 2026: Raspberry Pi vs mini PC vs NAS vs servidor. Escolha para Home Assistant sozinho ou HA mais um LLM local.',
+      'Melhor hardware para casa inteligente local + IA 2026: Raspberry Pi vs mini-PC vs NAS vs servidor. Para Home Assistant ou HA + LLM local.',
     twitterDescription:
       'Hardware para uma casa inteligente local: Pi vs mini PC vs NAS vs servidor. Pi para o básico, mini PC se você também quer rodar um LLM local. Guia 2026.',
     readTime: '9 min de leitura',
@@ -1095,7 +1095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Melhor Hardware para uma Casa Inteligente Local + IA Local (2026)',
-      description: 'Melhor hardware para uma casa inteligente local mais IA local em 2026: Raspberry Pi vs mini PC vs NAS vs servidor. Escolha para Home Assistant sozinho ou HA mais um LLM local.',
+      description: 'Melhor hardware para casa inteligente local + IA 2026: Raspberry Pi vs mini-PC vs NAS vs servidor. Para Home Assistant ou HA + LLM local.',
       url: 'https://www.promptquorum.com/pt/smart-home/best-hardware-for-local-smart-home',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1129,7 +1129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '本地智能家居的最佳硬件取决于你是否还想运行本地 LLM：Raspberry Pi 能应付基础，而如果你想在一台设备上同时运行 Home Assistant 和本地 AI，迷你 PC 是更好的选择。本指南比较 Pi、迷你 PC、NAS 和专用服务器，并帮你在仅-HA 与 HA-加-AI 之间做选择——VRAM 的深入内容走外链。',
     metaDescription:
-      '2026 年本地智能家居加本地 AI 的最佳硬件：Raspberry Pi 对迷你 PC 对 NAS 对服务器。为单独的 Home Assistant 还是 HA 加本地 LLM 选择。',
+      '2026 年本地智能家居加 AI 的最佳硬件：Raspberry Pi 对迷你 PC 对 NAS 对服务器。HA 单用或 HA 加本地 LLM。',
     twitterDescription:
       '本地智能家居硬件：Pi 对迷你 PC 对 NAS 对服务器。基础用 Pi，若还想运行本地 LLM 就用迷你 PC。2026 指南。',
     readTime: '阅读约9分钟',
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '本地智能家居 + 本地 AI 的最佳硬件（2026）',
-      description: '2026 年本地智能家居加本地 AI 的最佳硬件：Raspberry Pi 对迷你 PC 对 NAS 对服务器。为单独的 Home Assistant 还是 HA 加本地 LLM 选择。',
+      description: '2026 年本地智能家居加 AI 的最佳硬件：Raspberry Pi 对迷你 PC 对 NAS 对服务器。HA 单用或 HA 加本地 LLM。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-hardware-for-local-smart-home',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

@@ -187,7 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Ein lokales Smart Home hält die gesamte Verarbeitung auf Ihrer eigenen Hardware zu Hause und unterstützt so Datenminimierung und Datenresidenz der DSGVO von Grund auf, weil kein Auftragsverarbeiter beteiligt ist. Dieser EU-Leitfaden erklärt, wie die DSGVO auf vernetzte Geräte anwendbar ist, wohin Cloud-Geräte Daten senden, wie lokale Verarbeitung Datenresidenz erreicht, und bietet eine Kauf-Checkliste für ein privates, DSGVO-freundliches Setup.',
     metaDescription:
-      'Ein DSGVO-freundliches privates Smart Home bauen: Datenresidenz, keine Cloud-Verarbeitung, lokale Sprache und KI. Ein EU-Leitfaden, um Smart-Home-Daten auf Ihrer Hardware zu halten.',
+      'DSGVO-freundliches privates Smart Home 2026: Datenresidenz, keine Cloud-Verarbeitung, lokale Sprache und KI. EU-Leitfaden für Datenschutz by Design.',
     twitterDescription:
       'Ein DSGVO-freundliches Smart Home hält die Verarbeitung lokal: Datenresidenz von Grund auf, kein Auftragsverarbeiter, lokale Sprache und KI. Ein EU-Leitfaden.',
     readTime: '8 Min. Lesezeit',
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Ein DSGVO-freundliches privates Smart Home bauen (EU, 2026)',
-      description: 'Ein DSGVO-freundliches privates Smart Home bauen: Datenresidenz, keine Cloud-Verarbeitung, lokale Sprache und KI. Ein EU-Leitfaden, um Smart-Home-Daten auf Ihrer Hardware zu halten.',
+      description: 'DSGVO-freundliches privates Smart Home 2026: Datenresidenz, keine Cloud-Verarbeitung, lokale Sprache und KI. EU-Leitfaden für Datenschutz by Design.',
       url: 'https://www.promptquorum.com/de/smart-home/private-smart-home-gdpr',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -365,7 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Un smart home local mantiene todo el procesamiento en tu propio hardware en casa, apoyando la minimización de datos y la residencia del RGPD por diseño porque no interviene ningún encargado del tratamiento externo. Esta guía centrada en la UE explica cómo se aplica el RGPD a los dispositivos conectados, a dónde envían datos los dispositivos en la nube, cómo el procesamiento local logra la residencia, y ofrece una lista de compra para una configuración privada y compatible con el RGPD.',
     metaDescription:
-      'Construye un smart home privado compatible con el RGPD: residencia de datos, sin procesamiento en la nube, voz e IA locales. Una guía UE para mantener los datos del hogar en tu hardware.',
+      'Smart home privado compatible con el RGPD 2026: residencia de datos, sin nube, voz e IA locales. Guía UE para datos del hogar siempre en tu hardware.',
     twitterDescription:
       'Un smart home compatible con el RGPD mantiene el procesamiento local: residencia de datos por diseño, sin encargado externo, voz e IA locales. Una guía UE.',
     readTime: '8 min de lectura',
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Construir un Smart Home Privado Compatible con el RGPD (UE, 2026)',
-      description: 'Construye un smart home privado compatible con el RGPD: residencia de datos, sin procesamiento en la nube, voz e IA locales. Una guía UE para mantener los datos del hogar en tu hardware.',
+      description: 'Smart home privado compatible con el RGPD 2026: residencia de datos, sin nube, voz e IA locales. Guía UE para datos del hogar siempre en tu hardware.',
       url: 'https://www.promptquorum.com/es/smart-home/private-smart-home-gdpr',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -539,7 +539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Une maison connectée locale garde tout le traitement sur votre propre matériel chez vous, soutenant la minimisation des données et la résidence du RGPD par conception car aucun sous-traitant externe n\'intervient. Ce guide axé sur l\'UE explique comment le RGPD s\'applique aux appareils connectés, où les appareils cloud envoient les données, comment le traitement local assure la résidence, et propose une liste d\'achat pour une configuration privée et conforme au RGPD.',
     metaDescription:
-      'Construire une maison connectée privée conforme au RGPD : résidence des données, pas de traitement cloud, voix et IA locales. Un guide UE pour garder les données du foyer sur votre matériel.',
+      'Maison connectée privée conforme au RGPD 2026 : résidence des données, zéro cloud, voix et IA locales. Guide UE pour garder les données du foyer chez vous.',
     twitterDescription:
       'Une maison connectée conforme au RGPD garde le traitement local : résidence des données par conception, pas de sous-traitant externe, voix et IA locales. Un guide UE.',
     readTime: '8 min de lecture',
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Construire une Maison Connectée Privée Conforme au RGPD (UE, 2026)',
-      description: 'Construire une maison connectée privée conforme au RGPD : résidence des données, pas de traitement cloud, voix et IA locales. Un guide UE pour garder les données du foyer sur votre matériel.',
+      description: 'Maison connectée privée conforme au RGPD 2026 : résidence des données, zéro cloud, voix et IA locales. Guide UE pour garder les données du foyer chez vous.',
       url: 'https://www.promptquorum.com/fr/smart-home/private-smart-home-gdpr',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -713,7 +713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルスマートホームは、すべての処理を自宅の自分のハードウェアに保ち、外部の処理者が関与しないため、GDPR のデータ最小化とデータレジデンシーを設計上サポートします。本 EU 向けガイドは、GDPR が接続機器にどう適用されるか、クラウド機器がどこへデータを送るか、ローカル処理がどうレジデンシーを実現するかを説明し、プライベートで GDPR に配慮した構成のための購入チェックリストを示します。',
     metaDescription:
-      'GDPR に配慮したプライベートなスマートホームを作る：データレジデンシー、クラウド処理なし、ローカル音声とAI。スマートホームのデータを自分のハードウェアに保つ EU ガイド。',
+      'GDPR 対応 private smart home 2026：data residency・cloud 処理なし・local 音声と AI。EU ガイド — データを自宅 hardware に保つ。',
     twitterDescription:
       'GDPR に配慮したスマートホームは処理をローカルに保ちます：設計上のデータレジデンシー、外部処理者なし、ローカル音声とAI。EU ガイド。',
     readTime: '8分で読める',
@@ -853,7 +853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'GDPR に配慮したプライベートなスマートホームを作る（EU・2026）',
-      description: 'GDPR に配慮したプライベートなスマートホームを作る：データレジデンシー、クラウド処理なし、ローカル音声とAI。スマートホームのデータを自分のハードウェアに保つ EU ガイド。',
+      description: 'GDPR 対応 private smart home 2026：data residency・cloud 処理なし・local 音声と AI。EU ガイド — データを自宅 hardware に保つ。',
       url: 'https://www.promptquorum.com/ja/smart-home/private-smart-home-gdpr',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -887,7 +887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Uma casa inteligente local mantém todo o processamento no seu próprio hardware em casa, apoiando a minimização de dados e a residência por design porque nenhum operador externo está envolvido. Este guia explica como o GDPR (na UE) e a LGPD (no Brasil) se aplicam a dispositivos conectados, para onde os dispositivos na nuvem enviam dados, como o processamento local atinge a residência, e oferece uma lista de compra para uma configuração privada e compatível.',
     metaDescription:
-      'Construa uma casa inteligente privada compatível com GDPR/LGPD: residência de dados, sem processamento na nuvem, voz e IA locais. Um guia para manter os dados do lar no seu hardware.',
+      'Smart home privada compatível com GDPR 2026: residência de dados, sem nuvem, voz e IA locais. Guia para manter dados do lar no seu hardware.',
     twitterDescription:
       'Uma casa inteligente compatível com GDPR/LGPD mantém o processamento local: residência de dados por design, sem operador externo, voz e IA locais.',
     readTime: '8 min de leitura',
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Construir uma Casa Inteligente Privada Compatível com GDPR/LGPD (2026)',
-      description: 'Construa uma casa inteligente privada compatível com GDPR/LGPD: residência de dados, sem processamento na nuvem, voz e IA locais. Um guia para manter os dados do lar no seu hardware.',
+      description: 'Smart home privada compatível com GDPR 2026: residência de dados, sem nuvem, voz e IA locais. Guia para manter dados do lar no seu hardware.',
       url: 'https://www.promptquorum.com/pt/smart-home/private-smart-home-gdpr',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '本地智能家居把全部处理保留在你自己家中的硬件上，因为没有外部处理方参与，从设计上支持 GDPR 的数据最小化与数据本地化。本面向欧盟的指南解释 GDPR 如何适用于联网设备、云端设备把数据发往何处、本地处理如何实现数据本地化，并提供一份用于私密、合规配置的购买清单。',
     metaDescription:
-      '构建符合 GDPR 的私密智能家居：数据本地化、无云端处理、本地语音与 AI。一份把联网家庭数据留在你硬件上的欧盟指南。',
+      '构建符合 GDPR 的私密智能家居 2026：data 本地化、无 cloud 处理、local 语音与 AI。EU 智能家居隐私指南。',
     twitterDescription:
       '符合 GDPR 的智能家居把处理保留在本地：从设计上实现数据本地化、无外部处理方、本地语音与 AI。一份欧盟指南。',
     readTime: '阅读约8分钟',
@@ -1201,7 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '构建符合 GDPR 的私密智能家居（欧盟，2026）',
-      description: '构建符合 GDPR 的私密智能家居：数据本地化、无云端处理、本地语音与 AI。一份把联网家庭数据留在你硬件上的欧盟指南。',
+      description: '构建符合 GDPR 的私密智能家居 2026：data 本地化、无 cloud 处理、local 语音与 AI。EU 智能家居隐私指南。',
       url: 'https://www.promptquorum.com/zh/smart-home/private-smart-home-gdpr',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

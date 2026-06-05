@@ -9,11 +9,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Best Mini PCs for Home Assistant + Local AI (2026)',
-    seoTitle: 'Best Mini PC for Home Assistant + AI (2026)',
+    seoTitle: 'Best Mini PC for Home Assistant + Local AI in 2026',
     intro:
       'The best mini PCs for running Home Assistant plus a local LLM on one box prioritise RAM and a capable integrated GPU or NPU. This buyer\'s guide explains what you need for HA plus AI on a single machine, compares the main mini PC classes, weighs budget against performance, and covers setup notes — cross-linking to the local-llms hardware guide for VRAM depth.',
     metaDescription:
-      'Best mini PCs for Home Assistant plus a local LLM in 2026: prioritise RAM and a capable iGPU/NPU. Classes compared, budget vs performance, and setup notes.',
+      'Home Assistant + local LLM on one mini PC in 2026: RAM and iGPU or NPU matter most. Budget N-series, Ryzen/Core i, and NPU options compared by workload.',
     twitterDescription:
       'Best mini PCs to run Home Assistant + a local LLM on one box: prioritise RAM and a capable iGPU/NPU. Classes compared, picks by budget.',
     readTime: '8 min read',
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Best Mini PCs for Home Assistant + Local AI (2026)',
-      description: 'Best mini PCs for Home Assistant plus a local LLM in 2026: prioritise RAM and a capable iGPU/NPU. Classes compared, budget vs performance, and setup notes.',
+      description: 'Home Assistant + local LLM on one mini PC in 2026: RAM and iGPU or NPU matter most. Budget N-series, Ryzen/Core i, and NPU options compared by workload.',
       url: 'https://www.promptquorum.com/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -185,11 +185,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Beste Mini-PCs für Home Assistant + lokale KI (2026)',
-    seoTitle: 'Bester Mini-PC für Home Assistant + KI (2026)',
+    seoTitle: 'Bester Mini-PC für Home Assistant + lokale KI 2026',
     intro:
       'Die besten Mini-PCs, um Home Assistant plus ein lokales LLM auf einem Gerät zu betreiben, priorisieren RAM und eine leistungsfähige integrierte GPU oder NPU. Diese Kaufberatung erklärt, was Sie für HA plus KI auf einer einzigen Maschine brauchen, vergleicht die wichtigsten Mini-PC-Klassen, wägt Budget gegen Leistung ab und behandelt Einrichtungshinweise – mit Querverweis auf den local-llms-Hardware-Leitfaden für VRAM-Tiefe.',
     metaDescription:
-      'Beste Mini-PCs für Home Assistant plus ein lokales LLM 2026: RAM und eine leistungsfähige iGPU/NPU priorisieren. Klassen im Vergleich, Budget vs Leistung und Einrichtungshinweise.',
+      'Mini-PC-Guide für Home Assistant + lokales LLM 2026: RAM und iGPU/NPU schlagen CPU-Takt. Drei Hardwareklassen verglichen — Budget, Mid-Range und NPU.',
     twitterDescription:
       'Beste Mini-PCs, um Home Assistant + ein lokales LLM auf einem Gerät zu betreiben: RAM und eine leistungsfähige iGPU/NPU priorisieren. Klassen im Vergleich, Empfehlungen nach Budget.',
     readTime: '8 Min. Lesezeit',
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Beste Mini-PCs für Home Assistant + lokale KI (2026)',
-      description: 'Beste Mini-PCs für Home Assistant plus ein lokales LLM 2026: RAM und eine leistungsfähige iGPU/NPU priorisieren. Klassen im Vergleich, Budget vs Leistung und Einrichtungshinweise.',
+      description: 'Mini-PC-Guide für Home Assistant + lokales LLM 2026: RAM und iGPU/NPU schlagen CPU-Takt. Drei Hardwareklassen verglichen — Budget, Mid-Range und NPU.',
       url: 'https://www.promptquorum.com/de/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -361,11 +361,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Mejores Mini PC para Home Assistant + IA Local (2026)',
-    seoTitle: 'Mejor Mini PC para Home Assistant + IA (2026)',
+    seoTitle: 'Mejor Mini PC para Home Assistant + IA Local en 2026',
     intro:
       'Los mejores mini PC para ejecutar Home Assistant más un LLM local en un solo equipo priorizan la RAM y una GPU integrada o NPU capaz. Esta guía de compra explica qué necesitas para HA más IA en una sola máquina, compara las principales clases de mini PC, sopesa presupuesto frente a rendimiento y cubre notas de configuración, con enlace cruzado a la guía de hardware de local-llms para la profundidad de VRAM.',
     metaDescription:
-      'Mejores mini PC para Home Assistant más un LLM local en 2026: prioriza la RAM y una iGPU/NPU capaz. Clases comparadas, presupuesto vs rendimiento y notas de configuración.',
+      'Guía de mini PC para Home Assistant + LLM local 2026: la RAM y la iGPU/NPU superan a la CPU. Tres clases comparadas: económica, gama media y con NPU.',
     twitterDescription:
       'Mejores mini PC para ejecutar Home Assistant + un LLM local en un equipo: prioriza la RAM y una iGPU/NPU capaz. Clases comparadas, opciones por presupuesto.',
     readTime: '8 min de lectura',
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Mejores Mini PC para Home Assistant + IA Local (2026)',
-      description: 'Mejores mini PC para Home Assistant más un LLM local en 2026: prioriza la RAM y una iGPU/NPU capaz. Clases comparadas, presupuesto vs rendimiento y notas de configuración.',
+      description: 'Guía de mini PC para Home Assistant + LLM local 2026: la RAM y la iGPU/NPU superan a la CPU. Tres clases comparadas: económica, gama media y con NPU.',
       url: 'https://www.promptquorum.com/es/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -537,11 +537,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Meilleurs Mini-PC pour Home Assistant + IA Locale (2026)',
-    seoTitle: 'Meilleur Mini-PC pour Home Assistant + IA (2026)',
+    seoTitle: 'Meilleur Mini-PC pour Home Assistant + IA Locale 2026',
     intro:
       'Les meilleurs mini-PC pour faire tourner Home Assistant plus un LLM local sur une seule machine priorisent la RAM et un GPU intégré ou NPU capable. Ce guide d\'achat explique ce qu\'il vous faut pour HA plus l\'IA sur une seule machine, compare les principales classes de mini-PC, pèse le budget face aux performances et couvre des notes de configuration — avec lien croisé vers le guide matériel de local-llms pour la profondeur de VRAM.',
     metaDescription:
-      'Meilleurs mini-PC pour Home Assistant plus un LLM local en 2026 : priorisez la RAM et un iGPU/NPU capable. Classes comparées, budget vs performances et notes de configuration.',
+      'Guide mini-PC pour Home Assistant + LLM local 2026 : RAM et iGPU/NPU surpassent le CPU. Trois classes comparées : entrée de gamme, milieu de gamme et NPU.',
     twitterDescription:
       'Meilleurs mini-PC pour faire tourner Home Assistant + un LLM local sur une machine : priorisez la RAM et un iGPU/NPU capable. Classes comparées, choix par budget.',
     readTime: '8 min de lecture',
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Meilleurs Mini-PC pour Home Assistant + IA Locale (2026)',
-      description: 'Meilleurs mini-PC pour Home Assistant plus un LLM local en 2026 : priorisez la RAM et un iGPU/NPU capable. Classes comparées, budget vs performances et notes de configuration.',
+      description: 'Guide mini-PC pour Home Assistant + LLM local 2026 : RAM et iGPU/NPU surpassent le CPU. Trois classes comparées : entrée de gamme, milieu de gamme et NPU.',
       url: 'https://www.promptquorum.com/fr/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -713,11 +713,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Home Assistant + ローカルAIに最適なミニPC（2026）',
-    seoTitle: 'Home Assistant + AI に最適なミニPC（2026）',
+    seoTitle: 'Home Assistant + ローカルAIに最適なミニPC 2026年版ガイド',
     intro:
       'Home Assistant とローカル LLM を一台で動かすのに最適なミニPCは、RAM と高性能な統合 GPU または NPU を優先します。本購入ガイドは、一台で HA＋AI に必要なものを説明し、主なミニPCのクラスを比較し、予算と性能を天秤にかけ、設定上の注意を扱います——VRAM の詳細は local-llms のハードウェアガイドへ相互リンクします。',
     metaDescription:
-      'Home Assistant とローカル LLM に最適なミニPC（2026）：RAM と高性能な iGPU/NPU を優先。クラス比較、予算対性能、設定の注意。',
+      'Home Assistant + ローカルLLMのミニPC 2026年版：RAM と iGPU/NPU を優先。N・Ryzen/Core i・NPU の3クラスを予算別に比較。',
     twitterDescription:
       'Home Assistant + ローカル LLM を一台で動かすのに最適なミニPC：RAM と高性能な iGPU/NPU を優先。クラス比較、予算別の候補。',
     readTime: '8分で読める',
@@ -859,7 +859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant + ローカルAIに最適なミニPC（2026）',
-      description: 'Home Assistant とローカル LLM に最適なミニPC（2026）：RAM と高性能な iGPU/NPU を優先。クラス比較、予算対性能、設定の注意。',
+      description: 'Home Assistant + ローカルLLMのミニPC 2026年版：RAM と iGPU/NPU を優先。N・Ryzen/Core i・NPU の3クラスを予算別に比較。',
       url: 'https://www.promptquorum.com/ja/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -889,11 +889,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Melhores Mini PCs para Home Assistant + IA Local (2026)',
-    seoTitle: 'Melhor Mini PC para Home Assistant + IA (2026)',
+    seoTitle: 'Melhor Mini PC para Home Assistant + IA Local em 2026',
     intro:
       'Os melhores mini PCs para rodar o Home Assistant mais um LLM local em uma só máquina priorizam a RAM e uma GPU integrada ou NPU capaz. Este guia de compra explica o que você precisa para HA mais IA em uma única máquina, compara as principais classes de mini PC, pesa orçamento frente a desempenho e cobre notas de configuração — com link cruzado para o guia de hardware do local-llms para a profundidade de VRAM.',
     metaDescription:
-      'Melhores mini PCs para Home Assistant mais um LLM local em 2026: priorize a RAM e uma iGPU/NPU capaz. Classes comparadas, orçamento vs desempenho e notas de configuração.',
+      'Guia de mini PC para Home Assistant + LLM local 2026: RAM e iGPU/NPU superam a CPU. Três classes comparadas: econômica, intermediária e com NPU.',
     twitterDescription:
       'Melhores mini PCs para rodar Home Assistant + um LLM local em uma máquina: priorize a RAM e uma iGPU/NPU capaz. Classes comparadas, escolhas por orçamento.',
     readTime: '8 min de leitura',
@@ -1035,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Melhores Mini PCs para Home Assistant + IA Local (2026)',
-      description: 'Melhores mini PCs para Home Assistant mais um LLM local em 2026: priorize a RAM e uma iGPU/NPU capaz. Classes comparadas, orçamento vs desempenho e notas de configuração.',
+      description: 'Guia de mini PC para Home Assistant + LLM local 2026: RAM e iGPU/NPU superam a CPU. Três classes comparadas: econômica, intermediária e com NPU.',
       url: 'https://www.promptquorum.com/pt/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1065,11 +1065,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Home Assistant + 本地 AI 的最佳迷你 PC（2026）',
-    seoTitle: 'Home Assistant + AI 的最佳迷你 PC（2026）',
+    seoTitle: '2026年最佳迷你 PC：Home Assistant 加本地大语言模型',
     intro:
       '在一台机器上运行 Home Assistant 加本地 LLM 的最佳迷你 PC，会优先考虑内存以及一块强力的集成 GPU 或 NPU。本购买指南讲解在单机上实现 HA 加 AI 所需的条件，比较主要的迷你 PC 类别，权衡预算与性能，并涵盖配置注意事项——并交叉链接到 local-llms 硬件指南以了解 VRAM 细节。',
     metaDescription:
-      '2026 年 Home Assistant 加本地 LLM 的最佳迷你 PC：优先内存和一块强力 iGPU/NPU。类别比较、预算对性能，以及配置注意事项。',
+      '2026年 Home Assistant 加本地 LLM 的最佳迷你 PC：优先内存和 iGPU/NPU。N 系列、Ryzen/Core i 与 NPU 三类对比，含预算指南。',
     twitterDescription:
       '在一台机器上运行 Home Assistant + 本地 LLM 的最佳迷你 PC：优先内存和一块强力 iGPU/NPU。类别比较，按预算的选择。',
     readTime: '阅读约8分钟',
@@ -1211,7 +1211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant + 本地 AI 的最佳迷你 PC（2026）',
-      description: '2026 年 Home Assistant 加本地 LLM 的最佳迷你 PC：优先内存和一块强力 iGPU/NPU。类别比较、预算对性能，以及配置注意事项。',
+      description: '2026年 Home Assistant 加本地 LLM 的最佳迷你 PC：优先内存和 iGPU/NPU。N 系列、Ryzen/Core i 与 NPU 三类对比，含预算指南。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
     title: 'Home Assistant: Complete Getting-Started Guide (2026)',
-    seoTitle: 'Home Assistant Getting Started (2026)',
+    seoTitle: 'Home Assistant 2026: Complete Local Smart Home Setup',
     intro:
       'Home Assistant is the leading local-first smart home hub: install it on a Raspberry Pi or mini PC, add integrations, and control everything locally with no cloud. This getting-started guide covers why Home Assistant, the install options, first integrations, the dashboard, your first automation, and where to add local AI later — without re-explaining the LLM mechanics.',
     metaDescription:
@@ -200,11 +200,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
     title: 'Home Assistant: Vollständiger Einsteiger-Leitfaden (2026)',
-    seoTitle: 'Home Assistant Einsteiger-Leitfaden (2026)',
+    seoTitle: 'Home Assistant 2026: Lokales Smart Home einrichten',
     intro:
       'Home Assistant ist der führende Local-First-Smart-Home-Hub: Installieren Sie ihn auf einem Raspberry Pi oder Mini-PC, fügen Sie Integrationen hinzu und steuern Sie alles lokal ohne Cloud. Dieser Einsteiger-Leitfaden behandelt Warum Home Assistant, die Installationsoptionen, erste Integrationen, das Dashboard, Ihre erste Automatisierung und wo Sie später lokale KI hinzufügen – ohne die LLM-Mechanik erneut zu erklären.',
     metaDescription:
-      'Erste Schritte mit Home Assistant 2026: Installationsoptionen (HAOS, Container, Pi vs Mini-PC), erste Integrationen, Dashboards und Ihre erste lokale Automatisierung.',
+      'Erste Schritte mit Home Assistant 2026: HAOS oder Container, Pi vs Mini-PC, erste Integrationen, Dashboards und lokale Automatisierung.',
     twitterDescription:
       'Home Assistant Einsteiger-Leitfaden: auf einem Pi oder Mini-PC installieren, Integrationen hinzufügen, Ihre erste lokale Automatisierung bauen. Der Local-First-Hub.',
     readTime: '10 Min. Lesezeit',
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant: Vollständiger Einsteiger-Leitfaden (2026)',
-      description: 'Erste Schritte mit Home Assistant 2026: Installationsoptionen (HAOS, Container, Pi vs Mini-PC), erste Integrationen, Dashboards und Ihre erste lokale Automatisierung.',
+      description: 'Erste Schritte mit Home Assistant 2026: HAOS oder Container, Pi vs Mini-PC, erste Integrationen, Dashboards und lokale Automatisierung.',
       url: 'https://www.promptquorum.com/de/smart-home/home-assistant-getting-started',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -391,11 +391,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
     title: 'Home Assistant: Guía Completa para Empezar (2026)',
-    seoTitle: 'Home Assistant: Guía para Empezar (2026)',
+    seoTitle: 'Home Assistant 2026: Guía Completa para Empezar',
     intro:
       'Home Assistant es el hub de smart home local-first líder: instálalo en una Raspberry Pi o un mini PC, añade integraciones y controla todo localmente sin nube. Esta guía para empezar cubre por qué Home Assistant, las opciones de instalación, las primeras integraciones, el panel, tu primera automatización y dónde añadir IA local más adelante, sin reexplicar la mecánica del LLM.',
     metaDescription:
-      'Empieza con Home Assistant en 2026: opciones de instalación (HAOS, contenedor, Pi vs mini PC), primeras integraciones, paneles y tu primera automatización local.',
+      'Empieza con Home Assistant 2026: HAOS o contenedor, Pi vs mini-PC, primeras integraciones, paneles y primera automatización local.',
     twitterDescription:
       'Guía para empezar con Home Assistant: instala en una Pi o mini PC, añade integraciones, crea tu primera automatización local. El hub local-first.',
     readTime: '10 min de lectura',
@@ -552,7 +552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant: Guía Completa para Empezar (2026)',
-      description: 'Empieza con Home Assistant en 2026: opciones de instalación (HAOS, contenedor, Pi vs mini PC), primeras integraciones, paneles y tu primera automatización local.',
+      description: 'Empieza con Home Assistant 2026: HAOS o contenedor, Pi vs mini-PC, primeras integraciones, paneles y primera automatización local.',
       url: 'https://www.promptquorum.com/es/smart-home/home-assistant-getting-started',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -582,11 +582,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
     title: 'Home Assistant : Guide Complet pour Débuter (2026)',
-    seoTitle: 'Home Assistant : Guide pour Débuter (2026)',
+    seoTitle: 'Home Assistant 2026 : Guide Complet pour Bien Démarrer',
     intro:
       'Home Assistant est le hub de maison connectée local-first de référence : installez-le sur une Raspberry Pi ou un mini-PC, ajoutez des intégrations et contrôlez tout localement sans cloud. Ce guide de démarrage couvre pourquoi Home Assistant, les options d\'installation, les premières intégrations, le tableau de bord, votre première automatisation et où ajouter de l\'IA locale plus tard, sans réexpliquer la mécanique du LLM.',
     metaDescription:
-      'Débutez avec Home Assistant en 2026 : options d\'installation (HAOS, conteneur, Pi vs mini-PC), premières intégrations, tableaux de bord et votre première automatisation locale.',
+      'Débutez avec Home Assistant en 2026 : HAOS ou conteneur, Pi vs mini-PC, premières intégrations, tableaux de bord et première automatisation locale.',
     twitterDescription:
       'Guide de démarrage Home Assistant : installez sur une Pi ou un mini-PC, ajoutez des intégrations, créez votre première automatisation locale. Le hub local-first.',
     readTime: '10 min de lecture',
@@ -743,7 +743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant : Guide Complet pour Débuter (2026)',
-      description: 'Débutez avec Home Assistant en 2026 : options d\'installation (HAOS, conteneur, Pi vs mini-PC), premières intégrations, tableaux de bord et votre première automatisation locale.',
+      description: 'Débutez avec Home Assistant en 2026 : HAOS ou conteneur, Pi vs mini-PC, premières intégrations, tableaux de bord et première automatisation locale.',
       url: 'https://www.promptquorum.com/fr/smart-home/home-assistant-getting-started',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -773,11 +773,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
     title: 'Home Assistant：完全入門ガイド（2026）',
-    seoTitle: 'Home Assistant 入門ガイド（2026）',
+    seoTitle: 'Home Assistant 2026 完全入門：インストールから自動化まで',
     intro:
       'Home Assistant は主要なローカルファーストのスマートホームハブです：Raspberry Pi やミニPCにインストールし、統合を追加し、すべてをクラウドなしでローカル制御します。本入門ガイドは、なぜ Home Assistant か、インストール方法、最初の統合、ダッシュボード、最初の自動化、そして後でローカルAIをどこに追加するかを扱います——LLMの仕組みは再説明しません。',
     metaDescription:
-      'Home Assistant を2026年に始める：インストール方法（HAOS、コンテナ、Pi 対 ミニPC）、最初の統合、ダッシュボード、最初のローカル自動化。',
+      'Home Assistant 2026 を始める：HAOS・container・Pi 対 mini-PC で install、統合・dashboard・local 自動化まで。',
     twitterDescription:
       'Home Assistant 入門ガイド：Pi かミニPCにインストールし、統合を追加し、最初のローカル自動化を作る。ローカルファーストのハブ。',
     readTime: '10分で読める',
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant：完全入門ガイド（2026）',
-      description: 'Home Assistant を2026年に始める：インストール方法（HAOS、コンテナ、Pi 対 ミニPC）、最初の統合、ダッシュボード、最初のローカル自動化。',
+      description: 'Home Assistant 2026 を始める：HAOS・container・Pi 対 mini-PC で install、統合・dashboard・local 自動化まで。',
       url: 'https://www.promptquorum.com/ja/smart-home/home-assistant-getting-started',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -964,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
     title: 'Home Assistant: Guia Completo para Começar (2026)',
-    seoTitle: 'Home Assistant: Guia para Começar (2026)',
+    seoTitle: 'Home Assistant 2026: Guia Completo para Começar',
     intro:
       'O Home Assistant é o hub de casa inteligente local-first líder: instale-o em uma Raspberry Pi ou mini PC, adicione integrações e controle tudo localmente sem nuvem. Este guia para começar cobre por que o Home Assistant, as opções de instalação, as primeiras integrações, o painel, sua primeira automação e onde adicionar IA local depois, sem reexplicar a mecânica do LLM.',
     metaDescription:
@@ -1155,7 +1155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
     title: 'Home Assistant：完整入门指南（2026）',
-    seoTitle: 'Home Assistant 入门指南（2026）',
+    seoTitle: 'Home Assistant 2026 完整入门指南：安装与本地自动化',
     intro:
       'Home Assistant 是领先的本地优先智能家居中枢：把它装在 Raspberry Pi 或迷你 PC 上，添加集成，并在无云端的情况下本地控制一切。本入门指南讲解为何选 Home Assistant、安装方式、首批集成、仪表盘、你的第一条自动化，以及以后在哪里添加本地 AI——不再赘述 LLM 机制。',
     metaDescription:

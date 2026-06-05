@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Lokales Whisper gibt Home Assistant privates Sprache-zu-Text ohne Cloud: Sie wählen eine Whisper-Modellgröße für Ihren Kompromiss aus Genauigkeit, Tempo und Hardware und verbinden es dann über das Wyoming-Protokoll mit Assist. Dieser Leitfaden behandelt, warum lokales STT wichtig ist, die Whisper-Modellgrößen, die Wyoming-Einrichtung, den Hardware-Bedarf und wie Sie die Genauigkeit abstimmen.',
     metaDescription:
-      'Lokales Sprache-zu-Text zu Home Assistant mit Whisper hinzufügen: Modellgrößen, Hardware-Bedarf, Genauigkeit vs Tempo und Wyoming-Einrichtung. Private, offline Transkription.',
+      'Whisper für lokales Sprache-zu-Text in Home Assistant 2026: Modellgröße wählen, Wyoming konfigurieren, offline transkribieren. Kein Cloud-Dienst.',
     twitterDescription:
       'Privates Sprache-zu-Text für Home Assistant mit lokalem Whisper: eine Modellgröße wählen, über Wyoming verbinden, Genauigkeit abstimmen. Keine Cloud.',
     readTime: '8 Min. Lesezeit',
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Lokales Sprache-zu-Text fürs Smart Home: Whisper + HA (2026)',
-      description: 'Lokales Sprache-zu-Text zu Home Assistant mit Whisper hinzufügen: Modellgrößen, Hardware-Bedarf, Genauigkeit vs Tempo und Wyoming-Einrichtung. Private, offline Transkription.',
+      description: 'Whisper für lokales Sprache-zu-Text in Home Assistant 2026: Modellgröße wählen, Wyoming konfigurieren, offline transkribieren. Kein Cloud-Dienst.',
       url: 'https://www.promptquorum.com/de/smart-home/local-whisper-home-assistant',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Whisper local da a Home Assistant voz-a-texto privado sin nube: eliges un tamaño de modelo Whisper para tu equilibrio de precisión, velocidad y hardware, y luego lo conectas a Assist sobre el protocolo Wyoming. Esta guía cubre por qué importa el STT local, los tamaños de modelo Whisper, la configuración de Wyoming, las necesidades de hardware y cómo ajustar la precisión.',
     metaDescription:
-      'Añade voz-a-texto local a Home Assistant con Whisper: tamaños de modelo, necesidades de hardware, precisión vs velocidad y configuración de Wyoming. Transcripción privada y offline.',
+      'Whisper en Home Assistant 2026: voz-a-texto local, tamaños de modelo, hardware necesario y ajuste de precisión. Sin nube, transcripción offline.',
     twitterDescription:
       'Voz-a-texto privado para Home Assistant con Whisper local: elige un tamaño de modelo, conecta sobre Wyoming, ajusta la precisión. Sin nube.',
     readTime: '8 min de lectura',
@@ -528,7 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Voz-a-Texto Local para Smart Homes: Whisper + HA (2026)',
-      description: 'Añade voz-a-texto local a Home Assistant con Whisper: tamaños de modelo, necesidades de hardware, precisión vs velocidad y configuración de Wyoming. Transcripción privada y offline.',
+      description: 'Whisper en Home Assistant 2026: voz-a-texto local, tamaños de modelo, hardware necesario y ajuste de precisión. Sin nube, transcripción offline.',
       url: 'https://www.promptquorum.com/es/smart-home/local-whisper-home-assistant',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Whisper local donne à Home Assistant une reconnaissance vocale privée sans cloud : vous choisissez une taille de modèle Whisper selon votre compromis précision, vitesse et matériel, puis vous le reliez à Assist via le protocole Wyoming. Ce guide couvre pourquoi la STT locale compte, les tailles de modèle Whisper, la configuration Wyoming, les besoins matériels et comment régler la précision.',
     metaDescription:
-      'Ajoutez la reconnaissance vocale locale à Home Assistant avec Whisper : tailles de modèle, besoins matériels, précision vs vitesse et configuration Wyoming. Transcription privée et hors ligne.',
+      'Whisper + Home Assistant 2026 : reconnaissance vocale locale, tailles de modèle, Wyoming et précision. Transcription privée, hors ligne.',
     twitterDescription:
       'Reconnaissance vocale privée pour Home Assistant avec Whisper local : choisir une taille de modèle, relier via Wyoming, régler la précision. Sans cloud.',
     readTime: '8 min de lecture',
@@ -711,7 +711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Reconnaissance Vocale Locale pour la Maison Connectée : Whisper + HA (2026)',
-      description: 'Ajoutez la reconnaissance vocale locale à Home Assistant avec Whisper : tailles de modèle, besoins matériels, précision vs vitesse et configuration Wyoming. Transcription privée et hors ligne.',
+      description: 'Whisper + Home Assistant 2026 : reconnaissance vocale locale, tailles de modèle, Wyoming et précision. Transcription privée, hors ligne.',
       url: 'https://www.promptquorum.com/fr/smart-home/local-whisper-home-assistant',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -928,7 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O Whisper local dá ao Home Assistant voz-para-texto privado sem nuvem: você escolhe um tamanho de modelo Whisper para o seu equilíbrio de precisão, velocidade e hardware, e depois o conecta ao Assist sobre o protocolo Wyoming. Este guia cobre por que o STT local importa, os tamanhos de modelo Whisper, a configuração do Wyoming, as necessidades de hardware e como ajustar a precisão.',
     metaDescription:
-      'Adicione voz-para-texto local ao Home Assistant com o Whisper: tamanhos de modelo, necessidades de hardware, precisão vs velocidade e configuração do Wyoming. Transcrição privada e offline.',
+      'Whisper no Home Assistant 2026: voz-para-texto local, tamanhos de modelo, hardware necessário e configuração Wyoming. Transcrição offline.',
     twitterDescription:
       'Voz-para-texto privado para o Home Assistant com Whisper local: escolha um tamanho de modelo, conecte sobre Wyoming, ajuste a precisão. Sem nuvem.',
     readTime: '8 min de leitura',
@@ -1077,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Voz-para-Texto Local para Casas Inteligentes: Whisper + HA (2026)',
-      description: 'Adicione voz-para-texto local ao Home Assistant com o Whisper: tamanhos de modelo, necessidades de hardware, precisão vs velocidade e configuração do Wyoming. Transcrição privada e offline.',
+      description: 'Whisper no Home Assistant 2026: voz-para-texto local, tamanhos de modelo, hardware necessário e configuração Wyoming. Transcrição offline.',
       url: 'https://www.promptquorum.com/pt/smart-home/local-whisper-home-assistant',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Ein lokales LLM ermöglicht kontextbewusste Heim-Automatisierungen, die in natürlicher Sprache beschrieben werden – über starre Wenn-dann-Regeln hinaus. Dieser Leitfaden erklärt die Grenzen regelbasierter Automatisierung, was ein LLM hinzufügt, echte Beispiel-Automatisierungen mit ihren Prompts, die Architektur und die Leitplanken, die sie zuverlässig halten – alles lokal, ohne Cloud.',
     metaDescription:
-      'Kontextbewusste Heim-Automatisierungen mit einem lokalen LLM bauen: natürlichsprachliche Regeln, die Wenn-dann schlagen. Beispiele, Prompts, Architektur und Leitplanken.',
+      'Heim-Automatisierungen 2026 mit lokalem LLM: natürlichsprachliche Regeln schlagen starre Wenn-Dann-Regeln. Beispiele, Prompts, Architektur.',
     twitterDescription:
       'Ein lokales LLM macht Heim-Automatisierungen kontextbewusst: „Wenn es nach Regen aussieht und ich gehe, erinnere mich." Beispiele, Prompts und Leitplanken.',
     readTime: '9 Min. Lesezeit',
@@ -339,7 +339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Smartere Heim-Automatisierungen mit einem lokalen LLM (2026)',
-      description: 'Kontextbewusste Heim-Automatisierungen mit einem lokalen LLM bauen: natürlichsprachliche Regeln, die Wenn-dann schlagen. Beispiele, Prompts, Architektur und Leitplanken.',
+      description: 'Heim-Automatisierungen 2026 mit lokalem LLM: natürlichsprachliche Regeln schlagen starre Wenn-Dann-Regeln. Beispiele, Prompts, Architektur.',
       url: 'https://www.promptquorum.com/de/smart-home/ai-automations-local-llm',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Un LLM local permite automatizaciones del hogar conscientes del contexto descritas en lenguaje natural, yendo más allá de las rígidas reglas si-esto-entonces-aquello. Esta guía explica los límites de la automatización basada en reglas, qué añade un LLM, automatizaciones de ejemplo reales con sus prompts, la arquitectura y las salvaguardas que la mantienen fiable, todo ejecutándose en local sin nube.',
     metaDescription:
-      'Crea automatizaciones del hogar conscientes del contexto con un LLM local: reglas en lenguaje natural que superan el si-esto-entonces-aquello. Ejemplos, prompts, arquitectura y salvaguardas.',
+      'Automatizaciones del hogar con IA 2026: LLM local más allá de si-esto-entonces. Reglas en lenguaje natural, ejemplos, prompts y salvaguardas.',
     twitterDescription:
       'Un LLM local hace que las automatizaciones del hogar sean conscientes del contexto: "si parece que va a llover y voy a salir, recuérdamelo". Ejemplos, prompts y salvaguardas.',
     readTime: '9 min de lectura',
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Automatizaciones del Hogar Más Inteligentes con un LLM Local (2026)',
-      description: 'Crea automatizaciones del hogar conscientes del contexto con un LLM local: reglas en lenguaje natural que superan el si-esto-entonces-aquello. Ejemplos, prompts, arquitectura y salvaguardas.',
+      description: 'Automatizaciones del hogar con IA 2026: LLM local más allá de si-esto-entonces. Reglas en lenguaje natural, ejemplos, prompts y salvaguardas.',
       url: 'https://www.promptquorum.com/es/smart-home/ai-automations-local-llm',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Un LLM local permet des automatisations maison conscientes du contexte décrites en langage naturel — au-delà des règles rigides si-ceci-alors-cela. Ce guide explique les limites de l\'automatisation par règles, ce qu\'ajoute un LLM, de vrais exemples d\'automatisations avec leurs prompts, l\'architecture et les garde-fous qui la gardent fiable, le tout tournant en local sans cloud.',
     metaDescription:
-      'Créez des automatisations maison conscientes du contexte avec un LLM local : des règles en langage naturel qui battent le si-ceci-alors-cela. Exemples, prompts, architecture et garde-fous.',
+      'Automatisations maison IA 2026 : LLM local, règles en langage naturel, exemples avec prompts et garde-fous. Dépasse le si-ceci-alors-cela.',
     twitterDescription:
       'Un LLM local rend les automatisations maison conscientes du contexte : « s\'il semble pleuvoir et que je pars, rappelle-le-moi ». Exemples, prompts et garde-fous.',
     readTime: '9 min de lecture',
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Des Automatisations Maison Plus Intelligentes avec un LLM Local (2026)',
-      description: 'Créez des automatisations maison conscientes du contexte avec un LLM local : des règles en langage naturel qui battent le si-ceci-alors-cela. Exemples, prompts, architecture et garde-fous.',
+      description: 'Automatisations maison IA 2026 : LLM local, règles en langage naturel, exemples avec prompts et garde-fous. Dépasse le si-ceci-alors-cela.',
       url: 'https://www.promptquorum.com/fr/smart-home/ai-automations-local-llm',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルLLMは、自然言語で記述する文脈を理解した家の自動化を可能にします——硬直した「もし〜なら」ルールを超えて。本ガイドは、ルールベース自動化の限界、LLM が加えるもの、プロンプト付きの実例自動化、アーキテクチャ、そして信頼性を保つガードレールを説明します——すべてローカルで、クラウドなしに動きます。',
     metaDescription:
-      'ローカルLLMで文脈を理解した家の自動化を構築：「もし〜なら」を上回る自然言語ルール。例、プロンプト、アーキテクチャ、ガードレール。',
+      'ローカルLLM（2026）でコンテキスト対応のホームオートメーション構築：自然言語ルールが固定のif-thenを超える。例、プロンプト、アーキテクチャ、ガードレールを解説。',
     twitterDescription:
       'ローカルLLMは家の自動化を文脈対応にします：「雨が降りそうで外出するなら、傘を思い出させて」。例、プロンプト、ガードレール。',
     readTime: '9分で読める',
@@ -879,7 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'ローカルLLMでより賢い家の自動化（2026）',
-      description: 'ローカルLLMで文脈を理解した家の自動化を構築：「もし〜なら」を上回る自然言語ルール。例、プロンプト、アーキテクチャ、ガードレール。',
+      description: 'ローカルLLM（2026）でコンテキスト対応のホームオートメーション構築：自然言語ルールが固定のif-thenを超える。例、プロンプト、アーキテクチャ、ガードレールを解説。',
       url: 'https://www.promptquorum.com/ja/smart-home/ai-automations-local-llm',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Um LLM local permite automações domésticas conscientes do contexto descritas em linguagem natural — indo além das rígidas regras se-isto-então-aquilo. Este guia explica os limites da automação baseada em regras, o que um LLM acrescenta, automações de exemplo reais com seus prompts, a arquitetura e as salvaguardas que a mantêm confiável, tudo rodando localmente sem nuvem.',
     metaDescription:
-      'Crie automações domésticas conscientes do contexto com um LLM local: regras em linguagem natural que superam o se-isto-então-aquilo. Exemplos, prompts, arquitetura e salvaguardas.',
+      'Automações domésticas com IA 2026: LLM local além do se-isto-então. Regras em linguagem natural, exemplos, prompts e salvaguardas.',
     twitterDescription:
       'Um LLM local torna as automações domésticas conscientes do contexto: "se parecer que vai chover e eu estiver saindo, me lembre". Exemplos, prompts e salvaguardas.',
     readTime: '9 min de leitura',
@@ -1059,7 +1059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Automações Domésticas Mais Inteligentes com um LLM Local (2026)',
-      description: 'Crie automações domésticas conscientes do contexto com um LLM local: regras em linguagem natural que superam o se-isto-então-aquilo. Exemplos, prompts, arquitetura e salvaguardas.',
+      description: 'Automações domésticas com IA 2026: LLM local além do se-isto-então. Regras em linguagem natural, exemplos, prompts e salvaguardas.',
       url: 'https://www.promptquorum.com/pt/smart-home/ai-automations-local-llm',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1093,7 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '本地 LLM 让你用自然语言描述具备情境感知的家庭自动化——超越僵化的“如果-那么”规则。本指南讲解基于规则的自动化的局限、LLM 带来了什么、带提示词的真实示例自动化、架构，以及保持其可靠的护栏，全部在本地运行、无需云端。',
     metaDescription:
-      '用本地 LLM 构建具备情境感知的家庭自动化：胜过“如果-那么”的自然语言规则。示例、提示词、架构和护栏。',
+      '用本地LLM构建2026年情境感知家庭自动化：自然语言规则替代僵硬的触发条件，包含示例、提示词、架构说明和可靠性护栏，全程本地运行，无需云端。',
     twitterDescription:
       '本地 LLM 让家庭自动化具备情境感知：“如果看起来要下雨而我要出门，就提醒我。”示例、提示词和护栏。',
     readTime: '阅读约9分钟',
@@ -1239,7 +1239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '用本地 LLM 实现更聪明的家庭自动化（2026）',
-      description: '用本地 LLM 构建具备情境感知的家庭自动化：胜过“如果-那么”的自然语言规则。示例、提示词、架构和护栏。',
+      description: '用本地LLM构建2026年情境感知家庭自动化：自然语言规则替代僵硬的触发条件，包含示例、提示词、架构说明和可靠性护栏，全程本地运行，无需云端。',
       url: 'https://www.promptquorum.com/zh/smart-home/ai-automations-local-llm',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

@@ -201,7 +201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Ein lokales Smart Home schlägt die Cloud bei Zuverlässigkeit, Datenschutz, Kosten und Langlebigkeit: Es funktioniert weiter, wenn Internet oder Hersteller-Cloud ausfallen, sammelt keine Daten, braucht keine Abonnements und kann nicht durch eine Cloud-Abschaltung unbrauchbar werden. Dieser Leitfaden begründet das ehrlich, inklusive des einen echten Kompromisses – des Einrichtungsaufwands.',
     metaDescription:
-      'Warum ein lokales Smart Home 2026 die Cloud schlägt: Zuverlässigkeit, Datenschutz, keine Abonnements, keine unbrauchbaren Geräte und Tempo – mit dem einen ehrlichen Kompromiss.',
+      'Lokales Smart Home 2026 schlägt die Cloud bei Zuverlässigkeit, Datenschutz, Kosten und Langlebigkeit — mit dem einen ehrlichen Kompromiss.',
     twitterDescription:
       'Lokales Smart Home vs Cloud: offline-fähig, keine Abonnements, keine unbrauchbaren Geräte, voller Datenschutz. Der ehrliche Fall für lokal 2026.',
     readTime: '8 Min. Lesezeit',
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Warum ein lokales Smart Home 2026 die Cloud schlägt',
-      description: 'Warum ein lokales Smart Home 2026 die Cloud schlägt: Zuverlässigkeit, Datenschutz, keine Abonnements, keine unbrauchbaren Geräte und Tempo – mit dem einen ehrlichen Kompromiss.',
+      description: 'Lokales Smart Home 2026 schlägt die Cloud bei Zuverlässigkeit, Datenschutz, Kosten und Langlebigkeit — mit dem einen ehrlichen Kompromiss.',
       url: 'https://www.promptquorum.com/de/smart-home/why-local-smart-home-beats-cloud',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Un smart home local supera a la nube en fiabilidad, privacidad, coste y longevidad: sigue funcionando cuando se cae internet o la nube del fabricante, no recopila datos, no necesita suscripciones y no puede quedar inutilizado por un cierre de la nube. Esta guía expone el caso con honestidad, incluido el único compromiso real: el esfuerzo de configuración.',
     metaDescription:
-      'Por qué un smart home local supera a la nube en 2026: fiabilidad, privacidad, sin suscripciones, sin dispositivos inutilizados y velocidad — con el único compromiso honesto.',
+      'Smart home local supera a la nube en 2026: fiabilidad offline, privacidad, sin suscripciones, dispositivos longevos — con el único compromiso.',
     twitterDescription:
       'Smart home local vs nube: funciona sin conexión, sin suscripciones, sin dispositivos inutilizados, total privacidad. El caso honesto de lo local en 2026.',
     readTime: '8 min de lectura',
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Por Qué un Smart Home Local Supera a la Nube en 2026',
-      description: 'Por qué un smart home local supera a la nube en 2026: fiabilidad, privacidad, sin suscripciones, sin dispositivos inutilizados y velocidad — con el único compromiso honesto.',
+      description: 'Smart home local supera a la nube en 2026: fiabilidad offline, privacidad, sin suscripciones, dispositivos longevos — con el único compromiso.',
       url: 'https://www.promptquorum.com/es/smart-home/why-local-smart-home-beats-cloud',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Une maison connectée locale bat le cloud sur la fiabilité, la confidentialité, le coût et la longévité : elle continue de fonctionner quand internet ou le cloud du fabricant tombe, ne collecte aucune donnée, ne nécessite aucun abonnement et ne peut pas être rendue inutilisable par une fermeture de cloud. Ce guide expose le cas honnêtement, y compris le seul vrai compromis : l\'effort de configuration.',
     metaDescription:
-      'Pourquoi une maison connectée locale bat le cloud en 2026 : fiabilité, confidentialité, sans abonnement, sans appareils inutilisables et rapidité — avec le seul compromis honnête.',
+      'Maison connectée locale vs cloud en 2026 : fiabilité offline, confidentialité totale, zéro abonnement, longévité garantie — avec le seul vrai compromis.',
     twitterDescription:
       'Maison connectée locale vs cloud : fonctionne hors ligne, sans abonnement, sans appareils inutilisables, confidentialité totale. Le cas honnête du local en 2026.',
     readTime: '8 min de lecture',
@@ -731,7 +731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Pourquoi une Maison Connectée Locale Bat le Cloud en 2026',
-      description: 'Pourquoi une maison connectée locale bat le cloud en 2026 : fiabilité, confidentialité, sans abonnement, sans appareils inutilisables et rapidité — avec le seul compromis honnête.',
+      description: 'Maison connectée locale vs cloud en 2026 : fiabilité offline, confidentialité totale, zéro abonnement, longévité garantie — avec le seul vrai compromis.',
       url: 'https://www.promptquorum.com/fr/smart-home/why-local-smart-home-beats-cloud',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルスマートホームは、信頼性・プライバシー・コスト・寿命でクラウドに勝ります：インターネットやメーカーのクラウドが落ちても動き続け、データを収集せず、サブスク不要で、クラウド終了で使えなくなることもありません。本ガイドは、唯一の本当のトレードオフ——設定の手間——も含めて、正直にその根拠を示します。',
     metaDescription:
-      'なぜ2026年にローカルスマートホームはクラウドに勝るのか：信頼性、プライバシー、サブスク不要、使えなくなる機器なし、そして速度——唯一の正直なトレードオフとともに。',
+      'local smart home 2026 で cloud に勝る：offline・privacy・0 subscription・機器長寿命・速度。設定の手間が唯一のトレードオフ。',
     twitterDescription:
       'ローカルスマートホーム対クラウド：オフライン動作、サブスク不要、使えなくなる機器なし、完全なプライバシー。2026年のローカルの正直な根拠。',
     readTime: '8分で読める',
@@ -919,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'なぜ2026年にローカルスマートホームはクラウドに勝るのか',
-      description: 'なぜ2026年にローカルスマートホームはクラウドに勝るのか：信頼性、プライバシー、サブスク不要、使えなくなる機器なし、そして速度——唯一の正直なトレードオフとともに。',
+      description: 'local smart home 2026 で cloud に勝る：offline・privacy・0 subscription・機器長寿命・速度。設定の手間が唯一のトレードオフ。',
       url: 'https://www.promptquorum.com/ja/smart-home/why-local-smart-home-beats-cloud',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Uma casa inteligente local supera a nuvem em confiabilidade, privacidade, custo e longevidade: continua funcionando quando a internet ou a nuvem do fabricante cai, não coleta dados, não precisa de assinaturas e não pode ser inutilizada por um encerramento de nuvem. Este guia apresenta o caso com honestidade, incluindo o único compromisso real: o esforço de configuração.',
     metaDescription:
-      'Por que uma casa inteligente local supera a nuvem em 2026: confiabilidade, privacidade, sem assinaturas, sem dispositivos inutilizados e velocidade — com o único compromisso honesto.',
+      'Casa inteligente local vs nuvem em 2026: confiabilidade offline, privacidade, sem assinaturas, sem dispositivos inutilizados — com o único compromisso real.',
     twitterDescription:
       'Casa inteligente local vs nuvem: funciona offline, sem assinaturas, sem dispositivos inutilizados, total privacidade. O caso honesto do local em 2026.',
     readTime: '8 min de leitura',
@@ -1107,7 +1107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Por Que uma Casa Inteligente Local Supera a Nuvem em 2026',
-      description: 'Por que uma casa inteligente local supera a nuvem em 2026: confiabilidade, privacidade, sem assinaturas, sem dispositivos inutilizados e velocidade — com o único compromisso honesto.',
+      description: 'Casa inteligente local vs nuvem em 2026: confiabilidade offline, privacidade, sem assinaturas, sem dispositivos inutilizados — com o único compromisso real.',
       url: 'https://www.promptquorum.com/pt/smart-home/why-local-smart-home-beats-cloud',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Matter over Thread can run a genuinely local smart home through a local controller like Home Assistant — no manufacturer cloud required. This guide clears up the nuance of whether Matter means local, explains Thread border routers and local-only commissioning, shows how to avoid cloud bridges, and walks through a local Matter setup with Home Assistant.',
     metaDescription:
-      'Use Matter and Thread for genuinely local smart home control: Thread border routers, local-only commissioning, avoiding cloud bridges, and a Home Assistant setup.',
+      'Matter + Thread for local smart home control 2026: Thread border routers, local-only commissioning, avoiding cloud bridges — Home Assistant setup included.',
     twitterDescription:
       'Matter and Thread can run fully local through a controller like Home Assistant — no manufacturer cloud. How to commission locally and avoid cloud bridges.',
     readTime: '8 min read',
@@ -165,7 +165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter & Local Control: An Internet-Independent Smart Home (2026)',
-      description: 'Use Matter and Thread for genuinely local smart home control: Thread border routers, local-only commissioning, avoiding cloud bridges, and a Home Assistant setup.',
+      description: 'Matter + Thread for local smart home control 2026: Thread border routers, local-only commissioning, avoiding cloud bridges — Home Assistant setup included.',
       url: 'https://www.promptquorum.com/smart-home/matter-local-control-guide',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Matter über Thread kann ein echtes lokales Smart Home über einen lokalen Controller wie Home Assistant betreiben – ohne Hersteller-Cloud. Dieser Leitfaden klärt die Frage, ob Matter lokal bedeutet, erklärt Thread-Border-Router und das nur-lokale Einbinden, zeigt, wie man Cloud-Bridges vermeidet, und führt durch ein lokales Matter-Setup mit Home Assistant.',
     metaDescription:
-      'Matter und Thread für echte lokale Smart-Home-Steuerung nutzen: Thread-Border-Router, nur-lokales Einbinden, Cloud-Bridges vermeiden und ein Home-Assistant-Setup.',
+      'Matter und Thread 2026 für echte lokale Steuerung: Thread-Border-Router, nur-lokales Pairing, Cloud-Bridges vermeiden — Home-Assistant-Setup inklusive.',
     twitterDescription:
       'Matter und Thread können über einen Controller wie Home Assistant vollständig lokal laufen – ohne Hersteller-Cloud. Wie man lokal einbindet und Cloud-Bridges vermeidet.',
     readTime: '8 Min. Lesezeit',
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter & lokale Steuerung: Ein internetunabhängiges Smart Home (2026)',
-      description: 'Matter und Thread für echte lokale Smart-Home-Steuerung nutzen: Thread-Border-Router, nur-lokales Einbinden, Cloud-Bridges vermeiden und ein Home-Assistant-Setup.',
+      description: 'Matter und Thread 2026 für echte lokale Steuerung: Thread-Border-Router, nur-lokales Pairing, Cloud-Bridges vermeiden — Home-Assistant-Setup inklusive.',
       url: 'https://www.promptquorum.com/de/smart-home/matter-local-control-guide',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Matter sobre Thread puede ejecutar un smart home genuinamente local mediante un controlador local como Home Assistant, sin necesidad de la nube del fabricante. Esta guía aclara el matiz de si Matter significa local, explica los routers de borde Thread y la vinculación solo-local, muestra cómo evitar puentes en la nube y recorre una configuración local de Matter con Home Assistant.',
     metaDescription:
-      'Usa Matter y Thread para un control de smart home genuinamente local: routers de borde Thread, vinculación solo-local, evitar puentes en la nube y una configuración con Home Assistant.',
+      'Matter y Thread 2026 para smart home local genuino: Thread border routers, solo emparejamiento local, sin puentes cloud — configuración Home Assistant incluida.',
     twitterDescription:
       'Matter y Thread pueden funcionar totalmente local mediante un controlador como Home Assistant, sin nube del fabricante. Cómo vincular en local y evitar puentes en la nube.',
     readTime: '8 min de lectura',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter y Control Local: Un Smart Home Independiente de Internet (2026)',
-      description: 'Usa Matter y Thread para un control de smart home genuinamente local: routers de borde Thread, vinculación solo-local, evitar puentes en la nube y una configuración con Home Assistant.',
+      description: 'Matter y Thread 2026 para smart home local genuino: Thread border routers, solo emparejamiento local, sin puentes cloud — configuración Home Assistant incluida.',
       url: 'https://www.promptquorum.com/es/smart-home/matter-local-control-guide',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Matter sur Thread peut faire tourner une maison connectée véritablement locale via un contrôleur local comme Home Assistant — sans cloud du fabricant. Ce guide clarifie la nuance de savoir si Matter signifie local, explique les routeurs de bordure Thread et l\'appairage uniquement local, montre comment éviter les ponts cloud et détaille une configuration Matter locale avec Home Assistant.',
     metaDescription:
-      'Utilisez Matter et Thread pour un contrôle de maison connectée véritablement local : routeurs de bordure Thread, appairage uniquement local, éviter les ponts cloud et une configuration Home Assistant.',
+      'Matter + Thread pour contrôle vraiment local 2026 : Thread border routers, appairage local seul, éviter les ponts cloud — configuration Home Assistant incluse.',
     twitterDescription:
       'Matter et Thread peuvent tourner entièrement en local via un contrôleur comme Home Assistant — sans cloud du fabricant. Comment appairer en local et éviter les ponts cloud.',
     readTime: '8 min de lecture',
@@ -723,7 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter et Contrôle Local : Une Maison Connectée Indépendante d\'Internet (2026)',
-      description: 'Utilisez Matter et Thread pour un contrôle de maison connectée véritablement local : routeurs de bordure Thread, appairage uniquement local, éviter les ponts cloud et une configuration Home Assistant.',
+      description: 'Matter + Thread pour contrôle vraiment local 2026 : Thread border routers, appairage local seul, éviter les ponts cloud — configuration Home Assistant incluse.',
       url: 'https://www.promptquorum.com/fr/smart-home/matter-local-control-guide',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Matter over Thread は、Home Assistant のようなローカルコントローラーを通じて真にローカルなスマートホームを動かせます——メーカーのクラウドは不要です。本ガイドは、Matter がローカルを意味するのかという機微を整理し、Thread ボーダールーターとローカルのみのコミッショニングを説明し、クラウドブリッジの回避方法を示し、Home Assistant でのローカル Matter 構成を順を追って解説します。',
     metaDescription:
-      'Matter と Thread で真にローカルなスマートホーム制御を：Thread ボーダールーター、ローカルのみのコミッショニング、クラウドブリッジの回避、そして Home Assistant 構成。',
+      'Matter + Thread で local 制御（2026）：Thread border router・local-only commissioning・cloud bridge 回避・Home Assistant 構成。',
     twitterDescription:
       'Matter と Thread は、Home Assistant のようなコントローラーで完全にローカルに動作できます——メーカーのクラウド不要。ローカルでコミッショニングし、クラウドブリッジを避ける方法。',
     readTime: '8分で読める',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter とローカル制御：インターネットに依存しないスマートホーム（2026）',
-      description: 'Matter と Thread で真にローカルなスマートホーム制御を：Thread ボーダールーター、ローカルのみのコミッショニング、クラウドブリッジの回避、そして Home Assistant 構成。',
+      description: 'Matter + Thread で local 制御（2026）：Thread border router・local-only commissioning・cloud bridge 回避・Home Assistant 構成。',
       url: 'https://www.promptquorum.com/ja/smart-home/matter-local-control-guide',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -943,7 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O Matter sobre Thread pode rodar uma casa inteligente genuinamente local por meio de um controlador local como o Home Assistant — sem necessidade da nuvem do fabricante. Este guia esclarece a nuance de se o Matter significa local, explica os roteadores de borda Thread e o emparelhamento somente-local, mostra como evitar pontes na nuvem e percorre uma configuração local de Matter com o Home Assistant.',
     metaDescription:
-      'Use Matter e Thread para um controle de casa inteligente genuinamente local: roteadores de borda Thread, emparelhamento somente-local, evitar pontes na nuvem e uma configuração com Home Assistant.',
+      'Matter + Thread para controle local 2026: Thread border routers, emparelhamento somente-local, sem pontes na nuvem. Configuração Home Assistant inclusa.',
     twitterDescription:
       'Matter e Thread podem rodar totalmente local por meio de um controlador como o Home Assistant — sem nuvem do fabricante. Como emparelhar localmente e evitar pontes na nuvem.',
     readTime: '8 min de leitura',
@@ -1095,7 +1095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter e Controle Local: Uma Casa Inteligente Independente da Internet (2026)',
-      description: 'Use Matter e Thread para um controle de casa inteligente genuinamente local: roteadores de borda Thread, emparelhamento somente-local, evitar pontes na nuvem e uma configuração com Home Assistant.',
+      description: 'Matter + Thread para controle local 2026: Thread border routers, emparelhamento somente-local, sem pontes na nuvem. Configuração Home Assistant inclusa.',
       url: 'https://www.promptquorum.com/pt/smart-home/matter-local-control-guide',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Sie können Alexa oder Google durch einen vollständig lokalen Sprachassistenten ersetzen, gebaut aus Home Assistant Assist, lokalem Whisper für Sprache-zu-Text, Piper für Text-zu-Sprache und einem lokalen LLM als Gehirn. Dieser Leitfaden behandelt den Offline-Sprach-Stack, jede Komponente, das Wyoming-Protokoll, das sie verbindet, und die nötige Hardware – alles privat und ohne Cloud.',
     metaDescription:
-      'Alexa durch einen vollständig lokalen Sprachassistenten ersetzen: Home Assistant Assist + Whisper + Piper + ein lokales LLM über das Wyoming-Protokoll. Privat und offline.',
+      'Alexa lokal ersetzen (2026): Home Assistant Assist + Whisper + Piper + lokales LLM via Wyoming-Protokoll. Privat, vollständig offline, kein Cloud-Upload.',
     twitterDescription:
       'Bauen Sie einen privaten Sprachassistenten als Alexa-Ersatz: Assist + Whisper (STT) + Piper (TTS) + ein lokales LLM. Vollständig offline, über Wyoming.',
     readTime: '11 Min. Lesezeit',
@@ -384,7 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Einen vollständig lokalen Sprachassistenten fürs Smart Home bauen (2026)',
-      description: 'Alexa durch einen vollständig lokalen Sprachassistenten ersetzen: Home Assistant Assist + Whisper + Piper + ein lokales LLM über das Wyoming-Protokoll. Privat und offline.',
+      description: 'Alexa lokal ersetzen (2026): Home Assistant Assist + Whisper + Piper + lokales LLM via Wyoming-Protokoll. Privat, vollständig offline, kein Cloud-Upload.',
       url: 'https://www.promptquorum.com/de/smart-home/local-voice-assistant-smart-home',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1028,7 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Você pode substituir a Alexa ou o Google por um assistente de voz totalmente local construído com Home Assistant Assist, Whisper local para voz-para-texto, Piper para texto-para-voz e um LLM local como cérebro. Este guia cobre o stack de voz offline, cada componente, o protocolo Wyoming que os conecta e o hardware necessário — tudo privado e funcionando sem a nuvem.',
     metaDescription:
-      'Substitua a Alexa por um assistente de voz totalmente local: Home Assistant Assist + Whisper + Piper + um LLM local sobre o protocolo Wyoming. Privado e offline.',
+      'Substitua a Alexa por assistente de voz local 2026: Assist + Whisper + Piper + LLM local via protocolo Wyoming. Privado, sem nuvem, 100 % offline.',
     twitterDescription:
       'Monte um assistente de voz privado que substitui a Alexa: Assist + Whisper (STT) + Piper (TTS) + um LLM local. Totalmente offline, via Wyoming.',
     readTime: '11 min de leitura',
@@ -1196,7 +1196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Monte um Assistente de Voz Totalmente Local para sua Casa Inteligente (2026)',
-      description: 'Substitua a Alexa por um assistente de voz totalmente local: Home Assistant Assist + Whisper + Piper + um LLM local sobre o protocolo Wyoming. Privado e offline.',
+      description: 'Substitua a Alexa por assistente de voz local 2026: Assist + Whisper + Piper + LLM local via protocolo Wyoming. Privado, sem nuvem, 100 % offline.',
       url: 'https://www.promptquorum.com/pt/smart-home/local-voice-assistant-smart-home',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

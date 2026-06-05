@@ -217,6 +217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**For 6 GB RAM (most common laptop/desktop)**: Use Q4_K_M. A 7B model quantized to Q4_K_M is ~4.5 GB, leaving 1.5 GB for the OS and browser.',
             '**For coding or math tasks**: Use Q5_K_M or higher even if you have budget for Q4_K_M. Quantization effects (1–3% loss) are most visible on precise numerical reasoning. For an end-to-end air-gapped coding setup that pairs Q5_K_M Qwen3-Coder with no-internet operation, see [Local Coding LLM Without Internet](/power-local-llm/local-coding-llm-without-internet).',
             '**Quantization + Temperature trade-off**: A Q4_K_M model at temperature 0.3 produces more deterministic output than a full-precision (FP16) model at temperature 1.0. For independent tuning, see [temperature and top-p: control AI creativity](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity).',
+            '**For smart home and edge devices:** Q4_K_M (4–8 GB VRAM) is the sweet spot for always-on home automation AI running on a mini PC. See [best local LLM models for smart home →](/smart-home/best-local-llm-models-smart-home).',
           ],
         },
         lmStudio: {
@@ -730,6 +731,7 @@ schema: {
             '**Para 6 GB de RAM (laptop/desktop más común)**: Usa Q4_K_M. Un modelo 7B cuantizado a Q4_K_M es ~4,5 GB, dejando 1,5 GB para el SO y el navegador.',
             '**Para tareas de código o matemáticas**: Usa Q5_K_M o superior incluso si tienes presupuesto para Q4_K_M. Los efectos de cuantización (pérdida del 1–3%) son más visibles en el razonamiento numérico preciso. Para una configuración de código air-gapped de extremo a extremo que combina Q5_K_M Qwen3-Coder con operación sin internet, consulta [LLM de código local sin internet](/es/power-local-llm/local-coding-llm-without-internet).',
             '**Compensación cuantización + temperatura**: Un modelo Q4_K_M a temperatura 0.3 produce una salida más determinista que un modelo de precisión completa (FP16) a temperatura 1.0. Para ajuste independiente, consulta [temperatura y top-p: controla la creatividad de la IA](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity).',
+            '**Para hogar inteligente y dispositivos edge:** Q4_K_M (4–8 GB de VRAM) es el punto óptimo para IA de domótica siempre activa en un mini PC. Ver [mejores modelos LLM locales para hogar inteligente →](/smart-home/best-local-llm-models-smart-home).',
           ],
         },
         lmStudio: {
@@ -1220,6 +1222,9 @@ schema: {
           id: 'which-quantization',
           title: 'Qual quantização você deve usar? (Árvore de decisão rápida)',
           content: '**Escolha com base na VRAM disponível, não apenas no tamanho do modelo.**',
+          items: [
+            '**Para casa inteligente e dispositivos edge:** Q4_K_M (VRAM 4–8 GB) é o ponto ideal para IA de automação residencial sempre ativa em um mini PC. Veja [melhores modelos LLM locais para casa inteligente →](/smart-home/best-local-llm-models-smart-home).',
+          ],
           rows: [
             { 'Sua VRAM': '4–6 GB', 'Melhor quantização': 'Q3_K_S ou Q4_K_M', 'Tamanho do modelo': '3B, 7B (Q4) | 7B (Q3)', 'Qualidade': '5–10% de perda (Q3) | 1–3% (Q4)' },
             { 'Sua VRAM': '6–8 GB', 'Melhor quantização': 'Q4_K_M (recomendado)', 'Tamanho do modelo': '7B nativo', 'Qualidade': '1–3% de perda (imperceptível)' },
@@ -1504,6 +1509,7 @@ schema: {
             '**Für 6 GB RAM (häufigster Laptop/Desktop)**: Verwenden Sie Q4_K_M. Ein 7B-Modell quantisiert zu Q4_K_M ist ~4,5 GB und lässt 1,5 GB für das OS und den Browser.',
             '**Für Coding- oder Mathe-Aufgaben**: Verwenden Sie Q5_K_M oder höher, auch wenn Sie Budget für Q4_K_M haben. Quantisierungseffekte (1–3% Verlust) sind bei präziser numerischer Berechnung am sichtbarsten. Für ein durchgängiges Air-Gapped-Coding-Setup, das Q5_K_M Qwen3-Coder mit Offline-Betrieb kombiniert, siehe [Lokales Coding-LLM ohne Internet](/de/power-local-llm/local-coding-llm-without-internet).',
             '**Quantisierung + Temperatur-Tradeoff**: Ein Q4_K_M-Modell bei Temperatur 0,3 liefert deterministischere Ausgaben als ein vollständiges Modell (FP16) bei Temperatur 1,0. Zur unabhängigen Einstellung: [Temperatur und Top-p: KI-Kreativität steuern](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity).',
+            '**Für Smart Home und Edge-Geräte:** Q4_K_M (4–8 GB VRAM) ist der Sweet Spot für dauerhaft aktive Heimautomatisierungs-KI auf einem Mini-PC. Siehe [beste lokale LLM-Modelle für Smart Home →](/smart-home/best-local-llm-models-smart-home).',
           ],
         },
         lmStudio: {
@@ -2009,6 +2015,7 @@ schema: {
             '**Traitement par lots / tâches nocturnes** : Q4_K_M -- maximise le débit et la taille du modèle par RAM disponible.',
             '**Tâches de codage ou mathématiques spécifiquement** : utilisez Q5_K_M ou supérieur -- les effets de quantification sont plus visibles sur le raisonnement numérique et algorithmique précis. Pour un setup de codage air-gapped de bout en bout qui associe Qwen3-Coder en Q5_K_M à un fonctionnement totalement hors-ligne, voir [LLM de codage local sans Internet](/fr/power-local-llm/local-coding-llm-without-internet).',
             '**La quantisation affecte la précision ; la température affecte l\'aléatoire :** Un modèle Q4 à température 0,3 produit des sorties plus déterministes qu\'un modèle pleine précision à température 1,0. Pour ajuster ces paramètres indépendamment, voir [température et top-p : contrôler la créativité de l\'IA](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity).',
+            '**Maison connectée et appareils edge :** Q4_K_M (4–8 Go VRAM) est la quantification idéale pour l\'IA domotique toujours active sur un mini PC. Voir [meilleurs LLM locaux pour maison connectée →](/smart-home/best-local-llm-models-smart-home).',
           ],
         },
         offloading: {
@@ -2470,6 +2477,7 @@ schema: {
             '**バッチ処理/夜間タスク**：Q4_K_M -- 利用可能なRAMあたりのスループットとモデルサイズを最大化します。',
             '**コーディングまたは数学タスク専用**：Q5_K_M以上を使用 -- 量子化の影響は正確な数値および算法的推論で最も顕著です。Q5_K_M の Qwen3-Coder をネット接続なしの環境と組み合わせる、エンドツーエンドのエアギャップ型コーディング構成については、[インターネット不要のローカルコーディング LLM](/ja/power-local-llm/local-coding-llm-without-internet)を参照してください。',
             '**量子化は精度に、温度はランダム性に影響**：温度0.3のQ4モデルは、温度1.0のフル精度モデルよりも決定論的な出力を生成します。これらのパラメータを独立して調整するには[温度とTop-p：AIの創造性を制御する](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity)をご覧ください。',
+            '**スマートホームとエッジデバイス向け：** Q4_K_M（VRAM 4〜8 GB）はミニPCで常時稼働するホームオートメーションAIに最適です。[スマートホーム向け最高のローカルLLMモデル →](/smart-home/best-local-llm-models-smart-home)をご覧ください。',
           ],
         },
         offloading: {
@@ -2930,6 +2938,7 @@ schema: {
             '**批处理/夜间任务**：Q4_K_M----在可用RAM上最大化吞吐量和模型大小。',
             '**专门用于编码或数学任务**：使用Q5_K_M或更高----量化影响在精确数值和算法推理上最为明显。要查看把 Q5_K_M 的 Qwen3-Coder 与完全离线运行结合在一起的端到端隔网编码方案，请参阅[无互联网的本地编码 LLM](/zh/power-local-llm/local-coding-llm-without-internet)。',
             '**量化影响精度，温度影响随机性**：温度为0.3的Q4模型比温度为1.0的全精度模型产生更确定性的输出。要独立调整这两个参数，请参阅[温度和Top-p：控制AI创造力](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity)。',
+            '**智能家居和边缘设备：** Q4_K_M（VRAM 4–8 GB）是迷你PC上始终在线家庭自动化AI的最佳选择。参阅[智能家居最佳本地LLM模型 →](/smart-home/best-local-llm-models-smart-home)。',
           ],
         },
         offloading: {

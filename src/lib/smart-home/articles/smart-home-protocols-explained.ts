@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Matter, Thread, Zigbee, Z-Wave: Protocols Explained (2026)',
-    seoTitle: 'Smart Home Protocols Explained (2026)',
+    seoTitle: 'Smart Home Protocols 2026: Matter, Thread, Zigbee, Z-Wave',
     intro:
       'Smart home protocols decide how your devices communicate, how far they reach, and whether they work locally. This plain-English guide explains Zigbee, Z-Wave, Thread, and Matter — their range, power use, interoperability, and which are local by default — so you can choose the right ones for a reliable, private setup.',
     metaDescription:
@@ -195,11 +195,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Matter, Thread, Zigbee, Z-Wave: Protokolle erklärt (2026)',
-    seoTitle: 'Smart-Home-Protokolle erklärt (2026)',
+    seoTitle: 'Smart-Home-Protokolle 2026: Matter, Thread, Zigbee, Z-Wave',
     intro:
       'Smart-Home-Protokolle bestimmen, wie Ihre Geräte kommunizieren, wie weit sie reichen und ob sie lokal funktionieren. Dieser verständliche Leitfaden erklärt Zigbee, Z-Wave, Thread und Matter – ihre Reichweite, ihren Stromverbrauch, ihre Interoperabilität und welche standardmäßig lokal sind –, damit Sie die richtigen für ein zuverlässiges, privates Setup wählen.',
     metaDescription:
-      'Matter, Thread, Zigbee, Z-Wave verständlich erklärt: Reichweite, Strom, Mesh, Interoperabilität und welche standardmäßig lokal sind. Das richtige Protokoll wählen.',
+      'Matter, Thread, Zigbee, Z-Wave einfach erklärt: Reichweite, Energieverbrauch, Mesh, Interoperabilität und welche lokal sind. Protokoll richtig wählen.',
     twitterDescription:
       'Zigbee vs Z-Wave vs Thread vs Matter: verständlicher Leitfaden zu Reichweite, Strom, Interoperabilität und welche Protokolle standardmäßig lokal sind.',
     readTime: '8 Min. Lesezeit',
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter, Thread, Zigbee, Z-Wave: Protokolle erklärt (2026)',
-      description: 'Matter, Thread, Zigbee, Z-Wave verständlich erklärt: Reichweite, Strom, Mesh, Interoperabilität und welche standardmäßig lokal sind. Das richtige Protokoll wählen.',
+      description: 'Matter, Thread, Zigbee, Z-Wave einfach erklärt: Reichweite, Energieverbrauch, Mesh, Interoperabilität und welche lokal sind. Protokoll richtig wählen.',
       url: 'https://www.promptquorum.com/de/smart-home/smart-home-protocols-explained',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -381,11 +381,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Matter, Thread, Zigbee, Z-Wave: Protocolos Explicados (2026)',
-    seoTitle: 'Protocolos del Smart Home Explicados (2026)',
+    seoTitle: 'Protocolos Smart Home 2026: Matter, Thread, Zigbee, Z-Wave',
     intro:
       'Los protocolos del smart home deciden cómo se comunican tus dispositivos, hasta dónde llegan y si funcionan localmente. Esta guía en lenguaje claro explica Zigbee, Z-Wave, Thread y Matter —su alcance, consumo, interoperabilidad y cuáles son locales por defecto— para que elijas los adecuados para una configuración fiable y privada.',
     metaDescription:
-      'Matter, Thread, Zigbee, Z-Wave explicados en lenguaje claro: alcance, consumo, mesh, interoperabilidad y cuáles son locales por defecto. Elige el protocolo correcto.',
+      'Matter, Thread, Zigbee, Z-Wave en lenguaje claro: alcance, consumo, mesh e interoperabilidad. Cuáles son locales por defecto y cómo elegir.',
     twitterDescription:
       'Zigbee vs Z-Wave vs Thread vs Matter: guía clara sobre alcance, consumo, interoperabilidad y qué protocolos son locales por defecto.',
     readTime: '8 min de lectura',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter, Thread, Zigbee, Z-Wave: Protocolos Explicados (2026)',
-      description: 'Matter, Thread, Zigbee, Z-Wave explicados en lenguaje claro: alcance, consumo, mesh, interoperabilidad y cuáles son locales por defecto. Elige el protocolo correcto.',
+      description: 'Matter, Thread, Zigbee, Z-Wave en lenguaje claro: alcance, consumo, mesh e interoperabilidad. Cuáles son locales por defecto y cómo elegir.',
       url: 'https://www.promptquorum.com/es/smart-home/smart-home-protocols-explained',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Les protocoles de la maison connectée déterminent comment vos appareils communiquent, jusqu\'où ils portent et s\'ils fonctionnent localement. Ce guide en langage clair explique Zigbee, Z-Wave, Thread et Matter — leur portée, leur consommation, leur interopérabilité et lesquels sont locaux par défaut — pour que vous choisissiez les bons pour une installation fiable et privée.',
     metaDescription:
-      'Matter, Thread, Zigbee, Z-Wave expliqués en langage clair : portée, consommation, mesh, interopérabilité et lesquels sont locaux par défaut. Choisissez le bon protocole.',
+      'Matter, Thread, Zigbee, Z-Wave en langage clair : portée, consommation, mesh, interopérabilité et lesquels sont locaux par défaut. Choisissez le bon.',
     twitterDescription:
       'Zigbee vs Z-Wave vs Thread vs Matter : guide clair sur la portée, la consommation, l\'interopérabilité et quels protocoles sont locaux par défaut.',
     readTime: '8 min de lecture',
@@ -723,7 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter, Thread, Zigbee, Z-Wave : Protocoles Expliqués (2026)',
-      description: 'Matter, Thread, Zigbee, Z-Wave expliqués en langage clair : portée, consommation, mesh, interopérabilité et lesquels sont locaux par défaut. Choisissez le bon protocole.',
+      description: 'Matter, Thread, Zigbee, Z-Wave en langage clair : portée, consommation, mesh, interopérabilité et lesquels sont locaux par défaut. Choisissez le bon.',
       url: 'https://www.promptquorum.com/fr/smart-home/smart-home-protocols-explained',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -753,11 +753,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Matter・Thread・Zigbee・Z-Wave：プロトコル解説（2026）',
-    seoTitle: 'スマートホームのプロトコル解説（2026）',
+    seoTitle: 'スマートホームプロトコル完全解説（2026年版）：メッシュ・ローカル・互換性',
     intro:
       'スマートホームのプロトコルは、機器がどう通信し、どこまで届き、ローカルで動くかを決めます。本ガイドは分かりやすく Zigbee、Z-Wave、Thread、Matter を解説します——到達距離、消費電力、相互運用性、どれが標準でローカルか——信頼でき、プライベートな構成のために正しいものを選べます。',
     metaDescription:
-      'Matter・Thread・Zigbee・Z-Wave を分かりやすく解説：到達距離、消費電力、メッシュ、相互運用、どれが標準でローカルか。正しいプロトコルを選ぶ。',
+      'スマートホームの四大無線規格を徹底解説：Zigbeeの広いデバイス生態系、Z-Waveの長距離通信、ThreadのIPメッシュ、そしてMatterのブランド統合まで。通信範囲・消費電力・相互運用・ローカル動作の違いを2026年版で比較。',
     twitterDescription:
       'Zigbee 対 Z-Wave 対 Thread 対 Matter：到達距離、消費電力、相互運用、どのプロトコルが標準でローカルかを分かりやすく解説。',
     readTime: '8分で読める',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter・Thread・Zigbee・Z-Wave：プロトコル解説（2026）',
-      description: 'Matter・Thread・Zigbee・Z-Wave を分かりやすく解説：到達距離、消費電力、メッシュ、相互運用、どれが標準でローカルか。正しいプロトコルを選ぶ。',
+      description: 'スマートホームの四大無線規格を徹底解説：Zigbeeの広いデバイス生態系、Z-Waveの長距離通信、ThreadのIPメッシュ、そしてMatterのブランド統合まで。通信範囲・消費電力・相互運用・ローカル動作の違いを2026年版で比較。',
       url: 'https://www.promptquorum.com/ja/smart-home/smart-home-protocols-explained',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -939,11 +939,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Matter, Thread, Zigbee, Z-Wave: Protocolos Explicados (2026)',
-    seoTitle: 'Protocolos da Casa Inteligente Explicados (2026)',
+    seoTitle: 'Protocolos da Casa Inteligente 2026: Matter, Thread, Zigbee',
     intro:
       'Os protocolos da casa inteligente decidem como seus dispositivos se comunicam, até onde alcançam e se funcionam localmente. Este guia em linguagem clara explica Zigbee, Z-Wave, Thread e Matter — seu alcance, consumo, interoperabilidade e quais são locais por padrão — para que você escolha os certos para uma configuração confiável e privada.',
     metaDescription:
-      'Matter, Thread, Zigbee, Z-Wave explicados em linguagem clara: alcance, consumo, mesh, interoperabilidade e quais são locais por padrão. Escolha o protocolo certo.',
+      'Matter, Thread, Zigbee, Z-Wave em linguagem clara: alcance, consumo, mesh, interoperabilidade e quais são locais por padrão. Escolha o certo.',
     twitterDescription:
       'Zigbee vs Z-Wave vs Thread vs Matter: guia claro sobre alcance, consumo, interoperabilidade e quais protocolos são locais por padrão.',
     readTime: '8 min de leitura',
@@ -1095,7 +1095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter, Thread, Zigbee, Z-Wave: Protocolos Explicados (2026)',
-      description: 'Matter, Thread, Zigbee, Z-Wave explicados em linguagem clara: alcance, consumo, mesh, interoperabilidade e quais são locais por padrão. Escolha o protocolo certo.',
+      description: 'Matter, Thread, Zigbee, Z-Wave em linguagem clara: alcance, consumo, mesh, interoperabilidade e quais são locais por padrão. Escolha o certo.',
       url: 'https://www.promptquorum.com/pt/smart-home/smart-home-protocols-explained',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1125,11 +1125,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Matter、Thread、Zigbee、Z-Wave：协议详解（2026）',
-    seoTitle: '智能家居协议详解（2026）',
+    seoTitle: '智能家居通信协议深度解析2026：网状、本地控制与协议互操作全面对比',
     intro:
       '智能家居协议决定你的设备如何通信、能传多远，以及是否本地工作。本指南用通俗语言讲解 Zigbee、Z-Wave、Thread 和 Matter——它们的覆盖范围、功耗、互操作性，以及哪些默认本地——帮助你为可靠且私密的配置选对协议。',
     metaDescription:
-      'Matter、Thread、Zigbee、Z-Wave 通俗讲解：覆盖范围、功耗、网状、互操作，以及哪些默认本地。选对协议。',
+      '通俗讲解四大智能家居无线协议的关键区别：Zigbee拥有最广泛的设备生态系统，Z-Wave工作在抗干扰的亚吉赫兹频段，Thread采用低功耗IP网状组网，Matter是实现跨品牌互通的应用层标准。2026版指南助你选对协议。',
     twitterDescription:
       'Zigbee 对 Z-Wave 对 Thread 对 Matter：用通俗语言讲解覆盖范围、功耗、互操作，以及哪些协议默认本地。',
     readTime: '阅读约8分钟',
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter、Thread、Zigbee、Z-Wave：协议详解（2026）',
-      description: 'Matter、Thread、Zigbee、Z-Wave 通俗讲解：覆盖范围、功耗、网状、互操作，以及哪些默认本地。选对协议。',
+      description: '通俗讲解四大智能家居无线协议的关键区别：Zigbee拥有最广泛的设备生态系统，Z-Wave工作在抗干扰的亚吉赫兹频段，Thread采用低功耗IP网状组网，Matter是实现跨品牌互通的应用层标准。2026版指南助你选对协议。',
       url: 'https://www.promptquorum.com/zh/smart-home/smart-home-protocols-explained',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

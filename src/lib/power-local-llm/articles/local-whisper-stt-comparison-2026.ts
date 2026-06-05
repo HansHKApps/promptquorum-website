@@ -126,6 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Offline:** Works on planes, in secure facilities, in areas without reliable internet. No API key management.',
           '**Latency:** No upload/download round-trip. For real-time voice interfaces, local processing reduces STT latency from 300–800 ms (cloud) to 50–300 ms.',
           '**Customization:** Fine-tune on domain-specific vocabulary. Run any model size that fits your hardware.',
+          '**Home assistant integration:** Whisper running locally means wake words and voice commands never leave your home network. See [local Whisper in Home Assistant →](/smart-home/local-whisper-home-assistant) for the add-on setup that replaces cloud STT entirely.',
         ],
       },
       whisperModelSizes: {
@@ -652,6 +653,7 @@ for segment in segments:
           '**Offline:** Funktioniert im Flugzeug, in Sicherheitsbereichen, in Gebieten ohne stabiles Internet. Kein API-Schlüsselmanagement.',
           '**Latenz:** Kein Upload/Download-Roundtrip. Für Echtzeit-Sprachinterfaces reduziert lokale Verarbeitung die STT-Latenz von 300–800 ms (Cloud) auf 50–300 ms.',
           '**Anpassbarkeit:** Feinabstimmung auf domänenspezifisches Vokabular. Beliebige Modellgröße, die zur Hardware passt.',
+          '**Home-Assistant-Integration:** Lokal laufendes Whisper bedeutet, dass Aktivierungswörter und Sprachbefehle das Heimnetzwerk nie verlassen. Siehe [lokales Whisper in Home Assistant →](/de/smart-home/local-whisper-home-assistant) für das Add-on-Setup, das Cloud-STT vollständig ersetzt.',
         ],
       },
       whisperModelSizes: {
@@ -1186,6 +1188,7 @@ for segment in segments:
           '**Hors ligne :** fonctionne en avion, dans des installations sécurisées, sans connexion fiable. Aucune gestion de clé API.',
           '**Latence :** pas d\'aller-retour upload/download. Pour les interfaces vocales temps réel, le traitement local réduit la latence STT de 300–800 ms (cloud) à 50–300 ms.',
           '**Personnalisation :** affinage sur un vocabulaire spécifique au domaine. Utilisation de n\'importe quelle taille de modèle adaptée à votre matériel.',
+          '**Intégration Home Assistant :** Whisper en local signifie que les mots de réveil et les commandes vocales ne quittent jamais votre réseau domestique. Voir [Whisper local dans Home Assistant →](/fr/smart-home/local-whisper-home-assistant) pour la configuration du module qui remplace entièrement le STT cloud.',
         ],
       },
       whisperModelSizes: {
@@ -1712,6 +1715,7 @@ for segment in segments:
           '**オフライン：** 飛行機内、セキュア施設内、安定したインターネットがない場所でも動作。APIキー管理不要。',
           '**レイテンシ：** アップロード/ダウンロードの往復遅延なし。リアルタイム音声インターフェースでは、ローカル処理によりSTTレイテンシをクラウドの300〜800msから50〜300msに削減。',
           '**カスタマイズ：** ドメイン固有の語彙でファインチューニング可能。ハードウェアに合ったモデルサイズを実行。',
+          '**Home Assistant連携：** ローカルで動作するWhisperにより、ウェイクワードと音声コマンドはホームネットワークの外に出ることがありません。クラウドSTTを完全に置き換えるアドオン設定は[Home AssistantのローカルWhisper →](/ja/smart-home/local-whisper-home-assistant)をご覧ください。',
         ],
       },
       whisperModelSizes: {
@@ -2238,6 +2242,7 @@ for segment in segments:
           '**离线使用：** 在飞机上、安全设施内、网络不稳定区域均可使用。无需管理API密钥。',
           '**低延迟：** 无上传/下载往返延迟。对于实时语音界面，本地处理将STT延迟从云端的300至800ms降低至50至300ms。',
           '**可定制：** 可针对特定领域词汇进行微调。运行适合您硬件的任意模型规格。',
+          '**Home Assistant集成：** 本地运行的Whisper意味着唤醒词和语音命令永不离开您的家庭网络。请参阅[Home Assistant中的本地Whisper →](/zh/smart-home/local-whisper-home-assistant)了解完全替代云端STT的插件设置。',
         ],
       },
       whisperModelSizes: {
@@ -2764,6 +2769,7 @@ for segment in segments:
           '**Offline:** funciona en aviones, instalaciones seguras y zonas sin internet estable. Sin gestión de API keys.',
           '**Latencia:** sin ida y vuelta de subida/descarga. Para interfaces de voz en tiempo real, el procesamiento local reduce la latencia STT de 300–800 ms (nube) a 50–300 ms.',
           '**Personalización:** ajusta el modelo con vocabulario específico del dominio. Ejecuta el tamaño de modelo que quepa en tu hardware.',
+          '**Integración con Home Assistant:** Whisper en local significa que las palabras de activación y los comandos de voz nunca salen de tu red doméstica. Ver [Whisper local en Home Assistant →](/es/smart-home/local-whisper-home-assistant) para la configuración del complemento que reemplaza completamente el STT en la nube.',
         ],
       },
       whisperModelSizes: {
@@ -3302,6 +3308,7 @@ for segment in segments:
           '**Offline:** funciona em aviões, em instalações seguras e em áreas sem internet confiável. Sem gerenciamento de chaves de API.',
           '**Latência:** sem ida e volta de upload/download. Para interfaces de voz em tempo real, o processamento local reduz a latência de STT de 300–800 ms (nuvem) para 50–300 ms.',
           '**Personalização:** ajuste fino com vocabulário específico do domínio. Rode qualquer tamanho de modelo que caiba no seu hardware.',
+          '**Integração com Home Assistant:** O Whisper rodando localmente significa que palavras de ativação e comandos de voz nunca saem da sua rede doméstica. Veja [Whisper local no Home Assistant →](/pt/smart-home/local-whisper-home-assistant) para a configuração do complemento que substitui completamente o STT na nuvem.',
         ],
       },
       whisperModelSizes: {

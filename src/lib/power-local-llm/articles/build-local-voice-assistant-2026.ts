@@ -126,6 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Customization:** Choose your wake word, personality, system prompt, and capabilities. Add custom commands, connect to local home automation systems, integrate with local APIs.',
           '**Offline operation:** Works without internet. Power outage (with a UPS) + internet outage: your local assistant still works. Useful for cabins, remote locations, and emergency preparedness.',
           '**What you give up:** Web search, smart-home integration with proprietary clouds, calendar sync with cloud services, the years of RLHF tuning that makes Alexa/Siri smooth at edge cases.',
+          '**Smart home integration:** Wire your local voice assistant directly into Home Assistant to control lights, thermostats, and sensors by voice — completely offline. See [local voice assistant for smart home →](/smart-home/local-voice-assistant-smart-home) for the full Piper + Whisper + Home Assistant setup guide.',
         ],
       },
       architecture: {
@@ -523,6 +524,7 @@ if __name__ == "__main__":
           '**Anpassbarkeit:** Wake-Word, Persönlichkeit, System-Prompt und Funktionen selbst wählen. Eigene Befehle hinzufügen, lokale Hausautomationssysteme verbinden, lokale APIs integrieren.',
           '**Offline-Betrieb:** Funktioniert ohne Internet. Stromausfall (mit USV) + Internetausfall: Der lokale Assistent funktioniert weiterhin. Nützlich für Hütten, abgelegene Standorte und Notfallvorbereitung.',
           '**Was Sie aufgeben:** Websuche, Smart-Home-Integration mit proprietären Clouds, Kalendersynchronisierung mit Cloud-Diensten und die jahrelange RLHF-Optimierung, die Alexa/Siri bei Randfällen geschmeidig macht.',
+          '**Smart-Home-Integration:** Verbinden Sie Ihren lokalen Sprachassistenten direkt mit Home Assistant, um Lichter, Thermostate und Sensoren per Sprache zu steuern — komplett offline. Siehe [lokaler Sprachassistent für Smart Home →](/de/smart-home/local-voice-assistant-smart-home) für die vollständige Piper + Whisper + Home-Assistant-Installationsanleitung.',
         ],
       },
       architecture: {
@@ -928,6 +930,7 @@ if __name__ == "__main__":
           '**Personnalisation :** Choisissez votre mot de déclenchement, la personnalité, le prompt système et les fonctionnalités. Connectez des systèmes domotiques locaux, intégrez des API locales.',
           '**Fonctionnement hors ligne :** Fonctionne sans internet. Panne de courant (avec onduleur) + panne internet : votre assistant local continue de fonctionner.',
           '**Ce que vous perdez :** Recherche web, intégration domotique avec les clouds propriétaires, synchronisation d\'agenda cloud, et les années d\'optimisation RLHF qui rendent Alexa/Siri fluides pour les cas limites.',
+          '**Intégration domotique :** Connectez votre assistant vocal local directement à Home Assistant pour contrôler les lumières, thermostats et capteurs par la voix — entièrement hors ligne. Voir [assistant vocal local pour smart home →](/fr/smart-home/local-voice-assistant-smart-home) pour le guide complet Piper + Whisper + Home Assistant.',
         ],
       },
       architecture: {
@@ -1324,6 +1327,7 @@ if __name__ == "__main__":
           '**カスタマイズ：** ウェイクワード、個性、システムプロンプト、機能を選択できます。カスタムコマンドを追加し、ローカルホームオートメーションシステムに接続し、ローカルAPIと統合できます。',
           '**オフライン動作：** インターネットなしで動作します。停電（UPSあり）＋インターネット障害でもローカルアシスタントは動き続けます。山小屋、遠隔地、緊急時対策に有用です。',
           '**失うもの：** ウェブ検索、独自クラウドを使うスマートホーム統合、クラウドサービスとのカレンダー同期、AlexaやSiriのエッジケースを滑らかにしているRLHFチューニングの積み重ね。',
+          '**スマートホーム連携：** ローカル音声アシスタントをHome Assistantに直接つなぎ、照明・サーモスタット・センサーを音声で操作できます — 完全オフライン。Piper + Whisper + Home Assistantのフルセットアップガイドは[スマートホーム向けローカル音声アシスタント →](/ja/smart-home/local-voice-assistant-smart-home)をご覧ください。',
         ],
       },
       architecture: {
@@ -1720,6 +1724,7 @@ if __name__ == "__main__":
           '**自定义：** 选择唤醒词、个性、系统提示词和功能。添加自定义命令，连接本地家庭自动化系统，与本地API集成。',
           '**离线运行：** 无需网络即可工作。停电（配UPS）+ 断网：本地助手仍然运行。适用于山间小屋、偏远地区和应急准备。',
           '**放弃的功能：** 网络搜索、与专有云的智能家居集成、与云服务的日历同步，以及让Alexa/Siri在边缘情况下表现流畅的多年RLHF调优积累。',
+          '**智能家居集成：** 将本地语音助手直接接入Home Assistant，通过语音控制灯光、温控器和传感器 — 完全离线。完整的Piper + Whisper + Home Assistant安装指南，请参阅[智能家居本地语音助手 →](/zh/smart-home/local-voice-assistant-smart-home)。',
         ],
       },
       architecture: {
@@ -2148,6 +2153,7 @@ if __name__ == "__main__":
           '**Personalización:** Elige tu palabra de activación, personalidad, system prompt y funcionalidades. Añade comandos personalizados, conecta sistemas de domótica local e integra APIs locales.',
           '**Funcionamiento offline:** Funciona sin internet. Un corte de luz (con SAI) + un corte de internet: tu asistente local sigue funcionando. Útil en cabañas, ubicaciones remotas y para preparación ante emergencias.',
           '**Lo que pierdes:** Búsqueda web, integración de domótica con nubes propietarias, sincronización de calendarios con servicios en la nube y los años de ajuste con RLHF que hacen que Alexa/Siri sean fluidos en casos límite.',
+          '**Integración con smart home:** Conecta tu asistente de voz local directamente a Home Assistant para controlar luces, termostatos y sensores por voz — completamente offline. Ver [asistente de voz local para smart home →](/es/smart-home/local-voice-assistant-smart-home) para la guía completa de configuración Piper + Whisper + Home Assistant.',
         ],
       },
       architecture: {
@@ -2587,6 +2593,7 @@ if __name__ == "__main__":
           '**Personalização:** Escolha a sua palavra de ativação, personalidade, system prompt e funcionalidades. Adicione comandos personalizados, conecte sistemas de automação residencial local e integre APIs locais.',
           '**Funcionamento offline:** Funciona sem internet. Um corte de energia (com nobreak) + um corte de internet: o seu assistente local continua funcionando. Útil em chalés, locais remotos e para preparação para emergências.',
           '**O que você abre mão:** Busca web, integração de automação residencial com nuvens proprietárias, sincronização de calendários com serviços na nuvem e os anos de ajuste com RLHF que tornam a Alexa/Siri fluidas em casos extremos.',
+          '**Integração com smart home:** Conecte o seu assistente de voz local diretamente ao Home Assistant para controlar luzes, termostatos e sensores por voz — completamente offline. Veja [assistente de voz local para smart home →](/pt/smart-home/local-voice-assistant-smart-home) para o guia completo de configuração Piper + Whisper + Home Assistant.',
         ],
       },
       architecture: {

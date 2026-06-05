@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Best Smart Home Devices 2026: A Buyer\'s Guide',
-    seoTitle: 'Best Smart Home Devices 2026: Buyer\'s Guide',
+    seoTitle: 'Best Smart Home Devices 2026: Local vs Cloud Buyer Guide',
     intro:
       'The best smart home devices in 2026 span hubs, lighting, locks, sensors, cameras, and plugs — and the smartest buying rule is to prefer local-capable devices for privacy and reliability. This buyer\'s guide goes category by category, flags which options work locally versus cloud-only, and shows how to assemble a local-first starter kit.',
     metaDescription:
@@ -197,11 +197,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Beste Smart-Home-Geräte 2026: Eine Kaufberatung',
-    seoTitle: 'Beste Smart-Home-Geräte 2026: Kaufberatung',
+    seoTitle: 'Beste Smart-Home-Geräte 2026: Lokal oder Cloud-Kaufberatung',
     intro:
       'Die besten Smart-Home-Geräte 2026 reichen von Hubs über Beleuchtung, Schlösser, Sensoren und Kameras bis zu Steckdosen – und die klügste Kaufregel ist, lokal-fähige Geräte für Datenschutz und Zuverlässigkeit zu bevorzugen. Diese Kaufberatung geht Kategorie für Kategorie vor, kennzeichnet, welche Optionen lokal statt nur-Cloud funktionieren, und zeigt, wie Sie ein Local-First-Starterset zusammenstellen.',
     metaDescription:
-      'Die besten Smart-Home-Geräte 2026 nach Kategorie – Hubs, Beleuchtung, Schlösser, Sensoren, Kameras, Steckdosen – jeweils als lokal-fähig oder nur-Cloud gekennzeichnet.',
+      'Die besten Smart-Home-Geräte 2026 nach Kategorie: Hubs, Beleuchtung, Schlösser, Sensoren, Kameras, Steckdosen – lokal-fähig oder nur-Cloud.',
     twitterDescription:
       'Beste Smart-Home-Geräte 2026 nach Kategorie, jeweils als lokal-fähig oder nur-Cloud gekennzeichnet. Bauen Sie ein privates Local-First-Set statt Cloud-Bindung.',
     readTime: '9 Min. Lesezeit',
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Beste Smart-Home-Geräte 2026: Eine Kaufberatung',
-      description: 'Die besten Smart-Home-Geräte 2026 nach Kategorie – Hubs, Beleuchtung, Schlösser, Sensoren, Kameras, Steckdosen – jeweils als lokal-fähig oder nur-Cloud gekennzeichnet.',
+      description: 'Die besten Smart-Home-Geräte 2026 nach Kategorie: Hubs, Beleuchtung, Schlösser, Sensoren, Kameras, Steckdosen – lokal-fähig oder nur-Cloud.',
       url: 'https://www.promptquorum.com/de/smart-home/best-smart-home-devices-2026',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -385,11 +385,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Mejores Dispositivos de Smart Home 2026: Guía de Compra',
-    seoTitle: 'Mejores Dispositivos de Smart Home 2026: Guía',
+    seoTitle: 'Mejores Dispositivos Smart Home 2026: Guía de Compra Local',
     intro:
       'Los mejores dispositivos de smart home de 2026 abarcan hubs, iluminación, cerraduras, sensores, cámaras y enchufes, y la regla de compra más inteligente es preferir los con capacidad local por privacidad y fiabilidad. Esta guía de compra va categoría por categoría, marca cuáles funcionan localmente frente a solo-nube y muestra cómo montar un kit inicial local-first.',
     metaDescription:
-      'Los mejores dispositivos de smart home de 2026 por categoría —hubs, iluminación, cerraduras, sensores, cámaras, enchufes— marcados como con capacidad local o solo-nube.',
+      'Los mejores dispositivos de smart home 2026 por categoría: hubs, iluminación, cerraduras, sensores, cámaras y enchufes. Cada uno marcado local o solo-nube.',
     twitterDescription:
       'Mejores dispositivos de smart home 2026 por categoría, marcados como con capacidad local o solo-nube. Monta un kit privado local-first en vez de uno atado a la nube.',
     readTime: '9 min de lectura',
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Mejores Dispositivos de Smart Home 2026: Guía de Compra',
-      description: 'Los mejores dispositivos de smart home de 2026 por categoría —hubs, iluminación, cerraduras, sensores, cámaras, enchufes— marcados como con capacidad local o solo-nube.',
+      description: 'Los mejores dispositivos de smart home 2026 por categoría: hubs, iluminación, cerraduras, sensores, cámaras y enchufes. Cada uno marcado local o solo-nube.',
       url: 'https://www.promptquorum.com/es/smart-home/best-smart-home-devices-2026',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -573,11 +573,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Meilleurs Appareils de Maison Connectée 2026 : Guide d\'Achat',
-    seoTitle: 'Meilleurs Appareils Maison Connectée 2026 : Guide',
+    seoTitle: 'Meilleurs Appareils Maison Connectée 2026: Guide Acheteur',
     intro:
       'Les meilleurs appareils de maison connectée de 2026 couvrent hubs, éclairage, serrures, capteurs, caméras et prises, et la règle d\'achat la plus avisée est de privilégier les appareils à capacité locale pour la confidentialité et la fiabilité. Ce guide d\'achat procède catégorie par catégorie, signale lesquels fonctionnent localement plutôt que tout-cloud, et montre comment assembler un kit de départ local-first.',
     metaDescription:
-      'Les meilleurs appareils de maison connectée 2026 par catégorie — hubs, éclairage, serrures, capteurs, caméras, prises — signalés comme à capacité locale ou tout-cloud.',
+      'Les meilleurs appareils domotiques 2026 par catégorie : hubs, éclairage, serrures, capteurs, caméras, prises. Chaque appareil signalé local ou tout-cloud.',
     twitterDescription:
       'Meilleurs appareils de maison connectée 2026 par catégorie, signalés à capacité locale ou tout-cloud. Assemblez un kit privé local-first plutôt que verrouillé au cloud.',
     readTime: '9 min de lecture',
@@ -731,7 +731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Meilleurs Appareils de Maison Connectée 2026 : Guide d\'Achat',
-      description: 'Les meilleurs appareils de maison connectée 2026 par catégorie — hubs, éclairage, serrures, capteurs, caméras, prises — signalés comme à capacité locale ou tout-cloud.',
+      description: 'Les meilleurs appareils domotiques 2026 par catégorie : hubs, éclairage, serrures, capteurs, caméras, prises. Chaque appareil signalé local ou tout-cloud.',
       url: 'https://www.promptquorum.com/fr/smart-home/best-smart-home-devices-2026',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -761,11 +761,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: '2026年 最適なスマートホーム機器：購入ガイド',
-    seoTitle: '2026年 最適なスマートホーム機器：購入ガイド',
+    seoTitle: 'スマートホーム機器おすすめ2026年版：ローカル対応で選ぶ購入ガイド',
     intro:
       '2026年の最適なスマートホーム機器は、ハブ、照明、ロック、センサー、カメラ、プラグに及びます——そして最も賢い購入ルールは、プライバシーと信頼性のためにローカル対応機器を優先することです。本購入ガイドはカテゴリーごとに進め、どれがクラウド専用ではなくローカルで動くかを示し、ローカルファーストのスターターキットの組み立て方を紹介します。',
     metaDescription:
-      '2026年の最適なスマートホーム機器をカテゴリー別に——ハブ、照明、ロック、センサー、カメラ、プラグ——それぞれローカル対応かクラウド専用かを明示。',
+      '2026年のスマートホーム機器をカテゴリー別に徹底比較：ハブ・照明・スマートロック・センサー・カメラ・スマートプラグの各分野でローカル対応かクラウド専用かを明示。プライバシー重視のローカルファーストキット構成方法も解説。',
     twitterDescription:
       '2026年の最適なスマートホーム機器をカテゴリー別に、ローカル対応かクラウド専用かを明示。クラウド固定ではなく、プライベートなローカルファーストのキットを。',
     readTime: '9分で読める',
@@ -919,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026年 最適なスマートホーム機器：購入ガイド',
-      description: '2026年の最適なスマートホーム機器をカテゴリー別に——ハブ、照明、ロック、センサー、カメラ、プラグ——それぞれローカル対応かクラウド専用かを明示。',
+      description: '2026年のスマートホーム機器をカテゴリー別に徹底比較：ハブ・照明・スマートロック・センサー・カメラ・スマートプラグの各分野でローカル対応かクラウド専用かを明示。プライバシー重視のローカルファーストキット構成方法も解説。',
       url: 'https://www.promptquorum.com/ja/smart-home/best-smart-home-devices-2026',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -949,11 +949,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Melhores Dispositivos de Casa Inteligente 2026: Guia de Compra',
-    seoTitle: 'Melhores Dispositivos de Casa Inteligente 2026',
+    seoTitle: 'Melhores Dispositivos de Casa Inteligente 2026: Guia Compra',
     intro:
       'Os melhores dispositivos de casa inteligente de 2026 abrangem hubs, iluminação, fechaduras, sensores, câmeras e tomadas, e a regra de compra mais inteligente é preferir dispositivos com capacidade local por privacidade e confiabilidade. Este guia de compra vai categoria por categoria, sinaliza quais funcionam localmente em vez de só-nuvem e mostra como montar um kit inicial local-first.',
     metaDescription:
-      'Os melhores dispositivos de casa inteligente de 2026 por categoria — hubs, iluminação, fechaduras, sensores, câmeras, tomadas — sinalizados como com capacidade local ou só-nuvem.',
+      'Os melhores dispositivos de casa inteligente 2026 por categoria: hubs, iluminação, fechaduras, sensores, câmeras e tomadas. Sinalizado como local ou só-nuvem.',
     twitterDescription:
       'Melhores dispositivos de casa inteligente 2026 por categoria, sinalizados como com capacidade local ou só-nuvem. Monte um kit privado local-first em vez de preso à nuvem.',
     readTime: '9 min de leitura',
@@ -1107,7 +1107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Melhores Dispositivos de Casa Inteligente 2026: Guia de Compra',
-      description: 'Os melhores dispositivos de casa inteligente de 2026 por categoria — hubs, iluminação, fechaduras, sensores, câmeras, tomadas — sinalizados como com capacidade local ou só-nuvem.',
+      description: 'Os melhores dispositivos de casa inteligente 2026 por categoria: hubs, iluminação, fechaduras, sensores, câmeras e tomadas. Sinalizado como local ou só-nuvem.',
       url: 'https://www.promptquorum.com/pt/smart-home/best-smart-home-devices-2026',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1137,11 +1137,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: '2026 最佳智能家居设备：购买指南',
-    seoTitle: '2026 最佳智能家居设备：购买指南',
+    seoTitle: '2026年智能家居设备分类购买指南：本地控制与云端优先方案全面对比',
     intro:
       '2026 年最佳的智能家居设备涵盖中枢、照明、门锁、传感器、摄像头和插座——而最明智的购买原则是为了隐私和可靠性优先选择支持本地的设备。本购买指南逐类展开，标明哪些可本地工作、哪些仅限云端，并展示如何组建一套本地优先的入门套件。',
     metaDescription:
-      '2026 年最佳智能家居设备分类盘点——中枢、照明、门锁、传感器、摄像头、插座——各自标明支持本地还是仅限云端。',
+      '2026年最佳智能家居设备分类盘点：中枢、照明、门锁、传感器、摄像头与智能插座，每类均标注是否支持本地控制。并附本地优先入门套件组建方案与选购建议。',
     twitterDescription:
       '2026 年最佳智能家居设备分类盘点，各自标明支持本地还是仅限云端。组建私密的本地优先套件，而非被云端锁定。',
     readTime: '阅读约9分钟',
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026 最佳智能家居设备：购买指南',
-      description: '2026 年最佳智能家居设备分类盘点——中枢、照明、门锁、传感器、摄像头、插座——各自标明支持本地还是仅限云端。',
+      description: '2026年最佳智能家居设备分类盘点：中枢、照明、门锁、传感器、摄像头与智能插座，每类均标注是否支持本地控制。并附本地优先入门套件组建方案与选购建议。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-smart-home-devices-2026',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

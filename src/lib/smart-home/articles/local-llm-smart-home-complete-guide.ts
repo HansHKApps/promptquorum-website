@@ -212,7 +212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Ein lokales LLM kann heute als Gehirn Ihres Smart Homes dienen – es interpretiert natürlichsprachliche Befehle, führt kontextbewusste Automatisierungen aus und betreibt einen privaten Sprachassistenten, alles auf eigener Hardware und ohne Cloud. Dieser Leitfaden erklärt, was das bedeutet, warum es 2026 praxistauglich wurde, die Architektur aus Home Assistant + Ollama + lokaler Sprache, was es gegenüber regelbasierter Automatisierung freischaltet und den Schritt-für-Schritt-Weg zum Aufbau.',
     metaDescription:
-      'Betreiben Sie Ihr Smart Home mit einem lokalen LLM: natürlichsprachliche Steuerung, kontextbewusste Automatisierungen und private Sprache über Home Assistant + Ollama. Ohne Cloud.',
+      'Smart Home mit lokalem LLM 2026: Natürlichsprachliche Steuerung und kontextbewusste Automatisierungen via Home Assistant + Ollama. Kein Cloud-Dienst.',
     twitterDescription:
       'Nutzen Sie ein lokales LLM als Smart-Home-Gehirn: natürlichsprachliche Steuerung und kontextbewusste Automatisierungen über Home Assistant + Ollama. Null Cloud.',
     readTime: '12 Min. Lesezeit',
@@ -376,7 +376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Ihr Smart Home mit einem lokalen LLM betreiben (Leitfaden 2026)',
-      description: 'Betreiben Sie Ihr Smart Home mit einem lokalen LLM: natürlichsprachliche Steuerung, kontextbewusste Automatisierungen und private Sprache über Home Assistant + Ollama. Ohne Cloud.',
+      description: 'Smart Home mit lokalem LLM 2026: Natürlichsprachliche Steuerung und kontextbewusste Automatisierungen via Home Assistant + Ollama. Kein Cloud-Dienst.',
       url: 'https://www.promptquorum.com/de/smart-home/local-llm-smart-home-complete-guide',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Un LLM local ya puede actuar como el cerebro de tu smart home: interpreta comandos en lenguaje natural, ejecuta automatizaciones contextuales y alimenta un asistente de voz privado, todo en hardware propio y sin nube. Esta guía explica qué significa, por qué se volvió práctico en 2026, la arquitectura Home Assistant + Ollama + voz local, qué desbloquea frente a la automatización por reglas y el camino paso a paso para montarlo.',
     metaDescription:
-      'Ejecuta tu smart home con un LLM local: control en lenguaje natural, automatizaciones contextuales y voz privada vía Home Assistant + Ollama. Sin nube. Guía 2026.',
+      'Smart home con LLM local 2026: control en lenguaje natural y automatizaciones contextuales via Home Assistant + Ollama. Sin nube.',
     twitterDescription:
       'Usa un LLM local como cerebro de tu smart home: control en lenguaje natural y automatizaciones contextuales vía Home Assistant + Ollama. Cero nube.',
     readTime: '12 min de lectura',
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Ejecuta Tu Smart Home con un LLM Local (Guía 2026)',
-      description: 'Ejecuta tu smart home con un LLM local: control en lenguaje natural, automatizaciones contextuales y voz privada vía Home Assistant + Ollama. Sin nube.',
+      description: 'Smart home con LLM local 2026: control en lenguaje natural y automatizaciones contextuales via Home Assistant + Ollama. Sin nube.',
       url: 'https://www.promptquorum.com/es/smart-home/local-llm-smart-home-complete-guide',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Un LLM local peut désormais servir de cerveau à votre maison connectée : il interprète des commandes en langage naturel, exécute des automatisations contextuelles et alimente un assistant vocal privé, le tout sur votre propre matériel et sans cloud. Ce guide explique ce que cela signifie, pourquoi c\'est devenu pratique en 2026, l\'architecture Home Assistant + Ollama + voix locale, ce que cela débloque face à l\'automatisation par règles et le chemin pas à pas pour le construire.',
     metaDescription:
-      'Faites tourner votre maison connectée sur un LLM local : commande en langage naturel, automatisations contextuelles et voix privée via Home Assistant + Ollama. Sans cloud.',
+      'Maison connectée avec LLM local 2026 : commande en langage naturel et automatisations contextuelles via Home Assistant + Ollama. Sans cloud.',
     twitterDescription:
       'Utilisez un LLM local comme cerveau de votre maison connectée : commande en langage naturel et automatisations contextuelles via Home Assistant + Ollama. Zéro cloud.',
     readTime: '12 min de lecture',
@@ -774,7 +774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Faire Tourner Votre Maison Connectée sur un LLM Local (Guide 2026)',
-      description: 'Faites tourner votre maison connectée sur un LLM local : commande en langage naturel, automatisations contextuelles et voix privée via Home Assistant + Ollama. Sans cloud.',
+      description: 'Maison connectée avec LLM local 2026 : commande en langage naturel et automatisations contextuelles via Home Assistant + Ollama. Sans cloud.',
       url: 'https://www.promptquorum.com/fr/smart-home/local-llm-smart-home-complete-guide',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Um LLM local já pode atuar como o cérebro da sua casa inteligente: interpreta comandos em linguagem natural, executa automações contextuais e alimenta um assistente de voz privado, tudo em hardware próprio e sem nuvem. Este guia explica o que isso significa, por que se tornou prático em 2026, a arquitetura Home Assistant + Ollama + voz local, o que desbloqueia em relação à automação por regras e o caminho passo a passo para montar.',
     metaDescription:
-      'Rode sua casa inteligente em um LLM local: controle em linguagem natural, automações contextuais e voz privada via Home Assistant + Ollama. Sem nuvem. Guia 2026.',
+      'Casa inteligente com LLM local 2026: controle em linguagem natural e automações contextuais via Home Assistant + Ollama. Sem nuvem.',
     twitterDescription:
       'Use um LLM local como cérebro da sua casa inteligente: controle em linguagem natural e automações contextuais via Home Assistant + Ollama. Zero nuvem.',
     readTime: '12 min de leitura',
@@ -1172,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Rode Sua Casa Inteligente em um LLM Local (Guia 2026)',
-      description: 'Rode sua casa inteligente em um LLM local: controle em linguagem natural, automações contextuais e voz privada via Home Assistant + Ollama. Sem nuvem.',
+      description: 'Casa inteligente com LLM local 2026: controle em linguagem natural e automações contextuais via Home Assistant + Ollama. Sem nuvem.',
       url: 'https://www.promptquorum.com/pt/smart-home/local-llm-smart-home-complete-guide',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

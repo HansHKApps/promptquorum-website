@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'How to Build a Smart Home With Zero Subscriptions (2026)',
-    seoTitle: 'Smart Home Without Subscriptions (2026)',
+    seoTitle: 'Smart Home Without Subscriptions: 2026 Setup Guide',
     intro:
       'You can build a smart home with zero subscriptions by choosing local-capable devices and a local hub, paying one-time hardware costs instead of monthly fees. This guide shows where subscriptions hide, the no-subscription local stack, devices that charge no fees, local camera storage, and the one-time-cost math that makes local cheaper over time.',
     metaDescription:
@@ -183,11 +183,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Ein Smart Home ganz ohne Abonnements bauen (2026)',
-    seoTitle: 'Smart Home ohne Abonnements (2026)',
+    seoTitle: 'Smart Home ohne Abonnements: Aufbau-Anleitung 2026',
     intro:
       'Sie können ein Smart Home ganz ohne Abonnements bauen, indem Sie lokal-fähige Geräte und einen lokalen Hub wählen und einmalige Hardwarekosten statt monatlicher Gebühren zahlen. Dieser Leitfaden zeigt, wo sich Abonnements verstecken, den abofreien lokalen Stack, Geräte ohne Gebühren, lokalen Kameraspeicher und die Einmalkosten-Rechnung, die lokal mit der Zeit günstiger macht.',
     metaDescription:
-      'Ein Smart Home ohne Abonnements bauen: lokal-fähige Geräte, ein lokaler Hub und lokaler Kameraspeicher ersetzen monatliche Gebühren durch einmalige Hardwarekosten.',
+      'Smart Home ohne Abonnements bauen 2026: lokale Geräte, lokaler Hub und lokaler Kameraspeicher ersetzen monatliche Gebühren durch einmalige Hardwarekosten.',
     twitterDescription:
       'Ein Smart Home ohne Abonnements bauen: lokale Geräte, ein lokaler Hub und lokaler Kameraspeicher ersetzen monatliche Gebühren durch einmalige Hardwarekosten.',
     readTime: '8 Min. Lesezeit',
@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Ein Smart Home ganz ohne Abonnements bauen (2026)',
-      description: 'Ein Smart Home ohne Abonnements bauen: lokal-fähige Geräte, ein lokaler Hub und lokaler Kameraspeicher ersetzen monatliche Gebühren durch einmalige Hardwarekosten.',
+      description: 'Smart Home ohne Abonnements bauen 2026: lokale Geräte, lokaler Hub und lokaler Kameraspeicher ersetzen monatliche Gebühren durch einmalige Hardwarekosten.',
       url: 'https://www.promptquorum.com/de/smart-home/smart-home-without-subscriptions',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -357,11 +357,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Cómo Construir un Smart Home con Cero Suscripciones (2026)',
-    seoTitle: 'Smart Home sin Suscripciones (2026)',
+    seoTitle: 'Smart Home sin Suscripciones: Guía de Configuración 2026',
     intro:
       'Puedes construir un smart home con cero suscripciones eligiendo dispositivos con capacidad local y un hub local, pagando costes de hardware únicos en vez de cuotas mensuales. Esta guía muestra dónde se esconden las suscripciones, el stack local sin suscripción, los dispositivos que no cobran cuotas, el almacenamiento local de cámaras y la matemática del coste único que hace que lo local sea más barato con el tiempo.',
     metaDescription:
-      'Construye un smart home con cero suscripciones: dispositivos con capacidad local, un hub local y almacenamiento local de cámaras reemplazan las cuotas mensuales por costes de hardware únicos.',
+      'Construye un smart home sin suscripciones en 2026: dispositivos locales, hub local y almacenamiento local de cámaras eliminan las cuotas mensuales.',
     twitterDescription:
       'Construye un smart home sin suscripciones: dispositivos locales, un hub local y almacenamiento local de cámaras reemplazan las cuotas mensuales por costes de hardware únicos.',
     readTime: '8 min de lectura',
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Cómo Construir un Smart Home con Cero Suscripciones (2026)',
-      description: 'Construye un smart home con cero suscripciones: dispositivos con capacidad local, un hub local y almacenamiento local de cámaras reemplazan las cuotas mensuales por costes de hardware únicos.',
+      description: 'Construye un smart home sin suscripciones en 2026: dispositivos locales, hub local y almacenamiento local de cámaras eliminan las cuotas mensuales.',
       url: 'https://www.promptquorum.com/es/smart-home/smart-home-without-subscriptions',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -531,11 +531,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Construire une Maison Connectée Sans Aucun Abonnement (2026)',
-    seoTitle: 'Maison Connectée Sans Abonnement (2026)',
+    seoTitle: 'Maison Connectée Sans Abonnement : Guide Complet 2026',
     intro:
       'Vous pouvez construire une maison connectée sans aucun abonnement en choisissant des appareils à capacité locale et un hub local, en payant des coûts matériels uniques au lieu de frais mensuels. Ce guide montre où se cachent les abonnements, la pile locale sans abonnement, les appareils qui ne facturent aucun frais, le stockage local des caméras et le calcul du coût unique qui rend le local moins cher avec le temps.',
     metaDescription:
-      'Construire une maison connectée sans abonnement : des appareils à capacité locale, un hub local et un stockage local des caméras remplacent les frais mensuels par des coûts matériels uniques.',
+      'Construire une maison connectée sans abonnement en 2026 : appareils locaux, hub local et stockage local des caméras éliminent les frais mensuels.',
     twitterDescription:
       'Construire une maison connectée sans abonnement : des appareils locaux, un hub local et un stockage local des caméras remplacent les frais mensuels par des coûts matériels uniques.',
     readTime: '8 min de lecture',
@@ -675,7 +675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Construire une Maison Connectée Sans Aucun Abonnement (2026)',
-      description: 'Construire une maison connectée sans abonnement : des appareils à capacité locale, un hub local et un stockage local des caméras remplacent les frais mensuels par des coûts matériels uniques.',
+      description: 'Construire une maison connectée sans abonnement en 2026 : appareils locaux, hub local et stockage local des caméras éliminent les frais mensuels.',
       url: 'https://www.promptquorum.com/fr/smart-home/smart-home-without-subscriptions',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -705,11 +705,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'サブスクなしでスマートホームを作る方法（2026）',
-    seoTitle: 'サブスクなしのスマートホーム（2026）',
+    seoTitle: 'サブスクなしのスマートホーム構築完全ガイド（2026年）',
     intro:
       'ローカル対応の機器とローカルハブを選び、月額料金ではなく一度きりのハードウェア費用を払うことで、サブスクなしのスマートホームを作れます。本ガイドは、サブスクがどこに潜むか、サブスクなしのローカル構成、料金のかからない機器、ローカルのカメラ保存、そしてローカルを長期的に安くする一度きり費用の計算を示します。',
     metaDescription:
-      'サブスクなしでスマートホームを作る：ローカル対応機器、ローカルハブ、ローカルのカメラ保存が、月額料金を一度きりのハードウェア費用に置き換えます。',
+      'サブスクなしでスマートホームを作る 2026年版：ローカル機器・ローカルハブ・カメラ保存で月額料金をゼロに。',
     twitterDescription:
       'サブスクなしでスマートホームを作る：ローカル機器、ローカルハブ、ローカルのカメラ保存が、月額料金を一度きりのハードウェア費用に置き換えます。',
     readTime: '8分で読める',
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'サブスクなしでスマートホームを作る方法（2026）',
-      description: 'サブスクなしでスマートホームを作る：ローカル対応機器、ローカルハブ、ローカルのカメラ保存が、月額料金を一度きりのハードウェア費用に置き換えます。',
+      description: 'サブスクなしでスマートホームを作る 2026年版：ローカル機器・ローカルハブ・カメラ保存で月額料金をゼロに。',
       url: 'https://www.promptquorum.com/ja/smart-home/smart-home-without-subscriptions',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -879,11 +879,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Como Construir uma Casa Inteligente Sem Nenhuma Assinatura (2026)',
-    seoTitle: 'Casa Inteligente Sem Assinaturas (2026)',
+    seoTitle: 'Casa Inteligente Sem Assinaturas: Guia de Configuração 2026',
     intro:
       'Você pode construir uma casa inteligente sem nenhuma assinatura escolhendo dispositivos com capacidade local e um hub local, pagando custos de hardware únicos em vez de taxas mensais. Este guia mostra onde as assinaturas se escondem, o stack local sem assinatura, os dispositivos que não cobram taxas, o armazenamento local de câmeras e a matemática do custo único que torna o local mais barato com o tempo.',
     metaDescription:
-      'Construa uma casa inteligente sem assinaturas: dispositivos com capacidade local, um hub local e armazenamento local de câmeras substituem as taxas mensais por custos de hardware únicos.',
+      'Construa uma casa inteligente sem assinaturas em 2026: dispositivos locais, hub local e armazenamento local de câmeras eliminam as taxas mensais.',
     twitterDescription:
       'Construa uma casa inteligente sem assinaturas: dispositivos locais, um hub local e armazenamento local de câmeras substituem as taxas mensais por custos de hardware únicos.',
     readTime: '8 min de leitura',
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Como Construir uma Casa Inteligente Sem Nenhuma Assinatura (2026)',
-      description: 'Construa uma casa inteligente sem assinaturas: dispositivos com capacidade local, um hub local e armazenamento local de câmeras substituem as taxas mensais por custos de hardware únicos.',
+      description: 'Construa uma casa inteligente sem assinaturas em 2026: dispositivos locais, hub local e armazenamento local de câmeras eliminam as taxas mensais.',
       url: 'https://www.promptquorum.com/pt/smart-home/smart-home-without-subscriptions',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1053,7 +1053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: '如何打造零订阅的智能家居（2026）',
-    seoTitle: '无订阅的智能家居（2026）',
+    seoTitle: '零订阅智能家居 2026：本地设备、本地中枢搭建完全指南',
     intro:
       '通过选择支持本地的设备和一个本地中枢，并支付一次性硬件成本而非按月付费，你就能打造一个零订阅的智能家居。本指南展示订阅藏在何处、无订阅的本地堆栈、不收费的设备、本地摄像头存储，以及让本地随时间更便宜的一次性成本算法。',
     metaDescription:

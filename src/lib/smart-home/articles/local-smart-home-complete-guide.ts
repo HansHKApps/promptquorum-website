@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
     title: 'Lokales Smart Home: Der komplette No-Cloud-Leitfaden (2026)',
-    seoTitle: 'Lokales Smart Home 2026: No-Cloud-Leitfaden',
+    seoTitle: 'Lokales Smart Home 2026: Vollständiger No-Cloud-Leitfaden',
     intro:
       'Ein lokales Smart Home verarbeitet jedes Gerät, jede Automatisierung und jeden Sprachbefehl auf Ihrer eigenen Hardware – ganz ohne Cloud-Konto. Dieser Leitfaden definiert das Local-First-Modell, erklärt, warum es 2026 wächst, und gliedert den Stack Schicht für Schicht auf: Hub, Protokolle, Sprache und ein lokales KI-Gehirn. Sie erfahren, was heute zu Hause läuft, was es kostet und wie Sie starten.',
     metaDescription:
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルスマートホームは、すべてのデバイス・自動化・音声コマンドを自分のハードウェア上で処理し、クラウドアカウントを一切使いません。本ガイドではローカルファーストの考え方を定義し、2026年に普及が進む理由を説明し、ハブ・プロトコル・音声・ローカルAIの頭脳という層ごとにスタックを分解します。今すぐ自宅で動かせるもの、費用、始め方がわかります。',
     metaDescription:
-      'ローカルスマートホームはすべてのデバイスと自動化を自分のハードウェアで動かします。クラウド不要、オフライン動作、完全プライベート。2026年版完全ガイド。',
+      'ローカル smart home 2026：全デバイスと自動化を自前ハードで動かす。cloud 不要・offline・完全 private。完全ガイド。',
     twitterDescription:
       'クラウド不要のスマートホーム：デバイス、自動化、音声コマンドをすべて自分のハードウェアで実行。2026年版の完全なローカルファースト構成。',
     readTime: '11分で読める',
@@ -1038,7 +1038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'ローカルスマートホーム完全ガイド：クラウド不要（2026）',
-      description: 'ローカルスマートホームはすべてのデバイスと自動化を自分のハードウェアで動かします。クラウド不要、オフライン動作、完全プライベート。2026年版完全ガイド。',
+      description: 'ローカル smart home 2026：全デバイスと自動化を自前ハードで動かす。cloud 不要・offline・完全 private。完全ガイド。',
       url: 'https://www.promptquorum.com/ja/smart-home/local-smart-home-complete-guide',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1281,11 +1281,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
     title: '本地智能家居完整指南：无需云端（2026）',
-    seoTitle: '本地智能家居2026：无云端完整指南',
+    seoTitle: '2026本地智能家居：Home Assistant无云端完整搭建指南',
     intro:
       '本地智能家居在你自己的硬件上处理每一个设备、自动化和语音指令，完全不使用云账户。本指南定义本地优先模式，解释它为何在2026年增长，并按层拆解整个架构：中枢、协议、语音以及本地AI大脑。你将了解今天能在家中运行什么、成本如何，以及如何开始。',
     metaDescription:
-      '本地智能家居在你自己的硬件上运行每个设备和自动化：无云端、可离线、完全私密。2026年完整本地优先架构指南。',
+      '本地智能家居2026：设备与自动化在你的硬件上运行，无 cloud 账号，断网可用，零订阅费。Home Assistant 完整架构指南。',
     twitterDescription:
       '无云端智能家居：每个设备、自动化和语音指令都在你自己的硬件上运行。2026年完整的本地优先架构。',
     readTime: '阅读约11分钟',
@@ -1462,7 +1462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '本地智能家居完整指南：无需云端（2026）',
-      description: '本地智能家居在你自己的硬件上运行每个设备和自动化：无云端、可离线、完全私密。2026年完整本地优先架构指南。',
+      description: '本地智能家居2026：设备与自动化在你的硬件上运行，无 cloud 账号，断网可用，零订阅费。Home Assistant 完整架构指南。',
       url: 'https://www.promptquorum.com/zh/smart-home/local-smart-home-complete-guide',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

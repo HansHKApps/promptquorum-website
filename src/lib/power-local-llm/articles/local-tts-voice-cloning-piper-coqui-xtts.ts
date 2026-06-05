@@ -136,6 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Latency:** No network round-trip. Piper generates the first audio token in under 50 ms on CPU — faster than any cloud TTS round-trip.',
           '**Customization:** Voice cloning (XTTS v2, F5-TTS, Coqui) lets you create a custom voice from a few seconds of audio. Cloud providers charge $10+/month per cloned voice.',
           '**Offline operation:** Works on planes, in secure facilities, in remote areas with no internet. Embedded voice UI for kiosks and appliances.',
+          '**Smart home:** Piper is the leading TTS layer for always-on local voice interfaces — real-time on Raspberry Pi, no GPU needed. For a complete offline voice assistant wired into Home Assistant, see [local voice assistant for smart home →](/smart-home/local-voice-assistant-smart-home).',
         ],
       },
       comparisonTable: {
@@ -626,6 +627,7 @@ tts.tts_to_file(
           '**Latenz:** Kein Netzwerk-Roundtrip. Piper generiert das erste Audio-Token in unter 50 ms auf der CPU — schneller als jeder Cloud-TTS-Roundtrip.',
           '**Anpassung:** Voice-Cloning (XTTS v2, F5-TTS, Coqui) ermöglicht die Erstellung einer eigenen Stimme aus wenigen Sekunden Audio. Cloud-Anbieter berechnen 10 €+/Monat pro geklonter Stimme.',
           '**Offline-Betrieb:** Funktioniert in Flugzeugen, in gesicherten Einrichtungen, in abgelegenen Gebieten ohne Internet. Eingebettete Sprach-UI für Kioske und Geräte.',
+          '**Smart Home:** Piper ist die führende TTS-Schicht für immer-aktive lokale Sprachschnittstellen — Echtzeit auf Raspberry Pi, keine GPU erforderlich. Für einen vollständigen Offline-Sprachassistenten in Home Assistant, siehe [lokaler Sprachassistent für Smart Home →](/de/smart-home/local-voice-assistant-smart-home).',
         ],
       },
       comparisonTable: {
@@ -930,6 +932,7 @@ tts.tts_to_file(
           '**Latence :** Pas d\'aller-retour réseau. Piper génère le premier token audio en moins de 50 ms sur CPU — plus rapide que tout aller-retour TTS cloud.',
           '**Personnalisation :** Le clonage vocal (XTTS v2, F5-TTS, Coqui) permet de créer une voix personnalisée à partir de quelques secondes d\'audio. Les fournisseurs cloud facturent 10 €+/mois par voix clonée.',
           '**Fonctionnement hors ligne :** Fonctionne dans les avions, dans les installations sécurisées, dans les zones éloignées sans internet. Interface vocale embarquée pour bornes et appareils.',
+          '**Maison connectée :** Piper est la couche TTS de référence pour les interfaces vocales locales toujours actives — temps réel sur Raspberry Pi, sans GPU. Pour un assistant vocal hors ligne intégré dans Home Assistant, voir [assistant vocal local pour smart home →](/fr/smart-home/local-voice-assistant-smart-home).',
         ],
       },
       comparisonTable: {
@@ -1219,6 +1222,7 @@ tts.tts_to_file(
           '**レイテンシ：** ネットワーク往復がありません。PiperはCPUで50ms未満で最初の音声トークンを生成します — あらゆるクラウドTTSの往復より高速です。',
           '**カスタマイズ：** ボイスクローニング（XTTS v2、F5-TTS、Coqui）により、数秒の音声からカスタムボイスを作成できます。クラウドプロバイダはクローン音声1つにつき月10ドル以上請求します。',
           '**オフライン動作：** 飛行機内、セキュリティ施設、インターネットのない遠隔地で動作します。キオスクや機器向けの組み込み音声UIとして使用できます。',
+          '**スマートホーム：** Piperは常時稼働のローカル音声インターフェースの主要TTS層で、Raspberry PiでもGPU不要でリアルタイム動作します。Home Assistantと連携した完全オフライン音声アシスタントは、[スマートホーム向けローカル音声アシスタント →](/ja/smart-home/local-voice-assistant-smart-home)をご覧ください。',
         ],
       },
       comparisonTable: {
@@ -1523,6 +1527,7 @@ tts.tts_to_file(
           '**延迟：** 无网络往返。Piper在CPU上50ms内生成第一个音频令牌 — 比任何云端TTS往返都快。',
           '**自定义：** 声音克隆（XTTS v2、F5-TTS、Coqui）允许您从几秒钟的音频创建自定义声音。云提供商每个克隆声音收取10美元以上/月。',
           '**离线操作：** 在飞机上、安全设施中、没有互联网的偏远地区均可工作。适用于信息亭和设备的嵌入式语音界面。',
+          '**智能家居：** Piper是常驻本地语音界面的主流TTS层，在Raspberry Pi上实时运行，无需GPU。要了解集成到Home Assistant的完整离线语音助手，请参阅[智能家居本地语音助手 →](/zh/smart-home/local-voice-assistant-smart-home)。',
         ],
       },
       comparisonTable: {
@@ -1903,6 +1908,7 @@ tts.tts_to_file(
           '**Latencia:** Sin viaje de red de ida y vuelta. Piper genera el primer token de audio en menos de 50 ms en CPU — más rápido que cualquier TTS en la nube.',
           '**Personalización:** La clonación de voz (XTTS v2, F5-TTS, Coqui) permite crear una voz personalizada a partir de unos pocos segundos de audio. Los proveedores en la nube cobran $10+/mes por cada voz clonada.',
           '**Operación offline:** Funciona en aviones, instalaciones seguras, zonas remotas sin internet. Interfaz de voz embebida para quioscos y dispositivos.',
+          '**Smart home:** Piper es la capa TTS principal para interfaces de voz locales siempre activas — tiempo real en Raspberry Pi, sin GPU. Para un asistente de voz offline completo integrado en Home Assistant, ver [asistente de voz local para smart home →](/es/smart-home/local-voice-assistant-smart-home).',
         ],
       },
       comparisonTable: {
@@ -2479,6 +2485,7 @@ tts.tts_to_file(
           '**Latência:** Sem viagem de rede de ida e volta. Piper gera o primeiro token de áudio em menos de 50 ms em CPU — mais rápido do que qualquer TTS na nuvem.',
           '**Personalização:** A clonagem de voz (XTTS v2, F5-TTS, Coqui) permite criar uma voz personalizada a partir de alguns segundos de áudio. Os provedores na nuvem cobram $10+/mês por cada voz clonada.',
           '**Operação offline:** Funciona em aviões, instalações seguras, zonas remotas sem internet. Interface de voz embarcada para quiosques e dispositivos.',
+          '**Casa inteligente:** Piper é a principal camada TTS para interfaces de voz locais sempre ativas — tempo real no Raspberry Pi, sem GPU. Para um assistente de voz offline completo integrado ao Home Assistant, veja [assistente de voz local para smart home →](/pt/smart-home/local-voice-assistant-smart-home).',
         ],
       },
       comparisonTable: {

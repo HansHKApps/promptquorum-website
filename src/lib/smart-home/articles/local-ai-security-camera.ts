@@ -202,7 +202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Frigate führt lokale KI-Objekt- und Personenerkennung auf Ihren Kamera-Feeds aus – ohne Cloud und ohne Abonnement – und integriert sich direkt in Home Assistant. Dieser Leitfaden behandelt das Datenschutzproblem von Cloud-Kameras, was Frigate tut, die Hardware, die die Erkennung beschleunigt (eine Coral-TPU oder GPU), die Home-Assistant-Integration, Benachrichtigungen und wie sich die Kosten zu Abo-Kameras verhalten.',
     metaDescription:
-      'Private KI-Sicherheitskameras mit Frigate betreiben: lokale Objekt- und Personenerkennung, ohne Cloud, ohne Abonnement. Hardware, Home-Assistant-Setup und Kosten vs Cloud.',
+      'Frigate: private KI-Sicherheitskameras 2026 – lokale Erkennung, kein Cloud-Abo. Hardware, Home-Assistant-Setup und Kostenvergleich.',
     twitterDescription:
       'Frigate gibt Ihnen private KI-Sicherheitskameras: lokale Personen-/Objekterkennung, ohne Cloud, ohne Abonnement, integriert mit Home Assistant.',
     readTime: '9 Min. Lesezeit',
@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Lokale KI-Sicherheitskameras mit Frigate (2026)',
-      description: 'Private KI-Sicherheitskameras mit Frigate betreiben: lokale Objekt- und Personenerkennung, ohne Cloud, ohne Abonnement. Hardware, Home-Assistant-Setup und Kosten vs Cloud.',
+      description: 'Frigate: private KI-Sicherheitskameras 2026 – lokale Erkennung, kein Cloud-Abo. Hardware, Home-Assistant-Setup und Kostenvergleich.',
       url: 'https://www.promptquorum.com/de/smart-home/local-ai-security-camera',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -391,7 +391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Frigate ejecuta detección local de objetos y personas con IA sobre tus cámaras, sin nube y sin suscripción, integrándose directamente en Home Assistant. Esta guía cubre el problema de privacidad de las cámaras en la nube, qué hace Frigate, el hardware que acelera la detección (una Coral TPU o GPU), la integración con Home Assistant, las notificaciones y cómo se compara el coste con las cámaras de suscripción.',
     metaDescription:
-      'Ejecuta cámaras de seguridad con IA privadas con Frigate: detección local de objetos y personas, sin nube, sin suscripción. Hardware, configuración de Home Assistant y coste vs nube.',
+      'Frigate 2026: cámaras de seguridad privadas con IA local, detección sin nube, sin suscripción. Hardware, Home Assistant y coste vs nube.',
     twitterDescription:
       'Frigate te da cámaras de seguridad con IA privadas: detección local de personas/objetos, sin nube, sin suscripción, integrada con Home Assistant.',
     readTime: '9 min de lectura',
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Cámaras de Seguridad con IA Local con Frigate (2026)',
-      description: 'Ejecuta cámaras de seguridad con IA privadas con Frigate: detección local de objetos y personas, sin nube, sin suscripción. Hardware, configuración de Home Assistant y coste vs nube.',
+      description: 'Frigate 2026: cámaras de seguridad privadas con IA local, detección sin nube, sin suscripción. Hardware, Home Assistant y coste vs nube.',
       url: 'https://www.promptquorum.com/es/smart-home/local-ai-security-camera',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Frigate exécute la détection locale d\'objets et de personnes par IA sur vos flux de caméras, sans cloud et sans abonnement, en s\'intégrant directement à Home Assistant. Ce guide couvre le problème de confidentialité des caméras cloud, ce que fait Frigate, le matériel qui accélère la détection (un Coral TPU ou un GPU), l\'intégration à Home Assistant, les notifications et la comparaison de coût avec les caméras à abonnement.',
     metaDescription:
-      'Exécutez des caméras de sécurité à IA privées avec Frigate : détection locale d\'objets et de personnes, sans cloud, sans abonnement. Matériel, configuration Home Assistant et coût vs cloud.',
+      'Frigate 2026 : caméras IA privées, détection locale d\'objets et personnes, sans cloud ni abonnement. Matériel, Home Assistant et coût.',
     twitterDescription:
       'Frigate vous donne des caméras de sécurité à IA privées : détection locale de personnes/objets, sans cloud, sans abonnement, intégrée à Home Assistant.',
     readTime: '9 min de lecture',
@@ -735,7 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Caméras de Sécurité à IA Locale avec Frigate (2026)',
-      description: 'Exécutez des caméras de sécurité à IA privées avec Frigate : détection locale d\'objets et de personnes, sans cloud, sans abonnement. Matériel, configuration Home Assistant et coût vs cloud.',
+      description: 'Frigate 2026 : caméras IA privées, détection locale d\'objets et personnes, sans cloud ni abonnement. Matériel, Home Assistant et coût.',
       url: 'https://www.promptquorum.com/fr/smart-home/local-ai-security-camera',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O Frigate executa detecção local de objetos e pessoas com IA nos feeds das suas câmeras, sem nuvem e sem assinatura, integrando-se diretamente ao Home Assistant. Este guia cobre o problema de privacidade das câmeras na nuvem, o que o Frigate faz, o hardware que acelera a detecção (uma Coral TPU ou GPU), a integração com o Home Assistant, as notificações e como o custo se compara ao das câmeras por assinatura.',
     metaDescription:
-      'Rode câmeras de segurança com IA privadas com o Frigate: detecção local de objetos e pessoas, sem nuvem, sem assinatura. Hardware, configuração do Home Assistant e custo vs nuvem.',
+      'Frigate 2026: câmeras de segurança com IA privada, detecção local, sem nuvem, sem assinatura. Hardware, Home Assistant e custo vs nuvem.',
     twitterDescription:
       'O Frigate dá câmeras de segurança com IA privadas: detecção local de pessoas/objetos, sem nuvem, sem assinatura, integrada ao Home Assistant.',
     readTime: '9 min de leitura',
@@ -1113,7 +1113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Câmeras de Segurança com IA Local com Frigate (2026)',
-      description: 'Rode câmeras de segurança com IA privadas com o Frigate: detecção local de objetos e pessoas, sem nuvem, sem assinatura. Hardware, configuração do Home Assistant e custo vs nuvem.',
+      description: 'Frigate 2026: câmeras de segurança com IA privada, detecção local, sem nuvem, sem assinatura. Hardware, Home Assistant e custo vs nuvem.',
       url: 'https://www.promptquorum.com/pt/smart-home/local-ai-security-camera',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

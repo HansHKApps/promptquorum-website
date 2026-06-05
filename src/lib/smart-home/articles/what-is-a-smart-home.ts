@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'What Is a Smart Home? A 2026 Beginner\'s Guide',
-    seoTitle: 'What Is a Smart Home? 2026 Beginner\'s Guide',
+    seoTitle: 'What Is a Smart Home? Complete 2026 Beginner\'s Guide',
     intro:
       'A smart home is a set of connected devices you monitor, automate, and control by app or voice. This beginner\'s guide explains the core idea, the device categories, how hubs tie devices together, the cloud-versus-local choice that defines privacy in 2026, the major ecosystems, and where to go next if you want a private setup.',
     metaDescription:
@@ -383,11 +383,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: '¿Qué Es un Smart Home? Guía para Principiantes 2026',
-    seoTitle: '¿Qué Es un Smart Home? Guía Principiantes 2026',
+    seoTitle: '¿Qué Es un Smart Home? Guía para Principiantes 2026',
     intro:
       'Un smart home es un conjunto de dispositivos conectados que monitoreas, automatizas y controlas por app o por voz. Esta guía para principiantes explica la idea central, las categorías de dispositivos, cómo los hubs unen los dispositivos, la decisión nube-frente-a-local que define la privacidad en 2026, los grandes ecosistemas y a dónde ir después si quieres una opción privada.',
     metaDescription:
-      'Un smart home son dispositivos conectados que controlas por app o voz. La guía para principiantes 2026: categorías, hubs, la decisión nube-vs-local y ecosistemas.',
+      'Un smart home son dispositivos conectados que controlas por app o voz. Guía 2026: categorías, hubs, la elección nube-vs-local y los grandes ecosistemas.',
     twitterDescription:
       '¿Qué es un smart home? Dispositivos conectados que automatizas y controlas por app o por voz. La guía para principiantes 2026 sobre categorías, hubs y nube vs local.',
     readTime: '8 min de lectura',
@@ -540,7 +540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '¿Qué Es un Smart Home? Guía para Principiantes 2026',
-      description: 'Un smart home son dispositivos conectados que controlas por app o voz. La guía para principiantes 2026: categorías, hubs, la decisión nube-vs-local y ecosistemas.',
+      description: 'Un smart home son dispositivos conectados que controlas por app o voz. Guía 2026: categorías, hubs, la elección nube-vs-local y los grandes ecosistemas.',
       url: 'https://www.promptquorum.com/es/smart-home/what-is-a-smart-home',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -570,11 +570,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Qu\'est-ce qu\'une Maison Connectée ? Guide Débutant 2026',
-    seoTitle: 'Qu\'est-ce qu\'une Maison Connectée ? Guide 2026',
+    seoTitle: 'Qu\'est-ce qu\'une Maison Connectée ? Guide Débutant 2026',
     intro:
       'Une maison connectée est un ensemble d\'appareils reliés que vous surveillez, automatisez et commandez par application ou à la voix. Ce guide débutant explique l\'idée de base, les catégories d\'appareils, comment les hubs relient les appareils, le choix cloud-contre-local qui définit la confidentialité en 2026, les grands écosystèmes et où aller ensuite si vous voulez une option privée.',
     metaDescription:
-      'Une maison connectée, ce sont des appareils reliés que vous commandez par application ou à la voix. Le guide débutant 2026 : catégories, hubs, cloud contre local et écosystèmes.',
+      'Une maison connectée, ce sont des appareils reliés commandés par app ou à la voix. Guide 2026 : catégories, hubs, cloud contre local et écosystèmes.',
     twitterDescription:
       'Qu\'est-ce qu\'une maison connectée ? Des appareils reliés que vous automatisez et commandez par application ou à la voix. Le guide débutant 2026 : catégories, hubs, cloud vs local.',
     readTime: '8 min de lecture',
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Qu\'est-ce qu\'une Maison Connectée ? Guide Débutant 2026',
-      description: 'Une maison connectée, ce sont des appareils reliés que vous commandez par application ou à la voix. Le guide débutant 2026 : catégories, hubs, cloud contre local et écosystèmes.',
+      description: 'Une maison connectée, ce sont des appareils reliés commandés par app ou à la voix. Guide 2026 : catégories, hubs, cloud contre local et écosystèmes.',
       url: 'https://www.promptquorum.com/fr/smart-home/what-is-a-smart-home',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -757,11 +757,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'スマートホームとは？2026年版 初心者ガイド',
-    seoTitle: 'スマートホームとは？2026年版 初心者ガイド',
+    seoTitle: 'スマートホームとは？アプリ・音声制御から始める2026年版初心者ガイド',
     intro:
       'スマートホームとは、アプリや音声で監視・自動化・制御できる接続機器の集まりです。本初心者ガイドでは、基本的な考え方、機器のカテゴリー、ハブが機器をどうつなぐか、2026年のプライバシーを左右するクラウド対ローカルの選択、主要なエコシステム、そしてプライベートな選択肢を求める場合の次の一歩を説明します。',
     metaDescription:
-      'スマートホームとは、アプリや音声で制御する接続機器のこと。2026年版初心者ガイド：カテゴリー、ハブ、クラウド対ローカルの選択、主要エコシステム。',
+      'スマートホームとはアプリや音声で操作できる接続機器の集まりです。2026年版ガイドでは照明から防犯まで5カテゴリー、ハブの仕組み、クラウド対ローカル制御の違い、主要4エコシステムをわかりやすく解説します。',
     twitterDescription:
       'スマートホームとは？アプリや音声で自動化・制御する接続機器。2026年版初心者ガイドでカテゴリー、ハブ、クラウド対ローカルを解説。',
     readTime: '8分で読める',
@@ -914,7 +914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'スマートホームとは？2026年版 初心者ガイド',
-      description: 'スマートホームとは、アプリや音声で制御する接続機器のこと。2026年版初心者ガイド：カテゴリー、ハブ、クラウド対ローカルの選択、主要エコシステム。',
+      description: 'スマートホームとはアプリや音声で操作できる接続機器の集まりです。2026年版ガイドでは照明から防犯まで5カテゴリー、ハブの仕組み、クラウド対ローカル制御の違い、主要4エコシステムをわかりやすく解説します。',
       url: 'https://www.promptquorum.com/ja/smart-home/what-is-a-smart-home',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -948,7 +948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Uma casa inteligente é um conjunto de dispositivos conectados que você monitora, automatiza e controla por aplicativo ou voz. Este guia para iniciantes explica a ideia central, as categorias de dispositivos, como os hubs unem os dispositivos, a decisão nuvem-versus-local que define a privacidade em 2026, os grandes ecossistemas e para onde ir depois se você quer uma opção privada.',
     metaDescription:
-      'Uma casa inteligente são dispositivos conectados que você controla por aplicativo ou voz. O guia para iniciantes 2026: categorias, hubs, a decisão nuvem-vs-local e ecossistemas.',
+      'Uma casa inteligente são dispositivos conectados que você controla por aplicativo ou voz. Guia 2026: categorias, hubs, a decisão nuvem-vs-local e ecossistemas.',
     twitterDescription:
       'O que é uma casa inteligente? Dispositivos conectados que você automatiza e controla por aplicativo ou voz. O guia para iniciantes 2026: categorias, hubs e nuvem vs local.',
     readTime: '8 min de leitura',
@@ -1101,7 +1101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'O Que É uma Casa Inteligente? Guia para Iniciantes 2026',
-      description: 'Uma casa inteligente são dispositivos conectados que você controla por aplicativo ou voz. O guia para iniciantes 2026: categorias, hubs, a decisão nuvem-vs-local e ecossistemas.',
+      description: 'Uma casa inteligente são dispositivos conectados que você controla por aplicativo ou voz. Guia 2026: categorias, hubs, a decisão nuvem-vs-local e ecossistemas.',
       url: 'https://www.promptquorum.com/pt/smart-home/what-is-a-smart-home',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1131,11 +1131,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: '什么是智能家居？2026新手指南',
-    seoTitle: '什么是智能家居？2026新手指南',
+    seoTitle: '什么是智能家居？应用与语音控制、生态系统与云端本地对比 2026新手指南',
     intro:
       '智能家居是一组联网设备，你可以通过应用或语音来监控、自动化和控制它们。本新手指南讲解核心理念、设备类别、中枢如何连接设备、在2026年决定隐私的云端对本地之选、主要生态系统，以及如果你想要更私密的方案下一步去哪里。',
     metaDescription:
-      '智能家居是你用应用或语音控制的联网设备。2026新手指南：设备类别、中枢、云端对本地之选与主要生态系统。',
+      '智能家居是指通过应用或语音控制的联网设备集合，涵盖照明、温控、安防等五大类别。本2026新手指南解析中枢作用、云端对本地控制的关键区别以及四大主流生态系统。',
     twitterDescription:
       '什么是智能家居？你用应用或语音自动化与控制的联网设备。2026新手指南讲解类别、中枢与云端对本地。',
     readTime: '阅读约8分钟',
@@ -1288,7 +1288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '什么是智能家居？2026新手指南',
-      description: '智能家居是你用应用或语音控制的联网设备。2026新手指南：设备类别、中枢、云端对本地之选与主要生态系统。',
+      description: '智能家居是指通过应用或语音控制的联网设备集合，涵盖照明、温控、安防等五大类别。本2026新手指南解析中枢作用、云端对本地控制的关键区别以及四大主流生态系统。',
       url: 'https://www.promptquorum.com/zh/smart-home/what-is-a-smart-home',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

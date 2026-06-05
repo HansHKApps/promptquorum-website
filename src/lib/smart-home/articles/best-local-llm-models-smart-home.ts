@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Die besten lokalen LLM-Modelle für die Smart-Home-Steuerung sind kleine, schnelle, instruktionsfolgende Modelle mit zuverlässigem Function-Calling – nicht das größte Modell, das Ihre Hardware fassen kann. Dieser Leitfaden erklärt, was für die Heimsteuerung wirklich zählt, gibt eine Auswahl geeigneter kleiner Modelle, vergleicht sie und ordnet Empfehlungen Hardware-Budgets zu – und verlinkt für tiefere Modell-Leitfäden, statt das ganze Feld neu zu ordnen.',
     metaDescription:
-      'Die besten lokalen LLM-Modelle für die Smart-Home-Steuerung 2026: kleine, schnelle Function-Calling-Modelle, die auf bescheidener Hardware laufen. Auswahl und Empfehlungen nach Budget.',
+      'Beste lokale LLMs für Home Assistant 2026: kleine, schnelle Function-Calling-Modelle für bescheidene Hardware. Auswahl nach Budgetstufen.',
     twitterDescription:
       'Beste lokale LLM-Modelle für die Home-Assistant-Steuerung: kleine, schnelle Function-Calling-Modelle statt des größten betreibbaren Modells. Empfehlungen nach Hardware-Budget.',
     readTime: '8 Min. Lesezeit',
@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Beste lokale LLM-Modelle für die Smart-Home-Steuerung (2026)',
-      description: 'Die besten lokalen LLM-Modelle für die Smart-Home-Steuerung 2026: kleine, schnelle Function-Calling-Modelle, die auf bescheidener Hardware laufen. Auswahl und Empfehlungen nach Budget.',
+      description: 'Beste lokale LLMs für Home Assistant 2026: kleine, schnelle Function-Calling-Modelle für bescheidene Hardware. Auswahl nach Budgetstufen.',
       url: 'https://www.promptquorum.com/de/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -375,7 +375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Los mejores modelos LLM locales para el control del smart home son modelos pequeños, rápidos y que siguen instrucciones con llamada a funciones fiable, no el modelo más grande que tu hardware pueda contener. Esta guía explica qué importa de verdad para el control del hogar, da una lista corta de modelos pequeños adecuados, los compara y asigna opciones a presupuestos de hardware, enlazando a guías de modelos más profundas en vez de reordenar todo el campo.',
     metaDescription:
-      'Los mejores modelos LLM locales para el control del smart home en 2026: modelos pequeños, rápidos y con llamada a funciones que corren en hardware modesto. Lista corta y opciones por presupuesto.',
+      'Mejores LLMs locales para Home Assistant 2026: modelos 3B–8B con llamada a funciones para hardware modesto. Lista y recomendaciones por presupuesto.',
     twitterDescription:
       'Mejores modelos LLM locales para el control con Home Assistant: modelos pequeños, rápidos y con llamada a funciones sobre el modelo más grande que puedas ejecutar. Opciones por presupuesto.',
     readTime: '8 min de lectura',
@@ -522,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Mejores Modelos LLM Locales para el Control del Smart Home (2026)',
-      description: 'Los mejores modelos LLM locales para el control del smart home en 2026: modelos pequeños, rápidos y con llamada a funciones que corren en hardware modesto. Lista corta y opciones por presupuesto.',
+      description: 'Mejores LLMs locales para Home Assistant 2026: modelos 3B–8B con llamada a funciones para hardware modesto. Lista y recomendaciones por presupuesto.',
       url: 'https://www.promptquorum.com/es/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Les meilleurs modèles LLM locaux pour le contrôle de la maison connectée sont des modèles petits, rapides et suivant les instructions, avec un appel de fonctions fiable — pas le plus gros modèle que votre matériel peut contenir. Ce guide explique ce qui compte vraiment pour le contrôle de la maison, donne une liste restreinte de petits modèles adaptés, les compare et associe des choix aux budgets matériels, en renvoyant vers des guides de modèles plus approfondis plutôt que de reclasser tout le domaine.',
     metaDescription:
-      'Les meilleurs modèles LLM locaux pour le contrôle de la maison connectée en 2026 : des modèles petits, rapides et à appel de fonctions qui tournent sur du matériel modeste. Liste restreinte et choix par budget.',
+      'Meilleurs LLM locaux 2026 pour la maison connectée : modèles petits à appel de fonctions, faible latence. Liste restreinte et choix par budget.',
     twitterDescription:
       'Meilleurs modèles LLM locaux pour le contrôle avec Home Assistant : des modèles petits, rapides et à appel de fonctions plutôt que le plus gros modèle exécutable. Choix par budget matériel.',
     readTime: '8 min de lecture',
@@ -703,7 +703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Meilleurs Modèles LLM Locaux pour le Contrôle de la Maison Connectée (2026)',
-      description: 'Les meilleurs modèles LLM locaux pour le contrôle de la maison connectée en 2026 : des modèles petits, rapides et à appel de fonctions qui tournent sur du matériel modeste. Liste restreinte et choix par budget.',
+      description: 'Meilleurs LLM locaux 2026 pour la maison connectée : modèles petits à appel de fonctions, faible latence. Liste restreinte et choix par budget.',
       url: 'https://www.promptquorum.com/fr/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'スマートホーム制御に最適なローカルLLMモデルは、信頼できる関数呼び出しを備えた、小型で高速・指示追従のモデルです——ハードウェアが収められる最大のモデルではありません。本ガイドは、家庭制御で実際に重要なことを説明し、適した小型モデルの短いリストを示し、それらを比較し、ハードウェア予算に候補を対応づけます——分野全体を再ランク付けせず、より深いモデルガイドへ外部リンクします。',
     metaDescription:
-      'スマートホーム制御に最適なローカルLLMモデル（2026）：控えめなハードウェアで動く小型・高速・関数呼び出しモデル。短いリストと予算別の候補。',
+      'スマートホーム制御に最適なローカルLLMモデル（2026）：控えめなハードウェアで動く小型・高速・関数呼び出しモデルを優先。Ollama対応の推奨リストと予算別の候補を掲載。',
     twitterDescription:
       'Home Assistant 制御に最適なローカルLLMモデル：動かせる最大のモデルより、小型・高速・関数呼び出しのモデル。ハードウェア予算別の候補。',
     readTime: '8分で読める',
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'スマートホーム制御に最適なローカルLLMモデル（2026）',
-      description: 'スマートホーム制御に最適なローカルLLMモデル（2026）：控えめなハードウェアで動く小型・高速・関数呼び出しモデル。短いリストと予算別の候補。',
+      description: 'スマートホーム制御に最適なローカルLLMモデル（2026）：控えめなハードウェアで動く小型・高速・関数呼び出しモデルを優先。Ollama対応の推奨リストと予算別の候補を掲載。',
       url: 'https://www.promptquorum.com/ja/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -918,7 +918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Os melhores modelos LLM locais para o controle da casa inteligente são modelos pequenos, rápidos e que seguem instruções, com chamada de funções confiável — não o maior modelo que o seu hardware consegue conter. Este guia explica o que realmente importa para o controle do lar, dá uma lista curta de modelos pequenos adequados, os compara e mapeia escolhas a orçamentos de hardware, com link externo para guias de modelos mais profundos em vez de reordenar todo o campo.',
     metaDescription:
-      'Os melhores modelos LLM locais para o controle da casa inteligente em 2026: modelos pequenos, rápidos e com chamada de funções que rodam em hardware modesto. Lista curta e escolhas por orçamento.',
+      'Melhores LLMs locais para Home Assistant 2026: modelos 3B–8B com chamada de funções para hardware modesto. Lista curta e escolhas por orçamento.',
     twitterDescription:
       'Melhores modelos LLM locais para o controle com Home Assistant: modelos pequenos, rápidos e com chamada de funções, em vez do maior modelo que você consegue rodar. Escolhas por orçamento de hardware.',
     readTime: '8 min de leitura',
@@ -1065,7 +1065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Melhores Modelos LLM Locais para o Controle da Casa Inteligente (2026)',
-      description: 'Os melhores modelos LLM locais para o controle da casa inteligente em 2026: modelos pequenos, rápidos e com chamada de funções que rodam em hardware modesto. Lista curta e escolhas por orçamento.',
+      description: 'Melhores LLMs locais para Home Assistant 2026: modelos 3B–8B com chamada de funções para hardware modesto. Lista curta e escolhas por orçamento.',
       url: 'https://www.promptquorum.com/pt/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '智能家居控制的最佳本地 LLM 模型，是具备可靠函数调用、小而快、能遵循指令的模型——而不是你硬件能容纳的最大模型。本指南讲解家庭控制真正重要的是什么，给出一份适用小型模型的精选清单，对它们进行比较，并把选择对应到硬件预算，并以外链指向更深入的模型指南，而非把整个领域重新排名。',
     metaDescription:
-      '2026 年智能家居控制的最佳本地 LLM 模型：在普通硬件上运行的小而快、支持函数调用的模型。精选清单与按预算的选择。',
+      '2026智能家居控制最佳本地LLM：优先选择3B至8B小型函数调用模型以降低延迟，适合在普通迷你PC上运行，含按预算的推荐清单与功能对比表。',
     twitterDescription:
       'Home Assistant 控制的最佳本地 LLM 模型：相较你能运行的最大模型，更应选小而快、支持函数调用的模型。按硬件预算给出选择。',
     readTime: '阅读约8分钟',
@@ -1246,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '智能家居控制的最佳本地 LLM 模型（2026）',
-      description: '2026 年智能家居控制的最佳本地 LLM 模型：在普通硬件上运行的小而快、支持函数调用的模型。精选清单与按预算的选择。',
+      description: '2026智能家居控制最佳本地LLM：优先选择3B至8B小型函数调用模型以降低延迟，适合在普通迷你PC上运行，含按预算的推荐清单与功能对比表。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

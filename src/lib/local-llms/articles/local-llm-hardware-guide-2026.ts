@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         budgetBuilds: {
           id: 'budget-builds',
           title: 'What Hardware Build Should You Buy?',
-          content: '**Building a local LLM machine from scratch means prioritizing GPU first, then CPU and RAM.** Here are three realistic configurations. For multi-GPU builds, see the [multi-GPU local LLM guide](/local-llms/multi-gpu-local-llms).',
+          content: '**Building a local LLM machine from scratch means prioritizing GPU first, then CPU and RAM.** Here are three realistic configurations. For multi-GPU builds, see the [multi-GPU local LLM guide](/local-llms/multi-gpu-local-llms). For home automation setups, compact mini PCs are often a better fit than full desktop builds — see the [best Mini PC for Home Assistant with local AI →](/smart-home/best-mini-pc-home-assistant-local-ai).',
           rows: [
             { 'Budget': '$1500 (entry)', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16 GB', 'Models': '7-13B', 'Cost': 'Realistic' },
             { 'Budget': '$2500 (solid)', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32 GB', 'Models': '13-30B', 'Cost': 'Recommended' },
@@ -962,7 +962,7 @@ schema: {
         budgetBuilds: {
           id: 'budget-builds',
           title: '¿Qué hardware deberías comprar?',
-          content: '**Construir una máquina para LLMs locales desde cero significa priorizar primero la GPU, luego CPU y RAM.** Aquí hay tres configuraciones realistas. Para builds multi-GPU, consulta la [guía de LLMs locales multi-GPU](/es/local-llms/multi-gpu-local-llms).',
+          content: '**Construir una máquina para LLMs locales desde cero significa priorizar primero la GPU, luego CPU y RAM.** Aquí hay tres configuraciones realistas. Para builds multi-GPU, consulta la [guía de LLMs locales multi-GPU](/es/local-llms/multi-gpu-local-llms). Para configuraciones de domótica, los mini PC compactos suelen ser mejor opción que los escritorios — ver [mejores mini PC para Home Assistant con IA local →](/smart-home/best-mini-pc-home-assistant-local-ai).',
           rows: [
             { 'Presupuesto': '$1500 (entrada)', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16 GB', 'Modelos': '7-13B', 'Costo': 'Realista' },
             { 'Presupuesto': '$2500 (sólido)', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32 GB', 'Modelos': '13-30B', 'Costo': 'Recomendado' },
@@ -1318,6 +1318,7 @@ schema: {
             'GPU topo: RTX 4090 (24 GB, R$ 9.500–12.000). Executa qualquer modelo 70B.',
             'Apple Silicon M4 Pro (48 GB unificada): excelente custo-benefício para 70B sem fragmentação de VRAM.',
             'Sem GPU: 16 GB de RAM executa modelos 7B a 5–8 tok/s (aceitável para batch offline).',
+            'Para automação residencial, mini PCs compactos geralmente são mais adequados que desktops — veja os [melhores mini PCs para Home Assistant com IA local →](/smart-home/best-mini-pc-home-assistant-local-ai).',
           ],
         },
       },
@@ -1445,7 +1446,7 @@ schema: {
         },
         budgetBuilds: {
           title: 'Empfohlene Budget-Builds',
-          content: 'Einen lokalen LLM-Rechner von Grund auf aufbauen:',
+          content: 'Einen lokalen LLM-Rechner von Grund auf aufbauen. Für Heimautomatisierungs-Setups sind kompakte Mini-PCs oft besser geeignet als vollständige Desktop-Builds — siehe [beste Mini-PCs für Home Assistant mit lokaler KI →](/smart-home/best-mini-pc-home-assistant-local-ai).',
           rows: [
             { 'Budget': '1500 € (Einstieg)', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16 GB', 'Modelle': '7-13B', 'Kosten': 'Realistisch' },
             { 'Budget': '2500 € (solide)', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32 GB', 'Modelle': '13-30B', 'Kosten': 'Empfohlen' },
@@ -1744,7 +1745,7 @@ schema: {
         },
         budgetBuilds: {
           title: 'Recommandations builds économiques',
-          content: 'Construire une machine local LLM from scratch:',
+          content: 'Construire une machine LLM locale from scratch. Pour des configurations domotiques, les mini PC compacts conviennent souvent mieux que les PC fixes — voir les [meilleurs mini PC pour Home Assistant avec IA locale →](/smart-home/best-mini-pc-home-assistant-local-ai).',
           rows: [
             { 'Budget': '1500 € (entrée)', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16 GB', 'Modèles': '7-13B', 'Coût': 'Réaliste' },
             { 'Budget': '2500 € (solide)', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32 GB', 'Modèles': '13-30B', 'Coût': 'Recommandé' },
@@ -2043,7 +2044,7 @@ schema: {
         },
         budgetBuilds: {
           title: '予算ビルドレコメンデーション',
-          content: 'ローカルLLMマシンをスクラッチから構築する:',
+          content: 'ローカルLLMマシンをスクラッチから構築する。ホームオートメーション向けには、フルデスクトップよりコンパクトなミニPCが適している場合が多いです — [ローカルAI搭載Home Assistantの最適なミニPC →](/smart-home/best-mini-pc-home-assistant-local-ai)をご覧ください。',
           rows: [
             { '予算': '¥225,000 (エントリー)', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16 GB', 'モデル': '7-13B', 'コスト': '現実的' },
             { '予算': '¥370,000 (堅牢)', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32 GB', 'モデル': '13-30B', 'コスト': '推奨' },
@@ -2339,7 +2340,7 @@ schema: {
         },
         budgetBuilds: {
           title: '预算构建建议',
-          content: '从头开始构建本地LLM机器：',
+          content: '从头开始构建本地LLM机器。家庭自动化场景下，紧凑迷你PC通常优于全尺寸台式机 — 参阅[适合Home Assistant本地AI的最佳迷你PC →](/smart-home/best-mini-pc-home-assistant-local-ai)。',
           rows: [
             { '预算': '$1500 (入门级)', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16 GB', '模型': '7-13B', '成本': '现实' },
             { '预算': '$2500 (可靠)', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32 GB', '模型': '13-30B', '成本': '推荐' },

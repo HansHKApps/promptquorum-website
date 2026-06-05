@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant hat eine eingebaute Ollama-Integration, die ein lokal gehostetes Modell zu Ihrem Konversations-Agenten macht und Geräte in natürlicher Sprache ohne Cloud steuert. Dieser Leitfaden führt durch Voraussetzungen, das Hinzufügen der Integration, die Modellwahl, das Verdrahten des Konversations-Agenten, die Gerätesteuerung und die Fehlerbehebung – die Ollama-Installation und Modellauswahl werden verlinkt, nicht erneut erklärt.',
     metaDescription:
-      'Ollama Schritt für Schritt mit Home Assistant verbinden: Integration hinzufügen, ein Modell wählen, den Konversations-Agenten setzen und Geräte in natürlicher Sprache steuern. Ohne Cloud.',
+      'Ollama mit Home Assistant verbinden 2026: Integration hinzufügen, Modell wählen, Konversations-Agent setzen. Geräte in natürlicher Sprache steuern.',
     twitterDescription:
       'Ollama in Home Assistant verdrahten für einen vollständig lokalen KI-Assistenten: Integration hinzufügen, Modell wählen, Geräte per Sprache oder Text steuern. Keine Cloud.',
     readTime: '9 Min. Lesezeit',
@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Ollama mit Home Assistant verbinden: Lokaler KI-Assistent (2026)',
-      description: 'Ollama Schritt für Schritt mit Home Assistant verbinden: Integration hinzufügen, ein Modell wählen, den Konversations-Agenten setzen und Geräte in natürlicher Sprache steuern. Ohne Cloud.',
+      description: 'Ollama mit Home Assistant verbinden 2026: Integration hinzufügen, Modell wählen, Konversations-Agent setzen. Geräte in natürlicher Sprache steuern.',
       url: 'https://www.promptquorum.com/de/smart-home/home-assistant-ollama-integration',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -423,7 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant tiene una integración de Ollama incorporada que convierte un modelo alojado localmente en tu agente de conversación, controlando dispositivos en lenguaje natural sin nube. Esta guía recorre los requisitos previos, añadir la integración, elegir un modelo, cablear el agente de conversación, controlar dispositivos y resolver problemas, manteniendo la instalación de Ollama y la elección de modelo enlazadas, no reexplicadas.',
     metaDescription:
-      'Conecta Ollama a Home Assistant paso a paso: añade la integración, elige un modelo, fija el agente de conversación y controla dispositivos en lenguaje natural. Sin nube.',
+      'Conecta Ollama a Home Assistant 2026: añade la integración, elige un modelo y controla dispositivos en lenguaje natural. Sin nube.',
     twitterDescription:
       'Cablea Ollama en Home Assistant para un asistente de IA totalmente local: añade la integración, elige un modelo, controla dispositivos por voz o texto. Cero nube.',
     readTime: '9 min de lectura',
@@ -594,7 +594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Conectar Ollama a Home Assistant: Asistente de IA Local (2026)',
-      description: 'Conecta Ollama a Home Assistant paso a paso: añade la integración, elige un modelo, fija el agente de conversación y controla dispositivos en lenguaje natural. Sin nube.',
+      description: 'Conecta Ollama a Home Assistant 2026: añade la integración, elige un modelo y controla dispositivos en lenguaje natural. Sin nube.',
       url: 'https://www.promptquorum.com/es/smart-home/home-assistant-ollama-integration',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -628,7 +628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant dispose d\'une intégration Ollama native qui transforme un modèle hébergé localement en votre agent de conversation, contrôlant les appareils en langage naturel sans cloud. Ce guide parcourt les prérequis, l\'ajout de l\'intégration, le choix d\'un modèle, le câblage de l\'agent de conversation, le contrôle des appareils et le dépannage — l\'installation d\'Ollama et le choix du modèle restant liés, non réexpliqués.',
     metaDescription:
-      'Connectez Ollama à Home Assistant pas à pas : ajoutez l\'intégration, choisissez un modèle, définissez l\'agent de conversation et contrôlez les appareils en langage naturel. Sans cloud.',
+      'Ollama + Home Assistant 2026 : ajoutez l\'intégration, choisissez un modèle, configurez l\'agent de conversation. Contrôle en langage naturel.',
     twitterDescription:
       'Câblez Ollama dans Home Assistant pour un assistant IA entièrement local : ajoutez l\'intégration, choisissez un modèle, contrôlez les appareils par voix ou texte. Zéro cloud.',
     readTime: '9 min de lecture',
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Connecter Ollama à Home Assistant : Assistant IA Local (2026)',
-      description: 'Connectez Ollama à Home Assistant pas à pas : ajoutez l\'intégration, choisissez un modèle, définissez l\'agent de conversation et contrôlez les appareils en langage naturel. Sans cloud.',
+      description: 'Ollama + Home Assistant 2026 : ajoutez l\'intégration, choisissez un modèle, configurez l\'agent de conversation. Contrôle en langage naturel.',
       url: 'https://www.promptquorum.com/fr/smart-home/home-assistant-ollama-integration',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -833,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant には組み込みの Ollama 統合があり、ローカルでホストするモデルを会話エージェントにして、機器を自然言語でクラウドなしに制御します。本ガイドは、前提条件、統合の追加、モデルの選択、会話エージェントの配線、機器の制御、トラブルシューティングを順に解説します——Ollama のインストールとモデル選択は外部リンクにし、再説明しません。',
     metaDescription:
-      'Ollama を Home Assistant に順を追って接続：統合を追加し、モデルを選び、会話エージェントを設定し、機器を自然言語で制御。クラウドなし。',
+      'Ollama を Home Assistant に順を追って接続（2026）：統合を追加し、モデルを選び、会話エージェントを設定し、機器を自然言語で制御。クラウドなし。',
     twitterDescription:
       'Ollama を Home Assistant に組み込み、完全ローカルのAIアシスタントに：統合を追加し、モデルを選び、機器を音声またはテキストで制御。クラウドはゼロ。',
     readTime: '9分で読める',
@@ -1004,7 +1004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Ollama を Home Assistant に接続する：ローカルAIアシスタント（2026）',
-      description: 'Ollama を Home Assistant に順を追って接続：統合を追加し、モデルを選び、会話エージェントを設定し、機器を自然言語で制御。クラウドなし。',
+      description: 'Ollama を Home Assistant に順を追って接続（2026）：統合を追加し、モデルを選び、会話エージェントを設定し、機器を自然言語で制御。クラウドなし。',
       url: 'https://www.promptquorum.com/ja/smart-home/home-assistant-ollama-integration',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1038,7 +1038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O Home Assistant tem uma integração do Ollama embutida que transforma um modelo hospedado localmente no seu agente de conversa, controlando dispositivos em linguagem natural sem nuvem. Este guia percorre os pré-requisitos, adicionar a integração, escolher um modelo, cablear o agente de conversa, controlar dispositivos e solucionar problemas — mantendo a instalação do Ollama e a escolha do modelo com link externo, não reexplicadas.',
     metaDescription:
-      'Conecte o Ollama ao Home Assistant passo a passo: adicione a integração, escolha um modelo, defina o agente de conversa e controle dispositivos em linguagem natural. Sem nuvem.',
+      'Conecte o Ollama ao Home Assistant 2026: adicione a integração, escolha um modelo e controle dispositivos em linguagem natural.',
     twitterDescription:
       'Cableie o Ollama no Home Assistant para um assistente de IA totalmente local: adicione a integração, escolha um modelo, controle dispositivos por voz ou texto. Zero nuvem.',
     readTime: '9 min de leitura',
@@ -1209,7 +1209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Conectar o Ollama ao Home Assistant: Assistente de IA Local (2026)',
-      description: 'Conecte o Ollama ao Home Assistant passo a passo: adicione a integração, escolha um modelo, defina o agente de conversa e controle dispositivos em linguagem natural. Sem nuvem.',
+      description: 'Conecte o Ollama ao Home Assistant 2026: adicione a integração, escolha um modelo e controle dispositivos em linguagem natural.',
       url: 'https://www.promptquorum.com/pt/smart-home/home-assistant-ollama-integration',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1243,7 +1243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant 内置了 Ollama 集成，可把一个本地托管的模型变成你的对话代理，用自然语言控制设备且无需云端。本指南依次讲解前提条件、添加集成、选择模型、连线对话代理、控制设备和排错——Ollama 的安装与模型选择走外链，不再赘述。',
     metaDescription:
-      '逐步把 Ollama 连接到 Home Assistant：添加集成、选择模型、设置对话代理，并用自然语言控制设备。无云端。',
+      '逐步把 Ollama 连接到 Home Assistant（2026）：添加集成、选择模型、设置对话代理，以自然语言控制智能家居设备。无云端。',
     twitterDescription:
       '把 Ollama 接入 Home Assistant，打造完全本地的 AI 助手：添加集成、选择模型、用语音或文本控制设备。零云端。',
     readTime: '阅读约9分钟',
@@ -1414,7 +1414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '把 Ollama 连接到 Home Assistant：本地 AI 助手（2026）',
-      description: '逐步把 Ollama 连接到 Home Assistant：添加集成、选择模型、设置对话代理，并用自然语言控制设备。无云端。',
+      description: '逐步把 Ollama 连接到 Home Assistant（2026）：添加集成、选择模型、设置对话代理，以自然语言控制智能家居设备。无云端。',
       url: 'https://www.promptquorum.com/zh/smart-home/home-assistant-ollama-integration',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

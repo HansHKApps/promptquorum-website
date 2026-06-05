@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Local vs Cloud Voice Assistants: Privacy, Cost & Capability (2026)',
-    seoTitle: 'Local vs Cloud Voice Assistant (2026)',
+    seoTitle: 'Local vs Cloud Voice Assistant: 2026 Privacy & Cost Guide',
     intro:
       'Local voice assistants win on privacy and cost; cloud assistants still lead on out-of-box polish and broad skills. This decision guide compares a local stack (Home Assistant Assist + Whisper + a local LLM) against cloud assistants (Alexa, Google) across privacy, cost, accuracy, skills, offline operation, and effort, and says when each wins.',
     metaDescription:
@@ -185,11 +185,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Lokale vs Cloud-Sprachassistenten: Datenschutz, Kosten & Fähigkeit (2026)',
-    seoTitle: 'Lokaler vs Cloud-Sprachassistent (2026)',
+    seoTitle: 'Lokaler vs Cloud-Sprachassistent: Datenschutz 2026',
     intro:
       'Lokale Sprachassistenten gewinnen bei Datenschutz und Kosten; Cloud-Assistenten führen weiterhin bei Out-of-Box-Politur und breiten Skills. Dieser Entscheidungs-Leitfaden vergleicht einen lokalen Stack (Home Assistant Assist + Whisper + ein lokales LLM) mit Cloud-Assistenten (Alexa, Google) über Datenschutz, Kosten, Genauigkeit, Skills, Offline-Betrieb und Aufwand und sagt, wann jeder gewinnt.',
     metaDescription:
-      'Lokale vs Cloud-Sprachassistenten: Datenschutz, Kosten, Genauigkeit, Skills, Offline und Aufwand im Vergleich. Wann ein lokaler Stack gewinnt und wann die Cloud führt.',
+      'Lokale vs Cloud-Sprachassistenten 2026: Datenschutz, Kosten, Genauigkeit, Skills und Offline verglichen. Wann der lokale Stack gewinnt — wann die Cloud führt.',
     twitterDescription:
       'Lokale vs Cloud-Sprachassistenten: Lokal gewinnt bei Datenschutz und Kosten, Cloud führt bei Politur und Skills. Wann jeder 2026 gewinnt.',
     readTime: '8 Min. Lesezeit',
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Lokale vs Cloud-Sprachassistenten: Datenschutz, Kosten & Fähigkeit (2026)',
-      description: 'Lokale vs Cloud-Sprachassistenten: Datenschutz, Kosten, Genauigkeit, Skills, Offline und Aufwand im Vergleich. Wann ein lokaler Stack gewinnt und wann die Cloud führt.',
+      description: 'Lokale vs Cloud-Sprachassistenten 2026: Datenschutz, Kosten, Genauigkeit, Skills und Offline verglichen. Wann der lokale Stack gewinnt — wann die Cloud führt.',
       url: 'https://www.promptquorum.com/de/smart-home/local-vs-cloud-voice-assistant',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -361,11 +361,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Asistentes de Voz Local vs Nube: Privacidad, Coste y Capacidad (2026)',
-    seoTitle: 'Asistente de Voz Local vs Nube (2026)',
+    seoTitle: 'Asistente de Voz Local vs Nube: Guía de Privacidad 2026',
     intro:
       'Los asistentes de voz locales ganan en privacidad y coste; los asistentes en la nube siguen liderando en pulido de fábrica y amplitud de skills. Esta guía de decisión compara un stack local (Home Assistant Assist + Whisper + un LLM local) frente a los asistentes en la nube (Alexa, Google) en privacidad, coste, precisión, skills, operación sin conexión y esfuerzo, y dice cuándo gana cada uno.',
     metaDescription:
-      'Asistentes de voz local vs nube: privacidad, coste, precisión, skills, sin conexión y esfuerzo comparados. Cuándo gana un stack local y cuándo sigue liderando la nube.',
+      'Asistentes de voz local vs nube 2026: privacidad, coste, precisión, skills y offline comparados. Cuándo gana el stack local y cuándo sigue liderando la nube.',
     twitterDescription:
       'Asistentes de voz local vs nube: local gana en privacidad y coste, la nube lidera en pulido y skills. Cuándo gana cada uno en 2026.',
     readTime: '8 min de lectura',
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Asistentes de Voz Local vs Nube: Privacidad, Coste y Capacidad (2026)',
-      description: 'Asistentes de voz local vs nube: privacidad, coste, precisión, skills, sin conexión y esfuerzo comparados. Cuándo gana un stack local y cuándo sigue liderando la nube.',
+      description: 'Asistentes de voz local vs nube 2026: privacidad, coste, precisión, skills y offline comparados. Cuándo gana el stack local y cuándo sigue liderando la nube.',
       url: 'https://www.promptquorum.com/es/smart-home/local-vs-cloud-voice-assistant',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -537,11 +537,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Assistants Vocaux Local vs Cloud : Confidentialité, Coût et Capacité (2026)',
-    seoTitle: 'Assistant Vocal Local vs Cloud (2026)',
+    seoTitle: 'Assistant Vocal Local vs Cloud : Guide Confidentialité 2026',
     intro:
       'Les assistants vocaux locaux gagnent sur la confidentialité et le coût ; les assistants cloud mènent encore sur la finition prête à l\'emploi et l\'étendue des skills. Ce guide de décision compare une pile locale (Home Assistant Assist + Whisper + un LLM local) aux assistants cloud (Alexa, Google) sur la confidentialité, le coût, la précision, les skills, le fonctionnement hors ligne et l\'effort, et dit quand chacun gagne.',
     metaDescription:
-      'Assistants vocaux local vs cloud : confidentialité, coût, précision, skills, hors ligne et effort comparés. Quand une pile locale gagne et quand le cloud mène encore.',
+      'Assistants vocaux local vs cloud 2026 : confidentialité, coût, précision, skills et hors ligne comparés. Quand la pile locale gagne, quand le cloud mène encore.',
     twitterDescription:
       'Assistants vocaux local vs cloud : le local gagne sur la confidentialité et le coût, le cloud mène sur la finition et les skills. Quand chacun gagne en 2026.',
     readTime: '8 min de lecture',
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Assistants Vocaux Local vs Cloud : Confidentialité, Coût et Capacité (2026)',
-      description: 'Assistants vocaux local vs cloud : confidentialité, coût, précision, skills, hors ligne et effort comparés. Quand une pile locale gagne et quand le cloud mène encore.',
+      description: 'Assistants vocaux local vs cloud 2026 : confidentialité, coût, précision, skills et hors ligne comparés. Quand la pile locale gagne, quand le cloud mène encore.',
       url: 'https://www.promptquorum.com/fr/smart-home/local-vs-cloud-voice-assistant',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -713,11 +713,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'ローカル対クラウドの音声アシスタント：プライバシー・コスト・能力（2026）',
-    seoTitle: 'ローカル対クラウドの音声アシスタント（2026）',
+    seoTitle: 'ローカル対クラウド音声アシスタント比較ガイド（2026年）',
     intro:
       'ローカル音声アシスタントはプライバシーとコストで勝り、クラウドアシスタントは依然として既製の完成度と幅広いスキルで先行します。本判断ガイドは、ローカルスタック（Home Assistant Assist + Whisper + ローカル LLM）をクラウドアシスタント（Alexa、Google）と、プライバシー・コスト・精度・スキル・オフライン動作・手間で比較し、どちらが勝つかを示します。',
     metaDescription:
-      'ローカル対クラウドの音声アシスタント：プライバシー、コスト、精度、スキル、オフライン、手間を比較。ローカルスタックが勝つときと、クラウドがなお先行するとき。',
+      'ローカル対クラウドの音声アシスタント（2026年）：プライバシー・コスト・精度・スキル・オフラインを比較。',
     twitterDescription:
       'ローカル対クラウドの音声アシスタント：ローカルはプライバシーとコストで勝ち、クラウドは完成度とスキルで先行。2026年にどちらが勝つか。',
     readTime: '8分で読める',
@@ -859,7 +859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'ローカル対クラウドの音声アシスタント：プライバシー・コスト・能力（2026）',
-      description: 'ローカル対クラウドの音声アシスタント：プライバシー、コスト、精度、スキル、オフライン、手間を比較。ローカルスタックが勝つときと、クラウドがなお先行するとき。',
+      description: 'ローカル対クラウドの音声アシスタント（2026年）：プライバシー・コスト・精度・スキル・オフラインを比較。',
       url: 'https://www.promptquorum.com/ja/smart-home/local-vs-cloud-voice-assistant',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -889,11 +889,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: 'Assistentes de Voz Local vs Nuvem: Privacidade, Custo e Capacidade (2026)',
-    seoTitle: 'Assistente de Voz Local vs Nuvem (2026)',
+    seoTitle: 'Assistente de Voz Local vs Nuvem: Guia de Privacidade 2026',
     intro:
       'Assistentes de voz locais ganham em privacidade e custo; assistentes na nuvem ainda lideram em polimento de fábrica e amplitude de skills. Este guia de decisão compara um stack local (Home Assistant Assist + Whisper + um LLM local) com assistentes na nuvem (Alexa, Google) em privacidade, custo, precisão, skills, operação offline e esforço, e diz quando cada um ganha.',
     metaDescription:
-      'Assistentes de voz local vs nuvem: privacidade, custo, precisão, skills, offline e esforço comparados. Quando um stack local ganha e quando a nuvem ainda lidera.',
+      'Assistentes de voz local vs nuvem 2026: privacidade, custo, precisão, skills e offline comparados. Quando o stack local ganha e quando a nuvem ainda lidera.',
     twitterDescription:
       'Assistentes de voz local vs nuvem: o local ganha em privacidade e custo, a nuvem lidera em polimento e skills. Quando cada um ganha em 2026.',
     readTime: '8 min de leitura',
@@ -1035,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Assistentes de Voz Local vs Nuvem: Privacidade, Custo e Capacidade (2026)',
-      description: 'Assistentes de voz local vs nuvem: privacidade, custo, precisão, skills, offline e esforço comparados. Quando um stack local ganha e quando a nuvem ainda lidera.',
+      description: 'Assistentes de voz local vs nuvem 2026: privacidade, custo, precisão, skills e offline comparados. Quando o stack local ganha e quando a nuvem ainda lidera.',
       url: 'https://www.promptquorum.com/pt/smart-home/local-vs-cloud-voice-assistant',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1065,7 +1065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
     title: '本地对云端的语音助手：隐私、成本与能力（2026）',
-    seoTitle: '本地对云端的语音助手（2026）',
+    seoTitle: '本地 vs 云端语音助手 2026：隐私、成本与技能的选择',
     intro:
       '本地语音助手在隐私和成本上胜出；云端助手在开箱即用的成熟度和广泛技能上仍然领先。本决策指南在隐私、成本、准确度、技能、离线运行和投入上，把一个本地堆栈（Home Assistant Assist + Whisper + 本地 LLM）与云端助手（Alexa、Google）作比较，并说明各自在何时胜出。',
     metaDescription:

@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Smart Home for Beginners: Where to Start in 2026',
-    seoTitle: 'Smart Home for Beginners: Where to Start (2026)',
+    seoTitle: 'Smart Home Beginner Guide 2026: Where to Start First',
     intro:
       'The reliable way to start a smart home in 2026 is to pick one hub, set up one room, add a few local-capable devices, and automate a couple of routines before expanding. This beginner\'s guide gives a step-by-step path, recommends a local-first approach for privacy, and flags the mistakes that lead to a drawer of incompatible gadgets.',
     metaDescription:
@@ -195,11 +195,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Smart Home für Einsteiger: Wo Sie 2026 starten',
-    seoTitle: 'Smart Home für Einsteiger: Wo starten (2026)',
+    seoTitle: 'Smart Home für Einsteiger 2026: Wo und wie anfangen',
     intro:
       'Der zuverlässige Weg, 2026 ein Smart Home zu starten, ist: einen Hub wählen, einen Raum einrichten, ein paar lokal-fähige Geräte hinzufügen und ein paar Routinen automatisieren, bevor Sie erweitern. Dieser Einsteiger-Leitfaden gibt einen Schritt-für-Schritt-Weg, empfiehlt für den Datenschutz einen Local-First-Ansatz und benennt die Fehler, die zu einer Schublade voller inkompatibler Geräte führen.',
     metaDescription:
-      'Starten Sie ein Smart Home richtig: einen Hub wählen, mit einem Raum beginnen, lokal-fähige Geräte hinzufügen, automatisieren, dann erweitern. Ein praktischer 2026-Weg.',
+      'Smart Home richtig starten 2026: Hub wählen, einen Raum einrichten, lokal-fähige Geräte hinzufügen und automatisieren. Praktischer Einsteiger-Weg.',
     twitterDescription:
       'Neu im Smart Home? Beginnen Sie mit einem Hub und einem Raum, fügen Sie lokal-fähige Geräte hinzu, automatisieren Sie ein paar Routinen, dann erweitern. Der 2026-Einsteigerweg.',
     readTime: '8 Min. Lesezeit',
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Smart Home für Einsteiger: Wo Sie 2026 starten',
-      description: 'Starten Sie ein Smart Home richtig: einen Hub wählen, mit einem Raum beginnen, lokal-fähige Geräte hinzufügen, automatisieren, dann erweitern. Ein praktischer 2026-Weg.',
+      description: 'Smart Home richtig starten 2026: Hub wählen, einen Raum einrichten, lokal-fähige Geräte hinzufügen und automatisieren. Praktischer Einsteiger-Weg.',
       url: 'https://www.promptquorum.com/de/smart-home/smart-home-for-beginners-where-to-start',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -381,11 +381,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Smart Home para Principiantes: Por Dónde Empezar en 2026',
-    seoTitle: 'Smart Home para Principiantes: Por Dónde Empezar',
+    seoTitle: 'Smart Home para Principiantes 2026: Por Dónde Empezar',
     intro:
       'La forma fiable de empezar un smart home en 2026 es: elegir un hub, montar una habitación, añadir unos pocos dispositivos con capacidad local y automatizar un par de rutinas antes de ampliar. Esta guía para principiantes da un camino paso a paso, recomienda un enfoque local-first por la privacidad y señala los errores que llevan a un cajón de dispositivos incompatibles.',
     metaDescription:
-      'Empieza un smart home bien: elige un hub, comienza con una habitación, añade dispositivos con capacidad local, automatiza y luego amplía. Un camino práctico para 2026.',
+      'Empieza un smart home en 2026: elige hub, monta una habitación, añade dispositivos locales, automatiza y amplía. Guía práctica para principiantes.',
     twitterDescription:
       '¿Nuevo en smart home? Empieza con un hub y una habitación, añade dispositivos con capacidad local, automatiza un par de rutinas y luego amplía. El camino 2026 para principiantes.',
     readTime: '8 min de lectura',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Smart Home para Principiantes: Por Dónde Empezar en 2026',
-      description: 'Empieza un smart home bien: elige un hub, comienza con una habitación, añade dispositivos con capacidad local, automatiza y luego amplía. Un camino práctico para 2026.',
+      description: 'Empieza un smart home en 2026: elige hub, monta una habitación, añade dispositivos locales, automatiza y amplía. Guía práctica para principiantes.',
       url: 'https://www.promptquorum.com/es/smart-home/smart-home-for-beginners-where-to-start',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -567,11 +567,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Maison Connectée pour Débutants : Par Où Commencer en 2026',
-    seoTitle: 'Maison Connectée Débutants : Par Où Commencer',
+    seoTitle: 'Maison Connectée Débutants 2026 : Par Où Commencer',
     intro:
       'La façon fiable de démarrer une maison connectée en 2026 est : choisir un hub, configurer une pièce, ajouter quelques appareils à capacité locale et automatiser quelques routines avant d\'étendre. Ce guide débutant donne un parcours pas à pas, recommande une approche local-first pour la confidentialité et signale les erreurs qui mènent à un tiroir d\'appareils incompatibles.',
     metaDescription:
-      'Démarrez une maison connectée correctement : choisir un hub, commencer par une pièce, ajouter des appareils à capacité locale, automatiser, puis étendre. Un parcours pratique pour 2026.',
+      'Démarrer une maison connectée en 2026 : choisir un hub, une pièce, des appareils locaux, automatiser puis étendre. Parcours pratique pour débutants.',
     twitterDescription:
       'Nouveau dans la maison connectée ? Commencez par un hub et une pièce, ajoutez des appareils à capacité locale, automatisez quelques routines, puis étendez. Le parcours débutant 2026.',
     readTime: '8 min de lecture',
@@ -723,7 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Maison Connectée pour Débutants : Par Où Commencer en 2026',
-      description: 'Démarrez une maison connectée correctement : choisir un hub, commencer par une pièce, ajouter des appareils à capacité locale, automatiser, puis étendre. Un parcours pratique pour 2026.',
+      description: 'Démarrer une maison connectée en 2026 : choisir un hub, une pièce, des appareils locaux, automatiser puis étendre. Parcours pratique pour débutants.',
       url: 'https://www.promptquorum.com/fr/smart-home/smart-home-for-beginners-where-to-start',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -753,11 +753,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'スマートホーム初心者：2026年 どこから始めるか',
-    seoTitle: 'スマートホーム初心者：どこから始めるか（2026）',
+    seoTitle: 'スマートホーム初心者ガイド（2026年版）：ハブ選びから自動化まで実践',
     intro:
       '2026年にスマートホームを始める確実な方法は、ハブを選び、一部屋を整え、ローカル対応機器をいくつか追加し、拡張する前にいくつかのルーティンを自動化することです。本初心者ガイドは手順を示し、プライバシーのためにローカルファーストのアプローチを勧め、非互換機器でいっぱいの引き出しにつながる失敗を指摘します。',
     metaDescription:
-      'スマートホームを正しく始める：ハブを選び、一部屋から始め、ローカル対応機器を追加し、自動化し、それから拡張。2026年の実践的な進め方。',
+      'スマートホームを2026年に正しく始める方法を解説：ハブの選び方、まず一部屋から始める手順、ローカル対応機器の追加方法、自動化ルーティンの設定から段階的な拡張まで実践的に紹介します。',
     twitterDescription:
       'スマートホーム初心者？ ハブと一部屋から始め、ローカル対応機器を追加し、いくつかのルーティンを自動化し、それから拡張。2026年の初心者の道。',
     readTime: '8分で読める',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'スマートホーム初心者：2026年 どこから始めるか',
-      description: 'スマートホームを正しく始める：ハブを選び、一部屋から始め、ローカル対応機器を追加し、自動化し、それから拡張。2026年の実践的な進め方。',
+      description: 'スマートホームを2026年に正しく始める方法を解説：ハブの選び方、まず一部屋から始める手順、ローカル対応機器の追加方法、自動化ルーティンの設定から段階的な拡張まで実践的に紹介します。',
       url: 'https://www.promptquorum.com/ja/smart-home/smart-home-for-beginners-where-to-start',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -943,7 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'A forma confiável de começar uma casa inteligente em 2026 é: escolher um hub, montar um cômodo, adicionar alguns dispositivos com capacidade local e automatizar algumas rotinas antes de expandir. Este guia para iniciantes dá um caminho passo a passo, recomenda uma abordagem local-first pela privacidade e aponta os erros que levam a uma gaveta de dispositivos incompatíveis.',
     metaDescription:
-      'Comece uma casa inteligente do jeito certo: escolha um hub, comece por um cômodo, adicione dispositivos com capacidade local, automatize e depois expanda. Um caminho prático para 2026.',
+      'Comece uma casa inteligente em 2026: escolha um hub, configure um cômodo, adicione dispositivos locais, automatize e expanda. Caminho prático para iniciantes.',
     twitterDescription:
       'Novo em casa inteligente? Comece com um hub e um cômodo, adicione dispositivos com capacidade local, automatize algumas rotinas e depois expanda. O caminho 2026 para iniciantes.',
     readTime: '8 min de leitura',
@@ -1095,7 +1095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Casa Inteligente para Iniciantes: Por Onde Começar em 2026',
-      description: 'Comece uma casa inteligente do jeito certo: escolha um hub, comece por um cômodo, adicione dispositivos com capacidade local, automatize e depois expanda. Um caminho prático para 2026.',
+      description: 'Comece uma casa inteligente em 2026: escolha um hub, configure um cômodo, adicione dispositivos locais, automatize e expanda. Caminho prático para iniciantes.',
       url: 'https://www.promptquorum.com/pt/smart-home/smart-home-for-beginners-where-to-start',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1125,11 +1125,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: '智能家居新手：2026 从何处开始',
-    seoTitle: '智能家居新手：2026 从何处开始',
+    seoTitle: '智能家居新手完全入门2026：中枢选购、首个房间到自动化全流程实践',
     intro:
       '2026 年开始智能家居的可靠方法是：选一个中枢、布置一个房间、添加少量支持本地的设备，并在扩展前自动化几条日常。本新手指南给出分步路径，出于隐私推荐本地优先的方式，并指出会导致一抽屉互不兼容设备的错误。',
     metaDescription:
-      '正确开始智能家居：选中枢、从一个房间起步、添加支持本地的设备、做自动化，然后扩展。2026 年的实用路径。',
+      '2026年智能家居入门完整指南：从挑选中枢控制器到布置第一个房间，添加支持本地运行的设备，配置自动化场景，再到系统扩展，一步步带你搭建私密可靠的本地优先智能家居。',
     twitterDescription:
       '智能家居新手？从一个中枢和一个房间开始，添加支持本地的设备，自动化几条日常，然后扩展。2026 年的新手路径。',
     readTime: '阅读约8分钟',
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '智能家居新手：2026 从何处开始',
-      description: '正确开始智能家居：选中枢、从一个房间起步、添加支持本地的设备、做自动化，然后扩展。2026 年的实用路径。',
+      description: '2026年智能家居入门完整指南：从挑选中枢控制器到布置第一个房间，添加支持本地运行的设备，配置自动化场景，再到系统扩展，一步步带你搭建私密可靠的本地优先智能家居。',
       url: 'https://www.promptquorum.com/zh/smart-home/smart-home-for-beginners-where-to-start',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

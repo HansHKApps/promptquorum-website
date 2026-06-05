@@ -201,7 +201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Von einem Cloud-Smart-Home zu lokaler Steuerung zu migrieren bedeutet, Ihre Cloud-Abhängigkeiten zu prüfen, Geräte auf einen lokalen Hub zu verschieben und Cloud-Assistenten außer Dienst zu stellen. Dieser Schritt-für-Schritt-Leitfaden zeigt, wie Sie prüfen, welche Geräte lokal können, wann ersetzen statt neu koppeln, wie Sie zu Home Assistant wechseln und einen lokalen Sprachassistenten anstelle von Alexa oder Google hinzufügen.',
     metaDescription:
-      'Von einem Cloud-Smart-Home zu lokaler Steuerung migrieren: Abhängigkeiten prüfen, Geräte zu Home Assistant verschieben, Alexa/Google außer Dienst stellen, lokale Sprache hinzufügen. Schritt für Schritt.',
+      'Cloud-Smart-Home zu Home Assistant migrieren 2026: Abhängigkeiten prüfen, Geräte verschieben, Alexa/Google ersetzen, lokale Sprache hinzufügen.',
     twitterDescription:
       'Von Alexa/Google zu einem lokalen Smart Home wechseln: Cloud-Abhängigkeiten prüfen, Geräte neu koppeln oder ersetzen, zu Home Assistant wechseln, lokale Sprache hinzufügen.',
     readTime: '9 Min. Lesezeit',
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Von einem Cloud-Smart-Home zu lokaler Steuerung migrieren (2026)',
-      description: 'Von einem Cloud-Smart-Home zu lokaler Steuerung migrieren: Abhängigkeiten prüfen, Geräte zu Home Assistant verschieben, Alexa/Google außer Dienst stellen, lokale Sprache hinzufügen. Schritt für Schritt.',
+      description: 'Cloud-Smart-Home zu Home Assistant migrieren 2026: Abhängigkeiten prüfen, Geräte verschieben, Alexa/Google ersetzen, lokale Sprache hinzufügen.',
       url: 'https://www.promptquorum.com/de/smart-home/migrating-from-cloud-to-local-smart-home',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Migrer d\'une maison connectée cloud vers le contrôle local signifie auditer vos dépendances cloud, déplacer les appareils vers un hub local et mettre les assistants cloud hors service. Ce guide pas à pas montre comment auditer, quels appareils peuvent passer en local, quand remplacer plutôt que réappairer, comment passer à Home Assistant et comment ajouter un assistant vocal local à la place d\'Alexa ou Google.',
     metaDescription:
-      'Migrez d\'une maison connectée cloud vers le contrôle local : auditez les dépendances, déplacez les appareils vers Home Assistant, mettez Alexa/Google hors service, ajoutez la voix locale. Pas à pas.',
+      'Migrez vers le contrôle local 2026 : auditez les dépendances cloud, déplacez vos appareils vers Home Assistant, retirez Alexa/Google et ajoutez la voix locale.',
     twitterDescription:
       'Passez d\'Alexa/Google à une maison connectée locale : auditez les dépendances cloud, réappairez ou remplacez les appareils, passez à Home Assistant, ajoutez la voix locale.',
     readTime: '9 min de lecture',
@@ -731,7 +731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Comment Migrer d\'une Maison Connectée Cloud vers le Contrôle Local (2026)',
-      description: 'Migrez d\'une maison connectée cloud vers le contrôle local : auditez les dépendances, déplacez les appareils vers Home Assistant, mettez Alexa/Google hors service, ajoutez la voix locale. Pas à pas.',
+      description: 'Migrez vers le contrôle local 2026 : auditez les dépendances cloud, déplacez vos appareils vers Home Assistant, retirez Alexa/Google et ajoutez la voix locale.',
       url: 'https://www.promptquorum.com/fr/smart-home/migrating-from-cloud-to-local-smart-home',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Migrar de uma casa inteligente na nuvem para o controle local significa auditar suas dependências da nuvem, mover os dispositivos para um hub local e aposentar os assistentes na nuvem. Este guia passo a passo mostra como auditar, quais dispositivos podem ir para o local, quando substituir em vez de reparear, como passar para o Home Assistant e como adicionar um assistente de voz local no lugar da Alexa ou do Google.',
     metaDescription:
-      'Migre de uma casa inteligente na nuvem para o controle local: audite dependências, mova dispositivos para o Home Assistant, aposente Alexa/Google e adicione voz local. Passo a passo.',
+      'Migre da nuvem para o controle local 2026: audite dependências, mova dispositivos para o Home Assistant, aposente Alexa/Google e adicione voz local.',
     twitterDescription:
       'Saia da Alexa/Google para uma casa inteligente local: audite dependências da nuvem, repareie ou substitua dispositivos, mude para o Home Assistant, adicione voz local.',
     readTime: '9 min de leitura',
@@ -1107,7 +1107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Como Migrar de uma Casa Inteligente na Nuvem para o Controle Local (2026)',
-      description: 'Migre de uma casa inteligente na nuvem para o controle local: audite dependências, mova dispositivos para o Home Assistant, aposente Alexa/Google e adicione voz local. Passo a passo.',
+      description: 'Migre da nuvem para o controle local 2026: audite dependências, mova dispositivos para o Home Assistant, aposente Alexa/Google e adicione voz local.',
       url: 'https://www.promptquorum.com/pt/smart-home/migrating-from-cloud-to-local-smart-home',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },

@@ -1782,6 +1782,48 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
           </Link>
         </div>
 
+        {/* Cross-link: Smart Home */}
+        <div className="mb-16 bg-primary/5 border border-primary/20 rounded-2xl px-6 py-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="flex-1">
+            <p className="text-sm font-semibold text-text-primary mb-1">
+              {lang === 'de' ? 'Verwandte Themen: Smart-Home-Guide'
+                : lang === 'fr' ? 'Connexe : Guide Maison Connectée'
+                : lang === 'ja' ? '関連：スマートホームガイド'
+                : lang === 'zh' ? '相关推荐：智能家居指南'
+                : lang === 'es' ? 'Relacionado: Guía de Hogar Inteligente'
+                : lang === 'pt' ? 'Relacionado: Guia de Casa Inteligente'
+                : 'Related: Smart Home Guide'}
+            </p>
+            <p className="text-sm text-text-secondary leading-relaxed">
+              {lang === 'de'
+                ? 'Ein lokales LLM auszuführen ist Schritt eins. Es zu Hause einzusetzen ist Schritt zwei. Der Smart-Home-Guide behandelt Home Assistant Setup, Ollama-Integration, lokale Sprachassistenten mit Whisper + Piper, datenschutzorientierte Automatisierung und Hardware-Empfehlungen für dauerhaft aktive KI im Zuhause — alles offline, kein Cloud-Abo.'
+                : lang === 'fr'
+                ? 'Faire tourner un LLM local est la première étape. L\'utiliser chez vous est la deuxième. Le guide maison connectée couvre la configuration de Home Assistant, l\'intégration Ollama, les assistants vocaux locaux avec Whisper + Piper, l\'automatisation axée sur la confidentialité et les recommandations matérielles pour une IA permanente à domicile — tout offline, sans abonnement cloud.'
+                : lang === 'ja'
+                ? 'ローカルLLMを動かすことがステップ1です。それを自宅で活用することがステップ2です。スマートホームガイドは、Home Assistantのセットアップ、Ollama統合、Whisper + Piperによるローカル音声アシスタント、プライバシー重視のオートメーション、常時稼働AIのハードウェア推奨事項をカバーしています — すべてオフライン、クラウドサブスクリプション不要。'
+                : lang === 'zh'
+                ? '运行本地LLM是第一步，在家中应用它是第二步。智能家居指南涵盖Home Assistant设置、Ollama集成、Whisper + Piper本地语音助手、隐私优先自动化以及家庭常驻AI的硬件推荐——全部离线，无需云端订阅。'
+                : lang === 'es'
+                ? 'Ejecutar un LLM local es el primer paso. Ponerlo a trabajar en tu hogar es el segundo. La guía de hogar inteligente cubre la configuración de Home Assistant, integración con Ollama, asistentes de voz locales con Whisper + Piper, automatización centrada en la privacidad y recomendaciones de hardware para IA siempre activa en el hogar — todo offline, sin suscripción a la nube.'
+                : lang === 'pt'
+                ? 'Executar um LLM local é o primeiro passo. Colocá-lo para trabalhar em sua casa é o segundo. O guia de casa inteligente cobre a configuração do Home Assistant, integração com Ollama, assistentes de voz locais com Whisper + Piper, automação focada na privacidade e recomendações de hardware para IA sempre ativa em casa — tudo offline, sem assinatura em nuvem.'
+                : 'Running a local model is step one. Putting it to work in your home is step two. The Smart Home guide covers Home Assistant setup, Ollama integration, local voice assistants with Whisper + Piper, privacy-first automation, and hardware recommendations for always-on AI in your home — all offline, no cloud subscription.'}
+            </p>
+          </div>
+          <Link
+            href={lang === 'en' ? '/smart-home' : `/${lang}/smart-home`}
+            className="flex-shrink-0 inline-flex items-center px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap"
+          >
+            {lang === 'de' ? 'Zum Smart-Home-Guide →'
+              : lang === 'fr' ? 'Explorer le Guide Maison Connectée →'
+              : lang === 'ja' ? 'スマートホームガイドを見る →'
+              : lang === 'zh' ? '探索智能家居指南 →'
+              : lang === 'es' ? 'Explorar la Guía de Hogar Inteligente →'
+              : lang === 'pt' ? 'Explorar o Guia de Casa Inteligente →'
+              : 'Explore the Smart Home Guide →'}
+          </Link>
+        </div>
+
         {/* Back nav */}
         <div className="pt-8 border-t border-primary/20">
           <Link href={navHref('/', lang)} className="text-sm text-text-secondary hover:text-primary transition-colors">

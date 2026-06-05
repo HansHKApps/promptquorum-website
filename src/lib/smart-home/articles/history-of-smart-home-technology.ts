@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Smart Home History: From X10 to Local AI (2026)',
-    seoTitle: 'Smart Home History: X10 to Local AI (2026)',
+    seoTitle: 'Smart Home Technology History: X10 to Local AI (2026)',
     intro:
       'Smart home technology evolved from 1970s X10 powerline control through Z-Wave and Zigbee, the cloud era of Nest and Echo, the Matter unifying standard, and now a swing back toward local control with on-device AI. This guide traces that arc and explains why the pendulum is moving away from cloud dependence toward local autonomy.',
     metaDescription:
@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Geschichte des Smart Home: Von X10 zur lokalen KI (2026)',
-    seoTitle: 'Smart-Home-Geschichte: X10 bis lokale KI (2026)',
+    seoTitle: 'Smart-Home-Geschichte: Von X10 bis zur lokalen KI (2026)',
     intro:
       'Die Smart-Home-Technik entwickelte sich von der X10-Powerline-Steuerung der 1970er über Z-Wave und Zigbee, die Cloud-Ära von Nest und Echo, den vereinheitlichenden Matter-Standard bis zur heutigen Rückkehr zur lokalen Steuerung mit On-Device-KI. Dieser Leitfaden zeichnet diesen Bogen nach und erklärt, warum das Pendel von der Cloud-Abhängigkeit zurück zur lokalen Autonomie schwingt.',
     metaDescription:
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Historia del Smart Home: De X10 a la IA Local (2026)',
-    seoTitle: 'Historia del Smart Home: X10 a IA Local (2026)',
+    seoTitle: 'Historia del Smart Home: De X10 a la IA Local en 2026',
     intro:
       'La tecnología del smart home evolucionó desde el control por línea eléctrica X10 de los años 70, pasando por Z-Wave y Zigbee, la era de la nube de Nest y Echo, el estándar unificador Matter, hasta el giro actual hacia el control local con IA en el dispositivo. Esta guía traza ese arco y explica por qué el péndulo se aleja de la dependencia de la nube hacia la autonomía local.',
     metaDescription:
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'La technologie de la maison connectée a évolué depuis la commande par courant porteur X10 des années 1970, en passant par Z-Wave et Zigbee, l\'ère du cloud de Nest et Echo, le standard unificateur Matter, jusqu\'au virage actuel vers le contrôle local avec l\'IA embarquée. Ce guide retrace cet arc et explique pourquoi le pendule s\'éloigne de la dépendance au cloud vers l\'autonomie locale.',
     metaDescription:
-      'Histoire de la maison connectée de X10 (1975) à l\'IA locale : Z-Wave, Zigbee, l\'ère du cloud de Nest et Echo, Matter et le virage de 2026 vers le contrôle local.',
+      'Histoire de la maison connectée de X10 (1975) à l\'IA locale : Z-Wave, Zigbee, Nest, Echo, Matter et le virage 2026 vers le contrôle local.',
     twitterDescription:
       'De X10 en 1975 à l\'IA locale en 2026 : comment la maison connectée a évolué via Z-Wave, Zigbee, l\'ère du cloud, Matter et le retour au contrôle local.',
     readTime: '8 min de lecture',
@@ -731,7 +731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Histoire de la Maison Connectée : de X10 à l\'IA Locale (2026)',
-      description: 'Histoire de la maison connectée de X10 (1975) à l\'IA locale : Z-Wave, Zigbee, l\'ère du cloud de Nest et Echo, Matter et le virage de 2026 vers le contrôle local.',
+      description: 'Histoire de la maison connectée de X10 (1975) à l\'IA locale : Z-Wave, Zigbee, Nest, Echo, Matter et le virage 2026 vers le contrôle local.',
       url: 'https://www.promptquorum.com/fr/smart-home/history-of-smart-home-technology',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'スマートホームの歴史：X10からローカルAIへ（2026）',
-    seoTitle: 'スマートホームの歴史：X10からローカルAI（2026）',
+    seoTitle: 'スマートホームの歴史：X10からローカルAIへの進化（2026年版）',
     intro:
       'スマートホーム技術は、1970年代の X10 電力線制御から、Z-Wave と Zigbee、Nest と Echo のクラウド時代、統一規格 Matter を経て、今日のオンデバイスAIによるローカル制御への転換まで進化してきました。本ガイドはその流れをたどり、振り子がクラウド依存からローカルの自律へと戻る理由を説明します。',
     metaDescription:
@@ -1137,7 +1137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: '智能家居简史：从 X10 到本地AI（2026）',
-    seoTitle: '智能家居简史：从 X10 到本地AI（2026）',
+    seoTitle: '智能家居发展史：从X10到本地AI，2026年版完整时间线',
     intro:
       '智能家居技术从1970年代的 X10 电力线控制，经由 Z-Wave 与 Zigbee、Nest 与 Echo 的云端时代、统一标准 Matter，演进到如今借助设备端AI回归本地控制。本指南梳理这一脉络，并解释为何钟摆正从云端依赖摆回本地自主。',
     metaDescription:
