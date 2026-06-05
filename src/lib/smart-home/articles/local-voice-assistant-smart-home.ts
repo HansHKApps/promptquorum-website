@@ -825,7 +825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant Assist、音声認識のローカル Whisper、音声合成の Piper、頭脳としてのローカル LLM で構築した完全ローカルな音声アシスタントで、Alexa や Google を置き換えられます。本ガイドは、オフラインの音声スタック、各コンポーネント、それらをつなぐ Wyoming プロトコル、そして必要なハードウェアを扱います——すべてプライベートで、クラウドなしに動きます。',
     metaDescription:
-      'Alexa を完全ローカルな音声アシスタントに置き換える：Home Assistant Assist + Whisper + Piper + ローカル LLM を Wyoming プロトコルで。プライベートかつオフライン。',
+      'Alexa を完全ローカルな音声アシスタントに置き換える（2026）：Assist・Whisper・Piper・ローカルLLM を Wyoming プロトコルで統合。マイク設定・Wake Word検出・音声認識・音声合成の組み合わせ方を解説。プライベートかつオフライン動作。',
     twitterDescription:
       'Alexa を置き換えるプライベートな音声アシスタントを作る：Assist + Whisper（STT）+ Piper（TTS）+ ローカル LLM。完全オフライン、Wyoming 経由。',
     readTime: '11分で読める',
@@ -993,7 +993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'スマートホーム向けの完全ローカルな音声アシスタントを作る（2026）',
-      description: 'Alexa を完全ローカルな音声アシスタントに置き換える：Home Assistant Assist + Whisper + Piper + ローカル LLM を Wyoming プロトコルで。プライベートかつオフライン。',
+      description: 'Alexa を完全ローカルな音声アシスタントに置き換える（2026）：Assist・Whisper・Piper・ローカルLLM を Wyoming プロトコルで統合。マイク設定・Wake Word検出・音声認識・音声合成の組み合わせ方を解説。プライベートかつオフライン動作。',
       url: 'https://www.promptquorum.com/ja/smart-home/local-voice-assistant-smart-home',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1231,7 +1231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '你可以用 Home Assistant Assist、用于语音转文字的本地 Whisper、用于文字转语音的 Piper，以及作为大脑的本地 LLM，搭建一个完全本地的语音助手来替代 Alexa 或 Google。本指南讲解离线语音堆栈、各个组件、把它们连起来的 Wyoming 协议，以及你需要的硬件——一切私密，且无需云端即可工作。',
     metaDescription:
-      '用完全本地的语音助手替代 Alexa：Home Assistant Assist + Whisper + Piper + 本地 LLM，经由 Wyoming 协议。私密且离线。',
+      '用完全本地语音助手替代 Alexa（2026）：Home Assistant Assist 整合本地 Whisper 语音识别、Piper 语音合成与本地 LLM 推理模块，经由 Wyoming 协议连接组合。实现完全离线运行、隐私数据保护、零月费订阅。含麦克风与唤醒词检测全流程配置。',
     twitterDescription:
       '搭建一个替代 Alexa 的私密语音助手：Assist + Whisper（STT）+ Piper（TTS）+ 本地 LLM。完全离线，经由 Wyoming。',
     readTime: '阅读约11分钟',
@@ -1399,7 +1399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '为你的智能家居搭建完全本地的语音助手（2026）',
-      description: '用完全本地的语音助手替代 Alexa：Home Assistant Assist + Whisper + Piper + 本地 LLM，经由 Wyoming 协议。私密且离线。',
+      description: '用完全本地语音助手替代 Alexa（2026）：Home Assistant Assist 整合本地 Whisper 语音识别、Piper 语音合成与本地 LLM 推理模块，经由 Wyoming 协议连接组合。实现完全离线运行、隐私数据保护、零月费订阅。含麦克风与唤醒词检测全流程配置。',
       url: 'https://www.promptquorum.com/zh/smart-home/local-voice-assistant-smart-home',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

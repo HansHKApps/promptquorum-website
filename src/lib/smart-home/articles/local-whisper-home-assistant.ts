@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカル Whisper は、Home Assistant にクラウドなしのプライベートな音声認識を与えます：精度・速度・ハードウェアの兼ね合いで Whisper のモデルサイズを選び、Wyoming プロトコルで Assist につなぎます。本ガイドは、ローカル STT がなぜ重要か、Whisper のモデルサイズ、Wyoming の設定、ハードウェア要件、そして精度の調整方法を扱います。',
     metaDescription:
-      'Whisper で Home Assistant にローカル音声認識を追加：モデルサイズ、ハードウェア要件、精度対速度、Wyoming 設定。プライベートでオフラインの文字起こし。',
+      'Whisper で Home Assistant にローカル音声認識を追加する方法（2026）：クラウド不要の音声テキスト変換、日本語対応モデルの選び方を解説。モデルサイズ・ハードウェア要件・精度と速度のトレードオフ・Wyoming の設定手順を網羅。',
     twitterDescription:
       'ローカル Whisper で Home Assistant にプライベートな音声認識を：モデルサイズを選び、Wyoming でつなぎ、精度を調整。クラウドなし。',
     readTime: '8分で読める',
@@ -894,7 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'スマートホーム向けのローカル音声認識：Whisper + HA（2026）',
-      description: 'Whisper で Home Assistant にローカル音声認識を追加：モデルサイズ、ハードウェア要件、精度対速度、Wyoming 設定。プライベートでオフラインの文字起こし。',
+      description: 'Whisper で Home Assistant にローカル音声認識を追加する方法（2026）：クラウド不要の音声テキスト変換、日本語対応モデルの選び方を解説。モデルサイズ・ハードウェア要件・精度と速度のトレードオフ・Wyoming の設定手順を網羅。',
       url: 'https://www.promptquorum.com/ja/smart-home/local-whisper-home-assistant',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1111,7 +1111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '本地 Whisper 为 Home Assistant 提供无云端的私密语音转文字：你按精度、速度和硬件的取舍选择一个 Whisper 模型大小，然后经由 Wyoming 协议把它连接到 Assist。本指南讲解本地 STT 为何重要、Whisper 的模型大小、Wyoming 配置、硬件需求，以及如何调优精度。',
     metaDescription:
-      '用 Whisper 为 Home Assistant 添加本地语音转文字：模型大小、硬件需求、精度对速度，以及 Wyoming 配置。私密、离线的转写。',
+      '用 Whisper 为 Home Assistant 添加本地语音识别与实时转写（2026）：支持中文等多语言识别，数据完全本地处理无需联网。含不同规格模型的延迟与精度对比，以及经由 Wyoming 协议接入 Assist 流水线的详细配置指南。',
     twitterDescription:
       '用本地 Whisper 为 Home Assistant 实现私密语音转文字：选择模型大小、经由 Wyoming 连接、调优精度。无云端。',
     readTime: '阅读约8分钟',
@@ -1260,7 +1260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '智能家居的本地语音转文字：Whisper + HA（2026）',
-      description: '用 Whisper 为 Home Assistant 添加本地语音转文字：模型大小、硬件需求、精度对速度，以及 Wyoming 配置。私密、离线的转写。',
+      description: '用 Whisper 为 Home Assistant 添加本地语音识别与实时转写（2026）：支持中文等多语言识别，数据完全本地处理无需联网。含不同规格模型的延迟与精度对比，以及经由 Wyoming 协议接入 Assist 流水线的详细配置指南。',
       url: 'https://www.promptquorum.com/zh/smart-home/local-whisper-home-assistant',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Migrar de un smart home en la nube al control local significa auditar tus dependencias de la nube, mover los dispositivos a un hub local y retirar los asistentes en la nube. Esta guía paso a paso muestra cómo auditar, qué dispositivos pueden ir a local, cuándo reemplazar frente a re-emparejar, cómo pasar a Home Assistant y cómo añadir un asistente de voz local en lugar de Alexa o Google.',
     metaDescription:
-      'Migra de un smart home en la nube al control local: audita dependencias, mueve dispositivos a Home Assistant, retira Alexa/Google y añade voz local. Paso a paso.',
+      'Migra de smart home en la nube al control local 2026: audita dependencias, pasa a Home Assistant, retira Alexa/Google, añade voz local.',
     twitterDescription:
       'Pasa de Alexa/Google a un smart home local: audita dependencias de la nube, re-empareja o reemplaza dispositivos, cambia a Home Assistant, añade voz local.',
     readTime: '9 min de lectura',
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Cómo Migrar de un Smart Home en la Nube al Control Local (2026)',
-      description: 'Migra de un smart home en la nube al control local: audita dependencias, mueve dispositivos a Home Assistant, retira Alexa/Google y añade voz local. Paso a paso.',
+      description: 'Migra de smart home en la nube al control local 2026: audita dependencias, pasa a Home Assistant, retira Alexa/Google, añade voz local.',
       url: 'https://www.promptquorum.com/es/smart-home/migrating-from-cloud-to-local-smart-home',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'クラウドのスマートホームからローカル制御へ移行するとは、クラウド依存を棚卸しし、機器をローカルハブへ移し、クラウドアシスタントを退役させることです。本ステップバイステップのガイドは、棚卸しの方法、どの機器がローカル化できるか、交換と再ペアリングのどちらにすべきか、Home Assistant への移行方法、そして Alexa や Google の代わりにローカル音声アシスタントを追加する方法を示します。',
     metaDescription:
-      'クラウドのスマートホームからローカル制御へ移行：依存を棚卸し、機器を Home Assistant へ移し、Alexa/Google を退役させ、ローカル音声を追加。順を追って。',
+      'クラウドスマートホームからローカル制御へ移行する手順（2026）：クラウド依存関係の見直し、機器の Home Assistant への移行、Alexa/Google の退役、ローカル音声システムの追加。部屋ごとに段階的に進める移行方法を詳解。',
     twitterDescription:
       'Alexa/Google からローカルスマートホームへ：クラウド依存を棚卸しし、機器を再ペアリングまたは交換し、Home Assistant へ切り替え、ローカル音声を追加。',
     readTime: '9分で読める',
@@ -919,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'クラウドのスマートホームからローカル制御へ移行する方法（2026）',
-      description: 'クラウドのスマートホームからローカル制御へ移行：依存を棚卸し、機器を Home Assistant へ移し、Alexa/Google を退役させ、ローカル音声を追加。順を追って。',
+      description: 'クラウドスマートホームからローカル制御へ移行する手順（2026）：クラウド依存関係の見直し、機器の Home Assistant への移行、Alexa/Google の退役、ローカル音声システムの追加。部屋ごとに段階的に進める移行方法を詳解。',
       url: 'https://www.promptquorum.com/ja/smart-home/migrating-from-cloud-to-local-smart-home',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1141,7 +1141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '从云端智能家居迁移到本地控制，意味着审查你的云端依赖、把设备迁移到本地中枢，并退役云端助手。本分步指南展示如何审查、哪些设备可以本地化、何时应替换而非重新配对、如何迁移到 Home Assistant，以及如何用本地语音助手取代 Alexa 或 Google。',
     metaDescription:
-      '从云端智能家居迁移到本地控制：审查依赖、把设备迁移到 Home Assistant、退役 Alexa/Google，并添加本地语音。分步进行。',
+      '从云端智能家居全面迁移到本地控制（2026）：系统审查云端依赖关系、将所有设备迁移到 Home Assistant、退役 Alexa 和 Google 助手，并添加本地语音控制系统。含设备配对决策与按房间分阶段推进的详细迁移策略。',
     twitterDescription:
       '从 Alexa/Google 转向本地智能家居：审查云端依赖、重新配对或替换设备、切换到 Home Assistant、添加本地语音。',
     readTime: '阅读约9分钟',
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '如何从云端智能家居迁移到本地控制（2026）',
-      description: '从云端智能家居迁移到本地控制：审查依赖、把设备迁移到 Home Assistant、退役 Alexa/Google，并添加本地语音。分步进行。',
+      description: '从云端智能家居全面迁移到本地控制（2026）：系统审查云端依赖关系、将所有设备迁移到 Home Assistant、退役 Alexa 和 Google 助手，并添加本地语音控制系统。含设备配对决策与按房间分阶段推进的详细迁移策略。',
       url: 'https://www.promptquorum.com/zh/smart-home/migrating-from-cloud-to-local-smart-home',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

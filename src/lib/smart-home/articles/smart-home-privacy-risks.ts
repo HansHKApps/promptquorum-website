@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Smart Home Privacy Risks (2026): What Your Devices Know',
-    seoTitle: 'Smart Home Privacy Risks 2026: What Devices Know',
+    seoTitle: 'Smart Home Privacy Risks 2026: What Your Devices Collect',
     intro:
       'Cloud smart home devices collect usage patterns, voice recordings, and camera feeds on company servers — and the fix is local control. This guide covers the real privacy risks, what cloud ecosystems collect, why breaches and data sharing matter, and how a local-first setup with local AI removes the third-party processor entirely.',
     metaDescription:
@@ -189,7 +189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Cloud-Smart-Home-Geräte sammeln Nutzungsmuster, Sprachaufnahmen und Kamerafeeds auf Firmen-Servern – und die Lösung ist lokale Steuerung. Dieser Leitfaden behandelt die realen Datenschutzrisiken, was Cloud-Ökosysteme sammeln, warum Datenlecks und Datenweitergabe zählen, und wie ein Local-First-Setup mit lokaler KI den externen Verarbeiter vollständig entfernt.',
     metaDescription:
-      'Smart-Home-Datenschutzrisiken: Cloud-Datensammlung, immer lauschende Mikrofone, Kamerafeeds, Datenlecks und Weitergabe an Dritte – und wie lokale Steuerung sie löst.',
+      'Smart-Home-Datenschutzrisiken 2026: Cloud-Datensammlung, lauschende Mikrofone, Kamerafeeds und Drittanbieter-Sharing. Wie lokale Steuerung schützt.',
     twitterDescription:
       'Was Ihre Smart-Home-Geräte über Sie wissen: Cloud-Nutzungsdaten, Sprachaufnahmen, Kamerafeeds. Die Lösung ist lokale Steuerung und lokale KI.',
     readTime: '8 Min. Lesezeit',
@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Smart-Home-Datenschutzrisiken (2026): Was Ihre Geräte wissen',
-      description: 'Smart-Home-Datenschutzrisiken: Cloud-Datensammlung, immer lauschende Mikrofone, Kamerafeeds, Datenlecks und Weitergabe an Dritte – und wie lokale Steuerung sie löst.',
+      description: 'Smart-Home-Datenschutzrisiken 2026: Cloud-Datensammlung, lauschende Mikrofone, Kamerafeeds und Drittanbieter-Sharing. Wie lokale Steuerung schützt.',
       url: 'https://www.promptquorum.com/de/smart-home/smart-home-privacy-risks',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -365,11 +365,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Riesgos de Privacidad del Smart Home (2026): Qué Saben Tus Dispositivos',
-    seoTitle: 'Riesgos de Privacidad del Smart Home 2026',
+    seoTitle: 'Riesgos de Privacidad del Smart Home 2026: Guía Completa',
     intro:
       'Los dispositivos de smart home en la nube recopilan patrones de uso, grabaciones de voz y vídeo de cámaras en servidores de las empresas, y la solución es el control local. Esta guía cubre los riesgos reales de privacidad, qué recopilan los ecosistemas en la nube, por qué importan las brechas y el intercambio de datos, y cómo una configuración local-first con IA local elimina por completo al procesador externo.',
     metaDescription:
-      'Riesgos de privacidad del smart home: recopilación de datos en la nube, micrófonos siempre escuchando, vídeo de cámaras, brechas y compartición — y cómo lo arregla el control local.',
+      'Riesgos de privacidad del smart home 2026: nube, micrófonos activos, cámaras, brechas y datos compartidos. Cómo el control local lo resuelve.',
     twitterDescription:
       'Lo que tus dispositivos de smart home saben de ti: datos de uso en la nube, grabaciones de voz, vídeo de cámaras. La solución es el control local y la IA local.',
     readTime: '8 min de lectura',
@@ -511,7 +511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Riesgos de Privacidad del Smart Home (2026): Qué Saben Tus Dispositivos',
-      description: 'Riesgos de privacidad del smart home: recopilación de datos en la nube, micrófonos siempre escuchando, vídeo de cámaras, brechas y compartición — y cómo lo arregla el control local.',
+      description: 'Riesgos de privacidad del smart home 2026: nube, micrófonos activos, cámaras, brechas y datos compartidos. Cómo el control local lo resuelve.',
       url: 'https://www.promptquorum.com/es/smart-home/smart-home-privacy-risks',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -541,11 +541,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Risques de Confidentialité de la Maison Connectée (2026)',
-    seoTitle: 'Risques de Confidentialité Maison Connectée 2026',
+    seoTitle: 'Risques Confidentialité Maison Connectée 2026: Ce Que Savent',
     intro:
       'Les appareils de maison connectée cloud collectent des habitudes d\'usage, des enregistrements vocaux et des flux de caméra sur les serveurs des entreprises — et la solution est le contrôle local. Ce guide couvre les risques réels de confidentialité, ce que collectent les écosystèmes cloud, pourquoi les fuites et le partage de données comptent, et comment une configuration local-first avec IA locale supprime entièrement le sous-traitant externe.',
     metaDescription:
-      'Risques de confidentialité de la maison connectée : collecte de données cloud, micros toujours à l\'écoute, flux de caméra, fuites et partage — et comment le contrôle local les corrige.',
+      'Risques confidentialité maison connectée 2026 : données cloud, micros actifs, flux caméra, fuites et partage. Contrôle local comme solution.',
     twitterDescription:
       'Ce que vos appareils de maison connectée savent de vous : données d\'usage cloud, enregistrements vocaux, flux de caméra. La solution est le contrôle local et l\'IA locale.',
     readTime: '8 min de lecture',
@@ -687,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Risques de Confidentialité de la Maison Connectée (2026)',
-      description: 'Risques de confidentialité de la maison connectée : collecte de données cloud, micros toujours à l\'écoute, flux de caméra, fuites et partage — et comment le contrôle local les corrige.',
+      description: 'Risques confidentialité maison connectée 2026 : données cloud, micros actifs, flux caméra, fuites et partage. Contrôle local comme solution.',
       url: 'https://www.promptquorum.com/fr/smart-home/smart-home-privacy-risks',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -717,11 +717,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'スマートホームのプライバシーリスク（2026）：機器は何を知るか',
-    seoTitle: 'スマートホームのプライバシーリスク（2026）',
+    seoTitle: 'スマートホームのプライバシーリスク2026年版：機器が集めるデータと対策',
     intro:
       'クラウド型スマートホーム機器は、利用パターン・音声録音・カメラ映像を企業のサーバーに収集します——そして解決策はローカル制御です。本ガイドは、現実のプライバシーリスク、クラウドエコシステムが何を収集するか、漏えいやデータ共有がなぜ重要か、そしてローカルAIを備えたローカルファースト構成が外部処理者を完全に取り除く仕組みを扱います。',
     metaDescription:
-      'スマートホームのプライバシーリスク：クラウドのデータ収集、常時待ち受けマイク、カメラ映像、漏えい、第三者共有——そしてローカル制御がどう解決するか。',
+      'スマートホームのプライバシーリスクを2026年版で解説：クラウドのデータ収集、常時待ち受けマイク、カメラ映像の送信、漏えいリスク、第三者共有の実態——そしてローカル制御による根本的な解決策。',
     twitterDescription:
       'あなたのスマートホーム機器が知っていること：クラウドの利用データ、音声録音、カメラ映像。解決策はローカル制御とローカルAIです。',
     readTime: '8分で読める',
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'スマートホームのプライバシーリスク（2026）：機器は何を知るか',
-      description: 'スマートホームのプライバシーリスク：クラウドのデータ収集、常時待ち受けマイク、カメラ映像、漏えい、第三者共有——そしてローカル制御がどう解決するか。',
+      description: 'スマートホームのプライバシーリスクを2026年版で解説：クラウドのデータ収集、常時待ち受けマイク、カメラ映像の送信、漏えいリスク、第三者共有の実態——そしてローカル制御による根本的な解決策。',
       url: 'https://www.promptquorum.com/ja/smart-home/smart-home-privacy-risks',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -893,11 +893,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'Riscos de Privacidade da Casa Inteligente (2026): O Que Seus Dispositivos Sabem',
-    seoTitle: 'Riscos de Privacidade da Casa Inteligente 2026',
+    seoTitle: 'Riscos de Privacidade da Casa Inteligente 2026: Guia',
     intro:
       'Dispositivos de casa inteligente na nuvem coletam padrões de uso, gravações de voz e imagens de câmeras em servidores das empresas — e a solução é o controle local. Este guia cobre os riscos reais de privacidade, o que os ecossistemas na nuvem coletam, por que vazamentos e compartilhamento de dados importam, e como uma configuração local-first com IA local elimina por completo o processador externo.',
     metaDescription:
-      'Riscos de privacidade da casa inteligente: coleta de dados na nuvem, microfones sempre ouvindo, imagens de câmeras, vazamentos e compartilhamento — e como o controle local resolve.',
+      'Riscos de privacidade casa inteligente 2026: nuvem, microfones ativos, câmeras, vazamentos e compartilhamento. Como o controle local resolve.',
     twitterDescription:
       'O que seus dispositivos de casa inteligente sabem sobre você: dados de uso na nuvem, gravações de voz, imagens de câmeras. A solução é o controle local e a IA local.',
     readTime: '8 min de leitura',
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Riscos de Privacidade da Casa Inteligente (2026): O Que Seus Dispositivos Sabem',
-      description: 'Riscos de privacidade da casa inteligente: coleta de dados na nuvem, microfones sempre ouvindo, imagens de câmeras, vazamentos e compartilhamento — e como o controle local resolve.',
+      description: 'Riscos de privacidade casa inteligente 2026: nuvem, microfones ativos, câmeras, vazamentos e compartilhamento. Como o controle local resolve.',
       url: 'https://www.promptquorum.com/pt/smart-home/smart-home-privacy-risks',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1069,11 +1069,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: '智能家居隐私风险（2026）：你的设备知道什么',
-    seoTitle: '智能家居隐私风险（2026）',
+    seoTitle: '智能家居隐私风险深度解析2026：数据收集、泄露与本地控制解决方案',
     intro:
       '云端智能家居设备会把使用模式、语音录音和摄像头画面收集到企业服务器上——而解决办法是本地控制。本指南讲解真实的隐私风险、云端生态收集了什么、数据泄露与共享为何重要，以及带本地AI的本地优先配置如何彻底去除外部处理方。',
     metaDescription:
-      '智能家居隐私风险：云端数据收集、始终聆听的麦克风、摄像头画面、泄露与第三方共享——以及本地控制如何解决。',
+      '智能家居隐私风险2026年全面解析：云端使用数据收集、始终聆听的麦克风、摄像头画面上传、数据泄露事件与第三方共享现状，以及本地优先控制架构如何从根本上解决上述隐私问题。',
     twitterDescription:
       '你的智能家居设备知道你什么：云端使用数据、语音录音、摄像头画面。解决办法是本地控制与本地AI。',
     readTime: '阅读约8分钟',
@@ -1215,7 +1215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '智能家居隐私风险（2026）：你的设备知道什么',
-      description: '智能家居隐私风险：云端数据收集、始终聆听的麦克风、摄像头画面、泄露与第三方共享——以及本地控制如何解决。',
+      description: '智能家居隐私风险2026年全面解析：云端使用数据收集、始终聆听的麦克风、摄像头画面上传、数据泄露事件与第三方共享现状，以及本地优先控制架构如何从根本上解决上述隐私问题。',
       url: 'https://www.promptquorum.com/zh/smart-home/smart-home-privacy-risks',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

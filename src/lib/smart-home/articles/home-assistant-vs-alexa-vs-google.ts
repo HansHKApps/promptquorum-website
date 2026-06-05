@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant、Amazon Alexa、Google Home は、それぞれ異なる優先事項に合います：Home Assistant はプライバシーとローカル制御で勝り、Alexa と Google はプラグアンドプレイの利便性で勝ります。本対決は、プライバシー、ローカル制御、機器対応、音声、AI、コスト、手間を比較し、ユーザータイプ別に正しい選択を推奨します。',
     metaDescription:
-      'Home Assistant 対 Alexa・Google Home 2026年版比較：プライバシー・ローカル制御・AI・コストを徹底解説。',
+      'Home Assistant、Alexa、Google Homeを2026年版で徹底比較：プライバシー保護の強さ、ローカル制御機能の有無、AI音声連携の質、月額コストの差、クラウド依存度という5つの重要な観点からスマートホームプラットフォームを選ぶ。',
     twitterDescription:
       'Home Assistant 対 Alexa 対 Google Home：プライバシーとローカル制御 対 プラグアンドプレイの利便性。2026年の対決と、それぞれが誰に合うか。',
     readTime: '8分で読める',
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant 対 Alexa 対 Google Home：どれが正解？（2026）',
-      description: 'Home Assistant 対 Alexa・Google Home 2026年版比較：プライバシー・ローカル制御・AI・コストを徹底解説。',
+      description: 'Home Assistant、Alexa、Google Homeを2026年版で徹底比較：プライバシー保護の強さ、ローカル制御機能の有無、AI音声連携の質、月額コストの差、クラウド依存度という5つの重要な観点からスマートホームプラットフォームを選ぶ。',
       url: 'https://www.promptquorum.com/ja/smart-home/home-assistant-vs-alexa-vs-google',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1153,7 +1153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant、Amazon Alexa 和 Google Home 适合不同的优先事项：Home Assistant 在隐私和本地控制上胜出，而 Alexa 和 Google 在即插即用的便利上胜出。本对决比较隐私、本地控制、设备支持、语音、AI、成本和投入，并按用户类型推荐合适的选择。',
     metaDescription:
-      '2026年对比 Home Assistant、Alexa 和 Google Home：隐私保护、本地控制、AI 与语音比较，选出你的智能家居平台。',
+      '2026年深度对比Home Assistant、Alexa和Google Home三大智能家居平台：从隐私数据保护程度、本地控制能力、AI语音功能体验、月度订阅费用、云端依赖程度五个核心维度全面分析，助你选出最合适的智能家居平台方案。',
     twitterDescription:
       'Home Assistant 对 Alexa 对 Google Home：隐私与本地控制 对 即插即用的便利。2026 年的对决，以及各自适合谁。',
     readTime: '阅读约8分钟',
@@ -1309,7 +1309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant 对 Alexa 对 Google Home：哪个适合你？（2026）',
-      description: '2026年对比 Home Assistant、Alexa 和 Google Home：隐私保护、本地控制、AI 与语音比较，选出你的智能家居平台。',
+      description: '2026年深度对比Home Assistant、Alexa和Google Home三大智能家居平台：从隐私数据保护程度、本地控制能力、AI语音功能体验、月度订阅费用、云端依赖程度五个核心维度全面分析，助你选出最合适的智能家居平台方案。',
       url: 'https://www.promptquorum.com/zh/smart-home/home-assistant-vs-alexa-vs-google',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

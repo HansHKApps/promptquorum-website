@@ -809,7 +809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルLLMは今やスマートホームの頭脳として機能できます——自然言語コマンドを解釈し、文脈を踏まえた自動化を実行し、プライベートな音声アシスタントを動かします。すべて自分のハードウェア上でクラウドなしに行えます。本ガイドではその意味、2026年に実用化した理由、Home Assistant + Ollama + ローカル音声のアーキテクチャ、ルールベースの自動化に対して何が広がるか、そして構築の手順を説明します。',
     metaDescription:
-      'ローカルLLMでスマートホームを動かす：自然言語制御、文脈を踏まえた自動化、Home Assistant + Ollama によるプライベート音声。クラウド不要。2026年ガイド。',
+      'ローカルLLMでスマートホームを動かす2026年ガイド：インストール手順、ハードウェア要件、音声制御の設定方法を解説。Home Assistant と Ollama で自然言語制御と文脈を踏まえた自動化を実現。クラウド不要のプライベートAI環境を構築。',
     twitterDescription:
       'ローカルLLMをスマートホームの頭脳に：Home Assistant + Ollama による自然言語制御と文脈を踏まえた自動化。クラウドはゼロ。',
     readTime: '12分で読める',
@@ -973,7 +973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'ローカルLLMでスマートホームを動かす（2026年ガイド）',
-      description: 'ローカルLLMでスマートホームを動かす：自然言語制御、文脈を踏まえた自動化、Home Assistant + Ollama によるプライベート音声。クラウド不要。',
+      description: 'ローカルLLMでスマートホームを動かす2026年ガイド：インストール手順、ハードウェア要件、音声制御の設定方法を解説。Home Assistant と Ollama で自然言語制御と文脈を踏まえた自動化を実現。クラウド不要のプライベートAI環境を構築。',
       url: 'https://www.promptquorum.com/ja/smart-home/local-llm-smart-home-complete-guide',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1207,7 +1207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '本地LLM如今可以充当你智能家居的大脑：解读自然语言指令、执行情境化自动化，并驱动一个私密的语音助手，全部在你自己的硬件上运行且无需云端。本指南解释它的含义、为何在2026年变得实用、Home Assistant + Ollama + 本地语音的架构、相对基于规则的自动化它解锁了什么，以及搭建的分步路径。',
     metaDescription:
-      '用本地LLM运行你的智能家居：自然语言控制、情境化自动化，以及通过 Home Assistant + Ollama 的私密语音。无需云端。2026指南。',
+      '用本地LLM运行智能家居完整指南（2026）：实现自然语言设备控制和情境化智能自动化，通过 Home Assistant 与 Ollama 搭建私密语音控制系统。含硬件选型、安装配置步骤和模型选择建议，数据不离家，无需云端。',
     twitterDescription:
       '把本地LLM当作智能家居的大脑：通过 Home Assistant + Ollama 实现自然语言控制与情境化自动化。零云端。',
     readTime: '阅读约12分钟',
@@ -1371,7 +1371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '用本地LLM运行你的智能家居（2026指南）',
-      description: '用本地LLM运行你的智能家居：自然语言控制、情境化自动化，以及通过 Home Assistant + Ollama 的私密语音。无需云端。',
+      description: '用本地LLM运行智能家居完整指南（2026）：实现自然语言设备控制和情境化智能自动化，通过 Home Assistant 与 Ollama 搭建私密语音控制系统。含硬件选型、安装配置步骤和模型选择建议，数据不离家，无需云端。',
       url: 'https://www.promptquorum.com/zh/smart-home/local-llm-smart-home-complete-guide',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

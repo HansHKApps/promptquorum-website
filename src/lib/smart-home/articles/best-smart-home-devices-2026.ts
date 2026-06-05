@@ -1141,7 +1141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '2026 年最佳的智能家居设备涵盖中枢、照明、门锁、传感器、摄像头和插座——而最明智的购买原则是为了隐私和可靠性优先选择支持本地的设备。本购买指南逐类展开，标明哪些可本地工作、哪些仅限云端，并展示如何组建一套本地优先的入门套件。',
     metaDescription:
-      '2026年最佳智能家居设备分类盘点：中枢、照明、门锁、传感器、摄像头与智能插座，每类均标注是否支持本地控制。并附本地优先入门套件组建方案与选购建议。',
+      '2026年最佳智能家居设备完整分类盘点：中枢、照明、门锁、传感器、摄像头与智能插座，每类均标注是否支持本地控制及推荐型号。并附本地优先入门套件完整组建方案与选购建议。',
     twitterDescription:
       '2026 年最佳智能家居设备分类盘点，各自标明支持本地还是仅限云端。组建私密的本地优先套件，而非被云端锁定。',
     readTime: '阅读约9分钟',
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026 最佳智能家居设备：购买指南',
-      description: '2026年最佳智能家居设备分类盘点：中枢、照明、门锁、传感器、摄像头与智能插座，每类均标注是否支持本地控制。并附本地优先入门套件组建方案与选购建议。',
+      description: '2026年最佳智能家居设备完整分类盘点：中枢、照明、门锁、传感器、摄像头与智能插座，每类均标注是否支持本地控制及推荐型号。并附本地优先入门套件完整组建方案与选购建议。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-smart-home-devices-2026',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

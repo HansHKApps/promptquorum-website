@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルスマートホームに最適なハードウェアは、ローカルLLMも動かしたいかどうかで決まります：Raspberry Pi は基本を担い、Home Assistant とローカルAIを一台で動かしたいならミニPCがより良い選択です。本ガイドは Pi、ミニPC、NAS、専用サーバーを比較し、HAのみか HA＋AI かの選択を助けます——VRAM の詳細は外部リンクへ。',
     metaDescription:
-      'ローカル smart home と AI に最適な hardware（2026）：Raspberry Pi 対 mini PC 対 NAS 対 server。HA 単体か HA+local LLM か。',
+      'ローカルスマートホームとローカルAI活用に最適なハードウェア比較（2026年）：Raspberry Pi、ミニPC、NAS、専用サーバーの特徴と性能を詳しく比較し、Home Assistantのみか、ローカルLLMも同時に動かすかで最適な設定と構成を案内します。',
     twitterDescription:
       'ローカルスマートホームのハードウェア：Pi 対 ミニPC 対 NAS 対 サーバー。基本は Pi、ローカルLLMも動かすならミニPC。2026年ガイド。',
     readTime: '9分で読める',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'ローカルスマートホーム + ローカルAIに最適なハードウェア（2026）',
-      description: 'ローカル smart home と AI に最適な hardware（2026）：Raspberry Pi 対 mini PC 対 NAS 対 server。HA 単体か HA+local LLM か。',
+      description: 'ローカルスマートホームとローカルAI活用に最適なハードウェア比較（2026年）：Raspberry Pi、ミニPC、NAS、専用サーバーの特徴と性能を詳しく比較し、Home Assistantのみか、ローカルLLMも同時に動かすかで最適な設定と構成を案内します。',
       url: 'https://www.promptquorum.com/ja/smart-home/best-hardware-for-local-smart-home',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1129,7 +1129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '本地智能家居的最佳硬件取决于你是否还想运行本地 LLM：Raspberry Pi 能应付基础，而如果你想在一台设备上同时运行 Home Assistant 和本地 AI，迷你 PC 是更好的选择。本指南比较 Pi、迷你 PC、NAS 和专用服务器，并帮你在仅-HA 与 HA-加-AI 之间做选择——VRAM 的深入内容走外链。',
     metaDescription:
-      '2026 年本地智能家居加 AI 的最佳硬件：Raspberry Pi 对迷你 PC 对 NAS 对服务器。HA 单用或 HA 加本地 LLM。',
+      '2026年本地智能家居与本地AI的最佳硬件推荐：系统比较Raspberry Pi、迷你PC、NAS和专用服务器的性能与价格区间。仅运行Home Assistant还是同时运行本地大语言模型，两种需求对应完全不同的选购方案，本指南逐一分析。',
     twitterDescription:
       '本地智能家居硬件：Pi 对迷你 PC 对 NAS 对服务器。基础用 Pi，若还想运行本地 LLM 就用迷你 PC。2026 指南。',
     readTime: '阅读约9分钟',
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '本地智能家居 + 本地 AI 的最佳硬件（2026）',
-      description: '2026 年本地智能家居加 AI 的最佳硬件：Raspberry Pi 对迷你 PC 对 NAS 对服务器。HA 单用或 HA 加本地 LLM。',
+      description: '2026年本地智能家居与本地AI的最佳硬件推荐：系统比较Raspberry Pi、迷你PC、NAS和专用服务器的性能与价格区间。仅运行Home Assistant还是同时运行本地大语言模型，两种需求对应完全不同的选购方案，本指南逐一分析。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-hardware-for-local-smart-home',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

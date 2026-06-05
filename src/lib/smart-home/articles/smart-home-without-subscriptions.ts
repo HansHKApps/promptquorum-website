@@ -709,7 +709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカル対応の機器とローカルハブを選び、月額料金ではなく一度きりのハードウェア費用を払うことで、サブスクなしのスマートホームを作れます。本ガイドは、サブスクがどこに潜むか、サブスクなしのローカル構成、料金のかからない機器、ローカルのカメラ保存、そしてローカルを長期的に安くする一度きり費用の計算を示します。',
     metaDescription:
-      'サブスクなしでスマートホームを作る 2026年版：ローカル機器・ローカルハブ・カメラ保存で月額料金をゼロに。',
+      'サブスクなしでスマートホームを作る方法（2026年版）：Home Assistant を中心に、ローカル機器・ローカルハブ・クラウドカメラ不要の構成で月額料金をゼロに。初期費用のみで長期的に安く運用する方法を解説。',
     twitterDescription:
       'サブスクなしでスマートホームを作る：ローカル機器、ローカルハブ、ローカルのカメラ保存が、月額料金を一度きりのハードウェア費用に置き換えます。',
     readTime: '8分で読める',
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'サブスクなしでスマートホームを作る方法（2026）',
-      description: 'サブスクなしでスマートホームを作る 2026年版：ローカル機器・ローカルハブ・カメラ保存で月額料金をゼロに。',
+      description: 'サブスクなしでスマートホームを作る方法（2026年版）：Home Assistant を中心に、ローカル機器・ローカルハブ・クラウドカメラ不要の構成で月額料金をゼロに。初期費用のみで長期的に安く運用する方法を解説。',
       url: 'https://www.promptquorum.com/ja/smart-home/smart-home-without-subscriptions',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1057,7 +1057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '通过选择支持本地的设备和一个本地中枢，并支付一次性硬件成本而非按月付费，你就能打造一个零订阅的智能家居。本指南展示订阅藏在何处、无订阅的本地堆栈、不收费的设备、本地摄像头存储，以及让本地随时间更便宜的一次性成本算法。',
     metaDescription:
-      '打造零订阅的智能家居：支持本地的设备、一个本地中枢，以及本地摄像头存储，用一次性硬件成本取代按月付费。',
+      '打造零订阅智能家居的完整方案（2026）：选用支持本地运行的设备和 Home Assistant 中枢，用 Frigate 本地存储摄像头画面，以一次性硬件成本彻底取代按月付费。含设备推荐、成本计算与长期节省分析。',
     twitterDescription:
       '打造无订阅的智能家居：本地设备、一个本地中枢，以及本地摄像头存储，用一次性硬件成本取代按月付费。',
     readTime: '阅读约8分钟',
@@ -1197,7 +1197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '如何打造零订阅的智能家居（2026）',
-      description: '打造零订阅的智能家居：支持本地的设备、一个本地中枢，以及本地摄像头存储，用一次性硬件成本取代按月付费。',
+      description: '打造零订阅智能家居的完整方案（2026）：选用支持本地运行的设备和 Home Assistant 中枢，用 Frigate 本地存储摄像头画面，以一次性硬件成本彻底取代按月付费。含设备推荐、成本计算与长期节省分析。',
       url: 'https://www.promptquorum.com/zh/smart-home/smart-home-without-subscriptions',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

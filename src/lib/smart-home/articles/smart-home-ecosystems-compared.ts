@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '4大スマートホームエコシステム——Amazon Alexa、Google Home、Apple Home、Home Assistant——は、プライバシーとローカル制御で最も大きく異なります。本比較では機器対応、プライバシー、ローカル制御、音声、コスト、ロックインを扱い、ユーザータイプ別にプラットフォームを推奨し、Home Assistant をローカルかつプライベートの王者として位置づけます。',
     metaDescription:
-      'Alexa 対 Google Home 対 Apple Home 対 Home Assistant：機器対応、プライバシー、ローカル制御、音声、コスト、ロックインを比較。ユーザータイプ別に選択。',
+      'アレクサとGoogle Homeは最も簡単なクラウドファーストのセットアップを提供し、Apple Homeはプライバシー寄りで、Home Assistantは完全なローカル制御と最大のプライバシーを実現します。機器対応・コスト・ロックインも含めた2026年版の徹底比較をお届けします。',
     twitterDescription:
       'Alexa 対 Google 対 Apple Home 対 Home Assistant：プライバシー、ローカル制御、機器、音声、コスト、ロックインを比較。あなたに合うのはどれ？',
     readTime: '9分で読める',
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'スマートホームのエコシステム比較（2026）：Alexa・Google・Apple・HA',
-      description: 'Alexa 対 Google Home 対 Apple Home 対 Home Assistant：機器対応、プライバシー、ローカル制御、音声、コスト、ロックインを比較。ユーザータイプ別に選択。',
+      description: 'アレクサとGoogle Homeは最も簡単なクラウドファーストのセットアップを提供し、Apple Homeはプライバシー寄りで、Home Assistantは完全なローカル制御と最大のプライバシーを実現します。機器対応・コスト・ロックインも含めた2026年版の徹底比較をお届けします。',
       url: 'https://www.promptquorum.com/ja/smart-home/smart-home-ecosystems-compared',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1153,7 +1153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '四大智能家居生态系统——Amazon Alexa、Google Home、Apple Home 和 Home Assistant——最大的差异在于隐私和本地控制。本对比涵盖设备支持、隐私、本地控制、语音、成本和锁定，并按用户类型推荐平台，将 Home Assistant 定位为本地与私密的冠军。',
     metaDescription:
-      'Alexa 对 Google Home 对 Apple Home 对 Home Assistant：设备支持、隐私、本地控制、语音、成本与锁定对比。按用户类型选择。',
+      '四大智能家居平台深度对比：Alexa和Google Home以云端优先为主，Apple Home兼顾隐私，Home Assistant实现完全本地控制。本文从设备兼容性、隐私保护、本地控制能力、语音体验、使用成本与平台锁定六维度全面对比，按用户类型推荐最优方案。',
     twitterDescription:
       'Alexa 对 Google 对 Apple Home 对 Home Assistant：隐私、本地控制、设备、语音、成本与锁定对比。哪个平台适合你？',
     readTime: '阅读约9分钟',
@@ -1309,7 +1309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '智能家居生态系统对比（2026）：Alexa、Google、Apple、HA',
-      description: 'Alexa 对 Google Home 对 Apple Home 对 Home Assistant：设备支持、隐私、本地控制、语音、成本与锁定对比。按用户类型选择。',
+      description: '四大智能家居平台深度对比：Alexa和Google Home以云端优先为主，Apple Home兼顾隐私，Home Assistant实现完全本地控制。本文从设备兼容性、隐私保护、本地控制能力、语音体验、使用成本与平台锁定六维度全面对比，按用户类型推荐最优方案。',
       url: 'https://www.promptquorum.com/zh/smart-home/smart-home-ecosystems-compared',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルLLMは、自然言語で記述する文脈を理解した家の自動化を可能にします——硬直した「もし〜なら」ルールを超えて。本ガイドは、ルールベース自動化の限界、LLM が加えるもの、プロンプト付きの実例自動化、アーキテクチャ、そして信頼性を保つガードレールを説明します——すべてローカルで、クラウドなしに動きます。',
     metaDescription:
-      'ローカルLLM（2026）でコンテキスト対応のホームオートメーション構築：自然言語ルールが固定のif-thenを超える。例、プロンプト、アーキテクチャ、ガードレールを解説。',
+      'ローカルLLM（2026）でコンテキスト対応のホームオートメーション構築：自然言語ルールが固定のif-thenを超える。例、プロンプト、アーキテクチャ、ガードレールを解説。Home Assistantとの連携方法と実際の設定手順も紹介。',
     twitterDescription:
       'ローカルLLMは家の自動化を文脈対応にします：「雨が降りそうで外出するなら、傘を思い出させて」。例、プロンプト、ガードレール。',
     readTime: '9分で読める',
@@ -879,7 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'ローカルLLMでより賢い家の自動化（2026）',
-      description: 'ローカルLLM（2026）でコンテキスト対応のホームオートメーション構築：自然言語ルールが固定のif-thenを超える。例、プロンプト、アーキテクチャ、ガードレールを解説。',
+      description: 'ローカルLLM（2026）でコンテキスト対応のホームオートメーション構築：自然言語ルールが固定のif-thenを超える。例、プロンプト、アーキテクチャ、ガードレールを解説。Home Assistantとの連携方法と実際の設定手順も紹介。',
       url: 'https://www.promptquorum.com/ja/smart-home/ai-automations-local-llm',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1093,7 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '本地 LLM 让你用自然语言描述具备情境感知的家庭自动化——超越僵化的“如果-那么”规则。本指南讲解基于规则的自动化的局限、LLM 带来了什么、带提示词的真实示例自动化、架构，以及保持其可靠的护栏，全部在本地运行、无需云端。',
     metaDescription:
-      '用本地LLM构建2026年情境感知家庭自动化：自然语言规则替代僵硬的触发条件，包含示例、提示词、架构说明和可靠性护栏，全程本地运行，无需云端。',
+      '用本地LLM构建情境感知家庭自动化（2026年）：自然语言规则替代僵硬触发条件，包含真实使用示例、提示词设计思路、系统架构说明和可靠性护栏，全程本地运行无需任何云端服务。',
     twitterDescription:
       '本地 LLM 让家庭自动化具备情境感知：“如果看起来要下雨而我要出门，就提醒我。”示例、提示词和护栏。',
     readTime: '阅读约9分钟',
@@ -1239,7 +1239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '用本地 LLM 实现更聪明的家庭自动化（2026）',
-      description: '用本地LLM构建2026年情境感知家庭自动化：自然语言规则替代僵硬的触发条件，包含示例、提示词、架构说明和可靠性护栏，全程本地运行，无需云端。',
+      description: '用本地LLM构建情境感知家庭自动化（2026年）：自然语言规则替代僵硬触发条件，包含真实使用示例、提示词设计思路、系统架构说明和可靠性护栏，全程本地运行无需任何云端服务。',
       url: 'https://www.promptquorum.com/zh/smart-home/ai-automations-local-llm',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

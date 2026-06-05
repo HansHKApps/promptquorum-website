@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Frigate は、クラウドなし・サブスクなしで、あなたのカメラ映像にローカルAIの物体・人物検出を実行し、Home Assistant に直接統合します。本ガイドは、クラウドカメラのプライバシー問題、Frigate の機能、検出を高速化するハードウェア（Coral TPU または GPU）、Home Assistant 統合、通知、そしてサブスク型カメラとのコスト比較を扱います。',
     metaDescription:
-      'Frigate でプライベートなAIセキュリティカメラを：ローカルの物体・人物検出、クラウドなし、サブスクなし。ハードウェア、Home Assistant 設定、クラウドとのコスト比較。',
+      'Frigate でプライベートなAIセキュリティカメラを構築（2026）：ローカルの物体・人物検出、クラウドなし、サブスクなし。月額費用ゼロで映像データを自宅内に保持できる。ハードウェア選定、Home Assistant 設定、クラウドとのコスト比較を解説。',
     twitterDescription:
       'Frigate はプライベートなAIセキュリティカメラを提供：ローカルの人物・物体検出、クラウドなし、サブスクなし、Home Assistant と統合。',
     readTime: '9分で読める',
@@ -924,7 +924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Frigate によるローカルAIセキュリティカメラ（2026）',
-      description: 'Frigate でプライベートなAIセキュリティカメラを：ローカルの物体・人物検出、クラウドなし、サブスクなし。ハードウェア、Home Assistant 設定、クラウドとのコスト比較。',
+      description: 'Frigate でプライベートなAIセキュリティカメラを構築（2026）：ローカルの物体・人物検出、クラウドなし、サブスクなし。月額費用ゼロで映像データを自宅内に保持できる。ハードウェア選定、Home Assistant 設定、クラウドとのコスト比較を解説。',
       url: 'https://www.promptquorum.com/ja/smart-home/local-ai-security-camera',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Frigate 在你的摄像头画面上进行本地 AI 物体与人物检测，无云端、无订阅，并直接集成到 Home Assistant。本指南讲解云端摄像头的隐私问题、Frigate 的功能、加速检测的硬件（Coral TPU 或 GPU）、Home Assistant 集成、通知，以及与订阅式摄像头的成本对比。',
     metaDescription:
-      '用 Frigate 运行私密的 AI 安防摄像头：本地物体与人物检测，无云端、无订阅。硬件、Home Assistant 配置，以及与云端的成本对比。',
+      '用 Frigate 打造私密的 AI 安防摄像头（2026）：本地物体与人物检测，无云端、无订阅费，视频数据完全存储在本地家庭网络中。含详细硬件选型、Home Assistant 集成配置，以及与云端摄像头服务的年度费用对比。',
     twitterDescription:
       'Frigate 给你私密的 AI 安防摄像头：本地人物/物体检测，无云端、无订阅，与 Home Assistant 集成。',
     readTime: '阅读约9分钟',
@@ -1302,7 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '用 Frigate 的本地 AI 安防摄像头（2026）',
-      description: '用 Frigate 运行私密的 AI 安防摄像头：本地物体与人物检测，无云端、无订阅。硬件、Home Assistant 配置，以及与云端的成本对比。',
+      description: '用 Frigate 打造私密的 AI 安防摄像头（2026）：本地物体与人物检测，无云端、无订阅费，视频数据完全存储在本地家庭网络中。含详细硬件选型、Home Assistant 集成配置，以及与云端摄像头服务的年度费用对比。',
       url: 'https://www.promptquorum.com/zh/smart-home/local-ai-security-camera',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

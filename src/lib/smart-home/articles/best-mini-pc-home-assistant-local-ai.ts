@@ -717,7 +717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant とローカル LLM を一台で動かすのに最適なミニPCは、RAM と高性能な統合 GPU または NPU を優先します。本購入ガイドは、一台で HA＋AI に必要なものを説明し、主なミニPCのクラスを比較し、予算と性能を天秤にかけ、設定上の注意を扱います——VRAM の詳細は local-llms のハードウェアガイドへ相互リンクします。',
     metaDescription:
-      'Home Assistant + ローカルLLMのミニPC 2026年版：RAM と iGPU/NPU を優先。N・Ryzen/Core i・NPU の3クラスを予算別に比較。',
+      'Home AssistantとローカルLLMを同時に動かすミニPCの選び方（2026年）：メモリ容量とiGPU・NPU性能を優先判断基準に、エントリークラスのNシリーズ、ミドルクラスのRyzen/Core i、高性能なNPU搭載モデルという3種類を予算別に詳しく比較解説。',
     twitterDescription:
       'Home Assistant + ローカル LLM を一台で動かすのに最適なミニPC：RAM と高性能な iGPU/NPU を優先。クラス比較、予算別の候補。',
     readTime: '8分で読める',
@@ -859,7 +859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant + ローカルAIに最適なミニPC（2026）',
-      description: 'Home Assistant + ローカルLLMのミニPC 2026年版：RAM と iGPU/NPU を優先。N・Ryzen/Core i・NPU の3クラスを予算別に比較。',
+      description: 'Home AssistantとローカルLLMを同時に動かすミニPCの選び方（2026年）：メモリ容量とiGPU・NPU性能を優先判断基準に、エントリークラスのNシリーズ、ミドルクラスのRyzen/Core i、高性能なNPU搭載モデルという3種類を予算別に詳しく比較解説。',
       url: 'https://www.promptquorum.com/ja/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '在一台机器上运行 Home Assistant 加本地 LLM 的最佳迷你 PC，会优先考虑内存以及一块强力的集成 GPU 或 NPU。本购买指南讲解在单机上实现 HA 加 AI 所需的条件，比较主要的迷你 PC 类别，权衡预算与性能，并涵盖配置注意事项——并交叉链接到 local-llms 硬件指南以了解 VRAM 细节。',
     metaDescription:
-      '2026年 Home Assistant 加本地 LLM 的最佳迷你 PC：优先内存和 iGPU/NPU。N 系列、Ryzen/Core i 与 NPU 三类对比，含预算指南。',
+      '2026年同時運行Home Assistant與本地大語言模型的最佳迷你PC選購指南：詳細評估內存容量與iGPU和NPU性能，深入對比N系列、Ryzen/Core i和NPU搭載機型這三個價位，並提供針對不同預算的完整選購建議和推薦清單。',
     twitterDescription:
       '在一台机器上运行 Home Assistant + 本地 LLM 的最佳迷你 PC：优先内存和一块强力 iGPU/NPU。类别比较，按预算的选择。',
     readTime: '阅读约8分钟',
@@ -1211,7 +1211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant + 本地 AI 的最佳迷你 PC（2026）',
-      description: '2026年 Home Assistant 加本地 LLM 的最佳迷你 PC：优先内存和 iGPU/NPU。N 系列、Ryzen/Core i 与 NPU 三类对比，含预算指南。',
+      description: '2026年同時運行Home Assistant與本地大語言模型的最佳迷你PC選購指南：詳細評估內存容量與iGPU和NPU性能，深入對比N系列、Ryzen/Core i和NPU搭載機型這三個價位，並提供針對不同預算的完整選購建議和推薦清單。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

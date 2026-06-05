@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'スマートホーム制御に最適なローカルLLMモデルは、信頼できる関数呼び出しを備えた、小型で高速・指示追従のモデルです——ハードウェアが収められる最大のモデルではありません。本ガイドは、家庭制御で実際に重要なことを説明し、適した小型モデルの短いリストを示し、それらを比較し、ハードウェア予算に候補を対応づけます——分野全体を再ランク付けせず、より深いモデルガイドへ外部リンクします。',
     metaDescription:
-      'スマートホーム制御に最適なローカルLLMモデル（2026）：控えめなハードウェアで動く小型・高速・関数呼び出しモデルを優先。Ollama対応の推奨リストと予算別の候補を掲載。',
+      'スマートホーム制御に最適なローカルLLMモデル（2026）：控えめなハードウェアで動く小型・高速・関数呼び出しモデルを優先。Ollama対応の推奨リストと予算別の候補を掲載。各モデルの性能と応答速度を比較。',
     twitterDescription:
       'Home Assistant 制御に最適なローカルLLMモデル：動かせる最大のモデルより、小型・高速・関数呼び出しのモデル。ハードウェア予算別の候補。',
     readTime: '8分で読める',
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'スマートホーム制御に最適なローカルLLMモデル（2026）',
-      description: 'スマートホーム制御に最適なローカルLLMモデル（2026）：控えめなハードウェアで動く小型・高速・関数呼び出しモデルを優先。Ollama対応の推奨リストと予算別の候補を掲載。',
+      description: 'スマートホーム制御に最適なローカルLLMモデル（2026）：控えめなハードウェアで動く小型・高速・関数呼び出しモデルを優先。Ollama対応の推奨リストと予算別の候補を掲載。各モデルの性能と応答速度を比較。',
       url: 'https://www.promptquorum.com/ja/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '智能家居控制的最佳本地 LLM 模型，是具备可靠函数调用、小而快、能遵循指令的模型——而不是你硬件能容纳的最大模型。本指南讲解家庭控制真正重要的是什么，给出一份适用小型模型的精选清单，对它们进行比较，并把选择对应到硬件预算，并以外链指向更深入的模型指南，而非把整个领域重新排名。',
     metaDescription:
-      '2026智能家居控制最佳本地LLM：优先选择3B至8B小型函数调用模型以降低延迟，适合在普通迷你PC上运行，含按预算的推荐清单与功能对比表。',
+      '2026年智能家居控制最佳本地LLM模型：优先选择小型函数调用模型以降低响应延迟，适合在普通迷你PC或低功耗硬件设备上部署，含按预算的推荐型号清单、功能说明与性能对比表。',
     twitterDescription:
       'Home Assistant 控制的最佳本地 LLM 模型：相较你能运行的最大模型，更应选小而快、支持函数调用的模型。按硬件预算给出选择。',
     readTime: '阅读约8分钟',
@@ -1246,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '智能家居控制的最佳本地 LLM 模型（2026）',
-      description: '2026智能家居控制最佳本地LLM：优先选择3B至8B小型函数调用模型以降低延迟，适合在普通迷你PC上运行，含按预算的推荐清单与功能对比表。',
+      description: '2026年智能家居控制最佳本地LLM模型：优先选择小型函数调用模型以降低响应延迟，适合在普通迷你PC或低功耗硬件设备上部署，含按预算的推荐型号清单、功能说明与性能对比表。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

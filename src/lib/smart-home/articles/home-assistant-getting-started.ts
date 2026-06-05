@@ -777,7 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant は主要なローカルファーストのスマートホームハブです：Raspberry Pi やミニPCにインストールし、統合を追加し、すべてをクラウドなしでローカル制御します。本入門ガイドは、なぜ Home Assistant か、インストール方法、最初の統合、ダッシュボード、最初の自動化、そして後でローカルAIをどこに追加するかを扱います——LLMの仕組みは再説明しません。',
     metaDescription:
-      'Home Assistant 2026 を始める：HAOS・container・Pi 対 mini-PC で install、統合・dashboard・local 自動化まで。',
+      'Home Assistantを2026年に始める完全ガイド：HAOSとコンテナによるインストール手順、Raspberry PiとミニPCの選び方、はじめての統合設定、ダッシュボードの構築方法、最初のローカル自動化の作成まで初心者向けに詳しく解説。',
     twitterDescription:
       'Home Assistant 入門ガイド：Pi かミニPCにインストールし、統合を追加し、最初のローカル自動化を作る。ローカルファーストのハブ。',
     readTime: '10分で読める',
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant：完全入門ガイド（2026）',
-      description: 'Home Assistant 2026 を始める：HAOS・container・Pi 対 mini-PC で install、統合・dashboard・local 自動化まで。',
+      description: 'Home Assistantを2026年に始める完全ガイド：HAOSとコンテナによるインストール手順、Raspberry PiとミニPCの選び方、はじめての統合設定、ダッシュボードの構築方法、最初のローカル自動化の作成まで初心者向けに詳しく解説。',
       url: 'https://www.promptquorum.com/ja/smart-home/home-assistant-getting-started',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1159,7 +1159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant 是领先的本地优先智能家居中枢：把它装在 Raspberry Pi 或迷你 PC 上，添加集成，并在无云端的情况下本地控制一切。本入门指南讲解为何选 Home Assistant、安装方式、首批集成、仪表盘、你的第一条自动化，以及以后在哪里添加本地 AI——不再赘述 LLM 机制。',
     metaDescription:
-      '2026 年开始使用 Home Assistant：安装方式（HAOS、容器、Pi 对迷你 PC）、首批集成、仪表盘，以及你的第一条本地自动化。',
+      '2026年Home Assistant完整入门教程：全面介绍HAOS、容器部署、Raspberry Pi和迷你PC的安装方式，详细指导完成首批设备集成、自定义仪表盘搭建，以及创建第一条完全本地运行的自动化规则，全程无需云端服务。',
     twitterDescription:
       'Home Assistant 入门指南：装在 Pi 或迷你 PC 上，添加集成，创建你的第一条本地自动化。本地优先中枢。',
     readTime: '阅读约10分钟',
@@ -1316,7 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant：完整入门指南（2026）',
-      description: '2026 年开始使用 Home Assistant：安装方式（HAOS、容器、Pi 对迷你 PC）、首批集成、仪表盘，以及你的第一条本地自动化。',
+      description: '2026年Home Assistant完整入门教程：全面介绍HAOS、容器部署、Raspberry Pi和迷你PC的安装方式，详细指导完成首批设备集成、自定义仪表盘搭建，以及创建第一条完全本地运行的自动化规则，全程无需云端服务。',
       url: 'https://www.promptquorum.com/zh/smart-home/home-assistant-getting-started',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

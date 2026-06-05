@@ -713,7 +713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルスマートホームは、すべての処理を自宅の自分のハードウェアに保ち、外部の処理者が関与しないため、GDPR のデータ最小化とデータレジデンシーを設計上サポートします。本 EU 向けガイドは、GDPR が接続機器にどう適用されるか、クラウド機器がどこへデータを送るか、ローカル処理がどうレジデンシーを実現するかを説明し、プライベートで GDPR に配慮した構成のための購入チェックリストを示します。',
     metaDescription:
-      'GDPR 対応 private smart home 2026：data residency・cloud 処理なし・local 音声と AI。EU ガイド — データを自宅 hardware に保つ。',
+      'GDPR準拠のプライベートスマートホーム（2026年）：すべてのデータを自宅のハードウェアで管理し、クラウド処理を一切使わずローカル音声認識とAIを活用。EUのプライバシー規制に対応したスマートホーム構築の完全ガイド。',
     twitterDescription:
       'GDPR に配慮したスマートホームは処理をローカルに保ちます：設計上のデータレジデンシー、外部処理者なし、ローカル音声とAI。EU ガイド。',
     readTime: '8分で読める',
@@ -853,7 +853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'GDPR に配慮したプライベートなスマートホームを作る（EU・2026）',
-      description: 'GDPR 対応 private smart home 2026：data residency・cloud 処理なし・local 音声と AI。EU ガイド — データを自宅 hardware に保つ。',
+      description: 'GDPR準拠のプライベートスマートホーム（2026年）：すべてのデータを自宅のハードウェアで管理し、クラウド処理を一切使わずローカル音声認識とAIを活用。EUのプライバシー規制に対応したスマートホーム構築の完全ガイド。',
       url: 'https://www.promptquorum.com/ja/smart-home/private-smart-home-gdpr',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '本地智能家居把全部处理保留在你自己家中的硬件上，因为没有外部处理方参与，从设计上支持 GDPR 的数据最小化与数据本地化。本面向欧盟的指南解释 GDPR 如何适用于联网设备、云端设备把数据发往何处、本地处理如何实现数据本地化，并提供一份用于私密、合规配置的购买清单。',
     metaDescription:
-      '构建符合 GDPR 的私密智能家居 2026：data 本地化、无 cloud 处理、local 语音与 AI。EU 智能家居隐私指南。',
+      '构建完全符合GDPR规范的私密智能家居（2026年）：所有数据完全本地化存储、零云端处理、支持本地语音识别与AI功能。专为欧盟用户设计的智能家居隐私合规与数据主权完整实施指南。',
     twitterDescription:
       '符合 GDPR 的智能家居把处理保留在本地：从设计上实现数据本地化、无外部处理方、本地语音与 AI。一份欧盟指南。',
     readTime: '阅读约8分钟',
@@ -1201,7 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '构建符合 GDPR 的私密智能家居（欧盟，2026）',
-      description: '构建符合 GDPR 的私密智能家居 2026：data 本地化、无 cloud 处理、local 语音与 AI。EU 智能家居隐私指南。',
+      description: '构建完全符合GDPR规范的私密智能家居（2026年）：所有数据完全本地化存储、零云端处理、支持本地语音识别与AI功能。专为欧盟用户设计的智能家居隐私合规与数据主权完整实施指南。',
       url: 'https://www.promptquorum.com/zh/smart-home/private-smart-home-gdpr',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

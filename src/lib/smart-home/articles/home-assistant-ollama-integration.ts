@@ -833,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant には組み込みの Ollama 統合があり、ローカルでホストするモデルを会話エージェントにして、機器を自然言語でクラウドなしに制御します。本ガイドは、前提条件、統合の追加、モデルの選択、会話エージェントの配線、機器の制御、トラブルシューティングを順に解説します——Ollama のインストールとモデル選択は外部リンクにし、再説明しません。',
     metaDescription:
-      'Ollama を Home Assistant に順を追って接続（2026）：統合を追加し、モデルを選び、会話エージェントを設定し、機器を自然言語で制御。クラウドなし。',
+      'Ollama を Home Assistant に順を追って接続（2026）：統合を追加し、モデルを選び、会話エージェントを設定して機器を自然言語で制御。日本語で家電を完全ローカルに操作できるプライベートなAI音声制御。クラウドなし。',
     twitterDescription:
       'Ollama を Home Assistant に組み込み、完全ローカルのAIアシスタントに：統合を追加し、モデルを選び、機器を音声またはテキストで制御。クラウドはゼロ。',
     readTime: '9分で読める',
@@ -1004,7 +1004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Ollama を Home Assistant に接続する：ローカルAIアシスタント（2026）',
-      description: 'Ollama を Home Assistant に順を追って接続（2026）：統合を追加し、モデルを選び、会話エージェントを設定し、機器を自然言語で制御。クラウドなし。',
+      description: 'Ollama を Home Assistant に順を追って接続（2026）：統合を追加し、モデルを選び、会話エージェントを設定して機器を自然言語で制御。日本語で家電を完全ローカルに操作できるプライベートなAI音声制御。クラウドなし。',
       url: 'https://www.promptquorum.com/ja/smart-home/home-assistant-ollama-integration',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1243,7 +1243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant 内置了 Ollama 集成，可把一个本地托管的模型变成你的对话代理，用自然语言控制设备且无需云端。本指南依次讲解前提条件、添加集成、选择模型、连线对话代理、控制设备和排错——Ollama 的安装与模型选择走外链，不再赘述。',
     metaDescription:
-      '逐步把 Ollama 连接到 Home Assistant（2026）：添加集成、选择模型、设置对话代理，以自然语言控制智能家居设备。无云端。',
+      '把 Ollama 逐步接入 Home Assistant（2026）：添加集成、选择模型并配置对话代理，以自然语言指令控制所有智能家居设备。所有数据始终留在本地硬件上运行，完全无需云端服务，有效保护家庭隐私与数据安全。',
     twitterDescription:
       '把 Ollama 接入 Home Assistant，打造完全本地的 AI 助手：添加集成、选择模型、用语音或文本控制设备。零云端。',
     readTime: '阅读约9分钟',
@@ -1414,7 +1414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '把 Ollama 连接到 Home Assistant：本地 AI 助手（2026）',
-      description: '逐步把 Ollama 连接到 Home Assistant（2026）：添加集成、选择模型、设置对话代理，以自然语言控制智能家居设备。无云端。',
+      description: '把 Ollama 逐步接入 Home Assistant（2026）：添加集成、选择模型并配置对话代理，以自然语言指令控制所有智能家居设备。所有数据始终留在本地硬件上运行，完全无需云端服务，有效保护家庭隐私与数据安全。',
       url: 'https://www.promptquorum.com/zh/smart-home/home-assistant-ollama-integration',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

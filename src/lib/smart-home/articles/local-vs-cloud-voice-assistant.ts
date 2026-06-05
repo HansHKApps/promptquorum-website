@@ -717,7 +717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカル音声アシスタントはプライバシーとコストで勝り、クラウドアシスタントは依然として既製の完成度と幅広いスキルで先行します。本判断ガイドは、ローカルスタック（Home Assistant Assist + Whisper + ローカル LLM）をクラウドアシスタント（Alexa、Google）と、プライバシー・コスト・精度・スキル・オフライン動作・手間で比較し、どちらが勝つかを示します。',
     metaDescription:
-      'ローカル対クラウドの音声アシスタント（2026年）：プライバシー・コスト・精度・スキル・オフラインを比較。',
+      'ローカル対クラウドの音声アシスタント（2026年）：プライバシー・コスト・精度・スキル・オフライン動作の5項目を徹底比較。ローカルスタックはプライバシーとコストで勝り、クラウドは既製の完成度とスキル数で先行。どちらを選ぶかの判断基準を解説。',
     twitterDescription:
       'ローカル対クラウドの音声アシスタント：ローカルはプライバシーとコストで勝ち、クラウドは完成度とスキルで先行。2026年にどちらが勝つか。',
     readTime: '8分で読める',
@@ -859,7 +859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'ローカル対クラウドの音声アシスタント：プライバシー・コスト・能力（2026）',
-      description: 'ローカル対クラウドの音声アシスタント（2026年）：プライバシー・コスト・精度・スキル・オフラインを比較。',
+      description: 'ローカル対クラウドの音声アシスタント（2026年）：プライバシー・コスト・精度・スキル・オフライン動作の5項目を徹底比較。ローカルスタックはプライバシーとコストで勝り、クラウドは既製の完成度とスキル数で先行。どちらを選ぶかの判断基準を解説。',
       url: 'https://www.promptquorum.com/ja/smart-home/local-vs-cloud-voice-assistant',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '本地语音助手在隐私和成本上胜出；云端助手在开箱即用的成熟度和广泛技能上仍然领先。本决策指南在隐私、成本、准确度、技能、离线运行和投入上，把一个本地堆栈（Home Assistant Assist + Whisper + 本地 LLM）与云端助手（Alexa、Google）作比较，并说明各自在何时胜出。',
     metaDescription:
-      '本地对云端的语音助手：隐私、成本、准确度、技能、离线和投入对比。本地堆栈何时胜出、云端何时仍然领先。',
+      '本地对云端的语音助手（2026）：从隐私、成本、准确度、技能广度和离线能力五个维度全面对比。本地堆栈在隐私保护和长期成本上胜出，云端在开箱即用成熟度上领先。详解各自何时是更优选择。',
     twitterDescription:
       '本地对云端的语音助手：本地在隐私和成本上胜出，云端在成熟度和技能上领先。2026 年各自何时胜出。',
     readTime: '阅读约8分钟',
@@ -1211,7 +1211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '本地对云端的语音助手：隐私、成本与能力（2026）',
-      description: '本地对云端的语音助手：隐私、成本、准确度、技能、离线和投入对比。本地堆栈何时胜出、云端何时仍然领先。',
+      description: '本地对云端的语音助手（2026）：从隐私、成本、准确度、技能广度和离线能力五个维度全面对比。本地堆栈在隐私保护和长期成本上胜出，云端在开箱即用成熟度上领先。详解各自何时是更优选择。',
       url: 'https://www.promptquorum.com/zh/smart-home/local-vs-cloud-voice-assistant',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

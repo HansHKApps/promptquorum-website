@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルスマートホームは、信頼性・プライバシー・コスト・寿命でクラウドに勝ります：インターネットやメーカーのクラウドが落ちても動き続け、データを収集せず、サブスク不要で、クラウド終了で使えなくなることもありません。本ガイドは、唯一の本当のトレードオフ——設定の手間——も含めて、正直にその根拠を示します。',
     metaDescription:
-      'local smart home 2026 で cloud に勝る：offline・privacy・0 subscription・機器長寿命・速度。設定の手間が唯一のトレードオフ。',
+      'ローカルスマートホームがクラウドに勝る理由（2026）：オフライン動作・プライバシー保護・月額料金ゼロ・デバイス長寿命・高速応答の5つの利点を解説。設定の手間が唯一のトレードオフ。信頼性とコストの正直な比較。',
     twitterDescription:
       'ローカルスマートホーム対クラウド：オフライン動作、サブスク不要、使えなくなる機器なし、完全なプライバシー。2026年のローカルの正直な根拠。',
     readTime: '8分で読める',
@@ -919,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'なぜ2026年にローカルスマートホームはクラウドに勝るのか',
-      description: 'local smart home 2026 で cloud に勝る：offline・privacy・0 subscription・機器長寿命・速度。設定の手間が唯一のトレードオフ。',
+      description: 'ローカルスマートホームがクラウドに勝る理由（2026）：オフライン動作・プライバシー保護・月額料金ゼロ・デバイス長寿命・高速応答の5つの利点を解説。設定の手間が唯一のトレードオフ。信頼性とコストの正直な比較。',
       url: 'https://www.promptquorum.com/ja/smart-home/why-local-smart-home-beats-cloud',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1141,7 +1141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '本地智能家居在可靠性、隐私、成本和寿命上胜过云端：在断网或厂商云端故障时仍可运行，不收集数据，不需要订阅，也不会因云端关停而变砖。本指南诚实地陈述论据，包括唯一真正的取舍——配置投入。',
     metaDescription:
-      '为何2026年本地智能家居胜过云端：可靠性、隐私、免订阅、不会变砖的设备，以及速度——以及那个唯一诚实的取舍。',
+      '为何2026年本地智能家居胜过云端：可靠性、隐私保护、免订阅、设备不会因云端关停而变砖，以及更快的响应速度——同时诚实分析唯一的取舍：前期配置投入。助你做出明智的本地化决策。',
     twitterDescription:
       '本地智能家居对云端：可离线、免订阅、设备不变砖、完全隐私。2026年本地的诚实论据。',
     readTime: '阅读约8分钟',
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '为何2026年本地智能家居胜过云端',
-      description: '为何2026年本地智能家居胜过云端：可靠性、隐私、免订阅、不会变砖的设备，以及速度——以及那个唯一诚实的取舍。',
+      description: '为何2026年本地智能家居胜过云端：可靠性、隐私保护、免订阅、设备不会因云端关停而变砖，以及更快的响应速度——同时诚实分析唯一的取舍：前期配置投入。助你做出明智的本地化决策。',
       url: 'https://www.promptquorum.com/zh/smart-home/why-local-smart-home-beats-cloud',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

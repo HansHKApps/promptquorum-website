@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Matter over Thread は、Home Assistant のようなローカルコントローラーを通じて真にローカルなスマートホームを動かせます——メーカーのクラウドは不要です。本ガイドは、Matter がローカルを意味するのかという機微を整理し、Thread ボーダールーターとローカルのみのコミッショニングを説明し、クラウドブリッジの回避方法を示し、Home Assistant でのローカル Matter 構成を順を追って解説します。',
     metaDescription:
-      'Matter + Thread で local 制御（2026）：Thread border router・local-only commissioning・cloud bridge 回避・Home Assistant 構成。',
+      'MatterとThreadによるローカル制御の完全ガイド（2026年）：Threadボーダールーターの詳しい設定手順、クラウドブリッジを一切使わないローカルのみのコミッショニング手順、Home Assistantでの構成方法をステップごとに解説。',
     twitterDescription:
       'Matter と Thread は、Home Assistant のようなコントローラーで完全にローカルに動作できます——メーカーのクラウド不要。ローカルでコミッショニングし、クラウドブリッジを避ける方法。',
     readTime: '8分で読める',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter とローカル制御：インターネットに依存しないスマートホーム（2026）',
-      description: 'Matter + Thread で local 制御（2026）：Thread border router・local-only commissioning・cloud bridge 回避・Home Assistant 構成。',
+      description: 'MatterとThreadによるローカル制御の完全ガイド（2026年）：Threadボーダールーターの詳しい設定手順、クラウドブリッジを一切使わないローカルのみのコミッショニング手順、Home Assistantでの構成方法をステップごとに解説。',
       url: 'https://www.promptquorum.com/ja/smart-home/matter-local-control-guide',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1129,7 +1129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Matter over Thread 可以通过像 Home Assistant 这样的本地控制器，运行一个真正本地的智能家居——无需厂商云端。本指南厘清“Matter 是否意味着本地”这一细节，解释 Thread 边界路由器与仅本地配网，展示如何避免云端网桥，并带你完成用 Home Assistant 的本地 Matter 配置。',
     metaDescription:
-      '用 Matter 和 Thread 实现真正本地的智能家居控制：Thread 边界路由器、仅本地配网、避免云端网桥，以及 Home Assistant 配置。',
+      '2026年利用Matter和Thread实现真正本地控制的完整智能家居指南：Thread边界路由器的详细配置步骤、纯本地配网完整流程、彻底绕开云端网桥的方法，以及在Home Assistant中完成全部设置的详细操作教程。',
     twitterDescription:
       'Matter 和 Thread 可通过像 Home Assistant 这样的控制器完全本地运行——无需厂商云端。如何在本地配网并避免云端网桥。',
     readTime: '阅读约8分钟',
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter 与本地控制：一个不依赖互联网的智能家居（2026）',
-      description: '用 Matter 和 Thread 实现真正本地的智能家居控制：Thread 边界路由器、仅本地配网、避免云端网桥，以及 Home Assistant 配置。',
+      description: '2026年利用Matter和Thread实现真正本地控制的完整智能家居指南：Thread边界路由器的详细配置步骤、纯本地配网完整流程、彻底绕开云端网桥的方法，以及在Home Assistant中完成全部设置的详细操作教程。',
       url: 'https://www.promptquorum.com/zh/smart-home/matter-local-control-guide',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

@@ -761,11 +761,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'スマートホームの歴史：X10からローカルAIへ（2026）',
-    seoTitle: 'スマートホームの歴史：X10からローカルAIへの進化（2026年版）',
+    seoTitle: 'スマートホームの進化史（2026年版）：X10からMatterまでローカルAIへの転換を追う',
     intro:
       'スマートホーム技術は、1970年代の X10 電力線制御から、Z-Wave と Zigbee、Nest と Echo のクラウド時代、統一規格 Matter を経て、今日のオンデバイスAIによるローカル制御への転換まで進化してきました。本ガイドはその流れをたどり、振り子がクラウド依存からローカルの自律へと戻る理由を説明します。',
     metaDescription:
-      'X10（1975）からローカルAIまでのスマートホーム史：Z-Wave、Zigbee、Nest と Echo のクラウド時代、Matter、そして2026年のローカル制御への回帰。',
+      'スマートホームの技術は1975年のX10電力線制御から始まり、Z-WaveとZigbeeの普及、NestとAmazon Echoによるクラウド時代を経て、Matter統一規格とローカルAI制御による本地回帰へと進化しました。2026年版で五十年の技術変遷を解説。',
     twitterDescription:
       '1975年の X10 から2026年のローカルAIへ：Z-Wave、Zigbee、クラウド時代、Matter を経てローカル制御へ戻るスマートホームの進化。',
     readTime: '8分で読める',
@@ -919,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'スマートホームの歴史：X10からローカルAIへ（2026）',
-      description: 'X10（1975）からローカルAIまでのスマートホーム史：Z-Wave、Zigbee、Nest と Echo のクラウド時代、Matter、そして2026年のローカル制御への回帰。',
+      description: 'スマートホームの技術は1975年のX10電力線制御から始まり、Z-WaveとZigbeeの普及、NestとAmazon Echoによるクラウド時代を経て、Matter統一規格とローカルAI制御による本地回帰へと進化しました。2026年版で五十年の技術変遷を解説。',
       url: 'https://www.promptquorum.com/ja/smart-home/history-of-smart-home-technology',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1137,11 +1137,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: '智能家居简史：从 X10 到本地AI（2026）',
-    seoTitle: '智能家居发展史：从X10到本地AI，2026年版完整时间线',
+    seoTitle: '智能家居技术发展完整史2026：X10电力线协议到本地人工智能控制的五十年',
     intro:
       '智能家居技术从1970年代的 X10 电力线控制，经由 Z-Wave 与 Zigbee、Nest 与 Echo 的云端时代、统一标准 Matter，演进到如今借助设备端AI回归本地控制。本指南梳理这一脉络，并解释为何钟摆正从云端依赖摆回本地自主。',
     metaDescription:
-      '智能家居从 X10（1975）到本地AI的历史：Z-Wave、Zigbee、Nest 与 Echo 的云端时代、Matter，以及2026年回归本地控制。',
+      '智能家居技术从1975年X10电力线协议起步，历经Z-Wave与Zigbee的低功耗网状发展、Nest与Echo引领的云端时代、Matter统一标准的推出，最终在2026年以设备端AI控制实现本地回归。本文全面梳理五十年演进脉络。',
     twitterDescription:
       '从1975年的 X10 到2026年的本地AI：智能家居如何经由 Z-Wave、Zigbee、云端时代、Matter，再摆回本地控制。',
     readTime: '阅读约8分钟',
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '智能家居简史：从 X10 到本地AI（2026）',
-      description: '智能家居从 X10（1975）到本地AI的历史：Z-Wave、Zigbee、Nest 与 Echo 的云端时代、Matter，以及2026年回归本地控制。',
+      description: '智能家居技术从1975年X10电力线协议起步，历经Z-Wave与Zigbee的低功耗网状发展、Nest与Echo引领的云端时代、Matter统一标准的推出，最终在2026年以设备端AI控制实现本地回归。本文全面梳理五十年演进脉络。',
       url: 'https://www.promptquorum.com/zh/smart-home/history-of-smart-home-technology',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },

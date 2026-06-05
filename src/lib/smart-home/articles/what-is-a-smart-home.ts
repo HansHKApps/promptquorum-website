@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '智能家居是一组联网设备，你可以通过应用或语音来监控、自动化和控制它们。本新手指南讲解核心理念、设备类别、中枢如何连接设备、在2026年决定隐私的云端对本地之选、主要生态系统，以及如果你想要更私密的方案下一步去哪里。',
     metaDescription:
-      '智能家居是指通过应用或语音控制的联网设备集合，涵盖照明、温控、安防等五大类别。本2026新手指南解析中枢作用、云端对本地控制的关键区别以及四大主流生态系统。',
+      '智能家居是指通过应用或语音控制的联网设备集合，涵盖照明、温控、安防等五大类别。本篇2026新手指南详细解析中枢作用、云端对本地控制的关键区别以及四大主流生态系统。',
     twitterDescription:
       '什么是智能家居？你用应用或语音自动化与控制的联网设备。2026新手指南讲解类别、中枢与云端对本地。',
     readTime: '阅读约8分钟',
@@ -1288,7 +1288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '什么是智能家居？2026新手指南',
-      description: '智能家居是指通过应用或语音控制的联网设备集合，涵盖照明、温控、安防等五大类别。本2026新手指南解析中枢作用、云端对本地控制的关键区别以及四大主流生态系统。',
+      description: '智能家居是指通过应用或语音控制的联网设备集合，涵盖照明、温控、安防等五大类别。本篇2026新手指南详细解析中枢作用、云端对本地控制的关键区别以及四大主流生态系统。',
       url: 'https://www.promptquorum.com/zh/smart-home/what-is-a-smart-home',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
