@@ -90,6 +90,16 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'Prompt Bites',
     pt: 'Prompt Bites', // VERIFY
   },
+  smartHome: {
+    // Labels match the term each locale's cluster content uses (not machine-translated).
+    en: 'Smart Home',
+    de: 'Smart Home',
+    fr: 'Maison connectée',
+    ja: 'スマートホーム',
+    zh: '智能家居',
+    es: 'Smart Home',
+    pt: 'Casa inteligente',
+  },
   waitlist: {
     en: 'Waitlist',
     de: 'Warteliste',
@@ -128,6 +138,10 @@ function promptBitesHref(lang: string) {
   return lang === 'en' ? '/prompt-bites' : `/${lang}/prompt-bites`
 }
 
+function smartHomeHref(lang: string) {
+  return lang === 'en' ? '/smart-home' : `/${lang}/smart-home`
+}
+
 function HeaderInner() {
   const { openWaitlist } = useWaitlist()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -164,6 +178,7 @@ function HeaderInner() {
           <Link href={navHref('/local-llms', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('localLlms', lang)}</Link>
           <Link href={powerLocalLlmHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('powerLocalLlm', lang)}</Link>
           <Link href={promptBitesHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptBites', lang)}</Link>
+          <Link href={smartHomeHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('smartHome', lang)}</Link>
           <a
             href="#waitlist"
             onClick={handleWaitlistClick}
@@ -273,6 +288,13 @@ function HeaderInner() {
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('promptBites', lang)}
+        </Link>
+        <Link
+          href={smartHomeHref(lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('smartHome', lang)}
         </Link>
         <a
           href="#waitlist"
