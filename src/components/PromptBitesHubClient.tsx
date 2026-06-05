@@ -37,6 +37,16 @@ const HUB_HEADLINE: Partial<Record<Language, string>> = {
   pt: 'Respostas rápidas para perguntas sobre LLMs locais',
 }
 
+const HUB_EYEBROW: Partial<Record<Language, string>> = {
+  en: 'Prompt Bites',
+  de: 'Prompt-Häppchen',
+  fr: 'Prompts en bref',
+  ja: 'プロンプト早わかり',
+  zh: '提示词速答',
+  es: 'Prompts en breve',
+  pt: 'Prompts em resumo',
+}
+
 const COUNT = PROMPT_BITES_PUBLISHED_SLUGS.size
 
 const HUB_SUBTITLE: Partial<Record<Language, string>> = {
@@ -311,7 +321,7 @@ export function PromptBitesHubClient({ lang }: Props) {
       <div className="max-w-5xl mx-auto">
         <header className="mb-12 text-center">
           <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-primary/10 text-primary mb-4">
-            Prompt Bites
+            {HUB_EYEBROW[lang] ?? 'Prompt Bites'}
           </span>
           <h1 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
             {HUB_HEADLINE[lang]}

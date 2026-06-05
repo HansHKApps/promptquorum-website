@@ -23,22 +23,22 @@ function promptBitesHubHref(lang: Language): string {
 
 const BREADCRUMB_LABELS: Partial<Record<Language, Record<string, string>>> = {
   en: { home: 'Home', hub: 'Prompt Bites' },
-  de: { home: 'Startseite', hub: 'Prompt Bites' },
-  fr: { home: 'Accueil', hub: 'Prompt Bites' },
-  ja: { home: 'ホーム', hub: 'Prompt Bites' },
-  zh: { home: '主页', hub: 'Prompt Bites' },
-  es: { home: 'Inicio', hub: 'Prompt Bites' },
-  pt: { home: 'Início', hub: 'Prompt Bites' },
+  de: { home: 'Startseite', hub: 'Prompt-Häppchen' },
+  fr: { home: 'Accueil', hub: 'Prompts en bref' },
+  ja: { home: 'ホーム', hub: 'プロンプト早わかり' },
+  zh: { home: '主页', hub: '提示词速答' },
+  es: { home: 'Inicio', hub: 'Prompts en breve' },
+  pt: { home: 'Início', hub: 'Prompts em resumo' },
 }
 
 const BACK_LABEL: Partial<Record<Language, string>> = {
   en: '← Back to Prompt Bites',
-  de: '← Zurück zu Prompt Bites',
-  fr: '← Retour aux Prompt Bites',
-  ja: '← Prompt Bites に戻る',
-  zh: '← 返回 Prompt Bites',
-  es: '← Volver a Prompt Bites',
-  pt: '← Voltar para Prompt Bites', // VERIFY
+  de: '← Zurück zu Prompt-Häppchen',
+  fr: '← Retour aux Prompts en bref',
+  ja: '← プロンプト早わかり に戻る',
+  zh: '← 返回 提示词速答',
+  es: '← Volver a Prompts en breve',
+  pt: '← Voltar para Prompts em resumo',
 }
 
 const QUICK_ANSWER_LABEL: Partial<Record<Language, string>> = {

@@ -74,21 +74,21 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
   },
   powerLocalLlm: {
     en: 'Power Local LLM',
-    de: 'Power Local LLM',
-    fr: 'Power Local LLM',
-    ja: 'Power Local LLM',
-    zh: 'Power Local LLM',
-    es: 'Power Local LLM',
-    pt: 'Power Local LLM', // VERIFY
+    de: 'Lokale LLMs Pro',
+    fr: 'LLM locaux avancés',
+    ja: 'ローカルLLM活用',
+    zh: '本地LLM进阶',
+    es: 'LLM locales avanzados',
+    pt: 'LLMs locais avançados',
   },
   promptBites: {
     en: 'Prompt Bites',
-    de: 'Prompt Bites',
-    fr: 'Prompt Bites',
-    ja: 'Prompt Bites',
-    zh: 'Prompt Bites',
-    es: 'Prompt Bites',
-    pt: 'Prompt Bites', // VERIFY
+    de: 'Prompt-Häppchen',
+    fr: 'Prompts en bref',
+    ja: 'プロンプト早わかり',
+    zh: '提示词速答',
+    es: 'Prompts en breve',
+    pt: 'Prompts em resumo',
   },
   smartHome: {
     // Labels match the term each locale's cluster content uses (not machine-translated).
