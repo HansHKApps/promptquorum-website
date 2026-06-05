@@ -10,6 +10,7 @@ import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
 import { PROMPT_BITES_PUBLISHED_SLUGS, PROMPT_BITES_HUB_PUBLISHED } from '@/lib/prompt-bites/published'
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
+import { SMART_HOME_PUBLISHED_SLUGS, SMART_HOME_HUB_PUBLISHED } from '@/lib/smart-home/published'
 
 export const dynamic = 'force-static'
 
@@ -240,6 +241,18 @@ const PROMPT_BITES_PAGES: Page[] = [
   })),
 ]
 
+const SMART_HOME_PAGES: Page[] = [
+  ...(SMART_HOME_HUB_PUBLISHED
+    ? [{ path: '/smart-home', priority: 0.9, changefreq: 'weekly' as const, lastmod: '2026-06-05' }]
+    : []),
+  ...Array.from(SMART_HOME_PUBLISHED_SLUGS).map(slug => ({
+    path: `/smart-home/${slug}`,
+    priority: 0.8,
+    changefreq: 'monthly' as const,
+    lastmod: '2026-06-05',
+  })),
+]
+
 const PAGES: Page[] = [
   ...STATIC_PAGES,
   ...PE_PAGES,
@@ -248,6 +261,7 @@ const PAGES: Page[] = [
   ...LOCAL_LLM_PAGES,
   ...POWER_LOCAL_LLM_PAGES,
   ...PROMPT_BITES_PAGES,
+  ...SMART_HOME_PAGES,
 ]
 
 const POWER_LLM_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
@@ -260,9 +274,15 @@ const PROMPT_BITES_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
   ...Array.from(PROMPT_BITES_PUBLISHED_SLUGS).map(slug => `/prompt-bites/${slug}`),
 ])
 
+const SMART_HOME_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
+  ...(SMART_HOME_HUB_PUBLISHED ? ['/smart-home'] : []),
+  ...Array.from(SMART_HOME_PUBLISHED_SLUGS).map(slug => `/smart-home/${slug}`),
+])
+
 function isExcluded(path: string): boolean {
   if (POWER_LLM_PUBLISHED_PATHS.has(path)) return false
   if (PROMPT_BITES_PUBLISHED_PATHS.has(path)) return false
+  if (SMART_HOME_PUBLISHED_PATHS.has(path)) return false
   return EXCLUDED_PATH_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`))
 }
 

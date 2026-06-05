@@ -44,8 +44,8 @@ const CLUSTERS = [
     basePath: '/smart-home',
     slugsFile: 'src/lib/smart-home/slugs.ts',
     publishedFile: 'src/lib/smart-home/published.ts',
-    // Mirrors isSmartHomeHubPublished() — unpublished cluster-wide until launch.
-    hubPublishedLangs: new Set(),
+    // Mirrors isSmartHomeHubPublished() — all langs published since launch 2026-06-05.
+    hubPublishedLangs: new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']),
   },
 ]
 
