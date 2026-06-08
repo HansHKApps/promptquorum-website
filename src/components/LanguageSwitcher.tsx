@@ -31,21 +31,12 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
     { code: 'zh', flag: '🇨🇳' },
     { code: 'es', flag: '🇪🇸' },
     { code: 'pt', flag: '🇧🇷' },
-    // TODO: RTL styling needed for AR option — August 2026
-    { code: 'ar', flag: '🇸🇦', comingSoon: true },
+    { code: 'ar', flag: '🇸🇦' },
   ]
 
   const current = languageCodes.find(l => l.code === currentLang) || languageCodes[0]
 
   const handleLanguageChange = (lang: Language) => {
-    // AR has no page tree yet — redirect to EN instead of a 404.
-    // PT is live (path-prefix routed like JA/ZH/DE/FR/ES) and handled below.
-    const COMING_SOON_LANGS: Language[] = ['ar']
-    if (COMING_SOON_LANGS.includes(lang)) {
-      window.location.href = window.location.origin + '/'
-      return
-    }
-
     window.umami?.track('language_switch', { from_lang: currentLang, to_lang: lang })
     document.cookie = `pq_lang=${lang}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`
     // Path-prefix-routed clusters for ALL non-EN langs (e.g. power-local-llm).

@@ -115,7 +115,7 @@ export default async function RootLayout({
   const baseUrlWithoutLang = `https://www.promptquorum.com${pathname}`
 
   return (
-    <html lang={selectedLang} dir={getLangDir(selectedLang)} className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable}`}>
+    <html lang={selectedLang} dir={getLangDir(selectedLang)} className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable}`} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#6750A4" />
 
