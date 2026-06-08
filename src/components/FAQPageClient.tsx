@@ -5,6 +5,7 @@ import type { Lang } from '@/hooks/useLang'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import Link from 'next/link'
 import { FAQAccordion } from './FAQAccordion'
+import Image from 'next/image'
 
 const T = {
   en: {
@@ -108,7 +109,7 @@ function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").L
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0">
-                <img
+                <Image
                   src="/images/hans-kuepper.jpg"
                   alt="Hans Kuepper, Founder of PromptQuorum"
                   width={80}

@@ -12,6 +12,7 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { FrameworkWheel } from '@/components/FrameworkWheel'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { FactsDisclaimer } from '@/components/FactsDisclaimer'
+import Image from 'next/image'
 
 // Helper to convert "Published Month DD, YYYY" to ISO date format "YYYY-MM-DD"
 function getDateISO(dateStr: string): string {
@@ -115,13 +116,13 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
             <FrameworkWheel />
           ) : post.heroImage ? (
             <div className="my-8">
-              <img
+              <Image
                 src={post.heroImage}
                 alt="Article illustration"
                 width={1200}
                 height={675}
                 className="w-full rounded-lg border border-primary/20 shadow-sm"
-                loading="lazy"
+                priority
               />
             </div>
           ) : null}
