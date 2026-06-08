@@ -555,7 +555,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-2026?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/best-local-llms-2026',
         headline: 'Mejores LLMs locales en 2026: Top modelos clasificados por tarea, hardware y calidad',
         description: 'Mejores LLMs locales en 2026: Llama 3.3 70B, Qwen3 72B, Mistral Small 3.1, Gemma 3 9B y Phi-4 Mini -- con requisitos de VRAM y puntuaciones de benchmark.',
         dateModified: '2026-06-01',

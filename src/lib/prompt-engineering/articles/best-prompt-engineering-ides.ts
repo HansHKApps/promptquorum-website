@@ -663,7 +663,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-engineering-ides?lang=es',
+      url: 'https://www.promptquorum.com/es/es/prompt-engineering/best-prompt-engineering-ides',
       inLanguage: 'es',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -962,7 +962,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/pt/prompt-engineering/best-prompt-engineering-ides?lang=pt',
+      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/best-prompt-engineering-ides',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Intermediate',
       about: [

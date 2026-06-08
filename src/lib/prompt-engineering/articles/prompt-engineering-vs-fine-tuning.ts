@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=en',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning',
       inLanguage: 'en',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       headline: 'Prompt Engineering vs Fine-Tuning',
@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=es',
+      url: 'https://www.promptquorum.com/es/es/prompt-engineering/prompt-engineering-vs-fine-tuning',
       inLanguage: 'es',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       headline: 'Prompt Engineering vs Fine-Tuning: cuándo usar prompts, cuándo entrenar',
@@ -791,7 +791,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/pt/prompt-engineering/prompt-engineering-vs-fine-tuning?lang=pt',
+      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/prompt-engineering-vs-fine-tuning',
       inLanguage: 'pt-BR',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       headline: 'Prompt Engineering vs Fine-Tuning: quando usar prompts, quando treinar',

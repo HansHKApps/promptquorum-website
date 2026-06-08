@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'url': 'https://www.promptquorum.com/prompt-engineering/persona-prompting?lang=en',
+      'url': 'https://www.promptquorum.com/prompt-engineering/persona-prompting',
       headline: 'Persona Prompting: Give Your AI a Role and Watch It Improve',
       description: 'What persona prompting is, why it matters, core building blocks, practical examples, and how to test personas across multiple AI models.',
       datePublished: '2026-03-26',
@@ -329,12 +329,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Related Articles',
         items: [
-          '[How to Write Clear Prompts for AI](/prompt-engineering/how-to-write-clear-prompts?lang=en) — Master the fundamentals before advancing to personas.',
-          '[Negative Prompting: Tell AI What NOT to Do](/prompt-engineering/negative-prompting?lang=en) — Combine personas with explicit constraints for better control.',
-          '[Prompt Frameworks: Chain-of-Thought and Beyond](/prompt-engineering/chain-of-thought-prompting?lang=en) — Learn structured reasoning techniques that work with personas.',
-          '[System Prompts: The Foundation of AI Behavior](/prompt-engineering/system-prompts?lang=en) — Understand how personas fit into the broader system architecture.',
-          '[Fine-Tuning vs Prompt Engineering: When to Use Each](/prompt-engineering/fine-tuning-vs-prompting?lang=en) — Decide whether personas or fine-tuning is right for your use case.',
-          '[Testing AI Models Across Providers](/prompt-engineering/testing-ai-models?lang=en) — Learn how to systematically compare persona performance.',
+          '[How to Write Clear Prompts for AI](/prompt-engineering/how-to-write-clear-prompts) — Master the fundamentals before advancing to personas.',
+          '[Negative Prompting: Tell AI What NOT to Do](/prompt-engineering/negative-prompting) — Combine personas with explicit constraints for better control.',
+          '[Prompt Frameworks: Chain-of-Thought and Beyond](/prompt-engineering/chain-of-thought-prompting) — Learn structured reasoning techniques that work with personas.',
+          '[System Prompts: The Foundation of AI Behavior](/prompt-engineering/system-prompts) — Understand how personas fit into the broader system architecture.',
+          '[Fine-Tuning vs Prompt Engineering: When to Use Each](/prompt-engineering/fine-tuning-vs-prompting) — Decide whether personas or fine-tuning is right for your use case.',
+          '[Testing AI Models Across Providers](/prompt-engineering/testing-ai-models) — Learn how to systematically compare persona performance.',
         ],
       },
     },
@@ -693,7 +693,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'url': 'https://www.promptquorum.com/es/prompt-engineering/persona-prompting?lang=es',
+      'url': 'https://www.promptquorum.com/es/es/prompt-engineering/persona-prompting',
       headline: 'Persona Prompting: dale un rol a tu IA y observa cómo mejora',
       description: 'Qué es el persona prompting, por qué importa, los bloques de construcción fundamentales, ejemplos prácticos y cómo probar personas en múltiples modelos de IA.',
       datePublished: '2026-03-26',
@@ -892,7 +892,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'url': 'https://www.promptquorum.com/pt/prompt-engineering/persona-prompting?lang=pt',
+      'url': 'https://www.promptquorum.com/pt/pt/prompt-engineering/persona-prompting',
       headline: 'Persona Prompting: dê um papel à sua IA e veja como ela melhora',
       description: 'O que é o persona prompting, por que importa, os blocos de construção fundamentais, exemplos práticos e como testar personas em vários modelos de IA.',
       datePublished: '2026-03-26',

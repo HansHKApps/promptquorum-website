@@ -444,7 +444,7 @@ schema: {
           items: [
             '**Wählen Sie selbst-gehostet, wenn:** Sie sensible Daten haben, keine API-Kosten möchten, die Schnittstelle anpassen möchten oder offline sind.',
             '**Wählen Sie Cloud, wenn:** Sie die beste Modellqualität benötigen, keine Infrastruktur verwalten möchten oder niedriges Volumen haben.',
-            '**Nutzen Sie beide parallel:** Tools wie [PromptQuorum](/?lang=de) ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Modell und Cloud-APIs zu versenden, damit Sie Ergebnisse nebeneinander vergleichen können.',
+            '**Nutzen Sie beide parallel:** Tools wie [PromptQuorum](/de) ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Modell und Cloud-APIs zu versenden, damit Sie Ergebnisse nebeneinander vergleichen können.',
           ],
         },
         regionalContext: {
@@ -1837,7 +1837,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Los mejores frontends para LLMs locales 2026',
         'description': 'Compara 8 frontends para LLMs locales: Open WebUI (25k estrellas, RAG), Enchanted UI (el más rápido), Jan AI (app de escritorio). Tabla de características y guía de configuración.',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-local-llm-frontends?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

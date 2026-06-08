@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/best-beginner-local-llm-models?lang=en',
+        'url': 'https://www.promptquorum.com/local-llms/best-beginner-local-llm-models',
         headline: 'Llama 3.2, Phi-4 Mini, Gemma 3: Best Beginner LLMs 2026',
         description: 'Llama 3.2 3B = 2.5 GB RAM, 25-45 tok/s. Phi-4 Mini = 2.5 GB. Gemma 3 2B = 1.7 GB, 40-60 tok/s. Full comparison table and Ollama commands. April 2026.',
         'datePublished': '2026-04-04',
@@ -678,7 +678,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-beginner-local-llm-models?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/best-beginner-local-llm-models',
         headline: 'Llama 3.2, Phi-4 Mini, Gemma 3: Mejores LLMs para principiantes 2026',
         description: 'Llama 3.2 3B = 2,5 GB RAM, 25-45 tok/s. Phi-4 Mini = 2,5 GB. Gemma 3 2B = 1,7 GB, 40-60 tok/s. Tabla de comparación completa y comandos de Ollama. Abril 2026.',
         'datePublished': '2026-04-04',

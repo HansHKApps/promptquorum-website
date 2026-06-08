@@ -723,7 +723,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified:  '2026-04-29',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-engineering-setup-small-teams?lang=es',
+      url: 'https://www.promptquorum.com/es/es/prompt-engineering/prompt-engineering-setup-small-teams',
       inLanguage:       'es',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -1046,7 +1046,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author:    { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      url: 'https://www.promptquorum.com/pt/prompt-engineering/prompt-engineering-setup-small-teams?lang=pt',
+      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/prompt-engineering-setup-small-teams',
       inLanguage:       'pt-BR',
       proficiencyLevel: 'Intermediate',
       about: [

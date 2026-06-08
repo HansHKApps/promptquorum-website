@@ -307,7 +307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
-      url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=en',
+      url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
       inLanguage: 'en',
       about: [
         { '@type': 'Thing', name: 'Alibaba Cloud PAI' },
@@ -614,7 +614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/es/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=es',
+      url: 'https://www.promptquorum.com/es/es/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
       inLanguage: 'es',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [
@@ -930,7 +930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/pt/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=pt',
+      url: 'https://www.promptquorum.com/pt/pt/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
       inLanguage: 'pt-BR',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [

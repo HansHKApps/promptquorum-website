@@ -519,7 +519,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Corregir errores de LLM local en 2026: 10 problemas frecuentes en Ollama, LM Studio y vLLM',
         'description': 'Soluciona cuelgues por falta de memoria, GPU no detectada, conexión rechazada y salida corrupta en Ollama y LM Studio. Comandos exactos: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
-        'url': 'https://www.promptquorum.com/es/local-llms/troubleshooting-local-llm-setup?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/troubleshooting-local-llm-setup',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

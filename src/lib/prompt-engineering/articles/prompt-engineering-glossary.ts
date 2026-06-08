@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary?lang=en',
+        url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary',
         inLanguage: 'en',
         headline: 'Prompt Engineering Glossary: 500 Key Terms',
         datePublished: '2026-03-28',
@@ -360,7 +360,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-engineering-glossary?lang=es',
+    url: 'https://www.promptquorum.com/es/es/prompt-engineering/prompt-engineering-glossary',
     inLanguage: 'es',
     headline: 'Glosario de Prompt Engineering: 500 términos clave',
     datePublished: '2026-03-28',
@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/pt/prompt-engineering/prompt-engineering-glossary?lang=pt',
+    url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/prompt-engineering-glossary',
     inLanguage: 'pt-BR',
     headline: 'Glossário de Prompt Engineering: 500 Termos Essenciais',
     datePublished: '2026-03-28',

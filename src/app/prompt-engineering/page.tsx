@@ -45,7 +45,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
-  const langSuffix = selectedLang === 'en' ? '' : `?lang=${selectedLang}`
+  const langPrefix = selectedLang === 'en' ? '' : `/${selectedLang}`
   const t = translations[selectedLang as keyof typeof translations]
 
   // Multilingual FAQ translations for schema markup
@@ -264,7 +264,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       'name': t.promptEngineeringHubTitle,
-      'url': `https://www.promptquorum.com/prompt-engineering${langSuffix}`,
+      'url': `https://www.promptquorum.com${langPrefix}/prompt-engineering`,
       'inLanguage': toOutputLocale(selectedLang),
       'description': t.promptEngineeringHubDescription,
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
@@ -277,7 +277,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       'name': t.promptEngineeringHubTitle,
-      'url': `https://www.promptquorum.com/prompt-engineering${langSuffix}`,
+      'url': `https://www.promptquorum.com${langPrefix}/prompt-engineering`,
       'inLanguage': toOutputLocale(selectedLang),
       'description': t.promptEngineeringHubDescription,
       'numberOfItems': 80,
@@ -290,7 +290,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       'inLanguage': toOutputLocale(selectedLang),
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': BREADCRUMB_HOME[selectedLang] ?? 'Home', 'item': 'https://www.promptquorum.com' },
-        { '@type': 'ListItem', 'position': 2, 'name': BREADCRUMB_LABELS[selectedLang] ?? 'Prompt Engineering', 'item': `https://www.promptquorum.com/prompt-engineering${langSuffix}` },
+        { '@type': 'ListItem', 'position': 2, 'name': BREADCRUMB_LABELS[selectedLang] ?? 'Prompt Engineering', 'item': `https://www.promptquorum.com${langPrefix}/prompt-engineering` },
       ],
     },
     {
@@ -336,7 +336,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
         return slugs.map((slug, i) => ({
           '@type': 'ListItem',
           'position': i + 1,
-          'url': `https://www.promptquorum.com/prompt-engineering/${slug}${langSuffix}`,
+          'url': `https://www.promptquorum.com${langPrefix}/prompt-engineering/${slug}`,
           'name': names[i],
         }))
       })(),

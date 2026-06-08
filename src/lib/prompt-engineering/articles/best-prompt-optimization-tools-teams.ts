@@ -1338,7 +1338,7 @@ tests:
       headline: 'Mejores herramientas de optimización de prompts para equipos 2026',
       description:
         'Seis herramientas para optimización de prompts a escala de equipo: comparadas por A/B testing, características de colaboración, integración CI/CD y precios.',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=es',
+      url: 'https://www.promptquorum.com/es/es/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'es',
       datePublished: '2026-04-10',
       dateModified: '2026-04-29',
@@ -1814,7 +1814,7 @@ tests:
       headline: 'Melhores ferramentas de otimização de prompts para equipes 2026',
       description:
         'Seis ferramentas para otimização de prompts em escala de equipe: comparadas por A/B testing, recursos de colaboração, integração CI/CD e preços.',
-      url: 'https://www.promptquorum.com/pt/prompt-engineering/best-prompt-optimization-tools-for-teams?lang=pt',
+      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'pt-BR',
       datePublished: '2026-04-10',
       dateModified: '2026-04-29',

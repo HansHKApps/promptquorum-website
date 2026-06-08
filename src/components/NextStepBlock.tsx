@@ -10,7 +10,7 @@ interface Props {
 }
 
 export function NextStepBlock({ text, label, href, lang }: Props) {
-  const destination = lang === 'en' ? href : `${href}?lang=${lang}`
+  const destination = lang === 'en' ? href : `/${lang}${href}`
 
   return (
     <div className="mt-12 border-l-4 border-primary bg-primary/5 rounded-r-xl p-6">

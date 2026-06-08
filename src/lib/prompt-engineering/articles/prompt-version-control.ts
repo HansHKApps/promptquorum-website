@@ -724,7 +724,7 @@ jobs:
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-version-control-workflows?lang=es',
+      url: 'https://www.promptquorum.com/es/es/prompt-engineering/prompt-version-control-workflows',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/es/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
       keywords: ['control de versiones de prompts', 'versionado de prompts', 'flujo de trabajo Git para prompts', 'gestión de cambios de prompts', 'cómo versionar prompts de IA'],

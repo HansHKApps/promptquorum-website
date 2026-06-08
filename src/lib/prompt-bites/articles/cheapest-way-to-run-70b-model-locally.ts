@@ -162,7 +162,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 5, name: 'Mac Studio M4 Max 128GB', description: 'Best performance-per-watt, $3,000' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Cheapest Way to Run 70B Model Locally 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/cheapest-way-to-run-70b-model-locally?lang=en', inLanguage: 'en' },
+    schema: { '@type': 'TechArticle', headline: 'Cheapest Way to Run 70B Model Locally 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'en' },
   },
   de: {
     freshness_tier: 'semi_annual',

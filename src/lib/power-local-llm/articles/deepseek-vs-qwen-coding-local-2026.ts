@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
-      url: 'https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026?lang=en',
+      url: 'https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       inLanguage: 'en',
       about: [
         { '@type': 'Thing', name: 'DeepSeek-V3' },
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/es/power-local-llm/deepseek-vs-qwen-coding-local-2026?lang=es',
+      url: 'https://www.promptquorum.com/es/es/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       inLanguage: 'es',
       about: [
         { '@type': 'Thing', name: 'DeepSeek-V3' },
@@ -1478,7 +1478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/pt/power-local-llm/deepseek-vs-qwen-coding-local-2026?lang=pt',
+      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       inLanguage: 'pt-BR',
       about: [
         { '@type': 'Thing', name: 'DeepSeek-V3' },

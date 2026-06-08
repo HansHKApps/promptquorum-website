@@ -612,7 +612,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Text-Generation-WebUI vs vLLM vs llama.cpp en 2026: Comparación de Motores de Inferencia',
         'description': 'vLLM domina la producción (mayor rendimiento). llama.cpp impulsa Ollama (el más ligero). Text-Generation-WebUI ideal para investigación. Comparación de motores de inferencia 2026.',
-        'url': 'https://www.promptquorum.com/es/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

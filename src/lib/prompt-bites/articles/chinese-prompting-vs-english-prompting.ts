@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'TechArticle',
       headline: 'Chinese vs English Prompting for Local LLMs 2026',
       description: 'CJK tokenisation saves 30–50% tokens on Qwen3. English system prompts produce stronger reasoning. Best practice: English instructions with Chinese output directive.',
-      url: 'https://www.promptquorum.com/prompt-bites/chinese-prompting-vs-english-prompting?lang=en',
+      url: 'https://www.promptquorum.com/prompt-bites/chinese-prompting-vs-english-prompting',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

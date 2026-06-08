@@ -28,7 +28,7 @@ function articleUrl(hub: string, slug: string, lang: string): string {
   if (usesPathPrefix) {
     return lang === 'en' ? `/${hub}/${slug}` : `/${lang}/${hub}/${slug}`
   }
-  return lang === 'en' ? `/${hub}/${slug}` : `/${hub}/${slug}?lang=${lang}`
+  return lang === 'en' ? `/${hub}/${slug}` : `/${lang}/${hub}/${slug}`
 }
 
 export function GET() {

@@ -495,7 +495,7 @@ docker run --gpus all \\
       headline: 'Qwen Local Deployment: Complete Production Guide 2026',
       description:
         'Deploy Qwen 7B to 72B in production: Docker Compose API server, multi-GPU setup, hardware benchmarks, and cost comparison vs Alibaba Cloud.',
-      url: 'https://www.promptquorum.com/power-local-llm/qwen-local-deployment-complete-guide-2026?lang=en',
+      url: 'https://www.promptquorum.com/power-local-llm/qwen-local-deployment-complete-guide-2026',
       inLanguage: 'en',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
@@ -1531,7 +1531,7 @@ docker run --gpus all \\
       headline: 'Despliegue Local de Qwen: Guía Completa de Producción 2026',
       description:
         'Despliega Qwen 7B a 72B en producción: servidor API Docker Compose, configuración multi-GPU, benchmarks de hardware y comparación de costes con Alibaba Cloud.',
-      url: 'https://www.promptquorum.com/es/power-local-llm/qwen-local-deployment-complete-guide-2026?lang=es',
+      url: 'https://www.promptquorum.com/es/es/power-local-llm/qwen-local-deployment-complete-guide-2026',
       inLanguage: 'es',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
@@ -2060,7 +2060,7 @@ docker run --gpus all \\
       headline: 'Implantação Local do Qwen: Guia Completo de Produção 2026',
       description:
         'Implante Qwen 7B a 72B em produção: servidor API Docker Compose, configuração multi-GPU, benchmarks de hardware e comparação de custos com a Alibaba Cloud.',
-      url: 'https://www.promptquorum.com/pt/power-local-llm/qwen-local-deployment-complete-guide-2026?lang=pt',
+      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/qwen-local-deployment-complete-guide-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',

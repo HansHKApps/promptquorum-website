@@ -1529,7 +1529,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LM Studio vs Jan AI: ¿Cuál es mejor para LLMs locales?',
         'description': 'LM Studio es mejor para principiantes: configuración más rápida, búsqueda HuggingFace integrada, 3 años de historial. Jan AI para desarrolladores: plugins, múltiples endpoints API, RAG local. Guía de decisión de abril de 2026.',
-        'url': 'https://www.promptquorum.com/es/local-llms/lm-studio-vs-jan-ai?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/lm-studio-vs-jan-ai',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -1567,7 +1567,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LM Studio vs Jan AI: ¿Cuál es mejor para LLMs locales?',
-        'url': 'https://www.promptquorum.com/es/local-llms/lm-studio-vs-jan-ai?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/lm-studio-vs-jan-ai',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio: más simple, más estable, 3 años de historial. Mejor para principiantes.' },
           { '@type': 'ListItem', position: 2, name: 'Jan AI: más reciente, sistema de plugins, mejor para desarrolladores. Actualizaciones más frecuentes.' },

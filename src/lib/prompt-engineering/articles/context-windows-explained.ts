@@ -58,7 +58,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets?lang=en',
+        url: 'https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets',
         inLanguage: 'en',
         headline: 'Context Windows Explained: Why AI Forgets (and What to Do)',
         description: 'LLMs don\'t have long-term memory — they only "see" a sliding window of recent tokens. Learn why AI forgets context, how to structure prompts, and practical strategies to manage context windows across models.',
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/context-windows-explained-why-ai-forgets?lang=es',
+        url: 'https://www.promptquorum.com/es/es/prompt-engineering/context-windows-explained-why-ai-forgets',
         inLanguage: 'es',
         headline: 'Context windows explicadas: Por qué la IA olvida (y qué hacer al respecto)',
         description: 'Los LLM no tienen memoria a largo plazo — solo "ven" una ventana deslizante de tokens recientes. Aprende por qué la IA olvida el contexto, cómo estructurar los prompts y estrategias prácticas para gestionar las context windows en distintos modelos.',

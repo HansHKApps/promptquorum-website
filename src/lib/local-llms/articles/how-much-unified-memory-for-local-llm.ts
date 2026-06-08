@@ -426,7 +426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '¿Cuánta memoria unificada para LLMs locales? 16 GB vs 36 GB vs 64 GB',
       description: 'Ejecuta modelos de 3.8B a 70B en Apple Silicon: 16 GB (Phi), 36 GB (8B), 64 GB (70B).',
-      url: 'https://www.promptquorum.com/es/local-llms/how-much-unified-memory-for-local-llm?lang=es',
+      url: 'https://www.promptquorum.com/es/es/local-llms/how-much-unified-memory-for-local-llm',
       inLanguage: 'es',
       datePublished: '2026-05-15',
       dateModified: '2026-05-15',

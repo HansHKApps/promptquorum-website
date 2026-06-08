@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/prompt-chaining?lang=en',
+        'url': 'https://www.promptquorum.com/prompt-engineering/prompt-chaining',
         headline: 'Prompt Chaining: How to Break Big Tasks Into Winning Steps',
         description: 'What prompt chaining is, why it matters, and how to design multi-step AI workflows that are easier to control and reuse.',
         datePublished: '2026-03-26',
@@ -712,7 +712,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/es/prompt-engineering/prompt-chaining?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/prompt-engineering/prompt-chaining',
         headline: 'Prompt Chaining: cómo dividir tareas grandes en pasos ganadores',
         description: 'Qué es el prompt chaining, por qué importa y cómo diseñar workflows de IA de múltiples pasos que son más fáciles de controlar y reutilizar.',
         datePublished: '2026-03-26',
@@ -952,7 +952,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/pt/prompt-engineering/prompt-chaining?lang=pt',
+        'url': 'https://www.promptquorum.com/pt/pt/prompt-engineering/prompt-chaining',
         headline: 'Prompt Chaining: como dividir tarefas grandes em etapas vencedoras',
         description: 'O que é o prompt chaining, por que importa e como projetar fluxos de trabalho de IA de múltiplas etapas que são mais fáceis de controlar e reutilizar.',
         datePublished: '2026-03-26',

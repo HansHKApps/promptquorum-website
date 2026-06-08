@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai?lang=en',
+        'url': 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai',
         headline: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
         description: 'The US, China, and European Union are pursuing incompatible visions of AI governance. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements.',
         datePublished: '2026-04-01',
@@ -1416,7 +1416,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        'url': 'https://www.promptquorum.com/es/prompt-engineering/geopolitics-and-ai?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/prompt-engineering/geopolitics-and-ai',
         headline: 'Geopolítica de la IA explicada: EU AI Act vs. EE.UU. vs. China (Análisis 2026)',
         description: 'EE.UU., China y la Unión Europea persiguen visiones incompatibles de la gobernanza de la IA. Para las organizaciones que despliegan IA, estas diferencias se traducen en obligaciones de cumplimiento concretas, restricciones de adquisición y requisitos de residencia de datos.',
         datePublished: '2026-04-01',
@@ -3599,7 +3599,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        'url': 'https://www.promptquorum.com/pt/prompt-engineering/geopolitics-and-ai?lang=pt',
+        'url': 'https://www.promptquorum.com/pt/pt/prompt-engineering/geopolitics-and-ai',
         headline: 'Geopolítica da IA explicada: EU AI Act vs. EUA vs. China (Análise 2026)',
         description: 'EUA, China e União Europeia perseguem visões incompatíveis de governança da IA. Para organizações que implementam IA, essas diferenças se traduzem em obrigações concretas de conformidade, restrições de aquisição e requisitos de residência de dados.',
         datePublished: '2026-04-01',

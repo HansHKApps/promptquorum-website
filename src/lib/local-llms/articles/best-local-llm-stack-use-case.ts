@@ -516,7 +516,7 @@ for filename, review in reviews:
         '@type': 'TechArticle',
         'headline': 'Mejor stack de LLM local por caso de uso 2026: Código, Escritura, RAG, Agentes',
         'description': 'Mejor stack LLM local por caso de uso abril 2026: Código → vLLM + Qwen3-Coder. Escritura → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. VRAM 8–24 GB. Guía completa de configuración.',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-local-llm-stack-use-case?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/best-local-llm-stack-use-case',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

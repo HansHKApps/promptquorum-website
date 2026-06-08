@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-documentation-templates?lang=es',
+      url: 'https://www.promptquorum.com/es/es/prompt-engineering/prompt-documentation-templates',
       inLanguage: 'es',
       headline: 'Plantillas de documentación de prompts: 6 formatos reutilizables para equipos',
       description: '6 plantillas de documentación de prompts: Tarjeta One-Liner, Bloque de Versión, Encabezado de Suite de Pruebas, Registro de Decisiones, Justificación de Cambio, Bloque de Config API.',
@@ -565,7 +565,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/pt/prompt-engineering/prompt-documentation-templates?lang=pt',
+      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/prompt-documentation-templates',
       inLanguage: 'pt-BR',
       headline: 'Modelos de documentação de prompts: 6 formatos reutilizáveis para equipes',
       description: '6 modelos de documentação de prompts: Cartão One-Liner, Bloco de Versão, Cabeçalho de Suite de Testes, Registro de Decisões, Justificativa de Mudança, Bloco de Config API.',

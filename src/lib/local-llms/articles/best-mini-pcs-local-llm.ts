@@ -1540,7 +1540,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Mejores mini PCs para LLMs locales 2026: Mac Mini M4 Pro, Framework Desktop y builds Mini-ITX',
         'description': 'Mac mini M4 Pro (64 GB unificado): 70B a 10–15 tok/s. Framework Desktop 128 GB: 70B a 20+ tok/s. ASUS PN51 + RTX 5060 Ti: $900, 7B a 25 tok/s. Comparación completa 2026.',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-mini-pcs-local-llm?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/best-mini-pcs-local-llm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-21',
         'proficiencyLevel': 'Intermediate',
@@ -1562,7 +1562,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-mini-pcs-local-llm?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/best-mini-pcs-local-llm',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo ejecutar modelos 13B sin problemas en un mini PC?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, con cuantización Q4 con RTX 5060 Ti (16 GB) o RTX 4070 (12 GB). La RTX 4060 Ti (8 GB) es demasiado ajustada para 13B cómodo — el margen de VRAM cae por debajo de 1 GB.' } },
           { '@type': 'Question', 'name': '¿Es útil el Intel NUC con una RTX 5060 Ti externa en dock para LLMs locales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. El eGPU TB3 pierde 15–20% de ancho de banda, así que espera 12 tok/s en lugar de 15 en 7B. Sigue siendo funcional y excelente para espacios pequeños donde una torre completa es poco práctica.' } },
@@ -1579,7 +1579,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/es/local-llms/best-mini-pcs-local-llm?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/best-mini-pcs-local-llm',
         'name': 'Mejores mini PCs para inferencia LLM local 2026',
         'numberOfItems': 5,
         'itemListElement': [

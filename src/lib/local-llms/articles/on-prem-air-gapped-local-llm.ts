@@ -449,7 +449,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Despliegue de LLM Local con Air-Gap',
         'description': 'Despliegue de LLM local con air-gap: arquitectura de aislamiento completo, seguridad de red, gestión de actualizaciones y manejo de datos clasificados.',
-        'url': 'https://www.promptquorum.com/es/local-llms/on-prem-air-gapped-local-llm?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/on-prem-air-gapped-local-llm',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

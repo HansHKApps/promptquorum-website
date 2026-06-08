@@ -376,7 +376,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Mejores GPUs de segunda mano para LLMs locales: Guía de compra RTX 3060, 3080, 4090',
         'description': 'Mejores GPUs de segunda mano para LLMs locales: RTX 3060, 3080, 3090, 4090. Dónde comprar, evaluación de riesgos y cómo hacer pruebas de rendimiento.',
-        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -396,7 +396,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/used-gpus-for-local-llms',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -438,7 +438,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/used-gpus-for-local-llms',
         'name': 'GPUs de segunda mano para LLMs locales: Comparativa de costes y fiabilidad',
         'itemListElement': [
           { '@type': 'ListItem', position: 1, name: 'Comparativa de costes: RTX 3060 ($200-250 de segunda mano) vs RTX 3080 ($350-400) vs RTX 4090 ($1,000-1,300): ahorro del 30-50% frente a nueva.' },

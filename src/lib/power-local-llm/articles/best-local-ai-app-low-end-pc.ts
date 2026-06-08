@@ -887,7 +887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Startseite', 'item': 'https://www.promptquorum.com/?lang=de' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Startseite', 'item': 'https://www.promptquorum.com/de' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Power Local LLM', 'item': 'https://www.promptquorum.com/de/power-local-llm' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Beste lokale KI-Apps für leistungsschwache PCs', 'item': 'https://www.promptquorum.com/de/power-local-llm/best-local-ai-app-low-end-pc' },
       ],
@@ -1156,7 +1156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Accueil', 'item': 'https://www.promptquorum.com/?lang=fr' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Accueil', 'item': 'https://www.promptquorum.com/fr' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Power Local LLM', 'item': 'https://www.promptquorum.com/fr/power-local-llm' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Meilleures applications d\'IA locale pour PC modestes', 'item': 'https://www.promptquorum.com/fr/power-local-llm/best-local-ai-app-low-end-pc' },
       ],
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'ホーム', 'item': 'https://www.promptquorum.com/?lang=ja' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'ホーム', 'item': 'https://www.promptquorum.com/ja' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Power Local LLM', 'item': 'https://www.promptquorum.com/ja/power-local-llm' },
         { '@type': 'ListItem', 'position': 3, 'name': 'ロースペックPC向けベストローカルAIアプリ', 'item': 'https://www.promptquorum.com/ja/power-local-llm/best-local-ai-app-low-end-pc' },
       ],
@@ -1702,7 +1702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': '主页', 'item': 'https://www.promptquorum.com/?lang=zh' },
+        { '@type': 'ListItem', 'position': 1, 'name': '主页', 'item': 'https://www.promptquorum.com/zh' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Power Local LLM', 'item': 'https://www.promptquorum.com/zh/power-local-llm' },
         { '@type': 'ListItem', 'position': 3, 'name': '低配PC最佳本地AI应用', 'item': 'https://www.promptquorum.com/zh/power-local-llm/best-local-ai-app-low-end-pc' },
       ],
@@ -2111,7 +2111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'url': 'https://www.promptquorum.com/es/power-local-llm/best-local-ai-app-low-end-pc?lang=es',
+      'url': 'https://www.promptquorum.com/es/es/power-local-llm/best-local-ai-app-low-end-pc',
       'headline': 'Mejores apps de IA local para PCs de gama baja en 2026 (8 GB RAM, sin GPU)',
       'description':
         'Ollama, GPT4All, Jan y llama.cpp probados en portátiles con 8 GB RAM y gráficos integrados. Tokens/s, presión de memoria, configuraciones exactas.',
@@ -2178,7 +2178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://www.promptquorum.com/?lang=es' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://www.promptquorum.com/es' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Power Local LLM', 'item': 'https://www.promptquorum.com/es/power-local-llm' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Mejores apps de IA local para PCs de gama baja', 'item': 'https://www.promptquorum.com/es/power-local-llm/best-local-ai-app-low-end-pc' },
       ],
@@ -2587,7 +2587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'url': 'https://www.promptquorum.com/pt/power-local-llm/best-local-ai-app-low-end-pc?lang=pt',
+      'url': 'https://www.promptquorum.com/pt/pt/power-local-llm/best-local-ai-app-low-end-pc',
       'headline': 'Melhores apps de IA local para PCs de baixo desempenho em 2026 (8 GB RAM, sem GPU)',
       'description':
         'Ollama, GPT4All, Jan e llama.cpp testados em notebooks com 8 GB RAM e gráficos integrados. Tokens/s, pressão de memória, configurações exatas.',
@@ -2654,7 +2654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Início', 'item': 'https://www.promptquorum.com/?lang=pt' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Início', 'item': 'https://www.promptquorum.com/pt' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Power Local LLM', 'item': 'https://www.promptquorum.com/pt/power-local-llm' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Melhores apps de IA local para PCs de baixo desempenho', 'item': 'https://www.promptquorum.com/pt/power-local-llm/best-local-ai-app-low-end-pc' },
       ],

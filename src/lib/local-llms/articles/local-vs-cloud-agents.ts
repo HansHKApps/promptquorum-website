@@ -481,7 +481,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Agentes de IA Local vs Cloud 2026: ¿Cuál es mejor para tu caso de uso?',
         'description': 'Agentes Cloud responden en 100–300ms pero cuestan $20/1M tokens. Agentes locales tardan 2–5 s pero cuestan $0. Punto de equilibrio en 50M tokens/mes. Comparativa completa 2026 con marco de decisión.',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-vs-cloud-agents?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/local-vs-cloud-agents',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

@@ -113,7 +113,7 @@ function GoDeeper({ parentArticle, siblingBites, lang }: {
   lang: Language
 }) {
   if (!parentArticle && (!siblingBites || siblingBites.length === 0)) return null
-  const langSuffix = lang !== 'en' ? `?lang=${lang}` : ''
+  const langPrefix = lang !== 'en' ? `/${lang}` : ''
   return (
     <div className="mt-10 border-t border-primary/10 pt-8 space-y-6">
       {parentArticle && (
@@ -122,7 +122,7 @@ function GoDeeper({ parentArticle, siblingBites, lang }: {
             {GO_DEEPER_HEADING[lang]}
           </p>
           <Link
-            href={`${parentArticle}${langSuffix}`}
+            href={`${langPrefix}${parentArticle}`}
             className="text-sm font-semibold text-primary hover:underline"
           >
             {READ_FULL_GUIDE[lang]}
@@ -143,7 +143,7 @@ function GoDeeper({ parentArticle, siblingBites, lang }: {
               return (
                 <li key={slug}>
                   <Link
-                    href={`/prompt-bites/${slug}${langSuffix}`}
+                    href={`${langPrefix}/prompt-bites/${slug}`}
                     className="flex gap-2 text-sm text-text-secondary hover:text-primary transition-colors"
                   >
                     <span className="text-primary mt-0.5 flex-shrink-0">▸</span>

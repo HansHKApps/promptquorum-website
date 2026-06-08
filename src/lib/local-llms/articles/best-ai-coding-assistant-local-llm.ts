@@ -827,7 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       '@id': 'https://www.promptquorum.com/es/local-llms/best-ai-coding-assistant-local-llm',
-      'url': 'https://www.promptquorum.com/es/local-llms/best-ai-coding-assistant-local-llm?lang=es',
+      'url': 'https://www.promptquorum.com/es/es/local-llms/best-ai-coding-assistant-local-llm',
       'headline': 'Mejor asistente de código IA para LLM local 2026: Cursor vs Continue.dev vs Cody comparados',
       'description': 'Compara 5 asistentes de código IA con soporte LLM local nativo: Ollama, LM Studio, privacidad, precios. Cursor vs Continue.dev vs Cody—verificado mayo 2026.',
       'datePublished': '2026-05-17',

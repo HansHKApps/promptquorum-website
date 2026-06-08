@@ -866,7 +866,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Die Multi-Modell-Cross-Check-Methode',
           content: [
             '**Das Durchführen des gleichen Prompts durch mehrere Modelle gleichzeitig reduziert die Chance, eine halluzinierte Dependency oder unsichere Implementierung zu akzeptieren — weil unabhängige Modelle selten die gleiche spezifische falsche Detail halluzinieren.**',
-            '[PromptQuorum](/?lang=de) ist ein Multi-Modell-KI-Dispatch-Tool, das einen Prompt gleichzeitig an mehrere KI-Provider sendet und alle Responses nebeneinander zeigt. Wenn GPT-5, Claude 4.8 Opus und Gemini 3 Pro den gleichen Package-Namen empfehlen, ist diese Konvergenz ein starkes Signal, dass das Package echt ist. Wenn sie bei einem Implementierungs-Ansatz uneins sind, ist diese Divergenz ein Signal, vor dem Committing zu untersuchen.',
+            '[PromptQuorum](/de) ist ein Multi-Modell-KI-Dispatch-Tool, das einen Prompt gleichzeitig an mehrere KI-Provider sendet und alle Responses nebeneinander zeigt. Wenn GPT-5, Claude 4.8 Opus und Gemini 3 Pro den gleichen Package-Namen empfehlen, ist diese Konvergenz ein starkes Signal, dass das Package echt ist. Wenn sie bei einem Implementierungs-Ansatz uneins sind, ist diese Divergenz ein Signal, vor dem Committing zu untersuchen.',
           ],
         },
         parameters: {
@@ -1049,7 +1049,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Seguridad del código' },
         ],
         image: 'https://www.promptquorum.com/es/api/og/write-better-code-with-ai',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/write-better-code-with-ai?lang=es',
+        url: 'https://www.promptquorum.com/es/es/prompt-engineering/write-better-code-with-ai',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       howToSchema: {
@@ -1324,7 +1324,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Segurança de código' },
         ],
         image: 'https://www.promptquorum.com/pt/api/og/write-better-code-with-ai',
-        url: 'https://www.promptquorum.com/pt/prompt-engineering/write-better-code-with-ai?lang=pt',
+        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/write-better-code-with-ai',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       howToSchema: {
@@ -1883,7 +1883,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'La Méthode de Vérification Multi-Modèles',
           content: [
             '**Exécuter le même prompt à travers plusieurs modèles simultanément réduit la chance d\'accepter une dépendance halluccinée ou une implémentation insécurisée — car les modèles indépendants fabriquent rarement le même détail incorrect spécifique.**',
-            '[PromptQuorum](/?lang=fr) est un outil de dispatch multi-modèles qui envoie un prompt à plusieurs fournisseurs d\'IA simultanément et affiche toutes les réponses côte à côte. Quand GPT-5, Claude 4.8 Opus et Gemini 3 Pro recommandent le même nom de package, cette convergence est un signal fort que le package est réel. Quand ils ne sont pas d\'accord sur une approche d\'implémentation, cette divergence est un signal à investiguer avant de s\'engager.',
+            '[PromptQuorum](/fr) est un outil de dispatch multi-modèles qui envoie un prompt à plusieurs fournisseurs d\'IA simultanément et affiche toutes les réponses côte à côte. Quand GPT-5, Claude 4.8 Opus et Gemini 3 Pro recommandent le même nom de package, cette convergence est un signal fort que le package est réel. Quand ils ne sont pas d\'accord sur une approche d\'implémentation, cette divergence est un signal à investiguer avant de s\'engager.',
           ],
         },
         parameters: {
@@ -2337,7 +2337,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'マルチモデル相互検証法',
           content: [
             '**同じプロンプトを複数のモデルで同時に実行することで、幻覚化された依存関係または不安全な実装を受け入れる確率が低減されます。**',
-            '[PromptQuorum](/?lang=ja) は複数モデル AI ディスパッチツールで、1つのプロンプトを複数の AI プロバイダーに同時に送信し、すべての応答を並べて表示します。複数のモデルが同じパッケージ名を推奨する場合、その収束は強い信号。',
+            '[PromptQuorum](/ja) は複数モデル AI ディスパッチツールで、1つのプロンプトを複数の AI プロバイダーに同時に送信し、すべての応答を並べて表示します。複数のモデルが同じパッケージ名を推奨する場合、その収束は強い信号。',
           ],
         },
         parameters: {
@@ -2818,7 +2818,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '多模型交叉检验方法',
           content: [
             '**同时通过多个模型运行相同的提示词会减少接受幻觉依赖或不安全实现的机会 — 因为独立的模型很少会编造相同的具体错误细节。**',
-            '[PromptQuorum](/?lang=zh)是一个多模型AI分发工具，它同时向多个AI提供商发送一个提示词并并排显示所有响应。当GPT-5、Claude 4.8 Opus和Gemini 3 Pro推荐相同的包名称时，这种汇聚是包是真实的一个强信号。当它们在实现方法上不同意时，那种分歧是部署前调查的信号。',
+            '[PromptQuorum](/zh)是一个多模型AI分发工具，它同时向多个AI提供商发送一个提示词并并排显示所有响应。当GPT-5、Claude 4.8 Opus和Gemini 3 Pro推荐相同的包名称时，这种汇聚是包是真实的一个强信号。当它们在实现方法上不同意时，那种分歧是部署前调查的信号。',
           ],
         },
         parameters: {

@@ -797,7 +797,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Ejecutar LLMs Locales en un Portátil: RAM, Velocidad y Temperatura 2026',
         'description': 'Ejecuta LLMs locales en portátiles con 8 GB de RAM. Cubre los mejores modelos (Llama 3.2 3B, Mistral Small, Qwen3 7B), correcciones de throttling térmico, optimización de batería y configuración de cuantización Q4_K_M.',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-on-laptop?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/local-llm-on-laptop',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

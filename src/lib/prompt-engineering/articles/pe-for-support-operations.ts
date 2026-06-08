@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/prompt-engineering/pe-for-support-operations?lang=en',
+      url: 'https://www.promptquorum.com/prompt-engineering/pe-for-support-operations',
       headline: 'Prompt Engineering for Support Operations: Consistent, Accurate Response Templates',
       description: 'How support teams design prompts for triage, escalation, resolution, and follow-up — including tone controls, policy compliance guardrails, and human handoff patterns.',
       datePublished: '2026-05-02',
@@ -404,7 +404,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/pe-for-support-operations?lang=es',
+      url: 'https://www.promptquorum.com/es/es/prompt-engineering/pe-for-support-operations',
       headline: 'Prompt engineering para operaciones de soporte: plantillas de respuesta consistentes y precisas',
       description: 'Cómo los equipos de soporte diseñan prompts para triage, escalación, resolución y seguimiento — incluyendo controles de tono, salvaguardas de cumplimiento de políticas y patrones de transferencia a personas.',
       datePublished: '2026-05-02',
@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/pt/prompt-engineering/pe-for-support-operations?lang=pt',
+      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/pe-for-support-operations',
       headline: 'Prompt engineering para operações de suporte: modelos de resposta consistentes e precisos',
       description: 'Como as equipes de suporte projetam prompts para triagem, escalada, resolução e acompanhamento — incluindo controles de tom, salvaguardas de conformidade de políticas e padrões de transferência para humanos.',
       datePublished: '2026-05-02',

@@ -545,7 +545,7 @@ schema: {
         description: 'Los LLMs locales están 10–20 puntos por debajo de GPT-5.5 en benchmarks de razonamiento, requieren 16 GB+ de RAM para modelos 7B y no tienen acceso a la web. Las 6 limitaciones con datos de benchmarks y orientación para decidir entre local y nube.',
         datePublished: '2026-04-04',
         dateModified: '2026-04-18',
-        url: 'https://www.promptquorum.com/es/local-llms/local-llm-limitations?lang=es',
+        url: 'https://www.promptquorum.com/es/es/local-llms/local-llm-limitations',
         inLanguage: 'es',
         proficiencyLevel: 'Beginner',
         about: [
@@ -1399,14 +1399,14 @@ schema: {
             '- ✓ JA → **Nutzen Sie lokales 70B.** Qualität entspricht Cloud, null fortlaufende Kosten.',
             '- ✗ NEIN → **Nutzen Sie Cloud.** Praktischer als schwaches Lokal-Setup.',
             '',
-            '**F4: Immer noch unsicher?** [Testen Sie beide mit PromptQuorum](/?lang=de).',
+            '**F4: Immer noch unsicher?** [Testen Sie beide mit PromptQuorum](/de).',
           ],
         },
         promptquorumCta: {
           id: 'test-both',
           title: 'Immer noch unsicher? Testen Sie vorher',
           content: [
-            'Wenn Sie zwischen Lokal und Cloud für Ihren spezifischen Task unsicher sind, nutzen Sie [PromptQuorum kostenlos](/?lang=de) um:',
+            'Wenn Sie zwischen Lokal und Cloud für Ihren spezifischen Task unsicher sind, nutzen Sie [PromptQuorum kostenlos](/de) um:',
           ],
           items: [
             'Ein Prompt gleichzeitig zu Ihrem lokalen Ollama und 25+ Cloud-Modellen senden',
@@ -2037,14 +2037,14 @@ schema: {
             '- ✓ OUI → **Utilisez local 70B.** Qualité égale cloud, zéro coûts continus.',
             '- ✗ NON → **Utilisez cloud.** Plus pratique que local faible.',
             '',
-            '**Q4 : Toujours incertain ?** [Testez les deux avec PromptQuorum](/?lang=fr).',
+            '**Q4 : Toujours incertain ?** [Testez les deux avec PromptQuorum](/fr).',
           ],
         },
         promptquorumCta: {
           id: 'test-both',
           title: 'Toujours indécis ? Testez avant de vous engager',
           content: [
-            'Si vous êtes déchiré entre local et cloud pour votre tâche spécifique, utilisez [PromptQuorum gratuitement](/?lang=fr) pour:',
+            'Si vous êtes déchiré entre local et cloud pour votre tâche spécifique, utilisez [PromptQuorum gratuitement](/fr) pour:',
           ],
           items: [
             'Envoyer un prompt à la fois à votre Ollama local ET 25+ modèles cloud',
@@ -2676,14 +2676,14 @@ schema: {
             '- ✓ YES → **ローカル70B使用.** 品質がクラウド相当、継続コスト$0。',
             '- ✗ NO → **クラウド使用.** パワー不足ローカルより実用的。',
             '',
-            '**Q4：まだ迷っている?** [PromptQuorum両方テスト](/?lang=ja).',
+            '**Q4：まだ迷っている?** [PromptQuorum両方テスト](/ja).',
           ],
         },
         promptquorumCta: {
           id: 'test-both',
           title: 'まだ迷っている?実行前にテストしてください',
           content: [
-            'ローカルとクラウドのあなたの特定のタスク決定が難しい場合、[PromptQuorum無料](/?lang=ja)で使用して:',
+            'ローカルとクラウドのあなたの特定のタスク決定が難しい場合、[PromptQuorum無料](/ja)で使用して:',
           ],
           items: [
             'ローカルOllama AND 25+クラウドモデルに同時にpromptを送信',
@@ -3215,14 +3215,14 @@ schema: {
             '- ✓ 是 → **使用本地70B。** 质量与云相当，无持续成本。',
             '- ✗ 否 → **使用云。** 比低配本地更实用。',
             '',
-            '**问题4：仍然不确定?** [用PromptQuorum测试两者](/?lang=zh)。',
+            '**问题4：仍然不确定?** [用PromptQuorum测试两者](/zh)。',
           ],
         },
         promptquorumCta: {
           id: 'test-both',
           title: '还在犹豫？承诺前先测试',
           content: [
-            '如果您为自己的特定任务在本地和云之间纠结，使用[PromptQuorum免费](/?lang=zh):',
+            '如果您为自己的特定任务在本地和云之间纠结，使用[PromptQuorum免费](/zh):',
           ],
           items: [
             '同时将一个提示发送到本地Ollama和25+个云模型',

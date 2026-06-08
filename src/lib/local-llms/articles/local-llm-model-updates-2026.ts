@@ -490,7 +490,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Actualizaciones de modelos LLM locales 2026: Todos los lanzamientos open-weight importantes del año',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-model-updates-2026?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/local-llm-model-updates-2026',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -516,7 +516,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Principales lanzamientos de LLM locales del Q1 2026',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-model-updates-2026?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/local-llm-model-updates-2026',
         'numberOfItems': 4,
         'itemListElement': [
           {

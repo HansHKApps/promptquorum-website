@@ -9,39 +9,7 @@ function detectLangFromHeader(acceptLanguage: string, supported: string[]): stri
     .find(l => supported.includes(l)) ?? null
 }
 
-// Clusters routed via path-prefix locales for ALL non-EN langs (separate src/app/{de,fr,ja,zh}/<cluster>/ trees).
-// Keep in sync with PATH_LOCALE_CLUSTERS in src/components/LanguageSwitcher.tsx,
-// NOINDEX_PATH_PREFIXES in src/app/layout.tsx, and EXCLUDED_PATH_PREFIXES in src/app/sitemap.ts.
-const PATH_LOCALE_CLUSTERS = ['power-local-llm', 'prompt-bites', 'smart-home']
-
-// Clusters routed via /ja/, /zh/, /de/, and /fr/ path-prefixes for Japanese, Chinese, German, and French.
-// All non-EN languages now use path-prefix routing.
-// Keep in sync with PATH_PREFIX_LANG_CLUSTERS in src/components/LanguageSwitcher.tsx.
-const PATH_PREFIX_LANG_CLUSTERS = [
-  'prompt-engineering',
-  'local-llms',
-  'blog',
-  'frameworks',
-  'compare',
-  'features',
-  'how-it-works',
-  'faq',
-  'about',
-  'privacy',
-]
-
 const PATH_LOCALE_RE = new RegExp(`^/(de|fr|ja|zh|es|pt|ar)(/|$)`)
-const CLUSTER_PATH_RE = new RegExp(
-  `^(?:/(de|fr|ja|zh|es|pt|ar))?/(${PATH_LOCALE_CLUSTERS.join('|')})(/|$)`
-)
-// Matches /ja/, /zh/, /de/, /fr/, /es/, /pt/, or /ar/ <pathPrefixLangCluster>/... or /<pathPrefixLangCluster>/... (without a locale prefix)
-const PATH_PREFIX_LANG_CLUSTER_RE = new RegExp(
-  `^(?:/(de|fr|ja|zh|es|pt|ar))?/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/|$)`
-)
-// Matches /ja/, /zh/, /de/, /fr/, /es/, /pt/, or /ar/ <pathPrefixLangCluster>/... (already prefixed — used to detect already-migrated URLs)
-const PATH_PREFIX_LANG_PREFIXED_RE = new RegExp(
-  `^/(de|fr|ja|zh|es|pt|ar)/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/|$)`
-)
 
 export function middleware(request: NextRequest) {
   const url = request.nextUrl
@@ -80,12 +48,37 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(redirectUrl, 301)
   }
 
-  // FIX 3: Special case for ?lang=jp (country code) → 301 to ?lang=ja (language code)
-  if (langParam === 'jp' && !isApiRoute && !isCronRoute) {
-    const redirectUrl = url.clone()
-    redirectUrl.searchParams.set('lang', 'ja')
-    console.log(`[Middleware] 301 redirect (jp→ja): ${url.toString()} -> ${redirectUrl.toString()}`)
-    return NextResponse.redirect(redirectUrl, 301)
+  // LANG PARAM REDIRECT: convert any ?lang=XX URL to the canonical subdirectory form.
+  // ?lang=en or unrecognised lang → strip param, stay at current path.
+  // ?lang=jp normalised to ja (country-code alias).
+  // 'ar' is excluded from valid non-EN langs (page tree not yet live).
+  // Returns 308 (permanent, method-preserving).
+  if (langParam !== null && !isApiRoute && !isCronRoute) {
+    const LANG_ALIASES: Record<string, string> = { jp: 'ja' }
+    const resolvedLang = LANG_ALIASES[langParam] ?? langParam
+    const pathHasLangPrefix = PATH_LOCALE_RE.test(url.pathname)
+
+    // Build remaining query string without the lang param
+    const newParams = new URLSearchParams(url.search)
+    newParams.delete('lang')
+    const remainingQuery = newParams.toString()
+    const querySuffix = remainingQuery ? `?${remainingQuery}` : ''
+
+    let target: string
+    if (pathHasLangPrefix) {
+      // Path already locale-prefixed (e.g., /de/about?lang=de) — drop stale param, trust the path
+      target = url.pathname + querySuffix
+    } else if (VALID_NON_EN_LANGS.includes(resolvedLang)) {
+      // Valid non-EN lang, unlocalized path — add the lang prefix
+      const cleanPathname = url.pathname === '/' ? '' : url.pathname
+      target = `/${resolvedLang}${cleanPathname}${querySuffix}`
+    } else {
+      // EN or unrecognized lang — strip the param, keep the path
+      target = url.pathname + querySuffix
+    }
+
+    console.log(`[Middleware] 308 redirect (?lang=${langParam}→canonical): ${url.toString()} -> ${target}`)
+    return NextResponse.redirect(new URL(target, url.origin), 308)
   }
 
   // Auto-detect browser language on first visit (no cookie, no explicit lang selection).
@@ -107,68 +100,6 @@ export function middleware(request: NextRequest) {
       console.log(`[Middleware] 302 redirect (Accept-Language auto-detect ${detected}): ${url.toString()} -> ${redirectUrl.toString()}`)
       return res
     }
-  }
-
-  // PATH_LOCALE_CLUSTERS (all langs): rewrite legacy ?lang= links to path prefix.
-  // /power-local-llm/foo?lang=de → /de/power-local-llm/foo
-  // Only fires when the path is NOT already locale-prefixed.
-  const clusterMatch = url.pathname.match(CLUSTER_PATH_RE)
-  const onClusterPath = !!clusterMatch
-  const alreadyLocalePrefixed = !!clusterMatch?.[1]
-  if (
-    onClusterPath &&
-    !alreadyLocalePrefixed &&
-    langParam &&
-    VALID_NON_EN_LANGS.includes(langParam) &&
-    !isApiRoute &&
-    !isCronRoute
-  ) {
-    const redirectUrl = url.clone()
-    redirectUrl.pathname = `/${langParam}${url.pathname}`
-    redirectUrl.searchParams.delete('lang')
-    console.log(`[Middleware] 301 redirect (cluster ?lang=→/lang/): ${url.toString()} -> ${redirectUrl.toString()}`)
-    return NextResponse.redirect(redirectUrl, 301)
-  }
-
-  // PATH_PREFIX_LANG_CLUSTERS: redirect ?lang=ja, ?lang=zh, ?lang=de, and ?lang=fr to /ja/, /zh/, /de/, and /fr/ path prefixes.
-  // All non-EN languages now use path-prefix routing.
-  // Handles:
-  //   /blog/slug?lang=ja          → /ja/blog/slug
-  //   /compare?lang=de            → /de/compare
-  //   /?lang=fr                   → /fr  (home page special case)
-  if (langParam !== null && VALID_NON_EN_LANGS.includes(langParam) && !isApiRoute && !isCronRoute) {
-    const alreadyPrefixed = PATH_PREFIX_LANG_PREFIXED_RE.test(url.pathname)
-    const isHome = url.pathname === '/' || url.pathname === ''
-
-    if (isHome) {
-      // Home: /?lang=ja → /ja, /?lang=zh → /zh
-      const redirectUrl = url.clone()
-      redirectUrl.pathname = `/${langParam}`
-      redirectUrl.searchParams.delete('lang')
-      console.log(`[Middleware] 301 redirect (home ?lang=${langParam}→/${langParam}): ${url.toString()} -> ${redirectUrl.toString()}`)
-      return NextResponse.redirect(redirectUrl, 301)
-    }
-
-    const onPrefixLangCluster = PATH_PREFIX_LANG_CLUSTER_RE.test(url.pathname)
-    if (onPrefixLangCluster && !alreadyPrefixed) {
-      // Cluster path: /blog/slug?lang=ja → /ja/blog/slug, /blog/slug?lang=zh → /zh/blog/slug
-      const redirectUrl = url.clone()
-      redirectUrl.pathname = `/${langParam}${url.pathname}`
-      redirectUrl.searchParams.delete('lang')
-      console.log(`[Middleware] 301 redirect (prefix-lang cluster ?lang=${langParam}→/${langParam}/): ${url.toString()} -> ${redirectUrl.toString()}`)
-      return NextResponse.redirect(redirectUrl, 301)
-    }
-  }
-
-  // FIX 1 & 2: 301-redirect ?lang=en, ?lang= (empty), or other invalid langs to the bare URL.
-  // English is served at the default path; any non-translatable lang param duplicates the
-  // canonical URL and triggers GSC "Duplicate without user-selected canonical".
-  // Skip API routes — the OG image generator depends on an explicit ?lang=en.
-  if (langParam !== null && !VALID_NON_EN_LANGS.includes(langParam) && !isApiRoute && !isCronRoute) {
-    const redirectUrl = url.clone()
-    redirectUrl.searchParams.delete('lang')
-    console.log(`[Middleware] 301 redirect (remove lang): ${url.toString()} -> ${redirectUrl.toString()}`)
-    return NextResponse.redirect(redirectUrl, 301)
   }
 
   const response = NextResponse.next()

@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
         dateModified: '2026-06-03',
-        url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-tools-2026?lang=en',
+        url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-tools-2026',
         inLanguage: 'en',
         proficiencyLevel: 'Intermediate',
         about: [
@@ -738,7 +738,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     datePublished: '2026-04-10',
     dateModified: '2026-06-03',
-    url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-engineering-tools-2026?lang=es',
+    url: 'https://www.promptquorum.com/es/es/prompt-engineering/best-prompt-engineering-tools-2026',
     inLanguage: 'es',
     proficiencyLevel: 'Intermediate',
     about: [
@@ -1079,7 +1079,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     datePublished: '2026-04-10',
     dateModified: '2026-06-03',
-    url: 'https://www.promptquorum.com/pt/prompt-engineering/best-prompt-engineering-tools-2026?lang=pt',
+    url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/best-prompt-engineering-tools-2026',
     inLanguage: 'pt-BR',
     proficiencyLevel: 'Intermediate',
     about: [

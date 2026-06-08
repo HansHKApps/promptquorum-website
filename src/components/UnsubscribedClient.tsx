@@ -39,7 +39,7 @@ const COPY: Partial<Record<Lang, { ok: { title: string; body: string }; invalid:
 export function UnsubscribedClient({ lang, status }: { lang: Lang; status: Status }) {
   const c = (COPY[lang as keyof typeof COPY] ?? COPY.en)!
   const msg = c[status]
-  const homeHref = lang === 'en' ? '/' : `/?lang=${lang}`
+  const homeHref = lang === 'en' ? '/' : `/${lang}`
 
   return (
     <main id="main" className="min-h-screen flex items-center justify-center bg-white px-4 py-16">

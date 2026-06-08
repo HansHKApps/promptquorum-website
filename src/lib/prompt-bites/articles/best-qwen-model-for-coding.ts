@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'TechArticle',
       headline: 'Best Qwen Model for Coding? 7B vs 14B vs 32B Guide 2026',
       description: 'Qwen3-Coder size comparison: 7B at 5.5 GB VRAM (79.7% HumanEval), 14B at 9.5 GB (88.0%), 32B at 20.5 GB (91.5%). Pick the right size for your hardware.',
-      url: 'https://www.promptquorum.com/prompt-bites/best-qwen-model-for-coding?lang=en',
+      url: 'https://www.promptquorum.com/prompt-bites/best-qwen-model-for-coding',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'GPU en la nube UE y RGPD 2026: Guía de cumplimiento para IA',
       description: 'GPU en la nube en la UE conforme al RGPD: compara OVHcloud, Scaleway y Hetzner, residencia de datos, cláusulas contractuales y costes para IA en 2026.',
-      url: 'https://www.promptquorum.com/es/local-llms/eu-cloud-gpu-gdpr-2026?lang=es',
+      url: 'https://www.promptquorum.com/es/es/local-llms/eu-cloud-gpu-gdpr-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

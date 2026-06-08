@@ -43,13 +43,13 @@ export default async function HowItWorksPage({ searchParams }: PageProps) {
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
   // Build language-specific schema
-  const langSuffix = selectedLang === 'en' ? '' : `?lang=${selectedLang}`
+  const langPrefix = selectedLang === 'en' ? '' : `/${selectedLang}`
   const schemaArray = [
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       'name': 'How PromptQuorum Works — Write, Optimize, Dispatch, Quorum',
-      'url': `https://www.promptquorum.com/how-it-works${langSuffix}`,
+      'url': `https://www.promptquorum.com${langPrefix}/how-it-works`,
       'inLanguage': toOutputLocale(selectedLang),
       'description': 'A complete guide to the PromptQuorum 4-stage workflow: structured prompt writing with 9 frameworks, LLM-powered optimization, one-click dispatch to 25+ AI services, and multi-model Quorum analysis.',
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
@@ -59,7 +59,7 @@ export default async function HowItWorksPage({ searchParams }: PageProps) {
       '@type': 'BreadcrumbList',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'How It Works', 'item': `https://www.promptquorum.com/how-it-works${langSuffix}` },
+        { '@type': 'ListItem', 'position': 2, 'name': 'How It Works', 'item': `https://www.promptquorum.com${langPrefix}/how-it-works` },
       ],
     },
     {

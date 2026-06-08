@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/constrained-prompting?lang=en',
+        url: 'https://www.promptquorum.com/prompt-engineering/constrained-prompting',
         inLanguage: 'en',
         headline: 'Constrained Prompting: Force AI Output Formats (2026)',
         description: 'What constrained prompting is, why it matters, and how to use it to make AI outputs predictable and safe in real workflows.',
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Format-Constraints funktionieren am besten mit einem Beispiel: zeigen Sie dem Modell das genaue JSON-Schema oder die Markdown-Struktur, die Sie benötigen.',
             'GPT-5.5, Claude Sonnet 4.6 und Gemini 3.1 Pro unterstützen alle Constrained Prompting — sowie API-Ebenen-Durchsetzung via Structured Outputs — reagieren aber unterschiedlich auf Prompt-Level-Constraints. Testen Sie über Modelle hinweg.',
             'Geconstraintetete Prompts sparen Überprüfungszeit: Ausgaben, die bereits Ihre erforderliche Struktur erfüllen, benötigen weniger menschliche Korrektur.',
-            'Verwenden Sie [PromptQuorum](https://www.promptquorum.com/?lang=de) um geconstraintetete Prompts über mehrere Modelle hinweg nebeneinander zu testen und Constraint-Einhaltung zu vergleichen.',
+            'Verwenden Sie [PromptQuorum](https://www.promptquorum.com/de) um geconstraintetete Prompts über mehrere Modelle hinweg nebeneinander zu testen und Constraint-Einhaltung zu vergleichen.',
           ],
         },
         quickFacts: {
@@ -589,7 +589,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               mistake: 'Constraints nicht über Modelle hinweg testen',
               problem: 'GPT-5.5, Claude Sonnet 4.6 und Gemini 3.1 Pro interpretieren die gleiche Constraint unterschiedlich. Ein Prompt, der auf einem funktioniert, kann auf einem anderen fehlschlagen.',
-              fix: 'Testen Sie Ihren geconstrainteten Prompt auf mindestens 2 Modellen vor dem Deployment. Nutzen Sie [PromptQuorum](https://www.promptquorum.com/?lang=de) für parallele Vergleiche.',
+              fix: 'Testen Sie Ihren geconstrainteten Prompt auf mindestens 2 Modellen vor dem Deployment. Nutzen Sie [PromptQuorum](https://www.promptquorum.com/de) für parallele Vergleiche.',
             },
             {
               mistake: 'Kein Beispiel neben der Constraint bereitstellen',
@@ -706,7 +706,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/constrained-prompting?lang=es',
+        url: 'https://www.promptquorum.com/es/es/prompt-engineering/constrained-prompting',
         inLanguage: 'es',
         headline: 'Constrained Prompting: Fuerza formatos de salida de IA (2026)',
         description: 'Qué es el constrained prompting, por qué importa y cómo usarlo para hacer que las salidas de IA sean predecibles y seguras en workflows reales.',
@@ -1036,7 +1036,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/pt/prompt-engineering/constrained-prompting?lang=pt',
+        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/constrained-prompting',
         inLanguage: 'pt-BR',
         headline: 'Constrained Prompting: Force formatos de saída de IA (2026)',
         description: 'O que é o constrained prompting, por que importa e como usá-lo para tornar as saídas de IA previsíveis e seguras em workflows reais.',
@@ -1424,7 +1424,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Les contraintes de format fonctionnent mieux avec un exemple : montrez au modèle le schéma JSON exact ou la structure Markdown que vous avez besoin.',
         'GPT-5.5, Claude Sonnet 4.6 et Gemini 3.1 Pro supportent tous le prompting avec contraintes — y compris l\'enforcement au niveau API via Structured Outputs — mais réagissent différemment aux contraintes au niveau prompt. Testez sur plusieurs modèles.',
         'Les prompts contraints économisent du temps d\'examen : les outputs qui correspondent déjà à votre structure requise nécessitent moins de correction humaine.',
-        'Utilisez [PromptQuorum](https://www.promptquorum.com/?lang=fr) pour tester les prompts contraints sur plusieurs modèles côte à côte et comparer la conformité aux contraintes.',
+        'Utilisez [PromptQuorum](https://www.promptquorum.com/fr) pour tester les prompts contraints sur plusieurs modèles côte à côte et comparer la conformité aux contraintes.',
       ],
     },
     quickFacts: {

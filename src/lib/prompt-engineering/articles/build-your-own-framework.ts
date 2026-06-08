@@ -449,7 +449,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/build-your-own-framework?lang=es',
+      url: 'https://www.promptquorum.com/es/es/prompt-engineering/build-your-own-framework',
       inLanguage: 'es',
       headline: 'Construye tu propio framework de prompts: proceso de 5 pasos',
       description: 'Aprende cuándo y cómo construir un framework de prompts personalizado: proceso de 5 pasos desde el objetivo hasta la documentación. Con el ejemplo REPAIR para equipos de soporte.',
@@ -685,7 +685,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/pt/prompt-engineering/build-your-own-framework?lang=pt',
+      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/build-your-own-framework',
       inLanguage: 'pt-BR',
       headline: 'Construa seu próprio framework de prompts: processo de 5 etapas',
       description: 'Aprenda quando e como construir um framework de prompts personalizado: processo de 5 etapas desde o objetivo até a documentação. Com o exemplo REPAIR para equipes de suporte.',

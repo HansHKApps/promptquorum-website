@@ -45,9 +45,9 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
-  const langSuffix = selectedLang === 'en' ? '' : `?lang=${selectedLang}`
-  const canonicalUrl = `https://www.promptquorum.com/local-llms${langSuffix}`
-  const jsonLd = generateLocalLlmsJsonLd(selectedLang as any, canonicalUrl, langSuffix)
+  const langPrefix = selectedLang === 'en' ? '' : `/${selectedLang}`
+  const canonicalUrl = `https://www.promptquorum.com${langPrefix}/local-llms`
+  const jsonLd = generateLocalLlmsJsonLd(selectedLang as any, canonicalUrl, langPrefix)
   const hubData = buildLLMHubData()
 
   return (

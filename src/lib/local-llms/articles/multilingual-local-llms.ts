@@ -339,7 +339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/es/local-llms/multilingual-local-llms?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/multilingual-local-llms',
         'headline': 'Los mejores LLM locales multilingues 2026: Qwen3 vs Mistral',
         'description': 'Qwen3 domina los idiomas asiáticos (15-25% mejor que Llama en JMT-bench). Mistral competitivo en idiomas europeos. Comparativa de benchmarks y recomendaciones -- abril 2026.',
         'image': 'https://www.promptquorum.com/images/multilingual-llm-comparison-en.svg',
@@ -371,7 +371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        'url': 'https://www.promptquorum.com/es/local-llms/multilingual-local-llms?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/multilingual-local-llms',
         'name': 'Cómo evaluar la calidad multilingue en LLM locales',
         'step': [
           {
@@ -409,7 +409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/es/local-llms/multilingual-local-llms?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/multilingual-local-llms',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -456,7 +456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/es/local-llms/multilingual-local-llms?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/multilingual-local-llms',
         'name': 'Comparativa de idiomas para modelos de lenguaje locales',
         'description': 'Comparativa del soporte de idiomas en Qwen3, Llama, Mistral y Gemma para chino, japonés, coreano, francés, alemán, español, italiano y árabe.',
         'numberOfItems': 6,

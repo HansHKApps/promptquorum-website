@@ -53,7 +53,7 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
         {/* Header */}
         <div className="mb-12 pb-8 border-b border-gray-100">
           <p className="text-xs font-mono text-text-secondary mb-4">
-            <a href={`/?lang=${lang}`} className="hover:text-primary transition-colors">{t.privacyFooterHome}</a>
+            <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary transition-colors">{t.privacyFooterHome}</a>
             <span className="mx-2">/</span>
             <span>{t.privacyBreadcrumb}</span>
           </p>
@@ -351,8 +351,8 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
 
         {/* Footer nav */}
         <div className="mt-16 pt-8 border-t border-gray-100 flex flex-wrap gap-4 text-sm text-text-secondary">
-          <a href={`/?lang=${lang}`} className="hover:text-primary transition-colors">{t.privacyFooterHome}</a>
-          <a href={`/faq?lang=${lang}`} className="hover:text-primary transition-colors">{t.privacyFooterFaq}</a>
+          <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary transition-colors">{t.privacyFooterHome}</a>
+          <a href={lang === 'en' ? '/faq' : `/${lang}/faq`} className="hover:text-primary transition-colors">{t.privacyFooterFaq}</a>
           <a href={`mailto:${CONTROLLER_EMAIL}`} className="hover:text-primary transition-colors">{CONTROLLER_EMAIL}</a>
         </div>
 

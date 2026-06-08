@@ -387,7 +387,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-framework-for-teams?lang=es',
+      url: 'https://www.promptquorum.com/es/es/prompt-engineering/prompt-framework-for-teams',
       inLanguage: 'es',
       headline: 'Cómo elegir un framework de prompts para tu equipo: ¿CO-STAR, CRAFT, RISEN o personalizado?',
       description: 'Elige un framework de prompts para tu equipo: CO-STAR para tareas complejas, CRAFT para contenido, RISEN para instructional, RTF para salida estructurada. Matriz de decisión por caso de uso.',
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/pt/prompt-engineering/prompt-framework-for-teams?lang=pt',
+      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/prompt-framework-for-teams',
       inLanguage: 'pt-BR',
       headline: 'Como escolher um framework de prompts para sua equipe: CO-STAR, CRAFT, RISEN ou personalizado?',
       description: 'Escolha um framework de prompts para sua equipe: CO-STAR para tarefas complexas, CRAFT para conteúdo, RISEN para instrucional, RTF para saída estruturada. Matriz de decisão por caso de uso.',

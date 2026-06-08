@@ -35,7 +35,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-powered-research?lang=en',
+        url: 'https://www.promptquorum.com/prompt-engineering/ai-powered-research',
         inLanguage: 'en',
         headline: 'AI-Powered Research: Tools, Hallucination Rates, and Verification Workflows',
         description: 'AI-powered research tools reduce literature review time from weeks to hours — but hallucination rates of 9.2% make verification workflows mandatory. Covers Elicit, Consensus, Perplexity, scite.ai, multi-model cross-checking, and prompt frameworks for research.',
@@ -348,7 +348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Structured prompts produce more accurate and verifiable research outputs than open-ended questions — the difference is in specificity of scope, output format, and explicit instructions to cite sources.**',
             'The key mistake most researchers make is asking a research question exactly as they would type it into a search engine. Search engines rank documents; LLMs predict tokens. They require different input structures.',
-            'For the complete library of prompt structuring techniques — role assignment, output formatting, and constraint specification — see the [prompt engineering guide](/prompt-engineering/what-is-prompt-engineering?lang=en).',
+            'For the complete library of prompt structuring techniques — role assignment, output formatting, and constraint specification — see the [prompt engineering guide](/prompt-engineering/what-is-prompt-engineering).',
           ],
         },
         promptFramework: {
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'For research tasks involving fewer than 20 papers, all three models handle the full context. For systematic reviews covering 50—200 papers, Gemini 3.1 Pro\'s 1-million-token context window is the only current model capable of processing the full corpus in a single session.',
             'For truly large corpora (500+ papers), a RAG pipeline — where papers are chunked, embedded in a vector database, and retrieved by semantic similarity — is the correct architecture, not direct context injection.',
-            'For a deeper explanation of context windows and why models lose information mid-context, see [context windows explained](/prompt-engineering/context-window-limits-explained?lang=en).',
+            'For a deeper explanation of context windows and why models lose information mid-context, see [context windows explained](/prompt-engineering/context-window-limits-explained).',
           ],
         },
         lostInMiddle: {
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-powered-research?lang=es',
+        url: 'https://www.promptquorum.com/es/es/prompt-engineering/ai-powered-research',
         inLanguage: 'es',
         headline: 'Investigación con IA: Herramientas, Tasas de Alucinaciones y Flujos de Verificación',
         description: 'Las herramientas de investigación con IA reducen el tiempo de revisión bibliográfica de semanas a horas — pero las tasas de alucinación del 9,2 % hacen obligatorios los flujos de verificación. Cubre Elicit, Consensus, Perplexity, scite.ai, verificación cruzada multi-modelo y frameworks de prompts para investigación.',
@@ -1614,7 +1614,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/pt/prompt-engineering/ai-powered-research?lang=pt',
+        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/ai-powered-research',
         inLanguage: 'pt-BR',
         headline: 'Pesquisa com IA: Ferramentas, Taxas de Alucinação e Fluxos de Verificação',
         description: 'As ferramentas de pesquisa com IA reduzem o tempo de revisão bibliográfica de semanas para horas — mas as taxas de alucinação de 9,2% tornam os fluxos de verificação obrigatórios. Cobre Elicit, Consensus, Perplexity, scite.ai, verificação cruzada multi-modelo e frameworks de prompts para pesquisa.',

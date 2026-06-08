@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=en',
+        url: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do',
         inLanguage: 'en',
         headline: 'AI Limitations — What LLMs Can\'t Do',
         description: 'The eight structural limits of large language models: knowledge cutoffs, hallucination, no real-time data, context windows, no persistent memory, bias, and inability to verify outputs.',
@@ -784,7 +784,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-limitations-what-llms-cant-do?lang=es',
+        url: 'https://www.promptquorum.com/es/es/prompt-engineering/ai-limitations-what-llms-cant-do',
         inLanguage: 'es',
         headline: 'Limitaciones de la IA — Lo que los LLMs no pueden hacer',
         description: 'Los ocho límites estructurales de los grandes modelos de lenguaje: cortes de conocimiento, alucinación, sin datos en tiempo real, context windows, sin memoria persistente, sesgo y la incapacidad de verificar outputs.',
@@ -984,7 +984,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/pt/prompt-engineering/ai-limitations-what-llms-cant-do?lang=pt',
+        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/ai-limitations-what-llms-cant-do',
         inLanguage: 'pt-BR',
         headline: 'Limitações da IA — O que os LLMs não podem fazer',
         description: 'Os oito limites estruturais dos grandes modelos de linguagem: cortes de conhecimento, alucinação, sem dados em tempo real, janelas de contexto, sem memória persistente, viés e a incapacidade de verificar saídas.',

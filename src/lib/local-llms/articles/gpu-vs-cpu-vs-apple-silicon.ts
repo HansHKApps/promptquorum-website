@@ -527,7 +527,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'GPU vs CPU vs Apple Silicon 2026: CUDA, Metal y ancho de banda de memoria',
         'description': '¿Qué plataforma de cómputo elegir para LLMs locales? RTX 5090 (200 tok/s) vs M2 Ultra (60 tok/s, 70B nativo) vs CPU (5 tok/s). Ecosistema CUDA, ancho de banda de memoria, costes. Abril 2026.',
-        'url': 'https://www.promptquorum.com/es/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/gpu-vs-cpu-vs-apple-silicon',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-20',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting?lang=en',
+        url: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting',
         inLanguage: 'en',
         headline: 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
         description: 'What chain-of-thought prompting is, when it helps, and how to structure prompts so models show their reasoning clearly.',
@@ -253,12 +253,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Related Reading',
           items: [
-            '[What Is Prompt Engineering? A Complete Guide 2026](/prompt-engineering/what-is-prompt-engineering?lang=en)',
-            '[Structured Output & JSON Schema Prompting](/prompt-engineering/structured-output?lang=en)',
-            '[How to Reduce AI Hallucination](/prompt-engineering/reducing-hallucination?lang=en)',
-            '[Constrained Prompting: Limit Model Outputs](/prompt-engineering/constrained-prompting?lang=en)',
-            '[How to Build a Multi-Model Dispatch System](/prompt-engineering/multi-model-dispatch?lang=en)',
-            '[Prompt Testing & Evaluation Framework](/prompt-engineering/prompt-testing?lang=en)',
+            '[What Is Prompt Engineering? A Complete Guide 2026](/prompt-engineering/what-is-prompt-engineering)',
+            '[Structured Output & JSON Schema Prompting](/prompt-engineering/structured-output)',
+            '[How to Reduce AI Hallucination](/prompt-engineering/reducing-hallucination)',
+            '[Constrained Prompting: Limit Model Outputs](/prompt-engineering/constrained-prompting)',
+            '[How to Build a Multi-Model Dispatch System](/prompt-engineering/multi-model-dispatch)',
+            '[Prompt Testing & Evaluation Framework](/prompt-engineering/prompt-testing)',
             '[Cadeia de Raciocínio em Prompts (Português)](/pt/prompt-engineering/chain-of-thought-prompting) — versão em português deste guia',
           ],
         },
@@ -867,7 +867,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/es/prompt-engineering/chain-of-thought-prompting?lang=es',
+    url: 'https://www.promptquorum.com/es/es/prompt-engineering/chain-of-thought-prompting',
     inLanguage: 'es',
     headline: 'Chain-of-Thought Prompting: Haz que la IA muestre su razonamiento',
     description: 'Qué es el chain-of-thought prompting, cuándo ayuda y cómo estructurar prompts para que los modelos muestren su razonamiento con claridad.',
@@ -1275,7 +1275,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/pt/prompt-engineering/chain-of-thought-prompting?lang=pt',
+    url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/chain-of-thought-prompting',
     inLanguage: 'pt-BR',
     headline: 'Chain-of-Thought Prompting: Faça a IA mostrar seu raciocínio',
     description: 'O que é o chain-of-thought prompting, quando ajuda e como estruturar prompts para que os modelos mostrem seu raciocínio com clareza.',

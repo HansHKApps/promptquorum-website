@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'TechArticle',
       headline: 'DeepSeek V3 Local Hardware Requirements: Can You Run It?',
       description: 'DeepSeek V3 (671B MoE) needs ~400 GB RAM locally at Q4_K_M — not viable on consumer hardware. Practical distilled alternatives at every VRAM tier.',
-      url: 'https://www.promptquorum.com/prompt-bites/deepseek-v3-local-hardware-requirements?lang=en',
+      url: 'https://www.promptquorum.com/prompt-bites/deepseek-v3-local-hardware-requirements',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       headline: 'Best AI Text-to-Speech for Content Creators 2026',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      url: 'https://www.promptquorum.com/prompt-bites/best-ai-text-to-speech-for-content-creators?lang=en',
+      url: 'https://www.promptquorum.com/prompt-bites/best-ai-text-to-speech-for-content-creators',
       inLanguage: 'en',
     },
   },

@@ -1193,10 +1193,10 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt', Hu
     lastUpdatedLabel: 'Zuletzt aktualisiert:',
     relatedReadingHeading: 'Weiterführende Literatur',
     relatedReadingLinks: [
-      { href: '/local-llms/local-llm-hardware-guide-2026?lang=de', label: 'Lokale LLM-Hardware-Guide 2026' },
-      { href: '/local-llms/best-local-llms-2026?lang=de', label: 'Die besten lokalen LLMs 2026' },
-      { href: '/local-llms/llamacpp-vs-ollama-vs-vllm?lang=de', label: 'llama.cpp vs. Ollama vs. vLLM' },
-      { href: '/prompt-engineering/rag-explained?lang=de', label: 'RAG erklärt' },
+      { href: '/de/local-llms/local-llm-hardware-guide-2026', label: 'Lokale LLM-Hardware-Guide 2026' },
+      { href: '/de/local-llms/best-local-llms-2026', label: 'Die besten lokalen LLMs 2026' },
+      { href: '/de/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp vs. Ollama vs. vLLM' },
+      { href: '/de/prompt-engineering/rag-explained', label: 'RAG erklärt' },
     ],
   },
   fr: {
@@ -1241,10 +1241,10 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt', Hu
     lastUpdatedLabel: 'Última actualización:',
     relatedReadingHeading: 'Lecturas Relacionadas',
     relatedReadingLinks: [
-      { href: '/local-llms/local-llm-hardware-guide-2026?lang=es', label: 'Guía de Hardware para LLM Local 2026' },
-      { href: '/local-llms/best-local-llms-2026?lang=es', label: 'Mejores LLMs Locales en 2026' },
-      { href: '/local-llms/llamacpp-vs-ollama-vs-vllm?lang=es', label: 'llama.cpp vs Ollama vs vLLM' },
-      { href: '/prompt-engineering/rag-explained?lang=es', label: 'RAG Explicado' },
+      { href: '/es/local-llms/local-llm-hardware-guide-2026', label: 'Guía de Hardware para LLM Local 2026' },
+      { href: '/es/local-llms/best-local-llms-2026', label: 'Mejores LLMs Locales en 2026' },
+      { href: '/es/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp vs Ollama vs vLLM' },
+      { href: '/es/prompt-engineering/rag-explained', label: 'RAG Explicado' },
     ],
   },
   pt: {
@@ -1253,10 +1253,10 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt', Hu
     lastUpdatedLabel: 'Última atualização:',
     relatedReadingHeading: 'Leituras Relacionadas',
     relatedReadingLinks: [
-      { href: '/local-llms/local-llm-hardware-guide-2026?lang=pt', label: 'Guia de Hardware para LLM Local 2026' },
-      { href: '/local-llms/best-local-llms-2026?lang=pt', label: 'Melhores LLMs Locais em 2026' },
-      { href: '/local-llms/llamacpp-vs-ollama-vs-vllm?lang=pt', label: 'llama.cpp vs Ollama vs vLLM' },
-      { href: '/prompt-engineering/rag-explained?lang=pt', label: 'RAG Explicado' },
+      { href: '/pt/local-llms/local-llm-hardware-guide-2026', label: 'Guia de Hardware para LLM Local 2026' },
+      { href: '/pt/local-llms/best-local-llms-2026', label: 'Melhores LLMs Locais em 2026' },
+      { href: '/pt/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp vs Ollama vs vLLM' },
+      { href: '/pt/prompt-engineering/rag-explained', label: 'RAG Explicado' },
     ],
   },
 }

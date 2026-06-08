@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms?lang=en',
+        'url': 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms',
         headline: 'Open Source vs Proprietary LLMs',
         description: 'Open-weights models like LLaMA 3.1 and Mistral offer control and cost savings; proprietary models like GPT-5.5 and Claude Opus 4.8 deliver frontier performance.',
         datePublished: '2026-03-24',
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/es/prompt-engineering/open-source-vs-proprietary-llms?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/prompt-engineering/open-source-vs-proprietary-llms',
         headline: 'LLMs de código abierto vs propietarios',
         description: 'Los modelos open-weights como LLaMA 4 y Mistral ofrecen control y ahorro de costos; los modelos propietarios como GPT-5.5 y Claude Opus 4.8 ofrecen rendimiento de frontera.',
         datePublished: '2026-03-24',
@@ -1211,7 +1211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Open-Weights vs LLMs Propietarios — Comparación Completa',
         description: 'Comparación en 10 dimensiones de LLMs open-weights y propietarios que cubre costo, rendimiento, privacidad, fine-tuning, context window, soberanía, velocidad, soporte, actualizaciones y vendor lock-in.',
         numberOfItems: 10,
-        url: 'https://www.promptquorum.com/es/prompt-engineering/open-source-vs-proprietary-llms?lang=es',
+        url: 'https://www.promptquorum.com/es/es/prompt-engineering/open-source-vs-proprietary-llms',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Modelo de costos', description: 'Open-weights: $0,50–2,00/hr de infraestructura; gratis una vez desplegado, sin facturación por token. Propietarios: facturación por API $0,15–5,00 por 1M tokens de entrada; $0,30–15,00 por 1M tokens de salida.' },
           { '@type': 'ListItem', position: 2, name: 'Techo de rendimiento', description: 'Open-weights (LLaMA 70B, Mistral Large): MMLU 80–82 %, competitivos en tareas específicas. Propietarios (GPT-5.5, Claude, Gemini): MMLU 88–90 %, mayor techo en razonamiento y multimodal.' },
@@ -1427,7 +1427,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/pt/prompt-engineering/open-source-vs-proprietary-llms?lang=pt',
+        'url': 'https://www.promptquorum.com/pt/pt/prompt-engineering/open-source-vs-proprietary-llms',
         headline: 'LLMs de código aberto vs proprietários',
         description: 'Os modelos open-weights como LLaMA 4 e Mistral oferecem controle e economia de custos; os modelos proprietários como GPT-5.5 e Claude Opus 4.8 oferecem desempenho de fronteira.',
         datePublished: '2026-03-24',
@@ -1467,7 +1467,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Open-Weights vs LLMs Proprietários — Comparação Completa',
         description: 'Comparação em 10 dimensões de LLMs open-weights e proprietários cobrindo custo, desempenho, privacidade, fine-tuning, context window, soberania, velocidade, suporte, atualizações e vendor lock-in.',
         numberOfItems: 10,
-        url: 'https://www.promptquorum.com/pt/prompt-engineering/open-source-vs-proprietary-llms?lang=pt',
+        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/open-source-vs-proprietary-llms',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Modelo de custos', description: 'Open-weights: $0,50–2,00/hr de infraestrutura; gratuito após implantado, sem cobrança por token. Proprietários: cobrança por API $0,15–5,00 por 1M tokens de entrada; $0,30–15,00 por 1M tokens de saída.' },
           { '@type': 'ListItem', position: 2, name: 'Teto de desempenho', description: 'Open-weights (LLaMA 70B, Mistral Large): MMLU 80–82%, competitivos em tarefas específicas. Proprietários (GPT-5.5, Claude, Gemini): MMLU 88–90%, teto maior em raciocínio e multimodal.' },
@@ -2102,12 +2102,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keyTerms: {
           title: 'Termes clés',
           items: [
-            '[Open-Weights](/prompt-engineering/prompt-engineering-glossary#open-weights?lang=fr) — Les poids du modèle sont téléchargeables mais peuvent être restreints par licence',
-            '[Fine-tuning](/prompt-engineering/prompt-engineering-glossary#fine-tuning?lang=fr) — Réentraînement des poids du modèle sur des données spécifiques à un domaine',
-            '[LoRA](/prompt-engineering/prompt-engineering-glossary#lora?lang=fr) — Fine-tuning efficace via adaptation de faible rang (5–10 % du coût d\'entraînement complet)',
-            '[RAG](/prompt-engineering/prompt-engineering-glossary#rag?lang=fr) — Retrieval-Augmented Generation ; ancrage des sorties LLM dans des documents externes',
-            '[Fenêtre de contexte](/prompt-engineering/prompt-engineering-glossary#context-window?lang=fr) — Capacité maximale en tokens pour l\'entrée + la sortie combinées',
-            '[VRAM](/prompt-engineering/prompt-engineering-glossary#vram?lang=fr) — Mémoire GPU requise pour l\'inférence du modèle',
+            '[Open-Weights](/fr/prompt-engineering/prompt-engineering-glossary#open-weights) — Les poids du modèle sont téléchargeables mais peuvent être restreints par licence',
+            '[Fine-tuning](/fr/prompt-engineering/prompt-engineering-glossary#fine-tuning) — Réentraînement des poids du modèle sur des données spécifiques à un domaine',
+            '[LoRA](/fr/prompt-engineering/prompt-engineering-glossary#lora) — Fine-tuning efficace via adaptation de faible rang (5–10 % du coût d\'entraînement complet)',
+            '[RAG](/fr/prompt-engineering/prompt-engineering-glossary#rag) — Retrieval-Augmented Generation ; ancrage des sorties LLM dans des documents externes',
+            '[Fenêtre de contexte](/fr/prompt-engineering/prompt-engineering-glossary#context-window) — Capacité maximale en tokens pour l\'entrée + la sortie combinées',
+            '[VRAM](/fr/prompt-engineering/prompt-engineering-glossary#vram) — Mémoire GPU requise pour l\'inférence du modèle',
           ],
         },
 
@@ -2638,12 +2638,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keyTerms: {
           title: '主要用語',
           items: [
-            '[オープンウェイト](/prompt-engineering/prompt-engineering-glossary#open-weights?lang=ja) — モデルウェイトはダウンロード可能だが、ライセンスによって制限される場合がある',
-            '[ファインチューニング](/prompt-engineering/prompt-engineering-glossary#fine-tuning?lang=ja) — ドメイン固有のデータでモデルウェイトを再学習させる',
-            '[LoRA](/prompt-engineering/prompt-engineering-glossary#lora?lang=ja) — 低ランク適応による効率的なファインチューニング（完全学習コストの5〜10%）',
-            '[RAG](/prompt-engineering/prompt-engineering-glossary#rag?lang=ja) — Retrieval-Augmented Generation：外部文書でLLM出力を根拠付ける',
-            '[コンテキストウィンドウ](/prompt-engineering/prompt-engineering-glossary#context-window?lang=ja) — 入力+出力合計の最大トークン容量',
-            '[VRAM](/prompt-engineering/prompt-engineering-glossary#vram?lang=ja) — モデル推論に必要なGPUメモリ',
+            '[オープンウェイト](/ja/prompt-engineering/prompt-engineering-glossary#open-weights) — モデルウェイトはダウンロード可能だが、ライセンスによって制限される場合がある',
+            '[ファインチューニング](/ja/prompt-engineering/prompt-engineering-glossary#fine-tuning) — ドメイン固有のデータでモデルウェイトを再学習させる',
+            '[LoRA](/ja/prompt-engineering/prompt-engineering-glossary#lora) — 低ランク適応による効率的なファインチューニング（完全学習コストの5〜10%）',
+            '[RAG](/ja/prompt-engineering/prompt-engineering-glossary#rag) — Retrieval-Augmented Generation：外部文書でLLM出力を根拠付ける',
+            '[コンテキストウィンドウ](/ja/prompt-engineering/prompt-engineering-glossary#context-window) — 入力+出力合計の最大トークン容量',
+            '[VRAM](/ja/prompt-engineering/prompt-engineering-glossary#vram) — モデル推論に必要なGPUメモリ',
           ],
         },
 

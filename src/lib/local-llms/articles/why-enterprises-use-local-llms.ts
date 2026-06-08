@@ -447,7 +447,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Por qué las empresas eligen LLMs locales',
         'description': 'Por qué las empresas usan LLMs locales: análisis de costos, cumplimiento GDPR/HIPAA, soberanía de datos, evitar la dependencia de proveedores.',
-        'url': 'https://www.promptquorum.com/es/local-llms/why-enterprises-use-local-llms?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/why-enterprises-use-local-llms',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

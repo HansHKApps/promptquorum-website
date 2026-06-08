@@ -456,7 +456,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/es/local-llms/how-to-install-lm-studio?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/how-to-install-lm-studio',
         'headline': 'Instalar LM Studio: configuración de interfaz gráfica para macOS, Windows y Linux',
         'description': 'Instala LM Studio en macOS, Windows o Linux: descarga un modelo y empieza a chatear en 5 minutos. Sin terminal. Guía para principiantes 2026.',
         'datePublished': '2026-04-04',

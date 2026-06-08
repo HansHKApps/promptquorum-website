@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'Lambda Labs', description: 'Most reliable on-demand — A10G 24GB $0.60/hr' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Best Cloud GPU for LLM Fine-Tuning Under $1/Hour (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour?lang=en', inLanguage: 'en' },
+    schema: { '@type': 'TechArticle', headline: 'Best Cloud GPU for LLM Fine-Tuning Under $1/Hour (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour', inLanguage: 'en' },
   },
 
   de: {

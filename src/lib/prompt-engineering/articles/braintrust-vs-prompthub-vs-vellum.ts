@@ -432,7 +432,7 @@ tests:
         name: 'PromptQuorum',
         url: 'https://www.promptquorum.com',
       },
-      url: 'https://www.promptquorum.com/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=en',
+      url: 'https://www.promptquorum.com/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo',
       inLanguage: 'en',
       about: [
         { '@type': 'Thing', name: 'Prompt Management' },
@@ -1318,7 +1318,7 @@ tests:
       dateModified: '2026-05-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/es/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=es',
+      url: 'https://www.promptquorum.com/es/es/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo',
       inLanguage: 'es',
       proficiencyLevel: 'Intermediate',
       about: [
@@ -1770,7 +1770,7 @@ tests:
       dateModified: '2026-05-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/pt/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo?lang=pt',
+      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Intermediate',
       about: [

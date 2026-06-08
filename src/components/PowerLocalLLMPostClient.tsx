@@ -292,14 +292,14 @@ function renderInlineLinks(
           </a>
         )
       }
-      // Internal links: use Next.js Link with lang parameter injection
+      // Internal links: use Next.js Link with language path prefix
       let finalUrl = url
-      if (lang !== 'en' && url.startsWith('/') && !url.includes('?lang=')) {
+      if (lang !== 'en' && url.startsWith('/') && !url.startsWith(`/${lang}/`)) {
         if (url.includes('#')) {
           const [basePath, anchor] = url.split('#')
-          finalUrl = `${basePath}?lang=${lang}#${anchor}`
+          finalUrl = `/${lang}${basePath}#${anchor}`
         } else {
-          finalUrl = `${url}?lang=${lang}`
+          finalUrl = `/${lang}${url}`
         }
       }
       return (
@@ -760,7 +760,7 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
         {/* Breadcrumb + language */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-2 text-sm text-text-secondary flex-wrap">
-            <a href={lang === 'en' ? '/' : `/?lang=${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
+            <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
             <span>/</span>
             <a href={powerLLMHubPath(lang)} className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Power Local LLM'}</a>
             <span>/</span>

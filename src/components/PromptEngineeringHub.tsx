@@ -14,7 +14,9 @@ import { GuideStarWidget, type RecommendedArticle } from './hub/GuideStarWidget'
 import { LazySection } from './hub/LazySection'
 
 function navHref(path: string, lang: string) {
-  return lang === 'en' ? path : `${path}?lang=${lang}`
+  if (lang === 'en') return path
+  if (path === '/') return `/${lang}`
+  return `/${lang}${path}`
 }
 
 const HUB_HERO_TITLE: Record<string, string> = {

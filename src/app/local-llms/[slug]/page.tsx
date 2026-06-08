@@ -110,7 +110,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
 
   const canonicalUrl = selectedLang === 'en'
     ? `https://www.promptquorum.com/local-llms/${slug}`
-    : `https://www.promptquorum.com/local-llms/${slug}?lang=${selectedLang}`
+    : `https://www.promptquorum.com/${selectedLang}/local-llms/${slug}`
   const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${selectedLang}`
   const translationObj = llmContent[key][selectedLang] as any
   const hasTranslation =

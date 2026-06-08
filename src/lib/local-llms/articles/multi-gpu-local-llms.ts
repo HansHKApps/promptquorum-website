@@ -542,7 +542,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Multi-GPU LLMs Locales 2026: Ejecuta Modelos 70B en 2+ GPUs con vLLM y Ollama',
         description: '2× RTX 4090 (48 GB combinados): Llama 3.3 70B a 100 tok/s por $3,600. Solo 5–10% de penalización vs GPU única teórica. Paralelismo tensorial vLLM + Ollama auto-split. NVLink vs PCIe comparados.',
-        url: 'https://www.promptquorum.com/es/local-llms/multi-gpu-local-llms?lang=es',
+        url: 'https://www.promptquorum.com/es/es/local-llms/multi-gpu-local-llms',
         datePublished: '2026-04-04',
         dateModified: '2026-04-16',
         author: { '@type': 'Person', name: 'Hans Kuepper' },

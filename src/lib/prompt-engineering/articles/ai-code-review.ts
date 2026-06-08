@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/ai-code-review?lang=en',
+        url: 'https://www.promptquorum.com/prompt-engineering/ai-code-review',
         inLanguage: 'en',
         headline: 'AI Code Review 2026: Best Tools Ranked (CodeRabbit, Greptile, Snyk) + Prompt Framework',
         description: 'AI code review detects 42-85% of runtime bugs vs sub-20% for SAST. CodeRabbit, Greptile, and Snyk compared. Includes 5-part prompt framework to cut noise by 3×.',
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-code-review?lang=es',
+        url: 'https://www.promptquorum.com/es/es/prompt-engineering/ai-code-review',
         inLanguage: 'es',
         headline: 'Revisión de Código con IA 2026: Mejores Herramientas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
         description: 'La revisión de código con IA detecta entre el 42 y el 85 % de los bugs en tiempo de ejecución vs. menos del 20 % para SAST. CodeRabbit, Greptile y Snyk comparados. Incluye framework de prompts de 5 partes para reducir el ruido 3 veces.',
@@ -1181,7 +1181,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/pt/prompt-engineering/ai-code-review?lang=pt',
+        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/ai-code-review',
         inLanguage: 'pt-BR',
         headline: 'Revisão de Código com IA 2026: Melhores Ferramentas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
         description: 'A revisão de código com IA detecta de 42% a 85% dos bugs em tempo de execução vs. menos de 20% para SAST. CodeRabbit, Greptile e Snyk comparados. Inclui framework de prompts de 5 partes para reduzir o ruído em 3×.',

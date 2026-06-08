@@ -437,7 +437,7 @@ schema: {
         'description': 'Practical guide to choosing LLM quantization levels by VRAM. Q4_K_M, Q5_K_M, Q6_K, Q8_0 compared with RAM tables, quality loss, and use cases.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
-        'url': 'https://www.promptquorum.com/local-llms/llm-quantization-explained?lang=en',
+        'url': 'https://www.promptquorum.com/local-llms/llm-quantization-explained',
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'Q4_K_M quantization' },
@@ -947,7 +947,7 @@ schema: {
         'description': 'Guía práctica para elegir niveles de cuantización de LLM según la VRAM. Q4_K_M, Q5_K_M, Q6_K, Q8_0 comparados con tablas de RAM, pérdida de calidad y casos de uso.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
-        'url': 'https://www.promptquorum.com/es/local-llms/llm-quantization-explained?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/llm-quantization-explained',
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'Cuantización Q4_K_M' },
@@ -1052,7 +1052,7 @@ schema: {
       supplementalSchema: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        'url': 'https://www.promptquorum.com/es/local-llms/llm-quantization-explained?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/llm-quantization-explained',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro'],

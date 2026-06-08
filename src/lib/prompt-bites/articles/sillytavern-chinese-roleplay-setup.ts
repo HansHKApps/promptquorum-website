@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'TechArticle',
       headline: 'SillyTavern Chinese Roleplay Setup 2026',
       description: 'Best models for Chinese roleplay in SillyTavern: Qwen3-72B leads, Yi-34B for character depth, ChatGLM for speed. Character card encoding, API bridge to Ollama.',
-      url: 'https://www.promptquorum.com/prompt-bites/sillytavern-chinese-roleplay-setup?lang=en',
+      url: 'https://www.promptquorum.com/prompt-bites/sillytavern-chinese-roleplay-setup',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'en',

@@ -237,7 +237,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
-      url: 'https://www.promptquorum.com/prompt-bites/best-vpn-for-ai-development-china-2026?lang=en',
+      url: 'https://www.promptquorum.com/prompt-bites/best-vpn-for-ai-development-china-2026',
       inLanguage: 'en',
     },
   },

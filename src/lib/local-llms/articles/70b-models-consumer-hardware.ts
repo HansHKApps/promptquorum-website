@@ -532,7 +532,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Cómo ejecutar modelos 70B en hardware de consumo 2026: RAM y GPU',
         'description': 'Ejecuta modelos Llama 3.3 y Qwen3 70B localmente: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Guía de hardware completa -- abril 2026.',
-        'url': 'https://www.promptquorum.com/es/local-llms/70b-models-consumer-hardware?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/70b-models-consumer-hardware',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -947,7 +947,7 @@ schema: {
         'name': 'Lohnen sich 70B Modelle im Vergleich zu 13B Modellen für alltägliche Aufgaben?',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': 'Bei komplexem Reasoning, Analyse längerer Dokumente und nuanciertem Schreiben ja -- der Qualitätsunterschied ist spürbar. Bei einfacher Zusammenfassung, Fragen beantworten und Klassifizierung erzeugt ein 13B oder sogar 7B Modell fast identische Ausgaben. Führe beide auf deinen spezifischen Use-Case mit [PromptQuorum](/?lang=de) durch, um den Qualitätsunterschied zu quantifizieren, bevor du in 70B Hardware investierst.',
+          'text': 'Bei komplexem Reasoning, Analyse längerer Dokumente und nuanciertem Schreiben ja -- der Qualitätsunterschied ist spürbar. Bei einfacher Zusammenfassung, Fragen beantworten und Klassifizierung erzeugt ein 13B oder sogar 7B Modell fast identische Ausgaben. Führe beide auf deinen spezifischen Use-Case mit [PromptQuorum](/de) durch, um den Qualitätsunterschied zu quantifizieren, bevor du in 70B Hardware investierst.',
         }
       },
       {
@@ -963,7 +963,7 @@ schema: {
         'name': 'Sollte ich 70B oder 34B Modelle auf meinem System laufen lassen?',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': 'Wenn du mindestens 48 GB RAM hast (dediziert für das Modell), wähle 70B -- der Qualitätssprung ist erheblich und rechtfertigt die zusätzliche Hardware-Anforderung. Mit 32-48 GB RAM ist ein 34B Modell eine praktischere Option mit noch respektabler Qualität (ähnlich GPT-4o mini). Teste beide mit [PromptQuorum](/?lang=de) auf deinen speziellen Aufgaben.',
+          'text': 'Wenn du mindestens 48 GB RAM hast (dediziert für das Modell), wähle 70B -- der Qualitätssprung ist erheblich und rechtfertigt die zusätzliche Hardware-Anforderung. Mit 32-48 GB RAM ist ein 34B Modell eine praktischere Option mit noch respektabler Qualität (ähnlich GPT-4o mini). Teste beide mit [PromptQuorum](/de) auf deinen speziellen Aufgaben.',
         }
       },
       {
@@ -1093,7 +1093,7 @@ schema: {
         },
         {
           q: 'Lohnen sich 70B Modelle im Vergleich zu 13B Modellen für alltägliche Aufgaben?',
-          a: 'Bei komplexem Reasoning, Analyse längerer Dokumente und nuanciertem Schreiben ja -- der Qualitätsunterschied ist spürbar. Bei einfacher Zusammenfassung, Fragen beantworten und Klassifizierung erzeugt ein 13B oder sogar 7B Modell fast identische Ausgaben. Führe beide auf deinen spezifischen Use-Case mit [PromptQuorum](/?lang=de) durch, um den Qualitätsunterschied zu quantifizieren, bevor du in 70B Hardware investierst.',
+          a: 'Bei komplexem Reasoning, Analyse längerer Dokumente und nuanciertem Schreiben ja -- der Qualitätsunterschied ist spürbar. Bei einfacher Zusammenfassung, Fragen beantworten und Klassifizierung erzeugt ein 13B oder sogar 7B Modell fast identische Ausgaben. Führe beide auf deinen spezifischen Use-Case mit [PromptQuorum](/de) durch, um den Qualitätsunterschied zu quantifizieren, bevor du in 70B Hardware investierst.',
         },
         {
           q: 'Ist die Q4_K_M Quantisierung für 70B Modelle ausreichend?',
@@ -1101,7 +1101,7 @@ schema: {
         },
         {
           q: 'Sollte ich 70B oder 34B Modelle auf meinem System laufen lassen?',
-          a: 'Wenn du mindestens 48 GB RAM hast (dediziert für das Modell), wähle 70B -- der Qualitätssprung ist erheblich und rechtfertigt die zusätzliche Hardware-Anforderung. Mit 32-48 GB RAM ist ein 34B Modell eine praktischere Option mit noch respektabler Qualität (ähnlich GPT-4o mini). Teste beide mit [PromptQuorum](/?lang=de) auf deinen speziellen Aufgaben.',
+          a: 'Wenn du mindestens 48 GB RAM hast (dediziert für das Modell), wähle 70B -- der Qualitätssprung ist erheblich und rechtfertigt die zusätzliche Hardware-Anforderung. Mit 32-48 GB RAM ist ein 34B Modell eine praktischere Option mit noch respektabler Qualität (ähnlich GPT-4o mini). Teste beide mit [PromptQuorum](/de) auf deinen speziellen Aufgaben.',
         },
         {
           q: 'DSGVO: Muss ich bei der Verwendung von lokalen 70B Modellen die DSGVO beachten?',
@@ -1264,7 +1264,7 @@ schema: {
         },
         {
           q: 'Les modèles 70B en valent-ils la peine par rapport aux modèles 13B pour les tâches quotidiennes ?',
-          a: 'Pour le raisonnement complexe, l\'analyse de documents longs et l\'écriture nuancée, oui -- la différence de qualité est notable. Pour la résumé simple, les questions-réponses et la classification, un modèle 13B ou même 7B produit une sortie quasi-identique. Exécutez les deux sur votre cas d\'usage spécifique avec [PromptQuorum](/?lang=fr) pour quantifier la différence de qualité avant d\'investir dans du matériel 70B.',
+          a: 'Pour le raisonnement complexe, l\'analyse de documents longs et l\'écriture nuancée, oui -- la différence de qualité est notable. Pour la résumé simple, les questions-réponses et la classification, un modèle 13B ou même 7B produit une sortie quasi-identique. Exécutez les deux sur votre cas d\'usage spécifique avec [PromptQuorum](/fr) pour quantifier la différence de qualité avant d\'investir dans du matériel 70B.',
         },
         {
           q: 'Quel est l\'intérêt pour un utilisateur français ou belge d\'exécuter 70B localement ?',
@@ -1528,7 +1528,7 @@ schema: {
         },
         {
           q: '70Bモデルは日常的なタスクに対して13Bモデルの価値があるのですか？',
-          a: '複雑な推論、長いドキュメント分析、微妙な作成には、はい -- 品質の違いは目立ちます。単純な要約、Q&A、分類では、13B または 7B モデルでも実質的に同じ出力を生成します。70B ハードウェアに投資する前に、[PromptQuorum](/?lang=ja) で両方を特定のユースケースで実行して、品質差を量化してください。',
+          a: '複雑な推論、長いドキュメント分析、微妙な作成には、はい -- 品質の違いは目立ちます。単純な要約、Q&A、分類では、13B または 7B モデルでも実質的に同じ出力を生成します。70B ハードウェアに投資する前に、[PromptQuorum](/ja) で両方を特定のユースケースで実行して、品質差を量化してください。',
         },
         {
           q: '日本語で70Bモデルを使用する場合、どのモデルが推奨されますか？',
@@ -1697,7 +1697,7 @@ schema: {
         },
         {
           q: '相比 13B 模型，70B 模型在日常任务中值得吗？',
-          a: '对于复杂推理、长文档分析和细致写作，值得 -- 质量差异明显。对于简单摘要、问答和分类，13B 甚至 7B 模型产生几乎相同的输出。在您的特定用例上同时运行两种模型与 [PromptQuorum](/?lang=zh) 比较，在投资 70B 硬件前量化质量差异。',
+          a: '对于复杂推理、长文档分析和细致写作，值得 -- 质量差异明显。对于简单摘要、问答和分类，13B 甚至 7B 模型产生几乎相同的输出。在您的特定用例上同时运行两种模型与 [PromptQuorum](/zh) 比较，在投资 70B 硬件前量化质量差异。',
         },
         {
           q: '在中国部署 70B 本地模型有特殊考虑吗？',
@@ -1857,31 +1857,31 @@ schema: {
         '@type': 'ListItem',
         position: 1,
         name: '硬件选择指南',
-        url: '/?lang=zh',
+        url: '/zh',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: '量化等级对比',
-        url: '/?lang=zh',
+        url: '/zh',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: '模型推荐',
-        url: '/?lang=zh',
+        url: '/zh',
       },
       {
         '@type': 'ListItem',
         position: 4,
         name: '故障排除',
-        url: '/?lang=zh',
+        url: '/zh',
       },
       {
         '@type': 'ListItem',
         position: 5,
         name: '中国合规部署',
-        url: '/?lang=zh',
+        url: '/zh',
       },
     ],
   },

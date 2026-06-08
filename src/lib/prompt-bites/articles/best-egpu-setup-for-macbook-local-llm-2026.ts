@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Best eGPU Setup for MacBook Local LLM Inference (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026?lang=en', inLanguage: 'en' },
+    schema: { '@type': 'TechArticle', headline: 'Best eGPU Setup for MacBook Local LLM Inference (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'en' },
   },
 
   de: {

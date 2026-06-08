@@ -46,9 +46,9 @@ export function generateAlternates(
       const suffix = path === '/' ? '' : path
       return `${BASE}/${lang}${suffix}`
     }
-    // For root path, Next.js normalizes away query params, so return just the base URL
-    if (path === '/') return `${BASE}`
-    return `${BASE}${path}?lang=${lang}`
+    // All non-EN langs use path-prefix form; ?lang= is deprecated.
+    const suffix = path === '/' ? '' : path
+    return `${BASE}/${lang}${suffix}`
   }
 
   // Canonical determination:

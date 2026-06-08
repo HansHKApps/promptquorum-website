@@ -35,7 +35,7 @@ schema: {
         'description': 'Llama 4 Scout (10M context), DeepSeek V4-Flash (1M), Qwen 3.6 (256K native, extendable to 1M via YaRN) now lead long-context local LLMs. 7B-8B models practical at 16K-32K, MoE and 70B+ models reach 256K-1M. May 2026 guide.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-06',
-        'url': 'https://www.promptquorum.com/local-llms/long-context-local-llms?lang=en',
+        'url': 'https://www.promptquorum.com/local-llms/long-context-local-llms',
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'Long context LLM' },
@@ -386,7 +386,7 @@ schema: {
         'description': 'Llama 4 Scout (10M de contexto), DeepSeek V4-Flash (1M), Qwen 3.6 (256K nativo, extensible a 1M mediante YaRN) lideran los LLM locales de contexto largo. Los modelos 7B-8B son prácticos en 16K-32K; los modelos MoE y 70B+ alcanzan 256K-1M. Guía de mayo 2026.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-06',
-        'url': 'https://www.promptquorum.com/es/local-llms/long-context-local-llms?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/long-context-local-llms',
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'LLM de contexto largo' },
@@ -732,7 +732,7 @@ schema: {
         'description': 'Llama 4 Scout (10M de contexto), DeepSeek V4-Flash (1M), Qwen 3.6 (256K nativo, extensível a 1M via YaRN) lideram os LLMs locais de contexto longo. Os modelos 7B-8B são práticos em 16K-32K; os modelos MoE e 70B+ alcançam 256K-1M. Guia de maio de 2026.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-06',
-        'url': 'https://www.promptquorum.com/pt/local-llms/long-context-local-llms?lang=pt',
+        'url': 'https://www.promptquorum.com/pt/pt/local-llms/long-context-local-llms',
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'LLM de contexto longo' },

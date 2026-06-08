@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai?lang=en',
+        url: 'https://www.promptquorum.com/prompt-engineering/teaching-with-ai',
         inLanguage: 'en',
         headline: 'Teaching With AI in 2026: Harvard Study Shows 2× Learning Gains — Tools, Prompts & EU AI Act Guide',
         description: 'Harvard RCT: AI tutoring produced 2× the learning gains in 18% less time. Best tools for teachers (Khanmigo, MagicSchool), 5-part prompt framework, and EU AI Act school obligations.',
@@ -1238,7 +1238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/teaching-with-ai?lang=es',
+        url: 'https://www.promptquorum.com/es/es/prompt-engineering/teaching-with-ai',
         inLanguage: 'es',
         headline: 'Enseñar con IA en 2026: Estudio Harvard Muestra 2× Más Aprendizaje — Herramientas, Prompts y Guía Ley de IA de la UE',
         description: 'ECA de Harvard: la tutoría con IA produjo 2× las ganancias de aprendizaje en un 18 % menos de tiempo. Las mejores herramientas para docentes (Khanmigo, MagicSchool), framework de prompts de 5 partes y obligaciones escolares de la Ley de IA de la UE.',
@@ -1308,7 +1308,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'HowTo',
         inLanguage: 'es',
         name: 'Cómo integrar la IA en tu enseñanza',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/teaching-with-ai?lang=es',
+        url: 'https://www.promptquorum.com/es/es/prompt-engineering/teaching-with-ai',
         step: [
           { '@type': 'HowToStep', position: 1, name: 'Define los objetivos de aprendizaje y las evaluaciones antes de introducir la IA', text: 'Especifica qué deben saber los estudiantes y cómo lo evaluarás. Luego diseña dónde la IA amplifica la instrucción.' },
           { '@type': 'HowToStep', position: 2, name: 'Usa la IA para práctica personalizada y retroalimentación inmediata, no para calificación', text: 'La IA destaca en la generación de problemas de práctica y en la provisión de retroalimentación inmediata. Evita usar la IA para calificación subjetiva sin revisión humana.' },
@@ -1323,7 +1323,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'es',
         name: 'Herramientas de IA para docentes 2026',
         description: 'Comparativa de herramientas de IA para docentes para uso en el aula',
-        url: 'https://www.promptquorum.com/es/prompt-engineering/teaching-with-ai?lang=es',
+        url: 'https://www.promptquorum.com/es/es/prompt-engineering/teaching-with-ai',
         numberOfItems: 6,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Khanmigo', description: 'Tutoría estudiantil mediante cuestionamiento socrático. K-12, ecosistema Khan Academy. 44 USD al año.' },

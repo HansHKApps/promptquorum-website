@@ -14,7 +14,9 @@ const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU',
 const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث' }
 
 function navHref(path: string, lang: string) {
-  return lang === 'en' ? path : `${path}?lang=${lang}`
+  if (lang === 'en') return path
+  if (path === '/') return `/${lang}`
+  return `/${lang}${path}`
 }
 
 function getImagePath(basePath: string, lang: string): string {
@@ -31,7 +33,7 @@ function renderDescription(text: string, lang: Language): React.ReactNode {
     if (boldMatch) return <strong key={i}>{boldMatch[1]}</strong>
     const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
     if (linkMatch) {
-      const href = lang !== 'en' ? `${linkMatch[2]}?lang=${lang}` : linkMatch[2]
+      const href = lang !== 'en' ? `/${lang}${linkMatch[2]}` : linkMatch[2]
       return <Link key={i} href={href} className="text-primary hover:underline">{linkMatch[1]}</Link>
     }
     return part
@@ -516,11 +518,11 @@ const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     'Null API-Kosten nach Hardware-Kauf — keine Nutzungsbegrenzungen, keine Anbieter-Lock-in',
     'Alle Daten bleiben auf Ihrer Maschine — keine Telemetrie, kein Cloud-Speicher, DSGVO-konform',
     'LoRA-Fine-Tuning erfordert 500+ gekennzeichnete Beispiele und 24 GB+ VRAM (oder Cloud-GPU zum Training)',
-    '[Qwen lokaler Deployment-Leitfaden 2026](/local-llms/qwen-local-deployment-guide-2026?lang=de) — Einzeilen-Ollama-Setup für Qwen2.5 7B–72B',
-    '[Bestes GPU unter 500 $ für LLM-Inferenz](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=de) — RTX 4060 Ti 16 GB führt beim Preis-Leistungs-Verhältnis',
-    '[DeepSeek vs Qwen: Lokaler Vergleich 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=de) — Benchmark-Kopf-an-Kopf',
-    '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=de) — GPU-Cloud für den chinesischen Markt',
-    '[Lokaler LLM-Kostenrechner: Bauen vs. Mieten 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=de) — 3-Jahres-ROI-Rechner',
+    '[Qwen lokaler Deployment-Leitfaden 2026](/de/local-llms/qwen-local-deployment-guide-2026) — Einzeilen-Ollama-Setup für Qwen2.5 7B–72B',
+    '[Bestes GPU unter 500 $ für LLM-Inferenz](/de/local-llms/best-gpu-for-llm-inference-under-500-2026) — RTX 4060 Ti 16 GB führt beim Preis-Leistungs-Verhältnis',
+    '[DeepSeek vs Qwen: Lokaler Vergleich 2026](/de/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — Benchmark-Kopf-an-Kopf',
+    '[Alibaba Cloud vs Tencent Cloud GPU 2026](/de/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — GPU-Cloud für den chinesischen Markt',
+    '[Lokaler LLM-Kostenrechner: Bauen vs. Mieten 2026](/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 3-Jahres-ROI-Rechner',
   ],
   fr: [
     '8 GB de RAM suffisent pour exécuter un modèle 7B localement (Ollama ou LM Studio, moins de 10 min de configuration)',
@@ -530,11 +532,11 @@ const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     'Zéro coût d\'API après achat du matériel — aucune limite d\'utilisation, aucun verrouillage fournisseur',
     'Toutes les données restent sur votre machine — pas de télémétrie, pas de stockage cloud, prêt pour le RGPD',
     'Le fine-tuning LoRA nécessite 500+ exemples étiquetés et 24 GB+ VRAM (ou GPU cloud pour l\'entraînement)',
-    '[Guide de déploiement local Qwen 2026](/local-llms/qwen-local-deployment-guide-2026?lang=fr) — Configuration Ollama en une commande pour Qwen2.5 7B–72B',
-    '[Meilleur GPU à moins de 500 $ pour l\'inférence LLM](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=fr) — RTX 4060 Ti 16 GB en tête sur la valeur',
-    '[DeepSeek vs Qwen : comparaison locale 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=fr) — benchmark face à face',
-    '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=fr) — GPU cloud pour le marché chinois',
-    '[Calculateur de coût LLM local : Construire vs Louer 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=fr) — calculateur ROI sur 3 ans',
+    '[Guide de déploiement local Qwen 2026](/fr/local-llms/qwen-local-deployment-guide-2026) — Configuration Ollama en une commande pour Qwen2.5 7B–72B',
+    '[Meilleur GPU à moins de 500 $ pour l\'inférence LLM](/fr/local-llms/best-gpu-for-llm-inference-under-500-2026) — RTX 4060 Ti 16 GB en tête sur la valeur',
+    '[DeepSeek vs Qwen : comparaison locale 2026](/fr/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — benchmark face à face',
+    '[Alibaba Cloud vs Tencent Cloud GPU 2026](/fr/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — GPU cloud pour le marché chinois',
+    '[Calculateur de coût LLM local : Construire vs Louer 2026](/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — calculateur ROI sur 3 ans',
   ],
   ja: [
     '8 GB RAMで7Bモデルをローカルで実行できます（Ollama または LM Studio、10分以内のセットアップ）',
@@ -544,11 +546,11 @@ const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     'ハードウェア購入後のAPIコストはゼロ — 使用制限なし、ベンダーロックインなし',
     'すべてのデータはマシン上に保たれます — テレメトリなし、クラウドストレージなし、GDPR対応',
     'LoRA微調整には500個以上のラベル付き例とVRAM 24 GB以上が必要です（またはトレーニング用のクラウドGPU）',
-    '[Qwenローカルデプロイガイド2026](/local-llms/qwen-local-deployment-guide-2026?lang=ja) — Qwen2.5 7B–72B向け1コマンドOllamaセットアップ',
-    '[LLM推論向け500ドル以下ベストGPU](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=ja) — RTX 4060 Ti 16 GBがコスパ首位',
-    '[DeepSeek vs Qwen：ローカル比較2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=ja) — ベンチマーク対決',
-    '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=ja) — 中国市場向けGPUクラウド',
-    '[ローカルLLMコスト計算機：自作 vs レンタル2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=ja) — 3年間ROI計算機',
+    '[Qwenローカルデプロイガイド2026](/ja/local-llms/qwen-local-deployment-guide-2026) — Qwen2.5 7B–72B向け1コマンドOllamaセットアップ',
+    '[LLM推論向け500ドル以下ベストGPU](/ja/local-llms/best-gpu-for-llm-inference-under-500-2026) — RTX 4060 Ti 16 GBがコスパ首位',
+    '[DeepSeek vs Qwen：ローカル比較2026](/ja/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — ベンチマーク対決',
+    '[Alibaba Cloud vs Tencent Cloud GPU 2026](/ja/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — 中国市場向けGPUクラウド',
+    '[ローカルLLMコスト計算機：自作 vs レンタル2026](/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 3年間ROI計算機',
   ],
   zh: [
     '8 GB RAM足以在本地运行7B模型（Ollama或LM Studio，设置不到10分钟）',
@@ -558,11 +560,11 @@ const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     '硬件购买后零API成本 — 无使用限制、无供应商锁定',
     '所有数据保留在您的机器上 — 无遥测、无云存储、GDPR就绪',
     'LoRA微调需要500多个标记示例和24 GB+ VRAM（或用于训练的云GPU）',
-    '[Qwen本地部署指南2026](/local-llms/qwen-local-deployment-guide-2026?lang=zh) — Qwen2.5 7B–72B的一键Ollama设置',
-    '[500美元以下最佳LLM推理GPU](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=zh) — RTX 4060 Ti 16 GB性价比领先',
-    '[DeepSeek vs Qwen：本地对比2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=zh) — 基准测试对决',
-    '[阿里云vs腾讯云GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=zh) — 中国市场GPU云服务',
-    '[本地LLM成本计算器：自建vs租用2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=zh) — 3年ROI计算器',
+    '[Qwen本地部署指南2026](/zh/local-llms/qwen-local-deployment-guide-2026) — Qwen2.5 7B–72B的一键Ollama设置',
+    '[500美元以下最佳LLM推理GPU](/zh/local-llms/best-gpu-for-llm-inference-under-500-2026) — RTX 4060 Ti 16 GB性价比领先',
+    '[DeepSeek vs Qwen：本地对比2026](/zh/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — 基准测试对决',
+    '[阿里云vs腾讯云GPU 2026](/zh/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — 中国市场GPU云服务',
+    '[本地LLM成本计算器：自建vs租用2026](/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 3年ROI计算器',
   ],
   es: [
     '8 GB de RAM son suficientes para ejecutar un modelo 7B localmente (Ollama o LM Studio, configuración en menos de 10 min)',
@@ -572,11 +574,11 @@ const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     'Cero costes de API tras la compra del hardware — sin límites de uso, sin dependencia de proveedor',
     'Todos los datos permanecen en tu máquina — sin telemetría, sin almacenamiento cloud, listo para GDPR',
     'El fine-tuning con LoRA requiere 500+ ejemplos etiquetados y 24 GB+ VRAM (o GPU cloud para entrenamiento)',
-    '[Guía de despliegue local de Qwen 2026](/local-llms/qwen-local-deployment-guide-2026?lang=es) — configuración Ollama en un comando para Qwen2.5 7B–72B',
-    '[Mejor GPU por menos de 500 $ para inferencia LLM](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=es) — RTX 4060 Ti 16 GB lidera en valor',
-    '[DeepSeek vs Qwen: comparativa local 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=es) — benchmark cara a cara',
-    '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=es) — GPU cloud para el mercado chino',
-    '[Calculadora de costes LLM local: construir vs alquilar 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=es) — calculadora ROI a 3 años',
+    '[Guía de despliegue local de Qwen 2026](/es/local-llms/qwen-local-deployment-guide-2026) — configuración Ollama en un comando para Qwen2.5 7B–72B',
+    '[Mejor GPU por menos de 500 $ para inferencia LLM](/es/local-llms/best-gpu-for-llm-inference-under-500-2026) — RTX 4060 Ti 16 GB lidera en valor',
+    '[DeepSeek vs Qwen: comparativa local 2026](/es/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — benchmark cara a cara',
+    '[Alibaba Cloud vs Tencent Cloud GPU 2026](/es/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — GPU cloud para el mercado chino',
+    '[Calculadora de costes LLM local: construir vs alquilar 2026](/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — calculadora ROI a 3 años',
   ],
   pt: [
     '8 GB de RAM são suficientes para rodar um modelo 7B localmente (Ollama ou LM Studio, configuração em menos de 10 min)',
@@ -586,11 +588,11 @@ const HUB_TAKEAWAYS_BULLETS: Record<string, string[]> = {
     'Zero custos de API após a compra do hardware — sem limites de uso, sem vendor lock-in',
     'Todos os dados permanecem na sua máquina — sem telemetria, sem armazenamento na cloud, pronto para o GDPR',
     'O fine-tuning com LoRA exige 500+ exemplos rotulados e 24 GB+ VRAM (ou GPU na cloud para treinamento)',
-    '[Guia de implantação local do Qwen 2026](/local-llms/qwen-local-deployment-guide-2026?lang=pt) — configuração Ollama em um comando para Qwen2.5 7B–72B',
-    '[Melhor GPU abaixo de $500 para inferência de LLM](/local-llms/best-gpu-for-llm-inference-under-500-2026?lang=pt) — RTX 4060 Ti 16 GB lidera em custo-benefício',
-    '[DeepSeek vs Qwen: comparativo local 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026?lang=pt) — benchmark frente a frente',
-    '[Alibaba Cloud vs Tencent Cloud GPU 2026](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026?lang=pt) — GPU na cloud para o mercado chinês',
-    '[Calculadora de custo de LLM local: construir vs alugar 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026?lang=pt) — calculadora de ROI de 3 anos',
+    '[Guia de implantação local do Qwen 2026](/pt/local-llms/qwen-local-deployment-guide-2026) — configuração Ollama em um comando para Qwen2.5 7B–72B',
+    '[Melhor GPU abaixo de $500 para inferência de LLM](/pt/local-llms/best-gpu-for-llm-inference-under-500-2026) — RTX 4060 Ti 16 GB lidera em custo-benefício',
+    '[DeepSeek vs Qwen: comparativo local 2026](/pt/power-local-llm/deepseek-vs-qwen-local-comparison-2026) — benchmark frente a frente',
+    '[Alibaba Cloud vs Tencent Cloud GPU 2026](/pt/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — GPU na cloud para o mercado chinês',
+    '[Calculadora de custo de LLM local: construir vs alugar 2026](/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — calculadora de ROI de 3 anos',
   ],
 }
 

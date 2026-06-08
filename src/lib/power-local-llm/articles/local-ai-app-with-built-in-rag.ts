@@ -443,7 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
       'url': 'https://www.promptquorum.com/power-local-llm/local-ai-app-with-built-in-rag',
-      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=en',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -2966,8 +2966,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'AnythingLLM, LM Studio y Jan + Documentos probados en documentos de 1.000 páginas. RAG integrado sin base de datos vectorial, sin Python, sin línea de comandos.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
-      'url': 'https://www.promptquorum.com/es/power-local-llm/local-ai-app-with-built-in-rag?lang=es',
-      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=es',
+      'url': 'https://www.promptquorum.com/es/es/power-local-llm/local-ai-app-with-built-in-rag',
+      'image': 'https://www.promptquorum.com/es/api/og/local-ai-app-with-built-in-rag',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -3482,8 +3482,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'AnythingLLM, LM Studio e Jan + Documentos testados em documentos de 1.000 páginas. RAG integrado sem banco de dados vetorial, sem Python, sem linha de comando.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
-      'url': 'https://www.promptquorum.com/pt/power-local-llm/local-ai-app-with-built-in-rag?lang=pt',
-      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=pt',
+      'url': 'https://www.promptquorum.com/pt/pt/power-local-llm/local-ai-app-with-built-in-rag',
+      'image': 'https://www.promptquorum.com/pt/api/og/local-ai-app-with-built-in-rag',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',

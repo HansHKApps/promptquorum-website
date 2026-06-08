@@ -444,7 +444,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Cumplimiento Empresarial con LLMs Locales',
         'description': 'Cumplimiento de IA empresarial: GDPR, HIPAA, SOC2, requisitos de la Ley de IA de la UE. Guía regulatoria para LLMs locales.',
-        'url': 'https://www.promptquorum.com/es/local-llms/enterprise-compliance-local-llms?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/enterprise-compliance-local-llms',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

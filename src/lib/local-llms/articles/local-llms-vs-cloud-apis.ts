@@ -406,7 +406,7 @@ schema: {
         'headline': 'LLMs locales vs APIs en la nube: ¿Cuál deberías usar en 2026?',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
-        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-cloud-apis?lang=es',
+        'url': 'https://www.promptquorum.com/es/es/local-llms/local-llms-vs-cloud-apis',
         'proficiencyLevel': 'Beginner',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -765,7 +765,7 @@ schema: {
           items: [
             '**Wählen Sie ein lokales LLM, wenn:** Sie sensible oder regulierte Daten verarbeiten, Sie hohe Arbeitslasten mit akkumulierenden Token-Kosten haben, Sie Offline-Fähigkeit benötigen oder Sie verstehen möchten, wie LLMs intern funktionieren.',
             '**Wählen Sie eine Cloud-API, wenn:** Sie die höchste verfügbare Ausgabequalität benötigen, Sie keinen Einrichtungsaufwand möchten, Sie prototypisieren und keine Infrastruktur verwalten möchten oder Ihre Nutzung geringvolumig ist.',
-            '**Verwenden Sie beides parallel:** Tools wie [PromptQuorum](/?lang=de) ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-Modelle zu senden, lokale vs. Cloud-Ergebnisse in einer Ansicht zu vergleichen und Aufgaben an das richtige Modell weiterzuleiten.',
+            '**Verwenden Sie beides parallel:** Tools wie [PromptQuorum](/de) ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-Modelle zu senden, lokale vs. Cloud-Ergebnisse in einer Ansicht zu vergleichen und Aufgaben an das richtige Modell weiterzuleiten.',
           ],
         },
         regionalContext: {
@@ -1008,7 +1008,7 @@ schema: {
           items: [
             '**Choisissez un LLM local si :** vous traitez des données sensibles ou réglementées, vous exécutez des charges importantes où les coûts par token s\'accumulent, vous avez besoin d\'un accès hors ligne, ou vous souhaitez comprendre le fonctionnement interne des LLMs.',
             '**Choisissez une API cloud si :** vous avez besoin de la meilleure qualité de sortie disponible, vous souhaitez une configuration sans friction, vous faites du prototypage sans gérer d\'infrastructure, ou votre utilisation est à faible volume.',
-            '**Utilisez les deux en parallèle :** Des outils comme [PromptQuorum](/?lang=fr) vous permettent d\'envoyer un prompt simultanément à votre modèle Ollama local et à plus de 25 modèles cloud, de comparer les résultats locaux vs cloud en une seule vue et de router les tâches vers le bon modèle.',
+            '**Utilisez les deux en parallèle :** Des outils comme [PromptQuorum](/fr) vous permettent d\'envoyer un prompt simultanément à votre modèle Ollama local et à plus de 25 modèles cloud, de comparer les résultats locaux vs cloud en une seule vue et de router les tâches vers le bon modèle.',
           ],
         },
         regionalContext: {
@@ -1251,7 +1251,7 @@ schema: {
           items: [
             '**ローカルLLMを選ぶ場合：** 機密データや規制対象データを処理する場合、トークンコストが蓄積する高負荷ワークロードがある場合、オフライン機能が必要な場合、またはLLMの内部動作を学びたい場合。',
             '**クラウドAPIを選ぶ場合：** 最高の出力品質が必要な場合、セットアップの手間をかけたくない場合、インフラ管理なしでプロトタイピングする場合、または使用量が少量の場合。',
-            '**両方を並行して使用する：** [PromptQuorum](/?lang=ja)などのツールを使えば、1つのプロンプトをローカルOllamaモデルと25以上のクラウドモデルに同時に送信し、ローカル vs クラウドの結果を1つの画面で比較して、各タスクに最適なモデルにルーティングできます。',
+            '**両方を並行して使用する：** [PromptQuorum](/ja)などのツールを使えば、1つのプロンプトをローカルOllamaモデルと25以上のクラウドモデルに同時に送信し、ローカル vs クラウドの結果を1つの画面で比較して、各タスクに最適なモデルにルーティングできます。',
           ],
         },
         regionalContext: {
@@ -1494,7 +1494,7 @@ schema: {
           items: [
             '**选择本地LLM的情形：** 处理敏感或受监管数据、运行token成本累积的高频工作负载、需要离线能力，或想了解LLM内部工作原理。',
             '**选择云端API的情形：** 需要最高可用输出质量、希望零配置摩擦、正在原型开发且不想管理基础设施，或使用量较低。',
-            '**并行使用两者：** [PromptQuorum](/?lang=zh)等工具让您同时向本地Ollama模型和25+云端模型发送提示词，在一个界面中比较本地与云端结果，并将任务路由到每项工作的最佳模型。',
+            '**并行使用两者：** [PromptQuorum](/zh)等工具让您同时向本地Ollama模型和25+云端模型发送提示词，在一个界面中比较本地与云端结果，并将任务路由到每项工作的最佳模型。',
           ],
         },
         regionalContext: {
