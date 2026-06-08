@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { headers } from 'next/headers'
-import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google'
+import { Plus_Jakarta_Sans, JetBrains_Mono, Noto_Sans_Arabic } from 'next/font/google'
 import './globals.css'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -16,9 +16,18 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
   display: 'swap',
 })
+
+const notoSansArabic = Noto_Sans_Arabic({
+  subsets: ['arabic'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-arabic',
+  display: 'swap',
+})
+
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { getLangDir } from '@/lib/i18n/constants'
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 import { Footer } from '@/components/Footer'
@@ -54,7 +63,6 @@ export const metadata: Metadata = {
       'zh': 'https://www.promptquorum.com/zh',
       'es': 'https://www.promptquorum.com/es',
       'pt-BR': 'https://www.promptquorum.com/pt',
-      // TODO: Add dir="rtl" when lang === 'ar' — August 2026
       'ar': 'https://www.promptquorum.com/ar',
       'x-default': 'https://www.promptquorum.com',
     }
@@ -107,7 +115,7 @@ export default async function RootLayout({
   const baseUrlWithoutLang = `https://www.promptquorum.com${pathname}`
 
   return (
-    <html lang={selectedLang} className={`${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
+    <html lang={selectedLang} dir={getLangDir(selectedLang)} className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable}`}>
       <head>
         <meta name="theme-color" content="#6750A4" />
 

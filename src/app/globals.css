@@ -95,6 +95,10 @@
     @apply px-4 py-3 text-left font-bold text-text-primary text-xs uppercase tracking-wider;
   }
 
+  html[dir="rtl"] .glossary-table th {
+    text-align: start;
+  }
+
   .glossary-table tbody tr {
     @apply border-b border-primary/10 transition-colors hover:bg-primary/5;
   }
@@ -122,19 +126,42 @@
   }
 }
 
+/* Arabic (RTL) — font and direction */
+html[dir="rtl"] body {
+  font-family: var(--font-arabic), system-ui, sans-serif;
+}
+
+/* Code blocks, inline code, and monospace must stay LTR in all languages.
+   Numbers and Latin brand names embedded in RTL text also stay LTR via
+   Unicode bidi isolation so no extra markup is needed for those. */
+html[dir="rtl"] pre,
+html[dir="rtl"] code,
+html[dir="rtl"] [class*="font-mono"],
+html[dir="rtl"] kbd,
+html[dir="rtl"] samp {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
 /* CSS scroll progress bar — no JS needed */
 @supports (animation-timeline: scroll()) {
   .scroll-progress-bar {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     height: 2px;
     background: rgb(124, 58, 237); /* --primary: 265 50% 42% */
     transform-origin: left;
     animation: scroll-progress linear;
     animation-timeline: scroll();
     z-index: 60;
+  }
+
+  /* RTL: bar grows from the right (logical start) */
+  html[dir="rtl"] .scroll-progress-bar {
+    transform-origin: right;
   }
 
   @keyframes scroll-progress {

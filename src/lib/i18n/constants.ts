@@ -36,3 +36,9 @@ export const OUTPUT_LOCALE: Record<string, string> = { pt: 'pt-BR' };
 export function toOutputLocale(lang: string): string {
   return OUTPUT_LOCALE[lang] ?? lang;
 }
+
+export const RTL_LANGS = ['ar'] as const;
+
+export function getLangDir(lang: string): 'rtl' | 'ltr' {
+  return (RTL_LANGS as readonly string[]).includes(lang) ? 'rtl' : 'ltr';
+}
