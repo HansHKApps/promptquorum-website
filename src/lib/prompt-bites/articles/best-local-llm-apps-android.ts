@@ -603,4 +603,81 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Tool Comparisons',
+    title: 'ما أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام Android؟',
+    seoTitle: 'أفضل تطبيقات Android للنماذج المحلية 2026 | PromptQuorum',
+    metaDescription: 'أفضل تطبيقات Android للنماذج اللغوية الكبيرة المحلية: MLC Chat (الأسهل)، Pocketpal (مرن)، Termux + Ollama (تحكم كامل). تعمل جميعها دون اتصال بالإنترنت.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: 'مبتدئ',
+    audience: 'مستخدمو Android الذين يشغّلون النماذج اللغوية الكبيرة على هواتفهم',
+    parentArticle: '/power-local-llm/best-local-llm-apps-android-2026',
+    siblingBites: ['best-frontend-for-ollama', 'jan-vs-lm-studio'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ar: {
+        question: 'ما أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام Android؟',
+        answer: 'أفضل تطبيقات Android لتشغيل النماذج اللغوية الكبيرة محلياً هي MLC Chat للإعداد السهل مع النماذج المُحسَّنة مسبقاً، وPocketpal للتحميل المرن لملفات GGUF، وTermux مع Ollama للتحكم الكامل. جميعها تعمل دون اتصال بالإنترنت بالكامل.',
+        bullets: [
+          'MLC Chat: أسهل إعداد، نماذج مُحسَّنة مسبقاً لنظام Android',
+          'Pocketpal: تحميل مرن لنماذج GGUF',
+          'Termux + Ollama: Ollama كاملة على Android، يحتاج 8 جيجابايت RAM أو أكثر',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'MLC Chat هو الخيار الأسهل — حمّله من Google Play واختر نموذجاً وابدأ الاستخدام دون اتصال بالإنترنت فوراً',
+          'Pocketpal LLM أكثر مرونة: يمكنك تحميل أي نموذج GGUF من Hugging Face، لكنه يحتاج إعداداً أكبر',
+          'Termux + Ollama يمنحك تحكماً كاملاً في Ollama على هاتفك — لكنه يتطلب 8 جيجابايت RAM أو أكثر ومعرفة بالطرفية',
+        ],
+      },
+      body1: {
+        title: 'مقارنة سريعة لأفضل 3 خيارات',
+        content: [
+          '<strong>MLC Chat (التنزيل الأسهل)</strong> — يُثبَّت في دقيقة واحدة من Google Play. يتضمن قائمة منتقاة من النماذج المُحسَّنة مسبقاً لنظام Android (Phi-2، Llama 3B). لا سطر أوامر، لا إعداد. الخيار الأفضل للمبتدئين.',
+          '<strong>Pocketpal AI (الأكثر مرونة)</strong> — يُحمِّل أي نموذج GGUF مباشرةً من Hugging Face. يتطلب إعداداً أكبر من MLC Chat لكنه يمنحك حرية اختيار أي نموذج. يتضمن واجهة دردشة مدمجة.',
+          '<strong>Termux + Ollama (تحكم كامل)</strong> — يُثبّت Ollama الكاملة على Android. جميع أوامر Ollama متاحة. يتطلب طرفية و8 جيجابايت RAM أو أكثر ومعرفة تقنية. للمستخدمين المتقدمين فقط.',
+        ],
+      },
+      body2: {
+        title: 'أيها تختار',
+        content: [
+          'ابدأ بـ<strong>MLC Chat</strong> إذا لم تشغّل نماذج لغوية كبيرة على هاتفك من قبل. إنه الخيار الأكثر سهولة.',
+          'استخدم <strong>Pocketpal</strong> إذا أردت التحكم في النماذج التي تشغّلها دون الحاجة إلى الطرفية.',
+          'اختر <strong>Termux + Ollama</strong> إذا كنت مطوراً أو تريد Ollama الكاملة على جهازك.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'أسئلة سريعة حول تطبيقات Android للنماذج اللغوية الكبيرة',
+        faqs: [
+          {
+            q: 'ما متطلبات RAM لتطبيق MLC Chat؟',
+            a: 'يعمل MLC Chat على الهواتف التي تحتوي على 4 جيجابايت RAM أو أكثر. للحصول على أفضل النتائج، يُوصى بـ8 جيجابايت أو أكثر. النماذج المُحسَّنة مسبقاً مضغوطة للتشغيل على الأجهزة المحمولة.',
+          },
+          {
+            q: 'هل يمكنني استخدام Pocketpal بدون حساب Hugging Face؟',
+            a: 'نعم. يستطيع Pocketpal AI تنزيل نماذج GGUF من مستودعات Hugging Face العامة بدون حساب. تحتاج إلى حساب Hugging Face فقط للوصول إلى المستودعات الخاصة أو المقيّدة.',
+          },
+          {
+            q: 'كيف أثبّت Ollama على Android عبر Termux؟',
+            a: 'ثبّت Termux من F-Droid (لا تستخدم Google Play — نسخة متجر Play قديمة). في Termux نفّذ <code>pkg update && pkg install ollama</code>. ثم استخدم أوامر Ollama القياسية: <code>ollama pull llama3</code> و<code>ollama run llama3</code>. يحتاج جهازك إلى 8 جيجابايت RAM أو أكثر للتشغيل المستقر.',
+          },
+          {
+            q: 'ما أفضل تطبيق Android للنماذج اللغوية الكبيرة للمبتدئين؟',
+            a: 'MLC Chat هو أفضل نقطة انطلاق. يُثبَّت من Google Play في دقيقة واحدة، يوفر قائمة منتقاة من النماذج المُحسَّنة مسبقاً، ولا يتطلب أي خبرة في سطر الأوامر. للحصول على واجهة دردشة أغنى، راجع <a href="/ar/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">دليل أفضل واجهات Ollama</a>.',
+          },
+        ],
+      },
+    },
+  },
 }

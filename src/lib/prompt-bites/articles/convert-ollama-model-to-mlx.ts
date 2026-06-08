@@ -553,4 +553,76 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Tool Comparisons',
+    title: 'كيفية تحويل نماذج Ollama إلى صيغة MLX',
+    seoTitle: 'تحويل نماذج Ollama إلى MLX 2026 | PromptQuorum',
+    metaDescription: 'لا يمكنك تحويل نماذج Ollama إلى MLX مباشرةً. استخدم أوزان Hugging Face مع mlx-lm convert. معظم النماذج الشائعة لديها نسخ MLX محوَّلة مسبقًا.',
+    publishDate: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: ['Llama 3', 'Qwen', 'Mistral'],
+    current_hardware_mentioned: ['Apple Silicon'],
+    educationalLevel: 'Intermediate',
+    audience: 'مطورو Mac الراغبون في نماذج بصيغة MLX من منظومة Ollama',
+    parentArticle: '/local-llms/apple-silicon-local-llm-guide-2026',
+    siblingBites: ['mlx-vs-ollama-vs-llamacpp', 'ollama-mlx-apple-silicon', 'ollama-vs-lm-studio'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ar: {
+        question: 'كيف تحوّل نموذج Ollama إلى صيغة MLX؟',
+        answer: 'لا يمكنك تحويل نماذج Ollama إلى MLX مباشرةً. بدلًا من ذلك، نزّل الأوزان الأصلية بصيغة GGUF أو SafeTensors من Hugging Face ثم حوّلها بـ mlx-lm convert. لمعظم النماذج الشائعة (Llama 3 وQwen وMistral)، توجد نسخ MLX محوَّلة مسبقًا على Hugging Face تحت منظمة mlx-community.',
+        bullets: [
+          'لا يمكن تحويل نماذج Ollama مباشرةً — صيغة النموذج مختلفة',
+          'نماذج MLX محوَّلة مسبقًا متوفرة على huggingface.co/mlx-community لمعظم النماذج الشائعة',
+          'للتحويل بنفسك: نزّل من Hugging Face ثم نفّذ mlx_lm.convert',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'لا يمكن تحويل نماذج Ollama بصيغة GGUF إلى MLX مباشرةً — يجب البدء بالأوزان الأصلية من Hugging Face',
+          'النماذج الشائعة لديها نسخ MLX جاهزة على huggingface.co/mlx-community — ابحث عن نموذجك أولًا قبل التحويل',
+          'للتحويل: نزّل الأوزان من Hugging Face ثم نفّذ `mlx_lm.convert --model-path <مسار> -o <مخرج>`',
+        ],
+      },
+      body1: {
+        title: 'لماذا لا يمكن التحويل المباشر؟',
+        content: [
+          'نماذج Ollama بصيغة GGUF (مضغوطة 4–8 بت). تتطلب MLX الأوزان الأصلية 16 بت من Hugging Face لأنها تحتاج إلى إعادة الضغط باستخدام خوارزميات Apple Silicon الأصلية.',
+          'إذا حاولت التحويل مباشرةً من GGUF، ستفقد معلومات الدقة خلال الضغط وينتج عنه جودة أدنى.',
+          'الحل: البدء بالأوزان غير المضغوطة من Hugging Face ثم السماح لـ mlx-lm بإعادة الضغط مُحسَّنًا لـ Metal على Apple Silicon.',
+        ],
+      },
+      body2: {
+        title: 'كيفية التحويل (إذا لزم الأمر)',
+        content: [
+          '<strong>المحاولة الأولى: ابحث عن نموذجك في mlx-community.</strong> نفّذ: `pip install mlx-lm` ثم `python -m mlx_lm.generate --model mlx-community/model-name-4bit`. إذا نجح، فالنموذج محوَّل مسبقًا.',
+          '<strong>إذا لم يكن متاحًا، حوّله بنفسك:</strong> نزّل الأوزان الأصلية بـ `git clone https://huggingface.co/owner/model` ثم نفّذ `mlx_lm.convert --model-path ./model -o ./mlx_model` (يستغرق 5–10 دقائق).',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'إجابات سريعة حول تحويل نماذج Ollama إلى MLX',
+        faqs: [
+          {
+            q: 'أين أجد نماذج MLX المحوَّلة مسبقًا؟',
+            a: 'على Hugging Face تحت منظمة mlx-community: huggingface.co/mlx-community. ابحث عن نموذجك (Llama وQwen وMistral وغيرها). إذا لم يكن موجودًا، ستحتاج إلى التحويل بنفسك.',
+          },
+          {
+            q: 'كم يستغرق التحويل؟',
+            a: 'عادةً 5–10 دقائق لنموذج 7B على M5 Pro. النماذج الأكبر قد تستغرق أكثر من 20 دقيقة. التحويل عملية تُجرى مرة واحدة — النموذج الناتج يُخزَّن محليًا.',
+          },
+          {
+            q: 'ما مستوى الضغط المناسب عند التحويل إلى MLX؟',
+            a: 'لمعظم نماذج 7B–14B على ذاكرة موحّدة 16 GB، استخدم الضغط 4 بت (الإعداد الافتراضي للعلامة `-q`). ينتج عنه نموذج ~4 GB يعمل بكفاءة على رقائق M1/M2/M3/M4. استخدم 8 بت فقط إذا كانت لديك 32 GB أو أكثر وتحتاج إلى جودة إخراج أعلى.',
+          },
+        ],
+      },
+    },
+  },
 }

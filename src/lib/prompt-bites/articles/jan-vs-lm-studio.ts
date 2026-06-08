@@ -618,4 +618,92 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Tool Comparisons',
+    title: 'Jan مقابل LM Studio: أيهما أفضل؟',
+    seoTitle: 'Jan مقابل LM Studio: أيهما تختار | PromptQuorum',
+    metaDescription: 'Jan: مفتوح المصدر، ~30 إضافة. LM Studio: واجهة مصقولة ومكتبة نماذج أكبر. للتخصيص اختر Jan؛ للسهولة اختر LM Studio. إجابة سريعة.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: 'Intermediate',
+    audience: 'المطورون الذين يختارون تطبيق سطح مكتب لتشغيل النماذج اللغوية الكبيرة محلياً',
+    parentArticle: '/local-llms/lm-studio-vs-jan-ai',
+    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ar: {
+        question: 'Jan مقابل LM Studio: أيهما أفضل؟',
+        answer: 'Jan مفتوح المصدر بالكامل مع نظام إضافات. LM Studio يمتلك واجهة أكثر صقلاً ومكتبة نماذج مدمجة أكبر. للمستخدمين المتقدمين الراغبين في التخصيص، اختر Jan. لسهولة الاستخدام، اختر LM Studio.',
+        bullets: [
+          'Jan: مفتوح المصدر، إضافات، يعمل بشكل جيد على Linux',
+          'LM Studio: واجهة مصقولة، مكتبة نماذج أكبر، تجربة مستخدم أفضل',
+          'كلاهما مجاني ويعمل بالكامل دون اتصال بالإنترنت',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Jan مرخص بموجب MIT ومفتوح المصدر؛ LM Studio ملكية خاصة لكن مجاني للمشاريع الشخصية والتجارية',
+          'Jan يدعم أنظمة التشغيل الثلاثة بشكل أصلي مع تسريع GPU لـ NVIDIA وAMD؛ LM Studio يعمل على Mac وWindows فقط (دعم Linux تجريبي اعتباراً من مايو 2026)',
+          'LM Studio يمتلك متجر نماذج مدمجاً مع تنزيل بنقرة واحدة؛ Jan يعتمد على مصادر نماذج خارجية كـ Hugging Face',
+          'كلا التطبيقين يستخدمان تنسيق GGUF، يتضمنان خادم API محلياً، ويعملان بالكامل دون اتصال — الاختيار بين التخصيص والصقل',
+        ],
+      },
+      body1: {
+        title: 'المعضلة: مفتوح المصدر مقابل الصقل',
+        content: [
+          '<strong>Jan (github.com/janhq/jan) مرخص بموجب MIT ومفتوح المصدر بالكامل — يمكنك قراءة الكود وعمل fork وتعديله.</strong> LM Studio (lmstudio.ai) برنامج ملكية خاصة مجاني لكن مغلق المصدر. Jan يتضمن نظام إضافات يسمح للمطورين بإضافة وظائف مخصصة، وهي ميزة لا يقدمها LM Studio.',
+          'حالات الاستخدام الفعلية للإضافات تشمل: ربط Jan بواجهات API سحابية (OpenAI، Anthropic، Groq) لسير عمل هجينة محلية/سحابية، إضافة قوالب مطالبات مخصصة وإعدادات دردشة مسبقة، والتكامل مع أدوات خارجية مثل Obsidian لتدوين الملاحظات. حوالي 30 إضافة مجتمعية متاحة اعتباراً من مايو 2026.',
+          'الميزة الرئيسية لـ LM Studio هي متجر النماذج المدمج. يمكنك تصفح مئات من نماذج GGUF ومعاينتها وتنزيلها دون مغادرة التطبيق. Jan يتطلب منك العثور على النماذج في Hugging Face أو استيرادها يدوياً — احتكاك أكبر للمستخدمين الراغبين في البدء بسرعة.',
+          'للمطورين الراغبين في البناء على التطبيق، كود Jan مفتوح المصدر وAPI الإضافات مزايا مهمة. لجميع المستخدمين الآخرين، يعتمد الاختيار على سير العمل الذي يتناسب مع استخدامك اليومي.',
+        ],
+      },
+      body2: {
+        title: 'أيهما يناسب سير عملك',
+        content: [
+          '<strong>استخدم Jan إذا أردت توسيع التطبيق، أو تشغيله على Linux، أو احتجت لدعم GPU من AMD.</strong> استخدم LM Studio إذا أردت تجربة مصقولة مع مكتبة نماذج مدمجة ولا تحتاج للتخصيص.',
+          'للمقارنة الكاملة مع خطوات التثبيت وتفاصيل API، راجع <a href="/ar/local-llms/lm-studio-vs-jan-ai" class="text-primary hover:underline">الدليل المعمّق لـ Jan مقابل LM Studio</a>.',
+        ],
+        columns: ['الميزة', 'Jan', 'LM Studio'],
+        rows: [
+          { 'الميزة': 'الترخيص', 'Jan': 'MIT (مفتوح المصدر)', 'LM Studio': 'ملكية خاصة (مجاني)' },
+          { 'الميزة': 'الإضافات', 'Jan': '~30 متاحة', 'LM Studio': 'لا' },
+          { 'الميزة': 'أنظمة التشغيل', 'Jan': 'Mac، Windows، Linux', 'LM Studio': 'Mac، Windows (Linux تجريبي)' },
+          { 'الميزة': 'خلفية GPU', 'Jan': 'NVIDIA + AMD', 'LM Studio': 'NVIDIA فقط' },
+          { 'الميزة': 'مكتبة النماذج', 'Jan': 'جهات خارجية (Hugging Face)', 'LM Studio': 'متجر مدمج' },
+          { 'الميزة': 'الأفضل لـ', 'Jan': 'التخصيص / قابلية التوسع', 'LM Studio': 'السهولة / تنوع النماذج' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'أسئلة شائعة حول Jan مقابل LM Studio',
+        faqs: [
+          {
+            q: 'هل Jan مجاني فعلاً؟',
+            a: 'نعم. Jan برنامج مفتوح المصدر بموجب ترخيص MIT. لا توجد مستويات مدفوعة، ولا قياس عن بُعد بشكل افتراضي، والكود المصدري الكامل متاح على GitHub في github.com/janhq/jan.',
+          },
+          {
+            q: 'هل LM Studio يعمل على Linux؟',
+            a: 'LM Studio لا يمتلك إصداراً Linux رسمياً مستقراً. يعمل على Mac وWindows. مستخدمو Linux يجب أن يستخدموا Jan أو Ollama أو Open WebUI بدلاً من ذلك.',
+          },
+          {
+            q: 'هل يستطيع كل من Jan وLM Studio استخدام GPU من AMD؟',
+            a: 'Jan يدعم تسريع GPU من AMD عبر ROCm على Linux. LM Studio على Windows يدعم NVIDIA فقط (بدون إصدار Linux مستقر). على macOS، يتولى Apple Metal تسريع GPU لكلا التطبيقين بغض النظر عن العلامة التجارية للـ GPU. للحصول على بديل قائم على سطر الأوامر على أي نظام تشغيل، راجع <a href="/ar/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama مقابل LM Studio</a>.',
+          },
+          {
+            q: 'أي تطبيق يمتلك مكتبة نماذج أكبر؟',
+            a: 'LM Studio يمتلك متجر نماذج مدمجاً أكبر مع نماذج GGUF مختارة يمكنك تصفحها وتنزيلها بنقرة واحدة. Jan يتطلب استيراد النماذج من Hugging Face أو مصادر أخرى.',
+          },
+        ],
+      },
+    },
+  },
 }
+

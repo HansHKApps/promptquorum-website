@@ -802,4 +802,127 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: o que funciona em 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'pt-BR' },
   },
+  ar: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Hardware & Performance',
+    type: 'how-to',
+    title: 'eGPU مع MacBook والذكاء الاصطناعي المحلي: ما الذي يعمل في 2026؟',
+    seoTitle: 'eGPU مع MacBook للذكاء الاصطناعي المحلي 2026 — البدائل',
+    metaDescription: 'أجهزة MacBook بمعالج Apple Silicon لا تدعم eGPU لحوسبة معالج الرسومات. البدائل في 2026: Mac Mini M4 Pro، حاسب AMD مصغر مع OCuLink، خادم Ollama عبر الشبكة المحلية.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    parentArticle: '/ar/local-llms/gpu-vs-cpu-vs-apple-silicon',
+    leadAnswerBlock: '**لا يمكن لأجهزة MacBook بمعالج Apple Silicon (M2–M5) استخدام eGPU لحوسبة معالج الرسومات في 2026 — فقد أزالت Apple دعم eGPU عبر Thunderbolt في macOS Ventura. البديل: Mac Mini M4 Pro (48 جيجابايت ذاكرة موحدة) أو حاسب AMD مصغر (UM890 Pro) مع eGPU عبر OCuLink.**',
+    quickAnswerTop: {
+      question: 'هل يمكنني استخدام eGPU مع MacBook للاستدلال المحلي بالنماذج اللغوية الكبيرة؟',
+      answer: 'لا. لا يمكن لأجهزة MacBook بمعالج Apple Silicon (M2/M3/M4/M5) استخدام eGPU لحوسبة معالج الرسومات. أزالت إصدارات macOS Ventura وما بعدها دعم eGPU عبر Thunderbolt بالكامل. البديل: Mac Mini M4 Pro (48 جيجابايت ذاكرة موحدة) أو حاسب AMD مصغر مع eGPU عبر OCuLink.',
+      bullets: [
+        'أجهزة MacBook بمعالج Apple Silicon: eGPU غير مدعومة لحوسبة معالج الرسومات (macOS Ventura+)',
+        'أجهزة MacBook بمعالج Intel (2015–2020): كانت eGPU تعمل عبر Thunderbolt 3 — لكن تلك السلسلة أوقف إنتاجها',
+        'أفضل بديل لـ macOS: Mac Mini M4 Pro (48 جيجابايت ذاكرة موحدة)',
+        'أفضل مزيج من معالج الرسومات والحمولية: حاسب AMD مصغر (UM890 Pro) + OCuLink + RTX 3090',
+        'يوفر OCuLink ~80% من نطاق PCIe x16 الترددي — بدون اختناق لاستدلال النماذج اللغوية الكبيرة',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'لا يمكن لأجهزة MacBook بمعالج Apple Silicon استخدام eGPU للحوسبة — أزالت Apple هذه الميزة في macOS Ventura',
+          'دعمت أجهزة MacBook بمعالج Intel (2018–2020) eGPU عبر Thunderbolt 3 — تلك السلسلة أوقف إنتاجها',
+          'لـ macOS: اشترِ Mac Mini M4 Pro (48 جيجابايت) بدلاً من محاولة توسيع MacBook بـ eGPU',
+          'لحاسب محمول + معالج رسومات: حاسب AMD مصغر (UM890 Pro) + RTX 3090 عبر OCuLink — Ollama بـ60–80 رمز/ثانية',
+          'تعمل eGPU عبر Thunderbolt 4 في الحاسبات المحمولة x86 (Windows/Linux) — مع عقوبة نطاق ترددي ~35–45%',
+        ],
+      },
+      mainContent: {
+        title: 'لماذا لا تعمل eGPU مع أجهزة MacBook في 2026؟',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'لا تعمل eGPU للاستدلال المحلي بالنماذج اللغوية الكبيرة المُسرَّع بمعالج الرسومات على أجهزة MacBook بمعالج Apple Silicon في 2026 لأن Apple أزالت دعم حوسبة eGPU عبر Thunderbolt في macOS Ventura (2022).',
+          },
+          {
+            type: 'plain-terms',
+            text: 'eGPU هي بطاقة رسومات خارجية في حاوية متصلة عبر Thunderbolt أو OCuLink. في MacBook بمعالج Apple M، تكون وحدة معالجة الرسومات مدمجة في المعالج — لا يمكن إضافة معالجات رسومات خارجية لمهام الحوسبة. لا تمتد واجهة برمجة تطبيقات Metal (واجهة GPU من Apple) إلى معالجات الرسومات الخارجية في أجهزة سلسلة M.',
+          },
+        ],
+        content: 'أزالت Apple دعم eGPU عبر Thunderbolt في macOS Ventura (الصادر في أكتوبر 2022). تعمل جميع أجهزة MacBook بمعالج Apple Silicon (M1 وM2 وM3 وM4 وM5) على هذا الإصدار أو إصدارات أحدث. حتى لو وصّلت eGPU فيزيائياً، لن يستخدم macOS معالج الرسومات الخارجي لمهام حوسبة GPU — معالج الرسومات الداخلي فقط هو النشط.',
+        items: [
+          '**macOS 13 Ventura (2022)**: إزالة دعم eGPU. جميع أجهزة Mac بمعالج Apple Silicon متأثرة.',
+          '**macOS 14 Sonoma وmacOS 15 Sequoia**: لا تزال بدون دعم حوسبة eGPU.',
+          '**أجهزة MacBook بمعالج Intel (2018–2020)**: كانت eGPU تعمل عبر Thunderbolt 3 في macOS القديم. تلك الأجهزة أوقف إنتاجها.',
+          '**شاشة خارجية عبر eGPU**: لا تزال تعمل في أجهزة Mac الأقدم كجهاز عرض.',
+        ],
+      },
+      alternatives: {
+        title: 'البدائل الحقيقية: ماذا تفعل بدلاً من ذلك',
+        productItems: [
+          {
+            title: 'Mac Mini M4 Pro (48 جيجابايت) — أفضل خيار لـ macOS',
+            content: 'يشغّل Mac Mini M4 Pro بـ48 جيجابايت من الذاكرة الموحدة Qwen3 32B Q4 بـ20–30 رمز/ثانية عبر خلفية Metal في Ollama. السعر: ~1,399 دولار. إذا احتجت للبقاء في نظام macOS البيئي وتحتاج قدرة لنماذج 32B فأكبر، هذا هو مسار الترقية — لا eGPU.',
+            affiliateLinks: [
+              { label: 'Apple Mac Mini M4 Pro على Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
+            ],
+          },
+          {
+            title: 'حاسب AMD مصغر + eGPU عبر OCuLink (أفضل مزيج من معالج الرسومات والحمولية)',
+            content: 'يتصل AOOSTAR GEM12 Pro OCuLink (AMD Ryzen 9 8945HS، ~480 دولار) بـ RTX 3090 أو RTX 4090 عبر OCuLink (PCIe 4.0 x4، 64 جيجابت/ثانية — ~80% من نطاق فتحة x16 الترددي). يشغّل Ollama على Linux أو Windows مع CUDA النماذج 7B Q4 بـ65–85 رمز/ثانية مع RTX 3090. الحاسب المصغر صغير بما يكفي لوضعه على المكتب بجانب MacBook وتقديم Ollama عبر الشبكة المحلية.',
+            affiliateLinks: [
+              { label: 'AOOSTAR GEM12 Pro OCuLink على Amazon', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
+            ],
+          },
+          {
+            title: 'eGPU عبر Thunderbolt 4 في حاسب محمول Windows/Linux (إذا لم تكن على Mac)',
+            content: 'في حاسب محمول x86 يعمل بنظام Windows أو Linux مع Thunderbolt 4، تعمل eGPU مع Ollama. عقوبة النطاق الترددي ~35–45% مقارنةً بفتحة PCIe x16 الأصلية، لكن استدلال Ollama محدود بنطاق ترددي الذاكرة (لا بـ PCIe). الحاوية الموصى بها: Razer Core X (~299 دولار) + RTX 3090.',
+            affiliateLinks: [
+              { label: 'Razer Core X eGPU Enclosure على Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
+            ],
+          },
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: 'هل توجد طريقة لتشغيل eGPU مع MacBook Pro M4 للذكاء الاصطناعي؟',
+            a: 'لا لحوسبة معالج الرسومات. لا يكشف macOS واجهة برمجة تطبيقات لمعالجات الرسومات الخارجية لتنفيذ مهام Metal compute على أجهزة سلسلة M. الخيار الوحيد هو توصيل MacBook بخادم Ollama على جهاز منفصل (حاسب مصغر أو مكتبي بمعالج رسومات مخصص) عبر الشبكة المحلية. عيّن OLLAMA_HOST=0.0.0.0 على الخادم ووجّه تطبيقات MacBook إلى عنوان IP ذلك الجهاز.',
+          },
+          {
+            q: 'هل ستُعيد Apple دعم eGPU لمعالج Apple Silicon؟',
+            a: 'مستبعد. تدمج بنية سلسلة M من Apple معالج الرسومات ووحدة المعالجة المركزية والذاكرة في شريحة واحدة — فلسفة التصميم هي الذاكرة الموحدة لا قابلية التوسع. فقط Mac Pro (2023) يدعم توسيع معالج الرسومات.',
+          },
+          {
+            q: 'هل يمكنني استخدام معالج رسومات NVIDIA للاستدلال وتوجيه المخرجات إلى MacBook الخاص بي؟',
+            a: 'نعم — هذا هو النهج الموصى به. شغّل Ollama على جهاز Windows أو Linux بمعالج رسومات NVIDIA، اكشفه على شبكتك المحلية (OLLAMA_HOST=0.0.0.0)، واتصل من MacBook عبر Open WebUI أو Cursor أو Continue أو أي عميل متوافق مع OpenAI.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'هل يمكنني استخدام eGPU مع MacBook للاستدلال المحلي بالنماذج اللغوية الكبيرة؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'لا. أزالت Apple دعم حوسبة eGPU في macOS Ventura (2022). البدائل: Mac Mini M4 Pro (48 جيجابايت ذاكرة موحدة) أو حاسب AMD مصغر مع OCuLink.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'هل توجد طريقة لتشغيل eGPU مع MacBook Pro M4 للذكاء الاصطناعي؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'لا لحوسبة معالج الرسومات. وصّل MacBook بخادم Ollama على جهاز منفصل بمعالج رسومات مخصص عبر الشبكة المحلية (OLLAMA_HOST=0.0.0.0 على الخادم).',
+          },
+        },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'eGPU مع MacBook والذكاء الاصطناعي المحلي: ما الذي يعمل في 2026؟', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ar/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ar' },
+  },
 }

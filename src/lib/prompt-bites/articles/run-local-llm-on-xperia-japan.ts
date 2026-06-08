@@ -656,4 +656,89 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Hardware Guides',
+    title: 'هل يمكنك تشغيل نموذج لغة محلي على هاتف Xperia؟',
+    seoTitle: 'نموذج لغة محلي على Xperia اليابان 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Xperia 1 VI (12 GB) يشغّل Phi-4 Q4 و Rinna 3.6B؛ Xperia 5 V (8 GB) يدير نماذج 3B؛ Xperia 10 VI (6 GB) يقتصر على TinyLlama. عبر MLC Chat، بدون روت.',
+    publishDate: '2026-05-27',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-27',
+    quickAnswerTop: {
+      ar: {
+        question: 'هل يمكنك تشغيل نموذج لغة محلي على هاتف Xperia؟',
+        answer: 'نعم — Xperia 1 VI (12 GB RAM، Snapdragon 8 Gen 3) يشغّل Rinna 3.6B و Phi-4 Q4 عبر MLC Chat. يدير Xperia 5 V (8 GB) النماذج الخفيفة. يقتصر Xperia 10 VI (6 GB) على TinyLlama و Gemma 2B.',
+        bullets: [
+          'Xperia 1 VI: 12 GB RAM — يشغّل Phi-4 Q4 و Rinna 3.6B و Qwen3-3B',
+          'Xperia 5 V: 8 GB RAM — يشغّل Rinna 3.6B و Gemma 2B Q4',
+          'Xperia 10 VI: 6 GB RAM — TinyLlama و Gemma 2B فقط',
+          'لا تتضمن Sony ميزات مشابهة لـ Galaxy AI — نموذج اللغة المحلي عبر MLC Chat يملأ هذه الفجوة',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Xperia 1 VI (12 GB RAM، Snapdragon 8 Gen 3) هو الـ Xperia الوحيد الذي يشغّل نماذج 7B+ بموثوقية — مثالي لـ Phi-4 Q4 و Qwen3-3B',
+          'Xperia 5 V (8 GB RAM) يدير نماذج 3B بما فيها Rinna 3.6B و Gemma 2B Q4 دون مشاكل',
+          'Xperia 10 VI (6 GB RAM) مقتصر على النماذج دون 2B — TinyLlama 1.1B و Gemma 2B هما الحد العملي',
+          'لا تتضمن Sony ميزات ذكاء اصطناعي على الجهاز — MLC Chat أو PocketPal AI من Google Play هو البديل العملي',
+          'يبلغ استهلاك البطارية حوالي 15% في الساعة مع الشاشة المضاءة أثناء الاستنتاج المستمر على Xperia 1 VI؛ استخدم وضع الطيران لتقليل الاستهلاك',
+        ],
+      },
+      body1: {
+        title: 'التوافق حسب طراز Xperia',
+        content: [
+          '<strong>اعتبارًا من مايو 2026، تدعم ثلاثة طرازات Xperia حالية استنتاج نماذج اللغة المحلية، وتتحدد القدرة بالكامل وفق الذاكرة العشوائية والمعالج — يتصدر Xperia 1 VI، ويغطي Xperia 5 V الفئة المتوسطة، ويقتصر Xperia 10 VI على أصغر النماذج.</strong> لا تُثبّت Sony مسبقًا مساعدات ذكاء اصطناعي على الجهاز (خلافًا لـ Samsung Galaxy AI)، لذا فإن تطبيقات نماذج اللغة المحلية هي الطريق الوحيد للذكاء الاصطناعي الخاص وغير المتصل على أجهزة Xperia.',
+          'Xperia 1 VI هو الـ Xperia الوحيد القادر على تشغيل نماذج 7B+ المُكمَّمة. تتيح معالجة Snapdragon 8 Gen 3 SoC و12 GB LPDDR5X RAM هامشًا لـ Phi-4 Q4 (14B مُكمَّم إلى ~8 GB) و Qwen3-3B إلى جانب الاستخدام اليومي للتطبيقات. Xperia 5 V بـ Snapdragon 8 Gen 2 و8 GB RAM هو النقطة المثلى لنماذج 3B — يعمل Rinna 3.6B و Gemma 2B Q4 بموثوقية. يستخدم Xperia 10 VI الفئة المتوسطة Snapdragon 6 Gen 1 مع 6 GB RAM فقط؛ في هذا المستوى التزم بـ TinyLlama 1.1B أو Gemma 2B — تتعطل النماذج الأكبر أو تُنتج أخطاء نفاد الذاكرة أثناء التحميل.',
+          'استخدم Xperia 1 VI للنماذج 7B+؛ و Xperia 5 V للنماذج 3B؛ والتزم بالنماذج دون 2B على Xperia 10 VI.',
+          'لتعليمات إعداد التطبيقات، راجع <a href="/ar/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">دليل تطبيقات نماذج اللغة على Android لليابان</a>.',
+        ],
+        columns: ['طراز Xperia', 'الذاكرة / المعالج', 'النماذج الموصى بها'],
+        rows: [
+          { 'طراز Xperia': 'Xperia 1 VI', 'الذاكرة / المعالج': '12 GB / Snapdragon 8 Gen 3', 'النماذج الموصى بها': 'Phi-4 Q4، Rinna 3.6B، Qwen3-3B' },
+          { 'طراز Xperia': 'Xperia 5 V', 'الذاكرة / المعالج': '8 GB / Snapdragon 8 Gen 2', 'النماذج الموصى بها': 'Rinna 3.6B، Gemma 2B Q4' },
+          { 'طراز Xperia': 'Xperia 10 VI', 'الذاكرة / المعالج': '6 GB / Snapdragon 6 Gen 1', 'النماذج الموصى بها': 'TinyLlama 1.1B، Gemma 2B فقط' },
+        ],
+      },
+      body2: {
+        title: 'دليل الإعداد في 3 خطوات',
+        content: [
+          '<strong>يستغرق تثبيت نموذج لغة محلي على Xperia ثلاث خطوات وأقل من 30 دقيقة بما فيها وقت تنزيل النموذج.</strong> لا تتطلب العملية صلاحيات root أو وضع المطور أو إعدادات Xperia خاصة — تتم بالكامل عبر إدارة التطبيقات والملفات القياسية في Android.',
+          'الخطوة 1: ثبّت MLC Chat أو PocketPal AI من Google Play (Google Playストア). كلاهما مجاني ومتاح في اليابان بدون VPN أو تجاوز المنطقة. MLC Chat أسرع حتى الاستنتاج الأول؛ PocketPal AI يدعم نطاقًا أوسع من ملفات النماذج GGUF من Hugging Face.',
+          'الخطوة 2: نزّل نموذجك عبر Wi-Fi. تتفاوت أحجام التنزيل: TinyLlama 1.1B Q4 حوالي 0.7 GB، Rinna 3.6B Q4 حوالي 2 GB، Gemma 2B Q4 حوالي 1.5 GB، Phi-4 Q4 حوالي 8 GB. استخدم Xperia بسعة تخزين 128 GB أو أكثر لـ Phi-4. أغلق جميع التطبيقات الأخرى قبل تحميل Phi-4 Q4 — يستخدم نحو 8 GB من الـ 12 GB RAM المتاحة في Xperia 1 VI ويحتاج إلى أقصى ذاكرة متاحة للتحميل دون تعطل. تجنب التنزيل عبر بيانات الهاتف — الملفات ضخمة.',
+          'الخطوة 3: بدّل لوحة المفاتيح إلى الإدخال باليابانية. Gboard مع تفعيل اليابانية أو ATOK (الشائع في اليابان للاستخدام المهني) يعملان مباشرةً مع MLC Chat و PocketPal AI — تكتب باليابانية والنموذج يرد باليابانية. لا يلزم إعداد إضافي لتعمل الإدخال بالحروف اليابانية. عند الاستنتاج يكون وضع الطيران (機内モード) مفيدًا لتوفير البطارية. يتصل Sony Xperia AI Agent (حاليًا في مرحلة تجريبية) بخدمات ذكاء اصطناعي سحابية — نموذج اللغة المحلي عبر MLC Chat هو الطريقة الوحيدة لتشغيل استنتاج الذكاء الاصطناعي بالكامل على Xperia دون إرسال بيانات إلى خوادم خارجية، وهو أمر مهم للخصوصية في ظل قانون حماية المعلومات الشخصية (APPI / 個人情報保護法). للاطلاع على دليل إعداد كامل، راجع <a href="/ar/power-local-llm/run-ai-on-tablet-ipad-android" class="text-primary hover:underline">تشغيل الذكاء الاصطناعي على الأجهزة اللوحية وهواتف Android</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'إجابات سريعة حول نماذج اللغة على Xperia',
+        faqs: [
+          {
+            q: 'هل يعمل نموذج اللغة المحلي على Xperia 10 VI؟',
+            a: 'فقط TinyLlama 1.1B و Gemma 2B Q4. يمتلك Xperia 10 VI ذاكرة RAM سعتها 6 GB ومعالج Snapdragon 6 Gen 1 — تتعطل النماذج الأكبر أو تُنتج أخطاء نفاد الذاكرة أثناء التحميل. لا تحاول تشغيل Rinna 3.6B أو أي نموذج 7B على Xperia 10 VI.',
+          },
+          {
+            q: 'كم مساحة تخزين يحتاجها النموذج على Xperia؟',
+            a: 'يتطلب Rinna 3.6B Q4 تقريبًا 2 GB. يتطلب Phi-4 Q4 تقريبًا 8 GB. يتطلب TinyLlama 1.1B Q4 تقريبًا 0.7 GB. استخدم Xperia بتخزين 128 GB أو أكثر لـ Phi-4؛ 64 GB كافية لـ Rinna 3.6B و Gemma 2B.',
+          },
+          {
+            q: 'كم يستهلك تشغيل نموذج لغة على Xperia من البطارية؟',
+            a: 'حوالي 15% في الساعة مع الشاشة المضاءة أثناء الاستنتاج المستمر على Xperia 1 VI بالأداء الكامل. على Xperia 5 V مع Rinna 3.6B توقع استهلاكًا مشابهًا. فعّل وضع الطيران (機内モード) لتقليل استهلاك الراديو في الخلفية وخفض الاستهلاك الكلي بنسبة 2–4% في الساعة.',
+          },
+          {
+            q: 'هل يعمل بدون إنترنت على Xperia؟',
+            a: 'نعم — بالكامل بدون إنترنت بعد التنزيل الأولي للنموذج. لا يتطلب MLC Chat و PocketPal AI اتصالًا بالإنترنت أو مفتاح API أو حساب Sony بمجرد تخزين النموذج على الجهاز. لا تغادر أي بيانات هاتفك أثناء الاستنتاج.',
+          },
+          {
+            q: 'ما الفرق بين Sony Xperia AI Agent ونموذج اللغة المحلي؟',
+            a: 'يُوجّه Sony Xperia AI Agent (تجريبي) الطلبات عبر خوادم ذكاء اصطناعي سحابية — تمر موجّهاتك وردودك عبر البنية التحتية لـ Sony أو جهة خارجية. يعمل نموذج اللغة المحلي عبر MLC Chat بالكامل على شريحة Snapdragon في Xperia — لا تغادر البيانات الجهاز قط. هذا النهج على الجهاز هو البديل المتوافق مع الخصوصية للمستخدمين الذين يتعاملون مع بيانات حساسة في ظل قانون حماية المعلومات الشخصية (APPI / 個人情報保護法).',
+          },
+        ],
+      },
+    },
+  },
 }

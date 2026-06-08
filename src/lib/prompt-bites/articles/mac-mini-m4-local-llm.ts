@@ -1031,4 +1031,146 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Hardware-Specific',
+    title: 'هل Mac Mini M4 مناسب للنماذج اللغوية المحلية في 2026؟',
+    seoTitle: 'Mac Mini M4 للنماذج اللغوية المحلية 2026 | Prompt Bites',
+    metaDescription: 'نعم، Mac Mini M4 يشغّل النماذج اللغوية المحلية بشكل جيد. M4 Pro بـ 24 GB ذاكرة موحدة يتعامل مع نماذج 8B بسلاسة وهو أفضل خيار Apple من حيث السعر.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Mac Mini M4', 'Mac Mini M4 Pro'],
+    educationalLevel: 'Intermediate',
+    audience: 'المشترون الذين يقيّمون Mac Mini M4 لتشغيل النماذج اللغوية الكبيرة محلياً',
+    affiliateDisclosure: true,
+    parentArticle: '/local-llms/best-mini-pcs-local-llm',
+    siblingBites: ['best-mini-pc-for-local-llm', 'best-egpu-ollama-macbook'],
+    is_living_page: false,
+    readTime: '4 دقائق قراءة',
+    leadAnswerBlock:
+      'نعم، Mac Mini M4 مناسب للنماذج اللغوية المحلية. إعداد M4 Pro بـ 24 GB من الذاكرة الموحدة يشغّل نماذج 8B بسلاسة وهو أفضل خيار Apple من حيث السعر للاستدلال المحلي. الذاكرة الموحدة تعني أن RAM مشتركة بين CPU وGPU، لذا لا يوجد حد VRAM منفصل.',
+    toc: [
+      { label: 'أفضل اختيار: Mac Mini M4 Pro بـ 24 GB', anchor: '#best-pick' },
+      { label: 'مقارنة إعدادات Mac Mini M4', anchor: '#comparison' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+      { label: 'قراءات ذات صلة', anchor: '#related' },
+    ],
+    intro:
+      'Mac Mini M4 آلة قادرة للنماذج اللغوية المحلية لأن Apple Silicon يستخدم ذاكرة موحدة: نفس الـ RAM تخدم CPU وGPU معاً. هذا يُزيل حد VRAM الثابت الذي يقيّد الحاسبات المدمجة ذات GPU منفصلة. السؤال هو أي إعداد تختار.',
+    quickAnswerTop: {
+      ar: {
+        question: 'هل Mac Mini M4 جيد لتشغيل النماذج اللغوية المحلية؟',
+        answer: 'نعم — Mac Mini M4 Pro بـ 24 GB ذاكرة موحدة يشغّل Llama 3 8B بـ ~36 توكن/ث عبر MLX. أفضل خيار Apple من حيث القيمة مقابل السعر بـ 1,599 دولار.',
+        bullets: [
+          'M4 الأساسي (16 GB) يشغّل نماذج 7B بسلاسة، لكنه لا يستطيع تحميل 14B بجودة كاملة.',
+          'M4 Pro 24 GB يتعامل مع Qwen 14B Q4 بـ ~20 توكن/ث — النقطة العملية المثلى.',
+          'M4 Pro 48 GB يشغّل Qwen 32B Q4 بـ ~12 توكن/ث — معادل لـ RTX 4090 المنفصلة لمعظم المهام.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'أفضل اختيار: Mac Mini M4 Pro بـ 24 GB ذاكرة موحدة — يشغّل نماذج 8B بسلاسة ومعظم 14B بتكميم Q4',
+          'بنية الذاكرة الموحدة تشارك RAM بين CPU وGPU — لا حد VRAM منفصل',
+          'Mac Mini M4 الأساسي بـ 16 GB يشغّل نماذج 8B لكن يترك هامشاً ضيقاً للنماذج الأكبر أو السياقات الطويلة',
+          'M4 يستخدم Apple Metal لتسريع GPU؛ Ollama وLM Studio يدعمانه دون إعداد drivers',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'أفضل اختيار: Mac Mini M4 Pro بـ 24 GB ذاكرة موحدة',
+        content: [
+          '<strong>Mac Mini M4 Pro بـ 24 GB ذاكرة موحدة هو أفضل خيار Apple من حيث السعر للنماذج اللغوية المحلية، لأن 24 GB يشغّل نماذج 8B بسلاسة ومعظم 14B بتكميم Q4.</strong> الذاكرة الموحدة مشتركة بين CPU وGPU، لذا لا يوجد ميزانية VRAM منفصلة لإدارتها.',
+          'نموذج 8B بتكميم Q4 يستخدم حوالي 5 GB؛ 14B يستخدم حوالي 9–10 GB. مع 24 GB إجمالاً، M4 Pro يترك هامشاً كافياً لنافذة السياق ونظام التشغيل والتطبيقات الأخرى. Mac Mini M4 الأساسي بـ 16 GB يشغّل نماذج 8B لكن هامشه ضيق لشيء أكبر.',
+          'M4 يستخدم Apple Metal لتسريع GPU، وOllama وLM Studio يدعمانه دون إعداد drivers. اختر M4 الأساسي 16 GB إذا كنت ستشغّل نماذج 8B فقط وتريد أقل سعر. اختر M4 Pro 24 GB إذا أردت هامشاً للنمو نحو نماذج 14B. للأسعار، راجع قوائم Apple والتجار الحاليين.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro+24GB',
+            productName: 'Apple Mac Mini M4 Pro 24GB',
+            productCategory: 'mini-pc',
+            label: 'عرض سعر Mac Mini M4 Pro على Amazon',
+          },
+          {
+            url: 'https://www.bestbuy.com/site/searchpage.jsp?st=Mac+Mini+M4+Pro',
+            productName: 'Apple Mac Mini M4 Pro 24GB',
+            productCategory: 'mini-pc',
+            label: 'عرض سعر Mac Mini M4 Pro على Best Buy',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Mac+Mini+M4+16GB',
+            productName: 'Apple Mac Mini M4 16GB',
+            productCategory: 'mini-pc',
+            label: 'عرض سعر Mac Mini M4 الأساسي على Amazon',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'مقارنة إعدادات Mac Mini M4 للنماذج اللغوية المحلية',
+        content: [
+          '<strong>العامل الحاسم هو حجم الذاكرة الموحدة — يحدد أكبر نموذج يمكنك تشغيله.</strong> الأسعار تتفاوت حسب التاجر والإعداد؛ راجع القوائم الحالية قبل الشراء.',
+        ],
+        columns: ['الإعداد', 'الذاكرة الموحدة', 'أكبر نموذج (Q4)', 'مثالي لـ'],
+        rows: [
+          {
+            'الإعداد': 'Mac Mini M4 (أساسي)',
+            'الذاكرة الموحدة': '16 GB',
+            'أكبر نموذج (Q4)': '8B بسلاسة',
+            'مثالي لـ': 'أقل سعر، 8B فقط',
+          },
+          {
+            'الإعداد': 'Mac Mini M4 Pro',
+            'الذاكرة الموحدة': '24 GB',
+            'أكبر نموذج (Q4)': '14B بسلاسة',
+            'مثالي لـ': 'أفضل قيمة — هامش للنمو',
+          },
+          {
+            'الإعداد': 'Mac Mini M4 Pro (محسّن)',
+            'الذاكرة الموحدة': '48 GB+',
+            'أكبر نموذج (Q4)': 'فئة 30B',
+            'مثالي لـ': 'نماذج أكبر، تكلفة أعلى',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'أسئلة شائعة حول Mac Mini M4 للنماذج اللغوية المحلية',
+        faqs: [
+          {
+            q: 'هل يستطيع Mac Mini M4 تشغيل نماذج 8B؟',
+            a: 'نعم. Mac Mini M4 الأساسي بـ 16 GB ذاكرة موحدة يشغّل نماذج 8B بتكميم Q4 بسلاسة. M4 Pro بـ 24 GB يشغّلها مع هامش أكبر ويتعامل أيضاً مع معظم نماذج 14B.',
+          },
+          {
+            q: 'ما معنى الذاكرة الموحدة بالنسبة للنماذج اللغوية المحلية؟',
+            a: 'الذاكرة الموحدة هي RAM مشتركة بين CPU وGPU في Apple Silicon. لا يوجد مجموعة VRAM منفصلة، لذا يمكن استخدام كامل الذاكرة المتاحة لتحميل النموذج. Mac Mini M4 Pro بـ 24 GB يمكنه تخصيص معظم تلك الـ 24 GB للاستدلال.',
+          },
+          {
+            q: 'كم ذاكرة يجب أن أشتري في Mac Mini M4 للنماذج اللغوية؟',
+            a: 'اشترِ 24 GB إذا أردت تشغيل نماذج 14B بسلاسة. لا يمكن ترقية الذاكرة بعد الشراء في Apple Silicon، لذا اختر بناءً على أكبر نموذج تخطط لتشغيله مستقبلاً، ليس فقط احتياجاتك الحالية.',
+          },
+          {
+            q: 'هل أحتاج إلى برامج إضافية لتشغيل النماذج اللغوية على Mac Mini M4؟',
+            a: 'لا تحتاج إلى drivers خاصة. Ollama وLM Studio يدعمان تسريع Apple Metal GPU على M4 بشكل افتراضي. ثبّت التطبيق، نزّل نموذجاً، وشغّله.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[أفضل mini PC للنماذج اللغوية المحلية](/ar/prompt-bites/best-mini-pc-for-local-llm) — Mac Mini M4 مقارنة بـ mini PCs من AMD',
+          '[أفضل eGPU لـ Ollama على MacBook](/ar/prompt-bites/best-egpu-ollama-macbook) — لماذا لا تساعد eGPU في استدلال النماذج اللغوية على Apple Silicon',
+          '[أفضل نموذج لغوي محلي لحاسب محمول بـ 16 GB RAM](/ar/prompt-bites/best-local-llm-16gb-ram-laptop) — اختيار النماذج لمستوى 16 GB',
+        ],
+      },
+    },
+  },
 }
+

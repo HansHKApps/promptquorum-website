@@ -1073,4 +1073,151 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Hardware-Specific',
+    title: 'أفضل SSD لتحميل النماذج بسرعة في 2026؟',
+    seoTitle: 'أفضل SSD لتحميل نماذج LLM بسرعة 2026 | Prompt Bites',
+    metaDescription: 'أفضل SSD لتحميل نماذج LLM بسرعة: محرك NVMe PCIe Gen4 مثل Samsung 990 Pro 2 TB. القراءة التسلسلية العالية تنقل النماذج متعددة الجيجابايت إلى الذاكرة في ثوانٍ.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Samsung 990 Pro 2 TB'],
+    educationalLevel: 'Intermediate',
+    audience: 'مستخدمو LLM المحلي الذين يعانون من بطء أوقات تحميل النماذج',
+    affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
+    siblingBites: ['best-gpu-under-600-local-llm', 'best-mini-pc-for-local-llm'],
+    is_living_page: false,
+    readTime: '4 دقائق للقراءة',
+    leadAnswerBlock:
+      'أفضل SSD لتحميل نماذج LLM بسرعة هو محرك NVMe PCIe Gen4 مثل Samsung 990 Pro 2 TB. تقرأ سرعته التسلسلية العالية (~7,000 MB/s) ملفات النماذج متعددة الجيجابايت وتنقلها إلى الذاكرة في ثوانٍ، مما يقلل وقت البدء البارد لنموذج 14B من ~30 ثانية (SSD SATA) إلى أقل من 5 ثوانٍ.',
+    toc: [
+      { label: 'الاختيار الأفضل: Samsung 990 Pro 2 TB', anchor: '#best-pick' },
+      { label: 'مقارنة أنواع SSD لتحميل النماذج', anchor: '#comparison' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+      { label: 'قراءة ذات صلة', anchor: '#related' },
+    ],
+    intro:
+      'تحميل النماذج مقيّد بسرعة القراءة التسلسلية: نموذج 14B Q4 يشغل ~9 GB على القرص، والوقت اللازم لنسخه إلى الذاكرة هو وقت الانتظار عند تبديل النماذج. محرك NVMe سريع يُزيل هذا الانتظار تمامًا.',
+    quickAnswerTop: {
+      ar: {
+        question: 'أي SSD يوفر أسرع تحميل لنماذج LLM المحلية؟',
+        answer: 'Samsung 990 Pro 2 TB بسرعة 7,450 MB/s يحمّل نموذج 7B Q4 في أقل من ثانيتين. أفضل نسبة سعر إلى سرعة لتخزين نماذج الذكاء الاصطناعي.',
+        bullets: [
+          'نموذج 7B Q4_K_M (~4.1 GB) يُحمَّل في ~0.8 ثانية على 990 Pro مقابل ~3.5 ثانية على SSD SATA.',
+          'أي محرك NVMe Gen4 يعمل — WD Black SN850X وSeagate FireCuda 530 بدائل قريبة.',
+          'ضع ذاكرة تخزين Ollama (~/ollama/models) على NVMe وليس على محرك نظام التشغيل للتحميل الأسرع.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'الاختيار الأفضل: Samsung 990 Pro 2 TB (PCIe Gen4 NVMe) — ~7,000 MB/s قراءة تسلسلية تنقل نموذج 14B إلى الذاكرة في أقل من 5 ثوانٍ',
+          'محركات NVMe PCIe Gen4 تحمّل ملفات النماذج الكبيرة بسرعة 7-10 أضعاف مقارنةً بـ SSD SATA',
+          '2 TB هو الحد الأدنى العملي عند الاحتفاظ بأكثر من نموذجين أو ثلاثة نماذج مُكمَّمة على القرص',
+          'محركات Gen5 أسرع على الورق لكن الفارق أقل أهمية لتحميل LLM مقارنةً بالاختبارات الخام',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'الاختيار الأفضل: Samsung 990 Pro 2 TB (PCIe Gen4 NVMe)',
+        content: [
+          '<strong>يُعدّ Samsung 990 Pro 2 TB أفضل SSD لتحميل نماذج LLM بسرعة لأن قراءته التسلسلية ~7,000 MB/s تنقل نموذج 14B Q4 (~9 GB) إلى الذاكرة في أقل من 5 ثوانٍ.</strong> SSD SATA بسرعة ~550 MB/s يستغرق أكثر من 15 ثانية للنموذج ذاته. على HDD بطيء، الانتظار يتجاوز دقيقة كاملة.',
+          'PCIe Gen4 NVMe هو النقطة المثلى. Samsung 990 Pro وWD Black SN850X وCrucial T500 جميعها قريبة من 7,000 MB/s قراءة تسلسلية بأسعار متشابهة. محركات Gen5 تصل إلى ذرى أعلى لكن المكسب لتحميل النماذج صغير — وGen5 يتطلب لوحة أم متوافقة.',
+          'اشترِ 2 TB أو أكبر. بعد تجميع عدد من النماذج المُكمَّمة (7B، 8B، 13B، 14B بكميات متعددة)، يمتلئ 1 TB بسرعة. 2 TB يترك مساحة لنظام التشغيل والأطر البرمجية وعشرات النماذج دون الحاجة لتناوب التنزيلات. للأسعار الحالية راجع قوائم تجار التجزئة — أسعار NVMe تتغير أسبوعيًا.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Samsung+990+Pro+2TB',
+            productName: 'Samsung 990 Pro 2 TB',
+            productCategory: 'ssd',
+            label: 'تحقق من سعر Samsung 990 Pro 2 TB على Amazon',
+          },
+          {
+            url: 'https://www.newegg.com/p/pl?d=Samsung+990+Pro+2TB',
+            productName: 'Samsung 990 Pro 2 TB',
+            productCategory: 'ssd',
+            label: 'تحقق من سعر Samsung 990 Pro 2 TB على Newegg',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=WD+Black+SN850X+2TB',
+            productName: 'WD Black SN850X 2 TB',
+            productCategory: 'ssd',
+            label: 'تحقق من سعر WD Black SN850X 2 TB على Amazon',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'مقارنة أنواع SSD لتحميل نماذج LLM',
+        content: [
+          '<strong>سرعة القراءة التسلسلية هي الرقم الوحيد المهم لتحميل النماذج.</strong> يوضح الجدول أدناه المدة التي يستغرقها كل محرك لتحميل نموذج 14B Q4 (~9 GB) من القرص إلى الذاكرة — تقريبي، دون احتساب الحمل الإضافي للنظام.',
+        ],
+        columns: ['نوع المحرك', 'القراءة التسلسلية', 'وقت تحميل نموذج 9 GB', 'الحكم'],
+        rows: [
+          {
+            'نوع المحرك': 'PCIe Gen4 NVMe (مثل Samsung 990 Pro)',
+            'القراءة التسلسلية': '~7,000 MB/s',
+            'وقت تحميل نموذج 9 GB': '~1.5 ثانية (نظري)، ~3-5 ثوانٍ (فعلي)',
+            'الحكم': 'الاختيار الأفضل',
+          },
+          {
+            'نوع المحرك': 'PCIe Gen3 NVMe',
+            'القراءة التسلسلية': '~3,500 MB/s',
+            'وقت تحميل نموذج 9 GB': '~3-7 ثوانٍ',
+            'الحكم': 'مقبول',
+          },
+          {
+            'نوع المحرك': 'SSD SATA',
+            'القراءة التسلسلية': '~550 MB/s',
+            'وقت تحميل نموذج 9 GB': '~17-25 ثانية',
+            'الحكم': 'بطيء — قم بالترقية إن أمكن',
+          },
+          {
+            'نوع المحرك': 'HDD (7200 RPM)',
+            'القراءة التسلسلية': '~150 MB/s',
+            'وقت تحميل نموذج 9 GB': '~60-90 ثانية',
+            'الحكم': 'تجنّبه لـ LLMs',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'إجابات سريعة حول SSD لنماذج LLM المحلية',
+        faqs: [
+          {
+            q: 'هل يُسرّع SSD أسرع عملية الاستنتاج؟',
+            a: 'لا. بمجرد تحميل النموذج في الذاكرة أو VRAM، تعتمد سرعة الاستنتاج على عرض نطاق الذاكرة ووحدة معالجة الرسوميات وليس على SSD. يُسرّع SSD السريع فقط التحميل الأولي عند تشغيل النموذج أو التبديل بين النماذج.',
+          },
+          {
+            q: 'هل يستحق PCIe Gen5 على Gen4 لنماذج LLM؟',
+            a: 'بالنسبة لتحميل النماذج، المكسب صغير. محركات Gen5 تتجاوز 12,000 MB/s لكن وقت تحميل نموذج 9 GB ينخفض من ~1.5 ثانية إلى أقل من ثانية — معظم المستخدمين لن يلاحظوا ذلك. Gen5 أيضًا أغلى ويحتاج فتحة Gen5 في اللوحة الأم.',
+          },
+          {
+            q: 'كم مساحة SSD أحتاج لنماذج LLM المحلية؟',
+            a: '2 TB هو الحد الأدنى المريح. بضعة نماذج 14B مُكمَّمة قد تستهلك 30-50 GB مجتمعةً، وعادةً تريد نماذج متعددة على القرص للتبديل بين حالات الاستخدام. يمتلئ 1 TB بسرعة مع نظام التشغيل والأطر البرمجية وبيانات المستخدم.',
+          },
+          {
+            q: 'هل يجب أن يكون محرك نظام التشغيل هو نفس SSD؟',
+            a: 'لا. يمكنك وضع نظام التشغيل على محرك وملفات النماذج على NVMe سريع منفصل. هذا إعداد شائع. فقط وجّه Ollama أو LM Studio إلى دليل النماذج على المحرك السريع.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'قراءة ذات صلة',
+        items: [
+          '[أفضل GPU بأقل من 600 دولار لنماذج LLM المحلية](/ar/prompt-bites/best-gpu-under-600-local-llm) — اجمع SSD سريعًا مع GPU المناسبة',
+          '[أفضل mini PC لنموذج LLM المحلي](/ar/prompt-bites/best-mini-pc-for-local-llm) — كثير من mini PCs تأتي مع SSDs أبطأ',
+          '[كم من الذاكرة RAM يحتاج نموذج 7B؟](/ar/prompt-bites/how-much-ram-for-7b-model) — الذاكرة RAM أهم من SSD لسرعة الاستنتاج',
+        ],
+      },
+    },
+  },
 }

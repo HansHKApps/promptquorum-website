@@ -814,4 +814,87 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: '2026年Ollama常驻服务器最佳迷你电脑推荐', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/zh/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'zh' },
   },
+  ar: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Hardware & Performance',
+    type: 'comparison',
+    title: 'أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل 2026',
+    seoTitle: 'أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل 2026',
+    metaDescription: 'شغّل Ollama على مدار الساعة بجهاز مصغر يستهلك 15–35 W. أبرز الخيارات: Minisforum UM890 Pro، وAOOSTAR GEM12، وBeelink SER8. مواصفات، استهلاك الطاقة، وروابط الشراء.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    parentArticle: '/local-llms/local-llm-hardware-guide-2026',
+    leadAnswerBlock: '**Minisforum UM890 Pro (AMD Ryzen 9 8945HS، 32–96 GB RAM، Radeon 780M iGPU) هو أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل في 2026: يشغّل نماذج 7B بـ12–18 رمز/ثانية عبر CPU فقط، ويستهلك 25–45 W تحت الحمل، ويكفي حجم درج صغير.**',
+    quickAnswerTop: {
+      question: 'ما هو أفضل جهاز كمبيوتر مصغر لتشغيل Ollama كخادم منزلي دائم التشغيل؟',
+      answer: 'Minisforum UM890 Pro هو الخيار الأمثل: CPU سريع، وحتى 96 GB RAM للنماذج الكبيرة، واستهلاك 25–45 W تحت الحمل، وGPU Radeon 780M تسرّع نماذج 7B–13B. خيار الميزانية: Beelink SER8 (~$350). مستخدمو eGPU: AOOSTAR GEM12 Pro OCuLink.',
+      bullets: [
+        'Minisforum UM890 Pro: الأفضل عموماً — Ryzen 9 8945HS، حتى 96 GB DDR5، 25–45 W',
+        'AOOSTAR GEM12 Pro OCuLink: الأفضل للـeGPU — منفذ OCuLink يتصل بـRTX 3080/3090',
+        'Beelink SER8: الأفضل للميزانية — Ryzen 7 8745H، 32 GB، ~$350',
+        'Apple Mac Mini M4 Pro: الأفضل لـmacOS — 48 GB ذاكرة موحدة، 15–30 W',
+        'جميعها تستهلك أقل من 50 W في وضع الخمول — تشغيل 24/7 بـ~$3–5 شهرياً للكهرباء',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'الأجهزة المصغرة تستهلك 15–45 W مقابل 200–350 W لبطاقات GPU المكتبية — وفورات 24/7 مهمة',
+          'UM890 Pro يشغّل نماذج 7B عبر CPU فقط بـ12–18 رمز/ثانية؛ مناسب لاستخدام خادم API',
+          'AOOSTAR GEM12 Pro + eGPU OCuLink يتيح تسريع GPU دون الحاجة لحاسوب مكتبي',
+          'Mac Mini M4 Pro: 48 GB ذاكرة موحدة يشغّل نماذج 32B — أفضل خيار macOS',
+          'Beelink SER8 هو نقطة البداية دون $400 — 32 GB RAM لنماذج 7B و13B',
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: 'هل يمكن لجهاز مصغر تشغيل نماذج 13B أو أكبر بسرعة مفيدة؟',
+            a: 'نعم — مع RAM كافية. UM890 Pro بـ64 GB يشغّل Llama 3.3 13B Q8 كاملاً في الذاكرة بـ~8–12 رمز/ثانية عبر CPU فقط. مع تسريع iGPU Radeon 780M، تعمل نماذج Q4 بـ10–18 رمز/ثانية — مفيد للتلخيص في الخلفية أو استدعاءات API. للنماذج 30B فأكبر، Mac Mini M4 Pro (48 GB ذاكرة موحدة) هو الخيار الوحيد دون $1500.',
+          },
+          {
+            q: 'هل يعمل Ollama جيداً كخادم شبكة على جهاز مصغر؟',
+            a: 'نعم. اضبط OLLAMA_HOST=0.0.0.0 وسيخدم Ollama الطلبات من أي جهاز على شبكتك المحلية LAN. ادمجه مع Open WebUI (حاوية Docker) للحصول على واجهة مستعرض يمكن الوصول إليها من الهواتف والأجهزة اللوحية وأجهزة الكمبيوتر. يتعامل مع طلب متزامن واحد دون مشكلة.',
+          },
+          {
+            q: 'هل تستحق إعدادات eGPU التكلفة؟',
+            a: 'بالنسبة لـOllama تحديداً، eGPU عبر OCuLink (AOOSTAR GEM12 Pro + RTX 3090) يجمع بين عالمين: سرعة GPU مكتبية مع استهلاك طاقة جهاز مصغر في وضع الخمول. OCuLink (PCIe 4.0 x4) يوفر ~80% من عرض نطاق فتحة PCIe x16 المباشرة — كافٍ للاستدلال على نماذج اللغة الكبيرة مع حد أدنى من الاختناق.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'هل يمكن لجهاز مصغر تشغيل نماذج 13B أو أكبر بسرعة مفيدة؟',
+          acceptedAnswer: { '@type': 'Answer', text: 'نعم، مع RAM كافية. UM890 Pro بـ64 GB يشغّل 13B Q8 بـ8–12 رمز/ثانية عبر CPU فقط، و10–18 رمز/ثانية مع Radeon 780M. للنماذج 30B+، Mac Mini M4 Pro (48 GB) هو الخيار الأمثل للأجهزة المصغرة.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'هل يعمل Ollama جيداً كخادم شبكة على جهاز مصغر؟',
+          acceptedAnswer: { '@type': 'Answer', text: 'نعم. اضبط OLLAMA_HOST=0.0.0.0 ليخدم Ollama شبكتك المحلية. ادمجه مع Open WebUI للحصول على واجهة مستعرض. يتعامل مع طلب متزامن واحد دون مشكلة.' },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'أفضل الأجهزة المصغرة لخادم Ollama الدائم التشغيل 2026',
+      numberOfItems: 4,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'الأفضل عموماً — Ryzen 9 8945HS، حتى 96 GB DDR5، ~$450' },
+        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'الأفضل للـeGPU — منفذ OCuLink، ~$480' },
+        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'الأفضل للميزانية — Ryzen 7 8745H، 32 GB، ~$350' },
+        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'الأفضل لـmacOS — 48 GB ذاكرة موحدة، ~$1399' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ar/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ar' },
+  },
 }

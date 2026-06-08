@@ -792,4 +792,134 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Tool Comparisons',
+    title: 'Cursor Pro مقابل Continue.dev: هل تستحق $20/شهر في 2026؟',
+    seoTitle: 'Cursor Pro مقابل Continue.dev 2026 | Prompt Bites',
+    metaDescription: 'Cursor Pro ($20/شهر) يتفوق في نماذج السحابة والتجربة المصقولة. Continue.dev مجاني وأفضل لنماذج Ollama المحلية. اختر حسب مكان نموذجك.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: 'Intermediate',
+    audience: 'مطورون يختارون مساعد برمجة بالذكاء الاصطناعي لسير عمل من نوع VS Code',
+    affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/replace-github-copilot-with-local-llm',
+    siblingBites: ['best-frontend-for-ollama', 'jan-vs-lm-studio'],
+    is_living_page: false,
+    leadAnswerBlock: 'Cursor Pro بـ ~$20/شهر يستحق الاشتراك إذا كنت تستخدم أساسًا نماذج السحابة الحدّية (Claude وGPT) وتريد تجربة محرر مصقولة. Continue.dev مجاني وأفضل إذا كنت تشغّل أساسًا نماذج محلية عبر Ollama. اختر حسب مكان نموذجك: سحابة → Cursor Pro، محلي → Continue.dev.',
+    toc: [
+      { label: 'أفضل اختيار حسب سير العمل', anchor: '#best-pick' },
+      { label: 'Cursor Pro مقابل Continue.dev', anchor: '#comparison' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+      { label: 'قراءات ذات صلة', anchor: '#related' },
+    ],
+    intro: 'Cursor Pro وContinue.dev كلاهما مساعدا برمجة بالذكاء الاصطناعي لكن بمراكز ثقل مختلفة. Cursor Pro نسخة مدفوعة كاملة من VS Code مُحسَّنة لنماذج السحابة الحدّية. Continue.dev امتداد مجاني لـ VS Code/JetBrains مبني حول مفهوم "أحضر نموذجك" — بما في ذلك Ollama المحلي.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'الأفضل لنماذج السحابة الحدّية: Cursor Pro بـ ~$20/شهر — تجربة مصقولة، وضع الوكيل، حصة نماذج مضمّنة',
+          'الأفضل لنماذج Ollama المحلية: Continue.dev — مجاني، مفتوح المصدر، مبني حول "أحضر نموذجك"',
+          'الـ $20 في Cursor Pro تشتري تجربة المحرر بالإضافة إلى الوصول للنماذج؛ Continue.dev هو طبقة المحرر فقط',
+          'إذا كنت تدفع بالفعل لوصول API لـ Claude أو OpenAI، يمكن لـ Continue.dev مضاهاة Cursor بتكلفة أقل بكثير باستخدام مفاتيحك الخاصة',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'أفضل اختيار: Cursor Pro للسحابة، Continue.dev للمحلي',
+        content: [
+          '<strong>Cursor Pro هو الأفضل إذا كنت تستخدم أساسًا نماذج السحابة الحدّية (Claude 4.6 Sonnet وGPT) وتريد بيئة تطوير مصقولة؛ Continue.dev هو الأفضل إذا كنت تشغّل أساسًا نماذج محلية عبر Ollama أو تدفع بالفعل لواجهة برمجية.</strong> اختر حسب مكان نموذجك.',
+          'Cursor Pro بـ ~$20/شهر يجمع استخدام النماذج مع محرر مُدمج تمامًا — وضع الوكيل، سياق المستودع بأكمله، تعديلات تنبؤية. للمطورين الذين لا يدفعون بالفعل لواجهات Claude أو OpenAI، هذه الـ $20 تنافسية مقارنةً بتكلفة استخدام النموذج وحده.',
+          'Continue.dev مجاني ومفتوح المصدر. يعمل كامتداد لـ VS Code أو JetBrains ويتيح توجيهه نحو أي نموذج: واجهات API سحابية (بمفاتيحك الخاصة)، أو Ollama، أو LM Studio، أو vLLM. إذا كان سير عملك الرئيسي هو Ollama المحلي فـ Continue.dev هو الاختيار الواضح. إذا كنت تدفع بالفعل لواجهة Claude API بأسعار الاستخدام، فـ Continue.dev بمفتاحك الخاص عادةً أرخص من Cursor Pro عند الاستخدام المكثّف.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://cursor.com',
+            productName: 'Cursor Pro',
+            productCategory: 'ide',
+            priceRange: '~$20/شهر',
+            label: 'تحقق من أسعار Cursor Pro على cursor.com',
+          },
+          {
+            url: 'https://continue.dev',
+            productName: 'Continue.dev (مجاني)',
+            productCategory: 'ide-extension',
+            priceRange: 'مجاني',
+            label: 'تحميل Continue.dev (مجاني)',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Cursor Pro مقابل Continue.dev',
+        content: [
+          '<strong>الأداتان تخدمان سير عمل متداخلة لكن متمايزة.</strong> الأسعار تقريبية لمايو 2026 — تحقق من مواقع مزودي الخدمة للأسعار الحالية.',
+        ],
+        columns: ['الخاصية', 'Cursor Pro', 'Continue.dev'],
+        rows: [
+          {
+            'الخاصية': 'السعر (تقريبي)',
+            'Cursor Pro': '~$20/شهر',
+            'Continue.dev': 'مجاني',
+          },
+          {
+            'الخاصية': 'الترخيص',
+            'Cursor Pro': 'مملوك',
+            'Continue.dev': 'مفتوح المصدر (Apache 2.0)',
+          },
+          {
+            'الخاصية': 'النموذج الافتراضي',
+            'Cursor Pro': 'Claude 4.6 Sonnet (مضمّن)',
+            'Continue.dev': 'أحضر نموذجك (Ollama وOpenAI وغيرهما)',
+          },
+          {
+            'الخاصية': 'دعم Ollama المحلي',
+            'Cursor Pro': 'غير أصلي',
+            'Continue.dev': 'دعم كامل',
+          },
+          {
+            'الخاصية': 'وضع الوكيل',
+            'Cursor Pro': 'نعم',
+            'Continue.dev': 'أساسي',
+          },
+          {
+            'الخاصية': 'الأفضل لـ',
+            'Cursor Pro': 'نماذج السحابة، تجربة مصقولة',
+            'Continue.dev': 'النماذج المحلية، المرونة',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'أسئلة سريعة: Cursor Pro مقابل Continue.dev',
+        faqs: [
+          {
+            q: 'هل تستحق $20/شهر لـ Cursor Pro؟',
+            a: 'نعم إذا كنت تستخدم أساسًا Claude 4.6 أو GPT وتريد أفضل بيئة تطوير بالذكاء الاصطناعي. لا إذا كنت تستخدم أساسًا Ollama المحلي — Continue.dev مجاني وأفضل لسير العمل المحلية. إذا كنت تدفع لوصول API لـ Claude أو OpenAI، فـ Continue.dev بمفاتيحك الخاصة عادةً أرخص.',
+          },
+          {
+            q: 'هل يعمل Continue.dev مع Ollama؟',
+            a: 'نعم — ذلك هو حالة الاستخدام الرئيسية. ثبّت Ollama، نزّل نموذج برمجة مثل Qwen 3 Coder، ووجّه Continue.dev نحو نقطة نهاية Ollama المحلية. لا حاجة لمفاتيح API.',
+          },
+          {
+            q: 'أيهما أرخص في الاستخدام اليومي المكثّف؟',
+            a: 'Continue.dev بمفاتيح API الخاصة بك عادةً أرخص في الاستخدام المكثّف، إذ تدفع للرموز فقط دون هامش ربح. الحصة المضمّنة في Cursor Pro بـ ~$20 قد تُتجاوَز في الاستخدام المكثّف مما يُفعّل رسوم الزيادة.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[أفضل واجهة لـ Ollama](/ar/prompt-bites/best-frontend-for-ollama) — مقارنة Continue.dev بعملاء Ollama الآخرين',
+          '[Jan مقابل LM Studio](/ar/prompt-bites/jan-vs-lm-studio) — خيارات مماثلة لسير عمل المحادثة',
+          '[Qwen Coder مقابل DeepSeek Coder](/ar/prompt-bites/qwen-coder-vs-deepseek-coder) — نماذج البرمجة المحلية للاستخدام مع Continue.dev',
+        ],
+      },
+    },
+  },
 }

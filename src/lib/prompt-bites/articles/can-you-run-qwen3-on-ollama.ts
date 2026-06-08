@@ -567,4 +567,83 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Ollama',
+    title: 'هل يمكن تشغيل Qwen 3 على Ollama؟',
+    seoTitle: 'تشغيل Qwen 3 على Ollama 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'نعم — يدعم Ollama جميع أحجام Qwen 3 من 0.6B إلى 72B. شغّل باستخدام: ollama run qwen3:8b. يحتاج الحجم 8B إلى ~6 GB VRAM. تم التحديث في مايو 2026.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ar: {
+        question: 'هل يمكن تشغيل Qwen 3 على Ollama؟',
+        answer: 'نعم — يدعم Ollama جميع أحجام نماذج Qwen 3 من 0.6B إلى 72B. شغّل أي حجم بأمر واحد مثل ollama run qwen3:8b. يحتاج النموذج 8B إلى ~6 GB VRAM بتكميم Q4.',
+        bullets: [
+          'ollama run qwen3:0.6b — يعمل بـ 1 GB VRAM',
+          'ollama run qwen3:8b — يحتاج ~6 GB VRAM',
+          'ollama run qwen3:72b — يحتاج ~40 GB VRAM',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'يدعم Ollama جميع أحجام Qwen 3: 0.6B و1.5B و3B و7B و14B و32B و72B',
+          'نزّل أي حجم باستخدام <code>ollama run qwen3:8b</code> — استبدل الوسم بحجمك المستهدف',
+          'يحتاج نموذج 7B إلى ~6 GB VRAM بتكميم Q4 ويعمل بسرعة ~20 tok/s على GPU متوسط المستوى',
+          'يدعم Qwen 3 استدعاء الأدوات بشكل أصيل عبر واجهة برمجة Ollama القياسية — لا يلزم أي Modelfile مخصص',
+        ],
+      },
+      body1: {
+        title: 'نعم — إليك ما هو متاح',
+        content: [
+          '<strong>اعتبارًا من مايو 2026، يدعم Ollama جميع أحجام نماذج Qwen 3 الرئيسية من 0.6B إلى 72B.</strong> نزّل أي حجم بأمر واحد: <code>ollama run qwen3:8b</code>. استبدل <code>8b</code> بـ <code>0.6b</code> أو <code>1.5b</code> أو <code>3b</code> أو <code>14b</code> أو <code>32b</code> أو <code>72b</code> للأحجام الأخرى.',
+          'كل حجم متاح بتكميمات متعددة. Q4_K_M هو نقطة البداية الافتراضية والموصى بها — يوفر أفضل نسبة جودة إلى حجم الملف. Q8_0 متاح للنموذجين 7B و14B إذا كان لديك هامش VRAM إضافي.',
+          'استدعاء الأدوات مدعوم بشكل أصيل في جميع أحجام Qwen 3 عبر واجهة برمجة Ollama القياسية. لا يلزم أي Modelfile مخصص أو قالب مطالبة خاص.',
+        ],
+        codeBlock: 'ollama run qwen3:8b',
+      },
+      body2: {
+        title: 'اختيار حجم Qwen 3 المناسب',
+        content: [
+          'يعتمد اختيار الحجم المناسب من Qwen 3 كليًا على VRAM المتاح. <strong>بالنسبة لمعظم المستخدمين الذين يمتلكون GPU متوسط المستوى (6-8 GB VRAM)، يُعدّ نموذج 7B بتكميم Q4_K_M الخيار العملي — يحتاج ~6 GB ويعمل بسرعة ~20 tok/s.</strong>',
+          'نموذج 14B بتكميم Q4 هو المستوى الموصى به للبرمجة: يتفوق على 7B في توليد الشيفرة ويعمل بشكل مريح في 10-12 GB VRAM. للمقارنة الكاملة لأداء Qwen 3 في البرمجة مقابل النماذج المحلية الأخرى، راجع <a href="/ar/local-llms/run-qwen-locally-guide-2026" class="text-primary hover:underline">دليل تشغيل Qwen محليًا في 2026</a>.',
+        ],
+        columns: ['VRAM', 'حجم Qwen 3', 'الأفضل لـ'],
+        rows: [
+          { 'VRAM': '< 4 GB', 'حجم Qwen 3': '0.6B / 1.5B', 'الأفضل لـ': 'الأجهزة الطرفية والاختبارات والمعالجة المركزية فقط' },
+          { 'VRAM': '4–6 GB', 'حجم Qwen 3': '3B', 'الأفضل لـ': 'GPU اقتصادي أو معالج مركزي بذاكرة محدودة' },
+          { 'VRAM': '6–12 GB', 'حجم Qwen 3': '7B / 14B', 'الأفضل لـ': 'الاستخدام العام والبرمجة' },
+          { 'VRAM': '12–24 GB', 'حجم Qwen 3': '14B / 32B', 'الأفضل لـ': 'برمجة واستدلال عالي الجودة' },
+          { 'VRAM': '40+ GB', 'حجم Qwen 3': '72B', 'الأفضل لـ': 'جودة محلية قريبة من الحد الأمثل' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'إجابات سريعة حول Qwen 3 على Ollama',
+        faqs: [
+          {
+            q: 'كيف أُثبّت Qwen 3 على Ollama؟',
+            a: 'شغّل <code>ollama run qwen3:8b</code> في الطرفية. يُنزّل Ollama النموذج تلقائيًا في أول تشغيل. استبدل <code>8b</code> بحجمك المستهدف: 0.6b أو 1.5b أو 3b أو 14b أو 32b أو 72b.',
+          },
+          {
+            q: 'هل Qwen 3 أفضل من Llama 3 للبرمجة؟',
+            a: 'للبرمجة: نعم، يتفوق Qwen 3 14B على Llama 3 8B في اختبارات HumanEval. للمحادثة العامة على مستوى 8B: يظل Llama 3 8B منافسًا. للاطلاع على أفضل نماذج Ollama الحالية عبر جميع المهام، راجع <a href="/ar/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">أفضل نماذج Ollama في الوقت الحالي</a>.',
+          },
+          {
+            q: 'هل يدعم Qwen 3 استدعاء الأدوات على Ollama؟',
+            a: 'نعم. يدعم Qwen 3 استدعاء الدوال والأدوات بشكل أصيل عبر واجهة برمجة Ollama القياسية. لا يلزم أي Modelfile مخصص أو تهيئة خاصة — يعمل مع أي عميل يدعم تنسيق استخدام الأدوات في Ollama.',
+          },
+          {
+            q: 'هل يمكنني تشغيل Qwen 3 72B على أجهزة المستهلك؟',
+            a: 'من الناحية التقنية نعم، لكنه يتطلب ~40 GB VRAM بتكميم Q4 — مما يعني إعداد GPU مزدوج (بطاقتا RTX 3090) أو Mac من سلسلة Apple M مع ذاكرة موحّدة 64 GB أو أكثر. تقتصر معظم إعدادات المستهلك على مستوى 32B كحد أقصى.',
+          },
+        ],
+      },
+    },
+  },
 }

@@ -602,4 +602,88 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Tool Comparisons',
+    title: 'Ollama مقابل LM Studio: أيهما تختار؟',
+    seoTitle: 'Ollama مقابل LM Studio | Prompt Bites | PromptQuorum',
+    metaDescription: 'إذا كنت تستخدم الطرفية وتطور تطبيقات بواجهات برمجية، اختر Ollama. إذا كنت تفضل واجهة رسومية والدردشة مع النماذج، استخدم LM Studio. كلاهما مجاني ويشغّل النماذج محليًا.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: 'Intermediate',
+    audience: 'المطورون الذين يختارون بين Ollama و LM Studio',
+    parentArticle: '/local-llms/ollama-vs-lm-studio',
+    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ar: {
+        question: 'Ollama مقابل LM Studio: أيهما تختار؟',
+        answer: 'إذا كنت تستخدم الطرفية وتطور تطبيقات بواجهات برمجية، اختر Ollama. إذا كنت تفضل واجهة رسومية وتريد فقط الدردشة مع النماذج، استخدم LM Studio. كلاهما مجاني ويشغّل النماذج محليًا.',
+        bullets: [
+          'Ollama: يعطي الأولوية لسطر الأوامر، واجهة برمجية متوافقة مع OpenAI، أداة للمطورين',
+          'LM Studio: واجهة رسومية لسطح المكتب، إضافة النماذج بالسحب والإفلات، مناسب للمبتدئين',
+          'كلاهما يعمل على Mac و Windows و Linux',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'يعمل Ollama كخدمة خلفية عبر سطر الأوامر على المنفذ 11434 — ابدأه بـ `ollama serve`، وحمّل النماذج بـ `ollama pull`، واستعلم عبر curl أو أي عميل متوافق مع OpenAI',
+          'LM Studio تطبيق سطح مكتب بواجهة رسومية — حمّله من lmstudio.ai، وتصفح النماذج وحمّلها بنقرة واحدة، مع نافذة دردشة مدمجة',
+          'كلاهما يستخدم llama.cpp و GGUF تحت الغطاء؛ لذا تكون سرعة توليد الرموز متطابقة تقريبًا لنفس النموذج ومستوى الكميّة',
+        ],
+      },
+      body1: {
+        title: 'نقاط التميز لكل أداة',
+        content: [
+          '<strong>يتميز Ollama للمطورين: بدون تحميل زائد من الواجهة الرسومية، ويتكامل مع تطبيقات Python و JavaScript عبر واجهته البرمجية REST المتوافقة مع OpenAI، ويعمل بدون واجهة على خوادم Linux.</strong> يتميز LM Studio للمبتدئين: تتيح متجر النماذج المدمج تنزيل نموذج وتشغيله في أقل من ثلاث دقائق دون لمس الطرفية.',
+          'كلتا الأداتين تستخدمان llama.cpp تحت الغطاء؛ لذا يعمل النموذج بطريقة متطابقة. الاختيار يتعلق بسير العمل: سطر الأوامر مقابل الواجهة المرئية. يوضح الجدول التالي خمسة أبعاد عملية مع الأداة الأفضل في كل منها.',
+        ],
+        columns: ['الميزة', 'Ollama', 'LM Studio'],
+        rows: [
+          { 'الميزة': 'طريقة التثبيت', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'مثبّت رسومي' },
+          { 'الميزة': 'واجهة الدردشة', 'Ollama': 'لا توجد (واجهة برمجية فقط)', 'LM Studio': 'مدمجة' },
+          { 'الميزة': 'خادم الواجهة البرمجية', 'Ollama': 'REST، المنفذ 11434', 'LM Studio': 'REST، المنفذ 1234' },
+          { 'الميزة': 'إدارة النماذج', 'Ollama': '`ollama pull <model>`', 'LM Studio': 'تصفح + نقر' },
+          { 'الميزة': 'الأنسب لـ', 'Ollama': 'المطورون + الخوادم', 'LM Studio': 'المبتدئون + الدردشة' },
+        ],
+      },
+      body2: {
+        title: 'متى تستخدم كليهما معًا',
+        content: [
+          'يمكنك تشغيل Ollama و LM Studio في آنٍ واحد. استخدم LM Studio لتصفح النماذج الجديدة واختبارها، ثم انتقل إلى Ollama بمجرد تحديد النموذج الذي تريد دمجه في تطبيق Python أو JavaScript.',
+          'يستخدم Ollama افتراضيًا المنفذ 11434، بينما يستخدم LM Studio المنفذ 1234 — فلا تعارض بينهما بشكل افتراضي. إذا خصصت أحد المنفذين، فعيّن متغير البيئة OLLAMA_HOST أو غيّر منفذ خادم LM Studio في الإعدادات.',
+          'للاطلاع على الدليل الكامل الذي يغطي التثبيت واختيار النماذج وضبط الأداء، راجع <a href="/ar/local-llms/ollama-vs-lm-studio" class="text-primary hover:underline">المقارنة المعمّقة بين Ollama و LM Studio</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'إجابات سريعة حول Ollama مقابل LM Studio',
+        faqs: [
+          {
+            q: 'هل يمكن تشغيل Ollama و LM Studio في نفس الوقت؟',
+            a: 'نعم. يستخدم Ollama افتراضيًا المنفذ 11434، ويستخدم LM Studio المنفذ 1234؛ لذا لا تعارض بينهما افتراضيًا. تحتاج فقط إلى تغيير منفذ إذا خصصت أحدهما.',
+          },
+          {
+            q: 'أيهما أسرع — Ollama أم LM Studio؟',
+            a: 'الأداء متطابق تقريبًا لأن كليهما يستخدم llama.cpp لتشغيل نماذج GGUF. الفرق في سرعة توليد الرموز بين الأداتين أقل من 5% لنفس النموذج ومستوى الكميّة.',
+          },
+          {
+            q: 'هل يوجد لـ LM Studio واجهة سطر أوامر؟',
+            a: 'لا. LM Studio لا يملك واجهة سطر أوامر لتشغيل النماذج؛ إذ هو تطبيق سطح مكتب حصرًا. إذا احتجت إلى الوصول عبر سطر الأوامر أو دمج استنتاج النماذج في سكريبتات، استخدم Ollama بدلًا من ذلك.',
+          },
+          {
+            q: 'هل يمكنني استخدام Ollama بدون واجهة رسومية على الإطلاق؟',
+            a: 'نعم. صُمّم Ollama للاستخدام بدون واجهة وعلى الخوادم. يعمل كخدمة systemd على Linux دون أي اعتماديات رسومية، ويمكن إقرانه بواجهة دردشة عبر المتصفح عند الحاجة. راجع <a href="/ar/prompt-bites/jan-vs-lm-studio" class="text-primary hover:underline">Jan مقابل LM Studio</a> لمقارنة خيارات الواجهة الرسومية لسطح المكتب.',
+          },
+        ],
+      },
+    },
+  },
 }

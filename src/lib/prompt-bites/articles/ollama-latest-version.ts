@@ -573,4 +573,84 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Ollama',
+    title: 'ما هو أحدث إصدار من Ollama؟',
+    seoTitle: 'أحدث إصدار من Ollama 2026 | PromptQuorum',
+    metaDescription: 'تحقق من الإصدار الحالي لـ Ollama على GitHub. شغّل ollama --version. Linux: أعد تشغيل سكريبت التثبيت؛ Mac/Windows: نزّل من ollama.com.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    is_living_page: true,
+    quickAnswerTop: {
+      ar: {
+        question: 'ما هو أحدث إصدار من Ollama؟',
+        answer: 'تحقق من ollama.com أو صفحة الإصدارات على GitHub لمعرفة الإصدار الحالي. على Linux، شغّل سكريبت التثبيت للتحديث. على Mac/Windows، نزّل أحدث مثبّت.',
+        bullets: [
+          'للتحقق: github.com/ollama/ollama/releases للإصدار الأحدث',
+          'التحديث على Linux: curl -fsSL https://ollama.com/install.sh | sh',
+          'Mac/Windows: أعد تنزيل المثبّت من ollama.com',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'شغّل <code>ollama --version</code> لمعرفة إصدارك المثبّت؛ قارنه بصفحة الإصدارات على GitHub',
+          'التحديث على Linux بأمر واحد: <code>curl -fsSL https://ollama.com/install.sh | sh</code>',
+          'Mac وWindows: أعد تنزيل المثبّت من ollama.com — بدون سطر أوامر',
+          'التحديثات لا تحذف نماذجك أبداً — ملفات GGUF مخزّنة بشكل منفصل عن ملف Ollama الثنائي',
+        ],
+      },
+      body1: {
+        title: 'أين تتحقق من إصدار Ollama',
+        content: [
+          '<strong>في مايو 2026، أحدث إصدار مستقر من Ollama متاح على github.com/ollama/ollama/releases — تلك الصفحة تعرض رقم الإصدار الدقيق وملاحظات الإصدار. هذه الصفحة تُحدَّث شهرياً — آخر تحقق مايو 2026.</strong>',
+          'شغّل <code>ollama --version</code> في طرفية لمعرفة إصدارك المثبّت. المخرجات سطر واحد. إذا أظهرت صفحة إصدارات GitHub رقماً أعلى، فإصدارك قديم.',
+          'عائلات النماذج الجديدة — بما فيها Llama 3.3 وQwen 3 — تتطلب حداً أدنى من إصدار Ollama لتُحمَّل بشكل صحيح. تتضمن الإصدارات الأخيرة أيضاً تحميلاً أسرع لـ GGUF وإدارة أفضل للسياق متعدد GPU — تحسينات تتراكم في الاستخدام اليومي.',
+        ],
+      },
+      body2: {
+        title: 'كيفية تحديث Ollama بأمان',
+        content: [
+          '<strong>التحديث آمن: نماذجك المنزّلة مخزّنة في مجلد منفصل ولا تُحذف أبداً بتحديث Ollama.</strong> واجهة REST API للمستخدمين حافظت على التوافق مع الإصدارات السابقة منذ الإصدار 0.1.',
+          'إذا تأخرت عدة إصدارات، شغّل <code>ollama list</code> قبل التحديث لتدوين نماذجك الحالية. لن يتعطل شيء، لكن هذه الخطوة التي تستغرق 30 ثانية تزيل الشك قبل قفزة إصدار كبيرة.',
+          'للاطلاع على سجل التغييرات الكامل لكل إصدار من Ollama وما تستفيد منه عائلات النماذج، راجع <a href="/ar/local-llms/local-llm-model-updates-2026" class="text-primary hover:underline">دليل تحديثات نماذج LLM المحلية لعام 2026</a>.',
+        ],
+        columns: ['المنصة', 'طريقة التحديث', 'ملاحظات'],
+        rows: [
+          { 'المنصة': 'Linux', 'طريقة التحديث': 'تشغيل سكريبت التثبيت (أمر واحد)', 'ملاحظات': 'يستبدل الملف الثنائي، يحتفظ بالنماذج' },
+          { 'المنصة': 'macOS', 'طريقة التحديث': 'إعادة التنزيل من ollama.com', 'ملاحظات': 'اسحب إلى التطبيقات، النماذج محفوظة' },
+          { 'المنصة': 'Windows', 'طريقة التحديث': 'إعادة تنزيل .exe من ollama.com', 'ملاحظات': 'شغّل المثبّت، النماذج محفوظة' },
+        ],
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+        callouts: [{ type: 'info', text: 'آخر تحقق: مايو 2026. إذا بدت البيانات أعلاه قديمة، راجع صفحة إصدارات GitHub الرسمية لـ Ollama أو مكتبة النماذج.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'إجابات سريعة حول تحديثات Ollama',
+        faqs: [
+          {
+            q: 'كيف أتحقق من إصدار Ollama المثبّت لديّ؟',
+            a: 'شغّل <code>ollama --version</code> في طرفية. يعرض رقم الإصدار في سطر واحد، مثلاً <code>ollama version 0.x.y</code>.',
+          },
+          {
+            q: 'هل يحذف تحديث Ollama نماذجي المنزّلة؟',
+            a: 'لا. يخزّن Ollama ملفات النماذج في <code>~/.ollama/models/</code> على Linux وmacOS، منفصلةً عن الملف الثنائي للتطبيق. التحديثات لا تلمس هذا المجلد أبداً. راجع <a href="/ar/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">أفضل نماذج Ollama الآن</a> إذا أردت إضافة نماذج جديدة بعد التحديث.',
+          },
+          {
+            q: 'هل من الآمن تخطّي عدة إصدارات من Ollama عند التحديث؟',
+            a: 'نعم. يأخذك مثبّت Ollama دائماً إلى أحدث إصدار في خطوة واحدة، بغض النظر عن عدد الإصدارات التي تخطيتها. لا تحديثات تدريجية مطلوبة.',
+          },
+          {
+            q: 'هل يستلزم تحديث Ollama تحديث النماذج المثبّتة أيضاً؟',
+            a: 'لا. ملفات النماذج GGUF متوافقة للأمام. الملفات التي نزّلتها لإصدار قديم من Ollama تعمل مع الإصدار الحالي دون الحاجة إلى إعادة التنزيل.',
+          },
+        ],
+      },
+    },
+  },
 }

@@ -602,4 +602,83 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Hardware-Specific',
+    title: 'هل يمكنك تشغيل نماذج اللغة المحلية على Radeon RX 6800M؟',
+    seoTitle: 'Radeon 6800M لنماذج اللغة المحلية؟ | Prompt Bites | PromptQuorum',
+    metaDescription: 'نعم: Radeon RX 6800M ذات 12 GB تشغّل نماذج اللغة عبر ROCm على Linux أو llama.cpp. Llama 3 8B Q4 يعمل بـ ~12 tok/s. دعم ROCm على Windows محدود.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ar: {
+        question: 'هل يمكنك تشغيل نماذج اللغة المحلية على Radeon RX 6800M؟',
+        answer: 'نعم. تمتلك Radeon RX 6800M ذاكرة VRAM بحجم 12 GB GDDR6 ويمكنها تشغيل نماذج اللغة المحلية. على Linux استخدم ROCm لتسريع GPU. على Windows استخدم llama.cpp مع Vulkan أو تراجع إلى وحدة المعالجة المركزية. يعمل Llama 3 8B Q4_K_M بـ ~12 tok/s على Linux مع ROCm.',
+        bullets: [
+          'Linux + ROCm: تسريع GPU كامل، ~12 tok/s على Llama 3 8B Q4',
+          'Windows: استخدم llama.cpp مع الواجهة الخلفية Vulkan لتحميل جزئي على GPU',
+          '12 GB VRAM تدعم النماذج حتى 14B بـ Q4_K_M',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Radeon RX 6800M شريحة RDNA 2 محمولة بـ 12 GB VRAM — ليست RX 6800 المكتبية؛ دعم ROCm لـ RDNA 2 المحمولة كان متذبذبًا تاريخيًا',
+          'الواجهة الخلفية Vulkan (Ollama أو llama.cpp) هي المسار الأكثر موثوقية عبر المنصات؛ Linux + ROCm يوفر سرعة أعلى (~12 tok/s) حين يعمل',
+          'سرعات Vulkan أبطأ بنسبة 30–40% من CUDA على بطاقات NVIDIA المعادلة — توقع ~14 tok/s على Llama 3 8B مقابل ~25 tok/s على بطاقة NVIDIA بـ 12 GB',
+          'اعمل دائمًا متصلًا بالكهرباء: تُخفِّض وحدات GPU المحمولة من AMD أداءها على البطارية وتعمل عملية الاستنتاج أبطأ بنسبة 40–50%',
+        ],
+      },
+      body1: {
+        title: 'ما يمكن لـ Radeon 6800M تشغيله فعليًا',
+        content: [
+          'اعتبارًا من مايو 2026، <strong>Radeon RX 6800M شريحة RDNA 2 محمولة بذاكرة VRAM بحجم 12 GB GDDR6 — وليست RX 6800 المكتبية التي تستخدم شريحة GPU مختلفة بنطاق دعم ROCm مختلف.</strong> بـ 12 GB، تستوعب 6800M نماذج حتى 14B بـ Q4_K_M دون تحميل طبقات، مما يساوي سعة RTX 3060 المكتبية بـ 12 GB.',
+          'كان دعم ROCm لشرائح RDNA 2 المحمولة متذبذبًا تاريخيًا — تحقق من مصفوفة دعم GPU الرسمية لـ AMD ROCm قبل الاعتماد عليه. على Linux حيث يعمل ROCm، يكتشف Ollama تلقائيًا 6800M ويحقق Llama 3 8B Q4_K_M حوالي 12 tok/s. تعمل الواجهة الخلفية Vulkan في Ollama أو llama.cpp على Windows و Linux دون الحاجة إلى ROCm وهي المسار الأكثر موثوقية عبر المنصات.',
+          'سرعات Vulkan أبطأ بنسبة 30–40% من CUDA على الأجهزة المعادلة من NVIDIA: يحقق نفس النموذج الذي يعمل بـ ~25 tok/s على RTX 3060 12 GB حوالي ~14 tok/s على 6800M عبر Vulkan. للمقارنة مع جهاز CUDA بـ 8 GB VRAM، راجع <a href="/ar/prompt-bites/best-models-amd-5700x-3070ti" class="text-primary hover:underline">مقارنة جهاز AMD 5700X + RTX 3070 Ti</a>.',
+        ],
+        columns: ['النموذج', 'VRAM Q4', 'السرعة المقاسة'],
+        rows: [
+          { 'النموذج': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', 'السرعة المقاسة': '~14 tok/s (Vulkan)' },
+          { 'النموذج': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', 'السرعة المقاسة': '~13 tok/s (Vulkan)' },
+          { 'النموذج': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', 'السرعة المقاسة': '~10 tok/s (Vulkan)' },
+          { 'النموذج': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'السرعة المقاسة': '~9 tok/s (Vulkan)' },
+        ],
+      },
+      body2: {
+        title: 'إعداد نماذج اللغة المحلية على 6800M',
+        content: [
+          '<strong>على Linux، ثبّت Ollama — يتضمن دعم Vulkan افتراضيًا ويكتشف 6800M تلقائيًا.</strong> إذا عمل ROCm على شريحتك المحددة (تحقق من مصفوفة دعم GPU لـ AMD ROCm)، سيستخدمه Ollama تلقائيًا وسيوفر حوالي 12 tok/s على Llama 3 8B Q4_K_M بدلًا من خط الأساس لـ Vulkan.',
+          'على Windows، لا يتوفر ROCm الأصلي بشكل موثوق لـ 6800M. استخدم Ollama مع دعم Vulkan أو حمّل ملفًا ثنائيًا جاهزًا من llama.cpp مبنيًا لـ Vulkan وحمّل ملف GGUF بـ <code>-ngl 33</code> لتحميل الطبقات على GPU. WSL2 مع passthrough لـ GPU خيار آخر للاستفادة من مزايا ROCm الحصرية على Linux دون نظام مزدوج.',
+          'اعمل دائمًا متصلًا بالكهرباء — تُخفِّض وحدات GPU المحمولة من AMD أداءها بشكل كبير على البطارية وتنخفض سرعة الاستنتاج بنسبة 40–50% بدون مصدر الطاقة. للمقارنة الكاملة بين GPU لـ NVIDIA و AMD، راجع <a href="/ar/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">دليل أفضل GPU لنماذج اللغة المحلية</a>.',
+        ],
+        callouts: [{ type: 'tip', text: 'اختبر إعدادك: شغّل <code>ollama run llama3:8b</code> وتحقق من استخدام GPU بـ <code>rocm-smi</code> (إذا كنت تستخدم ROCm) أو تحقق من <code>ollama ps</code>. إذا تراجع النموذج إلى وحدة المعالجة المركزية، تأكد من اكتشاف GPU بـ <code>ollama info</code>.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'إجابات سريعة حول Radeon 6800M ونماذج اللغة المحلية',
+        faqs: [
+          {
+            q: 'هل تدعم Radeon 6800M روكم ROCm رسميًا؟',
+            a: 'كان دعم ROCm لشرائح RDNA 2 المحمولة متذبذبًا تاريخيًا. البطاقات المكتبية RDNA 2 (RX 6800، RX 6900 XT) مدرجة رسميًا في مصفوفة دعم GPU لـ AMD ROCm؛ أما 6800M المحمولة فهي شريحة مختلفة. تحقق من صفحة توافق ROCm لـ AMD للحالة الراهنة قبل الاعتماد على التسريع بـ ROCm.',
+          },
+          {
+            q: 'هل 6800M أسرع من RTX 3070 Mobile في نماذج اللغة؟',
+            a: '12 GB VRAM في 6800M مقابل 8 GB في معظم إعدادات RTX 3070 Mobile أهم لاستيعاب النماذج من السرعة الخام. بنفس حجم النموذج، تستفيد RTX 3070 Mobile من تكامل أفضل مع تعريفات CUDA على Windows. على Linux مع عمل ROCm على 6800M، يضيق فارق السرعة.',
+          },
+          {
+            q: 'هل يمكنني استخدام حيل الذاكرة الموحدة بأسلوب Apple Silicon على AMD المحمولة؟',
+            a: 'لا. تستخدم 6800M ذاكرة VRAM GDDR6 مخصصة منفصلة عن ذاكرة النظام RAM — لا يوجد تجميع ذاكرة مماثل لبنية الذاكرة الموحدة في سلسلة Apple M. الـ 12 GB كاملة حصرية لـ GPU؛ ذاكرة النظام RAM غير قابلة للعنونة كـ VRAM إضافية.',
+          },
+          {
+            q: 'ما درجة حرارة 6800M أثناء الاستنتاج المستمر لنماذج اللغة؟',
+            a: 'توقع 80–90°C تحت حمل الاستنتاج المستمر، مشابهًا لجلسة ألعاب. تخفيض الأداء الحراري فوق ~100°C سيُقلل سرعة الاستنتاج. استخدم Radeon Software (Windows) أو CoreCtrl (Linux) لضبط ملف تعريف undervolting وتأكد من التهوية الجيدة.',
+          },
+        ],
+      },
+    },
+  },
 }

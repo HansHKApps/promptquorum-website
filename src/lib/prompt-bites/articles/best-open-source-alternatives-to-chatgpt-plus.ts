@@ -549,4 +549,99 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: 'Melhores Alternativas Open Source ao ChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'pt-BR' },
   },
+  ar: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Cost & Comparisons',
+    type: 'comparison',
+    title: 'أفضل بدائل مفتوحة المصدر لـChatGPT Plus 2026',
+    seoTitle: 'أفضل البدائل المجانية مفتوحة المصدر لـChatGPT Plus 2026',
+    metaDescription: 'أفضل البدائل مفتوحة المصدر لـChatGPT Plus في 2026. قارن Ollama+Open WebUI وLM Studio وJan وAnythingLLM — مجاني، خاص، بدون اشتراك.',
+    educationalLevel: 'Beginner',
+    affiliateDisclosure: false,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**أفضل بديل مفتوح المصدر لـChatGPT Plus في 2026 هو Ollama + Open WebUI — مجاني، يشغّل نماذج محلية على أي عتاد، متوافق مع نماذج من فئة GPT-4 كـQwen3 72B وLlama 3.3 70B، بدون اشتراك $20/شهر.**',
+    quickAnswerTop: {
+      question: 'ما هو أفضل بديل مجاني لـChatGPT Plus؟',
+      answer: 'Ollama + Open WebUI للاستضافة الذاتية المحلية؛ Jan لأسهل تطبيق سطح مكتب؛ Groq API للاستدلال السريع على السحابة في المستوى المجاني. جميعها مجانية بدون اشتراك.',
+      bullets: [
+        'Ollama + Open WebUI: أفضل بديل محلي متكامل لـChatGPT',
+        'Jan: أسهل تطبيق سطح مكتب، تنزيل نموذج بنقرة واحدة',
+        'LM Studio: الأفضل لاستكشاف واختبار النماذج',
+        'Groq API (المستوى المجاني): أسرع استدلال سحابي، بدون بطاقة ائتمان',
+        'AnythingLLM: الأفضل للفرق وأسئلة المستندات',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'أفضل بديل مفتوح المصدر لـChatGPT Plus في 2026 هو Ollama مع Open WebUI — مجاني ومحلي وقادر على تشغيل نماذج من فئة GPT-4.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'البدائل مفتوحة المصدر لـChatGPT تشغّل نماذج لغة الذكاء الاصطناعي على حاسوبك الخاص أو خدمة سحابية مجانية، بدلاً من دفع $20/شهر لـOpenAI.',
+      },
+    ],
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Ollama + Open WebUI: أفضل بديل محلي متكامل لـChatGPT Plus، مجاني تماماً',
+          'Jan: أسهل تطبيق سطح مكتب للمبتدئين بنقرة واحدة',
+          'LM Studio: الأفضل لاستكشاف ومقارنة النماذج',
+          'Groq API المستوى المجاني: أسرع استدلال سحابي بدون بطاقة ائتمان',
+          'AnythingLLM: الأفضل للفرق التي تحتاج أسئلة المستندات ومتعدد المستخدمين',
+          'الخمسة تكلّف $0 — ChatGPT Plus تكلّف $20/شهر ($240/سنة)',
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: 'هل يمكن لنماذج مفتوحة المصدر المحلية مجاراة جودة ChatGPT Plus؟',
+            a: 'Qwen3 72B وLlama 3.3 70B المشغَّلان محلياً يعادلان أداء GPT-4o في معظم معايير الاستدلال والبرمجة والكتابة. يحتاجان 24 GB+ VRAM للجودة الكاملة. النماذج الأصغر 14B أضعف ملحوظاً من GPT-4o لكنها قوية بما يكفي لمعظم المهام اليومية.',
+          },
+          {
+            q: 'ما العتاد الذي أحتاجه لتشغيل بديل مجاني لـChatGPT محلياً؟',
+            a: 'الحد الأدنى: 8 GB RAM لنماذج 3B على CPU. الأفضل: 16 GB RAM لنماذج 7B، GPU بـ8 GB VRAM لنماذج 7B بالسرعة الكاملة. المثالي: 16–24 GB VRAM لنماذج 14–34B. Mac بـApple Silicon M2 أو أحدث يتعامل جيداً مع نماذج 7B–14B بذاكرة موحدة.',
+          },
+          {
+            q: 'هل Groq مجاني فعلاً؟',
+            a: 'Groq يقدم مستوى مجانياً بحدود معدل: ~30 طلب/دقيقة لـLlama 3.3 70B. للاستخدام الشخصي هذا كافٍ. المستوى المجاني لا يحتاج بطاقة ائتمان. للإنتاج أو الاستخدام المكثف، الخطط المدفوعة تبدأ من ~$0.05 لكل مليون رمز.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'ما هو أفضل بديل مجاني لـChatGPT Plus؟',
+          acceptedAnswer: { '@type': 'Answer', text: 'Ollama + Open WebUI للاستضافة الذاتية المحلية؛ Jan لأسهل تطبيق سطح مكتب. كلاهما مجاني تماماً.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'هل يمكن لنماذج مفتوحة المصدر المحلية مجاراة جودة ChatGPT Plus؟',
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 72B وLlama 3.3 70B يعادلان GPT-4o في معظم المعايير ويحتاجان 24 GB+ VRAM. نماذج 14B قوية للمهام اليومية.' },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'أفضل بدائل مفتوحة المصدر لـChatGPT Plus 2026',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Ollama + Open WebUI', description: 'أفضل بديل محلي متكامل لـChatGPT' },
+        { '@type': 'ListItem', position: 2, name: 'Jan', description: 'أسهل تطبيق سطح مكتب بتنزيل نموذج بنقرة واحدة' },
+        { '@type': 'ListItem', position: 3, name: 'LM Studio', description: 'الأفضل لاستكشاف واختبار النماذج' },
+        { '@type': 'ListItem', position: 4, name: 'Groq API المستوى المجاني', description: 'أسرع استدلال سحابي بدون بطاقة ائتمان' },
+        { '@type': 'ListItem', position: 5, name: 'AnythingLLM', description: 'الأفضل للفرق وأسئلة المستندات' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'أفضل بدائل مفتوحة المصدر لـChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/ar/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'ar' },
+  },
 }

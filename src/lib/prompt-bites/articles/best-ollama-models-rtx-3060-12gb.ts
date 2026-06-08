@@ -564,4 +564,83 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Quantization & VRAM',
+    title: 'أفضل نماذج Ollama لـRTX 3060 12 GB؟',
+    seoTitle: 'أفضل نماذج Ollama RTX 3060 12 GB 2026 | PromptQuorum',
+    metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M للدردشة (20 رمز/ثانية)، Qwen 3 Coder 14B Q4 للبرمجة. كلاهما يتسع في 12 GB VRAM. إجابة سريعة من PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ar: {
+        question: 'أفضل نماذج Ollama لـRTX 3060 12 GB؟',
+        answer: 'مع 12 GB VRAM، أفضل نموذج للاستخدام العام هو Llama 3 8B في Q5_K_M بـ20–30 رمز/ثانية بجودة متوازنة. للبرمجة، استخدم Qwen 3 Coder 14B في Q4_K_M. كلاهما يعمل بـ20–30 رمز/ثانية.',
+        bullets: [
+          'Llama 3 8B Q5_K_M: الأفضل للاستخدام العام على RTX 3060',
+          'Qwen 3 Coder 14B Q4_K_M: الأفضل للبرمجة',
+          'Mistral Small Q6_K: بديل سريع للدردشة',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'الأفضل للاستخدام العام: Llama 3 8B في Q5_K_M — 7 GB VRAM، ~25 رمز/ثانية، جودة ممتازة للدردشة والكود',
+          'الأفضل للبرمجة: Qwen 3 Coder 14B في Q4_K_M — 10 GB VRAM، أفضل نقاط HumanEval في فئة 14B',
+          'RTX 3060 12 GB هي الـGPU الاستهلاكية الوحيدة دون $400 مع VRAM كافية لتشغيل نماذج 14B في Q4',
+        ],
+      },
+      body1: {
+        title: 'أفضل 5 نماذج Ollama لـRTX 3060 12 GB',
+        content: [
+          'اعتباراً من مايو 2026، <strong>RTX 3060 12 GB هي أرخص طريق لتشغيل نماذج 14B محلياً.</strong> 12 GB VRAM لديها تعادل RTX 4070 Ti (~$800) وRTX 4080 (~$1100) بجزء بسيط من التكلفة. بـ$280–$350 مستعملة، تحصل على نفس قدرة النماذج كبطاقات أغلى 3 مرات — محدود فقط بالسرعة الخام لا بما يمكنك تحميله.',
+          'النماذج الخمسة التالية تعمل مع Ollama دون إعداد. أرقام السرعة مع سياق 2048 رمز افتراضي على حاسوب مكتبي دون تفريغ على CPU.',
+        ],
+        columns: ['النموذج', 'VRAM المستخدمة', 'السرعة'],
+        rows: [
+          { 'النموذج': 'Llama 3 8B Q5_K_M', 'VRAM المستخدمة': '7.0 GB', 'السرعة': '~25 رمز/ثانية' },
+          { 'النموذج': 'Qwen 3 Coder 14B Q4_K_M', 'VRAM المستخدمة': '10.0 GB', 'السرعة': '~20 رمز/ثانية' },
+          { 'النموذج': 'Mistral Small Q6_K', 'VRAM المستخدمة': '6.5 GB', 'السرعة': '~27 رمز/ثانية' },
+          { 'النموذج': 'Phi-4 Q5_K_M', 'VRAM المستخدمة': '6.2 GB', 'السرعة': '~28 رمز/ثانية' },
+          { 'النموذج': 'Qwen 14B Q4_K_M', 'VRAM المستخدمة': '10.0 GB', 'السرعة': '~18 رمز/ثانية' },
+        ],
+      },
+      body2: {
+        title: 'كيف تحصل على أفضل أداء على RTX 3060',
+        content: [
+          'للاستخدام العام، شغّل Llama 3 8B في Q5_K_M مع نافذة سياق 4096 رمز. هذا يستخدم ~8 GB VRAM إجمالاً ويترك 4 GB هامشاً — كافٍ لتجنب تجاوز الحد عند التبديل بين النماذج.',
+          'للبرمجة، Qwen 3 Coder 14B في Q4_K_M هو الاختيار الواضح: يتفوق على Llama 3 8B في HumanEval، يتسع في 10 GB VRAM ويتعامل مع Python وTypeScript وGo دون ضبط دقيق.',
+          'اترك دائماً 1.5–2 GB VRAM حرة على الأقل. تحميل نموذجين متتاليين دون تفريغ الأول يسبب تجاوز VRAM ويُجبر على تفريغ بطيء على CPU. للسياق الكامل لمعايير GPU، راجع <a href="/ar/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">أفضل بطاقات GPU لنماذج اللغة الكبيرة المحلية</a>. إذا كانت GPU لديك أقل من 12 GB، راجع <a href="/ar/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">أفضل النماذج لـ6 GB VRAM</a>. لتشغيل أفضل خيار عام على RTX 3060:',
+        ],
+        codeBlock: 'ollama pull llama3:8b-instruct-q5_K_M\nollama run llama3:8b-instruct-q5_K_M',
+        callouts: [{ type: 'tip', text: 'التنزيل يحمّل ~7 GB في التشغيل الأول. التشغيلات التالية تبدأ فوراً من الذاكرة المؤقتة. استخدم <code>--num-ctx 4096</code> إذا احتجت نافذة سياق أكبر.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'إجابات سريعة حول النماذج لـRTX 3060',
+        faqs: [
+          {
+            q: 'هل يمكن لـRTX 3060 تشغيل نموذج 70B؟',
+            a: 'لا. نموذج 70B في Q4_K_M يحتاج حوالي 40 GB VRAM. RTX 3060 12 GB تصل كحد أقصى لنماذج ~14B في Q4. راجع <a href="/ar/prompt-bites/vram-for-70b-model" class="text-primary hover:underline">كم VRAM يحتاج نموذج 70B</a> للخيارات.',
+          },
+          {
+            q: 'هل RTX 3060 12 GB جيدة لنماذج اللغة الكبيرة المحلية؟',
+            a: 'نعم — هي أفضل جودة/سعر في هذا النطاق من VRAM. السعة 12 GB تتيح نماذج 14B في Q4، وهو ما لا تستطيع بطاقات 8 GB فعله. السعر المستعمل عادةً $280–$350.',
+          },
+          {
+            q: 'ما التكميم الذي يجب استخدامه على RTX 3060 12 GB؟',
+            a: 'Q5_K_M لنماذج 7–8B (أفضل جودة ضمن ميزانية 12 GB). Q4_K_M لنماذج 13–14B (ضروري للتناسب). راجع <a href="/ar/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">ما معنى Q4_K_M</a> للتوازن في الجودة.',
+          },
+          {
+            q: 'هل Ollama يستخدم GPU RTX 3060 تلقائياً؟',
+            a: 'نعم. Ollama يكتشف بطاقات NVIDIA عبر CUDA تلقائياً على Windows وLinux. لا يلزم إعداد يدوي. شغّل <code>ollama run اسم_النموذج</code> وسيُحمَّل كلياً على GPU إذا كانت VRAM كافية.',
+          },
+        ],
+      },
+    },
+  },
 }

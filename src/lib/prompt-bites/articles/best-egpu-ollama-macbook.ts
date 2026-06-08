@@ -622,6 +622,130 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Hardware-Specific',
+    title: 'هل توجد eGPU تعمل مع Ollama على MacBook في 2026؟',
+    seoTitle: 'eGPU لـ Ollama على MacBook 2026 | Prompt Bites',
+    metaDescription: 'لا توجد eGPU تعمل مع Ollama على MacBook بمعالج Apple Silicon: الذاكرة الموحدة وغياب PCIe يستبعدان هذا الخيار. استخدم ذاكرة أكبر أو حاسباً Linux.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Apple Silicon MacBook'],
+    educationalLevel: 'Intermediate',
+    audience: 'مالكو MacBook الذين يفكرون في eGPU لتسريع Ollama',
+    affiliateDisclosure: true,
+    siblingBites: ['mac-mini-m4-local-llm', 'best-budget-ai-laptop-under-1000'],
+    is_living_page: false,
+    readTime: 'قراءة 3 دقائق',
+    leadAnswerBlock:
+      'لا توجد eGPU تعمل مع Ollama على MacBook بمعالج Apple Silicon. يستخدم Apple Silicon الذاكرة الموحدة ولا يكشف PCIe لمعالجات الرسومات الخارجية — فقد أزال macOS تعريفات eGPU الخارجية عند إيقاف إنتاج أجهزة Mac بمعالج Intel. تفيد eGPU فقط في الحاسبات المحمولة التي تعمل بنظام Linux عبر Thunderbolt 4 أو OCuLink.',
+    toc: [
+      { label: 'أفضل خيار: انسَ eGPU، اشترِ ذاكرة موحدة أكبر', anchor: '#best-pick' },
+      { label: 'لماذا لا تعمل eGPU على Apple Silicon', anchor: '#comparison' },
+      { label: 'أسئلة شائعة', anchor: '#faq' },
+      { label: 'قراءة ذات صلة', anchor: '#related' },
+    ],
+    intro:
+      'تصل حاويات eGPU معالجَ رسومات خارجياً بحاسب محمول عبر Thunderbolt أو OCuLink. وهي مفيدة في Linux. لكنها لا تعمل على MacBook بمعالج Apple Silicon — وليس الأمر مسألة سعر أو توفر. فالبنية المعمارية تستبعد ذلك.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'لا تدعم أجهزة MacBook بمعالج Apple Silicon eGPU — فقد أزال macOS تعريفات معالجات الرسومات الخارجية عند إيقاف إنتاج أجهزة Mac بمعالج Intel',
+          'يستخدم Apple Silicon الذاكرة الموحدة كذاكرة لمعالج الرسومات؛ لا توجد مسار PCIe لتوصيل معالج رسومات مستقل',
+          'للحصول على مساحة أكبر للنماذج اللغوية الكبيرة على Mac، اشترِ MacBook Pro أو Mac Studio بذاكرة موحدة أكبر',
+          'لا تزال eGPU تعمل في الحاسبات المحمولة التي تعمل بنظام Linux مع Thunderbolt 4 أو OCuLink — ذات صلة فقط للأجهزة غير التابعة لـ Apple',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: 'أفضل خيار: انسَ eGPU — اشترِ ذاكرة موحدة أكبر',
+        content: [
+          '<strong>أفضل eGPU لـ Ollama على MacBook هي بلا eGPU على الإطلاق. لا يدعم Apple Silicon eGPU ولا يوجد حل بديل.</strong> الطريق إلى استدلال أسرع بالنماذج اللغوية الكبيرة محلياً على Mac هو المزيد من الذاكرة الموحدة، لا معالج رسومات خارجي.',
+          'في Apple Silicon، تشترك وحدة معالجة الرسومات في نفس RAM الفيزيائية مع وحدة المعالجة المركزية. لا يوجد مجموعة VRAM منفصلة لتوسيعها، ولا يكشف macOS نفق PCIe عبر Thunderbolt كما يفعل Linux. أزالت Apple تعريفات eGPU الخارجية عند إيقاف إنتاج أجهزة Mac بمعالج Intel — لا يوجد تعريف Metal لـ NVIDIA أو AMD أو أي معالج رسومات خارجي.',
+          'إذا أردت مساحة أكبر للنماذج اللغوية الكبيرة المحلية على Mac، فالمسار للترقية هو MacBook Pro أو Mac Studio بذاكرة موحدة أكبر (32 جيجابايت، 64 جيجابايت، 96 جيجابايت). إذا كانت قابلية توسيع معالج الرسومات ضرورية، فالبديل هو حاسب محمول يعمل بنظام Linux مع Thunderbolt 4 أو حاسب محمول مع OCuLink بجانب معالج رسومات مكتبي في حاوية — هذه لا تزال تعمل، لكن ليس على Apple Silicon.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=MacBook+Pro+M4+32GB',
+            productName: 'MacBook Pro M-series 32GB+',
+            productCategory: 'laptop',
+            label: 'عرض MacBook Pro 32GB+‎ على Amazon (بديل عن eGPU)',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Mac+Studio+M+series',
+            productName: 'Mac Studio M-series',
+            productCategory: 'desktop',
+            label: 'عرض سعر Mac Studio على Amazon',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'لماذا لا تعمل eGPU على Apple Silicon',
+        content: [
+          '<strong>العائق معماري وليس تجارياً — لا توجد حاوية ولا تعريف ولا حزمة برمجيات تحلّ هذه المشكلة.</strong>',
+        ],
+        columns: ['القيد', 'MacBook Apple Silicon', 'حاسب Linux مع TB4/OCuLink'],
+        rows: [
+          {
+            'القيد': 'تعريف معالج رسومات NVIDIA/AMD خارجي',
+            'MacBook Apple Silicon': 'غير متاح في macOS',
+            'حاسب Linux مع TB4/OCuLink': 'متاح (nvidia، amdgpu)',
+          },
+          {
+            'القيد': 'نفق PCIe عبر Thunderbolt',
+            'MacBook Apple Silicon': 'غير مكشوف بواسطة macOS',
+            'حاسب Linux مع TB4/OCuLink': 'مدعوم',
+          },
+          {
+            'القيد': 'بنية الذاكرة',
+            'MacBook Apple Silicon': 'ذاكرة موحدة فقط',
+            'حاسب Linux مع TB4/OCuLink': 'VRAM مستقلة في eGPU',
+          },
+          {
+            'القيد': 'تسريع eGPU لـ Ollama',
+            'MacBook Apple Silicon': 'لا مسار — لا تعمل',
+            'حاسب Linux مع TB4/OCuLink': 'تعمل مع CUDA أو ROCm',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'أسئلة شائعة حول eGPU وأجهزة MacBook',
+        faqs: [
+          {
+            q: 'لماذا لا يدعم MacBook الخاص بي eGPU؟',
+            a: 'تستخدم أجهزة MacBook بمعالج Apple Silicon الذاكرة الموحدة ولا تكشف نفق PCIe عبر Thunderbolt. كما أزالت Apple تعريفات eGPU الخارجية عند إيقاف إنتاج أجهزة Mac بمعالج Intel. اليوم لا توجد مسار برمجي لتشغيل معالج رسومات NVIDIA أو AMD خارجي في macOS.',
+          },
+          {
+            q: 'هل دعمت أجهزة MacBook القديمة بمعالج Intel eGPU؟',
+            a: 'نعم، دعمت أجهزة MacBook بمعالج Intel eGPU من AMD عبر Thunderbolt 3. انتهى هذا الدعم مع الانتقال إلى Apple Silicon. أجهزة Mac الجديدة وOllama على Apple Silicon ليس لها مسار لـ eGPU.',
+          },
+          {
+            q: 'ما أسرع طريقة لتسريع Ollama على MacBook؟',
+            a: 'اشترِ ذاكرة موحدة أكبر. يشغّل MacBook Pro بـ32 جيجابايت أو 64 جيجابايت من الذاكرة الموحدة نماذج أكبر محلياً مع تسريع GPU Metal كامل. لا يوجد خيار مُسرِّع خارجي.',
+          },
+          {
+            q: 'هل تعمل eGPU مع Ollama على الحاسبات المحمولة التي تعمل بنظام Linux؟',
+            a: 'نعم. يمكن لحاسب محمول يعمل بنظام Linux مع Thunderbolt 4 أو OCuLink توصيل معالج رسومات NVIDIA أو AMD مكتبي وتشغيل Ollama عبر CUDA أو ROCm. يُحدّ الأداء بنطاق ترددي Thunderbolt 4 (40 جيجابت/ثانية)، لكنه يعمل.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: 'قراءة ذات صلة',
+        items: [
+          '[هل Mac Mini M4 جيد للنماذج اللغوية الكبيرة المحلية؟](/ar/prompt-bites/mac-mini-m4-local-llm) — المكافئ المكتبي بنفس البنية المعمارية',
+          '[أفضل حاسب محمول للذكاء الاصطناعي بأقل من 1,000 دولار](/ar/prompt-bites/best-budget-ai-laptop-under-1000) — البدائل غير التابعة لـ Apple في الفئة الدنيا',
+          '[أفضل حاسب مصغر للنماذج اللغوية الكبيرة المحلية](/ar/prompt-bites/best-mini-pc-for-local-llm) — الحاسبات المصغرة المكتبية مقابل الذاكرة الموحدة لـ MacBook',
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Hardware-Specific',
     title: '¿Mejor eGPU para Ollama en un MacBook en 2026?',

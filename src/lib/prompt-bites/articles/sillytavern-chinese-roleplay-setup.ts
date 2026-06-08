@@ -1649,4 +1649,209 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       ],
     },
   },
+  ar: {
+    theme: 'Model Comparisons',
+    title: 'إعداد SillyTavern للعب الأدوار باللغة الصينية',
+    seoTitle: 'SillyTavern لعب أدوار صيني 2026: Qwen3 و Yi-34B',
+    metaDescription: 'أفضل النماذج المحلية للعب الأدوار باللغة الصينية في SillyTavern 2026: Qwen3-72B و Yi-34B و ChatGLM. إعداد بطاقات UTF-8 وجسر API مع Ollama.',
+    publishDate: '2026-05-26',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    educationalLevel: 'Intermediate',
+    audience: 'المستخدمون العرب الذين يضبطون SillyTavern مع نماذج لغة محلية للعب الأدوار باللغة الصينية',
+    parentArticle: '/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
+    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing-2026'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ar: {
+        question: 'ما أفضل نموذج للعب الأدوار باللغة الصينية في SillyTavern؟',
+        answer: 'Qwen3-72B Q4_K_M هو أفضل نموذج محلي للعب الأدوار باللغة الصينية — تدريب أصلي على الصينية ومفردات غنية وسياق 128K. يتميز Yi-34B في العمق العاطفي للشخصيات. مع 8 GB VRAM، يعمل Qwen3-7B بسرعة 8–12 tok/s.',
+        bullets: [
+          'Qwen3-72B Q4_K_M: 46 GB RAM، أفضل جودة نثر صيني، سياق 128K',
+          'Yi-34B Q4_K_M: 21 GB RAM، صوت شخصية ممتاز ونطاق عاطفي واسع',
+          'Qwen3-7B Q4_K_M: 5.5 GB VRAM، 8–12 tok/s — الأفضل لـ GPU بـ 8 GB',
+          'ChatGLM3-6B: 4.5 GB VRAM، استنتاج أسرع لكن اتساق شخصية أقل',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    readTime: 'قراءة 5 دقائق',
+    intro: 'تشغيل SillyTavern مع نموذج محلي باللغة الصينية يتطلب ثلاثة أشياء: نموذج مُدرَّب أصليًا على النص الصيني، والترميز الصحيح UTF-8 في بطاقات شخصيتك، وجسر API من SillyTavern إلى Ollama أو llama.cpp. يغطي هذا الدليل أفضل النماذج حسب مستوى VRAM وإعداد بطاقات الشخصية الصينية وإعدادات الاتصال التي تعمل فعليًا.',
+    leadAnswerBlock: 'Qwen3-72B Q4_K_M هو أفضل نموذج محلي للعب الأدوار باللغة الصينية بـ 46 GB RAM. لـ 8 GB VRAM استخدم Qwen3-7B. اضبط بطاقات الشخصية دائمًا على UTF-8 وصل SillyTavern بـ Ollama على http://127.0.0.1:11434.',
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        content: 'يقدم Qwen3-72B Q4_K_M أفضل جودة لعب أدوار صيني محليًا؛ لـ 8 GB VRAM، Qwen3-7B هو الخيار العملي بسرعة 8–12 tok/s.',
+      },
+      {
+        type: 'plain-terms',
+        content: 'SillyTavern واجهة دردشة للعب الأدوار. Ollama يشغّل نموذج الذكاء الاصطناعي على جهازك. للعب الأدوار باللغة الصينية محليًا: (1) حمّل نموذجًا مُدرَّبًا على الصينية عبر Ollama، (2) وجّه SillyTavern إلى واجهة Ollama البرمجية، (3) اكتب بطاقات الشخصية بالصينية بترميز UTF-8.',
+      },
+    ],
+    toc: [
+      { label: 'مقارنة النماذج حسب VRAM', anchor: 'model-comparison' },
+      { label: 'ربط SillyTavern بـ Ollama', anchor: 'connection-setup' },
+      { label: 'بطاقات الشخصية بالصينية', anchor: 'character-cards' },
+      { label: 'إعدادات الترميز', anchor: 'encoding-settings' },
+      { label: 'قالب الموجّه للصينية', anchor: 'prompt-template' },
+      { label: 'الأسئلة الشائعة', anchor: 'faq' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'النقاط الرئيسية',
+        isTldr: true,
+        items: [
+          'Qwen3-72B Q4_K_M: أفضل نثر صيني، يحتاج 46 GB RAM',
+          'Yi-34B Q4_K_M: أفضل عمق شخصية، 21 GB RAM',
+          'Qwen3-7B Q4_K_M: الأفضل لـ 8 GB VRAM، 8–12 tok/s',
+          'SillyTavern ← نوع API: متوافق مع OpenAI ← URL: http://127.0.0.1:11434/v1',
+          'بطاقات الشخصية: الصق النص الصيني مباشرةً، احفظ بـ UTF-8',
+          'موجّه النظام: 始终用简体中文回复。保持角色一致性。',
+        ],
+      },
+      modelComparison: {
+        id: 'model-comparison',
+        title: 'أي نموذج Qwen أو صيني تستخدم للعب الأدوار',
+        content: [
+          'يغطي أربعة نماذج مستويات الأجهزة الرئيسية. يتصدر Qwen3-72B في جودة النثر لكنه يتطلب محطة عمل أو Mac Studio بـ 46 GB ذاكرة موحدة. Yi-34B هو الخيار الثاني للمستخدمين الذين يُعطون الأولوية لصوت الشخصية وعمقها العاطفي. Qwen3-7B هو الخيار العملي لأي بطاقة GPU للألعاب.',
+        ],
+        comparisonTable: {
+          columns: ['النموذج', 'VRAM / RAM', 'درجة الصينية', 'السرعة', 'الأفضل لـ'],
+          rows: [
+            { 'النموذج': 'Qwen3-72B Q4_K_M', 'VRAM / RAM': '46 GB RAM', 'درجة الصينية': '★★★★★', 'السرعة': '1–3 tok/s', 'الأفضل لـ': 'أفضل نثر، روايات طويلة' },
+            { 'النموذج': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', 'درجة الصينية': '★★★★☆', 'السرعة': '2–5 tok/s', 'الأفضل لـ': 'العمق العاطفي، صوت الشخصية' },
+            { 'النموذج': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9.5 GB VRAM', 'درجة الصينية': '★★★★☆', 'السرعة': '4–8 tok/s', 'الأفضل لـ': 'توازن جودة + سرعة' },
+            { 'النموذج': 'Qwen3-7B Q4_K_M', 'VRAM / RAM': '5.5 GB VRAM', 'درجة الصينية': '★★★☆☆', 'السرعة': '8–12 tok/s', 'الأفضل لـ': 'RTX 3060، GPU بـ 8 GB VRAM' },
+            { 'النموذج': 'ChatGLM3-6B', 'VRAM / RAM': '4.5 GB VRAM', 'درجة الصينية': '★★★☆☆', 'السرعة': '12–18 tok/s', 'الأفضل لـ': 'أسرع، سياق محدود (8K)' },
+          ],
+        },
+      },
+      connectionSetup: {
+        id: 'connection-setup',
+        title: 'ربط SillyTavern بـ Ollama في 4 خطوات',
+        content: [
+          'يتواصل SillyTavern مع Ollama عبر نقطة نهاية API متوافقة مع OpenAI. لا يلزم أي مكوّن إضافي — Ollama يُظهرها أصليًا على المنفذ 11434.',
+        ],
+        numberedItems: [
+          'حمّل النموذج: نفّذ `ollama pull qwen2.5:7b` (أو `qwen2.5:72b` أو `yi:34b`) في طرفيتك',
+          'افتح SillyTavern ← اتصالات API ← اختر **متوافق مع OpenAI**',
+          'اضبط عنوان URL المخصص للـ API على: `http://127.0.0.1:11434/v1`',
+          'اضبط مفتاح API على أي سلسلة غير فارغة (مثلاً `ollama`) — Ollama يتجاهل المفتاح',
+          'انقر على اتصال ← اختر نموذجك من القائمة المنسدلة',
+        ],
+      },
+      characterCards: {
+        id: 'character-cards',
+        title: 'كتابة بطاقات الشخصية بالصينية',
+        content: [
+          'تدعم بطاقات شخصيات SillyTavern (وصف الشخص ورسائل الترحيب وحوارات الأمثلة) النص الصيني بالكامل. اكتب بالصينية المبسطة مباشرةً — لا تلزم خطوات ترميز خاصة إذا كانت إعدادات منطقتك بـ UTF-8.',
+        ],
+        codeBlock: `名字：苏云
+描述：苏云是一名二十五岁的古风侠女，性格冷静、话语简洁，行事果断。她来自江湖，精通剑术，内心深处渴望平静的生活。
+开场白：（苏云缓缓抬头，眸色沉静）你来了。有什么事？
+示例对话：
+{{user}}: 我需要你的帮助。
+苏云: 先说清楚，值不值得我出手。`,
+        codeLanguage: 'text',
+      },
+      encodingSettings: {
+        id: 'encoding-settings',
+        title: 'إعدادات الترميز لتجنب الأحرف التالفة',
+        content: [
+          'الصينية التالفة (乱码) تعود دائمًا تقريبًا إلى ثلاثة أسباب: غياب تعليمة اللغة في موجّه النظام، أو نموذج غير مُدرَّب على الصينية، أو طرفية/محرر غير مضبوط على UTF-8.',
+        ],
+        items: [
+          '**إعداد SillyTavern:** لا يلزم ضبط خاص — التطبيق يستخدم UTF-8 داخليًا. عند تصدير/استيراد بطاقات الشخصية كـ JSON، تأكد من أن محررك يحفظ بـ UTF-8 (وليس ANSI أو GB2312).',
+          '**طرفية Windows:** نفّذ `chcp 65001` قبل تشغيل Ollama لفرض صفحة كود UTF-8.',
+          '**ملف نموذج Ollama:** إذا استخدمت Modelfile مخصصًا، اضبط `PARAMETER stop ""` — علامات الترقيم الصينية كـ 。！？ قد تُشغّل رموز توقف مبكرة في بعض النماذج الأساسية.',
+          '**واجهة llama.cpp الخلفية:** أضف علامة `--log-disable` — قد يُفسد مخرج السجل الافتراضي Unicode في بعض طرفيات Windows.',
+        ],
+      },
+      promptTemplate: {
+        id: 'prompt-template',
+        title: 'قالب موجّه النظام للعب الأدوار بالصينية',
+        content: [
+          'ضع هذا في حقل موجّه النظام في SillyTavern (API ← قالب التعليمات). اضبط اسم الشخصية والنبرة حسب الحاجة.',
+        ],
+        codeBlock: `你是{{char}}。请始终用简体中文回复，保持角色一致性。
+规则：
+- 不要破坏角色（OOC）
+- 回复长度：100–300字，根据情境调整
+- 使用符合古风/现代/科幻（选择一种）语境的词汇
+- 如有动作描写，用括号标注，如：（她轻轻叹气）`,
+        codeLanguage: 'text',
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          {
+            q: 'هل يستطيع Qwen3-7B التعامل مع جلسات لعب أدوار طويلة باللغة الصينية؟',
+            a: 'نعم. يدعم Qwen3-7B Q4_K_M سياقًا بـ 32K افتراضيًا في Ollama. للجلسات الطويلة التي تحتوي على لور موسّع أو سجل حوار طويل، وسّع نافذة السياق في إعدادات API في SillyTavern واستخدم Qwen3-14B أو أعلى لاتساق أفضل مع 10K+ رمز.',
+          },
+          {
+            q: 'هل يدعم SillyTavern أسماء ووصف الشخصيات بالصينية؟',
+            a: 'نعم. يخزّن SillyTavern جميع بيانات الشخصيات كـ JSON بترميز UTF-8. يمكنك كتابة الأسماء والأوصاف ورسائل الترحيب وحوارات الأمثلة بالصينية بالكامل. تعرض الواجهة الحروف الصينية بشكل صحيح دون أي مكوّن إضافي.',
+          },
+          {
+            q: 'هل Yi-34B أفضل من Qwen3-14B للعب الأدوار بالصينية؟',
+            a: 'يُنتج Yi-34B استجابات شخصية أكثر تعبيرًا وتنوعًا عاطفيًا، خاصةً للمشاهد المعقدة أو الأدبية. Qwen3-14B أسرع (4–8 tok/s مقابل 2–5 tok/s) ويتطلب ذاكرة RAM أقل. للانغماس الكامل في اللعب، يفوز Yi-34B؛ للسرعة ومتطلبات الأجهزة الأقل، Qwen3-14B هو الخيار الأفضل.',
+          },
+          {
+            q: 'لماذا ينتج النموذج خليطًا من الصينية والإنجليزية؟',
+            a: 'السبب غياب تعليمة اللغة في موجّه النظام. أضف 始终用简体中文回复，不要使用英文 إلى موجّه النظام في قالب التعليمات في SillyTavern. تأكد أيضًا من استخدام نموذج مُدرَّب على الصينية (Qwen3 أو Yi أو ChatGLM) بدلًا من Llama أو Mistral اللذان ينتجان الإنجليزية افتراضيًا.',
+          },
+          {
+            q: 'هل يمكنني استخدام الصينية التقليدية بدلًا من المبسطة؟',
+            a: 'نعم. استبدل 简体中文 بـ 繁體中文 في موجّه النظام. يتعامل Qwen3 مع الصينية التقليدية بشكل جيد. يدعم Yi-34B أيضًا الصينية التقليدية لكن باتساق أقل قليلًا من المبسطة. دُرِّب ChatGLM3 أساسًا على الصينية المبسطة ولا يُنصح به للاستخدام بالصينية التقليدية.',
+          },
+          {
+            q: 'هل يعمل على Mac؟',
+            a: 'نعم. Ollama على Apple Silicon يشغّل Qwen3-7B و 14B عبر Metal (واجهة MLX الخلفية). لـ Qwen3-72B تحتاج على الأقل 64 GB ذاكرة موحدة (Mac Studio M2 Ultra أو M3 Ultra أو Mac Pro). نفّذ `ollama pull qwen2.5:72b` وصل SillyTavern بنفس الطريقة.',
+          },
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'إعداد SillyTavern للعب الأدوار باللغة الصينية 2026',
+      description: 'أفضل النماذج للعب الأدوار بالصينية في SillyTavern: Qwen3-72B في المقدمة، Yi-34B لعمق الشخصية، ChatGLM للسرعة. ترميز البطاقات وجسر API إلى Ollama.',
+      url: 'https://www.promptquorum.com/ar/prompt-bites/sillytavern-chinese-roleplay-setup',
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'SillyTavern' },
+        { '@type': 'Thing', name: 'نموذج اللغة الصيني' },
+        { '@type': 'Thing', name: 'لعب الأدوار مع نموذج اللغة المحلي' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'SillyTavern' },
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+        { '@type': 'SoftwareApplication', name: 'ChatGLM' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'هل يستطيع Qwen3-7B التعامل مع جلسات لعب أدوار طويلة باللغة الصينية؟',
+          acceptedAnswer: { '@type': 'Answer', text: 'نعم. Qwen3-7B Q4_K_M يدعم سياق 32K افتراضيًا في Ollama. للجلسات الطويلة، وسّع نافذة السياق واستخدم Qwen3-14B أو أعلى.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'لماذا ينتج النموذج خليطًا من الصينية والإنجليزية؟',
+          acceptedAnswer: { '@type': 'Answer', text: 'أضف 始终用简体中文回复，不要使用英文 إلى موجّه النظام. استخدم Qwen3 أو Yi أو ChatGLM — Llama و Mistral ينتجان الإنجليزية افتراضيًا.' },
+        },
+      ],
+    },
+  },
 }

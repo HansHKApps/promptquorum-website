@@ -579,4 +579,80 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Tool Comparisons',
+    title: 'هل يدعم Ollama MLX على Apple Silicon؟',
+    seoTitle: 'دعم Ollama لـ MLX على Apple Silicon 2026 | PromptQuorum',
+    metaDescription: 'لا — يستخدم Ollama llama.cpp + Metal، وليس MLX. للاستنتاج الأصلي عبر MLX على Apple Silicon، استخدم mlx-lm أو LM Studio. LM Studio يدعم كلا الخلفيتين.',
+    publishDate: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Apple Silicon', 'Apple M1', 'Apple M2', 'Apple M3', 'Apple M4'],
+    educationalLevel: 'Principiante',
+    audience: 'مستخدمو Mac الذين يتساءلون عما إذا كان Ollama يستخدم MLX للتسريع',
+    parentArticle: '/local-llms/apple-silicon-local-llm-guide-2026',
+    siblingBites: ['mlx-vs-ollama-vs-llamacpp', 'convert-ollama-model-to-mlx', 'ollama-vs-lm-studio'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ar: {
+        question: 'هل يدعم Ollama MLX على Apple Silicon؟',
+        answer: 'لا. يستخدم Ollama llama.cpp مع تسريع GPU Metal على Apple Silicon — وليس MLX. تسريع Metal سريع لكنه ليس محسَّناً كـ MLX الأصلي. للاستنتاج بسرعة MLX، استخدم mlx-lm مباشرةً أو LM Studio الذي يدعم كلا الخلفيتين.',
+        bullets: [
+          'خلفية Ollama على Mac: llama.cpp + Metal (وليس MLX)',
+          'خيارات MLX الأصلية: mlx-lm (واجهة سطر أوامر) أو LM Studio (واجهة رسومية مع دعم MLX)',
+          'LM Studio هو الأسهل للحصول على سرعة MLX مع واجهة مشابهة لـ Ollama',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Ollama لا يستخدم MLX على Mac — يستخدم llama.cpp مع تسريع Metal، وهو أبطأ بحوالي ضعفين من MLX الأصلي',
+          'للحصول على MLX الأصلي على Apple Silicon، استخدم mlx-lm (Python CLI) أو LM Studio (واجهة رسومية مع محدد الخلفية)',
+          'LM Studio هو الأسهل لأنه يوفر زراً للتبديل بين خلفيتَي MLX وllama.cpp دون تغيير النماذج',
+        ],
+      },
+      body1: {
+        title: 'لماذا لا يستخدم Ollama MLX؟',
+        content: [
+          '<strong>Ollama مصمم ليكون متعدد المنصات.</strong> يستخدم llama.cpp كخلفية افتراضية لأن llama.cpp يعمل على Windows وLinux وMac. MLX يعمل فقط على Apple Silicon، لذا فإن إضافة دعم MLX ستجعل Ollama أكثر تعقيداً بكثير.',
+          'على Mac، يستخدم Ollama llama.cpp مع تسريع Metal (GPU من Apple)، وهو سريع (حوالي 35 رمزاً/ثانية على M5 Pro مع نموذج 8B) لكنه ليس محسَّناً كـ MLX الأصلي (حوالي 65 رمزاً/ثانية).',
+        ],
+      },
+      body2: {
+        title: 'كيف تحصل على سرعة MLX',
+        content: [
+          '<strong>الخيار 1 (سطر أوامر): استخدم mlx-lm مباشرةً.</strong> `pip install mlx-lm`، ثم `python -m mlx_lm.generate --model mlx-community/model-4bit`. سريع لكن يتطلب سطر أوامر.',
+          '<strong>الخيار 2 (واجهة رسومية): استخدم LM Studio.</strong> نزّله من lmstudio.ai. في الإعدادات، غيّر "Inference Engine" من llama.cpp إلى MLX. تحصل على سرعة MLX مع واجهة LM Studio المشابهة لـ Ollama.',
+          'إذا كنت بحاجة تحديداً إلى Ollama، استخدمه وتوقع حوالي 35 رمزاً/ثانية. إذا كنت بحاجة إلى سرعة MLX (حوالي 65 رمزاً/ثانية)، استخدم أحد الخيارين السابقين.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'أسئلة سريعة: Ollama وMLX',
+        faqs: [
+          {
+            q: 'هل يستخدم LM Studio MLX أم llama.cpp على Mac؟',
+            a: 'يمكن لـ LM Studio استخدام كليهما. افتراضياً يستخدم llama.cpp. اذهب إلى Settings → Inference Engine وغيّر إلى MLX للحصول على سرعة MLX الأصلية.',
+          },
+          {
+            q: 'هل هناك فارق في السرعة بين Ollama Metal وMLX؟',
+            a: 'نعم، حوالي ضعفَين أسرع. Ollama (llama.cpp + Metal) حوالي 35 رمزاً/ثانية على M5 Pro. MLX الأصلي حوالي 65 رمزاً/ثانية على نفس الشريحة مع نفس النموذج.',
+          },
+          {
+            q: 'هل يمكنني إجبار Ollama على استخدام MLX؟',
+            a: 'لا. يستخدم Ollama داخلياً llama.cpp فقط. للحصول على MLX، تحتاج إلى التبديل إلى mlx-lm أو LM Studio.',
+          },
+          {
+            q: 'هل يجب أن أنتظر Ollama ليضيف دعم MLX؟',
+            a: 'غير مرجح. Ollama يُولي الأولوية لكونه متعدد المنصات. MLX خاص بـ Apple Silicon. استخدم LM Studio عوضاً عن ذلك، إذ يدعم كلا الخلفيتين ويوفر واجهة مماثلة.',
+          },
+        ],
+      },
+    },
+  },
 }

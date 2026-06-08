@@ -564,4 +564,84 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Quantization & VRAM',
+    title: 'كم VRAM تحتاج للنماذج اللغوية المحلية؟',
+    seoTitle: 'متطلبات VRAM للنماذج اللغوية المحلية 2026 | PromptQuorum',
+    metaDescription: '4 GB لـ Phi-4 Mini Q4. 6 GB لـ Llama 3 8B Q4_K_M. 12 GB لـ Qwen 14B. المعادلة: المعاملات × 0.7 = GB عند Q4. دليل VRAM من PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ar: {
+        question: 'كم VRAM تحتاج للنماذج اللغوية المحلية؟',
+        answer: '4 GB من VRAM يستوعب Phi-4 Mini وGemma 2B بسهولة مع هامش لتوسيع السياق. 6 GB يشغّل Llama 3 8B بتكميم Q4. 12 GB يستوعب Qwen 14B Q4 بكفاءة. النماذج بـ 70B عند Q4 تحتاج 16+ GB.',
+        bullets: [
+          '4 GB: Phi-4 Mini Q4، Gemma 2 2B',
+          '6 GB: Llama 3 8B Q4_K_M',
+          '8–12 GB: Mistral Small Q5، Qwen 14B Q4',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '4 GB من VRAM يشغّل Phi-4 Mini Q4 وGemma 2 2B بسلاسة',
+          '6 GB هو حد الدخول لـ Llama 3 8B بتكميم Q4_K_M — النموذج المحلي الأكثر شيوعاً',
+          '12 GB يفتح الباب أمام Qwen 14B Q4، أفضل مستوى جودة بالسعر',
+          'النماذج بـ 70B تحتاج 40+ GB — خطط لذلك باستخدام RTX 3090 مزدوج أو Apple M-series بذاكرة موحدة كبيرة',
+        ],
+      },
+      body1: {
+        title: 'متطلبات VRAM حسب حجم النموذج',
+        content: [
+          'اعتباراً من مايو 2026، يتبع استهلاك VRAM للنموذج معادلة بسيطة: المعاملات بالمليار × 0.7 = GB تقريبياً عند تكميم Q4. <strong>نموذج 7B يحتاج ~4.9 GB للأوزان، بالإضافة إلى 0.5–1 GB كنفقات عامة للسياق.</strong> لهذا السبب 6 GB هو الحد الأدنى للنطاق 7–8B، و12 GB يفتح نطاق 14B مع هامش.',
+          'استخدم الجدول التالي كمرجع سريع. عمود "السرعة" يفترض Ollama على GPU مكتبية مع سياق افتراضي (2048 توكن).',
+          '<strong>اترك دائماً 1–2 GB من VRAM فارغة فوق احتياجات النموذج المُعلنة.</strong> نظام التشغيل ونوافذ المتصفح وبيئة تشغيل Ollama تستهلك 500 MB–1 GB حتى بدون تحميل نموذج. راجع <a href="/ar/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">الدليل الشامل لـ VRAM للنماذج المحلية</a> لمزيد من التفاصيل.',
+        ],
+        columns: ['VRAM', 'أفضل نموذج بـ Q4_K_M', 'السرعة'],
+        rows: [
+          { 'VRAM': '4 GB', 'أفضل نموذج بـ Q4_K_M': 'Phi-4 Mini Q4', 'السرعة': '~25 توكن/ث' },
+          { 'VRAM': '6 GB', 'أفضل نموذج بـ Q4_K_M': 'Llama 3 8B Q4_K_M', 'السرعة': '~20 توكن/ث' },
+          { 'VRAM': '8 GB', 'أفضل نموذج بـ Q4_K_M': 'Mistral Small Q5_K_M', 'السرعة': '~18 توكن/ث' },
+          { 'VRAM': '12 GB', 'أفضل نموذج بـ Q4_K_M': 'Qwen 14B Q4_K_M', 'السرعة': '~15 توكن/ث' },
+          { 'VRAM': '16+ GB', 'أفضل نموذج بـ Q4_K_M': 'Qwen 32B Q4 أو Llama 70B جزئي', 'السرعة': '~8 توكن/ث' },
+        ],
+      },
+      body2: {
+        title: 'ماذا تفعل عندما تكون VRAM غير كافية',
+        content: [
+          'إذا تجاوز النموذج VRAM المتاحة لديك، فلديك ثلاثة خيارات: تقليل التكميم (Q4_K_M بدلاً من Q5)، تقليل نافذة السياق باستخدام <code>--num-ctx 2048</code>، أو السماح لـ Ollama بنقل الطبقات إلى RAM الجهاز.',
+          'النقل إلى CPU يعمل لكنه بطيء — كل طبقة تُنقل إلى RAM تضيف كمون. للاستخدام التفاعلي، ابقَ ضمن حد VRAM لـ GPU. تقليل السياق من 4096 إلى 2048 توكن يوفر ~2 GB في نموذج 7B.',
+          'للتفاصيل الكاملة حول أحجام النماذج وحساب VRAM، راجع <a href="/ar/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">الدليل الشامل لـ VRAM للنماذج المحلية</a>. للنطاق 7B تحديداً، راجع <a href="/ar/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">كم ذاكرة يحتاج نموذج 7B</a>.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'أسئلة شائعة حول VRAM',
+        faqs: [
+          {
+            q: 'هل 8 GB من VRAM كافية للنماذج اللغوية المحلية؟',
+            a: 'نعم. بـ 8 GB يمكنك تشغيل Llama 3 8B بتكميم Q5_K_M بسرعة ~18 توكن/ث، أو Mistral Small بتكميم Q5_K_M مع هامش وافر. معظم مهام المحادثة والبرمجة اليومية مغطاة جيداً في هذا النطاق.',
+          },
+          {
+            q: 'هل يمكن تشغيل نموذج 7B بـ 4 GB VRAM؟',
+            a: 'لا. نموذج 7B بتكميم Q4 يحتاج 5–6 GB من VRAM. أصغر تكميم قابل للاستخدام لا يزال يتجاوز 4 GB. راجع <a href="/ar/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">كم ذاكرة يحتاج نموذج 7B</a> للتفاصيل الكاملة.',
+          },
+          {
+            q: 'هل يؤثر حجم نافذة السياق على استهلاك VRAM؟',
+            a: 'نعم. كل 1000 توكن إضافي من السياق يستهلك ~250 MB من VRAM في نموذج 7B. السياق الافتراضي 2048 توكن يستخدم ~0.5 GB؛ 16384 توكن يستخدم ~4 GB إضافية فوق وزن النموذج.',
+          },
+          {
+            q: 'ماذا أفعل إذا استخدم نموذجي VRAM أكثر من المتوقع؟',
+            a: 'اضبط <code>--num-ctx 2048</code> في أمر Ollama. هذا يقلل استخدام VRAM بما يصل إلى 2 GB في نماذج 7B دون تعديل ملف النموذج.',
+          },
+        ],
+      },
+    },
+  },
 }
+

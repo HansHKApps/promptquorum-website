@@ -571,4 +571,84 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ar: {
+    theme: 'Quantization & VRAM',
+    title: 'أفضل نماذج Ollama لـ4 GB VRAM؟',
+    seoTitle: 'نماذج Ollama لـ4 GB VRAM 2026 | PromptQuorum',
+    metaDescription: '4 GB VRAM ضيّقة. Phi-4 Mini Q4 (3.2 GB)، Gemma 2 2B (1.5 GB)، SmolLM 1.7B (1.0 GB). Llama 3 8B لا يتسع. إجابة سريعة من PromptQuorum.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ar: {
+        question: 'أفضل نماذج Ollama لـ4 GB VRAM؟',
+        answer: '4 GB VRAM ضيّقة لكن قابلة للاستخدام مع نماذج صغيرة كـPhi-4 Mini Q4 (~3.2 GB) وGemma 2 2B (~1.5 GB) وSmolLM 1.7B (~1.0 GB). Llama 3 8B لا يتسع.',
+        bullets: [
+          'Phi-4 Mini Q4: أفضل جودة في 4 GB (3.2 GB VRAM)',
+          'Gemma 2 2B: سريع وخفيف (1.5 GB)',
+          'SmolLM 1.7B: أدنى استهلاك VRAM (1.0 GB)',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'الأفضل لـ4 GB VRAM: Phi-4 Mini Q4 بـ~3.2 GB — أعلى جودة في هذا النطاق',
+          'Gemma 2 2B (1.5 GB) هو الخيار الأسرع؛ SmolLM 1.7B (1.0 GB) هو الأصغر',
+          'Llama 3 8B لا يتسع في أي تكميم — يحتاج 5.5 GB كحد أدنى',
+        ],
+      },
+      body1: {
+        title: 'ما يتسع في 4 GB VRAM',
+        content: [
+          'اعتباراً من مايو 2026، <strong>مع 4 GB VRAM أنت محدود بنماذج بـ3 مليارات معامل أو أقل في تكميم Q4.</strong> هذا يستبعد جميع النماذج المحلية الشائعة — Llama 3 8B وMistral Small وQwen 14B. ثلاثة نماذج صغيرة حديثة تؤدي أداءً مفاجئاً جيداً: Phi-4 Mini يعادل GPT-4o mini في اتباع التعليمات، وGemma 2 2B يتعامل مع الدردشة السريعة، وSmolLM 1.7B يعمل على الرسوميات المدمجة.',
+          'Phi-4 Mini هو الخيار الأمثل في هذا النطاق. رغم صغر حجمه، يتعامل مع الأسئلة العامة والبرمجة الخفيفة وتلخيص المستندات بـ~25 رمز/ثانية. Gemma 2 2B أسرع للدردشة أحادية الدور. SmolLM 1.7B هو البديل إذا كان حتى Phi-4 Mini يقرّب VRAM لديك من الحد.',
+        ],
+        columns: ['النموذج', 'VRAM', 'الأفضل لـ'],
+        rows: [
+          { 'النموذج': 'Phi-4 Mini Q4', 'VRAM': '3.2 GB', 'الأفضل لـ': 'أفضل جودة في 4 GB' },
+          { 'النموذج': 'Gemma 2 2B Q4', 'VRAM': '1.5 GB', 'الأفضل لـ': 'دردشة سريعة أحادية الدور' },
+          { 'النموذج': 'SmolLM 1.7B Q4', 'VRAM': '1.0 GB', 'الأفضل لـ': 'أدنى استهلاك VRAM' },
+        ],
+      },
+      body2: {
+        title: 'ما لا يتسع في 4 GB',
+        content: [
+          'هذه النماذج تُطلب كثيراً لكنها تحتاج أكثر من 4 GB VRAM في جميع مستويات التكميم:',
+          'الترقية إلى 6 GB تتيح Llama 3 8B وMistral Small — أكثر النماذج المحلية شعبية. راجع <a href="/ar/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">أفضل نماذج اللغة الكبيرة المحلية لـ6 GB VRAM</a>. للمقارنة الشاملة للعتاد، راجع <a href="/ar/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">أسرع نماذج اللغة الكبيرة المحلية للحواسيب منخفضة المستوى</a>.',
+        ],
+        items: [
+          'Llama 3 8B — يحتاج ~5.5 GB في Q4_K_M (الحد الأدنى)',
+          'Mistral Small — يحتاج ~4.5 GB في Q4_K_M (هامشي؛ محفوف بالمخاطر في 4 GB مع تكلفة السياق)',
+          'Phi-4 (14B كامل) — يحتاج ~9.8 GB',
+          'Qwen 14B — يحتاج ~9.5 GB في Q4_K_M',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'إجابات سريعة حول النماذج بـ4 GB VRAM',
+        faqs: [
+          {
+            q: 'هل 4 GB VRAM كافٍ لنموذج لغة كبير مفيد؟',
+            a: 'نعم، للمهام الأساسية. Phi-4 Mini يتعامل مع الأسئلة العامة والبرمجة الخفيفة بـ~25 رمز/ثانية. للسياقات الطويلة أو وكلاء البرمجة متعددة الخطوات أو تحليل المستندات، 4 GB هو عنق الزجاجة — قم بالترقية إلى 6 GB أو أكثر.',
+          },
+          {
+            q: 'هل يمكنني تشغيل Llama 3 بـ4 GB VRAM؟',
+            a: 'لا. Llama 3 8B يحتاج ~5.5 GB في Q4_K_M كحد أدنى. Llama 3.2 3B يتسع في ~2.5 GB إذا أردت تحديداً متغيراً Llama. راجع <a href="/ar/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">الدليل الشامل لمتطلبات VRAM</a>.',
+          },
+          {
+            q: 'ما بطاقات GPU التي تحتوي 4 GB VRAM؟',
+            a: 'RTX 3050 Ti (4 GB) وGTX 1650 Super (4 GB) وAMD RX 6500 XT (4 GB) هي الأكثر شيوعاً. الثلاثة تعمل مع Ollama — NVIDIA عبر CUDA وAMD عبر ROCm أو Vulkan.',
+          },
+          {
+            q: 'هل يمكن لوضع CPU فقط تجاوز حد 4 GB VRAM؟',
+            a: 'نعم. بدون GPU، Llama 3 8B Q4 يستخدم ~6 GB من RAM النظام ويعمل بـ3–6 رمز/ثانية على CPU حديثة 8 أنوية. أبطأ، لكنه يعمل إذا كانت لديك RAM كافية.',
+          },
+        ],
+      },
+    },
+  },
 }

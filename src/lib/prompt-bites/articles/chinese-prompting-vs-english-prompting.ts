@@ -852,4 +852,111 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       ],
     },
   },
+  ar: {
+    theme: 'Model Comparisons',
+    title: 'الكتابة بالصينية مقابل الإنجليزية: أيهما أفضل لنماذج LLM المحلية؟',
+    seoTitle: 'الكتابة بالصينية مقابل الإنجليزية 2026: كفاءة الرموز',
+    metaDescription: 'الأوامر الصينية تستخدم 30–50% رموزًا أقل على Qwen3. الإنجليزية تُنتج سلاسل استدلال أقوى. تقنيات مختلطة ودليل لكل نموذج.',
+    publishDate: '2026-05-26',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    educationalLevel: 'Intermediate',
+    audience: 'مستخدمون ثنائيو اللغة (صيني-إنجليزي) يشغّلون نماذج LLM محلية',
+    parentArticle: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
+    siblingBites: ['can-you-run-qwen3-on-ollama', 'qwen-coder-vs-deepseek-coder'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ar: {
+        question: 'هل الكتابة بالصينية أم بالإنجليزية أفضل لنماذج LLM المحلية؟',
+        answer: 'التعليمات بالإنجليزية + توجيه "الرد بالصينية" هو الإعداد الأمثل على جميع النماذج. الأوامر الصينية توفّر 30–50% من الرموز على Qwen3. الأوامر الإنجليزية تُنتج سلاسل استدلال أقوى.',
+        bullets: [
+          'ترميز CJK: 30–50% رموزًا أقل على Qwen3',
+          'نصوص النظام بالإنجليزية → استدلال أفضل',
+          'Llama 3 / Mistral: الكتابة بالإنجليزية أفضل بشكل ملحوظ',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'الأوامر الصينية توفّر 30–50% من الرموز على Qwen3 وDeepSeek-R1-Distill — ترميز CJK أكثف بطبيعته',
+          'الأوامر الإنجليزية تُنتج سلاسل استدلال منطقي أقوى على تقريبًا جميع النماذج',
+          'أفضل ممارسة: "الرجاء الرد بالصينية. [تعليمات إنجليزية]" — يتفوّق على الصينية الخالصة في كل نموذج تم اختباره',
+          'تجنّب الأوامر الصينية مع Llama 3 وMistral — محللاتها الغربية تُجزّئ الأحرف الصينية',
+        ],
+      },
+      tokenEfficiency: {
+        id: 'token-efficiency',
+        title: 'كفاءة الرموز: الصينية مقابل الإنجليزية',
+        content: [
+          'يُنتج ترميز CJK رموزًا أقل بشكل ملحوظ لكل وحدة معنى.',
+          '**مثال:** نفس التعليمة بالإنجليزية: ~25 رمزًا؛ بالصينية: ~16 رمزًا (أقل بنسبة 36%)',
+          '**الكفاءة حسب عائلة النموذج:** Qwen3: 1 حرف صيني ≈ 1–1.5 رمز؛ Llama 3: 1 حرف ≈ 3–5 رموز (غير فعّال)',
+        ],
+      },
+      reasoning: {
+        id: 'reasoning-quality',
+        title: 'جودة الاستدلال: الإنجليزية لها الأفضلية',
+        content: [
+          'رغم القدرة الصينية الأصلية لـ Qwen3، تُنتج نصوص النظام الإنجليزية باستمرار سلاسل تفكير متسلسل أقوى.',
+          '**أفضل تركيبة:** نص النظام بالإنجليزية + "الرد بالصينية" في أمر المستخدم.',
+        ],
+      },
+      mixedTechnique: {
+        id: 'mixed-language',
+        title: 'تقنية الكتابة متعددة اللغات',
+        content: [
+          '**قالب نص النظام (الأفضل أداءً):** `You are a helpful assistant. Always respond in Simplified Chinese (简体中文). Think step by step before answering.`',
+          '**للكتابة الإبداعية:** الأوامر الصينية الخالصة على Qwen3-72B تُنتج أفضل النتائج الأسلوبية.',
+          '**للمهام التقنية (توليد الكود):** استخدم الأوامر الإنجليزية حتى مع Qwen3-Coder.',
+        ],
+      },
+      modelGuide: {
+        id: 'model-guide',
+        title: 'استراتيجية الكتابة حسب النموذج',
+        content: [
+          '**Qwen3 7B/14B/32B:** أفضل دعم صيني أصلي. استخدم نصوص نظام إنجليزية للمهام كثيفة الاستدلال.',
+          '**DeepSeek-R1-Distill (جميع الأحجام):** قوي في كلتا اللغتين. نص النظام الإنجليزي + استعلام المستخدم بالصينية هو الإعداد الأمثل.',
+          '**Llama 3 8B/70B:** تجنّب الأوامر الصينية. المحلّل يُجزّئ الأحرف الصينية إلى بايتات.',
+          '**Mistral Small:** أضعف دعم للصينية. التزم بالأوامر الإنجليزية.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          { q: 'هل الكتابة بالصينية توفّر المال في استدعاءات API؟', a: 'نعم، بشكل ملحوظ. الرموز الصينية أقل بنسبة 30–50% لنفس المحتوى على نماذج عائلة Qwen.' },
+          { q: 'هل يمكنني مزج الصينية والإنجليزية في نفس الأمر؟', a: 'نعم. Qwen3 وDeepSeek-R1-Distill يتعاملان بشكل جيد مع الأوامر ثنائية اللغة.' },
+          { q: 'ما اللغة التي يجب استخدامها لنصوص النظام؟', a: 'الإنجليزية، حتى على النماذج ذات الأصول الصينية كـ Qwen3. نصوص النظام الإنجليزية تُنتج باستمرار اتباعًا أفضل للتعليمات.' },
+          { q: 'ما الفرق بين الصينية التقليدية والمبسّطة؟', a: 'Qwen3 يتعامل مع كليهما. حدّد "请使用繁体中文回答" للتقليدية أو "请使用简体中文回答" للمبسّطة.' },
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'الكتابة بالصينية مقابل الإنجليزية لنماذج LLM المحلية 2026',
+      description: 'ترميز CJK: 30–50% رموزًا أقل على Qwen3. نصوص النظام الإنجليزية لاستدلال أفضل. يُوصى بالتقنية المختلطة.',
+      url: 'https://www.promptquorum.com/ar/prompt-bites/chinese-prompting-vs-english-prompting',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      about: [{ '@type': 'Thing', name: 'تقنيات الكتابة لنماذج LLM' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen3' }, { '@type': 'SoftwareApplication', name: 'DeepSeek-R1' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        { '@type': 'Question', name: 'هل الكتابة بالصينية أم الإنجليزية أفضل لنماذج LLM المحلية؟', acceptedAnswer: { '@type': 'Answer', text: 'التعليمات بالإنجليزية + توجيه بالصينية هو الأمثل. الصينية توفّر 30–50% من الرموز؛ الإنجليزية تُنتج استدلالًا أفضل.' } },
+        { '@type': 'Question', name: 'ما اللغة المناسبة لنصوص النظام؟', acceptedAnswer: { '@type': 'Answer', text: 'الإنجليزية، حتى على النماذج ذات الأصول الصينية كـ Qwen3. نصوص النظام الإنجليزية دائمًا تُنتج اتباعًا أفضل للتعليمات.' } },
+      ],
+    },
+  },
 }
