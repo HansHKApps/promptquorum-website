@@ -7,7 +7,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
@@ -1252,7 +1252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
@@ -1664,7 +1664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
@@ -2076,7 +2076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
@@ -2500,7 +2500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
 },
   pt: {
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',
@@ -2924,7 +2924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-06-03',
     next_refresh_due: '2026-11-07',

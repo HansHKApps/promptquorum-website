@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'monthly',
       theme: 'Fundamentals',
       title: 'How to Build a Prompt Library: 8-Field Template, Governance, and Team Adoption Guide',
       intro: 'A prompt library is a team-wide collection of tested instructions. Done well, each entry works like a small tool: pick it up, adapt the inputs, and get consistent results.',
@@ -1193,11 +1193,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
   },
-  freshness_tier: 'semi_annual',
+  freshness_tier: 'monthly',
   next_refresh_due: '2026-09-24',
 },
     es: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'monthly',
       theme: 'Fundamentals',
       title: 'Cómo construir una biblioteca de prompts: plantilla de 8 campos, gobernanza y guía de adopción para equipos',
       intro: 'Una biblioteca de prompts es una colección de instrucciones probadas para todo el equipo. Bien construida, cada entrada funciona como una pequeña herramienta: tómala, adapta las entradas y obtén resultados consistentes.',
@@ -1542,7 +1542,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ar: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'monthly',
       theme: 'Fundamentals',
       title: 'كيفية بناء مكتبة تعليمات: قالب 8 حقول والحوكمة ودليل التبني للفرق',
       intro: 'مكتبة التعليمات هي مجموعة من التعليمات المختبرة لكامل الفريق. حين تُبنى بشكل صحيح، كل إدخال يعمل كأداة صغيرة: خذها وكيِّف المدخلات واحصل على نتائج متسقة.',
@@ -1887,7 +1887,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     pt: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'monthly',
       theme: 'Fundamentals',
       title: 'Como construir uma biblioteca de prompts: modelo de 8 campos, governança e guia de adoção para equipes',
       intro: 'Uma biblioteca de prompts é uma coleção de instruções testadas para toda a equipe. Bem construída, cada entrada funciona como uma pequena ferramenta: pegue-a, adapte as entradas e obtenha resultados consistentes.',
@@ -2782,7 +2782,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
   },
-  freshness_tier: 'semi_annual',
+  freshness_tier: 'monthly',
   next_refresh_due: '2026-09-24',
 },
     ja: {
@@ -3360,7 +3360,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
   },
-  freshness_tier: 'semi_annual',
+  freshness_tier: 'monthly',
   next_refresh_due: '2026-09-24',
 },
     zh: {
@@ -3938,7 +3938,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
   },
-  freshness_tier: 'semi_annual',
+  freshness_tier: 'monthly',
   next_refresh_due: '2026-09-24',
 },
   };

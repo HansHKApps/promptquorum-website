@@ -8,7 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       next_refresh_due: '2026-12-03',
       theme: 'Models by Use Case',
       title: 'Q4 vs Q5 vs Q8: Which Quantization Level Should You Use?',
@@ -256,7 +256,7 @@ schema: {
       },
     },
     es: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Models by Use Case',
       title: 'Q4 vs Q5 vs Q8: ¿Qué nivel de cuantización deberías usar?',
       seoTitle: 'Q4 vs Q5 vs Q8 2026: mejor cuantización LLM para velocidad',
@@ -502,7 +502,7 @@ schema: {
       },
     },
     pt: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Models by Use Case',
       title: 'Q4 vs Q5 vs Q8: qual nível de quantização você deve usar?',
       seoTitle: 'Q4 vs Q5 vs Q8 2026: melhor quantização LLM para velocidade',
@@ -996,7 +996,7 @@ schema: {
       },
     },
     fr: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Modèles par cas d\'utilisation',
       title: 'Q4 vs Q5 vs Q8 : Quel niveau de quantification utiliser ?',
       seoTitle: 'Q4 vs Q5 vs Q8 : Meilleure quantification LLM pour vitesse, RAM et qualité (2026)',
@@ -1238,7 +1238,7 @@ schema: {
       },
     },
     ja: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'ユースケース別モデル',
       title: 'Q4 vs Q5 vs Q8: どの量子化レベルを使用する?',
       seoTitle: 'Q4 vs Q5 vs Q8: 速度、RAM、品質に最適なLLM量子化(2026)',
@@ -1378,7 +1378,7 @@ schema: {
       },
     },
     zh: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: '按用途分类的模型',
       title: 'Q4 vs Q5 vs Q8: 应该使用哪个量子化级别?',
       seoTitle: 'Q4 vs Q5 vs Q8: 本地LLM最优量子化级别2026',

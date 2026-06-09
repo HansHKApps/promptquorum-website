@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Fundamentals',
       title: 'Tokens, Costs & Limits: The Economics of AI Prompting in 2026',
       intro: 'Every AI API call is measured and billed in tokens — the unit that controls both what the model can process and how much you pay. Understanding tokens is the foundation of efficient, cost-effective prompting.',

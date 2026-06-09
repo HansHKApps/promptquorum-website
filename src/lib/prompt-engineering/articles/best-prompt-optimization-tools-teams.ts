@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     audience: 'Engineering managers and prompt engineers building multi-person LLM workflows',
     primaryTerm: 'Prompt Optimization Tools for Teams',
     aboutTopics: ['Prompt Optimization', 'Team Collaboration', 'LLM Evaluation'],
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     next_refresh_due: '2026-10-10',
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
@@ -541,7 +541,7 @@ tests:
     audience: 'Engineering-Manager und Prompt-Ingenieure, die LLM-Workflows mit mehreren Personen erstellen',
     primaryTerm: 'Prompt-Optimierungs-Tools für Teams',
     aboutTopics: ['Prompt-Optimierung', 'Team-Zusammenarbeit', 'LLM-Bewertung'],
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     next_refresh_due: '2026-10-10',
     toc: [
       { label: 'Zusammenfassung', anchor: '#key-takeaways' },
@@ -934,7 +934,7 @@ tests:
     audience: 'Engineering managers e ingenieros de prompts que construyen flujos de trabajo LLM con múltiples personas',
     primaryTerm: 'Herramientas de optimización de prompts para equipos',
     aboutTopics: ['Optimización de prompts', 'Colaboración en equipo', 'Evaluación de LLM'],
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     next_refresh_due: '2026-10-10',
     toc: [
       { label: 'Puntos clave', anchor: '#key-takeaways' },
@@ -1889,7 +1889,7 @@ tests:
     audience: 'Responsables d\'ingénierie et ingénieurs d\'invites construisant des workflows LLM multi-personnels',
     primaryTerm: 'Outils d\'optimisation d\'invites pour les équipes',
     aboutTopics: ['Optimisation d\'invites', 'Collaboration d\'équipe', 'Évaluation LLM'],
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     next_refresh_due: '2026-10-10',
     toc: [
       { label: 'Points clés', anchor: '#key-takeaways' },
@@ -2265,7 +2265,7 @@ tests:
     audience: 'マルチパーソンLLMワークフロー構築するエンジニアリングマネージャーとプロンプトエンジニア',
     primaryTerm: 'チーム向けプロンプト最適化ツール',
     aboutTopics: ['プロンプト最適化', 'チーム協働', 'LLM評価'],
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     next_refresh_due: '2026-10-10',
     toc: [
       { label: '重要ポイント', anchor: '#key-takeaways' },
@@ -2641,7 +2641,7 @@ tests:
     audience: '构建多人LLM工作流的工程经理和提示工程师',
     primaryTerm: '团队提示优化工具',
     aboutTopics: ['提示优化', '团队协作', 'LLM评估'],
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     next_refresh_due: '2026-10-10',
     toc: [
       { label: '核心要点', anchor: '#key-takeaways' },
@@ -3102,7 +3102,7 @@ tests:
     audience: 'مدراء الهندسة ومهندسو التعليمات الذين يبنون سير عمل LLM متعدد الأشخاص',
     primaryTerm: 'أدوات تحسين التعليمات للفرق',
     aboutTopics: ['تحسين التعليمات', 'التعاون الجماعي', 'تقييم LLM'],
-    freshness_tier: 'semi_annual',
+    freshness_tier: 'monthly',
     next_refresh_due: '2026-10-10',
     toc: [
       { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },

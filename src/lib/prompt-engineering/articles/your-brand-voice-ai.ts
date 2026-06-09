@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Use Cases',
       title: 'Brand Voice AI: How to Train Models to Match Your Tone',
       intro: 'A well-trained brand voice AI lets you generate and review content at scale without losing the tone, style, and personality that make your brand recognizable. Used correctly, it becomes an extension of your brand team: it learns from your best copy, applies those patterns across every channel, and flags anything that sounds off-brand before customers ever see it.',
@@ -344,7 +344,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     de: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Use Cases',
       title: 'Brand-Voice-AI: KI-Modelle trainieren, um in Ihrer Marke zu sprechen',
       intro: 'Eine gut trainierte Brand-Voice-AI ermöglicht es Ihnen, Inhalte im großen Maßstab zu generieren und zu überprüfen, ohne den Ton, den Stil und die Persönlichkeit zu verlieren, die Ihre Marke unverwechselbar machen. Richtig eingesetzt, wird sie zu einer Erweiterung Ihres Brand-Teams: Sie lernt von Ihrer besten Kopie, wendet diese Muster über jeden Kanal an und kennzeichnet alles, das nicht markengerecht klingt, bevor Kunden es überhaupt sehen.',
@@ -677,7 +677,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     es: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Use Cases',
       title: 'IA para la Voz de Marca: Cómo Entrenar Modelos para que Coincidan con tu Tono',
       intro: 'Una IA de voz de marca bien entrenada te permite generar y revisar contenido a escala sin perder el tono, el estilo y la personalidad que hacen que tu marca sea reconocible. Utilizada correctamente, se convierte en una extensión de tu equipo de marca: aprende de tu mejor contenido, aplica esos patrones en todos los canales y señala cualquier cosa que suene fuera de la marca antes de que los clientes la vean.',
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     ar: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Use Cases',
       title: 'الذكاء الاصطناعي لصوت العلامة التجارية: كيف تُدرّب النماذج على مطابقة نبرتك',
       intro: 'الذكاء الاصطناعي لصوت العلامة التجارية المُدرَّب جيدًا يتيح لك إنشاء المحتوى ومراجعته على نطاق واسع دون فقدان النبرة والأسلوب والشخصية التي تجعل علامتك التجارية مميزة. عند استخدامه بشكل صحيح، يصبح امتدادًا لفريق علامتك التجارية: يتعلم من أفضل محتواك، ويطبق تلك الأنماط عبر جميع القنوات، ويُشير إلى أي شيء يبدو خارج نطاق العلامة قبل أن يراه العملاء.',
@@ -1629,7 +1629,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     fr: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Use Cases',
       title: 'Brand Voice IA : Entraîner les modèles à parler avec votre ton',
       intro: 'Une IA de voix de marque bien entraînée vous permet de générer et d\'examiner des contenus à grande échelle sans perdre le ton et la personnalité qui rendent votre marque reconnaissable. Utilisée correctement, elle devient une extension de votre équipe marque : elle apprend de vos meilleurs textes, applique ces modèles sur chaque canal et signale tout ce qui sonne hors-marque.',
@@ -1960,7 +1960,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ja: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Use Cases',
       title: 'ブランドボイスAI：モデルをあなたのトーンで話すようにトレーニング',
       intro: 'よくトレーニングされたブランドボイスAIにより、スケール・規模でコンテンツを生成・審査でき、ブランドを認識させるトーンと個性を失いません。正しく使用すると、ブランドチームの拡張になります。最良のコピーから学び、すべてのチャネルに適用し、顧客が見る前に、ブランドから外れた内容にフラグを立てます。',
@@ -2295,7 +2295,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     zh: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Use Cases',
       title: '品牌声音AI：训练模型用你的语调说话',
       intro: '经过良好训练的品牌声音AI让你能大规模生成和审查内容，同时保持品牌的语调和个性。正确使用时，它成为品牌团队的延伸：从你的最佳文案学习，在每个渠道应用这些模式，在客户看到之前标记任何听起来不合品牌的内容。',

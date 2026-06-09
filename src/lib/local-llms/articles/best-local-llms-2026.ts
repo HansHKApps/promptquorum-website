@@ -8,7 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       last_full_refresh: '2026-06-01',
       current_models_mentioned: ['Llama 3.3 70B', 'Qwen3 72B', 'Mistral Small 3.1 24B', 'Gemma 3 9B', 'Phi-4 Mini 3.8B'],
       theme: 'Best Models',
@@ -300,7 +300,7 @@ schema: {
     },
 
     es: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Best Models',
       title: 'Mejores LLMs locales en 2026: Top modelos clasificados por tarea, hardware y calidad',
       seoTitle: 'Mejores LLMs locales 2026: Llama, Qwen, Mistral clasificados',
@@ -588,7 +588,7 @@ schema: {
     },
 
     pt: {
-      freshness_tier: 'semi_annual',
+      freshness_tier: 'monthly',
       theme: 'Best Models',
       title: 'Melhores LLMs locais em 2026: top modelos classificados por tarefa, hardware e qualidade',
       seoTitle: 'Melhores LLMs locais 2026: Llama, Qwen, Mistral classificados',

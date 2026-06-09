@@ -11,6 +11,7 @@
  * - evergreen: no year/model/hardware refs, no benchmarks
  * - semi_annual: must have year in title/seoTitle, next_refresh_due
  * - annual: must have year in slug/URL, specific_year
+ * - monthly: tightest tier, no structural requirements — just set the value
  */
 
 import fs from 'fs';
