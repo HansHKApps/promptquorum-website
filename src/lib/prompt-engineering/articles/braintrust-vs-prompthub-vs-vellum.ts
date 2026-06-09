@@ -2321,4 +2321,458 @@ tests:
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Braintrust vs PromptHub vs Vellum vs Promptfoo 2026', description: '4款提示词管理工具对比：Braintrust评估、Vellum A/B测试、PromptHub版本管理、Promptfoo开源CI/CD。含中国企业《数据安全法》合规指南。', datePublished: '2026-04-10', dateModified: '2026-05-01', author: { '@type': 'Organization', 'name': 'PromptQuorum' }, publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, url: 'https://www.promptquorum.com/zh/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo', inLanguage: 'zh', about: [{ '@type': 'Thing', 'name': 'Braintrust' }, { '@type': 'Thing', 'name': 'PromptHub' }, { '@type': 'Thing', 'name': 'Vellum' }, { '@type': 'Thing', 'name': 'Promptfoo' }, { '@type': 'Thing', 'name': 'PromptQuorum' }, { '@type': 'Thing', 'name': 'LLM 评估' }], speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] } },
     itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: '提示词管理工具（比较）', inLanguage: 'zh', url: 'https://www.promptquorum.com/zh/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo', numberOfItems: 5, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Braintrust', description: '包含详细指标和自动评估的评估和实验' }, { '@type': 'ListItem', position: 2, name: 'PromptHub', description: '团队协作的提示词版本控制' }, { '@type': 'ListItem', position: 3, name: 'Vellum', description: '实时流量分割的生产 A/B 测试' }, { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'GitHub Actions 集成的开源回归测试' }, { '@type': 'ListItem', position: 5, name: 'PromptQuorum', description: '模型选择的 25+ 模型跨模型比较' }] },
   },
+  ar: {
+    theme: 'Tools & Platforms',
+    title: 'Braintrust مقابل PromptHub مقابل Vellum مقابل Promptfoo (2026)',
+    seoTitle: 'Braintrust مقابل PromptHub مقابل Vellum: المجموعة الثنائية لعام 2026',
+    intro: '**تهيمن أربع أدوات على إدارة الـ prompts للفرق: Braintrust لتقييم المخرجات، وPromptHub للتحكم في الإصدارات، وVellum لاختبار A/B في الإنتاج، وPromptfoo لمنع انحدارات CI/CD.** معظم الفرق تشتري الأدوات الأربع وتُهدر $1,000+ شهريًا. المجموعة الصحيحة دائمًا هي أداتان فقط — إحداهما للتقييم والأخرى للنشر.',
+    metaDescription: 'Braintrust (‎$249/شهر) يُقيّم الـ prompts. Vellum (‎$200–500/شهر) يجري A/B في الإنتاج. Promptfoo مجاني لـ CI/CD. PromptHub (‎$50–200/شهر) يُدير الإصدارات. معظم الفرق تحتاج 2 فقط.',
+    ogTitle: 'شراء الأدوات الأربع للـ prompts يُهدر $1,000+/شهر. إليك المجموعة الثنائية',
+    ogDescription: 'Braintrust يُسجّل النقاط. Vellum يُوزّع الحركة. Promptfoo يكتشف الانحدارات. PromptHub يُدير الإصدارات. اختر 2. جدول المقارنة بالداخل.',
+    twitterTitle: 'Braintrust مقابل PromptHub مقابل Vellum مقابل Promptfoo: أي اثنتين تختار',
+    twitterDescription: 'Promptfoo مجاني. Vellum يبدأ من $200/شهر. Braintrust من $500/شهر. PromptHub من $50/شهر. تحتاج 2 فقط — تقييم + نشر. مصفوفة القرار بالداخل.',
+    publishDate: '2026-04-10',
+    dateModified: '2026-05-01',
+    readTime: '9 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'مهندسو الـ prompts ومدراء الهندسة الذين يختارون مجموعة أدوات إدارة الـ prompts',
+    primaryTerm: 'مقارنة Braintrust وPromptHub وVellum وPromptfoo',
+    aboutTopics: ['إدارة الـ Prompts', 'تقييم نماذج اللغة الكبيرة', 'إدارة إصدارات الـ Prompts'],
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-10-27',
+    lastFactChecked: '2026-04-28',
+    toc: [
+      { label: 'ما الذي تفعله Braintrust وPromptHub وVellum وPromptfoo', anchor: '#what-is' },
+      { label: 'كيف نقارن هذه الأدوات', anchor: '#evaluation-criteria' },
+      { label: 'Braintrust: عمق التقييم بـ $249/شهر (Pro)', anchor: '#braintrust' },
+      { label: 'PromptHub: التحكم في الإصدارات بـ $50–200/شهر', anchor: '#prompthub' },
+      { label: 'Vellum: توزيع الحركة في الإنتاج بـ $200–500/شهر', anchor: '#vellum' },
+      { label: 'Promptfoo: اختبار CI/CD مفتوح المصدر ومجاني', anchor: '#promptfoo' },
+      { label: 'PromptQuorum: مقارنة متعددة النماذج قبل التحسين', anchor: '#promptquorum' },
+      { label: 'وجهًا لوجه: الأدوات الأربع مقارنةً', anchor: '#comparison-table' },
+      { label: 'اختيار الأداة حسب نوع الفريق', anchor: '#which-tool' },
+      { label: 'الأخطاء الشائعة', anchor: '#common-mistakes' },
+      { label: 'كيف تختار بين هذه الأدوات الأربع', anchor: '#how-to-choose' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
+      { label: 'المصادر', anchor: '#sources' },
+    ],
+    quickFacts: [
+      'Promptfoo هي الأداة المجانية الوحيدة (رخصة MIT، بدون مستوى مدفوع) — مثالية للفرق التي تريد CI/CD بدون تكاليف SaaS',
+      'الخطة Pro لـ Braintrust تبدأ من $249/شهر (المستوى المجاني متاح بـ 1M spans + 10K scores)؛ Vellum بين $200–500/شهر؛ PromptHub بين $50–200/شهر',
+      'مجموعة أدوات ثنائية نموذجية (تقييم + نشر) تكلف $250–700/شهر لفريق من 5 أشخاص',
+      'Vellum وحده يدعم التوزيع الفعلي للحركة في الإنتاج (اختبارات A/B مع مستخدمين حقيقيين)',
+      'تدعم الأدوات الأربع واجهات برمجة تطبيقات OpenAI وAnthropic؛ Promptfoo وحده يدعم أكثر من 40 مزودًا بشكل أصلي',
+      'PromptQuorum يضيف خطوة أولى مستقلة عن النماذج: يُرسل الـ prompt إلى 25+ نموذجًا قبل الالتزام بمزود',
+    ],
+    sections: {
+      keyTakeaways: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Braintrust يتصدر في عمق التقييم: وظائف تسجيل مخصصة، وكيل Loop للتكرار المستقل، تكامل MCP لأدوات IDE، Pro بـ $249/شهر (مستوى مجاني متاح). مثالي للفرق التي تقيس جودة المخرجات بشكل منهجي.',
+          'Vellum يتصدر في اختبار A/B بالإنتاج: يوزع حركة المستخدمين الحقيقيين بين المتغيرات، وتدفقات الموافقة، و$200–500/شهر. مثالي للميزات اللايف للنماذج اللغوية.',
+          'Promptfoo هو البديل المجاني: CLI مفتوح المصدر، مجموعات اختبار بـ YAML، تكامل مع GitHub Actions. مثالي لفرق DevOps والمنصات.',
+          'PromptHub يركز على التحكم في الإصدارات والمشاركة بين الفرق. الأسهل في الإعداد؛ الأقل تكلفة ($50–200/شهر). مثالي لفرق المحتوى والتسويق.',
+          'معظم الفرق تحتاج بالضبط إلى أداتين: إحداهما للتقييم (Braintrust أو Promptfoo) والأخرى للنشر (Vellum أو PromptHub). شراء الأربعة يُهدر $700+/شهر.',
+          'لا توجد أداة واحدة تتفوق في المعايير الخمسة: التعاون، واختبار A/B، وتسجيل التقييم، وتكامل CI/CD، وشفافية الأسعار.',
+          'PromptQuorum: قبل التحسين لأي أداة، استخدم PromptQuorum لمقارنة أداء الـ prompt في 25+ نموذجًا في آنٍ واحد.',
+        ],
+      },
+      whatIs: {
+        id: 'what-is',
+        title: 'ما الذي تفعله Braintrust وPromptHub وVellum وPromptfoo',
+        content: [
+          '**تحل Braintrust وPromptHub وVellum وPromptfoo مشاكل مختلفة لفرق الـ prompts.** Braintrust منصة تقييم (تُسجّل النقاط للمخرجات). PromptHub نظام تحكم في الإصدارات (ينظم الـ prompts ويشاركها). Vellum منصة نشر مع اختبار A/B (تُجري تجارب على الحركة الحقيقية). Promptfoo أداة أتمتة اختبار (تكتشف الانحدارات في CI/CD). تتداخل ولكنها لا تحل محل بعضها البعض.',
+          'السبب في صعوبة اختيار الفرق لواحدة: الأربعة تدّعي "تحسين الـ prompts" لكنها تفعل ذلك في مراحل مختلفة. Braintrust تحسّن بالقياس؛ Vellum تحسّن بتوزيع الحركة؛ Promptfoo تحسّن باكتشاف الانحدارات؛ PromptHub تحسّن بالتنظيم. يمكن للفريق استخدام Braintrust لاكتشاف prompt أفضل، وPromptfoo لاختباره في CI/CD، وVellum لنشره.',
+          'هذا الدليل مقارنة مباشرة لأربع أدوات محددة. للحصول على تصنيف أوسع لجميع أدوات هندسة الـ prompts، راجع [أفضل أدوات هندسة الـ prompts 2026](/ar/prompt-engineering/best-prompt-engineering-tools-2026). لميزات تحسين الفريق بما يشمل DSPy وHelicone، راجع [أفضل أدوات تحسين الـ prompts للفرق](/ar/prompt-engineering/best-prompt-optimization-tools-for-teams).',
+        ],
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'Braintrust يُسجّل النقاط، PromptHub يُدير الإصدارات، Vellum يجري A/B، Promptfoo يختبر الانحدارات — أربع أدوات للـ prompts تتداخل لكنها لا تحل محل بعضها.',
+          },
+          {
+            type: 'in-plain-terms',
+            text: 'فكّر في الأمر كبناء برمجيات: تحتاج إطار اختبار (Promptfoo)، ولوحة جودة (Braintrust)، وخط نشر (Vellum)، ومستودع كود (PromptHub). معظم الفرق تحتاج اثنتين منها، ليس الأربعة.',
+          },
+        ],
+      },
+      evaluationCriteria: {
+        id: 'evaluation-criteria',
+        title: 'كيف نقارن هذه الأدوات',
+        content: [
+          '**نقيّم الأدوات الأربع وفق خمسة معايير مهمة في سير عمل الفرق الفعلية: مدى دعمها للتعاون بين الفريق، وما إذا كانت تتضمن اختبار A/B أو التجريب، وقدرات التسجيل والتقييم، وتكامل CI/CD، وشفافية الأسعار.**',
+        ],
+        columns: ['المعيار', 'ما يقيسه', 'لماذا يهم'],
+        rows: [
+          {
+            'المعيار': 'التعاون بين الفريق',
+            'ما يقيسه': 'التحكم في الوصول بالأدوار، والفروع، ولوحات المعلومات المشتركة',
+            'لماذا يهم': 'يجب أن يتمكن عدة مهندسين من تعديل الـ prompts دون الكتابة فوق بعضهم',
+          },
+          {
+            'المعيار': 'اختبار A/B',
+            'ما يقيسه': 'مقارنة المتغيرات جنبًا إلى جنب، وتوزيع الحركة',
+            'لماذا يهم': 'مقارنة المتغيرات على نفس مجموعة الإدخالات أو حركة الإنتاج',
+          },
+          {
+            'المعيار': 'التقييم/التسجيل',
+            'ما يقيسه': 'مقاييس مخصصة، ومسجّلون مبنيون على نماذج اللغة الكبيرة، وبوابات الجودة',
+            'لماذا يهم': 'قياس جودة المخرجات وليس مجرد النظر إليها بصريًا',
+          },
+          {
+            'المعيار': 'تكامل CI/CD',
+            'ما يقيسه': 'CLI، وAPI، وGitHub Actions، والاختبار الآلي',
+            'لماذا يهم': 'اكتشاف الانحدارات قبل النشر؛ أتمتة فحوص الجودة',
+          },
+          {
+            'المعيار': 'شفافية الأسعار',
+            'ما يقيسه': 'صفحة أسعار عامة، وتكاليف واضحة لكل وحدة',
+            'لماذا يهم': 'القدرة على التنبؤ بالميزانية للفرق المؤلفة من 3–10 أشخاص',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust: عمق التقييم بـ $249/شهر (Pro)',
+        content: [
+          '**Braintrust منصة تقييم ذكاء اصطناعي تسجّل كل استدعاء لـ API، وتُسجّل النقاط للمخرجات بمقاييس مخصصة، وتُجري تجارب A/B في مختبر مشترك — مثالية للفرق التي تقيس جودة المخرجات بشكل منهجي.** Braintrust ليست أداة بناء prompts ولا نظام تحكم في الإصدارات؛ إنها مختبر تقييم مشترك.',
+          'يشمل المستوى المجاني 1M spans من التتبع و10K scores مع مستخدمين غير محدودين — كافٍ لمعظم سير العمل في التقييم قبل الإنتاج. الخطة Pro بـ $249/شهر. أضافت Braintrust وكيل Loop في 2026: مُقيّم مستقل يولّد حالات اختبار ويكرر على الـ prompts دون إعداد يدوي. يربط خادم MCP بين Claude Code وCursor مباشرةً بمجموعة تقييم Braintrust من IDE. يتكامل وكيل التسجيل مع واجهات برمجة تطبيقات OpenAI وAnthropic وGoogle دون تغييرات في الكود. تُعرّف وظائف التسجيل المخصصة بـ TypeScript أو Python. يتيح التكامل مع GitHub إصدار الـ prompts جنبًا إلى جنب مع الكود. شهادة SOC 2 Type II متاحة الآن.',
+          'أفضل الميزات للفرق: لوحات تجارب مشتركة (يرى جميع الأعضاء نتائج التقييم في الوقت الفعلي)، التحكم في الوصول بالأدوار (مشرف/عضو/مراقب)، تاريخ commits بأسلوب Git للـ prompts، وتسجيل الإنتاج (كل استدعاء API مسجّل بالمدخلات والمخرجات والنقاط).',
+          'للاطلاع على المقاييس التي تقوم عليها عملية التسجيل المخصصة، راجع [مقاييس تقييم الـ Prompt: الدقة والأهمية والكمون](/ar/prompt-engineering/prompt-evaluation-metrics).',
+        ],
+        items: [
+          'لوحات تجارب مشتركة: يرى جميع أعضاء الفريق نتائج التقييم الحية',
+          'التحكم في الوصول بالأدوار: أدوار المشرف/العضو/المراقب',
+          'إصدار الـ prompts عبر تاريخ commits بأسلوب Git',
+          'تسجيل الإنتاج: كل استدعاء API مسجّل بالمدخلات/المخرجات/النقاط',
+          'وكيل Loop: مُقيّم مستقل يولّد حالات اختبار ويكرر على الـ prompts (جديد في 2026)',
+          'خادم MCP: تكامل مباشر مع Claude Code وCursor للتقييم من IDE',
+          'شهادة SOC 2 Type II للنشر على مستوى المؤسسات',
+        ],
+        callouts: [
+          {
+            type: 'insight',
+            label: 'هل تعلم؟',
+            text: 'يشمل المستوى المجاني لـ Braintrust مليون span من التتبع و10,000 نقطة تسجيل مع مستخدمين غير محدودين — أكثر قدرة تقييمية مما تستخدمه معظم الفرق في أول 3 أشهر. يمكنك تشغيل سير عمل تقييم prompt كامل دون دفع أي شيء.',
+          },
+          {
+            type: 'warning',
+            label: 'تعقيد وظائف التسجيل',
+            text: 'يتطلب مُسجّلو Braintrust Pro المخصصون TypeScript أو Python. إذا لم يستطع أحد في فريقك كتابة وظائف تسجيل، فإن الميزة المميزة الرئيسية لـ Braintrust ستظل غير مستخدمة. ومع ذلك، يقلل المستوى المجاني ووكيل Loop هذا الحاجز. تحقق من قدرة الفريق قبل الالتزام بـ Pro.',
+          },
+        ],
+      },
+      prompthub: {
+        id: 'prompthub',
+        title: 'PromptHub: التحكم في الإصدارات بـ $50–200/شهر',
+        content: [
+          '**PromptHub منصة تحكم في الإصدارات ومشاركة الـ prompts — تخزّن الفرق الـ prompts في مكتبة مركزية، وتُسمّي الإصدارات، وتُشارك عبر المنظمة دون إدارة جداول بيانات أو رسائل Slack.** الأسهل في الإعداد من بين الأربعة.',
+          'Starter ~‎$50/شهر؛ Pro ~‎$200/شهر. واجهة ويب للمستخدمين غير التقنيين. تاريخ إصدارات لكل prompt، وتصنيفات للتنظيم، وتدفقات نشر. يدعم واجهات برمجة تطبيقات OpenAI وAnthropic والمخصصة. القيد: بدون تسجيل تقييم مخصص؛ محدود بفحوص الجودة المدمجة؛ غير مناسب للفرق التي تُجري تجارب A/B حية.',
+        ],
+      },
+      vellum: {
+        id: 'vellum',
+        title: 'Vellum: توزيع الحركة في الإنتاج بـ $200–500/شهر',
+        content: [
+          '**Vellum منصة نشر prompt مع اختبار A/B مدمج تُوزّع الحركة الحقيقية في الإنتاج بين متغيرات الـ prompts وتقيس جودة المخرجات في العالم الحقيقي — مثالية للفرق التي تُشغّل ميزات نماذج لغوية حية.** Vellum مستوى تحكم، ليست أداة اختبار.',
+          'Starter ‎$200/شهر؛ Growth ‎$500/شهر؛ Enterprise مخصص. توجّه حركة الإنتاج بنسبة مئوية بين المتغيرات. يقارن التقييم بين المتغيرات على مجموعات بيانات اختبار. ميزات الفريق: مساحة عمل مشتركة، ومراجعات prompts بأسلوب PR، وتدفقات موافقة النشر. القيد: الخيار الأغلى؛ مبالغة للفرق قبل مرحلة الإنتاج أو التي لا تتعامل مع حركة مستخدمين حقيقية بعد.',
+          'لفهم متى يُضيف اختبار A/B قيمة مقابل التحسين اليدوي، راجع [التحسين اليدوي مقابل الآلي للـ Prompts](/ar/prompt-engineering/manual-vs-automated-prompt-optimization).',
+        ],
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo: اختبار CI/CD مفتوح المصدر ومجاني',
+        content: [
+          '**Promptfoo أداة CLI مفتوحة المصدر تُشغّل مجموعات اختبار prompt آلية ضد نماذج لغوية متعددة — تدمجها الفرق في خطوط CI/CD لاكتشاف انحدارات الـ prompts قبل النشر.** مجانية (رخصة MIT). عرّف حالات الاختبار بـ YAML، أضفها إلى Git، وسيُشغّلها Promptfoo في كل PR.',
+          'يدعم 40+ مزود LLM. تكامل GitHub Actions متاح. تُقدّم مدخلات وأنماط مخرجات متوقعة وتأكيدات مخصصة مبنية على نماذج لغوية. ملائم للفرق: إعدادات الاختبار في Git، تُشغَّل في CI، بدون حساب أو فواتير شهرية. القيد: بدون واجهة؛ للمهندسين فقط؛ بدون ميزات تعاون مدمجة خارج Git.',
+        ],
+        codeBlock: `prompts:
+  - "Summarize in 3 bullets: {{text}}"
+providers:
+  - openai:gpt-5.5
+  - anthropic:claude-opus-4-7
+tests:
+  - vars:
+      text: "Long document..."
+    assert:
+      - type: contains
+        value: "•"
+      - type: llm-rubric
+        value: "Exactly 3 bullets"`,
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'tip',
+            label: 'Promptfoo + GitHub Actions',
+            text: 'تُضاف إعدادات اختبار YAML الخاصة بـ Promptfoo مباشرةً إلى Git. في كل PR، يُشغّل GitHub Actions مجموعة الاختبار ضد جميع النماذج المُهيّأة ويحجب الدمج عند الفشل. بدون تكلفة شهرية، وتكامل CI/CD كامل.',
+          },
+        ],
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'PromptQuorum: مقارنة متعددة النماذج قبل التحسين',
+        content: [
+          '**قبل الالتزام بـ Braintrust أو Vellum أو PromptHub أو Promptfoo لمزود LLM محدد، استخدم [PromptQuorum](/features) لإرسال الـ prompt إلى 25+ نموذجًا في آنٍ واحد ومعرفة أيها يؤدي أفضل — خطوة أولى مستقلة عن النماذج.** مستوى مجاني متاح.',
+          'على عكس الأدوات الأربع السابقة (التي تُحسّن لنموذج واحد في كل مرة)، يجيب PromptQuorum على سؤال "أي نموذج يتعامل مع هذا الـ prompt بشكل أفضل؟" في تشغيل واحد. بعد اكتشاف النموذج الأمثل مع PromptQuorum، وجّه إلى Braintrust للتقييم الأعمق، أو Vellum لاختبار A/B في الإنتاج، أو Promptfoo لمنع انحدارات CI/CD.',
+        ],
+        items: [
+          'أكثر من 25 نموذجًا بما يشمل GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro والنماذج المحلية عبر Ollama وLM Studio',
+          '9 أطر prompt مدمجة — TRACE وCO-STAR وCRAFT والمزيد',
+          'مقارنة الردود جنبًا إلى جنب مع تسجيل الإجماع',
+          'عد الـ tokens لكل نموذج — اطلع على فروق التكلفة قبل الالتزام',
+          'مستوى مجاني — لا يتطلب إعدادًا تقنيًا',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'وجهًا لوجه: الأدوات الأربع مقارنةً',
+        content: [
+          '**لا توجد أداة واحدة تتفوق في المعايير الخمسة. Braintrust تتصدر في عمق التقييم؛ Vellum تتصدر في توزيع الحركة في الإنتاج؛ Promptfoo تتصدر في CI/CD المجاني؛ PromptHub تتصدر في البساطة.**',
+        ],
+        columns: ['الأداة', 'الاستخدام الرئيسي', 'التعاون', 'CI/CD', 'الأسعار', 'مثالية لـ'],
+        rows: [
+          {
+            'الأداة': 'Braintrust',
+            'الاستخدام الرئيسي': 'تقييم المخرجات',
+            'التعاون': '✅ أدوار + لوحات معلومات',
+            'CI/CD': '✓ API + MCP',
+            'الأسعار': 'مجاني / $249 Pro',
+            'مثالية لـ': 'الفرق المركّزة على الجودة',
+          },
+          {
+            'الأداة': 'PromptHub',
+            'الاستخدام الرئيسي': 'التحكم في الإصدارات',
+            'التعاون': '✅ مساحة عمل الفريق',
+            'CI/CD': '✗ لا يوجد',
+            'الأسعار': '$50–200/شهر',
+            'مثالية لـ': 'فرق المحتوى',
+          },
+          {
+            'الأداة': 'Vellum',
+            'الاستخدام الرئيسي': 'A/B في الإنتاج',
+            'التعاون': '✅ مراجعات PR',
+            'CI/CD': '✓ Webhooks',
+            'الأسعار': '$200–500/شهر',
+            'مثالية لـ': 'الميزات الحية',
+          },
+          {
+            'الأداة': 'Promptfoo',
+            'الاستخدام الرئيسي': 'اختبار CI/CD',
+            'التعاون': 'مبني على Git',
+            'CI/CD': '✅ GitHub Actions',
+            'الأسعار': 'مجاني',
+            'مثالية لـ': 'فرق DevOps',
+          },
+          {
+            'الأداة': 'PromptQuorum',
+            'الاستخدام الرئيسي': 'مقارنة متعددة النماذج',
+            'التعاون': '✓ مساحة عمل مشتركة',
+            'CI/CD': '✗ لا يوجد',
+            'الأسعار': 'مجاني + رصيد',
+            'مثالية لـ': 'اختيار النموذج',
+          },
+        ],
+        callouts: [
+          {
+            type: 'insight',
+            label: 'قاعدة المجموعة الثنائية',
+            text: 'تُهدر معظم الفرق المال على 3–4 أدوات. المجموعة المثلى هي اثنتان: إحداهما للتقييم (Braintrust أو Promptfoo) والأخرى للنشر/الإصدارات (Vellum أو PromptHub). إجمالي الإنفاق: $250–700/شهر بدلًا من $1,000+.',
+          },
+        ],
+      },
+      whichTool: {
+        id: 'which-tool',
+        title: 'اختيار الأداة حسب نوع الفريق',
+        content: [
+          '**طابق الأداة مع أبرز عنق الزجاجة والعمق التقني لفريقك.**',
+          'لا تستخدم Braintrust إذا لم يتمكن فريقك من كتابة وظائف تسجيل مخصصة — ستظل غير مستخدمة. لا تستخدم Vellum إذا لم يكن لديك مستخدمون حقيقيون بعد — اشترها بعد الوصول إلى مرحلة الإنتاج. لا تستخدم PromptHub وحده إذا كنت بحاجة إلى قياس جودة المخرجات — ينظّم الـ prompts لكنه لا يستطيع تسجيل النقاط لها.',
+          'لسير العمل الكامل لإعداد الفريق بما يشمل الملكية وقواعد المراجعة، راجع [إعداد هندسة الـ Prompt للفرق الصغيرة](/ar/prompt-engineering/prompt-engineering-setup-small-teams).',
+        ],
+        numberedItems: [
+          {
+            title: 'فرق الهندسة ذات متطلبات الجودة ← Braintrust',
+            whyItMatters: 'صمّم وظائف تسجيل مخصصة؛ أجرِ تقييمات قابلة للتكرار؛ قِس تأثير تغييرات الـ prompt.',
+          },
+          {
+            title: 'فرق المحتوى/التسويق التي تحتاج تحكمًا في الإصدارات ← PromptHub',
+            whyItMatters: 'واجهة ويب بسيطة؛ لا يتطلب كودًا؛ مكتبة prompts مركزية.',
+          },
+          {
+            title: 'فرق المنتج مع ميزات نماذج لغوية حية ← Vellum',
+            whyItMatters: 'اختبار A/B على الحركة الحقيقية؛ تدفقات الموافقة؛ قِس التأثير في العالم الحقيقي.',
+          },
+          {
+            title: 'فرق DevOps/المنصات التي تمنع الانحدارات ← Promptfoo',
+            whyItMatters: 'مجاني؛ مبني على YAML؛ يتكامل مع GitHub؛ يكتشف الانحدارات في CI.',
+          },
+          {
+            title: 'جميع الفرق (الخطوة الأولى) ← PromptQuorum',
+            whyItMatters: 'قارن الـ prompt على 25+ نموذجًا قبل الالتزام بالتحسين لمزود واحد.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'الأخطاء الشائعة',
+        mistakes: [
+          {
+            mistake: 'شراء الأدوات الأربع لتغطية جميع الاحتمالات',
+            problem: 'يصل الإنفاق الإجمالي إلى $700+/شهر؛ تُشغّل أربعة أنظمة؛ ارتباك الفريق حول أي أداة تُستخدم لأي غرض.',
+            fix: 'اختر اثنتين: إحداهما للتقييم (Braintrust أو Promptfoo) والأخرى للنشر (Vellum أو PromptHub). أضف PromptQuorum كخطوة أولى مجانية.',
+          },
+          {
+            mistake: 'عدم تجربة المستويات المجانية أولًا',
+            problem: 'كلٌّ من Braintrust (مليون تتبع و10K نقاط مجانًا) وPromptfoo (مجاني تمامًا) يوفران قدرة كافية لإجراء تقييم حقيقي قبل الدفع. الفرق التي تتخطى المستوى المجاني تُهدر الشهر الأول في التعلم بما كان يجب قياسه.',
+            fix: 'ابدأ بـ Promptfoo (CLI مجاني) أو المستوى المجاني لـ Braintrust. ابنِ مجموعة بيانات التقييم. حدّد مقاييس الجودة. فقط عندها قيّم الأدوات المدفوعة مقابل خط الأساس الذي وضعته.',
+          },
+          {
+            mistake: 'اختيار أداة بسبب سمعة العلامة التجارية بدلًا من ملاءمة سير العمل',
+            problem: 'تشتري Braintrust Pro لكن فريقك غير تقني ولا يستطيع كتابة وظائف تسجيل؛ أو تشتري PromptHub عندما يكون عنق الزجاجة الحقيقي هو قياس الجودة.',
+            fix: 'حدّد عنق الزجاجة الرئيسي أولًا (التقييم، الإصدارات، اختبار A/B، منع الانحدارات) قبل تقييم الأدوات.',
+          },
+          {
+            mistake: 'اعتماد أداة دون بناء مجموعة بيانات تقييم',
+            problem: 'تسجّل في Braintrust أو Vellum لكن ليس لديك أزواج إدخال/مخرجات مُصنّفة لتسجيل النقاط عليها. تظل الأدوات غير مستخدمة؛ ولا ترى عائدًا على الاستثمار.',
+            fix: 'ابنِ مجموعة اختبار من 20–50 مثالًا مُصنّفًا قبل الدفع لأي منصة. استخدم المستوى المجاني لـ Braintrust أو Promptfoo (مجاني) للتحقق من مقاييسك أولًا.',
+          },
+          {
+            mistake: 'استخدام Vellum بدون مقياس جودة',
+            problem: 'تجري اختبار A/B لـ promptين على حركة الإنتاج لكنك لم تُعرّف "المخرج الجيد". تُوجَّه متغيرة المبيعات للمستخدمين؛ لا أحد يستطيع تفسير السبب.',
+            fix: 'حدّد 3–5 معايير جودة ونفّذها كتأكيدات (في Promptfoo) أو مسجّلين مخصصين (في Braintrust) قبل تشغيل اختبارات A/B.',
+          },
+        ],
+      },
+      howToChoose: {
+        id: 'how-to-choose',
+        title: 'كيف تختار بين هذه الأدوات الأربع',
+        numberedItems: [
+          'حدّد عنق الزجاجة الرئيسي: هل هو جودة المخرجات، أم التكلفة، أم الكمون، أم سرعة الفريق؟',
+          'قيّم العمق التقني: فريق غير تقني ← PromptHub؛ مختلط ← Braintrust + Vellum؛ تقني جدًا ← Promptfoo.',
+          'ابنِ مجموعة بيانات تقييم مُصنّفة (20–50 زوج إدخال/مخرجات) قبل تقييم أي أداة مدفوعة.',
+          'ابدأ بأداة مجانية (Promptfoo أو PromptQuorum) لتحديد مقاييس خط الأساس.',
+          'أجرِ تجربة أسبوعين مع الـ prompts الفعلية للفريق قبل الالتزام بأي منصة SaaS.',
+          'خطط لأداتين: إحداهما للتقييم والأخرى للنشر/الإصدارات.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            label: 'نصيحة احترافية: ابنِ مجموعة اختبار أولًا',
+            text: 'ابنِ مجموعة اختبار من 20–50 زوج إدخال/مخرجات مُصنّفة قبل تقييم أي أداة مدفوعة. بدون مجموعة بيانات أساسية، لا يمكنك قياس ما إذا كانت الأداة تُحسّن الـ prompts فعلًا — بل أنت فقط تدفع مقابل لوحة معلومات بلا بيانات. استخدم المستوى المجاني لـ Braintrust أو Promptfoo (مجاني) للتحقق من مقاييسك أولًا.',
+          },
+          {
+            type: 'tip',
+            label: 'المجاني أولًا، ثم المدفوع',
+            text: 'ابدأ بـ Promptfoo (مجاني) + PromptQuorum (مستوى مجاني) لتحديد خطوط الأساس. أضف Braintrust Pro أو Vellum فقط بعد امتلاك 20+ حالة اختبار مُصنّفة ومقياس جودة مُعرَّف. أدوات مدفوعة بدون خطوط أساس = ميزانية مُهدرة.',
+          },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          {
+            q: 'ما الفرق الرئيسي بين Braintrust وPromptHub؟',
+            a: 'Braintrust منصة تقييم: تسجّل استدعاءات API، وتُعرّف وظائف تسجيل مخصصة، وتُجري تجارب A/B لقياس جودة المخرجات. PromptHub نظام تحكم في الإصدارات: يُخزّن الـ prompts في مكتبة، ويُسمّي الإصدارات، ويُشارك بين الفريق. استخدم Braintrust عندما يكون عنق الزجاجة هو قياس الجودة؛ استخدم PromptHub عندما يكون عنق الزجاجة هو تنظيم الـ prompts.',
+          },
+          {
+            q: 'هل Promptfoo مجاني حقًا؟',
+            a: 'نعم. Promptfoo مفتوح المصدر (رخصة MIT) وليس له مستوى مدفوع. تشغّله كأداة CLI على بنيتك التحتية الخاصة أو في GitHub Actions. لا توجد رسوم شهرية أو حدود لاستدعاءات API أو قيود freemium.',
+          },
+          {
+            q: 'هل أختار Braintrust أم Vellum؟',
+            a: 'اختر Braintrust إذا كان هدفك الرئيسي قياس جودة المخرجات وتحسينها بمقاييس مخصصة. اختر Vellum إذا كان هدفك الرئيسي اختبار A/B على حركة الإنتاج الحقيقية. Braintrust تعمل بشكل أفضل قبل الإنتاج؛ Vellum تعمل بشكل أفضل مع المستخدمين الحقيقيين.',
+          },
+          {
+            q: 'كم يكلف Vellum أكثر من Braintrust؟',
+            a: 'Braintrust Pro بـ $249/شهر (يوجد أيضًا مستوى مجاني بـ 1M spans + 10K scores). Vellum Starter بـ $200/شهر؛ Growth بـ $500/شهر. عند مستوى Pro، Braintrust أغلى قليلًا من Vellum Starter لكنه يتضمن قدرة تقييم أكبر بكثير. لكليهما نقاط دخول مجانية أو منخفضة التكلفة. Promptfoo مجاني؛ PromptHub بـ $50–200/شهر.',
+          },
+          {
+            q: 'كيف أدمج Promptfoo مع GitHub Actions؟',
+            a: 'يوفر Promptfoo قالب GitHub Actions. عرّف حالات الاختبار بـ YAML، أضف الإعدادات إلى Git، واستخدم الـ promptfoo-github-action الرسمي في ملف سير العمل. في كل PR، يُشغّل Promptfoo الاختبارات ضد جميع النماذج المُهيّأة ويُبلّغ عن حالة النجاح/الفشل.',
+          },
+          {
+            q: 'هل يمكن لـ PromptHub أن يحل محل Braintrust؟',
+            a: 'لا. PromptHub يُخزّن الـ prompts ويُدير إصداراتها. Braintrust يُقيّم الـ prompts ويُسجّل نقاطها. يمكنك استخدام PromptHub وحده إذا كانت حاجتك الوحيدة هي تنظيم الـ prompts؛ لكن لا يمكنك استخدامه وحده إذا كنت بحاجة إلى قياس جودة المخرجات أو إجراء تجارب.',
+          },
+          {
+            q: 'هل Vellum هو نفسه منصة إدارة الـ prompts؟',
+            a: 'لا. Vellum منصة نشر واختبار A/B. يتضمن تحكمًا أساسيًا في الإصدارات، لكن قوته الرئيسية هي توزيع حركة الإنتاج بين متغيرات الـ prompts وقياس التأثير الحقيقي. أدوات إدارة الـ prompts الحقيقية (PromptHub) تُركّز على تنظيم الـ prompts ومشاركتها، ليس اختبارها.',
+          },
+          {
+            q: 'هل هناك بدائل أخرى خارج هذه الأدوات الأربع في 2026؟',
+            a: 'نعم. توسّع سوق تقييم الـ prompts بشكل ملحوظ في 2025–2026. Confident AI يقدم 50+ مقياس تقييم مدمج بـ $19.99–49.99/مقعد/شهر مع تكاليف تتبع أقل من Braintrust ($1/GB مقابل $3/GB). Galileo AI يوفر حواجز وقت التشغيل عبر نماذج تقييم Luna-2 ($100+/شهر). Arize Phoenix منصة مراقبة LLM مجانية ومفتوحة المصدر. لمعظم الفرق، الأدوات الأربع في هذه المقارنة بالإضافة إلى Confident AI تغطي جميع الاحتياجات العملية.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[GPT أم Claude أم Gemini؟ كيف تختار النموذج المناسب](/ar/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — اختر النموذج المناسب قبل اختيار أداة التقييم المناسبة',
+          '[أفضل أدوات تحسين الـ Prompts للفرق: تصنيفات 2026](/ar/prompt-engineering/best-prompt-optimization-tools-for-teams) — يقارن سبع أدوات بما يشمل Helicone وDSPy',
+          '[كيف تُقيّم جودة الـ Prompts بشكل منهجي](/ar/prompt-engineering/how-to-evaluate-prompt-quality) — أطر لقياس المخرجات',
+          '[ربط الـ Prompts (Prompt Chaining)](/ar/prompt-engineering/prompt-chaining) — سير العمل متعددة الخطوات التي تستفيد أكثر من التقييم المنهجي',
+          '[التحسين اليدوي مقابل الآلي للـ Prompts](/ar/prompt-engineering/manual-vs-automated-prompt-optimization) — متى تُعدّل يدويًا ومتى تؤتمت',
+          '[مقاييس تقييم الـ Prompts: الدقة والأهمية والكمون](/ar/prompt-engineering/prompt-evaluation-metrics) — مقاييس الجودة المحددة لنماذج اللغة الكبيرة',
+          '[Qwen مقابل Llama مقابل Mistral](/ar/local-llms/qwen-vs-llama-vs-mistral) — Promptfoo يتميز في المقارنة المباشرة لعائلات النماذج المحلية',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'المصادر',
+        items: [
+          '[Braintrust — منصة تقييم الذكاء الاصطناعي](https://braintrust.dev) — الوثائق الرسمية؛ أساس ادعاءات وكيل Loop وتكامل MCP وشهادة SOC 2 وأسعار الخطة Pro بـ $249/شهر (أُعيد هيكلتها مارس 2026)',
+          '[PromptHub — التحكم في إصدارات الـ Prompts](https://prompthub.ai) — الصفحة الرئيسية للمنتج؛ أساس ادعاءات التحكم في الإصدارات وواجهة الويب والأسعار $50–200/شهر',
+          '[Vellum — نشر LLM واختبار A/B](https://www.vellum.ai) — نظرة عامة على المنتج وصفحة الأسعار؛ أساس ادعاءات توزيع الحركة وتدفق الموافقة والأسعار $200–500/شهر',
+          '[Promptfoo — اختبار الـ Prompts مفتوح المصدر](https://www.promptfoo.dev) — مستودع GitHub والوثائق؛ أساس ادعاءات رخصة MIT وإعدادات YAML وتكامل GitHub Actions',
+          '[PromptQuorum — إرسال متعدد النماذج](https://promptquorum.com) — أداة مقارنة متعددة النماذج؛ أساس ادعاءات الإرسال لـ 25+ نموذج والمقارنة متعددة النماذج',
+          '[Confident AI](https://confident.ai) — منصة تقييم ناشئة مع 50+ مقياس مدمج بـ $19.99–49.99/مقعد/شهر',
+          '[Galileo AI](https://galileo.ai) — نماذج تقييم Luna-2 وحواجز وقت التشغيل لتطبيقات LLM',
+          '[Arize Phoenix](https://docs.arize.com/phoenix) — منصة مراقبة LLM مفتوحة المصدر للتتبع والتقييم',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Braintrust مقابل PromptHub مقابل Vellum مقابل Promptfoo (2026)',
+      description: 'Braintrust (‎$249/شهر) يُقيّم الـ prompts. Vellum (‎$200–500/شهر) يجري A/B testing في الإنتاج. Promptfoo CI/CD مجاني. PromptHub (‎$50–200/شهر) يُدير الإصدارات. معظم الفرق تحتاج 2 فقط.',
+      datePublished: '2026-04-10',
+      dateModified: '2026-05-01',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/ar/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo',
+      inLanguage: 'ar',
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: 'إدارة الـ Prompts' },
+        { '@type': 'Thing', name: 'تقييم نماذج اللغة الكبيرة' },
+        { '@type': 'Thing', name: 'إدارة إصدارات الـ Prompts' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'PromptHub' },
+        { '@type': 'SoftwareApplication', name: 'Vellum' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+        { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      inLanguage: 'ar',
+      name: 'Braintrust مقابل PromptHub مقابل Vellum مقابل Promptfoo: مقارنة الأدوات',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'منصة تقييم الذكاء الاصطناعي مع تسجيل تعاوني ووكيل Loop للتكرار المستقل وتكامل MCP-IDE. مستوى مجاني متاح (1M Spans، 10K Scores)؛ Pro بـ $249/شهر. مثالية للفرق التي تقيس جودة المخرجات.' },
+        { '@type': 'ListItem', position: 2, name: 'PromptHub', description: 'التحكم في إصدارات الـ prompts مع تعاون الفريق' },
+        { '@type': 'ListItem', position: 3, name: 'Vellum', description: 'اختبار A/B في الإنتاج مع توزيع الحركة الحقيقية' },
+        { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'اختبار الانحدار مفتوح المصدر مع تكامل GitHub Actions' },
+        { '@type': 'ListItem', position: 5, name: 'PromptQuorum', description: 'مقارنة متعددة النماذج على 25+ نموذج لاختيار النموذج' },
+      ],
+    },
+  },
 };

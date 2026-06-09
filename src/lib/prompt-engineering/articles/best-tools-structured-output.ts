@@ -2295,5 +2295,339 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ]
       }
     }
-  }
+  },
+
+  ar: {
+    theme: 'Tools & Platforms',
+    title: 'أفضل أدوات Structured Output و JSON Mode (2026)',
+    seoTitle: 'أفضل أدوات Structured Output و JSON Mode 2026',
+    metaDescription: 'مقارنة 6 أدوات structured output: Instructor و Outlines و Pydantic AI و LangChain و Marvin و PromptQuorum. جدول مقارنة: الأسعار ودعم النماذج المحلية.',
+    ogTitle: 'أفضل أدوات Structured Output و JSON Mode (2026)',
+    ogDescription: 'مقارنة 6 أدوات LLM للـ structured output: Instructor لإعادة المحاولات، Outlines للـ constrained decoding، Pydantic AI للوكلاء. اختبر الاتساق مع PromptQuorum.',
+    twitterTitle: 'أفضل أدوات Structured Output و JSON Mode (2026)',
+    twitterDescription: 'Instructor مقابل Outlines مقابل Pydantic AI مقابل LangChain مقابل Marvin — أي أداة structured output تناسب بنيتك؟ مقارنة جانبية (2026).',
+    intro: '**ست أدوات تهيمن على structured output في 2026: Instructor لاستخراج Pydantic، و Outlines للـ constrained decoding، و Pydantic AI للوكلاء الآمنة من حيث الأنواع، و LangChain لـ APIs الموحدة، و Marvin للاستخراج المبني على المزخرفات، و PromptQuorum لاختبار التوافق عبر النماذج. كل أداة تحل عائقاً مختلفاً في سير العمل.**',
+    publishDate: '2026-04-30',
+    dateModified: '2026-04-30',
+    lastFactChecked: '2026-04-30 — تم التحقق من جميع الأسعار وروابط GitHub ومقارنات الميزات مقابل الوثائق الرسمية',
+    readTime: '10 دقائق للقراءة',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'أدوات structured output لنماذج اللغة الكبيرة',
+    aboutTopics: ['أدوات structured output', 'مكتبات التحقق من LLM', 'تطبيق المخطط'],
+    audience: 'المطورون الذين يبنون تطبيقات LLM في بيئة الإنتاج مع متطلبات structured output',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-10-30',
+    toc: [
+      { label: 'المشكلة التي تحلها كل أداة', anchor: '#tool-problems' },
+      { label: 'Instructor: استخراج Pydantic', anchor: '#instructor' },
+      { label: 'Outlines: Constrained Decoding', anchor: '#outlines' },
+      { label: 'Pydantic AI: وكلاء آمنة من حيث الأنواع', anchor: '#pydantic-ai' },
+      { label: 'LangChain: APIs موحدة', anchor: '#langchain-structured-output' },
+      { label: 'Marvin: استخراج مبني على المزخرفات', anchor: '#marvin' },
+      { label: 'PromptQuorum: اختبار متعدد النماذج', anchor: '#promptquorum' },
+      { label: 'مقارنة جانبية', anchor: '#side-by-side-comparison' },
+      { label: 'اختيار الأداة المناسبة', anchor: '#how-to-choose' },
+      { label: 'إضافة structured output خطوة بخطوة', anchor: '#how-to-add-structured-output' },
+      { label: 'الأخطاء الشائعة في structured output', anchor: '#common-mistakes' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+    ],
+    leadAnswerBlock: '**اختر حسب مكان تشغيل نماذجك: Instructor و Pydantic AI لسير عمل API-first مع إعادة المحاولات وسلامة الأنواع؛ Outlines لضمان الامتثال للمخطط في النماذج المحلية؛ LangChain للفرق التي تستخدم chains أو وكلاء بالفعل؛ Marvin للنمذجة السريعة المبنية على المزخرفات؛ PromptQuorum لاختبار الاتساق عبر GPT و Claude و Gemini قبل الإنتاج.**',
+    quickFacts: [
+      'يدعم Instructor أكثر من 20 مزود LLM (OpenAI, Anthropic, Google, Ollama, vLLM)',
+      'يضمن Outlines الامتثال للمخطط عند توليد الرمز المميز (0% هلوسات)',
+      'يعمل Pydantic AI بشكل كامل async ويدعم التحقق من محادثات متعددة الأدوار',
+      'يوحد with_structured_output() في LangChain أكثر من 6 APIs لمزودين رئيسيين',
+      'صيغة المزخرف في Marvin: @marvin.fn signature → ربط تلقائي بنداء LLM',
+      'يختبر PromptQuorum نفس الـ prompt على أكثر من 25 نموذجاً لضمان الاتساق'
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'أفضل أدوات Structured Output و JSON Mode (2026)',
+      description: 'مقارنة ست مكتبات لـ structured output في LLM: Instructor و Outlines و Pydantic AI و LangChain و Marvin و PromptQuorum. مصنفة حسب الامتثال للمخطط ودعم اللغة والتوافق مع النماذج المحلية والأسعار.',
+      author: { '@type': 'Organization', 'name': 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-04-30',
+      dateModified: '2026-04-30',
+      url: 'https://www.promptquorum.com/ar/prompt-engineering/best-tools-structured-output-json',
+      inLanguage: 'ar',
+      proficiencyLevel: 'Advanced',
+      about: [
+        { '@type': 'Thing', name: 'مكتبات Structured Output' },
+        { '@type': 'Thing', name: 'التحقق من المخطط' },
+        { '@type': 'Thing', name: 'أغلفة API للـ LLM' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Instructor' },
+        { '@type': 'SoftwareApplication', name: 'Outlines' },
+        { '@type': 'SoftwareApplication', name: 'Pydantic AI' },
+        { '@type': 'SoftwareApplication', name: 'LangChain' },
+        { '@type': 'SoftwareApplication', name: 'Marvin' },
+        { '@type': 'SoftwareApplication', name: 'PromptQuorum' }
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'أفضل أدوات structured output لنماذج اللغة الكبيرة (2026)',
+      description: 'ست مكتبات رائدة لإلزام النماذج اللغوية بـ structured output.',
+      numberOfItems: 6,
+      inLanguage: 'ar',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Instructor', description: 'مكتبة Python/TypeScript للاستخراج المبني على Pydantic من أي LLM. مفتوحة المصدر Apache 2.0.' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: 'مكتبة constrained decoding لضمان الامتثال للمخطط في النماذج المحلية.' },
+        { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: 'إطار عمل وكلاء آمن من حيث الأنواع مع تحقق مدمج من structured output.' },
+        { '@type': 'ListItem', position: 4, name: 'LangChain', description: 'طبقة API موحدة لـ structured output عبر OpenAI و Anthropic و Google والنماذج المحلية.' },
+        { '@type': 'ListItem', position: 5, name: 'Marvin', description: 'إطار عمل مبني على المزخرفات يحول تواقيع دوال Python إلى نداءات LLM بأنواع محددة.' },
+        { '@type': 'ListItem', position: 6, name: 'PromptQuorum', description: 'منصة اختبار متعددة النماذج للتحقق من اتساق structured output عبر GPT و Claude و Gemini.' }
+      ]
+    },
+    sections: {
+      keyTakeaways: {
+        isTldr: true,
+        callouts: [
+          {
+            type: 'tip',
+            label: 'TL;DR',
+            text: 'استخدم Instructor للاستخراج بـ Python مع إعادة المحاولات. استخدم Outlines لضمان الامتثال للمخطط في النماذج المحلية. استخدم Pydantic AI للوكلاء متعددة الأدوار الآمنة من حيث الأنواع. استخدم LangChain إن كنت تعمل بالفعل في هذا النظام البيئي. استخدم Marvin للنمذجة السريعة. استخدم PromptQuorum لاختبار اتساق structured output عبر جميع النماذج قبل الإنتاج.'
+          }
+        ],
+        items: [
+          '**Instructor** هو الخيار الأكثر شيوعاً في Python — مخططات Pydantic، إعادة محاولات تلقائية، يدعم أي API للـ LLM',
+          '**Outlines** يضمن الامتثال للمخطط في النماذج المحلية عبر constrained decoding — خطر هلوسات صفري',
+          '**Pydantic AI** يضيف سلامة الأنواع إلى محادثات الوكلاء متعددة الأدوار مع structured output من الدرجة الأولى',
+          '**with_structured_output() في LangChain** يوحد structured output عبر APIs لـ OpenAI و Anthropic و Google',
+          '**Marvin** يستخدم المزخرفات للنمذجة السريعة — يحول تواقيع دوال Python إلى نداءات LLM بأنواع محددة',
+          '**PromptQuorum** يختبر اتساق structured output عبر جميع النماذج قبل النشر في الإنتاج'
+        ]
+      },
+      whichProblem: {
+        id: 'tool-problems',
+        title: 'المشكلة التي تحلها كل أداة',
+        content: '**يتطلب structured output حل ثلاث مشكلات مترابطة: تعريف المخطط، والامتثال عبر API، والتحقق.** تعالج الأدوات المختلفة هذه المشكلات بطرق مختلفة. يتعامل Instructor مع الثلاثة في Python مع إعادة المحاولات. يزيل Outlines خطوة التحقق عبر constrained decoding. يضيف Pydantic AI سلامة الأنواع للوكلاء. يغلف LangChain APIs المزودين. يُعطي Marvin الأولوية لسرعة المطور. يتحقق PromptQuorum من الاتساق عبر جميع النماذج.',
+        columns: ['المشكلة', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
+        rows: [
+          { 'المشكلة': 'تعريف المخطط', 'Instructor': 'نماذج Pydantic', 'Outlines': 'JSON Schema / GBNF', 'Pydantic AI': 'نماذج Pydantic', 'LangChain': 'تعريفات الأدوات', 'Marvin': 'مزخرفات Python' },
+          { 'المشكلة': 'الإلزام في نداء API', 'Instructor': 'إعادة محاولة + تحقق', 'Outlines': 'تقييد على مستوى الرمز', 'Pydantic AI': 'API + تحقق', 'LangChain': 'وضع JSON للمزود', 'Marvin': 'حقن prompt' },
+          { 'المشكلة': 'التحقق من الاستجابة', 'Instructor': 'تلقائي', 'Outlines': 'مضمون عند التوليد', 'Pydantic AI': 'محقق من الأنواع', 'LangChain': 'يدوي', 'Marvin': 'تلقائي' }
+        ]
+      },
+      instructor: {
+        id: 'instructor',
+        title: 'Instructor: استخراج Pydantic',
+        content: '**Instructor هي المكتبة الأكثر انتشاراً لـ structured output. تغلف أي API للـ LLM — OpenAI GPT-4.5, Claude 4.8, Gemini, Ollama, vLLM — وتُعيد نماذج Pydantic محققة بدلاً من نص خام.** يتعامل Instructor مع إعادة المحاولات تلقائياً عند فشل التحقق، مما يجعله جاهزاً للإنتاج دون معالجة إضافية للأخطاء.',
+        items: [
+          'متوافق مع أكثر من 20 مزود LLM (OpenAI, Anthropic, Google, النماذج المحلية عبر Ollama/vLLM)',
+          'مخططات Pydantic v2: تلميحات الأنواع وقواعد التحقق وأوصاف docstring مدمجة في المخطط',
+          'إعادة محاولة تلقائية مع backoff عند فشل التحقق — لا حاجة لمعالجة أخطاء يدوية',
+          'يعمل في Python و TypeScript (عبر محول Node.js)',
+          'مفتوح المصدر Apache 2.0، يُصان بنشاط',
+          'السعر: مجاني (لا تكلفة إضافية بخلاف نداءات API لـ LLM)'
+        ],
+        codeLanguage: 'python',
+        codeBlock: 'import instructor\nfrom pydantic import BaseModel\nfrom openai import OpenAI\n\nclass User(BaseModel):\n    name: str\n    age: int\n\nclient = instructor.from_openai(OpenAI())\nuser = client.chat.completions.create(\n    model="gpt-4o",\n    response_model=User,\n    messages=[{"role": "user", "content": "Extract: John is 25 years old"}]\n)\n# user.name == "John", user.age == 25'
+      },
+      outlines: {
+        id: 'outlines',
+        title: 'Outlines: Constrained Decoding',
+        content: '**يفرض Outlines الامتثال للمخطط عند توليد الرمز المميز عبر constrained decoding. بدلاً من توليد الرموز ثم التحقق منها، يقيّد Outlines الرموز الصالحة في كل خطوة لتطابق مخططك.** هذا يضمن امتثالاً 100% للمخطط مع خطر هلوسات صفري، مما يجعله مثالياً للنماذج المحلية.',
+        items: [
+          'يعمل مع llama.cpp و vLLM و transformers و NVIDIA NIM وأي نموذج من HuggingFace',
+          'تعريفات المخطط بصيغة JSON Schema أو GBNF (GGML BNF)',
+          'امتثال مضمون للمخطط — لا حاجة للتحقق بعد التوليد ولا لإعادة المحاولات',
+          'أسرع من التحقق المبني على إعادة المحاولات (رموز مهدورة أقل)',
+          'مجاني ومفتوح المصدر (Apache 2.0)',
+          'مثالي للنشر المحلي وسير العمل الحساسة للتكلفة'
+        ]
+      },
+      pydanticAi: {
+        id: 'pydantic-ai',
+        title: 'Pydantic AI: وكلاء آمنة من حيث الأنواع',
+        content: '**Pydantic AI هو إطار عمل جديد (2025) يجمع نماذج Pydantic مع دعم من الدرجة الأولى لمحادثات الوكلاء متعددة الأدوار. يضيف سلامة أنواع كاملة لحلقات الوكلاء مع إلزام structured output في كل دور.** مصمم لسير عمل Python غير المتزامنة.',
+        items: [
+          'نظام أنواع Pydantic v2 — دعم كامل لـ IDE والتحقق من الأنواع',
+          'structured output مدمج في كل خطوة من خطوات الوكيل',
+          'تصميم async-first للتطبيقات عالية الأداء',
+          'يدعم OpenAI GPT و Anthropic Claude و Google Gemini والنماذج المحلية عبر Ollama',
+          'نداءات أدوات مدمجة — عرّف الأدوات كدوال Python مع تلميحات الأنواع',
+          'مجاني (لا تكلفة إضافية بخلاف نداءات API لـ LLM)'
+        ]
+      },
+      langchain: {
+        id: 'langchain-structured-output',
+        title: 'LangChain: APIs موحدة',
+        content: '**أضاف LangChain 0.1+ دالة with_structured_output() لجميع نماذج الدردشة الرئيسية. يوحد هذا structured output عبر OpenAI و Anthropic و Google والنماذج المحلية خلف API واحدة.** إن كان فريقك يستخدم chains أو وكلاء LangChain بالفعل، فهذا أسهل طريق نحو structured output.',
+        items: [
+          'API موحدة: طريقة .with_structured_output() واحدة تعمل عبر جميع المزودين',
+          'تحويل تلقائي لتعريفات أدوات LangChain إلى صيغ مخططات خاصة بالمزود',
+          'تكامل سلس مع chains والوكلاء وسير العمل القابلة للتنفيذ',
+          'يدعم نماذج Pydantic و TypedDict وتعريفات مخطط OpenAI',
+          'جزء من نظام LangChain البيئي (لا تبعيات إضافية)',
+          'مثالي للفرق المستثمرة بالفعل في LangChain'
+        ]
+      },
+      marvin: {
+        id: 'marvin',
+        title: 'Marvin: استخراج مبني على المزخرفات',
+        content: '**يستخدم Marvin مزخرفات Python لتحويل تواقيع الدوال إلى نداءات LLM بأنواع محددة. تعرّف توقيع دالة مع تلميحات الأنواع، تزخرفها بـ @marvin.fn، ويتولى Marvin تلقائياً توليد prompt والتحقق من structured output.** أسرع طريق من الفكرة إلى الكود الوظيفي.',
+        items: [
+          'صيغة المزخرف: @marvin.fn تحول تواقيع Python إلى prompts لـ LLM',
+          'يعمل مع OpenAI و Anthropic و Google والنماذج المحلية',
+          'تلميحات الأنواع تتحول إلى مخطط — بوابة مصليحة دنيا',
+          'تحقق ومعالجة أخطاء مدمجة',
+          'مناسب للنمذجة الأولية وسير العمل الصغيرة إلى المتوسطة',
+          'مجاني (الأسعار في انتظار التأكيد اعتباراً من أبريل 2026)'
+        ]
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'PromptQuorum: اختبار متعدد النماذج',
+        content: '**PromptQuorum ليست مكتبة structured output بذاتها، بل منصة اختبار للتحقق من اتساق structured output عبر النماذج.** تشغّل نفس الـ prompt في وقت واحد مقابل GPT-4.5 و Claude 4.8 Opus و Gemini 3.1 Pro وأكثر من 20 نموذجاً آخر. تقيس الامتثال للمخطط والكمون والتكلفة لكل نموذج.',
+        items: [
+          'إرسال متعدد النماذج في نداء API واحد — اختبر prompt مقابل أكثر من 25 نموذجاً',
+          'مقاييس امتثال structured output — معدل النجاح والكمون والتكلفة لكل نموذج',
+          'تحديد النماذج التي تُهلوس بمخططك — تجنب النشر على نماذج غير موثوقة',
+          'وضع الإجماع — إيجاد الاتفاق عبر تشغيلات نماذج مستقلة',
+          'يعمل مع Instructor و Outlines و Pydantic AI و LangChain أو APIs LLM الخام',
+          'طبقة مجانية متاحة، أسعار enterprise لاختبار الحجم الكبير'
+        ]
+      },
+      comparison: {
+        id: 'side-by-side-comparison',
+        title: 'مقارنة جانبية',
+        columns: ['الأداة', 'الأنسب لـ', 'صيغة المخطط', 'اللغة', 'النماذج المحلية', 'السعر', 'منحنى التعلم'],
+        rows: [
+          { 'الأداة': 'Instructor', 'الأنسب لـ': 'APIs Python + إعادة المحاولات', 'صيغة المخطط': 'نماذج Pydantic', 'اللغة': 'Python/TypeScript', 'النماذج المحلية': 'نعم (Ollama)', 'السعر': 'مجاني', 'منحنى التعلم': 'منخفض' },
+          { 'الأداة': 'Outlines', 'الأنسب لـ': 'نشر النماذج المحلية', 'صيغة المخطط': 'JSON Schema/GBNF', 'اللغة': 'Python', 'النماذج المحلية': 'نعم (أصلي)', 'السعر': 'مجاني', 'منحنى التعلم': 'متوسط' },
+          { 'الأداة': 'Pydantic AI', 'الأنسب لـ': 'وكلاء آمنة من حيث الأنواع', 'صيغة المخطط': 'نماذج Pydantic', 'اللغة': 'Python', 'النماذج المحلية': 'نعم (Ollama)', 'السعر': 'مجاني', 'منحنى التعلم': 'منخفض' },
+          { 'الأداة': 'LangChain', 'الأنسب لـ': 'Chains + وكلاء', 'صيغة المخطط': 'تعريفات الأدوات', 'اللغة': 'Python/JS', 'النماذج المحلية': 'نعم', 'السعر': 'مجاني', 'منحنى التعلم': 'متوسط' },
+          { 'الأداة': 'Marvin', 'الأنسب لـ': 'نمذجة أولية سريعة', 'صيغة المخطط': 'تلميحات الأنواع', 'اللغة': 'Python', 'النماذج المحلية': 'نعم', 'السعر': 'مجاني', 'منحنى التعلم': 'منخفض جداً' },
+          { 'الأداة': 'PromptQuorum', 'الأنسب لـ': 'اختبار متعدد النماذج', 'صيغة المخطط': 'API-agnostic', 'اللغة': 'API-first', 'النماذج المحلية': 'عبر وكيل OpenAI', 'السعر': 'مجاني + enterprise', 'منحنى التعلم': 'منخفض' }
+        ]
+      },
+      decision: {
+        id: 'how-to-choose',
+        title: 'اختيار الأداة المناسبة',
+        content: 'ابدأ بالإجابة على ثلاثة أسئلة: (1) هل تستخدم LangChain بالفعل؟ (2) هل تحتاج دعم النماذج المحلية؟ (3) ما مدى تعقيد التحقق لديك؟',
+        items: [
+          '**استخدم Instructor إذا:** كنت تبني APIs Python وتحتاج إعادة محاولات تلقائية عند فشل التحقق. أفضل خيار للاستخدام العام.',
+          '**استخدم Outlines إذا:** كنت تنشر نماذج محلية (llama.cpp, vLLM) وتريد امتثالاً مضموناً للمخطط عند التوليد.',
+          '**استخدم Pydantic AI إذا:** كنت تبني سير عمل وكلاء متعددة الأدوار مع سلامة الأنواع في كل خطوة.',
+          '**استخدم LangChain إذا:** كنت تستخدم chains أو وكلاء LangChain بالفعل — with_structured_output() هي أبسط إضافة.',
+          '**استخدم Marvin إذا:** أردت النمذجة الأولية بسرعة ولا تحتاج تحققاً معقداً — المزخرفات هي أسرع طريق.',
+          '**استخدم PromptQuorum إذا:** احتجت اختبار اتساق structured output عبر GPT و Claude و Gemini قبل الإنتاج.'
+        ]
+      },
+      howToIntegrate: {
+        id: 'how-to-add-structured-output',
+        title: 'إضافة structured output خطوة بخطوة',
+        numberedItems: [
+          '**عرّف مخطط مخرجاتك** — أنشئ نموذج Pydantic (Python) أو واجهة TypeScript أو JSON Schema يصف الحقول والأنواع والقيود التي تريد أن يُعيدها LLM.',
+          '**اختر مكتبة** — Instructor لـ APIs Python، Outlines للنماذج المحلية، Pydantic AI للوكلاء، LangChain إن كانت مستخدمة، Marvin للسرعة.',
+          '**ثبّت وغلّف نداء LLM الخاص بك** — `pip install instructor` (Python)، ثم مرر مخططك إلى نداء API. يتعامل Instructor مع التحقق وإعادة المحاولات.',
+          '**اختبر مع PromptQuorum** — انشر على PromptQuorum وشغّل prompt الخاص بك مقابل GPT و Claude و Gemini. قِس الامتثال للمخطط لكل نموذج.',
+          '**نقّح المخطط بناءً على الإخفاقات** — إن فشل نموذج في التحقق، أضف أمثلة إلى prompt الخاص بك أو عدّل قيود المخطط. كرر حتى تنجح جميع النماذج.'
+        ]
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'الأخطاء الشائعة في structured output',
+        mistakes: [
+          {
+            mistake: 'استخدام وضع JSON دون تحقق',
+            problem: 'وضع JSON في API (response_format لـ OpenAI، التحكم في JSON لـ Anthropic) يقترح فقط هيكل JSON — لا يضمن احترام مخططك. لا تزال النماذج تُهلوس أسماء الحقول والأنواع.',
+            fix: 'أضف دائماً تحققاً فوقه: استخدم Instructor أو Outlines أو Pydantic AI. لا تثق أبداً بوضع JSON وحده. اختبر مع PromptQuorum لرصد إخفاقات الامتثال.'
+          },
+          {
+            mistake: 'تصميم مخططات مقيدة جداً',
+            problem: 'المخططات المقيدة جداً (قوائم enum صغيرة، أنماط regex محددة جداً) تجعل نماذج LLM تفشل في التحقق بكثرة. أعداد إعادة المحاولات العالية تهدر tokens والمال.',
+            fix: 'استخدم PromptQuorum لاختبار صرامة المخطط عبر النماذج. خفّف القيود لتحقيق امتثال 95%+. استخدم الحقول الاختيارية بدلاً من المطلوبة حيثما أمكن.'
+          },
+          {
+            mistake: 'عدم اختبار الفروق بين النماذج المحلية ونماذج API',
+            problem: 'Outlines على llama.cpp يتصرف بشكل مختلف عن Instructor على GPT-4.5. تختلف معدلات الامتثال للمخطط بحسب النموذج. البناء لـ GPT فقط ثم النشر محلياً يسبب إخفاقات في الإنتاج.',
+            fix: 'اختبر جميع backends النماذج المخطط لها مبكراً. استخدم PromptQuorum لتشغيل نفس الـ prompt على نماذج محلية (vLLM) وAPI (OpenAI, Anthropic) ومفتوحة المصدر (Gemini).'
+          },
+          {
+            mistake: 'إهمال تأثير الكمون وتكلفة tokens',
+            problem: 'structured output مع إعادة المحاولات يكلف tokens أكثر. Instructor يعيد المحاولة عند الإخفاق. constrained decoding لـ Outlines أبطأ من التوليد الحر. عدم قياس التكلفة لكل نموذج.',
+            fix: 'استخدم تتبع التكاليف في PromptQuorum. قارن الكمون عبر النماذج. لسير العمل الحساسة للميزانية، فضّل Outlines (بدون إعادة محاولات). للدقة، اقبل تكلفة إعادة المحاولات في Instructor.'
+          },
+          {
+            mistake: 'خلط طرق التحقق (دون اتساق)',
+            problem: 'بعض الطلبات تستخدم Instructor، وأخرى تُحلل JSON خاماً. بعض النماذج محققة وأخرى لا. هذا يؤدي إلى أخطاء غير متسقة في الإنتاج.',
+            fix: 'قياسياً على نهج تحقق واحد لكل قاعدة كود. جميع الطلبات تستخدم Instructor، أو جميعها تستخدم Outlines. الاتساق يقلل وقت التصحيح 10 أضعاف.'
+          }
+        ]
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءة ذات صلة',
+        items: [
+          '[Structured Output و JSON Mode](/ar/prompt-engineering/structured-output-json-mode) — كيف يعمل وضع JSON في APIs لـ OpenAI و Anthropic و Google؛ متى تستخدم الامتثال للصيغة مقابل التحقق من المخطط.',
+          '[حقن الـ Prompt والأمان](/ar/prompt-engineering/prompt-injection-and-security) — مخاطر قبول مدخلات المستخدم في prompts منظمة؛ استراتيجيات التعقيم.',
+          '[كيف تُقيّم جودة الـ Prompt](/ar/prompt-engineering/how-to-evaluate-prompt-quality) — قِس الدقة والاتساق واتباع التعليمات في مخططات structured output الخاصة بك.',
+          '[كيف تختبر الـ Prompts عبر النماذج](/ar/prompt-engineering/how-to-test-prompts-across-models) — شغّل نفس مجموعة الاختبارات عبر GPT و Claude و Gemini؛ قارن معدلات النجاح.',
+          '[Prompt Engineering مقابل Fine-Tuning](/ar/prompt-engineering/prompt-engineering-vs-fine-tuning) — متى يكون الـ prompting المنظم كافياً مقابل متى تحتاج fine-tuning للنموذج.',
+          '[إعداد prompt engineering للفرق الصغيرة](/ar/prompt-engineering/prompt-engineering-setup-small-teams) — بناء سير عمل مع مخرجات بيانات منظمة للفرق من 2 إلى 15 شخصاً.'
+        ]
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          {
+            q: 'ما هو structured output في نماذج اللغة الكبيرة؟',
+            a: 'structured output يقيّد استجابات LLM بمخطط محدد — صيغة JSON وحقول معرفة وقيود الأنواع. بدلاً من استجابات نص حر، يُعيد structured output بيانات يمكن لكودك تحليلها والتحقق منها مباشرة دون معالجة أخطاء.'
+          },
+          {
+            q: 'ما الأداة الأفضل لمطوري Python؟',
+            a: 'Instructor هو الخيار الأكثر شيوعاً في Python. يستخدم نماذج Pydantic لتعريف المخططات، ويتعامل تلقائياً مع إعادة المحاولات والتحقق، ويدعم أي API لـ LLM (OpenAI, Anthropic, Google, Ollama). Pydantic AI هو بديل إن أردت أيضاً محادثات وكلاء متعددة الأدوار آمنة من حيث الأنواع.'
+          },
+          {
+            q: 'هل يمكنني استخدام structured output مع نماذج محلية مثل Llama؟',
+            a: 'نعم. Outlines متخصص في constrained decoding للنماذج المحلية — يعمل مع llama.cpp و vLLM ومكتبات transformers. يضمن Outlines الامتثال للمخطط عند توليد الرمز المميز مع خطر هلوسات صفري. يدعم Instructor أيضاً Ollama إن كنت تشغله كـ API.'
+          },
+          {
+            q: 'ما الفرق بين Instructor و Marvin؟',
+            a: 'Instructor يستخدم نماذج Pydantic لتعريف المخططات ويتعامل مع الاستخراج مع استرداد الأخطاء. Marvin يستخدم مزخرفات Python — تزخرف توقيع دالة ويُولّد Marvin تلقائياً prompt اللـ LLM. Instructor أكثر صراحة (أفضل للتحققات المعقدة)، Marvin أكثر إيجازاً (أفضل للنمذجة السريعة).'
+          },
+          {
+            q: 'هل يدعم LangChain structured output؟',
+            a: 'نعم. LangChain 0.1+ يتضمن طريقة with_structured_output() في ChatOpenAI و ChatAnthropic و ChatGoogle وغيرها. تحوّل تلقائياً أدوات LangChain إلى مخططات structured output. استخدمه إن كنت تستخدم وكلاء LangChain بالفعل وتريد إضافة امتثال للمخطط دون تغيير المكتبة.'
+          },
+          {
+            q: 'كيف أختبر موثوقية structured output؟',
+            a: 'استخدم PromptQuorum لتشغيل نفس الـ prompt عبر نماذج متعددة وقياس الامتثال للمخطط. تتمتع نماذج مختلفة (GPT-4.5, Claude 4.8, Gemini 3.1) بمستويات مختلفة من موثوقية structured output. اختبر قبل النشر في الإنتاج.'
+          },
+          {
+            q: 'ماذا يعني "constrained decoding"؟',
+            a: 'constrained decoding يقيّد توليد الرموز على القيم الصالحة فقط وفق مخططك. يفعل Outlines ذلك بحساب مجموعة الرموز الصالحة التالية في كل خطوة. هذا يضمن الامتثال للمخطط دون تحقق ما بعد التوليد أو إعادة محاولات، مما يجعله أسرع وأكثر موثوقية من وضع JSON على مستوى API.'
+          },
+          {
+            q: 'هل يمكنني استخدام structured output دون أي مكتبة؟',
+            a: 'تقنياً نعم — يمكنك جعل النموذج يُعيد JSON ثم تُحلله بنفسك. لكن التحقق سيفشل عند الهلوسات. تحل الأدوات الست هذا إما بالتحقق مع إعادة المحاولات (Instructor, Marvin)، أو الإلزام عند وقت فك التشفير (Outlines)، أو تغليف APIs المزود (LangChain, Pydantic AI).'
+          },
+          {
+            q: 'أي أداة لديها أفضل توثيق؟',
+            a: 'LangChain و Pydantic AI لديهما التوثيق الأشمل بفضل دعمهما المؤسسي. Instructor لديه دروس تعليمية وأمثلة ممتازة رغم صيانته من المجتمع. توثيق Outlines تقني لكنه شامل. Marvin لديه أدلة بدء سريع.'
+          },
+          {
+            q: 'هل أحتاج الأدوات الست جميعها أم أداة واحدة فقط؟',
+            a: 'ابدأ بأداة واحدة. يجب على مطوري Python تجربة Instructor أو Pydantic AI. الفرق التي تعمل بنماذج محلية يجب أن تجرب Outlines. مستخدمو LangChain يجب أن يجربوا with_structured_output(). استخدم PromptQuorum للتحقق من الاتساق عبر جميع النماذج. معظم الفرق تستخدم أداة واحدة + PromptQuorum للاختبار.'
+          }
+        ]
+      },
+      sources: {
+        id: 'sources',
+        title: 'المصادر',
+        items: [
+          '[مستودع Instructor على GitHub](https://github.com/jxnl/instructor) — المستودع الرسمي والوثائق لمكتبة Instructor',
+          '[وثائق Outlines](https://outlines-dev.github.io/) — constrained decoding لضمان الامتثال للمخطط',
+          '[Pydantic AI](https://ai.pydantic.dev) — إطار وكلاء آمن من حيث الأنواع مع structured output',
+          '[with_structured_output() في LangChain](https://python.langchain.com/docs/modules/model_io/chat/structured_output/) — API موحدة لـ structured output في LangChain',
+          '[وثائق Marvin](https://askmarvin.ai) — إطار استخراج LLM مبني على المزخرفات'
+        ]
+      }
+    }
+  },
 };

@@ -26,6 +26,7 @@ function cleanedWordCount(str) {
   if (/^\d{4}-\d{2}(-\d{2})?$/.test(str)) return 0 // ISO date
   if (str.includes('](http')) return 0              // markdown link
   if (/^[$#!@\[{]/.test(str)) return 0             // code/markup token start
+  if (/\bet al\b|\barXiv:\d+|\(\d{4}\)/.test(str)) return 0 // academic citation
 
   const cleaned = str
     // strip known untranslated brand/model names
@@ -64,6 +65,15 @@ function preprocessArBlock(raw) {
   out = out.replace(/\bcodeBlock:\s*"[^"]*\\n[^"]*"/g, 'codeBlock: ""')
   out = out.replace(/\btext:\s*'[^']*\\n[^']*'/g, "text: ''")
   out = out.replace(/\btext:\s*"[^"]*\\n[^"]*"/g, 'text: ""')
+  // Strip anchor field values (URL slugs — not translatable prose)
+  out = out.replace(/\banchor:\s*'[^']*'/g, "anchor: ''")
+  out = out.replace(/\banchor:\s*"[^"]*"/g, 'anchor: ""')
+  // Strip primaryTerm field values (technical identifiers — not translatable)
+  out = out.replace(/\bprimaryTerm:\s*'[^']*'/g, "primaryTerm: ''")
+  out = out.replace(/\bprimaryTerm:\s*"[^"]*"/g, 'primaryTerm: ""')
+  // Strip source { title, url } title values — bibliographic refs stay in English
+  out = out.replace(/\btitle:\s*'[^']*'(\s*,\s*url:)/g, "title: ''$1")
+  out = out.replace(/\btitle:\s*"[^"]*"(\s*,\s*url:)/g, 'title: ""$1')
   return out
 }
 
