@@ -3073,4 +3073,352 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Local AI Agents & Tool Use',
+    title: 'ربط Ollama بقواعد البيانات وAPIs مع MCP: إعداد وكيل محلي 2026',
+    seoTitle: 'Ollama + MCP محلي 2026: ربط الذكاء الاصطناعي بقواعد البيانات وAPIs',
+    intro:
+      'يُعدّ بروتوكول سياق النموذج (MCP) الطبقة المفقودة بين نموذج Ollama المحلي وبقية أجهزتك. بملف إعداد واحد ونموذج يدعم استدعاء الأدوات، يستطيع الوكيل ذاته الاستعلام عن قاعدة بيانات Postgres، وقراءة الملفات والكتابة فيها في دليل معزول، والتحكم في متصفح بلا واجهة، وفتح pull requests على GitHub — كل ذلك يعمل على حاسوبك المحمول، وكل ذلك بدون اتصال. يشرح هذا الدليل الإعداد الكامل من البداية إلى النهاية مع نموذج أمان لا يفترض أنك تثق في النموذج.',
+    metaDescription:
+      'دليل إعداد وكلاء الذكاء الاصطناعي المحلي في 2026 باستخدام Ollama وMCP: filesystem وSQLite/Postgres والمتصفح وGitHub وJSON الإعداد العملي ونموذج sandboxing.',
+    twitterDescription:
+      'Ollama محلي + MCP = وكيل ذكاء اصطناعي يقرأ الملفات ويستعلم عن قواعد البيانات ويتحكم في المتصفح — بالكامل بدون اتصال. إعدادات عملية والخوادم الأربعة الأساسية ونموذج أمان لا يثق في النموذج.',
+    current_models_mentioned: [
+      'Gemma 4 27B',
+      'GLM-5.1 32B',
+      'Qwen3 32B',
+      'Qwen3-Coder 30B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'Apple M5 Max 64 GB',
+      'NVIDIA RTX 4090 24 GB',
+    ],
+    audience:
+      'المطورون والمستخدمون ذوو الخلفية التقنية الذين يشغّلون النماذج اللغوية المحلية عبر Ollama ويريدون نموذجاً يستطيع فعل أشياء حقيقية — استعلام قواعد البيانات وتحرير الملفات وأتمتة المتصفح — دون إرسال أي شيء إلى مزوّد سحابي.',
+    readTime: '15 دقائق قراءة',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'وكيل MCP محلي',
+    targetKeywords: [
+      'mcp ollama عربي',
+      'إعداد خادم mcp محلي',
+      'model context protocol محلي',
+      'ollama tool calling 2026',
+      'وكيل ذكاء اصطناعي محلي mcp',
+      'mcp بدون claude desktop',
+    ],
+    leadAnswerBlock:
+      '**يتيح بروتوكول MCP لنموذج Ollama المحلي استدعاء الأدوات — قراءة ملف، وتشغيل استعلام SQL، والنقر على رابط، وفتح pull request — عبر واجهة JSON-RPC قياسية يستطيع أي عميل متوافق مع MCP (Goose وCline وContinue.dev وLM Studio في 2026) استخدامها. البروتوكول مفتوح، وخوادم المرجع مفتوحة المصدر، وفي 2026 لا يستلزم أي شيء Claude Desktop أو أي حساب سحابي. شغّل Ollama، وثبّت عميل MCP، وأفلت ملف إعداد `mcp.json` مسمياً الخوادم التي تريدها، وسيصبح نموذج استدعاء الأدوات (Gemma 4 أو GLM-5.1 أو Qwen3 أو Llama 3.3) وكيلاً يعمل على جهازك بأذونات تتحكم فيها أنت.**',
+    quickAnswerTop: {
+      ar: {
+        question: 'هل يمكنني تشغيل وكلاء ذكاء اصطناعي محلياً مع MCP وOllama في 2026؟',
+        answer:
+          'نعم — والإعداد الآن صغير بما يكفي للإنجاز في بعد ظهر واحد. شغّل Ollama مع نموذج استدعاء أدوات (Gemma 4 أو GLM-5.1 أو Qwen3 أو Llama 3.3 70B)، وثبّت عميلاً متوافقاً مع MCP (Goose هو الأكثر مباشرةً من CLI؛ Cline وContinue.dev وLM Studio كلها أضافت دعم MCP في مطلع 2026)، وأضف خوادم MCP للقدرات التي تريدها — `filesystem` للملفات، و`sqlite` أو `postgres` لقواعد البيانات، و`puppeteer` أو `playwright` لأتمتة المتصفح، و`github` لإدارة المستودعات. البروتوكول هو البروتوكول ذاته الذي يستخدمه Claude Desktop؛ الفرق الوحيد هو النموذج والعميل.',
+        bullets: [
+          'MCP مفتوح ويعمل بالكامل محلياً — لا Claude Desktop، لا حساب Anthropic، لا استدعاءات سحابية مطلوبة.',
+          'Ollama يوفر النموذج؛ عميل MCP (Goose أو Cline أو Continue.dev أو LM Studio) يربط Ollama بخوادم MCP عبر JSON-RPC.',
+          'أربعة خوادم مرجعية تغطي معظم سير العمل الحقيقية: filesystem وsqlite/postgres وpuppeteer/playwright (متصفح) وgithub.',
+          'موثوقية استدعاء الأدوات خاصية تعتمد على النموذج: Gemma 4 27B وGLM-5.1 32B وQwen3 32B وQwen3-Coder 30B وLlama 3.3 70B يتعاملون مع MCP بشكل نظيف. النماذج التي تقل عن 7B تُصدر tool calls مشوّهة بانتظام.',
+          'نموذج الأمان: خصّص وصول filesystem لدليل واحد، وشغّل خوادم قاعدة البيانات في وضع القراءة فقط، وضع كل أداة كتابة أو shell خلف موافقة صريحة.',
+          'التكلفة: صفر إنفاق على API، لكن التوكنات تُستهلك محلياً — حلقات الوكيل مكثّفة في التوكنات، لذا استخدم نموذجاً بسياق 32K+ وجهازاً يستطيع تشغيله بسرعة مفيدة.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+      { label: 'حقائق سريعة', anchor: '#quick-facts' },
+      { label: 'ما يُتيحه MCP', anchor: '#what-mcp-unlocks' },
+      { label: 'مقارنة خوادم MCP', anchor: '#server-comparison' },
+      { label: 'البنية: كيف تتلاءم الأجزاء', anchor: '#architecture' },
+      { label: 'الإعداد: Ollama + Goose في 15 دقيقة', anchor: '#setup' },
+      { label: 'خادم Filesystem', anchor: '#filesystem-server' },
+      { label: 'خادما SQLite وPostgres', anchor: '#database-server' },
+      { label: 'خادم المتصفح (Puppeteer / Playwright)', anchor: '#browser-server' },
+      { label: 'خادم GitHub', anchor: '#github-server' },
+      { label: 'نموذج الأمان', anchor: '#security-model' },
+      { label: 'MCP محلي مقابل Claude Desktop', anchor: '#vs-claude-desktop' },
+      { label: 'اختيار نموذج استدعاء الأدوات', anchor: '#picking-model' },
+      { label: 'MCP مقابل Function Calling البسيط', anchor: '#mcp-vs-function-calling' },
+      { label: 'الأخطاء الشائعة', anchor: '#common-mistakes' },
+      { label: 'المصادر', anchor: '#sources' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+      { label: 'قراءة ذات صلة', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-with-mcp-2026-static.html',
+    gammaDescription:
+      'العرض التقديمي يشمل: كيف يحوّل MCP نموذج Ollama المحلي إلى وكيل يستعلم عن قواعد البيانات ويقرأ الملفات ويتحكم في المتصفح ويفتح pull requests — كل ذلك بدون اتصال؛ والخوادم المرجعية الأربعة (filesystem وSQLite/Postgres والمتصفح وGitHub) مع صعوبة الإعداد ومستوى المخاطر؛ ودليل إعداد Goose في 6 خطوات؛ ونموذج أمان لا يثق في النموذج اللغوي؛ ومقارنة مباشرة مع Claude Desktop. نزّل الـPDF بطاقة مرجعية لوكيل MCP المحلي.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**MCP هو البروتوكول الذي يحوّل نموذج Ollama من محادثة إلى وكيل.** اربطه بخوادم أدوات (filesystem وقاعدة بيانات ومتصفح وGitHub) وسيكون للنموذج الإجراءات الفعلية وليس فقط النص المُنشأ.',
+          '**أربعة خوادم مرجعية تغطي 80% من الاحتياجات الحقيقية:** filesystem (قراءة/كتابة ملفات)، وsqlite+postgres (الاستعلام عن قواعد البيانات)، وpuppeteer/playwright (أتمتة المتصفح)، وgithub (إدارة المستودعات). كلها مفتوحة المصدر وتعمل بالكامل بدون اتصال.',
+          '**الإعداد صغير: ملف `mcp.json` واحد.** ثلاثة حقول لكل خادم: الأمر، والمعطيات، والبيئة. تُنشر الخوادم كعمليات فرعية من العميل — لا daemon، لا خدمة.',
+          '**موثوقية استدعاء الأدوات تعتمد على النموذج.** Gemma 4 27B وGLM-5.1 32B وQwen3 32B وLlama 3.3 70B يعملون بشكل موثوق في 2026. النماذج الأقل من 7B تُصدر JSON مشوّهاً في استدعاءات الأدوات بانتظام بصرف النظر عن العميل.',
+          '**نموذج الأمان: لا تثق في النموذج أبداً.** filesystem → دليل واحد، قاعدة البيانات → قراءة فقط افتراضياً، أدوات الكتابة والshell → موافقة صريحة دائماً. النموذج يقترح؛ الإنسان يوافق على كل ما يغيّر حالة.',
+          '**MCP مفتوح ومستقل عن Claude Desktop.** في 2026: Goose وCline وContinue.dev وLM Studio كلها عملاء MCP تعمل مع Ollama. ليس Anthropic المنفّذ الوحيد.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'حقائق سريعة',
+        items: [
+          '**ما تحتاجه:** Ollama (مثبَّت) + عميل MCP (Goose أو Cline أو Continue.dev أو LM Studio) + ملف `mcp.json` + نموذج استدعاء أدوات (Gemma 4 27B أو أعلى مُوصى به).',
+          '**وقت الإعداد:** 15–30 دقيقة لخادم filesystem وSQLite الأول؛ 60 دقيقة للمتصفح وGitHub.',
+          '**الخوادم المرجعية الأربعة الأساسية:** `@modelcontextprotocol/server-filesystem`، و`@modelcontextprotocol/server-sqlite`، و`@modelcontextprotocol/server-postgres`، و`@modelcontextprotocol/server-puppeteer`، و`@modelcontextprotocol/server-github`.',
+          '**يتطلب Node.js >= 18 لمعظم الخوادم.**',
+          '**لا يتطلب Claude Desktop:** يعمل MCP محلياً مع Goose وCline وContinue.dev وLM Studio.',
+          '**Goose يدعم أيضاً خوادم Python** — مفيد إذا كانت خوادمك المخصصة مكتوبة بـPython.',
+        ],
+      },
+      whatMcpUnlocks: {
+        id: 'what-mcp-unlocks',
+        title: 'ما يُتيحه MCP لنموذج Ollama المحلي',
+        content:
+          '**بدون MCP، نموذج Ollama المحلي هو مولّد نص — يستقبل نصاً ويُنتج نصاً.** مع MCP، يصبح الوكيل الذي يقرأ الملفات ويكتبها، ويستعلم عن قواعد البيانات، ويتحكم في المتصفح، ويفتح pull requests.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'يربط MCP نموذج Ollama بأدوات خارجية (filesystem وقاعدة البيانات والمتصفح وGitHub) عبر واجهة JSON-RPC موحّدة، محوّلاً المحادثة إلى وكالة دون إرسال أي شيء إلى السحابة.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'مثال على ما يعنيه ذلك عملياً: تكتب "ابحث في قاعدة بيانات العملاء عن جميع الطلبات التي تجاوزت 1000 دولار هذا الشهر واكتب تقريراً". النموذج يُصدر استدعاء أداة `query_database` مع SQL؛ عميل MCP يوجّهه إلى خادم Postgres؛ الخادم يُعيد الصفوف؛ النموذج يُلخّص. لا SQL يدوي، لا بيانات تغادر شبكتك.',
+          },
+        ],
+        items: [
+          '**Filesystem:** اقرأ واكتب الملفات داخل دليل يمكنك الوصول إليه. مفيد للمهام من نوع "حلّل هذه السجلات" و"حدّث ملف الإعداد هذا" و"لخّص جميع ملفات PDF في هذا المجلد".',
+          '**SQLite / Postgres:** شغّل استعلامات SQL على قاعدة بيانات. في وضع القراءة فقط: آمن للبيانات الحساسة. مع دور كتابة مُقيَّد: يستطيع الوكيل إنشاء سجلات.',
+          '**متصفح (Puppeteer / Playwright):** تحكّم في Chromium — انتقل إلى الصفحات، وانقر، واملأ النماذج، والتقط لقطات الشاشة. مفيد لكشط الويب وملء النماذج والاختبار.',
+          '**GitHub:** افتح issues وPRs وأضف التعليقات وراجع الكود. مع PAT ذو نطاق ضيق يُقيَّد بمستودع اختبار واحد.',
+          '**خوادم مخصصة:** يمكن كتابة خادم MCP في TypeScript أو Python باستخدام SDK المرجعي في 50–100 سطر. اكتب خوادمك المخصصة للأدوات الداخلية (Jira، وNotion، وSlack، وما إلى ذلك).',
+        ],
+      },
+      serverComparison: {
+        id: 'server-comparison',
+        title: 'مقارنة خوادم MCP: ما تثبّته أولاً',
+        content: 'ابدأ بخوادم المرجع الرسمية قبل كتابة خوادمك المخصصة:',
+        columns: ['الخادم', 'حزمة NPM', 'صعوبة الإعداد', 'مستوى المخاطر', 'الاستخدام الرئيسي'],
+        rows: [
+          { 'الخادم': 'Filesystem', 'حزمة NPM': '@modelcontextprotocol/server-filesystem', 'صعوبة الإعداد': 'سهل', 'مستوى المخاطر': 'متوسط (قيّده بدليل واحد)', 'الاستخدام الرئيسي': 'قراءة/كتابة/تلخيص الملفات' },
+          { 'الخادم': 'SQLite', 'حزمة NPM': '@modelcontextprotocol/server-sqlite', 'صعوبة الإعداد': 'سهل', 'مستوى المخاطر': 'منخفض افتراضياً', 'الاستخدام الرئيسي': 'استعلام البيانات المحلية' },
+          { 'الخادم': 'Postgres', 'حزمة NPM': '@modelcontextprotocol/server-postgres', 'صعوبة الإعداد': 'متوسط', 'مستوى المخاطر': 'متوسط (استخدم دور SELECT فقط)', 'الاستخدام الرئيسي': 'الاستعلام عن قواعد البيانات الإنتاجية' },
+          { 'الخادم': 'Puppeteer', 'حزمة NPM': '@modelcontextprotocol/server-puppeteer', 'صعوبة الإعداد': 'متوسط', 'مستوى المخاطر': 'مرتفع (موافقة صريحة للنقر)', 'الاستخدام الرئيسي': 'كشط الويب وأتمتة النماذج' },
+          { 'الخادم': 'GitHub', 'حزمة NPM': '@modelcontextprotocol/server-github', 'صعوبة الإعداد': 'متوسط', 'مستوى المخاطر': 'متوسط (PAT ذو نطاق ضيق)', 'الاستخدام الرئيسي': 'إدارة PRs والكود' },
+        ],
+      },
+      architecture: {
+        id: 'architecture',
+        title: 'البنية: كيف تتلاءم الأجزاء',
+        content:
+          '**المكدس يتكوّن من ثلاث طبقات:** النموذج (Ollama)، والعميل (Goose أو Cline أو غيرهما)، والخوادم (filesystem وقاعدة البيانات وما إلى ذلك).',
+        items: [
+          '**Ollama** يُشغّل النموذج ويعرض API دردشة متوافق مع OpenAI على `localhost:11434`. النموذج لا يعرف أي شيء عن MCP.',
+          '**عميل MCP** (Goose أو Cline أو غيرهما) يقرأ ملف `mcp.json`، ويُنشئ الخوادم كعمليات فرعية، ويحوّل تعريفات الأدوات إلى تنسيق function calling للنموذج، ويوجّه استدعاءات الأدوات الصادرة عن النموذج إلى الخادم المناسب، ويُعيد النتائج إلى المحادثة.',
+          '**خوادم MCP** تعمل كعمليات فرعية محلية تتواصل عبر stdio. لكل خادم قدراته: filesystem يعرض أدوات قراءة_ملف وكتابة_ملف وسرد_الدليل؛ sqlite يعرض أداة استعلام_قاعدة_البيانات؛ وهكذا.',
+          '**دفق البيانات:** المستخدم → العميل → Ollama → استدعاء أداة (JSON) → العميل → خادم MCP → نتيجة → العميل → Ollama → رد → المستخدم. لا شيء يغادر جهازك.',
+        ],
+      },
+      setup: {
+        id: 'setup',
+        title: 'الإعداد: Ollama + Goose في 15 دقيقة',
+        content: 'الخطوات التالية تفترض macOS أو Linux. Windows يعمل بالمثل مع تعديلات بسيطة للمسار.',
+        numberedItems: [
+          'ثبّت Ollama: `curl -fsSL https://ollama.ai/install.sh | sh` ثم `ollama pull gemma4:27b` (أو `qwen3:32b` للبدء بنموذج أصغر).',
+          'ثبّت Goose: `brew install block-inc/goose/goose` (macOS) أو اتبع دليل التثبيت على goose.ai للأنظمة الأخرى.',
+          'هيّئ Goose لاستخدام Ollama: قم بتشغيل `goose configure` واختر "Ollama" كمزوّد مع `localhost:11434`.',
+          'ثبّت خوادم MCP المرجعية: `npm install -g @modelcontextprotocol/server-filesystem @modelcontextprotocol/server-sqlite`.',
+          'أنشئ `~/.config/goose/mcp.json` بمحتوى الإعداد (filesystem يُقيَّد بـ`~/agent-workspace`, sqlite يُشير إلى قاعدة بياناتك).',
+          'شغّل Goose: `goose session` — النموذج الآن يرى الأدوات ويستطيع استخدامها.',
+        ],
+      },
+      filesystemServer: {
+        id: 'filesystem-server',
+        title: 'خادم Filesystem: قراءة الملفات وكتابتها بأمان',
+        content:
+          '**الضبط الأمني الأساسي: قيّد مسار allowedPaths بدليل واحد فقط.** إذا كان الوكيل يستطيع الكتابة في أي مكان على جهازك، فأي خطأ في توجيه النموذج قد يكون مدمّراً.',
+        items: [
+          'أنشئ دليل workspace مخصص: `mkdir ~/agent-workspace`.',
+          'في إعداد MCP، اجعل allowedPaths يشير فقط إلى `~/agent-workspace`.',
+          'ضع الملفات التي تريد للوكيل العمل عليها في هذا الدليل.',
+          'أدوات القراءة (read_file، list_directory) آمنة للموافقة التلقائية. أدوات الكتابة (write_file، delete_file) يجب أن تستلزم موافقة صريحة.',
+          'استخدم `git init` في agent-workspace لتتبع التغييرات — أي كتابة يمكن التراجع عنها بـ`git checkout`.',
+        ],
+      },
+      databaseServer: {
+        id: 'database-server',
+        title: 'خادما SQLite وPostgres: الاستعلام بأمان',
+        content:
+          '**القاعدة الأمنية: بداية وضع القراءة فقط.** دع الوكيل يثبت أنه يستطيع الاستعلام بشكل صحيح قبل منح الوصول للكتابة.',
+        items: [
+          'SQLite: أشر إلى ملف `.db` محدد. الخادم يدعم وضع القراءة فقط في مرحلة التكوين.',
+          'Postgres: أنشئ مستخدماً بامتيازات SELECT فقط: `CREATE USER mcp_reader WITH PASSWORD \'...\'; GRANT SELECT ON ALL TABLES IN SCHEMA public TO mcp_reader;`',
+          'استخدم متغيرات البيئة (DATABASE_URL) لتمرير بيانات الاعتماد، لا نص عادي في ملف الإعداد.',
+          'قيّد الاستعلامات بجداول أو مخطط محدد إذا أمكن — لا وصول للجداول النظام.',
+        ],
+      },
+      browserServer: {
+        id: 'browser-server',
+        title: 'خادم المتصفح (Puppeteer / Playwright): أتمتة المتصفح',
+        content:
+          '**المتصفح هو خادم MCP الأعلى مخاطرةً لأن النقر على زر قد يُؤدّي إلى إجراءات لا رجعة فيها.** لا تُوافق تلقائياً على أدوات النقر أو إرسال النماذج.',
+        items: [
+          'ثبّت: `npm install -g @modelcontextprotocol/server-puppeteer` — Chromium يُنزَّل تلقائياً.',
+          'اقبل الموافقة التلقائية لأدوات navigate وscreenshot وget_text. طالب بالموافقة الصريحة لأدوات click وfill وsubmit.',
+          'فيد في: كشط البيانات العامة، والاختبار التلقائي، وملء النماذج البسيطة التي ليس لها API.',
+          'تجنّب: الجلسات المُسجَّل الدخول إليها دون مراجعة دقيقة — النموذج يستطيع الكتابة في الحقول وإرسال النماذج.',
+        ],
+      },
+      githubServer: {
+        id: 'github-server',
+        title: 'خادم GitHub: إدارة المستودعات',
+        content:
+          '**استخدم PAT ذا نطاق ضيق (Personal Access Token) يقتصر على المستودعات التي تريد للوكيل العمل عليها.**',
+        items: [
+          'أنشئ PAT من إعدادات GitHub: المصادقة → التوكنات الشخصية → Fine-grained tokens.',
+          'امنح صلاحيات: محتوى المستودع (قراءة وكتابة)، والـPull requests (قراءة وكتابة)، والـIssues (قراءة وكتابة).',
+          'قيّد التوكن بمستودعات محددة — لا وصول للمؤسسة بأكملها.',
+          'أدوات القراءة (list_repos، get_file، list_prs): موافقة تلقائية. أدوات الكتابة (create_pr، push_files): موافقة صريحة دائماً.',
+        ],
+      },
+      securityModel: {
+        id: 'security-model',
+        title: 'نموذج الأمان: لا تثق في النموذج أبداً',
+        content:
+          '**النماذج اللغوية غير حتمية — تُصدر أحياناً استدعاءات أدوات غير متوقعة. نموذج الأمان لا يفترض ذلك.**',
+        items: [
+          '**قاعدة الموافقة:** موافقة تلقائية فقط لعمليات القراءة (read_file، query_database، navigate). موافقة صريحة لكل عمليات الكتابة (write_file، run_query_with_write، click، push).',
+          '**نطاق Filesystem:** يُقيَّد بدليل واحد تحته `~/agent-workspace`. لا مسارات مطلقة خارجه.',
+          '**قاعدة البيانات:** وضع القراءة فقط افتراضياً. فكّر مرتين قبل منح الوصول للكتابة حتى لو لقاعدة بيانات اختبار.',
+          '**Shell:** إذا كان عميلك يدعم أدوات shell، فطالب بالموافقة اليدوية لكل استدعاء. لا موافقة تلقائية لتشغيل الأوامر.',
+          '**Injection هجوم للـPrompt:** النموذج قد يقرأ ملفاً يحتوي على تعليمات ضارة. احتفظ بـworkspace ذاته نظيفاً وافحص مخرجات الأداة قبل الموافقة على الخطوات التالية.',
+        ],
+      },
+      vsClaudeDesktop: {
+        id: 'vs-claude-desktop',
+        title: 'MCP محلي مقابل Claude Desktop',
+        content:
+          '**Claude Desktop كان الاستخدام الأبرز لـMCP في 2025. في 2026، عملاء متعددة تعمل مع نماذج محلية.**',
+        columns: ['الميزة', 'Claude Desktop + Claude API', 'Goose/Cline + Ollama محلي'],
+        rows: [
+          { 'الميزة': 'النموذج', 'Claude Desktop + Claude API': 'Claude (Anthropic، مُستضاف)', 'Goose/Cline + Ollama محلي': 'أي نموذج Ollama' },
+          { 'الميزة': 'التكلفة', 'Claude Desktop + Claude API': 'يُدفع لكل توكن', 'Goose/Cline + Ollama محلي': 'صفر دولار' },
+          { 'الميزة': 'الخصوصية', 'Claude Desktop + Claude API': 'البيانات تصل إلى Anthropic', 'Goose/Cline + Ollama محلي': 'بالكامل محلي' },
+          { 'الميزة': 'الموثوقية', 'Claude Desktop + Claude API': 'أعلى (Claude 3.5+ ممتاز في tool calling)', 'Goose/Cline + Ollama محلي': 'عالية مع نماذج 27B+' },
+          { 'الميزة': 'توافق الخوادم', 'Claude Desktop + Claude API': 'أي خادم MCP', 'Goose/Cline + Ollama محلي': 'أي خادم MCP' },
+          { 'الميزة': 'اشتراط الاتصال', 'Claude Desktop + Claude API': 'نعم', 'Goose/Cline + Ollama محلي': 'لا' },
+        ],
+      },
+      pickingModel: {
+        id: 'picking-model',
+        title: 'اختيار نموذج استدعاء الأدوات لـMCP',
+        content:
+          '**موثوقية استدعاء الأدوات خاصية تعتمد على النموذج.** النموذج الخاطئ يُصدر JSON مشوّهاً، مما يتسبب في إخفاقات صامتة أو حلقات لا نهاية لها.',
+        items: [
+          '**Gemma 4 27B (`gemma4:27b`):** توصيتي الافتراضية في 2026. موثوق في استدعاء الأدوات المتسلسلة. 16 جيجابايت ذاكرة موحدة أو 24 جيجابايت VRAM بـQ4_K_M.',
+          '**GLM-5.1 32B (`glm5:32b`):** سياق 128K أصلي. أفضل لأعمال الوثائق الطويلة والاستعلامات الكبيرة.',
+          '**Qwen3 32B (`qwen3:32b`) / Qwen3-Coder 30B (`qwen3-coder:30b`):** توازن ممتاز. Coder يعمل بشكل أفضل مع مستودعات الكود وأدوات GitHub.',
+          '**Llama 3.3 70B (`llama3.3:70b`):** يستلزم 48 جيجابايت+ VRAM. أعلى سقف لكن أبطأ.',
+          '**تجنّب:** أي نموذج أقل من 7B، وأي نموذج للأغراض العامة بدون ضبط دقيق صريح على tool calling. الأعراض: JSON مشوّه، واستدعاءات أدوات بمعطيات هلوسة، وحلقات وكيل تتوقف.',
+        ],
+      },
+      mcpVsFunctionCalling: {
+        id: 'mcp-vs-function-calling',
+        title: 'MCP مقابل Function Calling البسيط',
+        content:
+          '**Function Calling هو قدرة النموذج. MCP هو بروتوكول قابلية التشغيل البيني.** يتعاونان معاً:',
+        items: [
+          'Function calling: النموذج اللغوي يُصدر JSON منظّم مع اسم أداة ومعطياتها. هذا خاص بالنموذج.',
+          'MCP: البروتوكول الذي يتيح لخوادم الأدوات والعملاء وصف الأدوات واكتشافها واستدعاءها وإعادة نتائجها عبر العمليات. هذه طبقة قابلية التشغيل البيني.',
+          'كيف يتعاونان: العميل يحوّل تعريفات أدوات MCP إلى تنسيق function calling للنموذج. النموذج يُصدر function call. العميل يُعيد تعيين الاستدعاء إلى خادم MCP. الخادم ينفّذه.',
+          'بدون MCP: function calling ممكن لكن تُعيد تنفيذ معالجات filesystem/قاعدة البيانات/المتصفح في كل مشروع. مع MCP: نفس الخوادم تعمل تحت أي عميل.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'الأخطاء الشائعة في إعداد MCP المحلي',
+        items: [
+          '**استخدام نموذج أقل من 7B لاستدعاء الأدوات.** النماذج الصغيرة تُصدر JSON مشوّهاً بانتظام. إذا كان الوكيل يُخفق بصمت أو يحلّق في حلقات، فالنموذج هو المشكلة في الغالب لا MCP.',
+          '**عدم تقييد مسار Filesystem.** المسار غير المُقيَّد + هلوسة طفيفة = ملفات تُكتب في أماكن غير متوقعة. قيّد بـ`~/agent-workspace` دائماً.',
+          '**الموافقة التلقائية على أدوات الكتابة.** اجعل كل أداة تغيّر الحالة تستلزم موافقة صريحة. الطيران التلقائي أمر للوكلاء غير المراقَبين في بيئات الإنتاج — وهذه ليست الحالة الافتراضية.',
+          '**توكن GitHub بامتيازات واسعة جداً.** استخدم fine-grained tokens بصلاحيات لمستودع بعينه. توكن بامتيازات مؤسسة كاملة وخطأ في الهلوسة قد يُنشئ PRs أو issues في أماكن غير متوقعة.',
+          '**الوثوق في نواتج الأداة بدون مراجعة.** المحتوى الخارجي (ملفات مقروءة أو صفحات ويب) قد يحتوي على prompt injection. افحص النواتج قبل الموافقة على الخطوات التالية.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'المصادر',
+        items: [
+          '[مواصفة بروتوكول سياق النموذج (MCP)](https://modelcontextprotocol.io/specification) — المواصفة الرسمية ومستودعات خوادم المرجع.',
+          '[Goose — وثائق العميل](https://goose.ai/docs) — دليل الإعداد الرسمي مع Ollama ومعلومات تكوين MCP.',
+          '[مستودع MCP على GitHub من Anthropic](https://github.com/modelcontextprotocol) — خوادم المرجع الرسمية (filesystem، وsqlite، وpostgres، وpuppeteer، وgithub).',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          {
+            q: 'ما هو MCP ولماذا يهم الذكاء الاصطناعي المحلي؟',
+            a: 'MCP (بروتوكول سياق النموذج) هو بروتوكول JSON-RPC 2.0 مفتوح يتيح لعميل (Goose أو Cline أو Continue.dev أو LM Studio أو Claude Desktop) ربط نموذج لغوي بخوادم أدوات بطريقة موحّدة. يهم الذكاء الاصطناعي المحلي لأنه يُقنّن الطبقة التي تحوّل نموذج المحادثة إلى وكيل — اكتب خادم أدوات مرةً واحدة واستخدمه تحت أي عميل وأي نموذج، بما في ذلك نموذج Ollama المحلي.',
+          },
+          {
+            q: 'هل يعمل MCP بدون Claude Desktop؟',
+            a: 'نعم. البروتوكول مفتوح ومستقل تماماً عن Claude Desktop. في 2026، Goose وCline وContinue.dev وLM Studio كلها توفر تطبيقات عميل MCP تعمل مع نماذج Ollama المحلية. خوادم المرجع (filesystem وsqlite وpostgres وpuppeteer وgithub) تعمل دون تعديل تحت أي عميل متوافق.',
+          },
+          {
+            q: 'ما النماذج المحلية الأفضل دعماً لـMCP؟',
+            a: 'في مايو 2026، الخيارات الأكثر موثوقيةً هي: Gemma 4 27B وGLM-5.1 32B وQwen3 32B (أو Qwen3-Coder 30B للعمل المرتكز على الكود) وLlama 3.3 70B. الأربعة لديهم تدريب صريح على tool calling ويُصدرون JSON استدعاء دوال نظيفاً يستطيع عملاء MCP توجيهه. النماذج الأقل من 7B (ومعظم النماذج العامة بدون ضبط دقيق على tool calling) تُنتج tool calls مشوّهة بانتظام.',
+          },
+          {
+            q: 'هل MCP آمن؟ هل يستطيع الوكيل حذف ملفاتي؟',
+            a: 'يستطيع ذلك إذا سمحت له. الأمان يأتي من كيفية إعدادك للخوادم لا من البروتوكول. خادم filesystem يعمل فقط داخل المسارات التي تضعها في allowlist — قيّده بدليل `agent-workspace` مخصص. خادم قاعدة البيانات يعمل في وضع القراءة فقط حين تستخدم دور SELECT فقط. اشترط دائماً موافقة صريحة لأدوات الكتابة والshell وPR؛ وافق تلقائياً فقط على عمليات القراءة.',
+          },
+          {
+            q: 'هل يعمل MCP على Windows؟',
+            a: 'نعم. Ollama وGoose وCline وContinue.dev وLM Studio كلها تعمل على Windows. خوادم MCP تعمل كعمليات فرعية من Node.js أو Python؛ كلا بيئتي التشغيل متوافقتان كلياً مع Windows. التفصيل الوحيد الخاص بالمنصة هو التعامل مع المسارات — استخدم الشرطة المائلة للأمام في الإعداد أو اهرب الشرطات المائلة للخلف بشكل صحيح.',
+          },
+          {
+            q: 'كيف أضع استدعاءات أدوات MCP في sandbox؟',
+            a: 'ثلاث طبقات تغطي معظم المخاطر. أولاً، قيّد كل خادم بضيق في مستوى الإعداد: filesystem لدليل واحد، وقاعدة البيانات لدور قراءة فقط، وGitHub لـPAT ذي نطاق ضيق لمستودعات اختبار. ثانياً، استخدم قواعد الموافقة لكل أداة في العميل: موافقة تلقائية للقراءات، وموافقة مطلوبة للكتابات. ثالثاً، احتفظ بالوكيل داخل workspace متوافق مع `git stash` لكي تكون أي إجراءات مدمّرة قابلة للتراجع عنها.',
+          },
+          {
+            q: 'ما الفرق بين MCP وFunction Calling؟',
+            a: 'Function Calling هو إصدار النموذج اللغوي لـJSON منظّم مع اسم أداة ومعطياتها — هذه قدرة النموذج. MCP هو البروتوكول الذي يتيح لخوادم الأدوات والعملاء وصف الأدوات واكتشافها واستدعاءها وإعادة نتائجها عبر العمليات — هذه طبقة قابلية التشغيل البيني. يتعاونان: العميل يحوّل تعريفات أدوات MCP إلى تنسيق function calling للنموذج، والنموذج يُصدر function call، والعميل يُعيد تعيين الاستدعاء إلى خادم MCP، والخادم ينفّذه. بدون MCP: function calling ممكن؛ لكنك تُعيد تنفيذ معالجات filesystem/قاعدة البيانات/المتصفح في كل مشروع. مع MCP: نفس الخوادم تعمل تحت أي عميل.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءة ذات صلة',
+        items: [
+          '[أفضل النماذج المحلية لاستدعاء الأدوات في 2026](/ar/power-local-llm/best-local-models-tool-calling-2026) — معايير مقارنية للنماذج الموصى بها (Gemma 4 وGLM-5.1 وQwen3 وLlama 3.3).',
+          '[وكلاء الذكاء الاصطناعي المحلي الذاتيون يعملون فعلاً](/ar/power-local-llm/autonomous-local-agents-actually-work) — تحقق من الواقع حول ما يستطيع وكيل MCP المحلي وما لا يستطيع فعله بشكل موثوق في مهمة طويلة الأمد.',
+          '[Continue.dev مقابل Cline مقابل Aider: أفضل وكيل برمجة محلي في 2026](/ar/power-local-llm/continue-dev-vs-cline-vs-aider-local) — سياق وكيل مجاور للعمل المرتكز على الكود؛ Cline وContinue.dev أيضاً عملاء MCP.',
+          '[أفضل نماذج لغوية محلية في 2026](/ar/local-llms/best-local-llms-2026) — مرجع النماذج لمشهد الأوزان المفتوحة الأشمل.',
+          '[استبدال Zapier بوكلاء الذكاء الاصطناعي المحلي](/ar/power-local-llm/replace-zapier-with-local-ai-agents) — إطار أتمتة سير العمل لنفس مكدس MCP.',
+          '[مركز Power Local LLM](/ar/power-local-llm) — مكتبة كاملة من الأدلة.',
+        ],
+      },
+    },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'ربط Ollama بقواعد البيانات وAPIs مع MCP: إعداد وكيل محلي 2026',
+      description: 'دليل إعداد وكلاء الذكاء الاصطناعي المحلي في 2026 باستخدام Ollama وMCP. Filesystem وSQLite/Postgres والمتصفح وGitHub وإعداد JSON عملي ونموذج sandboxing لا يثق في النموذج اللغوي.',
+      url: 'https://www.promptquorum.com/ar/power-local-llm/local-ai-agents-with-mcp-2026',
+      inLanguage: 'ar',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
 }

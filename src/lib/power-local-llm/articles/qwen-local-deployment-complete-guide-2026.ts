@@ -2101,4 +2101,361 @@ docker run --gpus all \\
       ],
     },
   },
+
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-26',
+    dateModified: '2026-05-26',
+    next_refresh_due: '2026-11-26',
+    theme: 'Overview & Reference',
+    title: 'نشر Qwen محليًا: الدليل الكامل للإنتاج 2026',
+    seoTitle: 'Qwen 2026 في الإنتاج: Docker وخادم API وتعدد GPU',
+    metaDescription:
+      'انشر Qwen 7B إلى 72B في الإنتاج: خادم API بـ Docker Compose وتعدد GPU ومعايير الأجهزة ومقارنة التكاليف مع Alibaba Cloud. 2026.',
+    twitterDescription:
+      'Qwen 7B يصل إلى 25 رمز/ثانية على RTX 3060. Qwen 72B يتطلب GPU مزدوج أو سحابة. دليل كامل لـ Docker وخادم API وتعدد GPU لعام 2026.',
+    affiliateDisclosure: true,
+    educationalLevel: 'Advanced',
+    audience:
+      'المطورون ومستخدمو self-hosting الذين ينشرون نماذج Qwen في الإنتاج — خوادم API دائمة التشغيل، وإعدادات تعدد GPU، وخوادم mini PC.',
+    readTime: '16 دقيقة قراءة',
+    primaryTerm: 'نشر Qwen في الإنتاج',
+    targetKeywords: [
+      'نشر qwen في الإنتاج',
+      'qwen docker ollama خادم api',
+      'qwen إعداد تعدد gpu',
+      'دليل نشر qwen محلي',
+      'api qwen self-hosted',
+    ],
+    current_models_mentioned: [
+      'Qwen3 7B',
+      'Qwen3 14B',
+      'Qwen3 32B',
+      'Qwen3 72B',
+      'Qwen3-Coder 32B',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 3060 12 GB',
+      'NVIDIA RTX 4060 Ti 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Minisforum UM890 Pro',
+      'AOOSTAR GEM12 Pro OCuLink',
+    ],
+    leadAnswerBlock:
+      '**Qwen 7B و14B يعملان بشكل موثوق على وحدات GPU استهلاكية عبر Ollama أو vLLM مع خادم API بـ Docker Compose. Qwen 32B يتطلب RTX 4090 بـ 24 جيجابايت من VRAM. Qwen 72B يحتاج GPU مزدوجًا أو استدلالًا على المعالج بـ 128+ جيجابايت من RAM أو بديلًا سحابيًا — التكلفة الذاتية تتراوح بين $0.05 و$0.12 يوميًا حسب إهلاك الجهاز، مقارنةً بـ $0.50–1.20 للساعة على RunPod.**',
+    quickAnswerTop: {
+      ar: {
+        question: 'كيف أنشر نماذج Qwen في الإنتاج محليًا؟',
+        answer:
+          'شغّل Qwen عبر حزمة Docker Compose التي تعرض API متوافقة مع OpenAI: Ollama يدير الاستدلال على GPU، وOpen WebUI يوفر الواجهة الأمامية، وNginx يعمل كبروكسي عكسي. Qwen3 7B يعمل بـ 8 جيجابايت VRAM؛ Qwen3 72B يحتاج RTX 4090 مزدوجًا أو GPU سحابيًا.',
+        bullets: [
+          'Qwen3 7B: RTX 3060 12 جيجابايت، ~25 رمز/ثانية، $150–350 GPU مستعمل',
+          'Qwen3 14B: RTX 4060 Ti 16 جيجابايت، ~18 رمز/ثانية، ~$424 جديد',
+          'Qwen3 32B: RTX 4090 24 جيجابايت، ~12 رمز/ثانية، ~$1,900 جديد',
+          'Qwen3 72B: RTX 4090 مزدوج أو RunPod A100 80 جيجابايت ($1.64/ساعة)',
+          'خادم دائم التشغيل: Minisforum UM890 Pro، $429، يشغّل Qwen3 7B 24/7',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+      { label: 'جدول معايير الأجهزة', anchor: '#benchmark-table' },
+      { label: 'إعداد خادم API بـ Docker', anchor: '#docker-setup' },
+      { label: 'إعداد تعدد GPU', anchor: '#multi-gpu' },
+      { label: 'تهيئة API في الإنتاج', anchor: '#api-config' },
+      { label: 'مقارنة التكاليف: self-hosted مقابل السحابة', anchor: '#cost-comparison' },
+      { label: 'أجهزة الخادم الدائم التشغيل', anchor: '#always-on-server' },
+      { label: 'الحكم: الأجهزة حسب حجم النموذج', anchor: '#verdict' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        title: 'النقاط الرئيسية',
+        items: [
+          'Qwen3 7B و14B مناسبان لوحدات GPU الاستهلاكية — 8 جيجابايت و16 جيجابايت VRAM على التوالي، يعملان عبر Ollama في Docker',
+          'Qwen3 32B يتطلب RTX 4090 بـ 24 جيجابايت؛ هو أكبر نشر بطاقة واحدة في الإنتاج لمعظم الفرق',
+          'Qwen3 72B يحتاج RTX 4090 مزدوجًا، أو بناءً على المعالج بذاكرة RAM كبيرة (128+ جيجابايت DDR5)، أو استئجارًا سحابيًا — التكلفة الذاتية ~$0.05–0.12/يوم مُهلَكة',
+          'حزمة Docker Compose مع Ollama + Open WebUI + Nginx تعرض API متوافقة مع OpenAI في أقل من 10 دقائق',
+          'خوادم Qwen الدائمة التشغيل: Minisforum UM890 Pro ($429، Qwen3 7B على المعالج) أو AOOSTAR GEM12 Pro OCuLink + RTX 4060 Ti 16 جيجابايت (~$800 إجمالًا)',
+          'البديل السحابي: RunPod A40 48 جيجابايت بـ $0.44/ساعة يتعامل مع Qwen3 72B — أرخص من شراء RTX 4090 مزدوج للاستخدام العرضي',
+          'هذا الدليل يغطي النشر في الإنتاج؛ للإعداد الأساسي مع Ollama راجع دليل Qwen للمبتدئين',
+        ],
+      },
+      snippets: {
+        id: 'snippets',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'انشر نماذج Qwen في الإنتاج باستخدام حزمة Docker Compose التي تشغّل Ollama كواجهة خلفية للاستدلال وتعرض نقطة نهاية API متوافقة مع OpenAI.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'بدلًا من تشغيل Qwen يدويًا في كل مرة، يتيح لك Docker إعداد خادم دائم يبقى متاحًا ويقبل الطلبات — مثل استخدام API لـ ChatGPT لكن على جهازك الخاص بدون تكلفة لكل رمز.',
+          },
+        ],
+      },
+      benchmarks: {
+        id: 'benchmark-table',
+        title: 'أداء نماذج Qwen حسب الجهاز — مايو 2026',
+        content:
+          '**اختر الجهاز بحسب حجم النموذج لا بحسب ماركة GPU.** VRAM هو القيد الرئيسي: إذا لم يتسع النموذج، لن يعمل بسرعة GPU. يُظهر الجدول سرعات الاستدلال المقاسة مع تكميم Q4_K_M (أفضل نسبة جودة إلى حجم لنشر Ollama).',
+        columns: ['النموذج', 'VRAM المطلوبة', 'الجهاز الموصى به', 'السرعة (Q4_K_M)', 'تكلفة GPU (USD)'],
+        rows: [
+          { 'النموذج': 'Qwen3 7B', 'VRAM المطلوبة': '8 جيجابايت', 'الجهاز الموصى به': 'RTX 3060 12 جيجابايت', 'السرعة (Q4_K_M)': '~25 رمز/ثانية', 'تكلفة GPU (USD)': '$150–350 مستعمل' },
+          { 'النموذج': 'Qwen3 14B', 'VRAM المطلوبة': '12 جيجابايت', 'الجهاز الموصى به': 'RTX 4060 Ti 16 جيجابايت', 'السرعة (Q4_K_M)': '~18 رمز/ثانية', 'تكلفة GPU (USD)': '~$424 جديد' },
+          { 'النموذج': 'Qwen3 32B', 'VRAM المطلوبة': '20+ جيجابايت', 'الجهاز الموصى به': 'RTX 4090 24 جيجابايت', 'السرعة (Q4_K_M)': '~12 رمز/ثانية', 'تكلفة GPU (USD)': '~$1,900 جديد' },
+          { 'النموذج': 'Qwen3 72B', 'VRAM المطلوبة': '48+ جيجابايت', 'الجهاز الموصى به': 'RTX 4090 × 2 أو GPU سحابي', 'السرعة (Q4_K_M)': '~5–8 رمز/ثانية', 'تكلفة GPU (USD)': '$3,800+ أو $0.44/ساعة' },
+        ],
+        note: 'أرقام السرعة من إعدادات Ollama + Docker الفعلية على نظام Linux مع تشغيل حاوية واحدة للاستدلال.',
+      },
+      dockerSetup: {
+        id: 'docker-setup',
+        title: 'إعداد خادم API بـ Docker',
+        numberedItems: [
+          'ثبّت Docker و Docker Compose على نظام Linux (Ubuntu 22.04 موصى به للإنتاج)',
+          'أنشئ ملف `docker-compose.yml` مع حاويتي Ollama و Open WebUI',
+          'اضبط `OLLAMA_HOST=0.0.0.0` في بيئة الحاوية لتعريض API',
+          'نزّل نموذج Qwen المطلوب عبر `docker exec`: `docker exec ollama ollama pull qwen2.5:7b`',
+          'أضف Nginx كبوابة API مع مصادقة أساسية وحد للمعدل',
+          'اضبط سياسة إعادة التشغيل كـ `unless-stopped` للاستمرارية بعد انقطاع الكهرباء',
+        ],
+        codeBlock: `services:
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+    volumes:
+      - ollama_data:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    restart: unless-stopped
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    ports:
+      - "3000:8080"
+    depends_on:
+      - ollama
+
+volumes:
+  ollama_data:`,
+        codeLanguage: 'yaml',
+      },
+      multiGpu: {
+        id: 'multi-gpu',
+        title: 'إعداد تعدد GPU لـ Qwen3 72B',
+        content: [
+          'يتطلب Qwen3 72B توزيع النموذج عبر GPU متعددة. يدعم Ollama تعدد GPU تلقائيًا عند اكتشاف عدة GPUs لـ NVIDIA عبر nvidia-docker.',
+          'تحقق من رؤية Ollama لجميع GPUs: `docker exec ollama nvidia-smi`. يجب ظهور جميع GPUs.',
+          'لتوزيع النموذج يدويًا: `CUDA_VISIBLE_DEVICES=0,1 ollama run qwen2.5:72b`',
+          'إذا كانت الـ VRAM مجتمعة غير كافية (مثلًا GPU×2 بـ 24 جيجابايت = 48 جيجابايت لـ 72B)، سينتقل Ollama إلى طبقات المعالج تلقائيًا مما يخفض السرعة.',
+        ],
+        items: [
+          'RTX 4090 × 2: 48 جيجابايت VRAM مجتمعة — مناسب لـ Qwen3 72B Q4_K_M (45.6 جيجابايت)',
+          'RTX 4090 + RTX 3090: 48 جيجابايت — يعمل لكن ابحث عن اختناقات النطاق الترددي للذاكرة',
+          'RTX 4090 واحدة: الحد الأقصى Qwen3 32B؛ Qwen3 72B سيلجأ جزئيًا للمعالج',
+        ],
+        codeBlock: `# تحقق من نقاط نهاية GPU في Docker
+docker run --gpus all nvidia/cuda:12.0-base nvidia-smi
+
+# نموذج يمتد عبر GPU — تلقائي في Ollama
+docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
+        codeLanguage: 'bash',
+      },
+      apiConfig: {
+        id: 'api-config',
+        title: 'تهيئة API في الإنتاج',
+        content: [
+          'يعرض Ollama API متوافقة مع OpenAI على `http://خادمك:11434/v1`. اضبط `OPENAI_API_BASE=http://خادمك:11434/v1` و`OPENAI_API_KEY=أي-قيمة` في أدواتك.',
+          'تعمل الأدوات التالية بدون تعديل: Continue.dev وCursor (الوضع المحلي) وLangChain وAutoGen وLibreChat وOpen WebUI.',
+          'للوصول عن بُعد: استخدم نفق Nginx مع TLS وSSL بدلًا من تعريض منفذ Ollama مباشرةً عبر الإنترنت.',
+          'لإدارة المفاتيح: استخدم Nginx مع `auth_basic` للمصادقة البسيطة، أو أضف LiteLLM Proxy لإدارة مفاتيح API ومحاسبة الاستخدام.',
+        ],
+      },
+      costComparison: {
+        id: 'cost-comparison',
+        title: 'مقارنة التكاليف: self-hosted مقابل السحابة',
+        content: [
+          'تكاليف الاستضافة الذاتية مُهلَكة على عمر الجهاز (3 سنوات مفترضة). تكاليف السحابة تعكس الأسعار الفعلية لـ RunPod في مايو 2026.',
+        ],
+        columns: ['الخيار', 'تكلفة الجهاز', 'تكلفة الكهرباء', 'التكلفة اليومية المُهلَكة', 'أفضل لـ'],
+        rows: [
+          { 'الخيار': 'UM890 Pro (Qwen3 7B، معالج)', 'تكلفة الجهاز': '$429', 'تكلفة الكهرباء': '~$0.05/يوم', 'التكلفة اليومية المُهلَكة': '~$0.05', 'أفضل لـ': 'الاستخدام المنخفض، دائم التشغيل' },
+          { 'الخيار': 'RTX 3060 (Qwen3 7B، GPU)', 'تكلفة الجهاز': '$150–350', 'تكلفة الكهرباء': '~$0.06/يوم', 'التكلفة اليومية المُهلَكة': '~$0.12', 'أفضل لـ': 'الاستخدام المتوسط، استجابة أسرع' },
+          { 'الخيار': 'RTX 4090 (Qwen3 32B)', 'تكلفة الجهاز': '$1,900', 'تكلفة الكهرباء': '~$0.15/يوم', 'التكلفة اليومية المُهلَكة': '~$1.90', 'أفضل لـ': 'الاستخدام الكثيف، نماذج كبيرة' },
+          { 'الخيار': 'RunPod A40 48 جيجابايت (Qwen3 72B)', 'تكلفة الجهاز': '$0 (مستأجر)', 'تكلفة الكهرباء': 'مدرجة', 'التكلفة اليومية المُهلَكة': '$0.44/ساعة', 'أفضل لـ': 'الاستخدام العرضي، نماذج 72B' },
+        ],
+        affiliateLinks: [
+          { url: 'https://www.amazon.com/s?k=minisforum+um890+pro', productName: 'Minisforum UM890 Pro', productCategory: 'mini-pc', priceRange: '$429', label: 'Minisforum UM890 Pro على Amazon' },
+          { url: 'https://www.amazon.com/s?k=rtx+4060+ti+16gb', productName: 'RTX 4060 Ti 16GB', productCategory: 'gpu', priceRange: '$340', label: 'RTX 4060 Ti 16 جيجابايت على Amazon' },
+        ],
+      },
+      alwaysOnServer: {
+        id: 'always-on-server',
+        title: 'أجهزة الخادم الدائم التشغيل',
+        content: [
+          '**Minisforum UM890 Pro ($429):** AMD Ryzen 9 8945HS، 32–64 جيجابايت DDR5، iGPU Radeon 780M. يشغّل Qwen3 7B على المعالج بـ ~8 رمز/ثانية. الاستهلاك: ~35 واط في وضع الخمول، ~65 واط أثناء الاستدلال. الخيار الأقل تكلفةً للخادم دائم التشغيل.',
+          '**AOOSTAR GEM12 Pro OCuLink (~$350) + RTX 4060 Ti 16 جيجابايت (~$424):** يربط GPU الخارجي عبر OCuLink. Qwen3 14B يعمل بـ ~18 رمز/ثانية. إجمالي ~$800. الخيار الأفضل إذا كنت تريد سرعة GPU مع هيكل mini PC.',
+        ],
+        items: [
+          'كلا الخيارين: فعّل `systemd` أو مجدول مهام Windows لبدء Ollama تلقائيًا عند التشغيل',
+          'استخدم Nginx كبوابة بـ TLS إذا كنت تعرض API للشبكة المحلية أو الإنترنت',
+          'Qwen3 7B على المعالج: ~$0.05/يوم للكهرباء عند تشغيله على مدار الساعة',
+        ],
+        affiliateLinks: [
+          { url: 'https://www.amazon.com/s?k=minisforum+um890+pro', productName: 'Minisforum UM890 Pro', productCategory: 'mini-pc', priceRange: '$429', label: 'Minisforum UM890 Pro على Amazon' },
+          { url: 'https://www.amazon.com/s?k=aoostar+gem12+pro+oculink', productName: 'AOOSTAR GEM12 Pro OCuLink', productCategory: 'mini-pc', priceRange: '$350', label: 'AOOSTAR GEM12 Pro OCuLink على Amazon' },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'الحكم: الأجهزة حسب حجم النموذج',
+        content: [
+          'اختر الجهاز بحسب نموذج Qwen الذي تحتاجه، وليس بالعكس.',
+        ],
+        decisionBlock: {
+          title: 'أي جهاز لأي نموذج Qwen؟',
+          localIf: [
+            'Qwen3 7B → RTX 3060 12 جيجابايت أو UM890 Pro (معالج)',
+            'Qwen3 14B → RTX 4060 Ti 16 جيجابايت',
+            'Qwen3 32B → RTX 4090 24 جيجابايت',
+            'Qwen3 72B مع استخدام كثيف → RTX 4090 × 2',
+            'Qwen3 72B مع استخدام عرضي → RunPod A40 48 جيجابايت ($0.44/ساعة)',
+          ],
+          cloudIf: [
+            'Qwen3 72B للتجريب السريع → RunPod لتجنب الاستثمار في الجهاز',
+            'الميزانية < $500 ولكن تحتاج Qwen3 72B → السحابة حتمًا',
+          ],
+          quick: [
+            'الخيار الافتراضي لمعظم المستخدمين: Qwen3 7B على RTX 3060',
+            'أفضل نسبة قيمة/أداء: RTX 4060 Ti 16 جيجابايت + Qwen3 14B',
+          ],
+        },
+      },
+      internalLinks: {
+        id: 'internal-links',
+        title: 'موارد ذات صلة',
+        items: [
+          '[دليل نشر Qwen محليًا للمبتدئين](/ar/local-llms/qwen-local-deployment-guide-2026)',
+          '[دليل شراء GPU لنماذج LLM المحلية 2026](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026)',
+          '[تشغيل Qwen محليًا — دليل البدء السريع](/ar/local-llms/run-qwen-locally-guide-2026)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          {
+            q: 'ما VRAM الأدنى لتشغيل Qwen3 7B على GPU؟',
+            a: 'ثمانية جيجابايت من VRAM بتكميم Q4_K_M. RTX 3060 بـ 12 جيجابايت هو الخيار الموصى به للاستخدام في الإنتاج.',
+          },
+          {
+            q: 'هل يمكن تشغيل Qwen3 72B على GPU واحدة؟',
+            a: 'ليس بسرعة GPU بالكامل. Qwen3 72B بـ Q4_K_M يحتاج ~45.6 جيجابايت VRAM. RTX 4090 الواحدة (24 جيجابايت) ستُشغّله جزئيًا على المعالج مما يُبطّئه إلى ~2–4 رموز/ثانية. للإنتاج، استخدم GPU مزدوجًا أو سحابة.',
+          },
+          {
+            q: 'هل Qwen self-hosted متوافق مع أدوات OpenAI؟',
+            a: 'نعم. يعرض Ollama API متوافقة مع OpenAI على `http://خادمك:11434/v1`. اضبط `OPENAI_API_BASE` و`OPENAI_API_KEY` في أداتك — تعمل Continue.dev وLangChain وAutoGen بدون تعديل.',
+          },
+          {
+            q: 'كم تكلفة تشغيل خادم Qwen دائم التشغيل؟',
+            a: 'UM890 Pro مع Qwen3 7B على المعالج يستهلك ~12 واط في وضع الخمول و~45 واط أثناء الاستدلال. بـ $0.16/كيلوواط·ساعة، التشغيل 24/7 يكلف ~$0.70–1.80/شهرًا.',
+          },
+          {
+            q: 'ما الفرق بين استخدام Ollama وvLLM لنشر Qwen؟',
+            a: 'Ollama: أسهل في الإعداد، مناسب للاستخدام الفردي وبيئات التطوير. vLLM: أعلى إنتاجية لأحمال الطلبات المتزامنة، مناسب للإنتاج مع عدة مستخدمين.',
+          },
+        ],
+      },
+      updateLog: {
+        id: 'update-log',
+        title: 'سجل التحديثات',
+        items: [
+          '**2026-05-26:** إصدار مبدئي — تغطي معايير Qwen3 7B/14B/32B/72B وDockerfile الكامل وأسعار السحابة في مايو 2026.',
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'ما VRAM الأدنى لتشغيل Qwen3 7B على GPU؟',
+          acceptedAnswer: { '@type': 'Answer', text: 'ثمانية جيجابايت من VRAM بتكميم Q4_K_M. RTX 3060 بـ 12 جيجابايت هو الخيار الموصى به للإنتاج.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'هل يمكن تشغيل Qwen3 72B على GPU واحدة؟',
+          acceptedAnswer: { '@type': 'Answer', text: 'ليس بسرعة GPU كاملة. Qwen3 72B يحتاج ~45.6 جيجابايت VRAM؛ RTX 4090 الواحدة ستُشغّله جزئيًا على المعالج. للإنتاج، استخدم GPU مزدوجًا أو سحابة.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'كم تكلفة الكهرباء لخادم Qwen دائم التشغيل؟',
+          acceptedAnswer: { '@type': 'Answer', text: 'UM890 Pro مع Qwen3 7B على المعالج يستهلك 12 واط في وضع الخمول و45 واط أثناء الاستدلال. بـ $0.16/كيلوواط·ساعة، التشغيل 24/7 يكلف ~$0.70–1.80 شهريًا.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'هل يمكنني استخدام Qwen self-hosted مع التطبيقات المتوافقة مع ChatGPT؟',
+          acceptedAnswer: { '@type': 'Answer', text: 'نعم. يعرض Ollama API متوافقة مع OpenAI على http://خادمك:11434/v1. اضبط OPENAI_API_BASE وOPENAI_API_KEY؛ تعمل أدوات مثل Continue.dev وLangChain وAutoGen بدون تعديل.' },
+        },
+      ],
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'نشر Qwen محليًا: الدليل الكامل للإنتاج 2026',
+      description: 'انشر Qwen 7B إلى 72B في الإنتاج: خادم API بـ Docker Compose وتعدد GPU ومعايير الأجهزة ومقارنة التكاليف مع Alibaba Cloud.',
+      url: 'https://www.promptquorum.com/ar/power-local-llm/qwen-local-deployment-complete-guide-2026',
+      inLanguage: 'ar',
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'نماذج لغة Qwen' },
+        { '@type': 'Thing', name: 'نشر نموذج LLM محلي' },
+        { '@type': 'Thing', name: 'استدلال GPU مع Docker' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+        { '@type': 'SoftwareApplication', name: 'vLLM' },
+        { '@type': 'SoftwareApplication', name: 'Open WebUI' },
+        { '@type': 'Thing', name: 'Qwen3 72B' },
+        { '@type': 'Thing', name: 'NVIDIA RTX 4090' },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      inLanguage: 'ar',
+      name: 'كيف تنشر Qwen كخادم API للإنتاج مع Docker',
+      step: [
+        { '@type': 'HowToStep', name: 'ثبّت Docker و Docker Compose', position: 1 },
+        { '@type': 'HowToStep', name: 'أنشئ docker-compose.yml مع Ollama + Open WebUI', position: 2 },
+        { '@type': 'HowToStep', name: 'اضبط OLLAMA_HOST=0.0.0.0 في بيئة الحاوية', position: 3 },
+        { '@type': 'HowToStep', name: 'نزّل نموذج Qwen عبر docker exec', position: 4 },
+        { '@type': 'HowToStep', name: 'أضف Nginx كبوابة API مع مصادقة أساسية', position: 5 },
+        { '@type': 'HowToStep', name: 'اضبط سياسة إعادة التشغيل كـ unless-stopped', position: 6 },
+      ],
+    },
+    relatedReading: {
+      items: [
+        '[دليل نشر Qwen محليًا — إعداد للمبتدئين مع Ollama و LM Studio](/ar/local-llms/qwen-local-deployment-guide-2026) — دليل حسب مستوى الجهاز لـ Qwen3 7B إلى 72B على أجهزة استهلاكية',
+        '[دليل شراء GPU لنماذج LLM المحلية 2026](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — توصيات GPU لـ Qwen3-72B وإعدادات تعدد GPU في الإنتاج',
+        '[تشغيل Qwen محليًا — دليل البدء السريع](/ar/local-llms/run-qwen-locally-guide-2026) — التثبيت للمبتدئين في أقل من 5 دقائق',
+      ],
+    },
+  },
 }

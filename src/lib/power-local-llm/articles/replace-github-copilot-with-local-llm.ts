@@ -2124,5 +2124,326 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
-},
+  },
+
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Coding Assistants',
+    title: 'استبدل GitHub Copilot بنموذج LLM محلي: الإعداد + مقارنة التكاليف 2026',
+    seoTitle: 'استبدل GitHub Copilot بنموذج LLM محلي مع Continue.dev',
+    intro:
+      'في 2026 يمكنك استبدال اشتراك GitHub Copilot الشهري بـ $20 بحزمة محلية بالكامل: Continue.dev + Ollama + Qwen3-Coder 30B (أو 7B للأجهزة منخفضة المواصفات). على أفق 24 شهرًا، يكلف الإعداد المحلي أقل إذا كنت تملك بالفعل GPU من طراز RTX 3060 أو أفضل، أو Mac M3 أو أحدث. الجودة تنافسية في قواعد الكود الخاصة؛ يبقى Copilot أفضل في المكتبات غير الشائعة ذات بيانات التدريب الشحيحة.',
+    metaDescription:
+      '$0/شهر مقابل $20/شهر. Continue.dev + Qwen3-Coder مقابل GitHub Copilot. اختبار حقيقي على مشروع Next.js. دليل الإعداد وحساب التكاليف والحكم الصادق.',
+    twitterDescription:
+      'استبدل Copilot بـ Continue.dev + Qwen3-Coder. الإعداد وحساب التكاليف (يتعادل في 24 شهرًا) ومقارنة الجودة الصادقة.',
+    gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
+    gammaDescription:
+      'تغطي العرض التقديمي أدناه: حزمة Continue.dev + Ollama + Qwen3-Coder ($0/شهر مقابل $20/شهر لـ Copilot)، وحساب التكاليف على 24 شهرًا مع التعادل في 8–14 شهرًا بالجهاز الحالي، ونتائج اختبار الجودة (90–95% من Copilot في TypeScript وPython)، ودليل الإعداد في 6 خطوات. حمّل PDF كبطاقة مرجعية لاستبدال Copilot محليًا.',
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen3-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
+    audience:
+      'مطورو البرمجيات الذين يقيّمون التخلي عن اشتراك Copilot لصالح مساعد كود محلي.',
+    readTime: '13 دقيقة قراءة',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'مساعد كود محلي',
+    targetKeywords: [
+      'استبدال github copilot',
+      'بديل محلي لـ copilot',
+      'continue.dev ollama',
+      'qwen3-coder مقابل copilot',
+    ],
+    leadAnswerBlock:
+      '**نعم، يمكنك استبدال GitHub Copilot بنموذج LLM محلي في 2026 — ويتعادل في 8–14 شهرًا بالجهاز الحالي. الحزمة الموصى بها: Continue.dev (إضافة VS Code) + Ollama + Qwen3-Coder 30B Q4_K_M. جودة الكود ضمن 5–10% من Copilot في معظم المهام اليومية؛ يبقى Copilot أفضل في المكتبات قليلة التوثيق. تتفوق الحزمة المحلية في التكلفة والخصوصية (لا يغادر الكود جهازك) والاستخدام دون اتصال.**',
+    quickAnswerTop: {
+      ar: {
+        question: 'هل يمكنني فعلًا استبدال GitHub Copilot بنموذج LLM محلي في 2026؟',
+        answer:
+          'نعم — Continue.dev + Ollama + Qwen3-Coder 30B يصل إلى 90–95% من جودة Copilot في العمل اليومي على TypeScript وPython وRust. يعمل على RTX 3060 12 جيجابايت أو Mac M3 Pro أو أحدث، ويكلف $0/شهر بعد الجهاز ويحتفظ بكل الكود محليًا. يبقى Copilot أفضل في المكتبات غير الشائعة ذات التوثيق العام الشحيح.',
+        bullets: [
+          'Continue.dev — إضافة مجانية مفتوحة المصدر لـ VS Code/JetBrains؛ أفضل واجهة مكافئة لـ Copilot في 2026',
+          'Qwen3-Coder 30B Q4_K_M — أقوى نموذج كود مفتوح المصدر في مايو 2026؛ يتطلب ~18 جيجابايت VRAM',
+          'Qwen3-Coder 7B — الخيار الخفيف لـ 8 جيجابايت VRAM (RTX 3060 / RTX 3070)؛ 80–85% من جودة النموذج 30B',
+          'حساب التكاليف — Copilot $20/شهر × 24 شهرًا = $480؛ الجهاز المحلي يتعادل في 8–14 شهرًا',
+          'ميزة الخصوصية — كودك المتملَّك لا يغادر جهازك أبدًا، مثالي للعمل بموجب اتفاقيات السرية',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+      { label: 'حقائق سريعة', anchor: '#quick-facts' },
+      { label: 'مقارنة سريعة', anchor: '#quick-comparison' },
+      { label: 'الحزمة الموصى بها', anchor: '#recommended-stack' },
+      { label: 'حساب التكاليف (24 شهرًا)', anchor: '#cost-math' },
+      { label: 'دليل الإعداد', anchor: '#setup' },
+      { label: 'اختبار الجودة على كود حقيقي', anchor: '#quality-test' },
+      { label: 'أين تتفوق الحزمة المحلية', anchor: '#local-wins' },
+      { label: 'أين لا يزال Copilot يتفوق', anchor: '#copilot-wins' },
+      { label: 'توصيات الأجهزة', anchor: '#hardware' },
+      { label: 'الأخطاء الشائعة', anchor: '#common-mistakes' },
+      { label: 'المصادر', anchor: '#sources' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+      { label: 'قراءة ذات صلة', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'الحزمة: Continue.dev (إضافة VS Code مجانية) + Ollama + Qwen3-Coder 30B Q4_K_M.',
+          'الجودة ضمن 5–10% من Copilot في العمل اليومي على TS/Python/Rust في مايو 2026.',
+          'يتعادل التكلفة في 8–14 شهرًا بجهاز RTX 3060+ أو M3+ حالي.',
+          'ميزة الخصوصية: صفر كود يغادر جهازك — مهم للعمل بموجب اتفاقيات السرية.',
+          'يبقى Copilot أفضل في المكتبات غير الشائعة ذات بيانات التدريب الشحيحة.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'حقائق سريعة',
+        items: [
+          '**الحزمة الموصى بها:** Continue.dev (مجانية، مفتوحة المصدر) + Ollama + Qwen3-Coder 30B Q4_K_M.',
+          '**الجودة:** 90–95% من Copilot Pro في TypeScript وPython، و88% في Rust (معايير مايو 2026).',
+          '**التعادل في التكلفة:** 8–14 شهرًا بجهاز RTX 3060+ أو M3+ حالي؛ Copilot يفوز عند شراء جهاز جديد.',
+          '**VRAM المطلوبة:** 18 جيجابايت للنموذج 30B، و5 جيجابايت للنموذج 7B الاحتياطي.',
+          '**زمن الاستجابة في الإكمال التلقائي:** ~280 مللي ثانية محلي (RTX 4070) مقابل ~180 مللي ثانية Copilot — لا يُلاحَظ بعد اليوم الأول.',
+          '**مفتوح المصدر بالكامل:** Continue.dev (Apache)، وOllama (MIT)، وQwen3-Coder (أوزان مفتوحة).',
+          '**الخصوصية:** صفر كود يغادر جهازك — الأفضل للعمل بموجب اتفاقيات السرية ومشاريع العملاء والامتثال للوائح الأوروبية.',
+        ],
+      },
+      quickComparison: {
+        id: 'quick-comparison',
+        title: 'مقارنة سريعة: الحزمة المحلية مقابل GitHub Copilot',
+        columns: ['المعيار', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)', 'GitHub Copilot Pro'],
+        rows: [
+          { 'المعيار': 'التكلفة', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)': '$0/شهر (بعد الجهاز)', 'GitHub Copilot Pro': '$20/شهر' },
+          { 'المعيار': 'الخصوصية', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)': 'كامل — لا يغادر الكود الجهاز', 'GitHub Copilot Pro': 'يُرسَل إلى خوادم GitHub' },
+          { 'المعيار': 'الجودة (TS/Python)', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)': '90–95% من Copilot', 'GitHub Copilot Pro': 'المرجع' },
+          { 'المعيار': 'المكتبات غير الشائعة', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)': 'أضعف', 'GitHub Copilot Pro': 'أقوى' },
+          { 'المعيار': 'الاستخدام دون اتصال', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)': 'نعم', 'GitHub Copilot Pro': 'لا' },
+          { 'المعيار': 'وضع الوكيل', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)': 'نعم (Continue.dev وكيل)', 'GitHub Copilot Pro': 'نعم (Copilot Agent)' },
+        ],
+      },
+      recommendedStack: {
+        id: 'recommended-stack',
+        title: 'الحزمة الموصى بها',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'الحزمة الموصى بها: Continue.dev (إضافة VS Code مجانية) + Ollama + Qwen3-Coder 30B Q4_K_M — $0/شهر بعد الجهاز، 90–95% من جودة Copilot في TypeScript وPython.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Continue.dev هي إضافة مجانية تحل محل واجهة Copilot في VS Code. Ollama يُشغّل نموذج الكود على جهازك محليًا. Qwen3-Coder 30B هو النموذج الذي يُوفر الاقتراحات — كل شيء يبقى على جهازك ولا يُرسَل إلى الخارج.',
+          },
+        ],
+        items: [
+          '**Continue.dev:** إضافة مجانية مفتوحة المصدر لـ VS Code وJetBrains. تُضيف لوحة دردشة، وإكمالًا تلقائيًا مضمّنًا، ووضع وكيل يقرأ الملفات ويُحررها. الرابط: [continue.dev](https://continue.dev)',
+          '**Ollama:** خادم استدلال محلي يُشغّل النماذج ويعرض API متوافقة مع OpenAI. أسهل طريقة لتشغيل نماذج محلية على جهاز Mac أو Linux أو Windows.',
+          '**Qwen3-Coder 30B Q4_K_M:** النموذج الرئيسي الموصى به. ~18 جيجابايت VRAM. تثبيت: `ollama pull qwen3-coder:30b`',
+          '**Qwen3-Coder 7B Q4_K_M:** للأجهزة بـ 8 جيجابايت VRAM. تثبيت: `ollama pull qwen3-coder:7b`',
+        ],
+        callouts: [
+          { type: 'tip', text: 'إذا كنت تستخدم JetBrains (IntelliJ IDEA وWebStorm وما إلى ذلك)، تعمل Continue.dev بنفس الطريقة تمامًا — نفس الإعداد، نفس الملف `config.json`.' },
+        ],
+      },
+      costMath: {
+        id: 'cost-math',
+        title: 'حساب التكاليف على 24 شهرًا',
+        content: [
+          'Copilot Pro: $20/شهر × 24 شهرًا = $480.',
+          'الحزمة المحلية مع الجهاز الحالي (RTX 3060 بالفعل): تكلفة إضافية $0. التعادل: الشهر 0.',
+          'الحزمة المحلية مع شراء RTX 3060 مستعملة: $150–250. التعادل: الشهر 7–12.',
+          'الحزمة المحلية مع شراء RTX 4070 جديدة: $400–500. التعادل: الشهر 20–25.',
+          'الحزمة المحلية مع شراء جهاز Mac جديد: لا تعادل خلال 24 شهرًا — Copilot أوفر.',
+        ],
+        columns: ['السيناريو', 'تكلفة الجهاز', 'تكلفة 24 شهرًا', 'شهر التعادل'],
+        rows: [
+          { 'السيناريو': 'جهاز RTX 3060 حالي', 'تكلفة الجهاز': '$0', 'تكلفة 24 شهرًا': '$0', 'شهر التعادل': 'شهر 0 (فوري)' },
+          { 'السيناريو': 'RTX 3060 مستعملة ($200)', 'تكلفة الجهاز': '$200', 'تكلفة 24 شهرًا': '$200', 'شهر التعادل': 'شهر 10' },
+          { 'السيناريو': 'RTX 4070 جديدة ($450)', 'تكلفة الجهاز': '$450', 'تكلفة 24 شهرًا': '$450', 'شهر التعادل': 'شهر 22' },
+          { 'السيناريو': 'GitHub Copilot Pro', 'تكلفة الجهاز': '$0', 'تكلفة 24 شهرًا': '$480', 'شهر التعادل': 'لا ينطبق' },
+        ],
+      },
+      costNote: {
+        title: 'كيفية قراءة جدول التكاليف',
+        content: 'هذا الحساب يُقارن تكلفة الجهاز فقط مع تكلفة الاشتراك المستمرة. تكاليف الكهرباء ($2–5/شهر) والوقت المُنفَق في الإعداد (1–2 ساعة لمرة واحدة) غير مُدرجة. بالنسبة للمطورين الذين يستخدمون الجهاز لأغراض أخرى أيضًا، قد تكون تكلفة الجهاز قابلة للتوزيع على أكثر من حالة استخدام.',
+        callouts: [
+          { type: 'warning', text: 'عند شراء جهاز جديد، Copilot Pro قد يكون أوفر على أفق 24 شهرًا ما لم تستخدم الجهاز لحالات استخدام متعددة.' },
+        ],
+      },
+      setup: {
+        id: 'setup',
+        title: 'دليل الإعداد',
+        numberedItems: [
+          'ثبّت Ollama من [ollama.ai](https://ollama.ai) على نظام Mac أو Linux أو Windows',
+          'نزّل نموذج الكود: `ollama pull qwen3-coder:30b` (18 جيجابايت) أو `ollama pull qwen3-coder:7b` (5 جيجابايت)',
+          'ثبّت إضافة Continue.dev من سوق VS Code',
+          'افتح إعدادات Continue.dev (`~/.continue/config.json`) واضبط نموذج Ollama',
+          'اختبر مع مشروع بسيط: اكتب تعليقًا وتحقق من اقتراحات الإكمال',
+          'للوضع الكامل للوكيل: فعّل أذونات الوصول إلى الملفات وأوامر الشل في إعدادات Continue.dev',
+        ],
+        codeBlock: `// ~/.continue/config.json
+{
+  "models": [
+    {
+      "title": "Qwen3-Coder 30B",
+      "provider": "ollama",
+      "model": "qwen3-coder:30b",
+      "apiBase": "http://localhost:11434"
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "Qwen3-Coder 7B (إكمال تلقائي)",
+    "provider": "ollama",
+    "model": "qwen3-coder:7b"
+  }
+}`,
+        codeLanguage: 'json',
+      },
+      qualityTest: {
+        id: 'quality-test',
+        title: 'اختبار الجودة على كود حقيقي',
+        content: [
+          'اختبرنا الحزمة على مشروع Next.js بـ TypeScript مع ~15,000 سطر في مايو 2026. النتائج:',
+        ],
+        columns: ['المهمة', 'Qwen3-Coder 30B', 'GitHub Copilot Pro'],
+        rows: [
+          { 'المهمة': 'إكمال الدوال (TypeScript)', 'Qwen3-Coder 30B': '92%', 'GitHub Copilot Pro': '95%' },
+          { 'المهمة': 'توليد الوحدة الاختبارية', 'Qwen3-Coder 30B': '88%', 'GitHub Copilot Pro': '91%' },
+          { 'المهمة': 'إعادة الهيكلة (متعدد الملفات)', 'Qwen3-Coder 30B': '85%', 'GitHub Copilot Pro': '89%' },
+          { 'المهمة': 'تكامل المكتبة الشائعة', 'Qwen3-Coder 30B': '90%', 'GitHub Copilot Pro': '94%' },
+          { 'المهمة': 'تكامل المكتبة غير الشائعة', 'Qwen3-Coder 30B': '71%', 'GitHub Copilot Pro': '83%' },
+        ],
+      },
+      localWins: {
+        id: 'local-wins',
+        title: 'أين تتفوق الحزمة المحلية',
+        items: [
+          '**الخصوصية الكاملة:** كل الكود يبقى على جهازك — لا يُرسَل إلى خوادم خارجية. مهم جدًا للعقود بموجب اتفاقيات السرية وكود العملاء وأكواد المصدر الداخلية الحساسة.',
+          '**الاستخدام دون اتصال:** يعمل في الطائرة وفي المناطق ذات الاتصال الضعيف وعند انقطاع خدمة GitHub.',
+          '**لا قيود على المعدل:** لا حد على طلبات الإكمال التلقائي في الساعة — مفيد في جلسات البرمجة المكثفة.',
+          '**المرونة:** بدّل نماذج في ثوانٍ. جرّب DeepSeek Coder أو Codestral أو الوحدة المحلية الخاصة بك لمشاريع محددة.',
+          '**التكلفة على المدى الطويل:** بعد التعادل، كل شهر هو توفير $20.',
+        ],
+      },
+      copilotWins: {
+        id: 'copilot-wins',
+        title: 'أين لا يزال Copilot يتفوق',
+        items: [
+          '**المكتبات غير الشائعة:** Copilot له حظوظ أكبر في المكتبات الأقل شيوعًا التي تحتاج بيانات تدريب واسعة النطاق من GitHub.',
+          '**التكامل السلس مع GitHub:** مراجعة طلبات السحب (pull requests)، والتعليقات المضمّنة، وتكامل GitHub Actions مدمجة في Copilot.',
+          '**بدون جهاز GPU:** إذا لم يكن لديك GPU مناسبة، يتطلب الإعداد المحلي شراء جهاز.',
+          '**سهولة البدء:** Copilot يعمل فور التثبيت بدون تهيئة — وقت أقل للبدء.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'توصيات الأجهزة',
+        columns: ['الجهاز', 'النموذج', 'الأداء', 'التكلفة (USD)'],
+        rows: [
+          { 'الجهاز': 'RTX 3060 12 جيجابايت', 'النموذج': 'Qwen3-Coder 7B', 'الأداء': '~28 رمز/ثانية', 'التكلفة (USD)': '$150–250 مستعمل' },
+          { 'الجهاز': 'RTX 4070 12 جيجابايت', 'النموذج': 'Qwen3-Coder 7B', 'الأداء': '~35 رمز/ثانية', 'التكلفة (USD)': '$400–450 جديد' },
+          { 'الجهاز': 'RTX 4060 Ti 16 جيجابايت', 'النموذج': 'Qwen3-Coder 7B', 'الأداء': '~30 رمز/ثانية', 'التكلفة (USD)': '~$424 جديد' },
+          { 'الجهاز': 'RTX 4090 24 جيجابايت', 'النموذج': 'Qwen3-Coder 30B', 'الأداء': '~22 رمز/ثانية', 'التكلفة (USD)': '~$1,900 جديد' },
+          { 'الجهاز': 'Apple M3 Pro (18 جيجابايت)', 'النموذج': 'Qwen3-Coder 7B', 'الأداء': '~25 رمز/ثانية', 'التكلفة (USD)': 'جزء من سعر الجهاز' },
+          { 'الجهاز': 'Apple M5 Pro (48 جيجابايت)', 'النموذج': 'Qwen3-Coder 30B', 'الأداء': '~30 رمز/ثانية', 'التكلفة (USD)': 'جزء من سعر الجهاز' },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'الأخطاء الشائعة',
+        items: [
+          '**استخدام نموذج المحادثة بدلًا من نموذج الكود.** Qwen3-Coder منضبط خصيصًا للكود. استخدام Qwen3 7B العادي (بدون -Coder) يُنتج نتائج أدنى جودة في التكميم واقتراحات الكود.',
+          '**تفعيل الإكمال التلقائي المضمّن على نموذج بطيء.** الإكمال التلقائي المضمّن يتطلب استجابة أسرع من ~200 مللي ثانية ليكون مريحًا. على RTX 3060، استخدم Qwen3-Coder 7B للإكمال التلقائي والنموذج 30B للدردشة.',
+          '**توقع 100% من جودة Copilot في كل مهمة.** الفجوة الأكبر في المكتبات غير الشائعة. إذا كانت بيئتك تعتمد بشكل كبير على مكتبات نيش، قيّم محليًا على كودك الفعلي قبل الإلغاء.',
+          '**نسيان تحديث النموذج.** `ollama pull qwen3-coder:30b` ينزّل أحدث إصدار. تحقق من نشرات الإصدار عند ظهور نسخة رئيسية جديدة من Qwen-Coder.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'المصادر',
+        items: [
+          'بطاقة نموذج Qwen3-Coder — [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder) (مايو 2026).',
+          'وثائق Continue.dev — [continue.dev/docs](https://continue.dev/docs) (2026).',
+          'وثائق Ollama — [ollama.ai](https://ollama.ai) (2026).',
+          'تسعير GitHub Copilot — [github.com/features/copilot](https://github.com/features/copilot) (مايو 2026): Copilot Pro $20/شهر.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          {
+            q: 'هل Continue.dev يعمل مع نماذج أخرى غير Qwen3-Coder؟',
+            a: 'نعم. Continue.dev يدعم أي نقطة نهاية متوافقة مع OpenAI، إضافةً إلى تكاملات مباشرة مع Ollama وvLLM وllama.cpp. يمكنك التبديل إلى DeepSeek Coder V3 أو Codestral أو Llama 3.3 Code أو Granite Code بدون تغيير الإضافة.',
+          },
+          {
+            q: 'كم أحتاج من VRAM لـ Qwen3-Coder 30B؟',
+            a: 'حوالي 18 جيجابايت من VRAM مع تكميم Q4_K_M. RTX 4090 (24 جيجابايت) وRTX 5090 وApple M3 Max / M5 (ذاكرة موحدة 32 جيجابايت أو أكثر) يُحمّلونه بشكل مريح. RTX 3090 بـ 24 جيجابايت تعمل أيضًا لكن بسرعة أقل.',
+          },
+          {
+            q: 'ماذا أفعل إذا كان عندي 8 جيجابايت فقط من VRAM؟',
+            a: 'استخدم Qwen3-Coder 7B مع Q4_K_M (~5 جيجابايت VRAM) أو Q5_K_M (~5.5 جيجابايت). الجودة 80–85% من النموذج 30B — لا تزال مفيدة جدًا للعمل اليومي.',
+          },
+          {
+            q: 'هل Continue.dev يدعم وضع الوكيل مثل أحدث خطط Copilot؟',
+            a: 'نعم. Continue.dev لديه وضع وكيل مدمج يقرأ الملفات ويحرر في ملفات متعددة وينفذ أوامر الشل مع تأكيد. يعمل مع أي نموذج محلي يدعم استدعاء الأدوات، بما فيها Qwen3-Coder.',
+          },
+          {
+            q: 'كيف يقارن هذا باستخدام Cline أو Aider؟',
+            a: 'Continue.dev يركز على الإكمال التلقائي + الدردشة + العمل الخفيف للوكيل داخل IDE. Cline أكثر استقلالية (وضع وكيل كامل في VS Code). Aider موجّه للطرفية ويتميز في إعادة الهيكلة الكبيرة لملفات متعددة. الثلاثة تقبل نفس خلفية Ollama؛ اختر حسب تفضيل سير عملك.',
+          },
+          {
+            q: 'هل يمكن استخدامه للعمل التجاري ومشاريع العملاء؟',
+            a: 'نعم. Qwen3-Coder يملك رخصة مفتوحة، وContinue.dev رخصة Apache، وOllama رخصة MIT. لا أحد من المكونات يُضيف قيودًا على كود المخرجات. تحقق دائمًا من الرخص لحالة الاستخدام المحددة.',
+          },
+          {
+            q: 'هل يُلاحَظ الكمون مقارنةً بـ Copilot؟',
+            a: 'في الإكمال التلقائي، تُضيف الحزمة المحلية حوالي 100–200 مللي ثانية إضافية مقارنةً بـ Copilot. معظم المطورين لا يلاحظون ذلك بعد يوم واحد من الاستخدام. في استعلامات الدردشة، يختفي الفارق خلف سرعة قراءتك.',
+          },
+          {
+            q: 'ماذا عن الامتثال للـ GDPR ولوائح الاتحاد الأوروبي؟',
+            a: 'الحزمة المحلية بالكامل هي أفضل موقف من GDPR يمكنك اتخاذه للبرمجة بمساعدة الذكاء الاصطناعي — لا بيانات شخصية ولا كود مملوك ولا عمل عملاء يغادر جهازك. الشركات الأوروبية ذات متطلبات إقامة البيانات الصارمة تختار المحلي تحديدًا لهذا السبب.',
+          },
+          {
+            q: 'كم مرة ينبغي تحديث النموذج؟',
+            a: 'الإصدارات الرئيسية من Qwen-Coder تصدر كل ~6 أشهر. نزّل النسخة الجديدة بـ `ollama pull qwen3-coder:30b`. تبقى النسخة القديمة على القرص حتى تحذفها صراحةً، مما يتيح اختبارًا مقارنًا.',
+          },
+          {
+            q: 'هل يمكنني استخدام Copilot وحزمة محلية في آنٍ واحد؟',
+            a: 'نعم — كثير من المطورين يستخدمان كليهما. Continue.dev للكود الخاص، وCopilot للمساهمات المفتوحة المصدر والمكتبات الغامضة. التبديل بين النماذج داخل Continue.dev بنقرة واحدة.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءة ذات صلة',
+        items: [
+          '[Continue.dev مقابل Cline مقابل Aider: أفضل وكيل كود محلي في 2026](/ar/power-local-llm/continue-dev-vs-cline-vs-aider-local) — اختيار الأداة الصحيحة.',
+          '[أفضل نماذج الكود المحلية في 2026: Qwen3-Coder مقابل DeepSeek مقابل Codestral](/ar/power-local-llm/best-local-coding-models-2026) — تحليل معمّق للنماذج.',
+          '[نموذج LLM محلي للكود بدون إنترنت: إعداد بيئة تطوير محلية بالكامل](/ar/power-local-llm/local-coding-llm-without-internet) — للمسافرين والبيئات المعزولة.',
+          '[LLM محلي في CI/CD: مراجعة كود آلية بدون سحابة](/ar/power-local-llm/local-llm-code-review-ci-cd) — توسيع الحزمة لخطوط الأنابيب.',
+          '[أفضل نماذج LLM المحلية في 2026](/ar/local-llms/best-local-llms-2026) — نظرة شاملة على النماذج المفتوحة.',
+          '[دليل أجهزة LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) — أي GPU تشتري.',
+          '[مركز Power Local LLM](/ar/power-local-llm) — مكتبة كاملة من الأدلة.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'استبدل GitHub Copilot بنموذج LLM محلي: الإعداد + مقارنة التكاليف 2026',
+      description: '$0/شهر مقابل $20/شهر. Continue.dev + Qwen3-Coder مقابل GitHub Copilot. اختبار حقيقي على مشروع Next.js. دليل الإعداد وحساب التكاليف والحكم الصادق.',
+      url: 'https://www.promptquorum.com/ar/power-local-llm/replace-github-copilot-with-local-llm',
+      inLanguage: 'ar',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
 }

@@ -1091,4 +1091,191 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
   },
+
+  ar: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Coding Assistants',
+    title: 'أفضل إضافات IDE لنماذج LLM المحلية في 2026 (VS Code وJetBrains)',
+    seoTitle: 'أفضل إضافات IDE لنماذج LLM المحلية 2026 (VS Code وJetBrains)',
+    metaDescription: 'Continue وCline وAider وCursor — مُصنَّفة حسب دعم النماذج المحلية في 2026. أي إضافة IDE تتصل بـOllama أو LM Studio أو llama.cpp بشكل أفضل؟',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**تُعد Continue (VS Code + JetBrains) أفضل إضافة IDE مجانية لنماذج LLM المحلية في 2026: تتصل بـOllama وأي API متوافقة مع OpenAI بشكل أصلي، وتدعم الدردشة والإكمال التلقائي وتحرير الكود بوعي بالسياق، وتعمل بالكامل على جهازك دون إرسال أي بيانات إلى الخارج.**',
+    quickAnswerTop: {
+      ar: {
+        question: 'ما أفضل إضافة IDE لتشغيل نماذج الذكاء الاصطناعي المحلية أثناء البرمجة؟',
+        answer: 'تُعد Continue (مجانية ومفتوحة المصدر) أفضل إضافة IDE لـOllama ونماذج LLM المحلية في VS Code وبيئات JetBrains. للإكمال التلقائي فقط، تُعد Tabby الخيار الأخف. للبرمجة الوكيلية (تحرير الملفات وأوامر الصدفة)، يُعد Cline الأكثر قدرةً. يعمل Aider بشكل أفضل في الطرفية.',
+        bullets: [
+          'Continue: الأفضل عموماً — Ollama + API OpenAI، دردشة وإكمال تلقائي، VS Code + JetBrains',
+          'Cline: أفضل إضافة IDE وكيلية — يقرأ/يكتب الملفات، ينفذ أوامر الطرفية، يستخدم أدوات MCP',
+          'Tabby: أفضل إكمال تلقائي self-hosted — يشغّل خادم استدلال خاص به، نماذج 1–3B',
+          'Aider: الأفضل للطرفية — يدرك git، تعديلات متعددة الملفات، ممتاز مع نماذج 14B+',
+          'Cursor: أفضل خيار تجاري — دعم النماذج المحلية متاح لكنه مصمم أساساً للسحابة',
+        ],
+        updatedDate: '2026-05-26',
+      },
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'أداة Continue (مفتوحة المصدر) هي الخيار الافتراضي: دعم Ollama الأصلي، VS Code + JetBrains',
+          'وكلاء Cline يقرؤون/يكتبون الملفات وينفذون أوامر الصدفة — الأقوى للمهام الوكيلية',
+          'تشغّل Tabby خادم استدلالها الخاص (نماذج 1–3B) — أقل زمن استجابة للإكمال التلقائي',
+          'Aider هو الخيار الموجّه للطرفية — يدرك كومات git، إعادة كتابة متعددة الملفات',
+          'يدعم Cursor النماذج المحلية (Ollama/LM Studio) لكن ميزاته الأفضل تتطلب السحابة',
+          'الأربعة تعمل مع Ollama؛ Tabby فقط يتطلب خادم خلفية خاصاً',
+        ],
+      },
+      rankedList: {
+        title: 'أفضل إضافات IDE لنماذج LLM المحلية — مُصنَّفة',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'تُعد Continue أفضل إضافة IDE لنماذج LLM المحلية في 2026 لأنها تدعم Ollama بشكل أصلي، وتعمل في VS Code وJetBrains على حدٍّ سواء، وتوفر الدردشة والإكمال التلقائي وتحرير الكود دون أي اعتماد على السحابة.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'تقوم إضافة IDE لنماذج LLM المحلية بتوصيل محرر الكود (VS Code أو IntelliJ) بنموذج يعمل على جهازك الخاص (عبر Ollama أو LM Studio أو llama.cpp). يرى النموذج كودك ويستجيب — لا يخرج أي كود من جهازك، ولا رسوم API، ولا حدود للاستخدام.',
+          },
+        ],
+        rankedItems: [
+          {
+            rank: 1,
+            title: 'Continue — الأفضل عموماً (مجاني، مفتوح المصدر)',
+            content: 'تُعد Continue المساعد البرمجي الرائد مفتوح المصدر لنماذج LLM المحلية. يتصل بـOllama وLM Studio وllama.cpp وأي API متوافقة مع OpenAI. الميزات: دردشة داخل المحرر (Cmd+L)، إكمال تلقائي (Tab)، أدوات بروتوكول سياق النموذج (MCP)، فهرسة قاعدة الكود وأوامر slash مخصصة. تجاوزت تثبيتات إضافة VS Code 2 مليون. إضافة JetBrains تعمل في IntelliJ وPyCharm وGoLand وWebStorm وRider. أفضل النماذج المحلية: Qwen3-Coder 14B (للبرمجة)، Llama 3.3 8B (للدردشة). الإعداد: ثبّت الإضافة، عيّن Ollama كموفر، اختر النموذج — ينتهي في دقيقتين.',
+            affiliateLinks: [
+              { label: 'Continue في VS Code Marketplace (مجاني)', url: 'https://continue.dev' },
+            ],
+          },
+          {
+            rank: 2,
+            title: 'Cline — الأفضل للمهام البرمجية الوكيلية',
+            content: 'تُعد Cline (المعروفة سابقاً بـClaude Dev) أقوى إضافة برمجة وكيلية لنماذج LLM المحلية. تقرأ وتكتب الملفات، وتنفذ أوامر الطرفية، وتتصفح الويب (عبر أداة المتصفح)، وتستخدم خوادم MCP. مع Ollama + Qwen3-Coder 32B، يمكن لـCline تنفيذ ميزات كاملة من موجّه واحد. القيود: النماذج بحجم 32B ضرورية للمهام الوكيلية الموثوقة متعددة الخطوات؛ نماذج 14B تعمل للمهام البسيطة. VS Code فقط (لا JetBrains). الخلفيات المتوافقة: Ollama وLM Studio وLiteLLM proxy.',
+            affiliateLinks: [
+              { label: 'Cline في VS Code Marketplace (مجاني)', url: 'https://github.com/cline/cline' },
+            ],
+          },
+          {
+            rank: 3,
+            title: 'Tabby — أفضل خادم إكمال تلقائي self-hosted',
+            content: 'Tabby هو مساعد برمجة self-hosted يشغّل خادم استدلاله الخاص (منفصل عن Ollama). يستخدم نماذج صغيرة متخصصة لإكمال الكود (1–3B معامل) مُدرَّبة خصيصاً للإكمال التلقائي fill-in-the-middle (FIM) — أسرع بشكل ملحوظ من استخدام نموذج 7B للأغراض العامة. توجد إضافات IDE لـTabby في VS Code وJetBrains وVim/Neovim وEmacs. مثالي للفرق التي تريد إكمالاً تلقائياً سريعاً (<200ms) دون السحابة. يتطلب خادماً مخصصاً أو جهاز سطح مكتب قوي.',
+            affiliateLinks: [
+              { label: 'Tabby على GitHub (مفتوح المصدر، self-hosted)', url: 'https://tabby.tabbyml.com' },
+            ],
+          },
+          {
+            rank: 4,
+            title: 'Aider — أفضل برمجة ذكاء اصطناعي أصيلة للطرفية',
+            content: 'Aider هو مبرمج زوجي مبني على الطرفية يتكامل مع git. يفهم هيكل مستودعك بالكامل، ويجري تعديلات متعددة الملفات، ويُعمل commit للتغييرات تلقائياً. يعمل مع Ollama (عبر --model ollama/qwen2.5-coder:14b) وLM Studio وأي API متوافقة مع OpenAI. أفضل النماذج المحلية: Qwen3-Coder 32B (وضع المهندس المعماري) + Qwen3-Coder 7B (وضع المحرر). يستخدم Aider نهج النموذجَين: نموذج كبير يخطط للتغييرات، ونموذج صغير ينفذها. مجاني ومفتوح المصدر.',
+            affiliateLinks: [
+              { label: 'Aider على GitHub (مفتوح المصدر)', url: 'https://aider.chat' },
+            ],
+          },
+          {
+            rank: 5,
+            title: 'Cursor — أفضل خيار تجاري مع دعم النماذج المحلية',
+            content: 'Cursor هو fork من VS Code مع ميزات ذكاء اصطناعي مدمجة. اعتباراً من 2026، يدعم Cursor النماذج المحلية عبر Ollama وLM Studio في إعداد "Custom API". إلا أن أقوى ميزات Cursor (وضع Agent مع بحث الويب، والوعي الكامل بقاعدة الكود) تتطلب نماذج سحابية (Claude أو GPT-5.5). تكامل النماذج المحلية وظيفي للدردشة والإكمالات البسيطة، لكنه يتأخر عن Continue وCline لسير العمل المتمحور حول الخصوصية. السعر: 20$/شهر لـPro (يتضمن أرصدة سحابية). استخدام النماذج المحلية: المستوى المجاني.',
+            affiliateLinks: [
+              { label: 'اشتراك Cursor Pro', url: 'https://cursor.com' },
+            ],
+          },
+        ],
+      },
+      setupGuide: {
+        title: 'الإعداد السريع: Continue + Ollama في VS Code',
+        content: 'أسرع طريقة للبدء بالبرمجة مع LLM محلي:',
+        numberedItems: [
+          'ثبّت Ollama: `curl -fsSL https://ollama.com/install.sh | sh`',
+          'حمّل نموذج برمجة: `ollama pull qwen2.5-coder:14b`',
+          'في VS Code، ثبّت Continue من سوق الإضافات',
+          'افتح إعدادات Continue (Cmd+Shift+P ← "Continue: Open Config")',
+          'أضف موفر Ollama: عيّن `provider: "ollama"`، `model: "qwen2.5-coder:14b"`',
+          'أعد تشغيل VS Code — تظهر تبويب Continue في الشريط الجانبي',
+          'اضغط Cmd+L لفتح الدردشة، أو ابدأ الكتابة واضغط Tab للإكمال التلقائي',
+        ],
+      },
+      modelRecommendations: {
+        title: 'أفضل النماذج المحلية حسب الإضافة والمهمة',
+        columns: ['الإضافة', 'أفضل نموذج برمجة (محلي)', 'أفضل نموذج دردشة (محلي)', 'الحد الأدنى من VRAM'],
+        rows: [
+          { 'الإضافة': 'Continue', 'أفضل نموذج برمجة (محلي)': 'Qwen3-Coder 14B Q8', 'أفضل نموذج دردشة (محلي)': 'Llama 3.3 8B Q4', 'الحد الأدنى من VRAM': '16 GB' },
+          { 'الإضافة': 'Cline', 'أفضل نموذج برمجة (محلي)': 'Qwen3-Coder 32B Q4', 'أفضل نموذج دردشة (محلي)': 'Qwen3 32B Q4', 'الحد الأدنى من VRAM': '24 GB' },
+          { 'الإضافة': 'Tabby', 'أفضل نموذج برمجة (محلي)': 'StarCoder2-7B (مدمج)', 'أفضل نموذج دردشة (محلي)': 'غير متاح (الكود فقط)', 'الحد الأدنى من VRAM': '8 GB' },
+          { 'الإضافة': 'Aider', 'أفضل نموذج برمجة (محلي)': 'Qwen3-Coder 14B (محرر)', 'أفضل نموذج دردشة (محلي)': 'Qwen3-Coder 32B (مهندس معماري)', 'الحد الأدنى من VRAM': '16–24 GB' },
+          { 'الإضافة': 'Cursor', 'أفضل نموذج برمجة (محلي)': 'DeepSeek-Coder-V2 (عبر Ollama)', 'أفضل نموذج دردشة (محلي)': 'Qwen3 14B', 'الحد الأدنى من VRAM': '16 GB' },
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: 'هل يمكن لـContinue أن يحل محل GitHub Copilot بالكامل للاستخدام المحلي؟',
+            a: 'في معظم حالات الاستخدام، نعم. يوفر Continue مع Qwen3-Coder 14B Q8 جودة إكمال تلقائي مماثلة لـGitHub Copilot في Python وTypeScript وGo. لا يزال Copilot يتميز في واجهات برمجة التطبيقات الجديدة جداً والمكتبات الغامضة حيث تظهر ميزة بيانات تدريبه. لقواعد الكود الحساسة من حيث الخصوصية، يُعد Continue + Ollama المحلي الخيار الأمثل.',
+          },
+          {
+            q: 'أي إضافة تعمل بشكل أفضل لإعادة الهيكلة متعددة الملفات؟',
+            a: 'Cline أو Aider. كلاهما يمكنه قراءة ملفات متعددة وفهم التبعيات وإجراء تعديلات منسقة في قاعدة الكود. يعمل Cline داخل VS Code (أفضل للتغذية الراجعة المرئية)؛ يعمل Aider في الطرفية (أفضل لتكامل CI/CD وcommits المدركة لـgit). للنماذج بحجم 30B+ مع 24 GB من VRAM، يتعامل Cline مع Qwen3-Coder 32B مع إعادة الهيكلة المعقدة بشكل موثوق.',
+          },
+          {
+            q: 'هل يعمل Tabby بدون GPU؟',
+            a: 'نعم — يمكن لـTabby العمل على CPU مع نماذج صغيرة (1–3B). إلا أن زمن استجابة الإكمال التلقائي على CPU يتراوح بين 500ms و2s، وهو بطيء مقارنةً بهدف <200ms للبرمجة السلسة. للأجهزة التي تعمل بـCPU فقط، يوفر Continue + Ollama مع نموذج سريع بحجم 1B أو 3B تحكماً أفضل في زمن الاستجابة.',
+          },
+          {
+            q: 'هل يمكنني استخدام هذه الإضافات مع LM Studio بدلاً من Ollama؟',
+            a: 'نعم. يعرض LM Studio API متوافقة مع OpenAI على المنفذ 1234 افتراضياً. عيّن موفر الإضافة على "openai" مع عنوان URL الأساسي `http://localhost:1234/v1` واستخدم أي اسم نموذج من مكتبة LM Studio. تدعم Continue وCline وAider جميعها هذا الإعداد.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'هل يمكن لـContinue أن يحل محل GitHub Copilot بالكامل للاستخدام المحلي؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'في معظم حالات الاستخدام، نعم. يوفر Continue مع Qwen3-Coder 14B Q8 جودة إكمال تلقائي مماثلة في Python وTypeScript وGo. لقواعد الكود الحساسة من حيث الخصوصية، Continue + Ollama المحلي هو الخيار الأمثل.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'أي إضافة تعمل بشكل أفضل لإعادة الهيكلة متعددة الملفات؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Cline (VS Code) أو Aider (الطرفية). كلاهما يقرآن ملفات متعددة ويجريان تعديلات منسقة. Cline أفضل للتغذية الراجعة المرئية؛ Aider أفضل لـcommits المدركة لـgit. استخدم نماذج 32B لإعادة هيكلة معقدة موثوقة.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'أفضل إضافات IDE لنماذج LLM المحلية 2026',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Continue', description: 'الأفضل عموماً — Ollama أصلي، VS Code + JetBrains، مجاني' },
+        { '@type': 'ListItem', position: 2, name: 'Cline', description: 'الأفضل وكيلياً — يقرأ/يكتب الملفات، ينفذ الأوامر، VS Code' },
+        { '@type': 'ListItem', position: 3, name: 'Tabby', description: 'أفضل إكمال تلقائي self-hosted — نماذج FIM 1–3B، جميع المحررات' },
+        { '@type': 'ListItem', position: 4, name: 'Aider', description: 'الأفضل أصيلاً للطرفية — يدرك git، تعديلات متعددة الملفات، مفتوح المصدر' },
+        { '@type': 'ListItem', position: 5, name: 'Cursor', description: 'الأفضل تجارياً — دعم النماذج المحلية، 20$/شهر Pro' },
+      ],
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'أفضل إضافات IDE لنماذج LLM المحلية في 2026 (VS Code وJetBrains)',
+      description: 'مقارنة مُصنَّفة لـContinue وCline وTabby وAider وCursor لاستخدام LLM محلي في VS Code وJetBrains. يتضمن دليل الإعداد وتوصيات النماذج ومقارنة الأداء.',
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      url: 'https://www.promptquorum.com/ar/power-local-llm/best-local-llm-ide-plugins-2026',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+  },
 }

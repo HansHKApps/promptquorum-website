@@ -1625,4 +1625,252 @@ while True:
       ],
     },
   },
+
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-26',
+    dateModified: '2026-05-26',
+    next_refresh_due: '2026-11-26',
+    theme: 'Local AI Agents & Tool Use',
+    title: 'WeChat + نموذج لغة محلي: دليل المطور 2026',
+    seoTitle: 'تكامل WeChat مع نموذج لغة محلي 2026 | جسر API لـ Ollama',
+    intro:
+      'يتيح لك ربط WeChat بنموذج لغة محلي الحصول على مساعد ذكاء اصطناعي خاص داخل تطبيق المراسلة الأكثر استخدامًا في العالم، دون إرسال رسالة واحدة إلى واجهة API سحابية. يتناول هذا الدليل ثلاثة أنماط تكامل (WeChatFerry على Windows، وجسر HTTP webhook، وخادم mini PC دائم التشغيل)، ويساعدك في اختيار نموذج Qwen المناسب للمحادثات باللغة الصينية، ويشرح كيف يلتزم الاستدلال المحلي بقانون أمن البيانات الصيني.',
+    metaDescription:
+      'اربط WeChat بنموذج لغة محلي في 2026. ثلاثة أنماط: WeChatFerry وHTTP webhook وخادم Ollama على mini PC. Qwen3 7B للغة الصينية. بدون API سحابية.',
+    twitterDescription:
+      'أنشئ جسرًا بين WeChat ونموذج لغة محلي: WeChatFerry أو HTTP webhook أو mini PC. Qwen3 7B للغة الصينية. بدون API سحابية.',
+    gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
+    readTime: '11 دقائق قراءة',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'تكامل WeChat نموذج لغة محلي',
+    targetKeywords: [
+      'wechat llm محلي 2026',
+      'wechat ollama تكامل',
+      'بوت wechat ذكاء اصطناعي محلي',
+      'wechatferry qwen2.5',
+      'wechat llm python محلي',
+    ],
+    leadAnswerBlock:
+      '**اربط WeChat بنموذج لغة محلي عبر تشغيل Ollama على mini PC دائم التشغيل، ثم وجّه رسائل WeChat إلى HTTP API لـ Ollama عبر WeChatFerry (Windows) أو مستمع webhook. Qwen3 7B Q4_K_M هو أفضل نموذج للمحادثات باللغة الصينية في WeChat: ترميز CJK أصلي، 5.5 GB VRAM، و8–15 رمز/ثانية على أجهزة متواضعة.**',
+    quickAnswerTop: {
+      ar: {
+        question: 'كيف أربط WeChat بنموذج لغة محلي؟',
+        answer:
+          'شغّل Ollama على mini PC (أو localhost)، وثبّت WeChatFerry لاعتراض رسائل عميل WeChat PC، واكتب جسر Python يرسل الرسائل إلى HTTP API لـ Ollama على localhost:11434، ثم يُعيد رد النموذج إلى المحادثة. Qwen3 7B Q4_K_M هو النموذج الموصى به للمحادثات باللغة الصينية.',
+        bullets: [
+          'WeChatFerry: ربط WeChat على Windows فقط؛ النهج الأكثر موثوقية لعام 2026',
+          'Ollama HTTP API: POST إلى /api/generate — لا حاجة لبيانات اعتماد سحابية',
+          'Qwen3 7B Q4_K_M: 5.5 GB VRAM، ترميز CJK أصلي، 8–15 رمز/ثانية',
+          'خادم mini PC دائم التشغيل (Minisforum UM890 Pro، ~35 واط): يُبقي البوت متاحًا على مدار الساعة',
+          'الخصوصية: لا تُنقل أي بيانات إلى السحابة — صفر إرسال',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'اربط WeChat بنموذج لغة محلي مع WeChatFerry وOllama: تبقى الرسائل على أجهزتك دون الحاجة إلى API سحابية.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'يوضح هذا الدليل كيفية جعل WeChat يرد تلقائيًا باستخدام نموذج ذكاء اصطناعي محلي يعمل على حاسوبك أو mini PC الخاص بك، دون مغادرة أي بيانات لشبكتك.',
+      },
+    ],
+    toc: [
+      { label: 'النقاط الرئيسية', anchor: 'tldr' },
+      { label: 'أنماط التكامل', anchor: 'integration-patterns' },
+      { label: 'إعداد WeChatFerry', anchor: 'wechatferry' },
+      { label: 'جسر Ollama API', anchor: 'ollama-bridge' },
+      { label: 'خادم mini PC', anchor: 'mini-pc-server' },
+      { label: 'اختيار النموذج للغة الصينية', anchor: 'model-choice' },
+      { label: 'إدارة محادثات المجموعة', anchor: 'group-chat' },
+      { label: 'الخصوصية والامتثال القانوني', anchor: 'privacy' },
+      { label: 'الأسئلة الشائعة', anchor: 'faq' },
+    ],
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'WeChatFerry (Windows) هو الربط الأكثر موثوقية لعميل WeChat PC في 2026: يعمل بجانب WeChat دون تعديل ملفاته الثنائية',
+          'يعرض Ollama HTTP API محليًا على المنفذ 11434: سكريبت Python من 10 أسطر يوجه رسائل WeChat إلى أي نموذج محمّل',
+          'Qwen3 7B Q4_K_M: موصى به للمحادثات باللغة الصينية — 5.5 GB VRAM، ترميز CJK أصلي، 8–15 رمز/ثانية على mini PC',
+          'خادم mini PC دائم التشغيل (Minisforum UM890 Pro، ~35 واط): يُبقي البوت متاحًا على مدار الساعة للمحادثات الجماعية والشخصية',
+          'الاستدلال المحلي: لا تُنقل أي بيانات إلى السحابة — يمتثل للمادة 31 من قانون أمن البيانات الصيني للبيانات الشخصية',
+        ],
+      },
+      integrationPatterns: {
+        id: 'integration-patterns',
+        title: 'ثلاثة أنماط لتكامل WeChat + نموذج لغة محلي',
+        content: [
+          '**النمط 1 — WeChatFerry + Ollama (Windows):** الأكثر استقرارًا. يعترض WeChatFerry عميل WeChat PC الرسمي ويعرض SDK بـ Python. تصل الرسائل كأحداث؛ يستدعي سكريبتك HTTP API لـ Ollama ويُعيد الرد. يعمل للمحادثات الشخصية والجماعية. يتطلب Windows مع تثبيت WeChat PC.',
+          '**النمط 2 — جسر HTTP webhook:** يشغّل خادم HTTP محليًا يستقبل استدعاءات webhook من بوابة WeChat تابعة لطرف ثالث. أكثر تعقيدًا في الإعداد، لكنه يعمل على منصات متعددة. مناسب للشركات التي لديها بنية تحتية لـ WeChat Official Account.',
+          '**النمط 3 — Ollama + إعادة توجيه Open WebUI:** يستخدم ميزة إشعارات WeChat في Open WebUI (عند توفرها) لإرسال ملخصات أو ردود إلى حساب WeChat شخصي. خفيف ولا يحتاج ربطًا، لكنه يدعم الإشعارات أحادية الاتجاه فقط.',
+          'بالنسبة لمعظم المستخدمين — خاصة في الصين بحسابات شخصية — النمط 1 (WeChatFerry + Ollama) هو الخيار الصحيح لعام 2026.',
+        ],
+      },
+      wechatferry: {
+        id: 'wechatferry',
+        title: 'إعداد WeChatFerry: خطوة بخطوة',
+        numberedItems: [
+          'ثبّت WeChat PC (الإصدار الرسمي من weixin.qq.com) على Windows',
+          'ثبّت WeChatFerry: `pip install wcferry` (Python 3.10+)',
+          'ابدأ daemon لـ WeChatFerry: `python -m wcferry.daemon`',
+          'اكتب معالج الرسائل: `from wcferry import Wcf; wcf = Wcf(); wcf.enable_receiving_msg()`',
+          'في حلقة الرسائل، أرسل POST إلى Ollama: `requests.post("http://localhost:11434/api/generate", json={"model":"qwen2.5:7b","prompt":msg.content})`',
+          'أرسل الرد: `wcf.send_text(response["response"], msg.roomid or msg.sender)`',
+          'اختبر برسالة شخصية؛ تحقق من ظهور الرد في WeChat خلال 2–5 ثوانٍ',
+        ],
+        codeBlock: `import requests
+from wcferry import Wcf
+
+wcf = Wcf()
+wcf.enable_receiving_msg()
+
+while True:
+    msg = wcf.get_msg()
+    if msg and msg.from_self() is False:
+        resp = requests.post(
+            "http://localhost:11434/api/generate",
+            json={"model": "qwen2.5:7b", "prompt": msg.content, "stream": False}
+        ).json()
+        wcf.send_text(resp["response"], msg.roomid or msg.sender)`,
+        codeLanguage: 'python',
+      },
+      ollamaBridge: {
+        id: 'ollama-bridge',
+        title: 'Ollama HTTP API: نقاط النهاية الرئيسية',
+        content: [
+          'يشغّل Ollama خادم REST محليًا على `http://localhost:11434` بعد `ollama serve`. لا مصادقة مطلوبة للاتصالات المحلية.',
+          '**التوليد (دور واحد):** `POST /api/generate` — الجسم: `{model, prompt, stream: false}` — يُعيد `{response, done}`',
+          '**الدردشة (متعددة الأدوار):** `POST /api/chat` — الجسم: `{model, messages: [{role, content}]}` — يحافظ على سياق المحادثة بين الاستدعاءات',
+          '**قائمة النماذج:** `GET /api/tags` — يُعيد جميع النماذج المثبتة مع أحجامها',
+          'لتكامل WeChat، استخدم `/api/chat` مع تاريخ محادثة دوري (آخر 10 رسائل) للحفاظ على السياق خلال الجلسة.',
+        ],
+      },
+      miniPcServer: {
+        id: 'mini-pc-server',
+        title: 'Mini PC كخادم WeChat LLM دائم التشغيل',
+        content: [
+          'يُبقي mini PC مخصص ودائم التشغيل بوت WeChat يعمل دون احتلال جهاز محمول أو محطة عمل.',
+          '**Minisforum UM890 Pro (موصى به):** AMD Ryzen 9 8945HS، 32–64 GB DDR5، AMD Radeon 780M iGPU. يشغّل Qwen3 7B بـ ~8 رمز/ثانية عبر ROCm على Linux. الاستهلاك: ~35 واط في وضع الخمول، ~65 واط أثناء الاستدلال. السعر: ~350–450 دولار.',
+          '**Mac Mini M4:** Apple Silicon M4، 16–32 GB ذاكرة موحدة، ~18 رمز/ثانية للنماذج 7B عبر MLX. الاستهلاك: ~20 واط في وضع الخمول. الخيار الأهدأ صوتًا. السعر: ~599 دولار.',
+          '**نصيحة للإعداد:** فعّل التشغيل التلقائي — أضف `ollama serve` وسكريبت جسر WeChatFerry إلى systemd (Linux) أو مجدول المهام في Windows. سيتعافى البوت تلقائيًا بعد كل انقطاع في الكهرباء.',
+        ],
+        comparisonTable: {
+          columns: ['الجهاز', 'RAM', 'السرعة (7B)', 'الاستهلاك', 'السعر (USD)'],
+          rows: [
+            { 'الجهاز': 'Minisforum UM890 Pro', 'RAM': '32–64 GB', 'السرعة (7B)': '~8 رمز/ثانية', 'الاستهلاك': '35–65 واط', 'السعر (USD)': '$350–$450' },
+            { 'الجهاز': 'Mac Mini M4',          'RAM': '16–32 GB', 'السرعة (7B)': '~18 رمز/ثانية', 'الاستهلاك': '20–40 واط', 'السعر (USD)': '$599+' },
+            { 'الجهاز': 'Beelink SER8',         'RAM': '32 GB',    'السرعة (7B)': '~8 رمز/ثانية', 'الاستهلاك': '30–55 واط', 'السعر (USD)': '$280–$330' },
+          ],
+        },
+      },
+      modelChoice: {
+        id: 'model-choice',
+        title: 'أفضل النماذج للمحادثات باللغة الصينية في WeChat',
+        content: [
+          '**Qwen3 7B Q4_K_M (الخيار الأول):** طوّرته Alibaba بترميز CJK أصلي. 5.5 GB VRAM، 8–15 رمز/ثانية. يفهم الأمثال الصينية والمراجع الكلاسيكية والعبارات العامية أفضل بكثير من النماذج ذات التوجه الغربي. التثبيت: `ollama pull qwen2.5:7b`.',
+          '**Qwen3 14B Q4_K_M:** لمحادثات أكثر ثراءً عند توفر mini PC بـ 12–16 GB RAM. 9.5 GB VRAM، 4–8 رمز/ثانية. أفضل بشكل ملحوظ في الاستدلال الدقيق باللغة الصينية والسياق متعدد الأدوار.',
+          '**DeepSeek-R1-Distill-Qwen-7B:** جيد للإجابة عن الأسئلة والشروحات خطوة بخطوة باللغة الصينية. أضعف قليلًا في المحادثة العادية مقارنةً بـ Qwen3 7B.',
+          '**تجنّب:** Llama 3 وMistral — تستخدم المرمّزات ذات التوجه الغربي 2–3× رموز أكثر للنص الصيني، مما يولّد ردودًا أبطأ وقطعًا في الرسائل الطويلة.',
+        ],
+      },
+      groupChat: {
+        id: 'group-chat',
+        title: 'إدارة محادثات المجموعة',
+        content: [
+          'تتطلب المجموعات في WeChat إدارة إشارات @. يعرض WeChatFerry `msg.is_at` لاكتشاف متى يُشار إلى البوت.',
+          'الممارسة الجيدة: الرد فقط عندما يكون `msg.is_at` صحيحًا أو عندما تبدأ الرسالة بكلمة تفعيل. الرد على كل رسالة في المجموعة يولّد ضوضاء ويفعّل حدود معدل مكافحة البوتات في WeChat.',
+          'حد المعدل: قد يقيّد WeChat الحسابات التي ترسل أكثر من ~30 رسالة في الدقيقة. أضف تأخيرًا 2–3 ثوانٍ بين ردود البوت في سياقات المجموعة.',
+          'إدارة السياق: في محادثات المجموعة، احتفظ بسجلات محادثة منفصلة لكل مستخدم (مفهرسة بـ `msg.sender`) لتجنب خلط السياق بين المشاركين.',
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'الخصوصية والامتثال لقانون أمن البيانات الصيني',
+        content: [
+          'يعني الاستدلال المحلي أن المطالبات والردود وتاريخ المحادثة لا تغادر أجهزتك أبدًا. لا تعالج خوادم Tencent في WeChat ولا أي API نموذج لغة سحابية المحتوى.',
+          '**قانون أمن البيانات الصيني (DSL، 2021) المادة 31:** تُلزم بأن تظل البيانات الشخصية المجمّعة أو المستخدمة على الأراضي الصينية تحت الولاية القضائية الصينية. يضمن تشغيل نموذجك اللغوي المحلي ألا يُوجَّه الاستدلال عبر موفري سحابة أجانب (OpenAI وAnthropic وGoogle).',
+          '**قانون الأمن السيبراني المادة 37:** يجب على مشغلي البنية التحتية للمعلومات الحيوية تخزين البيانات داخل البلاد. يلبّي الاستدلال المحلي هذا المطلب للاستخدام الشخصي والشركات الصغيرة.',
+          '**ما لا يشمله ذلك:** تظل بيانات تعريف رسائل WeChat (من أرسل لمن والطوابع الزمنية) على خوادم Tencent وفقًا لشروط الخدمة — لا يمكن للاستدلال المحلي تغيير ذلك. للخصوصية الكاملة، استخدم منصة مراسلة محلية بدلًا من WeChat.',
+          '**ملاحظة للقراء في الدول العربية:** تُلزم المادة 28 من GDPR باتفاقيات مع معالجي البيانات. يتجنب تشغيل النماذج اللغوية محليًا الحاجة إلى اتفاقية معالجة بيانات مع أي موفر نموذج لغة — تبسيط امتثال كبير.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          {
+            q: 'هل يعمل WeChatFerry مع WeChat للماك؟',
+            a: 'لا. يعترض WeChatFerry ملفات DLL لعميل WeChat PC على Windows ولا يتوافق مع WeChat للماك. على الماك، استخدم VM بـ Windows أو أحد أنماط HTTP webhook.',
+          },
+          {
+            q: 'هل يمكن أن تحظر Tencent حسابي لاستخدام بوت؟',
+            a: 'تحظر شروط خدمة WeChat الإرسال الجماعي الآلي. نادرًا ما تؤدي البوتات الشخصية ذات معدلات الرد الشبيهة بالبشر (1–5 رسائل في الدقيقة) إلى حظر. تجنّب الإرسال الجماعي أو البريد المزعج في المجموعات أو استخدام البوت للترويج التجاري.',
+          },
+          {
+            q: 'ما أفضل نموذج Ollama للنص الصيني؟',
+            a: 'Qwen3 7B Q4_K_M. طوّرته Alibaba بترميز CJK أصلي — أكثر كفاءة بـ 30–40% مع النص الصيني مقارنةً بنماذج Llama أو Mistral.',
+          },
+          {
+            q: 'هل يمكنني تشغيل هذا على كمبيوتر محمول؟',
+            a: 'نعم. يشغّل كمبيوتر محمول بـ 16 GB RAM نموذج Qwen3 7B بشكل مريح بـ 8–15 رمز/ثانية على المعالج فقط. كمون الرد 3–8 ثوانٍ لكل رسالة، وهو مقبول للمحادثة.',
+          },
+          {
+            q: 'هل يمتثل الاستدلال المحلي لقانون أمن البيانات الصيني؟',
+            a: 'بالنسبة لمحتوى الاستدلال (المطالبات والردود)، نعم — لا تغادر أي بيانات أجهزتك. تظل بيانات تعريف رسائل WeChat على خوادم Tencent وفقًا لشروط الخدمة.',
+          },
+          {
+            q: 'كيف أدير المحادثات متعددة الأدوار؟',
+            a: 'خزّن تاريخ المحادثة كقائمة Python تحتوي قواميس {role, content} مفهرسة بالمرسل. مرّر آخر 10–15 رسالة إلى /api/chat في كل طلب للحفاظ على السياق.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: 'قراءة ذات صلة',
+        items: [
+          '[بوت WeChat مع نموذج لغة محلي: دليل المساعد الشخصي](/ar/power-local-llm/wechat-bot-local-llm-personal-assistant-2026) — تحليل متعمق لـ WeChatFerry للمساعدين الشخصيين',
+          '[أفضل mini PC للنموذج اللغوي المحلي](/ar/prompt-bites/best-mini-pc-for-local-llm) — مقارنة الأجهزة لخوادم النماذج اللغوية الدائمة التشغيل',
+          '[وكلاء الذكاء الاصطناعي المحليون مع MCP 2026](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — وسّع بوتات WeChat باستخدام الأدوات والأتمتة',
+          '[استبدل Zapier بوكلاء ذكاء اصطناعي محليين](/ar/power-local-llm/replace-zapier-with-local-ai-agents) — تدفقات الأتمتة المُشغَّلة بأحداث WeChat',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'WeChat + نموذج لغة محلي: دليل المطور 2026',
+      description: 'اربط WeChat بنموذج لغة محلي مع WeChatFerry وOllama. ثلاثة أنماط تكامل، توصيات النماذج، إعداد خادم mini PC، والامتثال لقانون أمن البيانات الصيني.',
+      url: 'https://www.promptquorum.com/ar/power-local-llm/wechat-local-llm-integration-2026',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      about: [
+        { '@type': 'Thing', name: 'تكامل WeChat API' },
+        { '@type': 'Thing', name: 'نشر نموذج لغة محلي' },
+        { '@type': 'Thing', name: 'امتثال الذكاء الاصطناعي في الصين' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'WeChatFerry' },
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+        { '@type': 'SoftwareApplication', name: 'Qwen3 7B' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        { '@type': 'Question', name: 'هل يعمل WeChatFerry مع WeChat للماك؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. يعترض WeChatFerry ملفات DLL لعميل WeChat PC على Windows ولا يتوافق مع WeChat للماك. على الماك، استخدم VM بـ Windows أو نمط HTTP webhook.' } },
+        { '@type': 'Question', name: 'ما أفضل نموذج Ollama للمحادثات الصينية في WeChat؟', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — طوّرته Alibaba بترميز CJK أصلي، 5.5 GB VRAM، أكثر كفاءة بـ 30–40% مع النص الصيني مقارنةً بـ Llama أو Mistral.' } },
+        { '@type': 'Question', name: 'هل يمكن أن تحظر Tencent حسابي لاستخدام بوت؟', acceptedAnswer: { '@type': 'Answer', text: 'نادرًا ما تؤدي البوتات الشخصية ذات معدلات الرد الشبيهة بالبشر (1–5 رسائل في الدقيقة) إلى حظر. تجنّب الإرسال الجماعي أو الترويج التجاري عبر البوت.' } },
+        { '@type': 'Question', name: 'هل يمتثل الاستدلال المحلي مع نموذج لغة لقانون أمن البيانات الصيني؟', acceptedAnswer: { '@type': 'Answer', text: 'بالنسبة لمحتوى الاستدلال، نعم — لا تغادر أي مطالبة أو رد أجهزتك. تظل بيانات تعريف WeChat على خوادم Tencent وفقًا لشروط الخدمة.' } },
+      ],
+    },
+  },
 }
