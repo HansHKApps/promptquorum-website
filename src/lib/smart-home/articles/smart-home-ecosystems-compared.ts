@@ -192,6 +192,196 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: 'مقارنة منظومات المنزل الذكي (2026): Alexa مقابل Google مقابل Apple مقابل HA',
+    seoTitle: 'منصات المنزل الذكي 2026: Alexa وGoogle Home وApple وHome Assistant',
+    intro:
+      'تختلف المنظومات الأربع الكبرى للمنزل الذكي — Amazon Alexa وGoogle Home وApple Home وHome Assistant — في المقام الأول على صعيد الخصوصية والتحكم المحلي. تغطي هذه المقارنة دعم الأجهزة والخصوصية والتحكم المحلي والصوت والتكلفة والتقيد، وتوصي بمنصة لكل نوع مستخدم، مع تموضع Home Assistant بوصفه البطل المحلي والخاص.',
+    metaDescription:
+      'Alexa مقابل Google Home مقابل Apple Home مقابل Home Assistant: مقارنة دعم الأجهزة والخصوصية والتحكم المحلي والصوت والتكلفة والتقيد. اختر وفق نوع مستخدمك.',
+    twitterDescription:
+      'Alexa مقابل Google مقابل Apple Home مقابل Home Assistant: مقارنة الخصوصية والتحكم المحلي والأجهزة والصوت والتكلفة والتقيد. أي منصة تناسبك؟',
+    readTime: '9 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'الأشخاص الذين يختارون منصة منزل ذكي',
+    primaryTerm: 'smart home ecosystem comparison',
+    targetKeywords: [
+      'مقارنة منظومات المنزل الذكي',
+      'alexa مقابل google مقابل apple home',
+      'أفضل منصة منزل ذكي',
+      'home assistant مقابل alexa',
+      'أكثر منصات المنزل الذكي خصوصية',
+    ],
+    leadAnswerBlock:
+      '**Home Assistant هو الأكثر خصوصية وتحكمًا محليًا بين المنظومات الأربع الكبرى؛ Amazon Alexa وGoogle Home تعتمدان السحابة أولًا وأسهلهما للبدء؛ Apple Home يقع بينهما مع مزيد من الخصوصية وبعض التحكم المحلي.** اختر بناءً على الموازنة بين الراحة والخصوصية/التحكم.',
+    quickAnswerTop: {
+      ar: {
+        question: 'أي منظومة منزل ذكي يجب أن أختار؟',
+        answer:
+          'اختر Home Assistant للخصوصية والتحكم المحلي الكامل، واختر Amazon Alexa أو Google Home للإعداد السحابي الأسهل والدعم الصوتي الأوسع، واختر Apple Home إذا أردت توازنًا بين الخصوصية والبساطة ضمن عالم Apple. يعتمد القرار في الغالب على مدى تقديرك للخصوصية والتحكم المحلي مقارنةً بسهولة التوصيل والتشغيل.',
+        bullets: [
+          'Home Assistant: الأكثر خصوصية، محلي بالكامل، الأكثر جهدًا',
+          'Alexa / Google Home: الأسهل، سحابة أولًا، أوسع دعم للأجهزة',
+          'Apple Home: يميل للخصوصية، مع بعض التحكم المحلي',
+          'الخصوصية والتحكم المحلي هما العاملان الحاسمان',
+          'يمكن لـ Home Assistant ربط عدة منظومات عبر جسر تكامل',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'ملخص سريع', anchor: 'tldr' },
+      { label: 'المنظومات الأربع', anchor: 'four-ecosystems' },
+      { label: 'المقارنة', anchor: 'comparison' },
+      { label: 'الأفضل للخصوصية', anchor: 'best-privacy' },
+      { label: 'الأفضل للسهولة', anchor: 'best-ease' },
+      { label: 'التقيد وتكلفة الخروج', anchor: 'lock-in' },
+      { label: 'التوصية حسب نوع المستخدم', anchor: 'recommendation' },
+      { label: 'الأسئلة الشائعة', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Home Assistant هو المنظومة الأكثر خصوصية ومحلية؛ Alexa وGoogle Home الأسهل وتعتمدان السحابة أولًا؛ Apple Home يوازن بين الاثنين.' },
+      { type: 'plain-terms', content: 'توجد أربع منصات كبرى للمنزل الذكي. Alexa وGoogle Home الأسهل في الإعداد لكنهما تعملان عبر سحب الشركات. Apple Home أكثر اهتمامًا بالخصوصية. Home Assistant يتطلب أكبر جهد لكنه يُبقي كل شيء محليًا وخاصًا. يختزل اختيارك في الغالب إلى الخصوصية في مقابل الراحة.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'ملخص سريع',
+        isTldr: true,
+        items: [
+          'Home Assistant: الأكثر خصوصية ومحلية؛ أوسع دعم للأجهزة عبر التكاملات؛ أكبر جهد في الإعداد',
+          'Amazon Alexa: أسهل بداية، أوسع دعم للأجهزة الصوتية، سحابة أولًا',
+          'Google Home: صوت قوي ودعم واسع، سحابة أولًا',
+          'Apple Home: يميل للخصوصية مع بعض التحكم المحلي، نطاق أجهزة أضيق',
+          'الخصوصية والتحكم المحلي هما الفوارق الحاسمة، لا الميزات',
+          'يمكن لـ Home Assistant ربط الأخرى، مما يُقلل التقيد',
+        ],
+      },
+      fourEcosystems: {
+        id: 'four-ecosystems',
+        title: 'المنظومات الأربع',
+        content:
+          '**تغطي Amazon Alexa وGoogle Home وApple Home وHome Assistant معظم السوق وتنقسم بوضوح على الخصوصية والتحكم المحلي.** كلٌّ منها يناسب أولوية مختلفة.',
+        items: [
+          '**Amazon Alexa:** أوسع دعم لأجهزة ومهارات الطرف الثالث، سحابة أولًا، مُقاد بالصوت.',
+          '**Google Home:** مساعد صوتي قوي ودعم واسع للأجهزة، سحابة أولًا.',
+          '**Apple Home:** يُركز على الخصوصية ضمن منظومة Apple، مع تحكم محلي عبر مركز المنزل.',
+          '**Home Assistant:** مفتوح المصدر، محلي أولًا، الأكثر مرونةً وخصوصيةً — راجع [الدليل الكامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide).',
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'المقارنة',
+        content:
+          '**عبر المعايير المهمة، يتصدر Home Assistant في الخصوصية والتحكم المحلي بينما تتصدر Alexa وGoogle في السهولة والشمولية.** استخدم الجدول لمطابقة منظومة مع أولويتك.',
+        columns: ['المعيار', 'Amazon Alexa', 'Google Home', 'Apple Home', 'Home Assistant'],
+        rows: [
+          { 'المعيار': 'دعم الأجهزة', 'Amazon Alexa': 'الأوسع', 'Google Home': 'واسع', 'Apple Home': 'أضيق', 'Home Assistant': 'الأوسع عبر التكاملات' },
+          { 'المعيار': 'الخصوصية', 'Amazon Alexa': 'بيانات سحابية', 'Google Home': 'بيانات سحابية', 'Apple Home': 'أقوى', 'Home Assistant': 'الأفضل (محلي)' },
+          { 'المعيار': 'التحكم المحلي', 'Amazon Alexa': 'محدود', 'Google Home': 'محدود', 'Apple Home': 'جزئي', 'Home Assistant': 'كامل' },
+          { 'المعيار': 'الصوت', 'Amazon Alexa': 'قوي (سحابة)', 'Google Home': 'قوي (سحابة)', 'Apple Home': 'Siri', 'Home Assistant': 'محلي (Assist)' },
+          { 'المعيار': 'التكلفة', 'Amazon Alexa': 'أجهزة بأسعار منخفضة', 'Google Home': 'أجهزة بأسعار منخفضة', 'Apple Home': 'أجهزة أغلى', 'Home Assistant': 'أجهزة + جهد' },
+          { 'المعيار': 'التقيد', 'Amazon Alexa': 'عالٍ', 'Google Home': 'عالٍ', 'Apple Home': 'عالٍ (Apple)', 'Home Assistant': 'منخفض (مفتوح)' },
+        ],
+      },
+      bestPrivacy: {
+        id: 'best-privacy',
+        title: 'الأفضل للخصوصية',
+        content:
+          '**Home Assistant هو الخيار الأفضل للخصوصية لأن التحكم والأتمتة تعمل محليًا دون جمع بيانات من المورد.** Apple Home هو الأكثر خصوصية بين المنظومات السحابية السائدة.',
+        items: [
+          'استخدم Home Assistant إذا كانت الخصوصية أولويتك القصوى وقبلت مزيدًا من الإعداد.',
+          'استخدم Apple Home للحصول على خيار يميل للخصوصية وأسهل من Home Assistant.',
+          'لمساعد صوتي محلي وذكاء اصطناعي، راجع [تشغيل منزلك الذكي على نموذج لغوي محلي](/ar/smart-home/local-llm-smart-home-complete-guide).',
+        ],
+      },
+      bestEase: {
+        id: 'best-ease',
+        title: 'الأفضل للسهولة',
+        content:
+          '**Amazon Alexa وGoogle Home الأسهل للبدء لأنهما مُدارتان عبر تطبيق وسحابة.** اختَرهما إذا أردت إعدادًا أدنى وقبلت تنازل الخصوصية.',
+        items: [
+          'استخدم Alexa للحصول على أوسع دعم للأجهزة والمهارات الصوتية مباشرةً.',
+          'استخدم Google Home إذا كنت تفضل مساعد Google وخدماته.',
+          'كلاهما يُقايض الخصوصية وموثوقية الاتصال بلا إنترنت مقابل الراحة — راجع [لماذا يتفوق المنزل الذكي المحلي على السحابة](/ar/smart-home/why-local-smart-home-beats-cloud).',
+        ],
+      },
+      lockIn: {
+        id: 'lock-in',
+        title: 'التقيد وتكلفة الخروج',
+        content:
+          '**المنظومات السحابية تحمل تقيدًا أعلى؛ التصميم المفتوح لـ Home Assistant له أدنى تكلفة خروج ويمكنه حتى ربط الأخرى.** فكر في صعوبة المغادرة قبل الالتزام.',
+        items: [
+          'تُقيدك Alexa وGoogle وApple بحساباتها وتطبيقاتها وأجهزتها المدعومة.',
+          'يتكامل Home Assistant مع كثير من المنظومات، فيمكنك الترحيل تدريجيًا — راجع [الترحيل من السحابة إلى المحلي](/ar/smart-home/migrating-from-cloud-to-local-smart-home).',
+          'شراء أجهزة ذات قدرة محلية يُبقي خياراتك مفتوحة بصرف النظر عن المنصة.',
+        ],
+      },
+      recommendation: {
+        id: 'recommendation',
+        title: 'التوصية حسب نوع المستخدم',
+        content:
+          '**اختر وفق أولويتك: الخصوصية والتحكم ← Home Assistant؛ أسهل بداية ← Alexa أو Google؛ بيئة Apple ← Apple Home.** إذا كنت غير متأكد والخصوصية مهمة، ابدأ بـ Home Assistant.',
+        items: [
+          '**المُركّز على الخصوصية / المُحب للتجربة:** Home Assistant.',
+          '**المبتدئ الذي يُقدّم الراحة:** Amazon Alexa أو Google Home.',
+          '**بيئة Apple الباحثة عن توازن:** Apple Home.',
+          '**تريد الصوت والخصوصية معًا؟** Home Assistant مع مساعد صوتي محلي — مقارنة مباشرة في [Home Assistant مقابل Alexa مقابل Google](/ar/smart-home/home-assistant-vs-alexa-vs-google).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          { q: 'أي منظومة منزل ذكي هي الأكثر خصوصية؟', a: 'Home Assistant هو الأكثر خصوصية لأن التحكم والأتمتة تعمل محليًا على أجهزتك الخاصة دون جمع بيانات من المورد. بين المنظومات السحابية السائدة، Apple Home هو الأكثر تركيزًا على الخصوصية.' },
+          { q: 'أي منظومة تعمل بدون اتصال بالإنترنت؟', a: 'Home Assistant يعمل بدون اتصال للأجهزة والأتمتة المحلية. Alexa وGoogle Home تعتمدان بشدة على السحابة وتفقدان معظم الوظائف بدون إنترنت؛ Apple Home يحتفظ ببعض التحكم المحلي عبر مركز المنزل.' },
+          { q: 'هل يمكنني مزج منظومات المنزل الذكي؟', a: 'نعم، إلى حد ما. يمكن لـ Home Assistant دمج الأجهزة وحتى ربط Alexa وGoogle وApple، وهو الأسلوب الأكثر مرونة لمزج المنظومات. المزج المباشر بين المنظومات السحابية أكثر محدودية.' },
+          { q: 'أي منظومة الأسهل للمبتدئين؟', a: 'Amazon Alexa وGoogle Home الأسهل للمبتدئين لأن الإعداد مُقاد عبر تطبيق ومُدار في السحابة. Home Assistant يوفر مزيدًا من الخصوصية والتحكم لكنه يتطلب جهدًا أكبر.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[Home Assistant مقابل Alexa مقابل Google Home](/ar/smart-home/home-assistant-vs-alexa-vs-google) — صفحة القرار المباشر',
+          '[الدليل الكامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide) — المسار المحلي الأول',
+          '[تشغيل منزلك الذكي على نموذج لغوي محلي](/ar/smart-home/local-llm-smart-home-complete-guide) — التحكم بالذكاء الاصطناعي المحلي',
+          '[الترحيل من السحابة إلى المحلي](/ar/smart-home/migrating-from-cloud-to-local-smart-home) — تقليل التقيد',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'مقارنة منظومات المنزل الذكي (2026): Alexa مقابل Google مقابل Apple مقابل HA',
+      description: 'Alexa مقابل Google Home مقابل Apple Home مقابل Home Assistant: مقارنة دعم الأجهزة والخصوصية والتحكم المحلي والصوت والتكلفة والتقيد. اختر وفق نوع مستخدمك.',
+      url: 'https://www.promptquorum.com/ar/smart-home/smart-home-ecosystems-compared',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }, { '@type': 'Thing', name: 'Apple Home' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        { '@type': 'Question', name: 'أي منظومة منزل ذكي هي الأكثر خصوصية؟', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant، لأن التحكم والأتمتة تعمل محليًا دون جمع بيانات من المورد. بين المنظومات السحابية، Apple Home هو الأكثر تركيزًا على الخصوصية.' } },
+        { '@type': 'Question', name: 'أي منظومة تعمل بدون اتصال؟', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant يعمل بدون اتصال للأجهزة والأتمتة المحلية. Alexa وGoogle Home تعتمدان على السحابة؛ Apple Home يحتفظ ببعض التحكم المحلي عبر مركز المنزل.' } },
+        { '@type': 'Question', name: 'هل يمكنني مزج منظومات المنزل الذكي؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، إلى حد ما. يمكن لـ Home Assistant دمج الأجهزة وربط Alexa وGoogle وApple، وهو الأسلوب الأكثر مرونة لمزج المنظومات.' } },
+        { '@type': 'Question', name: 'أي منظومة الأسهل للمبتدئين؟', acceptedAnswer: { '@type': 'Answer', text: 'Amazon Alexa وGoogle Home، لأن الإعداد مُقاد عبر تطبيق ومُدار في السحابة. Home Assistant يوفر مزيدًا من التحكم لكنه يتطلب جهدًا أكبر.' } },
+      ],
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

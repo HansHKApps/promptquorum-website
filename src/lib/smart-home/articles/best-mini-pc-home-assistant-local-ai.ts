@@ -186,6 +186,190 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-05',
+    next_refresh_due: '2026-12-04',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'أفضل Mini PCs لـ Home Assistant + الذكاء الاصطناعي المحلي (2026)',
+    seoTitle: 'أفضل Mini PC لـ Home Assistant + الذكاء الاصطناعي المحلي 2026',
+    intro:
+      'أفضل mini PCs لتشغيل Home Assistant مع نموذج LLM محلي على صندوق واحد تُعطي الأولوية لـ RAM وGPU متكاملة أو NPU قادرة. يشرح هذا الدليل الشرائي ما تحتاجه لـ HA مع الذكاء الاصطناعي على جهاز واحد، ويقارن الفئات الرئيسية لـ mini PC، ويوازن الميزانية مقابل الأداء، ويغطي ملاحظات الإعداد — مع إحالات متقاطعة إلى دليل أجهزة local-llms لتفاصيل VRAM.',
+    metaDescription:
+      'Home Assistant + نموذج LLM محلي على mini PC واحد في 2026: RAM وiGPU أو NPU هما الأهم. مقارنة بين فئات N-series وRyzen/Core i وNPU حسب حمل العمل.',
+    twitterDescription:
+      'أفضل mini PCs لتشغيل Home Assistant + نموذج LLM محلي على صندوق واحد: أعطِ الأولوية لـ RAM وiGPU/NPU قادرة. مقارنة الفئات واختيارات حسب الميزانية.',
+    readTime: '8 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'المشترون الذين يختارون mini PC لـ Home Assistant والذكاء الاصطناعي المحلي',
+    primaryTerm: 'best mini PC Home Assistant local AI',
+    targetKeywords: [
+      'أفضل mini pc home assistant ذكاء اصطناعي محلي',
+      'mini pc home assistant llm',
+      'أجهزة home assistant ذكاء اصطناعي محلي',
+      'mini pc ollama home assistant',
+      'home assistant mini pc 2026',
+    ],
+    leadAnswerBlock:
+      '**أفضل mini PC لـ Home Assistant مع نموذج LLM محلي يمتلك RAM وافرًا وGPU متكاملة أو NPU قادرة، ليشغّل المركز ونموذجًا صغيرًا على صندوق واحد.** أعطِ الأولوية لـ RAM والرسومات/NPU على زمن استجابة الذكاء الاصطناعي بدلًا من تردد CPU الخام.',
+    quickAnswerTop: {
+      ar: {
+        question: 'ما أفضل mini PC لـ Home Assistant والذكاء الاصطناعي المحلي؟',
+        answer:
+          'اختر mini PC مع RAM كافٍ (كلما كان أكثر كان أفضل لتشغيل نموذج إلى جانب Home Assistant) وGPU متكاملة أو NPU قادرة للحفاظ على سرعة استجابة نموذج LLM صغير. صندوق Intel N-series منخفض الطاقة يشغّل Home Assistant ونموذجًا صغيرًا جدًا؛ mini PC بـ AMD Ryzen أو Core i مع iGPU قوية يتعامل بشكل أفضل مع نموذج 7B.',
+        bullets: [
+          'أعطِ الأولوية لـ RAM وiGPU/NPU قادرة على تردد CPU',
+          'N-series منخفض الطاقة: HA + نموذج صغير جدًا',
+          'Ryzen / Core i-series مع iGPU قوية: HA + نموذج 7B',
+          'صندوق واحد يشغّل HA وOllama وWhisper وFrigate معًا',
+          'راجع دليل أجهزة local-llms لتفاصيل VRAM',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'ملخص سريع', anchor: 'tldr' },
+      { label: 'ما تحتاجه لـ HA + LLM', anchor: 'what-you-need' },
+      { label: 'فئات Mini PC', anchor: 'classes' },
+      { label: 'المقارنة', anchor: 'comparison' },
+      { label: 'الميزانية مقابل الأداء', anchor: 'budget-performance' },
+      { label: 'ملاحظات الإعداد', anchor: 'setup-notes' },
+      { label: 'أسئلة شائعة', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'أفضل mini PC لـ Home Assistant مع نموذج LLM محلي يمتلك RAM وافرًا وiGPU أو NPU قادرة لتشغيل المركز ونموذج صغير على صندوق واحد.' },
+      { type: 'plain-terms', content: 'mini PC هو حاسوب صغير منخفض الطاقة يمكنه تشغيل منزلك الذكي بالكامل مع نموذج ذكاء اصطناعي محلي. أهم شيئين هما RAM (كافٍ لاستيعاب النموذج والمركز) وشريحة رسومات أو NPU قادرة (لإبقاء الذكاء الاصطناعي سريع الاستجابة). تردد CPU يهم أقل.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'ملخص سريع',
+        isTldr: true,
+        items: [
+          'أعطِ الأولوية لـ RAM وGPU متكاملة أو NPU قادرة على تردد CPU الخام',
+          'mini PC Intel N-series منخفض الطاقة يشغّل Home Assistant ونموذجًا صغيرًا جدًا',
+          'mini PC بـ AMD Ryzen أو Intel Core i مع iGPU قوية يتعامل مع نموذج 7B',
+          'يمكن لـ mini PC واحد تشغيل Home Assistant وOllama وWhisper وFrigate معًا',
+          'المزيد من RAM يتيح تشغيل نموذج أكبر إلى جانب المركز',
+          'راجع دليل أجهزة local-llms متعدد العناقيد لتفاصيل VRAM',
+        ],
+      },
+      whatYouNeed: {
+        id: 'what-you-need',
+        title: 'ما تحتاجه لـ HA + LLM على صندوق واحد',
+        content:
+          '**تحتاج RAM كافيًا لاستيعاب النموذج مع Home Assistant، وiGPU أو NPU قادرة لإبقاء النموذج سريع الاستجابة.** تردد CPU ثانوي لهذا حمل العمل.',
+        items: [
+          'RAM: حيّز كافٍ لحجم النموذج الذي تريده مع المركز والإضافات.',
+          'الرسومات/NPU: GPU متكاملة أو NPU قادرة تخفض زمن استجابة LLM وWhisper.',
+          'التخزين: مساحة للتسجيلات إذا شغّلت أيضًا Frigate — راجع [كاميرات الأمان بالذكاء الاصطناعي المحلي](/ar/smart-home/local-ai-security-camera).',
+        ],
+      },
+      classes: {
+        id: 'classes',
+        title: 'فئات Mini PC',
+        content:
+          '**ثلاث فئات تغطي معظم الاحتياجات: N-series منخفض الطاقة للذكاء الاصطناعي الخفيف، وRyzen/Core i مع iGPU قوية لنموذج 7B، وmini PCs مجهّزة بـ NPU للذكاء الاصطناعي الفعال على الجهاز.** اختر حسب حجم النموذج الذي تريده.',
+        items: [
+          '**Intel N-series منخفض الطاقة:** فعّال ورخيص؛ يشغّل Home Assistant ونموذجًا صغيرًا جدًا، أبطأ على الذكاء الاصطناعي. مثال: Beelink EQ14 أو GMKtec G3 Plus (Intel N150).',
+          '**AMD Ryzen / Intel Core i مع iGPU قوية:** حيّز RAM ورسومات أكبر لنموذج 7B بزمن استجابة مقبول. مثال: Beelink SER8 (Ryzen 7 8845HS, Radeon 780M) أو Minisforum UM890 Pro.',
+          '**Mini PCs مجهّزة بـ NPU:** أجهزة أحدث مع وحدة معالجة عصبية؛ GPU المتكاملة القوية — لا NPU — تتولى عمل LLM المحلي، بينما تساعد NPU في مهام الرؤية مثل Frigate. مثال: GEEKOM A9 Max (Ryzen AI 9 HX 370).',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink EQ14 (Intel N150)', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'GMKtec G3 Plus (Intel N150)', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Ryzen 7 8845HS)', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max (Ryzen AI 9 HX 370)', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'المقارنة',
+        content:
+          '**طابق الفئة مع نموذجك المستهدف: N-series لنموذج صغير، Ryzen/Core i مع iGPU قوية لنموذج 7B.** الأسعار نسبية.',
+        columns: ['فئة Mini PC', 'المعالج', 'توجيه RAM', 'يشغّل نموذج LLM محلي', 'السعر النسبي'],
+        rows: [
+          { 'فئة Mini PC': 'N-series منخفض الطاقة', 'المعالج': 'Intel N-series', 'توجيه RAM': 'متوسط', 'يشغّل نموذج LLM محلي': 'نماذج صغيرة جدًا، أبطأ', 'السعر النسبي': 'منخفض' },
+          { 'فئة Mini PC': 'Ryzen / Core i (iGPU قوية)', 'المعالج': 'AMD Ryzen / Intel Core i', 'توجيه RAM': 'وافر', 'يشغّل نموذج LLM محلي': 'حتى ~7B بزمن استجابة مقبول', 'السعر النسبي': 'متوسط' },
+          { 'فئة Mini PC': 'مجهّز بـ NPU', 'المعالج': 'معالج حديث + NPU', 'توجيه RAM': 'وافر', 'يشغّل نموذج LLM محلي': 'نماذج صغيرة/متوسطة فعّالة', 'السعر النسبي': 'متوسط-مرتفع' },
+        ],
+        items: [
+          'لـ VRAM وعمق التكميم، راجع متعدد العناقيد [أفضل mini PCs للنماذج اللغوية المحلية](/ar/local-llms/best-mini-pcs-local-llm).',
+        ],
+      },
+      budgetPerformance: {
+        id: 'budget-performance',
+        title: 'الميزانية مقابل الأداء',
+        content:
+          '**اشترِ أرخص صندوق يشغّل نموذجك المستهدف بزمن استجابة مقبول — عادةً Ryzen/Core i mini PC مع iGPU قوية لنموذج 7B.** لا تنفق زيادةً على CPU لن تستخدمه.',
+        items: [
+          'الميزانية: صندوق N-series منخفض الطاقة لـ HA مع نموذج صغير جدًا.',
+          'متوازن: Ryzen/Core i mini PC مع iGPU قوية لنموذج 7B.',
+          'لقرار الأجهزة الأوسع (Pi مقابل mini PC مقابل NAS)، راجع [أفضل أجهزة المنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home).',
+        ],
+      },
+      setupNotes: {
+        id: 'setup-notes',
+        title: 'ملاحظات الإعداد',
+        content:
+          '**شغّل Home Assistant OS أو حاوية، ثبّت Ollama، وتأكد من استخدام iGPU/NPU للاستنتاج.** ابقِ الصندوق متصلًا بالشبكة سلكيًا للموثوقية.',
+        items: [
+          'ثبّت Home Assistant — راجع [البدء](/ar/smart-home/home-assistant-getting-started).',
+          'ثبّت Ollama واسحب نموذجًا صغيرًا — راجع [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama).',
+          'اربط Ollama بـ Home Assistant — راجع [دليل تكامل Ollama](/ar/smart-home/home-assistant-ollama-integration).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'أسئلة شائعة',
+        faqs: [
+          { q: 'هل يستطيع mini PC واحد تشغيل Home Assistant ونموذج LLM محلي معًا؟', a: 'نعم. mini PC مع RAM كافٍ وGPU متكاملة أو NPU قادرة يشغّل Home Assistant ونموذج LLM محلي صغيرًا معًا، ويمكنه إضافة Whisper وFrigate. هذا النهج بصندوق واحد هو أبسط طريقة للحصول على منزل ذكي بذكاء اصطناعي محلي.' },
+          { q: 'كم من RAM أحتاج؟', a: 'كافٍ لاستيعاب نموذجك المستهدف مع Home Assistant وأي إضافات. نموذج صغير يحتاج RAM متواضعًا، بينما يستفيد تشغيل نموذج 7B بشكل مريح إلى جانب المركز من RAM وافر. طابق RAM مع أكبر نموذج تخطط لتشغيله.' },
+          { q: 'Intel أم AMD لـ mini PC بـ Home Assistant؟', a: 'كلاهما يعمل. صندوق Intel N-series منخفض الطاقة هو الأرخص للاستخدام الخفيف؛ mini PC بـ AMD Ryzen أو Intel Core i مع GPU متكاملة قوية يتعامل بشكل أفضل مع نموذج 7B. اختر حسب حجم النموذج وزمن الاستجابة الذي تريده.' },
+          { q: 'ما أرخص mini PC يشغّل نموذج LLM محلي؟', a: 'Intel N-series mini PC منخفض الطاقة هو الأرخص الذي يمكنه تشغيل Home Assistant مع نموذج صغير جدًا، وإن كانت الاستجابات أبطأ. لمساعد 7B أسرع استجابةً، ترقَّ إلى Ryzen أو Core i mini PC مع iGPU قوية.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءة ذات صلة',
+        items: [
+          '[أفضل أجهزة المنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home) — Pi مقابل mini PC مقابل NAS مقابل خادم',
+          '[تشغيل منزلك الذكي على نموذج LLM محلي](/ar/smart-home/local-llm-smart-home-complete-guide) — ما يشغّله الصندوق',
+          '[ربط Ollama بـ Home Assistant](/ar/smart-home/home-assistant-ollama-integration) — ربط النموذج',
+          '[أفضل Mini PCs للنماذج اللغوية المحلية](/ar/local-llms/best-mini-pcs-local-llm) — متعدد العناقيد: VRAM وعمق الأجهزة',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'أفضل Mini PCs لـ Home Assistant + الذكاء الاصطناعي المحلي (2026)',
+      description: 'Home Assistant + نموذج LLM محلي على mini PC واحد في 2026: RAM وiGPU أو NPU هما الأهم. مقارنة بين فئات N-series وRyzen/Core i وNPU حسب حمل العمل.',
+      url: 'https://www.promptquorum.com/ar/smart-home/best-mini-pc-home-assistant-local-ai',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-05',
+      about: [{ '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'نموذج LLM محلي' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        { '@type': 'Question', name: 'هل يستطيع mini PC واحد تشغيل Home Assistant ونموذج LLM محلي معًا؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. mini PC مع RAM كافٍ وiGPU أو NPU قادرة يشغّل Home Assistant ونموذج LLM محلي صغيرًا معًا، ويمكنه إضافة Whisper وFrigate.' } },
+        { '@type': 'Question', name: 'كم من RAM أحتاج؟', acceptedAnswer: { '@type': 'Answer', text: 'كافٍ لاستيعاب نموذجك المستهدف مع Home Assistant والإضافات. نموذج صغير يحتاج RAM متواضعًا؛ تشغيل نموذج 7B بشكل مريح يستفيد من RAM وافر.' } },
+        { '@type': 'Question', name: 'Intel أم AMD لـ mini PC بـ Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'كلاهما يعمل. Intel N-series منخفض الطاقة هو الأرخص للاستخدام الخفيف؛ AMD Ryzen أو Intel Core i مع iGPU قوية يتعامل بشكل أفضل مع نموذج 7B.' } },
+        { '@type': 'Question', name: 'ما أرخص mini PC يشغّل نموذج LLM محلي؟', acceptedAnswer: { '@type': 'Answer', text: 'Intel N-series منخفض الطاقة يمكنه تشغيل Home Assistant مع نموذج صغير جدًا، وإن كانت الاستجابات أبطأ. لمساعد 7B أسرع، ترقَّ إلى Ryzen أو Core i مع iGPU قوية.' } },
+      ],
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

@@ -185,6 +185,189 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'تحويل الكلام إلى نص محليًا للمنازل الذكية: Whisper + HA (2026)',
+    seoTitle: 'Whisper + Home Assistant 2026: دليل تحويل الكلام إلى نص المحلي',
+    intro:
+      'يمنح Whisper المحلي Home Assistant خاصية تحويل الكلام إلى نص بشكل خاص دون سحابة: تختار حجم نموذج Whisper لتحقيق التوازن بين الدقة والسرعة والأجهزة، ثم تربطه بـ Assist عبر بروتوكول Wyoming. يتناول هذا الدليل سبب أهمية تحويل الكلام إلى نص المحلي، وأحجام نماذج Whisper، وإعداد Wyoming، ومتطلبات الأجهزة، وكيفية ضبط الدقة.',
+    metaDescription:
+      'أضف تحويل الكلام إلى نص محليًا لـ Home Assistant مع Whisper: أحجام النماذج ومتطلبات الأجهزة والدقة مقابل السرعة وإعداد Wyoming. نسخ خاص دون إنترنت.',
+    twitterDescription:
+      'تحويل كلام إلى نص خاص لـ Home Assistant مع Whisper المحلي: اختر حجم النموذج، اربط عبر Wyoming، اضبط الدقة. بدون سحابة.',
+    readTime: '8 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'مستخدمو Home Assistant الذين يُعدّون تحويل الكلام إلى نص محليًا',
+    primaryTerm: 'local Whisper Home Assistant',
+    targetKeywords: [
+      'whisper home assistant تحويل كلام إلى نص محلي',
+      'home assistant تحويل كلام إلى نص',
+      'تحويل كلام إلى نص محلي home assistant',
+      'faster-whisper home assistant',
+      'حجم نموذج whisper home assistant',
+    ],
+    leadAnswerBlock:
+      '**يمنح Whisper المحلي Home Assistant خاصية تحويل الكلام إلى نص بشكل خاص: ثبِّت إضافة Whisper، واختر حجم النموذج المناسب لأجهزتك، واربطه بـ Assist عبر بروتوكول Wyoming.** النماذج الأصغر أسرع؛ النماذج الأكبر أدق. لا شيء يُرسَل إلى خدمة سحابية.',
+    quickAnswerTop: {
+      ar: {
+        question: 'كيف أضيف تحويل الكلام إلى نص محليًا لـ Home Assistant؟',
+        answer:
+          'ثبِّت إضافة Whisper (faster-whisper) في Home Assistant، واختر حجم النموذج، ويسجِّل نفسه تلقائيًا كخدمة تحويل كلام إلى نص عبر Wyoming. اختره في خط أنابيب Assist. يعمل النسخ بالكامل على أجهزتك لذا لا يغادر أي صوت المنزل.',
+        bullets: [
+          'ثبِّت إضافة Whisper (faster-whisper)',
+          'اختر حجم النموذج: tiny/base/small/medium/large',
+          'يتصل بـ Assist عبر بروتوكول Wyoming',
+          'الأصغر = أسرع على المعالج المركزي؛ الأكبر = أدق',
+          'نسخ متعدد اللغات بدون سحابة',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'ملخص سريع', anchor: 'tldr' },
+      { label: 'لماذا تحويل الكلام إلى نص المحلي', anchor: 'why-local-stt' },
+      { label: 'أحجام نماذج Whisper', anchor: 'model-sizes' },
+      { label: 'إعداد Wyoming', anchor: 'wyoming-setup' },
+      { label: 'متطلبات الأجهزة', anchor: 'hardware' },
+      { label: 'ضبط الدقة', anchor: 'tuning' },
+      { label: 'الأسئلة الشائعة', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'ثبِّت إضافة Whisper في Home Assistant، واختر حجم النموذج لأجهزتك، واربطه بـ Assist عبر Wyoming لتحويل كلام إلى نص خاص.' },
+      { type: 'plain-terms', content: 'تحويل الكلام إلى نص يحوِّل كلامك المنطوق إلى نص يمكن للمساعد التصرف بناءً عليه. Whisper نموذج تعرف على الكلام مفتوح المصدر يعمل محليًا، لذا على خلاف المساعدات السحابية، تسجيلاتك الصوتية لا تغادر أجهزتك أبدًا. الاختيار الرئيسي هو حجم النموذج: الأكبر أدق لكن يحتاج معالجة أكثر.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'ملخص سريع',
+        isTldr: true,
+        items: [
+          'Whisper نموذج تحويل كلام إلى نص مفتوح المصدر يعمل محليًا — لا يغادر أي صوت أجهزتك',
+          'استخدم إضافة Whisper (faster-whisper)؛ يتصل بـ Assist عبر Wyoming',
+          'أحجام النماذج من tiny → base → small → medium → large؛ الأكبر أدق، أبطأ',
+          'على الأجهزة التي تعتمد على المعالج المركزي فقط، فضِّل tiny/base/small؛ GPU يجعل medium/large عمليًا',
+          'Whisper متعدد اللغات، لذا الأوامر غير الإنجليزية تُنسَخ بدون خدمة سحابية',
+          'حسِّن بميكروفون أفضل والنموذج الصحيح قبل الانتقال لنموذج أكبر',
+        ],
+      },
+      whyLocalStt: {
+        id: 'why-local-stt',
+        title: 'لماذا تستخدم تحويل الكلام إلى نص المحلي؟',
+        content:
+          '**يحتفظ تحويل الكلام إلى نص المحلي بتسجيلاتك الصوتية على أجهزتك الخاصة، لذا لا يُرفَع أي صوت إلى طرف ثالث.** كما يعمل دون إنترنت وليس له تكلفة لكل طلب.',
+        items: [
+          '**الخصوصية:** تنقل المساعدات السحابية وقد تحتفظ بالتسجيلات؛ Whisper المحلي لا يفعل ذلك — راجع [مخاطر خصوصية المنزل الذكي](/ar/smart-home/smart-home-privacy-risks).',
+          '**دون إنترنت:** يعمل النسخ أثناء انقطاع الإنترنت.',
+          '**بدون رسوم:** لا توجد رسوم استخدام للنسخ المحلي.',
+        ],
+      },
+      modelSizes: {
+        id: 'model-sizes',
+        title: 'أي حجم نموذج Whisper يجب أن تستخدم؟',
+        content:
+          '**اختر أصغر نموذج Whisper يعطي دقةً مقبولة على أجهزتك — tiny/base/small للمعالج المركزي فقط، وmedium/large عند توفر GPU.** النماذج الأكبر تحسِّن الدقة على اللهجات والصوت الصاخب على حساب السرعة.',
+        columns: ['النموذج', 'الدقة النسبية', 'السرعة النسبية', 'الأنسب لـ'],
+        rows: [
+          { 'النموذج': 'tiny', 'الدقة النسبية': 'الأدنى', 'السرعة النسبية': 'الأسرع', 'الأنسب لـ': 'معالج مركزي منخفض الطاقة، أوامر قصيرة' },
+          { 'النموذج': 'base', 'الدقة النسبية': 'منخفضة', 'السرعة النسبية': 'سريع جدًا', 'الأنسب لـ': 'Raspberry Pi، عبارات بسيطة' },
+          { 'النموذج': 'small', 'الدقة النسبية': 'جيدة', 'السرعة النسبية': 'سريع', 'الأنسب لـ': 'معالج جهاز كمبيوتر مصغر، الاستخدام اليومي' },
+          { 'النموذج': 'medium', 'الدقة النسبية': 'عالية', 'السرعة النسبية': 'متوسط', 'الأنسب لـ': 'GPU أو معالج مركزي قوي' },
+          { 'النموذج': 'large', 'الدقة النسبية': 'الأعلى', 'السرعة النسبية': 'الأبطأ', 'الأنسب لـ': 'GPU، لهجات/غرف صاخبة' },
+        ],
+        items: [
+          'استخدم small كإعداد افتراضي على معالج جهاز كمبيوتر مصغر؛ انتقل إلى medium/large فقط إذا كانت الدقة غير كافية.',
+          'استخدم tiny/base على Raspberry Pi لإبقاء الكمون مقبولًا.',
+        ],
+      },
+      wyomingSetup: {
+        id: 'wyoming-setup',
+        title: 'إعداد Wyoming',
+        content:
+          '**تعرض إضافة Whisper نقطة نهاية Wyoming يستخدمها Assist لتحويل الكلام إلى نص.** الإعداد هو: ثبِّت ← اختر النموذج ← اختره في خط الأنابيب.',
+        numberedItems: [
+          'ثبِّت إضافة Whisper (faster-whisper) من متجر الإضافات.',
+          'اضبط حجم النموذج في إعداد الإضافة وشغِّلها.',
+          'تسجِّل الإضافة نفسها تلقائيًا كخدمة تحويل كلام إلى نص عبر Wyoming.',
+          'في الإعدادات ← المساعدون الصوتيون، اضبط Whisper كمحرك STT لخط أنابيب Assist.',
+          'اختبر النسخ من أدوات التصحيح في Assist قبل إضافة أجهزة الصوت.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'متطلبات الأجهزة',
+        content:
+          '**يعمل Whisper على المعالج المركزي للنماذج الصغيرة ويستفيد من GPU للنماذج medium/large.** طابق حجم النموذج مع الجهاز الذي يستضيفه.',
+        items: [
+          'Raspberry Pi: التزم بـ tiny/base لكمون مقبول.',
+          'جهاز كمبيوتر مصغر (معالج مركزي): small يعمل جيدًا؛ medium ممكن لكن أبطأ — راجع [أفضل الأجهزة للمنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home).',
+          'مع GPU/NPU: يصبح medium وlarge عمليًا للدقة العالية.',
+          'يمكنك تشغيل Whisper على جهاز أقوى منفصل عبر Wyoming إذا كان مركزك Raspberry Pi.',
+        ],
+      },
+      tuning: {
+        id: 'tuning',
+        title: 'ضبط الدقة',
+        content:
+          '**حسِّن بميكروفون جيد والنموذج الصحيح قبل الانتقال لأكبر نموذج Whisper.** جودة الصوت كثيرًا ما تهم أكثر من حجم النموذج لأوامر المنزل.',
+        items: [
+          'استخدم ميكروفونًا عالي الجودة أو أجهزة أقمار صوتية قريبة من المتحدث.',
+          'قلِّل ضوضاء الخلفية حيث يوجد الميكروفون.',
+          'اضبط اللغة الصحيحة في الإضافة لتجنب النسخ الخاطئ.',
+          'انتقل حجمًا واحدًا في كل مرة وأعِد الاختبار بدلًا من القفز مباشرة إلى large.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          { q: 'أي نموذج Whisper يجب أن أستخدم لـ Home Assistant؟', a: 'استخدم small كإعداد افتراضي على معالج جهاز كمبيوتر مصغر، وtiny أو base على Raspberry Pi، وmedium أو large فقط إذا كان لديك GPU وتحتاج دقة أعلى على اللهجات أو الغرف الصاخبة. انتقل حجمًا واحدًا في كل مرة وأعِد الاختبار.' },
+          { q: 'هل أحتاج إلى GPU لـ Whisper المحلي؟', a: 'لا للنماذج small وما دونها — تلك تعمل على المعالج المركزي. GPU بشكل رئيسي يجعل النماذج medium وlarge سريعة بما يكفي للاستخدام الفوري. يمكنك أيضًا تفريغ Whisper إلى جهاز أقوى عبر بروتوكول Wyoming.' },
+          { q: 'ما دقة Whisper المحلي دون إنترنت؟', a: 'الدقة قوية مع النموذج الصحيح وميكروفون جيد؛ النماذج الأكبر تتعامل بشكل أفضل مع اللهجات والضوضاء. لأوامر المنزل الواضحة، النموذج small على جهاز كمبيوتر مصغر عادةً دقيق بما يكفي، ويعمل بالكامل دون إنترنت.' },
+          { q: 'هل Whisper المحلي متعدد اللغات؟', a: 'نعم. يدعم Whisper لغات كثيرة، لذا الأوامر غير الإنجليزية تُنسَخ محليًا بدون أي خدمة سحابية. اضبط اللغة في إعداد الإضافة للحصول على أفضل النتائج.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'مقالات ذات صلة',
+        items: [
+          '[بناء مساعد صوتي محلي كامل](/ar/smart-home/local-voice-assistant-smart-home) — البنية الصوتية الكاملة التي يناسبها Whisper',
+          '[تشغيل منزلك الذكي بنموذج لغوي محلي](/ar/smart-home/local-llm-smart-home-complete-guide) — أضف عقل النموذج اللغوي',
+          '[أفضل الأجهزة للمنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home) — تحجيم الجهاز الذي يُشغِّل Whisper',
+          '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) — عبر المجموعات: عمق النموذج والأجهزة',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'تحويل الكلام إلى نص محليًا للمنازل الذكية: Whisper + HA (2026)',
+      description: 'أضف تحويل الكلام إلى نص محليًا لـ Home Assistant مع Whisper: أحجام النماذج ومتطلبات الأجهزة والدقة مقابل السرعة وإعداد Wyoming. نسخ خاص دون إنترنت.',
+      url: 'https://www.promptquorum.com/ar/smart-home/local-whisper-home-assistant',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'تحويل الكلام إلى نص' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        { '@type': 'Question', name: 'أي نموذج Whisper يجب أن أستخدم لـ Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'استخدم small كإعداد افتراضي على معالج جهاز كمبيوتر مصغر، وtiny أو base على Raspberry Pi، وmedium أو large فقط مع GPU عند الحاجة لدقة أعلى على اللهجات أو الضوضاء.' } },
+        { '@type': 'Question', name: 'هل أحتاج إلى GPU لـ Whisper المحلي؟', acceptedAnswer: { '@type': 'Answer', text: 'لا للنماذج small وما دونها — تلك تعمل على المعالج المركزي. GPU بشكل رئيسي يجعل medium وlarge سريعة بما يكفي للاستخدام الفوري. يمكنك أيضًا تفريغ Whisper عبر Wyoming.' } },
+        { '@type': 'Question', name: 'ما دقة Whisper المحلي دون إنترنت؟', acceptedAnswer: { '@type': 'Answer', text: 'قوية مع النموذج الصحيح والميكروفون؛ النماذج الأكبر تتعامل بشكل أفضل مع اللهجات والضوضاء. النموذج small على جهاز كمبيوتر مصغر عادةً دقيق بما يكفي لأوامر المنزل الواضحة، بالكامل دون إنترنت.' } },
+        { '@type': 'Question', name: 'هل Whisper المحلي متعدد اللغات؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يدعم Whisper لغات كثيرة، لذا الأوامر غير الإنجليزية تُنسَخ محليًا بدون سحابة. اضبط اللغة في إعداد الإضافة.' } },
+      ],
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

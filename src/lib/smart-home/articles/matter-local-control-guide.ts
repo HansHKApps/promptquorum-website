@@ -188,6 +188,192 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'Matter والتحكم المحلي: منزل ذكي مستقل عن الإنترنت (2026)',
+    seoTitle: 'التحكم المحلي بـ Matter 2026: منزل ذكي بدون سحابة',
+    intro:
+      'يمكن لـ Matter عبر Thread تشغيل منزل ذكي محلي حقيقي من خلال متحكم محلي مثل Home Assistant — دون الحاجة إلى سحابة مورِّد. يُوضِّح هذا الدليل ما إذا كان Matter يعني محليًا، ويشرح موجِّهات حدود Thread والتوصيل المحلي فقط، ويوضح كيفية تجنب الجسور السحابية، ويتناول إعداد Matter المحلي مع Home Assistant.',
+    metaDescription:
+      'Matter + Thread للتحكم المحلي في المنزل الذكي 2026: موجِّهات حدود Thread، التوصيل المحلي فقط، تجنب الجسور السحابية — إعداد Home Assistant مُضمَّن.',
+    twitterDescription:
+      'يمكن لـ Matter وThread العمل محليًا بالكامل من خلال متحكم مثل Home Assistant — بدون سحابة مورِّد. كيفية التوصيل محليًا وتجنب الجسور السحابية.',
+    readTime: '8 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'مستخدمون يبنون إعداد Matter مستقلًا عن الإنترنت',
+    primaryTerm: 'Matter local control',
+    targetKeywords: [
+      'matter تحكم محلي بدون سحابة',
+      'matter thread محلي',
+      'matter home assistant محلي',
+      'موجِّه حدود thread',
+      'منزل ذكي مستقل عن الإنترنت',
+    ],
+    leadAnswerBlock:
+      '**يمكن لـ Matter عبر Thread العمل محليًا بالكامل من خلال متحكم محلي مثل Home Assistant — توصِّل الجهاز بنسيجك المحلي، دون الحاجة إلى سحابة مورِّد.** يربط موجِّه حدود Thread أجهزة Thread بشبكتك؛ يعمل Home Assistant كمتحكم محلي.',
+    quickAnswerTop: {
+      ar: {
+        question: 'هل يعمل Matter بدون سحابة؟',
+        answer:
+          'يمكن لـ Matter أن يعمل محليًا بالكامل: عند توصيل جهاز Matter بمتحكم محلي مثل Home Assistant، يحدث التحكم على شبكتك بدون سحابة مورِّد. تحتاج أجهزة Matter المبنية على Thread إلى موجِّه حدود Thread. تقدم بعض الأجهزة أيضًا ميزات سحابية، لكن التحكم المحلي لا يتطلبها.',
+        bullets: [
+          'يمكن لـ Matter العمل محليًا عبر متحكم محلي (مثل Home Assistant)',
+          'تحتاج أجهزة Thread إلى موجِّه حدود Thread',
+          'وصِّل الأجهزة بنسيجك المحلي، وليس تطبيق المورِّد',
+          'تجنب الجسور السحابية لإبقاء التحكم مستقلًا عن الإنترنت',
+          'تضيف بعض الأجهزة ميزات سحابية اختيارية يمكنك تخطيها',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'ملخص سريع', anchor: 'tldr' },
+      { label: 'هل Matter يعني محليًا؟', anchor: 'matter-local' },
+      { label: 'موجِّهات حدود Thread', anchor: 'border-routers' },
+      { label: 'التوصيل المحلي فقط', anchor: 'commissioning' },
+      { label: 'تجنب الجسور السحابية', anchor: 'avoid-bridges' },
+      { label: 'الإعداد مع Home Assistant', anchor: 'ha-setup' },
+      { label: 'الأسئلة الشائعة', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'يعمل Matter عبر Thread محليًا بالكامل من خلال متحكم مثل Home Assistant؛ يربط موجِّه حدود Thread الأجهزة المبنية على Thread، ولا حاجة إلى سحابة مورِّد.' },
+      { type: 'plain-terms', content: 'صُمِّم Matter للعمل محليًا، لكن ما إذا كان إعدادك يبقى بعيدًا عن السحابة فعليًا يعتمد على كيفية توصيل الأجهزة والمتحكم الذي تستخدمه. إقران جهاز Matter بمتحكم محلي مثل Home Assistant — بدلًا من تطبيق مورِّد فقط — يُبقي التحكم على شبكتك الخاصة.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'ملخص سريع',
+        isTldr: true,
+        items: [
+          'يمكن لـ Matter العمل محليًا بالكامل من خلال متحكم محلي مثل Home Assistant',
+          'تتطلب أجهزة Matter المبنية على Thread موجِّه حدود Thread على شبكتك',
+          'وصِّل الأجهزة بنسيجك المحلي، وليس فقط تطبيق سحابة مورِّد',
+          'تجنب الجسور السحابية التي تُوجِّه التحكم عبر خادم مورِّد',
+          'يعمل Home Assistant كمتحكم Matter محلي للتحكم المستقل عن الإنترنت',
+          'تقدم بعض الأجهزة ميزات سحابية اختيارية يمكنك تجاهلها للتحكم المحلي',
+        ],
+      },
+      matterLocal: {
+        id: 'matter-local',
+        title: 'هل Matter يعني محليًا؟',
+        content:
+          '**صُمِّم Matter للتحكم المحلي، لكن ما إذا كان إعدادك يبقى محليًا يعتمد على المتحكم وكيفية توصيل الأجهزة.** الإقران بمتحكم محلي يُبقي التحكم على شبكتك.',
+        items: [
+          'التحكم في Matter بين جهاز ومتحكم محلي يحدث على شبكتك المحلية.',
+          'استخدام تطبيق مورِّد فقط قد يُوجِّه بعض الميزات عبر سحابة ذلك المورِّد.',
+          'للخلفية البروتوكولية، راجع [بروتوكولات المنزل الذكي موضَّحة](/ar/smart-home/smart-home-protocols-explained).',
+        ],
+      },
+      borderRouters: {
+        id: 'border-routers',
+        title: 'موجِّهات حدود Thread',
+        content:
+          '**تحتاج أجهزة Matter المبنية على Thread إلى موجِّه حدود Thread لجسر شبكة Thread إلى شبكة IP الخاصة بك.** يتضمنها كثير من المراكز وبعض مكبرات الصوت.',
+        items: [
+          'يربط موجِّه الحدود أجهزة Thread منخفضة الطاقة بشبكتك المحلية.',
+          'أجهزة Matter عبر Wi-Fi لا تحتاج Thread، لكن Thread يناسب الأجهزة البطارية.',
+          'تحقق من أن متحكمك أو جهازًا متوافقًا يوفر موجِّه حدود.',
+        ],
+      },
+      commissioning: {
+        id: 'commissioning',
+        title: 'التوصيل المحلي فقط',
+        content:
+          '**وصِّل أجهزة Matter مباشرةً بمتحكمك المحلي حتى يبقى التحكم على شبكتك.** ميزة الإدارة المتعددة في Matter تتيح لجهاز الانضمام إلى أكثر من نسيج واحد.',
+        numberedItems: [
+          'أضف تكامل Matter في متحكمك المحلي (مثل Home Assistant).',
+          'امسح رمز QR/الإقران الخاص بـ Matter للجهاز من المتحكم.',
+          'وصِّله بنسيجك المحلي على شبكتك.',
+          'تحقق من أن التحكم يعمل مع إغلاق تطبيق المورِّد.',
+        ],
+      },
+      avoidBridges: {
+        id: 'avoid-bridges',
+        title: 'تجنب الجسور السحابية',
+        content:
+          '**تجنب الجسور السحابية التي تُرحِّل التحكم في الأجهزة عبر خادم مورِّد، مما يبطل التشغيل المحلي.** فضِّل التوصيل المحلي المباشر والمتحكمات المحلية.',
+        items: [
+          'بعض المنظومات تجسر أجهزة Matter عبر سحابتها — فضِّل متحكمًا محليًا.',
+          'احتفظ بموجِّه حدود Thread والمتحكم على شبكتك الخاصة.',
+          'اختبر أن التحكم يصمد أثناء انقطاع الإنترنت للتأكد من أنه محلي.',
+        ],
+      },
+      haSetup: {
+        id: 'ha-setup',
+        title: 'الإعداد مع Home Assistant',
+        content:
+          '**يعمل Home Assistant كمتحكم Matter محلي، لذا توصِّل الأجهزة به وتتحكم فيها بدون سحابة مورِّد.** هذا هو أنظف مسار للتحكم في Matter بشكل مستقل عن الإنترنت.',
+        items: [
+          'استخدم تكامل Home Assistant Matter كمتحكمك — راجع [بدء استخدام Home Assistant](/ar/smart-home/home-assistant-getting-started).',
+          'اقرن موجِّه حدود Thread حتى تنضم أجهزة Thread إلى شبكتك.',
+          'للصورة المحلية الكاملة، راجع [الدليل الشامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide).',
+        ],
+      },
+      haSetupTable: {
+        id: 'ha-setup-table',
+        title: 'مقارنة مسارات الإعداد',
+        content:
+          '**التوصيل المحلي بمتحكم محلي مستقل عن الإنترنت؛ الإقران بسحابة مورِّد فقط ليس كذلك.** اختر المسار المحلي.',
+        columns: ['مسار الإعداد', 'محلي فقط؟', 'يحتاج جسرًا سحابيًا؟'],
+        rows: [
+          { 'مسار الإعداد': 'توصيل بـ Home Assistant (متحكم محلي)', 'محلي فقط؟': 'نعم', 'يحتاج جسرًا سحابيًا؟': 'لا' },
+          { 'مسار الإعداد': 'Matter عبر Thread + موجِّه حدود Thread محلي', 'محلي فقط؟': 'نعم', 'يحتاج جسرًا سحابيًا؟': 'لا' },
+          { 'مسار الإعداد': 'إقران بتطبيق مورِّد فقط', 'محلي فقط؟': 'جزئي', 'يحتاج جسرًا سحابيًا؟': 'أحيانًا' },
+          { 'مسار الإعداد': 'منظومة بجسر سحابي', 'محلي فقط؟': 'لا', 'يحتاج جسرًا سحابيًا؟': 'نعم' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          { q: 'هل Matter دائمًا محلي؟', a: 'صُمِّم Matter للتحكم المحلي، لكن ما إذا كان إعدادك يبقى محليًا يعتمد على المتحكم والتوصيل. إقران الأجهزة بمتحكم محلي مثل Home Assistant يُبقي التحكم على شبكتك؛ الاعتماد فقط على تطبيق سحابة مورِّد قد يُوجِّه الميزات عبر السحابة.' },
+          { q: 'هل أحتاج إلى موجِّه حدود Thread؟', a: 'فقط لأجهزة Matter المبنية على Thread، التي تستخدم شبكة Thread منخفضة الطاقة. يجسر موجِّه حدود Thread هذه الأجهزة بشبكة IP الخاصة بك وهو مدمج في بعض المراكز ومكبرات الصوت. أجهزة Matter عبر Wi-Fi لا تحتاجه.' },
+          { q: 'هل يمكنني تجنب تطبيق المورِّد؟', a: 'في كثير من الأحيان، نعم. مع توصيل Matter يمكنك إقران جهاز مباشرةً بمتحكم محلي مثل Home Assistant والتحكم فيه بدون تطبيق المورِّد. قد يستخدم الإعداد الأولي التطبيق، لكن التحكم الجاري يمكن أن يكون محليًا.' },
+          { q: 'هل يعمل Matter مع Home Assistant؟', a: 'نعم. يتضمن Home Assistant تكامل Matter ويمكنه العمل كمتحكم Matter محلي، يوصِّل الأجهزة بنسيجك المحلي ويتحكم فيها بدون سحابة مورِّد.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'مقالات ذات صلة',
+        items: [
+          '[بروتوكولات المنزل الذكي موضَّحة](/ar/smart-home/smart-home-protocols-explained) — Matter وThread وZigbee وZ-Wave',
+          '[الدليل الشامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide) — البنية المحلية أولًا',
+          '[Home Assistant: دليل البدء](/ar/smart-home/home-assistant-getting-started) — متحكم Matter المحلي',
+          '[لماذا المنزل الذكي المحلي يتفوق على السحابة](/ar/smart-home/why-local-smart-home-beats-cloud) — لماذا تهم الاستقلالية عن الإنترنت',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Matter والتحكم المحلي: منزل ذكي مستقل عن الإنترنت (2026)',
+      description: 'Matter + Thread للتحكم المحلي في المنزل الذكي 2026: موجِّهات حدود Thread، التوصيل المحلي فقط، تجنب الجسور السحابية — إعداد Home Assistant مُضمَّن.',
+      url: 'https://www.promptquorum.com/ar/smart-home/matter-local-control-guide',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Matter' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'التحكم المحلي' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        { '@type': 'Question', name: 'هل Matter دائمًا محلي؟', acceptedAnswer: { '@type': 'Answer', text: 'صُمِّم Matter للتحكم المحلي، لكن ما إذا كان إعدادك يبقى محليًا يعتمد على المتحكم والتوصيل. الإقران بمتحكم محلي مثل Home Assistant يُبقي التحكم على شبكتك.' } },
+        { '@type': 'Question', name: 'هل أحتاج إلى موجِّه حدود Thread؟', acceptedAnswer: { '@type': 'Answer', text: 'فقط لأجهزة Matter المبنية على Thread. يجسر موجِّه حدود Thread هذه الأجهزة بشبكة IP ومدمج في بعض المراكز ومكبرات الصوت. أجهزة Matter عبر Wi-Fi لا تحتاجه.' } },
+        { '@type': 'Question', name: 'هل يمكنني تجنب تطبيق المورِّد؟', acceptedAnswer: { '@type': 'Answer', text: 'في كثير من الأحيان، نعم. مع توصيل Matter يمكنك إقران جهاز مباشرةً بمتحكم محلي مثل Home Assistant والتحكم فيه بدون تطبيق المورِّد.' } },
+        { '@type': 'Question', name: 'هل يعمل Matter مع Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يتضمن Home Assistant تكامل Matter ويمكنه العمل كمتحكم Matter محلي بدون سحابة مورِّد.' } },
+      ],
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

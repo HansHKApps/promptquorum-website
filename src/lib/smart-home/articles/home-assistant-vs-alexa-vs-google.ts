@@ -192,6 +192,196 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Decision & Comparison',
+    title: 'Home Assistant مقابل Alexa مقابل Google Home: أيهم الأنسب؟ (2026)',
+    seoTitle: 'Home Assistant مقابل Alexa مقابل Google Home: مقارنة 2026',
+    intro:
+      'يناسب Home Assistant وAmazon Alexa وGoogle Home أولويات مختلفة: يتفوق Home Assistant على صعيد الخصوصية والتحكم المحلي، في حين يتفوق Alexa وGoogle على صعيد سهولة الإعداد الفوري. تقارن هذه المراجعة المباشرة الخصوصية والتحكم المحلي ودعم الأجهزة والصوت والذكاء الاصطناعي والتكلفة والجهد، وتوصي بالاختيار المناسب حسب نوع المستخدم.',
+    metaDescription:
+      'Home Assistant مقابل Alexa مقابل Google Home: مقارنة 2026 تشمل الخصوصية والتحكم المحلي والصوت والذكاء الاصطناعي والتكلفة — أي منصة منزل ذكي تناسبك؟',
+    twitterDescription:
+      'Home Assistant مقابل Alexa مقابل Google Home: الخصوصية والتحكم المحلي مقابل سهولة الإعداد الفوري. المواجهة المباشرة لعام 2026 ومن يناسب كل خيار.',
+    readTime: '8 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'الأشخاص الذين يختارون بين Home Assistant وAlexa وGoogle Home',
+    primaryTerm: 'Home Assistant vs Alexa vs Google Home',
+    targetKeywords: [
+      'home assistant مقابل alexa مقابل google home',
+      'home assistant مقابل alexa',
+      'alexa مقابل google home',
+      'أفضل منصة منزل ذكي 2026',
+      'منصة منزل ذكي خاصة',
+    ],
+    leadAnswerBlock:
+      '**اختر Home Assistant للخصوصية والتحكم المحلي الكامل، واختر Amazon Alexa أو Google Home لأسهل بداية فورية.** يتطلب Home Assistant إعدادًا أكثر لكنه يحتفظ بالبيانات محليًا ويعمل دون إنترنت؛ Alexa وGoogle أبسط لكنهما يعتمدان على السحابة.',
+    quickAnswerTop: {
+      ar: {
+        question: 'هل يجب أن أختار Home Assistant أم Alexa أم Google Home؟',
+        answer:
+          'اختر Home Assistant إذا كنت تقدّر الخصوصية والتحكم المحلي والمرونة وتقبل إعدادًا أكثر. اختر Amazon Alexa أو Google Home إذا أردت أسهل إعداد ودعمًا واسعًا للأجهزة والصوت ولا تمانع الاعتماد على السحابة. يمكن لـ Home Assistant أيضًا ربط Alexa وGoogle، لذا فالاختيار ليس صارمًا حصريًا.',
+        bullets: [
+          'Home Assistant: الأكثر خصوصية ومحليًا ومرونةً؛ أعلى جهد',
+          'Alexa: أسهل بداية، أوسع دعم لأجهزة الصوت',
+          'Google Home: صوت قوي، دعم واسع، سحابة أولًا',
+          'الخصوصية والتحكم المحلي مقابل سهولة الإعداد الفوري',
+          'يستطيع Home Assistant ربط المساعدات السحابية',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'ملخص سريع', anchor: 'tldr' },
+      { label: 'الخيارات الثلاثة', anchor: 'three-options' },
+      { label: 'المقارنة', anchor: 'comparison' },
+      { label: 'الفائز بالخصوصية', anchor: 'privacy-winner' },
+      { label: 'الفائز بالسهولة', anchor: 'convenience-winner' },
+      { label: 'الذكاء الاصطناعي والصوت', anchor: 'ai-voice' },
+      { label: 'التوصية حسب المستخدم', anchor: 'recommendation' },
+      { label: 'أسئلة شائعة', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'يتفوق Home Assistant على صعيد الخصوصية والتحكم المحلي؛ ويتفوق Alexa وGoogle Home على صعيد سهولة الإعداد الفوري والدعم الصوتي الواسع.' },
+      { type: 'plain-terms', content: 'هذه الخيارات الثلاثة هي الأكثر شيوعًا للمنزل الذكي. Alexa وGoogle Home هما الأسهل في الإعداد لكنهما يعملان عبر سحابات الشركات. يستلزم Home Assistant جهدًا أكبر لكنه يحتفظ بكل شيء محليًا وخاصًا — ويستطيع حتى ربط Alexa وGoogle إذا أردت.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'ملخص سريع',
+        isTldr: true,
+        items: [
+          'Home Assistant: الأكثر خصوصية، تحكم محلي كامل، الأكثر مرونة، أعلى جهد في الإعداد',
+          'Amazon Alexa: أسهل بداية، أوسع دعم للصوت والأجهزة، سحابة أولًا',
+          'Google Home: مساعد صوتي قوي، دعم واسع، سحابة أولًا',
+          'الخصوصية والتحكم المحلي هما العاملان الحاسمان',
+          'يضيف Home Assistant ذكاءً اصطناعيًا محليًا (Ollama + صوت) لا تستطيع المساعدات السحابية مجاراته بشكل خاص',
+          'يستطيع Home Assistant ربط Alexa وGoogle مما يخفض تكلفة اختياره',
+        ],
+      },
+      threeOptions: {
+        id: 'three-options',
+        title: 'الخيارات الثلاثة',
+        content:
+          '**Home Assistant محلي أولًا وخاص؛ Alexa وGoogle Home سحابيان أولًا وسهلان.** كل منهم يناسب أولوية مختلفة.',
+        items: [
+          '**Home Assistant:** مفتوح المصدر، محلي أولًا، الأكثر مرونة وخصوصية — راجع [البدء السريع](/ar/smart-home/home-assistant-getting-started).',
+          '**Amazon Alexa:** أوسع دعم للأجهزة ومهارات الصوت، أسهل بداية، سحابة أولًا.',
+          '**Google Home:** صوت قوي ودعم واسع، سحابة أولًا.',
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'المقارنة',
+        content:
+          '**يتصدر Home Assistant على صعيد الخصوصية والتحكم المحلي والذكاء الاصطناعي؛ ويتصدر Alexa وGoogle على صعيد السهولة واتساع الصوت.** استخدم الجدول لمطابقة المنصة مع أولويتك.',
+        columns: ['المعيار', 'Home Assistant', 'Amazon Alexa', 'Google Home'],
+        rows: [
+          { 'المعيار': 'الخصوصية', 'Home Assistant': 'الأفضل (محلي)', 'Amazon Alexa': 'بيانات سحابية', 'Google Home': 'بيانات سحابية' },
+          { 'المعيار': 'التحكم المحلي', 'Home Assistant': 'كامل', 'Amazon Alexa': 'محدود', 'Google Home': 'محدود' },
+          { 'المعيار': 'دعم الأجهزة', 'Home Assistant': 'الأوسع عبر التكاملات', 'Amazon Alexa': 'الأوسع صوتيًا', 'Google Home': 'واسع' },
+          { 'المعيار': 'الصوت', 'Home Assistant': 'محلي (Assist)', 'Amazon Alexa': 'قوي (سحابة)', 'Google Home': 'قوي (سحابة)' },
+          { 'المعيار': 'الذكاء الاصطناعي', 'Home Assistant': 'نموذج LLM محلي (Ollama)', 'Amazon Alexa': 'مساعد سحابي', 'Google Home': 'مساعد سحابي' },
+          { 'المعيار': 'التكلفة', 'Home Assistant': 'جهاز + جهد', 'Amazon Alexa': 'جهاز رخيص', 'Google Home': 'جهاز رخيص' },
+          { 'المعيار': 'الجهد', 'Home Assistant': 'أعلى', 'Amazon Alexa': 'منخفض', 'Google Home': 'منخفض' },
+        ],
+      },
+      privacyWinner: {
+        id: 'privacy-winner',
+        title: 'الفائز بالخصوصية: Home Assistant',
+        content:
+          '**يفوز Home Assistant بالخصوصية لأن التحكم والصوت والذكاء الاصطناعي تعمل جميعها محليًا دون جمع بيانات من قِبل الشركة المصنّعة.** اختره إذا كانت الخصوصية أولويتك القصوى.',
+        items: [
+          'لا بيانات استخدام ولا تسجيلات ولا لقطات تغادر منزلك — راجع [مخاطر خصوصية المنزل الذكي](/ar/smart-home/smart-home-privacy-risks).',
+          'أضف مساعدًا صوتيًا محليًا ونموذج LLM للتحكم الخاص بلغة طبيعية.',
+          'اقبل جهد إعداد أكبر في المقابل.',
+        ],
+      },
+      convenienceWinner: {
+        id: 'convenience-winner',
+        title: 'الفائز بالسهولة: Alexa أو Google',
+        content:
+          '**يفوز Amazon Alexa وGoogle Home بالسهولة لأن الإعداد موجّه بالتطبيق والأجهزة مدعومة على نطاق واسع من الصندوق.** اخترهما إذا كان الحد الأدنى من الجهد هو الأهم.',
+        items: [
+          'استخدم Alexa للحصول على أوسع نظام بيئي لمهارات الصوت.',
+          'استخدم Google Home إذا كنت تفضّل مساعد Google وخدماته.',
+          'اقبل الاعتماد على السحابة والمقايضة في الخصوصية — راجع [لماذا المحلي يتفوق على السحابة](/ar/smart-home/why-local-smart-home-beats-cloud).',
+        ],
+      },
+      aiVoice: {
+        id: 'ai-voice',
+        title: 'الذكاء الاصطناعي والصوت',
+        content:
+          '**يقدم Alexa وGoogle صوتًا سحابيًا متطورًا؛ ويقدم Home Assistant صوتًا محليًا خاصًا وعقل LLM محلي.** الاختيار بين التطور السحابي والتحكم الخاص.',
+        items: [
+          'المساعدات السحابية معدّلة لزمن استجابة منخفض ومهارات صوت واسعة.',
+          'يشغّل Home Assistant Assist + Whisper + Piper + نموذج LLM محلي بشكل خاص — راجع [تشغيل منزلك الذكي على نموذج LLM محلي](/ar/smart-home/local-llm-smart-home-complete-guide).',
+          'قارن مناهج الصوت في [المساعدات الصوتية المحلية مقابل السحابية](/ar/smart-home/local-vs-cloud-voice-assistant).',
+        ],
+      },
+      recommendation: {
+        id: 'recommendation',
+        title: 'التوصية حسب نوع المستخدم',
+        content:
+          '**مركّز على الخصوصية أو مولع بالتجريب → Home Assistant؛ مبتدئ يولي الأولوية للسهولة → Alexa أو Google؛ غير متأكد لكن الخصوصية تهمه → ابدأ بـ Home Assistant.** يمكنك ربط المساعدات السحابية بـ Home Assistant لاحقًا.',
+        items: [
+          '**الخصوصية / التحكم:** Home Assistant.',
+          '**أسهل بداية:** Amazon Alexa أو Google Home.',
+          '**أفضل ذكاء اصطناعي خاص:** Home Assistant مع نموذج LLM محلي.',
+          '**تريد المقارنة الكاملة للمنصات؟** راجع [مقارنة أنظمة المنزل الذكي](/ar/smart-home/smart-home-ecosystems-compared).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'أسئلة شائعة',
+        faqs: [
+          { q: 'أيهم الأكثر خصوصية؟', a: 'Home Assistant هو الأكثر خصوصية لأن التحكم والصوت والذكاء الاصطناعي تعمل محليًا على جهازك الخاص دون جمع بيانات من الشركة المصنّعة. Alexa وGoogle Home سحابيان أولًا ويرسلان بيانات الاستخدام والصوت إلى خوادم الشركة.' },
+          { q: 'أيهم الأسهل؟', a: 'Amazon Alexa وGoogle Home هما الأسهل لأن الإعداد موجّه بالتطبيق ومُدار سحابيًا مع دعم واسع للأجهزة من الصندوق. يوفر Home Assistant خصوصية وتحكمًا أكبر لكنه يتطلب جهد إعداد أكثر.' },
+          { q: 'أيهم يمتلك أفضل ذكاء اصطناعي؟', a: 'للذكاء الاصطناعي الخاص، يتصدر Home Assistant لأنه يستطيع تشغيل نموذج LLM محلي كعامل محادثة دون سحابة. Alexa وGoogle يمتلكان مساعدات سحابية متطورة لكنها تعالج بياناتك على خوادم الشركة.' },
+          { q: 'هل أستطيع تغيير المنصة لاحقًا؟', a: 'نعم، وإن كان يتطلب جهدًا. يستطيع Home Assistant دمج Alexa وGoogle وربطهما، لذا يمكنك اعتماده تدريجيًا. الانتقال من نظام سحابي إلى التحكم المحلي هو ترحيل قابل للإدارة غرفة بغرفة.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءة ذات صلة',
+        items: [
+          '[مقارنة أنظمة المنزل الذكي](/ar/smart-home/smart-home-ecosystems-compared) — المقارنة الكاملة لأربع منصات',
+          '[Home Assistant: دليل البدء السريع](/ar/smart-home/home-assistant-getting-started) — إعداد الخيار الخاص',
+          '[المساعدات الصوتية المحلية مقابل السحابية](/ar/smart-home/local-vs-cloud-voice-assistant) — قرار الصوت',
+          '[لماذا يتفوق المنزل الذكي المحلي على السحابة](/ar/smart-home/why-local-smart-home-beats-cloud) — الحجة المحلية',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Home Assistant مقابل Alexa مقابل Google Home: أيهم الأنسب؟ (2026)',
+      description: 'Home Assistant مقابل Alexa مقابل Google Home: مقارنة 2026 تشمل الخصوصية والتحكم المحلي والصوت والذكاء الاصطناعي والتكلفة — أي منصة منزل ذكي تناسبك؟',
+      url: 'https://www.promptquorum.com/ar/smart-home/home-assistant-vs-alexa-vs-google',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        { '@type': 'Question', name: 'أيهم الأكثر خصوصية؟', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant، لأن التحكم والصوت والذكاء الاصطناعي تعمل محليًا دون جمع بيانات من الشركة المصنّعة. Alexa وGoogle Home سحابيان أولًا ويرسلان بيانات الاستخدام والصوت إلى خوادم الشركة.' } },
+        { '@type': 'Question', name: 'أيهم الأسهل؟', acceptedAnswer: { '@type': 'Answer', text: 'Amazon Alexa وGoogle Home، لأن الإعداد موجّه بالتطبيق ومُدار سحابيًا مع دعم واسع من الصندوق. Home Assistant يوفر تحكمًا أكبر لكنه يتطلب جهدًا أكثر.' } },
+        { '@type': 'Question', name: 'أيهم يمتلك أفضل ذكاء اصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'للذكاء الاصطناعي الخاص، Home Assistant، لأنه يستطيع تشغيل نموذج LLM محلي كعامل محادثة دون سحابة. مساعدات Alexa وGoogle السحابية تعالج بياناتك على خوادم الشركة.' } },
+        { '@type': 'Question', name: 'هل أستطيع تغيير المنصة لاحقًا؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، مع جهد. يستطيع Home Assistant دمج Alexa وGoogle وربطهما، لذا يمكنك اعتماده تدريجيًا في ترحيل غرفة بغرفة.' } },
+      ],
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

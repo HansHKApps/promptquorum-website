@@ -215,6 +215,219 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-05',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    affiliateDisclosure: true,
+    title: 'أفضل أجهزة المنزل الذكي 2026: دليل المشتري',
+    seoTitle: 'أفضل أجهزة المنزل الذكي 2026: دليل المشتري للتحكم المحلي مقابل السحابة',
+    intro:
+      'تمتد أفضل أجهزة المنزل الذكي في 2026 من المراكز والإضاءة والأقفال والمستشعرات والكاميرات وحتى المقابس — والقاعدة الأذكى للشراء هي تفضيل الأجهزة القادرة على العمل محليًا للخصوصية والموثوقية. يسير هذا الدليل فئةً فئةً، ويميّز الخيارات القادرة على العمل محليًا عن تلك التي تعمل بالسحابة فقط، ويُظهر كيفية تجميع مجموعة بداية محلية أولًا.',
+    metaDescription:
+      'أفضل أجهزة المنزل الذكي لعام 2026 حسب الفئة — مراكز وإضاءة وأقفال ومستشعرات وكاميرات ومقابس — كل منها مصنّف بالقدرة المحلية أو السحابة فقط. دليل المشتري.',
+    twitterDescription:
+      'أفضل أجهزة المنزل الذكي 2026 حسب الفئة، كل منها مصنّف بالقدرة المحلية أو السحابة فقط. ابنِ مجموعة خاصة محلية أولًا بدلًا من المقيّدة بالسحابة.',
+    readTime: '9 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'المشترون الذين يجمّعون منزلًا ذكيًا قادرًا على العمل محليًا',
+    primaryTerm: 'best smart home devices 2026',
+    targetKeywords: [
+      'أفضل أجهزة المنزل الذكي 2026',
+      'دليل شراء المنزل الذكي 2026',
+      'أجهزة المنزل الذكي المحلية',
+      'أفضل مركز منزل ذكي 2026',
+      'أجهزة المنزل الذكي للخصوصية',
+    ],
+    leadAnswerBlock:
+      '**أفضل أجهزة المنزل الذكي لعام 2026 تشمل المراكز والإضاءة والأقفال والمستشعرات والكاميرات والمقابس — والقاعدة الأساسية للشراء هي اختيار الأجهزة القادرة على العمل محليًا (Zigbee أو Z-Wave أو Matter أو Wi-Fi محلي) بدلًا من الأجهزة التي تعمل بالسحابة فقط، من أجل الخصوصية والموثوقية دون إنترنت.** مركز محلي مثل Home Assistant يربطها معًا.',
+    quickAnswerTop: {
+      ar: {
+        question: 'ما أفضل أجهزة المنزل الذكي للشراء في 2026؟',
+        answer:
+          'أفضل الأجهزة لعام 2026 هي الأجهزة القادرة على العمل محليًا في كل فئة: مركز محلي (Home Assistant)، إضاءة Zigbee أو Matter، أقفال Z-Wave أو Matter، مستشعرات Zigbee، كاميرات RTSP محلية مقرونة بـ Frigate، ومقابس Wi-Fi محلية أو Zigbee. إعطاء الأولوية للتحكم المحلي يمنحك الخصوصية والموثوقية دون إنترنت وبلا اشتراكات.',
+        bullets: [
+          'المركز: Home Assistant على mini PC أو جهاز مخصص',
+          'الإضاءة: مصابيح Zigbee أو Matter (تحكم محلي)',
+          'الأقفال: Z-Wave أو Matter (تجنّب السحابة فقط)',
+          'الكاميرات: كاميرات RTSP محلية + Frigate، بلا اشتراك',
+          'فضّل Zigbee/Z-Wave/Matter/Wi-Fi محلي على السحابة فقط',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'ملخص سريع', anchor: 'tldr' },
+      { label: 'كيف نختار', anchor: 'how-we-pick' },
+      { label: 'أفضل مركز', anchor: 'hub' },
+      { label: 'أفضل إضاءة', anchor: 'lighting' },
+      { label: 'أفضل أقفال ومستشعرات', anchor: 'locks-sensors' },
+      { label: 'أفضل كاميرات ومقابس', anchor: 'cameras-plugs' },
+      { label: 'بناء مجموعة محلية أولًا', anchor: 'starter-kit' },
+      { label: 'أسئلة شائعة', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'أفضل أجهزة المنزل الذكي لعام 2026 هي الأجهزة القادرة على العمل محليًا — Zigbee وZ-Wave وMatter أو Wi-Fi محلي — مترابطةً عبر مركز محلي مثل Home Assistant.' },
+      { type: 'plain-terms', content: 'عند شراء أجهزة المنزل الذكي، أهم سؤال ليس العلامة التجارية — بل هل يستطيع الجهاز العمل محليًا. الأجهزة التي تتحدث Zigbee أو Z-Wave أو Matter، أو تتيح واجهة برمجية محلية، تستمر في العمل دون سحابة وتحافظ على بياناتك في المنزل. الأجهزة التي تعمل بالسحابة فقط مريحة لكنها تقيّدك.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'ملخص سريع',
+        isTldr: true,
+        items: [
+          'اشترِ أجهزة قادرة على العمل محليًا: Zigbee أو Z-Wave أو Matter أو Wi-Fi محلي مع واجهة برمجية محلية',
+          'المركز: Home Assistant على mini PC أو جهاز مخصص هو الأساس المحلي أولًا',
+          'الإضاءة: مصابيح وأسلاك Zigbee أو Matter تتحكم محليًا؛ تجنّب المصابيح التي تعتمد على السحابة فقط',
+          'الأقفال: اختر أقفال Z-Wave أو Matter بدلًا من طرازات السحابة فقط',
+          'الكاميرات: كاميرات RTSP محلية مع Frigate تتجنب الاشتراكات وتحتفظ بالتسجيلات في المنزل',
+          'مركز محلي مع أجهزة محلية يعني الخصوصية والموثوقية دون إنترنت وبلا رسوم',
+        ],
+      },
+      howWePick: {
+        id: 'how-we-pick',
+        title: 'كيف نختار: القدرة المحلية أولًا',
+        content:
+          '**قاعدة الاختيار هي القدرة المحلية أولًا: يجب أن يعمل الجهاز عبر مركز محلي دون الاعتماد على سحابة البائع.** الأجهزة القادرة على العمل محليًا تحمي الخصوصية وتعمل دون إنترنت وتتجنب الاشتراكات.',
+        items: [
+          '**بروتوكول أو واجهة برمجية محلية:** Zigbee أو Z-Wave أو Matter أو واجهة Wi-Fi محلية موثقة.',
+          '**لا حساب سحابي إلزامي:** يجب أن يعمل الجهاز عبر مركز محلي.',
+          '**لا اشتراك للميزات الأساسية:** يجب ألا يتطلب التسجيل أو الأتمتة رسومًا.',
+        ],
+      },
+      hub: {
+        id: 'hub',
+        title: 'أفضل مركز',
+        content:
+          '**مركز محلي يشغّل Home Assistant هو الأساس، لأنه يتحدث Zigbee وZ-Wave وMatter وThread ويشغّل الأتمتة دون إنترنت.** شغّله على mini PC إذا أردت أيضًا ذكاءً اصطناعيًا محليًا.',
+        items: [
+          'Home Assistant على mini PC يتعامل مع المركز مع نموذج LLM محلي — راجع [أفضل أجهزة المنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home).',
+          'أضف منسّق Zigbee ووحدة تحكم Z-Wave (عصي USB) لتلك البروتوكولات.',
+          'موجّه Thread الحدودي يُمكّن أجهزة Matter عبر Thread.',
+          'مثال: Home Assistant Green (مركز جاهز)؛ أضف SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E) أو Home Assistant Connect ZBT-2 لـ Zigbee/Thread/Matter.',
+        ],
+        affiliateLinks: [
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E)', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
+          { label: 'Home Assistant Connect ZBT-2', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
+        ],
+      },
+      lighting: {
+        id: 'lighting',
+        title: 'أفضل إضاءة',
+        content:
+          '**اختر مصابيح وأسلاك Zigbee أو Matter لتتحكم في الإضاءة محليًا وفوريًا.** تجنّب المصابيح التي تعمل فقط عبر تطبيق المصنّع والسحابة.',
+        items: [
+          'مصابيح وأسلاك Zigbee تقترن بمركزك وتستجيب محليًا.',
+          'إضاءة Matter توفر توافقًا عبر العلامات التجارية مع تحكم محلي.',
+          'أسلاك الحائط التي تتحكم في التركيبات الموجودة غالبًا أكثر موثوقية من المصابيح الذكية وحدها.',
+          'مثال: مصابيح Philips Hue أو IKEA TRÅDFRI Zigbee — كلاهما يتحكم محليًا عند الاقتران بمنسّق Zigbee.',
+        ],
+        affiliateLinks: [
+          { label: 'مصابيح Philips Hue Zigbee على Amazon', url: 'https://www.amazon.com/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb' },
+          { label: 'مصابيح IKEA TRÅDFRI Zigbee', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+        ],
+      },
+      locksSensors: {
+        id: 'locks-sensors',
+        title: 'أفضل أقفال ومستشعرات',
+        content:
+          '**اختر أقفال Z-Wave أو Matter ومستشعرات Zigbee/Z-Wave لتعمل الأمان والمحفزات محليًا.** بالنسبة للأقفال، التحكم المحلي يهم أكثر لأن الموثوقية متعلقة بالسلامة.',
+        items: [
+          'أقفال Z-Wave خيار محلي موثوق منذ فترة طويلة؛ أقفال Matter تظهر تدريجيًا.',
+          'مستشعرات الحركة والأبواب/النوافذ والحرارة Zigbee أو Z-Wave تُشغّل الأتمتة دون إنترنت.',
+          'الإبقاء على أتمتة الأقفال والإنذارات حتمية بدلًا من توجيهها عبر نموذج لغوي — راجع [أتمتة الذكاء الاصطناعي بنموذج LLM محلي](/ar/smart-home/ai-automations-local-llm).',
+          'مثال: Yale Assure Lock (Z-Wave) للقفل؛ مستشعر حركة Aqara P1 ومستشعر باب/نافذة SONOFF SNZB-04P (Zigbee).',
+        ],
+        affiliateLinks: [
+          { label: 'Yale Assure Lock (Z-Wave)', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
+          { label: 'مستشعر حركة Aqara P1', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
+          { label: 'مستشعر باب/نافذة SONOFF SNZB-04P', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
+        ],
+      },
+      camerasPlugs: {
+        id: 'cameras-plugs',
+        title: 'أفضل كاميرات ومقابس',
+        content:
+          '**اختر كاميرات RTSP محلية مقرونة بـ Frigate، ومقابس Zigbee أو Wi-Fi محلية، لتجنّب الاشتراكات والحفاظ على البيانات في المنزل.** الكاميرات السحابية هي أكبر فخ للخصوصية والرسوم.',
+        items: [
+          'كاميرات RTSP/PoE المحلية مع Frigate توفر كشفًا خاصًا بالذكاء الاصطناعي بلا اشتراك — راجع [كاميرات الأمان بالذكاء الاصطناعي المحلي مع Frigate](/ar/smart-home/local-ai-security-camera).',
+          'مقابس Zigbee أو Wi-Fi المحلية ذات واجهة برمجية محلية تعمل عبر مركزك دون إنترنت.',
+          'تجنّب المقابس والكاميرات التي تتطلب حسابًا سحابيًا للتحكم الأساسي.',
+          'مثال: Reolink RLC-810A أو كاميرا Amcrest PoE (RTSP، متوافقة مع Frigate)؛ مقابس SONOFF أو ThirdReality Zigbee الذكية.',
+        ],
+        affiliateLinks: [
+          { label: 'Reolink RLC-810A (4K PoE)', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
+          { label: 'كاميرا Amcrest PoE على Amazon', url: 'https://www.amazon.com/s?k=Amcrest+PoE+camera', productName: 'Amcrest PoE camera', productCategory: 'Security camera' },
+          { label: 'مقبس SONOFF Zigbee الذكي', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'مقبس ThirdReality Zigbee الذكي', url: 'https://thirdreality.com/product/smart-plug-gen2-with-energy-monitoring/', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
+        ],
+      },
+      starterKit: {
+        id: 'starter-kit',
+        title: 'بناء مجموعة محلية أولًا',
+        content:
+          '**ابدأ بمركز محلي ومنسّق Zigbee وعدد قليل من الأجهزة المحلية في غرفة واحدة، ثم وسّع.** هذا يمنحك قاعدة خاصة وموثوقة يمكن توسيعها.',
+        columns: ['الفئة', 'الاختيار المحلي القادر', 'لماذا'],
+        rows: [
+          { 'الفئة': 'المركز', 'الاختيار المحلي القادر': 'Home Assistant على mini PC', 'لماذا': 'يتحدث جميع البروتوكولات المحلية، يعمل دون إنترنت' },
+          { 'الفئة': 'الإضاءة', 'الاختيار المحلي القادر': 'مصابيح/أسلاك Zigbee أو Matter', 'لماذا': 'تحكم محلي فوري' },
+          { 'الفئة': 'القفل', 'الاختيار المحلي القادر': 'قفل Z-Wave أو Matter', 'لماذا': 'أمان محلي موثوق' },
+          { 'الفئة': 'المستشعرات', 'الاختيار المحلي القادر': 'Zigbee/Z-Wave حركة وباب', 'لماذا': 'محفزات أتمتة محلية' },
+          { 'الفئة': 'الكاميرا', 'الاختيار المحلي القادر': 'كاميرا RTSP محلية + Frigate', 'لماذا': 'كشف ذكاء اصطناعي خاص، بلا رسوم' },
+          { 'الفئة': 'المقبس', 'الاختيار المحلي القادر': 'مقبس Zigbee أو Wi-Fi محلي', 'لماذا': 'تحكم محلي، لا حساب سحابي' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'أسئلة شائعة',
+        faqs: [
+          { q: 'ما أفضل جهاز منزل ذكي للبداية؟', a: 'مركز محلي يشغّل Home Assistant، مع منسّق Zigbee وعدد من مصابيح أو مستشعرات Zigbee. المركز هو الأساس الذي يجعل كل جهاز محلي آخر يعمل معًا دون إنترنت وبشكل خاص.' },
+          { q: 'أي العلامات التجارية تعمل محليًا؟', a: 'ابحث عن أجهزة تستخدم Zigbee أو Z-Wave أو Matter، أو أجهزة Wi-Fi محلية مع واجهة برمجية محلية موثقة. هذه تعمل عبر مركز محلي دون سحابة البائع، بصرف النظر عن العلامة التجارية. تجنّب الأجهزة التي تتطلب حسابًا سحابيًا للتحكم الأساسي.' },
+          { q: 'هل أحتاج مركز المصنّع؟', a: 'في الغالب لا. مركز محلي مثل Home Assistant يمكنه التحدث مع أجهزة Zigbee وZ-Wave وMatter مباشرةً بمنسّق، لذا يمكنك في الغالب تخطي مركز المصنّع المرتبط بالسحابة. تحقق من أن الجهاز المحدد يدعم الاقتران المحلي.' },
+          { q: 'ما الاختيارات الجيدة للميزانية المحدودة؟', a: 'مصابيح وأسلاك ومستشعرات Zigbee غير مكلفة وقادرة على العمل محليًا، مما يجعلها خيارات قوية للميزانية المحدودة. البداية بعدد من أجهزة Zigbee ومركز محلي تبقي التكلفة الأولية منخفضة مع الحفاظ على الخصوصية وإمكانية التوسع.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءة ذات صلة',
+        items: [
+          '[الدليل الشامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide) — تجميع هذه الأجهزة في مجموعة محلية',
+          '[أفضل أجهزة المنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home) — أجهزة المركز',
+          '[كاميرات الأمان بالذكاء الاصطناعي المحلي مع Frigate](/ar/smart-home/local-ai-security-camera) — كشف كاميرا خاص',
+          '[بروتوكولات المنزل الذكي شرح](/ar/smart-home/smart-home-protocols-explained) — أي البروتوكولات محلية',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'أفضل أجهزة المنزل الذكي 2026: دليل المشتري',
+      description: 'أفضل أجهزة المنزل الذكي لعام 2026 حسب الفئة — مراكز وإضاءة وأقفال ومستشعرات وكاميرات ومقابس — كل منها مصنّف بالقدرة المحلية أو السحابة فقط.',
+      url: 'https://www.promptquorum.com/ar/smart-home/best-smart-home-devices-2026',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-05',
+      about: [{ '@type': 'Thing', name: 'أجهزة المنزل الذكي' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'التحكم المحلي' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        { '@type': 'Question', name: 'ما أفضل جهاز منزل ذكي للبداية؟', acceptedAnswer: { '@type': 'Answer', text: 'مركز محلي يشغّل Home Assistant، مع منسّق Zigbee وعدد من مصابيح أو مستشعرات Zigbee — المركز يجعل كل جهاز محلي آخر يعمل معًا دون إنترنت.' } },
+        { '@type': 'Question', name: 'أي العلامات التجارية تعمل محليًا؟', acceptedAnswer: { '@type': 'Answer', text: 'أجهزة تستخدم Zigbee أو Z-Wave أو Matter، أو Wi-Fi محلية مع واجهة برمجية محلية موثقة. هذه تعمل عبر مركز محلي دون سحابة البائع، بصرف النظر عن العلامة التجارية.' } },
+        { '@type': 'Question', name: 'هل أحتاج مركز المصنّع؟', acceptedAnswer: { '@type': 'Answer', text: 'في الغالب لا. Home Assistant يتحدث مع أجهزة Zigbee وZ-Wave وMatter مباشرةً بمنسّق، لذا يمكنك تخطي مركز المصنّع المرتبط بالسحابة.' } },
+        { '@type': 'Question', name: 'ما الاختيارات الجيدة للميزانية المحدودة؟', acceptedAnswer: { '@type': 'Answer', text: 'مصابيح وأسلاك ومستشعرات Zigbee غير مكلفة وقادرة على العمل محليًا. البداية بعدد من أجهزة Zigbee ومركز محلي تبقي التكلفة منخفضة مع الحفاظ على الخصوصية وإمكانية التوسع.' } },
+      ],
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

@@ -207,6 +207,211 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'ربط Ollama بـ Home Assistant: مساعد ذكاء اصطناعي محلي (2026)',
+    seoTitle: 'Ollama + Home Assistant 2026: إعداد ذكاء اصطناعي محلي',
+    intro:
+      'يتضمن Home Assistant تكاملًا مدمجًا مع Ollama يحوّل نموذجًا يستضيفه محليًا إلى عامل محادثة يتحكم في الأجهزة بلغة طبيعية دون أي سحابة. يستعرض هذا الدليل المتطلبات الأساسية وإضافة التكامل واختيار النموذج وتوصيل عامل المحادثة والتحكم في الأجهزة واستكشاف الأخطاء — مع الإبقاء على إعداد Ollama واختيار النموذج كروابط خارجية لا إعادة شرح.',
+    metaDescription:
+      'ربط Ollama بـ Home Assistant خطوة بخطوة: أضف التكامل واختر نموذجًا وضبط عامل المحادثة وتحكم في الأجهزة بلغة طبيعية. بدون سحابة.',
+    twitterDescription:
+      'اربط Ollama بـ Home Assistant للحصول على مساعد ذكاء اصطناعي محلي بالكامل: أضف التكامل واختر نموذجًا وتحكم في الأجهزة بالصوت أو النص. صفر سحابة.',
+    readTime: '9 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'مستخدمو Home Assistant الذين يضيفون عامل محادثة ذكاء اصطناعي محلي',
+    primaryTerm: 'Home Assistant Ollama integration',
+    targetKeywords: [
+      'تكامل ollama home assistant',
+      'ollama home assistant',
+      'home assistant نموذج llm محلي',
+      'عامل محادثة ollama home assistant',
+      'مساعد ذكاء اصطناعي محلي home assistant',
+    ],
+    leadAnswerBlock:
+      '**أضف تكامل Ollama في Home Assistant ووجّهه نحو خادم Ollama واختر نموذجًا ثم عيّن هذا النموذج عامل محادثة Assist — الآن تتحكم في الأجهزة بلغة طبيعية بشكل محلي تام.** يشغّل Ollama النموذج على جهازك الخاص، لذا لا يغادر أي أمر أو حالة منزلية شبكتك.',
+    quickAnswerTop: {
+      ar: {
+        question: 'كيف أربط Ollama بـ Home Assistant؟',
+        answer:
+          'شغّل Ollama على جهاز يمكن الوصول إليه من Home Assistant وحمّل نموذجًا، ثم في Home Assistant أضف تكامل Ollama (الإعدادات ← الأجهزة والخدمات)، وأدخل عنوان URL لـ Ollama (الافتراضي http://host:11434) وحدد نموذجك. أخيرًا، عيّن كيان محادثة Ollama عاملًا في خط أنابيب Assist.',
+        bullets: [
+          'شغّل Ollama وحمّل نموذجًا على مضيف يمكن الوصول إليه',
+          'أضف تكامل Ollama في Home Assistant',
+          'أدخل عنوان URL لـ Ollama (المنفذ الافتراضي 11434) واختر نموذجًا',
+          'اعرض الكيانات لـ Assist حتى يتمكن النموذج من التحكم فيها',
+          'عيّن عامل Ollama في خط أنابيب Assist',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'ملخص سريع', anchor: 'tldr' },
+      { label: 'ما ستحصل عليه', anchor: 'what-this-gives' },
+      { label: 'المتطلبات الأساسية', anchor: 'prerequisites' },
+      { label: 'إضافة التكامل', anchor: 'add-integration' },
+      { label: 'اختيار نموذج', anchor: 'choose-model' },
+      { label: 'تهيئة العامل', anchor: 'configure-agent' },
+      { label: 'التحكم في الأجهزة', anchor: 'control-devices' },
+      { label: 'استكشاف الأخطاء', anchor: 'troubleshooting' },
+      { label: 'أسئلة شائعة', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'أضف تكامل Ollama في Home Assistant ووجّهه نحو خادم Ollama واختر نموذجًا وعيّنه عامل محادثة Assist.' },
+      { type: 'plain-terms', content: 'يمكن لـ Home Assistant استخدام نموذج ذكاء اصطناعي محلي كعقله للصوت والدردشة. تشغّل النموذج بـ Ollama على جهازك الخاص وتخبر Home Assistant بمكانه وتختار النموذج وتتركه يتحكم في الأجهزة التي تعرضها. كل شيء يعمل على جهازك، لذا لا يُرسل شيء إلى خدمة سحابية.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'ملخص سريع',
+        isTldr: true,
+        items: [
+          'يأتي Home Assistant مع تكامل Ollama رسمي — لا حاجة لإضافة مخصصة',
+          'شغّل Ollama على مضيف Home Assistant أو جهاز آخر على شبكتك المحلية',
+          'أضف التكامل ← أدخل عنوان URL لـ Ollama (الافتراضي http://host:11434) ← حدد نموذجًا',
+          'اعرض الكيانات التي تريد أن يتحكم فيها النموذج فقط، ثم عيّنه عامل Assist',
+          'استخدم نموذجًا صغيرًا يدعم استدعاء الدوال لتقليل زمن الاستجابة؛ اربط للتعمق في النماذج والجهاز',
+          'كل شيء محلي: لا يغادر أي أمر أو حالة منزلية شبكتك',
+        ],
+      },
+      whatThisGives: {
+        id: 'what-this-gives',
+        title: 'ما يمنحك إياه ربط Ollama بـ Home Assistant',
+        content:
+          '**يمنح Home Assistant عامل محادثة محليًا: تتكلم أو تكتب طلبًا ويقوم النموذج بتعيينه إلى إجراءات الأجهزة، دون مشاركة أي مساعد سحابي.** يحل هذا محل عامل الصوت السحابي (Alexa، Google) للتحكم بلغة طبيعية.',
+        items: [
+          '**التحكم بلغة طبيعية:** "أطفئ كل شيء في الطابق السفلي" يُعين على الكيانات الصحيحة بدلًا من عبارة ثابتة.',
+          '**محلي وخاص:** يعمل النموذج عبر Ollama على جهازك — راجع [دليل المنزل الذكي بنموذج LLM محلي](/ar/smart-home/local-llm-smart-home-complete-guide) للبنية التقنية الكاملة.',
+          '**جاهز للصوت:** ادمجه مع خط أنابيب صوتي محلي كبديل خاص لـ Alexa — راجع [بناء مساعد صوتي محلي بالكامل](/ar/smart-home/local-voice-assistant-smart-home).',
+        ],
+      },
+      prerequisites: {
+        id: 'prerequisites',
+        title: 'المتطلبات الأساسية قبل البدء',
+        content:
+          '**تحتاج إلى Home Assistant يعمل و Ollama يعمل على مضيف يمكن الوصول إليه ونموذج واحد محمّل.** لا يُعيد هذا الدليل شرح تثبيت Ollama — الرابط لذلك خارجي.',
+        numberedItems: [
+          'Home Assistant يعمل ويمكن الوصول إليه على شبكتك المحلية.',
+          'Ollama مثبت ويعمل على نفس المضيف أو جهاز آخر — راجع [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama).',
+          'نموذج واحد على الأقل محمّل (نموذج تعليمات صغير هو نقطة البداية المناسبة).',
+          'إمكانية الوصول الشبكي: تأكد من أن Home Assistant يمكنه الوصول إلى عنوان URL لـ Ollama (المنفذ الافتراضي 11434).',
+        ],
+      },
+      addIntegration: {
+        id: 'add-integration',
+        title: 'كيف تضيف تكامل Ollama؟',
+        content:
+          '**في Home Assistant اذهب إلى الإعدادات ← الأجهزة والخدمات ← إضافة تكامل ← Ollama، ثم أدخل عنوان URL لـ Ollama.** عنوان URL الافتراضي هو http://<host>:11434.',
+        columns: ['الخطوة', 'الإجراء', 'النتيجة'],
+        rows: [
+          { 'الخطوة': '1', 'الإجراء': 'الإعدادات ← الأجهزة والخدمات ← إضافة تكامل', 'النتيجة': 'يفتح منتقي التكاملات' },
+          { 'الخطوة': '2', 'الإجراء': 'ابحث عن "Ollama" وحدده', 'النتيجة': 'يظهر مربع حوار الاتصال' },
+          { 'الخطوة': '3', 'الإجراء': 'أدخل عنوان URL لـ Ollama (http://host:11434)', 'النتيجة': 'يتصل Home Assistant بـ Ollama' },
+          { 'الخطوة': '4', 'الإجراء': 'حدد نموذجًا من القائمة', 'النتيجة': 'يُنشأ كيان محادثة' },
+        ],
+      },
+      chooseModel: {
+        id: 'choose-model',
+        title: 'أي نموذج يجب أن تختار؟',
+        content:
+          '**اختر نموذجًا صغيرًا سريعًا يتبع التعليمات ويدعم استدعاء الدوال للتحكم في المنزل — وليس أكبر نموذج يمكنك تشغيله.** زمن الاستجابة هنا أهم من القدرة الخام.',
+        items: [
+          'استخدم نموذجًا صغيرًا إذا أردت استجابات سريعة على جهاز متواضع.',
+          'أعطِ الأولوية لدعم استدعاء الدوال/الأدوات حتى يُصدر النموذج إجراءات الأجهزة بشكل موثوق.',
+          'للاطلاع على قائمة مختصرة خاصة بالمنزل الذكي، راجع [أفضل نماذج LLM المحلية للتحكم في المنزل الذكي](/ar/smart-home/best-local-llm-models-smart-home).',
+          'للتعمق في آليات النماذج، انتقل إلى [أفضل LLMs المحلية للبرمجة](/ar/power-local-llm/best-local-coding-models-2026) وعنقود local-llms — هذا الدليل لا يُعيد ترتيب النماذج.',
+        ],
+      },
+      configureAgent: {
+        id: 'configure-agent',
+        title: 'تهيئة عامل المحادثة',
+        content:
+          '**عيّن كيان محادثة Ollama عاملًا في خط أنابيب Assist واعرض الكيانات التي تريده يتحكم فيها فقط.** العرض هو ما يسمح للنموذج بالتأثير في الأجهزة.',
+        numberedItems: [
+          'افتح الإعدادات ← المساعدات الصوتية وعدّل (أو أنشئ) خط أنابيب Assist.',
+          'عيّن عامل المحادثة على كيان Ollama الذي أنشأه التكامل.',
+          'تحت إعدادات عرض Assist، اعرض الكيانات المحددة التي يمكن للنموذج التحكم فيها.',
+          'اختياريًا أضف تعليمة نظام مخصصة لتقييد النبرة والنطاق.',
+          'احفظ ثم اختبر من مربع دردشة Assist قبل إضافة الصوت.',
+        ],
+      },
+      controlDevices: {
+        id: 'control-devices',
+        title: 'التحكم في الأجهزة بالصوت أو النص',
+        content:
+          '**بمجرد ضبط العامل وعرض الكيانات، اكتب أو قُل طلبًا في Assist وسينفذ النموذج الإجراء.** احتفظ بأتمتة السلامة الحتمية كقواعد بسيطة لا يقودها النموذج.',
+        items: [
+          'اختبر أولًا بأوامر بسيطة ("أضئ مصباح المكتب")، ثم بصياغة طبيعية.',
+          'يتحكم النموذج فقط في الكيانات التي عرضتها — الأجهزة غير المعروضة تبقى دون تغيير.',
+          'أضف واجهة صوتية محلية للاستخدام باليد الحرة — راجع [مساعد صوتي محلي](/ar/smart-home/local-voice-assistant-smart-home).',
+          'لأتمتة واعية بالسياق تتجاوز الأوامر المباشرة، راجع [أتمتة الذكاء الاصطناعي مع نموذج LLM محلي](/ar/smart-home/ai-automations-local-llm).',
+        ],
+      },
+      troubleshooting: {
+        id: 'troubleshooting',
+        title: 'استكشاف المشكلات الشائعة وإصلاحها',
+        content:
+          '**معظم المشكلات تتعلق بالاتصال أو اختيار النموذج أو العرض.** تعامل معها بالترتيب.',
+        items: [
+          '**تعذر الاتصال:** تحقق من عنوان URL لـ Ollama وأن المنفذ 11434 يمكن الوصول إليه من Home Assistant؛ اربط Ollama بـ 0.0.0.0 إذا كان على مضيف آخر.',
+          '**استجابات بطيئة:** انتقل إلى نموذج أصغر أو أضف GPU/NPU — راجع [أفضل جهاز للمنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home).',
+          '**النموذج يتجاهل الأجهزة:** تأكد من أن الكيانات معروضة لـ Assist وأن كيان Ollama هو العامل النشط.',
+          '**إجراءات خاطئة:** أضف تعليمة نظام تقيّد النطاق، أو قلّل عدد الكيانات المعروضة.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'أسئلة شائعة',
+        faqs: [
+          { q: 'أي نموذج يجب أن أختار لـ Home Assistant؟', a: 'نموذج صغير يتبع التعليمات مع دعم استدعاء الدوال هو أفضل نقطة بداية لأن التحكم في المنزل يتطلب استجابات سريعة ومنظمة. الحجم المناسب يعتمد على جهازك؛ راجع دليل أفضل نماذج LLM المحلية للمنزل الذكي للخيارات الحالية.' },
+          { q: 'هل أحتاج إلى GPU لتشغيل Ollama مع Home Assistant؟', a: 'لا، لكنه يساعد. يعمل نموذج صغير على CPU حديث أو GPU مدمج؛ GPU مخصص أو NPU يقلل زمن الاستجابة مما يجعل المساعد أكثر استجابة. طابق حجم النموذج مع جهازك.' },
+          { q: 'هل يمكن للنموذج التحكم في أي جهاز في Home Assistant؟', a: 'فقط الكيانات التي تعرضها صراحةً لـ Assist. العرض يعتمد الموافقة المسبقة، لذا لا يمكن للنموذج التصرف على أجهزة لم تشاركها، مما يجعل التحكم قابلًا للتنبؤ وآمنًا.' },
+          { q: 'هل يعمل تكامل Ollama دون اتصال بالإنترنت؟', a: 'نعم. يشغّل Ollama النموذج محليًا ويتحكم Home Assistant في الأجهزة عبر شبكتك المحلية، لذا يعمل المساعد دون إنترنت. فقط الوصول البعيد من خارج المنزل يحتاج اتصالًا.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءة ذات صلة',
+        items: [
+          '[تشغيل منزلك الذكي على نموذج LLM محلي](/ar/smart-home/local-llm-smart-home-complete-guide) — البنية التقنية الكاملة التي يندرج فيها هذا',
+          '[بناء مساعد صوتي محلي بالكامل](/ar/smart-home/local-voice-assistant-smart-home) — إضافة الصوت باليد الحرة',
+          '[أفضل نماذج LLM المحلية للتحكم في المنزل الذكي](/ar/smart-home/best-local-llm-models-smart-home) — اختر النموذج المناسب',
+          '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) — متعدد العناقيد: إعداد Ollama',
+          '[أفضل النماذج المحلية للبرمجة 2026](/ar/power-local-llm/best-local-coding-models-2026) — متعدد العناقيد: عمق النماذج',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'ربط Ollama بـ Home Assistant: مساعد ذكاء اصطناعي محلي (2026)',
+      description: 'ربط Ollama بـ Home Assistant خطوة بخطوة: أضف التكامل واختر نموذجًا وضبط عامل المحادثة وتحكم في الأجهزة بلغة طبيعية. بدون سحابة.',
+      url: 'https://www.promptquorum.com/ar/smart-home/home-assistant-ollama-integration',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Ollama' }, { '@type': 'Thing', name: 'مساعد ذكاء اصطناعي محلي' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        { '@type': 'Question', name: 'أي نموذج يجب أن أختار لـ Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'نموذج صغير يتبع التعليمات مع دعم استدعاء الدوال هو أفضل نقطة بداية لأن التحكم في المنزل يتطلب استجابات سريعة ومنظمة. الحجم المناسب يعتمد على جهازك.' } },
+        { '@type': 'Question', name: 'هل أحتاج إلى GPU لتشغيل Ollama مع Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'لا، لكنه يساعد. يعمل نموذج صغير على CPU حديث أو GPU مدمج؛ GPU مخصص أو NPU يقلل زمن الاستجابة.' } },
+        { '@type': 'Question', name: 'هل يمكن للنموذج التحكم في أي جهاز في Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'فقط الكيانات التي تعرضها صراحةً لـ Assist. العرض يعتمد الموافقة المسبقة، لذا لا يمكن للنموذج التصرف على أجهزة لم تشاركها.' } },
+        { '@type': 'Question', name: 'هل يعمل تكامل Ollama دون اتصال بالإنترنت؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يشغّل Ollama النموذج محليًا ويتحكم Home Assistant في الأجهزة عبر شبكتك المحلية، لذا يعمل دون إنترنت.' } },
+      ],
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

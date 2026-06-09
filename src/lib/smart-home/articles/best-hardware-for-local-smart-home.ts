@@ -202,6 +202,206 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-05',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    affiliateDisclosure: true,
+    title: 'أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي المحلي (2026)',
+    seoTitle: 'أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي (2026)',
+    intro:
+      'تعتمد أفضل أجهزة المنزل الذكي المحلي على ما إذا كنت تريد أيضًا تشغيل نموذج LLM محلي: يكفي Raspberry Pi للأساسيات، بينما يُعدّ mini PC الخيار الأفضل إذا أردت Home Assistant مع الذكاء الاصطناعي المحلي على صندوق واحد. يقارن هذا الدليل بين Pi وmini PC وNAS والخادم المخصص، ويساعدك على الاختيار بين HA فقط أو HA مع الذكاء الاصطناعي — مع إحالات خارجية لتفاصيل VRAM.',
+    metaDescription:
+      'أفضل أجهزة المنزل الذكي المحلي مع الذكاء الاصطناعي 2026: Raspberry Pi مقابل mini PC مقابل NAS مقابل خادم. اختر لـ Home Assistant وحده أو HA مع نموذج LLM محلي.',
+    twitterDescription:
+      'أجهزة المنزل الذكي المحلي: Pi مقابل mini PC مقابل NAS مقابل خادم. اختر Pi للأساسيات، وmini PC إذا أردت تشغيل نموذج LLM محلي. دليل 2026.',
+    readTime: '9 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'المشترون الذين يختارون أجهزة لتشغيل Home Assistant والذكاء الاصطناعي المحلي',
+    primaryTerm: 'best hardware local smart home',
+    targetKeywords: [
+      'أفضل أجهزة home assistant ذكاء اصطناعي محلي',
+      'أجهزة home assistant',
+      'mini pc home assistant نموذج llm محلي',
+      'raspberry pi مقابل mini pc home assistant',
+      'خادم المنزل الذكي المحلي',
+    ],
+    leadAnswerBlock:
+      '**شغّل المنزل الذكي المحلي على Raspberry Pi للأساسيات، أو على mini PC إذا أردت أيضًا نموذج LLM محلي أو نماذج Whisper أكبر أو Frigate على نفس الصندوق.** يناسب NAS أو الخادم المخصص الإعدادات الأكبر؛ العامل الحاسم هو ما إذا كنت تريد الذكاء الاصطناعي المحلي.',
+    quickAnswerTop: {
+      ar: {
+        question: 'ما الأجهزة التي أحتاجها للمنزل الذكي المحلي مع الذكاء الاصطناعي؟',
+        answer:
+          'لـ Home Assistant وحده، يكفي Raspberry Pi. لتشغيل نموذج LLM محلي أو نماذج Whisper أكبر أو كشف كاميرات Frigate على نفس الصندوق، اختر mini PC مع RAM كافٍ وGPU متكاملة أو NPU قادرة. يناسب NAS أو الخادم المخصص الإعدادات الأكبر متعددة الخدمات.',
+        bullets: [
+          'Home Assistant وحده: يكفي Raspberry Pi',
+          'HA + نموذج LLM محلي: mini PC مع iGPU/NPU قادرة',
+          'المزيد من RAM وGPU/NPU يقلل زمن استجابة النموذج اللغوي',
+          'NAS أو خادم: للإعدادات الأكبر متعددة الخدمات',
+          'قرر أولًا: HA فقط أم HA + ذكاء اصطناعي محلي',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'ملخص سريع', anchor: 'tldr' },
+      { label: 'ما يحتاجه المركز', anchor: 'hub-needs' },
+      { label: 'Raspberry Pi', anchor: 'raspberry-pi' },
+      { label: 'Mini PC', anchor: 'mini-pc' },
+      { label: 'NAS', anchor: 'nas' },
+      { label: 'خادم مخصص', anchor: 'server' },
+      { label: 'HA فقط أم HA + ذكاء اصطناعي', anchor: 'picking' },
+      { label: 'أسئلة شائعة', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'يُشغّل Raspberry Pi مركز المنزل الذكي المحلي؛ أما mini PC فهو الأفضل إذا أردت أيضًا نموذج LLM محلي أو Whisper أكبر أو Frigate على نفس الصندوق.' },
+      { type: 'plain-terms', content: 'برنامج المركز (Home Assistant) خفيف ويعمل على حاسوب صغير مثل Raspberry Pi. إضافة الذكاء الاصطناعي المحلي — نموذج لغوي أو التعرف على الكلام الأكبر أو كشف الكاميرا — تتطلب قدرة أكبر، وهنا يأتي دور mini PC مع RAM أكثر وشريحة رسومات قادرة.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'ملخص سريع',
+        isTldr: true,
+        items: [
+          'Home Assistant وحده يعمل بسهولة على Raspberry Pi',
+          'mini PC هو الخيار الأفضل إذا أردت أيضًا نموذج LLM محلي أو Whisper أكبر أو Frigate',
+          'المزيد من RAM وiGPU/NPU قادرة يقلل زمن استجابة الذكاء الاصطناعي المحلي',
+          'يمكن لـ NAS استضافة Home Assistant في حاوية إلى جانب خدمات التخزين',
+          'الخادم المخصص يناسب الإعدادات المحلية الأكبر متعددة الخدمات',
+          'قرر HA فقط أم HA + ذكاء اصطناعي قبل الشراء — يغيّر ذلك الجهاز المناسب',
+        ],
+      },
+      hubNeeds: {
+        id: 'hub-needs',
+        title: 'ما يحتاجه المركز',
+        content:
+          '**Home Assistant خفيف بحد ذاته ويعمل على أجهزة متواضعة؛ الطلبات الثقيلة تأتي من الذكاء الاصطناعي المحلي وكشف الكاميرا.** حجّم الصندوق لما ستضيفه، ليس فقط للمركز.',
+        items: [
+          'يحتاج المركز حسابًا ضئيلًا للتحكم في الأجهزة والأتمتة.',
+          'استنتاج نموذج LLM محلي وWhisper الأكبر وFrigate هي أحمال العمل الثقيلة.',
+          'خطط لـ RAM وGPU/NPU حول تلك الإضافات.',
+        ],
+      },
+      raspberryPi: {
+        id: 'raspberry-pi',
+        title: 'Raspberry Pi',
+        content:
+          '**Raspberry Pi هو أرخص وأقل استهلاكًا للطاقة طريقة لتشغيل Home Assistant للاستخدام المنزلي الذكي الاعتيادي.** يجد صعوبة مع استنتاج النموذج اللغوي ونماذج Whisper الكبيرة.',
+        items: [
+          'ممتاز للتحكم في الأجهزة والأتمتة وإعداد صوتي محلي صغير.',
+          'استنتاج النموذج اللغوي على Pi محدود بنماذج صغيرة جدًا وبطيئة.',
+          'اختر Pi إذا أردت الأساسيات بتكلفة منخفضة واستهلاك طاقة منخفض. مثال: Raspberry Pi 5 (8GB)، أو جهاز Home Assistant Green الجاهز.',
+        ],
+        affiliateLinks: [
+          { label: 'Raspberry Pi 5 (8GB)', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+        ],
+      },
+      miniPc: {
+        id: 'mini-pc',
+        title: 'Mini PC (ومساحة لنموذج LLM)',
+        content:
+          '**mini PC هو أفضل خيار بصندوق واحد لـ Home Assistant مع الذكاء الاصطناعي المحلي، بما يكفي من RAM وiGPU أو NPU قادرة لتشغيل نموذج LLM صغير.** يوازن القدرة والحجم والتكلفة.',
+        items: [
+          'شغّل Home Assistant ونموذج LLM صغير عبر Ollama وWhisper وFrigate معًا.',
+          'أعطِ الأولوية لـ RAM وGPU متكاملة أو NPU قادرة لزمن استجابة أقل.',
+          'للاختيارات المحددة، راجع [أفضل mini PCs لـ Home Assistant + ذكاء اصطناعي محلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) ومتعدد العناقيد [أفضل mini PCs للنماذج اللغوية المحلية](/ar/local-llms/best-mini-pcs-local-llm). مثال: Beelink SER8 (Ryzen 7 8845HS) لنموذج 7B، أو Beelink EQ14 (Intel N150) لبناء منخفض الطاقة.',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink SER8 (Ryzen 7 8845HS)', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Intel N150)', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+        ],
+      },
+      nas: {
+        id: 'nas',
+        title: 'NAS',
+        content:
+          '**يمكن لـ NAS استضافة Home Assistant في حاوية إلى جانب التخزين وتسجيلات Frigate، إذا كان يمتلك CPU وRAM كافيين.** مريح إذا كنت تمتلك واحدًا بالفعل.',
+        items: [
+          'مناسب لدمج التخزين مع خدمات أتمتة المنزل.',
+          'تحقق من أن NAS لديه حيّز CPU/RAM لإضافاتك.',
+          'يعتمد استنتاج النموذج اللغوي على NAS على أجهزته — كثير منها يفتقر إلى GPU قادرة. مثال: Synology DS925+ أو DS225+؛ طرازات UGREEN NASync تشحن مع خيار نموذج LLM محلي مدمج.',
+        ],
+        affiliateLinks: [
+          { label: 'Synology DS925+', url: 'https://www.synology.com/en-us/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+', url: 'https://www.synology.com/en-us/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS' },
+        ],
+      },
+      server: {
+        id: 'server',
+        title: 'خادم مخصص',
+        content:
+          '**الخادم المخصص يناسب الإعدادات الأكبر التي تشغّل خدمات متعددة ونموذجًا محليًا أكبر.** يوفر أكبر حيّز بتكلفة واستهلاك طاقة أعلى.',
+        items: [
+          'الأفضل لكاميرات كثيرة ونموذج LLM أكبر ومستخدمين متعددين.',
+          'استهلاك طاقة وتكلفة أعلى من mini PC.',
+          'مبالغة لمنزل ذكي أساسي — احتفظ به للاستخدام الكثيف للذكاء الاصطناعي المحلي.',
+        ],
+      },
+      picking: {
+        id: 'picking',
+        title: 'الاختيار بين HA فقط أم HA + ذكاء اصطناعي',
+        content:
+          '**اختر Pi لـ HA فقط، وmini PC لـ HA مع الذكاء الاصطناعي المحلي — هذا القرار الواحد يحدد الأجهزة المناسبة.** طابق الصندوق مع حمل العمل.',
+        columns: ['الأجهزة', 'السعر النسبي', 'HA فقط', 'يمكنه تشغيل نموذج LLM محلي', 'ملاحظات'],
+        rows: [
+          { 'الأجهزة': 'Raspberry Pi', 'السعر النسبي': 'منخفض', 'HA فقط': 'نعم', 'يمكنه تشغيل نموذج LLM محلي': 'نماذج صغيرة جدًا فقط، بطيء', 'ملاحظات': 'أقل استهلاكًا للطاقة' },
+          { 'الأجهزة': 'Mini PC', 'السعر النسبي': 'متوسط', 'HA فقط': 'نعم', 'يمكنه تشغيل نموذج LLM محلي': 'نعم (نماذج صغيرة)', 'ملاحظات': 'أفضل صندوق واحد لـ HA + ذكاء اصطناعي' },
+          { 'الأجهزة': 'NAS', 'السعر النسبي': 'متوسط-مرتفع', 'HA فقط': 'نعم (حاوية)', 'يمكنه تشغيل نموذج LLM محلي': 'يعتمد على الأجهزة', 'ملاحظات': 'يجمع التخزين + HA' },
+          { 'الأجهزة': 'خادم مخصص', 'السعر النسبي': 'مرتفع', 'HA فقط': 'نعم', 'يمكنه تشغيل نموذج LLM محلي': 'نعم (نماذج أكبر)', 'ملاحظات': 'أكبر حيّز، أعلى طاقة' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'أسئلة شائعة',
+        faqs: [
+          { q: 'هل يستطيع Raspberry Pi تشغيل نموذج LLM محلي أيضًا؟', a: 'يمكن لـ Pi تشغيل نماذج صغيرة جدًا فحسب وببطء، لذا فهو ليس مثاليًا لمساعد LLM محلي سريع الاستجابة. يتعامل بشكل جيد مع Home Assistant والصوت الأساسي، لكن للذكاء الاصطناعي المحلي يُعدّ mini PC مع iGPU أو NPU قادرة الخيار الأفضل.' },
+          { q: 'كم من RAM أحتاج؟', a: 'Home Assistant وحده يعمل في بضعة غيغابايت. لتشغيل نموذج LLM محلي صغير وخدمات ذكاء اصطناعي أخرى على نفس الصندوق، يساعد المزيد من RAM؛ طابق RAM مع حجم النموذج الذي تخطط لتشغيله.' },
+          { q: 'ما mini PC الذي يجب أن أشتريه؟', a: 'اختر mini PC مع RAM كافٍ وGPU متكاملة أو NPU قادرة لحجم النموذج المطلوب. راجع دليل أفضل mini PCs لـ Home Assistant + ذكاء اصطناعي محلي للاختيارات المتوافقة مع HA ونموذج LLM صغير.' },
+          { q: 'صندوق واحد أم اثنان؟', a: 'صندوق واحد (mini PC) هو الأبسط ويشغّل Home Assistant مع نموذج LLM محلي صغير معًا. قسّم إلى اثنين إذا أردت إبقاء المركز موثوقًا للغاية على Pi وتفريغ الذكاء الاصطناعي الثقيل على جهاز منفصل أكثر قدرة.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءة ذات صلة',
+        items: [
+          '[أفضل Mini PCs لـ Home Assistant + ذكاء اصطناعي محلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) — اختيارات محددة',
+          '[الدليل الشامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide) — المجموعة الكاملة',
+          '[تشغيل منزلك الذكي على نموذج LLM محلي](/ar/smart-home/local-llm-smart-home-complete-guide) — ما يشغّله صندوق الذكاء الاصطناعي',
+          '[أفضل Mini PCs للنماذج اللغوية المحلية](/ar/local-llms/best-mini-pcs-local-llm) — متعدد العناقيد: VRAM وتفاصيل الأجهزة',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي المحلي (2026)',
+      description: 'أفضل أجهزة المنزل الذكي المحلي مع الذكاء الاصطناعي 2026: Raspberry Pi مقابل mini PC مقابل NAS مقابل خادم. اختر لـ Home Assistant وحده أو HA مع نموذج LLM محلي.',
+      url: 'https://www.promptquorum.com/ar/smart-home/best-hardware-for-local-smart-home',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-05',
+      about: [{ '@type': 'Thing', name: 'أجهزة Home Assistant' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'نموذج LLM محلي' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        { '@type': 'Question', name: 'هل يستطيع Raspberry Pi تشغيل نموذج LLM محلي أيضًا؟', acceptedAnswer: { '@type': 'Answer', text: 'يمكن لـ Pi تشغيل نماذج صغيرة جدًا فحسب وببطء. يتعامل بشكل جيد مع Home Assistant والصوت الأساسي، لكن للذكاء الاصطناعي المحلي mini PC مع iGPU أو NPU قادرة هو الأفضل.' } },
+        { '@type': 'Question', name: 'كم من RAM أحتاج؟', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant وحده يعمل في بضعة غيغابايت. لتشغيل نموذج LLM محلي صغير على نفس الصندوق، يساعد المزيد من RAM؛ طابق RAM مع حجم النموذج الذي تخطط لتشغيله.' } },
+        { '@type': 'Question', name: 'ما mini PC الذي يجب أن أشتريه؟', acceptedAnswer: { '@type': 'Answer', text: 'واحد مع RAM كافٍ وGPU متكاملة أو NPU قادرة لحجم نموذجك. راجع دليل أفضل mini PCs لـ Home Assistant + ذكاء اصطناعي محلي للاختيارات.' } },
+        { '@type': 'Question', name: 'صندوق واحد أم اثنان؟', acceptedAnswer: { '@type': 'Answer', text: 'mini PC واحد يشغّل Home Assistant مع نموذج LLM محلي صغير معًا. قسّم إلى اثنين إذا أردت إبقاء المركز موثوقًا للغاية على Pi وتفريغ الذكاء الاصطناعي الثقيل على جهاز منفصل.' } },
+      ],
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

@@ -188,6 +188,192 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: 'Matter وThread وZigbee وZ-Wave: شرح البروتوكولات (2026)',
+    seoTitle: 'بروتوكولات المنزل الذكي 2026: Matter وThread وZigbee وZ-Wave',
+    intro:
+      'تحدد بروتوكولات المنزل الذكي كيفية تواصل أجهزتك ومداها وما إذا كانت تعمل محليًا. يشرح هذا الدليل البسيط بروتوكولات Zigbee وZ-Wave وThread وMatter — مداها واستهلاكها للطاقة وقابلية التشغيل المتبادل وأيها محلي بشكل افتراضي — حتى تتمكن من اختيار المناسب لإعداد موثوق وخاص.',
+    metaDescription:
+      'شرح Matter وThread وZigbee وZ-Wave بلغة بسيطة: المدى والطاقة والشبكة الشبكية والتشغيل المتبادل وأيها محلي بشكل افتراضي. اختر البروتوكول المناسب.',
+    twitterDescription:
+      'Zigbee مقابل Z-Wave مقابل Thread مقابل Matter: دليل بسيط للمدى والطاقة والتشغيل المتبادل وأي البروتوكولات محلية بشكل افتراضي.',
+    readTime: '8 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'الأشخاص الذين يختارون أجهزة المنزل الذكي حسب البروتوكول',
+    primaryTerm: 'smart home protocols',
+    targetKeywords: [
+      'الفرق بين matter thread zigbee z-wave',
+      'شرح بروتوكولات المنزل الذكي',
+      'zigbee مقابل z-wave',
+      'ما هو matter للمنزل الذكي',
+      'بروتوكول thread للمنزل الذكي',
+    ],
+    leadAnswerBlock:
+      '**Zigbee وZ-Wave بروتوكولات شبكية ناضجة منخفضة الطاقة، وThread هو الشبكة الشبكية الحديثة المبنية على IP منخفضة الطاقة، وMatter هو معيار طبقة التطبيقات الذي يعمل عبر Thread وWi-Fi وEthernet لتوحيد الأجهزة.** Zigbee وZ-Wave وThread محلية بشكل افتراضي؛ يمكن تشغيل Matter محليًا من خلال متحكم محلي.',
+    quickAnswerTop: {
+      ar: {
+        question: 'ما الفرق بين Matter وThread وZigbee وZ-Wave؟',
+        answer:
+          'Zigbee وZ-Wave بروتوكولا شبكة لاسلكية شبكية منخفضة الطاقة راسخان للحساسات وأدوات التحكم. Thread شبكة شبكية حديثة منخفضة الطاقة مبنية على IP. Matter ليس تردد لاسلكي بل معيار يعمل عبر Thread وWi-Fi وEthernet لتمكين التفاهم بين الأجهزة من علامات تجارية مختلفة. Zigbee وZ-Wave وThread محلية بشكل افتراضي.',
+        bullets: [
+          'Zigbee: شبكة شبكية مفتوحة بـ 2.4 GHz، نطاق أجهزة ضخم',
+          'Z-Wave: شبكة شبكية دون GHz، تداخل أقل، مدى جيد',
+          'Thread: شبكة شبكية حديثة منخفضة الطاقة مبنية على IP',
+          'Matter: معيار عبر Thread/Wi-Fi/Ethernet، وليس تردد لاسلكي',
+          'Zigbee وZ-Wave وThread محلية بشكل افتراضي',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'ملخص سريع', anchor: 'tldr' },
+      { label: 'لماذا تهم البروتوكولات', anchor: 'why-protocols' },
+      { label: 'Zigbee', anchor: 'zigbee' },
+      { label: 'Z-Wave', anchor: 'z-wave' },
+      { label: 'Thread', anchor: 'thread' },
+      { label: 'Matter (الموحِّد)', anchor: 'matter' },
+      { label: 'أيها تختار', anchor: 'which-to-choose' },
+      { label: 'الأسئلة الشائعة', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Zigbee وZ-Wave ترددات لاسلكية شبكية ناضجة منخفضة الطاقة، وThread الشبكة الشبكية الحديثة المبنية على IP، وMatter معيار يعمل عبرها لتوحيد الأجهزة.' },
+      { type: 'plain-terms', content: 'البروتوكولات هي اللغات التي تتحدثها أجهزة المنزل الذكي. Zigbee وZ-Wave شبكات لاسلكية قديمة وموثوقة. Thread شبكة شبكية أحدث مبنية على معايير الإنترنت. Matter ليس تردد لاسلكي على الإطلاق — بل معيار مشترك يجعل الأجهزة من علامات تجارية مختلفة تعمل معًا، ويمكنه العمل دون سحابة.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'ملخص سريع',
+        isTldr: true,
+        items: [
+          'Zigbee: شبكة شبكية مفتوحة بـ 2.4 GHz بأوسع نظام بيئي للأجهزة؛ يحتاج منسقًا',
+          'Z-Wave: شبكة شبكية دون GHz بتداخل أقل ومدى جيد؛ ناضجة وموثوقة',
+          'Thread: شبكة شبكية حديثة منخفضة الطاقة مبنية على IPv6 تدعم كثيرًا من Matter',
+          'Matter: معيار طبقة تطبيق (وليس تردد لاسلكي) عبر Thread وWi-Fi وEthernet',
+          'Zigbee وZ-Wave وThread محلية بشكل افتراضي؛ Matter يعمل محليًا عبر متحكم محلي',
+          'اختر حسب توفر الأجهزة وما إذا أردت مدى دون GHz (Z-Wave) أو اختيارًا واسعًا (Zigbee)',
+        ],
+      },
+      whyProtocols: {
+        id: 'why-protocols',
+        title: 'لماذا تهم البروتوكولات',
+        content:
+          '**يحدد البروتوكول الذي يستخدمه الجهاز مداه وعمر البطارية والموثوقية وما إذا كان يعمل دون سحابة.** اختيار بروتوكولات متوافقة يتجنب درجًا مليئًا بأجهزة غير متوافقة.',
+        items: [
+          '**الموثوقية:** تُمرّر البروتوكولات الشبكية الإشارات بين الأجهزة، مما يمدد التغطية.',
+          '**التحكم المحلي:** البروتوكولات المحلية تعمل عبر مركز بلا إنترنت — راجع [الدليل الكامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide).',
+          '**التوافق:** المركز الذي يتحدث بروتوكولات أجهزتك يربطها معًا.',
+        ],
+      },
+      zigbee: {
+        id: 'zigbee',
+        title: 'Zigbee',
+        content:
+          '**Zigbee بروتوكول شبكي مفتوح منخفض الطاقة بـ 2.4 GHz يملك أوسع نطاق من الأجهزة الميسورة.** يحتاج منسقًا (عصا USB أو مركز) ويمرر الإشارات عبر الأجهزة المتصلة بالكهرباء.',
+        items: [
+          'نظام بيئي ضخم من المصابيح والحساسات والقوابس والمفاتيح.',
+          'يشترك في نطاق 2.4 GHz مع Wi-Fi، لذا يهم موضع التثبيت.',
+          'محلي بشكل افتراضي عبر منسق Zigbee على مركزك.',
+        ],
+      },
+      zwave: {
+        id: 'z-wave',
+        title: 'Z-Wave',
+        content:
+          '**Z-Wave بروتوكول شبكي منخفض الطاقة دون GHz بتداخل أقل ومدى جيد، مشهور بأجهزة تحكم منزلية موثوقة.** يستخدم نطاق تردد منفصلًا عن Wi-Fi وZigbee.',
+        items: [
+          'يعمل في نطاقات دون GHz (ترددات إقليمية)، متجنبًا ازدحام 2.4 GHz.',
+          'سمعة قوية في الأقفال والحساسات وأدوات التحكم الموثوقة.',
+          'محلي بشكل افتراضي عبر متحكم Z-Wave.',
+        ],
+      },
+      thread: {
+        id: 'thread',
+        title: 'Thread',
+        content:
+          '**Thread شبكة شبكية حديثة منخفضة الطاقة مبنية على IPv6 تمنح كل جهاز عنوان IP وتدعم كثيرًا من Matter.** يحتاج موجه حدودي Thread للاتصال بشبكتك.',
+        items: [
+          'مبني على IP، فيتكامل بسلاسة مع الشبكات الحديثة.',
+          'يتطلب موجه حدودي Thread (مدمج في بعض المراكز والسماعات).',
+          'أساس لأجهزة Matter — راجع [التحكم المحلي بـ Matter](/ar/smart-home/matter-local-control-guide).',
+        ],
+      },
+      matter: {
+        id: 'matter',
+        title: 'Matter: الموحِّد',
+        content:
+          '**Matter معيار طبقة تطبيق — وليس تردد لاسلكي — يعمل عبر Thread وWi-Fi وEthernet لتمكين التشغيل المتبادل بين الأجهزة من علامات تجارية مختلفة.** يمكنه العمل محليًا عبر متحكم محلي، مما يُقلل الاعتماد على السحابة.',
+        items: [
+          'يوحّد Matter كيفية وصف الأجهزة والتحكم فيها عبر العلامات التجارية.',
+          'يعمل فوق Thread (للأجهزة منخفضة الطاقة) أو Wi-Fi/Ethernet (للأجهزة المتصلة بالكهرباء).',
+          'التحكم المحلي ممكن مع متحكم Matter محلي مثل Home Assistant.',
+        ],
+      },
+      whichToChoose: {
+        id: 'which-to-choose',
+        title: 'أي بروتوكول تختار؟',
+        content:
+          '**اختر Zigbee للأجهزة الميسورة الأوسع، وZ-Wave للمدى دون GHz والتداخل الأقل، وMatter-over-Thread للتشغيل المتبادل مستقبلًا.** مركز مثل Home Assistant يتحدث بها جميعًا.',
+        columns: ['البروتوكول', 'النطاق / المدى', 'الطاقة', 'شبكة شبكية', 'محلي بشكل افتراضي', 'النضج'],
+        rows: [
+          { 'البروتوكول': 'Zigbee', 'النطاق / المدى': '2.4 GHz، متوسط', 'الطاقة': 'منخفضة', 'شبكة شبكية': 'نعم', 'محلي بشكل افتراضي': 'نعم', 'النضج': 'ناضج' },
+          { 'البروتوكول': 'Z-Wave', 'النطاق / المدى': 'دون GHz، جيد', 'الطاقة': 'منخفضة', 'شبكة شبكية': 'نعم', 'محلي بشكل افتراضي': 'نعم', 'النضج': 'ناضج' },
+          { 'البروتوكول': 'Thread', 'النطاق / المدى': '2.4 GHz، متوسط', 'الطاقة': 'منخفضة', 'شبكة شبكية': 'نعم', 'محلي بشكل افتراضي': 'نعم', 'النضج': 'في نمو' },
+          { 'البروتوكول': 'Matter', 'النطاق / المدى': 'عبر Thread/Wi-Fi', 'الطاقة': 'متفاوتة', 'شبكة شبكية': 'عبر Thread', 'محلي بشكل افتراضي': 'مع متحكم محلي', 'النضج': 'في نمو' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          { q: 'هل Matter بروتوكول أم معيار؟', a: 'Matter معيار طبقة تطبيق، وليس بروتوكول لاسلكي. يحدد كيفية وصف الأجهزة والتحكم فيها ويعمل فوق طبقات النقل مثل Thread وWi-Fi وEthernet، ولهذا يمكنه توحيد الأجهزة من علامات تجارية مختلفة.' },
+          { q: 'هل أحتاج إلى Thread؟', a: 'فقط إذا كنت تستخدم أجهزة مبنية على Thread أو Matter-over-Thread، التي تحتاج موجه حدودي Thread. كثير من المراكز وبعض السماعات تتضمنه. أجهزة Zigbee وZ-Wave لا تستخدم Thread وتحتاج منسقها الخاص.' },
+          { q: 'Zigbee مقابل Z-Wave — أيهما أفضل؟', a: 'Zigbee يوفر أوسع اختيار للأجهزة الميسورة على نطاق 2.4 GHz؛ Z-Wave يستخدم ترددات دون GHz بتداخل أقل ومدى جيد. اختر Zigbee لتنوع الأجهزة وZ-Wave للموثوقية في بيئات 2.4 GHz المزدحمة.' },
+          { q: 'هل هذه البروتوكولات محلية أم سحابية؟', a: 'Zigbee وZ-Wave وThread محلية بشكل افتراضي وتعمل عبر مركز بلا إنترنت. Matter يمكنه العمل محليًا عبر متحكم محلي، وإن كانت بعض أجهزة Matter قد تقدم ميزات سحابية أيضًا.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[Matter والتحكم المحلي](/ar/smart-home/matter-local-control-guide) — استخدام Matter وThread بدون جسور سحابية',
+          '[Home Assistant: دليل البدء](/ar/smart-home/home-assistant-getting-started) — مركز يتحدث كل هذه البروتوكولات',
+          '[مقارنة منظومات المنزل الذكي](/ar/smart-home/smart-home-ecosystems-compared) — المنصات المبنية على هذه البروتوكولات',
+          '[الدليل الكامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide) — الصورة الكاملة للمحلي أولًا',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Matter وThread وZigbee وZ-Wave: شرح البروتوكولات (2026)',
+      description: 'شرح Matter وThread وZigbee وZ-Wave بلغة بسيطة: المدى والطاقة والشبكة الشبكية والتشغيل المتبادل وأيها محلي بشكل افتراضي. اختر البروتوكول المناسب.',
+      url: 'https://www.promptquorum.com/ar/smart-home/smart-home-protocols-explained',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        { '@type': 'Question', name: 'هل Matter بروتوكول أم معيار؟', acceptedAnswer: { '@type': 'Answer', text: 'Matter معيار طبقة تطبيق، وليس تردد لاسلكي. يحدد كيفية وصف الأجهزة والتحكم فيها ويعمل فوق طبقات النقل مثل Thread وWi-Fi وEthernet.' } },
+        { '@type': 'Question', name: 'هل أحتاج إلى Thread؟', acceptedAnswer: { '@type': 'Answer', text: 'فقط إذا كنت تستخدم أجهزة مبنية على Thread أو Matter-over-Thread، التي تحتاج موجه حدودي Thread. أجهزة Zigbee وZ-Wave لا تستخدم Thread.' } },
+        { '@type': 'Question', name: 'Zigbee مقابل Z-Wave — أيهما أفضل؟', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee يوفر أوسع اختيار للأجهزة الميسورة على 2.4 GHz؛ Z-Wave يستخدم دون GHz بتداخل أقل ومدى جيد. اختر حسب تنوع الأجهزة مقابل التداخل.' } },
+        { '@type': 'Question', name: 'هل هذه البروتوكولات محلية أم سحابية؟', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee وZ-Wave وThread محلية بشكل افتراضي عبر مركز. Matter يمكنه العمل محليًا عبر متحكم محلي.' } },
+      ],
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

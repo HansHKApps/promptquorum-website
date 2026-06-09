@@ -193,6 +193,197 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'Home Assistant: دليل البدء الشامل (2026)',
+    seoTitle: 'Home Assistant 2026: إعداد المنزل الذكي المحلي الكامل',
+    intro:
+      'Home Assistant هو المركز الرائد للمنزل الذكي المحلي أولًا: ثبّته على Raspberry Pi أو mini PC، أضف التكاملات، وتحكم في كل شيء محليًا بدون سحابة. يغطي هذا الدليل للمبتدئين سبب اختيار Home Assistant وخيارات التثبيت والتكاملات الأولى ولوحة التحكم وأول أتمتة وكيفية إضافة الذكاء الاصطناعي المحلي لاحقًا — دون إعادة شرح ميكانيكا النموذج اللغوي.',
+    metaDescription:
+      'ابدأ مع Home Assistant في 2026: خيارات التثبيت (HAOS، حاوية، Pi مقابل mini PC)، التكاملات الأولى، لوحات التحكم، وأول أتمتة محلية.',
+    twitterDescription:
+      'دليل البدء مع Home Assistant: ثبّته على Pi أو mini PC، أضف التكاملات، وابنِ أول أتمتة محلية. المركز المحلي أولًا.',
+    readTime: '10 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'من يُعدّون أول مركز Home Assistant لهم',
+    primaryTerm: 'Home Assistant getting started',
+    targetKeywords: [
+      'Home Assistant للمبتدئين',
+      'إعداد Home Assistant',
+      'تثبيت Home Assistant',
+      'Home Assistant raspberry pi مقابل mini pc',
+      'دليل مبتدئ Home Assistant',
+    ],
+    leadAnswerBlock:
+      '**Home Assistant برنامج منزل ذكي مجاني ومفتوح المصدر ومحلي أولًا تُثبّته على Raspberry Pi أو mini PC — أضف التكاملات وابنِ لوحة تحكم وتحكم في الأجهزة محليًا بدون سحابة.** استخدم Home Assistant OS (HAOS) على جهاز مخصص للبدء الأسهل.',
+    quickAnswerTop: {
+      ar: {
+        question: 'كيف أبدأ مع Home Assistant؟',
+        answer:
+          'ثبّت Home Assistant OS على Raspberry Pi أو mini PC أو جهاز Home Assistant مخصص، افتح واجهة الويب، وأضف تكاملات لأجهزتك. ابنِ لوحة تحكم وأنشئ أول أتمتة وأضف منسّق Zigbee أو Z-Wave للأجهزة المحلية. كل شيء يعمل محليًا ولا يتطلب حسابًا سحابيًا.',
+        bullets: [
+          'ثبّت Home Assistant OS (HAOS) للإعداد الأسهل',
+          'شغّله على Raspberry Pi (أساسيات) أو mini PC (أساسيات + ذكاء اصطناعي محلي)',
+          'أضف تكاملات لأجهزتك عبر واجهة المستخدم',
+          'أضف منسّق Zigbee/Z-Wave للبروتوكولات المحلية',
+          'ابنِ لوحة تحكم وأول أتمتة — كل ذلك محليًا',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'ملخص سريع', anchor: 'tldr' },
+      { label: 'لماذا Home Assistant', anchor: 'why-ha' },
+      { label: 'خيارات التثبيت', anchor: 'install' },
+      { label: 'التكاملات الأولى', anchor: 'integrations' },
+      { label: 'لوحة التحكم', anchor: 'dashboard' },
+      { label: 'أول أتمتة', anchor: 'automation' },
+      { label: 'إضافة الذكاء الاصطناعي لاحقًا', anchor: 'ai-later' },
+      { label: 'أسئلة شائعة', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Home Assistant برنامج مركز مجاني ومفتوح المصدر محلي أولًا تُثبّته على Pi أو mini PC للتحكم في الأجهزة محليًا بدون سحابة.' },
+      { type: 'plain-terms', content: 'Home Assistant هو البرنامج الذي يشغّل منزلك الذكي على جهازك الخاص بدلًا من سحابة شركة. تُثبّته على حاسوب صغير وتوصّل أجهزتك وتبني لوحات تحكم وأتمتة. إنه أساس منزل ذكي خاص ومحلي.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'ملخص سريع',
+        isTldr: true,
+        items: [
+          'Home Assistant مجاني ومفتوح المصدر ومحلي أولًا — المركز الخاص المعياري للمنزل الذكي',
+          'ثبّت Home Assistant OS (HAOS) على جهاز مخصص للبدء الأسهل',
+          'Raspberry Pi يتعامل مع الأساسيات؛ mini PC أفضل إذا أردت أيضًا ذكاءً اصطناعيًا محليًا',
+          'أضف التكاملات عبر واجهة المستخدم؛ لا حاجة للبرمجة للأجهزة الشائعة',
+          'أضف منسّق Zigbee أو Z-Wave (عصا USB) للبروتوكولات المحلية',
+          'أضف دماغ نموذج LLM محلي لاحقًا — أحل خارجًا لميكانيكا النموذج',
+        ],
+      },
+      whyHa: {
+        id: 'why-ha',
+        title: 'لماذا Home Assistant؟',
+        content:
+          '**Home Assistant هو أساس المنزل الذكي المحلي لأنه يعمل على جهازك الخاص ويتحدث كل بروتوكول محلي رئيسي ويُبقي الأتمتة تعمل دون إنترنت.** إنه الأكثر مرونةً وخصوصيةً.',
+        items: [
+          'محلي أولًا: التحكم والأتمتة تعمل بدون السحابة.',
+          'دعم واسع: آلاف التكاملات عبر الماركات والبروتوكولات.',
+          'أساس للذكاء الاصطناعي المحلي — راجع [تشغيل منزلك الذكي على نموذج LLM محلي](/ar/smart-home/local-llm-smart-home-complete-guide).',
+        ],
+      },
+      install: {
+        id: 'install',
+        title: 'أي خيار تثبيت تختار؟',
+        content:
+          '**استخدم Home Assistant OS (HAOS) على جهاز مخصص للإعداد الأبسط، وتثبيت حاوية إذا كنت تشغّل بالفعل خادمًا، واختر Raspberry Pi للأساسيات أو mini PC إذا أردت الذكاء الاصطناعي المحلي.** HAOS يتضمن نظام الإضافات الذي ستحتاجه.',
+        columns: ['طريقة التثبيت', 'الصعوبة', 'الأفضل لـ'],
+        rows: [
+          { 'طريقة التثبيت': 'HAOS على جهاز مخصص', 'الصعوبة': 'الأسهل', 'الأفضل لـ': 'معظم المستخدمين؛ دعم كامل للإضافات' },
+          { 'طريقة التثبيت': 'HAOS على Raspberry Pi', 'الصعوبة': 'سهل', 'الأفضل لـ': 'الأساسيات، منخفض الطاقة' },
+          { 'طريقة التثبيت': 'HAOS على mini PC', 'الصعوبة': 'سهل', 'الأفضل لـ': 'الأساسيات + ذكاء اصطناعي محلي' },
+          { 'طريقة التثبيت': 'حاوية (Docker)', 'الصعوبة': 'متوسط', 'الأفضل لـ': 'الخوادم المنزلية/NAS الموجودة' },
+        ],
+        items: [
+          'لتحديد حجم الأجهزة بما في ذلك نموذج LLM محلي، راجع [أفضل أجهزة المنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home).',
+        ],
+      },
+      integrations: {
+        id: 'integrations',
+        title: 'إضافة أول تكاملاتك',
+        content:
+          '**أضف التكاملات عبر الإعدادات ← الأجهزة والخدمات؛ يتم اكتشاف كثير من الأجهزة تلقائيًا على شبكتك.** لأجهزة Zigbee أو Z-Wave، أضف منسّقًا أولًا.',
+        items: [
+          'الاكتشاف التلقائي يعثر على كثير من أجهزة Wi-Fi وMatter تلقائيًا.',
+          'أضف منسّق Zigbee (وتكامل ZHA أو Zigbee2MQTT) لأجهزة Zigbee — راجع [بروتوكولات المنزل الذكي شرح](/ar/smart-home/smart-home-protocols-explained).',
+          'اعرض فقط الكيانات التي تريدها، خاصةً قبل توصيل الصوت أو الذكاء الاصطناعي.',
+        ],
+      },
+      dashboard: {
+        id: 'dashboard',
+        title: 'لوحة التحكم',
+        content:
+          '**ينشئ Home Assistant تلقائيًا لوحة تحكم يمكنك تخصيصها ببطاقات لأجهزتك.** ابدأ بالافتراضي وحسّنه تدريجيًا.',
+        items: [
+          'لوحة التحكم الافتراضية تُدرج أجهزتك ومناطقك تلقائيًا.',
+          'أضف بطاقات للعناصر التحكمية الأكثر استخدامًا.',
+          'أنشئ طرق عرض لكل غرفة مع نمو إعدادك.',
+        ],
+      },
+      automation: {
+        id: 'automation',
+        title: 'أول أتمتة',
+        content:
+          '**أنشئ أتمتة بسيطة في الإعدادات ← الأتمتة باستخدام المحرر المرئي — مثلًا، تشغيل ضوء عند الغروب.** لا يلزم برمجة للقواعد الشائعة.',
+        numberedItems: [
+          'افتح الإعدادات ← الأتمتة والمشاهد ← إنشاء أتمتة.',
+          'اختر محفّزًا (وقت أو غروب أو حالة مستشعر).',
+          'اختر إجراءً (تشغيل ضوء أو إرسال إشعار).',
+          'احفظها واختبرها، ثم حسّنها.',
+          'لقواعد واعية بالسياق لاحقًا، راجع [أتمتة الذكاء الاصطناعي بنموذج LLM محلي](/ar/smart-home/ai-automations-local-llm).',
+        ],
+      },
+      aiLater: {
+        id: 'ai-later',
+        title: 'إضافة الذكاء الاصطناعي لاحقًا',
+        content:
+          '**بمجرد عمل الأساسيات، أضف نموذج LLM محلي كعامل محادثة — لكن افعل ذلك بعد استقرار أجهزتك وأتمتتك.** لا يعيد هذا الدليل شرح Ollama؛ أحل خارجًا لذلك.',
+        items: [
+          'اربط نموذجًا محليًا عبر [تكامل Ollama](/ar/smart-home/home-assistant-ollama-integration).',
+          'لإعداد Ollama واختيار النموذج، راجع [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) (متعدد العناقيد).',
+          'أضف واجهة صوتية محلية مع [دليل مساعد الصوت المحلي](/ar/smart-home/local-voice-assistant-smart-home).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'أسئلة شائعة',
+        faqs: [
+          { q: 'Raspberry Pi أم mini PC لـ Home Assistant؟', a: 'Raspberry Pi يشغّل Home Assistant بشكل جيد للاستخدام المنزلي الذكي الاعتيادي. اختر mini PC إذا أردت أيضًا تشغيل نموذج LLM محلي أو نماذج Whisper أكبر أو كشف كاميرا Frigate على نفس الصندوق، إذ تحتاج تلك إلى قدرة حسابية أكبر.' },
+          { q: 'هل Home Assistant مجاني؟', a: 'نعم. Home Assistant مجاني ومفتوح المصدر. تدفع فقط للجهاز الذي يعمل عليه وأي إضافات اختيارية (مثل مرحّل سحابي للوصول عن بُعد السهل). التحكم المحلي الأساسي لا يحتاج اشتراكًا.' },
+          { q: 'هل أحتاج إلى البرمجة لاستخدام Home Assistant؟', a: 'لا. الإعدادات الشائعة ولوحات التحكم والأتمتة تُبنى عبر واجهة رسومية. تكوين YAML متاح للأتمتة المتقدمة لكنه اختياري للبداية.' },
+          { q: 'هل يمكن لـ Home Assistant تشغيل الذكاء الاصطناعي؟', a: 'نعم. Home Assistant يتكامل مع Ollama ليتصرف نموذج محلي كعامل محادثة، ويدعم الصوت المحلي مع Whisper وPiper. تشغيل هذه على mini PC يبقي كل شيء محليًا. راجع دليل تكامل Ollama للإعداد.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءة ذات صلة',
+        items: [
+          '[الدليل الشامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide) — المجموعة الكاملة المحلية أولًا',
+          '[ربط Ollama بـ Home Assistant](/ar/smart-home/home-assistant-ollama-integration) — إضافة عامل ذكاء اصطناعي محلي',
+          '[أفضل أجهزة المنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home) — اختيار الصندوق المناسب',
+          '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) — متعدد العناقيد: تشغيل نموذج محلي',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Home Assistant: دليل البدء الشامل (2026)',
+      description: 'ابدأ مع Home Assistant في 2026: خيارات التثبيت (HAOS، حاوية، Pi مقابل mini PC)، التكاملات الأولى، لوحات التحكم، وأول أتمتة محلية.',
+      url: 'https://www.promptquorum.com/ar/smart-home/home-assistant-getting-started',
+      inLanguage: 'ar',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'أتمتة المنزل' }, { '@type': 'Thing', name: 'التحكم المحلي' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        { '@type': 'Question', name: 'Raspberry Pi أم mini PC لـ Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'Raspberry Pi يشغّل Home Assistant بشكل جيد للاستخدام الاعتيادي. اختر mini PC إذا أردت أيضًا نموذج LLM محلي أو نماذج Whisper أكبر أو كشف Frigate على نفس الصندوق.' } },
+        { '@type': 'Question', name: 'هل Home Assistant مجاني؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. مجاني ومفتوح المصدر. تدفع فقط للجهاز وإضافات اختيارية كمرحّل سحابي للوصول عن بُعد. التحكم المحلي الأساسي لا يحتاج اشتراكًا.' } },
+        { '@type': 'Question', name: 'هل أحتاج إلى البرمجة لاستخدام Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. الإعدادات الشائعة ولوحات التحكم والأتمتة تُبنى عبر واجهة رسومية. YAML اختياري للأتمتة المتقدمة.' } },
+        { '@type': 'Question', name: 'هل يمكن لـ Home Assistant تشغيل الذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يتكامل مع Ollama لعامل محادثة محلي ويدعم الصوت المحلي مع Whisper وPiper. تشغيل هذه على mini PC يبقي كل شيء محليًا.' } },
+      ],
+    },
+  },
+
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

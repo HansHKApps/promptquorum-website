@@ -834,6 +834,262 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       ]
     }
   }
+}, ar: {
+  theme: 'Tools & Platforms',
+  title: 'أدوات اختبار وتقييم البرامج النصية 2026: Promptfoo مقابل Braintrust مقابل DeepEval',
+  seoTitle: 'أدوات اختبار وتقييم البرامج النصية 2026: Promptfoo مقابل Braintrust مقابل DeepEval',
+  metaDescription: 'Promptfoo يكتشف التراجعات في ثوانٍ (مجاني). Braintrust ينفّذ تقييمات دفعية مع محكّمين بشريين (500$/شهر). DeepEval يقيس خطوط RAG بمعايير RAGAS. LangSmith يتتبع الأعطال. Phoenix يراقب الإنتاج. مقارنة شاملة لخط الأنابيب.',
+  ogTitle: 'Promptfoo في ثوانٍ. Braintrust في ساعات. أيهما تحتاج؟',
+  ogDescription: 'اختبارات CI/CD السريعة مقابل التقييمات الدفعية مقابل تسجيل RAG مقابل التتبع مقابل المراقبة. 5 أدوات، 5 مهام. جدول مقارنة مرفق.',
+  twitterTitle: 'أدوات اختبار البرامج النصية 2026: خط الأنابيب من 5 مراحل مقارنةً',
+  twitterDescription: 'التقييم الذاتي يُضخّم النتائج بنسبة 10–20%. هل تختبر GPT-5.5؟ قيّمه بـ Claude. المكدس الكامل: Promptfoo ← Braintrust ← DeepEval ← LangSmith ← Phoenix.',
+  intro: '**ينقسم اختبار البرامج النصية إلى قسمين: اختبارات وحدة سريعة (Promptfoo) في ثوانٍ وتقييمات دفعية بطيئة (Braintrust) في دقائق.** يعمل Promptfoo ضمن CI/CD ويكتشف التراجعات في كل عملية إيداع.\n\n**يقيّم Braintrust دون اتصال بالإنترنت مع محكّمين بشريين.** يضيف DeepEval معايير RAGAS لخطوط RAG. يوضح هذا الدليل متى تستخدم كلًا منها وكيف تعمل معًا.',
+  publishDate: '2026-04-10',
+  dateModified: '2026-04-10',
+  lastFactChecked: '2026-04-28',
+  readTime: '٨ دقائق للقراءة',
+  freshness_tier: 'semi_annual',
+  next_refresh_due: '2026-10-10',
+  educationalLevel: 'متوسط',
+  primaryTerm: 'أدوات اختبار البرامج النصية',
+  audience: 'مهندسو DevOps ومهندسو التعلم الآلي وفرق المنصات الذين يبنون خطوط أنابيب اختبار نماذج اللغة الكبيرة',
+  aboutTopics: ['اختبار البرامج النصية', 'التقييم', 'اختبار CI/CD', 'اختبار التراجع'],
+  toc: [
+    { label: 'النقاط الرئيسية', anchor: 'key-takeaways' },
+    { label: 'لماذا نختبر البرامج النصية؟', anchor: 'why-test-prompts' },
+    { label: 'Promptfoo: اختبار CI/CD السريع', anchor: 'promptfoo-fast-cicd-testing' },
+    { label: 'Braintrust: التقييمات الدفعية البطيئة', anchor: 'braintrust-slow-batch-evaluations' },
+    { label: 'DeepEval: RAGAS لخطوط RAG', anchor: 'deepeval-ragas-for-rag-pipelines' },
+    { label: 'LangSmith: تتبع السلاسل متعددة الخطوات', anchor: 'langsmith-tracing-multi-step-chains' },
+    { label: 'Phoenix: قابلية المراقبة لتطبيقات LLM', anchor: 'phoenix-observability-for-llm-apps' },
+    { label: 'PromptQuorum: مقارنة النماذج قبل الاختبارات', anchor: 'promptquorum' },
+    { label: 'جدول المقارنة', anchor: 'comparison-table' },
+    { label: 'كيفية الاختيار', anchor: 'how-to-choose' },
+    { label: 'لماذا تفشل اختبارات البرامج النصية؟', anchor: 'common-mistakes' },
+    { label: 'قراءات ذات صلة', anchor: 'related-reading' },
+    { label: 'الأسئلة الشائعة', anchor: 'faq' },
+    { label: 'المصادر', anchor: 'sources' }
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'أدوات اختبار البرامج النصية 2026: Promptfoo، Braintrust، DeepEval',
+    description: 'اختبر البرامج النصية بسرعة في CI/CD مع Promptfoo، وقيّمها دون اتصال مع Braintrust، وقِس خطوط RAG مع DeepEval.',
+    datePublished: '2026-04-10',
+    dateModified: '2026-04-10',
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    url: 'https://www.promptquorum.com/ar/prompt-engineering/best-prompt-testing-evaluation-tools',
+    inLanguage: 'ar',
+    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
+    educationalLevel: 'Intermediate',
+    proficiencyLevel: 'Intermediate',
+    about: [
+      { '@type': 'Thing', 'name': 'Prompt Testing' },
+      { '@type': 'Thing', 'name': 'LLM Evaluation' },
+      { '@type': 'Thing', 'name': 'CI/CD Testing' }
+    ]
+  },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: 'ar',
+    mainEntity: [
+      { '@type': 'Question', name: 'ما هو اختبار البرامج النصية؟', acceptedAnswer: { '@type': 'Answer', text: 'يتحقق اختبار البرامج النصية من أن مخرجات نموذج اللغة الكبير تتطابق مع إجابة مرجعية أو تجتاز قاعدة LLM-as-judge. تتحقق الاختبارات السريعة (الوحدة) من برنامج نصي واحد في ثوانٍ. أما الاختبارات البطيئة (الدفعية) فتقيّم مجموعة بيانات دون اتصال في دقائق أو ساعات.' } },
+      { '@type': 'Question', name: 'متى يجب اختبار البرامج النصية؟', acceptedAnswer: { '@type': 'Answer', text: 'اختبر في كل مرة تغيّر فيها برنامجًا نصيًا، خاصةً قبل النشر في الإنتاج. استخدم اختبار CI/CD في كل عملية إيداع والتقييم الدفعي للموافقة النهائية.' } },
+      { '@type': 'Question', name: 'ما الفرق بين Promptfoo وBraintrust؟', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo مفتوح المصدر، يعتمد على واجهة الأوامر، ومبني لخطوط CI/CD (سريع، مجاني). Braintrust خدمة SaaS قائمة على الويب للتقييم دون اتصال مع محكّمين بشريين ونماذج LLM (بطيء، شامل).' } },
+      { '@type': 'Question', name: 'ما هي معايير RAGAS؟', acceptedAnswer: { '@type': 'Answer', text: 'تقيس RAGAS جودة الاسترجاع وملاءمة السياق وصحة الإجابة في خطوط RAG. يطبّق DeepEval معايير RAGAS.' } },
+      { '@type': 'Question', name: 'هل يمكنني استخدام أدوات متعددة معًا؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. استخدم Promptfoo في CI/CD للحصول على تغذية راجعة سريعة، وBraintrust للتقييم الدفعي النهائي، وDeepEval لمعايير RAG، وLangSmith لتتبع السلاسل متعددة الخطوات.' } },
+      { '@type': 'Question', name: 'أي أداة مجانية؟', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo مفتوح المصدر ومجاني. DeepEval مجاني مع تقييمات سحابية مدفوعة اختيارية. Phoenix مفتوح المصدر ومجاني. يوفر Braintrust وLangSmith مستويات مجانية.' } },
+      { '@type': 'Question', name: 'كيف أُعِدّ Promptfoo في CI/CD؟', acceptedAnswer: { '@type': 'Answer', text: 'اكتب إعداد YAML ببرامجك النصية وحالات الاختبار، نفّذ promptfoo eval في خط CI الخاص بك (GitHub Actions، GitLab CI) وأفشل البناء إذا انخفضت النتائج دون عتبة محددة.' } },
+      { '@type': 'Question', name: 'ما هو LLM-as-judge؟', acceptedAnswer: { '@type': 'Answer', text: 'يستخدم LLM-as-judge نموذجًا آخر (GPT-5.5، Claude) لتقييم مخرجاتك وفق معيار تقييم. يوسّع التقييم دون مراجعة بشرية، لكنه قد يحمل تحيزًا. تدعم معظم الأدوات هذا الأسلوب.' } }
+    ]
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    inLanguage: 'ar',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Promptfoo: اختبار CI/CD السريع', url: 'https://promptfoo.dev' },
+      { '@type': 'ListItem', position: 2, name: 'Braintrust: التقييمات الدفعية البطيئة', url: 'https://braintrust.dev' },
+      { '@type': 'ListItem', position: 3, name: 'DeepEval: RAGAS لخطوط RAG', url: 'https://deepeval.trychasm.com' },
+      { '@type': 'ListItem', position: 4, name: 'LangSmith: تتبع السلاسل متعددة الخطوات', url: 'https://smith.langchain.com' },
+      { '@type': 'ListItem', position: 5, name: 'Phoenix: قابلية المراقبة لتطبيقات LLM', url: 'https://arize.com/phoenix' }
+    ]
+  },
+  howToSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    'name': 'كيفية اختيار مكدس اختبار البرامج النصية',
+    'description': 'دليل من 6 خطوات لاختيار المزيج الصحيح من أدوات اختبار البرامج النصية لتطبيق LLM الخاص بك.',
+    'step': [
+      { '@type': 'HowToStep', 'position': 1, 'name': 'ابدأ بـ Promptfoo', 'text': 'الجميع: ابدأ بـ Promptfoo (مجاني) في خط CI/CD الخاص بك. نفّذ الاختبارات في كل عملية إيداع. هذا غير قابل للتفاوض.' },
+      { '@type': 'HowToStep', 'position': 2, 'name': 'أضف Braintrust للموافقة على الإنتاج', 'text': 'عند النشر في الإنتاج: أضف Braintrust للتقييم الدفعي النهائي مع موافقة بشرية قبل الإطلاق.' },
+      { '@type': 'HowToStep', 'position': 3, 'name': 'أضف DeepEval لخطوط RAG', 'text': 'خطوط RAG: أضف DeepEval لمعايير RAGAS الخاصة بالاسترجاع.' },
+      { '@type': 'HowToStep', 'position': 4, 'name': 'أضف LangSmith للسلاسل متعددة الخطوات', 'text': 'السلاسل متعددة الخطوات: أضف LangSmith للتتبع. عندما يكتشف Promptfoo تراجعًا، يُظهر LangSmith أين انكسرت السلسلة.' },
+      { '@type': 'HowToStep', 'position': 5, 'name': 'أضف Phoenix لمراقبة الإنتاج', 'text': 'مراقبة الإنتاج: أضف Phoenix لقابلية المراقبة في الوقت الفعلي — الكمون والتكلفة واكتشاف الانجراف.' },
+      { '@type': 'HowToStep', 'position': 6, 'name': 'استخدم PromptQuorum لاختيار النموذج', 'text': 'اختيار النموذج: نفّذ PromptQuorum أولًا لمقارنة النماذج على برامجك النصية المحددة قبل بناء مجموعات الاختبار.' }
+    ]
+  },
+  sections: {
+    keyTakeaways: {
+      isTldr: true,
+      items: [
+        'استخدم Promptfoo لاختبار CI/CD (ثوانٍ، مفتوح المصدر، يكتشف التراجعات)',
+        'استخدم Braintrust للتقييم النهائي (دقائق إلى ساعات، محكّمون بشريون + LLM، سير عمل دون اتصال)',
+        'استخدم DeepEval للتقييمات الخاصة بـ RAG (معايير RAGAS، الاسترجاع + السياق + التركيب)',
+        'استخدم LangSmith للتتبع (تصحيح السلاسل متعددة الخطوات، فهم السبب الجذري للفشل)',
+        'استخدم PromptQuorum للمقارنة متعددة النماذج (أي نموذج تختبر، جنبًا إلى جنب في ثوانٍ)',
+        'ادمج الأدوات: Promptfoo في CI ← Braintrust للموافقة ← LangSmith للتصحيح',
+        'يوسّع LLM-as-judge التقييمات دون بشر لكنه قد يحمل تحيزًا — تحقق من صحته مقابل المعيار الذهبي'
+      ]
+    },
+    whyTestPrompts: {
+      title: 'لماذا نختبر البرامج النصية؟',
+      content: '**يركز هذا الدليل حصرًا على أدوات الاختبار والتقييم.** للحصول على الصورة الكاملة لأدوات هندسة البرامج النصية، راجع [أفضل أدوات هندسة البرامج النصية 2026](/ar/prompt-engineering/best-prompt-engineering-tools-2026). لميزات التعاون الجماعي، راجع [أفضل أدوات تحسين البرامج النصية للفرق](/ar/prompt-engineering/best-prompt-optimization-tools-for-teams).\n\n**تؤدي التغييرات في البرامج النصية إلى تعطل الإنتاج.** قد تُقلل صياغة واحدة معاد كتابتها الدقة بنسبة 5–10%، أو تفوّت الحالات الحدية، أو تغير النبرة. حتى أبريل 2026، لا تختبر معظم الشركات البرامج النصية إطلاقًا، وترسل التغييرات بشكل عشوائي. يكتشف الاختبار التراجعات قبل وصولها للمستخدمين. توجد سيرتا عمل: اختبارات وحدة سريعة في [CI/CD](/ar/prompt-engineering/ci-cd-for-prompts) (ثوانٍ، آلية) وتقييمات دفعية بطيئة دون اتصال (دقائق إلى ساعات، مراجعة بشرية). بدون اختبار، لا يمكنك التكرار بأمان.',
+      snippets: [
+        { type: 'in-one-sentence', text: 'اختبار البرامج النصية هو التحقق الآلي من أن مخرجات نموذج LLM تستوفي عتبة الجودة قبل نشرها.' },
+        { type: 'in-plain-terms', text: 'فكّر في الأمر كاختبارات وحدة لبرامجك النصية: تحدد كيف تبدو "الصحة" ثم تُمرر كل عملية إيداع عبر هذا المعيار.' }
+      ],
+      callouts: [
+        { type: 'Warning', label: 'لا تتخطى الاختبار', text: 'النشر دون اختبارات البرامج النصية يعني أن الفرق تكتشف التراجعات عبر المستخدمين لا عبر CI. حتى 5 حالات اختبار لكل برنامج نصي تكتشف 80% من التراجعات الشائعة.' }
+      ]
+    },
+    promptfoo: {
+      title: 'Promptfoo: اختبار CI/CD السريع',
+      content: '**Promptfoo مفتوح المصدر، يعتمد على واجهة الأوامر، ومبني لخطوط CI/CD.** يعمل في ثوانٍ، ويكتشف التراجعات في كل عملية إيداع، ويُفشل البناء إذا انخفضت النتائج. اكتب إعداد YAML ببرامجك النصية وحالات الاختبار، نفّذ promptfoo eval واحصل على نتيجة. يدعم Promptfoo تشابه السلاسل، regex، [LLM-as-judge](/ar/prompt-engineering/llm-as-judge-evaluation) والمقيّمين المخصصين.',
+      snippets: [
+        { type: 'in-one-sentence', text: 'Promptfoo أداة واجهة أوامر مجانية مفتوحة المصدر تنفّذ اختبارات تراجع البرامج النصية في خطوط CI/CD في ثوانٍ.' }
+      ],
+      callouts: [
+        { type: 'Pro Tip', label: 'ابدأ من هنا', text: 'Promptfoo هو أسرع طريق لاختبار البرامج النصية في CI/CD: ملف YAML واحد وأمر واجهة أوامر واحد. يستغرق الدمج في خط GitHub Actions موجود ~15 دقيقة.' }
+      ],
+      numberedItems: [
+        'استخدم Promptfoo إذا كنت تنشر بشكل متكرر (يوميًا/أسبوعيًا)',
+        'مثالي لمجموعات الاختبار الصغيرة (100–500 حالة)',
+        'التسعير: مجاني (مفتوح المصدر، رخصة MIT)'
+      ]
+    },
+    braintrust: {
+      title: 'Braintrust: التقييمات الدفعية البطيئة',
+      content: '**استخدم Braintrust إذا كنت بحاجة إلى مراجعة بشرية وتتبع خط الأساس قبل الإنتاج.** يعمل بشكل أبطأ (5–30 دقيقة لـ 1000 حالة اختبار، 4+ ساعات مع مراجعة بشرية كاملة) لكنه يدعم التقييم الشامل: يسجّل كل استدعاء LLM، يتيح المقارنة جنبًا إلى جنب، ويتتبع تراجعات خط الأساس. يتكامل مع LangChain وLLamaIndex والكود المخصص.',
+      numberedItems: [
+        'استخدم Braintrust للموافقة النهائية قبل الإطلاق',
+        'مثالي لمجموعات الاختبار الكبيرة (1000+) والمراجعة البشرية',
+        'التسعير: ~500$/شهر للفرق ذات متطلبات التقييم'
+      ]
+    },
+    deepeval: {
+      title: 'DeepEval: RAGAS لخطوط RAG',
+      content: '**استخدم DeepEval إذا كنت تبني [خطوط RAG](/ar/prompt-engineering/rag-explained) وتحتاج نتائج منفصلة لجودة الاسترجاع والتوليد.** DeepEval مكتبة Python تقيس جودة RAG بمعايير RAGAS، وتقسّم النجاح إلى ثلاثة أبعاد: جودة الاسترجاع، وملاءمة السياق، وصحة الإجابة. تعمل ككود Python أو عبر لوحة تحكم ويب.',
+      numberedItems: [
+        'استخدم DeepEval إذا كنت تستخدم معماريات RAG',
+        'قِس الاسترجاع + التركيب بشكل منفصل',
+        'التسعير: مجاني مع تقييمات سحابية مدفوعة اختيارية'
+      ]
+    },
+    langsmith: {
+      title: 'LangSmith: تتبع السلاسل متعددة الخطوات',
+      content: '**استخدم LangSmith إذا كنت بحاجة إلى تصحيح السلاسل متعددة الخطوات وإيجاد مواضع حدوث الأعطال.** يتتبع LangSmith كل استدعاء LLM، ويقيس الكمون والتكلفة، ويتيح لك التعمق في كل خطوة لتحديد نقاط الاختناق. عندما يكتشف Promptfoo تراجعًا، يُظهر LangSmith بالضبط أين في سلسلتك (الاسترجاع ← التركيب ← الترتيب) حدث الفشل. تكامل أصلي مع [LangChain](/ar/local-llms/local-ai-agents-langgraph-ollama).',
+      callouts: [
+        { type: 'Warning', label: 'خصوصية البيانات', text: 'يرسل LangSmith آثار التتبع إلى خوادم Arize AI السحابية. إذا كانت برامجك النصية تحتوي على معلومات شخصية أو بيانات ملكية، راجع خيارات إقامة البيانات في LangSmith أو استخدم مستوى Enterprise المستضاف ذاتيًا.' }
+      ],
+      numberedItems: [
+        'استخدم LangSmith لتصحيح السلاسل متعددة الخطوات',
+        'ضروري إذا كنت تستخدم LangChain',
+        'التسعير: مستوى مجاني، 50+$/شهر للتخزين'
+      ]
+    },
+    phoenix: {
+      title: 'Phoenix: قابلية المراقبة لتطبيقات LLM',
+      content: '**استخدم Phoenix إذا كنت بحاجة إلى قابلية مراقبة الإنتاج: مراقبة أداء البرامج النصية في الوقت الفعلي.** يسجّل Phoenix (من Arize AI) البرامج النصية والاستجابات والتضمينات والكمون. مفتوح المصدر وقابل للاستضافة الذاتية. مكمّل موصى به لـ Promptfoo (الاختبار) وBraintrust (التقييمات).',
+      numberedItems: [
+        'استخدم Phoenix لقابلية مراقبة الإنتاج',
+        'مفتوح المصدر ومجاني (Apache 2.0)',
+        'يمكن استضافته ذاتيًا أو إدارته سحابيًا'
+      ]
+    },
+    promptquorum: {
+      id: 'promptquorum',
+      title: 'PromptQuorum: مقارنة متعددة النماذج قبل الاختبارات',
+      content: '**استخدم PromptQuorum لمقارنة أداء نفس البرنامج النصي على GPT-5.5 وClaude وGemini وLLMs المحلية في إرسال واحد — قبل الالتزام بنموذج لمجموعة اختباراتك.** يختبر Promptfoo وBraintrust نموذجًا واحدًا في كل مرة. يجيب PromptQuorum على "أي نموذج يجب أن أختبر؟" في ثوانٍ.',
+      numberedItems: [
+        'استخدم PromptQuorum كخطوة أولى قبل إعداد مجموعات اختبار Promptfoo',
+        'قارن أكثر من 25 نموذجًا جنبًا إلى جنب مع تسجيل إجماعي',
+        'التسعير: مستوى مجاني + رصيد'
+      ]
+    },
+    comparisonTable: {
+      id: 'comparison-table',
+      title: 'جدول المقارنة: مصفوفة الميزات',
+      content: '**حتى أبريل 2026، هذا هو تفصيل الميزات:**',
+      columns: ['الأداة', 'السرعة', 'حالة الاستخدام', 'CI/CD', 'المراجعة البشرية', 'التسعير'],
+      rows: [
+        { 'الأداة': 'Promptfoo', 'السرعة': 'ثوانٍ', 'حالة الاستخدام': 'اختبارات الوحدة، التراجع', 'CI/CD': '✅ أصلي', 'المراجعة البشرية': '✗ لا', 'التسعير': 'مجاني (MIT)' },
+        { 'الأداة': 'Braintrust', 'السرعة': 'دقائق–ساعات', 'حالة الاستخدام': 'تقييم دفعي، موافقة', 'CI/CD': '✓ API', 'المراجعة البشرية': '✅ نعم', 'التسعير': '~500$/شهر' },
+        { 'الأداة': 'DeepEval', 'السرعة': 'دقائق', 'حالة الاستخدام': 'تسجيل خطوط RAG', 'CI/CD': '✓ Python', 'المراجعة البشرية': '✗ لا', 'التسعير': 'مجاني + سحابي مدفوع' },
+        { 'الأداة': 'LangSmith', 'السرعة': 'وقت فعلي', 'حالة الاستخدام': 'تتبع، تصحيح', 'CI/CD': '✓ API', 'المراجعة البشرية': '✗ لا', 'التسعير': 'مجاني / 50+$/شهر' },
+        { 'الأداة': 'Phoenix', 'السرعة': 'وقت فعلي', 'حالة الاستخدام': 'مراقبة الإنتاج', 'CI/CD': '✓ API', 'المراجعة البشرية': '✗ لا', 'التسعير': 'مجاني (Apache 2.0)' },
+        { 'الأداة': 'PromptQuorum', 'السرعة': 'ثوانٍ', 'حالة الاستخدام': 'مقارنة متعددة النماذج', 'CI/CD': '✗ لا', 'المراجعة البشرية': '✓ جنبًا إلى جنب', 'التسعير': 'مجاني + رصيد' }
+      ]
+    },
+    howToChoose: {
+      id: 'how-to-choose',
+      title: 'كيفية اختيار مكدس الاختبار',
+      numberedItems: [
+        'الجميع: ابدأ بـ Promptfoo (مجاني) في خط CI/CD الخاص بك. نفّذ الاختبارات في كل عملية إيداع. هذا غير قابل للتفاوض.',
+        'عند النشر في الإنتاج: أضف Braintrust للتقييم الدفعي النهائي مع موافقة بشرية قبل الإطلاق.',
+        'خطوط RAG: أضف DeepEval لمعايير RAGAS الخاصة بالاسترجاع. يختبر Promptfoo خط الأنابيب بالكامل؛ يشخّص DeepEval طبقة الاسترجاع.',
+        'السلاسل متعددة الخطوات: أضف LangSmith للتتبع. عندما يكتشف Promptfoo تراجعًا، يُظهر LangSmith أين انكسر في السلسلة.',
+        'مراقبة الإنتاج: أضف Phoenix لقابلية المراقبة في الوقت الفعلي — الكمون والتكلفة واكتشاف الانجراف.',
+        'اختيار النموذج: نفّذ PromptQuorum أولًا لمقارنة النماذج على برامجك النصية المحددة قبل بناء مجموعات الاختبار.'
+      ]
+    },
+    commonMistakes: {
+      id: 'common-mistakes',
+      title: 'لماذا تفشل اختبارات البرامج النصية؟',
+      mistakes: [
+        { mistake: 'اختبار المسار السعيد فقط', problem: 'تتسبب الحالات الحدية (إدخال فارغ، إدخال طويل جدًا، تعليمات متعارضة) في أكثر من 30% من إخفاقات الإنتاج.', fix: 'اختبر ما لا يقل عن 20 حالة تمثيلية لكل سيناريو، بما في ذلك المدخلات العدائية.' },
+        { mistake: 'عدم اختبار التراجعات', problem: 'تغيير البرنامج النصي الذي يُحسّن حالة واحدة كثيرًا ما يُفسد ثلاث حالات أخرى. بدون مقارنة خط الأساس، تنشر بشكل أعمى.', fix: 'نفّذ مجموعة الاختبارات القديمة على كل إصدار جديد. ارجع إذا انخفض أكثر من 10% من الحالات دون العتبة.' },
+        { mistake: 'التقييم بنفس النموذج الذي تختبره', problem: 'يُضخّم التقييم الذاتي النتائج بنسبة 10–20%. تقييم GPT-5.5 لمخرجاته الخاصة ليس تحققًا مستقلًا.', fix: 'استخدم نموذجًا مختلفًا للتقييم. اختبر GPT-5.5 ← قيّم بـ Claude. أو استخدم محكّمين بشريين للحقيقة الأساسية.' },
+        { mistake: 'تجاهل الكمون والتكلفة في التقييم', problem: 'برنامج نصي أكثر دقة بنسبة 10% لكنه أبطأ بمقدار 2× قد لا يستحق النشر.', fix: 'تتبع الجودة والكمون والتكلفة لكل مخرج. يضيف Helicone أو Phoenix رؤية تكاليف.' }
+      ]
+    },
+    relatedReading: {
+      title: 'قراءات ذات صلة',
+      items: [
+        '[Braintrust مقابل PromptHub مقابل Vellum مقابل Promptfoo: أيهما تستخدم؟](/ar/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
+        '[أفضل أدوات هندسة البرامج النصية 2026: مصنّفة حسب حالة الاستخدام](/ar/prompt-engineering/best-prompt-engineering-tools-2026)',
+        '[أفضل أدوات تحسين البرامج النصية للفرق 2026](/ar/prompt-engineering/best-prompt-optimization-tools-for-teams)',
+        '[هندسة البرامج النصية مقابل الضبط الدقيق: كيف تقرر](/ar/prompt-engineering/prompt-engineering-vs-fine-tuning)',
+        '[تحسين البرامج النصية اليدوي مقابل الآلي 2026](/ar/prompt-engineering/manual-vs-automated-prompt-optimization)',
+        '[المطالبة بدون أمثلة مقابل مع أمثلة: متى تستخدم كلًا منهما](/ar/prompt-engineering/zero-shot-vs-few-shot)'
+      ]
+    },
+    faq: {
+      title: 'الأسئلة الشائعة',
+      faqs: [
+        { q: 'ما هو اختبار البرامج النصية؟', a: 'يتحقق اختبار البرامج النصية من أن مخرجات نموذج LLM تتطابق مع إجابة مرجعية أو تجتاز قاعدة LLM-as-judge. تتحقق الاختبارات السريعة (الوحدة) من برنامج نصي واحد في ثوانٍ. أما الاختبارات البطيئة (الدفعية) فتقيّم مجموعة بيانات دون اتصال في دقائق أو ساعات.' },
+        { q: 'متى يجب اختبار البرامج النصية؟', a: 'اختبر في كل مرة تغيّر فيها برنامجًا نصيًا، خاصةً قبل النشر في الإنتاج. استخدم اختبار CI/CD في كل عملية إيداع والتقييم الدفعي للموافقة النهائية.' },
+        { q: 'ما الفرق بين Promptfoo وBraintrust؟', a: 'Promptfoo مفتوح المصدر، يعتمد على واجهة الأوامر، ومبني لخطوط CI/CD (سريع، مجاني). Braintrust خدمة SaaS قائمة على الويب للتقييم دون اتصال مع محكّمين بشريين ونماذج LLM (بطيء، شامل).' },
+        { q: 'ما هي معايير RAGAS؟', a: 'تقيس RAGAS (تقييم التوليد المعزز بالاسترجاع) ثلاثة جوانب من خطوط RAG: جودة الاسترجاع، وملاءمة السياق، وصحة الإجابة. يطبّق DeepEval معايير RAGAS.' },
+        { q: 'هل يمكنني استخدام أدوات متعددة معًا؟', a: 'نعم. استخدم Promptfoo في CI/CD للحصول على تغذية راجعة سريعة، وBraintrust للتقييم الدفعي النهائي، وDeepEval لمعايير RAG المحددة، وLangSmith لتتبع السلاسل متعددة الخطوات.' },
+        { q: 'أي أداة مجانية؟', a: 'Promptfoo مفتوح المصدر ومجاني. DeepEval مجاني مع تقييمات سحابية مدفوعة اختيارية. Phoenix مفتوح المصدر ومجاني. يوفر Braintrust وLangSmith مستويات مجانية.' },
+        { q: 'كيف أُعِدّ Promptfoo في CI/CD؟', a: 'اكتب إعداد YAML ببرامجك النصية وحالات الاختبار، نفّذ promptfoo eval في خط CI الخاص بك (GitHub Actions، GitLab CI) وأفشل البناء إذا انخفضت النتائج دون عتبة محددة.' },
+        { q: 'ما هو LLM-as-judge؟', a: 'يستخدم LLM-as-judge نموذجًا آخر (GPT-5.5، Claude) لتقييم مخرجاتك وفق معيار تقييم. يوسّع التقييم دون مراجعة بشرية، لكنه قد يحمل تحيزًا. تدعم معظم الأدوات هذا الأسلوب.' }
+      ]
+    },
+    sources: {
+      title: 'المصادر',
+      items: [
+        '[Promptfoo GitHub](https://github.com/promptfoo/promptfoo) — إطار اختبار البرامج النصية CI/CD مفتوح المصدر؛ أساس ادعاءات السرعة والميزات',
+        '[Braintrust Documentation](https://docs.braintrust.dev) — منصة التقييم الدفعي؛ أساس ادعاءات المراجعة البشرية ومحكّمي LLM',
+        '[DeepEval RAGAS Metrics](https://docs.deepeval.trychasm.com) — مكتبة تقييم RAG؛ أساس تفصيل معايير RAGAS',
+        '[LangSmith Tracing Guide](https://docs.smith.langchain.com) — تتبع وتصحيح LangChain؛ أساس ادعاءات السلاسل متعددة الخطوات',
+        '[Phoenix Documentation](https://docs.arize.com/phoenix) — قابلية مراقبة LLM مفتوحة المصدر؛ أساس ادعاءات ميزات المراقبة'
+      ]
+    }
+  }
 }, pt: {
   theme: 'Tools & Platforms',
   title: 'Ferramentas de teste e avaliação de prompts 2026: Promptfoo vs Braintrust vs DeepEval', // VERIFY
