@@ -16,6 +16,7 @@ const LABELS: Record<string, Record<string, string>> = {
   zh: { prompt: '您的级别？', beginner: '入门', intermediate: '掌握基础', advanced: '构建系统', clear: '清除' },
   es: { prompt: '¿Cuál es tu nivel?', beginner: 'Principiante', intermediate: 'Conocimientos básicos', advanced: 'Construyendo sistemas', clear: 'Limpiar' },
   pt: { prompt: 'Qual é o seu nível?', beginner: 'Iniciante', intermediate: 'Conhecimentos básicos', advanced: 'Construindo sistemas', clear: 'Limpar' }, // VERIFY
+  ar: { prompt: 'ما مستواك؟', beginner: 'مبتدئ', intermediate: 'أعرف الأساسيات', advanced: 'بناء الأنظمة', clear: 'مسح' },
 }
 
 const LEVELS = ['beginner', 'intermediate', 'advanced'] as const

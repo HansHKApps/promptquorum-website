@@ -24,6 +24,7 @@ const WIDGET_LABELS: Record<string, Record<string, string>> = {
   zh: { title: '为您推荐', empty: '选择上方的级别以获取个性化推荐' },
   es: { title: 'Recomendado para ti', empty: 'Selecciona un nivel arriba para obtener recomendaciones personalizadas' },
   pt: { title: 'Recomendado para você', empty: 'Selecione um nível acima para receber recomendações personalizadas' }, // VERIFY
+  ar: { title: 'موصى به لك', empty: 'اختر مستوىً أعلاه للحصول على توصيات شخصية' },
 }
 
 export function GuideStarWidget({ signal, recommendations }: Props) {

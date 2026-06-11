@@ -27,6 +27,7 @@ const HUB_HERO_TITLE: Record<string, string> = {
   zh: 'Prompt工程指南：9大主题80篇文章（2026）',
   es: 'Guía de Prompt Engineering: 80 artículos en 9 temas (2026)',
   pt: 'Guia de Prompt Engineering: 80 Artigos em 9 Temas (2026)',
+  ar: 'دليل هندسة التوجيهات: 80 مقالاً في 9 موضوعات (2026)',
 }
 
 const HUB_LEAD_ANSWER: Record<string, string> = {
@@ -37,6 +38,7 @@ const HUB_LEAD_ANSWER: Record<string, string> = {
   zh: '提示词工程是设计AI语言模型输入的实践——指定角色、上下文、约束条件、输出格式和示例——以产生准确、一致的结果。2026年，随着25个以上模型的可用，提示词设计是从AI获取可靠价值的最高效技能。',
   es: 'El prompt engineering es la práctica de diseñar entradas para modelos de lenguaje IA — especificando rol, contexto, restricciones, formato de salida y ejemplos — para producir resultados precisos y consistentes. En 2026, con más de 25 modelos disponibles, el diseño de prompts es la habilidad con mayor impacto para obtener valor fiable de la IA.',
   pt: 'Prompt engineering é a prática de projetar entradas para modelos de linguagem de IA — especificando papel, contexto, restrições, formato de saída e exemplos — para produzir resultados precisos e consistentes. Em 2026, com mais de 25 modelos disponíveis, o design de prompts é a habilidade de maior impacto para obter valor confiável da IA.',
+  ar: 'هندسة التوجيهات هي ممارسة تصميم المُدخلات لنماذج اللغة الاصطناعية — بتحديد الدور والسياق والقيود وصيغة الإخراج والأمثلة — للحصول على نتائج دقيقة ومتسقة. في عام 2026، مع توفر أكثر من 25 نموذجاً تجارياً ومفتوح المصدر، يُعدّ تصميم التوجيهات المهارة الأكثر تأثيراً للحصول على قيمة موثوقة من الذكاء الاصطناعي.',
 }
 
 const HUB_IN_ONE_SENTENCE: Record<string, string> = {
@@ -47,6 +49,7 @@ const HUB_IN_ONE_SENTENCE: Record<string, string> = {
   zh: '提示词工程是为AI模型设计输入——角色、上下文、约束、格式、示例——以获得准确、一致、生产级的结果。',
   es: 'El prompt engineering consiste en diseñar entradas para modelos de IA — rol, contexto, restricciones, formato, ejemplos — para obtener resultados precisos, consistentes y listos para producción.',
   pt: 'Prompt engineering consiste em projetar entradas para modelos de IA — papel, contexto, restrições, formato, exemplos — para obter resultados precisos, consistentes e prontos para produção.',
+  ar: 'هندسة التوجيهات هي تصميم المُدخلات لنماذج الذكاء الاصطناعي — الدور والسياق والقيود والصيغة والأمثلة — للحصول على نتائج دقيقة ومتسقة وجاهزة للإنتاج.',
 }
 
 const HUB_IN_PLAIN_TERMS: Record<string, string> = {
@@ -57,14 +60,15 @@ const HUB_IN_PLAIN_TERMS: Record<string, string> = {
   zh: '不再只是输入"帮我写封邮件"然后祈祷，而是告诉AI确切需要扮演什么角色、拥有什么上下文、使用什么格式以及好的输出是什么样子——性能提升3-5倍。',
   es: 'En lugar de escribir "redáctame un email" y esperar, le dices a la IA exactamente qué rol jugar, qué contexto tiene, qué formato usar y cómo es una buena salida — y el rendimiento mejora 3-5×.',
   pt: 'Em vez de digitar "escreve um e-mail pra mim" e torcer, você diz à IA exatamente qual papel desempenhar, qual contexto ela tem, qual formato usar e como é uma boa saída — e o desempenho melhora de 3 a 5×.',
+  ar: 'بدلاً من كتابة "اكتب لي بريداً إلكترونياً" وانتظار النتيجة، أخبر الذكاء الاصطناعي تحديداً بالدور الذي يجب أن يؤديه، والسياق المتاح له، والصيغة المطلوبة، وشكل الإخراج الجيد — فيكون الأداء أفضل بـ 3–5 أضعاف.',
 }
 
 const HUB_IN_ONE_SENTENCE_LABEL: Record<string, string> = {
-  en: '📍 In One Sentence', de: '📍 Kurzfassung', fr: '📍 En une phrase', ja: '📍 一言で', zh: '📍 一句话概括', es: '📍 En una frase', pt: '📍 Em uma frase',
+  en: '📍 In One Sentence', de: '📍 Kurzfassung', fr: '📍 En une phrase', ja: '📍 一言で', zh: '📍 一句话概括', es: '📍 En una frase', pt: '📍 Em uma frase', ar: '📍 في جملة واحدة',
 }
 
 const HUB_IN_PLAIN_TERMS_LABEL: Record<string, string> = {
-  en: '💬 In Plain Terms', de: '💬 Einfach erklärt', fr: '💬 En termes simples', ja: '💬 わかりやすく言うと', zh: '💬 通俗来说', es: '💬 En términos sencillos', pt: '💬 Em termos simples',
+  en: '💬 In Plain Terms', de: '💬 Einfach erklärt', fr: '💬 En termes simples', ja: '💬 わかりやすく言うと', zh: '💬 通俗来说', es: '💬 En términos sencillos', pt: '💬 Em termos simples', ar: '💬 بعبارات بسيطة',
 }
 
 const HUB_HERO_DESC: Record<string, string> = {
@@ -75,6 +79,7 @@ const HUB_HERO_DESC: Record<string, string> = {
   zh: '提示词工程决定了AI模型是给出有用答案还是模糊答案。精心设计的提示词明确指定任务、提供正确上下文、设置格式约束并使用示例校准模型行为。这80篇指南涵盖完整的提示词工程体系：基础知识（词元、上下文窗口、温度）、成熟框架（CO-STAR、CRAFT、RTF）、高级技术（思维链、RAG、少样本学习）、团队工作流程、评估方法，以及GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro的工具比较。',
   es: 'El prompt engineering determina si un modelo de IA te da una respuesta útil o vaga. Un prompt bien diseñado especifica la tarea con claridad, proporciona el contexto adecuado, establece restricciones de formato y usa ejemplos para calibrar el comportamiento del modelo. Estas 80 guías cubren el stack completo: fundamentos (tokens, ventanas de contexto, temperatura), frameworks probados (CO-STAR, CRAFT, RTF, APE, RISEN), técnicas avanzadas (chain-of-thought, RAG, self-consistency, few-shot), flujos de trabajo en equipo (control de versiones, governance, CI/CD), métodos de evaluación y comparativas de herramientas para GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro.',
   pt: 'O prompt engineering determina se um modelo de IA vai te dar uma resposta útil ou uma resposta vaga. Um prompt bem elaborado especifica a tarefa com clareza, fornece o contexto certo, define restrições de formato e usa exemplos para calibrar o comportamento do modelo — transformando respostas genéricas de IA em saídas previsíveis e com qualidade de especialista. Estes 80 guias cobrem o stack completo de prompt engineering: fundamentos (tokens, janelas de contexto, temperatura), frameworks comprovados (CO-STAR, CRAFT, RTF, APE, RISEN), técnicas avançadas (chain-of-thought, RAG, self-consistency, few-shot), fluxos de trabalho de equipe (controle de versão, governança, CI/CD), métodos de avaliação e comparativos de ferramentas para GPT-4o, Claude 4.6 Sonnet e Gemini 2.5 Pro.',
+  ar: 'هندسة التوجيهات تحدد ما إذا كان نموذج الذكاء الاصطناعي يمنحك إجابة مفيدة أو مبهمة. يحدد التوجيه المُصمم جيداً المهمة بوضوح، ويوفر السياق الملائم، ويضع قيود التنسيق، ويستخدم الأمثلة لضبط سلوك النموذج — محوِّلاً استجابات الذكاء الاصطناعي العامة إلى مخرجات متوقعة بجودة خبراء. تغطي هذه الـ 80 دليلاً المكدس الكامل لهندسة التوجيهات: الأساسيات (الرموز المميزة ونوافذ السياق ودرجة الحرارة واختيار النماذج)، والأطر المُجرَّبة (CO-STAR وCRAFT وRTF وAPE وRISEN)، والتقنيات المتقدمة (سلسلة التفكير وRAG والاتساق الذاتي والتعلم بأمثلة قليلة)، وسير عمل الفريق (التحكم في الإصدار والحوكمة وبوابات مراجعة CI/CD)، وأساليب التقييم ومقارنات الأدوات لـ GPT-4o وClaude 4.6 Sonnet وGemini 2.5 Pro.',
 }
 
 const HUB_TLDR: Record<string, string> = {
@@ -85,6 +90,7 @@ const HUB_TLDR: Record<string, string> = {
   zh: '按技能水平整理的80篇Prompt工程指南：从基础开始（词元、温度、模型选择），学习框架（CO-STAR、CRAFT、RTF），应用技术（思维链、RAG、少样本），建立团队治理（版本控制、CI/CD门控），并选择合适的工具（Braintrust、Promptfoo、Cursor）。已更新至2026年5月，适用于GPT-4o、Claude和Gemini。',
   es: '80 guías de prompt engineering organizadas por nivel: empieza con Fundamentos (tokens, temperatura, selección de modelos), aprende Frameworks (CO-STAR, CRAFT, RTF), aplica Técnicas (chain-of-thought, RAG, few-shot), configura la Gobernanza de equipo (control de versiones, CI/CD) y elige las herramientas correctas (Braintrust, Promptfoo, Cursor). Actualizado mayo 2026 para GPT-4o, Claude y Gemini.',
   pt: '80 guias de prompt engineering organizados por nível: comece pelos Fundamentos (tokens, temperatura, seleção de modelos), aprenda os Frameworks (CO-STAR, CRAFT, RTF), aplique as Técnicas (chain-of-thought, RAG, few-shot), configure a Governança de equipe (controle de versão, CI/CD) e escolha as ferramentas certas (Braintrust, Promptfoo, Cursor). Atualizado em maio de 2026 para GPT-4o, Claude e Gemini.',
+  ar: '80 دليلاً لهندسة التوجيهات مُنظَّمة حسب مستوى المهارة: ابدأ بالأساسيات (الرموز المميزة ودرجة الحرارة واختيار النماذج)، وتعلّم الأطر (CO-STAR وCRAFT وRTF)، وطبّق التقنيات (سلسلة التفكير وRAG والتعلم بأمثلة قليلة)، وأسّس حوكمة الفريق (التحكم في الإصدار وبوابات CI/CD)، واختر الأدوات المناسبة (Braintrust وPromptfoo وCursor). مُحدَّث في مايو 2026 لـ GPT-4o وClaude وGemini.',
 }
 
 const HUB_CTA_TEXT: Record<string, string> = {
@@ -95,6 +101,7 @@ const HUB_CTA_TEXT: Record<string, string> = {
   zh: 'PromptQuorum自动优化您的提示词，并同时在25+个AI模型中进行测试。',
   es: 'PromptQuorum optimiza tus prompts automáticamente y los prueba en más de 25 modelos de IA simultáneamente.',
   pt: 'O PromptQuorum otimiza seus prompts automaticamente e os testa em mais de 25 modelos de IA simultaneamente.',
+  ar: 'يُحسّن PromptQuorum توجيهاتك تلقائياً ويختبرها عبر أكثر من 25 نموذج ذكاء اصطناعي في آنٍ واحد.',
 }
 
 const HUB_QUICK_FACTS: Record<string, string[]> = {
@@ -105,6 +112,7 @@ const HUB_QUICK_FACTS: Record<string, string[]> = {
   zh: ['9个主题领域80篇文章', '涵盖GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro', '每篇5-20分钟', '2026年5月更新'],
   es: ['80 artículos en 9 áreas temáticas', 'Cubre GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro', '5–20 min por artículo', 'Actualizado mayo 2026'],
   pt: ['80 artigos em 9 áreas temáticas', 'Cobre GPT-4o, Claude 4.6 Sonnet e Gemini 2.5 Pro', '5–20 min por artigo', 'Atualizado em maio de 2026'],
+  ar: ['80 مقالاً في 9 مجالات موضوعية', 'يغطي GPT-4o وClaude 4.6 Sonnet وGemini 2.5 Pro', '5–20 دقيقة لكل مقال', 'مُحدَّث مايو 2026'],
 }
 
 const HUB_QUICK_FACTS_DETAILED: Record<string, string[]> = {
@@ -164,10 +172,18 @@ const HUB_QUICK_FACTS_DETAILED: Record<string, string[]> = {
     'A maioria das equipes em produção precisa de exatamente 2 ferramentas: uma para avaliação e outra para deploy',
     'Se você está começando, comece pelos Fundamentos; se tem experiência, vá direto para Avaliação & Confiabilidade ou Governança de equipe',
   ],
+  ar: [
+    '80 مقالاً في 9 مجالات موضوعية، مُحدَّث مايو 2026',
+    'يغطي GPT-4o وClaude 4.6 Sonnet وGemini 2.5 Pro وأكثر من 20 نموذجاً مفتوح المصدر',
+    '5–20 دقيقة لكل مقال، مع النقاط الرئيسية والأسئلة الشائعة والمصادر',
+    'يُحسّن التوجيه بسلسلة التفكير دقة الاستدلال المعقد بنسبة 30–40%',
+    'تحتاج معظم الفرق الإنتاجية إلى أداتين فقط: إحداهما للتقييم والأخرى للنشر',
+    'ابدأ بالأساسيات إن كنت جديداً؛ انتقل مباشرة إلى التقييم والموثوقية أو حوكمة الفريق إن كنت خبيراً',
+  ],
 }
 
 const HUB_QUICK_FACTS_HEADER: Record<string, string> = {
-  en: '⚡ Quick Facts', de: '⚡ Schnellfakten', fr: '⚡ En bref', ja: '⚡ クイックファクト', zh: '⚡ 快速事实', es: '⚡ Datos rápidos', pt: '⚡ Fatos rápidos',
+  en: '⚡ Quick Facts', de: '⚡ Schnellfakten', fr: '⚡ En bref', ja: '⚡ クイックファクト', zh: '⚡ 快速事实', es: '⚡ Datos rápidos', pt: '⚡ Fatos rápidos', ar: '⚡ حقائق سريعة',
 }
 
 const HUB_CTA_BUTTON: Record<string, string> = {
@@ -178,27 +194,28 @@ const HUB_CTA_BUTTON: Record<string, string> = {
   zh: '免费试用PromptQuorum →',
   es: 'Prueba PromptQuorum gratis →',
   pt: 'Teste o PromptQuorum gratuitamente →',
+  ar: 'جرّب PromptQuorum مجاناً ←',
 }
 
 const HUB_NAV_HOME: Record<string, string> = {
-  en: '← Home', de: '← Startseite', fr: '← Accueil', ja: '← ホーム', zh: '← 主页', es: '← Inicio', pt: '← Início',
+  en: '← Home', de: '← Startseite', fr: '← Accueil', ja: '← ホーム', zh: '← 主页', es: '← Inicio', pt: '← Início', ar: '← الرئيسية',
 }
 const HUB_NAV_FEATURES: Record<string, string> = {
-  en: 'Features', de: 'Funktionen', fr: 'Fonctionnalités', ja: '機能', zh: '功能', es: 'Características', pt: 'Recursos',
+  en: 'Features', de: 'Funktionen', fr: 'Fonctionnalités', ja: '機能', zh: '功能', es: 'Características', pt: 'Recursos', ar: 'الميزات',
 }
 const HUB_NAV_HOW: Record<string, string> = {
-  en: 'How It Works', de: 'So funktioniert es', fr: 'Comment ça marche', ja: '仕組み', zh: '工作原理', es: 'Cómo funciona', pt: 'Como funciona',
+  en: 'How It Works', de: 'So funktioniert es', fr: 'Comment ça marche', ja: '仕組み', zh: '工作原理', es: 'Cómo funciona', pt: 'Como funciona', ar: 'كيف يعمل',
 }
 const HUB_NAV_BLOG: Record<string, string> = {
-  en: 'Blog', de: 'Blog', fr: 'Blog', ja: 'ブログ', zh: '博客', es: 'Blog', pt: 'Blog',
+  en: 'Blog', de: 'Blog', fr: 'Blog', ja: 'ブログ', zh: '博客', es: 'Blog', pt: 'Blog', ar: 'المدونة',
 }
 
 const GUIDES_LABEL: Record<string, string> = {
-  en: 'guides', de: 'Leitfäden', fr: 'guides', ja: 'ガイド', zh: '篇指南', es: 'guías', pt: 'guias',
+  en: 'guides', de: 'Leitfäden', fr: 'guides', ja: 'ガイド', zh: '篇指南', es: 'guías', pt: 'guias', ar: 'دليل',
 }
 
 const GUIDE_LABEL_SINGULAR: Record<string, string> = {
-  en: 'guide', de: 'Leitfaden', fr: 'guide', ja: 'ガイド', zh: '篇指南', es: 'guía', pt: 'guia',
+  en: 'guide', de: 'Leitfaden', fr: 'guide', ja: 'ガイド', zh: '篇指南', es: 'guía', pt: 'guia', ar: 'دليل',
 }
 
 const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
@@ -210,6 +227,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     zh: '你真正需要了解什么？',
     es: '¿Qué necesitas saber realmente?',
     pt: 'O que você realmente precisa saber?',
+    ar: 'ما الذي تحتاج لمعرفته فعلاً؟',
   },
   frameworks: {
     en: 'Which Template Gets the Best Results?',
@@ -219,6 +237,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     zh: '哪个模板效果最好？',
     es: '¿Qué plantilla obtiene los mejores resultados?',
     pt: 'Qual template traz os melhores resultados?',
+    ar: 'أي قالب يحقق أفضل النتائج؟',
   },
   techniques: {
     en: 'What Separates Good Prompts from Great Ones?',
@@ -228,6 +247,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     zh: '好提示词与优秀提示词的区别是什么？',
     es: '¿Qué separa los buenos prompts de los excelentes?',
     pt: 'O que separa bons prompts dos excelentes?',
+    ar: 'ما الذي يُميّز التوجيهات الجيدة عن المتميزة؟',
   },
   'use-topics': {
     en: 'How Do You Prompt for Your Specific Job?',
@@ -237,6 +257,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     zh: '如何针对你的工作提示？',
     es: '¿Cómo haces prompts para tu trabajo específico?',
     pt: 'Como você cria prompts para o seu trabalho específico?',
+    ar: 'كيف تُوجّه النموذج لعملك المحدد؟',
   },
   policy: {
     en: 'What Do AI Regulations Mean for Your Organization?',
@@ -246,6 +267,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     zh: 'AI法规对您的组织意味着什么？',
     es: '¿Qué significan las regulaciones de IA para tu organización?',
     pt: 'O que as regulamentações de IA significam para a sua organização?',
+    ar: 'ماذا تعني لوائح الذكاء الاصطناعي لمؤسستك؟',
   },
   'tools-platforms': {
     en: 'Which Tool Fits Your Workflow?',
@@ -255,6 +277,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     zh: '哪个工具适合您的工作流程？',
     es: '¿Qué herramienta encaja con tu flujo de trabajo?',
     pt: 'Qual ferramenta combina com o seu fluxo de trabalho?',
+    ar: 'أي أداة تناسب سير عملك؟',
   },
   'evaluation-reliability': {
     en: 'How Do You Know Your Prompts Work?',
@@ -264,6 +287,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     zh: '您如何知道提示词是否有效？',
     es: '¿Cómo sabes que tus prompts funcionan?',
     pt: 'Como você sabe que seus prompts funcionam?',
+    ar: 'كيف تتحقق من أن توجيهاتك تعمل؟',
   },
   'team-governance': {
     en: 'How Do You Manage Prompts at Scale?',
@@ -273,6 +297,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     zh: '如何大规模管理提示词？',
     es: '¿Cómo gestionas prompts a escala?',
     pt: 'Como você gerencia prompts em escala?',
+    ar: 'كيف تدير التوجيهات على نطاق واسع؟',
   },
   'workflows-automation': {
     en: 'How Do You Scale Prompts into Systems?',
@@ -282,6 +307,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     zh: '如何将提示词扩展为系统？',
     es: '¿Cómo conviertes prompts en sistemas?',
     pt: 'Como você transforma prompts em sistemas?',
+    ar: 'كيف تحوّل التوجيهات إلى أنظمة؟',
   },
 }
 
@@ -294,6 +320,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     zh: '每位提示词工程师需要理解的核心概念——LLM的工作原理、词元是什么，以及为什么提示词结构决定输出质量。这些文章解释温度如何控制随机性、为什么上下文窗口会导致AI"遗忘"，以及GPT-4o、Claude 4.6 Sonnet等不同模型如何以不同方式解释指令。提示词工程新手请从这里开始。',
     es: 'Conceptos fundamentales que todo prompt engineer debe entender — cómo funcionan los LLMs, qué son los tokens y por qué la estructura del prompt determina la calidad del resultado. Estos artículos explican cómo la temperatura controla la aleatoriedad, por qué las ventanas de contexto hacen que la IA "olvide" y cómo modelos distintos (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) interpretan las instrucciones de forma diferente. Empieza aquí si eres nuevo en el prompt engineering.',
     pt: 'Conceitos fundamentais que todo prompt engineer precisa entender — como os LLMs funcionam, o que são tokens e por que a estrutura do prompt determina a qualidade da saída. Estes artigos explicam como a temperatura controla a aleatoriedade, por que as janelas de contexto fazem a IA "esquecer" e como modelos diferentes (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) interpretam as instruções de formas distintas. Comece por aqui se você é novo em prompt engineering.',
+    ar: 'المفاهيم الأساسية التي يحتاج كل مهندس توجيهات إلى فهمها — كيف تعمل النماذج اللغوية الكبيرة، وما هي الرموز المميزة، ولماذا تحدد بنية التوجيه جودة الإخراج. تشرح هذه المقالات كيف تتحكم درجة الحرارة في العشوائية، ولماذا تجعل نوافذ السياق الذكاء الاصطناعي "ينسى"، وكيف تفسر النماذج المختلفة (GPT-4o وClaude 4.6 Sonnet وGemini 2.5 Pro) التعليمات بطرق مختلفة. ابدأ من هنا إن كنت جديداً على هندسة التوجيهات.',
   },
   frameworks: {
     en: 'Structured templates for building reliable, repeatable prompts across different tasks — marketing, coding, research, and more. Frameworks like CO-STAR, CRAFT, RTF, and APE break down prompts into components (role, context, constraints, output format) to eliminate guesswork and produce consistent results regardless of who writes the prompt. Use these guides to find the right framework for your use case, compare frameworks head-to-head, or build a custom framework tailored to your team\'s specific needs.',
@@ -303,6 +330,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     zh: '用于构建可靠、可重复提示词的结构化模板，适用于营销、编程、研究等不同任务。CO-STAR、CRAFT、RTF和APE等框架将提示词分解为组成部分（角色、上下文、约束、输出格式），消除猜测并产生一致的结果。使用这些指南为您的用例找到合适的框架，或构建适合团队的自定义框架。',
     es: 'Plantillas estructuradas para construir prompts fiables y repetibles en distintas tareas — marketing, programación, investigación y más. Frameworks como CO-STAR, CRAFT, RTF y APE descomponen los prompts en componentes (rol, contexto, restricciones, formato de salida) para eliminar conjeturas y producir resultados consistentes. Usa estas guías para encontrar el framework adecuado a tu caso de uso, comparar frameworks o crear uno personalizado para tu equipo.',
     pt: 'Templates estruturados para construir prompts confiáveis e repetíveis em diferentes tarefas — marketing, programação, pesquisa e mais. Frameworks como CO-STAR, CRAFT, RTF e APE decompõem os prompts em componentes (papel, contexto, restrições, formato de saída) para eliminar achismos e produzir resultados consistentes, independentemente de quem escreve o prompt. Use estes guias para encontrar o framework certo para o seu caso de uso, comparar frameworks lado a lado ou criar um framework personalizado para as necessidades específicas da sua equipe.',
+    ar: 'قوالب منظمة لبناء توجيهات موثوقة وقابلة للتكرار عبر مهام مختلفة — التسويق والبرمجة والبحث وغيرها. تُقسّم الأطر مثل CO-STAR وCRAFT وRTF وAPE التوجيهاتِ إلى مكونات (الدور والسياق والقيود وصيغة الإخراج) للقضاء على التخمين وإنتاج نتائج متسقة بغض النظر عمن يكتب التوجيه. استخدم هذه الأدلة للعثور على الإطار المناسب لحالتك، أو لمقارنة الأطر مع بعضها، أو لبناء إطار مخصص لاحتياجات فريقك.',
   },
   techniques: {
     en: 'Proven prompting techniques that improve accuracy, reduce errors, and produce more useful AI outputs for any task. These guides cover chain-of-thought prompting (step-by-step reasoning that improves complex problem accuracy), few-shot prompting (teaching with examples), RAG (grounding outputs in external data sources), self-consistency (reliability through multiple solutions), and prompt security (defending against injection attacks). Each technique includes decision criteria: when to use it, when to avoid it, and how to combine techniques for complex tasks.',
@@ -312,6 +340,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     zh: '经过验证的提示技术，可提高准确性、减少错误，为任何任务产生更有用的AI输出。这些指南涵盖思维链提示、少样本提示、RAG、自一致性以及针对注入攻击的提示安全防护。每种技术都包含决策标准：何时使用、何时避免，以及如何组合技术处理复杂任务。',
     es: 'Técnicas de prompting probadas que mejoran la precisión, reducen errores y producen resultados de IA más útiles en cualquier tarea. Estas guías cubren chain-of-thought (razonamiento paso a paso), few-shot prompting, RAG, self-consistency y seguridad frente a ataques de inyección. Cada técnica incluye criterios de decisión: cuándo usarla, cuándo evitarla y cómo combinar técnicas para tareas complejas.',
     pt: 'Técnicas de prompting comprovadas que melhoram a precisão, reduzem erros e produzem saídas de IA mais úteis em qualquer tarefa. Estes guias cobrem chain-of-thought (raciocínio passo a passo), few-shot prompting, RAG, self-consistency e segurança contra ataques de injection. Cada técnica inclui critérios de decisão: quando usá-la, quando evitá-la e como combinar técnicas para tarefas complexas.',
+    ar: 'تقنيات توجيه مُجرَّبة تُحسّن الدقة وتُقلّل الأخطاء وتُنتج مخرجات ذكاء اصطناعي أكثر فائدة لأي مهمة. تغطي هذه الأدلة التوجيه بسلسلة التفكير (استدلال خطوة بخطوة يُحسّن دقة المسائل المعقدة)، والتوجيه بأمثلة قليلة (التعليم بالأمثلة)، وRAG (ربط المخرجات بمصادر بيانات خارجية)، والاتساق الذاتي (الموثوقية عبر حلول متعددة)، وأمان التوجيه (الدفاع ضد هجمات الحقن). تتضمن كل تقنية معايير قرار: متى تستخدمها، ومتى تتجنبها، وكيف تجمع التقنيات لمهام معقدة.',
   },
   'use-topics': {
     en: 'Practical prompt engineering guides for specific domains and output types. Whether you\'re prompting for code review, research synthesis, SEO content, customer support, or multilingual tasks, these guides provide ready-to-use patterns optimized for each domain. The Output Engineering subsection covers format control, brand voice consistency, quality validation, and prompt library management — the operational layer for teams producing high-volume AI content.',
@@ -321,6 +350,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     zh: '面向特定领域和输出类型的实用提示词工程指南。无论是代码审查、研究综合、SEO内容还是多语言任务，这些指南都提供针对各领域优化的即用模式。输出工程子版块涵盖格式控制、品牌声音一致性、质量验证和提示词库管理。',
     es: 'Guías prácticas de prompt engineering para dominios y tipos de salida específicos. Ya sea para revisión de código, síntesis de investigación, contenido SEO, soporte al cliente o tareas multilingüe, estas guías ofrecen patrones listos para usar optimizados para cada dominio. La subsección Output Engineering cubre control de formato, coherencia de voz de marca, validación de calidad y gestión de biblioteca de prompts.',
     pt: 'Guias práticos de prompt engineering para domínios e tipos de saída específicos. Seja para revisão de código, síntese de pesquisa, conteúdo de SEO, suporte ao cliente ou tarefas multilíngues, estes guias oferecem padrões prontos para usar e otimizados para cada domínio. A subseção Output Engineering cobre controle de formato, consistência da voz da marca, validação de qualidade e gerenciamento de biblioteca de prompts.',
+    ar: 'أدلة عملية لهندسة التوجيهات في مجالات ومخرجات محددة. سواء أكنت توجّه لمراجعة الكود أم لتلخيص البحث أم لمحتوى SEO أم لدعم العملاء أم لمهام متعددة اللغات، فإن هذه الأدلة تُقدم أنماطاً جاهزة مُحسَّنة لكل مجال. يغطي قسم هندسة الإخراج التحكمَ في التنسيق واتساق صوت العلامة التجارية والتحقق من الجودة وإدارة مكتبة التوجيهات — الطبقة التشغيلية للفرق التي تُنتج محتوى ذكاء اصطناعي بحجم كبير.',
   },
   policy: {
     en: 'How AI regulation, data residency law, and geopolitical competition affect organizations deploying AI. As governments in the EU, US, China, and Japan establish AI governance frameworks, prompt engineers and AI teams need to understand which compliance obligations affect how prompts can be written, what data they can reference, and how outputs must be handled. This section is expanding — additional guides on EU AI Act compliance, GDPR and AI prompts, and enterprise data residency are in development.',
@@ -330,6 +360,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     zh: 'AI法规、数据驻留法律和地缘政治竞争如何影响部署AI的组织。本版块正在扩充中——欧盟AI法案合规、GDPR与AI提示词相关指南正在开发中。',
     es: 'Cómo la regulación de IA, las leyes de residencia de datos y la competencia geopolítica afectan a las organizaciones que despliegan IA. Esta sección está en expansión — se están desarrollando guías adicionales sobre cumplimiento del AI Act europeo, RGPD y prompts de IA, y residencia de datos empresariales.',
     pt: 'Como a regulamentação de IA, as leis de residência de dados e a competição geopolítica afetam as organizações que implantam IA. Conforme governos da União Europeia, EUA, China e Japão estabelecem frameworks de governança de IA, prompt engineers e equipes de IA precisam entender quais obrigações de compliance afetam como os prompts podem ser escritos, quais dados eles podem referenciar e como as saídas devem ser tratadas. Esta seção está em expansão — guias adicionais sobre conformidade com o AI Act europeu, LGPD e prompts de IA, e residência de dados corporativos estão em desenvolvimento.',
+    ar: 'كيف تؤثر لوائح الذكاء الاصطناعي وقوانين إقامة البيانات والمنافسة الجيوسياسية على المؤسسات التي تنشر الذكاء الاصطناعي. مع إنشاء حكومات الاتحاد الأوروبي والولايات المتحدة والصين واليابان لأطر حوكمة الذكاء الاصطناعي، يحتاج مهندسو التوجيهات وفرق الذكاء الاصطناعي إلى فهم الالتزامات الامتثالية التي تؤثر على كيفية كتابة التوجيهات وكيفية التعامل مع المخرجات. هذا القسم في توسع مستمر — أدلة إضافية حول امتثال قانون الذكاء الاصطناعي الأوروبي وGDPR قيد التطوير.',
   },
   'tools-platforms': {
     en: 'Evaluate and compare the best prompt engineering tools, platforms, and IDEs for individual and team workflows. These guides cover prompt testing suites (Braintrust for evaluation depth, Promptfoo for CI/CD integration), version control platforms (PromptHub for collaboration, Vellum for production traffic), developer IDEs (Cursor, VS Code with Continue.dev), and head-to-head comparisons with pricing and team-size fit. Every comparison includes explicit decision criteria so you can match the right tool to your workflow.',
@@ -339,6 +370,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     zh: '评估并比较最适合个人和团队工作流的提示词工程工具、平台和IDE。这些指南涵盖测试套件（Braintrust、Promptfoo）、版本控制平台（PromptHub、Vellum）、开发者IDE（Cursor、VS Code+Continue.dev），以及包含定价和团队规模建议的横向比较。',
     es: 'Evalúa y compara las mejores herramientas, plataformas e IDEs de prompt engineering para flujos de trabajo individuales y en equipo. Estas guías cubren suites de testing (Braintrust, Promptfoo), plataformas de control de versiones (PromptHub, Vellum), IDEs para desarrolladores (Cursor, VS Code con Continue.dev) y comparativas con precios y recomendaciones por tamaño de equipo.',
     pt: 'Avalie e compare as melhores ferramentas, plataformas e IDEs de prompt engineering para fluxos de trabalho individuais e de equipe. Estes guias cobrem suites de testes (Braintrust, Promptfoo), plataformas de controle de versão (PromptHub, Vellum), IDEs para desenvolvedores (Cursor, VS Code com Continue.dev) e comparativos diretos com preços e recomendações por tamanho de equipe. Cada comparativo inclui critérios de decisão explícitos para você escolher a ferramenta certa para o seu fluxo de trabalho.',
+    ar: 'تقييم ومقارنة أفضل أدوات هندسة التوجيهات والمنصات وبيئات التطوير للأفراد والفرق. تغطي هذه الأدلة مجموعات اختبار التوجيهات (Braintrust للعمق التقييمي، وPromptfoo لتكامل CI/CD)، ومنصات التحكم في الإصدار (PromptHub للتعاون، وVellum لحركة مرور الإنتاج)، وبيئات المطورين (Cursor وVS Code مع Continue.dev)، ومقارنات مباشرة مع الأسعار والملاءمة حسب حجم الفريق. تتضمن كل مقارنة معايير قرار واضحة لتوافق الأداة المناسبة مع سير عملك.',
   },
   'evaluation-reliability': {
     en: 'Systematic methods to evaluate prompt quality, test across models, and build reliable prompts for production. Untested prompts fail silently — they return plausible-sounding wrong answers instead of throwing errors, meaning quality issues go undetected until production. These guides cover prompt evaluation metrics (accuracy, consistency, latency), regression testing to catch breaking changes, brittleness reduction strategies, cross-model consistency testing, and building automated review gates into CI/CD pipelines.',
@@ -348,6 +380,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     zh: '评估提示词质量、跨模型测试以及为生产环境构建可靠提示词的系统化方法。未经测试的提示词会悄无声息地失败。这些指南涵盖评估指标、回归测试、脆弱性降低策略、跨模型一致性测试，以及将自动化审查门禁集成到CI/CD流水线中。',
     es: 'Métodos sistemáticos para evaluar la calidad de prompts, probar en varios modelos y construir prompts fiables para producción. Los prompts sin probar fallan en silencio. Estas guías cubren métricas de evaluación, pruebas de regresión, estrategias para reducir la fragilidad, testing de consistencia entre modelos e integración de revisiones automatizadas en pipelines CI/CD.',
     pt: 'Métodos sistemáticos para avaliar a qualidade dos prompts, testar em vários modelos e construir prompts confiáveis para produção. Prompts não testados falham em silêncio — eles retornam respostas erradas com aparência plausível em vez de gerar erros, o que significa que problemas de qualidade passam despercebidos até a produção. Estes guias cobrem métricas de avaliação de prompts (precisão, consistência, latência), testes de regressão para detectar mudanças que quebram, estratégias de redução de fragilidade, testes de consistência entre modelos e a criação de gates de revisão automatizados em pipelines de CI/CD.',
+    ar: 'أساليب منهجية لتقييم جودة التوجيهات واختبارها عبر النماذج وبناء توجيهات موثوقة للإنتاج. التوجيهات غير المُختبرة تفشل بصمت — تُعيد إجابات خاطئة تبدو معقولة بدلاً من إثارة أخطاء، مما يعني أن مشكلات الجودة لا تُكتشف حتى مرحلة الإنتاج. تغطي هذه الأدلة مقاييس تقييم التوجيهات (الدقة والاتساق والكمون)، واختبار الانحدار للكشف عن التغييرات المُعطِّلة، واستراتيجيات تقليل الهشاشة، واختبار الاتساق عبر النماذج، وبناء بوابات مراجعة آلية في خطوط أنابيب CI/CD.',
   },
   'team-governance': {
     en: 'Establish version control, documentation, governance, and security workflows for team-based prompt engineering. As AI becomes a core engineering function, teams need repeatable processes: Git-based prompt versioning (every prompt change is a PR), standardized documentation templates, approval workflows with domain and security reviewers, injection-vulnerability scanning, and full audit trails for compliance. These guides explain how to operationalize prompt engineering at team scale without adding workflow overhead.',
@@ -357,6 +390,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     zh: '为基于团队的提示词工程建立版本控制、文档、治理和安全工作流。团队需要可重复的流程：基于Git的提示词版本控制、标准化文档模板、审批工作流、注入漏洞扫描和完整审计跟踪。',
     es: 'Establece control de versiones, documentación, gobernanza y flujos de trabajo de seguridad para el prompt engineering en equipo. Los equipos necesitan procesos repetibles: versionado de prompts basado en Git, plantillas de documentación estandarizadas, flujos de aprobación, análisis de vulnerabilidades de inyección y trazabilidad completa para auditorías.',
     pt: 'Estabeleça controle de versão, documentação, governança e fluxos de trabalho de segurança para prompt engineering em equipe. Conforme a IA se torna uma função central de engenharia, as equipes precisam de processos repetíveis: versionamento de prompts baseado em Git (cada alteração de prompt é um PR), templates de documentação padronizados, fluxos de aprovação com revisores de domínio e de segurança, varredura de vulnerabilidades de injection e trilhas de auditoria completas para compliance. Estes guias explicam como operacionalizar o prompt engineering em escala de equipe sem adicionar sobrecarga ao fluxo de trabalho.',
+    ar: 'إنشاء سير عمل للتحكم في الإصدار والتوثيق والحوكمة والأمان لهندسة التوجيهات القائمة على الفريق. مع تحول الذكاء الاصطناعي إلى وظيفة هندسية أساسية، تحتاج الفرق إلى عمليات قابلة للتكرار: إصدار التوجيهات المستند إلى Git (كل تغيير في التوجيه هو طلب سحب)، وقوالب توثيق موحدة، وسير عمل موافقة مع مراجعين للمجال والأمان، وفحص ثغرات الحقن، وسجلات تدقيق كاملة للامتثال. تشرح هذه الأدلة كيفية تشغيل هندسة التوجيهات على مستوى الفريق دون إضافة عبء على سير العمل.',
   },
   'workflows-automation': {
     en: 'Build structured outputs, automate prompt workflows, and design repeatable processes for teams and use cases. These guides cover JSON mode and structured extraction (Instructor, Outlines, Pydantic AI), prompt chaining into multi-step workflows, cross-model testing pipelines, and how to configure prompt engineering workflows for developers, content teams, and support operations. Each guide includes practical patterns deployable in days, not months.',
@@ -366,6 +400,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     zh: '构建结构化输出、自动化提示词工作流，以及为团队和用例设计可重复的流程。这些指南涵盖JSON模式和结构化提取（Instructor、Outlines、Pydantic AI）、多步骤工作流的提示词链，以及为开发者、内容团队和支持运营配置提示词工程工作流。',
     es: 'Construye salidas estructuradas, automatiza flujos de trabajo de prompts y diseña procesos repetibles para equipos y casos de uso. Estas guías cubren el modo JSON y extracción estructurada (Instructor, Outlines, Pydantic AI), encadenamiento de prompts en flujos de trabajo multi-paso, y cómo configurar flujos de prompt engineering para desarrolladores, equipos de contenido y operaciones de soporte.',
     pt: 'Construa saídas estruturadas, automatize fluxos de trabalho de prompts e projete processos repetíveis para equipes e casos de uso. Estes guias cobrem o modo JSON e extração estruturada (Instructor, Outlines, Pydantic AI), encadeamento de prompts em fluxos de trabalho de múltiplas etapas, pipelines de testes entre modelos e como configurar fluxos de prompt engineering para desenvolvedores, equipes de conteúdo e operações de suporte. Cada guia inclui padrões práticos que podem ser implantados em dias, não meses.',
+    ar: 'بناء مخرجات منظمة وأتمتة سير عمل التوجيهات وتصميم عمليات قابلة للتكرار للفرق وحالات الاستخدام. تغطي هذه الأدلة وضع JSON واستخراج البنية (Instructor وOutlines وPydantic AI)، وسلسلة التوجيهات في سير عمل متعدد الخطوات، وخطوط أنابيب الاختبار عبر النماذج، وكيفية تكوين سير عمل هندسة التوجيهات للمطورين وفرق المحتوى وعمليات الدعم. يتضمن كل دليل أنماطاً عملية قابلة للنشر في أيام لا أشهر.',
   },
 }
 
@@ -378,6 +413,7 @@ const SUBSECTION_LABELS: Record<string, Record<string, string>> = {
     zh: '按垂直领域划分的用例',
     es: 'Casos de uso por sector',
     pt: 'Casos de uso por setor',
+    ar: 'حالات الاستخدام حسب القطاع',
   },
   'Output Engineering': {
     en: 'Output Engineering',
@@ -387,6 +423,7 @@ const SUBSECTION_LABELS: Record<string, Record<string, string>> = {
     zh: '输出工程',
     es: 'Ingeniería de salida',
     pt: 'Output Engineering',
+    ar: 'هندسة الإخراج',
   },
 }
 
@@ -399,6 +436,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     zh: '基础知识',
     es: 'Fundamentos',
     pt: 'Fundamentos',
+    ar: 'الأساسيات',
   },
   frameworks: {
     en: 'Frameworks',
@@ -408,6 +446,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     zh: '框架',
     es: 'Frameworks',
     pt: 'Frameworks',
+    ar: 'الأطر',
   },
   techniques: {
     en: 'Techniques',
@@ -417,6 +456,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     zh: '技术',
     es: 'Técnicas',
     pt: 'Técnicas',
+    ar: 'التقنيات',
   },
   'use-topics': {
     en: 'Use Cases & Output Engineering',
@@ -426,6 +466,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     zh: '用例与输出工程',
     es: 'Casos de uso e Ingeniería de salida',
     pt: 'Casos de uso e Output Engineering',
+    ar: 'حالات الاستخدام وهندسة الإخراج',
   },
   policy: {
     en: 'Policy & Compliance',
@@ -435,6 +476,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     zh: '政策与合规',
     es: 'Política & Cumplimiento',
     pt: 'Política & Compliance',
+    ar: 'السياسات والامتثال',
   },
   'tools-platforms': {
     en: 'Tools & Platforms',
@@ -444,6 +486,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     zh: '工具与平台',
     es: 'Herramientas & Plataformas',
     pt: 'Ferramentas & Plataformas',
+    ar: 'الأدوات والمنصات',
   },
   'evaluation-reliability': {
     en: 'Evaluation & Reliability',
@@ -453,6 +496,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     zh: '评估与可靠性',
     es: 'Evaluación & Fiabilidad',
     pt: 'Avaliação & Confiabilidade',
+    ar: 'التقييم والموثوقية',
   },
   'team-governance': {
     en: 'Team Governance',
@@ -462,6 +506,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     zh: '团队治理',
     es: 'Gobernanza de equipo',
     pt: 'Governança de equipe',
+    ar: 'حوكمة الفريق',
   },
   'workflows-automation': {
     en: 'Workflows & Automation',
@@ -471,6 +516,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     zh: '工作流程与自动化',
     es: 'Flujos de trabajo & Automatización',
     pt: 'Fluxos de trabalho & Automação',
+    ar: 'سير العمل والأتمتة',
   },
 }
 
@@ -483,6 +529,7 @@ const THEME_CALLOUTS: Record<string, Record<string, { icon: string; title: strin
     zh: { icon: '🔍', title: '从哪里开始', text: '如果只读3篇文章：《什么是Prompt工程》《思维链提示》《如何评估Prompt质量》。这三篇涵盖了你所需知识的80%。' },
     es: { icon: '🔍', title: 'Por dónde empezar', text: 'Si solo lees 3 artículos, lee: "Qué es el Prompt Engineering", "Chain-of-Thought Prompting" y "Cómo evaluar la calidad de prompts". Estos tres cubren el 80% de lo que necesitas.' },
     pt: { icon: '🔍', title: 'Por onde começar', text: 'Se você ler apenas 3 artigos, leia: "O que é Prompt Engineering", "Chain-of-Thought Prompting" e "Como avaliar a qualidade dos prompts". Esses três cobrem 80% do que você precisa.' },
+    ar: { icon: '🔍', title: 'من أين تبدأ', text: 'إن كنت ستقرأ 3 مقالات فقط، اقرأ: "ما هي هندسة التوجيهات" و"التوجيه بسلسلة التفكير" و"كيف تُقيّم جودة التوجيه". هذه الثلاثة تغطي 80% مما تحتاجه.' },
   },
   'tools-platforms': {
     en: { icon: '🔍', title: 'Two-Tool Stack', text: 'Most teams waste money on 3-4 tools. The optimal stack: one for evaluation (Braintrust or Promptfoo) and one for deployment (Vellum or PromptHub). Start with free tools (Promptfoo + PromptQuorum) before paying.' },
@@ -492,6 +539,7 @@ const THEME_CALLOUTS: Record<string, Record<string, { icon: string; title: strin
     zh: { icon: '🔍', title: '双工具组合', text: '大多数团队在3-4个工具上浪费金钱。最优工具栈：一个用于评估（Braintrust或Promptfoo），一个用于部署（Vellum或PromptHub）。付费前先用免费工具（Promptfoo + PromptQuorum）。' },
     es: { icon: '🔍', title: 'Stack de dos herramientas', text: 'La mayoría de equipos malgasta dinero en 3-4 herramientas. El stack óptimo: una para evaluación (Braintrust o Promptfoo) y una para despliegue (Vellum o PromptHub). Empieza con herramientas gratuitas (Promptfoo + PromptQuorum) antes de pagar.' },
     pt: { icon: '🔍', title: 'Stack de duas ferramentas', text: 'A maioria das equipes desperdiça dinheiro com 3-4 ferramentas. O stack ideal: uma para avaliação (Braintrust ou Promptfoo) e uma para deploy (Vellum ou PromptHub). Comece com ferramentas gratuitas (Promptfoo + PromptQuorum) antes de pagar.' },
+    ar: { icon: '🔍', title: 'مجموعة الأداتين', text: 'تُهدر معظم الفرق المال على 3-4 أدوات. المجموعة المثلى: أداة للتقييم (Braintrust أو Promptfoo) وأداة للنشر (Vellum أو PromptHub). ابدأ بالأدوات المجانية (Promptfoo + PromptQuorum) قبل الدفع.' },
   },
   'evaluation-reliability': {
     en: { icon: '🔍', title: 'Silent Failures', text: 'Prompts fail silently — no error log, no exception. Output quality degrades but nothing breaks visibly. Evaluation and regression testing are the only way to catch this.' },
@@ -501,11 +549,12 @@ const THEME_CALLOUTS: Record<string, Record<string, { icon: string; title: strin
     zh: { icon: '🔍', title: '静默失败', text: 'Prompt悄无声息地失败——没有错误日志，没有异常。输出质量下降，但表面上什么都没有断裂。评估和回归测试是唯一能发现这个问题的方法。' },
     es: { icon: '🔍', title: 'Fallos silenciosos', text: 'Los prompts fallan sin hacer ruido — sin log de errores, sin excepciones. La calidad de la salida se degrada pero nada falla visiblemente. La evaluación y los tests de regresión son la única forma de detectarlo.' },
     pt: { icon: '🔍', title: 'Falhas silenciosas', text: 'Os prompts falham em silêncio — sem log de erro, sem exceção. A qualidade da saída se degrada, mas nada quebra visivelmente. Avaliação e testes de regressão são a única forma de detectar isso.' },
+    ar: { icon: '🔍', title: 'الفشل الصامت', text: 'التوجيهات تفشل بصمت — لا سجل أخطاء ولا استثناءات. تتدهور جودة الإخراج دون أن يظهر أي عطل واضح. التقييم واختبار الانحدار هما الوسيلة الوحيدة لاكتشاف ذلك.' },
   },
 }
 
 const HUB_SOURCES_HEADER: Record<string, string> = {
-  en: 'Sources', de: 'Quellen', fr: 'Sources', ja: '出典', zh: '参考来源', es: 'Fuentes', pt: 'Fontes',
+  en: 'Sources', de: 'Quellen', fr: 'Sources', ja: '出典', zh: '参考来源', es: 'Fuentes', pt: 'Fontes', ar: 'المصادر',
 }
 
 const HUB_SOURCES_DATA: Array<{ title: string; url: string; desc: string }> = [
@@ -525,6 +574,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     ja: 'チーム向けプロンプト文書テンプレート',
     zh: '团队提示词文档模板',
     pt: 'Templates de documentação de prompts para equipes',
+    ar: 'قوالب توثيق التوجيهات للفرق',
   },
   'prompt-governance-in-production': {
     en: 'Prompt Governance in Production',
@@ -533,6 +583,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     ja: '本番環境でのプロンプトガバナンス',
     zh: '生产环境中的提示词治理',
     pt: 'Governança de prompts em produção',
+    ar: 'حوكمة التوجيهات في الإنتاج',
   },
   'prompt-security-tools-injection-testing': {
     en: 'Prompt Security Tools & Injection Testing',
@@ -541,6 +592,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     ja: 'プロンプトセキュリティツールとインジェクションテスト',
     zh: '提示词安全工具与注入测试',
     pt: 'Ferramentas de segurança de prompts & testes de injection',
+    ar: 'أدوات أمان التوجيهات واختبار الحقن',
   },
   'prompt-audit-and-regression-risk': {
     en: 'Prompt Audit & Regression Risk Management',
@@ -549,6 +601,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     ja: 'プロンプト監査と回帰リスク管理',
     zh: '提示词审计与回归风险管理',
     pt: 'Auditoria de prompts & gestão de risco de regressão',
+    ar: 'تدقيق التوجيهات وإدارة مخاطر الانحدار',
   },
   'multi-model-prompt-testing-workflows': {
     en: 'Multi-Model Prompt Testing Workflows',
@@ -557,6 +610,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     ja: 'マルチモデルプロンプトテストワークフロー',
     zh: '多模型提示词测试工作流',
     pt: 'Fluxos de teste de prompts multi-modelo',
+    ar: 'سير عمل اختبار التوجيهات متعددة النماذج',
   },
   'prompt-library-management-for-teams': {
     en: 'Prompt Library Management for Teams',
@@ -565,6 +619,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     ja: 'チーム向けプロンプトライブラリ管理',
     zh: '团队提示词库管理',
     pt: 'Gerenciamento de biblioteca de prompts para equipes',
+    ar: 'إدارة مكتبة التوجيهات للفرق',
   },
   'prompts-to-repeatable-workflows': {
     en: 'From Prompts to Repeatable Workflows',
@@ -573,6 +628,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     ja: 'プロンプトから反復可能なワークフローへ',
     zh: '从提示词到可重复工作流程',
     pt: 'De prompts a fluxos de trabalho repetíveis',
+    ar: 'من التوجيهات إلى سير العمل القابل للتكرار',
   },
   'prompt-engineering-for-content-teams': {
     en: 'Prompt Engineering for Content Teams',
@@ -581,6 +637,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     ja: 'コンテンツチーム向けプロンプトエンジニアリング',
     zh: '内容团队的提示词工程',
     pt: 'Prompt Engineering para equipes de conteúdo',
+    ar: 'هندسة التوجيهات لفرق المحتوى',
   },
   'prompt-engineering-for-developers-workflow': {
     en: 'Prompt Engineering Workflow for Developers',
@@ -589,6 +646,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     ja: '開発者向けプロンプトエンジニアリングワークフロー',
     zh: '开发者的提示词工程工作流',
     pt: 'Fluxo de prompt engineering para desenvolvedores',
+    ar: 'سير عمل هندسة التوجيهات للمطورين',
   },
   'prompt-engineering-for-support-operations': {
     en: 'Prompt Engineering for Support Operations',
@@ -597,6 +655,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     ja: 'サポートオペレーション向けプロンプトエンジニアリング',
     zh: '客户支持运营的提示词工程',
     pt: 'Prompt Engineering para operações de suporte',
+    ar: 'هندسة التوجيهات لعمليات الدعم',
   },
   'prompt-framework-selection-for-teams': {
     en: 'How to Choose the Right Prompt Framework for Your Team',
@@ -605,6 +664,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     ja: 'チームに最適なプロンプトフレームワークの選び方',
     zh: '如何为团队选择合适的提示词框架',
     pt: 'Como escolher o framework de prompts certo para a sua equipe',
+    ar: 'كيف تختار إطار التوجيه المناسب لفريقك',
   },
   'prompts-for-reliable-structured-data': {
     en: 'Prompts for Reliable Structured Data Extraction',
@@ -613,6 +673,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     ja: '信頼性の高い構造化データ抽出のためのプロンプト',
     zh: '可靠结构化数据提取的提示词',
     pt: 'Prompts para extração confiável de dados estruturados',
+    ar: 'توجيهات استخراج البيانات المنظمة الموثوقة',
   },
 }
 
@@ -623,6 +684,7 @@ const HUB_FAQ_HEADER: Record<string, string> = {
   ja: 'よくある質問',
   zh: '常见问题',
   pt: 'Perguntas frequentes',
+  ar: 'الأسئلة الشائعة',
 }
 
 const HUB_FAQ_DATA: Record<string, Array<{ q: string; a: string }>> = {
@@ -707,6 +769,18 @@ const HUB_FAQ_DATA: Record<string, Array<{ q: string; a: string }>> = {
     { q: '提示词工程师使用哪些工具？', a: '核心工具栈：提示词IDE（Cursor或带Continue.dev的VS Code）、测试框架（Braintrust或Promptfoo）、版本控制（PromptHub或Git）以及多模型测试平台（PromptQuorum用于同时比较GPT-4o、Claude和Gemini）。' },
     { q: '使用AI工具需要遵守中国数据安全法吗？', a: '是的——中国《数据安全法》（2021年）和《个人信息保护法》（PIPL）要求中国用户的数据在境内存储和处理。对于处理敏感数据的企业，本地部署模型或阿里云、腾讯云等国内云服务商的AI接口可满足数据安全合规要求。' },
     { q: '如何为企业级生产环境搭建安全的提示词工程体系？', a: '企业级体系需要三层保障：自动化测试（格式验证、安全扫描、幻觉检测）、人工审核（领域专家 + 安全审查员）以及CI/CD门控（未审批提示词无法合并）。金融、医疗、法律行业还需额外的合规审查，建议使用Git进行版本控制并保留完整审计记录。' },
+  ],
+  ar: [
+    { q: 'ما هي هندسة التوجيهات؟', a: 'هندسة التوجيهات هي ممارسة تنظيم الطلبات الموجهة لنماذج الذكاء الاصطناعي للحصول على مخرجات أفضل وأكثر اتساقاً. تشمل استخدام الأطر والتنسيق والأمثلة والقيود لتوجيه سلوك النموذج — وتحويل استجابات الذكاء الاصطناعي الغامضة إلى مخرجات دقيقة بجودة خبراء.' },
+    { q: 'ما أهم تقنيات هندسة التوجيهات؟', a: 'التقنيات الأعلى تأثيراً هي: التوجيه بسلسلة التفكير (استدلال خطوة بخطوة يُحسّن الدقة في المسائل المعقدة)، والتوجيه بأمثلة قليلة (تقديم 2–5 أمثلة لتعليم النموذج الصيغة المطلوبة)، وRAG (ربط المخرجات ببيانات خارجية لمنع الهلوسة). هذه التقنيات الثلاث تغطي معظم حالات استخدام هندسة التوجيهات في الإنتاج.' },
+    { q: 'كيف تؤثر درجة الحرارة على مخرجات الذكاء الاصطناعي؟', a: 'تتحكم درجة الحرارة في عشوائية استجابات الذكاء الاصطناعي. القيم المنخفضة (0.0–0.5) تُنتج مخرجات حتمية وواقعية مناسبة للمهام المنظمة كاستخراج البيانات أو كتابة الكود. القيم العالية (0.7–1.0) تُنتج استجابات إبداعية ومتنوعة للكتابة أو العصف الذهني. تعمل معظم حالات الاستخدام الإنتاجي بشكل أفضل عند 0.3–0.5.' },
+    { q: 'أي أطر التوجيه يجب أن أتعلم أولاً؟', a: 'ابدأ بـ CO-STAR (السياق والهدف والأسلوب والنبرة والجمهور والاستجابة) للتوجيه العام، وCRAFT للمهام الإبداعية والتحليلية. يغطي هذان الإطاران 80% من سيناريوهات هندسة التوجيهات الشائعة. تعلّم RTF (الدور والمهمة والصيغة) اختصاراً سريعاً للتوجيهات البسيطة.' },
+    { q: 'هل أحتاج إلى معرفة البرمجة لممارسة هندسة التوجيهات؟', a: 'لا — هندسة التوجيهات الأساسية لا تتطلب برمجة. حالات الاستخدام المتقدمة كخطوط أنابيب الاختبار الآلي وبوابات CI/CD واستخراج المخرجات المنظمة تستفيد من الإلمام بـ Python. ابدأ بالأطر المفاهيمية والتقنيات؛ وتعلّم طبقة الهندسة حين يستدعي ذلك حالتُك.' },
+    { q: 'هل هندسة التوجيهات لا تزال ذات صلة في عام 2026؟', a: 'نعم — رغم التحسينات في استدلال النماذج، تظل هندسة التوجيهات ضرورية. لا تزال النماذج تُنتج مخرجات أفضل بكثير مع مُدخلات منظمة. يُحسّن التوجيه بسلسلة التفكير دقة الاستدلال المعقد بنسبة 30–40% في المعايير المرجعية. مع تطور النماذج، يتحول التركيز من تصحيح نقاط الضعف إلى إطلاق الإمكانات.' },
+    { q: 'ما الفرق بين هندسة التوجيهات والضبط الدقيق؟', a: 'تُشكّل هندسة التوجيهات سلوك النموذج من خلال تصميم المُدخلات دون تغيير أوزانه — سريعة (دقائق) وغير مرتبطة بنموذج بعينه. أما الضبط الدقيق فيُدرّب النموذج على بيانات جديدة لتغيير سلوكه الأساسي — يستغرق ساعات ويتطلب مجموعات بيانات وينتج نموذجاً متخصصاً. استخدم هندسة التوجيهات أولاً؛ ولجأ إلى الضبط الدقيق فقط حين تعجز التوجيهات باستمرار عن حل المهمة.' },
+    { q: 'ما الأدوات التي يستخدمها مهندسو التوجيهات؟', a: 'المجموعة الأساسية: بيئة توجيهات متكاملة (Cursor أو VS Code مع Continue.dev)، وإطار اختبار (Braintrust أو Promptfoo للتقييم وCI/CD)، ونظام تحكم في الإصدار (PromptHub أو Git)، ومنصة اختبار متعددة النماذج (PromptQuorum لمقارنة مخرجات GPT-4o وClaude وGemini في آنٍ واحد). تُضيف الفرق المتقدمة Vellum لإدارة حركة مرور الإنتاج.' },
+    { q: 'على كم نموذج ذكاء اصطناعي يجب أن أختبر توجيهاتي؟', a: 'كحد أدنى، اختبر على نموذجين من مزودَين مختلفَين — مثل GPT-4o وClaude 4.6 Sonnet. ينبغي اختبار التوجيهات الإنتاجية على ثلاثة نماذج أو أكثر. استخدم PromptQuorum للإرسال إلى أكثر من 25 نموذجاً في تشغيل واحد ومقارنة المخرجات ومعدلات النجاح والكمون جنباً إلى جنب.' },
+    { q: 'ما الفرق بين هندسة التوجيهات وإدارة التوجيهات؟', a: 'هندسة التوجيهات تعني تصميم توجيهات فردية — اختيار الدور والسياق والصيغة والأمثلة المناسبة. أما إدارة التوجيهات فهي الطبقة التشغيلية: التحكم في الإصدار وتعاون الفريق وخطوط أنابيب الاختبار وسير عمل النشر وسجلات التدقيق. تبدأ الفرق الصغيرة بالهندسة؛ وتُضيف الفرق المتنامية الإدارة.' },
   ],
 }
 
