@@ -29,6 +29,20 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
+  // Stacked-locale guard — /pt/zh/local-llms/x → 301 → /zh/local-llms/x
+  // Happens when a bot or stale bookmark stacks two locale prefixes.
+  // Derived from VALID_NON_EN_LANGS so the alternation never drifts.
+  const _langAlt = VALID_NON_EN_LANGS.join('|')
+  const _doubleLangRe = new RegExp(`^/(${_langAlt})/(${_langAlt})(/.*)?$`)
+  const doubleLangMatch = url.pathname.match(_doubleLangRe)
+  if (doubleLangMatch && !isApiRoute && !isCronRoute) {
+    const innerLang = doubleLangMatch[2]
+    const rest = doubleLangMatch[3] ?? ''
+    const target = new URL(`/${innerLang}${rest}`, url.origin)
+    target.search = url.search
+    return NextResponse.redirect(target, 301)
+  }
+
   // FIX 0: PE framework slugs → /frameworks/ canonical URL
   // These articles declare /frameworks/X as canonical but are also indexed via /prompt-engineering/X
   // causing "Duplicate without user-selected canonical" in GSC. Redirect to canonical.
@@ -50,7 +64,6 @@ export function middleware(request: NextRequest) {
   // LANG PARAM REDIRECT: convert any ?lang=XX URL to the canonical subdirectory form.
   // ?lang=en or unrecognised lang → strip param, stay at current path.
   // ?lang=jp normalised to ja (country-code alias).
-  // 'ar' is excluded from valid non-EN langs (page tree not yet live).
   // Returns 308 (permanent, method-preserving).
   if (langParam !== null && !isApiRoute && !isCronRoute) {
     const LANG_ALIASES: Record<string, string> = { jp: 'ja' }
