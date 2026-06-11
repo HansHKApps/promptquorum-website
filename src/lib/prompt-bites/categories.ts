@@ -26,6 +26,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '量化与显存',
       es: 'Cuantización y VRAM',
       pt: 'Quantização e VRAM',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'التكميم والذاكرة VRAM',
     },
     description: {
       en: 'How much memory you need, which quantization format to pick, and VRAM decision trees.',
@@ -35,6 +37,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '所需内存量、选择哪种量化格式以及VRAM决策树。',
       es: 'Cuánta memoria necesita, qué formato de cuantización elegir y árboles de decisión de VRAM.',
       pt: 'Quanta memória você precisa, qual formato de quantização escolher e árvores de decisão de VRAM.',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'حجم الذاكرة المطلوب، وصيغة التكميم المناسبة، وأشجار قرارات VRAM.',
     },
     articleSlugs: [
       'how-much-vram-for-local-llm',
@@ -61,6 +65,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: 'Ollama',
       es: 'Ollama',
       pt: 'Ollama',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'Ollama',
     },
     description: {
       en: 'Latest versions, best models, context windows, vision, and CPU-only use.',
@@ -70,6 +76,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '最新版本、最佳模型、上下文窗口、视觉和纯CPU使用。',
       es: 'Versiones más recientes, mejores modelos, ventanas de contexto, visión y uso solo con CPU.',
       pt: 'Versões mais recentes, melhores modelos, janelas de contexto, visão e uso somente com CPU.',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'أحدث الإصدارات، وأفضل النماذج، ونوافذ السياق، والرؤية، والاستخدام على CPU فقط.',
     },
     articleSlugs: [
       'ollama-latest-version',
@@ -93,6 +101,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '工具比较',
       es: 'Comparativas de herramientas',
       pt: 'Comparações de ferramentas',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'مقارنة الأدوات',
     },
     description: {
       en: 'Two-way comparisons: Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
@@ -102,6 +112,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '双向对比：Ollama vs LM Studio、Jan vs LM Studio、Qwen vs DeepSeek。',
       es: 'Comparaciones uno a uno: Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
       pt: 'Comparações diretas: Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'مقارنات ثنائية: Ollama مقابل LM Studio، وJan مقابل LM Studio، وQwen مقابل DeepSeek.',
     },
     articleSlugs: [
       'qwen-coder-vs-deepseek-coder',
@@ -128,6 +140,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '模型比较',
       es: 'Comparativas de modelos',
       pt: 'Comparações de modelos',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'مقارنة النماذج',
     },
     description: {
       en: 'Best 14B models, MoE models, mini PCs, and head-to-head model matchups.',
@@ -137,6 +151,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '最佳14B模型、MoE模型、迷你PC及正面对决模型比较。',
       es: 'Mejores modelos 14B, modelos MoE, mini PCs y comparativas directas entre modelos.',
       pt: 'Melhores modelos 14B, modelos MoE, mini PCs e confrontos diretos entre modelos.',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'أفضل نماذج 14B، ونماذج MoE، وأجهزة الكمبيوتر المصغرة، ومقارنات مباشرة بين النماذج.',
     },
     articleSlugs: [
       'qwen-14b-vs-llama-8b',
@@ -159,6 +175,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '特定硬件',
       es: 'Hardware específico',
       pt: 'Hardware específico',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'الأجهزة المخصصة',
     },
     description: {
       en: 'Hardware picks and buying-guide bites: GPU recommendations by budget, mini-PCs, SSDs, cloud GPUs, and eGPUs.',
@@ -168,6 +186,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '硬件选择和购买指南：按预算推荐GPU、迷你PC、SSD、云GPU和eGPU。',
       es: 'Recomendaciones de hardware y guías de compra: GPUs por presupuesto, mini-PCs, SSDs, GPUs en la nube y eGPUs.',
       pt: 'Escolhas de hardware e guias de compra: recomendações de GPU por orçamento, mini PCs, SSDs, GPUs na nuvem e eGPUs.',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'توصيات الأجهزة وأدلة الشراء: بطاقات GPU حسب الميزانية، وأجهزة الكمبيوتر المصغرة، وأقراص SSD، وبطاقات GPU السحابية، وبطاقات eGPU.',
     },
     articleSlugs: [
       'best-local-llm-coding-12gb-vram',
@@ -196,6 +216,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '快速解答',
       es: 'Respuestas rápidas',
       pt: 'Respostas rápidas',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'إجابات سريعة',
     },
     description: {
       en: 'Yes/no and one-number answers: RAM limits, laptop recommendations.',
@@ -205,6 +227,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '是/否和单数字答案：RAM限制、笔记本推荐。',
       es: 'Respuestas de sí/no y un solo número: límites de RAM, recomendaciones de laptops.',
       pt: 'Respostas de sim/não e de um único número: limites de RAM, recomendações de notebooks.',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'إجابات بنعم/لا وأرقام مفردة: حدود RAM، وتوصيات أجهزة الحاسوب المحمولة.',
     },
     articleSlugs: [
       'can-you-run-rag-on-2gb-ram',
@@ -225,6 +249,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '提示词工程',
       es: 'Ingeniería de prompts',
       pt: 'Engenharia de prompts',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'هندسة الأوامر',
     },
     description: {
       en: 'Quick definitions and best-of lists for prompt engineering concepts.',
@@ -234,6 +260,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '提示词工程概念的快速定义和最佳列表。',
       es: 'Definiciones rápidas y mejores listas para conceptos de ingeniería de prompts.',
       pt: 'Definições rápidas e listas dos melhores para conceitos de engenharia de prompts.',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'تعريفات سريعة وقوائم بأفضل مفاهيم هندسة الأوامر.',
     },
     articleSlugs: [
       'co-star-prompt-framework',
@@ -253,6 +281,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: '隐私与合规',
       es: 'Privacidad y cumplimiento normativo',
       pt: 'Privacidade e conformidade',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'الخصوصية والامتثال',
     },
     description: {
       en: 'GDPR compliance, data sovereignty, and privacy-safe local AI deployment.',
@@ -262,6 +292,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       zh: 'GDPR合规性、数据主权以及隐私安全的本地AI部署。',
       es: 'Cumplimiento del RGPD, soberanía de datos y despliegue de IA local con privacidad garantizada.',
       pt: 'Conformidade com o GDPR, soberania de dados e implantação de IA local com privacidade garantida.',
+      // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+      ar: 'الامتثال لـGDPR، وسيادة البيانات، ونشر الذكاء الاصطناعي المحلي مع الحفاظ على الخصوصية.',
     },
     articleSlugs: [
       'is-qwen-gdpr-compliant',

@@ -507,6 +507,257 @@ schema: {
         ]
       },
     },
+    ar: {
+      freshness_tier: 'semi_annual',
+      theme: 'Getting Started',
+      title: 'ما هي نماذج LLM المحلية؟ كيف تشغّل نماذج الذكاء الاصطناعي على عتادك الخاص',
+      seoTitle: 'ما هي نماذج LLM المحلية؟ ذكاء اصطناعي يعمل على عتادك',
+      intro: 'نموذج LLM المحلي هو نموذج لغة ذكاء اصطناعي يعمل بالكامل على عتادك الخاص: بلا اتصال بالإنترنت، وبلا استدعاءات API، وبلا بيانات تغادر جهازك. نزّل أوزان النموذج كملف، شغّل محرك استدلال مثل Ollama أو LM Studio، فيستجيب النموذج من CPU أو GPU لديك. اعتبارًا من أبريل 2026، أكثر النماذج عملية للمبتدئين هي Llama 3.2 3B وPhi-3 Mini.',
+      metaDescription: 'تشغّل نماذج LLM المحلية نماذج الذكاء الاصطناعي على عتادك الخاص، دون حاجة إلى إنترنت. تعرّف على ماهيتها، وكيف تعمل، ومتى تستخدمها. دليل 2026.',
+      leadAnswerBlock: '**تشغّل نماذج LLM المحلية كل الاستدلال على عتادك الخاص بتكلفة صفرية لكل token وخصوصية تامة.** تقدّم واجهات API السحابية (GPT-5.5، Claude Opus 4.8، Gemini 3.1 Pro) جودة أعلى بإعداد أدنى.',
+      dateModified: '2026-04-15',
+      publishDate: '2026-04-04',
+      audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على عتاد استهلاكي',
+      readTime: '7 دقائق قراءة',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'LLM محلي',
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'ما هو نموذج LLM المحلي؟', anchor: '#what-is-a-local-llm' },
+        { label: 'كيف يعمل نموذج LLM المحلي؟', anchor: '#how-does-a-local-llm-work' },
+        { label: 'أي عتاد تحتاج؟', anchor: '#what-hardware-do-you-need' },
+        { label: 'LLM محلي مقابل API سحابية: ما الفرق؟', anchor: '#local-llm-vs-cloud-api' },
+        { label: 'أي صيغ نماذج تُستخدم؟', anchor: '#which-model-formats-are-used' },
+        { label: 'متى يجب أن تستخدم نموذج LLM محليًا؟', anchor: '#when-should-you-use-a-local-llm' },
+        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'يعمل نموذج LLM المحلي على CPU أو GPU الخاص بك: بلا إنترنت، وبلا تكاليف API، وبلا بيانات تُرسل إلى خوادم طرف ثالث.',
+            'تلزم ثلاثة مكونات: ملف النموذج (صيغة GGUF أو safetensors)، ومحرك استدلال (Ollama، أو LM Studio، أو llama.cpp)، واختياريًا واجهة دردشة.',
+            'الحد الأدنى من العتاد: 8 GB من RAM لنموذج 7B معاملات بتكميم 4 بت. مع 16 GB من RAM، تُدار معظم النماذج اليومية بأريحية.',
+            'النماذج المحلية أبطأ من واجهات API السحابية على العتاد الاستهلاكي: نموذج 7B على حاسوب محمول حديث ينتج 15-40 token/ثانية مقابل ~100 token/ثانية لـ GPT-5.5 Mini عبر API.',
+            'أفضل حالات الاستخدام: معالجة البيانات الخاصة، والعمل دون اتصال، وتكلفة متكررة صفرية، وتعلّم كيفية عمل نماذج LLM.',
+          ],
+        },
+        whatIsLocalLlm: {
+          title: 'ما هو نموذج LLM المحلي؟',
+          content: [
+            '**نموذج LLM المحلي (نموذج لغة كبير) هو نموذج ذكاء اصطناعي يعمل على عتاد تحت سيطرتك: حاسوبك المحمول، أو المكتبي، أو خادم محلي.** تُخزّن أوزان النموذج كملف على قرصك، وتحدث كل المعالجة على CPU أو GPU الخاص بك. لا يُنقل أي نص من الموجّهات أو بيانات استجابة إلى أي خادم خارجي.',
+            'يميّز مصطلح "محلي" هذه النماذج عن الخدمات المستضافة في السحابة، مثل OpenAI GPT-5.5، أو Anthropic Claude 4.6، أو Google Gemini 3.1 Pro، التي تعالج موجّهاتك على خوادم بعيدة وتعيد النتائج عبر الإنترنت.',
+            'تتراوح نماذج LLM المحلية من نماذج صغيرة 1B معاملات تعمل على هاتف إلى نماذج 70B معاملات تتطلب محطة عمل بذاكرة VRAM سعة 48 GB. أكثر النماذج استخدامًا للمبتدئين -- Meta Llama 3.2 3B، وMicrosoft Phi-3 Mini، وGoogle Gemma 2 2B -- تعمل على أي حاسوب محمول بذاكرة 8 GB من RAM.',
+          ],
+        },
+        howItWorks: {
+          title: 'كيف يعمل نموذج LLM المحلي؟',
+          content: [
+            '**يتضمن تشغيل نموذج LLM محلي ثلاث طبقات تعمل معًا: ملف النموذج، ومحرك الاستدلال، والواجهة.**',
+            '**يحتوي ملف النموذج** على أوزان الشبكة العصبية: القيم العددية المُتعلَّمة التي تحدد كيف يعالج النموذج النص ويولّده. للاستخدام المحلي، تُخزّن هذه الأوزان غالبًا بصيغة GGUF (صيغة مضغوطة طوّرها مشروع llama.cpp) أو بصيغة safetensors. نموذج 7B معاملات مكمَّم إلى دقة 4 بت يشغل نحو 4.5 GB على القرص.',
+            '**يقرأ محرك الاستدلال** ملف النموذج وينفّذ الحسابات المصفوفية اللازمة لتوليد token. أشهر المحركات هي [Ollama](/ar/local-llms/how-to-install-ollama) (يعمل كخدمة في الخلفية بواجهة API متوافقة مع OpenAI)، و[LM Studio](/ar/local-llms/how-to-install-lm-studio) (تطبيق سطح مكتب بواجهة دردشة مدمجة)، وllama.cpp (مكتبة C++ الأساسية التي تُبنى عليها معظم الأدوات).',
+            '**الواجهة** هي حيث تتفاعل مع النموذج: طرفية، أو واجهة ويب، أو نقطة نهاية API. تعرض أدوات كثيرة مثل Ollama واجهة REST API على `http://localhost:11434` لتتمكن من توصيل أي تطبيق متوافق مع OpenAI بنموذجك المحلي.',
+          ],
+          youtubeUrl: 'https://www.youtube.com/watch?v=2p2xMKpz7wM',
+        },
+        hardware: {
+          id: 'what-hardware-do-you-need',
+          title: 'أي عتاد تحتاج لتشغيل نموذج LLM محلي؟',
+          content: 'يعتمد متطلب العتاد كليًا على النموذج الذي تريد تشغيله وسرعة الاستجابة التي تحتاجها.',
+          rows: [
+            { 'Tamaño del modelo': '1B-3B معاملات', 'RAM necesaria': '4-6 GB', 'Velocidad (CPU)': '20-60 tok/ثانية', 'Modelos de ejemplo': 'Llama 3.2 1B، Phi-3 Mini 3.8B' },
+            { 'Tamaño del modelo': '7B-8B معاملات', 'RAM necesaria': '6-8 GB', 'Velocidad (CPU)': '10-30 tok/ثانية', 'Modelos de ejemplo': 'Llama 3.3 8B، Mistral Small' },
+            { 'Tamaño del modelo': '13B-14B معاملات', 'RAM necesaria': '10-12 GB', 'Velocidad (CPU)': '5-15 tok/ثانية', 'Modelos de ejemplo': 'Llama 3.2 13B، Qwen3 14B' },
+            { 'Tamaño del modelo': '32B-34B معاملات', 'RAM necesaria': '20-24 GB', 'Velocidad (CPU)': '2-6 tok/ثانية', 'Modelos de ejemplo': 'Qwen3 32B، DeepSeek-R1 32B' },
+            { 'Tamaño del modelo': '70B+ معاملات', 'RAM necesaria': '40-48 GB', 'Velocidad (CPU)': '1-3 tok/ثانية', 'Modelos de ejemplo': 'Llama 3.3 70B، Qwen3 72B' },
+          ],
+          columns: ['حجم النموذج', 'RAM المطلوبة', 'السرعة (CPU)', 'نماذج مثال'],
+        },
+        hardwareGpu: {
+          title: 'هل تجعل وحدة GPU نموذج LLM المحلي أسرع؟',
+          content: 'يحسّن التسريع بوحدة GPU السرعة بشكل كبير. تشغّل NVIDIA RTX 4070 Ti (12 GB من VRAM) نموذج 7B بـ 80-120 token/ثانية: أسرع بـ 4 إلى 8 مرات من وضع CPU فقط. تستخدم أجهزة Mac بمعالج Apple Silicon (M1، M2، M3، M4) ذاكرة موحّدة وتبلغ 40-80 token/ثانية على نماذج 7B دون GPU مخصصة. لمستخدمي الحواسيب المحمولة، راجع [كيفية تشغيل نماذج LLM المحلية على حاسوب محمول](/ar/local-llms/local-llm-on-laptop) للحصول على نصائح خاصة بالعتاد.',
+        },
+        vsCloud: {
+          id: 'local-llm-vs-cloud-api',
+          title: 'LLM محلي مقابل API سحابية: ما الفرق؟',
+          content: 'المقايضة الأساسية هي الخصوصية والتكلفة مقابل القدرة والسرعة. راجع المقارنة الكاملة في [نماذج LLM المحلية مقابل واجهات API السحابية](/ar/local-llms/local-llms-vs-cloud-apis).',
+          rows: [
+            { 'Factor': 'الخصوصية', 'LLM local': 'تامة: لا تغادر البيانات جهازك أبدًا', 'API en la nube': 'تُعالَج البيانات على خوادم المزوّد' },
+            { 'Factor': 'التكلفة', 'LLM local': '$0 لكل token بعد تكلفة العتاد', 'API en la nube': '$0.15-$15 لكل مليون token حسب النموذج' },
+            { 'Factor': 'السرعة', 'LLM local': '10-120 tok/ثانية على عتاد استهلاكي', 'API en la nube': '50-200 tok/ثانية، تتفاوت حسب الحمل' },
+            { 'Factor': 'جودة النموذج', 'LLM local': 'جيدة: منافِسة على نطاق 70B', 'API en la nube': 'الأفضل المتاحة (GPT-5.5، Claude 4.6 Sonnet)' },
+            { 'Factor': 'وقت الإعداد', 'LLM local': '5-15 دقيقة مع Ollama أو LM Studio', 'API en la nube': '2-5 دقائق للحصول على مفتاح API' },
+            { 'Factor': 'الاستخدام دون اتصال', 'LLM local': 'نعم: يعمل بلا إنترنت', 'API en la nube': 'لا: يتطلب اتصالًا نشطًا' },
+          ],
+          columns: ['العامل', 'LLM محلي', 'API سحابية'],
+        },
+        modelFormats: {
+          id: 'which-model-formats-are-used',
+          title: 'أي صيغ نماذج تُستخدم لنماذج LLM المحلية؟',
+          content: [
+            '**GGUF** (GPT-Generated Unified Format) هي الصيغة المهيمنة للاستدلال المحلي. طوّرها مشروع llama.cpp، وتدمج ملفات GGUF كل بيانات النموذج الوصفية وتدعم مستويات تكميم متعددة في ملف واحد. عندما تشغّل `ollama pull llama3.2`، ينزّل Ollama داخليًا ملف GGUF.',
+            '**Safetensors** صيغة من Hugging Face تُستخدم أساسًا مع أدوات الاستدلال القائمة على PyTorch، مثل transformers وvLLM. وهي أكثر شيوعًا في البحث وعمليات النشر على الخوادم.',
+            '**يقلّل التكميم** دقة النموذج لخفض متطلبات الذاكرة. نموذج 7B بدقة FP16 كاملة يتطلب ~14 GB من RAM. بتكميم Q4_K_M (4 بت)، يحتاج النموذج نفسه ~4.5 GB بفقدان جودة ضئيل. تستخدم معظم أدلة المبتدئين Q4_K_M أو Q5_K_M.',
+          ],
+        },
+        whenToUse: {
+          id: 'when-should-you-use-a-local-llm',
+          title: 'متى يجب أن تستخدم نموذج LLM محليًا بدلًا من API سحابية؟',
+          items: [
+            '**معالجة البيانات الحساسة** -- السجلات الطبية، والمستندات القانونية، والبيانات المالية، أو أي معلومات تعريف شخصية (PII) لا يمكن أن تغادر بنيتك التحتية.',
+            '**إلغاء تكاليف API** -- المعالجة بالدُفعات عالية الحجم حيث تتراكم تكاليف token السحابية بسرعة. نموذج 7B يعمل محليًا يكلّف $0 لكل استعلام بعد استهلاك العتاد.',
+            '**بيئات دون اتصال أو معزولة** -- العمل الميداني، والمنشآت الآمنة، أو التطبيقات التي يجب أن تعمل دون اتصال بالإنترنت.',
+            '**التعلّم والتجريب** -- فهم كيفية عمل نماذج LLM داخليًا، وتجربة الموجّهات دون قلق بشأن التكلفة، أو بناء أدوات محلية مدعومة بالذكاء الاصطناعي.',
+            '**التطبيقات منخفضة زمن الاستجابة** -- عندما يكون زمن الذهاب والإياب عبر الشبكة غير مقبول ويكون نموذج محلي أصغر سريعًا بما يكفي للمهمة.',
+          ],
+        },
+        faqSection: {
+          id: 'common-questions',
+          title: 'أسئلة شائعة حول نماذج LLM المحلية',
+          faqs: [
+            {
+              q: 'هل يمكن لنموذج LLM محلي مضاهاة جودة GPT-5.5؟',
+              a: 'لا، ليس على العتاد الاستهلاكي الحالي. يتفوق GPT-5.5 وClaude 4.6 Sonnet على أي نموذج قابل للتشغيل محليًا في الاستدلال المعقد، وتوليد الشيفرة، ومعايير اتباع التعليمات. مع ذلك، لمهام التلخيص، والترجمة، والكتابة اليومية، ينتج نموذج 13B-34B مكمَّم جيدًا نتائج يصعب تمييزها عن النماذج الرائدة.',
+            },
+            {
+              q: 'هل أحتاج إلى GPU لتشغيل نموذج LLM محلي؟',
+              a: 'لا. تعمل جميع محركات الاستدلال الرئيسية (Ollama، LM Studio، llama.cpp) على CPU فقط. تسرّع GPU الأداء بشكل كبير: تشغّل NVIDIA RTX 4060 (8 GB من VRAM) نموذج 7B بـ 60-90 token/ثانية مقابل 10-20 token/ثانية على CPU فقط. تستخدم أجهزة Mac بمعالج Apple Silicon ذاكرة موحّدة مسرّعة بـ GPU افتراضيًا وهي مثالية لنماذج LLM المحلية دون GPU مخصصة.',
+            },
+            {
+              q: 'من أين أنزّل نماذج LLM المحلية؟',
+              a: 'المصادر الثلاثة الرئيسية هي: مكتبة نماذج Ollama (ollama.com/library) للتنزيلات بأمر واحد؛ وHugging Face (huggingface.co) لمجموعة كاملة من نماذج GGUF وsafetensors؛ ومتصفح النماذج المدمج في LM Studio الذي يبحث في Hugging Face مباشرة. راجع [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) و[كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio) لأدلة الإعداد.',
+            },
+            {
+              q: 'هل تشغيل نموذج LLM محلي خاص؟',
+              a: 'نعم، مع تفاصيل دقيقة. استدلال النموذج نفسه محلي بالكامل. مع ذلك، قد ترسل بعض التطبيقات المبنية على نماذج LLM المحلية بيانات إلى خوادم خارجية. تحقق دائمًا مما إذا كانت الواجهة أو طبقة الإضافات التي تستخدمها قد فعّلت القياس عن بُعد أو المزامنة السحابية. راجع [قائمة تحقق أمان وخصوصية نماذج LLM المحلية](/ar/local-llms/local-llm-security-privacy-checklist) للحصول على دليل تدقيق كامل.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'كيف تبدأ مع نماذج LLM المحلية؟',
+          content: 'أسرع طريقة لتشغيل أول نموذج LLM محلي هي [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama): أمر واحد يثبّت المحرك وينزّل نموذجًا في أقل من 5 دقائق على macOS أو Windows أو Linux. إذا فضّلت واجهة رسومية، فإن [كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio) ترشدك خطوة بخطوة في إعداد تطبيق سطح المكتب. لاختيار نموذج للبدء، راجع [أفضل نماذج LLM المحلية للمبتدئين](/ar/local-llms/best-beginner-local-llm-models).',
+        },
+        sources: {
+          id: 'sources',
+          title: 'المصادر',
+          items: [
+            '**llama.cpp -- GitHub** -- مكتبة C++ الأساسية لتشغيل النماذج المكمَّمة محليًا',
+            '**Hugging Face -- Model Hub** -- مستودع لأكثر من 100,000 نموذج بصيغة GGUF وsafetensors وغيرها',
+            '**Ollama Model Library** -- قائمة منسّقة من النماذج المكمَّمة مسبقًا المتاحة للتنزيل بنقرة واحدة',
+          ],
+        },
+        commonMistakes: {
+          title: 'أخطاء شائعة عند البدء',
+          items: [
+            'افتراض أن جميع النماذج المحلية خاصة بالقدر نفسه: قد تظل بعض الواجهات أو التكميمات تسجّل البيانات.',
+            'تشغيل نماذج أكبر من RAM المتاحة، مما يسبب تباطؤًا حادًا بسبب التبديل على القرص.',
+            'عدم إدراك أن جودة النماذج تتفاوت بشكل كبير: ليست كل النماذج المحلية تضاهي GPT-5.5 في المهام المعقدة.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'قراءات ذات صلة',
+          items: [
+            '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- إعداد خطوة بخطوة وأول نموذج',
+            '[كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio) -- بديل تطبيق سطح مكتب بواجهة رسومية',
+            '[أفضل نماذج LLM المحلية للمبتدئين](/ar/local-llms/best-beginner-local-llm-models) -- توصيات نماذج حسب RAM المتاحة',
+            '[نماذج LLM المحلية مقابل واجهات API السحابية](/ar/local-llms/local-llms-vs-cloud-apis) -- مقارنة كاملة للمقايضات',
+            'فهم ماهية نماذج LLM المحلية هو الخطوة الأولى. تعلّم استخدامها بفعالية هو الثانية: يغطي [دليل هندسة الموجّهات](https://www.promptquorum.com/ar/prompt-engineering) 80 تقنية.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'ما هي نماذج LLM المحلية؟ كيف تعمل نماذج الذكاء الاصطناعي على عتادك',
+        'description': 'تشغّل نماذج LLM المحلية نماذج الذكاء الاصطناعي على عتادك الخاص، دون حاجة إلى إنترنت. تعرّف على ماهيتها، وكيف تعمل، ومتى تستخدمها. دليل 2026.',
+        'url': 'https://www.promptquorum.com/ar/local-llms/what-are-local-llms',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-18',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'inLanguage': 'ar',
+        'about': [
+          { '@type': 'Thing', 'name': 'LLM محلي' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'صيغة GGUF' },
+          { '@type': 'Thing', 'name': 'llama.cpp' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ar',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين نموذج LLM محلي وواجهة API ذكاء اصطناعي سحابية؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'يعمل نموذج LLM المحلي على عتادك الخاص: CPU أو GPU لديك. تعالج واجهة API السحابية (OpenAI، Anthropic، Google) موجّهاتك على خوادم بعيدة. النماذج المحلية خاصة ومجانية بعد الإعداد؛ بينما تتقاضى واجهات API السحابية رسومًا لكل token وترسل بياناتك إلى خوادم خارجية.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل نموذج LLM محلي دون GPU؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. يعمل الاستدلال على CPU بذاكرة 8 GB من RAM أو أكثر. نموذج 7B بتكميم Q4 يعمل بـ 5-15 token/ثانية على CPU حاسوب محمول حديث. يرفعه التسريع بـ GPU (NVIDIA CUDA، AMD ROCm، Apple Metal) إلى 30-100 token/ثانية.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'من أين أنزّل نماذج LLM المحلية؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'ثلاثة مصادر رئيسية: مكتبة Ollama (ollama.com/library) للتنزيلات بأمر واحد، وHugging Face (huggingface.co) لمجموعة كاملة من نماذج GGUF، ومتصفح النماذج المدمج في LM Studio الذي يبحث في Hugging Face مباشرة.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تشغيل نموذج LLM محلي خاص؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم: الاستدلال محلي بالكامل. مع ذلك، قد ترسل بعض التطبيقات المبنية على نماذج LLM المحلية بيانات إلى الخارج. تحقق دائمًا مما إذا كانت الواجهة أو طبقة الإضافات قد فعّلت القياس عن بُعد أو المزامنة السحابية.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي عتاد أحتاج لنموذج LLM محلي؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'الحد الأدنى: 8 GB من RAM لنموذج 7B بتكميم Q4. الموصى به: 16 GB من RAM وGPU بذاكرة VRAM سعة 8 GB+ لاستدلال مريح. تشغّل أجهزة Mac بمعالج Apple Silicon (M1/M2/M3) نماذج LLM المحلية بكفاءة باستخدام الذاكرة الموحّدة.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هي صيغة GGUF؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF (GPT-Generated Unified Format) هي صيغة الملف المعيارية لنماذج LLM المحلية المكمَّمة. طوّرها مشروع llama.cpp، وتخزّن أوزان النموذج بصيغة مدمجة تدعم مستويات تكميم متعددة (Q4_K_M، Q5_K_M، Q8_0).' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو التكميم في نماذج LLM المحلية؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'يقلّل التكميم الدقة العددية لأوزان النموذج من 16 بت إلى 4 أو 8 بت، مما يخفض حجم الملف ومتطلبات VRAM بنسبة 50-75%. Q4_K_M هو المعيار: ينتقل نموذج 7B من ~14 GB (FP16) إلى ~4.5 GB، بفقدان جودة نحو 1%.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو llama.cpp؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'llama.cpp مكتبة استدلال C++ مفتوحة المصدر تشغّل نماذج LLM المكمَّمة على CPU وGPU. وهي المحرك المستخدم في Ollama، وLM Studio، وGPT4All، ومعظم أدوات LLM المحلية الأخرى. تدعم صيغة GGUF، وNVIDIA CUDA، وAMD ROCm، وApple Metal.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن لنماذج LLM المحلية مضاهاة جودة GPT-4؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'ليس بعد للمهام الأكثر تطلبًا. اعتبارًا من أبريل 2026، يقترب أفضل نموذج محلي للمستهلكين (Llama 3.3 70B بـ Q4) من GPT-5.5 في المعايير، لكنه يتطلب GPU محطة عمل بذاكرة VRAM سعة 48 GB+. تعمل نماذج 7B على الحواسيب المحمولة، لكنها أضعف بكثير من GPT-5.5.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين نموذج LLM محلي ونموذج مضبوط دقيقًا (fine-tuned)؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نموذج LLM المحلي هو أي نموذج يعمل على عتادك الخاص. النموذج المضبوط دقيقًا هو نموذج أساسي أُعيد تدريبه ببيانات محددة لتغيير سلوكه. يمكن أيضًا تشغيل النماذج المضبوطة محليًا عبر Ollama أو llama.cpp باستخدام محوّلات LoRA أو ملفات GGUF مدمجة.' }
+          }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'أساسيات نماذج LLM المحلية',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'ما هو نموذج LLM المحلي؟', 'description': 'نموذج ذكاء اصطناعي يعمل على عتادك الخاص دون إنترنت أو استدعاءات API، بخصوصية تامة للبيانات وتكلفة صفرية لكل token.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'كيف يعمل', 'description': 'ثلاثة مكونات تعمل معًا: ملف النموذج (صيغة GGUF)، ومحرك استدلال (Ollama، LM Studio، llama.cpp)، وواجهة.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'متطلبات العتاد', 'description': 'الحد الأدنى 8 GB من RAM لنموذج 7B بتكميم Q4؛ مع 16 GB من RAM، يُعمَل بأريحية في معظم حالات الاستخدام اليومية.' },
+        ]
+      },
+    },
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',

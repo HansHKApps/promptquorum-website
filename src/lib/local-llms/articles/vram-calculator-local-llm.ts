@@ -836,6 +836,423 @@ schema: {
         },
       },
     },
+    ar: {
+      freshness_tier: 'semi_annual',
+      theme: 'Hardware & Performance',
+      title: 'حاسبة VRAM 2026: متطلبات GPU لنماذج LLM 7B/13B/70B (Q4، Q5، Q8)',
+      seoTitle: 'حاسبة VRAM 2026: GPU لنماذج LLM 7B و13B و70B',
+      intro: 'حاسبة VRAM تفاعلية لنماذج LLM المحلية. أدخل حجم النموذج، والتكميم، وطول السياق، وحجم الدفعة لحساب مقدار VRAM GPU الذي تحتاجه بالضبط. تدعم النماذج من 1B إلى 405B بـ FP16 وQ8 وQ5 وQ4. مُحدّثة في أبريل 2026 بتحليل توافق لـ RTX 4090 و4080 و3060 وحسابات الحمل الإضافي.',
+      metaDescription: 'احسب متطلبات GPU الدقيقة لنماذج 7B (3.5 GB بـ Q4) و13B (6.5 GB بـ Q4) و70B (35 GB بـ Q4). توافق مع RTX 4090 و4080 و4070 Ti.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-19',
+      next_refresh_due: '2026-10-04',
+      leadAnswerBlock: '**يشرح هذا الدليل كيفية حساب متطلبات VRAM الدقيقة لأي مجموعة نموذج وعتاد. الصيغة بسيطة: (حجم النموذج بـ GB × بتات التكميم) ÷ 8 = VRAM المطلوبة.**',
+      audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على عتاد استهلاكي',
+      readTime: '10 دقائق قراءة',
+      educationalLevel: 'Beginner to Intermediate',
+      primaryTerm: 'حاسبة VRAM',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'حاسبة VRAM لنماذج LLM المحلية: احسب متطلبات GPU الدقيقة',
+        description: 'حاسبة VRAM لنماذج LLM المحلية 2026: استخدم الصيغة VRAM = (مليارات النموذج × بتات التكميم) ÷ 8. أمثلة بـ RTX 4090 و4080 وM5 Max ببيانات الحمل الإضافي والمعالجة بالدُفعات والدقة.',
+        author: {
+          '@type': 'Person',
+          name: 'Hans Kuepper'
+        },
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-19',
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com'
+        },
+        proficiencyLevel: 'مبتدئ',
+        audience: {
+          '@type': 'Audience',
+          audienceType: 'المطورون والمبتدئون الذين يشغّلون نماذج LLM المحلية'
+        },
+        about: [
+          { '@type': 'Thing', name: 'VRAM' },
+          { '@type': 'Thing', name: 'ذاكرة GPU' },
+          { '@type': 'Thing', name: 'نماذج Llama' },
+          { '@type': 'Thing', name: 'التكميم' }
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways']
+        },
+        url: 'https://www.promptquorum.com/ar/local-llms/vram-calculator-local-llm',
+        inLanguage: 'ar'
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'ar',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'هل تعمل الصيغة لجميع أنواع النماذج؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'نعم. تنطبق الصيغة (مليارات النموذج × بتات التكميم) ÷ 8 على جميع النماذج القائمة على Transformer (Llama، Qwen، Mistral، Claude، إلخ). البنى غير القائمة على Transformer (RNN، إلخ) نادرة وقد تتطلب تعديلات.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'أي تكميم يجب أن أستخدم؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'لمعظم الحالات: يقدّم Q5 أفضل توازن (95% جودة، 68% تقليل حجم). لوحدات GPU الاستهلاكية: Q4 هو المعيار (90–95% جودة، 75% تقليل). للإنتاج: Q8 إذا سمح VRAM (99% جودة). تجنّب Q3 وما دونه إلا إذا لم يكن لديك خيار آخر.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'كم RAM النظام التي أحتاجها؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'الحد الأدنى 16 GB للتفريغ (offloading). إذا استخدمت تفريغ VRAM (الفائض إلى CPU)، تعمل RAM النظام كاحتياطي. للمعالجة بالدُفعات، أضف 8–16 GB من RAM النظام بما يتجاوز متطلبات تفريغ النموذج. لدردشة مستخدم واحد، 16 GB كافية.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'هل يؤثر حجم الدفعة في حساب VRAM؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'نعم. تحسب الصيغة VRAM لطلب واحد. يضيف حجم الدفعة VRAM خطيًا: كل طلب متزامن يضيف بين 500 MB و2 GB حسب طول السياق. مع batch=4، أضف بين 2 و8 GB إلى المقدار المحسوب.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'هل يمكنني تشغيل نموذج 70B على GPU بسعة 12 GB؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'فقط بتكميم متطرف (Q2، ~70% فقدان جودة) وتفريغ إلى CPU (بطيء جدًا، 1–3 token/ثانية). غير عملي. خيار أفضل: استخدم نموذج 13B بـ Q4 (نفس VRAM، أسرع بكثير وجودة أفضل).'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'ماذا لو كان استخدام VRAM الفعلي أقل من المحسوب؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'الصيغة متحفظة وتشمل الحمل الإضافي. الاستخدام الفعلي الأقل يعني هامشًا أكبر للمعالجة بالدُفعات، أو سياقات أطول، أو هامش أمان. استخدم nvidia-smi لقياس الاستخدام الفعلي ثم قِس أداء نموذجك للتأكيد.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'هل أشتري GPU بحجم VRAM المحسوب بالضبط؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'لا. اشترِ دائمًا VRAM أكثر بنسبة 25% من المحسوب. إذا حسبت 18 GB، فاشترِ GPU بسعة 24 GB. هذا هامش الأمان يراعي نمو السياق، والمعالجة بالدُفعات، وعمليات النظام. المشتريات المحدودة تمامًا لا تترك هامشًا وتسبب أخطاء نفاد الذاكرة.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'ما أفضل GPU لنماذج 13B في 2026؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'RTX 4070 Ti (12 GB) لدردشة مستخدم واحد بـ Q4–Q5. RTX 4080 (16 GB) إذا أردت جودة Q8 أو المعالجة بالدُفعات. M5 Max (36 GB) إذا كنت تستخدم Mac. الثلاثة تشغّل بسهولة نماذج Llama 3.3 وQwen3 وMistral 3.1 بحجم 13B.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'هل يمكنني تشغيل نموذج 70B على RTX 4090؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'فقط بتكميم Q4 (35 GB) + تفريغ إلى CPU (بطيء، 3–5 tok/ثانية)، وهو غير عملي. نهج أفضل: استخدم نموذج 32B بـ Q5 (20 GB) على RTX 4090 لاستجابات سريعة وعالية الجودة. أو رقِّ إلى RTX 5090 (32 GB) لتشغيل 70B بـ Q4 دون تفريغ.'
+            }
+          }
+        ]
+      },
+      softwareApplicationSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'حاسبة VRAM لنماذج LLM المحلية',
+        description: 'حاسبة VRAM تفاعلية لنماذج LLM المحلية. تحسب متطلبات GPU الدقيقة لأي مجموعة من حجم النموذج (1B–405B)، والتكميم (FP16، Q8، Q5، Q4، Q3، Q2)، وطول السياق (2K–128K token)، وحجم الدفعة (1–8). تتضمن تحقق توافق GPU في الوقت الفعلي لـ RTX 5070/5080/5090 وM5 Max.',
+        applicationCategory: 'UtilityApplication',
+        operatingSystem: 'Web',
+        url: 'https://www.promptquorum.com/ar/local-llms/vram-calculator-local-llm',
+        inLanguage: 'ar',
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'USD'
+        },
+        creator: {
+          '@type': 'Person',
+          name: 'Hans Kuepper'
+        }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'كيفية حساب متطلبات VRAM لنماذج LLM المحلية',
+        description: 'احسب VRAM المطلوبة بالضبط لأي نموذج LLM محلي باستخدام الصيغة: (مليارات النموذج × بتات التكميم) ÷ 8. تتضمن السياق، والدفعة، وحمل النظام الإضافي.',
+        inLanguage: 'ar',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'حدّد حجم نموذجك',
+            text: 'حدّد عدد المعاملات بالمليارات (مثلًا، 7B = 7 مليارات معامل، 13B = 13 مليار). نماذج شائعة: Llama 3.2 (7B، 13B)، Qwen3 (7B، 14B، 32B، 72B)، Mistral 3.1 (7B، 32B)، Claude (يتفاوت).'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'اختر مستوى التكميم',
+            text: 'اختر بتات التكميم: FP16 (100% جودة، الأكبر)، Q8 (99%)، Q5 (95%، التوازن الموصى به)، Q4 (90–95%، الافتراضي للاستهلاكي)، Q3 (80–85%، ضغط متطرف)، Q2 (70%، أجهزة الحافة).'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'طبّق الصيغة',
+            text: 'احسب: VRAM (GB) = (حجم النموذج بالمليارات × بتات التكميم) ÷ 8. مثال: نموذج 13B بـ Q4 = (13 × 4) ÷ 8 = 6.5 GB وزن النموذج الأساسي.'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'احتسب الحمل الإضافي',
+            text: 'أضف حمل السياق (1–3 GB لـ 4k token)، والمعالجة بالدُفعات (×حجم الدفعة)، والنظام (1–2 GB). الإجمالي = الأساس + الحمل الإضافي.'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'طبّق هامش أمان 25%',
+            text: 'اضرب الإجمالي في 1.25 للحصول على VRAM الموصى بها. مثال: 10 GB محسوبة = اشترِ GPU بسعة 12–16 GB. هذا يراعي تباين وقت التشغيل وهامش الأمان.'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 6,
+            name: 'تحقق من توافق GPU',
+            text: 'قارن VRAM الموصى بها لديك بوحدات GPU المتاحة. RTX 5090 (32 GB)، RTX 5080 (16 GB)، RTX 5070 Ti (16 GB)، RTX 5070 (12 GB)، M5 Max (48 GB). استخدم الحاسبة التفاعلية للحصول على مطابقات في الوقت الفعلي.'
+          }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'حاسبة VRAM لنماذج LLM المحلية',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'احسب VRAM الأساسية', 'description': 'استخدم الصيغة: (مليارات المعاملات × بتات التكميم) ÷ 8. Q4 = 4 بتات، Q8 = 8 بتات.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'أضف حمل السياق والدفعة', 'description': 'السياق (4K token): +2–3 GB. الدفعة: +(الدفعة-1) × 1–2 GB لكل طلب.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'طبّق هامش أمان 25%', 'description': 'اضرب الإجمالي في 1.25. مثال: 10 GB محسوبة ← اشترِ GPU بسعة 12–16 GB.' },
+        ]
+      },
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'حقائق سريعة', anchor: '#quick-facts' },
+        { label: 'في جملة واحدة', anchor: '#in-one-sentence' },
+        { label: 'بعبارات بسيطة', anchor: '#in-plain-terms' },
+        { label: 'صيغة VRAM', anchor: '#vram-formula' },
+        { label: 'حاسبة تفاعلية', anchor: '#interactive-calculator' },
+        { label: 'مستويات التكميم', anchor: '#quantization-levels' },
+        { label: 'جدول مرجعي سريع', anchor: '#quick-reference' },
+        { label: 'أمثلة من العالم الحقيقي', anchor: '#real-world-examples' },
+        { label: 'أي GPU تناسب نموذجك؟', anchor: '#hardware-fit' },
+        { label: 'حمل VRAM المخفي', anchor: '#hidden-overhead' },
+        { label: 'الدقة والهوامش', anchor: '#accuracy' },
+        { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
+        { label: 'النشر الإقليمي', anchor: '#regional-context' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
+        { label: 'قراءات ذات صلة', anchor: '#related-reading' },
+      ],
+      gammaEmbedUrl: '/presentations/vram-calculator-local-llm-static.html',
+      gammaDescription: 'يغطي العرض التقديمي أدناه: صيغة VRAM (مليارات النموذج × بتات التكميم) ÷ 8، ومستويات التكميم Q2–FP16 بمقايضات الجودة، وجدول مرجعي سريع (نماذج 3B–70B)، وسيناريوهات GPU من العالم الحقيقي (RTX 4090، 4080، M5 Max)، والامتثال الإقليمي (GDPR للاتحاد الأوروبي، وAPPI لليابان، وقانون أمن البيانات الصيني). نزّل ملف PDF كبطاقة مرجعية لحاسبة VRAM.',
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'VRAM = (حجم النموذج × بتات التكميم) ÷ 8',
+            'FP16 = 16 بت، Q8 = 8، Q5 = 5، Q4 = 4 بتات',
+            'مثال: نموذج 13B بـ Q4 = (13 × 4) ÷ 8 = 6.5 GB',
+            'أضف دائمًا هامش 25% للسياق، وحمل النظام، والأمان',
+            'اعتبارًا من أبريل 2026، هذه الصيغة دقيقة ضمن ±10%',
+          ],
+        },
+        quickFacts: {
+          id: 'quick-facts',
+          title: 'حقائق سريعة: متطلبات VRAM لكل GPU',
+          items: [
+            '**RTX 4090 (24 GB):** Llama 3.3 7B بـ Q4 (3.5 GB)، 13B بـ Q5 (8.1 GB)، 70B بـ Q4 مع تفريغ',
+            '**RTX 4080 (16 GB):** Llama 3.3 7B بـ Q4 (3.5 GB)، 13B بـ Q5 (8.1 GB)، 32B بـ Q4 (16 GB)',
+            '**RTX 4070 Ti (12 GB):** Llama 3.3 7B بـ Q4 (3.5 GB)، 13B بـ Q5 (8.1 GB بهامش ضيق)',
+            '**M5 Max Mac (36 GB موحّدة):** Llama 3.3 13B بـ FP16 (26 GB)، 70B غير ممكن دون تكميم متطرف',
+            '**قاعدة عامة:** خصّص دائمًا 25–40% إضافية من VRAM للسياق، والمعالجة بالدُفعات، وحمل النظام بما يتجاوز نتيجة الصيغة',
+          ],
+        },
+        inOneSentence: {
+          id: 'in-one-sentence',
+          title: 'في جملة واحدة',
+          content: 'تساوي VRAM المطلوبة (GB) معاملات النموذج بالمليارات مضروبة في بتات التكميم (16 لـ FP16، و8 لـ Q8، و4 لـ Q4، إلخ)، مقسومة على 8.',
+        },
+        inPlainTerms: {
+          id: 'in-plain-terms',
+          title: 'بعبارات بسيطة',
+          content: 'تخيّل VRAM كمساحة على رف. الكتب الأكبر (النماذج بمعاملات أكثر مثل 70B) تحتاج مساحة أكبر. الكتب الأصغر (تكميم Q4) تشغل مساحة أقل من الكبيرة (FP16). تخبرك الصيغة بعدد "الأرفف" (GB) التي تحتاجها بالضبط. اترك دائمًا مساحة فارغة إضافية للمحادثات، وعدة طلبات متزامنة، وبرمجيات النظام.',
+        },
+        formula: {
+          id: 'vram-formula',
+          title: 'ما هي صيغة VRAM؟',
+          image: '/images/vram-calculator-local-llm-formula-es.svg',
+          imageCaption: 'صيغة VRAM مع 3 أمثلة حساب: نموذج 7B بـ Q4 = 3.5 GB، 13B بـ Q5 = 8.1 GB، 70B بـ Q8 = 70 GB. أضف دائمًا هامش 25–40% للسياق، والمعالجة بالدُفعات، وحمل النظام.',
+          content: [
+            'صيغة متطلب VRAM بسيطة بشكل خادع:',
+            '💡 **نصيحة احترافية:** تحسب هذه الصيغة أوزان النموذج فقط. الاستخدام الفعلي لـ VRAM أعلى بنسبة 25–40% بسبب السياق، والمعالجة بالدُفعات، وحمل النظام. أضف دائمًا هامش أمان.',
+          ],
+          codeBlock: 'VRAM (GB) = (Model Size in Billions × Quantization Bits) ÷ 8\n\nExample:\n- 7B model at 4-bit quantization\n- (7 × 4) ÷ 8 = 3.5 GB\n\n- 13B model at 5-bit quantization\n- (13 × 5) ÷ 8 = 8.125 GB\n\n- 70B model at 8-bit quantization\n- (70 × 8) ÷ 8 = 70 GB',
+          codeLanguage: 'bash',
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'حاسبة VRAM التفاعلية',
+          content: 'استخدم هذه الحاسبة لحساب متطلبات VRAM الدقيقة لأي مجموعة نموذج، وتكميم، وسياق، وحجم دفعة. اختر تكوينك وتحقق من وحدات GPU المتوافقة.',
+          component: 'VramCalculator',
+        },
+        quantization: {
+          id: 'quantization-levels',
+          title: 'ماذا تعني مستويات التكميم؟',
+          image: '/images/vram-calculator-local-llm-quant-levels-es.svg',
+          imageCaption: 'مقارنة مستويات التكميم: FP16 (100% جودة)، Q8 (99%)، Q5 (95%، موصى به)، Q4 (90–95%)، Q3 (80–85%)، Q2 (70%). يقلّص Q5 نموذج 7B من 14 GB إلى 4.4 GB بفقدان جودة 5% فقط.',
+          content: '🔍 **فكرة رئيسية:** يقايض التكميم حجم الملف بالجودة. Q5 هو النقطة المثلى (95% جودة، أصغر بـ 68%). Q4 مقبول لمعظم المستخدمين. Q3 وما دونه فقط لأجهزة الحافة أو عندما يكون VRAM محدودًا بشدة.',
+          rows: [
+            { 'Cuantización': 'FP16 (16 بت)', 'Reducción de tamaño': 'لا شيء (أساس)', 'Calidad': '100% (مثالية)', 'Velocidad': 'أساس', 'Caso de uso': 'بحث، ضبط دقيق' },
+            { 'Cuantización': 'Q8 (8 بت)', 'Reducción de tamaño': '50%', 'Calidad': '99% (غير محسوس)', 'Velocidad': 'أساس', 'Caso de uso': 'إنتاج، خوادم محلية' },
+            { 'Cuantización': 'Q6 (6 بت)', 'Reducción de tamaño': '62.5%', 'Calidad': '98% (طفيف)', 'Velocidad': 'أساس', 'Caso de uso': 'استخدام متوازن' },
+            { 'Cuantización': 'Q5 (5 بت)', 'Reducción de tamaño': '68.75%', 'Calidad': '95% (فقدان طفيف)', 'Velocidad': 'أساس', 'Caso de uso': 'ضغط جيد، استهلاكي' },
+            { 'Cuantización': 'Q4 (4 بت)', 'Reducción de tamaño': '75%', 'Calidad': '90–95% (مقبول)', 'Velocidad': 'أساس', 'Caso de uso': 'أقصى ضغط' },
+            { 'Cuantización': 'Q3 (3 بت)', 'Reducción de tamaño': '81%', 'Calidad': '80–85% (فقدان ملحوظ)', 'Velocidad': 'أسرع', 'Caso de uso': 'ضغط متطرف، CPU' },
+            { 'Cuantización': 'Q2 (2 بت)', 'Reducción de tamaño': '87.5%', 'Calidad': '70% (فقدان مرئي)', 'Velocidad': 'الأسرع', 'Caso de uso': 'نماذج صغيرة، أجهزة الحافة' },
+          ],
+          columns: ['التكميم', 'تقليل الحجم', 'الجودة', 'السرعة', 'حالة الاستخدام'],
+        },
+        quickRef: {
+          id: 'quick-reference',
+          title: 'جدول مرجعي سريع: VRAM حسب النموذج والتكميم',
+          image: '/images/vram-calculator-local-llm-quick-ref-es.svg',
+          imageCaption: 'مصفوفة مرجعية سريعة لـ VRAM: نماذج من 3B إلى 70B بـ FP16 وQ8 وQ5 وQ4. أخضر = يتسع في GPU بسعة 12 GB. كهرماني = يتطلب 16–24 GB. أحمر = يتطلب 40+ GB أو عدة وحدات GPU.',
+          rows: [
+            { 'Modelo': '3B', 'FP16': '6 GB', 'Q8': '3 GB', 'Q5': '1.9 GB', 'Q4': '1.5 GB' },
+            { 'Modelo': '7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4.4 GB', 'Q4': '3.5 GB' },
+            { 'Modelo': '13B', 'FP16': '26 GB', 'Q8': '13 GB', 'Q5': '8.1 GB', 'Q4': '6.5 GB' },
+            { 'Modelo': '32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' },
+            { 'Modelo': '70B', 'FP16': '140 GB', 'Q8': '70 GB', 'Q5': '43.75 GB', 'Q4': '35 GB' },
+          ],
+          columns: ['النموذج', 'FP16', 'Q8', 'Q5', 'Q4'],
+        },
+        realWorld: {
+          id: 'real-world-examples',
+          title: 'أمثلة من العالم الحقيقي',
+          image: '/images/vram-calculator-local-llm-gpu-scenarios-es.svg',
+          imageCaption: 'سيناريوهات GPU من العالم الحقيقي: RTX 4090 (24 GB)، RTX 4080 (16 GB)، RTX 4070 Ti (12 GB)، M5 Max Mac (36 GB)، RTX 3060 (12 GB): أي نماذج Llama 3.3 يمكن لكلٍّ تشغيلها على مستويات تكميم مختلفة.',
+          content: [
+            'حسابات VRAM عملية لسيناريوهات شائعة:',
+            '⚠️ **تحذير:** هذه الحسابات لأوزان النموذج فقط. أضف 25–40% للسياق، والمعالجة بالدُفعات، وحمل النظام. مثال: 13B Q5 = 8.1 GB نموذج + 2–3 GB حمل إضافي = 10–11 GB فعلية.',
+          ],
+          items: [
+            '**RTX 4070 Ti (12 GB)**: Llama 3.3 7B بـ Q4 = 3.5 GB ✓ (هامش كبير). Llama 3.3 13B بـ Q5 = 8.1 GB ✓ (ضيق، لكنه يعمل دون سياق أو معالجة بالدُفعات).',
+            '**RTX 4090 (24 GB)**: Llama 3.3 70B بـ Q5 = 43.75 GB ✗ (كبير جدًا). Llama 3.3 70B بـ Q4 = 35 GB ✗ (لا يزال كبيرًا جدًا). Llama 3.3 70B بـ Q4 مع تفريغ = يعمل (بطيء، 3–5 tok/ثانية).',
+            '**M5 Max Mac (36 GB)**: Llama 3.3 13B بـ FP16 = 26 GB ✓ (يعمل). Llama 3.3 70B = مستحيل (حتى بـ Q2، ~70% فقدان جودة).',
+          ],
+        },
+        overhead: {
+          id: 'hidden-overhead',
+          title: 'ما حمل VRAM المخفي الذي يجب أن تحتسبه؟',
+          image: '/images/vram-calculator-local-llm-overhead-es.svg',
+          imageCaption: 'تفصيل حمل VRAM المخفي: نافذة السياق (2–3 GB لـ 4k token)، والمعالجة بالدُفعات (×4 لـ batch=4)، وحمل النظام (500 MB–1 GB)، وهامش أمان إجمالي 25–40%.',
+          content: [
+            '**تحسب الصيغة أوزان النموذج فقط.** سيكون الاستخدام الفعلي لـ VRAM أعلى بسبب عدة عوامل. خصّص 25–40% إضافية فوق المقدار المحسوب.',
+            'تخزّن نافذة السياق (ذاكرة المفتاح-القيمة) سجل المحادثة أثناء الاستدلال. سياق 4k token يستخدم نحو 2–3 GB لنموذج 7B.',
+            '📌 **نقطة رئيسية:** تزيد المعالجة بالدُفعات استخدام VRAM خطيًا. كل طلب متزامن إضافي (عند معالجة عدة طلبات معًا) يستهلك بين 500 MB و2 GB ذاكرة إضافية. مع batch=4، اضرب VRAM الطلب الواحد في 4 وأضف الحمل الإضافي.',
+            'يحجز حمل نظام التشغيل وإطار الاستدلال (Ollama، vLLM، llama.cpp) بين 500 MB و1 GB. حافظ دائمًا على هامش أمان عند اختيار GPU.',
+          ],
+        },
+        hardwareGuide: {
+          id: 'hardware-fit',
+          title: 'أي نموذج LLM محلي يناسب وحدة GPU لديك؟ دليل 2026',
+          content: [
+            'استخدم الحاسبة التفاعلية أعلاه لإيجاد ملاءمتك الدقيقة. فيما يلي سيناريوهات GPU شائعة ونماذج موصى بها.',
+          ],
+          items: [
+            '**RTX 3060 (12 GB):** أفضل نموذج: Qwen3 7B Q5 (4.4 GB) ✓. بديل: Llama 3.2 8B Q4 (4 GB) ✓. غير ممكن: نماذج 32B+.',
+            '**RTX 4070 (12 GB):** أفضل نموذج: Qwen3 13B Q4 (6.5 GB) ✓. بهامش: Llama 3.2 8B Q5 (5 GB) ✓. غير ممكن: نماذج 32B.',
+            '**RTX 4070 Ti (12 GB):** أفضل نموذج: Qwen3 13B Q5 (8.1 GB) ✓. ضيق: Llama 3.3 13B Q4 (6.5 GB) ✓. غير مثالي: المعالجة بالدُفعات.',
+            '**RTX 4080 (16 GB):** أفضل نموذج: Qwen3 32B Q4 (16 GB) ✓ ضيق. مريح: Mistral 3.1 24B Q5 (15 GB) ✓. موصى به: Llama 3.3 13B Q8 (13 GB) ✓.',
+            '**RTX 4090 (24 GB):** أفضل نموذج: Qwen3 32B Q5 (20 GB) ✓. مع تفريغ: Llama 3.3 70B Q4 (35 GB – يحتاج تفريغًا). مريح: أي 32B بـ Q5/Q8.',
+            '**RTX 5090 (32 GB، إن توفّرت):** أفضل نموذج: Llama 3.3 70B Q4 (35 GB – ضيق). أفضل: Qwen3 72B Q3 (27 GB) ✓. مريح: 70B بـ Q5+ مع معالجة بالدُفعات.',
+          ],
+        },
+        accuracy: {
+          id: 'accuracy',
+          title: 'ما مدى دقة الصيغة؟',
+          image: '/images/vram-calculator-local-llm-accuracy-es.svg',
+          imageCaption: 'دقة صيغة VRAM ±10%: التباين ناتج عن صيغة التكميم (GGUF مقابل GPTQ مقابل AWQ)، وبنية النموذج (Transformer مقابل MoE)، ومحرك الاستدلال (vLLM مقابل llama.cpp مقابل Ollama).',
+          content: [
+            '**الصيغة دقيقة ضمن ±10% لمعظم الحالات.** يتفاوت الاستخدام الفعلي لـ VRAM حسب التنفيذ، وبنية النموذج، وتحسينات محرك الاستدلال.',
+            'تشمل مصادر التباين: صيغ تكميم مختلفة (GGUF مقابل safetensors مقابل AWQ)، وبنية النموذج (Transformer مقابل غير Transformer)، وتحسينات خاصة بمحرك الاستدلال (vLLM، llama.cpp، Ollama).',
+            'اعتبارًا من أبريل 2026، عامِل الصيغة كتقدير متحفظ. أضف دائمًا هامش 25% عند شراء GPU لمراعاة حمل السياق، والمعالجة بالدُفعات، وعمليات النظام.',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'أخطاء شائعة في حساب VRAM',
+          image: '/images/vram-calculator-local-llm-mistakes-es.svg',
+          imageCaption: '4 أخطاء VRAM شائعة: نسيان حمل السياق (يضيف 1.5–3 GB)، والخلط بين 70B معاملًا و70 GB من VRAM، وتجاهل 1–2 GB حمل نظام، وشراء GPU بحجم محسوب بالضبط دون هامش 25%.',
+          items: [
+            '**نسيان حمل السياق.** نموذج 7B بـ Q4 يشغل 3.5 GB، لكن مع سياق 4k يحتاج 5–6 GB إجمالًا.',
+            '**استخدام حجم نموذج HuggingFace دون مراعاة التكميم.** 70B تعني 70 مليار معامل، وليس 70 GB من VRAM.',
+            '**عدم احتساب حمل النظام.** لا تحصل النماذج أبدًا على كل VRAM في GPU. احجز 1–2 GB لنظام التشغيل ومحرك الاستدلال.',
+            '**شراء GPU بحجم محسوب بالضبط.** اشترِ دائمًا 25% أكثر. إذا حسبت 18 GB، فاقتنِ GPU بسعة 24 GB.',
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'اعتبارات النشر الإقليمي',
+          content: [
+            '**الاتحاد الأوروبي (GDPR):** يضمن الاستدلال المحلي (داخل المنشأة) الامتثال لإقامة البيانات بموجب GDPR. تشغيل النماذج على وحدة GPU الخاصة بك يُبقي بيانات المستخدمين داخل البلد. تساعدك حاسبة VRAM هذه على تحديد حجم العتاد لعمليات النشر التي تعطي الأولوية للخصوصية.',
+            '**منطقة الخليج / السعودية (PDPL):** يتطلب نظام حماية البيانات الشخصية (PDPL) في السعودية وأطر السيادة على الذكاء الاصطناعي في الإمارات معالجة دقيقة للبيانات الشخصية. يقلّل الاستدلال المحلي لنماذج LLM نقل البيانات إلى خوادم خارجية. استخدم هذه الحاسبة لتحديد حجم الأنظمة لعمليات النشر المؤسسية على عتاد سيادي مع نماذج عربية المنشأ مثل Jais وALLaM وFalcon.',
+            '**اليابان (APPI):** يتطلب قانون حماية المعلومات الشخصية (APPI) معالجة دقيقة للبيانات. يقلّل استدلال LLM على الجهاز نقل ومعالجة البيانات خارج اليابان. استخدم هذه الحاسبة لتحديد حجم الأنظمة لعمليات النشر المؤسسية اليابانية.',
+            '**الصين (قانون أمن البيانات):** يتطلب قانون أمن البيانات الصيني لعام 2021 إقامة البيانات داخل الحدود الصينية. يتوافق الاستدلال المحلي لـ LLM على خوادم وطنية (Alibaba Cloud، Tencent Cloud) مع اللوائح. تنطبق هذه الصيغة على تحديد حجم تلك العمليات بنماذج محسّنة للصين مثل Qwen3.',
+            'في جميع المناطق، يوفّر الاستدلال المحلي ضمانات أقوى لخصوصية البيانات من واجهات API السحابية. حاسبة VRAM هذه أساسية لتصميم أنظمة ذكاء اصطناعي متوافقة وتحافظ على الخصوصية.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'الأسئلة الشائعة: VRAM ومتطلبات GPU',
+          faqs: [
+            { q: 'هل تعمل الصيغة لجميع أنواع النماذج؟', a: 'نعم. تنطبق الصيغة (مليارات النموذج × بتات التكميم) ÷ 8 على جميع النماذج القائمة على Transformer (Llama، Qwen، Mistral، Claude، إلخ). البنى غير القائمة على Transformer (RNN، إلخ) نادرة وقد تتطلب تعديلات.' },
+            { q: 'أي تكميم يجب أن أستخدم؟', a: 'لمعظم الحالات: يقدّم Q5 أفضل توازن (95% جودة، 68% تقليل حجم). لوحدات GPU الاستهلاكية: Q4 هو المعيار (90–95% جودة، 75% تقليل). للإنتاج: Q8 إذا سمح VRAM (99% جودة). تجنّب Q3 وما دونه إلا إذا لم يكن لديك خيار آخر.' },
+            { q: 'كم RAM النظام التي أحتاجها؟', a: 'الحد الأدنى 16 GB للتفريغ (offloading). إذا استخدمت تفريغ VRAM (الفائض إلى CPU)، تعمل RAM النظام كاحتياطي. للمعالجة بالدُفعات، أضف 8–16 GB من RAM النظام بما يتجاوز متطلبات تفريغ النموذج. لدردشة مستخدم واحد، 16 GB كافية.' },
+            { q: 'هل يؤثر حجم الدفعة في حساب VRAM؟', a: 'نعم. تحسب الصيغة VRAM لطلب واحد. يضيف حجم الدفعة VRAM خطيًا: كل طلب متزامن يضيف بين 500 MB و2 GB حسب طول السياق. مع batch=4، أضف بين 2 و8 GB إلى المقدار المحسوب.' },
+            { q: 'هل يمكنني تشغيل نموذج 70B على GPU بسعة 12 GB؟', a: 'فقط بتكميم متطرف (Q2، ~70% فقدان جودة) وتفريغ إلى CPU (بطيء جدًا، 1–3 token/ثانية). غير عملي. خيار أفضل: استخدم نموذج 13B بـ Q4 (نفس VRAM، أسرع بكثير وجودة أفضل).' },
+            { q: 'ماذا لو كان استخدام VRAM الفعلي أقل من المحسوب؟', a: 'الصيغة متحفظة وتشمل الحمل الإضافي. الاستخدام الفعلي الأقل يعني هامشًا أكبر للمعالجة بالدُفعات، أو سياقات أطول، أو هامش أمان. استخدم nvidia-smi لقياس الاستخدام الفعلي ثم قِس أداء نموذجك للتأكيد.' },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'قراءات ذات صلة',
+          items: [
+            '[دليل عتاد LLM المحلي 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- توصيات كاملة لـ GPU وCPU حسب ميزانيتك.',
+            '[أفضل وحدات GPU لنماذج LLM المحلية](/ar/local-llms/best-gpus-for-local-llms) -- معايير وتحليلات تكلفة لـ RTX 4090 و4080 و4070 Ti.',
+            '[تشغيل نماذج 70B بذاكرة VRAM سعة 24 GB](/ar/local-llms/run-70b-models-24gb-vram) -- تقنيات التكميم والتفريغ للنماذج الكبيرة.',
+            '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) -- تحليل معمّق لصيغ Q4 وQ5 وQ8 ومقايضات جودتها.',
+            '[استهلاك الطاقة لنماذج LLM المحلية](/ar/local-llms/local-llm-power-consumption) -- تحليل مزوّد الطاقة، والتبريد، والتكلفة الكهربائية.',
+            '[نماذج LLM المحلية متعددة GPU](/ar/local-llms/multi-gpu-local-llms) -- تقسيم الطبقات والاستدلال الموزّع لنماذج 70B+.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'المصادر',
+          items: [
+            '[مواصفة GGUF](https://github.com/ggerganov/ggml/blob/master/docs/gguf.md) -- وثائق ggerganov/ggml حول صيغة الملف المكمَّم.',
+            '[وثائق تكميم Transformers](https://huggingface.co/docs/transformers/quantization) -- الدليل الرسمي لـ Hugging Face حول طرق التكميم.',
+            '[وثائق Ollama](https://ollama.ai) -- الأدلة الرسمية لـ Ollama لإدارة النماذج.',
+            '[دليل أداء vLLM](https://docs.vllm.ai) -- وثائق تحسين إطار vLLM.',
+            'تحدّ VRAM لديك حجم النموذج، لكن حجم النموذج ليس الحد الوحيد لجودة المخرجات. نوافذ السياق الأكبر تتيح استجابات أفضل: [شرح نوافذ السياق](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets) يغطي كيفية العمل ضمن القيود.',
+          ],
+        },
+      },
+    },
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',

@@ -1365,6 +1365,253 @@ schema: {
         ],
       },
     },
+    ar: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: 'دليل أوامر Ollama: شرح جميع الأوامر (2026)',
+      seoTitle: 'مرجع أوامر Ollama 2026: pull، run، serve',
+      intro: 'Ollama أداة سطر أوامر، وفهم أوامرها يجعلها أقوى بكثير. يغطي هذا الدليل الأوامر الأساسية: `ollama pull` و`ollama run` و`ollama list` و`ollama rm` و`ollama serve` وخيارات متقدمة مثل تكميم النماذج وملفات Modelfile المخصصة. اعتبارًا من أبريل 2026، تغطي هذه الأوامر 95% من حالات الاستخدام الواقعية.',
+      metaDescription: 'أوامر Ollama مشروحة 2026: pull، run، list، rm، serve، create مع أمثلة. مرجع CLI كامل يغطي 95% من حالات الاستخدام.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-19',
+      leadAnswerBlock: '**Ollama أداة سطر أوامر، وفهم أوامرها يجعلها أقوى بكثير. يغطي هذا الدليل الأوامر الأساسية: `ollama pull` و`ollama run` و`ollama list` و`ollama rm` و`ollama serve` وخيارات متقدمة مثل تكميم النماذج وملفات Modelfile المخصصة.**',
+      audience: 'مبتدئون يشغّلون أول نموذج LLM محلي على عتاد استهلاكي',
+      readTime: '11 دقيقة قراءة',
+      educationalLevel: 'Beginner to Advanced',
+      primaryTerm: 'أوامر Ollama',
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'الأوامر الأساسية', anchor: '#essential-commands' },
+        { label: 'إدارة النماذج', anchor: '#managing-models' },
+        { label: 'التشغيل والخدمة', anchor: '#running-serving' },
+        { label: 'متقدم: ملفات Modelfile المخصصة', anchor: '#custom-modelfiles' },
+        { label: 'متقدم: التكميم', anchor: '#quantization' },
+        { label: 'متقدم: نماذج embeddings', anchor: '#embedding-models' },
+        { label: 'متغيرات البيئة', anchor: '#env-variables' },
+        { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
+        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+        { label: 'قراءات ذات صلة', anchor: '#related-reading' },
+        { label: 'المصادر', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '`ollama pull <model>` -- ينزّل نموذجًا (مثل `ollama pull llama3.2:3b`).',
+            '`ollama run <model>` -- يبدأ محادثة مع نموذج.',
+            '`ollama list` -- يعرض جميع النماذج المنزّلة وأحجامها.',
+            '`ollama rm <model>` -- يحذف نموذجًا منزّلًا.',
+            '`ollama serve` -- يبدأ خادم API الخاص بـ Ollama (يعمل تلقائيًا على Mac/Windows).',
+            '`ollama create <name> -f <modelfile>` -- يبني نموذجًا مخصصًا من ملف Modelfile.',
+            'اعتبارًا من أبريل 2026، هذه الأوامر مستقرة وتغطي جميع حالات الاستخدام الشائعة.',
+          ],
+        },
+        essentialCommands: {
+          id: 'essential-commands',
+          title: 'ما الأوامر الأساسية في Ollama؟',
+          items: [
+            '**`ollama list`** -- يعرض النماذج المنزّلة، واستخدام القرص، وتاريخ التعديل.',
+            '**`ollama pull <model>`** -- ينزّل نموذجًا بالاسم (مثل `ollama pull mistral`).',
+            '**`ollama run <model>`** -- يبدأ جلسة محادثة مع نموذج.',
+            '**`ollama rm <model>`** -- يحذف نموذجًا ويحرّر مساحة القرص.',
+            '**`ollama serve`** -- يبدأ خادم API REST (عادةً يعمل تلقائيًا).',
+            '**`ollama help`** -- يعرض جميع الأوامر المتاحة.',
+          ],
+        },
+        managingModels: {
+          id: 'managing-models',
+          title: 'كيف تُدار النماذج في Ollama؟',
+          content: 'إدارة النماذج في Ollama تتم بالكامل بالأوامر:',
+          codeBlock: '# Listar todos los modelos descargados\nollama list\n\n# Descargar un modelo desde la biblioteca de Ollama\nollama pull llama3.2:3b       # Versión 7-bit (~2.5 GB)\nollama pull llama3.2:3b-fp16  # Precisión completa (~6.5 GB)\n\n# Descargar cuantización específica\nollama pull qwen2.5:7b-q4   # Cuantización 4-bit\nollama pull qwen2.5:7b-q8   # Cuantización 8-bit\n\n# Ver uso del disco\ndu -sh ~/.ollama/models\n\n# Eliminar un modelo\nollama rm llama3.2:3b\n\n# Descargar desde registro personalizado (avanzado)\nollama pull localhost:5000/custom-model',
+          codeLanguage: 'bash',
+        },
+        runningServing: {
+          id: 'running-serving',
+          title: 'كيف تُشغَّل النماذج وتُخدَم؟',
+          content: 'هناك طريقتان لاستخدام Ollama:',
+          codeBlock: '# 1. Chat interactivo (CLI)\nollama run llama3.2:3b\n# Escribe tus prompts y presiona Enter\n\n# 2. Iniciar el servidor API (se ejecuta en segundo plano)\nollama serve\n# La API escucha en http://localhost:11434/v1\n\n# 3. Usar el modelo vía API desde otra terminal\ncurl http://localhost:11434/v1/chat/completions \\\n  -H "Content-Type: application/json" \\\n  -d \'{\n    "model": "llama3.2:3b",\n    "messages": [{"role": "user", "content": "Hola"}]\n  }\'',
+          codeLanguage: 'bash',
+        },
+        modelfiles: {
+          id: 'custom-modelfiles',
+          title: 'كيف تُنشأ نماذج مخصصة بملفات Modelfile؟',
+          content: [
+            '**ملف Modelfile هو ملف تهيئة (مثل Dockerfile) يعرّف نموذجًا مخصصًا انطلاقًا من نموذج أساسي بإضافة محفّزات نظام ومعاملات وأوزان.**',
+          ],
+          codeBlock: '# Crear un archivo llamado Modelfile\nFROM llama3.2:3b\n\n# Añadir un system prompt\nSYSTEM """\nEres un experto útil en aprendizaje automático.\nSiempre explica conceptos complejos en términos simples.\n"""\n\n# Ajustar parámetros\nPARAMETER temperature 0.7\nPARAMETER top_p 0.9\n\n# Construir el modelo personalizado\nollama create ml-expert -f Modelfile\n\n# Usarlo\nollama run ml-expert',
+          codeLanguage: 'bash',
+        },
+        quantization: {
+          id: 'quantization',
+          title: 'ما خيارات التكميم التي يدعمها Ollama؟',
+          content: [
+            '**يقلّل التكميم حجم النموذج وVRAM باستخدام أرقام أقل دقة.** يدعم Ollama صيغة GGUF بعدة مستويات تكميم:',
+          ],
+          rows: [
+            { 'Cuantización': 'FP16 (الدقة الكاملة)', 'Tamaño (7B)': '14 GB', 'VRAM': '16 GB', 'Calidad': 'الأفضل', 'Velocidad': 'الأبطأ' },
+            { 'Cuantización': 'Q8_0 (8-bit)', 'Tamaño (7B)': '7 GB', 'VRAM': '8 GB', 'Calidad': 'ممتازة', 'Velocidad': 'سريعة' },
+            { 'Cuantización': 'Q6_K (6-bit)', 'Tamaño (7B)': '5.5 GB', 'VRAM': '6 GB', 'Calidad': 'جيدة جدًا', 'Velocidad': 'سريعة' },
+            { 'Cuantización': 'Q5_K_M (5-bit)', 'Tamaño (7B)': '5 GB', 'VRAM': '5.5 GB', 'Calidad': 'جيدة', 'Velocidad': 'سريعة جدًا' },
+            { 'Cuantización': 'Q4_K_M (4-bit)', 'Tamaño (7B)': '4.7 GB', 'VRAM': '5 GB', 'Calidad': 'جيدة', 'Velocidad': 'سريعة جدًا' },
+            { 'Cuantización': 'Q3_K_M (3-bit)', 'Tamaño (7B)': '3.3 GB', 'VRAM': '4 GB', 'Calidad': 'مقبولة', 'Velocidad': 'الأسرع' },
+          ],
+          columns: ['Cuantización', 'Tamaño (7B)', 'VRAM', 'Calidad', 'Velocidad'],
+        },
+        embeddings: {
+          id: 'embedding-models',
+          title: 'كيف تُولَّد embeddings بـ Ollama؟',
+          content: [
+            '**embeddings هي تمثيلات عددية للنص، مفيدة لـ RAG (التوليد المعزّز بالاسترجاع) والبحث الدلالي.**',
+          ],
+          codeBlock: '# Descargar un modelo de embeddings\nollama pull nomic-embed-text  # Mejor para inglés, 137M params\n\n# Generar embeddings\ncurl http://localhost:11434/v1/embeddings \\\n  -H "Content-Type: application/json" \\\n  -d \'{\n    "model": "nomic-embed-text",\n    "input": "The quick brown fox jumps"\n  }\'\n\n# La respuesta incluye embeddings como vector de 768 dimensiones',
+          codeLanguage: 'bash',
+        },
+        envVariables: {
+          id: 'env-variables',
+          title: 'ما متغيرات البيئة التي تتحكم في Ollama؟',
+          content: 'متغيرات بيئة رئيسية:',
+          items: [
+            '`OLLAMA_HOST` -- عنوان الاستماع (افتراضيًا: 127.0.0.1:11434). اضبط `0.0.0.0:11434` للوصول عبر الشبكة.',
+            '`OLLAMA_MODELS` -- مكان تخزين النماذج (افتراضيًا: `~/.ollama/models`).',
+            '`OLLAMA_DEBUG` -- اضبطه على `1` لسجلات مفصّلة.',
+            '`OLLAMA_GPU` -- GPU المراد استخدامه (افتراضيًا: كشف تلقائي). اضبط `cuda` أو `rocm`.',
+            '`OLLAMA_KEEP_ALIVE` -- مدة إبقاء النموذج في الذاكرة (افتراضيًا: 5 دقائق).',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'أخطاء شائعة مع أوامر Ollama',
+          items: [
+            '**نسيان وسوم النموذج.** `ollama pull llama3.2` ينزّل أكبر إصدار؛ `ollama pull llama3.2:3b` ينزّل إصدار 3B.',
+            '**عدم معرفة أن `ollama serve` يعمل تلقائيًا.** على Mac وWindows، يبدأ Ollama الـ API تلقائيًا عند فتح التطبيق. على Linux، قد يلزم بدؤه يدويًا.',
+            '**تنزيل التكميم الخاطئ.** حدّد دائمًا وسم النموذج الدقيق (مثل `qwen2.5:7b-q4`) للتحكم في استخدام VRAM.',
+            '**توقّع عمل Ollama دون اتصال بعد التنزيل.** Ollama نفسه يعمل دون اتصال، لكن يجب تنزيل النماذج مع اتصال بالإنترنت.',
+          ],
+        },
+        faqSection: {
+          id: 'common-questions',
+          title: 'الأسئلة الشائعة حول أوامر Ollama',
+          faqs: [
+            {
+              q: 'أين تُخزَّن نماذج Ollama؟',
+              a: 'افتراضيًا: `~/.ollama/models` على macOS/Linux أو `%USERPROFILE%\\.ollama\\models` على Windows. اضبط `OLLAMA_MODELS` لتغيير الموقع.',
+            },
+            {
+              q: 'هل يمكنني نقل النماذج بين الحواسيب؟',
+              a: 'نعم. انسخ ملفات النموذج من `~/.ollama/models` إلى دليل `~/.ollama/models` في حاسوب آخر؛ سيتعرّف عليها `ollama list` تلقائيًا.',
+            },
+            {
+              q: 'كيف أرى استخدام الذاكرة للنماذج النشطة؟',
+              a: 'استخدم `ollama ps` لسرد النماذج المحمّلة حاليًا. تُفرَّغ النماذج من الذاكرة بعد 5 دقائق من الخمول افتراضيًا.',
+            },
+            {
+              q: 'هل يمكنني تشغيل عدة نماذج في آنٍ واحد؟',
+              a: 'نعم، لكنها تتشارك VRAM. تشغيل نموذجي 8B يتطلب 16 GB من VRAM. كل نموذج إضافي يزيد استخدام الذاكرة.',
+            },
+            {
+              q: 'ما الفرق بين GGUF وصيغ النماذج الأخرى؟',
+              a: 'GGUF مكمّم وفعّال ويعمل على CPU/GPU. وهو المعيار لنماذج LLM المحلية. الصيغ الأخرى (safetensors، PyTorch .bin) تتطلب مزيدًا من VRAM وغير محسّنة للاستدلال المحلي.',
+            },
+            {
+              q: 'كيف أستخدم نماذج Ollama في تطبيقي الخاص؟',
+              a: '`ollama serve` يبدأ API متوافقًا مع OpenAI على `localhost:11434`. استخدم أي SDK لـ OpenAI (Python، Node.js، إلخ) موجّهًا إلى ذلك العنوان لإرسال الطلبات واستقبال الردود.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'قراءات ذات صلة',
+          items: [
+            '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- دليل التثبيت.',
+            '[API محلي لـ LLM متوافق مع OpenAI](/ar/local-llms/local-llm-openai-compatible-api) -- استخدم API الخاص بـ Ollama من الشيفرة.',
+            '[أفضل واجهات نماذج LLM المحلية](/ar/local-llms/best-local-llm-frontends) -- واجهات محادثة لـ Ollama.',
+            '[Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) -- مقارنة مع LM Studio.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'المصادر',
+          items: [
+            'GitHub لـ Ollama -- github.com/ollama/ollama',
+            'توثيق Ollama -- github.com/ollama/ollama/blob/main/docs',
+            'مكتبة نماذج Ollama -- ollama.ai/library',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'دليل أوامر Ollama: شرح جميع الأوامر (2026)',
+        'description': 'أوامر Ollama مشروحة 2026: pull، run، list، rm، serve، create مع أمثلة. مرجع CLI كامل يغطي 95% من حالات الاستخدام.',
+        'url': 'https://www.promptquorum.com/ar/local-llms/ollama-command-guide',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'أوامر Ollama' },
+          { '@type': 'Thing', 'name': 'صيغة GGUF' },
+          { '@type': 'Thing', 'name': 'تكميم النماذج' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner to Advanced',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'أين تُخزَّن نماذج Ollama؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'افتراضيًا: `~/.ollama/models` على macOS/Linux أو `%USERPROFILE%\\.ollama\\models` على Windows. اضبط `OLLAMA_MODELS` لتغيير الموقع.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني نقل النماذج بين الحواسيب؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. انسخ ملفات النموذج من `~/.ollama/models` إلى دليل `~/.ollama/models` في حاسوب آخر؛ سيتعرّف عليها `ollama list` تلقائيًا.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أرى استخدام الذاكرة للنماذج النشطة؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'استخدم `ollama ps` لسرد النماذج المحمّلة حاليًا. تُفرَّغ النماذج من الذاكرة بعد 5 دقائق من الخمول افتراضيًا.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل عدة نماذج في آنٍ واحد؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، لكنها تتشارك VRAM. تشغيل نموذجي 8B يتطلب 16 GB من VRAM. كل نموذج إضافي يزيد استخدام الذاكرة.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين GGUF وصيغ النماذج الأخرى؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF مكمّم وفعّال ويعمل على CPU/GPU. وهو المعيار لنماذج LLM المحلية. الصيغ الأخرى (safetensors، PyTorch .bin) تتطلب مزيدًا من VRAM وغير محسّنة للاستدلال المحلي.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أستخدم نماذج Ollama في تطبيقي الخاص؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '`ollama serve` يبدأ API متوافقًا مع OpenAI على `localhost:11434`. استخدم أي SDK لـ OpenAI (Python، Node.js، إلخ) موجّهًا إلى ذلك العنوان لإرسال الطلبات واستقبال الردود.' }
+          }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'دليل أوامر Ollama: شرح جميع الأوامر (2026)',
+        'itemListElement': [
+          { '@type': 'ListItem', position: 1, name: '`ollama pull <model>` -- ينزّل نموذجًا (مثل `ollama pull llama3.2:3b`).' },
+          { '@type': 'ListItem', position: 2, name: '`ollama run <model>` -- يبدأ محادثة مع نموذج.' },
+          { '@type': 'ListItem', position: 3, name: '`ollama list` -- يعرض جميع النماذج المنزّلة وأحجامها.' },
+          { '@type': 'ListItem', position: 4, name: '`ollama rm <model>` -- يحذف نموذجًا منزّلًا.' },
+          { '@type': 'ListItem', position: 5, name: '`ollama serve` -- يبدأ خادم API الخاص بـ Ollama (يعمل تلقائيًا على Mac/Windows).' },
+          { '@type': 'ListItem', position: 6, name: '`ollama create <name> -f <modelfile>` -- يبني نموذجًا مخصصًا من ملف Modelfile.' },
+          { '@type': 'ListItem', position: 7, name: 'اعتبارًا من أبريل 2026، هذه الأوامر مستقرة وتغطي جميع حالات الاستخدام الشائعة.' },
+        ],
+      },
+    },
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',

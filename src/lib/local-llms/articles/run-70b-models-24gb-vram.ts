@@ -1317,6 +1317,238 @@ schema: {
         ],
       },
     },
+    ar: {
+      freshness_tier: 'semi_annual',
+      theme: 'Hardware & Performance',
+      title: 'كيفية تشغيل نماذج 70B على 24 GB من VRAM: تقنيات متقدمة',
+      seoTitle: 'تشغيل نماذج 70B على 24 GB من VRAM: دليل كامل 2026',
+      intro: 'تشغيل نموذج 70B (يتطلب عادةً أكثر من 40 GB) على 24 GB من VRAM ممكن بتكميم قوي (Q2-Q3) وتفريغ الطبقات، لكن النتيجة بطيئة (~3-5 token/ثانية). اعتبارًا من أبريل 2026، هذا غير عملي للدردشة الفورية، لكنه قابل للتطبيق للمعالجة بالدُفعات أو التجريب.',
+      metaDescription: 'تشغيل نماذج 70B على 24 GB من VRAM 2026: التكميم (Q4_K_M)، والتفريغ، وتقسيم الطبقات. تقنيات بمفاضلات وبيانات أداء.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-19',
+      leadAnswerBlock: '**تشغيل نموذج 70B (يتطلب عادةً أكثر من 40 GB) على 24 GB من VRAM ممكن بتكميم قوي (Q2-Q3) وتفريغ الطبقات، لكن النتيجة بطيئة (~3-5 token/ثانية).**',
+      audience: 'المهندسون الذين ينشرون نماذج LLM المحلية في بيئات الإنتاج أو المؤسسات',
+      readTime: '10 دقائق قراءة',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'تحسين نماذج 70B',
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'الحدود النظرية', anchor: '#limits' },
+        { label: 'استراتيجية التكميم', anchor: '#quantization' },
+        { label: 'استراتيجية التفريغ', anchor: '#offloading' },
+        { label: 'الإعداد العملي', anchor: '#setup' },
+        { label: 'الأداء الواقعي', anchor: '#performance' },
+        { label: 'بدائل أفضل', anchor: '#alternatives' },
+        { label: 'الأخطاء الشائعة', anchor: '#common-mistakes' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
+        { label: 'قراءات ذات صلة', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Llama 3.3 70B بـ Q4 = 35 GB (أكبر من أن يتسع في 24 GB). بـ Q3 = 26 GB (لا يزال كبيرًا جدًا). بـ Q2 = 17 GB (يتسع!).',
+            'المفاضلة: لـ Q2 فقدان جودة ملحوظ. ~70% من جودة FP16.',
+            'السرعة: 3-5 token/ثانية مع تفريغ 20 GB إلى RAM النظام (بطيء جدًا).',
+            'الخيار الأفضل: استخدام نموذج 13B بـ Q5، أو شراء بطاقة رسوم ثانية لتقسيم الطبقات.',
+            'اعتبارًا من أبريل 2026، هذا حل لقيد، لا نهج موصى به.',
+          ],
+        },
+        limits: {
+          id: 'limits',
+          title: 'الحسابات النظرية لـ VRAM',
+          content: [
+            '**Llama 3.3 70B بمستويات تكميم مختلفة:**',
+          ],
+          rows: [
+            { 'Cuantización': 'FP16 (الأساس)', 'Tamaño': '140 GB', '¿Cabe en 24 GB?': 'لا' },
+            { 'Cuantización': 'Q8 (8 بت)', 'Tamaño': '70 GB', '¿Cabe en 24 GB?': 'لا' },
+            { 'Cuantización': 'Q5 (5 بت)', 'Tamaño': '43.75 GB', '¿Cabe en 24 GB?': 'لا' },
+            { 'Cuantización': 'Q4 (4 بت)', 'Tamaño': '35 GB', '¿Cabe en 24 GB?': 'لا (مع التفريغ: ربما)' },
+            { 'Cuantización': 'Q3 (3 بت)', 'Tamaño': '26 GB', '¿Cabe en 24 GB?': 'لا (بفارق ضئيل)' },
+            { 'Cuantización': 'Q2 (2 بت)', 'Tamaño': '17.5 GB', '¿Cabe en 24 GB?': 'نعم' },
+          ],
+          columns: ['Cuantización', 'Tamaño del modelo', '¿Cabe en 24 GB?'],
+        },
+        quantization: {
+          id: 'quantization',
+          title: 'التكميم القوي: الأداة الرئيسية',
+          content: [
+            '**لكي يتسع 70B في 24 GB، يجب استخدام تكميم Q2 أو Q3.**',
+            '- **Q3**: 26 GB (لا يزال 2 GB زائدة). يمكن تفريغ 2 GB إلى RAM. جودة أفضل قليلًا من Q2.',
+            '- **Q2**: 17.5 GB (يتسع!). 70% من الجودة مقابل FP16. تدهور ملحوظ لكنه قابل للاستخدام.',
+            'نزّل النموذج المُكمَّم: `ollama pull llama3.1:70b-q2` (إن توفّر) أو استخدم أدوات تحويل مثل llama.cpp.',
+          ],
+        },
+        offloading: {
+          id: 'offloading',
+          title: 'التفريغ إلى RAM النظام',
+          content: [
+            '**إذا استخدمت Q4 (35 GB) على بطاقة رسوم بسعة 24 GB، يمكنك تفريغ الـ 11 GB المتبقية إلى RAM النظام.** عقوبة السرعة شديدة (أبطأ بـ 10×).',
+            'عملي فقط للمعالجة بالدُفعات حيث يمكنك انتظار النتائج ساعات.',
+          ],
+        },
+        setup: {
+          id: 'setup',
+          title: 'الإعداد العملي: تشغيل 70B على 24 GB',
+          content: 'خطوة بخطوة:',
+          numberedItems: [
+            'استخدم تكميم Q2: `ollama pull llama3.1:70b-q2` (إن توفّر؛ وإلا حوّل بـ llama.cpp)',
+            'تحقق من VRAM: ينبغي أن يعرض `nvidia-smi` نحو 18 GB قيد الاستخدام',
+            'شغّل النموذج: `ollama run llama3.1:70b-q2`',
+            'توقّع 3-5 token/ثانية (بطيء جدًا)',
+            'استخدمه فقط للمعالجة بالدُفعات/دون اتصال، لا للدردشة التفاعلية',
+          ],
+        },
+        performance: {
+          id: 'performance',
+          title: 'توقعات الأداء الواقعية',
+          content: [
+            '**تشغيل 70B على 24 GB من VRAM بطيء:**',
+          ],
+          rows: [
+            { 'Cuantización': 'Q2 (24 GB VRAM)', 'Velocidad': '5-8 token/ثانية', 'Latencia': '2-4 ثانية لكل token', 'Caso de uso': 'معالجة بالدُفعات فقط' },
+            { 'Cuantización': 'Q3 + تفريغ (24 GB)', 'Velocidad': '3-5 token/ثانية', 'Latencia': '3-5 ثوانٍ لكل token', 'Caso de uso': 'محدود للغاية' },
+            { 'Cuantización': 'Q4 + تفريغ (24 GB)', 'Velocidad': '1-3 token/ثانية', 'Latencia': '5-10 ثوانٍ لكل token', 'Caso de uso': 'دُفعات ليلية فقط' },
+          ],
+          columns: ['Cuantización', 'Velocidad', 'Latencia', 'Caso de uso'],
+        },
+        alternatives: {
+          id: 'alternatives',
+          title: 'بدائل أفضل من 70B المقيّد',
+          content: 'بدلًا من الصراع مع 70B بـ VRAM محدود، فكّر في:',
+          items: [
+            'استخدام نموذج 13B (Llama 3.3 13B بـ Q5 = 8 GB، سريع جدًا)',
+            'شراء RTX 4090 ثانية لتقسيم الطبقات (2× 24 GB = 48 GB، أكثر من 100 token/ثانية)',
+            'استخدام API سحابي (GPT-5.5 للمهام المهمة، محلي للتجريب)',
+            'انتظار نماذج أكفأ (أصغر، بالجودة نفسها)',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'الأخطاء الشائعة مع 70B المقيّد',
+          items: [
+            '**توقّع أن يكون Q2 قابلًا للاستخدام في الدردشة.** ليس كذلك. تدهور الجودة شديد جدًا للتفاعل الفوري.',
+            '**عدم قياس السرعة الفعلية قبل الالتزام.** اختبر بأمر صغير (10 tokens) وتحقق من السرعة قبل تشغيل أعمال دُفعات كبيرة.',
+            '**افتراض أن التفريغ "مجاني".** RAM النظام أبطأ بـ 100× من VRAM بطاقة الرسوم. التفريغ يجعل الاستدلال غير عملي.',
+            '**عدم مراعاة البدائل.** نموذج 13B أسرع بشكل كبير وغالبًا ما يكون كافيًا في الجودة.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'الأسئلة الشائعة',
+          faqs: [
+            {
+              q: 'هل يمكنني فعلًا تشغيل نموذج 70B على RTX 4090 واحدة؟',
+              a: 'نعم، لكن بتحذيرات مهمة. بتكميم Q2 (17.5 GB)، يتسع النموذج في 24 GB من VRAM لكنه يعمل بـ 5-8 token/ثانية وبـ ~70% من جودة FP16. بـ Q4 (35 GB)، تحتاج إلى تفريغ 11 GB إلى RAM النظام، مما يقلّل السرعة إلى 1-3 token/ثانية. لا يصلح أي خيار للدردشة الفورية — فقط للمعالجة بالدُفعات دون اتصال.',
+            },
+            {
+              q: 'أي تكميم مطلوب لكي يتسع 70B في 24 GB من VRAM؟',
+              a: 'تكميم Q2 يتسع في 24 GB (17.5 GB حجم النموذج). Q3 (26 GB) يتطلب تفريغ 2 GB من RAM. Q4 (35 GB) يتطلب تفريغ 11 GB ويجعل الاستدلال بطيئًا جدًا. Q5 وما فوق (44-70 GB) لا يمكن أن يتسع حتى مع التفريغ على بطاقة رسوم بسعة 24 GB. Q2 هو الخيار الوحيد الذي يعمل بالكامل في VRAM.',
+            },
+            {
+              q: 'كم يكون نموذج 70B بطيئًا على 24 GB من VRAM؟',
+              a: 'بـ Q2 (بالكامل في VRAM): 5-8 token/ثانية. بـ Q3 وتفريغ 2 GB من RAM: 3-5 token/ثانية. بـ Q4 وتفريغ 11 GB من RAM: 1-3 token/ثانية. قارن بنموذج 13B بـ Q5 على بطاقة الرسوم نفسها: 80-100 token/ثانية. إعداد 70B المقيّد أبطأ بـ 10-20× من نموذج أصغر بالحجم الملائم.',
+            },
+            {
+              q: 'هل استخدام نموذج 13B أفضل من 70B مقيّد؟',
+              a: 'لمعظم المهام، نعم. نموذج 13B بتكميم Q5 يعمل بـ 80-100 token/ثانية على RTX 4090 ويقدّم جودة عالية. نموذج 70B بـ Q2 يعمل بـ 5-8 token/ثانية بجودة متدهورة. يفوز 13B في السرعة وغالبًا في الجودة العملية بسبب تدهور Q2. استخدم 70B-على-24GB فقط إذا كنت تحتاج إلى قدرات خاصة بـ 70B ويمكنك تحمّل استخدام بالدُفعات حصرًا.',
+            },
+            {
+              q: 'ما أفضل حالة استخدام لـ 70B على 24 GB من VRAM؟',
+              a: 'المعالجة بالدُفعات الليلية — مهام ترسل فيها 100+ أمرًا وتسترجع النتائج بعد ساعات. أمثلة: تحليل المستندات، مراجعات الكود بالدُفعات، وسم مجموعات البيانات. الدردشة الفورية غير عملية بـ 1-8 token/ثانية. للاستخدام التفاعلي، RTX 4090 ثانية ($1,800) بتقسيم الطبقات تبلغ ~100 token/ثانية — استثمار أفضل بكثير.',
+            },
+            {
+              q: 'كيف أنزّل نماذج 70B مُكمَّمة بـ Q2؟',
+              a: 'عبر Ollama: `ollama pull llama3.1:70b-instruct-q2_K` (يتفاوت التوفر). عبر llama.cpp: نزّل ملفات GGUF Q2_K من Hugging Face (ابحث عن "llama-3.1-70b GGUF"). ينشر TheBloke وbartowski إصدارات مُكمَّمة. تحقق من النموذج بـ `nvidia-smi` بعد التحميل — ينبغي أن يكون استخدام VRAM ~18-20 GB لـ Q2.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'قراءات ذات صلة',
+          items: [
+            '[دليل أجهزة نماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- اشترِ أجهزة أفضل.',
+            '[نماذج LLM المحلية ببطاقات رسوم متعددة](/ar/local-llms/multi-gpu-local-llms) -- استخدم تقسيم الطبقات بدلًا من ذلك.',
+            '[أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding) -- النماذج الأصغر غالبًا ما تكون كافية.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'المصادر',
+          items: [
+            'تكميم llama.cpp -- github.com/ggerganov/llama.cpp/blob/master/gguf-py/gguf/quants.py',
+            'بطاقة النموذج: Llama 3.3 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        url: 'https://www.promptquorum.com/ar/local-llms/run-70b-models-24gb-vram',
+        inLanguage: 'ar',
+        headline: 'تشغيل نماذج 70B على 24 GB من VRAM: دليل كامل 2026',
+        description: 'تشغيل نماذج 70B على 24 GB من VRAM 2026: التكميم (Q4_K_M)، والتفريغ، وتقسيم الطبقات. تقنيات بمفاضلات وبيانات أداء.',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-19',
+        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        proficiencyLevel: 'Advanced',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+        about: [
+          { '@type': 'Thing', name: 'Llama 3.3' },
+          { '@type': 'Thing', name: 'نماذج 70B' },
+          { '@type': 'Thing', name: 'تحسين VRAM' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'Ollama' },
+          { '@type': 'SoftwareApplication', name: 'llama.cpp' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'ar',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'هل يمكنني فعلًا تشغيل نموذج 70B على RTX 4090 واحدة؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'نعم، لكن بتحذيرات مهمة. بتكميم Q2 (17.5 GB)، يتسع النموذج في 24 GB من VRAM لكنه يعمل بـ 5-8 token/ثانية وبـ ~70% من جودة FP16. بـ Q4 (35 GB)، تحتاج إلى تفريغ 11 GB إلى RAM النظام، مما يقلّل السرعة إلى 1-3 token/ثانية. لا يصلح أي خيار للدردشة الفورية.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'أي تكميم مطلوب لكي يتسع 70B في 24 GB من VRAM؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'تكميم Q2 يتسع في 24 GB (17.5 GB حجم النموذج). Q3 (26 GB) يتطلب تفريغ 2 GB من RAM. Q4 (35 GB) يتطلب تفريغ 11 GB ويجعل الاستدلال بطيئًا جدًا. Q5 وما فوق لا يمكن أن يتسع حتى مع التفريغ. Q2 هو الخيار الوحيد الذي يعمل بالكامل في VRAM.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'كم يكون نموذج 70B بطيئًا على 24 GB من VRAM؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'بـ Q2 (بالكامل في VRAM): 5-8 token/ثانية. بـ Q3 وتفريغ 2 GB من RAM: 3-5 token/ثانية. بـ Q4 وتفريغ 11 GB من RAM: 1-3 token/ثانية. نموذج 13B بـ Q5 على بطاقة الرسوم نفسها يعمل بـ 80-100 token/ثانية — أسرع بـ 10-20×.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل استخدام نموذج 13B أفضل من 70B مقيّد؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'لمعظم المهام، نعم. نموذج 13B بـ Q5 يعمل بـ 80-100 token/ثانية على RTX 4090. نموذج 70B بـ Q2 يعمل بـ 5-8 token/ثانية بجودة متدهورة. يفوز 13B في السرعة وغالبًا في الجودة العملية. استخدم 70B-على-24GB فقط إذا كنت تحتاج إلى قدرات خاصة بـ 70B ويمكنك تحمّل استخدام بالدُفعات حصرًا.' },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'ar',
+        name: 'تقنيات تشغيل نماذج 70B على 24 GB من VRAM',
+        numberOfItems: 3,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'تكميم Q2 (17.5 GB)', description: 'يتسع بالكامل في 24 GB من VRAM. الجودة: ~70% من FP16. السرعة: 5-8 token/ثانية.' },
+          { '@type': 'ListItem', position: 2, name: 'Q4 + تفريغ CPU (11 GB مفرَّغة)', description: 'جودة أفضل لكن بطيء جدًا: 1-3 token/ثانية. مناسب للدُفعات الليلية فقط.' },
+          { '@type': 'ListItem', position: 3, name: 'تقسيم الطبقات (2× RTX 4090)', description: 'الخيار الأفضل: 48 GB إجمالًا، يشغّل Q5 بـ ~100 token/ثانية. موصى به على قيد بطاقة رسوم واحدة.' },
+        ],
+      },
+    },
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',

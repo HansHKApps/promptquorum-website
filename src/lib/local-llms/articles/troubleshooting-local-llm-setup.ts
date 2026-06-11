@@ -609,6 +609,309 @@ schema: {
       gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
       gammaDescription: 'La siguiente presentación cubre: los 10 errores más comunes en la configuración de LLM local (sin memoria, GPU no detectada, inferencia lenta, conexión rechazada, salida corrupta), los requisitos de RAM para modelos 3B–14B con cuantización Q4_K_M y Q8_0, un proceso de depuración en 5 pasos y los comandos de Ollama para cada corrección. Descarga el PDF como tarjeta de referencia para la resolución de problemas de LLM local.',
     },
+    ar: {
+      freshness_tier: 'semi_annual',
+      theme: 'Getting Started',
+      title: 'إصلاح أخطاء LLM المحلي في 2026: 10 مشكلات شائعة في Ollama وLM Studio وvLLM',
+      seoTitle: 'أخطاء LLM المحلي: OOM، وعدم اكتشاف GPU، والمنفذ 11434',
+      intro: 'أكثر الأخطاء شيوعًا في نماذج LLM المحلية هي التعليق بسبب نفاد الذاكرة، وعدم اكتشاف GPU، والاستدلال البطيء للغاية على CPU، ورفض الاتصال من API، والمخرجات التالفة. اعتبارًا من أبريل 2026، توجد حلول لكل الأخطاء العشرة -- معظمها يتطلب أمرًا أو أمرين فقط في الطرفية. يغطي هذا الدليل Ollama (المنفذ 11434)، وLM Studio (المنفذ 1234)، وvLLM بأوامر دقيقة لكل خطأ.',
+      metaDescription: '10 أخطاء شائعة لـ LLM المحلي محلولة: تعليق OOM، وعدم اكتشاف GPU، ورفض المنفذ 11434، وبطء CPU. أوامر لـ Ollama وLM Studio. 2026.',
+      twitterDescription: '10 أخطاء لـ LLM المحلي محلولة: OOM، وعدم اكتشاف GPU، ورفض المنفذ 11434، وبطء CPU. أوامر لـ Ollama + LM Studio. أبريل 2026.',
+      leadAnswerBlock: '**أكثر الأخطاء شيوعًا في نماذج LLM المحلية هي التعليق بسبب نفاد الذاكرة، وعدم اكتشاف GPU، والاستدلال البطيء للغاية على CPU، ورفض الاتصال من API، والمخرجات التالفة.**',
+      dateModified: '2026-04-16',
+      publishDate: '2026-04-04',
+      audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على عتاد استهلاكي',
+      readTime: '9 دقائق قراءة',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'استكشاف أخطاء LLM المحلي وإصلاحها',
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'الخطأ 1: نفاد الذاكرة', anchor: '#error-1-out-of-memory' },
+        { label: 'الخطأ 2: عدم اكتشاف GPU', anchor: '#error-2-gpu-not-detected' },
+        { label: 'الخطأ 3: استدلال بطيء جدًا', anchor: '#error-3-very-slow-inference' },
+        { label: 'الخطأ 4: رفض الاتصال', anchor: '#error-4-connection-refused' },
+        { label: 'الخطأ 5: النموذج غير موجود', anchor: '#error-5-model-not-found' },
+        { label: 'الخطأ 6: ملف نموذج تالف', anchor: '#error-6-corrupted-model-file' },
+        { label: 'الخطأ 7: أخطاء CUDA / ROCm', anchor: '#error-7-cuda-errors' },
+        { label: 'الخطأ 8: مخرجات تالفة أو متكررة', anchor: '#error-8-garbled-output' },
+        { label: 'الخطأ 9: المنفذ قيد الاستخدام', anchor: '#error-9-port-already-in-use' },
+        { label: 'الخطأ 10: يتوقف النموذج في منتصف الاستجابة', anchor: '#error-10-model-stops-mid-response' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'نفاد الذاكرة: بدّل إلى تكميم أصغر (Q4_K_M ← Q3_K_S) أو نموذج أصغر.',
+            'عدم اكتشاف GPU على NVIDIA: حدّث البرنامج المشغّل إلى 525+ على Linux، و452+ على Windows. شغّل `nvidia-smi` للتأكيد.',
+            'استدلال بطيء للغاية: أنت تشغّل على CPU فقط. فعّل التفريغ على GPU في Ollama بمتغير البيئة `OLLAMA_GPU_LAYERS`.',
+            'رفض الاتصال: Ollama غير قيد التشغيل. ابدأه بـ `ollama serve` أو أعد تشغيل الخدمة.',
+            'مخرجات تالفة: قالب موجّه خاطئ. استخدم نسخة Instruct من النموذج، وليس النسخة الأساسية.',
+          ],
+          image: '/images/troubleshooting-error-symptoms-quick-ref-es.svg',
+          imageCaption: 'أكثر 10 أخطاء شيوعًا لـ LLM المحلي مع الأعراض والحلول -- مرجع سريع لإعدادات Ollama وLM Studio وvLLM (أبريل 2026).',
+        },
+        error1: {
+          id: 'error-1-out-of-memory',
+          title: 'الخطأ 1: "نفاد الذاكرة" / تعليق بسبب نقص الذاكرة',
+          content: '**أخطاء نفاد الذاكرة تعني أن النموذج يحتاج ذاكرة RAM أكثر من المتاح -- وليست عطلًا في العتاد.** هذا أكثر الأخطاء شيوعًا للمستخدمين الجدد. راجع [شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) لفهم كيف يقلل التكميم متطلبات RAM.',
+          items: [
+            '**تحقق من RAM المتاحة**: شغّل `free -h` على macOS/Linux، أو افتح إدارة المهام ← الأداء ← الذاكرة على Windows.',
+            '**بدّل إلى تكميم أصغر**: استبدل `Q8_0` أو `Q5_K_M` بـ `Q4_K_M`. لـ Ollama: `ollama run llama3.2-instruct-q4_K_M`.',
+            '**أغلق التطبيقات في الخلفية قبل تحميل النموذج** -- المتصفحات والتطبيقات الأخرى تستهلك RAM التي يحتاجها النموذج.',
+            '**بدّل إلى نموذج أصغر**: إذا فشل 8B بذاكرة 8 GB من RAM، جرّب `llama3.2:3b` (يتطلب ~2.5 GB فقط).',
+          ],
+          image: '/images/troubleshooting-ram-by-model-size-es.svg',
+          imageCaption: 'متطلبات RAM لـ LLM المحلي حسب حجم النموذج: llama3.2 1B–3B يتسع في 8 GB، ونماذج 7B–8B تحتاج 16 GB، ونماذج 70B تحتاج 64 GB بتكميم Q4_K_M.',
+        },
+        error1Code: {
+          title: 'التحقق من RAM المتاحة على Linux / macOS',
+          codeBlock: '# Linux\nfree -h\n\n# macOS\nvm_stat | grep "Pages free"\n\n# Más legible en macOS\ntop -l 1 | grep "PhysMem"',
+          codeLanguage: 'bash',
+        },
+        error2: {
+          id: 'error-2-gpu-not-detected',
+          title: 'الخطأ 2: عدم استخدام GPU (التشغيل على CPU فقط)',
+          content: [
+            '**عدم استخدام GPU يعني أن LLM يعمل أبطأ بـ 5–10 مرات من المتوقع -- تحقق من تثبيت البرنامج المشغّل قبل أي شيء آخر.** تأكد من أن GPU مرئية للنظام:',
+          ],
+          codeBlock: '# NVIDIA — debe mostrar el nombre de la GPU y la versión del driver\nnvidia-smi\n\n# AMD en Linux\nrocm-smi\n\n# macOS — verificar si Metal está disponible\nsystem_profiler SPDisplaysDataType | grep "Metal"',
+          codeLanguage: 'bash',
+          image: '/images/troubleshooting-gpu-detection-es.svg',
+          imageCaption: 'CPU فقط مقابل GPU نشطة: Ollama على CPU يعطي 2–8 tok/ثانية؛ ووضع GPU يعطي 30–120 tok/ثانية. تحقق بـ ollama ps أو nvidia-smi.',
+        },
+        error2Fixes: {
+          title: 'كيف تفعّل GPU في Ollama؟',
+          items: [
+            '**NVIDIA على Linux**: ثبّت البرنامج المشغّل NVIDIA 525+ وCUDA Toolkit 11.3+. يكتشف Ollama CUDA تلقائيًا عند إعادة التشغيل.',
+            '**NVIDIA على Windows**: تأكد من أن إصدار البرنامج المشغّل 452.39 أو أعلى. يثبّت Ollama دعم CUDA تلقائيًا عبر مثبّت Windows.',
+            '**AMD على Linux**: ثبّت ROCm 5.7+. إذا فشل الاكتشاف، اضبط `HSA_OVERRIDE_GFX_VERSION=11.0.0` لبطاقات سلسلة RX 6000.',
+            '**Apple Silicon**: يستخدم Ollama Metal افتراضيًا -- لا حاجة لتكوين. تأكد بـ `ollama ps` بعد تحميل نموذج؛ تظهر طبقات GPU في المخرجات.',
+          ],
+        },
+        error3: {
+          id: 'error-3-very-slow-inference',
+          title: 'الخطأ 3: استدلال بطيء للغاية (أقل من 5 token في الثانية)',
+          content: '**أقل من 5 token في الثانية يعني أن النموذج يعمل على CPU فقط أو أن النموذج أكبر من VRAM المتاحة.** نموذج 7B على GPU يولّد 30–80 tok/ثانية؛ والنموذج نفسه على CPU يولّد 3–10 tok/ثانية.',
+          items: [
+            '**تأكد إن كانت GPU نشطة**: شغّل `ollama ps` أثناء تحميل نموذج. تُظهر المخرجات عدد الطبقات على GPU مقابل CPU.',
+            '**قلّل حجم النموذج**: نموذج 13B على CPU يولّد 3–6 tok/ثانية. التبديل إلى 7B يضاعف السرعة؛ والتبديل إلى 3B يربّعها.',
+            '**زِد طبقات GPU في Ollama**: اضبط `OLLAMA_GPU_LAYERS=999` لنقل كل الطبقات إلى GPU (سيقتصر Ollama على الحد الأقصى الذي يتسع في VRAM).',
+            '**استخدم تكميمًا أسرع**: Q4_K_M هو أسرع تكميم يحافظ على جودة مقبولة. Q8_0 ذو جودة أعلى لكنه أبطأ بـ ~30%.',
+          ],
+        },
+        error3Code: {
+          title: 'ضبط طبقات GPU في Ollama',
+          codeBlock: '# Establecer la variable de entorno antes de iniciar Ollama\nexport OLLAMA_GPU_LAYERS=999\nollama serve\n\n# O en un Modelfile\nFROM llama3.1:8b\nPARAMETER num_gpu 999',
+          codeLanguage: 'bash',
+        },
+        error4: {
+          id: 'error-4-connection-refused',
+          title: 'الخطأ 4: "رفض الاتصال" عند استدعاء API',
+          content: '**رفض الاتصال يعني أن Ollama غير قيد التشغيل -- لا تستجيب API على `localhost:11434` إلا عندما تكون الخدمة نشطة.** ابدأها قبل إجراء استدعاءات API.',
+          codeBlock: '# Iniciar Ollama manualmente\nollama serve\n\n# En Linux — reiniciar el servicio systemd\nsystemctl restart ollama\n\n# Verificar que está en ejecución\ncurl http://localhost:11434\n# Esperado: "Ollama is running"',
+          codeLanguage: 'bash',
+        },
+        error5: {
+          id: 'error-5-model-not-found',
+          title: 'الخطأ 5: خطأ "النموذج غير موجود"',
+          content: [
+            '**"النموذج غير موجود" يعني أن اسم النموذج في أمرك لا يطابق أي نموذج تم تنزيله.** أسماء النماذج في Ollama حساسة لحالة الأحرف وتتضمن وسوم الإصدار.',
+          ],
+          codeBlock: '# Listar todos los modelos descargados\nollama list\n\n# Descargar un modelo si falta\nollama pull llama3.2\n\n# Verifica el nombre exacto del modelo — las etiquetas importan\n# "llama3.2" y "llama3.2:3b" son entradas diferentes',
+          codeLanguage: 'bash',
+        },
+        error6: {
+          id: 'error-6-corrupted-model-file',
+          title: 'الخطأ 6: ملف نموذج تالف',
+          content: '**ملفات النماذج التالفة تنتج عن عمليات تنزيل مقطوعة -- احذف وأعد التنزيل للإصلاح.** لا يكتشف Ollama دائمًا عمليات التنزيل الجزئية تلقائيًا.',
+          codeBlock: '# Eliminar el modelo corrupto\nollama rm llama3.2\n\n# Volver a descargarlo\nollama pull llama3.2\n\n# Para LM Studio: eliminar archivos de modelo manualmente\n# Ubicación predeterminada: ~/.cache/lm-studio/models/',
+          codeLanguage: 'bash',
+        },
+        error6lmstudio: {
+          id: 'error-6b-lm-studio-model-resolution',
+          title: 'الخطأ 6b: "فشل في حل النموذج" في LM Studio',
+          content: '**"Failed to resolve model lmstudio-community/..." يعني أن LM Studio لا يستطيع العثور على النموذج في سجله.** يحدث هذا عادةً عندما يُنزَّل نموذج من `lmstudio-community` على Hugging Face لكن مرجع السجل تغيّر. يستخدم LM Studio إدخال سجل مخزّنًا مؤقتًا لم يعد يطابق ملفات النماذج المتاحة.',
+          items: [
+            '**افتح LM Studio ← علامة التبويب My Models ← انقر قائمة النقاط الثلاث للنموذج الفاشل ← اختر "Delete model"** (يحتفظ بالملف، ويحذف السجل)',
+            '**ابحث عن النموذج نفسه في مستكشف النماذج وأعد تنزيله** -- سيعيد LM Studio تسجيله',
+            '**بديل: أغلق LM Studio، وانتقل إلى `~/.cache/lm-studio/models/`، واحذف مجلد النموذج المحدد وأعد تنزيله**',
+          ],
+          codeBlock: '# Limpiar manualmente la caché de modelos de LM Studio (macOS/Linux)\nrm -rf ~/.cache/lm-studio/models/lmstudio-community/<model-name>',
+          codeLanguage: 'bash',
+        },
+        error7: {
+          id: 'error-7-cuda-errors',
+          title: 'الخطأ 7: أخطاء تهيئة CUDA / ROCm',
+          content: '**أخطاء CUDA وROCm تشير إلى عدم توافق إصدار البرنامج المشغّل/المكتبة -- حدّث برنامجك المشغّل إلى الإصدار الأدنى المطلوب.**',
+          items: [
+            '**"إصدار برنامج تشغيل CUDA غير كافٍ"**: حدّث البرنامج المشغّل NVIDIA. الحد الأدنى لـ llama.cpp هو CUDA 11.3 / البرنامج المشغّل 450.80.',
+            '**"لا توجد صورة kernel متاحة للتنفيذ"**: بنية GPU لديك غير مدعومة. سلسلة GTX 900 (Maxwell) وما قبلها غير مدعومة في إصدارات CUDA الحديثة.',
+            '**AMD ROCm "HSA_STATUS_ERROR_INVALID_ISA"**: اضبط `HSA_OVERRIDE_GFX_VERSION=10.3.0` (لـ RX 6000) أو `11.0.0` (لـ RX 7000) قبل بدء Ollama.',
+            '**تحقق من إصدار CUDA**: شغّل `nvcc --version` أو `nvidia-smi | grep CUDA`.',
+          ],
+        },
+        error8: {
+          id: 'error-8-garbled-output',
+          title: 'الخطأ 8: مخرجات تالفة أو متكررة أو بلا معنى',
+          content: [
+            '**المخرجات التالفة تعني دائمًا تقريبًا أنك تستخدم نموذجًا أساسيًا بدلًا من نسخة instruct/chat.** تولّد النماذج الأساسية إكمالات نص خام، وليس إجابات عن الأسئلة.',
+            'النماذج الأساسية (مثل `llama3.1:8b`) ليست مضبوطة للمحادثة، وعند طرح سؤال عليها، تولّد إكمالات خام تبدو غير متماسكة. استخدم دائمًا نسخة instruct: `llama3.1:8b-instruct`. راجع [كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio) لطريقة قائمة على الواجهة الرسومية لتبديل نسخ النماذج.',
+            'في Ollama، يشير الوسم الافتراضي لمعظم النماذج إلى نسخة instruct بالفعل. إذا نزّلت يدويًا من Hugging Face، فتأكد من أن اسم الملف يتضمن "Instruct" أو "chat".',
+          ],
+        },
+        error9: {
+          id: 'error-9-port-already-in-use',
+          title: 'الخطأ 9: "العنوان قيد الاستخدام بالفعل" -- تعارض المنفذ',
+          content: '**"العنوان قيد الاستخدام بالفعل" يعني أن عملية أخرى تشغل المنفذ 11434 (Ollama) أو 1234 (LM Studio).** اعثر على العملية المتعارضة وأنهِها.',
+          codeBlock: '# Encontrar qué usa el puerto 11434 (Ollama)\nlsof -i :11434\n\n# Terminar por PID\nkill -9 <PID>\n\n# O cambiar el puerto de Ollama\nexport OLLAMA_HOST=0.0.0.0:11435\nollama serve',
+          codeLanguage: 'bash',
+        },
+        error10: {
+          id: 'error-10-model-stops-mid-response',
+          title: 'الخطأ 10: يتوقف النموذج في منتصف الاستجابة',
+          content: '**التوقف في منتصف الاستجابة سببه بلوغ حدود طول السياق أو ضبط `num_predict` منخفضًا جدًا.** قيمة `num_predict` الافتراضية في كثير من الإعدادات هي 128 token -- تكفي لجملة أو جملتين فقط.',
+          items: [
+            '**زِد num_predict**: يحدد هذا المعامل أقصى عدد token للتوليد. القيمة الافتراضية غالبًا 128. زِدها: في Ollama، أضف `PARAMETER num_predict 2048` إلى الـ Modelfile.',
+            '**تحقق من نافذة السياق**: إذا كانت محادثتك طويلة جدًا، فقد يكون النموذج قد بلغ حد سياقه. ابدأ جلسة جديدة أو استخدم نموذجًا بنافذة سياق أكبر (يدعم Llama 3.2 3B سياق 128K).',
+            '**تحقق من token التوقف**: تتضمن بعض ملفات Modelfile تسلسلات توقف تنهي التوليد مبكرًا. راجع موجّه النظام والقالب بحثًا عن أنماط توقف غير متوقعة.',
+          ],
+        },
+        relatedReading: {
+          title: 'قراءات ذات صلة',
+          items: [
+            '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) -- لماذا Q4_K_M هو الافتراضي وكيف يؤثر التكميم في RAM',
+            '[دليل عتاد LLM المحلي 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- متطلبات العتاد لتشغيل نماذج 7B–70B',
+            '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- دليل التثبيت والإعداد',
+            '[Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) -- مقارنة أشهر أداتين لـ LLM المحلي',
+            '[كيفية تشغيل نماذج LLM المحلية على حاسوب محمول](/ar/local-llms/local-llm-on-laptop) -- تحسين حراري وبطارية خاص بالحواسيب المحمولة',
+            '[أفضل نماذج LLM المحلية للمبتدئين](/ar/local-llms/best-beginner-local-llm-models) -- توصيات نماذج لذاكرة 8 GB من RAM',
+            '[أفضل نماذج LLM المحلية للبرمجة 2026](/ar/local-llms/best-local-llms-for-coding) -- مقارنة Qwen3-Coder مقابل DeepSeek',
+          ],
+        },
+        moreTroubleshooting: {
+          title: 'أين تجد مزيدًا من المساعدة',
+          content: 'للمشكلات الخاصة بعتاد الحواسيب المحمولة (الخنق الحراري، واستهلاك البطارية)، راجع [كيفية تشغيل نماذج LLM المحلية على حاسوب محمول](/ar/local-llms/local-llm-on-laptop). لأسئلة إعداد الأمان والخصوصية، راجع [قائمة تحقق أمان وخصوصية LLM المحلي](/ar/local-llms/local-llm-security-privacy-checklist). صفحة مشكلات Ollama على GitHub (github.com/ollama/ollama/issues) ومنتدى r/LocalLLaMA الفرعي هما أكثر موارد المجتمع نشاطًا للأخطاء الخاصة بالنماذج.',
+        },
+        commonMistakes: {
+          title: 'أخطاء شائعة في استكشاف أخطاء LLM المحلي وإصلاحها',
+          items: [
+            '**الخلط بين أخطاء OOM وأعطال العتاد** -- الخطأ يعني أن RAM أصغر من أن تستوعب النموذج، وليس أن العتاد معطّل. الحل: استخدم تكميم Q4_K_M أو نموذجًا أصغر.',
+            '**عدم التحقق من حمل النظام** -- تتدهور سرعة الاستدلال بشكل كبير عندما تستهلك تطبيقات أخرى CPU/GPU. أغلق المتصفح، ومشغّل الفيديو، والعمليات في الخلفية قبل قياس الأداء.',
+            '**تجاهل عدم توافق إصدار البرنامج المشغّل** -- يتطلب NVIDIA CUDA إصدارات برنامج مشغّل محددة لكل إصدار CUDA. تحقق من مخرجات `nvidia-smi`؛ يجب أن يكون إصدار البرنامج المشغّل ≥450.80 لـ CUDA 11.x.',
+            '**استخدام اسم نموذج خاطئ في Ollama** -- `llama3.2` و`llama3.2:3b` وسمان مختلفان في Ollama. شغّل `ollama list` لرؤية الأسماء الدقيقة للنماذج المنزّلة.',
+            '**عدم إعادة تشغيل Ollama بعد تحديث البرنامج المشغّل** -- يكتشف Ollama GPU عند الإقلاع. بعد تحديث برامج تشغيل NVIDIA أو ROCm، أعد تشغيل Ollama بالكامل (`ollama serve`) لإعادة اكتشاف GPU.',
+          ],
+          image: '/images/troubleshooting-debug-steps-es.svg',
+          imageCaption: 'عملية تصحيح أخطاء LLM المحلي في 5 خطوات: تحقق من RAM ← تحقق من GPU ← تحقق من الخادم ← تحقق من النموذج ← تحقق من جودة المخرجات. توقّف عند أول خطوة فاشلة.',
+        },
+        sources: {
+          id: 'sources',
+          title: 'المصادر',
+          items: [
+            'NVIDIA. (2024). "CUDA Toolkit Release Notes." https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/ -- المتطلبات الرسمية لإصدار برنامج تشغيل CUDA لكل إصدار.',
+            'Ollama. (2026). "Ollama Troubleshooting." https://github.com/ollama/ollama/blob/main/docs/troubleshooting.md -- التوثيق الرسمي لـ Ollama للأخطاء الشائعة.',
+            'AMD. (2024). "ROCm Installation Guide." https://rocm.docs.amd.com/projects/install-on-linux/en/latest/ -- التثبيت الرسمي لـ AMD ROCm ودعم GPU لـ Linux.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'إصلاح أخطاء LLM المحلي في 2026: 10 مشكلات شائعة في Ollama وLM Studio وvLLM',
+        'description': 'صحّح التعليق بسبب نقص الذاكرة، وعدم اكتشاف GPU، ورفض الاتصال، والمخرجات التالفة في Ollama وLM Studio. أوامر دقيقة: OLLAMA_GPU_LAYERS، وollama rm، وnvidia-smi.',
+        'url': 'https://www.promptquorum.com/ar/local-llms/troubleshooting-local-llm-setup',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-16',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'inLanguage': 'ar',
+        'about': [
+          { '@type': 'Thing', 'name': 'استكشاف أخطاء Ollama وإصلاحها' },
+          { '@type': 'Thing', 'name': 'أخطاء LM Studio' },
+          { '@type': 'Thing', 'name': 'LLM محلي بنفاد الذاكرة' },
+          { '@type': 'Thing', 'name': 'OLLAMA_GPU_LAYERS' },
+          { '@type': 'Thing', 'name': 'عدم اكتشاف GPU لـ LLM محلي' },
+        ],
+        'proficiencyLevel': 'Beginner',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'تصحيح أخطاء إعداد LLM المحلي',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'تصحيح أخطاء نفاد الذاكرة', 'text': 'بدّل إلى تكميم أصغر (Q4_K_M) أو نموذج أصغر. تحقق من RAM بـ free -h.' },
+          { '@type': 'HowToStep', 'name': 'تفعيل اكتشاف GPU', 'text': 'حدّث برامج التشغيل (NVIDIA 525+)، اضبط OLLAMA_GPU_LAYERS=999، تحقق بـ nvidia-smi.' },
+          { '@type': 'HowToStep', 'name': 'تسريع الاستدلال البطيء', 'text': 'تأكد من نشاط GPU بـ ollama ps، قلّل حجم النموذج أو استخدم تكميم Q4_K_M.' },
+          { '@type': 'HowToStep', 'name': 'تصحيح رفض الاتصال', 'text': 'ابدأ Ollama بـ ollama serve أو أعد تشغيل خدمة systemd. تحقق بـ curl localhost:11434.' },
+          { '@type': 'HowToStep', 'name': 'حل النموذج غير موجود', 'text': 'اسرد النماذج بـ ollama list، نزّل المفقودة بـ ollama pull، تحقق من الأسماء والوسوم الدقيقة.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ar',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'ما الذي يسبب أخطاء OOM في نماذج LLM المحلية؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'تحدث أخطاء OOM (نفاد الذاكرة) عندما يتجاوز حجم النموذج RAM أو VRAM المتاحة. الحل: بدّل إلى نموذج أصغر (`ollama run llama3.2:3b` يتطلب ~2.5 GB) أو استخدم مستوى تكميم أقل. شغّل `free -h` (Linux/macOS) للتحقق من RAM المتاحة قبل تنزيل نماذج أكبر من 7B.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'لماذا لا يكتشف Ollama وحدة GPU لدي؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'NVIDIA: ثبّت البرنامج المشغّل 525+ وCUDA Toolkit 11.3+، ثم أعد تشغيل Ollama. AMD على Linux: ثبّت ROCm 5.7+. تحقق من الاكتشاف بـ `nvidia-smi` (NVIDIA) أو `rocm-smi` (AMD). Apple Silicon: يستخدم Ollama Metal افتراضيًا -- لا حاجة لتكوين. اضبط OLLAMA_GPU_LAYERS=999 لفرض التفريغ الكامل على GPU.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'لماذا يُرفض المنفذ 11434 عند تشغيل Ollama؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'يُرفض المنفذ 11434 عندما لا يكون خادم Ollama قيد التشغيل. ابدأه بـ `ollama serve`، ثم تحقق بـ `curl http://localhost:11434` -- الاستجابة المتوقعة هي "Ollama is running". على Linux، أعد تشغيل خدمة systemd: `systemctl restart ollama`.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'لماذا يعمل LLM المحلي لدي على CPU بدلًا من GPU؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'يلجأ Ollama إلى CPU إذا لم يكتشف GPU أو إذا كانت VRAM غير كافية. اضبط متغير البيئة `OLLAMA_GPU_LAYERS=999` قبل بدء Ollama لفرض أقصى تفريغ على GPU. تحقق أولًا من رؤية GPU بـ `nvidia-smi`. إذا كانت VRAM غير كافية للنموذج الكامل، يقسّم Ollama الطبقات تلقائيًا بين GPU وCPU.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هي أكثر الأخطاء شيوعًا في نشر LLM المحلي؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'أكثر 10 أخطاء شيوعًا لـ LLM المحلي هي: (1) OOM/نفاد الذاكرة، (2) عدم اكتشاف GPU، (3) رفض المنفذ 11434، (4) CPU بطيئة كبديل، (5) النموذج غير موجود، (6) تنزيل جزئي تالف، (7) توقف التوليد مبكرًا، (8) عدم توافق إصدار CUDA، (9) تجاوز طول السياق، (10) وسم نموذج خاطئ. لكلٍّ منها أمر تصحيح محدد في Ollama وLM Studio.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أصلح تنزيل نموذج Ollama تالفًا؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'احذف النموذج المخزّن مؤقتًا وأعد تنزيله: `ollama rm <اسم-النموذج>` ثم `ollama pull <اسم-النموذج>`. تحدث عمليات التنزيل التالفة عند مقاطعة التنزيل. لا يكتشف Ollama دائمًا عمليات التنزيل الجزئية تلقائيًا.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أتحقق من أن Ollama يستخدم وحدة GPU لدي؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'شغّل `ollama ps` أثناء تحميل نموذج -- تُظهر المخرجات أي طبقات على GPU مقابل CPU. بدلًا من ذلك، راقب استخدام GPU بـ `nvidia-smi -l 1` (يُحدّث كل ثانية). إذا بقي استخدام GPU عند 0%، فإن Ollama يعمل على CPU فقط -- تحقق من تثبيت البرنامج المشغّل والتوافق مع CUDA.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'لماذا يتوقف توليد LLM قبل الأوان؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'عادةً ما يكون التوقف المبكر بسبب token توقف في الـ Modelfile. تحقق من موجّه النظام والقالب بحثًا عن تسلسلات توقف غير متوقعة. تحقق أيضًا من معامل `num_predict` -- إذا كان مضبوطًا منخفضًا جدًا، فسيقتطع Ollama المخرجات عند ذلك العدد من token. القيمة الافتراضية -1 (غير محدود).' }
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'أساسيات استكشاف أخطاء LLM المحلي وإصلاحها',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'أخطاء OOM', 'description': 'صحّح التعليق بسبب نقص الذاكرة بالتبديل إلى تكميم Q4_K_M أو نماذج أصغر. تحقق من RAM بـ free -h قبل تنزيل النماذج.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'اكتشاف GPU', 'description': 'فعّل GPU بتثبيت برامج تشغيل NVIDIA 525+، أو CUDA 11.3+، أو ROCm 5.7+ لـ AMD. اضبط OLLAMA_GPU_LAYERS=999 للتفريغ الكامل على GPU.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'استدلال بطيء', 'description': 'تأكد من نشاط GPU بـ ollama ps. إذا كان يستخدم CPU فقط، قلّل حجم النموذج أو استخدم تكميم Q4_K_M.' },
+        ],
+      },
+      gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
+      gammaDescription: 'يغطي العرض التقديمي التالي: أكثر 10 أخطاء شيوعًا في إعداد LLM المحلي (نفاد الذاكرة، وعدم اكتشاف GPU، والاستدلال البطيء، ورفض الاتصال، والمخرجات التالفة)، ومتطلبات RAM لنماذج 3B–14B بتكميم Q4_K_M وQ8_0، وعملية تصحيح في 5 خطوات، وأوامر Ollama لكل تصحيح. نزّل ملف PDF كبطاقة مرجعية لاستكشاف أخطاء LLM المحلي وإصلاحها.',
+    },
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',

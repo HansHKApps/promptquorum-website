@@ -500,6 +500,332 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       }
     },
+    ar: {
+      theme: 'Best Models',
+      title: 'أفضل نماذج LLM المحلية متعددة اللغات 2026: Qwen3 مقابل Mistral',
+      seoTitle: 'أفضل نماذج LLM المحلية متعددة اللغات 2026: Qwen3 مقابل Mistral',
+      intro: 'Qwen3 هو أقوى عائلة نماذج LLM محلية متعددة اللغات في 2026، بدعم أصلي لـ 29 لغة، بما في ذلك الصينية واليابانية والكورية والعربية وجميع اللغات الأوروبية الرئيسية. للغات الأوروبية، Mistral وLlama 3.x تنافسيان. للغات الآسيوية (اليابانية، الكورية، الصينية)، يتفوق Qwen3 على جميع البدائل في كل حجم نموذج مماثل.',
+      metaDescription: 'يهيمن Qwen3 على اللغات الآسيوية (أفضل بنسبة 15-25% من Llama في JMT-bench). Mistral تنافسي في اللغات الأوروبية. مقارنة اختبارات الأداء -- أبريل 2026.',
+      publishDate: '2026-04-04',
+      readTime: '9 دقائق قراءة',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'LLM محلي متعدد اللغات',
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'أي نماذج LLM المحلية تدعم عدة لغات؟', anchor: '#which-llms-support-multiple-languages' },
+        { label: 'أفضل النماذج للغات الأوروبية', anchor: '#best-models-for-european-languages' },
+        { label: 'أفضل النماذج للغات الآسيوية', anchor: '#best-models-for-asian-languages' },
+        { label: 'أفضل النماذج للعربية ولغات الشرق الأوسط', anchor: '#best-models-for-arabic' },
+        { label: 'كيفية تقييم الجودة متعددة اللغات', anchor: '#how-to-benchmark-multilingual-quality' },
+        { label: 'جدول المقارنة متعدد اللغات', anchor: '#multilingual-comparison-table' },
+        { label: 'أخطاء شائعة مع النماذج متعددة اللغات', anchor: '#common-mistakes' },
+        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**أفضل عائلة متعددة اللغات**: Qwen3 -- 29 لغة أصلية، وأعلى درجات في اختبارات الأداء للغات غير الإنجليزية في كل حجم نموذج.',
+            '**اللغات الأوروبية (الألمانية، الفرنسية، الإسبانية، الإيطالية)**: Mistral وLlama 3.x تنافسان Qwen3 للغات الاتحاد الأوروبي؛ يبقى Qwen3 متصدرًا في مهام التسجيل الرسمي والشيفرة المختلطة.',
+            '**اليابانية والكورية**: Qwen3 أقوى بشكل ملحوظ -- أفضل بنسبة 15-25% في اختبارات الأداء الخاصة باللغة من Llama 3.x في نفس الحجم.',
+            '**الصينية (المبسطة والتقليدية)**: Qwen3 هو النموذج المهيمن -- مدرَّب على أكبر مدوّنة صينية لأي نموذج مفتوح الأوزان.',
+            'اعتبارًا من أبريل 2026، لا يضاهي أي نموذج قابل للتشغيل محليًا جودة GPT-5.5 أو Claude Opus 4.8 في اليابانية أو الكورية للمهام المعقدة. Qwen3 هو أفضل خيار متاح محليًا.',
+          ],
+        },
+        whichSupport: {
+          title: 'أي نماذج LLM المحلية تدعم فعلًا عدة لغات؟',
+          content: [
+            '**"دعم" لغة يعني أكثر من توليد نص بتلك اللغة.** الدعم الحقيقي متعدد اللغات يتطلب: بيانات تدريب باللغة (لا مجرد ترجمة)، وترميزًا محسّنًا لنص اللغة، وضبطًا دقيقًا على اتباع التعليمات بتلك اللغة.',
+            'النماذج التي تدّعي دعمًا متعدد اللغات لكنها دُرّبت أساسًا بالإنجليزية تنتج مخرجات أقل جودة في اللغات الأخرى -- أخطاء نحوية وعدم اتساق ثقافي ودقة أقل في اتباع التعليمات. اعتبارًا من أبريل 2026، يقدّم Qwen3 وحده دعمًا حقيقيًا بجودة أصلية للغات الآسيوية محليًا.',
+          ],
+          rows: [
+            { 'Familia de modelo': 'Qwen3', 'Idiomas nativos': '29', 'Soporte asiático fuerte': 'نعم', 'Soporte europeo fuerte': 'نعم', 'Soporte árabe': 'نعم' },
+            { 'Familia de modelo': 'Llama 3.x', 'Idiomas nativos': '8', 'Soporte asiático fuerte': 'محدود', 'Soporte europeo fuerte': 'جيد', 'Soporte árabe': 'محدود' },
+            { 'Familia de modelo': 'Mistral', 'Idiomas nativos': '5', 'Soporte asiático fuerte': 'لا', 'Soporte europeo fuerte': 'جيد', 'Soporte árabe': 'محدود' },
+            { 'Familia de modelo': 'Gemma 3', 'Idiomas nativos': '35+', 'Soporte asiático fuerte': 'متوسط', 'Soporte europeo fuerte': 'جيد', 'Soporte árabe': 'متوسط' },
+            { 'Familia de modelo': 'Phi-4', 'Idiomas nativos': '~10', 'Soporte asiático fuerte': 'محدود', 'Soporte europeo fuerte': 'متوسط', 'Soporte árabe': 'محدود' },
+          ],
+          columns: ['Familia de modelo', 'Idiomas nativos', 'Soporte asiático fuerte', 'Soporte europeo fuerte', 'Soporte árabe'],
+        },
+        european: {
+          title: 'أي نماذج LLM المحلية تعمل بشكل أفضل للغات الأوروبية؟',
+          content: [
+            '**للألمانية والفرنسية والإسبانية والإيطالية والبرتغالية والهولندية والبولندية -- Qwen3 وMistral وLlama 3.x تنتج نتائج مقبولة.** يتميز Mistral بقوة خاصة في الفرنسية لأن Mistral AI شركة فرنسية مع تركيز على بيانات التدريب الفرنسية. اعتبارًا من أبريل 2026، تُظهر اختبارات الأداء بالألمانية أن Qwen3 7B يتفوق على Mistral Small بنسبة 8-12% في مهام اتباع التعليمات بالألمانية.',
+            'لحالات الاستخدام الحساسة لحماية البيانات في أوروبا، يُفضَّل تشغيل نموذج محلي (من أي عائلة) على واجهات API السحابية لأسباب إقامة البيانات. تستفيد الشركات التي تستخدم الذكاء الاصطناعي بموجب لوائح الذكاء الاصطناعي الإقليمية من الاستدلال المحلي لتطبيقات الذكاء الاصطناعي عالية المخاطر. Mistral AI، كونها شركة أوروبية، تُفضَّل لدى بعض المؤسسات الأوروبية لأسباب الحوكمة بغض النظر عن اختبار الأداء.',
+          ],
+          items: [
+            '**الألمانية**: Qwen3 7B يتصدر في اتباع التعليمات؛ Mistral Small تنافسي في النص الرسمي.',
+            '**الفرنسية**: Mistral Small تنافسي مع Qwen3 7B؛ كلاهما أعلى بكثير من Llama 3.3 8B.',
+            '**الإسبانية، الإيطالية، البرتغالية**: Qwen3 7B متقدم قليلًا؛ Llama 3.3 8B تنافسي.',
+            '**البولندية، التشيكية، الرومانية**: Qwen3 7B يتصدر؛ انخفاض جودة ملحوظ لـ Mistral Small.',
+          ],
+        },
+        asian: {
+          title: 'أي نماذج LLM المحلية تعمل بشكل أفضل لليابانية والكورية والصينية؟',
+          content: [
+            '**يهيمن Qwen3 على الأداء في اللغات الآسيوية.** طُوِّرت عائلة النماذج من Alibaba ببيانات تدريب صينية ضخمة وضبط دقيق صريح متعدد اللغات لليابانية والكورية.',
+            'لليابانية: يسجّل Qwen3 7B أعلى بنسبة 15-20% من Llama 3.3 8B في JMT-bench (اختبار أداء اتباع التعليمات باليابانية). للكورية: يتفوق Qwen3 على البدائل بهوامش مماثلة. للصينية (المبسطة): Qwen3 في فئة خاصة به بين النماذج القابلة للتشغيل محليًا.',
+            'اعتبارًا من أبريل 2026، ظلت وزارة الاقتصاد والتجارة والصناعة اليابانية (METI) تروّج للتطوير المحلي للذكاء الاصطناعي، وتفضّل بعض الشركات اليابانية النماذج المنشورة محليًا لسيادة البيانات. Qwen3 هو الخيار العملي للاستدلال المحلي باليابانية.',
+          ],
+          rows: [
+            { 'Idioma': 'الصينية (المبسطة)', 'Mejor modelo': 'Qwen3 (أي حجم)', 'Segundo mejor': 'Gemma 3', 'Notas': 'Qwen3 يهيمن -- أكبر مدوّنة تدريب صينية' },
+            { 'Idioma': 'اليابانية', 'Mejor modelo': 'Qwen3 7B+', 'Segundo mejor': 'Gemma 3 9B', 'Notas': 'فرق 15-20% عن Llama في JMT-bench' },
+            { 'Idioma': 'الكورية', 'Mejor modelo': 'Qwen3 7B+', 'Segundo mejor': 'Gemma 3 9B', 'Notas': 'Qwen3 أقوى بشكل ملحوظ' },
+            { 'Idioma': 'الصينية التقليدية', 'Mejor modelo': 'Qwen3', 'Segundo mejor': 'Llama 3.3 8B', 'Notas': 'Qwen3 مدرَّب على المبسطة والتقليدية' },
+          ],
+          columns: ['Idioma', 'Mejor modelo', 'Segundo mejor', 'Notas'],
+        },
+        arabic: {
+          title: 'أي نماذج LLM المحلية تعمل بشكل أفضل للعربية؟',
+          content: [
+            '**تطرح العربية تحديًا فريدًا بسبب كتابتها من اليمين إلى اليسار وتعقيدها الصرفي وكثرة لهجاتها (العربية الفصحى الحديثة مقابل** المصرية والخليجية والشامية). اعتبارًا من أبريل 2026، Qwen3 وGemma 3 هما أقوى النماذج العربية القابلة للتشغيل محليًا. كما تقدّم نماذج عربية سيادية مثل Jais وALLaM وFalcon دعمًا محليًا قويًا للعربية.',
+            'لاتباع التعليمات بالفصحى (العربية الفصحى الحديثة)، ينتج Qwen3 14B والإصدارات الأكبر جودة مقبولة. للعربية العامية، تؤدي جميع النماذج المحلية أسوأ بشكل ملحوظ من النماذج السحابية مثل GPT-5.5، التي لها تغطية أكبر للهجات العربية.',
+          ],
+        },
+        howToBenchmark: {
+          title: 'كيف تقيّم الجودة متعددة اللغات في نماذج LLM المحلية؟',
+          content: 'اختبارات الأداء القياسية (MMLU، HumanEval) بالإنجليزية فقط. لتقييم الجودة متعددة اللغات، استخدم هذه المقاربات:',
+          numberedItems: [
+            'شغّل MGSM (Multilingual Grade School Math) -- يختبر الاستدلال الرياضي بـ 10 لغات. متاح على Hugging Face: datasets/juletxara/mgsm.',
+            'شغّل m-MMLU -- النسخة متعددة اللغات من MMLU التي تغطي 57 مادة بعدة لغات.',
+            'للجودة الحوارية: اكتب 10 محفّزات اختبار بلغتك المستهدفة تشمل أنواع مهام مختلفة (تلخيص، أسئلة وأجوبة، ترجمة، كتابة إبداعية). قيّم الإجابات يدويًا أو مع متحدث أصلي.',
+            'لليابانية تحديدًا: استخدم JMT-bench (github.com/Stability-AI/lm-evaluation-harness)، الذي يغطي اتباع التعليمات باليابانية.',
+            'قارن نموذجك المحلي بواجهات API السحابية باستخدام [PromptQuorum](/) -- أرسل نفس المحفّز متعدد اللغات إلى نموذج Ollama المحلي وإلى GPT-5.5 في آنٍ واحد لقياس فرق الجودة في حالة استخدامك المحددة.',
+          ],
+        },
+        comparisonTable: {
+          title: 'مقارنة نماذج LLM المحلية متعددة اللغات: Qwen3 مقابل Llama 3.x مقابل Mistral مقابل Gemma 3',
+          rows: [
+            { 'Grupo de idioma': 'الصينية (أي لهجة)', 'Qwen3 7B': '★★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'اليابانية', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'الكورية', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'الفرنسية / الألمانية', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'الإسبانية / الإيطالية', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'العربية (الفصحى)', 'Qwen3 7B': '★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+          ],
+          columns: ['Grupo de idioma', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          image: 'multilingual-llm-comparison-en.svg',
+          imageCaption: 'مقارنة نماذج LLM متعددة اللغات 2026: Qwen3 7B يتصدر في جميع اللغات الآسيوية (الصينية، اليابانية، الكورية بتقييمات ★★★★-★★★★★). Mistral Small يضاهي Qwen3 في اللغات الأوروبية (الفرنسية/الألمانية). تقييمات النجوم (1-5) تعكس اختبارات أداء 2026.',
+        },
+        commonMistakes: {
+          title: 'ما الأخطاء الشائعة عند استخدام نماذج LLM المحلية متعددة اللغات؟',
+          faqs: [
+            {
+              q: 'استخدام نموذج ذي أولوية للإنجليزية لمهام باليابانية أو الصينية',
+              a: 'ينتج Llama 3.3 8B وMistral Small مخرجات يابانية وصينية معقولة نحويًا لكنها غير متسقة دلاليًا. الأخطاء غير واضحة دون معرفة أصلية باللغة. لمهام اليابانية أو الصينية، استخدم دائمًا Qwen3 -- فرق الجودة ملحوظ وقابل للقياس.',
+            },
+            {
+              q: 'كتابة المحفّزات بالإنجليزية بينما المهمة بلغة أخرى',
+              a: 'النماذج المحلية ذات الدعم الأصلي متعدد اللغات تنتج نتائج أفضل عندما يكون محفّز النظام وتعليمات المستخدم والمحتوى كلها باللغة المستهدفة نفسها. مزج تعليمات بالإنجليزية مع محتوى بالصينية ينتج مخرجات أقل جودة من محفّز كامل بالصينية. اكتب محفّزات النظام باللغة المستهدفة للحصول على أفضل النتائج.',
+            },
+            {
+              q: 'افتراض أن نفس وسم النموذج يتعامل مع جميع النصوص بالتساوي',
+              a: 'تختلف كفاءة الترميز حسب النص. النصوص اللاتينية تستخدم ~3-4 أحرف لكل token؛ الأحرف الصينية غالبًا حرف واحد لكل token. "سياق 4K" يعني كميات مختلفة من المحتوى حسب اللغة. سياق 4096 token يحتوي على نحو 3,000 كلمة إنجليزية لكن نحو 2,000 حرف صيني فقط -- خطّط لأطوال السياق وفقًا لذلك.',
+            },
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'الأسئلة الشائعة حول نماذج LLM المحلية متعددة اللغات',
+          faqs: [
+            {
+              q: 'هل يمكنني تشغيل نموذج مضبوط لليابانية فقط محليًا؟',
+              a: 'نعم -- يحافظ مجتمع الذكاء الاصطناعي الياباني على عدة ضبطات دقيقة خاصة باليابانية لنماذج Qwen3 وLlama على Hugging Face. ابحث عن "Japanese instruct GGUF" على Hugging Face للاطلاع على الخيارات الحالية. حمّلها في LM Studio أو عبر `ollama create` بملف Modelfile مخصص.',
+            },
+            {
+              q: 'هل تقلّل القدرة متعددة اللغات من الجودة بالإنجليزية؟',
+              a: 'لا بشكل ملحوظ لـ Qwen3. تُظهر اختبارات الأداء أن Qwen3 7B يسجّل 74% في MMLU بالإنجليزية -- مماثل لـ Llama 3.3 8B بـ 73%. التدريب متعدد اللغات لا يضعف الأداء بالإنجليزية بشكل ملحوظ في هذا الحجم.',
+            },
+            {
+              q: 'أي نموذج أفضل لمهام الترجمة محليًا؟',
+              a: 'Qwen3 14B أو أعلى لترجمة عالية الجودة بين الإنجليزية والصينية واليابانية والكورية. للترجمة بين اللغات الأوروبية، ينتج Mistral Small 3.1 24B نتائج موثوقة. لأحمال الترجمة الإنتاجية على نطاق واسع، لا تزال واجهات API السحابية (DeepL، Google Translate) تتفوق على النماذج القابلة للتشغيل محليًا لمعظم أزواج اللغات.',
+            },
+            {
+              q: 'كيف أضبط اللغة في Ollama؟',
+              a: 'اكتب محفّزك باللغة المستهدفة. لا حاجة لأي معامل لغة خاص -- يكتشف النموذج لغة الإدخال. للحصول على مخرجات متسقة بلغة محددة، أضف محفّز نظام: "أنت مساعد مفيد. أجب دائمًا بالعربية." استخدم معامل system في Ollama: `ollama run qwen2.5:7b --system "أجب دائمًا باليابانية."`',
+            },
+            {
+              q: 'هل توجد نماذج LLM محلية متعددة اللغات ممتثلة لحماية البيانات للمؤسسات؟',
+              a: 'نعم. تشغيل Qwen3 أو Mistral محليًا بـ Ollama يبقي جميع البيانات في الموقع ودون اتصال بالكامل. لامتثال لوائح الذكاء الاصطناعي الإقليمية، يلغي الاستدلال المحلي قلق معالج البيانات الخارجي لتطبيقات الذكاء الاصطناعي عالية المخاطر. Mistral AI، ومقرها فرنسا، تُفضَّل لدى بعض المؤسسات لأسباب حوكمة البيانات حتى للنماذج المنشورة محليًا.',
+            },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'المصادر',
+          items: [
+            'التقرير التقني لـ Qwen3 -- qwenlm.github.io/blog/qwen2.5/',
+            'اختبار MGSM -- huggingface.co/datasets/juletxara/mgsm',
+            'التقييم الياباني JMT-bench -- github.com/Stability-AI/lm-evaluation-harness',
+            'حماية البيانات والذكاء الاصطناعي المحلي -- artificialintelligenceact.eu',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'url': 'https://www.promptquorum.com/ar/local-llms/multilingual-local-llms',
+        'headline': 'أفضل نماذج LLM المحلية متعددة اللغات 2026: Qwen3 مقابل Mistral',
+        'description': 'يهيمن Qwen3 على اللغات الآسيوية (أفضل بنسبة 15-25% من Llama في JMT-bench). Mistral تنافسي في اللغات الأوروبية. مقارنة اختبارات الأداء وتوصيات -- أبريل 2026.',
+        'image': 'https://www.promptquorum.com/images/multilingual-llm-comparison-en.svg',
+        'datePublished': '2026-04-04',
+        'author': {
+          '@type': 'Person',
+          'name': 'Hans Kuepper'
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+          'url': 'https://www.promptquorum.com'
+        },
+        'about': [
+          { '@type': 'Thing', 'name': 'Qwen3' },
+          { '@type': 'Thing', 'name': 'Llama 3.x' },
+          { '@type': 'Thing', 'name': 'Mistral Small' },
+          { '@type': 'Thing', 'name': 'Gemma 3' }
+        ],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'llama.cpp' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'url': 'https://www.promptquorum.com/ar/local-llms/multilingual-local-llms',
+        'name': 'كيفية تقييم الجودة متعددة اللغات في نماذج LLM المحلية',
+        'step': [
+          {
+            '@type': 'HowToStep',
+            'position': 1,
+            'name': 'تشغيل MGSM للاستدلال الرياضي متعدد اللغات',
+            'text': 'شغّل MGSM (Multilingual Grade School Math) -- يختبر الاستدلال الرياضي بـ 10 لغات. متاح على Hugging Face: datasets/juletxara/mgsm.'
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 2,
+            'name': 'تشغيل m-MMLU للمعرفة العامة',
+            'text': 'شغّل m-MMLU -- النسخة متعددة اللغات من MMLU التي تغطي 57 مادة بعدة لغات.'
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 3,
+            'name': 'إنشاء محفّزات اختبار باللغة المستهدفة',
+            'text': 'اكتب 10 محفّزات اختبار بلغتك المستهدفة تشمل أنواع مهام مختلفة (تلخيص، أسئلة وأجوبة، ترجمة، كتابة إبداعية). قيّم الإجابات يدويًا أو مع متحدث أصلي.'
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 4,
+            'name': 'استخدام JMT-bench لليابانية',
+            'text': 'لليابانية تحديدًا: استخدم JMT-bench (github.com/Stability-AI/lm-evaluation-harness)، الذي يغطي اتباع التعليمات باليابانية.'
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 5,
+            'name': 'المقارنة مع واجهات API السحابية',
+            'text': 'قارن نموذجك المحلي بواجهات API السحابية باستخدام PromptQuorum -- أرسل نفس المحفّز متعدد اللغات إلى نموذج Ollama المحلي وإلى GPT-5.5 في آنٍ واحد لقياس فرق الجودة في حالة استخدامك المحددة.'
+          }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'url': 'https://www.promptquorum.com/ar/local-llms/multilingual-local-llms',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل نموذج مضبوط لليابانية فقط محليًا؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم -- يحافظ مجتمع الذكاء الاصطناعي الياباني على عدة ضبطات دقيقة خاصة باليابانية لنماذج Qwen3 وLlama على Hugging Face. ابحث عن "Japanese instruct GGUF" على Hugging Face للاطلاع على الخيارات الحالية. حمّلها في LM Studio أو عبر `ollama create` بملف Modelfile مخصص.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تقلّل القدرة متعددة اللغات من الجودة بالإنجليزية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا بشكل ملحوظ لـ Qwen3. تُظهر اختبارات الأداء أن Qwen3 7B يسجّل 74% في MMLU بالإنجليزية -- مماثل لـ Llama 3.3 8B بـ 73%. التدريب متعدد اللغات لا يضعف الأداء بالإنجليزية بشكل ملحوظ في هذا الحجم.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي نموذج أفضل لمهام الترجمة محليًا؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 14B أو أعلى لترجمة عالية الجودة بين الإنجليزية والصينية واليابانية والكورية. للترجمة بين اللغات الأوروبية، ينتج Mistral Small 3.1 24B نتائج موثوقة. لأحمال الترجمة الإنتاجية على نطاق واسع، لا تزال واجهات API السحابية (DeepL، Google Translate) تتفوق على النماذج القابلة للتشغيل محليًا لمعظم أزواج اللغات.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أضبط اللغة في Ollama؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'اكتب محفّزك باللغة المستهدفة. لا حاجة لأي معامل لغة خاص -- يكتشف النموذج لغة الإدخال. للحصول على مخرجات متسقة بلغة محددة، أضف محفّز نظام: "أنت مساعد مفيد. أجب دائمًا بالعربية." استخدم معامل system في Ollama: `ollama run qwen2.5:7b --system "أجب دائمًا باليابانية."`'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل توجد نماذج LLM محلية متعددة اللغات ممتثلة لحماية البيانات للمؤسسات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. تشغيل Qwen3 أو Mistral محليًا بـ Ollama يبقي جميع البيانات في الموقع ودون اتصال بالكامل. لامتثال لوائح الذكاء الاصطناعي الإقليمية، يلغي الاستدلال المحلي قلق معالج البيانات الخارجي لتطبيقات الذكاء الاصطناعي عالية المخاطر. Mistral AI، ومقرها فرنسا، تُفضَّل لدى بعض المؤسسات لأسباب حوكمة البيانات حتى للنماذج المنشورة محليًا.'
+            }
+          }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'url': 'https://www.promptquorum.com/ar/local-llms/multilingual-local-llms',
+        'name': 'مقارنة اللغات لنماذج اللغة المحلية',
+        'description': 'مقارنة دعم اللغات في Qwen3 وLlama وMistral وGemma للصينية واليابانية والكورية والفرنسية والألمانية والإسبانية والإيطالية والعربية.',
+        'numberOfItems': 6,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'الصينية (أي لهجة)',
+            'description': 'Qwen3 7B يهيمن بـ 5 نجوم؛ Llama وMistral بأقل من نجمتين.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'اليابانية',
+            'description': 'Qwen3 7B يتصدر بـ 4 نجوم؛ Llama وMistral بأقل من نجمتين.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'الكورية',
+            'description': 'Qwen3 7B يتصدر بـ 4 نجوم؛ Llama وMistral بأقل من نجمتين.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': 'الفرنسية / الألمانية',
+            'description': 'Qwen3 وMistral يتنافسان بـ 4 نجوم لكل منهما؛ Llama وGemma بـ 3 نجوم.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 5,
+            'name': 'الإسبانية / الإيطالية',
+            'description': 'Qwen3 وMistral وGemma بـ 3-4 نجوم؛ Llama بـ 3 نجوم.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 6,
+            'name': 'العربية (الفصحى)',
+            'description': 'Qwen3 وGemma بـ 3 نجوم؛ Llama بنجمتين، Mistral بنجمة واحدة.'
+          }
+        ]
+      }
+    },
     pt: {
       theme: 'Best Models',
       title: 'Melhores LLMs Locais Multilíngues 2026: Qwen3 vs Mistral',

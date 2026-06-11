@@ -2292,6 +2292,398 @@ uptime`,
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ar: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-15',
+    theme: 'Hardware & Performance',
+    title: 'Mac Mini M5 كخادم ذكاء اصطناعي محلي 2026: LLM وWhisper وRAG ومساعد صوتي 24/7',
+    seoTitle: 'Mac Mini M5 كخادم ذكاء اصطناعي محلي 24/7',
+    intro: 'دليل شامل لاستخدام Mac Mini M5 Pro بسعة 64 GB كخادم ذكاء اصطناعي محلي صامت ودائم التشغيل. Ollama LLM، وWhisper STT، وخط معالجة RAG، ومنظومة مساعد صوتي. تكلفة الكهرباء 26–39 دولارًا سنويًا. إعداد خطوة بخطوة بأوامر حقيقية وحالات استخدام وتحليل تكاليف وتفصيل للتكلفة الإجمالية على مدى 5 سنوات.',
+    metaDescription: 'خادم ذكاء اصطناعي دائم التشغيل على Mac Mini M5: 25–55 واط، 26–39 دولارًا سنويًا للكهرباء. Ollama وWhisper STT وRAG ومساعد صوتي. صامت وبلا إعادة تشغيل.',
+    twitterDescription: 'Mac Mini M5 Pro بسعة 64 GB: خادم الذكاء الاصطناعي المحلي الصامت المثالي. LLM + Whisper + RAG دائم التشغيل مقابل 35 دولارًا سنويًا من الكهرباء. دليل إعداد كامل.',
+    publishDate: '2026-05-15',
+    dateModified: '2026-05-15',
+    ctaText: 'هل لديك بالفعل خادم الذكاء الاصطناعي Mac Mini يعمل؟ قارن إجابات Llama أو DeepSeek المحلي لديك مع GPT-4 وClaude وGemini و22 نموذجًا آخر في إرسال واحد عبر PromptQuorum — تحقق من أن إعدادك المستضاف ذاتيًا يقدم إجابات بجودة السحابة لحالات استخدامك.',
+    current_models_mentioned: ['Llama 3.3 8B', 'Mistral Small', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
+    current_hardware_mentioned: ['M5 Pro', 'M5 Max', 'Mac Mini M5'],
+    audience: 'المستخدمون الذين يريدون خادم ذكاء اصطناعي محلي دائم التشغيل للمنزل أو المكتب. مستخدمون تقنيون مرتاحون مع الطرفية.',
+    readTime: '12 دقيقة قراءة',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Mac Mini خادم ذكاء اصطناعي محلي',
+    targetKeywords: ['Mac Mini خادم ذكاء اصطناعي', 'LLM دائم التشغيل', 'بنية تحتية للذكاء الاصطناعي المحلي', 'Ollama دائم التشغيل', 'Mac Mini M5 خادم'],
+    leadAnswerBlock: '**Mac Mini M5 Pro بسعة 64 GB مقابل 1,199 دولارًا هو خادم الذكاء الاصطناعي دائم التشغيل الأفضل من حيث القيمة مقابل السعر في 2026. صامت (بلا مروحة تقريبًا)، استهلاك 25–55 واط، 26–39 دولارًا سنويًا للكهرباء. يشغّل نماذج Ollama 34B وWhisper STT وخط معالجة RAG ومساعدًا صوتيًا في آنٍ واحد. يسترد تكلفته مقابل 4 اشتراكات ChatGPT Plus خلال 15 شهرًا.**',
+    nextStep: {
+      text: 'هل أنت مستعد لإعداد Ollama على Mac Mini M5 لديك؟ إليك دليل التثبيت الكامل.',
+      label: 'Ollama على Mac — دليل الإعداد 2026 ←',
+      href: '/local-llms/ollama-on-mac-apple-silicon-setup-2026',
+    },
+    quickAnswerTop: {
+      ar: {
+        question: 'لماذا تستخدم Mac Mini M5 كخادم ذكاء اصطناعي محلي؟',
+        answer: 'صامت (بلا مروحة أو شبه صامت)، 25–55 واط (مقابل 300 واط+ لجهاز PC بـ GPU)، 26–39 دولارًا سنويًا للكهرباء (مقابل 263–394 دولارًا لـ GPU)، تكلفة لمرة واحدة 1,199 دولارًا. يشغّل Ollama 34B LLM + Whisper + RAG في آنٍ واحد على 64 GB من الذاكرة الموحدة.',
+        bullets: [
+          'M5 Pro 64 GB: 1,199 دولارًا — أفضل قيمة مقابل السعر',
+          'الاستهلاك: 25–55 واط (مقابل 300 واط+ لجهاز PC بـ GPU)',
+          'الكهرباء السنوية: 26–39 دولارًا (مقابل 263–394 دولارًا لـ GPU)',
+          'صامت: بلا مروحة تقريبًا تحت أحمال LLM المعتادة',
+          'API REST يمكن الوصول إليه من جميع أجهزة الشبكة المحلية LAN',
+          'يسترد تكلفته مقابل 4 اشتراكات ChatGPT Plus خلال ~15 شهرًا',
+        ],
+        updatedDate: '2026-05-15',
+      },
+    },
+    toc: [
+      { label: 'لماذا Mac Mini M5', anchor: '#why' },
+      { label: 'إعداد العتاد', anchor: '#hardware' },
+      { label: 'الإعداد الكامل للخادم', anchor: '#setup' },
+      { label: 'الوصول عن بُعد', anchor: '#remote-access' },
+      { label: 'حالات الاستخدام', anchor: '#usecases' },
+      { label: 'الاستهلاك والأداء الحراري', anchor: '#monitoring' },
+      { label: 'المراقبة والصيانة', anchor: '#maintenance' },
+      { label: 'التكلفة الإجمالية على مدى 5 سنوات', anchor: '#tco' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+      { label: 'مقالات ذات صلة', anchor: '#related' },
+    ],
+    sections: {
+      why: {
+        id: 'why',
+        title: 'لماذا يُعد Mac Mini M5 خادم الذكاء الاصطناعي المثالي',
+        content: [
+          'Mac Mini M5 Pro بسعة 64 GB مقابل 1,199 دولارًا هو العتاد الأفضل من حيث القيمة مقابل السعر في 2026 لخادم ذكاء اصطناعي محلي صامت ودائم التشغيل. يجمع بين الصمت شبه التام (بلا مروحة أو بمروحة بعدد دورات منخفض جدًا)، واستهلاك كهربائي منخفض (25–55 واط مقابل 300 واط+ لأجهزة PC بـ GPU)، وذاكرة موحدة كافية لتشغيل نماذج بـ 34B معامل أو عدة نماذج صغيرة في آنٍ واحد.',
+          'تكلفة الكهرباء السنوية 26–39 دولارًا مقابل 263–394 دولارًا للمكافئات المكتبية بـ GPU — أقل من شهرين من اشتراك واحد في ChatGPT Plus، كل عام، بشكل دائم.',
+        ],
+        tableFormat: true,
+        columns: ['الخاصية', 'Mac Mini M5 Pro', 'Desktop + RTX 4070', 'Raspberry Pi 5'],
+        rows: [
+          { 'الخاصية': 'تكلفة العتاد', 'Mac Mini M5 Pro': '1,199 دولارًا', 'Desktop + RTX 4070': '1,200 دولارًا+', 'Raspberry Pi 5': '80 دولارًا' },
+          { 'الخاصية': 'الاستهلاك (خمول)', 'Mac Mini M5 Pro': '8 واط', 'Desktop + RTX 4070': '50 واط', 'Raspberry Pi 5': '5 واط' },
+          { 'الخاصية': 'الاستهلاك (حمل LLM)', 'Mac Mini M5 Pro': '25–55 واط', 'Desktop + RTX 4070': '200–300 واط', 'Raspberry Pi 5': 'غير متاح (صغير جدًا)' },
+          { 'الخاصية': 'الكهرباء السنوية', 'Mac Mini M5 Pro': '26–39 دولارًا', 'Desktop + RTX 4070': '263–394 دولارًا', 'Raspberry Pi 5': '~5 دولارات' },
+          { 'الخاصية': 'مستوى الضجيج', 'Mac Mini M5 Pro': 'صامت', 'Desktop + RTX 4070': 'صاخب (3+ مراوح)', 'Raspberry Pi 5': 'صامت' },
+          { 'الخاصية': 'أقصى حجم نموذج', 'Mac Mini M5 Pro': '34B (Q5)', 'Desktop + RTX 4070': '8B (12 GB VRAM)', 'Raspberry Pi 5': '1–3B فقط' },
+          { 'الخاصية': 'موثوقية دائم التشغيل', 'Mac Mini M5 Pro': 'ممتازة', 'Desktop + RTX 4070': 'جيدة', 'Raspberry Pi 5': 'ممتازة' },
+          { 'الخاصية': 'الحجم المادي', 'Mac Mini M5 Pro': '13×13 سم', 'Desktop + RTX 4070': 'برج كامل', 'Raspberry Pi 5': '8×8 سم' },
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'توصية إعداد العتاد',
+        content: 'M5 Pro 64 GB مقابل 1,199 دولارًا هو نقطة القيمة المثلى: يشغّل نماذج 34B، ويدعم منظومات مساعد صوتي متعددة الأنماط، ويترك هامشًا لـ 2–3 سنوات من نمو حجم النماذج. لا تشترِ أبدًا أقل من 36 GB للاستخدام كخادم ذكاء اصطناعي.',
+        tableFormat: true,
+        columns: ['التهيئة', 'السعر (2026)', 'الذاكرة', 'مثالي لـ', 'النماذج المتوافقة'],
+        rows: [
+          { 'التهيئة': 'Mac Mini M5 (أساسي)', 'السعر (2026)': '599 دولارًا', 'الذاكرة': '16 GB', 'مثالي لـ': 'استخدام خفيف، مستخدم واحد', 'النماذج المتوافقة': '7B Q4 فقط' },
+          { 'التهيئة': 'Mac Mini M5 (32 GB)', 'السعر (2026)': '799 دولارًا', 'الذاكرة': '32 GB', 'مثالي لـ': 'استخدام عام فردي', 'النماذج المتوافقة': 'حتى 13B Q4' },
+          { 'التهيئة': 'Mac Mini M5 Pro 36 GB', 'السعر (2026)': '999 دولارًا', 'الذاكرة': '36 GB', 'مثالي لـ': 'منظومة مساعد صوتي', 'النماذج المتوافقة': '8B + Whisper + TTS' },
+          { 'التهيئة': 'Mac Mini M5 Pro 64 GB ★', 'السعر (2026)': '1,199 دولارًا', 'الذاكرة': '64 GB', 'مثالي لـ': 'نقطة القيمة المثلى الموصى بها', 'النماذج المتوافقة': 'نماذج 34B بأريحية' },
+          { 'التهيئة': 'Mac Mini M5 Pro 64 GB + 1 TB', 'السعر (2026)': '1,399 دولارًا', 'الذاكرة': '64 GB', 'مثالي لـ': 'تخزين نماذج كثيرة', 'النماذج المتوافقة': '50+ نموذجًا على القرص' },
+        ],
+        note: '★ موصى به. تخطيط التخزين: Llama 3.3 8B Q4 ~5 GB لكل نموذج، Whisper large-v3 ~3 GB، نموذج embeddings ~0.5 GB، ChromaDB مع 10,000 مستند ~2 GB. تهيئة معتادة بـ 5 نماذج: 50–80 GB. الحد الأدنى 512 GB SSD؛ 1 TB للمستخدمين المتقدمين.',
+      },
+      setup: {
+        id: 'setup',
+        title: 'الإعداد الكامل للخادم (30 دقيقة من فتح العلبة إلى التشغيل)',
+        content: 'تهيّئ هذه الخطوات Mac Mini M5 كخادم ذكاء اصطناعي دائم يمكن الوصول إليه عبر الشبكة. بعد إتمام جميع الخطوات، يمكن لأي جهاز في شبكتك المحلية LAN إرسال طلبات إلى API الخاص بـ Ollama على Mac Mini عبر المنفذ 11434.',
+      },
+      setupStep1: {
+        id: 'setup-step1',
+        title: 'الخطوة 1: تثبيت Homebrew وOllama',
+        codeBlock: `# Install Homebrew (if not already installed)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Ollama
+brew install ollama
+
+# Start as background service (auto-starts on reboot)
+brew services start ollama
+
+# Verify it's running
+curl http://localhost:11434/api/version`,
+        codeLanguage: 'bash',
+      },
+      setupStep2: {
+        id: 'setup-step2',
+        title: 'الخطوة 2: تهيئة الوصول عبر الشبكة',
+        content: 'افتراضيًا، يستمع Ollama على localhost فقط. تفتح هذه الإعدادات الوصول إلى شبكتك المحلية LAN وتهيّئ التخزين المؤقت متعدد النماذج.',
+        codeBlock: `# Allow Ollama to listen on all interfaces (not just localhost)
+echo 'export OLLAMA_HOST=0.0.0.0:11434' >> ~/.zshrc
+echo 'export OLLAMA_MAX_LOADED_MODELS=3' >> ~/.zshrc
+echo 'export OLLAMA_KEEP_ALIVE=1h' >> ~/.zshrc
+source ~/.zshrc
+
+# Restart Ollama with new settings
+brew services restart ollama
+
+# Verify listening on all interfaces
+lsof -i :11434`,
+        codeLanguage: 'bash',
+      },
+      setupStep3: {
+        id: 'setup-step3',
+        title: 'الخطوة 3: تهيئة جدار حماية macOS',
+        content: 'إعدادات النظام ← الشبكة ← جدار الحماية ← خيارات ← أضف مسار الملف التنفيذي لـ Ollama (/opt/homebrew/bin/ollama) ← اسمح بالاتصالات الواردة. يتيح هذا لأجهزة الشبكة المحلية LAN الوصول إلى المنفذ 11434 مع تفعيل جدار الحماية.',
+      },
+      setupStep4: {
+        id: 'setup-step4',
+        title: 'الخطوة 4: تنزيل النماذج الموصى بها',
+        codeBlock: `# General-purpose LLM
+ollama pull llama3.1:8b
+
+# Alternative: faster, similar quality
+ollama pull mistral:7b
+
+# For coding tasks
+ollama pull deepseek-coder-v2:16b
+
+# Embedding model for RAG
+ollama pull nomic-embed-text`,
+        codeLanguage: 'bash',
+      },
+      setupStep5: {
+        id: 'setup-step5',
+        title: 'الخطوة 5: تهيئة IP ثابت أو mDNS',
+        content: 'mDNS (Bonjour) هو الخيار الأبسط — يمكن الوصول إلى Mac Mini لديك باسم المضيف على شبكتك المحلية دون أي تهيئة إضافية.',
+        codeBlock: `# Find current local IP
+ipconfig getifaddr en0
+
+# Or use Bonjour - access at hostname.local
+scutil --get LocalHostName
+# Ejemplo: macmini → accesible en http://macmini.local:11434`,
+        codeLanguage: 'bash',
+        note: 'للحصول على IP ثابت، خصّص حجزًا في DHCP ضمن إعدادات الراوتر باستخدام عنوان MAC الخاص بـ Mac. بهذا لا يتغير الـ IP أبدًا.',
+      },
+      setupStep6: {
+        id: 'setup-step6',
+        title: 'الخطوة 6: منع وضع السكون (ضروري للتشغيل الدائم)',
+        content: 'بدون هذه الإعدادات، سيدخل macOS في وضع السكون بعد فترة خمول، فيصبح الخادم غير قابل للوصول حتى يُعاد تنشيطه يدويًا.',
+        codeBlock: `sudo pmset -a sleep 0
+sudo pmset -a displaysleep 1
+sudo pmset -a powernap 0
+sudo pmset -a hibernatemode 0
+
+# Verify settings
+pmset -g`,
+        codeLanguage: 'bash',
+        note: 'فعّل "البدء تلقائيًا بعد انقطاع التيار" في إعدادات النظام ← الطاقة للتعامل مع انقطاعات الكهرباء.',
+      },
+      setupStep7: {
+        id: 'setup-step7',
+        title: 'الخطوة 7: الاختبار من جهاز آخر على الشبكة المحلية LAN',
+        codeBlock: `# Desde cualquier portátil/teléfono/tableta en la misma red:
+curl http://macmini.local:11434/api/chat -d '{
+  "model": "llama3.1:8b",
+  "messages": [{"role": "user", "content": "¡Hola desde mi teléfono!"}]
+}'`,
+        codeLanguage: 'bash',
+        note: 'إذا تلقّيت ردًا، فإن خادم الذكاء الاصطناعي يعمل. يمكن لجميع أجهزة الشبكة المحلية LAN استخدامه الآن كخلفية ذكاء اصطناعي.',
+      },
+      remoteAccess: {
+        id: 'remote-access',
+        title: 'الوصول عن بُعد: استخدم خادم الذكاء الاصطناعي Mac Mini من أي مكان',
+        content: [
+          'خياران للوصول إلى خادم الذكاء الاصطناعي Mac Mini من خارج شبكتك المنزلية: Tailscale (موصى به للاستخدام الشخصي) وCloudflare Tunnel (لنقاط نهاية يمكن الوصول إليها عبر الويب).',
+        ],
+        codeBlock: `# Opción 1: Tailscale (Recomendado) — instalar en Mac Mini
+brew install --cask tailscale
+# Inicia sesión con la app de Tailscale — Mac Mini obtiene una IP privada
+# Accede desde cualquier lugar con Tailscale instalado:
+curl http://macmini.tailnet.ts.net:11434/api/chat -d '{...}'
+
+# Opción 2: Cloudflare Tunnel (Acceso web)
+brew install cloudflared
+cloudflared tunnel create ai-server
+cloudflared tunnel route dns ai-server ai.tudominio.com
+# Accesible en https://ai.tudominio.com desde cualquier lugar`,
+        codeLanguage: 'bash',
+        note: 'الأمان: لا تعرّض Ollama مباشرةً للإنترنت دون مصادقة. لا يحتوي Ollama على مصادقة مدمجة. استخدم Tailscale أو Cloudflare Tunnel مع سياسات وصول أو WireGuard VPN.',
+      },
+      usecases: {
+        id: 'usecases',
+        title: 'أربع حالات استخدام حقيقية لخادم الذكاء الاصطناعي Mac Mini',
+        content: 'يغطي خادم الذكاء الاصطناعي Mac Mini أربع حالات استخدام رئيسية. كل واحدة هي سير عمل مستقل — يمكنك تشغيل الأربع في آنٍ واحد على M5 Pro 64 GB.',
+      },
+      usecaseFamilyServer: {
+        id: 'usecases-family',
+        title: 'حالة الاستخدام 1: خادم ذكاء اصطناعي عائلي للمنزل',
+        content: [
+          'يوجد Mac Mini في خزانة يعمل 24/7. جميع أجهزة الشبكة المنزلية — هواتف وأجهزة لوحية وحواسيب محمولة — ترسل طلبات API إلى نفس نسخة Ollama. عائلة من 4 أفراد بأجهزة iPhone وiPad وMacBook يستخدمونه في آنٍ واحد.',
+          'تستخدم أجهزة iPhone تطبيق Atajos ← POST إلى macmini.local:11434. يستخدم مستخدمو MacBook إضافات Continue.dev أو Raycast. اضبط OLLAMA_NUM_PARALLEL=2 حتى يتمكن فردان من العائلة من المحادثة في آنٍ واحد مع Llama 3.3 8B.',
+          'يحل محل 4 اشتراكات ChatGPT Plus (80 دولارًا/شهر = 960 دولارًا/سنة). فترة استرداد تكلفة Mac Mini: ~15 شهرًا. من السنة الثانية إلى الخامسة: ادخار صافٍ.',
+        ],
+      },
+      usecaseRAG: {
+        id: 'usecases-rag',
+        title: 'حالة الاستخدام 2: خادم خاص للأسئلة والأجوبة على المستندات باستخدام RAG',
+        content: 'المنظومة: Ollama (Llama 3.3 8B) + nomic-embed-text + ChromaDB. كل شيء يعمل على Mac Mini، يمكن الوصول إليه من الشبكة المحلية LAN. حالات الاستخدام: مستندات عائلية، عقود قانونية، أدلة تقنية، مكتبة وصفات، سجلات طبية، أوراق بحثية. كل شيء خاص. كل شيء قابل للبحث. كل شيء دون اتصال.',
+        codeBlock: `# Install ChromaDB via Docker
+brew install --cask docker
+docker run -d -p 8000:8000 -v ~/chromadb:/data chromadb/chroma
+
+# Index documents (Python)
+from langchain_community.embeddings import OllamaEmbeddings
+from langchain_community.vectorstores import Chroma
+
+embeddings = OllamaEmbeddings(
+    model="nomic-embed-text",
+    base_url="http://localhost:11434"
+)
+vectordb = Chroma.from_documents(
+    documents=splits,
+    embedding=embeddings,
+    persist_directory="./chroma_db"
+)`,
+        codeLanguage: 'python',
+      },
+      usecaseVoice: {
+        id: 'usecases-voice',
+        title: 'حالة الاستخدام 3: مساعد صوتي دائم التشغيل',
+        content: [
+          'المنظومة على Mac Mini: whisper.cpp لـ STT (مُسرّع بـ Metal)، Ollama Llama 3.3 8B للاستدلال، Piper TTS لإخراج الصوت، بروتوكول Wyoming للتكامل مع Home Assistant.',
+          'يُفعّل بكلمة تنشيط من أجهزة العميل (Apple HomePod عبر Home Assistant، أو مصفوفات ميكروفونات Raspberry Pi في كل غرفة). زمن الاستجابة من الطرف إلى الطرف على M5 Pro: 1.2 ثانية (STT 0.3 ث + LLM 0.7 ث + TTS 0.2 ث).',
+          'الكهرباء السنوية: 35 دولارًا. خدمة سحابية مماثلة (Alexa Plus بـ 20 دولارًا/شهر): 240 دولارًا/سنة. وفّر أكثر من 200 دولار سنويًا مع إبقاء جميع بيانات الصوت خاصة.',
+        ],
+        items: [
+          'اطّلع على الإعداد التفصيلي: [إنشاء مساعد صوتي محلي](/ar/power-local-llm/build-local-voice-assistant-2026)',
+        ],
+      },
+      usecaseCoding: {
+        id: 'usecases-coding',
+        title: 'حالة الاستخدام 4: وكيل برمجي خاص (التكامل مع IDE)',
+        content: 'هيّئ Continue.dev أو Cursor لاستخدام API الخاص بـ Mac Mini. يتفوق DeepSeek Coder V2 بحجم 16B على GitHub Copilot في عدة اختبارات أداء للغات — مع إبقاء كل الشيفرة خاصة ودون اتصال.',
+        codeBlock: `// ~/.continue/config.json
+{
+  "models": [{
+    "title": "Mac Mini DeepSeek Coder",
+    "provider": "ollama",
+    "model": "deepseek-coder-v2:16b",
+    "apiBase": "http://macmini.local:11434"
+  }]
+}`,
+        codeLanguage: 'json',
+        items: [
+          '0 دولار/سنة (مقابل GitHub Copilot بـ 10 دولارات/شهر لكل مستخدم)',
+          'الشيفرة لا تغادر شبكتك أبدًا',
+          'يعمل دون اتصال (الطائرات، المكاتب الآمنة)',
+          'يتفوق DeepSeek Coder V2 على Copilot في اختبارات أداء Go وPython وTypeScript',
+        ],
+      },
+      monitoring: {
+        id: 'monitoring',
+        title: 'الاستهلاك الكهربائي والأداء الحراري',
+        content: 'قياسات على Mac Mini M5 Pro 64 GB يشغّل Ollama بتسريع Metal. تُحسب تكلفة الكهرباء على أساس 0.15 دولار/كيلوواط ساعة.',
+        tableFormat: true,
+        columns: ['عبء العمل', 'الاستهلاك', 'التكلفة السنوية (24/7، 0.15 دولار/ك.و.س)'],
+        rows: [
+          { 'عبء العمل': 'خمول', 'الاستهلاك': '8 واط', 'التكلفة السنوية (24/7، 0.15 دولار/ك.و.س)': '~10 دولارات/سنة' },
+          { 'عبء العمل': 'استدلال Llama 8B', 'الاستهلاك': '25–35 واط', 'التكلفة السنوية (24/7، 0.15 دولار/ك.و.س)': '~39 دولارًا/سنة' },
+          { 'عبء العمل': 'استدلال Llama 34B', 'الاستهلاك': '40–55 واط', 'التكلفة السنوية (24/7، 0.15 دولار/ك.و.س)': '~63 دولارًا/سنة' },
+          { 'عبء العمل': 'حمل مختلط معتاد', 'الاستهلاك': '15–25 واط', 'التكلفة السنوية (24/7، 0.15 دولار/ك.و.س)': '~26 دولارًا/سنة' },
+        ],
+        items: [
+          'درجة حرارة السطح تحت الحمل: 35–42 °م (دافئ عند اللمس)',
+          'درجة الحرارة الداخلية لـ CPU: 65–75 °م (أقل بكثير من عتبة الخفض)',
+          'المروحة: لا تعمل أبدًا في M5 الأساسي؛ تشغيل قصير بعدد دورات منخفض في M5 Pro أثناء الذروات',
+          'لا خفض حراري ملحوظ في اختبارات 30 يومًا من التشغيل المتواصل',
+          'التهوية: يُوصى بمساحة مفتوحة — لا تضعه في خزانة مغلقة',
+          'متانة SSD: 600 TBW نموذجيًا = ~30 سنة بأنماط كتابة خادم الذكاء الاصطناعي',
+        ],
+        note: 'متوسط الكهرباء السنوية لحمل مختلط معتاد: 26–39 دولارًا. سنة كاملة من التشغيل 24/7 تكلّف أقل من شهر واحد من ChatGPT Plus.',
+      },
+      maintenance: {
+        id: 'maintenance',
+        title: 'المراقبة والصيانة للتشغيل 24/7',
+        content: 'احفظ سكربت فحص السلامة هذا باسم ~/check-ai-server.sh — شغّله عبر cron أو launchd كل ساعة لإعادة تشغيل Ollama تلقائيًا إذا تعطّل.',
+        codeBlock: `#!/bin/bash
+echo "=== AI Server Health Check ==="
+echo "Date: $(date)"
+
+if pgrep -x "ollama" > /dev/null; then
+    echo "✓ Ollama running"
+else
+    echo "✗ Ollama NOT running - restarting"
+    brew services restart ollama
+fi
+
+if curl -s http://localhost:11434/api/version > /dev/null; then
+    echo "✓ API responding"
+else
+    echo "✗ API NOT responding"
+fi
+
+df -h / | tail -1
+uptime`,
+        codeLanguage: 'bash',
+        items: [
+          'شهريًا: حدّث Ollama بـ `brew upgrade ollama`',
+          'شهريًا: حدّث النماذج بـ `ollama pull llama3.1:8b` (ينزّل أحدث إصدار)',
+          'شهريًا: نظّف النماذج غير المستخدمة بـ `ollama list` ثم `ollama rm <model-name>`',
+          'شهريًا: طبّق تحديثات macOS من إعدادات النظام ← تحديث البرنامج',
+          'شهريًا: أعد تشغيل Mac Mini (تنظيف الذاكرة، يزيل أي حالة متراكمة)',
+        ],
+        note: 'لجدولة فحص السلامة كل ساعة، أنشئ ~/Library/LaunchAgents/com.user.ollama-monitor.plist وحمّله بـ launchctl.',
+      },
+      tco: {
+        id: 'tco',
+        title: 'تحليل التكلفة الإجمالية للملكية على مدى 5 سنوات',
+        tableFormat: true,
+        columns: ['السنة', 'خادم الذكاء الاصطناعي Mac Mini', '4× ChatGPT Plus', 'الفرق'],
+        rows: [
+          { 'السنة': 'السنة 1', 'خادم الذكاء الاصطناعي Mac Mini': '1,199 دولارًا عتاد + 35 دولارًا كهرباء = 1,234 دولارًا', '4× ChatGPT Plus': '960 دولارًا', 'الفرق': '−274 دولارًا (Mac أغلى في السنة 1)' },
+          { 'السنة': 'السنة 2', 'خادم الذكاء الاصطناعي Mac Mini': '35 دولارًا (كهرباء فقط)', '4× ChatGPT Plus': '960 دولارًا', 'الفرق': '+925 دولارًا تم ادخارها' },
+          { 'السنة': 'السنة 3', 'خادم الذكاء الاصطناعي Mac Mini': '35 دولارًا', '4× ChatGPT Plus': '960 دولارًا', 'الفرق': '+925 دولارًا تم ادخارها' },
+          { 'السنة': 'السنة 4', 'خادم الذكاء الاصطناعي Mac Mini': '35 دولارًا', '4× ChatGPT Plus': '960 دولارًا', 'الفرق': '+925 دولارًا تم ادخارها' },
+          { 'السنة': 'السنة 5', 'خادم الذكاء الاصطناعي Mac Mini': '35 دولارًا', '4× ChatGPT Plus': '960 دولارًا', 'الفرق': '+925 دولارًا تم ادخارها' },
+          { 'السنة': 'إجمالي 5 سنوات', 'خادم الذكاء الاصطناعي Mac Mini': '1,374 دولارًا', '4× ChatGPT Plus': '4,800 دولارًا', 'الفرق': '+3,426 دولارًا تم ادخارها' },
+        ],
+        items: [
+          'فترة الاسترداد لعائلة من 4 تستبدل ChatGPT Plus: ~15 شهرًا',
+          'وكيل برمجي (يستبدل Copilot بـ 10 دولارات/مستخدم/شهر) — مطوّر واحد: مُسترد خلال 12 شهرًا',
+          'وكيل برمجي — فريق من 4 مطوّرين: مُسترد خلال 3 أشهر',
+          'وكيل برمجي — فريق من 10 أشخاص: مُسترد خلال 1.2 شهر',
+        ],
+        note: 'تفترض التكلفة الإجمالية 960 دولارًا/سنة (4× ChatGPT Plus بـ 20 دولارًا/شهر لكل منها). جميع البيانات خاصة، بلا تكلفة لكل استعلام، مع تضمين العمل دون اتصال.',
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          { q: 'هل Mac Mini M5 أكثر هدوءًا من البدائل؟', a: 'نعم. M5 الأساسي بلا مروحة تمامًا. نادرًا ما تدور مروحة M5 Pro، وعندما تدور تكون هادئة جدًا. أجهزة PC مكتبية بـ GPU: ~50–70 ديسيبل. Mac Mini M5: 0 ديسيبل في الخمول، 20–25 ديسيبل لفترة وجيزة تحت حمل مكثف بـ 34B+.' },
+          { q: 'هل يمكنني الوصول إلى Mac Mini عن بُعد؟', a: 'نعم — عبر SSH من الطرفية، أو بمشاركة الشاشة (VNC) من إعدادات النظام ← المشاركة ← الإدارة عن بُعد. على الشبكة المحلية LAN: ssh user@macmini.local. للوصول عن بُعد: استخدم Tailscale أولًا ثم SSH عبر IP الخاص بـ Tailscale.' },
+          { q: 'ماذا أفعل إذا احتجت أداءً أعلى؟', a: 'مسار الترقية: Mac Studio M5 Max (128 GB، ~2,000 دولار) لسرعة 2× ودعم نماذج 70B. Mac Studio M5 Ultra (متوقع في 2026) لسرعة 4×. لمزارع الخوادم، اربط عدة أجهزة Mac Mini في رف ووازِن الحمل بـ Nginx.' },
+          { q: 'كم تدوم Mac Mini كخادم ذكاء اصطناعي 24/7؟', a: 'أجهزة Mac بشريحة Apple Silicon مصممة للتشغيل المتواصل. العمر المتوقع: 7–10 سنوات للاستخدام كخادم ذكاء اصطناعي. متانة SSD (600 TBW نموذجيًا) تغطي 25–30 سنة من أحمال الذكاء الاصطناعي. معدل فشل العتاد السنوي أقل من 0.5%.' },
+          { q: 'هل يمكنني خدمة عدة مستخدمين في آنٍ واحد؟', a: 'نعم. اضبط OLLAMA_NUM_PARALLEL=2 (أو أكثر مع مزيد من الذاكرة) لإدارة الطلبات المتزامنة. يتعامل M5 Pro 64 GB بأريحية مع 2–3 مستخدمين متزامنين بنماذج 8B، أو مع مستخدم واحد بمنظومات متعددة النماذج (LLM + رؤية + STT).' },
+          { q: 'ماذا يحدث إذا فقد Mac Mini التيار الكهربائي؟', a: 'بعد عودة التيار، يُقلع macOS تلقائيًا إذا فعّلت "البدء تلقائيًا بعد انقطاع التيار" في إعدادات النظام ← الطاقة. يُقلع Ollama كخدمة brew. تُعاد النماذج عند أول طلب (تأخير 5–15 ث في أول استجابة بعد إعادة التشغيل).' },
+          { q: 'هل يمكنني إضافة GPU خارجي إلى Mac Mini لاستدلال أسرع؟', a: 'لا. لا تدعم Apple Silicon وحدات GPU خارجية لتسريع Metal/ML. بنية الذاكرة الموحدة هي التصميم — لا يمكن إضافة GPU منفصل. لمزيد من السرعة، رقِّ إلى Mac Studio M5 Max.' },
+          { q: 'هل Mac Mini قوي جدًا أم غير كافٍ لخادم ذكاء اصطناعي؟', a: 'لمنازل من 1–4 أشخاص أو فرق صغيرة تشغّل نماذج 8B–34B: مناسب تمامًا. لنماذج 70B: غير كافٍ (يلزم Mac Studio M5 Max 128 GB). لنماذج صغيرة بميزانية هواة: قوي جدًا (Raspberry Pi 5 يغطي فقط نماذج 1–3B، غير كافٍ لأي استخدام عملي في 2026).' },
+        ],
+      },
+      relatedArticles: {
+        id: 'related',
+        title: 'مقالات ذات صلة',
+        items: [
+          '[Apple Silicon لنماذج LLM المحلية: دليل شامل](/ar/local-llms/apple-silicon-local-llm-guide-2026)',
+          '[اختبارات أداء M5 Pro مقابل M5 Max 2026](/ar/local-llms/m5-pro-max-llm-benchmarks-2026)',
+          '[دليل إعداد Ollama على Mac](/ar/local-llms/ollama-on-mac-apple-silicon-setup-2026)',
+          '[كم من الذاكرة الموحدة تحتاج لنماذج LLM المحلية؟](/ar/local-llms/how-much-unified-memory-for-local-llm)',
+          '[أفضل نماذج LLM لـ Apple Silicon](/ar/local-llms/best-models-apple-silicon-2026)',
+          '[مقارنة MLX مقابل Ollama مقابل llama.cpp](/ar/local-llms/mlx-vs-ollama-vs-llama-cpp-mac)',
+          '[إنشاء مساعد صوتي محلي](/ar/power-local-llm/build-local-voice-assistant-2026)',
+          '[RAG محلي لبيانات الأعمال الخاصة](/ar/power-local-llm/local-rag-for-private-business-data)',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Mac Mini M5 كخادم ذكاء اصطناعي محلي 2026: LLM وWhisper وRAG',
+      description: 'خادم ذكاء اصطناعي محلي دائم التشغيل على Mac Mini M5. 25–55 واط، صامت، LLM 24/7.',
+      url: 'https://www.promptquorum.com/ar/local-llms/mac-mini-m5-local-ai-server',
+      inLanguage: 'ar',
+      datePublished: '2026-05-15',
+      dateModified: '2026-05-15',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-15',

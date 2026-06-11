@@ -2001,6 +2001,459 @@ schema: {
       gammaEmbedUrl: '/presentations/local-llm-openai-compatible-api-static.html',
       gammaDescription: 'La presentación a continuación cubre: el estándar de API compatible con OpenAI, la configuración del endpoint de Ollama, la integración de Python y Node.js en 3 pasos, el streaming, el function calling y el cumplimiento normativo regional (RGPD UE, APPI Japón, CAC China). Descarga el PDF como tarjeta de referencia de integración de API de LLM local.',
     },
+    ar: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-11-04',
+      theme: 'Tools & Interfaces',
+      title: 'واجهة برمجة تطبيقات متوافقة مع OpenAI لنماذج LLM المحلية (Ollama و vLLM و LM Studio) — دليل Python و Node.js 2026',
+      seoTitle: 'واجهة OpenAI مع LM Studio و Ollama: Python و Node.js 2026',
+      intro: 'يكشف كل من LM Studio (localhost:1234) و Ollama (localhost:11434) و vLLM (localhost:8000) عن واجهات REST API بتنسيق OpenAI. استخدم SDK الرسمي لـ OpenAI الخاص بـ Python أو Node.js مع أي نموذج محلي عبر تغيير سطرين فقط: عيّن base_url إلى endpoint المحلي و api_key إلى أي سلسلة نصية. اعتباراً من مايو 2026، هذه هي الطريقة القياسية لتشغيل نماذج LLM المحلية في تطبيقات Python و Node.js الإنتاجية دون تكاليف سحابية أو الاعتماد على مزوّد معيّن.',
+      metaDescription: 'أدلة إعداد لواجهة برمجة التطبيقات المتوافقة مع OpenAI في LM Studio و Ollama مع أمثلة برمجية بـ Python/Node.js وبث متدفق واستدعاء الدوال.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**يكشف كل من LM Studio (localhost:1234) و Ollama (localhost:11434) و vLLM (localhost:8000) عن واجهات REST API بتنسيق OpenAI. استخدم SDK الرسمي لـ OpenAI الخاص بـ Python أو Node.js مع أي نموذج محلي عبر تغيير سطرين فقط: عيّن base_url إلى endpoint المحلي و api_key إلى أي سلسلة نصية.**',
+      audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي لهم على عتاد استهلاكي',
+      dateModified: '2026-05-17',
+      readTime: '10 دقائق للقراءة',
+      educationalLevel: 'Beginner to Advanced',
+      primaryTerm: 'OpenAI-compatible API',
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'حقائق سريعة', anchor: '#quick-facts' },
+        { label: 'ما المقصود بالتوافق مع OpenAI؟', anchor: '#what-is-openai-compatibility' },
+        { label: 'endpoint واجهة Ollama', anchor: '#ollama-api-endpoint' },
+        { label: 'Python: استخدام مكتبة OpenAI الرسمية', anchor: '#python-openai-library' },
+        { label: 'Node.js: SDK الخاص بـ OpenAI', anchor: '#nodejs-openai' },
+        { label: 'LM Studio: خادم متوافق مع OpenAI', anchor: '#lm-studio-api' },
+        { label: 'JavaScript: الاستخدام في المتصفح', anchor: '#javascript-browser' },
+        { label: 'متقدم: الاستجابات المتدفقة', anchor: '#streaming-responses' },
+        { label: 'متقدم: استدعاء الدوال', anchor: '#function-calling' },
+        { label: 'واجهات نماذج LLM المحلية حسب المنطقة', anchor: '#regional-context' },
+        { label: 'الأخطاء الشائعة', anchor: '#common-mistakes' },
+        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+        { label: 'قراءات ذات صلة', anchor: '#related-reading' },
+        { label: 'المصادر', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'يكشف Ollama عن واجهة REST API على `http://localhost:11434/v1` تطابق واجهة OpenAI تماماً.',
+            'استخدم مكتبة Python الخاصة بـ OpenAI: غيّر `api_key="openai"` إلى `api_key="ollama"` وعيّن `base_url="http://localhost:11434/v1"`.',
+            'النهج نفسه في Node.js: SDK الخاص بـ OpenAI موجَّه إلى localhost:11434.',
+            'الواجهة المتوافقة مع OpenAI متطابقة في Ollama و vLLM و LM Studio -- لا حاجة لأي تغييرات برمجية عند تبديل المزوّد.',
+            'اعتباراً من مايو 2026، يعمل البث المتدفق (الاستجابات token بـ token) واستدعاء الدوال مع النماذج المحلية عبر هذه الواجهة.',
+          ],
+        },
+        quickFacts: {
+          id: 'quick-facts',
+          title: '⚡ حقائق سريعة',
+          content: [
+            '**واجهة Ollama:** `http://localhost:11434/v1` — تطابق `/chat/completions` الخاصة بـ OpenAI تماماً',
+            '**واجهة LM Studio:** `http://localhost:1234/v1` — التنسيق نفسه، منفذ مختلف',
+            '**واجهة vLLM:** `http://localhost:8000/v1` — خدمة بجودة إنتاجية',
+            '**التغيير البرمجي:** سطران — `base_url` و `api_key`. تبقى بقية الشيفرة متطابقة.',
+            '**المدعوم:** Chat completions و text completions و embeddings والبث المتدفق واستدعاء الدوال',
+            '**المصادقة:** لا شيء افتراضياً — وصول من localhost فقط. أضف reverse proxy للوصول عبر الشبكة.',
+            '**النموذج المستخدم في الأمثلة البرمجية:** Llama 4 Scout (أفضل جودة على 12 GB) أو Llama 3.2 3B (خفيف)',
+          ],
+        },
+        whatIsOpenAI: {
+          id: 'what-is-openai-compatibility',
+          title: 'ماذا يعني متوافق مع OpenAI؟',
+          content: [
+            '**متوافق مع OpenAI يعني أن endpoint الواجهة يعيد الاستجابات بالتنسيق نفسه الذي تستخدمه واجهة OpenAI.** يتيح ذلك لأي مكتبة أو أداة مبنية لـ OpenAI أن تعمل مع النماذج المحلية بمجرد توجيهها إلى عنوان URL مختلف. اطّلع على كيفية مقارنة [Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) في تطبيقهما لهذا المعيار.',
+            'مثال: ترسل مكتبة Python الخاصة بـ OpenAI الطلبات هكذا:',
+            '```\nPOST /chat/completions\n{\n  "model": "gpt-4o",\n  "messages": [...],\n  "temperature": 0.7\n}\n```',
+            'تقبل واجهة Ollama الطلب نفسه تماماً على `localhost:11434/v1/chat/completions` وتعيد الاستجابة بتنسيق OpenAI:',
+            '```\n{\n  "choices": [{\"message\": {\"content\": \"...\"}}],\n  "usage\": {\"prompt_tokens\": 10, \"completion_tokens\": 20}\n}\n```',
+            'بما أن التنسيق متطابق، فلا حاجة لتعلّم واجهة جديدة أو إعادة كتابة شيفرتك.',
+            '---',
+            '🔍 **هل تعلم:** أصبح تنسيق واجهة OpenAI المعيار غير الرسمي لجميع واجهات نماذج LLM. وتدعمه الآن Anthropic (Claude) و Google (Gemini) وجميع أدوات الاستدلال المحلية الرئيسية (Ollama و vLLM و LM Studio و llama.cpp). الشيفرة المكتوبة وفق هذا التنسيق محايدة فعلاً تجاه المزوّد — وهي أقرب ما توصلت إليه صناعة الذكاء الاصطناعي إلى واجهة عالمية.',
+          ],
+          image: '/images/openai-compatible-one-line-change-es.svg',
+          imageCaption: 'يتطلب التبديل من OpenAI إلى Ollama تعديل سطرين -- base_url و api_key -- وتبقى بقية الشيفرة متطابقة.',
+        },
+        ollamaEndpoint: {
+          id: 'ollama-api-endpoint',
+          title: 'ما هو endpoint واجهة Ollama؟',
+          content: '**عند تشغيل `ollama serve`، يبدأ Ollama واجهة REST API على `http://localhost:11434`.** الـ endpoints المتوافقة مع OpenAI هي:',
+          rows: [
+            { 'Endpoint': 'Chat Completions', 'URL': 'POST http://localhost:11434/v1/chat/completions', 'Descripción': 'يكافئ `/chat/completions` الخاصة بـ OpenAI' },
+            { 'Endpoint': 'Text Completions', 'URL': 'POST http://localhost:11434/v1/completions', 'Descripción': 'يكافئ `/completions` الخاصة بـ OpenAI' },
+            { 'Endpoint': 'Embeddings', 'URL': 'POST http://localhost:11434/v1/embeddings', 'Descripción': 'يحوّل النص إلى متجهات' },
+            { 'Endpoint': 'List Models', 'URL': 'GET http://localhost:11434/v1/models', 'Descripción': 'يسرد النماذج المتاحة' },
+          ],
+          columns: ['Endpoint', 'URL', 'Descripción'],
+          image: '/images/openai-compatible-api-request-flow-es.svg',
+          imageCaption: 'يعترض Ollama الطلب بتنسيق OpenAI ويشغّل الاستدلال محلياً -- وتُعاد الاستجابة بتنسيق OpenAI نفسه، دون الحاجة إلى الإنترنت.',
+        },
+        pythonOpenAI: {
+          id: 'python-openai-library',
+          title: 'كيف تستخدم واجهة Ollama مع Python (مكتبة OpenAI)؟',
+          content: [
+            '**ثبّت مكتبة OpenAI ووجّهها إلى localhost.**',
+            '🔍 **نصيحة احترافية:** عيّن `OPENAI_BASE_URL=http://localhost:11434/v1` كمتغيّر بيئة. تقرأ العديد من الأدوات (LangChain و LlamaIndex و aider) هذا المتغيّر تلقائياً — دون أي تغييرات برمجية. يمكنك التبديل بين OpenAI و Ollama عبر تعديل متغيّر بيئة واحد فقط.',
+          ],
+          codeBlock: '# 1. Install the OpenAI library\npip install openai\n\n# 2. Connect to Ollama\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"  # dummy key; Ollama ignores it\n)\n\n# 3. Make a request\nresponse = client.chat.completions.create(\n  model="llama4:scout",  # Best quality on 12 GB VRAM (MoE)\n  # model="llama3.2:3b",  # Lightweight alternative for 8 GB RAM\n  messages=[\n    {"role": "user", "content": "What is 2+2?"}\n  ]\n)\n\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        nodejs: {
+          id: 'nodejs-openai',
+          title: 'كيف تستخدم واجهة Ollama مع Node.js؟',
+          content: '**ثبّت SDK الخاص بـ OpenAI واربطه بنسخة Ollama المحلية لديك.**',
+          codeBlock: '// 1. Install\nnpm install openai\n\n// 2. Connect to Ollama\nconst OpenAI = require("openai").default;\n\nconst client = new OpenAI({\n  baseURL: "http://localhost:11434/v1",\n  apiKey: "ollama"\n});\n\n// 3. Make a request\nconst response = await client.chat.completions.create({\n  model: "llama4:scout",       // Best quality on 12 GB VRAM\n  // model: "llama3.2:3b",     // Lightweight for 8 GB RAM\n  messages: [{\n    role: "user",\n    content: "What is 2+2?"\n  }]\n});\n\nconsole.log(response.choices[0].message.content);',
+          codeLanguage: 'javascript',
+        },
+        lmStudio: {
+          id: 'lm-studio-api',
+          title: 'كيف تستخدم خادم LM Studio المتوافق مع OpenAI (localhost:1234)',
+          content: [
+            '**يكشف LM Studio عن واجهة متوافقة مع OpenAI على `http://localhost:1234/v1`.** فعّلها في علامة التبويب Local Server -- حمّل نموذجاً وانقر على Start Server. تعمل شيفرة Python و Node.js نفسها مع LM Studio -- ما عليك سوى تغيير المنفذ من 11434 إلى 1234.',
+            'يناسب LM Studio مستخدمي الواجهة الرسومية الذين يريدون استكشاف النماذج بصرياً والتبديل بينها بسهولة. ويُفضَّل Ollama للنصوص البرمجية والأتمتة وخطوط CI.',
+          ],
+          codeBlock: '# Python: Connect to LM Studio (localhost:1234)\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="lm-studio"  # any string; LM Studio ignores it\n)\n\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-instruct",  # exact model name shown in LM Studio\n  messages=[\n    {"role": "user", "content": "What is 2+2?"}\n  ]\n)\n\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+          rows: [
+            { 'Plataforma': 'LM Studio', 'Puerto': 'localhost:1234', 'Ideal para': 'مستخدمو الواجهة الرسومية، الإدارة البصرية للنماذج', 'GPU requerida': 'لا (يعمل على CPU)' },
+            { 'Plataforma': 'Ollama', 'Puerto': 'localhost:11434', 'Ideal para': 'النصوص البرمجية، الأتمتة، الإنتاج', 'GPU requerida': 'لا (يعمل على CPU)' },
+            { 'Plataforma': 'vLLM', 'Puerto': 'localhost:8000', 'Ideal para': 'تعدد وحدات GPU، خوادم عالية الأداء', 'GPU requerida': 'مُوصى بها' },
+          ],
+          columns: ['Plataforma', 'Puerto', 'Ideal para', 'GPU requerida'],
+        },
+        javascript: {
+          id: 'javascript-browser',
+          title: 'كيف تستخدم واجهة Ollama من JavaScript في المتصفح؟',
+          content: [
+            '**يتطلب استدعاء Ollama من JavaScript على جانب المتصفح أن يكون المتصفح والخادم على الجهاز نفسه (أو أن يكون CORS مسموحاً).** لأسباب أمنية، لا تعمل طلبات المتصفح إلى localhost إلا إذا كان JavaScript يُقدَّم أيضاً من localhost. اطّلع على [أفضل واجهات نماذج LLM المحلية](/ar/local-llms/best-local-llm-frontends) للحصول على واجهات جاهزة للمتصفح تتعامل مع ذلك بشفافية.',
+            'إذا كنت بحاجة إلى استدعاء Ollama من متصفح على عنوان IP مختلف، فاضبط proxy لـ CORS أو استخدم middleware على جانب الخادم.',
+          ],
+          codeBlock: '// Browser-side JavaScript (if server is localhost:3000, Ollama is localhost:11434)\nfetch("http://localhost:11434/v1/chat/completions", {\n  method: "POST",\n  headers: { "Content-Type": "application/json" },\n  body: JSON.stringify({\n    model: "llama4:scout",      // Best quality on 12 GB VRAM\n    // model: "llama3.2:3b",    // Lightweight for 8 GB RAM\n    messages: [{ role: "user", content: "What is 2+2?" }]\n  })\n})\n  .then(res => res.json())\n  .then(data => console.log(data.choices[0].message.content))',
+          codeLanguage: 'javascript',
+        },
+        streaming: {
+          id: 'streaming-responses',
+          title: 'كيف تبث الاستجابات token بـ token؟',
+          content: '**يتيح لك البث المتدفق عرض الاستجابات أثناء توليدها، token بـ token، بدلاً من انتظار الاستجابة الكاملة.** اعتباراً من مايو 2026، يعمل البث المتدفق مع جميع النماذج المحلية عبر الواجهة المتوافقة مع OpenAI.',
+          codeBlock: '# Python: streaming example\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"\n)\n\nstream = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "Count to 10"}],\n  stream=True\n)\n\nfor chunk in stream:\n  if chunk.choices[0].delta.content:\n    print(chunk.choices[0].delta.content, end="", flush=True)',
+          codeLanguage: 'python',
+          image: '/images/openai-compatible-streaming-vs-batch-es.svg',
+          imageCaption: 'مع stream=True، يسلّم Ollama أول token خلال نحو 0.1 ثانية -- يرى المستخدمون المخرجات فوراً بدلاً من انتظار الاستجابة الكاملة.',
+        },
+        functionCalling: {
+          id: 'function-calling',
+          title: 'هل يستطيع نموذجك المحلي استدعاء الدوال؟',
+          content: [
+            '**نعم، اعتباراً من مايو 2026، يعمل استدعاء الدوال مع النماذج المحلية عبر واجهة OpenAI.** تُعرّف مخطط دالة، ويستطيع النموذج الرد بوسائط لتمريرها إلى دالتك. يتيح ذلك لـ [أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding) أن تتكامل مع منظومة أدواتك.',
+            'يعتمد دعم استدعاء الدوال على النموذج. تدعم Llama 4 Scout و Qwen3 8B و Gemma 4 9B و Mistral Small 3.1 استدعاء الأدوات بشكل موثوق. كما تدعمه Llama 3.3 8B و Qwen3 7B أيضاً (إصدارات أقدم). قد لا تنتج النماذج الأصغر (3B) JSON منظَّماً لاستدعاء الأدوات بشكل موثوق.',
+            'في عام 2026، يوسّع Model Context Protocol (MCP) استدعاء الدوال إلى طبقة موحَّدة لربط الأدوات. يتيح MCP لأي عميل (Claude Code و Cursor والتطبيقات المخصصة) الاتصال بأي خادم أدوات عبر بروتوكول واحد — متجاوزاً تعريفات الأدوات لكل طلب الموضحة أعلاه. يدعم Ollama استدعاء الأدوات بأسلوب MCP عبر واجهة استدعاء الدوال القياسية المتوافقة مع OpenAI. لتكاملات الأدوات الإنتاجية، يتحول MCP إلى المعيار؛ وتبقى أمثلة استدعاء الدوال هنا هي الأساس.',
+            'عند استخدام الواجهات المتوافقة مع OpenAI محلياً، يعمل الإخراج المنظَّم ووضع JSON تماماً كما هو الحال مع الواجهات السحابية. لفرض مطابقة المخطط والتحكم في التنسيق على النماذج المحلية والسحابية، اطّلع على [الإخراج المنظَّم ووضع JSON](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode).',
+            'تقبل الواجهات المتوافقة مع OpenAI تنسيقات الـ prompt نفسها التي تقبلها الإصدارات السحابية — رسائل النظام ورسائل المستخدم والإخراج المنظَّم. تنطبق المكتبة الكاملة لـ [تقنيات هندسة الـ prompt](https://www.promptquorum.com/prompt-engineering) مباشرة على استدعاءات الواجهة المحلية.',
+          ],
+          codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
+          codeLanguage: 'python',
+          image: '/images/openai-compatible-function-calling-es.svg',
+          imageCaption: 'تدفق استدعاء الدوال مع Ollama: يعيد النموذج المحلي JSON من نوع tool_call ويشغّل تطبيقك الدالة -- مدعوم من Llama 4 Scout و Qwen3 8B و Gemma 4 9B و Mistral.',
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'واجهات نماذج LLM المحلية المتوافقة مع OpenAI حسب المنطقة',
+          content: [
+            '**الاتحاد الأوروبي / اللائحة العامة لحماية البيانات وقانون الذكاء الاصطناعي:** بالنسبة لمطوري الاتحاد الأوروبي، يضمن تشغيل Ollama محلياً الامتثال للمادة 5 من اللائحة العامة لحماية البيانات (تقليل البيانات) -- يبقى كل الاستدلال على الجهاز دون نقل بيانات إلى واجهات سحابية. يُنزَّل Ollama من GitHub بموجب رخصة MIT، بما يلبي متطلبات الامتثال في الاتحاد الأوروبي. تسري التزامات أنظمة المخاطر العالية في قانون الذكاء الاصطناعي للاتحاد الأوروبي اعتباراً من 2 أغسطس 2026 (في انتظار Digital Omnibus). يلبي الاستدلال المحلي للواجهة متطلبات إقامة البيانات في اللائحة العامة لحماية البيانات افتراضياً. وبالنسبة للمؤسسات، يلغي ذلك الاعتماد على المزوّد ويضمن إقامة البيانات.',
+            '**إسبانيا وأمريكا اللاتينية / اللائحة العامة لحماية البيانات و LSSI:** في إسبانيا، يفرض قانون خدمات مجتمع المعلومات (LSSI) واللائحة العامة لحماية البيانات معالجة مسؤولة للبيانات الشخصية. يلبي تشغيل Ollama محلياً هذه المتطلبات: لا يوجد نقل للبيانات إلى خوادم خارجية. وفي أمريكا اللاتينية، تفرض دول مثل المكسيك (LFPDPPP) والأرجنتين (القانون 25.326) والبرازيل (LGPD) حماية البيانات الشخصية؛ ويلبي الاستدلال المحلي مع Ollama هذه المتطلبات. يعمل Ollama + Qwen3 8B على حواسيب الشركات المحمولة القياسية (8 GB RAM).',
+            '**الصين / CAC:** بالنسبة لعمليات النشر بموجب قانون الأمن السيبراني الصيني (المادة 37 من CAC)، يلبي الاستدلال المحلي متطلبات توطين البيانات -- يعمل Ollama + Qwen3 على أي جهاز Linux دون استدعاءات لواجهات خارجية. تضيف التجزئة اللغوية الأصلية للصينية في Qwen3 كفاءة بنسبة 30-40% مقارنة بـ Llama، مما يقلل من عبء الاستدلال المحلي.',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'ما هي الأخطاء الشائعة مع واجهات نماذج LLM المحلية المتوافقة مع OpenAI؟',
+          items: [
+            '**نسيان أن مفتاح الواجهة يُتجاهَل.** يتطلب Ollama `api_key="ollama"` (أي سلسلة نصية تعمل) لأنه لا يصادق. تعتمد المصادقة الفعلية على ورود الطلب من localhost أو من شبكتك المحلية، لا من الإنترنت.',
+            '**عدم إدراك أن اسم النموذج مهم.** إذا استدعيت `/chat/completions` بـ `model="gpt-4"` بينما لم تنزّل سوى `llama3.2:3b` في Ollama، سيفشل الطلب. استخدم أسماء النماذج الدقيقة من `ollama list`.',
+            '**افتراض أن Ollama يحتاج إلى الإنترنت.** لا يحتاج إليه. الواجهة محلية بالكامل. لكن إذا حاولت شيفرة Python لديك الاتصال بخوادم OpenAI أولاً (افتراضياً)، فستفشل. عيّن `base_url` صراحةً دائماً.',
+            '**أخطاء CORS من المتصفح.** إذا استدعيت Ollama من نص برمجي على جانب المتصفح وحصلت على خطأ CORS، فهذا يعني أن المتصفح حظر الطلب لأسباب أمنية. اطّلع على [نماذج LLM المحلية مع VS Code و Cursor](/ar/local-llms/local-llms-with-vscode-cursor) للحصول على حلول قائمة على المحرر تتجاوز CORS.',
+            '**عدم تعيين stream=True عند توقّع البث المتدفق.** إذا أردت استجابات token بـ token، فيجب أن تعيّن `stream=True` صراحةً في الطلب. افتراضياً، ينتظر الاستجابة الكاملة.',
+            '**استخدام `llama3.2:3b` في الأمثلة رغم توفّر نماذج أفضل.** تستخدم العديد من الدروس Llama 3.2 3B لأنها تتسع في 8 GB من RAM. إذا كان لديك 12+ GB من VRAM، فانتقل إلى `llama4:scout` — جودة أفضل بشكل كبير لشيفرة الواجهة نفسها. استخدم نماذج 3B فقط لاختبار التكامل مع الواجهة، لا لأحمال العمل الإنتاجية.',
+            '**عدم تعيين `OLLAMA_NUM_PARALLEL` للطلبات المتزامنة.** افتراضياً، يعالج Ollama طلباً واحداً في كل مرة. للتطبيقات متعددة المستخدمين أو مجموعات الاختبار المتوازية، عيّن `OLLAMA_NUM_PARALLEL=4` (أو أكثر) للتعامل مع استدعاءات الواجهة المتزامنة. بدون ذلك، تُصطفّ الطلبات ويزداد زمن الاستجابة.',
+            '---',
+            '⚠️ **تحذير:** لا تملك واجهة Ollama أي مصادقة افتراضياً. إذا كشفتها لشبكتك (`OLLAMA_HOST=0.0.0.0`)، فيمكن لأي شخص على تلك الشبكة إرسال الطلبات وتحميل النماذج واستهلاك موارد GPU. للإعدادات متعددة المستخدمين أو الإنتاجية، ضع reverse proxy (nginx أو Caddy) مع مصادقة أمام Ollama — لا تكشف المنفذ 11434 مباشرة للإنترنت أبداً.',
+          ],
+          image: '/images/openai-compatible-platform-comparison-es.svg',
+          imageCaption: 'يكشف Ollama (المنفذ 11434) و vLLM (المنفذ 8000) و LM Studio (المنفذ 1234) جميعها عن endpoints متوافقة مع OpenAI -- شيفرة عميل متطابقة، منافذ وحالات استخدام مختلفة.',
+        },
+        faqSection: {
+          id: 'common-questions',
+          title: 'الأسئلة الشائعة حول واجهات نماذج LLM المحلية',
+          faqs: [
+            {
+              q: 'هل أحتاج إلى تعديل شيفرة OpenAI الخاصة بي لاستخدام Ollama؟',
+              a: 'لا. عيّن `base_url="http://localhost:11434/v1"` و `api_key="ollama"`. يبقى كل ما عداهما كما هو. إذا كانت لديك شيفرة تستخدم مكتبة OpenAI، فغيّر هذين السطرين وستعمل مع نموذجك المحلي.',
+            },
+            {
+              q: 'هل يمكنني استخدام الواجهة من حاسوب آخر على شبكتي؟',
+              a: 'نعم. افتراضياً، يستمع Ollama على localhost فقط. للسماح بالوصول عبر الشبكة، عيّن متغيّر البيئة `OLLAMA_HOST=0.0.0.0:11434` قبل تشغيل Ollama. ثم وجّه شيفرتك إلى `http://<عنوان-ip-الجهاز>:11434/v1`. انتبه للأمان -- استخدم جدار حماية إن كان الإعداد إنتاجياً.',
+            },
+            {
+              q: 'هل يملك LM Studio واجهة متوافقة مع OpenAI؟',
+              a: 'نعم. يكشف LM Studio عن واجهة متوافقة مع OpenAI على `http://localhost:1234/v1`. فعّلها في علامة التبويب Local Server، وحمّل نموذجاً، وانقر على Start Server. استخدم شيفرة Python أو Node.js نفسها التي تستخدمها مع Ollama -- مع تغيير المنفذ فقط (1234 بدلاً من 11434).',
+            },
+            {
+              q: 'هل يمكنني استدعاء عدة نماذج في وقت واحد؟',
+              a: 'إذا كانت محمَّلة في Ollama، فنعم. لكن انتبه إلى أن تشغيل نموذجين في وقت واحد يضاعف استخدام VRAM. يجب أن تتوفر لديك ذاكرة GPU كافية.',
+            },
+            {
+              q: 'هل الواجهة مصادَق عليها؟',
+              a: 'لا. افتراضياً، لا تملك واجهة Ollama أي مصادقة. يمكن لأي شخص لديه وصول إلى localhost:11434 استخدامها. للإنتاج مع الوصول عبر الشبكة، أضف المصادقة عبر reverse proxy (nginx مع Basic Auth، إلخ).',
+            },
+            {
+              q: 'كيف أستخدم البث المتدفق مع واجهة OpenAI الخاصة بـ Ollama؟',
+              a: 'عيّن stream=True في استدعائك لمكتبة OpenAI. يعيد Ollama server-sent events (SSE) مع كل token. في Python: for chunk in client.chat.completions.create(stream=True, ...): print(chunk.choices[0].delta.content).',
+            },
+            {
+              q: 'هل يدعم Ollama استدعاء الدوال / استخدام الأدوات عبر الواجهة؟',
+              a: 'نعم، للنماذج التي تدعمه (Llama 4 Scout و Qwen3 8B و Gemma 4 9B و Mistral Small 3.1). كما تدعمه النماذج الأقدم (Llama 3.3 8B و Qwen3 7B) أيضاً. مرّر tools=[] في استدعاء الواجهة كما تفعل مع OpenAI. يحلّل Ollama استدعاءات الأدوات ويعيد JSON منظَّماً. لا تدعمه كل النماذج -- اطّلع على توثيق النموذج.',
+            },
+            {
+              q: 'ما هو MCP وكيف يرتبط بالواجهة المتوافقة مع OpenAI؟',
+              a: 'MCP (Model Context Protocol) بروتوكول موحَّد لربط نماذج الذكاء الاصطناعي بالأدوات ومصادر البيانات الخارجية. يبنى على استدعاء الدوال — المعامل نفسه `tools=[]` الموضح في الأمثلة — لكنه يضيف بنية عميل-خادم قياسية تجعل الأدوات قابلة للاكتشاف وإعادة الاستخدام عبر التطبيقات. يدعم Ollama تفاعلات الأدوات بأسلوب MCP عبر endpoint استدعاء الدوال المتوافق مع OpenAI. للتكاملات البسيطة، تكفي أمثلة استدعاء الدوال في هذا المقال. ولسير العمل المعقدة متعددة الأدوات، يوفر MCP نهجاً أكثر تنظيماً.',
+            },
+            {
+              q: 'ما الفرق بين /api/generate و /v1/chat/completions في Ollama؟',
+              a: '/api/generate هو endpoint Ollama الأصلي ذو الدور الواحد. أما /v1/chat/completions فهو endpoint المتوافق مع OpenAI متعدد الأدوار. استخدم /v1/chat/completions لجميع المشاريع الجديدة -- فهو يدعم سجل المحادثة ومتوافق مع مكتبات OpenAI.',
+            },
+            {
+              q: 'هل يمكنني استخدام vLLM كواجهة متوافقة مع OpenAI؟',
+              a: 'نعم. يشغّل vLLM خادماً متوافقاً مع OpenAI على http://localhost:8000/v1 افتراضياً. ابدأه بـ: python -m vllm.entrypoints.openai.api_server --model mistralai/Mistral-7B-v0.1. استخدم شيفرة العميل نفسها التي تستخدمها مع Ollama.',
+            },
+            {
+              q: 'كيف أستخدم واجهة Ollama مع حزمة Node.js openai؟',
+              a: 'استورد OpenAI من openai. عيّن baseURL: "http://localhost:11434/v1" و apiKey: "ollama" في المُنشئ. ثم استدعِ client.chat.completions.create() تماماً كما تفعل مع واجهة OpenAI الحقيقية -- دون أي تغييرات أخرى.',
+            },
+            {
+              q: 'كيف أبدّل بين Ollama و OpenAI في الشيفرة نفسها؟',
+              a: 'استخدم متغيّر بيئة: عيّن USE_LOCAL=true لـ Ollama (base_url http://localhost:11434/v1، api_key "ollama") و USE_LOCAL=false لـ OpenAI. تقبل مكتبة Python الخاصة بـ OpenAI الـ base_url كوسيط للمُنشئ. عيّن USE_LOCAL=false في الإنتاج للتبديل إلى OpenAI دون تعديل أي شيفرة أخرى.',
+            },
+            {
+              q: 'هل يمكنني استخدام الواجهة المتوافقة مع OpenAI مع LangChain؟',
+              a: 'نعم. استخدم ChatOpenAI مع base_url="http://localhost:11434/v1" و api_key="ollama". يحوّل ذلك Ollama إلى بديل مباشر لـ OpenAI في أي خط معالجة في LangChain -- تعمل سلاسل RAG والوكلاء والأدوات دون تعديل. كما يملك LangChain فئة ChatOllama مخصصة لميزات Ollama المحددة.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'قراءات ذات صلة',
+          items: [
+            '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- اضبط Ollama لكشف الواجهة.',
+            '[Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) -- كلاهما يكشف عن واجهات متوافقة مع OpenAI.',
+            '[أفضل واجهات نماذج LLM المحلية](/ar/local-llms/best-local-llm-frontends) -- واجهات تستخدم هذه الواجهة داخلياً.',
+            '[نماذج LLM المحلية مع VS Code و Cursor](/ar/local-llms/local-llms-with-vscode-cursor) -- محررات شيفرة تستخدم هذه الواجهة.',
+            '[Text-Generation-WebUI مقابل vLLM مقابل llama.cpp](/ar/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- خلفيات مختلفة تكشف عن هذه الواجهة.',
+            '[حزمة تطوير نماذج LLM المحلية](/ar/local-llms/local-llm-developer-stack) -- للحصول على حزمة كاملة من 3 مستويات (CLI ← API ← الإنتاج) تتجاوز إعداد توافق الواجهة.',
+            '[الإخراج المنظَّم ووضع JSON](/prompt-engineering/structured-output-and-json-mode) -- استخدام الواجهة لفرض تنسيق الإخراج.',
+            '[Prompt Chaining](/prompt-engineering/prompt-chaining) -- بناء خطوط معالجة واجهة متعددة الخطوات بنماذج محلية.',
+            '[Constrained Prompting](/prompt-engineering/constrained-prompting) -- فرض التنسيق على مستوى الواجهة.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'المصادر',
+          items: [
+            'Ollama. (2026). "Ollama OpenAI Compatibility." https://github.com/ollama/ollama/blob/main/docs/openai.md -- التوثيق الرسمي لـ endpoints REST المتوافقة مع OpenAI في Ollama.',
+            'LM Studio. (2026). "LM Studio Local Server." https://lmstudio.ai/docs/local-server -- توثيق الخادم المحلي المتوافق مع OpenAI في LM Studio على localhost:1234.',
+            'OpenAI. (2024). "OpenAI Python Library." https://github.com/openai/openai-python -- SDK الرسمي لـ Python المستخدم للاتصال بكل من OpenAI ونماذج LLM المحلية عبر تجاوز base_url.',
+            'vLLM Team. (2024). "vLLM OpenAI-Compatible Server." https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html -- توثيق خادم الواجهة المتوافق مع OpenAI في vLLM (المنفذ 8000، الاستخدام الإنتاجي).',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'واجهة متوافقة مع OpenAI لنماذج LLM المحلية: دليل الإعداد بـ Python و Node.js (localhost:1234 و 11434)',
+        'description': 'غيّر سطراً واحداً -- base_url إلى localhost -- لاستخدام Ollama كواجهة OpenAI بديلة مباشرة. تعمل Python و Node.js والبث المتدفق واستدعاء الدوال دون تغييرات.',
+        'url': 'https://www.promptquorum.com/ar/local-llms/local-llm-openai-compatible-api',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-05-17',
+        'inLanguage': 'ar',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'audience': { '@type': 'Audience', 'audienceType': 'المطورون الذين يدمجون نماذج LLM المحلية في تطبيقات Python أو Node.js أو JavaScript' },
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'OpenAI API' },
+          { '@type': 'Thing', 'name': 'الاستدلال المحلي لنماذج LLM' },
+          { '@type': 'Thing', 'name': 'REST API' },
+          { '@type': 'Thing', 'name': 'مكتبة Python الخاصة بـ OpenAI' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner to Advanced',
+        'proficiencyLevel': 'Intermediate',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ar',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'هل أحتاج إلى تعديل شيفرة OpenAI الخاصة بي لاستخدام Ollama؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. عيّن base_url="http://localhost:11434/v1" و api_key="ollama". يبقى كل ما عداهما كما هو. إذا كانت لديك شيفرة قائمة تستخدم مكتبة OpenAI، فغيّر هذين السطرين وستعمل مع نموذجك المحلي.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام واجهة Ollama من حاسوب آخر على شبكتي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. افتراضياً، يستمع Ollama على localhost فقط. عيّن OLLAMA_HOST=0.0.0.0:11434 قبل تشغيل Ollama للسماح بالوصول عبر الشبكة. وجّه الشيفرة إلى http://<عنوان-ip-الجهاز>:11434/v1. أضف جدار حماية أو reverse proxy لمزيد من الأمان.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يملك LM Studio واجهة متوافقة مع OpenAI؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يكشف LM Studio عن واجهة متوافقة مع OpenAI على http://localhost:1234/v1. فعّلها في علامة التبويب Local Server. استخدم الشيفرة نفسها التي تستخدمها مع Ollama، مع تغيير المنفذ فقط من 11434 إلى 1234.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استدعاء عدة نماذج في وقت واحد عبر واجهة Ollama؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'إذا كان كلا النموذجين محمَّلاً في Ollama، فنعم. تشغيل نموذجين في وقت واحد يضاعف تقريباً استخدام VRAM. تأكد من توفّر ذاكرة GPU كافية قبل تحميل عدة نماذج في وقت واحد.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل واجهة Ollama مصادَق عليها؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. افتراضياً، لا يملك Ollama أي مصادقة. يمكن لأي شخص لديه وصول إلى localhost:11434 استخدامها. للاستخدام الإنتاجي المكشوف عبر الشبكة، أضف المصادقة عبر reverse proxy (nginx مع Basic Auth أو OAuth2-proxy).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أستخدم البث المتدفق مع واجهة OpenAI الخاصة بـ Ollama؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'عيّن stream=True في استدعائك لمكتبة OpenAI. يعيد Ollama server-sent events (SSE) مع كل token. في Python: for chunk in client.chat.completions.create(stream=True, ...): print(chunk.choices[0].delta.content).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يدعم Ollama استدعاء الدوال / استخدام الأدوات عبر الواجهة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، للنماذج التي تدعمه (Llama 4 Scout و Qwen3 8B و Gemma 4 9B و Mistral Small 3.1). مرّر tools=[] في استدعاء الواجهة كما تفعل مع OpenAI. يحلّل Ollama استدعاءات الأدوات ويعيد JSON منظَّماً. لا تدعمه كل النماذج -- اطّلع على توثيق النموذج.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين /api/generate و /v1/chat/completions في Ollama؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '/api/generate هو endpoint Ollama الأصلي ذو الدور الواحد. أما /v1/chat/completions فهو endpoint المتوافق مع OpenAI متعدد الأدوار. استخدم /v1/chat/completions لجميع المشاريع الجديدة -- فهو يدعم سجل المحادثة ومتوافق مع مكتبات OpenAI.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام vLLM كواجهة متوافقة مع OpenAI؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يشغّل vLLM خادماً متوافقاً مع OpenAI على http://localhost:8000/v1 افتراضياً. ابدأه بـ: python -m vllm.entrypoints.openai.api_server --model mistralai/Mistral-7B-v0.1. استخدم شيفرة العميل نفسها التي تستخدمها مع Ollama.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أستخدم واجهة Ollama مع حزمة Node.js openai؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استورد OpenAI من openai. عيّن baseURL: "http://localhost:11434/v1" و apiKey: "ollama" في المُنشئ. ثم استدعِ client.chat.completions.create() تماماً كما تفعل مع واجهة OpenAI الحقيقية -- دون أي تغييرات أخرى.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أبدّل بين Ollama و OpenAI في الشيفرة نفسها؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استخدم متغيّر بيئة: عيّن USE_LOCAL=true لـ Ollama (base_url http://localhost:11434/v1، api_key "ollama") و USE_LOCAL=false لـ OpenAI. تقبل مكتبة Python الخاصة بـ OpenAI الـ base_url كوسيط للمُنشئ.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام الواجهة المتوافقة مع OpenAI مع LangChain؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. استخدم ChatOpenAI مع base_url="http://localhost:11434/v1" و api_key="ollama". كما يملك LangChain فئة ChatOllama مخصصة لميزات Ollama المحددة.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما المنفذ الذي يستخدمه LM Studio لواجهته المتوافقة مع OpenAI؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يستخدم LM Studio المنفذ 1234. عنوان URL الأساسي للواجهة هو http://localhost:1234/v1. فعّلها في علامة التبويب Local Server في LM Studio، وحمّل نموذجاً، واستخدم SDK الخاص بـ OpenAI مع base_url="http://localhost:1234/v1" و api_key="lm-studio" (أي سلسلة نصية).',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أضبط LM Studio كخادم واجهة محلي متوافق مع OpenAI؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'افتح LM Studio، وحمّل نموذجاً، وانتقل إلى علامة التبويب Local Server وانقر على Start Server. يبدأ LM Studio واجهة متوافقة مع OpenAI على http://localhost:1234/v1. ثبّت SDK الخاص بـ OpenAI (pip install openai)، ثم: client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio"). استدعِ client.chat.completions.create() تماماً كما مع OpenAI.',
+            }
+          }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'inLanguage': 'ar',
+        'name': 'كيفية استخدام LM Studio أو Ollama مع الواجهة المتوافقة مع OpenAI',
+        'description': 'اربط Python أو Node.js بـ LM Studio (localhost:1234) أو Ollama (localhost:11434) باستخدام SDK الخاص بـ OpenAI.',
+        'step': [
+          {
+            '@type': 'HowToStep',
+            'name': 'ثبّت SDK الخاص بـ OpenAI',
+            'text': 'شغّل pip install openai (Python) أو npm install openai (Node.js). لا حاجة لأي حزمة خاصة بمنصة معينة.',
+          },
+          {
+            '@type': 'HowToStep',
+            'name': 'ابدأ LM Studio أو Ollama',
+            'text': 'لـ LM Studio: حمّل نموذجاً وفعّل Local Server (المنفذ 1234). لـ Ollama: شغّل ollama serve (المنفذ 11434). يبدأ كلاهما تلقائياً على منفذيهما الخاصين.',
+          },
+          {
+            '@type': 'HowToStep',
+            'name': 'عيّن base_url و api_key',
+            'text': 'LM Studio: base_url="http://localhost:1234/v1"، api_key="lm-studio". Ollama: base_url="http://localhost:11434/v1"، api_key="ollama". يُتجاهَل api_key محلياً لكن يتطلبه الـ SDK.',
+          },
+          {
+            '@type': 'HowToStep',
+            'name': 'استدعِ chat.completions.create',
+            'text': 'استخدم client.chat.completions.create(model="اسم-النموذج", messages=[...]) -- مطابق لاستدعاء واجهة OpenAI. يجب أن يطابق اسم النموذج النموذج المحمَّل في LM Studio أو المثبَّت في Ollama.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'ar',
+        'name': 'منافذ الواجهة المتوافقة مع OpenAI لنماذج LLM المحلية: LM Studio و Ollama و vLLM',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'LM Studio', 'description': 'localhost:1234/v1 -- التفعيل في علامة التبويب Local Server؛ إدارة نماذج قائمة على الواجهة الرسومية؛ لا يتطلب GPU؛ واجهة متوافقة مع OpenAI' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Ollama', 'description': 'localhost:11434/v1 -- البدء بـ ollama serve؛ مثالي للنصوص البرمجية والأتمتة؛ لا يتطلب GPU؛ واجهة متوافقة مع OpenAI' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'vLLM', 'description': 'localhost:8000/v1 -- البدء بـ python -m vllm.entrypoints.openai.api_server؛ يُوصى بـ GPU؛ استخدام إنتاجي عالي الأداء' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'endpoint Chat Completions', 'description': 'POST /v1/chat/completions -- مسار endpoint متطابق في LM Studio و Ollama و vLLM؛ تعمل شيفرة العميل نفسها مع الثلاثة' },
+        ],
+      },
+      gammaEmbedUrl: '/presentations/local-llm-openai-compatible-api-static.html',
+      gammaDescription: 'يغطي العرض التقديمي أدناه: معيار الواجهة المتوافقة مع OpenAI، وإعداد endpoint الخاص بـ Ollama، وتكامل Python و Node.js في 3 خطوات، والبث المتدفق، واستدعاء الدوال، والامتثال التنظيمي الإقليمي (اللائحة العامة لحماية البيانات في الاتحاد الأوروبي، و APPI اليابان، و CAC الصين). نزّل ملف PDF كبطاقة مرجعية لتكامل واجهة نموذج LLM المحلي.',
+    },
     pt: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',

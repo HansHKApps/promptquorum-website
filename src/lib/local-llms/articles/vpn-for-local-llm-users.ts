@@ -1284,6 +1284,237 @@ schema: {
         ],
       },
     },
+    ar: {
+      freshness_tier: 'annual',
+      theme: 'Privacy & Business',
+      title: 'VPN والذكاء الاصطناعي المحلي: كل ما تحتاج معرفته',
+      seoTitle: 'VPN لـ LLM المحلي: الوصول عن بُعد، والأمان، والنفق المنقسم',
+      intro: '**يمكن لأعضاء الفريق العاملين عن بُعد الوصول إلى خادم LLM المحلي عبر VPN المؤسسية دون تعريضه للإنترنت العام.** اعتبارًا من أبريل 2026، يحل VPN + قواعد جدار الحماية محل اشتراك API السحابية للفرق الموزّعة. يغطي هذا الدليل الإعداد، وأثر الأداء، واعتبارات الأمان.',
+      metaDescription: 'VPN للوصول إلى خادم LLM المحلي: إعداد WireGuard وOpenVPN. وصول الفريق عن بُعد، والأمان. دليل النفق المنقسم.',
+      publishDate: '2026-04-05',
+      leadAnswerBlock: '**يمكن لأعضاء الفريق العاملين عن بُعد الوصول إلى خادم LLM المحلي عبر VPN المؤسسية دون تعريضه للإنترنت العام. اعتبارًا من أبريل 2026، يحل VPN + قواعد جدار الحماية محل اشتراك API السحابية للفرق الموزّعة.**',
+      audience: 'المطورون المُلمّون بـ Ollama أو LM Studio الذين يحسّنون سير عمل نماذج LLM المحلية',
+      readTime: '7 دقائق قراءة',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'VPN',
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#tldr' },
+        { label: 'بروتوكولات VPN: WireGuard مقابل OpenVPN', anchor: '#protocols' },
+        { label: 'الإعداد: خادم VPN في شبكة LLM', anchor: '#setup' },
+        { label: 'أثر الأداء', anchor: '#perf' },
+        { label: 'النفق المنقسم (الوصول إلى LLM فقط، لا الإنترنت)', anchor: '#split' },
+        { label: 'تعزيز الأمان', anchor: '#hardening' },
+        { label: 'استكشاف أخطاء الوصول عن بُعد وإصلاحها', anchor: '#troubleshooting' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**بروتوكول VPN:** يُوصى بـ WireGuard (سريع، حديث). OpenVPN (أبطأ، توافق أكبر) كبديل.',
+            '**الإعداد:** خادم VPN على الشبكة نفسها لخادم LLM. يتصل المستخدمون عن بُعد عبر WireGuard.',
+            '**زمن الاستجابة:** +5-10 ميلي ثانية لكل اتصال (عادةً غير محسوس). الإنتاجية = مقيّدة بعرض نطاق الإنترنت.',
+            '**وقت الإعداد:** 30 دقيقة (WireGuard) إلى ساعتين (OpenVPN + تكامل المصادقة).',
+            '**التكلفة:** مجاني (مصدر مفتوح) أو $50-200/سنة (خدمة VPN مُدارة إن لم ترغب في استضافتها بنفسك).',
+            '**الأمان:** WireGuard بـ 4,000 LOC (سطح هجوم منخفض). OpenVPN بـ 400K+ LOC (معقّد).',
+            '**التشفير:** كلاهما يدعم AES-256. أمان من طرف إلى طرف (مستخدم عن بُعد ← VPN ← خادم LLM).',
+            '**بلا نفق منقسم = تتحكم المؤسسة في كل حركة مرور الإنترنت. مع نفق منقسم = يوجّه المستخدم حركة المرور غير الخاصة بـ LLM خارج VPN.**',
+          ],
+        },
+        protocols: {
+          id: 'protocols',
+          title: 'بروتوكولات VPN: WireGuard مقابل OpenVPN',
+          rows: [
+            { Característica: 'الميزة', WireGuard: 'WireGuard', OpenVPN: 'OpenVPN' },
+            { Característica: 'زمن الاستجابة', WireGuard: '~5 ميلي ثانية حمل إضافي', OpenVPN: '~15 ميلي ثانية حمل إضافي' },
+            { Característica: 'تعقيد الإعداد', WireGuard: 'بسيط (30 دقيقة)', OpenVPN: 'معقّد (ساعتان)' },
+            { Característica: 'حجم الشيفرة', WireGuard: '4,000 LOC (قابلة للتدقيق)', OpenVPN: '400K+ LOC (معقّد)' },
+            { Característica: 'المصادقة', WireGuard: 'مفتاح عام', OpenVPN: 'شهادات + مفاتيح' },
+            { Característica: 'النفق المنقسم', WireGuard: '✓ مدمج', OpenVPN: '✓ يتطلب تكوينًا' },
+            { Característica: 'VPN مؤسسية (AD/SAML)', WireGuard: 'محدود (مصادقة يدوية)', OpenVPN: 'أفضل (دعم RADIUS)' },
+            { Característica: 'التوصية', WireGuard: '**استخدم هذا**', OpenVPN: 'بديل إن لم يتوفر WireGuard' },
+          ],
+          columns: ['الميزة', 'WireGuard', 'OpenVPN'],
+        },
+        setup: {
+          id: 'setup',
+          title: 'الإعداد: خادم VPN في شبكة LLM',
+          numberedItems: [
+            '**ثبّت WireGuard** على خادم VPN (جهاز Linux افتراضي على الشبكة المحلية نفسها لخادم LLM).',
+            '**ولّد المفاتيح:** مفتاح خاص (سرّ من جانب الخادم)، مفاتيح عامة (توزّع على العملاء).',
+            '**قاعدة جدار الحماية:** اسمح بـ UDP 51820 (المنفذ الافتراضي لـ WireGuard) الوارد من الإنترنت.',
+            '**تكوين العميل:** يتلقى كل مستخدم ملف .conf بمفتاح خاص، ونقطة نهاية الخادم، وعناوين IP المسموح بها.',
+            '**برمجية العميل:** تطبيق سطح المكتب WireGuard (Mac، Windows، Linux) أو المحمول (iOS، Android).',
+            '**الاختبار:** يتصل المستخدم بـ VPN، ويُجري ping لخادم LLM (يجب أن يستجيب)، ويشغّل الاستدلال عبر API.',
+          ],
+        },
+        perf: {
+          id: 'perf',
+          title: 'أثر الأداء',
+          content: [
+            '**زمن الاستجابة:** يضيف WireGuard 5-10 ميلي ثانية. يستغرق استدلال LLM أصلًا 10-100 ميلي ثانية/token، لذا فالأثر <5% محسوس.',
+            '**الإنتاجية:** مقيّدة باتصالك بالإنترنت (مثلًا، 100 Mbps إنترنت منزلي = 12 MB/ثانية = كافٍ لـ LLM).',
+            '**مثال:** إرسال موجّه 10 KB + استلام استجابة 5 KB = 15 KB إجمالًا. عند 100 Mbps = ~1 ميلي ثانية زمن استجابة شبكي (لا يُذكر).',
+            '**حمل التشفير:** تملك وحدات CPU الحديثة تعليمات AES-NI. تشفير/فك تشفير بـ 500 Mbps+ لكل نواة.',
+          ],
+        },
+        split: {
+          id: 'split',
+          title: 'النفق المنقسم (الوصول إلى LLM فقط، لا الإنترنت)',
+          content: [
+            '**افتراضيًا، توجّه VPN كل حركة المرور (الإنترنت + LLM) عبر النفق المؤسسي.**',
+            'قد يكون هذا بطيئًا إذا أراد المستخدمون تصفّح الإنترنت أثناء استخدام LLM.',
+            '**النفق المنقسم** = حركة مرور LLM فقط تمر عبر VPN، وحركة مرور الإنترنت تذهب مباشرة.',
+            'مثال على النفق المنقسم في WireGuard: `AllowedIPs = 10.0.0.0/24` (شبكة LLM فقط).',
+            '**المقايضة:** إنترنت أسرع، لكن إشراف أمني أقل (يمكن للمستخدم تسريب البيانات خارج VPN).',
+            '**التوصية:** نفق منقسم للمستخدمين (تجربة مستخدم أفضل). راقب باكتشاف نقاط النهاية (CrowdStrike، Sentinel One).',
+          ],
+        },
+        hardening: {
+          id: 'hardening',
+          title: 'تعزيز الأمان',
+          items: [
+            '**جدار الحماية:** اسمح فقط لخادم VPN بالتواصل مع خادم LLM. أسقِط كل حركة المرور الأخرى.',
+            '**تدوير المفاتيح:** كل 6 أشهر، أعد توليد مفاتيح العميل. عند إنهاء وصول مستخدم: ألغِ مفاتيحه فورًا.',
+            '**السجلات:** سجّل اتصالات VPN (مَن، ومتى، وكم المدة). دقّق ربع سنويًا.',
+            '**كلمات المرور:** يجب أن يستخدم خادم VPN مفاتيح SSH فقط (بلا مصادقة بكلمة مرور). SSH بلا كلمة مرور عبر زوج مفاتيح.',
+            '**الفشل المغلق:** إذا انقطع VPN، فلا يمكن للعميل الوصول إلى الإنترنت (ما لم يكن النفق المنقسم مفعّلًا).',
+          ],
+        },
+        troubleshooting: {
+          id: 'troubleshooting',
+          title: 'استكشاف أخطاء الوصول عن بُعد وإصلاحها',
+          content: [
+            '**لا يمكن الاتصال:** تحقق من قواعد جدار الحماية في الموجّه (هل UDP 51820 مفتوح؟). تأكد من تشغيل خدمة WireGuard (`wg show`).',
+            '**استدلال بطيء:** تحقق من زمن الاستجابة (`ping 10.0.0.1` داخل VPN، يجب أن يكون <20 ميلي ثانية). تحقق من عرض نطاق الإنترنت (`iperf3`).',
+            '**مهلة API:** انقطع اتصال VPN. راجع السجلات (`journalctl -u wg-quick@wg0`). أعد تشغيل WireGuard.',
+            '**مستخدم لا يستطيع الوصول، وآخرون يستطيعون:** تحقق من المفتاح العام للمستخدم في تكوين الخادم. أعد توليد زوج المفاتيح.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'الأسئلة الشائعة',
+          faqs: [
+            { q: 'هل أستخدم VPN أم أعرّض API لـ LLM للإنترنت؟', a: 'استخدم VPN دائمًا. لا تعرّض LLM للإنترنت مباشرة أبدًا (DDoS، وصول غير مصرّح). VPN + جدار الحماية آمن.' },
+            { q: 'هل يمكن للمستخدمين الوصول إلى API لـ LLM دون VPN؟', a: 'فقط من الشبكة المحلية (الشبكة نفسها). يجب على المستخدمين عن بُعد استخدام VPN. أو استخدم نفق SSH عكسيًا (أقل أمانًا).' },
+            { q: 'هل يبطئ تشفير VPN الاستدلال؟', a: 'بشكل لا يُذكر (<5% أثر). تستطيع وحدات CPU الحديثة التشفير/فك التشفير بسرعات Gbps.' },
+            { q: 'هل أستخدم النفق المنقسم؟', a: 'نعم، لتجربة مستخدم أفضل. راقب بـ EDR (اكتشاف نقاط النهاية) لتسريب البيانات.' },
+            { q: 'ماذا يحدث إذا تعرّض مفتاح VPN للاختراق؟', a: 'أعد توليد مفتاح ذلك المستخدم فورًا. يصبح المفتاح القديم غير صالح. لا وصول بأثر رجعي.' },
+            { q: 'هل يمكنني استخدام VPN المؤسسية (Okta، Azure)؟', a: 'نعم، أفضل للفرق الكبيرة. لكنه يتطلب تكاملًا (RADIUS، SAML). WireGuard أبسط لأقل من 20 مستخدمًا.' },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'قراءات ذات صلة',
+          items: [
+            '[إعداد LLM محلي للفرق](/ar/local-llms/local-llm-setup-for-teams)',
+            '[LLM محلي خاص للبيانات الحساسة](/ar/local-llms/private-local-llm-sensitive-data)',
+            '[أفضل حزمة LLM محلية للمطورين](/ar/local-llms/local-llm-developer-stack)',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'المصادر',
+          items: [
+            'الوثائق الرسمية لـ WireGuard ودليل البدء السريع',
+            'وثائق مجتمع OpenVPN وOpenVPN Access Server',
+            'إطار الأمن السيبراني NIST: أفضل ممارسات VPN',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'VPN لفرق LLM المحلي: الوصول عن بُعد، والأمان، والنفق المنقسم',
+        description: 'VPN للوصول إلى خادم LLM المحلي: إعداد WireGuard وOpenVPN. وصول الفريق عن بُعد، والأمان. دليل النفق المنقسم.',
+        url: 'https://www.promptquorum.com/ar/local-llms/vpn-for-local-llm-users',
+        inLanguage: 'ar',
+        datePublished: '2026-04-05',
+        dateModified: '2026-04-19',
+        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', 'name': 'إعداد VPN' },
+          { '@type': 'Thing', 'name': 'WireGuard' },
+          { '@type': 'Thing', 'name': 'الوصول عن بُعد' },
+          { '@type': 'Thing', 'name': 'الاستدلال المحلي لـ LLM' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        educationalLevel: 'Intermediate',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'ar',
+        url: 'https://www.promptquorum.com/ar/local-llms/vpn-for-local-llm-users',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            'name': 'هل أستخدم VPN أم أعرّض API لـ LLM للإنترنت؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استخدم VPN دائمًا. لا تعرّض LLM للإنترنت مباشرة أبدًا (DDoS، وصول غير مصرّح). VPN + جدار الحماية آمن.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن للمستخدمين الوصول إلى API لـ LLM دون VPN؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'فقط من الشبكة المحلية (الشبكة نفسها). يجب على المستخدمين عن بُعد استخدام VPN. أو استخدم نفق SSH عكسيًا (أقل أمانًا).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يبطئ تشفير VPN الاستدلال؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بشكل لا يُذكر (<5% أثر). تستطيع وحدات CPU الحديثة التشفير/فك التشفير بسرعات Gbps.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أستخدم النفق المنقسم؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، لتجربة مستخدم أفضل. راقب بـ EDR (اكتشاف نقاط النهاية) لتسريب البيانات.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ماذا يحدث إذا تعرّض مفتاح VPN للاختراق؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'أعد توليد مفتاح ذلك المستخدم فورًا. يصبح المفتاح القديم غير صالح. لا وصول بأثر رجعي.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام VPN المؤسسية (Okta، Azure)؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، أفضل للفرق الكبيرة. لكنه يتطلب تكاملًا (RADIUS، SAML). WireGuard أبسط لأقل من 20 مستخدمًا.'
+            }
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        url: 'https://www.promptquorum.com/ar/local-llms/vpn-for-local-llm-users',
+        inLanguage: 'ar',
+        name: 'خيارات إعداد VPN للوصول عن بُعد إلى LLM المحلي',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'WireGuard: زمن استجابة 5-10 ميلي ثانية، إعداد 30 دقيقة، 4,000 LOC (قابلة للتدقيق)، مصادقة بمفتاح عام. موصى به.' },
+          { '@type': 'ListItem', position: 2, name: 'OpenVPN: زمن استجابة 15 ميلي ثانية، إعداد ساعتين، 400K+ LOC (معقّد)، قائم على الشهادات. خيار بديل.' },
+          { '@type': 'ListItem', position: 3, name: 'Cloudflare Tunnel: أبسط إعداد، بلا تعريض IP عام، حماية DDoS مدمجة، لكن اعتماد على المزوّد.' },
+        ],
+      },
+    },
     pt: {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',

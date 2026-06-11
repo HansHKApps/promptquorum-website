@@ -702,6 +702,361 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
      },
   },
 
+  ar: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    theme: 'Advanced Techniques',
+    title: 'كيفية تشغيل Qwen2-VL محليًا في 2026: دليل OCR للمستندات والرؤية',
+    seoTitle: 'تشغيل Qwen2-VL محليًا 2026: دليل OCR والرؤية',
+    intro: 'Qwen2-VL هو نموذج الرؤية-اللغة المفتوح من Alibaba، ويعمل متغيره بحجم 7B محليًا بنحو 6 GB من VRAM عبر Ollama أو LM Studio. يقرأ المستندات ولقطات الشاشة والرسوم البيانية والصور، ويتفوق على جميع نماذج الرؤية المحلية الأخرى في OCR للصينية واليابانية والكورية. يغطي هذا الدليل اختيار النموذج والأجهزة والإعداد عبر Ollama وLM Studio واستخراج المستندات متعدد اللغات ومقارنة Qwen2-VL بـ LLaVA وLlama 3.2 Vision.',
+    metaDescription: 'شغّل Qwen2-VL محليًا بـ ~6 GB من VRAM عبر Ollama: التثبيت، OCR بالصينية واليابانية، الأسئلة عن الصور، والمقارنة بـ LLaVA.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    readTime: '11 دقيقة قراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'المطورون والمحللون الذين يحتاجون إلى OCR للمستندات دون اتصال وفهم الصور — خصوصًا للملفات بالصينية واليابانية واللغات المختلطة — دون إرسال البيانات إلى واجهات API سحابية',
+    primaryTerm: 'تشغيل Qwen2-VL محليًا',
+    targetKeywords: [
+      'تشغيل Qwen2-VL محليًا 2026',
+      'إعداد Qwen2-VL Ollama',
+      'OCR المستندات Qwen2-VL',
+      'نموذج رؤية محلي متعدد اللغات',
+      'Qwen2-VL مقابل Llama 3.2 Vision',
+      'OCR صيني ياباني LLM محلي',
+    ],
+    current_models_mentioned: [
+      'Qwen2-VL 2B',
+      'Qwen2-VL 7B',
+      'Qwen2-VL 72B',
+      'LLaVA 1.6 7B',
+      'Llama 3.2 Vision 11B',
+      'MiniCPM-V 2.6',
+      'InternVL 2.5 8B',
+      'Moondream 2',
+    ],
+    current_hardware_mentioned: [
+      '4 GB VRAM',
+      '6 GB VRAM',
+      '8 GB VRAM',
+      '48 GB VRAM',
+      'RTX 4060',
+      'RTX 3060 12 GB',
+      'Apple Silicon (unified memory)',
+    ],
+    ctaText: 'انضم إلى قائمة انتظار PromptQuorum ←',
+    leadAnswerBlock: '**نفّذ `ollama pull qwen2-vl:7b` على أي جهاز بسعة 8 GB من VRAM لقراءة المستندات بالصينية واليابانية واللغات المختلطة محليًا.** Qwen2-VL هو أقوى نموذج رؤية مفتوح لـ OCR متعدد اللغات — تُعالَج كل صورة على جهازك، دون رفع إلى السحابة.',
+    quickAnswerTop: {
+      ar: {
+        question: 'كيف أشغّل Qwen2-VL محليًا في 2026؟',
+        answer: 'ثبّت Ollama، ونفّذ `ollama pull qwen2-vl:7b`، ثم `ollama run qwen2-vl:7b` واكتب مسار ملف صورة في أمرك. للواجهة الرسومية، استخدم LM Studio: ابحث عن "Qwen2-VL 7B"، ونزّل متغير GGUF Q4_K_M، وأرفق الصور بأيقونة الصورة. يحتاج Qwen2-VL 7B إلى ~6 GB من VRAM ويقرأ المستندات ولقطات الشاشة والرسوم البيانية دون اتصال بالكامل.',
+        bullets: [
+          'الحد الأدنى من الأجهزة: 8 GB من VRAM (RTX 4060، RTX 3060 12 GB) أو Apple Silicon بذاكرة موحدة 16 GB',
+          'تنزيل النموذج: ollama pull qwen2-vl:7b (يُنزّل Qwen2-VL 7B Q4_K_M ~6 GB)',
+          'إرفاق الصور: اكتب مسار الملف في الأمر (CLI) أو أرسل مصفوفة images بصيغة base64 (API)',
+          'نقاط القوة: OCR المستندات بالصينية واليابانية والكورية — يتفوق على LLaVA وLlama 3.2 Vision',
+          'الأحجام: 2B (~3 GB VRAM)، 7B (~6 GB، موصى به)، 72B (~48 GB)',
+        ],
+        updatedDate: '2026-05-22',
+      },
+    },
+    toc: [
+      { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+      { label: 'لماذا يتصدر Qwen2-VL في OCR متعدد اللغات', anchor: '#why-qwen-vl' },
+      { label: 'اختيار حجم نموذج Qwen2-VL', anchor: '#choose-model' },
+      { label: 'متطلبات الأجهزة', anchor: '#hardware' },
+      { label: 'الإعداد عبر Ollama', anchor: '#ollama-setup' },
+      { label: 'الإعداد عبر LM Studio', anchor: '#lm-studio-setup' },
+      { label: 'OCR المستندات للملفات CJK', anchor: '#ocr-use-case' },
+      { label: 'الأسئلة عن الصور ولقطات الشاشة والرسوم البيانية', anchor: '#other-use-cases' },
+      { label: 'Qwen2-VL مقابل LLaVA مقابل Llama 3.2 Vision', anchor: '#vs-other-models' },
+      { label: 'الاتصال بـ PromptQuorum', anchor: '#promptquorum' },
+      { label: 'حل المشكلات', anchor: '#troubleshooting' },
+      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**يعمل Qwen2-VL 7B محليًا بـ ~6 GB من VRAM (Q4)** عبر Ollama — أمر واحد `ollama pull qwen2-vl:7b`، بلا تحويل نموذج.',
+          '**أفضل نموذج محلي لـ OCR متعدد اللغات**: يساوي Qwen2-VL نموذج MiniCPM-V 2.6 ويتفوق على LLaVA 1.6 وLlama 3.2 Vision 11B في النص الصيني والياباني والكوري.',
+          '**دقة أصلية تصل إلى 4096×4096** — يقرأ المسوحات عالية الدقة دون تصغير، بخلاف LLaVA 1.6 (672×672) أو Llama 3.2 Vision (1120×1120).',
+          '**ثلاثة أحجام**: 2B (~3 GB VRAM، سريع وأساسي)، 7B (~6 GB، موصى به لمعظم المستخدمين)، 72B (~48 GB، يتصدر معايير المصدر المفتوح).',
+          '**يقبل حتى 8 صور لكل طلب** — أعلى سعة لصور متعددة بين نماذج الرؤية المحلية.',
+          '**لا إدخال مباشر لـ PDF**: حوّل صفحات PDF إلى PNG أو JPEG أولًا ثم أرسل كل صفحة كصورة منفصلة.',
+          '**100% دون اتصال بعد التنزيل**: بلا مفتاح API، بلا رفع إلى السحابة — يبقى كل مستند على جهازك.',
+        ],
+      },
+      whyQwenVl: {
+        id: 'why-qwen-vl',
+        title: 'لماذا يتصدر Qwen2-VL نماذج الرؤية المحلية في OCR متعدد اللغات',
+        content: [
+          '**Qwen2-VL هو أقوى نموذج رؤية محلي لـ OCR المستندات متعدد اللغات — يساوي أو يتفوق على أي نموذج آخر يعمل على أجهزة استهلاكية عند قراءة النص بالصينية واليابانية والكورية والإنجليزية.** درّبته Alibaba على مجموعات نصية ضخمة من المستندات متعددة اللغات، مما يفسّر تفوّقه على LLaVA 1.6 وLlama 3.2 Vision 11B في استخراج النص غير الإنجليزي.',
+          'يدعم Qwen2-VL دقة إدخال ديناميكية تصل إلى 4096×4096 بكسل. لدى LLaVA 1.6 حد 672×672 وLlama 3.2 Vision حد 1120×1120، لذا يصغّر كلاهما المسوحات عالية الدقة قبل قراءتها. يقرأ Qwen2-VL مسحًا A4 بدقة 300 DPI بالدقة الأصلية — السبب الرئيسي لأن دقة OCR لديه أعلى في المستندات الكثيفة والأحرف CJK الصغيرة.',
+          'تشغيل Qwen2-VL محليًا يكلّف 0 € لكل صورة بعد الأجهزة. تتقاضى واجهة رؤية سحابية نحو $0.01–0.03 لكل صورة؛ بـ 10,000 صورة شهريًا يعني ذلك $100–300 مُوفَّرة — ولا يغادر أي مستند جهازك أبدًا.',
+          'استخدم Qwen2-VL إذا كانت مستنداتك تحتوي على نص CJK أو خطوط صغيرة أو مسوحات عالية الدقة. إذا كان عملك مجرد أسئلة عن صور بالإنجليزية، فإن Llama 3.2 Vision 11B خيار جيد بالمثل.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Qwen2-VL هو أكثر نماذج الرؤية المحلية دقةً لـ OCR المستندات بالصينية واليابانية والكورية، ويعمل بـ ~6 GB من VRAM عبر Ollama.' },
+          { type: 'plain-terms', text: 'نموذج الرؤية-اللغة يقرأ الصور بدلًا من توليدها. تعطي Qwen2-VL صورة أو صفحة ممسوحة، فيعيد نصًا — وصفًا أو إجابة أو المحتوى المستخرَج.' },
+        ],
+      },
+      chooseModel: {
+        id: 'choose-model',
+        title: 'اختيار حجم نموذج Qwen2-VL',
+        content: [
+          'يأتي Qwen2-VL بثلاثة أحجام. اختر حسب VRAM لديك والدقة التي تحتاجها. جميع الأحجام متوفرة على [Hugging Face (Qwen)](https://huggingface.co/Qwen) وفي مكتبة نماذج Ollama بوسوم صريحة.',
+        ],
+        rows: [
+          { 'Modelo': 'Qwen2-VL 2B Q4', 'VRAM (Q4)': '~3 GB', 'Etiqueta Ollama': 'qwen2-vl:2b', 'Ideal para': 'أوصاف سريعة، OCR بسيط، حواسيب محمولة بـ VRAM قليل' },
+          { 'Modelo': 'Qwen2-VL 7B Q4', 'VRAM (Q4)': '~6 GB', 'Etiqueta Ollama': 'qwen2-vl:7b', 'Ideal para': 'موصى به — OCR المستندات، الأسئلة عن الصور، الرسوم البيانية' },
+          { 'Modelo': 'Qwen2-VL 72B Q4', 'VRAM (Q4)': '~48 GB', 'Etiqueta Ollama': 'qwen2-vl:72b', 'Ideal para': 'أقصى جودة، Apple Silicon 64 GB+ أو بطاقات رسوم متعددة' },
+        ],
+        columns: ['Modelo', 'VRAM (Q4)', 'Etiqueta Ollama', 'Ideal para'],
+        tableFormat: true,
+        note: 'Q4_K_M هو التكميم الموصى به — أفضل نسبة جودة-حجم. ينبغي لمعظم المستخدمين البدء بـ Qwen2-VL 7B: يتسع في بطاقة رسوم بسعة 8 GB ويغطي جميع حالات الاستخدام في هذا الدليل. انتقل إلى نموذج 2B فقط عندما يكون VRAM أقل من 6 GB. راجع [تكميم نماذج LLM موضّحًا](/ar/local-llms/llm-quantization-explained) لمعرفة كيف يؤثر Q4 في الجودة.',
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'متطلبات الأجهزة لـ Qwen2-VL',
+        items: [
+          '**الحد الأدنى (Qwen2-VL 7B Q4)**: بطاقة رسوم بسعة 8 GB من VRAM — NVIDIA RTX 4060 أو RTX 3060 12 GB أو RTX 2080.',
+          '**خيار VRAM القليل (Qwen2-VL 2B Q4)**: 4 GB من VRAM — يعمل على معظم بطاقات رسوم الحواسيب المحمولة وعلى Apple Silicon المدمج.',
+          '**أقصى جودة (Qwen2-VL 72B Q4)**: ~48 GB — Apple Silicon بذاكرة موحدة 64 GB+، أو بطاقتا رسوم بسعة 24 GB.',
+          '**Apple Silicon**: شريحة M-series بذاكرة موحدة 16 GB+ تشغّل نموذج 7B دون مشكلات؛ يحتاج 72B إلى 64 GB+.',
+          '**RAM النظام**: 16 GB كحد أدنى إلى جانب استدلال بطاقة الرسوم؛ 32 GB موصى بها مع بيئة تطوير كاملة مفتوحة.',
+          '**التخزين**: ~6 GB مساحة قرص حرة لـ Qwen2-VL 7B Q4 (GGUF)، ~30 GB لـ 72B.',
+        ],
+        callouts: [
+          { type: 'note', text: 'تعمل نماذج الرؤية أبطأ بنحو 30–60% من نموذج نصي فقط بالعدد نفسه من المعاملات. يعالج مشفّر الرؤية الصورة كاملةً عند أول token؛ ثم يُولَّد النص بسرعة شبه طبيعية. احجز VRAM لكل من المشفّر ونموذج اللغة.' },
+        ],
+      },
+      ollamaSetup: {
+        id: 'ollama-setup',
+        title: 'إعداد Qwen2-VL مع Ollama',
+        content: [
+          'Ollama هو أسرع طريقة لتشغيل Qwen2-VL محليًا. ينزّل النموذج، ويدير التكميم، ويكشف واجهة API على localhost:11434. ثبّته من [ollama.com](https://ollama.com/download) — أو، إن كنت جديدًا على هذا، ابدأ بـ [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama).',
+        ],
+        numberedItems: [
+          { title: 'ثبّت Ollama', whyItMatters: 'يدير Ollama تنزيل النموذج وتنسيق GGUF وواجهة API المحلية. متاح لـ macOS وLinux وWindows.' },
+          { title: 'نزّل Qwen2-VL بوسم حجم صريح', whyItMatters: 'استخدم qwen2-vl:7b. الوسم qwen2-vl دون تحديد قد يُحل إلى حجم مختلف — حدّد دائمًا 2b أو 7b أو 72b للحصول على النموذج الذي يستهدفه هذا الدليل.' },
+          { title: 'شغّل النموذج وأرفق صورة', whyItMatters: 'في الوضع التفاعلي، اكتب مسار ملف الصورة داخل الأمر. يكتشف Ollama المسار ويحمّل الصورة في مشفّر الرؤية.' },
+          { title: 'أرسل الصور عبر API', whyItMatters: 'تقبل نقطة النهاية /api/generate مصفوفة images مرمّزة بـ base64. هكذا ترسل التطبيقات — وPromptQuorum — الصور برمجيًا.' },
+          { title: 'تحقق من OCR متعدد اللغات', whyItMatters: 'أرسل مسح مستند صيني أو ياباني وتأكد من تطابق النص المستخرَج. يثبت هذا أن مشفّر الرؤية والمُرمِّز يتعاملان مع نص CJK بشكل صحيح قبل البناء عليه.' },
+        ],
+        codeBlock: `# Step 1 — Install Ollama
+# macOS
+brew install ollama
+
+# Linux
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Windows — download from https://ollama.com/download
+
+# Step 2 — Pull Qwen2-VL 7B (explicit size tag)
+ollama pull qwen2-vl:7b
+# Downloads Qwen2-VL 7B Q4_K_M (~6 GB)
+
+# Step 3 — Run and attach an image (interactive)
+ollama run qwen2-vl:7b
+>>> Extract every line of text from ./invoice-jp.png
+
+# Step 4 — Send an image through the API
+# Encode the image first:  base64 -i scan.png   (macOS)
+curl http://localhost:11434/api/generate -d '{
+  "model": "qwen2-vl:7b",
+  "prompt": "Extract every line of text from this document. Preserve line breaks.",
+  "images": ["<base64-encoded-image>"],
+  "stream": false
+}'
+
+# Step 5 — Verify multilingual OCR
+ollama run qwen2-vl:7b
+>>> Extract all text from this image: ./contract-zh.png`,
+        codeLanguage: 'bash',
+        callouts: [
+          { type: 'warning', text: 'أرسل صور المستندات بدقة 150 DPI أو أعلى. يقرأ Qwen2-VL أصليًا حتى 4096×4096، لذا تحسّن المسوحات عالية الدقة الدقة مباشرة. بخلاف أمر نصي، جودة الصورة هي العامل الأهم في نتائج OCR — مسح ضبابي ينتج أحرفًا خاطئة مهما كان النموذج جيدًا.' },
+        ],
+      },
+      lmStudioSetup: {
+        id: 'lm-studio-setup',
+        title: 'إعداد Qwen2-VL مع LM Studio',
+        content: [
+          'يشغّل LM Studio نموذج Qwen2-VL عبر واجهة رسومية دون أوامر CLI. وهو الطريقة الموصى بها لمستخدمي Windows وأي شخص يفضّل واجهة رسومية. نزّله من [lmstudio.ai](https://lmstudio.ai)، أو راجع [كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio).',
+        ],
+        numberedItems: [
+          { title: 'نزّل وثبّت LM Studio', whyItMatters: 'واجهة رسومية مجانية متعددة المنصات لاستدلال النماذج المحلية. لا تتطلب طرفية.' },
+          { title: 'ابحث عن Qwen2-VL في متصفح النماذج', whyItMatters: 'ابحث عن "Qwen2-VL 7B" واختر متغير GGUF Q4_K_M. يعلّم LM Studio النماذج الداعمة للرؤية بأيقونة صورة.' },
+          { title: 'حمّل النموذج وأرفق صورة', whyItMatters: 'انقر على أيقونة الصورة في حقل الإدخال لرفع صورة أو مسح. يمرّرها LM Studio إلى مشفّر الرؤية.' },
+          { title: 'ابدأ الخادم المحلي', whyItMatters: 'زر "Start Server" يكشف واجهة API متوافقة مع OpenAI على localhost:1234. تستخدم طلبات الرؤية تنسيق محتوى image_url القياسي.' },
+        ],
+        codeBlock: `// LM Studio — OpenAI-compatible vision request (localhost:1234)
+{
+  "model": "qwen2-vl-7b",
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        { "type": "text", "text": "Extract all text from this document." },
+        {
+          "type": "image_url",
+          "image_url": { "url": "data:image/png;base64,<base64-encoded-image>" }
+        }
+      ]
+    }
+  ]
+}`,
+        codeLanguage: 'json',
+        note: 'يستخدم LM Studio وOllama تنسيقي صور مختلفين: يتبع LM Studio مخطط محتوى image_url الخاص بـ OpenAI (ببادئة data:)؛ ويستخدم Ollama مصفوفة images عُلوية بـ base64 خالص (بلا بادئة). اختر بيئة تشغيل واحدة واستخدم تنسيقها.',
+      },
+      ocrUseCase: {
+        id: 'ocr-use-case',
+        title: 'OCR المستندات للملفات بالصينية واليابانية واللغات المختلطة',
+        content: [
+          '**يستخرج Qwen2-VL النص من المستندات بالصينية واليابانية والكورية واللغات المختلطة بدقة أعلى من أي نموذج رؤية محلي آخر.** تضمّنت بيانات تدريبه مجموعات نصية ضخمة من المستندات متعددة اللغات، ودقته الأصلية 4096×4096 تقرأ أحرف CJK الصغيرة التي يصغّرها LLaVA 1.6 وLlama 3.2 Vision ويفقدانها.',
+          'النمط الأكثر موثوقية هو أمر استخراج محدد. اطلب بنية — "احفظ تخطيط الجدول"، "أعِد كل حقل بصيغة key: value" — بدلًا من "اقرأ هذا" الغامض. يتّبع Qwen2-VL تعليمات التنسيق بدقة، مما يجعل المخرجات قابلة للاستخدام دون معالجة لاحقة.',
+        ],
+        items: [
+          '**استخراج نص بسيط**: "استخرج كل سطر نص من هذه الصورة. احفظ فواصل الأسطر وترتيب القراءة."',
+          '**حقول منظمة**: "هذه فاتورة يابانية. أعِد المورّد والتاريخ والمجموع الفرعي والضريبة والإجمالي بصيغة أزواج key: value."',
+          '**استخراج جداول**: "استخرج هذا الجدول بصيغة CSV. عامل الصف الأول كترويسة."',
+          '**استخراج وترجمة في خطوة واحدة**: "استخرج النص الصيني من هذه الصورة ثم ترجمه إلى العربية. أظهر كليهما."',
+        ],
+        codeBlock: `# Japanese invoice -> structured fields
+ollama run qwen2-vl:7b
+>>> This is a Japanese invoice. Extract vendor name, invoice date,
+    subtotal, consumption tax, and total. Return as key: value pairs.
+    ./invoice-jp.png
+
+# Example output:
+# vendor: Sample Trading Co., Ltd.
+# date: 2026-04-30
+# subtotal: 84,000 JPY
+# tax: 8,400 JPY
+# total: 92,400 JPY`,
+        codeLanguage: 'bash',
+        callouts: [
+          { type: 'important', text: 'تحقق دائمًا من الأرقام المستخرَجة مقابل المستند المصدر. قد تخطئ نماذج الرؤية المحلية — بما فيها Qwen2-VL — في قراءة رقم في مسح منخفض الجودة. عامل مخرجات OCR كمسودة للتأكيد، لا كقيمة نهائية، خصوصًا في الفواتير والمستندات المالية.' },
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'لاستخراج نص من مستند CJK بـ Qwen2-VL، أرسل الصورة بدقة 150+ DPI بأمر محدد يطلب بنية، مثل "أعِد كل حقل بصيغة key: value".' },
+          { type: 'plain-terms', text: 'OCR يعني تحويل صورة نص إلى نص قابل للتحرير. ينظر Qwen2-VL إلى صفحة ممسوحة ويكتب ما يراه — ويتعامل مع الأحرف الصينية واليابانية بنفس جودة الإنجليزية.' },
+        ],
+      },
+      otherUseCases: {
+        id: 'other-use-cases',
+        title: 'الأسئلة عن الصور وتحليل لقطات الشاشة وقراءة الرسوم البيانية',
+        content: [
+          'إلى جانب OCR، يتعامل Qwen2-VL مع فهم الصور العام — وصف الصور والإجابة عن أسئلة حول لقطات الشاشة وقراءة الرسوم البيانية. وهو دقيق مع المدخلات الواضحة وأضعف مع المشاهد المزدحمة أو الغامضة.',
+        ],
+        items: [
+          '**الأسئلة عن الصور**: اطرح أسئلة مفتوحة عن صورة — "ما الموجود في هذه الصورة؟"، "كم شخصًا يرتدي ملابس حمراء؟". Qwen2-VL 7B دقيق مع الصور الواضحة وأضعف مع المشاهد المزدحمة أو الغامضة.',
+          '**تحليل لقطات الشاشة والواجهات**: يقرأ Qwen2-VL لقطات شاشة الواجهات وحوارات الأخطاء وحالات التطبيقات. للقطات الكود الكثيفة تحديدًا، دُرّب InternVL 2.5 بتركيز أكبر على تلك البيانات — استخدمه إذا كانت الواجهة والكود عبء عملك الرئيسي.',
+          '**قراءة الرسوم البيانية والمخططات**: يصف Qwen2-VL بنية الرسوم البيانية واتجاهاتها جيدًا، لكن القيم العددية الدقيقة المستخرَجة من الرسوم غير موثوقة في أي نموذج رؤية محلي. تأكد من الأرقام الدقيقة مقابل البيانات الأساسية.',
+          '**إطارات الفيديو**: يقبل Qwen2-VL إطارات متعددة كتسلسل — خذ نحو إطار واحد في الثانية وأرسل حتى 8 لتلخيص مقطع قصير.',
+          '**مقارنة صور متعددة**: أرسل حتى 8 صور في طلب واحد لمقارنة الإصدارات أو رصد الفروق أو وصف مجموعة بالدُفعات.',
+        ],
+        callouts: [
+          { type: 'tip', text: 'استخدم Qwen2-VL لـ OCR والمستندات متعددة اللغات والأسئلة العامة عن الصور. انتقل إلى InternVL 2.5 عندما يكون عبء عملك الرئيسي لقطات الكود أو الواجهة، أو إلى Moondream 2 عندما يكون لديك أقل من 4 GB من VRAM.' },
+        ],
+      },
+      vsOtherModels: {
+        id: 'vs-other-models',
+        title: 'Qwen2-VL مقابل LLaVA مقابل Llama 3.2 Vision',
+        content: [
+          '**في OCR متعدد اللغات، يتفوق Qwen2-VL على LLaVA 1.6 ويساوي أو يتفوق على Llama 3.2 Vision 11B بـ VRAM أقل.** للأسئلة عن صور بالإنجليزية فقط، Llama 3.2 Vision 11B خيار قوي بالمثل. يبقى LLaVA 1.6 النموذج الأفضل توثيقًا إذا كنت تحتاج إلى موارد حل مشكلات من المجتمع.',
+        ],
+        rows: [
+          { 'Modelo': 'Qwen2-VL 7B', 'VRAM (Q4)': '~6 GB', 'OCR / CJK': 'ممتاز', 'Resolución máx.': '4096×4096', 'Ideal para': 'OCR متعدد اللغات، مسوحات عالية الدقة' },
+          { 'Modelo': 'Llama 3.2 Vision 11B', 'VRAM (Q4)': '~8 GB', 'OCR / CJK': 'جيد', 'Resolución máx.': '1120×1120', 'Ideal para': 'أسئلة عن صور بالإنجليزية، مستندات عامة' },
+          { 'Modelo': 'LLaVA 1.6 7B', 'VRAM (Q4)': '~6 GB', 'OCR / CJK': 'متوسط', 'Resolución máx.': '672×672', 'Ideal para': 'أسئلة عامة، دعم مجتمعي' },
+          { 'Modelo': 'MiniCPM-V 2.6 8B', 'VRAM (Q4)': '~6 GB', 'OCR / CJK': 'ممتاز', 'Resolución máx.': '1792×1792', 'Ideal para': 'OCR المستندات (موجّه للإنجليزية)' },
+          { 'Modelo': 'InternVL 2.5 8B', 'VRAM (Q4)': '~8 GB', 'OCR / CJK': 'جيد', 'Resolución máx.': 'عالية', 'Ideal para': 'لقطات الكود والواجهة' },
+        ],
+        columns: ['Modelo', 'VRAM (Q4)', 'OCR / CJK', 'Resolución máx.', 'Ideal para'],
+        tableFormat: true,
+        note: 'تعمل الخمسة جميعًا عبر Ollama (InternVL 2.5 عبر بناءات مجتمعية). للتحليل الكامل لنماذج الرؤية المحلية — بما فيها Moondream 2 ومعيار استخراج الفواتير — راجع [مقارنة نماذج الرؤية المحلية](/ar/power-local-llm/local-vision-models-llava-ollama-2026). إذا لم تكن متأكدًا، ابدأ بـ Qwen2-VL 7B: يغطي OCR والمستندات والأسئلة العامة بـ 6 GB من VRAM.',
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'ربط Qwen2-VL المحلي بـ PromptQuorum',
+        content: [
+          'يُوجّه PromptQuorum الأوامر بين نماذج متعددة. لاستخدام Qwen2-VL المحلي كوجهة توزيع للرؤية، وجّه نقطة نهاية LLM المحلي في PromptQuorum إلى خادم Ollama لديك. تبقى معالجة الصور حينها على أجهزتك، بينما تظل النماذج السحابية متاحة لمهام النص.',
+          'هذه نقطة نهاية Ollama (متوافقة مع OpenAI)، منفصلة عن إعداد API الخاص بـ Anthropic المستخدم لـ Claude. يمكن أن يكون كلاهما نشطًا في آن واحد، مع توجيه PromptQuorum حسب نوع المهمة وحساسية البيانات.',
+        ],
+        codeBlock: `# PromptQuorum dispatch config — local Qwen2-VL via Ollama
+# Set in your .env or the PromptQuorum settings panel
+
+OLLAMA_BASE_URL=http://localhost:11434/v1
+LOCAL_VISION_MODEL=qwen2-vl:7b
+
+# Example routing rules:
+# - task_type: ocr / image  -> qwen2-vl:7b        (local Ollama, no cloud upload)
+# - task_type: text         -> claude-sonnet-4-6  (Anthropic API, separate config)`,
+        codeLanguage: 'bash',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'اربط PromptQuorum بـ Qwen2-VL المحلي بضبط OLLAMA_BASE_URL على http://localhost:11434/v1 وتوجيه نموذج الرؤية المحلي إلى qwen2-vl:7b.' },
+        ],
+      },
+      troubleshooting: {
+        id: 'troubleshooting',
+        title: 'حل مشكلات Qwen2-VL',
+        items: [
+          '**"unknown model" أو فشل التنزيل**: استخدم وسم حجم صريحًا — `ollama pull qwen2-vl:7b`، لا `qwen2-vl`. نفّذ `ollama list` لتأكيد الاسم المثبَّت.',
+          '**الصورة تُتجاهَل ويستجيب النموذج كأنه لم تُرسَل أي صورة**: تأكد من أن مسار الملف صحيح وقابل للقراءة. في واجهة API الخاصة بـ Ollama، يجب أن تحتوي مصفوفة `images` على base64 خالص *دون* بادئة `data:` — بادئة `data:` لتنسيق LM Studio وOpenAI فقط.',
+          '**أحرف CJK غير مقروءة أو غائبة**: المسح بدقة منخفضة جدًا. أعد المسح بدقة 150–300 DPI. يقرأ Qwen2-VL حتى 4096×4096، لذا تحسّن دقة الإدخال الأعلى دقة الصينية واليابانية مباشرة.',
+          '**CUDA نفاد الذاكرة (out of memory)**: النموذج لا يتسع في VRAM لديك. انتقل إلى Qwen2-VL 2B (~3 GB) أو شغّله على Apple Silicon، الذي يشارك الذاكرة الموحدة بين CPU وبطاقة الرسوم.',
+          '**أول استجابة بطيئة، ثم سريعة**: هذا طبيعي. يعالج مشفّر الرؤية الصورة كاملةً عند أول token؛ ثم يُولَّد النص بسرعة شبه طبيعية.',
+          '**أرقام خاطئة مستخرَجة من فاتورة أو رسم بياني**: تخطئ نماذج الرؤية المحلية في قراءة الأرقام في المدخلات المشوّشة. ارفع جودة المسح وتحقق دائمًا من المخرجات العددية مقابل المصدر.',
+          '**ملف PDF لا يُحمَّل**: لا يقبل أي نموذج رؤية محلي PDF مباشرة. حوّل الصفحات إلى PNG أو JPEG أولًا (بـ pdf2image أو pypdfium2)، ثم أرسل كل صفحة كصورة منفصلة.',
+          '**LM Studio يعرض "failed to load model"**: إمّا VRAM غير كافٍ، أو نزّلت GGUF بلا دعم رؤية. تأكد من أن بطاقة النموذج تشير إلى دعم الرؤية واختر متغير Q4_K_M.',
+        ],
+        callouts: [
+          { type: 'tip', text: 'نفّذ `ollama ps` لرؤية النماذج المحمّلة في VRAM وكم تستهلك كل واحدة من الذاكرة. استخدم `ollama stop qwen2-vl:7b` لتفريغ النموذج قبل الانتقال إلى 72B.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[كيفية تشغيل Qwen 3 محليًا](/ar/local-llms/run-qwen-locally-guide-2026) — المقال المكمّل لنموذج النص: إعداد Qwen 3 مع Ollama وLM Studio.',
+          '[مقارنة نماذج الرؤية المحلية: LLaVA، Llama 3.2 Vision، MiniCPM-V](/ar/power-local-llm/local-vision-models-llava-ollama-2026) — التحليل الكامل لكل نموذج رؤية محلي، مع معايير.',
+          '[نماذج LLM المحلية متعددة الوسائط: الرؤية والصوت والنص](/ar/local-llms/multimodal-local-llms) — نظرة عامة أوسع على تشغيل النماذج متعددة الوسائط محليًا.',
+          '[Qwen مقابل Llama مقابل Mistral](/ar/local-llms/qwen-vs-llama-vs-mistral) — كيف تقارن نماذج Qwen النصية بالبدائل.',
+          '[دليل أجهزة نماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) — متطلبات VRAM وبطاقة الرسوم للاستدلال المحلي.',
+          '[عرض جميع أدلة نماذج LLM المحلية](/ar/local-llms)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          { q: 'ما الحد الأدنى من الأجهزة لتشغيل Qwen2-VL محليًا؟', a: 'يحتاج Qwen2-VL 7B بتكميم Q4_K_M إلى 8 GB من VRAM (RTX 4060 أو RTX 3060 12 GB أو RTX 2080). يعمل Qwen2-VL 2B الأصغر بـ 4 GB. يحتاج نموذج 72B إلى ~48 GB — Apple Silicon بذاكرة موحدة 64 GB+ أو بطاقتي رسوم بسعة 24 GB. يشغّل Apple Silicon بذاكرة موحدة 16 GB+ نموذج 7B دون مشكلات.' },
+          { q: 'هل Qwen2-VL أفضل من LLaVA لـ OCR؟', a: 'نعم، خصوصًا للنص غير الإنجليزي. يساوي Qwen2-VL نموذج MiniCPM-V 2.6 ويتفوق على LLaVA 1.6 وLlama 3.2 Vision 11B في OCR الصينية واليابانية والكورية. دقته الأصلية 4096×4096 تقرأ المسوحات عالية الدقة دون تصغير، بينما لدى LLaVA 1.6 حد 672×672. لا يزال لـ LLaVA أكبر مجتمع وأكثر دروس.' },
+          { q: 'هل يمكن لـ Qwen2-VL قراءة ملفات PDF مباشرة؟', a: 'لا. لا يقبل أي نموذج رؤية محلي إدخال PDF مباشرة. حوّل كل صفحة من PDF إلى صورة PNG أو JPEG أولًا (باستخدام pdf2image أو pypdfium2)، ثم أرسل كل صفحة كطلب صورة منفصل. لـ PDF من 10 صفحات ترسل 10 استعلامات صور وتدمج النتائج.' },
+          { q: 'كيف أرسل صورة إلى Qwen2-VL عبر Ollama؟', a: 'بطريقتين. في الوضع التفاعلي (`ollama run qwen2-vl:7b`)، اكتب مسار ملف الصورة داخل الأمر — يكتشفه Ollama ويحمّل الصورة. عبر API، أرسل طلب POST إلى /api/generate بمصفوفة `images` مرمّزة بـ base64. يجب ألا تتضمن سلسلة base64 بادئة `data:`.' },
+          { q: 'هل يعمل Qwen2-VL دون اتصال بالكامل؟', a: 'نعم. بعد التنزيل الواحد للنموذج، يعمل Qwen2-VL بالكامل على جهازك — بلا مفتاح API ولا حساب سحابي. لا تُرفع أي صورة إلى أي مكان، مما يُبقي معالجة المستندات داخل بنيتك التحتية. راجع [دليل إعداد Qwen المحلي لـ GDPR](/ar/local-llms/qwen-local-gdpr-setup-guide-2026) لتداعيات الامتثال.' },
+          { q: 'كم صورة يمكن لـ Qwen2-VL معالجتها في آن واحد؟', a: 'حتى 8 صور لكل طلب — أعلى سعة لصور متعددة بين نماذج الرؤية المحلية. هذا يجعله مثاليًا لمقارنة إصدارات المستندات أو رصد الفروق أو تلخيص فيديو قصير مُعاين بإطار واحد في الثانية.' },
+          { q: 'Qwen2-VL أم Llama 3.2 Vision — أيهما أختار؟', a: 'اختر Qwen2-VL للمستندات بالصينية أو اليابانية أو الكورية، أو المسوحات عالية الدقة، أو الخطوط الصغيرة — ولأن نموذج 7B يتسع في 6 GB من VRAM مقابل 8 GB لـ Llama 3.2 Vision 11B. اختر Llama 3.2 Vision 11B للأسئلة العامة عن صور بالإنجليزية فقط، حيث يكون الاثنان متقاربين.' },
+          { q: 'لماذا تكون الأحرف في مخرجات OCR لدي غير مقروءة؟', a: 'يكون السبب دائمًا تقريبًا مسحًا بدقة منخفضة. يقرأ Qwen2-VL أصليًا حتى 4096×4096، لذا فإن إعادة مسح المستند بدقة 150–300 DPI تحل عادةً الأحرف غير المقروءة أو الغائبة. الإدخال منخفض الجودة هو أكبر سبب لأخطاء OCR في أي نموذج رؤية محلي.' },
+        ],
+      },
+    },
+     schema: {
+       '@context': 'https://schema.org',
+       '@type': 'TechArticle',
+       headline: 'كيفية تشغيل Qwen2-VL محليًا في 2026: OCR المستندات والرؤية',
+       description: 'شغّل Qwen2-VL محليًا بـ ~6 GB من VRAM عبر Ollama: OCR، الرؤية، خطوات التثبيت.',
+       url: 'https://www.promptquorum.com/ar/local-llms/run-qwen-vl-locally-2026',
+       inLanguage: 'ar',
+       datePublished: '2026-05-22',
+       dateModified: '2026-05-22',
+       author: { '@type': 'Person', name: 'Hans Kuepper' },
+       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+     },
+  },
+
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

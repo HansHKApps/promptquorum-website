@@ -1149,6 +1149,181 @@ schema: {
         ],
       },
     },
+    ar: {
+      theme: 'Tools & Interfaces',
+      title: 'نماذج LLM المحلية مع VS Code وCursor: الإعداد وأفضل الممارسات',
+      seoTitle: 'نماذج LLM المحلية في VS Code وCursor: دليل الإعداد 2026',
+      intro: 'يستطيع VS Code وCursor (محرر شيفرة موجّه نحو الذكاء الاصطناعي) استخدام نماذج LLM المحلية لإكمال الشيفرة واقتراحها، عبر إضافة Continue.dev (VS Code) أو التكامل المباشر (Cursor). اعتبارًا من أبريل 2026، إكمالات الشيفرة المحلية عملية لنماذج 7B-13B وتتطلب 8-16 GB من RAM. يغطي هذا الدليل الإعداد وأفضل النماذج وضبط الأداء.',
+      metaDescription: 'استخدم Ollama في VS Code مع Continue.dev لإكمالات شيفرة محلية بلا مفتاح API. أفضل النماذج، متطلبات VRAM والتكامل مع Cursor 2026.',
+      publishDate: '2026-04-04',
+      readTime: '10 دقائق للقراءة',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'إكمال الشيفرة المحلي',
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'VS Code + Continue.dev', anchor: '#vscode-continue' },
+        { label: 'محرر Cursor', anchor: '#cursor-editor' },
+        { label: 'أفضل النماذج للشيفرة', anchor: '#best-models' },
+        { label: 'الأداء وVRAM', anchor: '#performance' },
+        { label: 'الإعداد المتقدم', anchor: '#advanced' },
+        { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
+        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+        { label: 'قراءات ذات صلة', anchor: '#related-reading' },
+        { label: 'المصادر', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'يستخدم VS Code إضافة Continue.dev للاتصال بالنماذج المحلية (Ollama، LM Studio، vLLM).',
+            'Cursor هو نسخة معدّلة (fork) من VS Code بدعم أصلي للنماذج المحلية. لا تحتاج أي إضافة.',
+            '**أفضل النماذج المحلية للشيفرة**: Qwen3-Coder 7B، Llama Code 13B أو Mistral Small.',
+            'توقّع زمن استجابة إكمال 2-5 ثوانٍ على بطاقات GPU استهلاكية مع نماذج 7B.',
+            'اعتبارًا من أبريل 2026، إكمالات الشيفرة المحلية عملية للاستخدام الشخصي، لكنها ليست جاهزة بعد للإنتاج في الفرق.',
+          ],
+        },
+        vscodeContinue: {
+          title: 'كيف تُعِدّ Continue.dev في VS Code؟',
+          content: 'Continue.dev إضافة لـVS Code لإكمالات الشيفرة المحلية والسحابية.',
+          codeBlock: '# 1. Install Continue from VS Code marketplace\n# Search "Continue" and click Install\n\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Continue settings (Ctrl+Shift+P → Continue: Open Settings)\n# config.json opens\n\n# 4. Configure for your local model:\n# Replace the default settings with:\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. Start typing code and press Tab for completions\n# Or Ctrl+Shift+\\ to manually trigger completions',
+          codeLanguage: 'json',
+        },
+        cursor: {
+          title: 'كيف تستخدم النماذج المحلية في Cursor؟',
+          content: [
+            '**Cursor نسخة معدّلة من VS Code محسّنة للبرمجة المدعومة بالذكاء الاصطناعي.** لديه دعم مدمج للنماذج المحلية عبر Ollama.',
+          ],
+          codeBlock: '# 1. Download Cursor from cursor.sh\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Cursor Settings (Cmd/Ctrl + ,)\n# 4. Search "Model" and set:\n#    - Model Provider: "Ollama"\n#    - Model: "qwen2.5-coder:7b" (or your choice)\n#    - API Base: "http://localhost:11434"\n\n# 5. Type code and press Tab for inline completions\n# 6. Ctrl+K for multi-line completions',
+          codeLanguage: 'bash',
+        },
+        bestModels: {
+          title: 'أي النماذج الأفضل للشيفرة؟',
+          content: [
+            '⚠️ **قاعدة VRAM**: احتفظ دائمًا بـ2-3 GB من VRAM متاحة فوق ما يتطلبه النموذج. نموذج 7B في Q4 (4.7 GB) يحتاج 8 GB من VRAM إجمالًا عند التشغيل في VS Code أو Cursor.',
+          ],
+          rows: [
+            { 'Modelo': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Velocidad': 'سريع', 'Ideal para': 'أفضل توازن، الأسرع' },
+            { 'Modelo': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Velocidad': 'سريع', 'Ideal para': 'برمجة عامة' },
+            { 'Modelo': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4.5 GB', 'Velocidad': 'سريع جدًا', 'Ideal para': 'خفيف، خوادم الاتحاد الأوروبي' },
+            { 'Modelo': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', 'Velocidad': 'متوسط', 'Ideal para': 'أفضل جودة على أجهزة 16 GB' },
+            { 'Modelo': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Velocidad': 'سريع', 'Ideal para': 'بديل خفيف' },
+          ],
+          columns: ['Modelo', 'HumanEval', 'VRAM', 'Velocidad', 'Ideal para'],
+        },
+        performance: {
+          title: 'ما زمن الاستجابة وVRAM الذي يجب توقّعه؟',
+          content: [
+            '**زمن استجابة الإكمال (الوقت حتى الرمز الأول) أساسي لتجربة الـIDE.** اعتبارًا من أبريل 2026، هذه هي القيم النموذجية:',
+            '⚠️ **التحقق الواقعي من زمن الاستجابة**: الإكمالات المحلية أبطأ بـ2-10 مرات من السحابية. استخدم المحلي للعمل الخاص؛ استخدم السحابة (Copilot، Claude) للبرمجة حيث يهمّ الوقت.',
+            '💡 **تحسين الأداء**: قلّل `contextLength` من 2048 إلى 1024 رمزًا لتقليل زمن الاستجابة إلى النصف. المقايضة: عدد أقل من أسطر شيفرة السياق للاقتراحات.',
+          ],
+          rows: [
+            { 'Hardware': 'RTX 4090 GPU', 'Modelo': 'Qwen3-Coder 7B', 'Latencia': '0.3-0.5 ثانية', 'Rendimiento': '150 رمز/ث' },
+            { 'Hardware': 'RTX 4070 GPU', 'Modelo': 'Qwen3-Coder 7B', 'Latencia': '0.8-1.5 ثانية', 'Rendimiento': '80 رمز/ث' },
+            { 'Hardware': 'M3 MacBook Pro', 'Modelo': 'Qwen3-Coder 7B', 'Latencia': '2-3 ثوانٍ', 'Rendimiento': '20 رمز/ث' },
+            { 'Hardware': 'CPU بـ8 أنوية فقط', 'Modelo': 'Qwen3-Coder 7B', 'Latencia': '5-10 ثوانٍ', 'Rendimiento': '3 رموز/ث' },
+          ],
+          columns: ['Hardware', 'Modelo', 'Latencia', 'Rendimiento'],
+          note: '**ملاحظة حول بيانات الأداء**: زمن الاستجابة والإنتاجية مقيسان بصيغة Qwen3-Coder 7B Q4_K_M، حجم الدفعة = 1، على نظام دون حمل (بلا مهام في الخلفية). يعتمد أداؤك الفعلي على نظام التشغيل وتوافر VRAM وصيغة التكميم والحمل المتزامن.',
+        },
+        advanced: {
+          title: 'كيف تُعِدّ إكمالات الشيفرة للحصول على أفضل أداء؟',
+          content: [
+            'اضبط التجربة بهذه المعاملات:',
+            '⚠️ **تحذير**: على أجهزة 8 GB مع نماذج 13B، قد تستغرق الإكمالات 5-10 ثوانٍ، مما يجعل الـIDE يبدو غير مستجيب. التزم بنماذج 7B لأداء سلس.',
+            '💡 **نصيحة احترافية**: زِد `debounceWaitMs` إلى 400-500 مللي ثانية لتقليل الوميض وتجنّب عرض اقتراحات غير مكتملة.',
+          ],
+          codeBlock: '# config.json advanced settings\n{\n  "tabAutocompleteModel": {\n    "contextLength": 2048,     # How much code context to send\n    "maxTokens": 50            # Max tokens per completion\n  },\n  "completionOptions": {\n    "maxContextTokens": 1024,\n    "maxSuggestionsCount": 5,\n    "debounceWaitMs": 200      # Wait before showing completions (ms)\n  },\n  # For faster inference, use smaller context:\n  "models": [{\n    "contextLength": 1024      # Smaller context = faster\n  }]\n}\n\n# For best speed on 8GB machines:\n# - Use 7B model (not 13B)\n# - Set maxTokens to 30\n# - Set debounceWaitMs to 500 (less flickering)',
+          codeLanguage: 'json',
+        },
+        commonMistakes: {
+          title: 'ما الأخطاء الشائعة عند إعداد إكمالات الشيفرة المحلية؟',
+          items: [
+            '**عدم ضبط زمن استجابة debounce**: إذا بدت الإكمالات "بطيئة"، زِد debounceWaitMs (مثلًا إلى 400 مللي ثانية) لتجنّب عرض اقتراحات غير مكتملة.',
+            '**استخدام نموذج كبير جدًا على VRAM الخاص بك**: نموذج 13B زائد عبء المحرر قد يستخدم أكثر من 12 GB. على أجهزة 8 GB، التزم بنماذج 7B.',
+            '**توقّع جودة شيفرة بمستوى السحابة**: GPT-5.5 أفضل بشكل كبير في الشيفرة من أي نموذج 7B. تمثّل الإكمالات المحلية 70-80% من جودة السحابة.',
+            '**تشغيل الاستدلال على CPU**: الإكمالات على CPU غير عملية (زمن استجابة 5-10 ثوانٍ). GPU ضرورية للحصول على إكمالات قابلة للاستخدام.',
+          ],
+        },
+        faqSection: {
+          title: 'الأسئلة الشائعة: إكمالات الشيفرة المحلية',
+          faqs: [
+            {
+              q: 'هل إكمالات الشيفرة المحلية أسرع من السحابية؟',
+              a: 'لا. الإكمالات السحابية (GitHub Copilot) أسرع بفضل الخوادم المحسّنة. الإكمالات المحلية ذات زمن استجابة أعلى، لكنها بتكلفة صفرية وصفر خطر على الخصوصية.',
+            },
+            {
+              q: 'هل يمكنني استخدام الإكمالات المحلية مع بيئات IDE أخرى (PyCharm، Neovim)؟',
+              a: 'نعم، رغم أن الإعداد يتفاوت. لدى PyCharm إضافة لـOllama. لـNeovim، استخدم cmp-ollama (إضافة إكمالات). راجع دائمًا مجتمع الـIDE الخاص بك لمعرفة التكاملات المتاحة.',
+            },
+            {
+              q: 'هل يمكنني استخدام النماذج السحابية في Continue أو Cursor؟',
+              a: 'نعم. اضبط Continue لاستخدام OpenAI أو Claude أو Gemini. يمكنك أيضًا الجمع بينها (المحلي للمهام السريعة، السحابة للشيفرة المعقّدة).',
+            },
+            {
+              q: 'هل تعمل إكمالات الشيفرة المحلية دون اتصال؟',
+              a: 'نعم. إذا نزّلت النموذج في Ollama، تعمل الإكمالات دون اتصال بالكامل.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'قراءات ذات صلة',
+          items: [
+            '[أفضل مساعد شيفرة بالذكاء الاصطناعي لـLLM محلي](/ar/local-llms/best-ai-coding-assistant-local-llm) -- مقارنة كاملة لـCursor وContinue.dev وCody وTabnine وWindsurf بدعم LLM محلي.',
+            '[مكدّس المطوّر بـLLM محلي](/ar/local-llms/local-llm-developer-stack) -- المكدّس الكامل الذي يشمل إعداد خادم API والمراقبة في الإنتاج بما يتجاوز التكامل مع الـIDE.',
+            '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- أعِدّ Ollama لإكمالات الشيفرة.',
+            '[أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding) -- معيار مفصّل لنماذج الشيفرة.',
+            '[كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio) -- أي أداة تستخدم.',
+            '[واجهة API متوافقة مع OpenAI لـLLM محلي](/ar/local-llms/local-llm-openai-compatible-api) -- واجهات API لإكمالات الشيفرة.',
+          ],
+        },
+        sources: {
+          title: 'المصادر',
+          items: [
+            'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ -- Official setup guide, config.json reference, and local model integration instructions.',
+            'Cursor. (2026). "Cursor Documentation." https://docs.cursor.com/ -- Local model configuration, Ollama integration, and inference setup guide.',
+            'Alibaba Qwen Team. (2025). "Qwen3-Coder Technical Report." arXiv:2409.12186. https://arxiv.org/abs/2409.12186 -- HumanEval and code generation benchmarks for Qwen3-Coder variants.',
+            'DeepSeek-AI. (2024). "DeepSeek-Coder Technical Paper." arXiv:2401.14196. https://arxiv.org/abs/2401.14196 -- Benchmark data and capability analysis for DeepSeek-Coder family.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'كيف تستخدم نماذج LLM المحلية مع VS Code وCursor 2026',
+        'description': 'كيف تستخدم نماذج LLM المحلية في VS Code وCursor للحصول على مساعدة شيفرة خاصة وسريعة مع تكامل PromptQuorum.',
+        'url': 'https://www.promptquorum.com/ar/local-llms/local-llms-with-vscode-cursor',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'ثبّت Continue.dev لـVS Code', 'text': 'ثبّت إضافة Continue من متجر VS Code واضبطها لتوجّه إلى خادم Ollama المحلي.' },
+          { '@type': 'HowToStep', 'name': 'اضبط Cursor مع LLM محلي', 'text': 'في إعدادات Cursor، اضبط مزوّد الذكاء الاصطناعي على نقطة نهاية Ollama المحلية (http://localhost:11434).' },
+          { '@type': 'HowToStep', 'name': 'اختر نموذج شيفرة', 'text': 'استخدم Qwen3-Coder 7B أو DeepSeek-Coder للحصول على أفضل نتائج إكمال الشيفرة المحلية.' },
+          { '@type': 'HowToStep', 'name': 'اختبر المطالبات بـPromptQuorum', 'text': 'قارن استجابات مطالبات الشيفرة عبر عدة نماذج محلية بـPromptQuorum لإيجاد الأنسب لسير عملك.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'هل إكمالات الشيفرة المحلية أسرع من السحابية؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. الإكمالات السحابية (GitHub Copilot) أسرع بفضل الخوادم المحسّنة. الإكمالات المحلية ذات زمن استجابة أعلى، لكنها بتكلفة صفرية وصفر خطر على الخصوصية.' } },
+          { '@type': 'Question', name: 'هل يمكنني استخدام الإكمالات المحلية مع بيئات IDE أخرى (PyCharm، Neovim)؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، رغم أن الإعداد يتفاوت. لدى PyCharm إضافة لـOllama. لـNeovim، استخدم cmp-ollama (إضافة إكمالات). راجع دائمًا مجتمع الـIDE الخاص بك لمعرفة التكاملات المتاحة.' } },
+          { '@type': 'Question', name: 'هل يمكنني استخدام النماذج السحابية في Continue أو Cursor؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. اضبط Continue لاستخدام OpenAI أو Claude أو Gemini. يمكنك أيضًا الجمع بينها (المحلي للمهام السريعة، السحابة للشيفرة المعقّدة).' } },
+          { '@type': 'Question', name: 'هل تعمل إكمالات الشيفرة المحلية دون اتصال؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. إذا نزّلت النموذج في Ollama، تعمل الإكمالات دون اتصال بالكامل.' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'نماذج LLM المحلية مع VS Code وCursor: الإعداد وأفضل الممارسات',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'يستخدم VS Code إضافة Continue.dev للاتصال بالنماذج المحلية (Ollama، LM Studio، vLLM).' },
+          { '@type': 'ListItem', position: 2, name: 'Cursor نسخة معدّلة من VS Code بدعم أصلي للنماذج المحلية. لا تحتاج أي إضافة.' },
+          { '@type': 'ListItem', position: 3, name: '**أفضل النماذج المحلية للشيفرة**: Qwen3-Coder 7B، Llama Code 13B أو Mistral Small.' },
+          { '@type': 'ListItem', position: 4, name: 'توقّع زمن استجابة إكمال 2-5 ثوانٍ على بطاقات GPU استهلاكية مع نماذج 7B.' },
+          { '@type': 'ListItem', position: 5, name: 'اعتبارًا من أبريل 2026، إكمالات الشيفرة المحلية عملية للاستخدام الشخصي، لكنها ليست جاهزة بعد للإنتاج في الفرق.' },
+        ],
+      },
+    },
     pt: {
       theme: 'Tools & Interfaces',
       title: 'LLMs Locais com VS Code e Cursor: Configuração e Boas Práticas',

@@ -682,6 +682,343 @@ schema: {
         ]
       },
     },
+    ar: {
+      freshness_tier: 'semi_annual',
+      theme: 'Getting Started',
+      title: 'شغّل أول نموذج LLM محلي في 10 دقائق: من التثبيت إلى أول استجابة',
+      seoTitle: 'شغّل أول نموذج LLM محلي في 10 دقائق (خطوة بخطوة)',
+      intro: 'تشغيل أول نموذج LLM محلي مع Ollama يستغرق أقل من 10 دقائق. ثبّت Ollama، ونفّذ أمرًا لتنزيل نموذج، وابدأ الدردشة في طرفيتك — بلا مفتاح API، وبلا حساب، وبلا اتصال بالإنترنت بعد التنزيل الأولي. اعتبارًا من أبريل 2026، أسرع نموذج للمبتدئين هو Llama 3.2 3B بـ 25-45 token/ثانية على CPU حديث لحاسوب محمول.',
+      metaDescription: 'شغّل أول نموذج LLM محلي في 10 دقائق مع Ollama: ثبّت، ونزّل نموذج 3B، واحصل على استجابة. بلا مفتاح API ولا إنترنت بعد التنزيل.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**تشغيل أول نموذج LLM محلي يستغرق أقل من 10 دقائق مع Ollama. ثبّت Ollama، ونفّذ أمرًا لتنزيل نموذج، وابدأ الدردشة في طرفيتك — بلا مفتاح API، وبلا حساب، وبلا اتصال بالإنترنت بعد التنزيل الأولي.**',
+      audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على أجهزة استهلاكية',
+      readTime: '7 دقائق قراءة',
+      heroComponent: 'LLMImageSelector',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'LLM محلي',
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'الخطوة 1: تثبيت Ollama', anchor: '#step-1-install-ollama' },
+        { label: 'الخطوة 2: اختيار أول نموذج', anchor: '#step-2-choose-your-first-model' },
+        { label: 'الخطوة 3: تنزيل النموذج', anchor: '#step-3-pull-the-model' },
+        { label: 'الخطوة 4: التشغيل والدردشة', anchor: '#step-4-run-and-chat' },
+        { label: 'ماذا تتوقع: السرعة والجودة', anchor: '#what-to-expect' },
+        { label: 'ما بعد الطرفية', anchor: '#beyond-the-terminal' },
+        { label: 'السياق الإقليمي', anchor: '#regional-context' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
+        { label: 'الأخطاء الشائعة', anchor: '#common-mistakes' },
+        { label: 'قراءات ذات صلة', anchor: '#related-reading' },
+        { label: 'المصادر', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'أسرع مسار: ثبّت Ollama ← نفّذ `ollama run llama3.2` ← دردش في طرفيتك. الوقت الإجمالي: أقل من 5 دقائق باتصال سريع.',
+            'للأجهزة بسعة 8 GB من RAM: ابدأ بـ `llama3.2:3b` (تنزيل 2 GB) أو `phi4-mini` (2.3 GB). كلاهما يعمل على أي حاسوب محمول حديث.',
+            'توقّع 15-40 token/ثانية على CPU و60-120 token/ثانية على بطاقة رسوم متوسطة المواصفات أو Apple Silicon.',
+            'قد تبدو الاستجابات الأولى أبطأ من واجهات API السحابية — تبادل النماذج المحلية السرعة مقابل الخصوصية والتكلفة الصفرية.',
+            'بعد التنزيل الأولي للنموذج، يعمل كل شيء دون اتصال. لا حاجة للإنترنت للجلسات اللاحقة.',
+          ],
+        },
+        step1: {
+          title: 'الخطوة 1: تثبيت Ollama',
+          content: 'Ollama هو أسرع طريقة لتشغيل نموذج LLM محلي. ثبّته بأمر واحد أو تنزيل من دقيقتين:',
+          codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download',
+          codeLanguage: 'bash',
+        },
+        step1Detail: {
+          title: 'تحقق من أن Ollama قيد التشغيل',
+          content: 'بعد التثبيت، تأكد من أن Ollama نشط:',
+          codeBlock: 'curl http://localhost:11434\n# Expected output: Ollama is running',
+          codeLanguage: 'bash',
+        },
+        step2: {
+          title: 'الخطوة 2: اختيار أول نموذج',
+          content: 'اختر نموذجًا حسب RAM المتاح. إذا كنت في شك، ابدأ بـ `llama3.2:3b` — يعمل على أي جهاز بسعة 4 GB من RAM وينتج نتائج مفيدة:',
+          rows: [
+            { 'Tu RAM': '4 GB', 'Modelo recomendado': 'llama3.2:1b', 'Tamaño de descarga': '~1.3 GB', 'Por qué': 'أصغر نموذج Llama مفيد' },
+            { 'Tu RAM': '8 GB', 'Modelo recomendado': 'Llama 3.2 3B', 'Tamaño de descarga': '~2 GB', 'Por qué': 'أفضل نسبة جودة/حجم للمبتدئين' },
+            { 'Tu RAM': '8-16 GB', 'Modelo recomendado': 'Llama 3.3 8B', 'Tamaño de descarga': '~4.7 GB', 'Por qué': 'نموذج عام عالي الأداء' },
+            { 'Tu RAM': '16+ GB', 'Modelo recomendado': 'mistral:7b أو qwen2.5:7b', 'Tamaño de descarga': '~4-5 GB', 'Por qué': 'جودة تنافسية، استدلال سريع' },
+          ],
+          columns: ['Tu RAM', 'Modelo recomendado', 'Tamaño de descarga', 'Por qué'],
+        },
+        step3: {
+          title: 'الخطوة 3: تنزيل النموذج',
+          content: 'نزّل النموذج بـ `ollama pull`. يُحفظ النموذج في `~/.ollama/models` ويحتاج إلى التنزيل مرة واحدة فقط:',
+          codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b',
+          codeLanguage: 'bash',
+        },
+        step3Progress: {
+          title: 'كيف يبدو التنزيل؟',
+          content: 'يعرض Ollama تقدّم التنزيل في الطرفية. يستغرق نموذج `llama3.2:3b` 2-5 دقائق على اتصال نطاق عريض نموذجي. يُخزَّن النموذج مضغوطًا — الـ 2 GB المُنزَّلة تتوسّع إلى نحو 2.3 GB على القرص.',
+          codeBlock: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess',
+          codeLanguage: 'text',
+        },
+        step4: {
+          id: 'step-4-run-and-chat',
+          title: 'الخطوة 4: تشغيل النموذج وإرسال أول أمر',
+          content: 'ابدأ جلسة دردشة تفاعلية:',
+          codeBlock: 'ollama run llama3.2\n\n# Ollama loads the model and shows a prompt:\n>>> Send a message (/? for help)',
+          codeLanguage: 'bash',
+        },
+        step4Chat: {
+          title: 'محادثتك الأولى',
+          content: 'اكتب رسالة واضغط Enter. يبثّ النموذج استجابته token بـ token:',
+          codeBlock: '>>> What are local LLMs?\n\nLocal LLMs (large language models) are AI models that run entirely\non your own hardware -- your laptop, desktop, or server. Unlike cloud\nservices such as ChatGPT or Claude, local LLMs process everything\nlocally with no data sent to external servers...',
+          codeLanguage: 'text',
+        },
+        whatToExpect: {
+          id: 'what-to-expect',
+          title: 'ماذا تتوقع: السرعة والجودة والقيود',
+          content: [
+            '**السرعة** تتفاوت حسب الأجهزة. على حاسوب محمول من 2023 (بلا بطاقة رسوم): توقّع 15-25 token/ثانية لنموذج 3B و8-15 token/ثانية لنموذج 8B. على Apple M3 Pro: 50-80 token/ثانية لنموذج 8B. على NVIDIA RTX 4070 Ti: 90-130 token/ثانية لنموذج 8B.',
+            '**جودة** `llama3.2:3b` أدنى بشكل ملحوظ من GPT-5.5 أو Claude Opus 4.8 في المهام المعقدة. للتلخيص والأسئلة والأجوبة البسيطة وشرح الكود، النتيجة مفيدة. للاستدلال متعدد الخطوات أو الكتابة الطويلة، رقِّ إلى نموذج 8B أو 13B.',
+            '**نافذة السياق**: يدعم `llama3.2:3b` 128K token افتراضيًا في Ollama. عمليًا، تتدهور الجودة بعد ~16K token في محادثة واحدة.',
+            '**تأخير الاستجابة الأولى**: تتضمن الاستجابة الأولى بعد `ollama run` وقت تحميل النموذج (5-30 ثانية). الاستجابات اللاحقة في الجلسة نفسها أسرع.',
+          ],
+        },
+        beyondTerminal: {
+          id: 'beyond-the-terminal',
+          title: 'كيف تستخدم نموذج LLM المحلي خارج الطرفية؟',
+          content: 'الدردشة في طرفية Ollama مفيدة للاختبار، لكن معظم حالات الاستخدام الفعلية تحتاج إلى واجهة أفضل:',
+          items: [
+            '**Open WebUI**: واجهة ويب كاملة لـ Ollama. شغّلها بـ Docker: `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main`. ادخل عبر http://localhost:3000.',
+            '**LM Studio**: إذا كنت تفضّل واجهة سطح مكتب، يغطي [كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio) الإعداد الكامل. الدردشة المدمجة في LM Studio مصقولة وتدعم سجل المحادثات.',
+            '**تكامل API**: واجهة API الخاصة بـ Ollama على `localhost:11434` متوافقة مع SDK الخاص بـ OpenAI. أي تطبيق يقبل عنوان URL أساسيًا لـ OpenAI يمكنه الاتصال بنموذجك المحلي.',
+            '**VS Code / Cursor**: تتصل إضافات مثل Continue.dev بـ Ollama وتوفّر مساعدة برمجية بذكاء اصطناعي محلي مباشرة في محررك.',
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'تشغيل أول نموذج LLM محلي: السياق الإقليمي',
+          content: [
+            '**الاتحاد الأوروبي / GDPR**: تشغيل نموذج LLM محلي مع Ollama يعني أن أي بيانات أمر أو سياق أو مخرجات لا تغادر جهازك — لا تنطبق آليات النقل بموجب المادة 46 من GDPR. للمهنيين في الاتحاد الأوروبي الذين يتعاملون مع بيانات شخصية، هذا هو البديل الحافظ للخصوصية مقابل واجهات API للذكاء الاصطناعي السحابي. أول نموذج محلي لديك (llama3.2:3b) يستخدم 2 GB من القرص، ويولّد صفر استدعاءات API خارجية، ويمتثل بالتصميم لإرشادات تقليل البيانات.',
+            '**الخليج (PDPL السعودي)**: تتطلب أطر حوكمة البيانات في الخليج توثيق مكان حدوث استدلال الذكاء الاصطناعي. ينشئ أول إعداد لـ Ollama بيئة محلية كاملة وقابلة للتدقيق: ملفات نموذج مخزّنة في ~/.ollama/models بأسماء ملفات خاصة بالإصدار، دون اعتماد على API خارجي، واستدلال يمكن التحقق منه عبر `ollama ps`. يمكن للمهنيين في الخليج الذين يشغّلون Llama أو Qwen3 محليًا توثيق إصدار النموذج الدقيق والأجهزة لأغراض الامتثال. كما تتوفر بدائل عربية سيادية مثل Jais وALLaM للمؤسسات التي تفضّل نماذج عربية المنشأ.',
+            '**الصين**: لسير العمل بالصينية، استبدل llama3.2:3b بـ qwen2.5:3b كأول نموذج: `ollama pull qwen2.5:3b`. يعالج Qwen3 النص الصيني بكفاءة أعلى بـ 30-40% في الـ tokens من Llama، فينتج نتائج أفضل على مستوى الأجهزة نفسه. أمرا ollama pull وrun متطابقان.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'الأسئلة الشائعة عند تشغيل أول نموذج LLM محلي',
+          faqs: [
+            {
+              q: 'استجابة النموذج بطيئة جدًا — هل هذا طبيعي؟',
+              a: 'على أجهزة CPU فقط، 8-20 token/ثانية أمر طبيعي لنموذج 7B. كل token يعادل نحو 0.75 كلمة. بـ 10 token/ثانية، تستغرق استجابة من 100 كلمة نحو 13 ثانية. لتسريع الاستدلال، استخدم نموذجًا أصغر (3B بدلًا من 8B)، أو فعّل التفريغ إلى بطاقة الرسوم إن كان لديك متوافقة، أو استخدم مستوى تكميم Q4_K_M وهو الإعداد الأسرع المعتاد.',
+            },
+            {
+              q: 'هل يمكنني تشغيل نموذجين في آن واحد؟',
+              a: 'يمكن لـ Ollama إبقاء عدة نماذج محمّلة في آن واحد إذا كان لديك RAM كافٍ. افتراضيًا، يفرّغ Ollama نموذجًا بعد 5 دقائق من الخمول. يمكنك تغيير ذلك بمتغير البيئة OLLAMA_KEEP_ALIVE. تشغيل نموذجي 7B في آن واحد يتطلب ~16 GB من RAM.',
+            },
+            {
+              q: 'كيف أوقف Ollama عن العمل في الخلفية؟',
+              a: 'على macOS: انقر على أيقونة اللاما في شريط القوائم واختر إنهاء. على Linux: نفّذ `systemctl stop ollama`. على Windows: انقر بزر الفأرة الأيمن على أيقونة شريط النظام واختر إنهاء. لمنع Ollama من البدء عند تسجيل الدخول، أزله من عناصر بدء التشغيل لديك.',
+            },
+            {
+              q: 'ما أسهل طريقة لتشغيل نموذج LLM محلي لأول مرة؟',
+              a: 'ثبّت Ollama (ollama.com)، ونفّذ `ollama pull llama3.2:3b` ثم `ollama run llama3.2:3b`. هذا كل شيء. ثلاثة أوامر، 2-5 دقائق، ولديك نموذج ذكاء اصطناعي يعمل على جهازك دون حاجة إلى الإنترنت بعد التنزيل الأولي.',
+            },
+            {
+              q: 'كيف أعرف أن نموذج LLM المحلي يعمل بشكل صحيح؟',
+              a: 'نفّذ `ollama ps` في الطرفية. إذا كان النموذج قيد التشغيل، سيظهر في القائمة باسمه وحجمه واستخدام ذاكرته. أرسل له أمرًا بسيطًا مثل "كم يساوي 2+2؟" — إذا أجاب "4"، فالنموذج يعمل بشكل صحيح.',
+            },
+            {
+              q: 'هل يحتاج حاسوبي إلى بطاقة رسوم لتشغيل نموذج LLM محلي؟',
+              a: 'لا. تعمل نماذج LLM المحلية على CPU. بطاقة الرسوم تجعل الاستدلال أسرع بـ 5-10 مرات، لكن CPU وحده مناسب للتعلّم ولكثير من حالات الاستخدام الفعلية. يمكن للحواسيب المحمولة الحديثة بـ Apple M1/M2 أو AMD Ryzen أو Intel من الجيل الثاني عشر تشغيل نماذج 3B-7B بسرعات معقولة (10-30 token/ثانية).',
+            },
+            {
+              q: 'كم مساحة قرص يشغل نموذج LLM محلي؟',
+              a: '`llama3.2:1b` يشغل 1.3 GB، و`llama3.2:3b` يشغل 2 GB، و`llama3.1:8b` يشغل 4.7 GB. هذه الأحجام المضغوطة كما يخزّنها Ollama. بعد تحميلها في RAM للاستدلال، تختلف الأحجام (راجع [كم من VRAM لنموذج LLM محلي](/ar/local-llms/how-much-vram-local-llm) للمزيد من التفاصيل).',
+            },
+            {
+              q: 'هل يمكنني استخدام نموذج LLM المحلي دون اتصال بالإنترنت؟',
+              a: 'نعم، بالكامل. نزّل النموذج مرة واحدة بـ Ollama (يتطلب إنترنت) ثم شغّله محليًا للأبد دون إنترنت. مثالي للشبكات الخاصة أو الطائرات أو البيئات المعزولة تمامًا.',
+            },
+            {
+              q: 'بماذا يختلف نموذج LLM المحلي عن ChatGPT؟',
+              a: 'يعمل ChatGPT على خوادم Anthropic. وتعمل نماذج LLM المحلية على جهازك. محلي = صفر بيانات تغادر جهازك، خصوصية كاملة، بلا تكاليف API. ChatGPT = جودة أفضل في المهام المعقدة، يتطلب إنترنت واشتراكًا مدفوعًا. لكليهما مزايا وعيوب.',
+            },
+            {
+              q: 'ما أفضل نموذج أول لتجربته مع Ollama؟',
+              a: '`ollama pull llama3.2:3b` — يزن 2 GB، يعمل على أي حاسوب محمول حديث، ينتج استجابات كفؤة، وهو نقطة البداية الموصى بها من Ollama. بعد تجربته، راجع [أفضل نماذج LLM المحلية للمبتدئين](/ar/local-llms/best-beginner-local-llm-models) للبدائل حسب أجهزتك.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'الخطوات التالية بعد أول تشغيل',
+          content: 'الآن وقد صار لديك نموذج LLM محلي يعمل، استكشف ما يمكنه فعله. لفهم أي النماذج تؤدي أفضل مع أجهزتك، راجع [أفضل نماذج LLM المحلية للمبتدئين](/ar/local-llms/best-beginner-local-llm-models). لنصائح أداء خاصة بالحواسيب المحمولة، راجع [كيفية تشغيل نماذج LLM المحلية على حاسوب محمول](/ar/local-llms/local-llm-on-laptop). لأفضل ممارسات الخصوصية والأمان، راجع [قائمة التحقق لأمان وخصوصية نموذج LLM المحلي](/ar/local-llms/local-llm-security-privacy-checklist).',
+        },
+        sources: {
+          id: 'sources',
+          title: 'المصادر',
+          items: [
+            '[**مكتبة نماذج Ollama**](https://ollama.com/library) -- القائمة الرسمية للنماذج القابلة للتنزيل ومواصفاتها',
+            '[**مستودع Ollama على GitHub**](https://github.com/ollama/ollama) -- الكود مفتوح المصدر والتوثيق وتتبّع المشكلات',
+            '[**بطاقة نموذج Meta Llama 3.2**](https://llama.meta.com/) -- المواصفات الرسمية وبيانات التدريب ومعايير الأداء',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'الأخطاء الشائعة بعد أول تشغيل',
+          items: [
+            'الخلط بين عدد الـ tokens والسرعة — نموذج 7B يولّد 100 token بـ 20 token/ثانية يستغرق 5 ثوانٍ، وليس فوريًا.',
+            'تشغيل الاستدلال بينما النظام مشغول بمهام أخرى، مما يقلّل tokens/ثانية الفعلية بشكل كبير.',
+            'عدم التحقق من حدود نافذة السياق — تدعم معظم نماذج المبتدئين 2K-8K token، لا 100K+ كنماذج الطليعة.',
+            'توقّع استجابات فورية في أول تشغيل — تتضمن الاستجابة الأولى وقت تحميل النموذج (5-30 ثانية). الاستجابات اللاحقة في الجلسة نفسها أسرع بـ 2-5 مرات.',
+            'استخدام وسم النموذج الخاطئ — `llama3.1:8b-text` هو وضع إكمال النص الأساسي وسينتج حلقات/تكرارًا لا نهائيًا. استخدم وسوم `-instruct` مثل `llama3.1:8b-instruct` للدردشة.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'قراءات ذات صلة',
+          items: [
+            '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- التثبيت والإعداد',
+            '[كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio) -- بديل بواجهة رسومية',
+            '[أفضل نماذج LLM المحلية للمبتدئين](/ar/local-llms/best-beginner-local-llm-models) -- توصيات النماذج حسب أجهزتك',
+            '[ما هي نماذج LLM المحلية؟](/ar/local-llms/what-are-local-llms) -- المفاهيم الأساسية وكيف تعمل',
+            '[حل مشكلات إعداد نموذج LLM المحلي](/ar/local-llms/troubleshooting-local-llm-setup) -- حل الاستدلال البطيء وعدم اكتشاف بطاقة الرسوم والأخطاء الشائعة',
+            '[واجهة API متوافقة مع OpenAI لنموذج LLM المحلي](/ar/local-llms/local-llm-openai-compatible-api) -- اربط Ollama قيد التشغيل بـ Python وتطبيقات أخرى',
+            'أول نموذج LLM محلي لديك قيد التشغيل. تعلّم الآن صياغة الأوامر بفاعلية: [ما هي هندسة الأوامر](https://www.promptquorum.com/ar/prompt-engineering/what-is-prompt-engineering) تعلّم الأساسيات.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'شغّل أول نموذج LLM محلي في 10 دقائق (خطوة بخطوة)',
+        'description': 'شغّل أول نموذج LLM محلي في أقل من 10 دقائق مع Ollama: ثبّت، ونزّل نموذج 3B، واحصل على استجابة — بلا مفتاح API ولا حساب بعد التنزيل.',
+        'url': 'https://www.promptquorum.com/ar/local-llms/run-first-local-llm',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-18',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'Llama 3.2' },
+          { '@type': 'Thing', 'name': 'LLM محلي' },
+          { '@type': 'Thing', 'name': 'إعداد نماذج الذكاء الاصطناعي' },
+          { '@type': 'Thing', 'name': 'أوامر الطرفية' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'كيفية تشغيل أول نموذج LLM محلي في 10 دقائق',
+        'totalTime': 'PT10M',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'تثبيت Ollama', 'text': 'نزّل وثبّت Ollama من ollama.ai. تحقق من التثبيت بـ `ollama --version`.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'اختيار أول نموذج', 'text': 'اختر نموذجًا للمبتدئين حسب أجهزتك: Llama 3.2 3B (4 GB من RAM)، Phi 2.5 (8 GB)، أو Mistral Small (16 GB).' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'تنزيل النموذج', 'text': 'نفّذ `ollama pull llama3.2:3b` لتنزيل النموذج. انتظر حتى يكتمل.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'التشغيل والدردشة', 'text': 'نفّذ `ollama run llama3.2:3b` لبدء النموذج والبدء بالدردشة في طرفيتك.' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'اختبر بأول أمر', 'text': 'اكتب أول أمر لديك (مثلًا "مرحبًا، ما هو نموذج LLM؟") واضغط Enter. لاحظ زمن الاستجابة والجودة.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'استجابة النموذج بطيئة جدًا — هل هذا طبيعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'على أجهزة CPU فقط، 8-20 token/ثانية أمر طبيعي لنموذج 7B. كل token يعادل نحو 0.75 كلمة. بـ 10 token/ثانية، تستغرق استجابة من 100 كلمة نحو 13 ثانية. لتسريع الاستدلال، استخدم نموذجًا أصغر (3B بدلًا من 8B)، أو فعّل التفريغ إلى بطاقة الرسوم إن كان لديك متوافقة، أو استخدم مستوى تكميم Q4_K_M وهو الإعداد الأسرع المعتاد.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل نموذجين في آن واحد؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يمكن لـ Ollama إبقاء عدة نماذج محمّلة في آن واحد إذا كان لديك RAM كافٍ. افتراضيًا، يفرّغ Ollama نموذجًا بعد 5 دقائق من الخمول. يمكنك تغيير ذلك بمتغير البيئة OLLAMA_KEEP_ALIVE. تشغيل نموذجي 7B في آن واحد يتطلب ~16 GB من RAM.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أوقف Ollama عن العمل في الخلفية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'على macOS: انقر على أيقونة اللاما في شريط القوائم واختر إنهاء. على Linux: نفّذ `systemctl stop ollama`. على Windows: انقر بزر الفأرة الأيمن على أيقونة شريط النظام واختر إنهاء. لمنع Ollama من البدء عند تسجيل الدخول، أزله من عناصر بدء التشغيل لديك.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أسهل طريقة لتشغيل نموذج LLM محلي لأول مرة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ثبّت Ollama (ollama.com)، ونفّذ `ollama pull llama3.2:3b` ثم `ollama run llama3.2:3b`. هذا كل شيء. ثلاثة أوامر، 2-5 دقائق، ولديك نموذج ذكاء اصطناعي يعمل على جهازك دون حاجة إلى الإنترنت بعد التنزيل الأولي.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أعرف أن نموذج LLM المحلي يعمل بشكل صحيح؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نفّذ `ollama ps` في الطرفية. إذا كان النموذج قيد التشغيل، سيظهر في القائمة باسمه وحجمه واستخدام ذاكرته. أرسل له أمرًا بسيطًا مثل "كم يساوي 2+2؟" — إذا أجاب "4"، فالنموذج يعمل بشكل صحيح.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يحتاج حاسوبي إلى بطاقة رسوم لتشغيل نموذج LLM محلي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. تعمل نماذج LLM المحلية على CPU. بطاقة الرسوم تجعل الاستدلال أسرع بـ 5-10 مرات، لكن CPU وحده مناسب للتعلّم ولكثير من حالات الاستخدام الفعلية. يمكن للحواسيب المحمولة الحديثة بـ Apple M1/M2 أو AMD Ryzen أو Intel من الجيل الثاني عشر تشغيل نماذج 3B-7B بسرعات معقولة (10-30 token/ثانية).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم مساحة قرص يشغل نموذج LLM محلي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '`llama3.2:1b` يشغل 1.3 GB، و`llama3.2:3b` يشغل 2 GB، و`llama3.1:8b` يشغل 4.7 GB. هذه الأحجام المضغوطة كما يخزّنها Ollama. بعد تحميلها في RAM للاستدلال، تختلف الأحجام.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام نموذج LLM المحلي دون اتصال بالإنترنت؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، بالكامل. نزّل النموذج مرة واحدة بـ Ollama (يتطلب إنترنت) ثم شغّله محليًا للأبد دون إنترنت. مثالي للشبكات الخاصة أو الطائرات أو البيئات المعزولة تمامًا.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'بماذا يختلف نموذج LLM المحلي عن ChatGPT؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعمل ChatGPT على خوادم Anthropic. وتعمل نماذج LLM المحلية على جهازك. محلي = صفر بيانات تغادر جهازك، خصوصية كاملة، بلا تكاليف API. ChatGPT = جودة أفضل في المهام المعقدة، يتطلب إنترنت واشتراكًا مدفوعًا. لكليهما مزايا وعيوب.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل نموذج أول لتجربته مع Ollama؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '`ollama pull llama3.2:3b` — يزن 2 GB، يعمل على أي حاسوب محمول حديث، ينتج استجابات كفؤة، وهو نقطة البداية الموصى بها من Ollama. بعد تجربته، راجع أفضل نماذج LLM المحلية للمبتدئين للبدائل حسب أجهزتك.'
+            }
+          },
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'أفضل نماذج LLM المحلية الأولى حسب RAM',
+        'numberOfItems': 4,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB من RAM. تنزيل 1.3 GB. أصغر نموذج Llama مفيد.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 GB من RAM. تنزيل 2 GB. أفضل نسبة جودة-حجم للمبتدئين.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 GB من RAM. تنزيل 4.7 GB. أداء عام عالٍ.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b أو qwen2.5:7b', 'description': '16+ GB من RAM. تنزيل 4-5 GB. جودة تنافسية.' },
+        ]
+      },
+    },
     de: {
       theme: 'Erste Schritte',
       title: 'Führe dein erstes lokales LLM aus: Von Installation bis erste Antwort in 10 Minuten',

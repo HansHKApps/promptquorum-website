@@ -1054,6 +1054,538 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ar: {
+    freshness_tier: 'semi_annual',
+    theme: 'Hardware Setups',
+    title: 'أفضل حاسوب AMD مصغر لتشغيل LLM محلياً 2026: مقارنة AOOSTAR وMinisforum وBeelink وGMKtec',
+    seoTitle: 'حاسوب AMD مصغر 2026: مقارنة Minisforum مقابل Beelink',
+    metaDescription: 'قارن أجهزة الحاسوب المصغرة AMD Ryzen AI Max+: Minisforum MS-A2 وBeelink GTR9 وAOOSTAR GEM12 وGMKtec EVO-X2. المواصفات والأسعار والأداء على نماذج 70B. 2026.',
+    publishDate: '2026-05-17',
+    next_refresh_due: '2026-11-17',
+    intro: '**أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ 395 المزودة بذاكرة موحدة بسعة 64–128 GB قادرة على تشغيل نماذج 30–70B دون اتصال بالإنترنت بأداء محطة عمل مقابل 1,200–2,500 دولار أمريكي.** تجذب فئة الحاسوب المصغر الجديدة من مصنّعي OEM الصينيين (AOOSTAR وMinisforum وBeelink وGMKtec) المشترين الذين يرتقون من أجهزة اللابتوب أو الراغبين في تجنب تكلفة Mac Studio (أكثر من 3,000 دولار). تجمع هذه الأجهزة بين معالج Zen 5 + iGPU من نوع Radeon 8060S + NPU بقدرة 50 TOPS بحجم أصغر من برج مكتبي، مع دعم ROCm على Linux ينضج بسرعة. قد تختلف الأسعار حسب بلدك.',
+    leadAnswerBlock: '**توفر أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ 395 ذاكرة موحدة بسعة 64–128 GB وNPU بقدرة 50 TOPS وأداء iGPU مماثل لبطاقة RTX 4070 — مثالية للاستدلال دون اتصال على نماذج 30–70B بسعر يتراوح بين 1,200 و2,500 دولار أمريكي.**',
+    audience: 'مستخدمو LLM المحلي الذين يقارنون خيارات الحاسوب المصغر بين 1,200–2,500 دولار لقدرة نماذج 70B؛ المشترون الذين يقيّمون AMD مقابل Mac Studio؛ المطورون الذين يركزون على Linux.',
+    readTime: '12 دقيقة للقراءة',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AMD Ryzen AI Max Mini PC',
+    toc: [
+      { label: 'التحديث', anchor: '#update-notice' },
+      { label: 'توصياتنا', anchor: '#verdict-picks' },
+      { label: 'النقاط الرئيسية', anchor: '#tldr' },
+      { label: 'لماذا يهم AMD Ryzen AI Max+ لتشغيل LLM محلياً', anchor: '#why-amd' },
+      { label: 'جدول المقارنة', anchor: '#comparison-table' },
+      { label: 'Minisforum MS-A2: أفضل توازن عام', anchor: '#minisforum-ms-a2' },
+      { label: 'Beelink GTR9 Pro: أقصى ذاكرة RAM', anchor: '#beelink-gtr9' },
+      { label: 'AOOSTAR GEM12 Pro: جودة تصنيع متميزة', anchor: '#aoostar-gem12' },
+      { label: 'GMKtec EVO-X2: أفضل خيار اقتصادي', anchor: '#gmktec-evo-x2' },
+      { label: 'اختبارات الأداء', anchor: '#benchmarks' },
+      { label: 'مصفوفة القرار: أيّها تشتري؟', anchor: '#decision-matrix' },
+      { label: 'دليل Linux السريع', anchor: '#linux-setup' },
+      { label: 'AMD مقابل Apple Silicon لتشغيل LLM محلياً', anchor: '#amd-vs-apple' },
+      { label: 'الشحن إلى الاتحاد الأوروبي والضمان', anchor: '#eu-considerations' },
+      { label: 'متى لا يكون الحاسوب المصغر AMD الخيار الصحيح', anchor: '#wrong-choice' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+    ],
+    sections: {
+      updateNotice: {
+        id: 'update-notice',
+        content: '🔄 تحديث مايو 2026: النشر الأولي. تم التحقق من الأسعار لدى العلامات التجارية الأربع. تم تضمين GMKtec EVO-X2 (صدر حديثاً). اختبارات الأداء هي تقديرات مبنية على بيانات مرجعية لـ Ryzen AI Max+ 395 — التحديث ببيانات حقيقية مجدول ليونيو 2026. التحديث التالي: يونيو 2026.',
+      },
+      verdictBox: {
+        id: 'verdict-picks',
+        title: 'توصياتنا — مايو 2026',
+        content: 'أربعة فائزين لأربعة أنماط من المشترين.',
+        callouts: [
+          { type: '🥇 الأفضل عموماً: Minisforum MS-A2', text: '1,599 دولار · 96 GB · أفضل توازن بين الذاكرة وجودة التصنيع والسعر. يشغّل Llama 3.3 70B دون مشاكل. [اعرضه على Minisforum →](https://store.minisforum.com)' },
+          { type: '💰 أفضل سعر: GMKtec EVO-X2', text: '1,199 دولار · 64 GB · نقطة الدخول إلى عالم AMD Ryzen AI Max. يتعامل مع نماذج 30–40B. [اعرضه على GMKtec →](https://www.gmktec.com)' },
+          { type: '🏆 الأفضل للمستخدمين المتقدمين: Beelink GTR9 Pro', text: '1,899 دولار · 128 GB · أقصى ذاكرة RAM في أي حاسوب مصغر. يتعامل مع 70B + نوافذ سياق ضخمة. [اعرضه على Beelink →](https://www.bee-link.com)' },
+          { type: '🔧 أفضل جودة تصنيع: AOOSTAR GEM12 Pro', text: '1,799 دولار · 96 GB · تصميم حراري متميز، منفذ OCuLink لبطاقة eGPU. للهواة. [اعرضه على AOOSTAR →](https://aoostar.com)' },
+        ],
+      },
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          'الأفضل عموماً: Minisforum MS-A2 (1,599 دولار، 96 GB RAM). يشغّل Llama 3.3 70B Q4 دون مشاكل. أفضل نسبة سعر إلى أداء.',
+          'أقصى ذاكرة RAM: Beelink GTR9 Pro (1,899 دولار، 128 GB). يشغّل 70B Q5 بنوافذ سياق ضخمة. الأفضل للمستخدمين المتقدمين.',
+          'أفضل سعر: GMKtec EVO-X2 (1,199 دولار، 64 GB). Ryzen AI Max 385، جيد لنماذج 30–40B. نقطة الدخول لهذه الفئة.',
+          'الخيار المتميز: AOOSTAR GEM12 Pro (1,799 دولار، 96 GB). منفذ OCuLink لتوسعة eGPU. موجه للهواة.',
+          'الأربعة جميعاً: دعم ROCm على Linux (kernel 6.11+)، ذاكرة RAM من نوع DDR5X عالية السرعة، SSD من نوع NVMe بسعة 1 TB أو أكثر.',
+          'الأداء: تشترك Minisforum/Beelink/AOOSTAR في نفس معالج Ryzen AI Max+ 395. تستخدم GMKtec معالج Max 385 (45 TOPS).',
+          'مقابل Mac Studio M4 Max: نفس بنية الذاكرة الموحدة، أرخص بنسبة 30–40%. المقايضة: macOS مقابل Linux/ROCm.',
+          'حالة Linux: ROCm 6.2+ مستقر. Ollama وvLLM وMLX تعمل. أقل صقلاً من CUDA، لكنه جاهز للإنتاج.',
+        ],
+      },
+      'why-amd': {
+        id: 'why-amd',
+        title: 'لماذا يهم AMD Ryzen AI Max+ لتشغيل LLM محلياً',
+        content: 'صدر AMD Ryzen AI Max+ في أواخر 2025 ببنية جديدة جذرياً لأجهزة الحاسوب المصغرة الاستهلاكية. هذا ما يجعله مهماً لمستخدمي LLM المحلي.',
+        items: [
+          '**ذاكرة موحدة مثل Apple Silicon:** مجمّع بسعة 64–128 GB مشترك بين CPU وiGPU وNPU. لا اختناق بين VRAM وRAM. تبقى النماذج في الذاكرة السريعة ويبقى الاستدلال سريعاً.',
+          '**iGPU ينافس بطاقات GPU المنفصلة:** يوفر Radeon 8060S (RDNA 3.5) قدرة حوسبة مكافئة لـ RTX 4070 بعُشر استهلاك الطاقة. يعمل Llama 3.3 70B Q4 بسرعة 20–30 tok/s.',
+          '**NPU بقدرة 50 TOPS:** وحدة معالجة عصبية مخصصة تسرّع العمليات المكمَّمة. أسرع بشكل ملحوظ لنماذج INT8/Q4 مقارنةً بالاعتماد على CPU وحده.',
+          '**TDP بقدرة 65–120 W:** يستهلك النظام بأكمله طاقة أقل من بطاقة RTX 4090 واحدة. يعمل بتبريد سلبي أو مراوح هادئة. لا يحتاج إلى مصدر طاقة بقدرة 350 W.',
+          '**نضوج منظومة ROCm:** أصبح الدعم على Linux مستقراً الآن (kernel 6.11+، ROCm 6.2+). تدعم Ollama وvLLM وLM Studio بطاقة iGPU من AMD بشكل أصلي.',
+          '**مصنّعو OEM الصينيون يسلّمون بسرعة:** Minisforum (مستودع في ألمانيا) وAOOSTAR وBeelink وGMKtec تصل إلى الاتحاد الأوروبي/الولايات المتحدة خلال 2–4 أسابيع.',
+          '**نطاق السعر 1,200–2,500 دولار أمريكي:** يتفوق على Mac Studio M4 Max (2,999 دولار) بنسبة 40–60% مع توفير سعة ذاكرة موحدة مماثلة أو أعلى.',
+        ],
+      },
+      'comparison-table': {
+        id: 'comparison-table',
+        title: 'جدول مقارنة أجهزة الحاسوب المصغرة AMD (مايو 2026)',
+        note: 'تم التحقق من الأسعار في المتاجر الرسمية للعلامات التجارية في مايو 2026. قد تختلف الأسعار حسب بلدك.',
+        columns: ['الحاسوب المصغر', 'CPU', 'iGPU', 'RAM', 'NPU', 'السعر', 'الحالة'],
+        rows: [
+          { 'الحاسوب المصغر': 'Minisforum MS-A2', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96 GB DDR5X-8000', 'NPU': '50 TOPS', 'السعر': '1,599 دولار', 'الحالة': 'جاهز للإنتاج' },
+          { 'الحاسوب المصغر': 'Beelink GTR9 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '128 GB DDR5X-8000', 'NPU': '50 TOPS', 'السعر': '1,899 دولار', 'الحالة': 'جاهز للإنتاج' },
+          { 'الحاسوب المصغر': 'AOOSTAR GEM12 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96 GB DDR5X-8000', 'NPU': '50 TOPS', 'السعر': '1,799 دولار', 'الحالة': 'جاهز للإنتاج' },
+          { 'الحاسوب المصغر': 'GMKtec EVO-X2', 'CPU': 'Ryzen AI Max 385', 'iGPU': 'Radeon 8050S', 'RAM': '64 GB DDR5X-7500', 'NPU': '45 TOPS', 'السعر': '1,199 دولار', 'الحالة': 'خيار الدخول' },
+        ],
+        image: '/images/best-amd-mini-pc-comparison-es.svg',
+        imageCaption: 'السعر وذاكرة RAM وقدرة NPU والأداء عبر النماذج الأربعة من الحاسوب المصغر. توفر Minisforum أفضل توازن، وBeelink أقصى ذاكرة، وGMKtec نقطة الدخول.',
+      },
+      'minisforum-ms-a2': {
+        id: 'minisforum-ms-a2',
+        title: 'Minisforum MS-A2: أفضل توازن عام',
+        content: 'يمثّل Minisforum MS-A2 النقطة المثالية: Ryzen AI Max+ 395، 96 GB ذاكرة موحدة، 1 TB NVMe، جودة تصنيع جيدة وسعر تنافسي قدره 1,599 دولار.',
+        items: [
+          '**CPU:** 16 نواة Zen 5 (تردد متسارع 5.6 GHz)',
+          '**iGPU:** Radeon 8060S (32 نواة، 2.7 GHz)',
+          '**NPU:** 50 TOPS (Ryzen AI)',
+          '**RAM:** 96 GB DDR5X-8000 (قابلة للترقية إلى 192 GB)',
+          '**التخزين:** SSD من نوع NVMe بسعة 1 TB',
+          '**المنافذ:** 2× Thunderbolt 4، 2× USB 3.2، 1× USB-C، HDMI 2.1، صوت 3.5 mm، Ethernet RJ-45',
+          '**الأبعاد:** 180 × 170 × 65 mm',
+          '**TDP:** 95 W مستمر (حد أقصى 120 W متسارع)',
+          '**السعر:** 1,599 دولار أمريكي. قد تختلف الأسعار حسب بلدك.',
+        ],
+        strengths: [
+          'أفضل نسبة سعر إلى أداء: 96 GB بسعر 1,599 دولار يتفوق سعرياً على Beelink بسعة 128 GB (1,899 دولار) ويتعامل مع نفس أحمال عمل 70B.',
+          'مستودع في ألمانيا: الشحن من فرانكفورت؛ يستلم المشترون في الاتحاد الأوروبي خلال 2–3 أسابيع بدلاً من 4–6 أسابيع.',
+          'جودة التصنيع: هيكل من الألمنيوم، وسائد حرارية على جميع المكونات. يعمل بحرارة أقل من Beelink أو AOOSTAR.',
+          'هادئ: 38 dB في وضع الخمول، 42 dB تحت الحمل الكامل. مناسب للمكتب المنزلي.',
+          'سجل مثبت: تتمتع طرازات Minisforum السابقة بسجل امتد عامين. أكثر مصنّعي OEM الأربعة موثوقية.',
+        ],
+        weaknesses: [
+          'ليس الأقصى: 96 GB كافية لـ 70B Q4، لكنها لا تترك هامشاً لـ 70B Q5 بنوافذ سياق ضخمة.',
+          'لا يوجد منفذ eGPU: لا توسعة OCuLink ولا Thunderbolt لبطاقة eGPU. محدود بـ iGPU.',
+          'التبريد السلبي غير ممكن: يحتاج إلى مروحة نشطة حتى عند الحمل المتوسط.',
+          'توسعة التخزين: فتحة NVMe من نوع M.2 2230 (عامل شكل قصير)، تتطلب أقراص SSD غير شائعة.',
+        ],
+        bestFor: 'المطورون الذين يشغّلون Llama 3.3/4 70B Q4 أو نماذج Qwen 32B بنوافذ سياق قياسية. الفرق التي تشتري عدة وحدات (تقدّم Minisforum أسعار B2B). مشترو الاتحاد الأوروبي الذين يعطون الأولوية للشحن السريع.',
+        avoidIf: 'تحتاج إلى 128 GB أو تخطط لاستخدام 70B Q5. تريد تبريداً سلبياً. تحتاج إلى توسعة eGPU محلية.',
+        linuxCompatibility: 'ROCm 6.2+ مدعوم بالكامل. يتطلب kernel 6.11+. يعمل تثبيت Ollama القياسي فوراً. لا حاجة لترجمة برامج تشغيل مخصصة.',
+        whereToBuy: 'متجر Minisforum، Amazon DE/UK/US (غالباً أسرع)، تجار التجزئة المحليون في الاتحاد الأوروبي.',
+      },
+      'beelink-gtr9': {
+        id: 'beelink-gtr9',
+        title: 'Beelink GTR9 Pro: أقصى ذاكرة RAM للمستخدمين المتقدمين',
+        content: 'Beelink GTR9 Pro هو الحاسوب المصغر الوحيد هنا بسعة 128 GB. مثالي للباحثين والفرق التي تشغّل عدة نماذج بالتوازي أو تحتاج إلى نوافذ سياق ضخمة.',
+        items: [
+          '**CPU:** 16 نواة Zen 5 (تردد متسارع 5.6 GHz)',
+          '**iGPU:** Radeon 8060S (32 نواة، 2.7 GHz)',
+          '**NPU:** 50 TOPS',
+          '**RAM:** 128 GB DDR5X-8000 (غير قابلة للترقية)',
+          '**التخزين:** SSD من نوع NVMe بسعة 2 TB',
+          '**المنافذ:** 2× Thunderbolt 4، 2× USB 3.2، USB-C، HDMI 2.1، 3.5 mm، Ethernet RJ-45',
+          '**الأبعاد:** 187 × 175 × 68 mm',
+          '**TDP:** 100 W مستمر (حد أقصى 120 W)',
+          '**السعر:** 1,899 دولار أمريكي. قد تختلف الأسعار حسب بلدك.',
+        ],
+        strengths: [
+          'أقصى ذاكرة RAM: 128 GB من الذاكرة الموحدة هي الأعلى المتوفرة في أي حاسوب مصغر. يتعامل مع Llama 3.3 70B Q5 إضافةً إلى سياق 32K دون تبديل.',
+          'NVMe مزدوج: سعة تخزين 2 TB تتيح حفظ عدة نماذج 70B في وقت واحد.',
+          'تصميم حراري محكم: هيكل أكبر بمنحنيات مراوح محسّنة. يعمل بحرارة أقل من التصاميم المدمجة.',
+          'دعم النماذج بالتوازي: تتيح 128 GB تشغيل نموذجين 32B أو نموذج 70B إضافةً إلى نموذج 13B في آن واحد.',
+          'جاهز للتوسعة: يتيح Thunderbolt 4 تخزيناً خارجياً أو بطاقة eGPU إذا احتجت إليها مستقبلاً.',
+        ],
+        weaknesses: [
+          'الأغلى ثمناً: فارق 300 دولار عن Minisforum مقابل 32 GB إضافية فقط من ذاكرة RAM.',
+          'حجم أكبر: قاعدة 187 × 175 mm أكبر بشكل ملحوظ.',
+          'أعلى ضجيجاً: ترتفع المروحة أسرع تحت الحمل المستمر.',
+          'مبالغ فيه لمعظم المستخدمين: إذا كنت تشغّل نموذج 70B واحداً، فإن 96 GB كافية.',
+          'ذاكرة RAM غير قابلة للترقية: لا يمكن إضافة المزيد من الذاكرة لاحقاً.',
+        ],
+        bestFor: 'الباحثون الذين يشغّلون عدة نماذج في آن واحد. الفرق ذات خادم استدلال LLM محلي مشترك. سير عمل الـ fine-tuning الذي يحتاج إلى نوافذ سياق ضخمة.',
+        avoidIf: 'الميزانية محدودة. تخطط لتشغيل نموذج واحد فقط في كل مرة. المساحة على المكتب محدودة. تعطي الأولوية لأقصى درجات الهدوء.',
+        linuxCompatibility: 'ROCm 6.2+ مستقر. Kernel 6.11+. يتضمن Beelink نظام Ubuntu 24.04 مثبّتاً مسبقاً مع ROCm مُهيّأ بالفعل. أبسط تجربة إعداد.',
+        whereToBuy: 'متجر Beelink، Amazon US/DE/UK، AliExpress.',
+      },
+      'aoostar-gem12': {
+        id: 'aoostar-gem12',
+        title: 'AOOSTAR GEM12 Pro: تصنيع متميز ودعم eGPU عبر OCuLink',
+        content: 'AOOSTAR GEM12 Pro مصمّم للهواة. تصميم حراري متميز، منفذ OCuLink لتوسعة eGPU وسعر متميز.',
+        items: [
+          '**CPU:** 16 نواة Zen 5 (تردد متسارع 5.6 GHz)',
+          '**iGPU:** Radeon 8060S (32 نواة، 2.7 GHz)',
+          '**NPU:** 50 TOPS',
+          '**RAM:** 96 GB DDR5X-8000 (قابلة للترقية إلى 192 GB)',
+          '**التخزين:** SSD من نوع NVMe بسعة 1 TB',
+          '**المنافذ:** 1× OCuLink (eGPU)، 2× Thunderbolt 4، 2× USB 3.2، USB-C، HDMI 2.1، 3.5 mm، Ethernet RJ-45',
+          '**الأبعاد:** 190 × 172 × 72 mm',
+          '**TDP:** 95 W مستمر (حد أقصى 120 W)',
+          '**السعر:** 1,799 دولار أمريكي. قد تختلف الأسعار حسب بلدك.',
+        ],
+        strengths: [
+          'منفذ eGPU من نوع OCuLink: الحاسوب المصغر الوحيد هنا مع توسعة GPU خارجية. أضف RTX 4070 ومصدر طاقة خارجي لأداء هجين.',
+          'تبريد متميز: تصميم بمروحتين مع أنابيب حرارية نحاسية. أدنى درجات حرارة تحت الحمل المستمر.',
+          'ذاكرة RAM قابلة للترقية: تدعم حتى 192 GB. جاهز للمستقبل إذا زادت متطلبات الذاكرة.',
+          'تصميم جمالي: ألمنيوم متميز، لمسات LED، مظهر جهاز فاخر.',
+          'دعم عملاء جيد: لدى AOOSTAR شراكات مباشرة مع المؤثرين ووسائل الإعلام.',
+        ],
+        weaknesses: [
+          'الأغلى عند نفس سعة RAM: 200 دولار أكثر من Minisforum مقابل نفس 96 GB.',
+          'منظومة OCuLink لا تزال غير ناضجة: عدد قليل جداً من علب eGPU تدعم OCuLink.',
+          'ذاكرة RAM غير مشمولة في التوسعة: يأتي الجهاز بسعة 96 GB، والترقية إلى 192 GB ذاتية التركيب.',
+          'تخزين أقل: 1 TB مقابل 2 TB في Beelink.',
+          'جاذبية متخصصة: التركيز على الهواة يعني دعماً أقل من المجتمع.',
+        ],
+        bestFor: 'المستخدمون الباحثون عن مسار توسعة عبر eGPU. الهواة الذين يقدّرون التصميم الصناعي المتميز. الفرق التي تملك ميزانية لعلب OCuLink.',
+        avoidIf: 'الميزانية هي الهاجس الأساسي. لا تهتم بتوسعة eGPU. تريد أبسط إعداد مجرّب.',
+        linuxCompatibility: 'ROCm 6.2+ مدعوم. Kernel 6.11+. دعم eGPU عبر OCuLink على Linux تجريبي.',
+        whereToBuy: 'AOOSTAR مباشرةً، Amazon US/DE، AliExpress.',
+      },
+      'gmktec-evo-x2': {
+        id: 'gmktec-evo-x2',
+        title: 'GMKtec EVO-X2: أفضل نقطة دخول اقتصادية',
+        content: 'GMKtec EVO-X2 هو خيار الدخول. Ryzen AI Max 385 (الجيل السابق)، 64 GB ذاكرة RAM، 1,199 دولار. مثالي للتجربة أو تشغيل نماذج خفيفة 30–40B.',
+        items: [
+          '**CPU:** 16 نواة Zen 5 (ترددات أقل من Max+ 395)',
+          '**iGPU:** Radeon 8050S (24 نواة، أبطأ قليلاً)',
+          '**NPU:** 45 TOPS (مقابل 50 في Max+ 395)',
+          '**RAM:** 64 GB DDR5X-7500',
+          '**التخزين:** SSD من نوع NVMe بسعة 1 TB',
+          '**المنافذ:** 2× USB 3.2، USB-C، HDMI 2.1، 3.5 mm، Ethernet RJ-45',
+          '**الأبعاد:** 175 × 165 × 60 mm',
+          '**TDP:** 65 W مستمر (حد أقصى 100 W)',
+          '**السعر:** 1,199 دولار أمريكي. قد تختلف الأسعار حسب بلدك.',
+        ],
+        strengths: [
+          'أفضل سعر دخول: 1,199 دولار يتفوق على Minisforum بفارق 400 دولار. يمكن للمشترين لأول مرة التجربة دون تجاوز الميزانية.',
+          'حجم مدمج: الأصغر بين الأربعة. يناسب المساحات الضيقة وقابل للحمل.',
+          'استهلاك منخفض: 65 W مستمر هو الأدنى هنا. تشغيل بلا مروحة أو شبه صامت ممكن.',
+          'أداء لائق: يتعامل Radeon 8050S مع Llama 3.3 13B وMistral 24B وQwen 14B بسلاسة.',
+          'مثالي للتجربة: هل تريد تجربة حاسوب مصغر AMD قبل الالتزام بـ 1,600 دولار أو أكثر؟',
+        ],
+        weaknesses: [
+          'حد نماذج 30–40B: تصل 64 GB من ذاكرة RAM إلى حدّها عند 40B Q4 أو 30B Q5.',
+          'جيل سابق: Ryzen AI Max 385 من الجيل السابق.',
+          'iGPU أبطأ: يحتوي Radeon 8050S على 24 نواة مقابل 32 في Max+ 395. استدلال أبطأ بنسبة 10–15%.',
+          'منافذ أقل: مدخلات/مخرجات أقل مقارنة بالخيارات الأخرى.',
+          'هامش حراري: قد يعاني من خفض الأداء الحراري تحت الحمل المستمر.',
+        ],
+        bestFor: 'المشترون لأول مرة بميزانية محدودة. المطورون الذين يجربون نماذج 13–32B. المؤسسات التي تجري تجربة تجريبية لـ LLM محلي قبل التوسع.',
+        avoidIf: 'تحتاج إلى دعم نماذج 70B. تخطط لاستدلال مستمر. تريد عتاداً جاهزاً للمستقبل.',
+        linuxCompatibility: 'ROCm 6.2+ مدعوم. Kernel 6.11+. يملك Radeon 8050S اختبارات أقل من المجتمع، لكنه يعمل.',
+        whereToBuy: 'GMKtec مباشرةً، AliExpress، Amazon.',
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: 'اختبارات الأداء (تقديرية، مايو 2026)',
+        content: 'بيانات الأداء الحقيقية لا تزال شحيحة لهذه الأجهزة المصغرة الجديدة. فيما يلي تقديرات مبنية على الاختبارات المرجعية لـ Ryzen AI Max+ 395. يختلف الأداء الفعلي حسب التبريد ونظام التشغيل ودقة النموذج.',
+        items: [
+          'Llama 3.3 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR نحو 45–55 tok/s. GMKtec EVO-X2 نحو 40 tok/s.',
+          'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR نحو 18–22 tok/s (تقديري). GMKtec EVO-X2 نحو 14–16 tok/s.',
+          'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR نحو 35–40 tok/s. GMKtec نحو 30 tok/s.',
+          'ملاحظة: تستند هذه التقديرات إلى تسريع iGPU إضافةً إلى NPU. الاستدلال بـ CPU وحده سيكون أبطأ بـ 3–5 مرات.',
+        ],
+        image: '/images/best-amd-mini-pc-benchmarks-es.svg',
+        imageCaption: 'الرموز/الثانية على نماذج 8B و32B و70B. تحقق Minisforum/Beelink/AOOSTAR أداءً متطابقاً بفضل نفس شريحة Ryzen AI Max+ 395. GMKtec EVO-X2 أبطأ بنسبة 10–15% مع Ryzen AI Max 385.',
+      },
+      'decision-matrix': {
+        id: 'decision-matrix',
+        title: 'مصفوفة القرار: أيّها تشتري؟',
+        content: 'استخدم هذه المصفوفة لإيجاد أفضل خيار لك.',
+        items: [
+          'الميزانية أولوية، مستعد للبدء بنماذج 30–40B: GMKtec EVO-X2 (1,199 دولار)',
+          'تريد قدرة 70B بأفضل سعر: Minisforum MS-A2 (1,599 دولار)',
+          'تحتاج إلى 128 GB لسياق ضخم أو نماذج بالتوازي: Beelink GTR9 Pro (1,899 دولار)',
+          'تريد مسار توسعة eGPU: AOOSTAR GEM12 Pro (1,799 دولار)',
+          'مشترٍ في الاتحاد الأوروبي يعطي الأولوية للشحن السريع: Minisforum (مستودع في ألمانيا)',
+          'فريق يشتري عدة وحدات: Minisforum (أسعار B2B متوفرة)',
+          'مطوّر يفضّل Linux ويريد إعداداً دون متاعب: Beelink GTR9 Pro (يتضمن Ubuntu + ROCm)',
+          'تريد الخيار الأكثر هدوءاً: Minisforum MS-A2 (38 dB في وضع الخمول)',
+        ],
+        image: '/images/best-amd-mini-pc-decision-tree-es.svg',
+        imageCaption: 'شجرة القرار: طابق أولوياتك مع الحاسوب المصغر الصحيح. المشترون الذين يعطون الأولوية للسعر يبدؤون بـ GMKtec. المستخدمون المتقدمون والباحثون يفضّلون Beelink. Minisforum هو أفضل خيار عام.',
+      },
+      'linux-setup': {
+        id: 'linux-setup',
+        title: 'دليل Linux السريع (10 خطوات)',
+        content: 'تعمل الأجهزة المصغرة الأربعة بأفضل شكل مع Ubuntu 24.04 LTS أو Fedora 41+. هذا أسرع طريق لتشغيل أول نموذج 70B لديك.',
+        items: [
+          'الخطوة 1 — اطلب الجهاز من تاجر التجزئة الذي تختاره. توقع تسليماً خلال 2–4 أسابيع.',
+          'الخطوة 2 — ثبّت نظام التشغيل (إن لم يكن مثبّتاً مسبقاً). أقلع من USB بنظام Ubuntu 24.04 LTS. يتطلب kernel 6.11+.',
+          'الخطوة 3 — ثبّت ROCm من المستودع الرسمي: amdgpu-install -y --usecase=opencl,rocm',
+          'الخطوة 4 — اضبط تجاوز GPU من نوع HIP (حرج لـ iGPU في الحاسوب المصغر). أضف إلى ~/.bashrc: export HSA_OVERRIDE_GFX_VERSION=11.0.0',
+          'الخطوة 5 — ثبّت Ollama بالسكربت الرسمي: curl -fsSL https://ollama.com/install.sh | sh',
+          'الخطوة 6 — نزّل أول نموذج (اختبار استدلال): ollama pull llama3.1:8b',
+          'الخطوة 7 — تحقق من تسريع GPU في سجلات Ollama. يجب أن ترى استخدام ذاكرة GPU إذا كان HIP يعمل.',
+          'الخطوة 8 — نزّل النموذج المستهدف: ollama pull llama3.1:70b-instruct-q4_K_M',
+          'الخطوة 9 — قِس أول استجابة: time ollama run llama3.1:70b "اشرح نماذج LLM المحلية في جملة واحدة"',
+          'الخطوة 10 — (اختياري) ثبّت Open WebUI لواجهة المتصفح: docker run -d -p 3000:8080 ghcr.io/open-webui/open-webui:latest',
+        ],
+      },
+      'amd-vs-apple': {
+        id: 'amd-vs-apple',
+        title: 'AMD Ryzen AI Max+ مقابل Apple Silicon: المقارنة الحقيقية',
+        content: 'يشترك كلاهما في بنية الذاكرة الموحدة والرسوميات المدمجة. هكذا يقارَنان لاستخدام LLM المحلي.',
+        items: [
+          '**Mac Studio M4 Max** (المكافئ): CPU بـ 32 نواة، GPU من نوع M4 Max، حتى 128 GB ذاكرة موحدة. السعر: 2,999–3,999 دولار. التسليم: 4–6 أسابيع.',
+          '**الحاسوب المصغر AMD Ryzen AI Max+** (أفضل بديل): CPU بـ 16 نواة، iGPU من نوع Radeon 8060S، حتى 128 GB ذاكرة موحدة. السعر: 1,599–1,899 دولار. التسليم: 2–4 أسابيع.',
+          '**الأداء:** يشغّل Ryzen AI Max+ نموذج Llama 70B بسرعة 18–22 tok/s. يشغّل Mac M4 Max نفس النموذج بسرعة 20–25 tok/s. الفارق أقل من 10%.',
+          '**المنظومة:** يملك macOS كلاً من MLX وMetal. يملك AMD/Linux كلاً من ROCm وvLLM وOllama. كلاهما ناضج الآن.',
+          '**ميزة التكلفة:** يوفّر AMD مبلغ 1,100–2,400 دولار لكل وحدة. على نطاق واسع (للفرق)، يساوي ذلك 5,500–12,000 دولار على 5 وحدات.',
+          '**المقايضة:** تفقد macOS وXcode وFinal Cut Pro. تكسب مرونة Linux ونقل مهارات ROCm وتكلفة أقل.',
+        ],
+        image: '/images/best-amd-mini-pc-amd-vs-apple-es.svg',
+        imageCaption: 'مقارنة جنباً إلى جنب: توفّر أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ (1,599–1,899 دولار) أداءً وذاكرة موحدة مكافئة لـ Mac Studio M4 Max (2,999–3,999 دولار) بتكلفة أقل بنسبة 40–50%.',
+      },
+      'eu-considerations': {
+        id: 'eu-considerations',
+        title: 'الشحن إلى الاتحاد الأوروبي والضمان وضرائب الاستيراد',
+        content: 'إذا اشتريت من أوروبا، فهذه اعتبارات خاصة.',
+        items: [
+          'أسرع شحن إلى الاتحاد الأوروبي: Minisforum (مستودع في فرانكفورت، ألمانيا). شحن داخل الاتحاد الأوروبي مع تسليم خلال 2–3 أسابيع. دون رسوم استيراد.',
+          'مسارات أبطأ: AOOSTAR وBeelink وGMKtec تشحن من الصين. 4–6 أسابيع بالشحن العادي، 2–3 أسابيع بالسريع. قد تُطبَّق رسوم على ما يتجاوز 150 يورو.',
+          'استراتيجية Amazon: تتوفر Minisforum وأحياناً AOOSTAR على Amazon DE وAmazon FR وAmazon UK. غالباً أسرع وتشمل ضريبة القيمة المضافة.',
+          'الضمان: تلتزم جميع العلامات التجارية بالضمان القانوني لعامين في الاتحاد الأوروبي. يختلف الضمان الخاص بكل علامة تجارية.',
+          'ضرائب الاستيراد: الطلبات دون 150 يورو قد تمرّ دون رسوم. فوق 150 يورو، توقع ضريبة قيمة مضافة بنسبة 19–25% إضافةً إلى رسوم استيراد محتملة.',
+          'أفضل عرض في الاتحاد الأوروبي: اشترِ Minisforum MS-A2 مباشرةً من مستودع فرانكفورت أو من Amazon DE. دون رسوم، دون حواجز لغوية وتسليم أسرع.',
+        ],
+      },
+      'wrong-choice': {
+        id: 'wrong-choice',
+        title: 'متى لا يكون الحاسوب المصغر AMD Ryzen AI Max+ الخيار الصحيح',
+        content: 'هذه الأجهزة المصغرة ممتازة، لكنها ليست شاملة لكل الاستخدامات. متى تبحث عن بديل آخر.',
+        items: [
+          'تحتاج إلى سير عمل حصري لـ CUDA: fine-tuning عبر PyTorch باستخدام torch.cuda، أو نوى CUDA الخاصة بـ vLLM، أو كود بحثي خاص بـ CUDA. يغطي ROCm نسبة 85%، لكن تبقى ثغرات.',
+          'تريد macOS دون تنازلات: إذا كان سير عملك بالكامل على macOS (Xcode، Final Cut، Figma)، فإن Mac Studio M4 Max هو الخيار الطبيعي.',
+          'تحتاج إلى نماذج أكبر من 70B: حتى مع 128 GB من الذاكرة الموحدة يكون الحد الأقصى 70B Q5. يتطلب Llama 4 Maverick (400B إجمالاً) إعداداً متعدد بطاقات GPU.',
+          'تطلب خدمة ضمان خلال ساعات: تتطلب بعض شركات OEM الصينية إعادة الوحدات إلى آسيا.',
+          'تشغّل استدلال إنتاج لعملاء يدفعون: إذا كان مطلوباً اتفاقية مستوى خدمة بتوفر 99.9%، فإن الدعم المؤسسي يتفوق على الأجهزة المصغرة الاستهلاكية.',
+          'تريد تبريداً سلبياً: تحتاج الأجهزة المصغرة الأربعة جميعاً إلى مراوح نشطة تحت الحمل المستمر.',
+          'ميزانيتك 500 دولار: بطاقة RTX 3090 مستعملة (نحو 800 دولار)، أو لابتوب ألعاب مستعمل (نحو 1,000 دولار)، أو بطاقة GPU اقتصادية (300–500 دولار) تتفوق على أي حاسوب مصغر جديد.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        items: [
+          'س: هل تستطيع أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ تشغيل Llama 3.3 70B؟ | ج: نعم، الأربعة جميعاً قادرة على ذلك. تشغّل Minisforum/Beelink/AOOSTAR نموذج 70B Q4 بسرعة 18–22 tok/s. كما يتعامل Beelink بسعة 128 GB مع 70B Q5. GMKtec أبطأ ومحدود بنماذج 40B.',
+          'س: كيف يقارَن AMD Ryzen AI Max+ بـ Apple M4 Max؟ | ج: أداء شبه متطابق (فارق 5–10%). AMD أرخص بنسبة 30–40%. المقايضة: تفقد منظومة macOS وXcode وFinal Cut.',
+          'س: هل أحتاج إلى Linux أم يمكنني استخدام Windows؟ | ج: الأربعة جميعاً تتضمن Linux. برامج تشغيل Windows قيد التطوير، لكنها ليست جاهزة للإنتاج بعد.',
+          'س: ما الفرق بين Minisforum MS-A2 وBeelink GTR9 Pro؟ | ج: يملك Minisforum سعة 96 GB من ذاكرة RAM (1,599 دولار). يملك Beelink سعة 128 GB من ذاكرة RAM (1,899 دولار) ويأتي مهيّأ مسبقاً مع Ubuntu إضافةً إلى ROCm.',
+          'س: هل يمكنني إضافة بطاقة GPU منفصلة إلى هذه الأجهزة المصغرة؟ | ج: يدعم AOOSTAR GEM12 Pro بطاقة GPU خارجية عبر OCuLink (يتطلب علبة eGPU بسعر 500 دولار أو أكثر).',
+          'س: كم تستهلك هذه الأجهزة المصغرة من الكهرباء؟ | ج: بين 65 و120 W حسب الطراز والحمل. شهر كامل عند 100 W يعادل نحو 72 kWh، أي حوالي 8–12 دولاراً من تكاليف الكهرباء في الولايات المتحدة.',
+          'س: هل ستصبح قديمة عندما يطلق AMD الجيل التالي؟ | ج: من المرجّح أن يصل AMD Ryzen AI Max Gen 2 في أواخر 2026. ستبقى هذه الأجهزة مهمة لمدة 3–4 سنوات.',
+          'س: هل يمكنني تشغيل عدة نماذج في آن واحد؟ | ج: نعم، مع ذاكرة RAM كافية. بسعة 96 GB يمكنك تشغيل نموذجين 32B أو نموذج 70B إضافةً إلى نموذج 13B. بسعة 128 GB تملك هامشاً أكبر.',
+          'س: ما مستوى الضجيج تحت الحمل؟ | ج: Minisforum 42 dB، Beelink 44 dB، AOOSTAR 40 dB، GMKtec 38 dB. جميعها مماثلة لمراوح تبريد اللابتوب.',
+          'س: هل هذه الأجهزة المصغرة جيدة للـ fine-tuning؟ | ج: نعم، مع تحفظات. يعمل fine-tuning عبر LoRA بشكل جيد. fine-tuning الأوزان الكاملة أبطأ من إعدادات GPU المكتبية.',
+          'س: هل يمكنني تشغيل Stable Diffusion على هذه الأجهزة المصغرة؟ | ج: نعم. يعمل Stable Diffusion XL بسرعة 8–12 ثانية/صورة (بطيء مقارنةً بنحو 3 ثوانٍ/صورة على RTX 4070).',
+          'س: كيف يقارَن ROCm بـ CUDA للاستدلال؟ | ج: ROCm مكتمل بنسبة 90% مقارنةً بـ CUDA. الثغرة الرئيسية: بعض أطر fine-tuning الخاصة لا تملك دعم ROCm.',
+          'س: ما مدة الضمان؟ | ج: Minisforum سنتان، AOOSTAR سنة، Beelink سنة (يضيف قانون الاتحاد الأوروبي سنتين). GMKtec يختلف حسب المنطقة.',
+          'س: هل يمكنني ترقية ذاكرة RAM لاحقاً؟ | ج: Minisforum/AOOSTAR نعم (حتى 192 GB). Beelink/GMKtec لا (ملحومة). اشترِ ذاكرة RAM التي تحتاجها من البداية.',
+          'س: أي حاسوب مصغر يملك أفضل جودة تصنيع؟ | ج: AOOSTAR GEM12 Pro (ألمنيوم متميز، تحسين حراري). Minisforum هو الأقرب في المرتبة الثانية.',
+        ],
+      },
+      'related': {
+        id: 'related',
+        title: 'أدلة ذات صلة',
+        content: 'استكشف أدلة عتاد وبرمجيات ذات صلة بتشغيل LLM محلياً.',
+        items: [
+          '[أفضل أجهزة الحاسوب المصغرة لتشغيل LLM محلياً](/ar/local-llms/best-mini-pcs-local-llm)',
+          '[دليل عتاد تشغيل LLM محلياً 2026](/ar/local-llms/local-llm-hardware-guide-2026)',
+          '[GPU مقابل CPU مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+          '[كم تحتاج من VRAM؟](/ar/local-llms/how-much-vram-local-llm)',
+          '[أفضل نماذج LLM المحلية 2026](/ar/local-llms/best-local-llms-2026)',
+          '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained)',
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'هل تستطيع أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ تشغيل Llama 3.3 70B؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'نعم، الأربعة جميعاً قادرة على ذلك. تشغّل Minisforum/Beelink/AOOSTAR نموذج 70B Q4 بسرعة 18–22 tok/s. كما يتعامل Beelink بسعة 128 GB مع 70B Q5. GMKtec أبطأ ومحدود بنماذج 40B.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'كيف يقارَن AMD Ryzen AI Max+ بـ Apple M4 Max؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'أداء شبه متطابق (فارق 5–10%). AMD أرخص بنسبة 30–40%. المقايضة: تفقد منظومة macOS وXcode وFinal Cut.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل أحتاج إلى Linux أم يمكنني استخدام Windows؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'الأربعة جميعاً تتضمن Linux. برامج تشغيل Windows قيد التطوير، لكنها ليست جاهزة للإنتاج بعد.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'ما الفرق بين Minisforum MS-A2 وBeelink GTR9 Pro؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'يملك Minisforum سعة 96 GB من ذاكرة RAM (1,599 دولار). يملك Beelink سعة 128 GB من ذاكرة RAM (1,899 دولار) ويأتي مهيّأ مسبقاً مع Ubuntu إضافةً إلى ROCm.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل يمكنني إضافة بطاقة GPU منفصلة إلى هذه الأجهزة المصغرة؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'يدعم AOOSTAR GEM12 Pro بطاقة GPU خارجية عبر OCuLink (يتطلب علبة eGPU بسعر 500 دولار أو أكثر).'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'كم تستهلك هذه الأجهزة المصغرة من الكهرباء؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'شهر كامل عند 100 W يعادل نحو 72 kWh، أي حوالي 8–12 دولاراً من تكاليف الكهرباء في الولايات المتحدة.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل ستصبح قديمة عندما يطلق AMD الجيل التالي؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'من المرجّح أن يصل AMD Ryzen AI Max Gen 2 في أواخر 2026. ستبقى هذه الأجهزة مهمة لمدة 3–4 سنوات.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل يمكنني تشغيل عدة نماذج في آن واحد؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'نعم، مع ذاكرة RAM كافية. بسعة 96 GB يمكنك تشغيل نموذجين 32B أو نموذج 70B إضافةً إلى نموذج 13B. بسعة 128 GB تملك هامشاً أكبر.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'ما مستوى الضجيج تحت الحمل؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Minisforum 42 dB، Beelink 44 dB، AOOSTAR 40 dB، GMKtec 38 dB. جميعها مماثلة لمراوح تبريد اللابتوب.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل هذه الأجهزة المصغرة جيدة للـ fine-tuning؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'نعم، مع تحفظات. يعمل fine-tuning عبر LoRA بشكل جيد. fine-tuning الأوزان الكاملة أبطأ من إعدادات GPU المكتبية.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل يمكنني تشغيل Stable Diffusion على هذه الأجهزة المصغرة؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'نعم. يعمل Stable Diffusion XL بسرعة 8–12 ثانية/صورة (بطيء مقارنةً بنحو 3 ثوانٍ/صورة على RTX 4070).'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'كيف يقارَن ROCm بـ CUDA للاستدلال؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'ROCm مكتمل بنسبة 90% مقارنةً بـ CUDA. الثغرة الرئيسية: بعض أطر fine-tuning الخاصة لا تملك دعم ROCm.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'ما مدة الضمان؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Minisforum سنتان، AOOSTAR سنة، Beelink سنة (يضيف قانون الاتحاد الأوروبي سنتين). GMKtec يختلف حسب المنطقة.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل يمكنني ترقية ذاكرة RAM لاحقاً؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Minisforum/AOOSTAR نعم (حتى 192 GB). Beelink/GMKtec لا (ملحومة). اشترِ ذاكرة RAM التي تحتاجها من البداية.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'أي حاسوب مصغر يملك أفضل جودة تصنيع؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'AOOSTAR GEM12 Pro (ألمنيوم متميز، تحسين حراري). Minisforum هو الأقرب في المرتبة الثانية.'
+          }
+        },
+      ],
+    },
+    supplementalSchema: {
+      'products': [
+        {
+          '@type': 'Product',
+          'name': 'Minisforum MS-A2',
+          'description': 'حاسوب مصغر AMD Ryzen AI Max+ 395 بذاكرة موحدة سعة 96 GB وNPU بقدرة 50 TOPS لاستدلال LLM المحلي.',
+          'brand': { '@type': 'Brand', 'name': 'Minisforum' },
+          'offers': [
+            { '@type': 'Offer', 'price': '1599', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': 'https://store.minisforum.com' }
+          ],
+          'category': 'حاسوب مصغر لاستدلال LLM المحلي',
+        },
+        {
+          '@type': 'Product',
+          'name': 'Beelink GTR9 Pro',
+          'description': 'حاسوب مصغر AMD Ryzen AI Max+ 395 بذاكرة موحدة سعة 128 GB لاستدلال نماذج متعددة بالتوازي.',
+          'brand': { '@type': 'Brand', 'name': 'Beelink' },
+          'offers': [
+            { '@type': 'Offer', 'price': '1899', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': 'https://www.bee-link.com' }
+          ],
+          'category': 'حاسوب مصغر لاستدلال LLM المحلي',
+        },
+        {
+          '@type': 'Product',
+          'name': 'AOOSTAR GEM12 Pro',
+          'description': 'حاسوب مصغر AMD Ryzen AI Max+ 395 بذاكرة موحدة سعة 96 GB ودعم eGPU عبر OCuLink لإعدادات LLM محلية قابلة للتوسعة.',
+          'brand': { '@type': 'Brand', 'name': 'AOOSTAR' },
+          'offers': [
+            { '@type': 'Offer', 'price': '1799', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': 'https://aoostar.com' }
+          ],
+          'category': 'حاسوب مصغر لاستدلال LLM المحلي',
+        },
+        {
+          '@type': 'Product',
+          'name': 'GMKtec EVO-X2',
+          'description': 'حاسوب مصغر AMD Ryzen AI Max 385 كنقطة دخول اقتصادية لاستدلال LLM المحلي.',
+          'brand': { '@type': 'Brand', 'name': 'GMKtec' },
+          'offers': [
+            { '@type': 'Offer', 'price': '1199', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock', 'url': 'https://www.gmktec.com' }
+          ],
+          'category': 'حاسوب مصغر لاستدلال LLM المحلي',
+        },
+      ],
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'أفضل حاسوب AMD مصغر لتشغيل LLM محلياً 2026: Ryzen AI Max+ 395 (128 GB)',
+      description: 'أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ 395 بسعة 128 GB تشغّل نماذج 70B محلياً. اختبارات الأداء والأسعار ومقارنة Framework Desktop وGMKtec وMinisforum.',
+      url: 'https://www.promptquorum.com/ar/local-llms/best-amd-mini-pc-local-llm-2026',
+      inLanguage: 'ar',
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-17',

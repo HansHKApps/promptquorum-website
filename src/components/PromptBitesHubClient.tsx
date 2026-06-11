@@ -35,6 +35,8 @@ const HUB_HEADLINE: Partial<Record<Language, string>> = {
   zh: '本地LLM问题的快速解答',
   es: 'Respuestas rápidas a preguntas sobre LLM locales',
   pt: 'Respostas rápidas para perguntas sobre LLMs locais',
+  // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+  ar: 'إجابات سريعة على أسئلة النماذج اللغوية المحلية',
 }
 
 const HUB_EYEBROW: Partial<Record<Language, string>> = {
@@ -45,6 +47,8 @@ const HUB_EYEBROW: Partial<Record<Language, string>> = {
   zh: '提示词速答',
   es: 'Prompts en breve',
   pt: 'Prompts em resumo',
+  // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+  ar: 'Prompt Bites',
 }
 
 const COUNT = PROMPT_BITES_PUBLISHED_SLUGS.size
@@ -57,6 +61,8 @@ const HUB_SUBTITLE: Partial<Record<Language, string>> = {
   zh: `${COUNT}篇简答指南。显存要求、Ollama推荐、硬件对比和设置技巧 — 60秒内解答。`,
   es: `${COUNT} guías de respuesta rápida. Requisitos de VRAM, recomendaciones de Ollama, comparativas de hardware y consejos de configuración — respondidas en 60 segundos o menos.`,
   pt: `${COUNT} guias de resposta rápida. Requisitos de VRAM, recomendações de Ollama, comparações de hardware e dicas de configuração — respondidos em 60 segundos ou menos.`,
+  // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+  ar: `${COUNT} دليل للإجابات القصيرة. متطلبات VRAM، وأفضل نماذج Ollama، ومقارنات الأجهزة، ونصائح الإعداد — إجابات في 60 ثانية أو أقل.`,
 }
 
 const VRAM_TABLE_HEADERS: Partial<Record<Language, { vram: string; model: string; quant: string; useCase: string }>> = {
@@ -67,6 +73,8 @@ const VRAM_TABLE_HEADERS: Partial<Record<Language, { vram: string; model: string
   zh: { vram: 'VRAM', model: '最佳模型（2026年5月）', quant: '量化', useCase: '使用场景' },
   es: { vram: 'VRAM', model: 'Mejor modelo (mayo de 2026)', quant: 'Cuantización', useCase: 'Caso de uso' },
   pt: { vram: 'VRAM', model: 'Melhor modelo (maio de 2026)', quant: 'Quantização', useCase: 'Caso de uso' },
+  // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+  ar: { vram: 'VRAM', model: 'أفضل نموذج (مايو 2026)', quant: 'التكميم', useCase: 'حالة الاستخدام' },
 }
 
 const VRAM_TABLE_ROWS: Partial<Record<Language, Array<{ vram: string; model: string; quant: string; useCase: string }>>> = {
@@ -132,6 +140,16 @@ const VRAM_TABLE_ROWS: Partial<Record<Language, Array<{ vram: string; model: str
     { vram: '16 GB', model: 'Qwen 32B', quant: 'Q4_K_M', useCase: 'Tarefas complexas de várias etapas' },
     { vram: '24 GB', model: 'Llama 70B', quant: 'Q4_K_M (parcial)', useCase: 'Qualidade quase de produção' },
     { vram: '48+ GB', model: 'Llama 70B', quant: 'Q5_K_M ou superior', useCase: 'Modelos de precisão total' },
+  ],
+  // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+  ar: [
+    { vram: '4 GB', model: 'Phi-4 Mini', quant: 'Q4', useCase: 'محادثة بسيطة، مهام صغيرة' },
+    { vram: '6 GB', model: 'Llama 3 8B', quant: 'Q4_K_M', useCase: 'محادثة يومية وبرمجة' },
+    { vram: '8 GB', model: 'Mistral 7B', quant: 'Q5_K_M', useCase: 'توازن الجودة والسرعة' },
+    { vram: '12 GB', model: 'Qwen 14B', quant: 'Q4_K_M', useCase: 'البرمجة والاستدلال' },
+    { vram: '16 GB', model: 'Qwen 32B', quant: 'Q4_K_M', useCase: 'مهام معقدة متعددة الخطوات' },
+    { vram: '24 GB', model: 'Llama 70B', quant: 'Q4_K_M (جزئي)', useCase: 'جودة قريبة من الإنتاج' },
+    { vram: '48+ GB', model: 'Llama 70B', quant: 'Q5_K_M أو أعلى', useCase: 'نماذج دقة كاملة' },
   ],
 }
 
@@ -206,12 +224,24 @@ const DEEPDIVE_LINKS: Partial<Record<Language, Record<string, { text: string; hr
     'Prompt Engineering': { text: 'Aprofundamento: Framework de prompts CO-STAR', href: '/pt/prompt-engineering/co-star-framework' },
     'Privacy & Compliance': { text: 'Aprofundamento: Manifesto de GDPR e privacidade', href: '/pt/local-llms/qwen-gdpr-privacy-manifesto-2026' },
   },
+  // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+  ar: {
+    'Quantization & VRAM': { text: 'تعمق: شرح التكميم', href: '/ar/local-llms/llm-quantization-explained' },
+    'Ollama': { text: 'تعمق: أفضل نماذج مفتوحة المصدر مع Ollama', href: '/ar/local-llms/top-open-source-models-ollama' },
+    'Tool Comparisons': { text: 'تعمق: Ollama مقابل LM Studio', href: '/ar/local-llms/ollama-vs-lm-studio' },
+    'Model Comparisons': { text: 'تعمق: Qwen مقابل Llama مقابل Mistral', href: '/ar/local-llms/qwen-vs-llama-vs-mistral' },
+    'Hardware-Specific': { text: 'تعمق: أفضل بطاقات GPU الاقتصادية للنماذج المحلية', href: '/ar/local-llms/best-budget-gpus-local-llm' },
+    'Quick Answers': { text: 'تعمق: كم VRAM تحتاج للنماذج المحلية', href: '/ar/local-llms/how-much-vram-local-llm' },
+    'Prompt Engineering': { text: 'تعمق: إطار عمل CO-STAR للأوامر', href: '/ar/prompt-engineering/co-star-framework' },
+    'Privacy & Compliance': { text: 'تعمق: GDPR ومانيفستو الخصوصية', href: '/ar/local-llms/qwen-gdpr-privacy-manifesto-2026' },
+  },
 }
 
 const EDUCATIONAL_LEVEL: Record<string, Partial<Record<Language, string>>> = {
-  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante' },
-  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio', pt: 'Intermediário' },
-  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级', es: 'Avanzado', pt: 'Avançado' },
+  // TODO(ar-review): native MSA check — Wave 4, not yet go-live
+  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante',     ar: 'مبتدئ' },
+  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio',    pt: 'Intermediário', ar: 'متوسط' },
+  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级', es: 'Avanzado',      pt: 'Avançado',      ar: 'متقدم' },
 }
 
 function promptBitesArticleHref(lang: Language, slug: string): string {
@@ -236,6 +266,7 @@ const CATEGORY_SVG: Partial<Record<string, string>> = {
 }
 
 const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
+  // TODO(ar-review): native MSA check — Wave 4, not yet go-live
   'quantization-vram': {
     en: 'VRAM and quantization decision tree for local LLMs',
     de: 'VRAM- und Quantisierungs-Entscheidungsbaum für lokale LLMs',
@@ -244,6 +275,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     zh: '本地LLM显存与量化决策树',
     es: 'Árbol de decisión de VRAM y cuantización para LLM locales',
     pt: 'Árvore de decisão de VRAM e quantização para LLMs locais',
+    ar: 'شجرة قرار VRAM والتكميم للنماذج اللغوية المحلية',
   },
   'ollama': {
     en: 'Ollama model picker guide for local LLM selection',
@@ -253,6 +285,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     zh: 'Ollama本地LLM模型选择指南',
     es: 'Guía de selección de modelos Ollama para LLM locales',
     pt: 'Guia de seleção de modelos Ollama para LLMs locais',
+    ar: 'دليل اختيار نموذج Ollama للنماذج اللغوية المحلية',
   },
   'tool-comparisons': {
     en: 'Local LLM tool comparison matrix: Ollama, LM Studio, Jan',
@@ -262,6 +295,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     zh: '本地LLM工具对比矩阵：Ollama、LM Studio、Jan',
     es: 'Matriz comparativa de herramientas LLM locales: Ollama, LM Studio, Jan',
     pt: 'Matriz de comparação de ferramentas de LLM local: Ollama, LM Studio, Jan',
+    ar: 'مصفوفة مقارنة أدوات النماذج اللغوية المحلية: Ollama, LM Studio, Jan',
   },
   'model-comparisons': {
     en: 'Local LLM model size comparison chart',
@@ -271,6 +305,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     zh: '本地LLM模型规模对比图',
     es: 'Gráfico comparativo del tamaño de modelos LLM locales',
     pt: 'Gráfico comparativo do tamanho de modelos de LLM local',
+    ar: 'مخطط مقارنة أحجام النماذج اللغوية المحلية',
   },
   'hardware-specific': {
     en: 'GPU VRAM tier guide for local LLM hardware selection',
@@ -280,6 +315,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     zh: '本地LLM硬件选择GPU显存档位指南',
     es: 'Guía de niveles de VRAM de GPU para elegir hardware de LLM local',
     pt: 'Guia de níveis de VRAM de GPU para escolher hardware de LLM local',
+    ar: 'دليل مستويات VRAM للـGPU لاختيار أجهزة النماذج اللغوية المحلية',
   },
   'quick-answers': {
     en: 'VRAM quick reference table for local LLMs',
@@ -289,6 +325,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     zh: '本地LLM显存快速参考表',
     es: 'Tabla de referencia rápida de VRAM para LLM locales',
     pt: 'Tabela de referência rápida de VRAM para LLMs locais',
+    ar: 'جدول مرجعي سريع لـVRAM للنماذج اللغوية المحلية',
   },
   'prompt-engineering': {
     en: 'Prompt Bites overview — quick answers to local LLM questions',
@@ -298,6 +335,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     zh: 'Prompt Bites概览 — 本地LLM问题快速解答',
     es: 'Resumen de Prompt Bites — respuestas rápidas a preguntas sobre LLM locales',
     pt: 'Visão geral do Prompt Bites — respostas rápidas para perguntas sobre LLMs locais',
+    ar: 'نظرة عامة على Prompt Bites — إجابات سريعة على أسئلة النماذج اللغوية المحلية',
   },
   'privacy-compliance': {
     en: 'GPU and VRAM guide for privacy-first local LLM deployment',
@@ -307,6 +345,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     zh: '隐私优先本地LLM部署的GPU和显存指南',
     es: 'Guía de GPU y VRAM para despliegue de LLM local centrado en la privacidad',
     pt: 'Guia de GPU e VRAM para implantação de LLM local com foco em privacidade',
+    ar: 'دليل GPU وVRAM لنشر النماذج اللغوية المحلية مع الحفاظ على الخصوصية',
   },
 }
 
@@ -333,7 +372,7 @@ export function PromptBitesHubClient({ lang }: Props) {
 
         {/* Cross-language links */}
         <div className="flex justify-center mb-12">
-          <LangLinksBar cluster="prompt-bites" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es", "pt"]} initialLang={lang} />
+          <LangLinksBar cluster="prompt-bites" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es", "pt", "ar"]} initialLang={lang} />
         </div>
 
         {/* VRAM Reference Table */}
