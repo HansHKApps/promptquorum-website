@@ -14,8 +14,7 @@ const PATH_LOCALE_RE = new RegExp(`^/(de|fr|ja|zh|es|pt|ar)(/|$)`)
 export function middleware(request: NextRequest) {
   const url = request.nextUrl
 
-  // ar: excluded until /ar page tree exists. Re-add ar when /ar pages ship.
-  const VALID_NON_EN_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt']
+  const VALID_NON_EN_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const langParam = url.searchParams.get('lang')
   const isApiRoute = url.pathname.startsWith('/api/')
   const isCronRoute = url.pathname.startsWith('/cron/')
