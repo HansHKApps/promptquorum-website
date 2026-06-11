@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 
 const FAQS: Partial<Record<Lang, { question: string; answer: string }[]>> = {
   en: [

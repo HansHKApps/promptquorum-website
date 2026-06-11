@@ -35,7 +35,7 @@ const COOKIELESS_MIGRATED_LANGS: Language[] = ['en', 'de', 'fr', 'ja', 'zh', 'es
 
 export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
   const lang = useLang(initialLang) as Language
-  const t = translations[lang]
+  const t = translations[lang as keyof typeof translations]
   const gaRemoved = COOKIELESS_MIGRATED_LANGS.includes(lang)
 
   const renderTemplate = (text: string, vars: Record<string, string> = {}) => {

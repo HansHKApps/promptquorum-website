@@ -1,7 +1,7 @@
 // Prompt Bites Hub page metadata — optimizable by /geo-meta-optimizer
 // All 8 languages must remain in sync. Interpolate {{count}} at runtime.
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 
 export interface HubMetadataConfig {
   titles: Partial<Record<Lang, string>>

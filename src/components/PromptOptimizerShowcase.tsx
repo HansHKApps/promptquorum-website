@@ -27,7 +27,7 @@ type ShowcaseStrings = {
   optimizationEngine: string
 }
 
-const translations: Record<Lang, ShowcaseStrings> = {
+const translations = {
   en: {
     title: 'Prompt Optimizer',
     desc: 'Choose a framework, optimize your prompt, and compare across AI models',
@@ -211,7 +211,7 @@ export function PromptOptimizerShowcase({ lang = 'en' }: { lang?: Lang }) {
   const [prompt, setPrompt] = useState('')
   const [provider, setProvider] = useState('gpt-4')
   const [optimizationStarted, setOptimizationStarted] = useState(false)
-  const t = translations[lang] || translations.en
+  const t = (translations as Partial<Record<Lang, ShowcaseStrings>>)[lang] || translations.en
 
   useEffect(() => setOptimizationStarted(false), [prompt])
 

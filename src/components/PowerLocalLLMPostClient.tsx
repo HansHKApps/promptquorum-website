@@ -762,7 +762,7 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
           <div className="flex items-center gap-2 text-sm text-text-secondary flex-wrap">
             <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
             <span>/</span>
-            <a href={powerLLMHubPath(lang)} className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Power Local LLM'}</a>
+            <a href={powerLLMHubPath(lang as any)} className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Power Local LLM'}</a>
             <span>/</span>
             <span className="text-text-primary font-medium">{article.title}</span>
           </div>
@@ -932,7 +932,7 @@ function PowerLocalLLMPostContent({ slug, lang }: Props) {
         {/* Marketing CTA suppressed cluster-wide until /power-local-llm launches publicly. */}
 
         <p className="text-center mt-16 pt-8 border-t border-primary/20">
-          <a href={powerLLMHubPath(lang)} className="text-primary hover:text-primary/80 text-sm">
+          <a href={powerLLMHubPath(lang as any)} className="text-primary hover:text-primary/80 text-sm">
             {POST_UI.backLink[lang] ?? POST_UI.backLink['en']}
           </a>
         </p>

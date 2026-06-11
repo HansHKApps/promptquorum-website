@@ -21,7 +21,7 @@ const blogPosts = [
 
 function BlogSectionInner({ initialLang }: { initialLang?: Language }) {
   const lang = useLang(initialLang) as Language
-  const t = translations[lang] || translations.en
+  const t = translations[lang as keyof typeof translations] || translations.en
 
   return (
     <section id="blog" className="py-20 px-4 sm:px-6 bg-surface">

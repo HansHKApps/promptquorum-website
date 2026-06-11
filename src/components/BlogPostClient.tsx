@@ -49,6 +49,7 @@ const BLOG_UI = {
     es: 'Inicio',
     pt: 'Início',
     ar: 'الرئيسية',
+    ko: '홈',
   },
   breadcrumbHub: {
     en: 'Blog',
@@ -59,6 +60,7 @@ const BLOG_UI = {
     es: 'Blog',
     pt: 'Blog',
     ar: 'المدونة',
+    ko: '블로그',
   },
 }
 

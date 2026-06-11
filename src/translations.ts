@@ -2249,6 +2249,6 @@ export const translations = {
   },
 };
 
-export type Language = "en" | "de" | "fr" | "ja" | "zh" | "es" | "pt" | "ar";
+export type Language = "en" | "de" | "fr" | "ja" | "zh" | "es" | "pt" | "ar" | "ko";
 
 export type TranslationKey = keyof typeof translations.en;

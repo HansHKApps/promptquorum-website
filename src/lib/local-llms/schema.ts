@@ -51,6 +51,7 @@ const FAQ_DATA: Record<Language, { q: string; a: string }[]> = {
   zh: [],
   pt: [],
   ar: [],
+  ko: [],
 }
 
 const NAV_LABELS: Record<Language, Record<string, string>> = {
@@ -84,6 +85,7 @@ const NAV_LABELS: Record<Language, Record<string, string>> = {
   zh: {},
   pt: {},
   ar: {},
+  ko: {},
 }
 
 const SCHEMA_DESCRIPTIONS: Record<Language, {
@@ -167,6 +169,16 @@ const SCHEMA_DESCRIPTIONS: Record<Language, {
     breadcrumbHub: '',
   },
   ar: {
+    collectionPageName: '',
+    collectionPageDescription: '',
+    webPageDescription: '',
+    navigationName: '',
+    itemListName: '',
+    howToName: '',
+    breadcrumbHome: '',
+    breadcrumbHub: '',
+  },
+  ko: {
     collectionPageName: '',
     collectionPageDescription: '',
     webPageDescription: '',

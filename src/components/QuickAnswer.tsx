@@ -2,7 +2,7 @@
 
 import { ReactNode } from 'react'
 
-type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
+type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 
 interface QuickAnswerProps {
   lang?: Language

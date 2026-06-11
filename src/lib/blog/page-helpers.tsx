@@ -82,6 +82,7 @@ const BLOG_BREADCRUMB_LABELS = {
   es: { home: 'Inicio', blog: 'Blog' },
   pt: { home: 'Início', blog: 'Blog' },
   ar: { home: 'الرئيسية', blog: 'المدونة' },
+  ko: { home: '홈', blog: '블로그' },
 }
 
 export async function buildArticlePageElement(slug: string, lang: Language) {

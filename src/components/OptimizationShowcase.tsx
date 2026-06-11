@@ -42,7 +42,7 @@ type ShowcaseStrings = {
   exportAsPDF: string
 }
 
-const translations: Record<Lang, ShowcaseStrings> = {
+const translations = {
   en: {
     backToPrompt: '← Back to Prompt',
     optimizationResults: 'Optimization Results',
@@ -320,7 +320,7 @@ const translations: Record<Lang, ShowcaseStrings> = {
 export function OptimizationShowcase({ lang = 'en' }: OptimizationShowcaseProps) {
   const [expandedCollapsible, setExpandedCollapsible] = useState<string | null>('details')
   const [selectedVersion, setSelectedVersion] = useState('v3')
-  const t = translations[lang] || translations.en
+  const t = (translations as Partial<Record<Lang, ShowcaseStrings>>)[lang] || translations.en
 
   const toggleCollapsible = (id: string) => {
     setExpandedCollapsible(expandedCollapsible === id ? null : id)

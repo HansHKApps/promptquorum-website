@@ -36,7 +36,7 @@ const blogPosts = [
 
 function BlogIndexInner({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
   const lang = useLang(initialLang) as Language
-  const t = translations[lang] || translations.en
+  const t = translations[lang as keyof typeof translations] || translations.en
 
   return (
     <main className="min-h-screen pt-20 pb-16">

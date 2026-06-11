@@ -23,7 +23,7 @@ type ShowcaseStrings = {
   clearSession: string
 }
 
-const translations: Record<Lang, ShowcaseStrings> = {
+const translations = {
   en: {
     quorumTitle: 'Quorum — Multi-Model Consensus',
     quorumDesc: 'Collect responses from multiple LLMs, analyze patterns, and synthesize insights across models.',
@@ -180,7 +180,7 @@ const translations: Record<Lang, ShowcaseStrings> = {
 
 export function QuorumShowcase({ lang = 'en' }: { lang?: Lang }) {
   const [checkedFormats, setCheckedFormats] = useState<string[]>(['txt', 'md'])
-  const t = translations[lang] || translations.en
+  const t = (translations as Partial<Record<Lang, ShowcaseStrings>>)[lang] || translations.en
 
   const toggleFormat = (format: string) => {
     setCheckedFormats(prev =>
