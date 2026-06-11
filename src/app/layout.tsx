@@ -39,6 +39,7 @@ import { HeaderClient } from '@/components/HeaderClient'
 import { Footer } from '@/components/Footer'
 import { CookieBanner } from '@/components/CookieBanner'
 import { PageTracker } from '@/components/PageTracker'
+import { ClarityRouteTracker } from '@/components/ClarityRouteTracker'
 import { OneSignalInit } from '@/components/OneSignalInit'
 import { PushPromptBanner } from '@/components/PushPromptBanner'
 import { ConsentedAnalytics } from '@/components/ConsentedAnalytics'
@@ -248,6 +249,7 @@ export default async function RootLayout({
           <div className="scroll-progress-bar" aria-hidden="true" />
           <HeaderClient />
           <PageTracker />
+          <ClarityRouteTracker />
           <OneSignalInit />
           <main id="main">{children}</main>
           <Footer lang={selectedLang as any} />
