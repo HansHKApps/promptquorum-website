@@ -79,6 +79,8 @@ function preprocessArBlock(raw) {
   // Strip source { title, url } title values — bibliographic refs stay in English
   out = out.replace(/\btitle:\s*'[^']*'(\s*,\s*url:)/g, "title: ''$1")
   out = out.replace(/\btitle:\s*"[^"]*"(\s*,\s*url:)/g, 'title: ""$1')
+  // Strip siblingBites arrays — URL slugs, not translatable prose
+  out = out.replace(/\bsiblingBites:\s*\[[^\]]*\]/gs, 'siblingBites: []')
   return out
 }
 
