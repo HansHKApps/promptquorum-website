@@ -754,6 +754,194 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: '스마트 홈의 역사: X10부터 로컬 AI까지 (2026)',
+    seoTitle: '스마트 홈 기술의 역사: X10부터 로컬 AI까지 (2026)',
+    intro:
+      '스마트 홈 기술은 1970년대 X10 전력선 제어에서 시작하여 Z-Wave와 Zigbee, Nest와 Echo의 클라우드 시대, Matter 통합 표준을 거쳐 현재는 온디바이스 AI와 함께 로컬 제어로 회귀하고 있습니다. 이 가이드는 그 흐름을 추적하며 클라우드 의존에서 로컬 자율성으로 추가 이동하는 이유를 설명합니다.',
+    metaDescription:
+      '스마트 홈의 역사: X10(1975)부터 로컬 AI까지 — Z-Wave, Zigbee, Nest와 Echo의 클라우드 시대, Matter, 2026년 로컬 제어로의 회귀.',
+    twitterDescription:
+      '1975년 X10부터 2026년 로컬 AI까지: Z-Wave, Zigbee, 클라우드 시대, Matter를 거쳐 로컬 제어로 돌아온 스마트 홈 기술의 진화.',
+    readTime: '8분 분량',
+    educationalLevel: 'Beginner',
+    audience: '스마트 홈 기술 발전 맥락을 이해하려는 독자',
+    primaryTerm: 'history of smart home technology',
+    targetKeywords: [
+      '스마트 홈 기술의 역사',
+      '스마트 홈 역사',
+      'x10 홈 자동화 역사',
+      '스마트 홈 진화',
+      '스마트 홈은 언제 시작되었나',
+    ],
+    leadAnswerBlock:
+      '**스마트 홈 기술은 1975년 X10 전력선 제어로 시작하여 무선 메시 프로토콜(2001년 Z-Wave, 2000년대 중반 Zigbee)로 전환되었고, Nest(2011)와 Amazon Echo(2014)와 함께 클라우드 시대로 진입했으며, 2022년 Matter 표준을 획득한 후 현재는 온디바이스 AI를 통한 로컬 제어로 회귀하고 있습니다.** 이 흐름은 로컬에서 클라우드로, 다시 로컬로 움직이는 진자와 같습니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '스마트 홈 기술은 어떻게 발전해 왔습니까?',
+        answer:
+          '스마트 홈 기술은 1975년 X10 전력선 신호 방식으로 시작하여 2000년대에는 Z-Wave와 Zigbee 같은 무선 메시 프로토콜로 전환되었습니다. 2010년대에는 Nest와 Amazon Echo가 주도하는 클라우드 연결 시대로 접어들었습니다. 2022년에는 Matter가 등장하여 기기들을 통합하였으며, 현재는 온디바이스 AI와 함께 로컬 제어로 다시 전환되고 있습니다.',
+        bullets: [
+          'X10(1975): 전력선을 통한 최초의 대중적 홈 자동화',
+          'Z-Wave(2001)와 Zigbee(2000년대 중반): 무선 메시',
+          '클라우드 시대: Nest(2011), Amazon Echo(2014), Apple HomeKit(2014)',
+          'Matter(2022): 통합 상호운용성 표준',
+          '2026년: 온디바이스 AI와 함께 로컬 제어로 회귀',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'TL;DR', anchor: 'tldr' },
+      { label: '유선 시대', anchor: 'wired-era' },
+      { label: '무선 프로토콜', anchor: 'wireless' },
+      { label: '클라우드 시대', anchor: 'cloud-era' },
+      { label: 'Matter와 상호운용성', anchor: 'matter' },
+      { label: '로컬로의 회귀', anchor: 'swing-back' },
+      { label: '다음은 무엇인가', anchor: 'whats-next' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '스마트 홈 기술은 1975년 X10 전력선 제어에서 무선 메시와 클라우드 시대를 거쳐 Matter와 로컬 AI 제어로 회귀하였습니다.' },
+      { type: 'plain-terms', content: '홈 자동화는 대부분의 사람들이 생각하는 것보다 훨씬 오래되었습니다. 1970년대 집 안 전선을 통해 신호를 보내는 방식으로 시작하였습니다. 수십 년에 걸쳐 무선으로 발전하고, 기업 클라우드로 이동하였다가, 이제는 다시 집 안의 하드웨어에서 실행되며 로컬 AI도 함께 작동하는 방향으로 돌아오고 있습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        items: [
+          'X10(1975)는 전력선을 통해 신호를 전송하는 최초의 대중적 홈 자동화 시스템이었습니다',
+          'Z-Wave(2001)와 Zigbee(2000년대 중반)는 저전력 무선 메시 네트워크를 도입하였습니다',
+          '클라우드 시대는 Nest(2011)와 Amazon Echo, Apple HomeKit(2014)과 함께 시작되었습니다',
+          'Matter(2022)는 제조사 간 상호운용성 표준을 추가하였습니다',
+          '2026년에는 온디바이스 AI를 통한 로컬 제어로의 회귀 추세가 뚜렷합니다',
+          '이 패턴은 진자와 같습니다: 로컬 제어, 클라우드 의존, 다시 로컬로',
+        ],
+      },
+      wiredEra: {
+        id: 'wired-era',
+        title: '유선 시대: X10과 Insteon',
+        content:
+          '**홈 자동화는 1975년 X10으로 시작되었습니다. X10은 기존 가정용 전선을 통해 제어 신호를 전송하였습니다.** 클라우드가 없었던 시절 필연적으로 로컬 방식을 택하였으나 기능이 제한적이었고 간섭에 취약하였습니다.',
+        items: [
+          '**X10(1975):** Pico Electronics가 개발하였으며 스위치와 모듈이 전력선을 통해 통신하도록 하였습니다.',
+          '**Insteon:** 이후 전력선과 무선 신호를 결합하여 신뢰성을 향상하였습니다.',
+          '**기본적으로 로컬:** 모든 것이 집 안에서 실행되었으며, 오늘날의 로컬 우선 부활을 예고하였습니다.',
+        ],
+      },
+      wireless: {
+        id: 'wireless',
+        title: '무선 프로토콜: Z-Wave와 Zigbee',
+        content:
+          '**Z-Wave(2001)와 Zigbee(2000년대 중반)는 배터리 기기와 센서를 위해 구축된 저전력 무선 메시 네트워크를 도입하였습니다.** 두 프로토콜은 오늘날에도 핵심적인 로컬 프로토콜로 남아 있습니다.',
+        items: [
+          '**Z-Wave(2001):** 신뢰할 수 있는 홈 제어 기기를 위해 설계된 저전력 메시 프로토콜입니다.',
+          '**Zigbee(2000년대 중반):** 전구와 센서에 널리 사용되는 개방형 저전력 메시 표준입니다.',
+          '**여전히 유효합니다:** 두 프로토콜 모두 기본적으로 로컬이며 현대 허브의 기반이 됩니다 — [스마트 홈 프로토콜 설명](/ko/smart-home/smart-home-protocols-explained)을 참조하십시오.',
+        ],
+      },
+      cloudEra: {
+        id: 'cloud-era',
+        title: '클라우드 시대: Nest, Echo, HomeKit',
+        content:
+          '**2010년대에는 스마트 홈이 클라우드로 이동하였습니다: Nest 온도조절기(2011), Amazon Echo(2014), Apple HomeKit(2014)은 기기를 편리하게 만들었으나 제조사 서버에 의존하게 되었습니다.** 편의성은 높아졌지만 개인정보 보호와 오프라인 신뢰성은 낮아졌습니다.',
+        items: [
+          '**Nest(2011):** 학습형 온도조절기가 클라우드 연결 가정용 기기를 대중화하였습니다. Google이 2014년 Nest를 인수하였습니다.',
+          '**Amazon Echo(2014):** 클라우드 어시스턴트를 통한 음성 제어가 대중화되었습니다.',
+          '**Apple HomeKit(2014):** Apple의 보다 프라이버시 중심적인 프레임워크로 일부 로컬 제어를 지원합니다.',
+          '**절충점:** 설치 편의성을 위해 데이터가 집 밖으로 나가고 기업 클라우드에 의존하게 되었습니다.',
+        ],
+      },
+      matter: {
+        id: 'matter',
+        title: 'Matter와 상호운용성',
+        content:
+          '**Matter는 2022년 Connectivity Standards Alliance가 출시한 제조사 간 표준으로, 서로 다른 브랜드의 기기가 함께 작동하도록 하며 로컬에서도 실행될 수 있습니다.** 클라우드 시대의 파편화 문제를 해결하였습니다.',
+        items: [
+          'Matter는 IP를 통해 실행되며 Thread와 Wi-Fi와 함께 작동합니다.',
+          '로컬 컨트롤러를 통한 로컬 제어를 가능하게 하여 클라우드 의존도를 줄입니다 — [Matter 로컬 제어 가이드](/ko/smart-home/matter-local-control-guide)를 참조하십시오.',
+          '이전의 앱과 브리지 패치워크보다 브랜드 혼합을 훨씬 쉽게 만들었습니다.',
+        ],
+      },
+      swingBack: {
+        id: 'swing-back',
+        title: '2026년 로컬로의 회귀',
+        content:
+          '**현재의 변화는 개인정보 보호 우려, 기기를 무력화하는 클라우드 서비스 종료, 이제 실용적이 된 온디바이스 AI에 의해 로컬 제어로 회귀하고 있습니다.** 로컬 자율성은 틈새 영역이 아닌 다음 시대로 자리매김하고 있습니다.',
+        items: [
+          '기기를 비활성화하는 클라우드 서비스 종료로 인해 사용자들은 로컬 우선 설정으로 이동하였습니다.',
+          '클라우드 데이터 수집 범위가 명확해지면서 개인정보 보호 인식이 높아졌습니다 — [스마트 홈 개인정보 보호 위험](/ko/smart-home/smart-home-privacy-risks)을 참조하십시오.',
+          '온디바이스 AI를 통해 로컬 LLM이 홈 제어를 실행할 수 있습니다 — [완전한 로컬 스마트 홈 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
+        ],
+      },
+      whatsNext: {
+        id: 'whats-next',
+        title: '다음은 무엇인가',
+        content:
+          '**다음 시대는 로컬 제어와 로컬 AI를 결합합니다: 자동화와 자연어 어시스턴트를 모두 자체 하드웨어에서 실행하는 가정입니다.** Matter가 상호운용성을 용이하게 하는 동안 로컬 AI는 클라우드 없이 지능을 추가합니다.',
+        columns: ['시대', '대략적 연도', '핵심 기술', '클라우드 또는 로컬'],
+        rows: [
+          { '시대': '유선', '대략적 연도': '1975–2000', '핵심 기술': 'X10, Insteon', '클라우드 또는 로컬': '로컬' },
+          { '시대': '무선 메시', '대략적 연도': '2001–2010', '핵심 기술': 'Z-Wave, Zigbee', '클라우드 또는 로컬': '로컬' },
+          { '시대': '클라우드', '대략적 연도': '2011–2021', '핵심 기술': 'Nest, Echo, HomeKit', '클라우드 또는 로컬': '클라우드' },
+          { '시대': '상호운용성', '대략적 연도': '2022–2025', '핵심 기술': 'Matter, Thread', '클라우드 또는 로컬': '양쪽 모두' },
+          { '시대': '로컬 AI', '대략적 연도': '2026+', '핵심 기술': '로컬 LLM, Home Assistant', '클라우드 또는 로컬': '로컬' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '최초의 스마트 홈 기술은 무엇이었습니까?', a: '1975년에 도입된 X10이 일반적으로 최초의 대중적 홈 자동화 기술로 여겨집니다. 기존 가정용 전선을 통해 제어 신호를 전송하여 새 배선 없이 스위치와 모듈이 통신할 수 있도록 하였습니다.' },
+          { q: '스마트 홈은 언제 대중화되었습니까?', a: '스마트 홈은 2010년대 클라우드 연결 기기와 함께 대중화되었습니다. 2011년 Nest 온도조절기와 2014년 Amazon Echo 같은 음성 어시스턴트가 광범위한 대중에게 기술을 접근 가능하게 만들었습니다.' },
+          { q: 'Matter는 무엇입니까?', a: 'Matter는 2022년 Connectivity Standards Alliance가 출시한 제조사 간 스마트 홈 표준입니다. 서로 다른 브랜드의 기기가 IP를 통해 함께 작동하도록 하며, 각 제조사의 클라우드에 의존하지 않고 로컬 컨트롤러를 통해 로컬에서 실행될 수 있습니다.' },
+          { q: '스마트 홈 기술이 로컬로 다시 이동하는 이유는 무엇입니까?', a: '개인정보 보호 우려, 기기를 비활성화하는 클라우드 서비스 종료, 실용적인 온디바이스 AI의 등장으로 인해 사용자들이 로컬 제어로 다시 돌아가고 있습니다. 로컬 설정은 데이터를 집 안에 보관하고 오프라인에서도 작동하며 제조사의 클라우드에 의존하지 않습니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 스마트 홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide) — 실제 로컬 우선 시대',
+          '[스마트 홈 생태계 비교](/ko/smart-home/smart-home-ecosystems-compared) — 이 역사에서 탄생한 플랫폼들',
+          '[스마트 홈 프로토콜 설명](/ko/smart-home/smart-home-protocols-explained) — 무선 표준 심층 분석',
+          '[스마트 홈 개인정보 보호 위험](/ko/smart-home/smart-home-privacy-risks) — 진자가 다시 돌아오는 이유',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '스마트 홈의 역사: X10부터 로컬 AI까지 (2026)',
+      description: '스마트 홈의 역사: X10(1975)부터 로컬 AI까지 — Z-Wave, Zigbee, Nest와 Echo의 클라우드 시대, Matter, 2026년 로컬 제어로의 회귀.',
+      url: 'https://www.promptquorum.com/ko/smart-home/history-of-smart-home-technology',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '홈 자동화의 역사' }, { '@type': 'Thing', name: 'X10' }, { '@type': 'Thing', name: 'Matter' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '최초의 스마트 홈 기술은 무엇이었습니까?', acceptedAnswer: { '@type': 'Answer', text: '1975년에 도입된 X10이 일반적으로 최초의 대중적 홈 자동화 기술로 여겨집니다. 기존 가정용 전선을 통해 제어 신호를 전송하였습니다.' } },
+        { '@type': 'Question', name: '스마트 홈은 언제 대중화되었습니까?', acceptedAnswer: { '@type': 'Answer', text: '2010년대 클라우드 연결 기기와 함께 대중화되었습니다 — 2011년 Nest 온도조절기와 2014년 Amazon Echo 같은 음성 어시스턴트가 기술을 대중화하였습니다.' } },
+        { '@type': 'Question', name: 'Matter는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '2022년 Connectivity Standards Alliance가 출시한 제조사 간 스마트 홈 표준입니다. 서로 다른 브랜드의 기기가 IP를 통해 함께 작동하도록 하며 로컬에서도 실행될 수 있습니다.' } },
+        { '@type': 'Question', name: '스마트 홈 기술이 로컬로 다시 이동하는 이유는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '개인정보 보호 우려, 기기를 비활성화하는 클라우드 서비스 종료, 실용적인 온디바이스 AI로 인해 사용자들이 로컬 제어로 돌아가고 있습니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

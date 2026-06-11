@@ -754,6 +754,194 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: '클라우드 스마트홈에서 로컬 제어로 이전하는 방법 (2026)',
+    seoTitle: 'Alexa에서 Home Assistant로: 로컬 제어 이전 (2026)',
+    intro:
+      '클라우드 스마트홈에서 로컬 제어로 이전한다는 것은 클라우드 의존성을 감사하고, 기기를 로컬 허브로 이동하며, 클라우드 어시스턴트를 종료하는 것을 의미합니다. 이 단계별 가이드는 감사 방법, 어떤 기기가 로컬로 전환 가능한지, 교체와 재페어링 중 어느 것이 나은지, Home Assistant로 전환하는 방법, Alexa나 Google 대신 로컬 음성 어시스턴트를 추가하는 방법을 설명합니다.',
+    metaDescription:
+      '클라우드 스마트홈에서 로컬 제어로 이전 2026: 의존성 감사, Home Assistant로 전환, Alexa/Google 종료, 로컬 음성 추가.',
+    twitterDescription:
+      'Alexa/Google에서 로컬 스마트홈으로: 클라우드 의존성 감사, 기기 재페어링 또는 교체, Home Assistant로 전환, 로컬 음성 추가.',
+    readTime: '9분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '클라우드 스마트홈 사용자로서 로컬 제어로 전환하려는 사용자',
+    primaryTerm: 'migrate cloud to local smart home',
+    targetKeywords: [
+      'alexa에서 home assistant로 이전',
+      '클라우드에서 로컬 스마트홈으로',
+      'alexa 대신 home assistant',
+      '스마트홈 로컬로 전환',
+      'google home 탈출',
+    ],
+    leadAnswerBlock:
+      '**클라우드 의존성을 감사하고, 로컬 지원 기기를 Home Assistant로 이동(가능하면 재페어링, 불가능하면 교체)하고, Alexa 또는 Google 대신 로컬 음성 어시스턴트를 도입하여 이전하십시오.** 이전 과정 내내 집이 정상 작동하도록 방 단위로 진행하십시오.',
+    quickAnswerTop: {
+      ko: {
+        question: '클라우드 스마트홈에서 로컬 제어로 어떻게 이전합니까?',
+        answer:
+          '기기 목록을 작성하고 클라우드에 의존하는 기기를 파악하십시오. 로컬 지원 기기(Zigbee, Z-Wave, Matter, 로컬 Wi-Fi)를 재페어링하여 Home Assistant로 이동하고, 클라우드 전용 기기는 점진적으로 교체하며, Alexa 또는 Google을 로컬 음성 어시스턴트로 대체하십시오. 방 단위로 점진적으로 이전하십시오.',
+        bullets: [
+          '제조사 클라우드에 의존하는 기기를 감사하십시오',
+          '로컬 지원 기기를 Home Assistant에 재페어링하십시오',
+          '클라우드 전용 기기는 점진적으로 교체하십시오',
+          'Alexa/Google을 대체할 로컬 음성을 추가하십시오',
+          '다운타임을 피하기 위해 방 단위로 이전하십시오',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: '클라우드 의존성 감사', anchor: 'audit' },
+      { label: '로컬 전환 가능 기기', anchor: 'which-local' },
+      { label: '교체 vs 재페어링', anchor: 'replace-repair' },
+      { label: 'Home Assistant로 전환', anchor: 'move-ha' },
+      { label: 'Alexa/Google 종료', anchor: 'retire' },
+      { label: '로컬 음성 추가', anchor: 'local-voice' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '클라우드 의존성을 감사하고, 로컬 지원 기기를 Home Assistant에 재페어링하고, 클라우드 전용 기기를 교체하고, 로컬 음성을 추가하여 로컬로 이전하십시오.' },
+      { type: 'plain-terms', content: '클라우드 스마트홈에서 로컬로 전환하는 것이 모든 것을 버리는 것을 의미하지는 않습니다. 많은 기기가 이미 로컬 프로토콜을 지원하므로 로컬 허브에 재페어링하기만 하면 됩니다. 클라우드 전용 기기는 시간을 두고 교체하고, 클라우드 음성 어시스턴트는 로컬 어시스턴트로 교체하십시오.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          '제조사 클라우드에 의존하는 기기를 감사하는 것으로 시작하십시오',
+          '로컬 지원 기기(Zigbee, Z-Wave, Matter, 로컬 Wi-Fi)는 Home Assistant에 재페어링할 수 있습니다',
+          '클라우드 전용 기기는 한꺼번에가 아니라 점진적으로 교체하십시오',
+          '제어 및 자동화를 로컬 Home Assistant 허브로 이동하십시오',
+          '로컬 음성 어시스턴트를 추가하여 Alexa/Google을 종료하십시오',
+          '다운타임 방지를 위해 방 단위로 이전하십시오',
+        ],
+      },
+      audit: {
+        id: 'audit',
+        title: '클라우드 의존성 감사',
+        content:
+          '**각 기기를 목록화하고 제조사 클라우드 없이는 작동하지 않는 기기를 표시하십시오.** 이를 통해 재페어링 가능한 기기와 교체가 필요한 기기를 파악할 수 있습니다.',
+        numberedItems: [
+          '기기를 방별, 브랜드별로 목록화하십시오.',
+          '각 기기가 사용하는 프로토콜(Zigbee, Z-Wave, Matter, Wi-Fi)을 기록하십시오.',
+          '기본 제어에 클라우드 계정이 필요한 기기를 표시하십시오.',
+          '현재 제조사 클라우드에서 실행 중인 자동화를 파악하십시오.',
+        ],
+      },
+      whichLocal: {
+        id: 'which-local',
+        title: '로컬 전환 가능 기기',
+        content:
+          '**Zigbee, Z-Wave, Matter 또는 로컬 Wi-Fi API를 사용하는 기기는 로컬 제어로 전환할 수 있습니다. 클라우드 전용 기기는 일반적으로 교체 없이는 전환이 불가능합니다.** 프로토콜을 먼저 확인하십시오.',
+        items: [
+          'Zigbee 및 Z-Wave 기기는 허브의 코디네이터에 재페어링하면 됩니다.',
+          'Matter 기기는 로컬 컨트롤러에 연결할 수 있습니다 — [Matter 로컬 제어 가이드](/ko/smart-home/matter-local-control-guide)를 참조하십시오.',
+          '문서화된 로컬 API를 가진 로컬 Wi-Fi 기기는 로컬에서 제어할 수 있습니다.',
+        ],
+      },
+      replaceRepair: {
+        id: 'replace-repair',
+        title: '교체 vs 재페어링',
+        content:
+          '**로컬 지원 기기는 허브에 재페어링하십시오. 클라우드 전용 기기는 예산이 허용하는 대로 점진적으로 교체하십시오.** 프라이버시 위험이 높은 클라우드 기기를 우선적으로 교체하십시오.',
+        columns: ['기기 유형', '로컬 전환 가능?', '방법'],
+        rows: [
+          { '기기 유형': 'Zigbee/Z-Wave 전구 및 센서', '로컬 전환 가능?': '예', '방법': '허브의 코디네이터에 재페어링' },
+          { '기기 유형': 'Matter 기기', '로컬 전환 가능?': '예', '방법': '로컬 컨트롤러에 연결' },
+          { '기기 유형': '로컬 Wi-Fi 기기(로컬 API)', '로컬 전환 가능?': '예', '방법': '통합을 통해 추가' },
+          { '기기 유형': '클라우드 전용 카메라', '로컬 전환 가능?': '대체로 불가', '방법': 'RTSP 로컬 카메라 + Frigate로 교체' },
+          { '기기 유형': '클라우드 음성 어시스턴트', '로컬 전환 가능?': '교체 필요', '방법': '로컬 음성 어시스턴트로 추가' },
+        ],
+      },
+      moveHa: {
+        id: 'move-ha',
+        title: 'Home Assistant로 전환',
+        content:
+          '**Home Assistant를 로컬 허브로 설정하고 기기 및 자동화를 이전하십시오.** 이것이 제조사 클라우드를 대체하는 제어 플레인이 됩니다.',
+        items: [
+          'Home Assistant를 설치하고 Zigbee/Z-Wave 코디네이터를 추가하십시오 — [Home Assistant 시작 가이드](/ko/smart-home/home-assistant-getting-started)를 참조하십시오.',
+          '기기를 재페어링하고 자동화를 로컬에서 재구성하십시오.',
+          '클라우드 서비스를 종료하기 전에 인터넷 없이 모든 것이 작동하는지 확인하십시오.',
+        ],
+      },
+      retire: {
+        id: 'retire',
+        title: 'Alexa/Google 종료',
+        content:
+          '**로컬 제어와 로컬 음성 어시스턴트가 작동하면 클라우드 어시스턴트와 계정을 종료하십시오.** 전환 기간 동안 음성 제어를 유지하기 위해 이 단계를 마지막에 수행하십시오.',
+        items: [
+          'Alexa/Google을 사용하던 기능을 로컬 제어가 모두 커버하는지 확인하십시오.',
+          '제조사 앱에서 기기를 삭제하고 계정을 비활성화하십시오.',
+          '보안 자동화는 로컬 허브에서 결정론적으로 유지하십시오.',
+        ],
+      },
+      localVoice: {
+        id: 'local-voice',
+        title: '로컬 음성 추가',
+        content:
+          '**클라우드 음성을 로컬 어시스턴트로 교체하여 클라우드 없이 핸즈프리 제어를 유지하십시오.** 이것이 완전한 이전의 마지막 단계입니다.',
+        items: [
+          'Assist + Whisper + Piper로 로컬 음성 어시스턴트를 구축하십시오 — [로컬 음성 어시스턴트 가이드](/ko/smart-home/local-voice-assistant-smart-home)를 참조하십시오.',
+          '자연어 이해를 위해 로컬 LLM을 추가하십시오 — [로컬 LLM으로 스마트홈 운영](/ko/smart-home/local-llm-smart-home-complete-guide)을 참조하십시오.',
+          '전체적인 최종 상태는 [로컬 스마트홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '기존 기기를 그대로 사용할 수 있습니까?', a: 'Zigbee, Z-Wave, Matter 또는 로컬 Wi-Fi API를 사용하는 기기는 Home Assistant와 같은 로컬 허브에 재페어링할 수 있습니다. 기본 제어에 제조사 계정이 필요한 클라우드 전용 기기만 점진적으로 교체하면 됩니다.' },
+          { q: '로컬로 전환할 수 없는 기기는 무엇입니까?', a: '제조사 클라우드에 완전히 의존하는 클라우드 전용 기기(일부 카메라, 초인종, 독점 에코시스템)는 일반적으로 로컬 전환이 불가능하며, Frigate와 함께 사용하는 RTSP 카메라와 같은 로컬 지원 대안으로 교체해야 합니다.' },
+          { q: '이전에 얼마나 걸립니까?', a: '설정 규모에 따라 다르지만, 방 단위로 이전하면 작업이 분산되어 다운타임을 피할 수 있습니다. 많은 사용자가 메인 허브와 몇 개의 방을 주말에 이전하고, 이후 몇 주에 걸쳐 클라우드 전용 기기를 점진적으로 교체합니다.' },
+          { q: '이전 후 음성 제어를 잃게 됩니까?', a: '아닙니다. 클라우드 음성 어시스턴트를 종료하기 전에 로컬 음성 어시스턴트를 추가하면 됩니다. Assist, Whisper, Piper 스택(선택적으로 로컬 LLM 포함)은 클라우드 없이 Alexa나 Google을 대체하여 핸즈프리 제어를 제공합니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[Home Assistant 시작 가이드](/ko/smart-home/home-assistant-getting-started) — 목적지 허브 설정',
+          '[로컬 스마트홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide) — 최종 상태',
+          '[완전 로컬 음성 어시스턴트 구축](/ko/smart-home/local-voice-assistant-smart-home) — Alexa/Google 대체',
+          '[Matter와 로컬 제어](/ko/smart-home/matter-local-control-guide) — 로컬에서 기기 연결',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '클라우드 스마트홈에서 로컬 제어로 이전하는 방법 (2026)',
+      description: '클라우드 스마트홈에서 로컬 제어로 이전 2026: 의존성 감사, Home Assistant로 전환, Alexa/Google 종료, 로컬 음성 추가.',
+      url: 'https://www.promptquorum.com/ko/smart-home/migrating-from-cloud-to-local-smart-home',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '스마트홈 이전' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '로컬 제어' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '기존 기기를 그대로 사용할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee, Z-Wave, Matter 또는 로컬 Wi-Fi API 기기는 로컬 허브에 재페어링할 수 있습니다. 기본 제어에 제조사 계정이 필요한 클라우드 전용 기기만 교체하면 됩니다.' } },
+        { '@type': 'Question', name: '로컬로 전환할 수 없는 기기는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '제조사 클라우드에 완전히 의존하는 클라우드 전용 기기(일부 카메라, 초인종)는 RTSP + Frigate 카메라 등 로컬 지원 대안으로 교체해야 합니다.' } },
+        { '@type': 'Question', name: '이전에 얼마나 걸립니까?', acceptedAnswer: { '@type': 'Answer', text: '설정 규모에 따라 다르지만 방 단위 이전이 다운타임을 피하게 합니다. 많은 사용자가 주말에 메인 허브와 몇 개 방을 이전하고 이후 몇 주간 클라우드 전용 기기를 교체합니다.' } },
+        { '@type': 'Question', name: '이전 후 음성 제어를 잃게 됩니까?', acceptedAnswer: { '@type': 'Answer', text: '아닙니다. 클라우드 어시스턴트를 종료하기 전에 로컬 음성 어시스턴트를 추가하십시오. Assist, Whisper, Piper는 클라우드 없이 Alexa나 Google을 대체합니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

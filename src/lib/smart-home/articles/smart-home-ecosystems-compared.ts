@@ -762,6 +762,196 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: '스마트홈 에코시스템 비교 (2026): Alexa, Google, Apple, HA',
+    seoTitle: '스마트홈 에코시스템 2026: Alexa, Google, Apple, HA 비교',
+    intro:
+      '4대 스마트홈 에코시스템인 Amazon Alexa, Google Home, Apple Home, Home Assistant는 프라이버시와 로컬 제어 측면에서 뚜렷한 차이를 보입니다. 이 비교 가이드는 기기 호환성, 프라이버시, 로컬 제어, 음성, 비용, 종속성을 다루며, 사용자 유형별 플랫폼을 추천합니다. Home Assistant는 로컬·프라이버시 챔피언으로 자리매김합니다.',
+    metaDescription:
+      'Alexa vs Google Home vs Apple Home vs Home Assistant: 호환성, 프라이버시, 로컬 제어, 음성, 비용, 종속성 비교. 사용자 유형별 플랫폼 선택 가이드.',
+    twitterDescription:
+      'Alexa vs Google vs Apple Home vs Home Assistant: 프라이버시, 로컬 제어, 기기, 음성, 비용, 종속성 비교. 어떤 플랫폼이 맞습니까?',
+    readTime: '9분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '스마트홈 플랫폼을 선택하는 사용자',
+    primaryTerm: 'smart home ecosystem comparison',
+    targetKeywords: [
+      '스마트홈 에코시스템 비교',
+      'alexa vs google vs apple home',
+      '최고 스마트홈 플랫폼',
+      'home assistant vs alexa',
+      '가장 프라이빗한 스마트홈 플랫폼',
+    ],
+    leadAnswerBlock:
+      '**Home Assistant는 4대 에코시스템 중 가장 프라이빗하고 로컬입니다. Amazon Alexa와 Google Home은 클라우드 우선으로 시작하기 가장 쉽습니다. Apple Home은 중간에 위치하며 더 높은 프라이버시와 일부 로컬 제어를 제공합니다.** 편의성과 프라이버시/제어의 균형에 따라 선택하십시오.',
+    quickAnswerTop: {
+      ko: {
+        question: '어떤 스마트홈 에코시스템을 선택해야 합니까?',
+        answer:
+          '프라이버시와 완전한 로컬 제어를 원한다면 Home Assistant를, 가장 쉬운 클라우드 우선 설정과 가장 넓은 음성 지원을 원한다면 Amazon Alexa 또는 Google Home을, Apple 생태계 안에서 프라이버시와 단순성의 균형을 원한다면 Apple Home을 선택하십시오. 선택은 주로 프라이버시·로컬 제어와 플러그-앤-플레이 편의성 중 어느 것을 더 중시하느냐에 달려 있습니다.',
+        bullets: [
+          'Home Assistant: 가장 프라이빗, 완전 로컬, 더 많은 노력 필요',
+          'Alexa / Google Home: 가장 쉬움, 클라우드 우선, 더 높은 호환성',
+          'Apple Home: 프라이버시 지향, 일부 로컬 제어',
+          '프라이버시와 로컬 제어가 결정적 요소입니다',
+          'Home Assistant는 브리징으로 여러 에코시스템을 통합할 수 있습니다',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: '4대 에코시스템', anchor: 'four-ecosystems' },
+      { label: '비교표', anchor: 'comparison' },
+      { label: '프라이버시 최고', anchor: 'best-privacy' },
+      { label: '편의성 최고', anchor: 'best-ease' },
+      { label: '종속성 및 이탈 비용', anchor: 'lock-in' },
+      { label: '사용자 유형별 추천', anchor: 'recommendation' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Home Assistant는 가장 프라이빗하고 로컬인 에코시스템입니다. Alexa와 Google Home은 가장 쉽고 클라우드 우선입니다. Apple Home은 그 중간입니다.' },
+      { type: 'plain-terms', content: '4대 스마트홈 플랫폼이 있습니다. Alexa와 Google Home은 설정이 가장 쉽지만 기업 클라우드를 통해 작동합니다. Apple Home은 프라이버시를 더 의식합니다. Home Assistant는 더 많은 노력이 필요하지만 모든 것을 로컬·프라이빗으로 유지합니다. 선택은 거의 항상 프라이버시 대 편의성으로 귀결됩니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          'Home Assistant: 가장 프라이빗·로컬; 통합을 통한 최고 호환성; 설정 노력 최대',
+          'Amazon Alexa: 시작 가장 쉬움, 음성 호환성 최고, 클라우드 우선',
+          'Google Home: 강력한 음성과 넓은 지원, 클라우드 우선',
+          'Apple Home: 프라이버시 지향, 일부 로컬 제어, 기기 범위 좁음',
+          '프라이버시와 로컬 제어가 결정적 차이이며, 기능이 아닙니다',
+          'Home Assistant는 다른 에코시스템을 통합할 수 있어 종속성을 줄입니다',
+        ],
+      },
+      fourEcosystems: {
+        id: 'four-ecosystems',
+        title: '4대 에코시스템',
+        content:
+          '**Amazon Alexa, Google Home, Apple Home, Home Assistant가 시장 대부분을 차지하며 프라이버시와 로컬 제어 측면에서 명확하게 나뉩니다.** 각 에코시스템은 서로 다른 우선순위에 맞습니다.',
+        items: [
+          '**Amazon Alexa:** 가장 넓은 기기 및 서드파티 스킬 지원, 클라우드 우선, 음성 중심.',
+          '**Google Home:** 강력한 음성 어시스턴트와 넓은 기기 지원, 클라우드 우선.',
+          '**Apple Home:** Apple 생태계 내에서 프라이버시 지향, 홈 허브를 통한 로컬 제어.',
+          '**Home Assistant:** 오픈소스, 로컬 우선, 가장 유연하고 프라이빗 — [로컬 스마트홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '비교표',
+        content:
+          '**중요한 기준 전반에 걸쳐 Home Assistant는 프라이버시와 로컬 제어에서 앞서고, Alexa와 Google은 편의성과 폭넓음에서 앞섭니다.** 표를 활용하여 에코시스템과 우선순위를 매칭하십시오.',
+        columns: ['기준', 'Amazon Alexa', 'Google Home', 'Apple Home', 'Home Assistant'],
+        rows: [
+          { '기준': '기기 호환성', 'Amazon Alexa': '가장 넓음', 'Google Home': '넓음', 'Apple Home': '더 제한적', 'Home Assistant': '통합을 통해 가장 넓음' },
+          { '기준': '프라이버시', 'Amazon Alexa': '클라우드 데이터', 'Google Home': '클라우드 데이터', 'Apple Home': '높음', 'Home Assistant': '최고(로컬)' },
+          { '기준': '로컬 제어', 'Amazon Alexa': '제한적', 'Google Home': '제한적', 'Apple Home': '부분', 'Home Assistant': '완전' },
+          { '기준': '음성', 'Amazon Alexa': '강력(클라우드)', 'Google Home': '강력(클라우드)', 'Apple Home': 'Siri', 'Home Assistant': '로컬(Assist)' },
+          { '기준': '비용', 'Amazon Alexa': '저가 하드웨어', 'Google Home': '저가 하드웨어', 'Apple Home': '고가 하드웨어', 'Home Assistant': '하드웨어+노력' },
+          { '기준': '종속성', 'Amazon Alexa': '높음', 'Google Home': '높음', 'Apple Home': '높음(Apple)', 'Home Assistant': '낮음(오픈)' },
+        ],
+      },
+      bestPrivacy: {
+        id: 'best-privacy',
+        title: '프라이버시 최고',
+        content:
+          '**Home Assistant는 제조사 데이터 수집 없이 제어 및 자동화가 로컬에서 실행되므로 프라이버시에 가장 좋습니다.** Apple Home은 일반 클라우드 에코시스템 중 가장 프라이빗합니다.',
+        items: [
+          '프라이버시가 우선순위이고 더 많은 설정을 수용할 수 있다면 Home Assistant를 사용하십시오.',
+          'Home Assistant보다 더 쉬운 프라이버시 지향 옵션을 원한다면 Apple Home을 사용하십시오.',
+          '로컬 음성 어시스턴트와 AI 두뇌에 대해서는 [로컬 LLM으로 스마트홈 운영](/ko/smart-home/local-llm-smart-home-complete-guide)을 참조하십시오.',
+        ],
+      },
+      bestEase: {
+        id: 'best-ease',
+        title: '편의성 최고',
+        content:
+          '**Amazon Alexa와 Google Home은 앱 가이드 방식으로 클라우드 관리되므로 시작하기 가장 쉽습니다.** 설정 최소화를 원하고 프라이버시 트레이드오프를 수용할 수 있다면 선택하십시오.',
+        items: [
+          '가장 넓은 기기 지원과 기본 음성 스킬을 원한다면 Alexa를 사용하십시오.',
+          'Google 어시스턴트와 서비스를 선호한다면 Google Home을 사용하십시오.',
+          '두 에코시스템 모두 편의성을 위해 프라이버시와 오프라인 신뢰성을 희생합니다 — [로컬 스마트홈이 클라우드보다 나은 이유](/ko/smart-home/why-local-smart-home-beats-cloud)를 참조하십시오.',
+        ],
+      },
+      lockIn: {
+        id: 'lock-in',
+        title: '종속성 및 이탈 비용',
+        content:
+          '**클라우드 에코시스템은 더 높은 종속성을 수반합니다. Home Assistant의 개방형 설계는 이탈 비용이 가장 낮으며 다른 에코시스템도 통합할 수 있습니다.** 참여하기 전에 얼마나 쉽게 나갈 수 있는지 고려하십시오.',
+        items: [
+          'Alexa, Google, Apple은 각각의 계정, 앱, 호환 기기에 묶입니다.',
+          'Home Assistant는 많은 에코시스템을 통합하므로 점진적으로 이전할 수 있습니다 — [클라우드에서 로컬로 이전](/ko/smart-home/migrating-from-cloud-to-local-smart-home)을 참조하십시오.',
+          '로컬 지원 기기를 구매하면 어떤 플랫폼이든 선택지가 열려 있습니다.',
+        ],
+      },
+      recommendation: {
+        id: 'recommendation',
+        title: '사용자 유형별 추천',
+        content:
+          '**우선순위에 따라 선택하십시오: 프라이버시·제어 → Home Assistant; 가장 쉬운 시작 → Alexa 또는 Google; Apple 가정 → Apple Home.** 프라이버시가 중요하다면 Home Assistant로 시작하십시오.',
+        items: [
+          '**프라이버시 지향/애호가:** Home Assistant.',
+          '**편의성 우선 초보자:** Amazon Alexa 또는 Google Home.',
+          '**균형을 원하는 Apple 가정:** Apple Home.',
+          '**음성과 프라이버시를 원합니까?** 로컬 음성 어시스턴트와 함께하는 Home Assistant — [Home Assistant vs Alexa vs Google](/ko/smart-home/home-assistant-vs-alexa-vs-google)에서 직접 비교.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '어떤 스마트홈 에코시스템이 가장 프라이빗합니까?', a: 'Home Assistant가 가장 프라이빗합니다. 제조사 데이터 수집 없이 제어와 자동화가 자신의 하드웨어에서 로컬로 실행되기 때문입니다. 일반 클라우드 에코시스템 중에서는 Apple Home이 가장 프라이버시 지향입니다.' },
+          { q: '어떤 에코시스템이 오프라인에서 작동합니까?', a: 'Home Assistant는 로컬 기기 및 자동화에 대해 오프라인에서 작동합니다. Alexa와 Google Home은 클라우드에 크게 의존하며 인터넷 없이는 대부분의 기능을 잃습니다. Apple Home은 홈 허브를 통해 일부 로컬 제어를 유지합니다.' },
+          { q: '스마트홈 에코시스템을 혼용할 수 있습니까?', a: '예, 어느 정도는 가능합니다. Home Assistant는 기기를 통합하고 Alexa, Google, Apple을 브리징할 수 있으며, 이것이 에코시스템을 혼용하는 가장 유연한 방법입니다. 클라우드 에코시스템을 직접 혼용하는 것은 더 제한적입니다.' },
+          { q: '초보자에게 가장 쉬운 에코시스템은 무엇입니까?', a: 'Amazon Alexa와 Google Home이 초보자에게 가장 쉽습니다. 설정이 앱 가이드 방식으로 이루어지고 클라우드에서 관리되기 때문입니다. Home Assistant는 더 많은 프라이버시와 제어를 제공하지만 더 많은 노력이 필요합니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[Home Assistant vs Alexa vs Google Home](/ko/smart-home/home-assistant-vs-alexa-vs-google) — 직접 결정 페이지',
+          '[로컬 스마트홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide) — 로컬 우선 경로',
+          '[로컬 LLM으로 스마트홈 운영](/ko/smart-home/local-llm-smart-home-complete-guide) — 로컬 AI로 제어',
+          '[클라우드에서 로컬로 이전](/ko/smart-home/migrating-from-cloud-to-local-smart-home) — 종속성 줄이기',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '스마트홈 에코시스템 비교 (2026): Alexa, Google, Apple, HA',
+      description: 'Alexa vs Google Home vs Apple Home vs Home Assistant: 호환성, 프라이버시, 로컬 제어, 음성, 비용, 종속성 비교. 사용자 유형별 플랫폼 선택 가이드.',
+      url: 'https://www.promptquorum.com/ko/smart-home/smart-home-ecosystems-compared',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }, { '@type': 'Thing', name: 'Apple Home' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '어떤 스마트홈 에코시스템이 가장 프라이빗합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant. 제조사 데이터 수집 없이 제어와 자동화가 로컬로 실행되기 때문입니다. 클라우드 에코시스템 중에서는 Apple Home이 가장 프라이빗합니다.' } },
+        { '@type': 'Question', name: '어떤 에코시스템이 오프라인에서 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant는 로컬 기기 및 자동화에 대해 오프라인에서 작동합니다. Alexa와 Google Home은 클라우드에 의존합니다. Apple Home은 홈 허브를 통해 일부 로컬 제어를 유지합니다.' } },
+        { '@type': 'Question', name: '스마트홈 에코시스템을 혼용할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예. Home Assistant는 기기를 통합하고 Alexa, Google, Apple을 브리징할 수 있으며, 이것이 에코시스템 혼용의 가장 유연한 방법입니다.' } },
+        { '@type': 'Question', name: '초보자에게 가장 쉬운 에코시스템은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Amazon Alexa와 Google Home. 앱 가이드 방식으로 설정하고 클라우드에서 관리됩니다. Home Assistant는 더 많은 제어를 제공하지만 더 많은 노력이 필요합니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

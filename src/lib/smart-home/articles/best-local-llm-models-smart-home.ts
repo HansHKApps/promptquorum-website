@@ -726,6 +726,187 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-05',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: '스마트 홈 제어를 위한 최고의 로컬 LLM 모델 (2026)',
+    seoTitle: 'Home Assistant를 위한 최고의 로컬 LLM (2026)',
+    intro:
+      '스마트 홈 제어를 위한 최고의 로컬 LLM 모델은 신뢰할 수 있는 함수 호출 기능을 갖춘 소형 고속 명령 이행 모델입니다. 하드웨어가 수용할 수 있는 가장 큰 모델이 아닙니다. 이 가이드는 홈 제어에 실제로 중요한 것을 설명하고, 적합한 소형 모델의 단축 목록을 제공하며, 비교하고, 하드웨어 예산별 선택을 제시합니다. 전 분야를 재순위화하는 대신 더 깊은 모델 가이드로 링크합니다.',
+    metaDescription:
+      '2026년 스마트 홈 제어를 위한 최고의 로컬 LLM: 평범한 하드웨어에서 실행되는 소형 고속 함수 호출 모델. 단축 목록 및 예산별 선택.',
+    twitterDescription:
+      'Home Assistant 제어를 위한 최고의 로컬 LLM 모델: 실행 가능한 가장 큰 모델보다 소형 고속 함수 호출 모델을 우선시하십시오. 하드웨어 예산별 선택.',
+    readTime: '8분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '장치 제어를 위한 로컬 모델을 선택하는 Home Assistant 사용자',
+    primaryTerm: 'best local LLM for home control',
+    targetKeywords: [
+      'home assistant 최고의 로컬 LLM',
+      '스마트 홈 최고의 로컬 LLM',
+      '홈 제어 로컬 LLM 모델',
+      '함수 호출 로컬 LLM',
+      '홈 자동화 소형 로컬 LLM',
+    ],
+    leadAnswerBlock:
+      '**스마트 홈 제어에는 신뢰할 수 있는 함수 호출 기능을 갖춘 소형 명령 이행 모델을 선택하십시오. 3B~8B 모델이 최적입니다. 홈 제어는 원시 성능보다 낮은 지연 시간과 구조화된 출력을 필요로 하기 때문입니다.** 사용 가능한 가장 큰 모델을 선택하는 대신 하드웨어에 맞는 모델을 선택하십시오.',
+    quickAnswerTop: {
+      ko: {
+        question: '스마트 홈 제어에 가장 적합한 로컬 LLM은 무엇입니까?',
+        answer:
+          '단단한 함수 호출 기능을 갖춘 소형 명령 이행 모델, 일반적으로 4B~8B 범위의 모델이 홈 제어에 가장 적합합니다. 빠르게 응답하고 신뢰할 수 있는 장치 동작을 출력하기 때문입니다. Gemma 3 4B, Qwen3 4B, Qwen3 8B 같은 모델이 일반적이고 잘 지원되는 선택입니다. 올바른 선택은 하드웨어와 언어 요구 사항에 따라 다릅니다.',
+        bullets: [
+          '크기보다 낮은 지연 시간과 함수 호출을 우선시하십시오',
+          '4B 모델은 저전력 하드웨어에 적합하고 8B는 GPU 또는 NPU가 있는 미니 PC에 적합합니다',
+          'Gemma 3 4B, Qwen3 4B, Phi-4-mini가 일반적인 시작점입니다',
+          '사용하는 언어를 강하게 지원하는 모델을 선택하십시오',
+          '대형 모델은 단순한 장치 제어에 거의 도움이 되지 않습니다',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'TL;DR', anchor: 'tldr' },
+      { label: '홈 제어에 중요한 것', anchor: 'what-matters' },
+      { label: '단축 목록', anchor: 'shortlist' },
+      { label: '비교', anchor: 'comparison' },
+      { label: '하드웨어 예산별', anchor: 'by-budget' },
+      { label: '선택 방법', anchor: 'how-to-pick' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '스마트 홈 제어를 위한 최고의 로컬 LLM은 낮은 지연 시간을 위해 선택된 신뢰할 수 있는 함수 호출 기능을 갖춘 소형(3B~8B) 명령 이행 모델입니다.' },
+      { type: 'plain-terms', content: '홈 제어에는 거대한 모델이 필요하지 않습니다. 빠르게 응답하고 허브가 실행할 수 있는 구조화된 명령을 안정적으로 출력하는 모델이 필요합니다. 3B~8B 범위의 소형 모델이 이를 잘 수행하고 평범한 하드웨어에서 실행됩니다. 더 깊은 모델 순위는 local-llms 클러스터에 있습니다. 이 가이드는 홈 제어 측면에 집중합니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        items: [
+          '홈 제어는 최대 모델 크기가 아닌 낮은 지연 시간과 신뢰할 수 있는 함수 호출을 필요로 합니다',
+          '4B 모델은 저전력 하드웨어에 적합하고 8B 모델은 GPU 또는 NPU가 있는 미니 PC에 적합합니다',
+          'Gemma 3 4B (Google), Qwen3 4B (Alibaba), Qwen3 8B (Alibaba)가 일반적이고 잘 지원되는 선택입니다',
+          'Qwen3, Gemma 3, Phi-4-mini는 현재 Home Assistant 툴 호출 지원이 검증되어 있습니다',
+          '사용하는 언어를 강하게 지원하는 모델을 선택하십시오',
+          '깊은 모델 순위와 메커니즘은 local-llms 클러스터로 연결하십시오',
+        ],
+      },
+      whatMatters: {
+        id: 'what-matters',
+        title: '홈 제어에 중요한 것',
+        content:
+          '**좋은 홈 제어 모델을 결정하는 세 가지: 지연 시간, 신뢰할 수 있는 함수 호출, 하드웨어에 맞는 크기입니다.** 벤치마크 리더보드는 반응성보다 훨씬 덜 중요합니다.',
+        items: [
+          '**지연 시간:** 음성 명령이 거의 즉각적으로 느껴져야 합니다. 고성능 하드웨어의 소형 모델이 더 빠르게 응답합니다.',
+          '**함수 호출:** 모델이 구조화된 장치 동작을 안정적으로 출력해야 합니다. 이것이 결정적인 능력입니다.',
+          '**적합성:** 모델이 Home Assistant를 호스팅하는 기기에서 편안하게 실행되어야 합니다. [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
+        ],
+      },
+      shortlist: {
+        id: 'shortlist',
+        title: '단축 목록',
+        content:
+          '**이 소형 모델들은 다양한 하드웨어 예산에서 홈 제어에 일반적이고 잘 지원되는 선택입니다.** 경량 하드웨어에는 4B 모델을, GPU 또는 NPU가 있을 때는 8B 모델을 사용하십시오. Gemma 4 (2026년 6월)가 최신 옵션입니다. Qwen3, Gemma 3, Phi-4-mini는 현재 Home Assistant 툴 호출 지원이 검증되어 있습니다.',
+        items: [
+          '**Gemma 3 4B (Google):** 광범위한 다국어 지원(140개 이상 언어)을 갖춘 40억 매개변수 모델로 강력한 저전력 선택입니다 — Ollama 태그 `gemma3:4b`.',
+          '**Qwen3 4B (Alibaba):** 신뢰할 수 있는 툴 사용과 우수한 다국어 지원을 갖춘 빠른 4B 모델로 CPU 또는 내장 GPU에서 낮은 지연 시간 — `qwen3:4b`.',
+          '**Phi-4-mini (Microsoft):** 명령 이행에서 크기 이상의 성능을 발휘하는 컴팩트한 3.8B 모델 — `phi4-mini`.',
+          '**Llama 3.2 3B (Meta):** 우수한 함수 호출로 평범한 하드웨어에서 실행되는 광범위하게 지원되는 3B 기준 모델 — `llama3.2:3b`.',
+          '**Qwen3 8B (Alibaba):** GPU 또는 NPU에서 최고의 품질, Home Assistant 툴 호출의 선호 모델 — `qwen3:8b`.',
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '비교',
+        content:
+          '**하드웨어와 언어로 선택하십시오: CPU 전용 또는 Pi급 하드웨어에는 소형 모델, GPU 탑재 미니 PC에는 8B.** 아래 크기는 일반적인 4비트 양자화에서 근사치입니다. Ollama 태그가 다운로드할 정확한 모델입니다.',
+        columns: ['모델', '매개변수', '근사 풋프린트 (Q4)', 'Ollama 태그', '최적 용도'],
+        rows: [
+          { '모델': 'Gemma 3 4B', '매개변수': '4B', '근사 풋프린트 (Q4)': '~3 GB', 'Ollama 태그': 'gemma3:4b', '최적 용도': '저전력 호스트, 140개 이상 언어' },
+          { '모델': 'Qwen3 4B', '매개변수': '4B', '근사 풋프린트 (Q4)': '~2.5–3 GB', 'Ollama 태그': 'qwen3:4b', '최적 용도': '낮은 지연 시간, 다국어, 툴' },
+          { '모델': 'Phi-4-mini', '매개변수': '3.8B', '근사 풋프린트 (Q4)': '~2.5–3 GB', 'Ollama 태그': 'phi4-mini', '최적 용도': '강력한 명령 이행' },
+          { '모델': 'Llama 3.2 3B', '매개변수': '3B', '근사 풋프린트 (Q4)': '~2–3 GB', 'Ollama 태그': 'llama3.2:3b', '최적 용도': '광범위하게 지원되는 기준 모델' },
+          { '모델': 'Qwen3 8B', '매개변수': '8B', '근사 풋프린트 (Q4)': '~5 GB', 'Ollama 태그': 'qwen3:8b', '최적 용도': 'GPU/NPU에서 최고 품질; HA 선호 모델' },
+        ],
+        items: [
+          '풋프린트는 근사치이며 양자화에 따라 달라집니다. VRAM 및 양자화 심도는 local-llms 클러스터로 연결하십시오.',
+        ],
+      },
+      byBudget: {
+        id: 'by-budget',
+        title: '하드웨어 예산별 선택',
+        content:
+          '**Pi 또는 CPU 전용 미니 PC에는 4B 모델, GPU 또는 NPU가 있을 때는 8B 모델을 선택하십시오.** 이렇게 하면 모든 계층에서 응답이 빠릅니다.',
+        items: [
+          '**Raspberry Pi / 저전력:** 더 느린 응답을 감수하고 Gemma 3 4B 또는 Qwen3 4B.',
+          '**미니 PC (CPU 전용):** 반응이 빠른 기본값으로 Qwen3 4B 또는 Phi-4-mini.',
+          '**GPU/NPU 탑재 미니 PC:** 허용 가능한 지연 시간으로 최고의 품질을 위해 Qwen3 8B — [Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai)를 참조하십시오.',
+        ],
+      },
+      howToPick: {
+        id: 'how-to-pick',
+        title: '선택 방법',
+        content:
+          '**4B 모델로 시작하여 지연 시간과 신뢰할 수 있는 장치 동작을 확인하고, 품질이 부족한 경우에만 8B로 전환하십시오.** 결정하기 전에 실제 명령으로 테스트하십시오.',
+        items: [
+          '[Ollama 통합](/ko/smart-home/home-assistant-ollama-integration)을 통해 설치하고 일반적인 명령을 테스트하십시오.',
+          '응답이 느리면 크기를 줄이거나 GPU/NPU를 추가하십시오.',
+          '동작이 불안정하면 함수 호출로 알려진 모델을 선호하십시오.',
+          '깊은 모델 순위와 메커니즘은 [최고의 로컬 LLM 2026](/ko/local-llms/best-local-llms-2026)(크로스 클러스터)를 참조하십시오. 이 가이드는 홈 제어 특화입니다.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '홈 제어에 사용 가능한 가장 소형 모델은 무엇입니까?', a: 'Llama 3.2 3B 같은 3B 모델은 저전력 하드웨어에서 신뢰할 수 있는 장치 제어를 위한 실용적인 최저선입니다. 일부 이해력을 속도와 교환합니다. 하드웨어가 허용한다면 Gemma 3 4B나 Qwen3 4B 같은 4B 모델이 더 나은 균형입니다.' },
+          { q: '홈 제어 모델에 GPU가 필요합니까?', a: 'CPU 또는 내장 GPU에서 실행되는 4B 모델에는 필요하지 않습니다. GPU 또는 NPU는 주로 더 나은 이해를 위해 낮은 지연 시간으로 Qwen3 8B 같은 8B 모델을 실행할 수 있게 합니다. 하드웨어에 맞는 모델을 선택하십시오.' },
+          { q: '어떤 모델이 함수 호출을 지원합니까?', a: 'Qwen3, Gemma 3, Phi-4-mini를 포함한 현대 소형 모델은 신뢰할 수 있는 장치 동작을 출력할 수 있는 능력인 Home Assistant 툴/함수 호출 지원이 검증되어 있습니다. 홈 제어에는 이를 지원하는 것으로 문서화된 모델을 선호하십시오.' },
+          { q: 'Raspberry Pi에 가장 적합한 모델은 무엇입니까?', a: 'Gemma 3 4B나 Qwen3 4B 같은 4B 모델이 Raspberry Pi의 실용적인 상한선이며 응답이 미니 PC보다 느립니다. 빠른 어시스턴트를 원한다면 GPU/NPU로 Qwen3 8B를 실행하는 미니 PC가 더 나은 호스트입니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration) — 선택한 모델 설치 및 테스트',
+          '[로컬 LLM으로 스마트 홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide) — 전체 아키텍처',
+          '[로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — 모델 크기를 하드웨어에 맞추기',
+          '[최고의 로컬 LLM 2026](/ko/local-llms/best-local-llms-2026) — 크로스 클러스터: 깊은 모델 순위',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '스마트 홈 제어를 위한 최고의 로컬 LLM 모델 (2026)',
+      description: '2026년 스마트 홈 제어를 위한 최고의 로컬 LLM: 평범한 하드웨어에서 실행되는 소형 고속 함수 호출 모델. 단축 목록 및 예산별 선택.',
+      url: 'https://www.promptquorum.com/ko/smart-home/best-local-llm-models-smart-home',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-05',
+      about: [{ '@type': 'Thing', name: '로컬 LLM' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '함수 호출' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '홈 제어에 사용 가능한 가장 소형 모델은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.2 3B 같은 3B 모델이 저전력 하드웨어에서 신뢰할 수 있는 장치 제어를 위한 실용적인 최저선입니다. 하드웨어가 허용한다면 Gemma 3 4B나 Qwen3 4B 같은 4B 모델이 더 나은 균형입니다.' } },
+        { '@type': 'Question', name: '홈 제어 모델에 GPU가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'CPU 또는 내장 GPU에서 실행되는 4B 모델에는 필요하지 않습니다. GPU 또는 NPU는 주로 낮은 지연 시간으로 Qwen3 8B 같은 8B 모델을 실행할 수 있게 합니다.' } },
+        { '@type': 'Question', name: '어떤 모델이 함수 호출을 지원합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3, Gemma 3, Phi-4-mini를 포함한 현대 소형 모델은 신뢰할 수 있는 장치 동작을 출력할 수 있는 Home Assistant 툴/함수 호출 지원이 검증되어 있습니다.' } },
+        { '@type': 'Question', name: 'Raspberry Pi에 가장 적합한 모델은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Gemma 3 4B나 Qwen3 4B 같은 4B 모델이 Pi의 실용적인 상한선이며 응답이 더 느립니다. GPU/NPU로 Qwen3 8B를 실행하는 미니 PC가 더 나은 호스트입니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

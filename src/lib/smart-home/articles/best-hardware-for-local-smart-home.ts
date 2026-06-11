@@ -802,6 +802,206 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-05',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    affiliateDisclosure: true,
+    title: '로컬 스마트 홈 + 로컬 AI를 위한 최고의 하드웨어 (2026)',
+    seoTitle: '로컬 스마트 홈 + AI를 위한 최고의 하드웨어 (2026)',
+    intro:
+      '로컬 스마트 홈에 최적인 하드웨어는 로컬 LLM도 실행할지 여부에 따라 달라집니다. 기본 기능에는 Raspberry Pi로 충분하지만 한 기기에서 Home Assistant와 로컬 AI를 함께 실행하려면 미니 PC가 더 나은 선택입니다. 이 가이드는 Pi, 미니 PC, NAS, 전용 서버를 비교하고 HA 단독과 HA+AI 중 선택하는 방법을 안내하며 VRAM 심층 정보는 외부 링크로 연결합니다.',
+    metaDescription:
+      '2026년 로컬 스마트 홈 + 로컬 AI를 위한 최고의 하드웨어: Raspberry Pi 대 미니 PC 대 NAS 대 서버. Home Assistant 단독 또는 HA + 로컬 LLM 선택 가이드.',
+    twitterDescription:
+      '로컬 스마트 홈 하드웨어: Pi 대 미니 PC 대 NAS 대 서버. 기본 기능에는 Pi, 로컬 LLM도 실행하려면 미니 PC. 2026 가이드.',
+    readTime: '9분 분량',
+    educationalLevel: 'Intermediate',
+    audience: 'Home Assistant와 로컬 AI 실행을 위한 하드웨어를 선택하는 구매자',
+    primaryTerm: 'best hardware local smart home',
+    targetKeywords: [
+      'home assistant 로컬 AI 최고의 하드웨어',
+      'home assistant 하드웨어',
+      '미니 PC home assistant 로컬 LLM',
+      'raspberry pi 대 미니 PC home assistant',
+      '로컬 스마트 홈 서버',
+    ],
+    leadAnswerBlock:
+      '**기본 기능에는 Raspberry Pi로 로컬 스마트 홈을 운영하고, 같은 기기에서 로컬 LLM, 대형 Whisper 모델, Frigate도 실행하려면 미니 PC를 선택하십시오.** NAS나 전용 서버는 대규모 설정에 적합합니다. 결정 요인은 로컬 AI 필요 여부입니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'AI가 포함된 로컬 스마트 홈에 어떤 하드웨어가 필요합니까?',
+        answer:
+          'Home Assistant 단독으로는 Raspberry Pi로 충분합니다. 같은 기기에서 로컬 LLM, 대형 Whisper 모델, Frigate 카메라 감지를 실행하려면 충분한 RAM과 고성능 내장 GPU 또는 NPU가 있는 미니 PC를 선택하십시오. NAS 또는 전용 서버는 대규모 멀티서비스 설정에 적합합니다.',
+        bullets: [
+          'Home Assistant 단독: Raspberry Pi로 충분합니다',
+          'HA + 로컬 LLM: 고성능 iGPU/NPU가 있는 미니 PC',
+          '더 많은 RAM과 GPU/NPU는 LLM 지연 시간을 줄입니다',
+          'NAS 또는 서버: 대규모 멀티서비스 설정에 적합합니다',
+          '먼저 결정하십시오: HA 단독인지 HA + 로컬 AI인지',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'TL;DR', anchor: 'tldr' },
+      { label: '허브에 필요한 것', anchor: 'hub-needs' },
+      { label: 'Raspberry Pi', anchor: 'raspberry-pi' },
+      { label: '미니 PC', anchor: 'mini-pc' },
+      { label: 'NAS', anchor: 'nas' },
+      { label: '전용 서버', anchor: 'server' },
+      { label: 'HA 단독 대 HA + AI', anchor: 'picking' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Raspberry Pi는 로컬 스마트 홈 허브를 실행하고, 같은 기기에서 로컬 LLM, 대형 Whisper, Frigate도 원한다면 미니 PC가 더 적합합니다.' },
+      { type: 'plain-terms', content: '허브 소프트웨어(Home Assistant)는 가볍고 Raspberry Pi 같은 소형 컴퓨터에서 실행됩니다. 언어 모델, 대형 음성 인식, 카메라 감지 등 로컬 AI를 추가하면 더 많은 성능이 필요하고, 이때 더 많은 RAM과 고성능 그래픽 칩이 있는 미니 PC가 필요합니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        items: [
+          'Home Assistant 단독은 Raspberry Pi에서 쾌적하게 실행됩니다',
+          '로컬 LLM, 대형 Whisper, Frigate도 원한다면 미니 PC가 더 나은 선택입니다',
+          '더 많은 RAM과 고성능 iGPU/NPU는 로컬 AI 지연 시간을 줄입니다',
+          'NAS는 스토리지 서비스와 함께 컨테이너에서 Home Assistant를 호스팅할 수 있습니다',
+          '전용 서버는 멀티서비스 대규모 로컬 설정에 적합합니다',
+          '구매 전에 HA 단독 대 HA + AI를 결정하십시오. 그 선택이 적합한 기기를 바꿉니다',
+        ],
+      },
+      hubNeeds: {
+        id: 'hub-needs',
+        title: '허브에 필요한 것',
+        content:
+          '**Home Assistant 자체는 가볍고 평범한 하드웨어에서 실행됩니다. 높은 요구 사항은 로컬 AI와 카메라 감지에서 옵니다.** 허브만이 아니라 추가할 것을 고려하여 기기 크기를 결정하십시오.',
+        items: [
+          '허브는 장치 제어 및 자동화에 거의 연산이 필요하지 않습니다.',
+          '로컬 LLM 추론, 대형 Whisper, Frigate가 까다로운 워크로드입니다.',
+          '이러한 부가 기능에 맞춰 RAM과 GPU/NPU를 계획하십시오.',
+        ],
+      },
+      raspberryPi: {
+        id: 'raspberry-pi',
+        title: 'Raspberry Pi',
+        content:
+          '**Raspberry Pi는 일반 스마트 홈 용도로 Home Assistant를 실행하는 가장 저렴하고 저전력인 방법입니다.** LLM 추론과 대형 Whisper 모델에는 어려움을 겪습니다.',
+        items: [
+          '장치 제어, 자동화, 소형 로컬 음성 설정에 탁월합니다.',
+          'Pi에서의 LLM 추론은 매우 소형이고 느린 모델에만 제한됩니다.',
+          '저비용 저전력으로 기본 기능만 원한다면 Pi를 선택하십시오. 예시: Raspberry Pi 5 (8GB) 또는 사전 구성된 Home Assistant Green 어플라이언스.',
+        ],
+        affiliateLinks: [
+          { label: 'Raspberry Pi 5 (8GB)', url: 'https://www.raspberrypi.com/products/raspberry-pi-5/', productName: 'Raspberry Pi 5', productCategory: 'Single-board computer' },
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+        ],
+      },
+      miniPc: {
+        id: 'mini-pc',
+        title: '미니 PC (LLM을 위한 여유 공간)',
+        content:
+          '**미니 PC는 Home Assistant와 로컬 AI를 하나의 기기에서 실행하는 최고의 선택입니다. 충분한 RAM과 고성능 iGPU 또는 NPU로 소형 LLM을 실행합니다.** 성능, 크기, 비용의 균형이 잡혀 있습니다.',
+        items: [
+          'Home Assistant, Ollama를 통한 소형 LLM, Whisper, Frigate를 함께 실행하십시오.',
+          '더 낮은 지연 시간을 위해 RAM과 고성능 내장 GPU 또는 NPU를 우선시하십시오.',
+          '구체적인 선택은 [Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai)와 크로스 클러스터 [로컬 LLM을 위한 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm)를 참조하십시오. 예시: 7B 모델용 Beelink SER8 (Ryzen 7 8845HS) 또는 저전력 구성용 Beelink EQ14 (Intel N150).',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink SER8 (Ryzen 7 8845HS)', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Intel N150)', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+        ],
+      },
+      nas: {
+        id: 'nas',
+        title: 'NAS',
+        content:
+          '**NAS는 충분한 CPU와 RAM이 있다면 스토리지 및 Frigate 녹화와 함께 컨테이너에서 Home Assistant를 호스팅할 수 있습니다.** 이미 보유하고 있다면 편리합니다.',
+        items: [
+          '스토리지와 홈 자동화 서비스를 결합하기에 적합합니다.',
+          'NAS에 부가 기능을 위한 CPU/RAM 여유가 있는지 확인하십시오.',
+          'NAS에서의 LLM 추론은 하드웨어에 따라 다릅니다. 많은 NAS에는 고성능 GPU가 없습니다. 예시: Synology DS925+ 또는 DS225+; UGREEN NASync 모델은 내장 로컬 LLM 옵션을 제공합니다.',
+        ],
+        affiliateLinks: [
+          { label: 'Synology DS925+', url: 'https://www.synology.com/en-us/products/DS925+', productName: 'Synology DS925+', productCategory: 'NAS' },
+          { label: 'Synology DS225+', url: 'https://www.synology.com/en-us/products/DS225+', productName: 'Synology DS225+', productCategory: 'NAS' },
+          { label: 'UGREEN NASync', url: 'https://nas.ugreen.com/pages/ugreen-nasync-series', productName: 'UGREEN NASync', productCategory: 'NAS' },
+        ],
+      },
+      server: {
+        id: 'server',
+        title: '전용 서버',
+        content:
+          '**전용 서버는 여러 서비스와 대형 로컬 모델을 실행하는 대규모 설정에 적합합니다.** 더 높은 비용과 전력으로 가장 많은 여유를 제공합니다.',
+        items: [
+          '많은 카메라, 대형 LLM, 다수의 사용자에게 가장 적합합니다.',
+          '미니 PC보다 전력 소비와 비용이 높습니다.',
+          '기본 스마트 홈에는 과도합니다. 대용량 로컬 AI 사용에 예약하십시오.',
+        ],
+      },
+      picking: {
+        id: 'picking',
+        title: 'HA 단독 대 HA + AI 선택',
+        content:
+          '**HA 단독에는 Pi, HA + 로컬 AI에는 미니 PC를 선택하십시오. 이 단일 결정이 올바른 하드웨어를 결정합니다.** 워크로드에 맞게 기기를 선택하십시오.',
+        columns: ['하드웨어', '상대적 가격', 'HA 단독', '로컬 LLM 실행 가능', '비고'],
+        rows: [
+          { '하드웨어': 'Raspberry Pi', '상대적 가격': '저가', 'HA 단독': '가능', '로컬 LLM 실행 가능': '매우 소형만, 느림', '비고': '최저 전력' },
+          { '하드웨어': '미니 PC', '상대적 가격': '중가', 'HA 단독': '가능', '로컬 LLM 실행 가능': '가능 (소형 모델)', '비고': 'HA + AI를 위한 최고의 단일 기기' },
+          { '하드웨어': 'NAS', '상대적 가격': '중~고가', 'HA 단독': '가능 (컨테이너)', '로컬 LLM 실행 가능': '하드웨어에 따라 다름', '비고': '스토리지 + HA 결합' },
+          { '하드웨어': '전용 서버', '상대적 가격': '고가', 'HA 단독': '가능', '로컬 LLM 실행 가능': '가능 (대형 모델)', '비고': '최대 여유, 최고 전력' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: 'Raspberry Pi도 로컬 LLM을 실행할 수 있습니까?', a: 'Pi는 매우 소형 모델만 느리게 실행할 수 있으므로 반응이 빠른 로컬 LLM 어시스턴트에는 이상적이지 않습니다. Home Assistant와 기본 음성은 잘 처리하지만 로컬 AI에는 고성능 iGPU 또는 NPU가 있는 미니 PC가 더 나은 선택입니다.' },
+          { q: 'RAM이 얼마나 필요합니까?', a: 'Home Assistant 단독은 몇 GB면 충분합니다. 같은 기기에서 소형 로컬 LLM과 다른 AI 서비스를 실행하려면 더 많은 RAM이 도움이 됩니다. 실행할 모델 크기에 맞게 RAM을 선택하십시오.' },
+          { q: '어떤 미니 PC를 구매해야 합니까?', a: '원하는 모델 크기에 맞는 충분한 RAM과 고성능 내장 GPU 또는 NPU가 있는 미니 PC를 선택하십시오. HA + 소형 LLM에 맞는 선택은 Home Assistant + 로컬 AI를 위한 최고의 미니 PC 가이드를 참조하십시오.' },
+          { q: '기기 하나로 충분합니까, 두 개가 필요합니까?', a: '미니 PC 하나로 Home Assistant와 소형 로컬 LLM을 함께 실행하는 것이 가장 간단합니다. Pi에서 허브를 매우 안정적으로 유지하고 무거운 AI를 별도의 강력한 기기에 오프로드하려면 두 기기로 나누십시오.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) — 구체적인 선택',
+          '[로컬 스마트 홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide) — 전체 스택',
+          '[로컬 LLM으로 스마트 홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide) — AI 기기가 실행하는 것',
+          '[로컬 LLM을 위한 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm) — 크로스 클러스터: VRAM 및 하드웨어 심층 정보',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 스마트 홈 + 로컬 AI를 위한 최고의 하드웨어 (2026)',
+      description: '2026년 로컬 스마트 홈 + 로컬 AI를 위한 최고의 하드웨어: Raspberry Pi 대 미니 PC 대 NAS 대 서버. Home Assistant 단독 또는 HA + 로컬 LLM 선택.',
+      url: 'https://www.promptquorum.com/ko/smart-home/best-hardware-for-local-smart-home',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-05',
+      about: [{ '@type': 'Thing', name: 'Home Assistant 하드웨어' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: '미니 PC' }, { '@type': 'Thing', name: '로컬 LLM' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: 'Raspberry Pi도 로컬 LLM을 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: 'Pi는 매우 소형 모델만 느리게 실행할 수 있습니다. Home Assistant와 기본 음성은 잘 처리하지만 반응이 빠른 로컬 LLM 어시스턴트에는 고성능 iGPU 또는 NPU가 있는 미니 PC가 더 적합합니다.' } },
+        { '@type': 'Question', name: 'RAM이 얼마나 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant 단독은 몇 GB면 충분합니다. 같은 기기에서 소형 로컬 LLM을 실행하려면 더 많은 RAM이 도움이 됩니다. 실행할 모델 크기에 맞게 RAM을 선택하십시오.' } },
+        { '@type': 'Question', name: '어떤 미니 PC를 구매해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: '모델 크기에 맞는 충분한 RAM과 고성능 내장 GPU 또는 NPU가 있는 것을 선택하십시오. Home Assistant + 로컬 AI를 위한 최고의 미니 PC 가이드에서 선택을 확인하십시오.' } },
+        { '@type': 'Question', name: '기기 하나로 충분합니까, 두 개가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '미니 PC 하나로 Home Assistant와 소형 로컬 LLM을 함께 실행합니다. Pi에서 허브를 매우 안정적으로 유지하고 무거운 AI를 별도 기기에 오프로드하려면 두 기기로 나누십시오.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

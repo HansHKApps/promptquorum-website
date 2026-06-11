@@ -814,6 +814,209 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: '스마트 홈용 완전 로컬 음성 어시스턴트 구축하기 (2026)',
+    seoTitle: '로컬 음성 어시스턴트 2026: Alexa를 개인적으로 대체',
+    intro:
+      'Home Assistant Assist, 로컬 Whisper 음성→텍스트, Piper 텍스트→음성, 로컬 LLM 두뇌로 구축된 완전 로컬 음성 어시스턴트로 Alexa 또는 Google을 대체할 수 있습니다. 이 가이드는 오프라인 음성 스택, 각 구성 요소, 이들을 연결하는 Wyoming 프로토콜, 필요한 하드웨어를 다룹니다. 모두 비공개이며 클라우드 없이 동작합니다.',
+    metaDescription:
+      'Alexa를 완전 로컬 음성 어시스턴트로 대체하십시오: Wyoming 프로토콜 기반 Home Assistant Assist + Whisper + Piper + 로컬 LLM. 비공개, 오프라인.',
+    twitterDescription:
+      'Alexa를 대체하는 비공개 음성 어시스턴트 구축: Assist + Whisper(STT) + Piper(TTS) + 로컬 LLM. Wyoming 기반 완전 오프라인.',
+    readTime: '11분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '클라우드 음성 어시스턴트를 대체하는 프라이버시 중시 Home Assistant 사용자',
+    primaryTerm: 'local voice assistant',
+    targetKeywords: [
+      '로컬 음성 어시스턴트 home assistant',
+      'alexa home assistant 대체',
+      '프라이빗 음성 어시스턴트',
+      'home assistant assist whisper piper',
+      '오프라인 음성 어시스턴트',
+    ],
+    leadAnswerBlock:
+      '**완전 로컬 음성 어시스턴트는 Home Assistant Assist(의도), 로컬 Whisper(음성→텍스트), Piper(텍스트→음성), 로컬 LLM(추론)을 결합하며 Wyoming 프로토콜 위에서 직접 소유한 하드웨어에서 모두 실행됩니다.** 어떤 오디오나 명령도 집 밖으로 나가지 않으며 오프라인으로 동작합니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '완전 로컬 음성 어시스턴트를 어떻게 구축합니까?',
+        answer:
+          'Home Assistant Assist를 파이프라인으로 사용하고, 음성→텍스트를 위한 Whisper 애드온, 텍스트→음성을 위한 Piper 애드온을 추가하고, Wyoming 프로토콜을 통해 연결하고, 웨이크 워드 엔진을 추가하고 선택적으로 로컬 LLM을 대화 에이전트로 설정하십시오. 모든 것이 클라우드 없이 직접 소유한 하드웨어에서 실행됩니다.',
+        bullets: [
+          'Assist = Home Assistant 내의 음성 파이프라인',
+          'Whisper = 로컬 음성→텍스트; Piper = 로컬 텍스트→음성',
+          'Wyoming 프로토콜이 음성 서비스를 연결',
+          '핸즈프리 트리거를 위한 웨이크 워드 엔진 추가',
+          '선택 사항: 대화 에이전트로서의 로컬 LLM',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: '완전 로컬 음성 스택', anchor: 'voice-stack' },
+      { label: 'Home Assistant Assist', anchor: 'assist' },
+      { label: 'STT용 Whisper', anchor: 'whisper' },
+      { label: 'TTS용 Piper', anchor: 'piper' },
+      { label: 'Wyoming 프로토콜', anchor: 'wyoming' },
+      { label: 'LLM 두뇌 추가', anchor: 'llm-brain' },
+      { label: '하드웨어 요구 사항', anchor: 'hardware' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '완전 로컬 음성 어시스턴트는 Wyoming 기반의 Home Assistant Assist + Whisper(STT) + Piper(TTS) + 선택적 로컬 LLM으로 오프라인으로 동작합니다.' },
+      { type: 'plain-terms', content: '음성 어시스턴트는 세 가지 역할이 있습니다. 듣기(음성→텍스트), 이해하고 행동하기(의도 또는 LLM), 말로 응답하기(텍스트→음성)입니다. Home Assistant는 Whisper, Piper, Assist로 세 가지 모두를 직접 소유한 하드웨어에서 수행할 수 있으므로 Alexa와 달리 어떤 녹음도 기업 서버로 전송되지 않습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          'Home Assistant Assist는 모든 것을 연결하는 로컬 음성 파이프라인입니다',
+          'Whisper는 로컬에서 음성→텍스트를 처리합니다. 정확도/속도/하드웨어 균형에 맞는 모델 크기를 선택하십시오',
+          'Piper는 자연스러운 음성으로 로컬에서 텍스트→음성을 처리합니다',
+          'Wyoming 프로토콜이 Assist를 Whisper 및 Piper 서비스와 연결합니다',
+          '핸즈프리 트리거를 위한 웨이크 워드 엔진(예: openWakeWord)을 추가하십시오',
+          '선택 사항: 고정된 의도 대신 자연어 이해를 위해 로컬 LLM을 대화 에이전트로 설정하십시오',
+        ],
+      },
+      voiceStack: {
+        id: 'voice-stack',
+        title: '완전 로컬 음성 스택',
+        content:
+          '**로컬 음성 어시스턴트는 직접 소유한 하드웨어에서 네 가지 역할을 수행합니다. 캡처 및 변환(Whisper), 이해(Assist 의도 또는 로컬 LLM), 응답(Piper), 트리거(웨이크 워드)입니다.** 각각은 오프라인으로 실행되며 Wyoming 프로토콜이 이들을 연결합니다.',
+        columns: ['구성 요소', '역할', '로컬?', '비고'],
+        rows: [
+          { '구성 요소': 'Assist', '역할': '파이프라인 + 의도', '로컬?': '예', '비고': 'Home Assistant에 내장됨' },
+          { '구성 요소': 'Whisper', '역할': '음성→텍스트', '로컬?': '예', '비고': '모델 크기가 정확도/속도 결정' },
+          { '구성 요소': 'Piper', '역할': '텍스트→음성', '로컬?': '예', '비고': '자연스러운 로컬 음성' },
+          { '구성 요소': '웨이크 워드', '역할': '핸즈프리 트리거', '로컬?': '예', '비고': '예: openWakeWord' },
+          { '구성 요소': '로컬 LLM', '역할': '이해(선택)', '로컬?': '예', '비고': 'Ollama를 통해 대화 에이전트로' },
+        ],
+      },
+      assist: {
+        id: 'assist',
+        title: 'Home Assistant Assist',
+        content:
+          '**Assist는 오디오를 음성→텍스트, 에이전트, 텍스트→음성으로 라우팅하는 내장 음성 파이프라인입니다.** 설정 → 음성 어시스턴트에서 구성합니다.',
+        items: [
+          'Assist는 일반 명령에 대해 기본적으로 내장 의도(LLM 없음)로 동작합니다.',
+          'STT 엔진(Whisper), TTS 엔진(Piper), 대화 에이전트를 선택합니다.',
+          '빠른 의도 전용 어시스턴트와 LLM 어시스턴트를 별도로 원한다면 여러 파이프라인을 사용하십시오.',
+        ],
+      },
+      whisper: {
+        id: 'whisper',
+        title: '로컬 음성→텍스트용 Whisper',
+        content:
+          '**Whisper는 로컬에서 음성을 변환합니다. 더 큰 Whisper 모델이 더 정확하지만 더 많은 연산이 필요합니다.** Whisper 애드온(faster-whisper)으로 추가하고 Wyoming을 통해 연결하십시오.',
+        items: [
+          'Whisper는 tiny부터 large까지 크기가 있습니다. 더 작으면 더 빠르고 더 크면 더 정확합니다.',
+          'STT에 집중된 설정(모델, 하드웨어, 정확도)은 [로컬 Whisper + Home Assistant](/ko/smart-home/local-whisper-home-assistant)를 참조하십시오.',
+          'Whisper는 다국어를 지원하므로 다른 언어 명령도 클라우드 서비스 없이 변환됩니다.',
+        ],
+      },
+      piper: {
+        id: 'piper',
+        title: '로컬 텍스트→음성용 Piper',
+        content:
+          '**Piper는 자연스럽게 들리는 음성으로 로컬에서 응답을 생성하며 저사양 하드웨어에서도 실시간 응답이 가능할 만큼 빠릅니다.** Piper 애드온으로 추가하고 음성을 선택하십시오.',
+        items: [
+          'Piper는 여러 언어와 음성을 제공합니다. 파이프라인당 하나를 선택하십시오.',
+          'Raspberry Pi에서도 일반적인 응답 길이에 잘 동작합니다.',
+          '오디오가 어디로도 전송되지 않습니다. 음성이 직접 소유한 기기에서 합성됩니다.',
+        ],
+      },
+      wyoming: {
+        id: 'wyoming',
+        title: 'Wyoming 프로토콜',
+        content:
+          '**Wyoming는 Home Assistant가 Assist를 Whisper 및 Piper와 같은 로컬 음성 서비스에 연결하는 데 사용하는 프로토콜입니다.** 음성 서비스가 별도 애드온 또는 별도 기기에서 실행될 수 있게 합니다.',
+        items: [
+          '각 서비스(Whisper, Piper, 웨이크 워드)는 Wyoming 엔드포인트로 실행됩니다.',
+          'Assist는 Wyoming 통합을 통해 이들을 감지하고 사용합니다.',
+          '이 모듈성은 필요한 경우 Whisper를 더 강력한 기기로 오프로드할 수 있음을 의미합니다.',
+        ],
+      },
+      llmBrain: {
+        id: 'llm-brain',
+        title: 'LLM 두뇌 추가',
+        content:
+          '**고정된 의도 대신 자연어를 이해하기 위해 로컬 LLM을 대화 에이전트로 설정하십시오.** 선택 사항이지만 유연한 표현을 가능하게 합니다.',
+        items: [
+          '먼저 Ollama를 Home Assistant에 연결하십시오 — [Ollama 통합 가이드](/ko/smart-home/home-assistant-ollama-integration)를 참조하십시오.',
+          '음성 응답이 빠르게 유지되도록 function-calling이 가능한 소형 모델을 사용하십시오.',
+          '전체 그림은 [로컬 LLM으로 스마트 홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide)를 참조하십시오.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: '하드웨어 요구 사항',
+        content:
+          '**미니 PC는 Assist, Whisper, Piper, 소형 LLM을 편안하게 실행합니다. Raspberry Pi는 의도 전용 음성은 처리하지만 큰 Whisper 모델과 LLM 추론에는 어려움을 겪습니다.** 마이크 하드웨어(음성 위성)가 집 전체의 오디오를 캡처합니다.',
+        items: [
+          'LLM 두뇌와 더 큰 Whisper 모델을 원한다면 미니 PC를 사용하십시오 — [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
+          '가벼운 의도 전용 어시스턴트에는 Pi를 사용하십시오.',
+          '방별 커버리지를 위해 음성 위성 하드웨어(마이크 + 스피커 엔드포인트)를 추가하십시오.',
+          '[로컬 vs 클라우드 음성 어시스턴트](/ko/smart-home/local-vs-cloud-voice-assistant)에서 트레이드오프를 비교하십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '로컬 음성 어시스턴트가 Alexa를 완전히 대체할 수 있습니까?', a: '스마트 홈 제어와 많은 루틴에 대해서는 예입니다. Assist와 Whisper, Piper, 로컬 LLM은 비공개로 자연어로 기기 제어와 응답을 처리합니다. 타사 Alexa 스킬과 클라우드 쇼핑 기능을 복제하지는 않지만 핵심적인 홈 제어 사용 사례를 비공개로 처리합니다.' },
+          { q: '로컬 음성 어시스턴트가 오프라인으로 동작합니까?', a: '예. 음성→텍스트(Whisper), 텍스트→음성(Piper), 의도 처리, 선택적 로컬 LLM 모두 직접 소유한 하드웨어에서 실행되므로 인터넷 없이 동작합니다. 집 밖에서의 원격 접근만 연결이 필요합니다.' },
+          { q: '로컬 음성 인식이 얼마나 정확합니까?', a: 'Whisper 모델 크기와 마이크에 따라 달라집니다. 더 큰 Whisper 모델이 더 정확하지만 더 느립니다. 미니 PC에서 중간 크기 모델은 홈 명령에 대한 균형이 좋습니다. 크기 선택은 로컬 Whisper 가이드를 참조하십시오.' },
+          { q: '로컬 음성 어시스턴트에 어떤 하드웨어가 필요합니까?', a: '전체 스택(LLM + 더 큰 Whisper)을 위한 미니 PC 또는 의도 전용 어시스턴트를 위한 Raspberry Pi, 방별 커버리지를 위한 마이크/스피커 음성 위성 하드웨어가 필요합니다. GPU 또는 NPU는 LLM과 큰 Whisper의 지연 시간을 줄입니다.' },
+          { q: '맞춤 웨이크 워드를 사용할 수 있습니까?', a: '예. openWakeWord와 같은 로컬 웨이크 워드 엔진은 맞춤 웨이크 워드를 지원하며 직접 소유한 하드웨어에서 실행되므로 핸즈프리 트리거에 클라우드가 필요 없습니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration) — LLM 대화 에이전트 추가',
+          '[로컬 Whisper + Home Assistant](/ko/smart-home/local-whisper-home-assistant) — 음성→텍스트 선택 및 조정',
+          '[로컬 LLM으로 스마트 홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide) — 완전한 로컬 AI 아키텍처',
+          '[로컬 vs 클라우드 음성 어시스턴트](/ko/smart-home/local-vs-cloud-voice-assistant) — 결정과 트레이드오프',
+          '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 클러스터 간: 로컬 모델 실행',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '스마트 홈용 완전 로컬 음성 어시스턴트 구축하기 (2026)',
+      description: 'Alexa를 완전 로컬 음성 어시스턴트로 대체하십시오: Wyoming 프로토콜 기반 Home Assistant Assist + Whisper + Piper + 로컬 LLM. 비공개, 오프라인.',
+      url: 'https://www.promptquorum.com/ko/smart-home/local-voice-assistant-smart-home',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '음성 어시스턴트' }, { '@type': 'Thing', name: 'Home Assistant Assist' }, { '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Piper' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '로컬 음성 어시스턴트가 Alexa를 완전히 대체할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '스마트 홈 제어와 많은 루틴에 대해서는 예입니다. Assist, Whisper, Piper, 로컬 LLM은 비공개로 자연어 기기 제어를 처리합니다. 타사 Alexa 스킬은 복제하지 않습니다.' } },
+        { '@type': 'Question', name: '로컬 음성 어시스턴트가 오프라인으로 동작합니까?', acceptedAnswer: { '@type': 'Answer', text: '예. Whisper, Piper, 의도 처리, 선택적 로컬 LLM 모두 직접 소유한 하드웨어에서 실행되므로 인터넷 없이 동작합니다.' } },
+        { '@type': 'Question', name: '로컬 음성 인식이 얼마나 정확합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Whisper 모델 크기와 마이크에 따라 달라집니다. 더 큰 모델이 더 정확하지만 더 느립니다. 미니 PC에서 중간 크기 모델이 홈 명령에 균형이 좋습니다.' } },
+        { '@type': 'Question', name: '로컬 음성 어시스턴트에 어떤 하드웨어가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '전체 스택을 위한 미니 PC 또는 의도 전용을 위한 Raspberry Pi, 방별 커버리지를 위한 마이크/스피커 음성 위성이 필요합니다. GPU 또는 NPU는 지연 시간을 줄입니다.' } },
+        { '@type': 'Question', name: '맞춤 웨이크 워드를 사용할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예. openWakeWord와 같은 로컬 웨이크 워드 엔진은 맞춤 웨이크 워드를 지원하며 클라우드 없이 직접 소유한 하드웨어에서 실행됩니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

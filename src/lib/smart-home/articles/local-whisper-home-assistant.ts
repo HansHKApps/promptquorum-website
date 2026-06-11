@@ -734,6 +734,189 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: '스마트 홈용 로컬 음성→텍스트: Whisper + HA (2026)',
+    seoTitle: 'Whisper + Home Assistant 2026: 로컬 STT 가이드',
+    intro:
+      '로컬 Whisper는 Home Assistant에 클라우드 없는 비공개 음성→텍스트를 제공합니다. 정확도, 속도, 하드웨어의 균형에 맞는 Whisper 모델 크기를 선택한 후 Wyoming 프로토콜을 통해 Assist에 연결합니다. 이 가이드는 로컬 STT가 중요한 이유, Whisper 모델 크기, Wyoming 설정, 하드웨어 요구 사항, 정확도 조정 방법을 다룹니다.',
+    metaDescription:
+      'Home Assistant의 Whisper 2026: 로컬 음성→텍스트, 모델 크기, 필요한 하드웨어, 정확도 조정. 클라우드 없음, 오프라인 변환.',
+    twitterDescription:
+      'Whisper 로컬로 Home Assistant의 비공개 음성→텍스트: 모델 크기 선택, Wyoming 위에 연결, 정확도 조정. 클라우드 없음.',
+    readTime: '8분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '로컬 음성→텍스트를 설정하는 Home Assistant 사용자',
+    primaryTerm: 'local Whisper Home Assistant',
+    targetKeywords: [
+      'whisper home assistant stt 로컬',
+      'home assistant 음성 텍스트',
+      '로컬 stt home assistant',
+      'faster-whisper home assistant',
+      'whisper 모델 크기 home assistant',
+    ],
+    leadAnswerBlock:
+      '**로컬 Whisper는 Home Assistant에 비공개 음성→텍스트를 제공합니다. Whisper 애드온을 설치하고 하드웨어에 맞는 모델 크기를 선택하고 Wyoming 프로토콜을 통해 Assist에 연결하십시오.** 더 작은 모델이 더 빠르고 더 큰 모델이 더 정확합니다. 어떤 것도 클라우드 서비스로 전송되지 않습니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'Home Assistant에 로컬 음성→텍스트를 어떻게 추가합니까?',
+        answer:
+          'Home Assistant에 Whisper 애드온(faster-whisper)을 설치하고 모델 크기를 선택하면 Wyoming 음성→텍스트 서비스로 등록됩니다. Assist 파이프라인에서 선택하십시오. 변환이 이후 완전히 직접 소유한 하드웨어에서 실행되므로 어떤 오디오도 집 밖으로 나가지 않습니다.',
+        bullets: [
+          'Whisper 애드온(faster-whisper) 설치',
+          '모델 크기 선택: tiny/base/small/medium/large',
+          'Wyoming 프로토콜을 통해 Assist에 연결',
+          '더 작음 = CPU에서 더 빠름; 더 큼 = 더 정확함',
+          '클라우드 없이 다국어 변환',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: '로컬 STT를 사용하는 이유', anchor: 'why-local-stt' },
+      { label: 'Whisper 모델 크기', anchor: 'model-sizes' },
+      { label: 'Wyoming 설정', anchor: 'wyoming-setup' },
+      { label: '하드웨어 요구 사항', anchor: 'hardware' },
+      { label: '정확도 조정', anchor: 'tuning' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Home Assistant에 Whisper 애드온을 설치하고 하드웨어에 맞는 모델 크기를 선택하고 Wyoming을 통해 Assist에 연결하면 비공개 음성→텍스트를 사용할 수 있습니다.' },
+      { type: 'plain-terms', content: '음성→텍스트는 말한 단어를 어시스턴트가 처리할 수 있는 텍스트로 변환합니다. Whisper는 로컬에서 실행되는 오픈 음성 인식 모델이므로 클라우드 어시스턴트와 달리 음성 녹음이 절대 직접 소유한 하드웨어를 떠나지 않습니다. 주요 선택은 모델 크기입니다. 더 크면 더 정확하지만 더 많은 연산이 필요합니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          'Whisper는 로컬에서 실행되는 오픈 음성→텍스트 모델입니다. 어떤 오디오도 직접 소유한 하드웨어를 떠나지 않습니다',
+          'Whisper 애드온(faster-whisper)을 사용하십시오. Wyoming을 통해 Assist에 연결됩니다',
+          '모델 크기는 tiny → base → small → medium → large입니다. 더 크면 더 정확하고 더 느립니다',
+          'CPU 전용 하드웨어에서는 tiny/base/small을 선호하십시오. GPU가 있으면 medium/large가 실용적입니다',
+          'Whisper는 다국어를 지원하므로 다른 언어 명령도 클라우드 서비스 없이 변환됩니다',
+          '더 큰 모델로 가기 전에 더 좋은 마이크와 올바른 모델로 정확도를 조정하십시오',
+        ],
+      },
+      whyLocalStt: {
+        id: 'why-local-stt',
+        title: '로컬 음성→텍스트를 사용하는 이유',
+        content:
+          '**로컬 음성→텍스트는 음성 녹음을 직접 소유한 하드웨어에 유지하므로 어떤 오디오도 제3자에게 업로드되지 않습니다.** 오프라인으로도 동작하고 요청당 비용도 없습니다.',
+        items: [
+          '**프라이버시:** 클라우드 어시스턴트는 녹음을 전송하고 보관할 수 있습니다. 로컬 Whisper는 그렇지 않습니다 — [스마트 홈 프라이버시 위험](/ko/smart-home/smart-home-privacy-risks)을 참조하십시오.',
+          '**오프라인:** 인터넷 장애 중에도 변환이 동작합니다.',
+          '**비용 없음:** 로컬 변환에 사용당 요금이 없습니다.',
+        ],
+      },
+      modelSizes: {
+        id: 'model-sizes',
+        title: '어떤 Whisper 모델 크기를 사용해야 합니까?',
+        content:
+          '**직접 소유한 하드웨어에서 허용 가능한 정확도를 제공하는 가장 작은 Whisper 모델을 선택하십시오. CPU 전용에는 tiny/base/small, GPU가 있을 때는 medium/large입니다.** 더 큰 모델은 억양과 잡음 있는 오디오에 대한 정확도를 속도를 희생해 향상합니다.',
+        columns: ['모델', '상대 정확도', '상대 속도', '최적 용도'],
+        rows: [
+          { '모델': 'tiny', '상대 정확도': '가장 낮음', '상대 속도': '가장 빠름', '최적 용도': '저전력 CPU, 짧은 명령' },
+          { '모델': 'base', '상대 정확도': '낮음', '상대 속도': '매우 빠름', '최적 용도': 'Raspberry Pi, 간단한 문장' },
+          { '모델': 'small', '상대 정확도': '양호', '상대 속도': '빠름', '최적 용도': '미니 PC CPU, 일상 사용' },
+          { '모델': 'medium', '상대 정확도': '높음', '상대 속도': '보통', '최적 용도': 'GPU 또는 강력한 CPU' },
+          { '모델': 'large', '상대 정확도': '가장 높음', '상대 속도': '가장 느림', '최적 용도': 'GPU, 억양/잡음 있는 공간' },
+        ],
+        items: [
+          '미니 PC CPU에서는 small을 기본값으로 사용하십시오. 정확도가 부족할 때만 medium/large로 전환하십시오.',
+          'Raspberry Pi에서는 사용 가능한 지연 시간을 유지하기 위해 tiny/base를 사용하십시오.',
+        ],
+      },
+      wyomingSetup: {
+        id: 'wyoming-setup',
+        title: 'Wyoming 설정',
+        content:
+          '**Whisper 애드온은 Assist가 음성→텍스트에 사용하는 Wyoming 엔드포인트를 노출합니다.** 설정은 설치 → 모델 선택 → 파이프라인에서 선택입니다.',
+        numberedItems: [
+          '애드온 스토어에서 Whisper 애드온(faster-whisper)을 설치하십시오.',
+          '애드온 설정에서 모델 크기를 설정하고 시작하십시오.',
+          '애드온이 자동으로 Wyoming 음성→텍스트 서비스로 등록됩니다.',
+          '설정 → 음성 어시스턴트에서 Assist 파이프라인의 STT 엔진으로 Whisper를 설정하십시오.',
+          '음성 하드웨어를 추가하기 전에 Assist 디버그 도구에서 변환을 테스트하십시오.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: '하드웨어 요구 사항',
+        content:
+          '**Whisper는 소형 모델의 경우 CPU에서 실행되고 medium/large 모델의 경우 GPU가 도움이 됩니다.** 호스팅하는 기기에 맞게 모델 크기를 조정하십시오.',
+        items: [
+          'Raspberry Pi: 허용 가능한 지연 시간을 위해 tiny/base를 유지하십시오.',
+          '미니 PC(CPU): small이 잘 동작합니다. medium은 가능하지만 더 느립니다 — [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
+          'GPU/NPU가 있을 때: 높은 정확도를 위해 medium과 large가 실용적이 됩니다.',
+          '허브가 Pi인 경우 Wyoming를 통해 더 강력한 별도 기기에서 Whisper를 실행할 수 있습니다.',
+        ],
+      },
+      tuning: {
+        id: 'tuning',
+        title: '정확도 조정',
+        content:
+          '**가장 큰 Whisper에 의존하기 전에 좋은 마이크와 올바른 모델로 개선하십시오.** 홈 명령의 경우 모델 크기보다 오디오 품질이 더 중요한 경우가 많습니다.',
+        items: [
+          '화자 근처에 품질 좋은 마이크 또는 음성 위성 하드웨어를 사용하십시오.',
+          '마이크가 있는 곳의 배경 소음을 줄이십시오.',
+          '잘못된 변환을 피하기 위해 애드온에서 올바른 언어를 설정하십시오.',
+          'large로 바로 건너뛰지 말고 한 번에 하나씩 모델 크기를 올리고 재테스트하십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: 'Home Assistant에 어떤 Whisper 모델을 사용해야 합니까?', a: '미니 PC CPU에서는 small을 기본값으로, Raspberry Pi에서는 tiny 또는 base를 사용하고, 억양이나 잡음 있는 공간에서 더 높은 정확도가 필요할 때만 GPU가 있을 경우 medium 또는 large를 사용하십시오. 한 번에 하나씩 크기를 올리고 재테스트하십시오.' },
+          { q: '로컬 Whisper에 GPU가 필요합니까?', a: 'small 이하에는 필요 없습니다. 이 모델들은 CPU에서 실행됩니다. GPU는 주로 medium과 large를 실시간 사용에 충분히 빠르게 만듭니다. Wyoming 프로토콜을 통해 더 강력한 기기에서 Whisper를 오프로드할 수도 있습니다.' },
+          { q: '로컬 Whisper 오프라인이 얼마나 정확합니까?', a: '올바른 모델과 좋은 마이크로 정확도가 강합니다. 더 큰 모델은 억양과 소음을 더 잘 처리합니다. 명확한 홈 명령의 경우 미니 PC의 small 모델이 보통 충분히 정확하며 완전히 오프라인으로 실행됩니다.' },
+          { q: '로컬 Whisper가 다국어를 지원합니까?', a: '예. Whisper는 많은 언어를 지원하므로 다른 언어 명령도 클라우드 서비스 없이 로컬에서 변환됩니다. 최상의 결과를 위해 애드온 설정에서 언어를 설정하십시오.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[완전 로컬 음성 어시스턴트 구축하기](/ko/smart-home/local-voice-assistant-smart-home) — Whisper가 맞는 완전한 음성 스택',
+          '[로컬 LLM으로 스마트 홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide) — LLM 두뇌 추가',
+          '[로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — Whisper를 실행하는 기기 크기 선택',
+          '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 클러스터 간: 모델과 하드웨어 심층 분석',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '스마트 홈용 로컬 음성→텍스트: Whisper + HA (2026)',
+      description: 'Home Assistant의 Whisper 2026: 로컬 음성→텍스트, 모델 크기, 필요한 하드웨어, 정확도 조정. 클라우드 없음, 오프라인 변환.',
+      url: 'https://www.promptquorum.com/ko/smart-home/local-whisper-home-assistant',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: '음성→텍스트' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: 'Home Assistant에 어떤 Whisper 모델을 사용해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: '미니 PC CPU에서는 small을 기본값으로, Raspberry Pi에서는 tiny 또는 base를 사용하고, 더 높은 정확도가 필요할 때만 GPU가 있을 경우 medium 또는 large를 사용하십시오.' } },
+        { '@type': 'Question', name: '로컬 Whisper에 GPU가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'small 이하에는 필요 없습니다. 이 모델들은 CPU에서 실행됩니다. GPU는 주로 medium과 large를 실시간 사용에 충분히 빠르게 만듭니다. Wyoming을 통해 오프로드할 수도 있습니다.' } },
+        { '@type': 'Question', name: '로컬 Whisper 오프라인이 얼마나 정확합니까?', acceptedAnswer: { '@type': 'Answer', text: '올바른 모델과 좋은 마이크로 강합니다. 더 큰 모델은 억양과 소음을 더 잘 처리합니다. 미니 PC의 small 모델이 명확한 홈 명령에 보통 충분히 정확합니다.' } },
+        { '@type': 'Question', name: '로컬 Whisper가 다국어를 지원합니까?', acceptedAnswer: { '@type': 'Answer', text: '예. Whisper는 많은 언어를 지원하므로 다른 언어 명령도 클라우드 서비스 없이 로컬에서 변환됩니다. 최상의 결과를 위해 애드온 설정에서 언어를 설정하십시오.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

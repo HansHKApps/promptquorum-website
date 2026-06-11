@@ -702,6 +702,180 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: '개인정보 보호법(PIPA) 준수 프라이빗 스마트홈 구축 가이드 (한국, 2026)',
+    seoTitle: '개인정보 보호법 준수 스마트홈 한국 2026: 클라우드 없이',
+    intro:
+      '로컬 스마트홈은 모든 처리를 자신의 하드웨어에서 수행하므로 설계에 의한 데이터 최소화와 데이터 상주를 지원하며, 외부 처리수탁자가 개입하지 않습니다. 이 가이드는 개인정보 보호법(PIPA)이 스마트 기기에 어떻게 적용되는지, 클라우드 기기가 데이터를 어디로 전송하는지, 로컬 처리를 통해 데이터 상주를 어떻게 달성하는지 설명하며, PIPA 준수 프라이빗 스마트홈 구축을 위한 체크리스트를 제공합니다.',
+    metaDescription:
+      '개인정보 보호법 준수 프라이빗 스마트홈 2026: 데이터 상주, 클라우드 없음, 로컬 음성·AI. 홈 데이터를 항상 내 하드웨어에 보관하는 한국 가이드.',
+    twitterDescription:
+      'PIPA 준수 스마트홈은 처리를 로컬로 유지합니다: 설계에 의한 데이터 상주, 외부 처리자 없음, 로컬 음성·AI. 한국 가이드.',
+    readTime: '8분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '개인정보 보호에 맞는 스마트홈을 원하는 한국 가정',
+    primaryTerm: 'PIPA private smart home Korea',
+    targetKeywords: [
+      '개인정보 보호법 스마트홈 프라이버시',
+      '프라이빗 스마트홈 한국',
+      '개인정보 보호법 스마트 기기',
+      '스마트홈 데이터 상주',
+      '로컬 스마트홈 개인정보 보호법',
+    ],
+    leadAnswerBlock:
+      '**로컬 스마트홈은 설계에 의해 개인정보 보호법(PIPA)을 지원합니다: 처리가 자신의 하드웨어에서 이루어지므로 기기, 음성, 카메라 데이터가 최소화되고 외부 처리수탁자 없이 관할권 내에 유지됩니다.** 로컬 음성과 로컬 AI는 클라우드 처리수탁자를 완전히 제거합니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 스마트홈은 개인정보 보호법(PIPA)을 준수합니까?',
+        answer:
+          '예. 로컬 스마트홈은 기기, 음성, 카메라 데이터를 자신의 하드웨어에서 처리하므로 설계에 의한 데이터 최소화와 데이터 상주 원칙을 지원하며, 외부 처리수탁자가 가정 데이터를 처리하지 않습니다. 반면 클라우드 기기는 개인 데이터를 처리수탁자 역할을 하는 제조사 서버로 전송합니다.',
+        bullets: [
+          '로컬 처리는 데이터를 집과 관할권 내에 유지합니다',
+          '가정 데이터에 외부 처리수탁자가 없습니다',
+          '로컬 음성(Whisper/Piper)은 클라우드 음성 처리를 방지합니다',
+          '설계에 의한 데이터 최소화와 데이터 상주를 지원합니다',
+          '클라우드 기기는 개인 데이터를 제조사 처리수탁자에게 전송합니다',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: 'PIPA와 스마트 가전', anchor: 'gdpr-home' },
+      { label: '클라우드 기기의 데이터 전송 경로', anchor: 'cloud-data' },
+      { label: '로컬 처리를 통한 데이터 상주', anchor: 'residency' },
+      { label: '로컬 음성·AI', anchor: 'local-voice-ai' },
+      { label: '한국 체크리스트', anchor: 'checklist' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '로컬 스마트홈은 기기, 음성, 카메라 데이터를 자신의 하드웨어에서 처리하여 외부 처리수탁자 없이 PIPA에 따른 데이터 최소화와 상주를 지원합니다.' },
+      { type: 'plain-terms', content: '개인정보 보호법(PIPA) 하에서 가정 데이터를 기업 클라우드로 전송하면 해당 기업이 처리수탁자가 됩니다. 로컬 스마트홈은 모든 처리를 자신의 하드웨어에서 수행하여 이를 방지하므로 데이터가 관할권 내에 유지되고 외부에서 처리되지 않습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          '로컬 처리는 기기, 음성, 카메라 데이터를 집과 관할권 내에 유지합니다',
+          '클라우드가 없으면 가정 데이터를 처리하는 외부 처리수탁자가 없습니다',
+          '로컬 음성(Whisper + Piper)과 로컬 LLM은 클라우드 음성/AI 처리를 방지합니다',
+          '이는 설계에 의한 PIPA 데이터 최소화 및 상주 원칙을 지원합니다',
+          '클라우드 기기는 개인 데이터를 처리수탁자 역할을 하는 제조사 서버로 전송합니다',
+          '구체적인 상황에 맞는 자세한 내용은 개인정보보호 전문가와 상담하십시오',
+        ],
+      },
+      gdprHome: {
+        id: 'gdpr-home',
+        title: 'PIPA와 스마트 가전',
+        content:
+          '**개인정보 보호법(PIPA)은 개인 데이터를 규율하며, 스마트홈은 재실 정보, 루틴, 음성, 영상 등 많은 데이터를 생성합니다.** 해당 데이터가 처리되는 위치가 누가 개입하고 얼마나 노출되는지를 결정합니다.',
+        items: [
+          '스마트홈 데이터(재실, 녹음, 영상)는 PIPA 하에서 개인 데이터입니다.',
+          '클라우드 처리는 외부 처리수탁자를 도입합니다(PIPA 제26조 유사 의무 적용).',
+          '로컬 처리는 외부 수탁자 없이 귀하가 통제권을 유지합니다.',
+        ],
+      },
+      cloudData: {
+        id: 'cloud-data',
+        title: '클라우드 기기의 데이터 전송 경로',
+        content:
+          '**클라우드 스마트홈 기기는 사용 데이터, 음성 쿼리, 카메라 영상을 제조사 서버로 전송하며, 때로는 국외로 전송됩니다.** 이는 제조사를 처리수탁자로 만들고 데이터 이전 문제를 야기할 수 있습니다.',
+        items: [
+          '사용 데이터 및 텔레메트리가 제조사 분석 시스템으로 전송됩니다.',
+          '음성 어시스턴트는 녹음을 클라우드에서 처리합니다.',
+          '카메라 영상이 제조사 서버에 저장됩니다 — [스마트홈 프라이버시 위험](/ko/smart-home/smart-home-privacy-risks)을 참조하십시오.',
+        ],
+      },
+      residency: {
+        id: 'residency',
+        title: '로컬 처리를 통한 데이터 상주',
+        content:
+          '**로컬 처리는 기본적으로 데이터 상주를 달성합니다: 데이터가 집을 떠나지 않으므로 관할권 내에 유지됩니다.** 이는 PIPA의 데이터 상주 및 최소화 원칙을 직접적으로 지원합니다.',
+        items: [
+          '로컬 허브(Home Assistant)는 현장에서 자동화를 처리합니다 — [로컬 스마트홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
+          '기기 외부로 데이터가 전송되지 않으므로 국경 간 이전이 없습니다.',
+          '집에 남아 있는 데이터만 수집하여 데이터 수집을 최소화합니다.',
+        ],
+      },
+      localVoiceAi: {
+        id: 'local-voice-ai',
+        title: '로컬 음성·AI = 외부 처리수탁자 없음',
+        content:
+          '**로컬 음성과 로컬 LLM은 가장 민감한 데이터인 음성과 가정 맥락에 대한 클라우드 처리수탁자를 제거합니다.** 모든 연산이 자신의 하드웨어에서 이루어집니다. 개인정보보호위원회(PIPC)가 집행하는 개인정보 보호법(PIPA) 하에서 음성 데이터는 민감 정보로 분류될 수 있으며, 처리를 로컬에 유지하면 제3자 처리수탁자 위험이 완전히 제거됩니다.',
+        items: [
+          '로컬 Whisper 및 Piper가 음성 처리를 기기에서 유지합니다 — [완전 로컬 음성 어시스턴트 구축](/ko/smart-home/local-voice-assistant-smart-home)을 참조하십시오.',
+          '[Ollama 통합](/ko/smart-home/home-assistant-ollama-integration)을 통한 로컬 LLM이 자연어 처리를 로컬에서 수행합니다.',
+          '일반적인 로컬 프라이빗 AI는 [로컬 LLM이란?](/ko/local-llms/what-are-local-llms)(클러스터 간)을 참조하십시오.',
+        ],
+      },
+      checklist: {
+        id: 'checklist',
+        title: '한국 체크리스트',
+        content:
+          '**가정 데이터를 집에 유지하려면 로컬 지원 기기, 로컬 허브, 로컬 음성/AI를 우선시하십시오.** 표는 PIPA 관련 항목에서 클라우드와 로컬을 대조합니다. 이 가이드는 개인정보 보호법(PIPA) 및 개인정보보호위원회(PIPC) 집행에 초점을 맞추고 있으며, 처리를 로컬에 유지하는 논리는 한국의 개인정보 보호 원칙과 직접적으로 부합합니다.',
+        columns: ['항목', '클라우드 기기', '로컬 구성'],
+        rows: [
+          { '항목': '데이터 위치', '클라우드 기기': '제조사 데이터센터', '로컬 구성': '내 집' },
+          { '항목': '처리수탁자', '클라우드 기기': '제조사(제3자)', '로컬 구성': '외부 없음' },
+          { '항목': '음성 데이터', '클라우드 기기': '클라우드에서 처리', '로컬 구성': '기기 내(Whisper/Piper)' },
+          { '항목': 'PIPA 준수 태세', '클라우드 기기': '이전/수탁자 문제', '로컬 구성': '설계에 의한 데이터 상주' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '스마트홈 기기는 PIPA와 관련이 있습니까?', a: '예. 스마트홈 기기는 재실, 루틴, 음성, 영상 등 개인 데이터를 생성합니다. PIPA 하에서 해당 데이터가 처리되는 방식과 위치가 중요하며, 데이터를 제조사 서버로 전송하는 클라우드 기기는 외부 처리수탁자를 도입합니다.' },
+          { q: '로컬이면 처리수탁자가 없습니까?', a: '가정 데이터에 관해서는 그렇습니다: 로컬 처리는 모든 것을 자신의 하드웨어에 유지하므로 외부 당사자가 처리하지 않습니다. 귀하가 데이터 통제권을 유지하며, 이는 PIPA의 최소화 및 상주 원칙을 지원합니다.' },
+          { q: '음성 데이터는 PIPA에서 특히 문제가 됩니까?', a: '음성 녹음은 민감한 개인 데이터이며, 클라우드 어시스턴트는 제조사 서버에서 처리합니다. 로컬 음성-텍스트 변환(Whisper)과 텍스트-음성 변환(Piper)을 사용하면 음성 처리가 기기 내에서 이루어지므로 음성에 대한 클라우드 처리수탁자가 없습니다.' },
+          { q: '한국에서 호스팅되는 스마트홈 옵션이 있습니까?', a: '로컬 우선 구성이 가장 강력한 프라이버시 옵션입니다. 데이터가 집을 떠나지 않으므로 호스팅 위치 문제 자체가 없습니다. 사용하는 클라우드 기능에 대해서는 제공자가 데이터를 어디서 처리하는지 확인하고 구체적인 필요에 맞는 개인정보보호 전문가와 상담하십시오.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[스마트홈 프라이버시 위험](/ko/smart-home/smart-home-privacy-risks) — PIPA 준수 구성이 방지하는 위험',
+          '[로컬 스마트홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide) — 프라이빗 스택 구축',
+          '[Ollama를 Home Assistant에 연결](/ko/smart-home/home-assistant-ollama-integration) — 로컬 AI, 클라우드 처리수탁자 없음',
+          '[로컬 LLM이란?](/ko/local-llms/what-are-local-llms) — 클러스터 간: 로컬 프라이빗 AI',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '개인정보 보호법(PIPA) 준수 프라이빗 스마트홈 구축 가이드 (한국, 2026)',
+      description: '개인정보 보호법 준수 프라이빗 스마트홈 2026: 데이터 상주, 클라우드 없음, 로컬 음성·AI. 홈 데이터를 항상 내 하드웨어에 보관하는 한국 가이드.',
+      url: 'https://www.promptquorum.com/ko/smart-home/private-smart-home-gdpr',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '개인정보 보호법(PIPA)' }, { '@type': 'Thing', name: '스마트홈 프라이버시' }, { '@type': 'Thing', name: '데이터 상주' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '스마트홈 기기는 PIPA와 관련이 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예. 스마트홈 기기는 재실, 루틴, 음성, 영상 등 개인 데이터를 생성합니다. 데이터를 제조사 서버로 전송하는 클라우드 기기는 PIPA 하에서 외부 처리수탁자를 도입합니다.' } },
+        { '@type': 'Question', name: '로컬이면 처리수탁자가 없습니까?', acceptedAnswer: { '@type': 'Answer', text: '가정 데이터에 관해서는 그렇습니다: 로컬 처리는 모든 것을 자신의 하드웨어에 유지하므로 외부 당사자가 처리하지 않아 PIPA의 최소화 및 상주 원칙을 지원합니다.' } },
+        { '@type': 'Question', name: '음성 데이터는 PIPA에서 특히 문제가 됩니까?', acceptedAnswer: { '@type': 'Answer', text: '음성 녹음은 민감 개인 데이터이며 클라우드 어시스턴트는 제조사 서버에서 처리합니다. 로컬 Whisper와 Piper는 음성 처리를 기기 내에서 수행합니다.' } },
+        { '@type': 'Question', name: '한국에서 호스팅되는 스마트홈 옵션이 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '로컬 우선 구성이 가장 강력한 옵션입니다. 데이터가 집을 떠나지 않으므로 호스팅 위치 문제가 없습니다. 사용 중인 클라우드 기능에 대해서는 제공자 처리 위치를 확인하고 전문가와 상담하십시오.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

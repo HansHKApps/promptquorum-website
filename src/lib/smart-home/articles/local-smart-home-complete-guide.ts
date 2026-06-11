@@ -850,6 +850,218 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: '클라우드 없는 로컬 스마트 홈 완전 가이드 (2026)',
+    seoTitle: '로컬 스마트 홈 2026: 클라우드 없는 완전 가이드',
+    intro:
+      '로컬 스마트 홈은 모든 기기, 자동화, 음성 명령을 직접 소유한 하드웨어에서 처리합니다. 클라우드 계정이 필요 없습니다. 이 가이드는 로컬 퍼스트 모델을 정의하고, 2026년에 성장하는 이유를 설명하며, 허브, 프로토콜, 음성, 로컬 AI 두뇌 등 아키텍처를 계층별로 분석합니다. 오늘 집에서 실행할 수 있는 것, 비용, 시작 방법을 확인하십시오.',
+    metaDescription:
+      '로컬 스마트 홈은 모든 기기와 자동화를 직접 소유한 하드웨어에서 실행합니다. 클라우드 없음, 오프라인 동작, 완전한 프라이버시. 2026 가이드.',
+    twitterDescription:
+      '클라우드 없는 스마트 홈: 모든 기기, 자동화, 음성 명령이 직접 소유한 하드웨어에서 실행됩니다. 2026을 위한 완전한 로컬 퍼스트 아키텍처.',
+    readTime: '11분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '자체 호스팅 스마트 홈을 구성하는 프라이버시 중시 사용자',
+    primaryTerm: 'local smart home',
+    targetKeywords: [
+      '클라우드 없는 로컬 스마트 홈',
+      '로컬 스마트 홈',
+      '자체 호스팅 스마트 홈',
+      '프라이빗 스마트 홈',
+      '오프라인 스마트 홈',
+    ],
+    leadAnswerBlock:
+      '**로컬 스마트 홈은 모든 기기, 자동화, 음성 명령을 직접 소유한 하드웨어에서 처리합니다. 클라우드 계정 없음, 집 밖으로 나가는 데이터 없음, 인터넷이 끊겨도 완전히 동작합니다.** 아키텍처는 로컬 허브(Home Assistant), 로컬 프로토콜(Matter/Thread, Zigbee, Z-Wave), 로컬 음성, 그리고 2026년의 새로운 요소인 자동화 두뇌로서의 로컬 LLM입니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 스마트 홈이란 무엇입니까?',
+        answer:
+          '로컬 스마트 홈은 허브, 기기, 자동화, 음성 제어가 제조사 클라우드가 아닌 집의 하드웨어에서 실행되는 구성입니다. 오프라인으로 동작하고, 구독이 필요 없으며, 사용 데이터를 제3자에게 전송하지 않습니다. Home Assistant가 가장 많이 사용되는 로컬 퍼스트 허브입니다.',
+        bullets: [
+          '제어 플레인이 제조사 클라우드가 아닌 집(Home Assistant)에서 실행됩니다',
+          '인터넷 또는 제조사 클라우드 장애 시에도 동작합니다',
+          '구독 없음, 외부 데이터 처리자 없음',
+          '로컬 음성(Whisper + Piper)이 Alexa/Google을 대체합니다',
+          '로컬 LLM이 자연어로 자동화 두뇌 역할을 할 수 있습니다',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: '의미', anchor: 'what-it-means' },
+      { label: '로컬이 성장하는 이유', anchor: 'why-local' },
+      { label: '로컬 퍼스트 아키텍처', anchor: 'the-stack' },
+      { label: '로컬에서 실행 가능한 것', anchor: 'what-you-can-run' },
+      { label: '비용과 노력', anchor: 'cost-effort' },
+      { label: '시작 방법', anchor: 'how-to-start' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '로컬 스마트 홈은 허브, 기기, 자동화, 음성 제어를 직접 소유한 하드웨어에서 실행합니다. 클라우드 계정 없음, 오프라인 동작.' },
+      { type: 'plain-terms', content: '대부분의 스마트 홈은 제조사 클라우드를 통해 명령을 전송합니다. 버튼을 누르면 요청이 회사 서버로 이동하고, 서버가 기기에 명령을 내립니다. 로컬 스마트 홈은 서버를 제거합니다. 집의 허브(일반적으로 Home Assistant)가 로컬 프로토콜로 기기에 직접 통신하므로 인터넷이 끊겨도 작동하고 사용 데이터가 네트워크 밖으로 나가지 않습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          '로컬 제어는 허브에서 기기까지의 명령 경로가 집 안에 머문다는 의미입니다. 클라우드 제어는 제조사 서버를 통해 라우팅합니다',
+          '로컬 허브(Raspberry Pi 또는 미니 PC의 Home Assistant)를 기반으로 사용하십시오',
+          '기본적으로 로컬에서 동작하는 Matter/Thread, Zigbee, Z-Wave 기기를 선호하십시오',
+          'Alexa/Google을 로컬 음성으로 교체하십시오: Home Assistant Assist + Whisper(음성→텍스트) + Piper(텍스트→음성)',
+          '2026년 신기능: Ollama의 로컬 LLM이 자연어 제어와 문맥 인식 자동화를 동일한 기기에서 실행할 수 있습니다',
+          '트레이드오프: 초기 설정에 더 많은 노력이 필요하지만 프라이버시, 오프라인 안정성, 구독 없음을 얻습니다',
+        ],
+      },
+      whatItMeans: {
+        id: 'what-it-means',
+        title: '로컬 스마트 홈의 실제 의미',
+        content:
+          '**로컬 스마트 홈은 제어 경로 — "조명을 켜고 싶다"는 의도와 실제로 켜지는 조명 사이의 연결 — 를 완전히 집 안에 유지합니다.** 클라우드 스마트 홈은 그 명령을 먼저 제조사 서버로 전송하지만 로컬은 그렇지 않습니다. 경계는 어떤 브랜드를 구매하느냐가 아니라 결정이 어디서 이루어지느냐입니다.',
+        items: [
+          '**클라우드 제어:** 앱 또는 음성 어시스턴트가 명령을 제조사 클라우드로 전송하고 클라우드가 기기에 중계합니다. 클라우드나 인터넷이 끊기면 기기가 응답하지 않습니다.',
+          '**로컬 제어:** 집의 허브(Home Assistant)가 로컬 프로토콜로 기기에 직접 명령을 전송합니다. 인터넷 왕복 없음, 제3자 서버 없음.',
+          '**구분이 중요한 이유:** 로컬 제어는 프라이버시(사용 기록이 집 밖으로 나가지 않음), 안정성(오프라인으로 동작), 지속성(클라우드 서비스 종료가 기기를 무용지물로 만들 수 없음)을 결정합니다.',
+        ],
+        columns: ['항목', '클라우드 스마트 홈', '로컬 스마트 홈'],
+        rows: [
+          { '항목': '프라이버시', '클라우드 스마트 홈': '사용, 음성, 카메라 데이터가 제조사 서버에 존재', '로컬 스마트 홈': '데이터가 직접 소유한 하드웨어에 남아 있음' },
+          { '항목': '오프라인 동작', '클라우드 스마트 홈': '아니오: 대부분의 기능에 클라우드 필요', '로컬 스마트 홈': '예: LAN에서 실행됨' },
+          { '항목': '구독', '클라우드 스마트 홈': '일반적(카메라 스토리지, 프리미엄 기능)', '로컬 스마트 홈': '없음: 하드웨어 일회 비용' },
+          { '항목': '데이터 위치', '클라우드 스마트 홈': '제조사 데이터센터(종종 해외)', '로컬 스마트 홈': '집' },
+          { '항목': '설정 노력', '클라우드 스마트 홈': '낮음: 앱 안내', '로컬 스마트 홈': '높음: 허브를 직접 관리' },
+          { '항목': 'AI 기능', '클라우드 스마트 홈': '클라우드 어시스턴트(Alexa, Google)', '로컬 스마트 홈': '로컬 음성 + 선택적 로컬 LLM' },
+        ],
+      },
+      whyLocal: {
+        id: 'why-local',
+        title: '2026년에 로컬 퍼스트가 성장하는 이유',
+        content:
+          '**클라우드의 단점이 구체화되면서 로컬 퍼스트 채택이 증가하고 있습니다. 하드웨어를 무용지물로 만드는 서비스 종료, 반복 구독료, 장애, 프라이버시 노출 등이 발생했으며 동시에 로컬 AI를 집에서 실행할 수 있게 되었습니다.** 각각은 일반적인 선호가 아닌 구체적이고 검증 가능한 이유입니다.',
+        items: [
+          '**클라우드 서비스 종료가 기기를 무용지물로 만듭니다:** 제조사가 제품의 클라우드를 중단하면 의존하는 기기가 핵심 기능을 갑자기 잃을 수 있습니다. 로컬 기기는 외부 의존성이 없으므로 계속 동작합니다.',
+          '**안정성:** 로컬 스마트 홈은 인터넷 장애와 클라우드 사고 시에도 응답합니다. 조명, 잠금장치, 자동화가 원격 서버의 활성 상태에 의존하지 않습니다.',
+          '**프라이버시:** 클라우드 기기는 사용 패턴, 음성 녹음, 카메라 영상을 수집합니다. 로컬 제어는 외부 처리자를 완전히 제거합니다. [스마트 홈 프라이버시 위험](/ko/smart-home/smart-home-privacy-risks)을 참조하십시오.',
+          '**구독 없음:** 로컬 카메라 녹화와 로컬 자동화는 클라우드 생태계가 스토리지와 프리미엄 기능에 연결하는 월정액을 피할 수 있습니다.',
+          '**로컬 AI가 이제 실용적입니다:** 소형 모델이 미니 PC에서 실행되어 로컬 LLM이 자동화 두뇌 역할을 할 수 있습니다. 몇 년 전에는 가정 사용자에게 존재하지 않았던 일입니다. [로컬 LLM으로 스마트 홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide)를 참조하십시오.',
+        ],
+      },
+      theStack: {
+        id: 'the-stack',
+        title: '로컬 퍼스트 아키텍처 계층별 분석',
+        content:
+          '**로컬 스마트 홈은 네 가지 계층입니다. 허브, 로컬 기기 프로토콜, 로컬 음성, 선택적 로컬 AI 두뇌입니다.** 이 순서대로 구축하십시오. 허브 먼저, AI 마지막입니다.',
+        numberedItems: [
+          { title: '허브 — Home Assistant', whyItMatters: '제어 플레인입니다. Home Assistant는 Raspberry Pi, 미니 PC, NAS에서 실행되며 기기에 직접 통신하는 오픈소스 소프트웨어입니다. 여기서 시작하십시오: [Home Assistant 시작하기](/ko/smart-home/home-assistant-getting-started)를 참조하십시오.' },
+          { title: '프로토콜 — Matter/Thread, Zigbee, Z-Wave', whyItMatters: '기기가 로컬에서 통신하는 방법입니다. Zigbee와 Z-Wave는 성숙한 저전력 메시 표준이고 Thread는 최신 메시이며 Matter는 통합 계층입니다. 제조사 클라우드 없이 동작합니다: [Matter 로컬 제어 가이드](/ko/smart-home/matter-local-control-guide)를 참조하십시오.' },
+          { title: '로컬 음성 — Assist + Whisper + Piper', whyItMatters: 'Alexa와 Google을 대체합니다. Home Assistant Assist가 의도를 처리하고 Whisper가 음성→텍스트, Piper가 텍스트→음성을 담당하며 모두 오프라인으로 동작합니다: [완전 로컬 음성 어시스턴트 구축하기](/ko/smart-home/local-voice-assistant-smart-home)를 참조하십시오.' },
+          { title: 'AI 두뇌 — Ollama를 통한 로컬 LLM', whyItMatters: '선택적인 상위 계층입니다. 로컬 모델이 경직된 규칙을 자연어 제어와 문맥 인식 자동화로 변환하며 동일한 기기에서 클라우드 없이 실행됩니다.' },
+        ],
+      },
+      whatYouCanRun: {
+        id: 'what-you-can-run',
+        title: '오늘 로컬에서 실행할 수 있는 것',
+        content:
+          '**조명, 냉난방, 보안, 센서, 음성, AI 자동화 모두 2026년에 로컬에서 실행됩니다. 클라우드는 선택 사항이지 필수가 아닙니다.** 아래 표는 각 카테고리를 로컬 옵션에 매핑합니다.',
+        columns: ['카테고리', '로컬 옵션', '비고'],
+        rows: [
+          { '카테고리': '조명', '로컬 옵션': 'Zigbee/Matter 전구 + Home Assistant', '비고': '즉각적인 로컬 응답, 앱 클라우드 로그인 없음' },
+          { '카테고리': '냉난방', '로컬 옵션': '로컬 온도 조절기 / Zigbee 또는 Z-Wave 밸브', '비고': '일정과 자동화가 허브에서 실행됨' },
+          { '카테고리': '보안', '로컬 옵션': '로컬 카메라 + Frigate', '비고': '기기 내 AI 감지. 아래 로컬 AI 카메라 참조' },
+          { '카테고리': '센서', '로컬 옵션': 'Zigbee/Z-Wave 동작, 도어, 온도 센서', '비고': '인터넷 없이 자동화 트리거' },
+          { '카테고리': '음성', '로컬 옵션': 'Assist + Whisper + Piper', '비고': '웨이크 워드와 명령어 완전 오프라인' },
+          { '카테고리': 'AI 자동화', '로컬 옵션': 'Ollama를 통한 로컬 LLM', '비고': '자연어 제어와 문맥 인식 규칙' },
+        ],
+        items: [
+          '프라이빗 AI 카메라의 경우 [Frigate](/ko/smart-home/local-ai-security-camera)가 구독 없이 로컬에서 객체 및 인물 감지를 실행합니다.',
+          '로컬 LLM을 포함한 이 모든 것을 실행하는 하드웨어는 [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
+        ],
+      },
+      costEffort: {
+        id: 'cost-effort',
+        title: '비용과 필요한 노력',
+        content:
+          '**로컬 스마트 홈은 더 많은 초기 설정 노력을 제로 구독과 장기 제어권으로 교환합니다.** 솔직한 요약: 월정액과 제조사 의존성 대신 일회 하드웨어 비용과 주말 한 번의 시간을 투자합니다.',
+        items: [
+          '**하드웨어:** Raspberry Pi로 기본 로컬 허브를 실행할 수 있습니다. 로컬 LLM도 함께 실행하고 싶다면 미니 PC가 더 나은 선택입니다. 반복 구독료가 아닌 일회 하드웨어 비용을 고려하십시오.',
+          '**노력:** Home Assistant 설정, 기기 페어링, 첫 자동화 작성에 학습 곡선이 있습니다. 보상은 어떤 제조사도 변경하거나 중단할 수 없는 시스템입니다.',
+          '**로컬 퍼스트 방식을 선택하십시오 (해당하는 경우):** 프라이버시, 오프라인 안정성, 구독 회피가 중요한 경우.',
+          '**클라우드를 유지하십시오 (해당하는 경우):** 제로 유지 관리와 설정을 절대 건드리지 않기를 원하는 경우. 단, 데이터, 장애, 구독의 단점은 감수하십시오. [로컬이 클라우드보다 나은 이유](/ko/smart-home/why-local-smart-home-beats-cloud)를 참조하십시오.',
+        ],
+      },
+      howToStart: {
+        id: 'how-to-start',
+        title: '로컬 스마트 홈 시작 방법',
+        content:
+          '**허브와 방 하나로 시작하고 확장하십시오. 기기를 집 전체에 먼저 구매하지 마십시오.** 가장 빠르고 안정적인 경로는 Raspberry Pi 또는 미니 PC의 Home Assistant, Zigbee 코디네이터, 몇 가지 로컬 기기입니다.',
+        numberedItems: [
+          'Raspberry Pi 또는 미니 PC에 Home Assistant를 설치하십시오 — [시작 가이드](/ko/smart-home/home-assistant-getting-started).',
+          '로컬 AI를 원한다면 여유 있는 하드웨어를 선택하십시오 — [하드웨어 가이드](/ko/smart-home/best-hardware-for-local-smart-home).',
+          'Matter/Thread, Zigbee, Z-Wave로 기본적으로 로컬인 기기를 추가하십시오 — [Matter 로컬 제어](/ko/smart-home/matter-local-control-guide).',
+          '기기가 동작하면 로컬 음성을 추가하십시오 — [로컬 음성 어시스턴트](/ko/smart-home/local-voice-assistant-smart-home).',
+          '마지막으로 로컬 LLM 두뇌를 추가하십시오 — [로컬 LLM으로 스마트 홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide).',
+          'EU 독자라면 프라이버시 입장을 확인하십시오 — [GDPR 준수 프라이빗 스마트 홈](/ko/smart-home/private-smart-home-gdpr).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '로컬 스마트 홈 설정이 어렵습니까?', a: '플러그앤플레이 방식의 클라우드 설정보다 더 많은 노력이 필요합니다. 특히 Home Assistant 설치와 기기 페어링이 그렇습니다. 대부분의 사용자는 주말에 허브를 동작시키고 첫 번째 자동화를 완성한 후 점차 확장합니다. 일반적인 설정에는 프로그래밍이 필요 없지만 고급 자동화를 위한 YAML을 사용할 수 있습니다.' },
+          { q: '로컬 스마트 홈이 인터넷 없이 동작합니까?', a: '예. 허브와 기기가 로컬 네트워크로 통신하므로 조명, 잠금장치, 센서, 자동화가 인터넷이나 클라우드 장애 시에도 계속 동작합니다. 집 밖에서의 원격 접근과 클라우드 알림 등 인터넷 의존 기능만 잃습니다.' },
+          { q: '로컬 스마트 홈에 구독이 필요합니까?', a: '아니요. Home Assistant는 무료 오픈소스이며 로컬 기기에는 반복 요금이 없습니다. 일회 하드웨어 비용만 지불합니다. 쉬운 원격 접근을 위한 클라우드 릴레이 같은 선택적 유료 부가 기능이 있지만 기본 로컬 제어에는 구독이 필요 없습니다.' },
+          { q: '스마트 홈에서 AI를 로컬로 실행할 수 있습니까?', a: '예. Ollama를 통한 로컬 LLM이 Home Assistant 내에서 대화 에이전트와 자동화 두뇌로 동작하여 클라우드 없이 직접 소유한 하드웨어에서 자연어로 기기를 제어할 수 있습니다. 미니 PC는 소형 모델을 원활하게 처리합니다. 로컬 LLM 스마트 홈 가이드를 참조하십시오.' },
+          { q: '로컬 스마트 홈이 GDPR을 준수합니까?', a: '로컬 처리는 기기, 음성, 카메라 데이터를 집의 하드웨어에 유지하여 외부 처리자가 개입하지 않으므로 설계상 GDPR 데이터 최소화 및 데이터 거주 원칙을 지원합니다. EU 체크리스트는 GDPR 준수 프라이빗 스마트 홈 가이드를 참조하십시오.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[Home Assistant 시작하기](/ko/smart-home/home-assistant-getting-started) — 아키텍처의 기반이 되는 로컬 허브 설치',
+          '[로컬 스마트 홈이 클라우드보다 나은 이유](/ko/smart-home/why-local-smart-home-beats-cloud) — 안정성, 프라이버시, 비용 논거',
+          '[로컬 LLM으로 스마트 홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide) — 자연어 AI 두뇌 추가',
+          '[완전 로컬 음성 어시스턴트 구축하기](/ko/smart-home/local-voice-assistant-smart-home) — Assist + Whisper + Piper로 Alexa 대체',
+          '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 클러스터 간: LLM 실행 방법',
+          '[가장 쉬운 로컬 AI 앱](/ko/power-local-llm/easiest-local-ai-app-windows-mac-linux) — 동일한 하드웨어의 로컬 AI 앱',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '클라우드 없는 로컬 스마트 홈 완전 가이드 (2026)',
+      description: '로컬 스마트 홈은 모든 기기와 자동화를 직접 소유한 하드웨어에서 실행합니다. 클라우드 없음, 오프라인 동작, 완전한 프라이버시. 2026 가이드.',
+      url: 'https://www.promptquorum.com/ko/smart-home/local-smart-home-complete-guide',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '로컬 스마트 홈' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '스마트 홈 프라이버시' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '로컬 스마트 홈 설정이 어렵습니까?', acceptedAnswer: { '@type': 'Answer', text: '클라우드 설정보다 더 많은 노력이 필요하며 특히 Home Assistant 설치와 기기 페어링이 그렇습니다. 대부분의 사용자는 주말에 허브를 동작시킵니다. 일반적인 설정에는 프로그래밍이 필요 없습니다.' } },
+        { '@type': 'Question', name: '로컬 스마트 홈이 인터넷 없이 동작합니까?', acceptedAnswer: { '@type': 'Answer', text: '예. 허브와 기기가 로컬 네트워크로 통신하므로 조명, 잠금장치, 센서, 자동화가 인터넷 또는 클라우드 장애 시에도 계속 동작합니다.' } },
+        { '@type': 'Question', name: '로컬 스마트 홈에 구독이 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '아니요. Home Assistant는 무료 오픈소스이며 로컬 기기에는 반복 요금이 없습니다. 일회 하드웨어 비용만 지불합니다.' } },
+        { '@type': 'Question', name: '스마트 홈에서 AI를 로컬로 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예. Ollama를 통한 로컬 LLM이 Home Assistant 내에서 자동화 두뇌로 동작하여 클라우드 없이 자연어로 기기를 제어합니다.' } },
+        { '@type': 'Question', name: '로컬 스마트 홈이 GDPR을 준수합니까?', acceptedAnswer: { '@type': 'Answer', text: '로컬 처리는 기기, 음성, 카메라 데이터를 집에 유지하여 외부 처리자 없이 설계상 GDPR 데이터 최소화와 데이터 거주 원칙을 지원합니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

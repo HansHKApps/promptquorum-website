@@ -738,6 +738,190 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-05',
+    next_refresh_due: '2026-12-04',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'Home Assistant + 로컬 AI를 위한 최고의 미니 PC (2026)',
+    seoTitle: '2026년 Home Assistant + 로컬 AI를 위한 최고의 미니 PC',
+    intro:
+      '하나의 기기에서 Home Assistant와 로컬 LLM을 실행하기 위한 최고의 미니 PC는 RAM과 고성능 내장 GPU 또는 NPU를 우선시합니다. 이 구매 가이드는 단일 머신에서 HA + AI에 필요한 것을 설명하고, 주요 미니 PC 클래스를 비교하며, 예산 대비 성능을 따지고, 설정 메모를 다룹니다. VRAM 심층 정보는 local-llms 하드웨어 가이드로 크로스 링크합니다.',
+    metaDescription:
+      '2026년 Home Assistant + 로컬 LLM을 하나의 미니 PC에서: RAM과 iGPU 또는 NPU가 가장 중요합니다. 워크로드별 예산 N-시리즈, Ryzen/Core i, NPU 옵션 비교.',
+    twitterDescription:
+      'Home Assistant + 로컬 LLM을 하나의 기기에서 실행하기 위한 최고의 미니 PC: RAM과 고성능 iGPU/NPU를 우선시하십시오. 클래스 비교, 예산별 선택.',
+    readTime: '8분 분량',
+    educationalLevel: 'Intermediate',
+    audience: 'Home Assistant와 로컬 AI를 위한 미니 PC를 선택하는 구매자',
+    primaryTerm: 'best mini PC Home Assistant local AI',
+    targetKeywords: [
+      'home assistant 로컬 AI 최고의 미니 PC',
+      '미니 PC home assistant LLM',
+      'home assistant 로컬 AI 하드웨어',
+      '미니 PC ollama home assistant',
+      'home assistant 미니 PC 2026',
+    ],
+    leadAnswerBlock:
+      '**Home Assistant와 로컬 LLM을 위한 최고의 미니 PC는 충분한 RAM과 고성능 내장 GPU 또는 NPU를 갖추어 허브와 소형 모델을 하나의 기기에서 실행합니다.** AI 지연 시간을 위해 CPU 클럭보다 RAM과 그래픽/NPU를 우선시하십시오.',
+    quickAnswerTop: {
+      ko: {
+        question: 'Home Assistant와 로컬 AI에 가장 적합한 미니 PC는 무엇입니까?',
+        answer:
+          '충분한 RAM(Home Assistant 옆에서 모델을 실행하기 위해 많을수록 좋습니다)과 소형 LLM의 응답성을 유지하기 위한 고성능 내장 GPU 또는 NPU가 있는 미니 PC를 선택하십시오. 저전력 Intel N-시리즈 기기는 Home Assistant와 매우 소형 모델을 실행합니다. 강력한 iGPU가 있는 AMD Ryzen 또는 Core i-시리즈 미니 PC는 7B 모델을 더 잘 처리합니다.',
+        bullets: [
+          'CPU 클럭보다 RAM과 고성능 iGPU/NPU를 우선시하십시오',
+          '저전력 N-시리즈: HA + 매우 소형 모델',
+          '강력한 iGPU가 있는 Ryzen / Core i-시리즈: HA + 7B 모델',
+          '하나의 기기로 HA, Ollama, Whisper, Frigate를 함께 실행합니다',
+          'VRAM 심층 정보는 local-llms 하드웨어 가이드를 참조하십시오',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'TL;DR', anchor: 'tldr' },
+      { label: 'HA + LLM에 필요한 것', anchor: 'what-you-need' },
+      { label: '미니 PC 클래스', anchor: 'classes' },
+      { label: '비교', anchor: 'comparison' },
+      { label: '예산 대 성능', anchor: 'budget-performance' },
+      { label: '설정 메모', anchor: 'setup-notes' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Home Assistant와 로컬 LLM을 위한 최고의 미니 PC는 허브와 소형 모델을 하나의 기기에서 실행하기 위한 충분한 RAM과 고성능 iGPU 또는 NPU를 갖추고 있습니다.' },
+      { type: 'plain-terms', content: '미니 PC는 스마트 홈 전체와 로컬 AI 모델을 실행할 수 있는 소형 저전력 컴퓨터입니다. 가장 중요한 두 가지는 RAM(모델과 허브를 수용하기에 충분한)과 고성능 그래픽 칩 또는 NPU(AI 응답성 유지)입니다. CPU 클럭 속도는 덜 중요합니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        items: [
+          '원시 CPU 클럭보다 RAM과 고성능 내장 GPU 또는 NPU를 우선시하십시오',
+          '저전력 Intel N-시리즈 미니 PC는 Home Assistant와 매우 소형 모델을 실행합니다',
+          '강력한 iGPU가 있는 AMD Ryzen 또는 Intel Core i-시리즈 미니 PC는 7B 모델을 처리합니다',
+          '하나의 미니 PC로 Home Assistant, Ollama, Whisper, Frigate를 함께 실행할 수 있습니다',
+          '더 많은 RAM으로 허브 옆에서 더 큰 모델을 실행할 수 있습니다',
+          'VRAM 세부 사항은 크로스 클러스터 local-llms 하드웨어 가이드를 참조하십시오',
+        ],
+      },
+      whatYouNeed: {
+        id: 'what-you-need',
+        title: '하나의 기기에서 HA + LLM에 필요한 것',
+        content:
+          '**모델과 Home Assistant를 수용하기에 충분한 RAM과 모델의 응답성을 유지하기 위한 고성능 iGPU 또는 NPU가 필요합니다.** CPU 클럭은 이 워크로드에서 부차적입니다.',
+        items: [
+          'RAM: 원하는 모델 크기와 허브 및 부가 기능을 위한 충분한 여유.',
+          '그래픽/NPU: 고성능 내장 GPU 또는 NPU는 LLM 및 Whisper 지연 시간을 줄입니다.',
+          '저장소: Frigate도 실행한다면 녹화를 위한 공간 — [로컬 AI 보안 카메라](/ko/smart-home/local-ai-security-camera)를 참조하십시오.',
+        ],
+      },
+      classes: {
+        id: 'classes',
+        title: '미니 PC 클래스',
+        content:
+          '**세 가지 클래스가 대부분의 요구를 충족합니다: 경량 AI를 위한 저전력 N-시리즈, 7B 모델을 위한 강력한 iGPU가 있는 Ryzen/Core i-시리즈, 효율적인 온-디바이스 AI를 위한 NPU 탑재 미니 PC.** 원하는 모델 크기에 따라 선택하십시오.',
+        items: [
+          '**저전력 Intel N-시리즈:** 효율적이고 저렴합니다. Home Assistant와 매우 소형 모델을 실행하며 AI는 느립니다. 예시: Beelink EQ14 또는 GMKtec G3 Plus (Intel N150).',
+          '**강력한 iGPU가 있는 AMD Ryzen / Intel Core i-시리즈:** 사용 가능한 지연 시간으로 7B 모델을 위한 더 많은 RAM 및 그래픽 여유. 예시: Beelink SER8 (Ryzen 7 8845HS, Radeon 780M) 또는 Minisforum UM890 Pro.',
+          '**NPU 탑재 미니 PC:** 신경 처리 장치가 있는 최신 머신. 강력한 내장 GPU(NPU가 아님)가 로컬 LLM 작업을 담당하고 NPU는 Frigate 같은 비전 작업을 지원합니다. 예시: GEEKOM A9 Max (Ryzen AI 9 HX 370).',
+        ],
+        affiliateLinks: [
+          { label: 'Beelink EQ14 (Intel N150)', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'GMKtec G3 Plus (Intel N150)', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Ryzen 7 8845HS)', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max (Ryzen AI 9 HX 370)', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '비교',
+        content:
+          '**목표 모델에 맞게 클래스를 선택하십시오: 소형 모델에는 N-시리즈, 7B 모델에는 강력한 iGPU가 있는 Ryzen/Core i.** 가격은 상대적입니다.',
+        columns: ['미니 PC 클래스', 'CPU', 'RAM 지침', '로컬 LLM 실행', '상대적 가격'],
+        rows: [
+          { '미니 PC 클래스': '저전력 N-시리즈', 'CPU': 'Intel N-시리즈', 'RAM 지침': '중간', '로컬 LLM 실행': '매우 소형 모델, 느림', '상대적 가격': '저가' },
+          { '미니 PC 클래스': 'Ryzen / Core i (강력한 iGPU)', 'CPU': 'AMD Ryzen / Intel Core i', 'RAM 지침': '충분', '로컬 LLM 실행': '사용 가능한 지연 시간으로 ~7B까지', '상대적 가격': '중가' },
+          { '미니 PC 클래스': 'NPU 탑재', 'CPU': '현대 CPU + NPU', 'RAM 지침': '충분', '로컬 LLM 실행': '효율적인 소형/중형 모델', '상대적 가격': '중~고가' },
+        ],
+        items: [
+          'VRAM 및 양자화 심도는 크로스 클러스터 [로컬 LLM을 위한 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm)를 참조하십시오.',
+        ],
+      },
+      budgetPerformance: {
+        id: 'budget-performance',
+        title: '예산 대 성능',
+        content:
+          '**허용 가능한 지연 시간으로 목표 모델을 실행하는 가장 저렴한 기기를 구매하십시오. 일반적으로 7B 모델을 위한 강력한 iGPU가 있는 Ryzen/Core i 미니 PC입니다.** 사용하지 않을 CPU에 과도하게 지출하지 마십시오.',
+        items: [
+          '경제적: 매우 소형 모델과 함께 HA를 위한 저전력 N-시리즈 기기.',
+          '균형적: 7B 모델을 위한 강력한 iGPU가 있는 Ryzen/Core i 미니 PC.',
+          '더 넓은 하드웨어 결정(Pi 대 미니 PC 대 NAS)은 [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
+        ],
+      },
+      setupNotes: {
+        id: 'setup-notes',
+        title: '설정 메모',
+        content:
+          '**Home Assistant OS 또는 컨테이너를 실행하고, Ollama를 설치하며, 추론에 iGPU/NPU가 사용되는지 확인하십시오.** 안정성을 위해 기기를 네트워크에 유선으로 연결하십시오.',
+        items: [
+          'Home Assistant를 설치하십시오 — [시작하기](/ko/smart-home/home-assistant-getting-started)를 참조하십시오.',
+          'Ollama를 설치하고 소형 모델을 다운로드하십시오 — [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama)을 참조하십시오.',
+          'Ollama를 Home Assistant에 연결하십시오 — [Ollama 통합 가이드](/ko/smart-home/home-assistant-ollama-integration)를 참조하십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '하나의 미니 PC로 Home Assistant와 로컬 LLM 모두 실행할 수 있습니까?', a: '네. 충분한 RAM과 고성능 내장 GPU 또는 NPU가 있는 미니 PC는 Home Assistant와 소형 로컬 LLM을 함께 실행하고 Whisper와 Frigate를 추가할 수 있습니다. 이 단일 기기 접근 방식이 로컬 AI 스마트 홈을 구축하는 가장 간단한 방법입니다.' },
+          { q: 'RAM이 얼마나 필요합니까?', a: '목표 모델과 Home Assistant 및 부가 기능을 수용하기에 충분한 양이 필요합니다. 소형 모델은 적당한 RAM만 필요하지만 허브 옆에서 7B 모델을 편안하게 실행하려면 충분한 RAM이 도움이 됩니다. 실행할 가장 큰 모델에 맞게 RAM을 선택하십시오.' },
+          { q: 'Home Assistant 미니 PC에는 Intel과 AMD 중 어느 것이 좋습니까?', a: '둘 다 작동합니다. 저전력 Intel N-시리즈 기기는 경량 사용에 가장 저렴하고, 강력한 내장 GPU가 있는 AMD Ryzen 또는 Intel Core i 미니 PC는 7B 모델을 더 잘 처리합니다. 원하는 모델 크기와 지연 시간에 따라 선택하십시오.' },
+          { q: '로컬 LLM을 실행하는 가장 저렴한 미니 PC는 무엇입니까?', a: '저전력 Intel N-시리즈 미니 PC가 Home Assistant와 매우 소형 모델을 실행할 수 있는 가장 저렴한 것이지만 응답이 더 느립니다. 더 빠른 7B급 어시스턴트를 원한다면 강력한 iGPU가 있는 Ryzen 또는 Core i 미니 PC로 업그레이드하십시오.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — Pi 대 미니 PC 대 NAS 대 서버',
+          '[로컬 LLM으로 스마트 홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide) — 기기가 실행하는 것',
+          '[Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration) — 모델 연결',
+          '[로컬 LLM을 위한 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm) — 크로스 클러스터: VRAM 및 하드웨어 심층 정보',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Home Assistant + 로컬 AI를 위한 최고의 미니 PC (2026)',
+      description: '2026년 Home Assistant + 로컬 LLM을 하나의 미니 PC에서: RAM과 iGPU 또는 NPU가 가장 중요합니다. 워크로드별 예산 N-시리즈, Ryzen/Core i, NPU 옵션 비교.',
+      url: 'https://www.promptquorum.com/ko/smart-home/best-mini-pc-home-assistant-local-ai',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-05',
+      about: [{ '@type': 'Thing', name: '미니 PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '로컬 LLM' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '하나의 미니 PC로 Home Assistant와 로컬 LLM 모두 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '네. 충분한 RAM과 고성능 iGPU 또는 NPU가 있는 미니 PC는 Home Assistant와 소형 로컬 LLM을 함께 실행하고 Whisper와 Frigate를 추가할 수 있습니다.' } },
+        { '@type': 'Question', name: 'RAM이 얼마나 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '목표 모델과 Home Assistant 및 부가 기능을 수용하기에 충분한 양이 필요합니다. 소형 모델은 적당한 RAM만 필요하지만 7B 모델을 편안하게 실행하려면 충분한 RAM이 도움이 됩니다.' } },
+        { '@type': 'Question', name: 'Home Assistant 미니 PC에는 Intel과 AMD 중 어느 것이 좋습니까?', acceptedAnswer: { '@type': 'Answer', text: '둘 다 작동합니다. 저전력 Intel N-시리즈 기기는 경량 사용에 가장 저렴하고, 강력한 iGPU가 있는 AMD Ryzen 또는 Intel Core i는 7B 모델을 더 잘 처리합니다.' } },
+        { '@type': 'Question', name: '로컬 LLM을 실행하는 가장 저렴한 미니 PC는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '저전력 Intel N-시리즈 미니 PC가 Home Assistant와 매우 소형 모델을 실행할 수 있지만 응답이 더 느립니다. 더 빠른 7B 어시스턴트를 원한다면 강력한 iGPU가 있는 Ryzen 또는 Core i로 업그레이드하십시오.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

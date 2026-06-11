@@ -710,6 +710,182 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: '스마트홈 개인정보 위험 (2026): 기기가 아는 것들',
+    seoTitle: '스마트홈 개인정보 위험 2026: 기기 수집 항목',
+    intro:
+      '클라우드 스마트홈 기기는 이용 패턴, 음성 녹음, 카메라 영상을 기업 서버에 수집합니다. 해결책은 로컬 제어입니다. 이 가이드는 실제 개인정보 위험, 클라우드 생태계의 수집 항목, 침해와 데이터 공유가 중요한 이유, 그리고 로컬 AI를 포함한 로컬 우선 설정이 어떻게 제3자 처리자를 완전히 제거하는지 설명합니다.',
+    metaDescription:
+      '스마트홈 개인정보 위험: 클라우드 데이터 수집, 항상 듣는 마이크, 카메라 영상, 침해, 제3자 공유 — 로컬 제어로 해결하는 방법.',
+    twitterDescription:
+      '스마트홈 기기가 아는 것: 클라우드 이용 데이터, 음성 녹음, 카메라 영상. 해결책은 로컬 제어와 로컬 AI입니다.',
+    readTime: '8분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '개인정보를 중시하는 스마트홈 소유자',
+    primaryTerm: 'smart home privacy risks',
+    targetKeywords: [
+      '스마트홈 개인정보 위험',
+      '스마트홈 데이터 수집',
+      '스마트 스피커 도청 여부',
+      '스마트홈 보안 위험',
+      '프라이빗 스마트홈',
+    ],
+    leadAnswerBlock:
+      '**클라우드 스마트홈 기기는 이용 패턴, 음성 녹음, 카메라 영상을 기업 서버에 수집하며 침해와 제3자 공유에 노출됩니다. 해결책은 데이터를 집 안에 유지하는 로컬 제어입니다.** 로컬 우선 설정은 제3자 처리자를 완전히 제거합니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '스마트홈의 개인정보 위험은 무엇입니까?',
+        answer:
+          '클라우드 연결 스마트홈 기기는 이용 데이터, 음성 녹음, 카메라 영상을 기업 서버로 전송하며, 보관·제3자 공유·침해 노출 위험이 있습니다. 항상 듣는 어시스턴트와 클라우드 카메라가 가장 위험한 기기입니다. 로컬 제어로 전환하면 해당 데이터를 자신의 하드웨어에 유지할 수 있습니다.',
+        bullets: [
+          '클라우드 이용 데이터는 생활 패턴과 재실 여부를 노출합니다',
+          '음성 어시스턴트는 녹음을 클라우드에서 처리합니다',
+          '클라우드 카메라는 영상을 제조사 서버에 저장합니다',
+          '침해와 공유로 데이터가 노출됩니다',
+          '로컬 제어는 제3자 처리자를 제거합니다',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: '실제 위험', anchor: 'real-risks' },
+      { label: '각 생태계의 수집 항목', anchor: 'what-collected' },
+      { label: '침해와 노출', anchor: 'breaches' },
+      { label: '해결책: 로컬 우선', anchor: 'the-fix' },
+      { label: '실행 체크리스트', anchor: 'checklist' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '클라우드 스마트홈 기기는 이용 데이터, 음성 녹음, 카메라 영상을 기업 서버에 수집합니다. 로컬 제어는 해당 데이터를 집 안에 유지합니다.' },
+      { type: 'plain-terms', content: '클라우드에 의존하는 스마트홈 기기는 귀하의 집에 관한 정보를 기업 서버로 전송합니다. 언제 집에 오고 가는지, 스피커에 무슨 말을 하는지, 카메라가 무엇을 보는지가 포함됩니다. 그 데이터는 보관·공유·유출될 수 있습니다. 모든 것을 로컬에서 실행하면 아무것도 집 밖으로 나가지 않습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          '클라우드 이용 데이터는 귀하의 일상 패턴과 재실 여부를 드러냅니다',
+          '음성 어시스턴트는 처리를 위해 녹음을 클라우드로 전송합니다',
+          '클라우드 카메라는 영상을 제조사 서버에 저장하며 구독 서비스 뒤에 있는 경우가 많습니다',
+          '저장된 데이터는 침해와 제3자 공유에 노출됩니다',
+          '로컬 제어는 데이터를 귀하의 하드웨어에 유지하고 제3자 처리자를 제거합니다',
+          '로컬 AI(음성 및 LLM)를 통해 클라우드 없이 스마트 기능을 유지할 수 있습니다',
+        ],
+      },
+      realRisks: {
+        id: 'real-risks',
+        title: '실제 개인정보 위험',
+        content:
+          '**실제 위험은 클라우드 데이터 수집, 항상 듣는 어시스턴트, 카메라 영상, 침해, 제3자 공유입니다.** 각각은 데이터가 집을 떠나 다른 사람의 서버에 저장되기 때문에 발생합니다.',
+        items: [
+          '**이용 데이터:** 기기 로그는 언제 기상하고 외출하고 귀가하는지 드러냅니다.',
+          '**항상 듣는 어시스턴트:** 음성 질의는 처리되며 클라우드에 보관될 수 있습니다.',
+          '**카메라 영상:** 클라우드 카메라는 영상을 제조사 서버에 업로드합니다.',
+          '**침해와 공유:** 저장된 데이터는 노출되거나 제3자와 공유될 수 있습니다.',
+        ],
+      },
+      whatCollected: {
+        id: 'what-collected',
+        title: '각 생태계의 수집 항목',
+        content:
+          '**클라우드 우선 생태계는 로컬보다 더 많이 수집합니다. 이용·음성·영상을 수집하며 로컬 설정은 기기 외부에서 아무것도 수집하지 않습니다.** 개인정보 수준은 클라우드에서 실행되는 비율에 따라 결정됩니다.',
+        items: [
+          '클라우드 우선 생태계(Alexa, Google Home)는 음성을 처리하고 이용 데이터를 서버에 저장합니다.',
+          'Apple Home은 개인정보를 더 중시하지만 일부 기능에서는 여전히 클라우드에 연결됩니다.',
+          'Home Assistant는 기본적으로 데이터를 로컬에 유지합니다 — [스마트홈 생태계 비교](/ko/smart-home/smart-home-ecosystems-compared)를 참조하십시오.',
+        ],
+      },
+      breaches: {
+        id: 'breaches',
+        title: '침해와 노출',
+        content:
+          '**기업 서버에 저장된 모든 데이터는 침해, 정책 변경, 통제할 수 없는 제3자 공유에 노출됩니다.** 제공업체로부터 유출될 수 없는 유일한 데이터는 제공업체가 받지 않은 데이터입니다.',
+        items: [
+          '중앙화된 영상과 녹음은 침해의 매력적인 표적입니다.',
+          '개인정보 처리방침이 변경되어 데이터 사용 방식이 확장될 수 있습니다.',
+          '로컬 처리는 데이터를 전송하지 않음으로써 문제를 완전히 방지합니다.',
+        ],
+      },
+      theFix: {
+        id: 'the-fix',
+        title: '해결책: 로컬 우선과 로컬 AI',
+        content:
+          '**해결책은 로컬 제어입니다. 허브, 음성, AI를 자신의 하드웨어에서 실행하여 데이터가 집 밖으로 나가지 않도록 합니다.** 제3자 처리자 없이 스마트 기능을 유지할 수 있습니다. 한국 개인정보 보호법(PIPA)과 개인정보보호위원회(PIPC)는 개인정보 최소 처리를 권장하며, 제3자가 관여하지 않는 로컬 우선 설정은 이를 충족합니다.',
+        items: [
+          '로컬 허브와 로컬 기기로 전환하십시오 — [완전한 로컬 스마트홈 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
+          '클라우드 음성을 로컬 어시스턴트로 교체하십시오 — [Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration)를 참조하십시오.',
+          'EU/GDPR 관점은 [GDPR 친화적 프라이빗 스마트홈 구축](/ko/smart-home/private-smart-home-gdpr)을 참조하십시오.',
+          '프라이빗 로컬 AI 전반은 [로컬 LLM이란](/ko/local-llms/what-are-local-llms)을 참조하십시오(크로스 클러스터).',
+        ],
+      },
+      checklist: {
+        id: 'checklist',
+        title: '개인정보 실행 체크리스트',
+        content:
+          '**가장 노출도가 높은 클라우드 기기를 로컬 기기로 교체하여 위험을 줄이십시오. 카메라와 음성부터 시작하십시오.** 교체할 때마다 집 밖으로 나가는 데이터 흐름이 하나씩 제거됩니다.',
+        columns: ['위험', '클라우드 설정', '로컬 설정'],
+        rows: [
+          { '위험': '음성', '클라우드 설정': '녹음이 클라우드에서 처리됨', '로컬 설정': '로컬 Whisper + Piper, 기기 내 처리' },
+          { '위험': '카메라', '클라우드 설정': '영상이 제조사 서버에 저장됨', '로컬 설정': 'Frigate, 영상이 집 안에 유지됨' },
+          { '위험': '이용 데이터', '클라우드 설정': '제조사가 기록함', '로컬 설정': '허브에만 저장됨' },
+          { '위험': '자동화', '클라우드 설정': '클라우드에서 실행됨', '로컬 설정': '로컬 허브에서 실행됨' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '스마트 스피커는 항상 듣고 있습니까?', a: '클라우드 음성 어시스턴트는 로컬에서 웨이크 워드를 감지한 후 이후 오디오를 클라우드로 전송하여 처리합니다. 음성 질의가 전송되고 보관될 수 있습니다. 로컬 음성 어시스턴트는 모든 것을 귀하의 하드웨어에서 처리합니다.' },
+          { q: '카메라 영상은 어디로 갑니까?', a: '클라우드 카메라는 영상을 제조사 서버에 업로드하며 구독 서비스 뒤에 있는 경우가 많습니다. Frigate를 이용한 로컬 설정은 영상을 귀하의 하드웨어에 유지하므로 집 밖으로 나가지 않습니다.' },
+          { q: '데이터 수집을 중단할 수 있습니까?', a: '클라우드 기기의 경우 설정을 통해 수집을 제한할 수 있지만 완전히 중단하기는 어렵습니다. 신뢰할 수 있는 해결책은 로컬 가능 기기와 로컬 허브로 전환하여 데이터가 애초에 제조사에게 전송되지 않도록 하는 것입니다.' },
+          { q: '로컬 스마트홈은 실제로 프라이빗합니까?', a: '그렇습니다. 로컬 허브, 로컬 음성, 로컬 AI를 사용하면 기기 데이터, 녹음, 자동화가 제3자 처리자 없이 귀하의 하드웨어에 유지됩니다. 이것이 로컬 우선 설정을 설계 단계부터 프라이빗하게 만드는 요소입니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[완전한 로컬 스마트홈 가이드](/ko/smart-home/local-smart-home-complete-guide) — 전체 해결책',
+          '[GDPR 친화적 프라이빗 스마트홈 구축](/ko/smart-home/private-smart-home-gdpr) — EU 개인정보 관점',
+          '[Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration) — 프라이빗 로컬 AI 제어',
+          '[로컬 LLM이란](/ko/local-llms/what-are-local-llms) — 크로스 클러스터: 프라이빗 로컬 AI',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '스마트홈 개인정보 위험 (2026): 기기가 아는 것들',
+      description: '스마트홈 개인정보 위험: 클라우드 데이터 수집, 항상 듣는 마이크, 카메라 영상, 침해, 제3자 공유 — 로컬 제어로 해결하는 방법.',
+      url: 'https://www.promptquorum.com/ko/smart-home/smart-home-privacy-risks',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '스마트홈 개인정보' }, { '@type': 'Thing', name: '데이터 수집' }, { '@type': 'Thing', name: '로컬 제어' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '스마트 스피커는 항상 듣고 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '클라우드 음성 어시스턴트는 로컬에서 웨이크 워드를 감지한 후 이후 오디오를 클라우드로 전송합니다. 질의가 전송되고 보관될 수 있습니다. 로컬 어시스턴트는 모든 것을 귀하의 하드웨어에서 처리합니다.' } },
+        { '@type': 'Question', name: '카메라 영상은 어디로 갑니까?', acceptedAnswer: { '@type': 'Answer', text: '클라우드 카메라는 영상을 제조사 서버에 업로드하며 구독 서비스 뒤에 있는 경우가 많습니다. Frigate를 이용한 로컬 설정은 영상을 귀하의 하드웨어에 유지합니다.' } },
+        { '@type': 'Question', name: '데이터 수집을 중단할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '클라우드 기기는 제한할 수 있지만 완전히 중단하기는 어렵습니다. 신뢰할 수 있는 해결책은 로컬 가능 기기와 로컬 허브로 전환하는 것입니다.' } },
+        { '@type': 'Question', name: '로컬 스마트홈은 실제로 프라이빗합니까?', acceptedAnswer: { '@type': 'Answer', text: '그렇습니다. 로컬 허브, 로컬 음성, 로컬 AI를 사용하면 기기 데이터, 녹음, 자동화가 제3자 처리자 없이 귀하의 하드웨어에 유지됩니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

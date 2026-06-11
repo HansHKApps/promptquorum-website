@@ -746,6 +746,192 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: 'Matter, Thread, Zigbee, Z-Wave: 프로토콜 설명 (2026)',
+    seoTitle: '스마트홈 프로토콜 2026: Matter, Thread, Zigbee, Z-Wave',
+    intro:
+      '스마트홈 프로토콜은 기기 간 통신 방식, 도달 범위, 로컬 작동 여부를 결정합니다. 이 가이드는 Zigbee, Z-Wave, Thread, Matter의 범위·전력 소비·상호 운용성, 그리고 기본적으로 로컬인 프로토콜을 알기 쉽게 설명합니다. 신뢰할 수 있는 프라이빗 설정을 위한 올바른 선택을 돕습니다.',
+    metaDescription:
+      'Matter, Thread, Zigbee, Z-Wave 알기 쉬운 설명: 범위, 전력, 메시, 상호 운용성, 기본 로컬 여부. 올바른 프로토콜 선택 방법.',
+    twitterDescription:
+      'Zigbee vs Z-Wave vs Thread vs Matter: 범위, 전력, 상호 운용성, 기본 로컬 프로토콜에 관한 알기 쉬운 가이드.',
+    readTime: '8분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '프로토콜 기준으로 스마트홈 기기를 선택하는 사람',
+    primaryTerm: 'smart home protocols',
+    targetKeywords: [
+      'Matter Thread Zigbee Z-Wave 차이',
+      '스마트홈 프로토콜 설명',
+      'Zigbee vs Z-Wave',
+      'Matter 스마트홈이란',
+      'Thread 프로토콜 스마트홈',
+    ],
+    leadAnswerBlock:
+      '**Zigbee와 Z-Wave는 성숙한 저전력 메시 프로토콜이고, Thread는 현대적인 IP 기반 저전력 메시이며, Matter는 Thread·Wi-Fi·Ethernet 위에서 실행되어 기기를 통합하는 애플리케이션 계층 표준입니다.** Zigbee, Z-Wave, Thread는 기본적으로 로컬이며 Matter는 로컬 컨트롤러를 통해 로컬로 실행될 수 있습니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'Matter, Thread, Zigbee, Z-Wave의 차이는 무엇입니까?',
+        answer:
+          'Zigbee와 Z-Wave는 센서 및 제어 장치를 위한 검증된 저전력 무선 메시 프로토콜입니다. Thread는 IP 기반의 최신 저전력 메시입니다. Matter는 무선 방식이 아니라 Thread·Wi-Fi·Ethernet 위에서 실행되어 서로 다른 브랜드의 기기가 함께 작동하도록 하는 표준입니다. Zigbee, Z-Wave, Thread는 기본적으로 로컬입니다.',
+        bullets: [
+          'Zigbee: 2.4 GHz 개방형 메시, 방대한 기기 선택지',
+          'Z-Wave: 서브 GHz 메시, 간섭 적음, 긴 범위',
+          'Thread: 현대적인 IP 기반 저전력 메시',
+          'Matter: Thread/Wi-Fi/Ethernet 위의 표준, 무선 방식 아님',
+          'Zigbee, Z-Wave, Thread는 기본적으로 로컬',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: '프로토콜이 중요한 이유', anchor: 'why-protocols' },
+      { label: 'Zigbee', anchor: 'zigbee' },
+      { label: 'Z-Wave', anchor: 'z-wave' },
+      { label: 'Thread', anchor: 'thread' },
+      { label: 'Matter (통합자)', anchor: 'matter' },
+      { label: '선택 기준', anchor: 'which-to-choose' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Zigbee와 Z-Wave는 성숙한 저전력 메시 무선 방식이고, Thread는 현대적인 IP 기반 메시이며, Matter는 그 위에서 실행되어 기기를 통합하는 표준입니다.' },
+      { type: 'plain-terms', content: '프로토콜은 스마트홈 기기가 사용하는 언어입니다. Zigbee와 Z-Wave는 오래되고 신뢰할 수 있는 무선 메시입니다. Thread는 인터넷 표준을 기반으로 한 최신 메시입니다. Matter는 무선 방식이 전혀 아닙니다. 서로 다른 브랜드 기기가 함께 작동하도록 하는 공통 표준이며 클라우드 없이 실행될 수 있습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          'Zigbee: 가장 넓은 기기 생태계를 가진 2.4 GHz 개방형 메시, 코디네이터 필요',
+          'Z-Wave: 간섭 적고 범위 좋은 서브 GHz 메시, 성숙하고 신뢰할 수 있음',
+          'Thread: Matter의 많은 부분을 지탱하는 현대적인 IP 기반 저전력 메시',
+          'Matter: Thread, Wi-Fi, Ethernet 위의 애플리케이션 계층 표준(무선 방식 아님)',
+          'Zigbee, Z-Wave, Thread는 기본적으로 로컬; Matter는 로컬 컨트롤러를 통해 로컬로 실행',
+          '기기 가용성, 서브 GHz 범위(Z-Wave) 또는 폭넓은 선택지(Zigbee) 중 원하는 것에 따라 선택',
+        ],
+      },
+      whyProtocols: {
+        id: 'why-protocols',
+        title: '프로토콜이 중요한 이유',
+        content:
+          '**기기가 사용하는 프로토콜은 범위, 배터리 수명, 신뢰성, 클라우드 없이 작동 가능 여부를 결정합니다.** 호환 프로토콜을 선택하면 호환되지 않는 기기로 가득 찬 서랍을 피할 수 있습니다.',
+        items: [
+          '**신뢰성:** 메시 프로토콜은 기기 간 신호를 중계하여 커버리지를 확장합니다.',
+          '**로컬 제어:** 로컬 프로토콜은 인터넷 없이 허브를 통해 작동합니다 — [완전한 로컬 스마트홈 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
+          '**호환성:** 기기의 프로토콜을 지원하는 허브가 기기를 연결합니다.',
+        ],
+      },
+      zigbee: {
+        id: 'zigbee',
+        title: 'Zigbee',
+        content:
+          '**Zigbee는 가장 넓은 범위의 저가 기기를 가진 개방형 2.4 GHz 저전력 메시 프로토콜입니다.** 코디네이터(USB 스틱 또는 허브)가 필요하며 유선 전원 기기를 통해 중계합니다.',
+        items: [
+          '전구, 센서, 플러그, 스위치의 방대한 생태계를 보유합니다.',
+          'Wi-Fi와 2.4 GHz 대역을 공유하므로 배치 위치가 중요합니다.',
+          '허브의 Zigbee 코디네이터를 통해 기본적으로 로컬입니다.',
+        ],
+      },
+      zwave: {
+        id: 'z-wave',
+        title: 'Z-Wave',
+        content:
+          '**Z-Wave는 간섭이 적고 범위가 좋은 서브 GHz 저전력 메시 프로토콜로, 신뢰할 수 있는 홈 컨트롤 기기로 유명합니다.** Wi-Fi 및 Zigbee와 다른 주파수 대역을 사용합니다.',
+        items: [
+          '서브 GHz 대역(지역별 주파수)에서 작동하여 2.4 GHz 혼잡을 피합니다.',
+          '신뢰할 수 있는 잠금장치, 센서, 제어 장치로 강한 명성을 가집니다.',
+          'Z-Wave 컨트롤러를 통해 기본적으로 로컬입니다.',
+        ],
+      },
+      thread: {
+        id: 'thread',
+        title: 'Thread',
+        content:
+          '**Thread는 각 기기에 IP 주소를 부여하고 Matter의 많은 부분을 지탱하는 현대적인 IPv6 기반 저전력 메시입니다.** 네트워크에 연결하려면 Thread 보더 라우터가 필요합니다.',
+        items: [
+          'IP 기반이므로 현대 네트워크와 깔끔하게 통합됩니다.',
+          'Thread 보더 라우터가 필요합니다(일부 허브와 스피커에 내장).',
+          'Matter 기기의 기반입니다 — [Matter 로컬 제어](/ko/smart-home/matter-local-control-guide)를 참조하십시오.',
+        ],
+      },
+      matter: {
+        id: 'matter',
+        title: 'Matter: 통합자',
+        content:
+          '**Matter는 무선 방식이 아닌 애플리케이션 계층 표준으로, Thread·Wi-Fi·Ethernet 위에서 실행되어 서로 다른 브랜드 기기가 상호 운용되도록 합니다.** 로컬 컨트롤러를 통해 로컬로 실행될 수 있어 클라우드 의존도를 줄입니다.',
+        items: [
+          'Matter는 브랜드 전반에서 기기를 설명하고 제어하는 방식을 표준화합니다.',
+          'Thread(저전력 기기) 또는 Wi-Fi/Ethernet(유선 전원 기기) 위에서 실행됩니다.',
+          'Home Assistant와 같은 로컬 Matter 컨트롤러로 로컬 제어가 가능합니다.',
+        ],
+      },
+      whichToChoose: {
+        id: 'which-to-choose',
+        title: '어떤 프로토콜을 선택해야 합니까?',
+        content:
+          '**가장 넓은 저가 기기 선택지를 원하면 Zigbee, 서브 GHz 범위와 적은 간섭을 원하면 Z-Wave, 미래 지향적 상호 운용성을 원하면 Matter-over-Thread를 선택하십시오.** Home Assistant 같은 허브는 이 모두를 지원합니다.',
+        columns: ['프로토콜', '대역/범위', '전력', '메시', '기본 로컬', '성숙도'],
+        rows: [
+          { '프로토콜': 'Zigbee', '대역/범위': '2.4 GHz, 중간', '전력': '낮음', '메시': '예', '기본 로컬': '예', '성숙도': '성숙' },
+          { '프로토콜': 'Z-Wave', '대역/범위': '서브 GHz, 양호', '전력': '낮음', '메시': '예', '기본 로컬': '예', '성숙도': '성숙' },
+          { '프로토콜': 'Thread', '대역/범위': '2.4 GHz, 중간', '전력': '낮음', '메시': '예', '기본 로컬': '예', '성숙도': '성장 중' },
+          { '프로토콜': 'Matter', '대역/범위': 'Thread/Wi-Fi 위', '전력': '다양', '메시': 'Thread 경유', '기본 로컬': '로컬 컨트롤러 필요', '성숙도': '성장 중' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: 'Matter는 프로토콜입니까, 표준입니까?', a: 'Matter는 무선 프로토콜이 아닌 애플리케이션 계층 표준입니다. 기기를 설명하고 제어하는 방식을 정의하며 Thread·Wi-Fi·Ethernet 같은 전송 계층 위에서 실행됩니다. 그렇기 때문에 서로 다른 브랜드의 기기를 통합할 수 있습니다.' },
+          { q: 'Thread가 필요합니까?', a: 'Thread 보더 라우터가 필요한 Thread 기반 또는 Matter-over-Thread 기기를 사용할 경우에만 필요합니다. 많은 허브와 일부 스피커에 내장되어 있습니다. Zigbee 및 Z-Wave 기기는 Thread를 사용하지 않으며 별도의 코디네이터가 필요합니다.' },
+          { q: 'Zigbee vs Z-Wave — 어느 것이 더 낫습니까?', a: 'Zigbee는 2.4 GHz 대역에서 가장 넓고 저렴한 기기 선택지를 제공합니다. Z-Wave는 간섭이 적고 범위가 좋은 서브 GHz 주파수를 사용합니다. 기기 선택지를 위해서는 Zigbee를, 2.4 GHz 혼잡 환경에서의 신뢰성을 위해서는 Z-Wave를 선택하십시오.' },
+          { q: '이 프로토콜들은 로컬입니까, 클라우드입니까?', a: 'Zigbee, Z-Wave, Thread는 기본적으로 로컬이며 인터넷 없이 허브를 통해 작동합니다. Matter는 로컬 컨트롤러를 통해 로컬로 실행될 수 있지만 일부 Matter 기기는 클라우드 기능도 제공할 수 있습니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[Matter와 로컬 제어](/ko/smart-home/matter-local-control-guide) — 클라우드 브리지 없이 Matter와 Thread 사용하기',
+          '[Home Assistant: 시작하기 가이드](/ko/smart-home/home-assistant-getting-started) — 이 모든 프로토콜을 지원하는 허브',
+          '[스마트홈 생태계 비교](/ko/smart-home/smart-home-ecosystems-compared) — 이 프로토콜을 기반으로 하는 플랫폼',
+          '[완전한 로컬 스마트홈 가이드](/ko/smart-home/local-smart-home-complete-guide) — 로컬 우선 전체 그림',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Matter, Thread, Zigbee, Z-Wave: 프로토콜 설명 (2026)',
+      description: 'Matter, Thread, Zigbee, Z-Wave 알기 쉬운 설명: 범위, 전력, 메시, 상호 운용성, 기본 로컬 여부. 올바른 프로토콜 선택 방법.',
+      url: 'https://www.promptquorum.com/ko/smart-home/smart-home-protocols-explained',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: 'Matter는 프로토콜입니까, 표준입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Matter는 무선 방식이 아닌 애플리케이션 계층 표준입니다. 기기 설명 및 제어 방식을 정의하며 Thread·Wi-Fi·Ethernet 같은 전송 계층 위에서 실행됩니다.' } },
+        { '@type': 'Question', name: 'Thread가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Thread 기반 또는 Matter-over-Thread 기기를 사용할 경우에만 필요합니다. Zigbee 및 Z-Wave 기기는 Thread를 사용하지 않습니다.' } },
+        { '@type': 'Question', name: 'Zigbee vs Z-Wave — 어느 것이 더 낫습니까?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee는 2.4 GHz에서 가장 넓고 저렴한 기기 선택지를 제공합니다. Z-Wave는 간섭이 적고 범위가 좋은 서브 GHz를 사용합니다. 기기 선택지 대 간섭 회피 중 원하는 것에 따라 선택하십시오.' } },
+        { '@type': 'Question', name: '이 프로토콜들은 로컬입니까, 클라우드입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee, Z-Wave, Thread는 기본적으로 허브를 통해 로컬입니다. Matter는 로컬 컨트롤러를 통해 로컬로 실행될 수 있습니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

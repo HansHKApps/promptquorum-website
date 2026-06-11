@@ -854,6 +854,219 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-05',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    affiliateDisclosure: true,
+    title: '2026년 최고의 스마트 홈 기기: 구매 가이드',
+    seoTitle: '2026년 최고의 스마트 홈 기기 로컬 구매 가이드',
+    intro:
+      '2026년 최고의 스마트 홈 기기는 허브, 조명, 잠금장치, 센서, 카메라, 플러그를 망라하며, 가장 현명한 구매 원칙은 개인 정보 보호와 신뢰성을 위해 로컬 제어 가능 기기를 선호하는 것입니다. 이 구매 가이드는 카테고리별로 로컬과 클라우드 전용을 구분하고 로컬 퍼스트 초기 세트를 구성하는 방법을 안내합니다.',
+    metaDescription:
+      '2026년 카테고리별 최고의 스마트 홈 기기: 허브, 조명, 잠금장치, 센서, 카메라, 플러그. 각 기기에 로컬 또는 클라우드 전용 표시.',
+    twitterDescription:
+      '2026년 카테고리별 최고의 스마트 홈 기기, 로컬 제어 가능 또는 클라우드 전용으로 표시. 클라우드 종속 대신 프라이빗 로컬 퍼스트 세트를 구성하십시오.',
+    readTime: '9분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '로컬 제어 가능 스마트 홈을 구성하는 구매자',
+    primaryTerm: 'best smart home devices 2026',
+    targetKeywords: [
+      '2026년 최고의 스마트 홈 기기',
+      '스마트 홈 2026 구매 가이드',
+      '로컬 스마트 홈 기기',
+      '2026년 최고의 스마트 홈 허브',
+      '스마트 홈 기기 프라이버시',
+    ],
+    leadAnswerBlock:
+      '**2026년 최고의 기기는 허브, 조명, 잠금장치, 센서, 카메라, 플러그를 망라하며, 핵심 구매 원칙은 프라이버시와 오프라인 신뢰성을 위해 클라우드 전용이 아닌 로컬 제어 가능 기기(Zigbee, Z-Wave, Matter 또는 로컬 Wi-Fi)를 선택하는 것입니다.** Home Assistant 같은 로컬 허브가 이 기기들을 하나로 묶습니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년에 구매할 최고의 스마트 홈 기기는 무엇입니까?',
+        answer:
+          '2026년 최고의 기기는 각 카테고리에서 로컬 제어 가능한 것입니다: 로컬 허브(Home Assistant), Zigbee 또는 Matter 조명, Z-Wave 또는 Matter 잠금장치, Zigbee 센서, Frigate가 있는 로컬 RTSP 카메라, 로컬 Wi-Fi 또는 Zigbee 플러그. 로컬 제어를 우선시하면 프라이버시, 오프라인 신뢰성, 구독 없는 운영이 가능합니다.',
+        bullets: [
+          '허브: 미니 PC 또는 전용 기기에서 Home Assistant',
+          '조명: Zigbee 또는 Matter 전구(로컬 제어)',
+          '잠금장치: Z-Wave 또는 Matter(클라우드 전용 방지)',
+          '카메라: 로컬 RTSP 카메라 + Frigate, 구독 없음',
+          'Zigbee/Z-Wave/Matter/로컬 Wi-Fi를 클라우드 전용보다 선호하십시오',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'TL;DR', anchor: 'tldr' },
+      { label: '선정 기준', anchor: 'how-we-pick' },
+      { label: '최고의 허브', anchor: 'hub' },
+      { label: '최고의 조명', anchor: 'lighting' },
+      { label: '최고의 잠금장치와 센서', anchor: 'locks-sensors' },
+      { label: '최고의 카메라와 플러그', anchor: 'cameras-plugs' },
+      { label: '로컬 퍼스트 세트 구성', anchor: 'starter-kit' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '2026년 최고의 스마트 홈 기기는 Zigbee, Z-Wave, Matter 또는 로컬 Wi-Fi 등 로컬 제어 가능한 것으로, Home Assistant 같은 로컬 허브로 통합됩니다.' },
+      { type: 'plain-terms', content: '스마트 홈 기기를 구매할 때 가장 중요한 질문은 브랜드가 아니라 기기가 로컬에서 작동할 수 있는지입니다. Zigbee, Z-Wave, Matter를 지원하거나 로컬 API를 제공하는 기기는 클라우드 없이도 작동하며 데이터를 집 안에 보관합니다. 클라우드 전용 기기는 편리하지만 종속성을 만들어냅니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        items: [
+          '로컬 제어 가능 기기를 구매하십시오: Zigbee, Z-Wave, Matter 또는 로컬 API가 있는 로컬 Wi-Fi',
+          '허브: 미니 PC 또는 전용 기기에서 Home Assistant가 로컬 퍼스트 기반입니다',
+          '조명: Zigbee 또는 Matter 전구는 로컬로 제어됩니다. 클라우드 전용 앱 기기를 피하십시오',
+          '잠금장치: 클라우드 전용 모델보다 Z-Wave 또는 Matter 잠금장치를 선택하십시오',
+          '카메라: Frigate가 있는 로컬 RTSP 카메라는 구독을 피하고 녹화를 집 안에 보관합니다',
+          '로컬 허브와 로컬 기기는 프라이버시, 오프라인 신뢰성, 구독 없는 운영을 의미합니다',
+        ],
+      },
+      howWePick: {
+        id: 'how-we-pick',
+        title: '선정 기준: 로컬 제어 우선',
+        content:
+          '**선정 원칙은 로컬 제어 우선입니다: 기기가 제조사 클라우드에 의존하지 않고 로컬 허브를 통해 작동해야 합니다.** 로컬 제어 가능 기기는 프라이버시를 보호하고, 오프라인에서도 작동하며, 구독을 피할 수 있습니다.',
+        items: [
+          '**프로토콜 또는 로컬 API:** Zigbee, Z-Wave, Matter 또는 공문화된 로컬 Wi-Fi API.',
+          '**필수 클라우드 계정 없음:** 기기가 로컬 허브를 통해 작동해야 합니다.',
+          '**핵심 기능에 구독 없음:** 녹화나 자동화에 월정액이 필요하지 않아야 합니다.',
+        ],
+      },
+      hub: {
+        id: 'hub',
+        title: '최고의 허브',
+        content:
+          '**Home Assistant가 있는 로컬 허브가 기반입니다. Zigbee, Z-Wave, Matter, Thread를 지원하고 오프라인에서 자동화를 실행하기 때문입니다.** 로컬 AI도 원한다면 미니 PC에서 실행하십시오.',
+        items: [
+          '미니 PC의 Home Assistant는 허브와 로컬 LLM을 모두 처리합니다 — [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
+          'Zigbee 코디네이터와 Z-Wave 컨트롤러(USB 동글)를 추가하여 해당 프로토콜을 지원하십시오.',
+          'Thread 엣지 라우터는 Matter-over-Thread 기기를 지원합니다.',
+          '예시: Home Assistant Green(사전 구성된 허브); SONOFF Zigbee 3.0 USB Dongle Plus(ZBDongle-E) 또는 Home Assistant Connect ZBT-2를 추가하여 Zigbee/Thread/Matter를 지원하십시오.',
+        ],
+        affiliateLinks: [
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'SONOFF Zigbee 3.0 USB Dongle Plus (ZBDongle-E)', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator' },
+          { label: 'Home Assistant Connect ZBT-2', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
+        ],
+      },
+      lighting: {
+        id: 'lighting',
+        title: '최고의 조명',
+        content:
+          '**조명이 로컬로 즉시 제어되도록 Zigbee 또는 Matter 전구와 스위치를 선택하십시오.** 제조사 앱과 클라우드에서만 작동하는 전구는 피하십시오.',
+        items: [
+          'Zigbee 전구와 스위치는 허브와 페어링하여 로컬에서 응답합니다.',
+          'Matter 조명은 로컬 제어로 크로스 브랜드 호환성을 제공합니다.',
+          '스마트 전구 단독보다 기존 조명기구를 제어하는 벽면 스위치가 대개 더 안정적입니다.',
+          '예시: Philips Hue Zigbee 전구 또는 IKEA TRÅDFRI — 둘 다 Zigbee 코디네이터와 페어링하면 로컬에서 제어됩니다.',
+        ],
+        affiliateLinks: [
+          { label: 'Philips Hue Zigbee 전구 (amazon.co.kr)', url: 'https://www.amazon.es/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb' },
+          { label: 'IKEA TRÅDFRI Zigbee 전구', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+        ],
+      },
+      locksSensors: {
+        id: 'locks-sensors',
+        title: '최고의 잠금장치와 센서',
+        content:
+          '**보안과 트리거가 로컬에서 실행되도록 Z-Wave 또는 Matter 잠금장치와 Zigbee/Z-Wave 센서를 선택하십시오.** 잠금장치는 보안에 신뢰성이 중요하기 때문에 로컬 제어가 더욱 중요합니다.',
+        items: [
+          'Z-Wave 잠금장치는 오래된 신뢰할 수 있는 로컬 선택입니다; Matter 잠금장치가 등장하고 있습니다.',
+          'Zigbee 또는 Z-Wave 동작, 문/창문, 온도 센서는 인터넷 없이 자동화를 트리거합니다.',
+          '잠금장치와 알람 자동화는 LLM을 통하지 말고 결정론적으로 유지하십시오 — [로컬 LLM을 사용한 AI 자동화](/ko/smart-home/ai-automations-local-llm)를 참조하십시오.',
+          '예시: Yale Assure Lock(Z-Wave) 잠금장치; Aqara P1 동작 센서, SONOFF SNZB-04P 문/창문 센서(Zigbee).',
+        ],
+        affiliateLinks: [
+          { label: 'Yale Assure Lock (Z-Wave)', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock', productCategory: 'Smart lock' },
+          { label: 'Aqara P1 동작 센서', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor' },
+          { label: 'SONOFF SNZB-04P 문/창문 센서', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor' },
+        ],
+      },
+      camerasPlugs: {
+        id: 'cameras-plugs',
+        title: '최고의 카메라와 플러그',
+        content:
+          '**구독을 피하고 데이터를 집 안에 보관하려면 Frigate가 있는 로컬 RTSP 카메라와 Zigbee 또는 로컬 Wi-Fi 플러그를 선택하십시오.** 클라우드 카메라는 가장 큰 프라이버시와 비용 함정입니다.',
+        items: [
+          'Frigate가 있는 로컬 RTSP/PoE 카메라는 구독 없이 프라이빗 AI 감지를 제공합니다 — [Frigate가 있는 로컬 AI 보안 카메라](/ko/smart-home/local-ai-security-camera)를 참조하십시오.',
+          '로컬 API가 있는 Zigbee 또는 로컬 Wi-Fi 플러그는 오프라인에서도 허브를 통해 작동합니다.',
+          '기본 제어에 클라우드 계정이 필요한 플러그와 카메라는 피하십시오.',
+          '예시: Reolink RLC-810A 또는 Amcrest PoE 카메라(RTSP, Frigate 호환); SONOFF 또는 ThirdReality Zigbee 플러그.',
+        ],
+        affiliateLinks: [
+          { label: 'Reolink RLC-810A (4K PoE)', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera' },
+          { label: 'Amcrest PoE 카메라 (amazon.co.kr)', url: 'https://www.amazon.es/s?k=Amcrest+PoE+camera', productName: 'Amcrest PoE camera', productCategory: 'Security camera' },
+          { label: 'SONOFF Zigbee 플러그', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug' },
+          { label: 'ThirdReality Zigbee 플러그', url: 'https://thirdreality.com/product/smart-plug-gen2-with-energy-monitoring/', productName: 'ThirdReality Zigbee plug', productCategory: 'Smart plug' },
+        ],
+      },
+      starterKit: {
+        id: 'starter-kit',
+        title: '로컬 퍼스트 세트 구성',
+        content:
+          '**한 방에서 로컬 허브, Zigbee 코디네이터, 몇 가지 로컬 기기로 시작한 다음 확장하십시오.** 이렇게 하면 성장 가능한 프라이빗하고 신뢰할 수 있는 기반이 만들어집니다.',
+        columns: ['카테고리', '로컬 제어 가능 선택', '이유'],
+        rows: [
+          { '카테고리': '허브', '로컬 제어 가능 선택': '미니 PC의 Home Assistant', '이유': '모든 로컬 프로토콜 지원, 오프라인 실행' },
+          { '카테고리': '조명', '로컬 제어 가능 선택': 'Zigbee 또는 Matter 전구/스위치', '이유': '즉각적인 로컬 제어' },
+          { '카테고리': '잠금장치', '로컬 제어 가능 선택': 'Z-Wave 또는 Matter 잠금장치', '이유': '신뢰할 수 있는 로컬 보안' },
+          { '카테고리': '센서', '로컬 제어 가능 선택': 'Zigbee/Z-Wave 동작 및 문 센서', '이유': '로컬 자동화 트리거' },
+          { '카테고리': '카메라', '로컬 제어 가능 선택': '로컬 RTSP 카메라 + Frigate', '이유': '프라이빗 AI 감지, 구독 없음' },
+          { '카테고리': '플러그', '로컬 제어 가능 선택': 'Zigbee 또는 로컬 Wi-Fi 플러그', '이유': '로컬 제어, 클라우드 계정 없음' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '어떤 스마트 홈 기기로 시작해야 합니까?', a: 'Home Assistant가 있는 로컬 허브, Zigbee 코디네이터, Zigbee 전구 또는 센서 몇 가지로 시작하십시오. 허브는 다른 모든 로컬 제어 가능 기기가 함께, 오프라인에서, 프라이빗하게 작동하게 하는 기반입니다.' },
+          { q: '어떤 브랜드가 로컬에서 작동합니까?', a: 'Zigbee, Z-Wave, Matter를 사용하거나 공문화된 로컬 API가 있는 로컬 Wi-Fi 기기를 찾으십시오. 이 기기들은 브랜드에 관계없이 제조사 클라우드 없이 로컬 허브를 통해 작동합니다. 기본 제어에 클라우드 계정이 필요한 기기는 피하십시오.' },
+          { q: '제조사 허브가 필요합니까?', a: '일반적으로 필요하지 않습니다. Home Assistant 같은 로컬 허브는 코디네이터를 통해 Zigbee, Z-Wave, Matter 기기와 직접 통신할 수 있으므로 종종 제조사의 클라우드 종속 허브를 건너뛸 수 있습니다. 해당 기기가 로컬 페어링을 지원하는지 확인하십시오.' },
+          { q: '예산 친화적인 선택은 무엇입니까?', a: 'Zigbee 전구, 플러그, 센서는 저렴하고 로컬 제어가 가능하여 강력한 예산 선택입니다. Zigbee 기기 몇 가지와 로컬 허브로 시작하면 비용을 낮게 유지하면서도 프라이빗하고 확장 가능합니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[완전한 로컬 스마트 홈 가이드](/ko/smart-home/local-smart-home-complete-guide) — 이 기기들을 로컬 스택으로 조립하기',
+          '[로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — 허브 하드웨어',
+          '[Frigate가 있는 로컬 AI 보안 카메라](/ko/smart-home/local-ai-security-camera) — 프라이빗 카메라 감지',
+          '[스마트 홈 프로토콜 설명](/ko/smart-home/smart-home-protocols-explained) — 어떤 프로토콜이 로컬인지',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '2026년 최고의 스마트 홈 기기: 구매 가이드',
+      description: '2026년 카테고리별 최고의 스마트 홈 기기: 허브, 조명, 잠금장치, 센서, 카메라, 플러그. 각 기기에 로컬 또는 클라우드 전용 표시.',
+      url: 'https://www.promptquorum.com/ko/smart-home/best-smart-home-devices-2026',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-05',
+      about: [{ '@type': 'Thing', name: '스마트 홈 기기' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '로컬 제어' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '어떤 스마트 홈 기기로 시작해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant가 있는 로컬 허브, Zigbee 코디네이터, Zigbee 전구 또는 센서 몇 가지로 시작하십시오 — 허브는 다른 모든 로컬 제어 가능 기기가 함께, 오프라인에서 작동하게 하는 기반입니다.' } },
+        { '@type': 'Question', name: '어떤 브랜드가 로컬에서 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee, Z-Wave, Matter를 사용하거나 공문화된 로컬 API가 있는 로컬 Wi-Fi 기기를 찾으십시오. 이 기기들은 브랜드에 관계없이 제조사 클라우드 없이 로컬 허브를 통해 작동합니다.' } },
+        { '@type': 'Question', name: '제조사 허브가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '일반적으로 필요하지 않습니다. Home Assistant 같은 로컬 허브는 코디네이터를 통해 Zigbee, Z-Wave, Matter 기기와 직접 통신할 수 있으므로 종종 제조사 허브를 건너뛸 수 있습니다.' } },
+        { '@type': 'Question', name: '예산 친화적인 선택은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee 전구, 플러그, 센서는 저렴하고 로컬 제어가 가능합니다. Zigbee 기기 몇 가지와 로컬 허브로 시작하면 비용을 낮게 유지하면서도 프라이빗하고 확장 가능합니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

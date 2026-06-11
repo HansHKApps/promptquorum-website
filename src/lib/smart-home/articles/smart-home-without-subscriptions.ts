@@ -698,6 +698,180 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Decision & Comparison',
+    title: '구독료 없이 스마트홈 구축하는 방법 (2026)',
+    seoTitle: '구독 없는 스마트홈: 2026 설정 가이드',
+    intro:
+      '로컬 가능 기기와 로컬 허브를 선택하면 월정액 대신 일회성 하드웨어 비용만 지불하고 구독료 없는 스마트홈을 구축할 수 있습니다. 이 가이드는 구독료가 숨어 있는 곳, 구독 없는 로컬 스택, 수수료 없는 기기, 로컬 카메라 저장, 그리고 로컬 방식이 시간이 지날수록 더 저렴한 이유를 설명합니다.',
+    metaDescription:
+      '구독료 없는 스마트홈 구축: 로컬 가능 기기, 로컬 허브, 로컬 카메라 저장이 월정액을 일회성 하드웨어 비용으로 대체합니다.',
+    twitterDescription:
+      '구독 없는 스마트홈 구축: 로컬 기기, 로컬 허브, 로컬 카메라 저장이 월정액을 일회성 하드웨어 비용으로 대체합니다.',
+    readTime: '8분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '반복 수수료를 피하려는 스마트홈 사용자',
+    primaryTerm: 'smart home without subscriptions',
+    targetKeywords: [
+      '구독 없는 스마트홈',
+      '구독료 없는 스마트홈',
+      '수수료 없는 스마트홈',
+      '구독 없는 로컬 카메라',
+      '구독 없는 스마트홈 구축',
+    ],
+    leadAnswerBlock:
+      '**로컬 가능 기기, 로컬 허브(Home Assistant), Frigate를 이용한 로컬 카메라 저장을 선택하면 구독료 없는 스마트홈을 구축할 수 있습니다. 월정액 대신 일회성 하드웨어 비용만 지불합니다.** 클라우드 카메라와 프리미엄 기능이 구독료가 숨어 있는 곳입니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '구독 없이 스마트홈을 구축하려면 어떻게 합니까?',
+        answer:
+          '로컬 가능 기기(Zigbee, Z-Wave, Matter, 로컬 Wi-Fi)를 선택하고, Home Assistant 같은 로컬 허브를 실행하며, 클라우드 요금제 대신 Frigate로 카메라를 로컬에 녹화합니다. 이렇게 하면 카메라 저장, AI 감지, 프리미엄 기능의 반복 수수료가 일회성 하드웨어 비용으로 대체됩니다.',
+        bullets: [
+          '구독료는 카메라 저장, AI 감지, 프리미엄 기능에 숨어 있습니다',
+          '로컬 허브(Home Assistant)는 제어와 자동화를 무료로 실행합니다',
+          'Frigate는 월정액 없이 카메라를 로컬에 녹화합니다',
+          '로컬 가능 기기는 클라우드 계정 요구 사항을 피합니다',
+          '일회성 하드웨어가 반복 수수료를 대체합니다',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: '구독료가 숨어 있는 곳', anchor: 'where-hide' },
+      { label: '구독 없는 스택', anchor: 'no-sub-stack' },
+      { label: '수수료 없는 기기', anchor: 'no-fee-devices' },
+      { label: '로컬 카메라 저장', anchor: 'camera-storage' },
+      { label: '일회성 비용 계산', anchor: 'cost-math' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '구독료 없는 스마트홈은 로컬 가능 기기, 로컬 허브, 로컬 카메라 저장을 사용하여 월정액을 일회성 하드웨어 비용으로 대체합니다.' },
+      { type: 'plain-terms', content: '스마트홈 구독료는 주로 클라우드 카메라에서 발생합니다. 영상 저장과 AI 감지 잠금 해제를 위해 매달 비용을 지불합니다. 카메라를 로컬에 녹화하고 로컬 허브를 실행하면 하드웨어 비용만 한 번 지불하고 핵심 기능에 대한 월정액은 없습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          '대부분의 스마트홈 구독료는 클라우드 카메라 저장과 AI 감지에서 발생합니다',
+          '로컬 허브(Home Assistant)는 수수료 없이 제어와 자동화를 실행합니다',
+          'Frigate는 구독 없이 카메라를 녹화하고 AI 감지를 로컬에서 실행합니다',
+          '클라우드 계정이 필요 없는 로컬 가능 기기를 선택하십시오',
+          '일회성 하드웨어 비용으로 반복 수수료를 없앨 수 있습니다',
+          '시간이 지날수록 로컬 방식이 더 저렴하고 데이터를 프라이빗하게 유지합니다',
+        ],
+      },
+      whereHide: {
+        id: 'where-hide',
+        title: '구독료가 숨어 있는 곳',
+        content:
+          '**스마트홈 구독료는 주로 클라우드 카메라에 숨어 있습니다. 영상 저장, AI 감지, 월정액 뒤의 프리미엄 기능이 해당합니다.** 어디에 숨어 있는지 알면 설계 단계에서 제거할 수 있습니다.',
+        items: [
+          '**카메라 저장:** 클라우드 영상 기록이 가장 일반적인 반복 수수료입니다.',
+          '**AI 감지:** 사람/사물 알림은 종종 요금제 뒤에 잠겨 있습니다.',
+          '**프리미엄 기능:** 일부 생태계는 자동화나 추가 기능을 구독 뒤에 잠급니다.',
+        ],
+      },
+      noSubStack: {
+        id: 'no-sub-stack',
+        title: '구독 없는 스택',
+        content:
+          '**구독 없는 스택은 로컬 허브 + 로컬 가능 기기 + 로컬 카메라 녹화입니다. 모든 것이 귀하 소유의 하드웨어에서 실행됩니다.** 핵심 기능에는 월정액이 필요하지 않습니다.',
+        items: [
+          '로컬 허브: Home Assistant는 제어와 자동화를 무료로 실행합니다 — [시작하기 가이드](/ko/smart-home/home-assistant-getting-started)를 참조하십시오.',
+          '로컬 기기: 클라우드 계정 없는 Zigbee, Z-Wave, Matter, 또는 로컬 Wi-Fi.',
+          '로컬 카메라: 녹화와 AI 감지를 위한 Frigate — [로컬 AI 보안 카메라](/ko/smart-home/local-ai-security-camera)를 참조하십시오.',
+        ],
+      },
+      noFeeDevices: {
+        id: 'no-fee-devices',
+        title: '수수료 없는 기기',
+        content:
+          '**로컬 프로토콜을 사용하고 클라우드 계정이 필요 없는 기기는 반복 수수료를 부과하지 않습니다.** 프로토콜과 클라우드 로그인 필수 여부를 확인하십시오.',
+        items: [
+          'Zigbee 및 Z-Wave 전구, 플러그, 센서는 수수료가 없습니다.',
+          '로컬 컨트롤러에 등록된 Matter 기기는 수수료가 없습니다.',
+          '기본 제어를 위해 제조사 구독이 필요한 기기는 피하십시오.',
+        ],
+      },
+      cameraStorage: {
+        id: 'camera-storage',
+        title: '로컬 카메라 저장',
+        content:
+          '**클라우드 영상 기록 비용을 지불하는 대신 Frigate로 카메라를 로컬 저장소에 녹화하십시오.** 이렇게 하면 가장 큰 스마트홈 반복 수수료가 제거됩니다.',
+        items: [
+          'RTSP/PoE 카메라를 사용하고 로컬에 녹화하십시오. 영상이 집 안에 유지됩니다.',
+          'Frigate는 구독 없이 AI 감지를 제공합니다 — [로컬 AI 보안 카메라](/ko/smart-home/local-ai-security-camera)를 참조하십시오.',
+          '원하는 보존 기간에 맞게 로컬 디스크를 계획하십시오. 월정액이 적용되지 않습니다.',
+        ],
+      },
+      costMath: {
+        id: 'cost-math',
+        title: '일회성 비용 계산',
+        content:
+          '**로컬 방식은 반복 월정액을 일회성 하드웨어로 대체하므로 시간이 지날수록 더 저렴합니다.** 오래 운영할수록 구독 대비 절감 효과가 커집니다.',
+        columns: ['기능', '구독 옵션', '구독 없는 로컬 옵션'],
+        rows: [
+          { '기능': '카메라 저장', '구독 옵션': '월간 클라우드 요금제', '구독 없는 로컬 옵션': '로컬 디스크 + Frigate' },
+          { '기능': 'AI 감지', '구독 옵션': '클라우드 요금제 추가 기능', '구독 없는 로컬 옵션': 'Frigate (Coral/GPU)' },
+          { '기능': '제어 및 자동화', '구독 옵션': '잠겨 있는 경우도 있음', '구독 없는 로컬 옵션': 'Home Assistant (무료)' },
+          { '기능': '음성/AI', '구독 옵션': '클라우드 어시스턴트', '구독 없는 로컬 옵션': '로컬 음성 + 로컬 LLM' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '수수료 없는 스마트홈 기기는 무엇입니까?', a: 'Zigbee, Z-Wave, Matter를 사용하는 기기나 로컬 API가 있는 로컬 Wi-Fi 기기는 클라우드 계정 없이 로컬 허브를 통해 작동하므로 반복 수수료가 없습니다. 반복 수수료는 거의 항상 클라우드 카메라와 프리미엄 생태계 기능에서 발생합니다.' },
+          { q: '구독 없이 카메라 영상을 저장할 수 있습니까?', a: '가능합니다. RTSP 또는 PoE 카메라를 Frigate로 자신의 저장소에 로컬 녹화하면 구독 없이 녹화와 AI 감지를 이용할 수 있습니다. 영상은 집 안에 유지되며 제공하는 디스크 공간으로 보존 기간을 제어합니다.' },
+          { q: '장기적으로 얼마나 절감할 수 있습니까?', a: '반복 월정액을 일회성 하드웨어 비용으로 대체하므로 시간이 지날수록 절감액이 늘어납니다. 정확한 금액은 피하는 클라우드 구독 수에 따라 다르지만, 로컬 설정은 오래 운영할수록 더 저렴합니다.' },
+          { q: '구독 없는 스마트홈에 숨은 비용이 있습니까?', a: '주요 비용은 초기 하드웨어(로컬 허브, 감지 가속기, 저장소)와 설정 시간입니다. 그 이후에는 핵심 제어, 자동화, 로컬 카메라 녹화가 반복 수수료 없이 실행됩니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[로컬 스마트홈이 클라우드를 능가하는 이유](/ko/smart-home/why-local-smart-home-beats-cloud) — 더 넓은 로컬 논거',
+          '[완전한 로컬 스마트홈 가이드](/ko/smart-home/local-smart-home-complete-guide) — 수수료 없는 스택 구축',
+          '[Frigate를 이용한 로컬 AI 보안 카메라](/ko/smart-home/local-ai-security-camera) — 클라우드 카메라 수수료 대체',
+          '[로컬 LLM이란](/ko/local-llms/what-are-local-llms) — 크로스 클러스터: 이용 수수료 없는 프라이빗 로컬 AI',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '구독료 없이 스마트홈 구축하는 방법 (2026)',
+      description: '구독료 없는 스마트홈 구축: 로컬 가능 기기, 로컬 허브, 로컬 카메라 저장이 월정액을 일회성 하드웨어 비용으로 대체합니다.',
+      url: 'https://www.promptquorum.com/ko/smart-home/smart-home-without-subscriptions',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '스마트홈 구독' }, { '@type': 'Thing', name: '로컬 저장' }, { '@type': 'Thing', name: 'Frigate' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '수수료 없는 스마트홈 기기는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee, Z-Wave, Matter를 사용하는 기기나 로컬 API가 있는 로컬 Wi-Fi 기기는 로컬 허브를 통해 작동하므로 수수료가 없습니다. 수수료는 거의 항상 클라우드 카메라와 프리미엄 기능에서 발생합니다.' } },
+        { '@type': 'Question', name: '구독 없이 카메라 영상을 저장할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '가능합니다. RTSP 또는 PoE 카메라를 Frigate로 자신의 저장소에 로컬 녹화하면 구독 없이 녹화와 AI 감지를 이용할 수 있습니다. 영상은 집 안에 유지됩니다.' } },
+        { '@type': 'Question', name: '장기적으로 얼마나 절감할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '반복 월정액을 일회성 하드웨어 비용으로 대체하므로 시간이 지날수록 절감액이 늘어납니다. 로컬 설정은 오래 운영할수록 더 저렴합니다.' } },
+        { '@type': 'Question', name: '구독 없는 스마트홈에 숨은 비용이 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '주요 비용은 초기 하드웨어(허브, 감지 가속기, 저장소)와 설정 시간입니다. 그 이후에는 핵심 제어, 자동화, 로컬 카메라 녹화가 반복 수수료 없이 실행됩니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

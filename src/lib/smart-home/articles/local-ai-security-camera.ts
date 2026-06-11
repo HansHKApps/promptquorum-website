@@ -758,6 +758,195 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'Frigate로 로컬 AI 보안 카메라 구축 (2026)',
+    seoTitle: 'Frigate 로컬 AI 카메라 2026: 사적 감지',
+    intro:
+      'Frigate는 클라우드와 구독 없이 카메라 피드에서 로컬 AI 객체 및 사람 감지를 실행하며 Home Assistant에 직접 통합됩니다. 이 가이드는 클라우드 카메라 개인정보 보호 문제, Frigate의 기능, 감지를 가속하는 하드웨어(Coral TPU 또는 GPU), Home Assistant 통합, 알림, 구독 카메라와의 비용 비교를 다룹니다.',
+    metaDescription:
+      'Frigate로 사적 AI 보안 카메라 실행: 로컬 객체 및 사람 감지, 클라우드 없음, 구독 없음. 하드웨어, Home Assistant 설정, 클라우드 대비 비용.',
+    twitterDescription:
+      'Frigate는 사적 AI 보안 카메라를 제공합니다: 로컬 사람/객체 감지, 클라우드 없음, 구독 없음, Home Assistant와 통합.',
+    readTime: '9분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '사적 AI 카메라 감지를 구축하는 Home Assistant 사용자',
+    primaryTerm: 'Frigate local AI camera',
+    targetKeywords: [
+      'Frigate 로컬 AI 카메라 Home Assistant',
+      'Frigate Home Assistant',
+      '로컬 AI 보안 카메라',
+      '클라우드 없는 사적 보안 카메라',
+      'Frigate Coral TPU',
+    ],
+    leadAnswerBlock:
+      '**Frigate는 클라우드와 구독 없이 자체 하드웨어에서 완전히 카메라 피드에서 AI 객체 및 사람 감지를 실행하는 오픈 소스 로컬 NVR로 Home Assistant와 통합됩니다.** Coral TPU 또는 GPU가 감지를 가속하여 실시간으로 유지합니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'Frigate란 무엇이고 어떻게 사적 AI 카메라를 제공합니까?',
+        answer:
+          'Frigate는 클라우드와 구독 없이 RTSP 카메라 스트림에서 AI 객체 및 사람 감지를 로컬로 수행하는 오픈 소스 네트워크 비디오 레코더 소프트웨어입니다. 알림 및 자동화를 위해 Home Assistant와 통합됩니다. Google Coral TPU 또는 GPU가 효율적으로 감지를 처리하여 여러 카메라가 실시간으로 실행됩니다.',
+        bullets: [
+          '자체 하드웨어에서 로컬 AI 감지 — 클라우드 없음',
+          '구독 없음; 일회성 하드웨어 비용',
+          '표준 RTSP 카메라와 작동',
+          '알림 및 자동화를 위해 Home Assistant와 통합',
+          'Coral TPU 또는 GPU가 감지를 실시간으로 유지',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'TL;DR', anchor: 'tldr' },
+      { label: '클라우드 카메라 문제', anchor: 'cloud-problem' },
+      { label: 'Frigate의 기능', anchor: 'what-frigate-does' },
+      { label: '하드웨어', anchor: 'hardware' },
+      { label: 'Home Assistant 통합', anchor: 'ha-integration' },
+      { label: '알림 및 자동화', anchor: 'notifications' },
+      { label: '클라우드 카메라 대비 비용', anchor: 'cost' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Frigate는 클라우드와 구독 없이 카메라 피드에서 로컬 AI 사람 및 객체 감지를 실행하며 Home Assistant와 통합됩니다.' },
+      { type: 'plain-terms', content: '대부분의 스마트 카메라는 기업 클라우드에 비디오를 전송하고 AI 감지 및 기록에 월 구독료를 청구합니다. Frigate는 대신 자체 하드웨어에서 AI 감지를 수행하므로 영상이 집 안에 남고 구독이 없습니다. 표준 카메라와 작동하며 Home Assistant에 연결됩니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        items: [
+          'Frigate는 내장 AI 객체/사람 감지가 있는 오픈 소스 로컬 NVR 소프트웨어입니다',
+          '감지가 하드웨어에서 실행됩니다 — 영상이 절대 집을 떠나지 않으며 구독이 없습니다',
+          '표준 RTSP 카메라와 작동합니다(유선 PoE 카메라가 가장 신뢰할 수 있습니다)',
+          'Google Coral TPU 또는 GPU가 감지를 가속하여 많은 카메라가 실시간으로 실행됩니다',
+          '알림, 스냅샷, 자동화를 위해 Home Assistant와 통합됩니다',
+          '일회성 하드웨어 비용이 반복적인 클라우드 카메라 비용을 대체합니다',
+        ],
+      },
+      cloudProblem: {
+        id: 'cloud-problem',
+        title: '클라우드 카메라 개인정보 보호 문제',
+        content:
+          '**클라우드 카메라는 영상을 제조사에 업로드하고 종종 AI 감지와 비디오 기록을 구독 뒤에 잠급니다.** 이는 가정 비디오가 다른 사람의 서버에 저장되며 구독을 취소하면 작동이 중지된다는 것을 의미합니다.',
+        items: [
+          '**외부의 영상:** 녹화물이 제조사 데이터 센터에 저장되어 침해와 정책 변경에 노출됩니다 — [스마트 홈 개인정보 보호 위험](/ko/smart-home/smart-home-privacy-risks)을 참조하십시오.',
+          '**구독:** 사람 감지와 녹화 기록에는 일반적으로 월 구독료가 필요합니다.',
+          '**잠금:** 제조사가 계획을 변경하거나 서비스를 종료하면 기능이 사라질 수 있습니다.',
+        ],
+      },
+      whatFrigateDoes: {
+        id: 'what-frigate-does',
+        title: 'Frigate의 기능',
+        content:
+          '**Frigate는 카메라 스트림을 수집하고 로컬에서 AI 감지를 실행하여 사람, 차량, 객체를 식별하며 중요한 클립만 녹화합니다.** 이벤트와 스냅샷을 Home Assistant에 노출합니다.',
+        items: [
+          'RTSP 스트림에서 실시간 객체 감지로 오탐 움직임(나무, 그림자)을 필터링합니다.',
+          '이벤트 클립과 스냅샷을 로컬로 녹화합니다. 보존 기간을 직접 제어합니다.',
+          '영역과 객체 필터가 노이즈를 줄입니다 — 예를 들어 진입로의 사람에게만 알림.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Frigate에 필요한 하드웨어는 무엇입니까?',
+        content:
+          '**Frigate는 Google Coral TPU 또는 GPU에서 효율적으로 감지를 실행합니다. CPU만으로 감지도 가능하지만 실행할 수 있는 카메라 수가 제한됩니다.** 녹화를 위한 충분한 스토리지가 있는 호스트와 함께 사용하십시오.',
+        items: [
+          '**Coral TPU:** Google Coral USB 또는 M.2 가속기가 낮은 전력으로 여러 카메라의 감지를 처리합니다.',
+          '**GPU:** 별도의 GPU도 감지를 가속하며 같은 기기에서 로컬 LLM도 실행 중이라면 유용합니다 — [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
+          '**스토리지:** 이벤트 녹화를 위한 로컬 디스크를 계획하십시오. 유선 PoE 카메라가 가장 신뢰할 수 있는 스트림을 제공합니다.',
+          '**하나의 기기:** Frigate는 Home Assistant와 미니 PC를 공유할 수 있습니다 — [Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai)를 참조하십시오.',
+        ],
+      },
+      haIntegration: {
+        id: 'ha-integration',
+        title: 'Home Assistant 통합',
+        content:
+          '**Frigate는 Home Assistant와 통합되어 감지가 자동화할 수 있는 엔티티가 됩니다.** Frigate를 설치한 후 Home Assistant에서 Frigate 통합을 추가하십시오.',
+        numberedItems: [
+          'Frigate(애드온 또는 컨테이너로)를 실행하고 카메라 RTSP 스트림을 지정하십시오.',
+          'Frigate 구성에서 감지기(Coral/GPU)와 감지 영역을 구성하십시오.',
+          'Home Assistant에서 Frigate 통합을 추가하여 카메라 및 감지 엔티티를 노출하십시오.',
+          '자동화와 대시보드에서 감지 엔티티를 사용하십시오.',
+        ],
+      },
+      notifications: {
+        id: 'notifications',
+        title: '알림 및 자동화',
+        content:
+          '**Frigate 감지 이벤트를 사용하여 스냅샷이 포함된 로컬 알림을 보내고 자동화를 트리거하십시오 — 클라우드 알림 서비스가 필요 없습니다.** 원한다면 자연어 알림을 위해 로컬 LLM과 결합하십시오.',
+        items: [
+          '특정 영역에서 사람이 감지되면 스냅샷 알림을 보내십시오.',
+          '감지 시 조명이나 사이렌을 결정론적 자동화로 트리거하십시오.',
+          '선택적으로 자연어 요약을 위해 로컬 LLM에 이벤트를 전달하십시오 — [로컬 LLM으로 AI 자동화](/ko/smart-home/ai-automations-local-llm)를 참조하십시오.',
+        ],
+      },
+      cost: {
+        id: 'cost',
+        title: '클라우드 카메라 대비 비용',
+        content:
+          '**Frigate는 반복적인 클라우드 카메라 비용을 일회성 하드웨어 비용(가속기 + 스토리지)으로 대체합니다.** 시간이 지남에 따라 구독 없는 로컬 설정이 더 저렴하고 영상을 사적으로 유지합니다.',
+        columns: ['측면', '클라우드 카메라', 'Frigate(로컬)'],
+        rows: [
+          { '측면': '개인정보 보호', '클라우드 카메라': '제조사 서버에 영상', 'Frigate(로컬)': '영상이 집 안에 유지됨' },
+          { '측면': '구독', '클라우드 카메라': 'AI + 기록 월 구독료', 'Frigate(로컬)': '없음' },
+          { '측면': '감지', '클라우드 카메라': '클라우드 AI', 'Frigate(로컬)': '로컬 AI(Coral/GPU)' },
+          { '측면': '오프라인', '클라우드 카메라': '인터넷 없이 제한적', 'Frigate(로컬)': 'LAN에서 작동' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: 'Frigate에 Coral TPU가 필요합니까?', a: '필수는 아니지만 권장됩니다. Google Coral TPU는 낮은 전력으로 여러 카메라의 AI 감지를 효율적으로 처리합니다. GPU도 작동하며 CPU만으로 감지도 가능하지만 실시간으로 실행할 수 있는 카메라 수가 제한됩니다.' },
+          { q: 'Frigate는 오프라인에서 작동합니까?', a: '네. 감지, 녹화, Home Assistant 알림이 모두 로컬 네트워크에서 실행되므로 인터넷 장애 중에도 Frigate가 계속 작동합니다. 집 외부에서의 원격 시청만 연결이 필요합니다.' },
+          { q: 'Frigate와 작동하는 카메라는 무엇입니까?', a: 'RTSP 스트림을 제공하는 카메라와 작동하며 대부분의 IP 및 PoE 카메라가 해당됩니다. 유선 PoE 카메라가 지속적인 감지를 위해 가장 신뢰할 수 있는 스트림을 제공합니다.' },
+          { q: 'Frigate 구독이 있습니까?', a: '아니오. Frigate는 오픈 소스이며 구독 없이 하드웨어에서 실행됩니다. 반복적인 클라우드 비용 대신 감지 가속기와 스토리지에 일회성 비용을 지불합니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 스마트 홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide) — 스택에서 로컬 카메라의 위치',
+          '[로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — 가속기와 스토리지',
+          '[Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) — Frigate + HA를 위한 하나의 기기',
+          '[스마트 홈 개인정보 보호 위험](/ko/smart-home/smart-home-privacy-risks) — 로컬 카메라가 해결하는 문제',
+          '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 크로스 클러스터: 같은 기기에서 로컬 모델 실행',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Frigate로 로컬 AI 보안 카메라 구축 (2026)',
+      description: 'Frigate로 사적 AI 보안 카메라 실행: 로컬 객체 및 사람 감지, 클라우드 없음, 구독 없음. 하드웨어, Home Assistant 설정, 클라우드 대비 비용.',
+      url: 'https://www.promptquorum.com/ko/smart-home/local-ai-security-camera',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'AI 보안 카메라' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: 'Frigate에 Coral TPU가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '필수는 아니지만 권장됩니다. Google Coral TPU는 낮은 전력으로 여러 카메라의 AI 감지를 효율적으로 처리합니다. GPU도 작동하며 CPU만으로 가능하지만 카메라 수를 제한합니다.' } },
+        { '@type': 'Question', name: 'Frigate는 오프라인에서 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: '네. 감지, 녹화, Home Assistant 알림이 로컬 네트워크에서 실행되므로 인터넷 장애 중에도 Frigate가 계속 작동합니다.' } },
+        { '@type': 'Question', name: 'Frigate와 작동하는 카메라는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'RTSP 스트림을 제공하는 카메라이며 대부분의 IP 및 PoE 카메라가 해당됩니다. 유선 PoE 카메라가 가장 신뢰할 수 있는 스트림을 제공합니다.' } },
+        { '@type': 'Question', name: 'Frigate 구독이 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '아니오. Frigate는 오픈 소스이며 구독 없이 하드웨어에서 실행됩니다 — 클라우드 비용 대신 가속기와 스토리지에 일회성 비용.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

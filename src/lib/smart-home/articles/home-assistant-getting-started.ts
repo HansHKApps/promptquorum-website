@@ -766,6 +766,197 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'Home Assistant: 완전한 시작 가이드 (2026)',
+    seoTitle: 'Home Assistant 2026: 로컬 스마트 홈 완전 설정',
+    intro:
+      'Home Assistant는 선도적인 로컬 우선 스마트 홈 허브입니다. Raspberry Pi나 미니 PC에 설치하고 통합을 추가하면 클라우드 없이 모든 것을 로컬로 제어할 수 있습니다. 이 시작 가이드는 Home Assistant를 선택하는 이유, 설치 옵션, 첫 번째 통합, 대시보드, 첫 번째 자동화, 나중에 로컬 AI를 추가하는 방법을 다룹니다.',
+    metaDescription:
+      '2026년 Home Assistant 시작하기: 설치 옵션(HAOS, 컨테이너, Pi 대 미니 PC), 첫 번째 통합, 대시보드, 첫 번째 로컬 자동화.',
+    twitterDescription:
+      'Home Assistant 시작 가이드: Pi 또는 미니 PC에 설치하고, 통합을 추가하며, 첫 번째 로컬 자동화를 구축합니다. 로컬 우선 허브.',
+    readTime: '10분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '첫 번째 Home Assistant 허브를 설정하는 사람들',
+    primaryTerm: 'Home Assistant getting started',
+    targetKeywords: [
+      'Home Assistant 시작하기',
+      'Home Assistant 설정',
+      'Home Assistant 설치',
+      'Home Assistant raspberry pi vs mini pc',
+      'Home Assistant 초보자 가이드',
+    ],
+    leadAnswerBlock:
+      '**Home Assistant는 Raspberry Pi나 미니 PC에 설치하는 무료 오픈 소스 로컬 우선 스마트 홈 소프트웨어입니다 — 통합을 추가하고 대시보드를 구축하여 클라우드 없이 로컬로 기기를 제어합니다.** 가장 쉬운 시작을 위해 전용 하드웨어에 Home Assistant OS(HAOS)를 사용하십시오.',
+    quickAnswerTop: {
+      ko: {
+        question: 'Home Assistant를 어떻게 시작합니까?',
+        answer:
+          'Raspberry Pi, 미니 PC, 또는 전용 Home Assistant 하드웨어에 Home Assistant OS를 설치하고 웹 인터페이스를 열어 기기용 통합을 추가합니다. 대시보드를 구축하고 첫 번째 자동화를 만들며 로컬 기기를 위한 Zigbee 또는 Z-Wave 코디네이터를 추가합니다. 클라우드 계정 없이 모든 것이 로컬에서 실행됩니다.',
+        bullets: [
+          '가장 쉬운 설정을 위해 Home Assistant OS(HAOS)를 설치하십시오',
+          'Raspberry Pi(기본 기능) 또는 미니 PC(기본 기능 + 로컬 AI)에서 실행하십시오',
+          'UI를 통해 기기용 통합을 추가하십시오',
+          '로컬 프로토콜을 위한 Zigbee/Z-Wave 코디네이터를 추가하십시오',
+          '대시보드와 첫 번째 자동화를 구축하십시오 — 모두 로컬',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'TL;DR', anchor: 'tldr' },
+      { label: 'Home Assistant를 선택하는 이유', anchor: 'why-ha' },
+      { label: '설치 옵션', anchor: 'install' },
+      { label: '첫 번째 통합', anchor: 'integrations' },
+      { label: '대시보드', anchor: 'dashboard' },
+      { label: '첫 번째 자동화', anchor: 'automation' },
+      { label: '나중에 AI 추가하기', anchor: 'ai-later' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Home Assistant는 Pi 또는 미니 PC에 설치하여 클라우드 없이 로컬로 기기를 제어하는 무료 오픈 소스 로컬 우선 허브 소프트웨어입니다.' },
+      { type: 'plain-terms', content: 'Home Assistant는 기업 클라우드 대신 자체 하드웨어에서 스마트 홈을 실행하는 소프트웨어입니다. 소형 컴퓨터에 설치하고 기기를 연결하여 대시보드와 자동화를 구축합니다. 이것이 사설 로컬 우선 스마트 홈의 기반입니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        items: [
+          'Home Assistant는 무료, 오픈 소스, 로컬 우선입니다 — 표준적인 사설 스마트 홈 허브입니다',
+          '가장 쉬운 시작을 위해 전용 하드웨어에 Home Assistant OS(HAOS)를 설치하십시오',
+          'Raspberry Pi는 기본 기능을 처리합니다. 로컬 AI도 원한다면 미니 PC가 더 적합합니다',
+          'UI를 통해 통합을 추가하십시오. 일반적인 기기에는 코딩이 필요 없습니다',
+          '로컬 프로토콜을 위해 Zigbee 또는 Z-Wave 코디네이터(USB 스틱)를 추가하십시오',
+          '나중에 로컬 LLM 두뇌를 추가하십시오 — LLM 메커니즘은 외부 링크를 참조하십시오',
+        ],
+      },
+      whyHa: {
+        id: 'why-ha',
+        title: 'Home Assistant를 선택하는 이유',
+        content:
+          '**Home Assistant는 자체 하드웨어에서 실행되고, 모든 주요 로컬 프로토콜을 지원하며, 오프라인에서도 자동화가 작동하기 때문에 로컬 스마트 홈의 기반입니다.** 가장 유연하고 사적인 허브입니다.',
+        items: [
+          '로컬 우선: 제어와 자동화가 클라우드 없이 실행됩니다.',
+          '광범위한 지원: 브랜드와 프로토콜에 걸쳐 수천 개의 통합.',
+          '로컬 AI의 기반 — [로컬 LLM으로 스마트 홈 실행](/ko/smart-home/local-llm-smart-home-complete-guide)을 참조하십시오.',
+        ],
+      },
+      install: {
+        id: 'install',
+        title: '어떤 설치 옵션을 선택해야 합니까?',
+        content:
+          '**가장 간단한 설정을 위해 전용 하드웨어에 Home Assistant OS(HAOS)를 사용하고, 이미 서버를 운영 중이라면 컨테이너 설치를, 기본 기능만 원한다면 Raspberry Pi를, 로컬 AI를 원한다면 미니 PC를 선택하십시오.** HAOS에는 필요한 애드온 시스템이 포함되어 있습니다.',
+        columns: ['설치 방법', '난이도', '최적 용도'],
+        rows: [
+          { '설치 방법': '전용 기기에 HAOS', '난이도': '가장 쉬움', '최적 용도': '대부분의 사용자; 전체 애드온 지원' },
+          { '설치 방법': 'Raspberry Pi에 HAOS', '난이도': '쉬움', '최적 용도': '기본 기능, 저전력' },
+          { '설치 방법': '미니 PC에 HAOS', '난이도': '쉬움', '최적 용도': '기본 기능 + 로컬 AI' },
+          { '설치 방법': '컨테이너(Docker)', '난이도': '보통', '최적 용도': '기존 홈 서버/NAS' },
+        ],
+        items: [
+          '로컬 LLM을 포함한 하드웨어 규모 산정은 [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
+        ],
+      },
+      integrations: {
+        id: 'integrations',
+        title: '첫 번째 통합 추가하기',
+        content:
+          '**설정 → 기기 및 서비스를 통해 통합을 추가하십시오. 많은 기기가 네트워크에서 자동으로 검색됩니다.** Zigbee 또는 Z-Wave 기기의 경우 먼저 코디네이터를 추가하십시오.',
+        items: [
+          '자동 검색으로 많은 Wi-Fi 및 Matter 기기가 자동으로 발견됩니다.',
+          'Zigbee 기기를 위해 Zigbee 코디네이터(및 ZHA 또는 Zigbee2MQTT 통합)를 추가하십시오 — [스마트 홈 프로토콜 설명](/ko/smart-home/smart-home-protocols-explained)을 참조하십시오.',
+          '특히 음성 또는 AI를 연결하기 전에 원하는 엔티티만 노출하십시오.',
+        ],
+      },
+      dashboard: {
+        id: 'dashboard',
+        title: '대시보드',
+        content:
+          '**Home Assistant는 기기용 카드로 맞춤 설정할 수 있는 대시보드를 자동으로 생성합니다.** 기본값으로 시작하여 시간이 지나면서 개선하십시오.',
+        items: [
+          '기본 대시보드는 기기와 영역을 자동으로 나열합니다.',
+          '가장 많이 사용하는 컨트롤에 카드를 추가하십시오.',
+          '설정이 확장됨에 따라 방별 보기를 만드십시오.',
+        ],
+      },
+      automation: {
+        id: 'automation',
+        title: '첫 번째 자동화',
+        content:
+          '**설정 → 자동화에서 시각적 편집기를 사용하여 간단한 자동화를 만드십시오 — 예를 들어 일몰 시 조명 켜기.** 일반적인 규칙에는 코딩이 필요 없습니다.',
+        numberedItems: [
+          '설정 → 자동화 및 장면 → 자동화 만들기를 여십시오.',
+          '트리거를 선택하십시오(시간, 일몰 또는 센서 상태).',
+          '작업을 선택하십시오(조명 켜기, 알림 보내기).',
+          '저장하고 테스트한 후 개선하십시오.',
+          '나중에 컨텍스트 인식 규칙을 위해 [로컬 LLM으로 AI 자동화](/ko/smart-home/ai-automations-local-llm)를 참조하십시오.',
+        ],
+      },
+      aiLater: {
+        id: 'ai-later',
+        title: '나중에 AI 추가하기',
+        content:
+          '**기본 기능이 작동하면 로컬 LLM을 대화 에이전트로 추가하십시오 — 하지만 기기와 자동화가 안정된 후에 하십시오.** 이 가이드는 Ollama를 다시 설명하지 않습니다. 그것은 외부 링크를 참조하십시오.',
+        items: [
+          '[Ollama 통합](/ko/smart-home/home-assistant-ollama-integration)을 통해 로컬 모델을 연결하십시오.',
+          'Ollama 설정 및 모델 선택은 [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama)(크로스 클러스터)을 참조하십시오.',
+          '[로컬 음성 어시스턴트 가이드](/ko/smart-home/local-voice-assistant-smart-home)로 로컬 음성 프론트엔드를 추가하십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: 'Home Assistant에는 Raspberry Pi 또는 미니 PC가 더 적합합니까?', a: 'Raspberry Pi는 일반적인 스마트 홈 사용에 Home Assistant를 잘 실행합니다. 같은 기기에서 로컬 LLM, 더 큰 Whisper 모델, 또는 Frigate 카메라 감지도 실행하려면 미니 PC를 선택하십시오. 그런 기능들은 더 많은 컴퓨팅 성능을 필요로 합니다.' },
+          { q: 'Home Assistant는 무료입니까?', a: '네. Home Assistant는 무료 오픈 소스입니다. 실행되는 하드웨어와 원격 접근을 위한 클라우드 릴레이 같은 선택적 추가 기능에만 비용이 듭니다. 핵심 로컬 제어에는 구독이 필요 없습니다.' },
+          { q: 'Home Assistant를 사용하려면 코딩이 필요합니까?', a: '아니오. 일반적인 설정, 대시보드, 자동화는 그래픽 인터페이스를 통해 구축됩니다. YAML 설정은 고급 자동화에 사용 가능하지만 시작할 때는 선택 사항입니다.' },
+          { q: 'Home Assistant로 AI를 실행할 수 있습니까?', a: '네. Home Assistant는 로컬 모델이 대화 에이전트로 작동할 수 있도록 Ollama와 통합되며, Whisper와 Piper로 로컬 음성을 지원합니다. 미니 PC에서 이것들을 실행하면 모든 것이 로컬로 유지됩니다. 설정은 Ollama 통합 가이드를 참조하십시오.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 스마트 홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide) — 전체 로컬 우선 스택',
+          '[Home Assistant에 Ollama 연결](/ko/smart-home/home-assistant-ollama-integration) — 로컬 AI 에이전트 추가',
+          '[로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — 올바른 기기 선택',
+          '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 크로스 클러스터: 로컬 모델 실행',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Home Assistant: 완전한 시작 가이드 (2026)',
+      description: '2026년 Home Assistant 시작하기: 설치 옵션(HAOS, 컨테이너, Pi 대 미니 PC), 첫 번째 통합, 대시보드, 첫 번째 로컬 자동화.',
+      url: 'https://www.promptquorum.com/ko/smart-home/home-assistant-getting-started',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '홈 자동화' }, { '@type': 'Thing', name: '로컬 제어' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: 'Home Assistant에는 Raspberry Pi 또는 미니 PC가 더 적합합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Raspberry Pi는 일반적인 용도에 잘 작동합니다. 같은 기기에서 로컬 LLM, 더 큰 Whisper 모델, 또는 Frigate 감지도 원한다면 미니 PC를 선택하십시오.' } },
+        { '@type': 'Question', name: 'Home Assistant는 무료입니까?', acceptedAnswer: { '@type': 'Answer', text: '네. 무료 오픈 소스입니다. 하드웨어와 원격 접근을 위한 클라우드 릴레이 같은 선택적 추가 기능에만 비용이 듭니다. 핵심 로컬 제어에는 구독이 필요 없습니다.' } },
+        { '@type': 'Question', name: 'Home Assistant를 사용하려면 코딩이 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '아니오. 일반적인 설정, 대시보드, 자동화는 그래픽 인터페이스를 통해 구축됩니다. YAML은 고급 자동화에 선택 사항입니다.' } },
+        { '@type': 'Question', name: 'Home Assistant로 AI를 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '네. 로컬 대화 에이전트를 위해 Ollama와 통합되며 Whisper와 Piper로 로컬 음성을 지원합니다. 미니 PC에서 실행하면 모든 것이 로컬로 유지됩니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

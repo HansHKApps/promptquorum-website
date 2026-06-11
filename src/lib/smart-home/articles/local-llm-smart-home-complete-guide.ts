@@ -798,6 +798,205 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: '로컬 LLM으로 스마트 홈 운영하기 (2026 가이드)',
+    seoTitle: '로컬 LLM 스마트 홈 2026: 완전 가이드',
+    intro:
+      '이제 로컬 LLM이 스마트 홈의 두뇌 역할을 담당할 수 있습니다. 자연어 명령을 해석하고, 문맥 인식 자동화를 실행하며, 프라이빗 음성 어시스턴트를 구동합니다. 이 모든 것이 클라우드 없이 직접 소유한 하드웨어에서 실행됩니다. 이 가이드는 그 의미, 2026년에 실용화된 이유, Home Assistant + Ollama + 로컬 음성 아키텍처, 규칙 기반 자동화 대비 장점, 그리고 구축 단계별 경로를 설명합니다.',
+    metaDescription:
+      '로컬 LLM 스마트 홈 2026: Home Assistant + Ollama로 자연어 제어와 문맥 인식 자동화를 클라우드 없이 구현하는 완전 가이드.',
+    twitterDescription:
+      '로컬 LLM을 스마트 홈의 두뇌로 활용하십시오. Home Assistant + Ollama를 통한 자연어 제어와 문맥 인식 자동화. 클라우드 없음.',
+    readTime: '12분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '스마트 홈에 로컬 AI 제어를 추가하는 Home Assistant 사용자',
+    primaryTerm: 'local LLM smart home',
+    targetKeywords: [
+      '로컬 LLM 스마트 홈',
+      'home assistant 로컬 LLM',
+      'ollama 스마트 홈',
+      '자연어 홈 자동화',
+      '로컬 AI home assistant',
+    ],
+    leadAnswerBlock:
+      '**Ollama를 Home Assistant에 연결하고 모델을 대화 에이전트 및 자동화 두뇌로 사용하면 로컬 LLM으로 스마트 홈을 운영할 수 있습니다. 자연어로 기기를 제어하며, 클라우드 없이 직접 소유한 하드웨어에서 모두 실행됩니다.** 소형이면서 function-calling이 가능한 모델이 미니 PC에서 구동되기 시작한 2026년에 실용화되었습니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 LLM으로 스마트 홈을 운영할 수 있습니까?',
+        answer:
+          '예. Home Assistant는 Ollama와 연동되므로 로컬에서 호스팅된 모델이 대화 에이전트 역할을 하며 자연어 요청을 기기 동작으로 변환합니다. 모델은 직접 소유한 하드웨어에서 실행되므로 제어와 자동화가 클라우드 없이 작동하며 데이터가 집 밖으로 나가지 않습니다. 미니 PC의 소형 모델로도 홈 컨트롤이 충분합니다.',
+        bullets: [
+          'Home Assistant + Ollama = 로컬 모델이 대화 에이전트로 동작',
+          '자연어 제어: "부엌 조명 어둡게 하고 전기 주전자 켜줘"',
+          '경직된 if-then 규칙을 넘어선 문맥 인식 자동화',
+          '직접 소유한 하드웨어에서 오프라인으로 동작 — 클라우드 없음, 사용 기록 없음',
+          '미니 PC의 소형 function-calling 모델로 홈 컨트롤 처리 가능',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: '의미', anchor: 'what-it-means' },
+      { label: '2026년에 가능한 이유', anchor: 'why-2026' },
+      { label: '아키텍처', anchor: 'architecture' },
+      { label: '달성 가능한 것', anchor: 'what-it-unlocks' },
+      { label: '하드웨어 현실', anchor: 'hardware' },
+      { label: '단계별 경로', anchor: 'step-by-step' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Ollama를 Home Assistant에 연결하면 로컬에서 호스팅된 모델이 스마트 홈의 두뇌가 됩니다. 클라우드 없이 자연어 제어와 문맥 인식 자동화를 실현합니다.' },
+      { type: 'plain-terms', content: '전통적인 스마트 홈 자동화는 경직된 규칙입니다. 움직임이 감지되면 조명을 켭니다. 로컬 LLM은 자연어와 문맥을 이해하는 계층을 추가합니다. "외출합니다"라고 말하면 무엇을 끌지 결정할 수 있습니다. 모델은 직접 소유한 기기에서 Ollama를 통해 실행되며 Home Assistant에 연결되므로 어떤 것도 클라우드 서비스에 의존하지 않습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          'Home Assistant에는 Ollama 통합이 내장되어 있습니다. 로컬 모델이 대화 에이전트가 됩니다.',
+          '정확한 명령 문구를 외울 필요 없이 자연어로 기기를 제어합니다.',
+          '모델은 경직된 규칙으로는 표현할 수 없는 문맥 인식 자동화를 실행할 수 있습니다.',
+          '모든 것이 직접 소유한 하드웨어에서 실행됩니다. 클라우드 없음, 사용 데이터가 집 밖으로 나가지 않습니다.',
+          '미니 PC의 소형 function-calling 모델로 충분합니다. GPU 또는 고성능 iGPU/NPU는 지연 시간을 줄입니다.',
+          '구축 순서: 먼저 Home Assistant, 다음 Ollama, 대화 에이전트 연결, 마지막으로 로컬 음성 추가',
+        ],
+      },
+      whatItMeans: {
+        id: 'what-it-means',
+        title: '로컬 LLM으로 스마트 홈을 운영한다는 의미',
+        content:
+          '**로컬에서 호스팅된 언어 모델이 사용자와 기기 사이에 위치하여 자연어 의도를 Home Assistant 동작으로 변환하고, 고정 규칙으로는 내릴 수 없는 자동화 결정을 내린다는 것을 의미합니다.** LLM은 두 가지 역할을 담당합니다. 대화 에이전트(말을 하면 행동합니다)와 자동화 두뇌(문맥을 추론합니다)입니다.',
+        items: [
+          '**대화 에이전트:** "거실을 아늑하게 해줘"라고 말하거나 입력하면 모델이 그 의도를 구체적인 기기 호출로 매핑합니다. 조명을 어둡게 하고 따뜻한 색조로 설정하며 블라인드를 내립니다.',
+          '**자동화 두뇌:** 하나의 트리거가 하나의 동작을 유발하는 대신, 모델은 문맥을 고려합니다. 시간대, 재실 여부, 센서 상태, 그리고 자연어로 표현된 목표를 반영합니다.',
+          '**설계부터 로컬:** 모델은 직접 소유한 기기에서 Ollama를 통해 실행되므로 명령도, 홈 상태도 제3자에게 전송되지 않습니다.',
+        ],
+      },
+      why2026: {
+        id: 'why-2026',
+        title: '2026년에 가능해진 이유',
+        content:
+          '**세 가지가 수렴했습니다. 소형 모델이 홈 컨트롤에 충분한 성능을 갖추었고, 신뢰할 수 있는 function-calling을 획득했으며, Home Assistant가 일류 LLM 통합을 출시했습니다.** 이것들이 동시에 가정 사용자에게 제공된 것은 몇 년 전에는 없었던 일입니다.',
+        items: [
+          '**유능한 소형 모델:** 3B~8B 범위의 모델들이 이제 의도를 기기 동작에 매핑할 만큼 지시를 잘 따르며 소박한 하드웨어에서도 동작합니다. 모델 원리와 크기 선택에 대해서는 [로컬 LLM이란 무엇인가](/ko/local-llms/what-are-local-llms)를 참조하십시오. 이 가이드에서는 다시 설명하지 않습니다.',
+          '**Function-calling / 도구 사용:** 홈 컨트롤은 모델이 구조화된 호출(켜기, 온도 설정)을 출력하는 것에 의존합니다. 현대 로컬 모델들이 이를 지원하며, 이것이 신뢰할 수 있는 제어를 가능하게 합니다.',
+          '**Home Assistant 통합:** Home Assistant는 대화 에이전트 인터페이스와 Ollama 통합을 제공하므로 로컬 모델을 기기에 연결하는 것은 설정 단계이지 커스텀 개발이 아닙니다.',
+        ],
+      },
+      architecture: {
+        id: 'architecture',
+        title: '아키텍처: Home Assistant + Ollama + 로컬 음성',
+        content:
+          '**스택은 직접 소유한 하드웨어의 세 가지 구성 요소입니다. Home Assistant(기기 + 자동화), Ollama(로컬 모델 런타임), 로컬 음성 파이프라인(Assist + Whisper + Piper)입니다.** 데이터는 네트워크를 벗어나지 않는 루프로 흐릅니다.',
+        numberedItems: [
+          { title: 'Home Assistant', whyItMatters: '기기, 엔티티 상태, 자동화를 관리하고 대화 에이전트 인터페이스를 제공합니다. 모델이 동작하는 허브입니다. [Home Assistant 시작하기](/ko/smart-home/home-assistant-getting-started)에서 시작하십시오.' },
+          { title: 'Ollama', whyItMatters: '로컬 모델을 실행하고 Home Assistant에 제공합니다. 설치 및 모델 선택은 [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama)을 참조하십시오. 이 가이드는 스마트 홈 연결에 집중합니다.' },
+          { title: '대화 에이전트', whyItMatters: 'Assist를 Ollama 모델에 연결하여 자연어가 기기 동작이 되도록 하는 Home Assistant 설정입니다. 단계별 안내는 [Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration)에 있습니다.' },
+          { title: '로컬 음성(선택 사항)', whyItMatters: 'Whisper가 음성을 텍스트로 변환하고 Piper가 응답을 말하므로 완전히 오프라인으로 동작하는 음성 어시스턴트를 구성할 수 있습니다. [완전 로컬 음성 어시스턴트 구축하기](/ko/smart-home/local-voice-assistant-smart-home)를 참조하십시오.' },
+        ],
+      },
+      whatItUnlocks: {
+        id: 'what-it-unlocks',
+        title: '규칙 기반 자동화 대비 달성 가능한 것',
+        content:
+          '**로컬 LLM은 규칙 기반 자동화로는 표현할 수 없는 유연성, 자연어, 문맥을 제공합니다. 더 많은 설정과 하드웨어가 필요한 대신입니다.** 결정론적 트리거에는 규칙을, 의도와 문맥이 중요한 곳에는 LLM을 사용하십시오.',
+        columns: ['항목', '규칙 기반 자동화', '로컬 LLM 자동화'],
+        rows: [
+          { '항목': '유연성', '규칙 기반 자동화': '고정 트리거 → 고정 동작', '로컬 LLM 자동화': '목표를 해석하고 문맥에 적응' },
+          { '항목': '자연어', '규칙 기반 자동화': '없음 — 정확한 조건을 직접 설정', '로컬 LLM 자동화': '자연어 명령 및 의도' },
+          { '항목': '문맥 인식', '규칙 기반 자동화': '스크립트로 작성된 상태만', '로컬 LLM 자동화': '시간, 재실, 센서를 종합하여 추론' },
+          { '항목': '설정', '규칙 기반 자동화': '규칙별로 간단', '로컬 LLM 자동화': '높음 — 허브 + 모델 + 연결' },
+          { '항목': '하드웨어 필요', '규칙 기반 자동화': '최소(Pi 하나)', '로컬 LLM 자동화': '미니 PC; GPU/NPU가 지연 시간에 도움' },
+        ],
+        items: [
+          '구체적인 자동화 예시와 그 이면의 프롬프트는 [로컬 LLM을 활용한 스마트한 자동화](/ko/smart-home/ai-automations-local-llm)를 참조하십시오.',
+          '결정론적 안전 자동화(화재 경보, 도어록)는 간단한 규칙으로 유지하십시오. 모델을 통해 라우팅하지 마십시오.',
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: '하드웨어 현실',
+        content:
+          '**Home Assistant와 소형 로컬 모델을 미니 PC 하나에서 실행할 수 있습니다. GPU, 고성능 iGPU 또는 NPU는 응답 지연 시간을 줄입니다.** 이 가이드는 VRAM이나 모델 양자화를 다시 설명하지 않습니다. 자세한 내용은 외부 링크를 참조하십시오.',
+        items: [
+          '**하나의 기기로 충분합니다:** 미니 PC는 Ollama를 통해 Home Assistant와 소형 모델을 함께 호스팅할 수 있습니다. 추천 제품은 [Home Assistant + 로컬 AI용 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai)를 참조하십시오.',
+          '**지연 시간은 하드웨어에 비례합니다:** 더 큰 모델과 CPU 전용 추론은 응답이 더 느립니다. GPU나 최신 iGPU/NPU는 빠른 어시스턴트와의 격차를 줄입니다. VRAM과 모델 크기에 대한 자세한 내용은 [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
+          '**용도에 맞는 모델을 선택하십시오:** 홈 컨트롤은 가장 큰 모델보다 소형의 빠른 function-calling 모델이 적합합니다. [스마트 홈 제어를 위한 최고의 로컬 LLM 모델](/ko/smart-home/best-local-llm-models-smart-home)을 참조하십시오.',
+        ],
+      },
+      stepByStep: {
+        id: 'step-by-step',
+        title: '단계별 경로',
+        content:
+          '**순서대로 구축하십시오. Home Assistant, 다음 Ollama, 대화 에이전트, 그리고 음성과 자동화입니다.** 각 단계는 별도의 가이드에서 다루므로 이 핵심 문서는 지도 역할을 유지하며 명령어 나열이 되지 않습니다.',
+        numberedItems: [
+          '미니 PC에 Home Assistant를 설정하십시오 — [시작 가이드](/ko/smart-home/home-assistant-getting-started).',
+          'Ollama를 설치하고 소형 모델을 다운로드하십시오 — [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama).',
+          'Ollama를 Home Assistant에 연결하고 대화 에이전트로 설정하십시오 — [통합 가이드](/ko/smart-home/home-assistant-ollama-integration).',
+          '홈 컨트롤에 맞춰진 모델을 선택하십시오 — [스마트 홈을 위한 최고의 로컬 LLM 모델](/ko/smart-home/best-local-llm-models-smart-home).',
+          '완전 로컬 음성 프론트엔드를 추가하십시오 — [로컬 음성 어시스턴트](/ko/smart-home/local-voice-assistant-smart-home).',
+          '문맥 인식 자동화를 설계하십시오 — [로컬 LLM을 활용한 AI 자동화](/ko/smart-home/ai-automations-local-llm).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '홈 컨트롤에 가장 적합한 로컬 모델은 무엇입니까?', a: '신뢰할 수 있는 function-calling을 갖춘 소형 지시 추종 모델(일반적으로 3B~8B 범위)이 가장 적합합니다. 홈 컨트롤은 가장 큰 모델보다 빠르고 구조화된 응답이 필요하기 때문입니다. 최적의 선택은 하드웨어에 따라 다릅니다. 현재 옵션은 스마트 홈을 위한 최고의 로컬 LLM 모델 가이드를 참조하십시오.' },
+          { q: '로컬 LLM 스마트 홈에 GPU가 필요합니까?', a: '아니요, 하지만 도움이 됩니다. 소형 모델은 최신 CPU나 고성능 내장 GPU에서 실행됩니다. 전용 GPU나 NPU는 주로 응답 지연 시간을 줄여 어시스턴트를 더 빠르게 만듭니다. 가장 큰 GPU를 구입하기보다 하드웨어에 맞게 모델 크기를 조정하십시오.' },
+          { q: '로컬 LLM 스마트 홈은 오프라인으로 작동합니까?', a: '예. 모델은 Ollama를 통해 로컬에서 실행되고 Home Assistant는 LAN으로 기기를 제어하므로 자연어 제어와 자동화가 인터넷 없이 작동합니다. 집 밖에서의 원격 접근만 연결이 필요합니다.' },
+          { q: '로컬 LLM이 Alexa보다 빠릅니까?', a: '하드웨어와 모델 크기에 따라 다릅니다. Alexa 같은 클라우드 어시스턴트는 낮은 지연 시간에 최적화되어 있으며, 로컬 LLM은 프라이버시와 오프라인 운영을 위해 어느 정도 속도를 희생합니다. GPU가 장착된 미니 PC에서는 격차가 줄어듭니다. 결정적인 장점은 속도가 아니라 프라이버시와 제어권입니다.' },
+          { q: '로컬 LLM 스마트 홈을 Raspberry Pi에서 실행할 수 있습니까?', a: 'Raspberry Pi는 Home Assistant를 잘 실행하지만 Pi에서의 LLM 추론은 매우 소형 모델에 제한되며 느립니다. 반응 속도가 좋은 로컬 LLM 어시스턴트를 위해서는 고성능 iGPU/NPU 또는 전용 GPU가 있는 미니 PC가 더 나은 선택입니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration) — 단계별 통합',
+          '[완전 로컬 음성 어시스턴트 구축하기](/ko/smart-home/local-voice-assistant-smart-home) — Assist + Whisper + Piper',
+          '[로컬 LLM을 활용한 스마트한 자동화](/ko/smart-home/ai-automations-local-llm) — 문맥 인식 규칙과 프롬프트',
+          '[스마트 홈 제어를 위한 최고의 로컬 LLM 모델](/ko/smart-home/best-local-llm-models-smart-home) — 모델 선택',
+          '[로컬 스마트 홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide) — 로컬 퍼스트 기반',
+          '[실제로 작동하는 자율 로컬 에이전트](/ko/power-local-llm/autonomous-local-agents-actually-work) — 클러스터 간: 로컬 AI 에이전트와 워크플로우',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 LLM으로 스마트 홈 운영하기 (2026 가이드)',
+      description: '로컬 LLM 스마트 홈 2026: Home Assistant + Ollama로 자연어 제어와 문맥 인식 자동화를 클라우드 없이 구현하는 완전 가이드.',
+      url: 'https://www.promptquorum.com/ko/smart-home/local-llm-smart-home-complete-guide',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '로컬 LLM' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Ollama' }, { '@type': 'Thing', name: '홈 자동화' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '홈 컨트롤에 가장 적합한 로컬 모델은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '신뢰할 수 있는 function-calling을 갖춘 소형 지시 추종 모델(일반적으로 3B~8B)이 가장 적합합니다. 홈 컨트롤은 가장 큰 모델보다 빠르고 구조화된 응답이 필요하기 때문입니다.' } },
+        { '@type': 'Question', name: '로컬 LLM 스마트 홈에 GPU가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '아니요, 하지만 도움이 됩니다. 소형 모델은 최신 CPU나 내장 GPU에서 실행됩니다. 전용 GPU나 NPU는 주로 응답 지연 시간을 줄입니다.' } },
+        { '@type': 'Question', name: '로컬 LLM 스마트 홈은 오프라인으로 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: '예. 모델은 Ollama를 통해 로컬에서 실행되고 Home Assistant는 LAN으로 기기를 제어하므로 제어와 자동화가 인터넷 없이 작동합니다.' } },
+        { '@type': 'Question', name: '로컬 LLM이 Alexa보다 빠릅니까?', acceptedAnswer: { '@type': 'Answer', text: '하드웨어와 모델 크기에 따라 다릅니다. 클라우드 어시스턴트는 낮은 지연 시간에 최적화되어 있습니다. 로컬 LLM은 프라이버시와 오프라인 운영을 위해 어느 정도 속도를 희생하며 GPU 장착 미니 PC에서는 격차가 줄어듭니다.' } },
+        { '@type': 'Question', name: '로컬 LLM 스마트 홈을 Raspberry Pi에서 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: 'Pi는 Home Assistant를 잘 실행하지만 Pi에서의 LLM 추론은 매우 소형 모델에 제한되며 느립니다. 고성능 iGPU/NPU 또는 전용 GPU가 있는 미니 PC가 더 낫습니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

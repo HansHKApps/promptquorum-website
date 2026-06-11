@@ -706,6 +706,182 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Decision & Comparison',
+    title: '로컬 vs 클라우드 음성 어시스턴트: 프라이버시, 비용, 성능 (2026)',
+    seoTitle: '로컬 vs 클라우드 음성 어시스턴트: 2026 프라이버시 가이드',
+    intro:
+      '로컬 음성 어시스턴트는 프라이버시와 비용에서 우세합니다. 클라우드 어시스턴트는 완성도와 스킬 폭에서 여전히 앞섭니다. 이 결정 가이드는 로컬 스택(Home Assistant Assist + Whisper + 로컬 LLM)과 클라우드 어시스턴트(Alexa, Google)를 프라이버시, 비용, 정확도, 스킬, 오프라인 동작, 노력 측면에서 비교하고 각각이 언제 더 나은지 설명합니다.',
+    metaDescription:
+      '로컬 vs 클라우드 음성 어시스턴트 2026: 프라이버시, 비용, 정확도, 스킬, 오프라인 비교. 로컬 스택과 클라우드가 각각 언제 우세한지.',
+    twitterDescription:
+      '로컬 vs 클라우드 음성 어시스턴트: 로컬이 프라이버시와 비용에서 우세하고 클라우드가 완성도와 스킬에서 앞섭니다. 2026에 각각이 언제 더 나은지.',
+    readTime: '8분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '로컬과 클라우드 음성 제어 중에서 결정하는 사람들',
+    primaryTerm: 'local vs cloud voice assistant',
+    targetKeywords: [
+      '로컬 vs 클라우드 음성 어시스턴트',
+      '프라이빗 음성 어시스턴트 vs alexa',
+      'home assistant 음성 vs alexa',
+      '오프라인 음성 어시스턴트 비교',
+      'alexa 프라이버시 대체',
+    ],
+    leadAnswerBlock:
+      '**로컬 음성 어시스턴트는 프라이버시, 비용, 오프라인 동작에서 우세합니다. Alexa나 Google과 같은 클라우드 어시스턴트는 완성도와 타사 스킬 폭에서 여전히 앞섭니다.** 프라이버시와 제어권을 위해서는 로컬을, 노력 없는 편의성을 위해서는 클라우드를 선택하십시오.',
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 음성 어시스턴트와 클라우드 음성 어시스턴트 중 어느 것을 사용해야 합니까?',
+        answer:
+          '프라이버시, 구독 없음, 오프라인 동작을 원한다면 로컬 음성 어시스턴트(Home Assistant Assist + Whisper + Piper + 로컬 LLM)를 사용하십시오. 가장 쉬운 설정과 더 광범위한 타사 스킬을 원하고 음성 데이터가 클라우드에서 처리되는 것을 수용한다면 Alexa나 Google과 같은 클라우드 어시스턴트를 사용하십시오.',
+        bullets: [
+          '로컬: 비공개, 구독 없음, 오프라인 동작, 더 많은 설정',
+          '클라우드: 가장 쉬움, 더 광범위한 스킬, 완성도 높음, 클라우드에서 처리됨',
+          '로컬 정확도는 Whisper 모델과 하드웨어에 따라 달라짐',
+          '클라우드가 광범위한 타사 스킬과 제로 설정에서 앞섬',
+          '프라이버시/제어 vs 편의성으로 선택하십시오',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: '두 가지 접근 방식', anchor: 'two-approaches' },
+      { label: '비교', anchor: 'comparison' },
+      { label: '로컬의 논거', anchor: 'case-local' },
+      { label: '클라우드가 여전히 우세한 곳', anchor: 'cloud-wins' },
+      { label: '권장 사항', anchor: 'recommendation' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '로컬 음성 어시스턴트는 프라이버시, 비용, 오프라인 동작에서 우세합니다. 클라우드 어시스턴트는 완성도와 타사 스킬 폭에서 앞섭니다.' },
+      { type: 'plain-terms', content: 'Alexa 같은 클라우드 음성 어시스턴트는 쉽고 기능이 풍부하지만 음성을 기업 서버로 전송합니다. 로컬 음성 어시스턴트는 직접 소유한 하드웨어에서 실행되므로 비공개이고 오프라인으로 동작하지만 직접 설정하고 타사 스킬이 더 적습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          '로컬(Assist + Whisper + Piper + 로컬 LLM): 비공개, 구독 없음, 오프라인, 더 많은 설정',
+          '클라우드(Alexa, Google): 가장 쉬움, 더 광범위한 타사 스킬, 완성도 높음, 클라우드에서 처리됨',
+          '로컬 정확도는 Whisper 모델 크기와 마이크에 따라 달라짐',
+          '클라우드가 제로 설정과 광범위한 스킬에서 앞섭니다. 로컬이 프라이버시와 비용에서 앞섭니다',
+          'GPU가 장착된 미니 PC는 로컬의 지연 시간 격차를 줄입니다',
+          '프라이버시와 제어를 위해서는 로컬을, 편의성을 위해서는 클라우드를 선택하십시오',
+        ],
+      },
+      twoApproaches: {
+        id: 'two-approaches',
+        title: '두 가지 접근 방식',
+        content:
+          '**로컬 어시스턴트는 음성, 이해, 응답을 직접 소유한 하드웨어에서 실행합니다. 클라우드 어시스턴트는 제조사 서버에서 실행합니다.** 이 단 하나의 차이가 모든 트레이드오프를 만듭니다.',
+        items: [
+          '**로컬:** Home Assistant Assist + Whisper(STT) + Piper(TTS) + 선택적 로컬 LLM — [완전 로컬 음성 어시스턴트 구축하기](/ko/smart-home/local-voice-assistant-smart-home)를 참조하십시오.',
+          '**클라우드:** Alexa 또는 Google이 서버에서 음성을 처리합니다.',
+          '이 선택은 더 광범위한 로컬 vs 클라우드 결정을 반영합니다 — [로컬이 클라우드보다 나은 이유](/ko/smart-home/why-local-smart-home-beats-cloud)를 참조하십시오.',
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '비교',
+        content:
+          '**로컬이 프라이버시, 비용, 오프라인에서 우세합니다. 클라우드가 스킬과 노력에서 우세합니다.** 표를 사용해 우선순위를 매핑하십시오.',
+        columns: ['기준', '로컬(Assist + Whisper + LLM)', '클라우드(Alexa / Google)'],
+        rows: [
+          { '기준': '프라이버시', '로컬(Assist + Whisper + LLM)': '기기 내, 비공개', '클라우드(Alexa / Google)': '클라우드에서 처리된 음성' },
+          { '기준': '비용', '로컬(Assist + Whisper + LLM)': '하드웨어 일회 비용', '클라우드(Alexa / Google)': '저렴한 하드웨어, 구독 가능' },
+          { '기준': '정확도', '로컬(Assist + Whisper + LLM)': '모델/하드웨어에 따라 달라짐', '클라우드(Alexa / Google)': '완성도 높음, 일관됨' },
+          { '기준': '스킬', '로컬(Assist + Whisper + LLM)': '홈 제어에 집중', '클라우드(Alexa / Google)': '광범위한 타사 스킬' },
+          { '기준': '오프라인', '로컬(Assist + Whisper + LLM)': '오프라인으로 동작', '클라우드(Alexa / Google)': '인터넷 필요' },
+          { '기준': '노력', '로컬(Assist + Whisper + LLM)': '더 많은 설정', '클라우드(Alexa / Google)': '플러그앤플레이' },
+        ],
+      },
+      caseLocal: {
+        id: 'case-local',
+        title: '프라이버시와 비용을 위한 로컬의 논거',
+        content:
+          '**로컬 음성은 녹음을 직접 소유한 하드웨어에 유지하고 구독을 피할 수 있어 선택하는 가장 강력한 이유입니다.** 인터넷 장애 시에도 동작합니다.',
+        items: [
+          '음성 녹음이 제조사에게 전송되지 않습니다 — [스마트 홈 프라이버시 위험](/ko/smart-home/smart-home-privacy-risks)을 참조하십시오.',
+          '구독 없음. 하드웨어를 한 번 구매합니다.',
+          '자연어 이해를 위한 로컬 LLM 추가 — [로컬 LLM으로 스마트 홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide)를 참조하십시오.',
+        ],
+      },
+      cloudWins: {
+        id: 'cloud-wins',
+        title: '클라우드가 여전히 우세한 곳',
+        content:
+          '**클라우드 어시스턴트는 노력 없는 설정, 일관된 정확도, 광범위한 타사 스킬에서 여전히 앞섭니다.** 쇼핑, 광범위한 앱 통합, 제로 설정을 원한다면 클라우드가 앞섭니다.',
+        items: [
+          '관리할 하드웨어 없이 기본 설정.',
+          '홈 제어를 넘어선 광범위한 타사 스킬 생태계.',
+          '모델이나 마이크를 조정하지 않아도 되는 일관된 인식.',
+        ],
+      },
+      recommendation: {
+        id: 'recommendation',
+        title: '권장 사항',
+        content:
+          '**프라이버시, 비용, 오프라인 동작이 중요하다면 로컬을 선택하십시오. 제로 설정과 가장 광범위한 스킬을 원한다면 클라우드를 선택하십시오.** 확신이 없지만 프라이버시를 중시한다면 미니 PC로 로컬부터 시작하십시오.',
+        items: [
+          '**프라이버시 / 오프라인 / 구독 없음:** 로컬 스택.',
+          '**제로 설정 / 더 광범위한 스킬:** Alexa 또는 Google.',
+          '**프라이버시 성향이지만 미결정:** GPU가 장착된 미니 PC로 로컬부터 시작하십시오 — [Home Assistant + 로컬 AI용 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai)를 참조하십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '로컬 음성이 지금 클라우드만큼 좋습니까?', a: '홈 제어와 자연어 명령에 대해서는 좋은 Whisper 모델과 로컬 LLM을 갖춘 로컬 스택이 매우 유능합니다. 클라우드 어시스턴트는 기본 완성도와 홈 제어를 넘어선 광범위한 타사 스킬에서 여전히 앞섭니다.' },
+          { q: '로컬 음성 어시스턴트가 완전히 오프라인으로 동작합니까?', a: '예. 음성→텍스트, 텍스트→음성, 의도 처리, 선택적 로컬 LLM 모두 직접 소유한 하드웨어에서 실행되므로 인터넷 없이 동작합니다. 집 밖에서의 원격 접근만 연결이 필요합니다.' },
+          { q: '비용 차이는 어떻습니까?', a: '로컬 음성은 일회 하드웨어 비용으로 구독이 없고, 클라우드 어시스턴트는 하드웨어가 저렴하지만 프리미엄 기능에 구독이 연결될 수 있습니다. 장기적으로 로컬이 더 저렴한 경우가 많고 음성 데이터가 비공개로 유지됩니다.' },
+          { q: '로컬 음성 설정에 얼마나 많은 노력이 필요합니까?', a: '클라우드 어시스턴트보다 더 많은 노력이 필요합니다. Home Assistant 설치, Whisper와 Piper 추가, Wyoming 위에서 연결, 선택적으로 로컬 LLM 추가가 필요합니다. 몇 번의 터치가 아닌 주말 프로젝트지만 잘 문서화되어 있습니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[완전 로컬 음성 어시스턴트 구축하기](/ko/smart-home/local-voice-assistant-smart-home) — 로컬 스택 구축 방법',
+          '[로컬 스마트 홈이 클라우드보다 나은 이유](/ko/smart-home/why-local-smart-home-beats-cloud) — 더 광범위한 로컬 논거',
+          '[로컬 Whisper + Home Assistant](/ko/smart-home/local-whisper-home-assistant) — 로컬 음성→텍스트',
+          '[Home Assistant + 로컬 AI용 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) — 로컬 음성을 위한 하드웨어',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 vs 클라우드 음성 어시스턴트: 프라이버시, 비용, 성능 (2026)',
+      description: '로컬 vs 클라우드 음성 어시스턴트 2026: 프라이버시, 비용, 정확도, 스킬, 오프라인 비교. 로컬 스택과 클라우드가 각각 언제 우세한지.',
+      url: 'https://www.promptquorum.com/ko/smart-home/local-vs-cloud-voice-assistant',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '음성 어시스턴트' }, { '@type': 'Thing', name: '로컬 AI' }, { '@type': 'Thing', name: '프라이버시' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '로컬 음성이 지금 클라우드만큼 좋습니까?', acceptedAnswer: { '@type': 'Answer', text: '홈 제어에 대해서는 좋은 Whisper 모델과 로컬 LLM을 갖춘 로컬 스택이 매우 유능합니다. 클라우드는 기본 완성도와 광범위한 타사 스킬에서 여전히 앞섭니다.' } },
+        { '@type': 'Question', name: '로컬 음성 어시스턴트가 완전히 오프라인으로 동작합니까?', acceptedAnswer: { '@type': 'Answer', text: '예. 음성→텍스트, 텍스트→음성, 의도 처리, 선택적 로컬 LLM 모두 직접 소유한 하드웨어에서 실행되므로 인터넷 없이 동작합니다. 원격 접근만 연결이 필요합니다.' } },
+        { '@type': 'Question', name: '비용 차이는 어떻습니까?', acceptedAnswer: { '@type': 'Answer', text: '로컬은 일회 하드웨어 비용으로 구독이 없고 클라우드는 하드웨어가 저렴하지만 프리미엄 기능에 구독이 연결될 수 있습니다. 장기적으로 로컬이 더 저렴한 경우가 많습니다.' } },
+        { '@type': 'Question', name: '로컬 음성 설정에 얼마나 많은 노력이 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '클라우드보다 더 많은 노력이 필요합니다. Home Assistant, Whisper, Piper를 Wyoming 위에 설치하고 선택적으로 로컬 LLM을 추가합니다. 주말 프로젝트지만 잘 문서화되어 있습니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

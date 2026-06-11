@@ -750,6 +750,193 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: '스마트홈이란? 2026 입문자 가이드',
+    seoTitle: '스마트홈이란? 2026 완전한 입문자 가이드',
+    intro:
+      '스마트홈은 앱이나 음성으로 모니터링·자동화·제어할 수 있는 연결된 기기의 집합입니다. 이 입문자 가이드는 핵심 개념, 기기 카테고리, 허브가 기기를 연결하는 방법, 2026년 개인정보를 결정하는 클라우드 대 로컬 선택, 주요 생태계, 그리고 프라이빗 설정을 원할 때 다음 단계를 설명합니다.',
+    metaDescription:
+      '스마트홈은 앱이나 음성으로 제어하는 연결된 기기입니다. 2026 입문자 가이드: 카테고리, 허브, 클라우드 대 로컬 선택, 주요 생태계.',
+    twitterDescription:
+      '스마트홈이란? 앱이나 음성으로 자동화하고 제어하는 연결된 기기입니다. 카테고리, 허브, 클라우드 대 로컬에 관한 2026 입문자 가이드.',
+    readTime: '8분 분량',
+    educationalLevel: 'Beginner',
+    audience: '첫 번째 스마트홈을 계획하는 입문자',
+    primaryTerm: 'smart home',
+    targetKeywords: [
+      '스마트홈이란',
+      '스마트홈 설명',
+      '스마트홈 기초',
+      '스마트홈 입문자 가이드',
+      '클라우드 대 로컬 스마트홈',
+    ],
+    leadAnswerBlock:
+      '**스마트홈은 인터넷 또는 허브로 연결된 기기의 집합입니다. 조명, 온도 조절기, 잠금장치, 카메라, 센서를 앱이나 음성으로 모니터링·자동화·제어할 수 있습니다.** 2026년 가장 중요한 선택은 클라우드 대 로컬 제어이며 이는 개인정보와 신뢰성을 결정합니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '스마트홈이란 무엇입니까?',
+        answer:
+          '스마트홈은 연결된 기기를 앱, 허브, 또는 음성 명령을 통해 제어하고 자동화하는 가정입니다. 기기는 조명, 기후, 보안, 엔터테인먼트, 센서를 아우릅니다. 제조사 클라우드를 통해 실행되는지 허브에서 로컬로 실행되는지에 따라 시스템의 프라이빗 수준과 신뢰성이 결정됩니다.',
+        bullets: [
+          '앱, 허브, 또는 음성으로 제어하는 연결된 기기',
+          '카테고리: 조명, 기후, 보안, 엔터테인먼트, 센서',
+          '허브가 기기를 연결하고 자동화를 실행합니다',
+          '클라우드 대 로컬 제어가 2026년 핵심 선택입니다',
+          '주요 생태계: Alexa, Google Home, Apple Home, Home Assistant',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: '핵심 개념', anchor: 'core-idea' },
+      { label: '기기 카테고리', anchor: 'categories' },
+      { label: '허브와 기기 통신 방식', anchor: 'hubs' },
+      { label: '클라우드 대 로컬', anchor: 'cloud-vs-local' },
+      { label: '주요 생태계', anchor: 'ecosystems' },
+      { label: '다음 단계', anchor: 'next' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '스마트홈은 연결된 기기(조명, 온도 조절기, 잠금장치, 카메라, 센서)를 앱이나 음성으로 모니터링·자동화·제어하는 것입니다.' },
+      { type: 'plain-terms', content: '스마트홈은 일상 기기들이 서로, 그리고 사용자와 통신할 수 있다는 것을 의미합니다. 핸드폰으로 조명을 끄거나, 외출 시 난방이 내려가도록 하거나, 스피커에 문을 잠그라고 요청할 수 있습니다. 중요한 선택은 이 모든 것이 기업의 클라우드를 통해 실행되는지, 아니면 집 안의 허브에서 유지되는지입니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          '스마트홈은 앱, 허브, 또는 음성으로 제어하는 연결된 기기입니다',
+          '5가지 공통 카테고리는 조명, 기후, 보안, 엔터테인먼트, 센서입니다',
+          '허브는 기기를 조율하고 자동화를 실행하여 함께 작동하도록 합니다',
+          '클라우드 제어는 명령을 제조사 서버를 통해 라우팅하고, 로컬 제어는 집 안에 유지합니다',
+          '로컬 제어는 더 많은 개인정보와 오프라인 신뢰성을 의미합니다. 2026년 핵심 구분점입니다',
+          '4대 주요 생태계는 Amazon Alexa, Google Home, Apple Home, Home Assistant입니다',
+        ],
+      },
+      coreIdea: {
+        id: 'core-idea',
+        title: '핵심 개념',
+        content:
+          '**스마트홈은 일반 기기를 원격 또는 음성으로 모니터링·자동화·제어할 수 있는 기기로 전환합니다.** 자동화(트리거에 따라 기기가 스스로 작동하는 것)가 스마트홈을 원격 제어 기기의 집합과 구분하는 요소입니다.',
+        items: [
+          '**모니터링:** 어디서든 기기 상태(문이 잠겼는지, 온도가 어떤지)를 확인합니다.',
+          '**자동화:** 규칙을 설정합니다("일몰 시 현관 조명 켜기"). 기기가 알아서 작동합니다.',
+          '**제어:** 앱이나 음성 어시스턴트를 사용하여 기기를 직접 조작합니다.',
+        ],
+      },
+      categories: {
+        id: 'categories',
+        title: '스마트홈 기기의 5가지 카테고리',
+        content:
+          '**대부분의 스마트홈 기기는 5가지 카테고리에 속합니다: 조명, 기후, 보안, 엔터테인먼트, 센서.** 많은 기기가 클라우드 전용 버전과 로컬 가능 버전 모두 제공됩니다.',
+        columns: ['카테고리', '예시 기기', '클라우드 또는 로컬'],
+        rows: [
+          { '카테고리': '조명', '예시 기기': '스마트 전구, 스위치, 플러그', '클라우드 또는 로컬': '둘 다 (Zigbee/Matter는 로컬)' },
+          { '카테고리': '기후', '예시 기기': '온도 조절기, 스마트 라디에이터 밸브', '클라우드 또는 로컬': '둘 다' },
+          { '카테고리': '보안', '예시 기기': '카메라, 스마트 잠금장치, 도어벨', '클라우드 또는 로컬': '대개 클라우드; 로컬 옵션 존재' },
+          { '카테고리': '엔터테인먼트', '예시 기기': '스피커, TV, 스트리밍 기기', '클라우드 또는 로컬': '주로 클라우드' },
+          { '카테고리': '센서', '예시 기기': '모션, 도어/창문, 온도', '클라우드 또는 로컬': '둘 다 (Zigbee/Z-Wave는 로컬)' },
+        ],
+      },
+      hubs: {
+        id: 'hubs',
+        title: '스마트홈 허브란 무엇입니까?',
+        content:
+          '**허브는 기기들이 서로 통신하고 자동화를 실행하도록 하는 코디네이터로, 종종 서로 다른 무선 프로토콜을 연결합니다.** 일부 생태계는 전용 허브를 사용하고, 다른 생태계는 스피커나 스마트폰을 사용합니다.',
+        items: [
+          '허브는 Zigbee, Z-Wave 같은 프로토콜을 네트워크에 연결합니다 — [스마트홈 프로토콜 설명](/ko/smart-home/smart-home-protocols-explained)을 참조하십시오.',
+          '로컬 허브(Home Assistant 등)는 인터넷 없이 자동화를 실행합니다.',
+          '클라우드 생태계는 별도의 허브가 필요 없을 수 있지만 서버에 의존합니다.',
+        ],
+      },
+      cloudVsLocal: {
+        id: 'cloud-vs-local',
+        title: '클라우드 대 로컬: 2026년 분기점',
+        content:
+          '**클라우드 제어는 명령을 제조사 서버로 전송하고, 로컬 제어는 집 안에 유지합니다.** 이 선택이 개인정보, 오프라인 신뢰성, 제조사가 기기를 변경하거나 중단할 수 있는지를 결정합니다.',
+        items: [
+          '**클라우드:** 설정이 쉽지만 데이터가 집을 떠나며 서비스가 종료되면 기능도 중단될 수 있습니다.',
+          '**로컬:** 설정이 더 많이 필요하지만 프라이빗하고, 오프라인 가능하며, 제조사 클라우드에 의존하지 않습니다 — [완전한 로컬 스마트홈 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
+          '**입문자가 중요시해야 하는 이유:** 선택을 나중에 되돌리기 어렵기 때문에 일찍 결정하는 것이 좋습니다.',
+        ],
+      },
+      ecosystems: {
+        id: 'ecosystems',
+        title: '주요 생태계',
+        content:
+          '**4대 주요 생태계는 Amazon Alexa, Google Home, Apple Home, Home Assistant입니다. 개인정보와 로컬 제어에서 가장 크게 차이가 납니다.** Home Assistant는 로컬/프라이빗의 챔피언이며, Alexa와 Google은 클라우드 우선입니다.',
+        items: [
+          '**Amazon Alexa:** 넓은 기기 지원, 클라우드 우선, 음성 중심.',
+          '**Google Home:** 넓은 지원과 강력한 음성, 클라우드 우선.',
+          '**Apple Home:** 개인정보에 더 중점, 홈 허브를 통한 일부 로컬 제어.',
+          '**Home Assistant:** 오픈 소스, 로컬 우선, 가장 프라이빗 — [생태계 비교](/ko/smart-home/smart-home-ecosystems-compared)에서 비교됩니다.',
+        ],
+      },
+      next: {
+        id: 'next',
+        title: '다음 단계',
+        content:
+          '**개인정보가 중요하면 로컬 우선 경로를 시작하고, 편의만 원하면 클라우드 생태계가 가장 빠른 시작입니다.** 어느 쪽이든 방 하나부터 시작하십시오.',
+        items: [
+          '입문자이고 단계별 경로를 원하십니까? [스마트홈 입문자: 어디서 시작할까요](/ko/smart-home/smart-home-for-beginners-where-to-start)를 참조하십시오.',
+          '개인정보가 중요하십니까? [완전한 로컬 스마트홈 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '스마트홈에 허브가 필요합니까?', a: '항상 필요한 것은 아닙니다. Wi-Fi 기기와 클라우드 생태계는 전용 허브 없이 작동할 수 있지만, Zigbee와 Z-Wave 같은 로컬 프로토콜과 로컬 자동화 실행에는 허브가 필요합니다. Home Assistant 같은 로컬 허브는 인터넷 없이도 시스템이 작동하도록 합니다.' },
+          { q: '스마트홈은 안전합니까?', a: '안전할 수 있지만 보안은 기기와 설정에 따라 다릅니다. 클라우드 기기는 데이터를 제조사 서버에 노출하고, 로컬 설정은 데이터를 집 안에 유지합니다. 강력한 비밀번호를 사용하고 펌웨어를 업데이트하며 카메라 같은 민감한 영역에는 로컬 가능 기기를 사용하십시오.' },
+          { q: '입문자에게는 클라우드와 로컬 중 어느 것이 좋습니까?', a: '클라우드 생태계가 시작하기 쉽고, 로컬 설정은 더 많은 노력이 필요하지만 개인정보와 오프라인 신뢰성을 제공합니다. 개인정보가 중요하다면 로컬 우선으로 시작하면 나중에 더 어려운 이전을 피할 수 있습니다.' },
+          { q: '스마트홈을 시작하는 가장 저렴한 방법은 무엇입니까?', a: '방 하나와 몇 가지 저렴한 로컬 가능 기기(스마트 전구 또는 플러그 몇 개와 센서) 그리고 허브로 시작하십시오. 점진적으로 확장하면 과도한 지출을 피하고 생태계를 선택하기 전에 배울 수 있습니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[완전한 로컬 스마트홈 가이드](/ko/smart-home/local-smart-home-complete-guide) — 프라이빗하고 클라우드 없는 경로',
+          '[스마트홈 기술의 역사](/ko/smart-home/history-of-smart-home-technology) — 어떻게 여기까지 왔는가',
+          '[스마트홈 입문자: 어디서 시작할까요](/ko/smart-home/smart-home-for-beginners-where-to-start) — 첫 번째 단계',
+          '[스마트홈 생태계 비교](/ko/smart-home/smart-home-ecosystems-compared) — 플랫폼 선택',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '스마트홈이란? 2026 입문자 가이드',
+      description: '스마트홈은 앱이나 음성으로 제어하는 연결된 기기입니다. 2026 입문자 가이드: 카테고리, 허브, 클라우드 대 로컬 선택, 주요 생태계.',
+      url: 'https://www.promptquorum.com/ko/smart-home/what-is-a-smart-home',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '스마트홈' }, { '@type': 'Thing', name: '홈 자동화' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '스마트홈에 허브가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '항상 필요한 것은 아닙니다. Wi-Fi와 클라우드 생태계는 허브 없이 작동할 수 있지만 Zigbee, Z-Wave 같은 로컬 프로토콜과 로컬 자동화에는 허브가 필요합니다.' } },
+        { '@type': 'Question', name: '스마트홈은 안전합니까?', acceptedAnswer: { '@type': 'Answer', text: '기기와 설정에 따라 안전할 수 있습니다. 클라우드 기기는 데이터를 제조사 서버에 노출하고 로컬 설정은 집 안에 유지합니다. 강력한 비밀번호를 사용하고 펌웨어를 업데이트하며 카메라에는 로컬 가능 기기를 사용하십시오.' } },
+        { '@type': 'Question', name: '입문자에게는 클라우드와 로컬 중 어느 것이 좋습니까?', acceptedAnswer: { '@type': 'Answer', text: '클라우드가 시작하기 쉽고, 로컬은 더 많은 노력이 필요하지만 개인정보와 오프라인 신뢰성을 제공합니다. 개인정보가 중요하면 로컬 우선으로 시작하십시오.' } },
+        { '@type': 'Question', name: '스마트홈을 시작하는 가장 저렴한 방법은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '방 하나와 몇 가지 저렴한 로컬 가능 기기 그리고 허브로 시작한 후 점진적으로 확장하십시오.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

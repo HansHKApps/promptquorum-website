@@ -746,6 +746,192 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Smart Home Foundations',
+    title: '스마트홈 입문: 2026년 시작 방법 완전 가이드',
+    seoTitle: '스마트홈 입문 2026: 어디서부터 시작할까',
+    intro:
+      '2026년 스마트홈을 시작하는 안정적인 방법은 허브를 선택하고, 한 방을 구성하고, 로컬 지원 기기 몇 가지를 추가하고, 확장하기 전에 루틴 자동화 한두 개를 설정하는 것입니다. 이 입문 가이드는 단계별 경로를 제공하고, 프라이버시를 위한 로컬 우선 접근 방식을 추천하며, 호환되지 않는 기기 서랍으로 이어지는 실수를 짚어줍니다.',
+    metaDescription:
+      '스마트홈 2026 시작하기: 허브 선택, 한 방 구성, 로컬 기기 추가, 자동화 설정, 확장. 입문자를 위한 실용 가이드.',
+    twitterDescription:
+      '스마트홈 처음 시작합니까? 허브와 한 방으로 시작하고, 로컬 지원 기기를 추가하고, 루틴 자동화 몇 가지를 설정한 뒤 확장하십시오. 2026 입문 경로.',
+    readTime: '8분 분량',
+    educationalLevel: 'Beginner',
+    audience: '첫 번째 스마트홈을 구성하는 사용자',
+    primaryTerm: 'how to start a smart home',
+    targetKeywords: [
+      '스마트홈 시작하는 방법',
+      '스마트홈 입문',
+      '스마트홈 시작 가이드',
+      '첫 번째 스마트홈 설정',
+      '스마트홈 초보자 2026',
+    ],
+    leadAnswerBlock:
+      '**허브를 선택하고, 한 방을 구성하고, 로컬 지원 기기 몇 가지를 추가하고, 루틴 자동화 몇 가지를 설정한 뒤 확장하십시오.** Home Assistant와 같은 로컬 우선 허브를 일찍 선택하면 나중에 더 어려운 마이그레이션을 피할 수 있습니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '초보자로서 스마트홈을 어떻게 시작합니까?',
+        answer:
+          '허브를 선택하고, 한 방만 시작하고, 로컬 지원 기기(전구, 센서, 플러그) 몇 가지를 추가하고, 자동화 한두 개를 설정하십시오. 확장하기 전에 그것이 잘 작동하도록 하십시오. 처음부터 Home Assistant와 같은 로컬 우선 허브를 선택하면 데이터가 프라이빗하게 유지되고 나중에 다시 설정하는 일을 피할 수 있습니다.',
+        bullets: [
+          '1단계: 허브 선택(프라이버시가 중요하다면 로컬 우선)',
+          '2단계: 한 방으로 시작',
+          '3단계: 로컬 지원 기기 몇 가지 추가',
+          '4단계: 자동화 한두 개 만들기',
+          '5단계: 이후 음성/AI 추가, 그 다음 확장',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: '1단계: 허브 선택', anchor: 'step-hub' },
+      { label: '2단계: 한 방으로 시작', anchor: 'step-room' },
+      { label: '3단계: 기기 추가', anchor: 'step-devices' },
+      { label: '4단계: 첫 번째 자동화', anchor: 'step-automations' },
+      { label: '5단계: 이후 음성·AI', anchor: 'step-voice' },
+      { label: '흔한 실수', anchor: 'mistakes' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '허브를 선택하고, 로컬 지원 기기 몇 가지로 한 방을 구성하고, 루틴 자동화 하나를 설정한 뒤 확장하는 것으로 스마트홈을 시작하십시오.' },
+      { type: 'plain-terms', content: '초보자의 가장 큰 실수는 한꺼번에 기기를 많이 구매하는 것입니다. 대신 허브를 선택하고, 로컬 기기 한두 개로 한 방을 작동시키고, 간단한 자동화를 설정한 뒤 거기서부터 성장하십시오. 로컬 우선으로 시작하면 데이터가 프라이빗하게 유지되고 나중에 설정을 다시 하지 않아도 됩니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          '허브를 먼저 선택하십시오: 프라이버시가 중요하다면 Home Assistant와 같은 로컬 우선 허브',
+          '집 전체가 아닌 한 방으로 시작하십시오',
+          '로컬 지원 기기 몇 가지를 추가하십시오(Zigbee 전구, 센서, 플러그)',
+          '작동 방식을 익히기 위해 간단한 자동화 한두 개를 만드십시오',
+          '기본이 안정적으로 작동하면 이후 음성·AI를 추가하십시오',
+          '미리 클라우드 전용 기기를 많이 구매하는 흔한 실수를 피하십시오',
+        ],
+      },
+      stepHub: {
+        id: 'step-hub',
+        title: '1단계: 허브 선택',
+        content:
+          '**허브를 먼저 선택하십시오. 어떤 기기가 함께 작동하는지와 시스템이 로컬로 실행되는지 여부가 결정되기 때문입니다.** 프라이버시와 오프라인 신뢰성을 위해 Home Assistant와 같은 로컬 우선 허브가 권장 경로입니다.',
+        items: [
+          '완전한 로컬 제어를 위해 Home Assistant를 사용하십시오 — [Home Assistant 시작 가이드](/ko/smart-home/home-assistant-getting-started)를 참조하십시오.',
+          '기본 사양에는 Raspberry Pi, 나중에 로컬 AI를 원한다면 미니 PC에서 실행하십시오.',
+          '플러그-앤-플레이 편의성만 원한다면 클라우드 에코시스템이 가장 쉬운 출발점입니다.',
+        ],
+      },
+      stepRoom: {
+        id: 'step-room',
+        title: '2단계: 한 방으로 시작',
+        content:
+          '**확장하기 전에 시스템을 익히기 위해 먼저 한 방을 구성하십시오.** 한 방으로도 기기, 자동화, 신뢰성을 테스트하기에 충분합니다.',
+        items: [
+          '매일 사용하는 방(거실 또는 침실)을 선택하십시오.',
+          '더 많이 구매하기 전에 기기 한두 개가 그 방에서 작동하도록 하십시오.',
+          '모든 것이 로컬에서 안정적으로 반응하는지 확인하십시오.',
+        ],
+      },
+      stepDevices: {
+        id: 'step-devices',
+        title: '3단계: 로컬 지원 기기 몇 가지 추가',
+        content:
+          '**클라우드 전용 기기를 많이 구매하는 대신 로컬 지원 기기(Zigbee 전구, 동작 센서, 플러그) 몇 가지를 추가하십시오.** 이렇게 하면 설정이 프라이빗하고 확장 가능하게 유지됩니다.',
+        items: [
+          '로컬 제어를 위해 Zigbee, Z-Wave 또는 Matter 기기를 선택하십시오 — [2026 최고의 스마트홈 기기](/ko/smart-home/best-smart-home-devices-2026)를 참조하십시오.',
+          'Zigbee 기기를 위해 허브에 Zigbee 코디네이터를 추가하십시오.',
+          '기본 제어에 클라우드 계정이 필요한 기기는 피하십시오.',
+        ],
+      },
+      stepAutomations: {
+        id: 'step-automations',
+        title: '4단계: 첫 번째 자동화 만들기',
+        content:
+          '**기본을 익히기 위해 간단한 자동화 한두 개를 만드십시오(예: 일몰 시 켜지는 조명).** 자동화가 집을 단순히 원격 제어되는 것이 아닌 "스마트"하게 만드는 것입니다.',
+        items: [
+          '시간 또는 센서 기반 규칙으로 시작하십시오(일몰 시 조명, 동작 감지 시 복도 조명).',
+          '더 많이 추가하기 전에 각 자동화를 테스트하고 조정하십시오.',
+          'Home Assistant의 일반적인 자동화에는 프로그래밍이 필요하지 않습니다.',
+        ],
+      },
+      stepVoice: {
+        id: 'step-voice',
+        title: '5단계: 이후 음성·AI 추가',
+        content:
+          '**첫날이 아니라 기본이 작동한 후에 음성 및 AI 제어를 추가하십시오.** 로컬 음성 어시스턴트와 LLM 두뇌는 강력하지만 안정적인 기반 위에 추가하는 것이 더 쉽습니다.',
+        items: [
+          '핸즈프리 제어를 위해 로컬 음성 어시스턴트를 추가하십시오 — [완전 로컬 음성 어시스턴트 구축](/ko/smart-home/local-voice-assistant-smart-home)을 참조하십시오.',
+          '자연어 제어를 위해 로컬 LLM 두뇌를 추가하십시오 — [로컬 LLM으로 스마트홈 운영](/ko/smart-home/local-llm-smart-home-complete-guide)을 참조하십시오.',
+          '편안함을 느낄 때마다 방 단위로 확장하십시오.',
+        ],
+      },
+      mistakes: {
+        id: 'mistakes',
+        title: '흔한 초보자 실수',
+        content:
+          '**가장 큰 실수는 한꺼번에 너무 많이 구매하고, 클라우드 전용 기기를 선택하고, 허브 결정을 건너뛰는 것입니다.** 이를 피하면 나머지는 간단합니다.',
+        columns: ['단계', '구매 항목', '상대적 비용'],
+        rows: [
+          { '단계': '허브', '구매 항목': '로컬 허브 + Zigbee 코디네이터', '상대적 비용': '저~중' },
+          { '단계': '첫 번째 방', '구매 항목': 'Zigbee 전구/스위치 2~3개', '상대적 비용': '저' },
+          { '단계': '센서', '구매 항목': '동작/도어 센서 1~2개', '상대적 비용': '저' },
+          { '단계': '확장', '구매 항목': '필요에 따라 로컬 기기 추가', '상대적 비용': '함께 성장' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '스마트홈을 위해 무엇을 먼저 구매해야 합니까?', a: '먼저 허브를 구매하십시오. 이상적으로는 Home Assistant와 같은 로컬 우선 허브와 Zigbee 코디네이터 그리고 Zigbee 전구나 센서 한두 개입니다. 허브가 무엇이 함께 작동하는지를 결정하므로 개별 기기보다 먼저 선택해야 합니다.' },
+          { q: '스마트홈 시작이 비쌉니까?', a: '작게 시작하면 그렇지 않습니다. 로컬 허브와 한 방의 Zigbee 기기 몇 개는 저렴하며 점진적으로 확장할 수 있습니다. 비용은 한꺼번에 많은 기기를 구매하거나 구독이 포함된 프리미엄 클라우드 에코시스템을 선택할 때만 높아집니다.' },
+          { q: '스마트홈 구성에 프로그래밍이 필요합니까?', a: '아닙니다. Home Assistant 및 클라우드 에코시스템의 일반적인 설정과 자동화는 그래픽 인터페이스를 통해 구성됩니다. 고급 사용자는 복잡한 자동화에 YAML을 사용할 수 있지만 시작하기 위해서는 선택 사항입니다.' },
+          { q: '초보자에게는 클라우드가 낫습니까, 로컬이 낫습니까?', a: '클라우드 에코시스템이 시작하기 더 쉽지만 로컬 우선 허브는 데이터를 프라이빗하게 유지하고 오프라인에서도 작동합니다. 프라이버시가 중요하다면 로컬 우선으로 시작하면 나중에 더 어려운 마이그레이션을 피할 수 있으며 여전히 초보자에게도 적합합니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[Home Assistant 시작 가이드](/ko/smart-home/home-assistant-getting-started) — 로컬 허브 구성',
+          '[로컬 스마트홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide) — 로컬 우선 완전한 그림',
+          '[2026 최고의 스마트홈 기기](/ko/smart-home/best-smart-home-devices-2026) — 카테고리별 구매 가이드',
+          '[스마트홈이란?](/ko/smart-home/what-is-a-smart-home) — 기초부터',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '스마트홈 입문: 2026년 시작 방법 완전 가이드',
+      description: '스마트홈 2026 시작하기: 허브 선택, 한 방 구성, 로컬 기기 추가, 자동화 설정, 확장. 입문자를 위한 실용 가이드.',
+      url: 'https://www.promptquorum.com/ko/smart-home/smart-home-for-beginners-where-to-start',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '스마트홈 설정' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '스마트홈을 위해 무엇을 먼저 구매해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: '먼저 허브를 구매하십시오. 이상적으로는 Home Assistant와 같은 로컬 우선 허브, Zigbee 코디네이터, Zigbee 전구나 센서 한두 개입니다. 허브가 무엇이 함께 작동하는지 결정합니다.' } },
+        { '@type': 'Question', name: '스마트홈 시작이 비쌉니까?', acceptedAnswer: { '@type': 'Answer', text: '작게 시작하면 그렇지 않습니다. 로컬 허브와 한 방의 Zigbee 기기는 저렴하며 점진적으로 확장할 수 있습니다.' } },
+        { '@type': 'Question', name: '스마트홈 구성에 프로그래밍이 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '아닙니다. 일반적인 설정과 자동화는 그래픽 인터페이스를 통해 구성됩니다. YAML은 고급 자동화에 선택 사항입니다.' } },
+        { '@type': 'Question', name: '초보자에게는 클라우드가 낫습니까, 로컬이 낫습니까?', acceptedAnswer: { '@type': 'Answer', text: '클라우드가 더 쉽지만 로컬 우선 허브는 데이터를 프라이빗하게 유지하고 오프라인에서도 작동합니다. 프라이버시가 중요하다면 로컬 우선으로 시작하면 나중에 마이그레이션을 피할 수 있습니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

@@ -762,6 +762,196 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Decision & Comparison',
+    title: 'Home Assistant vs Alexa vs Google Home: 어떤 것이 맞습니까? (2026)',
+    seoTitle: 'Home Assistant vs Alexa vs Google Home: 2026년 비교',
+    intro:
+      'Home Assistant, Amazon Alexa, Google Home은 서로 다른 우선 순위에 맞습니다: Home Assistant는 개인정보 보호와 로컬 제어에서 우수하고, Alexa와 Google은 플러그 앤 플레이 편의성에서 우수합니다. 이 비교는 개인정보 보호, 로컬 제어, 기기 지원, 음성, AI, 비용, 노력을 비교하고 사용자 유형별로 적합한 선택을 추천합니다.',
+    metaDescription:
+      'Home Assistant vs Alexa vs Google Home: 2026년 비교. 개인정보 보호와 로컬 제어 대 편의성 — 어떤 스마트 홈 플랫폼이 맞습니까?',
+    twitterDescription:
+      'Home Assistant vs Alexa vs Google Home: 개인정보 보호와 로컬 제어 대 플러그 앤 플레이 편의성. 2026년 직접 비교와 각각이 맞는 사용자.',
+    readTime: '8분 분량',
+    educationalLevel: 'Intermediate',
+    audience: 'Home Assistant, Alexa, Google Home 중에서 선택하는 사람들',
+    primaryTerm: 'Home Assistant vs Alexa vs Google Home',
+    targetKeywords: [
+      'Home Assistant vs Alexa vs Google Home',
+      'Home Assistant vs Alexa',
+      'Alexa vs Google Home',
+      '2026년 최고의 스마트 홈 플랫폼',
+      '사적 스마트 홈 플랫폼',
+    ],
+    leadAnswerBlock:
+      '**개인정보 보호와 완전한 로컬 제어를 위해 Home Assistant를 선택하고, 가장 쉬운 플러그 앤 플레이 시작을 위해 Amazon Alexa 또는 Google Home을 선택하십시오.** Home Assistant는 더 많은 설정이 필요하지만 데이터를 로컬에 유지하고 오프라인에서도 작동합니다. Alexa와 Google은 더 단순하지만 클라우드에 의존합니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'Home Assistant, Alexa, Google Home 중 어떤 것을 선택해야 합니까?',
+        answer:
+          '개인정보 보호, 로컬 제어, 유연성을 중시하고 더 많은 설정을 허용한다면 Home Assistant를 선택하십시오. 가장 쉬운 설정, 광범위한 기기 및 음성 지원을 원하고 클라우드 의존이 괜찮다면 Amazon Alexa 또는 Google Home을 선택하십시오. Home Assistant는 Alexa와 Google을 브리지할 수도 있으므로 선택이 엄격히 배타적이지 않습니다.',
+        bullets: [
+          'Home Assistant: 가장 사적, 로컬, 유연; 가장 많은 노력',
+          'Alexa: 가장 쉬운 시작, 가장 넓은 음성 기기 지원',
+          'Google Home: 강력한 음성, 광범위한 지원, 클라우드 우선',
+          '개인정보 보호와 로컬 제어 대 플러그 앤 플레이 편의성',
+          'Home Assistant는 클라우드 어시스턴트를 브리지할 수 있습니다',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'TL;DR', anchor: 'tldr' },
+      { label: '세 가지 옵션', anchor: 'three-options' },
+      { label: '비교', anchor: 'comparison' },
+      { label: '개인정보 보호 우승자', anchor: 'privacy-winner' },
+      { label: '편의성 우승자', anchor: 'convenience-winner' },
+      { label: 'AI와 음성', anchor: 'ai-voice' },
+      { label: '사용자별 추천', anchor: 'recommendation' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Home Assistant는 개인정보 보호와 로컬 제어에서 우수하고, Alexa와 Google Home은 플러그 앤 플레이 편의성과 광범위한 음성 지원에서 우수합니다.' },
+      { type: 'plain-terms', content: '이 세 가지가 일반적인 스마트 홈 선택입니다. Alexa와 Google Home은 설정이 가장 쉽지만 기업 클라우드를 통해 실행됩니다. Home Assistant는 더 많은 노력이 필요하지만 모든 것을 로컬하고 사적으로 유지합니다 — 원한다면 Alexa와 Google도 연결할 수 있습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        items: [
+          'Home Assistant: 가장 사적, 완전한 로컬 제어, 가장 유연, 가장 많은 설정 노력',
+          'Amazon Alexa: 가장 쉬운 시작, 가장 넓은 음성 및 기기 지원, 클라우드 우선',
+          'Google Home: 강력한 음성 어시스턴트, 광범위한 지원, 클라우드 우선',
+          '개인정보 보호와 로컬 제어가 결정적인 요소입니다',
+          'Home Assistant는 클라우드 어시스턴트가 사적으로 대응할 수 없는 로컬 AI(Ollama + 음성)를 추가합니다',
+          'Home Assistant는 Alexa와 Google을 브리지할 수 있어 선택 비용을 낮춥니다',
+        ],
+      },
+      threeOptions: {
+        id: 'three-options',
+        title: '세 가지 옵션',
+        content:
+          '**Home Assistant는 로컬 우선이고 사적입니다. Alexa와 Google Home은 클라우드 우선이고 편리합니다.** 각각은 다른 우선 순위에 맞습니다.',
+        items: [
+          '**Home Assistant:** 오픈 소스, 로컬 우선, 가장 유연하고 사적 — [시작하기](/ko/smart-home/home-assistant-getting-started)를 참조하십시오.',
+          '**Amazon Alexa:** 가장 넓은 기기 및 음성 스킬 지원, 가장 쉬운 시작, 클라우드 우선.',
+          '**Google Home:** 강력한 음성과 광범위한 지원, 클라우드 우선.',
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '비교',
+        content:
+          '**Home Assistant는 개인정보 보호, 로컬 제어, AI에서 앞서고, Alexa와 Google은 편의성과 음성 범위에서 앞섭니다.** 테이블을 사용하여 플랫폼을 우선 순위에 맞추십시오.',
+        columns: ['기준', 'Home Assistant', 'Amazon Alexa', 'Google Home'],
+        rows: [
+          { '기준': '개인정보 보호', 'Home Assistant': '최고(로컬)', 'Amazon Alexa': '클라우드 데이터', 'Google Home': '클라우드 데이터' },
+          { '기준': '로컬 제어', 'Home Assistant': '완전', 'Amazon Alexa': '제한적', 'Google Home': '제한적' },
+          { '기준': '기기 지원', 'Home Assistant': '통합을 통해 가장 넓음', 'Amazon Alexa': '가장 넓은 음성', 'Google Home': '광범위' },
+          { '기준': '음성', 'Home Assistant': '로컬(Assist)', 'Amazon Alexa': '강력(클라우드)', 'Google Home': '강력(클라우드)' },
+          { '기준': 'AI', 'Home Assistant': '로컬 LLM(Ollama)', 'Amazon Alexa': '클라우드 어시스턴트', 'Google Home': '클라우드 어시스턴트' },
+          { '기준': '비용', 'Home Assistant': '하드웨어 + 노력', 'Amazon Alexa': '저렴한 하드웨어', 'Google Home': '저렴한 하드웨어' },
+          { '기준': '노력', 'Home Assistant': '높음', 'Amazon Alexa': '낮음', 'Google Home': '낮음' },
+        ],
+      },
+      privacyWinner: {
+        id: 'privacy-winner',
+        title: '개인정보 보호 우승자: Home Assistant',
+        content:
+          '**Home Assistant는 제어, 음성, AI가 모두 제조사 데이터 수집 없이 로컬에서 실행되기 때문에 개인정보 보호에서 우수합니다.** 개인정보 보호가 최우선 순위라면 이것을 선택하십시오.',
+        items: [
+          '사용 데이터, 녹음, 영상이 집 밖으로 나가지 않습니다 — [스마트 홈 개인정보 보호 위험](/ko/smart-home/smart-home-privacy-risks)을 참조하십시오.',
+          '사적 자연어 제어를 위해 로컬 음성 어시스턴트와 LLM을 추가하십시오.',
+          '그 대신 더 많은 설정 노력을 감수하십시오.',
+        ],
+      },
+      convenienceWinner: {
+        id: 'convenience-winner',
+        title: '편의성 우승자: Alexa 또는 Google',
+        content:
+          '**Amazon Alexa와 Google Home은 앱으로 안내되는 설정과 기기의 광범위한 지원 때문에 편의성에서 우수합니다.** 최소한의 노력이 가장 중요하다면 이것들을 선택하십시오.',
+        items: [
+          '가장 넓은 음성 스킬 생태계를 위해 Alexa를 사용하십시오.',
+          'Google의 어시스턴트와 서비스를 선호한다면 Google Home을 사용하십시오.',
+          '클라우드 의존과 개인정보 보호 절충을 감수하십시오 — [로컬이 클라우드를 이기는 이유](/ko/smart-home/why-local-smart-home-beats-cloud)를 참조하십시오.',
+        ],
+      },
+      aiVoice: {
+        id: 'ai-voice',
+        title: 'AI와 음성',
+        content:
+          '**Alexa와 Google은 세련된 클라우드 음성을 제공하고, Home Assistant는 사적 로컬 음성과 로컬 LLM 두뇌를 제공합니다.** 선택은 클라우드 세련미 대 사적 제어입니다.',
+        items: [
+          '클라우드 어시스턴트는 낮은 지연 시간과 광범위한 음성 스킬에 맞게 조정되어 있습니다.',
+          'Home Assistant는 Assist + Whisper + Piper + 로컬 LLM을 사적으로 실행합니다 — [로컬 LLM으로 스마트 홈 실행](/ko/smart-home/local-llm-smart-home-complete-guide)을 참조하십시오.',
+          '[로컬 대 클라우드 음성 어시스턴트](/ko/smart-home/local-vs-cloud-voice-assistant)에서 음성 접근 방식을 비교하십시오.',
+        ],
+      },
+      recommendation: {
+        id: 'recommendation',
+        title: '사용자별 추천',
+        content:
+          '**개인정보 중심 또는 DIY 사용자 → Home Assistant; 편의성 우선 초보자 → Alexa 또는 Google; 불확실하지만 개인정보가 중요하다면 → Home Assistant로 시작하십시오.** 나중에 클라우드 어시스턴트를 Home Assistant에 브리지할 수 있습니다.',
+        items: [
+          '**개인정보 / 제어:** Home Assistant.',
+          '**가장 쉬운 시작:** Amazon Alexa 또는 Google Home.',
+          '**최고의 사적 AI:** 로컬 LLM을 갖춘 Home Assistant.',
+          '**전체 플랫폼 비교를 원합니까?** [스마트 홈 생태계 비교](/ko/smart-home/smart-home-ecosystems-compared)를 참조하십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '어떤 것이 가장 사적입니까?', a: 'Home Assistant가 가장 사적입니다. 제어, 음성, AI가 모두 제조사 데이터 수집 없이 자체 하드웨어에서 로컬로 실행됩니다. Alexa와 Google Home은 클라우드 우선으로 사용 및 음성 데이터를 제조사 서버로 전송합니다.' },
+          { q: '어떤 것이 가장 쉽습니까?', a: 'Amazon Alexa와 Google Home이 가장 쉽습니다. 설정이 앱으로 안내되고 클라우드로 관리되며 광범위한 기기 지원이 제공됩니다. Home Assistant는 더 많은 개인정보 보호와 제어를 제공하지만 더 많은 설정 노력이 필요합니다.' },
+          { q: '어떤 것이 최고의 AI를 가지고 있습니까?', a: '사적 AI를 위해서는 Home Assistant가 앞섭니다. 클라우드 없이 로컬 LLM을 대화 에이전트로 실행할 수 있습니다. Alexa와 Google은 세련된 클라우드 어시스턴트를 가지고 있지만 데이터를 제조사 서버에서 처리합니다.' },
+          { q: '나중에 플랫폼을 바꿀 수 있습니까?', a: '네, 하지만 노력이 필요합니다. Home Assistant는 Alexa와 Google을 통합하고 브리지할 수 있어 점진적으로 도입할 수 있습니다. 클라우드 생태계에서 로컬 제어로의 전환은 방별로 관리 가능한 마이그레이션입니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[스마트 홈 생태계 비교](/ko/smart-home/smart-home-ecosystems-compared) — 네 플랫폼 전체 비교',
+          '[Home Assistant: 시작 가이드](/ko/smart-home/home-assistant-getting-started) — 사적 옵션 설정',
+          '[로컬 대 클라우드 음성 어시스턴트](/ko/smart-home/local-vs-cloud-voice-assistant) — 음성 결정',
+          '[로컬 스마트 홈이 클라우드를 이기는 이유](/ko/smart-home/why-local-smart-home-beats-cloud) — 로컬의 논거',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Home Assistant vs Alexa vs Google Home: 어떤 것이 맞습니까? (2026)',
+      description: 'Home Assistant vs Alexa vs Google Home: 2026년 비교. 개인정보 보호와 로컬 제어 대 편의성 — 어떤 스마트 홈 플랫폼이 맞습니까?',
+      url: 'https://www.promptquorum.com/ko/smart-home/home-assistant-vs-alexa-vs-google',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '어떤 것이 가장 사적입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant. 제어, 음성, AI가 모두 로컬에서 제조사 데이터 수집 없이 실행됩니다. Alexa와 Google Home은 클라우드 우선으로 사용 및 음성 데이터를 제조사 서버로 전송합니다.' } },
+        { '@type': 'Question', name: '어떤 것이 가장 쉽습니까?', acceptedAnswer: { '@type': 'Answer', text: 'Amazon Alexa와 Google Home. 설정이 앱으로 안내되고 클라우드로 관리되며 광범위한 기기 지원이 제공됩니다. Home Assistant는 더 많은 제어를 제공하지만 더 많은 노력이 필요합니다.' } },
+        { '@type': 'Question', name: '어떤 것이 최고의 AI를 가지고 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '사적 AI를 위해서는 Home Assistant. 클라우드 없이 로컬 LLM을 대화 에이전트로 실행할 수 있습니다. Alexa와 Google의 클라우드 어시스턴트는 데이터를 제조사 서버에서 처리합니다.' } },
+        { '@type': 'Question', name: '나중에 플랫폼을 바꿀 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '네, 노력이 필요합니다. Home Assistant는 Alexa와 Google을 통합하고 브리지할 수 있어 방별 마이그레이션으로 점진적으로 도입할 수 있습니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

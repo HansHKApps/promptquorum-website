@@ -722,6 +722,186 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: '로컬 LLM으로 더 스마트한 홈 자동화 (2026)',
+    seoTitle: 'AI 홈 자동화 2026: 로컬 LLM으로 IFTTT를 넘어서십시오',
+    intro:
+      '로컬 LLM은 IFTTT식 경직된 규칙을 넘어 자연어로 기술된 상황 인식형 홈 자동화를 가능하게 합니다. 이 가이드는 규칙 기반 자동화의 한계, LLM이 추가하는 기능, 프롬프트를 포함한 실제 자동화 예시, 아키텍처, 신뢰성을 유지하는 안전장치를 설명합니다. 모든 것이 클라우드 없이 로컬에서 실행됩니다.',
+    metaDescription:
+      '로컬 LLM으로 상황 인식형 홈 자동화를 구축하십시오. IFTTT를 능가하는 자연어 규칙, 예시, 프롬프트, 아키텍처 및 안전장치.',
+    twitterDescription:
+      '로컬 LLM은 홈 자동화를 상황 인식형으로 만듭니다. "비가 올 것 같고 외출할 예정이라면 알려 주십시오." 예시, 프롬프트 및 안전장치.',
+    readTime: '9분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '상황 인식형 자동화를 설계하는 Home Assistant 사용자',
+    primaryTerm: 'AI home automation local LLM',
+    targetKeywords: [
+      'AI 홈 자동화 로컬 LLM',
+      'home assistant LLM 자동화',
+      '상황 인식형 홈 자동화',
+      '자연어 홈 자동화',
+      '로컬 LLM 자동화',
+    ],
+    leadAnswerBlock:
+      '**로컬 LLM을 사용하면 자동화를 자연어 목표로 작성하고 시간, 재실 여부, 센서 상태 등의 컨텍스트를 추론할 수 있습니다. 경직된 트리거를 배선할 필요가 없습니다.** Ollama와 Home Assistant를 통해 자신의 하드웨어에서 실행되므로 상황 인식형 자동화에 클라우드가 필요하지 않습니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 LLM은 홈 자동화를 어떻게 개선합니까?',
+        answer:
+          '로컬 LLM은 의도와 컨텍스트를 이해하는 계층을 추가합니다. 이를 통해 자동화가 트리거마다 고정된 동작을 실행하는 대신 시간, 재실 인원, 센서 상태를 자연어 목표와 비교하여 판단할 수 있습니다. Ollama와 Home Assistant를 통해 로컬에서 실행되며 결정론적 안전 규칙은 일반 자동화로 유지됩니다.',
+        bullets: [
+          '경직된 트리거 → 동작 규칙 대신 자연어 목표 사용',
+          '컨텍스트 추론: 시간, 재실 여부, 센서',
+          'Ollama + Home Assistant를 통해 로컬 실행 — 클라우드 불필요',
+          '안전 필수 규칙은 결정론적으로 유지하고 LLM에 위임하지 마십시오',
+          '소형 고속 함수 호출 모델에 가장 적합합니다',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'TL;DR', anchor: 'tldr' },
+      { label: '규칙 기반 자동화의 한계', anchor: 'rule-limits' },
+      { label: 'LLM이 추가하는 기능', anchor: 'llm-adds' },
+      { label: '자동화 예시', anchor: 'examples' },
+      { label: '아키텍처', anchor: 'architecture' },
+      { label: '신뢰성 및 안전장치', anchor: 'guardrails' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '로컬 LLM은 경직된 트리거-동작 규칙을 자연어로 기술된 상황 인식형 자동화로 전환합니다. Ollama와 Home Assistant를 통해 로컬에서 실행됩니다.' },
+      { type: 'plain-terms', content: '일반 자동화는 정밀합니다. 모션 감지 시 조명을 켭니다. 모든 경우를 스크립트로 작성하지 않으면 "이미 밝은가?" 또는 "집에 누군가 있는가?"를 판단할 수 없습니다. 로컬 LLM은 컨텍스트와 자연어 목표를 읽고 결정을 내립니다. 자신의 하드웨어에서 실행되므로 개인 정보가 보호됩니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        items: [
+          '규칙 기반 자동화는 결정론적이지만 스크립트에 없는 컨텍스트에는 대응하지 못합니다',
+          '로컬 LLM은 의도와 컨텍스트를 추론합니다: 시간, 재실 여부, 날씨, 센서 상태',
+          '자동화를 자연어 목표로 기술하면 모델이 장치 동작으로 매핑합니다',
+          'Ollama + Home Assistant를 통해 로컬에서 실행합니다 — 클라우드 없이 데이터가 집을 떠나지 않습니다',
+          '안전 필수 자동화(잠금, 경보)는 결정론적 규칙으로 유지하십시오',
+          '소형 함수 호출 모델을 사용하고 신뢰성을 위해 범위를 제한하십시오',
+        ],
+      },
+      ruleLimits: {
+        id: 'rule-limits',
+        title: '규칙 기반 자동화의 한계',
+        content:
+          '**규칙 기반 자동화는 고정 트리거에 고정 동작을 실행하며 명시적으로 스크립트에 없는 컨텍스트는 판단하지 못합니다.** 신뢰성과 속도는 뛰어나지만 모든 뉘앙스에는 수동으로 작성한 조건이 필요합니다.',
+        items: [
+          '**조합 폭발:** "밝지 않으면 조명을 켜되, 누군가 자고 있거나 외출 중이면 제외"는 중첩 조건이 무수히 많아집니다.',
+          '**의도 없음:** 규칙은 "아늑하게 만들어 주십시오"를 해석할 수 없습니다. 정확한 엔티티 상태만 처리합니다.',
+          '**취약한 엣지 케이스:** 스크립트에 없는 상황은 합리적인 기본값 없이 처리되지 않습니다.',
+        ],
+      },
+      llmAdds: {
+        id: 'llm-adds',
+        title: 'LLM이 추가하는 기능: 컨텍스트, 의도, 언어',
+        content:
+          '**LLM은 규칙에 없는 세 가지를 추가합니다. 자연어를 이해하고, 의도를 추론하며, 여러 컨텍스트 신호를 동시에 처리합니다.** 뉘앙스가 중요한 곳에는 LLM을, 결정론이 중요한 곳에는 규칙을 사용하십시오.',
+        columns: ['측면', '규칙 기반', '로컬 LLM 구동'],
+        rows: [
+          { '측면': '트리거 처리', '규칙 기반': '트리거마다 고정 동작', '로컬 LLM 구동': '행동 전 컨텍스트 판단' },
+          { '측면': '표현 방식', '규칙 기반': '정확한 조건만', '로컬 LLM 구동': '자연어 목표' },
+          { '측면': '컨텍스트', '규칙 기반': '스크립트된 상태만', '로컬 LLM 구동': '시간, 재실 여부, 센서 통합' },
+          { '측면': '엣지 케이스', '규칙 기반': '처리되지 않음', '로컬 LLM 구동': '컨텍스트 기반 합리적 기본값' },
+        ],
+      },
+      examples: {
+        id: 'examples',
+        title: '자동화 예시 (프롬프트 포함)',
+        content:
+          '**이 예시들은 LLM 구동 자동화가 규칙보다 뛰어난 경우를 보여 줍니다. 각각 모델이 실시간 컨텍스트에 대해 처리하는 자연어 목표입니다.** 대화 에이전트를 호출하는 Home Assistant 자동화로 연결하십시오.',
+        numberedItems: [
+          { title: '외출 알림', whyItMatters: '프롬프트: "한 시간 이내에 비가 올 것 같고 외출할 예정이라면 우산을 챙기라고 알려 주십시오." 모델은 날씨 엔티티와 재실 여부를 확인한 후 알림을 전송합니다. 규칙은 명시적인 임계값이 필요합니다.' },
+          { title: '적응형 저녁 장면', whyItMatters: '프롬프트: "일몰 후 마지막 사람이 귀가하면, 누군가 이미 자고 있지 않다면 따뜻하고 낮은 조도의 장면을 설정하십시오." 모델은 재실 여부, 시간, 수면 상태를 함께 판단합니다.' },
+          { title: '에너지 알림', whyItMatters: '프롬프트: "난방이 켜져 있고 창문이 5분 이상 열려 있다면 난방을 낮추고 어느 방인지 알려 주십시오." 모델은 두 센서 상태를 결합하고 동작을 설명합니다.' },
+        ],
+        items: [
+          '모델이 추론할 컨텍스트를 가질 수 있도록 관련 엔티티 상태를 프롬프트에 포함하십시오.',
+          '엔드-투-엔드 설정은 [로컬 LLM으로 스마트 홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide)를 참조하십시오.',
+        ],
+      },
+      architecture: {
+        id: 'architecture',
+        title: '아키텍처',
+        content:
+          '**자동화가 Home Assistant에서 트리거되면 대화 에이전트를 통해 컨텍스트가 로컬 LLM으로 전달되고, 모델이 장치 동작을 반환합니다.** 모든 것이 로컬에서 실행됩니다.',
+        items: [
+          'Home Assistant 자동화가 트리거와 현재 엔티티 상태를 제공합니다.',
+          '로컬 모델([Ollama 통합](/ko/smart-home/home-assistant-ollama-integration) 경유)이 추론하고 동작을 반환합니다.',
+          'Assist에 노출한 엔티티만 작동 가능하여 모델이 할 수 있는 작업이 제한됩니다.',
+        ],
+      },
+      guardrails: {
+        id: 'guardrails',
+        title: '신뢰성 및 안전장치',
+        content:
+          '**안전 필수 자동화는 결정론적으로 유지하고, 모델의 범위를 제한하며, 지연 시간을 낮게 유지하기 위해 소형 고속 모델을 선호하십시오.** LLM 자동화는 중요한 기능을 소유하는 것이 아니라 보완해야 합니다.',
+        items: [
+          '**모델에 안전을 절대 위임하지 마십시오:** 화재 경보기, 도어락, 보안은 일반 규칙으로 유지합니다.',
+          '**범위 제한:** 모델에 필요한 엔티티만 노출하고 동작을 제한하는 시스템 프롬프트를 추가하십시오.',
+          '**지연 시간에 맞는 모델 선택:** [스마트 홈 제어를 위한 최고의 로컬 LLM 모델](/ko/smart-home/best-local-llm-models-smart-home)을 참조하십시오.',
+          '**기록 및 검토:** 무인으로 신뢰하기 전에 대화 로그를 확인하여 모델이 의도대로 동작하는지 확인하십시오.',
+          '**에이전트 패턴 및 워크플로우는** [실제로 작동하는 자율 로컬 에이전트](/ko/power-local-llm/autonomous-local-agents-actually-work)(크로스 클러스터)를 참조하십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '로컬 LLM 자동화는 신뢰할 만큼 충분히 안정적입니까?', a: '편의 자동화의 경우 범위를 제한하고 동작을 먼저 검토한다면 그렇습니다. 안전 필수 자동화(잠금, 경보, 화재 감지기)는 모델을 통해 위임하지 않고 결정론적 규칙으로 유지하십시오.' },
+          { q: 'LLM이 모든 자동화를 대체합니까?', a: '아닙니다. 단순하거나 시간에 민감하거나 안전에 중요한 트리거에는 결정론적 규칙을 사용하고, 컨텍스트·뉘앙스·자연어 목표가 필요한 자동화에는 LLM을 사용하십시오. 두 가지는 함께 작동합니다.' },
+          { q: 'AI 자동화에 가장 적합한 모델은 무엇입니까?', a: '소형 고속 함수 호출 모델은 자동화 지연 시간을 낮게 유지하면서 장치 동작을 안정적으로 출력합니다. 하드웨어에 맞는 선택은 스마트 홈을 위한 최고의 로컬 LLM 모델 가이드를 참조하십시오.' },
+          { q: 'LLM 자동화는 얼마나 많은 지연 시간을 추가합니까?', a: '지연 시간은 모델 크기와 하드웨어에 따라 달라집니다. GPU 또는 NPU가 있는 미니 PC의 소형 모델은 즉각적이지 않은 자동화에 충분히 빠르게 응답합니다. 지연에 민감한 트리거는 모델을 통해 처리하지 마십시오.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 LLM으로 스마트 홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide) — 이 자동화에서 사용하는 아키텍처',
+          '[Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration) — 대화 에이전트 연결',
+          '[스마트 홈 제어를 위한 최고의 로컬 LLM 모델](/ko/smart-home/best-local-llm-models-smart-home) — 저지연 모델 선택',
+          '[실제로 작동하는 자율 로컬 에이전트](/ko/power-local-llm/autonomous-local-agents-actually-work) — 크로스 클러스터: 에이전트 패턴',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 LLM으로 더 스마트한 홈 자동화 (2026)',
+      description: '로컬 LLM으로 상황 인식형 홈 자동화를 구축하십시오. IFTTT를 능가하는 자연어 규칙, 예시, 프롬프트, 아키텍처 및 안전장치.',
+      url: 'https://www.promptquorum.com/ko/smart-home/ai-automations-local-llm',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: '홈 자동화' }, { '@type': 'Thing', name: '로컬 LLM' }, { '@type': 'Thing', name: '상황 인식형 자동화' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '로컬 LLM 자동화는 신뢰할 만큼 충분히 안정적입니까?', acceptedAnswer: { '@type': 'Answer', text: '편의 자동화의 경우 범위를 제한하고 동작을 먼저 검토한다면 그렇습니다. 안전 필수 자동화는 결정론적 규칙으로 유지하십시오.' } },
+        { '@type': 'Question', name: 'LLM이 모든 자동화를 대체합니까?', acceptedAnswer: { '@type': 'Answer', text: '아닙니다. 단순하거나 시간에 민감하거나 안전에 중요한 트리거에는 결정론적 규칙을 사용하고, 풍부한 컨텍스트와 자연어가 필요한 자동화에는 LLM을 사용하십시오.' } },
+        { '@type': 'Question', name: 'AI 자동화에 가장 적합한 모델은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '소형 고속 함수 호출 모델은 지연 시간을 낮게 유지하면서 장치 동작을 안정적으로 출력합니다. 하드웨어에 맞는 모델을 선택하십시오.' } },
+        { '@type': 'Question', name: 'LLM 자동화는 얼마나 많은 지연 시간을 추가합니까?', acceptedAnswer: { '@type': 'Answer', text: '모델 크기와 하드웨어에 따라 달라집니다. GPU 또는 NPU가 있는 미니 PC의 소형 모델은 즉각적이지 않은 자동화에 충분히 빠르게 응답합니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

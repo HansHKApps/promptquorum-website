@@ -822,6 +822,211 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local AI & LLMs in the Smart Home',
+    title: 'Ollama를 Home Assistant에 연결하기: 로컬 AI 어시스턴트 (2026)',
+    seoTitle: 'Ollama + Home Assistant 2026: 로컬 AI 설정',
+    intro:
+      'Home Assistant에는 로컬에서 호스팅된 모델을 대화 에이전트로 전환하여 클라우드 없이 자연어로 기기를 제어하는 Ollama 통합이 내장되어 있습니다. 이 가이드는 전제 조건, 통합 추가, 모델 선택, 대화 에이전트 연결, 기기 제어, 문제 해결을 안내합니다. Ollama 설정과 모델 선택은 외부 링크로 연결됩니다.',
+    metaDescription:
+      'Ollama를 Home Assistant에 단계별로 연결하기: 통합 추가, 모델 선택, 대화 에이전트 설정, 자연어로 기기 제어. 클라우드 없음.',
+    twitterDescription:
+      'Ollama를 Home Assistant에 연결하여 완전한 로컬 AI 어시스턴트 구현: 통합 추가, 모델 선택, 음성 또는 텍스트로 기기 제어. 클라우드 제로.',
+    readTime: '9분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '로컬 AI 대화 에이전트를 추가하는 Home Assistant 사용자',
+    primaryTerm: 'Home Assistant Ollama integration',
+    targetKeywords: [
+      'Home Assistant Ollama 통합',
+      'Ollama Home Assistant',
+      'Home Assistant 로컬 LLM',
+      'Home Assistant 대화 에이전트 Ollama',
+      '로컬 AI 어시스턴트 Home Assistant',
+    ],
+    leadAnswerBlock:
+      '**Home Assistant의 Ollama 통합을 추가하고 Ollama 서버를 지정하여 모델을 선택한 다음 해당 모델을 Assist 대화 에이전트로 설정하십시오 — 이제 완전히 로컬에서 자연어로 기기를 제어합니다.** Ollama는 자체 하드웨어에서 모델을 실행하므로 어떤 명령이나 홈 상태도 네트워크 밖으로 나가지 않습니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'Ollama를 Home Assistant에 어떻게 연결합니까?',
+        answer:
+          'Home Assistant에서 접근 가능한 기기에서 Ollama를 실행하고 모델을 가져온 후, Home Assistant에서 Ollama 통합(설정 → 기기 및 서비스)을 추가하고 Ollama URL(기본값 http://host:11434)을 입력하여 모델을 선택합니다. 마지막으로 Assist 파이프라인에서 Ollama 대화 엔티티를 에이전트로 설정합니다.',
+        bullets: [
+          '접근 가능한 호스트에서 Ollama를 실행하고 모델을 가져오십시오',
+          'Home Assistant에서 Ollama 통합을 추가하십시오',
+          'Ollama URL(기본 포트 11434)을 입력하고 모델을 선택하십시오',
+          '모델이 기기를 제어할 수 있도록 Assist에 엔티티를 노출하십시오',
+          'Assist 파이프라인에서 Ollama 에이전트를 설정하십시오',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: 'TL;DR', anchor: 'tldr' },
+      { label: '이것이 주는 것', anchor: 'what-this-gives' },
+      { label: '전제 조건', anchor: 'prerequisites' },
+      { label: '통합 추가', anchor: 'add-integration' },
+      { label: '모델 선택', anchor: 'choose-model' },
+      { label: '에이전트 구성', anchor: 'configure-agent' },
+      { label: '기기 제어', anchor: 'control-devices' },
+      { label: '문제 해결', anchor: 'troubleshooting' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Home Assistant에서 Ollama 통합을 추가하고 Ollama 서버를 지정하여 모델을 선택한 후 Assist 대화 에이전트로 설정합니다.' },
+      { type: 'plain-terms', content: 'Home Assistant는 로컬 AI 모델을 음성/채팅 두뇌로 사용할 수 있습니다. 자신의 컴퓨터에서 Ollama로 모델을 실행하고, Home Assistant에 그 위치를 알려주며, 어떤 모델을 사용할지 선택하고, 노출된 기기를 제어하도록 합니다. 모든 것이 하드웨어에서 실행되므로 클라우드 서비스로 아무것도 전송되지 않습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'TL;DR',
+        isTldr: true,
+        items: [
+          'Home Assistant에는 공식 Ollama 통합이 내장되어 있습니다 — 사용자 정의 애드온이 필요 없습니다',
+          'Home Assistant 호스트 또는 LAN의 다른 기기에서 Ollama를 실행하십시오',
+          '통합 추가 → Ollama URL 입력(기본값 http://host:11434) → 모델 선택',
+          '모델이 제어할 엔티티만 노출한 후 Assist 에이전트로 설정하십시오',
+          '낮은 지연 시간을 위해 소형 함수 호출 모델을 사용하십시오. 모델/하드웨어 심층 정보는 링크를 참조하십시오',
+          '모든 것이 로컬입니다: 어떤 명령이나 홈 상태도 네트워크 밖으로 나가지 않습니다',
+        ],
+      },
+      whatThisGives: {
+        id: 'what-this-gives',
+        title: 'Ollama를 Home Assistant에 연결하면 얻는 것',
+        content:
+          '**Home Assistant에 로컬 대화 에이전트가 생깁니다: 요청을 말하거나 입력하면 모델이 클라우드 어시스턴트 없이 기기 동작에 매핑합니다.** 이것은 자연어 제어를 위해 클라우드 음성 에이전트(Alexa, Google)를 대체합니다.',
+        items: [
+          '**자연어 제어:** "아래층 모든 것 꺼줘"가 고정된 구문 대신 올바른 엔티티에 매핑됩니다.',
+          '**로컬 및 사적:** 모델이 하드웨어의 Ollama를 통해 실행됩니다 — 전체 아키텍처는 [로컬 LLM 스마트 홈 가이드](/ko/smart-home/local-llm-smart-home-complete-guide)를 참조하십시오.',
+          '**음성 준비:** 사적 Alexa 대체품을 위해 로컬 음성 파이프라인과 연결하십시오 — [완전한 로컬 음성 어시스턴트 구축](/ko/smart-home/local-voice-assistant-smart-home)을 참조하십시오.',
+        ],
+      },
+      prerequisites: {
+        id: 'prerequisites',
+        title: '시작 전 전제 조건',
+        content:
+          '**Home Assistant 실행, 접근 가능한 호스트에서 Ollama 실행, 하나의 모델 가져오기가 필요합니다.** 이 가이드는 Ollama 설치를 다시 설명하지 않습니다 — 그것은 외부 링크를 참조하십시오.',
+        numberedItems: [
+          'LAN에서 실행 중이고 접근 가능한 Home Assistant.',
+          '동일 호스트 또는 다른 기기에 설치된 실행 중인 Ollama — [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama)을 참조하십시오.',
+          '하나 이상의 모델 가져오기(소형 명령어 모델이 올바른 시작점입니다).',
+          '네트워크 접근성: Home Assistant가 Ollama URL(기본 포트 11434)에 접근할 수 있는지 확인하십시오.',
+        ],
+      },
+      addIntegration: {
+        id: 'add-integration',
+        title: 'Ollama 통합을 어떻게 추가합니까?',
+        content:
+          '**Home Assistant에서 설정 → 기기 및 서비스 → 통합 추가 → Ollama로 이동한 후 Ollama URL을 입력하십시오.** 기본 URL은 http://<host>:11434입니다.',
+        columns: ['단계', '작업', '결과'],
+        rows: [
+          { '단계': '1', '작업': '설정 → 기기 및 서비스 → 통합 추가', '결과': '통합 선택기가 열립니다' },
+          { '단계': '2', '작업': '"Ollama"를 검색하여 선택합니다', '결과': '연결 대화 상자가 나타납니다' },
+          { '단계': '3', '작업': 'Ollama URL 입력(http://host:11434)', '결과': 'Home Assistant가 Ollama에 연결됩니다' },
+          { '단계': '4', '작업': '목록에서 모델을 선택합니다', '결과': '대화 엔티티가 생성됩니다' },
+        ],
+      },
+      chooseModel: {
+        id: 'choose-model',
+        title: '어떤 모델을 선택해야 합니까?',
+        content:
+          '**홈 제어를 위해 함수 호출이 가능한 소형의 빠른 명령어 추종 모델을 선택하십시오 — 실행 가능한 가장 큰 모델이 아닙니다.** 여기서는 원시 능력보다 지연 시간이 더 중요합니다.',
+        items: [
+          '보통 하드웨어에서 빠른 응답을 원한다면 소형 모델을 사용하십시오.',
+          '모델이 기기 동작을 안정적으로 내보낼 수 있도록 함수 호출/도구 지원을 우선시하십시오.',
+          '스마트 홈 특정 후보 목록은 [스마트 홈 제어를 위한 최고의 로컬 LLM 모델](/ko/smart-home/best-local-llm-models-smart-home)을 참조하십시오.',
+          '더 깊은 모델 메커니즘은 [코딩을 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-coding-models-2026) 및 local-llms 클러스터를 링크하십시오 — 이 가이드는 모델 순위를 다시 매기지 않습니다.',
+        ],
+      },
+      configureAgent: {
+        id: 'configure-agent',
+        title: '대화 에이전트 구성',
+        content:
+          '**Assist 파이프라인에서 Ollama 대화 엔티티를 에이전트로 설정하고 제어하길 원하는 엔티티만 노출하십시오.** 노출이 모델이 기기에 작용할 수 있게 하는 것입니다.',
+        numberedItems: [
+          '설정 → 음성 어시스턴트를 열고 Assist 파이프라인을 편집(또는 생성)하십시오.',
+          '대화 에이전트를 통합이 만든 Ollama 엔티티로 설정하십시오.',
+          'Assist 노출 아래에서 모델이 제어할 수 있는 특정 엔티티를 노출하십시오.',
+          '선택적으로 톤과 범위를 제한하는 사용자 정의 프롬프트를 추가하십시오.',
+          '저장한 후 음성을 추가하기 전에 Assist 채팅 상자에서 테스트하십시오.',
+        ],
+      },
+      controlDevices: {
+        id: 'control-devices',
+        title: '음성 또는 텍스트로 기기 제어',
+        content:
+          '**에이전트가 설정되고 엔티티가 노출되면 Assist에서 요청을 입력하거나 말하면 모델이 동작을 수행합니다.** 결정론적 안전 자동화는 모델 주도가 아닌 일반 규칙으로 유지하십시오.',
+        items: [
+          '먼저 간단한 명령("사무실 조명 켜줘")으로 테스트한 후 자연스러운 표현으로 테스트하십시오.',
+          '모델은 노출한 엔티티만 제어합니다 — 노출되지 않은 기기는 그대로 유지됩니다.',
+          '핸즈프리 사용을 위해 로컬 음성 프론트엔드를 추가하십시오 — [로컬 음성 어시스턴트](/ko/smart-home/local-voice-assistant-smart-home)를 참조하십시오.',
+          '직접 명령을 넘어서는 컨텍스트 인식 자동화는 [로컬 LLM으로 AI 자동화](/ko/smart-home/ai-automations-local-llm)를 참조하십시오.',
+        ],
+      },
+      troubleshooting: {
+        id: 'troubleshooting',
+        title: '일반적인 문제 해결',
+        content:
+          '**대부분의 문제는 연결성, 모델 선택 또는 노출과 관련됩니다.** 순서대로 처리하십시오.',
+        items: [
+          '**연결 불가:** Ollama URL과 Home Assistant에서 포트 11434에 접근할 수 있는지 확인하십시오. 다른 호스트에 있다면 Ollama를 0.0.0.0에 바인딩하십시오.',
+          '**느린 응답:** 더 작은 모델로 전환하거나 GPU/NPU를 추가하십시오 — [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
+          '**모델이 기기를 무시함:** 엔티티가 Assist에 노출되어 있고 Ollama 엔티티가 활성 에이전트인지 확인하십시오.',
+          '**잘못된 동작:** 범위를 제한하는 시스템 프롬프트를 추가하거나 노출된 엔티티 수를 줄이십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: 'Home Assistant에 어떤 모델을 선택해야 합니까?', a: '홈 제어는 빠르고 구조화된 응답이 필요하기 때문에 함수 호출 지원이 있는 소형 명령어 추종 모델이 최고의 시작점입니다. 적절한 크기는 하드웨어에 따라 다릅니다. 현재 옵션은 스마트 홈을 위한 최고의 로컬 LLM 모델 가이드를 참조하십시오.' },
+          { q: 'Home Assistant에서 Ollama를 실행하려면 GPU가 필요합니까?', a: '아니오, 하지만 도움이 됩니다. 소형 모델은 현대적인 CPU나 통합 GPU에서 실행됩니다. 별도의 GPU나 NPU는 지연 시간을 줄여 어시스턴트가 더 빠르게 느껴지게 합니다. 하드웨어에 맞게 모델 크기를 맞추십시오.' },
+          { q: '모델이 Home Assistant의 모든 기기를 제어할 수 있습니까?', a: 'Assist에 명시적으로 노출한 엔티티만 제어할 수 있습니다. 노출은 옵트인 방식이므로 모델은 공유하지 않은 기기에 작용할 수 없습니다. 이로 인해 제어가 예측 가능하고 안전합니다.' },
+          { q: 'Ollama 통합은 오프라인에서 작동합니까?', a: '네. Ollama는 로컬에서 모델을 실행하고 Home Assistant는 LAN을 통해 기기를 제어하므로 인터넷 없이도 어시스턴트가 작동합니다. 집 외부에서의 원격 접근만 연결이 필요합니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 LLM으로 스마트 홈 실행](/ko/smart-home/local-llm-smart-home-complete-guide) — 이것이 맞는 전체 아키텍처',
+          '[완전한 로컬 음성 어시스턴트 구축](/ko/smart-home/local-voice-assistant-smart-home) — 핸즈프리 음성 추가',
+          '[스마트 홈 제어를 위한 최고의 로컬 LLM 모델](/ko/smart-home/best-local-llm-models-smart-home) — 올바른 모델 선택',
+          '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 크로스 클러스터: Ollama 설정',
+          '[2026년 최고의 로컬 코딩 모델](/ko/power-local-llm/best-local-coding-models-2026) — 크로스 클러스터: 모델 심층 정보',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Ollama를 Home Assistant에 연결하기: 로컬 AI 어시스턴트 (2026)',
+      description: 'Ollama를 Home Assistant에 단계별로 연결하기: 통합 추가, 모델 선택, 대화 에이전트 설정, 자연어로 기기 제어. 클라우드 없음.',
+      url: 'https://www.promptquorum.com/ko/smart-home/home-assistant-ollama-integration',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Ollama' }, { '@type': 'Thing', name: '로컬 AI 어시스턴트' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: 'Home Assistant에 어떤 모델을 선택해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: '홈 제어는 빠르고 구조화된 응답이 필요하기 때문에 함수 호출 지원이 있는 소형 명령어 추종 모델이 최고의 시작점입니다. 적절한 크기는 하드웨어에 따라 다릅니다.' } },
+        { '@type': 'Question', name: 'Home Assistant에서 Ollama를 실행하려면 GPU가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '아니오, 하지만 도움이 됩니다. 소형 모델은 현대적인 CPU나 통합 GPU에서 실행됩니다. 별도의 GPU나 NPU는 지연 시간을 줄입니다.' } },
+        { '@type': 'Question', name: '모델이 Home Assistant의 모든 기기를 제어할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: 'Assist에 명시적으로 노출한 엔티티만 제어할 수 있습니다. 노출은 옵트인이므로 공유하지 않은 기기에는 작용할 수 없습니다.' } },
+        { '@type': 'Question', name: 'Ollama 통합은 오프라인에서 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: '네. Ollama는 로컬에서 모델을 실행하고 Home Assistant는 LAN을 통해 기기를 제어하므로 인터넷 없이도 작동합니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',

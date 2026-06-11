@@ -746,6 +746,192 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-06-04',
+    dateModified: '2026-06-04',
+    next_refresh_due: '2026-12-04',
+    theme: 'Local-First Smart Home',
+    title: 'Matter와 로컬 제어: 인터넷 독립 스마트홈 구축 가이드 (2026)',
+    seoTitle: 'Matter 로컬 제어 2026: 클라우드 없는 스마트홈',
+    intro:
+      'Matter over Thread는 Home Assistant와 같은 로컬 컨트롤러를 통해 진정한 로컬 스마트홈을 구동할 수 있습니다. 제조사 클라우드는 필요하지 않습니다. 이 가이드는 Matter가 로컬을 의미하는지에 대한 미묘한 차이를 명확히 정리하고, Thread 보더 라우터와 로컬 전용 커미셔닝을 설명하며, 클라우드 브리지를 피하는 방법과 Home Assistant를 활용한 로컬 Matter 설정 절차를 단계별로 안내합니다.',
+    metaDescription:
+      'Matter+Thread 로컬 스마트홈 제어 2026: Thread 보더 라우터 설정, 로컬 전용 커미셔닝, 클라우드 브리지 회피 방법, Home Assistant 설정 포함.',
+    twitterDescription:
+      'Matter와 Thread는 Home Assistant 같은 컨트롤러를 통해 완전히 로컬로 작동합니다. 제조사 클라우드 불필요. 로컬 커미셔닝 방법과 클라우드 브리지 회피법을 안내합니다.',
+    readTime: '8분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '인터넷 독립 Matter 구성을 구축하는 사용자',
+    primaryTerm: 'Matter local control',
+    targetKeywords: [
+      'matter 로컬 제어 클라우드 없음',
+      'matter thread 로컬',
+      'matter home assistant 로컬',
+      'thread 보더 라우터',
+      '인터넷 독립 스마트홈',
+    ],
+    leadAnswerBlock:
+      '**Matter over Thread는 Home Assistant와 같은 로컬 컨트롤러를 통해 완전히 로컬로 작동할 수 있습니다. 기기를 로컬 패브릭에 커미셔닝하면 제조사 클라우드가 필요하지 않습니다.** Thread 보더 라우터가 Thread 기기를 네트워크에 연결하고, Home Assistant가 로컬 컨트롤러 역할을 합니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'Matter는 클라우드 없이 작동합니까?',
+        answer:
+          'Matter는 완전히 로컬로 작동할 수 있습니다. Matter 기기를 Home Assistant와 같은 로컬 컨트롤러에 커미셔닝하면 제조사 클라우드 없이 네트워크 내에서 제어가 이루어집니다. Thread 기반 Matter 기기는 Thread 보더 라우터가 필요합니다. 일부 기기는 클라우드 기능도 제공하지만, 로컬 제어에는 필요하지 않습니다.',
+        bullets: [
+          'Matter는 로컬 컨트롤러(예: Home Assistant)를 통해 로컬로 작동 가능합니다',
+          'Thread 기기에는 Thread 보더 라우터가 필요합니다',
+          '기기를 제조사 앱이 아닌 로컬 패브릭에 커미셔닝하십시오',
+          '클라우드 브리지를 피해 제어를 인터넷 독립 상태로 유지하십시오',
+          '일부 기기는 건너뛸 수 있는 선택적 클라우드 기능을 추가합니다',
+        ],
+        updatedDate: '2026-06',
+      },
+    },
+    toc: [
+      { label: '요약', anchor: 'tldr' },
+      { label: 'Matter는 로컬을 의미합니까?', anchor: 'matter-local' },
+      { label: 'Thread 보더 라우터', anchor: 'border-routers' },
+      { label: '로컬 전용 커미셔닝', anchor: 'commissioning' },
+      { label: '클라우드 브리지 회피', anchor: 'avoid-bridges' },
+      { label: 'Home Assistant 설정', anchor: 'ha-setup' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Matter over Thread는 Home Assistant와 같은 컨트롤러를 통해 완전히 로컬로 작동합니다. Thread 보더 라우터가 Thread 기기를 연결하며 제조사 클라우드는 필요하지 않습니다.' },
+      { type: 'plain-terms', content: 'Matter는 로컬 작동을 위해 설계되었지만, 설정이 실제로 클라우드를 사용하지 않는지 여부는 기기를 어떻게 커미셔닝하고 어떤 컨트롤러를 사용하는지에 따라 달라집니다. Matter 기기를 제조사 앱만이 아닌 Home Assistant와 같은 로컬 컨트롤러에 페어링하면 제어가 자신의 네트워크 내에 유지됩니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '요약',
+        isTldr: true,
+        items: [
+          'Matter는 Home Assistant와 같은 로컬 컨트롤러를 통해 완전히 로컬로 작동할 수 있습니다',
+          'Thread 기반 Matter 기기는 네트워크에 Thread 보더 라우터가 필요합니다',
+          '기기를 제조사 클라우드 앱만이 아닌 로컬 패브릭에 커미셔닝하십시오',
+          '제어를 제조사 서버를 통해 라우팅하는 클라우드 브리지를 피하십시오',
+          'Home Assistant는 인터넷 독립 제어를 위한 로컬 Matter 컨트롤러 역할을 합니다',
+          '일부 기기는 로컬 제어에서 무시할 수 있는 선택적 클라우드 기능을 제공합니다',
+        ],
+      },
+      matterLocal: {
+        id: 'matter-local',
+        title: 'Matter는 로컬을 의미합니까?',
+        content:
+          '**Matter는 로컬 제어를 위해 설계되었지만, 설정이 로컬로 유지되는지 여부는 컨트롤러와 기기 커미셔닝 방식에 따라 달라집니다.** 로컬 컨트롤러에 페어링하면 제어가 네트워크 내에 유지됩니다.',
+        items: [
+          '기기와 로컬 컨트롤러 간의 Matter 제어는 LAN에서 이루어집니다.',
+          '제조사 앱만 사용하면 일부 기능이 해당 제조사의 클라우드를 통해 라우팅될 수 있습니다.',
+          '프로토콜 배경은 [스마트홈 프로토콜 설명](/ko/smart-home/smart-home-protocols-explained)을 참조하십시오.',
+        ],
+      },
+      borderRouters: {
+        id: 'border-routers',
+        title: 'Thread 보더 라우터',
+        content:
+          '**Thread 기반 Matter 기기는 Thread 메시를 IP 네트워크에 브리징하는 Thread 보더 라우터가 필요합니다.** 많은 허브와 일부 스피커에 내장되어 있습니다.',
+        items: [
+          '보더 라우터는 저전력 Thread 기기를 LAN에 연결합니다.',
+          'Matter-over-Wi-Fi 기기에는 Thread가 필요 없지만, Thread는 배터리 기기에 적합합니다.',
+          '컨트롤러 또는 호환 기기가 보더 라우터를 제공하는지 확인하십시오.',
+        ],
+      },
+      commissioning: {
+        id: 'commissioning',
+        title: '로컬 전용 커미셔닝',
+        content:
+          '**제어가 네트워크 내에 유지되도록 Matter 기기를 로컬 컨트롤러에 직접 커미셔닝하십시오.** Matter의 멀티-어드민 기능을 통해 기기가 여러 패브릭에 참여할 수 있습니다.',
+        numberedItems: [
+          '로컬 컨트롤러(예: Home Assistant)에 Matter 통합을 추가하십시오.',
+          '컨트롤러에서 기기의 Matter QR/페어링 코드를 스캔하십시오.',
+          '네트워크의 로컬 패브릭에 커미셔닝하십시오.',
+          '제조사 앱을 닫은 상태에서 제어가 작동하는지 확인하십시오.',
+        ],
+      },
+      avoidBridges: {
+        id: 'avoid-bridges',
+        title: '클라우드 브리지 회피',
+        content:
+          '**기기 제어를 제조사 서버를 통해 중계하는 클라우드 브리지는 로컬 작동을 무력화하므로 피하십시오.** 직접 로컬 커미셔닝과 로컬 컨트롤러를 선호하십시오.',
+        items: [
+          '일부 에코시스템은 클라우드를 통해 Matter 기기를 브리징합니다. 대신 로컬 컨트롤러를 선호하십시오.',
+          'Thread 보더 라우터와 컨트롤러를 자신의 네트워크에 유지하십시오.',
+          '인터넷 중단 시에도 제어가 유지되는지 테스트하여 로컬 여부를 확인하십시오.',
+        ],
+      },
+      haSetup: {
+        id: 'ha-setup',
+        title: 'Home Assistant 설정',
+        content:
+          '**Home Assistant는 로컬 Matter 컨트롤러 역할을 하므로 기기를 커미셔닝하고 제조사 클라우드 없이 제어합니다.** 이것이 인터넷 독립 Matter로 가는 가장 깔끔한 경로입니다.',
+        items: [
+          'Home Assistant Matter 통합을 컨트롤러로 사용하십시오. [Home Assistant 시작 가이드](/ko/smart-home/home-assistant-getting-started)를 참조하십시오.',
+          'Thread 보더 라우터를 페어링하여 Thread 기기가 네트워크에 참여하도록 하십시오.',
+          '전체 로컬 그림은 [로컬 스마트홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
+        ],
+      },
+      haSetupTable: {
+        id: 'ha-setup-table',
+        title: '설정 경로 비교',
+        content:
+          '**로컬 컨트롤러에 로컬 커미셔닝하는 방식은 인터넷 독립적입니다. 제조사 클라우드 전용 페어링은 그렇지 않습니다.** 로컬 경로를 선택하십시오.',
+        columns: ['설정 경로', '로컬 전용?', '클라우드 브리지 필요?'],
+        rows: [
+          { '설정 경로': 'Home Assistant에 커미셔닝(로컬 컨트롤러)', '로컬 전용?': '예', '클라우드 브리지 필요?': '아니오' },
+          { '설정 경로': 'Matter-over-Thread + 로컬 Thread 보더 라우터', '로컬 전용?': '예', '클라우드 브리지 필요?': '아니오' },
+          { '설정 경로': '제조사 앱 전용 페어링', '로컬 전용?': '부분', '클라우드 브리지 필요?': '경우에 따라' },
+          { '설정 경로': '클라우드 브리지 에코시스템', '로컬 전용?': '아니오', '클라우드 브리지 필요?': '예' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: 'Matter는 항상 로컬입니까?', a: 'Matter는 로컬 제어를 위해 설계되었지만, 설정이 로컬로 유지되는지 여부는 컨트롤러와 커미셔닝에 따라 달라집니다. Home Assistant와 같은 로컬 컨트롤러에 기기를 페어링하면 제어가 네트워크 내에 유지됩니다. 제조사 클라우드 앱에만 의존하면 기능이 클라우드를 통해 라우팅될 수 있습니다.' },
+          { q: 'Thread 보더 라우터가 필요합니까?', a: '저전력 Thread 메시를 사용하는 Thread 기반 Matter 기기에만 필요합니다. Thread 보더 라우터는 해당 기기를 IP 네트워크에 브리징하며, 일부 허브와 스피커에 내장되어 있습니다. Matter-over-Wi-Fi 기기에는 필요하지 않습니다.' },
+          { q: '제조사 앱을 피할 수 있습니까?', a: '대체로 가능합니다. Matter 커미셔닝을 통해 Home Assistant와 같은 로컬 컨트롤러에 기기를 직접 페어링하고 제조사 앱 없이 제어할 수 있습니다. 초기 설정에서 앱을 사용할 수도 있지만, 일상적인 제어는 로컬로 할 수 있습니다.' },
+          { q: 'Matter는 Home Assistant에서 작동합니까?', a: '예. Home Assistant는 Matter 통합을 포함하며 로컬 Matter 컨트롤러 역할을 할 수 있습니다. 기기를 로컬 패브릭에 커미셔닝하고 제조사 클라우드 없이 제어합니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[스마트홈 프로토콜 설명](/ko/smart-home/smart-home-protocols-explained) — Matter, Thread, Zigbee, Z-Wave',
+          '[로컬 스마트홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide) — 로컬 우선 구성',
+          '[Home Assistant 시작 가이드](/ko/smart-home/home-assistant-getting-started) — 로컬 Matter 컨트롤러',
+          '[로컬 스마트홈이 클라우드보다 나은 이유](/ko/smart-home/why-local-smart-home-beats-cloud) — 인터넷 독립의 중요성',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Matter와 로컬 제어: 인터넷 독립 스마트홈 구축 가이드 (2026)',
+      description: 'Matter+Thread 로컬 스마트홈 제어 2026: Thread 보더 라우터 설정, 로컬 전용 커미셔닝, 클라우드 브리지 회피 방법, Home Assistant 설정 포함.',
+      url: 'https://www.promptquorum.com/ko/smart-home/matter-local-control-guide',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-06-04',
+      dateModified: '2026-06-04',
+      about: [{ '@type': 'Thing', name: 'Matter' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: '로컬 제어' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: 'Matter는 항상 로컬입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Matter는 로컬 제어를 위해 설계되었지만, 설정이 로컬로 유지되는지 여부는 컨트롤러와 커미셔닝에 따라 달라집니다. Home Assistant와 같은 로컬 컨트롤러에 페어링하면 제어가 네트워크 내에 유지됩니다.' } },
+        { '@type': 'Question', name: 'Thread 보더 라우터가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Thread 기반 Matter 기기에만 필요합니다. Thread 보더 라우터는 해당 기기를 IP 네트워크에 브리징하며 일부 허브와 스피커에 내장되어 있습니다. Matter-over-Wi-Fi 기기에는 필요하지 않습니다.' } },
+        { '@type': 'Question', name: '제조사 앱을 피할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '대체로 가능합니다. Matter 커미셔닝으로 Home Assistant와 같은 로컬 컨트롤러에 기기를 직접 페어링하고 제조사 앱 없이 제어할 수 있습니다.' } },
+        { '@type': 'Question', name: 'Matter는 Home Assistant에서 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: '예. Home Assistant는 Matter 통합을 포함하며 제조사 클라우드 없이 로컬 Matter 컨트롤러 역할을 할 수 있습니다.' } },
+      ],
+    },
+  },
+
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
