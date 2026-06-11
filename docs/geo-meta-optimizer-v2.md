@@ -83,7 +83,8 @@ generateMetadata routes (og/twitter auto-derived):
 | pt   | Latin  | 50–58 | 60 | 140–155 | 160 | 70 | *(reserved — no files yet)* |
 | ja   | CJK    | 30–40 CJK | 40 CJK | 80–120 CJK | 155 raw | 80 CJK |
 | zh   | CJK    | 28–38 CJK | 40 CJK | 70–110 CJK | 155 raw | 70 CJK |
-| ar   | RTL/Arabic | 45–55 | 60 | 130–150 | 160 | 70 | *(reserved — no files yet)* |
+| ko   | CJK/Hangul | 28–38 CJK | 40 CJK | 70–110 CJK | 155 raw | 70 CJK | *(reserved — Language type not yet extended)* |
+| ar   | RTL/Arabic | 40–52 | 55 | 120–145 | 150 | 70 | *(reserved — no files yet)* |
 
 **Why per-language:** German compounds and Arabic glyphs consume SERP pixel-width faster than
 English; CJK glyphs are wider so fewer characters fill the snippet. Uniform char limits (the v1
@@ -177,7 +178,8 @@ This is the coverage-gap detector — run it periodically so leftovers can't sil
 - **PT** (reserved, code `pt`) — when authored, target **Brazilian** Portuguese (não pt-PT): BR vocabulary/spelling (e.g. "arquivo" not "ficheiro"), LGPD where relevant (Brazil's data-privacy law, the BR analogue to GDPR).
 - **JA** — native Japanese; katakana for foreign terms (オラマ for Ollama); METI guidance if relevant; CJK width rules above.
 - **ZH** — Simplified Chinese (本地LLM, 量化); CJK width rules above.
-- **AR** — Modern Standard Arabic; **RTL** — keep Latin technical terms (ollama, VRAM, Q4_K_M) LTR within RTL text; Arabic glyphs are wide, use the AR length targets; Gulf data-sovereignty framing where relevant.
+- **KO** (reserved, code `ko`) — when authored, target South Korean Korean (한국어); Hangul glyphs are information-dense (CJK-width class), use KO CJK length targets; keep Latin technical terms (ollama, VRAM, Q4_K_M) verbatim; Korean data-protection framing (PIPA — Personal Information Protection Act) where relevant. Language type extension required before files can be authored.
+- **AR** — Modern Standard Arabic; **RTL** — keep Latin technical terms (ollama, VRAM, Q4_K_M) LTR within RTL text; Arabic glyphs are visually wide, use the AR length targets (shorter than Latin); Gulf data-sovereignty framing where relevant.
 
 ---
 
