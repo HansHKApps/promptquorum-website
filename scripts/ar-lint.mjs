@@ -27,6 +27,8 @@ function cleanedWordCount(str) {
   if (str.includes('](http')) return 0              // markdown link
   if (/^[$#!@\[{]/.test(str)) return 0             // code/markup token start
   if (/\bet al\b|\barXiv:\d+|\(\d{4}\)/.test(str)) return 0 // academic citation
+  if (/^\.?\.?\//.test(str)) return 0               // shell command / relative path (./stream, ../, /usr)
+  if (/(^|\s)--?[a-z]/.test(str) && /[/.]/.test(str)) return 0 // CLI invocation with flags (e.g. ./stream -m x --step 500)
 
   const cleaned = str
     // strip known untranslated brand/model names

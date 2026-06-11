@@ -440,7 +440,223 @@ schema: {
         ],
       },
     },
-    // VERIFY: guia comparativo de GPUs com preços de mercado de segunda mão em USD (referência global) — preços mantidos em USD. No varejo brasileiro, com impostos de importação, esses valores ficam ~2-3x maiores em reais. Links de afiliado não há; confirmar disponibilidade/preço BR antes de publicar.
+    ar: {
+      freshness_tier: 'semi_annual',
+      theme: 'GPU Buying Guides',
+      title: 'أفضل كروت رسوميات AMD لنماذج LLM المحلية',
+      seoTitle: 'أفضل كروت رسوميات AMD لنماذج LLM المحلية 2026: دليل مقارنة',
+      intro: '**AMD RX 6800 XT وRX 7900 XTX بديلان قويان لـ NVIDIA، بأداء لكل دولار أفضل بنسبة 15-20%، لكنهما يعانيان من توافق أقل مع ONNX Runtime وبرامج تشغيل vLLM.** اعتبارًا من أبريل 2026، نضج AMD ROCm (HIP)، رغم أن طبقات التوافق تضيف احتكاكًا. ولا يزال NVIDIA CUDA المسار الأبسط لنماذج LLM المحلية. استخدم AMD فقط إن وجدت عرضًا مستعملًا رائعًا أو كنت تملك بالفعل عتاد AMD.',
+      metaDescription: 'قارن AMD RX 6800 XT وRX 7900 XTX مقابل NVIDIA RTX: إعداد ROCm، الأداء في vLLM، التكلفة لكل TFLOP ومتى تشتري AMD. مُحدَّث 2026.',
+      publishDate: '2026-04-05',
+      leadAnswerBlock: '**AMD RX 6800 XT وRX 7900 XTX بديلان قويان لـ NVIDIA، بأداء لكل دولار أفضل بنسبة 15-20%، لكنهما يعانيان من توافق أقل مع ONNX Runtime وبرامج تشغيل vLLM.**',
+      audience: 'المطورون المعتادون على Ollama أو LM Studio الذين يحسّنون تدفقات عملهم مع نماذج LLM المحلية',
+      readTime: '7 دقائق للقراءة',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'AMD GPU',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'NewsArticle',
+        'headline': 'أفضل كروت رسوميات AMD لنماذج LLM المحلية 2026: RX 7900 XTX',
+        'description': 'قارن AMD RX 7900 XTX و6800 XT مقابل NVIDIA RTX. إعداد ROCm، الأداء في vLLM، تحليل التكلفة لكل TFLOP. متى تختار AMD على CUDA. أبريل 2026.',
+        'url': 'https://www.promptquorum.com/ar/local-llms/best-amd-gpus-local-llm',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-04-18',
+        'inLanguage': 'ar',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'AMD GPU' },
+          { '@type': 'Thing', 'name': 'ROCm' },
+          { '@type': 'Thing', 'name': 'GPU VRAM' },
+          { '@type': 'Thing', 'name': 'الاستدلال المحلي لـ LLM' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Intermediate',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ar',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'هل أشتري AMD RX 6800 XT أم NVIDIA RTX 3080 لنماذج LLM المحلية؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 3080 إن كنت تقدّر البساطة (CUDA يعمل دون مشاكل). RX 6800 XT إن أردت قيمة أكبر بنسبة 25% ولا تمانع 5-10 ساعات من إعداد ROCm.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل AMD RX 7900 XTX أفضل من RTX 4090؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'سرعة متماثلة، نفس VRAM (24GB). RX 7900 XTX أرخص بـ 200-300 دولار مستعملة (450-550 دولارًا مقابل 1,000-1,300 دولار). إعداد ROCm هو الثمن المقابل.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام كروت رسوميات AMD مع Ollama؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'تقنيًا نعم، لكن توقّع سلوكًا غير مستقر. التراجع إلى المعالج متكرر. استخدم vLLM أو llama.cpp بدلًا منه لـ AMD.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل مسار AMD لنماذج LLM المحلية في 2026؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama.cpp (خلفية HIP) + Text Generation WebUI. كلاهما بدعم جيد لـ AMD. تجنّب Ollama.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أحتاج Ubuntu لـ AMD ROCm، أم يعمل Windows أيضًا؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'الدعم في Windows موجود (HIP on Windows)، لكنه أحدث وأقل استقرارًا. Ubuntu هو المسار الموصى به.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل RX 6700 أو 6750 جيد لنماذج 7B؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'RX 6700 (12GB) يعمل، لكنه أبطأ بنسبة 20% من RX 6800 XT. اشتره فقط إن كلف أقل من 250 دولارًا. وإلا، راهن على 6800 XT.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني الجمع بين كروت رسوميات AMD وNVIDIA في نظام واحد؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نظريًا نعم، لكن الإدارة كابوس. يحتاج كل GPU بيئة CUDA/HIP خاصة به. غير موصى به.' }
+          },
+        ]
+      },
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#tldr' },
+        { label: 'أي كروت رسوميات AMD تستحق العناء فعلًا؟', anchor: '#which-amd' },
+        { label: 'كيف تُقارن كروت رسوميات AMD بـ RTX في السعر والأداء؟', anchor: '#amd-vs-nvidia' },
+        { label: 'ما احتكاك إعداد ROCm لـ AMD؟', anchor: '#rocm-setup' },
+        { label: 'هل يمكنك تشغيل Ollama وvLLM على AMD؟', anchor: '#software-support' },
+        { label: 'متى ينبغي أن تشتري AMD بدلًا من NVIDIA؟', anchor: '#when-buy-amd' },
+        { label: 'الأخطاء الشائعة عند تبنّي AMD', anchor: '#mistakes' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'AMD RX 6800 XT (16GB، نحو 300-350 دولارًا مستعملة) وRX 7900 XTX (24GB، نحو 400-500 دولار مستعملة) هما الخياران الوحيدان القابلان للاستخدام لنماذج LLM المحلية. قد تتفاوت الأسعار حسب بلدك.',
+            'الأداء لكل دولار: AMD أرخص بنسبة 20-30% من NVIDIA، لكن احتكاك البرمجيات يكلف 5 إلى 10 ساعات من الإعداد.',
+            'Ollama: دعم AMD محدود (مسار ROCm غير مستقر، التراجع إلى المعالج بطيء). غير موصى به.',
+            'vLLM: دعم كامل لـ AMD ROCm منذ الإصدار v0.6.0، لكن الإعداد يتطلب تثبيت برامج التشغيل يدويًا. يعمل جيدًا بعد تجاوز مرحلة التثبيت.',
+            'Text Generation WebUI: دعم ممتاز لـ AMD عبر ROCm. أفضل تجربة مستخدم على AMD.',
+            'Llama.cpp: دعم أصلي لـ AMD (خلفية HIP). أداء قوي. المسار الموصى به على AMD.',
+            'تكلفة الإعداد: خطّط لـ 5-10 ساعات من تصحيح برامج تشغيل ROCm، وتجميع HIPCC، وتوافق النواة.',
+            'الحكم (أبريل 2026): استخدم AMD فقط إن كنت تملك بالفعل عتاد AMD أو وجدت عرضًا مستعملًا ممتازًا (نحو 300 دولار لكرت بسعة 16GB). وإلا، يبقى NVIDIA CUDA أبسط.',
+          ],
+        },
+        'which-amd': {
+          title: 'أي كروت رسوميات AMD تستحق العناء فعلًا؟',
+          items: [
+            '**RX 6800 XT** (16GB GDDR6): ملكة القيمة في AMD. صدر في 2020. لا يزال قويًا لاستدلال 7B-22B. مستعمل: نحو 300-350 دولارًا.',
+            '**RX 6900 XT** (16GB GDDR6): أسرع هامشيًا من 6800 XT. غير شائع. مستعمل: نحو 350-400 دولار. زيادة السعر لا تستحق العناء.',
+            '**RX 7900 XT** (20GB GDDR6): بنية RDNA 3 أحدث. أسرع بنسبة 20% من 6800 XT. مستعمل: نحو 400-480 دولارًا. جيد لـ 70B Q4.',
+            '**RX 7900 XTX** (24GB GDDR6): كرت AMD الاستهلاكي الراقي. 24GB من VRAM نقطة تحول لنماذج 70B. مستعمل: نحو 450-550 دولارًا. سرعة مماثلة لـ RTX 4090.',
+            '**Radeon Pro W6800 (32GB)**: كرت بمستوى المؤسسات، أرخص مستعملًا (نحو 200-300 دولار). أبطأ، لكن 32GB ممتازة لـ 70B Q8. خيار متخصص.',
+          ],
+        },
+        'amd-vs-nvidia': {
+          title: 'كيف تُقارن كروت رسوميات AMD بـ RTX في السعر والأداء؟',
+          rows: [
+            { 'GPU': 'RX 6800 XT', 'VRAM': '16GB', 'TFLOPS': '1,952', 'Precio (2ª mano)': 'نحو 300-350 دولارًا', 'Rend./$ vs. RTX': '+25%', 'RTX equivalente': 'RTX 3080 (أبطأ)' },
+            { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2,540', 'Precio (2ª mano)': 'نحو 400-480 دولارًا', 'Rend./$ vs. RTX': '+20%', 'RTX equivalente': 'RTX 4080 (متماثل)' },
+            { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2,750', 'Precio (2ª mano)': 'نحو 450-550 دولارًا', 'Rend./$ vs. RTX': '+15%', 'RTX equivalente': 'RTX 4090 (سرعة متماثلة)' },
+            { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1,456', 'Precio (2ª mano)': 'نحو 350-400 دولار', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
+            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', 'Precio (2ª mano)': 'نحو 1,000-1,300 دولار', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
+          ],
+          columns: ['GPU', 'VRAM', 'TFLOPS', 'Precio (2ª mano)', 'Rend./$ vs. RTX', 'RTX equivalente'],
+        },
+        'rocm-setup': {
+          title: 'ما احتكاك إعداد ROCm لـ AMD؟',
+          content: [
+            '**1. ثبّت برامج تشغيل AMD ROCm: `apt-get install rocm-dkms` (Ubuntu). في Windows، استخدم مثبّت .exe اليدوي. يستغرق نحو 30 دقيقة.**',
+            '2. تحقق من مُجمِّع HIP: `hipcc --version`. غالبًا ما يفشل في المحاولة الأولى. صحّح توافق النواة لكرتك.',
+            '3. ثبّت HIPCC (مُجمِّع HIP-to-C++ من AMD): `apt-get install hip-runtime-amd`. سلسلة تبعيات أخرى.',
+            '4. اختبر بنموذج LLM صغير: شغّل الاستدلال للتحقق من عمل تسريع GPU. التراجع إلى المعالج متكرر.',
+            '5. حلّ تعارضات إصدار برامج التشغيل: ROCm v5.7 يعمل مع النواة 5.15 لكن ليس مع 6.x. يستهلك 2-4 ساعات من التصحيح.',
+            'NVIDIA CUDA بالمقارنة: `nvidia-cuda-toolkit` ← أمر apt-get واحد، وصول فوري لـ GPU. تتطلب AMD احتكاكًا أكبر بـ 5 إلى 10 أضعاف.',
+          ],
+        },
+        'software-support': {
+          title: 'هل يمكنك تشغيل Ollama وvLLM على AMD؟',
+          content: [
+            '**Ollama على AMD:** تجريبي وغير مستقر اعتبارًا من أبريل 2026. مسار ROCm يعمل أحيانًا، والتراجع إلى المعالج بطيء. غير موصى به.',
+            '**vLLM على AMD:** دعم كامل لـ ROCm منذ الإصدار v0.6.0. يعمل جيدًا، لكنه يتطلب تهيئة يدوية لبرامج تشغيل ROCm/HIP. خيار جيد إن تجاوزت مرحلة التثبيت.',
+            '**Text Generation WebUI:** دعم ممتاز لـ AMD ROCm. أفضل تجربة مستخدم على AMD. موصى به.',
+            '**Llama.cpp:** خلفية HIP أصلية. أداء قوي. أبسط مسار لـ AMD. موصى به.',
+            '**LM Studio:** NVIDIA فقط. دون دعم لـ AMD.',
+            'اعتبارًا من أبريل 2026: vLLM + llama.cpp هما خياراك على AMD. وOllama غير موثوق.',
+          ],
+        },
+        'when-buy-amd': {
+          title: 'متى ينبغي أن تشتري AMD بدلًا من NVIDIA؟',
+          content: [
+            'اشترِ AMD إذا:',
+            '- وجدت RX 7900 XTX مستعملة بأقل من 450 دولارًا (مُقيَّمة بأقل من قيمتها مقابل قيمة RTX 4090).',
+            '- كنت تملك بالفعل عتاد AMD وتريد الحفاظ على اتساق المنظومة.',
+            '- كنت تبني عنقودًا وترتّب الأداء لكل دولار فوق سهولة الإعداد.',
+            'لا تشترِ AMD إذا:',
+            '- أردت تجربة جاهزة للاستخدام. NVIDIA CUDA أسرع في التشغيل.',
+            '- احتجت Ollama. دعم AMD غير موثوق.',
+            '- كان وقتك ضيقًا. تصحيح ROCm قد يستهلك أكثر من 10 ساعات.',
+          ],
+        },
+        'mistakes': {
+          title: 'الأخطاء الشائعة عند تبنّي AMD',
+          items: [
+            'شراء RX 6700 (12GB) ظنًا أنه يكافئ 3060 12GB — إنه أبطأ بنسبة 20% وغالبًا صعب الإيجاد مستعملًا.',
+            'افتراض أن ROCm «يعمل ببساطة» مثل CUDA — خطّط لـ 5 إلى 10 ساعات من حل مشكلات توافق برامج التشغيل والنواة.',
+            'استخدام Ollama مع AMD مع توقع تكامل سلس — مسار ROCm غير مستقر؛ llama.cpp أو vLLM خياران أفضل.',
+          ],
+        },
+        'faqSection': {
+          title: 'الأسئلة الشائعة',
+          faqs: [
+            { q: 'هل أشتري AMD RX 6800 XT أم NVIDIA RTX 3080 لنماذج LLM المحلية؟', a: 'RTX 3080 إن كنت تقدّر البساطة (CUDA يعمل دون مشاكل). RX 6800 XT إن أردت قيمة أكبر بنسبة 25% ولا تمانع 5-10 ساعات من إعداد ROCm.' },
+            { q: 'هل AMD RX 7900 XTX أفضل من RTX 4090؟', a: 'سرعة متماثلة، نفس VRAM (24GB). RX 7900 XTX أرخص بـ 200-300 دولار مستعملة (450-550 دولارًا مقابل 1,000-1,300 دولار). إعداد ROCm هو الثمن المقابل.' },
+            { q: 'هل يمكنني استخدام كروت رسوميات AMD مع Ollama؟', a: 'تقنيًا نعم، لكن توقّع سلوكًا غير مستقر. التراجع إلى المعالج متكرر. استخدم vLLM أو llama.cpp بدلًا منه لـ AMD.' },
+            { q: 'ما أفضل مسار AMD لنماذج LLM المحلية في 2026؟', a: 'Llama.cpp (خلفية HIP) + Text Generation WebUI. كلاهما بدعم جيد لـ AMD. تجنّب Ollama.' },
+            { q: 'هل أحتاج Ubuntu لـ AMD ROCm، أم يعمل Windows أيضًا؟', a: 'الدعم في Windows موجود (HIP on Windows)، لكنه أحدث وأقل استقرارًا. Ubuntu هو المسار الموصى به.' },
+            { q: 'هل RX 6700 أو 6750 جيد لنماذج 7B؟', a: 'RX 6700 (12GB) يعمل، لكنه أبطأ بنسبة 20% من RX 6800 XT. اشتره فقط إن كلف أقل من 250 دولارًا. وإلا، راهن على 6800 XT.' },
+            { q: 'هل يمكنني الجمع بين كروت رسوميات AMD وNVIDIA في نظام واحد؟', a: 'نظريًا نعم، لكن الإدارة كابوس. يحتاج كل GPU بيئة CUDA/HIP خاصة به. غير موصى به.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'قراءات ذات صلة',
+          items: [
+            '[أفضل كروت الرسوميات الاقتصادية لنماذج LLM المحلية](/ar/local-llms/best-budget-gpus-local-llm)',
+            '[أفضل كروت الرسوميات لنماذج LLM المحلية](/ar/local-llms/best-gpus-for-local-llms)',
+            '[GPU مقابل CPU مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+            '[Text Generation WebUI مقابل vLLM مقابل Llama.cpp](/ar/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
+            '[لابتوب مقابل سطح المكتب لنماذج LLM المحلية](/ar/local-llms/laptop-vs-desktop-local-llm) — مقارنة التكلفة والأداء بين اللابتوب وسطح المكتب للذكاء الاصطناعي.',
+          ],
+        },
+        'sources': {
+          title: 'المصادر',
+          items: [
+            'توثيق AMD ROCm وGitHub: مُجمِّع HIP، مصفوفة توافق برامج التشغيل، أمثلة استدلال بنماذج LLM',
+            'vLLM GitHub: تنفيذ خلفية AMD/ROCm وحالة الدعم (v0.6.0 فأحدث)',
+            'Llama.cpp GitHub: خلفية HIP لدعم كروت رسوميات AMD',
+            'تقدّم كروت رسوميات AMD سرعات جيدة في الـ tokens في الثانية، لكن السرعة وحدها لا تحدّد جودة الإجابات. ما تسأله للنموذج يهم بقدر سرعة الإجابة: [context windows explained](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets) يشرح كيفية هيكلة الطلبات الأطول ضمن حدود ذاكرة GPU.',
+          ],
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'url': 'https://www.promptquorum.com/ar/local-llms/best-amd-gpus-local-llm',
+        'inLanguage': 'ar',
+        name: 'أفضل كروت رسوميات AMD لنماذج LLM المحلية',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT (16GB، نحو 300-350 دولارًا مستعملة) وRX 7900 XTX (24GB، نحو 400-500 دولار مستعملة) هما الخياران الوحيدان القابلان للاستخدام لنماذج LLM المحلية.' },
+          { '@type': 'ListItem', position: 2, name: 'الأداء لكل دولار: AMD أرخص بنسبة 20-30% من NVIDIA، لكن احتكاك البرمجيات يكلف 5 إلى 10 ساعات من الإعداد.' },
+          { '@type': 'ListItem', position: 3, name: 'Ollama: دعم AMD محدود (مسار ROCm غير مستقر، التراجع إلى المعالج بطيء). غير موصى به.' },
+          { '@type': 'ListItem', position: 4, name: 'vLLM: دعم كامل لـ AMD ROCm منذ الإصدار v0.6.0، لكن الإعداد يتطلب تثبيت برامج التشغيل يدويًا.' },
+          { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI: دعم ممتاز لـ AMD عبر ROCm. أفضل تجربة مستخدم على AMD.' },
+          { '@type': 'ListItem', position: 6, name: 'Llama.cpp: دعم أصلي لـ AMD (خلفية HIP). أداء قوي. المسار الموصى به على AMD.' },
+          { '@type': 'ListItem', position: 7, name: 'تكلفة الإعداد: خطّط لـ 5-10 ساعات من تصحيح برامج تشغيل ROCm، وتجميع HIPCC، وتوافق النواة.' },
+          { '@type': 'ListItem', position: 8, name: 'الحكم (أبريل 2026): استخدم AMD فقط إن كنت تملك بالفعل عتاد AMD أو وجدت عرضًا مستعملًا ممتازًا. وإلا، يبقى NVIDIA CUDA أبسط.' },
+        ],
+      },
+    },
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',

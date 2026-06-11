@@ -1919,6 +1919,326 @@ schema: {
       },
     },
 
+    ar: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: 'أفضل واجهات أمامية لنماذج LLM المحلية 2026',
+      seoTitle: 'أفضل واجهات أمامية لنماذج LLM المحلية 2026: 8 مقارنة',
+      intro: 'الواجهة الأمامية هي واجهة الدردشة التي تتفاعل بها مع نموذج LLM المحلي. يشغّل Ollama أو LM Studio النموذج، لكن الواجهة الأمامية توفّر الواجهة المرئية. في أبريل 2026، تتصدّر Open WebUI بأكثر من 25,000 نجمة على GitHub (RAG، متعددة الوسائط، متعددة المستخدمين)، وEnchanted UI هي الخيار الأسرع (دون تهيئة)، وJan AI تغطي الاستخدام المكتبي دون اتصال. يقارن هذا الدليل 8 واجهات أمامية حسب ميزاتها، وزمن التهيئة، وحالة الاستخدام.',
+      metaDescription: 'قارن 8 واجهات أمامية لنماذج LLM المحلية: Open WebUI (25k نجمة، RAG)، وEnchanted (الأسرع)، وJan AI (مكتبية)، وContinue.dev (للبرمجة). مع دليل.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**الواجهة الأمامية هي واجهة الدردشة التي تتفاعل بها مع نموذج LLM المحلي. يشغّل Ollama أو LM Studio النموذج، لكن الواجهة الأمامية توفّر الواجهة المرئية. في أبريل 2026، تتصدّر Open WebUI بأكثر من 25,000 نجمة على GitHub (RAG، متعددة الوسائط، متعددة المستخدمين)، وEnchanted UI هي الخيار الأسرع (دون تهيئة)، وJan AI تغطي الاستخدام المكتبي دون اتصال.**',
+      audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على عتاد استهلاكي',
+      readTime: '11 دقيقة للقراءة',
+      educationalLevel: 'Beginner to Advanced',
+      primaryTerm: 'frontend para LLM local',
+      next_refresh_due: '2026-10-04',
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'مقارنة أفضل 8 واجهات أمامية', anchor: '#top-8-frontends' },
+        { label: 'الأفضل عموماً: Open WebUI', anchor: '#best-overall-open-webui' },
+        { label: 'الأسرع: Enchanted UI', anchor: '#best-for-speed-enchanted' },
+        { label: 'أفضل تطبيق مكتبي: Jan AI', anchor: '#best-desktop-jan' },
+        { label: 'الأفضل للبرمجة: Continue.dev', anchor: '#best-for-code-continue' },
+        { label: 'أفضل واجهة ويب: Gradio/Streamlit', anchor: '#best-web-gradio' },
+        { label: 'الاستضافة الذاتية مقابل السحابة', anchor: '#self-hosted-vs-cloud' },
+        { label: 'السياق الإقليمي', anchor: '#regional-context' },
+        { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
+        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+        { label: 'قراءات ذات صلة', anchor: '#related-reading' },
+        { label: 'المصادر', anchor: '#sources' },
+      ],
+      gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
+      gammaDescription: 'تقارن هذه العرض التقديمي 8 واجهات أمامية لنماذج LLM المحلية -- Open WebUI (أكثر من 25,000 نجمة، RAG)، وEnchanted UI (الأسرع)، وJan AI (مكتبية)، وContinue.dev (للبرمجة) -- مع جدول مقارنة للميزات، ودليل تهيئة، وسياق امتثال إقليمي (الخليج/PDPL، اليابان، الصين)، و5 أخطاء شائعة. حمّل ملف PDF كبطاقة مرجعية للواجهات الأمامية لنماذج LLM المحلية.',
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'الواجهة الأمامية لنموذج LLM المحلي هي واجهة الدردشة التي تتحدث بها مع نموذجك. يوفّر Ollama الـ API؛ والواجهة الأمامية هي الواجهة المرئية.',
+            '**Open WebUI** هي الأكثر اكتمالاً في الميزات (RAG، متعددة الوسائط، قواعد المعرفة، استدعاء الدوال). تتطلب Docker. يُوصى بـ 12 GB من RAM أو أكثر.',
+            '**Enchanted UI** هي الأسرع والأكثر بساطة. دون تبعيات، تعمل في متصفحك. مثالية للاستخدام الخفيف.',
+            '**Jan AI** تطبيق مكتبي (Windows، macOS) مع مزامنة دون اتصال. دون تهيئة خادم. شائعة بين المستخدمين غير التقنيين.',
+            '**Continue.dev** امتداد لـ VS Code لاقتراحات برمجية سطرية من نموذج Ollama المحلي.',
+            'في أبريل 2026، جميع الواجهات الأمامية الرئيسية مفتوحة المصدر ومجانية.',
+          ],
+        },
+        topFrontends: {
+          title: 'أفضل 8 واجهات أمامية لنماذج LLM المحلية: مقارنة الميزات',
+          image: '/images/frontend-selection-guide-es.svg',
+          imageCaption: 'اختر واجهتك الأمامية لنموذج LLM المحلي حسب حالة الاستخدام: تتصل جميع الخيارات بنفس واجهة API من Ollama.',
+          rows: [
+            { 'Frontend': 'Open WebUI', 'Tipo': 'تطبيق ويب (Docker)', 'Ideal para': 'ميزات متقدمة، RAG، فرق', 'Tiempo de config.': '5 دقائق (مع Docker)', 'RAM necesaria': '12 GB+', 'Código abierto': 'نعم' },
+            { 'Frontend': 'Enchanted UI', 'Tipo': 'ويب (دون تبعيات)', 'Ideal para': 'السرعة، البساطة', 'Tiempo de config.': '0 دقيقة (URL)', 'RAM necesaria': '8 GB+', 'Código abierto': 'نعم' },
+            { 'Frontend': 'Jan AI', 'Tipo': 'تطبيق مكتبي', 'Ideal para': 'مستخدمون غير تقنيين، دون اتصال', 'Tiempo de config.': '3 دقائق (تثبيت)', 'RAM necesaria': '8 GB+', 'Código abierto': 'نعم' },
+            { 'Frontend': 'Continue.dev', 'Tipo': 'امتداد VS Code', 'Ideal para': 'إكمال برمجي', 'Tiempo de config.': '2 دقيقة (تثبيت الامتداد)', 'RAM necesaria': '8 GB+', 'Código abierto': 'نعم' },
+            { 'Frontend': 'Lobe Chat', 'Tipo': 'تطبيق ويب', 'Ideal para': 'الخصوصية، التخصيص', 'Tiempo de config.': '5 دقائق', 'RAM necesaria': '8 GB+', 'Código abierto': 'نعم' },
+            { 'Frontend': 'Gradio', 'Tipo': 'مكتبة Python', 'Ideal para': 'واجهات مخصصة، فرق ML', 'Tiempo de config.': '5 دقائق (Python)', 'RAM necesaria': '8 GB+', 'Código abierto': 'نعم' },
+            { 'Frontend': 'Streamlit', 'Tipo': 'إطار عمل Python', 'Ideal para': 'علماء البيانات، لوحات معلومات', 'Tiempo de config.': '5 دقائق (Python)', 'RAM necesaria': '8 GB+', 'Código abierto': 'نعم' },
+            { 'Frontend': 'Text-generation-webui', 'Tipo': 'ويب (معقّد)', 'Ideal para': 'تجريب، مستخدمون متقدمون', 'Tiempo de config.': '15 دقيقة', 'RAM necesaria': '12 GB+', 'Código abierto': 'نعم' },
+          ],
+          columns: ['Frontend', 'Tipo', 'Ideal para', 'Tiempo de config.', 'RAM necesaria', 'Código abierto'],
+        },
+        openWebUI: {
+          title: 'لماذا Open WebUI هي الواجهة الأمامية الأكثر شيوعاً؟',
+          image: '/images/open-webui-architecture-es.svg',
+          imageCaption: 'تقع Open WebUI بين متصفحك وOllama، مُتيحة الوصول متعدد المستخدمين، وRAG، والميزات متعددة الوسائط عبر Docker.',
+          content: [
+            '**Open WebUI هي الواجهة الأمامية لنماذج LLM المحلية الأكثر تنزيلاً على GitHub بأكثر من 25,000 نجمة: تدمج RAG، ومتعددة الوسائط، والبحث على الويب، والتعاون متعدد المستخدمين في حاوية Docker واحدة.** تعمل مع Ollama أو LM Studio أو أي API متوافق مع OpenAI.',
+            '**الميزات الرئيسية:**',
+            '- **RAG (التوليد المعزّز بالاسترجاع)**: ارفع مستندات (PDF، ملفات نصية) واسمح للنموذج بالإجابة عن أسئلة حولها.',
+            '- **دعم متعدد الوسائط**: ارفع صوراً واطرح أسئلة حولها.',
+            '- **تكامل البحث على الويب**: يمكن للنموذج البحث على الويب عن معلومات محدّثة.',
+            '- **قواعد المعرفة**: أنشئ مجموعات مستندات دائمة يرجع إليها النموذج.',
+            '- **استدعاء الدوال والأدوات**: ابنِ سير عمل يمكن فيه للنموذج استدعاء دوال أو أدوات.',
+            '- **التعاون الجماعي**: يمكن لعدة مستخدمين مشاركة المثيل نفسه.',
+            '- **سوق النماذج**: استكشف وحمّل نماذج مباشرة من الواجهة.',
+            'في أبريل 2026، القيد الرئيسي هو أن Open WebUI تتطلب Docker، ما يضيف نحو 5 دقائق للتهيئة. بمجرد تشغيلها، تضيف RAG، ومتعددة الوسائط، ومتعددة المستخدمين، والبحث على الويب، وهي ميزات غير متوفرة في البدائل الأخف.',
+          ],
+          callouts: [
+            { type: '⚠️ تحذير', text: 'تتطلب Open WebUI استخدام Docker. إذا لم يكن Docker مثبتاً، يضيف ذلك ما بين 10 و15 دقيقة إلى زمن التهيئة. شغّل `docker --version` للتحقق قبل البدء.' },
+            { type: '💡 نصيحة احترافية', text: 'اضبط WEBUI_AUTH=true في أمر Docker لطلب تسجيل دخول المستخدم. هذا إلزامي في أي نشر متعدد المستخدمين أو جماعي.' },
+          ],
+          codeBlock: '# Run Open WebUI with Docker (5 min setup)\ndocker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \\\n  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \\\n  --name open-webui ghcr.io/open-webui/open-webui:latest\n\n# Then open http://localhost:3000 in your browser',
+          codeLanguage: 'bash',
+        },
+        enchanted: {
+          title: 'لماذا تختار Enchanted UI لتجربة سريعة وخفيفة؟',
+          content: [
+            '**Enchanted UI هي الواجهة الأمامية الأسرع دون تهيئة: دون تثبيت، ودون تبعيات؛ افتح URL في متصفحك وابدأ الدردشة مع نموذج Ollama المحلي.** في أبريل 2026، هي ملف HTML واحد، ما يجعلها الخيار الأخف للدردشة البسيطة.',
+            '**الميزات الرئيسية:**',
+            '- **بدء فوري**: دون تثبيت، ودون تبعيات. فقط افتح URL.',
+            '- **سريعة**: JavaScript بحد أدنى، دون أطر عمل ثقيلة.',
+            '- **خاصة**: كل شيء يعمل في متصفحك؛ لا تغادر أي بيانات جهازك.',
+            '- **وضع داكن أنيق**: واجهة نظيفة وعصرية.',
+            'Enchanted UI مثالية إذا أردت الدردشة مع نموذجك المحلي دون تعقيد التهيئة. تفتقر إلى RAG، ومتعددة الوسائط، والميزات المتقدمة، لكنها للدردشة اليومية لا تُضاهى في البساطة.',
+          ],
+          callouts: [
+            { type: '💡 نصيحة احترافية', text: 'تتصل Enchanted UI بـ Ollama على localhost:11434 افتراضياً. إذا لم يكن Ollama قيد التشغيل، تعرض الدردشة خطأ اتصال. شغّل دائماً `ollama serve` (أو افتح تطبيق Ollama) أولاً.' },
+          ],
+          codeBlock: '# 1. Start your Ollama model\nollama run llama3.2:3b\n\n# 2. Open this URL in your browser\n# https://enchanted.div.ai/\n\n# Ollama will auto-detect, and you can start chatting immediately',
+          codeLanguage: 'bash',
+        },
+        janAI: {
+          title: 'لماذا Jan AI هي أفضل خيار لمستخدمي سطح المكتب؟',
+          content: [
+            '**Jan AI تطبيق مكتبي (Windows، macOS) يدمج إدارة النماذج، والاستدلال، والدردشة في تطبيق واحد دون اتصال: دون خادم أو تهيئة Docker.** هي مشابهة لـ LM Studio، لكن مع دعم أفضل دون اتصال ونهج مدفوع بالمجتمع.',
+            '**الميزات الرئيسية:**',
+            '- **دون اتصال أولاً**: تُزامَن النماذج على جهازك؛ لا حاجة إلى إنترنت للدردشة.',
+            '- **GPU وCPU كبديل**: يستخدم تلقائياً GPU إن توفّرت، ويرجع إلى CPU بخلاف ذلك.',
+            '- **خاص افتراضياً**: لا يتطلب حساباً، دون قياس عن بُعد.',
+            '- **سوق الامتدادات**: أضف إضافات مثل RAG، أو البحث على الويب، أو الأدوات.',
+            'Jan هي أفضل خيار للمستخدمين غير التقنيين الذين يريدون تطبيقاً مكتبياً متقناً. في أبريل 2026، تكتسب شعبية كبديل لـ LM Studio بدعم أكبر من المجتمع.',
+          ],
+          callouts: [
+            { type: '📌 نقطة رئيسية', text: 'تخزّن Jan AI النماذج في ~/jan/models، منفصلة عن ذاكرة النماذج المؤقتة لـ Ollama. إذا استخدمت التطبيقين، لا تُشارَك النماذج المُنزَّلة ويتضاعف استخدام القرص لأي نموذج مُستخدَم في كليهما.' },
+          ],
+        },
+        continueDev: {
+          title: 'كيف تستخدم Continue.dev للإكمال البرمجي؟',
+          content: [
+            '**يحوّل Continue.dev نموذج Ollama المحلي إلى اقتراحات برمجية سطرية داخل VS Code أو JetBrains: تستغرق التهيئة دقيقتين ولا تتطلب أي مفتاح API سحابي.** عندما تبدأ الكتابة، يقترح Continue إكمالات مبنية على نموذجك المحلي.',
+            '**التهيئة (دقيقتان):**',
+            '1. ثبّت Continue من سوق VS Code.',
+            '2. وجّهه إلى مثيل Ollama لديك (Config → Configure Continue → Add localhost:11434).',
+            '3. ابدأ كتابة الكود واضغط Tab أو Ctrl+Shift+\\ للحصول على إكمالات.',
+            'Continue مثالي للمطورين الذين يريدون اقتراحات برمجية دون إرسال الكود إلى واجهات API سحابية. لمهام البرمجة، ينتج Ollama مع نماذج Qwen3-Coder 7B أو Llama Code اقتراحات معقولة.',
+          ],
+          callouts: [
+            { type: '💡 نصيحة احترافية', text: 'للإكمال البرمجي، يتفوق Qwen3-Coder 7B (`ollama run qwen2.5-coder:7b`) على النماذج العامة مثل Llama 3.2 في مهام البرمجة. غيّر النموذج في config.json الخاص بـ Continue بعد التهيئة.' },
+          ],
+        },
+        selfHosted: {
+          title: 'هل يجب أن تستضيف ذاتياً أم تستخدم واجهة أمامية سحابية؟',
+          content: '**تعمل جميع الواجهات الأمامية في هذا الدليل على جهازك أو خادمك: لا تغادر أي بيانات مطالبات جهازك ولا توجد تكاليف API.** البديل هو الواجهات الأمامية السحابية مثل ChatGPT أو Claude أو Gemini، التي تتصل بخوادم بعيدة.',
+          items: [
+            '**اختر الاستضافة الذاتية إذا:** كان لديك بيانات حساسة، أو أردت صفر تكاليف API، أو أردت تخصيص الواجهة، أو كنت تعمل دون اتصال.',
+            '**اختر السحابة إذا:** احتجت إلى أفضل جودة نموذج، أو لم ترغب في إدارة بنية تحتية، أو كان لديك حجم منخفض.',
+            '**استخدم كليهما بالتوازي:** أدوات مثل [PromptQuorum](/) تتيح لك إرسال مطالبة إلى نموذجك المحلي وإلى واجهات API سحابية في آن واحد، لتقارن النتائج جنباً إلى جنب.',
+          ],
+          callouts: [
+            { type: '📌 نقطة رئيسية', text: 'تتشارك جميع الواجهات الأمامية المثيل نفسه من Ollama على localhost:11434. التبديل من Open WebUI إلى Enchanted UI لا يتطلب إعادة تنزيل النماذج: يحتفظ Ollama بجميع النماذج المُنزَّلة بغض النظر عن الواجهة الأمامية التي تستخدمها.' },
+          ],
+        },
+        regionalContext: {
+          title: 'كيف تؤثر اللوائح الإقليمية في اختيارك للواجهة الأمامية؟',
+          content: [
+            '**الخليج / PDPL**',
+            'بالنسبة للمؤسسات في منطقة الخليج التي تنشر واجهات أمامية لنماذج LLM المحلية، تُعد سيادة البيانات المحرّك الرئيسي. تعمل الواجهات الأمامية الثماني في هذا الدليل بالكامل في البيئة المحلية: لا يغادر أي محتوى مطالبات، أو سجل محادثات، أو مستندات مرفوعة بنيتك التحتية. هذا يدعم متطلبات إبقاء البيانات داخل الحدود الوطنية بموجب نظام حماية البيانات الشخصية السعودي (PDPL) وقانون حماية البيانات الإماراتي، ويلغي علاقة معالج البيانات الخارجي.',
+            'للقطاعات المنظَّمة في الخليج (الصحة، القانون، المالية): Open WebUI هي الواجهة الأمامية الموصى بها لأنها تسجّل جميع المحادثات محلياً مع سجلات تدقيق قابلة للتصدير. تقبل الجهات التنظيمية الخليجية أدوات الذكاء الاصطناعي المُستضافة محلياً للمعالجة عالية الخطورة عند دمجها مع ضوابط وصول مناسبة. هيّئ Open WebUI مع تفعيل المصادقة (`WEBUI_AUTH=true` في Docker) وقيّد الوصول للمستخدمين المصرّح لهم فقط. للمنظومة العربية السيادية، تتوافق نماذج مثل Jais وALLaM وFalcon مع هذه الواجهات الأمامية.',
+            '**اليابان (METI)**',
+            'تتطلب إرشادات حوكمة الذكاء الاصطناعي من METI توثيق إصدارات أدوات الذكاء الاصطناعي في عمليات النشر الإنتاجية. إصدار Open WebUI مرئي في الإعدادات ← حول، وتوفّر وسوم صور Docker إصداراً دقيقاً لسجلات الامتثال. للفرق المؤسسية اليابانية، المنظومة الموصى بها هي Open WebUI مع Qwen3 7B (`ollama run qwen2.5:7b`): يقدّم التقطيع الأصلي باليابانية جودة أفضل لوظيفة RAG مع مستندات بتلك اللغة.',
+            '**الصين**',
+            'بموجب قانون أمن البيانات في الصين (数据安全法)، تستوفي جميع الواجهات الأمامية في هذا الدليل متطلبات الإقامة المحلية للبيانات عند نشرها في بيئة محلية أو على مزودي سحابة وطنيين (Alibaba Cloud، Tencent Cloud). Open WebUI على Docker متوافقة مع مثيلات VM سحابية صينية. لعمليات نشر RAG المؤسسية بالصينية، ادمج Open WebUI مع Qwen3 14B لتحليل أمثل للمستندات بتلك اللغة.',
+          ],
+          callouts: [
+            { type: '⚠️ تحذير', text: 'للقطاعات المنظَّمة في الخليج (الصحة، القانون، المالية): لا تحتوي تهيئة Docker الافتراضية لـ Open WebUI على مصادقة. أضف WEBUI_AUTH=true قبل عرضها على أي شبكة داخلية أو خارجية: هذا إلزامي للتدابير التقنية لحماية البيانات.' },
+            { type: '🔍 هل تعلم؟', text: 'تتطلب إرشادات حوكمة الذكاء الاصطناعي من METI توثيق إصدارات أدوات الذكاء الاصطناعي في الإنتاج. إصدار Open WebUI مرئي في الإعدادات ← حول، وتوفّر وسوم صور Docker (مثل :0.3.32) إصداراً دقيقاً لسجلات الامتثال.' },
+          ],
+        },
+        commonMistakes: {
+          title: 'ما هي الأخطاء الخمسة الأكثر شيوعاً عند اختيار واجهة أمامية؟',
+          items: [
+            '**افتراض أنك تحتاج إلى الواجهة الأمامية الأكثر اكتمالاً.** لدى Open WebUI ميزات أكثر، لكن إذا أردت الدردشة فقط، فإن Enchanted أسرع. اختر حسب احتياجاتك الفعلية، لا حسب عدد الميزات.',
+            '**عدم إدراك أنه يمكنك التبديل بين الواجهات الأمامية بسهولة.** نموذجك ونماذج Ollama مستقلة عن الواجهة الأمامية. بدّل من Open WebUI إلى Enchanted UI أو Jan AI دون إعادة تنزيل النماذج: تتشارك جميعها المثيل نفسه من Ollama.',
+            '**محاولة تشغيل Open WebUI على جهاز بسعة 8 GB من RAM دون GPU.** Open WebUI إضافة إلى استدلال النموذج تتطلب أكثر من 12 GB إجمالاً. على عتاد محدود، استخدم Enchanted UI أو بديلاً خفيفاً.',
+            '**تجاهل تكميم النموذج ومتطلبات الواجهة الأمامية.** نموذج 13B بصيغة 8 بت يزن 13 GB وحده. تضيف Open WebUI عبئاً. احسب: حجم النموذج + عبء الواجهة الأمامية + نظام التشغيل = إجمالي RAM المطلوب.',
+            '**عدم تهيئة Ollama كخدمة خلفية أولاً.** يحاول كثير من المستخدمين الجدد تشغيل عدة واجهات أمامية في آن واحد دون إدراك أن Ollama يجب أن يكون قيد التشغيل. هيّئ Ollama أولاً (كخدمة مع `ollama serve` في الخلفية) ثم أضف الواجهة الأمامية التي تختارها.',
+          ],
+          callouts: [
+            { type: '⚠️ تحذير', text: 'تشغيل Open WebUI إضافة إلى استدلال النموذج على 8 GB من RAM يسبب غالباً أخطاء نفاد الذاكرة. الحد الأدنى لتجربة سلسة هو 16 GB من RAM الإجمالي في النظام: 12 GB للنموذج، و4 GB لنظام التشغيل وDocker.' },
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'الأسئلة الشائعة حول الواجهات الأمامية لنماذج LLM المحلية',
+          faqs: [
+            {
+              q: 'هل يمكنني تشغيل عدة واجهات أمامية في آن واحد؟',
+              a: 'نعم. تتصل جميع الواجهات الأمامية بنفس واجهة API من Ollama (localhost:11434). يمكنك تشغيل Open WebUI وEnchanted UI وContinue.dev واستخدام النموذج نفسه في آن واحد. هذا لا يضاعف استخدام VRAM: تتشارك جميعها المثيل نفسه من النموذج.',
+            },
+            {
+              q: 'أي واجهة أمامية أفضل لـ RAG؟',
+              a: 'لدى Open WebUI أنضج تطبيق لـ RAG. ارفع مستندات وسيجيب النموذج عن أسئلة استناداً إليها. لسير عمل RAG المتقدم، راجع [أفضل أدوات RAG المحلية](/ar/local-llms/best-local-rag-tools).',
+            },
+            {
+              q: 'هل أحتاج إلى واجهة أمامية؟',
+              a: 'لا. يوفّر Ollama واجهة REST API على localhost:11434. يمكنك كتابة سكربتات بـ Python أو JavaScript أو bash للتفاعل مع النموذج مباشرة عبر الـ API، دون أي واجهة أمامية. الواجهة الأمامية للراحة والتفاعل المرئي فقط.',
+            },
+            {
+              q: 'أي واجهة أمامية تعمل على Linux؟',
+              a: 'تعمل Open WebUI وEnchanted UI وLobe Chat وGradio/Streamlit على Linux. لدى Jan AI دعم Linux في مرحلة beta (في أبريل 2026). يعمل Continue.dev عبر VS Code على جميع المنصات.',
+            },
+            {
+              q: 'هل يمكنني استضافة واجهة أمامية على خادم بعيد؟',
+              a: 'نعم. جميع الواجهات الأمامية تطبيقات ويب (أو يمكن وضعها في حاويات). يمكنك تشغيل Ollama على خادم وOpen WebUI على Docker، ثم الوصول من حاسوبك المحمول عبر HTTP. تأكد من حماية الواجهة بمصادقة أو جدار حماية.',
+            },
+            {
+              q: 'أي واجهة أمامية تستخدم أقل RAM؟',
+              a: 'تستخدم Enchanted UI أساساً صفر RAM إضافية بخلاف نموذجك قيد التشغيل: هي ملف HTML واحد في متصفحك. تضيف Jan AI وContinue.dev أيضاً عبئاً بحد أدنى (أقل من 200 MB). تضيف Open WebUI على Docker نحو 500 MB إلى 1 GB من العبء. إذا كان RAM محدوداً، استخدم Enchanted UI للدردشة أو Continue.dev للبرمجة.',
+            },
+            {
+              q: 'هل يمكنني استخدام هذه الواجهات الأمامية مع LM Studio بدلاً من Ollama؟',
+              a: 'نعم، مع قيود. تعمل Enchanted UI وOpen WebUI مع أي API متوافق مع OpenAI، بما في ذلك API بيتا من LM Studio على localhost:1234. غيّر URL الأساسي في الإعدادات. لاحظ أن API من LM Studio لا تزال في مرحلة beta في أبريل 2026: يبقى Ollama الخلفية الأكثر موثوقية للواجهات الأمامية.',
+            },
+            {
+              q: 'أي واجهة أمامية أفضل لفريق من 5 مطورين أو أكثر؟',
+              a: 'Open WebUI. هي الواجهة الأمامية الوحيدة في هذه القائمة المصممة للنشر متعدد المستخدمين: مصادقة، وسجلات محادثة منفصلة لكل مستخدم، وقواعد معرفة مشتركة، وضوابط إدارة. انشرها على خادم مشترك مع Docker ويصل جميع أعضاء الفريق من المتصفح. تتطلب 12 GB أو أكثر من RAM في الخادم المضيف.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'قراءات ذات صلة',
+          items: [
+            '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- دليل تهيئة محرك النماذج.',
+            '[Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) -- مقارنة أكثر أداتي LLM المحلية شيوعاً.',
+            '[أفضل أدوات RAG المحلية](/ar/local-llms/best-local-rag-tools) -- تحليل مفصّل لـ RAG في Open WebUI وأدوات LLM أخرى مبنية على المستندات.',
+            '[API محلي متوافق مع OpenAI لنماذج LLM](/ar/local-llms/local-llm-openai-compatible-api) -- كيفية استخدام الـ API مباشرة من الكود.',
+            '[نماذج LLM المحلية مع VS Code وCursor](/ar/local-llms/local-llms-with-vscode-cursor) -- تهيئة Continue.dev وتكاملات VS Code.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'المصادر',
+          items: [
+            '[Open WebUI Contributors. (2026). "Open WebUI GitHub."](https://github.com/open-webui/open-webui) -- شفرة المصدر ووثائق التهيئة مع Docker لـ Open WebUI.',
+            '[Jan AI. (2026). "Jan AI Official Site."](https://jan.ai) -- وثائق التطبيق المكتبي ودليل إدارة النماذج.',
+            '[Continue.dev. (2026). "Continue Documentation."](https://continue.dev/docs) -- تهيئة الامتداد لـ VS Code وJetBrains للإكمال البرمجي مع نماذج LLM المحلية.',
+            '[Lobe Chat Contributors. (2024). "Lobe Chat GitHub."](https://github.com/lobehub/lobe-chat) -- شفرة المصدر وتعليمات نشر واجهة الدردشة المرتكزة على الخصوصية.',
+            'اختيار الواجهة الأمامية يؤثر في تجربة المستخدم، لا في مخرجات النموذج. تعتمد جودة المخرجات على المطالبات، لا على الواجهات: يعمل [دليل هندسة المطالبات](https://www.promptquorum.com/ar/prompt-engineering) مع جميع الواجهات الأمامية.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'أفضل واجهات أمامية لنماذج LLM المحلية 2026',
+        'description': 'قارن 8 واجهات أمامية لنماذج LLM المحلية: Open WebUI (25k نجمة، RAG)، وEnchanted UI (الأسرع)، وJan AI (تطبيق مكتبي). جدول ميزات ودليل تهيئة.',
+        'url': 'https://www.promptquorum.com/ar/local-llms/best-local-llm-frontends',
+        'inLanguage': 'ar',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-12',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'Open WebUI' },
+          { '@type': 'Thing', 'name': 'الواجهة الأمامية لنموذج LLM المحلي' },
+          { '@type': 'Thing', 'name': 'Jan AI' },
+          { '@type': 'Thing', 'name': 'Continue.dev' },
+          { '@type': 'Thing', 'name': 'واجهة دردشة لـ Ollama' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'أفضل واجهات أمامية لنماذج LLM المحلية 2026',
+        'numberOfItems': 8,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'تطبيق ويب (Docker). مثالية لـ RAG، والفرق، والميزات المتقدمة. 5 دقائق للتهيئة. 12 GB+ من RAM. مفتوحة المصدر ومجانية.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Enchanted UI', 'description': 'ويب (دون تبعيات). مثالية للسرعة والبساطة. 0 دقيقة للتهيئة. 8 GB+ من RAM. مفتوحة المصدر ومجانية.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Jan AI', 'description': 'تطبيق مكتبي. مثالي للمستخدمين غير التقنيين والاستخدام دون اتصال. 3 دقائق للتهيئة. 8 GB+ من RAM. مفتوح المصدر ومجاني.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Continue.dev', 'description': 'امتداد VS Code. مثالي للإكمال البرمجي. 2 دقيقة للتهيئة. 8 GB+ من RAM. مفتوح المصدر ومجاني.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Lobe Chat', 'description': 'تطبيق ويب. مثالي للخصوصية والتخصيص. 5 دقائق للتهيئة. 8 GB+ من RAM. مفتوح المصدر ومجاني.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Gradio', 'description': 'مكتبة Python. مثالية لواجهات ML المخصصة. 5 دقائق للتهيئة. 8 GB+ من RAM. مفتوحة المصدر ومجانية.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Streamlit', 'description': 'إطار عمل Python. مثالي لعلماء البيانات. 5 دقائق للتهيئة. 8 GB+ من RAM. مفتوح المصدر ومجاني.' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Text-generation-webui', 'description': 'ويب (معقّد). مثالي للتجريب المتقدم. 15 دقيقة للتهيئة. 12 GB+ من RAM. مفتوح المصدر ومجاني.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ar',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل عدة واجهات أمامية في آن واحد؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. تتصل جميع الواجهات الأمامية بنفس واجهة API من Ollama (localhost:11434). يمكنك تشغيل Open WebUI وEnchanted UI وContinue.dev واستخدام النموذج نفسه في آن واحد. هذا لا يضاعف استخدام VRAM: تتشارك جميعها المثيل نفسه من النموذج.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي واجهة أمامية أفضل لـ RAG؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'لدى Open WebUI أنضج تطبيق لـ RAG. ارفع مستندات وسيجيب النموذج عن أسئلة استناداً إليها. لسير عمل RAG المتقدم، راجع أفضل أدوات RAG المحلية.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أحتاج إلى واجهة أمامية؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'لا. يوفّر Ollama واجهة REST API على localhost:11434. يمكنك كتابة سكربتات بـ Python أو JavaScript أو bash للتفاعل مع النموذج مباشرة عبر الـ API، دون أي واجهة أمامية. الواجهة الأمامية للراحة والتفاعل المرئي فقط.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي واجهة أمامية تعمل على Linux؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'تعمل Open WebUI وEnchanted UI وLobe Chat وGradio/Streamlit على Linux. لدى Jan AI دعم Linux في مرحلة beta (في أبريل 2026). يعمل Continue.dev عبر VS Code على جميع المنصات.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استضافة واجهة أمامية على خادم بعيد؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. جميع الواجهات الأمامية تطبيقات ويب (أو يمكن وضعها في حاويات). يمكنك تشغيل Ollama على خادم وOpen WebUI على Docker، ثم الوصول من حاسوبك المحمول عبر HTTP. تأكد من حماية الواجهة بمصادقة أو جدار حماية.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي واجهة أمامية تستخدم أقل RAM؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'تستخدم Enchanted UI أساساً صفر RAM إضافية بخلاف نموذجك قيد التشغيل: هي ملف HTML واحد في متصفحك. تضيف Jan AI وContinue.dev أيضاً عبئاً بحد أدنى (أقل من 200 MB). تضيف Open WebUI على Docker نحو 500 MB إلى 1 GB من العبء. إذا كان RAM محدوداً، استخدم Enchanted UI للدردشة أو Continue.dev للبرمجة.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام هذه الواجهات الأمامية مع LM Studio بدلاً من Ollama؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، مع قيود. تعمل Enchanted UI وOpen WebUI مع أي API متوافق مع OpenAI، بما في ذلك API بيتا من LM Studio على localhost:1234. غيّر URL الأساسي في الإعدادات. لاحظ أن API من LM Studio لا تزال في مرحلة beta في أبريل 2026: يبقى Ollama الخلفية الأكثر موثوقية للواجهات الأمامية.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي واجهة أمامية أفضل لفريق من 5 مطورين أو أكثر؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI. هي الواجهة الأمامية الوحيدة في هذه القائمة المصممة للنشر متعدد المستخدمين: مصادقة، وسجلات محادثة منفصلة لكل مستخدم، وقواعد معرفة مشتركة، وضوابط إدارة. انشرها على خادم مشترك مع Docker ويصل جميع أعضاء الفريق من المتصفح. تتطلب 12 GB أو أكثر من RAM في الخادم المضيف.' }
+          },
+        ],
+      },
+    },
+
     pt: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-04',

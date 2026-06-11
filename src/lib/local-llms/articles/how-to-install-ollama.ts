@@ -563,6 +563,286 @@ schema: {
         ]
       },
     },
+    ar: {
+      freshness_tier: 'annual',
+      theme: 'Getting Started',
+      title: 'تثبيت Ollama: إعداد في دقيقتين لـ macOS و Windows و Linux',
+      seoTitle: 'تثبيت Ollama في دقيقتين: macOS و Windows و Linux',
+      intro: 'يُثبَّت Ollama في أقل من دقيقتين على macOS و Windows و Linux. وبعد التثبيت، يقوم أمر واحد بتنزيل وتشغيل أي نموذج من مكتبة Ollama -- دون بيئة Python ودون ملفات تهيئة ودون حاجة إلى GPU للبدء. واعتبارًا من أبريل 2026، يدعم Ollama أكثر من 200 نموذج، بما في ذلك Meta Llama 3.3 و Qwen3 و Mistral.',
+      metaDescription: 'ثبّت Ollama في دقيقتين على أي نظام: نزّل، شغّل `ollama run llama3.2` وابدأ المحادثة. دليل كامل مع حل المشكلات.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**يُثبَّت Ollama في أقل من دقيقتين على macOS و Windows و Linux. وبعد التثبيت، يقوم أمر واحد بتنزيل وتشغيل أي نموذج من مكتبة Ollama -- دون بيئة Python ودون ملفات تهيئة ودون حاجة إلى GPU للبدء.**',
+      audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على أجهزة استهلاكية',
+      readTime: '8 دقائق للقراءة',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Ollama',
+      toc: [
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'التثبيت على macOS', anchor: '#install-on-macos' },
+        { label: 'التثبيت على Windows', anchor: '#install-on-windows' },
+        { label: 'التثبيت على Linux', anchor: '#install-on-linux' },
+        { label: 'تنزيل وتشغيل أول نموذج لديك', anchor: '#pull-and-run-your-first-model' },
+        { label: 'التحقق من عمل Ollama', anchor: '#verify-ollama-is-working' },
+        { label: 'أوامر مفيدة في Ollama', anchor: '#useful-ollama-commands' },
+        { label: 'حل المشكلات', anchor: '#troubleshooting' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'macOS: نزّل ملف .dmg من ollama.com أو شغّل `brew install ollama` -- ثم `ollama run llama3.2` لبدء المحادثة.',
+            'Windows: نزّل المثبّت من ollama.com/download. يعمل Ollama كخدمة في الخلفية في علبة النظام.',
+            'Linux: أمر curl واحد يثبّت كل شيء -- `curl -fsSL https://ollama.com/install.sh | sh`.',
+            'الحد الأدنى من المتطلبات: 4 GB من RAM لنموذج 3B، و8 GB من RAM لنموذج 7B. لا حاجة إلى GPU للبدء.',
+            'يكشف Ollama واجهة REST API متوافقة مع OpenAI على `http://localhost:11434` -- ويستطيع أي تطبيق يستخدم SDK الخاص بـ OpenAI استخدامها دون تغيير في الكود.',
+            '👉 **قبل التثبيت، تأكّد من أن التشغيل المحلي هو الخيار المناسب لحالة استخدامك** — راجع [LLM محلي مقابل API سحابية](/ar/local-llms/local-llm-limitations) لمعرفة متى تتفوق السحابة على الاستدلال المحلي.',
+          ],
+        },
+        beforeYouInstall: {
+          id: 'before-you-install',
+          title: 'قبل التثبيت: هل LLM المحلي هو الخيار المناسب لحالة استخدامك؟',
+          content: [
+            'يستغرق تثبيت Ollama 5 دقائق، لكن تشغيل أول نموذج لديك بنجاح قد يستغرق 20-40 دقيقة إذا واجهت مشكلات في اكتشاف GPU أو عدم توافق التعريفات أو قيود RAM.',
+            'إذا لم تكن متأكدًا من أن الاستدلال المحلي هو الخيار المناسب لك، **[قارن أولًا الإيجابيات والسلبيات الكاملة بين المحلي والسحابة](https://www.promptquorum.com/ar/local-llms/local-llm-limitations)** — قد تكتشف أن البدء بـ API سحابية (جاهزة في 5 دقائق، دون حاجة لحل مشكلات) هو الطريق الأذكى. يكتشف كثير من المستخدمين ذلك بعد التثبيت؛ والأفضل تقريره الآن.',
+            'وللمستخدمين الملتزمين بالتشغيل المحلي، تابع أدناه. وللذين يقيّمون السحابة أولًا، [راجع المقارنة الكاملة](https://www.promptquorum.com/ar/local-llms/local-llm-limitations).',
+          ],
+        },
+        whatIsOllama: {
+          title: 'ما هو Ollama ولماذا تستخدمه؟',
+          content: [
+            '**Ollama محرك استدلال مفتوح المصدر يشغّل نماذج اللغة الكبيرة محليًا.** يدمج إدارة النماذج وخلفية الاستدلال llama.cpp وواجهة REST API متوافقة مع OpenAI في تطبيق واحد خفيف. دون Python ودون بيئة conda ودون إعداد CUDA.',
+            'يحافظ Ollama على مكتبة نماذج منتقاة (ollama.com/library) بتنزيلات بأمر واحد لـ Meta Llama 3.3 و Microsoft Phi-3 و Google Gemma 2 و Mistral و Qwen3 وأكثر من 100 نموذج إضافي. يُنزَّل النموذج مرة واحدة ويُخزَّن مؤقتًا على القرص -- وتنطلق التشغيلات اللاحقة في أقل من 5 ثوانٍ.',
+            'للاطلاع على بدائل Ollama، راجع [مثبّتات LLM المحلية بنقرة واحدة](/ar/local-llms/local-llm-one-click-installers). ولمقارنة Ollama بـ LM Studio، راجع [كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio).',
+          ],
+        },
+        installMac: {
+          id: 'install-on-macos',
+          title: 'كيف يُثبَّت Ollama على macOS؟',
+          content: 'توجد طريقتان. تنزيل المثبّت أسرع؛ و Homebrew أفضل إذا كنت تدير البرامج بـ brew.',
+          numberedItems: [
+            'اذهب إلى ollama.com/download وانقر "تنزيل لـ macOS".',
+            'افتح ملف Ollama.dmg المنزَّل واسحب Ollama إلى مجلد التطبيقات.',
+            'افتح Ollama من التطبيقات. تظهر أيقونة llama في شريط القوائم -- وأصبح Ollama يعمل بالفعل كخدمة في الخلفية.',
+            'افتح Terminal وشغّل أول نموذج لديك: `ollama run llama3.2`',
+            'يُنزَّل النموذج (~2 GB لـ llama3.2:3b) وتظهر واجهة محادثة. اكتب رسالة واضغط Enter.',
+          ],
+        },
+        installMacBrew: {
+          title: 'تثبيت Ollama على macOS بـ Homebrew',
+          codeBlock: 'brew install ollama\n\n# Start the Ollama service\nollama serve &\n\n# Pull and run a model\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        installWindows: {
+          id: 'install-on-windows',
+          title: 'كيف يُثبَّت Ollama على Windows؟',
+          numberedItems: [
+            'اذهب إلى ollama.com/download وانقر "تنزيل لـ Windows".',
+            'شغّل المثبّت OllamaSetup.exe المنزَّل. يُثبَّت Ollama في %LOCALAPPDATA%\\Programs\\Ollama.',
+            'ينطلق Ollama تلقائيًا ويظهر كأيقونة في علبة النظام.',
+            'افتح PowerShell أو موجّه الأوامر وشغّل: `ollama run llama3.2`',
+            'يُنزَّل النموذج عند أول تشغيل. وتستخدم التشغيلات اللاحقة النموذج المخزَّن مؤقتًا.',
+          ],
+        },
+        installWindowsNote: {
+          title: 'دعم GPU على Windows',
+          content: 'يكتشف Ollama على Windows ويستخدم تلقائيًا بطاقات NVIDIA (CUDA 11.3+) و AMD (ROCm 6+). إذا كانت لديك بطاقة NVIDIA RTX، فسيُنزِّل Ollama طبقات النموذج إلى VRAM تلقائيًا -- دون حاجة إلى إعداد يدوي. للتحقق من استخدام GPU، شغّل `ollama run llama3.2` وراجع مدير المهام ← GPU لرؤية النشاط.',
+        },
+        installLinux: {
+          id: 'install-on-linux',
+          title: 'كيف يُثبَّت Ollama على Linux؟',
+          content: 'أمر واحد يثبّت Ollama على أي توزيعة Linux:',
+          codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+          codeLanguage: 'bash',
+        },
+        installLinuxService: {
+          title: 'تشغيل Ollama كخدمة systemd على Linux',
+          content: 'يسجّل سكربت التثبيت Ollama تلقائيًا كخدمة systemd. لإدارتها:',
+          codeBlock: '# Check service status\nsystemctl status ollama\n\n# Start / stop / restart\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# View logs\njournalctl -u ollama -f',
+          codeLanguage: 'bash',
+        },
+        firstModel: {
+          id: 'pull-and-run-your-first-model',
+          title: 'كيف يُنزَّل ويُشغَّل أول نموذج في Ollama؟',
+          content: 'بعد تثبيت Ollama، شغّل هذا الأمر لتنزيل نموذج وبدئه:',
+          codeBlock: '# Pull a model (downloads to ~/.ollama/models)\nollama pull llama3.2\n\n# Run it interactively\nollama run llama3.2\n\n# Or pull and run in one step\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        recommendedModels: {
+          title: 'بأي نموذج ينبغي أن تبدأ؟',
+          content: 'لأول تشغيل، تغطي هذه النماذج الثلاثة ملفات أجهزة مختلفة:',
+          rows: [
+            { 'النموذج': 'Llama 3.2 3B', 'حجم التنزيل': '~2 GB', 'RAM المطلوبة': '4 GB', 'الأفضل لـ': 'أول تجربة -- أي جهاز' },
+            { 'النموذج': 'Llama 3.3 8B', 'حجم التنزيل': '~4.7 GB', 'RAM المطلوبة': '8 GB', 'الأفضل لـ': 'استخدام عام على معظم الحواسيب المحمولة' },
+            { 'النموذج': 'phi4-mini', 'حجم التنزيل': '~2.3 GB', 'RAM المطلوبة': '4 GB', 'الأفضل لـ': 'استجابات سريعة، RAM قليلة' },
+          ],
+          columns: ['النموذج', 'حجم التنزيل', 'RAM المطلوبة', 'الأفضل لـ'],
+        },
+        verify: {
+          id: 'verify-ollama-is-working',
+          title: 'كيف تتحقق من أن Ollama يعمل؟',
+          content: 'اختبر REST API مباشرةً للتأكد من أن Ollama يعمل ويمكن الوصول إليه:',
+          codeBlock: '# Check Ollama is running\ncurl http://localhost:11434\n# Expected: "Ollama is running"\n\n# List downloaded models\nollama list\n\n# Send a prompt via API (OpenAI-compatible)\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "What is 2+2?",\n  "stream": false\n}\'',
+          codeLanguage: 'bash',
+        },
+        commands: {
+          title: 'أوامر مفيدة في Ollama',
+          rows: [
+            { 'الأمر': 'ollama list', 'ما يفعله': 'يعرض كل النماذج المنزَّلة وأحجامها' },
+            { 'الأمر': 'ollama pull <model>', 'ما يفعله': 'ينزّل نموذجًا دون تشغيله' },
+            { 'الأمر': 'ollama rm <model>', 'ما يفعله': 'يحذف نموذجًا من القرص' },
+            { 'الأمر': 'ollama ps', 'ما يفعله': 'يعرض النماذج المحمّلة حاليًا في الذاكرة' },
+            { 'الأمر': 'ollama show <model>', 'ما يفعله': 'يعرض تفاصيل النموذج (المعاملات، القالب، الترخيص)' },
+            { 'الأمر': 'ollama serve', 'ما يفعله': 'يبدأ خادم Ollama يدويًا (إذا لم يعمل كخدمة)' },
+          ],
+          columns: ['الأمر', 'ما يفعله'],
+        },
+        troubleshooting: {
+          id: 'troubleshooting',
+          title: 'حل مشكلات تثبيت Ollama الشائعة',
+          faqs: [
+            {
+              q: 'يقول Ollama "could not connect to ollama app, is it running?"',
+              a: 'لا يعمل Ollama كخدمة في الخلفية. على macOS: افتح تطبيق Ollama من التطبيقات. على Linux: شغّل `systemctl start ollama` أو `ollama serve` في طرفية. على Windows: افتح Ollama من قائمة ابدأ.',
+            },
+            {
+              q: 'تنزيل النموذج بطيء جدًا أو توقّف',
+              a: 'تنزيلات النماذج كبيرة (2-47 GB). إذا توقّف التنزيل، اضغط Ctrl+C وأعد تشغيل `ollama pull <model>` -- يستأنف Ollama التنزيلات الجزئية. وللتنزيلات الأسرع، استخدم اتصالًا سلكيًا بدلًا من Wi-Fi.',
+            },
+            {
+              q: 'يظهر الخطأ "error: model requires more system memory" عند تشغيل نموذج',
+              a: 'النموذج كبير جدًا على RAM المتاحة. جرّب تكميمًا أقل: `ollama run llama3.2-instruct-q4_0` بدلًا من Q4_K_M الافتراضي. أو انتقل إلى نموذج أصغر مثل `llama3.2:3b`. راجع [أفضل نماذج LLM المحلية للمبتدئين](/ar/local-llms/best-beginner-local-llm-models) للحصول على توصيات مناسبة لـ RAM.',
+            },
+            {
+              q: 'Ollama يعمل لكن GPU غير مُستخدمة',
+              a: 'على Windows، تحقّق من أن تعريف NVIDIA إصدار 452.39 أو أحدث. على Linux، تأكّد من تثبيت NVIDIA container toolkit (يجب أن يعيد `nvidia-smi` معلومات GPU). يُنزِّل Ollama الطبقات إلى GPU تلقائيًا عند توفر VRAM -- شغّل `ollama ps` بعد بدء نموذج لرؤية استخدام GPU.',
+            },
+            {
+              q: 'أين تُخزَّن ملفات نماذج Ollama؟',
+              a: 'تُخزَّن النماذج في ~/.ollama/models على macOS و Linux. وعلى Windows، المسار الافتراضي هو C:\\Users\\<username>\\.ollama\\models. يمكنك تغيير موقع التخزين بضبط متغير البيئة OLLAMA_MODELS قبل بدء الخدمة.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'ماذا تفعل بعد تثبيت Ollama؟',
+          content: 'بمجرد عمل Ollama، تكون الخطوة التالية [تشغيل أول نموذج LLM محلي لديك](/ar/local-llms/run-first-local-llm) لفهم الـ prompting وطول السياق وما تتوقعه من سرعة الاستدلال المحلي. ولاختيار أفضل نموذج لجهازك، راجع [أفضل نماذج LLM المحلية للمبتدئين](/ar/local-llms/best-beginner-local-llm-models). وإذا كنت تفضّل واجهة محادثة رسومية بدلًا من الطرفية، فإن [كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio) يغطي بديل تطبيق سطح المكتب.',
+        },
+        sources: {
+          id: 'sources',
+          title: 'المصادر',
+          items: [
+            '**الموقع الرسمي لـ Ollama** -- تنزيلات التثبيت والتوثيق الرسمي',
+            '**مستودع Ollama على GitHub** -- الكود المصدري والمشكلات ونقاشات المجتمع',
+            '**مكتبة نماذج Ollama** -- مجموعة منتقاة من النماذج المتاحة بروابط تنزيل',
+          ],
+        },
+        commonMistakes: {
+          title: 'أخطاء شائعة عند تثبيت Ollama',
+          items: [
+            'عدم التحقق من أن Ollama يعمل كخدمة في الخلفية قبل توقع استجابة API.',
+            'محاولة تشغيل نماذج أكبر من RAM المتاحة دون التحقق أولًا من متطلبات الذاكرة.',
+            'تجاهل اكتشاف GPU -- يدعم Ollama NVIDIA و AMD لكنه يتطلب تعريفات محدّثة.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'قراءات ذات صلة',
+          items: [
+            '[حزمة تطوير LLM المحلي](/ar/local-llms/local-llm-developer-stack) -- ابنِ بيئة تطوير كاملة: CLI ← خادم API ← متعدد GPU في الإنتاج.',
+            '[ما هي نماذج LLM المحلية؟](/ar/local-llms/what-are-local-llms) -- التعريف والمفاهيم الأساسية',
+            '[تشغيل أول نموذج LLM محلي لديك](/ar/local-llms/run-first-local-llm) -- الخطوة التالية بعد التثبيت',
+            '[أفضل نماذج LLM المحلية للمبتدئين](/ar/local-llms/best-beginner-local-llm-models) -- توصيات نماذج حسب الجهاز',
+            '[مثبّتات LLM المحلية بنقرة واحدة](/ar/local-llms/local-llm-one-click-installers) -- أدوات بديلة لـ Ollama',
+            '[MLX مقابل Ollama مقابل llama.cpp على Mac 2026](/ar/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- مقارنة أطر العمل لـ Apple Silicon: السرعة ووقت الإعداد وإيجابيات وسلبيات المنظومة.',
+            'Ollama مثبّت وجاهز الآن. التحدي التالي: كتابة prompts تحقق نتائج جيدة. ابدأ هنا: [ما هي هندسة الـ prompts](https://www.promptquorum.com/ar/prompt-engineering/what-is-prompt-engineering) يغطي الأساسيات بلغة واضحة.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'تثبيت Ollama: إعداد في دقيقتين لـ macOS و Windows و Linux',
+        'description': 'ثبّت Ollama في دقيقتين على أي نظام تشغيل: نزّل، شغّل ollama run llama3.2، ابدأ المحادثة. دليل إعداد كامل مع حل المشكلات للمبتدئين 2026.',
+        'url': 'https://www.promptquorum.com/ar/local-llms/how-to-install-ollama',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-18',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'تثبيت LLM محلي' },
+          { '@type': 'Thing', 'name': 'llama.cpp' },
+          { '@type': 'Thing', 'name': 'استدلال الذكاء الاصطناعي المحلي' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner',
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+          { '@type': 'SoftwareApplication', 'name': 'Qwen3' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'كيف أثبّت Ollama على macOS؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نزّل ملف .dmg من ollama.com، واسحبه إلى التطبيقات، وافتحه، ثم شغّل ollama run llama3.2 في Terminal. أو بديلًا: brew install ollama && ollama serve.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أثبّت Ollama على Windows؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نزّل OllamaSetup.exe من ollama.com/download وشغّله. يُثبَّت Ollama كخدمة في الخلفية. افتح موجّه الأوامر وشغّل ollama run llama3.2.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أثبّت Ollama على Linux؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'شغّل: curl -fsSL https://ollama.com/install.sh | sh. يثبّت هذا Ollama كخدمة systemd. ثم: ollama pull llama3.2 لتنزيل أول نموذج لديك.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم تحتاج Ollama من RAM كحد أدنى؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'الحد الأدنى 4 GB من RAM لنموذج 3B، و8 GB لنموذج 7B بتكميم Q4. لا حاجة إلى GPU -- ينتقل Ollama تلقائيًا إلى الاستدلال عبر CPU.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل Ollama دون GPU؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. يعمل Ollama على CPU دون GPU. يكون الاستدلال أبطأ (2-5 tokens/ثانية مقابل 30-60 مع GPU) لكنه عملي. استخدم نماذج صغيرة مثل llama3.2:3b أو phi3.5 على الأنظمة بلا GPU.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أنزّل نموذجًا جديدًا بـ Ollama؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'شغّل: ollama pull اسم-النموذج. مثلًا: ollama pull mistral أو ollama pull qwen2.5:7b. تُخزَّن النماذج في ~/.ollama/models. اعرض النماذج المنزَّلة بـ ollama list.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي منفذ يستخدم Ollama؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'يقدّم Ollama واجهة API على المنفذ 11434 افتراضيًا. ادخل إليها على http://localhost:11434. غيّر المنفذ بمتغير البيئة OLLAMA_HOST: OLLAMA_HOST=0.0.0.0:11435.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل API الخاص بـ Ollama متوافق مع API الخاص بـ OpenAI؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. يدعم Ollama نقطة chat completions الخاصة بـ OpenAI على /v1/chat/completions. ويستطيع أي تطبيق مبني لـ OpenAI استخدام Ollama بضبط base_url على http://localhost:11434/v1.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أرى أي النماذج مثبّتة في Ollama؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'شغّل: ollama list. يعرض هذا كل النماذج المنزَّلة وأحجامها ومستويات التكميم. احذف نموذجًا بـ ollama rm اسم-النموذج.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أحدّث Ollama إلى أحدث إصدار؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'macOS/Windows: أعد تنزيل المثبّت من ollama.com -- يستبدل الإصدار السابق. Linux: أعد تشغيل curl -fsSL https://ollama.com/install.sh | sh للتحديث في المكان نفسه.' }
+          }
+        ]
+      },
+    },
     pt: {
       freshness_tier: 'annual',
       theme: 'Getting Started',
