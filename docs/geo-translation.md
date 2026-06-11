@@ -10,8 +10,8 @@ Generate production-ready translations for one language at a time with full loca
 /geo-translation https://www.promptquorum.com/ja/prompt-engineering/rtf-framework
 ```
 
-**Exactly one language in the path prefix (`/de/`, `/fr/`, `/ja/`, etc.)** Supported: `ar`, `de`, `es`, `fr`, `ja`, `pt`, `zh`.
-  - `es`, `de`, `fr`, `ja`, `zh` are ACTIVE. `pt` (Brazilian Portuguese) and `ar` (Arabic) are RESERVED — full rules below; only generate them when authoring real `pt`/`ar` content. `pt` outputs hreflang `pt-BR`; `ar` is RTL.
+**Exactly one language in the path prefix (`/de/`, `/fr/`, `/ja/`, etc.)** Supported: `ar`, `de`, `es`, `fr`, `ja`, `ko`, `pt`, `zh`.
+  - `es`, `de`, `fr`, `ja`, `zh` are ACTIVE. `pt` (Brazilian Portuguese), `ar` (Arabic), and `ko` (Korean) are RESERVED — full rules below; only generate them when authoring real content in those languages. `pt` outputs hreflang `pt-BR`; `ar` is RTL; `ko` is LTR.
 
 ---
 
@@ -328,7 +328,7 @@ feat: Add DE (German) translation for local-llm-hardware-guide-2026 article
 
 ### 🔧 ALWAYS Set / Compute
 - `schema.url` → prepend language path prefix (e.g., `https://www.promptquorum.com/de/local-llms/slug`). EN: no prefix (default).
-- `schema.inLanguage` → `'de'` / `'es'` / `'fr'` / `'ja'` / `'zh'` / `'pt-BR'` (Portuguese — Brazilian; NOT `'pt'`) / `'ar'`
+- `schema.inLanguage` → `'de'` / `'es'` / `'fr'` / `'ja'` / `'zh'` / `'pt-BR'` (Portuguese — Brazilian; NOT `'pt'`) / `'ar'` / `'ko'` (RESERVED until go-live)
 - `howToSchema.inLanguage`, `faqSchema.inLanguage`, `itemListSchema.inLanguage` → same as `schema.inLanguage` (add to all schema types)
 - `schema.author` → ALWAYS normalize to `{ '@type': 'Person', 'name': 'Hans Kuepper' }`
 - `schema.publisher` → ALWAYS normalize to `{ '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }`
@@ -561,6 +561,30 @@ de: {
 | **schema.author** | `{ '@type': 'Organization', 'name': 'PromptQuorum' }` (AR convention; override if present as Person) |
 | **schema.inLanguage** | `'ar'` — across all schema types. |
 | **readTime** | `'[N] دقائق للقراءة'` (e.g., `'7 دقائق للقراءة'`) |
+| **Total FAQs** | 10 (same as EN) |
+
+---
+
+### 🇰🇷 KO — Korean (Modern Standard / formal register)
+
+> **RESERVED language.** Only generate when authoring real Korean content. Korean (`ko`) is gated — do not emit `ko` in hreflang, sitemap, or `schema.inLanguage` until go-live is enabled.
+
+| Aspect | Rule |
+|--------|------|
+| **Style** | Modern written Korean, FORMAL register — use the 합쇼체 / -습니다 / -ㅂ니다 ending for headings, body, FAQ answers, and CTAs. This is the register Korean technical documentation, Naver tech content, and Korean LLM-vendor docs use. Do NOT use casual -요 (해요체) or plain -다 (해라체). Smart-colleague tone, authoritative but not stiff. Same information as the English source — localize phrasing, never invent. |
+| **Direction** | LTR (left-to-right). No RTL handling. |
+| **Spacing (띄어쓰기)** | Korean DOES use spaces between words (unlike Chinese/Japanese). Follow standard Korean word-spacing rules. Do NOT run words together CJK-style. Particles (은/는/이/가/을/를/에/에서 etc.) attach to the preceding noun with no space. |
+| **toc tldr** | Title: `'핵심 내용'` |
+| **Decimal / numerals** | Western Arabic numerals (0-9), NOT Korean numerals. "4.5 GB" stays "4.5 GB" — keep the dot. |
+| **Tech terminology** | Keep established tech terms in Latin script: GPU, VRAM, LLM, API, RAG, CPU, RAM, token, fine-tuning, framework, quantization. Do NOT transliterate these into Hangul. Korean tech writing routinely keeps these in English. Model/tool names stay Latin: Llama, Qwen, Mistral, DeepSeek, GPT, Claude, Gemini, Ollama, LM Studio, llama.cpp, vLLM. Quant tags (Q4_K_M) stay verbatim. "PromptQuorum" stays Latin. |
+| **Mixed-script handling** | When a Latin term sits inside a Korean sentence, follow it naturally with the appropriate Korean particle (e.g. "GPU를", "Ollama로", "VRAM이"). Do not add spaces inside the Latin token. |
+| **Glyph width / length** | Hangul is information-dense (like CJK) — meta titles/descriptions run SHORT in character count. Favor concise phrasing; see geo-meta-optimizer KO targets (title 28–38, desc 70–110 CJK-style). |
+| **Currency** | Korea-specific pricing → KRW (₩) with locally researched values where an article targets the Korean market; otherwise USD default (widely understood in Korean tech). Format with Western numerals. If unsure, keep USD with a note that local prices vary. |
+| **Extra FAQs** | None by default. KO matches the EN/ES FAQ count. |
+| **regionalContext** | Skip for pure technical/hardware/PE articles. Only add if the article is fundamentally ABOUT compliance or data governance — then reference Korea's **PIPA** (Personal Information Protection Act / 개인정보 보호법) and the **PIPC** regulator, and the domestic push toward sovereign/Korean LLMs (e.g. Naver HyperCLOVA X, LG EXAONE, Kakao) where relevant. Frame local inference as keeping data within Korea. Do NOT fabricate sections the source lacks. |
+| **schema.author** | `{ '@type': 'Organization', 'name': 'PromptQuorum' }` |
+| **schema.inLanguage** | `'ko'` — across all schema types (TechArticle, HowToSchema, FAQSchema, ItemListSchema). |
+| **readTime** | `'[N]분 읽기'` (e.g., `'7분 읽기'`) |
 | **Total FAQs** | 10 (same as EN) |
 
 ---
