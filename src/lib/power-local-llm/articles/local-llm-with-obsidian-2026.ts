@@ -3186,7 +3186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'خمسة ملحقات لـ Obsidian تحوّل المخزن إلى دماغ ثانٍ حقيقي في 2026 حين تُقرن بخلفية Ollama محلية: Smart Connections وCopilot for Obsidian وText Generator وLocal GPT وBMO Chatbot. يغطي كلٌّ منها طبقةً مختلفة: بحث دلالي، ودردشة مضمّنة، وتوليد بالقوالب، ومحادثة تعطي الأولوية للخصوصية، ودردشة خفيفة بسياق. المزيج الموصى به لمعظم المستخدمين هو Smart Connections + Copilot for Obsidian: الأول يتولى الربط الدلالي عبر المخزن بأكمله، والثاني يوفر واجهة الدردشة. يُقيّم هذا الدليل الملحقات الخمسة من حيث جودة البحث في المخزن وسرعة التوليد وتخصيص الموجّهات وسلوك المزامنة على الجوّال، مع خطوات تهيئة ملموسة لـ Ollama.',
     metaDescription:
-      'خمسة ملحقات Obsidian مُختبرة مع Ollama المحلي في 2026: Smart Connections وCopilot وText Generator وLocal GPT وBMO Chatbot. أفضل مزيج، حجم المخزن، المزامنة المحمولة.',
+      '5 ملحقات Obsidian مُختبرة مع Ollama: Smart Connections للبحث الدلالي، Copilot للدردشة، Text Generator وLocal GPT وBMO Chatbot — أفضل مزيج للمخزن.',
     twitterDescription:
       'أفضل مزيج Obsidian + LLM محلي في 2026: Smart Connections (بحث دلالي في المخزن) + Copilot for Obsidian (دردشة). الملحقات الخمسة مُختبرة مع Ollama. تحفظات المزامنة المحمولة.',
     current_models_mentioned: [

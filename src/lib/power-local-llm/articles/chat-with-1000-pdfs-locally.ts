@@ -3948,11 +3948,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'محادثة مع 1000+ ملف PDF محلياً: RAG على نطاق واسع يتجاوز نماذج الاختبار',
-    seoTitle: 'محادثة مع 1000 ملف PDF محلياً 2026: RAG على نطاق واسع',
+    seoTitle: 'محادثة مع 1000 ملف PDF محلياً: RAG على نطاق واسع',
     intro:
       'دليل قرار للمستخدمين المتقدمين الذين لديهم مجموعات بيانات شخصية من 1,000 إلى 10,000+ مستند — مكتبات بحثية وأرشيفات قانونية ووثائق داخلية. تفشل الإعدادات الافتراضية عند حوالي 5,000 مقطع؛ يُبيّن هذا المقال المسارات الأربعة للتوسع (AnythingLLM محسَّن وLlamaIndex محلي وOllama+ChromaDB مخصص وOllama+Qdrant للإنتاج) مع قياسات موثوقة لزمن الاستجابة والتخزين والفهرسة عند 100 و1,000 و10,000 مستند.',
     metaDescription:
-      'توسيع RAG المحلي إلى 1,000–10,000+ ملف PDF: شجرة المعمارية والقياسات والتخزين وزمن الاستجابة في AnythingLLM وLlamaIndex وChromaDB وQdrant.',
+      'RAG لـ10,000+ ملف PDF محلياً: AnythingLLM وLlamaIndex وChromaDB وQdrant مقارنةً بالقياسات وزمن الاستجابة — البحث الهجين يرفع الاستدعاء إلى 92–95%.',
     twitterDescription:
       'عندما يفشل RAG الأساسي: توسيع محادثة المستندات الشخصية إلى 1,000–10,000 ملف PDF محلياً. شجرة قرار المعمارية + قياسات موثوقة لأربعة مكدسات مفتوحة المصدر. مايو 2026.',
     current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],

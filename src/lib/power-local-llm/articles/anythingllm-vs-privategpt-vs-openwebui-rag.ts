@@ -3221,11 +3221,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM مقابل PrivateGPT مقابل Open WebUI: أفضل RAG محلي في 2026',
-    seoTitle: 'RAG محلي 2026: AnythingLLM مقابل PrivateGPT مقابل Open WebUI',
+    seoTitle: 'RAG محلي: AnythingLLM مقابل PrivateGPT مقابل Open WebUI',
     intro:
       'تُعدّ AnythingLLM وPrivateGPT وOpen WebUI أبرز ثلاث منصات RAG ذاتية الاستضافة في عام 2026. قمنا بتحميل مجموعة نصوص متطابقة مؤلفة من 5.047 صفحة على كل منصة، ونفّذنا 50 استعلامًا موزعة على 5 أنواع من الأسئلة، وقسنا زمن الاسترجاع، ومعدل الهلوسة، وجودة الاستشهادات، إضافةً إلى التكاليف الخفية التي لا يتحدث عنها أحد (إعادة التضمين، والتخزين في قاعدة البيانات المتجهية، وذروات استهلاك GPU أثناء الفهرسة). البطل في العروض التجريبية ليس البطل في بيئات الإنتاج.',
     metaDescription:
-      'ثلاث منصات RAG محلية اختُبرت على مجموعة نصوص من 5.047 صفحة. AnythingLLM وPrivateGPT وOpen WebUI: الدقة والاستجابة والاستشهادات. حكم 2026.',
+      'اختُبرت 3 منصات RAG محلية على مجموعة 5,047 صفحة: AnythingLLM تتفوق في الدقة، وOpen WebUI في السرعة، وPrivateGPT في الاستشهادات. نتائج مايو 2026.',
     twitterDescription:
       'مقارنة RAG المحلي: AnythingLLM مقابل PrivateGPT مقابل Open WebUI على 5.047 صفحة. فائزون مختلفون في الدقة والاستجابة وقابلية التوسع. معايير أداء كاملة.',
     current_models_mentioned: [

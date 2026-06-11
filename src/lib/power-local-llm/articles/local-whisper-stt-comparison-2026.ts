@@ -3734,11 +3734,11 @@ for segment in segments:
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp مقابل faster-whisper 2026: معايير STT المحلية والإعداد وتسريع GPU',
-    seoTitle: 'Whisper.cpp مقابل faster-whisper 2026: STT محلي ومعايير الأداء',
+    seoTitle: 'Whisper.cpp مقابل faster-whisper 2026: معايير STT',
     intro:
       'يُعدّ كلٌّ من whisper.cpp وfaster-whisper التطبيقَين المهيمنَين لنموذج Whisper من OpenAI لتحويل الكلام إلى نص محليًا وبدون اتصال في عام 2026. فـwhisper.cpp هو منفذ نقي بلغة C/C++ يعمل على Apple Metal وCUDA وVulkan والمعالج — مما يجعله مثاليًا لأجهزة Apple Silicon والأنظمة المدمجة وتطبيقات الصوت في الوقت الفعلي. أما faster-whisper فهو مكتبة Python تستخدم CTranslate2 وتحقق إنتاجية تبلغ ~4 أضعاف نموذج Whisper الأصلي على بطاقات NVIDIA عبر التكميم int8. يتناول هذا الدليل التثبيت ومعايير الأداء وإعداد النسخ في الوقت الفعلي والمقارنة المباشرة بين المنصات لمساعدتك في اختيار الأداة المناسبة لخط أنابيبك.',
     metaDescription:
-      'قارن بين whisper.cpp وfaster-whisper للتعرف على الكلام محليًا في 2026: معايير WER، سرعة GPU مقابل CPU، Apple Silicon Metal، النسخ في الوقت الفعلي. كل شيء بدون اتصال.',
+      'Whisper.cpp يعمل على CPU وApple Metal؛ faster-whisper أسرع 4× على GPU بـint8. مقارنة معايير WER وسرعة النسخ الفوري وخطوات الإعداد 2026.',
     twitterDescription:
       'whisper.cpp مقابل faster-whisper: معايير التعرف على الكلام المحلي 2026. سرعة CPU مقابل GPU، Apple Metal، دقة WER، النسخ في الوقت الفعلي. بدون سحابة، بدون تكلفة.',
     audience:

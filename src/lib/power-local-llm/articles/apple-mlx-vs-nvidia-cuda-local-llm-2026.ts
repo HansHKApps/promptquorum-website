@@ -3173,8 +3173,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'المطوّرون وهواة الذكاء الاصطناعي والمستخدمون المتقدمون الذين يختارون عتادًا لأغراض الاستنتاج المحلي بنماذج اللغة الكبيرة',
     primaryTerm: 'Apple MLX مقابل NVIDIA CUDA لنماذج اللغة الكبيرة المحلية',
     title: 'Apple MLX مقابل NVIDIA CUDA لنماذج اللغة الكبيرة المحلية: أيهما تختار في 2026؟',
-    seoTitle: 'Apple MLX مقابل NVIDIA CUDA لنماذج اللغة الكبيرة المحلية 2026',
-    metaDescription: 'Apple M5 Max مقابل RTX 4090/5090 لنماذج اللغة الكبيرة المحلية: بيانات المعايير، التكلفة الإجمالية حسب حجم النموذج، استهلاك الطاقة، وتوصيات واضحة لكل حالة استخدام 2026.',
+    seoTitle: 'Apple MLX مقابل NVIDIA CUDA لنماذج LLM المحلية 2026',
+    metaDescription: 'M5 Max مقابل RTX 5090 في الاستدلال المحلي: معدلات الرموز، VRAM، استهلاك الطاقة، والتكلفة الإجمالية حسب حجم النموذج. بيانات مقارنة 2026.',
     readTime: '18 دقائق قراءة',
     targetKeywords: [
       'apple mlx مقابل nvidia cuda نماذج لغة كبيرة محلية',

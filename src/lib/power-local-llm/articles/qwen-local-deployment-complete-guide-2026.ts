@@ -2109,9 +2109,9 @@ docker run --gpus all \\
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
     title: 'نشر Qwen محليًا: الدليل الكامل للإنتاج 2026',
-    seoTitle: 'Qwen 2026 في الإنتاج: Docker وخادم API وتعدد GPU',
+    seoTitle: 'Qwen في الإنتاج 2026: Docker وخادم API وتعدد GPU',
     metaDescription:
-      'انشر Qwen 7B إلى 72B في الإنتاج: خادم API بـ Docker Compose وتعدد GPU ومعايير الأجهزة ومقارنة التكاليف مع Alibaba Cloud. 2026.',
+      'Qwen 7B يُنتج 25 رمز/ثانية على RTX 3060. دليل نشر Docker Compose وخادم API وتعدد GPU وتكاليف السحابة لنماذج 7B حتى 72B في 2026.',
     twitterDescription:
       'Qwen 7B يصل إلى 25 رمز/ثانية على RTX 3060. Qwen 72B يتطلب GPU مزدوج أو سحابة. دليل كامل لـ Docker وخادم API وتعدد GPU لعام 2026.',
     affiliateDisclosure: true,

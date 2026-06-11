@@ -3112,11 +3112,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     title: 'أفضل تطبيقات النماذج اللغوية المحلية للـ iPhone في 2026 (شغّل الذكاء الاصطناعي بدون واي فاي)',
-    seoTitle: 'أفضل تطبيقات LLM محلي لـ iPhone 2026',
+    seoTitle: 'تطبيقات LLM محلي لـ iPhone 2026: PocketPal وPrivate LLM',
     intro:
       'خمسة تطبيقات لـ iPhone تُشغّل نماذج لغوية حقيقية بالكامل على الجهاز في 2026: برنامج PocketPal AI، وبرنامج Private LLM، وبرنامج MLC Chat، وبرنامج LLM Farm، وApple Intelligence (المدمج في النظام). جميعها تعمل بدون واي فاي بمجرد تنزيل النموذج. يصنّف هذا الدليل التطبيقات وفق عدد الرموز في الثانية على iPhone 16 Pro وiPhone 17 Pro، ومكتبة النماذج، وإدارة الذاكرة العشوائية، وموقف الخصوصية، والتكامل مع نظام iOS.',
     metaDescription:
-      'خمسة تطبيقات iPhone تُشغّل نماذج لغوية على الجهاز في 2026: برنامج PocketPal AI وPrivate LLM وMLC Chat وLLM Farm مُختبَرة على iPhone 16 Pro و17 Pro. مقارنة السرعة والخصوصية ومكتبة النماذج.',
+      '5 تطبيقات تشغّل LLMs على iPhone بدون واي فاي: PocketPal AI وPrivate LLM وMLC Chat وLLM Farm مُختبَرة على iPhone 16 Pro. مقارنة السرعة والخصوصية.',
     twitterDescription:
       'ذكاء اصطناعي محلي على iPhone في 2026: برنامج PocketPal AI (مجاني)، برنامج Private LLM (~10 يورو دفعة واحدة، Siri)، برنامج MLC Chat (الأسرع)، برنامج LLM Farm (الأكثر قابلية للضبط). جميعها تعمل بدون اتصال بعد التنزيل.',
     current_models_mentioned: [

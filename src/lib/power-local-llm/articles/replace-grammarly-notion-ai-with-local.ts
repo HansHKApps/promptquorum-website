@@ -2464,11 +2464,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'استبدل Grammarly وNotion AI بنموذج LLM محلي (2026)',
-    seoTitle: 'استبدل Grammarly وNotion AI بنموذج LLM محلي 2026',
+    seoTitle: 'استبدل Grammarly وNotion AI بـ LLM محلي 2026',
     intro:
       'يُرسل Grammarly وNotion AI كتاباتك إلى خوادم سحابية للمعالجة — تمر مسوداتك ووثائقك السرية وملاحظاتك الشخصية عبر أنظمة ذكاء اصطناعي تابعة لطرف ثالث بشكل تصميمي. يمكن لنموذج LLM محلي يعمل عبر Ollama أو LM Studio أن يحل محل كليهما في معظم مهام الكتابة: التصحيح النحوي والأسلوبي وكتابة الوثائق وتلخيص المحتوى وتدوين الملاحظات بمساعدة الذكاء الاصطناعي — دون أن يغادر أي بيانات جهازك.',
     metaDescription:
-      'استبدل Grammarly وNotion AI بنموذج LLM محلي: مقارنة الخصوصية والتكلفة والقدرات. أدلة للتصحيح وكتابة الوثائق والملاحظات.',
+      'Grammarly وNotion AI يرسلان كتاباتك إلى السحابة. LLM محلي عبر Ollama يؤدي التصحيح وكتابة الوثائق والملاحظات بخصوصية تامة — مقارنة التكلفة والقدرات.',
     twitterDescription:
       'استبدل Grammarly (التصحيح النحوي/الأسلوبي) وNotion AI (كتابة الوثائق والملاحظات) بنموذج LLM محلي — البيانات لا تغادر جهازك. الخصوصية والتكلفة ودليل الإعداد.',
     current_models_mentioned: [

@@ -2579,11 +2579,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'أسهل تطبيق ذكاء اصطناعي محلي لنظامي Windows وMac وLinux (2026)',
-    seoTitle: 'أسهل ذكاء اصطناعي محلي 2026: بدون طرفية، 3 خيارات',
+    seoTitle: 'أسهل تطبيق ذكاء اصطناعي محلي 2026: LM Studio أو Jan؟',
     intro:
       'يُعدّ تطبيق LM Studio أسهل تطبيق للذكاء الاصطناعي المحلي في 2026 لأنظمة Windows وMac وLinux — قم بتنزيله وتثبيته وتحميل نموذج والبدء بالدردشة في أقل من 10 دقائق دون الحاجة إلى أي طرفية. يغطي هذا الدليل تطبيقات LM Studio وJan وGPT4All بوصفها الخيارات الثلاثة التي لا تستلزم أي برمجة، ويقارنها من حيث وقت الإعداد والقدرات، ويوضح أيّها تختار بناءً على أجهزتك وأهدافك.',
     metaDescription:
-      'LM Studio وJan وGPT4All مرتّبةً حسب السهولة في 2026: وقت التثبيت ودعم النماذج ومتطلبات الأجهزة والتشغيل الأول على Windows وMac وLinux. لا طرفية مطلوبة.',
+      'LM Studio جاهز في أقل من 10 دقائق بدون طرفية. مقارنة LM Studio وJan وGPT4All: وقت التثبيت ودعم النماذج ومتطلبات الأجهزة على Windows وMac وLinux.',
     twitterDescription:
       'أسهل تطبيقات الذكاء الاصطناعي المحلي في 2026: LM Studio (أسرع إعداد، أفضل واجهة)، Jan (بديل مفتوح المصدر)، GPT4All (الأكثر سهولةً للمبتدئين). Windows وMac وLinux مقارنةً.',
     current_models_mentioned: [

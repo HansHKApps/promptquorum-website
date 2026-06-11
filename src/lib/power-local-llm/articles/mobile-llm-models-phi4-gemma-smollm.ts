@@ -3245,11 +3245,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     title: 'أفضل نماذج LLM للهاتف في 2026: Phi-4 Mini مقابل Gemma 3 مقابل SmolLM',
-    seoTitle: 'Phi-4 Mini مقابل Gemma 3 مقابل SmolLM: نماذج LLM للهاتف 2026',
+    seoTitle: 'نماذج LLM للهاتف 2026: Phi-4 Mini وGemma 3 وSmolLM',
     intro:
       'ستة نماذج لغوية صغيرة تغطي تقريبًا جميع حالات الاستخدام على الهاتف في 2026: Phi-4 Mini (3.8B) وGemma 3 4B وGemma 3 1B وSmolLM 2 1.7B وQwen 3 1.5B وLlama 3.2 3B. تتباين في الرموز في الثانية واستهلاك الذاكرة وجودة الدردشة والتلخيص والترجمة وكتابة النصوص القصيرة. يقارن هذا الدليل هذه النماذج على iPhone 17 Pro وGalaxy S25 Ultra، ويقدم حكمًا لكل فئة (راقية / متوسطة / اقتصادية)، ويشرح لماذا يُعد التكميم Q4_K_M هو المعيار على الهاتف.',
     metaDescription:
-      'ستة نماذج LLM صغيرة مُختبرة على الهواتف في 2026. Phi-4 Mini وGemma 3 4B/1B وSmolLM 2 1.7B وQwen 3 1.5B وLlama 3.2 3B مقارنةً في السرعة والذاكرة RAM والجودة.',
+      'Phi-4 Mini وGemma 3 وSmolLM 2 مُختبرة على iPhone 17 Pro وGalaxy S25 Ultra. مقارنة السرعة والذاكرة RAM والجودة — وسبب هيمنة Q4_K_M على الهاتف.',
     twitterDescription:
       'أفضل نماذج LLM للهاتف في 2026: Phi-4 Mini (الأذكى)، SmolLM 2 (الأسرع)، Qwen 3 (متعدد اللغات)، Gemma 3 1B (للهواتف القديمة)، Gemma 3 4B (متوازن)، Llama 3.2 3B (الأكثر تنوعًا).',
     current_models_mentioned: [

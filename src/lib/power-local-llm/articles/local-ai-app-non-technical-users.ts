@@ -2529,11 +2529,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'الذكاء الاصطناعي المحلي للمستخدمين غير التقنيين: 5 تطبيقات تعمل ببساطة (بدون سطر أوامر)',
-    seoTitle: '5 تطبيقات ذكاء اصطناعي محلي تعمل بدون سطر أوامر (2026)',
+    seoTitle: 'GPT4All وJan وMsty: 5 تطبيقات ذكاء اصطناعي للمبتدئين',
     intro:
       'تُعدّ تطبيقات GPT4All وJan وMsty وAnythingLLM Desktop وLM Studio الخمسة الأفضل للمستخدمين غير التقنيين الذين يريدون الذكاء الاصطناعي المحلي — بدون سطر أوامر، وبدون Python، وبدون Docker. كل تطبيق يتصدر لملف مستخدم مبتدئ مختلف. GPT4All يُحضر المستخدم إلى محادثة عاملة في 4 نقرات؛ Jan يضيف صفر بيانات مُرسَلة؛ Msty يضيف الواجهة الأجمل؛ AnythingLLM Desktop يضيف الدردشة مع المستندات بالسحب والإسقاط؛ LM Studio يقدم أفضل تجربة على Mac.',
     metaDescription:
-      'صفر سطر أوامر. بدون Python. بدون Docker. 5 تطبيقات ذكاء اصطناعي محلي يثبّتها أي مستخدم غير تقني في 10 دقائق. مُختبَرة مع مبتدئين حقيقيين في 2026.',
+      '10 دقائق كافية لتثبيت أي من هذه التطبيقات الخمسة بدون Python أو Docker. GPT4All وJan وMsty وAnythingLLM وLM Studio — مُختبَرة في 2026.',
     twitterDescription:
       'خمسة تطبيقات ذكاء اصطناعي محلي تعمل دون فتح سطر أوامر قط — مُرتَّبة حسب ملف المبتدئ. مُختبَرة في مايو 2026.',
     current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],

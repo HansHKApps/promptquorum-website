@@ -2831,11 +2831,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Mobile & Edge LLMs',
     title: 'شغّل ذكاءً اصطناعيًا محليًا على لوحيك: iPad Pro M4 وGalaxy Tab S10 وOnePlus Pad 2 (2026)',
-    seoTitle: 'تشغيل ذكاء اصطناعي محلي على iPad وتابلت Android 2026',
+    seoTitle: 'تشغيل LLM محليًا على iPad وAndroid Tablet 2026',
     intro:
       'تشغيل ذكاء اصطناعي محلي على لوحي أصبح عمليًا في 2026 على أجهزة iPad من الفئة الراقية وأجهزة Android بـ 8 جيجابايت RAM أو أكثر. يغطي هذا الدليل الخيارات: الاستدلال على الجهاز مع تطبيق Pocket Paladin وLLM Farm على iPad، وTermux + Ollama على Android، وبديل الاتصال عن بُعد (ربط اللوحي بـ Mac أو PC يشغّل Ollama عبر شبكة Wi-Fi المحلية) للأجهزة التي لا تستطيع تشغيل الاستدلال محليًا.',
     metaDescription:
-      'كيفية تشغيل ذكاء اصطناعي محلي على iPad أو تابلت Android في 2026: تطبيقات الاستدلال على الجهاز وTermux + Ollama والاتصال عن بُعد بـ Mac أو PC.',
+      'Pocket Paladin وLLM Farm يُشغّلان نماذج محلية على iPad Pro M4؛ Android بـ 8 جيجابايت RAM يدعم Termux + Ollama أو الاتصال بـ Mac عبر Wi-Fi.',
     twitterDescription:
       'شغّل ذكاءً اصطناعيًا على iPad أو تابلت Android في 2026: الاستدلال على الجهاز (Pocket Paladin وLLM Farm وTermux+Ollama) والاتصال عن بُعد بـ Mac/PC.',
     current_models_mentioned: [

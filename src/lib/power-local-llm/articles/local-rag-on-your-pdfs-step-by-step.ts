@@ -3296,11 +3296,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'بناء نظام RAG محلي على ملفات PDF في 30 دقيقة (Ollama + AnythingLLM)',
-    seoTitle: 'نظام RAG المحلي على ملفات PDF 2026: إعداد خطوة بخطوة',
+    seoTitle: 'RAG محلي على PDF في 30 دقيقة: Ollama + AnythingLLM 2026',
     intro:
       'دليل شامل لأسرع مسار نحو نظام RAG شخصي يعمل على حاسوب محمول بذاكرة RAM سعتها 16 غيغابايت. المكدس التقني: برنامج Ollama، ونموذج Llama 3.3 8B، وبرنامج AnythingLLM، ونموذج nomic-embed-text. الوقت الإجمالي: 30 دقيقة من جهاز فارغ إلى الدردشة مع ملفات PDF الخاصة بك.',
     metaDescription:
-      'خطوة بخطوة: ثبّت برنامج Ollama، وأعدّ برنامج AnythingLLM، وأضف ملفات PDF وتحدّث معها. الوقت الإجمالي 30 دقيقة. مُختبَر على حاسوب محمول بذاكرة RAM سعتها 16 غيغابايت. مايو 2026.',
+      'إعداد نظام RAG شخصي في 30 دقيقة على حاسوب بـ 16 غيغابايت RAM: Ollama وLlama 3.3 8B وAnythingLLM وnomic-embed-text — من جهاز فارغ إلى الدردشة مع PDF.',
     twitterDescription:
       '30 دقيقة من حاسوب محمول فارغ إلى الدردشة مع ملفات PDF الخاصة بك. Ollama + Llama 3.3 8B + AnythingLLM + nomic-embed-text. مُختبَر على ذاكرة RAM سعتها 16 غيغابايت.',
     current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral Small'],

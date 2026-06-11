@@ -3081,11 +3081,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
     title: 'أفضل نماذج التضمين لـ RAG المحلي في 2026 (اختبار بوثائق حقيقية)',
-    seoTitle: 'أفضل نماذج التضمين لـ RAG المحلي 2026: 6 نماذج مقارَنة',
+    seoTitle: 'نماذج التضمين لـ RAG المحلي 2026: مقارنة 6 نماذج',
     intro:
       'ستة نماذج تضمين مفتوحة الأوزان — nomic-embed-text-v2 وbge-large-en-v1.5 وgte-large وmxbai-embed-large وsnowflake-arctic-embed وjina-embeddings-v3 — اختُبرت على 4 أنواع من الوثائق (عقود قانونية ومقالات بحثية وكود مصدري وويكي مؤسسي متعدد اللغات). 100 استعلام مقيَّم لكل نموذج، وقياس retrieval@10 مقابل مجموعة إجابات معروفة، وأداء التضمين على وحدة المعالجة المركزية والرسومية على أجهزة المستهلك. نموذج واحد يفوز بدقة الاسترجاع الكلية، وآخر بسرعة وحدة المعالجة المركزية، والجدال حول عدد الأبعاد له إجابة واضحة.',
     metaDescription:
-      'Nomic وBGE وGTE وMixedbread وSnowflake وJina مختبرة على عقود قانونية وأوراق بحثية وكود وويكي متعدد اللغات. retrieval@10 والسرعة والذاكرة. مايو 2026.',
+      'Nomic وBGE وGTE وMixedbread وSnowflake وJina مختبرة على 4 أنواع وثائق: 100 استعلام لكل نموذج. retrieval@10 والسرعة والذاكرة. حكم مايو 2026.',
     twitterDescription:
       '6 نماذج تضمين محلية مقارَنة على 4 أنواع وثائق. retrieval@10 وسرعة CPU/GPU والذاكرة وجودة متعددة اللغات. نموذج واحد يهيمن على الدقة. جميع الأرقام في الداخل.',
     current_models_mentioned: [

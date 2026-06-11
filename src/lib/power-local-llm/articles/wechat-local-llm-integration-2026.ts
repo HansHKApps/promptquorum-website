@@ -1633,11 +1633,11 @@ while True:
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
     title: 'WeChat + نموذج لغة محلي: دليل المطور 2026',
-    seoTitle: 'تكامل WeChat مع نموذج لغة محلي 2026 | جسر API لـ Ollama',
+    seoTitle: 'دمج WeChat مع LLM محلي عبر Ollama: دليل 2026',
     intro:
       'يتيح لك ربط WeChat بنموذج لغة محلي الحصول على مساعد ذكاء اصطناعي خاص داخل تطبيق المراسلة الأكثر استخدامًا في العالم، دون إرسال رسالة واحدة إلى واجهة API سحابية. يتناول هذا الدليل ثلاثة أنماط تكامل (WeChatFerry على Windows، وجسر HTTP webhook، وخادم mini PC دائم التشغيل)، ويساعدك في اختيار نموذج Qwen المناسب للمحادثات باللغة الصينية، ويشرح كيف يلتزم الاستدلال المحلي بقانون أمن البيانات الصيني.',
     metaDescription:
-      'اربط WeChat بنموذج لغة محلي في 2026. ثلاثة أنماط: WeChatFerry وHTTP webhook وخادم Ollama على mini PC. Qwen3 7B للغة الصينية. بدون API سحابية.',
+      '3 أنماط لربط WeChat بنموذج LLM محلي: WeChatFerry على Windows، جسر HTTP webhook، وخادم Ollama على mini PC. Qwen3 7B موصى به للمحادثات بالصينية.',
     twitterDescription:
       'أنشئ جسرًا بين WeChat ونموذج لغة محلي: WeChatFerry أو HTTP webhook أو mini PC. Qwen3 7B للغة الصينية. بدون API سحابية.',
     gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',

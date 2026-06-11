@@ -3570,9 +3570,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'تطبيقات الذكاء الاصطناعي المحلي مع RAG مدمج: تحدّث مع ملفاتك (بدون إعداد)',
-    seoTitle: 'تطبيقات RAG مدمج 2026: دردشة مع PDFs بدون قاعدة بيانات متجهية',
+    seoTitle: 'RAG مدمج 2026: دردشة مع PDF محلياً بدون إعداد',
     metaDescription:
-      '3 تطبيقات سطح مكتب تُحمّل PDF وتُجيب في 5 دقائق، بدون قاعدة بيانات متجهية أو Python. اختُبرت تطبيقات LM Studio وJan وAnythingLLM على PDFs بـ1000 صفحة.',
+      'LM Studio وJan وAnythingLLM تُجيب على PDFs بـ 1000 صفحة في 5 دقائق، بدون قاعدة بيانات متجهية أو Python. مقارنة دقة الاسترداد والاقتباسات.',
     twitterDescription:
       '3 تطبيقات ذكاء اصطناعي محلي مع RAG مدمج تعمل فوراً. حمّل PDF، اطرح سؤالاً. مُختبَرة على مستندات بـ1000 صفحة في مايو 2026.',
     current_models_mentioned: [
