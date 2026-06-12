@@ -2606,13 +2606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '채팅 테스트: Cmd-L(Mac) 또는 Ctrl-L(Win/Linux)을 눌러 채팅 사이드 패널을 열고 코드에 대해 질문하십시오.',
           '선택 사항: Continue.dev 설정에서 에이전트 모드를 활성화하여 확인을 거친 다중 파일 편집 권한을 모델에 부여하십시오.',
         ],
-        codeBlock: '# 모델 다운로드
-ollama pull qwen3-coder:30b
-
-# 정상 로드 확인
-ollama run qwen3-coder:30b "Python에서 문자열을 뒤집는 함수를 작성해 주세요"
-
-# Continue.dev는 http://localhost:11434에서 실행 중인 Ollama 서버를 자동으로 감지합니다',
+        codeBlock: '# 모델 다운로드\nollama pull qwen3-coder:30b\n\n# 정상 로드 확인\nollama run qwen3-coder:30b "Python에서 문자열을 뒤집는 함수를 작성해 주세요"\n\n# Continue.dev는 http://localhost:11434에서 실행 중인 Ollama 서버를 자동으로 감지합니다',
         codeLanguage: 'bash',
       },
       qualityTest: {

@@ -3600,20 +3600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**6단계 — 실제 작업으로 확인.** `goose session`을 시도하고 "notes/의 모든 Markdown 파일을 제목과 단어 수와 함께 나열하고 결과를 notes/index.md에 쓰십시오."를 요청하십시오. 에이전트가 읽고, 요약하고, 다시 쓰면 루프가 작동합니다.',
         ],
         codeBlock:
-          '# 1. Pull a tool-calling model
-ollama pull gemma4:27b
-
-# 2. Install Goose
-pipx install goose-ai
-
-# 3. Configure Ollama as the provider
-goose configure
-# Provider: ollama
-# Model:    gemma4:27b
-# Host:     http://127.0.0.1:11434
-
-# 4. Start a session — Goose reads ~/.config/goose/config.yaml
-goose session',
+          '# 1. Pull a tool-calling model\nollama pull gemma4:27b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:27b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
         codeLanguage: 'bash',
         callouts: [
           {
@@ -3635,15 +3622,7 @@ goose session',
           '**위험 표면:** 서버는 허용 목록을 존중하지만 그 안에서는 완전한 읽기/쓰기 권한이 있습니다. 허용 목록을 유일한 장벽으로 취급하고 홈 폴더 대신 전용 workspace 디렉터리를 선택하십시오.',
         ],
         codeBlock:
-          '# ~/.config/goose/config.yaml
-mcpServers:
-  filesystem:
-    command: npx
-    args:
-      - "-y"
-      - "@modelcontextprotocol/server-filesystem"
-      - "/Users/you/agent-workspace"
-    env: {}',
+          '# ~/.config/goose/config.yaml\nmcpServers:\nfilesystem:\ncommand: npx\nargs:\n- "-y"\n- "@modelcontextprotocol/server-filesystem"\n- "/Users/you/agent-workspace"\nenv: {}',
         codeLanguage: 'yaml',
         callouts: [
           {
@@ -3665,30 +3644,12 @@ mcpServers:
           '**비용:** 쿼리가 데이터베이스로 직접 갑니다. 1억 행 테이블에 대한 잘못된 `SELECT *`는 인간이 한 것과 동일한 사고입니다 — 역할을 별도의 연결 풀에 statement timeout과 함께 유지하십시오.',
         ],
         codeBlock:
-          '# ~/.config/goose/config.yaml
-mcpServers:
-  sqlite:
-    command: npx
-    args:
-      - "-y"
-      - "@modelcontextprotocol/server-sqlite"
-      - "--db-path"
-      - "/Users/you/data/events.db"
-    env: {}
-
-  postgres:
-    command: npx
-    args:
-      - "-y"
-      - "@modelcontextprotocol/server-postgres"
-      - "postgresql://agent_ro@127.0.0.1:5432/analytics"
-    env:
-      PGPASSWORD: "${PG_AGENT_PASSWORD}"',
+          '# ~/.config/goose/config.yaml\nmcpServers:\nsqlite:\ncommand: npx\nargs:\n- "-y"\n- "@modelcontextprotocol/server-sqlite"\n- "--db-path"\n- "/Users/you/data/events.db"\nenv: {}\n\npostgres:\ncommand: npx\nargs:\n- "-y"\n- "@modelcontextprotocol/server-postgres"\n- "postgresql://agent_ro@127.0.0.1:5432/analytics"\nenv:\nPGPASSWORD: "${PG_AGENT_PASSWORD}"',
         codeLanguage: 'yaml',
         callouts: [
           {
             type: 'tip',
-            text: 'Postgres 역할을 한 번 만들고 에이전트에게 그 이상을 주지 마십시오: `CREATE ROLE agent_ro WITH LOGIN PASSWORD '…'; GRANT CONNECT ON DATABASE analytics TO agent_ro; GRANT USAGE ON SCHEMA public TO agent_ro; GRANT SELECT ON ALL TABLES IN SCHEMA public TO agent_ro; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO agent_ro;` 그런 다음 역할에 `statement_timeout = 30s`를 추가하십시오. 에이전트는 쓸 수 없고, 삭제할 수 없고, 무한히 실행할 수 없습니다.',
+            text: 'Postgres 역할을 한 번 만들고 에이전트에게 그 이상을 주지 마십시오: `CREATE ROLE agent_ro WITH LOGIN PASSWORD \'…\'; GRANT CONNECT ON DATABASE analytics TO agent_ro; GRANT USAGE ON SCHEMA public TO agent_ro; GRANT SELECT ON ALL TABLES IN SCHEMA public TO agent_ro; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO agent_ro;` 그런 다음 역할에 `statement_timeout = 30s`를 추가하십시오. 에이전트는 쓸 수 없고, 삭제할 수 없고, 무한히 실행할 수 없습니다.',
           },
         ],
       },
@@ -3705,17 +3666,7 @@ mcpServers:
           '**올바른 사용 사례:** 연구(페이지 열기, 요약하기, 노트에 추가), 회귀 테스트(탐색, 클릭, 스크린샷), 당신이 제어하는 페이지의 양식 작성. 잘못된 사용 사례: 라이브 웹에서 잘못된 클릭에 결과가 따르는 모든 것.',
         ],
         codeBlock:
-          '# ~/.config/goose/config.yaml
-mcpServers:
-  puppeteer:
-    command: npx
-    args:
-      - "-y"
-      - "@modelcontextprotocol/server-puppeteer"
-    env:
-      PUPPETEER_HEADLESS: "true"
-      # Block obviously dangerous endpoints at the OS firewall level
-      # rather than relying on the agent to refuse them.',
+          '# ~/.config/goose/config.yaml\nmcpServers:\npuppeteer:\ncommand: npx\nargs:\n- "-y"\n- "@modelcontextprotocol/server-puppeteer"\nenv:\nPUPPETEER_HEADLESS: "true"\n# Block obviously dangerous endpoints at the OS firewall level\n# rather than relying on the agent to refuse them.',
         codeLanguage: 'yaml',
         callouts: [
           {
@@ -3737,17 +3688,7 @@ mcpServers:
           '**위험 표면:** 에이전트가 이슈와 PR을 만들고 댓글을 달 수 있으며, (쓰기 권한이 있는 경우) 커밋을 push할 수 있습니다. 모델과 워크플로 모두를 신뢰하지 않는 한 merge 도구를 비활성화하십시오 — 세분화된 PAT로 저장소에서의 실수 merge는 복구 가능하지만 빨리 알아차려야 합니다.',
         ],
         codeBlock:
-          '# ~/.config/goose/config.yaml
-mcpServers:
-  github:
-    command: npx
-    args:
-      - "-y"
-      - "@modelcontextprotocol/server-github"
-    env:
-      GITHUB_PERSONAL_ACCESS_TOKEN: "${GH_AGENT_PAT}"
-      # Fine-grained PAT scoped to one or two test repos,
-      # not your personal account-wide classic token.',
+          '# ~/.config/goose/config.yaml\nmcpServers:\ngithub:\ncommand: npx\nargs:\n- "-y"\n- "@modelcontextprotocol/server-github"\nenv:\nGITHUB_PERSONAL_ACCESS_TOKEN: "${GH_AGENT_PAT}"\n# Fine-grained PAT scoped to one or two test repos,\n# not your personal account-wide classic token.',
         codeLanguage: 'yaml',
       },
       securityModel: {

@@ -3867,27 +3867,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         promptExamples: [
           {
             label: 'Text Generator 템플릿: 일일 노트 요약기',
-            text: '---
-name: Daily summary
----
-Summarise the following daily note in three concise bullet points. Focus on decisions made, blockers identified, and action items for tomorrow.
-
-Daily note ({{date}}):
-{{content}}
-
-Summary:',
+            text: '---\nname: Daily summary\n---\nSummarise the following daily note in three concise bullet points. Focus on decisions made, blockers identified, and action items for tomorrow.\n\nDaily note ({{date}}):\n{{content}}\n\nSummary:',
           },
           {
             label: 'Text Generator 템플릿: MOC(콘텐츠 맵) 생성기',
-            text: '---
-name: MOC for tag
----
-Generate a Map of Content for all notes tagged with `#{{selection}}`. Group related notes into 3–5 thematic clusters, with a one-sentence description per cluster and a list of the notes inside each cluster.
-
-Notes tagged #{{selection}}:
-{{vault_search_result tag={{selection}}}}
-
-MOC:',
+            text: '---\nname: MOC for tag\n---\nGenerate a Map of Content for all notes tagged with `#{{selection}}`. Group related notes into 3–5 thematic clusters, with a one-sentence description per cluster and a list of the notes inside each cluster.\n\nNotes tagged #{{selection}}:\n{{vault_search_result tag={{selection}}}}\n\nMOC:',
           },
         ],
         callouts: [

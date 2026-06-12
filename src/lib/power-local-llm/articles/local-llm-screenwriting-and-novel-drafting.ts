@@ -3017,9 +3017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'context-window',
         title: '장문 집필을 위한 컨텍스트 윈도 문제',
         content:
-          '**대부분의 로컬 모델에서 실질적인 컨텍스트 한계는 32,000 토큰입니다 — 광고된 128K가 아닙니다.** 어텐션 품질(모델이 이전 콘텐츠를 정확하게 참조하는 능력)은 대부분의 모델에서 32,000 토큰 이후 저하됩니다. 128K 토큰에서는 많은 모델이 컨텍스트 첫 번째 사분위의 콘텐츠에 대한 정확한 참조를 잃습니다. 소설의 경우, 이는 지금까지의 원고를 단순히 붙여넣고 다음 챕터를 요청할 수 없다는 것을 의미합니다.
-
-Moonshot AI의 Kimi-K2.6은 128K 컨텍스트를 가진 대부분의 모델보다 어텐션 품질 보존이 뛰어난 진정한 100만 토큰 컨텍스트 윈도를 제공합니다. 대부분의 작가들에게 Kimi-K2.6을 로컬에서 실행하는 것은 비실용적입니다 — Q4 양자화에서 약 480 GB의 VRAM이 필요하여 소비자 하드웨어를 훨씬 초과합니다. 1M 컨텍스트가 실제로 필요한 작가들에게는 Moonshot의 호스팅 API가 실용적인 접근 지점입니다. 로컬에서 실행 가능한 모델(Llama 3.3 70B, Qwen3 32B, Mistral Large)을 사용하는 작가들에게는 32K 실질 상한이 제약입니다.',
+          '**대부분의 로컬 모델에서 실질적인 컨텍스트 한계는 32,000 토큰입니다 — 광고된 128K가 아닙니다.** 어텐션 품질(모델이 이전 콘텐츠를 정확하게 참조하는 능력)은 대부분의 모델에서 32,000 토큰 이후 저하됩니다. 128K 토큰에서는 많은 모델이 컨텍스트 첫 번째 사분위의 콘텐츠에 대한 정확한 참조를 잃습니다. 소설의 경우, 이는 지금까지의 원고를 단순히 붙여넣고 다음 챕터를 요청할 수 없다는 것을 의미합니다.\n\nMoonshot AI의 Kimi-K2.6은 128K 컨텍스트를 가진 대부분의 모델보다 어텐션 품질 보존이 뛰어난 진정한 100만 토큰 컨텍스트 윈도를 제공합니다. 대부분의 작가들에게 Kimi-K2.6을 로컬에서 실행하는 것은 비실용적입니다 — Q4 양자화에서 약 480 GB의 VRAM이 필요하여 소비자 하드웨어를 훨씬 초과합니다. 1M 컨텍스트가 실제로 필요한 작가들에게는 Moonshot의 호스팅 API가 실용적인 접근 지점입니다. 로컬에서 실행 가능한 모델(Llama 3.3 70B, Qwen3 32B, Mistral Large)을 사용하는 작가들에게는 32K 실질 상한이 제약입니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3047,36 +3045,11 @@ Moonshot AI의 Kimi-K2.6은 128K 컨텍스트를 가진 대부분의 모델보�
         id: 'session-document',
         title: '세션 문서 기법',
         content:
-          '이 섹션의 세션 문서 기법은 여러 장문 프로젝트(90,000 단어 문학 소설 한 편, 시나리오 초안 두 편)에서의 실제 집필 작업을 통해 검증되었습니다. 4,000 토큰의 세션 문서 크기, 장면별 생성 리듬, 연속성 확인 타이밍은 이론적 모델이 아닌 실제 집필 작업에서 관찰된 실패 패턴으로부터 도출된 것입니다.
-
-**세션 문서는 원고 옆에 보관하는 일반 텍스트 파일로, 모델이 일관된 콘텐츠를 생성하기 위해 알아야 하는 소설의 압축 상태입니다.** 세 섹션으로 구성됩니다: 활성 인물 카드, 챕터 요약, 현재 장면 설정.',
+          '이 섹션의 세션 문서 기법은 여러 장문 프로젝트(90,000 단어 문학 소설 한 편, 시나리오 초안 두 편)에서의 실제 집필 작업을 통해 검증되었습니다. 4,000 토큰의 세션 문서 크기, 장면별 생성 리듬, 연속성 확인 타이밍은 이론적 모델이 아닌 실제 집필 작업에서 관찰된 실패 패턴으로부터 도출된 것입니다.\n\n**세션 문서는 원고 옆에 보관하는 일반 텍스트 파일로, 모델이 일관된 콘텐츠를 생성하기 위해 알아야 하는 소설의 압축 상태입니다.** 세 섹션으로 구성됩니다: 활성 인물 카드, 챕터 요약, 현재 장면 설정.',
         promptExamples: [
           {
             label: '세션 문서 템플릿',
-            text: '# SESSION DOCUMENT — [NOVEL TITLE]
-
-## ACTIVE CHARACTERS
-**[Character Name]**
-Dominant trait: [one trait]
-Contradicting behaviour: [one behaviour]
-Speech register: [formal/casual/specific verbal tics]
-Relationship to [other character]: [brief]
-
-**[Character Name 2]**
-[same structure]
-
-## CHAPTER SUMMARIES (completed)
-**Chapter 1:** [100–150 words — what happened, what changed, where it ended]
-**Chapter 2:** [100–150 words]
-[continue for all completed chapters]
-
-## CURRENT SCENE SETUP
-Chapter: [N]
-Scene: [brief description of what this scene needs to accomplish]
-POV: [character name]
-Opening state: [where we are at the start of this scene — 1 sentence]
-Emotional beat to land on: [what the POV character feels at the end — do not state it directly in the scene]
-Word ceiling: [200–500 words]',
+            text: '# SESSION DOCUMENT — [NOVEL TITLE]\n\n## ACTIVE CHARACTERS\n**[Character Name]**\nDominant trait: [one trait]\nContradicting behaviour: [one behaviour]\nSpeech register: [formal/casual/specific verbal tics]\nRelationship to [other character]: [brief]\n\n**[Character Name 2]**\n[same structure]\n\n## CHAPTER SUMMARIES (completed)\n**Chapter 1:** [100–150 words — what happened, what changed, where it ended]\n**Chapter 2:** [100–150 words]\n[continue for all completed chapters]\n\n## CURRENT SCENE SETUP\nChapter: [N]\nScene: [brief description of what this scene needs to accomplish]\nPOV: [character name]\nOpening state: [where we are at the start of this scene — 1 sentence]\nEmotional beat to land on: [what the POV character feels at the end — do not state it directly in the scene]\nWord ceiling: [200–500 words]',
           },
         ],
         items: [
@@ -3119,22 +3092,11 @@ Word ceiling: [200–500 words]',
         promptExamples: [
           {
             label: '시나리오 시스템 프롬프트',
-            text: 'You are a screenplay formatting assistant. All prose you generate is formatted in standard US screenplay format:
-- Scene headers: INT./EXT. LOCATION — DAY/NIGHT
-- Action lines: present tense, concrete, maximum 3 lines per block
-- Character names: ALL CAPS above dialogue
-- Dialogue: centred, no dialogue tags
-- Parentheticals: sparingly, only for delivery or action mid-dialogue
-
-Generate in Fountain-compatible plain text.',
+            text: 'You are a screenplay formatting assistant. All prose you generate is formatted in standard US screenplay format:\n- Scene headers: INT./EXT. LOCATION — DAY/NIGHT\n- Action lines: present tense, concrete, maximum 3 lines per block\n- Character names: ALL CAPS above dialogue\n- Dialogue: centred, no dialogue tags\n- Parentheticals: sparingly, only for delivery or action mid-dialogue\n\nGenerate in Fountain-compatible plain text.',
           },
           {
             label: '장면 beat에서 스크립트 페이지로 변환하는 프롬프트',
-            text: 'Beat: [paste the one-sentence scene beat from the beat sheet]
-POV character: [Name]
-Page target: [1–3 pages]
-
-Generate the script pages for this beat. Use standard screenplay format. Begin with the slug line. No narration — action lines and dialogue only.',
+            text: 'Beat: [paste the one-sentence scene beat from the beat sheet]\nPOV character: [Name]\nPage target: [1–3 pages]\n\nGenerate the script pages for this beat. Use standard screenplay format. Begin with the slug line. No narration — action lines and dialogue only.',
           },
         ],
         items: [
@@ -3169,25 +3131,11 @@ Generate the script pages for this beat. Use standard screenplay format. Begin w
         promptExamples: [
           {
             label: '소설 장면 생성 프롬프트',
-            text: '[SESSION DOCUMENT ALREADY IN SYSTEM PROMPT]
-
-Current scene:
-Chapter: [N]
-Beat: [one sentence from the beat sheet]
-POV: [character name]
-Opening: [one sentence — where we are, who is present]
-Emotional landing: [what the POV character feels at the end — show, don't state]
-Word ceiling: [300–500 words]
-
-Write this scene. No summarising. Every sentence renders a moment.',
+            text: '[SESSION DOCUMENT ALREADY IN SYSTEM PROMPT]\n\nCurrent scene:\nChapter: [N]\nBeat: [one sentence from the beat sheet]\nPOV: [character name]\nOpening: [one sentence — where we are, who is present]\nEmotional landing: [what the POV character feels at the end — show, don\'t state]\nWord ceiling: [300–500 words]\n\nWrite this scene. No summarising. Every sentence renders a moment.',
           },
           {
             label: '연속성 확인 프롬프트',
-            text: 'Before writing the next scene, check for continuity. The session document says:
-- [Character A] is [trait/state]
-- The last scene ended with [brief description]
-
-The next scene opens with [brief description]. Does this transition make sense? If not, what needs to change in the transition? One paragraph answer only.',
+            text: 'Before writing the next scene, check for continuity. The session document says:\n- [Character A] is [trait/state]\n- The last scene ended with [brief description]\n\nThe next scene opens with [brief description]. Does this transition make sense? If not, what needs to change in the transition? One paragraph answer only.',
           },
         ],
         callouts: [
@@ -3283,7 +3231,7 @@ The next scene opens with [brief description]. Does this transition make sense? 
           },
           {
             q: '특정 인물처럼 들리는 대화를 어떻게 생성합니까?',
-            a: '세 단계 접근법: (1) 세션 문서에 인물의 말하기 방식을 추가하십시오 ("격식체, 축약형 피하기, '제 생각에는...'과 같은 수식어로 문장 시작"). (2) 세션 시작 시 보정 단계로서 중립적인 컨텍스트에서 이 인물의 샘플 대화 3–5 줄을 생성하십시오. (3) 대화 프롬프트에서 해당 샘플 줄을 예시로 사용하십시오: "이 예시들과 동일한 어조로 대화를 작성하라: [샘플 붙여넣기]." 보정 단계가 인물 목소리 일관성을 위한 가장 효과적인 기법입니다.',
+            a: '세 단계 접근법: (1) 세션 문서에 인물의 말하기 방식을 추가하십시오 ("격식체, 축약형 피하기, \'제 생각에는...\'과 같은 수식어로 문장 시작"). (2) 세션 시작 시 보정 단계로서 중립적인 컨텍스트에서 이 인물의 샘플 대화 3–5 줄을 생성하십시오. (3) 대화 프롬프트에서 해당 샘플 줄을 예시로 사용하십시오: "이 예시들과 동일한 어조로 대화를 작성하라: [샘플 붙여넣기]." 보정 단계가 인물 목소리 일관성을 위한 가장 효과적인 기법입니다.',
           },
           {
             q: '소설 집필에 로컬 LLM을 사용하려면 GPU가 필요합니까?',

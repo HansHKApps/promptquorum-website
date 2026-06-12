@@ -3886,8 +3886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Linux:** 한 줄 설치: `curl -fsSL https://ollama.com/install.sh | sh`. 스크립트가 systemd 유닛을 등록합니다. `sudo systemctl start ollama`로 시작하십시오.',
           '**확인:** 터미널을 열고 `ollama --version`을 실행하십시오. 버전 문자열이 표시되어야 합니다. 명령을 찾을 수 없는 경우 터미널을 재시작하여 업데이트된 PATH를 로드하십시오.',
         ],
-        codeBlock: 'ollama --version
-# ollama version is 0.5.x  (any 0.5+ build works for this tutorial)',
+        codeBlock: 'ollama --version\n# ollama version is 0.5.x  (any 0.5+ build works for this tutorial)',
         codeLanguage: 'bash',
         callouts: [
           {
@@ -3908,14 +3907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RAM 절약 대안:** RAM이 16GB 대신 8GB인 경우 `ollama pull phi3:mini`(Phi-4 Mini, 디스크 약 2.4GB)를 실행하십시오. 3단계에서 해당 모델 이름을 사용하십시오. 긴 문서에서 품질은 낮지만 시스템은 작동합니다.',
         ],
         codeBlock:
-          '# 16GB RAM 권장
-ollama pull llama3.3:8b-instruct-q4_K_M
-
-# 8GB RAM 대안
-ollama pull phi3:mini
-
-# 빠른 테스트 (/bye를 입력하여 종료)
-ollama run llama3.3:8b-instruct-q4_K_M',
+          '# 16GB RAM 권장\nollama pull llama3.3:8b-instruct-q4_K_M\n\n# 8GB RAM 대안\nollama pull phi3:mini\n\n# 빠른 테스트 (/bye를 입력하여 종료)\nollama run llama3.3:8b-instruct-q4_K_M',
         codeLanguage: 'bash',
         callouts: [
           {
@@ -3959,8 +3951,7 @@ ollama run llama3.3:8b-instruct-q4_K_M',
           '**벡터 데이터베이스:** 기본값(LanceDB)으로 유지하십시오. 로컬, 파일 기반이며 설정이 필요 없습니다. PGVector 또는 Qdrant가 특별히 필요한 경우에만 변경하십시오.',
         ],
         codeBlock:
-          '# 임베딩 기본 설정 패널을 열기 전에 터미널에서 실행하십시오
-ollama pull nomic-embed-text',
+          '# 임베딩 기본 설정 패널을 열기 전에 터미널에서 실행하십시오\nollama pull nomic-embed-text',
         codeLanguage: 'bash',
         callouts: [
           {

@@ -4359,4 +4359,5 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
-},
+  },
+}

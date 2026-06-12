@@ -4011,21 +4011,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         promptExamples: [
           {
             label: 'ChromaDB 수집(Python 스키마)',
-            text: 'import chromadb, ollama, pathlib
-client = chromadb.PersistentClient(path="./chroma")
-coll = client.get_or_create_collection("kb")
-for p in pathlib.Path("vault").rglob("*.md"):
-    text = p.read_text()
-    emb = ollama.embeddings(model="nomic-embed-text", prompt=text)["embedding"]
-    coll.upsert(ids=[str(p)], embeddings=[emb], documents=[text], metadatas=[{"source": str(p)}])',
+            text: 'import chromadb, ollama, pathlib\nclient = chromadb.PersistentClient(path="./chroma")\ncoll = client.get_or_create_collection("kb")\nfor p in pathlib.Path("vault").rglob("*.md"):\ntext = p.read_text()\nemb = ollama.embeddings(model="nomic-embed-text", prompt=text)["embedding"]\ncoll.upsert(ids=[str(p)], embeddings=[emb], documents=[text], metadatas=[{"source": str(p)}])',
           },
           {
             label: '재순위를 사용한 쿼리(스키마)',
-            text: 'q = "로컬 RAG 동기화에 대해 무엇을 작성했나요?"
-q_emb = ollama.embeddings(model="nomic-embed-text", prompt=q)["embedding"]
-hits = coll.query(query_embeddings=[q_emb], n_results=20)
-# pass hits["documents"] through a re-ranker, keep top 5
-# send top 5 + question to Llama 3.2 3B via Ollama chat endpoint',
+            text: 'q = "로컬 RAG 동기화에 대해 무엇을 작성했나요?"\nq_emb = ollama.embeddings(model="nomic-embed-text", prompt=q)["embedding"]\nhits = coll.query(query_embeddings=[q_emb], n_results=20)\n# pass hits["documents"] through a re-ranker, keep top 5\n# send top 5 + question to Llama 3.2 3B via Ollama chat endpoint',
           },
         ],
         callouts: [

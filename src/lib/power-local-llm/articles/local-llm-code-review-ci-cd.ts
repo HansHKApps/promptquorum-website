@@ -3152,7 +3152,7 @@ jobs:
           script: |
             const fs = require('fs');
             const review = JSON.parse(JSON.parse(fs.readFileSync('/tmp/review.json')).message.content);
-            const body = \`### Local LLM Review: \\`\${review.verdict}\\`\n\n\${review.summary}\`;
+            const body = \`### Local LLM Review: \\\`\${review.verdict}\\\`\n\n\${review.summary}\`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,

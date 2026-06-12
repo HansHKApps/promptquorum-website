@@ -1217,7 +1217,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
     dateModified: '2026-05-26',
-    next_refresh_due: '2026-11-26',
     current_models_mentioned: ['Qwen3 14B', 'Qwen3 7B', 'Llama 3.3 8B', 'nomic-embed-text', 'mxbai-embed-large', 'multilingual-e5-large'],
     current_hardware_mentioned: ['RTX 3090', 'Mac Mini M4 Pro', 'Minisforum UM890 Pro'],
     leadAnswerBlock: '**AnythingLLM은 2026년 대부분의 기업 팀에 가장 적합한 RAG 도구입니다 — PDF, Word, Excel, URL을 기본으로 처리하며, Ollama와 함께 완전히 로컬에서 실행되고, 코딩 없이 멀티 사용자 워크스페이스를 지원합니다.**',
@@ -1303,11 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       anythingllm: {
         heading: 'AnythingLLM — 코드 없는 기업 팀을 위한 최고의 선택',
-        body: 'AnythingLLM은 기술적 지식이 없는 사용자도 운영할 수 있는 브라우저 인터페이스를 갖춘 완전한 RAG 플랫폼을 제공합니다. 워크스페이스(부서, 프로젝트 또는 고객별 하나씩)를 만들고, 문서를 추가하고, 채팅을 시작할 수 있습니다. 각 워크스페이스는 자체 벡터 인덱스를 유지하므로 법무팀의 NDA 라이브러리가 엔지니어링의 아키텍처 문서와 섞이지 않습니다.
-
-AnythingLLM은 Ollama, LM Studio 또는 OpenAI 호환 API에 연결됩니다. 로컬 배포의 경우 Qwen3 14B 또는 Llama 3.3 8B가 16GB RAM 내에서 대부분의 기업 문서 Q&A 작업을 처리합니다. Enterprise 에디션은 SSO, 감사 로그 및 맞춤형 임베딩 모델을 추가합니다.
-
-**설치:** useanything.com에서 단일 Docker 명령 또는 데스크톱 앱 다운로드. 명령줄 설정이 필요 없습니다.',
+        body: 'AnythingLLM은 기술적 지식이 없는 사용자도 운영할 수 있는 브라우저 인터페이스를 갖춘 완전한 RAG 플랫폼을 제공합니다. 워크스페이스(부서, 프로젝트 또는 고객별 하나씩)를 만들고, 문서를 추가하고, 채팅을 시작할 수 있습니다. 각 워크스페이스는 자체 벡터 인덱스를 유지하므로 법무팀의 NDA 라이브러리가 엔지니어링의 아키텍처 문서와 섞이지 않습니다.\n\nAnythingLLM은 Ollama, LM Studio 또는 OpenAI 호환 API에 연결됩니다. 로컬 배포의 경우 Qwen3 14B 또는 Llama 3.3 8B가 16GB RAM 내에서 대부분의 기업 문서 Q&A 작업을 처리합니다. Enterprise 에디션은 SSO, 감사 로그 및 맞춤형 임베딩 모델을 추가합니다.\n\n**설치:** useanything.com에서 단일 Docker 명령 또는 데스크톱 앱 다운로드. 명령줄 설정이 필요 없습니다.',
         affiliateLinks: [
           {
             productName: 'AnythingLLM',
@@ -1321,60 +1316,35 @@ AnythingLLM은 Ollama, LM Studio 또는 OpenAI 호환 API에 연결됩니다. �
       },
       llamaindex: {
         heading: 'LlamaIndex — 맞춤형 파이프라인을 위한 최고의 개발자 프레임워크',
-        body: 'LlamaIndex는 프로덕션 환경에서 RAG 시스템을 구축하기 위한 가장 많이 사용되는 Python 프레임워크입니다. AnythingLLM과 달리 내장 인터페이스가 없으며, 대신 조합 가능한 추상화를 제공합니다: 데이터 로더, 인덱스 유형(VectorStore, KnowledgeGraph, Summary), 쿼리 엔진 및 에이전트 워크플로우.
-
-Ollama 통합을 위해 `llama-index-llms-ollama` 및 `llama-index-embeddings-ollama`를 설치하십시오. LlamaIndex는 Chroma, Qdrant, Weaviate, Pinecone 및 20개 이상의 다른 벡터 데이터베이스를 백엔드로 지원합니다. 프레임워크는 청킹 전략, 메타데이터 필터링 및 하이브리드 검색을 자동으로 처리합니다.
-
-```python
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
-from llama_index.llms.ollama import Ollama
-
-llm = Ollama(model="qwen2.5:14b", request_timeout=120)
-docs = SimpleDirectoryReader("/path/to/docs").load_data()
-index = VectorStoreIndex.from_documents(docs)
-query_engine = index.as_query_engine(llm=llm)
-response = query_engine.query("What are the payment terms in the MSA?")
-```',
+        body: 'LlamaIndex는 프로덕션 환경에서 RAG 시스템을 구축하기 위한 가장 많이 사용되는 Python 프레임워크입니다. AnythingLLM과 달리 내장 인터페이스가 없으며, 대신 조합 가능한 추상화를 제공합니다: 데이터 로더, 인덱스 유형(VectorStore, KnowledgeGraph, Summary), 쿼리 엔진 및 에이전트 워크플로우.\n\nOllama 통합을 위해 `llama-index-llms-ollama` 및 `llama-index-embeddings-ollama`를 설치하십시오. LlamaIndex는 Chroma, Qdrant, Weaviate, Pinecone 및 20개 이상의 다른 벡터 데이터베이스를 백엔드로 지원합니다. 프레임워크는 청킹 전략, 메타데이터 필터링 및 하이브리드 검색을 자동으로 처리합니다.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
         pros: ['최대 파이프라인 유연성', '모든 주요 벡터 데이터베이스 지원', '기업 지원이 포함된 프로덕션 수준', '활발한 커뮤니티 (GitHub 별 30,000개 이상)'],
         cons: ['Python 지식 필요', '내장 인터페이스 없음', '즉시 사용 가능한 도구보다 설정이 많음'],
         verdict: '도메인별 RAG 애플리케이션을 구축하고 청킹, 검색 및 재순위 지정에 대한 세밀한 제어가 필요한 개발팀에 가장 적합합니다.',
       },
       privategpt: {
         heading: 'PrivateGPT — 단일 사용자를 위한 가장 간단한 로컬 설정',
-        body: 'PrivateGPT는 기기에서 데이터가 유출되지 않고 "PDF를 업로드하고 채팅하는" 간단한 경험을 원하는 개인 사용자를 위한 도구입니다. 오픈소스 버전은 전체 스택을 처리합니다: 문서 수집, 임베딩(Ollama를 통한 nomic-embed-text), 벡터 저장(Qdrant) 및 추론.
-
-설정은 10분 미만이 소요됩니다: 저장소를 복제하고, `make install`을 실행하고, 서버를 시작하십시오. localhost:8001의 웹 인터페이스는 PDF 및 DOCX 업로드를 허용합니다. PrivateGPT 0.6+는 출처 인용을 포함하므로 각 응답을 생성한 문서 청크를 정확히 확인할 수 있습니다.',
+        body: 'PrivateGPT는 기기에서 데이터가 유출되지 않고 "PDF를 업로드하고 채팅하는" 간단한 경험을 원하는 개인 사용자를 위한 도구입니다. 오픈소스 버전은 전체 스택을 처리합니다: 문서 수집, 임베딩(Ollama를 통한 nomic-embed-text), 벡터 저장(Qdrant) 및 추론.\n\n설정은 10분 미만이 소요됩니다: 저장소를 복제하고, `make install`을 실행하고, 서버를 시작하십시오. localhost:8001의 웹 인터페이스는 PDF 및 DOCX 업로드를 허용합니다. PrivateGPT 0.6+는 출처 인용을 포함하므로 각 응답을 생성한 문서 청크를 정확히 확인할 수 있습니다.',
         pros: ['완전 오프라인 — 원격 측정 없음', '내장 출처 인용', '개인을 위한 간단한 설정', '7B 모델로 빠른 속도'],
         cons: ['멀티 사용자 지원 없음', 'PDF/DOCX/TXT로 제한', '기본 인터페이스'],
         verdict: '노트북에서 개인 문서 조회 도구가 필요한 개인 전문가 — 변호사, 연구원, 컨설턴트 — 에게 가장 적합합니다.',
       },
       cognita: {
         heading: 'Cognita — RBAC를 갖춘 기업 수준의 RAG',
-        body: 'Cognita(Truefoundry 제공)는 역할 기반 액세스 제어, 감사 로그 및 클라우드 스토리지(S3, Azure Blob, SharePoint) 통합이 필요한 기업을 위한 도구입니다. 팀별로 별도의 컬렉션을 생성하고 컬렉션 수준에서 권한을 적용할 수 있습니다.
-
-Cognita는 로컬 추론을 위해 Ollama와 통합되지만 하이브리드 배포를 위해 AWS Bedrock 및 Azure OpenAI도 지원합니다. 메타데이터 추출 파이프라인은 OCR을 통해 스캔된 PDF를 처리하므로 디지털화된 계약서 및 역사적 문서에 적합합니다.',
+        body: 'Cognita(Truefoundry 제공)는 역할 기반 액세스 제어, 감사 로그 및 클라우드 스토리지(S3, Azure Blob, SharePoint) 통합이 필요한 기업을 위한 도구입니다. 팀별로 별도의 컬렉션을 생성하고 컬렉션 수준에서 권한을 적용할 수 있습니다.\n\nCognita는 로컬 추론을 위해 Ollama와 통합되지만 하이브리드 배포를 위해 AWS Bedrock 및 Azure OpenAI도 지원합니다. 메타데이터 추출 파이프라인은 OCR을 통해 스캔된 PDF를 처리하므로 디지털화된 계약서 및 역사적 문서에 적합합니다.',
         pros: ['RBAC 및 감사 로그', 'SharePoint/S3 통합', '스캔된 문서용 OCR', '다중 컬렉션 권한'],
         cons: ['더 복잡한 설정 (Kubernetes 권장)', 'AnythingLLM 또는 LlamaIndex보다 작은 커뮤니티'],
         verdict: '문서 액세스 제어 및 컴플라이언스 감사 추적이 필요한 규제 산업(금융, 의료, 법률)에 가장 적합합니다.',
       },
       chroma: {
         heading: 'Chroma — 최고의 오픈소스 벡터 데이터베이스',
-        body: 'Chroma는 완전한 RAG 애플리케이션이 아닙니다 — 맞춤형 RAG 스택에서 스토리지 계층으로 사용되는 오픈소스 벡터 데이터베이스입니다. LlamaIndex 또는 LangChain으로 자체 파이프라인을 구축하는 경우 Chroma는 Pinecone과 같은 호스팅 벡터 데이터베이스에 대한 빠른 로컬 대안을 제공합니다.
-
-Chroma는 임베딩을 SQLite에 저장하거나(임베디드 모드) 여러 클라이언트의 액세스를 위해 독립적인 HTTP 서버로 실행됩니다. 메타데이터 필터링을 지원하므로 특정 문서 컬렉션이나 날짜 범위로 검색을 제한할 수 있습니다.',
+        body: 'Chroma는 완전한 RAG 애플리케이션이 아닙니다 — 맞춤형 RAG 스택에서 스토리지 계층으로 사용되는 오픈소스 벡터 데이터베이스입니다. LlamaIndex 또는 LangChain으로 자체 파이프라인을 구축하는 경우 Chroma는 Pinecone과 같은 호스팅 벡터 데이터베이스에 대한 빠른 로컬 대안을 제공합니다.\n\nChroma는 임베딩을 SQLite에 저장하거나(임베디드 모드) 여러 클라이언트의 액세스를 위해 독립적인 HTTP 서버로 실행됩니다. 메타데이터 필터링을 지원하므로 특정 문서 컬렉션이나 날짜 범위로 검색을 제한할 수 있습니다.',
         pros: ['가벼운 임베디드 모드', '빠른 유사도 검색', 'Python 및 JavaScript 기본 클라이언트', '무료 오픈소스'],
         cons: ['내장 인터페이스 없음', '보완적인 LLM 프레임워크 필요', '단독으로는 완전한 RAG 솔루션이 아님'],
         verdict: 'LlamaIndex 또는 LangChain으로 맞춤형 RAG 스택을 구축할 때 벡터 스토리지 구성 요소로 가장 적합합니다.',
       },
       methodology: {
         heading: '이 RAG 도구를 어떻게 평가했습니까',
-        body: '각 도구를 200개의 기업 문서(계약서, 인보이스, 내부 정책, 기술 사양)로 구성된 850MB 참조 코퍼스에 대해 테스트했습니다. 평가 기준:
-
-- **검색 정확도:** 50개 질문 벤치마크에서 올바른 응답 비율
-- **설정 시간:** 비개발자가 처음부터 첫 번째 쿼리까지 걸리는 시간
-- **청킹 품질:** 기본 설정에서 검색된 청크의 일관성
-- **속도:** RTX 3090에서 Qwen3 14B Q4_K_M으로 쿼리 응답 시간
-- **실패 모드:** 코퍼스에 답변이 없을 때 환각 비율',
+        body: '각 도구를 200개의 기업 문서(계약서, 인보이스, 내부 정책, 기술 사양)로 구성된 850MB 참조 코퍼스에 대해 테스트했습니다. 평가 기준:\n\n- **검색 정확도:** 50개 질문 벤치마크에서 올바른 응답 비율\n- **설정 시간:** 비개발자가 처음부터 첫 번째 쿼리까지 걸리는 시간\n- **청킹 품질:** 기본 설정에서 검색된 청크의 일관성\n- **속도:** RTX 3090에서 Qwen3 14B Q4_K_M으로 쿼리 응답 시간\n- **실패 모드:** 코퍼스에 답변이 없을 때 환각 비율',
       },
       hardwareGuide: {
         heading: '로컬 기업 RAG를 위한 하드웨어 요구사항',
@@ -1389,15 +1359,7 @@ Chroma는 임베딩을 SQLite에 저장하거나(임베디드 모드) 여러 클
       },
       decisionMatrix: {
         heading: '어떤 RAG 도구를 선택해야 합니까?',
-        body: '**AnythingLLM을 선택하십시오:** 코딩 없이 오늘 당장 작동하는 솔루션이 필요하고 여러 팀원과 다양한 문서 형식을 지원해야 하는 경우.
-
-**LlamaIndex를 선택하십시오:** 맞춤형 RAG 애플리케이션을 구축하는 개발자이고, 메타데이터 필터링이 필요하거나 기존 데이터 파이프라인과 통합하려는 경우.
-
-**PrivateGPT를 선택하십시오:** PDF 컬렉션을 가진 개인 사용자로 유지 관리할 서버가 없는 경우.
-
-**Cognita를 선택하십시오:** 조직에서 문서 수준의 액세스 제어, 컴플라이언스 감사 추적 또는 스캔된 PDF 지원이 필요한 경우.
-
-**Chroma를 선택하십시오:** 맞춤형 스택을 구축 중이며 클라우드 계정 없이 로컬에서 실행되는 빠르고 무료인 벡터 데이터베이스가 필요한 경우.',
+        body: '**AnythingLLM을 선택하십시오:** 코딩 없이 오늘 당장 작동하는 솔루션이 필요하고 여러 팀원과 다양한 문서 형식을 지원해야 하는 경우.\n\n**LlamaIndex를 선택하십시오:** 맞춤형 RAG 애플리케이션을 구축하는 개발자이고, 메타데이터 필터링이 필요하거나 기존 데이터 파이프라인과 통합하려는 경우.\n\n**PrivateGPT를 선택하십시오:** PDF 컬렉션을 가진 개인 사용자로 유지 관리할 서버가 없는 경우.\n\n**Cognita를 선택하십시오:** 조직에서 문서 수준의 액세스 제어, 컴플라이언스 감사 추적 또는 스캔된 PDF 지원이 필요한 경우.\n\n**Chroma를 선택하십시오:** 맞춤형 스택을 구축 중이며 클라우드 계정 없이 로컬에서 실행되는 빠르고 무료인 벡터 데이터베이스가 필요한 경우.',
       },
       faq: {
         id: 'faq',
@@ -1428,9 +1390,9 @@ Chroma는 임베딩을 SQLite에 저장하거나(임베디드 모드) 여러 클
         id: 'related-reading',
         heading: '관련 자료',
         items: [
-          { title: 'Ollama로 로컬 LLM 실행하기', url: '/ko/local-llms/run-llm-locally-with-ollama' },
-          { title: 'LM Studio 가이드: 로컬 AI 모델 실행', url: '/ko/local-llms/lm-studio-guide' },
-          { title: '프롬프트 엔지니어링 기초', url: '/ko/prompt-engineering/prompt-engineering-basics' },
+          '[Ollama로 로컬 LLM 실행하기](/ko/local-llms/run-llm-locally-with-ollama)',
+          '[LM Studio 가이드: 로컬 AI 모델 실행](/ko/local-llms/lm-studio-guide)',
+          '[프롬프트 엔지니어링 기초](/ko/prompt-engineering/prompt-engineering-basics)',
         ],
       },
     },
