@@ -1352,8 +1352,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Privacy & Security',
     title: 'أفضل VPN لتنزيل نماذج الذكاء الاصطناعي في 2026',
-    seoTitle: 'أفضل 5 شبكات VPN لتنزيل نماذج الذكاء الاصطناعي 2026',
-    metaDescription: 'أفضل 5 شبكات VPN لتنزيل نماذج الذكاء الاصطناعي 2026: ProtonVPN (مراجَع، مجاني)، Mullvad (مجهول)، NordVPN (أكثر من 6,000 خادم)، Surfshark (الأرخص)، ExpressVPN (الأسرع).',
+    seoTitle: 'أفضل 5 شبكات VPN لتنزيل نماذج الذكاء AI 2026',
+    metaDescription: '5 شبكات VPN لتنزيل نماذج AI: ProtonVPN مجاني ومراجَع، Mullvad مجهول الهوية، NordVPN بأكثر من 6,000 خادم، Surfshark (~$2/شهر)، ExpressVPN الأسرع.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-23',
     freshness_tier: 'semi_annual',

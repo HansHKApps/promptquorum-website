@@ -795,8 +795,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Tool Comparisons',
     title: 'Cursor Pro مقابل Continue.dev: هل تستحق $20/شهر في 2026؟',
-    seoTitle: 'Cursor Pro مقابل Continue.dev: أيهما للكود المحلي؟',
-    metaDescription: 'Cursor Pro بـ $20/شهر يتفوق في نماذج السحابة. Continue.dev مجاني ومفتوح المصدر، ويعمل مع نماذج Ollama المحلية دون اتصال بالإنترنت.',
+    seoTitle: 'Cursor Pro مقابل Continue.dev 2026 | أيهما للكود؟',
+    metaDescription: 'Cursor Pro ($20/شهر) الأمثل لنماذج Claude وGPT السحابية مع تجربة محرر متكاملة. Continue.dev مجاني ويتفوق مع Ollama المحلي. اختر حسب مكان نموذجك.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

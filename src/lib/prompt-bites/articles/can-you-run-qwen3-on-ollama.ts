@@ -570,8 +570,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Ollama',
     title: 'هل يمكن تشغيل Qwen 3 على Ollama؟',
-    seoTitle: 'تشغيل Qwen 3 على Ollama 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'نعم — يدعم Ollama جميع أحجام Qwen 3 من 0.6B إلى 72B. شغّل باستخدام: ollama run qwen3:8b. يحتاج الحجم 8B إلى ~6 GB VRAM. تم التحديث في مايو 2026.',
+    seoTitle: 'تشغيل Qwen 3 على Ollama 2026: من 0.6B إلى 72B',
+    metaDescription: 'نعم — Ollama يدعم جميع أحجام Qwen 3 من 0.6B إلى 72B. الحجم 8B يحتاج ~6 GB VRAM بتكميم Q4_K_M. شغّله بأمر: ollama run qwen3:8b. محدَّث مايو 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

@@ -606,8 +606,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Tool Comparisons',
     title: 'ما أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام Android؟',
-    seoTitle: 'MLC Chat وPocketPal: أفضل تطبيقات LLM على Android 2026',
-    metaDescription: 'MLC Chat أسهل تطبيق لـ LLMs المحلية على Android. PocketPal أكثر مرونة. Termux + Ollama يمنح تحكماً كاملاً. الثلاثة تعمل دون اتصال بالإنترنت.',
+    seoTitle: 'أفضل تطبيقات LLM لـAndroid 2026: MLC Chat وPocketpal',
+    metaDescription: '3 تطبيقات تشغّل LLMs محلياً على Android دون إنترنت: MLC Chat (أسهل إعداد)، Pocketpal (GGUF مرن)، Termux + Ollama (تحكم كامل). تحتاج 4 GB RAM كحد أدنى.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

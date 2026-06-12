@@ -542,8 +542,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Quick Answers',
     title: 'هل يمكنك تشغيل RAG بذاكرة 2 GB RAM؟',
-    seoTitle: 'تشغيل RAG على 2 GB RAM 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3.2 1B + تضمينات MiniLM-L6-v2 تُشغّل RAG على 2 GB RAM بحجم إجمالي ~1.3-1.5 GB. النماذج 7B+ تحتاج 8 GB. إجابة سريعة من PromptQuorum.',
+    seoTitle: 'تشغيل RAG على 2 GB RAM في 2026: دليل عملي',
+    metaDescription: 'Llama 3.2 1B Q4_K_M (~750 MB) مع تضمينات MiniLM-L6-v2 (~80 MB) يُشغّل RAG على 2 GB RAM بإجمالي ~1.3-1.5 GB. النماذج 7B+ تحتاج 8 GB RAM كحدٍّ أدنى.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

@@ -567,8 +567,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Quantization & VRAM',
     title: 'كم VRAM تحتاج للنماذج اللغوية المحلية؟',
-    seoTitle: 'VRAM للنماذج المحلية 2026: جدول من 4 GB إلى 24 GB',
-    metaDescription: '4 GB تكفي لـ Phi-4 Mini Q4؛ 6 GB لـ Llama 3 8B Q4_K_M؛ 12 GB لـ Qwen 14B. المعادلة: المعاملات × 0.7 = GB عند Q4. من PromptQuorum.',
+    seoTitle: 'VRAM للنماذج المحلية 2026: من 4 GB إلى 70B',
+    metaDescription: '4 GB تكفي لـ Phi-4 Mini Q4؛ 6 GB تُشغّل Llama 3 8B Q4_K_M؛ 12 GB تفتح Qwen 14B Q4. القاعدة: معاملات × 0.7 = GB عند Q4. من PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

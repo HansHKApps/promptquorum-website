@@ -546,8 +546,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Quantization & VRAM',
     title: 'كم من VRAM يحتاج نموذج 70B؟',
-    seoTitle: 'VRAM لنموذج 70B: 3 خيارات 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'نموذج 70B بـ Q4_K_M يحتاج ~40 GB VRAM. الخيارات: RTX 3090 مزدوجة (48 GB)، M5 Max بـ 128 GB موحدة أو GPU سحابية. إجابة سريعة من PromptQuorum.',
+    seoTitle: 'VRAM لنموذج 70B: 3 خيارات 2026 | PromptQuorum',
+    metaDescription: 'نموذج 70B بـ Q4_K_M يحتاج ~40 GB VRAM. الخيارات: RTX 3090 مزدوجة (48 GB) أو M5 Max 128 GB ذاكرة موحدة أو GPU سحابية بـ $0.50/ساعة.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

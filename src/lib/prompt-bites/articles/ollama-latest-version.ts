@@ -576,8 +576,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Ollama',
     title: 'ما هو أحدث إصدار من Ollama؟',
-    seoTitle: 'إصدار Ollama الحالي 2026: كيف تتحقق وتحدّث',
-    metaDescription: 'شغّل ollama --version للتحقق من نسختك. على Linux أعد سكريبت التثبيت؛ على Mac وWindows حمّل المثبّت من ollama.com. النماذج لا تُحذف عند التحديث.',
+    seoTitle: 'إصدار Ollama الأحدث 2026: فحص وتحديث سريع',
+    metaDescription: 'شغّل ollama --version لمعرفة إصدارك المثبّت. Linux: أعد سكريبت التثبيت بأمر واحد. Mac وWindows: حمّل المثبّت من ollama.com. النماذج لا تُحذف.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',

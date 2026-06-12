@@ -659,8 +659,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Hardware Guides',
     title: 'هل يمكنك تشغيل نموذج لغة محلي على هاتف Xperia؟',
-    seoTitle: 'نموذج لغة محلي على Xperia اليابان 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Xperia 1 VI (12 GB) يشغّل Phi-4 Q4 و Rinna 3.6B؛ Xperia 5 V (8 GB) يدير نماذج 3B؛ Xperia 10 VI (6 GB) يقتصر على TinyLlama. عبر MLC Chat، بدون روت.',
+    seoTitle: 'LLM محلي على Xperia باليابان 2026 | PromptQuorum',
+    metaDescription: 'Xperia 1 VI (12 GB RAM) يشغّل Phi-4 Q4 و Rinna 3.6B عبر MLC Chat. Xperia 5 V (8 GB): نماذج 3B. Xperia 10 VI (6 GB): TinyLlama فقط. بدون روت.',
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',

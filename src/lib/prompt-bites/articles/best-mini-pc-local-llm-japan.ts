@@ -831,8 +831,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Hardware Guides',
     title: 'ما هو أفضل جهاز كمبيوتر مصغر لنماذج اللغة الكبيرة المحلية المتاح في اليابان؟',
-    seoTitle: 'أفضل جهاز مصغر لنماذج اللغة الكبيرة في اليابان 2026 | PromptQuorum',
-    metaDescription: 'Beelink SER7 (~¥70.000)، MINISFORUM UM790 Pro (~¥85.000)، GMKtec NucBox K6 (~¥65.000): أفضل 3 أجهزة مصغرة لنماذج اللغة الكبيرة المحلية في اليابان. 32 GB DDR5، دعم Vulkan.',
+    seoTitle: 'أفضل جهاز مصغر لنماذج LLM في اليابان 2026',
+    metaDescription: 'Beelink SER7 (~¥70,000) أفضل جهاز بـ~10 رمز/ثانية. UM790 Pro (~¥85,000) بـ~12 رمز/ثانية. GMKtec NucBox K6 (~¥65,000) اقتصادي. كلها 32 GB DDR5 وVulkan.',
     publishDate: '2026-05-27',
     dateModified: '2026-05-27',
     freshness_tier: 'semi_annual',

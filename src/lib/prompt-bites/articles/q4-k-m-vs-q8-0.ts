@@ -553,8 +553,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Quantization & VRAM',
     title: 'Q4_K_M مقابل Q8_0: أيهما تختار؟',
-    seoTitle: 'Q4_K_M مقابل Q8_0: أيهما تختار بحسب VRAM؟',
-    metaDescription: 'نموذج 7B بتكميم Q4_K_M يبلغ 4.1 GB ويحقق ~92% من الجودة. Q8_0 يبلغ 7.7 GB ويحقق ~99%. استخدم Q4_K_M مع 8 GB VRAM أو أقل، وQ8_0 مع 12 GB فما فوق.',
+    seoTitle: 'Q4_K_M مقابل Q8_0: أيهما يناسب VRAM لديك؟',
+    metaDescription: 'نموذج 7B بـ Q4_K_M يبلغ 4.1 GB (~92% جودة)؛ Q8_0 يبلغ 7.7 GB (~99%). استخدم Q4_K_M مع 8 GB VRAM أو أقل، وQ8_0 مع 12 GB VRAM فما فوق.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
