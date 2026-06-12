@@ -3634,4 +3634,479 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'Obsidian + 로컬 LLM: 보관함을 제2의 뇌로 만드는 5가지 플러그인 (2026)',
+    seoTitle: 'Obsidian + 로컬 LLM: 보관함을 위한 5가지 플러그인 2026',
+    intro:
+      '2026년에 Ollama 로컬 백엔드와 결합하면 5가지 Obsidian 플러그인이 보관함을 완전한 제2의 뇌로 변환합니다: Smart Connections, Copilot for Obsidian, Text Generator, Local GPT, BMO Chatbot. 각각 다른 레이어를 담당합니다—시맨틱 검색, 인라인 채팅, 템플릿 기반 생성, 개인 정보 보호 우선 대화, 컨텍스트가 있는 경량 채팅. 대부분의 사용자에게 권장하는 조합은 Smart Connections + Copilot for Obsidian입니다. 하나는 보관함 전체의 시맨틱 연결을 관리하고, 다른 하나는 채팅 인터페이스를 제공합니다. 이 가이드는 보관함 검색 품질, 생성 속도, 프롬프트 커스터마이징, 모바일 동기화 동작을 기준으로 5가지 플러그인을 평가하며 Ollama 설정을 위한 구체적인 단계를 제공합니다.',
+    metaDescription:
+      '2026년 로컬 Ollama로 테스트한 5가지 Obsidian 플러그인: Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot. 최적의 조합, 보관함 규모, 모바일 동기화 설명.',
+    twitterDescription:
+      '2026년 최적의 Obsidian + 로컬 LLM 조합: Smart Connections(보관함 시맨틱 검색) + Copilot for Obsidian(채팅). Ollama로 테스트한 5가지 플러그인. 모바일 동기화 주의사항 포함.',
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Phi-4 Mini',
+      'Gemma 3 4B',
+      'Qwen3 1.7B',
+      'nomic-embed-text',
+      'mxbai-embed-large',
+    ],
+    current_hardware_mentioned: [
+      'Mac M3 Pro / M4 (통합 메모리 16GB 이상)',
+      'RTX 3060 12GB 또는 RTX 4060 8GB 탑재 PC',
+      'RAM 16GB PC (CPU 전용 대체)',
+    ],
+    audience:
+      '1,000~20,000개 노트로 보관함을 운영하며 클라우드 서비스에 노트를 전송하지 않고 AI 기능을 원하는 숙련된 Obsidian 사용자, 지식 노동자, 연구자, 작가.',
+    readTime: '14분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Obsidian 로컬 LLM 플러그인',
+    targetKeywords: [
+      'obsidian 로컬 llm',
+      'obsidian ollama 플러그인',
+      'smart connections obsidian 로컬',
+      'copilot for obsidian 로컬',
+      'obsidian 제2의 뇌 ai',
+      'obsidian llm 개인 정보 보호',
+    ],
+    leadAnswerBlock:
+      '**2026년 대부분의 Obsidian 사용자에게는 Smart Connections + Copilot for Obsidian을 설치하고 두 플러그인 모두 로컬 Ollama 백엔드를 사용하도록 설정하십시오.** Smart Connections는 `nomic-embed-text` 또는 `mxbai-embed-large`를 이용한 로컬 임베딩으로 보관함 전체의 시맨틱 연결(관련 노트 사이드바)을 관리합니다. Copilot for Obsidian은 `http://localhost:11434/v1`의 Ollama OpenAI 호환 엔드포인트를 사용하도록 설정된 채팅 인터페이스를 제공합니다. 이 조합은 보관함 콘텐츠를 클라우드에 전송하지 않고도 "제2의 뇌" 사용 사례(시맨틱 검색 + 노트와 채팅)의 약 80%를 처리합니다. 반복 가능한 콘텐츠 생성(일일 일지 프롬프트, 회의 노트 확장)을 원한다면 세 번째 플러그인으로 Text Generator를 추가하십시오. Smart Connections 임베딩은 보관함 내 `.smart-env/`에 저장됩니다—Obsidian Sync로 기기 간 동기화되지만 iCloud 또는 Git 사용 시 기기별로 재생성이 필요합니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 로컬 LLM을 위한 최적의 Obsidian 플러그인 조합은 무엇입니까?',
+        answer:
+          'Smart Connections + Copilot for Obsidian이 권장 조합입니다. Smart Connections는 로컬 임베딩(Ollama를 통한 nomic-embed-text 또는 mxbai-embed-large)으로 보관함 시맨틱 검색을 처리하고, Copilot은 Ollama의 OpenAI 호환 엔드포인트에 연결된 채팅 사이드바를 제공합니다. 두 플러그인 함께 관련 노트 탐색과 보관함 컨텍스트 채팅을 담당하며 "제2의 뇌" 사용 사례의 약 80%를 처리합니다. 템플릿 기반 생성을 위해 세 번째 플러그인으로 Text Generator를 추가하십시오. Local GPT와 BMO Chatbot은 더 단순한 채팅 전용 경험을 원하는 사용자를 위한 Copilot의 경량 대안입니다. 5가지 플러그인 모두 어떤 Ollama 모델과도 작동하며, 2026년 RAM 16GB 시스템의 권장 채팅 모델은 Llama 3.2 3B 또는 Phi-4 Mini입니다.',
+        bullets: [
+          'Smart Connections — 시맨틱 검색 + 관련 노트 사이드바. 보관함 전체 연결에 최적.',
+          'Copilot for Obsidian — 보관함 컨텍스트가 있는 채팅 사이드바. 대화형 질의에 최적.',
+          'Text Generator — 프론트매터 변수가 있는 템플릿 기반 생성. 반복 가능한 워크플로(일일 노트, 회의 요약)에 최적.',
+          'Local GPT — 현재 노트와 개인 정보 보호 우선 채팅. Copilot의 경량 대안.',
+          'BMO Chatbot — 보관함 컨텍스트가 있는 미니멀 채팅. Copilot의 기능 표면 없이 단일 채팅 플러그인을 원하는 사용자에게 최적.',
+          '권장 Ollama 모델: Llama 3.2 3B(채팅), Phi-4 Mini(채팅, 소형), nomic-embed-text 또는 mxbai-embed-large(Smart Connections용 임베딩).',
+          '모바일 동기화 주의: Smart Connections 임베딩은 .smart-env/에 저장됨 — Obsidian Sync로 동기화, iCloud 또는 Git 사용 시 기기별 재생성 필요.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '빠른 정보', anchor: '#quick-facts' },
+      { label: '어떤 플러그인 조합을 설치할까요?', anchor: '#which-plugins' },
+      { label: '플러그인 비교표', anchor: '#comparison-table' },
+      { label: 'Smart Connections: 보관함 시맨틱 검색', anchor: '#smart-connections' },
+      { label: 'Copilot for Obsidian: 보관함 컨텍스트 채팅', anchor: '#copilot' },
+      { label: 'Text Generator: 템플릿 기반 생성', anchor: '#text-generator' },
+      { label: 'Local GPT: 개인 정보 보호 우선 채팅', anchor: '#local-gpt' },
+      { label: 'BMO Chatbot: 경량 채팅', anchor: '#bmo-chatbot' },
+      { label: '권장 조합: Smart Connections + Copilot', anchor: '#recommended-combo' },
+      { label: '워크플로: 일일 노트, MOC, 글쓰기 지원', anchor: '#workflows' },
+      { label: '모바일 동기화: Obsidian Sync vs iCloud vs Git', anchor: '#mobile-sync' },
+      { label: '보관함 규모: 1K, 5K, 10K, 20K 노트', anchor: '#vault-scale' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 자료', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Smart Connections + Copilot for Obsidian이 대부분의 사용자에게 권장하는 조합입니다.** Smart Connections는 로컬 임베딩으로 보관함 시맨틱 검색을 처리하고, Copilot은 보관함 컨텍스트 채팅을 처리합니다. 두 플러그인 함께 클라우드 호출 없이 "제2의 뇌" 사용 사례의 약 80%를 처리합니다.',
+          '**5가지 플러그인 모두 `http://localhost:11434/v1`의 OpenAI 호환 엔드포인트를 통해 Ollama와 작동합니다.** 각 플러그인의 "API 기본 URL" 또는 동등한 설정을 이 주소로 지정하십시오. Ollama 기본 모델 이름(예: `llama3.2:3b`)을 플러그인 모델 필드에 입력하십시오.',
+          '**Smart Connections는 보관함 전체의 임베딩 인덱스를 구축하는 유일한 플러그인입니다.** 이를 통해 5,000개 이상의 노트에서 관련 노트 검색이 실용적으로 됩니다. 인덱스는 보관함 내 `.smart-env/`에 저장되어 Obsidian Sync와 동기화됩니다. iCloud 또는 Git 사용 시 기기별 재생성이 필요합니다.',
+          '**Text Generator는 반복 가능한 워크플로를 위한 최적의 플러그인입니다.** 일일 노트 요약, 회의 노트 확장, MOC(콘텐츠 맵) 생성이 프론트매터 변수가 있는 템플릿을 통해 단일 키 액션이 됩니다.',
+          '**채팅 전용 사용자에게는 BMO Chatbot이 Copilot보다 경량입니다.** 인덱스를 구축하지 않으며 컨텍스트는 현재 노트뿐입니다. 열린 노트에 대해서만 채팅한다면 BMO로 충분합니다.',
+          '**보관함 규모(Smart Connections + nomic-embed-text 기준):** Mac M3 Pro에서 1K 노트 약 2분, 5K 약 10분, 10K 약 25분, 20K 약 75분 인덱싱. 변경된 노트만 재임베딩되므로 첫 실행 후 재인덱싱 시간은 작습니다.',
+          '**2026년 권장 Ollama 모델:** 채팅—Llama 3.2 3B(기본) 또는 Phi-4 Mini(소형); 임베딩—nomic-embed-text(768차원, 빠름) 또는 mxbai-embed-large(1024차원, 더 정확).',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 정보',
+        items: [
+          '**다루는 플러그인:** Smart Connections, Copilot for Obsidian, Text Generator, Local GPT, BMO Chatbot.',
+          '**LLM 백엔드:** Ollama(권장) 또는 LM Studio — 로컬 URL에서 OpenAI 호환 엔드포인트를 노출하는 모든 것.',
+          '**Ollama 기본 엔드포인트:** `http://localhost:11434/v1`(채팅) 또는 `http://localhost:11434/api/embeddings`(임베딩).',
+          '**권장 채팅 모델:** Llama 3.2 3B, Phi-4 Mini, Gemma 3 4B(RAM 16GB 시스템); Qwen3 1.7B(RAM 8GB).',
+          '**권장 임베딩 모델:** nomic-embed-text(768차원, 빠름), mxbai-embed-large(1024차원, 더 정확).',
+          '**보관함 규모 목표:** 5가지 플러그인 모두 5,000개 이상의 노트에서 반응적으로 유지됨; 20K 노트 이상에서 병목은 Smart Connections 재인덱싱.',
+          '**모바일 호환성:** Ollama가 LAN에서 접근 가능하면 채팅 플러그인이 Obsidian Mobile에서 작동함; Smart Connections 임베딩 생성은 데스크톱에서만 실행됨.',
+        ],
+      },
+      whichPlugins: {
+        id: 'which-plugins',
+        title: '어떤 플러그인 조합을 설치할까요?',
+        content:
+          '**2026년 대부분의 Obsidian 사용자에게는: Smart Connections(보관함 시맨틱 검색)와 Copilot for Obsidian(채팅 사이드바)를 설치하십시오 — 두 플러그인 함께 "제2의 뇌" 사용 사례의 약 80%를 처리합니다.** 템플릿 기반 생성을 원하면 Text Generator를 추가하십시오. 특정 인터페이스를 선호하지 않는 한 나머지는 건너뛰십시오.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Smart Connections + Copilot for Obsidian을 설치하고 두 플러그인 모두 localhost:11434의 Ollama를 사용하도록 설정하면 보관함 전체 시맨틱 검색과 대화형 질의를 처리하는 프라이빗 제2의 뇌 스택을 갖게 됩니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Obsidian + AI를 두 가지 작업으로 생각하십시오: 관련 노트 찾기("내 보관함의 어떤 다른 노트가 이 아이디어를 다루는가?")와 노트에 대해 채팅하기("지난 분기에 이것에 대해 무엇을 썼는가?"). Smart Connections가 첫 번째를 처리하고, Copilot이 두 번째를 처리합니다. 두 플러그인 모두 Ollama를 통해 로컬 LLM을 사용하므로 아무것도 기기를 떠나지 않습니다. 반복 가능한 작업을 수행한다면(예: 각 회의 노트를 요약으로 변환) Text Generator를 추가하십시오. 특별한 이유가 없다면 Local GPT와 BMO Chatbot은 건너뛰십시오.',
+          },
+        ],
+        decisionBlock: {
+          title: '결정: 어떤 Obsidian 플러그인을 설치할까요?',
+          localIf: [
+            '보관함 전체 시맨틱 검색("관련 노트 보여줘")을 원한다 → Smart Connections',
+            '노트 컨텍스트가 있는 채팅 사이드바를 원한다 → Copilot for Obsidian',
+            '템플릿 기반 생성(일일 노트, 회의 요약)을 원한다 → Text Generator',
+            '보관함 검색 없이 현재 노트에 대해서만 채팅한다 → BMO Chatbot(Copilot보다 경량)',
+            '엄격한 개인 정보 보호 보장과 최소 기능으로 채팅을 원한다 → Local GPT',
+          ],
+          cloudIf: [
+            '모든 채팅 응답에서 GPT-5.5 수준의 품질이 필요하다 → 클라우드 동등품(로컬 스택은 약 70% 수준 달성)',
+            '보관함이 로컬 네트워크 호출을 차단하는 관리형 클라우드 서비스에 있다 → 클라우드 플러그인',
+            'LAN 접근 없이 Obsidian Mobile 앱 내에서 네이티브 iOS AI 기능을 원한다 → 2026년에는 아직 실현 불가(모바일은 Tailscale 등 없이 로컬 LLM에 접근 불가)',
+          ],
+          quick: [
+            '권장 조합: Smart Connections + Copilot for Obsidian',
+            '템플릿용 추가: Text Generator',
+            '경량 대안: BMO Chatbot(채팅 전용)',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Smart Connections와 Copilot for Obsidian을 하나씩 설치하십시오. Smart Connections는 첫 설치 시 임베딩 인덱스를 구축해야 합니다(보관함 크기에 따라 2~75분). 초기 인덱싱 중 CPU 경쟁을 피하기 위해 완료 후 Copilot을 추가하십시오. 두 플러그인이 모두 실행되면 RAM 사용량은 작습니다(합계 약 200~400MB)—무거운 프로세스는 플러그인이 아니라 Ollama입니다.',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '플러그인 비교표',
+        content:
+          '**5가지 플러그인은 대부분의 사용자에게 중요한 4가지 축에서 차이가 있습니다: 보관함 검색 깊이, 생성 유연성, 모바일 호환성, 기능 표면.** Smart Connections와 Copilot은 서로 교체 가능하지 않습니다—다른 문제를 해결하며 서로 보완합니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Smart Connections는 임베딩으로 보관함 전체를 검색하는 유일한 플러그인이며, 나머지 4가지는 현재 노트나 선택한 텍스트에서 작동하는 채팅 또는 생성 도구입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '이 플러그인 중 두 개(Smart Connections, Copilot)는 보관함 전체 컨텍스트를 처리합니다. 나머지 세 개(Text Generator, Local GPT, BMO Chatbot)는 현재 노트나 특정 선택 항목에서 작동합니다. 둘 이상을 설치하는 가장 일반적인 이유는 Smart Connections에 자체 채팅 인터페이스가 없기 때문입니다—실제로 보관함과 대화하려면 Copilot이나 더 가벼운 채팅 플러그인 중 하나가 필요합니다.',
+          },
+        ],
+        columns: ['플러그인', '보관함 검색', '생성', '모바일 동기화', '최적 용도'],
+        rows: [
+          { '플러그인': 'Smart Connections', '보관함 검색': '예(임베딩 인덱스)', '생성': '아니오(검색 전용)', '모바일 동기화': 'Obsidian Sync로 인덱스 동기화; iCloud / Git 사용 시 기기별 재생성', '최적 용도': '노트 간 시맨틱 연결' },
+          { '플러그인': 'Copilot for Obsidian', '보관함 검색': '예(보관함 QA 모드 사용)', '생성': '예(채팅 + 인라인)', '모바일 동기화': '플러그인 동기화됨; Ollama는 LAN에서 접근 가능해야 함', '최적 용도': '인라인 채팅 + 글쓰기 지원' },
+          { '플러그인': 'Text Generator', '보관함 검색': '아니오', '생성': '예(템플릿 기반)', '모바일 동기화': '템플릿 동기화됨; Ollama는 LAN에서 접근 가능해야 함', '최적 용도': '반복 가능한 템플릿 기반 생성' },
+          { '플러그인': 'Local GPT', '보관함 검색': '아니오', '생성': '예(채팅)', '모바일 동기화': '플러그인 동기화됨; Ollama는 LAN에서 접근 가능해야 함', '최적 용도': '현재 노트와 개인 정보 보호 우선 채팅' },
+          { '플러그인': 'BMO Chatbot', '보관함 검색': '아니오', '생성': '예(채팅)', '모바일 동기화': '플러그인 동기화됨; Ollama는 LAN에서 접근 가능해야 함', '최적 용도': '현재 노트와 경량 채팅' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '모바일 사용의 경우 제한 사항은 플러그인이 아니라 Obsidian Mobile이 Ollama에 접근할 수 있는지 여부입니다. 해결책: (1) 더 강력한 홈 서버에서 Ollama를 실행하고 고정 IP로 LAN에 노출한 다음 플러그인에서 localhost 대신 해당 IP 입력, (2) Tailscale 또는 다른 메시 VPN을 사용하여 어디서나 홈 Ollama에 접근, (3) AI 기능은 집 Wi-Fi에서만 작동한다고 수용.',
+          },
+        ],
+      },
+      smartConnections: {
+        id: 'smart-connections',
+        title: 'Smart Connections: 보관함 시맨틱 검색',
+        content:
+          '**Smart Connections는 2026년에 보관함 전체에 임베딩 인덱스를 구축하는 유일한 Obsidian 플러그인입니다.** 이를 통해 5,000개 이상의 노트에서 "관련 노트 보여줘"가 실용적이며, 플러그인 생태계에서 가장 큰 "제2의 뇌" 지원 기능입니다.',
+        items: [
+          '**기능:** 각 노트(및 설정 가능한 섹션)에 대한 벡터 임베딩을 생성하고 활성 노트와 시맨틱으로 관련된 노트의 "Smart Connections" 사이드바를 표시합니다.',
+          '**설치:** 설정 → 커뮤니티 플러그인 → 탐색 → "Smart Connections" → 설치 + 활성화. 제작자: Brian Petro.',
+          '**Ollama 설정:** 설정 → Smart Connections → 임베딩 모델 → "Local (Ollama)" 선택 → `http://localhost:11434/api/embeddings` 입력 → 모델 이름 `nomic-embed-text`(또는 `mxbai-embed-large`).',
+          '**초기 인덱싱:** 플러그인이 각 노트를 임베딩합니다. nomic-embed-text 사용 시 Mac M3 Pro 소요 시간: 1K 노트 약 2분, 5K 노트 약 10분, 10K 노트 약 25분, 20K 노트 약 75분. 편집 후 재인덱싱은 증분적(수정된 노트만)입니다.',
+          '**저장:** 인덱스는 보관함 내 `.smart-env/`에 저장됩니다. Obsidian Sync와 깔끔하게 동기화됩니다. iCloud / Git 사용 시 인덱스가 플랫폼별 바이너리이므로 기기별로 재생성해야 합니다.',
+          '**2026년 최적 임베딩 모델:** 대부분의 사용자에게 `nomic-embed-text`(1.37억 파라미터, 768차원, 빠름). 기술 콘텐츠에서 더 정확하지만 인덱싱 시간이 약 2배인 `mxbai-embed-large`(3.35억 파라미터, 1024차원).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '첫 번째 인덱스가 완료된 후 Smart Connections를 백그라운드에서 활성화 상태로 유지하십시오. 이후 편집은 증분 재임베딩을 트리거합니다—일반적으로 저장된 노트당 1초 미만입니다. 집중적인 편집 세션 중 Ollama 자체와의 CPU 경쟁을 피하기 위해 인덱싱을 일시 중지할 수도 있습니다.',
+          },
+        ],
+      },
+      copilot: {
+        id: 'copilot',
+        title: 'Copilot for Obsidian: 보관함 컨텍스트 채팅',
+        content:
+          '**Copilot for Obsidian은 Smart Connections에 없는 채팅 사이드바를 제공합니다.** Ollama를 사용하도록 설정하면 보관함을 컨텍스트로 사용하여 질문에 답변하고, 인라인 콘텐츠를 생성하고, 선택 항목에 대한 사용자 지정 프롬프트를 실행할 수 있는 프라이빗 채팅 어시스턴트를 갖게 됩니다.',
+        items: [
+          '**기능:** 채팅 사이드바, 보관함 QA 모드(검색된 노트와 채팅), 인라인 채팅, 선택 항목에 대한 사용자 지정 프롬프트, 명령 팔레트 명령.',
+          '**설치:** 설정 → 커뮤니티 플러그인 → 탐색 → Logan Yang의 "Copilot" → 설치 + 활성화.',
+          '**Ollama 설정:** 설정 → Copilot → API 설정 → 공급자 "Custom OpenAI" 또는 "Ollama" → API 기본 URL `http://localhost:11434/v1` → 모델 `llama3.2:3b`(또는 임의의 Ollama 모델).',
+          '**보관함 QA 모드:** Copilot은 자체 임베딩 파이프라인(Smart Connections와 별도)으로 가장 관련성 높은 노트를 검색한 다음 검색된 스니펫을 채팅 모델로 전송합니다. Copilot 설정에서 임베딩을 설정하십시오—`http://localhost:11434/api/embeddings`를 지정하고 `nomic-embed-text`를 선택하십시오.',
+          '**인라인 명령:** 노트에서 텍스트 선택 → Cmd/Ctrl+P → "Copilot: …" — 채팅 사이드바를 열지 않고 재작성, 요약 또는 사용자 지정 프롬프트 템플릿 적용.',
+          '**최적 용도:** 채팅 인터페이스와 보관함 컨텍스트 검색을 모두 원하는 사용자. 현재 노트에 대해서만 채팅하고 싶다면 BMO Chatbot이 더 경량입니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Copilot은 Smart Connections와 별도로 자체 임베딩 인덱스를 유지합니다. 두 플러그인을 모두 실행하면 동일한 보관함에 두 개의 인덱스가 생성되어 디스크 공간이 약 2배 소모됩니다(5K 노트당 약 200MB 벡터 데이터). 디스크 공간이 중요하다면 Copilot이 Smart Connections 인덱스를 사용하도록 설정하거나, 2026년 현재 두 플러그인이 임베딩을 공유하지 않는다는 것을 수용하십시오.',
+          },
+        ],
+      },
+      textGenerator: {
+        id: 'text-generator',
+        title: 'Text Generator: 템플릿 기반 생성',
+        content:
+          '**Text Generator는 반복 가능한 워크플로를 위한 최적의 플러그인입니다: 일일 노트 확장, 회의 노트 요약, MOC 생성, 사용자 지정 형식의 출력.** 템플릿은 프론트매터 변수와 Markdown을 사용하므로 단일 템플릿을 모든 노트에서 키보드 단축키로 실행할 수 있습니다.',
+        items: [
+          '**기능:** 로컬 LLM을 사용하여 현재 노트(또는 선택 항목)에 대한 사용자 지정 프롬프트 템플릿을 실행합니다. 템플릿은 프론트매터 변수, 현재 날짜 삽입, 선택 캡처를 지원합니다.',
+          '**설치:** 설정 → 커뮤니티 플러그인 → 탐색 → "Text Generator" → 설치 + 활성화. 제작자: nhaouari.',
+          '**Ollama 설정:** 설정 → Text Generator → 공급자 → "Ollama" 또는 "Custom" → 엔드포인트 `http://localhost:11434/v1` → 모델 `llama3.2:3b`.',
+          '**템플릿:** 설정된 폴더(예: `Templates/`)에 Markdown 파일로 저장됩니다. 템플릿은 `{{title}}`, `{{selection}}`, `{{date}}` 마커가 있는 프롬프트입니다.',
+          '**키보드 단축키 워크플로:** 특정 템플릿에 단축키 할당(Cmd/Ctrl+T → "템플릿에서 생성" → 템플릿 선택). 한 번의 키 입력으로 현재 노트에서 템플릿을 실행합니다.',
+          '**최적 용도:** 수십 번 반복하는 워크플로—일지 프롬프트, 주간 리뷰 질문, 회의 노트 요약, 아티클 독서 노트.',
+        ],
+        promptExamples: [
+          {
+            label: 'Text Generator 템플릿: 일일 노트 요약기',
+            text: '---
+name: Daily summary
+---
+Summarise the following daily note in three concise bullet points. Focus on decisions made, blockers identified, and action items for tomorrow.
+
+Daily note ({{date}}):
+{{content}}
+
+Summary:',
+          },
+          {
+            label: 'Text Generator 템플릿: MOC(콘텐츠 맵) 생성기',
+            text: '---
+name: MOC for tag
+---
+Generate a Map of Content for all notes tagged with `#{{selection}}`. Group related notes into 3–5 thematic clusters, with a one-sentence description per cluster and a list of the notes inside each cluster.
+
+Notes tagged #{{selection}}:
+{{vault_search_result tag={{selection}}}}
+
+MOC:',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Text Generator 템플릿을 Obsidian QuickAdd와 결합하여 "일일 리뷰" 시퀀스를 구축하십시오: 단일 QuickAdd 명령이 오늘의 일일 노트를 열고, 일일 요약 템플릿을 실행하고, 결과를 삽입합니다. 세 개의 플러그인(Text Generator + QuickAdd + 날짜 계산을 위한 Templater)으로 실행에 2초, 완료에 10초가 걸리는 워크플로를 구축할 수 있습니다.',
+          },
+        ],
+      },
+      localGpt: {
+        id: 'local-gpt',
+        title: 'Local GPT: 개인 정보 보호 우선 채팅',
+        content:
+          '**Local GPT는 노트 콘텐츠가 기기를 떠나서는 안 된다는 원칙을 중심으로 구축된 채팅 플러그인입니다.** 기능적으로는 Copilot for Obsidian보다 단순합니다—보관함 QA 모드 없음, 템플릿 라이브러리 없음—하지만 개인 정보 보호 입장에서 가장 명확합니다.',
+        items: [
+          '**기능:** 로컬 LLM을 사용하여 현재 노트(또는 선택한 텍스트)와 채팅합니다. 플러그인에 클라우드 옵션이 없습니다—로컬 공급자만.',
+          '**설치:** 설정 → 커뮤니티 플러그인 → 탐색 → "Local GPT" → 설치 + 활성화. 제작자: pfrankov(목록에서 확인—여러 플러그인이 비슷한 이름을 가짐).',
+          '**Ollama 설정:** 설정 → Local GPT → 공급자 → "Ollama" → URL `http://localhost:11434` → 모델 `llama3.2:3b`.',
+          '**채팅 범위:** 활성 노트 또는 선택한 텍스트만. 임베딩 인덱스 없음—컨텍스트는 명시적으로 전송하는 것.',
+          '**최적 용도:** 현재 노트에 대해 채팅하고, 가능한 한 최소한의 기능 표면을 선호하고, 실수로 클라우드 서비스를 호출할 수 없는 플러그인을 원하는 사용자.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Copilot for Obsidian이 로컬을 유지한다고 신뢰한다면(클라우드 또는 로컬로 설정 가능) Copilot을 사용하십시오. 플러그인 코드 자체가 클라우드 호출을 불가능하게 만들기를 원한다면 Local GPT를 사용하십시오—설계 제약은 "클라우드 공급자 없음, 절대로"입니다. 이는 실수로 클라우드로 유출될 가능성이 있는 것이 문제인 의료, 법률, 저널리즘 워크플로에서 중요한 차이점입니다.',
+          },
+        ],
+      },
+      bmoChatbot: {
+        id: 'bmo-chatbot',
+        title: 'BMO Chatbot: 경량 채팅',
+        content:
+          '**BMO Chatbot은 미니멀리스트 채팅 플러그인입니다: 사이드바 하나, 모델 선택기 하나, 엔드포인트용 설정 필드 하나.** 보관함 검색 없음, 템플릿 없음, 인라인 명령 없음. 활성 노트에 대해서만 채팅한다면 BMO가 가장 가벼운 옵션입니다.',
+        items: [
+          '**기능:** 활성 노트를 컨텍스트로 포함하는 채팅 사이드바.',
+          '**설치:** 설정 → 커뮤니티 플러그인 → 탐색 → "BMO Chatbot" → 설치 + 활성화. 제작자: longy2k.',
+          '**Ollama 설정:** 설정 → BMO Chatbot → API → URL `http://localhost:11434/v1` → 모델 `llama3.2:3b`.',
+          '**컨텍스트 처리:** 활성 노트가 채팅 컨텍스트에 자동으로 포함됩니다. 노트를 전환하면 컨텍스트가 변경됩니다.',
+          '**최적 용도:** 최소한의 설정으로 단일 채팅 플러그인을 원하고, 임베딩 인덱스가 없고, 좁은 Obsidian 사이드바에 맞는 인터페이스를 원하는 사용자.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'BMO Chatbot은 "현재 노트에 대해 채팅하고 싶을 뿐"이라는 경우에 적합한 플러그인입니다. "보관함 전체를 검색하고 싶다" 또는 "각 회의 노트에 이 프롬프트 템플릿을 실행하고 싶다"는 생각이 든다면 BMO를 넘어선 것입니다—Copilot for Obsidian(보관함 QA) 또는 Text Generator(템플릿)로 전환하십시오.',
+          },
+        ],
+      },
+      recommendedCombo: {
+        id: 'recommended-combo',
+        title: '권장 조합: Smart Connections + Copilot',
+        content:
+          '**Smart Connections + Copilot for Obsidian을 설치하고 두 플러그인 모두 Ollama를 사용하도록 설정하십시오.** 이 조합은 Obsidian 사용자가 원하는 두 가지 별개의 AI 작업—보관함 시맨틱 검색과 보관함 컨텍스트 채팅—을 처리하며, 노트를 클라우드에 전송하지 않고 "제2의 뇌" 사용 사례의 약 80%를 처리합니다.',
+        numberedItems: [
+          '**Ollama 설치:** 기기에 `brew install ollama`(macOS) 또는 ollama.com에서 다운로드(Windows / Linux). 채팅 모델 다운로드: `ollama pull llama3.2:3b`. 임베딩 모델 다운로드: `ollama pull nomic-embed-text`.',
+          '**Ollama 시작:** 설치 후 보통 백그라운드 서비스로 시작됩니다. 확인: `curl http://localhost:11434/api/tags`가 설치된 모델이 포함된 JSON을 반환합니다.',
+          '**Smart Connections 설치:** Obsidian에서 → `http://localhost:11434/api/embeddings`의 Ollama를 사용하도록 임베딩 설정, 모델 `nomic-embed-text`. 인덱싱을 기다리십시오(보관함 크기에 따라 2~75분).',
+          '**Copilot for Obsidian 설치:** → 공급자를 "Ollama" 또는 "Custom OpenAI"로 설정 → API 기본 URL `http://localhost:11434/v1` → 채팅 모델 `llama3.2:3b` → 임베딩 모델 `nomic-embed-text`(보관함 QA용).',
+          '**테스트:** 노트 열기 → Smart Connections 사이드바에서 관련 노트 확인 → Copilot 채팅 열기 → 보관함 지식이 필요한 질문 하기("내가 [주제]에 대해 쓴 내용 요약해줘") → 응답이 실제 노트를 참조하는지 확인.',
+          '**선택적 세 번째 플러그인:** 반복 가능한 워크플로(일일 노트 요약, 회의 확장, MOC 생성)가 있다면 Text Generator를 추가하십시오. 동일한 Ollama 엔드포인트로 설정하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '흔한 실수는 Copilot과 Smart Connections에 각각 다른 모델을 설정하는 것입니다—그러면 응답이 일관성 없게 느껴질 수 있습니다. 두 플러그인 모두에서 동일한 채팅 모델을 사용하십시오(대부분의 사용자에게는 Llama 3.2 3B; RAM 8GB 시스템에는 Phi-4 Mini). 다른 모델을 사용하는 유일한 곳은 임베딩 모델입니다—이것은 항상 채팅 모델과 별도의 모델입니다.',
+          },
+        ],
+      },
+      workflows: {
+        id: 'workflows',
+        title: '워크플로: 일일 노트, MOC, 글쓰기 지원',
+        content:
+          '**조합을 실제로 보여주는 세 가지 구체적인 워크플로.** 각각 Smart Connections(보관함 컨텍스트용)와 Copilot(채팅용)을 기반으로 하며 템플릿 작업을 위해 Text Generator가 추가됩니다.',
+        items: [
+          '**일일 노트 요약:** 일일 노트에서 전체 선택 → Copilot 인라인 명령 → "이 날을 결정, 차단요소, 내일의 행동 항목에 집중한 세 가지 요점으로 요약해줘". 출력이 선택 항목 아래에 추가됩니다. 프롬프트를 Text Generator 템플릿으로 저장하여 단일 키 액션으로 만드십시오.',
+          '**MOC(콘텐츠 맵) 생성:** 태그 페이지 또는 주제 노트 열기 → Copilot → "이 주제에 대한 콘텐츠 맵을 생성하고, 내가 가진 관련 노트를 3~5개의 주제 클러스터로 그룹화해줘. Smart Connections 사이드바를 사용하여 관련 노트를 식별해줘." → 검토 및 편집. Smart Connections가 탐색 레이어를 제공하고, Copilot이 구조를 합성합니다.',
+          '**컨텍스트 글쓰기 지원:** 노트 작성 중 Copilot 채팅 열기 → "내가 [주제]에 대해 쓴 노트를 감안할 때, 내가 놓치고 있는 관점은 무엇인가?" 묻기. Copilot이 보관함 QA로 관련 노트를 검색하고 격차를 제안합니다. 단일 관점의 초안에서 벗어나는 데 유용합니다.',
+          '**주간 리뷰:** 최근 7개 일일 노트에 대해 실행하는 Text Generator 템플릿 → "카테고리별로 주간을 3가지 요점으로 요약해줘: 진척, 차단요소, 주제." 단일 키 리뷰를 위해 키보드 단축키에 할당하십시오.',
+          '**아티클/도서 독서 노트:** 원본 노트 열기 → Copilot 인라인 명령 → "간격 반복을 위해 이 노트에서 세 가지 Anki 스타일 질문/답변 쌍을 생성해줘." 출력을 간격 반복 플러그인으로 전달할 수 있습니다.',
+          '**잠자는 노트 연결하기:** Smart Connections 사이드바는 몇 달 동안 건드리지 않았을 수 있는 관련 노트를 표시합니다—오래된 자료를 현재 작업과 검토하고 연결하도록 초대합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '가장 과소평가된 워크플로는 매일 Smart Connections 리뷰입니다. 매일 아침 일일 노트를 열고 → 아카이브에서 예상치 못한 관련 노트를 찾기 위해 Smart Connections 사이드바를 확인하십시오. 플러그인이 같은 주제를 다루는 잊혀진 노트를 표면화하며, 이것이 바로 지식 노동자들이 제2의 뇌에서 원하는 "사고 파트너" 효과입니다.',
+          },
+        ],
+      },
+      mobileSync: {
+        id: 'mobile-sync',
+        title: '모바일 동기화: Obsidian Sync vs iCloud vs Git',
+        content:
+          '**Obsidian Mobile에서의 플러그인 호환성은 두 가지 요소에 달려 있습니다: 보관함 동기화 방법과 전화기가 로컬 Ollama 서버에 접근할 수 있는지 여부.** Smart Connections 임베딩이 동기화에 가장 민감한 구성 요소입니다.',
+        items: [
+          '**Obsidian Sync(유료):** 가장 깔끔한 경로. `.smart-env/` 폴더가 기기 간 종단 간 암호화로 동기화되므로 Smart Connections가 기기별로 재인덱싱할 필요가 없습니다. 플러그인 설정도 동기화됩니다. 모바일 채팅 플러그인은 여전히 Ollama에 LAN 접근이 필요합니다(아래 참조).',
+          '**iCloud Drive:** 보관함은 동기화되지만 `.smart-env/`는 플랫폼별 바이너리이며 iOS / macOS / Windows / Android 간에 올바르게 동기화되지 않을 수 있습니다. 실용적인 해결책: 기기별로 Smart Connections를 재인덱싱하거나, 동기화에서 `.smart-env/`를 제외하고 모바일에서 시맨틱 사이드바가 없다고 수용하십시오.',
+          '**Git(iOS의 Working Copy, Android의 Termux를 통해):** 일반 텍스트 보관함이 깔끔하게 동기화됩니다. `.smart-env/`는 바이너리 인덱스가 저장소를 부풀리고 병합 충돌을 일으키므로 `.gitignore`에 추가해야 합니다. 기기별로 재인덱싱하십시오.',
+          '**모바일에서 Ollama LAN 접근:** 기본적으로 Ollama는 `localhost:11434`에서만 수신합니다—전화기에서 접근 불가. 모바일에서 AI 플러그인을 사용하려면: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`로 LAN에 Ollama를 바인딩하고, 데스크톱 LAN IP를 찾아(예: `192.168.1.20`), localhost 대신 해당 IP를 플러그인에 입력하십시오. 전화기가 집 Wi-Fi에 있어야 합니다.',
+          '**Tailscale / 메시 VPN:** 집 Wi-Fi뿐만 아니라 어디서나 홈 Ollama에 전화기가 접근할 수 있게 합니다. Tailscale이 2026년 가장 인기 있는 옵션입니다—데스크톱과 전화기에 설치하고, 플러그인 설정에서 Tailscale IP를 사용하십시오.',
+          '**Smart Connections 임베딩 생성은 데스크톱에서만 실행됩니다.** Obsidian Sync가 인덱스를 이동시켜도 인덱스는 어딘가에서 생성되어야 합니다—그것은 항상 데스크톱 수준의 기기입니다. 모바일은 동기화된 인덱스를 읽기 전용 관련 노트 검색에 사용합니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '보관함 동기화에 iCloud 또는 Git을 사용하고 여러 기기에서 Smart Connections가 작동하기를 원한다면, 가장 깔끔한 경로는 하나의 기기를 "인덱서"(기본 데스크톱)로 지정하고 Smart Connections가 거기서만 완전히 작동한다고 수용하는 것입니다. 다른 기기에서는 오래된 인덱스(iCloud) 또는 인덱스 없음(`.smart-env`가 .gitignore에 있는 Git)이 됩니다. Obsidian Sync만이 이를 올바르게 처리하는 유일한 옵션입니다.',
+          },
+        ],
+      },
+      vaultScale: {
+        id: 'vault-scale',
+        title: '보관함 규모: 1K, 5K, 10K, 20K 노트',
+        content:
+          '**5가지 플러그인 모두 5,000개 이상의 노트에서 반응적으로 유지됩니다. 20K 노트 이상에서 병목은 쿼리 지연이 아니라 Smart Connections 재인덱싱 시간입니다.** 아래의 현실적인 수치는 `nomic-embed-text` 임베딩과 Llama 3.2 3B 채팅을 사용하는 Mac M3 Pro(통합 메모리 16GB)에서 측정되었습니다.',
+        columns: ['보관함 크기', 'Smart Connections 초기 인덱스', '변경당 재인덱싱', '채팅 지연(Copilot)', '참고사항'],
+        rows: [
+          { '보관함 크기': '1,000 노트', 'Smart Connections 초기 인덱스': '약 2분', '변경당 재인덱싱': '1초 미만', '채팅 지연(Copilot)': '첫 번째 토큰 약 1~2초', '참고사항': '모든 최신 하드웨어에서 편안함.' },
+          { '보관함 크기': '5,000 노트', 'Smart Connections 초기 인덱스': '약 10분', '변경당 재인덱싱': '1초 미만', '채팅 지연(Copilot)': '첫 번째 토큰 약 1~2초', '참고사항': '대부분의 지식 노동자에게 최적.' },
+          { '보관함 크기': '10,000 노트', 'Smart Connections 초기 인덱스': '약 25분', '변경당 재인덱싱': '약 1~2초', '채팅 지연(Copilot)': '첫 번째 토큰 약 2~3초(보관함 QA 검색이 약 500ms 추가)', '참고사항': '여전히 완전히 사용 가능; 느려짐이 느껴지면 분리 고려.' },
+          { '보관함 크기': '20,000 노트', 'Smart Connections 초기 인덱스': '약 75분', '변경당 재인덱싱': '약 2~4초', '채팅 지연(Copilot)': '첫 번째 토큰 약 3~5초', '참고사항': '초기 인덱스는 밤에 실행하십시오. `.smart-env/` 디스크 사용량 약 800MB~1.2GB.' },
+          { '보관함 크기': '50,000개 이상 노트', 'Smart Connections 초기 인덱스': '4~8시간', '변경당 재인덱싱': '약 5~10초', '채팅 지연(Copilot)': '첫 번째 토큰 약 5~10초', '참고사항': '실용적 한계. 하위 보관함 고려 또는 정확도가 속도보다 중요하면 mxbai-embed-large로 업그레이드.' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '보관함 크기는 일일 반응성보다 초기 인덱싱에 더 큰 영향을 미칩니다. 초기 인덱스 후 재임베딩은 수정된 노트에만 발생합니다—20K 노트에서도 일반적으로 저장당 1초 미만입니다. 처음 한 번만 느린 경험입니다. 보관함이 크다면 야간에 초기 인덱스를 실행하십시오.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '흔한 실수',
+        items: [
+          '**두 플러그인에 두 가지 다른 채팅 모델을 설정하는 것.** Smart Connections는 생성하지 않지만 Copilot, Text Generator, Local GPT, BMO는 생성합니다. 각 플러그인에서 다른 모델을 사용하면 응답이 일관성 없게 느껴집니다. 채팅 모델 하나(대부분의 사용자에게 Llama 3.2 3B가 기본)를 선택하고 모든 채팅 플러그인에서 사용하도록 설정하십시오.',
+          '**`.gitignore` 없이 Git으로 동기화된 보관함에 `.smart-env/`를 추가하는 것.** Smart Connections 인덱스는 바이너리이며 모든 편집 시 변경됩니다. `.gitignore` 없이는 방대한 Git 이력과 끊임없는 병합 충돌이 생깁니다. `.smart-env/`를 `.gitignore`에 추가하고 기기별로 재인덱싱하십시오.',
+          '**Smart Connections 모바일이 자체 인덱스를 구축할 것으로 기대하는 것.** 임베딩 생성에는 데스크톱 수준의 기기가 필요합니다. 모바일은 동기화된 인덱스(Obsidian Sync)를 사용하거나 인덱스가 없습니다(iCloud / Git). 그에 맞게 계획하십시오.',
+          '**모바일 기기에서 `http://localhost:11434/v1`로 플러그인을 지정하는 것.** 모바일은 데스크톱의 localhost에 접근할 수 없습니다. Ollama를 LAN IP에 바인딩하고(`OLLAMA_HOST=0.0.0.0:11434`) 플러그인 설정에서 해당 IP를 사용하거나, 네트워크 외부에서 접근하려면 Tailscale을 사용하십시오.',
+          '**동일한 보관함에 Smart Connections와 Copilot 두 인덱스를 모두 실행하는 것.** 두 개의 별도 인덱스는 디스크와 CPU를 약 2배 소비합니다. 2026년 5월 기준으로 두 플러그인은 임베딩을 공유하지 않습니다. 디스크 공간이 중요하다면 Smart Connections를 검색에 사용하고 Smart Connections 벡터 저장소를 읽도록 Copilot을 설정하십시오(고급—Copilot의 검색 설정 편집 필요).',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          'Smart Connections — [github.com/brianpetro/obsidian-smart-connections](https://github.com/brianpetro/obsidian-smart-connections) (오픈 소스 Obsidian 플러그인).',
+          'Copilot for Obsidian — [github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot) (오픈 소스 Obsidian 플러그인).',
+          'Text Generator — [github.com/nhaouari/obsidian-textgenerator-plugin](https://github.com/nhaouari/obsidian-textgenerator-plugin) (오픈 소스 Obsidian 플러그인).',
+          'Ollama — [ollama.com](https://ollama.com) 및 [github.com/ollama/ollama](https://github.com/ollama/ollama) (로컬 LLM 실행 환경).',
+          'Obsidian 모바일 동기화 아키텍처 — [help.obsidian.md](https://help.obsidian.md) 및 Obsidian Sync 문서.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Ollama와 가장 잘 작동하는 Obsidian 플러그인은 무엇입니까?',
+            a: '대부분의 사용자에게: Smart Connections(보관함 시맨틱 검색) + Copilot for Obsidian(채팅). 두 플러그인 모두 Ollama 엔드포인트를 사용하도록 설정하십시오(채팅은 `http://localhost:11434/v1`, 임베딩은 `http://localhost:11434/api/embeddings`). Smart Connections가 관련 노트 탐색을 처리하고, Copilot이 보관함 컨텍스트로 대화형 쿼리를 처리합니다. 반복 가능한 템플릿 워크플로가 있다면 세 번째 플러그인으로 Text Generator를 추가하십시오.',
+          },
+          {
+            q: '플러그인이 10,000개 노트 보관함을 처리할 수 있습니까?',
+            a: '예. Smart Connections는 Mac M3 Pro에서 초기 임베딩 인덱스에 약 25분이 걸리고 그 후 변경당 약 1~2초가 걸립니다. Copilot의 보관함 QA 지연은 첫 번째 토큰까지 약 2~3초입니다. 20K 노트의 경우 초기 인덱싱에 약 75분이 필요합니다(야간에 실행). 50K개 이상의 노트에서 인덱싱에 4~8시간이 걸리며 하위 보관함으로 분리를 고려해야 합니다.',
+          },
+          {
+            q: '이 플러그인들이 모바일에 동기화됩니까?',
+            a: '플러그인 자체는 Obsidian 플러그인 동기화를 통해 동기화됩니다. 제한 사항은: (1) Smart Connections 임베딩 인덱스—Obsidian Sync로 깔끔하게 동기화되고, iCloud 또는 Git 사용 시 기기별 재인덱싱 필요; (2) 채팅 플러그인은 Ollama에 접근해야 하므로 LAN 접근(localhost를 `0.0.0.0`에 바인딩한 후 데스크톱 LAN IP 사용) 또는 Tailscale과 같은 메시 VPN이 필요합니다.',
+          },
+          {
+            q: '여러 AI 플러그인을 함께 사용할 수 있습니까?',
+            a: '예. Smart Connections + Copilot이 권장 조합입니다. 템플릿용으로 Text Generator를 추가하는 것이 일반적입니다. 3개 이상의 채팅 플러그인(Copilot + Local GPT + BMO)을 추가하는 것은 중복됩니다—모두 같은 작업을 합니다. 채팅 플러그인 하나를 선택하고 유지하십시오.',
+          },
+          {
+            q: '노트 내에서 쓰기에 어떤 플러그인이 가장 좋습니까?',
+            a: 'Copilot for Obsidian — 선택한 텍스트에서 작동하는 인라인 명령(Cmd/Ctrl+P → Copilot → 재작성 / 요약 / 사용자 지정 프롬프트)이 있습니다. Text Generator도 템플릿을 통한 반복 가능한 쓰기 작업에 강력합니다. 임시 쓰기 지원("이 단락을 더 공식적인 톤으로 재작성해줘")에는 Copilot이 더 빠릅니다. 구조화된 생성("이 템플릿을 사용하여 각 회의 노트를 요약으로 변환해줘")에는 Text Generator가 더 좋습니다.',
+          },
+          {
+            q: '전체 보관함에 대해 프롬프트를 어떻게 할 수 있습니까?',
+            a: 'Copilot for Obsidian의 보관함 QA 모드를 사용하십시오. 임베딩 인덱스(Smart Connections와 유사)를 사용하여 쿼리에 가장 관련성 높은 노트를 검색한 다음 해당 스니펫을 채팅 모델로 전송합니다. 로컬 Ollama를 지정하도록 Copilot 설정에서 임베딩을 설정하십시오. Smart Connections 자체에는 채팅 인터페이스가 없습니다—관련 노트를 표시하지만 그것들을 합성하지는 않습니다.',
+          },
+          {
+            q: '일일 일지에 이것들을 사용할 수 있습니까?',
+            a: '예. 두 가지 견고한 패턴: (1) Smart Connections 사이드바가 오늘의 일일 노트를 열 때 잊혀진 관련 노트를 표면화합니다—"사고 파트너" 효과. (2) Text Generator 템플릿이 하루 끝에 실행되어 일일 노트를 3가지 요점(결정, 차단요소, 행동 항목)으로 요약합니다. 두 가지를 결합하면 일일 일지가 더 성찰적이 됩니다.',
+          },
+          {
+            q: '플러그인이 Obsidian 업데이트 후에도 작동합니까?',
+            a: '일반적으로 예—잘 유지되는 플러그인(Smart Connections, Copilot, Text Generator)은 주요 Obsidian 버전 이후 며칠 이내에 업데이트됩니다. 유지 관리가 덜 되는 플러그인은 가끔 지연됩니다. 업데이트 후 플러그인이 실패하면 플러그인의 GitHub Issues 페이지를 확인하십시오. 수정 사항은 보통 1~2주 내에 릴리스됩니다. 플러그인 매니페스트는 최소 Obsidian 버전 호환성을 선언합니다.',
+          },
+          {
+            q: '어떤 플러그인이 커뮤니티 지원이 가장 좋습니까?',
+            a: 'Smart Connections가 가장 크고 활발한 커뮤니티를 보유합니다(2026년 Discord에서 약 5,000명, 정기적인 개발자 미팅). Copilot for Obsidian은 GitHub Issues에 강력한 커뮤니티와 활발한 유지 관리자(Logan Yang)가 있습니다. Text Generator는 더 작지만 헌신적인 커뮤니티가 있습니다. Local GPT와 BMO Chatbot은 더 작은 커뮤니티를 가지고 있으며—안정적인 사용에는 좋지만 문제 해결이 느립니다.',
+          },
+          {
+            q: '다른 기기에서 AI 플러그인을 실행할 수 있습니까?',
+            a: '예. 더 강력한 홈 서버(미니 PC, NAS 또는 전용 워크스테이션)에서 Ollama를 실행하고, `OLLAMA_HOST=0.0.0.0:11434 ollama serve`로 LAN에 바인딩한 다음, 각 플러그인 설정에서 서버 LAN IP를 입력하십시오(예: `http://192.168.1.20:11434/v1`). 이를 통해 저전력 노트북이나 모바일 기기가 홈 서버에서 실행되는 전체 70B 모델을 사용할 수 있습니다. Tailscale과 결합하면 집 Wi-Fi뿐만 아니라 어디서나 작동합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[로컬 LLM과 Logseq 및 Joplin](/ko/power-local-llm/local-llm-with-logseq-and-joplin) — Obsidian보다 Logseq 또는 Joplin을 선호하는 독자를 위한 인접 오픈 소스 대안.',
+          '[2026년 로컬 LLM을 이용한 개인 지식 베이스](/ko/power-local-llm/local-llm-personal-knowledge-base-2026) — Obsidian이 통합되는 더 넓은 PKB 아키텍처; RAG 레이어, 태깅 전략, 10K 항목 워크플로 포함.',
+          '[30분 만에 PDF에 로컬 RAG 구축하기(Ollama + AnythingLLM)](/ko/power-local-llm/local-rag-on-your-pdfs-step-by-step) — Smart Connections와 같은 시맨틱 플러그인을 구동하는 RAG 레이어; 임베딩 옵션에 대한 맥락으로 유용.',
+          '[로컬 LLM을 이용한 소설 및 시나리오 작성(2026)](/ko/power-local-llm/local-llm-screenwriting-and-novel-drafting) — 장편 글쓰기를 위한 쓰기 레이어로서의 Obsidian.',
+          '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 이 플러그인 뒤의 채팅 및 임베딩 모델을 선택하기 위한 더 넓은 모델 권위.',
+          '[2026년 로컬 LLM 소프트웨어 디렉토리](/ko/power-local-llm/local-llm-software-directory-2026) — Ollama, Smart Connections, Copilot 및 이 스택의 다른 구성 요소에 대한 디렉토리 목록.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Obsidian + 로컬 LLM: 보관함을 제2의 뇌로 만드는 5가지 플러그인 (2026)',
+      description: '2026년 로컬 Ollama로 테스트한 5가지 Obsidian 플러그인: Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot. 최적의 조합, 보관함 규모, 모바일 동기화.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-with-obsidian-2026',
+      inLanguage: 'ko',
+      datePublished: '2026-05-08',
+      dateModified: '2026-05-08',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
 }

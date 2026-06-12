@@ -4119,4 +4119,610 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Mobile & Edge LLMs',
+    title: '2026년 Android용 최고의 로컬 LLM 앱: 실제 스마트폰으로 비교한 6가지 앱',
+    seoTitle: 'Android 로컬 LLM 앱 2026: MLC Chat, Maid 등 비교',
+    intro:
+      '2026년에 6가지 Android 앱이 인터넷 연결 없이 대형 언어 모델을 완전히 오프라인으로 실행합니다: MLC Chat, Maid, Layla, Ollama via Termux, Private AI, PocketPal AI. 각 앱은 NPU 활용 방식, 모델 라이브러리의 폭, Android 통합 수준에서 차이가 있습니다 — 최적의 선택은 속도(MLC Chat의 Hexagon NPU), 최대 모델 유연성(Ollama via Termux), 또는 세련된 네이티브 인터페이스(Layla 또는 PocketPal AI) 중 무엇을 원하느냐에 달려 있습니다. 이 가이드는 Samsung Galaxy S25 Ultra(Snapdragon 8 Elite), Pixel 9 Pro(Tensor G5), OnePlus 13(Snapdragon 8 Elite)에서 여섯 앱을 비교하며, Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5의 추론 성능, Android 파편화의 현실, 각 앱의 스토리지·백그라운드 제한·Android 공유 패널 처리 방식을 다룹니다.',
+    metaDescription:
+      '2026년 실제 스마트폰에서 테스트한 Android용 로컬 LLM 앱 6종: MLC Chat, Maid, Layla, Ollama via Termux, Private AI, PocketPal AI. 토큰 속도와 NPU 지원 비교.',
+    twitterDescription:
+      '2026년 Android 로컬 AI: MLC Chat은 Snapdragon의 Hexagon NPU로 ~40 tok/s 달성. Maid는 전체 GGUF 접근 제공. Ollama via Termux는 고급 사용자의 선택. S25 Ultra, Pixel 9 Pro, OnePlus 13에서 6개 앱 전체 비교.',
+    current_models_mentioned: [
+      'Phi-4 Mini',
+      'Qwen3 1.7B',
+      'Qwen3 4B',
+      'Llama 3.2 3B',
+      'Gemma 3 4B',
+      'Gemma 3 1B',
+      'SmolLM2 1.7B',
+    ],
+    current_hardware_mentioned: [
+      'Samsung Galaxy S25 Ultra (Snapdragon 8 Elite)',
+      'Pixel 9 Pro (Tensor G5)',
+      'OnePlus 13 (Snapdragon 8 Elite)',
+      'Snapdragon 8 Elite Hexagon NPU',
+      'Google Tensor G5',
+      'MediaTek Dimensity 9400 APU',
+    ],
+    audience:
+      'API 클라우드, 구독 서비스, 기기 외부 데이터 전송 없이 스마트폰에서 로컬로 AI 모델을 실행하고자 하는 Android 사용자. 처음으로 앱을 설치하는 초보자부터 Termux + Ollama 파이프라인을 구축하는 고급 사용자까지 포괄합니다.',
+    readTime: '14분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Android용 로컬 LLM 앱',
+    targetKeywords: [
+      '안드로이드 로컬 llm 앱 2026',
+      '스마트폰 로컬 ai 실행',
+      'mlc chat 안드로이드',
+      'ollama 안드로이드 termux',
+      'pocketpal ai 안드로이드',
+      '오프라인 ai 안드로이드 인터넷 없이',
+    ],
+    leadAnswerBlock:
+      '**MLC Chat은 2026년 Android에서 가장 빠른 로컬 LLM 앱입니다 — Galaxy S25 Ultra와 OnePlus 13에서 Snapdragon의 Hexagon NPU를 활용해 Qwen3 1.7B 기준 ~40 tokens/s를 달성하며, 동일 기기에서 CPU 전용 앱의 8–12 tokens/s를 크게 앞섭니다. PocketPal AI는 대부분의 사용자에게 최고의 균형 잡힌 선택입니다: 모든 GGUF 모델 지원, 세련된 네이티브 인터페이스, Android 스토리지 올바른 처리를 갖추고 있습니다. Ollama via Termux는 고급 사용자를 위한 경로입니다 — 전체 Ollama 생태계(모든 모델, OpenAI 호환 API, 도구 사용)를 스마트폰에서 이용할 수 있으며, 터미널 설정이 필요합니다. Maid는 순수 오픈소스 선택지입니다: F-Droid 배포, Play Store 의존 없음, 파일 관리자에서 직접 GGUF 가져오기. Layla는 초보자 친화적인 앱으로 엄선된 모델 다운로드를 제공합니다. Private AI는 간단한 비기술적 설정으로 완전한 프라이버시를 중시합니다. Android 사용자는 iPhone보다 결정적인 이점을 가집니다: 사이드로딩, Termux, F-Droid 설치 기능이 iOS에서는 불가능한 도구를 제공합니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 Android에서 로컬 AI를 실행하기 가장 좋은 앱은 무엇입니까?',
+        answer:
+          'MLC Chat은 Hexagon NPU 지원 덕분에 Snapdragon 8 Elite 기기(S25 Ultra, OnePlus 13)에서 가장 빠릅니다 — Qwen3 1.7B 기준 ~40 tokens/s를 달성합니다. PocketPal AI는 광범위한 GGUF 지원, 세련된 인터페이스, Android 스토리지 올바른 처리로 대부분의 사용자에게 최고의 전반적 선택입니다. Ollama via Termux는 도구 사용과 OpenAI 호환 API를 포함한 완전한 Ollama 생태계를 제공합니다. Pixel 9 Pro(Tensor G5)에서는 타사 앱에 NPU 지원이 제한됩니다 — MLC Chat과 PocketPal AI 모두 CPU 전용으로 작동하며 Phi-4 Mini 기준 ~12–18 tokens/s를 제공합니다.',
+        bullets: [
+          'MLC Chat — Snapdragon 8 Elite에서 Hexagon NPU로 가장 빠름: Galaxy S25 Ultra에서 Qwen3 1.7B 기준 ~40 tok/s.',
+          'PocketPal AI — 전반적으로 최고: GGUF 지원, 세련된 인터페이스, Android 스토리지 올바른 처리, Hugging Face 통합.',
+          'Ollama via Termux — 고급 사용자에게 최고: 완전한 Ollama 생태계, 도구 사용, 기기 내 OpenAI 호환 API.',
+          'Maid — 최고의 오픈소스 선택: F-Droid 배포, Google Play 의존 없음, 파일 관리자에서 직접 GGUF 가져오기.',
+          'Layla — 초보자에게 최고: 엄선된 모델 다운로드, 간단한 온보딩, 터미널 불필요.',
+          'Private AI — 프라이버시 중심 사용자에게 최고: 네트워크 원격 측정 없음, 최소 권한, 간단한 설정.',
+          'Tensor G5(Pixel 9): NPU가 타사 앱에 노출되지 않음 — 6개 앱 모두 CPU 전용으로 실행, Phi-4 Mini 기준 10–18 tok/s.',
+          'Android의 이점: Termux, F-Droid, 사이드로딩으로 iOS에서 불가능한 도구 사용 가능 — Ollama via Termux는 iPhone에서 구현 불가.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '비교 표', anchor: '#comparison-table' },
+      { label: '어떤 앱을 선택해야 합니까?', anchor: '#which-app' },
+      { label: '칩셋 비교: Snapdragon vs MediaTek vs Tensor', anchor: '#chipsets' },
+      { label: 'MLC Chat', anchor: '#mlc-chat' },
+      { label: 'Maid', anchor: '#maid' },
+      { label: 'Layla', anchor: '#layla' },
+      { label: 'Ollama via Termux', anchor: '#ollama-termux' },
+      { label: 'Private AI', anchor: '#private-ai' },
+      { label: 'PocketPal AI', anchor: '#pocketpal-ai' },
+      { label: 'Android 파편화: 스토리지, RAM, 백그라운드 제한', anchor: '#android-fragmentation' },
+      { label: 'Android 공유 패널 통합', anchor: '#share-sheet' },
+      { label: '사이드로드 및 Termux 경로', anchor: '#sideload-paths' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/best-local-llm-apps-android-2026-static.html',
+    gammaDescription: '이 프레젠테이션은 다음을 다룹니다: 3대의 실제 스마트폰(Galaxy S25 Ultra, Pixel 9 Pro, OnePlus 13)에서 비교한 Android용 로컬 LLM 앱 6종, 속도 표(MLC Chat ~40 tok/s with Snapdragon Hexagon NPU, PocketPal AI ~16 tok/s), 칩셋 비교(Snapdragon 8 Elite vs Tensor G5 vs MediaTek Dimensity 9400), 사용 사례별 앱 선택 가이드, Android 백그라운드 제한 해결책, 피해야 할 6가지 흔한 실수. PDF를 Android 로컬 AI 참조 카드로 다운로드하십시오.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**MLC Chat은 Snapdragon 8 Elite에서 속도 우위를 가집니다.** Hexagon NPU는 Galaxy S25 Ultra에서 Qwen3 1.7B 기준 ~40 tok/s, Phi-4 Mini 기준 ~22 tok/s를 제공합니다 — 동일 하드웨어에서 CPU 전용 앱보다 3–4배 빠릅니다.',
+          '**PocketPal AI는 대부분의 Android 사용자에게 최고의 전반적 선택입니다.** 전체 GGUF 생태계를 지원하고, 모델 다운로드를 위한 Hugging Face 통합, Android 스토리지 올바른 처리, 6개 앱 중 가장 세련된 모바일 네이티브 인터페이스를 갖추고 있습니다.',
+          '**Ollama via Termux는 Android에서 완전한 OpenAI 호환 로컬 API로 가는 유일한 경로입니다.** 이는 도구 사용, 함수 호출, 또는 로컬 앱을 스마트폰 모델에 연결하려는 고급 사용자에게 중요합니다.',
+          '**Tensor G5(Pixel 9 Pro)는 타사 앱에 NPU를 노출하지 않습니다.** 6개 앱 모두 Pixel 9 Pro에서 CPU 전용으로 실행되며 Phi-4 Mini 기준 10–18 tok/s를 제공합니다 — Snapdragon 8 Elite 기기의 동등한 결과보다 느립니다.',
+          '**Maid는 F-Droid / Google 없는 선택입니다.** Play Store 의존 없음, Google 계정 불필요, 파일 관리자에서 직접 GGUF 가져오기. Google 서비스를 피하는 Android 사용자에게 최적입니다.',
+          '**Android 백그라운드 제한이 가장 큰 사용성 문제입니다.** Android는 대부분의 제조사 ROM(특히 Samsung, OnePlus, Xiaomi)에서 백그라운드 프로세스를 적극적으로 종료합니다. 활성 추론을 수행하는 앱은 최근 앱 트레이에 고정하거나 배터리 최적화 설정에서 예외로 설정해야 생성 중 중단을 피할 수 있습니다.',
+          '**모델 스토리지가 Android의 두 번째 큰 문제입니다.** 각 GGUF 모델은 1–8 GB를 차지합니다. Android의 내부 스토리지 파티션 분할로 인해 모델은 앱의 프라이빗 디렉토리 또는 특별히 설정된 위치에 저장해야 합니다 — 대부분의 앱에서 "다운로드" 폴더는 작동하지 않습니다.',
+          '**Android의 이점은 실재합니다: Termux와 사이드로딩으로 iOS에서 구현 불가능한 도구를 사용할 수 있습니다.** Ollama via Termux는 iPhone에서 불가능합니다. F-Droid 앱과 ADB 사이드로딩으로 Google Play에 없는 앱에 접근할 수 있습니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**테스트 기기:** Samsung Galaxy S25 Ultra(Snapdragon 8 Elite, 12 GB RAM), Google Pixel 9 Pro(Tensor G5, 16 GB RAM), OnePlus 13(Snapdragon 8 Elite, 16 GB RAM).',
+          '**테스트된 칩셋 계열:** Snapdragon 8 Elite(Hexagon NPU), Tensor G5(NPU가 타사 앱에 노출되지 않음), MediaTek Dimensity 9400(APU 사양 포함; 테스트 기기 아님).',
+          '**12 GB Android 기기 최적 모델:** Phi-4 Mini(3.8B, Q4_K_M에서 ~2.7 GB) — 3대의 테스트 스마트폰 모두에서 6개 앱 전체에서 작동합니다.',
+          '**8 GB Android 기기 최적 모델:** Qwen3 1.7B 또는 SmolLM2 1.7B — 모든 앱에서 작동; 매우 제한된 기기에는 Gemma 3 1B.',
+          '**3B 모델 최소 RAM:** 기기 RAM 6 GB. 6 GB 미만은 1.7B 모델 사용.',
+          '**S25 Ultra에서 tok/s(Phi-4 Mini):** MLC Chat ~22 tok/s(NPU 경로), PocketPal AI ~16 tok/s(CPU/Vulkan), Maid ~18 tok/s(Vulkan), Layla ~14 tok/s(CPU), Private AI ~13 tok/s(CPU), Ollama Termux ~10 tok/s(CPU).',
+          '**Play Store vs F-Droid:** MLC Chat, Layla, PocketPal AI, Private AI는 Google Play에 있습니다. Maid는 주로 F-Droid에 있습니다. Ollama via Termux는 F-Droid의 Termux가 필요합니다.',
+          '**Android 공유 패널 통합:** 2026년 5월 기준 PocketPal AI와 Layla만 Android 공유 패널 입력을 네이티브로 처리합니다.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '비교 표',
+        content:
+          '**토큰 속도는 Samsung Galaxy S25 Ultra(Snapdragon 8 Elite, 12 GB RAM)에서 Q4_K_M 양자화로 Phi-4 Mini를 실행하여 측정되었습니다.** NPU 활용은 앱에 따라 다릅니다 — MLC Chat은 2026년 5월 기준 검증된 Hexagon NPU 지원을 가진 유일한 앱입니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'MLC Chat은 Snapdragon의 Hexagon NPU 지원 덕분에 2026년 Android 로컬 LLM 속도에서 선두를 차지합니다 — Galaxy S25 Ultra에서 Phi-4 Mini 기준 ~22 tok/s, Qwen3 1.7B 기준 ~40 tok/s를 달성하며, 동일 하드웨어의 CPU 전용 대안보다 2–3배 빠릅니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Snapdragon 8 Elite 스마트폰을 가지고 있고 가능한 가장 빠른 추론을 원한다면 MLC Chat을 선택하십시오. 최상의 모델 지원과 가장 세련된 인터페이스를 가진 최고의 전반적 앱을 원한다면 PocketPal AI를 선택하십시오. 스마트폰에서 완전한 로컬 AI API를 원하고 터미널이 익숙하다면 Ollama via Termux를 선택하십시오. Google 없이 완전히 오픈소스인 선택을 원한다면 Maid를 선택하십시오. 로컬 AI를 처음 접하고 엄선된 모델 다운로드를 원한다면 Layla를 선택하십시오. 데이터 프라이버시와 최소 권한이 주요 관심사라면 Private AI를 선택하십시오.',
+          },
+        ],
+        columns: ['앱', 'tok/s(S25 Ultra, Phi-4 Mini)', 'NPU 지원', '최적 사용 사례'],
+        rows: [
+          {
+            '앱': 'MLC Chat',
+            'tok/s(S25 Ultra, Phi-4 Mini)': '~22 tok/s(NPU 경로)',
+            'NPU 지원': '예 — Snapdragon 8 Elite에서 Hexagon NPU',
+            '최적 사용 사례': 'Snapdragon 스마트폰에서 속도를 우선시하는 사용자',
+          },
+          {
+            '앱': 'Maid',
+            'tok/s(S25 Ultra, Phi-4 Mini)': '~18 tok/s(GPU Vulkan)',
+            'NPU 지원': '부분 — GPU Vulkan, 전용 NPU 경로 없음',
+            '최적 사용 사례': '오픈소스/F-Droid 사용자, 전체 GGUF 접근',
+          },
+          {
+            '앱': 'Layla',
+            'tok/s(S25 Ultra, Phi-4 Mini)': '~14 tok/s(CPU)',
+            'NPU 지원': '아니오',
+            '최적 사용 사례': '초보자, 엄선된 모델 다운로드',
+          },
+          {
+            '앱': 'Ollama via Termux',
+            'tok/s(S25 Ultra, Phi-4 Mini)': '~10 tok/s(CPU)',
+            'NPU 지원': '아니오(표준 Termux 빌드에서 CPU 전용)',
+            '최적 사용 사례': '고급 사용자, API 접근, 도구 사용',
+          },
+          {
+            '앱': 'Private AI',
+            'tok/s(S25 Ultra, Phi-4 Mini)': '~13 tok/s(CPU)',
+            'NPU 지원': '아니오',
+            '최적 사용 사례': '프라이버시 우선 사용자, 최소 권한',
+          },
+          {
+            '앱': 'PocketPal AI',
+            'tok/s(S25 Ultra, Phi-4 Mini)': '~16 tok/s(CPU/Vulkan)',
+            'NPU 지원': '부분 — 지원 기기에서 GPU Vulkan',
+            '최적 사용 사례': '대부분의 사용자 — 최고의 인터페이스 + 전체 GGUF 생태계',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Pixel 9 Pro(Tensor G5)에서는 MLC Chat이 1위 자리를 내려놓습니다 — 6개 앱 모두 거기서 CPU 전용으로 실행되며, PocketPal AI와 Maid가 인터페이스 품질로 두각을 나타냅니다. Tensor G5에서는 타사 추론 앱에 대한 NPU 이점이 완전히 사라집니다.',
+          },
+          {
+            type: 'warning',
+            text: 'Layla와 Private AI의 tok/s 수치는 Phi-4 Mini Q4_K_M의 CPU 경로 추정치입니다. 실제 속도는 열 상태에 따라 달라집니다 — 뜨거운 스마트폰에서 지속적인 추론은 냉각 시작 수치보다 20–30% 하락할 수 있습니다.',
+          },
+        ],
+      },
+      whichApp: {
+        id: 'which-app',
+        title: '어떤 앱을 선택해야 합니까?',
+        content:
+          '**올바른 앱은 기기의 칩셋과 단순함 대비 커스터마이징을 얼마나 중시하느냐에 따라 다릅니다.** Android 사용자들은 세련된 네이티브 경험(PocketPal AI, Layla)을 원하는 사람과 최대 제어(Ollama via Termux, Maid)를 원하는 사람으로 명확히 나뉩니다. iPhone과 달리 Android는 둘 다 가능합니다. 다양한 기기에서 모델 크기와 RAM 요구사항이 어떻게 연관되는지 더 잘 이해하려면 [VRAM 요구사항 가이드 →](/local-llms/how-much-vram-local-llm)를 참조하십시오.',
+        snippetBlocks: [
+          {
+            type: 'plain-terms',
+            text: 'Snapdragon 8 Elite 스마트폰을 가지고 있고 가능한 가장 빠른 추론을 원한다면 MLC Chat을 선택하십시오. 최상의 모델 지원과 가장 세련된 인터페이스를 가진 최고의 전반적 앱을 원한다면 PocketPal AI를 선택하십시오. 스마트폰에서 완전한 로컬 AI API를 원하고 터미널이 익숙하다면 Ollama via Termux를 선택하십시오. Google 없이 완전히 오픈소스인 선택을 원한다면 Maid를 선택하십시오. 로컬 AI를 처음 접하고 엄선된 모델 다운로드를 원한다면 Layla를 선택하십시오. 데이터 프라이버시와 최소 권한이 주요 관심사라면 Private AI를 선택하십시오.',
+          },
+        ],
+        items: [
+          '**Snapdragon 8 Elite 스마트폰(S25 Ultra, OnePlus 13):** MLC Chat으로 시작하십시오. MLC Chat 라이브러리에 없는 모델이 필요하다면 PocketPal AI를 두 번째 앱으로 추가하십시오 — Vulkan 가속 추론으로 전체 GGUF 생태계를 커버합니다.',
+          '**Pixel 9 Pro(Tensor G5):** NPU 이점이 사라집니다 — PocketPal AI가 인터페이스 품질과 모델 폭으로 최고의 선택입니다. MLC Chat은 Tensor G5에서 CPU 전용으로 전환되어 속도 이점을 잃습니다.',
+          '**모든 Android, 커스터마이징 우선:** Ollama via Termux + 채팅 프론트엔드(Alpaca, Chrome의 Open WebUI)가 가장 유능한 설정입니다. 약 30분의 터미널 작업이 필요하지만 OpenAI 호환 API 접근, 도구 사용, 전체 Ollama 모델 라이브러리를 제공합니다.',
+          '**Google 없는 스마트폰/프라이버시:** F-Droid의 Maid. GrapheneOS, CalyxOS, 기타 Google 없는 빌드에서 작동합니다. Play Services 의존 없음.',
+          '**RAM 8 GB 스마트폰:** 6개 앱 중 어느 것이든 Qwen3 1.7B 또는 SmolLM2 1.7B와 함께 사용하십시오. PocketPal AI는 제한된 기기에서 모델 스토리지를 더 우아하게 처리합니다.',
+          '**Samsung Galaxy(모든 모델):** Samsung의 적극적인 백그라운드 프로세스 종료를 주의하십시오. AI 앱을 최근 앱 트레이에 고정하고 기기 케어 → 배터리 → 절전 모드 앱에서 예외로 추가하여 추론 중 중단을 피하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Snapdragon 스마트폰을 가지고 있고 주로 오프라인 채팅을 원한다면 MLC Chat(짧은 세션의 속도)과 PocketPal AI(MLC Chat 라이브러리에 없는 모델을 사용한 더 긴 작업) 모두 실행하십시오. 두 앱은 완벽하게 공존하며 별도의 모델 스토리지를 사용합니다.',
+          },
+        ],
+      },
+      chipsets: {
+        id: 'chipsets',
+        title: '칩셋 비교: Snapdragon vs MediaTek vs Tensor',
+        content:
+          '**Snapdragon 8 Elite는 2026년 Android에서 로컬 LLM 추론을 위해 가장 유능한 칩셋입니다 — Hexagon NPU는 MLC Chat에서 검증된 지원을 받는 유일한 모바일 NPU입니다.** Tensor G5와 MediaTek Dimensity 9400은 6개 앱 모두를 CPU 전용 또는 GPU Vulkan 모드로만 실행합니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Snapdragon 8 Elite의 Hexagon NPU는 2026년 Android에서 CPU 전용 실행보다 2–3배 빠른 추론을 제공합니다. 단, MLC Chat만이 이 이점을 노출하며 — 다른 모든 앱은 모든 칩셋에서 CPU 또는 GPU Vulkan으로 폴백합니다.',
+          },
+        ],
+        columns: ['칩셋', '탑재 기기', '타사 앱용 NPU', '최선의 추론 경로', 'Phi-4 Mini 속도(추정)'],
+        rows: [
+          {
+            '칩셋': 'Snapdragon 8 Elite',
+            '탑재 기기': 'Galaxy S25 시리즈, OnePlus 13, Xiaomi 15 Pro',
+            '타사 앱용 NPU': '예 — MLCC를 통한 Hexagon NPU(MLC Chat 전용)',
+            '최선의 추론 경로': 'Hexagon NPU(MLC Chat) 또는 GPU Vulkan(Maid, PocketPal)',
+            'Phi-4 Mini 속도(추정)': '~22 tok/s(NPU) / ~16–18 tok/s(Vulkan)',
+          },
+          {
+            '칩셋': 'Google Tensor G5',
+            '탑재 기기': 'Pixel 9 시리즈',
+            '타사 앱용 NPU': '아니오 — Google이 자사 앱을 위해 NPU 예약',
+            '최선의 추론 경로': 'CPU(모든 앱이 CPU 전용으로 실행)',
+            'Phi-4 Mini 속도(추정)': '~12–15 tok/s(CPU)',
+          },
+          {
+            '칩셋': 'MediaTek Dimensity 9400',
+            '탑재 기기': 'Xiaomi 15 Ultra, Oppo Find X8 Pro, Vivo X200 Pro',
+            '타사 앱용 NPU': '제한적 — 실험적 NNAPI 경로를 통한 MediaTek APU 접근',
+            '최선의 추론 경로': 'GPU Vulkan(타사 최선 선택); 실험적 NNAPI',
+            'Phi-4 Mini 속도(추정)': '~14–18 tok/s(Vulkan) / ~12 tok/s(CPU)',
+          },
+          {
+            '칩셋': 'Snapdragon 8 Gen 3',
+            '탑재 기기': 'Galaxy S24 시리즈, OnePlus 12',
+            '타사 앱용 NPU': '부분 — 이전 세대 Hexagon, MLC Chat에서 제한적 지원',
+            '최선의 추론 경로': 'GPU Vulkan 또는 CPU',
+            'Phi-4 Mini 속도(추정)': '~12–15 tok/s(Vulkan)',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Google의 Tensor G5 NPU가 로컬 LLM 앱에 도움이 된다고 가정하지 마십시오. Google의 NPU는 자사 ML 서비스(Google 번역, 녹음기, 사진 처리)를 위해 예약되어 있습니다. 이 가이드의 6개 앱을 포함한 타사 추론 앱은 모든 Pixel 스마트폰에서 CPU 전용으로 실행됩니다. Pixel 9 Pro의 16 GB RAM이 실제 이점입니다 — 더 빠른 추론이 아니라 더 큰 모델을 위한 더 많은 공간.',
+          },
+          {
+            type: 'tip',
+            text: 'MediaTek Dimensity 9400 스마트폰은 Maid와 PocketPal AI의 GPU Vulkan 지원으로 혜택을 받습니다. Xiaomi 15 Ultra나 Oppo Find X8 Pro를 가지고 있다면 앱 설정에서 Vulkan을 활성화하여 CPU 경로 대비 30–40% 속도 향상을 얻으십시오.',
+          },
+        ],
+      },
+      mlcChat: {
+        id: 'mlc-chat',
+        title: 'MLC Chat',
+        content:
+          '**MLC Chat(Machine Learning Compilation Chat)은 2026년 Snapdragon 8 Elite 기기에서 Android용 가장 빠른 로컬 LLM 앱입니다.** MLC AI 팀이 개발했으며, MLCC 프레임워크를 사용하여 Snapdragon의 Hexagon NPU를 직접 대상으로 모델을 컴파일합니다 — llama.cpp 또는 일반 Vulkan 백엔드를 사용하는 앱에서는 불가능한 최적화 경로입니다.',
+        items: [
+          '**모델 라이브러리:** 엄선됨 — MLC Chat은 모바일 최적화 사전 컴파일 모델 세트를 포함합니다(Qwen3 1.7B, Phi-4 Mini, Gemma 3 1B, Llama 3.2 1B). 커스텀 모델 가져오기는 가능하지만 MLC 컴파일 도구 체인이 필요합니다 — 원클릭 프로세스가 아닙니다.',
+          '**NPU 활용:** Snapdragon 8 Elite(Galaxy S25 Ultra, OnePlus 13)에서 Hexagon NPU 지원 검증됨. S25 Ultra에서 Qwen3 1.7B 기준 ~40 tok/s, Phi-4 Mini 기준 ~22 tok/s로 측정됨 — 동일 하드웨어에서 CPU 전용 ~12–16 tok/s 대비.',
+          '**인터페이스 품질:** 깔끔하고 기능적이며 미니멀함. 채팅 인터페이스만 — 시스템 프롬프트 편집기 없음, 캐릭터 카드 없음, 다중 모델 전환 없음. 집중된 채팅 작업에 적합하며 고급 사용자 설정에는 적합하지 않습니다.',
+          '**Android 공유 패널:** 2026년 5월 기준 지원되지 않습니다. 표준 공유 패널을 통해 다른 앱에서 텍스트를 받을 수 없습니다.',
+          '**오프라인 신뢰성:** 우수함. 모델이 컴파일되고 캐시되면 MLC Chat은 네트워크 호출 없이 작동합니다. 백그라운드 프로세스는 일부 llama.cpp 기반 앱에 비해 안정적입니다.',
+          '**스토리지:** MLC Chat은 컴파일된 모델 가중치를 앱 프라이빗 디렉토리에 저장합니다(Snapdragon용 컴파일된 Phi-4 Mini의 경우 ~3 GB). 다른 앱으로 이식 불가능 — GGUF 기반 앱 대비 제한 사항.',
+          '**설치 경로:** Google Play Store. 소스 코드: [github.com/mlc-ai/mlc-llm](https://github.com/mlc-ai/mlc-llm).',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'MLC Chat의 모델 라이브러리는 엄선되고 컴파일됩니다. 공식 라이브러리에 없는 모델(예: 파인튜닝된 Mistral Small 또는 도메인별 모델)이 필요하다면 MLC Chat은 도움이 되지 않습니다 — 임의 GGUF 지원을 위해 PocketPal AI나 Maid를 사용하십시오. MLC Chat은 유연성이 아닌 속도 도구입니다.',
+          },
+        ],
+      },
+      maid: {
+        id: 'maid',
+        title: 'Maid',
+        content:
+          '**Maid는 F-Droid 우선 배포 방식의 완전한 오픈소스 Android 로컬 LLM 앱입니다 — Flutter로 빌드되었으며, llama.cpp를 추론 백엔드로 사용하고, Google Play 의존 없이 배포됩니다.** 파일 관리자에서 직접 GGUF 가져오기, 지원 기기에서 GPU Vulkan 가속, Google 없는 Android 버전(GrapheneOS, CalyxOS)에서 작동을 지원합니다.',
+        items: [
+          '**모델 라이브러리:** 제한 없음. 모든 GGUF 모델 파일을 Android 파일 관리자 또는 URL 다운로드로 가져올 수 있습니다. Hugging Face나 앱 엄선 라이브러리에 없는 모델도 포함됩니다.',
+          '**NPU 활용:** 지원 기기에서 GPU Vulkan 경로 — 전용 NPU 없음. Snapdragon 8 Elite에서 Vulkan은 Phi-4 Mini 기준 ~18 tok/s를 제공합니다 — MLC Chat의 NPU 경로 ~22 tok/s 대비. Hexagon NPU 접근 없음.',
+          '**인터페이스 품질:** 기능적이지만 PocketPal AI나 Layla보다 덜 세련됨. 시스템 프롬프트 편집기, 온도 조절, 기본 채팅 기록 관리 있음. 캐릭터 카드 지원은 제한적.',
+          '**Android 공유 패널:** 2026년 5월 기준 지원되지 않습니다.',
+          '**오프라인 신뢰성:** 우수 — llama.cpp 기반 추론은 안정적입니다. 제조사 ROM(Samsung, OnePlus)의 백그라운드 제한은 여전히 적용됩니다.',
+          '**스토리지:** 모델은 앱 프라이빗 디렉토리 또는 사용자 지정 경로에 저장됩니다. GGUF 파일은 공유 가능한 Android 스토리지에 배치되면 Maid와 PocketPal AI 간에 이식 가능합니다.',
+          '**설치 경로:** F-Droid(기본), GitHub 릴리스. 소스 코드: [github.com/Mobile-Artificial-Intelligence/maid](https://github.com/Mobile-Artificial-Intelligence/maid). Google Play에서 불가.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'GrapheneOS나 Google 없는 Android 버전을 사용한다면 Maid가 최고의 선택입니다 — Google Play Services 의존이 없습니다. F-Droid 클라이언트를 통해 설치하거나 GitHub 릴리스 페이지에서 APK를 직접 다운로드하여 ADB로 사이드로드하십시오.',
+          },
+        ],
+      },
+      layla: {
+        id: 'layla',
+        title: 'Layla',
+        content:
+          '**Layla는 Android 로컬 LLM 앱 중 초보자에게 가장 접근하기 쉬운 앱입니다 — 엄선된 다운로드 흐름 뒤에 모델 관리를 추상화하고, 터미널이 필요 없으며, 추론 설정을 노출하지 않고 세련된 채팅 인터페이스를 제공합니다.** 트레이드오프는 더 작은 모델 선택과 CPU 전용 추론입니다.',
+        items: [
+          '**모델 라이브러리:** 엄선됨, 더 작은 세트. Layla는 관리형 다운로드 경험을 제공합니다 — 앱 내 라이브러리에서 모델을 선택하면 자동으로 다운로드되고 설정됩니다. 커스텀 GGUF 가져오기는 주요 기능이 아닙니다.',
+          '**NPU 활용:** CPU 전용 경로 — GPU Vulkan이나 Hexagon NPU 없음. 이로 인해 Layla는 Snapdragon 8 Elite에서 6개 중 가장 느립니다(Phi-4 Mini 기준 ~14 tok/s). 단, 모든 Android 칩셋에서 일관됩니다.',
+          '**인터페이스 품질:** 6개 앱 중 처음 사용자에게 가장 높음. 명확한 대화 관리, 설정 오버헤드 없음, 원활한 모델 전환이 있는 채팅 중심 인터페이스.',
+          '**Android 공유 패널:** 지원됨 — Layla는 Android 공유 패널을 통해 다른 앱에서 텍스트를 받을 수 있으며, 이 가이드에서 표준 Android 공유 흐름에 통합된 두 앱 중 하나입니다.',
+          '**오프라인 신뢰성:** 양호. 모델 다운로드 후 완전히 오프라인. 로컬 서버 프로세스를 실행하지 않기 때문에 백그라운드 종료에 덜 취약합니다(Ollama via Termux와 달리).',
+          '**스토리지:** Layla가 모델 스토리지를 내부적으로 관리합니다. 수동 파일 관리 불필요.',
+          '**설치 경로:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Layla의 공유 패널 지원은 Android 워크플로우에서 독특하게 유용합니다: 모든 앱에서 텍스트 강조 → 공유 → Layla → 내용에 대해 질문. 이 사용 사례 — 앱 전환 없이 신속한 컨텍스트 내 AI 지원 — 는 Layla가 이 목록의 다른 모든 앱을 능가하는 부분입니다.',
+          },
+        ],
+      },
+      ollamaTermux: {
+        id: 'ollama-termux',
+        title: 'Ollama via Termux',
+        content:
+          '**Ollama via Termux는 Android에서 도구 사용, 함수 호출, 타사 Android 앱을 로컬에서 실행 중인 모델에 연결하는 기능을 포함한 완전한 OpenAI 호환 로컬 API로 가는 유일한 경로입니다.** 설정에 20–30분이 걸리고 터미널 사용에 익숙해야 하지만, 결과는 Mac과 Linux 사용자가 데스크톱에서 실행하는 것과 동일한 Ollama 생태계를 스마트폰에서 사용하는 것입니다.',
+        numberedItems: [
+          'F-Droid에서 Termux를 설치하십시오(Play Store 버전 아님 — Play Store 빌드는 오래되어 Ollama 설치를 중단시킵니다).',
+          'Termux에서: `pkg update && pkg install curl`',
+          'Ollama 설치: `curl -fsSL https://ollama.com/install.sh | sh` — 이것이 Android ARM64 환경을 감지하고 올바른 바이너리를 설치합니다.',
+          '모델 다운로드: `ollama pull qwen3:1.7b` 또는 `ollama pull phi4-mini`.',
+          '서버 시작: `ollama serve`(Termux 세션에서 실행 유지 또는 백그라운드 위젯 사용).',
+          'Termux를 통해 상호작용: `ollama run phi4-mini` — 또는 `http://localhost:11434`에서 OpenAI 호환 엔드포인트를 지원하는 모든 앱 연결.',
+        ],
+        items: [
+          '**모델 라이브러리:** 무제한 — `ollama pull [모델명]`을 통해 전체 Ollama 모델 라이브러리 사용 가능. 이 가이드의 앱 중 가장 넓은 모델 접근.',
+          '**NPU 활용:** 표준 Ollama ARM64 빌드에서 CPU 전용. 2026년 5월 기준 표준 Termux 설정에서 GPU Vulkan 또는 Hexagon NPU 지원 없음. 이로 인해 Ollama는 원시 tok/s에서 가장 느립니다(S25 Ultra에서 Phi-4 Mini 기준 ~10 tok/s).',
+          '**도구 사용 및 함수 호출:** 지원됨 — Android의 Ollama는 데스크톱과 동일한 방식으로 도구 사용을 처리합니다. 도구 사용 가능 프론트엔드를 localhost:11434에 연결하십시오.',
+          '**Android 공유 패널:** 직접 지원되지 않습니다. 해결책: Termux:Widget 단축키를 사용하여 클립보드 내용을 `ollama run [모델]`에 보내십시오.',
+          '**백그라운드 신뢰성:** 배터리 최적화 화이트리스트 없이는 Samsung과 OnePlus에서 문제 있음. Termux:Widget 단축키를 `ollama serve`용으로 만들고 최근 앱 트레이에 Termux를 고정하십시오. Samsung One UI는 Termux에 대해 "절전 모드 앱"을 명시적으로 비활성화해야 합니다.',
+          '**설치 경로:** F-Droid에서 Termux, 그 후 curl을 통한 Ollama 설치 스크립트.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '스마트폰의 Ollama via Termux는 데스크톱의 Ollama보다 현저히 느립니다 — S25 Ultra에서 Phi-4 Mini 기준 ~10 tok/s 대 RTX 4090에서 60+ tok/s. 성능이 아닌 편의성(오프라인 주머니 API, 데스크톱에서 떨어진 곳에서의 빠른 쿼리)을 위해 사용하십시오. 모바일에서 대형 모델 품질을 원한다면 Chrome의 Open WebUI를 통해 Ollama를 실행하는 홈 머신에 원격으로 연결하는 것이 여전히 최선입니다.',
+          },
+          {
+            type: 'tip',
+            text: 'Termux:Widget 플러그인을 설치하고 `ollama serve`를 실행하는 원터치 단축키를 만드십시오. 이렇게 하면 Termux를 열지 않고도 Android 홈 화면 위젯에서 Ollama 서버를 시작할 수 있습니다. 서비스가 시작되면 `localhost:11434`를 사용하도록 설정된 모든 앱이 자동으로 연결됩니다.',
+          },
+        ],
+      },
+      privateAI: {
+        id: 'private-ai',
+        title: 'Private AI',
+        content:
+          '**Private AI는 프라이버시 중심의 Android 로컬 LLM 앱입니다 — 최소 권한, 네트워크 원격 측정 없음, 간단한 비기술적 설정으로 모든 추론이 기기 내에 남기를 원하는 사용자를 위해 설계되었습니다.** 이 가이드의 어떤 앱보다 더 적은 권한을 요청하며, 초기 모델 다운로드 후 외부 서버에 접근하지 않습니다.',
+        items: [
+          '**모델 라이브러리:** 프라이버시 검토 엄선 세트. 다운로드는 검증 가능한 소스에서 이루어집니다. 임의 Hugging Face 저장소 접근 없음 — 유연성을 통제되고 감사 가능한 모델 공급과 교환합니다.',
+          '**NPU 활용:** CPU 전용 경로. 모든 칩셋에서 일관적으로 Phi-4 Mini 기준 ~13 tok/s(S25 Ultra).',
+          '**인터페이스 품질:** 깔끔하고 미니멀함. 대화 내보내기와 사용 원격 측정 없이 채팅 중심. 고급 설정 옵션 부족(온도, top-p, 시스템 프롬프트) — 의도적으로 단순화됨.',
+          '**Android 공유 패널:** 2026년 5월 기준 지원되지 않습니다.',
+          '**오프라인 신뢰성:** 최고 수준. 완전히 오프라인으로 작동하도록 설계됨. 백그라운드 네트워크 호출 없음, 동기화 없음, 분석 없음.',
+          '**권한:** 최소 — 스토리지 및 마이크(음성 입력, 선택 사항) 접근 요청. 연락처, 위치, 광고 ID 미요청.',
+          '**설치 경로:** Google Play Store.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '사용 사례에 민감한 전문 텍스트(법률 초안, 의료 메모, 기밀 비즈니스 콘텐츠)가 포함된다면 Private AI의 최소 권한과 감사 가능한 원격 측정 없는 아키텍처가 중요합니다. 일반적인 생산성 사용의 경우 PocketPal AI가 더 나은 전반적 선택이지만, Private AI의 신뢰 모델이 더 견고합니다.',
+          },
+        ],
+      },
+      pocketPalAI: {
+        id: 'pocketpal-ai',
+        title: 'PocketPal AI',
+        content:
+          '**PocketPal AI는 2026년 대부분의 사용자에게 Android용 최고의 전반적 로컬 LLM 앱입니다.** 전체 GGUF 모델 생태계(Hugging Face의 모든 모델), GPU Vulkan 가속, 6개 앱 중 가장 세련된 모바일 네이티브 인터페이스, Android 공유 패널 직접 지원, 올바른 Android 스토리지 처리를 결합합니다 — 이 가이드의 다른 어떤 앱도 이 조합을 갖추지 못했습니다.',
+        items: [
+          '**모델 라이브러리:** 전체 GGUF 생태계 — 앱 내에서 직접 Hugging Face에서 탐색 및 다운로드, 또는 로컬 GGUF 파일 가져오기. Maid와 동일한 폭을 커버하되 엄선된 검색 인터페이스 추가.',
+          '**NPU 활용:** 지원 기기에서 GPU Vulkan 경로. Snapdragon 8 Elite에서 Phi-4 Mini 기준 ~16 tok/s 제공 — MLC Chat의 NPU 경로(~22 tok/s) 대비 뒤지지만 동일 기기의 모든 CPU 전용 앱보다 앞섭니다.',
+          '**인터페이스 품질:** 6개 앱 중 최고의 모바일 네이티브 인터페이스. 제스처 탐색, 대화 관리, 시스템 프롬프트 편집기, 모델 벤치마킹, 모델별 설정 패널. React Native + llama.rn으로 빌드됨.',
+          '**Android 공유 패널:** 지원됨 — PocketPal AI와 Layla는 이 가이드에서 Android 공유 패널에 통합된 유일한 두 앱입니다. 모든 앱에서 텍스트 선택 → 공유 → PocketPal AI.',
+          '**오프라인 신뢰성:** 우수함. 백그라운드 서버 프로세스 없음(Ollama via Termux와 달리) — 추론이 프로세스 내에서 실행되어 서버 기반 접근을 괴롭히는 Android 백그라운드 종료 문제를 피합니다.',
+          '**스토리지:** 기본적으로 앱 프라이빗 스토리지에 GGUF 파일 저장, 외부 스토리지를 가리키는 옵션 있음. 모델 파일은 Android 공유 스토리지로 이동하면 Maid로 이식 가능합니다.',
+          '**설치 경로:** Google Play Store. 소스 코드: [github.com/a-ghorbani/pocketpal-ai](https://github.com/a-ghorbani/pocketpal-ai).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'PocketPal AI의 앱 내 모델 벤치마킹 도구(짧은 프롬프트 실행 후 tok/s 측정)는 특정 스마트폰에서 모델 크기를 비교하는 데 유용합니다. Phi-4 Mini, Qwen3 1.7B, Qwen3 4B에서 실행하여 일상 사용에 모델을 선택하기 전에 기기의 실용적인 속도 상한선을 찾으십시오.',
+          },
+        ],
+      },
+      androidFragmentation: {
+        id: 'android-fragmentation',
+        title: 'Android 파편화: 스토리지, RAM, 백그라운드 제한',
+        content:
+          '**Android 파편화는 로컬 LLM 앱에 세 가지 실질적인 문제를 만듭니다: 스토리지 파티션 충돌, 불일치한 RAM 할당, 제조사의 공격적인 백그라운드 종료 정책.** 이 세 가지는 Samsung, OnePlus, Pixel, 다른 Android 제조사 기기에서 iOS에서는 발생하지 않는 방식으로 모델 신뢰성에 영향을 미칩니다.',
+        snippetBlocks: [
+          {
+            type: 'plain-terms',
+            text: 'Android 파편화는 Pixel 9 Pro에서 완벽하게 작동하는 로컬 LLM 앱이 Galaxy S25 Ultra에서 추론 도중 멈출 수 있음을 의미합니다 — 앱이나 모델 때문이 아니라 Samsung의 백그라운드 종료 정책이 배터리를 절약하기 위해 프로세스를 종료하기 때문입니다. 각 Android 제조사는 이러한 정책을 다르게 커스터마이징합니다 — Pixel은 AOSP 표준에 더 가깝고; Samsung, OnePlus, Xiaomi는 모두 기본적으로 더 공격적인 백그라운드 종료를 합니다.',
+          },
+        ],
+        items: [
+          '**스토리지 파티션:** Android의 `/data/user/0/`(앱 프라이빗 스토리지)와 `/sdcard/`(공유 스토리지)는 별도의 파티션입니다. 대부분의 로컬 LLM 앱은 앱 프라이빗 스토리지에 모델을 저장하는데, 이는 루트 없이 파일 관리자에서 탐색할 수 없습니다. Maid와 PocketPal AI 간에 GGUF 파일을 공유하려면 먼저 공유 위치로 복사해야 합니다.',
+          '**RAM 할당:** Android는 타사 앱에 메모리 할당을 보장하지 않습니다. 시스템이 RAM이 필요하면 추론 프로세스를 포함한 백그라운드 프로세스를 종료합니다. RAM 12 GB 기기(S25 Ultra 기본값)에서는 활성 사용 중 거의 문제가 없습니다. RAM 8 GB 스마트폰에서는 추론 중 다른 앱을 실행하면 중단될 수 있습니다.',
+          '**Samsung One UI 백그라운드 종료:** 주요 Android 제조사 중 가장 공격적입니다. 설정 → 기기 케어 → 배터리 → 백그라운드 사용 제한 → 절전 모드 앱으로 이동하여 이 목록의 모든 LLM 앱을 수동으로 제거하십시오. 또한 최근 앱 아이콘을 눌러 앱을 고정하십시오.',
+          '**OnePlus OxygenOS 백그라운드 종료:** Samsung과 유사합니다. 설정 → 배터리 → 배터리 최적화로 이동하여 LLM 앱을 찾아 "최적화하지 않음"으로 설정하십시오. 추가로 최근 앱 개요에서 앱을 고정하십시오.',
+          '**Pixel(AOSP에 가장 가까움):** 백그라운드 동작이 가장 예측 가능합니다. `FOREGROUND_SERVICE` 권한을 요청하는 앱(PocketPal AI와 Maid가 해당)은 Pixel에서 활성 추론 중 안정적으로 실행됩니다. 매우 긴 세션에는 배터리 최적화 제외를 권장합니다.',
+          '**Xiaomi MIUI/HyperOS:** Samsung 다음으로 가장 공격적인 백그라운드 종료. "배터리 절약" 기능이 생성 도중 추론을 종료할 수 있습니다. 설정 → 앱 → 앱 관리 → [앱] → 배터리 절약 → 제한 없음으로 이동하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '어떤 로컬 LLM 앱에 대해서도 Android의 기본 백그라운드 동작에 의존하지 마십시오. Samsung과 OnePlus 기기에서는 기본 정책이 배터리 최적화 설정에서 앱을 명시적으로 화이트리스트에 추가하지 않는 한 긴 추론 세션(2분 이상)을 중단시킵니다. 이것이 이 가이드의 모든 앱에서 "앱이 응답 중간에 멈췄습니다" 보고의 가장 큰 원인입니다.',
+          },
+        ],
+      },
+      shareSheet: {
+        id: 'share-sheet',
+        title: 'Android 공유 패널 통합',
+        content:
+          '**Android 공유 패널 통합 — 모든 앱에서 텍스트를 선택하고 로컬 AI로 보내는 기능 — 은 6개 앱 중 두 개만 지원합니다: PocketPal AI와 Layla.** 이 단일 기능이 로컬 AI를 독립 앱이 아닌 진정한 시스템 수준 도구로 만듭니다.',
+        items: [
+          '**작동 방식:** 모든 Android 앱(웹 브라우저, 이메일, PDF 리더, 메시징 앱)에서 텍스트 선택 → 공유 탭 → PocketPal AI 또는 Layla 선택 → 선택한 텍스트가 채팅 입력 필드에 미리 채워짐.',
+          '**PocketPal AI 공유 패널:** 일반 텍스트 수신. 선택한 텍스트가 미리 채워진 새 대화 열기. 그 후 프롬프트 추가(예: "요약해 주세요", "한국어로 번역해 주세요", "사실을 확인해 주세요") 가능.',
+          '**Layla 공유 패널:** 동일한 기본 기능. 공유 패널에서 채팅 인터페이스로의 전환이 약간 더 매끄러움.',
+          '**MLC Chat, Maid, Ollama via Termux, Private AI:** 2026년 5월 기준 Android 공유 패널에 표시되지 않습니다. 텍스트를 이러한 앱에 수동으로 복사 및 붙여넣어야 합니다.',
+          '**실용적 사용 사례:** 웹 탐색 중 기사 요약, 이메일 번역, 메시지 답장 초안 작성, 단락 팩트 체크 — 모두 텍스트가 기기를 떠나거나 클라우드 API를 건드리지 않습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '전체 모델 라이브러리(Layla나 PocketPal AI의 엄선된 세트에 없는 모델 포함)를 사용하면서 공유 패널 통합을 원하는 고급 사용자를 위한 해결책: 텍스트 복사 → PocketPal AI 열기 → 모든 GGUF 모델 로드 → 붙여넣기. PocketPal AI의 Hugging Face 통합으로 커스텀 모델을 로드하고 공유 대상 앱으로 계속 사용할 수 있습니다.',
+          },
+        ],
+      },
+      sideloadPaths: {
+        id: 'sideload-paths',
+        title: '사이드로드 및 Termux 경로: Android의 이점',
+        content:
+          '**Android의 사이드로딩 및 Termux 생태계는 iOS에서 존재하지 않는 로컬 AI 도구에 Android 사용자가 접근할 수 있게 합니다.** 이것이 2026년 로컬 AI 사용에서 Android와 iPhone 간의 가장 두드러진 실질적 차이입니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Ollama via Termux — 스마트폰의 완전한 로컬 LLM API 서버 — 는 2026년 Android 독점 기능입니다: Apple의 iOS 샌드박스가 iPhone에서 동등한 설정을 방지하여, 기기 내 OpenAI 호환 API가 필요한 사용자에게 Android가 유일한 모바일 플랫폼이 됩니다.',
+          },
+        ],
+        items: [
+          '**Termux:** Android 앱 내의 Linux 환경. F-Droid를 통해 설치(Play Store 아님). bash, Python, curl 및 Ollama를 포함한 거의 모든 Linux ARM64 바이너리 실행 가능. Termux는 iOS에서 사용 불가; 동등한 것(iSH)은 로컬 API를 제공하기 위한 네트워킹 기능이 없습니다.',
+          '**F-Droid 사이드로딩:** Google Play 없이 앱 설치 — Maid, Termux 및 기타 오픈소스 로컬 AI 도구에 유용합니다. F-Droid 클라이언트 APK를 다운로드하고, Android 보안 설정에서 "알 수 없는 소스에서 앱 설치"를 활성화하고, F-Droid를 설치한 후 Google 계정 없이 F-Droid에 나열된 모든 앱을 설치하십시오.',
+          '**ADB 사이드로딩:** 고급 사용자는 Android Debug Bridge를 통해 직접 APK를 사이드로드할 수 있습니다(`adb install [app.apk]`). 이를 통해 Play Store 목록이 지역에 따라 제한되거나 제거된 앱을 설치할 수 있습니다.',
+          '**커스텀 ROM의 이점:** LineageOS, GrapheneOS, CalyxOS 사용자는 Google Play를 완전히 비활성화하고 F-Droid + ADB를 유일한 앱 설치 경로로 사용할 수 있습니다. Maid와 Termux는 이러한 플랫폼에서 완전히 작동합니다. iOS에는 동등한 것이 없습니다.',
+          '**Termux를 통한 llama.cpp 서버 모드:** Ollama 외에도 llama.cpp 자체를 Termux를 통해 컴파일하고 서버 모드로 실행할 수 있습니다 — Ollama에 비해 더 낮은 메모리 사용을 선호하는 일부 사용자가 선호하는 대체 로컬 API를 제공합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Termux + Ollama 설정은 동일한 스마트폰의 다른 앱을 위한 로컬 API 서버로도 작동합니다. 예를 들어 Obsidian(Local REST API 플러그인)과 같은 앱이나 Shortcuts 유사 커스텀 자동화는 인터넷 없이 AI 작업을 실행하기 위해 `localhost:11434/api/generate`를 쿼리할 수 있습니다 — 진정으로 유용한 홈 화면 자동화 패턴입니다.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '흔한 실수',
+        content: '**Android에서 로컬 LLM 앱의 대부분의 실패는 피할 수 있는 네 가지 실수에서 비롯됩니다.**',
+        items: [
+          '**Play Store에서 Termux 설치.** Play Store 버전의 Termux는 오래되었습니다(Termux는 2020년에 업데이트를 중단했습니다). 현재 유지 관리되는 빌드는 F-Droid에 있습니다. `pkg install curl`과 Ollama 설치 스크립트는 Play Store 버전의 Termux에서 실패합니다.',
+          '**Pixel 스마트폰에서 NPU 속도 기대.** Google의 Tensor G5 NPU는 타사 앱에서 접근 불가합니다. 6개 앱 모두 모든 Pixel 모델에서 CPU 전용으로 실행됩니다. MLC Chat의 NPU 이점은 Snapdragon 8 Elite에서만 적용되며 Pixel로는 이전되지 않습니다.',
+          '**Samsung에서 배터리 최적화 화이트리스트 건너뜀.** Galaxy 스마트폰은 백그라운드 프로세스를 공격적으로 종료합니다. 90초 이상 지속되는 생성은 Termux나 LLM 앱이 명시적으로 화이트리스트에 없으면 백그라운드 종료 정책에 의해 중단될 가능성이 높습니다.',
+          '**기기에 비해 너무 큰 모델 다운로드.** 7B Q4_K_M 모델(~4.7 GB)은 ~6 GB의 사용 가능 RAM이 필요합니다. 시스템 오버헤드가 있는 12 GB 스마트폰에서는 빡빡합니다. 8 GB 스마트폰에서는 생성 도중 OOM으로 앱이 충돌합니다. 8–10 GB 기기에는 Phi-4 Mini(3.8B, ~2.7 GB), 그 이하에는 Qwen3 1.7B(~1.1 GB)를 사용하십시오.',
+          '**다운로드 폴더의 스토리지가 접근 가능하다고 가정.** 대부분의 로컬 LLM 앱은 앱 프라이빗 스토리지(`/data/user/0/[앱패키지]/`)에 모델 파일을 저장하는데, 이는 루트 없이 파일 관리자에서 탐색할 수 없습니다. GGUF를 다운로드 폴더에 다운로드하고 앱이 찾을 것이라 기대한다면 찾지 못할 것입니다 — 앱의 내장 가져오기 기능을 사용하거나 설정에서 올바른 경로를 가리키십시오.',
+          '**두 추론 앱을 동시에 실행.** 각 앱은 모델을 RAM에 로드합니다. 12 GB 스마트폰에서 두 개의 3B 모델은 운영 체제에 ~5 GB를 남겨 종료를 유발합니다. MLC Chat과 PocketPal AI를 모두 사용한다면 다른 앱을 열기 전에 하나를 닫으십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          'MLC Chat GitHub 및 문서 — [github.com/mlc-ai/mlc-llm](https://github.com/mlc-ai/mlc-llm)',
+          'Maid GitHub (Mobile Artificial Intelligence) — [github.com/Mobile-Artificial-Intelligence/maid](https://github.com/Mobile-Artificial-Intelligence/maid)',
+          'PocketPal AI GitHub — [github.com/a-ghorbani/pocketpal-ai](https://github.com/a-ghorbani/pocketpal-ai)',
+          'Ollama 공식 문서 — [ollama.com](https://ollama.com)',
+          'Termux 공식 문서 — [wiki.termux.com](https://wiki.termux.com)',
+          'Snapdragon 8 Elite Hexagon NPU 기술 문서 — Qualcomm Developer Network',
+          'MediaTek Dimensity 9400 APU 사양 — MediaTek 제품 페이지',
+          'Google Tensor G5 칩 개요 — Google 하드웨어 문서',
+          'Android 배터리 최적화 및 백그라운드 프로세스 제한 — Android 개발자 문서',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Pixel 9 Pro에서 7B 모델을 실행할 수 있습니까?',
+            a: '예, Pixel 9 Pro에는 16 GB RAM이 있습니다 — 7B Q4_K_M 모델(~4.7 GB 모델 가중치)을 시스템 RAM이 남은 상태로 실행하기에 충분합니다. 해당 크기에서 속도는 ~8–10 tok/s입니다(Tensor G5에서 CPU 전용). 이 사용 사례에는 PocketPal AI나 Maid를 7B GGUF와 함께 사용하십시오. Pixel 9 Pro에서 실시간 대화 속도를 원한다면 Phi-4 Mini(3.8B, ~14 tok/s)를 고수하십시오.',
+          },
+          {
+            q: '이 앱들이 Snapdragon NPU를 사용합니까?',
+            a: 'MLC Chat만 Snapdragon NPU를 사용하며, Snapdragon 8 Elite 기기(Galaxy S25 시리즈, OnePlus 13)에서만 Hexagon NPU를 사용합니다. 다른 5개 앱은 CPU 또는 GPU Vulkan을 사용합니다. Hexagon NPU는 동일 기기의 CPU 경로 대비 MLC Chat에서 2–3배 빠른 추론을 제공합니다.',
+          },
+          {
+            q: 'Samsung Galaxy S22에서 로컬 AI를 실행할 수 있습니까?',
+            a: '예, 8 GB RAM 변형에서 가능합니다. Galaxy S22는 Snapdragon 8 Gen 1(또는 일부 지역에서 Exynos 2200)을 실행합니다. PocketPal AI와 Maid는 Qwen3 1.7B 또는 SmolLM2 1.7B와 함께 ~8–12 tok/s로 작동합니다. Phi-4 Mini(3.8B)는 8 GB RAM에서 가능하지만 빡빡합니다 — 먼저 다른 모든 앱을 닫으십시오. MLC Chat의 NPU 경로는 Snapdragon 8 Gen 1에서 검증되지 않았습니다.',
+          },
+          {
+            q: '로컬 AI를 위해 스마트폰을 루팅해야 합니까?',
+            a: '아니오. 이 가이드의 6개 앱은 모두 루팅되지 않은 Android 스마트폰에서 작동합니다. Termux는 F-Droid APK에 대해 "알 수 없는 소스에서 앱 설치"를 활성화해야 하지만 이는 루팅이 아닙니다. 루팅은 파일 관리자에서 앱의 프라이빗 스토리지 디렉토리에 접근하는 데만 관련 있습니다 — 추론에는 필요하지 않습니다.',
+          },
+          {
+            q: '이 앱들을 Termux와 함께 사용할 수 있습니까?',
+            a: 'Ollama via Termux는 자체 완전한 설정입니다 — Termux 내에 Ollama를 설치하고 Termux 터미널을 통해 상호작용합니다. 다른 5개 앱(MLC Chat, Maid, Layla, Private AI, PocketPal AI)은 Termux와 상호작용하지 않는 독립 Android 앱입니다. 고급 사용자는 둘 다 실행합니다: API 접근을 위한 Termux의 Ollama와 세련된 채팅 인터페이스를 위한 PocketPal AI.',
+          },
+          {
+            q: 'Android 백그라운드 제한을 어떻게 처리합니까?',
+            a: '백그라운드 제한은 Android 로컬 LLM 앱의 가장 큰 신뢰성 문제입니다. PocketPal AI와 Maid는 FOREGROUND_SERVICE 권한을 요청하여 백그라운드 종료에 더 강합니다. Ollama via Termux는 배터리 최적화 설정에서 Termux가 명시적으로 화이트리스트에 없으면 Samsung과 OnePlus의 백그라운드 종료 정책에 취약합니다. Pixel에서 백그라운드 동작이 더 예측 가능합니다. Samsung One UI에서는 기기 케어 → 배터리 → 절전 모드 앱에서 모든 LLM 앱을 수동으로 화이트리스트에 추가하십시오.',
+          },
+          {
+            q: '로컬 AI 출력을 다른 앱과 공유할 수 있습니까?',
+            a: '예, 어떤 앱에서든 가능합니다 — AI 응답을 복사하고 어디든 붙여넣으십시오. 반대 방향(다른 앱에서 AI로 텍스트 전송)의 경우, 2026년 5월 기준 PocketPal AI와 Layla만 Android 공유 패널에 표시됩니다.',
+          },
+          {
+            q: '이 앱들이 Android Auto를 지원합니까?',
+            a: '아니오. 2026년 5월 기준 6개 앱 중 어느 것도 Android Auto를 지원하지 않습니다. Android Auto는 운전 중 실행할 수 있는 앱을 제한하며, 로컬 LLM 앱들은 인증에 필요한 Auto 호환 인터페이스를 구축하지 않았습니다.',
+          },
+          {
+            q: '어떤 앱이 모델 스토리지를 가장 잘 처리합니까?',
+            a: 'PocketPal AI가 모델 스토리지를 가장 우아하게 처리합니다 — 앱 내 다운로드를 위해 Hugging Face와 직접 통합하고, Android 스토리지 파티션 분할을 올바르게 처리하며, 모델 관리 인터페이스를 제공합니다. Maid는 파일 시스템을 통해 GGUF 파일을 수동으로 관리하고자 하는 사용자에게 최적입니다. MLC Chat은 다른 앱으로 이식 불가능한 독점 컴파일된 모델 형식을 사용합니다.',
+          },
+          {
+            q: '여러 모델을 동시에 실행할 수 있습니까?',
+            a: '두 모델과 Android 운영 체제 오버헤드를 위한 충분한 RAM이 기기에 있는 경우에만 가능합니다. Pixel 9 Pro(16 GB)에서: 두 개의 Phi-4 Mini 모델(각 2.7 GB)은 운영 체제에 ~10 GB를 남겨줍니다 — 기술적으로 가능하지만 매우 빡빡합니다. 실제로는 다른 앱을 열기 전에 한 앱을 닫으십시오. Ollama via Termux는 단일 `ollama serve` 프로세스로 모델 전환을 지원하며, 한 번에 하나의 모델을 로드합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[2026년 iPhone용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — iOS 동등품: LLM Farm, Pocket Paladin 및 iPhone 추론 환경.',
+          '[태블릿에서 AI 실행 방법: iPad와 Android(2026)](/ko/power-local-llm/run-ai-on-tablet-ipad-android) — 더 큰 화면에서 기기 내 vs 원격 연결, 태블릿별 권장 사항.',
+          '[모바일 LLM 모델: Phi-4 Mini, Gemma, SmolLM](/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — 모바일 추론을 위한 모델 선택 가이드: 4–16 GB 스마트폰에 맞는 모델.',
+          '[2026 로컬 LLM 소프트웨어 디렉토리](/ko/power-local-llm/local-llm-software-directory-2026) — 데스크톱 앱, 서버 백엔드, 모든 플랫폼 프론트엔드를 포함한 전체 앱 디렉토리.',
+          '[Windows, Mac, Linux용 가장 쉬운 로컬 AI 앱](/ko/power-local-llm/easiest-local-ai-app-windows-mac-linux) — 데스크톱 동등품: 사용 편의성으로 앱 비교하는 동일한 철학.',
+          '[2026 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 모델 권위 기사: 모든 하드웨어 설정에서 사용할 오픈 웨이트 모델.',
+          '[ChatGPT Plus 최고의 오픈소스 대안](/ko/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) — Open WebUI, LibreChat, Jan: ChatGPT Plus와의 기능 비교.',
+          '[코딩을 위한 최고의 Qwen 모델](/ko/prompt-bites/best-qwen-model-for-coding) — Termux + Ollama를 통한 Android에서의 Qwen3-Coder: 실현 가능성과 설정.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'NewsArticle',
+      headline: '2026년 Android용 최고의 로컬 LLM 앱: 실제 스마트폰으로 비교한 6가지 앱',
+      datePublished: '2026-05-08',
+      dateModified: '2026-05-08',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/best-local-llm-apps-android-2026',
+      inLanguage: 'ko',
+      image: 'https://www.promptquorum.com/ko/api/og/best-local-llm-apps-android-2026',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        url: 'https://www.promptquorum.com/about',
+        sameAs: [
+          'https://www.linkedin.com/in/hanskuepper/',
+          'https://x.com/HansKuepperAPPs',
+        ],
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Power Local LLM',
+          item: 'https://www.promptquorum.com/ko/power-local-llm',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: '2026년 Android용 최고의 로컬 LLM 앱',
+          item: 'https://www.promptquorum.com/ko/power-local-llm/best-local-llm-apps-android-2026',
+        },
+      ],
+    },
+  },
+
 }

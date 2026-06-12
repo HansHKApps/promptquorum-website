@@ -5033,4 +5033,636 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
 },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Creative & Roleplay',
+    title: '소설 작가를 위한 로컬 LLM 프롬프트: 15가지 템플릿과 기법 (2026)',
+    seoTitle: '소설 작가를 위한 로컬 LLM 프롬프트 15가지 2026',
+    intro:
+      '로컬 LLM은 열린 요청 대신 구조화된 프롬프트를 제공할 때 현저히 뛰어난 소설을 생성합니다. 이 가이드는 실제로 작동하는 프롬프트 템플릿 15가지를 다룹니다 — 장면 쓰기, 인물 개발, 대화, 세계관 구축, 문체 이전, 퇴고 및 편집 작업 — 모두 Ollama 또는 LM Studio를 통해 로컬에서 실행되는 Llama 3.3 70B, Qwen3 32B, Mistral Large로 테스트되었습니다. 각 템플릿은 복사하여 바로 사용할 수 있으며 장르에 따라 조정할 부분도 포함되어 있습니다.',
+    metaDescription:
+      '로컬 LLM을 사용하는 소설 작가를 위한 프롬프트 템플릿 15가지: 장면, 인물, 대화, 세계관, 문체. Ollama와 LM Studio에 바로 사용 가능.',
+    twitterDescription:
+      '로컬 LLM 소설용 프롬프트 템플릿 15가지: 장면, 대화, 인물, 세계관 구축, 문체 이전, 퇴고, 편집. Llama 3.3 70B, Qwen3 32B로 테스트.',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 32B',
+      'Mistral Large',
+      'Command R+ 104B',
+      'Hermes 3 Llama 3.3',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      '로컬 LLM을 초안 작성 파트너로 활용하는 소설가, 단편 작가, 시나리오 작가, 게임 내러티브 디자이너로, 일관되고 활용 가능한 결과물을 생성하는 신뢰할 수 있는 프롬프트 구조를 원하는 분들입니다.',
+    readTime: '18분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '소설 작가를 위한 로컬 LLM 프롬프트',
+    targetKeywords: [
+      '소설 작가 로컬 llm 프롬프트',
+      'ollama 소설 쓰기 프롬프트',
+      '장면 프롬프트 템플릿 llm',
+      '인물 개발 프롬프트 로컬 ai',
+      '대화 프롬프트 로컬 llm',
+      '세계관 구축 프롬프트 템플릿',
+    ],
+    leadAnswerBlock:
+      '**로컬 LLM의 소설 출력에서 가장 큰 개선은 "장면을 써줘"에서 5부 구조 프롬프트(장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한)로 전환할 때 나타납니다. 이 형식만으로도 실제로 평범하고 요약 위주의 출력이 약 60% 감소합니다 — 모델이 쉬운 지름길을 택할 여지가 없기 때문에 묘사하는 산문을 생성합니다. 인물 개발을 위한 가장 신뢰할 수 있는 템플릿은 "모순 프롬프트"입니다: 인물에게 지배적인 성격과 모순되는 행동을 부여한 뒤, 어느 쪽도 명시하지 않고 두 가지를 모두 드러내는 장면을 써달라고 요청합니다. 대화의 경우, 먼저 하위 텍스트(인물이 말하고 싶지만 말하지 않을 것)를 설정한 뒤 그 숨겨진 메시지 주변의 대사를 생성하게 합니다. 편집 작업의 경우, 플롯 일관성 확인으로 연속성 오류를 감지하고, 리듬 분석으로 평탄한 구역을 파악하며, 노출 완화로 정보 블록을 재배치합니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 LLM을 사용하는 소설 작가에게 가장 좋은 프롬프트 템플릿은 무엇입니까?',
+        answer:
+          '소설에 가장 신뢰할 수 있는 프롬프트 구조는 장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한입니다. 이는 줄거리 요약이 아닌 묘사하는 산문을 생성합니다. 인물 개발을 위해서는 "모순 프롬프트"(지배적인 성격 + 모순되는 행동, 어느 쪽도 명시하지 않고 두 가지 모두 드러냄)를 사용하십시오. 대화의 경우, 먼저 하위 텍스트(인물이 원하지만 말하지 않을 것)를 설정한 뒤 대사를 씁니다. 세계관 구축은 하나의 감각적 세부 사항에 고정하고 바깥쪽으로 확장합니다. 이 템플릿들은 instruction-tuned 모델에서 작동하며, 더 큰 모델(Llama 3.3 70B, Qwen3 32B)은 긴 생성에서 제약 조건 준수를 더 잘 유지합니다.',
+        bullets: [
+          '장면 프롬프트: 장르 + 시점 + 감각적 세부 사항 1–2개 + 감정 비트 + 단어 제한 (150–400단어).',
+          '인물 개발: 지배적인 성격 + 모순되는 행동, 어느 쪽도 명시하지 않고 두 가지 모두 드러냄.',
+          '대화: 먼저 하위 텍스트(인물이 원하지만 말하지 않을 것)를 설정한 뒤 대사를 생성.',
+          '세계관 구축: 감각적 세부 사항에 고정하고 동심원 고리로 바깥쪽 확장 (방 → 건물 → 거리 → 구역 → 세계).',
+          '문체 이전: 목표 작가의 특정 기법 2–3가지를 명시하고, 2문장 샘플을 붙여넣은 뒤 그 기법을 사용하여 생성.',
+          '퇴고: 초안을 붙여넣고, 특정 문제(수동태, 부사 과다, 시점 전환)를 명시한 뒤 재작성 요청.',
+          '편집: 일관성 확인으로 연속성 오류 감지; 리듬 분석으로 챕터별 속도 매핑; 노출 완화로 정보 블록 재배치.',
+          '더 큰 모델이 제약 조건 준수를 더 잘 유지하며, Llama 3.3 70B가 대부분의 소설 작업에 기본 선택입니다.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '구조화된 프롬프트가 중요한 이유', anchor: '#why-structure' },
+      { label: '전/후 예시', anchor: '#before-after' },
+      { label: '장면 쓰기 템플릿 (1–2)', anchor: '#scene-writing' },
+      { label: '인물 개발 템플릿 (3–5)', anchor: '#character-development' },
+      { label: '대화 템플릿 (6–7)', anchor: '#dialogue' },
+      { label: '세계관 구축 템플릿 (8–9)', anchor: '#worldbuilding' },
+      { label: '문체 이전 템플릿 (10–11)', anchor: '#style-transfer' },
+      { label: '퇴고 템플릿 (12)', anchor: '#revision' },
+      { label: '편집 템플릿 (13–15)', anchor: '#editorial-templates' },
+      { label: '모델 추천', anchor: '#models' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**구조화된 프롬프트가 소설에서 열린 요청을 능가합니다.** 5부 장면 프롬프트(장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한)는 묘사하는 산문을 생성하고, "장면을 써줘"는 줄거리 요약을 생성합니다. 템플릿이 곧 기법입니다.',
+          '**모순 프롬프트가 가장 신뢰할 수 있는 인물 개발 구조입니다.** 모델에게 지배적인 성격과 모순되는 행동을 부여하고, 어느 쪽도 명시하지 않고 두 가지를 모두 드러내달라고 요청하십시오. 독자가 추론해야 하는 다층적인 인물이 탄생합니다.',
+          '**대사를 쓰기 전에 하위 텍스트를 먼저 설정하면 대화 품질이 두 배가 됩니다.** 인물이 원하지만 말하지 않을 것을 먼저 모델에게 알리십시오. 그러면 대사가 자연스럽게 그 숨겨진 메시지 주변에서 작동합니다.',
+          '**단어 제한이 채우기를 방지합니다.** 장면 프롬프트에 200단어 제한을 설정하면 압축이 강제됩니다. 모델은 정확해야 합니다. 더 많이 필요할 때는 100단어 단위로 늘리되, 항상 제한을 설정하십시오.',
+          '**퇴고 프롬프트에는 명시된 문제가 필요합니다.** "이것을 다시 써줘"는 최소한의 변화만 만들어냅니다. "다시 써줘: 모든 수동태를 제거하고, 각 문장은 구체적인 명사나 강한 동사로 시작해야 해"는 측정 가능한 개선을 만들어냅니다.',
+          '**편집 템플릿은 원고 수준에서 작동합니다.** 플롯 일관성 확인, 리듬 분석, 노출 완화는 완성된 장면과 챕터에서 작동합니다 — 초안 작성 중이 아닌 초안 작성 후에 실행하십시오.',
+          '**더 큰 모델이 긴 생성에서 제약 조건 준수를 더 잘 유지합니다.** Llama 3.3 70B와 Qwen3 32B는 5부 장면 제약 조건을 안정적으로 따르며, 더 작은 모델은 약 200토큰 이후 벗어납니다.',
+          '**인터페이스는 모델과 프롬프트보다 중요하지 않습니다.** Ollama, LM Studio, SillyTavern, Agnai 모두 프롬프트를 그대로 전달합니다 — 소설의 품질 차이는 모델 + 프롬프트에 있지, 인터페이스에 있지 않습니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**다루는 템플릿:** 총 15가지 — 장면 쓰기 (2), 인물 개발 (3), 대화 (2), 세계관 구축 (2), 문체 이전 (2), 퇴고 (1), 편집 (3).',
+          '**테스트된 환경:** Llama 3.3 70B, Qwen3 32B, Mistral Large — 모두 Apple M5 Max 64 GB와 NVIDIA RTX 4090 24 GB에서 Ollama를 통해 실행.',
+          '**단어 제한:** 장면은 150–400단어; 대화는 100–200단어; 세계관 구축 구절은 300–600단어.',
+          '**소설용 최고의 전반적인 모델:** Llama 3.3 70B (강력한 지시 추종, 서사 일관성, 긴 컨텍스트).',
+          '**문체 이전 최고:** Mistral Large (일관된 산문 레지스터; 작가 음성 패턴을 안정적으로 재현).',
+          '**대화 최고:** Command R+ 104B 또는 Hermes 3 (인물 목소리 차별화; 자연스러운 구어체 레지스터).',
+          '**시스템 프롬프트:** 장르와 시점을 사용자 턴이 아닌 시스템 메시지에 설정하세요 — 세션의 모든 생성을 고정합니다.',
+        ],
+      },
+      whyStructure: {
+        id: 'why-structure',
+        title: '구조화된 프롬프트가 소설에 중요한 이유',
+        content:
+          '**소설에서 로컬 LLM의 기본 실패 모드는 요약화입니다: 모델이 장면을 보여주는 대신 무슨 일이 일어났는지 말합니다.** 이는 instruction-tuned 모델이 서사적 몰입이 아닌 작업 완수에 최적화되어 있기 때문입니다 — 모호한 프롬프트("긴장된 대립 장면을 써줘")가 요약 휴리스틱을 활성화합니다. 구조화된 프롬프트는 그 출구를 막습니다. 시점, 감각적 앵커, 감정 비트, 단어 제한을 지정하면 모델이 요약할 공간이 없습니다 — 렌더링해야 합니다. 두 번째 실패 모드는 드리프트입니다: 모델이 지정한 장르와 음성으로 시작하다가 200–300토큰 이후 일반적인 AI 글쓰기 레지스터로 돌아갑니다. 제약 조건 앵커(시점, 감각적 포커스, 단어 제한)가 이 드리프트를 늦추고, 장르와 음성을 명시하는 시스템 프롬프트가 완전히 막습니다.',
+        callouts: [
+          {
+            type: 'tip',
+            text: '다중 턴 세션에서는 시스템 프롬프트에 장르와 시점을 설정하십시오 — 사용자 턴의 지시보다 더 잘 고정되는 이유는 [시스템 프롬프트 대 사용자 프롬프트](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)를 참조하십시오. 장르와 시점을 시스템 메시지에 넣고, 사용자 턴에는 넣지 마십시오. 세션의 모든 생성이 해당 제약을 상속하므로 매번 반복할 필요가 없습니다. 예시: "당신은 문학 소설 어시스턴트입니다. 생성하는 모든 산문은 3인칭 근접 시점, 과거 시제, 감각적 세부 사항과 하위 텍스트에 집중하여 작성됩니다."',
+          },
+        ],
+      },
+      beforeAfter: {
+        id: 'before-after',
+        title: '전/후: 구조화된 프롬프트가 실제로 하는 것',
+        content:
+          '아래 세 쌍은 모호한 요청에서 구조화된 프롬프트로 전환할 때 정확히 무엇이 바뀌는지 보여줍니다 — 각 쌍은 서로 다른 템플릿 카테고리를 다루며 각 프롬프트 유형으로 얻는 결과를 설명합니다.',
+      },
+      beforeAfterScene: {
+        id: 'before-after-scene',
+        title: '쌍 1 — 장면 쓰기',
+        promptExamples: [
+          {
+            label: '❌ 모호한 장면 프롬프트',
+            text: '주방에서 긴장된 대립 장면을 써 주세요.',
+          },
+          {
+            label: '✅ 5부 구조 장면 프롬프트',
+            text: '장르: 문학 소설. 시점: Maya의 3인칭 밀착 시점. 감각적 앵커: 탄 커피 냄새. 감정 비트: Maya가 오빠가 거짓말했음을 깨닫는 순간. 직접 서술하지 말고 보여 주세요. 단어 한도: 200단어.',
+          },
+        ],
+        items: [
+          '**모호한 결과:** 2–3문장의 줄거리 요약. "Maya가 부엌에서 오빠와 대립했습니다. 그들 사이의 긴장감이 느껴졌습니다. 그는 불편하게 움직이며 시선을 피했습니다." 장면이 묘사되지 않고 말해집니다. 감각적인 세계가 없습니다.',
+          '**구조화된 결과:** 탄 커피가 행동을 고정하는 180단어 렌더링된 장면 — Maya는 그 아침의 커피 찌꺼기를 보고 오빠가 없었다고 말한 시간에 있었다는 것을 깨닫고, 장면은 그의 손이 카운터에 닿는 물리적 세부 사항으로 끝납니다. 이해가 명시된 감정이 아닌 산문에서 나타납니다.',
+        ],
+      },
+      beforeAfterCharacter: {
+        id: 'before-after-char',
+        title: '쌍 2 — 인물 개발',
+        promptExamples: [
+          {
+            label: '❌ 성격 목록 인물 프롬프트',
+            text: 'Elena는 용감하고, 빈정대며, 충성스럽습니다.',
+          },
+          {
+            label: '✅ 모순에 의한 인물 프롬프트',
+            text: 'Elena는 병적으로 정직합니다. 그녀는 어머니에게 언니의 편지를 숨깁니다. 두 가지를 직접 명시하지 않고 보여 주세요. 200단어.',
+          },
+        ],
+        items: [
+          '**성격 목록 결과:** 각 성격을 순서대로 묘사하는 인물. "Elena는 망설임 없이 방에 들어갔습니다 — 그녀는 아무것도 두려워하지 않았습니다. '물론이죠,' 그녀는 퉁명스럽게 말했습니다. 그녀는 사랑하는 사람들을 위해 무엇이든 할 것입니다." 각 성격이 묘사되고 체크됩니다.',
+          '**모순 결과:** 독자가 해석해야 하는 인물. Elena는 요청받지 않고 잘못된 커피 주문을 지적하며(정직함), 어머니가 들어오기 전에 봉투를 부엌 서랍에 밀어 넣습니다(숨김). 독자는 그 모순을 만들어낸 상처를 추론해야 합니다. 그 간극이 바로 인물입니다.',
+        ],
+      },
+      beforeAfterDialogue: {
+        id: 'before-after-dialogue',
+        title: '쌍 3 — 대화',
+        promptExamples: [
+          {
+            label: '❌ 직접적인 대화 프롬프트',
+            text: '두 친구가 돈 문제로 다툽니다.',
+          },
+          {
+            label: '✅ 하위 텍스트 우선 대화 프롬프트',
+            text: '하위 텍스트: A는 B에게 돈을 빌리고 싶지만 말하지 않습니다. B는 알지만 모른 척합니다. 4번 주고받기, "said" 태그만, 행동 비트 없음.',
+          },
+        ],
+        items: [
+          '**직접적인 결과:** 정확히 하고 싶은 말을 하는 인물들. "'당신이 내게 돈을 빚졌어요,' James가 말했습니다. '알아요, 미안해요,' Paul이 말했습니다." 하위 텍스트가 텍스트 자체입니다. 독자가 추론할 것이 없습니다.',
+          '**하위 텍스트 우선 결과:** 어느 인물도 돈이나 대출을 언급하지 않는 네 번의 교환. A는 차가 수리가 필요하다고 불평합니다. B는 차가 문제라는 것에 동의합니다. A는 좀 더 오래 정비소에 맡겨야 할 것 같다고 말합니다. B는 자신의 정비소가 꽉 찼다고 말합니다. 필요와 회피는 말해지지 않은 것에서만 보입니다.',
+        ],
+      },
+      sceneWriting: {
+        id: 'scene-writing',
+        title: '장면 쓰기 템플릿 (템플릿 1–2)',
+        content:
+          '**5부 장면 템플릿이 기초입니다: 장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한.** 각 요소는 특정 역할을 하며 — 어느 것이든 제거하면 출력 품질이 측정 가능하게 떨어집니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '가장 효과적인 로컬 LLM 장면 프롬프트는 장르, 시점, 감각적 앵커 하나, 감정 비트, 단어 제한을 지정합니다 — 이 다섯 가지 제약 조건이 함께 묘사하는 산문을 강제하고 모델의 기본 요약화 모드를 방지합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '"긴장된 대립 장면을 써줘" 대신 이렇게 해보십시오: "장르: 스릴러. 시점: 3인칭 근접, Elena. 감각적 앵커: 에어컨 시스템의 웅웅거리는 소리. 감정 비트: Elena가 자신이 틀렸음을 깨닫는다 — 명시하지 말고 보여줘. 단어 제한: 200단어." 모델의 출력은 줄거리 요약이 아닌 구체적인 장면이 됩니다. 단어 제한은 선택 사항이 아닙니다 — 없으면 모델이 채웁니다.',
+          },
+        ],
+        items: [
+          '**장르 마커** — 단 하나의 단어나 구절 (예: "고딕 호러", "아늑한 미스터리", "하드 SF")이 산문의 레지스터를 고정합니다.',
+          '**시점 마커** — "3인칭 근접, [이름]" 또는 "1인칭"이 문법적 틀을 설정하고 모든 관찰을 하나의 의식을 통해 필터링합니다.',
+          '**감각적 앵커** — 특정 감각적 세부 사항(젖은 콘크리트 냄새, 시계 소리, 낡은 카펫의 감촉)이 장면을 물리적 세계에 고정하고 추상화를 방지합니다.',
+          '**감정 비트** — 장면이 끝나야 하는 감정 상태를 명시한 뒤 "명시하지 말고 보여줘"를 추가합니다 — 이것이 묘사 제약을 활성화합니다.',
+          '**단어 제한** — 압축된 순간에는 150단어; 완전한 장면 비트에는 250–300단어; 하나를 연장하는 대신 두 번째 장면을 요청하기 전 최대 400단어.',
+        ],
+      },
+      template1: {
+        id: 'template-1',
+        title: '템플릿 1 — 5부 장면 구조',
+        content:
+          '기본 템플릿입니다. 다섯 요소는 필수적입니다 — 어느 것이든 제거하면 출력 품질이 측정 가능하게 떨어집니다.',
+        codeBlock: `Genre: [literary fiction / thriller / fantasy / horror / etc.]
+POV: [first person / close third, character name]
+Sensory anchor: [one specific sensory detail — smell, texture, sound]
+Emotional beat: [what the POV character feels at the end of this scene — do not state it directly]
+Word ceiling: [150–400 words]
+
+Write the scene. Do not summarise. Every sentence must render a moment, not describe one.`,
+        codeLanguage: '장면 템플릿',
+      },
+      template2: {
+        id: 'template-2',
+        title: '템플릿 2 — 액션/전투 시간 압축',
+        content:
+          '모델이 액션을 축약하거나 비트 사이에 불필요한 숨 고르기 산문을 추가하는 것을 방지합니다. "1초 1문장" 규칙은 기계적 정확성을 강제하고 역동적인 순서를 유지합니다.',
+        codeBlock: `Genre: [action / thriller / fantasy combat]
+POV: [close third / first person, character name]
+Sensory anchor: [one physical sensation — impact, sound, texture]
+Time rule: every sentence represents exactly 1 second of story time
+Word ceiling: [100–200 words]
+
+Write the fight/action sequence. Enforce the time rule strictly — no sentence can span more than 1 second of story time.`,
+        codeLanguage: '장면 템플릿',
+      },
+      characterDevelopment: {
+        id: 'character-development',
+        title: '인물 개발 템플릿 (템플릿 3–5)',
+        content:
+          '**모순 프롬프트가 성격 목록 접근법보다 더 깊은 인물을 만들어냅니다.** 모델에게 성격 목록("Elena는 용감하고, 냉소적이고, 충성스럽다")을 주면 그 성격들을 묘사하는 인물이 만들어집니다. 모델에게 지배적인 성격과 모순되는 행동을 주면 독자가 해석해야 하는 인물이 만들어집니다.',
+        items: [
+          '**지배적인 성격 하나, 모순되는 행동 하나** — 모순이 바로 인물입니다; 독자가 그것을 만들어낸 상처나 역사를 추론합니다.',
+          '**"어느 것도 명시하거나 설명하지 마세요"** — 이 지시가 모델이 편집하는 것("그녀는 본질적으로 모순적이었습니다…")을 방지하고 장면이 의미를 전달하도록 강제합니다.',
+          '**관계 역학 프롬프트:** "A가 X를 원하고 B가 Y를 원하는 [인물 A]와 [인물 B] 사이의 200단어 교환을 써줘 — 둘 다 진짜로 원하는 것을 말하지 않아."',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '인물 카드를 전체 세션의 시스템 프롬프트로 사용하십시오. 텍스트 형식으로 인물 카드를 작성하고(이름, 지배적인 성격, 모순되는 행동, 중심 상처, 말하기 레지스터), 글쓰기 세션 시작 시 시스템 메시지에 붙여넣으십시오. 해당 세션의 모든 인물 등장이 일관됩니다. 인물이 챕터를 통해 발전함에 따라 카드를 업데이트하십시오.',
+          },
+        ],
+      },
+      template3: {
+        id: 'template-3',
+        title: '템플릿 3 — 인물 모순 프롬프트',
+        content:
+          '가장 신뢰할 수 있는 인물 개발 구조입니다. 성격 목록을 묘사하는 인물이 아닌, 독자가 추론해야 하는 다층적인 인물을 만들어냅니다.',
+        codeBlock: `Character name: [Name]
+Dominant trait: [one trait — "relentlessly optimistic", "pathologically honest", "obsessively controlled"]
+Contradicting behaviour: [one specific action that contradicts the trait — "hides her sister's letters", "lies to the one person who believes in him"]
+
+Write a scene (200 words max) in which both the trait and the behaviour are present and visible. Do not name or explain either.`,
+        codeLanguage: '인물 템플릿',
+      },
+      template4: {
+        id: 'template-4',
+        title: '템플릿 4 — 목소리 분리 프롬프트',
+        content:
+          '인물의 목소리를 줄거리와 심리에서 분리합니다. 대화를 쓰기 전에 말하기 레지스터를 확립하거나, 같은 원고의 다른 인물들과 인물의 소리가 구별되는지 확인하는 데 유용합니다.',
+        codeBlock: `Character: [Name]
+Task: a mundane activity — [making coffee / waiting for a bus / washing dishes]
+
+Write 5 lines of [Character]'s internal monologue during this task. Do not include plot information. Do not explain the character's psychology. Use the character's specific speech register only.`,
+        codeLanguage: '인물 템플릿',
+      },
+      template5: {
+        id: 'template-5',
+        title: '템플릿 5 — 배경 발굴',
+        content:
+          '어른 버전을 보여주지 않고 독자에게 인물을 형성한 것을 보여줍니다. 어린 시절 장면에서 추론된 배경은 말해주는 배경보다 더 지속적입니다.',
+        codeBlock: `Character (adult version): [Name — include dominant trait and contradicting behaviour in one sentence]
+
+Write a 150-word scene from [Character]'s childhood that makes their adult behaviour inevitable — but do not show the adult version of the character. Do not name the trait or explain the connection. Show the event; let the reader infer the rest.`,
+        codeLanguage: '인물 템플릿',
+      },
+      dialogue: {
+        id: 'dialogue',
+        title: '대화 템플릿 (템플릿 6–7)',
+        content:
+          '**하위 텍스트 우선 대화 템플릿이 자연스러운 대사를 만들어냅니다.** 대부분의 모델은 기본적으로 정확히 하고 싶은 말을 하는 인물을 만들어냅니다 — AI가 생성한 대화의 명백한 신호입니다. 대사를 요청하기 전에 하위 텍스트를 먼저 설정하면 모델이 회피를 구축하도록 강제합니다.',
+        items: [
+          '**하위 텍스트를 명시적으로 설정하십시오** — 각 인물이 원하지만 말하지 않을 것과 왜 말하지 않을지.',
+          '**"'said' 외의 대화 태그 없음"** — 감정적 태그를 위한 모델의 의존성("화가 난 듯 말했다")을 제거하고 대사가 감정을 전달하도록 강제합니다.',
+          '**"액션 비트 없음"** — 빈 대화를 채우기 위해 모델이 사용하는 단계 지시("그녀가 팔짱을 꼈다. 그가 한숨을 쉬었다.")를 제거합니다. 퇴고에서 잘라내십시오.',
+          '**장르 레지스터 프롬프트:** "[장르]에서 [관계] 사이의 5번 교환 논쟁을 써줘. 표면적으로는 [주제 A]에 관한 것이지만, 실제 논쟁은 [주제 B]에 관한 거야. 주제 B를 명시하지 마세요."',
+          '**끊기 프롬프트:** "인물 A가 문장 중간에 있을 때 인물 B가 끊습니다. B의 감정 상태를 말하지 않고 끊기가 B의 감정 상태를 드러내도록 써주세요."',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '여러 인물의 대화를 위해 생성 전에 시스템 프롬프트에 각 인물에게 "말하기 레지스터"를 할당하십시오. 예시: "Elena: 격식체, 정확함, 절대 축약어 없음. Marcus: 비격식, 끊기, '이봐,' 또는 '문제는'으로 문장 시작." 모델은 각 턴마다 상기시키지 않아도 이 레지스터를 유지합니다.',
+          },
+        ],
+      },
+      template6: {
+        id: 'template-6',
+        title: '템플릿 6 — 하위 텍스트 우선 대화',
+        content:
+          '대사를 쓰기 전에 각 인물이 원하지만 말하지 않을 것을 설정합니다. 정확히 하고 싶은 말을 하는 인물을 쓰는 대신 모델이 회피를 구축하도록 강제합니다.',
+        codeBlock: `Subtext (do not include this in the dialogue itself):
+[Character A] wants [X] but will not ask for it directly because [reason].
+[Character B] knows [X] is what A wants but pretends not to because [reason].
+
+Scene: [brief setting — 10 words max]
+Length: [number] exchanges
+
+Write the dialogue. No dialogue tags except "said". No internal monologue. No action beats.`,
+        codeLanguage: '대화 템플릿',
+      },
+      template7: {
+        id: 'template-7',
+        title: '템플릿 7 — 목소리 차별화 (3가지 전달)',
+        content:
+          '인물들의 목소리가 귀속 없이 식별될 만큼 충분히 구별되는지 확인합니다. 세 가지 전달이 같게 들린다면 세션을 계속하기 전에 시스템 프롬프트에 말하기 레지스터 제약을 추가하십시오.',
+        codeBlock: `Piece of news: [state the news in one sentence]
+
+Write this news delivered by three different characters. Each delivery should make the character's class, education level, and emotional relationship to the news immediately apparent. No exposition — voice only.
+
+Character 1: [Name — background and relationship to the news in one sentence]
+Character 2: [Name — background and relationship to the news in one sentence]
+Character 3: [Name — background and relationship to the news in one sentence]`,
+        codeLanguage: '대화 템플릿',
+      },
+      worldbuilding: {
+        id: 'worldbuilding',
+        title: '세계관 구축 템플릿 (템플릿 8–9)',
+        content:
+          '**세계관 구축 프롬프트는 동심원 고리 구조로 가장 잘 작동합니다: 감각적 세부 사항에 고정하고 바깥쪽으로 확장합니다.** "내 판타지 도시를 묘사해줘"로 시작하면 목록이 만들어집니다. "새벽 시장의 냄새"로 시작하면 독자가 살아가는 세계가 만들어집니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '하나의 감각적 세부 사항에 고정되고 동심원 고리(사물 → 방 → 건물 → 거리 → 구역)로 구조화된 세계관 구축 프롬프트는 백과사전식 목록이 아닌 독자가 살아가는 몰입적인 세계 묘사를 만들어냅니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '작고 구체적인 것에서 시작하십시오 — 동전의 무게, 대장간의 냄새, 특정 거리 상인의 소리 — 그리고 모델에게 거기서 바깥쪽으로 확장하라고 요청하십시오. 도시 수준에 도달하기 전에 멈추십시오. 다른 앵커에서의 짧은 세계관 구축 구절 여러 개가 포괄적인 묘사 하나보다 더 풍부한 세계를 구축합니다.',
+          },
+        ],
+        items: [
+          '**앵커 구체성** — 앵커가 구체적일수록 세계가 더 구체적입니다. "시장의 냄새"는 모호합니다. "모퉁이 향신료 가판대의 카다멈과 젖은 개 냄새"는 구체적인 세계를 만들어냅니다.',
+          '**정지 고리** — 모델에게 어디서 확장을 멈출지 알려주십시오(방, 건물, 구역, 도시). 정지가 없으면 전체 세계를 요약합니다.',
+          '**"세계의 이름을 밝히지 마세요"** — 모델이 정보를 주입하는 것을 방지하고 장면을 렌더링하도록 강제합니다.',
+          '**"역사를 설명하지 마세요"** — 백과사전적 반사를 제거합니다; 역사는 설명이 아닌 세부 사항에서 나타납니다.',
+          '**암시된 기술 프롬프트:** "30초 산책에서 인물이 만지는 모든 물체를 명시하여 세계의 거리를 묘사하십시오. 내러티브 없음 — 물체 이름만, 순서대로."',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '세계관 구축 목록을 피하십시오. 세계관 구축 프롬프트가 세계에 관한 사실 목록을 만들어낸다면, 프롬프트가 너무 추상적입니다. 렌더링된 산문이 아닌 모든 응답은 구체적인 앵커로 다시 프롬프트해야 합니다. 목록은 "내 세계를 묘사해줘" 유형 프롬프트의 증상입니다 — "[특정 위치]를 [특정 시점]에 [특정 순간]에 보여줘"로 전환하십시오.',
+          },
+        ],
+      },
+      template8: {
+        id: 'template-8',
+        title: '템플릿 8 — 동심원 고리 세계관 구축',
+        content:
+          '감각적 세부 사항에 고정하고 바깥쪽으로 확장합니다. 백과사전식 목록을 피하고 독자가 읽는 대신 살아가는 몰입적인 세계 묘사를 만들어냅니다.',
+        codeBlock: `Anchor: [one specific sensory detail — a smell, a sound, a texture]
+POV: [observer character or omniscient]
+Rings: expand from the anchor outward — object → room → building → street → district. Stop when you reach [ring level: room / building / street / district].
+Word ceiling: [200–400 words]
+
+Do not name the world. Do not explain the history. Show only what the POV character perceives in this moment.`,
+        codeLanguage: '세계관 구축 템플릿',
+      },
+      template9: {
+        id: 'template-9',
+        title: '템플릿 9 — 사물을 통한 파벌 문화',
+        content:
+          '묘사나 설명이 아닌 물질 문화를 통해 세계관 구축을 드러냅니다. 파벌이 소유하고 사용하고 눈에 보이게 유지하는 것이 그들의 믿음에 대한 어떤 설명보다 독자에게 더 많은 것을 알려줍니다.',
+        codeBlock: `Faction: [name and one-line description of their core belief or function]
+
+Describe the interior of a building used by this faction — only through the objects in the room. Do not describe the people. Do not state their beliefs. Do not explain the purpose of any object. 150 words max.`,
+        codeLanguage: '세계관 구축 템플릿',
+      },
+      styleTransfer: {
+        id: 'style-transfer',
+        title: '문체 이전 템플릿 (템플릿 10–11)',
+        content:
+          '**문체 이전은 작가 이름만이 아닌 기법을 명시할 때 작동합니다.** "Cormac McCarthy처럼 써줘"는 일반적인 근사치를 만들어냅니다 — 희소한 구두점과 서부 테마. "McCarthy의 중첩된 종속절, 구체적인 명사만, 대화 태그 없음 기법을 사용하여 써줘"는 진정한 구조적 충실도를 가진 무언가를 만들어냅니다. 특정한 창의적 결과물을 만들어내는 프롬프트 구조에 대한 보다 완전한 프레임워크는 [CRAFT 프레임워크](/ko/frameworks/craft)를 참조하십시오.',
+        items: [
+          '**기법을 구체적으로 명시하십시오** — "간결한 산문"은 모호합니다; "짧은 선언문, 구체적인 명사, 수식어 없음"은 실행 가능합니다.',
+          '**샘플을 붙여넣으십시오** — 작가의 실제 산문 2–3문장이 묘사만으로는 하지 못하는 방식으로 모델의 패턴 인식을 활성화합니다.',
+          '**"샘플을 모방하지 말고 기법을 복제하세요"** — 샘플 구절의 직접적인 의역을 방지합니다.',
+          '**시제 및 시점 이전:** "다음 구절을 다시 써주세요: 3인칭 과거에서 1인칭 현재로 변환하세요. 모든 구체적인 감각적 세부 사항을 유지하세요. 새로운 플롯 정보를 추가하지 마세요. 최대 200단어."',
+          '**레지스터 보정:** 복제를 요청하기 전에 제공한 구절에서 모델이 보는 기법을 명시하도록 요청하십시오 — 이 추출 단계가 기법 명시의 정확도를 향상시킵니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '문체 이전에는 Mistral Large를 사용하십시오. Mistral Large는 로컬에서 실행 가능한 대부분의 모델보다 긴 생성에서 일관된 산문 레지스터를 유지합니다. 여러 단락에 걸쳐 레지스터 일관성이 중요한 문체 이전 작업의 경우 Llama 3.3 70B보다 Mistral Large를 선호하십시오. 짧은 문체 이전(300단어 미만)의 경우 30B+ 모델이면 충분합니다.',
+          },
+        ],
+      },
+      template10: {
+        id: 'template-10',
+        title: '템플릿 10 — 명시된 기법으로 문체 이전',
+        content:
+          '작가 이름만이 아닌 특정 기법을 명시합니다. 표면적인 흉내가 아닌 구조적 충실도를 만들어냅니다.',
+        codeBlock: `Target style: [Author name]
+Techniques to replicate (name 2–3 specifically):
+1. [Technique — e.g., "sentence fragments for interiority"]
+2. [Technique — e.g., "concrete Anglo-Saxon vocabulary, no Latinate abstractions"]
+3. [Technique — e.g., "em dashes for interruption, never ellipsis"]
+
+Sample passage (2–3 sentences of the author's actual prose):
+"[paste sample]"
+
+Now write [scene description] using these techniques. 200 words. Do not mimic the sample — replicate the technique.`,
+        codeLanguage: '문체 이전 템플릿',
+      },
+      template11: {
+        id: 'template-11',
+        title: '템플릿 11 — 장르 레지스터 이전',
+        content:
+          '플롯 정보를 변경하지 않고 기존 산문을 장르 레지스터 간에 이동시킵니다. 장면에 맞는 레지스터를 찾거나 레지스터가 장르와 맞지 않을 때 퇴고하는 데 유용합니다.',
+        codeBlock: `Source register: [thriller / romance / horror / literary fiction / commercial fiction / etc.]
+Target register: [literary fiction / commercial fiction / genre X]
+Specific changes: [longer sentences / more interiority / less action description / etc.]
+
+Rewrite the following passage in [target register]. Do not change any plot information. Word ceiling: same length as input.
+
+[paste passage]`,
+        codeLanguage: '문체 이전 템플릿',
+      },
+      revision: {
+        id: 'revision',
+        title: '퇴고 템플릿 (템플릿 12)',
+        content:
+          '**퇴고 프롬프트에는 일반적인 개선 지시가 아닌 명시된 문제가 필요합니다.** "이것을 더 좋게 만들어줘"는 최소한의 표면적인 편집만 만들어냅니다. "모든 수동 구문을 제거하십시오; 각 문장은 능동태를 사용해야 합니다. 주어가 명확하지 않으면 구체적인 주어를 만들어내세요"는 측정 가능한 구조적 변화를 만들어냅니다.',
+        items: [
+          '**항상 묘사가 아닌 초안을 붙여넣으십시오.** 퇴고 프롬프트는 실제 초안 텍스트를 붙여넣을 때만 작동합니다. 산문을 보여주지 않고 문제를 묘사하면 재작성된 구절이 아닌 일반적인 조언이 나옵니다.',
+          '**특정 문제를 명시하십시오.** "다시 써주세요"만으로는 충분하지 않습니다. 구조적 문제를 식별하십시오: 수동태, 부사 과다, 시점 전환, 채우기 또는 정보 덤프.',
+          '**시점 전환 수정:** "다음 구절에는 시점 위반이 포함되어 있습니다 — 여러 인물의 생각을 듣습니다. 3인칭 근접 [인물 이름]으로 엄격하게 다시 써주세요. 다른 인물들의 모든 내부 접근을 제거하세요."',
+          '**대화 자연화:** "다음 대화는 쓰여진 것처럼 들립니다. 다시 써주세요: 인물들이 서로를 끊을 수 있고, 단편으로 말할 수 있고, 옆으로 이야기할 수 있습니다. 교환된 같은 정보를 유지하세요."',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '항상 묘사가 아닌 초안을 붙여넣으십시오. 퇴고 프롬프트는 실제 초안 텍스트를 붙여넣을 때만 작동합니다. 특정 단락이나 교환을 붙여넣고, 특정 문제를 명시하고, 재작성의 단어 제한을 지정하십시오.',
+          },
+        ],
+      },
+      template12: {
+        id: 'template-12',
+        title: '템플릿 12 — 퇴고 키트 (압축, 수동태, 부사 감소)',
+        content:
+          '특정 문제를 명시하는 세 가지 퇴고 지시. 각각 별도로 실행하십시오 — 세 가지를 하나의 프롬프트에 결합하면 모델이 하나를 다른 것보다 우선시하므로 일관성 없는 결과가 나옵니다.',
+        codeBlock: `--- COMPRESSION ---
+The following scene is [N] words. Rewrite it in [N/2] words. Preserve the emotional beat and all sensory anchors. Cut dialogue tags, action beats, and transitions first:
+
+[paste scene]
+
+---
+
+--- PASSIVE VOICE ELIMINATION ---
+Rewrite the following paragraph: every sentence must use active voice. If the subject is not clear, invent a concrete subject. 150 words max:
+
+[paste paragraph]
+
+---
+
+--- ADVERB REDUCTION ---
+Rewrite the following: remove every adverb. Replace each adverb + weak verb pair with a single strong verb. Do not add new plot information:
+
+[paste paragraph]`,
+        codeLanguage: '퇴고 템플릿',
+      },
+      editorialTemplates: {
+        id: 'editorial-templates',
+        title: '편집 템플릿 (템플릿 13–15)',
+        content:
+          '**편집 템플릿은 장면 수준이 아닌 원고 수준에서 작동합니다.** 연속성 오류가 쌓이기 전에 감지하고, 완전한 챕터에 걸친 리듬 문제를 식별하고, 정보 덤프 형식의 노출을 렌더링된 산문으로 재배치하는 데 도움이 됩니다. 초안 작성 중이 아닌 초안 작성 후에 실행하십시오.',
+        callouts: [
+          {
+            type: 'tip',
+            text: '완성된 초안에 편집 템플릿을 실행하고, 진행 중인 작업에는 실행하지 마십시오. 플롯 일관성 확인은 최소 3개의 장면이 필요하고; 리듬 분석은 완전한 챕터가 필요합니다. 미완성 구절에서 실행하면 거짓 양성이 나오고 컨텍스트 창을 낭비합니다.',
+          },
+        ],
+      },
+      template13: {
+        id: 'template-13',
+        title: '템플릿 13 — 플롯 일관성 확인',
+        content:
+          '챕터 전반에 쌓이기 전에 연속성 오류를 식별합니다. 3–4개의 새로운 장면마다 실행하여 수정이 아직 쉬울 때 오류를 잡으십시오.',
+        codeBlock: `[paste the last 3 scenes here]
+
+Read these three scenes carefully. List every continuity error you detect: changed physical descriptions (eye colour, hair, height), location inconsistencies, timeline conflicts, object appearances that contradict earlier scenes, character knowledge they should not yet have.
+
+Output only a flag list — one sentence per flag, 150 words maximum total. Do not summarise the scenes. Do not suggest fixes. Flag only.`,
+        codeLanguage: '편집 템플릿',
+      },
+      template14: {
+        id: 'template-14',
+        title: '템플릿 14 — 리듬 분석',
+        content:
+          '챕터 전반의 리듬을 매핑하여 평탄한 구역을 식별합니다. 챕터가 문장 수준에서는 올바르게 읽히지만 전반적으로 느리게 느껴질 때 유용합니다 — 리듬 표시가 끌림이 발생하는 곳을 보여줍니다.',
+        codeBlock: `[paste chapter here]
+
+Read this chapter and mark each paragraph with: FAST / MEDIUM / SLOW.
+
+After marking, list only the SLOW paragraphs with a one-sentence diagnosis for each: what is causing the pacing to drag (over-description, dialogue repetition, excessive interiority, unnecessary backstory insertion, etc.).
+
+Output format: Paragraph [number]: [SLOW] — [one-sentence diagnosis]
+No other commentary. No summaries. Diagnosis only.`,
+        codeLanguage: '편집 템플릿',
+      },
+      template15: {
+        id: 'template-15',
+        title: '템플릿 15 — 노출 완화',
+        content:
+          '어떤 정보도 추가하거나 제거하지 않고 정보 덤프 형식의 노출을 대화, 행동, 감각적 세부 사항을 통해 재배치합니다. 단락이 장면이 아닌 사실 전달 메커니즘으로 기능할 때 사용하십시오.',
+        codeBlock: `[paste paragraph with exposition]
+
+This paragraph delivers exposition as a block. Rewrite it by distributing the same information across three channels:
+1. A line of dialogue that reveals one piece of information through character reaction (not explanation).
+2. One action beat that implies one piece of information without stating it.
+3. One sensory detail that shows one piece of information without naming it.
+
+Word ceiling: same length as the input paragraph. Do not add any new information. Do not remove any information that was in the original.`,
+        codeLanguage: '편집 템플릿',
+      },
+      models: {
+        id: 'models',
+        title: '소설 쓰기를 위한 모델 추천',
+        content:
+          '**모델 선택은 프롬프트 구조보다 덜 중요하지만, 중요합니다.** 7B 모델에서 잘 구조화된 프롬프트가 70B 모델에서 모호한 프롬프트를 능가할 것입니다 — 하지만 동등한 프롬프트 기준으로 더 큰 모델이 긴 생성에서 더 안정적으로 제약 조건을 따르고 인물 목소리를 더 신뢰할 수 있게 구별합니다.',
+        columns: ['작업', '추천 모델', '이유'],
+        rows: [
+          { '작업': '일반 장면 쓰기', '추천 모델': 'Llama 3.3 70B', '이유': '강력한 지시 추종, 서사 일관성, 제약이 있는 산문에 최선' },
+          { '작업': '문체 이전', '추천 모델': 'Mistral Large', '이유': '긴 생성에서 일관된 산문 레지스터; 로컬에서 실행 가능한 모델 중 최고의 레지스터 충실도' },
+          { '작업': '대화 / 인물 목소리', '추천 모델': 'Command R+ 104B 또는 Hermes 3', '이유': '자연스러운 구어체 레지스터; 광범위한 교환에서 인물 목소리를 안정적으로 구별' },
+          { '작업': '세계관 구축', '추천 모델': 'Qwen3 32B', '이유': '구조화된 세부 사항 생성에 강함; 동심원 고리 확장 패턴을 안정적으로 유지' },
+          { '작업': '퇴고 / 편집', '추천 모델': 'Llama 3.3 70B', '이유': '전체 단락에 걸쳐 특정 구조적 재작성 지시를 따르는 데 최선' },
+          { '작업': '다크 / 무검열 소설', '추천 모델': 'Hermes 3 Llama 3.3', '이유': '콘텐츠 거부를 줄이도록 조정됨; 로컬에서 실행 시 클라우드 서비스 약관 제한 없음' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '소설 모델을 위한 최소 하드웨어 요구 사항. Q4 양자화의 Llama 3.3 70B는 약 40GB의 VRAM 또는 통합 메모리가 필요합니다 (NVIDIA RTX 4090 24 GB 듀얼 GPU, 또는 Apple M5 Max 64 GB). Q4의 Qwen3 32B는 20–24GB로 작동합니다. Q4의 Mistral Large는 약 24GB가 필요합니다. 16GB 머신의 경우 Qwen3 14B와 Mistral Small이 실제 상한입니다 — 두 모델 모두 더 짧은 생성에서 장면 템플릿을 안정적으로 따릅니다.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '흔한 실수',
+        items: [
+          '**단어 제한 없음.** 제한이 없으면 모델이 채웁니다 — 전환 단락, 액션 비트, 요약 문장을 토큰이 소진될 때까지 추가합니다. 항상 제한을 설정하십시오.',
+          '**모순 대신 성격 목록.** 다섯 가지 성격 목록은 각 성격을 순서대로 묘사하는 인물을 만들어냅니다. 두 성격 사이의 모순은 독자가 해석해야 하는 인물을 만들어냅니다. 모순 구조를 사용하십시오.',
+          '**기법 이름 없이 "[작가]처럼 써줘".** 작가 이름만으로 문체 이전을 하면 장르 흉내를 만들어내고 기법 충실도를 만들어내지 못합니다. 복제하고 싶은 특정 기법을 명시하십시오.',
+          '**시점 앵커 없음.** 명시된 시점 없이 장면 프롬프트를 작성하면 기본적으로 시점 전환이 만들어집니다 — 아무것도 금지하지 않기 때문에 모델이 모든 인물의 내부 상태에 접근합니다. 항상 시점 인물을 명시하십시오.',
+          '**초안 없이 퇴고 프롬프트 작성.** 모델에게 묘사하지만 보여주지 않는 장면의 "리듬을 개선"하도록 요청하면 일반적인 조언이 나옵니다. 실제 구절을 붙여넣으십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          'Llama 3.3 70B 모델 카드 및 지시 추종 벤치마크 — [Meta AI Research](https://ai.meta.com)',
+          'Qwen3 32B 기술 보고서 — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
+          'Mistral Large 모델 문서 — [Mistral AI](https://mistral.ai)',
+          'Command R+ 104B 사양 — [Cohere](https://cohere.com)',
+          'Hermes 3 파인튜닝 방법론 — [Nous Research](https://nousresearch.com)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '로컬 LLM이 소설 초안 작성을 위한 인간 글쓰기 파트너를 대체할 수 있습니까?',
+            a: '특정 작업의 경우 — 장면 초안 생성, 대화 변형 제작, 세계관 구축 세부 사항 추가 — 로컬 LLM은 빠르고 신뢰할 수 있는 초안 파트너입니다. 인간 공동 작가의 전략적 사고를 대체하지는 않습니다: 장면이 이야기 호에 맞는지, 인물의 선택이 감정적으로 획득되었는지, 챕터 리듬이 작동하는지 평가할 수 없습니다. 생성 작업에는 사용하고, 구조적 결정에는 인간의 판단을 유지하십시오.',
+          },
+          {
+            q: '소설 쓰기에는 Ollama, LM Studio, SillyTavern 중 무엇이 더 좋습니까?',
+            a: '완전한 프롬프트를 보내고 생성을 받는 구조화된 프롬프트 템플릿의 경우 Ollama (CLI 또는 API)와 LM Studio (OpenAI 호환 엔드포인트)는 동등합니다 — 인터페이스가 출력 품질에 영향을 주지 않습니다. SillyTavern은 다중 턴 롤플레이와 인물 카드 지속성에 가치를 추가하지만, 장면 쓰기 및 퇴고 프롬프트의 경우 간단한 채팅 인터페이스나 API 호출로 충분합니다.',
+          },
+          {
+            q: '이 프롬프트 템플릿이 더 작은 모델(7B–14B)에서도 작동합니까?',
+            a: '예, 하지만 제약 조건 준수가 약 150토큰 이후에 저하됩니다. 더 작은 모델은 5부 프롬프트의 처음 2–3개 제약 조건을 따르다가 기본 레지스터로 벗어납니다. 7B–14B 모델의 경우: 단어 제한을 줄이고(최대 150단어), 동시 제약 조건을 줄이고(5부 대신 3부), 더 자주 퇴고하거나 다시 프롬프트할 것으로 예상하십시오. Qwen3 14B가 소설 특정 프롬프트 추종에서 테스트된 가장 견고한 소형 모델입니다.',
+          },
+          {
+            q: '전체 소설 세션에 걸쳐 인물 목소리의 일관성을 어떻게 유지합니까?',
+            a: '텍스트 형식으로 인물 카드를 작성하고(이름, 지배적인 성격, 모순되는 행동, 말하기 레지스터, 예시 대화 3줄), 세션 시작 시 시스템 메시지에 붙여넣으십시오. 긴 세션의 경우 완성된 장면을 진행 중인 "세션 컨텍스트" 문서에 요약하고, 각 사용자 턴에 가장 최근 장면의 마지막 200–300단어를 포함하십시오. 이렇게 하면 컨텍스트 창을 초과하지 않고 컨텍스트 드리프트에 대응할 수 있습니다.',
+          },
+          {
+            q: '다크 또는 성인 소설을 쓰기에 가장 좋은 로컬 LLM은 무엇입니까?',
+            a: 'Hermes 3 Llama 3.3, Dolphin 3.0 Mistral, 또는 콘텐츠 거부를 줄이도록 조정된 모든 모델. 로컬에서 실행할 때 클라우드 서비스 약관 제한이 없습니다 — 모델의 기본 파인튜닝이 무엇을 생성할지와 생성하지 않을지를 결정합니다. 무검열 모델 옵션 및 윤리적 프레임워크에 대한 전체 내용은 [소설 쓰기를 위한 최고의 로컬 LLM 2026](/ko/power-local-llm/best-local-llm-creative-writing-2026)을 참조하십시오.',
+          },
+          {
+            q: 'SillyTavern이나 Agnai에서 이 템플릿을 사용할 수 있습니까?',
+            a: '예. 이 가이드의 모든 템플릿은 일반 텍스트입니다 — 로컬 모델에 텍스트를 전달하는 모든 인터페이스에서 작동합니다. SillyTavern에서는 시스템 프롬프트 필드에 장르와 시점 제약을 배치하고, 특정 장면 지시에는 사용자 턴을 사용하십시오. Agnai에서는 설정이 동일합니다. 템플릿은 인터페이스에 독립적입니다.',
+          },
+          {
+            q: '장면 프롬프트는 얼마나 길어야 합니까?',
+            a: '50–100단어의 장면 프롬프트가 실제로 최상의 결과를 냅니다. 더 긴 프롬프트(200단어 이상)는 복잡한 장면에서 작동할 수 있지만 모델이 일부 제약을 무시할 가능성이 높아집니다. 복잡한 장면의 경우 프롬프트를 두 패스로 나누십시오: 먼저 장면을 생성한 다음, 유지했던 제약을 추가하는 퇴고 프롬프트를 실행하십시오.',
+          },
+          {
+            q: '문체 이전 프롬프트가 저작권을 침해합니까?',
+            a: '작가의 기법(문장 구조, 구두점 선택, 서사 레지스터)을 복제하는 것은 저작권 침해가 아닙니다 — 문체는 저작권 보호 대상이 아닙니다. 저작권이 있는 텍스트의 실질적인 verbatim 구절을 복제하는 것은 침해입니다. 이 가이드의 템플릿은 2–3문장 샘플을 기법 앵커로 사용하며, 이는 표준 교육적 공정 사용 범위에 해당하고, 생성된 출력은 내용이 아닌 기법을 복제합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[소설 쓰기를 위한 최고의 로컬 LLM 2026](/ko/power-local-llm/best-local-llm-creative-writing-2026) — 서사 생성, 샘플링 설정, 무검열 옵션을 위한 모델 비교.',
+          '[SillyTavern vs Agnai vs RisuAI: 최고의 로컬 롤플레이 인터페이스](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 인물 카드와 협업 소설을 위한 인터페이스 비교.',
+          '[소설 초고와 시나리오를 위한 로컬 LLM 사용법](/ko/power-local-llm/local-llm-screenwriting-and-novel-drafting) — 장편 초안 작업 흐름, 챕터 관리, 컨텍스트 창 전략.',
+          '[소설 쓰기를 위한 무검열 로컬 LLM: 윤리와 설정](/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 성인 콘텐츠에 사용할 모델, 개인 정보 보호 영향, 책임감 있는 사용 프레임워크.',
+          '[Chain-of-Thought 프롬프팅 설명](/ko/prompt-engineering/chain-of-thought-prompting) — 소설 플롯 구성 및 장면 계획에 적용되는 구조화된 추론 프롬프트.',
+          '[Zero-Shot vs Few-Shot 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot-prompting) — 소설 작업에서 프롬프트에 예시를 포함할 때와 생략할 때.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '소설 작가를 위한 로컬 LLM 프롬프트: 15가지 템플릿과 기법 (2026)',
+      description: '로컬 LLM을 사용하는 소설 작가를 위한 프롬프트 템플릿 15가지. 장면 쓰기, 인물 개발, 대화, 세계관 구축, 문체 이전, 퇴고, 편집 템플릿 — Ollama와 LM Studio에 바로 복사하여 사용 가능.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-prompts-for-fiction-writers',
+      inLanguage: 'ko',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
 }

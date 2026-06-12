@@ -3413,4 +3413,445 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'Logseq와 Joplin으로 로컬 LLM 활용하기: 클라우드 동기화 없는 스마트 노트 (2026)',
+    seoTitle: 'Logseq + Joplin 로컬 LLM: 클라우드 없는 스마트 노트 2026',
+    intro:
+      '[Logseq](https://logseq.com)와 [Joplin](https://joplinapp.org)은 2026년 현재 로컬 LLM과 깔끔하게 연동되며 클라우드 왕복을 전혀 필요로 하지 않는 두 가지 오픈소스 노트 앱입니다. Logseq는 logseq-copilot 플러그인을 [Ollama](https://ollama.com)에 연결하여 아웃라이너 네이티브 채팅과 일일 저널 AI를 제공하고, Joplin은 Jarvis 플러그인을 Ollama에 연결하여 노트 인식 채팅, 요약, 임베딩 기반 검색을 지원합니다. 두 도구 모두 기본 아키텍처 측면에서 Notion AI보다 GDPR에 더 친화적입니다. Notion은 노트 내용을 OpenAI에 전송하지만, Logseq와 Joplin은 별도로 설정하지 않는 한 아무것도 전송하지 않습니다. 2026년의 주요 제약은 모바일입니다. Logseq와 Joplin 모두 iOS 또는 Android에서 플러그인을 지원하지 않으므로 AI 기능은 데스크톱에서만 실행됩니다. 이 가이드는 AI 플러그인 성숙도, 클라우드 없는 동기화 경로, 모바일 호환성, Notion에서의 마이그레이션 경로를 기준으로 두 도구를 비교하며, Ollama를 위한 구체적인 설정 단계를 제공합니다.',
+    metaDescription:
+      'Logseq + logseq-copilot vs Joplin + Jarvis on Ollama: Notion AI의 프라이빗 대안. 클라우드 없는 동기화, GDPR 자세, 모바일 플러그인 격차. 2026.',
+    twitterDescription:
+      '오픈소스 노트 + 클라우드 없는 로컬 AI: logseq-copilot이 적용된 Logseq, Jarvis가 적용된 Joplin, 모두 Ollama 기반. 모바일 플러그인 격차 설명. Notion 마이그레이션 경로. 기본적으로 GDPR 준수.',
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Phi-4 Mini',
+      'Gemma 3 4B',
+      'Qwen3 1.7B',
+      'nomic-embed-text',
+      'mxbai-embed-large',
+    ],
+    current_hardware_mentioned: [
+      'Mac M3 Pro / M4 (통합 메모리 16GB 이상)',
+      'RTX 3060 12GB 또는 RTX 4060 8GB 장착 PC',
+      '16GB RAM 장착 PC (CPU 전용 폴백)',
+    ],
+    audience:
+      '오픈소스 노트 앱 사용자, 프라이버시를 중시하는 지식 근로자, GDPR 적용을 받는 EU/DACH 전문가, Notion AI 이탈 사용자, OpenAI나 Anthropic에 노트를 전송하지 않으면서 AI 기능을 원하는 일일 저널 사용자.',
+    readTime: '14분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Logseq Joplin 로컬 LLM 플러그인',
+    targetKeywords: [
+      '로컬 llm 설치 방법',
+      'logseq 로컬 llm 설정',
+      'joplin 로컬 ai 플러그인',
+      'logseq copilot ollama 연동',
+      '오픈소스 노트 ai 프라이버시',
+      'notion ai 대안 gdpr',
+    ],
+    leadAnswerBlock:
+      '**2026년 대부분의 독자에게 Ollama와 조합한 Logseq + logseq-copilot 또는 Joplin + Jarvis가 Notion AI의 올바른 프라이빗 대안입니다.** 일일 저널 + 아웃라이너 워크플로우에서 생활하신다면 Logseq를, 종단 간 암호화 동기화를 갖춘 순수 Markdown 노트를 원하신다면 Joplin을 선택하십시오. 두 앱 모두 `http://localhost:11434/v1`에서 Ollama에 연결하고, 기본적으로 현재 노트와의 채팅을 지원하며, 허용적인 라이선스(Logseq AGPL 3.0, Joplin AGPL 3.0 — 동일 계열) 하에 오픈소스입니다. 플러그인에서 클라우드 공급자를 명시적으로 설정하지 않는 한 어느 쪽도 노트 내용을 클라우드에 전송하지 않습니다. 2026년의 엄격한 한계: 두 도구 모두 iOS나 Android에서 플러그인을 지원하지 않으므로 AI 기능은 데스크톱 전용입니다. 모바일은 수동 캡처 화면이 되고, AI 처리는 데스크톱에서 이루어집니다. Notion AI에서의 마이그레이션의 경우, Logseq는 Notion의 네이티브 Markdown 내보내기를 통한 가져오기 경로가 더 깔끔하고, Joplin의 Notion 가져오기는 기능하지만 블록 수준 구조를 잃습니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 프라이빗 로컬 LLM을 위한 Logseq 또는 Joplin의 최적 플러그인 조합은 무엇입니까?',
+        answer:
+          'Logseq + logseq-copilot 또는 Joplin + Jarvis 플러그인으로, 둘 다 `http://localhost:11434/v1`의 Ollama를 가리킵니다. logseq-copilot은 Logseq 내에 채팅 블록과 슬래시 명령어를 추가하고, Jarvis는 Joplin 내에 채팅, 요약, 임베딩 기반 Q&A를 추가합니다. 두 플러그인 모두 AGPL 오픈소스이며, 기본적으로 로컬에서만 실행되고, Ollama를 기본 지원합니다. 2026년 권장 채팅 모델은 Llama 3.2 3B(기본값) 또는 RAM 8GB 시스템용 Phi-4 Mini입니다. 임베딩 기반 검색(Joplin Jarvis 전용 — 2026년 Logseq는 현재 전체 볼트 임베딩 플러그인 없음)에는 nomic-embed-text 또는 mxbai-embed-large를 사용하십시오. 모바일 플러그인 지원: 2026년 어느 도구에서도 제공되지 않음 — AI 기능은 데스크톱에서만 실행됩니다.',
+        bullets: [
+          'Logseq + logseq-copilot — 아웃라이너 내 슬래시 명령어를 통한 채팅 블록. 일일 저널 및 그래프 워크플로우에 이상적입니다.',
+          'Joplin + Jarvis 플러그인 — 채팅 사이드바, 요약, 임베딩 기반 시맨틱 검색. 강력한 동기화를 갖춘 순수 Markdown 노트에 이상적입니다.',
+          '두 플러그인 모두 `http://localhost:11434/v1`을 통해 Ollama를 가리킴 — 기본적으로 클라우드 호출 없음.',
+          'Logseq 클라우드 없는 동기화: Git(내장) 또는 Syncthing/iCloud Drive를 통한 로컬 파일 동기화. Joplin 동기화: 종단 간 암호화 Joplin Cloud, 자체 호스팅 Joplin Server, 또는 E2EE를 갖춘 Nextcloud / WebDAV / Dropbox / OneDrive.',
+          '모바일 플러그인 격차(2026): Logseq Mobile도 Joplin Mobile도 플러그인을 지원하지 않음. AI 기능은 데스크톱 전용 — 모바일은 캡처, 데스크톱은 처리.',
+          'Notion AI에서의 마이그레이션: Logseq는 가장 깔끔한 Markdown 가져오기 경로를 제공하고, Joplin은 블록 수준 구조를 잃지만 내용을 보존합니다. 전환하는 즉시 두 앱 모두 OpenAI로의 데이터 전송이 중단됩니다.',
+          '권장 Ollama 모델: 채팅 — Llama 3.2 3B 또는 Phi-4 Mini; 임베딩(Joplin Jarvis 전용) — nomic-embed-text 또는 mxbai-embed-large.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '빠른 정보', anchor: '#quick-facts' },
+      { label: 'Logseq 또는 Joplin: 어느 것을 선택해야 합니까?', anchor: '#which-tool' },
+      { label: '도구 비교표', anchor: '#comparison-table' },
+      { label: 'Ollama와 함께하는 Logseq AI 플러그인', anchor: '#logseq-ai' },
+      { label: 'Ollama와 함께하는 Joplin AI 플러그인', anchor: '#joplin-ai' },
+      { label: 'Notion AI에 반대하는 프라이버시 논거', anchor: '#vs-notion' },
+      { label: '클라우드 없는 동기화: Git, Syncthing, Joplin Server', anchor: '#sync' },
+      { label: '모바일 플러그인 격차: 작동하는 것과 그렇지 않은 것', anchor: '#mobile' },
+      { label: 'GDPR 및 EU 데이터 거주', anchor: '#gdpr' },
+      { label: 'Notion AI에서 Logseq 또는 Joplin으로 마이그레이션', anchor: '#notion-migration' },
+      { label: '워크플로우 예시: 일일 저널, 회의 노트, 리서치', anchor: '#workflows' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 글', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Logseq + logseq-copilot은 아웃라이너 / 일일 저널 사용자에게 권장되는 조합입니다.** logseq-copilot은 `http://localhost:11434/v1`의 Ollama에 연결하여 Logseq 내에 채팅 블록과 슬래시 명령어를 추가합니다. 이미 Logseq의 일일 저널 페이지 모델에서 생활하는 사용자에게 이상적입니다.',
+          '**Joplin + Jarvis는 순수 Markdown 노트 사용자에게 권장되는 조합입니다.** Jarvis는 전체 노트북에 채팅 사이드바, 요약 명령어, 임베딩 기반 시맨틱 검색을 추가합니다. 강력한 종단 간 암호화 동기화를 갖춘 Notion 스타일 노트북을 원하는 사용자에게 이상적입니다.',
+          '**두 도구 모두 AGPL 3.0 하에 오픈소스입니다** — 라이선스는 개인 및 상업적 사용에 허용적이며, 수정하여 공개적으로 호스팅하는 경우 소스 코드를 공개해야 하는 제약만 있습니다.',
+          '**프라이버시 자세는 아키텍처 측면에서 Notion AI를 능가합니다.** Notion AI는 설계상 노트 내용을 OpenAI에 전송하지만, Logseq와 Joplin은 클라우드 공급자를 명시적으로 설정하지 않는 한 아무것도 전송하지 않습니다. 이 차이는 의료, 법률, 저널리즘, GDPR 적용 맥락에서 중요합니다.',
+          '**모바일 플러그인 격차가 2026년 최대 제약입니다.** Logseq Mobile도 Joplin Mobile도 플러그인을 지원하지 않습니다. AI 기능은 데스크톱에서만 실행되며, 모바일은 캡처(노트 작성) 화면이 되고, 처리(요약, 채팅, 검색)는 나중에 데스크톱에서 이루어집니다.',
+          '**클라우드 없는 동기화는 간단하지만 각 도구가 서로 다른 접근 방식을 취합니다.** Logseq는 내장 Git 동기화를 갖추고 있으며 Syncthing 또는 iCloud Drive와 깔끔하게 작동합니다. Joplin은 종단 간 암호화 Joplin Cloud, 자체 호스팅 Joplin Server, 또는 E2EE를 갖춘 WebDAV / Nextcloud / Dropbox 백엔드를 제공합니다.',
+          '**Notion AI에서의 마이그레이션은 두 도구 모두 처리하는 일방향 이동입니다.** Logseq는 블록 수준 충실도가 높은 Notion Markdown 내보내기를 가져오고, Joplin은 내용을 가져오지만 중첩된 블록을 평탄화합니다. 마이그레이션 후에는 결정하지 않는 한 어떤 노트도 귀하의 컴퓨터를 떠나지 않습니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 정보',
+        items: [
+          '**다루는 도구:** Logseq(아웃라이너, 일일 저널 우선)와 Joplin(순수 Markdown 노트북). [Obsidian](https://obsidian.md)은 참조용으로 언급되며 전용 가이드는 맨 아래에 링크되어 있습니다.',
+          '**주요 AI 플러그인:** Logseq용 logseq-copilot; Joplin용 Jarvis(및 유사한 Ollama 호환 플러그인).',
+          '**LLM 백엔드:** `http://localhost:11434/v1`의 Ollama(권장), 또는 OpenAI 호환 로컬 엔드포인트([LM Studio](https://lmstudio.ai), llama.cpp 서버, vLLM).',
+          '**권장 채팅 모델:** Llama 3.2 3B, Phi-4 Mini, Gemma 3 4B (RAM 16GB 시스템); Qwen3 1.7B (RAM 8GB).',
+          '**권장 임베딩 모델(Joplin Jarvis 전용):** nomic-embed-text (768차원, 빠름), mxbai-embed-large (1024차원, 더 정확).',
+          '**라이선스:** Logseq AGPL 3.0; Joplin AGPL 3.0; logseq-copilot AGPL 3.0 (Copilot for Obsidian의 동일 저자 Logan Yang); Jarvis(Joplin) AGPL 3.0.',
+          '**동기화 경로:** Logseq — 내장 Git, Syncthing, iCloud Drive, Logseq Sync(유료). Joplin — Joplin Cloud(유료, E2EE), 자체 호스팅 Joplin Server, WebDAV, Nextcloud, Dropbox, OneDrive(모두 E2EE 지원).',
+          '**모바일 플러그인:** 2026년 어느 도구에서도 지원되지 않음 — AI는 데스크톱 전용.',
+        ],
+      },
+      whichTool: {
+        id: 'which-tool',
+        title: 'Logseq 또는 Joplin: 어느 것을 선택해야 합니까?',
+        content:
+          '**노트 워크플로우가 주로 일일 저널 또는 그래프 형식이라면 Logseq를, 강력한 동기화 요구를 갖춘 순수 Markdown 문서라면 Joplin을 선택하십시오.** 두 도구는 서로 다른 정신 모델을 가지고 있습니다. Logseq는 양방향 링크와 기본 캡처 화면으로서의 일일 저널 페이지를 갖춘 아웃라이너이고, Joplin은 태그, 검색, 종단 간 암호화 동기화를 갖춘 Markdown 파일 노트북입니다. 2026년 AI 플러그인 생태계는 이를 반영합니다. logseq-copilot은 아웃라이너 블록 내에 통합되고, Jarvis는 Joplin 사이드바 내에 통합됩니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Logseq + logseq-copilot은 아웃라이너 / 일일 저널 워크플로우에 적합하고, Joplin + Jarvis는 강력한 종단 간 암호화 동기화를 갖춘 순수 Markdown 노트북 워크플로우에 적합합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '두 도구 모두 Notion AI의 프라이빗 대안입니다. 선택은 주로 어떻게 노트를 작성하느냐에 달려 있습니다. Logseq는 노트를 중첩된 글머리 기호로 처리하고 자동으로 일일 저널 페이지를 제공합니다. 소리 내어 생각하기, 타임스탬프 캡처, 그래프 스타일 상호 참조에 적합합니다. Joplin은 노트를 노트북의 완전한 Markdown 문서로 처리합니다. 긴 형식의 글쓰기, 구조화된 문서화, 암호화 동기화가 필요한 장치에 적합합니다. 두 앱 모두 Ollama를 통한 로컬 LLM으로 작동하고, 오픈소스이며, Notion에서 전환하는 즉시 누구에게도 데이터를 전송하지 않습니다.',
+          },
+        ],
+        decisionBlock: {
+          title: '결정: Logseq 또는 Joplin?',
+          localIf: [
+            '일일 저널을 작성하며 AI가 날짜를 요약 / 그룹화 / 연결하기를 원함 → Logseq + logseq-copilot',
+            '그래프 스타일 백링크와 인라인 채팅이 있는 아웃라이너 블록을 원함 → Logseq + logseq-copilot',
+            '긴 형식 Markdown 노트(리서치, 문서화, 초고) 작성 → Joplin + Jarvis',
+            '장치 간 종단 간 암호화 동기화가 필요함 → Joplin(더 나은 E2EE 제안)',
+            '전체 노트북에 걸친 임베딩 기반 시맨틱 검색을 원함 → Joplin + Jarvis(2026년 Logseq에 동등한 기능 없음)',
+            'Notion에서 마이그레이션하며 블록 수준 충실도를 최대화하고 싶음 → Logseq',
+          ],
+          cloudIf: [
+            'iOS 또는 Android에서 AI 기능이 필요함(캡처만이 아닌) → 2026년 어느 도구도 모바일에서 플러그인을 지원하지 않음; Tailscale과 함께 Obsidian Mobile + Ollama(LAN) 고려',
+            '동일 볼트에서 실시간 다중 사용자 협업이 필요함 → Logseq와 Joplin 모두 설계상 단일 사용자용; 협업 편집은 이들의 모델에 없음',
+            '각 채팅 응답에 GPT-5.5급 품질이 필요함 → 클라우드 동등 제품(로컬 스택은 약 70% 수준에 도달)',
+          ],
+          quick: [
+            '일일 저널 + 아웃라이너: Logseq + logseq-copilot',
+            '순수 Markdown 노트북 + E2EE 동기화: Joplin + Jarvis',
+            '모바일 AI 기능: 2026년 실현 불가 — 모바일은 캡처, 데스크톱은 처리',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: '일반적인 패턴은 두 앱을 모두 실행하는 것입니다. Logseq는 일일 저널과 빠른 캡처(모두 타임스탬프)에, Joplin은 영구 참조 노트(더 길고, 태그가 달리고, 암호화되어 동기화됨)에 사용합니다. 두 도구는 데이터베이스를 공유하지 않지만 무겁지 않습니다. 두 앱을 모두 실행하면 합산 약 200–400MB의 RAM이 추가됩니다. 두 앱에서 로컬 LLM을 사용하여 "생각"에는 Logseq를, "지식"에는 Joplin을 활용하십시오.',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '도구 비교표',
+        content:
+          '**가장 중요한 네 가지 축: AI 플러그인 깊이, 클라우드 없는 동기화, 모바일 플러그인 지원, 가장 적합한 워크플로우.** Obsidian은 참조용으로 포함됩니다. 세 가지 도구를 비교하는 독자는 맨 아래에 링크된 Obsidian 전용 가이드도 읽어야 합니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Logseq는 아웃라이너 네이티브 AI와 Git 동기화에서, Joplin은 종단 간 암호화 동기화와 임베딩 기반 검색에서, Obsidian은 유료 동기화와 비OSI 라이선스 비용으로 플러그인 폭에서 선두입니다.',
+          },
+        ],
+        columns: ['도구', 'AI 플러그인', '동기화(클라우드 없음)', '모바일', '이상적인 용도'],
+        rows: [
+          { '도구': '[Logseq](https://logseq.com)', 'AI 플러그인': 'logseq-copilot(채팅 블록, 슬래시 명령어), GPT-3 플러그인 변형', '동기화(클라우드 없음)': '내장 Git, Syncthing, iCloud Drive, Logseq Sync(유료 E2EE)', '모바일': '모바일 앱 제공; 모바일에서 플러그인 미지원(2026)', '이상적인 용도': '일일 저널 + 아웃라이너 워크플로우' },
+          { '도구': '[Joplin](https://joplinapp.org)', 'AI 플러그인': 'Jarvis(채팅, 요약, 임베딩 기반 Q&A), [Ollama](https://ollama.com) 호환 통합', '동기화(클라우드 없음)': 'Joplin Cloud(유료 E2EE), 자체 호스팅 Joplin Server, WebDAV, Nextcloud, Dropbox, OneDrive(모두 E2EE 지원)', '모바일': '모바일 앱 제공; 모바일에서 플러그인 미지원(2026)', '이상적인 용도': 'Markdown 노트북 + E2EE 동기화' },
+          { '도구': '[Obsidian](https://obsidian.md)(참조)', 'AI 플러그인': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot (주요 AI 플러그인)', '동기화(클라우드 없음)': 'Git, Syncthing, iCloud Drive, Obsidian Sync(유료 E2EE)', '모바일': '모바일 앱이 대부분의 플러그인 지원; Ollama에 대한 LAN 접근 필요', '이상적인 용도': '유료 플러그인 / 유료 동기화를 갖춘 고급 사용자' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '모바일 열이 2026년 최대 차별화 요소입니다. Obsidian Mobile은 Ollama가 LAN 또는 Tailscale을 통해 접근 가능할 때 대부분의 플러그인(Smart Connections와 Copilot 포함)을 실행합니다. Logseq Mobile과 Joplin Mobile은 어떤 플러그인도 실행하지 않습니다. AI 기능은 엄격히 데스크톱 전용입니다. 모바일 AI가 중요하다면 모바일 캡처 + 데스크톱 처리를 계획하거나 Obsidian Mobile을 살펴보십시오.',
+          },
+        ],
+      },
+      logseqAi: {
+        id: 'logseq-ai',
+        title: 'Ollama와 함께하는 Logseq AI 플러그인',
+        content:
+          '**2026년 권장 Logseq AI 플러그인은 logseq-copilot입니다 — Copilot for Obsidian과 동일한 저자가 만들었으며 Ollama를 가리키도록 설정됩니다.** 이 플러그인은 Logseq 아웃라이너 내에 채팅 블록(`/copilot` 슬래시 명령어), 인라인 재작성, 저널 인식 프롬프트를 추가합니다. Logseq는 현재 Smart Connections에 해당하는 기능(전체 볼트 임베딩 인덱스)을 갖추고 있지 않으므로, 그래프 전체의 시맨틱 링크는 2026년에 아직 해결된 문제가 아닙니다.',
+        items: [
+          '**기능:** 슬래시 명령어를 통한 채팅 블록, 인라인 콘텐츠 생성, 활성 페이지 또는 선택한 블록을 컨텍스트로 사용하는 저널 인식 프롬프트.',
+          '**설치:** 설정 → 플러그인 → 마켓플레이스 → "logseq-copilot" 검색 → 설치 + 활성화. 저자: Logan Yang(Copilot for Obsidian과 동일인).',
+          '**Ollama 설정:** 설정 → logseq-copilot → API Provider → "Custom OpenAI" 또는 "Ollama" → API 기본 URL `http://localhost:11434/v1` → 모델 `llama3.2:3b`(또는 Ollama 모델 이름).',
+          '**슬래시 명령어:** 임의의 블록에서 `/copilot`을 입력하여 채팅을 시작합니다. 출력이 프롬프트 아래 중첩된 블록으로 나타납니다 — 아웃라이너 네이티브이므로 응답이 일급 아웃라인 콘텐츠가 됩니다.',
+          '**선택 기반 프롬프트:** 블록을 선택 → 사용자 지정 프롬프트 템플릿 실행("이것을 세 가지 요점으로 요약하시오") → 결과가 선택 항목 아래에 추가됩니다.',
+          '**일일 저널 통합:** 일일 저널 페이지를 가리키는 템플릿 → 일과 마무리 요약, 주간 리뷰 질문, 또는 백링크 확장이 원터치 액션이 됩니다.',
+          '**2026년 미지원 기능:** 그래프 전체 임베딩 인덱스 없음. Logseq 백링크는 여전히 명시적이며, 페이지 간 시맨틱 검색은 2026년 어떤 오픈소스 Logseq 플러그인으로도 지원되지 않습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'logseq-copilot의 출력은 단순한 블록입니다 — Logseq의 다른 모든 것과 동일한 기본 요소입니다. 이것이 Obsidian에 대한 핵심 장점입니다. AI 응답은 사이드바에 떠 있는 텍스트가 아니라 링크, 태그, 쿼리, 재편집이 가능한 그래프 노드입니다. 캡처를 위해 `/copilot`을 적극 활용한 다음, 다른 노트처럼 응답 블록을 리팩토링하십시오.',
+          },
+        ],
+      },
+      joplinAi: {
+        id: 'joplin-ai',
+        title: 'Ollama와 함께하는 Joplin AI 플러그인',
+        content:
+          '**2026년 권장 Joplin AI 플러그인은 Jarvis입니다 — 전체 노트북에 걸쳐 채팅, 요약, 임베딩 기반 시맨틱 검색을 제공하며, 모두 Ollama 사용으로 설정 가능합니다.** Jarvis는 Smart Connections + Copilot for Obsidian을 결합한 것에 가장 가까운 Joplin 동등 기능입니다. 하나의 플러그인, 하나의 설정, 두 가지 역할.',
+        items: [
+          '**기능:** 채팅 사이드바, 전체 노트북 "Ask Jarvis" 명령어(임베딩 기반 검색), 선택한 노트 요약, 프롬프트에서 노트 생성, 선택 항목에 대한 사용자 지정 프롬프트.',
+          '**설치:** 도구 → 옵션 → 플러그인 → "Jarvis" 검색 → 설치 + 활성화. 저자: Alon Bukai.',
+          '**Ollama(채팅) 설정:** 옵션 → Jarvis → Model Provider → 사용자 지정 기본 URL이 있는 "OpenAI" → URL `http://localhost:11434/v1` → 모델 `llama3.2:3b` → API 키 임의의 비어있지 않은 문자열(Ollama는 무시함).',
+          '**Ollama(임베딩) 설정:** 옵션 → Jarvis → Notes Database → Database 활성화 → Embedding Model → 사용자 지정 기본 URL이 있는 "OpenAI" → URL `http://localhost:11434/v1` → 모델 `nomic-embed-text`.',
+          '**초기 인덱싱:** Jarvis는 처음 활성화될 때 각 노트를 데이터베이스에 임베딩합니다. Mac M3 Pro에서 nomic-embed-text 기준 소요 시간: 1천 개 노트 약 3분, 5천 개 노트 약 15분, 1만 개 노트 약 35분. 저장 시 재임베딩은 증분적입니다.',
+          '**"Ask Jarvis" 워크플로우:** 도구 → Jarvis → Ask Jarvis → 질문 입력 → Jarvis가 임베딩 유사도로 관련 노트를 검색하고 스니펫과 질문을 채팅 모델에 전송합니다. Copilot for Obsidian의 볼트 QA에 해당합니다.',
+          '**이상적인 용도:** 두 개의 별도 플러그인을 관리하지 않고 Joplin 내에서 채팅 + 검색을 모두 처리하는 단일 플러그인을 원하는 사용자.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Jarvis는 임베딩 데이터베이스를 Joplin의 SQLite 데이터베이스 내에 저장합니다. nomic-embed-text로 임베딩된 5천 개의 노트마다 데이터베이스 파일이 약 150–250MB 증가합니다. Joplin Cloud 또는 WebDAV를 통해 Joplin 프로필을 동기화하는 경우 임베딩 데이터베이스가 동기화에 포함됩니다. 대역폭 비용과 동기화 시간을 계획하십시오. Joplin의 E2EE를 사용하는 경우 임베딩 데이터베이스 자체는 전송 중에 암호화됩니다.',
+          },
+        ],
+      },
+      vsNotion: {
+        id: 'vs-notion',
+        title: 'Notion AI에 반대하는 프라이버시 논거',
+        content:
+          '**Notion AI는 설계상 노트 내용을 OpenAI에 전송합니다 — 이것은 아키텍처이지 설정 선택이 아닙니다.** Notion AI 기능을 페이지에서 사용하면 Notion이 페이지 내용을 OpenAI 서버에 전송하고, OpenAI가 처리하며, 응답이 Notion을 통해 돌아옵니다. 데이터는 귀하의 로컬 파일 시스템이 아닌 OpenAI와 Notion의 개인정보 처리 방침에 의해 관리됩니다. 규제 맥락(의료, 법률, 재무 자문, 저널리즘, GDPR 적용 EU 데이터)의 사용자에게 이것은 어떤 설정으로도 해결할 수 없는 구조적 문제입니다.',
+        items: [
+          '**Notion AI 아키텍처:** 노트가 OpenAI에 의해 처리되기 위해 귀하의 컴퓨터를 떠납니다. OpenAI Enterprise 데이터 처리 조건(표준 OpenAI API보다 더 좋음)에 따르지만, 여전히 귀하의 인프라 밖에 있습니다.',
+          '**Logseq + logseq-copilot 아키텍처:** Logseq는 로컬 앱으로 실행되고, 플러그인이 로컬 Ollama로 프롬프트를 전송하며, 플러그인에서 클라우드 공급자를 명시적으로 설정하지 않는 한 어떤 노트 내용도 제3자에게 도달하지 않습니다.',
+          '**Joplin + Jarvis 아키텍처:** Joplin은 로컬 앱으로 실행되고, Jarvis가 로컬 Ollama로 프롬프트를 전송하며, 임베딩 생성이 로컬에서 실행되고, Jarvis에서 클라우드 공급자를 명시적으로 설정하지 않는 한 어떤 노트 내용도 제3자에게 도달하지 않습니다.',
+          '**데이터 거주:** Logseq 또는 Joplin + Ollama를 사용하면 모든 노트 내용 바이트가 귀하의 컴퓨터에 남습니다. Notion AI를 사용하면 위치에 관계없이 노트 내용이 미국 소재 OpenAI 서버를 통과합니다.',
+          '**감사 추적:** 로컬 LLM을 사용하면 설치 후 한 번 패킷 캡처(Wireshark, Little Snitch 등)를 실행하여 AI 사용 중 플러그인이 발신 호출을 전혀 하지 않는지 확인할 수 있습니다. Notion AI의 경우 발신 호출이 본질적입니다 — 확인할 것이 없습니다.',
+          '**하위 처리자 위험:** Notion AI는 OpenAI의 모든 하위 처리자(주요 인프라로서 Microsoft Azure, 추가 지원 공급자)를 상속합니다. Logseq와 Joplin + Ollama는 AI 계층에 대한 하위 처리자가 없습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '"내 노트 앱이 정말 프라이빗한가?"에 대한 가장 명확한 테스트는 네트워크를 끊고 AI 기능을 사용해 보는 것입니다. Logseq + logseq-copilot + Ollama: 완전히 오프라인으로 작동합니다. Joplin + Jarvis + Ollama: 완전히 오프라인으로 작동합니다. Notion AI: 오류를 반환합니다. 설정 후 한 번 이 테스트를 수행하여 스택이 의도한 대로 작동하는지 확인하십시오.',
+          },
+        ],
+      },
+      sync: {
+        id: 'sync',
+        title: '클라우드 없는 동기화: Git, Syncthing, Joplin Server',
+        content:
+          '**Logseq와 Joplin 모두 노트 내용을 제3자 클라우드에 맡기지 않아도 되는 여러 동기화 경로를 갖추고 있습니다.** 올바른 선택은 설정 없음(유료 동기화), Git으로 추적되는 기록(개발자 친화적), 또는 피어 투 피어(서버 없음) 중 어느 것을 원하느냐에 달려 있습니다.',
+        items: [
+          '**Logseq — 내장 Git 동기화:** 설정 → 동기화 → Git 자동 커밋 활성화. Logseq는 일정에 따라 구성된 Git 원격 저장소에 그래프를 커밋합니다. GitHub / GitLab / 자체 호스팅 Gitea와 작동합니다. 순수 Markdown 커밋으로 기록이 사람이 읽을 수 있습니다.',
+          '**Logseq — Syncthing(피어 투 피어):** 각 장치에 Syncthing을 설치하고 Logseq 그래프 폴더를 가리킵니다. 종단 간 암호화, 중앙 서버 없음, 제3자 없음. 데스크톱 간 동기화에 탁월하며, Syncthing-Fork(Android) 또는 Möbius Sync(iOS)가 폴더를 최신 상태로 유지할 때 Logseq Mobile에서도 작동합니다.',
+          '**Logseq — iCloud Drive:** macOS / iOS에서 iCloud Drive 내에 그래프 폴더를 유지합니다. Apple 장치에서 가장 깔끔한 경로이며, 데이터는 Apple에 의해 저장 시 암호화되지만 Apple이 키를 보유합니다(제로 지식이 아님).',
+          '**Logseq Sync(유료 E2EE):** Logseq 팀의 종단 간 암호화 동기화. 단점: 유료(Pro 티어에 동기화 포함; 가격은 변동 가능 — logseq.com 참조), 하지만 모바일 포함 모든 장치에서 설정 없이 E2EE를 제공합니다.',
+          '**Joplin — Joplin Cloud(유료 E2EE):** 종단 간 암호화를 갖춘 Joplin 팀의 호스팅 동기화. 소량의 노트는 무료; 유료 티어는 확장됩니다. EU에서 호스팅됩니다. 편리하고 감사 친화적입니다.',
+          '**Joplin — 자체 호스팅 Joplin Server:** NAS / VPS / 홈 서버에서 Joplin Server Docker 이미지를 실행합니다. 클라이언트 간 종단 간 암호화; 서버는 암호화된 텍스트를 저장합니다. 전체 동기화 인프라 소유권을 원하는 조직에 최적입니다.',
+          '**Joplin — WebDAV / Nextcloud / Dropbox / OneDrive:** Joplin은 모든 WebDAV 엔드포인트를 지원하며, Nextcloud, Dropbox, OneDrive에 대한 일급 지원도 제공합니다. 항상 그 위에 Joplin 내장 E2EE를 활성화하십시오 — 이러한 공급자들은 암호화된 텍스트만 볼 수 있습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '자체 호스팅 Joplin Server는 제3자 클라우드를 신뢰하지 않고 감사 가능한 온프레미스 동기화를 원하는 조직에 대한 답입니다. 소형 VPS 또는 홈 서버에서 실행하고, 모든 클라이언트를 가리키고, E2EE를 활성화하면 — 서버는 암호화된 텍스트만 저장하고 귀하가 호스트를 제어합니다. 이것은 Notion을 자체 호스팅(공식적으로 지원되지 않음)하거나 Obsidian Sync 인프라를 자체 호스팅하는 것보다 훨씬 쉽습니다.',
+          },
+        ],
+      },
+      mobile: {
+        id: 'mobile',
+        title: '모바일 플러그인 격차: 작동하는 것과 그렇지 않은 것',
+        content:
+          '**2026년 Logseq Mobile도 Joplin Mobile도 플러그인을 지원하지 않습니다 — 이것이 Obsidian에 비한 가장 큰 제약입니다.** 모바일 앱은 기능적인 캡처 및 읽기 화면이지만, logseq-copilot과 Jarvis는 데스크톱에서만 실행됩니다. 모든 AI 워크플로우는 모바일이 캡처용이고 데스크톱이 처리용이라고 가정해야 합니다.',
+        items: [
+          '**Logseq Mobile(iOS / Android):** 노트 보기, 편집, 캡처; 백링크와 그래프 뷰 작동; 동기화 작동. 플러그인은 실행되지 않음 — logseq-copilot 포함. AI 기능은 모바일에서 사용할 수 없습니다.',
+          '**Joplin Mobile(iOS / Android):** 노트 보기, 편집, 캡처; 태그와 검색 작동; 동기화 작동(E2EE 포함). 플러그인은 실행되지 않음 — Jarvis 포함. AI 기능은 모바일에서 사용할 수 없습니다.',
+          '**대체 패턴: 모바일에서 캡처, 데스크톱에서 처리.** 모바일에서 자유롭게 노트를 작성합니다. 데스크톱에 도착하면 logseq-copilot 또는 Jarvis를 실행하여 캡처된 내용을 요약, 확장, 링크, 쿼리합니다.',
+          '**대체 패턴: 홈 서버 + 원격 데스크톱.** 집의 데스크톱에서 logseq-copilot 또는 Jarvis를 실행하고, AI가 필요할 때 모바일에서 Tailscale + 원격 데스크톱 / SSH 터널을 통해 해당 데스크톱에 접근합니다. 설정 비용이 추가됩니다; 가끔 사용자에게는 거의 가치가 없습니다.',
+          '**대체 패턴: AI 사용 사례를 위해 Obsidian Mobile로 전환.** Obsidian Mobile은 대부분의 플러그인을 실행합니다. 모바일 AI가 중요하다면 이것이 가장 간단한 답입니다 — 도구를 바꾸는 비용으로.',
+          '**격차가 존재하는 이유:** Logseq와 Joplin 모두 플러그인 엔진을 데스크톱 전용 Node.js / Electron 컨텍스트로 실행합니다. 모바일 앱은 네이티브(Logseq Capacitor, Joplin React Native)이며 플러그인 런타임을 포함하지 않습니다. 격차를 해소하려면 플러그인 아키텍처를 다시 작성해야 합니다 — 2026년에 이것을 계획한 팀은 없습니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'AI 사용 사례가 주로 모바일(예: 이동 중 노트를 받아쓰고 즉시 AI가 요약하기를 원함)이라면, 현재 Logseq와 Joplin은 적합한 도구가 아닙니다 — Obsidian Mobile + Ollama(LAN)가 맞습니다. AI 사용 사례가 주로 데스크톱이고 모바일 캡처(가장 일반적인 패턴)가 포함된다면, Logseq와 Joplin은 잘 작동하며 모바일 격차는 장애물이 아닌 사소한 불편함입니다.',
+          },
+        ],
+      },
+      gdpr: {
+        id: 'gdpr',
+        title: 'GDPR 및 EU 데이터 거주',
+        content:
+          '**EU 및 DACH 사용자에게 Logseq + logseq-copilot + Ollama와 Joplin + Jarvis + Ollama는 기본 아키텍처 측면에서 Notion AI보다 GDPR에 더 준수적입니다.** 노트 내용이 데이터 컨트롤러의 컴퓨터를 절대 떠나지 않으므로, SaaS 도구에 대해 GDPR 제28조(처리자 계약), 제44조(국제 이전), BSI-Grundschutz 카탈로그가 문서화를 요구하는 데이터 흐름이 로컬 스택에서는 단순히 존재하지 않습니다.',
+        items: [
+          '**제28조(처리자 계약):** Notion AI를 사용하면 Notion + OpenAI가 처리자이며 OpenAI로의 국제 이전을 위한 데이터 처리 계약(DPA) + 표준 계약 조항(SCC)이 필요합니다. Logseq / Joplin + Ollama를 사용하면 제3자 처리자가 없습니다 — 로컬 소프트웨어를 실행하는 컨트롤러만 있습니다.',
+          '**제44조(국제 이전):** Notion AI는 미국 소재 OpenAI 서버에 데이터를 전송합니다. 이것은 SCC와 이전 영향 평가(TIA)가 필요한 Schrems II "국제 이전"입니다. Ollama의 로컬 처리는 이전을 완전히 제거합니다.',
+          '**BSI-Grundschutz 카탈로그(DACH):** 독일의 연방 IT 보안 지침은 클라우드 AI 서비스를 공식적인 위험 평가가 필요한 아웃소싱으로 취급합니다. 로컬 AI 처리는 훨씬 더 간단한 "내부 IT" 기준선에 해당합니다.',
+          '**삭제권(제17조):** Notion AI를 사용하면 계정에서 노트 내용을 삭제해도 OpenAI의 훈련 파이프라인 또는 로그에서 반드시 삭제되지는 않습니다(엔터프라이즈 조건에 따라 다름). 로컬 Ollama를 사용하면 삭제는 파일 시스템 삭제입니다 — 확인 가능하고 완전합니다.',
+          '**감사 가능성:** 로컬 스택은 감사하기 더 쉽습니다. 한 번 패킷 캡처를 실행하고, AI 사용 중 발신 트래픽이 없음을 확인하고, 결과를 문서화합니다. 클라우드 AI 서비스는 공급자의 SOC 2 / ISO 27001 보고서를 신뢰해야 합니다.',
+          '**EU 호환 호스팅(동기화에 서버가 포함될 때):** Joplin Cloud는 EU에서 호스팅됩니다; 자체 호스팅 Joplin Server는 EU 인프라(Hetzner, OVH, IONOS)에서 호스팅 가능합니다. Logseq Sync는 Logseq Inc.(미국 소재)에 의해 운영됩니다 — EU 엄격한 거주를 위해서는 Logseq 동기화에 Git 또는 Syncthing을 선호하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'GDPR 하에서 AI 기능에 대한 방어 가능한 입장이 필요한 조직에게 Logseq 또는 Joplin의 로컬 LLM 스택이 가장 간단한 답입니다. DPA 논의는 "이러한 조항을 통해 Notion + OpenAI를 하위 처리자로 사용합니다"에서 "컨트롤러 엔드포인트에서 실행되는 로컬 소프트웨어를 사용하며 관련된 처리자가 없습니다"로 바뀝니다. 규정 준수 팀의 작업이 훨씬 간단해집니다.',
+          },
+        ],
+      },
+      notionMigration: {
+        id: 'notion-migration',
+        title: 'Notion AI에서 Logseq 또는 Joplin으로 마이그레이션',
+        content:
+          '**Notion은 Logseq와 Joplin 모두 가져올 수 있는 네이티브 Markdown 내보내기를 제공합니다 — Logseq는 블록 수준 구조를 더 잘 보존하고, Joplin은 내용을 보존하지만 중첩된 블록을 평탄화합니다.** 어느 쪽이든 마이그레이션은 지속적인 동기화가 아닌 일회성 내보내기-가져오기이며, OpenAI로의 데이터 흐름을 즉시 중단합니다.',
+        numberedItems: [
+          '**Notion에서 내보내기:** 설정 → 설정 및 구성원 → 설정 → "전체 워크스페이스 콘텐츠 내보내기" → "Markdown & CSV" 선택 → ZIP 다운로드. 내보내기에는 페이지당 하나의 .md 파일과 중첩 페이지용 폴더가 포함됩니다.',
+          '**압축 해제 및 정리:** Notion 내보내기는 파일 이름에 긴 페이지 ID 접미사를 사용합니다(예: `My Page 1f8b2a3c4d5e6f7g8h9i.md`). 파일 이름이 새 도구에서 중요하다면 빠른 이름 바꾸기 스크립트를 실행하여 ID를 제거하십시오.',
+          '**Logseq 가져오기 경로:** Logseq 열기 → 파일 → 새 그래프 → 새 폴더 가리키기 → 압축 해제된 Notion 파일을 그래프의 `pages/` 폴더에 복사합니다. Logseq가 이를 인식합니다. 백링크(Notion의 `[[페이지]]` 스타일)는 파일 이름이 일치할 때 살아남습니다. 블록 수준 중첩은 Notion과 Logseq 모두 목록 스타일 블록 들여쓰기를 사용하므로 보존됩니다.',
+          '**Joplin 가져오기 경로:** 도구 → 가져오기 → "MD - Markdown directory" → 압축 해제된 Notion 폴더 선택. Joplin은 Notion 페이지 계층 구조를 반영하는 노트북 구조 내에 .md 파일당 하나의 노트를 생성합니다. 블록 수준 중첩이 평탄화됩니다 — Notion의 중첩된 토글 목록이 일반 Markdown 목록이 됩니다.',
+          '**마이그레이션 확인:** 10–20개 페이지를 무작위로 확인합니다 — 내용, 링크, 태그가 살아남았는지 확인합니다. Notion 데이터베이스를 많이 사용한 경우 CSV 내보내기는 별도입니다. Logseq와 Joplin 모두 이를 구조화된 데이터베이스가 아닌 일반 파일로 처리하므로 일부 수동 재구성을 계획하십시오.',
+          '**Notion AI 중단:** 계정 설정에서 Notion AI 구독을 비활성화합니다. 향후 AI 작업은 로컬 컴퓨터에서 logseq-copilot 또는 Jarvis를 통해 이루어집니다.',
+          '**프라이버시 자세 확인:** 네트워크 끊기 → 새 도구에서 AI 기능 실행 → 작동 확인. 이것이 마이그레이션이 목표를 달성했음을 증명하는 테스트입니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Notion 데이터베이스를 구조화된 데이터(프로젝트 추적기, CRM 등)로 사용했다면 마이그레이션이 순수 산문 페이지보다 더 복잡합니다. Notion에서 텍스트가 많은 내용을 Logseq 또는 Joplin으로 이동하면서 해당 특정 데이터베이스를 Notion에(AI 없이) 유지하는 것을 고려하십시오 — 또는 데이터베이스를 [AnythingLLM](https://anythingllm.com)의 구조화된 RAG로 마이그레이션하여 로컬 LLM이 문서로 쿼리할 수 있게 하십시오.',
+          },
+        ],
+      },
+      workflows: {
+        id: 'workflows',
+        title: '워크플로우 예시: 일일 저널, 회의 노트, 리서치',
+        content:
+          '**로컬 스택의 실제 작동을 보여주는 세 가지 구체적인 워크플로우입니다.** 처음 두 가지는 Logseq 중심(아웃라이너 / 저널 네이티브)이고, 세 번째는 Joplin 중심(더 긴 형식 노트)입니다.',
+        items: [
+          '**Logseq 일일 저널 요약:** 하루가 끝날 때 → 오늘의 저널 페이지 열기 → `/copilot 이 날을 결정, 장애, 내일의 행동에 집중한 세 가지 요점으로 요약하시오` → 응답이 중첩된 블록으로 나타납니다. 프롬프트를 logseq-copilot 템플릿으로 저장하여 원터치 실행이 가능합니다.',
+          '**Logseq 주간 리뷰:** 일요일 오후 → `19주차 리뷰`라는 새 페이지 열기 → `/copilot 지난 7개의 일일 저널 페이지를 진행 상황, 장애, 주제 별 3가지 요점으로 요약하시오` → logseq-copilot이 페이지 링크 메커니즘을 통해 최근 저널 페이지를 검색합니다. 결과가 다음 주 계획의 씨앗이 됩니다.',
+          '**Joplin 회의 노트 확장:** 회의 중 대략적인 글머리 기호를 노트에 캡처 → 회의 후 전체 선택 → 도구 → Jarvis → "이 노트를 확장하고 구조화하시오" → 출력이 교체되거나 아래에 추가됩니다. 프롬프트를 Jarvis 프리셋으로 저장합니다.',
+          '**Joplin 리서치 Q&A:** 50–500개의 소스 노트(기사, 문서, 웹 클리핑)를 단일 노트북에 추가 → Jarvis Notes Database 활성화 → 임베딩 대기 → 도구 → Jarvis → "Ask Jarvis" → 소스 전체에 걸쳐 질문("X에 대해 논의하는 소스는 무엇입니까?"). Joplin 내에서의 Obsidian Copilot 볼트 QA에 해당합니다.',
+          '**Logseq + Joplin 결합:** Logseq에서 캡처(빠름, 저널 네이티브) → 영구적인 항목을 Joplin으로 큐레이션(영구 참조). 각 도구의 네이티브 강점에 대해 각 도구에서 AI를 실행합니다 — Logseq에서 빠른 채팅 / 아웃라인 생성, Joplin에서 임베딩 기반 리서치 Q&A.',
+          '**모바일 캡처, 데스크톱 처리:** 하루 종일 Logseq Mobile 또는 Joplin Mobile에서 노트를 자유롭게 캡처합니다(AI 없음). 데스크톱에서 하루가 끝날 때 logseq-copilot 또는 Jarvis를 실행하여 요약, 링크, 캡처된 내용을 쿼리합니다 — AI가 오프라인으로 캡처한 내용을 따라잡습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '"모바일 캡처, 데스크톱 처리" 패턴은 모바일 플러그인 격차를 고려할 때 2026년 Logseq + Joplin에 대해 올바르게 생각하는 방식입니다. 이것은 해결책이 아닙니다 — 지식 작업이 실제로 어떻게 이루어지는지에 해당합니다. 모바일은 입력을 위한 것입니다(아이디어가 생기면 캡처합니다). 데스크톱은 합성을 위한 것입니다(캡처된 자료를 처리합니다). 로컬 LLM은 합성 순간에 참여하는데, 이것이 정확히 품질이 가장 중요한 곳입니다.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '흔한 실수',
+        items: [
+          '**실수로 logseq-copilot 또는 Jarvis를 클라우드 공급자로 설정.** 두 플러그인 모두 기본 공급자로 "OpenAI"를 제공합니다. 로컬 전용 설정은 `http://localhost:11434/v1`을 가리키는 사용자 지정 기본 URL로 전환해야 합니다. 이것을 잊으면 플러그인이 조용히 노트를 OpenAI에 전송합니다 — 마이그레이션한 바로 그 실패 모드입니다. 패킷 캡처로 확인하십시오.',
+          '**모바일 플러그인 지원을 기다림.** Logseq Mobile도 Joplin Mobile도 2026년에 플러그인을 실행하지 않습니다. 노트가 있는 곳 어디에서나 AI가 작동한다고 가정한다면, 기차에서 처음 요약하려고 할 때 한계에 부딪힐 것입니다. 처음부터 모바일 캡처, 데스크톱 처리를 계획하십시오.',
+          '**다른 컴퓨터에서 플러그인을 `http://localhost:11434/v1`로 가리킴.** localhost는 컴퓨터별입니다. 데스크톱에서 Ollama를 실행하고 노트북에서 Logseq를 실행한다면, 데스크톱의 LAN IP(`http://192.168.1.20:11434/v1`)와 `0.0.0.0:11434`에 바인딩된 Ollama가 필요합니다.',
+          '**소용량 할당을 갖춘 무료 WebDAV 티어와 Joplin Jarvis 임베딩 데이터베이스 동기화.** 임베딩 데이터베이스는 5천 개 노트마다 약 150–250MB 증가합니다. 무료 티어(Dropbox 2GB)는 노트북 규모에서 빠르게 한계에 도달합니다. 노트북이 약 5천 개 이상의 노트를 초과할 때를 위해 자체 호스팅 Joplin Server 또는 유료 티어를 계획하십시오.',
+          '**한 번의 감사 패킷 캡처를 실행하지 않음.** 두 플러그인 모두 오픈소스이며 올바르게 작동하지만, 스택이 로컬 전용이라는 유일한 확실한 증거는 AI 사용 중 Wireshark / Little Snitch / 동등한 것을 실행하여 발신 트래픽이 없음을 확인하는 것입니다. 설정 후 한 번 하고, 결과를 문서화하고, 계속 진행하십시오.',
+          '**임베딩 기반 검색을 위해 Logseq + logseq-copilot 사용 시도.** logseq-copilot은 2026년에 전체 그래프 임베딩 인덱스를 갖추고 있지 않습니다. "전체 그래프에 질문"이 필요하다면 Joplin + Jarvis 또는 Obsidian + Smart Connections로 전환하십시오. Logseq는 아웃라이너 네이티브 AI에서 뛰어나지만 시맨틱 검색에서는 그렇지 않습니다.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          'Logseq — [logseq.com](https://logseq.com) 및 [github.com/logseq/logseq](https://github.com/logseq/logseq) (오픈소스 아웃라이너; AGPL 3.0).',
+          'logseq-copilot — [github.com/logancyang/logseq-copilot](https://github.com/logancyang/logseq-copilot) (오픈소스 Logseq 플러그인; AGPL 3.0).',
+          'Joplin — [joplinapp.org](https://joplinapp.org) 및 [github.com/laurent22/joplin](https://github.com/laurent22/joplin) (오픈소스 노트북; AGPL 3.0).',
+          'Jarvis(Joplin) — [github.com/alondmnt/joplin-plugin-jarvis](https://github.com/alondmnt/joplin-plugin-jarvis) (오픈소스 Joplin 플러그인; AGPL 3.0).',
+          'Ollama — [ollama.com](https://ollama.com) 및 [github.com/ollama/ollama](https://github.com/ollama/ollama) (로컬 LLM 런타임; MIT).',
+          'Notion AI 개인정보 보호 및 데이터 처리 — [notion.com/help/notion-ai-faqs](https://www.notion.com/help/notion-ai-faqs) (비교 맥락을 위한 공급자 문서).',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Logseq가 AI 사용자에게 Notion을 대체할 수 있습니까?',
+            a: '산문 페이지와 일일 저널 워크플로우에는 그렇습니다. logseq-copilot을 설치하고 Ollama를 가리키면 데이터가 컴퓨터를 떠나지 않고 Logseq 내에서 채팅, 요약, 템플릿 기반 생성이 가능합니다. 격차는 구조화된 데이터베이스입니다. Notion의 데이터베이스 뷰(프로젝트 추적기, CRM)는 Logseq에 깔끔한 동등 기능이 없습니다. 텍스트가 많은 사용자는 Notion을 완전히 대체하고, 데이터베이스가 많은 사용자는 수동 재구성을 수락하거나 텍스트를 Logseq로 이동하면서 특정 데이터베이스를 Notion에(AI 없이) 유지합니다.',
+          },
+          {
+            q: 'Joplin은 로컬 AI 플러그인을 지원합니까?',
+            a: '그렇습니다. 2026년 권장 플러그인은 Jarvis로, 전체 노트북에 걸쳐 채팅, 요약, 임베딩 기반 시맨틱 검색을 제공합니다. 채팅에는 `http://localhost:11434/v1`에서 Ollama를, 임베딩에는 `nomic-embed-text`와 함께 `http://localhost:11434/v1`을 사용하도록 Jarvis를 설정하십시오. 다른 Ollama 호환 Joplin 플러그인도 있지만 Jarvis가 가장 활발히 유지 관리되고 기능이 풍부합니다.',
+          },
+          {
+            q: '클라우드 없는 동기화가 더 나은 것은 Logseq입니까, Joplin입니까?',
+            a: 'Joplin은 더 넓고 세련된 클라우드 없는 동기화 이야기를 가지고 있습니다. Joplin은 자체 호스팅 Joplin Server, WebDAV, Nextcloud를 지원하며 모든 백엔드에 대해 일급 E2EE를 제공합니다. Logseq는 내장 Git 동기화(개발자에게 탁월함)를 갖추고 있으며 Syncthing 또는 iCloud Drive와 작동하지만 Joplin Server에 해당하는 자체 호스팅 기능이 없습니다. 온프레미스 감사 가능한 동기화를 원하는 팀에게는 Joplin Server가 최선이고, Git으로 추적된 기록을 원하는 개발자에게는 Logseq의 Git 동기화가 최선입니다.',
+          },
+          {
+            q: 'AI 기능을 유지하면서 Notion에서 Logseq로 마이그레이션할 수 있습니까?',
+            a: '마이그레이션은 내용을 이동하며 Notion AI 구독은 이동하지 않습니다. Notion에서 Markdown으로 내보내고, Logseq로 가져온 다음, logseq-copilot을 설치하고 Ollama로 설정합니다 — AI 계층이 로컬로 재구축됩니다. Logseq는 Joplin보다 Notion의 블록 수준 중첩을 더 잘 보존합니다. 두 도구 모두 같은 기본 요소로 목록 스타일 들여쓰기 블록을 사용하기 때문입니다. Notion AI 기능(자동 완성, 데이터베이스의 스마트 속성)은 Logseq에 직접 동등 기능이 없습니다 — 이러한 워크플로우는 logseq-copilot 프롬프트나 스크립트로 재구축해야 합니다.',
+          },
+          {
+            q: 'Logseq가 완전히 오프라인으로 작동합니까?',
+            a: '그렇습니다. Logseq는 클라우드 컴포넌트가 필요 없는 로컬 데스크톱 앱입니다. 그래프는 Markdown 파일 폴더이며, 앱이 로컬에서 읽고 씁니다. 네트워크 접근은 원격 저장소와 동기화(Git push, Syncthing 피어 검색, Logseq Sync)하고 logseq-copilot을 클라우드 LLM 공급자에 실행하는 데만 필요합니다 — 후자는 선택 사항입니다. Ollama를 LLM 공급자로 사용하면 전체 스택이 오프라인으로 작동합니다.',
+          },
+          {
+            q: 'Joplin AI 플러그인이 Obsidian만큼 성숙합니까?',
+            a: 'Obsidian은 더 많은 AI 플러그인과 더 많은 동시 유지 관리자를 보유하고 있습니다. Joplin은 플러그인이 적지만 Jarvis는 풀 기능이며 활발히 유지 관리됩니다 — 채팅, 요약, 단일 플러그인에서 임베딩 기반 검색을 다룹니다. 대부분의 사용자에게 Jarvis는 Joplin의 순수 Markdown 노트북에서 Obsidian Copilot + Smart Connections 결합에 상응하거나 능가합니다. 다양한 플러그인을 원하는 고급 사용자(템플릿 엔진, 캐릭터 채팅, MOC 생성기)에게는 Obsidian이 여전히 더 많은 옵션을 가지고 있습니다.',
+          },
+          {
+            q: '일일 저널 AI에 더 나은 것은 Logseq입니까, Joplin입니까?',
+            a: 'Logseq입니다. 일일 저널은 Logseq의 내장 기본 요소입니다 — 매일 자동으로 저널 페이지가 생성되고, 블록이 일급이며, logseq-copilot 출력이 프롬프트 아래 중첩된 블록이 됩니다. 일일 저널 AI 워크플로우(하루 마무리 요약, 주간 리뷰, 기분 태그)가 네이티브하게 느껴집니다. Joplin은 월별 노트북과 Jarvis 프롬프트로 이를 복제할 수 있지만 마찰이 더 큽니다.',
+          },
+          {
+            q: '여러 장치에서 동일한 볼트를 사용할 수 있습니까?',
+            a: '그렇습니다 — 두 도구 모두 동기화 레이어를 통한 다중 장치 사용을 지원합니다. Logseq: Git, Syncthing, iCloud Drive 또는 Logseq Sync. Joplin: Joplin Cloud, 자체 호스팅 Joplin Server, WebDAV, Nextcloud, Dropbox 또는 OneDrive. 주의: AI 플러그인은 데스크톱에서만 실행됩니다. 볼트 내용은 모바일에 동기화되지만 logseq-copilot과 Jarvis는 거기서 실행되지 않습니다. 데스크톱 AI, 모바일 캡처를 계획하십시오.',
+          },
+          {
+            q: 'Joplin Mobile 또는 Logseq Mobile에서 AI 플러그인이 작동합니까?',
+            a: '아니요 — 2026년 어느 도구도 모바일에서 플러그인을 지원하지 않습니다. Logseq Mobile과 Joplin Mobile은 동기화된 볼트를 위한 읽기/쓰기 화면이지만, 플러그인 런타임(Node.js / Electron)은 모바일 앱에 존재하지 않습니다. AI 기능(logseq-copilot, Jarvis)은 데스크톱에서만 실행됩니다. 모바일 AI가 중요하다면 대안은 Obsidian Mobile + Ollama(LAN), 또는 모바일 캡처 + 데스크톱 처리입니다.',
+          },
+          {
+            q: '로컬 AI 통합이 Notion AI보다 더 안전합니까?',
+            a: '기본 아키텍처 측면에서 그렇습니다. Notion AI는 설계상 노트 내용을 OpenAI에 전송합니다 — 이것은 구조적이며 설정 선택이 아닙니다. Logseq + logseq-copilot + Ollama와 Joplin + Jarvis + Ollama는 클라우드 LLM 공급자를 명시적으로 설정하지 않는 한 제3자에게 아무것도 전송하지 않습니다. GDPR 적용 EU 데이터, 의료, 법률, 저널리즘의 경우 이 차이가 중요합니다. 로컬 스택은 처리자가 없고, 국제 이전이 없으며, 하위 처리자 위험이 없습니다. 감사 가능성도 더 간단합니다 — 한 번의 패킷 캡처가 AI 사용 중 발신 트래픽이 없음을 증명합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 글',
+        items: [
+          '[Obsidian + 로컬 LLM: 볼트를 두 번째 뇌로 만드는 5개 플러그인 (2026)](/ko/power-local-llm/local-llm-with-obsidian-2026) — Obsidian 사용자를 위한 형제 글; 이 독자들이 일반적으로 비교하는 고급 대안.',
+          '[로컬 LLM으로 개인 지식 베이스 구축 2026](/ko/power-local-llm/local-llm-personal-knowledge-base-2026) — Logseq와 Joplin이 기여하는 더 넓은 PKB 아키텍처; RAG 레이어, 캡처 파이프라인, 1만 개 이상 항목 워크플로우 다룸.',
+          '[로컬 LLM으로 Grammarly와 Notion AI 대체하기 (2026)](/ko/power-local-llm/replace-grammarly-notion-ai-with-local) — 특히 Notion AI 탈출 경로에 집중한 인접 SaaS 대체 가이드.',
+          '[로컬 AI 에이전트로 Zapier 대체하기: 월 절감 5가지 워크플로우 (2026)](/ko/power-local-llm/replace-zapier-with-local-ai-agents) — SaaS 의존성을 통합하는 독자를 위한 인접 생산성 스택 대체.',
+          '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — logseq-copilot과 Jarvis 뒤에 있는 채팅 및 임베딩 모델 선택을 위한 모델 권위.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory-2026) — 라이선스 및 링크와 함께 Logseq, Joplin, Ollama, logseq-copilot, Jarvis 디렉터리 항목.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Logseq와 Joplin으로 로컬 LLM 활용하기: 클라우드 동기화 없는 스마트 노트 (2026)',
+      description: 'Logseq + logseq-copilot vs Joplin + Jarvis on Ollama: Notion AI의 프라이빗 대안. 클라우드 없는 동기화, GDPR 자세, 모바일 플러그인 격차. 2026.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-with-logseq-and-joplin',
+      inLanguage: 'ko',
+      datePublished: '2026-05-08',
+      dateModified: '2026-05-08',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: '로컬 LLM 파워 활용', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'Logseq와 Joplin으로 로컬 LLM 활용하기', item: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-with-logseq-and-joplin' },
+      ],
+    },
+  },
 }

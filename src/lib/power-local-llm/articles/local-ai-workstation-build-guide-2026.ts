@@ -4130,4 +4130,534 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'monthly',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: '로컬 AI 워크스테이션 구성 가이드 2026: 예산별 3단계',
+    seoTitle: '로컬 AI PC 2026: 입문부터 70B 워크스테이션까지',
+    intro:
+      '대부분의 로컬 AI PC 구성 가이드는 CPU부터 시작하지만, 실제로 어떤 모델을 실행할 수 있는지를 결정하는 것은 GPU와 그 VRAM입니다. 나머지 모든 부품은 GPU를 지원하기 위해 선택됩니다. 이 가이드는 로컬 LLM 전용 PC를 위한 세 가지 완전한 부품 목록을 제공합니다. 7B–13B 모델을 위한 보급형 구성, 14B–33B 모델을 위한 중급형 구성, 그리고 70B 모델 작업을 위한 고급형 구성입니다. 각 단계에는 정확한 부품, 예상 성능, 총 비용이 포함되어 있습니다. 가격에 관한 주의 사항: 2026년 메모리 칩 공급 부족으로 GPU 가격이 정가의 1.5~2배까지 상승했으며, 이로 인해 각 구성의 비용이 1년 전 동일한 부품보다 높아졌습니다. 각 수치는 2026년 5월 기준 스냅샷으로 참고하시고, 가능하면 중고 GPU 시장을 활용하시기 바랍니다.',
+    metaDescription:
+      '2026년 로컬 AI PC 3가지 구성: 보급형 7B–13B, 중급형 14B–33B, 고급형 70B. 정확한 부품 목록, 예상 tokens/s, 총 비용을 확인하십시오.',
+    twitterDescription:
+      '로컬 AI PC 구성 가이드: 7B부터 70B 모델까지 완전한 부품 목록과 함께 예산별 3단계. 2026년 GPU 가격 급등으로 각 구성 비용이 상승했습니다. 2026년 5월 기준 총액을 확인하십시오.',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Llama 3.3 8B',
+      'Qwen3 8B',
+      'Mistral Small',
+      'Llama 3.3 33B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4060 Ti 16 GB',
+      'NVIDIA RTX 4070 Ti Super 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'NVIDIA RTX 5090 32 GB',
+      'AMD Ryzen 7 7700',
+      'AMD Ryzen 9 7900X',
+    ],
+    audience:
+      '로컬 LLM 실행을 위해 PC를 구성하는 분들로, 예산 수준과 목표 모델 크기에 따라 결정을 내리는 사람들입니다. 양자화와 VRAM의 제약, PC 조립 기본 용어에 대한 이해는 있지만, 현재 특정 부품 SKU에 대해서는 잘 모르는 분들을 대상으로 합니다.',
+    readTime: '14분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'local AI workstation build',
+    targetKeywords: [
+      '로컬 llm pc 조립 2026',
+      '로컬 ai 워크스테이션 구성 가이드',
+      '로컬 llm 실행 최적 pc',
+      'ai 워크스테이션 부품 목록',
+      '로컬 ai pc 조립 방법',
+    ],
+    leadAnswerBlock:
+      '**로컬 AI PC에서 최적의 구성은 목표 모델에 맞는 GPU VRAM을 갖춘 단계입니다. 약 $1,100의 보급형 구성은 7B–13B 모델을 실행하고, 약 $2,400의 중급형 구성은 14B–33B 모델을 실행하며, 약 $5,000의 고급형 구성은 70B 모델을 실행합니다. 2026년 GPU 가격이 전년 대비 각 총액을 높였습니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년에 로컬 LLM을 실행하기 위한 PC를 어떻게 구성합니까?',
+        answer:
+          '실행하려는 가장 큰 모델에 따라 단계를 선택한 후 GPU를 중심으로 PC를 구성하십시오. 보급형 구성(약 $1,100)은 7B–13B 모델을 위해 RTX 4060 Ti 16 GB와 Ryzen 7 CPU를 조합합니다. 중급형 구성(약 $2,400)은 14B–33B 모델을 위해 RTX 4070 Ti Super 16 GB를 사용합니다. 고급형 구성(약 $5,000)은 70B 작업을 위해 RTX 5090 32 GB를 사용합니다. 2026년 메모리 공급 부족으로 GPU 가격이 정가를 크게 상회하므로, 각 총액은 2026년 5월 기준 스냅샷입니다.',
+        bullets: [
+          '보급형 약 $1,100: RTX 4060 Ti 16 GB, 7B–13B 모델 실행 가능',
+          '중급형 약 $2,400: RTX 4070 Ti Super 16 GB, 14B–33B 모델 실행 가능',
+          '고급형 약 $5,000: RTX 5090 32 GB, Q4 양자화로 70B 모델 실행 가능',
+          '2026년 GPU 가격은 정가의 1.5~2배입니다. 가능하면 중고 GPU를 구매하십시오.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '에디터 추천', anchor: '#editors-choice' },
+      { label: '단계 비교', anchor: '#comparison-table' },
+      { label: '어떤 구성을 선택해야 합니까?', anchor: '#which-build' },
+      { label: '보급형 구성 (~$1,100)', anchor: '#budget-build' },
+      { label: '중급형 구성 (~$2,400)', anchor: '#mid-build' },
+      { label: '고급형 구성 (~$5,000)', anchor: '#enthusiast-build' },
+      { label: '2026년 가격 급등이 구성에 미치는 영향', anchor: '#price-surge' },
+      { label: '결정 순서도', anchor: '#decision-flowchart' },
+      { label: '부품 구입처', anchor: '#where-to-buy' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 자료', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**GPU가 단계를 결정하고, 나머지 구성이 GPU를 지원합니다.** 로컬 AI PC는 VRAM이 어떤 모델을 실행할 수 있는지를 결정하기 때문에 GPU부터 선택합니다. 목표 모델에 맞는 GPU VRAM을 갖춘 단계를 선택한 후, CPU, RAM, 파워 서플라이를 그 주변에 맞게 구성하십시오.',
+          '**2026년 GPU 가격이 각 구성을 더 비싸게 만들었습니다.** 메모리 칩 공급 부족으로 GPU 가격이 정가의 1.5~2배까지 상승했습니다. 여기에 제시된 총액은 2026년 5월 기준 스냅샷이며 1년 전 동일한 부품보다 높습니다. 중고 GPU 시장을 적극 활용하십시오.',
+          '**보급형 구성 (~$1,100):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB RAM, 1 TB SSD, 650 W 파워 서플라이 — 7B–13B 모델을 사용 가능한 속도로 실행합니다. 로컬 AI를 위한 가장 저렴한 완전 구성입니다.',
+          '**중급형 구성 (~$2,400):** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB RAM, 2 TB SSD, 850 W 파워 서플라이 — 14B–33B 모델을 실행하고, 7B–14B 모델을 즉각적인 응답 속도로 처리합니다.',
+          '**고급형 구성 (~$5,000):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB RAM, 4 TB SSD, 1000 W 파워 서플라이 — Q4 양자화로 70B 모델을 실행할 수 있는 유일한 단일 GPU 구성입니다.',
+          '**RAM은 VRAM의 대체재가 아닙니다.** 시스템 RAM은 모델이 VRAM을 초과할 때 오프로드를 허용하지만, RAM에서 실행 중인 모델은 대화형 사용에 너무 느립니다. 모델에 맞는 충분한 VRAM을 구매하고, RAM은 운영 체제와 도구를 위해 구매하십시오.',
+          '**파워 서플라이는 GPU에 맞게 확장됩니다.** 보급형은 650 W, 중급형은 850 W, 고급형은 1000 W가 필요합니다. RTX 5090 단독으로 575 W를 소비하기 때문입니다. GPU와 함께 파워 서플라이 예산을 책정하십시오.',
+          '**2026년에는 중고 GPU가 최고의 가치를 제공합니다.** 검증된 작동 상태의 중고 RTX 4090 또는 RTX 4060 Ti는 대부분의 가격 급등을 피할 수 있습니다. 중고 카드를 구매하면 구성 총액을 낮게 유지할 수 있습니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**보급형 구성 (~$1,100):** GPU RTX 4060 Ti 16 GB — 7B 모델 및 대부분의 13B 모델 실행 가능.',
+          '**중급형 구성 (~$2,400):** GPU RTX 4070 Ti Super 16 GB — 14B 모델을 편안하게, 22B–33B 모델도 경량 작업 가능.',
+          '**고급형 구성 (~$5,000):** GPU RTX 5090 32 GB — 33B 모델을 편안하게, Q4 양자화로 70B 모델도 실행 가능.',
+          '**Q4_K_M 양자화 VRAM 기본 규칙:** 매개변수 10억 개당 약 0.6 GB, 컨텍스트 및 도구용 2–4 GB 추가.',
+          '**시스템 RAM 가이드:** 보급형 32 GB, 중급형 64 GB, 고급형 128 GB.',
+          '**단계별 파워 서플라이:** 보급형 650 W, 중급형 850 W, 고급형 1000 W — RTX 5090 단독으로 575 W 소비.',
+          '**2026년 가격 현실:** GPU 가격이 메모리 공급 부족으로 정가의 1.5~2배입니다. 현재 가격을 확인하고 중고 카드를 고려하십시오.',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: '에디터 추천: 중급형 구성 (~$2,400)',
+        sponsoredSlot: true,
+        content:
+          '**대부분의 로컬 AI PC 구성자에게 중급형 구성은 성능, 비용, 여유 공간을 균형 있게 제공하는 단계입니다.** RTX 4070 Ti Super 16 GB를 중심으로 구성된 이 설정은 충분한 컨텍스트 공간으로 모든 14B 모델을 실행하고, 22B–33B 모델의 경량 작업도 처리하며, 7B–14B 모델을 즉각적인 속도로 응답합니다. 총 약 $2,400으로 몇 달이 지나도 답답하지 않고, 1년 내에 교체할 필요가 없는 구성입니다. 7B–13B 모델만 사용할 계획이라면 보급형으로 내려가고, 70B 작업이 꼭 필요하다면 고급형으로 올라가십시오. 중급형 구성은 오래 유지하고 싶은 기기를 위한 안전한 기본 선택입니다.',
+        callouts: [
+          {
+            type: 'note',
+            text: '이 에디터 추천은 가격 대비 성능 비율만을 반영합니다. PromptQuorum은 어떤 제휴 프로그램에도 등록되어 있지 않으며, 아래 링크에는 제휴 태그가 포함되어 있지 않습니다. 이 링크는 수수료를 발생시키지 않는 단순 참조 링크입니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4070+Ti+Super+16GB',
+            productName: 'NVIDIA RTX 4070 Ti Super 16GB',
+            productCategory: 'pc-component',
+            priceRange: '1150-1200',
+            label: 'Amazon에서 RTX 4070 Ti Super 가격 확인',
+          },
+          {
+            url: 'https://www.newegg.com/p/pl?d=RTX+4070+Ti+Super',
+            productName: 'NVIDIA RTX 4070 Ti Super 16GB',
+            productCategory: 'pc-component',
+            priceRange: '1150-1200',
+            label: 'Newegg에서 RTX 4070 Ti Super 가격 확인',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '2026년 세 가지 구성 단계 비교',
+        content:
+          'VRAM 및 GPU 전력 수치는 제조사 사양입니다. 추론 속도는 해당 단계 GPU에 대한 PromptQuorum GPU 테스트의 모델 패밀리 수준 추정치입니다. 구성 총액은 2026년 5월 기준 USD 스냅샷입니다. 2026년 GPU 가격 급등으로 카드 가격이 정가의 1.5~2배까지 상승했으므로 GPU 항목이 각 총액을 주도하며 주간 단위로 변동합니다. 중고 GPU를 구입하면 각 총액을 줄일 수 있습니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 AI PC에서 GPU의 VRAM이 실행 가능한 모델을 결정하며, 나머지 부품 목록은 GPU를 지원하도록 구성됩니다. 모델 크기에 따라 단계를 먼저 선택하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '구성을 스타 선수를 중심으로 구성된 팀으로 생각하십시오. GPU가 스타 선수이고, CPU, RAM, 파워 서플라이는 GPU를 작동 상태로 유지하기 위해 존재하는 지원 역할입니다. 필요한 모델에 맞는 GPU를 먼저 선택한 후 나머지를 그 주변에 구성하십시오.',
+          },
+        ],
+        columns: ['단계', 'GPU', 'VRAM', '실행 가능', '파워 서플라이', '총액 (2026년 5월)'],
+        rows: [
+          {
+            '단계': '보급형',
+            'GPU': 'RTX 4060 Ti 16 GB',
+            'VRAM': '16 GB',
+            '실행 가능': '7B–13B 모델',
+            '파워 서플라이': '650 W',
+            '총액 (2026년 5월)': '약 $1,100',
+          },
+          {
+            '단계': '중급형',
+            'GPU': 'RTX 4070 Ti Super 16 GB',
+            'VRAM': '16 GB',
+            '실행 가능': '14B 편안하게, 22B–33B 경량',
+            '파워 서플라이': '850 W',
+            '총액 (2026년 5월)': '약 $2,400',
+          },
+          {
+            '단계': '고급형',
+            'GPU': 'RTX 5090 32 GB',
+            'VRAM': '32 GB',
+            '실행 가능': '33B 편안하게, Q4 양자화 70B',
+            '파워 서플라이': '1000 W',
+            '총액 (2026년 5월)': '약 $5,000',
+          },
+        ],
+      },
+      whichBuild: {
+        id: 'which-build',
+        title: '어떤 구성을 선택해야 합니까?',
+        content:
+          '**실행하려는 가장 큰 모델이 단계를 결정하며, 예산이 이를 확인합니다.** 상황에 맞는 행을 찾으십시오.',
+        columns: ['상황', '선택할 구성'],
+        rows: [
+          { '상황': '7B–13B 모델을 실행하며 가장 저렴한 완전한 기기를 원하는 경우', '선택할 구성': '보급형 구성 (~$1,100)' },
+          { '상황': '첫 로컬 AI PC이며 얼마나 멀리 갈지 모르는 경우', '선택할 구성': '보급형, 또는 여유를 위해 중급형' },
+          { '상황': '14B 모델을 지속적으로 실행하며 즉각적인 응답을 원하는 경우', '선택할 구성': '중급형 구성 (~$2,400)' },
+          { '상황': '22B–33B 경량 작업을 하며 오래 사용할 기기를 원하는 경우', '선택할 구성': '중급형 구성 (~$2,400)' },
+          { '상황': '33B 모델을 집중적으로 사용하거나 충분한 미래 여유 공간이 필요한 경우', '선택할 구성': '고급형 구성 (~$5,000)' },
+          { '상황': 'Q4 양자화로 70B 모델을 실행할 수 있는 단일 GPU 기기가 필요한 경우', '선택할 구성': '고급형 구성 (~$5,000)' },
+          { '상황': '2026년 가격 급등에도 불구하고 총액을 낮게 유지하고 싶은 경우', '선택할 구성': '어떤 단계든 가능 — 중고 GPU 구입' },
+          { '상황': '확실하지 않으며 수년간 유지할 가장 안전한 구성을 원하는 경우', '선택할 구성': '중급형 구성 — 에디터 추천' },
+        ],
+      },
+      budgetBuild: {
+        id: 'budget-build',
+        title: '보급형 구성 (~$1,100): RTX 4060 Ti 16 GB',
+        content:
+          '**보급형 구성은 가장 저렴한 완전 로컬 AI PC이며, 모든 7B 모델과 대부분의 13B 모델을 실행합니다. 처음 사용하는 대부분의 사용자에게 충분한 성능입니다.** RTX 4060 Ti 16 GB를 중심으로 구성되며, 2026년 가격 급등의 영향을 가장 적게 받은 GPU로 총액을 합리적인 범위 내로 유지합니다.',
+        items: [
+          '**GPU — RTX 4060 Ti 16 GB (~$420–450):** 16 GB VRAM, 165 W. 7B 모델을 약 20–25 tok/s로 실행하며, 컨텍스트 여유 공간과 함께 14B 모델도 수용합니다. 16 GB 용량이 8 GB 버전을 선택하지 않는 이유입니다.',
+          '**CPU — AMD Ryzen 7 7700 (~$250–280):** 8코어, 적당한 전력 소비. CPU는 GPU 추론 중 작업이 거의 없으므로 이 단계에서는 중간급 칩이 적합합니다. 이 단계에서 CPU에 과도하게 지출하지 마십시오.',
+          '**메인보드 — B650 칩셋 (~$130–160):** Ryzen 7과 전체 크기 GPU를 PCIe에서 지원합니다. 이 단계에서는 고급 전원 공급이 필요하지 않습니다.',
+          '**RAM — 32 GB DDR5 (~$90–120):** 운영 체제, 도구, VRAM에서 실행되는 7B–13B 모델을 위해 충분합니다. RAM은 VRAM의 대체재가 아닙니다. 이 단계에서 32 GB로 충분합니다.',
+          '**스토리지 — 1 TB NVMe SSD (~$70–90):** 운영 체제와 여러 모델을 저장합니다. 7B Q4 모델 하나는 약 4–5 GB입니다.',
+          '**파워 서플라이 — 650 W 80+ Gold (~$80–100):** 165 W GPU와 8코어 CPU에 대한 편안한 여유 공간.',
+          '**케이스 및 쿨링 — 타워형 공냉 쿨러가 있는 미드타워 (~$80–120):** 보급형은 발열이 적습니다. 공냉으로 충분합니다.',
+          '**이 단계를 선택하는 이유:** 낮은 초기 비용, 낮은 전력 소비, 일반 채팅, 코드 지원, 요약을 담당하는 7B–13B 모델에 충분한 성능. **건너뛰어야 하는 이유:** 이미 14B 이상 모델을 원하신다면 중급형 구성부터 시작하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'RTX 4060 Ti는 반드시 16 GB 버전을 구입하십시오. 8 GB 버전은 동일한 GPU 다이를 사용하여 비슷한 속도로 실행되지만, 8 GB는 14B 모델을 수용할 수 없습니다. 추가 메모리가 이 선택의 유일한 이유입니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB',
+            productName: 'NVIDIA RTX 4060 Ti 16GB',
+            productCategory: 'pc-component',
+            priceRange: '420-450',
+            label: 'Amazon에서 RTX 4060 Ti 16GB 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=AMD+Ryzen+7+7700',
+            productName: 'AMD Ryzen 7 7700',
+            productCategory: 'pc-component',
+            priceRange: '250-280',
+            label: 'Amazon에서 Ryzen 7 7700 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=32GB+DDR5+RAM',
+            productName: '32GB DDR5 RAM kit',
+            productCategory: 'pc-component',
+            priceRange: '90-120',
+            label: 'Amazon에서 32 GB DDR5 RAM 가격 확인',
+          },
+        ],
+      },
+      midBuild: {
+        id: 'mid-build',
+        title: '중급형 구성 (~$2,400): RTX 4070 Ti Super 16 GB',
+        content:
+          '**중급형 구성은 에디터 추천입니다. 14B 모델을 즉각적으로 실행하고, 22B–33B 경량 작업을 처리하며, 오래 유지할 수 있는 단계입니다.** RTX 4070 Ti Super 16 GB를 중심으로 구성되며, 14B급 모델에서 응답 지연이 감지되지 않을 만큼 충분히 빠릅니다.',
+        items: [
+          '**GPU — RTX 4070 Ti Super 16 GB (~$1,150–1,200):** 16 GB VRAM, 285 W. 보급형과 동일한 모델 수용 능력이지만 훨씬 빠릅니다. 7B–14B 모델이 즉각 응답하고, 22B–33B 경량 작업도 사용 가능합니다.',
+          '**CPU — AMD Ryzen 9 7900X (~$330–370):** 12코어. 추론과 함께 데이터 준비 및 도구 실행을 위한 보급형보다 더 많은 여유 공간.',
+          '**메인보드 — B650 또는 X670 칩셋 (~$180–240):** 12코어 CPU와 285 W GPU를 위한 견고한 전원 공급.',
+          '**RAM — 64 GB DDR5 (~$180–230):** 운영 체제, 더 큰 컨텍스트 창, 모델과 함께 실행되는 RAG 파이프라인 같은 도구를 위한 공간.',
+          '**스토리지 — 2 TB NVMe SSD (~$130–170):** 상당한 모델 라이브러리를 저장합니다. 33B Q4 모델 하나는 약 18–20 GB입니다.',
+          '**파워 서플라이 — 850 W 80+ Gold (~$120–150):** 지속적인 부하 하에서 285 W GPU와 12코어 CPU에 대한 편안한 여유 공간.',
+          '**케이스 및 쿨링 — 240–280 mm AIO 또는 고급 공냉 쿨러가 있는 미드타워 (~$150–220):** 중급형은 적당한 발열이 있습니다. 품질 쿨러로 장시간 추론 세션 중 CPU를 안정적으로 유지하십시오.',
+          '**이 단계를 선택하는 이유:** 14B 모델을 지속적으로 실행하며 즉각적인 응답을 원하거나, 22B–33B 경량 작업을 하며 여유 공간이 필요한 경우. **건너뛰어야 하는 이유:** 7B–13B로 충분하다면 보급형으로 $1,000 이상 절약 가능합니다. 70B가 필요하다면 16 GB GPU로는 불가능하므로 고급형으로 가십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '중급형 구성은 보급형과 동일한 모델을 수용합니다. 속도가 아닌 용량에 대한 비용입니다. 14B 모델이 일상적인 작업 부하가 되고 기다리는 것이 싫다면 이 단계를 선택하십시오.',
+          },
+          {
+            type: 'note',
+            text: '2026년 가격 급등 후 중고 RTX 4090 24 GB가 때로는 새 RTX 4070 Ti Super 가격과 비슷하게 팔립니다. 검증된 작동 상태의 제품을 찾는다면 8 GB의 VRAM 추가로 33B 모델까지 도달할 수 있습니다. 4070 Ti Super를 구입하기 전에 확인할 가치가 있습니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4070+Ti+Super+16GB',
+            productName: 'NVIDIA RTX 4070 Ti Super 16GB',
+            productCategory: 'pc-component',
+            priceRange: '1150-1200',
+            label: 'Amazon에서 RTX 4070 Ti Super 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=AMD+Ryzen+9+7900X',
+            productName: 'AMD Ryzen 9 7900X',
+            productCategory: 'pc-component',
+            priceRange: '330-370',
+            label: 'Amazon에서 Ryzen 9 7900X 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=64GB+DDR5+RAM',
+            productName: '64GB DDR5 RAM kit',
+            productCategory: 'pc-component',
+            priceRange: '180-230',
+            label: 'Amazon에서 64 GB DDR5 RAM 가격 확인',
+          },
+        ],
+      },
+      enthusiastBuild: {
+        id: 'enthusiast-build',
+        title: '고급형 구성 (~$5,000): RTX 5090 32 GB',
+        content:
+          '**고급형 구성은 Q4 양자화로 70B 모델을 실행할 수 있는 유일한 단일 GPU 기기입니다. RTX 5090 32 GB가 핵심 부품입니다.** 이 단계를 선택하는 이유는 원시 속도가 아닌 VRAM 용량입니다. 속도는 부수적인 효과입니다. 2026년 가격 급등이 이 단계에 가장 강하게 영향을 미쳐 GPU 항목이 총액을 주도하며 주간 단위로 변동합니다.',
+        items: [
+          '**GPU — RTX 5090 32 GB (~$3,650–3,900):** 32 GB GDDR7 VRAM, 575 W. 이중 GPU 구성 없이 Q4 양자화로 70B 모델을 실행할 수 있는 유일한 소비자용 카드입니다. 33B 모델을 여유 공간과 함께 편안하게 실행합니다.',
+          '**CPU — AMD Ryzen 9 7950X (~$450–520):** 16코어. 집중적인 추론과 함께 데이터 준비, 파인튜닝 실험, 도구 실행을 처리하기에 충분합니다.',
+          '**메인보드 — X670E 칩셋 (~$280–380):** 575 W GPU와 16코어 CPU를 위해 크기가 맞춰진 강력한 전원 공급 및 PCIe 5.0.',
+          '**RAM — 128 GB DDR5 (~$380–480):** 큰 컨텍스트 창, 동시에 로드된 여러 모델, 도구를 위한 공간 — 그리고 필요시 모델을 RAM으로 부분 오프로드할 수 있는 여유 공간.',
+          '**스토리지 — 4 TB NVMe SSD (~$260–340):** 70B Q4 모델 하나는 약 40 GB입니다. 4 TB 드라이브는 대형 모델의 큰 라이브러리를 수용합니다.',
+          '**파워 서플라이 — 1000 W 80+ Platinum (~$180–240):** RTX 5090 단독으로 575 W를 소비하기 때문에 필요합니다. 750 W 유닛은 부하 하에서 부족할 것입니다. 이 부품을 절약하지 마십시오.',
+          '**케이스 및 쿨링 — 360 mm AIO가 있는 풀타워 (~$280–380):** 575 W GPU와 16코어 CPU는 실제 발열을 발생시킵니다. 360 mm 수냉 쿨러는 지속적인 70B 추론 중 CPU를 안정적으로 유지합니다.',
+          '**이 단계를 선택하는 이유:** 33B 또는 70B 모델이 필요하거나, 집중적인 배치 추론을 실행하거나, 수년간 교체 없이 사용할 기기를 원하는 경우. **건너뛰어야 하는 이유:** 7B–14B 모델에는 과하게 비쌉니다. 중급형 구성이 해당 크기에서 절반도 안 되는 비용으로 즉각적인 응답을 제공합니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'RTX 5090은 단독으로 575 W를 소비합니다. 이 부품 목록의 1000 W 파워 서플라이와 함께 사용하십시오. 더 작은 유닛은 부하 하에서 제한될 것입니다. 조립 전에 벽면 회로가 총 소비 전력을 공급할 수 있는지 확인하십시오.',
+          },
+          {
+            type: 'note',
+            text: 'Q4 양자화 70B 모델은 약 39–42 GB의 VRAM이 필요하므로, RTX 5090 32 GB조차 적극적인 양자화나 시스템 RAM으로의 부분 오프로드를 통해서만 70B를 실행할 수 있습니다. 이 구성의 128 GB RAM이 해당 오프로드에 필요한 공간을 제공합니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+5090',
+            productName: 'NVIDIA RTX 5090 32GB',
+            productCategory: 'pc-component',
+            priceRange: '3650-3900',
+            label: 'Amazon에서 RTX 5090 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=AMD+Ryzen+9+7950X',
+            productName: 'AMD Ryzen 9 7950X',
+            productCategory: 'pc-component',
+            priceRange: '450-520',
+            label: 'Amazon에서 Ryzen 9 7950X 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=1000W+Platinum+power+supply',
+            productName: '1000W 80+ Platinum power supply',
+            productCategory: 'pc-component',
+            priceRange: '180-240',
+            label: 'Amazon에서 1000 W 파워 서플라이 가격 확인',
+          },
+        ],
+      },
+      priceSurge: {
+        id: 'price-surge',
+        title: '2026년 가격 급등이 구성 계획에 미치는 영향',
+        content:
+          '**2026년 메모리 칩 공급 부족으로 GPU 가격이 정가의 1.5~2배까지 상승했으며, GPU가 각 구성에서 가장 큰 항목이기 때문에 전년도 대비 각 총액이 높아졌습니다.** 출시 가격이 아닌 현재 가격을 기준으로 구성을 계획하십시오.',
+        items: [
+          '**GPU가 총액을 주도합니다.** 세 단계 모두에서 GPU는 가장 높은 단일 비용 항목입니다. 가격 급등은 다른 어떤 부품보다 구성 총액을 더 많이 변화시킵니다.',
+          '**원인은 GPU가 아닌 메모리입니다.** GDDR 및 HBM 공급 부족으로 빠른 메모리가 있는 모든 카드의 비용이 증가했습니다. VRAM이 많을수록 타격이 컸습니다. RTX 5090은 $1,999 출시 가격에서 약 $3,650–3,900으로 상승했습니다.',
+          '**저가형 GPU가 더 잘 버텼습니다.** RTX 4060 Ti 16 GB는 정가에 가까우므로 보급형 구성 총액의 변동이 적었습니다.',
+          '**중고 GPU가 최고의 가치입니다.** 중고 RTX 4060 Ti 또는 RTX 4090은 대부분의 가격 급등을 피할 수 있습니다. 검증된 작동 상태의 중고 카드를 구입하는 것이 구성 총액을 낮추는 가장 간단한 방법입니다.',
+          '**GPU 이외 부품의 가격 변동은 적었습니다.** CPU, 메인보드, SSD, 파워 서플라이 가격은 적당히 상승했습니다. DDR5 RAM도 메모리 공급 부족으로 타이트해졌지만, GPU가 여전히 주시해야 할 항목입니다.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '2026년 메모리 공급 부족으로 GPU 가격이 정가의 1.5~2배까지 상승하여, GPU가 부품 목록에서 가장 큰 단일 항목이기 때문에 각 로컬 AI 구성의 총액이 높아졌습니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'GPU는 기기의 가장 비싼 부품이며, 2026년에는 GPU가 가장 비싸진 부품입니다. 메모리 공급 부족이 해소될 때까지 출시 가격은 역사로 취급하고, 가능하면 중고 GPU를 구입하며, 모델에 필요한 것 이상의 VRAM을 구입하지 마십시오.',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: '결정 순서도: 네 가지 질문으로 구성 선택',
+        content:
+          '**네 가지 질문에 순서대로 답하면 대부분의 구성자가 단계에 도달합니다.**',
+        items: [
+          '**1. 실행하려는 가장 큰 모델은 무엇입니까?** 7B–13B: 보급형 구성. 14B–33B: 중급형 구성. 70B: 고급형 구성.',
+          '**2. 엄격한 예산 상한은 얼마입니까?** 약 $1,100: 보급형 구성. 약 $2,400: 중급형 구성. 약 $5,000: 고급형 구성.',
+          '**3. 새 GPU를 구입합니까, 중고 GPU를 구입합니까?** 검증된 작동 상태의 중고 GPU는 2026년 가격 급등의 대부분을 피할 수 있습니다. 중고를 선택하면 어떤 단계에서도 총액을 낮출 수 있습니다.',
+          '**4. 전원 공급 및 공간 계획이 성립합니까?** 부품을 주문하기 전에 파워 서플라이가 단계에 맞는지(650 W / 850 W / 1000 W) 확인하고, 케이스가 GPU와 쿨러를 수용하는지 확인하십시오.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 AI PC 구성을 선택할 때는 먼저 가장 큰 모델 크기, 다음으로 예산 상한, 세 번째로 새 GPU 대 중고 GPU, 마지막으로 전원 공급 및 공간 계획 순으로 답하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '실제로 실행하려는 가장 큰 모델부터 시작하여 단계를 결정하십시오. 그런 다음 예산을 확인하고, 중고 GPU를 구입할지 결정하고, 파워 서플라이와 케이스가 부품에 맞는지 확인하십시오. 이 순서대로 하면 모델을 실행할 수 없는 구성을 피할 수 있습니다.',
+          },
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '부품 구입처',
+        content:
+          '**대형 소매업체에는 이 구성의 모든 부품이 있습니다. 중고 시장은 GPU에 특화된 가치 원천입니다.** 아래 링크는 단순 제품 검색 링크입니다. 제휴 태그가 없으며 수수료가 발생하지 않습니다.',
+        items: [
+          '**Amazon 및 Newegg:** CPU, RAM, SSD, 파워 서플라이, 케이스의 가장 넓은 재고. 새 GPU 재고는 더 부족하며 2026년 가격 급등이 반영되어 있습니다.',
+          '**중고 GPU 시장:** GPU 항목에서 최고의 가치 — 검증된 작동 상태의 중고 RTX 4060 Ti, RTX 4070 Ti Super, RTX 4090은 대부분의 가격 급등을 피할 수 있습니다.',
+          '**지역 전자 제품 매장 및 PC 전문점:** CPU, 메인보드, 파워 서플라이의 좋은 공급처입니다. CPU와 메인보드 번들도 유용합니다.',
+          '**GPU를 먼저 구입하십시오.** GPU가 가장 크고 변동성이 높은 항목입니다. 수용 가능한 가격으로 GPU를 확보한 후, 지원 부품을 그 주변에 구입하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '2026년 GPU 가격 급등으로 이 가이드의 모든 총액은 빠르게 변동하는 2026년 5월 스냅샷입니다. 조립하기 전에 항상 GPU의 현재 소매 목록을 여십시오. 가격은 주간 단위로 변동했으며 구성 비용을 주도합니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=GPU+for+local+AI',
+            productName: 'GPUs for local AI builds',
+            productCategory: 'pc-component',
+            priceRange: '420-3900',
+            label: 'Amazon에서 GPU 탐색',
+          },
+          {
+            url: 'https://www.newegg.com/p/pl?d=CPU+AMD+Ryzen',
+            productName: 'AMD Ryzen CPUs',
+            productCategory: 'pc-component',
+            priceRange: '250-520',
+            label: 'Newegg에서 Ryzen CPU 탐색',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=DDR5+RAM+kit',
+            productName: 'DDR5 RAM kits',
+            productCategory: 'pc-component',
+            priceRange: '90-480',
+            label: 'Amazon에서 DDR5 RAM 탐색',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=NVMe+SSD+2TB',
+            productName: 'NVMe SSDs',
+            productCategory: 'pc-component',
+            priceRange: '70-340',
+            label: 'Amazon에서 NVMe SSD 탐색',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=850W+power+supply',
+            productName: 'ATX power supplies',
+            productCategory: 'pc-component',
+            priceRange: '80-240',
+            label: 'Amazon에서 파워 서플라이 탐색',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '로컬 AI PC 구성 시 흔한 실수',
+        items: [
+          '**GPU보다 CPU를 먼저 선택하는 것.** GPU가 기기가 실행하는 모델을 결정하며, CPU는 추론 중 작업이 거의 없습니다. GPU를 먼저 선택한 후 CPU를 그것을 지원하도록 구성하십시오.',
+          '**VRAM 대신 시스템 RAM을 구입하는 것.** RAM은 모델이 VRAM을 초과할 때 오프로드를 허용하지만, RAM에서 실행 중인 모델은 대화형 사용에 너무 느립니다. 모델에 맞는 충분한 VRAM을 구입하고, RAM은 운영 체제와 도구를 위해서만 구입하십시오.',
+          '**파워 서플라이를 과소평가하는 것.** RTX 5090 단독으로 575 W를 소비합니다. 부하 하에서 제한되는 파워 서플라이는 안정적으로 실행되는 느린 GPU보다 나쁩니다. 단계에 맞게 파워 서플라이를 조정하십시오.',
+          '**GPU 출시 가격에 고정되는 것.** 2026년 가격 급등으로 출시 가격이 더 이상 현실을 반영하지 않습니다. GPU를 현재 소매 가격 기준으로 예산을 책정하고 중고 시장을 고려하십시오.',
+          '**보급형 구성에 RTX 4060 Ti 8 GB를 구입하는 것.** 16 GB 버전과 같은 이름이지만 14B 모델을 수용할 수 없습니다. 목록에서 16 GB 변형을 확인하십시오.',
+          '**7B 모델을 위해 과도하게 지출하는 것.** 7B 모델이 사용 사례를 충족한다면 고급형 구성은 수천 달러와 수백 와트를 낭비합니다. 예산이 아닌 모델에 맞게 단계를 조정하십시오.',
+          '**케이스 및 쿨링 계획을 건너뛰는 것.** 575 W GPU와 16코어 CPU는 실제 발열을 발생시킵니다. 부품을 주문하기 전에 케이스가 GPU와 쿨러를 수용하고 공기 흐름이 원활한지 확인하십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[로컬 LLM 최적 GPU 구매 가이드 2026](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum: 여기 구성 총액에 사용된 2026년 5월 GPU 가격 및 정가의 1.5~2배 가격 급등.',
+          '[로컬 LLM 워크스테이션 구성](/ko/local-llms/local-llm-workstation-build) — PromptQuorum: 고급형 단계 이면의 이중 GPU 70B 워크스테이션을 위한 부품 목록, 쿨링, 파워 서플라이 가이드.',
+          '[NVIDIA GeForce RTX 40 및 50 시리즈 사양](https://www.nvidia.com/en-us/geforce/graphics-cards/) — RTX 4060 Ti, 4070 Ti Super, 5090의 공식 VRAM 용량 및 전력(TGP) 수치.',
+          '[PCPartPicker](https://pcpartpicker.com) — 2026년 5월 기준 AMD Ryzen CPU, DDR5 RAM, NVMe SSD, 파워 서플라이의 실시간 부품 가격.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '2026년에 로컬 AI PC를 구성하는 데 얼마나 비용이 듭니까?',
+            a: '보급형 로컬 AI PC는 약 $1,100, 중급형 구성은 약 $2,400, 고급형 70B 구성은 약 $5,000입니다. 이는 2026년 5월 기준 스냅샷입니다. 2026년 메모리 칩 공급 부족으로 GPU 가격이 정가의 1.5~2배까지 상승했으며, GPU가 각 구성에서 가장 큰 항목이기 때문에 전년도 동일한 부품 대비 각 총액이 높아졌습니다.',
+          },
+          {
+            q: '로컬 AI PC에 어떤 GPU를 사용해야 합니까?',
+            a: '목표 모델 크기에 따라 GPU를 선택하십시오. 7B–13B 모델 보급형 구성에는 RTX 4060 Ti 16 GB, 14B–33B 모델 중급형 구성에는 RTX 4070 Ti Super 16 GB, 70B 작업 고급형 구성에는 RTX 5090 32 GB가 적합합니다. GPU가 기기가 실행하는 모델을 결정하므로 먼저 선택하고, 나머지 부품 목록을 그 주변에 구성하십시오.',
+          },
+          {
+            q: '로컬 AI PC에 RAM이 얼마나 필요합니까?',
+            a: '보급형 구성에 32 GB, 중급형에 64 GB, 고급형에 128 GB를 계획하십시오. 시스템 RAM은 VRAM의 대체재가 아닙니다. RAM에서 실행 중인 모델은 대화형 사용에 너무 느립니다. RAM은 운영 체제, 컨텍스트, 도구를 위한 것입니다. 모델 자체를 위해 GPU에 충분한 VRAM을 구입하십시오.',
+          },
+          {
+            q: '로컬 AI PC에 어떤 파워 서플라이가 필요합니까?',
+            a: '단계에 맞게 파워 서플라이를 조정하십시오: 보급형 구성에 650 W, 중급형에 850 W, 고급형에 1000 W. 고급형 단계는 RTX 5090 단독으로 575 W를 소비하기 때문에 1000 W가 필요합니다. 용량 부족 파워 서플라이는 부하 하에서 불안정성을 초래하므로 이 부품을 절약하지 마십시오.',
+          },
+          {
+            q: '2026년에 GPU 부품을 새 것으로 구입해야 합니까, 중고로 구입해야 합니까?',
+            a: '가능하면 중고 GPU를 구입하고, 다른 부품은 새 것으로 구입하십시오. 2026년 가격 급등으로 새 GPU 가격이 정가의 1.5~2배까지 상승했지만, 중고 시장은 대부분의 가격 급등을 피했습니다. 검증된 작동 상태의 중고 RTX 4060 Ti, RTX 4070 Ti Super, RTX 4090은 구성 총액을 크게 줄입니다. CPU, RAM, SSD, 파워 서플라이는 새 것으로 구입하는 것이 좋습니다.',
+          },
+          {
+            q: '단일 GPU 구성으로 70B 모델을 실행할 수 있습니까?',
+            a: '네, 고급형 구성으로 가능합니다. RTX 5090 32 GB는 Q4 양자화로 70B 모델을 수용할 수 있는 유일한 단일 소비자용 카드입니다. 70B 모델은 약 39–42 GB의 VRAM이 필요하므로, 적극적인 양자화나 시스템 RAM으로의 부분 오프로드를 통해 70B를 실행합니다. 고급형 구성의 128 GB RAM이 해당 오프로드에 필요한 공간을 제공합니다.',
+          },
+          {
+            q: '보급형 대비 추가 비용을 고려할 때 중급형 구성이 가치가 있습니까?',
+            a: '14B급 모델을 정기적으로 실행한다면 그렇습니다. 보급형과 중급형 구성은 비슷한 모델을 수용하지만, 중급형의 RTX 4070 Ti Super가 훨씬 빠릅니다. 14B 모델이 느리게 응답하는 대신 즉각적으로 응답하고, 22B–33B 경량 작업이 사용 가능해집니다. 7B–13B 모델만으로 충분하다면 보급형으로 $1,000 이상 절약하는 것이 최고의 가성비입니다.',
+          },
+          {
+            q: '로컬 AI PC에 Threadripper CPU가 필요합니까?',
+            a: '아니요. 이 가이드의 세 가지 구성에는 소비자용 Ryzen CPU로 충분합니다. 보급형 단계에는 Ryzen 7, 중급형과 고급형 단계에는 Ryzen 9. Threadripper는 파인튜닝과 추론을 동시에 실행하는 이중 GPU 기기에만 비용 가치가 있습니다. 이는 단일 GPU 구성의 범위를 벗어납니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[전체 구매 가이드로 구성에 맞는 GPU 선택](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 2026년 5월 가격과 가격 급등 계산이 포함된 네 가지 예산 단계의 GPU 8종.',
+          '[프로덕션 사용을 위한 이중 GPU 70B 워크스테이션 구성 보기](/ko/local-llms/local-llm-workstation-build) — 이 가이드의 고급형 구성을 넘어서는 $4,000–6,000 다중 사용자 단계.',
+          '[PC 구성 대 클라우드 GPU 대여 비교](/ko/power-local-llm/cloud-gpu-rental-guide-2026) — 가끔 컴퓨팅에는 자체 하드웨어 소유보다 대여가 나을 때.',
+          '[구성 전 각 모델 크기에 필요한 VRAM 계산](/ko/local-llms/how-much-vram-local-llm) — 여기 단계 선택 이면의 모델 크기별 완전한 VRAM 방법론.',
+          '[로컬 AI를 위한 PC 구성의 대안으로 Mac 고려](/ko/power-local-llm/best-mac-for-local-ai-2026) — 통합 메모리를 갖춘 Apple Silicon이 로컬 AI를 위한 전용 GPU PC를 능가하는 경우.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 AI 워크스테이션 구성 가이드 2026: 예산별 3단계',
+      description: '2026년 로컬 AI PC 세 가지 완전 구성: 보급형 7B–13B, 중급형 14B–33B, 고급형 70B. 정확한 부품 목록, 예상 tokens/s, 2026년 5월 총 비용.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-workstation-build-guide-2026',
+      inLanguage: 'ko',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '로컬 AI 워크스테이션 구성 가이드 2026', item: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-workstation-build-guide-2026' },
+      ],
+    },
+  },
 }

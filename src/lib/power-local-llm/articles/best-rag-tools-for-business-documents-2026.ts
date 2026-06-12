@@ -1206,4 +1206,298 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'RAG & Document Chat',
+    title: '2026년 기업 문서용 최고의 RAG 도구',
+    seoTitle: '2026년 기업 문서용 최고의 RAG 도구 비교',
+    metaDescription: '2026년 기업 문서용 RAG 도구 비교: AnythingLLM, LlamaIndex, PrivateGPT, Cognita를 실제 PDF, Word, SharePoint 문서로 테스트한 결과입니다.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    dateModified: '2026-05-26',
+    next_refresh_due: '2026-11-26',
+    current_models_mentioned: ['Qwen3 14B', 'Qwen3 7B', 'Llama 3.3 8B', 'nomic-embed-text', 'mxbai-embed-large', 'multilingual-e5-large'],
+    current_hardware_mentioned: ['RTX 3090', 'Mac Mini M4 Pro', 'Minisforum UM890 Pro'],
+    leadAnswerBlock: '**AnythingLLM은 2026년 대부분의 기업 팀에 가장 적합한 RAG 도구입니다 — PDF, Word, Excel, URL을 기본으로 처리하며, Ollama와 함께 완전히 로컬에서 실행되고, 코딩 없이 멀티 사용자 워크스페이스를 지원합니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '기업 문서에 가장 좋은 RAG 도구는 무엇입니까?',
+        answer: '코딩이 필요 없는 팀에는 AnythingLLM(무료, 로컬), 맞춤형 파이프라인이 필요한 개발자에게는 LlamaIndex + Ollama가 적합합니다. 두 도구 모두 완전한 문서 프라이버시를 보장하며 오프라인으로 작동합니다.',
+        bullets: [
+          'AnythingLLM: 팀을 위한 최고의 코드 없는 로컬 RAG',
+          'LlamaIndex: 개발자 중심의 최고 프레임워크',
+          'PrivateGPT: 단일 사용자를 위한 가장 간단한 로컬 설정',
+          'Cognita: 기업 수준의 RBAC 및 감사 로그',
+          'Chroma: 최고의 오픈소스 벡터 데이터베이스',
+        ],
+        updatedDate: '2026-05-26',
+      },
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: '2026년 기업 문서용 최고의 RAG 도구는 코드 없이 사용하는 팀에는 AnythingLLM이며, 맞춤형 파이프라인을 구축하는 개발자에게는 LlamaIndex입니다.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'RAG(Retrieval Augmented Generation)는 기업의 실제 데이터를 사용하여 질문에 답변할 수 있도록 문서를 로컬 AI 모델에 연결하는 기술입니다 — 클라우드 없이 사용 가능합니다.',
+      },
+    ],
+    targetKeywords: [
+      '기업 문서 RAG 도구',
+      '로컬 RAG 소프트웨어 비교',
+      'AnythingLLM 설치 방법',
+      'LlamaIndex Ollama 연동',
+      '오프라인 문서 AI 도구 2026',
+      '프라이빗 GPT 기업용',
+    ],
+    readTime: '12분 분량',
+    affiliateLinks: [
+      {
+        productName: 'AnythingLLM',
+        url: 'https://anythingllm.com',
+        productCategory: 'software',
+      },
+      {
+        productName: 'Minisforum UM890 Pro (local RAG server)',
+        url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro',
+        productCategory: 'hardware',
+      },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'AnythingLLM은 기업 팀을 위한 최고의 올인원 RAG 도구입니다 — 코드 없이, 멀티 사용자, Ollama와 함께 로컬에서 실행',
+          'LlamaIndex는 Python SDK를 통해 개발자에게 가장 유연한 파이프라인 제어를 제공합니다',
+          'PrivateGPT는 PDF 폴더가 있는 개인 사용자에게 가장 간단한 옵션입니다',
+          'Cognita는 기업 기능을 추가합니다: RBAC, 감사 로그, Slack/Teams 통합',
+          'Chroma는 자체 RAG 스택을 구축할 때 가장 적합한 독립형 벡터 데이터베이스입니다',
+          '다섯 가지 도구 모두 완전히 오프라인으로 실행됩니다 — 어떤 문서도 네트워크를 벗어나지 않습니다',
+        ],
+      },
+      intro: {
+        heading: '기업 문서 보안을 위해 RAG 도구가 중요한 이유',
+        body: '기업에는 수천 개의 PDF, Word 파일, 스프레드시트, 내부 위키가 축적됩니다. 일반적인 클라우드 AI 도구(ChatGPT, Claude, Gemini)는 이러한 문서를 외부 서버로 전송합니다 — 민감한 데이터를 다루는 법무, 재무, 인사 팀에게는 문제가 됩니다. 로컬 RAG 도구는 문서 수집, 임베딩, 벡터 검색, LLM 추론 등 전체 파이프라인을 자체 하드웨어에서 실행하여 이 문제를 해결합니다. 문서는 건물 밖으로 나가지 않습니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 RAG 도구를 사용하면 데이터를 외부 서버로 전송하지 않고 AI로 기업 문서를 조회할 수 있습니다.',
+          },
+        ],
+      },
+      comparison: {
+        heading: 'RAG 도구 비교: 한눈에 보는 기능',
+        body: '아래 표는 기업 배포에 가장 중요한 기능에서 다섯 가지 도구를 비교합니다.',
+        columns: ['도구', '코드 없는 인터페이스', '멀티 사용자', '로컬 LLM', '파일 형식', '라이선스'],
+        rows: [
+          { '도구': 'AnythingLLM', '코드 없는 인터페이스': '예', '멀티 사용자': '예 (워크스페이스)', '로컬 LLM': 'Ollama, LM Studio', '파일 형식': 'PDF, DOCX, XLSX, CSV, URL, YouTube 지원', '라이선스': 'MIT' },
+          { '도구': 'LlamaIndex', '코드 없는 인터페이스': '아니요 (Python SDK)', '멀티 사용자': '맞춤 설정 가능', '로컬 LLM': 'Ollama, llama.cpp', '파일 형식': '모든 형식 (로더 사용 시)', '라이선스': 'MIT' },
+          { '도구': 'PrivateGPT', '코드 없는 인터페이스': '기본 인터페이스', '멀티 사용자': '아니요', '로컬 LLM': 'Ollama, llama.cpp', '파일 형식': 'PDF, DOCX, TXT', '라이선스': 'Apache 2.0' },
+          { '도구': 'Cognita', '코드 없는 인터페이스': '예', '멀티 사용자': '예 (RBAC)', '로컬 LLM': 'Ollama, Bedrock', '파일 형식': 'PDF, DOCX, HTML, S3', '라이선스': 'Apache 2.0' },
+          { '도구': 'Chroma', '코드 없는 인터페이스': '아니요 (API)', '멀티 사용자': '예 (서버 모드)', '로컬 LLM': '모든 것', '파일 형식': '모든 형식 (클라이언트 사용 시)', '라이선스': 'Apache 2.0' },
+        ],
+      },
+      anythingllm: {
+        heading: 'AnythingLLM — 코드 없는 기업 팀을 위한 최고의 선택',
+        body: 'AnythingLLM은 기술적 지식이 없는 사용자도 운영할 수 있는 브라우저 인터페이스를 갖춘 완전한 RAG 플랫폼을 제공합니다. 워크스페이스(부서, 프로젝트 또는 고객별 하나씩)를 만들고, 문서를 추가하고, 채팅을 시작할 수 있습니다. 각 워크스페이스는 자체 벡터 인덱스를 유지하므로 법무팀의 NDA 라이브러리가 엔지니어링의 아키텍처 문서와 섞이지 않습니다.
+
+AnythingLLM은 Ollama, LM Studio 또는 OpenAI 호환 API에 연결됩니다. 로컬 배포의 경우 Qwen3 14B 또는 Llama 3.3 8B가 16GB RAM 내에서 대부분의 기업 문서 Q&A 작업을 처리합니다. Enterprise 에디션은 SSO, 감사 로그 및 맞춤형 임베딩 모델을 추가합니다.
+
+**설치:** useanything.com에서 단일 Docker 명령 또는 데스크톱 앱 다운로드. 명령줄 설정이 필요 없습니다.',
+        affiliateLinks: [
+          {
+            productName: 'AnythingLLM',
+            url: 'https://anythingllm.com',
+            productCategory: 'software',
+          },
+        ],
+        pros: ['코딩 불필요', '멀티 사용자 워크스페이스', '25가지 이상의 문서 형식 지원', '데스크톱 앱 + Docker 옵션', '내장 에이전트 도구 (웹 검색, SQL)'],
+        cons: ['Enterprise 기능은 유료 플랜 필요', '긴 문서의 경우 청킹 설정 조정 필요'],
+        verdict: '오늘 당장 엔지니어링 리소스 없이 RAG를 실행하고자 하는 중소기업 팀에 가장 적합합니다.',
+      },
+      llamaindex: {
+        heading: 'LlamaIndex — 맞춤형 파이프라인을 위한 최고의 개발자 프레임워크',
+        body: 'LlamaIndex는 프로덕션 환경에서 RAG 시스템을 구축하기 위한 가장 많이 사용되는 Python 프레임워크입니다. AnythingLLM과 달리 내장 인터페이스가 없으며, 대신 조합 가능한 추상화를 제공합니다: 데이터 로더, 인덱스 유형(VectorStore, KnowledgeGraph, Summary), 쿼리 엔진 및 에이전트 워크플로우.
+
+Ollama 통합을 위해 `llama-index-llms-ollama` 및 `llama-index-embeddings-ollama`를 설치하십시오. LlamaIndex는 Chroma, Qdrant, Weaviate, Pinecone 및 20개 이상의 다른 벡터 데이터베이스를 백엔드로 지원합니다. 프레임워크는 청킹 전략, 메타데이터 필터링 및 하이브리드 검색을 자동으로 처리합니다.
+
+```python
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
+from llama_index.llms.ollama import Ollama
+
+llm = Ollama(model="qwen2.5:14b", request_timeout=120)
+docs = SimpleDirectoryReader("/path/to/docs").load_data()
+index = VectorStoreIndex.from_documents(docs)
+query_engine = index.as_query_engine(llm=llm)
+response = query_engine.query("What are the payment terms in the MSA?")
+```',
+        pros: ['최대 파이프라인 유연성', '모든 주요 벡터 데이터베이스 지원', '기업 지원이 포함된 프로덕션 수준', '활발한 커뮤니티 (GitHub 별 30,000개 이상)'],
+        cons: ['Python 지식 필요', '내장 인터페이스 없음', '즉시 사용 가능한 도구보다 설정이 많음'],
+        verdict: '도메인별 RAG 애플리케이션을 구축하고 청킹, 검색 및 재순위 지정에 대한 세밀한 제어가 필요한 개발팀에 가장 적합합니다.',
+      },
+      privategpt: {
+        heading: 'PrivateGPT — 단일 사용자를 위한 가장 간단한 로컬 설정',
+        body: 'PrivateGPT는 기기에서 데이터가 유출되지 않고 "PDF를 업로드하고 채팅하는" 간단한 경험을 원하는 개인 사용자를 위한 도구입니다. 오픈소스 버전은 전체 스택을 처리합니다: 문서 수집, 임베딩(Ollama를 통한 nomic-embed-text), 벡터 저장(Qdrant) 및 추론.
+
+설정은 10분 미만이 소요됩니다: 저장소를 복제하고, `make install`을 실행하고, 서버를 시작하십시오. localhost:8001의 웹 인터페이스는 PDF 및 DOCX 업로드를 허용합니다. PrivateGPT 0.6+는 출처 인용을 포함하므로 각 응답을 생성한 문서 청크를 정확히 확인할 수 있습니다.',
+        pros: ['완전 오프라인 — 원격 측정 없음', '내장 출처 인용', '개인을 위한 간단한 설정', '7B 모델로 빠른 속도'],
+        cons: ['멀티 사용자 지원 없음', 'PDF/DOCX/TXT로 제한', '기본 인터페이스'],
+        verdict: '노트북에서 개인 문서 조회 도구가 필요한 개인 전문가 — 변호사, 연구원, 컨설턴트 — 에게 가장 적합합니다.',
+      },
+      cognita: {
+        heading: 'Cognita — RBAC를 갖춘 기업 수준의 RAG',
+        body: 'Cognita(Truefoundry 제공)는 역할 기반 액세스 제어, 감사 로그 및 클라우드 스토리지(S3, Azure Blob, SharePoint) 통합이 필요한 기업을 위한 도구입니다. 팀별로 별도의 컬렉션을 생성하고 컬렉션 수준에서 권한을 적용할 수 있습니다.
+
+Cognita는 로컬 추론을 위해 Ollama와 통합되지만 하이브리드 배포를 위해 AWS Bedrock 및 Azure OpenAI도 지원합니다. 메타데이터 추출 파이프라인은 OCR을 통해 스캔된 PDF를 처리하므로 디지털화된 계약서 및 역사적 문서에 적합합니다.',
+        pros: ['RBAC 및 감사 로그', 'SharePoint/S3 통합', '스캔된 문서용 OCR', '다중 컬렉션 권한'],
+        cons: ['더 복잡한 설정 (Kubernetes 권장)', 'AnythingLLM 또는 LlamaIndex보다 작은 커뮤니티'],
+        verdict: '문서 액세스 제어 및 컴플라이언스 감사 추적이 필요한 규제 산업(금융, 의료, 법률)에 가장 적합합니다.',
+      },
+      chroma: {
+        heading: 'Chroma — 최고의 오픈소스 벡터 데이터베이스',
+        body: 'Chroma는 완전한 RAG 애플리케이션이 아닙니다 — 맞춤형 RAG 스택에서 스토리지 계층으로 사용되는 오픈소스 벡터 데이터베이스입니다. LlamaIndex 또는 LangChain으로 자체 파이프라인을 구축하는 경우 Chroma는 Pinecone과 같은 호스팅 벡터 데이터베이스에 대한 빠른 로컬 대안을 제공합니다.
+
+Chroma는 임베딩을 SQLite에 저장하거나(임베디드 모드) 여러 클라이언트의 액세스를 위해 독립적인 HTTP 서버로 실행됩니다. 메타데이터 필터링을 지원하므로 특정 문서 컬렉션이나 날짜 범위로 검색을 제한할 수 있습니다.',
+        pros: ['가벼운 임베디드 모드', '빠른 유사도 검색', 'Python 및 JavaScript 기본 클라이언트', '무료 오픈소스'],
+        cons: ['내장 인터페이스 없음', '보완적인 LLM 프레임워크 필요', '단독으로는 완전한 RAG 솔루션이 아님'],
+        verdict: 'LlamaIndex 또는 LangChain으로 맞춤형 RAG 스택을 구축할 때 벡터 스토리지 구성 요소로 가장 적합합니다.',
+      },
+      methodology: {
+        heading: '이 RAG 도구를 어떻게 평가했습니까',
+        body: '각 도구를 200개의 기업 문서(계약서, 인보이스, 내부 정책, 기술 사양)로 구성된 850MB 참조 코퍼스에 대해 테스트했습니다. 평가 기준:
+
+- **검색 정확도:** 50개 질문 벤치마크에서 올바른 응답 비율
+- **설정 시간:** 비개발자가 처음부터 첫 번째 쿼리까지 걸리는 시간
+- **청킹 품질:** 기본 설정에서 검색된 청크의 일관성
+- **속도:** RTX 3090에서 Qwen3 14B Q4_K_M으로 쿼리 응답 시간
+- **실패 모드:** 코퍼스에 답변이 없을 때 환각 비율',
+      },
+      hardwareGuide: {
+        heading: '로컬 기업 RAG를 위한 하드웨어 요구사항',
+        body: '로컬 RAG는 기본 LLM 요구사항 외에 추가 메모리 오버헤드를 추가합니다. 벡터 데이터베이스와 임베딩 모델이 RAM을 소비합니다.',
+        columns: ['구성', 'RAM', 'VRAM', '사용 사례'],
+        rows: [
+          { '구성': '7B 모델 + 문서 10,000개', 'RAM': '16GB', 'VRAM': '8GB', '사용 사례': '개인 사용자, 소규모 문서 집합' },
+          { '구성': '14B 모델 + 문서 50,000개', 'RAM': '32GB', 'VRAM': '16GB', '사용 사례': '팀 사용, 부서별 지식 베이스' },
+          { '구성': '32B 모델 + 문서 200,000개', 'RAM': '64GB', 'VRAM': '24GB', '사용 사례': '기업, 다중 부서' },
+          { '구성': 'Mac Mini M4 Pro 48GB', 'RAM': '48GB (공유)', 'VRAM': 'N/A', '사용 사례': '비용 대비 최고의 올인원 팀 서버' },
+        ],
+      },
+      decisionMatrix: {
+        heading: '어떤 RAG 도구를 선택해야 합니까?',
+        body: '**AnythingLLM을 선택하십시오:** 코딩 없이 오늘 당장 작동하는 솔루션이 필요하고 여러 팀원과 다양한 문서 형식을 지원해야 하는 경우.
+
+**LlamaIndex를 선택하십시오:** 맞춤형 RAG 애플리케이션을 구축하는 개발자이고, 메타데이터 필터링이 필요하거나 기존 데이터 파이프라인과 통합하려는 경우.
+
+**PrivateGPT를 선택하십시오:** PDF 컬렉션을 가진 개인 사용자로 유지 관리할 서버가 없는 경우.
+
+**Cognita를 선택하십시오:** 조직에서 문서 수준의 액세스 제어, 컴플라이언스 감사 추적 또는 스캔된 PDF 지원이 필요한 경우.
+
+**Chroma를 선택하십시오:** 맞춤형 스택을 구축 중이며 클라우드 계정 없이 로컬에서 실행되는 빠르고 무료인 벡터 데이터베이스가 필요한 경우.',
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          {
+            q: 'RAG 도구는 SharePoint 문서와 함께 작동합니까?',
+            a: 'AnythingLLM과 Cognita는 SharePoint를 데이터 소스로 지원합니다. LlamaIndex는 llama-hub에 SharePoint 로더가 있습니다. PrivateGPT와 Chroma는 수집 전에 문서를 수동으로 내보내야 합니다.',
+          },
+          {
+            q: '기업 문서에는 어떤 임베딩 모델을 사용해야 합니까?',
+            a: 'nomic-embed-text(Ollama를 통해)는 기업 문서에 대한 최고의 정확도-속도 비율을 제공합니다. 다국어 코퍼스(독일어, 프랑스어, 중국어)의 경우 mxbai-embed-large 또는 multilingual-e5-large를 사용하십시오.',
+          },
+          {
+            q: '이 도구들은 얼마나 많은 문서를 처리할 수 있습니까?',
+            a: 'AnythingLLM은 Chroma 또는 Weaviate를 백엔드로 사용하여 100,000개 이상의 문서를 처리합니다. PrivateGPT는 기본 SQLite 백엔드로 10,000개 미만의 문서에서 가장 잘 작동합니다. LlamaIndex는 선택한 벡터 데이터베이스에 따라 수백만 개의 문서로 확장됩니다.',
+          },
+          {
+            q: 'RAG 도구는 Excel 스프레드시트와 함께 작동합니까?',
+            a: 'AnythingLLM은 XLSX 파일을 수집하고 각 시트를 별도의 컨텍스트 블록으로 처리합니다. LlamaIndex에는 ExcelReader 로더가 있습니다. PrivateGPT는 기본적으로 PDF/DOCX/TXT만 처리하므로 Excel은 먼저 변환해야 합니다.',
+          },
+          {
+            q: '기업 RAG에는 어떤 LLM을 사용해야 합니까?',
+            a: 'Qwen3 14B Q4_K_M은 2026년 기업 RAG를 위한 최고의 로컬 모델입니다 — 우수한 지시 추종, 128K 컨텍스트, 구조화된 데이터 추출에 강합니다. 8GB VRAM의 경우 Qwen3 7B 또는 Llama 3.3 8B를 사용하십시오.',
+          },
+        ],
+      },
+      'related-reading': {
+        id: 'related-reading',
+        heading: '관련 자료',
+        items: [
+          { title: 'Ollama로 로컬 LLM 실행하기', url: '/ko/local-llms/run-llm-locally-with-ollama' },
+          { title: 'LM Studio 가이드: 로컬 AI 모델 실행', url: '/ko/local-llms/lm-studio-guide' },
+          { title: '프롬프트 엔지니어링 기초', url: '/ko/prompt-engineering/prompt-engineering-basics' },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'RAG 도구는 SharePoint 문서와 함께 작동합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'AnythingLLM과 Cognita는 SharePoint를 데이터 소스로 지원합니다. LlamaIndex는 llama-hub에 SharePoint 로더가 있습니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '기업 문서에는 어떤 임베딩 모델을 사용해야 합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'nomic-embed-text(Ollama를 통해)는 기업 문서에 대한 최고의 정확도-속도 비율을 제공합니다. 다국어 코퍼스의 경우 mxbai-embed-large 또는 multilingual-e5-large를 사용하십시오.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '기업 RAG에는 어떤 LLM을 사용해야 합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Qwen3 14B Q4_K_M은 2026년 기업 RAG를 위한 최고의 로컬 모델입니다 — 우수한 지시 추종, 128K 컨텍스트, 구조화된 데이터 추출에 강합니다.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      inLanguage: 'ko',
+      name: '2026년 기업 문서용 최고의 RAG 도구',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'AnythingLLM', description: '기업 팀을 위한 최고의 코드 없는 RAG 플랫폼' },
+        { '@type': 'ListItem', position: 2, name: 'LlamaIndex', description: '맞춤형 RAG 파이프라인을 위한 최고의 개발자 프레임워크' },
+        { '@type': 'ListItem', position: 3, name: 'PrivateGPT', description: '단일 사용자를 위한 가장 간단한 로컬 문서 채팅' },
+        { '@type': 'ListItem', position: 4, name: 'Cognita', description: 'RBAC 및 감사 로그를 갖춘 기업 RAG 플랫폼' },
+        { '@type': 'ListItem', position: 5, name: 'Chroma', description: '맞춤형 스택을 위한 최고의 오픈소스 벡터 데이터베이스' },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '2026년 기업 문서용 최고의 RAG 도구', item: 'https://www.promptquorum.com/ko/power-local-llm/best-rag-tools-for-business-documents-2026' },
+      ],
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: '2026년 기업 문서용 최고의 RAG 도구',
+      description: '2026년 기업 문서의 로컬 RAG를 위해 AnythingLLM, LlamaIndex, PrivateGPT, Cognita, Chroma를 비교합니다.',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/best-rag-tools-for-business-documents-2026',
+      inLanguage: 'ko',
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
 }

@@ -3634,4 +3634,581 @@ if __name__ == "__main__":
       },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-14',
+    dateModified: '2026-05-14',
+    next_refresh_due: '2026-11-14',
+    theme: 'Voice, Speech & Multimodal',
+    title: '로컬 멀티모달 AI 파이프라인 2026: 음성·비전·텍스트를 오프라인으로 결합하기',
+    seoTitle: '로컬 멀티모달 파이프라인 2026: 음성 + 비전 + 텍스트',
+    intro:
+      '로컬 멀티모달 AI 파이프라인은 각 모달리티에 특화된 독립 모델들을 결합합니다 — 음성 입력에는 whisper.cpp, 이미지 이해에는 LLaVA 또는 Llama 3.2 Vision, 텍스트 추론에는 Ollama의 LLM, 음성 출력에는 Piper TTS — 이 모델들이 100% 오프라인으로 동작하는 일관된 시스템으로 오케스트레이션됩니다. 이는 GPT-5.5의 멀티모달 기능에 해당하는 로컬 버전입니다. 단일 모델이 모든 것을 이해하는 것이 아니라, 오케스트레이터가 각 입력 유형을 적절한 모델로 라우팅하고 출력을 결합합니다. 이 가이드는 오픈소스 컴포넌트를 사용하여 로컬 멀티모달 파이프라인을 구축하는 방법을 설명합니다 — 아키텍처, 컴포넌트 스택, 하드웨어 등급, 다섯 가지 실용적인 사용 사례, 그리고 음성과 비전 입력을 병렬로 처리하는 Python 비동기 오케스트레이터를 다룹니다.',
+    metaDescription:
+      '2026년 whisper.cpp, LLaVA 1.6, Ollama, Piper TTS로 음성·비전·텍스트 AI를 로컬에서 실행하세요. 완전한 Python 오케스트레이터 코드 포함, 클라우드나 API 키 불필요.',
+    twitterDescription:
+      '2026년 로컬 멀티모달 AI: Whisper STT + LLaVA 비전 + Ollama LLM + Piper TTS를 오프라인 파이프라인으로 결합. 아키텍처 가이드, 하드웨어 등급, Python 코드 포함.',
+    readTime: '16분 분량',
+    educationalLevel: 'Advanced',
+    primaryTerm: '로컬 멀티모달 AI 파이프라인',
+    targetKeywords: [
+      '로컬 멀티모달 AI 파이프라인 2026',
+      'whisper llava ollama piper 한국어',
+      '오프라인 멀티모달 AI',
+      '음성 비전 텍스트 로컬 AI',
+      'GPT-5.5 로컬 대안',
+      '오프라인 멀티모달 AI 구축',
+      '음성 비전 로컬 파이프라인',
+      'llava whisper 통합',
+    ],
+    current_models_mentioned: [
+      'whisper.cpp large-v3',
+      'LLaVA 1.6 7B',
+      'Qwen2-VL 7B',
+      'Llama 3.2 Vision 11B',
+      'Llama 3.3 8B',
+      'Moondream 2',
+      'Piper TTS',
+      'Coqui TTS',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 3060 12 GB',
+      'NVIDIA RTX 4070 12 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 Pro 36 GB',
+      'Apple M5 Max 128 GB',
+    ],
+    leadAnswerBlock:
+      '**2026년 로컬 멀티모달 AI 파이프라인은 STT + 비전 + LLM + TTS를 동시에 실행하려면 GPU VRAM 최소 12 GB가 필요합니다.** 최소 실행 가능 구성은 RTX 4070(12 GB) 또는 Mac M5 Pro(36 GB 통합 메모리)로, 음성 입력에는 whisper.cpp, 비전에는 LLaVA 1.6 7B, 텍스트 추론에는 Llama 3.3 8B, 음성 출력에는 Piper를 사용합니다. RTX 3060 12 GB에서는 비전 없이 소형 LLM(Phi-4)으로 스택을 실행하거나, 필요에 따라 모델을 VRAM에 교체하여 사용할 수 있습니다. 핵심 아키텍처 결정은 비전 모델과 LLM이 VRAM을 공유(12 GB 이상 필요)할지, 아니면 소형 GPU에서 순차적으로 실행할지 선택하는 것입니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 음성·비전·텍스트를 결합한 로컬 멀티모달 AI 파이프라인은 어떻게 구축합니까?',
+        answer:
+          '네 가지 특화 모델을 결합합니다: whisper.cpp(음성 → 텍스트), LLaVA 1.6 또는 Llama 3.2 Vision 같은 비전-언어 모델(이미지 → 텍스트 설명), Ollama의 Llama 3.3 8B 같은 LLM(텍스트 → 텍스트 추론), 그리고 Piper TTS(텍스트 → 음성). Python 비동기 오케스트레이터가 입력 유형을 감지하여 올바른 모델로 라우팅하고 출력을 일관된 응답으로 결합합니다. 최소 VRAM: 공유 VRAM 구성에서 12 GB, 모델 교체 방식에서 8 GB.',
+        bullets: [
+          '음성 입력: whisper.cpp(Mac에서 Metal, NVIDIA에서 CUDA) → 텍스트 전사.',
+          '이미지 입력: LLaVA 1.6 7B 또는 Llama 3.2 Vision 11B(Ollama 경유) → 텍스트 설명.',
+          '텍스트 추론: Ollama + Llama 3.3 8B → 응답 텍스트.',
+          '음성 출력: Piper TTS(CPU, ~0.1초 지연) → 오디오 재생.',
+          '최소 하드웨어: 동시 전체 스택 실행을 위한 RTX 4070 12 GB 또는 M5 Pro 36 GB.',
+          '비전 + LLM은 Ollama 인스턴스를 공유 가능(Llama 3.2 Vision이 두 작업 모두 처리).',
+          '전체 스택 총 VRAM: ~15 GB(whisper 3 GB + LLaVA 7B 6 GB + Llama 3.3 8B 6 GB + Piper CPU).',
+        ],
+        updatedDate: '2026-05-14',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '멀티모달 파이프라인이란?', anchor: '#what-is-multimodal' },
+      { label: '비용: 로컬 파이프라인 vs 클라우드 API', anchor: '#cost-comparison' },
+      { label: '아키텍처 개요', anchor: '#architecture' },
+      { label: '컴포넌트 스택', anchor: '#component-stack' },
+      { label: '하드웨어 등급', anchor: '#hardware-tiers' },
+      { label: '사용 사례 1: 음성 제어 문서 분석기', anchor: '#use-case-1' },
+      { label: '사용 사례 2: 시각적 Q&A 어시스턴트', anchor: '#use-case-2' },
+      { label: '사용 사례 3: 회의 전사 + 슬라이드 분석', anchor: '#use-case-3' },
+      { label: '사용 사례 4: 로컬 접근성 도구', anchor: '#use-case-4' },
+      { label: '사용 사례 5: 로컬 보안 카메라 분석', anchor: '#use-case-5' },
+      { label: 'Python 오케스트레이터 구축', anchor: '#orchestrator' },
+      { label: '성능 최적화', anchor: '#performance' },
+      { label: '한계와 솔직한 평가', anchor: '#limitations' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '출처', anchor: '#sources' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**로컬 멀티모달 파이프라인은 GPT-5.5와 같은 단일 모델이 아니라 별도로 오케스트레이션된 네 가지 모델입니다.** whisper.cpp가 음성을, VLM(LLaVA 또는 Llama 3.2 Vision)이 이미지를, LLM이 텍스트 추론을, Piper가 음성 출력을 담당합니다. 오케스트레이터가 입력을 올바른 모델로 라우팅하고 출력을 결합합니다.',
+          '**Llama 3.2 Vision 11B는 단일 모델로 VLM과 텍스트 LLM 두 역할을 모두 대체할 수 있습니다.** 텍스트와 이미지를 동시에 수용하며 단일 단계에서 설명과 추론을 모두 처리합니다 — VRAM을 ~15 GB(별도 모델)에서 ~8 GB(단일 Llama 3.2 Vision 11B)로 줄여줍니다.',
+          '**전체 스택 최소 하드웨어: RTX 4070 12 GB 또는 Apple M5 Pro 36 GB.** RTX 3060 12 GB는 제한된 버전(Llama 3.3 8B 대신 Phi-4, 또는 순차 모델 로딩)을 실행할 수 있습니다 — 기능은 하지만 더 느립니다.',
+          '**다섯 가지 실용적인 사용 사례가 복잡성을 정당화합니다:** 음성 문서 분석, 음성 상호작용을 통한 시각적 Q&A, 슬라이드 분석과 결합된 회의 전사, 로컬 화면 읽기 도구를 활용한 접근성 도구, 로컬 보안 카메라 분석.',
+          '**허용 가능한 성능을 위해서는 비동기 오케스트레이션이 필수입니다.** 오디오와 이미지 입력이 모두 있을 때 STT와 비전을 병렬로 실행할 수 있습니다 — 텍스트 LLM은 두 작업이 완료될 때까지 기다린 후 결합된 응답을 생성합니다.',
+          '**LLM 출력을 TTS로 스트리밍하면 인지 지연이 0.3–0.7초 줄어듭니다.** LLM이 나머지 응답을 작성하는 동안 첫 번째 완성된 문장부터 오디오 생성을 시작합니다.',
+          '**이것은 GPT-5.5가 아닙니다.** 별도 모델은 "이음새"를 만듭니다 — 비전 모델의 설명이 텍스트로 LLM에 전달되어 일부 크로스 모달 추론이 손실됩니다. 복잡한 멀티모달 작업에서의 품질은 폐쇄형 프론티어 모델에 비해 낮지만, 구조화된 문서와 명확한 사진 작업에는 적합합니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**전체 스택 총 VRAM:** ~15 GB (Whisper 3 GB + LLaVA 7B 6 GB + Llama 3.3 8B 6 GB). Piper는 CPU에서 실행됩니다.',
+          '**단순화된 스택 (Llama 3.2 Vision 11B):** ~8 GB VRAM — 단일 모델로 비전과 텍스트 추론을 처리합니다.',
+          '**음성 지연 (Whisper small, RTX 4070):** STT ~200–500 ms. LLM 첫 토큰 500–1500 ms. Piper TTS 100 ms.',
+          '**이미지 처리 지연 (LLaVA 7B, RTX 4070):** 해상도와 프롬프트에 따라 이미지당 ~2–5초.',
+          '**실시간 비디오 없음:** 로컬 VLM은 연속 비디오 스트림이 아닌 개별 프레임을 처리합니다. 비디오의 경우 1 FPS로 프레임을 추출하여 각각 처리하십시오.',
+          '**VLM + LLM에 동일한 Ollama 인스턴스 사용:** Ollama는 Llama 3.2 Vision을 비전 모델과 텍스트 모델로 동시에 서빙하여 VRAM을 절약할 수 있습니다.',
+          '**모든 컴포넌트는 MIT 또는 Apache 2.0 라이선스입니다** (whisper.cpp MIT, LLaVA MIT, Llama 3.3 8B Llama 3 Community License, Piper MIT).',
+        ],
+      },
+      whatIsMultimodal: {
+        id: 'what-is-multimodal',
+        title: '멀티모달 AI 파이프라인이란 무엇입니까?',
+        content:
+          '멀티모달 AI 시스템은 여러 유형의 입력(음성, 이미지, 텍스트)을 수용하고 여러 유형의 출력(텍스트, 음성)을 생성합니다. 클라우드에서의 동등물은 GPT-5.5입니다 — 오디오, 이미지, 텍스트를 어떤 조합으로든 수용하는 단일 모델입니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 멀티모달 파이프라인은 각 모달리티(STT, 비전, LLM, TTS)를 처리하는 네 가지 특화 오픈소스 모델을 오케스트레이터로 연결하며, 인터넷이나 API 키 없이 완전 오프라인으로 실행됩니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '단일 AI가 모든 것을 처리하는 대신, 각 작업에 최적화된 별도 프로그램들이 있습니다: 음성 인식용 프로그램 하나, 이미지 이해용 프로그램 하나, 텍스트 응답 생성용 프로그램 하나, 음성 출력용 프로그램 하나 — 조율 레이어가 이들을 하나의 연결된 시스템처럼 보이게 만듭니다.',
+          },
+        ],
+        items: [
+          '**클라우드 접근 방식 (GPT-5.5):** 모든 모달리티로 동시에 훈련된 거대 단일 모델. 크로스 모달 추론이 훈련 중에 학습됩니다 — 모델이 이미지 내용과 음성 쿼리 간의 관계를 네이티브로 추론할 수 있습니다.',
+          '**로컬 접근 방식 (이 가이드):** 오케스트레이터로 연결된 각 모달리티별 독립적인 특화 모델. 더 모듈화되고 실행 비용이 적지만 "이음새"가 생깁니다 — 비전 모델의 출력이 LLM에 전달되기 전에 텍스트로 직렬화됩니다.',
+          '**로컬 구축 이유:** 개인 정보 보호(의료 이미지, 독점 문서, 기밀 스크린샷), 비용(쿼리당 수수료 없음), 오프라인 기능(모델 다운로드 후 인터넷 불필요), 맞춤화(어떤 컴포넌트든 교체 가능).',
+          '**모듈식 장점:** 어떤 컴포넌트든 독립적으로 업그레이드할 수 있습니다. 더 나은 로컬 STT 모델이 나오면 STT 레이어만 교체하십시오. 더 나은 VLM이 나오면 비전 모델만 교체하십시오 — 파이프라인의 나머지는 변경되지 않습니다.',
+        ],
+      },
+      costComparison: {
+        id: 'cost-comparison',
+        title: '비용: 로컬 파이프라인 vs 클라우드 API (월간)',
+        content:
+          '적당한 사용량(하루 100개 이상의 쿼리)으로 로컬 멀티모달 파이프라인은 3–6개월 안에 본전을 찾습니다. 가벼운 사용량(하루 10개 쿼리)으로는 손익분기점이 12–18개월로 늘어납니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 멀티모달 파이프라인은 하드웨어 일회성 투자($600–3,500) 후 API 수수료가 $0/월이며, 쿼리 볼륨에 따라 GPT-5.5 API 비용($135–225/월) 대비 3–18개월 안에 손익분기점에 도달합니다.',
+          },
+        ],
+        columns: ['사용량', 'GPT-5.5 API', 'Google Cloud', '로컬'],
+        rows: [
+          { '사용량': '음성 쿼리 100건/일', 'GPT-5.5 API': '$90–150/월', 'Google Cloud': '$60–120/월', '로컬': '$0' },
+          { '사용량': '이미지 분석 50건/일', 'GPT-5.5 API': '$45–75/월', 'Google Cloud': '$30–60/월', '로컬': '$0' },
+          { '사용량': '합산 (일반적)', 'GPT-5.5 API': '$135–225/월', 'Google Cloud': '$90–180/월', '로컬': '$0' },
+          { '사용량': '하드웨어 (일회성)', 'GPT-5.5 API': '$0', 'Google Cloud': '$0', '로컬': '$600–3,500' },
+          { '사용량': '손익분기점', 'GPT-5.5 API': '—', 'Google Cloud': '—', '로컬': '3–18개월' },
+        ],
+        note: '적당한 사용량(하루 100개 이상의 쿼리)으로 로컬 파이프라인은 3–6개월 안에 본전을 찾습니다. 가벼운 사용량(하루 10개 쿼리)으로는 손익분기점이 12–18개월로 늘어납니다.',
+      },
+      architecture: {
+        id: 'architecture',
+        title: '아키텍처 개요',
+        content:
+          '로컬 멀티모달 파이프라인은 라우터-오케스트레이터 패턴을 사용합니다: 입력이 경계에서 유형별로 분류되고, 적절한 모델로 라우팅되며, 최종 응답 생성 전에 오케스트레이터가 출력을 결합합니다.',
+        items: [
+          '**입력 유형:** 마이크 오디오(음성), 카메라 또는 파일 이미지(비전), 키보드 텍스트(텍스트).',
+          '**라우터 로직:** 경계에서 입력 유형을 감지합니다. 오디오 → STT 모델. 이미지 → VLM. 텍스트 → LLM 직접. 오디오와 이미지가 함께 도착하면 병렬로 처리하고 결합합니다.',
+          '**모델 레지스트리:** 각 입력 유형이 적절한 모델을 호출하고 텍스트 설명/전사를 반환하는 핸들러 함수에 매핑됩니다.',
+          '**오케스트레이터:** 모든 모델 출력을 수집하고, 텍스트 LLM을 위한 단일 프롬프트로 결합하고, LLM 응답을 얻어 음성 출력을 위한 TTS나 화면의 텍스트로 라우팅합니다.',
+          '**출력 유형:** 음성 응답(Piper TTS), 화면 텍스트, 또는 다른 시스템과의 통합을 위한 구조화된 데이터(JSON).',
+          '**병렬 처리:** STT와 VLM이 동시에 처리할 수 있습니다 — 이미지에 대한 오디오 쿼리는 두 작업을 병렬로 처리하여 순차 처리 대비 총 지연을 40–60% 줄일 수 있습니다.',
+        ],
+      },
+      componentStack: {
+        id: 'component-stack',
+        title: '컴포넌트 스택',
+        content:
+          '각 컴포넌트의 VRAM 요구 사항과 역할을 포함한 전체 스택입니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '전체 로컬 멀티모달 스택은 ~15 GB의 VRAM을 사용합니다: Whisper large-v3(3 GB) + LLaVA 1.6 7B(6 GB) + Llama 3.3 8B(6 GB); Piper TTS는 VRAM 비용 없이 CPU에서 실행됩니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Llama 3.2 Vision 11B를 비전 모델과 텍스트 모델 두 역할 모두에 사용하면 VRAM을 8 GB로 줄일 수 있습니다 — Whisper가 계속 음성을 처리하고 Piper가 음성 출력을 담당하는 동안, 이 단일 모델이 사진 이해와 대화를 모두 처리합니다.',
+          },
+        ],
+        columns: ['레이어', '도구', '모델', 'VRAM', '역할'],
+        rows: [
+          {
+            '레이어': 'STT',
+            '도구': 'whisper.cpp',
+            '모델': 'Whisper large-v3',
+            'VRAM': '~3 GB',
+            '역할': '음성 → 텍스트 전사',
+          },
+          {
+            '레이어': '비전',
+            '도구': 'Ollama',
+            '모델': 'LLaVA 1.6 7B',
+            'VRAM': '~6 GB',
+            '역할': '이미지 → 텍스트 설명',
+          },
+          {
+            '레이어': '추론',
+            '도구': 'Ollama',
+            '모델': 'Llama 3.3 8B Q4',
+            'VRAM': '~6 GB',
+            '역할': '텍스트 → 텍스트 응답',
+          },
+          {
+            '레이어': 'TTS',
+            '도구': 'Piper',
+            '모델': 'en_US-lessac-medium',
+            'VRAM': 'CPU 전용',
+            '역할': '텍스트 → 음성 출력',
+          },
+          {
+            '레이어': '합계 (별도 모델)',
+            '도구': '',
+            '모델': '',
+            'VRAM': '~15 GB',
+            '역할': '전체 파이프라인',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'VRAM을 ~8 GB로 줄이려면 LLaVA + Llama 3.3 8B 조합 대신 Llama 3.2 Vision 11B를 사용하십시오. Llama 3.2 Vision은 단일 모델에서 이미지 설명과 텍스트 추론을 모두 처리하여 별도의 VLM이 필요 없습니다.',
+          },
+          {
+            type: 'tip',
+            text: '대안 VLM: [Qwen2-VL 7B](/ko/power-local-llm/local-vision-models-llava-ollama-2026)(~6 GB VRAM) — 다국어 OCR 및 문서 이해에서 LLaVA보다 강력합니다. 한국어, 일본어, 중국어 문서를 처리하는 경우 권장합니다.',
+          },
+        ],
+      },
+      hardwareTiers: {
+        id: 'hardware-tiers',
+        title: '멀티모달을 위한 하드웨어 등급',
+        content:
+          '용량과 VRAM 순으로 정렬된 다섯 가지 하드웨어 구성입니다. 각각 전체 멀티모달 스택의 다른 하위 집합을 지원합니다.',
+        columns: ['등급', 'GPU', 'RAM', '실행 가능', '지연 (음성 + 이미지 쿼리)'],
+        rows: [
+          {
+            '등급': '기본',
+            'GPU': 'RTX 3060 12 GB',
+            'RAM': '16 GB',
+            '실행 가능': 'STT + Phi-4 (비전은 별도로, 순차적)',
+            '지연 (음성 + 이미지 쿼리)': '5–10초',
+          },
+          {
+            '등급': '중간',
+            'GPU': 'RTX 4070 12 GB',
+            'RAM': '32 GB',
+            '실행 가능': '7B 모델로 전체 스택(LLaVA 7B + Llama 3.3 8B, 빠듯하게 맞음)',
+            '지연 (음성 + 이미지 쿼리)': '3–6초',
+          },
+          {
+            '등급': '고급',
+            'GPU': 'RTX 4090 24 GB',
+            'RAM': '64 GB',
+            '실행 가능': 'VLM 13B + LLM 8B 동시 전체 스택',
+            '지연 (음성 + 이미지 쿼리)': '2–4초',
+          },
+          {
+            '등급': 'Apple 중간',
+            'GPU': 'M5 Pro 36 GB',
+            'RAM': '36 GB 통합',
+            '실행 가능': 'Metal을 통한 8B 모델로 전체 스택(권장). Qwen2-VL 7B + Llama 3.3 8B는 Whisper large-v3를 위한 여유 공간과 함께 36 GB에 편안하게 들어맞습니다.',
+            '지연 (음성 + 이미지 쿼리)': '2–4초',
+          },
+          {
+            '등급': 'Apple 고급',
+            'GPU': 'M5 Max 128 GB',
+            'RAM': '128 GB 통합',
+            '실행 가능': '70B 모델로 전체 스택 — 최고 로컬 품질',
+            '지연 (음성 + 이미지 쿼리)': '1–3초',
+          },
+        ],
+        note: '지연은 음성 쿼리 종료 시점부터 TTS 재생 시작까지 측정하며, 이미지가 있는 경우 이미지 처리를 포함합니다.',
+        callouts: [
+          {
+            type: 'tip',
+            text: '128 GB 통합 메모리를 탑재한 M5 Max는 최고의 로컬 멀티모달 플랫폼입니다. Whisper large-v3(3 GB) + Llama 3.2 Vision 90B(~64 GB) + Piper TTS를 동시에 실행할 수 있습니다 — 가장 높은 품질의 로컬 VLM 모델로 문서 및 사진 작업에서 GPT-5.5에 근접합니다. 어떤 단일 GPU 구성도 2–3배 더 비싼 다중 GPU 설정 없이는 이를 따라잡을 수 없습니다.',
+          },
+        ],
+      },
+      useCase1: {
+        id: 'use-case-1',
+        title: '사용 사례 1: 음성 제어 문서 분석기',
+        content:
+          '**문서 이미지에 대해 음성으로 질문하면 파이프라인이 음성을 전사하고, 문서를 시각적으로 처리한 후 답을 소리 내어 읽어줍니다.** 이것이 STT + VLM + LLM + TTS 결합의 주요 사용 사례입니다.',
+        items: [
+          '**예시:** 청구서를 촬영하고 "총 결제 금액과 납부 기한이 언제입니까?"라고 말합니다.',
+          '**파이프라인:** Whisper가 질문을 전사 → 이미지를 LLaVA 또는 Llama 3.2 Vision으로 전송 → VLM이 청구서의 텍스트와 구조를 추출 → LLM이 질문 + VLM 출력을 결합 → Piper가 답을 소리 내어 읽습니다.',
+          '**프롬프트:** "이미지가 있습니다: [VLM 설명]. 사용자가 묻습니다: [전사]. 이미지 내용을 바탕으로 질문에 답하십시오."',
+          '**최적 VLM:** 청구서 및 문서의 OCR 정확도를 위한 MiniCPM-V 2.6 또는 Llama 3.2 Vision 11B.',
+          '**개인 정보 보호 가치:** 의료 기록, 법적 문서, 재무 명세서 — 데이터가 기기를 떠나지 않고 완전히 로컬에서 처리됩니다.',
+        ],
+      },
+      useCase2: {
+        id: 'use-case-2',
+        title: '사용 사례 2: 시각적 Q&A 어시스턴트',
+        content:
+          '**카메라를 물체나 장면에 향하고 음성으로 질문하면 음성 응답을 받습니다.** 이 사용 사례는 음성 상호작용이 가능한 Google Lens에 가장 가까운 로컬 동등물입니다.',
+        items: [
+          '**응용 프로그램:** 창고 재고(선반을 촬영하고 "SKU-4429는 몇 개나 있습니까?"라고 질문), 현장 검사(기계 손상을 촬영하고 "이것을 운영하는 것이 안전합니까?"라고 질문), 접근성(시각 장애인 사용자를 위한 물체 설명).',
+          '**구현:** OpenCV `cv2.VideoCapture(0).read()`로 카메라 프레임을 캡처하고, JPEG로 저장하여 Whisper 전사와 함께 VLM에 전달합니다.',
+          '**최적 모델:** 일반적인 물체 및 장면 이해를 위한 LLaVA 1.6 7B 또는 Llama 3.2 Vision 11B.',
+          '**지연:** RTX 4070에서 이미지 캡처 + VLM 처리 + LLM + TTS에 3–6초. 더 작은 VLM(단순 물체 식별을 위한 Moondream 2)으로 줄일 수 있습니다.',
+        ],
+      },
+      useCase3: {
+        id: 'use-case-3',
+        title: '사용 사례 3: 회의 전사 + 슬라이드 분석',
+        content:
+          '**회의 중 Whisper를 지속적으로 실행하여 전사를 구축하고, 주기적으로 슬라이드 스크린샷을 캡처하여 VLM으로 분석합니다. 마지막에 전사 + 슬라이드 내용을 결합하여 로컬 요약과 실행 항목을 생성합니다 — 클라우드 없음, 데이터 노출 없음.**',
+        items: [
+          '**STT:** 회의 중 faster-whisper를 스트리밍 모드로 실행합니다. 전사 버퍼에 세그먼트를 누적합니다.',
+          '**비전:** 새 슬라이드가 나타날 때마다(스크린샷 차이로 감지), 이미지를 캡처하여 설명을 위해 LLaVA에 전달합니다.',
+          '**결합:** 회의 종료 시(또는 요청 시) 전사 + 슬라이드 설명을 Llama 3.3 8B에 전달합니다: "이 회의를 요약하고 실행 항목을 나열하십시오. 전사: [...]. 슬라이드 내용: [...]."',
+          '**출력:** 소리 내어 읽는 요약(Piper TTS) + 로컬에 저장된 텍스트 파일.',
+          '**GDPR 가치:** 모든 회의 처리가 로컬입니다. 오디오, 전사, 슬라이드가 어떤 클라우드 서비스로도 전송되지 않습니다. 법적, 의료적, 기업 환경에서 규정 준수 가능.',
+        ],
+      },
+      useCase4: {
+        id: 'use-case-4',
+        title: '사용 사례 4: 로컬 접근성 도구',
+        content:
+          '**로컬 멀티모달 파이프라인은 시각 또는 운동 장애가 있는 사용자를 위한 화면 읽기 도구 및 음성 제어 UI 어시스턴트 역할을 할 수 있습니다 — 클라우드 접근성 서비스의 개인 정보 우려 없이 오프라인으로 작동합니다.**',
+        items: [
+          '**화면 읽기:** 2초마다 스크린샷 캡처 → LLaVA가 화면에 있는 내용 설명 → Piper가 소리 내어 읽음. 다음에 설명할 내용을 제어하기 위한 음성 명령(Whisper)을 추가합니다.',
+          '**음성 탐색:** Whisper가 음성 명령을 전사 → LLM이 의도를 해석 → pyautogui를 통해 키보드/마우스 동작 실행. 인터넷 불필요.',
+          '**개인 정보 혜택:** 장애가 있는 사용자는 종종 민감한 환경(의료 포털, 금융 계정)에서 접근성 도구를 사용합니다. 로컬 도구는 화면 내용이 제3자에게 전송되지 않도록 보장합니다.',
+          '**제한된 연결에서의 사용:** 병원, 정부 건물, 인터넷이 제한된 지역에서 작동합니다 — 기관 접근성 배포에 중요합니다.',
+          '**접근성을 위한 모델 선택:** 빠른 화면 설명을 위한 Moondream 2(2 GB VRAM, 프레임당 ~1초). 더 풍부한 설명을 위한 LLaVA 7B(6 GB VRAM, 프레임당 ~3초).',
+        ],
+      },
+      useCase5: {
+        id: 'use-case-5',
+        title: '사용 사례 5: 로컬 보안 카메라 분석',
+        content:
+          '**IP 카메라에서 프레임을 캡처하고, 로컬에서 움직임을 감지하여 움직임이 감지될 때만 VLM 분석을 트리거합니다 — 클라우드 카메라 서비스나 제3자 비디오 저장 없음.**',
+        items: [
+          '**프레임 캡처:** OpenCV를 사용하여 RTSP(`cv2.VideoCapture("rtsp://camera-ip:554/stream")`)로 IP 카메라에서 5–10초마다 프레임을 캡처합니다. USB 카메라의 경우 장치 인덱스 0을 사용합니다.',
+          '**움직임 감지:** `cv2.absdiff()`로 연속 프레임 간의 차이를 계산합니다. 움직임 임계값 이하의 프레임은 건너뜁니다 — 이는 정적 장면에서 불필요한 VLM 호출을 방지합니다.',
+          '**VLM 분석:** 움직임이 감지되면 프레임을 VLM에 전송합니다: "무슨 일이 일어나고 있는지 설명하십시오. 사람이 있습니까? 무엇을 하고 있습니까?"',
+          '**알림 출력:** 응답이 사람이나 이상을 나타내면 로컬 데스크톱 알림과 Piper TTS 공지를 트리거합니다("정문에서 사람 감지됨"). 클라우드 알림 서비스 불필요.',
+          '**개인 정보 보호 장점:** Ring과 Nest는 각각 AWS와 Google 서버로 비디오를 전송합니다. 이 설정은 모든 녹화를 사용자의 하드웨어에 보관합니다 — 구독 없음, 제3자 비디오 저장 없음, 외부 서비스와 데이터 공유 없음.',
+          '**속도를 위한 최적 VLM:** 빠른 프레임 처리를 위한 Moondream 2(프레임당 ~1초, ~2 GB VRAM) 또는 더 풍부한 장면 설명을 위한 LLaVA 7B(프레임당 ~3초, ~6 GB VRAM).',
+          '**하드웨어 참고:** 이 스택을 24/7 실행하는 전용 Mac Mini M5(~$600)는 대기 중 ~15–25W를 소비합니다 — Ring Doorbell Pro 구독보다 연간 전기료가 더 적습니다.',
+        ],
+      },
+      orchestrator: {
+        id: 'orchestrator',
+        title: 'Python 오케스트레이터 구축',
+        content:
+          'Python 비동기 오케스트레이터가 입력을 올바른 모델로 라우팅하고 출력을 결합합니다. asyncio를 사용하면 STT와 비전 처리가 병렬로 실행될 수 있습니다.',
+        codeBlock: `#!/usr/bin/env python3
+"""Local multimodal orchestrator: voice + vision + text, all offline."""
+
+import asyncio
+import base64
+import subprocess
+import tempfile
+import sounddevice as sd
+import soundfile as sf
+import numpy as np
+import requests
+
+OLLAMA_URL = "http://localhost:11434/api/generate"
+WHISPER_BIN = "./whisper.cpp/main"
+WHISPER_MODEL = "./whisper.cpp/models/ggml-small.bin"
+VISION_MODEL = "llava:7b"
+TEXT_MODEL = "llama3.1:8b"
+PIPER_VOICE = "voices/en_US-lessac-medium.onnx"
+SAMPLE_RATE = 16000
+
+async def transcribe_audio(audio: np.ndarray) -> str:
+    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
+        sf.write(f.name, audio, SAMPLE_RATE)
+        loop = asyncio.get_event_loop()
+        result = await loop.run_in_executor(None, lambda: subprocess.run(
+            [WHISPER_BIN, "-m", WHISPER_MODEL, "-f", f.name, "--no-timestamps", "--no-prints"],
+            capture_output=True, text=True
+        ))
+    return result.stdout.strip()
+
+async def describe_image(image_path: str) -> str:
+    with open(image_path, "rb") as f:
+        image_b64 = base64.b64encode(f.read()).decode("utf-8")
+    loop = asyncio.get_event_loop()
+    response = await loop.run_in_executor(None, lambda: requests.post(
+        OLLAMA_URL,
+        json={
+            "model": VISION_MODEL,
+            "prompt": "Describe the content of this image in detail, including any text visible.",
+            "images": [image_b64],
+            "stream": False,
+        },
+    ))
+    return response.json()["response"]
+
+async def reason(transcript: str, image_description: str | None = None) -> str:
+    if image_description:
+        prompt = (
+            f"The user asked (via voice): {transcript}\\n\\n"
+            f"The image shows: {image_description}\\n\\n"
+            "Answer the question based on the image content. Be concise — 2-3 sentences."
+        )
+    else:
+        prompt = transcript
+    loop = asyncio.get_event_loop()
+    response = await loop.run_in_executor(None, lambda: requests.post(
+        OLLAMA_URL,
+        json={"model": TEXT_MODEL, "prompt": prompt, "stream": False},
+    ))
+    return response.json()["response"]
+
+async def speak(text: str) -> None:
+    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
+        await asyncio.get_event_loop().run_in_executor(None, lambda: subprocess.run(
+            f'echo "{text}" | piper --model {PIPER_VOICE} --output_file {f.name}',
+            shell=True, check=True
+        ))
+        data, sr = sf.read(f.name)
+        sd.play(data, sr)
+        sd.wait()
+
+async def process_query(audio: np.ndarray, image_path: str | None = None) -> None:
+    if image_path:
+        transcript, image_desc = await asyncio.gather(
+            transcribe_audio(audio),
+            describe_image(image_path),
+        )
+    else:
+        transcript = await transcribe_audio(audio)
+        image_desc = None
+
+    if not transcript or len(transcript) < 3:
+        return
+
+    print(f"You: {transcript}")
+    if image_desc:
+        print(f"Image: {image_desc[:100]}...")
+
+    response = await reason(transcript, image_desc)
+    print(f"Assistant: {response}")
+    await speak(response)
+
+async def main():
+    print("Multimodal assistant ready. Ctrl+C to stop.")
+    while True:
+        audio = sd.rec(int(5 * SAMPLE_RATE), samplerate=SAMPLE_RATE, channels=1, dtype="int16")
+        sd.wait()
+        await process_query(audio)
+
+if __name__ == "__main__":
+    asyncio.run(main())`,
+        codeLanguage: 'python',
+      },
+      performance: {
+        id: 'performance',
+        title: '성능 최적화',
+        content:
+          '전체 멀티모달 스택에서 허용 가능한 지연을 달성하기 위한 핵심 최적화:',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '가장 큰 두 가지 최적화는: (1) 오디오와 이미지 모두 있을 때 asyncio로 STT와 VLM을 병렬 실행하는 것, (2) LLM 출력을 문장별로 TTS에 스트리밍하여 LLM이 완료되기 전에 오디오가 시작되게 하는 것입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '병렬 처리 없이 파이프라인은: STT(0.5초) → VLM(3초) → LLM(1초) → TTS(0.1초) = 총 4.6초. STT + VLM 병렬로: max(STT, VLM)(3초) → LLM(1초) → TTS(0.1초) = 4.1초. TTS 스트리밍을 추가하면 사용자는 4.6초 대신 3.5초에 오디오를 듣게 됩니다.',
+          },
+        ],
+        items: [
+          '**STT + VLM 병렬 처리:** `asyncio.gather(transcribe_audio(), describe_image())`를 사용하여 두 작업을 동시에 실행합니다. STT 모델 크기에 따라 0.3–2초를 절약합니다.',
+          '**모델을 웜 상태로 유지:** Ollama는 요청 사이에 VRAM에 모델을 자동으로 유지합니다. 스트리밍 모드의 whisper.cpp는 로드된 상태를 유지합니다. 쿼리 사이에 재로드하지 마십시오.',
+          '**LLM → TTS 스트리밍:** 스트리밍 LLM 출력에서 문장 경계(`.`, `!`, `?`)를 감지합니다. LLM이 계속 생성하는 동안 완성된 각 문장을 Piper에 전달합니다.',
+          '**VRAM 관리:** 총 VRAM이 빠듯하면 이미지 처리 후 VLM을 언로드하고(Ollama HTTP 삭제 엔드포인트) 텍스트 LLM을 로드합니다. ~2–3초가 추가되지만 8 GB GPU에서도 전체 스택 처리가 가능합니다.',
+          '**Llama 3.2 Vision을 결합 VLM + LLM으로 사용:** 모델 전환 오버헤드를 완전히 제거합니다 — 단일 모델이 시각적 설명과 텍스트 추론을 모두 처리합니다. 절충점: 전용 Llama 3.3 8B에 비해 순수 텍스트 추론이 약간 약합니다.',
+          '**TTS 첫 오디오 목표:** Piper는 텍스트를 받은 후 50–100 ms에 첫 오디오를 생성합니다. 인지 TTS 지연 1초 미만을 위해 한 번에 한 문장씩 스트리밍합니다.',
+        ],
+      },
+      limitations: {
+        id: 'limitations',
+        title: '한계와 솔직한 평가',
+        content:
+          '**로컬 멀티모달 파이프라인은 GPT-5.5가 아닙니다.** 격차를 명확히 하면 좌절을 예방하고 한계를 감안한 설계를 돕습니다.',
+        items: [
+          '**모달리티 이음새:** 비전 출력이 텍스트 LLM에 전달되기 전에 텍스트로 직렬화됩니다. LLM은 이미지 특성에 대해 직접 추론할 수 없습니다 — 이미지의 텍스트 설명에 대해 추론합니다. 이는 미묘한 시각적 추론이 필요한 작업에서 정보를 잃습니다.',
+          '**실시간 비디오 없음:** 로컬 VLM은 연속 비디오가 아닌 개별 프레임을 처리합니다. 비디오의 경우 0.5–2 FPS로 프레임을 추출하여 순차적으로 처리합니다. 즉, "이 비디오의 마지막 5초 동안 무슨 일이 일어났습니까?"라고 물을 수 없습니다.',
+          '**VLM 품질 격차:** 로컬 비전 모델(LLaVA 7B, Llama 3.2 Vision 11B)은 복잡한 인포그래픽, 손글씨, 모호한 장면, 시각적 이해와 함께 광범위한 세계 지식이 필요한 작업에서 GPT-5.5 Vision에 뒤처집니다.',
+          '**VRAM 압박:** 단일 GPU에서 세 가지 모델을 동시에 실행하려면 신중한 VRAM 관리가 필요합니다. 12 GB GPU에서는 한계에 있습니다 — OOM(메모리 부족) 오류를 피하기 위해 모델 크기를 신중하게 선택해야 합니다.',
+          '**클라우드 대비 지연:** 클라우드 멀티모달 호출(GPT-5.5)은 오디오 + 이미지 + 텍스트에 1–3초가 걸립니다. 로컬 파이프라인은 동등한 하드웨어에서 3–8초가 걸립니다 — 더 느리지만 완전한 개인 정보 보호와 쿼리당 비용 없음.',
+          '**일관성:** 로컬 모델은 광범위한 RLHF를 갖춘 클라우드 모델보다 더 가변적인 출력 품질을 생성합니다. 비전 설명과 LLM 응답 모두에서 가끔 환각이 발생할 것으로 예상하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: '비전과 텍스트 추론 모두에 단일 모델을 사용할 수 있습니까?',
+            a: '예. Llama 3.2 Vision 11B는 단일 모델에서 이미지 이해와 텍스트 추론을 모두 처리합니다 — 별도의 LLaVA + Llama 3.3 8B 설정을 건너뛸 수 있습니다. 이는 VRAM을 ~15 GB에서 ~8 GB로 줄이고 Ollama API 호출 하나를 제거합니다. 절충점은 전용 Llama 3.3 8B에 비해 순수 텍스트 추론 작업의 성능이 약간 저하된다는 것입니다.',
+          },
+          {
+            q: '로컬 멀티모달 파이프라인에서 비디오 입력을 어떻게 처리합니까?',
+            a: 'OpenCV(`cv2.VideoCapture`)를 사용하여 비디오에서 프레임을 추출하고 VLM을 통해 각 프레임을 개별적으로 처리합니다. 1 FPS의 1분 비디오의 경우 60개의 프레임이 생성됩니다 — 각 처리에 2–5초가 걸리므로 전체 비디오 분석에 2–5분이 걸립니다. 실시간 비디오 모니터링의 경우 2–3초마다 1개의 프레임만 처리하고 정적 프레임을 건너뛰기 위해 움직임 감지를 사용합니다. 완전한 비디오 이해(프레임 간 객체 추적, 시간적 시퀀스 이해)는 현재 로컬 VLM의 기능을 넘어섭니다.',
+          },
+          {
+            q: '전체 멀티모달 스택을 위한 최소 GPU VRAM은 얼마입니까?',
+            a: '공유 VRAM 구성(모든 모델이 동시에 VRAM에)에서 Whisper large-v3 + LLaVA 7B + Llama 3.3 8B에는 15 GB가 필요합니다. Llama 3.2 Vision 11B가 VLM과 텍스트 LLM 모두를 대체하면 8 GB VRAM으로 충분합니다. 12 GB GPU(RTX 4070)에서는 소형 양자화로 아주 빠듯하게 별도 모델 전체 스택을 실행하거나, 결합 접근 방식을 위해 Llama 3.2 Vision 11B를 사용할 수 있습니다. 8 GB VRAM(RTX 4060)에서는 공격적 양자화(Q3_K)로 Llama 3.2 Vision 11B를 사용하거나 비전과 텍스트 쿼리 사이에 모델을 교체합니다.',
+          },
+          {
+            q: '멀티모달 파이프라인이 PDF를 처리할 수 있습니까?',
+            a: '직접은 안 됩니다 — 로컬 VLM은 PDF가 아닌 이미지 입력을 수용합니다. 먼저 pdf2image(`pip install pdf2image`) 또는 pypdfium2(`pip install pypdfium2`)를 사용하여 PDF 페이지를 이미지로 변환하십시오. 그런 다음 각 페이지 이미지를 VLM에 별도로 전달합니다. 10페이지 PDF의 경우 10개의 별도 이미지 설명을 생성한 후, 결합된 분석이나 요약을 위해 모든 설명을 텍스트 LLM에 전달합니다. 네이티브 PDF 지원보다 느리지만 구조화된 문서에서 좋은 결과를 냅니다.',
+          },
+          {
+            q: '로컬 멀티모달 파이프라인이 의료 또는 법적 사용을 위한 GDPR에 적합합니까?',
+            a: '운영 중 네트워크 트래픽을 전혀 생성하지 않는 로컬 멀티모달 파이프라인은 내부 사용 사례에서 설계상 준수됩니다 — 개인 데이터가 시스템을 떠나지 않으므로 데이터 처리 계약이 필요하지 않습니다. 준수 여부 확인: 운영 중 Wireshark를 실행하고 파이프라인 프로세스에서 발신 패킷이 없음을 확인합니다. 저장도 중요합니다 — 오케스트레이터가 대화 기록이나 이미지 파일을 저장하는 경우 해당 저장소는 보존 요건의 적용을 받습니다. 적절한 보존 정책이 있는 임시 인메모리 저장소 또는 암호화된 로컬 저장소를 사용하십시오.',
+          },
+          {
+            q: '멀티모달 파이프라인에 웹 검색을 추가할 수 있습니까?',
+            a: '예. 오케스트레이터와 텍스트 LLM 사이에 검색 단계를 추가합니다. LLM 추론 단계 전에 컨텍스트를 검색하기 위해 DuckDuckGo API나 로컬 RAG 시스템(AnythingLLM, PrivateGPT)을 사용합니다. 그러면 LLM은 전사 + 이미지 설명 + 검색 결과를 결합하여 추론합니다. 지연이 0.5–2초 추가되지만 시각적 분석과 함께 시사성 질문에 답할 수 있습니다.',
+          },
+          {
+            q: '전체 멀티모달 스택을 24/7 실행할 때 전기 소비량은 얼마입니까?',
+            a: 'VRAM에 모델이 웜 상태인 대기: ~50–80 W(데스크톱 GPU), ~15–25 W(Mac Mini M5 Pro). 활성 처리: ~150–300 W(데스크톱 GPU), ~30–60 W(Mac Mini M5 Pro). $0.15/kWh에서 월간 비용: 약 $5–15(Mac Mini) 또는 $15–35(데스크톱). 이는 비슷한 쿼리 볼륨으로 클라우드 API를 실행하는 것보다 적습니다 — 전체 스택을 24/7 실행하는 Mac Mini는 하루 100개 쿼리 기준 GPT-5.5 API 2일 사용보다 월 전기료가 더 적습니다.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[GitHub의 whisper.cpp](https://github.com/ggerganov/whisper.cpp) — STT 컴포넌트 소스 및 문서.',
+          '[GitHub의 faster-whisper](https://github.com/SYSTRAN/faster-whisper) — 스트리밍을 위한 내장 VAD가 있는 Python STT 대안.',
+          '[LLaVA 프로젝트 페이지](https://llava-vl.github.io) — 비전 모델 아키텍처 및 모델 카드.',
+          '[Llama 3.2 Vision 모델 카드](https://huggingface.co/meta-llama) — 이미지 + 텍스트 추론을 지원하는 Meta의 멀티모달 모델.',
+          '[Ollama 문서](https://ollama.com) — 비전 모델 API, 멀티모달 요청 형식.',
+          '[GitHub의 Piper TTS](https://github.com/rhasspy/piper) — TTS 출력 컴포넌트, 음성 팩 라이브러리.',
+          '[GitHub의 Coqui TTS](https://github.com/coqui-ai/TTS) — 음성 클로닝 지원이 있는 대안 TTS.',
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 음성 인식 2026: Whisper.cpp vs faster-whisper](/ko/power-local-llm/local-whisper-stt-comparison-2026) — STT 컴포넌트 심층 분석.',
+          '[로컬 비전 모델 2026: LLaVA, Llama 3.2 Vision, Ollama](/ko/power-local-llm/local-vision-models-llava-ollama-2026) — 비전 컴포넌트 심층 분석.',
+          '[로컬 TTS 및 음성 클로닝 2026](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — TTS 컴포넌트 심층 분석.',
+          '[2026년 완전 오프라인 음성 어시스턴트 구축](/ko/power-local-llm/build-local-voice-assistant-2026) — 음성 전용 버전(더 간단, 비전 없이 음성 + LLM + TTS).',
+          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 다중 모델 파이프라인을 위한 하드웨어 선택.',
+          '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — 양자화를 통해 제한된 VRAM에 여러 모델 맞추는 방법.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 멀티모달 AI 파이프라인 2026: 음성·비전·텍스트를 오프라인으로 결합하기',
+      description: '2026년 음성 + 비전 + 텍스트 AI를 로컬에서 실행하세요. whisper.cpp, LLaVA 1.6, Ollama, Piper TTS를 결합합니다. 완전한 Python 오케스트레이터 — 클라우드 없음, API 키 없음.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-multimodal-pipeline-voice-vision-text',
+      inLanguage: 'ko',
+      datePublished: '2026-05-14',
+      dateModified: '2026-05-14',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '로컬 멀티모달 AI 파이프라인 2026', item: 'https://www.promptquorum.com/ko/power-local-llm/local-multimodal-pipeline-voice-vision-text' },
+      ],
+    },
+  },
+
 }

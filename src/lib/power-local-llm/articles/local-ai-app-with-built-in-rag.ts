@@ -4053,4 +4053,531 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Easiest Desktop Apps',
+    title: '내장 RAG가 있는 로컬 AI 앱: 설정 없이 파일과 대화하기',
+    seoTitle: '내장 RAG 앱 2026: 벡터 DB 없이 PDF 채팅',
+    metaDescription:
+      '데스크톱 앱 3개가 PDF를 로드하고 5분 내에 응답합니다. 벡터 DB나 Python 불필요. LM Studio, Jan, AnythingLLM을 1,000페이지 PDF로 테스트했습니다.',
+    twitterDescription:
+      '즉시 작동하는 내장 RAG가 있는 로컬 AI 앱 3가지. PDF를 업로드하고 질문하세요. 2026년 5월 1,000페이지 문서로 테스트 완료.',
+    current_models_mentioned: [
+      'nomic-embed-text v1.5',
+      'BAAI/bge-small-en-v1.5',
+      'all-MiniLM-L6-v2',
+      'Llama 3.3 8B',
+      'Phi-4 Mini',
+    ],
+    current_hardware_mentioned: ['Apple M5 MacBook Pro 16GB', 'NVIDIA RTX 4070 12GB'],
+    audience:
+      '벡터 데이터베이스, 임베딩 파이프라인 또는 Python 환경을 설정하지 않고 PDF, 계약서, 메모를 로컬에서 대화형으로 활용하고 싶은 초보자 및 지식 근로자.',
+    readTime: '12분 분량',
+    educationalLevel: 'Beginner',
+    primaryTerm: '내장 RAG 로컬 AI 앱',
+    targetKeywords: [
+      '로컬 ai pdf 채팅',
+      '내장 rag 앱',
+      'lm studio rag 사용법',
+      'jan 문서 확장',
+      'anythingllm rag 설정',
+      '오프라인 pdf 채팅',
+    ],
+    leadAnswerBlock:
+      '**데스크톱 앱 3개를 사용하면 5분 이내에 PDF를 업로드하고 질문할 수 있습니다 — 벡터 데이터베이스 없이, Python 없이, 명령줄 없이. AnythingLLM이 가장 완전합니다(10개 이상의 파일 형식, 교체 가능한 임베딩 모델, 최고의 인용). LM Studio가 가장 단순합니다(단일 바이너리 설치, PDF + DOCX + TXT, 대화 범위). Jan이 가장 개인적입니다(완전 오픈 소스 AGPL, 텔레메트리 제로, 로컬 전용). 세 앱 모두 1,000페이지 문서를 처리하고 설치 후 완전히 오프라인으로 작동합니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: 'PDF 채팅을 위한 최고의 내장 RAG 로컬 AI 앱은 무엇입니까?',
+        answer:
+          '가장 많은 형식을 지원하고(PDF, DOCX, TXT, MD, EPUB, 웹사이트, 오디오), 교체 가능한 임베딩 모델과 최고의 인용 표현을 원하신다면 AnythingLLM을 선택하십시오. 어느 채팅에서나 한 번의 클릭으로 문서를 첨부하고 싶다면 LM Studio를 선택하십시오 — 설정이 가장 빠르고 단일 PDF에 대한 즉석 질문에 이상적입니다. 오픈 소스와 텔레메트리 제로가 필수라면 Jan을 선택하십시오. 세 앱 모두 무료이며 설치 후 오프라인으로 작동하고 문서를 로컬에 저장합니다.',
+        bullets: [
+          'AnythingLLM — 10개 이상의 형식, 교체 가능한 임베딩, 영구 작업 공간, 100개 이상의 문서 라이브러리에 이상적',
+          'LM Studio — 채팅에 드래그 앤 드롭으로 문서 첨부, 대화 범위, 가장 빠른 초기 응답',
+          'Jan — 문서 확장, 완전 오픈 소스(AGPL), 텔레메트리 제로, 규정 준수 민감 사용에 이상적',
+          '세 앱 모두 16GB RAM 하드웨어에서 1,000페이지 문서를 처리하고 오프라인으로 작동하며 데이터를 로컬에 저장합니다',
+          '5,000개 이상의 문서 라이브러리나 세분화된 청크 제어가 필요하다면 맞춤형 RAG 스택으로 확장하십시오',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '비교 표', anchor: '#comparison-table' },
+      { label: '어떤 것을 선택해야 합니까?', anchor: '#which-one' },
+      { label: '테스트 방법', anchor: '#how-we-tested' },
+      { label: 'AnythingLLM: 심층 분석', anchor: '#anythingllm' },
+      { label: 'LM Studio: 심층 분석', anchor: '#lm-studio' },
+      { label: 'Jan + 문서: 심층 분석', anchor: '#jan' },
+      { label: '샘플 쿼리 및 예상 응답', anchor: '#sample-queries' },
+      { label: '인용 품질', anchor: '#citations' },
+      { label: '대용량 파일 처리', anchor: '#large-files' },
+      { label: '내장 RAG를 넘어서야 할 때', anchor: '#outgrow' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 읽기', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**AnythingLLM**이 가장 완전한 내장 RAG입니다: 10개 이상의 형식(PDF, DOCX, TXT, MD, EPUB, 웹사이트, 오디오 전사), 교체 가능한 임베딩 모델, 최고의 인용, 영구 작업 공간.',
+          '**LM Studio**는 마찰이 가장 적습니다: PDF를 채팅에 드래그하면 30초 내에 응답을 받습니다. 대화 범위, 작업 공간 개념 없음.',
+          '**Jan + 문서 확장**은 오픈 소스 옵션입니다: AGPL, 텔레메트리 제로, 로컬 전용 임베딩, 법률·의료·규제 워크플로에 이상적.',
+          '세 앱 모두 16GB RAM 하드웨어에서 1,000페이지 문서를 5분 이내의 인덱싱으로 처리합니다.',
+          '기본 임베딩 모델(nomic-embed-text v1.5, all-MiniLM-L6-v2)은 대부분의 경우에 충분합니다 — 앱을 벗어나지 않고 교체할 수 있는 것은 AnythingLLM뿐입니다.',
+          '세 앱 모두 외부 OCR 없이는 스캔된 PDF(이미지 전용)를 처리하지 못합니다 — Tesseract 또는 PDF 도구로 먼저 텍스트를 추출하십시오.',
+          '**확장 경로:** 문서가 약 1,000개를 초과하거나, 작업 공간 간 검색 또는 고급 청킹이 필요할 때, Ollama + AnythingLLM Docker 또는 PrivateGPT가 있는 맞춤형 스택으로 전환하십시오.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'AnythingLLM, LM Studio, Jan + 문서는 2026년에 어떻게 비교됩니까?',
+        content:
+          'Apple M5 MacBook Pro(16GB 통합 메모리)와 NVIDIA RTX 4070(12GB VRAM, 32GB 시스템 RAM)이 탑재된 Windows 11 데스크톱에서 테스트했습니다. 동일한 문서 세트: 412페이지 연구 PDF, 38페이지 계약 DOCX, 1,047페이지 기술 매뉴얼 PDF, 25개의 마크다운 메모(총 약 600KB). 각 앱은 채팅 모델로 Llama 3.3 8B Q4_K_M과 쌍을 이루었습니다.',
+        columns: ['앱', '형식', '실용적 최대 크기', '임베딩 모델', '인용', '평가'],
+        rows: [
+          {
+            '앱': 'AnythingLLM',
+            '형식': 'PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, 웹사이트, 오디오(Whisper)',
+            '실용적 최대 크기': '~5,000개 문서 / ~50,000페이지',
+            '임베딩 모델': '내장(Native) 또는 Ollama / OpenAI / LM Studio로 교체 가능',
+            '인용': '파일명 + 페이지 번호가 있는 청크별 인용',
+            '평가': '가장 완전함 — 라이브러리에 먼저 선택',
+          },
+          {
+            '앱': 'LM Studio',
+            '형식': 'PDF, DOCX, TXT, MD',
+            '실용적 최대 크기': '채팅당 ~30개 문서 / ~3,000페이지',
+            '임베딩 모델': 'nomic-embed-text v1.5(내장, 교체 불가)',
+            '인용': '페이지 번호 없는 인라인 소스 언급',
+            '평가': '마찰 최소 — 즉석 Q&A에 선택',
+          },
+          {
+            '앱': 'Jan + 문서',
+            '형식': 'PDF, DOCX, TXT, MD',
+            '실용적 최대 크기': '~200개 문서 / ~10,000페이지',
+            '임베딩 모델': 'all-MiniLM-L6-v2(내장, 확장을 통해 교체 가능)',
+            '인용': '파일명이 있는 청크별 인용',
+            '평가': '가장 개인적 — AGPL / 규정 준수에 선택',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-one',
+        title: '어떤 것을 선택해야 합니까?',
+        content:
+          '**올바른 선택은 문서 라이브러리의 크기, 처리하는 형식, 오픈 소스를 얼마나 중요시하느냐에 달려 있습니다.** 이 결정 트리를 사용하십시오:',
+        rows: [
+          {
+            '상황': 'PDF 1개에 질문이 있고 60초 내에 답변을 원합니다',
+            '선택': 'LM Studio',
+          },
+          {
+            '상황': '반복적으로 쿼리하고 싶은 50~500개 PDF 폴더가 있습니다',
+            '선택': 'AnythingLLM',
+          },
+          {
+            '상황': '같은 작업 공간에 EPUB, 웹사이트 또는 오디오 전사가 필요합니다',
+            '선택': 'AnythingLLM',
+          },
+          {
+            '상황': '법률 또는 의료 문서를 다룹니다 — 오픈 소스가 필수입니다',
+            '선택': 'Jan + 문서',
+          },
+          {
+            '상황': '검색 품질을 테스트하기 위해 임베딩 모델을 교체하고 싶습니다',
+            '선택': 'AnythingLLM',
+          },
+          {
+            '상황': '4년 된 8GB RAM 노트북이 있습니다',
+            '선택': 'LM Studio(최소 설치, 가장 가벼운 작업 공간)',
+          },
+          {
+            '상황': '학술 논문을 위한 페이지별 인용이 필요합니다',
+            '선택': 'AnythingLLM',
+          },
+          {
+            '상황': '채팅 기록과 문서 인덱스를 프로젝트별로 분리하고 싶습니다',
+            '선택': 'AnythingLLM(작업 공간이 1등 시민)',
+          },
+          {
+            '상황': '회사에서 네트워크상의 비오픈 소스 바이너리를 차단합니다',
+            '선택': 'Jan + 문서(AGPL, 감사 가능)',
+          },
+        ],
+        columns: ['상황', '선택'],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: '이 3가지 앱을 테스트한 방법',
+        content:
+          '**각 앱을 처음부터 설치하고, 동일한 문서 세트를 제공하고, 동일한 12개 쿼리로 평가했습니다.** RAG 품질을 채팅 품질과 분리하기 위해 각 앱에서 동일한 채팅 모델(Llama 3.3 8B Q4_K_M, 약 4.9GB)을 사용했습니다.',
+        items: [
+          '**하드웨어:** macOS 워크스루를 위한 Apple M5 MacBook Pro(16GB 통합 메모리), Windows 워크스루를 위한 RTX 4070이 탑재된 Windows 11 데스크톱(12GB VRAM, 32GB 시스템 RAM). 테스트는 두 곳 모두에서 실행했습니다.',
+          '**문서 세트:** 412페이지 연구 논문 PDF(그림, 표, 방정식이 있는 트랜스포머 아키텍처), 38페이지 계약 DOCX(상업용 부동산 임대, 밀도 높은 법률 텍스트), 1,047페이지 기술 매뉴얼 PDF(산업 제어 시스템 참조), 25개의 마크다운 메모(약 600KB의 회의 메모 및 프로젝트 사양).',
+          '**임베딩:** 명시적 교체를 제외하고 각 앱은 기본 임베딩 모델을 사용했습니다. AnythingLLM "Native"는 기본적으로 all-MiniLM-L6-v2 품질에 가까운 384차원 모델을 사용합니다. LM Studio는 nomic-embed-text v1.5(768차원)를 사용합니다. Jan은 기본적으로 all-MiniLM-L6-v2를 포함합니다.',
+          '**쿼리 유형:** 사실 검색("계약 해지 통보 기간은 얼마입니까?"), 다중 홉 추론("매뉴얼의 어느 섹션이 안전 인터록과 비상 정지 모두를 다룹니까?"), 인용 정확도("토큰 믹싱에 관한 정확한 문구를 인용하십시오"), 요약("4장을 5가지로 요약하십시오"), 모순 감지("계약서가 임대료 에스컬레이션에 대해 모순되어 있습니까?").',
+          '**측정 항목:** 문서 로드 후 첫 번째 응답까지의 시간(인덱싱 + 첫 번째 응답), 12개의 기준 쿼리 세트에서의 검색 성능, 인용 정확도(해당하는 경우 청크 파일명 + 페이지), 1,047페이지 매뉴얼로의 동작(스트레스 테스트).',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '세 앱 모두 모델을 다운로드하면 100% 로컬입니다. 이 테스트 중에 프롬프트, 문서 청크 또는 임베딩 벡터가 기기를 벗어나지 않습니다. 오프라인 동작을 확인하기 위해 각 앱의 테스트 중간에 네트워크 액세스를 비활성화했습니다.',
+          },
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '내장 RAG가 있는 로컬 AI 앱은 설치 후 완전히 오프라인으로 작동하며, PDF와 문서를 벡터 데이터베이스나 Python 없이 5분 이내에 처리할 수 있습니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '내장 RAG 앱은 AI가 문서를 작은 청크로 분할하고 그 안에서 검색하여 질문에 답변할 수 있도록 합니다. 별도의 데이터베이스 설정이나 코딩이 필요하지 않으며, 모든 것이 컴퓨터에 로컬로 저장됩니다.',
+          },
+        ],
+      },
+      anythingllmDeep: {
+        id: 'anythingllm',
+        title: 'AnythingLLM: 가장 완전한 내장 RAG',
+        content:
+          '**AnythingLLM은 문서 채팅을 부가 기능이 아닌 1등 시민 기능으로 제공합니다.** 작업 공간은 영구 문서 인덱스를 유지합니다. 각 작업 공간은 독립적이므로 "법률 계약서"를 "연구 논문"과 별도로 교차 오염 없이 유지할 수 있습니다.',
+        items: [
+          '**설치:** anythingllm.com에서 데스크톱 앱을 다운로드하십시오(macOS, Windows, Linux용 서명된 설치 프로그램). 약 430MB. macOS 또는 Linux에서 관리자 권한이 필요하지 않습니다.',
+          '**파일 형식:** PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON. 오디오 파일(MP3, WAV, M4A)은 내장 Whisper를 통해 자동으로 전사됩니다. 웹사이트는 내장 스크래퍼로 추출됩니다.',
+          '**임베딩 모델:** 기본적으로 "Native"(all-MiniLM-L6-v2 품질에 가까운 소형 내장 모델). 설정 → 임베더에서 한 번의 클릭으로 Ollama를 통한 nomic-embed-text, LM Studio를 통한 BAAI/bge-small 또는 OpenAI text-embedding-3-small로 교체할 수 있습니다.',
+          '**청크 제어:** 청크 크기(기본값 1,000자)와 오버랩(기본값 20)은 작업 공간 설정에서 사용할 수 있습니다. "모두 재임베딩" 버튼은 변경 후 인덱스를 재구성합니다.',
+          '**인용:** 각 응답은 파일명과 페이지(PDF), 파일명과 섹션(MD) 또는 파일명만(TXT)으로 사용된 청크를 참조합니다. 인용을 클릭하면 사이드 패널에서 소스 청크가 열립니다.',
+          '**성능:** RTX 4070에서 4분 12초, M5에서 5분 38초 내에 전체 1,047페이지 매뉴얼 + 412페이지 논문 + 38페이지 계약서 + 25개의 마크다운 메모를 인덱싱했습니다. 첫 번째 응답: 두 경우 모두 약 3초.',
+          '**LLM 백엔드:** 기본적으로 내장 Ollama 런타임을 사용하거나 LM Studio, llama.cpp 서버, OpenAI 호환 URL 또는 클라우드 제공업체를 지정할 수 있습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '프로젝트별로 하나의 작업 공간을 만드십시오(예: "Q3 계약서", "논문 소스", "온보딩 매뉴얼"). 각 작업 공간에는 자체 채팅 기록과 임베딩 인덱스가 있어 컨텍스트가 프로젝트 간에 절대 혼합되지 않습니다.',
+          },
+        ],
+      },
+      lmStudioDeep: {
+        id: 'lm-studio',
+        title: 'LM Studio: 마찰이 가장 적은 문서 채팅',
+        content:
+          '**LM Studio는 2025년에 채팅에 문서 첨부를 추가했습니다.** 열린 채팅 창에 PDF를 드래그하면 몇 초 안에 질문할 수 있습니다 — 작업 공간 없음, 설정 없음, 임베딩 조정 없음.',
+        items: [
+          '**설치:** lmstudio.ai에서 다운로드하십시오. 약 450MB, macOS, Windows, Linux용 서명된 설치 프로그램. 채팅에 사용하는 것과 동일한 설치 — 별도의 RAG 플러그인 없음.',
+          '**파일 형식:** PDF, DOCX, TXT, MD. EPUB, HTML, 오디오 없음.',
+          '**임베딩 모델:** nomic-embed-text v1.5(768차원) 내장. 2026년 5월 기준으로 인터페이스에서 교체 불가 — 임베딩 모델을 선택하려면 AnythingLLM을 사용하십시오.',
+          '**청크 제어:** 인터페이스에서 숨겨져 있습니다. 청크 크기, 오버랩, top-K는 문서 크기에 따라 자동으로 조정됩니다.',
+          '**인용:** 모델은 청크를 컨텍스트로 받고 소스 파일명을 인용하도록 지시받습니다. 인용 품질은 채팅 모델에 따라 다릅니다 — Llama 3.3 8B 이상은 안정적으로 인용하고, 더 작은 모델은 때때로 인용을 생략합니다.',
+          '**성능:** M5에서 38초, RTX 4070에서 24초 내에 단일 412페이지 논문을 인덱싱했습니다. 첫 번째 응답: 2~3초. 속도 저하 전 실용적 한계: 채팅당 약 30개 문서 또는 약 3,000페이지.',
+          '**LLM 백엔드:** 대화에 선택된 동일한 채팅 모델을 사용합니다 — 문서가 첨부되면 RAG가 투명하게 발생합니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'LM Studio의 문서 첨부는 작업 공간이 아닌 대화 범위입니다. 새 채팅을 시작하면 이전 문서가 사라집니다. 이것은 즉석 Q&A에는 장점이지만 지속적인 연구 라이브러리에는 한계입니다.',
+          },
+        ],
+      },
+      janDeep: {
+        id: 'jan',
+        title: 'Jan + 문서 확장: 오픈 소스 옵션',
+        content:
+          '**Jan은 세 가지 중 완전히 감사 가능한 소스 코드(AGPL)를 가진 유일한 앱입니다.** 문서 확장은 텔레메트리 제로 자세를 손상시키지 않고 RAG를 추가합니다 — 임베딩은 로컬에서 실행되고 문서 청크는 절대 기기를 벗어나지 않습니다.',
+        items: [
+          '**설치:** jan.ai에서 Jan을 다운로드하십시오(약 380MB). 그런 다음 앱 내의 Hub 탭에서 문서 확장을 활성화하십시오. 이 확장은 Jan 팀의 것이며 타사가 아닙니다.',
+          '**파일 형식:** PDF, DOCX, TXT, MD. 2026년 5월 공개 로드맵에서 새 형식 추가가 예정되어 있습니다.',
+          '**임베딩 모델:** all-MiniLM-L6-v2(384차원) 내장. 확장 설정을 통해 BAAI/bge-small-en-v1.5 또는 문장 변환기 GGUF로 교체 가능합니다.',
+          '**청크 제어:** 청크 크기와 오버랩은 확장 설정에서 사용할 수 있습니다. 재인덱스 버튼은 로컬 LanceDB 스토어를 재구성합니다.',
+          '**인용:** 파일명이 있는 청크별 인용. 2026년 5월 기준으로 페이지 번호 없음 — Jan의 GitHub 이슈 #1184가 이 기능 요청을 추적합니다.',
+          '**성능:** M5에서 6분 04초, RTX 4070에서 5분 12초 내에 전체 테스트 코퍼스를 인덱싱했습니다. 첫 번째 응답: 3~4초. 실용적 한계: 약 200개 문서.',
+          '**LLM 백엔드:** Jan의 내장 llama.cpp 런타임을 사용합니다. 채팅에 로드된 동일한 모델이 RAG 합성에 사용됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'EU GDPR 준수, 규제 산업 또는 소스 코드 감사 가능성이 필수인 모든 환경에서 Jan은 세 가지 중 유일한 옵션입니다. AnythingLLM은 GitHub에서 오픈 소스이지만 공식 빌드에는 비공개 소스 텔레메트리가 포함되어 있습니다. LM Studio는 완전히 독점 소프트웨어입니다.',
+          },
+        ],
+      },
+      sampleQueries: {
+        id: 'sample-queries',
+        title: '샘플 쿼리 및 각 앱이 반환한 결과',
+        content:
+          '**동일한 문서, 동일한 채팅 모델(Llama 3.3 8B Q4_K_M), 동일한 프롬프트.** 실제 응답은 표시된 곳에서 단축했습니다. 각 행은 앱이 올바른 청크를 검색했는지와 응답 내용을 보여줍니다.',
+        columns: ['쿼리', 'AnythingLLM', 'LM Studio', 'Jan + 문서'],
+        rows: [
+          {
+            '쿼리': '계약 해지 통보 기간은 얼마입니까?',
+            'AnythingLLM': '✅ "60일 서면 통보" 인용 [계약.docx, 12페이지]',
+            'LM Studio': '✅ "60일 서면 통보" — 인용: 계약.docx',
+            'Jan + 문서': '✅ "60일 서면 통보" — 인용: 계약.docx',
+          },
+          {
+            '쿼리': '논문에서 토큰 믹싱에 관한 정확한 문구를 인용하십시오',
+            'AnythingLLM': '✅ [research.pdf, 4페이지] 인용이 있는 글자 그대로 인용',
+            'LM Studio': '✅ 글자 그대로 인용, research.pdf에 귀속(페이지 없음)',
+            'Jan + 문서': '⚠️ 패러프레이즈된 인용, research.pdf에 귀속',
+          },
+          {
+            '쿼리': '매뉴얼의 어느 섹션이 안전 인터록과 비상 정지 모두를 다룹니까?',
+            'AnythingLLM': '✅ "섹션 4.2(인터록) 및 섹션 7.1(비상 정지)" 인용 포함',
+            'LM Studio': '⚠️ 섹션 4.2만 반환 — 두 번째 홉 누락',
+            'Jan + 문서': '⚠️ 섹션 7.1만 반환 — 다중 홉 누락',
+          },
+          {
+            '쿼리': '4장을 5가지 항목으로 요약하십시오',
+            'AnythingLLM': '✅ 각각 인용이 있는 정확한 5가지 항목',
+            'LM Studio': '✅ 정확한 5가지 항목, 마지막에 단일 인용 블록',
+            'Jan + 문서': '✅ 정확한 5가지 항목, 첫 번째 항목에만 인용',
+          },
+          {
+            '쿼리': '계약서가 임대료 에스컬레이션에 대해 모순되어 있습니까?',
+            'AnythingLLM': '✅ "예 — 8페이지는 CPI 연동, 14페이지는 고정 3%라고 합니다"',
+            'LM Studio': '✅ "예 — 두 가지 다른 에스컬레이션 방법이 언급됩니다"',
+            'Jan + 문서': '⚠️ "모순이 발견되지 않았습니다" — 14페이지를 표면화하지 못했습니다',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'AnythingLLM이 다중 홉 및 모순 쿼리에서 앞섰습니다. 이는 검색 구성이 기본적으로 LM Studio(top-K = 4) 및 Jan(top-K = 4)보다 더 많은 청크를 추출하기 때문입니다(top-K = 6). 단순한 사실 검색에서는 세 가지 모두 실질적으로 동등했습니다.',
+          },
+        ],
+      },
+      citations: {
+        id: 'citations',
+        title: '인용은 얼마나 정확합니까?',
+        content:
+          '**인용 품질은 세 앱 간의 가장 큰 차별화 요소입니다.** AnythingLLM만이 2026년 5월 기준으로 파일명 + 페이지가 있는 청크별 인용을 제공합니다. 다른 두 앱은 파일명만으로 인용하며, 이는 유용하지만 학술 또는 법률 작업에는 불충분합니다.',
+        items: [
+          '**AnythingLLM:** 각 응답은 사용된 청크를 참조합니다. PDF에는 `[파일명, X페이지]`, 마크다운에는 `[파일명, 섹션]` 형식입니다. 클릭하면 사이드 패널에서 청크가 열려 확인할 수 있습니다.',
+          '**LM Studio:** 인용은 채팅 응답의 인라인 언급입니다("research.pdf에 따르면..."). 페이지 번호 없음, 인터랙티브 확인 패널 없음. 신뢰성은 채팅 모델에 따라 다릅니다 — Llama 3.3 8B는 안정적으로 인용하고, Phi-4 Mini는 때때로 인용을 생략합니다.',
+          '**Jan + 문서:** 파일명이 있는 청크별 인용. 페이지 번호 없음. 인용된 청크는 확장 패널에서 볼 수 있습니다.',
+          '**확인 비용:** AnythingLLM은 2번의 클릭으로 인용을 확인할 수 있습니다. LM Studio와 Jan은 소스 PDF를 열고 검색해야 합니다. 1,000페이지 매뉴얼의 경우 이것은 중요합니다.',
+          '**환각된 인용:** 세 앱 모두 관련 청크가 실제로 검색되지 않았을 때 때때로 파일명을 인용합니다. 12개 쿼리 테스트에서의 빈도: AnythingLLM 0/12, LM Studio 1/12(Phi-4 Mini), Jan 1/12. 항상 위험성이 높은 주장을 확인하십시오.',
+        ],
+      },
+      largeFiles: {
+        id: 'large-files',
+        title: '각 앱이 1,000페이지 이상의 문서를 처리하는 방법',
+        content:
+          '**1,047페이지 기술 매뉴얼이 스트레스 테스트였습니다.** 세 앱 모두 로드하고 인덱싱했습니다. 차이는 검색 시간과 작업 공간 인체공학에서 나타났습니다.',
+        rows: [
+          {
+            '동작': '인덱싱 시간(M5)',
+            'AnythingLLM': '4분 12초',
+            'LM Studio': '2분 47초',
+            'Jan + 문서': '6분 04초',
+          },
+          {
+            '동작': '인덱싱 중 RAM',
+            'AnythingLLM': '약 3.2GB',
+            'LM Studio': '약 2.4GB',
+            'Jan + 문서': '약 2.8GB',
+          },
+          {
+            '동작': '디스크의 인덱스 크기',
+            'AnythingLLM': '약 210MB',
+            'LM Studio': '약 95MB',
+            'Jan + 문서': '약 140MB',
+          },
+          {
+            '동작': '첫 번째 쿼리 지연(콜드)',
+            'AnythingLLM': '3.1초',
+            'LM Studio': '2.2초',
+            'Jan + 문서': '3.8초',
+          },
+          {
+            '동작': '실용적 문서 한계',
+            'AnythingLLM': '약 5,000개',
+            'LM Studio': '채팅당 약 30개',
+            'Jan + 문서': '약 200개',
+          },
+          {
+            '동작': '다중 홉 검색(12개 쿼리 테스트)',
+            'AnythingLLM': '11/12',
+            'LM Studio': '8/12',
+            'Jan + 문서': '7/12',
+          },
+        ],
+        columns: ['동작', 'AnythingLLM', 'LM Studio', 'Jan + 문서'],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'LM Studio는 단일 대용량 문서에 빠르지만 라이브러리로 확장되지 않습니다. 대화 범위 인덱스는 새 채팅이 처음부터 시작됨을 의미합니다 — 즉석 질문에는 유용하지만 지속적인 연구에는 문제입니다. 문서가 50개 이상이라면 AnythingLLM으로 전환하십시오.',
+          },
+        ],
+      },
+      outgrow: {
+        id: 'outgrow',
+        title: '언제 내장 RAG를 넘어서야 합니까?',
+        content:
+          '**내장 RAG는 이 세 가지 중 하나가 발생할 때까지 올바른 도구입니다:** 라이브러리가 약 1,000개 문서를 초과하거나, 청킹 전략에 대한 세분화된 제어가 필요하거나, 작업 공간 간 검색이 필요한 경우. 그 시점에서 확장하십시오.',
+        items: [
+          '**1,000개 이상의 문서:** AnythingLLM은 검색 지연이 눈에 띄게 되기 전에 단일 작업 공간에서 약 5,000개 문서를 처리합니다. 그 이상이라면 전용 벡터 데이터베이스(Qdrant, Weaviate 또는 Postgres + pgvector)가 있는 Ollama + AnythingLLM Docker가 포함된 맞춤형 스택으로 마이그레이션하십시오.',
+          '**맞춤형 청킹 전략이 필요한 경우:** 내장 앱은 고정 청크 크기(약 20의 오버랩으로 약 1,000자)를 사용합니다. 도메인별 청킹(의미론적, 계층적, 부모-자식)에는 LangChain 또는 LlamaIndex가 있는 맞춤형 스택을 사용하십시오.',
+          '**작업 공간 간 / 소스 간 검색이 필요한 경우:** AnythingLLM 작업 공간은 설계상 격리되어 있습니다. 단일 쿼리가 "계약서 + 이메일 + Slack 내보내기 + Notion"을 포괄해야 한다면, 통합 벡터 스토어로 맞춤형 RAG를 구축하십시오.',
+          '**세분화된 액세스 제어가 필요한 경우:** 내장 앱은 단일 사용자를 가정합니다. 역할 기반 권한이 있는 팀 RAG의 경우, AnythingLLM Docker(다중 사용자 모드) 또는 PrivateGPT를 배포하십시오.',
+          '**스캔된 PDF에 OCR이 필요한 경우:** 세 앱 모두 이미지 전용 PDF를 처리하지 못합니다. Tesseract 또는 pdf2image + Tesseract로 전처리하거나, Unstructured.io가 포함된 스택으로 마이그레이션하십시오.',
+          '**프로덕션 배포:** 내장 앱은 데스크톱 애플리케이션이며 서버가 아닙니다. API 액세스가 있는 프로덕션 RAG의 경우, AnythingLLM Docker, PrivateGPT 또는 적절한 RAG 플러그인이 있는 Open WebUI를 배포하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '작업을 보존하는 확장 경로: AnythingLLM Desktop → AnythingLLM Docker(다중 사용자, 동일한 데이터 형식) → Ollama + Qdrant + LlamaIndex가 있는 맞춤형 스택. 각 단계는 문서 코퍼스를 보존하고 재인덱싱을 방지합니다.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: '이 앱들에서 1,000개 이상의 PDF와 대화할 수 있습니까?',
+            a: 'AnythingLLM은 검색 지연이 눈에 띄게 되기 전에 작업 공간당 약 5,000개 문서를 처리합니다. Jan + 문서는 약 200개 문서를 안정적으로 처리합니다. LM Studio는 대화 범위이며 채팅당 약 30개 문서가 실용적입니다. 1,000개 이상의 문서 라이브러리의 경우, AnythingLLM이 맞춤형 스택으로 확장하지 않고 작동하는 유일한 내장 옵션입니다.',
+          },
+          {
+            q: '이 앱들은 DOCX 및 Excel을 지원합니까?',
+            a: '세 앱 모두 DOCX(Microsoft Word)를 지원합니다. Excel(XLSX)은 2026년 5월 기준으로 세 앱 모두 직접 지원하지 않습니다 — 먼저 CSV로 변환하거나(AnythingLLM은 CSV를 기본적으로 지원함) 마크다운 파일에 붙여넣으십시오. AnythingLLM은 EPUB, HTML, JSON, 오디오(Whisper로 전사), 웹사이트도 지원합니다.',
+          },
+          {
+            q: '내 문서는 어디에 저장됩니까?',
+            a: '세 앱 모두 문서와 임베딩 인덱스를 로컬 디스크에 저장합니다. AnythingLLM은 ~/.anythingllm/(macOS/Linux) 또는 %APPDATA%/AnythingLLM(Windows)에 저장합니다. LM Studio는 ~/.cache/lm-studio/ 또는 %APPDATA%/LM Studio에 저장합니다. Jan은 ~/jan/에 저장합니다. 세 앱 모두 문서를 어디에도 업로드하지 않습니다 — 모든 경우에 로컬 추론 및 로컬 인덱싱.',
+          },
+          {
+            q: '앱의 메모리에서 문서를 삭제할 수 있습니까?',
+            a: '세 앱 모두 예. AnythingLLM에는 작업 공간 인터페이스에서 문서별 삭제 + 재인덱스가 있습니다. LM Studio: 채팅에서 문서를 분리하거나 채팅을 삭제하십시오. Jan: 문서 확장 패널에서 삭제하고 재인덱스를 클릭하십시오. 삭제 후 임베딩 청크는 다음 재인덱싱 시 로컬 벡터 스토어에서 삭제됩니다.',
+          },
+          {
+            q: '인용은 얼마나 정확합니까?',
+            a: 'AnythingLLM은 파일명과 페이지(PDF)가 있는 청크별 인용을 제공합니다 — 확인하면 학술 논문에 충분히 정확합니다. LM Studio는 파일명만으로 인용합니다. 신뢰성은 사용한 채팅 모델에 따라 다릅니다(Llama 3.3 8B 이상은 안정적으로 인용하고, Phi-4 Mini는 때때로 인용을 생략합니다). Jan은 파일명이 있는 청크별로 인용하며 페이지 번호는 없습니다. 12개 쿼리 테스트에서 환각된 인용은 드물었습니다(AnythingLLM 0/12, LM Studio 1/12, Jan 1/12) — 항상 소스를 열어 위험성이 높은 주장을 확인하십시오.',
+          },
+          {
+            q: '내장 RAG는 오프라인으로 작동합니까?',
+            a: '예. 앱을 설치하고 채팅 모델과 임베딩 모델을 최소 하나씩 다운로드한 후, 세 앱 모두 완전히 오프라인으로 작동합니다. 문서 인덱싱은 로컬에서 발생합니다. 쿼리는 로컬 벡터 스토어와 로컬 LLM에 도달합니다. 각 앱의 테스트 중간에 네트워크를 비활성화하여 확인했습니다 — 세 앱 모두 정상적으로 쿼리에 계속 응답했습니다.',
+          },
+          {
+            q: '기기 간에 문서 데이터베이스를 공유할 수 있습니까?',
+            a: 'AnythingLLM은 작업 공간을 기기 간에 복사할 수 있는 이식 가능한 폴더에 저장합니다(~/.anythingllm/storage/). LM Studio의 문서 인덱스는 대화 범위이며 동기화에 적합하지 않습니다. Jan + 문서는 ~/jan/에 저장하지만 LanceDB 형식은 Jan 설치 버전 간의 차이에 민감합니다. 여러 기기의 경우 가장 깔끔한 경로는 홈 서버의 AnythingLLM Docker이며 모든 기기가 동일한 인스턴스를 가리킵니다.',
+          },
+          {
+            q: '내장 RAG는 스캔된 PDF(OCR)를 처리합니까?',
+            a: '세 앱 중 어떤 것도 2026년 5월 기준으로 이미지 전용 스캔 PDF를 처리하지 못합니다. PDF 텍스트 레이어를 통해 텍스트를 추출하므로 텍스트 레이어가 없는 스캔 PDF는 청크 없음을 반환합니다. Tesseract OCR(무료) 또는 ocrmypdf와 같은 도구로 텍스트 레이어를 추가한 후 OCR 처리된 PDF를 앱에 로드하십시오. AnythingLLM에는 Tesseract 통합에 대한 공개 기능 요청이 있습니다.',
+          },
+          {
+            q: '내장 RAG가 느려지기 전 최대 문서 크기는 얼마입니까?',
+            a: '16GB RAM 하드웨어에서 AnythingLLM은 작업 공간당 약 5,000개 문서 또는 약 50,000페이지까지 민첩함을 유지합니다. LM Studio의 실용적 한계는 채팅당 약 30개 문서(약 3,000페이지)입니다. Jan + 문서는 약 200개 문서를 안정적으로 처리합니다. 이 한계를 초과하면 인덱싱 시간이 선형적으로 증가하고 콜드 쿼리의 검색 지연이 5~10초에 이를 수 있습니다. 이것이 맞춤형 RAG 스택으로 확장해야 하는 신호입니다.',
+          },
+          {
+            q: '민감한 법률 또는 의료 문서에 이 앱들을 사용할 수 있습니까?',
+            a: '세 앱 모두 설치 후 완전히 오프라인으로 작동하며 문서 내용을 전송하지 않습니다. 규제된 워크플로(HIPAA, GDPR, 변호사-고객 특권)의 경우, Jan + 문서가 가장 강력한 옵션입니다. 전체 스택이 오픈 소스(AGPL)이며 감사 가능하고 기본적으로 텔레메트리가 없습니다. AnythingLLM도 오픈 소스 Docker 빌드를 사용하는 감사된 환경에서 방어 가능한 옵션입니다(데스크톱 설치 프로그램의 텔레메트리 방지). LM Studio는 완전히 독점 소프트웨어입니다 — 규제 데이터와 함께 사용하기 전에 규정 준수 팀과 확인하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽기',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: 2026년 최고의 로컬 RAG](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 내장 RAG를 넘어설 때의 확장 경로.',
+          '[PDF에서 30분 만에 로컬 RAG 구축하기(Ollama + AnythingLLM)](/ko/power-local-llm/local-rag-on-your-pdfs-step-by-step) — 더 많은 제어를 원할 때의 맞춤형 스택 튜토리얼.',
+          '[2026년 로컬 RAG를 위한 최고의 임베딩 모델](/ko/power-local-llm/best-embedding-models-local-rag-2026) — 검색 품질을 미세 조정하는 사용자를 위한 가이드.',
+          '[LM Studio vs Jan vs GPT4All: 2026년 어떤 로컬 AI 앱이 이깁니까?](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — RAG가 여러 기준 중 하나인 경우의 더 넓은 앱 비교.',
+          '[1,000개 이상의 PDF를 로컬에서 대화하기](/ko/power-local-llm/chat-with-1000-pdfs-locally) — 대규모 문서 라이브러리를 위한 확장 가이드.',
+          '[RAG 설명: AI 응답을 실제 데이터에 기반하는 방법(2026)](/ko/prompt-engineering/rag-explained) — RAG가 내부적으로 작동하는 방식에 대한 개념적 권위.',
+          '[Power Local LLM 허브](/ko/power-local-llm) — 클러스터 가이드의 전체 라이브러리.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': '내장 RAG가 있는 로컬 AI 앱: 설정 없이 파일과 대화하기',
+      'description':
+        '1,000페이지 문서에서 테스트된 AnythingLLM, LM Studio 및 Jan + 문서. 벡터 데이터베이스, Python, 명령줄 없는 내장 RAG.',
+      'datePublished': '2026-05-07',
+      'dateModified': '2026-05-07',
+      'inLanguage': 'ko',
+      'url': 'https://www.promptquorum.com/ko/power-local-llm/local-ai-app-with-built-in-rag',
+      'image': 'https://www.promptquorum.com/ko/api/og/local-ai-app-with-built-in-rag',
+      'author': {
+        '@type': 'Person',
+        'name': 'Hans Kuepper',
+        'url': 'https://www.promptquorum.com/about',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      'proficiencyLevel': 'Beginner',
+      'about': [
+        { '@type': 'Thing', 'name': 'AnythingLLM' },
+        { '@type': 'Thing', 'name': 'LM Studio' },
+        { '@type': 'Thing', 'name': 'Jan (로컬 AI 앱)' },
+        { '@type': 'Thing', 'name': 'Retrieval-Augmented Generation' },
+        { '@type': 'Thing', 'name': '로컬 문서 채팅' },
+        { '@type': 'Thing', 'name': '내장 RAG' },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'name': '2026년 내장 RAG가 있는 로컬 AI 데스크톱 앱',
+      'numberOfItems': 3,
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'AnythingLLM',
+          'description':
+            '가장 완전한 내장 RAG: 10개 이상의 형식(PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, 웹사이트, 오디오), 교체 가능한 임베딩 모델, 영구 작업 공간, 페이지 번호가 있는 청크별 인용. 작업 공간당 약 5,000개 문서의 실용적 한계.',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'LM Studio',
+          'description':
+            '마찰이 가장 적은 문서 채팅: 모든 대화에 PDF / DOCX / TXT / MD 첨부를 드래그 앤 드롭. nomic-embed-text v1.5 임베딩 모델 내장. 대화 범위(작업 공간 개념 없음). 채팅당 약 30개 문서의 실용적 한계.',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Jan + 문서 확장',
+          'description':
+            '오픈 소스 옵션: 완전 AGPL, 기본적으로 텔레메트리 제로, 로컬 전용 임베딩(all-MiniLM-L6-v2 내장, 교체 가능). PDF, DOCX, TXT, MD 지원. 규정 준수 민감 워크플로에 이상적. 약 200개 문서의 실용적 한계.',
+        },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': '홈',
+          'item': 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Power Local LLM',
+          'item': 'https://www.promptquorum.com/ko/power-local-llm',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': '내장 RAG가 있는 로컬 AI 앱',
+          'item': 'https://www.promptquorum.com/ko/power-local-llm/local-ai-app-with-built-in-rag',
+        },
+      ],
+    },
+  },
 }

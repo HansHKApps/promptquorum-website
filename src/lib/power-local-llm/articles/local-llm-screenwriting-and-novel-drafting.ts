@@ -2914,4 +2914,434 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
 },
+  ko: {
+    freshness_tier: 'evergreen',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    theme: 'Creative & Roleplay',
+    title: '로컬 LLM으로 소설과 시나리오 집필하기: 10만 단어 이상을 위한 워크플로 가이드',
+    seoTitle: '로컬 LLM 시나리오·소설 오프라인 집필 2026',
+    intro:
+      '소설이나 시나리오 집필 워크플로에 통합된 로컬 LLM은 인터넷 접속, 클라우드 로그, 사용량 제한 없이 장면 초안, beat sheet, 대화 검토, 수정 라운드를 생성할 수 있습니다. 이 가이드는 모델 선택, 장문 작업을 위한 컨텍스트 윈도 관리, 챕터별 스캐폴딩, 장면 생성, 그리고 로컬 LLM을 집필 소프트웨어와 연결하는 도구들을 포함한 전체 워크플로를 다룹니다.',
+    metaDescription:
+      '로컬 LLM으로 소설·시나리오 집필하는 완전한 워크플로: 모델 선택, 컨텍스트 관리, 챕터 스캐폴딩, 장면 생성.',
+    twitterDescription:
+      '로컬 LLM으로 소설과 시나리오를 집필하는 방법: 컨텍스트 윈도 관리, 챕터 스캐폴딩, 장면 생성, 대화 검토, 도구 통합.',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 32B',
+      'Mistral Large',
+      'Command R+ 104B',
+      'Hermes 3 Llama 3.3',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      '대규모 창작 작업에 로컬 LLM을 초안 보조 도구로 활용하고자 하는 시나리오 작가, 소설가, 게임 내러티브 디자이너 — 컨텍스트 윈도를 관리하고, 초안 콘텐츠를 생성하고, AI 지원을 기존 집필 도구에 통합하는 작업을 위한 가이드입니다.',
+    readTime: '15분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'local LLM screenwriting novel drafting',
+    targetKeywords: [
+      '로컬 llm 소설 쓰기',
+      '로컬 llm 시나리오 집필',
+      'ollama 창작 글쓰기 워크플로',
+      '컨텍스트 윈도 장문 소설',
+      '로컬 ai 글쓰기 보조',
+      '장면 생성 로컬 모델',
+    ],
+    leadAnswerBlock:
+      '**로컬 LLM을 장문 작업에 활용하는 작가들이 직면하는 핵심 기술적 과제는 컨텍스트 윈도 관리입니다. 대부분의 로컬 모델은 명목상 128K 컨텍스트 윈도를 갖추고 있지만, 실제로는 32K 토큰(약 24,000 단어) 이후부터 어텐션 품질이 현저히 저하됩니다. 해결책은 구조화된 컨텍스트 주입, 즉 "세션 문서" 기법입니다. 이전 챕터의 압축 요약, 현재 장면 설정, 관련 인물 카드만 유지하고, 매 집필 세션 시작 시 해당 요소들만 주입합니다. 장면별 생성(성장하는 문서를 계속 이어 달라고 요청하는 대신 세션당 하나의 장면 프롬프트)과 결합하면, 이 접근법은 어떤 분량의 소설에서도 일관된 장문 결과물을 만들어 냅니다. 특히 시나리오 집필에서는 beat sheet 우선 워크플로 — 산문 작성 전에 장면 수준의 beat sheet를 먼저 생성 — 가 구조에서 이탈하지 않는 형식화된 스크립트 페이지를 생성합니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '컨텍스트를 잃지 않고 로컬 LLM으로 소설이나 시나리오를 집필하는 방법은 무엇입니까?',
+        answer:
+          '핵심 기법은 구조화된 컨텍스트 주입입니다. 전체 원고를 컨텍스트 윈도에 붙여넣는 대신, 압축된 세션 문서를 유지하십시오. 인물 카드(이름, 지배적 특성, 말하기 방식), 완료된 챕터의 줄거리 요약(챕터당 100–200 단어), 현재 장면 설정(beat, 시점, 단어 상한)을 포함합니다. 이 세션 문서를 매 집필 세션 시작 시 주입하십시오. 32K 토큰을 초과하는 성장하는 문서를 이어 달라고 요청하는 대신, 한 번에 한 장면씩 생성하십시오.',
+        bullets: [
+          '세션 문서 기법: 인물 카드 + 챕터 요약 + 현재 장면 설정을 세션 시작 시 주입합니다.',
+          '한 번에 한 장면 생성 — 32K 토큰을 초과하는 문서를 "이어 쓰도록" 요청하지 마십시오.',
+          '시나리오는 beat sheet 우선: 산문 작성 전에 beat sheet를 생성하고 구조적 스캐폴드로 사용하십시오.',
+          '장문 작업에 가장 적합한 모델: Llama 3.3 70B (강한 컨텍스트 준수, 우수한 지시 따르기).',
+          'Ollama + Obsidian 또는 Scrivener가 2026년 작가들에게 가장 일반적인 워크플로입니다.',
+          '컨텍스트 윈도 현실: 128K가 기술적 한계이며, 32K 토큰이 대부분 모델의 실질적 품질 상한입니다.',
+          '무검열 모델(Hermes 3)은 설정 변경 없이 이 워크플로에 적합합니다.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 내용', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '컨텍스트 윈도 문제', anchor: '#context-window' },
+      { label: '세션 문서 기법', anchor: '#session-document' },
+      { label: '소설 집필 워크플로', anchor: '#novel-workflow' },
+      { label: '시나리오 워크플로', anchor: '#screenwriting-workflow' },
+      { label: '장면 생성 템플릿', anchor: '#scene-generation' },
+      { label: '도구 통합', anchor: '#tools' },
+      { label: '모델 추천', anchor: '#models' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 자료', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**컨텍스트 윈도 현실: 명목상 128K 토큰, 실제로는 32K 토큰.** 대부분의 로컬 모델에서 어텐션 품질은 32K 토큰(약 24,000 단어) 이후 눈에 띄게 저하됩니다. 전체 원고를 컨텍스트 윈도에 붙여넣지 말고 세션 문서 기법을 사용하십시오.',
+          '**세션 문서 기법이 핵심 기술입니다.** 활성 인물 카드(인물당 150 단어), 챕터 요약(완료된 챕터당 100–200 단어), 현재 장면 설정을 담은 압축 텍스트 파일을 유지하십시오. 매 생성 세션 시작 시 주입하십시오.',
+          '**한 번에 한 장면을 생성하십시오.** 성장하는 문서를 "이어 쓰도록" 요청하는 대신, 세션당 하나의 장면(200–600 단어)을 작성하도록 모델에 요청하십시오. 세션당 한 장면은 컨텍스트 이탈을 제거하고 일관된 목소리를 만들어 냅니다.',
+          '**시나리오는 beat sheet 우선으로 시작하십시오.** 스크립트 페이지를 생성하기 전에 장면 수준의 beat sheet를 먼저 생성하십시오. 이를 각 페이지 생성의 스캐폴드로 활용하십시오.',
+          '**Llama 3.3 70B가 장문 작업에 가장 적합한 모델입니다.** 강한 컨텍스트 준수, 더 긴 생성에서 우수한 지시 따르기, 긴 세션에서 신뢰할 수 있는 인물 목소리 일관성을 제공합니다.',
+          '**Ollama + 일반 텍스트 집필 도구가 가장 안정적인 통합입니다.** Scrivener, Obsidian, VS Code는 원고 레이어로 작동하며, Ollama는 앱이나 스크립트가 호출할 수 있는 API를 통해 모델을 제공합니다.',
+          '**무검열 모델(Hermes 3)은 설정 변경 없이 이 워크플로에 적합합니다.** 성숙한 소설을 위해 Ollama 모델을 Hermes 3로 전환하기만 하면 되며, 세션 문서 및 장면 생성 기법은 동일합니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**장문 소설에 가장 적합한 모델:** Llama 3.3 70B (가장 강한 컨텍스트 준수 및 지시 따르기).',
+          '**실질적 컨텍스트 윈도 한계:** 신뢰할 수 있는 어텐션 품질을 위해 ~32K 토큰(~24,000 단어); 128K는 기술적 상한입니다.',
+          '**세션 문서 크기:** 4,000 토큰 미만 목표 (인물 카드 + 챕터 요약 + 현재 장면 설정).',
+          '**장면 생성 목표:** 생성 호출당 200–600 단어; 더 긴 장면은 여러 순차 프롬프트를 통해 생성합니다.',
+          '**시나리오 형식:** Fountain 형식 출력 지시와 함께 Ollama를 사용하면 스크립트 형식의 텍스트를 생성합니다.',
+          '**Ollama와 함께 작동하는 집필 도구:** Scrivener (API 스크립트를 통해), Obsidian (로컬 플러그인 또는 스크립트를 통해), VS Code (Continue.dev 또는 직접 API 호출을 통해), 순수 터미널.',
+          '**무검열 옵션:** 성숙한 소설을 위한 Hermes 3 Llama 3.3; 동일한 워크플로, 동일한 세션 문서 기법.',
+        ],
+      },
+      contextWindow: {
+        id: 'context-window',
+        title: '장문 집필을 위한 컨텍스트 윈도 문제',
+        content:
+          '**대부분의 로컬 모델에서 실질적인 컨텍스트 한계는 32,000 토큰입니다 — 광고된 128K가 아닙니다.** 어텐션 품질(모델이 이전 콘텐츠를 정확하게 참조하는 능력)은 대부분의 모델에서 32,000 토큰 이후 저하됩니다. 128K 토큰에서는 많은 모델이 컨텍스트 첫 번째 사분위의 콘텐츠에 대한 정확한 참조를 잃습니다. 소설의 경우, 이는 지금까지의 원고를 단순히 붙여넣고 다음 챕터를 요청할 수 없다는 것을 의미합니다.
+
+Moonshot AI의 Kimi-K2.6은 128K 컨텍스트를 가진 대부분의 모델보다 어텐션 품질 보존이 뛰어난 진정한 100만 토큰 컨텍스트 윈도를 제공합니다. 대부분의 작가들에게 Kimi-K2.6을 로컬에서 실행하는 것은 비실용적입니다 — Q4 양자화에서 약 480 GB의 VRAM이 필요하여 소비자 하드웨어를 훨씬 초과합니다. 1M 컨텍스트가 실제로 필요한 작가들에게는 Moonshot의 호스팅 API가 실용적인 접근 지점입니다. 로컬에서 실행 가능한 모델(Llama 3.3 70B, Qwen3 32B, Mistral Large)을 사용하는 작가들에게는 32K 실질 상한이 제약입니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '대부분의 로컬 LLM에서 컨텍스트 준수의 실질적 품질 상한은 약 32,000 토큰(~24,000 단어)입니다 — 이를 초과하면 모델은 이전 콘텐츠에 대한 정확한 참조를 잃어 목소리 이탈과 줄거리 불일치가 장편 원고 전체에 걸쳐 누적됩니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '90,000 단어 소설을 128K 컨텍스트 윈도에 넣고 모델이 챕터 20을 쓰면서 챕터 3에서 무슨 일이 있었는지 기억할 것이라고 기대할 수 없습니다. 대신, 모델이 알아야 할 것들 — 인물 카드, 챕터 요약, 현재 장면 설정 — 을 4,000 토큰 미만의 "세션 문서"로 압축하고, 매 집필 세션 시작 시 그것을 주입하십시오. 모델은 현재 생성 중인 장면과 관련된 것만 알면 됩니다.',
+          },
+        ],
+        items: [
+          '**토큰-단어 변환:** 1 토큰 ≈ 영어 기준 0.75 단어. 32K 토큰 ≈ 24,000 단어. 128K 토큰 ≈ 96,000 단어 (완전한 소설 한 편).',
+          '**어텐션 저하:** 모델은 긴 컨텍스트 윈도의 초반부 콘텐츠에 대한 신뢰할 수 있는 참조를 잃습니다. 이는 인물 이름 오류, 잊혀진 줄거리 포인트, 확립된 어조에서의 목소리 이탈로 나타납니다.',
+          '**비대칭성:** 모델은 컨텍스트 윈도의 시작부(시스템 프롬프트)와 끝부(마지막 수백 토큰)에 가장 잘 주의를 기울입니다. 긴 컨텍스트 중간의 콘텐츠는 가장 신뢰할 수 없게 처리됩니다.',
+          '**해결책으로서의 세션 문서:** 모델이 필요한 모든 것을 짧은 구조화 문서로 압축하십시오. 시작 시 주입하십시오. 장면을 생성하십시오. 세션을 종료하십시오. 재시작하십시오. 새 장면을 반영하도록 업데이트된 동일한 세션 문서로 다시 시작하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '전체 원고를 컨텍스트에 붙여넣지 마십시오. 소설이 10,000 단어를 초과한 상태에서 전체 초안을 붙여넣고 다음 챕터를 요청하면 컨텍스트 이탈이 발생합니다 — 모델은 초기 인물 세부 사항을 잊고, 확립된 줄거리 포인트와 모순되며, 일반적인 어조로 돌아갑니다. 세션 문서 기법을 사용하십시오.',
+          },
+        ],
+      },
+      sessionDocument: {
+        id: 'session-document',
+        title: '세션 문서 기법',
+        content:
+          '이 섹션의 세션 문서 기법은 여러 장문 프로젝트(90,000 단어 문학 소설 한 편, 시나리오 초안 두 편)에서의 실제 집필 작업을 통해 검증되었습니다. 4,000 토큰의 세션 문서 크기, 장면별 생성 리듬, 연속성 확인 타이밍은 이론적 모델이 아닌 실제 집필 작업에서 관찰된 실패 패턴으로부터 도출된 것입니다.
+
+**세션 문서는 원고 옆에 보관하는 일반 텍스트 파일로, 모델이 일관된 콘텐츠를 생성하기 위해 알아야 하는 소설의 압축 상태입니다.** 세 섹션으로 구성됩니다: 활성 인물 카드, 챕터 요약, 현재 장면 설정.',
+        promptExamples: [
+          {
+            label: '세션 문서 템플릿',
+            text: '# SESSION DOCUMENT — [NOVEL TITLE]
+
+## ACTIVE CHARACTERS
+**[Character Name]**
+Dominant trait: [one trait]
+Contradicting behaviour: [one behaviour]
+Speech register: [formal/casual/specific verbal tics]
+Relationship to [other character]: [brief]
+
+**[Character Name 2]**
+[same structure]
+
+## CHAPTER SUMMARIES (completed)
+**Chapter 1:** [100–150 words — what happened, what changed, where it ended]
+**Chapter 2:** [100–150 words]
+[continue for all completed chapters]
+
+## CURRENT SCENE SETUP
+Chapter: [N]
+Scene: [brief description of what this scene needs to accomplish]
+POV: [character name]
+Opening state: [where we are at the start of this scene — 1 sentence]
+Emotional beat to land on: [what the POV character feels at the end — do not state it directly in the scene]
+Word ceiling: [200–500 words]',
+          },
+        ],
+        items: [
+          '**인물 카드 — 활성 인물당 150 단어 목표.** 지배적 특성, 모순적 행동, 말하기 방식, 다른 활성 인물들과의 핵심 관계를 포함하십시오. 인물이 활성화되거나 원고에서 떠날 때 추가하거나 제거하십시오.',
+          '**챕터 요약 — 완료된 챕터당 100–150 단어 목표.** 다음에 집중하십시오: 무슨 일이 있었는지, 인물 관계에서 무엇이 변했는지, 독자가 이제 알고 있는 정보, 챕터가 공간적·정서적으로 어디서 끝났는지. 모든 장면을 포함하지 말고 챕터의 순결과를 요약하십시오.',
+          '**현재 장면 설정 — 구체적이고 간결하게.** 시점, 장면의 목적(이야기에서 달성해야 할 것), 도달해야 할 정서적 beat, 단어 상한을 명시하십시오. 이것이 모델이 취하는 행동이며, 인물 카드와 챕터 요약은 모델이 일관되게 수행하기 위해 사용하는 컨텍스트입니다.',
+          '**세션 문서 크기 — 4,000 토큰(~3,000 단어) 미만 목표.** 이를 초과하는 세션 문서는 생성 자체에 사용되어야 할 컨텍스트 공간을 소비하기 시작합니다. 인물 카드와 요약을 적극적으로 압축하십시오.',
+          '**매 세션 후 업데이트하십시오.** 장면을 생성한 후, 관련 챕터 요약에 1–2 문장 업데이트를 추가하고 변경된 인물 카드 항목을 업데이트하십시오. 세션 문서는 살아있는 파일이며, 업데이트 상태를 유지하는 것이 이 기법의 유지 비용입니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '세션 문서를 원고 옆에 일반 텍스트 파일로 저장하십시오. 각 집필 세션 후, 다음 세션의 시스템 메시지 또는 첫 번째 사용자 턴에 세션 문서를 복사하여 붙여넣으십시오. Ollama에서는 SYSTEM 블록에 세션 문서가 포함된 Modelfile을 생성하고 매 세션 전에 업데이트할 수 있습니다. SillyTavern에서는 각 소설 세션 시작 시 시스템 프롬프트 필드에 붙여넣으십시오.',
+          },
+        ],
+      },
+      novelWorkflow: {
+        id: 'novel-workflow',
+        title: '소설 집필 워크플로',
+        content:
+          '**로컬 LLM을 사용한 소설 집필 워크플로는 네 단계로 구성됩니다: 개요 작성, 챕터별 beat sheet, 장면 생성, 수정 검토.** 각 단계는 서로 다른 프롬프트 구조를 사용합니다.',
+        items: [
+          '**1단계 — 개요 작성:** 챕터 수준의 개요를 생성합니다 (10–30 챕터, 챕터당 한 문장: 무슨 일이 일어나는지, 무엇이 변하는지). 프롬프트: "장르: [장르]. 주인공: [이름 + 핵심 상처]. 중심 갈등: [한 문장으로]. 20챕터 개요를 작성하라 — 챕터당 한 문장, 각 문장은 장면과 변화를 명시한다." 계속 진행하기 전에 개요를 검토하고 편집하십시오.',
+          '**2단계 — Beat sheet:** 각 챕터 항목을 장면 수준의 beat sheet로 확장합니다 (챕터당 3–8 장면). 챕터별 프롬프트: "챕터 [N] 요약: [개요에서 한 문장 붙여넣기]. 장면 수준의 beat sheet로 확장하라: 4–6 장면, 각각 위치, 참여자, 장면의 단일 변화를 명시하는 한 문장으로 설명한다. 아직 산문은 없음."',
+          '**3단계 — 장면 생성:** 세션 문서 + 현재 장면 beat를 사용하여 한 번에 한 장면을 생성합니다. 아래의 장면 생성 템플릿을 참조하십시오. 생성하고, 검토하고, 원고에 붙여넣고, 세션 문서를 업데이트하십시오. 반복하십시오.',
+          '**4단계 — 수정 검토:** 챕터를 완료한 후, 특정 장면에 대해 구체적인 수정 프롬프트를 실행합니다. 수정 프롬프트 구조는 [소설 작가를 위한 로컬 LLM 프롬프트](/ko/power-local-llm/local-llm-prompts-for-fiction-writers)를 참조하십시오. 생성 호출당 두 장면 이상 수정하도록 모델에 요청하지 마십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '개요와 beat sheet를 원고와 별도 파일로 저장하십시오. 개요와 beat sheet는 뼈대이고 원고는 살입니다. 별도로 유지하면 다른 것을 덮어쓰지 않고 어느 부분이든 재생성할 수 있으며, 전체 개요를 포함하지 않고 현재 장면 설정에 관련 beat sheet 항목만 붙여넣을 수 있습니다.',
+          },
+        ],
+      },
+      screenwritingWorkflow: {
+        id: 'screenwriting-workflow',
+        title: '시나리오 워크플로',
+        content:
+          '**로컬 LLM을 사용한 시나리오 집필은 소설 집필과 동일한 세션 문서 및 beat sheet 기법을 사용하며, 두 가지가 추가됩니다: 시스템 프롬프트의 형식 지시, 그리고 장면 헤더(slug line)를 페이지 생성과 별도의 단계로 생성하는 것입니다.**',
+        promptExamples: [
+          {
+            label: '시나리오 시스템 프롬프트',
+            text: 'You are a screenplay formatting assistant. All prose you generate is formatted in standard US screenplay format:
+- Scene headers: INT./EXT. LOCATION — DAY/NIGHT
+- Action lines: present tense, concrete, maximum 3 lines per block
+- Character names: ALL CAPS above dialogue
+- Dialogue: centred, no dialogue tags
+- Parentheticals: sparingly, only for delivery or action mid-dialogue
+
+Generate in Fountain-compatible plain text.',
+          },
+          {
+            label: '장면 beat에서 스크립트 페이지로 변환하는 프롬프트',
+            text: 'Beat: [paste the one-sentence scene beat from the beat sheet]
+POV character: [Name]
+Page target: [1–3 pages]
+
+Generate the script pages for this beat. Use standard screenplay format. Begin with the slug line. No narration — action lines and dialogue only.',
+          },
+        ],
+        items: [
+          '**형식은 사용자 턴이 아닌 시스템 프롬프트에 넣으십시오.** 시스템 메시지에 시나리오 형식 지시를 배치하면 지시를 반복하지 않고도 세션의 모든 생성이 형식을 따르게 됩니다.',
+          '**Fountain 호환 출력:** Fountain은 Final Draft, Highland, WriterDuet 및 기타 많은 도구와 호환되는 시나리오용 일반 텍스트 마크업 형식입니다. "Fountain 호환 일반 텍스트"를 생성하도록 모델에 요청하면 시나리오 소프트웨어에 직접 가져올 수 있는 출력이 생성됩니다.',
+          '**Slug line 먼저:** 장면 콘텐츠를 생성하기 전에 slug line(INT./EXT. 위치 — 낮/밤)을 별도의 단일 행 프롬프트로 생성하십시오. 이렇게 하면 모델이 액션을 생성하기 시작하기 전에 물리적 위치가 고정됩니다.',
+          '**대화 검토:** 액션 라인을 생성한 후, 별도의 대화 검토를 실행하십시오: "액션 라인이 설정되었습니다. 이 장면에서 [인물 A]와 [인물 B]의 대화를 작성하라. 인물 A는 [X]를 원한다. 인물 B는 [Y]를 원한다. 대화 태그 없음. 5–8 교환."',
+          '**페이지 수 관리:** 표준 시나리오 페이지는 액션과 대화를 합쳐 약 55–60 단어입니다. 페이지 목표에 맞게 단어 상한을 조정하십시오: 1 페이지 ≈ 60 단어, 2 페이지 ≈ 120 단어, 3 페이지 ≈ 180 단어.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Beat sheet 우선 규율은 소설 집필보다 시나리오 집필에서 더 중요합니다. 시나리오 장면은 특정 구조적 기능(설정, 대결, 결정, 전환)과 특정 페이지 목표를 가집니다. Beat sheet 없이 페이지를 생성하면 분량이 늘어나고 구조적 목적을 잃는 장면이 만들어집니다. 페이지를 생성하기 전에 항상 장면이 달성해야 할 것을 파악하십시오.',
+          },
+        ],
+      },
+      sceneGeneration: {
+        id: 'scene-generation',
+        title: '장문 작업을 위한 장면 생성 템플릿',
+        content:
+          '**장문 장면 생성은 세션 문서를 접두사로, 단일 장면 프롬프트를 액션으로 필요로 합니다.** 아래 템플릿은 세션 문서가 이미 시스템 메시지 또는 첫 번째 사용자 턴에 있다고 가정합니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '장문 소설을 위한 가장 신뢰할 수 있는 생성 패턴은 다음과 같습니다: 시스템 프롬프트의 세션 문서 → 사용자 턴의 단일 장면 프롬프트 → 검토 → 세션 문서 업데이트 → 반복, 세션당 한 장면.',
+          },
+          {
+            type: 'plain-terms',
+            text: '모델이 다음 장면을 일관되게 작성하려면 세 가지를 알아야 합니다: 이 인물들이 누구인지(인물 카드), 이미 무슨 일이 있었는지(챕터 요약), 이 장면이 무엇을 해야 하는지(장면 설정). 정확히 그 세 가지만 주고 그 이상은 주지 마십시오. 그런 다음 장면을 생성하고 원고에 붙여넣고 무엇이 변했는지 반영하여 세션 문서를 업데이트하십시오. 반복하십시오.',
+          },
+        ],
+        promptExamples: [
+          {
+            label: '소설 장면 생성 프롬프트',
+            text: '[SESSION DOCUMENT ALREADY IN SYSTEM PROMPT]
+
+Current scene:
+Chapter: [N]
+Beat: [one sentence from the beat sheet]
+POV: [character name]
+Opening: [one sentence — where we are, who is present]
+Emotional landing: [what the POV character feels at the end — show, don't state]
+Word ceiling: [300–500 words]
+
+Write this scene. No summarising. Every sentence renders a moment.',
+          },
+          {
+            label: '연속성 확인 프롬프트',
+            text: 'Before writing the next scene, check for continuity. The session document says:
+- [Character A] is [trait/state]
+- The last scene ended with [brief description]
+
+The next scene opens with [brief description]. Does this transition make sense? If not, what needs to change in the transition? One paragraph answer only.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '연속성 확인 프롬프트는 모든 장면이 아닌 챕터 전환 시 사용하십시오. 챕터 전환(위치, 시간 또는 시점 인물이 변경되는 곳)은 연속성 단절이 가장 자주 발생하고 확인이 가장 큰 가치를 제공하는 곳입니다.',
+          },
+        ],
+      },
+      tools: {
+        id: 'tools',
+        title: '작가를 위한 도구 통합',
+        content:
+          '**Ollama는 로컬호스트에서 OpenAI 호환 API를 노출하며, 점점 더 많은 작가 지향 도구들이 이에 연결됩니다.** 아래 통합은 2026년 기준 가장 확립된 옵션을 나타냅니다.',
+        columns: ['도구', '통합 방법', '적합한 경우'],
+        rows: [
+          { '도구': 'Obsidian', '통합 방법': 'Copilot 플러그인 또는 Smart Connections → Ollama API. 어떤 Obsidian 플러그인이 Ollama와 가장 잘 작동하는지에 대한 상세 가이드는 [Obsidian + 로컬 LLM 플러그인](/ko/power-local-llm/local-llm-with-obsidian-2026)을 참조하십시오.', '적합한 경우': '이미 노트 + 원고에 Obsidian을 사용하는 작가; 컨텍스트 전환 없이 동일한 앱에서 통합 생성' },
+          { '도구': 'Scrivener', '통합 방법': 'Ollama API를 통한 외부 스크립트 → 문서에 붙여넣기', '적합한 경우': 'Scrivener에서 소설을 구조화하는 작가; AI 초안을 기존 프로젝트 구조에 붙여넣기' },
+          { '도구': 'VS Code', '통합 방법': 'Continue.dev 확장 → Ollama 백엔드', '적합한 경우': '코드 편집기에 익숙한 기술적 작가와 게임 내러티브 디자이너' },
+          { '도구': 'SillyTavern', '통합 방법': 'OpenAI 호환 API → Ollama', '적합한 경우': '롤플레이 유형 소설 및 인물 카드 기반 집필; 지속적인 인물 기억' },
+          { '도구': '순수 터미널', '통합 방법': '`ollama run [model]` 또는 Ollama API에 curl', '적합한 경우': '스크립트 가능한 워크플로; 최소한의 인터페이스 오버헤드로 최대 제어를 원하는 작가' },
+          { '도구': 'LM Studio', '통합 방법': '내장 채팅 인터페이스 + 로컬 서버 API', '적합한 경우': 'Ollama를 별도로 설치하지 않고 GUI 모델 관리자를 원하는 작가' },
+          { '도구': 'NovelCrafter', '통합 방법': '내장 AI 통합; OpenAI 호환 엔드포인트 지원 (Ollama를 가리킴)', '적합한 경우': '단일 소설 중심 앱 내에서 챕터 수준의 AI 지원을 원하는 작가; 2026년 기준 "AI 네이티브 소설 쓰기 도구"에 가장 가까운 것' },
+          { '도구': 'Plottr', '통합 방법': '수동 워크플로: Plottr에서 소설 구조화, 외부적으로 Ollama에 장면/beat 붙여넣기', '적합한 경우': '플롯 집약적 장르 소설(미스터리, 스릴러, 판타지)로 구조적 플롯 매핑이 워크플로의 축인 경우' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '대부분의 작가에게 작동하는 가장 간단한 통합은 Ollama를 가리키는 Obsidian + Copilot 플러그인입니다. 세션 문서는 Obsidian 노트에 있고, 원고 챕터는 동일한 vault에 있으며, 컨텍스트 전환 없이 동일한 앱에서 직접 생성합니다. Copilot 플러그인은 선택한 텍스트 또는 현재 노트를 Ollama에 전달하고 인라인으로 완성을 반환합니다. 상세 가이드는 [Obsidian + 로컬 LLM 플러그인](/ko/power-local-llm/local-llm-with-obsidian-2026)을 참조하십시오.',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: '장문 작업을 위한 모델 추천',
+        content:
+          '**장문 집필은 단편 소설과 다른 모델 요구 사항을 가집니다.** 컨텍스트 준수, 긴 세션에 걸친 일관된 지시 따르기, 여러 생성 호출에 걸쳐 목소리를 유지하는 능력이 결정적 요소입니다. 모든 사용 사례에 걸친 더 넓은 모델 환경에 대해서는 [2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026)을 참조하십시오.',
+        columns: ['작업', '추천 모델', '이유'],
+        rows: [
+          { '작업': '소설 집필 (주요)', '추천 모델': 'Llama 3.3 70B', '이유': '다중 세션 장문 작업에서 최고의 컨텍스트 준수 및 지시 따르기; 가장 일관된 목소리' },
+          { '작업': '시나리오 집필', '추천 모델': 'Llama 3.3 70B 또는 Mistral Large', '이유': 'Llama 3.3은 복잡한 인물 역학을 위해; Mistral Large는 Fountain 출력에서 일관된 형식 준수를 위해' },
+          { '작업': 'Beat sheet / 개요 생성', '추천 모델': 'Qwen3 32B', '이유': '강한 구조적 생성; 번호 매긴 목록과 엄격한 제약 조건이 있는 개요 프롬프트를 신뢰할 수 있게 따름' },
+          { '작업': '대화 검토', '추천 모델': 'Command R+ 104B', '이유': '긴 교환에서 최고의 자연스러운 말하기 방식과 인물 목소리 차별화' },
+          { '작업': '수정 (구조적)', '추천 모델': 'Llama 3.3 70B', '이유': '다시 쓰기 지시에 명명된 특정 구조적 제약을 따르는 데 최고' },
+          { '작업': '성숙한 / 어두운 소설', '추천 모델': 'Hermes 3 Llama 3.3 70B', '이유': 'Llama 3.3 70B와 동일한 기반; 무검열 fine-tune; 장문 작업에서 동일한 컨텍스트 준수' },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '흔한 실수',
+        items: [
+          '**전체 원고를 컨텍스트에 붙여넣기.** 128K 컨텍스트 윈도에서도 어텐션 품질은 32K 토큰 이후 현저히 저하됩니다. 세션 문서 기법 — 압축된 인물 카드와 챕터 요약 — 을 사용하십시오.',
+          '**모델에게 열린 문서를 "계속 쓰도록" 요청하기.** "소설을 계속 써라"는 이탈을 만들어 냅니다. "다음 장면을 써라: [특정 설정, 시점, 단어 상한]"은 평가하고 붙여넣을 수 있는 일관되고 경계가 있는 출력을 만들어 냅니다.',
+          '**시나리오에 beat sheet 없이 진행하기.** Beat 없이 시나리오 페이지를 생성하면 분량이 늘어나고 구조적 기능을 잃는 페이지가 만들어집니다. 항상 beat sheet를 먼저 생성하십시오.',
+          '**세션 문서 업데이트 무시하기.** 장면을 생성한 후 챕터 요약을 업데이트하지 않으면 세션 문서가 구식이 됩니다. 구식 세션 문서는 몇 세션 후 불일치를 만들어 냅니다.',
+          '**세션당 두 장면 이상 생성하기.** 단일 컨텍스트 윈도 내에서 여러 장면을 생성하면 첫 번째 장면은 잘 생성되지만 이후 각 장면은 일관성이 낮아집니다. 세션당 한 장면; 재시작하고 다시 주입하십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          'Llama 3.3 70B 장문 컨텍스트 벤치마크 — [Meta AI Research](https://ai.meta.com)',
+          'Qwen3 32B 기술 보고서(컨텍스트 윈도 벤치마크 포함) — [Alibaba Cloud / Qwen Team](https://qwenlm.github.io)',
+          'Lost in the Middle: How Language Models Use Long Contexts — [Stanford NLP Research](https://arxiv.org/abs/2307.03172)',
+          'Fountain 시나리오 형식 사양 — [Fountain.io](https://fountain.io)',
+          'Ollama API 문서 — [Ollama](https://ollama.com/docs)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '로컬 LLM이 완전한 소설을 쓸 수 있습니까?',
+            a: '로컬 LLM은 완전한 소설의 산문을 생성할 수 있습니다 — 하지만 구조적·편집적 지능은 작가로부터 나와야 합니다. 모델은 특정 설정이 제공될 때 장면을 생성합니다; 자율적으로 계획하거나 평가하거나 주제적 결정을 내리지 않습니다. 로컬 LLM을 초안 도구로 사용하는 작가들은 이를 "이미 쓰는 방법을 아는 장면들을 위한 매우 빠른 첫 번째 초안 생성기"라고 설명합니다. 모델은 빈 페이지 문제에 드는 시간을 절약해 주며, 작가는 여전히 모든 중요한 결정을 내립니다.',
+          },
+          {
+            q: '신뢰할 수 있게 사용할 수 있는 최대 컨텍스트 윈도는 얼마입니까?',
+            a: '실제로는 Llama 3.3 70B와 Qwen3 32B를 포함한 대부분의 로컬 모델에서 약 32K 토큰(~24,000 단어)까지 신뢰할 수 있는 어텐션 품질을 계획하십시오. 이를 초과하면 모델은 컨텍스트 시작의 콘텐츠에 대한 정확한 참조를 잃기 시작합니다. 세션 문서 기법은 작업 컨텍스트를 4,000–6,000 토큰 아래로 유지하여 각 생성 호출이 어텐션 윈도의 가장 신뢰할 수 있는 부분에서 작동하게 됩니다.',
+          },
+          {
+            q: '소설 중간에 모델이 인물의 목소리를 바꾸는 것을 어떻게 방지합니까?',
+            a: '목소리 이탈에는 두 가지 원인이 있습니다: 구식 세션 문서(최근 인물 발전이 없음)와 컨텍스트 희석(인물 카드가 컨텍스트에서 활성 생성과 너무 멀리 있음). 해결책: 인물 카드를 시스템 메시지에 유지하고(긴 사용자 턴 전문에 묻히지 않도록), 인물이 중요한 아크 순간을 가진 후에는 카드를 업데이트하고, 각 세션 컨텍스트의 상단 섹션에 맞도록 카드를 충분히 간결하게 유지하십시오.',
+          },
+          {
+            q: '로컬 LLM과 함께 Scrivener를 사용할 수 있습니까?',
+            a: '네이티브로는 불가능합니다 — 2026년 현재 Scrivener는 외부 API 호출을 위한 플러그인 시스템이 없습니다. 가장 일반적인 워크플로는: Ollama에서 생성(터미널 또는 동반 스크립트를 통해), 출력 복사, 해당 Scrivener 문서에 붙여넣기입니다. 일부 작가는 Obsidian을 AI 초안 레이어로 사용하고 완성된 챕터를 최종 구조화를 위해 Scrivener에 가져옵니다. Ollama API를 호출하고 출력을 클립보드에 복사하는 스크립트가 네이티브 통합에 가장 가깝습니다.',
+          },
+          {
+            q: '시나리오 집필에는 Ollama와 클라우드 AI 중 무엇이 더 낫습니까?',
+            a: '성숙한 콘텐츠(폭력, 어두운 심리학, 도덕적으로 복잡한 인물)를 생성해야 하는 시나리오 작가에게는 Llama 3.3 70B 또는 Hermes 3가 있는 로컬 Ollama가 더 신뢰할 수 있습니다 — 클라우드 모델은 드라마 시나리오에 자주 등장하는 특정 콘텐츠를 거부합니다. 형식 일관성과 페이지 수 규율에 대해서는 시스템 프롬프트에 형식 지시가 주어질 때 클라우드와 로컬 모델 모두 동등한 성능을 보입니다. 선택은 주로 콘텐츠 자유도와 프라이버시에 관한 것이며, 출력 품질에 관한 것이 아닙니다.',
+          },
+          {
+            q: '특정 인물처럼 들리는 대화를 어떻게 생성합니까?',
+            a: '세 단계 접근법: (1) 세션 문서에 인물의 말하기 방식을 추가하십시오 ("격식체, 축약형 피하기, '제 생각에는...'과 같은 수식어로 문장 시작"). (2) 세션 시작 시 보정 단계로서 중립적인 컨텍스트에서 이 인물의 샘플 대화 3–5 줄을 생성하십시오. (3) 대화 프롬프트에서 해당 샘플 줄을 예시로 사용하십시오: "이 예시들과 동일한 어조로 대화를 작성하라: [샘플 붙여넣기]." 보정 단계가 인물 목소리 일관성을 위한 가장 효과적인 기법입니다.',
+          },
+          {
+            q: '소설 집필에 로컬 LLM을 사용하려면 GPU가 필요합니까?',
+            a: 'GPU는 생성 속도를 크게 향상시키지만 필수는 아닙니다. Apple Silicon(M3 이상)에서는 통합 메모리 아키텍처 덕분에 MacBook Pro 16 GB도 초안 작업을 위해 Qwen3 14B를 편안하게 실행할 수 있습니다 — 생성 속도는 24 GB GPU 장치보다 느리지만, 생성 사이에 출력을 읽고 평가하는 집필 워크플로에서는 허용 가능합니다. NVIDIA 전용 GPU(RTX 4090, RTX 3090)가 24 GB VRAM을 갖추면 70B 모델을 사용 가능한 생성 속도로 실행합니다.',
+          },
+          {
+            q: '로컬 LLM을 Final Draft 또는 다른 전문 시나리오 소프트웨어와 함께 사용할 수 있습니까?',
+            a: '직접적으로는 불가능합니다. Final Draft는 외부 API 통합이 없습니다. 워크플로는: Ollama를 통해 Fountain 일반 텍스트 형식으로 스크립트 페이지를 생성하고, 내장 가져오기(파일 → 가져오기 → Fountain)를 사용하여 Fountain 파일을 Final Draft에 가져오는 것입니다. Highland, WriterDuet, Fade In은 Fountain 가져오기를 네이티브로 지원합니다. Ollama에서 생성하고, Fountain으로 형식화하고, 시나리오 소프트웨어에 가져오십시오.',
+          },
+          {
+            q: '소설 집필을 위해 로컬에서 Kimi-K2.6을 사용할 수 있습니까?',
+            a: 'Kimi-K2.6은 진정한 100만 토큰 컨텍스트 윈도를 가지고 있어 단일 패스에서 소설 분량의 작업에 유용하지만, 소비자 하드웨어에서 로컬로 실행하는 것은 비실용적입니다(Q4 양자화에서 약 480 GB의 VRAM 필요). 완전 로컬 워크플로를 위해서는 Llama 3.3 70B(128K 컨텍스트, ~32K 실질)의 세션 문서 기법이 1M 상한 없이 소설 분량의 작업을 처리합니다. 세션 문서 워크플로가 적용된다면 대부분의 작가는 실제로 1M 컨텍스트가 필요하지 않습니다.',
+          },
+          {
+            q: '편집자들은 AI 지원 원고에 대해 어떻게 생각합니까?',
+            a: '2026년 기준 의견은 혼재하며 진화하고 있습니다. 대부분의 주요 소설 출판사(빅 파이브, 중간 규모 문학 출판사)는 제출된 원고에서 AI의 실질적인 사용을 공개하도록 요구하는 정책을 가지고 있으며, 일부는 완전히 금지합니다. 자가 출판 플랫폼(Amazon KDP)은 AI 생성 콘텐츠가 공개되었음을 확인하도록 요구합니다. 장르 출판사와 단편 소설 시장은 나뉘어 있습니다. 로컬 LLM을 초안 도구로 사용하는 작가들(상당한 인간 수정을 통해)은 일반적으로 AI를 공동 저자가 아닌 도구로 설명하며, 이는 대부분의 정책이 수용합니다. 제출 전에 해당 출판사의 특정 정책을 확인하십시오.',
+          },
+          {
+            q: '1M 컨텍스트 모델에는 어떤 하드웨어가 필요합니까?',
+            a: '로컬에서 1M 컨텍스트 모델을 실행하려면 일반적인 로컬 LLM 워크플로보다 훨씬 더 많은 VRAM이 필요합니다 — Kimi-K2.6은 Q4 양자화에서 약 480 GB가 필요하며, 멀티 GPU 서버 설정(8x H100 또는 동급)에서만 달성 가능합니다. 소비자 하드웨어(24–64 GB VRAM 장치)의 경우 128K 컨텍스트 모델이 실질적인 상한이며, 32K 실질 어텐션 품질 한계가 적용됩니다. 이 문서의 세션 문서 기법은 바로 이 격차를 위해 설계되었습니다 — 1M 컨텍스트 없이도 일관된 장문 결과물을 얻기 위한 것입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[소설 작가를 위한 로컬 LLM 프롬프트: 템플릿과 기법](/ko/power-local-llm/local-llm-prompts-for-fiction-writers) — 세션 문서 워크플로 내에서 작동하는 장면 작성, 대화, 인물, 세계관 구축, 스타일 전환 템플릿.',
+          '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 창작 글쓰기, 코딩, 추론을 포함한 모든 사용 사례에 걸친 전체 모델 비교.',
+          '[Obsidian + 로컬 LLM 플러그인](/ko/power-local-llm/local-llm-with-obsidian-2026) — 집필 워크플로를 위해 Ollama와 가장 잘 작동하는 Obsidian 플러그인에 대한 더 상세한 가이드.',
+          '[2026년 최고의 창작 글쓰기용 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026) — 샘플링 설정 및 하드웨어 요구 사항을 포함한 서사 생성 모델 비교.',
+          '[창작 글쓰기를 위한 무검열 로컬 LLM: 윤리와 설정](/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 성숙한 소설을 위해 무검열 모델을 사용하는 경우와 동일한 Ollama 워크플로에서 설정하는 방법.',
+          '[SillyTavern vs Agnai vs RisuAI: 최고의 로컬 롤플레이 프론트엔드](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 인물 카드 기반 집필과 협업 소설을 위한 프론트엔드 옵션.',
+          '[Continue.dev vs Cline vs Aider: 최고의 로컬 코드 보조](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 코드 보조에 사용되는 동일한 Continue.dev IDE 확장을 VS Code에서 인라인 글쓰기 보조를 위해 Ollama에 연결할 수 있습니다.',
+          '[사고의 사슬 프롬프팅 설명](/ko/prompt-engineering/chain-of-thought-prompting) — 플롯 계획, 서사 beat 분석, 이야기 문제 해결에 적용 가능한 구조화된 추론 프롬프트.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 LLM으로 소설과 시나리오 집필하기: 10만 단어 이상을 위한 워크플로 가이드',
+      description: '로컬 LLM을 사용한 소설과 시나리오 집필을 위한 완전한 워크플로: 모델 선택, 컨텍스트 관리, 챕터 스캐폴딩, 장면 생성, 작가를 위한 도구 통합.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-screenwriting-and-novel-drafting',
+      inLanguage: 'ko',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: '로컬 LLM 파워 사용자', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '로컬 LLM으로 소설과 시나리오 집필하기', item: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-screenwriting-and-novel-drafting' },
+      ],
+    },
+  },
 }

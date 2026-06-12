@@ -2895,4 +2895,382 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
-}
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Easiest Desktop Apps',
+    slug: 'local-ai-app-non-technical-users',
+    title: '비전문가를 위한 로컬 AI: 터미널 없이 바로 작동하는 앱 5가지',
+    seoTitle: '터미널 없이 작동하는 로컬 AI 앱 5가지 (2026)',
+    intro: 'GPT4All, Jan, Msty, AnythingLLM Desktop, LM Studio는 비전문가도 10분 안에 설치하고 바로 사용할 수 있는 로컬 AI 앱 5종입니다 — 터미널, Python, Docker가 전혀 필요 없습니다. 각 앱은 서로 다른 초보자 프로필에서 가장 뛰어납니다. 비전문가가 GPT4All 앞에 앉으면 4번의 클릭으로 채팅을 시작할 수 있고, Jan은 완전 무텔레메트리를 제공하며, Msty는 가장 세련된 인터페이스를 갖추고 있고, AnythingLLM Desktop은 문서 드래그 앤 드롭 채팅을, LM Studio는 Mac에서 최고의 경험을 제공합니다.',
+    metaDescription: '터미널 없음, Python 없음, Docker 없음: 비전문가도 10분 안에 설치할 수 있는 로컬 AI 앱 5가지. 2026년 실제 초보자와 함께 테스트 완료.',
+    twitterDescription: '터미널을 한 번도 열지 않고 작동하는 로컬 AI 앱 5가지 — 초보자 프로필별 순위. 2026년 5월 테스트 완료.',
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
+    audience: '완전 초보자 및 비전문가 사용자 — 부모, 기자, 학생, 소규모 사업주 등 터미널을 한 번도 열지 않고 ChatGPT의 프라이버시 대안을 원하는 분들.',
+    readTime: '12분 분량',
+    educationalLevel: 'Beginner',
+    primaryTerm: '비전문가용 로컬 AI 앱',
+    targetKeywords: [
+      '로컬 llm 설치 방법 비전문가',
+      '가장 쉬운 로컬 ai 앱',
+      '터미널 없는 로컬 ai',
+      '초보자용 로컬 llm 앱',
+      '부모를 위한 로컬 ai',
+    ],
+    leadAnswerBlock: '**터미널을 한 번도 사용한 적이 없다면 GPT4All을 설치하십시오 — 다운로드부터 첫 번째 채팅까지 4번의 클릭만으로 가능하며, 5년 된 노트북에서도 원활히 작동하는 로컬 AI 앱입니다. 완전 무텔레메트리를 원한다면 Jan을 선택하십시오. 가장 세련된 인터페이스를 원한다면 Msty를 선택하십시오. 드래그 앤 드롭 문서 채팅을 원한다면 AnythingLLM Desktop을 선택하십시오. Mac 사용자라면 LM Studio를 선택하십시오. 다섯 가지 모두 무료이며, 최초 다운로드 후 오프라인으로 작동하고, 대화 내용을 어디에도 전송하지 않습니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '비전문가가 처음 설치해야 할 로컬 AI 앱은 무엇입니까?',
+        answer: 'GPT4All을 설치하십시오. 다운로드 용량이 가장 작고(~290 MB), GPU 없이 8 GB RAM 노트북에서도 작동하며, 4번의 클릭으로 첫 번째 채팅에 도달합니다. 특별히 프라이버시, 문서 채팅, 세련된 인터페이스가 필요하거나 Mac 사용자라면 아래 프로필별 순위를 참조하십시오 — 각 프로필마다 다른 최적 선택이 있습니다.',
+        bullets: [
+          'GPT4All — 완전 초보자에게 최적; 가장 작은 설치 용량; 저사양 하드웨어에서도 작동; 4번 클릭으로 첫 채팅.',
+          'Jan — 프라이버시를 중시하는 초보자에게 최적; 완전 무텔레메트리; 완전 오픈소스.',
+          'Msty — "예쁜 인터페이스를 원한다"에 최적; 분할 패널 현대 UI; 내장 문서 채팅.',
+          'AnythingLLM Desktop — Windows 스타일의 친숙한 인터페이스와 드래그 앤 드롭 문서 폴더를 원하는 사용자에게 최적.',
+          'LM Studio — Mac 사용자에게 최적; Apple Silicon에 최적화; M 시리즈 칩에서 5가지 중 가장 빠름.',
+          '다섯 가지 모두 최초 모델 다운로드 후 완전 오프라인으로 작동합니다.',
+          '다섯 가지 모두 명령줄, Python, Docker, 관리자 권한, 신용카드가 필요하지 않습니다.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '이 가이드는 누구를 위한 것입니까?', anchor: '#who-should-use' },
+      { label: '#1 GPT4All — 완전 초보자에게 최적', anchor: '#gpt4all' },
+      { label: '#2 Jan — 프라이버시를 중시하는 초보자에게 최적', anchor: '#jan' },
+      { label: '#3 Msty — "예쁜 인터페이스"를 원하는 분에게 최적', anchor: '#msty' },
+      { label: '#4 AnythingLLM Desktop — 친숙한 인터페이스를 원하는 분에게 최적', anchor: '#anythingllm' },
+      { label: '#5 LM Studio — Mac 사용자에게 최적', anchor: '#lm-studio' },
+      { label: '자주 겪는 문제', anchor: '#stumbling-blocks' },
+      { label: '처음 10분', anchor: '#first-ten-minutes' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 읽기 자료', anchor: '#related-reading' },
+    ],
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: '터미널, Python, Docker 없이도 GPT4All, Jan, Msty, AnythingLLM Desktop, LM Studio 중 하나를 10분 안에 설치하여 완전 오프라인 로컬 AI를 실행할 수 있습니다.',
+      },
+      {
+        type: 'plain-terms',
+        text: '로컬 AI 앱은 사용자의 노트북에서 직접 실행되는 AI 프로그램입니다. ChatGPT와 달리 인터넷 연결 없이도 작동하며, 대화 내용이 외부 서버로 전송되지 않습니다. 비전문가도 일반 소프트웨어를 설치하는 것처럼 4~6번의 클릭으로 설치하고 바로 사용할 수 있습니다.',
+      },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'GPT4All은 마찰이 가장 적은 시작 옵션입니다 — 5년 된 노트북에서 다운로드부터 첫 번째 채팅까지 4번의 클릭.',
+          'Jan은 다섯 가지 중 유일하게 기본적으로 완전 무텔레메트리이며 완전 오픈소스 코드를 제공합니다.',
+          'Msty는 가장 세련된 UI와 설정 없이 사용 가능한 PDF 채팅을 갖추고 있습니다.',
+          'AnythingLLM Desktop은 친숙한 Windows 스타일의 파일/채팅 앱처럼 느껴집니다 — "문서 열기, 질문하기"에 가장 가깝습니다.',
+          'LM Studio는 Apple Silicon에서 가장 빠르며 앱 내에서 가장 큰 모델 브라우저를 제공합니다.',
+          '다섯 가지 모두 무료이며, 설치 후 오프라인으로 작동하고, 사용자의 프롬프트를 서버로 전송하지 않습니다.',
+        ],
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: '이 가이드는 누구를 위한 것입니까?',
+        content: '**이 가이드는 완전 초보자를 위한 것입니다 — 터미널을 한 번도 열어본 적 없고 앞으로도 열고 싶지 않은 분들을 위한 것입니다.** Zoom을 설치할 수 있다면 이 다섯 가지 앱 중 어떤 것이든 설치할 수 있습니다. 아래에서 해당하는 프로필을 선택하고 해당 섹션으로 바로 이동하십시오.',
+        rows: [
+          { '내 상황': '명령줄로 아무것도 실행한 적이 없으며 개인 정보가 보호되는 ChatGPT를 원합니다', '설치': 'GPT4All' },
+          { '내 상황': '개인 정보 보호가 걱정되며 완전 무텔레메트리를 원합니다', '설치': 'Jan' },
+          { '내 상황': '외관이 중요합니다. 깔끔하고 현대적인 인터페이스를 원합니다', '설치': 'Msty' },
+          { '내 상황': '주로 내 PDF, Word 문서, 메모와 채팅하고 싶습니다', '설치': 'AnythingLLM Desktop' },
+          { '내 상황': '2024년 이후 MacBook을 가지고 있으며 가장 빠른 로컬 AI를 원합니다', '설치': 'LM Studio' },
+          { '내 상황': 'RAM이 4 GB뿐이거나 Chromebook을 사용합니다', '설치': '해당 없음 — 모바일 앱 사용 권장' },
+        ],
+        columns: ['내 상황', '설치'],
+        callouts: [
+          {
+            type: 'note',
+            text: '이 앱들의 현실적인 최소 하드웨어 요건: RAM 8 GB, 여유 디스크 공간 ~5 GB. 이보다 낮은 사양이라면 모바일 앱으로 전환하십시오 — 하단의 관련 읽기 자료를 참조하십시오.',
+          },
+        ],
+      },
+      gpt4all: {
+        id: 'gpt4all',
+        title: '#1 GPT4All — 완전 초보자에게 최적',
+        content: '**GPT4All은 2026년 기준 마찰이 가장 적은 로컬 AI 앱입니다 — 290 MB 다운로드로 비전문가가 "뭘 설치해야 할지 모르겠다"에서 "내 노트북에서 AI와 대화 중"까지 10분 안에 도달할 수 있습니다.** 오픈소스(MIT 라이선스)이며 Nomic AI가 관리하고, 이 목록에서 인지 부하가 가장 낮습니다.',
+        items: [
+          '**설치 과정:** gpt4all.io에서 다운로드 → 설치 프로그램 실행 → 권장 모델 화면에서 "Llama 3.2 3B Instruct" 클릭 → 2 GB 다운로드 대기 → 채팅 시작. 총 4번의 클릭과 모델 다운로드.',
+          '**최소 하드웨어:** 5년 된 Intel 노트북(8 GB RAM, 내장 그래픽)에서 원활하게 작동합니다 — GPU가 필요하지 않습니다.',
+          '**인터페이스 명확성:** 창 하나. 왼쪽 사이드바에 채팅 목록. 가운데 패널이 대화창. 탭이 없고, 메뉴 안의 드롭다운 메뉴도 없으며, 실수로 망가뜨릴 수 있는 "고급 설정" 페이지도 없습니다.',
+          '**오류 메시지:** 문제가 발생할 경우(메모리 부족, 손상된 모델 파일) GPT4All은 하나의 제안된 해결책이 담긴 일반 언어 대화 상자를 표시합니다. 스택 트레이스가 없습니다.',
+          '**텔레메트리:** 기본적으로 비활성화되어 있습니다. 설치 중 익명 사용 공유를 선택할 수 있지만 기본값은 거부입니다.',
+          '**라이선스:** MIT — 완전 오픈소스. 소스 코드는 누구나 감사할 수 있도록 GitHub에 공개되어 있습니다.',
+          '**추천 초기 모델:** Llama 3.2 3B Instruct (Q4_0). 디스크 약 2 GB, 실행 시 RAM 4–6 GB, 내장 그래픽에서도 쾌적하게 빠릅니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '이 앱을 설치하세요: 개인 ChatGPT를 원하는 부모님, 저렴한 노트북을 가진 기자, 학생들에게 AI를 시연하는 교사, 또는 "터미널을 열어라"는 말에 "터미널이 뭔가요?"라고 반응하는 분.',
+          },
+        ],
+        image: '/images/local-ai-nontechnical-gpt4all-install-steps-ko.svg',
+        imageCaption: 'GPT4All 4단계 설치 과정: gpt4all.io에서 ~290 MB 다운로드, 설치 프로그램 실행, Llama 3.2 3B 선택(2 GB 다운로드), 채팅 시작 — 8 GB RAM 노트북에서 완전 오프라인 작동.',
+      },
+      jan: {
+        id: 'jan',
+        title: '#2 Jan — 프라이버시를 중시하는 초보자에게 최적',
+        content: '**Jan은 프라이버시 중심 옵션입니다 — 완전 무텔레메트리, 분석 SDK 없음, AGPL 라이선스 하에 완전히 감사 가능한 오픈소스 코드.** 외관과 느낌이 ChatGPT의 깔끔한 클론과 같으며, 앱을 나가지 않고 탐색할 수 있는 약 150개의 선별된 모델 카탈로그를 갖추고 있습니다.',
+        items: [
+          '**설치 과정:** jan.ai에서 서명된 설치 프로그램 다운로드 → 설치 → 앱 내 라이브러리에서 모델 선택(Hugging Face 계정 불필요, 로그인 불필요) → 채팅 시작. 총 약 5번의 클릭.',
+          '**프라이버시 입장:** 텔레메트리 없음. 분석 SDK 없음. 외부 호출 없음. 소스 코드는 AGPL 하에 GitHub에 공개 — 독립 감사인이 바이너리가 소스 코드와 일치하는지 확인할 수 있습니다.',
+          '**인터페이스:** 기본 다크 모드와 사이드바 대화 스레드가 있는 현대적인 채팅 인터페이스. 외관상 ChatGPT와 유사하지만 모든 것이 내 컴퓨터에서 실행됩니다.',
+          '**모델 브라우저:** "Hugging Face URL"로 가져오기 옵션과 함께 약 150개의 선별된 모델. LM Studio보다 부담이 없고 GPT4All보다 안내가 풍부합니다.',
+          '**내장 도구:** 문서 채팅, 웹 검색, OpenAI 호환 API 서버를 위한 선택적 확장 기능. 모두 선택 사항이며 명확하게 표시되어 있습니다.',
+          '**최소 하드웨어:** RAM 8 GB, 최신 CPU(2020년 이후). Apple Silicon과 NVIDIA GPU는 자동으로 감지되어 사용됩니다.',
+          '**추천 초기 모델:** Phi-4 Mini (~2.6 GB) — 작고 빠르며 일상적인 질문에 놀랍도록 잘 작동합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '이 앱을 설치하세요: 디지털 프라이버시를 걱정하는 분, 기밀 출처를 다루는 기자, 클라우드 API에 초안을 보낼 수 없는 법률가, 또는 "이 앱이 외부로 무엇을 보내는가?"가 위협 모델에 포함된 분.',
+          },
+        ],
+        image: '/images/local-ai-nontechnical-jan-privacy-features-ko.svg',
+        imageCaption: 'Jan 프라이버시 비교: 클라우드 AI는 분석 SDK와 함께 원격 서버로 프롬프트를 전송하지만, Jan은 완전 무텔레메트리, AGPL 하에 감사 가능한 소스 코드, 설치 후 완전 오프라인 작동을 제공합니다.',
+      },
+      msty: {
+        id: 'msty',
+        title: '#3 Msty — "예쁜 인터페이스"를 원하는 분에게 최적',
+        content: '**Msty는 시각적으로 가장 세련된 로컬 AI 앱입니다 — 나란히 대화를 비교할 수 있는 분할 패널 현대 인터페이스, 내장 문서 채팅, 원클릭 모델 설치 기능을 갖추고 있습니다.** 개인 사용에 무료이며 Windows, macOS, Linux에서 작동합니다.',
+        items: [
+          '**설치 과정:** msty.app에서 설치 프로그램 다운로드 → 설치 → 시작 화면에서 "로컬 AI" 선택 → 추천 모델 선택 → 채팅. 약 5~6번의 클릭.',
+          '**주목할 인터페이스 기능:** 분할 채팅. 같은 질문에 두 모델이 나란히 응답하게 하여 더 나은 답변을 선택할 수 있습니다. 이 목록의 다른 앱에는 기본으로 포함되지 않는 기능입니다.',
+          '**문서 채팅:** 내장되어 있습니다. PDF, DOCX 또는 폴더를 사이드바로 드래그하고 질문하십시오. 플러그인 설치가 필요 없습니다.',
+          '**지식 스택:** 문서를 "스택"에 고정하여 해당 워크스페이스의 모든 채팅이 이미 문서에 액세스할 수 있도록 할 수 있습니다 — "내 학습 메모와 대화하기"에 이상적입니다.',
+          '**최소 하드웨어:** RAM 8 GB, 2020년 이후 CPU. Apple Silicon, NVIDIA, AMD 가속을 자동으로 감지하여 사용합니다.',
+          '**라이선스:** 독점 소프트웨어, 개인 사용 무료. 클라우드 API 고급 기능에 유료 플랜이 있지만 로컬 전용 사용은 영구 무료입니다.',
+          '**추천 초기 모델:** Gemma 3 4B Instruct — 친근한 톤, 요약에 강하며 대부분의 노트북에서 작동합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '이 앱을 설치하세요: 기본 채팅 인터페이스가 못생겼다고 생각하는 디자이너, 두 모델의 응답을 나란히 비교하고 싶은 학생, 또는 AI가 처음부터 내 메모 폴더를 읽어주기를 원하는 작가.',
+          },
+        ],
+        image: '/images/local-ai-nontechnical-msty-ui-features-ko.svg',
+        imageCaption: 'Msty 기능 매트릭스: 분할 채팅(Msty 전용)은 두 모델을 나란히 표시; 지식 스택(전용 기능)은 문서를 워크스페이스에 고정 — Windows, macOS, Linux에서 개인 사용 무료.',
+      },
+      anythingllm: {
+        id: 'anythingllm',
+        title: '#4 AnythingLLM Desktop — 친숙한 인터페이스를 원하는 분에게 최적',
+        content: '**AnythingLLM Desktop은 문서 "워크스페이스"를 중심으로 구성되어 있습니다 — 어떠한 설정 없이 "폴더 열기, 질문하기"에 가장 가깝습니다.** 인터페이스는 클래식 데스크톱 앱의 왼쪽 파일 트리, 오른쪽 콘텐츠 관례를 채택하여 Windows에서 성장한 사용자에게 특히 편안합니다.',
+        items: [
+          '**설치 과정:** anythingllm.com에서 다운로드 → 설치 프로그램 실행 → 첫 실행 시 "로컬 AI 사용(API 키 없음)" 선택 → 내장 로컬 모델 선택 → 워크스페이스에 문서 드래그. 약 6번의 클릭.',
+          '**워크스페이스 모델:** 각 워크스페이스는 자체 문서 폴더와 채팅 기록입니다. 사고 모델: "이것이 세금 2026 폴더이고, 이것이 세금 2026 폴더를 아는 채팅입니다".',
+          '**문서 지원:** PDF, DOCX, TXT, Markdown, 웹 페이지 가져오기. 드래그하면 앱이 로컬로 인덱싱합니다 — 임베딩 API 계정이 필요 없습니다.',
+          '**인터페이스:** 이메일 클라이언트와 클래식 Windows 앱을 연상시키는 친숙한 3개 패널 레이아웃(워크스페이스 목록 / 문서 목록 / 채팅). 현대적인 미니멀리스트 인터페이스에 적응하지 못한 사용자의 인지 부하가 낮습니다.',
+          '**프라이버시:** 텔레메트리는 선택 사항(opt-in)입니다. 로컬 AI 옵션을 선택하면 문서 인덱싱이 완전히 내 컴퓨터에서 이루어집니다.',
+          '**최소 하드웨어:** RAM 8 GB, 워크스페이스에 수백 개의 문서가 있다면 이상적으로는 16 GB.',
+          '**추천 초기 모델:** Llama 3.2 3B Instruct 또는 Qwen3 4B — 둘 다 이 앱에서 문서 Q&A를 잘 처리합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '이 앱을 설치하세요: 계약서 폴더에 질문하고 싶은 소규모 사업주, "읽을 논문" 폴더를 가진 연구자, 현대적인 인터페이스가 혼란스럽고 Outlook과 비슷한 것을 선호하는 분.',
+          },
+        ],
+        image: '/images/local-ai-nontechnical-anythingllm-workspace-ko.svg',
+        imageCaption: 'AnythingLLM Desktop 워크스페이스 모델: 워크스페이스(왼쪽)에 문서(가운데)가 포함되고 AI가 채팅 질문(오른쪽)에 답할 때 인용합니다 — 모두 로컬에서 인덱싱, 클라우드 API 없음.',
+      },
+      lmStudio: {
+        id: 'lm-studio',
+        title: '#5 LM Studio — Mac 사용자에게 최적',
+        content: '**LM Studio는 Apple Silicon에서 다섯 가지 중 가장 빠르며 앱 내에서 가장 큰 모델 브라우저를 갖추고 있지만, 그룹에서 가장 가파른 학습 곡선을 가지고 있습니다.** 비전문가 Mac 사용자에게도 여전히 매우 접근하기 쉽지만 — Windows와 Linux에서는 GPT4All이나 Jan이 더 부드러운 첫 경험을 제공하는 경우가 많습니다.',
+        items: [
+          '**설치 과정:** lmstudio.ai에서 다운로드 → 설치 프로그램 실행 → 첫 실행 시 기본 설정 수락 → 앱 내 모델 브라우저에서 "직원 추천" 모델 선택 → 로드 → 채팅. 약 6번의 클릭과 모델 다운로드.',
+          '**Mac에서 앞서는 이유:** LM Studio에는 M 시리즈 칩에서 기존 기본값보다 15–30% 향상된 맞춤형 Apple Silicon Metal 커널이 포함되어 있습니다. 16 GB MacBook Pro에서 8B급 모델을 초당 ~38 토큰으로 스트리밍합니다.',
+          '**모델 브라우저 깊이:** Hugging Face에서 실시간으로 가져온 약 5,000개의 모델 변형, RAM/VRAM, 라이선스, 계열별 필터링 가능. Jan이나 GPT4All의 선별된 카탈로그를 벗어났을 때 유용합니다.',
+          '**내장 문서 채팅:** 예(2025년 도입), 깔끔한 드래그 앤 드롭 인터페이스.',
+          '**텔레메트리:** 기본적으로 익명 사용 이벤트가 전송됩니다. 설정 → 개인 정보 보호에서 쉽게 비활성화할 수 있습니다. 대화와 모델 파일은 절대 기기를 떠나지 않습니다.',
+          '**라이선스:** 독점 소프트웨어(개인 및 상업용 무료). 오픈소스 코드가 필수라면 Jan을 선택하십시오.',
+          '**추천 초기 모델:** 8 GB Mac에는 Phi-4 Mini; 16 GB 이상 Mac에는 Llama 3.3 8B Q4_K_M.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '이 앱을 설치하세요: Apple Silicon에서 가장 빠른 로컬 AI를 원하는 Mac 사용자, 여러 모델을 시험해보고 싶은 16 GB+ MacBook을 가진 작가, 또는 Jan이나 GPT4All의 선별된 카탈로그가 너무 작다고 생각하는 분.',
+          },
+        ],
+        image: '/images/local-ai-nontechnical-lmstudio-mac-speed-ko.svg',
+        imageCaption: 'Apple Silicon에서 LM Studio 모델 속도: Phi-4 Mini는 M3 8 GB에서 55–70 tok/s; Llama 3.3 8B Q4_K_M은 맞춤형 Metal 커널로 M3 Pro 16 GB에서 35–42 tok/s.',
+      },
+      stumblingBlocks: {
+        id: 'stumbling-blocks',
+        title: '자주 겪는 문제(및 해결 방법)',
+        content: '**다음은 비전문가 사용자가 처음 30분 내에 자주 겪는 다섯 가지 문제입니다.** 어디를 봐야 할지 알면 각각 한 줄로 해결할 수 있습니다.',
+        items: [
+          '**"macOS에서 '확인되지 않은 개발자'라고 표시됩니다."** → 시스템 설정 → 개인 정보 보호 및 보안을 열고 하단으로 스크롤한 후 "그래도 열기"를 클릭하십시오. 이것은 Apple이 공증하지 않은 서명된 앱에서 정상적인 현상입니다.',
+          '**"Windows Defender가 설치 프로그램에 경고를 표시했습니다."** → 다섯 가지 앱 모두 널리 사용되고 안전합니다. "추가 정보" → "그래도 실행"을 클릭하십시오. 보안을 위해 다운로드 URL이 공식 사이트(gpt4all.io, jan.ai, msty.app, anythingllm.com, lmstudio.ai)와 정확히 일치하는지 확인하십시오.',
+          '**"모델 다운로드가 영원히 걸립니다."** → 모델은 1.5–8 GB 파일입니다. 50 Mbps 연결에서 5–20분을 기다리십시오. 멈추면 취소하고 다시 시작하십시오 — 다섯 가지 앱 모두 재개 가능한 다운로드를 지원합니다.',
+          '**"컴퓨터가 많이 뜨거워지고 팬이 시끄러워졌습니다."** → 로컬 AI는 응답을 생성하는 동안 CPU 또는 GPU를 100% 사용합니다. 이것은 정상이며 응답이 완료되면 멈춥니다. 불편하다면 더 작은 모델로 전환하십시오(7B/8B 대신 3B 또는 4B).',
+          '**"어떤 모델을 선택해야 할지 모르겠습니다."** → 첫 번째 설치에서 기본적으로 3B 또는 4B Instruct 모델을 선택하십시오. 예: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 3 4B. 작고 빠르며 대부분의 일상적인 작업에 충분히 좋습니다. 앱을 실제로 사용하기로 결정한 후에만 7B 또는 8B로 업그레이드하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '임의의 웹사이트나 토렌트 사이트에서 모델을 다운로드하지 마십시오. 설치한 앱 내의 모델 브라우저를 사용하십시오 — 이 목록의 모든 앱은 공식 Hugging Face 미러에서 모델을 가져옵니다.',
+          },
+        ],
+      },
+      firstTenMinutes: {
+        id: 'first-ten-minutes',
+        title: '처음 10분 — 단계별 안내',
+        content: '**이것은 비전문가 사용자가 오늘 Windows 또는 Mac이 있는 현대적인 노트북에서 로컬 AI 대화를 시작하기까지 따를 수 있는 정확한 경로입니다.** 괄호 안의 숫자는 현실적인 소요 시간입니다.',
+        numberedItems: [
+          '위의 프로필 표에서 앱을 선택하십시오. 결정하기 어렵다면: GPT4All을 설치하십시오. (1분)',
+          '공식 사이트(gpt4all.io / jan.ai / msty.app / anythingllm.com / lmstudio.ai)를 열고 운영 체제용 설치 프로그램을 다운로드하십시오. (1분)',
+          '설치 프로그램을 실행하십시오. 기본값을 수락하십시오. 이 다섯 가지 앱은 모두 사용자별 설치에 Windows 또는 Mac의 관리자 권한이 필요하지 않습니다. (2분)',
+          '첫 실행 시 화면의 안내에 따라 추천 초기 모델을 다운로드하십시오 — 제공되는 가장 작은 "Instruct" 모델(3B 또는 4B 파라미터)을 선택하십시오. (연결 속도에 따라 3–5분)',
+          '채팅창에 "안녕하세요, 고양이에 대한 하이쿠를 써주시겠어요?"를 입력하고 Enter를 누르십시오. 5–10초 안에 응답이 나타나야 합니다. (1분)',
+          '응답이 작동하면 완료입니다. 이제 로컬 AI가 노트북에서 완전 오프라인으로 실행되고 있으며 대화 내용이 내 컴퓨터를 벗어나지 않았습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '5단계 후 노트북의 Wi-Fi를 끄고 다른 질문을 해보십시오. 응답이 계속 작동합니다. 이것이 대부분의 비전문가 사용자가 로컬 AI가 실제임을 깨닫는 순간입니다.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: '로컬 AI를 사용하려면 코딩을 알아야 합니까?',
+            a: '아닙니다. 이 목록의 다섯 가지 앱 — GPT4All, Jan, Msty, AnythingLLM Desktop, LM Studio — 중 어떤 것도 코딩, 스크립트 또는 터미널이 필요하지 않습니다. 일반 데스크톱 앱을 설치하고 설정 마법사를 따를 수 있다면 필요한 모든 기술을 갖추고 있습니다.',
+          },
+          {
+            q: '직장 노트북에서 관리자 권한 없이 로컬 AI를 설치할 수 있습니까?',
+            a: '경우에 따라 다릅니다. GPT4All과 Jan에는 Windows에서 관리자 권한이 필요 없는 사용자별 설치 프로그램이 포함되어 있습니다. LM Studio와 Msty는 일반적으로 표준 설치 프로그램에 관리자 권한이 필요합니다. 직장 노트북에 소프트웨어를 전혀 설치할 수 없는 경우 IT 부서에 먼저 문의하십시오 — 로컬 AI는 기술적인 문제가 아니라 정책의 문제입니다.',
+          },
+          {
+            q: '내 컴퓨터가 너무 오래되었다면 어떻게 합니까?',
+            a: '2018년 이후 노트북에 RAM 8 GB와 여유 디스크 공간 5 GB가 있다면 이 앱들 중 어느 것에서도 3B 파라미터 모델을 사용 가능한 속도(초당 8–15 토큰)로 실행할 수 있습니다. 이보다 오래되었거나 사양이 낮은 기기라면 모바일 로컬 AI 앱을 시도해보십시오 — iPhone 및 Android용 로컬 LLM 앱에 대한 관련 읽기 자료를 참조하십시오.',
+          },
+          {
+            q: '로컬 AI가 내 컴퓨터를 느리게 만들겠습니까?',
+            a: '응답을 생성하는 동안에만 그렇습니다. 로컬 AI는 응답을 생성하는 몇 초 동안 CPU 또는 GPU를 집중적으로 사용한 다음 유휴 상태로 돌아옵니다. 노트북 팬이 작동할 수 있고, 배터리가 더 빨리 소모되며, 응답 중에 다른 앱이 느려질 수 있습니다. 영구적인 것은 없습니다 — 앱을 닫으면 모든 리소스가 해제됩니다.',
+          },
+          {
+            q: '깔끔하게 제거할 수 있습니까?',
+            a: '예. 다섯 가지 앱 모두 표준 Windows/Mac/Linux 제거 프로그램을 통해 제거됩니다. 모델은 별도의 폴더(일반적으로 문서 또는 AppData)에 저장됩니다 — 해당 폴더를 삭제하여 디스크 공간을 회수할 수 있습니다. 레지스트리, 시스템 파일 또는 다른 애플리케이션을 수정하지 않습니다.',
+          },
+          {
+            q: '인터넷에서 이 앱을 다운로드하는 것이 안전합니까?',
+            a: '공식 사이트를 사용한다면 예. 다섯 가지 공식 사이트는 gpt4all.io, jan.ai, msty.app, anythingllm.com, lmstudio.ai입니다. 서드파티 다운로더와 토렌트를 피하십시오. 다섯 가지 설치 프로그램 모두 발행인이 서명했습니다; macOS와 Windows 모두 설치 중에 발행인 이름을 표시합니다.',
+          },
+          {
+            q: '이 앱들이 작동하려면 인터넷이 필요합니까?',
+            a: '최초 모델 다운로드에만 필요합니다. 모델이 디스크에 있으면 다섯 가지 앱 모두 완전 오프라인으로 작동합니다 — Wi-Fi를 끄거나, 비행기에 탑승하거나, 지하실에서 작업해도 AI가 계속 응답합니다.',
+          },
+          {
+            q: '직장 노트북에서 사용할 수 있습니까?',
+            a: '기술적으로는 예. 정책적으로는 IT 또는 컴플라이언스 부서에 먼저 문의하십시오. 로컬 AI는 프롬프트를 어디에도 보내지 않으므로 컴플라이언스에 유리한 경우가 많습니다 — 그러나 관리되는 기기에 서드파티 소프트웨어를 설치하는 것은 일반적으로 여전히 정책의 문제입니다. "데이터가 기기를 벗어나지 않음"을 증명하는 데 도움이 된다면 이 기사와 Jan 및 GPT4All의 AGPL/MIT 소스 코드 링크를 보여주십시오.',
+          },
+          {
+            q: '비전문가에게 로컬 AI와 ChatGPT의 차이는 무엇입니까?',
+            a: '세 가지 차이점: (1) 로컬 AI는 노트북에서 실행되며 프롬프트를 서버로 보내지 않습니다, (2) 로컬 AI는 최초 모델 다운로드 후 오프라인에서 작동합니다, (3) 로컬 AI는 영구 무료입니다 — 구독 없음, 토큰 요금 없음. 단점은 속도와 품질입니다: 로컬 3B–8B 모델은 GPT-5.5급 클라우드 모델보다 능력이 크게 낮습니다. 일상적인 글쓰기, 요약, 브레인스토밍, Q&A에서 차이는 작습니다. 길고 복잡한 추론에서 차이는 더 큽니다.',
+          },
+          {
+            q: '이 앱들은 장기적으로 비용이 드는 건 아닙니까?',
+            a: '아닙니다. 다섯 가지 모두 개인 사용에 영구 무료입니다. GPT4All(MIT)과 Jan(AGPL)은 오픈소스입니다. Msty는 클라우드 API 기능에 유료 플랜이 있지만 로컬 전용 사용은 영구 무료입니다. LM Studio는 개인 및 상업용 무료입니다. AnythingLLM Desktop은 무료이며 별도의 상품으로 유료 호스팅 제품이 있습니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽기 자료',
+        items: [
+          '[LM Studio vs Jan vs GPT4All: 2026년 어떤 로컬 AI 앱이 최고입니까?](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 속도, 모델 라이브러리, 프라이버시 측면에서 상위 3가지를 비교할 준비가 되었을 때.',
+          '[각 운영 체제에서 가장 쉬운 로컬 AI 앱: Windows, Mac, Linux 선택](/ko/power-local-llm/easiest-local-ai-app-windows-mac-linux) — 운영 체제별 추천만 원하는 사용자를 위한 것입니다.',
+          '[2026년 창작 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026) — 자주 있는 비전문가 사용 사례.',
+          '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 이 다섯 가지 앱 중 하나에 로드할 모델 추천.',
+          '[2026년 iPhone용 최고의 로컬 AI 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — 노트북 사양이 너무 낮은 사용자를 위한 것입니다.',
+          '[2026년 Android용 최고의 로컬 AI 앱](/ko/power-local-llm/best-local-llm-apps-android-2026) — Chromebook 또는 저사양 Windows 노트북 사용자를 위한 것입니다.',
+          '[Power Local LLM 허브](/ko/power-local-llm) — 완전한 가이드 라이브러리.',
+        ],
+      },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: '2026년 비전문가를 위한 최고의 로컬 AI 앱 5가지',
+      numberOfItems: 5,
+      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'GPT4All',
+          description:
+            '완전 초보자에게 최적. 가장 작은 설치 용량(~290 MB). GPU 없이 8 GB RAM 5년 된 노트북에서 작동. MIT 라이선스 오픈소스. 기본적으로 텔레메트리 비활성화.',
+          url: 'https://gpt4all.io',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Jan',
+          description:
+            '프라이버시를 중시하는 초보자에게 최적. AGPL 하에 완전 오픈소스. 기본적으로 완전 무텔레메트리. 약 150개의 선별된 모델 카탈로그.',
+          url: 'https://jan.ai',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Msty',
+          description:
+            '세련된 인터페이스를 원하는 사용자에게 최적. 나란히 모델 비교가 가능한 분할 패널 현대 UI. 지식 스택이 있는 내장 문서 채팅.',
+          url: 'https://msty.app',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'AnythingLLM Desktop',
+          description:
+            '문서 폴더와 채팅할 수 있는 친숙한 3개 패널 Windows 스타일 인터페이스를 원하는 사용자에게 최적. PDF/DOCX/Markdown이 있는 워크스페이스별 채팅. MIT 라이선스.',
+          url: 'https://anythingllm.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'LM Studio',
+          description:
+            'Mac 사용자에게 최적. 추론 속도 15–30% 향상을 위한 맞춤형 Apple Silicon Metal 커널. 앱 내 가장 큰 모델 브라우저(Hugging Face에서 ~5,000개 변형).',
+          url: 'https://lmstudio.ai',
+        },
+      ],
+    },
+    gammaEmbedUrl: '/presentations/local-ai-app-non-technical-users-static.html',
+    gammaDescription: '아래 프레젠테이션은 다음 내용을 다룹니다: 비전문가 사용자를 위한 GPT4All, Jan, Msty, AnythingLLM Desktop, LM Studio의 프로필별 비교; 빠른 선택 표(터미널 경험 없는 사용자부터 Mac 사용자까지); 앱별 주요 사항(텔레메트리 정책, 추천 모델, 인터페이스 스타일); 5가지 자주 겪는 문제와 한 줄 해결책; 처음 10분을 위한 6단계 가이드. PDF를 로컬 AI 초보자 참조 카드로 다운로드하십시오.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '터미널 없이 작동하는 로컬 AI 앱 5가지 (2026)',
+      description: '터미널 명령어 없음. Python 없음. Docker 없음. 비전문가도 10분 안에 설치할 수 있는 로컬 AI 앱 5가지. 2026년 실제 초보자와 함께 테스트 완료.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-app-non-technical-users',
+      inLanguage: 'ko',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '비전문가를 위한 로컬 AI 앱', item: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-app-non-technical-users' },
+      ],
+    },
+  },
+

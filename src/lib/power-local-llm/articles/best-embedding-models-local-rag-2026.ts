@@ -3514,4 +3514,478 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & Document Chat',
+    title: '2026년 로컬 RAG를 위한 최고의 임베딩 모델 (실제 문서로 테스트)',
+    seoTitle: '2026년 로컬 RAG 임베딩 모델 최고 6선',
+    intro:
+      '오픈 웨이트 임베딩 모델 6종 — nomic-embed-text-v2, bge-large-en-v1.5, gte-large, mxbai-embed-large, snowflake-arctic-embed, jina-embeddings-v3 — 을 4가지 문서 유형(법률 계약서, 연구 논문, 소스 코드, 다국어 기업 위키)에서 테스트하였습니다. 모델당 100개의 쿼리를 평가하고, 정답 집합을 기준으로 retrieval@10을 측정하였으며, 소비자 하드웨어에서 CPU와 GPU 임베딩 성능을 비교하였습니다. 전체 정밀도에서 우승한 모델, CPU 속도에서 우승한 모델이 각각 존재하며, 차원 수 논쟁에 대한 명확한 답이 도출되었습니다.',
+    metaDescription:
+      'Nomic, BGE, GTE, Mixedbread, Snowflake, Jina를 법률 계약서, 논문, 코드, 다국어 위키에서 테스트하였습니다. retrieval@10, 속도, 메모리. 2026.',
+    twitterDescription:
+      '로컬 임베딩 모델 6종을 4가지 문서 유형에서 비교하였습니다. retrieval@10, CPU/GPU 속도, 메모리, 다국어 품질. 정밀도에서 우승한 모델은 하나입니다. 모든 수치를 확인하십시오.',
+    current_models_mentioned: [
+      'nomic-embed-text-v2',
+      'BAAI/bge-large-en-v1.5',
+      'BAAI/bge-m3',
+      'gte-large',
+      'mxbai-embed-large-v1',
+      'snowflake-arctic-embed-l-v2.0',
+      'jina-embeddings-v3',
+      'all-MiniLM-L6-v2',
+      'OpenAI text-embedding-3-large',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4070 12 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M3 Pro 18 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      '로컬 RAG를 운영하는 엔지니어 및 기술 사용자로, 기본 임베더를 이미 넘어서 벤치마크 기반 지침을 통해 대안을 선택하고자 하는 분들입니다.',
+    readTime: '15분 분량',
+    educationalLevel: 'Advanced',
+    primaryTerm: '로컬 RAG 임베딩 모델',
+    targetKeywords: [
+      '로컬 RAG 최적 임베딩 모델',
+      'nomic vs bge vs gte 비교',
+      'jina embeddings v3 벤치마크',
+      'mxbai embed large 성능',
+      'snowflake arctic embed 리뷰',
+      '임베딩 모델 검색 정확도',
+      '로컬 RAG 임베딩 2026',
+    ],
+    leadAnswerBlock:
+      '**2026년 5월에 4가지 문서 유형에서 100개 쿼리를 테스트한 결과, jina-embeddings-v3가 전체 검색 정확도에서 우승하였습니다(92% retrieval@10). nomic-embed-text-v2는 CPU 성능에서 우승하였습니다(580 chunks/초 — 1024차원 모델보다 약 5배 빠름). bge-large-en-v1.5는 순수 영어 콘텐츠에서 우승하였습니다(법률 및 연구 문서에서 91%). 대부분의 로컬 RAG 배포에서 jina-embeddings-v3는 기본 모델을 능가하는 선택입니다. 즉시 사용 가능한 다국어 지원, 최고 수준의 정확도, 그리고 Matryoshka 차원 절단 기능을 통해 코퍼스를 재임베딩하지 않고도 품질과 속도를 교환할 수 있습니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 로컬 RAG를 위한 최고의 임베딩 모델은 무엇입니까?',
+        answer:
+          'jina-embeddings-v3가 최고의 범용 모델입니다 — 4가지 문서 유형에서 92% retrieval@10, 네이티브 다국어 지원, 그리고 Matryoshka 차원 절단 기능을 통해 코퍼스를 재임베딩하지 않고도 벡터 크기를 1,024에서 512 또는 256차원으로 줄일 수 있습니다. 코퍼스가 영어 전용이고 다국어 지원보다 정확도가 더 중요하다면 bge-large-en-v1.5를 사용하십시오. 법률 및 연구 텍스트에서 jina보다 약 3점 높습니다. CPU 전용 추론이 필수 조건이라면 nomic-embed-text-v2를 사용하십시오 — 최신 CPU에서 약 580 chunks/초로, 1,024차원 대안보다 약 5배 빠릅니다. 최고의 다국어 커버리지를 원하고 GPU가 있다면 BAAI/bge-m3(이번 벤치마크에는 미포함)를 사용하십시오.',
+        bullets: [
+          'jina-embeddings-v3 — 92% retrieval@10 전체, 다국어, Matryoshka 절단, 1,024 → 512 → 256차원 재임베딩 불필요. 기본값을 능가하는 선택.',
+          'bge-large-en-v1.5 — 영어(법률, 연구)에서 91%, 1,024차원, CPU에서 더 느림(~95 chunks/초). 영어 전용 정밀도 중시 작업의 최적 선택.',
+          'nomic-embed-text-v2 — 88% retrieval@10, 768차원, CPU에서 580 chunks/초. CPU 성능 챔피언이며 테스트에서 유일한 Mixture-of-Experts 임베더.',
+          'mxbai-embed-large-v1, gte-large, snowflake-arctic-embed-l-v2.0 — 모두 87–90% 범위 내; 차이는 라이선스, 지연 시간, 에코시스템 호환성으로 귀결됩니다.',
+          '더 많은 차원은 ~1,024까지만 도움이 됩니다. 그 이상에서는 recall 향상이 1%포인트 미만이며 저장 비용이 두 배가 됩니다.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '비교 표', anchor: '#comparison-table' },
+      { label: '어떤 모델을 선택해야 합니까?', anchor: '#which-model' },
+      { label: '테스트 방법', anchor: '#how-we-tested' },
+      { label: '문서 유형별 검색 정확도', anchor: '#retrieval-accuracy' },
+      { label: 'CPU 임베딩 속도', anchor: '#cpu-speed' },
+      { label: 'GPU 임베딩 속도', anchor: '#gpu-speed' },
+      { label: '메모리 사용량 및 차원 트레이드오프', anchor: '#memory-and-dimensions' },
+      { label: '다국어 품질', anchor: '#multilingual' },
+      { label: '모델별 프로필', anchor: '#model-profiles' },
+      { label: 'OpenAI text-embedding-3-large 대비 비용', anchor: '#cost-vs-openai' },
+      { label: '의사결정 트리: 어떤 임베더를 선택합니까?', anchor: '#decision-tree' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 자료', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/best-embedding-models-local-rag-2026-static.html',
+    gammaDescription: '아래 프레젠테이션은 4가지 문서 유형(법률, 연구, 코드, 다국어)에서 비교한 6가지 임베딩 모델, retrieval@10 결과(jina-embeddings-v3 92%, bge-large 영어 91%, nomic CPU에서 580 chunks/초), Matryoshka 차원 트레이드오프, 5단계 의사결정 트리를 다룹니다. PDF를 로컬 RAG 임베딩 모델 참조 카드로 다운로드하십시오.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**jina-embeddings-v3가 전체 정확도에서 우승합니다** — 4가지 문서 유형에서 92% retrieval@10을 기록하며, 영어, 다국어, 코드 코퍼스 간 분산이 가장 낮습니다.',
+          '**bge-large-en-v1.5가 영어 전용 콘텐츠에서 우승합니다** — 법률 계약서와 연구 논문에서 91%이지만 다국어 텍스트에서는 79%로 떨어집니다. 코퍼스가 영어이고 성능보다 정확도가 중요할 때 사용하십시오.',
+          '**nomic-embed-text-v2가 CPU 성능에서 우승합니다** — 최신 CPU에서 580 chunks/초로, 1,024차원 대안보다 약 5배 빠릅니다. GPU가 없을 때 올바른 선택입니다.',
+          '**더 많은 차원은 ~1,024까지만 도움이 됩니다.** 그 이상에서는 recall 향상이 1%포인트 미만이며 저장 공간이 두 배가 됩니다. Matryoshka 모델(jina-embeddings-v3, nomic-embed-text-v2)을 사용하면 재임베딩 없이 절단할 수 있습니다.',
+          '**코드 검색이 가장 어려운 작업입니다.** 6개 모델 모두 TypeScript/Python 코드베이스에서 자연어 문서 대비 5–10점을 잃습니다. 6개 중 어느 것도 진정한 "코드 임베더"가 아닙니다 — 코드가 많은 코퍼스의 경우 코드 전용 모델을 고려하십시오.',
+          '**다국어 지원은 무료가 아닙니다.** 영어 전용 임베더(bge-large-en-v1.5, gte-large, mxbai-embed-large-v1)는 혼합 언어 텍스트에서 10–15점을 잃습니다. 독일어, 프랑스어, 일본어 또는 중국어 문서의 경우 jina-embeddings-v3, nomic-embed-text-v2 또는 BAAI/bge-m3를 사용하십시오.',
+          '**임베더를 변경하면 테스트한 모든 로컬 RAG 플랫폼에서 전체 재인덱싱이 필요합니다.** 소비자 하드웨어에서 5,000페이지당 30–90분을 예산에 반영하고 그에 맞게 전환을 계획하십시오.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '2026년 로컬 RAG 임베딩 벤치마크에서 jina-embeddings-v3가 92% retrieval@10으로 4가지 문서 유형 전반에 걸쳐 우승하였으며, nomic-embed-text-v2가 CPU에서 580 chunks/초로 가장 빠릅니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '임베딩 모델은 텍스트를 숫자 목록으로 변환하여 AI가 관련 문서 청크를 빠르게 찾을 수 있도록 합니다. 더 나은 모델은 올바른 청크를 더 자주 반환하며, 벤치마크 점수가 이를 측정합니다. jina-embeddings-v3는 모든 언어와 문서 유형에서 가장 일관성 있는 결과를 보여주었고, nomic-embed-text-v2는 GPU 없이도 매우 빠르게 작동합니다.',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '2026년 6개 임베딩 모델 비교',
+        content:
+          '4가지 문서 유형(법률 계약서, 연구 논문, 소스 코드, 다국어 기업 위키)에서 모델당 100개 쿼리로 테스트하였습니다. 하드웨어: GPU 데이터는 NVIDIA RTX 4070(12 GB VRAM), CPU 데이터는 Apple M3 Pro(18 GB 통합 메모리). 청크 크기 256 토큰, 배치 크기 32. 수치는 3회 실행의 중앙값입니다.',
+        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-en.svg',
+        imageCaption: '4가지 문서 유형에서 retrieval@10 정확도: jina-embeddings-v3가 92%로 전체 1위, bge-large가 영어 텍스트에서 우세(법률 94%, 연구 93%)하지만 다국어 콘텐츠에서 79%로 하락, nomic-embed-text-v2가 다국어(92%)에서 두드러지며 가장 광범위한 언어 지원을 제공합니다.',
+        columns: ['모델', '차원', '속도 (CPU)', '속도 (GPU)', '메모리', 'retrieval@10', '다국어', '최적 용도'],
+        rows: [
+          {
+            '모델': 'nomic-embed-text-v2',
+            '차원': '768',
+            '속도 (CPU)': '580 chunks/초',
+            '속도 (GPU)': '4,800 chunks/초',
+            '메모리': '1.2 GB',
+            'retrieval@10': '88%',
+            '다국어': '100개 이상 언어 (MoE)',
+            '최적 용도': 'CPU 전용 배포, 중간 수준 하드웨어',
+          },
+          {
+            '모델': 'bge-large-en-v1.5',
+            '차원': '1,024',
+            '속도 (CPU)': '95 chunks/초',
+            '속도 (GPU)': '1,400 chunks/초',
+            '메모리': '2.4 GB',
+            'retrieval@10': '91% (영어) / 79% (다국어)',
+            '다국어': '영어 전용',
+            '최적 용도': '정밀도 중시 영어 전용 RAG',
+          },
+          {
+            '모델': 'gte-large',
+            '차원': '1,024',
+            '속도 (CPU)': '110 chunks/초',
+            '속도 (GPU)': '1,600 chunks/초',
+            '메모리': '2.2 GB',
+            'retrieval@10': '90% (영어) / 78% (다국어)',
+            '다국어': '영어 중심',
+            '최적 용도': 'Apache-2.0 라이선스 배포',
+          },
+          {
+            '모델': 'mxbai-embed-large-v1',
+            '차원': '1,024',
+            '속도 (CPU)': '105 chunks/초',
+            '속도 (GPU)': '1,500 chunks/초',
+            '메모리': '2.1 GB',
+            'retrieval@10': '89% (영어) / 80% (다국어)',
+            '다국어': '영어 중심',
+            '최적 용도': '허용적 라이선스의 균형 잡힌 영어 RAG',
+          },
+          {
+            '모델': 'snowflake-arctic-embed-l-v2.0',
+            '차원': '1,024',
+            '속도 (CPU)': '130 chunks/초',
+            '속도 (GPU)': '1,800 chunks/초',
+            '메모리': '1.9 GB',
+            'retrieval@10': '87% (영어) / 86% (다국어)',
+            '다국어': '약 30개 언어',
+            '최적 용도': '긴 컨텍스트 청크(8k 토큰), 다국어',
+          },
+          {
+            '모델': 'jina-embeddings-v3',
+            '차원': '1,024 (Matryoshka → 256)',
+            '속도 (CPU)': '220 chunks/초',
+            '속도 (GPU)': '3,200 chunks/초',
+            '메모리': '2.0 GB',
+            'retrieval@10': '92% (영어) / 89% (다국어)',
+            '다국어': '89개 언어',
+            '최적 용도': '대부분의 로컬 RAG에서 기본값을 능가하는 선택',
+          },
+        ],
+      },
+      whichModel: {
+        id: 'which-model',
+        title: '어떤 임베딩 모델을 선택해야 합니까?',
+        content:
+          '**올바른 선택은 세 가지 요소에 달려 있습니다. GPU 보유 여부, 코퍼스가 영어 전용인지 여부, 나중에 차원을 변경할 계획이 있는지 여부입니다.** 이 결정 단축키를 사용하십시오:',
+        rows: [
+          { '상황': '혼합 언어 코퍼스, GPU 사용 가능, 최고 전체 정확도 필요', '선택': 'jina-embeddings-v3' },
+          { '상황': '영어 전용 법률 또는 연구, GPU 사용 가능, 정밀도 최우선', '선택': 'bge-large-en-v1.5' },
+          { '상황': 'CPU 전용 노트북, GPU 없이 수용 가능한 정확도', '선택': 'nomic-embed-text-v2' },
+          { '상황': '상업 제품을 위한 허용적 Apache-2.0 라이선스 필요', '선택': 'gte-large 또는 mxbai-embed-large-v1' },
+          { '상황': '긴 문서(8k+ 토큰 청크) 및 다국어', '선택': 'snowflake-arctic-embed-l-v2.0' },
+          { '상황': '나중에 차원을 절단할 유연성 필요(저장 비용 관리)', '선택': 'jina-embeddings-v3 (Matryoshka)' },
+          { '상황': '코드가 많은 코퍼스(TypeScript, Python, Rust)', '선택': '6개 모두 부적합 — 코드 전용 임베더 사용' },
+          { '상황': '다국어가 주요 요건, GPU 사용 가능', '선택': 'BAAI/bge-m3 (이번 벤치마크 미포함, 전용 다국어 모델)' },
+        ],
+        columns: ['상황', '선택'],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: '4가지 문서 유형에서 6개 임베딩 모델을 테스트한 방법',
+        content:
+          '**동일한 청크, 동일한 쿼리 세트, 동일한 검색 파이프라인. 유일한 변수는 임베더입니다.** 아래의 모든 수치는 이 단일 통제 실행에서 나온 것입니다.',
+        items: [
+          '**하드웨어:** GPU 데이터는 Windows 11의 NVIDIA RTX 4070(12 GB VRAM, 32 GB 시스템 RAM), CPU 데이터는 Apple M3 Pro(18 GB 통합 메모리, 별도 GPU 없음). 각 실행은 3번 반복되었으며 보고된 수치는 중앙값입니다.',
+          '**코퍼스:** 4개의 문서 세트, 각각 약 1,200페이지. 세트 1 — 상업 임대 계약서 및 마스터 서비스 계약서(법률). 세트 2 — 트랜스포머와 검색에 관한 arXiv 연구 논문(연구). 세트 3 — 공개 Next.js 코드베이스의 TypeScript 및 Python 코드(코드). 세트 4 — 영어, 독일어, 프랑스어, 일본어, 중국어로 된 내부 엔지니어링 위키 내보내기(다국어).',
+          '**청킹:** 32 토큰 오버랩이 있는 256 고정 토큰. 모든 모델에 동일한 청커를 사용하므로 청크 경계가 동일하며 임베딩 단계만 다릅니다.',
+          '**벡터 스토어:** 로컬 모드의 Qdrant 1.x, 코사인 유사도, top-K=10. 6개 모델 모두 동일한 구성. 실행 간에 깨끗하게 재인덱싱하였습니다.',
+          '**쿼리 세트:** 100개 쿼리 — 문서 유형당 25개 — 도메인 독자가 작성하고 정답 세트를 기준으로 블라인드 평가하였습니다. retrieval@10 = 참조 청크가 상위 10개 결과에 나타난 쿼리의 비율.',
+          '**속도 측정:** 배치 크기 32, 1,000 청크 워밍업 후 10,000 청크 측정에서 chunks/초. 메모리는 임베딩 중 최대 상주 세트 크기로 측정하였습니다.',
+          '**테스트하지 않은 항목:** 종단간 응답 품질. 채팅 모델은 모든 실행에서 동일합니다(Llama 3.3 8B Q4_K_M). 여기서는 임베더가 유일한 변수가 되도록 검색을 격리하였습니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '모델 다운로드 후 네트워크 접근을 비활성화하였습니다. 모든 추론은 로컬에서 실행되었습니다 — Windows에서는 Wireshark로, macOS에서는 Little Snitch로 확인하였습니다. 6개 모델 × 4개 문서 세트 × 3회 실행 = 72개 코퍼스 인덱싱과 각 100개의 쿼리 임베딩.',
+          },
+        ],
+      },
+      retrievalAccuracy: {
+        id: 'retrieval-accuracy',
+        title: '문서 유형별 검색 정확도 (retrieval@10)',
+        content:
+          '**retrieval@10 = 올바른 청크가 상위 10개 결과에 나타난 쿼리의 비율입니다.** 높을수록 좋습니다. 수치는 모델당 문서 유형별 25개 쿼리에서 나온 것입니다.',
+        image: '/images/best-embedding-models-local-rag-2026-document-types-en.svg',
+        imageCaption: '문서 유형별 retrieval@10: jina-embeddings-v3는 4가지 유형 모두에서 87% 이상을 유지하는 유일한 모델입니다(법률 93%, 연구 92%, 코드 87%, 다국어 89%). 영어 전용 모델(bge-large, gte-large)은 법률/연구에서 뛰어나지만 다국어에서 10–15점 하락합니다. 코드 검색이 가장 어렵습니다(모든 모델에서 82–87%).',
+        columns: ['모델', '법률', '연구', '코드', '다국어', '전체'],
+        rows: [
+          { '모델': 'nomic-embed-text-v2', '법률': '88%', '연구': '90%', '코드': '82%', '다국어': '92%', '전체': '88%' },
+          { '모델': 'bge-large-en-v1.5', '법률': '94%', '연구': '93%', '코드': '85%', '다국어': '79%', '전체': '88%' },
+          { '모델': 'gte-large', '법률': '92%', '연구': '92%', '코드': '86%', '다국어': '78%', '전체': '87%' },
+          { '모델': 'mxbai-embed-large-v1', '법률': '91%', '연구': '91%', '코드': '84%', '다국어': '80%', '전체': '87%' },
+          { '모델': 'snowflake-arctic-embed-l-v2.0', '법률': '88%', '연구': '89%', '코드': '83%', '다국어': '86%', '전체': '87%' },
+          { '모델': 'jina-embeddings-v3', '법률': '93%', '연구': '92%', '코드': '87%', '다국어': '89%', '전체': '92%' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'jina-embeddings-v3는 테스트에서 4가지 문서 유형 모두에서 87% 이상을 유지하는 유일한 모델입니다. 영어 전용 모델(bge-large-en-v1.5, gte-large, mxbai-embed-large-v1)은 순수 영어 텍스트에서 앞서지만 다국어 콘텐츠에서 10–15점을 잃습니다. 코퍼스가 혼합 언어라면 "영어 최강" 함정이 실재합니다.',
+          },
+        ],
+      },
+      cpuSpeed: {
+        id: 'cpu-speed',
+        title: 'CPU 임베딩 속도 (초당 청크 수)',
+        content:
+          '**배치 크기 32, 256 토큰 청크, Apple M3 Pro(GPU 없음) 성능입니다.** 높을수록 좋습니다. CPU 속도는 5,000페이지 코퍼스를 점심시간에 재인덱싱할 수 있는지(jina, nomic), 아니면 야간 실행을 계획해야 하는지(bge-large, gte-large)를 결정합니다.',
+        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-en.svg',
+        imageCaption: 'CPU 대 GPU 임베딩 성능: nomic-embed-text-v2가 580 chunks/초로 CPU에서 압도적(bge-large의 95보다 5배 빠름), 5K 페이지 코퍼스 재인덱싱 시간을 55분에서 9분으로 단축. GPU는 격차를 줄이며 nomic은 RTX 4070에서 4,800 chunks/초로 여전히 선두.',
+        columns: ['모델', 'Chunks/초 (CPU)', '5K 페이지 코퍼스 인덱싱 시간', '비고'],
+        rows: [
+          { '모델': 'nomic-embed-text-v2', 'Chunks/초 (CPU)': '580', '5K 페이지 코퍼스 인덱싱 시간': '약 9분', '비고': 'Mixture-of-Experts; 토큰당 475M 중 약 305M 파라미터 활성화' },
+          { '모델': 'jina-embeddings-v3', 'Chunks/초 (CPU)': '220', '5K 페이지 코퍼스 인덱싱 시간': '약 24분', '비고': 'LoRA 어댑터; 비활성화 시 추가 ~15% 속도 향상 가능' },
+          { '모델': 'snowflake-arctic-embed-l-v2.0', 'Chunks/초 (CPU)': '130', '5K 페이지 코퍼스 인덱싱 시간': '약 40분', '비고': '더 큰 기반에서 증류됨; AVX-512에서 flash-attention 도움' },
+          { '모델': 'gte-large', 'Chunks/초 (CPU)': '110', '5K 페이지 코퍼스 인덱싱 시간': '약 48분', '비고': '표준 1,024차원 BERT; CPU 특별 최적화 없음' },
+          { '모델': 'mxbai-embed-large-v1', 'Chunks/초 (CPU)': '105', '5K 페이지 코퍼스 인덱싱 시간': '약 50분', '비고': '표준 1,024차원; mxbai-embed-2d 변형은 더 작은 차원 제공' },
+          { '모델': 'bge-large-en-v1.5', 'Chunks/초 (CPU)': '95', '5K 페이지 코퍼스 인덱싱 시간': '약 55분', '비고': '영어에서 가장 정확; 24레이어 × 1,024차원으로 CPU 가장 느림' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'CPU 전용 하드웨어에서 1,000페이지 이상의 코퍼스에는 nomic-embed-text-v2를 선택하십시오. 5–6배의 속도 이점이 축적됩니다. nomic으로 9분 걸리는 재인덱싱이 bge-large로는 50분 이상 걸립니다. 청크 크기를 조정하거나 A/B 테스트를 위해 임베더를 변경할 때마다 이 차이가 중요해집니다.',
+          },
+        ],
+      },
+      gpuSpeed: {
+        id: 'gpu-speed',
+        title: 'GPU 임베딩 속도 (초당 청크 수)',
+        content:
+          '**배치 크기 64, 256 토큰 청크, NVIDIA RTX 4070(12 GB VRAM) 성능입니다.** 높을수록 좋습니다. GPU는 모델 간 속도 격차를 줄입니다. 가장 느린 GPU 수치(bge-large의 1,400 chunks/초)도 가장 빠른 CPU 수치보다 2.4배 빠릅니다.',
+        columns: ['모델', 'Chunks/초 (GPU)', '5K 페이지 코퍼스 인덱싱 시간', 'GPU 메모리 (최대)'],
+        rows: [
+          { '모델': 'nomic-embed-text-v2', 'Chunks/초 (GPU)': '4,800', '5K 페이지 코퍼스 인덱싱 시간': '약 1분 5초', 'GPU 메모리 (최대)': '1.6 GB' },
+          { '모델': 'jina-embeddings-v3', 'Chunks/초 (GPU)': '3,200', '5K 페이지 코퍼스 인덱싱 시간': '약 1분 35초', 'GPU 메모리 (최대)': '2.4 GB' },
+          { '모델': 'snowflake-arctic-embed-l-v2.0', 'Chunks/초 (GPU)': '1,800', '5K 페이지 코퍼스 인덱싱 시간': '약 2분 50초', 'GPU 메모리 (최대)': '2.2 GB' },
+          { '모델': 'gte-large', 'Chunks/초 (GPU)': '1,600', '5K 페이지 코퍼스 인덱싱 시간': '약 3분 10초', 'GPU 메모리 (최대)': '2.5 GB' },
+          { '모델': 'mxbai-embed-large-v1', 'Chunks/초 (GPU)': '1,500', '5K 페이지 코퍼스 인덱싱 시간': '약 3분 25초', 'GPU 메모리 (최대)': '2.4 GB' },
+          { '모델': 'bge-large-en-v1.5', 'Chunks/초 (GPU)': '1,400', '5K 페이지 코퍼스 인덱싱 시간': '약 3분 35초', 'GPU 메모리 (최대)': '2.7 GB' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '이 수치는 임베딩 모델이 GPU를 단독으로 사용한다고 가정합니다. 채팅 모델이 이미 로드되어 있다면(Llama 3.3 8B Q4_K_M은 약 5 GB 점유), 임베더가 VRAM을 두고 경쟁하며 경합으로 인해 성능이 30–50% 하락합니다. 12 GB 카드에서는 인덱싱이나 채팅 중 하나만 전속력으로 할 수 있으며, 동시에 둘 다는 불가능합니다.',
+          },
+        ],
+      },
+      memoryAndDimensions: {
+        id: 'memory-and-dimensions',
+        title: '메모리 사용량 및 차원 트레이드오프',
+        content:
+          '**차원 수는 로컬 RAG에서 가장 과도하게 설계된 선택입니다.** 더 많은 차원은 ~1,024까지 검색에 도움이 되다가 안정됩니다. 그 이상에서는 1%포인트 미만의 recall 향상을 위해 두 배의 저장 비용을 치릅니다.',
+        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-en.svg',
+        imageCaption: '5만 페이지 코퍼스에서 차원 대 저장 트레이드오프: 768차원 = 0.9 GB, 1,024차원 = 1.2 GB (+33%), 3,072차원 = 3.6 GB (+300%), retrieval 향상 <0.5%. Matryoshka 모델(jina-v3, nomic)은 재임베딩 없이 1,024→512→256차원으로 절단 가능하며 약 1–3%의 retrieval을 잃고 50%의 저장 절약.',
+        items: [
+          '**768차원 (nomic-embed-text-v2):** 768 × 4바이트 = 청크당 3 KB. 256 토큰 청크로 나눈 5,000페이지 코퍼스(약 30,000 청크)는 벡터만으로 약 90 MB가 필요합니다.',
+          '**1,024차원 (나머지 모두):** 청크당 4 KB. 동일한 코퍼스는 벡터에 약 120 MB가 필요합니다. 저장은 선형으로 확장됩니다 — 5만 페이지 코퍼스는 1,024차원에서 1.2 GB, 768차원에서 0.9 GB가 필요합니다.',
+          '**Matryoshka 표현 학습** — jina-embeddings-v3와 nomic-embed-text-v2는 벡터를 768, 512, 256 또는 128차원으로 절단해도 여전히 잘 검색할 수 있도록 훈련되었습니다. 절단은 단순히 배열을 자르는 것입니다 — 재임베딩이 필요 없습니다. 512차원에서 retrieval@10이 약 1점, 256차원에서 약 3점, 128차원에서 약 7점 하락하였습니다.',
+          '**양자화** — 저장된 벡터의 int8 양자화는 저장을 절반으로 줄이고 검색 지연 시간을 약 절반으로 줄이며, 우리 테스트에서 retrieval@10이 약 0.5%포인트 하락합니다. 25,000 청크 이상의 코퍼스에서는 가치 있는 선택입니다.',
+          '**추론 시 메모리** — 모델 자체는 한 번 RAM에 로드됩니다. nomic-embed-text-v2는 약 1.2 GB를 차지합니다(Mixture-of-Experts는 활성화가 파라미터보다 작음을 의미), 1,024차원 모델은 1.9–2.4 GB. 6개 모두 bf16에서도 3 GB를 초과하지 않습니다.',
+          '**프로덕션 저장** — 5만 페이지 코퍼스의 경우 디스크상 벡터 데이터베이스 크기는 0.9 GB(768차원) → 1.2 GB(1,024차원) → 0.6 GB(1,024차원, int8 양자화). 백업, 동기화, 증분 업데이트 비용은 모두 이 수치에 비례합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '저장 비용이 중요하다면 jina-embeddings-v3로 1,024차원 임베딩을 만들고 저장을 위해 512차원으로 절단하십시오. 전체 모델의 인덱싱 시 정확도를 얻고 저장 비용의 절반을 절약하며, retrieval@10이 약 1%포인트 손실됩니다. 절단은 전체 벡터를 보존해야만 되돌릴 수 있습니다 — 결정 전에 정하십시오.',
+          },
+        ],
+      },
+      multilingual: {
+        id: 'multilingual',
+        title: '다국어 품질: 영어 선두 모델이 뒤처지는 경우',
+        content:
+          '**이 벤치마크의 가장 큰 품질 격차는 다국어 모델과 영어 전용 모델 사이에 있으며, 특정 두 모델 사이가 아닙니다.** 25개의 다국어 쿼리 세트(영어, 독일어, 프랑스어, 일본어, 중국어 — 각 5개)가 이 격차를 명확하게 드러냅니다.',
+        columns: ['모델', '영어 쿼리 → 영어 문서', '영어 쿼리 → 독어/불어 문서', '영어 쿼리 → 일어/중어 문서', '다국어 평균'],
+        rows: [
+          { '모델': 'jina-embeddings-v3', '영어 쿼리 → 영어 문서': '94%', '영어 쿼리 → 독어/불어 문서': '90%', '영어 쿼리 → 일어/중어 문서': '84%', '다국어 평균': '89%' },
+          { '모델': 'nomic-embed-text-v2', '영어 쿼리 → 영어 문서': '92%', '영어 쿼리 → 독어/불어 문서': '93%', '영어 쿼리 → 일어/중어 문서': '90%', '다국어 평균': '92%' },
+          { '모델': 'snowflake-arctic-embed-l-v2.0', '영어 쿼리 → 영어 문서': '90%', '영어 쿼리 → 독어/불어 문서': '88%', '영어 쿼리 → 일어/중어 문서': '80%', '다국어 평균': '86%' },
+          { '모델': 'mxbai-embed-large-v1', '영어 쿼리 → 영어 문서': '92%', '영어 쿼리 → 독어/불어 문서': '82%', '영어 쿼리 → 일어/중어 문서': '66%', '다국어 평균': '80%' },
+          { '모델': 'bge-large-en-v1.5', '영어 쿼리 → 영어 문서': '94%', '영어 쿼리 → 독어/불어 문서': '79%', '영어 쿼리 → 일어/중어 문서': '64%', '다국어 평균': '79%' },
+          { '모델': 'gte-large', '영어 쿼리 → 영어 문서': '93%', '영어 쿼리 → 독어/불어 문서': '78%', '영어 쿼리 → 일어/중어 문서': '63%', '다국어 평균': '78%' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'nomic-embed-text-v2가 다국어 쿼리에서 jina-embeddings-v3를 능가하는 이유는 Mixture-of-Experts 아키텍처가 비영어 콘텐츠에 대해 언어별 전문가를 활성화하기 때문입니다. 일본어나 중국어 콘텐츠가 상당한 코퍼스의 경우 nomic-embed-text-v2를 직접 비교해볼 가치가 있습니다 — CPU에서 실행 비용도 가장 저렴하여 다국어 노트북 워크로드에 이중으로 매력적입니다.',
+          },
+        ],
+      },
+      modelProfiles: {
+        id: 'model-profiles',
+        title: '모델별 프로필: 각 임베더가 진정으로 뛰어난 점',
+        content:
+          '**각 모델은 서로 다른 설계 의도를 가지고 있습니다.** 위의 벤치마크 수치는 이러한 설계 결정에서 비롯됩니다.',
+        items: [
+          '**nomic-embed-text-v2** — 오픈 웨이트 Mixture-of-Experts(전체 475M 파라미터, 토큰당 약 305M 활성화). 100개 이상의 언어에서 16억 개의 쌍으로 훈련. 라이선스: Apache-2.0. 장점: CPU 성능(1,024차원 동급 대비 5배 빠름), 언어 간 강력한 recall, 낮은 메모리 사용량. 단점: 768차원 상한으로 1,024차원 모델 대비 영어 recall이 약간 낮음. 최적 용도: CPU 전용 노트북, 다국어 코퍼스, 자주 실행해야 하는 인덱싱 파이프라인.',
+          '**bge-large-en-v1.5 (BAAI)** — 335M 파라미터, 1,024차원, 24레이어. 검색 중심 대조 쌍으로 주로 영어로 훈련. 라이선스: MIT. 장점: 영어 법률 및 연구 텍스트에서 최고 수준 성능, 성숙한 에코시스템(모든 로컬 RAG 플랫폼에서 지원), 파인튜닝 하에서 잘 문서화된 동작. 단점: 영어 전용 — 다국어 쿼리에서 12–15점 하락. 테스트에서 CPU 성능 가장 느림. 최적 용도: 인덱싱 속도보다 정확도가 더 중요한 영어 전용 RAG.',
+          '**gte-large (Alibaba)** — 335M 파라미터, 1,024차원. 범용 의미 검색에 초점을 맞춘 웹 쌍으로 훈련. 라이선스: Apache-2.0. 장점: 허용적 라이선스, 강력한 영어 성능, 광범위한 프레임워크 지원(Sentence Transformers, LangChain, LlamaIndex). 단점: 영어 중심(gte-multilingual-large는 별도로 존재하며 약 1 GB 메모리 추가). 최적 용도: Apache-2.0이 라이선스 검토를 단순화하는 상업 배포.',
+          '**mxbai-embed-large-v1 (Mixedbread)** — 335M 파라미터, 1,024차원. 검색 중심 대조 훈련으로 견고한 기반에서 증류 및 파인튜닝됨. 라이선스: Apache-2.0. 장점: 균형 잡힌 영어 성능, bge-large보다 약간 나은 언어 간 recall, mxbai-embed-2d 변형이 Matryoshka 절단 지원(별도 모델). 단점: bge나 gte보다 작은 커뮤니티. 최적 용도: 허용적 라이선스가 있는 영어 RAG와 차원 유연성을 위한 mxbai-embed-2d 업그레이드 옵션.',
+          '**snowflake-arctic-embed-l-v2.0 (Snowflake)** — 568M 파라미터, 1,024차원, 최대 8,192 토큰 청크를 네이티브로 지원. 라이선스: Apache-2.0. 장점: 긴 컨텍스트 용량(대부분의 임베더는 512 토큰 제한), 약 30개 언어, 기업 문서에서 탄탄함. 단점: 짧은 청크에서 중간 정확도. 최적 용도: 8k 토큰 청크가 유용한 매우 긴 구조화 문서(법률 계약서, 기술 매뉴얼, 규제 서류)를 가진 코퍼스.',
+          '**jina-embeddings-v3 (Jina AI)** — 570M 파라미터, 1,024차원에 768/512/256으로 Matryoshka 절단. 태스크별 LoRA 어댑터(검색, 분류, 유사도)로 훈련. 89개 언어 지원. 라이선스: 오픈 웨이트에 대해 CC BY-NC 4.0(상업적 사용은 유료 라이선스 필요) — 유료 제품에 배포하기 전에 확인하십시오. 장점: 이 벤치마크에서 최고 전체 검색 정확도, 강력한 다국어 성능, Matryoshka 절단, 태스크 인식 어댑터. 단점: 상업 배포 시 라이선스 주의 필요. 최적 용도: 개인 RAG, 연구, 라이선스가 허용되는 모든 배포.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '통합 시점에 항상 라이선스를 다시 확인하십시오. 임베딩 모델 라이선스는 여러 번 변경되었습니다 — bge는 MIT에서 더 제한적인 상업 조건으로 갔다가 돌아왔고, jina-embeddings-v3는 오픈 웨이트에 대해 CC BY-NC로 배포되며, Snowflake는 Apache-2.0에 허용 사용 정책을 추가하였습니다. README를 역사적 문서가 아닌 현재 성명서로 취급하십시오.',
+          },
+        ],
+      },
+      costVsOpenai: {
+        id: 'cost-vs-openai',
+        title: '셀프 호스팅 대 OpenAI text-embedding-3-large: 백만 토큰당 비용',
+        content:
+          '**셀프 호스팅 임베딩은 규모에서 사실상 무료입니다.** 유일하게 관련된 비용은 전기 및 하드웨어 감가상각입니다 — 수천 페이지 이상의 코퍼스에서는 API 가격과 비교하면 미미한 수준입니다.',
+        columns: ['방식', '1M 토큰당 비용', '1M 토큰 처리 시간', '비고'],
+        rows: [
+          { '방식': 'OpenAI text-embedding-3-large (API)', '1M 토큰당 비용': '$0.13', '1M 토큰 처리 시간': '약 3분 (네트워크 제한)', '비고': '영어에서 최고 절대 정확도; 데이터가 기기 밖으로 나감' },
+          { '방식': 'jina-embeddings-v3 on RTX 4070', '1M 토큰당 비용': '~$0.001 (전기)', '1M 토큰 처리 시간': '약 5분', '비고': '최고 로컬 정확도; 라이선스 CC BY-NC — 상업용 사용 확인 필요' },
+          { '방식': 'bge-large-en-v1.5 on RTX 4070', '1M 토큰당 비용': '~$0.001', '1M 토큰 처리 시간': '약 12분', '비고': '최고 영어 정확도; 라이선스 MIT' },
+          { '방식': 'nomic-embed-text-v2 on RTX 4070', '1M 토큰당 비용': '~$0.0005', '1M 토큰 처리 시간': '약 3분 30초', '비고': '최고 GPU 처리량; 다국어; Apache-2.0' },
+          { '방식': 'nomic-embed-text-v2 (M3 Pro CPU 실행)', '1M 토큰당 비용': '~$0.0008', '1M 토큰 처리 시간': '약 30분', '비고': 'GPU 불필요; GPU 없이도 실행 가능하다는 점에서만 관련' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '5,000페이지 코퍼스(페이지당 1,000 토큰으로 약 5M 토큰)의 경우 OpenAI는 전체 재인덱싱당 약 $0.65를 청구합니다 — 미미한 수준입니다. 실제 비용은 데이터 유출입니다. 모든 청크가 기기 밖으로 나가며, 많은 컴플라이언스 체제에서는 단순히 허용하지 않습니다. 셀프 호스팅 임베딩은 첫째로 프라이버시와 제어에 관한 결정이며, 둘째로 비용에 관한 결정입니다.',
+          },
+        ],
+      },
+      decisionTree: {
+        id: 'decision-tree',
+        title: '의사결정 트리: 어떤 임베더를 선택해야 합니까?',
+        content:
+          '**5개의 이진 질문으로, 순서대로, 대부분의 독자를 올바른 임베더로 안내합니다.**',
+        image: '/images/best-embedding-models-local-rag-2026-decision-tree-en.svg',
+        imageCaption: '5단계 플로우차트: GPU 사용 가능성 → 코퍼스 언어 → 문서 길이 → 차원 절단 필요성 → 상업 라이선스. 불확실할 때의 기본 선택: jina-embeddings-v3 (92% retrieval@10, 89개 언어 다국어, Matryoshka 차원 유연성). 상업 배포 시 CC BY-NC 라이선스 확인하십시오.',
+        items: [
+          '**1. 인덱싱에 GPU가 있습니까?** → 아니오: nomic-embed-text-v2 (CPU 속도 5배). 예: 계속.',
+          '**2. 코퍼스가 영어 전용입니까?** → 아니오: 계속. 예: 정확도가 최우선이면 bge-large-en-v1.5, Apache-2.0 라이선스가 중요하면 gte-large 또는 mxbai-embed-large-v1.',
+          '**3. 문서가 매우 깁니까(8k+ 토큰 청크)?** → 예: snowflake-arctic-embed-l-v2.0. 아니오: 계속.',
+          '**4. 저장 비용 관리를 위해 나중에 차원을 절단해야 합니까?** → 예: jina-embeddings-v3 (Matryoshka). 아니오: 계속.',
+          '**5. 상업 제품에 배포합니까?** → 예: 상업 라이선스 없이 jina-embeddings-v3 (CC BY-NC) 피하기 — 대신 nomic-embed-text-v2 (Apache-2.0) 또는 BAAI/bge-m3 (MIT) 사용.',
+          '**확실하지 않다면: jina-embeddings-v3.** 벤치마크에서 가장 높은 전체 정확도를 자랑하며 4가지 문서 유형 모두에서 87% 이상을 유지하는 유일한 모델입니다. 라이선스가 허용되는 배포에서는 기본으로 선택해야 합니다.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '임베딩 모델 선택 시 흔한 실수',
+        items: [
+          '**실수 1: 플랫폼 기본 임베더 그대로 유지.** AnythingLLM에는 소형 내장 임베더가 있고, PrivateGPT는 기본적으로 all-MiniLM-L6-v2를 사용하며, Open WebUI는 기본적으로 nomic-embed-text-v1.5를 사용합니다. 세 가지 기본값 모두 retrieval@10에서 jina-embeddings-v3보다 5–10%포인트 성능이 낮습니다. 변경하십시오.',
+          '**실수 2: 768차원 모델로 이미 90% retrieval@10 달성 시 1,024차원 모델 선택.** 한계 이익이 두 배의 저장과 5배 느린 CPU 성능을 정당화하는 경우는 드뭅니다. nomic-embed-text-v2는 88%를 달성합니다 — 대부분의 사용 사례에 충분합니다.',
+          '**실수 3: 다국어 코퍼스에 영어 전용 임베더 선택.** bge-large-en-v1.5는 테스트에서 최고의 영어 임베더이면서 일본어나 중국어 콘텐츠에서 가장 성능이 낮은 모델 중 하나입니다. "최고의 임베더"에 대한 답은 코퍼스에 따라 다릅니다 — 자신의 데이터로 측정하십시오.',
+          '**실수 4: 라이선스 무시.** jina-embeddings-v3는 오픈 웨이트에 대해 CC BY-NC로 배포됩니다. 상업 라이선스 없이 유료 제품에 포함하면 법적 문제가 됩니다. 통합 시점에 항상 라이선스를 다시 확인하십시오.',
+          '**실수 5: 너무 작은 코퍼스에서 벤치마크 수행.** 6개 모델 모두 100개 문서에서 좋아 보입니다. 차이는 약 5,000 청크 이상에서 결정적이 됩니다. 이 지점에서 약한 임베더의 recall 한계가 나타납니다. 실제 콘텐츠의 최소 5,000 청크로 테스트하십시오.',
+          '**실수 6: 임베더 변경 시 전체 재인덱싱이 필요하다는 사실 망각.** 어떤 로컬 RAG 플랫폼도 증분 마이그레이션을 지원하지 않습니다. 임베더 변경 시마다 소비자 하드웨어에서 5,000페이지당 30–90분이 소요됩니다. 한 번 선택하고, 신중하게 변경하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'CPU 전용에서 가장 빠른 임베딩 모델은 무엇입니까?',
+            a: 'nomic-embed-text-v2 — 배치 크기 32와 256 토큰 청크에서 Apple M3 Pro에서 580 chunks/초. 1,024차원 대안보다 약 5배 빠릅니다(bge-large-en-v1.5 95, gte-large 110, mxbai-embed-large-v1 105 chunks/초). 속도 이점은 Mixture-of-Experts 아키텍처에서 나오며, 토큰당 475M 파라미터 중 약 305M만 활성화됩니다. CPU 전용 하드웨어에서 1,000페이지 이상의 코퍼스의 경우 nomic-embed-text-v2가 실용적인 기본값입니다.',
+          },
+          {
+            q: '더 많은 임베딩 차원이 실제로 검색을 개선합니까?',
+            a: '~1,024차원까지는 그렇습니다. 그 이상에서는 아닙니다. 벤치마크에서 768차원 nomic-embed-text-v2(88% retrieval@10)는 전체적으로 1,024차원 jina-embeddings-v3(92%)보다 4점 낮았습니다. 1,536 또는 3,072차원으로 확장하면(일부 상업 API) 공개 비교에서 1%포인트 미만을 얻습니다. 차원은 저장 비용을 선형으로 증가시킵니다: 5만 페이지 코퍼스는 768차원에서 0.9 GB, 1,024차원에서 1.2 GB, 3,072차원에서 3.6 GB가 필요합니다. Matryoshka 기법 — 임베딩 후 절단 — 은 비용 없이 유연성을 제공합니다.',
+          },
+          {
+            q: '성능 손실 없이 다국어 임베딩을 사용할 수 있습니까?',
+            a: '다국어 모델은 2026년에 실질적으로 경쟁력 있는 수준에 도달하였습니다. jina-embeddings-v3는 92% retrieval@10 전체(다국어 쿼리에서 89%)를 달성하였습니다 — 영어 텍스트에서 최고의 영어 전용 임베더와 경쟁력 있으며 비영어 언어에서 훨씬 앞섭니다. 역사적 격차(다국어 = 낮은 정확도)는 영어 쿼리에서 1–2점으로 좁혀졌으며 비영어 언어에서 10점 향상을 얻습니다. 혼합 코퍼스의 경우 다국어가 이제 기본 올바른 선택입니다.',
+          },
+          {
+            q: '코드를 가장 잘 처리하는 임베딩 모델은 무엇입니까?',
+            a: '테스트한 6개 중 어느 것도 전용 코드 임베더가 아닙니다. TypeScript/Python 코드베이스에서 jina-embeddings-v3가 87% retrieval@10으로 선두였으며 나머지는 82–86% 범위였습니다. 코드가 많은 코퍼스 — 코드 검색, 리포지토리 RAG, 코드베이스 기반 에이전트 도구 — 의 경우 범용 임베더와 코드 전용 임베더(BAAI/bge-code-v1, voyage-code-2 또는 파인튜닝된 변형)를 결합하고 더 높은 점수를 사용하십시오. 가장 간단한 접근법: 먼저 jina-embeddings-v3로 모두 임베딩하고, 예비 쿼리 세트에서 retrieval@10을 측정하고, 임계값 아래로 떨어질 때만 변경하십시오.',
+          },
+          {
+            q: '임베딩 모델은 얼마나 자주 업데이트해야 합니까?',
+            a: '새로 게시된 모델이 유사한 코퍼스 데이터에서 귀하의 모델보다 3+%포인트 높은 벤치마크를 보이고, 비교할 측정된 retrieval@10 기준이 있을 때 업데이트하십시오. 기준 측정 없이는 새 모델이 실제로 귀하의 콘텐츠에 더 나은지 알 수 없습니다. 대부분의 로컬 RAG 배포에서 임베더는 훨씬 더 나은 옵션이 나오기 전에 12–18개월 동안 좋습니다. 재인덱싱이 비용입니다 — 소비자 하드웨어에서 5,000페이지당 30–90분을 예산에 반영하십시오.',
+          },
+          {
+            q: '동일한 RAG 시스템에서 임베딩 모델을 혼합할 수 있습니까?',
+            a: '기술적으로는 가능하지만 실제로는 그렇지 않습니다. 혼합은 두 개의 병렬 벡터 인덱스(둘 다 쿼리하고 결과 결합 — 50–150 ms 지연 시간 추가 및 관련성 점수 복잡화) 또는 차원을 정렬하는 소형 투영 레이어 훈련(연구 수준, 불안정)이 필요합니다. 로컬 배포의 95%에서는 임베더 하나를 선택하고 재인덱싱하십시오. 예외: 코드 청크에 전용 코드 임베더, 문서에 범용 임베더가 있는 코드 리포지토리 — 인제스트 시 문서 유형별로 분리하고, 사용자 쿼리가 모호할 때 두 인덱스를 쿼리하십시오.',
+          },
+          {
+            q: '오픈소스 임베딩이 OpenAI만큼 좋습니까?',
+            a: '대부분의 로컬 RAG 사용 사례에서 그렇습니다. OpenAI text-embedding-3-large는 여전히 게시된 영어 벤치마크에서 retrieval@10에서 2–4%포인트 앞서지만, 격차가 실질적으로 좁혀졌습니다. jina-embeddings-v3는 테스트 코퍼스에서 2점 차이에 불과했으며, OpenAI 경로는 데이터가 기기 밖으로 나가야 합니다 — 프라이버시나 컴플라이언스 제약이 있는 배포에서는 즉각 기각 사유입니다. 프라이버시 요건 없이 순수 영어 품질과 적당한 예산을 원한다면 OpenAI가 여전히 절대 최고 수치를 기록합니다. 그 외의 경우에는 오픈소스가 따라잡았습니다.',
+          },
+          {
+            q: '양자화가 임베딩 품질에 영향을 미칩니까?',
+            a: '저장된 벡터의 int8 양자화는 저장을 절반으로 줄이고 검색 지연 시간을 약 절반으로 줄이는 대신 우리 테스트에서 retrieval@10이 약 0.5%포인트 하락합니다. 25,000 청크 이상의 코퍼스에서는 가치 있습니다. *임베딩 모델 자체* 양자화(가중치 — bf16 → int8 → int4)는 더 공격적입니다. int8 모델 양자화는 1–2%포인트 비용, int4는 3–5점 비용이 들며 다국어 recall에 현저히 해롭습니다. 소비자 하드웨어의 로컬 RAG에서는 bf16(또는 fp16)으로 모델을 실행하고 저장된 벡터만 양자화하십시오.',
+          },
+          {
+            q: '법률 문서에 가장 좋은 모델은 무엇입니까?',
+            a: 'bge-large-en-v1.5가 법률 하위세트에서 94% retrieval@10으로 선두였습니다 — 벤치마크에서 가장 높은 단일 수치 — 그러나 영어 계약서에만 해당됩니다. 독일어, 프랑스어 또는 다국어 법률 코퍼스의 경우 jina-embeddings-v3(영어 93% / 다국어 89%)가 최고의 범용 모델입니다. 법률 텍스트는 용어 정밀도가 중요하기 때문에 1,024차원 모델을 선호합니다. 768차원 nomic-embed-text-v2는 법률 하위세트에서 6점 낮았습니다. 매우 긴 계약서(밀도 높은 법률 용어 50페이지 이상)의 경우 8k 토큰 청크가 있는 snowflake-arctic-embed-l-v2.0이 분할 손실을 줄입니다.',
+          },
+          {
+            q: 'RAG 플랫폼을 변경하면 임베딩을 재사용할 수 있습니까?',
+            a: '소스 문서는 플랫폼 간에 자유롭게 이동합니다. 임베딩은 새 플랫폼이 동일한 벡터 형식과 동일한 임베딩 모델을 지원하는 경우에만 이동합니다. AnythingLLM(LanceDB), PrivateGPT(Qdrant 또는 Chroma), Open WebUI(ChromaDB)는 모두 다른 벡터 스토어를 사용합니다. 임베더가 동일하더라도 메타데이터 스키마가 다릅니다. 실제로 모든 플랫폼 변경은 재인덱싱 패스이기도 합니다. 그에 맞게 계획하십시오. 검색 품질로 임베더를 선택하고, 나머지 모든 것으로 플랫폼을 선택하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: 2026년 최고의 로컬 RAG](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 임베딩 선택이 더 넓은 플랫폼 결정에 어떻게 맞는지에 대한 맥락.',
+          '[30분 내에 PDF에서 로컬 RAG 구축](/ko/power-local-llm/local-rag-on-your-pdfs-step-by-step) — nomic-embed-text-v1.5를 사용한 실용적인 구현 가이드.',
+          '[로컬에서 1,000개 PDF와 채팅](/ko/power-local-llm/chat-with-1000-pdfs-locally) — 10K 페이지 한계를 넘어선 임베딩 선택의 규모 의미.',
+          '[내장 RAG가 있는 로컬 AI 앱](/ko/power-local-llm/local-ai-app-with-built-in-rag) — 임베더를 아직 조정하지 않는 독자를 위한 초보자 수준(LM Studio, Jan, AnythingLLM).',
+          '[RAG 설명: 실제 데이터로 AI 응답 근거화 방법 (2026)](/ko/prompt-engineering/rag-explained) — 검색 증강 생성의 개념적 레이어.',
+          '[2026년 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026) — 임베딩 워크로드를 위한 GPU 및 RAM 크기 조정.',
+          '[Power Local LLM 허브](/ko/power-local-llm) — 완전한 가이드 라이브러리.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '2026년 로컬 RAG를 위한 최고의 임베딩 모델 (실제 문서로 테스트)',
+      description: 'Nomic, BGE, GTE, Mixedbread, Snowflake, Jina를 법률 계약서, 연구 논문, 코드, 다국어 위키에서 테스트하였습니다. retrieval@10, 속도, 메모리. 2026년 5월 평가.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/best-embedding-models-local-rag-2026',
+      inLanguage: 'ko',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '2026년 로컬 RAG를 위한 최고의 임베딩 모델', item: 'https://www.promptquorum.com/ko/power-local-llm/best-embedding-models-local-rag-2026' },
+      ],
+    },
+  },
 }

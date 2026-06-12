@@ -3945,4 +3945,502 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: '로컬 LLM 실행을 위한 최고의 노트북: 2026년 구매 가이드',
+    seoTitle: '로컬 LLM 노트북 2026: MacBook부터 ThinkPad까지',
+    intro:
+      '로컬 LLM을 위한 노트북 추천의 대부분은 GPU로 시작해서 거기서 끝납니다. 실제로 어떤 모델이 들어갈 수 있는지를 결정하는 수치는 메모리입니다. Windows 게이밍 노트북의 VRAM, 또는 Apple Silicon의 통합 메모리 — 메모리에 맞지 않는 모델은 로드되지 않거나 swap에서 느리게 실행됩니다. 이 가이드는 세 가지 구매 스타일에 따라 네 가지 노트북 제품군을 비교합니다: 휴대 가능한 폼팩터에서 가장 많은 메모리를 원하는 경우 Apple MacBook Pro, NVIDIA GPU 속도를 원하는 경우 Lenovo ThinkPad 또는 ASUS ROG 게이밍 노트북, 수리 및 업그레이드를 원하는 경우 Framework Laptop 16. 동일한 칩이 탑재된 데스크톱에 비해 노트북은 열 제한으로 인해 약 20~30% 느리게 동작합니다. 이 가이드의 가격은 2026년 5월 기준 스냅샷입니다 — 노트북 가격은 모델 사이클과 프로모션에 따라 변동하므로 구매 전에 현재 가격을 확인하십시오.',
+    metaDescription:
+      '2026년 로컬 LLM을 위한 최고의 노트북: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. 가격대별 RAM, VRAM, 실제 토큰 속도 비교.',
+    twitterDescription:
+      'MacBook Pro, ThinkPad, ASUS ROG, Framework 16 — 로컬 LLM을 위한 네 가지 노트북 제품군, 원칙은 하나: 메모리로 구매하십시오. VRAM 또는 통합 메모리가 어떤 모델이 들어가는지를 결정하며, GPU 이름이 아닙니다.',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Mistral Small v0.3',
+      'Qwen3 7B',
+      'Llama 3.3 8B',
+      'Llama 3.3 13B',
+    ],
+    current_hardware_mentioned: [
+      'Apple MacBook Pro (Apple Silicon)',
+      'Lenovo ThinkPad with NVIDIA RTX GPU',
+      'ASUS ROG gaming laptop with NVIDIA RTX GPU',
+      'Framework Laptop 16',
+    ],
+    audience:
+      '로컬 LLM 실행을 목적으로 노트북을 선택하는 구매자로, 구매 스타일(최대 휴대용 메모리, NVIDIA GPU 속도, 수리 가능한 하드웨어)과 실행해야 하는 가장 큰 모델에 따라 결정하는 분들.',
+    readTime: '13분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'laptop for local LLMs',
+    targetKeywords: [
+      '로컬 llm 노트북 추천 2026',
+      '맥북 프로 vs 게이밍 노트북 로컬 llm',
+      '로컬 llm 노트북 ram 용량',
+      '인공지능 게이밍 노트북 추천',
+      '프레임워크 노트북 16 로컬 llm',
+    ],
+    leadAnswerBlock:
+      '**로컬 LLM을 위한 최고의 노트북은 가장 빠른 GPU가 장착된 것이 아니라 목표 모델에 충분한 메모리가 있는 것입니다. 대용량 통합 메모리가 탑재된 MacBook Pro는 휴대 가능한 형태로 가장 큰 모델을 실행할 수 있으며, 높은 VRAM의 게이밍 노트북은 더 빠르게 실행하고, Framework Laptop 16은 수리 가능한 선택지입니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 로컬 LLM 실행을 위해 어떤 노트북을 구매해야 합니까?',
+        answer:
+          '먼저 메모리를 기준으로 구매하고, 그 다음에 속도를 고려하십시오. 대용량 통합 메모리를 갖춘 Apple MacBook Pro는 효율적이고 휴대 가능한 폼팩터에서 가장 큰 모델을 수용합니다. 높은 VRAM의 NVIDIA RTX GPU를 탑재한 Lenovo ThinkPad 또는 ASUS ROG 게이밍 노트북은 전원을 연결했을 때 7B~13B 모델을 더 빠르게 실행합니다. Framework Laptop 16은 수리 및 업그레이드를 위한 선택지입니다. 데스크톱보다 약 20~30% 낮은 속도를 예상하십시오. 노트북 가격은 모델 사이클에 따라 변동하므로 현재 가격을 확인하십시오.',
+        bullets: [
+          '최대 휴대용 메모리: 대용량 통합 메모리를 갖춘 Apple MacBook Pro — 더 큰 모델, 더 나은 배터리',
+          '7B-13B에서 가장 빠름: 높은 VRAM의 NVIDIA RTX GPU를 갖춘 게이밍 노트북 (ThinkPad 또는 ASUS ROG)',
+          '수리 가능한 선택지: Framework Laptop 16 — 업그레이드 가능한 RAM 및 저장소',
+          '최소 8GB를 계획하고 16GB 이상 권장, 데스크톱보다 약 20~30% 낮은 속도 예상',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '에디터 선택', anchor: '#editors-choice' },
+      { label: '노트북 제품군 비교', anchor: '#comparison-table' },
+      { label: '어떤 노트북을 구매해야 합니까?', anchor: '#which-laptop' },
+      { label: 'Apple MacBook Pro', anchor: '#family-macbook' },
+      { label: 'Lenovo ThinkPad 및 워크스테이션 노트북', anchor: '#family-thinkpad' },
+      { label: 'ASUS ROG 및 게이밍 노트북', anchor: '#family-rog' },
+      { label: 'Framework Laptop 16', anchor: '#family-framework' },
+      { label: '얼마나 많은 메모리가 필요합니까?', anchor: '#memory-needs' },
+      { label: '의사 결정 흐름도', anchor: '#decision-flowchart' },
+      { label: '구매처', anchor: '#where-to-buy' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽기', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**결정적 제약은 GPU 이름이 아니라 메모리입니다.** VRAM 또는 통합 메모리에 맞지 않는 모델은 로드되지 않거나 swap으로 넘쳐 대화형 사용에 너무 느려집니다. 목표 모델에 필요한 메모리를 기준으로 구매하고, 그 다음에 속도를 최적화하십시오.',
+          '**최대 휴대용 메모리: Apple MacBook Pro.** Apple Silicon은 CPU와 GPU 사이에 단일 통합 메모리 풀을 공유하므로, 대용량 메모리 구성은 동급 게이밍 노트북보다 더 큰 모델을 수용합니다 — 최고의 에너지 효율성을 제공합니다.',
+          '**7B-13B에서 가장 빠름: 높은 VRAM의 NVIDIA 게이밍 노트북.** RTX GPU를 탑재한 Lenovo ThinkPad 워크스테이션 또는 ASUS ROG 노트북은 전원을 연결했을 때 7B~13B 모델을 더 빠르게 실행합니다. RTX 4060 (8GB) 노트북은 7B 모델을 약 60~90 tok/s로 실행하며, RTX 4070 (12GB) 노트북은 13B를 편안하게 처리합니다.',
+          '**수리 가능한 선택지: Framework Laptop 16.** 업그레이드 가능한 RAM과 저장소, 모듈식 설계를 갖추고 있어 전체 기기를 교체하는 대신 나중에 메모리를 늘릴 수 있습니다 — 첫 번째 구성에서 메모리가 부족할 위험에 대한 완충장치입니다.',
+          '**메모리 최소 요구사항:** Q4_K_M으로 8GB는 7B 모델을 실행하고, 16GB는 13B를 편안하게 실행하며, 대용량 MacBook Pro 구성은 훨씬 더 큰 모델에 도달합니다. 운영체제를 위해 항상 2~4GB의 여유를 남겨 두십시오.',
+          '**데스크톱과의 속도 차이를 예상하십시오.** 노트북은 열 제한이 지속적인 부하 하에서 클록 주파수를 낮게 유지하기 때문에 동일한 칩이 탑재된 데스크톱보다 약 20~30% 느리게 동작합니다.',
+          '**Windows에서는 배터리가 모든 것을 바꿉니다.** 게이밍 노트북은 일반적으로 배터리 사용 시 외장 GPU를 비활성화하거나 제한하여 추론 속도를 매우 낮춥니다 — 전원을 연결하여 사용하도록 계획하십시오. Apple Silicon은 배터리로도 사용 가능하며 훨씬 더 효율적입니다.',
+          '**가격은 2026년 5월 기준 스냅샷입니다.** 노트북 가격은 모델 업데이트 사이클과 프로모션에 따라 변동합니다 — 각 수치를 범위로 취급하고 구매 전에 실시간 가격을 확인하십시오.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**Apple MacBook Pro:** CPU와 GPU가 공유하는 통합 메모리 — 대용량 구성은 가장 큰 모델을 휴대 가능하게 수용합니다.',
+          '**Lenovo ThinkPad / 워크스테이션:** NVIDIA RTX GPU 옵션을 갖춘 견고한 빌드 — 전원 연결 시 7B-13B 추론에 탁월합니다.',
+          '**ASUS ROG 게이밍 노트북:** 게이밍 수준의 냉각을 갖춘 높은 VRAM의 RTX GPU — 전원 연결 시 7B-13B에서 가장 빠른 옵션입니다.',
+          '**Framework Laptop 16:** 업그레이드 가능한 RAM과 저장소를 갖춘 모듈식 수리 가능 설계 — 나중에 늘릴 수 있는 메모리로 구매하십시오.',
+          '**Q4_K_M 메모리 규칙:** 8GB는 7B 모델 실행, 16GB는 13B 실행, 운영체제를 위해 항상 2~4GB를 여유로 남겨 두십시오.',
+          '**속도 기준:** 7B 모델은 노트북 CPU에서 10~25 tok/s, Apple Silicon에서 30~80 tok/s, RTX 4060 노트북 GPU에서 60~90 tok/s로 실행됩니다.',
+          '**데스크톱과의 속도 차이:** 열 스로틀링으로 인해 동일한 칩이 탑재된 데스크톱보다 노트북에서 약 20~30% 느린 지속 속도를 예상하십시오.',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: '에디터 선택: 대용량 통합 메모리를 갖춘 Apple MacBook Pro',
+        sponsoredSlot: true,
+        content:
+          '**로컬 LLM을 잘 실행하면서 휴대성을 유지하고자 하는 대부분의 구매자에게 대용량 통합 메모리를 갖춘 Apple MacBook Pro가 균형 잡힌 선택입니다.** Apple Silicon은 CPU와 GPU 사이에 단일 메모리 풀을 공유하므로, 대용량 메모리 구성은 동일한 메모리가 VRAM과 시스템 RAM으로 분리된 게이밍 노트북보다 더 큰 모델을 수용합니다. 또한 배터리로도 사용 가능하며 훨씬 더 효율적으로 동작합니다 — MacBook Pro M 시리즈는 7B 추론 중 약 12~18W를 소비하는 반면, Windows 노트북은 25~45W를 소비합니다. 7B-13B에서 가장 빠른 추론이 필요하고 노트북을 항상 전원에 연결할 것이라면, 높은 VRAM의 NVIDIA 게이밍 노트북이 더 빠릅니다. 수리하고 업그레이드할 수 있는 하드웨어를 원한다면 Framework Laptop 16을 선택하십시오. MacBook Pro는 예산이 허용하는 한 최대한 많은 통합 메모리로 구성하십시오 — 메모리는 구매 후 업그레이드할 수 없습니다. 가격은 넓은 범위를 포괄하므로 구매 전에 현재 가격을 확인하십시오.',
+        callouts: [
+          {
+            type: 'note',
+            text: '이 에디터 선택은 의도된 사용 목적에 대한 적합성만을 반영합니다. PromptQuorum은 어떤 제휴 프로그램에도 등록되어 있지 않으며, 아래 링크에는 제휴 태그가 없습니다 — 수수료가 발생하지 않는 단순 참조 링크입니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=MacBook+Pro',
+            productName: 'Apple MacBook Pro',
+            productCategory: 'laptop',
+            label: 'Amazon에서 MacBook Pro 가격 확인하기',
+          },
+          {
+            url: 'https://www.apple.com/shop/buy-mac/macbook-pro',
+            productName: 'Apple MacBook Pro',
+            productCategory: 'laptop',
+            label: 'Apple에서 MacBook Pro 구성 확인하기',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '로컬 LLM을 위한 네 가지 노트북 제품군 비교',
+        content:
+          '속도 수치는 PromptQuorum의 노트북 테스트에서 나온 것입니다 — 7B 모델은 노트북 CPU에서 10~25 tok/s, Apple Silicon에서 30~80 tok/s, RTX 4060 노트북 GPU에서 60~90 tok/s로 실행됩니다. "최적 용도" 열은 특정 SKU가 아닌 구매 스타일을 반영합니다. 가격은 2026년 5월 기준 범위로 표시됩니다 — 노트북 가격은 모델 사이클과 프로모션에 따라 변동하므로 구매 전에 확인하십시오.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 LLM이 탑재된 노트북의 경우, 메모리 풀(Windows의 VRAM 또는 Apple Silicon의 통합 메모리)이 어떤 모델이 들어갈 수 있는지를 결정하고, 냉각 시스템이 열 스로틀링 전에 얼마나 빠르게 실행되는지를 결정합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '메모리를 작업대 크기로, 모델을 그 위의 프로젝트로 생각하십시오. 더 빠른 칩은 작업을 더 빨리 마치지만, 프로젝트가 작업대에 맞지 않으면 속도는 중요하지 않습니다. 노트북은 데스크톱보다 냉각 시스템이 작아 긴 작업에서 속도가 떨어집니다.',
+          },
+        ],
+        columns: ['노트북 제품군', '메모리 모델', '7B 속도 (재사용 데이터)', '최적 용도', '가격 (2026년 5월)'],
+        rows: [
+          {
+            '노트북 제품군': 'Apple MacBook Pro',
+            '메모리 모델': '통합 메모리 (CPU + GPU 공유)',
+            '7B 속도 (재사용 데이터)': 'Apple Silicon에서 30-80 tok/s',
+            '최적 용도': '휴대 가능한 형태로 더 큰 모델, 더 나은 배터리',
+            '가격 (2026년 5월)': '중고가~프리미엄, 현재 가격 확인 필요',
+          },
+          {
+            '노트북 제품군': 'Lenovo ThinkPad / 워크스테이션',
+            '메모리 모델': 'NVIDIA RTX VRAM + 시스템 RAM',
+            '7B 속도 (재사용 데이터)': 'RTX 4060 GPU에서 60-90 tok/s',
+            '최적 용도': '견고한 빌드, 전원 연결 시 7B-13B 작업',
+            '가격 (2026년 5월)': '중고가~프리미엄, 현재 가격 확인 필요',
+          },
+          {
+            '노트북 제품군': 'ASUS ROG 게이밍 노트북',
+            '메모리 모델': 'NVIDIA RTX VRAM + 시스템 RAM',
+            '7B 속도 (재사용 데이터)': 'RTX 4060 GPU에서 60-90 tok/s',
+            '최적 용도': '전원 연결 시 7B-13B에서 가장 빠름',
+            '가격 (2026년 5월)': '중간 가격대, 현재 가격 확인 필요',
+          },
+          {
+            '노트북 제품군': 'Framework Laptop 16',
+            '메모리 모델': '업그레이드 가능한 시스템 RAM + GPU 모듈',
+            '7B 속도 (재사용 데이터)': '전원 연결 시 RTX 노트북과 유사',
+            '최적 용도': '수리 가능성, 나중에 메모리 늘리기',
+            '가격 (2026년 5월)': '중간 가격대, 현재 가격 확인 필요',
+          },
+        ],
+      },
+      whichLaptop: {
+        id: 'which-laptop',
+        title: '어떤 노트북을 구매해야 합니까?',
+        content:
+          '**구매 스타일이 제품군을 결정하고, 가장 큰 목표 모델이 메모리 구성을 결정합니다.** 자신의 상황에 맞는 행을 찾으십시오.',
+        columns: ['상황', '이것을 구매하십시오'],
+        rows: [
+          { '상황': '배터리 성능이 뛰어난 휴대 가능한 폼팩터에서 가장 큰 모델을 원합니다', '이것을 구매하십시오': '대용량 통합 메모리를 갖춘 Apple MacBook Pro' },
+          { '상황': '7B-13B에서 가장 빠른 추론을 원하고 항상 전원에 연결할 것입니다', '이것을 구매하십시오': '높은 VRAM의 NVIDIA RTX GPU를 갖춘 ASUS ROG 노트북' },
+          { '상황': 'RTX GPU를 갖춘 전문가급 견고한 빌드를 원합니다', '이것을 구매하십시오': 'RTX GPU를 갖춘 Lenovo ThinkPad 워크스테이션' },
+          { '상황': '노트북을 직접 수리하고 시간이 지남에 따라 업그레이드하고 싶습니다', '이것을 구매하십시오': 'Framework Laptop 16' },
+          { '상황': '주로 7B 모델을 실행하고 균형 잡힌 일상 노트북을 원합니다', '이것을 구매하십시오': '중간 수준의 통합 메모리를 갖춘 MacBook Pro' },
+          { '상황': '무엇을 선택할지 모르고 가장 안전한 첫 번째 노트북을 원합니다', '이것을 구매하십시오': 'Apple MacBook Pro — 메모리, 효율성, 배터리의 최고 균형' },
+        ],
+      },
+      familyMacbook: {
+        id: 'family-macbook',
+        title: 'Apple MacBook Pro: 최대 휴대용 메모리',
+        content:
+          '**Apple MacBook Pro는 Apple Silicon이 CPU와 GPU 사이에 단일 통합 메모리 풀을 공유하기 때문에 휴대 가능한 폼팩터에서 가장 큰 로컬 LLM을 수용하는 선택지입니다.** 즉, 대용량 메모리 구성은 VRAM과 시스템 RAM으로 별도로 나뉜 동일한 총 메모리를 가진 게이밍 노트북보다 더 큰 모델을 실행합니다.',
+        items: [
+          '**구매 이유:** 통합 메모리는 비교 가능한 VRAM 분할보다 더 큰 모델을 수용하고, Apple Silicon은 배터리로도 사용 가능하며 가장 에너지 효율적인 옵션입니다 — 7B 추론 중 약 12~18W 대 Windows 노트북의 25~45W.',
+          '**MacBook Pro를 선택하는 경우:** 가장 큰 모델을 위한 노트북을 원하고, 배터리 수명을 중시하며, 추론 실행을 위해 전원에 연결할 필요가 없는 조용한 기기를 선호하는 경우.',
+          '**재사용된 속도 데이터:** 7B 모델은 칩 수준과 메모리에 따라 Apple Silicon에서 30~80 tok/s로 실행됩니다; 대용량 통합 메모리 구성은 13B 모델을 빠른 메모리에 완전히 수용합니다.',
+          '**신중하게 구성하십시오:** 통합 메모리는 구매 후 업그레이드할 수 없습니다. 예산이 허용하는 한 최대한 많은 메모리를 구매하십시오 — 이것이 가장 큰 모델을 영구적으로 결정하는 사양입니다.',
+          '**선택하지 않아야 하는 경우:** 전원 연결 시 7B-13B의 가능한 가장 빠른 추론을 위해서는 높은 VRAM의 NVIDIA 게이밍 노트북이 더 빠르며, MacBook Pro는 사용자가 수리할 수 없습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'MacBook Pro에서 통합 메모리는 변경할 수 없는 유일한 사양입니다. 저장소보다 메모리를 우선시하십시오 — 외장 SSD가 모델 라이브러리를 저장할 수 있지만, 어떤 외부 구성 요소도 통합 메모리를 추가할 수 없습니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=MacBook+Pro',
+            productName: 'Apple MacBook Pro',
+            productCategory: 'laptop',
+            label: 'Amazon에서 MacBook Pro 가격 확인하기',
+          },
+          {
+            url: 'https://www.apple.com/shop/buy-mac/macbook-pro',
+            productName: 'Apple MacBook Pro',
+            productCategory: 'laptop',
+            label: 'Apple에서 MacBook Pro 구성 확인하기',
+          },
+        ],
+      },
+      familyThinkpad: {
+        id: 'family-thinkpad',
+        title: 'Lenovo ThinkPad 및 워크스테이션 노트북: 견고한 NVIDIA 옵션',
+        content:
+          '**NVIDIA RTX GPU를 탑재한 Lenovo ThinkPad 모바일 워크스테이션은 전문가급 견고한 빌드에서 NVIDIA 추론 속도를 원하는 구매자를 위한 선택지입니다.** ThinkPad 워크스테이션 모델은 RTX GPU와 견고한 섀시, 유지보수하기 쉬운 내부 구성을 결합합니다.',
+        items: [
+          '**구매 이유:** NVIDIA RTX GPU는 Ollama 및 LM Studio와 함께 기본적으로 CUDA 가속 추론을 실행하며, 일상적인 사용을 위해 설계된 섀시에서 교체 가능한 부품으로 구성됩니다.',
+          '**ThinkPad 워크스테이션을 선택하는 경우:** NVIDIA GPU 속도를 원하고, 견고한 빌드와 좋은 키보드를 중시하며, 노트북이 업무용 기기로도 사용되는 경우.',
+          '**재사용된 속도 데이터:** RTX 4060 (8GB) 노트북 GPU는 7B 모델을 약 60~90 tok/s로 실행합니다; RTX 4070 (12GB) 노트북은 13B 모델을 편안하게 처리합니다. 속도는 동급 데스크톱 GPU보다 약 20~30% 낮습니다.',
+          '**메모리를 위해 구성하십시오:** 13B를 위한 여유를 원한다면 최소 16GB 시스템 RAM과 12GB VRAM GPU를 선택하십시오; GPU는 납땜되어 있으므로 구매 시 올바른 VRAM을 선택하십시오.',
+          '**선택하지 않아야 하는 경우:** 외장 GPU는 일반적으로 배터리 사용 시 제한되므로 전원에 연결하여 사용하도록 계획하십시오; 순수한 가격 대비 속도 면에서는 ASUS ROG 게이밍 노트북이 더 저렴한 경우가 많습니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '노트북 GPU는 메인보드에 납땜되어 있어 업그레이드할 수 없습니다. 실행할 가장 큰 모델에 맞게 VRAM 용량을 선택하십시오 — 8GB GPU는 7B를 편안하게 수용하고, 12GB GPU는 13B를 위한 더 안전한 최소 기준입니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Lenovo+ThinkPad+RTX+workstation',
+            productName: 'Lenovo ThinkPad RTX workstation laptop',
+            productCategory: 'laptop',
+            label: 'Amazon에서 Lenovo ThinkPad 워크스테이션 가격 확인하기',
+          },
+          {
+            url: 'https://www.lenovo.com/us/en/d/laptops/thinkpad/',
+            productName: 'Lenovo ThinkPad workstation laptop',
+            productCategory: 'laptop',
+            label: 'Lenovo에서 ThinkPad 구성 확인하기',
+          },
+        ],
+      },
+      familyRog: {
+        id: 'family-rog',
+        title: 'ASUS ROG 및 게이밍 노트북: 전원 연결 시 7B-13B에서 가장 빠름',
+        content:
+          '**높은 VRAM의 NVIDIA RTX GPU를 탑재한 ASUS ROG 게이밍 노트북은 노트북이 전원에 연결되어 있을 때 7B-13B 로컬 LLM에서 가장 빠른 선택지입니다.** 게이밍 노트북은 RTX GPU와 지속적인 부하를 위해 설계된 냉각 시스템을 결합하여, 얇고 가벼운 섀시보다 더 오래 클록 주파수를 유지합니다.',
+        items: [
+          '**구매 이유:** 높은 VRAM의 RTX GPU와 게이밍 수준의 냉각은 Windows 옵션 중 가장 빠른 7B-13B 지속 추론을 제공하며, 종종 워크스테이션 노트북보다 낮은 가격으로 제공됩니다.',
+          '**ASUS ROG 노트북을 선택하는 경우:** 7B-13B에서 최대 속도를 원하고, 노트북을 전원에 연결하여 사용할 것이며, 더 시끄러운 팬과 게이밍 외관을 수용할 수 있는 경우.',
+          '**재사용된 속도 데이터:** RTX 4060 (8GB) 노트북은 7B 모델을 60~90 tok/s로 실행합니다; RTX 4070 (12GB) 노트북은 13B를 편안하게 실행합니다. 더 나은 냉각 시스템은 열 스로틀링을 지연시키며, 이는 일반적으로 10~15분의 지속 생성 후 시작됩니다.',
+          '**메모리를 위해 구성하십시오:** 13B 여유를 위해 최소 16GB 시스템 RAM과 12GB VRAM GPU를 선택하십시오; 7B가 한계라면 8GB VRAM 모델로 충분합니다.',
+          '**선택하지 않아야 하는 경우:** 외장 GPU는 배터리 사용 시 비활성화되거나 제한되어 추론 속도가 크게 떨어집니다; 팬 소음과 배터리 소모는 MacBook Pro보다 현저히 높습니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Windows 게이밍 노트북은 일반적으로 전력 절약을 위해 배터리 사용 시 외장 GPU를 비활성화하므로, 추론 속도가 CPU만 사용하는 속도로 떨어집니다. 전원 없이 모델을 실행해야 한다면 Apple MacBook Pro가 더 나은 옵션입니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=ASUS+ROG+RTX+gaming+laptop',
+            productName: 'ASUS ROG gaming laptop with NVIDIA RTX GPU',
+            productCategory: 'laptop',
+            label: 'Amazon에서 ASUS ROG 노트북 가격 확인하기',
+          },
+          {
+            url: 'https://www.asus.com/us/laptops/for-gaming/rog/',
+            productName: 'ASUS ROG gaming laptop',
+            productCategory: 'laptop',
+            label: 'ASUS에서 ASUS ROG 구성 확인하기',
+          },
+        ],
+      },
+      familyFramework: {
+        id: 'family-framework',
+        title: 'Framework Laptop 16: 수리 가능하고 업그레이드 가능한 선택지',
+        content:
+          '**Framework Laptop 16은 시간이 지남에 따라 직접 수리하고 업그레이드하고 싶은 구매자를 위한 선택지입니다.** 모듈식 설계는 업그레이드 가능한 RAM과 저장소, 교체 가능한 부품을 사용하므로, 첫 번째 구성에서 메모리가 부족해도 전체 기기를 새로 구매할 필요가 없습니다.',
+        items: [
+          '**구매 이유:** 사용자가 업그레이드할 수 있는 RAM과 저장소, 모듈식 수리 가능 설계 — MacBook Pro 또는 게이밍 노트북의 납땜된 메모리 한계에 대한 완충장치입니다.',
+          '**Framework Laptop 16을 선택하는 경우:** 수리 가능성과 나중에 메모리를 늘릴 수 있는 옵션을 중시하고, 필요가 증가할 때 전체 노트북을 교체하는 것을 피하고 싶은 경우.',
+          '**메모리 장점:** RAM이 업그레이드 가능하므로 7B 모델을 위한 더 작은 구성으로 시작해서 13B 작업을 위해 나중에 메모리를 추가할 수 있습니다 — 이것이 가능한 유일한 제품군입니다.',
+          '**지금을 위해 구성하고, 나중을 위해 계획하십시오:** 현재 목표 모델에 충분한 메모리를 구매하되, 나중에 늘릴 수 있다는 것을 알고 구매하십시오. 구매 전에 제조사 사이트에서 현재 GPU 모듈 옵션과 지원되는 RAM 용량을 확인하십시오.',
+          '**선택하지 않아야 하는 경우:** 휴대 가능한 폼팩터에서 가능한 가장 많은 통합 메모리를 원한다면 대용량 메모리 MacBook Pro가 더 큰 모델을 수용합니다; 게이밍 노트북은 유로당 더 높은 GPU 속도를 제공할 수 있습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Framework Laptop 16은 이 가이드에서 업그레이드 가능한 RAM을 갖춘 유일한 제품군입니다. 모델이 얼마나 커질지 확신하지 못한다면, 처음에 너무 많이 지출하는 대신 적당히 시작해서 나중에 메모리를 추가할 수 있습니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Framework+Laptop+16',
+            productName: 'Framework Laptop 16',
+            productCategory: 'laptop',
+            label: 'Amazon에서 Framework Laptop 16 가격 확인하기',
+          },
+          {
+            url: 'https://frame.work/laptop16',
+            productName: 'Framework Laptop 16',
+            productCategory: 'laptop',
+            label: 'Framework에서 Framework Laptop 16 구성 확인하기',
+          },
+        ],
+      },
+      memoryNeeds: {
+        id: 'memory-needs',
+        title: '노트북에서 얼마나 많은 메모리가 필요합니까?',
+        content:
+          '**Q4_K_M 양자화를 사용하면 로컬 LLM은 10억 파라미터당 약 0.6GB의 메모리가 필요하며, 운영체제와 도구를 위해 추가로 2~4GB가 필요합니다.** 노트북에서 "메모리"는 Windows의 VRAM과 시스템 RAM, 또는 Apple Silicon의 통합 메모리를 의미합니다.',
+        items: [
+          '**8GB — 3B 및 7B 모델:** Q4_K_M의 7B 모델은 약 4.5GB가 필요하며 운영체제를 위한 공간이 남습니다. 8GB는 실용적인 최소 기준입니다; 7B 모델을 로드하기 전에 브라우저를 닫으십시오.',
+          '**16GB — 7B 및 13B 모델:** Q4_K_M의 13B 모델은 약 9GB가 필요하며, 일반적인 멀티태스킹으로 16GB에 맞습니다. 16GB는 권장 시작점입니다.',
+          '**32GB 이상 — 집중적인 멀티태스킹과 함께 13B, 또는 더 큰 모델:** 다른 애플리케이션과 함께 13B에 편안하며, 13B를 넘어가기 위한 진입점입니다.',
+          '**대용량 통합 메모리를 갖춘 MacBook Pro — 가장 큰 휴대용 모델:** GPU가 전체 메모리 풀을 공유하므로, 대용량 메모리 MacBook Pro는 16GB Windows 노트북보다 훨씬 더 큰 모델을 수용합니다.',
+          '**8GB를 사용하는 경우:** 7B 모델이 작업을 충분히 처리하는 경우; **16GB 이상을 선택하는 경우:** 13B 모델을 원하거나 추론과 함께 브라우저와 편집기를 실행하는 경우.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 LLM이 탑재된 노트북의 경우, 가장 큰 모델의 10억 파라미터당 약 0.6GB의 메모리와 오버헤드를 위한 2~4GB를 계획하십시오 — 8GB는 7B 모델을 커버하고 16GB는 13B를 커버합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '각 모델은 로드하는 데 일정량의 메모리가 필요하고, 운영체제는 그 위에 자체 메모리가 필요합니다. 모델이 맞지 않으면 노트북은 디스크 기반 swap을 사용하여 매우 느려집니다. 몇 기가바이트의 여유를 두고 가장 큰 모델에 충분한 메모리를 구매하십시오.',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: '의사 결정 흐름도: 세 가지 질문으로 노트북 선택하기',
+        content:
+          '**세 가지 질문을 순서대로 대답하면 대부분의 구매자를 한 제품군으로 안내합니다.**',
+        items: [
+          '**1. 직접 노트북을 수리하고 업그레이드해야 합니까?** 예: Framework Laptop 16. 아니오: 계속하십시오.',
+          '**2. 배터리로 모델을 실행해야 하거나 가장 많은 휴대용 메모리를 원합니까?** 예: 대용량 통합 메모리를 갖춘 Apple MacBook Pro. 아니오: 계속하십시오.',
+          '**3. 전원 연결 시 7B-13B에서 가장 빠른 속도를 견고한 빌드로 원합니까?** 견고한 빌드가 더 중요합니다: Lenovo ThinkPad 워크스테이션. 원당 속도가 더 중요합니다: ASUS ROG 게이밍 노트북.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 LLM을 위한 노트북은 수리 가능성 필요, 배터리 및 휴대용 메모리 필요, 마지막으로 견고한 빌드와 원당 속도 중에서 선택하여 결정하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '노트북을 직접 업그레이드하고 싶은지부터 시작하십시오 — 그렇다면 Framework를 선택하십시오. 전원 없이 모델을 실행해야 하거나 가장 많은 메모리를 원한다면 MacBook Pro를 선택하십시오. 그렇지 않으면 내구성이 더 중요한지 가격 대비 속도가 더 중요한지에 따라 게이밍 노트북 또는 워크스테이션을 선택하십시오.',
+          },
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '로컬 LLM 노트북 구매처',
+        content:
+          '**노트북 가격은 모델 업데이트 사이클과 프로모션에 따라 변동합니다 — 미국 가격이 일반적으로 가장 낮으며, EU 가격에는 부가세가 포함됩니다.** 아래 링크는 지역별 제품 검색 및 제조사 링크입니다; 제휴 태그가 없으며 수수료가 발생하지 않습니다.',
+        items: [
+          '**미국:** Amazon과 제조사 스토어 (Apple, Lenovo, ASUS, Framework)는 가장 다양한 구성을 제공합니다. 제조사 스토어에서는 정확한 메모리를 선택할 수 있습니다.',
+          '**독일:** Amazon.de와 독일 제조사 스토어; 표시 가격에 약 19% 부가세가 포함되어 있습니다.',
+          '**프랑스:** Amazon.fr과 프랑스 제조사 스토어; 가격은 20% 부가세가 포함된 독일과 유사합니다.',
+          '**일본:** Amazon.co.jp와 일본 제조사 스토어; 구성 옵션은 미국과 동일합니다.',
+          '**모델 업데이트 근처에서 구매하는 경우:** 새로운 세대가 출시될 때 이전 세대 가격이 떨어지는 경우가 많으며, 중고 또는 리퍼비시 게이밍 노트북은 신제품 프리미엄의 많은 부분을 피할 수 있습니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '이 가이드의 각 가격 범위는 2026년 5월 기준 스냅샷입니다. 노트북 가격은 모델 사이클과 프로모션 이벤트에 따라 변동합니다 — 구매 전에 항상 소매점 또는 제조사의 현재 목록을 열어 확인하십시오.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=laptop+for+local+LLM',
+            productName: 'Local-LLM laptops (US)',
+            productCategory: 'laptop',
+            label: 'Amazon US에서 로컬 LLM 노트북 탐색하기',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=Laptop+RTX+KI',
+            productName: 'Local-LLM laptops (Germany)',
+            productCategory: 'laptop',
+            label: 'Amazon.de에서 노트북 탐색하기',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=ordinateur+portable+RTX+IA',
+            productName: 'Local-LLM laptops (France)',
+            productCategory: 'laptop',
+            label: 'Amazon.fr에서 노트북 탐색하기',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+laptop+AI',
+            productName: 'Local-LLM laptops (Japan)',
+            productCategory: 'laptop',
+            label: 'Amazon.co.jp에서 노트북 탐색하기',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '로컬 LLM 노트북 구매 시 흔한 실수',
+        items: [
+          '**메모리 대신 GPU 이름으로 구매하기.** 모델을 위한 VRAM이 부족한 빠른 GPU는 쓸모가 없습니다. 먼저 2~4GB 여유를 두고 모델이 메모리에 맞는지 확인한 다음 속도를 비교하십시오.',
+          '**7B 모델을 잘 실행하기를 기대하며 얇은 울트라북 구매하기.** 통합 그래픽과 작은 열 마진을 갖춘 울트라북은 가벼운 3B-7B CPU 추론만 처리합니다. 대신 MacBook Pro 또는 제대로 냉각된 노트북을 선택하십시오.',
+          '**노트북에서 데스크톱 속도를 기대하기.** 열 제한은 지속적인 부하 하에서 클록 주파수를 낮게 유지합니다 — 노트북은 동일한 칩이 탑재된 데스크톱보다 약 20~30% 느리게 동작합니다.',
+          '**배터리로 게이밍 노트북 실행 계획 세우기.** Windows 게이밍 노트북은 배터리 사용 시 외장 GPU를 제한하거나 비활성화하여 추론 속도가 CPU만의 속도로 떨어집니다. 전원에 연결하여 사용하도록 계획하거나 MacBook Pro를 구매하십시오.',
+          '**납땜된 메모리를 낮은 용량으로 구성하기.** MacBook Pro 또는 게이밍 노트북에서 메모리는 구매 후 업그레이드할 수 없습니다. 구매 시 가장 큰 목표 모델에 충분한 메모리를 구매하십시오.',
+          '**열 관리 무시하기.** 닫힌 가방에서 또는 공기 순환을 위한 스탠드 없이 추론을 실행하면 GPU가 몇 분 안에 급격히 스로틀됩니다. 스탠드를 사용하고 통풍구를 깨끗하게 유지하십시오.',
+          '**7B 모델을 위해 과도하게 지출하기.** 7B 모델이 작업을 충분히 처리한다면, 고사양 구성은 낭비된 돈과 배터리입니다. 우연히 가진 예산이 아닌 모델에 맞게 메모리를 조정하십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[로컬 LLM 실행을 위한 최고의 노트북](/ko/local-llms/best-laptops-local-llm) — PromptQuorum 자체 노트북 가이드: GPU 등급, 모델 크기 제한, 이 가이드에서 재사용된 데스크톱-노트북 속도 차이.',
+          '[노트북에서 로컬 LLM 실행하기: RAM, 속도, 열 관리](/ko/local-llms/local-llm-on-laptop) — 이 가이드에서 재사용된 7B 속도 수치 (CPU, Apple Silicon, RTX 노트북 GPU) 및 배터리/열 데이터를 위한 PromptQuorum 자체 출처.',
+          '[Apple MacBook Pro 사양](https://www.apple.com/macbook-pro/specs/) — Apple Silicon 통합 메모리 구성에 대한 공식 참조.',
+          '[Framework Laptop 16](https://frame.work/laptop16) — 업그레이드 가능한 RAM과 GPU 모듈을 갖춘 모듈식 설계에 대한 공식 참조.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '2026년 로컬 LLM 실행을 위한 최고의 노트북은 무엇입니까?',
+            a: '하나의 최고 노트북은 없습니다 — 구매 스타일에 따라 다릅니다. 대용량 통합 메모리를 갖춘 Apple MacBook Pro는 가장 큰 모델을 휴대 가능하고 효율적인 폼팩터에 수용하며, 다목적으로 가장 좋은 선택입니다. ASUS ROG 또는 Lenovo ThinkPad 워크스테이션과 같은 높은 VRAM NVIDIA 게이밍 노트북은 전원 연결 시 7B~13B 모델을 더 빠르게 실행합니다. Framework Laptop 16은 수리 및 업그레이드 가능한 하드웨어를 원한다면 선택하십시오. 먼저 메모리를 기준으로 구매하고, 그 다음에 속도를 고려하십시오.',
+          },
+          {
+            q: '로컬 LLM을 위한 노트북에는 얼마나 많은 RAM이 필요합니까?',
+            a: '실용적인 최소 기준으로 8GB, 권장 시작점으로 16GB를 계획하십시오. Q4_K_M 양자화를 사용하면 7B 모델은 약 4.5GB가 필요하며 다른 앱을 가볍게 유지하면 8GB 노트북에서 실행됩니다. 13B 모델은 약 9GB가 필요하며, 16GB에 편안하게 맞습니다. 운영체제를 위해 항상 2~4GB의 여유를 남겨 두십시오.',
+          },
+          {
+            q: '로컬 LLM에는 MacBook Pro와 게이밍 노트북 중 어느 것이 더 낫습니까?',
+            a: '우선순위에 따라 다릅니다. MacBook Pro는 CPU와 GPU 사이에 단일 통합 메모리 풀을 공유하므로 더 큰 모델을 수용하고, 훨씬 더 효율적으로 동작하며, 배터리로도 사용 가능합니다. 높은 VRAM의 NVIDIA RTX GPU를 탑재한 게이밍 노트북은 전원 연결 시 7B~13B 모델을 더 빠르게 실행합니다. 휴대성과 큰 모델을 위해서는 MacBook Pro를, 전원 연결 시 최고 속도를 위해서는 게이밍 노트북을 선택하십시오.',
+          },
+          {
+            q: '노트북이 데스크톱만큼 빠르게 로컬 LLM을 실행할 수 있습니까?',
+            a: '아닙니다. 노트북은 더 작은 냉각 시스템이 지속적인 부하 하에서 클록 주파수를 낮게 유지하기 때문에 동일한 칩이 탑재된 데스크톱보다 약 20~30% 느리게 동작합니다. 열 스로틀링은 일반적으로 10~15분의 연속 생성 후 시작됩니다. 노트북은 휴대성을 위한 올바른 선택입니다; 데스크톱은 지속적인 작업 부하나 큰 모델에 더 빠릅니다.',
+          },
+          {
+            q: 'Framework Laptop 16이 로컬 LLM에 좋습니까?',
+            a: '수리 가능성과 업그레이드가 중요하다면 예입니다. Framework Laptop 16은 업그레이드 가능한 RAM과 저장소, 모듈식 설계를 갖추고 있어 7B 모델을 위한 메모리 구성으로 시작해서 13B 작업을 위해 나중에 늘릴 수 있습니다. 이 가이드에서 사용자가 업그레이드할 수 있는 메모리를 갖춘 유일한 제품군입니다. 휴대 가능한 폼팩터에서 가장 많은 통합 메모리를 원한다면 대용량 메모리 MacBook Pro가 여전히 더 큰 모델을 수용합니다.',
+          },
+          {
+            q: '배터리로 노트북에서 로컬 LLM을 실행할 수 있습니까?',
+            a: '노트북에 따라 다릅니다. Apple Silicon MacBook은 배터리로도 사용 가능하며 효율적으로 동작합니다 — 7B 추론 중 약 12~18W. Windows 게이밍 노트북은 일반적으로 배터리 사용 시 외장 GPU를 비활성화하거나 제한하여 추론 속도가 느린 CPU만의 속도로 떨어집니다. 전원 없이 모델을 실행하는 것이 중요하다면 MacBook Pro를 선택하십시오.',
+          },
+          {
+            q: '노트북에서 7B 모델은 얼마나 빠르게 실행됩니까?',
+            a: '속도는 하드웨어에 따라 다릅니다. Q4_K_M의 7B 모델은 노트북 CPU에서 초당 약 10~25 토큰, 통합 메모리를 사용하는 Apple Silicon에서 30~80 토큰, NVIDIA RTX 4060 노트북 GPU에서 60~90 토큰으로 실행됩니다. 이 수치는 PromptQuorum 자체 노트북 테스트에서 나온 것입니다.',
+          },
+          {
+            q: '노트북 GPU를 나중에 업그레이드할 수 있습니까?',
+            a: '거의 모든 노트북에서 아닙니다 — GPU는 메인보드에 납땜되어 있어 변경할 수 없습니다. 따라서 VRAM은 구매 시 올바르게 선택해야 하는 영구적인 선택입니다: 8GB GPU는 7B 모델을 수용하고, 12GB GPU는 13B를 위한 더 안전한 최소 기준입니다. Framework Laptop 16은 RAM과 일부 구성 요소에서 모듈식이지만, GPU는 구성 시점에 선택합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽기',
+        items: [
+          '[로컬 LLM 노트북 전체 가이드 읽기](/ko/local-llms/best-laptops-local-llm) — 이 구매 가이드의 배경인 GPU 등급 및 배터리 세부 정보가 담긴 더 포괄적인 노트북 가이드.',
+          '[노트북에서 로컬 LLM 설정 및 실행하기 단계별 가이드](/ko/local-llms/local-llm-on-laptop) — 선택한 노트북을 위한 RAM, 열 스로틀링, 양자화 안내.',
+          '[로컬 LLM 작업을 위한 노트북 대 데스크톱 비교](/ko/local-llms/laptop-vs-desktop-local-llm) — 전체 비용 및 속도 분석이 포함된 이 가이드의 배경 플랫폼 결정.',
+          '[휴대성이 필요하지 않다면 데스크톱 GPU 선택하기](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 고정 위치 설치를 위한 더 빠른 빌드를 위한 보완적인 GPU 구매 가이드.',
+          '[노트북을 연결할 모니터 선택하기](/ko/power-local-llm/best-monitors-ai-development-2026) — 로컬 LLM 노트북을 완전한 개발 워크스테이션으로 변환하는 디스플레이.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 LLM 실행을 위한 최고의 노트북: 2026년 구매 가이드',
+      description: '2026년 로컬 LLM을 위한 최고의 노트북: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. 가격대별 RAM, VRAM, 실제 토큰 속도 비교.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/best-laptops-local-llm-2026',
+      inLanguage: 'ko',
+      datePublished: '2026-05-22',
+      dateModified: '2026-05-22',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
 }

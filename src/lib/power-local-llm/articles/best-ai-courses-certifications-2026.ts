@@ -3871,4 +3871,492 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
 },
-}
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: '최고의 AI 강좌 및 자격증: 2026 구매 가이드',
+    seoTitle: '2026 최고의 AI 강좌 및 자격증: 무료 또는 유료',
+    intro:
+      '"최고의 AI 강좌" 목록 대부분은 브랜드 인지도를 기준으로 강좌를 분류하며, 실제로 중요한 질문인 "그 기술을 배운 후 무엇을 할 것인가?"는 무시합니다. 무료 기초 강좌와 유료 자격증 과정은 서로 경쟁하는 제품이 아닙니다 — 서로 다른 목적을 위한 것입니다. 이 가이드는 AI 학습을 세 가지 범주로 정리합니다 — 무료 강좌, 구조화된 유료 강좌, 자격증 — 그리고 각 목적에 맞는 명확한 권장 사항을 제공합니다: 비용 없이 방향을 잡거나, 실용적인 깊이를 쌓거나, 고용주가 인정하는 자격증을 취득하거나. 대형 플랫폼이 과소평가하는 네 번째 경로인 prompt engineering도 별도의 기술로 다룹니다. 강좌 가격은 프로모션과 구독 수준에 따라 변동하므로 여기의 모든 수치는 2026년 5월 기준 스냅샷입니다 — 등록 전에 플랫폼에서 현재 가격을 확인하십시오.',
+    metaDescription:
+      '2026년을 위한 세 가지 AI 학습 경로 비교: 무료 강좌, 구조화된 유료 강좌, 자격증 — 각 목적에 맞는 명확한 권장 사항 포함.',
+    twitterDescription:
+      '무료 강좌, 유료 강좌, 자격증 — 세 가지 AI 학습 경로, 하나의 규칙: 목적에 맞게 선택하십시오. 무료로 방향을 잡고, 유료 과정으로 깊이를 쌓고, 고용주가 요구할 때 자격증을 취득하십시오.',
+    affiliateDisclosure: true,
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    audience:
+      'AI 강좌 또는 자격증을 선택하는 학생 및 현직 개발자로, 플랫폼 브랜드가 아닌 목적(방향 잡기, 실용적 깊이 개발, 인정받는 자격증 취득)에 따라 결정을 내리는 분들.',
+    readTime: '12분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AI course',
+    targetKeywords: [
+      '2026 최고의 ai 강좌',
+      '2026 최고의 ai 자격증',
+      '무료 ai 강좌 온라인',
+      '초보자를 위한 머신러닝 강좌',
+      'prompt engineering 강좌',
+    ],
+    leadAnswerBlock:
+      '**최고의 AI 강좌는 브랜드가 가장 유명한 것이 아니라 여러분의 목적에 맞는 것입니다. 방향을 잡으려면 무료 강좌를 선택하고, 실용적인 깊이를 쌓으려면 구조화된 유료 강좌를 선택하고, 고용주나 직책에서 자격증을 명시적으로 요구할 때만 자격증 과정을 선택하십시오.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년에 수강할 최고의 AI 강좌 또는 자격증은 무엇입니까?',
+        answer:
+          '목적에 따라 선택하십시오. 비용 없이 방향을 잡으려면 무료 기초 강좌부터 시작하십시오. 실용적인 깊이를 쌓으려면 평가형 프로젝트가 포함된 구조화된 유료 강좌나 전문화 과정을 수강하십시오. 고용주가 인정하는 자격증을 취득하려면 자격증 과정을 선택하십시오. 업무가 prompt 작성 위주라면 전용 prompt engineering 강좌를 수강하십시오. 강좌 가격은 자주 변동하므로 등록 전에 현재 가격을 확인하십시오.',
+        bullets: [
+          '무료로 방향 잡기: 비용 없이 청강 가능한 기초 강좌',
+          '깊이 쌓기: 평가형 프로젝트가 있는 구조화된 유료 강좌 또는 전문화 과정',
+          '자격증 취득: 검증 가능한 수료증을 발급하는 자격증 과정',
+          'Prompt 전문화: 전용 prompt engineering 강좌',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '편집자 선택', anchor: '#editors-choice' },
+      { label: '강좌 범주 비교', anchor: '#comparison-table' },
+      { label: '어떤 강좌를 수강해야 할까요?', anchor: '#which-course' },
+      { label: '무료 AI 강좌', anchor: '#category-free' },
+      { label: '구조화된 유료 강좌', anchor: '#category-paid' },
+      { label: 'AI 자격증', anchor: '#category-certifications' },
+      { label: 'Prompt engineering 강좌', anchor: '#category-prompt' },
+      { label: 'AI 강좌 평가 방법', anchor: '#how-to-evaluate' },
+      { label: '결정 흐름도', anchor: '#decision-flowchart' },
+      { label: '등록 방법', anchor: '#where-to-enroll' },
+      { label: '자주 하는 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**여러분의 목적이 결정적인 제약 조건이며, 플랫폼 브랜드가 아닙니다.** 무료 기초 강좌와 유료 자격증은 서로 다른 목적을 위한 것입니다 — 이후에 달성하고자 하는 것에 맞게 범주를 선택한 다음 해당 범주 내에서 옵션을 비교하십시오.',
+          '**먼저 무료로 방향을 잡으십시오.** 많은 탄탄한 기초 강좌를 비용 없이 청강할 수 있습니다. 아무것도 지불하기 전에 여기서 시작하십시오. 해당 주제가 자신에게 맞는지 알 수 있습니다.',
+          '**구조화된 유료 강좌로 깊이를 쌓으십시오.** 평가형 실무 프로젝트가 있는 전문화 과정이나 구조화된 강좌는 실제로 적용 가능한 기술을 쌓는 범주입니다. 비디오가 아닌 프로젝트가 실제 업무로 전달되는 것입니다.',
+          '**직책이 요구할 때만 자격증을 취득하십시오.** 자격증은 검증 가능한 자격을 제공합니다. 고용주, 계약, 또는 직책이 이를 명시적으로 요구할 때 비용 가치가 있습니다 — 아무도 확인하지 않으면 거의 가치가 없습니다.',
+          '**Prompt engineering은 별도의 학습 경로입니다.** 일반 AI 강좌는 prompt 작성을 과소평가합니다. 업무가 기존 모델에서 좋은 결과를 얻는 것 위주라면 전용 prompt engineering 강좌가 직접적인 경로입니다.',
+          '**지불 전에 청강하십시오.** 대부분의 유료 플랫폼에서는 구매 전에 강좌 자료를 미리 보거나 청강할 수 있습니다. 비용을 지불하기 전에 수준과 교육 방식이 맞는지 확인하십시오.',
+          '**구독 대 일회성 지불 계산에 주의하십시오.** 일부 플랫폼은 월간 구독료를, 다른 플랫폼은 강좌당 일회성 요금을 청구합니다 — 가장 저렴한 옵션은 완전히 수강을 얼마나 빨리 마치느냐에 달려 있습니다.',
+          '**가격은 2026년 5월 기준 스냅샷입니다.** 강좌 플랫폼 가격은 프로모션 및 구독 변경에 따라 변동합니다 — 등록 전에 플랫폼에서 현재 가격을 확인하십시오.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**무료 강좌:** 기초 및 방향 잡기, 종종 비용 없이 청강 가능 — 올바른 출발점입니다.',
+          '**구조화된 유료 강좌:** 평가형 프로젝트가 있는 전문화 과정 및 구조화된 경로 — 적용 가능한 기술을 쌓는 범주입니다.',
+          '**자격증:** 검증 가능한 자격을 발급합니다 — 직책이나 고용주가 명시적으로 요구할 때 가치가 있습니다.',
+          '**Prompt engineering 강좌:** 기존 모델에서 좋은 결과를 얻는 데 집중하는 경로입니다.',
+          '**가격 모델은 다양합니다:** 월간 구독, 강좌당 일회성 요금, 무료 청강 — 가장 저렴한 것은 수강을 얼마나 빨리 마치느냐에 달려 있습니다.',
+          '**검증 가능한 수료증:** 수료증 옵션에 비용을 지불하기 전에 강좌에서 공유 가능한 인증 링크가 포함된 자격을 발급하는지 확인하십시오.',
+          '**소요 시간:** 구조화된 전문화 과정은 보통 주당 몇 시간씩 몇 주에서 몇 달이 소요됩니다 — 등록 전에 예상 시간을 확인하십시오.',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: '편집자 선택: 평가형 프로젝트가 있는 구조화된 유료 강좌',
+        sponsoredSlot: true,
+        content:
+          '**기초를 넘어 발전하는 대부분의 학습자에게 평가형 실무 프로젝트가 있는 구조화된 유료 강좌나 전문화 과정은 AI 지식을 적용 가능한 기술로 전환하는 선택입니다.** 결정적인 요소는 프로젝트입니다: 비디오는 정보를 전달하지만, 평가형 프로젝트는 그것을 적용하도록 강제합니다 — 이것이 실제 업무로 전달되는 것입니다. 구조화된 강좌는 또한 필수 조건을 건너뛰지 않도록 주제를 순차적으로 배열하며, 많은 강좌가 완료 시 검증 가능한 수료증을 발급합니다. AI가 자신에게 맞는지 알고 싶을 뿐이라면 먼저 무료 기초 강좌부터 시작하십시오 — 비용이 들지 않으며 그 질문에 답을 줍니다. 특정 직업이나 계약에서 명시된 자격증을 요구한다면 대신 자격증 과정을 선택하십시오. 강좌 가격은 프로모션과 구독 수준에 따라 변동하므로 등록 전에 플랫폼에서 현재 가격을 확인하십시오.',
+        callouts: [
+          {
+            type: 'note',
+            text: '이 편집자 선택은 목적 적합성만을 반영합니다. PromptQuorum은 어떤 제휴 프로그램에도 가입되어 있지 않으며, 아래 링크에는 제휴 태그가 없습니다 — 수수료를 생성하지 않는 단순 참조 링크입니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.deeplearning.ai/courses/',
+            productName: 'DeepLearning.AI courses',
+            productCategory: 'course',
+            label: 'DeepLearning.AI에서 구조화된 AI 강좌 탐색',
+          },
+          {
+            url: 'https://www.coursera.org/search?query=artificial%20intelligence',
+            productName: 'Coursera AI specializations',
+            productCategory: 'course',
+            label: 'Coursera에서 AI 전문화 과정 탐색',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '2026년 네 가지 AI 학습 범주 비교',
+        content:
+          '"이상적인 대상" 열은 특정 강좌가 아닌 학습 목표를 반영합니다. 가격은 2026년 5월 기준 정성적 스냅샷입니다 — 강좌 플랫폼 가격은 프로모션과 구독 수준에 따라 변동하므로 등록 전에 플랫폼에서 현재 가격을 확인하십시오.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'AI 학습에서 여러분의 목표(방향 잡기, 실용적 깊이 개발, 인정받는 자격 취득)가 적합한 강좌 범주를 결정하며, 플랫폼 브랜드가 결정하는 것이 아닙니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AI 강좌를 공구함의 도구처럼 생각하십시오. 무료 강좌는 그 작업을 좋아하는지 알아보기 위해 집어드는 도구입니다. 구조화된 유료 강좌는 실제로 기술을 쌓는 도구입니다. 자격증은 다른 사람에게 그 기술을 증명하는 데 사용하는 도구입니다. 잘못된 작업에 잘못된 도구를 선택하면 돈과 시간을 낭비합니다.',
+          },
+        ],
+        columns: ['범주', '이상적인 대상', '결과', '비용 (2026년 5월)'],
+        rows: [
+          {
+            '범주': '무료 강좌',
+            '이상적인 대상': '방향 잡기, AI가 자신에게 맞는지 결정',
+            '결과': '기본 이해, 공식 자격 없음',
+            '비용 (2026년 5월)': '청강 무료; 현재 가격 확인 필요',
+          },
+          {
+            '범주': '구조화된 유료 강좌',
+            '이상적인 대상': '실용적이고 응용 가능한 기술 개발',
+            '결과': '적용 가능한 기술, 종종 검증 가능한 수료증 포함',
+            '비용 (2026년 5월)': '구독 또는 일회성 요금; 현재 가격 확인 필요',
+          },
+          {
+            '범주': '자격증',
+            '이상적인 대상': '직책이나 고용주가 요구하는 자격 취득',
+            '결과': '이력서 및 프로필용 검증 가능한 수료증',
+            '비용 (2026년 5월)': '일회성 요금; 현재 가격 확인 필요',
+          },
+          {
+            '범주': 'Prompt engineering 강좌',
+            '이상적인 대상': '기존 모델에서 좋은 결과 얻기',
+            '결과': '실용적인 prompt 작성 기술',
+            '비용 (2026년 5월)': '무료에서 중간 가격; 현재 가격 확인 필요',
+          },
+        ],
+      },
+      whichCourse: {
+        id: 'which-course',
+        title: '어떤 AI 강좌를 수강해야 할까요?',
+        content:
+          '**목적이 범주를 결정하고, 예산과 일정이 그 범주 내에서 어떤 옵션을 선택할지 결정합니다.** 여러분의 상황에 맞는 행을 찾으십시오.',
+        columns: ['여러분의 상황', '해야 할 것'],
+        rows: [
+          { '여러분의 상황': 'AI 업무가 나에게 맞는지 알고 싶다', '해야 할 것': '비용 없이 청강 가능한 무료 기초 강좌' },
+          { '여러분의 상황': '기초를 이해하고 실제 적용 기술을 원한다', '해야 할 것': '평가형 프로젝트가 있는 구조화된 유료 강좌 또는 전문화 과정' },
+          { '여러분의 상황': '채용 공고나 고용주가 AI 자격증을 요구한다', '해야 할 것': '검증 가능한 수료증을 발급하는 자격증 과정' },
+          { '여러분의 상황': '기존 모델을 위한 prompt 작성이 업무이다', '해야 할 것': '전용 prompt engineering 강좌' },
+          { '여러분의 상황': '지금은 예산이 없다', '해야 할 것': '무료 강좌 및 무료 prompt engineering 자료' },
+          { '여러분의 상황': '어디서 시작할지 모른다', '해야 할 것': '무료 기초 강좌 — 비용이 들지 않으며 다음 단계를 명확히 해줍니다' },
+        ],
+      },
+      categoryFree: {
+        id: 'category-free',
+        title: '무료 AI 강좌: 방향을 잡을 수 있는 곳',
+        content:
+          '**무료 AI 강좌는 아무것도 지출하지 않고도 기초를 쌓고 해당 주제가 자신에게 맞는지 결정할 수 있기 때문에 올바른 출발점입니다.** 많은 탄탄한 기초 강좌를 비용 없이 청강할 수 있습니다 — 보통 평가 수료증 없이 강의와 읽기 자료를 얻을 수 있습니다.',
+        items: [
+          '**수강해야 하는 이유:** 비용 없음, 위험 없음, 핵심 개념을 배우고 더 나아갈지 판단하기에 충분한 자료.',
+          '**무료 강좌를 수강하십시오, 만약** AI를 처음 접하거나, 커리어 변경을 탐색하거나, 돈이나 시간을 투자하기 전에 주제가 맞는지 확인하고 싶다면.',
+          '**찾을 수 있는 곳:** DeepLearning.AI는 짧고 집중적인 강좌를 제공합니다; Coursera는 많은 완전한 강좌를 무료로 청강할 수 있습니다; 주요 대학과 AI 연구소는 공개 강좌 자료를 제공합니다.',
+          '**최종 목적지가 아닌 이유:** 무료 청강은 보통 평가형 프로젝트와 검증 가능한 수료증을 포함하지 않습니다. 적용 기술을 쌓으려면 구조화된 유료 강좌로 이동하십시오.',
+          '**함정을 피하십시오:** 무료가 저품질을 의미하지 않습니다 — 최고의 AI 기초 자료 중 일부는 무료입니다. 가격이 아닌 교육과정과 강사로 판단하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '지불하기 전에 무료 강좌를 청강하여 주제를 확인하십시오. 무료 자료와 유료 과정은 종종 동일한 강의를 공유합니다 — 유료 수준은 평가형 프로젝트와 수료증을 추가합니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.deeplearning.ai/courses/',
+            productName: 'DeepLearning.AI free and short courses',
+            productCategory: 'course',
+            label: 'DeepLearning.AI에서 무료 및 단기 강좌 탐색',
+          },
+          {
+            url: 'https://www.coursera.org/courses?query=artificial%20intelligence&productDifficultyLevel=Beginner',
+            productName: 'Coursera auditable AI courses',
+            productCategory: 'course',
+            label: 'Coursera에서 청강 가능한 AI 강좌 찾기',
+          },
+        ],
+      },
+      categoryPaid: {
+        id: 'category-paid',
+        title: '구조화된 유료 강좌: 기술이 실제로 쌓이는 곳',
+        content:
+          '**구조화된 유료 강좌나 전문화 과정은 평가형 실무 프로젝트가 강의에서 가르치는 것을 적용하도록 강제하기 때문에 적용 가능한 AI 기술을 쌓는 범주입니다.** 프로젝트(비디오가 아닌)가 실제 업무로 전달되는 것입니다.',
+        items: [
+          '**수강해야 하는 이유:** 필수 조건을 건너뛰지 않도록 순차적으로 배열된 교육과정, 자료를 적용할 수 있음을 증명하는 평가형 프로젝트, 그리고 보통 완료 시 검증 가능한 수료증.',
+          '**구조화된 유료 강좌를 수강하십시오, 만약** 기초를 이미 이해하고 있으며 수동적인 친숙함이 아닌 포트폴리오 수준의 적용 기술을 원한다면.',
+          '**찾을 수 있는 곳:** DeepLearning.AI와 Coursera는 구조화된 AI 및 머신러닝 전문화 과정을 제공합니다; Udemy는 일회성 결제 방식의 프로젝트 강좌를 제공합니다; DataCamp는 인터랙티브하고 실습 중심의 데이터 및 AI 경로에 집중합니다.',
+          '**비교할 가격 모델:** 구독 플랫폼은 월별로 청구하므로 빨리 완료하면 더 저렴합니다; 일회성 결제 강좌는 속도에 관계없이 동일한 비용이 듭니다. 일정에 맞는 모델을 선택하십시오.',
+          '**기본 선택인 이유:** 기초를 넘어 발전하는 대부분의 학습자에게 이것이 지식을 기술로 전환하는 범주입니다. 특정 목표가 단순한 방향 잡기나 자격증뿐이 아닌 한 이것을 선택하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '구독 플랫폼에서 실제 비용은 속도에 따라 달라집니다 — 한 달 만에 전문화 과정을 완료하는 사람은 여섯 달이 걸리는 사람보다 훨씬 적게 지불합니다. 가격 모델을 선택하기 전에 완료 예상 시간을 추정하십시오.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.coursera.org/search?query=machine%20learning%20specialization',
+            productName: 'Coursera AI and ML specializations',
+            productCategory: 'course',
+            label: 'Coursera에서 AI 전문화 과정 탐색',
+          },
+          {
+            url: 'https://www.udemy.com/courses/search/?q=artificial%20intelligence',
+            productName: 'Udemy AI project courses',
+            productCategory: 'course',
+            label: 'Udemy에서 일회성 결제 AI 강좌 탐색',
+          },
+          {
+            url: 'https://www.datacamp.com/search?q=artificial%20intelligence',
+            productName: 'DataCamp AI tracks',
+            productCategory: 'course',
+            label: 'DataCamp에서 인터랙티브 AI 경로 탐색',
+          },
+        ],
+      },
+      categoryCertifications: {
+        id: 'category-certifications',
+        title: 'AI 자격증: 자격을 위해 비용을 지불할 가치가 있는 경우',
+        content:
+          '**AI 자격증은 직책, 고용주, 또는 계약에서 인정받는 자격증을 명시적으로 요구할 때 비용 가치가 있으며, 아무도 확인하지 않으면 거의 가치가 없습니다.** 자격증은 이력서나 전문 프로필에 첨부할 수 있는 검증 가능한 수료증을 발급합니다.',
+        items: [
+          '**취득해야 하는 이유:** 검증 가능한 자격, 구조화된 교육과정, 일부 고용주와 계약에서 명시적으로 요구하는 완료된 학습의 외부 신호.',
+          '**자격증을 취득하십시오, 만약** 채용 공고에서 자격증을 명시하거나, 고용주가 자격증을 재정 지원하거나 보상하거나, 자격증이 알려진 요건인 분야에 진입하고 있다면.',
+          '**찾을 수 있는 곳:** Coursera는 전문 수료증 프로그램을 제공합니다; DeepLearning.AI는 완료 수료증을 발급하는 구조화된 전문화 과정을 제공합니다; 클라우드 및 소프트웨어 공급업체는 자체 AI 자격 시험을 가지고 있습니다.',
+          '**건너뛰어야 하는 이유:** 고용주나 직책에서 요구하지 않는다면 자격증은 명확한 이점 없이 비용만 추가됩니다 — 구조화된 유료 강좌는 동일한 기술을 쌓고 보통 수료증도 발급합니다.',
+          '**구매 전 검증하십시오:** 수료증이 공유 가능한 인증 링크와 함께 검증 가능하고, 목표 고용주가 발급 기관을 실제로 인정하는지 확인하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '자격증은 교육과정을 완료했음을 증명하며, 그 일을 할 수 있음을 증명하지 않습니다. 구체적인 요건을 충족하기 위한 자격으로 취급하십시오 — 구조화된 강좌의 실무 프로젝트를 대체하는 것으로 취급하지 마십시오.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.coursera.org/professional-certificates',
+            productName: 'Coursera professional certificates',
+            productCategory: 'course',
+            label: 'Coursera에서 AI 전문 수료증 탐색',
+          },
+          {
+            url: 'https://www.deeplearning.ai/courses/',
+            productName: 'DeepLearning.AI specializations',
+            productCategory: 'course',
+            label: 'DeepLearning.AI에서 수료증이 있는 전문화 과정 탐색',
+          },
+        ],
+      },
+      categoryPrompt: {
+        id: 'category-prompt',
+        title: 'Prompt engineering 강좌: 과소평가된 경로',
+        content:
+          '**전용 prompt engineering 강좌는 업무가 새 모델을 훈련하는 것이 아니라 기존 모델에서 좋은 결과를 얻는 것 위주라면 직접적인 경로입니다.** 일반 AI 강좌는 prompt 작성을 과소평가합니다 — 모델이 어떻게 작동하는지 가르치지, 유용하게 만드는 입력을 작성하는 방법은 가르치지 않습니다.',
+        items: [
+          '**수강해야 하는 이유:** prompt engineering은 자체적인 적용 기술입니다 — 입력 구조화, few-shot 예제 사용, 출력 형식 제어 — 일반 머신러닝 강좌에서는 거의 다루지 않습니다.',
+          '**Prompt engineering 강좌를 수강하십시오, 만약** 일상적으로 AI 모델을 사용하거나, 모델 API로 구축하거나, 모델을 훈련하는 방법을 배우지 않고도 더 나은 신뢰할 수 있는 출력을 원한다면.',
+          '**찾을 수 있는 곳:** DeepLearning.AI는 prompting에 집중한 단기 강좌를 게시합니다; 많은 강좌가 무료 또는 저비용입니다. PromptQuorum도 무료 구조화된 prompt engineering 라이브러리를 게시합니다.',
+          '**다른 강좌를 보완하는 이유:** prompting 기술은 기초 강좌나 구조화된 강좌를 대체하지 않고 보완합니다 — 병렬로 하거나, prompting이 즉각적인 필요라면 먼저 하십시오.',
+          '**비용 참고:** prompt engineering 강좌는 무료 또는 중간 가격인 경향이 있으므로 추가하기에 저위험 경로입니다. 등록 전에 현재 가격을 확인하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '일상적인 필요가 이미 사용 중인 모델에서 더 나은 출력을 얻는 것이라면 전체 머신러닝 전문화 과정보다 먼저 prompt engineering 강좌부터 시작하십시오 — 더 빠르고 낮은 비용으로 활용 가능한 기술을 제공합니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.deeplearning.ai/short-courses/',
+            productName: 'DeepLearning.AI prompt engineering short courses',
+            productCategory: 'course',
+            label: 'DeepLearning.AI에서 단기 prompt engineering 강좌 탐색',
+          },
+          {
+            url: 'https://www.udemy.com/courses/search/?q=prompt%20engineering',
+            productName: 'Udemy prompt engineering courses',
+            productCategory: 'course',
+            label: 'Udemy에서 prompt engineering 강좌 탐색',
+          },
+        ],
+      },
+      howToEvaluate: {
+        id: 'how-to-evaluate',
+        title: '등록 전에 AI 강좌를 어떻게 평가합니까?',
+        content:
+          '**AI 강좌를 마케팅이 아닌 교육과정, 실무 프로젝트, 가격 모델, 검증 가능한 수료증 발급 여부로 평가하십시오.** 지불하기 전에 이 체크리스트를 사용하십시오.',
+        items: [
+          '**전체 교육과정을 읽으십시오:** 실제로 필요한 것을 다루는지, 필수 조건이 현재 수준에 맞는지 확인하십시오. 수준 불일치가 강좌가 학습자에게 실패하는 가장 일반적인 이유입니다.',
+          '**평가형 실무 프로젝트가 있는지 확인하십시오:** 비디오만 있는 강좌는 정보를 전달하지만 기술을 전달하지는 않습니다. 프로젝트가 실제 업무로 전달되는 것입니다 — 이를 포함하는 강좌를 우선시하십시오.',
+          '**가격 모델을 비교하십시오:** 월간 구독은 빨리 완료하는 사람에게 유리하고; 일회성 요금은 속도와 무관합니다. 완료 시간을 추정하고 그 속도에 가장 저렴한 모델을 선택하십시오.',
+          '**수료증이 검증 가능한지 확인하십시오:** 자격증이 필요하다면 강좌에서 공유 가능한 인증 링크가 포함된 수료증을 발급하고 목표 고용주가 발급 기관을 인정하는지 확인하십시오.',
+          '**먼저 청강하거나 미리 보십시오:** 대부분의 플랫폼에서는 구매 전에 자료를 체험할 수 있습니다. 비용을 지불하기 전에 교육 방식과 깊이가 맞는지 확인하십시오.',
+          '**적용 기술을 원한다면 프로젝트가 풍부한 강좌를 선택하십시오; 방향 잡기만 필요하고 가격이 무료이거나 거의 무료라면 비디오만 있는 강좌도 허용됩니다.**',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'AI 강좌를 교육과정, 평가형 실무 프로젝트, 가격 모델, 검증 가능한 수료증 발급 여부로 평가하십시오 — 마케팅 문구는 유용한 정보를 제공하지 않습니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '지불하기 전에 강좌가 실제로 가르치는 것을 읽고 물건을 만드는지 아니면 비디오만 보는지 확인하십시오. 물건을 만드는 것이 기술을 고착시킵니다. 그런 다음 얼마나 빨리 완료하느냐에 따라 월간 구독이나 일회성 요금 중 어느 것이 더 저렴한지 계산하십시오.',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: '결정 흐름도: 세 가지 질문으로 AI 강좌 선택',
+        content:
+          '**순서대로 세 가지 질문을 하면 대부분의 학습자가 범주에 도달합니다.**',
+        items: [
+          '**1. 직업이나 고용주가 명시된 자격증을 요구합니까?** 예: 자격증 과정. 아니오: 계속하십시오.',
+          '**2. 주된 필요가 기존 모델을 위한 prompt 작성입니까?** 예: prompt engineering 강좌. 아니오: 계속하십시오.',
+          '**3. AI 기초를 이미 이해합니까?** 예: 평가형 프로젝트가 있는 구조화된 유료 강좌. 아니오: 먼저 무료 기초 강좌.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '자격증이 필요한지, prompt 작성이 목표인지, 기초를 이미 알고 있는지를 순서대로 답하여 AI 강좌를 선택하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '누군가 수료증을 요청할지부터 시작하십시오 — 그렇다면 자격증을 취득하십시오. 실제 목표가 더 나은 prompt 작성이라면 prompt 강좌를 수강하십시오. 그렇지 않으면 먼저 무료로 기초를 배우고 실제 기술을 쌓기 위해 구조화된 강좌에 비용을 지불하십시오.',
+          },
+        ],
+      },
+      whereToEnroll: {
+        id: 'where-to-enroll',
+        title: 'AI 강좌에 등록하는 방법',
+        content:
+          '**주요 학습 플랫폼은 각각 서로 다른 범주로 기울어져 있으므로 등록하는 곳은 선택한 범주를 따라야 합니다.** 아래 링크는 단순한 플랫폼 링크입니다; 제휴 태그가 없으며 수수료를 생성하지 않습니다.',
+        items: [
+          '**Coursera:** 청강 가능한 강좌, 구조화된 전문화 과정, 전문 수료증 프로그램의 광범위한 카탈로그 — 세 가지 유료 범주 모두에서 강력합니다.',
+          '**DeepLearning.AI:** prompt engineering을 포함한 집중적인 AI 및 머신러닝 강좌와 단기 강좌 — 많은 강좌가 무료 또는 저비용입니다.',
+          '**Udemy:** AI 및 prompt engineering 분야의 일회성 결제 프로젝트 강좌 — 구독하는 대신 강좌별로 지불하고 싶을 때 좋습니다.',
+          '**DataCamp:** 데이터 및 AI 분야의 인터랙티브하고 실습 중심의 경로 — 강의를 보는 대신 브라우저에서 연습하고 싶은 학습자에게 강합니다.',
+          '**프로모션 기간에 등록하십시오, 만약** 기다릴 수 있다면 — 플랫폼 가격은 판매 이벤트와 구독 제안에 따라 변동하므로 타이밍이 비용에 영향을 미칩니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '이 가이드의 모든 가격 참조는 2026년 5월 기준 스냅샷입니다. 강좌 플랫폼 가격은 프로모션과 구독 수준에 따라 변동합니다 — 등록하기 전에 항상 플랫폼의 현재 페이지를 여십시오.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.coursera.org/search?query=artificial%20intelligence',
+            productName: 'Coursera AI catalog',
+            productCategory: 'course',
+            label: 'Coursera에서 AI 강좌 탐색',
+          },
+          {
+            url: 'https://www.deeplearning.ai/courses/',
+            productName: 'DeepLearning.AI course catalog',
+            productCategory: 'course',
+            label: 'DeepLearning.AI에서 AI 강좌 탐색',
+          },
+          {
+            url: 'https://www.udemy.com/courses/search/?q=artificial%20intelligence',
+            productName: 'Udemy AI catalog',
+            productCategory: 'course',
+            label: 'Udemy에서 AI 강좌 탐색',
+          },
+          {
+            url: 'https://www.datacamp.com/search?q=artificial%20intelligence',
+            productName: 'DataCamp AI tracks',
+            productCategory: 'course',
+            label: 'DataCamp에서 AI 경로 탐색',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'AI 강좌 선택 시 자주 하는 실수',
+        items: [
+          '**강좌를 청강하기 전에 수료증 비용을 지불하는 것.** 대부분의 플랫폼에서는 자료를 미리 보거나 청강할 수 있습니다. 아무것도 지출하기 전에 수준과 교육 방식이 맞는지 확인하십시오.',
+          '**아무도 요구하지 않는 자격증을 구매하는 것.** 자격증은 직책이나 고용주가 이를 요구할 때 비용 가치가 있습니다. 그 요건이 없다면 구조화된 유료 강좌가 동일한 기술을 쌓고 보통 수료증도 발급합니다.',
+          '**비디오만 있는 강좌를 선택하면서 기술을 쌓기를 기대하는 것.** 강의는 정보를 전달하고; 평가형 프로젝트는 기술을 쌓습니다. 실무 작업이 없는 강좌는 능력이 아닌 친숙함만 남깁니다.',
+          '**구독 대 일회성 지불 계산을 무시하는 것.** 월간 구독은 빨리 완료하면 저렴하고 지체하면 비쌉니다. 가격 모델을 선택하기 전에 완료 예상 시간을 추정하십시오.',
+          '**인상적으로 들린다고 고급 강좌부터 시작하는 것.** 수준 불일치가 학습자가 강좌를 포기하는 주된 이유입니다. 현재 수준에 필수 조건을 솔직하게 맞추십시오.',
+          '**일반 AI 강좌를 prompt engineering 강좌로 취급하는 것.** 일반 강좌는 모델이 어떻게 작동하는지 가르치지, 좋은 prompt를 작성하는 방법은 가르치지 않습니다. prompting이 목표라면 전용 prompt engineering 강좌를 수강하십시오.',
+          '**무료 자료를 건너뛰고 더 많이 지불하는 것.** 최고의 AI 기초 콘텐츠 중 일부는 무료입니다. 유료 강좌가 더 좋다고 가정하기 전에 무료 옵션을 청강하십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[Coursera 강좌 카탈로그](https://www.coursera.org/) — 청강 가능한 강좌, 전문화 과정, 전문 수료증 프로그램 구조에 대한 참조.',
+          '[DeepLearning.AI 강좌](https://www.deeplearning.ai/courses/) — AI 및 머신러닝 강좌와 단기 prompt engineering 강좌에 대한 참조.',
+          '[Udemy 강좌 플랫폼](https://www.udemy.com/) — 일회성 결제 프로젝트 강좌 가격 모델에 대한 참조.',
+          '[DataCamp 학습 플랫폼](https://www.datacamp.com/) — 인터랙티브하고 실습 중심의 데이터 및 AI 경로 구조에 대한 참조.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '2026년에 수강할 최고의 AI 강좌는 무엇입니까?',
+            a: '단 하나의 최고 AI 강좌는 없습니다 — 최고는 목표에 따라 달라집니다. 비용 없이 방향을 잡으려면 무료 기초 강좌를 수강하십시오. 실용적인 기술을 개발하려면 평가형 프로젝트가 있는 구조화된 유료 강좌나 전문화 과정을 수강하십시오. 자격증을 취득하려면 자격증 과정을 선택하십시오. 업무가 prompt 작성 위주라면 전용 prompt engineering 강좌를 수강하십시오. 먼저 목적에 맞게 범주를 선택한 다음 그 안에서 옵션을 비교하십시오.',
+          },
+          {
+            q: '무료 AI 강좌로 충분합니까, 아니면 비용을 지불해야 합니까?',
+            a: '무료 AI 강좌는 방향을 잡고 핵심 개념을 배우기에 충분합니다 — 높은 평가를 받는 많은 기초 강좌를 비용 없이 청강할 수 있습니다. 올바른 출발점입니다. 무료 강좌가 부족한 부분은 평가형 실무 프로젝트와 검증 가능한 수료증입니다. 적용 기술을 쌓거나 자격증을 취득하려면 무료 기초 이후에 구조화된 유료 강좌나 자격증 과정으로 이동하십시오.',
+          },
+          {
+            q: 'AI 자격증은 가치가 있습니까?',
+            a: 'AI 자격증은 직책, 고용주, 또는 특정 계약에서 인정받는 자격증을 요구할 때 비용 가치가 있습니다. 그 경우 구체적인 요건을 충족합니다. 아무도 확인하지 않는다면 자격증은 명확한 이점 없이 비용만 추가됩니다 — 구조화된 유료 강좌가 동일한 기술을 쌓고 보통 완료 수료증도 발급합니다. 실제로 누군가 자격증을 요구하는지에 따라 결정하십시오.',
+          },
+          {
+            q: '머신러닝 강좌와 prompt engineering 강좌 중 무엇을 수강해야 합니까?',
+            a: '하고 싶은 것에 따라 달라집니다. 머신러닝 강좌는 모델이 어떻게 구축되고 훈련되는지 가르칩니다 — 모델을 개발하거나 미세 조정하고 싶다면 수강하십시오. Prompt engineering 강좌는 기존 모델에서 좋은 신뢰할 수 있는 출력을 얻는 방법을 가르칩니다 — 모델을 구축하는 대신 사용하는 것이 업무라면 수강하십시오. 일상적으로 더 나은 출력만 필요하다면 prompt engineering 강좌가 더 빠르게 활용 가능한 기술을 제공합니다.',
+          },
+          {
+            q: 'AI 강좌를 완료하는 데 얼마나 걸립니까?',
+            a: '범주에 따라 다릅니다. 무료 단기 강좌는 몇 시간이 걸릴 수 있습니다. 구조화된 전문화 과정은 보통 주당 몇 시간씩 몇 주에서 몇 달이 소요됩니다. 자격증 과정은 프로그램에 따라 다릅니다. 등록하기 전에 항상 강좌 페이지에서 시간 예상치를 확인하십시오 — 그리고 구독 플랫폼에서 완료 시간은 비용에 직접적인 영향을 미칩니다.',
+          },
+          {
+            q: 'AI 강좌를 수강하기 위해 기술적 경험이 필요합니까?',
+            a: '모든 강좌에 필요한 것은 아닙니다. 초보자를 위한 기초 강좌와 많은 prompt engineering 강좌는 사전 기술 지식을 가정하지 않습니다. 구조화된 머신러닝 전문화 과정은 보통 프로그래밍과 수학에 대한 어느 정도의 편안함을 기대합니다. 가장 중요한 단계는 강좌 페이지에서 필수 조건을 읽고 현재 수준에 솔직하게 맞추는 것입니다 — 수준 불일치가 학습자가 강좌를 포기하는 주된 이유입니다.',
+          },
+          {
+            q: '구독과 강좌당 일회성 요금의 차이는 무엇입니까?',
+            a: '구독은 플랫폼이나 전문화 과정에 대한 접근에 대해 매월 반복적인 수수료를 청구하므로 빨리 완료하면 더 저렴하고 지체하면 비쌉니다. 강좌당 일회성 요금은 한 번만 지불하며 속도와 무관합니다. 가장 저렴한 옵션은 완전히 얼마나 빨리 완료하느냐에 달려 있습니다 — 완료 시간을 추정하고 그 속도에 가장 저렴한 모델을 선택하십시오.',
+          },
+          {
+            q: 'Prompt engineering을 무료로 배울 수 있는 곳은 어디입니까?',
+            a: '무료 prompt engineering 자료는 광범위하게 이용 가능합니다. DeepLearning.AI는 prompting에 집중한 단기 강좌를 게시하며, 그 중 여러 개가 비용 없이 이용 가능합니다. PromptQuorum은 few-shot prompting과 구조화된 출력과 같은 기술을 다루는 무료 구조화된 prompt engineering 라이브러리를 게시합니다. Prompt engineering 강좌는 무료 또는 저비용인 경향이 있으므로 전체 머신러닝 전문화 과정에 비용을 지불하기 전에 시작하기에 저위험 경로입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[PromptQuorum의 prompt engineering 라이브러리 시작하기](/ko/prompt-engineering) — 일반 AI 강좌가 과소평가하는 prompt 작성 기술을 다루는 무료 구조화된 자료.',
+          '[강좌에서 모델을 로컬로 실행하는 경우 GPU 선택](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — AI 강좌의 실무 작업을 위한 하드웨어 구매 가이드.',
+          '[AI 개발 및 학습을 위한 모니터 선택](/ko/power-local-llm/best-monitors-ai-development-2026) — 프로젝트가 풍부한 AI 강좌를 위한 데스크톱 설정.',
+          '[강좌 프로젝트를 위해 노트북에서 로컬 LLM 실행](/ko/local-llms/local-llm-on-laptop) — 이미 가지고 있는 하드웨어에서 모델로 연습하는 방법.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '최고의 AI 강좌 및 자격증: 2026 구매 가이드',
+      description: '2026년을 위한 세 가지 AI 학습 경로 비교: 무료 강좌, 구조화된 유료 강좌, 자격증 — 방향 잡기, 깊이 쌓기, 자격 취득을 위한 명확한 권장 사항 포함.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/best-ai-courses-certifications-2026',
+      inLanguage: 'ko',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+},

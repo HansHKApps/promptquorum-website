@@ -3196,4 +3196,403 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: '로컬 LLM으로 이메일·캘린더 자동화: 클라우드 API 없이 처리하기 (2026)',
+    seoTitle: '로컬 AI 이메일·캘린더 자동화 2026',
+    intro:
+      '로컬 LLM은 이메일 답장 초안 작성, 받은 편지함 요약, 회의 안건 생성, 캘린더 이벤트 분류를 클라우드 API에 메시지를 전송하지 않고 수행할 수 있습니다. 이 가이드는 실용적인 아키텍처를 다룹니다. Ollama를 활용한 로컬 IMAP 자동화, 로컬 AI 플러그인이 포함된 오픈소스 이메일 클라이언트, 그리고 통신 데이터를 자신의 기기에서 유지하기 위한 개인정보 보호 기초 사항입니다.',
+    metaDescription:
+      '로컬 LLM으로 이메일 작성, 받은 편지함 요약, 캘린더 관리를 자동화하는 방법. Ollama, IMAP 연동, 개인정보를 우선시하는 통신 자동화.',
+    twitterDescription:
+      '로컬 LLM 이메일 자동화: 답장 초안 작성, 받은 편지함 요약, 회의 안건 생성 — 모두 로컬에서, 클라우드 API 없이. Ollama + IMAP 워크플로우 설정 가이드.',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 14B',
+      'Mistral Small',
+      'Phi-4 Mini',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4070 12 GB',
+    ],
+    audience:
+      '이메일 작성 자동화, 받은 편지함 요약, 캘린더 관리를 클라우드 AI 서비스에 통신 데이터를 전송하지 않고 처리하고 싶은 전문직 종사자, 소규모 사업자, 개인정보 보호를 중시하는 개인.',
+    readTime: '12분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '로컬 LLM 이메일 자동화',
+    targetKeywords: [
+      '로컬 llm 이메일 자동화',
+      'ollama 이메일 초안 작성',
+      '로컬 ai 받은편지함 요약',
+      '로컬 llm 캘린더 자동화',
+      '개인정보 보호 ai 이메일 도우미',
+      '로컬 llm imap 워크플로우',
+    ],
+    leadAnswerBlock:
+      '**로컬 LLM 이메일 자동화는 2단계 파이프라인으로 가장 잘 작동합니다. 이메일 클라이언트 또는 IMAP 스크립트가 원본 메시지를 가져와 헤더를 제거한 후 일반 텍스트 본문을 API를 통해 Ollama에 전달하고, 모델이 전송 전에 검토하는 답장 초안을 생성합니다. 이메일 내용은 기기 밖으로 나가지 않습니다. 2026년에 가장 실용적인 세 가지 설정은 다음과 같습니다. (1) 일정에 따라 Ollama를 호출하는 IMAP + Python 스크립트 — 50줄, 완전 자동화 가능. (2) Ollama Compose 플러그인이 포함된 Thunderbird — GUI 기반, 코드 불필요. (3) 로컬 Ollama 노드가 있는 자체 호스팅 n8n — 코딩 없이 조건부 로직, 다단계 필터링, 캘린더 연동을 원하는 사용자를 위한 시각적 워크플로우 빌더. 캘린더 자동화의 경우, 동일한 Ollama API 호출이 내보낸 ICS 파일이나 로컬 자격 증명이 있는 Google Calendar API와 함께 작동합니다. 이벤트 세부 정보에서 회의 안건, 주간 요약, 후속 이메일 초안을 생성합니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '클라우드에 이메일을 전송하지 않고 로컬 LLM으로 이메일 작성을 자동화하려면 어떻게 해야 합니까?',
+        answer:
+          '가장 빠른 로컬 이메일 자동화 설정은 읽지 않은 이메일을 가져오고, 헤더를 제거하고, 일반 텍스트 본문을 Ollama 로컬 API에 전달하고, 답장 초안을 로컬 파일 또는 임시보관함 폴더에 저장하는 Python IMAP 스크립트입니다. 50줄 미만의 Python 코드이며, 이메일 데이터는 기기 밖으로 나가지 않습니다. GUI 대안으로는 Ollama Compose 확장 기능이 포함된 Thunderbird를 사용하면 클라이언트를 벗어나지 않고 이메일을 우클릭하여 답장을 생성할 수 있습니다. 워크플로우 자동화의 경우, 로컬 Ollama 노드가 있는 자체 호스팅 n8n이 클라우드 의존 없이 조건부 로직, 다단계 필터링, 캘린더 연동을 처리합니다.',
+        bullets: [
+          'IMAP + Python + Ollama: 50줄 스크립트, 일정에 따라 실행, 초안을 로컬에 저장 — 가장 간단한 설정.',
+          'Thunderbird + Ollama Compose 플러그인: GUI 기반, 코드 불필요, 이메일 클라이언트에서 우클릭으로 답장 생성.',
+          '자체 호스팅 n8n + Ollama 노드: 조건부 로직, 필터링, 캘린더 연동을 위한 시각적 워크플로우 빌더.',
+          '캘린더 자동화: ICS 파일을 내보내거나 로컬에서 Google Calendar API를 사용하여 회의 안건과 후속 이메일 초안 생성.',
+          '이메일에 가장 적합한 모델: Qwen3 14B 또는 Phi-4 Mini — 빠른 생성, 낮은 VRAM 사용량, 업무 서신에 충분한 품질.',
+          '개인정보 보호: IMAP 자격 증명과 이메일 내용은 기기를 벗어나지 않습니다. 어떤 설정에서도 클라우드 API 호출 없음.',
+          '전송 전 검토는 필수입니다. 로컬 모델은 어조 오류와 사실 오류를 범하므로 모든 출력을 첫 번째 초안으로 취급하십시오.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '빠른 정보', anchor: '#quick-facts' },
+      { label: '이메일에 로컬 AI를 사용하는 이유', anchor: '#why-local' },
+      { label: '접근 방식 비교', anchor: '#approach-comparison' },
+      { label: '설정 1: IMAP + Python + Ollama', anchor: '#imap-python' },
+      { label: '설정 2: Thunderbird + Ollama 플러그인', anchor: '#thunderbird' },
+      { label: '설정 3: 자체 호스팅 n8n + Ollama', anchor: '#n8n' },
+      { label: '분류 및 주간 검토 프롬프트 템플릿', anchor: '#triage-prompts' },
+      { label: '캘린더 자동화', anchor: '#calendar' },
+      { label: '모델 권장 사항', anchor: '#models' },
+      { label: '개인정보 보호 및 보안', anchor: '#privacy' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '참고 자료', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽기', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**세 가지 설정으로 로컬 이메일 자동화 사용 사례의 95%를 커버합니다.** IMAP + Python + Ollama (50줄, 완전 스크립팅 가능), Thunderbird + Ollama Compose (GUI, 코드 불필요), 자체 호스팅 n8n + Ollama 노드 (시각적 워크플로우, 조건부 로직). 워크플로우에 맞는 가장 간단한 옵션을 선택하십시오.',
+          '**창의적 작업보다 이메일에는 소형 모델이 더 적합합니다.** 이메일 작성에는 창의성이 아닌 일관성이 필요합니다. Qwen3 14B와 Phi-4 Mini는 16 GB 시스템에서 2~5초 만에 업무 품질의 답장 초안을 생성합니다. 대부분의 이메일 작업에 Llama 3.3 70B는 과분합니다.',
+          '**전송 전 검토는 선택 사항이 아닙니다.** 로컬 모델은 어조 오류 (지나치게 격식체, 지나치게 구어체), 사실 오류 (잘못된 회의 시간, 잘못된 수신자 이름), 관련 없는 내용 날조 등의 실수를 범합니다. 항상 초안을 읽고 전송하십시오.',
+          '**어떤 설정에서도 이메일 내용은 기기를 벗어나지 않습니다.** IMAP 연결은 클라우드 AI가 아닌 이메일 서버로 이동합니다. Ollama API는 로컬입니다. 자체 호스팅 n8n은 기기에서 실행됩니다. 개인정보 보호 이점은 실질적입니다.',
+          '**캘린더 자동화는 내보낸 ICS 또는 Google Calendar API 로컬 호출로 가장 잘 작동합니다.** 해당 주의 이벤트를 ICS 파일로 내보내고 Ollama에 전달하여 회의 안건, 준비 체크리스트, 또는 팀을 위한 주간 요약 이메일을 생성하십시오.',
+          '**IMAP 자격 증명은 민감합니다.** 환경 변수 또는 로컬 비밀 관리자에 저장하십시오. 스크립트 소스 코드에는 절대 저장하지 마십시오. 기본 계정 암호 대신 앱별 암호를 사용하십시오.',
+          '**자체 호스팅 n8n은 조건부 로직에 적합한 선택입니다.** "[도메인]에서 온 모든 이메일을 매일 요약" 또는 "캘린더 이벤트가 종료될 때 후속 이메일 생성"이 필요한 경우 n8n의 시각적 워크플로우 빌더가 사용자 정의 Python 없이 처리합니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 정보',
+        items: [
+          '**다루는 설정:** IMAP + Python + Ollama, Thunderbird + Ollama Compose, 자체 호스팅 n8n + Ollama 노드.',
+          '**이메일에 가장 적합한 모델:** Qwen3 14B (빠름, 낮은 VRAM 사용량, 적절한 업무 품질) 또는 Phi-4 Mini (가장 빠름, 4 GB VRAM).',
+          '**필요한 VRAM:** Qwen3 14B Q4 = 약 9 GB; Phi-4 Mini Q4 = 약 3 GB; Llama 3.3 70B Q4 = 약 42 GB.',
+          '**지원되는 이메일 형식:** IMAP 일반 텍스트 (MIME 디코딩), EML 파일, Gmail API (로컬 자격 증명), IMAP을 통한 Outlook.',
+          '**캘린더 형식:** ICS 내보내기 (범용), Google Calendar API (로컬 OAuth), Nextcloud Calendar (CalDAV).',
+          '**스크립트 복잡성:** IMAP + Python = 약 50줄; n8n 워크플로우 = 시각적, 코드 없음; Thunderbird = 플러그인 설치만.',
+          '**개인정보 보호:** 어떤 설정에서도 이메일 데이터가 클라우드 API로 전송되지 않습니다. IMAP은 이메일 서버에만 연결됩니다.',
+        ],
+      },
+      whyLocal: {
+        id: 'why-local',
+        title: '이메일 자동화에 로컬 AI를 사용하는 이유',
+        content:
+          '**핵심 이유는 개인정보 보호입니다. 클라우드 AI 어시스턴트에 붙여넣는 모든 이메일은 잠재적으로 기록되고, 학습에 사용되며, 해당 제공업체의 데이터 보존 정책의 적용을 받습니다.** 업무 서신, 고객 커뮤니케이션, 개인 이메일에는 제3자 데이터셋에 포함시키고 싶지 않은 정보가 포함되어 있습니다. 로컬 LLM은 자신의 하드웨어에서 이메일을 처리하고, 초안을 반환하며, 아무것도 보존하지 않습니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 LLM 이메일 자동화는 모든 이메일 내용을 기기 내에 유지합니다. 클라우드 API는 메시지를 수신하지 않고, 제3자는 서신을 기록하거나 학습에 사용하지 않으며, 초안 생성은 인터넷 연결 없이도 작동합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '답장 초안을 요청하기 위해 ChatGPT나 Claude.ai에 이메일을 붙여넣으면 해당 이메일은 OpenAI 또는 Anthropic 서버에서 처리됩니다. 대부분의 사람들에게, 대부분의 경우 이는 허용 가능합니다. 그러나 업무 서신, 고객 정보, 계약 논의, 또는 민감한 정보가 포함된 커뮤니케이션의 경우에는 그렇지 않습니다. Ollama를 통해 설정된 로컬 LLM은 동일한 이메일을 사용자의 컴퓨터에서 처리하고 어디에도 전송하지 않습니다.',
+          },
+        ],
+        items: [
+          '**데이터 주권:** 이메일 내용, 발신자 정보, 스레드 컨텍스트가 사용자의 기기에 유지됩니다. 클라우드 보존 정책이 적용되지 않습니다.',
+          '**오프라인 작동:** Ollama가 실행 중이고 모델이 다운로드되면 인터넷 연결 없이도 이메일 작성이 가능합니다.',
+          '**사용 한도 없음:** 클라우드 AI API는 속도 제한과 토큰 한도를 부과합니다. 로컬 설정은 요청당 비용이나 일일 한도가 없습니다.',
+          '**규정 준수:** GDPR, HIPAA, 직업적 비밀 특권 요건으로 인해 고객 커뮤니케이션을 제3자 AI에 전송하는 것이 금지될 수 있습니다. 로컬 처리는 이 우려를 해소합니다.',
+          '**짧은 작업의 속도:** 소형 모델 (Qwen3 14B, Phi-4 Mini)은 소비자 하드웨어에서 2~5초 만에 업무 이메일 초안을 생성합니다. 짧은 프롬프트의 경우 대부분의 클라우드 왕복보다 빠릅니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '로컬 이메일 자동화는 이메일 클라이언트의 대체물이 아닙니다. 기존 워크플로우에 통합되는 작성 도우미입니다. 여전히 Thunderbird, Apple Mail, Gmail을 사용하여 전송하고, 로컬 LLM은 검토, 편집 후 기존 클라이언트에서 전송할 텍스트를 생성합니다.',
+          },
+        ],
+      },
+      approachComparison: {
+        id: 'approach-comparison',
+        title: '접근 방식 비교',
+        content:
+          '**세 가지 설정은 대부분의 사용자에게 중요한 다섯 가지 축에서 차이가 있습니다. 설정 난이도, 30일 신뢰성, 개인정보 보호 태도, 각각이 가장 잘 맞는 사용자 프로필입니다.** 가장 강력한 옵션 대신 워크플로우를 커버하는 가장 간단한 옵션을 선택하십시오.',
+        columns: ['접근 방식', '설정', '신뢰성 (30일)', '개인정보 보호', '적합한 대상'],
+        rows: [
+          { '접근 방식': 'Thunderbird + Ollama Compose', '설정': '쉬움', '신뢰성 (30일)': '높음 (백그라운드 프로세스 없음)', '개인정보 보호': '로컬 전용', '적합한 대상': '개인 전문가, 일일 분류, GUI 사용자' },
+          { '접근 방식': 'Python + IMAP + cron', '설정': '어려움 (50 LOC + 스케줄링)', '신뢰성 (30일)': '매우 높음 (스크립팅 가능, 관찰 가능)', '개인정보 보호': '로컬 전용', '적합한 대상': '완전한 제어 + 사용자 정의 로직을 원하는 개발자' },
+          { '접근 방식': '자체 호스팅 n8n + Ollama', '설정': '중간 (시각적 워크플로우 편집기)', '신뢰성 (30일)': '높음 (자체 서버 모니터링 필요)', '개인정보 보호': '자체 호스팅으로 로컬', '적합한 대상': 'Zapier를 대체하려는 다중 워크플로우 사용자; 조건부 로직' },
+        ],
+      },
+      imapPython: {
+        id: 'imap-python',
+        title: '설정 1: IMAP + Python + Ollama',
+        content:
+          '**가장 스크립팅 가능한 설정입니다. Python 스크립트가 IMAP을 통해 읽지 않은 이메일을 가져오고, 헤더와 HTML을 제거하고, 일반 텍스트 본문을 Ollama 로컬 API에 전달하고, 답장 초안을 저장합니다.** cron 또는 작업 스케줄러를 사용하여 일정에 따라 실행됩니다. Python 50줄, Ollama Python 클라이언트 외 외부 의존성 없음.',
+        promptExamples: [
+          {
+            label: 'IMAP 이메일 가져오기 + Ollama 초안 (Python 골격)',
+            text: 'import imaplib, email, os\nimport ollama\n\n# IMAP 연결\nmail = imaplib.IMAP4_SSL(os.environ["IMAP_HOST"])\nmail.login(os.environ["IMAP_USER"], os.environ["IMAP_PASS"])\nmail.select("INBOX")\n\n# 읽지 않은 이메일 가져오기\n_, msgnums = mail.search(None, "UNSEEN")\nfor num in msgnums[0].split():\n    _, data = mail.fetch(num, "(RFC822)")\n    msg = email.message_from_bytes(data[0][1])\n    body = msg.get_payload(decode=True).decode("utf-8", errors="ignore")\n    subject = msg["Subject"]\n    sender = msg["From"]\n\n    # Ollama로 초안 생성\n    response = ollama.chat(model="qwen3:14b", messages=[\n        {"role": "system", "content": "귀하는 전문 이메일 어시스턴트입니다. 간결하고 정중한 업무 답장을 작성하십시오. 수신 이메일의 격식 수준에 맞추십시오."},\n        {"role": "user", "content": f"이메일 발신자: {sender}\\n제목: {subject}\\n\\n본문:\\n{body[:2000]}\\n\\n답장 초안을 작성하십시오."}\n    ])\n    draft = response["message"]["content"]\n    print(f"초안 - {subject}:\n{draft}\n---")',
+          },
+        ],
+        items: [
+          '**IMAP 자격 증명:** 환경 변수에 저장하십시오 (`IMAP_HOST`, `IMAP_USER`, `IMAP_PASS`). 소스 코드에는 절대 저장하지 마십시오. 기본 계정 암호 대신 앱별 암호를 사용하십시오.',
+          '**본문 잘라내기:** Ollama에 전달하기 전에 이메일 본문을 2,000~3,000자로 제한하십시오. 긴 이메일 스레드는 답장 초안에 유용한 컨텍스트를 거의 추가하지 않으며 생성을 느리게 합니다.',
+          '**HTML 제거:** 이메일 본문이 HTML인 경우, 모델에 전달하기 전에 `html.parser` 또는 `BeautifulSoup`을 사용하여 일반 텍스트를 추출하십시오. HTML 태그는 생성 품질을 저하시킵니다.',
+          '**스케줄링:** macOS/Linux에서는 cron 항목 (`crontab -e`)을 추가하여 30분마다 스크립트를 실행하십시오. Windows에서는 Python 인터프리터 경로와 함께 작업 스케줄러를 사용하십시오.',
+          '**초안 저장:** 이메일당 로컬 텍스트 파일 (타임스탬프 + 제목 슬러그 이름)에 초안을 저장하거나 `mail.append()`를 사용하여 IMAP "임시보관함" 폴더에 넣으십시오. 텍스트 파일 읽기가 검토에 더 안전합니다. IMAP 임시보관함은 어떤 클라이언트에서도 전송할 수 있게 합니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '자동 전송을 활성화하지 마십시오. 어떤 로컬 LLM도 사람의 검토 없이 전송할 만큼 신뢰할 수 있는 이메일 초안을 생성하지 않습니다. 어조 오류, 잘못된 날짜, 날조된 사실, 잘못된 스레드에 답장하는 오류가 정기적으로 발생합니다. 자동화는 작성 시간을 절약합니다. 검토 단계는 필수입니다.',
+          },
+        ],
+      },
+      thunderbird: {
+        id: 'thunderbird',
+        title: '설정 2: Thunderbird + Ollama Compose 플러그인',
+        content:
+          '**Ollama Compose 확장 기능이 포함된 Thunderbird는 코드 없는 옵션입니다.** Thunderbird를 설치하고, Ollama를 설치하고, 모델을 다운로드하고, 확장 기능을 설치하면 작성 창에서 우클릭으로 이메일을 생성할 수 있습니다.',
+        items: [
+          '**Thunderbird 설치**: thunderbird.net에서 설치하십시오. macOS, Windows, Linux에서 사용 가능합니다.',
+          '**Ollama 설치 및 모델 다운로드:** `ollama pull qwen3:14b` (이메일 작업에 권장). `ollama serve`를 시작하십시오.',
+          '**Ollama Compose 확장 기능 설치**: Thunderbird 부가 기능 관리자에서 설치하십시오. "Ollama"를 검색하거나 프로젝트 저장소의 XPI 파일에서 설치하십시오.',
+          '**확장 기능 구성**: `http://localhost:11434`를 가리키도록 설정하고 모델을 선택하십시오 (Qwen3 14B 또는 Phi-4 Mini 권장).',
+          '**작성 창에서:** 본문 영역을 우클릭하고 "Generate with Ollama"를 선택하십시오. 확장 기능이 인용된 원본 이메일과 커서 위치를 Ollama에 전달하고 답장 초안을 삽입합니다.',
+          '**모델 전환:** 확장 기능을 통해 작성 도구 모음에서 모델을 전환할 수 있습니다. 빠른 답장에는 Phi-4 Mini를 사용하고, 복잡하거나 민감한 서신에는 Qwen3 14B 또는 Llama 3.3 70B로 전환하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ollama Compose 설정에서 사용자 정의 시스템 프롬프트를 설정하십시오. 기본 프롬프트는 일반적입니다. 사용자 정의 프롬프트는 더 나은 결과를 제공합니다. 예시: "귀하는 [회사]의 [직책]인 [이름]을 위한 전문 이메일 답장을 작성합니다. 답장은 간결하고 (컨텍스트상 필요하지 않으면 150단어 미만), 전문적으로 따뜻하며, 수신 이메일의 격식 수준과 일치합니다. 법적 고지나 서명 줄을 추가하지 마십시오."',
+          },
+        ],
+      },
+      n8n: {
+        id: 'n8n',
+        title: '설정 3: 자체 호스팅 n8n + Ollama 노드',
+        content:
+          '**로컬 Ollama 노드가 있는 자체 호스팅 n8n은 조건부 자동화에 적합한 선택입니다. 발신자 도메인별 이메일 필터링, 매일 요약, 캘린더 이벤트 종료 시 후속 메일 생성, 또는 다른 이메일 유형을 다른 모델 프롬프트로 라우팅 — 모두 코드 작성 없이 가능합니다.**',
+        items: [
+          '**자체 호스팅 n8n 설치:** `npm install -g n8n && n8n start` 또는 `docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`. 워크플로우 편집기는 `http://localhost:5678`에서 실행됩니다.',
+          '**Ollama 노드 추가:** n8n 워크플로우 편집기에서 "Ollama" 노드를 검색하십시오 (n8n v1.2+ 내장). `http://localhost:11434`를 가리키도록 설정하고 모델을 선택하십시오.',
+          '**IMAP 트리거:** IMAP 이메일 노드를 워크플로우 트리거로 추가하십시오. IMAP 자격 증명으로 구성하십시오. 노드가 새 이메일을 폴링하고 각 이메일을 JSON 객체로 다음 단계에 전달합니다.',
+          '**필터링 로직:** IF 노드를 추가하여 발신자 도메인, 제목 키워드, 또는 시간대별로 이메일을 라우팅하십시오. 이메일 유형별로 (고객 이메일, 뉴스레터 요약, 내부 팀 메시지) 다른 Ollama 프롬프트로 라우팅하십시오.',
+          '**캘린더 연동:** Google Calendar 노드 (로컬 OAuth 자격 증명 사용) 또는 ICS 파일 리더를 추가하여 예정된 이벤트를 가져오십시오. 이벤트 세부 정보를 Ollama 노드에 전달하여 회의 안건 또는 준비 체크리스트를 생성하십시오.',
+          '**출력 옵션:** 로컬 파일에 초안 저장, IMAP 임시보관함에 넣기, Slack 메시지로 자신에게 전송, 또는 Notion/Obsidian 페이지에 저장 — 모두 n8n 출력 노드를 통해 가능합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '자체 호스팅 n8n은 캘린더 + 이메일 워크플로우의 최적 통합 지점입니다. 일반적인 패턴: IMAP 트리거가 회의 확인 이메일을 수신 → 회의 세부 정보 추출 → 참석자 가져오기 위해 Google Calendar API (로컬 OAuth) 호출 → 모든 컨텍스트를 Ollama에 전달 → 회의 안건 생성 → 지정 폴더에 저장. n8n 시각적 편집기에서 약 20분이면 설정 가능합니다.',
+          },
+        ],
+      },
+      triagePrompts: {
+        id: 'triage-prompts',
+        title: '분류 및 주간 검토 프롬프트 템플릿',
+        content:
+          '**가장 빈번한 이메일 작업 두 가지를 처리하는 프롬프트: 이메일별 분류와 주간 받은 편지함 검토.** 세 가지 설정 중 어느 것에나 통합하십시오 (Python 스크립트, Thunderbird 시스템 프롬프트, 또는 n8n Ollama 노드 본문). 의도적으로 모델 불가지론적으로 설계되었습니다.',
+        promptExamples: [
+          {
+            label: '분류 프롬프트 템플릿',
+            text: '귀하는 이메일 분류 어시스턴트입니다. 다음 이메일을 이러한 카테고리 중 하나로 분류하고 한 문장으로 설명하십시오:\n- 긴급: 4시간 이내 답장 필요\n- 중요: 24시간 이내 답장 필요\n- 정보: 인식을 위해 읽기, 답장 불필요\n- 홍보: 마케팅 또는 뉴스레터, 보관 가능\n- 스팸: 원하지 않음, 필터링 권장\n\n이메일:\n발신자: {sender}\n제목: {subject}\n본문: {body[:1500]}\n\n출력 형식:\n카테고리: [긴급|중요|정보|홍보|스팸]\n이유: [한 문장]\n권장 조치: [답장 | 보관 | 표시 | 삭제]',
+          },
+          {
+            label: '주간 검토 프롬프트 템플릿',
+            text: '지난 주의 다음 50개 이메일을 3개 섹션으로 요약하십시오:\n1. 아직 조치가 필요한 긴급 또는 중요 항목 (발신자 + 1줄 요약 포함)\n2. 주제 (예: "Q4 계획이 이번 주 12개 이메일에 등장했습니다")\n3. 답장이 필요한 사람 (발신자 + 대기 일수)\n\n이메일 (제목 + 각 본문 처음 200자):\n[이메일 목록을 일괄 붙여넣기]\n\n출력 형식: 마크다운 3개 섹션.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '분류 프롬프트의 경우 n8n IF 노드와 결합하여 카테고리별로 라우팅하십시오. 긴급 → 푸시 알림, 중요 → "답장 필요" 폴더에 저장, 홍보 → 자동 보관, 스팸 → 필터 규칙 표시. 분류는 하류 자동화를 안전하게 만드는 요소입니다. 분류 없이는 파이프라인이 고객 후속 메일과 마케팅 이메일을 구별할 수 없습니다.',
+          },
+        ],
+      },
+      calendar: {
+        id: 'calendar',
+        title: '로컬 LLM을 활용한 캘린더 자동화',
+        content:
+          '**로컬 AI를 사용한 캘린더 자동화는 두 가지 모드로 작동합니다. 수동 모드 (ICS 내보내기, 요약 또는 안건 생성을 위해 Ollama에 전달)와 능동 모드 (실시간 이벤트 액세스를 위한 로컬 OAuth 자격 증명이 있는 Google Calendar API). 수동 모드가 더 간단하고, 능동 모드는 예약된 워크플로우를 지원합니다.**',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 AI 캘린더 자동화는 내보낸 ICS 파일 내용이나 Google Calendar API 데이터를 Ollama에 전달하여 회의 안건, 주간 요약, 후속 이메일 초안을 생성합니다. 캘린더 데이터는 클라우드 AI에 전달되지 않습니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '가장 간단한 캘린더 자동화: 캘린더 앱 (Google Calendar, Apple Calendar, Nextcloud)에서 한 주의 이벤트를 ICS 파일로 내보내고, 터미널을 열어 "각 이벤트에 대한 안건을 생성하십시오"라는 프롬프트와 함께 ICS 내용을 Ollama에 전달하고, 출력을 메모에 복사하십시오. 30초면 완료되고, 캘린더 데이터는 로컬에 유지됩니다.',
+          },
+        ],
+        promptExamples: [
+          {
+            label: 'ICS-to-안건 프롬프트 템플릿',
+            text: '다음은 ICS 형식의 이번 주 캘린더입니다:\n\n[ICS 내용 붙여넣기]\n\n각 회의 이벤트에 대해:\n1. 이벤트 제목과 설명을 기반으로 5가지 회의 안건을 생성하십시오.\n2. 참석자가 나열되어 있는 경우 각 안건 항목을 이끌어야 할 사람을 기재하십시오.\n3. 이벤트에 설명이 없는 경우 [회의 유형] 회의에 적합한 일반 안건을 생성하십시오.\n\n일반 텍스트로 형식화하십시오. 이벤트당 한 섹션, ---로 구분.',
+          },
+        ],
+        items: [
+          '**ICS 내보내기 (수동):** Google Calendar, Apple Calendar, Nextcloud, Outlook은 모두 ICS 파일을 내보냅니다. 주간 또는 일간으로 내보내고, 터미널 또는 스크립트를 통해 Ollama에 전달하고, 안건 또는 요약을 생성하십시오.',
+          '**Google Calendar API (능동):** Google Cloud Console (개인 프로젝트)에서 로컬 OAuth 자격 증명을 생성하고, 자격 증명 JSON을 다운로드하고, 이벤트를 가져오기 위해 Python `google-auth-oauthlib` 라이브러리를 사용하십시오. OAuth 토큰은 로컬에 저장되고 API 호출은 Google Calendar로 직접 전달됩니다. AI 중개자 없음.',
+          '**회의 안건 생성 프롬프트:** 제목 + 참석자 + 설명 → "시간 배분이 포함된 5가지 회의 안건을 생성하십시오. 회의 설명이 없는 경우 [회의 유형] 회의에 적합한 일반 안건을 제안하십시오."',
+          '**주간 요약 프롬프트:** 해당 주의 모든 이벤트 → "이번 주 회의를 3문장으로 요약하십시오. 연속 블록이나 비정상적으로 긴 회의를 강조하십시오."',
+          '**후속 이메일 초안:** 회의 후 (이벤트 종료 시간으로 트리거) → "'[제목]' 회의를 위한 후속 이메일을 작성하십시오. 참석자에게 감사하고 다음 단계를 요약하십시오. 이 이벤트 설명을 컨텍스트로 사용하십시오: [설명]."',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '가능한 경우 캘린더 데이터를 일반 텍스트로 유지하십시오. ICS는 일반 텍스트이므로 Ollama에 직접 전달하기 쉽습니다. 독점 캘린더 형식이나 폐쇄형 기업 시스템을 사용하는 경우 먼저 ICS로 내보내십시오. ICS 표준은 범용이며 모든 주요 캘린더 앱에서 지원됩니다.',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: '이메일 및 캘린더 작업을 위한 모델 권장 사항',
+        content:
+          '**이메일 및 캘린더 자동화 작업은 크고 강력한 모델보다 작고 빠른 모델을 선호합니다.** 업무 이메일 답장 초안 작성, 회의 안건 생성, 받은 편지함 요약에는 Llama 3.3 70B가 필요하지 않습니다. 대화형으로 느껴질 만큼 충분히 빠르고 사용 가능한 업무 텍스트를 생성할 만큼 충분히 일관된 모델이 필요합니다. 모든 사용 사례에 걸친 더 넓은 모델 환경에 대해서는 [2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026)을 참조하십시오.',
+        columns: ['작업', '권장 모델', 'VRAM (Q4)', '이유'],
+        rows: [
+          { '작업': '이메일 답장 초안 작성', '권장 모델': 'Qwen3 14B', 'VRAM (Q4)': '약 9 GB', '이유': '업무 작성 품질과 생성 속도의 최적 균형; 격식체와 비격식체 모두 처리' },
+          { '작업': '빠른 한 줄 답장', '권장 모델': 'Phi-4 Mini', 'VRAM (Q4)': '약 3 GB', '이유': '가장 빠른 옵션; 간단한 확인 및 일정 조정 답장에 충분' },
+          { '작업': '회의 안건 생성', '권장 모델': 'Qwen3 14B', 'VRAM (Q4)': '약 9 GB', '이유': '구조화된 목록 생성에 우수; 안건 형식은 해당 모델의 능력 범위 내' },
+          { '작업': '긴 이메일 스레드 요약', '권장 모델': 'Llama 3.3 70B 또는 Qwen3 32B', 'VRAM (Q4)': '약 42 GB / 약 20 GB', '이유': '다중 메시지 스레드에서 장문 컨텍스트 준수가 중요; 소형 모델은 세부 정보를 놓침' },
+          { '작업': '민감한/법적 서신', '권장 모델': 'Llama 3.3 70B', 'VRAM (Q4)': '약 42 GB', '이유': '최고의 추론 품질; 오류가 고위험일 때 하드웨어 비용 가치 있음' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '16 GB 시스템의 대부분의 이메일 작업에서 Qwen3 14B가 올바른 기본 선택입니다. `ollama pull qwen3:14b`로 한 번 다운로드하고 모든 이메일 및 캘린더 자동화에 사용하십시오. 14B 출력 품질이 지속적으로 부족한 작업 유형을 발견할 때만 더 큰 모델로 전환하십시오.',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: '개인정보 보호 및 보안',
+        content:
+          '**로컬 이메일 자동화의 개인정보 보호 이점은 실질적이지만 올바른 구성이 필요합니다.** 세 가지가 이를 손상시킬 수 있습니다. IMAP 자격 증명의 우발적 클라우드 동기화, 제3자 도구에서 액세스 가능한 로그의 이메일 내용, 워크플로우를 네트워크에 노출시키는 잘못 구성된 n8n 인스턴스입니다. 다른 도구에서 "SaaS를 로컬 AI로 대체"하는 더 넓은 패턴에 대해서는 [Grammarly와 Notion AI를 로컬 모델로 대체하기](/ko/power-local-llm/replace-grammarly-notion-ai-with-local)를 참조하십시오.',
+        items: [
+          '**IMAP 자격 증명:** 환경 변수 또는 로컬 비밀 관리자에 저장하십시오 (macOS Keychain, Linux `secret-tool`, Windows 자격 증명 관리자). 클라우드 저장소와 동기화될 수 있는 스크립트 소스 코드나 파일에는 절대 저장하지 마십시오.',
+          '**로그의 이메일 내용:** stdout/stderr에 이메일 내용을 인쇄하는 Python 스크립트는 로그가 활성화된 상태로 cron을 통해 실행될 때 이메일 데이터를 로그 파일에 기록합니다. 로그를 `/dev/null`로 리디렉션하거나 이메일 내용을 제외하는 로그 레벨을 사용하십시오.',
+          '**n8n 네트워크 노출:** 자체 호스팅 n8n은 기본적으로 `localhost:5678`에 바인딩되며 이는 로컬입니다. 홈 네트워크나 그 이상으로 노출하는 경우 (예: 모바일 액세스) 인증을 추가하고 Ollama API도 localhost로 제한되어 있는지 확인하십시오.',
+          '**앱 암호:** 기본 계정 암호 대신 Gmail, Outlook, Apple Mail에서의 IMAP 액세스를 위한 전용 앱별 암호를 설정하십시오. 스크립트가 침해된 경우 즉시 취소하십시오.',
+          '**Git 저장소:** 자동화 스크립트를 버전 관리하는 경우 자격 증명이 포함된 `.env` 파일을 제외하는 `.gitignore`를 추가하십시오. 공개 또는 개인 저장소에 자격 증명을 커밋하지 마십시오.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '클라우드 동기화 위험. 홈 디렉토리가 iCloud, Google Drive, OneDrive와 동기화되는 경우 동기화된 디렉토리의 `.env` 또는 자격 증명 파일이 클라우드에 업로드됩니다. 클라우드 동기화에서 명시적으로 제외된 디렉토리에 자격 증명을 저장하거나 운영 체제의 기본 비밀 관리자를 사용하십시오.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '흔한 실수',
+        items: [
+          '**검토 없이 초안을 자동 전송.** 어떤 로컬 모델도 사람의 검토 없이 전송할 만큼 신뢰할 수 있는 출력을 생성하지 않습니다. 어조 오류, 잘못된 날짜, 날조된 사실은 흔합니다. 항상 전송 전에 읽으십시오.',
+          '**전체 이메일 스레드를 모델에 전달.** 긴 스레드는 토큰을 낭비하고 생성을 느리게 하는 중복 컨텍스트를 포함합니다. 인용된 답장 블록을 제거하고 최근 2~3개 메시지만 전달하십시오.',
+          '**모든 이메일 작업에 Llama 3.3 70B 사용.** 대부분의 이메일 작성에서 Qwen3 14B가 더 빠르고 VRAM을 적게 사용합니다. 진정으로 복잡하거나 고위험 서신에만 70B를 사용하십시오.',
+          '**IMAP 자격 증명을 스크립트에 저장.** 소스 코드의 자격 증명은 `git push` 한 번으로 공개될 수 있습니다. 환경 변수를 사용하십시오.',
+          '**초안 프롬프트에 단어 제한을 설정하지 않음.** 단어 제한 없이 모델은 불필요한 컨텍스트, 주의 사항, 과도한 정중함으로 업무 답장을 채웁니다. 모든 이메일 프롬프트에 "150단어 미만으로 답변하십시오"를 추가하십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '참고 자료',
+        items: [
+          'Qwen3 14B 모델 카드 — [Alibaba Cloud / Qwen 팀](https://qwenlm.github.io)',
+          'Phi-4 Mini 기술 보고서 — [Microsoft Research](https://microsoft.com/research)',
+          'Ollama API 문서 — [Ollama](https://ollama.com/docs)',
+          'n8n 자체 호스팅 문서 — [n8n.io](https://docs.n8n.io)',
+          'GDPR 제28조 — 데이터 처리자 의무 — [EUR-Lex](https://eur-lex.europa.eu)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Gmail에서도 작동합니까?',
+            a: '예. Gmail은 앱별 암호를 사용한 IMAP 액세스를 지원합니다. Gmail 설정에서 IMAP을 활성화하고, Google 계정 보안 설정에서 앱 암호를 생성하고, IMAP 스크립트에서 해당 자격 증명을 사용하십시오. Gmail은 더 구조화된 액세스를 위해 Gmail API도 제공합니다. 레이블 관리, 스레드 작업, 첨부 파일 처리가 필요한 n8n 워크플로우에 유용합니다.',
+          },
+          {
+            q: '이메일 자동화에는 IMAP + Python과 n8n 중 어느 것이 더 낫습니까?',
+            a: '스크립트를 작성하고 유지 관리하는 데 익숙하고 완전한 제어를 원한다면 IMAP + Python이 더 좋습니다. 조건부 로직 (발신자, 시간, 내용에 따른 이메일 라우팅), 캘린더 연동, 또는 코드 작성 없이 여러 출력 대상이 필요하다면 n8n이 더 좋습니다. 두 방법 모두 Ollama를 로컬 모델 백엔드로 사용합니다. 차이점은 주변의 오케스트레이션 레이어입니다.',
+          },
+          {
+            q: '로컬 AI가 전체 받은 편지함을 요약할 수 있습니까?',
+            a: '예, 제한 사항이 있습니다. 주간 받은 편지함 요약 (50~100개 이메일)은 잘 작동합니다. 제목과 각 본문 처음 200자를 가져오고, 연결하고, "주제와 긴급도별로 요약하십시오" 프롬프트와 함께 Qwen3 14B에 전달하십시오. 수천 개의 이메일이 있는 전체 받은 편지함의 경우 요약을 일괄 처리하고 (API 호출당 50개 이메일) 일괄 요약을 집계하십시오. 한 번의 호출에 1,000개의 이메일을 전달하면 컨텍스트 한도를 초과하고 신뢰할 수 없는 출력을 생성합니다.',
+          },
+          {
+            q: '공식 업무 이메일 작성에 가장 좋은 로컬 LLM은 무엇입니까?',
+            a: 'Qwen3 14B는 소비자 하드웨어에서 공식 업무 서신에 가장 좋은 품질 대비 속도 비율을 제공합니다. 격식체, 적절한 완화 표현, 전문적인 마무리를 안정적으로 처리합니다. 매우 고위험 서신 (법적 고지, 임원 커뮤니케이션, 계약 협상)의 경우 Llama 3.3 70B를 사용하십시오. 복잡하거나 민감한 주제에서 품질 차이가 두드러집니다.',
+          },
+          {
+            q: 'Windows에서도 작동합니까?',
+            a: '예. Ollama는 Windows에서 실행됩니다 (ollama.com에서 다운로드). IMAP Python 스크립트는 Windows의 모든 Python 3.8+ 설치에서 실행됩니다. Thunderbird와 Ollama Compose 확장 기능은 크로스 플랫폼입니다. 자체 호스팅 n8n은 npm 또는 Docker Desktop을 통해 Windows에서 실행됩니다.',
+          },
+          {
+            q: '이전 답장이 여러 개 있는 이메일 스레드를 어떻게 처리합니까?',
+            a: '모델에 전달하기 전에 인용된 내용을 제거하십시오. Python `email` 라이브러리를 사용하여 최신 답장만 추출하십시오 (첫 번째 `>` 접두사 또는 `--- Original Message ---` 구분자 위 부분). 총 3,000자 제한으로 최근 2~3개 메시지만 전달하십시오. 모델은 적절한 답장을 생성하기 위해 전체 스레드 기록이 거의 필요하지 않습니다.',
+          },
+          {
+            q: '업무용으로 GDPR을 준수합니까?',
+            a: '로컬 처리는 개인 데이터의 클라우드 AI 처리보다 GDPR상 더 방어 가능합니다. 데이터가 기기에 남아 있을 때 새로운 데이터 처리자 관계를 생성하지 않습니다 (제28조). 그러나 GDPR 준수는 특정 역할, 데이터 특성, 조직의 기존 데이터 보호 정책에 따라 달라집니다. 고객 또는 직원 개인 데이터를 처리하기 위해 이 설정을 사용하기 전에 데이터 보호 책임자와 상담하십시오.',
+          },
+          {
+            q: '다른 사람을 대신하여 답장을 작성하는 데 사용할 수 있습니까?',
+            a: '기술적으로는 가능합니다. 자격 증명이 있는 모든 IMAP 계정에 액세스하도록 스크립트를 구성할 수 있습니다. 법적, 윤리적으로는 동의 없이 다른 사람을 위한 이메일 답장을 생성하는 것은 동의 및 위장 관련 중대한 문제를 제기합니다. 이 자동화는 개인적으로 책임지는 계정과 서신에만 사용하십시오.',
+          },
+          {
+            q: '수신 이메일에서 AI를 트리거할 수 있습니까?',
+            a: '예, 세 가지 패턴을 통해 가능합니다. (1) Python + IMAP + cron: 30분마다 실행되도록 스크립트를 예약하고, 읽지 않은 새 이메일을 가져오고, 초안을 생성합니다. (2) n8n IMAP 트리거 노드: 1~5분마다 폴링하고 각 새 이메일에서 즉시 워크플로우를 트리거합니다. (3) Thunderbird 필터 규칙: curl을 통해 Ollama를 호출하는 "스크립트 실행" 필터 액션을 사용합니다. n8n 방식이 실시간 분류에 가장 신뢰할 수 있습니다. 30분 지연이 허용 가능한 경우 cron이 더 간단합니다.',
+          },
+          {
+            q: '이메일 AI를 여러 기기 간에 동기화할 수 있습니까?',
+            a: '초안은 기존 IMAP 임시보관함 폴더를 통해 동기화할 수 있습니다. `mail.append()`를 사용하여 AI 생성 초안을 IMAP "임시보관함" 폴더에 저장하면 IMAP 액세스가 있는 모든 기기 (휴대폰, 태블릿, 두 번째 노트북)에서 즉시 확인할 수 있습니다. Ollama 백엔드 자체는 동기화되지 않습니다. 구성된 기기에서 실행됩니다. 모바일 기기는 Ollama가 실행 중인 홈 기기에 대한 네트워크 액세스가 필요합니다 (LAN IP 또는 Tailscale). 계획: 홈 서버에서 Ollama + 자동화 실행, 모든 기기에서 IMAP 임시보관함 폴더의 초안 읽기. 단일 AI 생성, 여러 기기에서 검토 및 전송.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽기',
+        items: [
+          '[로컬 AI 에이전트로 Zapier 대체하기](/ko/power-local-llm/replace-zapier-with-local-ai-agents) — 비즈니스 프로세스 자동화를 위해 n8n, Ollama, Python을 사용한 로컬 워크플로우 자동화.',
+          '[비즈니스 워크플로우를 위한 로컬 AI 에이전트: EU 규정 준수](/ko/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — 기업 환경에 로컬 AI를 배포하기 위한 GDPR, EU AI 법, 규정 준수 컨텍스트.',
+          '[개인 비즈니스 데이터를 위한 로컬 RAG](/ko/power-local-llm/local-rag-for-private-business-data) — 클라우드 API 없이 개인 비즈니스 데이터에 대한 문서 Q&A를 설정하는 방법.',
+          '[2026년 MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 이메일 클라이언트, 캘린더, 기타 에이전트 컨텍스트 도구에 로컬 LLM을 연결하기 위한 MCP (Model Context Protocol).',
+          '[자율 로컬 에이전트: 실제로 작동하는 것들](/ko/power-local-llm/autonomous-local-agents-actually-work) — 2026년에 로컬 AI 에이전트가 할 수 있는 것과 할 수 없는 것에 대한 솔직한 평가.',
+          '[Grammarly와 Notion AI를 로컬 모델로 대체하기](/ko/power-local-llm/replace-grammarly-notion-ai-with-local) — 이메일/캘린더 대체를 보완하는 작성 도구를 위한 인접 SaaS 대체 패턴.',
+          '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 이 세 가지 설정 뒤의 채팅 모델 선택을 위한 더 넓은 모델 권위.',
+          '[Zero-Shot 대 Few-Shot 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot-prompting) — 프롬프트에 이메일 예시를 포함할 때와 더 나은 일반화를 위해 생략할 때.',
+          '[2026년 로컬 LLM 소프트웨어 디렉토리](/ko/power-local-llm/local-llm-software-directory-2026) — 이 스택의 Ollama, n8n, Thunderbird 및 기타 구성 요소에 대한 디렉토리 목록.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 LLM으로 이메일·캘린더 자동화: 클라우드 API 없이 처리하기 (2026)',
+      description: '로컬 LLM으로 이메일 작성 자동화, 받은 편지함 요약, 캘린더 관리를 수행하는 방법. Ollama, IMAP 연동, 개인정보를 보호하는 통신 자동화.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-email-and-calendar-automation',
+      inLanguage: 'ko',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-08',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
 }

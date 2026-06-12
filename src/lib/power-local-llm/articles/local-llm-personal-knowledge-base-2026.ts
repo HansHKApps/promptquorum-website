@@ -3734,4 +3734,486 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Productivity & Knowledge Tools',
+    title: '로컬 AI로 개인 지식 베이스 구축하기: 2026 스택 가이드',
+    seoTitle: '로컬 AI 개인 지식 베이스: 2026 스택 가이드',
+    intro:
+      '2026년에 로컬 AI 기반으로 구축한 개인 지식 베이스(PKB)는 다섯 가지 레이어로 구성됩니다: 캡처(웹 클리퍼, 이메일 전달, 모바일 공유 시트), 저장(Markdown vault 또는 문서 폴더), 임베딩(Ollama를 통한 로컬 모델), 검색(RAG), 인터페이스(채팅 또는 시맨틱 검색). 세 가지 아키텍처가 실제 사례의 약 95%를 커버합니다 — Obsidian 중심(노트 중심, 약 50,000개 항목까지 확장), AnythingLLM 중심(문서 중심, 약 100,000개 항목까지 확장), Python + ChromaDB 커스텀 스택(엔지니어 중심, 100만 개 이상 항목 확장). 하드웨어 최소 사양은 16 GB RAM 노트북이며, 10,000개 항목을 초과하면 32 GB를 계획하십시오. 가장 중요한 확장 결정은 LLM이 아니라 지식의 대부분이 도착하는 모바일에서 캡처 파이프라인이 일상적인 사용을 견딜 수 있는지 여부입니다.',
+    metaDescription:
+      '로컬 AI 개인 지식 베이스 2026: Obsidian, AnythingLLM, Python + ChromaDB 비교. 100,000개 이상 항목으로 확장. 캡처, RAG, 백업.',
+    twitterDescription:
+      '2026년 로컬 AI PKB 세 가지 아키텍처: Obsidian(~50K 항목), AnythingLLM(~100K), Python + ChromaDB(1M+). 캡처, RAG, 모바일 동기화, 백업, 확장.',
+    current_models_mentioned: [
+      'Llama 3.2 3B',
+      'Phi-4 Mini',
+      'Qwen3 7B',
+      'nomic-embed-text',
+      'mxbai-embed-large',
+      'bge-m3',
+    ],
+    current_hardware_mentioned: [
+      'Mac M3 Pro / M4 (최소 16 GB 통합 메모리, 10,000개 항목 이상에서 32 GB 권장)',
+      'RTX 3060 12 GB 또는 RTX 4060 8 GB PC',
+      '32 GB RAM PC (대형 vault용 CPU 전용 폴백)',
+      '홈 서버 / 미니 PC 64 GB RAM (100,000개 항목 이상용 Python 커스텀 스택)',
+    ],
+    audience:
+      '노트, 북마크, 이메일, 문서에서 AI 검색을 사용하는 개인 비공개 아카이브를 구축하는 지식 근로자, 연구자, 작가, 엔지니어 — 일반적으로 1,000~100,000개 항목 — 클라우드 서비스로 콘텐츠를 전송하지 않고.',
+    readTime: '15분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '로컬 AI 개인 지식 베이스',
+    targetKeywords: [
+      '로컬 AI 지식 베이스',
+      '로컬 LLM 세컨드 브레인',
+      '개인 AI 지식 베이스',
+      '로컬 RAG 지식 베이스',
+      '자체 호스팅 AI 지식 베이스',
+      '개인 지식 베이스 2026',
+    ],
+    leadAnswerBlock:
+      '**2026년 로컬 AI 지식 베이스는 5개 레이어 스택(캡처, 저장, 임베딩, 검색, 인터페이스)으로 이루어지며, 처음부터 설계하는 대신 세 가지 참조 아키텍처 중 하나를 선택해야 합니다.** 매일 노트를 작성하고 vault 전체에서 시맨틱 검색을 원한다면 Obsidian + Smart Connections + Copilot for Obsidian + Ollama를 사용하십시오. 16 GB Mac M3 Pro 또는 동급 PC에서 약 50,000개 노트까지 깔끔하게 확장됩니다. 지식이 주로 문서(PDF, 내보내기, 웹 클립) 형태로 존재한다면 AnythingLLM + Ollama를 사용하십시오. 약 100,000개 문서까지 확장되고 캡처, RAG, 채팅을 하나의 앱으로 통합합니다. 항목이 100,000개를 초과하거나 다중 사용자 액세스 또는 특정 스키마 요구 사항이 있는 경우에만 Python + ChromaDB + Llama 3.2 3B 커스텀 스택을 구축하십시오 — 유지 관리 비용이 실제로 존재합니다. 세 가지 아키텍처 모두에서 진정한 병목은 캡처입니다. 지식의 대부분은 모바일에서 도착하며(웹 페이지, 스크린샷, 음성 메모, 전달된 이메일), 모바일 캡처 경로가 없는 스택은 검색 기능이 아무리 뛰어나도 먼지가 쌓입니다. 하드웨어 최소 사양: 16 GB RAM; 10,000개 항목 이상에서 32 GB 예산. 100,000개 항목 이상에서 임베딩을 홈 서버로 이동하십시오.',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 최선의 로컬 AI 지식 베이스 아키텍처는 무엇입니까?',
+        answer:
+          '대부분의 사용자에게는 Obsidian + Smart Connections + Copilot for Obsidian + Ollama(채팅용 Llama 3.2 3B, 임베딩용 nomic-embed-text)가 권장됩니다. 16 GB Mac에서 약 50,000개 노트까지 확장됩니다. 문서가 많은 아카이브에는 AnythingLLM + Ollama 단일 앱(최대 약 100,000개 문서)을 사용하십시오. 엔지니어나 100,000개 이상 항목의 vault에는 캡처, 임베딩, 채팅 서비스를 분리한 Python + ChromaDB + Llama 3.2 3B 커스텀 스택을 구축하십시오. 하드웨어 최소 사양 16 GB RAM; 10,000개 항목부터 32 GB, 100,000개 이상부터 홈 서버. 캡처가 진정한 확장 병목입니다 — LLM을 최적화하기 전에 모바일 공유 시트, 웹 클리퍼, 이메일 전달을 설계하십시오.',
+        bullets: [
+          'Obsidian 중심 — 노트 중심 워크플로우에 최적, 약 50,000개 노트까지 확장, 최소 16 GB RAM.',
+          'AnythingLLM 중심 — 문서 중심 PKB(PDF, 내보내기)에 최적, 약 100,000개 문서까지 확장, 올인원 앱.',
+          'Python + ChromaDB 커스텀 스택 — 엔지니어에게 최적, 100만 개 이상 항목 확장, 자체 관리 서비스 필요.',
+          '2026년 권장 채팅 모델: 16 GB 시스템용 Llama 3.2 3B, 8 GB용 Phi-4 Mini, 32 GB+ 고품질용 Qwen3 7B.',
+          '권장 임베딩 모델: nomic-embed-text(768차원, 빠름) 또는 mxbai-embed-large(1024차원, 더 정확); 다국어 아카이브용 bge-m3.',
+          '하드웨어 최소 사양: 16 GB RAM 노트북; 10,000개 항목 이상에서 32 GB 권장; 100,000개 이상에서 64 GB 홈 서버.',
+          '캡처가 병목입니다: PKB 항목의 대부분은 모바일(웹 페이지, 스크린샷, 음성 메모)에서 캡처되고 데스크탑에서 조회됩니다. iOS Shortcuts → Obsidian, Working Copy(Git), a-Shell이 세 가지 모바일 캡처 경로입니다.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '빠른 정보', anchor: '#quick-facts' },
+      { label: '어떤 아키텍처를 구축할까?', anchor: '#which-architecture' },
+      { label: '아키텍처 비교표', anchor: '#comparison-table' },
+      { label: '로컬 AI PKB의 다섯 가지 레이어', anchor: '#five-layers' },
+      { label: '아키텍처 A: Obsidian 중심', anchor: '#architecture-obsidian' },
+      { label: '아키텍처 B: AnythingLLM 중심', anchor: '#architecture-anythingllm' },
+      { label: '아키텍처 C: Python + ChromaDB 커스텀', anchor: '#architecture-custom' },
+      { label: '캡처 파이프라인: 웹, 이메일, 모바일, 음성', anchor: '#capture' },
+      { label: '모바일 캡처: iOS Shortcuts, Working Copy, a-Shell', anchor: '#mobile-capture' },
+      { label: '확장: 1K, 10K, 100K 항목', anchor: '#scaling' },
+      { label: '백업, 버전 관리, 다중 기기 동기화', anchor: '#backup-sync' },
+      { label: '일반적인 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽기', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**처음부터 설계하는 대신 세 가지 참조 아키텍처 중 하나를 선택하십시오.** Obsidian 중심(노트 중심, ~50K 항목), AnythingLLM 중심(문서 중심, ~100K 항목), Python + ChromaDB 커스텀 스택(엔지니어 중심, 100만 개 이상). 아키텍처를 혼합하는 것은 거의 가치가 없습니다 — 통합 비용이 지배합니다.',
+          '**로컬 AI PKB는 다섯 가지 레이어로 구성됩니다: 캡처, 저장, 임베딩, 검색, 인터페이스.** 초보자의 실수는 대부분 LLM이 아닌 캡처 레이어에서 발생합니다. 항목이 모바일과 이메일에서 흐르지 않으면 아무리 스마트한 검색도 프로젝트를 구할 수 없습니다.',
+          '**하드웨어 최소 사양: 16 GB RAM.** 그 이하에서는 임베딩 모델 또는 채팅 모델 중 하나만 실행해야 합니다 — 둘 다는 불가능합니다. 16 GB에서 Llama 3.2 3B + nomic-embed-text를 동시에 실행할 수 있습니다. 32 GB에서 Qwen3 7B로 업그레이드하거나 여러 채팅 세션을 실행할 수 있습니다. 100,000개 항목 이상에서 임베딩을 홈 서버로 이동하십시오.',
+          '**2026년 권장 모델:** 채팅 — Llama 3.2 3B(기본값), Phi-4 Mini(8 GB 시스템), Qwen3 7B(32 GB+ 고품질); 임베딩 — nomic-embed-text(768차원, 빠름), mxbai-embed-large(1024차원, 더 정확), bge-m3(다국어).',
+          '**캡처가 확장 병목이며 검색이 아닙니다.** 지식 항목의 대부분은 모바일(웹 클립, 스크린샷, 음성 메모, 전달된 이메일)에서 도착합니다. LLM을 조정하기 전에 모바일 공유 시트 → vault 경로를 설계하십시오. iOS Shortcuts → Obsidian / Working Copy / a-Shell이 세 가지 실행 가능한 iOS 경로입니다.',
+          '**동기화 방법이 모바일에서 무엇이 작동하는지를 결정합니다.** Obsidian Sync는 임베딩 바이너리 인덱스를 깔끔하게 처리합니다; iCloud Drive는 플랫폼 간에 손상시킵니다; Git은 .gitignore 규율과 기기별 재인덱싱이 필요합니다. 플러그인보다 먼저 동기화를 선택하십시오.',
+          '**백업은 선택이 아닙니다.** 세 가지 레이어: vault 스냅샷(Time Machine, Backblaze, restic), 일반 텍스트 콘텐츠의 Git 기록, 깔끔한 재구성 경로로서의 분기별 임베딩 + 메타데이터 내보내기. 임베딩은 재생성 가능하지만 비용이 많이 듭니다 — vault가 10,000개 항목을 초과하면 함께 백업하십시오.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 정보',
+        items: [
+          '**다루는 아키텍처:** Obsidian 중심, AnythingLLM 중심, Python + ChromaDB 커스텀 스택.',
+          '**LLM 백엔드:** Ollama(권장) — `http://localhost:11434`의 로컬 엔드포인트 뒤에서 채팅 및 임베딩 모델 실행.',
+          '**2026년 권장 채팅 모델:** Llama 3.2 3B(16 GB 시스템), Phi-4 Mini(8 GB), Qwen3 7B(32 GB+).',
+          '**2026년 권장 임베딩 모델:** nomic-embed-text(768차원, 빠름), mxbai-embed-large(1024차원, 정확), bge-m3(다국어).',
+          '**항목 수 목표:** Obsidian 약 50,000개 노트, AnythingLLM 약 100,000개 문서, Python + ChromaDB 커스텀 스택 100만 개 이상.',
+          '**하드웨어 최소 사양:** 16 GB RAM 노트북. 10,000개 항목 이상: 32 GB 권장. 100,000개 항목 이상: 64 GB 홈 서버.',
+          '**모바일 캡처 경로(iOS):** Shortcuts → Obsidian, Shortcuts → Working Copy(Git), Shortcuts → a-Shell. Android: Tasker 또는 HTTP Shortcuts.',
+        ],
+      },
+      whichArchitecture: {
+        id: 'which-architecture',
+        title: '어떤 아키텍처를 구축할까?',
+        content:
+          '**가장 강력하게 들리는 아키텍처가 아니라 지식이 이미 도착하는 방식과 일치하는 아키텍처를 선택하십시오.** 이미 매일 노트를 작성한다면 Obsidian 중심으로 구축하십시오. 지식이 주로 문서(PDF, 내보내기, 웹 클립) 형태라면 AnythingLLM 중심으로 구축하십시오. 진정으로 100,000개 이상의 항목이 있거나 다중 사용자 액세스가 필요한 경우에만 Python + ChromaDB 커스텀 스택을 구축하십시오 — 유지 관리 비용이 실제로 존재하며 그 임계값 이하에서는 거의 가치가 없습니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '노트 중심 워크플로우는 Obsidian + Smart Connections + Copilot + Ollama를 선택하고, 문서 중심 아카이브는 AnythingLLM + Ollama를 선택하며, 100K 이상 항목을 가진 엔지니어는 Python + ChromaDB 커스텀 스택을 선택합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '세 가지 경로, 하나의 목적지. 이미 노트 앱 안에서 생활한다면 Obsidian이 기존 습관을 AI 기능으로 감쌉니다. 주로 PDF와 웹 페이지를 축적한다면 AnythingLLM은 수집, 인덱싱, 채팅을 하나로 처리하는 단일 앱입니다. 코드를 작성하고 완전한 제어를 원한다면 Python + ChromaDB로 원하는 것을 정확히 구축할 수 있습니다 — 하지만 유지 관리는 직접 해야 합니다. 아키텍처에 맞추어 습관을 바꾸지 말고 기존 워크플로우와 일치하는 경로를 선택하십시오.',
+          },
+        ],
+        decisionBlock: {
+          title: '결정: 어떤 PKB 아키텍처?',
+          localIf: [
+            '이미 Obsidian을 사용하거나 Markdown 파일을 사용한 노트 중심 워크플로우를 원함 → Obsidian 중심',
+            '지식이 주로 PDF, 내보내기, 웹 클립, 이메일 파일임 → AnythingLLM 중심',
+            '100,000개 이상의 항목, 커스텀 스키마 필요 또는 다중 사용자 액세스 → Python + ChromaDB 커스텀 스택',
+            '캡처, 저장, RAG, 채팅을 관리하는 단일 앱을 원함 → AnythingLLM 중심',
+            '청킹, 검색, 재순위 결정에 완전한 제어를 원함 → Python + ChromaDB 커스텀 스택',
+          ],
+          cloudIf: [
+            '모든 쿼리에 GPT-5.5 수준 추론이 필요하고 아카이브가 작음 → Notion AI 또는 커스텀 GPT를 사용한 ChatGPT(로컬 스택은 종합에서 약 70% 수준)',
+            '16 GB+ RAM 또는 홈 서버가 없음 → 클라우드 PKB SaaS(Mem, Reflect)',
+            '팀에 동시 다중 사용자 액세스가 필요하고 서비스를 호스팅하고 싶지 않음 → 클라우드 동급',
+          ],
+          quick: [
+            '노트 중심 사용자의 기본값: Obsidian + Smart Connections + Copilot + Ollama',
+            '문서 중심 사용자의 기본값: AnythingLLM + Ollama',
+            '100K 이상 항목을 가진 엔지니어: Python + ChromaDB 커스텀 스택 + Llama 3.2 3B',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: '단지 더 강력하게 들린다는 이유로 Python 커스텀 스택으로 시작하지 마십시오. 먼저 Obsidian 또는 AnythingLLM 중심으로 구축하고 두 달간 실행하면서 워크플로우와 맞지 않는 레이어를 찾은 다음, 그 레이어를 커스텀 구성 요소로 교체하는 것을 고려하십시오. "Python으로 처음부터" 시작하고 6개월 이상 지속된 모든 PKB 프로젝트는 결국 Obsidian 또는 AnythingLLM 형태의 디자인으로 수렴했습니다.',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '아키텍처 비교표',
+        content:
+          '**세 가지 참조 아키텍처는 대부분의 구축자에게 중요한 다섯 가지 축에서 차이가 납니다: 설정 복잡도, 항목 수 한계, 모바일 동기화, 캡처 유연성, 유지 관리 부담.** 설정 복잡도는 제어력에 대략 선형적으로 증가하며 유지 관리 비용도 마찬가지입니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Obsidian은 약 50K 항목에서 중간 복잡도, AnythingLLM은 약 100K 항목에서 낮은 복잡도, Python + ChromaDB 커스텀 스택은 높은 복잡도이지만 100만 개 이상으로 확장됩니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'AnythingLLM은 설정이 가장 쉽고 두 가지 "즉시 사용 가능한" 옵션 중 더 멀리 확장됩니다 — 하지만 문서 구성 방식에 대해 독단적입니다. Obsidian은 가장 표현력 있는 노트 작성 레이어와 활발한 플러그인 생태계를 제공하며, 설정 비용이 약간 더 높습니다. Python 커스텀은 한계가 없지만 모든 것을 직접 유지 관리해야 합니다: 청킹, 재순위, 중복 제거, 동기화, 백업. 항목 수만이 아니라 유지 관리 허용 수준으로 선택하십시오.',
+          },
+        ],
+        columns: ['아키텍처', '복잡도', '최대 항목', '모바일 동기화', '적합 대상'],
+        rows: [
+          { '아키텍처': 'Obsidian 중심', '복잡도': '중간', '최대 항목': '~50,000개', '모바일 동기화': '예(Obsidian Sync; iCloud / Git 조건부)', '적합 대상': '매일 글쓰기 습관이 있는 노트 중심 사용자' },
+          { '아키텍처': 'AnythingLLM 중심', '복잡도': '낮음', '최대 항목': '~100,000개', '모바일 동기화': '제한적(LAN / Tailscale을 통한 모바일 웹 UI)', '적합 대상': '문서 중심 PKB(PDF, 내보내기, 웹 클립)' },
+          { '아키텍처': 'Python + ChromaDB 커스텀', '복잡도': '높음', '최대 항목': '100만 개 이상', '모바일 동기화': '수동(자체 API + 모바일 클라이언트 구축)', '적합 대상': '완전한 제어 + 다중 사용자를 원하는 엔지니어' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '모바일 동기화는 가장 과소평가된 비교 축입니다. AnythingLLM은 기술적으로 Obsidian보다 설정이 쉽지만 모바일에서는 "Safari에서 LAN 웹 UI 열기"를 의미합니다 — 네이티브 경험이 아닙니다. Obsidian Mobile은 Obsidian Sync와 결합하면 오프라인 읽기가 가능한 거의 네이티브 iOS / Android 앱을 제공합니다. 모바일 캡처와 읽기가 중요하다면 표가 제안하는 것보다 Obsidian에 더 높은 가중치를 두십시오.',
+          },
+        ],
+      },
+      fiveLayers: {
+        id: 'five-layers',
+        title: '로컬 AI PKB의 다섯 가지 레이어',
+        content:
+          '**모든 로컬 AI PKB는 아키텍처와 관계없이 동일한 다섯 가지 레이어를 가집니다: 캡처, 저장, 임베딩, 검색, 인터페이스.** 실패는 대개 한 레이어가 다른 레이어와 일치하지 않을 때 발생합니다 — 가장 일반적으로는, 아무도 사용하지 않는 손상된 캡처 파이프라인과 쌍을 이룬 정교한 검색 레이어입니다.',
+        numberedItems: [
+          {
+            title: '캡처',
+            whyItMatters: '항목이 시스템에 들어오는 방법입니다. 웹 클리퍼, 이메일 전달, 모바일 공유 시트, 음성 메모, 수동 붙여넣기. 초보자 구축에서 가장 많이 생략되는 레이어이며 시스템이 일상적인 사용을 견딜 수 있는지를 결정하는 레이어입니다. 모바일에서 캡처하는 데 5초 이상 걸리면 시스템에 먼지가 쌓입니다.',
+          },
+          {
+            title: '저장',
+            whyItMatters: '항목이 디스크에 저장되는 곳입니다. Markdown vault(Obsidian, Logseq), 문서 폴더 + 데이터베이스(AnythingLLM), 파일 시스템 + 매니페스트(Python 커스텀). 도구 변경에도 살아남는 저장 형식을 선택하십시오 — 일반 텍스트 Markdown이 가장 이식 가능하고 바이너리 데이터베이스가 가장 이식 가능하지 않습니다.',
+          },
+          {
+            title: '임베딩',
+            whyItMatters: '시맨틱 검색에 사용되는 항목의 벡터 표현입니다. 로컬 모델(Ollama를 통한 nomic-embed-text 또는 mxbai-embed-large)에 의해 생성됩니다. 임베딩 모델은 나중에 변경할 수 있지만 마이그레이션 비용은 "모든 것을 다시 임베딩"입니다 — 한 번 선택하고 유지하십시오.',
+          },
+          {
+            title: '검색',
+            whyItMatters: '쿼리 시간에 항목을 찾는 방법입니다. 상위-k 벡터 검색, 선택적 재순위, 선택적 메타데이터 필터(태그, 날짜, 출처). 순진한 상위-5와 조정된 상위-20-재순위의 품질 차이는 "유용함"과 "마법 같음"의 차이입니다.',
+          },
+          {
+            title: '인터페이스',
+            whyItMatters: '쿼리하고 읽는 방법입니다. 사이드바(Smart Connections), 채팅(Copilot, AnythingLLM), CLI(Python 커스텀), API. 대부분의 사용자는 기본적으로 채팅을 사용하지만 "관련 노트" 사이드바는 채팅이 할 수 없는 잊혀진 자료를 보여줍니다 — 무엇을 물어봐야 할지 모르기 때문입니다.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '실패하는 일반적인 구축 패턴: 가장 강력한 검색(재순위를 사용한 커스텀 하이브리드 검색)과 가장 스마트한 채팅 모델(Qwen3 7B)을 선택하고 캡처를 무시합니다. 3주 후 vault에 47개 항목이 있는데 모바일에서 아무것도 흐르지 않기 때문입니다. 수정은 항상 같습니다: 검색 단순화, 채팅 단순화, 캡처 수정, 그리고 가치의 80%는 항목이 시스템 안에 있다는 것에서 온다는 것을 받아들이십시오.',
+          },
+        ],
+      },
+      architectureObsidian: {
+        id: 'architecture-obsidian',
+        title: '아키텍처 A: Obsidian 중심',
+        content:
+          '**Obsidian + Smart Connections + Copilot for Obsidian + Ollama는 2026년 노트 중심 워크플로우의 기본 아키텍처입니다.** 16 GB Mac M3 Pro 또는 동급 PC에서 약 50,000개 노트까지 깔끔하게 확장되고, Obsidian Mobile을 통한 모바일 읽기를 지원하며, 미래의 어떤 도구로도 가져갈 수 있는 일반 텍스트 Markdown으로 모든 것을 유지합니다.',
+        items: [
+          '**저장:** 폴더("vault") 안의 Markdown 파일. 일반 텍스트, 단순 폴더, 데이터베이스 없음. 도구 마이그레이션에서 살아남습니다.',
+          '**캡처:** Obsidian Web Clipper(브라우저 확장), Obsidian Mobile 공유 시트(iOS / Android), Mailspike 또는 커스텀 IFTTT 레시피를 통한 이메일-to-Obsidian, 수동 붙여넣기.',
+          '**임베딩:** Smart Connections 플러그인 → `http://localhost:11434/api/embeddings`의 Ollama → nomic-embed-text(기본값) 또는 mxbai-embed-large(더 정확). 인덱스는 vault 내 `.smart-env/`에 저장됩니다.',
+          '**검색:** Smart Connections 사이드바(관련 노트 보기) + Copilot for Obsidian의 Vault QA 모드(채팅 쿼리를 위한 vault 전체 RAG). 둘 다 임베딩 인덱스 위에서 검색합니다.',
+          '**인터페이스:** Smart Connections 사이드바(수동적 발견) + Copilot 채팅 패널(능동적 쿼리) + Text Generator 템플릿(일일 요약과 같은 반복 가능한 워크플로우).',
+          '**설정 시간:** 약 30분(Ollama 설치, 모델 다운로드, 세 가지 플러그인 설치, 엔드포인트 구성, 초기 인덱스 구축 대기).',
+          '**하드웨어:** 최소 16 GB RAM(Llama 3.2 3B + nomic-embed-text 동시 실행). 10,000개 노트 이상에서 32 GB 권장. SSD 강력 권장 — 인덱스 재구성은 HDD에서 I/O 바운드입니다.',
+          '**항목 한계:** 실제로 약 50,000개 노트; 서브-초 증분 재인덱싱으로 20,000개까지 테스트됨. 50K+ 노트에서 초기 인덱스는 4-8시간이 걸리며 서브-vault를 고려해야 합니다.',
+          '**적합 대상:** 매일 글쓰기 습관이 있고 Markdown-first 선호도를 가지며 잊혀진 노트를 보여주는 "생각 동반자" 사이드바를 원하는 사용자.',
+          '**부적합 대상:** 지식이 주로 PDF와 웹 클립인 사용자(AnythingLLM 중심 사용); 올인원 단일 앱을 원하는 사용자(Obsidian 중심은 "Obsidian + 3개 플러그인 + Ollama"입니다).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '이 아키텍처의 플러그인 레이어 심층 분석(5개 플러그인, 설정 단계, vault 확장 수치)은 [Obsidian + 로컬 LLM 플러그인 가이드](/ko/power-local-llm/local-llm-with-obsidian-2026)를 참조하십시오. 이 페이지는 아키텍처를 다루고 플러그인 가이드는 설정을 다룹니다.',
+          },
+        ],
+      },
+      architectureAnythingllm: {
+        id: 'architecture-anythingllm',
+        title: '아키텍처 B: AnythingLLM 중심',
+        content:
+          '**AnythingLLM + Ollama는 올인원 옵션입니다: 캡처, 저장, RAG, 채팅이 단일 데스크탑 또는 자체 호스팅 앱에 통합되어 있습니다.** 약 100,000개 문서(PDF, 웹 클립, 내보내기 혼합)까지 확장되며 지식이 노트보다 주로 문서 형태로 도착할 때 올바른 선택입니다.',
+        items: [
+          '**저장:** AnythingLLM 내부 데이터베이스(기본값은 SQLite; 다중 사용자 자체 호스팅에는 Postgres). 문서는 UI를 통해 수집됩니다; 원본은 동기화하는 폴더에도 남을 수 있습니다.',
+          '**캡처:** 앱 내 업로드(workspace에 PDF/파일 드래그), 웹 페이지용 브라우저 확장, 프로그래밍 방식 수집을 위한 공개 API(`POST /api/v1/document/upload`), 공식 통합 또는 커스텀 릴레이를 통한 이메일 전달.',
+          '**임베딩:** AnythingLLM은 구성한 임베딩 공급자를 사용합니다 — "Ollama" 선택 → `http://localhost:11434` 엔드포인트 → `nomic-embed-text` 모델. 임베딩은 내장 벡터 스토어(기본값은 LanceDB; ChromaDB / Pinecone 선택 가능)에 저장됩니다.',
+          '**검색:** workspace 전체 RAG. 구성 가능한 청크 크기, 상위-k 검색, 선택적 재순위. 여러 workspace를 통해 주제별 파티셔닝 가능(예: "업무", "읽기", "프로젝트").',
+          '**인터페이스:** AnythingLLM 웹 UI(데스크탑 및 모바일 브라우저에서 작동), 커스텀 프론트엔드용 공개 API, 다른 도구를 PKB에 연결하기 위한 OpenAI 호환 엔드포인트.',
+          '**설정 시간:** 약 15분(AnythingLLM Desktop 또는 Docker 설치, Ollama 연결, 문서 드래그).',
+          '**하드웨어:** 최소 16 GB RAM. 10,000개 문서 이상에서 32 GB 권장. AnythingLLM은 동일한 항목 수에서 Obsidian + 플러그인보다 메모리 효율적입니다 — 두 개가 아닌 단일 프로세스이기 때문입니다.',
+          '**항목 한계:** 단일 workspace에서 약 100,000개 문서; 검색 지연 시간을 약 1초 미만으로 유지하려면 50K에서 여러 workspace로 파티셔닝하십시오.',
+          '**적합 대상:** PDF가 많은 아카이브, 웹 클립 중심 캡처, 플러그인 스택보다 단일 앱을 선호하는 사용자. 또한 공유 PKB를 자체 호스팅하는 소규모 팀에 적합합니다.',
+          '**부적합 대상:** 노트 중심 글쓰기 표면을 원하는 사용자(Obsidian); 일반 텍스트 Markdown으로 저장소를 소유하고 싶은 사용자(AnythingLLM 벡터 스토어는 내부적입니다).',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '여기서 사용하는 RAG 레이어의 단계별 설정(Ollama + AnythingLLM, 수집, 청킹 조정)은 [30분 만에 PDF에서 로컬 RAG 설정 튜토리얼](/ko/power-local-llm/local-rag-on-your-pdfs-step-by-step)을 참조하십시오. 1,000개 이상 PDF로 RAG를 확장하는 방법은 [1000개 PDF와 로컬로 채팅하기](/ko/power-local-llm/chat-with-1000-pdfs-locally)를 참조하십시오.',
+          },
+        ],
+      },
+      architectureCustom: {
+        id: 'architecture-custom',
+        title: '아키텍처 C: Python + ChromaDB 커스텀',
+        content:
+          '**Python + ChromaDB + Ollama 커스텀 스택은 진정으로 100,000개 이상의 항목, 다중 사용자 필요성, 또는 표준 도구로는 모델링할 수 없는 특정 스키마 요구 사항이 있는 경우에만 올바른 선택입니다.** 유지 관리 비용이 실제로 존재합니다: 청킹, 중복 제거, 재순위, 동기화, 백업 — 모두 직접 관리해야 합니다.',
+        items: [
+          '**저장:** 파일 시스템(출처별 폴더: `notes/`, `pdfs/`, `web/`, `email/`) + 메타데이터 매니페스트(SQLite 또는 JSONL). 검색 레이어를 다시 수집하지 않고도 변경할 수 있도록 소스 파일은 개방형 형식으로 유지됩니다.',
+          '**캡처:** 웹훅으로 트리거된 스크립트(웹 클리퍼 → HTTP 엔드포인트 → 파일 쓰기), 이메일 전달 → IMAP 폴러 → 파일 쓰기, 모바일 공유 시트 → Tailscale 엔드포인트 → 파일 쓰기. 각 캡처 경로는 소규모 Python 서비스입니다.',
+          '**임베딩:** ChromaDB(로컬 모드, 디스크에 지속) + OpenAI 호환 엔드포인트를 통한 Ollama 임베딩. watchdog 프로세스를 통한 파일 변경 시 재임베딩. ChromaDB는 HNSW 인덱싱으로 단일 머신에서 수백만 개의 벡터로 확장됩니다.',
+          '**검색:** ChromaDB 상위-k 유사도 + 재순위기(BGE Re-ranker 또는 로컬 Cohere 동급) + 메타데이터 필터(날짜 범위, 태그, 출처). 정확한 용어 매칭을 위한 청크의 BM25를 사용한 선택적 하이브리드 검색.',
+          '**인터페이스:** 소규모 FastAPI 서비스를 `/v1/chat/completions` OpenAI 호환 엔드포인트로 노출하거나, Streamlit / Gradio UI, CLI, 또는 세 가지 모두. 코드 없이 세련된 채팅 경험을 위해 앞에 Open WebUI를 두십시오.',
+          '**설정 시간:** 기능하는 v1에 약 1일; 데이터에 대한 청킹, 검색 품질, 캡처 파이프라인 조정에 약 2주 반복.',
+          '**하드웨어:** 개발용 32 GB RAM 노트북; 임베딩 서비스가 노트북과 경쟁하지 않도록 100,000개 이상 항목에서 64 GB RAM 홈 서버. 채팅 성능을 위해 500K 항목 이상에서 전용 GPU(RTX 4060 이상) 고려.',
+          '**항목 한계:** HNSW + 샤딩으로 실제로 100만 개 이상; 병목이 검색에서 캡처 파이프라인 신뢰성과 스키마 변경 시 재임베딩 비용으로 이동합니다.',
+          '**적합 대상:** 스택을 소유하고 싶은 엔지니어, 커스텀 스키마를 가진 팀(예: "각 항목에는 신뢰도 점수, 출처, 저자가 있음"), 또는 Obsidian이나 AnythingLLM의 엄격한 한계(각각 50K와 100K)에 도달한 사용자.',
+          '**부적합 대상:** 비-엔지니어; 유지 관리 비용을 과소평가하는 사람; 표준 옵션이 이미 사용 사례를 커버하는 사용자.',
+        ],
+        promptExamples: [
+          {
+            label: 'ChromaDB 수집(Python 스키마)',
+            text: 'import chromadb, ollama, pathlib
+client = chromadb.PersistentClient(path="./chroma")
+coll = client.get_or_create_collection("kb")
+for p in pathlib.Path("vault").rglob("*.md"):
+    text = p.read_text()
+    emb = ollama.embeddings(model="nomic-embed-text", prompt=text)["embedding"]
+    coll.upsert(ids=[str(p)], embeddings=[emb], documents=[text], metadatas=[{"source": str(p)}])',
+          },
+          {
+            label: '재순위를 사용한 쿼리(스키마)',
+            text: 'q = "로컬 RAG 동기화에 대해 무엇을 작성했나요?"
+q_emb = ollama.embeddings(model="nomic-embed-text", prompt=q)["embedding"]
+hits = coll.query(query_embeddings=[q_emb], n_results=20)
+# pass hits["documents"] through a re-ranker, keep top 5
+# send top 5 + question to Llama 3.2 3B via Ollama chat endpoint',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '커스텀 구축에서 가장 일반적인 실패 패턴: 스키마가 안정적이지 않아 모든 코드 변경 시 전체 아카이브를 다시 임베딩합니다. 약 5,000개 항목을 수집하기 전에 임베딩 모델 + 청크 크기를 고정하십시오. nomic-embed-text 768차원에서 mxbai-embed-large 1024차원으로 100K 항목 마이그레이션하는 데 몇 시간의 컴퓨팅이 걸리고 ChromaDB 컬렉션이 손상됩니다 — 차원을 혼합할 수 없습니다.',
+          },
+        ],
+      },
+      capture: {
+        id: 'capture',
+        title: '캡처 파이프라인: 웹, 이메일, 모바일, 음성',
+        content:
+          '**캡처 레이어는 PKB가 일상적인 사용을 견딜 수 있는지를 결정합니다. 지식의 대부분은 데스크탑 밖에서 도착합니다 — 모바일에서, 이메일에서, 음성 메모에서 — 먼저 데스크탑 앱을 열어야 하는 캡처 파이프라인은 피해지는 파이프라인입니다.** 네 가지 주요 흐름을 위해 구축하고 항목의 80%가 모바일에서 도착할 것이라는 것을 받아들이십시오.',
+        items: [
+          '**웹 클리퍼(데스크탑 + 모바일):** Obsidian Web Clipper, AnythingLLM 브라우저 확장, 또는 현재 페이지를 캡처 엔드포인트로 POST하는 커스텀 북마크릿. 모바일 공유 시트 → 웹 클리퍼 확장 → vault.',
+          '**이메일 전달:** 전용 주소(예: `kb@yourdomain.com`) + IMAP 폴러 → 파일 쓰기. 보관하려는 이메일을 전달하면 폴러가 수집을 처리합니다. 검색에서 출처별 필터링을 위해 파일 이름에 출처 접두사를 사용하십시오.',
+          '**모바일 공유 시트:** 가장 많이 사용되는 캡처 경로. iOS 공유 → Obsidian(Markdown 파일 쓰기), iOS 공유 → Working Copy(Git에 커밋), iOS 공유 → 커스텀 Shortcut(캡처 API로 POST). Android: HTTP Shortcuts 또는 Tasker.',
+          '**음성 메모:** AudioPen 스타일 캡처는 2026년에 점점 보편화되고 있습니다. 전화로 녹음 → Whisper.cpp 또는 자체 호스팅 Whisper 서비스를 통해 로컬로 전사 → Markdown 파일로 전사 내용 쓰기 → 임베딩.',
+          '**수동 붙여넣기:** 폴백. 항상 작동하지만 절대 확장되지 않습니다. 롱테일 용도로 사용하십시오.',
+          '**스크린샷 OCR:** 스크린샷은 손실 캡처 형식입니다. iOS에서 Apple Live Text 또는 로컬 OCR 파이프라인(Tesseract, Apple Vision, EasyOCR)을 사용하여 텍스트를 추출하고 이미지와 추출된 텍스트가 있는 Markdown 파일을 쓰십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '파이프라인을 설계하기 전에 기존 캡처 습관을 감사하십시오. 이미 저장하는 것을 살펴보십시오: 브라우저 북마크, 스크린샷, 전달된 이메일, 음성 메모. PKB 캡처 레이어는 그러한 기존 흐름을 반영해야 합니다 — 스크린샷을 지속적으로 찍는다면 OCR 경로를 구축하고, 이미 이메일을 자신에게 전달한다면 이메일 전달을 구축하십시오. 새로운 습관을 추가하는 것("이제 모든 기사를 수동으로 KB에 복사 붙여넣기할 것이다")은 결코 작동하지 않습니다.',
+          },
+        ],
+      },
+      mobileCapture: {
+        id: 'mobile-capture',
+        title: '모바일 캡처: iOS Shortcuts, Working Copy, a-Shell',
+        content:
+          '**iOS에는 2026년 로컬 AI PKB로의 세 가지 실행 가능한 캡처 경로가 있습니다: Shortcuts → Obsidian, Shortcuts → Working Copy(Git), Shortcuts → a-Shell(스크립트 기반).** 각각은 세 가지 참조 아키텍처 중 하나와 자연스럽게 결합됩니다. 전반적인 아키텍처의 동기화 모델과 일치하는 경로를 선택하십시오.',
+        items: [
+          '**Shortcuts → Obsidian(Obsidian 중심):** Obsidian "노트에 추가" Shortcut이 캡처된 콘텐츠를 vault에 직접 씁니다. Obsidian Sync(유료, 권장) 또는 iCloud Drive(무료, 조건부)를 통한 동기화. 노트 중심 워크플로우에 적합합니다.',
+          '**Shortcuts → Working Copy(Git):** 캡처된 콘텐츠가 iPhone의 Working Copy 저장소에 쓰여진 다음 자동으로 커밋되고 푸시됩니다. 데스크탑이 풀합니다. 무료, 견고, 모든 Markdown vault와 작동합니다. 참고: Working Copy는 유료입니다(일회성 결제 약 $20). Git 동기화 vault에 적합합니다.',
+          '**Shortcuts → a-Shell:** a-Shell은 스크립트를 실행하는 무료 iOS 터미널입니다. 캡처된 텍스트를 a-Shell 스크립트로 파이프하는 Shortcut을 구축하면 파일을 쓰고 `git`을 통해 커밋하거나, Tailscale을 통해 `rsync`로 동기화하거나, 커스텀 캡처 엔드포인트로 업로드합니다. 엔지니어가 구축한 커스텀 아키텍처에 적합합니다.',
+          '**Android 동급:** iOS의 Working Copy 경로와 동급인 Tasker + Termux + Git. 커스텀 엔드포인트 경로용 HTTP Shortcuts. Obsidian 경로용 Obsidian Mobile 공유 시트.',
+          '**지연 시간 예산:** 모바일 캡처는 단 대 단으로 5초 미만(공유 시트 → 파일 쓰기 / 커밋 / 업로드)에 완료되어야 합니다. 더 느리면 사용자가 앱을 한 번 열고 다시는 열지 않습니다.',
+          '**오프라인 캡처:** 세 가지 iOS 경로 모두 오프라인에서 대기열을 지원합니다(Shortcuts는 대기열, Working Copy는 커밋 대기열, a-Shell 스크립트는 로컬에 쓰고 나중에 동기화). 비행, 대중교통, 시골 지역에서의 캡처에 필수적입니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '데스크탑이 온라인 상태여야 하는 모바일 캡처 경로를 구축하지 마십시오(예: 노트북이 깨어 있을 때만 액세스 가능한 Tailscale로 보호된 엔드포인트로 POST). 업무 회의 중, 노트북이 절전 모드일 때, 밤에 캡처를 잃게 됩니다. 항상 켜져 있는 홈 서버 / NAS에서 캡처 엔드포인트를 실행하거나, 오프라인에서 버퍼링되는 eventually-consistent 스토어(Obsidian Sync, Git, iCloud)에 쓰십시오.',
+          },
+        ],
+      },
+      scaling: {
+        id: 'scaling',
+        title: '확장: 1K, 10K, 100K 항목',
+        content:
+          '**로컬 AI PKB 확장에는 세 가지 체제가 있습니다: 1,000개 항목 미만에서는 모든 현대 노트북에서 모든 것이 빠릅니다; 1,000~10,000개 항목 사이에서는 임베딩 인덱스가 관리해야 할 실제 아티팩트가 됩니다; 10,000개 항목을 초과하면 하드웨어가 병목이 되고 캡처 파이프라인 신뢰성이 결과를 지배합니다.** 아래 실제 수치는 nomic-embed-text와 Llama 3.2 3B를 사용하는 Mac M3 Pro / RTX 4060 PC를 가정합니다.',
+        columns: ['항목 수', '권장 아키텍처', '초기 임베딩 시간', '하드웨어', '참고'],
+        rows: [
+          { '항목 수': '1,000개 항목', '권장 아키텍처': '세 가지 중 하나', '초기 임베딩 시간': '약 2분', '하드웨어': '16 GB RAM 노트북', '참고': '모든 것이 즉각적으로 느껴집니다. 아키텍처 선택은 순수하게 워크플로우 적합성 때문입니다.' },
+          { '항목 수': '10,000개 항목', '권장 아키텍처': 'Obsidian 또는 AnythingLLM', '초기 임베딩 시간': '약 25분', '하드웨어': '16 GB RAM 노트북(32 GB 권장)', '참고': '임베딩 인덱스 약 150-250 MB. 편집 시 재임베딩 시간 서브-초. 대부분의 지식 근로자에게 최적 지점.' },
+          { '항목 수': '50,000개 항목', '권장 아키텍처': 'AnythingLLM 또는 Python 커스텀', '초기 임베딩 시간': '약 3시간', '하드웨어': '32 GB RAM 노트북 또는 홈 서버', '참고': '초기 인덱스는 야간에 실행됩니다. 이 시점부터 서브-vault / workspace 계획. 임베딩 디스크 사용량 약 1.5-2 GB.' },
+          { '항목 수': '100,000개 항목', '권장 아키텍처': 'AnythingLLM(다중 workspace) 또는 Python 커스텀', '초기 임베딩 시간': '6-8시간', '하드웨어': '최소 32 GB RAM; 홈 서버 선호', '참고': '임베딩을 전용 홈 서버로 이동하십시오. 캡처 파이프라인 신뢰성이 이제 주요 실패 모드이며 검색이 아닙니다.' },
+          { '항목 수': '500,000개 항목 이상', '권장 아키텍처': 'Python + ChromaDB 커스텀', '초기 임베딩 시간': '24시간 이상', '하드웨어': '64 GB RAM + 전용 GPU 홈 서버', '참고': '샤딩, 중복 제거, 증분 재임베딩 파이프라인이 필요해집니다. 표준 도구는 더 이상 맞지 않습니다.' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '초기 임베딩 비용은 일회성 청구입니다. 첫 번째 인덱스 이후 변경된 항목만 재임베딩됩니다 — 일반적으로 100K 항목에서도 저장 시 1초 미만. 처음의 느림은 실제이지만 반복적이지 않습니다. 충전된 머신에서 야간에 초기 인덱스를 실행하고 잊어버리십시오.',
+          },
+        ],
+      },
+      backupSync: {
+        id: 'backup-sync',
+        title: '백업, 버전 관리, 다중 기기 동기화',
+        content:
+          '**로컬 AI PKB에는 세 가지 백업 레이어가 필요합니다: vault 스냅샷(Time Machine, Backblaze, restic), 일반 텍스트 콘텐츠의 Git 기록, 깔끔한 재구성을 위한 분기별 임베딩 및 메타데이터 내보내기.** 임베딩은 기술적으로 재생성 가능하지만 100K+ 항목에서 재생성에는 몇 시간이 걸립니다 — 함께 백업하십시오.',
+        items: [
+          '**vault 스냅샷(파일 시스템 레벨):** Time Machine(macOS) 또는 restic(Linux) 매 24시간. 외부 저장을 위한 Backblaze 또는 rsync.net. 임베딩을 포함한 모든 것을 캡처합니다.',
+          '**Git 기록(콘텐츠만):** 일반 텍스트 Markdown 파일을 Git 저장소에 커밋(로컬 + 비공개 GitHub / Gitea). `.smart-env/`, `vector_store/`, 기타 바이너리 인덱스 폴더를 `.gitignore`에 추가하십시오. Git은 노트별 버전 기록을 제공하고; vault 스냅샷은 전체 시스템 롤백을 제공합니다.',
+          '**임베딩 내보내기(분기별):** 벡터 스토어를 이식 가능한 형식으로 내보내십시오(ChromaDB → parquet, Smart Connections → JSON dump, AnythingLLM → 내장 내보내기). 외부 저장소에 마지막 두 번의 내보내기를 저장하십시오. vault 스냅샷이 실패하거나 임베딩 인덱스가 손상된 경우 이것이 빠른 재구성 경로입니다.',
+          '**다중 기기 동기화 — Obsidian 중심:** Obsidian Sync는 일반 텍스트 + 바이너리 인덱스를 깔끔하게 처리합니다(종단 간 암호화). iCloud Drive는 일반 텍스트에서는 작동하지만 플랫폼 간 바이너리 인덱스를 손상시킵니다. Working Copy / Termux를 통한 Git은 일반 텍스트 전용으로 작동합니다 — 기기별 재인덱싱.',
+          '**다중 기기 동기화 — AnythingLLM 중심:** 홈 서버에서 Docker 컨테이너로 AnythingLLM을 실행하십시오. 모든 기기는 LAN 또는 Tailscale을 통해 동일한 인스턴스에 연결됩니다. 클라이언트 측 동기화가 필요 없습니다.',
+          '**다중 기기 동기화 — Python 커스텀:** 구축하는 아키텍처가 이것을 결정합니다. 대부분의 구축은 중앙 API 서비스(홈 서버의 FastAPI)를 사용하고 클라이언트는 캡처를 POST하고 쿼리를 GET합니다. Tailscale이 네트워크 레이어를 제공합니다.',
+          '**새 컴퓨터로 마이그레이션:** vault 스냅샷 복원 → Ollama 설치 및 동일한 모델 다운로드 → Obsidian / AnythingLLM / Python 커스텀 스택 설치 → 임베딩 인덱서 재시작. Obsidian Sync 또는 자체 호스팅 AnythingLLM을 사용하면 마이그레이션은 "클라이언트 설치 및 로그인"입니다 — 수동 복원이 필요 없습니다. 그것 없이는 10K 항목 vault에 약 30분, 50K에 약 2시간, 임베딩 내보내기 단계를 생략했다면 100K 이상에는 밤새 계산하십시오.',
+          '**선택적 공유:** vault의 일부를 공유하려면(예: 협력자와 연구 프로젝트), 서브-vault 또는 태그 기반 내보내기 스크립트를 사용하십시오. 전체 vault를 공유하지 마십시오 — 대부분의 로컬 AI PKB는 로컬 스택을 절대 떠나서는 안 되는 민감한 항목(의료, 금융, 개인)을 축적합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '분기별로 복원을 테스트하십시오. "나는 백업이 있다"라는 대부분의 주장은 열망적입니다 — 테스트는 "2시간 미만에 새 노트북에서 vault를 복원할 수 있습니까?"입니다. 그 테스트를 실행하십시오. 처음 실행할 때 세 가지 레이어(스냅샷, Git, 임베딩 내보내기) 중 하나가 6개월 동안 잘못 구성되어 있었다는 것을 발견하게 됩니다.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '일반적인 실수',
+        items: [
+          '**캡처 레이어보다 검색 레이어를 먼저 설계합니다.** 47개 항목의 vault에서 재순위를 사용한 커스텀 하이브리드 검색은 낭비입니다. 먼저 캡처를 구축하고, 순진한 상위-5 검색을 받아들이고, vault에 1,000개 이상의 항목이 있고 실제 쿼리에서 검색 품질을 측정할 수 있을 때만 검색을 최적화하십시오.',
+          '**아키텍처 혼합.** "노트용 Obsidian + PDF용 AnythingLLM + 이메일용 Python 커스텀"은 깔끔하게 들리지만 통합 비용이 지배합니다. 하나의 아키텍처를 선택하고, 제한 사항을 받아들이고, 절대적으로 필요한 경우에만 단일 커넥터를 추가하십시오(예: Obsidian vault 폴더를 읽기 전용 모드로 수집하는 AnythingLLM).',
+          '**아카이브를 다시 임베딩하지 않고 임베딩 모델 변경.** 동일한 스토어에서 nomic-embed-text의 768차원 벡터와 mxbai-embed-large의 1024차원 벡터를 혼합하면 검색이 자동으로 손상됩니다. 임베딩 모델 + 차원을 선택하고 고정하고, 아카이브 전체 재임베딩으로만 변경하십시오.',
+          '**10,000개 항목 이상에서 임베딩 인덱스 백업 무시.** "재생성할 수 있습니다"는 사실이지만 재생성에 몇 시간이 걸립니다. 10K 항목에서 임베딩 스토어를 백업 전략에 추가하십시오.',
+          '**캡처의 80%가 모바일에서 발생하는데 데스크탑 전용으로 설계합니다.** 모바일 캡처 경로가 없는 PKB는 먼지가 쌓입니다. 첫 날 모바일 캡처 흐름을 테스트하십시오 — 공유 시트에서 vault까지 5초 미만에 완료되어야 합니다.',
+          '**바이너리 임베딩 인덱스에 iCloud Drive 신뢰.** iCloud는 일반 텍스트를 잘 처리합니다; 바이너리 인덱스(Smart Connections `.smart-env/`, AnythingLLM 벡터 스토어)는 플랫폼 간에 손상됩니다. Obsidian Sync, 자체 호스팅 인스턴스를 사용하거나 기기별 재인덱싱을 받아들이십시오.',
+          '**100K 항목에서 파티셔닝하지 않음.** 100K 항목에서 단일 workspace / vault는 여러 초의 검색 지연 시간을 갖습니다. 주제(업무, 읽기, 프로젝트)별로 여러 workspace 또는 서브-vault로 파티셔닝하고; 각각을 별도로 또는 라우터를 통해 쿼리하십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          'Obsidian — [obsidian.md](https://obsidian.md) 및 [help.obsidian.md](https://help.obsidian.md)(vault 구조, 모바일 동기화 아키텍처, 플러그인 문서).',
+          'AnythingLLM — [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)(오픈 소스 자체 호스팅 RAG 애플리케이션).',
+          'Ollama — [ollama.com](https://ollama.com) 및 [github.com/ollama/ollama](https://github.com/ollama/ollama)(로컬 LLM 런타임; 채팅 + 임베딩 엔드포인트).',
+          'ChromaDB — [trychroma.com](https://www.trychroma.com) 및 [github.com/chroma-core/chroma](https://github.com/chroma-core/chroma)(오픈 소스 로컬 벡터 데이터베이스).',
+          'Working Copy — [workingcopy.app](https://workingcopy.app)(모바일 캡처 파이프라인용 iOS Git 클라이언트).',
+          'a-Shell — [holzschu.github.io/a-Shell_iOS/](https://holzschu.github.io/a-Shell_iOS/)(스크립트 기반 모바일 캡처용 무료 iOS 터미널).',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '지식 베이스에 웹 페이지를 어떻게 캡처합니까?',
+            a: '마찰 순서로 정렬된 세 가지 옵션이 있습니다. (1) 브라우저 확장으로서의 웹 클리퍼 — Obsidian Web Clipper 또는 AnythingLLM 확장이 현재 페이지를 vault / workspace에 직접 씁니다. (2) 모바일 공유 시트 — Safari / Chrome에서 공유 → Obsidian(Markdown 파일 쓰기) 또는 → Working Copy(Git에 커밋) 또는 → 커스텀 Shortcut(캡처 API로 POST). (3) 북마크릿 — 확장이 없는 브라우저용; 현재 URL + 선택 내용을 캡처 엔드포인트로 POST합니다. 모바일 공유 시트가 실제로 가장 많이 사용되는 경로입니다 — 먼저 설계하십시오.',
+          },
+          {
+            q: '시스템에 이메일을 전달할 수 있습니까?',
+            a: '예. 전용 주소(예: Fastmail / Migadu 별칭 `kb@yourdomain.com`)를 설정하고 홈 서버 또는 노트북에서 새 메일을 다운로드하고 vault에 이메일당 Markdown 파일을 쓰는 IMAP 폴러를 실행하십시오. 검색이 발신자별로 필터링할 수 있도록 파일 이름에 발신자 주소 접두사를 추가하십시오. AnythingLLM에는 자체 이메일 통합이 있습니다; Obsidian 사용자는 일반적으로 직접 IMAP 폴러를 구축하거나 n8n과 같은 IFTTT / Zapier 대안을 사용합니다.',
+          },
+          {
+            q: '데스크탑과 모바일 간에 어떻게 동기화합니까?',
+            a: '아키텍처에 따라 다릅니다. Obsidian 중심: Obsidian Sync(유료, 바이너리 인덱스를 깔끔하게 처리), iCloud Drive(무료, 일반 텍스트 전용 — 기기별 재인덱싱) 또는 Working Copy를 통한 Git(무료 + Working Copy 일회성 결제, 일반 텍스트 전용 — 기기별 재인덱싱). AnythingLLM 중심: 홈 서버의 Docker에서 AnythingLLM을 실행하고 모든 기기가 LAN 또는 Tailscale을 통해 연결됩니다 — 클라이언트 측 동기화가 필요 없습니다. Python 커스텀: 홈 서버의 중앙 API 서비스를 구축하고; 클라이언트는 캡처를 POST하고 쿼리를 GET합니다.',
+          },
+          {
+            q: '하나의 큰 vault를 사용해야 할까요, 아니면 주제별로 나눠야 할까요?',
+            a: '약 50,000개 항목까지는 하나의 vault를 사용하십시오. 50K 이상에서는 두 가지 이유로 주제(업무, 읽기, 프로젝트, 개인)별로 나누십시오: 검색 지연 시간이 약 1초 미만으로 유지되고, 규모에서 발생할 수 있는 의도치 않은 컨텍스트 누출(예: 업무 쿼리에서 개인 노트 나타남)이 가능해집니다. 50K 이전에 나누는 것은 너무 이릅니다 — PKB의 주요 가치인 우연한 교차 연결을 잃게 됩니다.',
+          },
+          {
+            q: '더 높은 정확도를 위해 얼마나 자주 재임베딩해야 합니까?',
+            a: '"정확도 드리프트"로 인해 재임베딩하지 마십시오 — 임베딩은 저하되지 않습니다. 임베딩 모델을 변경할 때만 재임베딩하십시오(예: 기술 콘텐츠에서 더 나은 검색을 위해 nomic-embed-text에서 mxbai-embed-large로 업그레이드). 세 가지 아키텍처는 모두 파일 변경 시 증분 재임베딩을 자동으로 처리합니다; 스케줄링할 필요가 없습니다. 예외는 인덱서를 제어하는 Python 커스텀 스택입니다 — 거기서는 저장 시 watchdog으로 제어되는 증분 재임베딩이 표준입니다.',
+          },
+          {
+            q: '지식 베이스에서 버전 관리를 사용할 수 있습니까?',
+            a: '일반 텍스트 콘텐츠에는 예(Markdown vault → Git 저장소, 로컬 + 비공개 GitHub / Gitea). 바이너리 인덱스 폴더(`.smart-env/`, `vector_store/`, ChromaDB 지속성 디렉토리)를 `.gitignore`에 추가하십시오 — 기록을 부풀리고 병합 충돌을 유발합니다. Git은 노트별 버전 기록을 제공하고; vault 스냅샷(Time Machine, restic)은 전체 시스템 롤백을 제공합니다. 하나가 아닌 두 레이어 모두.',
+          },
+          {
+            q: '이 시스템에서 PDF를 어떻게 처리합니까?',
+            a: 'Obsidian 중심: Markdown 노트 옆에 PDF를 저장하십시오; Smart Connections는 PDF 콘텐츠를 직접 임베딩하지 않습니다 — 먼저 텍스트를 추출하십시오(예: PDF++ 플러그인 또는 각 PDF 옆에 Markdown 요약을 쓰는 전처리 스크립트를 통해). AnythingLLM 중심: PDF를 workspace에 직접 드래그하십시오; AnythingLLM이 PDF 파싱과 청킹을 자동으로 처리합니다. Python 커스텀: 수집 파이프라인에서 `pypdf` 또는 `pdfplumber`를 사용하여 텍스트를 추출하고, 추출된 텍스트를 임베딩하십시오. AnythingLLM은 PDF가 많은 아카이브에서 가장 마찰이 적은 옵션입니다.',
+          },
+          {
+            q: 'KB의 일부를 선택적으로 공유할 수 있습니까?',
+            a: '예, 하지만 첫 날부터 설계하십시오. "공유 가능"하고 "비공개" 콘텐츠를 별도의 스토어에 유지하기 위해 서브-vault(Obsidian) 또는 workspace(AnythingLLM)를 사용하십시오. 일회성 공유의 경우 태그(예: `#shareable`)별로 항목을 추출하는 이식 가능한 Markdown 번들로 내보내는 태그 기반 내보내기 스크립트를 구축하십시오. 전체 vault를 공유하지 마십시오 — 대부분의 로컬 AI PKB는 로컬 스택을 절대 떠나서는 안 되는 민감한 항목(의료, 금융, 개인 서신)을 축적합니다.',
+          },
+          {
+            q: '최선의 백업 전략은 무엇입니까?',
+            a: '세 가지 레이어: (1) 24시간마다 파일 시스템 스냅샷(Time Machine / restic)과 외부 저장소 사본(Backblaze / rsync.net); (2) 노트별 버전 검색을 위한 일반 텍스트 콘텐츠의 Git 기록; (3) 빠른 재구성 경로로서의 분기별 임베딩 + 메타데이터 내보내기. 분기별로 복원을 테스트하십시오 — "2시간 미만에 새 노트북에서 vault를 재구성할 수 있습니까?" 첫 번째 복원 테스트는 일반적으로 세 가지 레이어 중 하나가 잘못 구성되어 있었다는 것을 드러냅니다.',
+          },
+          {
+            q: '새 컴퓨터로 어떻게 마이그레이션합니까?',
+            a: 'vault 스냅샷 복원 → Ollama 설치 및 동일한 모델 다운로드 → Obsidian / AnythingLLM / Python 커스텀 스택 설치 → 임베딩 인덱서 재시작. Obsidian Sync 또는 자체 호스팅 AnythingLLM을 사용하면 마이그레이션은 "클라이언트 설치 및 로그인"입니다 — 수동 복원이 필요 없습니다. 그것 없이는 10K 항목 vault에 약 30분, 50K에 약 2시간, 임베딩 내보내기 단계를 생략했다면 100K 이상에는 밤새.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽기',
+        items: [
+          '[Obsidian + 로컬 LLM: vault를 세컨드 브레인으로 만드는 5개 플러그인(2026)](/ko/power-local-llm/local-llm-with-obsidian-2026) — 아키텍처 A의 플러그인 레이어 심층 분석.',
+          '[로컬 LLM과 Logseq 및 Joplin](/ko/power-local-llm/local-llm-with-logseq-and-joplin) — Obsidian이 선호하지 않는 경우 PKB의 대체 저장 레이어.',
+          '[1000개 이상 PDF와 로컬로 채팅하기: 토이 예제 이상으로 RAG 확장](/ko/power-local-llm/chat-with-1000-pdfs-locally) — 1,000개 항목 이상으로 RAG 레이어 확장, 세 가지 아키텍처 모두에 적용 가능.',
+          '[30분 만에 PDF에서 로컬 RAG(Ollama + AnythingLLM)](/ko/power-local-llm/local-rag-on-your-pdfs-step-by-step) — 아키텍처 B에서 사용하는 검색 레이어를 위한 RAG 구현 튜토리얼.',
+          '[로컬 RAG를 위한 최선의 임베딩 모델(2026)](/ko/power-local-llm/best-embedding-models-local-rag-2026) — 세 가지 아키텍처 각각에 대한 임베딩 모델 선택(nomic-embed-text vs mxbai-embed-large vs bge-m3).',
+          '[RAG 설명](/ko/prompt-engineering/rag-explained) — 검색 레이어의 개념적 참조.',
+          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 최소 16 GB, 10K 항목 이상에서 32 GB 권장, 100K 이상에서 홈 서버를 위한 하드웨어 사이징.',
+          '[로컬 LLM 소프트웨어 디렉토리 2026](/ko/power-local-llm/local-llm-software-directory-2026) — Ollama, ChromaDB, AnythingLLM, Obsidian 및 기타 스택 구성 요소의 디렉토리 목록.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 AI로 개인 지식 베이스 구축하기: 2026 스택 가이드',
+      description: '로컬 AI 개인 지식 베이스 2026: 3가지 아키텍처 비교(Obsidian, AnythingLLM, Python + ChromaDB). 100,000개 이상 항목으로 확장. 캡처, RAG, 동기화, 백업.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-personal-knowledge-base-2026',
+      inLanguage: 'ko',
+      datePublished: '2026-05-08',
+      dateModified: '2026-05-08',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
 }

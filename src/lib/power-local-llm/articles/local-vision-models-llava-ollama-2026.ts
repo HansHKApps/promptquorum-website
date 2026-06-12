@@ -4359,4 +4359,646 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
       },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-14',
+    dateModified: '2026-05-14',
+    next_refresh_due: '2026-11-14',
+    theme: 'Voice, Speech & Multimodal',
+    title: '로컬 비전 모델 2026: LLaVA, Llama 3.2 Vision, Qwen2-VL 및 Ollama 멀티모달 설정 가이드',
+    seoTitle: '최고의 로컬 비전 모델 2026: LLaVA와 Qwen2-VL',
+    intro:
+      '비전-언어 모델(VLM)은 이미지와 텍스트를 입력으로 받아 텍스트를 출력합니다. 문서 OCR, 이미지 질의응답, 스크린샷 분석, 차트 읽기 등 모든 작업을 로컬에서 처리할 수 있습니다. 2026년 현재 VLM을 실행하는 가장 간편한 방법은 Ollama를 사용하는 것입니다. 모델을 다운로드하고 이미지를 전송하면 설명이나 답변을 받을 수 있습니다. 이 가이드는 주요 로컬 비전 모델(LLaVA 1.6, Llama 3.2 Vision, MiniCPM-V 2.6, Moondream 2, Qwen2-VL, InternVL 2.5)을 비교하고, Ollama 설정 단계를 설명하며, VRAM 요구 사항과 품질 벤치마크에 따라 각 모델의 최적 활용 사례를 안내합니다.',
+    metaDescription:
+      '2026년 오프라인 이미지 질의응답, OCR, 스크린샷 분석 가이드. 벤치마크: LLaVA 1.6, Llama 3.2 Vision, Qwen2-VL, MiniCPM-V. Ollama VRAM 및 설정 방법.',
+    twitterDescription:
+      '로컬 비전 모델 2026: LLaVA, Llama 3.2 Vision, MiniCPM-V via Ollama. 이미지 질의응답, OCR, 스크린샷 분석 — 100% 오프라인. VRAM 가이드 및 설정 단계.',
+    audience:
+      '클라우드 API 없이 로컬에서 이미지 이해 기능이 필요한 개발자 — 문서 처리, 스크린샷 분석, 접근성 도구, 재고 시스템 또는 민감한 이미지를 다루는 워크플로우에 적합합니다.',
+    readTime: '11분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '로컬 비전 모델',
+    targetKeywords: [
+      '로컬 비전 모델 2026',
+      'LLaVA Ollama 설정',
+      '로컬 비전 모델 실행 방법',
+      'llama 3.2 vision 로컬',
+      'MiniCPM-V 로컬',
+      'qwen2-vl 로컬',
+      'qwen2-vl ollama',
+      '최고의 로컬 비전 모델',
+      '오프라인 이미지 이해',
+      '로컬 멀티모달 모델',
+      'ollama 비전 모델',
+    ],
+    current_models_mentioned: [
+      'LLaVA 1.6 (7B and 13B)',
+      'Llama 3.2 Vision 11B',
+      'Llama 3.2 Vision 90B',
+      'MiniCPM-V 2.6 (8B)',
+      'Moondream 2 (1.9B)',
+      'Qwen2-VL 7B',
+      'Qwen2-VL 72B',
+      'InternVL 2.5 (8B)',
+      'PaliGemma 2 3B',
+      'SmolVLM 2.2B',
+    ],
+    current_hardware_mentioned: [
+      '2 GB VRAM',
+      '6 GB VRAM',
+      '8 GB VRAM',
+      '16 GB VRAM',
+      '64 GB VRAM',
+      'Apple M-series (unified memory)',
+    ],
+    leadAnswerBlock:
+      '**VRAM 6~8 GB를 보유한 대부분의 개발자에게는 MiniCPM-V 2.6 (8B) 또는 LLaVA 1.6 7B via Ollama가 2026년 추천 시작점입니다.** 두 모델 모두 약 6 GB VRAM에서 동작하며, 문서 OCR, 이미지 질의응답, 스크린샷 분석을 지원하고 단일 Ollama 명령어로 실행할 수 있습니다. 8~16 GB VRAM에서 전반적인 최고 품질을 원한다면 Llama 3.2 Vision 11B가 최선의 선택이며, 특히 문서와 사진 처리에 강합니다. VRAM이 2 GB밖에 없다면 Moondream 2 (1.9B)가 유일한 실용적 옵션이지만, 복잡한 장면 처리에는 한계가 있습니다. 모든 모델은 다운로드 후 100% 오프라인으로 동작하며, API 키나 클라우드 계정이 필요하지 않습니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 Ollama에서 사용하기에 가장 좋은 로컬 비전 모델은 무엇입니까?',
+        answer:
+          '최적의 로컬 비전 모델은 VRAM 용량과 사용 목적에 따라 달라집니다. VRAM 6~8 GB의 경우 MiniCPM-V 2.6이 OCR 정확도와 일반적인 이미지 이해 사이에서 최고의 균형을 제공합니다. VRAM 8~16 GB의 경우 Llama 3.2 Vision 11B가 일반적인 시각적 질의응답과 문서 분석에서 최우선 선택입니다. VRAM 2 GB의 경우 Moondream 2가 유일한 대안으로, 빠르지만 처리 능력에 한계가 있습니다. InternVL 2.5는 UI 스크린샷과 차트 분석에 가장 강하지만, 다른 모델들보다 Ollama 통합이 적습니다.',
+        bullets: [
+          'VRAM 4 GB 미만 → Moondream 2 (1.9B): 빠르지만 복잡한 이미지 이해 제한적. 대안: PaliGemma 2 3B (~3 GB), SmolVLM 2.2B (~2 GB).',
+          'VRAM 6 GB → MiniCPM-V 2.6, LLaVA 1.6 7B 또는 Qwen2-VL 7B (다국어 OCR에 최적): 품질과 하드웨어 균형이 최고.',
+          'VRAM 8~16 GB → Llama 3.2 Vision 11B: 사진과 문서 처리에서 최고의 로컬 VLM.',
+          'VRAM 64+ GB (또는 Apple M-series) → Llama 3.2 Vision 90B 또는 Qwen2-VL 72B: 클라우드 수준에 가까운 최고 로컬 품질.',
+          '설정: `ollama pull llama3.2-vision` 후 `ollama run llama3.2-vision "이 이미지를 설명해 주세요" --image 사진.jpg`.',
+          'OCR 최고: Qwen2-VL 7B ≈ MiniCPM-V 2.6 > Llama 3.2 Vision 11B > LLaVA 1.6 — 문서 텍스트 추출에 강함.',
+          'UI/스크린샷 최고: InternVL 2.5 — 코드 및 UI 스크린샷으로 특별 훈련.',
+        ],
+        updatedDate: '2026-05-14',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '비전-언어 모델이란?', anchor: '#what-are-vlms' },
+      { label: '모델 비교표', anchor: '#model-comparison' },
+      { label: '실제 정확도 테스트: 청구서 추출', anchor: '#invoice-accuracy-test' },
+      { label: '다중 이미지 지원', anchor: '#multi-image-support' },
+      { label: 'Ollama 설정 (단계별)', anchor: '#ollama-setup' },
+      { label: '활용 사례 1: OCR 및 문서 추출', anchor: '#use-case-ocr' },
+      { label: '활용 사례 2: 이미지 질의응답', anchor: '#use-case-qa' },
+      { label: '활용 사례 3: 스크린샷 및 UI 분석', anchor: '#use-case-screenshot' },
+      { label: '활용 사례 4: 차트 및 다이어그램 읽기', anchor: '#use-case-chart' },
+      { label: '활용 사례 5: 동영상 프레임 분석', anchor: '#use-case-video' },
+      { label: 'VRAM 및 실제 성능 확인', anchor: '#vram-reality' },
+      { label: '로컬 비전 모델 vs GPT-5.5 Vision', anchor: '#local-vs-gpt4o' },
+      { label: 'LLaVA 심층 분석', anchor: '#llava-deep-dive' },
+      { label: 'Qwen2-VL — 최고의 다국어 OCR', anchor: '#qwen2vl-deep-dive' },
+      { label: '비전 모델 선택 방법', anchor: '#how-to-choose' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '출처', anchor: '#sources' },
+      { label: '관련 자료', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Llama 3.2 Vision 11B는 VRAM 8~16 GB를 보유한 대부분의 개발자에게 최고의 로컬 비전 모델입니다.** 사진, 문서, 혼합 콘텐츠를 동급 최고의 정확도로 처리하며 Ollama에서 직접 사용할 수 있습니다.',
+          '**MiniCPM-V 2.6 (8B)는 VRAM 6 GB에서 문서 OCR에 가장 적합한 모델입니다.** 훈련 데이터에 고해상도 문서 스캔이 포함되어 있어 표, 청구서, 빽빽한 텍스트에서 LLaVA보다 더 정확합니다.',
+          '**LLaVA 1.6 7B는 커뮤니티에서 가장 많이 문서화되고 검증된 로컬 VLM입니다.** 풍부한 예제, 튜토리얼, 문제 해결 자료가 필요하다면 가장 안전한 범용 선택입니다.',
+          '**Moondream 2 (1.9B)는 VRAM 4 GB 미만에서 유일한 실용적 선택입니다.** 빠르고 가볍지만 복잡한 장면, 빽빽한 텍스트, 정확한 차트 읽기에는 어려움이 있습니다.',
+          '**InternVL 2.5 (8B)는 코드 스크린샷 및 UI 분석에서 가장 강력합니다.** GitHub 스크린샷, UI 목업, 코드 실행 결과로 훈련되어 다른 모델들보다 이 분야에서 뛰어납니다.',
+          '**모든 모델은 단일 `pull` 명령어로 Ollama에서 사용 가능합니다.** 모델 변환, 양자화, Python 설정이 필요 없습니다. CLI와 HTTP API가 즉시 동작합니다.',
+          '**이 모델들 중 GPT-5.5 Vision의 품질에 근접하는 것은 없습니다.** 2026년의 로컬 VLM은 구조화된 문서와 선명한 사진에는 우수하지만, 손글씨와 복잡한 차트에는 여전히 약합니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**VLM의 역할:** 이미지 + 텍스트를 입력으로 받아 텍스트를 출력합니다. 이미지 생성 모델이 아니라, 이미지를 *이해*하는 모델입니다.',
+          '**Ollama 지원:** 이 비교의 모든 모델은 2026년 5월 기준으로 Ollama 공식 또는 커뮤니티 통합을 지원합니다.',
+          '**가장 작은 사용 가능 모델:** Moondream 2, 1.9B 파라미터, ~2 GB VRAM.',
+          '**가장 큰 실용적 로컬 모델:** Llama 3.2 Vision 90B, ~64 GB 통합 메모리 필요 (Apple M-series 또는 멀티 GPU).',
+          '**이미지 입력 형식:** JPEG, PNG, WebP 지원. 최대 해상도는 모델별로 다름 (일반적으로 1024×1024~4096×4096).',
+          '**OCR 정확도:** Qwen2-VL 7B ≈ MiniCPM-V 2.6 > Llama 3.2 Vision 11B > LLaVA 1.6 13B > LLaVA 1.6 7B > Moondream 2.',
+          '**멀티모달 ≠ 빠름:** 비전 모델은 LLM에 시각 인코더를 추가하므로, 같은 파라미터 수의 텍스트 전용 모델보다 토큰 생성이 약 30~60% 느립니다.',
+        ],
+      },
+      whatAreVLMs: {
+        id: 'what-are-vlms',
+        title: '비전-언어 모델(VLM)이란 무엇입니까?',
+        content:
+          '비전-언어 모델(VLM)은 이미지와 텍스트 입력을 동시에 처리하고 텍스트를 출력하는 신경망입니다. 표준 아키텍처는 시각 인코더(주로 CLIP 또는 SigLIP)와 언어 디코더(LLM)를 결합하며, 이미지 특징을 LLM이 이해하는 토큰 공간에 매핑하는 프로젝션 레이어로 연결됩니다.',
+        items: [
+          '**이미지 생성 모델과의 차이:** Stable Diffusion, FLUX, DALL-E 3는 텍스트에서 이미지를 생성하는 모델입니다. VLM은 이미지에서 텍스트를 생성하는 모델로, 이미지를 묘사하고 분석하며 질문에 답변합니다.',
+          '**전통적인 OCR 도구와의 차이:** 전통적인 OCR(Tesseract, PaddleOCR)은 패턴 인식으로 구조화된 문서에서 텍스트를 추출합니다. VLM은 문맥을 이해합니다 — 표의 의미를 설명하고, 차트에 대한 질문에 답하며, 사진의 객체를 식별할 수 있습니다.',
+          '**로컬 실행의 이유:** 개인 문서(의료 기록, 법적 문서, 재무제표), 독점적 스크린샷(내부 대시보드, 소스 코드), 또는 클라우드 API에 이미지를 전송하는 것이 컴플라이언스나 기밀 문제를 야기하는 모든 워크플로우.',
+          '**할 수 없는 것:** 이미지 생성, 스크린샷에 표시된 코드 실행, 인터넷 접속. VLM은 이미지에서 보이는 것을 기반으로 텍스트만 출력합니다.',
+        ],
+      },
+      modelComparison: {
+        id: 'model-comparison',
+        title: '로컬 비전 모델 비교표',
+        content:
+          '2026년 5월 기준으로 Ollama 또는 직접 추론을 통해 사용 가능한 주요 로컬 비전 모델 비교. VRAM 수치는 별도 표시가 없는 한 4비트 양자화(Q4) 변형 기준입니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'VRAM 6~8 GB의 경우: 문서 OCR에는 MiniCPM-V 2.6, 일반 이미지 질의응답에는 Llama 3.2 Vision 11B — 두 모델 모두 Ollama를 통해 로컬에서 실행 가능합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Moondream은 어디서든 실행되지만 이해력이 낮은 경량 옵션, LLaVA는 안전한 범용 선택, MiniCPM-V는 OCR 전문가, Llama 3.2 Vision은 전반적 최고 성능, InternVL은 UI 스크린샷 및 코드 전문가로 생각하면 됩니다.',
+          },
+        ],
+        columns: ['모델', '파라미터', 'VRAM (Q4)', '이미지 유형', '품질', 'Ollama 지원?'],
+        rows: [
+          {
+            '모델': 'Moondream 2',
+            '파라미터': '1.9B',
+            'VRAM (Q4)': '~2 GB',
+            '이미지 유형': '단순 사진',
+            '품질': '기본',
+            'Ollama 지원?': '예',
+          },
+          {
+            '모델': 'LLaVA 1.6 7B',
+            '파라미터': '7B',
+            'VRAM (Q4)': '~6 GB',
+            '이미지 유형': '사진, 문서, 차트',
+            '품질': '좋음',
+            'Ollama 지원?': '예',
+          },
+          {
+            '모델': 'LLaVA 1.6 13B',
+            '파라미터': '13B',
+            'VRAM (Q4)': '~10 GB',
+            '이미지 유형': '사진, 문서, 차트',
+            '품질': '매우 좋음',
+            'Ollama 지원?': '예',
+          },
+          {
+            '모델': 'MiniCPM-V 2.6',
+            '파라미터': '8B',
+            'VRAM (Q4)': '~6 GB',
+            '이미지 유형': '사진, 문서, OCR',
+            '품질': '매우 좋음',
+            'Ollama 지원?': '예',
+          },
+          {
+            '모델': 'Llama 3.2 Vision 11B',
+            '파라미터': '11B',
+            'VRAM (Q4)': '~8 GB',
+            '이미지 유형': '사진, 문서',
+            '품질': '우수',
+            'Ollama 지원?': '예',
+          },
+          {
+            '모델': 'Llama 3.2 Vision 90B',
+            '파라미터': '90B',
+            'VRAM (Q4)': '~64 GB',
+            '이미지 유형': '사진, 문서, 복잡한 콘텐츠',
+            '품질': '로컬 최고',
+            'Ollama 지원?': '예',
+          },
+          {
+            '모델': 'InternVL 2.5 8B',
+            '파라미터': '8B',
+            'VRAM (Q4)': '~8 GB',
+            '이미지 유형': '문서, 차트, UI, 코드',
+            '품질': '우수 (UI/차트)',
+            'Ollama 지원?': '커뮤니티',
+          },
+          {
+            '모델': 'Qwen2-VL 7B',
+            '파라미터': '7B',
+            'VRAM (Q4)': '~6 GB',
+            '이미지 유형': '사진, 문서, OCR, 다국어',
+            '품질': '우수',
+            'Ollama 지원?': '예',
+          },
+          {
+            '모델': 'Qwen2-VL 72B',
+            '파라미터': '72B',
+            'VRAM (Q4)': '~48 GB',
+            '이미지 유형': '사진, 문서, 복잡한 콘텐츠',
+            '품질': '최고 (오픈소스)',
+            'Ollama 지원?': '예',
+          },
+          {
+            '모델': 'PaliGemma 2 3B',
+            '파라미터': '3B',
+            'VRAM (Q4)': '~3 GB',
+            '이미지 유형': '사진, 문서',
+            '품질': '좋음',
+            'Ollama 지원?': '커뮤니티',
+          },
+          {
+            '모델': 'SmolVLM 2.2B',
+            '파라미터': '2.2B',
+            'VRAM (Q4)': '~2 GB',
+            '이미지 유형': '단순 사진, 설명',
+            '품질': '기본+',
+            'Ollama 지원?': '커뮤니티',
+          },
+        ],
+      },
+      invoiceAccuracyTest: {
+        id: 'invoice-accuracy-test',
+        title: '실제 정확도 테스트: 청구서 추출',
+        content:
+          '구조화된 문서 추출 작업에서 로컬 비전 모델의 정확도 비교. 테스트: 동일한 샘플 청구서에서 5개 필드(공급업체명, 날짜, 합계, 세금 금액, 항목 수) 추출.',
+        columns: ['모델', '공급업체', '날짜', '합계', '세금', '항목 수', '점수'],
+        rows: [
+          { '모델': 'Moondream 2', '공급업체': '✓', '날짜': '✓', '합계': '✗', '세금': '✗', '항목 수': '✗', '점수': '2/5' },
+          { '모델': 'LLaVA 1.6 7B', '공급업체': '✓', '날짜': '✓', '합계': '✓', '세금': '✗', '항목 수': '✓', '점수': '4/5' },
+          { '모델': 'MiniCPM-V 2.6', '공급업체': '✓', '날짜': '✓', '합계': '✓', '세금': '✓', '항목 수': '✓', '점수': '5/5' },
+          { '모델': 'Qwen2-VL 7B', '공급업체': '✓', '날짜': '✓', '합계': '✓', '세금': '✓', '항목 수': '✓', '점수': '5/5' },
+          { '모델': 'Llama 3.2 11B', '공급업체': '✓', '날짜': '✓', '합계': '✓', '세금': '✓', '항목 수': '✓', '점수': '5/5' },
+          { '모델': 'GPT-5.5 Vision', '공급업체': '✓', '날짜': '✓', '합계': '✓', '세금': '✓', '항목 수': '✓', '점수': '5/5' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '단일 샘플 청구서로 얻은 결과입니다. 실제 정확도는 문서 품질, 서체, 디자인 복잡도에 따라 달라집니다. 추출된 숫자는 항상 원본 문서와 대조하여 확인하십시오.',
+          },
+        ],
+      },
+      multiImageSupport: {
+        id: 'multi-image-support',
+        title: '다중 이미지 지원',
+        content:
+          '모든 로컬 비전 모델이 단일 요청에서 여러 이미지를 허용하는 것은 아닙니다. 다중 이미지 지원은 문서 처리(여러 페이지 PDF의 모든 페이지 전송)와 시각적 비교 작업(두 제품 사진 비교)에 중요합니다.',
+        columns: ['기능', 'Moondream', 'LLaVA 7B', 'MiniCPM-V', 'Qwen2-VL', 'LLaVA 13B', 'Llama 3.2 Vision', 'InternVL'],
+        rows: [
+          {
+            '기능': '다중 이미지 입력',
+            'Moondream': '아니오',
+            'LLaVA 7B': '아니오',
+            'MiniCPM-V': '예 (최대 4)',
+            'Qwen2-VL': '예 (최대 8)',
+            'LLaVA 13B': '아니오',
+            'Llama 3.2 Vision': '예 (다중 페이지)',
+            'InternVL': '예',
+          },
+        ],
+        items: [
+          'MiniCPM-V 2.6은 프롬프트당 최대 4개 이미지를, Qwen2-VL은 최대 8개 이미지를 허용합니다. LLaVA와 Moondream은 요청당 이미지 1개만 허용합니다.',
+          '**다중 이미지가 중요한 경우:** 완전한 문서 추출을 위해 여러 페이지 PDF의 모든 페이지 전송. 두 제품 사진을 나란히 비교. 단일 프롬프트에서 변경 전/후 스크린샷 분석.',
+        ],
+      },
+      ollamaSetup: {
+        id: 'ollama-setup',
+        title: 'Ollama 설정 — 단계별 가이드',
+        content:
+          'Ollama는 로컬 비전 모델을 실행하는 가장 간편한 방법입니다. Ollama를 설치하면 비전 모델이 단일 pull 명령어로 동작하며 CLI 플래그나 HTTP API를 통해 이미지를 받을 수 있습니다.',
+        items: [
+          '**1단계 — Ollama 설치:** macOS, Linux 또는 Windows용 파일을 ollama.com에서 다운로드하십시오. 설치에 2분 미만이 소요됩니다.',
+          '**2단계 — 비전 모델 다운로드:** `ollama pull llama3.2-vision` (11B, ~8 GB 다운로드) 또는 VRAM이 적은 경우 `ollama pull moondream` (1.9B, ~2 GB).',
+          '**3단계 — CLI에서 사용:** `ollama run llama3.2-vision "이 이미지에 무엇이 있습니까?" --image /경로/사진.jpg`',
+          '**4단계 — HTTP API 사용:** `http://localhost:11434/api/generate`에 POST 요청을 보내고 `images` 배열에 Base64 인코딩된 이미지 문자열을 포함시키십시오.',
+          '**5단계 — Python 예제:** Base64 인코딩과 함께 `requests` 라이브러리 사용 — 아래 코드 블록을 참조하십시오.',
+        ],
+        codeBlock: `import base64
+import requests
+
+def ask_vision_model(image_path: str, prompt: str, model: str = "llama3.2-vision") -> str:
+    with open(image_path, "rb") as f:
+        image_b64 = base64.b64encode(f.read()).decode("utf-8")
+
+    response = requests.post(
+        "http://localhost:11434/api/generate",
+        json={
+            "model": model,
+            "prompt": prompt,
+            "images": [image_b64],
+            "stream": False,
+        },
+    )
+    return response.json()["response"]
+
+# 사용 예시
+result = ask_vision_model("청구서.png", "이 청구서에서 모든 항목과 합계를 추출하십시오.")
+print(result)`,
+        codeLanguage: 'python',
+      },
+      useCaseOcr: {
+        id: 'use-case-ocr',
+        title: '활용 사례 1: OCR 및 문서 추출',
+        content:
+          '**VLM은 반구조화된 문서에서 전통적인 OCR보다 우수한 성능을 발휘합니다** — 청구서, 영수증, 계약서, 텍스트 자체만큼 레이아웃이 중요한 표. 전통적인 OCR(Tesseract)은 문자를 추출하지만, VLM은 문맥에서 그 문자들이 의미하는 바를 이해합니다.',
+        items: [
+          '**잘 작동하는 경우:** 스캔된 청구서, PDF 스크린샷, 인쇄체 손글씨 메모, 명확한 테두리가 있는 표, 명함.',
+          '**잘 작동하지 않는 경우:** 필기체 손글씨, 150 DPI 미만의 스캔, 과도한 압축 JPEG, 겹친 텍스트.',
+          '**OCR 최적 모델:** MiniCPM-V 2.6 (6 GB 카테고리에서 최고 OCR 정확도), Llama 3.2 Vision 11B (혼합 문서 유형에 최적).',
+          '**OCR 프롬프트 엔지니어링:** "줄바꿈을 유지하면서 이 문서의 모든 텍스트를 정확히 추출하십시오." 또는 "이 청구서의 내용을 다음 필드가 있는 JSON으로 반환하십시오: 공급업체, 날짜, 항목[], 합계."',
+          '**전통적인 OCR 대비:** VLM은 더 느리지만 더 의미론적입니다. Tesseract는 깨끗한 문서의 순수한 텍스트 추출에 더 빠릅니다. 단순 일반 텍스트가 아닌 구조화된 데이터 추출이 필요할 때 VLM을 사용하십시오.',
+        ],
+      },
+      useCaseQA: {
+        id: 'use-case-qa',
+        title: '활용 사례 2: 이미지 질의응답',
+        content:
+          '**일반적인 장면 이해, 제품 설명, 시각적 질의응답에는 Llama 3.2 Vision 11B가 권장 로컬 모델입니다.** 자연스럽고 상세한 설명을 생성하며 사진 내용에 대한 미묘한 질문도 처리합니다.',
+        items: [
+          '**장면 설명:** "이 사진에 무엇이 있습니까?" — 객체, 사람, 활동, 환경, 분위기.',
+          '**제품 카탈로그 작성:** 프롬프트 템플릿으로 제품 사진 처리: "이 제품을 설명하십시오: 색상, 형태, 소재, 상태." 클라우드 API 없이 전자상거래 재고 관리에 유용.',
+          '**접근성:** 이미지에 대한 대체 텍스트를 대규모로 생성합니다. 표준 제품 사진의 접근성 컴플라이언스에 충분한 정확도를 제공합니다.',
+          '**최적 모델:** 일반 사진 질의응답에는 LLaVA 1.6 13B 또는 Llama 3.2 Vision 11B. 정확도보다 속도가 중요한 대량 처리에는 LLaVA 1.6 7B.',
+          '**속도 고려사항:** 6 GB GPU에서 Llama 3.2 Vision 11B Q4는 이미지 응답 생성 시 초당 약 8~12토큰을 생성합니다 — 100개 이미지 처리에 설명 길이에 따라 약 2~5분이 소요됩니다.',
+        ],
+      },
+      useCaseScreenshot: {
+        id: 'use-case-screenshot',
+        title: '활용 사례 3: 스크린샷 및 UI 분석',
+        content:
+          '**애플리케이션 스크린샷, 오류 메시지, 대시보드 분석에는 InternVL 2.5가 가장 강력한 로컬 모델입니다** — 훈련 데이터에 소프트웨어 UI, GitHub 스크린샷, 코드 실행 결과가 강조되어 있습니다.',
+        items: [
+          '**개발자 워크플로우:** 오류 메시지 스크린샷을 모델에 전송: "이 스크린샷에서 무엇이 잘못되었으며 어떻게 수정하겠습니까?"',
+          '**버그 리포트 생성:** 구조화된 프롬프트로 스크린샷에서 버그 설명을 자동 생성합니다.',
+          '**대시보드 모니터링:** 모니터링 대시보드 스크린샷에서 이상 징후 분석 — "이 Grafana 스크린샷에서 경고 수준에 있는 지표가 있습니까?"',
+          '**접근성 테스트:** UI 변경 전/후 스크린샷을 비교하여 시각적 접근성 속성을 확인합니다.',
+          '**최적 모델:** InternVL 2.5 8B (최고 UI 이해), MiniCPM-V 2.6 (두 번째 선택, Ollama 지원).',
+        ],
+      },
+      useCaseChart: {
+        id: 'use-case-chart',
+        title: '활용 사례 4: 차트 및 다이어그램 읽기',
+        content:
+          '**막대형, 선형 차트, 표에서 데이터를 추출하는 것은 가능하지만 신중한 프롬프팅이 필요합니다.** 모든 로컬 VLM은 사진 설명보다 차트 읽기에서 약합니다 — 항상 차트에서 추출한 숫자를 원본 데이터와 대조하여 확인하십시오.',
+        items: [
+          '**잘 작동하는 경우:** 축 레이블 읽기, 추세 파악, 막대의 상대적 높이 비교, 명확한 폰트가 있는 표 값 읽기.',
+          '**신뢰할 수 없는 경우:** 연속형 차트에서의 정밀한 수치 추출 (예: "3분기 막대는 43.7 단위"), 명시적 레이블이 없는 파이 차트 백분율.',
+          '**프롬프트 전략:** "이 선형 차트에 표시된 추세를 설명하십시오"가 "2026년 3월의 정확한 값은 무엇입니까?"보다 효과적입니다.',
+          '**차트 최적 모델:** InternVL 2.5 (최고 차트 이해), Llama 3.2 Vision 11B (명확한 레이블이 있는 차트에 우수).',
+          '**제한 사항 참고:** 2026년의 어떤 로컬 VLM도 시각적으로 복잡한 차트에서 정밀한 숫자를 신뢰할 수 있게 추출하지 못합니다. 구조화된 차트 데이터가 필요하다면 가능한 경우 기본 데이터 소스에서 추출하십시오.',
+        ],
+      },
+      useCaseVideo: {
+        id: 'use-case-video',
+        title: '활용 사례 5: 동영상 프레임 분석',
+        content:
+          '**로컬 비전 모델은 개별 프레임을 처리하여 동영상을 분석할 수 있습니다** — ffmpeg으로 프레임을 추출하고, 비전 모델에 전송하여 분석한 다음, 텍스트 LLM으로 프레임 간 요약을 생성합니다. 실시간이 아님: 모델과 하드웨어에 따라 프레임당 0.5~3초를 예상하십시오.',
+        items: [
+          '**프레임 추출:** ffmpeg으로 1fps 추출: `ffmpeg -i video.mp4 -vf fps=1 frames/frame_%04d.jpg`',
+          '**프레임별 분석:** 일관된 프롬프트로 각 프레임을 비전 모델에 실행 (예: "이 프레임에서 무슨 일이 일어나고 있는지 한 문장으로 설명하십시오").',
+          '**프레임 간 요약:** 모든 프레임 설명을 수집하여 요약 프롬프트와 함께 텍스트 LLM에 전달합니다.',
+          '**활용 사례:** 보안 카메라 검토 (비정상적인 활동이 있는 프레임 표시), 강의 녹화 분석 (슬라이드별 노트 생성), 제조 품질 검사 (결함이 나타나는 프레임 표시).',
+          '**동영상 프레임 최적 모델:** 품질에는 Llama 3.2 Vision 11B, 속도에는 LLaVA 1.6 7B (더 높은 프레임 처리량).',
+          '**속도 현실:** RTX 4070에서 1fps 추출과 프레임당 약 1초 추론으로, 10분 동영상의 완전한 처리에는 약 20~30분이 소요됩니다.',
+        ],
+        codeBlock: `import base64
+import subprocess
+import os
+import requests
+
+def extract_frames(video_path: str, output_dir: str, fps: int = 1) -> list[str]:
+    os.makedirs(output_dir, exist_ok=True)
+    subprocess.run([
+        "ffmpeg", "-i", video_path,
+        "-vf", f"fps={fps}",
+        f"{output_dir}/frame_%04d.jpg",
+        "-y"
+    ], check=True)
+    return sorted([
+        os.path.join(output_dir, f)
+        for f in os.listdir(output_dir)
+        if f.endswith(".jpg")
+    ])
+
+def analyze_frame(image_path: str, model: str = "llama3.2-vision") -> str:
+    with open(image_path, "rb") as f:
+        image_b64 = base64.b64encode(f.read()).decode("utf-8")
+    response = requests.post(
+        "http://localhost:11434/api/generate",
+        json={
+            "model": model,
+            "prompt": "이 프레임에서 무슨 일이 일어나고 있는지 한 문장으로 설명하십시오.",
+            "images": [image_b64],
+            "stream": False,
+        },
+    )
+    return response.json()["response"]
+
+frames = extract_frames("강의.mp4", "frames/", fps=1)
+descriptions = [analyze_frame(f) for f in frames]
+print("\n".join(f"[{i+1}초] {d}" for i, d in enumerate(descriptions)))`,
+        codeLanguage: 'python',
+      },
+      vramReality: {
+        id: 'vram-reality',
+        title: 'VRAM 및 실제 성능 확인',
+        content:
+          '로컬 비전 모델은 기본 LLM에 시각 인코더를 추가하여 텍스트 전용 모델에 비해 VRAM 요구 사항과 추론 시간이 모두 증가합니다.',
+        columns: ['모델', 'VRAM (Q4)', '토큰/초 (RTX 4070)', '토큰/초 (M5 Pro 36GB)', '프로덕션 적합?'],
+        rows: [
+          {
+            '모델': 'Moondream 2 (1.9B)',
+            'VRAM (Q4)': '~2 GB',
+            '토큰/초 (RTX 4070)': '~25–35',
+            '토큰/초 (M5 Pro 36GB)': '~30–40',
+            '프로덕션 적합?': '예 — 단순 작업에',
+          },
+          {
+            '모델': 'LLaVA 1.6 7B',
+            'VRAM (Q4)': '~6 GB',
+            '토큰/초 (RTX 4070)': '~15–20',
+            '토큰/초 (M5 Pro 36GB)': '~18–25',
+            '프로덕션 적합?': '예 — 범용',
+          },
+          {
+            '모델': 'MiniCPM-V 2.6 (8B)',
+            'VRAM (Q4)': '~6 GB',
+            '토큰/초 (RTX 4070)': '~12–18',
+            '토큰/초 (M5 Pro 36GB)': '~15–20',
+            '프로덕션 적합?': '예 — OCR 및 문서',
+          },
+          {
+            '모델': 'Llama 3.2 Vision 11B',
+            'VRAM (Q4)': '~8 GB',
+            '토큰/초 (RTX 4070)': '~10–14',
+            '토큰/초 (M5 Pro 36GB)': '~12–16',
+            '프로덕션 적합?': '예 — 전반적 최고 품질',
+          },
+          {
+            '모델': 'LLaVA 1.6 13B',
+            'VRAM (Q4)': '~10 GB',
+            '토큰/초 (RTX 4070)': '~8–12',
+            '토큰/초 (M5 Pro 36GB)': '~10–14',
+            '프로덕션 적합?': '예 — 12 GB GPU에서',
+          },
+          {
+            '모델': 'Llama 3.2 Vision 90B',
+            'VRAM (Q4)': '~64 GB',
+            '토큰/초 (RTX 4070)': 'N/A (멀티 GPU 또는 M-Max 필요)',
+            '토큰/초 (M5 Pro 36GB)': 'N/A (M5 Max 128GB+ 필요)',
+            '프로덕션 적합?': '고급 Apple Silicon에서만',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '비전 모델의 토큰 생성 속도는 같은 크기의 텍스트 전용 모델보다 느립니다. 시각 인코더가 첫 번째 이미지 토큰에서 상당한 계산 오버헤드를 추가하기 때문입니다. 이후 텍스트 토큰은 거의 정상 속도로 생성됩니다.',
+          },
+          {
+            type: 'note',
+            text: 'Apple Silicon의 통합 메모리는 전용 GPU VRAM에 맞지 않는 더 큰 모델(M5 Max 128GB에서 최대 90B)을 실행할 수 있게 합니다. 속도는 동급 NVIDIA GPU보다 약간 낮지만 VRAM 제한이 없습니다.',
+          },
+        ],
+      },
+      localVsGpt4o: {
+        id: 'local-vs-gpt4o',
+        title: '로컬 비전 모델 vs GPT-5.5 Vision 비교',
+        content:
+          '로컬 VLM은 구조화된 문서에서 격차를 크게 좁혔지만, 복잡하고 모호한 작업에서는 여전히 GPT-5.5 Vision에 뒤처집니다.',
+        items: [
+          '**구조화된 문서 (청구서, 양식):** 로컬 모델이 GPT-5.5 품질의 80~90% — 깨끗하고 형식이 잘 된 문서에서 프로덕션 사용에 충분합니다.',
+          '**복잡한 장면, 모호한 이미지:** 로컬 모델이 GPT-5.5의 50~70% — 비정상적인 맥락, 조명 또는 모호한 내용이 있는 이미지에서 눈에 띄는 품질 격차.',
+          '**손글씨 인식:** 로컬 모델은 특히 필기체에서 크게 약합니다. GPT-5.5 Vision은 손글씨 처리가 실질적으로 더 우수합니다.',
+          '**차트 데이터 추출:** 로컬 모델과 GPT-5.5 모두에서 신뢰할 수 없지만, GPT-5.5는 정확한 수치에서 더 정확합니다.',
+          '**비용:** GPT-5.5 Vision이 이미지당 $0.01~0.03 vs 로컬에서 $0. 월 10,000개 이미지 = 로컬 모델로 $100~300 절약.',
+          '**개인정보 보호:** 로컬 모델은 기기 내에서 이미지를 처리하므로 데이터가 외부로 나가지 않습니다. GPT-5.5는 이미지를 OpenAI 서버로 전송합니다.',
+          '**속도:** 로컬 모델은 10~20 토큰/초 vs GPT-5.5의 30~80 토큰/초이지만, 배치 처리 시 로컬은 네트워크 지연이 없습니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '깨끗한 입력으로 청구서와 양식을 프로덕션에서 처리하는 경우, 로컬 VLM(Llama 3.2 Vision 11B, Qwen2-VL 7B)은 비용 없이 GPT-5.5 Vision을 대체할 수 있습니다. 손글씨, 복잡한 장면 분석, 모호한 내용이 포함된 모든 것에는 GPT-5.5가 여전히 우수합니다.',
+          },
+        ],
+      },
+      llavaDeepDive: {
+        id: 'llava-deep-dive',
+        title: 'LLaVA 심층 분석',
+        content:
+          '**LLaVA(Large Language and Vision Assistant)는 기본적인 오픈소스 VLM 아키텍처입니다.** 2023년 위스콘신-매디슨 대학교와 Microsoft Research가 출시하여 대부분의 현대 로컬 VLM이 따르는 CLIP 인코더 + LLM 디코더 패턴을 확립했습니다.',
+        items: [
+          '**아키텍처:** CLIP ViT-L/14 시각 인코더 + Llama-2 또는 Mistral 텍스트 디코더, 단순한 선형 프로젝션 레이어로 연결.',
+          '**LLaVA 1.5 vs 1.6:** 버전 1.6(2024년 초 출시)은 동적 패치를 통해 고해상도 입력 지원을 추가하여 OCR 정확도와 차트 읽기가 크게 향상되었습니다.',
+          '**훈련:** LLaVA-Instruct-150K에서 지시 튜닝 — 이미지 설명과 객체 감지 주석에서 생성된 시각적 대화 데이터셋.',
+          '**강점:** 광범위한 일반 지식, 잘 문서화됨, 대규모 커뮤니티, 광범위한 Ollama 통합.',
+          '**약점:** MiniCPM-V 2.6보다 약한 OCR, InternVL 2.5보다 약한 UI 분석, 품질 벤치마크에서 Llama 3.2 Vision 11B에 전반적으로 뒤처짐.',
+          '**여전히 권장되는 이유:** LLaVA 1.6은 모든 로컬 VLM 중에서 가장 큰 커뮤니티, 가장 많은 튜토리얼, 가장 많은 프롬프트 예제를 보유하고 있습니다. 문제가 있을 경우 도움을 찾기가 더 쉽습니다.',
+        ],
+      },
+      qwen2VlDeepDive: {
+        id: 'qwen2vl-deep-dive',
+        title: 'Qwen2-VL — 최고의 다국어 OCR 및 문서 성능',
+        content:
+          '**Qwen2-VL은 Alibaba의 비전-언어 모델로 2026년 문서 벤치마크에서 가장 강력한 오픈소스 옵션입니다.** 7B 변형은 더 적은 VRAM으로 Llama 3.2 Vision 11B와 경쟁하며, 72B 변형은 대부분의 오픈소스 VLM 순위에서 선두를 차지합니다.',
+        items: [
+          '**아키텍처:** 최대 4096×4096의 동적 해상도 지원 — LLaVA 1.6(672×672)이나 Llama 3.2 Vision(1120×1120)보다 크게 높습니다. 이를 통해 다운샘플링 없이 고DPI 스캔을 읽을 수 있습니다.',
+          '**다국어 OCR:** 중국어, 일본어, 한국어, 영어에서 동급 최고 성능. 훈련 데이터에 대규모 다국어 문서 코퍼스가 포함되어 영어 이외의 문서에서 LLaVA 및 Llama 3.2 Vision 대비 상당한 이점을 제공합니다.',
+          '**7B vs 72B:** 7B는 ~6 GB VRAM(Q4)에 맞으며 대부분의 문서 작업에서 Llama 3.2 Vision 11B와 경쟁합니다. 72B는 ~48 GB를 사용하며 대부분의 오픈소스 벤치마크를 선도합니다.',
+          '**Ollama 설치:** `ollama pull qwen2-vl:7b` — Ollama 모델 라이브러리에서 직접 사용 가능.',
+          '**다중 이미지 지원:** 요청당 최대 8개 이미지 허용 — 이 비교의 모든 모델 중 가장 높은 다중 이미지 용량.',
+          '**모델 페이지:** [Qwen2-VL 7B on Hugging Face](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct)',
+        ],
+      },
+      howToChoose: {
+        id: 'how-to-choose',
+        title: '비전 모델 선택 방법',
+        content:
+          '적절한 로컬 비전 모델을 선택하기 위한 VRAM 기반 의사결정 트리:',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '먼저 VRAM(2→4→6→8→16 GB)을 기준으로 모델을 선택한 다음 활용 사례(OCR, UI, 일반 질의응답 또는 최고 품질)에 따라 세분화하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'VRAM 4 GB 미만: Moondream만 가능. 6 GB: 문서에는 MiniCPM-V, 사진에는 LLaVA 7B. 8~16 GB: 거의 모든 용도에 Llama 3.2 Vision 11B. 64+ GB: 최고 로컬 품질을 위해 Llama 3.2 Vision 90B.',
+          },
+        ],
+        items: [
+          '**VRAM 4 GB 미만:** Moondream 2 (1.9B) — 2 GB에서 유일한 실용적 옵션. Moondream 2 이상으로는 PaliGemma 2 (3B)와 SmolVLM (2.2B)이 실용적인 대안입니다. PaliGemma 2는 약간 추가 VRAM (~3 GB) 비용으로 Moondream보다 더 나은 문서 이해를 제공합니다. SmolVLM은 극단적인 효율성을 위해 품질을 희생합니다. 빽빽한 텍스트 OCR에는 적합하지 않습니다.',
+          '**VRAM 6 GB:** 문서 OCR 및 청구서 처리에는 MiniCPM-V 2.6. 커뮤니티 지원이 중요한 일반 사진 질의응답에는 LLaVA 1.6 7B. 다국어 OCR 또는 가능한 가장 높은 OCR 정확도가 필요할 때는 Qwen2-VL 7B.',
+          '**VRAM 8~16 GB:** Llama 3.2 Vision 11B가 명확한 권장 사항 — 이 VRAM 카테고리에서 전반적인 최고 품질, 광범위한 Ollama 지원.',
+          '**VRAM 16+ GB:** LLaVA 1.6 13B는 7B 변형 대비 복잡한 장면 이해에 더 많은 용량을 추가합니다. UI 스크린샷 또는 코드가 주요 활용 사례라면 InternVL 2.5 8B.',
+          '**통합 메모리 64+ GB (Apple M-Max/Ultra, 멀티 GPU):** 사용 가능한 최고 로컬 VLM 품질을 위해 Llama 3.2 Vision 90B — 문서 작업에서 클라우드 수준 성능에 근접. Qwen2-VL 72B는 최고의 오픈소스 벤치마크 점수를 보유한 대안.',
+          '**항상 숫자를 확인하십시오:** 모델에 관계없이 차트나 표에서 추출한 수치는 원본 데이터와 대조하여 확인하십시오. 로컬 VLM은 시각적 차트에서 정확한 수치를 환각합니다.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: 'Ollama 없이 LLaVA 또는 Llama 3.2 Vision을 사용할 수 있습니까?',
+            a: '예. llama.cpp(비전 지원 포함), transformers 라이브러리(적절한 모델 카드 포함), 또는 LM Studio(비전 모델용 GUI 포함)를 사용하여 LLaVA 및 Llama 3.2 Vision을 직접 실행할 수 있습니다. Ollama는 단순성 때문에 권장됩니다 — 모델 다운로드, 양자화 선택, API 호스팅을 자동으로 관리합니다.',
+          },
+          {
+            q: 'Llama 3.2 Vision은 PDF 직접 입력을 지원합니까?',
+            a: '어떤 로컬 VLM도 PDF를 직접 받지 않습니다. 먼저 PDF 페이지를 이미지로 변환(pdf2image, pypdfium2 등 사용)한 다음 각 페이지를 별도의 이미지 요청으로 전송해야 합니다. 10페이지 PDF의 경우 10개의 별도 이미지 쿼리를 전송하고 결과를 연결하거나 요약합니다.',
+          },
+          {
+            q: '로컬 비전 모델은 GPT-5.5 Vision과 어떻게 비교됩니까?',
+            a: 'GPT-5.5 Vision은 모호한 장면, 손글씨, 복잡한 인포그래픽, 세계 지식이 필요한 작업에서 여전히 크게 우수합니다. Llama 3.2 Vision 11B는 구조화된 문서(청구서, 양식, 선명한 사진)에서 GPT-5.5에 근접하지만 미묘하거나 모호한 이미지에서는 뒤처집니다. 비용, 개인정보 보호, 속도 분석은 위의 전체 비교를 참조하십시오.',
+          },
+          {
+            q: '로컬 VLM은 어떤 이미지 해상도를 지원합니까?',
+            a: 'LLaVA 1.6은 최대 672×672의 실효 해상도를 지원합니다(동적 패치 포함). MiniCPM-V 2.6은 최대 1792×1792를 지원합니다 — 고DPI 문서 스캔에서 LLaVA를 능가하는 이유 중 하나입니다. Llama 3.2 Vision은 최대 1120×1120의 가변 해상도를 지원합니다. 최상의 OCR 결과를 위해 문서 이미지를 150+ DPI로 전송하십시오.',
+          },
+          {
+            q: '자체 이미지로 로컬 비전 모델을 파인튜닝할 수 있습니까?',
+            a: '예, 하지만 VLM 파인튜닝은 텍스트 전용 LLM 파인튜닝보다 더 많은 리소스가 필요합니다 — 이미지와 훈련 텍스트 모두 전체 포워드 패스를 통해 처리해야 합니다. LLaVA 파인튜닝은 원본 훈련 코드베이스를 사용하여 잘 문서화되어 있습니다. MiniCPM-V는 Hugging Face의 공식 훈련 스크립트를 통해 파인튜닝을 지원합니다. 대부분의 활용 사례에서는 파인튜닝 없이 프롬프트 엔지니어링만으로 충분합니다.',
+          },
+          {
+            q: 'VRAM 8 GB에 최적인 로컬 비전 모델은 무엇입니까?',
+            a: '범용 사용에는 Llama 3.2 Vision 11B (Q4 양자화가 ~8 GB에 맞음). 다국어 OCR이 주요 요구 사항이라면 Qwen2-VL 7B. 두 모델 모두 단일 pull 명령어로 Ollama에서 사용 가능합니다.',
+          },
+          {
+            q: 'LLaVA vs MiniCPM-V — OCR에는 어느 것이 더 낫습니까?',
+            a: 'MiniCPM-V 2.6은 문서 OCR, 특히 빽빽한 표와 고DPI 스캔에서 더 정확합니다. LLaVA 1.6은 더 잘 문서화되어 있고 더 많은 커뮤니티 지원이 있습니다. 순수한 OCR 정확도를 위해서는 MiniCPM-V를 선택하십시오. 커뮤니티 자료와 문제 해결을 위해서는 LLaVA를 선택하십시오.',
+          },
+          {
+            q: '로컬 비전 모델이 손글씨를 읽을 수 있습니까?',
+            a: '인쇄체 손글씨(블록 문자): 예, Llama 3.2 Vision 11B와 MiniCPM-V 2.6에서 중간 수준의 정확도로 읽을 수 있습니다. 필기체: 모든 로컬 모델에서 신뢰할 수 없습니다. GPT-5.5 Vision은 필기체 처리가 크게 우수합니다. 프로덕션에서 필기체 OCR은 클라우드 API를 여전히 권장합니다.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[LLaVA 프로젝트 페이지](https://llava-vl.github.io) — LLaVA 1.5 및 1.6 모델 카드, 아키텍처 세부 사항, 훈련 데이터셋 설명.',
+          '[Llama 3.2 Vision on Hugging Face](https://huggingface.co/meta-llama) — Meta의 공식 모델 출시, 모델 카드, 벤치마크 수치.',
+          '[MiniCPM-V 2.6 on Hugging Face](https://huggingface.co/openbmb/MiniCPM-V-2_6) — OpenBMB 모델 카드, OCR 벤치마크, 파인튜닝 지침.',
+          '[Moondream on GitHub](https://github.com/vikhyat/moondream) — 아키텍처 설명, 추론 스크립트, 모델 다운로드.',
+          '[InternVL 2.5 on Hugging Face](https://huggingface.co/OpenGVLab/InternVL2_5-8B) — OpenGVLab 모델 카드, 문서 및 UI 작업 벤치마크 점수.',
+          '[Ollama 문서](https://ollama.com) — 비전 모델 지원, API 참조, 모델 라이브러리.',
+          '[Qwen2-VL on Hugging Face](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct) — Alibaba Qwen2-VL 모델 카드, 아키텍처 세부 사항, 다국어 OCR 벤치마크.',
+          '[PaliGemma 2 on Hugging Face](https://huggingface.co/google/paligemma2-3b-pt-448) — Google PaliGemma 2 3B 모델 카드.',
+          '[SmolVLM on Hugging Face](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct) — HuggingFace SmolVLM 모델 카드 및 추론 지침.',
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[로컬 멀티모달 AI 파이프라인 2026](/ko/power-local-llm/local-multimodal-pipeline-voice-vision-text) — 비전 모델을 STT 및 TTS와 결합하여 완전한 로컬 멀티모달 스택 구성.',
+          '[로컬 음성 인식 2026: Whisper.cpp vs faster-whisper](/ko/power-local-llm/local-whisper-stt-comparison-2026) — 비전 출력을 보완하기 위해 음성 입력 추가.',
+          '[로컬 TTS 및 음성 복제 2026](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — VLM 응답을 소리내어 읽기 위한 음성 출력 추가.',
+          '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 필수 조건: Ollama 설정 및 설치.',
+          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 비전 모델 추론을 위한 VRAM 및 RAM 요구 사항.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 비전 모델 2026: LLaVA, Llama 3.2 Vision, Qwen2-VL 및 Ollama 멀티모달 설정 가이드',
+      description: '2026년 오프라인 이미지 질의응답, OCR, 스크린샷 분석. 벤치마크: LLaVA 1.6, Llama 3.2 Vision, Qwen2-VL, MiniCPM-V. Ollama VRAM 및 설정 가이드.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-vision-models-llava-ollama-2026',
+      inLanguage: 'ko',
+      datePublished: '2026-05-14',
+      dateModified: '2026-05-14',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '로컬 비전 모델 2026', item: 'https://www.promptquorum.com/ko/power-local-llm/local-vision-models-llava-ollama-2026' },
+      ],
+    },
+  },
 }

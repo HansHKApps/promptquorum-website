@@ -3421,4 +3421,498 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Local AI Agents & Tool Use',
+    title: 'Ollama를 데이터베이스 및 API에 MCP로 연결하기: 로컬 AI 에이전트 설정 2026',
+    seoTitle: 'Ollama + MCP 로컬 2026: AI를 데이터베이스 및 API에 연결하기',
+    intro:
+      'Model Context Protocol(MCP)은 로컬 Ollama 모델과 나머지 시스템 사이에 필요했던 계층입니다. 단 하나의 설정 파일과 tool calling을 지원하는 모델만 있으면, 동일한 에이전트가 Postgres 데이터베이스를 쿼리하고, 격리된 디렉터리에서 파일을 읽고 쓰고, headless 브라우저를 제어하고, GitHub에서 pull request를 열 수 있습니다 — 모두 노트북에서 실행되고, 모두 오프라인으로 작동합니다. 이 가이드는 모델을 신뢰하지 않는다고 가정하는 보안 모델과 함께 전체 과정을 안내합니다.',
+    metaDescription:
+      '2026년 Ollama와 MCP로 로컬 AI 에이전트 설정하기: filesystem, SQLite/Postgres, 브라우저, GitHub 서버, 실제 작동하는 JSON 설정, 샌드박싱 모델.',
+    twitterDescription:
+      'Ollama 로컬 + MCP = 파일을 읽고, 데이터베이스를 쿼리하고, 브라우저를 제어하는 AI 에이전트 — 완전히 오프라인으로. 실제 작동하는 설정, 4개의 핵심 서버, 그리고 모델을 신뢰하지 않는 보안 모델.',
+    current_models_mentioned: [
+      'Gemma 4 27B',
+      'GLM-5.1 32B',
+      'Qwen3 32B',
+      'Qwen3-Coder 30B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'Apple M5 Max 64 GB',
+      'NVIDIA RTX 4090 24 GB',
+    ],
+    audience:
+      'Ollama를 통해 로컬 LLM을 실행하며 클라우드 제공업체에 아무것도 전송하지 않고 데이터베이스 쿼리, 파일 편집, 브라우저 자동화 등 실질적인 작업을 수행할 수 있는 모델을 원하는 기술적 지식을 가진 개발자 및 사용자.',
+    readTime: '15분 분량',
+    educationalLevel: 'Advanced',
+    primaryTerm: '로컬 MCP 에이전트',
+    targetKeywords: [
+      '로컬 llm 에이전트 설정',
+      'mcp ollama 한국어',
+      'model context protocol 로컬',
+      'ollama tool calling 2026',
+      '로컬 ai 에이전트 mcp',
+      'claude desktop 없이 mcp',
+    ],
+    leadAnswerBlock:
+      '**Model Context Protocol(MCP)을 사용하면 로컬 Ollama 모델이 파일 읽기, SQL 쿼리 실행, 링크 클릭, pull request 열기 등의 도구를 호출할 수 있습니다 — MCP 호환 클라이언트(Goose, Cline, Continue.dev, 2026년의 LM Studio)가 사용할 수 있는 표준 JSON-RPC 인터페이스를 통해서입니다. 이 프로토콜은 오픈되어 있고, 참조 서버는 오픈 소스이며, 2026년에는 Claude Desktop이나 클라우드 계정이 필요하지 않습니다. Ollama를 실행하고, MCP 클라이언트를 설치하고, 원하는 서버가 포함된 `mcp.json` 설정 파일을 배치하면, tool calling 모델(Gemma 4, GLM-5.1, Qwen3, Llama 3.3)이 당신이 제어하는 권한으로 기기에서 작동하는 에이전트가 됩니다. 핵심은 보안 모델입니다: 절대로 쓰기 도구를 자동 승인하지 마십시오. filesystem 접근을 단일 디렉터리로 제한하고, 데이터베이스 서버는 기본적으로 읽기 전용 모드로 유지하십시오.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년에 MCP와 Ollama로 로컬 AI 에이전트를 실행할 수 있습니까?',
+        answer:
+          '네 — 그리고 설정이 이제 오후 한 번에 완료할 수 있을 만큼 간단해졌습니다. tool calling 모델(Gemma 4, GLM-5.1, Qwen3 또는 Llama 3.3 70B)로 Ollama를 실행하고, MCP 호환 클라이언트(Goose는 가장 직접적인 CLI입니다; Cline, Continue.dev, LM Studio는 2026년 초에 MCP 지원을 추가했습니다)를 설치하고, 필요한 기능을 위한 MCP 서버를 추가하십시오 — 파일을 위한 `filesystem`, 데이터베이스를 위한 `sqlite` 또는 `postgres`, 브라우저 자동화를 위한 `puppeteer` 또는 `playwright`, 저장소 관리를 위한 `github`. 프로토콜은 Claude Desktop이 사용하는 것과 동일합니다; 유일한 차이점은 모델과 클라이언트입니다. filesystem 서버를 단일 디렉터리로 제한하고, 데이터베이스를 기본적으로 읽기 전용으로 유지하고, 쓰기 또는 셸 도구를 절대로 자동 승인하지 않음으로써 보안을 유지하십시오.',
+        bullets: [
+          'MCP는 오픈 프로토콜이며 완전히 로컬에서 작동합니다 — Claude Desktop, Anthropic 계정, 클라우드 호출이 필요하지 않습니다.',
+          'Ollama가 모델을 제공하고, MCP 클라이언트(Goose, Cline, Continue.dev, LM Studio)가 JSON-RPC를 통해 Ollama와 MCP 서버를 연결합니다.',
+          '4개의 참조 서버가 대부분의 실제 워크플로를 커버합니다: filesystem, SQLite/Postgres, Puppeteer/Playwright(브라우저), GitHub.',
+          'tool calling 신뢰성은 모델의 속성입니다: Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B는 MCP를 문제없이 처리합니다. 7B 미만 모델은 잘못된 형식의 tool call을 자주 생성합니다.',
+          '보안 모델: filesystem 접근을 하나의 디렉터리로 제한하고, 데이터베이스 서버를 읽기 전용으로 실행하고, 모든 쓰기 또는 셸 도구를 명시적 승인 뒤에 두십시오.',
+          '비용: API 지출 $0이지만 토큰은 로컬에서 소비됩니다 — 에이전트 루프는 토큰 집약적이므로, 32K+ 컨텍스트를 가진 모델과 적절한 속도로 실행할 수 있는 기기를 사용하십시오.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: 'MCP가 가능하게 하는 것', anchor: '#what-mcp-unlocks' },
+      { label: 'MCP 서버 비교', anchor: '#server-comparison' },
+      { label: '아키텍처: 구성 요소가 맞춰지는 방식', anchor: '#architecture' },
+      { label: '설정: 15분 안에 Ollama + Goose', anchor: '#setup' },
+      { label: 'Filesystem 서버', anchor: '#filesystem-server' },
+      { label: 'SQLite 및 Postgres 서버', anchor: '#database-server' },
+      { label: '브라우저 서버 (Puppeteer / Playwright)', anchor: '#browser-server' },
+      { label: 'GitHub 서버', anchor: '#github-server' },
+      { label: '보안 모델', anchor: '#security-model' },
+      { label: '로컬 MCP vs Claude Desktop', anchor: '#vs-claude-desktop' },
+      { label: 'tool calling 모델 선택', anchor: '#picking-model' },
+      { label: 'MCP vs 일반 Function Calling', anchor: '#mcp-vs-function-calling' },
+      { label: '일반적인 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽기', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/local-ai-agents-with-mcp-2026-static.html',
+    gammaDescription:
+      '이 프레젠테이션은 다음을 다룹니다: MCP가 로컬 Ollama 모델을 데이터베이스를 쿼리하고, 파일을 읽고, 브라우저를 제어하고, pull request를 여는 에이전트로 변환하는 방법 — 모두 오프라인으로; 4개의 참조 서버(filesystem, SQLite/Postgres, 브라우저, GitHub)의 설정 난이도 및 위험 수준; Goose 설정 6단계 가이드; LLM을 신뢰하지 않는 보안 모델; Claude Desktop과의 직접 비교. 로컬 MCP 에이전트 참조 카드로 PDF를 다운로드하십시오.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**MCP는 도구를 위한 JSON-RPC 2.0 프로토콜입니다.** 모델(클라이언트를 통해)이 하나 이상의 MCP 서버에 연결하며, 각 서버는 Tools(호출 가능한 함수), Resources(읽을 수 있는 데이터), Prompts(템플릿)를 노출합니다. 클라이언트가 Claude Desktop, Goose, Cline, Continue.dev 또는 LM Studio든 wire 형식은 동일합니다.',
+          '**Ollama는 MCP를 직접 말하지 않습니다 — MCP 클라이언트가 Ollama를 감쌉니다.** Goose(Block)는 Ollama 기본 지원을 갖춘 가장 간단한 오픈 소스 CLI입니다; Cline, Continue.dev, LM Studio는 2026년 초에 MCP 클라이언트 지원을 추가했습니다.',
+          '**4개의 참조 서버가 대부분의 사용 사례를 커버합니다:** `filesystem`(격리된 디렉터리에서 읽기/쓰기), `sqlite` 및 `postgres`(기본적으로 읽기 전용으로 데이터베이스 쿼리), `puppeteer` 또는 `playwright`(headless 브라우저 제어), `github`(personal access token으로 저장소 및 PR 관리).',
+          '**tool calling 신뢰성은 모델 크기 및 훈련과 함께 확장됩니다.** Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B는 Q4_K_M에서 MCP를 문제없이 처리합니다. 7B 미만 모델은 잘못된 형식의 tool call을 자주 생성하고 루프를 차단합니다.',
+          '**보안 모델은 모델을 신뢰하지 않는다고 가정합니다.** filesystem 서버를 단일 디렉터리로 제한하고, 읽기 전용 역할로 데이터베이스 서버를 실행하고, `execute_command`나 `write_file`을 절대로 자동 승인하지 말고, 긴 세션 후에는 감사 로그를 검토하십시오.',
+          '**로컬 MCP vs Claude Desktop:** 동일한 프로토콜, 동일한 서버 생태계. 로컬 스택은 클라우드 모델을 오프라인 모델로 교체합니다 — 프라이버시, 토큰당 비용 없음, 속도 제한 없음을 제공하는 대신, 약간 덜 유능한 모델과 직접 보안 설정을 관리해야 하는 트레이드오프가 있습니다.',
+          '**비용은 API 수수료 $0이지만 토큰에서 실제로 발생합니다.** 에이전트 루프는 단일 다단계 작업에 대해 30K~80K 토큰을 소비할 수 있습니다. 최소 32K 컨텍스트를 가진 모델을 사용하십시오; 128K가 편안합니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**프로토콜:** stdio(로컬 하위 프로세스) 또는 HTTP/SSE(원격)를 통한 JSON-RPC 2.0. 로컬 에이전트는 거의 독점적으로 stdio를 사용합니다.',
+          '**유지 관리:** Anthropic(오픈 소스 사양); 참조 서버는 GitHub의 `modelcontextprotocol/servers`에서 유지 관리되며 성장하는 타사 생태계가 있습니다.',
+          '**2026년 로컬 클라이언트:** Goose(Block), Cline(VS Code 확장), Continue.dev(VS Code/JetBrains), LM Studio(데스크톱 앱), 그리고 여러 CLI 도구들.',
+          '**지원되는 Ollama 모델:** 네이티브 tool calling 훈련을 받은 모든 모델. 2026년 5월 기준: Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.',
+          '**기본 전송:** 로컬 프로세스를 위한 stdio; 서버를 기기 또는 에이전트 간에 공유해야 할 때만 HTTP/SSE.',
+          '**설정은 단일 파일에 있습니다:** `~/.config/goose/config.yaml`(Goose), `~/.continue/config.json`의 MCP 블록(Continue.dev) 또는 Cline 설정 인터페이스의 `mcpServers`. 모두 동일한 구조: 서버 이름, 명령, args, 환경 변수.',
+          '**Claude Desktop이 필요하지 않습니다.** 프로토콜은 Claude Desktop 독점 사용 이전부터 존재했습니다; 모든 참조 서버는 MIT/Apache 라이선스이며 모든 호환 클라이언트에서 작동합니다.',
+        ],
+      },
+      whatMcpUnlocks: {
+        id: 'what-mcp-unlocks',
+        title: 'MCP가 로컬 모델에 실제로 가능하게 하는 것',
+        content:
+          '**도구 없는 로컬 LLM은 텍스트로만 응답할 수 있습니다. MCP를 사용하면 동일한 모델이 기기에서 행동할 수 있습니다.** 이 변화는 챗봇과 에이전트의 차이입니다.',
+        items: [
+          '**"이 저장소에서 모든 TODO를 찾아 파일별로 그룹화하고 `notes/todos.md`에 Markdown 요약을 작성하십시오."** — `filesystem` 서버가 읽고, 모델이 그룹화하고, 동일한 서버가 씁니다. 처음부터 끝까지 단 한 번의 왕복.',
+          '**"이번 분기 수익 기준 상위 10개 고객을 보여주고 차트를 만드십시오."** — `postgres` 서버가 SQL을 실행하고(읽기 전용 역할), 모델이 요약하고 차트 도구를 위해 `filesystem`을 통해 CSV를 씁니다.',
+          '**"Hacker News 첫 페이지를 열어 상위 3개 AI 기사를 찾아 요약하고 내 읽기 목록에 추가하십시오."** — `puppeteer` 서버가 headless 브라우저를 제어하고, 모델이 추출 및 요약하고, `filesystem`이 추가합니다.',
+          '**"내 포크에 대해 `chore: bump deps` 제목으로 draft PR을 열고 실패한 CI 실행을 링크하십시오."** — `github` 서버가 PR을 생성하고, 실행을 가져오고, 설명에 링크를 씁니다.',
+          '**"`events.db`의 최근 100개 행을 보고 새 오류 급증에 책임이 있는 사용자 ID를 알려주십시오."** — `sqlite` 서버가 쿼리하고; 모델이 추론하고; 채팅 패널에서 답을 읽습니다.',
+          '이 각각은 이전에 호스팅된 도구가 있는 클라우드 모델 또는 손으로 작성한 스크립트가 필요했던 문장에서 행동으로의 워크플로입니다. MCP는 클라이언트 간에 동일한 서버를 재사용하고 서버 간에 동일한 모델을 재사용할 수 있게 하는 계층입니다.',
+        ],
+      },
+      serverComparison: {
+        id: 'server-comparison',
+        title: '가장 많이 사용되는 4개의 MCP 서버 비교',
+        content:
+          '아래의 참조 서버들은 "내 로컬 모델이 실제 작업을 수행하길 원한다"는 긴 여정을 커버합니다. 모두 오픈 소스이며 MCP 클라이언트가 시작하는 로컬 하위 프로세스로 실행됩니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'filesystem 서버(5분, 낮은 위험)로 시작하고, 데이터 작업을 위해 SQLite 서버를 추가하고, 필요할 때만 브라우저 서버를 추가하고, 기기에서 모델을 신뢰할 수 있을 때 GitHub을 도입하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '4개의 서버가 로컬 에이전트에게 원하는 작업의 90%를 커버합니다. filesystem 서버는 당신이 선택한 폴더에서 파일을 읽고 씁니다. SQLite 또는 Postgres 서버는 데이터베이스에 대한 쿼리를 실행합니다. 브라우저 서버는 모델이 JavaScript가 필요한 페이지를 읽을 수 있도록 실제 Chromium 창을 제어합니다. GitHub 서버는 저장소에서 이슈와 PR을 엽니다. 모두 하나의 명령으로 설치되고, 모두 자체 기기에서 하위 프로세스로 실행되며, 명시적으로 필요하지 않은 한 인터넷을 호출하지 않습니다(브라우저는 호출하지만 나머지는 하지 않습니다).',
+          },
+        ],
+        columns: ['MCP 서버', '활성화하는 기능', '설정 난이도', '위험 수준', '이상적인 용도'],
+        rows: [
+          { 'MCP 서버': 'Filesystem', '활성화하는 기능': '격리된 디렉터리 내에서 파일 읽기 및 쓰기', '설정 난이도': '쉬움(허용 목록에 경로 하나)', '위험 수준': '중간 — 범위를 신중하게 제한하십시오', '이상적인 용도': '개인 자동화, 노트 작성, 저장소 요약' },
+          { 'MCP 서버': 'SQLite', '활성화하는 기능': '로컬 SQLite 데이터베이스 파일 쿼리', '설정 난이도': '쉬움(.db 파일 경로)', '위험 수준': '읽기 전용에서 낮음; 쓰기 시 중간', '이상적인 용도': '데이터 탐색, 로그 분석, 프로토타이핑' },
+          { 'MCP 서버': 'Postgres', '활성화하는 기능': '연결 문자열을 통해 Postgres 데이터베이스 쿼리', '설정 난이도': '중간(역할 + URL)', '위험 수준': '중간 — 읽기 전용 역할을 사용하십시오', '이상적인 용도': '프로덕션 데이터 탐색, 보고, BI 프로토타입' },
+          { 'MCP 서버': 'Puppeteer / Playwright', '활성화하는 기능': '탐색, 스크래핑, 양식 작성을 위한 headless 또는 보이는 Chromium 제어', '설정 난이도': '어려움(브라우저 바이너리, 선택기, 지연)', '위험 수준': '높음 — 양식을 제출하고 무엇이든 클릭할 수 있습니다', '이상적인 용도': '연구, 스크래핑, 회귀 테스트' },
+          { 'MCP 서버': 'GitHub', '활성화하는 기능': '저장소 나열, 파일 읽기, 이슈 및 PR 열기', '설정 난이도': '쉬움(환경 변수의 PAT)', '위험 수준': '중간 — 토큰을 특정 저장소로 제한하십시오', '이상적인 용도': '개발 워크플로, 트리아지, PR 초안' },
+          { 'MCP 서버': 'Custom', '활성화하는 기능': 'JSON-RPC 도구로 표현할 수 있는 모든 것', '설정 난이도': '어려움(자체 서버 작성)', '위험 수준': '가변적', '이상적인 용도': '내부 API, 틈새 시스템, 통합 코드' },
+        ],
+      },
+      architecture: {
+        id: 'architecture',
+        title: '구성 요소가 맞춰지는 방식',
+        content:
+          '**세 가지 프로세스, 하나의 공유 프로토콜.** 모델은 Ollama에 있고, 클라이언트는 MCP를 말하며, 각 서버는 소규모 도구 집합을 노출합니다. 각 tool call은 클라이언트에서 서버로 이동하고, 로컬에서 실행되고, JSON을 반환합니다.',
+        items: [
+          '**Ollama**는 `127.0.0.1:11434`에서 백그라운드 서비스로 실행되며 OpenAI 호환 API를 통해 모델을 제공합니다. MCP가 무엇인지 알지 못합니다 — 단순히 채팅 완성에 응답하고 모델이 요청할 때 tool call을 생성합니다.',
+          '**MCP 클라이언트**(Goose, Cline, Continue.dev, LM Studio)가 다리 역할을 합니다. 모델을 위해 Ollama와 통신하고 도구를 위해 MCP 서버와 통신합니다. 모델이 tool call을 생성하면 클라이언트가 올바른 서버로 라우팅하고, 결과를 받아 대화에 반환합니다.',
+          '**MCP 서버**는 독립적인 하위 프로세스로, 각 기능마다 하나씩 있습니다. stdio를 통해 JSON-RPC 2.0을 말합니다. 각 서버는 Tools, Resources, Prompts 목록을 공개하며, 클라이언트는 이들을 모델에 제시되는 도구 표면으로 결합합니다.',
+          '**stdio 전송은 모든 것을 로컬에 유지합니다.** 서버는 클라이언트가 시작하고, stdin/stdout을 통해 통신하며, 클라이언트가 종료될 때 종료됩니다. 서버 자체가 연결을 여는 경우를 제외하고는 네트워크를 통해 아무것도 전송되지 않습니다(브라우저 서버는 그렇게 하지만 filesystem 및 데이터베이스 서버는 하지 않습니다).',
+          '**모델은 평평한 도구 목록을 봅니다.** 모델의 관점에서 서버가 없습니다 — `filesystem.read_file`, `sqlite.query`, `puppeteer.navigate`와 같은 도구 이름의 목록만 있습니다. 클라이언트가 라우팅을 관리합니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '아키텍처는 Claude Desktop과 동일합니다. 차이점은 모델(Claude 대신 로컬 Ollama 모델)과 클라이언트(Claude Desktop 대신 Goose/Cline/Continue.dev/LM Studio)입니다. MCP 서버는 동일한 서버입니다 — 오늘 Claude Desktop에서 filesystem 서버를 실행할 수 있고, 내일 Goose에서도 변경 없이 계속 작동합니다.',
+          },
+        ],
+      },
+      setup: {
+        id: 'setup',
+        title: '설정: 15분 안에 Ollama + Goose',
+        content:
+          '**Goose는 2026년에 작동하는 로컬 MCP 에이전트로 가는 가장 간단한 경로입니다.** Block의 오픈 소스 CLI로, Ollama 기본 지원, 대화형 채팅 인터페이스, 모든 MCP 서버를 위한 단일 설정 파일이 있습니다. Continue.dev, Cline, LM Studio도 작동합니다 — Goose는 첫 번째 실행의 설정 비용이 가장 낮습니다.',
+        items: [
+          '**1단계 — Ollama 설치.** ollama.com/download(macOS/Windows/Linux)에서 다운로드하십시오. `curl http://127.0.0.1:11434/api/tags`로 서비스가 실행 중인지 확인하십시오.',
+          '**2단계 — tool calling 모델 다운로드.** Gemma 4 27B(`gemma4:27b`), GLM-5.1 32B(`glm5:32b`), Qwen3 32B(`qwen3:32b`) 또는 Llama 3.3 70B(`llama3.3:70b`) 중에서 선택하십시오. 16GB 통합 메모리 또는 12GB VRAM으로 Q4_K_M에서 27B~32B를 편안하게 처리할 수 있습니다.',
+          '**3단계 — Goose 설치.** `pipx install goose-ai`(macOS, Linux) 또는 Goose releases 페이지에서 설치 프로그램을 다운로드하십시오. CLI는 `goose`로 설치됩니다.',
+          '**4단계 — Ollama를 제공자로 구성.** `goose configure`를 실행하고, `ollama`를 제공자로 선택하고, 모델을 다운로드한 것으로 설정하고, 호스트를 `http://127.0.0.1:11434`로 설정하십시오. Goose가 이것을 `~/.config/goose/config.yaml`에 씁니다.',
+          '**5단계 — filesystem MCP 서버 추가.** `~/.config/goose/config.yaml`을 편집하여 `mcpServers` 블록을 추가하십시오(아래 설정 예시). `goose session`을 재시작하고 테스트 디렉터리의 파일 나열을 요청하십시오. 첫 번째 턴이 서버가 연결되었음을 확인합니다.',
+          '**6단계 — 실제 작업으로 확인.** `goose session`을 시도하고 "notes/의 모든 Markdown 파일을 제목과 단어 수와 함께 나열하고 결과를 notes/index.md에 쓰십시오."를 요청하십시오. 에이전트가 읽고, 요약하고, 다시 쓰면 루프가 작동합니다.',
+        ],
+        codeBlock:
+          '# 1. Pull a tool-calling model
+ollama pull gemma4:27b
+
+# 2. Install Goose
+pipx install goose-ai
+
+# 3. Configure Ollama as the provider
+goose configure
+# Provider: ollama
+# Model:    gemma4:27b
+# Host:     http://127.0.0.1:11434
+
+# 4. Start a session — Goose reads ~/.config/goose/config.yaml
+goose session',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Cline 또는 Continue.dev를 이미 사용하고 있다면 Goose를 건너뛰고 그것들을 사용하십시오 — 둘 다 2026년 초 릴리스에 MCP 서버 지원을 추가했습니다. Cline의 "MCP Servers" 패널은 클릭 한 번으로 참조 서버를 설치합니다; Continue.dev는 `~/.continue/config.json`의 `mcpServers`를 읽습니다(아래 Goose 설정 블록과 동일한 구조). 모델과 서버는 동일합니다; 호스트 앱만 바뀝니다.',
+          },
+        ],
+      },
+      filesystemServer: {
+        id: 'filesystem-server',
+        title: 'Filesystem 서버: 격리된 디렉터리에서 읽기 및 쓰기',
+        content:
+          '**filesystem 서버는 처음 설치하고 안전하게 제한하기 가장 쉽습니다.** `read_file`, `write_file`, `list_directory`, `move_file`, `search_files`, `create_directory`를 노출합니다 — 모두 하나 이상의 허용 목록 경로로 제한됩니다.',
+        items: [
+          '**설치:** 참조 서버는 `@modelcontextprotocol/server-filesystem`으로, `npx -y`를 통해 실행됩니다(전역 설치 불필요). Goose, Cline, Continue.dev가 설정 블록에서 자동으로 시작합니다.',
+          '**허용 목록 경로:** 서버는 하나 이상의 디렉터리 인수를 받아들이고 그 밖의 작업을 거부합니다. 항상 명시적이고 좁은 경로를 전달하십시오 — `~`나 `/`는 절대 사용하지 마십시오.',
+          '**노출된 도구:** `read_file`, `read_multiple_files`, `write_file`, `edit_file`(행 대체), `list_directory`, `search_files`, `move_file`, `create_directory`, `directory_tree`. 모델은 이것들을 `filesystem.read_file` 등으로 봅니다.',
+          '**사용 편의성:** `directory_tree`는 JSON 트리를 반환합니다; 특정 파일을 읽기 전에 모델이 방향을 잡을 때 이상적입니다. `search_files`는 grep과 유사한 재귀 검색을 수행합니다.',
+          '**위험 표면:** 서버는 허용 목록을 존중하지만 그 안에서는 완전한 읽기/쓰기 권한이 있습니다. 허용 목록을 유일한 장벽으로 취급하고 홈 폴더 대신 전용 workspace 디렉터리를 선택하십시오.',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml
+mcpServers:
+  filesystem:
+    command: npx
+    args:
+      - "-y"
+      - "@modelcontextprotocol/server-filesystem"
+      - "/Users/you/agent-workspace"
+    env: {}',
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'warning',
+            text: '허용 목록에 `/`나 홈 디렉터리를 절대 넣지 마십시오. 전용 `agent-workspace` 폴더를 만들고, 에이전트가 작업할 파일의 복사본을 그 안에 넣고, 에이전트가 그 폴더 내에서만 작동하도록 하십시오. 에이전트가 실패하더라도 피해 범위는 하나의 디렉터리에 그칩니다.',
+          },
+        ],
+      },
+      databaseServer: {
+        id: 'database-server',
+        title: 'SQLite 및 Postgres 서버: 실제 데이터 쿼리',
+        content:
+          '**데이터베이스 서버는 모델을 읽기 전용으로 유지하는 한 실제 데이터 기반 질문에 답할 수 있는 주니어 분석가로 만들어줍니다.** 두 참조 서버 모두 `query` 도구와 선택적인 `write_query` 도구를 포함합니다.',
+        items: [
+          '**SQLite 서버(`@modelcontextprotocol/server-sqlite`)**는 `.db` 파일 경로를 받습니다. 데이터베이스를 실행할 필요 없이 로그 분석, 스키마 프로토타이핑, 내보내기 탐색에 유용합니다.',
+          '**Postgres 서버(`@modelcontextprotocol/server-postgres`)**는 연결 문자열을 받습니다. 권장 패턴은 에이전트를 위한 전용 읽기 전용 역할을 만들고 해당 역할의 연결 문자열을 사용하는 것입니다.',
+          '**노출된 도구:** `query`(읽기 전용으로 구성되면 SELECT만), `list_tables`, `describe_table`. Postgres 서버는 `list_schemas`를 추가합니다. 일부 포크는 `write_query`를 추가합니다 — 이 데이터베이스에서 모델을 신뢰하지 않는 한 비활성화된 상태로 유지하십시오.',
+          '**스키마 인식:** 분석적 질문을 하기 전에 에이전트에게 "테이블을 나열하고 가장 많이 사용되는 5개를 설명하십시오"를 요청하십시오 — 모델이 열 이름을 추측하는 것보다 `describe_table`을 호출한 후에 훨씬 더 정확합니다.',
+          '**비용:** 쿼리가 데이터베이스로 직접 갑니다. 1억 행 테이블에 대한 잘못된 `SELECT *`는 인간이 한 것과 동일한 사고입니다 — 역할을 별도의 연결 풀에 statement timeout과 함께 유지하십시오.',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml
+mcpServers:
+  sqlite:
+    command: npx
+    args:
+      - "-y"
+      - "@modelcontextprotocol/server-sqlite"
+      - "--db-path"
+      - "/Users/you/data/events.db"
+    env: {}
+
+  postgres:
+    command: npx
+    args:
+      - "-y"
+      - "@modelcontextprotocol/server-postgres"
+      - "postgresql://agent_ro@127.0.0.1:5432/analytics"
+    env:
+      PGPASSWORD: "${PG_AGENT_PASSWORD}"',
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Postgres 역할을 한 번 만들고 에이전트에게 그 이상을 주지 마십시오: `CREATE ROLE agent_ro WITH LOGIN PASSWORD '…'; GRANT CONNECT ON DATABASE analytics TO agent_ro; GRANT USAGE ON SCHEMA public TO agent_ro; GRANT SELECT ON ALL TABLES IN SCHEMA public TO agent_ro; ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO agent_ro;` 그런 다음 역할에 `statement_timeout = 30s`를 추가하십시오. 에이전트는 쓸 수 없고, 삭제할 수 없고, 무한히 실행할 수 없습니다.',
+          },
+        ],
+      },
+      browserServer: {
+        id: 'browser-server',
+        title: '브라우저 서버: Puppeteer 또는 Playwright로 Chromium 제어',
+        content:
+          '**브라우저 서버는 4개 중 가장 강력하고 가장 위험합니다.** 실제 Chromium을 실행하고 탐색, 클릭, 양식 작성, 스크린샷을 노출합니다 — 즉, 브라우저에서 할 수 있는 모든 것을 할 수 있으며 양식 제출도 포함됩니다.',
+        items: [
+          '**참조 서버:** `@modelcontextprotocol/server-puppeteer`(더 가볍고 기본적으로 headless)와 `@modelcontextprotocol/server-playwright`(더 무겁고 여러 브라우저 지원). 로컬 에이전트의 경우 Puppeteer로 충분합니다.',
+          '**노출된 도구:** `navigate`, `screenshot`, `click`, `fill`, `select`, `evaluate`(JavaScript 실행), `get_page_content`. 모델은 `get_page_content`를 구조화된 텍스트를 읽기 위해, `screenshot`을 시각적으로 확인하기 위해 사용합니다.',
+          '**지연:** 실제 브라우저 세션은 작업당 1~5초가 걸립니다. 다단계 탐색은 페이지 내용이 크기 때문에 쉽게 30~60초와 수만 토큰을 소비할 수 있습니다. 32K+ 컨텍스트 창을 사용하십시오.',
+          '**선택기:** 모델이 CSS 선택기를 선택해야 합니다. 더 작은 모델은 자주 틀립니다; 27B+ tool calling 모델은 일반적인 패턴을 안정적으로 처리합니다. 작업을 제한적으로 유지하십시오 — "이 URL에서 제목과 첫 단락을 추출하십시오"는 "사이트를 탐색하여 연락처 페이지를 찾으십시오"보다 훨씬 신뢰할 수 있습니다.',
+          '**올바른 사용 사례:** 연구(페이지 열기, 요약하기, 노트에 추가), 회귀 테스트(탐색, 클릭, 스크린샷), 당신이 제어하는 페이지의 양식 작성. 잘못된 사용 사례: 라이브 웹에서 잘못된 클릭에 결과가 따르는 모든 것.',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml
+mcpServers:
+  puppeteer:
+    command: npx
+    args:
+      - "-y"
+      - "@modelcontextprotocol/server-puppeteer"
+    env:
+      PUPPETEER_HEADLESS: "true"
+      # Block obviously dangerous endpoints at the OS firewall level
+      # rather than relying on the agent to refuse them.',
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'warning',
+            text: '브라우저 서버에 자격 증명을 절대 제공하지 마십시오. 인증된 세션이 필요하다면 에이전트에게 사전 인증된 브라우저 프로파일(`userDataDir`을 통해)을 전달하고 고영향 사이트(뱅킹, 이메일, 클라우드 콘솔, 결제 양식)를 탐색하지 못하게 하십시오. 모델은 버튼이 무엇을 하는지 판단하지 않습니다 — 텍스트를 보고 클릭합니다. 맥락도 없고 선택권도 없는 인턴처럼 취급하십시오.',
+          },
+        ],
+      },
+      githubServer: {
+        id: 'github-server',
+        title: 'GitHub 서버: 로컬 모델에서 저장소, 이슈, PR',
+        content:
+          '**GitHub 서버는 저장소에 대한 자연어 작업을 API 호출로 변환합니다.** 4개 중 설정이 가장 간단하며 personal access token(PAT) 권한을 통해 제한하기 가장 쉽습니다.',
+        items: [
+          '**설치:** `@modelcontextprotocol/server-github`, 환경 변수 `GITHUB_PERSONAL_ACCESS_TOKEN`의 PAT와 함께 실행. 토큰이 유일한 인증입니다 — 서버 자체에는 별도 설정이 없습니다.',
+          '**노출된 도구:** `search_repositories`, `get_file_contents`, `create_or_update_file`, `create_pull_request`, `list_issues`, `create_issue`, `add_issue_comment`, `merge_pull_request`, 그 외 수십 가지 추가 도구. 전체 표면이 크지만 대부분의 작업은 5~10개의 도구를 사용합니다.',
+          '**PAT 범위 제한.** 최소 필요 권한(탐색을 위한 Read, PR/이슈 생성을 위한 Write)으로 특정 저장소에 범위가 지정된 세분화된 PAT를 사용하십시오. 실험적 에이전트에 `repo`가 있는 클래식 PAT를 사용하지 마십시오.',
+          '**실제 워크플로:** 트리아지("최근 20개의 열린 이슈를 읽어 그룹화하고 레이블을 제안하십시오"), 초안("README를 읽고 오타를 수정하는 PR을 여십시오"), 보고서("이번 주 비활성 PR이 무엇입니까").',
+          '**위험 표면:** 에이전트가 이슈와 PR을 만들고 댓글을 달 수 있으며, (쓰기 권한이 있는 경우) 커밋을 push할 수 있습니다. 모델과 워크플로 모두를 신뢰하지 않는 한 merge 도구를 비활성화하십시오 — 세분화된 PAT로 저장소에서의 실수 merge는 복구 가능하지만 빨리 알아차려야 합니다.',
+        ],
+        codeBlock:
+          '# ~/.config/goose/config.yaml
+mcpServers:
+  github:
+    command: npx
+    args:
+      - "-y"
+      - "@modelcontextprotocol/server-github"
+    env:
+      GITHUB_PERSONAL_ACCESS_TOKEN: "${GH_AGENT_PAT}"
+      # Fine-grained PAT scoped to one or two test repos,
+      # not your personal account-wide classic token.',
+        codeLanguage: 'yaml',
+      },
+      securityModel: {
+        id: 'security-model',
+        title: '모델을 신뢰하지 않는 보안 모델',
+        content:
+          '**올바른 멘탈 모델은 "LLM은 당신이 주는 열쇠를 가진 신뢰하지 않는 인턴"입니다.** 기능은 허용 목록에 포함하는 서버와 표면에서 옵니다 — 모델의 판단에서 오는 것이 아닙니다.',
+        items: [
+          '**filesystem 서버를 하나의 디렉터리로 제한하십시오.** `~`나 `/`는 절대 안 됩니다. `agent-workspace/` 폴더를 선택하고 에이전트가 작업할 파일의 복사본을 그 안에 넣으십시오. 에이전트가 실패하더라도 최악의 경우는 하나의 폴더입니다.',
+          '**데이터베이스 서버를 기본적으로 읽기 전용으로 실행하십시오.** `SELECT` 권한만 있고 30초 statement timeout이 있는 전용 `agent_ro` 역할이 전체 사고 클래스를 제거합니다.',
+          '**모든 쓰기 또는 셸 도구를 명시적 승인 뒤에 두십시오.** Goose, Cline, Continue.dev는 도구별 승인 규칙을 지원합니다. 기본적으로 읽기 도구를 허용하고; `write_file`, `edit_file`, `execute_command`, `create_pull_request`, 양식을 제출하는 모든 브라우저 작업에 승인을 요구하십시오.',
+          '**감사 로그를 사용하십시오.** 모든 MCP 클라이언트는 tool call과 결과를 기록합니다. 긴 세션 후에 로그를 검토하십시오: 모델이 예상치 못한 것을 시도하는 것을 발견할 것입니다(때로는 무해하지만, 때로는 권한 조정을 정당화합니다).',
+          '**좁은 범위의 토큰으로 타사 접근을 제한하십시오.** 두 개의 테스트 저장소로 제한된 GitHub PAT. 읽기 전용 Postgres 역할. 자격 증명 없는 브라우저 세션. 모델은 결국 예상치 못한 것을 시도할 것입니다; 무엇을 할 수 있는지의 한계가 모델이 올바르게 행동하는지에 의존해서는 안 됩니다.',
+          '**민감한 데이터 작업을 위해 에이전트를 격리하십시오.** 개인 데이터로 작업할 때 에이전트가 실행되는 동안 호스트에서 네트워크 접근을 비활성화하십시오(또는 네트워크 네임스페이스 사용). 로컬 스택은 이미 기기 밖으로 아무것도 전송하지 않지만 심층 방어는 타사 서버의 버그를 포착합니다.',
+          '**MCP 서버 선택을 모든 의존성 선택과 동일하게 취급하십시오.** 참조 서버는 잘 유지 관리됩니다; 많은 타사 서버는 그렇지 않습니다. 자격 증명이 필요한 서버를 설치하기 전에 서버 코드를 읽으십시오.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '유용한 장애 복구 습관: 중요하지 않은 에이전트 작업 전에 `git stash`(또는 `git checkout -b agent/<task>`)를 수행하십시오. 작업 후 diff를 검토하고, 원하는 부분을 유지하고, 나머지는 버리십시오. 이것은 긴 Cline 또는 Aider 세션을 안전하게 만드는 것과 동일한 관행입니다 — 더 넓은 패턴은 [Continue.dev vs Cline vs Aider 비교](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local)를 참조하십시오.',
+          },
+        ],
+      },
+      vsClaudeDesktop: {
+        id: 'vs-claude-desktop',
+        title: '로컬 MCP vs Claude Desktop: 무엇이 바뀌고 무엇이 남는가',
+        content:
+          '**프로토콜과 서버는 동일합니다. 모델과 클라이언트만 바뀝니다.** 이것이 바로 MCP가 중요한 이유입니다 — 도구에 대한 투자가 로컬 및 클라우드 설정 간에 깔끔하게 이식됩니다.',
+        columns: ['레이어', 'Claude Desktop', 'Ollama 로컬 + Goose'],
+        rows: [
+          { '레이어': '모델', 'Claude Desktop': 'Claude(Anthropic, 클라우드)', 'Ollama 로컬 + Goose': 'Gemma 4, GLM-5.1, Qwen3 또는 Llama 3.3(로컬)' },
+          { '레이어': '클라이언트', 'Claude Desktop': 'Claude Desktop 앱', 'Ollama 로컬 + Goose': 'Goose, Cline, Continue.dev 또는 LM Studio' },
+          { '레이어': '서버', 'Claude Desktop': '동일한 MCP 서버', 'Ollama 로컬 + Goose': '동일한 MCP 서버' },
+          { '레이어': '프로토콜', 'Claude Desktop': 'MCP(JSON-RPC 2.0)', 'Ollama 로컬 + Goose': 'MCP(JSON-RPC 2.0)' },
+          { '레이어': '요청당 비용', 'Claude Desktop': '토큰당 API 지출', 'Ollama 로컬 + Goose': '$0 — 로컬 추론' },
+          { '레이어': '프라이버시', 'Claude Desktop': '대화가 Anthropic으로 전송됨', 'Ollama 로컬 + Goose': '기기에서만 유지됨' },
+          { '레이어': '속도 제한', 'Claude Desktop': 'API 제한 적용', 'Ollama 로컬 + Goose': '하드웨어 성능에 의해서만 제한됨' },
+          { '레이어': 'tool calling 품질', 'Claude Desktop': '최고 수준', 'Ollama 로컬 + Goose': '27B+ 모델에서 좋음; 7B 미만에서 급격히 저하됨' },
+          { '레이어': '인터넷 필요', 'Claude Desktop': '예', 'Ollama 로컬 + Goose': '서버가 요청을 할 경우에만(예: 브라우저)' },
+          { '레이어': '설정 시간', 'Claude Desktop': '5분', 'Ollama 로컬 + Goose': '15분(일회성)' },
+        ],
+      },
+      pickingModel: {
+        id: 'picking-model',
+        title: '로컬 MCP를 위한 tool calling 모델 선택',
+        content:
+          '**tool calling 신뢰성은 harness가 아닌 모델 크기와 훈련과 함께 확장됩니다.** Cline에서 잘못된 형식의 tool call을 생성하는 모델은 같은 이유로 Goose에서도 생성합니다.',
+        items: [
+          '**Gemma 4 27B(`gemma4:27b`)** — Google의 tool calling 훈련은 이 크기에서 최고 수준입니다. Q4_K_M에서 16GB 통합 메모리 또는 24GB VRAM에 맞습니다. 훌륭한 일반 추론; 연쇄 tool call에서 약간 보수적.',
+          '**GLM-5.1 32B(`glm5:32b`)** — Zhipu의 모델은 매우 높은 tool calling 신뢰성과 표준 128K 컨텍스트 창을 가집니다. Gemma 4보다 약간 무겁지만 24GB GPU에 편안하게 맞습니다.',
+          '**Qwen3 32B(`qwen3:32b`)** — 균형 잡힘; 조밀한 32B는 MCP를 문제없이 처리하고 긴 에이전트 루프에서 잘 작동합니다. **Qwen3-Coder 30B(`qwen3-coder:30b`)**는 에이전트 작업이 코드 지향적인 경우 최선입니다.',
+          '**Llama 3.3 70B(`llama3.3:70b`)** — 가장 높은 성능이지만 가장 무겁습니다. Q4_K_M에서 48GB+ 통합 메모리 또는 2× 24GB GPU. 하드웨어가 지원하는 경우에만 사용하십시오; 더 작은 모델이 충분한 경우가 많습니다.',
+          '**MCP 작업에서 피해야 할 것:** 7B 미만의 모든 것과 명시적인 tool calling 훈련이 없는 범용 모델. 잘못된 형식의 호출을 생성하고, 루프가 차단되고, harness를 탓하게 됩니다 — 하지만 harness는 괜찮습니다.',
+          '모든 모델에서 tool calling 품질을 향상시키는 구조적 프롬프팅 기법은 [Chain-of-thought 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting)을 참조하십시오.',
+          '비교 데이터는 [2026년 tool calling을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026)을 참조하십시오.',
+        ],
+      },
+      mcpVsFunctionCalling: {
+        id: 'mcp-vs-function-calling',
+        title: 'MCP vs 일반 Function Calling: 차이점은 무엇인가',
+        content:
+          '**Function calling은 모델이 생성하는 것입니다. MCP는 클라이언트와 도구가 만날 수 있게 하는 프로토콜입니다.** 두 가지는 다른 레이어에 있으며 협력합니다; 하나가 다른 것을 대체하지 않습니다.',
+        items: [
+          '**Function calling**은 LLM 측의 기능입니다: 모델이 도구 이름과 인수를 설명하는 구조화된 JSON 객체를 생성합니다. OpenAI의 도구, Anthropic의 도구, Ollama의 tool call API는 약간 다른 wire 형식으로 동일한 아이디어를 사용합니다.',
+          '**MCP**는 그 위에 위치합니다: 도구가 프로세스 간에 설명, 발견, 호출, 반환되는 방식을 표준화합니다. function calling만 있는 모델은 filesystem에 대해 아무것도 모릅니다; MCP 서버는 filesystem 작업을 사용 가능하게 만들고, 클라이언트는 이를 모델의 function calling API에 매핑하고, 모델이 호출할 수 있습니다.',
+          '**이점은 상호 운용성입니다.** filesystem 서버를 한 번 작성하면; Claude Desktop, Goose, Cline, Continue.dev, LM Studio 모두 변경 없이 사용합니다. Claude에서 Gemma 4로 모델을 바꿔도; 서버는 바뀌지 않습니다.',
+          '**pure function calling으로 에이전트를 만들 수 있습니다.** 프로젝트별로 filesystem, 데이터베이스, 브라우저 핸들러를 재구현하게 됩니다. MCP를 사용하면 이것들이 즉시 사용 가능한 의존성이 됩니다.',
+          '**일회성 스크립트의 경우 pure function calling이 더 간단합니다.** 프로젝트나 모델 간에 재사용하고 싶은 모든 것에 대해 MCP는 며칠 내에 가장 낮은 노력의 경로입니다.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '로컬 MCP 설정 시 일반적인 실수',
+        items: [
+          '**실수 1: 범용 소형 모델 사용.** 7B 미만 모델(그리고 tool calling 파인튜닝 없는 대부분의 7B~13B 범용 모델)은 잘못된 형식의 tool call을 생성합니다. tool calling에 파인튜닝된 27B+ 모델을 사용하고 harness와 싸우는 것을 그만두십시오.',
+          '**실수 2: 허용 목록에 홈 디렉터리 넣기.** "테스트만을 위한" `~` 허용 목록은 일상적인 사용까지 살아남습니다. 처음부터 전용 `agent-workspace`를 만드십시오.',
+          '**실수 3: 데이터베이스 서버를 읽기/쓰기 모드로 두기.** 실제 테이블에 대한 자신감 있는 에이전트의 `DELETE` 쿼리가 정확히 이것이 방지하는 사고입니다. `agent_ro`를 기본 역할로 만드십시오; 그것을 명시적으로 필요로 하는 작업에만, 그리고 그 작업 동안에만 별도의 쓰기 가능한 역할을 설정하십시오.',
+          '**실수 4: 모든 도구 자동 승인.** "모두 승인" 버튼은 편리하고 위험합니다. 읽기 도구(`read_file`, `list_directory`, `query`)를 자동 승인하십시오; 쓰기/셸/PR 도구는 항상 승인이 필요합니다.',
+          '**실수 5: 다단계 브라우저 작업에 32K 컨텍스트 모델 사용.** 페이지 내용이 크기 때문에 세 페이지를 탐색하는 에이전트가 추론 전에 32K 토큰을 소진할 수 있습니다. 브라우저 집약적인 작업에는 128K 컨텍스트 모델을 사용하십시오.',
+          '**실수 6: 에이전트가 판단력이 있다고 가정하기.** 그렇지 않습니다. 모델은 "이것이 프로덕션 데이터베이스이다" 또는 "이 PR이 배포될 것이다"라는 개념이 없습니다. 권한이 유일한 장벽입니다.',
+          '**실수 7: 처음부터 모든 참조 서버 설치.** 더 많은 도구 = 더 큰 시스템 프롬프트 = 더 느리고 덜 신뢰할 수 있는 도구 선택. `filesystem`으로 시작하십시오. 그것을 필요로 하는 워크플로가 있을 때만 다른 것을 추가하십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[Model Context Protocol 사양](https://modelcontextprotocol.io/) — 공식 사양, JSON-RPC 스키마, 전송 및 수명 주기 정의.',
+          '[GitHub modelcontextprotocol/servers 저장소](https://github.com/modelcontextprotocol/servers) — 참조 서버(filesystem, sqlite, postgres, github, puppeteer 등) 및 설정 문서.',
+          '[Goose 프로젝트 문서](https://block.github.io/goose/) — CLI 설치, Ollama 제공자 설정, MCP 서버 설정 구문.',
+          '[Ollama 모델 라이브러리](https://ollama.com/library) — 이 가이드에서 참조하는 사용 가능한 로컬 모델, tool calling 지원 지표 및 양자화 수준.',
+          '[Cline GitHub 저장소](https://github.com/cline/cline) — VS Code용 MCP 클라이언트 구현, MCP 서버 패널.',
+          '[Continue.dev 문서](https://docs.continue.dev/) — Continue.dev 클라이언트를 위한 `mcpServers` 설정 블록 참조.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'MCP란 무엇이며 로컬 AI에 왜 중요합니까?',
+            a: 'Model Context Protocol(MCP)은 클라이언트(Goose, Cline, Continue.dev, LM Studio, Claude Desktop)가 언어 모델을 도구 서버에 일관된 방식으로 연결할 수 있게 하는 오픈 JSON-RPC 2.0 프로토콜입니다. 로컬 AI에 중요한 이유는 채팅 모델을 에이전트로 변환하는 계층을 표준화하기 때문입니다 — 도구 서버를 한 번 작성하면 로컬 Ollama 모델을 포함한 모든 클라이언트와 모든 모델에서 사용하십시오. MCP 없이는 각 프로젝트가 자체 클라이언트에 대해 파일/데이터베이스/브라우저 도구를 재발명합니다.',
+          },
+          {
+            q: 'MCP는 Claude Desktop 없이 작동합니까?',
+            a: '네. 프로토콜은 오픈이며 Claude Desktop과 완전히 독립적입니다. 2026년에 Goose, Cline, Continue.dev, LM Studio는 로컬 Ollama 모델과 작동하는 MCP 클라이언트 구현을 제공합니다. 참조 서버(filesystem, sqlite, postgres, puppeteer, github)는 호환 클라이언트에서 변경 없이 작동합니다.',
+          },
+          {
+            q: '어떤 로컬 모델이 MCP를 가장 잘 지원합니까?',
+            a: '2026년 5월 기준으로 가장 신뢰할 수 있는 옵션은 Gemma 4 27B, GLM-5.1 32B, Qwen3 32B(코드 지향 작업의 경우 Qwen3-Coder 30B), Llama 3.3 70B입니다. 4개 모두 명시적인 tool calling 훈련을 받았으며 MCP 클라이언트가 라우팅할 수 있는 깔끔한 function calling JSON을 생성합니다. 7B 미만 모델(그리고 tool calling 파인튜닝 없는 대부분의 범용 모델)은 정기적으로 잘못된 형식의 tool call을 생성합니다.',
+          },
+          {
+            q: 'MCP는 안전합니까? 에이전트가 내 파일을 삭제할 수 있습니까?',
+            a: '허용하면 가능합니다. 보안은 프로토콜이 아닌 서버를 구성하는 방식에서 옵니다. filesystem 서버는 허용 목록에 넣은 경로 내에서만 작동합니다 — 전용 `agent-workspace` 디렉터리로 제한하십시오. 데이터베이스 서버는 SELECT 전용 역할을 사용할 때 읽기 전용으로 작동합니다. 쓰기, 셸, PR 도구에 대해 항상 명시적 승인을 요구하십시오; 읽기 작업만 자동 승인하십시오. 감사 로그는 에이전트가 한 일을 사후에 정확히 보여줍니다.',
+          },
+          {
+            q: '나만의 MCP 서버를 작성할 수 있습니까?',
+            a: '네 — 그리고 SDK가 간단하게 만들어줍니다. 공식 TypeScript 및 Python SDK(`@modelcontextprotocol/sdk` 및 `mcp`)가 JSON-RPC 배관을 처리합니다. JSON 스키마와 핸들러 함수로 도구를 정의하면 SDK가 stdio를 통해 노출합니다. 단일 목적 서버(내부 API를 래핑하는 하나 또는 두 개의 도구)는 50~100줄 파일입니다.',
+          },
+          {
+            q: 'MCP는 Windows에서 작동합니까?',
+            a: '네. Ollama, Goose, Cline, Continue.dev, LM Studio 모두 Windows에서 작동합니다. MCP 서버는 Node.js 또는 Python 하위 프로세스로 실행됩니다; 두 런타임 모두 Windows와 완전히 호환됩니다. 유일한 플랫폼 특정 세부 사항은 경로 처리입니다 — 설정에서 슬래시를 사용하거나 백슬래시를 올바르게 이스케이프하십시오. 그 외에는 경험이 macOS 및 Linux와 동일합니다.',
+          },
+          {
+            q: 'MCP tool call을 어떻게 샌드박싱합니까?',
+            a: '세 가지 레이어가 대부분의 위험을 커버합니다. 첫째, 설정 수준에서 각 서버를 좁게 제한하십시오: filesystem은 하나의 디렉터리로, 데이터베이스는 읽기 전용 역할로, GitHub는 테스트 저장소를 위한 세분화된 PAT로. 둘째, 클라이언트의 도구별 승인 규칙을 사용하십시오: 읽기에 자동 승인, 쓰기에 필수 승인. 셋째, 에이전트를 `git stash` 호환 workspace 내에서 유지하여 모든 파괴적인 작업이 git을 통해 취소 가능하도록 하십시오. 민감한 작업의 경우 서버가 명시적으로 필요로 하는 엔드포인트를 제외하고 네트워크 접근 없이 실행하십시오.',
+          },
+          {
+            q: 'MCP 에이전트가 HTTP 요청을 할 수 있습니까?',
+            a: '네, 특정 서버를 통해. 브라우저 서버(puppeteer 또는 playwright)는 모델이 탐색하는 요청을 하는 실제 Chromium을 제어합니다. 여러 타사 서버는 더 직접적으로 `http_get`/`http_post` 도구를 노출합니다. filesystem 및 데이터베이스 서버는 네트워크 요청을 하지 않습니다; 로컬 리소스에서만 작동합니다.',
+          },
+          {
+            q: 'MCP가 Ollama와 기본적으로 작동합니까, 아니면 래퍼가 필요합니까?',
+            a: 'Ollama 자체는 MCP를 말하지 않습니다 — OpenAI 호환 채팅 API를 제공합니다. Ollama의 채팅 API와 MCP 서버 사이를 연결하기 위해 클라이언트(Goose, Cline, Continue.dev, LM Studio)가 필요합니다. 클라이언트가 모델의 tool call을 올바른 MCP 서버로 라우팅하고 결과를 대화에 반환합니다. 사용자 관점에서 클라이언트를 설치하고 Ollama를 가리키는 것 외에 추가 설정이 없습니다.',
+          },
+          {
+            q: 'MCP와 function calling의 차이점은 무엇입니까?',
+            a: 'Function calling은 LLM이 도구 이름과 인수를 포함한 구조화된 JSON을 생성하는 것입니다 — 이것은 모델 기능입니다. MCP는 도구 서버와 클라이언트가 프로세스 간에 도구를 설명, 발견, 호출, 반환하는 방식을 표준화하는 프로토콜입니다 — 이것은 상호 운용성 계층입니다. 협력합니다: 클라이언트가 MCP 도구 정의를 모델의 function calling 형식으로 변환하고, 모델이 function call을 생성하고, 클라이언트가 호출을 MCP 서버에 다시 매핑하고, 서버가 실행합니다. MCP 없이는 function calling을 할 수 있지만 프로젝트별로 filesystem/데이터베이스/브라우저 핸들러를 재구현하게 됩니다. MCP를 사용하면 동일한 서버가 모든 클라이언트에서 작동합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽기',
+        items: [
+          '[2026년 tool calling을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026) — 위에서 권장한 모델(Gemma 4, GLM-5.1, Qwen3, Llama 3.3)에 대한 비교 벤치마크.',
+          '[로컬 자율 에이전트가 실제로 작동합니다](/ko/power-local-llm/autonomous-local-agents-actually-work) — 장시간 작업에서 로컬 MCP 에이전트가 신뢰할 수 있게 할 수 있고 없는 것에 대한 현실 점검.',
+          '[Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코드 에이전트](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 코드 지향 작업을 위한 인접 에이전트 맥락; Cline과 Continue.dev도 MCP 클라이언트입니다.',
+          '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 더 넓은 오픈 웨이트 환경을 위한 모델 참조.',
+          '[로컬 AI 에이전트로 Zapier 대체하기](/ko/power-local-llm/replace-zapier-with-local-ai-agents) — 동일한 MCP 스택을 위한 워크플로 자동화 프레임워크.',
+          '[Power Local LLM 허브](/ko/power-local-llm) — 전체 가이드 라이브러리.',
+        ],
+      },
+    },
+      schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Ollama를 데이터베이스 및 API에 MCP로 연결하기: 로컬 AI 에이전트 설정 2026',
+      description: '2026년 Ollama와 Model Context Protocol(MCP)을 사용한 로컬 AI 에이전트 설정 가이드. Filesystem, SQLite/Postgres, 브라우저, GitHub, 실제 작동하는 JSON 설정, LLM을 신뢰하지 않는 샌드박싱 모델.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-agents-with-mcp-2026',
+      inLanguage: 'ko',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
 }

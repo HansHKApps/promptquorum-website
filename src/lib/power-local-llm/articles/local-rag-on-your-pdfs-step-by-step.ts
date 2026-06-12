@@ -3756,4 +3756,481 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & Document Chat',
+    title: '30분 만에 PDF에 로컬 RAG 구축하기 (Ollama + AnythingLLM)',
+    seoTitle: 'PDF 로컬 RAG 2026: 단계별 설정 가이드',
+    intro:
+      '16GB RAM 노트북에서 개인 RAG 시스템을 가장 빠르게 구축하는 완전한 가이드입니다. 스택: Ollama, Llama 3.3 8B, AnythingLLM, nomic-embed-text. 총 소요 시간: 빈 머신에서 내 PDF와 대화하기까지 30분.',
+    metaDescription:
+      '단계별 안내: Ollama 설치, AnythingLLM 설정, PDF 업로드 및 대화. 총 소요 시간 30분. 16GB RAM 노트북에서 테스트 완료. 2026년 5월.',
+    twitterDescription:
+      '빈 노트북에서 30분 만에 내 PDF와 대화하기. Ollama + Llama 3.3 8B + AnythingLLM + nomic-embed-text. 16GB RAM에서 테스트 완료.',
+    current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral Small'],
+    current_hardware_mentioned: ['16GB RAM 노트북', 'Apple M1', 'Apple M3', 'Intel Core Ultra 5', 'AMD Ryzen 7 7700'],
+    audience: '클라우드 API에 의존하지 않고 자신의 노트북에서 개인 RAG 시스템을 구축하고자 하는 개발자 및 고급 사용자.',
+    readTime: '12분 분량',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'PDF 로컬 RAG',
+    targetKeywords: [
+      '로컬 rag pdf 튜토리얼',
+      'ollama anythingllm rag 설정',
+      'pdf 로컬 채팅 방법',
+      '로컬 rag 30분 설정',
+      '프라이빗 rag 노트북',
+    ],
+    leadAnswerBlock:
+      '**Ollama를 설치하고, Llama 3.3 8B를 다운로드하고, AnythingLLM을 설치한 후 Ollama에 연결하고, 임베딩 모델을 nomic-embed-text로 변경하고, PDF를 워크스페이스에 드래그하여 질문하십시오. 16GB RAM 노트북에서 전체 과정은 30분이 소요되며, 대부분의 시간은 모델 다운로드에 사용됩니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '30분 안에 내 PDF용 로컬 RAG 시스템을 어떻게 구축합니까?',
+        answer:
+          'Ollama 설치(3분), Llama 3.3 8B 다운로드(8분, 주로 다운로드 시간), AnythingLLM 설치(4분), Ollama 연결 및 nomic-embed-text로 임베더 변경(3분), 워크스페이스에 PDF 업로드(임베딩 5분), 쿼리 테스트(5분), 청크 크기 조정(2분). 합계: 16GB RAM 노트북에서 30분. 설치 후에는 시스템이 완전히 오프라인으로 동작합니다.',
+        bullets: [
+          '스택: Ollama + Llama 3.3 8B Q4_K_M + AnythingLLM + nomic-embed-text-v1.5',
+          '최소 하드웨어 요구 사항: RAM 16GB, 디스크 여유 공간 20GB, 최신 CPU(Apple Silicon, Ryzen 5000+, Intel 11세대+ 모두 해당)',
+          '인터넷은 초기 모델 및 앱 다운로드에만 필요하며, 추론은 완전히 로컬에서 실행됩니다.',
+          'macOS, Windows 10/11, Linux에서 AnythingLLM 단계에 관리자/루트 권한 없이 작동합니다.',
+          '코드 없음, Python 없음, 벡터 데이터베이스 설정 없음: AnythingLLM에 LanceDB가 내장되어 있습니다.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '구축할 것', anchor: '#stack-overview' },
+      { label: '사전 준비 사항', anchor: '#prerequisites' },
+      { label: '1단계: Ollama 설치 (3분)', anchor: '#step-1-install-ollama' },
+      { label: '2단계: Llama 3.3 8B 다운로드 (8분)', anchor: '#step-2-pull-model' },
+      { label: '3단계: AnythingLLM 설치 (4분)', anchor: '#step-3-install-anythingllm' },
+      { label: '4단계: 임베딩 모델 설정 (3분)', anchor: '#step-4-configure-embedding' },
+      { label: '5단계: 첫 번째 PDF 업로드 (5분)', anchor: '#step-5-upload-pdfs' },
+      { label: '6단계: 쿼리 테스트 (5분)', anchor: '#step-6-test-queries' },
+      { label: '7단계: 청크 크기 조정 (2분)', anchor: '#step-7-tune-chunks' },
+      { label: '예시 쿼리 및 예상 응답', anchor: '#sample-queries' },
+      { label: '문제 해결', anchor: '#troubleshooting' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 자료', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**스택:** Ollama가 LLM을 실행하고, AnythingLLM이 인터페이스와 벡터 저장소를 관리하며, Llama 3.3 8B Q4_K_M이 응답하고 nomic-embed-text-v1.5가 검색을 담당합니다.',
+          '**시간:** 총 30분. 가장 오래 걸리는 단계는 모델 다운로드입니다(50Mbps 기준 약 8분).',
+          '**하드웨어:** RAM 16GB가 최소 실용 사양입니다. 8GB에서는 Phi-4 Mini와 소규모 문서 세트만 작동합니다. 대안 모델 섹션을 참조하십시오.',
+          '**프라이버시:** 설치 후에는 아무것도 기기 밖으로 나가지 않습니다. PDF, 임베딩, 프롬프트, 응답 모두 로컬에 유지됩니다.',
+          '**코드 없음:** Python 없음, Ollama의 두 가지 명령 외에는 터미널도 없음. AnythingLLM은 드래그 앤 드롭 문서 가져오기를 갖춘 데스크톱 앱입니다.',
+          '**기본 임베더는 적합하지 않습니다:** AnythingLLM에는 매우 작은 내장 임베더가 포함되어 있습니다. 4단계에서 nomic-embed-text-v1.5로 교체하십시오. 검색 품질이 눈에 띄게 향상됩니다.',
+          '**기본 청크 크기도 PDF에는 적합하지 않습니다:** 기본값 512/0 대신 오버랩 200 토큰의 1000 토큰 청크가 더 나은 출발점입니다. 7단계에서 조정합니다.',
+        ],
+      },
+      stackOverview: {
+        id: 'stack-overview',
+        title: '구축할 것',
+        content:
+          '**자급자족형 데스크톱 RAG 시스템: PDF를 드래그하고 질문할 수 있는 채팅 창입니다.** 오픈소스 네 가지 구성 요소, 모두 무료이며 노트북에서 실행됩니다:',
+        items: [
+          '**Ollama** — 로컬 LLM 런타임. 모델 파일을 관리하고 localhost:11434에서 OpenAI 호환 API를 노출합니다. 응답 모델을 제공합니다.',
+          '**Llama 3.3 8B Instruct (Q4_K_M)** — Meta의 80억 파라미터 채팅 모델, RAM 약 5GB에 맞게 양자화됩니다. 2026년 문서 기반 질문에서 우수한 응답 품질을 제공합니다.',
+          '**AnythingLLM Desktop** — 인터페이스 + 벡터 저장소 + RAG 오케스트레이션. LanceDB 내장, PDF/DOCX/TXT/MD 네이티브 파싱, LLM 제공자로서 Ollama와 통신합니다.',
+          '**nomic-embed-text-v1.5** — 임베딩 모델. 768차원 벡터, 최신 CPU에서 Ollama를 통해 약 600 청크/초로 실행됩니다. 불충분한 AnythingLLM 기본 임베더를 교체합니다.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 RAG 시스템은 런타임(Ollama), 응답 모델(Llama 3.3 8B), 인터페이스 및 벡터 저장소(AnythingLLM), 임베딩 모델(nomic-embed-text-v1.5)의 네 가지 구성 요소가 클라우드 호출 없이 동일한 기기에서 연결된 것입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'PDF를 드래그하고, 질문하고, 인용이 포함된 근거 있는 답변을 완전히 오프라인으로 받으십시오. 네 가지 구성 요소가 역할을 나눕니다: Ollama는 모델을 실행하고, Llama 3.3 8B는 응답을 작성하고, AnythingLLM은 청크와 벡터를 관리하며, nomic-embed-text-v1.5는 텍스트를 검색 가능한 벡터로 변환합니다. 총 설치 시간: 약 30분, 총 비용: $0.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'AnythingLLM에는 기본 LLM과 기본 임베더가 내장되어 있습니다. 둘 다 로우엔드 하드웨어에서 빠르게 시작되도록 의도적으로 작게 설계되었습니다. RAG 시스템에서는 검색 품질이 전부이므로 4단계와 6단계에서 교체합니다.',
+          },
+        ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-rag-architecture-en.svg',
+        imageCaption: '로컬 RAG 스택: Ollama(런타임, localhost:11434), Llama 3.3 8B Q4_K_M(약 4.9GB, 응답 모델), AnythingLLM Desktop(인터페이스 + LanceDB 벡터 저장소), nomic-embed-text-v1.5(약 280MB 임베더). 데이터 흐름: PDF → AnythingLLM → nomic-embed-text → LanceDB → Llama 3.3 8B → 응답.',
+      },
+      prerequisites: {
+        id: 'prerequisites',
+        title: '시작 전 필요한 것',
+        content:
+          '**RAM 16GB, 디스크 여유 공간 20GB, 인터넷 연결, 그리고 30분이 필요합니다.** 운영 체제는 macOS 12+, Windows 10/11, 또는 최신 Linux 데스크톱을 사용할 수 있습니다.',
+        items: [
+          '**RAM:** 16GB는 Llama 3.3 8B Q4 + AnythingLLM + 일반 데스크톱 앱을 위한 최소 실용 사양입니다. 8GB의 경우 대신 Phi-4 Mini Q4를 사용하십시오. 2단계의 대안을 참조하십시오.',
+          '**디스크:** 여유 공간 20GB. Llama 3.3 8B Q4_K_M은 약 5GB, 임베딩 모델은 약 280MB, AnythingLLM은 약 600MB를 차지하며, 임베딩을 위한 공간(PDF 100페이지당 약 10~30MB)도 필요합니다.',
+          '**네트워크:** 모델 다운로드를 위해 최소 약 50Mbps가 필요합니다. 25Mbps에서는 같은 단계에 약 16분이 소요됩니다. 나머지 튜토리얼은 영향을 받지 않습니다.',
+          '**권한:** AnythingLLM은 관리자/루트 권한이 필요하지 않습니다. Ollama는 macOS/Linux의 `/usr/local/bin`(한 번 비밀번호 요청) 또는 Windows의 `%LOCALAPPDATA%`(관리자 없음)에 설치됩니다.',
+          '**문서 준비:** 시작을 위해 5~20개의 PDF를 준비하십시오. 더 많은 수량도 작동하지만, 소규모 세트로 검색 품질을 더 빠르게 테스트할 수 있습니다.',
+        ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-prerequisites-en.svg',
+        imageCaption: '시스템 요구 사항: RAM 16GB(Llama 3.3 8B Q4 + AnythingLLM 최소), 디스크 여유 공간 20GB, 모델 다운로드를 위한 50Mbps. macOS 12+, Windows 10/11 또는 Linux. AnythingLLM은 관리자 권한이 필요하지 않습니다.',
+      },
+      step1InstallOllama: {
+        id: 'step-1-install-ollama',
+        title: '1단계: Ollama 설치 (3분)',
+        content:
+          '**ollama.com/download에서 운영 체제용 Ollama 설치 파일을 다운로드하여 실행하십시오. 설치 프로그램이 `ollama` CLI를 PATH에 추가하고 백그라운드 서비스를 시작합니다.** 선택할 설정 옵션이 없습니다.',
+        items: [
+          '**macOS:** `.dmg`를 다운로드하고, Ollama를 응용 프로그램으로 드래그한 후, CLI 헬퍼를 설치하기 위해 한 번 여십시오. 서비스가 실행 중일 때 메뉴 막대에 라마 아이콘이 나타납니다.',
+          '**Windows:** `.exe`를 다운로드하고 실행하여 기본값을 수락하십시오. Ollama는 설치 후 백그라운드 서비스로 실행됩니다. 추가 실행이 필요하지 않습니다.',
+          '**Linux:** 한 줄 설치: `curl -fsSL https://ollama.com/install.sh | sh`. 스크립트가 systemd 유닛을 등록합니다. `sudo systemctl start ollama`로 시작하십시오.',
+          '**확인:** 터미널을 열고 `ollama --version`을 실행하십시오. 버전 문자열이 표시되어야 합니다. 명령을 찾을 수 없는 경우 터미널을 재시작하여 업데이트된 PATH를 로드하십시오.',
+        ],
+        codeBlock: 'ollama --version
+# ollama version is 0.5.x  (any 0.5+ build works for this tutorial)',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'warning',
+            text: '`ollama --version`은 작동하지만 이후 단계에서 "localhost:11434에서 연결 거부됨" 오류가 발생하면 백그라운드 서비스가 자동으로 시작되지 않은 것입니다. macOS: 응용 프로그램에서 앱을 여십시오. Linux: `sudo systemctl start ollama`. Windows: 시스템 트레이에서 Ollama 아이콘을 여십시오.',
+          },
+        ],
+      },
+      step2PullModel: {
+        id: 'step-2-pull-model',
+        title: '2단계: Llama 3.3 8B 다운로드 (8분)',
+        content:
+          '**터미널에서 `ollama pull llama3.3:8b-instruct-q4_K_M`을 실행하십시오. 이 명령은 4.9GB 양자화 GGUF를 다운로드하고 Ollama에 등록합니다.** 일반 가정용 인터넷 연결에서 전체 30분의 대부분이 이 단계에 소요됩니다.',
+        items: [
+          '**다운로드 크기:** 약 4.9GB(Q4_K_M 양자화). 50Mbps에서 약 8분, 100Mbps에서 약 4분, 25Mbps에서 약 16분이 소요됩니다.',
+          '**진행 상황 확인:** Ollama가 퍼센트와 속도를 출력합니다. 중단되면 다운로드가 재개됩니다. 동일한 명령을 다시 실행하십시오.',
+          '**빠른 모델 테스트:** 다운로드 완료 후 `ollama run llama3.3:8b-instruct-q4_K_M`을 실행하고 "2+2는 얼마입니까?"라고 질문하십시오. 합리적인 응답이 반환되는지 확인하십시오. `/bye`를 입력하여 종료하십시오.',
+          '**RAM 절약 대안:** RAM이 16GB 대신 8GB인 경우 `ollama pull phi3:mini`(Phi-4 Mini, 디스크 약 2.4GB)를 실행하십시오. 3단계에서 해당 모델 이름을 사용하십시오. 긴 문서에서 품질은 낮지만 시스템은 작동합니다.',
+        ],
+        codeBlock:
+          '# 16GB RAM 권장
+ollama pull llama3.3:8b-instruct-q4_K_M
+
+# 8GB RAM 대안
+ollama pull phi3:mini
+
+# 빠른 테스트 (/bye를 입력하여 종료)
+ollama run llama3.3:8b-instruct-q4_K_M',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'tip',
+            text: '이미 다른 Ollama 모델이 있습니까? `ollama list`로 모두 확인하십시오. 여러 모델을 설치된 상태로 유지하고 AnythingLLM 워크스페이스 설정에서 전환할 수 있습니다.',
+          },
+        ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-model-options-en.svg',
+        imageCaption: 'RAM별 모델 옵션: Llama 3.3 8B Q4_K_M(약 4.9GB, RAM 16GB, 50Mbps에서 약 8분) 권장; Phi-4 Mini Q4(약 2.4GB, RAM 8GB, 약 4분) 메모리 절약형; Mistral Small Q4_K_M(약 4.1GB, RAM 16GB, 약 7분) 대안.',
+      },
+      step3InstallAnythingLlm: {
+        id: 'step-3-install-anythingllm',
+        title: '3단계: AnythingLLM Desktop 설치 (4분)',
+        content:
+          '**useanything.com(또는 anythingllm.com)에서 AnythingLLM Desktop을 다운로드하여 설치 프로그램을 실행하십시오. 앱을 열고 "클라우드 계정 만들기" 프롬프트를 건너뛰십시오. 로컬 전용 모드는 다음 화면에서 제공됩니다.** 설치는 무인으로 진행됩니다.',
+        items: [
+          '**macOS:** `.dmg`를 다운로드하고, AnythingLLM을 응용 프로그램으로 드래그하여 여십시오. macOS에서 앱이 인정된 개발자의 것인지 확인을 요청할 수 있습니다. 요청 시 시스템 설정 → 개인 정보 보호에서 "열기"를 클릭하십시오.',
+          '**Windows:** `.exe` 설치 프로그램을 다운로드하십시오. Windows SmartScreen이 일반적이지 않은 다운로드라고 표시할 수 있습니다. "추가 정보" → "실행"을 클릭하십시오. 앱은 `%LOCALAPPDATA%\anythingllm-desktop`에 설치됩니다(관리자 없음).',
+          '**Linux:** `.AppImage`를 다운로드하고, 실행 가능으로 표시(`chmod +x AnythingLLMDesktop.AppImage`)한 후 더블클릭하여 실행하십시오.',
+          '**첫 실행 선택:** AnythingLLM은 호스팅된 클라우드 워크스페이스 또는 로컬 전용 설정을 제공합니다. **로컬 설정**을 선택하십시오. 이 옵션이 전체 시스템을 오프라인으로 유지합니다.',
+          '**워크스페이스 생성:** 요청 시 첫 번째 워크스페이스에 설명적인 이름("연구-논문", "계약서", "개인-메모")을 지정하십시오. 각 워크스페이스에는 자체 문서 컬렉션과 임베딩 저장소가 있습니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'AnythingLLM의 기본 LLM은 환영 데모용으로만 설계된 매우 작은 내장 모델입니다. 다음 단계에서 로컬 Ollama로 지정합니다. 실제 쿼리에 기본값을 사용하지 마십시오. 응답이 너무 약해서 유용하지 않습니다.',
+          },
+        ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-install-flow-en.svg',
+        imageCaption: 'AnythingLLM Desktop 4단계 설치: anythingllm.com에서 다운로드(약 600MB), 관리자 없이 설치, 클라우드 프롬프트 건너뛰기, "Local Setup" 선택으로 모든 데이터를 오프라인으로 유지.',
+      },
+      step4ConfigureEmbedding: {
+        id: 'step-4-configure-embedding',
+        title: '4단계: AnythingLLM을 Ollama에 연결하고 임베더 변경 (3분)',
+        content:
+          '**AnythingLLM 설정 → LLM 기본 설정을 여십시오. 제공자로 "Ollama"를 선택하고, URL을 `http://127.0.0.1:11434`으로 설정하고, 모델 드롭다운에서 `llama3.3:8b-instruct-q4_K_M`을 선택하십시오. 저장하십시오. 그런 다음 임베딩 기본 설정으로 이동하여 기본값에서 Ollama를 통한 `nomic-embed-text`로 변경하십시오.**',
+        items: [
+          '**LLM 기본 설정 패널:** 제공자 = Ollama, 엔드포인트 = `http://127.0.0.1:11434`, 모델 = `llama3.3:8b-instruct-q4_K_M`. "변경 사항 저장"을 클릭하십시오. 녹색 체크 표시가 연결을 확인합니다.',
+          '**임베딩 기본 설정 패널:** 기본값은 "AnythingLLM Native Embedder", 매우 작은 내장 임베더입니다. 제공자를 Ollama로 변경하고, 먼저 터미널에서 `ollama pull nomic-embed-text`를 실행(약 280MB)하고, 패널에서 모델 목록을 새로 고침하고, `nomic-embed-text:latest`를 선택하십시오. 저장하십시오.',
+          '**재임베딩 경고:** 이전 임베더로 이미 문서를 추가한 경우 AnythingLLM이 재처리를 요청합니다. 새 설치에는 문서가 없으므로 경고가 나타나지 않습니다.',
+          '**벡터 데이터베이스:** 기본값(LanceDB)으로 유지하십시오. 로컬, 파일 기반이며 설정이 필요 없습니다. PGVector 또는 Qdrant가 특별히 필요한 경우에만 변경하십시오.',
+        ],
+        codeBlock:
+          '# 임베딩 기본 설정 패널을 열기 전에 터미널에서 실행하십시오
+ollama pull nomic-embed-text',
+        codeLanguage: 'bash',
+        callouts: [
+          {
+            type: 'tip',
+            text: '왜 특별히 nomic-embed-text-v1.5입니까? 2026년 5월 기준 500MB 미만의 모든 모델 중 MTEB Retrieval 순위 상위 5위에 올라 있으며, 최신 CPU에서 400~800 청크/초, Apple Silicon에서 2000 청크/초 이상으로 실행되고, Apache 2.0 라이선스입니다. 거의 모든 로컬 RAG 스택의 표준 첫 번째 업그레이드입니다. 대안은 [임베딩 모델 비교](/ko/power-local-llm/best-embedding-models-local-rag-2026)를 참조하십시오.',
+          },
+        ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-config-flow-en.svg',
+        imageCaption: '4단계 두 패널: LLM 기본 설정(제공자 = Ollama, 엔드포인트 = http://127.0.0.1:11434, 모델 = llama3.3:8b-instruct-q4_K_M), 그런 다음 임베딩 기본 설정(먼저 nomic-embed-text 다운로드, 그런 다음 Ollama를 통해 nomic-embed-text:latest 선택).',
+      },
+      step5UploadPdfs: {
+        id: 'step-5-upload-pdfs',
+        title: '5단계: 첫 번째 PDF 업로드 (5분)',
+        content:
+          '**워크스페이스를 열고 "문서 업로드"를 클릭하여 5~20개의 PDF를 드래그하십시오. AnythingLLM이 텍스트를 추출하고, 청크로 분할하고(기본 512 토큰, 오버랩 0), 각 청크를 Ollama로 처리하고, 벡터를 LanceDB에 저장합니다.** 진행 표시줄에 분석된 페이지와 처리된 청크가 표시됩니다.',
+        items: [
+          '**지원 형식:** PDF(텍스트 기반), DOCX, TXT, MD, EPUB, 그리고 URL 스크래핑. 스캔된 이미지 PDF는 먼저 OCR이 필요합니다. 문제 해결 섹션을 참조하십시오.',
+          '**속도:** 최신 CPU에서 400~800 청크/초, Apple Silicon에서 2000 청크/초 이상(Ollama가 웜업된 후). 각 약 50페이지의 PDF 20개(총 약 3000 청크)는 최신 CPU에서 5~8초, Apple Silicon에서 1~2초 만에 임베딩이 완료됩니다(업로드 및 파싱 시간 제외). PDF 20개를 업로드, 파싱, 처리하는 데 총 약 5분을 계산하십시오.',
+          '**임베딩 중 RAM:** Ollama는 첫 번째 요청 시 임베딩 모델(약 280MB)을 RAM에 로드하고 캐시를 유지합니다. 이후 임베딩은 캐시를 재사용합니다.',
+          '**"워크스페이스로 이동":** 업로드 후 AnythingLLM은 문서를 "대기" 풀에 배치합니다. 쿼리 가능하게 하려면 "워크스페이스로 이동" → "저장 및 처리"를 명시적으로 클릭해야 합니다. 이 2단계 흐름은 의도적입니다. 임베딩 비용을 발생시키기 전에 미리 볼 수 있습니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '오래된 OCR 스캔 PDF는 종종 손상된 텍스트나 빈 텍스트 레이어를 포함합니다. 파일은 육안으로 올바르게 보이지만 AnythingLLM은 "[image]" 또는 빈 문자열을 추출합니다. 업로드하기 전에 텍스트 편집기에서 PDF를 열거나(또는 poppler-utils에서 `pdftotext file.pdf -`를 실행) 텍스트 레이어가 있는지 확인하십시오.',
+          },
+        ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-embed-flow-en.svg',
+        imageCaption: 'PDF 업로드에서 쿼리까지 5단계: PDF 업로드(드래그 앤 드롭) → 텍스트 레이어 추출 → 청크 분할(1000 토큰 / 200 오버랩) → Ollama를 통해 nomic-embed-text로 처리 → LanceDB에 저장 및 질문. 속도: CPU 400~800 청크/초, Apple Silicon 2000+.',
+      },
+      step6TestQueries: {
+        id: 'step-6-test-queries',
+        title: '6단계: 쿼리 테스트 (5분)',
+        content:
+          '**워크스페이스 채팅에 질문을 입력하십시오. AnythingLLM이 질문을 벡터화하고, LanceDB에서 상위 N개 청크를 검색하고, 해당 청크를 컨텍스트로 포함한 프롬프트를 구성하고, Ollama에 전송하여 응답을 표시합니다.** 16GB RAM 노트북에서 쿼리당 지연 시간은 약 3~10초입니다.',
+        items: [
+          '**팩트 검색 쿼리로 시작하십시오:** "PDF 중 하나에서 [특정 용어]는 무엇을 의미합니까?" 이것은 검색 앵커링을 테스트합니다. 응답이 PDF를 인용하고 정확한 표현을 재현해야 합니다.',
+          '**그런 다음 종합 쿼리:** "[문서 저자/제목]의 주요 주장을 요약하십시오." 이것은 모델이 여러 청크를 얼마나 잘 통합하는지 테스트합니다.',
+          '**그런 다음 비교 쿼리**(PDF에 비교 가능한 콘텐츠가 있는 경우에만): "[문서 A]와 [문서 B]가 [주제]를 어떻게 다르게 다루는지 비교하십시오." 이것은 문서 간 검색을 테스트합니다.',
+          '**인용 확인:** AnythingLLM은 각 응답 아래에 소스 청크를 표시합니다. 클릭하여 모델이 올바른 구절을 기반으로 하는지 확인하십시오. 인용이 무관련한 경우 검색이 손상된 것입니다. 7단계를 참조하십시오.',
+        ],
+      },
+      step7TuneChunks: {
+        id: 'step-7-tune-chunks',
+        title: '7단계: 청크 크기 조정 (2분)',
+        content:
+          '**워크스페이스 설정 → 벡터 데이터베이스를 여십시오. 청크 크기를 512에서 1000으로, 청크 오버랩을 0에서 200으로 변경하십시오. 저장을 클릭하고 문서를 재처리하십시오(인터페이스에서 요청합니다).** 이것이 AnythingLLM에서 검색 품질을 향상시키는 주요 매개변수입니다.',
+        items: [
+          '**512/0 대신 1000/200인 이유:** PDF의 단락과 섹션은 512 토큰에 깔끔하게 맞는 경우가 드뭅니다. 200 토큰 오버랩은 청크 경계를 넘는 문장이 적어도 하나의 인접 청크에 완전히 나타나므로 검색이 이를 포착합니다.',
+          '**재임베딩 비용:** PDF 20개/3000 청크 세트가 약 5초 만에 재처리됩니다. 더 큰 세트는 비례적으로 더 오래 걸립니다. 청크 저장소가 덮어쓰여집니다, 추가되지 않습니다.',
+          '**검색 Top-K:** 기본 Top-K는 4입니다(상위 4개 일치 청크가 컨텍스트가 됩니다). 응답이 충분한 근거가 없어 보이면 6~8로 올리십시오. 모델이 노이즈 청크에 의해 산만해지면 2~3으로 낮추십시오.',
+          '**프롬프트 템플릿:** AnythingLLM은 워크스페이스 → 채팅 설정 → 프롬프트에서 시스템 프롬프트를 노출합니다. 기본값은 괜찮습니다. 해결할 구체적인 실패가 있을 때만 조정하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '경험적 조정이 이론을 능가합니다: 청크 크기 변경 전후에 동일한 5가지 테스트 쿼리를 실행하고 비교하십시오. 1000/200에서 검색이 더 나쁘면 매우 짧은 문서(한 페이지 메모, 코드 독스트링)가 있을 가능성이 높습니다. 대신 256/64를 시도하십시오.',
+          },
+        ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-chunk-settings-en.svg',
+        imageCaption: '기본 vs. 권장 청크 설정: 기본값 512/0/Top-K 4는 경계에서 문장 단편을 남깁니다. 권장값 1000 토큰 / 200 오버랩 / Top-K 4~6은 오버랩 창 내에서 경계 문장을 포착합니다. PDF 20개 재처리에 약 5초 소요.',
+      },
+      sampleQueries: {
+        id: 'sample-queries',
+        title: '실제 응답은 어떻게 보여야 합니까?',
+        content:
+          '**올바르게 조정된 로컬 RAG 시스템은 팩트 검색 쿼리에 소스에서의 직접 인용으로 응답하고, 요청 시 종합하며, 사용한 청크를 인용합니다.** 연구 논문 워크스페이스에서의 세 가지 예시 쿼리와 정상적인 시스템이 반환하는 것:',
+        rows: [
+          {
+            '쿼리 유형': '팩트 검색',
+            '예시': 'Smith et al. 2024는 어떤 샘플 크기를 사용했습니까?',
+            '정상 응답 패턴': '방법론 섹션의 직접 인용 + 청크 참조',
+            '실패 패턴': '인용 없는 일반 응답("연구자들은 보통 100~500명의 참가자를 사용합니다")',
+          },
+          {
+            '쿼리 유형': '종합',
+            '예시': '이 논문의 주요 기여를 요약하십시오.',
+            '정상 응답 패턴': '초록 및 결론 청크에서 추출한 3~5문장',
+            '실패 패턴': '제목만 반복하거나 초록의 한 문장만 인용',
+          },
+          {
+            '쿼리 유형': '문서 간',
+            '예시': 'Smith와 Jones는 청크 오버랩에 대해 어떻게 다릅니까?',
+            '정상 응답 패턴': '명시적 귀속으로 두 논문의 인용',
+            '실패 패턴': '한 논문만 인용하거나 청크에 없는 불일치를 꾸며냄',
+          },
+        ],
+        columns: ['쿼리 유형', '예시', '정상 응답 패턴', '실패 패턴'],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '정상적인 로컬 RAG 응답은 팩트 검색에 소스 청크를 문자 그대로 인용하고, 요약 질문에 청크 간 종합을 하며, 사용한 특정 청크 ID를 인용합니다. 인용 없는 일반 응답은 모델 문제가 아닌 검색 문제를 나타냅니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '응답이 "연구자들은 보통 100~500명의 참가자를 사용합니다" 대신 "Smith et al.은 287명의 참가자를 사용했습니다(방법론, 4쪽)"라고 말해야 합니다. 그렇지 않으면 검색이 손상된 것이며 모델이 학습 데이터로 즉흥적으로 답하고 있는 것입니다. 응답 모델을 변경하기 전에 먼저 검색을 수정하십시오(청크 크기, 임베더, 유사도 임계값).',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '이 세 가지 쿼리 패턴을 검색 설정 변경 후마다 테스트 세트로 사용하십시오. 팩트 검색은 실패하지만 종합이 작동하면 청크가 너무 큽니다. 종합이 실패하지만 팩트 검색이 작동하면 top-k가 너무 낮습니다. 실패 패턴이 어떤 매개변수를 조정해야 할지 알려줍니다.',
+          },
+        ],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-query-types-en.svg',
+        imageCaption: '3가지 RAG 쿼리 유형: 팩트 검색(직접 인용 + 참조 = 정상, 일반 응답 = 검색 손상), 종합(초록 + 결론에서 3~5문장 = 정상), 문서 간(두 논문 인용 = 정상, 하나만 인용하거나 꾸며냄 = 손상). 녹색 = 정상, 빨간색 = 먼저 검색 수정.',
+      },
+      troubleshooting: {
+        id: 'troubleshooting',
+        title: '문제가 발생했을 때: 여섯 가지 일반적인 실패 모드와 해결책',
+        content:
+          '**대부분의 실패는 이 여섯 가지 범주 중 하나에 해당합니다. 해당 행에서 증상을 파악하고 해결책을 적용하십시오.**',
+        rows: [
+          {
+            '증상': 'AnythingLLM에 "Ollama에 연결할 수 없음" 표시',
+            '가능한 원인': 'Ollama 서비스가 실행 중이지 않거나 엔드포인트가 잘못됨',
+            '해결책': '`ollama serve`를 실행하십시오(또는 앱/서비스를 재시작하십시오). 엔드포인트가 `localhost:11434`가 아닌 `http://127.0.0.1:11434`인지 확인하십시오(Windows에서 별칭이 가끔 실패함).',
+          },
+          {
+            '증상': '모델 다운로드가 0% 또는 99%에서 멈춤',
+            '가능한 원인': 'CDN 엣지 문제 또는 디스크 가득 참',
+            '해결책': 'Ctrl+C로 취소하고, `df -h`로 디스크 공간을 확인하고, 동일한 `ollama pull`을 다시 실행하십시오. Ollama가 마지막 바이트에서 재개합니다.',
+          },
+          {
+            '증상': '임베딩 단계가 멈춘 것처럼 보임',
+            '가능한 원인': 'Ollama가 처음으로 임베딩 모델을 로드하는 중',
+            '해결책': '30~60초 기다리십시오. 처음 모델 로드는 디스크 속도에 따라 10~40초가 소요됩니다. 이후 임베딩은 빠릅니다.',
+          },
+          {
+            '증상': '검색이 쿼리와 관련 없는 청크를 반환',
+            '가능한 원인': '기본 512/0 청킹 + 약한 기본 임베더',
+            '해결책': '4단계(nomic-embed-text)와 7단계(청킹 1000/200)가 모두 적용되었는지 확인하십시오. 워크스페이스를 재처리하십시오.',
+          },
+          {
+            '증상': '응답이 짧거나, 일반적이거나, 소스 작업을 거부',
+            '가능한 원인': '선택된 LLM이 여전히 기본 소형 모델이거나 컨텍스트가 너무 작음',
+            '해결책': 'LLM 기본 설정에 `llama3.3:8b-instruct-q4_K_M`이 표시되는지 확인하십시오. top-K를 4에서 6으로 올리십시오.',
+          },
+          {
+            '증상': '스캔된 이미지 PDF가 업로드되지만 빈 청크 생성',
+            '가능한 원인': 'PDF에 텍스트 레이어가 없음. 순수 래스터 이미지',
+            '해결책': '먼저 PDF에 OCR을 적용하십시오. macOS: `ocrmypdf input.pdf output.pdf`. Linux/Windows: Tesseract + ocrmypdf를 설치하십시오. 그런 다음 OCR 처리된 파일을 다시 업로드하십시오.',
+          },
+        ],
+        columns: ['증상', '가능한 원인', '해결책'],
+        image: '/images/local-rag-on-your-pdfs-step-by-step-troubleshooting-en.svg',
+        imageCaption: '여섯 가지 실패 모드: 연결 거부됨(ollama serve 실행), 다운로드 멈춤(Ctrl+C → df -h → 재시도), 임베딩 멈춤(30~60초 대기), 관련 없는 청크(4단계 + 7단계 적용), 짧은/일반적 응답(llama3.3:8b-instruct-q4_K_M 설정, Top-K 올리기), 스캔 PDF 빈 청크(먼저 ocrmypdf 실행).',
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: '지역 컨텍스트: 한국의 데이터 프라이버시',
+        content:
+          '이 같은 로컬 RAG 시스템은 한국의 핵심 데이터 프라이버시 요구 사항을 직접적으로 충족합니다. 데이터를 외부 제공자에게 전송하는 클라우드 RAG 솔루션과 달리, 모든 것이 기기에 유지됩니다.',
+        items: [
+          '**개인정보보호법(PIPA) 준수:** 한국의 개인정보보호법(PIPA)은 개인 데이터 처리에 엄격한 기준을 요구합니다. 외부로 데이터를 전송하지 않는 로컬 RAG 시스템은 이 요구 사항을 직접적으로 충족합니다. 클라우드 RAG 솔루션과 달리 제3자 데이터 처리 계약이 필요하지 않습니다.',
+          '**규제 산업:** 금융, 의료, 법률 및 공공 부문 조직은 로컬 RAG를 통해 혜택을 받습니다. 클라우드 API 의존성 없음, 데이터 국외 이전 없음, 로컬 규정 즉시 준수.',
+          '**일반적인 한국 기업 시나리오:** 5년치 고객 계약서를 보관하고 AnythingLLM으로 인덱싱하여 실사 검색 및 고객 데이터 쿼리를 완전히 로컬에서 실행하십시오. 운영 비용: 사실상 제로. 프로덕션 설치: 노트북이나 로컬 서버에서 30분.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Ollama가 설치되지 않으면 어떻게 합니까?',
+            a: 'macOS에서 가장 일반적인 실패는 Gatekeeper가 서명되지 않은 헬퍼를 차단하는 것입니다. 시스템 설정 → 개인 정보 보호 및 보안을 열고 "그래도 열기"를 클릭하십시오. Windows에서 Defender SmartScreen이 설치 프로그램을 격리할 수 있습니다. 마우스 오른쪽 버튼 클릭 → 속성 → 차단 해제하십시오. Linux에서 설치 스크립트는 systemd 유닛을 작성하기 위해 sudo가 필요합니다. sudo를 사용할 수 없는 경우 github.com/ollama/ollama/releases에서 정적 바이너리를 다운로드하여 PATH에 수동으로 배치하십시오.',
+          },
+          {
+            q: '임베딩 단계가 왜 느립니까?',
+            a: '세션의 첫 번째 임베딩은 Ollama가 임베딩 모델을 지연 로드하기 때문에 느립니다(디스크 속도에 따라 10~40초). 그 후 임베딩은 최신 CPU에서 400~800 청크/초, Apple Silicon에서 2000 청크/초 이상으로 실행됩니다. 지속 처리량이 100 청크/초 미만이면 모델이 디스크 가상 메모리를 사용하고 있을 가능성이 높습니다. 다른 애플리케이션을 닫아 RAM을 확보하고 다시 시도하십시오.',
+          },
+          {
+            q: '한 번에 몇 개의 PDF를 업로드할 수 있습니까?',
+            a: 'AnythingLLM은 단일 드래그 앤 드롭으로 수백 개의 파일을 허용합니다. 실용적인 한계는 파싱 단계 중 RAM입니다. 평균 크기(각 50페이지)의 PDF 100개에 대해 최대 약 1GB. 처리 후 디스크의 벡터 저장소는 작습니다(PDF 100페이지당 약 10~30MB). PDF 1000개 이상의 경우 [로컬에서 PDF 1000개와 채팅하기](/ko/power-local-llm/chat-with-1000-pdfs-locally) 전용 가이드를 참조하십시오.',
+          },
+          {
+            q: '비밀번호 보호된 PDF와 함께 사용할 수 있습니까?',
+            a: 'AnythingLLM은 비밀번호 보호된 PDF를 직접 해독할 수 없습니다. 먼저 `qpdf --password=비밀번호 --decrypt input.pdf output.pdf`로 해독하십시오(qpdf는 무료, 세 가지 운영 체제 모두 사용 가능). 그런 다음 보호되지 않은 파일을 업로드하십시오. 위협 모델이 필요한 경우 임베딩 후 보호되지 않은 복사본을 삭제하십시오. 임베딩 자체는 사람이 읽을 수 없습니다.',
+          },
+          {
+            q: '검색이 잘못된 청크를 반환하면 어떻게 합니까?',
+            a: '영향 순서로 세 가지 매개변수: 기본 임베더를 nomic-embed-text로 변경(4단계), 청킹을 512/0에서 1000/200으로 변경하고 재처리(7단계), 워크스페이스 설정에서 top-K를 4에서 6으로 올리기. 세 가지 모두 적용 후에도 검색이 실패하면 문서에 전처리가 필요할 수 있습니다. 머리글과 바닥글을 제거하고, 공백을 정규화하거나, 매우 긴 PDF를 챕터별 파일로 분할하십시오.',
+          },
+          {
+            q: 'Llama 3.3 8B 외에 다른 모델을 사용해야 합니까?',
+            a: 'Llama 3.3 8B Q4_K_M은 2026년 16GB 시스템에서 최고의 품질 대 RAM 비율을 제공합니다. RAM 8GB에서는 Phi-4 Mini Q4_K_M(약 2.4GB)을 사용하십시오. RAM 24GB 이상에서는 긴 문서에서 현저히 나은 종합을 위해 Qwen 3 14B Q4를 시도하십시오. 다국어 워크로드의 경우 Mistral Nemo 12B가 Llama 3.3보다 한국어 콘텐츠를 더 잘 처리합니다.',
+          },
+          {
+            q: '나중에 모델을 어떻게 업데이트합니까?',
+            a: '`ollama pull llama3.3:8b-instruct-q4_K_M`을 다시 실행하여 최신 버전을 가져오고 AnythingLLM을 재시작하여 모델 버전을 다시 감지하게 하십시오. 완전히 다른 모델로 전환하려면 `ollama pull <새-모델>`을 실행하고 AnythingLLM 설정의 LLM 기본 설정 드롭다운을 변경하십시오. 임베딩은 임베더에만 의존하고 응답 모델에는 의존하지 않으므로 재처리가 필요하지 않습니다.',
+          },
+          {
+            q: '다른 기기로 이동할 수 있습니까?',
+            a: '예. Ollama 모델은 `~/.ollama/models`(macOS/Linux) 또는 `%USERPROFILE%\.ollama\models`(Windows)에 있습니다. 폴더를 복사하십시오. AnythingLLM 워크스페이스는 `~/.anythingllm/storage`에 있습니다. 이것도 복사하십시오. 새 기기에서 Ollama와 AnythingLLM Desktop을 설치하고 복사된 폴더를 제자리에 놓으십시오. 워크스페이스와 임베딩이 동일하게 복원됩니다.',
+          },
+          {
+            q: 'PDF가 스캔된 이미지인 경우 작동합니까?',
+            a: '직접적으로는 작동하지 않습니다. AnythingLLM은 텍스트를 추출하지만 이미지에서 OCR을 수행할 수 없습니다. `ocrmypdf input.pdf output.pdf`로 스캔된 PDF를 전처리하십시오(크로스 플랫폼, MIT 라이선스, Tesseract 사용). Apple Silicon에서 `ocrmypdf -l eng+kor`는 70개 이상의 언어를 지원합니다. OCR 후 출력 PDF에는 원본 이미지와 검색 가능한 텍스트 레이어가 모두 포함되어 있으며 AnythingLLM이 텍스트를 올바르게 추출합니다.',
+          },
+          {
+            q: '문서 데이터베이스를 어떻게 백업합니까?',
+            a: 'AnythingLLM은 모든 것을 `~/.anythingllm/storage`(macOS/Linux) 또는 `%LOCALAPPDATA%\anythingllm-desktop\storage`(Windows)에 저장합니다. 해당 폴더를 tar/zip으로 압축하여 백업 장치에 복사하십시오. 폴더에는 원본 문서, 파싱된 청크, 벡터 인덱스 및 채팅 기록이 포함됩니다. 복원은 다시 복사하고 재시작하는 것입니다. 특별한 가져오기 흐름이 필요하지 않습니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[AnythingLLM vs PrivateGPT vs Open WebUI: 최고의 로컬 RAG](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — AnythingLLM을 선택하기 전에 대안을 평가하려는 독자를 위해.',
+          '[2026년 로컬 RAG를 위한 최고의 임베딩 모델](/ko/power-local-llm/best-embedding-models-local-rag-2026) — nomic-embed-text보다 나은 검색을 원하는 독자를 위해.',
+          '[내장 RAG가 있는 로컬 AI 앱: 파일과 채팅하기 (설정 없음)](/ko/power-local-llm/local-ai-app-with-built-in-rag) — AnythingLLM보다 더 간단한 것을 찾는 독자를 위해.',
+          '[RAG 설명: 실제 데이터로 AI 응답 기반 세우기 (2026)](/ko/prompt-engineering/rag-explained) — RAG가 무엇인지, 왜 각 구성 요소가 중요한지에 대한 개념적 권위.',
+          '[2026년 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026) — 소프트웨어만이 아닌 노트북을 선택하는 경우를 위한 하드웨어 크기 조정 참조.',
+          '[Power Local LLM 허브](/ko/power-local-llm) — 클러스터의 전체 가이드 라이브러리.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/ko/power-local-llm/local-rag-on-your-pdfs-step-by-step',
+      'headline': '30분 만에 PDF에 로컬 RAG 구축하기 (Ollama + AnythingLLM)',
+      'description':
+        '단계별 안내: Ollama 설치, AnythingLLM 설정, PDF 업로드 및 대화. 총 소요 시간 30분. 16GB RAM 노트북에서 테스트 완료. 2026년 5월.',
+      'datePublished': '2026-05-07',
+      'dateModified': '2026-05-07',
+      'author': {
+        '@type': 'Person',
+        'name': 'Hans Kuepper',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+      'inLanguage': 'ko',
+      'proficiencyLevel': 'Beginner',
+      'about': [
+        { '@type': 'Thing', 'name': 'Ollama' },
+        { '@type': 'Thing', 'name': 'AnythingLLM' },
+        { '@type': 'Thing', 'name': 'Llama 3.3 8B' },
+        { '@type': 'Thing', 'name': 'nomic-embed-text' },
+        { '@type': 'Thing', 'name': 'Retrieval-augmented generation' },
+        { '@type': 'Thing', 'name': '로컬 RAG' },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': '홈',
+          'item': 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Power Local LLM',
+          'item': 'https://www.promptquorum.com/ko/power-local-llm',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': '30분 만에 PDF에 로컬 RAG 구축하기',
+          'item': 'https://www.promptquorum.com/ko/power-local-llm/local-rag-on-your-pdfs-step-by-step',
+        },
+      ],
+    },
+  },
 }

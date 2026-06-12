@@ -4004,4 +4004,521 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
 },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Coding Assistants',
+    title: 'Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코드 에이전트',
+    seoTitle: 'Continue.dev vs Cline vs Aider: 로컬 코드 에이전트 2026',
+    intro:
+      'Continue.dev, Cline, Aider는 2026년 현재 로컬 LLM과 올바르게 통합되는 세 가지 진지한 오픈소스 코딩 도구입니다. 이 세 도구는 서로 교체 가능하지 않습니다. 각각은 서로 다른 워크플로우 원시 요소를 중심으로 구축되어 있습니다 — 자동완성, 자율 에이전트 루프, 또는 Git 네이티브 diff. 먼저 워크플로우에 따라 선택하고, 그 다음 모델을 선택하면 통합 문제의 90%를 피할 수 있습니다.',
+    metaDescription:
+      'Continue.dev, Cline, Aider를 2026년 로컬 코드 에이전트로 비교: 편집 모델, IDE 통합, 실행 취소, 컨텍스트 전략.',
+    twitterDescription:
+      '세 가지 로컬 코딩 도구, 세 가지 고유한 워크플로우 원시 요소. Continue.dev는 자동완성, Cline은 자율 에이전트, Aider는 Git 네이티브 diff. 워크플로우별 최종 판정.',
+    current_models_mentioned: [
+      'Qwen3-Coder 30B',
+      'Qwen3-Coder 7B',
+      'DeepSeek Coder V3',
+      'Llama 3.3 70B',
+      'Codestral 22B',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4070 12 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      '로컬 코드 LLM(Qwen3-Coder, DeepSeek Coder, Codestral, Llama 3.3)을 실행하며 편집기와 프로젝트 워크플로우에 맞는 도구를 선택해야 하는 개발자.',
+    readTime: '14분 분량',
+    educationalLevel: 'Advanced',
+    primaryTerm: '로컬 코드 에이전트',
+    targetKeywords: [
+      'continue.dev vs cline 비교',
+      'cline vs aider 비교',
+      '로컬 llm 코드 에이전트 2026',
+      '로컬 llm 코딩 도구',
+      'aider 로컬 llm',
+      'continue.dev 로컬 llm',
+    ],
+    leadAnswerBlock:
+      '**Continue.dev, Cline, Aider는 동일한 로컬 모델로 서로 다른 문제를 해결합니다. Continue.dev는 자동완성과 IDE 통합 채팅 패널을 중심으로 구축되어 있습니다 — VS Code 또는 JetBrains에서 타이핑하면서 편집하는 워크플로우에 이상적입니다. Cline은 VS Code의 자율 에이전트로, 여러 파일에 걸쳐 명시적인 승인 게이트를 통해 계획하고 편집하고 명령을 실행합니다 — 다중 파일 리팩토링과 탐색적 버그 추적에 이상적입니다. Aider는 터미널 지향의 Git 네이티브 CLI로, 각 편집을 검색 및 교체 diff와 함께 커밋으로 변환합니다 — 저장소 규모의 작업과 `git log`에 모든 변경 사항이 반영되기를 원하는 리뷰어에게 이상적입니다. 어느 도구가 더 강력해 보이는지가 아니라 워크플로우 원시 요소(자동완성 vs 에이전트 루프 vs Git diff)에 따라 선택하십시오.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 최고의 로컬 코드 에이전트는 무엇입니까: Continue.dev, Cline, Aider 중 어느 것입니까?',
+        answer:
+          'VS Code 또는 JetBrains에서 하루 대부분을 보내며 코드베이스에 접근하는 채팅 패널과 함께 자동완성을 원하신다면 Continue.dev를 선택하십시오. 단계 사이에 승인 게이트를 두어 여러 파일을 계획하고 편집하고 명령을 실행하는 자율 에이전트를 원하신다면 — 리팩토링과 탐색적 버그 추적에 가장 강력한 — Cline을 선택하십시오. 터미널에서 작업하며 각 편집이 별도의 검토 가능한 git 커밋으로 남기를 원하신다면 Aider를 선택하십시오. 세 도구 모두 로컬 LLM 엔드포인트(Ollama, llama.cpp, LM Studio, vLLM)에 대해 완전히 오프라인으로 작동합니다. 올바른 선택은 품질 순위가 아닌 워크플로우 결정입니다.',
+        bullets: [
+          'Continue.dev — 자동완성 + IDE 통합 채팅. 편집기를 벗어나지 않고 점진적 편집을 원하는 VS Code 및 JetBrains 사용자에게 이상적입니다.',
+          'Cline — Plan/Act 모드, 도구 호출, 단계별 승인을 갖춘 자율 에이전트. 다중 파일 리팩토링과 버그 추적에 이상적입니다.',
+          'Aider — Git 네이티브 커밋과 검색 및 교체 diff를 갖춘 터미널 CLI. 실행 취소를 지원하는 검토 가능한 저장소 규모의 작업에 이상적입니다.',
+          '세 도구 모두 OpenAI 호환 로컬 엔드포인트에서 작동합니다 — Ollama가 가장 간단한 경로이며, llama.cpp와 vLLM은 공급자 설정을 통해 호환됩니다.',
+          '워크플로우 적합성이 원시 능력을 능가합니다. 터미널 지향 개발자를 Cline에 억지로 맞추거나(또는 VS Code 전용 개발자를 Aider에) 도구가 절약하는 것보다 더 많은 시간이 소요됩니다.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '비교표', anchor: '#comparison-table' },
+      { label: '어떤 것을 선택해야 합니까?', anchor: '#which-one' },
+      { label: 'Continue.dev: 심층 분석', anchor: '#continue-dev' },
+      { label: 'Cline: 심층 분석', anchor: '#cline' },
+      { label: 'Aider: 심층 분석', anchor: '#aider' },
+      { label: '편집 모델: 각 도구의 코드 작성 방식', anchor: '#edit-model' },
+      { label: '실행 취소 및 되돌리기', anchor: '#undo' },
+      { label: '컨텍스트 윈도우 전략', anchor: '#context' },
+      { label: '도구 호출 신뢰성', anchor: '#tool-calls' },
+      { label: 'IDE 통합', anchor: '#ide-integration' },
+      { label: '사용 사례별 워크플로우 적합성', anchor: '#workflow-fit' },
+      { label: '의사결정 트리', anchor: '#decision-tree' },
+      { label: '일반적인 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽기', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/continue-dev-vs-cline-vs-aider-local-static.html',
+    gammaDescription: '아래 프레젠테이션은 다음을 다룹니다: Continue.dev, Cline, Aider가 로컬 코딩 도구로서 어떻게 다른지(자동완성 vs 자율 에이전트 vs git 네이티브 diff), 기능 비교표, 도구 및 모델 크기별 편집 모델 신뢰성, 컨텍스트 윈도우 전략(32K vs 128K), IDE 통합(VS Code, JetBrains, Vim/SSH), 그리고 도구 선택 시 6가지 일반적인 실수. 로컬 코드 에이전트 참조 카드로 PDF를 다운로드하십시오.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Continue.dev**는 자동완성 우선입니다: FIM(fill-in-the-middle) 완성, IDE 통합 사이드 채팅 패널, `@` 컨텍스트 공급자(코드베이스, 파일, 문서, 터미널)를 갖춘 VS Code 및 JetBrains 확장. 로컬 모델을 위한 Copilot에 가장 가까운 오픈소스 유사품입니다.',
+          '**Cline**은 에이전트 우선입니다: 명시적인 Plan 및 Act 모드, 도구 호출 루프(read_file, write_to_file, execute_command, browser_action), 각 단계의 승인 게이트를 갖춘 VS Code 확장. 감독하는 동안 여러 파일에 자율적으로 실행되도록 설계되었습니다.',
+          '**Aider**는 Git 우선입니다: tree-sitter 저장소 맵을 유지하고, 검색 및 교체 diff 블록을 통해 파일을 편집하며, 각 변경 사항을 커밋하는 터미널 CLI. 실행 취소는 `git reset`입니다 — 세 가지 중 가장 검토 가능한 워크플로우.',
+          '세 도구 모두 OpenAI 호환 엔드포인트와 통신합니다. **Ollama**가 가장 원활한 로컬 백엔드이며, **llama.cpp**와 **vLLM**은 공급자 설정 또는 LiteLLM과 같은 프록시를 통해 작동합니다.',
+          '**도구 호출 신뢰성**은 도구가 아닌 모델에 의존합니다. Qwen3-Coder 30B와 DeepSeek Coder V3는 2026년 5월 기준 가장 신뢰할 수 있는 도구 호출자입니다. 소형 모델(7B 클래스)은 어느 도구로 감싸도 정기적으로 잘못된 형식의 도구 호출을 발생시킵니다.',
+          '**컨텍스트 윈도우 전략**은 현저히 다릅니다: Continue.dev는 내장 코드베이스 인덱스와 `@` 고정 컨텍스트에 의존하고, Cline은 전체 파일 내용을 대화에 스트리밍합니다(높은 토큰 사용), Aider는 tree-sitter 저장소 맵과 명시적인 `/add` 및 `/drop`을 사용하여 작업 세트를 작게 유지합니다.',
+          '개별 개발자의 경우, **워크플로우 적합성**이 어떤 벤치마크보다 결과를 지배합니다. 실제로 열어두는 도구가 선택해야 할 도구입니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**Continue.dev** — 자동완성 + 채팅, VS Code 및 JetBrains, 세 가지 중 가장 마찰이 적은 설치.',
+          '**Cline** — 승인 게이트를 갖춘 자율 에이전트, VS Code 전용, 가장 높은 기능과 가장 높은 토큰 사용량.',
+          '**Aider** — 터미널 CLI, Git 네이티브 커밋, 각 편집은 Git을 통해 검토 및 되돌리기 가능.',
+          '세 도구 모두 동일한 로컬 백엔드에서 실행됩니다 — **Ollama**가 가장 원활한 경로이며, **llama.cpp**와 **vLLM**도 OpenAI 호환 설정으로 작동합니다.',
+          '**도구 호출 신뢰성은 도구의 속성이 아닌 모델의 속성입니다.** Qwen3-Coder 30B와 DeepSeek Coder V3는 세 도구 모두에서 신뢰할 수 있으며, 7B 클래스 모델은 세 도구 모두에서 실패합니다.',
+          '**컨텍스트 예산:** Continue.dev와 Aider는 32K 컨텍스트 모델에서 편안하게 작동합니다. Cline은 사소하지 않은 다중 파일 작업에 **128K**가 필요합니다.',
+          '**편집기에 따라 선택하십시오:** JetBrains → Continue.dev 또는 Aider. Vim/Neovim 또는 SSH → Aider. 자동완성을 많이 사용하는 VS Code → Continue.dev. 다중 파일 리팩토링을 하는 VS Code → Cline.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '2026년 Continue.dev, Cline, Aider 비교',
+        content:
+          '세 도구 모두 오픈소스이며 무료이고 모든 로컬 LLM 엔드포인트에서 작동합니다. 아래의 구조적 차이점이 어느 도구가 귀하의 워크플로우에 적합한지 결정합니다.',
+        image: '/images/coding-agent-comparison-ko.svg',
+        imageCaption: 'Continue.dev vs Cline vs Aider: Continue.dev는 VS Code/JetBrains 자동완성용(컨텍스트 32K), Cline은 VS Code 다중 파일 자율 에이전트용(128K 권장), Aider는 터미널 git 네이티브 커밋용(컨텍스트 32K).',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Continue.dev는 Copilot 스타일의 자동완성, Cline은 파일 간 편집하는 자율 에이전트, Aider는 각 편집을 Git에 커밋하는 터미널 도구입니다 — 벤치마크가 아닌 워크플로우에 따라 선택하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '세 가지 무료 도구, 동일한 로컬 모델, 세 가지 완전히 다른 워크플로우. Continue.dev는 Copilot처럼 느껴집니다 — Tab을 눌러 편집기 내 제안을 수락합니다. Cline은 감독하는 주니어 개발자처럼 느껴집니다 — 각 단계를 승인하는 동안 파일 간에 계획하고 편집합니다. Aider는 터미널에서의 페어 프로그래밍처럼 느껴집니다 — 대화하면 커밋합니다. 이미 작업하는 방식과 일치하는 것을 시도해 보십시오.',
+          },
+        ],
+        columns: ['기능', 'Continue.dev', 'Cline', 'Aider'],
+        rows: [
+          {
+            '기능': '주요 인터페이스',
+            'Continue.dev': 'VS Code 및 JetBrains 확장',
+            'Cline': 'VS Code 확장',
+            'Aider': '터미널 CLI (모든 편집기와 나란히)',
+          },
+          {
+            '기능': '워크플로우 원시 요소',
+            'Continue.dev': '자동완성 + IDE 통합 채팅',
+            'Cline': '승인 게이트를 갖춘 자율 에이전트 루프',
+            'Aider': 'Git 네이티브 diff 편집, 각 변경 사항이 커밋',
+          },
+          {
+            '기능': '편집 모델',
+            'Continue.dev': '인라인 FIM + 채팅에서 파일에 적용',
+            'Cline': '도구 호출(read_file, write_to_file, replace_in_file)',
+            'Aider': '검색 및 교체 diff 블록; 소형 파일을 위한 "전체" 모드',
+          },
+          {
+            '기능': '다중 파일 편집',
+            'Continue.dev': '수동: 채팅이 제안하면 파일별로 적용',
+            'Cline': '네이티브: 에이전트가 단일 작업에서 파일 간 편집',
+            'Aider': '네이티브: 프롬프트에 파일 명명, 편집이 하나의 커밋으로 정착',
+          },
+          {
+            '기능': '실행 취소 / 되돌리기',
+            'Continue.dev': '적용된 편집에서 VS Code 실행 취소 스택',
+            'Cline': '에이전트 UI에서 편집별 되돌리기; 전체 되돌리기는 Git',
+            'Aider': '`/undo`가 마지막 커밋을 되돌림; 아래에 전체 git 기록',
+          },
+          {
+            '기능': '도구 호출 프로토콜',
+            'Continue.dev': 'Agent 모드에서 OpenAI function-calling',
+            'Cline': '엄격한 스키마를 갖춘 커스텀 XML 도구 블록',
+            'Aider': '도구 호출 없음; 모델이 diff 블록을 출력하도록 안내',
+          },
+          {
+            '기능': '코드베이스 컨텍스트',
+            'Continue.dev': '로컬 인덱스(TF-IDF + 임베딩) + `@` 공급자',
+            'Cline': '파일 전체 내용을 대화에 스트리밍',
+            'Aider': 'Tree-sitter 저장소 맵 + `/add` 및 `/drop` 수동 관리',
+          },
+          {
+            '기능': '승인 / 안전',
+            'Continue.dev': '각 적용 전 diff 미리보기',
+            'Cline': '단계별 승인; 구성 가능한 자동 승인 허용 목록',
+            'Aider': '터미널에서 diff 미리보기; 커밋 단계는 자동',
+          },
+          {
+            '기능': '최적 사용 사례',
+            'Continue.dev': '타이핑하며 편집, IDE 통합 채팅, 자동완성 집약적인 날',
+            'Cline': '다중 파일 리팩토링, 탐색적 디버깅, 저장소 작업',
+            'Aider': '저장소 규모의 검토 가능한 변경, 터미널 지향 워크플로우',
+          },
+        ],
+      },
+      whichOne: {
+        id: 'which-one',
+        title: '어떤 것을 선택해야 합니까',
+        content:
+          '**올바른 도구는 편집기, 자율 편집에 대한 내성, 변경 사항 검토 방식에 따라 결정됩니다.** 이 단축키를 사용하십시오.',
+        image: '/images/coding-agent-which-one-ko.svg',
+        imageCaption: '어떤 로컬 코딩 도구를 선택할지: Continue.dev는 IDE 자동완성과 채팅용(VS Code + JetBrains), Cline은 다중 파일 에이전트 루프와 명령 실행용, Aider는 터미널 및 SSH 환경에서의 git 네이티브 워크플로우용.',
+        columns: ['귀하의 상황', '선택'],
+        rows: [
+          { '귀하의 상황': 'VS Code 또는 JetBrains IDE에서 생활하며 Copilot 스타일의 자동완성을 원함', '선택': 'Continue.dev' },
+          { '귀하의 상황': '파일을 수동으로 업로드하지 않고 코드베이스에 접근하는 사이드 채팅 패널을 원함', '선택': 'Continue.dev' },
+          { '귀하의 상황': '다중 파일에 걸쳐 리팩토링을 계획하고 각 단계 전에 확인하는 에이전트를 원함', '선택': 'Cline' },
+          { '귀하의 상황': '모델이 루프의 일부로 명령을 실행하고 터미널 출력을 읽을 수 있기를 원함', '선택': 'Cline' },
+          { '귀하의 상황': '`git diff`로 변경 사항을 검토하며 각 편집이 자동으로 커밋되기를 원함', '선택': 'Aider' },
+          { '귀하의 상황': 'SSH로 작업하거나 터미널 지향 환경에서 작업함', '선택': 'Aider' },
+          { '귀하의 상황': '가끔 세 가지 워크플로우가 모두 필요함 — 먼저 가장 간단한 것을 선택', '선택': 'Continue.dev로 시작하고, Git 네이티브 diff가 필요할 때 Aider 추가' },
+        ],
+      },
+      continueDevDeep: {
+        id: 'continue-dev',
+        title: 'Continue.dev: 자동완성 중심의 선택',
+        content:
+          '**Continue.dev는 로컬 모델을 위한 GitHub Copilot에 가장 가까운 오픈소스 유사품입니다.** 주요 인터페이스는 편집기입니다: 타이핑하면서 Tab 완성과 코드베이스를 아는 사이드 채팅 패널.',
+        items: [
+          '**설치 경로:** VS Code Marketplace 및 JetBrains Marketplace. 설정은 `~/.continue/config.json`(또는 `config.yaml`)에 있으며, 모델 정의, 자동완성 설정, `@` 컨텍스트 공급자가 모두 포함됩니다.',
+          '**워크플로우 원시 요소:** FIM(fill-in-the-middle) 자동완성과 IDE 통합 사이드 채팅 패널. 채팅 패널은 열린 파일에 직접 편집을 적용할 수 있으며, Agent 모드는 다단계 작업을 위한 도구 호출 루프를 추가합니다.',
+          '**로컬 모델 설정:** 네이티브 Ollama 지원은 하나의 설정 블록입니다. llama.cpp, LM Studio, 모든 OpenAI 호환 엔드포인트도 작동합니다. 표준 패턴은 자동완성(소형, 빠름 — Qwen3-Coder 1.5B 클래스)과 채팅(대형 — Qwen3-Coder 30B, DeepSeek Coder V3)에 별도 모델을 실행하는 것입니다.',
+          '**코드베이스 컨텍스트:** 프로젝트 폴더에 대한 로컬 인덱스(TF-IDF 및 임베딩). `@codebase`, `@file`, `@folder`, `@docs`, `@terminal` 및 커스텀 공급자가 채팅 패널에서 인덱스에 접근합니다.',
+          '**편집 모델:** 채팅에서 모델이 코드 블록을 제안하면 "적용"을 클릭하면 열린 파일에 diff를 만들고 변경 수락 또는 거부를 선택할 수 있습니다. Cmd/Ctrl+I를 통한 인라인 편집은 선택한 내용을 그 자리에서 재작성하고 diff가 즉시 표시됩니다. 두 플로우 모두 쓰기 전에 diff 미리보기를 표시합니다.',
+          '**장점:** 이미 사용 중인 IDE 내 키보드 기반 편집, 편집당 낮은 인지 부담, 빠른 피드백 루프. 설치했다는 것을 잊게 되는 도구.',
+          '**단점:** 다중 파일 리팩토링은 파일별로 채팅을 안내해야 합니다. 장시간 자율 작업은 기본 모드가 아닙니다 — Agent 모드가 개선되고 있지만 프로젝트의 중심은 아닙니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Continue.dev 설정에서 두 가지 모델을 실행하십시오: 소형 자동완성 모델(Q4_K_M의 Qwen3-Coder 1.5B는 ~1.5 GB VRAM 필요)과 대형 채팅 모델(Q4_K_M의 Qwen3-Coder 30B, ~17 GB). 이를 분리하면 자동완성 지연 시간이 200ms 미만으로 유지되면서 채팅 패널이 사소하지 않은 질문에 여전히 유용합니다.',
+          },
+        ],
+      },
+      clineDeep: {
+        id: 'cline',
+        title: 'Cline: 자율 에이전트의 선택',
+        content:
+          '**Cline은 코드를 일련의 편집이 아닌 에이전트 작업으로 처리합니다.** 목표를 제시하면 계획하고, 파일을 읽고, 편집하고, 명령을 실행하며 각 단계를 승인하도록 요청합니다.',
+        items: [
+          '**설치 경로:** VS Code Marketplace(JetBrains 버전 없음). 설정은 확장 패널 내 GUI를 통해 수행됩니다 — 공급자, 모델, 자동 승인 설정, 커스텀 지침.',
+          '**워크플로우 원시 요소:** 명시적인 Plan 및 Act 모드를 갖춘 자율 에이전트 루프. Plan 모드는 파일 작성 없이 작업을 추론하고, Act 모드는 도구 호출로 계획을 실행합니다. 자동 승인 허용 목록에 도구를 추가하지 않는 한 단계 사이에 승인 게이트가 나타납니다.',
+          '**로컬 모델 설정:** 모든 OpenAI 호환 엔드포인트. Ollama는 원클릭입니다. llama.cpp 또는 vLLM의 경우, Cline을 OpenAI 호환 서버 URL로 지정합니다. 에이전트 루프는 토큰을 많이 사용합니다 — 최소 32K 컨텍스트 윈도우의 모델을 사용하십시오(32K에서 Qwen3-Coder 30B, 128K에서 DeepSeek Coder V3).',
+          '**도구 표면:** `read_file`, `write_to_file`, `replace_in_file`, `execute_command`, `list_files`, `search_files`, `browser_action`, `ask_followup_question`, `attempt_completion`. 세트는 작고 잘 문서화되어 있습니다. 도구 스키마는 모델이 올바르게 출력해야 하는 커스텀 XML 형식을 사용합니다.',
+          '**편집 모델:** 수백 줄의 파일의 경우, Cline이 전체 파일을 씁니다. 더 큰 파일의 경우, 명시적인 검색 및 교체 블록이 있는 `replace_in_file` 작업을 발생시킵니다. 각 쓰기 전에 패널에 diff가 표시됩니다.',
+          '**장점:** 다중 파일 리팩토링, "이 테스트가 왜 실패합니까?"라는 탐색적 작업, "세 계층에 걸쳐 기능 추가" 워크플로우. 5개 이상의 파일 편집이 있는 작업에서 세 가지 중 가장 강력합니다.',
+          '**단점:** 토큰 소비가 높습니다 — 각 읽기에서 전체 파일 내용이 대화에 스트리밍됩니다. 긴 세션은 32K 컨텍스트 모델을 소진시킵니다. 소형 모델(7B 클래스)의 도구 호출 신뢰성이 크게 저하됩니다 — 잘못된 형식의 XML을 발생시키고 루프가 중단됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Cline의 자동 승인 허용 목록은 유용한 에이전트와 지루한 에이전트의 차이입니다. 기본적으로 `read_file`, `list_files`, `search_files`를 허용하고, 이 코드베이스로 모델을 신뢰할 때까지 `write_to_file`, `replace_in_file`, `execute_command`는 게이트로 유지하십시오. 프로젝트별로 조정하십시오.',
+          },
+        ],
+      },
+      aiderDeep: {
+        id: 'aider',
+        title: 'Aider: Git 네이티브의 선택',
+        content:
+          '**Aider는 세 가지 중 대화가 아닌 저장소를 진실의 원천으로 취급하는 유일한 도구입니다.** 각 편집은 Git 커밋으로 정착됩니다. 실행 취소는 `git reset`입니다. 채팅 기록은 일회용이며, 커밋 로그가 아티팩트입니다.',
+        items: [
+          '**설치 경로:** `pip install aider-chat` 또는 `pipx install aider-chat`. CLI 호출: `aider file1.py file2.py`(파일이 대화 범위 내에 있음). `.aider.conf.yml` 및 플래그 재정의를 통한 설정.',
+          '**워크플로우 원시 요소:** 터미널 지향 대화형 편집. 프롬프트를 작성하면 Aider가 diff를 제안합니다. 수락하면 변경 사항이 커밋됩니다. `/add`와 `/drop`이 범위 내 파일을 관리합니다. `/undo`가 마지막 커밋을 되돌립니다. `/diff`가 HEAD에 대한 최근 변경 사항을 표시합니다.',
+          '**로컬 모델 설정:** LiteLLM을 통해 접근 가능한 모든 모델 — Ollama, OpenAI 호환 서버(llama.cpp, vLLM, LM Studio) 또는 모델 공급자 직접. `--model ollama_chat/qwen3-coder:30b`가 일반적인 로컬 호출입니다.',
+          '**코드베이스 컨텍스트:** tree-sitter 저장소 맵. Aider가 정의(함수, 클래스, 메서드)에 대한 저장소를 구문 분석하고, 범위 내 파일에 대한 근접성에 따라 요약하며, 시스템 프롬프트에 요약을 포함합니다. 맵은 소형 저장소의 경우 약 1K–4K 토큰에 맞으며, 대형 저장소의 경우 더 많습니다 — `--map-tokens`가 예산을 제한합니다.',
+          '**편집 모델:** 두 가지 전략. "diff" 모드는 모델이 문자 그대로 생성해야 하는 검색 및 교체 블록을 발생시킵니다 — 정밀하고 토큰이 적지만, 모델이 검색 블록을 바꿔 말하면 실패합니다. "전체" 모드는 전체 파일을 다시 씁니다 — 소형 파일에서는 견고하지만 대형 파일에서는 비용이 많이 듭니다. Aider는 알려진 강점과 일치하는 모델별 기본값을 자동으로 선택합니다.',
+          '**장점:** 커밋 로그에 각 단계를 원하는 저장소 규모의 변경 사항; 내장된 코드 리뷰가 있는 페어 프로그래밍(각 커밋이 별개의 검토 단위); IDE 확장이 옵션이 아닌 SSH 및 devcontainer 워크플로우.',
+          '**단점:** 자동완성 없음. 기본적으로 IDE 미리보기 없음(VS Code 터미널 패널에서 편집기 옆에서 잘 작동하지만 통합되지 않음). diff 편집 형식은 모델 출력 품질에 민감합니다 — 검색 블록을 재현하는 대신 바꿔 말하는 모델은 편집이 실패하고 터미널에서 재시도 시도가 표시됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '`auto-commits: true`(기본값)를 설정하고 기능 완료 후 `git rebase -i`를 사용하여 Aider 커밋을 스쿼시하십시오. 작업 중 상세 커밋은 `/undo`에 유용하고, 최종 스쿼시된 커밋은 팀이 검토하는 것입니다. Aider가 정확히 이 패턴을 문서화합니다.',
+          },
+        ],
+      },
+      editModel: {
+        id: 'edit-model',
+        title: '편집 모델: 각 도구의 코드 작성 방식',
+        content:
+          '**편집 모델은 각 도구의 느낌을 결정하는 가장 큰 단일 요인입니다.** 동일한 모델, 동일한 작업 — 세 가지 매우 다른 아티팩트.',
+        image: '/images/coding-agent-edit-model-ko.svg',
+        imageCaption: '도구별 편집 모델 신뢰성: 7B 모델에서 Continue.dev가 가장 관대하고, Aider는 일치하지 않는 블록을 거부하며, Cline은 잘못된 형식의 XML로 중단됩니다. 30B+ 코드 모델(Qwen3-Coder, DeepSeek Coder V3)에서는 세 가지 모두 신뢰할 수 있습니다.',
+        items: [
+          '**Continue.dev** — 자동완성의 경우: 커서 주변의 FIM 토큰이 인라인 완성을 생성합니다. 채팅 기반 편집의 경우: 모델이 구분된 코드 블록을 반환하고, "적용"이 열린 파일에 diff를 만들어 수락/거부를 제시합니다. 선택에 대한 Cmd/Ctrl+I를 통한 인라인 편집: 모델이 선택 내용을 그 자리에서 다시 씁니다.',
+          '**Cline** — 각 편집은 도구 호출입니다. 새 파일이나 전체 재작성의 경우 `write_to_file`, 명시적인 `<<<<<<< SEARCH` / `>>>>>>> REPLACE` 블록이 있는 정밀한 변경의 경우 `replace_in_file`. 도구 호출은 스키마에 대해 검증됩니다. 잘못된 형식은 에이전트가 보고 재시도하는 "도구 오류"를 생성합니다. 대화는 자유 형식 산문이 아닌 구조화된 도구 호출과 도구 결과입니다.',
+          '**Aider** — CLI에서 구문 분석된 일반 산문으로 렌더링된 검색 및 교체 diff 블록. 모델이 통합 diff 블록과 유사한 내용을 발생시키고, Aider가 이를 적용하고 커밋합니다. SEARCH 블록이 파일과 정확히 일치하지 않으면 편집이 거부되고 Aider가 모델에 재시도를 요청합니다.',
+          '**7B 클래스 모델의 신뢰성 순위:** Continue.dev > Aider > Cline. Continue.dev의 "적용"은 관대합니다 — 약간의 바꿔 말하기가 diff 알고리즘에 의해 조정됩니다. Aider는 일치하지 않는 검색 블록에서 완전히 거부하지만 실패가 명확하고 복구 가능합니다. Cline의 XML 도구 형식은 소형 모델에서 가장 취약합니다 — 잘못된 형식의 도구 호출은 루프를 중단시킵니다.',
+          '**30B+ 도구 호출 모델(Qwen3-Coder 30B, DeepSeek Coder V3)의 신뢰성 순위:** 세 가지가 수렴합니다 — 모델에 정밀한 diff 블록과 올바른 형식의 도구 호출을 일관되게 발생시킬 능력이 있습니다.',
+          '이러한 도구들을 감싸는 것과 독립적으로 코드 생성을 향상시키는 구조화된 프롬프팅 기법에 대해서는 [AI로 더 나은 코드 작성하기](/ko/prompt-engineering/write-better-code-with-ai)를 참조하십시오.',
+        ],
+      },
+      undo: {
+        id: 'undo',
+        title: '실행 취소, 되돌리기, 그리고 "에이전트가 방금 무엇을 했습니까?"라는 질문',
+        content:
+          '**실행 취소는 필요할 때만 알아차리는 화려하지 않은 기능입니다.** 세 도구 모두 복구 가능합니다. 차이점은 "이것은 실수였다"와 "실수가 사라졌다" 사이의 마찰이 얼마나 많은지에 있습니다.',
+        items: [
+          '**Continue.dev** — 적용된 편집은 VS Code 실행 취소 스택에 합류합니다. Cmd/Ctrl+Z는 파일별로 가장 최근의 적용을 되돌립니다. 여러 파일을 되돌리려면 기존 Git 워크플로우가 수행합니다. "이 전체 대화를 실행 취소"라는 도구 수준 명령은 없습니다.',
+          '**Cline** — 에이전트 UI가 각 단계를 카드로 표시합니다. 편집별 되돌리기는 한 번의 클릭입니다. 카드는 작업 기간 동안 지속됩니다. 작업 완료 후 되돌리기는 Git을 통해 이루어집니다 — Cline이 자동으로 커밋하지 않으므로 긴 세션 후에 커밋되지 않은 변경 사항이 쌓일 수 있습니다.',
+          '**Aider** — `/undo`가 가장 최근 커밋을 되돌립니다. 더 이전으로 돌아가려면 반복합니다. 각 편집이 별개의 커밋이므로 세분성이 단계별로 대화와 일치합니다. `git reflog`가 `/undo`가 처리할 수 없는 모든 것을 복구합니다.',
+          '**실용적 시사점:** 감독 없이 20분 동안 에이전트를 실행하는 경향이 있다면, Aider가 이후에 가장 검토 가능한 아티팩트(깔끔한 커밋 로그)를 제공하고, Cline이 진행 중인 가장 읽기 쉬운 감사 추적(단계별 카드, 커밋 없음)을 제공합니다. Continue.dev는 전체 시간 동안 키보드에 앉아 있었다고 가정합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Cline 세션의 경우, 사소하지 않은 작업을 시작하기 전에 `git stash`를 실행하십시오. 에이전트가 잘못된 방향으로 가면, `git stash drop`이 파일별로 되돌리는 것보다 더 빠르게 정리합니다. Aider의 경우, 기존 커밋 로그가 안전망이므로 추가 작업이 필요하지 않습니다.',
+          },
+        ],
+      },
+      context: {
+        id: 'context',
+        title: '컨텍스트 윈도우 전략: 토큰이 어디로 가는가',
+        content:
+          '**세 도구 모두 토큰을 다르게 소비합니다.** 이것은 더 작은 컨텍스트 윈도우(32K 이하)의 모델과 사소하지 않은 저장소를 갖고 있을 때 가장 중요한 예산 결정입니다.',
+        image: '/images/coding-agent-context-strategy-ko.svg',
+        imageCaption: '컨텍스트 윈도우 전략: Continue.dev는 온디맨드 인덱스 검색 사용(최소 32K), Cline은 전체 파일 스트리밍(다중 파일 작업에 128K 권장), Aider는 tree-sitter 저장소 맵과 명시적 /add 사용(최소 32K).',
+        items: [
+          '**Continue.dev** — 프로젝트에 대한 TF-IDF 및 임베딩 인덱스. 검색은 온디맨드입니다: 현재 채팅 메시지와 관련된 스니펫만 프롬프트에 포함됩니다. `@codebase`가 의미론적 검색을 트리거하고, `@file path/to/x.ts`가 파일을 문자 그대로 삽입합니다. 토큰 사용은 고정한 내용에 따라 확장되며, 저장소 크기에 따라 확장되지 않습니다.',
+          '**Cline** — 각 읽기에서 파일 전체 내용이 대화에 스트리밍됩니다. 500줄 파일은 ~3K–5K 토큰을 소비합니다. 8개 파일에 걸친 에이전트 작업은 추론이 일어나기 전에 25K–40K 토큰을 소비합니다. 권장 최소값: 32K 컨텍스트 윈도우; 128K가 편안합니다.',
+          '**Aider** — tree-sitter 저장소 맵(기본값 ~2K 토큰, `--map-tokens`로 설정 가능)과 `/add`로 명시적으로 추가된 파일의 내용. 맵은 전체 코드가 아닌 정의만의 요약이므로 파일을 스트리밍하는 것보다 저장소 크기에 훨씬 잘 확장됩니다. 범위 밖의 파일은 `/drop`하십시오.',
+          '**32K 컨텍스트 모델의 실용적 시사점:** Continue.dev와 Aider는 대부분의 저장소에서 편안합니다. Cline은 128K 컨텍스트 모델로 전환하지 않으면 5–6개 이상의 파일에 걸친 작업에서 컨텍스트 압박을 받기 시작합니다.',
+          '**128K 컨텍스트 모델의 실용적 시사점:** 세 가지 모두 편안합니다. Cline의 높은 소비가 더 이상 중요하지 않으며, 결정 요인은 다시 워크플로우 원시 요소로 돌아갑니다.',
+          '컨텍스트 윈도우와 모델이 컨텍스트 중간에서 정보를 잃는 이유에 대한 더 깊은 설명은 [컨텍스트 윈도우 설명: AI가 잊어버리는 이유](/ko/prompt-engineering/context-windows-explained-why-ai-forgets)를 참조하십시오.',
+        ],
+      },
+      toolCalls: {
+        id: 'tool-calls',
+        title: '도구 호출 신뢰성은 모델의 속성입니다',
+        content:
+          '**도구 호출 실패는 종종 잘못된 방향으로 도구에 귀인됩니다.** 실제로 모델이 잘못된 형식의 호출을 발생시키고, 도구가 엄격하게 검증하며, 루프가 중단됩니다. 다른 도구의 동일한 모델은 동일한 실패 모드를 생성합니다.',
+        items: [
+          '**이러한 도구들에 대해 신뢰할 수 있는 도구 호출을 수행하는 모델(2026년 5월):** Qwen3-Coder 30B(Cline의 XML 형식에서 최고), DeepSeek Coder V3(넓은 컨텍스트, 다단계 계획에서 강력), Llama 3.3 70B(느리지만 신뢰할 수 있음), Codestral 22B(빠르지만 계획 지평이 짧음).',
+          '**어려움을 겪는 모델:** 7B 미만의 모든 것, 코드 미세 조정 없는 13B 미만의 대부분의 범용 모델, 하단에서 Q4_K_M보다 엄격한 양자화. 증상: Cline에서의 잘못된 형식의 XML, Aider에서의 바꿔 말해진 SEARCH 블록, Continue.dev에서의 열린 파일과 일치하지 않는 구분된 코드.',
+          '**해결책은 거의 "도구 변경"이 아닙니다.** "모델 변경" 또는 "양자화 향상"입니다. Q4_K_M의 Qwen3-Coder 30B는 세 도구 모두에서 신뢰할 수 있게 도구 호출을 수행합니다. Q4의 Llama 3.2 7B는 세 도구 모두에서 실패합니다.',
+          '**Continue.dev의 Agent 모드**는 표준 OpenAI 도구 호출 JSON을 사용합니다. 코드에 맞게 조정된 대부분의 모델이 잘 처리합니다.',
+          '**Cline의 XML 형식**이 가장 까다롭습니다 — 모델이 정확한 XML 구조를 생성해야 합니다. 다양한 형식으로 훈련된 코드 조정 모델(Qwen3-Coder, DeepSeek Coder)이 처리합니다. 범용 모델은 종종 그렇지 않습니다.',
+          '**Aider는 도구 호출이 없습니다** — 산문에서 검색 및 교체 블록을 구문 분석합니다. "신뢰성" 질문은 "모델이 SEARCH 블록을 문자 그대로 재현합니까?"가 됩니다. 22B 이상의 대부분의 코드 조정 모델이 잘 수행합니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '새 로컬 모델을 평가할 때, 일반적인 도구 호출 벤치마크가 아닌 실제로 사용하는 도구에서 테스트하십시오. 관련 신호는 일상적인 워크플로우가 중단되는지 여부입니다. 공개 도구 호출 벤치마크에서 85%를 얻는 모델이 Cline 특정 XML을 신뢰할 수 있게 발생시키지 않으면 Cline 작업의 절반을 실패할 수 있습니다.',
+          },
+        ],
+      },
+      ideIntegration: {
+        id: 'ide-integration',
+        title: 'IDE 통합 및 편집기 범위',
+        content:
+          '**편집기 범위는 세 도구가 가장 눈에 띄게 다른 곳입니다.** 이것은 대부분의 독자에게 가장 중요한 차원입니다. 또한 10분 안에 테스트하기 가장 쉬운 것입니다.',
+        items: [
+          '**Continue.dev** — VS Code Marketplace 및 JetBrains Marketplace. JetBrains 빌드는 실제이며(IntelliJ, PyCharm, GoLand, WebStorm 등) 자동완성과 채팅에 대해 VS Code 빌드와 기능 동등성을 갖습니다. Cursor 사용자는 VS Code 확장을 설치할 수 있으며 동작이 VS Code와 일치합니다.',
+          '**Cline** — VS Code 확장 전용. Cursor(VS Code 포크)에서 작동하지만 공식적으로 테스트되지 않았습니다. 확장 표면이 동일하고 대부분의 사용자가 문제를 보고하지 않습니다. JetBrains 사용자는 현재 옵션이 없습니다.',
+          '**Aider** — 터미널 지향으로, 편집기 옆에 위치하여 모든 편집기와 통합됩니다. VS Code: 통합 터미널을 열고 Aider를 실행하며 Aider가 커밋하는 동안 편집기 패널에서 편집합니다. JetBrains: JetBrains 터미널의 동일한 패턴. Vim/Neovim: Aider 커밋 후 재로드를 위한 `:e!`와 결합하면 생산적인 워크플로우입니다. Cursor: VS Code와 동일합니다.',
+          '**JetBrains 사용자를 위한 실용적 시사점:** Continue.dev 또는 Aider만이 옵션입니다.',
+          '**Vim/Neovim 사용자를 위한 실용적 시사점:** Aider가 자연스러운 선택입니다. Continue.dev는 가변적인 성숙도를 가진 커뮤니티 Neovim 통합이 있으며, 공식 표면은 VS Code와 JetBrains입니다.',
+        ],
+      },
+      workflowFit: {
+        id: 'workflow-fit',
+        title: '사용 사례별 워크플로우 적합성',
+        content:
+          '**가장 유용한 프레임워크는 "오늘 어떤 종류의 날을 보내고 있습니까?"입니다.** 반대 방향이 아닌 날에 맞게 도구를 조정하십시오.',
+        image: '/images/coding-agent-workflow-fit-ko.svg',
+        imageCaption: '워크플로우 적합성: Continue.dev는 IDE 자동완성 및 질문용, Cline은 명령 접근을 포함한 다중 파일 리팩토링과 탐색적 디버깅용, Aider는 git 네이티브 변경과 SSH 및 Vim/Neovim 워크플로우용.',
+        columns: ['사용 사례', '최선의 선택', '이유'],
+        rows: [
+          {
+            '사용 사례': '자동완성으로 기존 파일에 기능 추가',
+            '최선의 선택': 'Continue.dev',
+            '이유': 'FIM 자동완성이 자연스러운 원시 요소이며, 채팅이 필요하지 않습니다',
+          },
+          {
+            '사용 사례': '편집기를 벗어나지 않고 "이 함수는 무엇을 합니까?" 질문하기',
+            '최선의 선택': 'Continue.dev',
+            '이유': '`@file`을 사용한 IDE 내 채팅이 마찰이 가장 적은 경로입니다',
+          },
+          {
+            '사용 사례': '5개 이상의 파일에 걸쳐 함수 리팩토링',
+            '최선의 선택': 'Cline',
+            '이유': '단계별 승인을 포함한 네이티브 다중 파일 편집',
+          },
+          {
+            '사용 사례': '"이 테스트가 왜 실패합니까?" — 탐색적 버그 추적',
+            '최선의 선택': 'Cline',
+            '이유': '에이전트 루프가 명령을 실행하고 로그를 읽으며 반복합니다',
+          },
+          {
+            '사용 사례': '검토 가능한 커밋으로 저장소 규모의 이름 변경 또는 API 마이그레이션',
+            '최선의 선택': 'Aider',
+            '이유': '각 편집이 커밋이 됩니다. 검토 및 실행 취소가 간단합니다',
+          },
+          {
+            '사용 사례': 'SSH로 서버에 접속하여 IDE 없이 작업',
+            '최선의 선택': 'Aider',
+            '이유': '설계에 의해 터미널 전용',
+          },
+          {
+            '사용 사례': 'Vim 또는 Neovim을 주 도구로 사용하는 사용자',
+            '최선의 선택': 'Aider',
+            '이유': '터미널 지향 편집과 자연스럽게 결합됩니다',
+          },
+          {
+            '사용 사례': 'JetBrains IDE(IntelliJ, GoLand, PyCharm) 사용자',
+            '최선의 선택': 'Continue.dev 또는 Aider',
+            '이유': 'Cline은 VS Code 전용입니다',
+          },
+        ],
+      },
+      decisionTree: {
+        id: 'decision-tree',
+        title: '의사결정 트리: 어떤 것을 선택해야 합니까',
+        content:
+          '**순서대로 다섯 가지 질문이 대부분의 독자를 올바른 선택으로 안내합니다.**',
+        items: [
+          '**1. JetBrains, Vim에 있거나 SSH로 작업하고 있습니까?** → 그렇다면 Continue.dev(JetBrains 전용)와 Aider(Vim/SSH) 사이에 있습니다. Q4로 건너뛰십시오. 그렇지 않으면 계속하십시오.',
+          '**2. 단일 작업에서 여러 파일을 편집하는 자율 에이전트를 원합니까?** → 예: Cline. 아니오: 계속하십시오.',
+          '**3. IDE 통합 채팅 패널과 함께 자동완성을 원합니까?** → 예: Continue.dev. 아니오: 계속하십시오.',
+          '**4. `git diff`로 변경 사항을 검토하며 각 편집이 자동으로 커밋되기를 원합니까?** → 예: Aider. 아니오: Continue.dev(기본 선택).',
+          '**5. 아직 확실하지 않습니까?** → Continue.dev로 시작하십시오. 마찰이 가장 적은 설치이며, 이미 사용하는 편집기에서 작동하고, 나중에 터미널 지향 작업을 위해 Aider를 추가하는 것이 간단합니다. Cline은 워크플로우에 추가하기 가장 파괴적입니다. 에이전트 루프를 원한다는 것을 알 때만 채택하십시오.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '로컬 코딩 도구 선택 시 일반적인 실수',
+        items: [
+          '**실수 1: 모델보다 도구를 먼저 선택하기.** 세 도구 중 어느 도구에서든 30B 코드 조정 모델이 "더 나은" 도구의 7B 범용 모델보다 성능이 좋습니다. 모델을 먼저 선택하고, 도구는 두 번째 결정입니다.',
+          '**실수 2: Continue.dev에서 자동완성과 채팅에 단일 모델 사용.** 자동완성은 200ms 미만의 지연 시간이 필요하고, 채팅은 몇 초를 허용합니다. 동일한 설정에서 소형 자동완성 모델과 대형 채팅 모델을 실행하십시오.',
+          '**실수 3: Cline 자동 승인을 완전히 개방.** `execute_command`가 자동 승인된 모델 루프는 실제 피해를 야기할 수 있습니다. 이 코드베이스로 모델을 신뢰할 때까지 파괴적인 도구를 게이트로 유지하십시오.',
+          '**실수 4: 코드를 바꿔 말하는 모델과 함께 Aider 사용.** 모델이 SEARCH 블록을 문자 그대로 재현할 수 없으면 모든 편집이 실패합니다. 신뢰할 수 있는 diff 편집을 위해 22B 이상의 코드 조정 모델(Qwen3-Coder, DeepSeek Coder, Codestral)을 사용하십시오.',
+          '**실수 5: 모델 문제를 해결하기 위해 도구 변경.** Cline에서 도구 호출이 실패하면 같은 이유로 Continue.dev의 Agent 모드에서도 실패할 가능성이 높습니다. 먼저 모델을 진단하십시오.',
+          '**실수 6: 다중 파일 작업에서 32K 컨텍스트 모델에 대해 Cline 실행.** 토큰 소비가 작업 중간에 예산을 소진시킵니다. Cline의 사소하지 않은 작업에는 128K 컨텍스트 모델을 사용하십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[Continue.dev 문서](https://docs.continue.dev/) — 공식 설정 가이드, 모델 설정, `@` 컨텍스트 공급자 및 Agent 모드 참조.',
+          '[Cline GitHub 저장소](https://github.com/cline/cline) — 소스 코드, 도구 스키마, Plan/Act 모드 동작 및 확장 아키텍처.',
+          '[Aider 문서](https://aider.chat/) — 공식 CLI 참조, 편집 형식 문서, 저장소 맵 메커니즘 및 모델별 기본값.',
+          '[Ollama 모델 라이브러리](https://ollama.com/library) — 각 도구에 대해 참조된 로컬 모델과 양자화 수준.',
+          '[Qwen3-Coder 모델 카드](https://huggingface.co/Qwen/Qwen3-Coder-30B) — 권장 코드 모델의 아키텍처, 지원 컨텍스트 길이 및 도구 호출 훈련 데이터.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'VS Code 사용자에게 최선의 선택은 무엇입니까?',
+            a: '세 가지 모두 VS Code에서 작동하지만 Continue.dev와 Cline이 자연스러운 선택입니다. 자동완성 우선 및 IDE 통합 채팅에는 Continue.dev, 자율 에이전트 작업에는 Cline. Aider는 VS Code 통합 터미널에서 완벽하게 작동하지만 편집기 표면 자체와 통합되지 않습니다 — 인터페이스는 터미널입니다.',
+          },
+          {
+            q: 'Cline은 Cursor IDE와 호환됩니까?',
+            a: 'Cursor는 VS Code 포크이며 VS Code 확장을 수락합니다. Cline이 Cursor에 설치되고 실행됩니다. 확장 표면이 동일합니다. Cline 팀은 공식적으로 Cursor를 대상으로 하지 않으므로 엣지 케이스(Cursor 특정 API, 향후 Cursor 변경)가 보장되지 않지만 실제로 사용자들이 문제를 보고하지 않습니다.',
+          },
+          {
+            q: 'Aider는 Git 없이 작동할 수 있습니까?',
+            a: '예, 하지만 이를 정의하는 워크플로우 원시 요소를 잃게 됩니다. Aider는 `--no-git`으로 Git이 없는 디렉토리에서 작동합니다. 편집이 적용되지만 커밋이 없으므로 `/undo`가 비활성화되고 되돌리기가 세션 내 모델의 diff 기록에 의존합니다. 사소하지 않은 작업의 경우, 시작하기 전에 Git 저장소를 초기화하십시오 — 무시된 것이라도.',
+          },
+          {
+            q: '다중 파일 리팩토링에 가장 좋은 것은 무엇입니까?',
+            a: '자율 다중 파일 작업에는 Cline — 파일 간에 계획하고, 필요에 따라 읽고, 단계별 승인으로 편집합니다. 파일을 명시적으로 명명하고 각 편집이 커밋으로 남기를 원하는 검토 가능한 다중 파일 작업에는 Aider. Continue.dev는 파일별 수동 안내가 필요합니다. 다중 파일 리팩토링에서 세 가지 중 가장 약합니다.',
+          },
+          {
+            q: '로컬 Ollama와 즉시 호환됩니까?',
+            a: '예. Continue.dev에는 설정 블록이 있는 네이티브 Ollama 공급자가 있습니다. Cline은 공급자 드롭다운에 Ollama를 나열합니다. Aider는 `--model ollama_chat/<model-name>`으로 LiteLLM을 통해 Ollama를 지원합니다. Ollama는 세 가지 모두에 대해 마찰이 가장 적은 로컬 백엔드입니다.',
+          },
+          {
+            q: 'Qwen3-Coder와 가장 잘 작동하는 것은 무엇입니까?',
+            a: 'Qwen3-Coder 30B는 2026년 5월 세 도구 모두에서 신뢰할 수 있습니다 — Cline의 XML 도구 형식, Aider의 검색 및 교체 블록, Continue.dev의 자동완성 + 채팅 워크플로우를 눈에 띄는 저하 없이 처리합니다. 소형 Qwen3-Coder 변형(7B 클래스)은 도구 호출을 덜 신뢰할 수 있게 수행하며 Cline의 에이전트 루프보다 Continue.dev의 자동완성 전용 모드에서 더 잘 작동합니다.',
+          },
+          {
+            q: '이 도구들을 Cursor의 로컬 모드와 함께 사용할 수 있습니까?',
+            a: 'Cursor의 내장 기능(Tab 자동완성, Cmd+K)은 이러한 도구가 아닌 Cursor 자체의 모델 라우팅을 사용합니다. Cursor에서 로컬 LLM을 사용하려면 Cursor 내에서 VS Code 확장으로 Continue.dev 또는 Cline을 설치하십시오 — 이들은 Cursor와 독립적인 자체 공급자 설정을 가져옵니다. Aider는 VS Code에서와 마찬가지로 Cursor 통합 터미널에서 작동합니다.',
+          },
+          {
+            q: '긴 세션에 가장 안정적인 것은 무엇입니까?',
+            a: 'Aider는 손상될 수 있는 프로세스 내 상태가 없으므로 — 각 편집이 커밋이고, 세션 실패는 작업이 아닌 대화만 잃게 됩니다. Continue.dev는 IDE에서 긴 세션 동안 안정적입니다. Cline의 긴 세션은 소형 모델에서 컨텍스트 윈도우 압박을 받을 수 있습니다. 대형 리팩토링 사이에 작업을 재시작하면 문제를 피할 수 있습니다.',
+          },
+          {
+            q: '커스텀 시스템 프롬프트를 지원합니까?',
+            a: '세 가지 모두. Continue.dev: `config.json`에서 모델별 `systemMessage`. Cline: 확장 설정의 "커스텀 지침" 필드. Aider: `--system-prompt` 플래그 또는 `.aider.conf.yml`의 모델별 기본값. 커스텀 프롬프트는 특히 Cline(Plan 모드 동작 안내)과 Aider(커밋 간 일관된 코드 스타일 적용)에 유용합니다.',
+          },
+          {
+            q: '로컬 코드 에이전트를 사용할 때 DevOps 또는 플랫폼 팀이 개인정보 보호에 대해 고려해야 할 사항은 무엇입니까?',
+            a: '로컬 LLM이 처리하는 코드 또는 로그에 EU 또는 기타 지역 사용자 데이터가 포함될 수 있는 경우 지역 개인정보 보호 규정이 적용됩니다. 로컬 LLM 자체(Ollama, llama.cpp)는 개인 데이터를 저장하지 않지만, 인덱싱하는 코드 디렉토리와 로그에는 민감한 정보가 포함될 수 있습니다. 외부 API 접근 없이 회사 인프라에 모델이 배포되었는지 확인하십시오. 규제 분야에서 프로덕션 배포 전에 컴플라이언스 팀과 상담하십시오.',
+          },
+          {
+            q: '한국 중소기업에 가장 좋은 선택은 무엇입니까?',
+            a: 'Aider는 중소기업에 최고의 비용 대비 가치를 제공합니다: IDE 라이선스 의존성 없음, 완전히 터미널 기반(기존 개발 환경에 맞음), 최소 하드웨어 요구사항(32K 컨텍스트 모델에서 작동), 그리고 완전한 감사 추적이 Git 로그에 있습니다(컴플라이언스와 코드 리뷰 간소화). VS Code/JetBrains에 크게 투자한 팀에는 Continue.dev가 두 번째 선택입니다. Cline은 토큰 소비 비용이 높고 더 높은 하드웨어가 필요하지만 집약적인 리팩토링 애자일 워크플로우에 적합합니다. 중소기업은 로컬 모델을 온프레미스에 배포하여 비용을 절약합니다 — 도구 선택은 하이프가 아닌 기존 인프라와 개발자 워크플로우를 따라야 합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽기',
+        items: [
+          '[GitHub Copilot을 로컬 LLM으로 교체하기](/ko/power-local-llm/replace-github-copilot-with-local-llm) — 비용 및 개인정보 보호 계산을 포함한 더 넓은 교체 컨텍스트.',
+          '[2026년 최고의 로컬 코딩 모델](/ko/power-local-llm/best-local-coding-models-2026) — 방정식의 모델 측: 실제 벤치마크에서 Qwen3-Coder vs DeepSeek vs Codestral.',
+          '[2026년 MCP를 사용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 이러한 도구를 넘어서 확장된 도구 호출을 원하는 사용자를 위해.',
+          '[2026년 도구 호출을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026) — 도구 호출 신뢰성에 관한 인접 기술적 심층 분석.',
+          '[llama.cpp vs Ollama vs vLLM](/ko/local-llms/llamacpp-vs-ollama-vs-vllm) — 세 도구 아래의 추론 엔진 계층.',
+          '[Power Local LLM 허브](/power-local-llm) — 전체 가이드 라이브러리.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코드 에이전트',
+      description: 'Continue.dev, Cline, Aider를 2026년 로컬 코드 에이전트로 비교. 편집 모델, IDE 통합, 실행 취소, 컨텍스트 전략 — 하이프가 아닌 워크플로우에 따라 선택.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local',
+      inLanguage: 'ko',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'Continue.dev vs Cline vs Aider 비교', item: 'https://www.promptquorum.com/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local' },
+      ],
+    },
+  },
 }

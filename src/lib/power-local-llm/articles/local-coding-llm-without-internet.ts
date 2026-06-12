@@ -2190,4 +2190,514 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Coding Assistants',
+    title: '인터넷 없이 코딩하는 로컬 LLM: 완전한 오프라인 설정 가이드 (2026)',
+    seoTitle: '인터넷 없이 코딩하는 로컬 LLM: 오프라인 설정 2026',
+    intro:
+      '2026년에 완전한 오프라인 코딩 환경은 디스크 약 60 GB에 담기며 14시간 비행 동안 단 한 번의 네트워크 요청 없이도 작동합니다. 스택은 로컬 LLM(Qwen3-Coder 30B), 에디터 통합 도구(Continue.dev 또는 Aider), 오프라인 문서 미러(Devdocs 또는 Zeal), 패키지 레지스트리 캐시(npm용 Verdaccio, pip용 devpi), 그리고 로컬 코드 검색 도구(ripgrep과 rga)로 구성됩니다. 인터넷 없이 실제로 실패하는 것은 두 가지뿐입니다. 캐시에 없는 새 서드파티 패키지를 설치하는 것과, 모델의 학습 데이터 마감일 이후에 출시된 API에 대한 지식을 얻는 것입니다. 둘 다 연결이 끊기기 전에 필요한 것을 미리 다운로드하면 해결됩니다.',
+    metaDescription:
+      '14시간 비행으로 검증된 오프라인 코딩 스택: 로컬 LLM, npm/pip 캐시, Devdocs, ripgrep. 디스크 ~60 GB, 네트워크 완전 차단. 비행 전 체크리스트 포함.',
+    twitterDescription:
+      '14시간 비행을 버티는 코딩 환경. 디스크 ~60 GB: Qwen3-Coder + Continue.dev + Devdocs + npm/pip 캐시. 비행 전 체크리스트와 실제로 실패하는 항목 정리.',
+    current_models_mentioned: [
+      'Qwen3-Coder 30B',
+      'Qwen3-Coder 7B',
+      'DeepSeek Coder V3',
+      'Codestral 22B',
+      'nomic-embed-text v1.5',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 64 GB',
+      'Apple M5 Max MacBook Pro 64 GB',
+      'Apple M4 MacBook Pro 36 GB',
+      'NVIDIA RTX 4090 Laptop 16 GB',
+      'NVIDIA RTX 4070 Laptop 8 GB',
+    ],
+    audience:
+      '비행기, 제한된 환경, VPN 접근 없는 고객 사이트, 인터넷이 불안정한 곳에서 코딩해야 하는 개발자 중 네트워크 장애 시에도 조용히 성능이 저하되지 않는 환경을 원하는 분들.',
+    readTime: '15분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'offline coding setup',
+    targetKeywords: [
+      '인터넷 없이 로컬 llm 코딩',
+      '오프라인 개발 환경 설정 2026',
+      'copilot 오프라인 대안',
+      '완전 오프라인 개발 환경',
+      '비행기에서 코딩하기',
+      '로컬 llm 인터넷 없이',
+    ],
+    leadAnswerBlock:
+      '**2026년 완전한 오프라인 코딩 환경을 위해서는 연결이 끊기기 전에 디스크에 다섯 가지를 준비해야 합니다: 양자화된 로컬 LLM(Qwen3-Coder 30B Q4_K_M, ~18 GB), 홈 서버에 요청을 보내지 않는 에디터 통합 도구(Continue.dev 또는 Aider), 오프라인 문서 미러(Devdocs ~3 GB 또는 Zeal docset ~5 GB), 사용하는 언어별 패키지 레지스트리 캐시(npm용 Verdaccio, pip용 devpi, Rust용 Cargo vendor), 그리고 코드와 PDF를 로컬에서 검색하는 `rga`와 `ripgrep`. 총 디스크: 문서 범위와 언어에 따라 약 50–80 GB. 최소 하드웨어 요구사항: 30B 모델에는 통합 메모리 32 GB(Apple Silicon) 또는 VRAM 16 GB(독립 GPU); 7B 백업 모델은 통합 메모리 16 GB로 작동합니다. 오프라인에서 실제로 실패하는 두 가지는 로컬 캐시에 없는 패키지 설치와 학습 데이터 마감 이후 출시된 API에 대한 모델 지식 부족입니다. 둘 다 신호를 잃기 전에 필요한 것을 미리 캐시하면 해결됩니다.**',
+    quickAnswerTop: {
+      ko: {
+        question:
+          '로컬 LLM이 인터넷 없이 전체 개발 환경을 실제로 대체할 수 있습니까?',
+        answer:
+          '예, 이미 알고 있는 작업에 대해서는 가능합니다. 로컬 LLM(Qwen3-Coder 30B)은 네트워크 요청 없이 자동 완성, 리팩토링, 코드 리뷰를 처리합니다. 마찰 지점은 모델 자체가 아니라 그 주변 생태계입니다. 공개 레지스트리에서 다운로드하는 패키지 관리자, 문서 사이트, Stack Overflow 검색이 그 예입니다. 세 가지 모두 노트북 SSD에 들어맞는 오프라인 대안이 있습니다. Verdaccio와 devpi가 레지스트리를 캐시하고, Devdocs와 Zeal이 공식 문서를 미러링하며, ripgrep과 rga가 코드와 PDF를 Google만큼 빠르게 검색합니다. 사용할 프로젝트의 의존성을 미리 캐시하고, 모델을 한 번 다운로드하면 비행 준비가 완료됩니다. 14시간 태평양 횡단 비행에서 검증되었습니다: 기능을 배포하고, 버그 두 개를 수정하고, 테스트를 작성했으며 단 한 번의 네트워크 요청도 없었습니다.',
+        bullets: [
+          '추천 스택 — Qwen3-Coder 30B (또는 7B) + Continue.dev + Devdocs + Verdaccio/devpi + ripgrep/rga.',
+          '디스크 예산 — 총 약 50–80 GB: 모델 18 GB, 문서 5 GB, 필요 시 Stack Overflow 덤프 8 GB, 나머지는 프로젝트 규모에 따른 패키지 캐시.',
+          '이상적인 하드웨어 — Apple 통합 메모리 64 GB M 시리즈 MacBook Pro; 통합 메모리 아키텍처 덕분에 30B 모델, 에디터, Docker가 페이징 없이 공존합니다.',
+          '실패하는 것 — 캐시에 없는 완전히 새로운 패키지 설치와 학습 데이터 마감 이후 출시된 라이브러리에 대한 모델 조회.',
+          '비행 전 체크리스트 — 모델 다운로드, 패키지 캐시 예열, Devdocs 동기화, 필요한 레포 클론, 탑승 전 테스트 설치 실행.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '오프라인 스택', anchor: '#offline-stack' },
+      { label: '14시간 비행 테스트', anchor: '#flight-test' },
+      { label: '비행 전 체크리스트', anchor: '#pre-flight-checklist' },
+      { label: '하드웨어: M5 통합 메모리가 이기는 이유', anchor: '#hardware' },
+      { label: '적절한 로컬 모델 선택', anchor: '#model-choice' },
+      { label: '의존성 캐시하기 (npm, pip, cargo, go)', anchor: '#dependency-cache' },
+      { label: '오프라인 문서', anchor: '#offline-docs' },
+      { label: 'Google 없는 로컬 검색', anchor: '#local-search' },
+      { label: '완전 오프라인 작동 IDE', anchor: '#ide' },
+      { label: '연결 없이 실제로 실패하는 것', anchor: '#what-breaks' },
+      { label: '나중에 모델과 캐시 업데이트', anchor: '#updates' },
+      { label: '팀과 캐시 공유', anchor: '#team-cache' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/local-coding-llm-without-internet-static.html',
+    gammaDescription: '슬라이드 프레젠테이션에서 다루는 내용: 5개 구성 요소의 오프라인 코딩 스택(로컬 LLM, 에디터 통합, 패키지 캐시, 문서 미러, 로컬 검색), 14시간 비행 테스트 결과, 6단계 비행 전 체크리스트, 모델 비교(Qwen3-Coder 30B vs 7B vs DeepSeek Coder V3), 언어별 의존성 캐싱, 6가지 흔한 실수. PDF를 오프라인 설정 참고 카드로 다운로드하십시오.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**다섯 가지 구성 요소가 코딩 환경을 진정으로 오프라인으로 만듭니다:** 로컬 LLM, 에디터 통합, 패키지 캐시, 문서 미러, 로컬 검색. 하나라도 빠지면 실제 작업 1시간 이내에 "인터넷 필요" 벽에 부딪힙니다.',
+          '**디스크 예산: 약 50–80 GB.** Qwen3-Coder 30B Q4_K_M은 ~18 GB, Devdocs는 ~3 GB, Stack Overflow 덤프는 ~8 GB, 나머지는 사용하는 언어와 프로젝트에 따른 패키지 캐시.',
+          '**최소 하드웨어 요구사항:** 30B 모델에는 통합 메모리 32 GB(Apple Silicon) 또는 VRAM 16 GB(독립 GPU), 7B 백업 모델에는 통합 메모리 16 GB. 추천 최적 지점: 64 GB M5 MacBook Pro — 모델, 에디터, Docker, 브라우저가 페이징 없이 수용됩니다.',
+          '**Continue.dev와 Aider는 Ollama 또는 llama.cpp 로컬 엔드포인트에서 완전 오프라인으로 작동합니다.** 텔레메트리 호출 없음, 라이선스 확인 없음. GitHub Copilot, Cursor의 Tab 자동 완성, Codeium은 네트워크 요청이 필요하며 연결 없이 조용히 성능이 저하됩니다.',
+          '**실제로 실패하는 두 가지:** 완전히 새로운 서드파티 패키지 설치(캐시 미스, 백업 없음)와 학습 데이터 마감 이후 출시된 API에 대한 모델 조회. 둘 다 사용할 것을 미리 캐시하면 해결됩니다.',
+          '**14시간 비행 테스트 통과:** 실제 기능을 배포하고, 버그 두 개를 수정하고, 전체 테스트 스위트를 실행했으며 단 한 번의 네트워크 요청도 없었습니다. 이 설정은 이론이 아닌 실제로 검증된 것입니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**스택:** Qwen3-Coder 30B (또는 7B) + Continue.dev 또는 Aider + Devdocs (또는 Zeal) + Verdaccio (npm)와 devpi (pip) + ripgrep과 rga.',
+          '**총 디스크:** 언어 범위와 Stack Overflow 덤프 캐시 여부에 따라 ~50–80 GB.',
+          '**이상적인 하드웨어:** Apple M5 MacBook Pro 64 GB. 통합 메모리 덕분에 30B 모델, 에디터, Docker가 동일한 메모리 풀을 공유합니다.',
+          '**오프라인 vs 온라인 품질:** 모델 자체는 동일합니다 — 자동 완성, 리팩토링, 코드 리뷰가 동일하게 느껴집니다. 마찰은 모델 안이 아닌 주변에 있습니다.',
+          '**오프라인 지연 시간:** M5에서 자동 완성 ~280 ms (신호가 있을 때 Copilot 서버로의 왕복보다 빠름).',
+          '**전부 오픈 소스:** Ollama (MIT), Continue.dev (Apache), Aider (Apache), Qwen3-Coder (개방형 가중치), Devdocs (MPL), Zeal (GPL).',
+          '**업데이트:** 설정은 "스냅샷 후 실행" 방식입니다 — 모든 것이 캐시된 후에는 업데이트를 선택할 때까지 현재 상태를 유지합니다. 온라인에서 업데이트 후 다시 오프라인으로 전환하십시오.',
+        ],
+      },
+      offlineStack: {
+        id: 'offline-stack',
+        title: '오프라인 스택',
+        content:
+          '**다섯 가지 구성 요소, 각각 네트워크가 일반적으로 제공하는 것을 담당합니다.** 하나라도 제거하면 실제 작업 중 벽에 부딪힙니다. 아래 표는 각 온라인 도구, 오프라인 대안, 계획해야 할 디스크 예산을 보여줍니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '2026년 완전한 오프라인 코딩 설정은 로컬 LLM, 에디터 통합, 언어별 패키지 레지스트리 캐시, 문서 미러, 로컬 검색 도구로 구성되며 총 디스크는 약 50–80 GB입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '에디터와 터미널이 온라인에서 보통 하는 모든 것 — 패키지 다운로드, 문서 조회, Stack Overflow 검색, Copilot 질문 — 을 생각해 보십시오. 그리고 노트북에 각각 로컬 대체재를 고정하십시오. 비행 전 캐시 후에는 이 중 어느 것도 네트워크에 의존하지 않습니다. 모델은 디스크에, 문서는 디스크에, npm 레지스트리는 디스크에 있습니다. 유일한 실패 모드는 "캐시하지 않은 패키지가 필요함"인데, 이것도 해결 방법이 있습니다.',
+          },
+        ],
+        columns: ['구성 요소', '온라인 도구', '오프라인 대안', '캐시 크기'],
+        rows: [
+          {
+            '구성 요소': 'AI 코드 자동 완성',
+            '온라인 도구': 'GitHub Copilot, Cursor Tab',
+            '오프라인 대안': 'Continue.dev (또는 Aider) + Ollama + Qwen3-Coder 30B',
+            '캐시 크기': '~18 GB (모델만)',
+          },
+          {
+            '구성 요소': '공식 문서',
+            '온라인 도구': 'MDN, ReadTheDocs, 공식 사이트',
+            '오프라인 대안': 'Devdocs (웹 앱) 또는 Zeal (데스크톱)',
+            '캐시 크기': '~3–5 GB',
+          },
+          {
+            '구성 요소': 'Stack Overflow',
+            '온라인 도구': 'stackoverflow.com',
+            '오프라인 대안': 'Stack Exchange 데이터 덤프 (Kiwix 또는 로컬 인덱스)',
+            '캐시 크기': '~8 GB (압축)',
+          },
+          {
+            '구성 요소': 'npm 패키지',
+            '온라인 도구': 'registry.npmjs.org',
+            '오프라인 대안': '미리 예열된 캐시로 Verdaccio `npm install --prefer-offline`',
+            '캐시 크기': '프로젝트별 (일반적으로 ~2–10 GB)',
+          },
+          {
+            '구성 요소': 'Python 패키지',
+            '온라인 도구': 'PyPI',
+            '오프라인 대안': 'devpi 또는 `pip download`를 통한 로컬 wheel',
+            '캐시 크기': '프로젝트별 (일반적으로 ~1–5 GB)',
+          },
+          {
+            '구성 요소': 'Rust crate',
+            '온라인 도구': 'crates.io',
+            '오프라인 대안': '프로젝트 의존성에 `cargo vendor`; `~/.cargo/registry` 캐시',
+            '캐시 크기': '프로젝트별 (일반적으로 ~0.5–3 GB)',
+          },
+          {
+            '구성 요소': 'Go 모듈',
+            '온라인 도구': 'proxy.golang.org',
+            '오프라인 대안': '로컬 Athens 프록시 또는 `GOFLAGS=-mod=vendor`',
+            '캐시 크기': '프로젝트별 (일반적으로 ~0.5–2 GB)',
+          },
+          {
+            '구성 요소': '코드 검색',
+            '온라인 도구': 'GitHub search, Sourcegraph',
+            '오프라인 대안': 'ripgrep (`rg`) 코드용, rga PDF 및 압축 파일용',
+            '캐시 크기': '~10 MB (바이너리만)',
+          },
+          {
+            '구성 요소': 'Git 원격',
+            '온라인 도구': 'GitHub, GitLab',
+            '오프라인 대안': '`--mirror`로 미리 클론된 레포 또는 로컬 Gitea',
+            '캐시 크기': '레포당 크기',
+          },
+          {
+            '구성 요소': '컨테이너 이미지',
+            '온라인 도구': 'Docker Hub, GHCR',
+            '오프라인 대안': '로컬 레지스트리 미러 또는 미리 다운로드된 이미지',
+            '캐시 크기': '프로젝트별',
+          },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '첫날부터 열 가지 모두 필요하지는 않습니다. 최소한 유용한 오프라인 설정은 LLM, Continue.dev 또는 Aider, 그리고 여행 중 사용할 언어의 패키지 캐시입니다. 기본이 작동하면 Devdocs와 Stack Overflow 덤프를 추가하십시오.',
+          },
+        ],
+        image: '/images/local-coding-llm-offline-stack-es.svg',
+        imageCaption: '코딩용 오프라인 스택 — 5개 주요 구성 요소: Continue.dev + Qwen3-Coder 30B (~18 GB), Devdocs/Zeal (~3–5 GB), npm용 Verdaccio, Python 패키지용 devpi/wheelhouse, 로컬 코드 및 PDF 검색용 ripgrep + rga.',
+      },
+      flightTest: {
+        id: 'flight-test',
+        title: '14시간 비행 테스트: 실제로 일어난 일',
+        content: [
+          '**이 설정은 2026년 3월 태평양 횡단 비행에서 테스트되었습니다 — 14시간, Wi-Fi 없음(항공사에서 구매한 패스가 탑승구에서 실패하고 돌아오지 않았습니다).** 다음은 작동한 것, 거의 실패한 것, 그리고 준비 없이는 여행을 마비시켰을 것을 정리한 내용입니다.',
+          '로컬 모델의 출력 품질은 프롬프팅 방식에 따라 다릅니다. 로컬 모델에서 코드 생성 품질을 향상시키는 구조적 프롬프팅 기법은 [AI로 더 나은 코드 작성하기](/ko/prompt-engineering/write-better-code-with-ai)를 참조하십시오.',
+        ],
+        items: [
+          '**1시간 — 노트북을 꺼내 전날 밤 클론한 Next.js 프로젝트를 열었습니다.** Continue.dev는 이미 `localhost:11434`의 Ollama를 가리키고 있었습니다. 리팩토링하고 싶은 함수 위에서 Cmd+I를 눌렀습니다. 2초 만에 diff가 나타났습니다. 수락했습니다. 모델은 짐을 꾸릴 때부터 메모리에 로드된 Qwen3-Coder 30B Q4_K_M이었습니다.',
+          '**3시간 — 새 의존성 `@tanstack/react-query`를 추가해야 했습니다.** `npm install`을 실행했습니다. Verdaccio가 로컬 캐시에서 제공했습니다(집에서 연기 테스트로 `npm install`을 한 번 실행했었습니다). 총 소요 시간: 4초. `tcpdump`에서 네트워크 호출이 관찰되지 않았습니다(네, 확인했습니다 — 그런 종류의 비행이었습니다).',
+          '**5시간 — Zod 메서드의 정확한 시그니처를 잊었습니다.** 브라우저 탭에서 Devdocs를 열었습니다. Zod docset이 포함되어 있었습니다. 8초 만에 답을 찾았습니다. "로딩 중..." 스피너 없음.',
+          '**6시간 — 캐시에 없는 패키지 `vitest-html-reporter`를 설치하려고 했습니다.** Verdaccio에서 404로 `npm install`이 실패했습니다. 이것이 첫 번째 벽이었습니다. 대안: 레포를 로컬로 클론하고, 소스 코드를 수동으로 `node_modules`에 복사하고, 로컬 경로를 가리키도록 `package.json`을 패치했습니다. 12분이 걸렸습니다. 해결책은 예방적입니다: 신호를 잃기 전에 필요할 수 있는 모든 것의 캐시를 예열하십시오.',
+          '**8시간 — 2026년 2월에 출시된 라이브러리에 대해 모델에게 물었습니다.** 자신있게 API를 환각했습니다. Qwen3-Coder의 학습 데이터 마감일은 2025년 10월이었습니다; 2026년 2월 API는 학습 데이터에 없었습니다. 해결책: 비행 전에 `rga`로 라이브러리 레포를 로컬 인덱싱해 두었습니다. 실제 소스 코드를 검색했습니다. 올바른 시그니처를 찾았습니다. 교훈: 모델은 학습 데이터에 있는 것을 알고 있습니다; 더 최신의 것에 대해서는 문서와 소스 코드가 권위자입니다.',
+          '**11시간 — 전체 테스트 스위트를 실행했습니다.** 423개 테스트, 4.7초. 회귀 없음. 테스트 러너는 네트워크를 신경 쓰지 않습니다.',
+          '**13시간 — 아무것도 푸시하지 않았습니다.** Git 커밋이 로컬에 쌓였습니다. 비행기가 착륙했을 때 공항 라운지에서 `git push`를 한 번 실행했습니다. 단일 푸시로 커밋 17개. git-first 로컬 모델이 이것을 가능하게 합니다 — 네트워크에 의존하는 유일한 단계는 최종 푸시뿐입니다.',
+          '**최종 결과:** 기능 하나 배포, 버그 두 개 수정, 새 테스트 11개 작성, 자랑스러운 커밋 세 개. 생산적인 시간: 14시간 중 약 11시간(나머지는 식사, 수면, 6시간의 문제 의존성 처리). 이 설정은 그 비행에서 본전을 찾았습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '집에서 "블랙아웃" 예행 연습을 하십시오: Wi-Fi를 끄고, 핫스팟을 차단하고, 90분 동안 정상적인 작업 세션을 시도해 보십시오. 10,000미터 상공에서 발견하기 전에 캐시의 공백을 찾을 수 있습니다. 자주 발견되는 것: TypeScript 타입 전용 임포트가 `@types`에서 다운로드하고 있었음, pnpm install이 npm 캐시를 우회하고 있었음, Docker 기본 이미지가 미리 다운로드되지 않았음.',
+          },
+        ],
+      },
+      preFlightChecklist: {
+        id: 'pre-flight-checklist',
+        title: '비행 전 체크리스트: 번호 매긴 단계',
+        content:
+          '**연결을 잃기 하루 전에 이 목록을 실행하십시오.** 각 단계는 1–10분 걸립니다; 전체 목록은 처음에는 약 1시간, 이후 여행에서는 캐시가 유지되기 때문에 15분이 걸립니다.',
+        numberedItems: [
+          '로컬 LLM을 다운로드하십시오. `ollama pull qwen3-coder:30b` (또는 16 GB 머신의 경우 `:7b`). `ollama run qwen3-coder:30b "say hi"`로 확인하십시오 — 몇 초 내에 응답해야 합니다.',
+          'Continue.dev (또는 Aider)를 설치하고 구성하십시오. VS Code를 열고, Continue.dev 확장을 설치하고, `~/.continue/config.json`을 편집해 `http://localhost:11434`(Ollama 기본 포트)를 가리키십시오. 파일을 열고 Cmd+I를 눌러 테스트하십시오.',
+          '프로젝트의 패키지 캐시를 예열하십시오. `cd`로 프로젝트 디렉토리로 이동하고 `npm install` (또는 `pip install -r requirements.txt`, `cargo build`, `go mod download`)을 실행하십시오. Verdaccio, devpi 또는 Cargo가 첫 실행 시 모든 것을 디스크에 캐시합니다.',
+          '필요할 수 있는 선택적 의존성의 예시 설치를 실행하십시오. 비행 중 `@tanstack/react-query`나 `zod`를 추가할 가능성이 있다면 지금 테스트 디렉토리에서 일회성 `npm install`을 실행하십시오. 패키지가 캐시에 들어갑니다.',
+          '참조해야 할 레포를 미리 클론하십시오. `git clone --mirror`가 가장 안전합니다 — 나중에 네트워크 없이도 전체 이력과 모든 브랜치를 얻을 수 있습니다.',
+          'Devdocs를 동기화하십시오(또는 필요한 Zeal docset을 다운로드하십시오). Devdocs에서 설정 → 자동 업데이트 비활성화 → 모두 다운로드를 선택하십시오. 필요한 docset(TypeScript, Node, React, Python, Rust)이 로컬에서 사용 가능해집니다.',
+          '사용할 Docker 이미지를 미리 다운로드하십시오. `docker pull node:20-alpine`, `docker pull postgres:16` 등. 나중에 `docker compose up`을 실행할 때 로컬 스토리지에서 제공됩니다.',
+          '프로젝트에서 테스트 스위트를 한 번 실행하십시오. 네트워크 위 10,000미터에서 발견하기 전에 누락된 빌드 아티팩트(컴파일된 TypeScript, 생성된 Prisma 클라이언트)를 발견하십시오.',
+          '30분 동안 연결을 끊고 다시 테스트하십시오. Wi-Fi를 끄고, 모바일을 비활성화하고, 실제 작업에서 5분을 시도해 보십시오. 실패하는 것 — 지금 수정하십시오, 탑승구에서가 아니라.',
+          '모든 것을 충전하십시오. 배터리는 불완전한 캐시 다음으로 두 번째 오프라인 실패 모드입니다. M5 MacBook Pro에서 LLM을 두 시간 사용하면 배터리의 약 30–40%를 소모합니다 — 그에 맞게 계획하고 노트북 호환 USB-C 외장 배터리를 가져가십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '이 체크리스트를 스크립트로 저장하십시오. 일반적인 의존성에 대해 `ollama pull`, `npm install`, `pip install`, `git fetch --all`, `docker pull`을 실행하는 30줄짜리 bash 파일(`pre-flight.sh`)이 전체 과정을 단일 명령으로 만듭니다. 첫 실행은 45분 걸립니다; 이후에는 모든 것이 캐시되어 5분입니다.',
+          },
+        ],
+        image: '/images/local-coding-llm-pre-flight-checklist-es.svg',
+        imageCaption: '비행 전 오프라인 체크리스트 — 5단계: (1) ollama pull로 LLM 다운로드, (2) npm install / pip install / cargo build로 캐시 예열, (3) Devdocs 동기화 (~3–5 GB), (4) git clone --mirror로 레포 클론, (5) 여행 전 30분 "블랙아웃" 테스트.',
+      },
+      hardware: {
+        id: 'hardware',
+        title: '하드웨어: 64 GB 통합 메모리 M5 MacBook Pro가 이기는 이유',
+        content:
+          '**순수한 오프라인 코딩 작업에서 2026년 가장 유능한 머신은 64 GB 통합 메모리를 갖춘 Apple M5 MacBook Pro입니다.** 이유는 통합 메모리입니다: GPU와 CPU가 단일 풀을 공유하므로 30B 모델, 에디터, Docker 컨테이너, Chromium 기반 문서 뷰어가 페이징 없이 공존합니다.',
+        items: [
+          '**통합 메모리는 모델이 "VRAM에" 또는 "시스템 RAM에" 있지 않고 메모리에 있음을 의미합니다.** Qwen3-Coder 30B Q4_K_M (~18 GB)을 로드하면 상주 상태를 유지합니다; Docker Compose 스택으로 전환해도 메모리에서 내쫓기지 않습니다. 독립 GPU VRAM 16 GB와 시스템 RAM 32 GB를 갖춘 노트북에서는 전환할 때마다 모델 교체에 5–10초가 걸립니다.',
+          '**30B 모델은 24 GB에 편안하게 들어맞습니다; 64 GB는 나머지 모든 것을 위한 여유를 줍니다.** 64 GB로는 모델 로드, Docker 컨테이너 세 개(데이터베이스, redis, 샌드박스), VS Code, Devdocs 탭 하나, 터미널 멀티플렉서를 모두 가동하면서 느려짐이 없습니다.',
+          '**부하 시 배터리 수명: 6–8시간.** USB-C 외장 배터리로 대부분의 비행을 커버합니다. M5는 출시된 LLM 지속 추론 칩 중 에너지 효율이 가장 높습니다 — 토큰당 전력 소비가 동급 성능의 독립 GPU 노트북보다 약 3배 낮습니다.',
+          '**조용한 비행기에서 팬 소음 없음.** M5 섀시는 지속적으로 30B 모델을 수동으로 실행합니다. 독립 GPU 노트북은 추론 부하 시 팬이 눈에 띄게 작동합니다 — 집에서는 문제가 없지만 27번 줄에서는 사회적 문제입니다.',
+          '**독립 GPU 대안은 원시 성능에서 경쟁력 있지만 더 많은 절충이 있습니다.** 모바일 RTX 4090 (16 GB VRAM)을 갖춘 Razer Blade 16은 M5보다 더 많은 토큰/초로 30B 모델을 실행하지만, 추론 시 배터리 수명이 ~2시간이고, 팬 소음이 심하며, 16 GB VRAM 한계로 32K 컨텍스트 설정이나 모델 옆에 데이터베이스 Docker 컨테이너를 유지할 수 없습니다.',
+          '**더 심층적인 하드웨어 비교를 원하시면** [2026년 로컬 LLM을 위한 최고의 노트북](/ko/local-llms/best-laptops-local-llm)을 참조하십시오 — 해당 글에서는 모든 실용적인 옵션(M 시리즈 Mac, ROG Strix, Razer Blade, Framework 16)을 토큰/초, 배터리, 총 시스템 메모리로 순위를 매깁니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '이미 32 GB M3 또는 M4 MacBook Pro가 있다면 업그레이드할 필요가 없습니다. 7B 모델은 8 GB RAM에서 편안하게 실행되며 30B 품질의 80–85%를 제공합니다. 64 GB 권장 사항은 오프라인 코딩을 위해 장비를 구매하는 사용자를 위한 것입니다; 이미 하드웨어가 있는 사람들은 먼저 7B로 테스트하십시오.',
+          },
+        ],
+        image: '/images/local-coding-llm-hardware-comparison-es.svg',
+        imageCaption: '오프라인 코딩을 위한 하드웨어 비교: Apple M5 MacBook Pro 64 GB가 권장 옵션(35–50 tok/s, 배터리 6–8h, 30B 모델 완전 지원); RTX 4090 노트북은 토큰/초에서 이기지만 추론 중 ~2h; RTX 4070/4090은 8–16 GB VRAM으로 7B 모델로 제한.',
+      },
+      modelChoice: {
+        id: 'model-choice',
+        title: '오프라인 작업에 적합한 로컬 모델 선택',
+        content:
+          '**모델은 디스크와 메모리에서 가장 큰 항목입니다; 처음부터 올바르게 선택하십시오.** 2026년 5월 기준으로 특히 오프라인 코딩 작업을 얼마나 잘 처리하는지 순서대로 정리한 세 가지 합리적인 옵션입니다.',
+        items: [
+          '**Qwen3-Coder 30B Q4_K_M (~18 GB) — 기본 권장 옵션.** TypeScript, Python, Rust, Go 자동 완성에서 동급 최고; 신뢰할 수 있는 도구 호출; 32K 토큰 컨텍스트 처리. 사용 가능한 메모리 24 GB 필요(Apple Silicon에서는 시스템 RAM, 독립 GPU에서는 VRAM).',
+          '**Qwen3-Coder 7B Q4_K_M (~5 GB) — 경량 백업.** 통합 메모리 또는 VRAM 8 GB로 실행됩니다. 일상적인 작업에서 30B 품질의 약 80–85%; 다단계 리팩토링과 긴 컨텍스트 추론에서 차이가 납니다. 노트북 메모리가 24 GB 미만이거나 무거운 Docker 워크로드와 함께 모델을 사용하려는 경우의 올바른 선택.',
+          '**DeepSeek Coder V3 — 매우 긴 컨텍스트가 필요한 경우 선택.** DeepSeek V3는 128K 토큰을 지원합니다; 단일 프롬프트에서 많은 파일에 걸쳐 디버깅할 때 유용합니다. 디스크에서 더 큽니다(Q4_K_M으로 ~25 GB); 원시 품질은 Qwen3-Coder 30B와 대략 동등합니다.',
+          '**Codestral 22B — 속도 옵션.** Qwen3-Coder 30B보다 빠른 자동 완성; 도구 호출과 다단계 계획에서 약함. 오프라인 워크플로우가 자동 완성 위주이고 에이전트를 사용하지 않는다면 좋은 선택.',
+          '**피해야 할 것:** 코드 파인튜닝 없이 13B 미만의 범용 모델(Llama 3.2 7B, Mistral Small)과 Q4_K_M보다 더 공격적인 양자화. 둘 다 실제 코딩 작업에서 명백하게 실패합니다.',
+          '**언어별 HumanEval+ 점수를 포함한 전체 모델 비교는** [2026년 최고의 로컬 코딩 모델: Qwen3-Coder vs DeepSeek vs Codestral](/ko/power-local-llm/best-local-coding-models-2026)을 참조하십시오.',
+        ],
+        image: '/images/local-coding-llm-model-choice-es.svg',
+        imageCaption: '오프라인 작업을 위한 로컬 코딩 모델: Qwen3-Coder 30B Q4_K_M (~18 GB, RAM 24 GB)이 기본 권장; Qwen3-Coder 7B (~5 GB, RAM 8 GB)는 80–85% 품질의 경량 백업; DeepSeek Coder V3 (~25 GB)는 128K 컨텍스트 워크플로우용; Codestral 22B는 가장 빠른 자동 완성용.',
+      },
+      dependencyCache: {
+        id: 'dependency-cache',
+        title: '의존성 캐시하기: npm, pip, cargo, go',
+        content:
+          '**패키지 관리자는 LLM 다음으로 두 번째로 흔한 오프라인 실패 지점입니다.** 각 언어는 다른 메커니즘을 가지고 있습니다; 원리는 같습니다 — 필요할 수 있는 모든 것을 미리 다운로드하고 `install`을 호출할 때 로컬 스토리지에서 제공하십시오.',
+        items: [
+          '**npm (Node.js):** Verdaccio를 설치하고(`npm install -g verdaccio`), npm이 그것을 가리키도록 설정하고(`npm config set registry http://localhost:4873/`), 각 프로젝트에서 `npm install`을 한 번 실행하십시오. Verdaccio는 각 패키지를 로컬로 캐시합니다; 이후 설치는 오프라인으로 작동합니다. 캐시는 `~/.local/share/verdaccio/storage`에 있습니다.',
+          '**pip (Python):** 가장 간단한 패턴은 `pip download -r requirements.txt -d ~/wheelhouse`, 그런 다음 `pip install --no-index --find-links ~/wheelhouse -r requirements.txt`로 설치하는 것입니다. 여러 프로젝트에 사용하려면 devpi가 더 강력한 옵션입니다 — Verdaccio와 같은 형태이지만 Python용입니다.',
+          '**cargo (Rust):** `cargo vendor`는 각 의존성을 프로젝트의 `vendor/` 디렉토리에 쓰고 cargo에게 그것을 사용하도록 지시하는 `.cargo/config.toml` 스니펫을 추가합니다. 커밋되면 프로젝트는 영원히 오프라인으로 빌드됩니다. Cargo는 또한 `~/.cargo/registry/cache`에 글로벌 레지스트리를 캐시합니다 — `cargo fetch`로 예열하면 대부분의 경우를 커버합니다.',
+          '**go (Go):** 가장 간단한 패턴은 프로젝트별 `go mod vendor`입니다(Go는 Cargo처럼 `vendor/` 디렉토리를 씁니다). 글로벌 캐시는 로컬 Athens 프록시를 실행하고 `GOPROXY=http://localhost:3000`을 설정하십시오.',
+          '**pnpm과 yarn (npm 변형):** npm과 동일하게 Verdaccio를 가리키십시오. pnpm의 내용 주소 지정 스토어는 기본적으로 오프라인 친화적입니다; 패키지가 스토어에 있으면 모든 프로젝트가 공유합니다.',
+          '**Brew, apt, dnf (시스템 패키지):** 짧은 여행에는 덜 중요하지만 알아 두면 유용합니다. `brew bundle dump`는 나중에 다시 실행할 수 있는 Brewfile을 생성합니다; apt/dnf는 `apt-get download`와 다운로드된 `.deb`/`.rpm` 파일을 통한 오프라인 모드가 있습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '가장 간단한 패키지 오프라인 패턴은 프로젝트별입니다: Rust의 `cargo vendor`, Go의 `go mod vendor`, Node의 Verdaccio 대상 `npm install`, Python의 `pip download` — 전날 프로젝트 수준에서 모두 완료. 시스템 캐시(Verdaccio 스토어, ~/.cargo, ~/.npm)가 프로젝트 간에 필요한 것을 처리합니다.',
+          },
+        ],
+      },
+      offlineDocs: {
+        id: 'offline-docs',
+        title: '오프라인 문서: Devdocs, Zeal, Stack Overflow 덤프',
+        content:
+          '**모델은 대략 학습된 내용을 알고 있습니다; 나머지는 오프라인 문서와 코드에 있습니다.** 세 가지 소스가 Google에서 검색할 내용의 약 95%를 커버합니다.',
+        items: [
+          '**Devdocs (웹 앱, ~3 GB).** ~150개 언어와 프레임워크의 공식 문서를 미러링하는 독립형 Progressive Web App. `devdocs.io`를 열고 설정으로 이동해 사용하는 문서를 활성화하고 "오프라인에서 사용 가능하게"를 클릭하십시오. 브라우저가 모든 것을 캐시합니다; 비행기 모드에서 영원히 작동합니다.',
+          '**Zeal (데스크톱 앱, ~5 GB).** Dash docset을 사용하는 네이티브 데스크톱 문서 브라우저 — macOS Dash 앱과 동일한 형식이지만 무료이고 크로스 플랫폼. Devdocs보다 키보드 탐색이 더 낫고, 검색이 더 약합니다. 하나를 선택하십시오; 둘 다 갖추는 것은 과합니다.',
+          '**Stack Overflow 데이터 덤프 (~8 GB 압축).** Internet Archive는 공식 Stack Exchange 데이터 덤프를 토렌트로 호스팅합니다. Kiwix 같은 도구가 이것을 탐색 가능한 사이트로 제공하거나, 빠른 로컬 검색을 위해 Elasticsearch/SQLite-FTS로 인덱싱할 수 있습니다. 커버리지는 덤프 날짜에서 끊기지만 — 보통 몇 달 이내 — 일반 코딩 질문에는 충분히 남습니다.',
+          '**프로젝트별 문서.** 자주 사용하는 라이브러리의 경우, 레포와 문서 사이트 소스를 클론하십시오. 대부분의 문서 사이트는 `docs/` 디렉토리에 있는 정적 사이트입니다; `mkdocs build` 또는 `npm run docs:build`가 `python -m http.server`로 제공할 수 있는 로컬 사이트를 생성합니다.',
+          '**모델 자체는 학습 데이터에 있는 것에 대한 문서 역할을 합니다.** Qwen3-Coder 30B는 표준 라이브러리와 주요 프레임워크 — TypeScript, React, Python stdlib, NumPy, AWS SDK — 를 잘 알고 있습니다. 이에 대해서는 Devdocs를 검색하는 것보다 모델에게 물어보는 것이 더 빠른 경우가 많습니다. 구분은 "알려진 것은 모델, 새로운 것은 문서, 모르는 것은 소스 코드"입니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Stack Overflow 콘텐츠 품질은 태그에 따라 크게 다릅니다. 덤프는 레거시 언어와 특정 오류 메시지에 가장 유용합니다 — 모델이 가장 잘 처리하지 못하는 부분입니다. 인기 있는 프레임워크 질문에 대해서는 모델이 덤프 검색보다 더 빠르고 정확합니다.',
+          },
+        ],
+      },
+      localSearch: {
+        id: 'local-search',
+        title: 'Google 없는 로컬 검색',
+        content:
+          '**`ripgrep`과 `rga`는 로컬 검색 워크플로우를 Google만큼 빠르게 느끼게 하는 두 가지 도구입니다.** 둘 다 무료이고, 둘 다 작고, 둘 다 모든 플랫폼에서 작동합니다.',
+        items: [
+          '**ripgrep (`rg`) — 코드를 위한 빠른 텍스트 검색.** 대규모 레포에서 `grep -r`을 대체하고 10–50배 능가합니다. 자동으로 `.gitignore`를 읽습니다. "이 함수가 어디에서 사용됩니까?"와 "이 API의 모든 호출자를 찾아라"에 대한 표준 도구.',
+          '**rga (`ripgrep-all`) — PDF, 압축 파일, 다른 바이너리 형식을 위한 ripgrep.** PDF, zip 파일, gzip으로 압축된 로그, SQLite 데이터베이스, Office 문서를 투명하게 검색합니다. `rga "쿼리" .`는 일반 텍스트에 대해 ripgrep으로 폴백하면서 ripgrep이 할 수 없는 모든 파일 형식에서 검색합니다.',
+          '**사용 사례 1 — "이 API 사용 예시가 필요합니다".** 그것을 사용하는 몇 개의 레포를 미리 클론하십시오; `rg "api_function_name" ~/code/examples`가 1초도 안 걸려 모든 실제 호출 사이트를 반환합니다. 사용 패턴에 대해서는 문서보다 낫습니다.',
+          '**사용 사례 2 — "이 PDF 사양에서 X가 어디에 있습니까?"** `rga "특정 문구" ~/specs/`. 검토하는 데 2분이 걸리던 PDF가 200 ms 검색으로 바뀝니다.',
+          '**사용 사례 3 — "Stack Overflow 없는 Stack Overflow".** Kiwix나 Elasticsearch로 Stack Overflow 덤프를 인덱싱했다면, 덤프에 대한 `rg` 스타일 쿼리가 레거시 주제에 대한 Google의 "stackoverflow" 검색을 대체합니다.',
+          '**빠른 코딩 질문에는 검색보다 모델이 더 빠릅니다.** Continue.dev에서 `Cmd+L`을 누르면 코드베이스를 컨텍스트로 채팅이 열립니다; "인증 플로우를 어디서 처리합니까?"가 1–2초 안에 올바른 파일을 반환합니다, 검색 도구에 쿼리를 입력할 필요 없이.',
+        ],
+      },
+      ide: {
+        id: 'ide',
+        title: '완전 오프라인으로 작동하는 IDE',
+        content:
+          '**대부분의 주요 IDE는 오프라인으로 작동합니다; 차이점은 확장, 라이선스 검증, AI 도구에 있습니다.** 중요한 것은 네트워크가 끊겼을 때 AI 기능이 계속 작동하는지 여부입니다, 이것이 사용자가 알아채는 부분이기 때문입니다.',
+        items: [
+          '**VS Code — 완전 오프라인 작동; AI 기능은 사용하는 확장에 따라 다릅니다.** Continue.dev는 Ollama 로컬 엔드포인트에 대해 완전히 실행되며 권장 조합입니다. Cursor의 내장 Tab 자동 완성은 네트워크 호출을 하고 조용히 성능이 저하됩니다. GitHub Copilot은 즉시 작동을 멈춥니다.',
+          '**JetBrains IDE (IntelliJ, PyCharm, GoLand, WebStorm) — 라이선스가 캐시되면 완전 오프라인 작동.** 라이선스 서버는 주기적으로 핑합니다(개인 라이선스의 경우 30일마다) 하지만 장기 오프라인 기간을 허용합니다. Continue.dev는 기능 동등성을 갖춘 JetBrains 버전이 있습니다.',
+          '**Vim과 Neovim — 설계상 완전 오프라인.** 라이선스 확인 없음, 텔레메트리 없음. 터미널 사이드 패널에서 Aider와 결합하거나; 또는 `llm.nvim` 플러그인을 사용해 로컬 Ollama를 가리키십시오.',
+          '**Emacs — 설계상 완전 오프라인.** `aidermacs`를 통해 Aider와 결합하거나 `gptel`을 통해 로컬 Ollama HTTP API를 직접 호출하십시오.',
+          '**Cursor — 부분 오프라인.** IDE 자체는 인터넷 없이 작동하지만 주요 기능(Tab 자동 완성, Cmd+K 에이전트)은 Cursor의 클라우드 라우팅이 필요합니다. Cursor 내에 VS Code 확장으로 Continue.dev를 설치하면 제한을 우회합니다; 오프라인 모드 호환 IDE에서 완전히 작동하는 로컬 AI 에디터를 얻을 수 있습니다.',
+          '**특히 harness 계층의 더 심층적인 비교는** [Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코드 에이전트](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local)를 참조하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '여행 시에는 Cline보다 Continue.dev를 선호하십시오. Cline의 자율 에이전트 루프는 전체 파일 내용을 대화에 스트리밍하여 토큰을 빠르게 소비합니다 — 전력이 있을 때는 괜찮지만, 모든 GPU 시간이 배터리 비용인 비행 중에는 불편합니다. Continue.dev의 자동 완성 중심 설계는 세션당 훨씬 적은 컴퓨팅을 사용합니다.',
+          },
+        ],
+      },
+      whatBreaks: {
+        id: 'what-breaks',
+        title: '연결 없이 실제로 실패하는 것 (정직한 목록)',
+        content:
+          '**이 설정은 진정으로 강력하지만 다섯 가지는 여전히 실패합니다.** 미리 실패 모드를 알면 피할 수 있습니다.',
+        items: [
+          '**완전히 새로운 서드파티 패키지 설치.** 캐시 미스, 소스 코드를 수동으로 vendoring하는 것 외에는 백업 없음. 해결책은 예방적입니다 — 사용할 가능성이 있는 것은 모두 미리 캐시하십시오, 가능한 옵션도 포함하여.',
+          '**학습 데이터 마감 이후 출시된 API에 대한 모델 지식.** Qwen3-Coder의 학습 데이터 마감일은 2025년 10월입니다(2026년 5월 출시); 그 이후에 출시된 API는 기껏해야 추측입니다. 해결책: 소스 코드를 미리 클론하고 의심스러울 때 `rg`를 사용해 실제 시그니처를 찾으십시오. 학습 데이터보다 최신의 라이브러리에 대해 모델을 신뢰하지 마십시오.',
+          '**OAuth 또는 API 인증 왕복이 필요한 것.** 클라우드 공급자 로그인, OAuth 토큰 교환, 팀 SSO 포털 접근 — 이 중 어느 것도 오프라인으로 작동하지 않습니다. 해결책: 이륙 전에 모든 인증을 완료하고 캐시된 토큰에 의존하십시오(보통 12–24시간 후 만료됩니다).',
+          '**브라우저 기반 원격 서비스 테스트.** 테스트가 실제 API나 스테이징 환경을 호출한다면 연결 없이 실패합니다. 해결책: 로컬 mock을 사용하고(msw, nock, vcr) 미리 픽스처를 기록하십시오.',
+          '**외부 서비스를 호출하는 이미지 및 에셋 생성.** 클라우드 이미지 생성기, 폰트 서비스, CDN으로 다운로드된 에셋이 모두 실패합니다. 해결책: 에셋을 레포에 포함하거나 완전히 로컬 이미지 모델을 사용하십시오(이는 별도의 스택입니다).',
+          '**"그 라이브러리 이름이 뭐였더라?" 문제의 해결책은 모델 자체입니다.** Google을 검색할 수 없을 때, 모델에게 "X 기능을 위한 패키지 이름은 무엇입니까?"라고 물어보십시오 — 학습 데이터에 있는 것에 대해서는 80–90% 정확하게 답합니다. 설치 전에 패키지 캐시에서 확인하십시오.',
+        ],
+        image: '/images/local-coding-llm-what-breaks-es.svg',
+        imageCaption: '오프라인에서 실패하는 것과 해결책: (1) 캐시 없는 패키지 — 출발 전 설치; (2) 마감 후 API 지식 — 소스 코드 클론 후 ripgrep 사용; (3) OAuth 인증 왕복 — 신호 잃기 전 인증 완료; (4) 원격 API 대상 테스트 — msw/nock으로 mock 사용; (5) 누락된 Docker 이미지 — 비행 전 docker pull 실행.',
+      },
+      updates: {
+        id: 'updates',
+        title: '나중에 모델과 캐시 업데이트',
+        content:
+          '**설정은 "스냅샷 후 실행" 방식입니다 — 모든 것이 캐시되면 업데이트를 선택할 때까지 정적으로 유지됩니다.** 업데이트는 온라인에서 이루어지고; 오프라인 세션은 업데이트 당시의 것을 사용합니다.',
+        items: [
+          '**모델은 `ollama pull`로 업데이트됩니다.** Qwen3-Coder 새 버전이 출시되면 온라인 상태에서 `ollama pull qwen3-coder:30b`를 실행하십시오. 새 가중치가 이전 것을 대체합니다; 다운로드 전에 태그를 지정했다면 이전 버전이 유지됩니다(`ollama tag qwen3-coder:30b qwen3-coder:30b-2026-05`).',
+          '**패키지 캐시는 다음 온라인 `npm install` / `pip install` / `cargo update`에서 업데이트됩니다.** 특별한 워크플로우 없음 — 온라인 상태에서 일반 패키지 관리자가 계속 작동하고 오프라인 상태에서 고정됩니다.',
+          '**Devdocs는 기본적으로 자동 업데이트됩니다.** 공항에서 신호가 있을 때 예상치 못한 다운로드를 방지하기 위해 비행 전에 자동 업데이트를 비활성화하십시오(설정 → 자동 업데이트 비활성화).',
+          '**Stack Overflow 덤프는 분기별로 새로 고쳐집니다.** Internet Archive는 3개월마다 새 덤프를 게시합니다; 더 최신 커버리지를 원할 때 다시 다운로드하십시오.',
+          '**계획할 주기:** 모델과 Devdocs는 2–3개월마다, 패키지 캐시는 새 작업을 시작할 때 프로젝트별로, Stack Overflow 덤프는 6–12개월마다. 진정으로 새로운 것을 시작하지 않는 한 긴급하지 않습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '가장 간단한 업데이트 플로우: 월 1회 일요일에 "온라인 유지보수의 날"을 지정하십시오. 새 모델 버전에 `ollama pull`을 실행하고, Devdocs를 새로 고치고, 활성 프로젝트에서 `npm update` / `cargo update` / `pip install --upgrade`를 실행하십시오. 그 후에는 성능 저하 없이 다음 달 동안 오프라인 상태를 유지할 수 있습니다.',
+          },
+        ],
+      },
+      teamCache: {
+        id: 'team-cache',
+        title: '팀과 오프라인 캐시 공유',
+        content:
+          '**함께 여행하거나 동일한 제한된 환경에서 작업하는 팀의 경우 캐시를 공유할 수 있습니다.** 이것이 개발자당 60 GB 다운로드와 사무실 네트워크에서 60 GB 한 번 다운로드의 차이입니다.',
+        items: [
+          '**Verdaccio도 팀 서버로 작동합니다.** 소규모 사무실 서버에 Verdaccio를 가리키고, 모든 사람을 위해 `npm config set registry http://team-cache.local:4873/`을 설정하십시오. 새 개발자는 자동으로 캐시를 얻습니다; 오프라인 여행은 노트북에서 필요한 것을 미리 동기화하는 것만 의미합니다.',
+          '**모델은 팀 Ollama 서버에 호스팅될 수 있습니다.** 강력한 사무실 머신에서 `ollama serve`를 실행하고, 각 개발자의 Continue.dev 설정을 사무실에 있을 때 팀 서버를 가리키도록 하고, 여행용으로는 `localhost:11434`(로컬에 다운로드된 모델)로 전환하십시오.',
+          '**Devdocs는 네이티브 팀 모드가 없지만 정적 폴더로 사소하게 공유 가능합니다.** 한 번 빌드하고 `http://docs.team.local`에 호스팅하여 모두가 북마크하십시오. 여행 시 개발자들은 `localhost`에서 개별 인스턴스를 실행합니다.',
+          '**Git은 이미 팀 공유 가능합니다.** 사무실 네트워크 내 로컬 Gitea 또는 자체 호스팅 GitLab은 각 개발자에게 레포에 대한 오프라인 접근을 제공합니다; 개별 노트북의 `git clone --mirror`와 결합해 여행하십시오.',
+          '**개인 레지스트리를 통한 컨테이너 이미지.** 소규모 Harbor 또는 Gitea 통합 레지스트리가 이미지를 한 번 캐시합니다; 여행자들은 출발 전에 로컬로 `docker pull`하십시오.',
+          '**경제적 사례:** 자주 여행하는 개발자 5명 팀의 경우 캐시 공유가 월 약 250 GB의 인터넷 다운로드를 절약하고 비행 전 체크리스트를 60분에서 5분으로 줄입니다.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '오프라인 코딩 스택 설정의 흔한 실수',
+        items: [
+          '**실수 1: 여행 전에 오프라인 설정을 테스트하지 않음.** 가장 흔한 실패는 공항에서 공백을 발견하는 것입니다. 집에서 30분 "블랙아웃" 예행 연습을 하십시오 — Wi-Fi를 끄고, 모바일을 차단하고, 실제 작업에서 시도해 보십시오 — 필요하기 최소 24시간 전에.',
+          '**실수 2: 현재 사용하는 패키지만 캐시하고 필요할 수도 있는 패키지는 캐시하지 않음.** 여행 중 의존성을 추가할 가능성이 있다면 집에서 smoke test로 한 번 설치하십시오. 캐시가 그것을 유지합니다.',
+          '**실수 3: Cursor의 Tab 자동 완성을 활성화된 채로 두고 오프라인에서 작동한다고 가정함.** 작동하지 않습니다. IDE는 조용히 아무것도 제공하지 않는 상태로 폴백합니다; 자동 완성이 전혀 없습니다. Cursor 내에서 Continue.dev를 VS Code 확장으로 설치하거나, VS Code를 직접 사용하십시오.',
+          '**실수 4: 진지한 코딩 작업에 7B 미만 모델 사용.** 7B 미만 코딩 모델은 출력을 수정하는 데 코드를 직접 작성하는 것보다 더 많은 시간을 소비할 만큼 충분히 실패합니다. 최소한 Qwen3-Coder 7B로 내려가십시오; 하드웨어가 그것도 처리할 수 없다면 그 노트북에서는 오프라인 코딩 설정이 실용적이지 않습니다.',
+          '**실수 5: 학습 데이터 마감보다 최신의 라이브러리에 대해 모델을 신뢰함.** 자신 있게 환각합니다. 지난 6개월 내에 출시된 모든 것에 대해 모델 출력을 추정으로 취급하고 소스 코드에서 확인하십시오.',
+          '**실수 6: 패키지 캐시를 건너뛰고 공항 라운지 Wi-Fi에서 `npm install`이 충분히 빠를 것이라고 가정함.** 라운지 Wi-Fi는 불안정하고, 다운로드가 중단되며, 의존성 트리가 절반만 설치된 상태로 탑승합니다. 전날 캐시하십시오.',
+          '**실수 7: Docker 이미지를 잊음.** 개발 워크플로우가 데이터베이스를 위해 `docker compose up`을 사용한다면 이미지를 미리 다운로드해야 합니다. 이미지 없이 비행 중 첫 `docker compose up`은 넘을 수 없는 벽입니다.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[Ollama 문서](https://ollama.com/library) — 오프라인 VRAM/RAM 예산을 위해 참조된 Qwen3-Coder 변형 및 양자화 수준을 포함한 공식 모델 라이브러리.',
+          '[Continue.dev 문서](https://docs.continue.dev/) — 설정 가이드, 로컬 모델 구성, 오프라인 모드 호환 자동 완성 및 채팅 워크플로우.',
+          '[Aider 문서](https://aider.chat/) — 터미널 CLI 참조, 로컬 모델 구성, git을 통한 네이티브 오프라인 워크플로우 패턴.',
+          '[Devdocs 소스 코드](https://github.com/freeCodeCamp/devdocs) — 오프라인 사용을 위한 공식 문서를 미러링하는 웹 앱; 다운로드 지침 및 PWA 캐시.',
+          '[Stack Exchange 데이터 덤프 (Internet Archive)](https://archive.org/details/stackexchange) — 검색 대체용으로 사용되는 Stack Overflow 콘텐츠의 분기별 덤프.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '완전한 오프라인 코딩 설정은 얼마나 많은 공간을 차지합니까?',
+            a: '커버리지에 따라 디스크에서 약 50–80 GB. 분류: Qwen3-Coder 30B Q4_K_M은 ~18 GB, Devdocs는 ~3 GB, Zeal docset은 사용하는 경우 ~5 GB, Stack Overflow 덤프는 ~8 GB, 프로젝트별 패키지 캐시(npm, pip, cargo, go)는 각각 2–10 GB를 추가합니다. 더 작은 공간 점유를 원하는 경우 7B 백업 모델은 ~5 GB입니다.',
+          },
+          {
+            q: '오프라인 상태에서 새로운 npm 패키지를 설치할 수 있습니까?',
+            a: '로컬 Verdaccio 캐시나 pnpm 스토어에 이미 있는 경우에만 가능합니다. 표준 비행 전 패턴은 집에서 프로젝트에 `npm install`을 실행하고, 추가할 수 있는 선택적 의존성에도 `npm install`을 실행하는 것입니다. 캐시하지 않은 패키지는 오프라인으로 설치할 수 없습니다; 대안은 소스 코드를 수동으로 클론하여 `node_modules`에 복사하는 것이지만 느리고 오류가 발생하기 쉽습니다. 미리 캐시하는 것이 정답입니다.',
+          },
+          {
+            q: 'GitHub은 오프라인에서 작동합니까?',
+            a: 'Git 자체는 완전히 오프라인으로 작동합니다 — `git commit`, `git branch`, `git rebase`, `git log`가 모두 로컬에서 실행됩니다. `git pull`, `git push`, `git fetch`, 또는 웹 인터페이스는 작동하지 않습니다. 전체 이력을 위해 `git clone --mirror`로 필요한 레포를 미리 클론하십시오; 커밋이 로컬에 쌓이고 연결이 돌아올 때 푸시됩니다. 진정한 오프라인 협업 작업의 경우 팀원의 노트북이나 소규모 사무실 서버에서 로컬 Gitea 또는 자체 호스팅 GitLab을 실행하십시오.',
+          },
+          {
+            q: '완전 오프라인에서 가장 잘 작동하는 IDE는 무엇입니까?',
+            a: 'Continue.dev가 있는 VS Code가 가장 완전한 오프라인 경험입니다: 풍부한 AI 기능, 좋은 확장 생태계, 라이선스 호출 없음. JetBrains IDE는 작동하지만 라이선스 서버가 주기적으로 핑합니다(~30일 오프라인 허용). Vim, Neovim, Emacs는 설계상 완전히 오프라인이며 Aider와 잘 결합됩니다. Cursor는 내장된 AI 기능이 네트워크 요청을 필요로 하기 때문에 내부에 Continue.dev를 설치해야 합니다.',
+          },
+          {
+            q: '오프라인 작업을 위해 레포를 클론할 수 있습니까?',
+            a: '예. `git clone --mirror <url> <path>`는 전체 이력과 모든 브랜치를 포함한 bare 클론을 만듭니다; `git clone <url>`은 일반 작업 복사본에 작동합니다. 둘 다 초기 클론 후 네트워크 없이 실행됩니다. 여러 레포 워크플로우의 경우 비행 전 클론을 스크립트화하는 것(`for repo in $REPOS; do git clone --mirror "$repo"; done`)이 가장 간단한 패턴입니다. 서브모듈은 미리 다운로드하기 위해 `git submodule update --init --recursive`가 필요합니다.',
+          },
+          {
+            q: 'Linux에서 오프라인 코딩이 작동합니까?',
+            a: '예 — Linux는 오프라인 코딩 설정에 가장 간단한 플랫폼입니다. Ollama가 네이티브로 실행되고, Continue.dev와 Aider에는 Linux 버전이 있으며, 모든 패키지 관리자(apt, dnf, pacman, nix)에는 오프라인 모드가 있고, 여기서 설명된 대부분의 도구는 원래 Linux에서 개발되었습니다. Linux 관련 주의 사항은 GPU 드라이버입니다: Linux용 NVIDIA 드라이버는 추론에 성숙하지만 오프라인으로 사용할 정확한 커널에서 테스트할 가치가 있습니다. Apple Silicon Mac과 독립 GPU가 있는 Linux 노트북은 둘 다 완전히 지원됩니다.',
+          },
+          {
+            q: '인터넷 없이 로컬 AI 모델을 어떻게 업데이트합니까?',
+            a: '할 수 없습니다 — 모델 업데이트는 연결이 필요합니다. 패턴은 "스냅샷 후 실행"입니다: 온라인에서 최신 모델을 다운로드하고 오프라인으로 전환하십시오. 신호가 돌아올 때(공항 라운지, 호텔 Wi-Fi, 집), `ollama pull qwen3-coder:30b`를 실행해 최신 가중치를 얻으십시오. 월간 업데이트 주기가 일반적입니다; 모델은 업데이트 사이에 조용히 성능이 저하되지 않습니다.',
+          },
+          {
+            q: '팀과 오프라인 캐시를 공유할 수 있습니까?',
+            a: '예. Verdaccio(npm)와 devpi(pip)는 둘 다 팀 서버로 작동합니다; Athens 프록시는 Go 모듈을 제공합니다; 개인 컨테이너 레지스트리는 Docker 이미지를 제공합니다; 자체 호스팅 Gitea 또는 GitLab은 git 원격을 제공합니다. 중앙화된 캐싱은 새 팀원이 각자 60 GB를 다운로드하는 대신 사무실 네트워크에서 모든 것을 얻음을 의미합니다. 여행 시 각 개발자의 노트북에는 여전히 사용할 것의 로컬 스냅샷이 필요하지만 중앙 캐시 덕분에 스냅샷이 저렴합니다.',
+          },
+          {
+            q: '이것이 약한 신호가 있는 비행기에서도 작동합니까?',
+            a: '예 — 그리고 불안정한 항공사 Wi-Fi에 의존하는 것보다 더 신뢰할 수 있습니다. 전체 스택은 네트워크 제로를 가정합니다; 약한 신호는 신호 없음과 동일하게 처리됩니다. 일화적으로, 로컬 LLM 자동 완성 지연 시간(M5에서 ~280 ms)은 연결이 좋을 때도 Copilot 서버까지의 일반적인 항공사 Wi-Fi 왕복(~400–800 ms, 저하 시 훨씬 더 나쁨)보다 빠릅니다. 오프라인 설계는 장거리 비행에서 "가능하면 온라인"을 능가합니다.',
+          },
+          {
+            q: '오프라인으로 코딩하는 것이 온라인보다 빠릅니까?',
+            a: '자동 완성과 채팅의 경우 예 — 로컬 추론 왕복은 클라우드 AI 공급자까지의 네트워크 왕복보다 빠릅니다. M5에서 Continue.dev + Qwen3-Coder 30B는 ~280 ms 안에 자동 완성을 반환합니다; 좋은 네트워크 조건에서 GitHub Copilot은 ~180–400 ms에 반환합니다; 성능이 저하된 네트워크에서 Copilot은 더 느리게 반환하거나 실패합니다. 지연 시간 차이는 작지만 일관되게 로컬 사용에 유리합니다. 가장 큰 이점은 결정론입니다 — 로컬 추론은 네트워크 상태에 관계없이 항상 같은 속도입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[GitHub Copilot을 로컬 LLM으로 대체하기: 설정 및 비용 비교 2026](/ko/power-local-llm/replace-github-copilot-with-local-llm) — 인접한 목표: 동일한 스택, 다른 접근 방식(비용 vs. 오프라인). 비용 수치를 먼저 원한다면 읽으십시오.',
+          '[Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코드 에이전트](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 완전 오프라인으로 작동하는 harness와 Continue.dev, Aider, Cline의 차이에 대한 심층 커버리지.',
+          '[2026년 최고의 로컬 코딩 모델: Qwen3-Coder vs DeepSeek vs Codestral](/ko/power-local-llm/best-local-coding-models-2026) — 언어별 HumanEval+ 벤치마크와 함께 방정식의 모델 측면.',
+          '[태블릿에서 AI 실행: iPad 및 Android 로컬 LLM 앱](/ko/power-local-llm/run-ai-on-tablet-ipad-android) — 노트북보다 더 가벼운 오프라인 기기를 선호하는 여행자를 위한 안내.',
+          '[2026년 로컬 LLM을 위한 최고의 노트북](/ko/local-llms/best-laptops-local-llm) — 하드웨어 참조; 모든 실용적인 노트북을 토큰/초, 배터리, 총 시스템 메모리로 순위 매김.',
+          '[AI로 더 나은 코드 작성하기](/ko/prompt-engineering/write-better-code-with-ai) — 온라인 또는 오프라인에서 모든 모델의 코드 생성 품질을 향상시키는 프롬프팅 기법.',
+          '[Power Local LLM 허브](/ko/power-local-llm) — 코딩, RAG, 에이전트, 창작 작업에 대한 전체 가이드 라이브러리.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '인터넷 없이 코딩하는 로컬 LLM: 완전한 오프라인 설정 가이드 (2026)',
+      description: '14시간 비행으로 검증된 오프라인 코딩 스택. 로컬 LLM, npm/pip 캐시, Devdocs, ripgrep — 디스크 ~60 GB, 네트워크 요청 제로. 비행 전 체크리스트 포함.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-coding-llm-without-internet',
+      inLanguage: 'ko',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '인터넷 없이 코딩하는 로컬 LLM', item: 'https://www.promptquorum.com/ko/power-local-llm/local-coding-llm-without-internet' },
+      ],
+    },
+  },
 }

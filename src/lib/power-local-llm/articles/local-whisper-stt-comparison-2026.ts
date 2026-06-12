@@ -4265,4 +4265,551 @@ for segment in segments:
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
      },
 },
-}
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-14',
+    dateModified: '2026-05-14',
+    next_refresh_due: '2026-11-14',
+    theme: 'Voice, Speech & Multimodal',
+    title: 'Whisper.cpp vs faster-whisper 2026: 로컬 STT 벤치마크, 설정 및 GPU 가속',
+    seoTitle: 'Whisper.cpp vs faster-whisper 2026: 로컬 STT 및 벤치마크',
+    intro:
+      'whisper.cpp와 faster-whisper는 2026년 현재 OpenAI Whisper 모델을 기반으로 한 가장 주요한 두 가지 로컬 오프라인 음성 인식(STT) 구현체입니다. whisper.cpp는 Apple Metal, CUDA, Vulkan, CPU에서 동작하는 순수 C/C++ 포트로 — Apple Silicon, 임베디드 시스템, 실시간 음성 애플리케이션에 이상적입니다. faster-whisper는 CTranslate2를 활용하는 Python 라이브러리로, int8 양자화를 통해 NVIDIA GPU에서 원본 Whisper 대비 최대 ~4배의 처리량을 달성합니다. 이 가이드에서는 설치 방법, 성능 벤치마크, 실시간 전사 설정, 그리고 플랫폼별 직접 비교를 통해 적합한 도구를 선택할 수 있도록 안내해 드립니다.',
+    metaDescription:
+      '2026년 로컬 음성 인식을 위한 whisper.cpp와 faster-whisper 비교: WER, GPU vs CPU 속도, Apple Silicon Metal, 실시간 전사. 완전 오프라인 동작.',
+    twitterDescription:
+      'whisper.cpp vs faster-whisper: 2026년 로컬 음성 인식 벤치마크. CPU vs GPU 속도, Apple Metal, WER 정확도, 실시간 전사. 클라우드 불필요, 무료.',
+    audience:
+      '오프라인 및 프라이버시 보호 음성 전사가 필요한 개발자, 연구자, 시스템 구축자 — 회의 메모, 음성 인터페이스, 접근성 도구, 또는 보안 환경에 활용하시는 분들을 위한 가이드입니다.',
+    readTime: '10분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '로컬 음성 인식',
+    targetKeywords: [
+      'whisper.cpp vs faster-whisper',
+      '로컬 음성 인식 2026',
+      '오프라인 음성 전사',
+      '로컬 whisper 전사',
+      'faster-whisper 벤치마크',
+      'whisper cpp 애플 실리콘',
+      '로컬 STT GPU',
+      'whisper cpp 설치 방법',
+    ],
+    current_models_mentioned: [
+      'Whisper tiny (39M)',
+      'Whisper base (74M)',
+      'Whisper small (244M)',
+      'Whisper medium (769M)',
+      'Whisper large-v3 (1.55B)',
+      'distil-large-v3 (~756M)',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4070',
+      'Apple M5 Pro',
+      'Apple Silicon (M-series)',
+      'Raspberry Pi',
+      'CPU (x86)',
+    ],
+    leadAnswerBlock:
+      '**whisper.cpp vs faster-whisper — 가장 널리 사용되는 두 가지 Whisper 로컬 런타임 — 각자의 대상 플랫폼에서 결정적인 우위를 보입니다.** **Apple Silicon(M 칩 탑재 Mac)의 경우, Metal 가속을 적용한 whisper.cpp가 2026년 가장 빠른 로컬 STT 옵션입니다 — M5 Pro에서 large-v3이 ~10배 실시간 속도로 동작합니다.** NVIDIA GPU 서버 및 Python 파이프라인의 경우, CTranslate2의 int8 양자화를 적용한 faster-whisper가 최선의 선택으로, RTX 4070에서 large-v3 모델을 ~2.5GB VRAM만으로 ~12배 실시간 속도로 처리합니다. 두 도구 모두 동일한 OpenAI Whisper 모델 가중치(tiny부터 large-v3까지)를 사용하며, 차이점은 런타임 최적화와 통합 방식에 있습니다. CPU 전용 하드웨어에서는 tiny 및 base 모델에 대해 두 도구 모두 활용 가능하며 — faster-whisper가 int8을 통해 CPU에서 약간 더 높은 속도(~20배 vs ~15배 실시간)를 제공합니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 로컬 음성 인식에 whisper.cpp와 faster-whisper 중 어느 것을 사용해야 합니까?',
+        answer:
+          '선택은 하드웨어와 통합 요구 사항에 따라 달라집니다. Apple Silicon(M1–M5)의 경우, Metal 가속을 적용한 whisper.cpp가 더 빠르고 자연스러운 선택입니다 — Python 의존성 없이 large-v3로 ~10배 실시간 속도를 달성합니다. NVIDIA GPU의 경우, faster-whisper가 더 빠르고 Python 파이프라인 통합이 용이하며, int8 양자화를 통해 40% 적은 VRAM으로 large-v3를 ~12배 실시간 속도로 처리합니다. CPU 전용 하드웨어에서는 small 및 base 모델에 대해 두 도구 모두 동작하며, faster-whisper가 속도 면에서 약간 우위를 보입니다.',
+        bullets: [
+          'Apple Silicon → whisper.cpp with Core ML / Metal. M5 Pro에서 large-v3으로 ~10배 실시간 속도.',
+          'NVIDIA GPU → faster-whisper. RTX 4070에서 large-v3 int8으로 ~12배 실시간 속도, ~2.5GB VRAM.',
+          'Python 파이프라인 → faster-whisper. 네이티브 Python, 5줄 설정, VAD 포함.',
+          '임베디드 / Raspberry Pi → whisper.cpp. 순수 C 바이너리, Python 런타임 불필요.',
+          '실시간 음성 → whisper.cpp 스트림 모드 또는 faster-whisper VAD 파이프라인.',
+          '배치 전사 → faster-whisper. GPU 처리량 우수; 간편한 비동기 배칭.',
+          'WER 정확도: 동일 — 동일한 Whisper 모델 가중치 사용.',
+        ],
+        updatedDate: '2026-05-14',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '빠른 사실 정리', anchor: '#quick-facts' },
+      { label: '로컬 음성 인식이 필요한 이유', anchor: '#why-local-stt' },
+      { label: 'Whisper 모델 크기', anchor: '#whisper-model-sizes' },
+      { label: 'Distil-Whisper: 더 빠른 대안', anchor: '#distil-whisper' },
+      { label: 'whisper.cpp — C/C++ 포트', anchor: '#whisper-cpp' },
+      { label: 'faster-whisper — CTranslate2 포트', anchor: '#faster-whisper' },
+      { label: '직접 비교: 벤치마크 표', anchor: '#benchmarks' },
+      { label: '실시간 전사 설정', anchor: '#real-time' },
+      { label: 'Apple Silicon: whisper.cpp 승', anchor: '#apple-silicon' },
+      { label: 'NVIDIA GPU: faster-whisper 승', anchor: '#nvidia-gpu' },
+      { label: '어느 것을 사용해야 하는가', anchor: '#when-to-use' },
+      { label: 'whisper.cpp와 faster-whisper를 넘어서', anchor: '#beyond-tools' },
+      { label: '일반적인 문제 및 해결책', anchor: '#troubleshooting' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '참고 자료', anchor: '#sources' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**whisper.cpp는 Apple Silicon을 위한 최선의 로컬 STT 선택입니다.** C/C++ 포트는 하드웨어 가속을 위해 Core ML과 Apple Metal을 활용합니다 — Python 의존성 없이 M5 Pro에서 large-v3가 ~10배 실시간 속도로 동작합니다.',
+          '**faster-whisper는 NVIDIA GPU 및 Python 파이프라인을 위한 최선의 로컬 STT 선택입니다.** CTranslate2의 int8 양자화는 VRAM을 ~40% 줄이고 처리량을 원본 OpenAI 구현 대비 ~4배 향상시킵니다 — RTX 4070에서 large-v3가 ~2.5GB VRAM만으로 ~12배 실시간 속도를 달성합니다.',
+          '**두 도구 모두 동일한 OpenAI Whisper 모델 가중치를 사용합니다.** WER(단어 오류율)은 동일합니다 — 차이점은 런타임 성능과 통합 방식에만 있으며, 전사 정확도에는 차이가 없습니다.',
+          '**Whisper large-v3는 영어에서 2.5% WER로 최고의 정확도를 제공합니다.** 대부분의 프로덕션 사용 사례에서는 Whisper small(3.4% WER, 2GB RAM) 또는 medium(2.9% WER, 5GB RAM)이 속도와 정확도 사이에서 더 나은 균형을 제공합니다.',
+          '**실시간 전사는 두 도구 모두로 달성 가능합니다** — whisper.cpp는 `--stream` 플래그를 통해, faster-whisper는 내장 VAD(음성 활동 감지) 파이프라인을 통해 지원합니다. 실제 지연 시간은 모델 크기에 따라 라이브 음성보다 0.5~2초 지연됩니다.',
+          '**whisper.cpp는 CPU, Metal, CUDA, Vulkan에서 동작합니다** — 크로스 플랫폼 임베디드 사용(Raspberry Pi, Windows GPU 구성, ARM 서버)을 위한 유일한 옵션입니다. faster-whisper는 CPU와 CUDA만 지원합니다(Mac에서 Metal 미지원).',
+          '**Raspberry Pi 및 임베디드 Linux의 경우, CPU 상의 whisper.cpp tiny/base** 가 실질적인 한계입니다 — Pi 5에서 tiny가 ~15배 실시간 속도, base가 ~6배 실시간 속도. 두 모델 모두 1GB RAM에 수용됩니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실 정리',
+        items: [
+          '**두 도구 모두:** OpenAI의 오픈소스 Whisper 모델(MIT 라이선스) 기반. 동일한 정확도 — 런타임만 다름.',
+          '**whisper.cpp:** Georgi Gerganov가 C/C++로 작성. CPU(AVX2/NEON), CUDA, Metal(Apple), Vulkan 지원. Python 불필요.',
+          '**faster-whisper:** CTranslate2를 사용하는 Python 라이브러리. CPU(int8)와 CUDA 지원. Apple Metal 미지원.',
+          '**Whisper 모델 크기:** tiny(39M), base(74M), small(244M), medium(769M), large-v3(1.55B). 모두 ggml / CTranslate2 형식.',
+          '**대부분의 경우 최선의 모델:** Whisper small — 3.4% WER, 2GB RAM에서 동작, 현대적 CPU 또는 GPU에서 6배 실시간 속도.',
+          '**RTX 4070 벤치마크(large-v3):** faster-whisper ~12배 실시간; whisper.cpp CUDA ~8배 실시간. NVIDIA에서는 faster-whisper 승.',
+          '**M5 Pro 벤치마크(large-v3):** whisper.cpp Metal ~10배 실시간; faster-whisper CPU 전용 ~3배 실시간. Apple에서는 whisper.cpp 승.',
+        ],
+      },
+      whyLocalSTT: {
+        id: 'why-local-stt',
+        title: '로컬 음성 인식이 필요한 이유',
+        content:
+          '클라우드 STT 서비스(Google Speech-to-Text, AWS Transcribe, Azure Speech)는 오디오 분당 요금을 부과하며 — 일반적으로 $0.006–$0.024/분 — 오디오를 원격 서버로 전송합니다. 개인 정보 보호가 중요한 애플리케이션(의료 받아쓰기, 법적 녹음, 저널리즘 인터뷰, 기업 회의)의 경우, 로컬 전사는 데이터 노출을 완전히 제거합니다.',
+        items: [
+          '**개인 정보 보호:** 오디오가 기기를 떠나지 않습니다. 컴플라이언스를 위한 데이터 처리 계약이 필요 없습니다 — 처리가 로컬에서 이루어집니다.',
+          '**비용:** 분당 요금 없음. 주당 8시간 회의를 전사하는 개발자는 클라우드 STT 가격 대비 월 $120–480를 절약할 수 있습니다.',
+          '**오프라인:** 비행기, 보안 시설, 안정적인 인터넷이 없는 지역에서 동작합니다. API 키 관리 불필요.',
+          '**지연 시간:** 업로드/다운로드 왕복 없음. 실시간 음성 인터페이스의 경우, 로컬 처리는 STT 지연 시간을 클라우드의 300–800ms에서 50–300ms로 단축합니다.',
+          '**커스터마이즈:** 도메인별 어휘로 모델을 미세 조정합니다. 하드웨어에 맞는 모델 크기를 실행합니다.',
+          '**Home Assistant 통합:** 로컬 Whisper는 웨이크 워드와 음성 명령이 홈 네트워크를 떠나지 않음을 의미합니다. 클라우드 STT를 완전히 대체하는 애드온 설정은 [Home Assistant에서의 로컬 Whisper →](/ko/smart-home/local-whisper-home-assistant)를 참조하십시오.',
+        ],
+      },
+      whisperModelSizes: {
+        id: 'whisper-model-sizes',
+        title: 'Whisper 모델 크기 — 두 도구의 공통 기반',
+        content:
+          'whisper.cpp와 faster-whisper 모두 동일한 Whisper 모델 가중치를 사용하며, 각자의 형식으로 변환됩니다(whisper.cpp는 GGML, faster-whisper는 CTranslate2). VRAM/RAM 예산과 정확도 요구 사항에 따라 모델 크기를 선택하십시오.',
+        columns: ['모델', '파라미터', 'VRAM / RAM', '영어 WER', '속도 배율 (RTX 4070 실시간 대비)'],
+        rows: [
+          {
+            '모델': 'tiny',
+            '파라미터': '39M',
+            'VRAM / RAM': '~1 GB',
+            '영어 WER': '7.6%',
+            '속도 배율 (RTX 4070 실시간 대비)': '~32×',
+          },
+          {
+            '모델': 'base',
+            '파라미터': '74M',
+            'VRAM / RAM': '~1 GB',
+            '영어 WER': '5.0%',
+            '속도 배율 (RTX 4070 실시간 대비)': '~16×',
+          },
+          {
+            '모델': 'small',
+            '파라미터': '244M',
+            'VRAM / RAM': '~2 GB',
+            '영어 WER': '3.4%',
+            '속도 배율 (RTX 4070 실시간 대비)': '~6×',
+          },
+          {
+            '모델': 'medium',
+            '파라미터': '769M',
+            'VRAM / RAM': '~5 GB',
+            '영어 WER': '2.9%',
+            '속도 배율 (RTX 4070 실시간 대비)': '~2×',
+          },
+          {
+            '모델': 'large-v3',
+            '파라미터': '1.55B',
+            'VRAM / RAM': '~10 GB',
+            '영어 WER': '2.5%',
+            '속도 배율 (RTX 4070 실시간 대비)': '1× (기준)',
+          },
+          {
+            '모델': 'distil-large-v3',
+            '파라미터': '~756M',
+            'VRAM / RAM': '~4 GB',
+            '영어 WER': '~2.6%',
+            '속도 배율 (RTX 4070 실시간 대비)': '~6×',
+          },
+        ],
+        note: 'WER(단어 오류율) 값은 LibriSpeech 클린 테스트 세트에 대한 Whisper 논문에서 가져왔습니다. 낮을수록 좋습니다. 속도 배율은 RTX 4070에서의 faster-whisper int8 기준입니다. distil-large-v3 값은 Distil-Whisper 논문에서 가져왔습니다.',
+      },
+      distilWhisper: {
+        id: 'distil-whisper',
+        title: 'Distil-Whisper: 더 빠른 대안',
+        content:
+          '**[distil-whisper/distil-large-v3](https://huggingface.co/distil-whisper/distil-large-v3)는 large-v3의 지식 증류 변형으로, 파라미터가 ~50% 적으면서 WER이 원본의 ~1% 이내로 유지되며 ~6배 빠르게 동작합니다.** 전사 속도가 마지막 정확도 퍼센트 이상으로 중요한 경우에 올바른 선택입니다. distil-large-v3는 faster-whisper(네이티브 CTranslate2 지원)와 whisper.cpp(GGML 형식 변환을 통해) 모두와 호환되어, 이미 사용 중인 런타임에 통합됩니다.',
+        items: [
+          '**파라미터:** ~756M — large-v3의 1.55B의 약 절반, ~10GB 대신 ~4GB VRAM에 수용됩니다.',
+          '**속도:** RTX 4070에서 ~6배 실시간(large-v3의 기준인 1× 대비) — 속도는 medium 모델과 유사하면서 정확도는 large-v3에 근접합니다.',
+          '**WER:** 영어에서 ~2.6% — large-v3의 2.5%보다 단 ~0.1% 높습니다. 실제로는 일반적인 음성에서 차이를 거의 느낄 수 없습니다.',
+          '**호환성:** faster-whisper에서 네이티브로 동작합니다(`WhisperModel("distil-large-v3", device="cuda", compute_type="int8")`). whisper.cpp의 경우, distil-whisper의 GGML 변환 스크립트를 사용하여 GGML 형식으로 변환하십시오.',
+          '**최적 사용 사례:** 배치 전사 작업, VRAM이 제한된 서버 배포, large-v3 품질을 medium 모델 속도로 원하는 모든 사용 사례.',
+          '**비권장 사용 사례:** 다국어 전사 — distil-large-v3는 영어 전용입니다. 다른 언어의 경우 large-v3 또는 medium을 사용하십시오.',
+        ],
+      },
+      whisperCppDeep: {
+        id: 'whisper-cpp',
+        title: 'whisper.cpp — C/C++ 포트',
+        content:
+          '**whisper.cpp(Georgi Gerganov 제작)는 OpenAI Whisper 모델의 순수 C/C++ 재구현으로, 저자원 크로스 플랫폼 추론에 최적화되어 있습니다.** Python, CUDA 툴킷이 필요 없으며, Raspberry Pi부터 Apple M5 Pro, Windows CUDA 구성까지 거의 모든 하드웨어에서 동작합니다.',
+        items: [
+          '**플랫폼 지원:** CPU(AVX2, AVX512, ARM NEON), Apple Metal(Core ML), CUDA(NVIDIA), Vulkan(AMD/Intel GPU), OpenCL.',
+          '**Apple Silicon 강점:** whisper.cpp는 모델을 Core ML 형식으로 내보내 Apple Neural Engine에서 추론을 가능하게 합니다. Metal을 통해 M5 Pro에서 large-v3가 ~10배 실시간 속도로 동작합니다 — 클라우드 왕복보다 빠릅니다.',
+          '**설치:** 저장소를 클론하고 `make`(또는 `cmake`)를 실행합니다. 일반 플랫폼용 사전 빌드된 바이너리가 제공됩니다. Python 의존성 없음.',
+          '**모델 다운로드:** `bash ./models/download-ggml-model.sh base.en` — GGML 형식의 모델 파일을 다운로드합니다(base의 경우 ~142MB).',
+          '**CLI 예시:** `./main -m models/ggml-base.bin -f audio.wav` — WAV 파일을 표준 출력으로 전사합니다. 한국어는 `-l ko`를 추가하십시오.',
+          '**실시간 스트림 모드:** `./stream -m models/ggml-base.bin --step 3000 --length 10000` — 마이크에서 3초 청크 단위로 전사합니다.',
+          '**Python 래퍼:** pywhispercpp은 whisper.cpp를 위한 Python 바인딩을 제공하여, Metal 가속을 희생하지 않고 Python 파이프라인에서 사용할 수 있게 합니다.',
+          '**한계:** 네이티브 VAD(음성 활동 감지) 없음. 스트림 모드는 사용 사례에 따라 `--step` 및 `--length` 파라미터를 조정해야 합니다.',
+        ],
+        codeBlock: `# Build from source (macOS / Linux)
+git clone https://github.com/ggerganov/whisper.cpp
+cd whisper.cpp
+make -j4
+
+# Download a model
+bash ./models/download-ggml-model.sh large-v3
+
+# Transcribe a file
+./main -m models/ggml-large-v3.bin -f recording.wav
+
+# Enable Metal on Apple Silicon (Core ML)
+make -j4 WHISPER_COREML=1
+./main -m models/ggml-large-v3-encoder.mlmodelc -f recording.wav`,
+        codeLanguage: 'bash',
+      },
+      fasterWhisperDeep: {
+        id: 'faster-whisper',
+        title: 'faster-whisper — CTranslate2 포트',
+        content:
+          '**faster-whisper(SYSTRAN 제작)는 CTranslate2를 사용하여 Whisper 추론을 재구현한 Python 라이브러리입니다 — int8 양자화 지원을 통해 VRAM 사용량을 줄이고 처리량을 향상시키는 고도로 최적화된 C++ 추론 엔진입니다.** NVIDIA GPU에서 faster-whisper는 사용 가능한 가장 빠른 로컬 Whisper 구현체입니다.',
+        items: [
+          '**플랫폼 지원:** CPU(int8 양자화)와 NVIDIA GPU CUDA. Apple Metal 미지원 — Mac에서는 CPU 전용으로만 동작합니다.',
+          '**int8 강점:** CTranslate2의 int8 양자화는 VRAM을 ~40% 줄이고 float16 대비 추론 속도를 ~2배 향상시키며, WER 영향은 무시할 수준(절대값 < 0.1%)입니다.',
+          '**설치:** `pip install faster-whisper` — 컴파일 불필요. CUDA 지원은 CUDA 11.8+와 cuDNN 8.x가 필요합니다.',
+          '**내장 VAD:** faster-whisper에는 Silero VAD 통합이 포함되어 있어 음성이 없는 오디오 세그먼트를 자동으로 건너뜁니다 — 실시간 전사 파이프라인에 필수적입니다.',
+          '**네이티브 Python:** 직접적인 Python API는 LLM, 오디오 처리 라이브러리, 웹 프레임워크와의 통합을 용이하게 합니다.',
+          '**속도:** RTX 4070에서 large-v3 int8이 ~2.5GB VRAM을 사용하며 ~12배 실시간 속도로 동작합니다. CPU int8은 tiny 모델에서 ~20배 실시간 속도를 달성합니다.',
+          '**배치 처리:** faster-whisper는 대량의 오디오 파일을 효율적으로 처리하기 위한 배치 추론을 지원합니다.',
+          '**한계:** Mac에서 Metal 미지원 — Apple Silicon에서 CPU 전용으로만 동작하며, Metal을 사용하는 whisper.cpp의 ~10배 대비 large-v3로 ~3배 실시간 속도를 달성합니다.',
+        ],
+        codeBlock: `from faster_whisper import WhisperModel
+
+# Load model (downloads automatically on first run)
+model = WhisperModel("large-v3", device="cuda", compute_type="int8")
+
+# Transcribe
+segments, info = model.transcribe("audio.wav", beam_size=5)
+
+print(f"Detected language: {info.language} (probability: {info.language_probability:.2f})")
+for segment in segments:
+    print(f"[{segment.start:.2f}s → {segment.end:.2f}s] {segment.text}")`,
+        codeLanguage: 'python',
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: '직접 비교: 벤치마크 표',
+        content:
+          '모든 벤치마크는 달리 명시되지 않는 한 large-v3 모델을 사용합니다. 속도는 실시간 배율로 측정됩니다(예: 10×는 60분 오디오를 6분에 전사함을 의미). VRAM 수치는 GPU 실행 기준이며, RAM 수치는 CPU 실행 기준입니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Apple Silicon에서 Metal을 사용한 whisper.cpp는 large-v3를 ~10배 실시간 속도로 처리하고, NVIDIA GPU에서 int8을 사용한 faster-whisper는 ~12배 실시간 속도를 달성합니다 — 각 도구는 자신의 대상 플랫폼에서 결정적인 우위를 보입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Mac에서는 whisper.cpp를 선택하십시오(Apple Neural Engine 활용), Windows/Linux의 NVIDIA GPU에서는 faster-whisper를 선택하십시오(실시간보다 12배 빠르게 오디오를 처리하며 GPU 메모리를 40% 덜 사용합니다).',
+          },
+        ],
+        columns: ['지표', 'whisper.cpp (large-v3)', 'faster-whisper (large-v3)'],
+        rows: [
+          {
+            '지표': '플랫폼 / 언어',
+            'whisper.cpp (large-v3)': 'C/C++ (크로스 플랫폼)',
+            'faster-whisper (large-v3)': 'Python (CTranslate2)',
+          },
+          {
+            '지표': 'GPU 지원',
+            'whisper.cpp (large-v3)': 'CUDA, Metal, Vulkan',
+            'faster-whisper (large-v3)': 'CUDA 전용',
+          },
+          {
+            '지표': 'CPU 최적화',
+            'whisper.cpp (large-v3)': 'AVX2, ARM NEON',
+            'faster-whisper (large-v3)': 'int8 양자화',
+          },
+          {
+            '지표': '속도 — RTX 4070, large-v3',
+            'whisper.cpp (large-v3)': '~8배 실시간',
+            'faster-whisper (large-v3)': '~12배 실시간 ✓',
+          },
+          {
+            '지표': '속도 — M5 Pro, large-v3',
+            'whisper.cpp (large-v3)': '~10배 실시간 (Metal) ✓',
+            'faster-whisper (large-v3)': '~3배 실시간 (CPU 전용)',
+          },
+          {
+            '지표': '속도 — CPU 전용 (x86), base',
+            'whisper.cpp (large-v3)': '~15배 실시간',
+            'faster-whisper (large-v3)': '~20배 실시간 ✓',
+          },
+          {
+            '지표': 'VRAM — large-v3, GPU',
+            'whisper.cpp (large-v3)': '~3 GB',
+            'faster-whisper (large-v3)': '~2.5 GB (int8) ✓',
+          },
+          {
+            '지표': 'Python 통합',
+            'whisper.cpp (large-v3)': '래퍼 필요 (pywhispercpp)',
+            'faster-whisper (large-v3)': '네이티브 ✓',
+          },
+          {
+            '지표': 'VAD (침묵 감지)',
+            'whisper.cpp (large-v3)': '수동 (--step 조정)',
+            'faster-whisper (large-v3)': '내장 (Silero VAD) ✓',
+          },
+          {
+            '지표': '실시간 스트리밍',
+            'whisper.cpp (large-v3)': '예 (--stream 플래그) ✓',
+            'faster-whisper (large-v3)': '예 (VAD 파이프라인)',
+          },
+          {
+            '지표': 'WER 정확도 (large-v3)',
+            'whisper.cpp (large-v3)': '2.5% (동일)',
+            'faster-whisper (large-v3)': '2.5% (동일)',
+          },
+          {
+            '지표': 'Python 의존성',
+            'whisper.cpp (large-v3)': '없음 ✓',
+            'faster-whisper (large-v3)': 'Python 3.8+',
+          },
+          {
+            '지표': 'Raspberry Pi / 임베디드',
+            'whisper.cpp (large-v3)': '예 — C 바이너리 ✓',
+            'faster-whisper (large-v3)': '제한적 — Python 오버헤드',
+          },
+          {
+            '지표': '출력 형식',
+            'whisper.cpp (large-v3)': 'SRT, VTT, JSON, CSV, txt',
+            'faster-whisper (large-v3)': 'Python 객체 (start, end, text)',
+          },
+        ],
+        note: 'whisper.cpp는 출력을 표준 자막 및 전사 형식(SRT, VTT, JSON, CSV, txt)으로 직접 작성합니다 — 추가 코드 없이 디스크에 파일이 필요한 자막 워크플로에 이상적입니다. faster-whisper는 `start`, `end`, `text` 속성을 가진 세그먼트 객체의 Python 제너레이터를 반환합니다 — 세그먼트 텍스트를 중간 파일 작성 없이 다운스트림 모델에 직접 전달하는 LLM 파이프라인 연결에 이상적입니다. 자막 생성의 경우 whisper.cpp가 더 간단합니다. 세그먼트를 프로그래밍 방식으로 처리하는 파이프라인의 경우 faster-whisper가 더 간단합니다.',
+      },
+      realTimeSetup: {
+        id: 'real-time',
+        title: '실시간 전사 설정',
+        content:
+          '**실시간 전사는 마이크에서 들어오는 오디오를 청크 단위로 처리하여 음성보다 약간 지연된 텍스트를 생성합니다.** 두 도구 모두 이를 지원하지만, 서로 다른 트레이드오프가 있습니다.',
+        items: [
+          '**whisper.cpp 스트림 모드:** `./stream -m models/ggml-small.bin --step 3000 --length 10000 -t 4`를 실행합니다. 3초 청크를 처리하며, small 모델로 ~0.5–1.5초의 지연 시간. Python 불필요.',
+          '**faster-whisper VAD 파이프라인:** `model.transcribe()`에서 `vad_filter=True`를 사용합니다. Silero VAD가 침묵 경계에서 자동으로 오디오를 세그먼트화합니다 — 고정 길이 창보다 더 자연스러운 청크.',
+          '**실제 지연 시간:** small 또는 medium 모델로 라이브 음성보다 0.5–2초 지연. 더 낮은 지연 시간(< 0.5초, 단 WER 더 높음)을 위해서는 tiny를 사용하십시오.',
+          '**실시간용 모델 선택:** small 또는 base가 실질적인 최적 지점입니다 — 음성을 따라가기에 충분히 빠르고, 깨끗한 오디오에 대해 충분히 정확합니다. 전용 GPU가 없는 한 실시간에서 large-v3는 피하십시오.',
+          '**마이크 입력:** whisper.cpp는 SDL2 또는 portaudio를 통해 원시 오디오를 읽습니다. faster-whisper는 모든 Python 오디오 라이브러리(sounddevice, pyaudio, soundfile)에서 오디오 배열을 읽습니다.',
+          '**안정성:** whisper.cpp의 스트림 모드는 침묵 중에 반복 채움 토큰("환각")을 생성할 수 있습니다. `--suppress-blank`와 `--no-speech-threshold`로 억제하십시오.',
+        ],
+      },
+      appleSiliconSection: {
+        id: 'apple-silicon',
+        title: 'Apple Silicon: whisper.cpp 승',
+        content:
+          '**M1, M2, M3, M4, M5 탑재 Mac의 경우, Core ML / Metal 가속을 사용하는 whisper.cpp가 올바른 도구입니다 — 의심의 여지가 없습니다.** faster-whisper는 Metal 지원이 없어 Mac에서 CPU 전용으로만 동작하며 large-v3로 ~3배 실시간 속도를 달성합니다. Metal을 사용하는 whisper.cpp는 M5 Pro에서 ~10배 실시간 속도를 달성합니다 — 3배의 속도 이점.',
+        items: [
+          '**Core ML 내보내기:** `./models/generate-coreml-model.sh large-v3`를 실행하여 인코더를 Core ML 형식으로 내보냅니다. 이를 통해 인코더 추론이 Apple Neural Engine으로 오프로드됩니다.',
+          '**M5 Pro 벤치마크(large-v3, Metal):** ~10배 실시간. 60분 오디오를 ~6분에 전사. 참고: M5 Pro는 2026년 3월 출시 — 이것은 커뮤니티의 초기 벤치마크입니다. whisper.cpp가 M5 Neural Engine을 최적화하는 업데이트에 따라 성능이 향상될 수 있습니다.',
+          '**M3 MacBook Air 벤치마크(large-v3, Metal):** ~7배 실시간. 60분을 ~8.5분에.',
+          '**메모리:** 통합 메모리는 별도의 VRAM이 없음을 의미합니다 — 16GB M5 Pro는 large-v3(~3GB)를 다른 프로세스와 함께 편안하게 실행할 수 있습니다.',
+          '**Mac에서의 faster-whisper:** CPU 전용, int8. Large-v3로 ~3배 실시간 속도. 야간 배치 전사에는 사용 가능하지만, 실시간이나 시간에 민감한 워크플로에는 적합하지 않습니다.',
+          '**권장 사항:** Mac에서의 모든 STT 작업에 whisper.cpp를 사용하십시오. Metal 가속을 유지하면서 Python 통합이 필요한 경우 pywhispercpp을 추가하십시오.',
+        ],
+      },
+      nvidiaSection: {
+        id: 'nvidia-gpu',
+        title: 'NVIDIA GPU: faster-whisper 승',
+        content:
+          '**NVIDIA GPU를 탑재한 Windows 및 Linux에서는 faster-whisper가 우수한 선택입니다.** CTranslate2의 CUDA 백엔드는 whisper.cpp의 CUDA 경로보다 더 최적화되어 있습니다 — RTX 4070에서 large-v3으로 ~12배 대 ~8배 실시간 속도, 더 낮은 VRAM 사용량.',
+        items: [
+          '**RTX 4070(12GB) 벤치마크(large-v3 int8):** ~12배 실시간, ~2.5GB VRAM.',
+          '**RTX 3060(12GB) 벤치마크(large-v3 int8):** ~8배 실시간, ~2.5GB VRAM.',
+          '**RTX 4060(8GB) 벤치마크(large-v3 int8):** ~7배 실시간, ~2.5GB VRAM — 여유 있게 수용됩니다.',
+          '**int8 vs float16:** int8은 ~2배 빠르고 VRAM을 ~40% 적게 사용하며 정확도 손실은 무시할 수준입니다. NVIDIA에서는 항상 `compute_type="int8"`을 사용하십시오.',
+          '**배치 처리:** faster-whisper의 `batched=True` 파라미터는 여러 오디오 파일의 병렬 처리를 가능하게 하여, 대규모 전사 작업에서 GPU 활용을 극대화합니다.',
+          '**Python 파이프라인 통합:** faster-whisper는 LangChain, Haystack 및 커스텀 Python 파이프라인에 직접 통합됩니다. whisper.cpp 래핑과 비교하여 서브프로세스 오버헤드 없음.',
+        ],
+      },
+      whenToUse: {
+        id: 'when-to-use',
+        title: '어느 것을 사용해야 하는가',
+        content: '시나리오에서 적합한 도구로의 직접적인 매핑:',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Apple Silicon 및 임베디드/크로스 플랫폼 대상에서는 whisper.cpp를, NVIDIA GPU 및 Python 파이프라인에서는 faster-whisper를 사용하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Mac이 있다면 whisper.cpp를 선택하십시오 — Apple 하드웨어에서 faster-whisper보다 3배 빠릅니다. NVIDIA GPU가 있고 Python을 작성한다면 faster-whisper를 선택하십시오 — 더 빠르고 GPU 메모리를 40% 덜 필요로 합니다.',
+          },
+        ],
+        columns: ['시나리오', '최선의 선택', '이유'],
+        rows: [
+          {
+            '시나리오': 'Apple Silicon Mac (모든 모델)',
+            '최선의 선택': 'whisper.cpp',
+            '이유': 'Metal / Core ML 가속 — Mac에서 CPU 전용인 faster-whisper보다 3배 빠름',
+          },
+          {
+            '시나리오': 'NVIDIA GPU 서버 (Linux/Windows)',
+            '최선의 선택': 'faster-whisper',
+            '이유': 'CTranslate2 int8 — whisper.cpp의 CUDA 경로보다 빠르고 VRAM 적게 사용',
+          },
+          {
+            '시나리오': 'Python 데이터 파이프라인',
+            '최선의 선택': 'faster-whisper',
+            '이유': '네이티브 Python API; 서브프로세스 래퍼 없음; 내장 VAD',
+          },
+          {
+            '시나리오': 'Raspberry Pi / 임베디드 Linux',
+            '최선의 선택': 'whisper.cpp',
+            '이유': '순수 C 바이너리; Python 런타임 오버헤드 없음; ARM NEON 최적화',
+          },
+          {
+            '시나리오': '실시간 음성 어시스턴트',
+            '최선의 선택': 'whisper.cpp',
+            '이유': '낮은 오버헤드의 스트림 모드; Pi / 임베디드에서 Python 없이 동작',
+          },
+          {
+            '시나리오': '배치 전사 (대용량 오디오 파일)',
+            '최선의 선택': 'faster-whisper',
+            '이유': '배치 추론, GPU 활용, 비동기 Python 통합',
+          },
+          {
+            '시나리오': 'AMD GPU (Vulkan)',
+            '최선의 선택': 'whisper.cpp',
+            '이유': 'Vulkan 백엔드 지원; faster-whisper는 CUDA 전용',
+          },
+          {
+            '시나리오': 'CPU 전용 Linux 서버',
+            '최선의 선택': 'faster-whisper',
+            '이유': 'int8 양자화가 x86 CPU에서 ~30% 속도 이점 제공',
+          },
+        ],
+      },
+      beyondTools: {
+        id: 'beyond-tools',
+        title: 'whisper.cpp와 faster-whisper를 넘어서',
+        content:
+          '두 가지 추가 도구는 Whisper를 두 기본 도구 모두가 기본적으로 제공하지 않는 기능으로 확장합니다: 화자 분리(diarization)와 초고속 GPU 배치 추론.',
+        items: [
+          '**[WhisperX](https://github.com/m-bain/whisperX):** faster-whisper 기반으로 구축된 WhisperX는 단어 수준 타임스탬프와 화자 분리를 추가합니다 — 어떤 화자가 어떤 단어를 말했는지 식별합니다. 최적 사용 사례: 화자 레이블이 있는 회의 전사, 팟캐스트 편집, 인터뷰 전사. `pip install whisperx`로 설치하고 분리 모델에 대한 Hugging Face 토큰을 제공하십시오.',
+          '**[insanely-fast-whisper](https://github.com/Vaibhavs10/insanely-fast-whisper):** Flash Attention 2 지원을 추가하는 Hugging Face Transformers 파이프라인 래퍼로, NVIDIA 하드웨어에서 표준 faster-whisper보다 훨씬 빠른 GPU 추론을 제공합니다. 최적 사용 사례: NVIDIA GPU에서 대용량 오디오 파일 배치 처리. Flash Attention 2 호환 GPU 필요(Ampere 이상: RTX 3000+, A100, H100).',
+        ],
+      },
+      troubleshooting: {
+        id: 'troubleshooting',
+        title: '일반적인 문제 및 해결책',
+        content: '가장 자주 발생하는 설정 및 런타임 문제와 직접적인 해결책:',
+        items: [
+          '**CUDA 버전 불일치:** faster-whisper는 CUDA 11.8 이상이 필요합니다. `nvcc --version`으로 확인하십시오. CUDA가 이전 버전인 경우 드라이버를 업데이트하거나 `cudatoolkit=11.8`을 사용하여 conda 환경에 faster-whisper를 설치하십시오.',
+          '**Metal 모델 내보내기 실패:** Xcode Command Line Tools가 설치되어 있는지 확인하십시오 — `xcode-select --install`을 실행합니다. Core ML 내보내기 스크립트는 `coremltools` Python 패키지가 필요합니다: `pip install coremltools`.',
+          '**침묵 중 환각:** 두 도구 모두 음성이 없는 오디오 세그먼트에서 반복 채움 토큰을 생성할 수 있습니다. whisper.cpp 스트림 모드에서는 `--no-speech-threshold 0.6`을, faster-whisper의 `model.transcribe()`에서는 `vad_filter=True`를 사용하여 자동으로 음성이 없는 세그먼트를 건너뛰십시오.',
+          '**large-v3 메모리 부족:** faster-whisper에서 int8 양자화로 전환하십시오(`compute_type="int8"`) — VRAM을 ~5GB(float16)에서 ~2.5GB로 줄입니다. whisper.cpp에서는 양자화된 GGML 변형을 사용하십시오(예: `ggml-large-v3-q5_0.bin`) — 메모리를 ~3–4GB로 줄입니다.',
+          '**영어가 아닌 오디오에서 알아볼 수 없는 출력:** 영어가 아닌 음성에 `.en` 모델 변형(tiny.en, base.en)을 사용하지 마십시오 — 이것들은 영어 전용입니다. 다국어 모델(base, small, medium, large-v3)을 사용하고 언어를 명시적으로 지정하십시오: whisper.cpp에서 `-l ko` 또는 faster-whisper에서 `language="ko"`.',
+          '**느린 CPU 추론:** CPU가 AVX2 명령어를 지원하는지 확인하십시오(최적화된 CPU 추론에 필요). Linux에서 `grep avx2 /proc/cpuinfo` 또는 Mac에서 `sysctl machdep.cpu.features`로 확인하십시오. AVX2 없는 CPU는 일반 SIMD로 폴백되어 2–3배 느립니다.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: 'whisper.cpp와 faster-whisper의 전사 정확도는 동일합니까?',
+            a: '그렇습니다. 두 도구 모두 동일한 OpenAI Whisper 모델 가중치를 사용합니다 — 모델 자체는 동일합니다. 차이는 추론 런타임(C/C++ vs CTranslate2 Python)에만 있습니다. 동일한 오디오 파일에 대한 WER은 서로 절대값 0.1% 이내로, 이는 beam search 무작위성으로 인한 정상적인 변동 범위 내입니다.',
+          },
+          {
+            q: 'Apple Silicon Mac에서 faster-whisper를 사용할 수 있습니까?',
+            a: '예, 하지만 CPU 전용으로만 동작합니다 — faster-whisper는 Metal 지원이 없습니다. M5 Pro에서 faster-whisper large-v3는 ~3배 실시간 속도(CPU int8)로 동작하며, Metal을 사용하는 whisper.cpp의 ~10배와 비교됩니다. 대부분의 Mac 사용자에게 whisper.cpp는 동일한 모델로 3배 더 빠릅니다. Mac에서 faster-whisper를 사용하는 유일한 이유는 Python 파이프라인이 이미 이에 의존하고 있으며 속도가 중요하지 않은 경우입니다.',
+          },
+          {
+            q: '음성 어시스턴트에 어떤 Whisper 모델 크기를 사용해야 합니까?',
+            a: '실시간 음성 인터페이스의 경우, Whisper small이 표준 권장 사항입니다 — 깨끗한 영어에서 3.4% WER, 현대적인 CPU 또는 GPU에서 ~200ms STT 지연 시간, 2GB RAM에 수용됩니다. 하드웨어가 매우 제한된 경우(Raspberry Pi Zero 2W, 구형 전화기) ~7.6% WER을 허용할 수 있다면 tiny를 사용하십시오. 지연 시간이 제약이 아닌 배치 전사의 경우에만 medium 또는 large-v3를 사용하십시오.',
+          },
+          {
+            q: 'whisper.cpp는 영어 외의 언어를 지원합니까?',
+            a: '그렇습니다. 모든 다국어 Whisper 모델(base, small, medium, large-v3)은 99개 언어를 지원합니다. CLI에 `-l [언어 코드]`를 추가하십시오: 한국어는 `-l ko`, 독일어는 `-l de`, 일본어는 `-l ja` 등. tiny.en 및 base.en 모델은 영어 전용이며 다국어 대응물보다 영어에서 약간 더 정확합니다.',
+          },
+          {
+            q: 'CUDA 지원을 포함하여 faster-whisper를 어떻게 설치합니까?',
+            a: '`pip install faster-whisper`로 설치합니다. CUDA 지원은 시스템에 CUDA 11.8 이상과 cuDNN 8.x가 설치되어 있어야 합니다. `nvcc --version`으로 CUDA 버전을 확인하십시오. 그런 다음 모델 로딩 시 `device="cuda"`를 지정합니다: `WhisperModel("large-v3", device="cuda", compute_type="int8")`. CUDA가 감지되지 않으면 faster-whisper는 자동으로 CPU로 폴백합니다.',
+          },
+          {
+            q: 'whisper.cpp와 faster-whisper 중 어느 것이 더 정확합니까?',
+            a: '동일합니다. 두 도구 모두 동일한 OpenAI Whisper 모델 가중치를 사용하며 동일한 오디오 파일에 대해 동일한 WER을 생성합니다. whisper.cpp와 faster-whisper의 차이점은 속도와 플랫폼 지원이지 전사 정확도가 아닙니다. 실행 간에 측정되는 WER 차이는 런타임 자체에서 비롯된 것이 아니라 beam search의 정상적인 변동 범위 내에 있습니다.',
+          },
+          {
+            q: '8GB RAM으로 Whisper large-v3를 실행할 수 있습니까?',
+            a: 'GPU에서는 가능합니다 — faster-whisper의 large-v3 int8은 ~2.5GB VRAM을 사용하며 8GB GPU에서 동작합니다. CPU 전용 하드웨어에서 8GB RAM은 large-v3(float32는 ~10GB 사용)에 빠듯합니다. CPU 전용 시스템에서는 medium(5GB RAM) 또는 small(2GB RAM)을 사용하십시오. whisper.cpp는 런타임 오버헤드가 적어 CPU에서 faster-whisper보다 메모리 효율이 높습니다.',
+          },
+          {
+            q: '로컬 Whisper vs 클라우드 STT의 비용은 얼마입니까?',
+            a: '지속적인 비용은 없습니다. 클라우드 STT 서비스는 오디오 분당 $0.006–$0.024를 부과합니다 — 주당 8시간 회의를 전사하는 개발자에게는 월 $120–480입니다. 로컬 Whisper는 이미 소유한 하드웨어에서 동작하며, 분당 요금 없고, API 키 관리 없고, 오디오 데이터가 기기를 떠나지 않습니다.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '참고 자료',
+        items: [
+          '[GitHub의 whisper.cpp](https://github.com/ggerganov/whisper.cpp) — 소스 코드, 빌드 지침, 모델 다운로드 스크립트, Metal/Core ML 설정 가이드.',
+          '[GitHub의 faster-whisper](https://github.com/SYSTRAN/faster-whisper) — 소스 코드, Python API 문서, 벤치마크 결과.',
+          '[Hugging Face의 distil-whisper/distil-large-v3](https://huggingface.co/distil-whisper/distil-large-v3) — 모델 카드, 벤치마크 결과, 증류된 Whisper 변형 사용 지침.',
+          '[GitHub의 WhisperX](https://github.com/m-bain/whisperX) — faster-whisper 기반 단어 수준 타임스탬프 및 화자 분리.',
+          '[GitHub의 insanely-fast-whisper](https://github.com/Vaibhavs10/insanely-fast-whisper) — NVIDIA GPU 최대 처리량을 위한 Whisper Flash Attention 2 파이프라인.',
+          '[GitHub의 OpenAI Whisper](https://github.com/openai/whisper) — 원본 Whisper 모델, 논문, 모든 크기의 모델 카드.',
+          '[OpenAI Whisper 논문 (Radford et al., 2022)](https://arxiv.org/abs/2212.04356) — "Robust Speech Recognition via Large-Scale Weak Supervision". WER 값의 출처.',
+          '[CTranslate2 문서](https://github.com/OpenNMT/CTranslate2) — 양자화 세부 사항, 하드웨어 지원, int8 최적화 기초.',
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[2026년 로컬 TTS 및 음성 복제: Piper vs Coqui vs XTTS v2](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — TTS 보완 가이드: 전사된 텍스트를 오프라인으로 다시 음성으로 변환합니다.',
+          '[2026년 완전 오프라인 음성 어시스턴트 구축](/ko/power-local-llm/build-local-voice-assistant-2026) — Whisper STT를 로컬 LLM과 Piper TTS에 연결하여 완전한 음성 파이프라인을 만듭니다.',
+          '[2026년 로컬 멀티모달 AI 파이프라인](/ko/power-local-llm/local-multimodal-pipeline-voice-vision-text) — STT 및 TTS와 함께 비전 모델을 추가하여 완전한 로컬 멀티모달 스택을 구성합니다.',
+          '[2026년 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026) — 완전한 음성 + LLM 파이프라인을 위한 GPU 및 RAM 요구 사항.',
+          '[스마트폰에서 로컬 음성 어시스턴트 구축](/ko/power-local-llm/voice-assistant-local-mobile-offline) — 모바일 버전: iPhone의 WhisperKit, Android의 Layla.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Whisper.cpp vs faster-whisper 2026: 로컬 STT 벤치마크, 설정 및 GPU 가속',
+      description: '2026년 로컬 음성 인식을 위한 whisper.cpp와 faster-whisper 비교. WER 벤치마크, GPU vs CPU 속도, Apple Silicon Metal, 실시간 전사, 설치 가이드. 완전 오프라인 동작.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-whisper-stt-comparison-2026',
+      inLanguage: 'ko',
+      datePublished: '2026-05-14',
+      dateModified: '2026-05-14',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'Whisper.cpp vs faster-whisper 2026', item: 'https://www.promptquorum.com/ko/power-local-llm/local-whisper-stt-comparison-2026' },
+      ],
+    },
+  },
+

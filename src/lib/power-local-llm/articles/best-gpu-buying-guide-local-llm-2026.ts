@@ -4530,4 +4530,602 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: '로컬 LLM용 최고의 GPU: 2026년 완전 구매 가이드',
+    seoTitle: '로컬 LLM용 최고의 GPU 2026: 보급형부터 RTX 5090까지',
+    intro:
+      '로컬 LLM용 GPU 관련 조언의 대부분은 잘못된 수치를 최적화하고 있습니다. 초당 토큰 속도는 모델이 얼마나 빠르게 응답하는지를 결정하지만, VRAM은 모델이 실행될 수 있는지 여부를 결정합니다. 메모리에 맞지 않는 모델은 맞는 모델보다 무한히 느립니다. 이 가이드는 실제 구매 결정을 좌우하는 수치인 VRAM 용량, 측정된 추론 속도, 전력 소비, 가격에 따라 네 가지 가격대에서 8개의 소비자용 GPU를 비교합니다. 가격에 관한 주의 사항: 2026년에는 메모리 공급 부족으로 인해 GPU 가격이 급등하여 현재 카드들이 원래 출시 가격보다 1.5~2배에 판매되고 있습니다. 여기의 모든 가격은 2026년 5월 기준 데이터이므로, 구매 전 현재 가격을 반드시 확인하십시오.',
+    metaDescription:
+      '4가지 예산별로 로컬 LLM용 8개 GPU 비교: RTX 3060부터 RTX 5090까지. VRAM, 토큰/초, 전력 소비, 2026년 5월 가격 — 각 등급에서 실행 가능한 모델 크기 포함.',
+    twitterDescription:
+      'RTX 3060, RX 6700 XT, RTX 4060 Ti 16GB, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — 8개 GPU, 4가지 예산, 하나의 규칙: VRAM으로 구매하십시오.',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Llama 4 Scout',
+      'Qwen3 8B',
+      'Mistral Small',
+      'DeepSeek-R1 7B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 3060 12 GB',
+      'AMD RX 6700 XT',
+      'NVIDIA RTX 4060 Ti 16 GB',
+      'AMD RX 7800 XT',
+      'NVIDIA RTX 4070 Ti Super',
+      'NVIDIA RTX 4080 Super',
+      'NVIDIA RTX 4090',
+      'NVIDIA RTX 5090',
+    ],
+    audience:
+      '로컬 LLM 실행을 위해 특정 GPU를 선택하는 구매자로, 가격대와 목표 모델 크기를 기준으로 결정을 내리는 분들입니다. 양자화와 VRAM 제약에 대한 기본 지식이 있으나 현재 GPU 제품군에는 익숙하지 않은 분들을 대상으로 합니다.',
+    readTime: '14분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'GPU for local LLMs',
+    targetKeywords: [
+      '로컬 llm gpu 추천 2026',
+      '로컬 llm gpu 구매 가이드',
+      'rtx 3060 vs rtx 4090 로컬 llm',
+      '로컬 llm vram 얼마나 필요한가',
+      '로컬 llm 가성비 gpu',
+    ],
+    leadAnswerBlock:
+      '**로컬 LLM용 최고의 GPU는 가장 빠른 카드가 아니라 모델에 맞는 VRAM을 갖춘 카드입니다. RTX 3060 12 GB는 7B 모델을 실행하고, RTX 4090 24 GB는 33B 모델을 처리하며, RTX 5090 32 GB는 70B 작업을 위한 유일한 단일 소비자용 카드입니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 로컬 LLM 실행을 위해 어떤 GPU를 구매해야 합니까?',
+        answer:
+          'VRAM 기준으로 먼저 구매하고, 그 다음 속도를 고려하십시오. 중고 RTX 3060 12 GB ($150-250)는 보급형 선택지로 7B 모델을 실행합니다. RTX 4060 Ti 16 GB (~$424)는 14B 모델을 위한 중급 선택지입니다. RTX 4090 24 GB는 33B 모델을 실행하고, RTX 5090 32 GB는 이중 GPU 구성 없이 70B 작업을 처리할 수 있는 유일한 단일 소비자용 카드입니다. 2026년 가격은 출시 가격을 크게 상회하고 있음을 유의하십시오.',
+        bullets: [
+          '보급형: RTX 3060 12 GB, 중고 $150-250 (신품 $350-680), 7B 모델을 15-20 토큰/초로 실행',
+          '중급형: RTX 4060 Ti 16 GB, ~$424, 여유 있게 14B 모델 실행 가능',
+          '고급형: RTX 5090 32 GB, ~$3,949, 단일 GPU로 70B를 실행할 수 있는 유일한 소비자용 카드',
+          '2026년 GPU 가격은 출시 가격의 1.5~2배 — 가능한 경우 중고 구매 권장',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '편집자 추천', anchor: '#editors-choice' },
+      { label: 'GPU 비교표', anchor: '#comparison-table' },
+      { label: '어떤 GPU를 구매해야 합니까?', anchor: '#which-gpu' },
+      { label: '보급형 ($130-680)', anchor: '#budget-tier' },
+      { label: '중급형 ($420-520)', anchor: '#mid-tier' },
+      { label: '고급형 ($1100-1200)', anchor: '#high-tier' },
+      { label: '최고급형 ($2480+)', anchor: '#enthusiast-tier' },
+      { label: '얼마나 많은 VRAM이 필요합니까?', anchor: '#vram-needs' },
+      { label: '2026년 GPU 가격이 오른 이유', anchor: '#price-surge' },
+      { label: '결정 흐름도', anchor: '#decision-flowchart' },
+      { label: '지역별 가격 및 구매처', anchor: '#where-to-buy' },
+      { label: '일반적인 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽기 자료', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**VRAM이 결정적인 제약 조건입니다.** VRAM에 맞지 않는 모델은 로드에 실패하거나 시스템 RAM으로 넘쳐 대화형 사용에 너무 느려집니다. 목표 모델에 맞는 VRAM을 가진 등급을 선택한 후, 해당 등급 내에서 속도를 최적화하십시오.',
+          '**2026년에 가격이 급등했습니다.** 메모리 공급 부족으로 모든 시장에서 소비자용 GPU 가격이 출시 가격보다 1.5~2배 상승했습니다. RTX 5090은 $3,949에 판매되고 있으며, 출시 가격인 $1,999가 아닙니다. 여기의 모든 가격을 2026년 5월 데이터로 취급하고 중고 시장을 적극 활용하십시오.',
+          '**보급형 추천: NVIDIA RTX 3060 12 GB** (중고 $150-250, 신품 $350-680) — 7B 모델을 15-20 토큰/초로 실행하고 Q4에서 대부분의 13B 모델도 처리합니다. 2026년 로컬 LLM 입문으로 최고의 가성비입니다.',
+          '**중급형 추천: NVIDIA RTX 4060 Ti 16 GB** (신품 ~$424, 중고 $290) — 16 GB VRAM으로 여유 있는 컨텍스트와 함께 14B 모델을 해결하며, 가격 급등의 영향을 가장 적게 받은 GPU입니다.',
+          '**고급형 추천: NVIDIA RTX 4080 Super 16 GB** (~$1,100-1,200) — 가장 빠른 16 GB 카드로, 2026년 가격 변동 후 더 느린 RTX 4070 Ti Super ($1,179)와 거의 같은 가격입니다.',
+          '**최고급형 추천: NVIDIA RTX 4090 24 GB / RTX 5090 32 GB** — RTX 4090 ($2,480-2,755)은 33B 모델을 실행하고, RTX 5090 (~$3,949)은 이중 GPU 구성 없이 Q4에서 70B 모델을 수용하는 유일한 단일 소비자용 카드입니다.',
+          '**AMD는 실행 가능하지만 설정 작업이 더 많습니다.** RX 6700 XT (12 GB)와 RX 7800 XT (16 GB)는 달러 대비 경쟁력 있는 VRAM을 제공하지만, ROCm 설정이 NVIDIA CUDA에 비해 몇 시간이 더 걸립니다.',
+          '**전력 소비는 등급에 따라 증가합니다.** RTX 3060은 170 W를 사용하고, RTX 5090은 575 W를 사용하며 850-1000 W 파워 서플라이가 필요합니다. 카드 가격과 함께 파워 서플라이 비용도 예산에 포함하십시오.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**보급형 ($130-680):** RTX 3060 12 GB 또는 RX 6700 XT 12 GB — 7B 모델과 대부분의 13B 모델을 실행합니다.',
+          '**중급형 ($420-520):** RTX 4060 Ti 16 GB 또는 RX 7800 XT 16 GB — 14B 모델을 편안하게 실행합니다.',
+          '**고급형 ($1,100-1,200):** RTX 4080 Super 16 GB 또는 RTX 4070 Ti Super 16 GB — 14B 추론 고속화, 22B 경량 작업 가능.',
+          '**최고급형 ($2,480+):** RTX 4090 24 GB 또는 RTX 5090 32 GB — 33B 모델, RTX 5090에서 Q4로 70B도 가능.',
+          '**Q4_K_M VRAM 기본 규칙:** 파라미터 10억 개당 약 0.6 GB, 여기에 컨텍스트와 도구를 위한 2-4 GB 추가.',
+          '**전력 소비 범위:** RTX 3060 170 W, RTX 4060 Ti 165 W, RTX 4070 Ti Super 285 W, RTX 4080 Super 320 W, RTX 4090 450 W, RTX 5090 575 W.',
+          '**2026년 가격 현실:** 메모리 공급 부족으로 가격이 출시 가격의 1.5~2배 상승, 중고 시장이 더 나은 가치를 제공합니다.',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: '편집자 추천: RTX 4080 Super 16 GB',
+        sponsoredSlot: true,
+        content:
+          '**$1,000 이상을 지출할 수 있고 오래 사용할 카드를 원하는 구매자에게 NVIDIA RTX 4080 Super 16 GB는 VRAM, 속도, 가격의 균형을 맞추는 선택입니다.** 16 GB VRAM으로 여유 있는 컨텍스트와 함께 14B 모델을 처리하고, 여기서 16 GB 카드 중 가장 빠른 약 120 토큰/초를 제공하며, 2026년 가격 변동 후 더 느린 RTX 4070 Ti Super ($1,179)와 거의 같은 ~$1,100-1,200에 판매됩니다. 이로써 고급형에서 명확한 가성비 선택이 됩니다. 예산이 $600 이하로 고정되어 있다면, RTX 4060 Ti 16 GB가 가성비 선택입니다. 구체적으로 33B 또는 70B 모델이 필요한 경우에만 더 많이 지출하십시오.',
+        callouts: [
+          {
+            type: 'note',
+            text: '이 편집자 추천은 가격 대비 용량 비율만을 반영합니다. PromptQuorum은 어떠한 제휴 프로그램에도 등록되어 있지 않으며 아래 링크에는 제휴 태그가 없습니다 — 커미션이 발생하지 않는 단순 참조 링크입니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4080+Super+16GB',
+            productName: 'NVIDIA RTX 4080 Super 16GB',
+            productCategory: 'gpu',
+            priceRange: '1100-1200',
+            label: 'Amazon에서 RTX 4080 Super 가격 보기',
+          },
+          {
+            url: 'https://www.newegg.com/p/pl?d=RTX+4080+Super',
+            productName: 'NVIDIA RTX 4080 Super 16GB',
+            productCategory: 'gpu',
+            priceRange: '1100-1200',
+            label: 'Newegg에서 RTX 4080 Super 가격 보기',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '2026년 로컬 LLM용 8개 GPU 비교',
+        content:
+          'VRAM과 전력 소비 수치는 제조사 사양입니다. RTX 3060, RTX 4080 Super, RTX 4090, RTX 5090의 추론 속도는 PromptQuorum 하드웨어 테스트에서 측정된 7B Q4 값이며, RTX 4060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super의 수치는 제품군 수준 추정치입니다. 가격은 2026년 5월 미국 데이터입니다. 2026년 메모리 공급 부족으로 출시 가격의 1.5~2배에 판매되고 있으므로 구매 전 반드시 확인하십시오.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 LLM의 경우 GPU의 VRAM이 실행 가능한 모델을 결정하고 초당 토큰이 응답 속도를 결정합니다. VRAM을 먼저 구매하고 그 다음 속도를 최적화하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'VRAM을 책상 크기로, 모델을 그 위에 올려놓는 것으로 생각하십시오. 더 빠른 GPU는 책상을 더 빨리 정리하지만, 모델이 책상에 전혀 맞지 않으면 속도는 아무 의미가 없습니다. 먼저 충분히 큰 책상을 가진 등급을 선택하십시오.',
+          },
+        ],
+        columns: ['GPU', 'VRAM', '속도 (7B Q4)', '전력 소비', '가격 (2026년 5월)', '적합 용도'],
+        rows: [
+          {
+            'GPU': 'RTX 3060 12 GB',
+            'VRAM': '12 GB',
+            '속도 (7B Q4)': '15-20 토큰/초',
+            '전력 소비': '170 W',
+            '가격 (2026년 5월)': '신품 $350-680 / 중고 $150-250',
+            '적합 용도': '보급형 입문 — 7B 모델',
+          },
+          {
+            'GPU': 'RX 6700 XT',
+            'VRAM': '12 GB',
+            '속도 (7B Q4)': '10-14 토큰/초',
+            '전력 소비': '230 W',
+            '가격 (2026년 5월)': '중고 $130-200 (신품 단종)',
+            '적합 용도': '가장 저렴한 VRAM, AMD 설정 감수',
+          },
+          {
+            'GPU': 'RTX 4060 Ti 16 GB',
+            'VRAM': '16 GB',
+            '속도 (7B Q4)': '~20-25 토큰/초',
+            '전력 소비': '165 W',
+            '가격 (2026년 5월)': '신품 $424 / 중고 $290',
+            '적합 용도': '중급형 — 14B 모델, 저전력',
+          },
+          {
+            'GPU': 'RX 7800 XT',
+            'VRAM': '16 GB',
+            '속도 (7B Q4)': '~18-24 토큰/초 (추정)',
+            '전력 소비': '263 W',
+            '가격 (2026년 5월)': '신품 ~$480-520',
+            '적합 용도': 'AMD에서 16 GB, ROCm 설정 감수',
+          },
+          {
+            'GPU': 'RTX 4070 Ti Super',
+            'VRAM': '16 GB',
+            '속도 (7B Q4)': '~80-90 토큰/초 (추정)',
+            '전력 소비': '285 W',
+            '가격 (2026년 5월)': '신품 $1,179 / 중고 $770',
+            '적합 용도': '14B 고속, 저전력 소비',
+          },
+          {
+            'GPU': 'RTX 4080 Super',
+            'VRAM': '16 GB',
+            '속도 (7B Q4)': '~120 토큰/초',
+            '전력 소비': '320 W',
+            '가격 (2026년 5월)': '신품 ~$1,100-1,200 / 중고 ~$900',
+            '적합 용도': '편집자 추천 — 가장 빠른 16 GB 카드',
+          },
+          {
+            'GPU': 'RTX 4090',
+            'VRAM': '24 GB',
+            '속도 (7B Q4)': '~150 토큰/초',
+            '전력 소비': '450 W',
+            '가격 (2026년 5월)': '신품 $2,755 / 중고 $2,480',
+            '적합 용도': '33B 모델, 70B용 이중 GPU',
+          },
+          {
+            'GPU': 'RTX 5090',
+            'VRAM': '32 GB',
+            '속도 (7B Q4)': '~160 토큰/초',
+            '전력 소비': '575 W',
+            '가격 (2026년 5월)': '신품 $3,949 / 중고 $3,999',
+            '적합 용도': '단일 GPU로 Q4에서 70B 실행',
+          },
+        ],
+        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-ko.svg',
+        imageCaption:
+          '4가지 예산 등급에서 VRAM, 7B Q4 추론 속도, 전력 소비, 2026년 5월 가격으로 비교한 로컬 LLM용 8개 소비자용 GPU. VRAM은 12 GB (RTX 3060)에서 32 GB (RTX 5090)까지 증가합니다. 속도를 최적화하기 전에 필요한 모델 크기에 맞는 카드를 먼저 구매하십시오.',
+      },
+      whichGpu: {
+        id: 'which-gpu',
+        title: '어떤 GPU를 구매해야 합니까?',
+        content:
+          '**가장 큰 목표 모델이 등급을 결정하고, 예산이 그 등급 내에서 NVIDIA와 AMD 중 하나를 결정합니다.** 자신의 상황에 맞는 행을 찾으십시오.',
+        columns: ['상황', '구매 권장'],
+        rows: [
+          { '상황': '$400 미만으로 7B 모델을 실행하고 싶습니다', '구매 권장': 'RTX 3060 12 GB (중고)' },
+          { '상황': '설정 작업을 감수하고 LLM을 실행할 가장 저렴한 카드를 원합니다', '구매 권장': 'RX 6700 XT (중고)' },
+          { '상황': '전력 예산이 타이트한 상태에서 14B 모델을 실행하고 싶습니다', '구매 권장': 'RTX 4060 Ti 16 GB' },
+          { '상황': '14B를 빠르게 실행하고 몇 년간 오래 쓸 카드를 원합니다', '구매 권장': 'RTX 4070 Ti Super 16 GB' },
+          { '상황': '가장 빠른 16 GB 카드를 원하고 가격은 부차적입니다', '구매 권장': 'RTX 4080 Super 16 GB' },
+          { '상황': '33B 모델이 필요하거나 70B용 이중 GPU 구성을 계획하고 있습니다', '구매 권장': 'RTX 4090 24 GB' },
+          { '상황': '단일 카드로 Q4에서 70B 모델을 실행해야 합니다', '구매 권장': 'RTX 5090 32 GB' },
+          { '상황': '확신이 없고 가장 안전한 첫 번째 GPU를 원합니다', '구매 권장': 'RTX 3060 12 GB — 나중에 필요하면 업그레이드하십시오' },
+        ],
+      },
+      budgetTier: {
+        id: 'budget-tier',
+        title: '보급형 ($130-680): RTX 3060 12 GB와 RX 6700 XT',
+        content:
+          '**보급형은 7B 모델과 대부분의 13B 모델을 실행할 수 있습니다. 로컬 LLM 초보자 대부분에게는 이것으로 충분합니다.** RTX 3060 12 GB가 추천 선택이고, RX 6700 XT는 AMD 설정 작업을 감수할 경우 더 저렴한 대안입니다. 이 등급에서는 중고 시장이 더욱 중요합니다. 2026년 가격 급등으로 신품 가격이 크게 상승했기 때문입니다.',
+        items: [
+          '**RTX 3060 12 GB (중고 $150-250, 신품 $350-680):** VRAM 12 GB, 170 W, Q4에서 7B 모델 15-20 토큰/초. Mistral Small, Qwen3 8B, DeepSeek-R1 7B, 대부분의 13B 모델을 실행합니다. 12 GB 버전을 구매하십시오 — 6 GB 버전은 3B 모델로 제한됩니다. 중고로 구매하십시오. 신품 재고는 단종되어 가격이 부풀려져 있습니다.',
+          '**RX 6700 XT (중고 $130-200, 신품 단종):** VRAM 12 GB, 230 W, 7B 모델 10-14 토큰/초. 로컬 LLM 입문의 가장 저렴한 방법이지만, RTX 3060보다 느리고 AMD ROCm 설정이 필요하여 설정 시간이 추가됩니다.',
+          '**이 등급을 선택하는 이유:** 가장 낮은 초기 비용, RTX 3060의 낮은 전력 소비, 일반 채팅, 코드 지원, 요약을 포괄하는 7B-13B 모델에 충분한 VRAM.',
+          '**이 등급을 건너뛰는 이유:** 14B 이상의 모델을 원한다는 것을 이미 알고 있다면, 보급형은 몇 주 내에 불만족스러울 것입니다. 대신 중급형에서 시작하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'RTX 3060은 반드시 12 GB 버전을 구매하십시오. RTX 3060 6 GB는 목록에서 비슷해 보이지만 3B 모델만 수용합니다 — 파라미터 수가 절반이라는 것은 작동하는 어시스턴트와 장난감의 차이입니다.',
+          },
+          {
+            type: 'warning',
+            text: 'RX 6700 XT는 여기서 가장 저렴한 카드이지만, Linux에서 ROCm 설정에 3-5시간을 예산으로 잡으십시오. 중고 RTX 3060 대비 절약하는 $30-80보다 시간이 더 가치 있다면 NVIDIA 카드를 구매하십시오.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+3060+12GB',
+            productName: 'NVIDIA RTX 3060 12GB',
+            productCategory: 'gpu',
+            priceRange: '150-680',
+            label: 'Amazon에서 RTX 3060 12GB 가격 보기',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=RX+6700+XT',
+            productName: 'AMD RX 6700 XT',
+            productCategory: 'gpu',
+            priceRange: '130-200',
+            label: 'Amazon에서 RX 6700 XT 가격 보기',
+          },
+        ],
+      },
+      midTier: {
+        id: 'mid-tier',
+        title: '중급형 ($420-520): RTX 4060 Ti 16 GB와 RX 7800 XT',
+        content:
+          '**중급형이 존재하는 이유는 하나입니다: 16 GB VRAM이 12 GB 카드가 수용할 수 없는 14B 모델을 해결하기 때문입니다.** 14B급 모델이 목표라면 이것이 가장 저렴하게 올바르게 실행할 수 있는 등급입니다. RTX 4060 Ti 16 GB는 2026년 가격 급등 동안 출시 가격을 거의 유지했기 때문에 특히 두드러집니다.',
+        items: [
+          '**RTX 4060 Ti 16 GB (신품 $424 / 중고 $290):** VRAM 16 GB, 165 W, 7B 모델 약 20-25 토큰/초. 8 GB 버전과 동일한 GPU 다이를 사용하므로 토큰당 속도는 비슷합니다. 16 GB 버전은 용량을 구매하는 것이지 순수 속도를 구매하는 것이 아닙니다. 165 W 전력 소비는 이 가이드에서 용량 대비 가장 낮으며, 가격 급등의 영향을 가장 적게 받은 GPU입니다.',
+          '**RX 7800 XT (신품 ~$480-520):** VRAM 16 GB, 263 W. 이 가이드를 위해 개별적으로 측정되지 않았습니다. RTX 4060 Ti 범위의 속도를 예상하며, AMD ROCm 설정이 단점입니다.',
+          '**이 등급을 선택하는 이유:** 14B 모델을 원하거나, 낮은 전력 소비를 원하거나 (RTX 4060 Ti), 가능한 가장 낮은 가격에 16 GB를 원합니다.',
+          '**이 등급을 건너뛰는 이유:** 7B 모델로 충분하다면 보급형에서 $200를 절약할 수 있습니다. 14B의 빠른 추론을 원한다면 고급형이 훨씬 더 빠릅니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'RTX 4060 Ti 16 GB는 8 GB 버전에 비해 용량 업그레이드이지 속도 업그레이드가 아닙니다. 14B 모델을 수용해야 하기 때문에 구매하는 것이지, 초당 토큰이 더 많기를 기대하는 것이 아닙니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB',
+            productName: 'NVIDIA RTX 4060 Ti 16GB',
+            productCategory: 'gpu',
+            priceRange: '420-520',
+            label: 'Amazon에서 RTX 4060 Ti 16GB 가격 보기',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=RX+7800+XT',
+            productName: 'AMD RX 7800 XT',
+            productCategory: 'gpu',
+            priceRange: '420-520',
+            label: 'Amazon에서 RX 7800 XT 가격 보기',
+          },
+        ],
+      },
+      highTier: {
+        id: 'high-tier',
+        title: '고급형 ($1,100-1,200): RTX 4080 Super와 RTX 4070 Ti Super',
+        content:
+          '**고급형은 16 GB VRAM을 유지하지만 7B-14B 모델을 즉각적으로 느끼게 하고 22B를 사용 가능하게 만드는 속도를 추가합니다.** 두 카드 모두 중급형과 동일한 모델을 수용합니다. 초당 토큰에 비용을 지불하는 것이지 용량에 지불하는 것이 아닙니다. 2026년 가격 급등으로 이 등급과 중급형 사이의 격차가 크게 벌어졌습니다.',
+        items: [
+          '**RTX 4080 Super 16 GB (~$1,100-1,200):** VRAM 16 GB, 320 W, 7B 모델 약 120 토큰/초. 편집자 추천 — 가장 빠른 16 GB 카드이며, 2026년 가격 변동 후 더 느린 RTX 4070 Ti Super와 거의 같은 가격입니다.',
+          '**RTX 4070 Ti Super 16 GB (신품 $1,179 / 중고 $770):** VRAM 16 GB, 285 W. RTX 4080 Super보다 약간 느리지만 거의 동일한 신품 가격 — 285 W의 낮은 전력 소비를 위해 선택하거나, ~$770에 중고로 구매하여 가장 저렴한 빠른 16 GB 카드를 얻으십시오.',
+          '**이 등급을 선택하는 이유:** 14B 모델을 지속적으로 실행하며 즉각적으로 원하거나, 경량 22B 작업을 수행하며 여유를 원합니다.',
+          '**이 등급을 건너뛰는 이유:** 33B 또는 70B 모델이 필요하다면 어떤 16 GB 카드도 수용할 수 없습니다. 여기에 과다 지출하는 대신 최고급형으로 이동하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '이 등급에서는 기본적으로 RTX 4080 Super를 선택하십시오. 거의 동일한 신품 가격에 RTX 4070 Ti Super보다 훨씬 빠릅니다. 약 35 W의 전력 절약을 위해서만 4070 Ti Super를 선택하거나, 할인된 중고로 구매하십시오.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4080+Super+16GB',
+            productName: 'NVIDIA RTX 4080 Super 16GB',
+            productCategory: 'gpu',
+            priceRange: '1100-1200',
+            label: 'Amazon에서 RTX 4080 Super 가격 보기',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4070+Ti+Super+16GB',
+            productName: 'NVIDIA RTX 4070 Ti Super 16GB',
+            productCategory: 'gpu',
+            priceRange: '770-1179',
+            label: 'Amazon에서 RTX 4070 Ti Super 가격 보기',
+          },
+        ],
+      },
+      enthusiastTier: {
+        id: 'enthusiast-tier',
+        title: '최고급형 ($2,480+): RTX 4090과 RTX 5090',
+        content:
+          '**최고급형만이 22B 이상의 모델을 실행할 수 있으며, RTX 5090 32 GB는 Q4에서 70B 모델을 수용하는 유일한 단일 소비자용 카드입니다.** 속도가 아닌 VRAM 용량을 위해 여기에서 구매하십시오. 속도는 부수적인 효과입니다. 2026년 가격 급등이 이 등급을 가장 크게 타격했으며, 가격은 주별로 변동됩니다.',
+        items: [
+          '**RTX 4090 24 GB (신품 $2,755 / 중고 $2,480):** VRAM 24 GB, 450 W, 7B 모델 약 150 토큰/초, 70B Q4 모델 36 토큰/초. 33B 모델을 편안하게 실행합니다. 가격 급등으로 중고 RTX 4090 가격이 신품 RTX 5090에 근접했음을 유의하십시오.',
+          '**RTX 5090 32 GB (신품 $3,949 / 중고 $3,999):** VRAM 32 GB GDDR7, 575 W, 7B 모델 약 160 토큰/초, 70B Q4 45 토큰/초. 32 GB 용량이 핵심 논거입니다 — 두 번째 GPU 없이 Q4에서 70B 모델을 실행하는 유일한 소비자용 카드입니다. 투기적 재판매로 인해 현재 중고 가격이 신품 가격을 상회합니다.',
+          '**이 등급을 선택하는 이유:** 33B 또는 70B 모델이 필요하거나, 배치 추론을 실행하거나, 몇 년간 교체 없이 사용할 카드를 원합니다.',
+          '**이 등급을 건너뛰는 이유:** 7B-14B 모델에는 과도합니다 — 고급형은 해당 크기에서 즉각적인 응답을 제공하며 절반 미만의 가격과 전력 소비로 이용할 수 있습니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'RTX 5090은 단독으로 575 W를 소비합니다. 850-1000 W 파워 서플라이와 함께 사용하십시오 — 750 W 유닛은 부하 시 실패할 것입니다. 파워 서플라이 업그레이드를 나중에 추가할 사항이 아닌 구매 비용에 포함하십시오.',
+          },
+          {
+            type: 'note',
+            text: '2026년 가격 급등 이전에는 중고 RTX 4090 두 개가 RTX 5090 하나보다 저렴했습니다. 이것이 역전되었습니다: 각 $2,480-2,755에 RTX 4090 한 쌍은 이제 단일 RTX 5090보다 상당히 더 비쌉니다. 새로운 70B 구성의 경우 단일 RTX 5090이 이제 더 간단하고 저렴합니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4090',
+            productName: 'NVIDIA RTX 4090 24GB',
+            productCategory: 'gpu',
+            priceRange: '2480-2755',
+            label: 'Amazon에서 RTX 4090 가격 보기',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=RTX+5090',
+            productName: 'NVIDIA RTX 5090 32GB',
+            productCategory: 'gpu',
+            priceRange: '3949-3999',
+            label: 'Amazon에서 RTX 5090 가격 보기',
+          },
+        ],
+      },
+      vramNeeds: {
+        id: 'vram-needs',
+        title: '얼마나 많은 VRAM이 필요합니까?',
+        content:
+          '**Q4_K_M 양자화에서 모델은 파라미터 10억 개당 약 0.6 GB의 VRAM이 필요하며, 컨텍스트와 도구 오버헤드를 위해 2-4 GB가 추가됩니다.** 이 공식은 네 가지 등급에 직접 매핑됩니다.',
+        items: [
+          '**7B 모델 — 8-9 GB:** 모든 등급에서 실행 가능합니다. 12 GB 카드는 여유 있는 공간을 제공합니다.',
+          '**13-14B 모델 — 11-13 GB:** 컨텍스트와 도구를 고려하면 실제로 16 GB가 필요합니다. 중급형 이상.',
+          '**22B 모델 — 14-16 GB:** 16 GB 카드에서 타이트합니다. 고급형 이상에서 편안합니다.',
+          '**33B 모델 — 19-22 GB:** 24 GB 카드가 필요합니다. RTX 4090 영역.',
+          '**70B 모델 — Q4에서 39-42 GB:** RTX 5090 32 GB가 한계에서 필요하거나 이중 GPU 구성이 필요합니다. 단일 24 GB 카드는 Q4에서 70B 모델을 수용할 수 없습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '컨텍스트 길이는 숨겨진 VRAM 비용입니다 — 긴 프롬프트와 큰 컨텍스트 창은 모델 가중치 위에 추가로 VRAM을 소비합니다. 항상 2-4 GB의 여유를 남겨두십시오. 전체 방법론은 관련 읽기 자료에 연결된 VRAM 요구 사항 가이드를 참조하십시오.',
+          },
+        ],
+      },
+      priceSurge: {
+        id: 'price-surge',
+        title: '2026년 GPU 가격이 오른 이유',
+        content:
+          '**2026년에 메모리 공급 부족으로 GPU 가격이 크게 상승하여 소비자용 카드가 원래 출시 가격보다 1.5~2배 높게 판매되고 있습니다.** 이로 인해 구매 계산이 달라지므로, 출시 가격이 아닌 현실적인 가격을 기준으로 계획하십시오.',
+        items: [
+          '**원인은 GPU가 아니라 메모리입니다.** GDDR과 HBM 공급 부족으로 빠른 메모리를 탑재한 모든 카드의 비용이 상승했습니다. LLM 가능 GPU는 정확히 가장 많이 타격 받은 고VRAM 카드들입니다.',
+          '**RTX 5090이 가장 명확한 사례입니다:** 출시 가격 $1,999이지만 2026년 5월에 ~$3,949에 판매 중입니다 — 거의 두 배.',
+          '**저가형 카드가 더 잘 버텼습니다.** RTX 4060 Ti 16 GB는 $399 출시 가격에 근접하게 유지되고 있습니다. 가격 급등은 카드가 탑재한 빠른 메모리 양에 비례합니다.',
+          '**중고 시장이 이제 가성비 선택입니다.** 중고 RTX 3060 12 GB나 RX 6700 XT는 급등의 많은 부분을 피할 수 있습니다 — 중고 가격은 신품보다 훨씬 적게 상승했습니다.',
+          '**결정:** 기다릴 수 있다면 공급 부족이 완화되는지 지켜보십시오. 그렇지 않다면 가능한 경우 중고로 구매하고 목표 모델에 맞는 가장 작은 카드를 구매하십시오.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '2026년 GPU 가격은 메모리 칩 공급 부족으로 인해 출시 가격보다 1.5~2배 높으므로, 로컬 LLM 구매자는 중고 시장을 선호하고 목표 모델에 맞는 가장 작은 카드를 구매해야 합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '카드가 개선된 것이 아닙니다 — 카드 내부의 메모리가 희귀하고 비싸졌습니다. 이것이 바뀔 때까지 출시 가격을 역사적 수치로 취급하고, 가능한 경우 중고로 구매하며, 모델이 실제로 필요한 것보다 더 많은 VRAM을 위해 비용을 지불하지 마십시오.',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: '결정 흐름도: 네 가지 질문으로 GPU 선택하기',
+        content:
+          '**네 가지 순서대로 묻는 질문이 대부분의 구매자를 하나의 카드로 안내합니다.**',
+        items: [
+          '**1. 실행하고 싶은 가장 큰 모델은 무엇입니까?** 7B: 보급형. 14B: 중급형. 22B: 고급형. 33B: RTX 4090. 70B: RTX 5090 또는 이중 GPU.',
+          '**2. 절대적인 예산 상한선은 얼마입니까?** ~$250 미만 (중고): RTX 3060 12 GB. $520 미만: RTX 4060 Ti 16 GB. ~$1,100-1,200: RTX 4080 Super 또는 4070 Ti Super. $2,480+: RTX 4090 또는 RTX 5090.',
+          '**3. NVIDIA입니까 AMD입니까?** 이미 AMD 하드웨어를 보유하고 있거나 RX 7800 XT에서 상당한 할인을 찾지 않는 한 NVIDIA를 선택하십시오 — CUDA는 ROCm 설정의 수시간을 절약합니다.',
+          '**4. 파워 서플라이에 여유가 있습니까?** 중급형 이상의 카드는 285-575 W가 필요합니다. 최고급형 하드웨어를 구매하기 전에 파워 서플라이와 케이스 냉각을 확인하십시오.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 LLM용 GPU는 가장 큰 모델 크기를 먼저, 예산 상한선을 두 번째, NVIDIA 대 AMD를 세 번째, 마지막으로 파워 서플라이 여유를 순서대로 고려하여 선택하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '실제로 실행하고 싶은 가장 큰 모델부터 시작하여 등급을 설정하십시오. 그 후에만 가격, 브랜드, 파워 서플라이가 처리할 수 있는지를 확인하십시오. 반대 순서로 하는 것이 사람들이 과다 지출하거나 모델을 실행할 수 없는 카드를 구매하는 이유입니다.',
+          },
+        ],
+        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-ko.svg',
+        imageCaption:
+          '로컬 LLM GPU 선택을 위한 네 가지 질문 결정 흐름: 목표 모델 크기가 등급을 설정하고, 예산 상한선이 선택을 좁히며, NVIDIA 대 AMD가 브랜드를 결정하고, 파워 서플라이 여유가 최고급형 선택을 확인합니다.',
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '지역별 가격 및 구매처',
+        content:
+          '**GPU 가격은 지역에 따라 다릅니다 — 미국 가격이 일반적으로 가장 낮고, EU 가격에는 VAT가 포함되며, 2026년 급등은 모든 시장에 영향을 미쳤습니다.** 아래 링크는 지역별 제품 검색 링크입니다. 제휴 태그가 없으며 커미션이 발생하지 않습니다.',
+        items: [
+          '**한국:** 다나와, 에누리, Auction, 11번가가 광범위한 재고를 보유하고 있습니다. 중고 RTX 3060과 RTX 4090은 중고나라와 당근마켓에서 구할 수 있습니다.',
+          '**일본:** Amazon.co.jp와 Yodobashi Camera, Ark PC가 주요 참고처입니다. 가격에 소비세가 포함됩니다.',
+          '**미국:** Amazon.com과 Newegg는 가장 광범위한 재고를 보유하고 있으며, 중고는 eBay를 확인하십시오.',
+          '**가격 비교:** 다나와 (한국)나 Idealo (EU)는 현재 최저가를 확인하기 위한 표준입니다.',
+          '**가용성:** 고급형 카드 (RTX 4090, RTX 5090)는 2026년에 간헐적으로 품절 상태입니다. 변동하는 가격을 예상하고 여러 유통업체를 확인하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '2026년 급등으로 인해 이 가이드의 모든 가격 수치는 2026년 5월에서 빠르게 변하는 데이터입니다. 구매 전 항상 소매업체의 현재 목록을 열어 확인하십시오 — 가격은 주별로 변동되었습니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+            productName: '로컬 LLM용 GPU (미국)',
+            productCategory: 'gpu',
+            priceRange: '150-3900',
+            label: 'Amazon 미국에서 GPU 보기',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+            productName: '로컬 LLM용 GPU (독일)',
+            productCategory: 'gpu',
+            priceRange: '150-3900',
+            label: 'Amazon.de에서 GPU 보기',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+            productName: '로컬 LLM용 GPU (프랑스)',
+            productCategory: 'gpu',
+            priceRange: '150-3900',
+            label: 'Amazon.fr에서 GPU 보기',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+            productName: '로컬 LLM용 GPU (일본)',
+            productCategory: 'gpu',
+            priceRange: '150-3900',
+            label: 'Amazon.co.jp에서 GPU 보기',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '로컬 LLM용 GPU 구매 시 일반적인 실수',
+        items: [
+          '**VRAM 대신 초당 토큰으로 구매하기.** 모델을 수용할 수 없는 더 빠른 카드는 쓸모없습니다. 먼저 모델이 2-4 GB 여유를 가지고 VRAM에 맞는지 확인한 후, 해당 등급 내에서 속도를 비교하십시오.',
+          '**RTX 3060 12 GB 대신 6 GB 버전 구매하기.** 이름은 같지만 용도가 다릅니다 — 6 GB 카드는 3B 모델로 제한됩니다. 목록에서 항상 12 GB 버전을 확인하십시오.',
+          '**RTX 4060 Ti 16 GB가 8 GB 버전보다 빠를 것이라고 가정하기.** 그렇지 않습니다 — 동일한 GPU 다이에 더 많은 메모리가 탑재되어 있습니다. 용량 (14B 모델)을 위해 구매하는 것이지 속도를 위해 구매하는 것이 아닙니다.',
+          '**현재 가격 대신 출시 가격을 기준으로 하기.** 2026년 급등으로 출시 가격이 현실을 반영하지 않습니다. 소매업체의 실시간 가격으로 예산을 세우고, 급등을 피할 수 있는 중고 시장을 우선시하십시오.',
+          '**파워 서플라이 요구 사항 무시하기.** RTX 5090은 575 W를 소비하며 850-1000 W 파워 서플라이가 필요합니다. 부하 시 실패하는 카드는 느리게 실행되는 카드보다 나쁩니다.',
+          '**AMD를 선택하면서 설정 시간을 예산에 포함하지 않기.** RX 6700 XT와 RX 7800 XT는 좋은 가성비이지만, ROCm 설정은 몇 시간이 걸립니다. 절약된 금액 대비 NVIDIA 카드와 비교하여 그 시간을 고려하십시오.',
+          '**7B 모델에 과다 구매하기.** 7B 모델이 사용 사례를 커버한다면 RTX 4090은 낭비된 돈과 에너지입니다. 우연히 가진 예산이 아닌 모델에 맞게 등급을 조정하십시오.',
+        ],
+        image: '/images/best-gpu-buying-guide-local-llm-2026-common-mistakes-en.svg',
+        imageCaption:
+          '로컬 LLM용 GPU 구매 시 7가지 일반적인 실수: VRAM보다 속도로 구매, RTX 3060 6 GB와 12 GB 혼동, RTX 4060 Ti 16 GB가 더 빠를 것이라는 기대, 출시 가격 기준, 파워 서플라이 요구 사항 무시, AMD 설정 시간 미예산, 7B 모델에 과다 구매.',
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[NVIDIA GeForce RTX 40 시리즈 사양](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/) — RTX 4060 Ti, 4070 Ti Super, 4080 Super, 4090의 공식 VRAM 용량 및 전력 소비 (TGP) 수치.',
+          '[NVIDIA GeForce RTX 5090 사양](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) — RTX 5090의 공식 32 GB GDDR7 VRAM 및 575 W 전력 소비 수치.',
+          '[Best Value GPU — RTX 5090 / 4090 / 4080 Super 가격 추적기](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — 2026년 5월 가격 데이터 포인트에 사용된 미국 신품 및 중고 가격 기록.',
+          '[AMD Radeon 사양](https://www.amd.com/en/products/graphics/desktops/radeon.html) — RX 7800 XT 및 RX 6700 XT의 공식 VRAM 및 전력 수치.',
+          '[2026년 로컬 LLM 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms) — PromptQuorum 하드웨어 테스트: RTX 3060, 4080, 4090, 5090의 7B Q4 추론 속도 측정값.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '로컬 LLM을 잘 실행할 수 있는 가장 저렴한 GPU는 무엇입니까?',
+            a: '중고 NVIDIA RTX 3060 12 GB ($150-250)가 로컬 LLM을 잘 실행할 수 있는 가장 저렴한 GPU입니다. 12 GB VRAM으로 Q4 양자화에서 7B 모델과 대부분의 13B 모델을 초당 15-20 토큰으로 실행합니다. 더 저렴한 RX 6700 XT도 작동하지만 더 느리고 AMD ROCm 설정이 필요합니다. 중고로 구매하십시오 — 2026년 급등으로 신품 가격이 거의 두 배가 되었습니다.',
+          },
+          {
+            q: '2026년에 GPU 가격이 왜 이렇게 높습니까?',
+            a: '메모리 칩 공급 부족이 2026년 GPU 가격 급등을 이끌었습니다. GDDR 및 HBM 공급이 타이트해져 빠른 메모리를 탑재한 모든 그래픽 카드의 비용이 상승했으며, LLM 가능 고VRAM 카드가 가장 많이 영향을 받았습니다. 2026년 5월까지 대부분의 카드가 원래 출시 가격의 1.5~2배에 판매됩니다 — RTX 5090은 $1,999에 출시되었지만 ~$3,950에 판매되고 있습니다. 중고 시장은 가격 인상의 대부분을 피했습니다.',
+          },
+          {
+            q: '로컬 LLM에 VRAM이 얼마나 필요합니까?',
+            a: 'Q4_K_M 양자화에서 파라미터 10억 개당 약 0.6 GB VRAM에 오버헤드를 위한 2-4 GB를 계획하십시오. 즉, 7B 모델에 8-9 GB, 14B에 11-13 GB, 33B에 19-22 GB, 70B에 39-42 GB입니다. 12 GB 카드는 7B를 편안하게 커버합니다. 70B는 RTX 5090 32 GB나 이중 GPU 구성이 필요합니다.',
+          },
+          {
+            q: 'RTX 4060 Ti 16 GB가 8 GB 버전보다 빠릅니까?',
+            a: '아니요. RTX 4060 Ti 16 GB와 8 GB는 동일한 GPU 다이를 사용하므로 토큰당 추론 속도는 비슷합니다 — 7B 모델에서 약 20-25 토큰/초. 16 GB 버전은 8 GB에 맞지 않는 14B 모델을 실행할 수 있는 용량을 제공합니다. 속도가 아닌 VRAM을 위해 구매하십시오.',
+          },
+          {
+            q: '로컬 LLM용으로 NVIDIA와 AMD 중 무엇을 구매해야 합니까?',
+            a: '이미 AMD 하드웨어를 보유하고 있거나 상당한 할인을 찾지 않는 한 NVIDIA를 구매하십시오. NVIDIA CUDA는 Ollama, LM Studio, llama.cpp와 즉시 작동합니다. RX 6700 XT 및 RX 7800 XT와 같은 AMD 카드는 달러 대비 경쟁력 있는 VRAM을 제공하지만, ROCm 설정은 Linux에서 보통 몇 시간이 소요됩니다.',
+          },
+          {
+            q: '단일 GPU로 70B 모델을 실행할 수 있습니까?',
+            a: 'RTX 5090 32 GB만 가능하며, Q4 양자화에서만 가능합니다. 70B 모델은 약 39-42 GB가 필요합니다 — 공격적인 양자화나 부분 오프로드가 필요합니다. RTX 4090 24 GB는 단독으로 Q4에서 70B 모델을 수용할 수 없습니다. 일반적인 해결책은 결합된 VRAM을 위해 두 개의 RTX 4090을 사용하는 것이지만, 2026년 가격 급등으로 그 쌍이 단일 RTX 5090보다 더 비싸졌습니다.',
+          },
+          {
+            q: '로컬 LLM용으로 RTX 5090이 RTX 4090보다 가치가 있습니까?',
+            a: '단일 카드로 70B 모델을 실행해야 하는 경우에만 해당됩니다. RTX 5090은 24 GB 대 RTX 4090의 32 GB VRAM을 가지며, 이것이 결정적 요소입니다. 7B-33B 모델의 경우 RTX 4090은 동일한 모델을 수용합니다. 2026년 급등 후 두 카드 모두 가격이 근접하므로, 5090의 추가 8 GB와 약간 더 높은 속도가 예산이 허용한다면 신품 구매를 더 나은 선택으로 만듭니다.',
+          },
+          {
+            q: '이 GPU들에 어떤 파워 서플라이가 필요합니까?',
+            a: '등급에 맞게 파워 서플라이를 조정하십시오: RTX 3060에는 550 W 유닛이 적합하고, RTX 4060 Ti와 4070 Ti Super에는 650-750 W, RTX 4090에는 850 W, RTX 5090에는 850-1000 W가 필요합니다 (단독으로 575 W 소비). 하향 과도한 파워 서플라이는 부하 시 불안정을 유발합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽기 자료',
+        items: [
+          '[각 모델 크기에 대한 전체 VRAM 요구 사항 확인](/ko/local-llms/how-much-vram-local-llm) — 이 가이드의 빠른 공식 뒤에 있는 모델 크기별 VRAM 전체 방법론.',
+          '[측정된 로컬 LLM 벤치마크로 15개 이상의 GPU 비교](/ko/local-llms/best-gpus-for-local-llms) — 여기 8개를 넘어 구형 및 서버 카드를 포함한 더 광범위한 GPU 벤치마크 세트.',
+          '[보급형 RTX 3060 12 GB에서 실행되는 모델 확인](/ko/local-llms/best-budget-gpus-local-llm) — 6 GB와 12 GB 구분을 포함한 보급형의 모델별 속도.',
+          '[RTX 5090과 RTX 4090을 정면 비교](/ko/local-llms/rtx-5090-vs-rtx-4090-local-llm) — RTX 5090으로 업그레이드할 가치가 있는 경우와 RTX 4090으로 충분한 경우.',
+          '[Q4_K_M 양자화가 VRAM 비용을 어떻게 결정하는지 이해하기](/ko/local-llms/llm-quantization-explained) — Q4_K_M이 기본값인 이유와 양자화가 VRAM 계산을 어떻게 변경하는지.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 LLM용 최고의 GPU: 2026년 완전 구매 가이드',
+      description: '4가지 예산별로 로컬 LLM용 8개 GPU 비교: RTX 3060부터 RTX 5090까지. VRAM, 초당 토큰, 전력 소비, 2026년 5월 가격 — 각 등급에서 실행되는 모델 크기 포함.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026',
+      inLanguage: 'ko',
+      datePublished: '2026-05-22',
+      dateModified: '2026-05-22',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '로컬 LLM용 최고의 GPU: 2026년 완전 구매 가이드', item: 'https://www.promptquorum.com/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026' },
+      ],
+    },
+  },
 }

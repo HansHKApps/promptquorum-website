@@ -3053,4 +3053,420 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Local AI Agents & Tool Use',
+    title: '2026년 Tool Calling 최고의 로컬 모델: 벤치마크 및 비교',
+    seoTitle: '2026년 Tool Calling 최고 로컬 모델: 실제 MCP 벤치마크',
+    intro:
+      '도구 호출의 신뢰성은 로컬 에이전트가 작업을 완료할지 멈출지를 결정하는 핵심 요소입니다. 모델을 감싸는 harness는 그다지 중요하지 않습니다 — 동일한 Cline, 동일한 MCP 서버, 동일한 프롬프트: 모델이 올바르게 형성된 도구 호출을 발행하거나 그렇지 않거나입니다. 이 가이드는 2026년 5월 기준 신뢰할 수 있는 5개의 Tool Calling 모델(Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B)을 실제 MCP 워크플로우에서 비교하고, 실패 모드를 파악하며, VRAM 예산에 따라 어떤 모델을 선택할지 안내합니다.',
+    metaDescription:
+      'Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B의 Tool Calling 신뢰성 비교. 리더보드가 아닌 실제 MCP 벤치마크입니다.',
+    twitterDescription:
+      '실제 MCP tool calls로 평가한 5개 로컬 모델: Gemma 4, GLM-5.1, Qwen3, Qwen3-Coder, Llama 3.3. 신뢰성 비율, VRAM, 실패 모드.',
+    current_models_mentioned: [
+      'Gemma 4 27B',
+      'GLM-5.1 32B',
+      'Qwen3 32B',
+      'Qwen3-Coder 30B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 Max 64 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'NVIDIA L40S 48 GB',
+    ],
+    audience:
+      'MCP, Cline, Continue.dev 또는 커스텀 오케스트레이션으로 로컬 에이전트를 구축하는 개발자로, 파일 시스템·데이터베이스·브라우저·GitHub 워크플로우에서 신뢰성 있게 동작하는 Tool Calling 모델을 선택해야 하는 분들을 위한 자료입니다.',
+    readTime: '12분 분량',
+    educationalLevel: 'Advanced',
+    primaryTerm: '로컬 모델 tool calling',
+    targetKeywords: [
+      '로컬 llm tool calling 추천',
+      'gemma 4 vs qwen3 tool calling',
+      'mcp 모델 벤치마크',
+      'llm 로컬 function calling 2026',
+      'glm-5.1 tool calls',
+      'qwen3-coder mcp',
+    ],
+    leadAnswerBlock:
+      '**2026년 5월 기준 신뢰할 수 있는 tool call을 수행하는 5개 로컬 모델: Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B. Llama 3.3 70B는 가장 높은 성능을 보이며(MCP 서버에서 올바르게 형성된 호출 비율 ~97%), 48GB+ VRAM이 필요합니다. Qwen3-Coder 30B는 코드 중심 작업에 최적입니다. Gemma 4 27B는 24GB VRAM 환경의 범용 작업에 최고의 선택입니다. GLM-5.1 32B는 긴 컨텍스트 에이전트 작업(기본 128K 컨텍스트)에서 뛰어납니다. Qwen3 32B는 균형 잡힌 대안입니다. 7B 이하 모델과 명시적인 tool calling 훈련 없는 대부분의 범용 모델은 동일한 워크플로우에서 잘못 형성된 호출을 발행합니다 — 실패는 harness가 아닌 모델에 있습니다. 이 목록의 소형 모델에서 Q4_K_M보다 공격적인 양자화는 신뢰성을 눈에 띄게 저하시킵니다; Q4_K_M이 프로덕션 최솟값입니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 Tool Calling에 가장 좋은 로컬 모델은 무엇입니까?',
+        answer:
+          'Llama 3.3 70B가 tool calling 성공률이 가장 높지만 48GB+ VRAM이 필요하므로 대부분의 사용자는 27B–32B 모델 중 하나를 선택합니다. Gemma 4 27B는 24GB 환경의 범용 에이전트 작업에 기본 선택입니다 — 해당 크기에서 최고의 tool calling 훈련을 받았으며, 체인 호출에서는 보수적이지만 신뢰성이 높습니다. GLM-5.1 32B는 컴플라이언스 보고서나 긴 회의 녹취록 같은 긴 컨텍스트 작업(기본 128K)에 최적입니다. Qwen3 32B는 균형 잡혀 있고, Qwen3-Coder 30B는 코드 전용 tool caller로 최고입니다. 다섯 모델 모두 깨끗한 function calling JSON을 발행하며 MCP 클라이언트가 적용하는 엄격한 스키마 검증을 통과합니다. Tool calling 신뢰성은 모델의 속성입니다 — 동일한 harness에서 소형 범용 모델은 동일한 워크플로우에서 실패합니다. 해결책은 "harness 교체"가 아닌 "모델 교체"입니다.',
+        bullets: [
+          'VRAM별 최고 선택: 24GB → Gemma 4 27B; 24GB 긴 컨텍스트 → GLM-5.1 32B; 24GB 코드 중심 → Qwen3-Coder 30B; 48GB+ → Llama 3.3 70B.',
+          '신뢰할 수 있는 5개 모델 모두 올바르게 형성된 function calling JSON을 발행하고, 병렬 호출을 처리하며, MCP 클라이언트의 엄격한 스키마 검증을 통과합니다.',
+          '7B 이하 모델과 tool calling 훈련 없는 범용 모델은 잘못 형성된 호출을 발행합니다 — 실패는 모델에 있으며 harness에 있지 않습니다.',
+          '양자화: Q4_K_M이 5개 모델 모두에 대한 프로덕션 최솟값입니다. Q3 이하는 채팅 품질보다 tool calling 신뢰성을 먼저 저하시킵니다.',
+          '형식 이식성이 높습니다 — 동일한 모델이 재설정 없이 OpenAI 도구, Cline XML, MCP JSON-RPC, Aider diff 블록을 모두 처리합니다.',
+          '실제 신뢰성은 올바른-형성-비율 × 올바른-선택-비율 × 올바른-인수-비율입니다. 90%+ 숫자는 복합되므로, 실제 다단계 워크플로우에서 end-to-end 80–90%를 예상하십시오.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '로컬 모델에서 Tool Calling의 의미', anchor: '#what-tool-calling' },
+      { label: '테스트 방법론', anchor: '#methodology' },
+      { label: '직접 비교', anchor: '#comparison' },
+      { label: 'Gemma 4 27B', anchor: '#gemma-4' },
+      { label: 'GLM-5.1 32B', anchor: '#glm-5-1' },
+      { label: 'Qwen3 32B', anchor: '#qwen3' },
+      { label: 'Qwen3-Coder 30B', anchor: '#qwen3-coder' },
+      { label: 'Llama 3.3 70B', anchor: '#llama-3-3' },
+      { label: '적합하지 않은 모델', anchor: '#non-starters' },
+      { label: 'Tool Call 형식 비교', anchor: '#format-comparison' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 자료', anchor: '#related-reading' },
+    ],
+    gammaEmbedUrl: '/presentations/best-local-models-tool-calling-2026-static.html',
+    gammaDescription: '발표 자료 내용: 실제 MCP 워크플로우에서 평가한 5개 로컬 모델(Gemma 4 27B ~95%, GLM-5.1 32B ~94%, Qwen3 32B ~93%, Qwen3-Coder 30B ~96% 코드, Llama 3.3 70B ~97%), VRAM 요구 사항 및 최소 양자화(Q4_K_M), 실패하는 모델(7B 이하, tool calling 훈련 없음, 과도한 양자화), tool call 형식 비교(OpenAI JSON, Cline XML, MCP JSON-RPC 2.0, Aider SEARCH/REPLACE), 에이전트 루프에서의 신뢰성 복합, 5가지 흔한 실수. PDF를 로컬 tool calling 모델 참고 카드로 다운로드하십시오.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**2026년 5월 기준 신뢰할 수 있는 5개 tool caller:** Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B. 다섯 모델 모두 올바르게 형성된 function calling JSON을 발행하며 엄격한 MCP 스키마 검증을 통과합니다.',
+          '**Llama 3.3 70B가 가장 높은 성능을 보입니다** — MCP 서버에서 90%대 후반의 올바른 형성 호출 비율 — 하지만 Q4_K_M으로 48GB+ VRAM이 필요합니다. 하드웨어가 허용할 때만 사용하십시오; 소형 모델로도 충분한 경우가 많습니다.',
+          '**Gemma 4 27B는 24GB 환경의 표준 선택입니다.** 해당 크기에서 최고의 tool calling 훈련, 체인 호출에서 보수적입니다. 파일 시스템, 데이터베이스, GitHub MCP 서버에서 신뢰성이 높습니다.',
+          '**GLM-5.1 32B는 긴 컨텍스트 에이전트 작업에서 뛰어납니다.** 기본 128K 컨텍스트 창; 간헐적인 인수 잘림이 유일한 일반적인 실패입니다. 컴플라이언스 보고서와 긴 녹취록에 사용하십시오.',
+          '**Qwen3-Coder 30B는 최고의 코드 중심 tool caller입니다.** `replace_in_file`, `read_file`, 코드 인식 브라우저 액션에서 강력합니다; Gemma 4보다 코드 비관련 MCP 서버에서 약합니다.',
+          '**7B 이하 모델은 잘못 형성된 호출을 발행합니다.** 명시적 tool calling 훈련 없는 범용 모델도 크기에 상관없이 동일합니다. 실패는 모델에 있으며 harness에 있지 않습니다; harness를 교체해도 해결되지 않습니다.',
+          '**Q4_K_M이 프로덕션 최솟값입니다.** Q3 이하는 채팅 품질보다 tool calling 신뢰성을 먼저 저하시킵니다. VRAM 예산뿐만 아니라 워크플로우에 맞게 양자화를 조정하십시오.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**최고 범용(24GB VRAM):** Gemma 4 27B — Q4_K_M, ~16GB VRAM, 4개 참고 MCP 서버(filesystem, sqlite, puppeteer, github) 모두에서 신뢰성 있음.',
+          '**최고 긴 컨텍스트(24GB VRAM):** GLM-5.1 32B — 128K 컨텍스트, Q4_K_M으로 ~20GB VRAM.',
+          '**최고 코드 중심:** Qwen3-Coder 30B — Q4_K_M으로 ~18GB VRAM, `replace_in_file`과 코드 MCP 도구에서 가장 강력.',
+          '**최고 성능:** Llama 3.3 70B — Q4_K_M으로 ~42GB VRAM, 5개 중 가장 느리지만 체인 호출에서 가장 신뢰성 있음.',
+          '**경량 옵션:** Llama 3.2 3B — 4–8GB VRAM, 분류 트리아주에는 충분하지만 다단계 계획에는 부족.',
+          '**양자화 프로덕션 최솟값:** Q4_K_M. Q3와 Q2는 채팅 품질보다 tool calling 신뢰성을 먼저 저하시킵니다.',
+          '**전반적 신뢰성 범위:** 단순 워크플로우에서 올바른 형성 호출 90%+; 선택 및 인수 오류를 복합한 실제 다단계 워크플로우에서 end-to-end 80–90%.',
+        ],
+      },
+      whatToolCalling: {
+        id: 'what-tool-calling',
+        title: '로컬 모델에서 Tool Calling의 의미',
+        content:
+          '**Tool calling은 도구와 그 인수를 지정하는 구조화된 JSON을 발행하는 모델의 능력입니다 — 채팅 모델을 에이전트로 변환하는 LLM 측 기술입니다.** MCP, OpenAI 도구, Anthropic 도구, Cline XML은 모두 동일한 기본 기술의 wire 형식 표현입니다.',
+        items: [
+          '**모델에 필요한 기술:** 도구 스키마를 읽고, 사용자 요청이 도구 호출에 해당하는지 결정하고, 도구를 지정하고 스키마에 맞는 인수를 제공하는 구조화된 응답을 발행합니다. 자유 텍스트 산문으로 도구 호출처럼 보이는 것이 아니라 — harness가 휴리스틱 없이 파싱할 수 있는 구조화된 객체입니다.',
+          '**Wire 형식은 다양하지만 기술은 다양하지 않습니다.** OpenAI 도구 JSON 형식에서 신뢰성 있게 tool calling을 수행하는 모델은 일반적으로 Cline XML과 MCP JSON-RPC에서도 신뢰성 있게 수행합니다. 기술은 이식 가능합니다; 재형식화 실패는 표면적입니다.',
+          '**Tool calling 훈련은 가장 저렴하고 영향력이 큰 사후 훈련 단계입니다.** Gemma 3 → Gemma 4, Qwen2 → Qwen3, Llama 3 → Llama 3.3 점프가 이를 반영합니다. 새로운 오픈 가중치 버전은 routinely tool calling 훈련을 추가하거나 개선합니다; 그것이 신뢰성 목록을 나머지 오픈 가중치 생태계에서 분리하는 것입니다.',
+          '**에이전트에 특히 중요한 이유:** 에이전트 루프는 tool call의 연속입니다. 호출당 95%의 신뢰성도 복합됩니다 — 8단계에서 95%는 ~66%의 시간에 성공적으로 완료됩니다. 그래서 승인 게이트가 있는 경계 harness가 실제 작업에서 자율 에이전트를 능가합니다: 인간 승인이 호출당 실패를 복구합니다.',
+          '모든 호환 모델에서 tool calling 신뢰성을 향상시키는 프롬프팅 기술은 [체인 오브 소트 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting)과 [트리 오브 소트와 ReAct](/ko/prompt-engineering/tree-of-thought-and-react)를 참조하십시오 — 둘 다 모델이 잘못된 도구를 선택하거나 잘못된 인수를 제공하는 비율을 줄여줍니다.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Tool calling은 도구를 지정하고 스키마에 맞는 인수를 제공하는 구조화된 JSON을 발행하는 LLM 측 기술입니다; MCP, OpenAI 도구, Cline XML은 모두 동일한 기술의 wire 형식 표현입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Tool calling 기능이 있는 모델은 사용 가능한 도구 목록을 읽고, 사용자 요청에 맞는 도구를 결정하고, 도구와 그 인수를 지정하는 깔끔한 구조화된 응답을 생성할 수 있습니다. Wire 형식(JSON, XML, JSON-RPC)은 harness의 결정입니다; 모델이 호출을 올바르게 실행하는지 여부는 모델의 속성입니다 — 그것이 이 가이드가 측정하는 것입니다.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '호출당 신뢰성은 에이전트 루프 전체에 걸쳐 복합됩니다. 8단계에서 호출당 95% 비율은 ~66%의 시간에 성공적으로 완료됩니다. 복합을 계획하십시오 — 계획 지평선을 짧게 유지하고, 승인 게이트를 사용하며, 현실적인 가장 긴 지평선을 처리할 수 있는 가장 작은 신뢰할 수 있는 모델을 선택하십시오.',
+          },
+        ],
+        image: '/images/tool-calling-what-is-it-en.svg',
+        imageCaption: 'Tool calling 5단계: 사용자 프롬프트 → LLM이 사용 가능한 도구 스키마 읽기 → 도구와 인수가 포함된 구조화된 JSON 발행 → harness가 스키마에 대해 검증 → 도구 실행(파일 시스템, 데이터베이스, 브라우저, API). Wire 형식은 다양하지만 기본 LLM 기술은 다양하지 않습니다.',
+      },
+      methodology: {
+        id: 'methodology',
+        title: '테스트 방법론',
+        content:
+          '**테스트는 harness를 일정하게 유지하고 모델만 변경했습니다.** 동일한 MCP 클라이언트, 동일한 서버, 동일한 프롬프트 — 실패는 모델에 귀속되며 runtime에 있지 않습니다.',
+        items: [
+          '**설정:** VS Code의 Cline 3.x(테스트한 것 중 가장 엄격한 tool calling 검증기)와 헤드리스 측의 Goose+MCP. 달리 명시하지 않는 한 Q4_K_M으로 각 모델을 제공하는 Ollama 0.5+ 백엔드.',
+          '**서버:** 4개의 참고 MCP 서버 — `filesystem`(샌드박스 디렉토리 읽기/쓰기), `sqlite`(기본 읽기 전용, 특정 작업에 대한 쓰기 역할), `puppeteer`(헤드리스 브라우저), `github`(세밀한 PAT로 PR 및 이슈 관리). 모든 모델 실행에서 동일한 서버 버전.',
+          '**프롬프트 세트:** 서버당 50개의 작업 프롬프트, 모델당 3번 반복 = 4개 서버에서 모델당 600개의 평가된 호출(5개 모델에 걸쳐 총 ~3,000개). 프롬프트는 단일 도구 작업("이 파일 읽기"), 다단계 계획("저장소에서 X에 대한 참조 찾기"), 병렬 호출("이 3개 디렉토리 나열")을 포함합니다.',
+          '**평가:** 호출당 4가지 신호. **올바른 형성** — 호출이 도구 스키마에 대해 올바르게 파싱됨. **올바른 선택** — 작업에 적합한 도구가 선택됨. **올바른 인수** — 인수 값이 작업이 요구한 것과 일치함. **실행 성공** — 호출이 예상 결과를 생성함.',
+          '**하드웨어:** 소형 모델(GLM-5.1 32B까지)에는 Apple M5 Max 64GB MacBook Pro; Llama 3.3 70B에는 NVIDIA L40S 48GB 및 2× RTX 3090 24GB. 모든 실행은 사용 가능한 토큰 속도(≥10 tokens/s)로 유지되어 지연 시간이 실패 모드가 되지 않도록 했습니다.',
+          '**정직성 제약:** 백분율은 정확한 숫자가 아닌 범위로 보고됩니다. "~95%"는 테스트 세트에서 우리 실행이 92–96% 범위에 있었음을 의미합니다; 분산이 정밀도가 오해를 일으킬 만큼 작을 때만 반올림합니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '이 수치는 BFCL 또는 ToolBench 리더보드가 아닌 우리의 테스트 harness에서 나왔습니다. 공개 벤치마크는 방향적으로 상관관계가 있지만 MCP 서버 워크플로우와 일대일 대응되지 않습니다 — 귀하의 스택에 맞는 벤치마크는 귀하의 스택입니다. 여기의 백분율을 최종 판결이 아닌 출발점 가설로 처리하십시오.',
+          },
+        ],
+        image: '/images/tool-calling-methodology-en.svg',
+        imageCaption: '테스트 방법론: 4개 MCP 서버(filesystem, sqlite, puppeteer, github), 50개 프롬프트 × 4개 서버 × 3회 실행 = 모델당 600개 평가 호출, 5개 모델에 걸쳐 총 ~3,000개 — 전체 과정에서 동일한 Cline 3.x harness, 모델만 변경.',
+      },
+      comparison: {
+        id: 'comparison',
+        title: '직접 비교: 2026년 5개 Tool Calling 모델',
+        content:
+          '**동일한 harness, 동일한 프롬프트, 다른 모델.** Llama 3.3 70B가 전반적인 수치에서 선두; 소형 모델은 종종 더 중요한 지표인 VRAM 달러당 신뢰성에서 선두입니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '범용 24GB 환경에는 Gemma 4 27B, 긴 컨텍스트에는 GLM-5.1 32B, 코드에는 Qwen3-Coder 30B, 균형 잡힌 대안으로 Qwen3 32B, 48GB+ VRAM이 있고 최고 성능이 필요할 때는 Llama 3.3 70B를 선택하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '다섯 모두 작동합니다. 차이는 비용(VRAM), 전문화(긴 컨텍스트, 코드, 범용), 호출에서 약간 실수하는 빈도(몇 퍼센트 — 승인 게이트로 복구 가능)입니다.',
+          },
+        ],
+        columns: ['모델', '크기', 'VRAM (Q4_K_M)', '올바른 형성 호출 비율', '최적 용도', '일반적인 실패 모드'],
+        rows: [
+          { '모델': 'Gemma 4 27B', '크기': '27B', 'VRAM (Q4_K_M)': '~16 GB', '올바른 형성 호출 비율': '~95%', '최적 용도': '24GB 환경의 범용 에이전트', '일반적인 실패 모드': '체인 호출에서 보수적(체이닝이 작동했을 곳에서 승인 요청)' },
+          { '모델': 'GLM-5.1 32B', '크기': '32B', 'VRAM (Q4_K_M)': '~20 GB', '올바른 형성 호출 비율': '~94%', '최적 용도': '긴 컨텍스트 에이전트(기본 128K)', '일반적인 실패 모드': '긴 입력에서 간헐적 인수 잘림' },
+          { '모델': 'Qwen3 32B', '크기': '32B', 'VRAM (Q4_K_M)': '~20 GB', '올바른 형성 호출 비율': '~93%', '최적 용도': '균형 잡힘 — 범용 + 가벼운 코드', '일반적인 실패 모드': 'Cline 엄격 형식에서 드문 XML 오형성' },
+          { '모델': 'Qwen3-Coder 30B', '크기': '30B', 'VRAM (Q4_K_M)': '~18 GB', '올바른 형성 호출 비율': '~96%(코드) / ~91%(비코드)', '최적 용도': '코드 에이전트(replace_in_file, read_file, 코드 인식 브라우저)', '일반적인 실패 모드': '범용 옵션보다 코드 비관련 서버에서 약함' },
+          { '모델': 'Llama 3.3 70B', '크기': '70B', 'VRAM (Q4_K_M)': '~42 GB', '올바른 형성 호출 비율': '~97%', '최적 용도': '하드웨어가 허용할 때 최고 성능', '일반적인 실패 모드': '낮은 토큰 속도로 긴 에이전트 루프가 느림' },
+        ],
+        image: '/images/tool-calling-model-comparison-en.svg',
+        imageCaption: '4개 MCP 서버에서 평가한 5개 tool calling 모델: Llama 3.3 70B가 ~97% 올바른 형성 호출(42GB VRAM)로 선두; Qwen3-Coder 30B ~96%(코드 도구); Gemma 4 27B ~95%(16GB VRAM); GLM-5.1 32B ~94%(128K 컨텍스트); Qwen3 32B ~93%(균형).',
+      },
+      gemma4: {
+        id: 'gemma-4',
+        title: 'Gemma 4 27B: 24GB 환경의 기본 선택',
+        content:
+          '**Gemma 4 27B는 대부분의 팀이 먼저 설치해야 할 모델입니다.** 해당 크기에서 최고의 tool calling 훈련, Q4_K_M으로 16GB 통합 메모리 또는 24GB VRAM에 맞으며, 테스트한 모든 MCP 서버에서 깨끗한 function calling JSON을 발행합니다.',
+        items: [
+          '**강점:** 도구 스키마에 대한 엄격한 준수(낮은 오형성 호출 비율), 도구 선택에서 좋은 일반적 추론, 24GB 소비자 GPU와 Apple M-series 머신에서 편안함.',
+          '**실패 모드:** 체인 도구 호출에서 보수적. Gemma 4는 Llama 3.3이 다음 도구를 호출했을 곳에서 때때로 사용자에게 명확화 질문을 하기 위해 멈춥니다. 목표가 감독이면 기능이고; 자율성을 원할 때는 마찰점입니다.',
+          '**권장 양자화:** Q4_K_M. Q5_K_M은 채팅 품질을 향상시키지만 tool calling 신뢰성을 눈에 띄게 향상시키지는 않습니다 — 추가 VRAM은 더 긴 컨텍스트 예산에 더 잘 사용됩니다.',
+          '**최고 harness 조합:** 신뢰할 수 있는 runtime 중 어느 것이든. Cline + Gemma 4는 Gemma의 보수주의가 Cline의 단계별 승인 UX와 일치하기 때문에 특히 깔끔한 조합입니다.',
+          '**어디에 사용할지:** 범용 에이전트 작업, 문서 처리, 이메일 트리아주, 파일 시스템 및 데이터베이스 기반 MCP 작업. 다른 것을 선택할 구체적인 이유가 없을 때의 기본 옵션.',
+        ],
+      },
+      glm51: {
+        id: 'glm-5-1',
+        title: 'GLM-5.1 32B: 긴 컨텍스트를 위한 선택',
+        content:
+          '**GLM-5.1 32B는 입력이 길 때 올바른 선택입니다.** 기본 128K 컨텍스트 창, 강력한 tool calling 신뢰성, 그리고 한 시간짜리 회의 녹취록이나 전체 코드베이스 읽기를 위해 컨텍스트 확장 파인튜닝이 필요 없는 상위 5개 중 유일한 모델입니다.',
+        items: [
+          '**강점:** 기본 128K 컨텍스트(rope scaling 아티팩트 없음), 신뢰할 수 있는 tool calling JSON, Gemma 4보다 약간 무겁지만 Q4_K_M으로 24GB VRAM에서 편안함.',
+          '**실패 모드:** 매우 긴 입력에서 간헐적 인수 잘림. 모델이 100K 토큰 문서를 받고 문서의 핵심 주장을 인수로 사용하여 도구를 호출하도록 요청받을 때, GLM-5.1이 때때로 요점 이전에 인수를 자릅니다. 복구 가능합니다 — Cline이 오형성 호출을 표시하고 모델이 재시도합니다 — 하지만 승인 사이클이 추가됩니다.',
+          '**권장 양자화:** Q4_K_M. GLM-5.1은 Gemma 4보다 약간 덜 우아하게 양자화됩니다; tool calling 워크플로우에서 Q4 아래로 내려가지 마십시오.',
+          '**어디에 사용할지:** 컴플라이언스 보고서 생성, 광범위한 문서 분석, 전체 코드베이스를 컨텍스트에 유지해야 하는 에이전트 작업. 컨텍스트 길이가 제약이 될 때의 선택.',
+        ],
+      },
+      qwen3: {
+        id: 'qwen3',
+        title: 'Qwen3 32B: 균형 잡힌 대안',
+        content:
+          '**Qwen3 32B는 어느 것도 선도하지 않으면서 모든 것을 능숙하게 처리하는 모델입니다.** 두 가지 설치를 관리하지 않고 일반 작업과 가벼운 코드 작업의 혼합에 단일 모델이 필요할 때 선택하십시오.',
+        items: [
+          '**강점:** 4개 MCP 서버 전반에서 일관된 tool calling 신뢰성, 좋은 일반적 추론, 24GB GPU에서 긴 에이전트 루프를 위해 충분히 빠름.',
+          '**실패 모드:** Cline 엄격 형식에서 드문 XML 오형성. 발생할 때 에이전트 루프가 깔끔하게 재시도합니다 — 실제로는 낮은 영향력 실패 모드입니다.',
+          '**권장 양자화:** Q4_K_M. Qwen3은 우아하게 양자화됩니다; Q5_K_M은 VRAM이 있으면 소폭 향상됩니다.',
+          '**어디에 사용할지:** 작업별로 모델을 전환하고 싶지 않은 혼합 워크플로우. "팀을 위한 하나의 모델" 옵션.',
+        ],
+      },
+      qwen3coder: {
+        id: 'qwen3-coder',
+        title: 'Qwen3-Coder 30B: 코드 중심 선택',
+        content:
+          '**Qwen3-Coder 30B는 코드 중심 MCP 작업에서 최고의 tool caller입니다.** `replace_in_file`, `read_file`, 코드 인식 브라우저 액션, GitHub PR 관리는 내장된 코드 파인튜닝의 혜택을 받습니다.',
+        items: [
+          '**강점:** 코드 MCP 도구에서 가장 높은 올바른 형성 호출 비율(~96%), 다중 파일 에이전트 작업에서 강력, 다른 32B 옵션보다 낮은 VRAM(Q4_K_M으로 ~18GB).',
+          '**실패 모드:** 코드 비관련 서버에서 약함. sqlite와 puppeteer에서의 신뢰성은 Gemma 4에 비해 낮아집니다 — Qwen3-Coder는 범용 모델보다 데이터베이스 쿼리와 브라우저 액션을 덜 관용적으로 처리합니다.',
+          '**권장 양자화:** Q4_K_M. Q5_K_M은 더 정밀한 코드 추론을 원한다면 소폭 향상됩니다.',
+          '**어디에 사용할지:** Cline + Continue.dev 코드 에이전트, 저장소 리팩토링, 탐색적 버그 디버깅. 에이전트가 코드 비관련 서버도 터치한다면 Gemma 4와 결합하십시오.',
+        ],
+      },
+      llama33: {
+        id: 'llama-3-3',
+        title: 'Llama 3.3 70B: 최고 성능',
+        content:
+          '**Llama 3.3 70B는 2026년 5월 기준 오픈 가중치 생태계에서 가장 신뢰할 수 있는 tool caller입니다.** 하드웨어가 허용할 때만 사용하십시오 — 소형 모델로도 일상적인 작업에 충분한 경우가 많습니다.',
+        items: [
+          '**강점:** 4개 서버 전반에서 가장 높은 올바른 형성 호출 비율(~97%), 체인 호출에서 가장 강한 신뢰성, 지저분한 입력에 강건함. harness를 탓하는 것을 멈추게 되는 모델.',
+          '**실패 모드:** 속도. 단일 L40S 48GB에서 Q4_K_M의 Llama 3.3 70B는 ~10–15 tokens/s를 유지합니다; 긴 에이전트 루프가 느리게 느껴집니다. 2× RTX 3090에서 분산 추론으로 처리량이 향상되지만 설정이 더 복잡합니다.',
+          '**권장 양자화:** Q4_K_M이 최솟값; VRAM이 허용한다면 Q5_K_M이 선호됩니다(~52GB). Llama 3.3은 우아하게 양자화됩니다 — Q4와 Q5의 차이는 Gemma 4보다 작습니다.',
+          '**어디에 사용할지:** 속도보다 신뢰성이 중요한 워크플로우(컴플라이언스 보고서, 법적 검토, 예외 처리). 또는 여유 하드웨어가 있는 모든 설정.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Q4_K_M의 Llama 3.3 70B는 ~42GB VRAM이 필요하며, 단일 L40S 48GB 또는 분산 추론을 사용한 2× RTX 3090 24GB에 편안하게 맞고, 64GB+ 통합 메모리의 Apple M-series 머신에서도 작동합니다. 토큰당 처리량이 실제 제약입니다 — 각 호출이 신뢰할 수 있어도 긴 에이전트 루프는 느리게 느껴집니다.',
+          },
+        ],
+      },
+      nonStarters: {
+        id: 'non-starters',
+        title: 'Tool Calling에 적합하지 않은 모델',
+        content:
+          '**세 가지 범주의 모델이 harness에 상관없이 동일한 방식으로 실패합니다.** 작동하게 만들려 하지 말고; 위의 신뢰할 수 있는 옵션 중 하나로 전환하십시오.',
+        items: [
+          '**7B 이하 모델.** Llama 3.2 1B, Llama 3.2 3B, Phi-3 Mini, Gemma 2 2B — 모두 단순한 단일 단계 작업 이상에서 오형성 tool call을 발행합니다. 출력이 짧은 문자열인 분류 트리아주("이 이메일은 고객 지원/영업/스팸입니다")에는 허용됩니다; 다단계 계획에는 허용되지 않습니다.',
+          '**Tool calling 훈련 없는 범용 모델.** 명시적 tool calling 파인튜닝 없는 대부분의 7B–13B 범용 채팅 모델은 도구 호출을 산문으로 바꾸거나, 인수 스키마를 잘못 맞추거나, 존재하지 않는 도구를 만들어냅니다. 모델 클래스가 실패이며 크기가 아닙니다.',
+          '**신뢰할 수 있는 모델의 강하게 양자화된 버전.** Q3, Q2, IQ-quant는 채팅 품질보다 tool calling 신뢰성을 먼저 저하시킵니다. Q3의 Gemma 4 27B는 채팅 품질에서 비슷하게 벤치마크되더라도 Q4_K_M의 Qwen3 32B보다 tool caller로서 더 나쁩니다. 워크플로우에 맞게 양자화를 조정하십시오 — Q4_K_M이 프로덕션 최솟값입니다.',
+          '**그래도 시도할 때의 증상:** Cline에서 오형성 XML(파서가 추출할 수 없는 tool call 블록), Aider에서 산문으로 바뀐 SEARCH/REPLACE 블록, Continue.dev에서 열린 파일과 일치하지 않는 마크 안의 코드, 모델이 동일한 호출을 두 번 연속 제안하는 막힌 에이전트 루프. 이 중 어느 것도 harness 버그가 아닙니다 — harness를 변경하면 다른 형태로 동일한 실패가 나타납니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Tool calling에 7B 이하 모델을 사용하는 것은 우리가 가장 많이 보는 시간 낭비입니다. 증상("harness가 깨졌다", "MCP가 깨졌다", "Cline이 깨졌다")은 모두 모델을 가리킵니다. tool calling 훈련이 있는 27B+ 모델로 전환하면 스택의 다른 것을 변경하지 않고도 증상이 사라집니다.',
+          },
+        ],
+        image: '/images/tool-calling-non-starters-en.svg',
+        imageCaption: 'Tool calling에 실패하는 세 가지 모델 범주: 7B 이하 모델은 다단계 작업에서 오형성 호출을 발행합니다; tool calling 훈련 없는 모델은 호출을 산문으로 바꿉니다; Q3/Q2 양자화는 채팅 품질보다 신뢰성을 먼저 저하시킵니다 — Q4_K_M이 프로덕션 최솟값입니다.',
+      },
+      formatComparison: {
+        id: 'format-comparison',
+        title: 'Tool Call 형식: 동일한 기술, 다른 wire 형식',
+        content:
+          '**동일한 모델이 4가지 형식 모두를 처리합니다.** 형식 선택은 harness/프로토콜 결정이며 모델 결정이 아닙니다.',
+        columns: ['형식', '어디에 나타나는가', '엄격한가?', '오형성 출력에 대한 허용도'],
+        rows: [
+          { '형식': 'OpenAI 도구(JSON)', '어디에 나타나는가': 'OpenAI API, Continue.dev Agent', '엄격한가?': '스키마 검증됨', '오형성 출력에 대한 허용도': '오류 표시, 모델 재시도' },
+          { '형식': 'Cline XML 도구 블록', '어디에 나타나는가': 'VS Code Cline 확장', '엄격한가?': '매우 엄격', '오형성 출력에 대한 허용도': '루프 막힘; 소형 모델이 먼저 어려움을 겪음' },
+          { '형식': 'MCP JSON-RPC 2.0', '어디에 나타나는가': 'Goose, Cline, Continue.dev, LM Studio', '엄격한가?': '스키마 검증됨', '오형성 출력에 대한 허용도': '오류 표시, 모델 재시도; 생태계가 수렴하는 wire 형식' },
+          { '형식': 'Aider SEARCH/REPLACE 블록', '어디에 나타나는가': 'Aider CLI', '엄격한가?': '리터럴 패턴 매칭', '오형성 출력에 대한 허용도': '거부 후 재시도; 소형 모델이 SEARCH 블록을 산문으로 바꾸어 실패' },
+        ],
+        items: [
+          '**형식 이식성 주장:** 위의 신뢰할 수 있는 5개 모델은 형식별 재설정 없이 4가지 형식 모두를 처리합니다. Cline에서 신뢰성 있게 tool calling을 수행하는 Gemma 4 27B는 Goose+MCP와 Continue.dev Agent에서도 신뢰성 있게 수행합니다.',
+          '**시사점:** 모델에 맞는 형식이 아닌 harness가 기본적으로 지원하는 형식을 선택하십시오. 모델이 핵심 변수입니다.',
+          '**예외:** SEARCH/REPLACE 블록(Aider 형식)에 대한 Qwen3-Coder의 준수는 코드 파인튜닝이 diff 충실도를 강조하기 때문에 Qwen3보다 약간 낫습니다. 미미합니다 — Qwen3 32B도 Aider에서 잘 작동합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '가장 벤치마크가 좋은 것이 아닌 harness가 기본적으로 지원하는 형식을 선택하십시오. 위의 신뢰할 수 있는 5개 모델은 4가지 형식에 이식 가능합니다; harness UX(단계별 승인, 감사 추적, IDE 통합)는 형식 선택보다 실제 성공에 더 결정적인 요소입니다.',
+          },
+        ],
+        image: '/images/tool-calling-format-comparison-en.svg',
+        imageCaption: '4가지 tool call 형식 비교: OpenAI JSON(스키마 검증됨, Continue.dev), Cline XML(매우 엄격, 처음으로 실패를 드러냄), MCP JSON-RPC 2.0(생태계 표준, 스키마 검증됨), Aider SEARCH/REPLACE(리터럴 패턴 매칭) — 벤치마크된 5개 모델 모두 4가지 형식을 처리합니다.',
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Tool Calling 모델 선택 시 흔한 실수',
+        items: [
+          '**실수 1: tool calling 실패를 harness 탓으로 돌리기.** 증상(오형성 XML, 산문으로 바뀐 SEARCH 블록, 일치하지 않는 코드)은 harness에 따라 다른 형태로 나타나지만; 원인은 보통 tool calling 훈련 없는 모델입니다. 먼저 모델을 바꾸십시오; 모델이 다른 곳에서 깨끗하게 tool calling을 수행함을 확인한 후에만 harness를 바꾸십시오.',
+          '**실수 2: 더 작은 GPU에 맞추기 위해 과도하게 양자화하기.** 신뢰할 수 있는 27B 모델의 Q3 및 IQ-quant는 보통 바로 아래 크기의 Q4_K_M보다 나쁩니다. 모델과 양자화를 독립적이 아닌 한 쌍으로 선택하십시오.',
+          '**실수 3: "단순한" tool call에 소형 범용 모델 사용하기.** 프롬프트에서 "단순한" 것이 7B 범용 모델에게 "단순한" 것은 아닙니다 — 오형성 호출 비율이 단일 단계 작업조차 5–10%의 실행에서 실패할 만큼 높습니다. 분류 트리아주에는 Llama 3.2 3B, 도구를 호출하는 모든 것에는 Gemma 4 27B(또는 더 큰 것)를 사용하십시오.',
+          '**실수 4: 체인 호출 복합 무시하기.** 호출당 95% 비율은 에이전트 루프 단계에 걸쳐 복합됩니다. 단계당 95%의 8단계 작업은 ~66%의 시간에 성공적으로 완료됩니다. 복합을 계획하십시오 — 계획 지평선을 짧게 유지하고, 승인 게이트를 사용하며, 현실적인 가장 긴 지평선을 처리할 수 있는 가장 작은 신뢰할 수 있는 모델을 선택하십시오.',
+          '**실수 5: MCP 신뢰성 대신 리더보드 점수 추구하기.** 공개 벤치마크(BFCL, ToolBench)는 유용한 신호이지만 MCP 서버 워크플로우와 일대일 대응되지 않습니다. 올바른 벤치마크는 실제 워크플로우입니다; 실행할 수 없다면 이 목록의 모델을 선호하십시오 — 실제 워크플로우에서 살아남습니다.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[Model Context Protocol 명세](https://modelcontextprotocol.io/) — 테스트 harness에 사용된 JSON-RPC 스키마, 전송, 수명 주기 정의.',
+          '[Berkeley Function Calling Leaderboard (BFCL)](https://gorilla.cs.berkeley.edu/leaderboard.html) — 공개 function calling 벤치마크; 유용한 방향적 신호이지만 MCP와 동일하지 않음.',
+          '[Ollama 모델 라이브러리](https://ollama.com/library) — 모델 가용성, tool calling 지원 표시기, 위에 참조된 양자화 수준.',
+          '[modelcontextprotocol/servers GitHub 저장소](https://github.com/modelcontextprotocol/servers) — 테스트 세트에 사용된 참고 filesystem, sqlite, postgres, puppeteer, github 서버.',
+          '[Gemma 4, GLM-5.1, Qwen3, Qwen3-Coder, Llama 3.3 Hugging Face 모델 카드](https://huggingface.co/) — 모델별 공식 tool calling 훈련 문서.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '2026년 tool calling에서 가장 높은 성공률을 가진 로컬 모델은 무엇입니까?',
+            a: 'Llama 3.3 70B가 테스트한 4개의 참고 MCP 서버에서 가장 높은 올바른 형성 호출 비율(~97%)을 가집니다. Q4_K_M으로 48GB+ VRAM이 필요하므로 대부분의 사용자는 소형 신뢰 모델 중 하나를 선택합니다 — 범용 작업에는 Gemma 4 27B, 긴 컨텍스트에는 GLM-5.1 32B, 코드에는 Qwen3-Coder 30B, 균형 잡힌 대안으로 Qwen3 32B. 4개의 27B–32B 옵션 모두 93–96% 범위에 위치하며 승인 게이트가 있는 프로덕션 에이전트 작업에 충분히 신뢰할 수 있습니다.',
+          },
+          {
+            q: 'Gemma 4의 기본 tool calling이 프롬프팅 트릭 없이 작동합니까?',
+            a: '예. Gemma 4 27B는 표준 채팅 형식에서 직접 깨끗한 function calling JSON과 깨끗한 Cline XML을 발행합니다 — 도구별 프롬프트 엔지니어링 없이, JSON 모드 래퍼 없이, 시스템 프롬프트 주문 없이. 모델은 사후 훈련 단계에서 tool calling 훈련을 받았습니다; 시스템 프롬프트에 도구 목록을 포함하여 다른 채팅 모델처럼 호출하면 나머지를 처리합니다.',
+          },
+          {
+            q: 'Llama 3.3 70B가 신뢰성 있게 tool call을 수행할 수 있습니까?',
+            a: '예 — 테스트한 5개 모델 중 가장 높은 신뢰성을 가집니다. 트레이드오프는 하드웨어입니다: Q4_K_M으로 ~42GB VRAM이 필요하므로 단일 L40S 48GB 또는 분산 추론을 사용한 2× RTX 3090 24GB에 편안하게 맞고, 64GB+ 통합 메모리의 Apple M-series 머신에서도 작동합니다. 토큰당 처리량이 실제 제약입니다 — 각 호출이 신뢰할 수 있어도 긴 에이전트 루프는 느리게 느껴집니다.',
+          },
+          {
+            q: '어떤 모델이 병렬 함수 호출을 가장 잘 처리합니까?',
+            a: 'Llama 3.3 70B가 병렬 호출 신뢰성에서 선두입니다 — 프롬프트가 "이 세 디렉토리를 동시에 나열하라"일 때, 70B 모델은 27B–32B 옵션보다 더 자주 깨끗하게 병렬 호출을 발행합니다. Gemma 4 27B와 Qwen3 32B가 매우 가깝습니다. Qwen3-Coder 30B는 코드 파인튜닝이 순차적 편집을 강조하기 때문에 병렬 호출에서 약간 더 약합니다. 미미합니다 — 대부분의 에이전트 워크플로우에서 병렬 호출 신뢰성은 체인 호출 신뢰성보다 덜 중요합니다 — 실제로는 체인이 훨씬 더 일반적입니다.',
+          },
+          {
+            q: '양자화된 버전이 tool calling에서 성능이 저하됩니까?',
+            a: '예, 저하는 채팅 품질보다 tool calling 신뢰성에 먼저 영향을 미칩니다. Q3의 Gemma 4 27B는 둘 다 비슷한 채팅 출력을 생성하더라도 Q4_K_M의 동일한 모델보다 눈에 띄게 나쁜 tool caller입니다. 메커니즘은 소량 가중치 양자화가 tool call 형식으로 라우팅하는 정밀한 활성화를 깨뜨리는 것입니다. Q4_K_M이 위의 신뢰할 수 있는 5개 모델에 대한 프로덕션 최솟값입니다; Q5_K_M이 안전한 향상입니다; Q3 이하는 에이전트 작업에 권장되지 않습니다.',
+          },
+          {
+            q: 'tool calling을 개선하기 위해 소형 모델을 파인튜닝할 수 있습니까?',
+            a: '가능하지만 거의 가치가 없습니다. 위의 신뢰할 수 있는 5개 모델은 원래 연구소에서 사후 훈련 단계에서 tool calling 훈련을 내장했습니다; 소형 베이스에 대한 커뮤니티 파인튜닝은 일반적으로 같은 수준에 도달하지 않습니다. 신뢰할 수 있는 모델 중 하나를 사용하십시오. 특정 도메인 도구 표면(독점 내부 도구)이 있다면, Gemma 4 또는 Qwen3에 대한 소형 LoRA가 귀하의 도구에 대한 스키마 준수를 세밀하게 조정할 수 있습니다 — 하지만 tool calling 훈련 없는 모델을 신뢰할 수 있는 tool caller로 전환하지는 않습니다.',
+          },
+          {
+            q: '신뢰할 수 있는 JSON 출력에 어떤 모델이 가장 좋습니까?',
+            a: '신뢰할 수 있는 JSON 출력과 신뢰할 수 있는 tool calling은 상관관계가 있지만 동일하지 않습니다. 순수한 JSON 모드 작업(tool call 없는 구조화된 출력 추출)에서는 Gemma 4 27B와 GLM-5.1 32B가 가장 강합니다 — 둘 다 추가 산문이나 주석 없이 깨끗한 JSON을 발행합니다. tool call에 대해서는 신뢰할 수 있는 5개 모델 모두 자격이 있습니다; tool call 래퍼 안에 발행하는 JSON은 모든 경우에 올바르게 형성됩니다.',
+          },
+          {
+            q: 'CPU 전용 설정에서 tool calling이 작동합니까?',
+            a: '기술적으로 예이지만, 실제로는 고통스럽습니다. 32GB RAM CPU에서 Q4_K_M의 Gemma 4 27B는 ~1–3 tokens/s를 유지합니다; 다단계 작업에 30K–80K 토큰이 필요한 에이전트 루프는 몇 시간이 걸립니다. CPU 전용은 소형 모델(Llama 3.2 3B)을 사용한 평가 및 분류 트리아주에는 괜찮습니다; 프로덕션 에이전트에는 GPU 또는 Apple Silicon 통합 메모리가 실용적 최솟값입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[MCP로 Ollama를 데이터베이스 및 API에 연결하기: 2026년 로컬 에이전트 설정](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 실용적인 구현; 위의 모델이 tool call을 수행하는 프로토콜 레이어.',
+          '[2026년 로컬 AI 에이전트: 실제로 작동하는 것(그리고 여전히 실패하는 것)](/ko/power-local-llm/autonomous-local-agents-actually-work) — 더 넓은 맥락; 에이전트 루프 단계에 걸쳐 tool calling 신뢰성이 어떻게 복합되는가.',
+          '[Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코드 에이전트](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 에이전트 스펙트럼의 코드 중심 끝을 위한 harness 비교.',
+          '[로컬 LLM으로 GitHub Copilot 대체하기](/ko/power-local-llm/replace-github-copilot-with-local-llm) — 위의 코드 tool calling 모델에 대한 응용 사용 사례.',
+          '[Ollama에서 최고의 오픈 소스 모델](/ko/local-llms/top-open-source-models-ollama) — 오픈 가중치 환경에 대한 더 넓은 모델 권한.',
+          '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — 양자화 이론; tool calling 워크플로우에서 Q4_K_M이 프로덕션 최솟값인 이유.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '2026년 Tool Calling 최고의 로컬 모델: 벤치마크 및 비교',
+      description:
+        'Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B의 Tool Calling 신뢰성 비교. 리더보드 점수가 아닌 실제 MCP 벤치마크입니다.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/best-local-models-tool-calling-2026',
+      inLanguage: 'ko',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: '로컬 LLM 활용',
+          item: 'https://www.promptquorum.com/ko/power-local-llm',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: '2026년 Tool Calling 최고의 로컬 모델',
+          item: 'https://www.promptquorum.com/ko/power-local-llm/best-local-models-tool-calling-2026',
+        },
+      ],
+    },
+  },
 }

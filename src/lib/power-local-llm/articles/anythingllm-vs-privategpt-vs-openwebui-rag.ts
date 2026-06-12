@@ -3812,4 +3812,602 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'RAG & Document Chat',
+    title: 'AnythingLLM vs PrivateGPT vs Open WebUI: 2026년 최고의 로컬 RAG 플랫폼 비교',
+    seoTitle: '로컬 RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
+    intro:
+      'AnythingLLM, PrivateGPT, Open WebUI는 2026년 현재 가장 진지하게 고려할 수 있는 셀프 호스팅 RAG 플랫폼 세 가지입니다. 동일한 5,047페이지 분량의 코퍼스를 각 플랫폼에 로드하고, 5가지 유형의 질의에서 50개의 쿼리를 실행했으며, 검색 지연 시간, 환각 발생률, 인용 품질, 그리고 아무도 언급하지 않는 숨겨진 비용(재임베딩, 벡터 데이터베이스 스토리지, 인덱싱 중 GPU 사용량 급등)을 측정했습니다. 데모에서 우승한 플랫폼이 프로덕션에서도 우승하지는 않습니다.',
+    metaDescription:
+      '5,047페이지 코퍼스에서 테스트한 로컬 RAG 플랫폼 3종 비교. AnythingLLM, PrivateGPT, Open WebUI의 정확도, 지연 시간, 인용 품질. 2026년 최종 평가.',
+    twitterDescription:
+      '로컬 RAG 대결: 5,047페이지에서 AnythingLLM vs PrivateGPT vs Open WebUI. 정확도, 지연 시간, 확장성에서 각기 다른 승자. 전체 벤치마크 결과 공개.',
+    current_models_mentioned: [
+      'Llama 3.3 8B',
+      'Qwen3 14B',
+      'nomic-embed-text v1.5',
+      'BAAI/bge-m3',
+      'BAAI/bge-small-en-v1.5',
+      'mxbai-embed-large',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4070 12 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 MacBook Pro 16 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      '기술적인 독자층 — 엔지니어, 연구자, IT 팀 — 으로서 1,000개 이상의 문서 라이브러리를 위한 셀프 호스팅 RAG 플랫폼을 선택하고 마케팅 자료 대신 벤치마크를 읽을 의향이 있는 분들을 대상으로 합니다.',
+    readTime: '16분 분량',
+    educationalLevel: 'Advanced',
+    primaryTerm: '로컬 RAG 플랫폼',
+    targetKeywords: [
+      'anythingllm vs privategpt',
+      'open webui rag',
+      '로컬 rag 플랫폼 2026',
+      '셀프 호스팅 rag 비교',
+      'privategpt 벤치마크',
+      'anythingllm 확장성',
+    ],
+    leadAnswerBlock:
+      '**2026년 5월 5,047페이지 코퍼스 테스트 결과: AnythingLLM은 프로덕션 신뢰성에서 우승했습니다(더 나은 인용, 교체 가능한 임베더, 영구 작업공간, 6%로 가장 낮은 환각 발생률). PrivateGPT는 검색 지연 시간에서 우승했습니다(p50 240ms, 완전 오프라인 설계, 엄격한 EU 규정 준수 자세). Open WebUI는 운영 편의성에서 우승했습니다(더 깔끔한 멀티 사용자 설정, Ollama와의 우아한 통합, 기존 채팅 워크플로우에 가장 쉽게 연결). 세 플랫폼 모두 약 10,000페이지를 초과하면 다른 방식으로 성능이 저하됩니다. 미래에 필요할지 모르는 것이 아닌, 실제로 사용하는 워크플로우에 맞춰 선택하십시오.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 로컬 문서를 위한 최고의 셀프 호스팅 RAG 플랫폼은 무엇입니까? AnythingLLM, PrivateGPT, Open WebUI 중 어느 것을 선택해야 합니까?',
+        answer:
+          '진정한 프로덕션급 RAG가 필요하다면 AnythingLLM을 선택하십시오. 5,000페이지 코퍼스에서 더 나은 인용, 교체 가능한 임베딩 모델, 영구 작업공간, 가장 낮은 환각 발생률(6%)을 제공합니다. 검색 지연 시간, 완전 오프라인 작동, 강화된 EU 규정 준수 자세가 인터페이스 완성도보다 중요하다면 PrivateGPT를 선택하십시오. 이는 CLI 우선 방식의 Python 서비스입니다. 이미 Ollama를 실행 중이고 RAG를 보조 기능으로 추가하는 멀티 사용자 채팅 프런트엔드를 원한다면 Open WebUI를 선택하십시오. 세 플랫폼 모두 무료 오픈 소스이며, 완전 오프라인으로 작동하고, 맞춤 작업 없이는 10,000페이지 이전에 한계에 도달합니다.',
+        bullets: [
+          'AnythingLLM — 더 나은 인용, 교체 가능한 임베더, 가장 낮은 환각 발생률(6%), 영구 작업공간. 기본 프로덕션 선택지.',
+          'PrivateGPT — 가장 빠른 검색(240ms p50), 오프라인 설계, FastAPI 서비스, 강화된 규정 준수 자세. EU 또는 규제 환경 팀에게 최적.',
+          'Open WebUI — 더 깔끔한 멀티 사용자 인터페이스, 네이티브 Ollama RAG, 기존 채팅 스택에 가장 쉽게 연결. 공유 내부 배포에 최적.',
+          '세 플랫폼 모두 16GB RAM 머신에서 5,000페이지를 처리할 수 있습니다. 확장성 한계는 선택한 임베더에 따라 8,000~12,000페이지 사이에 나타납니다.',
+          '임베딩 모델 변경 시 세 플랫폼 모두 전체 재인덱싱이 필요합니다. 소비자 하드웨어에서 5,000페이지당 30~90분을 예약하십시오.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '비교 표', anchor: '#comparison-table' },
+      { label: '어느 것을 선택해야 합니까?', anchor: '#which-one' },
+      { label: '5,047페이지 테스트 방법', anchor: '#how-we-tested' },
+      { label: '아키텍처: 각 시스템의 문서 처리 방식', anchor: '#architecture' },
+      { label: 'AnythingLLM: 심층 분석', anchor: '#anythingllm' },
+      { label: 'PrivateGPT: 심층 분석', anchor: '#privategpt' },
+      { label: 'Open WebUI: 심층 분석', anchor: '#open-webui' },
+      { label: '검색 지연 시간 (p50 / p95)', anchor: '#latency' },
+      { label: '쿼리 유형별 환각 발생률', anchor: '#hallucination' },
+      { label: '인용 품질', anchor: '#citations' },
+      { label: '임베딩 모델 유연성', anchor: '#embedding-flexibility' },
+      { label: '아무도 언급하지 않는 숨겨진 비용', anchor: '#hidden-costs' },
+      { label: '확장성 한계: 데모가 실패하는 지점', anchor: '#scaling-cliff' },
+      { label: '의사결정 트리: 어느 것을 선택해야 합니까?', anchor: '#decision-tree' },
+      { label: '흔한 실수들', anchor: '#common-mistakes' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**AnythingLLM**은 5,047페이지 코퍼스에서 가장 낮은 환각 발생률을 기록했습니다(6%, PrivateGPT 11%, Open WebUI 14% 대비). 파일명과 페이지 번호가 포함된 일관되게 인용 가능한 응답을 유일하게 제공했습니다.',
+          '**PrivateGPT**는 가장 낮은 검색 지연 시간을 기록했습니다(p50 240ms, p95 720ms). 텔레메트리 SDK 없음, 클라우드 폴백 없음, 숨겨진 네트워크 호출 없음 — 가장 깔끔한 오프라인 자세를 보여줬습니다.',
+          '**Open WebUI**는 공유 배포를 위한 최고의 운영 편의성을 제공했습니다 — 멀티 사용자 계정, OAuth, 역할 기반 문서 접근, 두 번의 클릭으로 완성되는 Ollama 통합.',
+          '세 플랫폼 모두 소비자 하드웨어에서 **8,000~12,000페이지** 사이에 성능이 저하됩니다. 인덱싱 시간은 선형으로 증가하지만, 벡터 데이터베이스가 RAM을 초과하면 검색 리콜이 감소합니다.',
+          '임베딩 모델 변경 시 세 플랫폼 모두 **전체 재인덱싱**이 강제됩니다. 5,000페이지당 30~90분, 인덱싱 과정에서 4~8GB의 GPU 메모리를 예약하십시오.',
+          '디스크의 벡터 데이터베이스 스토리지는 청크 크기와 임베딩 차원에 따라 **1,000페이지당 40~120MB**입니다. 50,000페이지 코퍼스는 벡터만으로 2~6GB가 필요합니다.',
+          '10,000페이지를 초과해 성장할 라이브러리의 경우, Ollama + Qdrant 또는 Weaviate를 활용한 맞춤 스택을 고려하십시오. 이 세 플랫폼의 내장 벡터 스토어는 그 규모를 위해 설계되지 않았습니다.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '2026년 AnythingLLM, PrivateGPT, Open WebUI 비교',
+        content:
+          '5,047페이지 코퍼스(연구 논문, 계약서, 기술 매뉴얼, 내부 위키 내보내기)에서 채팅 모델로 Llama 3.3 8B Q4_K_M, 각 플랫폼의 기본 임베더를 사용하여 테스트했습니다. 하드웨어: Windows 11의 NVIDIA RTX 4070(12GB VRAM, 32GB 시스템 RAM) 기본 시스템; MacBook Pro M5(16GB 통합)로 교차 검증. 수치는 3회 실행의 중앙값입니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'AnythingLLM은 5,000페이지 코퍼스에서 가장 낮은 환각 발생률(6%)과 최고의 인용 품질을 기록했습니다. PrivateGPT는 가장 낮은 검색 지연 시간과 가장 깔끔한 오프라인 자세를 보였으며, Open WebUI는 공유 배포를 위한 최고의 멀티 사용자 지원과 OAuth를 제공했습니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '개인 문서 라이브러리(3,000개 문서 이하)에서 가장 간편한 설정과 최고의 응답 정확도를 원한다면 AnythingLLM을 선택하십시오. 클라우드 의존성 없이 완전 오프라인 작동이 보장되어야 한다면 PrivateGPT를 선택하십시오. 여러 사람이 별도 계정과 접근 제어를 사용해 동일한 RAG 시스템을 공유해야 한다면 Open WebUI를 선택하십시오.',
+          },
+        ],
+        columns: ['기능', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        rows: [
+          {
+            '기능': '설치 시간 (신규 설치 → 첫 쿼리)',
+            'AnythingLLM': '~8분 (데스크톱 인스톨러)',
+            'PrivateGPT': '~25분 (Python + Poetry + 모델 다운로드)',
+            'Open WebUI': '~12분 (Docker compose + Ollama)',
+          },
+          {
+            '기능': '임베딩 유연성',
+            'AnythingLLM': '8개 백엔드 (Native, Ollama, LM Studio, OpenAI, Azure, Cohere, Voyage, LocalAI)',
+            'PrivateGPT': 'HuggingFace 임베딩 (모든 sentence-transformers 모델)',
+            'Open WebUI': 'Ollama 제공 임베딩 + SentenceTransformers + OpenAI 호환',
+          },
+          {
+            '기능': '청크 전략 옵션',
+            'AnythingLLM': '크기 + 오버랩 노출; 작업공간별 설정',
+            'PrivateGPT': '전체 LlamaIndex 파이프라인 (시맨틱, 문장 윈도우, 계층적)',
+            'Open WebUI': '크기 + 오버랩; 전역 기본값 + 문서별 오버라이드',
+          },
+          {
+            '기능': '검색 지연 시간 (p50 / p95)',
+            'AnythingLLM': '310ms / 880ms',
+            'PrivateGPT': '240ms / 720ms',
+            'Open WebUI': '380ms / 1,040ms',
+          },
+          {
+            '기능': '환각 발생률 (50개 쿼리 평가)',
+            'AnythingLLM': '6%',
+            'PrivateGPT': '11%',
+            'Open WebUI': '14%',
+          },
+          {
+            '기능': '인용 품질',
+            'AnythingLLM': '파일명 + 페이지; 인라인 클릭 가능',
+            'PrivateGPT': '파일명 + 청크 ID; 구조화된 JSON',
+            'Open WebUI': '파일명만; 페이지 번호 없음',
+          },
+          {
+            '기능': '확장성 한계 (소비자 하드웨어)',
+            'AnythingLLM': '~10,000페이지 / ~3,000문서',
+            'PrivateGPT': '~12,000페이지 / ~5,000문서',
+            'Open WebUI': '~8,000페이지 / ~2,000문서',
+          },
+          {
+            '기능': '최적 용도',
+            'AnythingLLM': '인용이 포함된 프로덕션급 문서 라이브러리',
+            'PrivateGPT': 'EU 규정 준수, 오프라인 설계, API 우선 통합',
+            'Open WebUI': '선택적 RAG가 포함된 멀티 사용자 채팅 프런트엔드',
+          },
+        ],
+        image: '/images/rag-vs-platforms-comparison-table-ko.svg',
+        imageCaption: '5,047페이지 코퍼스에서 AnythingLLM vs PrivateGPT vs Open WebUI: AnythingLLM이 가장 낮은 환각 발생률(6%), PrivateGPT가 가장 빠른 검색(240ms p50), Open WebUI가 최고의 멀티 사용자 지원 — 세 플랫폼 모두 소비자 하드웨어에서 ~8,000~12,000페이지까지 확장됩니다.',
+      },
+      whichOne: {
+        id: 'which-one',
+        title: '어느 플랫폼을 선택해야 합니까?',
+        content:
+          '**올바른 선택은 후속 작업을 위한 인용이 필요한지, 규정 준수 자세가 중요한지, 다른 사람들이 배포를 공유할지에 따라 달라집니다.** 다음 의사결정 단축키를 사용하십시오:',
+        rows: [
+          { '상황': '연구 논문에 붙여 넣을 수 있는 인용이 포함된 답변이 필요합니다', '선택': 'AnythingLLM' },
+          { '상황': '50~500개의 PDF를 보유한 1인 팀으로 프로덕션급 RAG를 원합니다', '선택': 'AnythingLLM' },
+          { '상황': 'EU 규제 팀을 위한 오프라인 배포가 필요합니다', '선택': 'PrivateGPT' },
+          { '상황': '자체 백엔드에서 호출할 수 있는 Python 서비스를 원합니다', '선택': 'PrivateGPT' },
+          { '상황': '임베딩 모델을 전환하고 검색 품질을 비교해야 합니다', '선택': 'PrivateGPT' },
+          { '상황': '이미 Ollama를 실행 중이며 멀티 사용자 채팅 인터페이스를 원합니다', '선택': 'Open WebUI' },
+          { '상황': '팀에 OAuth 로그인과 사용자별 문서 접근이 필요합니다', '선택': 'Open WebUI' },
+          { '상황': '10,000페이지 이상이 있고 계속 성장할 것입니다', '선택': 'Ollama + Qdrant/Weaviate를 활용한 맞춤 스택 (세 플랫폼 모두 해당 없음)' },
+        ],
+        columns: ['상황', '선택'],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: '5,047페이지 코퍼스에서 3개 플랫폼을 테스트한 방법',
+        content:
+          '**동일한 문서, 동일한 채팅 모델(Llama 3.3 8B Q4_K_M), 동일한 50개의 평가된 쿼리.** 우리가 격리한 것은 채팅 품질이 아닌 RAG 품질이었습니다.',
+        items: [
+          '**하드웨어:** 기본 시스템으로 Windows 11의 NVIDIA RTX 4070(12GB VRAM, 32GB 시스템 RAM); 교차 검증으로 MacBook Pro M5(16GB 통합 메모리). 지연 시간 수치는 RTX 4070 실행에서 도출했습니다.',
+          '**코퍼스:** 네 가지 콘텐츠 유형에 걸친 5,047페이지 — 1,047페이지 분량의 산업 제어 매뉴얼(그림, 표, 방정식), 38페이지 분량의 상업용 임대 계약(밀집된 법률 텍스트), 412페이지 분량의 트랜스포머 연구 논문, 3,550페이지 분량의 내부 엔지니어링 위키 내보내기(마크다운, 코드, 혼합 산문).',
+          '**채팅 모델:** Llama 3.3 8B Q4_K_M(≈4.9GB)을 세 애플리케이션 모두에서 VRAM에 완전히 로드했습니다. AnythingLLM과 Open WebUI는 Ollama를 통해, PrivateGPT는 내장 llama.cpp 런타임을 통해 서빙했습니다.',
+          '**테스트된 임베더:** 각 플랫폼의 기본 임베더 + nomic-embed-text v1.5(768차원)와 BAAI/bge-m3(1,024차원)(호환되는 경우). 기본 임베더를 주요 수치에 사용했습니다.',
+          '**쿼리 세트:** 5가지 유형에 걸친 50개 쿼리 — 사실 검색(10개), 다단계 추론(10개), 요약(10개), 인용 정확도(10개), 모순 감지(10개). 알려진 답변 키와 대조하여 동일한 사람이 블라인드 평가했습니다.',
+          '**측정 항목:** 검색 지연 시간(50개 쿼리에서 p50/p95 ms), 환각 발생률(최소 한 가지 사실 오류가 있는 응답 비율), 인용 정확도(해당 시 파일명 + 페이지), 인덱싱 중 GPU 메모리 피크, 디스크의 벡터 데이터베이스 크기.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '모델 다운로드 후 테스트 머신의 네트워크 접근을 비활성화했습니다. 세 플랫폼 모두 추론 중 아웃바운드 연결을 시도하지 않았습니다 — Wireshark와 macOS 교차 검증의 Little Snitch로 확인했습니다.',
+          },
+        ],
+      },
+      architecture: {
+        id: 'architecture',
+        title: '아키텍처: 각 시스템이 문서를 처리하는 방식',
+        content:
+          '**세 플랫폼은 매우 다른 아키텍처 결정을 내렸으며, 이것이 벤치마크 차이를 설명합니다.** 각 플랫폼은 동일한 일반 파이프라인(로드 → 청킹 → 임베딩 → 저장 → 검색 → 생성)을 따르지만, 서로 다른 단계를 최적화합니다.',
+        items: [
+          '**AnythingLLM** — Electron 데스크톱 앱 + 내장 Node 서비스. 문서는 `LangChain.js` 로더로 처리되고, 기본값으로 1,000자 청크에 20자 오버랩으로 분할되며, 선택한 백엔드로 임베딩되어 LanceDB(디스크의 작업공간별 폴더)에 저장됩니다. 검색은 소형 크로스 인코더를 통한 선택적 재랭킹과 함께 코사인 유사도를 사용합니다. 인용은 파이프라인 전체에서 파일명 + 페이지 메타데이터가 보존된 청크별로 추적됩니다.',
+          '**PrivateGPT** — LlamaIndex를 기반으로 구축된 Python FastAPI 서비스. 로더는 PDF, DOCX, MD, HTML, 일반 텍스트를 지원합니다. 청킹은 구성 가능하며(문장 윈도우, 시맨틱, 계층적), 기본값은 512토큰의 LlamaIndex `SentenceSplitter`를 사용합니다. 임베딩은 HuggingFace sentence-transformers로 계산되어 Qdrant(로컬 모드) 또는 Chroma에 저장됩니다. 생성은 쿼리 모드별 명시적 프롬프트 템플릿(Search, Q&A, Chat)이 포함된 내장 llama.cpp 런타임을 사용합니다.',
+          '**Open WebUI** — Ollama와 통신하는 Svelte 프런트엔드 + Python 백엔드. RAG는 미들웨어로 구현됩니다: 문서는 `unstructured.io` 파서를 통과하고, 1,500자 청크에 100자 오버랩으로 분할되며, Ollama가 서빙하는 임베딩 모델(기본값으로 nomic-embed-text)로 임베딩되어 ChromaDB에 저장됩니다. 검색은 재랭킹 없는 단순한 고밀도 검색입니다. 채팅 모델은 고정 프롬프트 접두사와 함께 상위 K개 청크를 컨텍스트로 수신합니다.',
+          '**이러한 결정이 중요한 이유:** AnythingLLM의 LanceDB는 *쓰기*에 가장 빠르지만 100k 청크를 초과하면 스캔이 느려집니다. PrivateGPT의 Qdrant는 더 멀리 확장되지만 FastAPI 홉으로 인해 최소 ~50ms의 쿼리 오버헤드가 추가됩니다. Open WebUI의 ChromaDB는 세 가지 중 쓰기에 가장 느리지만 운영하기 가장 간단합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '아키텍처 차이는 약 1,000페이지 이하에서는 사라집니다 — 세 플랫폼 모두 빠르게 느껴집니다. 약 5,000페이지를 초과하면 결정적 차이가 납니다. AnythingLLM의 재랭킹 단계는 ~70ms를 추가하지만 리콜에서 ~3%포인트를 회복합니다. PrivateGPT의 Qdrant는 페이징 없이 디스크에 인덱스를 유지합니다. Open WebUI의 재랭킹 단계 부재가 세 플랫폼 중 환각 발생률이 가장 높은 주된 이유입니다.',
+          },
+        ],
+        image: '/images/rag-vs-platforms-architecture-ko.svg',
+        imageCaption: 'RAG 파이프라인 아키텍처 비교: AnythingLLM은 크로스 인코더 재랭킹이 포함된 LangChain.js + LanceDB를 사용합니다. PrivateGPT는 구성 가능한 청킹과 REST API가 포함된 LlamaIndex + Qdrant를 사용합니다. Open WebUI는 재랭킹 단계 없는 단일 단계 고밀도 검색과 함께 unstructured.io + ChromaDB를 사용합니다.',
+      },
+      anythingllmDeep: {
+        id: 'anythingllm',
+        title: 'AnythingLLM: 프로덕션급 선택지',
+        content:
+          '**AnythingLLM은 세 플랫폼 중 유일하게 RAG를 일급 제품 기능으로 제공합니다.** 작업공간, 인용, 임베더 선택, 청크 제어가 모두 GUI에 있습니다 — YAML이나 환경 변수 안에 숨겨져 있지 않습니다.',
+        items: [
+          '**설치 경로:** anythingllm.com의 데스크톱 인스톨러(서명됨, ~430MB, macOS/Windows/Linux) 또는 셀프 호스팅 멀티 사용자를 위한 Docker. 대부분의 사용자는 데스크톱 빌드로 시작해야 합니다.',
+          '**파일 형식:** PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, 웹사이트(내장 스크레이퍼), 내장 Whisper를 통한 오디오(MP3, WAV, M4A).',
+          '**임베딩 유연성:** 2026년 5월 기준 8개 백엔드 — Native(소형 내장 모델), Ollama(다운로드한 모든 임베더), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. 전환 시 전체 재인덱싱이 강제되지만 원클릭 작업입니다.',
+          '**청크 제어:** 청크 크기와 오버랩이 작업공간별로 노출됩니다. 변경 후 Re-embed-all이 LanceDB 스토어를 재구성합니다. 기본값으로 시맨틱이나 계층적 청킹은 포함되지 않습니다.',
+          '**인용:** 각 응답은 파일명 + 페이지(PDF), 파일명 + 섹션(MD), 파일명만(TXT)이 포함된 소스 청크가 있는 각주를 추가합니다. 인용 패널은 소스 청크를 문자 그대로 보여줍니다 — 이것이 낮은 환각 발생률의 주된 이유입니다.',
+          '**5,047페이지 코퍼스 성능:** RTX 4070에서 인덱싱에 14분 42초 소요(기본 Native 임베더), GPU 메모리 피크 6.2GB. 검색 지연 시간 p50 310ms, p95 880ms. 디스크의 벡터 데이터베이스 크기: 184MB.',
+          '**규정 준수 참고:** 공식 데스크톱 빌드에는 클로즈드 소스 텔레메트리가 포함됩니다; GitHub 저장소는 오픈 소스(MIT)입니다. 감사 의무 배포의 경우 소스에서 빌드하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '문서 유형별이 아닌 프로젝트별로 작업공간을 사용하십시오. 별도의 작업공간은 인용 교차 오염을 방지하고 실제 콘텐츠에 따라 청크 크기를 조정할 수 있게 해줍니다(법률 문서는 더 작은 청크가 필요하고, 기술 매뉴얼은 더 큰 청크를 허용합니다).',
+          },
+        ],
+      },
+      privategptDeep: {
+        id: 'privategpt',
+        title: 'PrivateGPT: 오프라인 작동을 위해 설계된 선택지',
+        content:
+          '**PrivateGPT는 무엇보다 먼저 Python 서비스이고 그 다음에 인터페이스입니다.** 이 트레이드오프는 캐주얼 사용자에게는 잘못된 도구이지만, 자체 백엔드에서 RAG를 호출하거나, 규정 준수 자세를 강화하거나, 검색 품질을 과학적으로 테스트하기 위해 임베더를 교체해야 하는 팀에게는 올바른 도구입니다.',
+        items: [
+          '**설치 경로:** git clone, Poetry install, `make`로 모델 다운로드. 새 머신에서 25분을 예약하십시오. GPU 가속을 위해 CUDA 툴킷이 필요합니다. Docker 이미지가 존재하지만 소스 코드 릴리스보다 뒤처집니다.',
+          '**파일 형식:** LlamaIndex 로더를 통한 PDF, DOCX, MD, HTML, TXT, EPUB. 사용자 정의 로더를 통한 CSV와 JSON.',
+          '**임베딩 유연성:** 모든 HuggingFace sentence-transformers 모델이 작동합니다(BAAI/bge-m3, BAAI/bge-small-en-v1.5, nomic-embed-text 변형, mxbai-embed-large). `settings.yaml`에서 구성; GUI 선택기 없음.',
+          '**청크 전략:** 전체 LlamaIndex 툴킷을 사용할 수 있습니다 — `SentenceSplitter`, `SentenceWindowNodeParser`, `HierarchicalNodeParser`, `SemanticSplitterNodeParser`. 후자 두 가지는 테스트에서 다단계 쿼리에서 AnythingLLM의 고정 크기 청킹을 ~5%포인트 앞섰습니다.',
+          '**인용:** API 응답의 구조화된 JSON(파일명 + 청크 ID + 점수). 내장 Gradio 인터페이스는 이를 접을 수 있는 소스 패널로 표시합니다. PDF의 경우 페이지 번호가 신뢰할 수 있고, 일반 텍스트의 경우 없습니다.',
+          '**5,047페이지 코퍼스 성능:** RTX 4070에서 인덱싱에 18분 6초 소요(기본 sentence-transformers `all-MiniLM-L6-v2`), GPU 메모리 피크 4.8GB. 검색 지연 시간 p50 240ms, p95 720ms — 세 플랫폼 중 가장 빠릅니다. 디스크의 벡터 데이터베이스 크기(로컬 Qdrant): 156MB.',
+          '**규정 준수 자세:** 텔레메트리 없음, 분석 SDK 없음, FastAPI 서비스는 기본값으로 localhost에 바인딩됨, 모든 가중치는 디스크에 있음. EU AI법/GDPR 맥락에서 감사하기 가장 쉽습니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'PrivateGPT는 세 플랫폼 중 유일하게 실제 API 표면을 제공합니다 — `POST /v1/chat/completions`, `POST /v1/ingest/file` 등. 최종 목표가 Python 백엔드나 n8n/Zapier 같은 자동화 도구에서 RAG를 호출하는 것이라면, PrivateGPT가 유일하게 합리적인 출발점입니다.',
+          },
+        ],
+      },
+      openwebuiDeep: {
+        id: 'open-webui',
+        title: 'Open WebUI: 멀티 사용자 채팅 프런트엔드',
+        content:
+          '**Open WebUI는 RAG를 포함하도록 성장한 채팅 인터페이스로 이해하는 것이 가장 좋습니다. RAG를 포함하도록 성장한 RAG 제품이 아닙니다.** 그 기원이 느껴집니다: 채팅 경험은 세 플랫폼 중 가장 깔끔하지만, RAG는 미들웨어로 연결되어 있으며 그렇게 동작합니다.',
+        items: [
+          '**설치 경로:** Ollama와 함께 Docker compose. Docker가 이미 설치된 경우 새 머신에서 ~12분. 네이티브 인스톨러 없음 — Docker가 필수입니다.',
+          '**파일 형식:** PDF, DOCX, TXT, MD, HTML, CSV, EPUB. 선택적 `unstructured.io` 플러그인을 통한 이미지 OCR.',
+          '**임베딩 유연성:** Ollama가 서빙하는 모든 임베딩 모델(nomic-embed-text, mxbai-embed-large, snowflake-arctic-embed) + SentenceTransformers + OpenAI 호환 엔드포인트. 변경은 설정의 토글이지만 모든 컬렉션의 전체 재인덱싱이 트리거됩니다.',
+          '**청크 전략:** 청크 크기와 오버랩은 전역으로 구성 가능하며(기본값 1,500/100) 문서별 오버라이드가 있습니다. 시맨틱이나 계층적 스플리터 없음.',
+          '**인용:** 파일명만, 응답 아래 작은 "Sources" 푸터로 표시됩니다. 페이지 번호 없음, 청크 미리 보기 없음. 이것이 세 플랫폼 중 환각 발생률이 가장 높은 주된 이유입니다.',
+          '**5,047페이지 코퍼스 성능:** RTX 4070에서 인덱싱에 21분 18초 소요(Ollama를 통한 기본 nomic-embed-text), GPU 메모리 피크 5.4GB. 검색 지연 시간 p50 380ms, p95 1,040ms — 세 플랫폼 중 가장 느립니다. 디스크의 벡터 데이터베이스 크기(ChromaDB): 212MB.',
+          '**멀티 사용자:** OAuth(Google, Microsoft, GitHub, 일반 OIDC), 사용자별 컬렉션, 역할 기반 접근. 공유 배포를 위한 세 플랫폼 중 최고.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Open WebUI 한정으로, 명시적인 인용 프롬프트 없이도 인용을 잘 하는 모델로 기본 채팅 모델을 변경하십시오. Qwen3 14B와 Llama 3.3 70B는 요청하지 않아도 출처를 언급하지만, Llama 3.3 8B와 Phi-4 Mini는 압박 하에 인용을 종종 생략합니다.',
+          },
+        ],
+      },
+      latency: {
+        id: 'latency',
+        title: '5,047페이지에서 검색 지연 시간 (p50 / p95)',
+        content:
+          '**지연 시간은 쿼리 제출부터 첫 번째 응답 토큰까지 엔드-투-엔드로 측정되었습니다.** 채팅 모델이 이미 로드된 RTX 4070에서, 50개 쿼리의 중앙값; p95는 50개 중 48번째로 나쁜 결과입니다.',
+        columns: ['단계', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        rows: [
+          { '단계': '쿼리 임베딩 (벡터 생성)', 'AnythingLLM': '40ms', 'PrivateGPT': '35ms', 'Open WebUI': '90ms' },
+          { '단계': '벡터 검색 (top-K=6)', 'AnythingLLM': '180ms', 'PrivateGPT': '110ms', 'Open WebUI': '210ms' },
+          { '단계': '재랭킹 (크로스 인코더)', 'AnythingLLM': '70ms', 'PrivateGPT': '60ms (선택적)', 'Open WebUI': 'N/A' },
+          { '단계': '프롬프트 조립 + LLM TTFT', 'AnythingLLM': '20ms', 'PrivateGPT': '35ms', 'Open WebUI': '80ms' },
+          { '단계': '총 p50', 'AnythingLLM': '310ms', 'PrivateGPT': '240ms', 'Open WebUI': '380ms' },
+          { '단계': '총 p95', 'AnythingLLM': '880ms', 'PrivateGPT': '720ms', 'Open WebUI': '1,040ms' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'PrivateGPT는 원시 벡터 검색에서 우승했습니다. Qdrant는 세 가지 중 가장 성숙한 벡터 데이터베이스이며 반복 쿼리 하에 메모리에 워밍 상태로 유지됩니다. Open WebUI는 FastAPI 미들웨어 오버헤드와 잘못된 검색을 포착할 재랭킹 단계의 부재로 인해 지연됩니다.',
+          },
+        ],
+        image: '/images/rag-vs-platforms-latency-breakdown-ko.svg',
+        imageCaption: '5,047페이지에서 검색 지연 시간 분석: PrivateGPT가 240ms p50/720ms p95로 가장 빠름; AnythingLLM 310ms p50/880ms p95(70ms 재랭킹 포함); Open WebUI가 재랭킹 단계 없이 380ms p50/1,040ms p95로 가장 느림.',
+      },
+      hallucination: {
+        id: 'hallucination',
+        title: '쿼리 유형별 환각 발생률',
+        content:
+          '**환각 = 코퍼스에 올바른 정보가 포함되어 있을 때 응답에 최소 한 가지 사실 오류가 있는 경우.** 알려진 답변 키와 대조하여 블라인드 평가했습니다. 유형별 10개 쿼리, 플랫폼당 총 50개. 수치는 최소 한 가지 오류가 있는 응답의 비율입니다.',
+        columns: ['쿼리 유형', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        rows: [
+          { '쿼리 유형': '사실 검색', 'AnythingLLM': '0%', 'PrivateGPT': '10%', 'Open WebUI': '10%' },
+          { '쿼리 유형': '다단계 추론', 'AnythingLLM': '20%', 'PrivateGPT': '20%', 'Open WebUI': '30%' },
+          { '쿼리 유형': '요약', 'AnythingLLM': '0%', 'PrivateGPT': '0%', 'Open WebUI': '10%' },
+          { '쿼리 유형': '인용 정확도 (원문 인용)', 'AnythingLLM': '10%', 'PrivateGPT': '20%', 'Open WebUI': '20%' },
+          { '쿼리 유형': '모순 감지', 'AnythingLLM': '0%', 'PrivateGPT': '5%', 'Open WebUI': '0%' },
+          { '쿼리 유형': '총계 (50개 쿼리)', 'AnythingLLM': '6%', 'PrivateGPT': '11%', 'Open WebUI': '14%' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '다단계 추론은 세 플랫폼 모두 고전하는 영역입니다. 해결책은 플랫폼이 아닌 채팅 모델입니다. Llama 3.3 8B를 Qwen3 14B로 교체하면 각 플랫폼에서 다단계 환각이 ~10%포인트 감소했습니다. RAG 품질은 필요하지만 충분하지 않습니다; 채팅 모델이 검색된 청크에 대해 실제로 추론해야 합니다.',
+          },
+        ],
+        image: '/images/rag-vs-platforms-hallucination-rate-ko.svg',
+        imageCaption: '50개 평가 쿼리에서 환각 발생률: AnythingLLM 총 6%(사실 검색 0%, 요약 0%); PrivateGPT 11%; Open WebUI 14% — 다단계 추론은 세 플랫폼 모두에게 가장 약한 쿼리 유형입니다.',
+      },
+      citations: {
+        id: 'citations',
+        title: '동일한 응답에서의 인용 품질',
+        content:
+          '**인용 품질은 RAG에서 가장 과소평가된 차원입니다.** 인용 없는 올바른 응답은 후속 작업에 쓸모가 없습니다; 잘못된 인용과 함께 자신 있게 들리는 응답은 응답이 없는 것보다 더 나쁩니다.',
+        items: [
+          '**AnythingLLM** — 인용은 인라인(각주 마커)으로 표시되며 파일명 + 페이지가 있는 문자 그대로의 청크가 포함된 확장 가능한 패널로도 표시됩니다. PDF의 경우 페이지 번호가 신뢰할 수 있고(로더에서 파싱), 일반 텍스트의 경우 파일명만 있습니다. 클릭하여 소스로 이동하는 기능이 작동합니다.',
+          '**PrivateGPT** — 인용은 API 응답에서 구조화된 JSON으로 반환됩니다(`{filename, chunk_id, score, text}`). 내장 Gradio 인터페이스는 이를 접을 수 있는 "Sources" 패널로 표시합니다. PDF의 경우 페이지 번호가 신뢰할 수 있고, MD와 TXT의 경우 없습니다. 프로그래밍적 소비를 위해 최적입니다.',
+          '**Open WebUI** — 파일명만, 응답 아래 작은 "Sources:" 푸터로 표시됩니다. 페이지 번호 없음, 청크 미리 보기 없음, 클릭하여 소스로 이동하는 기능 없음. 비공식 채팅에는 허용 가능하지만 학술적이나 법적 작성에는 충분하지 않습니다.',
+          '10개의 인용 정확도 쿼리(원문 인용 검색)에서 AnythingLLM이 9/10, PrivateGPT가 8/10, Open WebUI가 8/10을 맞혔습니다. 하지만 Open WebUI의 실패는 청크 텍스트가 인용에 포함되지 않아 감지하기 더 어렵습니다.',
+        ],
+      },
+      embeddingFlexibility: {
+        id: 'embedding-flexibility',
+        title: '임베딩 모델 유연성',
+        content:
+          '**기본 임베더는 특정 코퍼스에 거의 최선이 아닙니다.** 법률 텍스트, 코드, 다국어 콘텐츠는 각각 선호하는 임베더가 있습니다. 쉽게 전환할 수 있는 플랫폼이 검색 품질을 조정하려는 모든 팀에게 승리합니다.',
+        items: [
+          '**AnythingLLM** — GUI에서 8개 백엔드, 클릭으로 전환. Re-embed-all이 LanceDB 인덱스를 재구성합니다. 기술적이지 않은 사용자가 임베더를 A/B 테스트하는 데 세 플랫폼 중 가장 간단합니다.',
+          '**PrivateGPT** — `settings.yaml`을 통한 모든 HuggingFace sentence-transformers 모델. 더 넓은 실제 선택 폭(다국어용 `bge-m3`을 포함한 모든 게시된 `BAAI/bge-*` 모델이 작동)이지만, YAML 파일을 편집하고 서비스를 재시작해야 합니다.',
+          '**Open WebUI** — Ollama + SentenceTransformers + OpenAI 호환 엔드포인트가 서빙하는 임베더. 설정의 토글; 임베딩 모델이 이미 Ollama에 다운로드되어 있어야 합니다. 재인덱싱은 백그라운드에서 실행됩니다.',
+          '5,047페이지 코퍼스에서 테스트: 기본 임베더를 `BAAI/bge-m3`로 교체하면 세 플랫폼 모두에서 전체 리콜이 4~7%포인트 향상되었지만, 인덱싱 시간이 3배 증가하고 프로세스 중 ~1GB의 GPU 메모리가 추가로 필요했습니다.',
+          '다국어 코퍼스(독일어, 프랑스어, 일본어, 중국어 혼합)의 경우, `bge-m3`는 세 플랫폼 모두에서 기본 임베더를 능가하지만, PrivateGPT만 Ollama를 우회하지 않고 네이티브로 지원합니다.',
+        ],
+        image: '/images/rag-vs-platforms-embedding-flexibility-ko.svg',
+        imageCaption: '임베딩 모델 유연성: AnythingLLM은 Ollama, OpenAI, Cohere를 포함한 인터페이스에서 8개의 선택 가능한 백엔드를 제공합니다. PrivateGPT는 100개 이상의 언어를 지원하는 bge-m3를 포함하여 모든 HuggingFace sentence-transformers 모델을 네이티브로 지원합니다. Open WebUI는 SentenceTransformers와 함께 Ollama가 서빙하는 임베더를 사용합니다.',
+      },
+      hiddenCosts: {
+        id: 'hidden-costs',
+        title: '아무도 언급하지 않는 숨겨진 비용',
+        content:
+          '**위의 벤치마크 수치는 쉽게 찾을 수 있습니다. 아래 비용은 프로덕션 배포를 망치는 것들입니다.** 계획하기 전에 이것들을 파악하십시오.',
+        items: [
+          '**모델 전환 시 재임베딩:** 임베더를 변경하면 전체 재인덱싱이 강제됩니다 — 세 플랫폼 어느 것에도 점진적 마이그레이션 경로가 없습니다. 5,047페이지 코퍼스에서 이 작업은 14~21분의 GPU 시간이 소요되었습니다. 소비자 하드웨어에서 1,000페이지당 ~3~5분, 24GB 이상 GPU에서 1,000페이지당 ~1분을 예상하십시오.',
+          '**디스크의 벡터 데이터베이스 스토리지:** 5,047페이지 코퍼스에서 184MB(AnythingLLM/LanceDB), 156MB(PrivateGPT/Qdrant), 212MB(Open WebUI/ChromaDB). 선형으로 확장됩니다 — 50,000페이지 코퍼스는 벡터만으로 1.5~2GB가 필요합니다. 백업 비용이 따라옵니다.',
+          '**인덱싱 중 GPU 메모리:** 임베딩 모델은 이미 VRAM을 차지하는 채팅 모델과 함께 로드됩니다. GPU 메모리 피크는 12GB 카드에서 6.2GB(AnythingLLM), 4.8GB(PrivateGPT), 5.4GB(Open WebUI)였습니다. VRAM에 Llama 3.3 70B가 있으면 인덱싱할 수 없습니다 — 먼저 채팅을 언로드해야 합니다.',
+          '**검색 중 시스템 RAM:** 벡터 데이터베이스는 기본값으로 디스크에서 페이징하지만 워밍된 캐시는 RAM을 소비합니다. 5,000페이지 코퍼스에서 1~3GB의 잔류 사용량, 25,000페이지에서 6~10GB를 예상하십시오.',
+          '**재랭킹 연산:** AnythingLLM의 재랭킹 크로스 인코더는 GPU에서 실행되어 쿼리당 60~100ms와 ~500MB의 GPU 메모리를 추가합니다. 품질 측면에서 가치가 있지만(리콜 ~3%포인트), 공유 하드웨어에서는 실제 비용입니다.',
+          '**유지 관리 비용:** PrivateGPT는 약 한 달에 한 번 LlamaIndex를 업데이트합니다 — 호환성을 깨는 변경이 빈번합니다. Open WebUI는 1~2주마다 게시하며 가끔 RAG 미들웨어를 재작성합니다. AnythingLLM은 버전 간 가장 안정적이지만 기본값으로 클로즈드 소스 텔레메트리가 포함됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '6개월 이상 지속될 배포의 경우, 선택한 임베더, 이유, 하드웨어에서의 인덱싱 시간을 기록하십시오. 재인덱싱을 해야 할 때 — 그리고 해야 합니다 — 그 메모가 몇 시간의 디버깅을 절약해 줄 것입니다.',
+          },
+        ],
+      },
+      scalingCliff: {
+        id: 'scaling-cliff',
+        title: '확장성 한계: 데모가 실패하는 지점',
+        content:
+          '**세 플랫폼 모두 1,000페이지 이하에서는 잘 작동하며 소비자 하드웨어에서 8,000~12,000페이지 사이 어딘가에서 실패하기 시작합니다.** 한계는 인덱싱 시간이 아닙니다 — 검색 리콜과 메모리 압박입니다.',
+        items: [
+          '**Open WebUI가 가장 먼저 실패합니다**, 약 8,000페이지에서 — 재랭킹 없는 단일 단계 고밀도 검색이 잘못된 청크를 반환하기 시작하고, 기본 ChromaDB 설정이 메모리 압박 하에 많이 페이징합니다. 환각 발생률은 다른 변경 없이 14%(5K 페이지)에서 ~22%(10K 페이지)로 상승합니다.',
+          '**AnythingLLM은 약 10,000페이지에서 실패합니다** — LanceDB 스캔은 ~120k 청크를 초과하면 느려지고 재랭킹 단계가 병목이 되기 시작합니다. p95 지연 시간은 880ms에서 ~1.6초로 증가합니다. 환각 발생률은 6%에서 ~10%로 상승합니다.',
+          '**PrivateGPT는 약 12,000페이지에서 실패합니다** — 로컬 모드의 Qdrant는 청크 볼륨을 잘 처리하지만 기본 FastAPI 서비스 설정(uvicorn 워커, 임베딩 배치 크기)에 조정이 필요합니다. 올바른 설정으로 PrivateGPT는 현저하게 저하되기 전에 32GB RAM 머신에서 ~25,000페이지까지 확장됩니다.',
+          '**~25,000페이지를 초과하면, 세 플랫폼 중 어느 것도 적합한 도구가 아닙니다.** 명시적인 하이브리드 검색(BM25 + 고밀도)과 전용 재랭커가 포함된 Ollama + Qdrant 또는 Weaviate를 활용한 맞춤 스택으로 전환하십시오. 이 세 플랫폼의 내장 벡터 스토어는 그 규모를 위해 설계되지 않았습니다.',
+          '**한계의 증상:** 검색 p95 지연 시간이 2초를 초과함, 코드 변경 없이 환각 발생률 증가, 쿼리 중 시스템 스왑 활동, 어제 작동하던 쿼리에 "관련 청크를 찾을 수 없음" 응답.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '10,000페이지를 초과해 성장할 수 있는 개인 지식 베이스나 팀 라이브러리를 구축 중이라면, PrivateGPT(세 플랫폼 중 가장 높은 확장성 상한)로 시작하거나 첫날부터 맞춤 스택으로 바로 이동하십시오. 마이그레이션 비용은 실제입니다 — 시간이 아닌 일 단위로 측정됩니다.',
+          },
+        ],
+      },
+      decisionTree: {
+        id: 'decision-tree',
+        title: '의사결정 트리: 어느 플랫폼을 선택해야 합니까?',
+        content:
+          '**순서대로 다섯 가지 이진 질문이 대부분의 독자를 올바른 선택으로 안내합니다.**',
+        items: [
+          '**1. 이 배포를 두 명 이상이 사용합니까?** → 예: 질문 3으로 건너뜁니다. 아니오: 계속합니다.',
+          '**2. 연구 작업에 붙여 넣을 수 있는 인용(파일명 + 페이지)이 포함된 응답이 필요합니까?** → 예: AnythingLLM. 아니오: 계속합니다.',
+          '**3. 자체 백엔드나 자동화 도구에서 이것을 호출합니까?** → 예: PrivateGPT. 아니오: 계속합니다.',
+          '**4. EU 규제 분야이거나 감사 맥락에 있습니까?** → 예: PrivateGPT. 아니오: 계속합니다.',
+          '**5. 이미 Ollama를 실행 중이며 멀티 사용자 채팅 인터페이스를 원합니까?** → 예: Open WebUI. 아니오: AnythingLLM (기본 선택지).',
+          '**확신이 없다면: AnythingLLM으로 시작하십시오.** 세 플랫폼 중 설치가 가장 쉽고, 환각 발생률이 가장 낮으며, 다른 작업에 붙여 넣을 수 있는 인용을 생성합니다. 나중에 한계에 도달하면 마이그레이션하십시오.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '로컬 RAG 플랫폼 선택 시 흔한 실수들',
+        items: [
+          '**실수 1: 임베더보다 플랫폼을 먼저 선택하는 것.** 임베딩 모델은 다른 어떤 결정보다 검색 품질을 지배합니다. 먼저 다국어 지원(`bge-m3`), 코드(`bge-code-v1`), 범용(`nomic-embed-text v1.5`) 중 무엇이 필요한지 결정하십시오; 그런 다음 네이티브로 지원하는 플랫폼을 선택하십시오.',
+          '**실수 2: 너무 작은 코퍼스로 벤치마크하는 것.** 세 플랫폼 모두 1,000페이지 이하에서 잘 작동합니다. 실제 콘텐츠 최소 5,000페이지로 벤치마크하십시오 — 순위가 바뀝니다.',
+          '**실수 3: 재인덱싱 비용을 무시하는 것.** 임베더를 변경하는 것은 무료가 아닙니다. 매달 임베더를 A/B 테스트하려면, 소비자 하드웨어에서 변경당 30~90분의 인덱싱을 예상하십시오.',
+          '**실수 4: 채팅 모델 개선을 건너뛰는 것.** RAG 품질은 필요하지만 충분하지 않습니다. 훌륭한 RAG 파이프라인이 소형 채팅 모델을 공급하면 다단계 쿼리에서 환각이 발생합니다; 동일한 파이프라인에 Qwen3 14B를 사용하면 다단계 오류가 ~10%포인트 감소합니다.',
+          '**실수 5: 인용을 확인하지 않고 응답을 신뢰하는 것.** 환각 발생률 6%의 AnythingLLM도 50개 응답 중 ~3개를 틀립니다. 결과가 중요한 모든 주제(법적, 의학적, 재무적)에 대해 인용된 청크를 열고 응답이 실제로 뒷받침되는지 확인하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: '어느 RAG 플랫폼이 가장 큰 문서 세트를 처리합니까?',
+            a: 'PrivateGPT는 소비자 하드웨어에서 가장 멀리 확장됩니다 — 32GB RAM 머신에서 조정된 설정(uvicorn 워커, 임베딩 배치 크기, Qdrant 캐시)으로 ~25,000페이지까지 편안하게 처리합니다. AnythingLLM은 약 10,000페이지에서, Open WebUI는 약 8,000페이지에서 실패합니다. 25,000페이지를 초과하면 세 플랫폼 중 어느 것도 적합한 도구가 아닙니다 — Ollama + Qdrant 또는 Weaviate를 활용한 맞춤 스택으로 이동하십시오.',
+          },
+          {
+            q: '이 플랫폼들 사이에서 문서와 임베딩을 마이그레이션할 수 있습니까?',
+            a: '소스 문서는 자유롭게 이동합니다 — 세 플랫폼 모두 동일한 파일을 수락합니다. 임베딩은 마이그레이션되지 않습니다. 각 플랫폼은 플랫폼별 메타데이터와 함께 자체 형식(LanceDB, Qdrant, ChromaDB)으로 벡터를 저장하므로, 전환은 항상 재인덱싱을 수반합니다. 소비자 하드웨어에서 5,000페이지당 30~90분을 예상하십시오.',
+          },
+          {
+            q: '어느 플랫폼이 인용 정확도가 가장 높습니까?',
+            a: 'AnythingLLM입니다. 50개의 평가된 쿼리에서, 원문 인용 쿼리에서 10번 중 9번 정확하게 파일명 + 페이지를 인용했으며, PrivateGPT 8/10, Open WebUI 8/10과 비교됩니다. AnythingLLM은 또한 세 플랫폼 중 유일하게 클릭하여 소스로 이동하는 패널에 문자 그대로의 청크 텍스트를 표시하여 인용 확인을 빠르게 합니다.',
+          },
+          {
+            q: '인덱싱 중 각 플랫폼이 얼마나 많은 GPU 메모리를 필요로 합니까?',
+            a: '기본 임베더로 5,047페이지 코퍼스에서: AnythingLLM 피크 6.2GB, Open WebUI 5.4GB, PrivateGPT 4.8GB. 더 큰 임베더(BAAI/bge-m3, 1,024차원)로 전환하면 ~1GB가 추가됩니다. VRAM에 채팅 모델이 이미 로드되어 있다면, 임베더가 그것과 경쟁할 것입니다 — 12GB 카드는 Llama 3.3 70B가 상주하는 동안 인덱싱할 수 없습니다.',
+          },
+          {
+            q: '자체 임베딩 모델을 사용할 수 있습니까?',
+            a: 'AnythingLLM은 GUI에서 8개의 임베딩 백엔드를 지원합니다(Native, Ollama, LM Studio, OpenAI, Azure, Cohere, Voyage, LocalAI). PrivateGPT는 settings.yaml을 통한 모든 HuggingFace sentence-transformers 모델을 지원합니다. Open WebUI는 Ollama, SentenceTransformers, OpenAI 호환 엔드포인트가 서빙하는 임베더를 지원합니다. PrivateGPT가 가장 넓은 실제 선택 폭을 제공하고; AnythingLLM이 가장 간단한 전환 경험을 제공합니다.',
+          },
+          {
+            q: '어느 플랫폼이 다국어 문서를 가장 잘 처리합니까?',
+            a: '`BAAI/bge-m3`(1,024차원 다국어 임베더)와 결합된 PrivateGPT입니다. bge-m3는 추가 구성 없이 100개 이상의 언어를 지원하며, 혼합 언어 쿼리에서 영어 전용 임베더를 8~15%포인트 앞섭니다. AnythingLLM과 Open WebUI도 Ollama를 통해 bge-m3를 사용할 수 있지만, PrivateGPT는 Ollama 우회 없이 네이티브로 지원합니다.',
+          },
+          {
+            q: 'PDF의 표와 그림을 어떻게 처리합니까?',
+            a: '세 플랫폼 모두 PDF 파서를 통해 텍스트를 추출합니다(AnythingLLM과 Open WebUI는 pypdfium2, PrivateGPT는 pdfplumber 스타일). 표는 행/열 구조가 불완전하게 보존된 텍스트로 추출됩니다 — 단순한 표에는 허용 가능하지만 복잡한 레이아웃에는 손실이 있습니다. 그림은 메타데이터에서 이미지 참조로 추출되지만 검색에는 사용되지 않습니다. 그림이 많은 PDF의 경우, Tabula나 Camelot 같은 도구로 먼저 표를 CSV로 추출하는 것을 고려하십시오.',
+          },
+          {
+            q: '어느 플랫폼이 서버에 배포하기 가장 쉽습니까?',
+            a: 'Open WebUI — Ollama와 함께하는 Docker compose는 OAuth, 역할 기반 접근, 사용자별 컬렉션을 포함한 12분 설정입니다. PrivateGPT는 서버 친화적이지만 Python + Poetry 경험이 필요합니다. AnythingLLM은 Docker 이미지를 보유하지만 대부분의 사용자는 실제로 데스크톱 앱을 실행합니다; 서버 멀티 사용자 빌드는 기능 동등성 면에서 데스크톱보다 뒤처집니다.',
+          },
+          {
+            q: '상업 제품에 사용할 수 있습니까?',
+            a: 'AnythingLLM은 MIT 라이선스(상업적 사용 허용; 공식 빌드에는 소스에서 빌드하여 비활성화하거나 제거할 수 있는 클로즈드 소스 텔레메트리가 포함됩니다). PrivateGPT는 Apache 2.0(상업적 사용 허용, 텔레메트리 없음). Open WebUI는 BSD-3(상업적 사용 허용). 통합 시점에 항상 라이선스를 확인하십시오 — 오픈 소스 라이선스는 변경될 수 있습니다.',
+          },
+          {
+            q: '어느 플랫폼이 가장 활발하게 개발됩니까?',
+            a: 'Open WebUI는 1~2주마다 게시하며 가끔 버전 간 RAG 미들웨어를 재작성합니다 — 가장 빠른 속도이지만 업데이트 변동이 가장 큽니다. PrivateGPT는 약 한 달에 한 번 LlamaIndex를 업데이트하며 주기적으로 호환성을 깨는 변경이 있습니다. AnythingLLM은 2~3주마다 게시하며 버전 간 가장 안정적입니다. 장기 프로덕션 배포의 경우, AnythingLLM의 게시 주기가 가장 예측 가능합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[PDF 파일로 로컬 RAG 단계별 가이드](/ko/power-local-llm/local-rag-on-your-pdfs-step-by-step) — 플랫폼 선택 후 실용적인 가이드.',
+          '[2026년 로컬 RAG를 위한 최고의 임베딩 모델](/ko/power-local-llm/best-embedding-models-local-rag-2026) — 검색 품질 뒤의 더 깊은 기술 레이어.',
+          '[로컬에서 1,000개의 PDF와 채팅하기](/ko/power-local-llm/chat-with-1000-pdfs-locally) — 코퍼스가 10K 페이지 확장 한계를 초과할 때 해야 할 일.',
+          '[내장 RAG가 있는 로컬 AI 앱](/ko/power-local-llm/local-ai-app-with-built-in-rag) — 더 간단한 것을 원하는 것을 발견한 분들을 위한 가장 쉽고 초보자 친화적인 레이어 (LM Studio, Jan, AnythingLLM 데스크톱).',
+          '[RAG 설명: AI 응답을 실제 데이터에 고정하는 방법 (2026)](/ko/prompt-engineering/rag-explained) — 검색 증강 생성을 위한 개념적 레이어.',
+          '[2026년 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026) — RAG 워크로드를 위한 GPU 및 RAM 크기 조정 방법.',
+          '[Power Local LLM 허브](/ko/power-local-llm) — 전체 가이드 라이브러리.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'AnythingLLM vs PrivateGPT vs Open WebUI: 2026년 최고의 로컬 RAG 플랫폼 비교',
+      description: '5,047페이지 코퍼스에서 테스트한 로컬 RAG 플랫폼 3종. AnythingLLM, PrivateGPT, Open WebUI의 정확도, 지연 시간, 인용 벤치마크. 2026년 5월 최종 평가.',
+      image: 'https://www.promptquorum.com/ko/api/og/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      inLanguage: 'ko',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
+      about: [
+        { '@type': 'Thing', name: 'AnythingLLM' },
+        { '@type': 'Thing', name: 'PrivateGPT' },
+        { '@type': 'Thing', name: 'Open WebUI' },
+        { '@type': 'Thing', name: 'RAG (검색 증강 생성)' },
+        { '@type': 'Thing', name: '로컬 LLM' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+        { '@type': 'SoftwareApplication', name: 'LanceDB' },
+        { '@type': 'SoftwareApplication', name: 'Qdrant' },
+        { '@type': 'SoftwareApplication', name: 'ChromaDB' },
+        { '@type': 'SoftwareApplication', name: 'Llama 3.3' },
+      ],
+      educationalLevel: 'Advanced',
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'ko',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '어느 RAG 플랫폼이 가장 큰 문서 세트를 처리합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PrivateGPT는 소비자 하드웨어에서 가장 멀리 확장됩니다 — 32GB RAM 머신에서 조정된 설정으로 ~25,000페이지까지 편안하게 처리합니다. AnythingLLM은 약 10,000페이지에서, Open WebUI는 약 8,000페이지에서 실패합니다. 25,000페이지를 초과하면 세 플랫폼 중 어느 것도 적합한 도구가 아닙니다 — Ollama + Qdrant 또는 Weaviate를 활용한 맞춤 스택으로 이동하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '이 플랫폼들 사이에서 문서와 임베딩을 마이그레이션할 수 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '소스 문서는 자유롭게 이동합니다. 임베딩은 마이그레이션되지 않습니다. 각 플랫폼은 자체 형식(LanceDB, Qdrant, ChromaDB)으로 벡터를 저장하므로 전환은 항상 재인덱싱을 수반합니다. 소비자 하드웨어에서 5,000페이지당 30~90분을 예상하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '어느 플랫폼이 인용 정확도가 가장 높습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'AnythingLLM입니다. 50개의 평가된 쿼리에서 원문 인용 쿼리에서 10번 중 9번 정확하게 파일명 + 페이지를 인용했습니다 — PrivateGPT 8/10, Open WebUI 8/10과 비교됩니다. AnythingLLM은 클릭하여 소스로 이동하는 패널에 문자 그대로의 청크 텍스트를 표시하는 유일한 플랫폼입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '인덱싱 중 각 플랫폼이 얼마나 많은 GPU 메모리를 필요로 합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '기본 임베더로 5,047페이지 코퍼스에서: AnythingLLM 피크 6.2GB, Open WebUI 5.4GB, PrivateGPT 4.8GB. BAAI/bge-m3(1,024차원)로 전환하면 ~1GB가 추가됩니다. 12GB 카드는 Llama 3.3 70B가 VRAM에 상주하는 동안 인덱싱할 수 없습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '자체 임베딩 모델을 사용할 수 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'AnythingLLM은 GUI에서 8개의 임베딩 백엔드를 지원합니다(Native, Ollama, LM Studio, OpenAI, Azure, Cohere, Voyage, LocalAI). PrivateGPT는 settings.yaml을 통한 모든 HuggingFace sentence-transformers 모델을 지원합니다. Open WebUI는 Ollama, SentenceTransformers, OpenAI 호환 엔드포인트가 서빙하는 임베더를 지원합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '어느 플랫폼이 다국어 문서를 가장 잘 처리합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'BAAI/bge-m3와 결합된 PrivateGPT입니다. bge-m3는 100개 이상의 언어를 지원하며 혼합 언어 쿼리에서 영어 전용 임베더를 8~15%포인트 앞섭니다. PrivateGPT는 Ollama 우회 없이 네이티브로 지원합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'PDF의 표와 그림을 어떻게 처리합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '세 플랫폼 모두 PDF 파서를 통해 텍스트를 추출합니다. 표는 행/열 구조가 불완전하게 보존된 텍스트로 추출됩니다. 그림은 메타데이터에서 참조로 추출되지만 검색에는 사용되지 않습니다. 그림이 많은 PDF의 경우 Tabula나 Camelot으로 먼저 표를 CSV로 추출하는 것을 고려하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '어느 플랫폼이 서버에 배포하기 가장 쉽습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Open WebUI — Ollama와 함께하는 Docker compose는 OAuth, 역할 기반 접근, 사용자별 컬렉션을 포함한 12분 설정입니다. PrivateGPT는 Python + Poetry 경험이 필요합니다. AnythingLLM은 Docker 이미지를 보유하지만 서버 멀티 사용자 빌드는 데스크톱보다 기능 동등성 면에서 뒤처집니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '상업 제품에 사용할 수 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'AnythingLLM은 MIT 라이선스(상업적 사용 허용; 공식 빌드에는 소스에서 빌드하여 비활성화할 수 있는 텔레메트리가 포함됩니다). PrivateGPT는 Apache 2.0(상업적 사용 허용, 텔레메트리 없음). Open WebUI는 BSD-3(상업적 사용 허용). 통합 시점에 항상 라이선스를 확인하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '어느 플랫폼이 가장 활발하게 개발됩니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Open WebUI는 1~2주마다 게시하며 가끔 RAG 미들웨어를 재작성합니다 — 가장 빠른 속도이지만 변동이 가장 큽니다. PrivateGPT는 약 한 달에 한 번 LlamaIndex를 업데이트합니다. AnythingLLM은 2~3주마다 게시하며 버전 간 가장 안정적입니다. 장기 프로덕션 배포의 경우 AnythingLLM의 게시 주기가 가장 예측 가능합니다.',
+            },
+          },
+        ],
+      },
+    },
+  },
 }

@@ -3851,4 +3851,499 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: '로컬 AI용 최고의 Mac 2026: Mac Mini vs Mac Studio vs MacBook Pro',
+    seoTitle: '로컬 AI용 최고의 Mac 2026: Mini vs Studio vs MBP',
+    intro:
+      'Mac을 AI용으로 추천하는 대부분의 글은 칩 이름에만 집중하지만, 실제로 구매 결정을 좌우하는 수치는 통합 메모리(Unified Memory)입니다. Apple Silicon에서는 모델이 시스템의 모든 것과 동일한 메모리 풀을 공유합니다. 따라서 64GB Mac Mini는 더 빠른 24GB MacBook Pro가 로드조차 할 수 없는 34B 모델을 실행할 수 있습니다. 이 가이드는 로컬 LLM 실행을 위한 세 가지 Mac을 비교합니다. 상시 가동 서버로서의 Mac Mini M5 Pro, 휴대용 워크스테이션으로서의 MacBook Pro 16" M5 Max, 그리고 데스크톱 옵션으로서의 Mac Studio를 구매 결정에 중요한 수치인 통합 메모리, 메모리 대역폭, 측정된 초당 토큰 수, 가격으로 비교합니다. 가격에 관한 주의 사항: Apple은 GPU에 영향을 미친 것과 동일한 메모리 부족 현상으로 인해 2026년에 구성된 메모리 가격을 인상했으므로, 여기에 표시된 모든 가격은 2026년 5월의 스냅샷입니다. 가용성에 관한 주의 사항: Mac Studio M5는 아직 출시되지 않았습니다. 아래의 사양과 가격은 예상치이며 명확하게 표시되어 있습니다.',
+    metaDescription:
+      '로컬 LLM용 Mac 세 가지 비교: Mac Mini M5 Pro, MacBook Pro M5 Max, Mac Studio. 통합 메모리, 초당 토큰, 전력 소비 및 2026년 가격을 모델별로 안내합니다.',
+    twitterDescription:
+      'Mac Mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio 로컬 AI 비교 — 세 가지 Mac, 하나의 결정 원칙: 통합 메모리를 먼저 보고, 그다음 대역폭을 최적화하세요. 2026년 5월 가격 기준.',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Llama 3.3 8B',
+      'Llama 3.3 34B',
+      'Llama 3.3 70B',
+      'Mistral Small',
+      'Qwen 3 32B',
+    ],
+    current_hardware_mentioned: [
+      'Apple Mac Mini M5 Pro',
+      'Apple MacBook Pro 16" M5 Max',
+      'Apple Mac Studio M4 Max',
+      'Apple Mac Studio M5 Max (unreleased)',
+      'Apple M5 Pro',
+      'Apple M5 Max',
+    ],
+    audience:
+      '로컬 LLM 실행을 위해 Mac을 선택하는 구매자로, 상시 가동 서버(Mac Mini), 휴대용 MacBook Pro, 데스크톱 Mac Studio 중에서 결정하는 분들을 대상으로 합니다. 양자화 및 통합 메모리의 제약에 대한 기본 지식을 갖추고 있지만 현재 Mac 모델 라인업에는 익숙하지 않은 분들을 위한 내용입니다.',
+    readTime: '13분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '로컬 AI용 Mac',
+    targetKeywords: [
+      '로컬 ai용 최고의 mac 2026',
+      'mac mini vs mac studio 로컬 llm',
+      'macbook pro m5 max 로컬 llm',
+      '로컬 llm에 필요한 통합 메모리',
+      '로컬 llm 실행 mac',
+    ],
+    leadAnswerBlock:
+      '**로컬 AI용 최고의 Mac은 통합 메모리가 모델에 맞는 것입니다. Mac Mini M5 Pro 64GB는 34B 모델을 실행하고, MacBook Pro 16" M5 Max 64GB는 70B 모델을 휴대용으로 실행하며, Mac Studio 128GB는 더 높은 품질의 70B를 위한 데스크톱 옵션입니다. 단, Mac Studio M5는 아직 출시되지 않았습니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년에 로컬 LLM 실행을 위해 어떤 Mac을 구매해야 합니까?',
+        answer:
+          '통합 메모리를 먼저 보고, 그다음 대역폭을 고려하십시오. Mac Mini M5 Pro 64GB(약 $1,199)는 가성비 최고의 선택으로, 34B 모델을 조용하게 상시 가동 서버로 실행합니다. MacBook Pro 16" M5 Max 64GB(약 $3,499)는 휴대용 선택으로 70B 모델을 실행합니다. Mac Studio 128GB는 Q5 품질의 70B를 위한 데스크톱 선택이지만, Mac Studio M5는 아직 출시되지 않았습니다. Mac Studio M4 Max는 현재 구매 가능한 대안으로 판매 중입니다.',
+        bullets: [
+          '가성비 / 상시 가동 서버: Mac Mini M5 Pro 64GB, 약 $1,199, 34B 모델을 15-25 tok/s로 실행',
+          '휴대용: MacBook Pro 16" M5 Max 64GB, 약 $3,499, 70B Q4를 7-11 tok/s로 실행',
+          '데스크톱 70B: Mac Studio 128GB — M5 버전 미출시(2026년 하반기 예상); M4 Max는 현재 구매 가능',
+          'Apple Silicon 메모리는 구매 후 업그레이드 불가 — 처음부터 필요한 용량을 구매하십시오',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '편집자 추천', anchor: '#editors-choice' },
+      { label: 'Mac 비교표', anchor: '#comparison-table' },
+      { label: '어떤 Mac을 구매해야 합니까?', anchor: '#which-mac' },
+      { label: 'Mac Mini M5 Pro: 상시 가동 서버', anchor: '#mac-mini' },
+      { label: 'MacBook Pro 16" M5 Max: 휴대용', anchor: '#macbook-pro' },
+      { label: 'Mac Studio: 데스크톱', anchor: '#mac-studio' },
+      { label: '필요한 통합 메모리 용량', anchor: '#memory-needs' },
+      { label: '결정 흐름도', anchor: '#decision-flowchart' },
+      { label: '구매처', anchor: '#where-to-buy' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**통합 메모리가 결정적인 제약입니다.** Apple Silicon에서 모델은 시스템과 동일한 메모리 풀을 공유합니다. 통합 메모리에 맞지 않는 모델은 실행할 수 없습니다. 목표 모델에 맞는 메모리를 가진 Mac을 선택하고, 그 후에 대역폭과 폼 팩터를 최적화하십시오.',
+          '**메모리는 구매 후 업그레이드가 불가능합니다.** Apple Silicon 통합 메모리는 납땜되어 있습니다. 구매하는 것이 영구적입니다. 오늘뿐만 아니라 2년 후에 실행하고 싶은 모델에 맞게 크기를 결정하십시오.',
+          '**가성비 최고 / 서버 추천: Mac Mini M5 Pro 64GB(약 $1,199)** — 조용하고, LLM 부하 시 25-55W, 연간 전기료 약 $26-39, 64GB로 34B 모델 실행 가능. Apple Silicon 로컬 AI 세계로의 가장 저렴한 진입점입니다.',
+          '**휴대용 추천: MacBook Pro 16" M5 Max 64GB(약 $3,499)** — 유일하게 출시된 M5 Max 장비, 460GB/s 대역폭, 70B Q4를 7-11 tok/s로 실행. 지속적인 부하 시 10-15%의 열 제한을 감수하는 대신 휴대성을 얻습니다.',
+          '**데스크톱 70B 추천: Mac Studio 128GB** — 614GB/s 대역폭으로 70B를 Q5 품질로 실행. Mac Studio M5는 미출시(2026년 하반기 예상); Mac Studio M4 Max가 현재 구매 가능한 대안입니다.',
+          '**속도를 결정하는 것은 칩 이름이 아니라 대역폭입니다.** M5 Max의 460-614GB/s는 동일 모델에서 307GB/s의 M5 Pro보다 약 두 배의 초당 토큰을 생성합니다.',
+          '**Apple Silicon은 순수 속도를 용량과 정숙성으로 맞바꿉니다.** 데스크톱 RTX GPU는 7B-13B 모델에서 더 빠르지만, 24-32GB VRAM으로는 128GB Mac이 무리 없이 실행하는 70B 모델을 로드할 수 없습니다.',
+          '**전력 소비는 전 제품군에서 낮습니다.** Mac Mini는 LLM 부하 시 25-55W, M5 Max는 60-100W를 소비합니다. 이에 비해 데스크톱 RTX 카드는 비슷한 작업에서 300-450W를 소비합니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**서버급(약 $999-1,399):** Mac Mini M5 Pro 64GB — 조용하고 상시 가동, 34B까지 모델 실행 가능.',
+          '**휴대용급(약 $3,499-4,499):** MacBook Pro 16" M5 Max 64-128GB — 이동 중에 70B 모델 실행.',
+          '**데스크톱급(약 $2,000+):** Mac Studio 128GB — Q5 품질로 70B 실행; M5 버전 미출시, M4 Max는 현재 구매 가능.',
+          '**Q4_K_M에서의 통합 메모리 규칙:** 10억 파라미터당 약 0.6GB, 컨텍스트 및 도구용으로 2-4GB 추가.',
+          '**메모리 대역폭:** M5 Pro 307GB/s, M5 Max 460GB/s(64GB)~614GB/s(128GB) — 속도는 대역폭에 비례합니다.',
+          '**전력 소비 범위:** Mac Mini M5 Pro 25-55W, MacBook Pro M5 Max LLM 부하 시 60-100W.',
+          '**2026년 가격 현실:** Apple이 메모리 부족으로 구성 메모리 가격을 인상했습니다 — 구매 전 Apple Store에서 현재 가격을 확인하십시오.',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: '편집자 추천: Mac Mini M5 Pro 64GB',
+        sponsoredSlot: true,
+        content:
+          '**로컬 AI를 위해 특별히 Mac을 선택하는 대부분의 구매자에게 Mac Mini M5 Pro 64GB 통합 메모리는 성능, 가격, 운영 비용의 균형을 맞춘 선택입니다.** 64GB는 컨텍스트 여유를 두고 최대 34B 모델을 수용하며, 조용하게 작동하고 추론 부하 시 25-55W만 소비합니다. 약 $1,199로 Apple Silicon 로컬 AI 세계로의 가장 저렴한 진입점입니다. 또한 가정이나 사무실을 위한 이상적인 상시 가동 AI 서버이기도 합니다. 휴대성이나 70B 모델이 필요한 경우에만 MacBook Pro 16" M5 Max로 업그레이드하고, 데스크톱에서 더 높은 품질의 70B가 필요한 경우에만 Mac Studio 128GB로 업그레이드하십시오. Mac Studio M5는 아직 출시되지 않았으므로, 오늘 데스크톱 70B를 원하는 구매자는 Mac Studio M4 Max를 선택하거나 기다려야 합니다.',
+        callouts: [
+          {
+            type: 'note',
+            text: '이 편집자 추천은 가성비만을 반영합니다. PromptQuorum은 어떠한 제휴 프로그램에도 등록되어 있지 않으며, 아래 링크에는 제휴 태그가 없습니다. 수수료를 발생시키지 않는 단순 참조 링크입니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.apple.com/mac-mini/',
+            productName: 'Apple Mac Mini M5 Pro 64GB',
+            productCategory: 'mac',
+            priceRange: '999-1399',
+            label: 'Apple에서 Mac Mini M5 Pro 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro',
+            productName: 'Apple Mac Mini M5 Pro 64GB',
+            productCategory: 'mac',
+            priceRange: '999-1399',
+            label: 'Amazon에서 Mac Mini M5 Pro 가격 확인',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '2026년 로컬 AI를 위한 세 가지 Mac 비교',
+        content:
+          '메모리 및 대역폭 수치는 Apple의 공식 사양입니다. 추론 속도는 M5 Pro 및 M5 Max에서 PromptQuorum의 Apple Silicon 테스트에서 측정된 8B 및 70B Q4 값입니다. Mac Studio M5 수치는 해당 모델이 아직 출시되지 않아 예상치입니다. 가격은 2026년 5월 미국 기준 스냅샷입니다. Apple이 2026년에 구성 메모리 가격을 인상했으므로 구매 전 Apple Store에서 현재 가격을 확인하십시오.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 LLM용 Mac에서는 통합 메모리가 로드 가능한 모델을 결정하고 메모리 대역폭이 응답 속도를 결정합니다. 전자를 먼저 구매하고 후자를 최적화하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '통합 메모리를 모델, 앱, 시스템이 함께 사용하는 공유 작업대로 생각하십시오. 대역폭이 높은 칩은 작업대를 더 빨리 비우지만, 모델이 작업대에 맞지 않으면 속도는 의미가 없습니다. 먼저 작업대가 충분히 큰 Mac을 선택하십시오.',
+          },
+        ],
+        columns: ['Mac', '통합 메모리', '대역폭', '속도 (8B Q4)', '속도 (70B Q4)', '가격 (2026년 5월)', '최적 용도'],
+        rows: [
+          {
+            'Mac': '[Mac Mini M5 Pro 64GB](https://www.apple.com/mac-mini/)',
+            '통합 메모리': '64GB',
+            '대역폭': '307GB/s',
+            '속도 (8B Q4)': '50-60 tok/s',
+            '속도 (70B Q4)': '8-12 tok/s',
+            '가격 (2026년 5월)': '약 $1,199',
+            '최적 용도': '조용한 상시 가동 서버, 34B 모델',
+          },
+          {
+            'Mac': '[MacBook Pro 16" M5 Max 64GB](https://www.apple.com/macbook-pro/)',
+            '통합 메모리': '64GB',
+            '대역폭': '460GB/s',
+            '속도 (8B Q4)': '약 100-110 tok/s',
+            '속도 (70B Q4)': '7-11 tok/s',
+            '가격 (2026년 5월)': '약 $3,499',
+            '최적 용도': '휴대용 70B 워크스테이션',
+          },
+          {
+            'Mac': 'MacBook Pro 16" M5 Max 128GB',
+            '통합 메모리': '128GB',
+            '대역폭': '614GB/s',
+            '속도 (8B Q4)': '약 110-120 tok/s',
+            '속도 (70B Q4)': '12-16 tok/s',
+            '가격 (2026년 5월)': '약 $4,499',
+            '최적 용도': '휴대용 70B Q5, 멀티 모델',
+          },
+          {
+            'Mac': '[Mac Studio M4 Max 128GB](https://www.apple.com/mac-studio/)',
+            '통합 메모리': '128GB',
+            '대역폭': '약 410-546GB/s',
+            '속도 (8B Q4)': '패밀리 수준 추정치',
+            '속도 (70B Q4)': '패밀리 수준 추정치',
+            '가격 (2026년 5월)': '약 $2,000+(구성)',
+            '최적 용도': '데스크톱 70B, 현재 구매 가능',
+          },
+          {
+            'Mac': 'Mac Studio M5 Max 128GB (미출시)',
+            '통합 메모리': '128GB (예상)',
+            '대역폭': '614GB/s (예상)',
+            '속도 (8B Q4)': '측정 불가',
+            '속도 (70B Q4)': '측정 불가',
+            '가격 (2026년 5월)': '미발표',
+            '최적 용도': '2026년 하반기 예상 — 현재 미구매',
+          },
+        ],
+      },
+      whichMac: {
+        id: 'which-mac',
+        title: '어떤 Mac을 구매해야 합니까?',
+        content:
+          '**목표로 하는 가장 큰 모델과 폼 팩터가 Mac을 결정하고, 예산이 그 안에서 메모리 등급을 결정합니다.** 자신의 상황에 맞는 행을 찾으십시오.',
+        columns: ['상황', '구매할 제품'],
+        rows: [
+          { '상황': '가정 또는 사무실에서 조용하고 상시 가동되는 AI 서버를 원합니다', '구매할 제품': '[Mac Mini M5 Pro 64GB](https://www.apple.com/mac-mini/)' },
+          { '상황': '8B-13B 모델을 실행하며 가장 저렴한 Mac을 원합니다', '구매할 제품': 'Mac Mini M5 Pro (32-64GB)' },
+          { '상황': '데스크톱에서 34B 모델을 실행하며 낮은 운영 비용을 원합니다', '구매할 제품': 'Mac Mini M5 Pro 64GB' },
+          { '상황': '70B 모델을 실행하고 장비와 함께 이동해야 합니다', '구매할 제품': '[MacBook Pro 16" M5 Max 64GB](https://www.apple.com/macbook-pro/)' },
+          { '상황': 'Q5 품질의 70B와 여러 모델을 동시에 실행하고 싶습니다', '구매할 제품': 'MacBook Pro 16" M5 Max 128GB' },
+          { '상황': '데스크톱 70B 장비를 지금 구매하고 싶습니다', '구매할 제품': '[Mac Studio M4 Max 128GB](https://www.apple.com/mac-studio/)' },
+          { '상황': '특별히 Mac Studio M5를 원합니다', '구매할 제품': '기다리십시오 — 2026년 하반기 예상, 아직 미출시' },
+          { '상황': '결정이 어려워 로컬 AI용 첫 번째 Mac으로 안전한 선택을 원합니다', '구매할 제품': 'Mac Mini M5 Pro 64GB — 나중에 필요하면 업그레이드하십시오' },
+        ],
+      },
+      macMini: {
+        id: 'mac-mini',
+        title: 'Mac Mini M5 Pro: 조용한 상시 가동 서버',
+        content:
+          '**Mac Mini M5 Pro는 가성비 최고의 선택이자 상시 가동 로컬 AI 서버로서 최고의 Mac입니다. 조용하고, 전력 소비가 낮으며, 최대 34B 모델을 실행할 수 있습니다.** Apple Silicon에서 AI를 시작하는 대부분의 사용자에게 64GB 구성은 필요한 모든 용량을 제공하며, 25-55W의 전력 소비로 24/7 운영이 경제적입니다.',
+        items: [
+          '**Mac Mini M5 기본형(약 $599, 16GB):** Q4에서 7B 모델만 실행 가능합니다. 단일 사용자 경량 채팅에는 적합하지만 16GB는 진지한 AI 장비로는 너무 작습니다. AI 용도로는 제외하십시오.',
+          '**Mac Mini M5(약 $799, 32GB):** Q4에서 최대 13B 모델을 처리합니다. 소형 모델만 실행한다면 합리적인 진입점이지만, 32GB는 빠르게 부족해집니다.',
+          '**Mac Mini M5 Pro 64GB(약 $1,199):** 추천 옵션입니다. 307GB/s 대역폭으로 8B 모델을 50-60 tok/s, 34B 모델을 15-25 tok/s로 실행합니다. LLM, Whisper 음성 전사, RAG 파이프라인을 동시에 실행할 수 있는 충분한 메모리를 제공합니다.',
+          '**이 Mac을 구매하는 이유:** Apple Silicon 로컬 AI로의 가장 저렴한 진입점, 조용한 작동, 25-55W 전력 소비(연간 전기료 약 $26-39), 서버로서 옷장에 들어가는 5x5인치 풋프린트.',
+          '**이 Mac을 제외하는 이유:** 70B 모델을 로드할 수 없으며 휴대용이 아닙니다. 70B가 목표라면 MacBook Pro M5 Max 또는 Mac Studio 128GB를 선택하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'M5 Pro 64GB를 구매하십시오. 32GB M5가 아닙니다. 추가 메모리는 13B 모델에 머무는 것과 34B 모델을 편안하게 실행하는 것의 차이입니다. Apple Silicon 메모리는 나중에 추가할 수 없습니다.',
+          },
+          {
+            type: 'note',
+            text: 'Mac Mini M5 Pro는 헤드리스 AI 서버로 탁월합니다. Ollama를 설치하고 LAN에 API를 노출하면 가정의 모든 기기가 사용할 수 있습니다. 1년 동안 24/7 운영하는 비용은 클라우드 AI 채팅 구독 1개월 비용보다 적습니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.apple.com/mac-mini/',
+            productName: 'Apple Mac Mini M5 Pro 64GB',
+            productCategory: 'mac',
+            priceRange: '599-1399',
+            label: 'Apple에서 Mac Mini M5 Pro 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Mac+Mini+M5',
+            productName: 'Apple Mac Mini M5',
+            productCategory: 'mac',
+            priceRange: '599-1399',
+            label: 'Amazon에서 Mac Mini M5 가격 확인',
+          },
+        ],
+      },
+      macbookPro: {
+        id: 'macbook-pro',
+        title: 'MacBook Pro 16" M5 Max: 휴대용 70B 워크스테이션',
+        content:
+          '**MacBook Pro 16" M5 Max는 70B 모델을 실행할 수 있는 유일한 구매 가능한 Mac이며, 휴대용 폼 팩터로 그것을 가능하게 합니다.** 70B급 모델이 필요하고 장비를 가지고 다녀야 하는 구매자를 위한 선택입니다. 절충점은 지속적인 추론 시 10-15%의 열 제한과 동일한 칩의 데스크톱 장비보다 높은 가격입니다.',
+        items: [
+          '**MacBook Pro 16" M5 Max 64GB(약 $3,499):** 32코어 GPU, 460GB/s 대역폭. 8B 모델을 약 100-110 tok/s, Llama 3.3 70B Q4를 7-11 tok/s로 실행합니다. 휴대용 로컬 AI 70B로의 진입점입니다.',
+          '**MacBook Pro 16" M5 Max 128GB(약 $4,499):** 40코어 GPU, 614GB/s 대역폭. 70B를 Q5 품질로 실행하며 두 모델을 동시에 실행할 수 있습니다. 예를 들어 70B 모델과 13B 모델을 함께 사용할 수 있습니다.',
+          '**이 Mac을 구매하는 이유:** 70B 모델과 휴대성이 모두 필요하거나, 크리에이티브 작업과 AI를 위한 단일 장비를 원하거나, 데스크톱을 떠나 이동하며 발표해야 하는 경우.',
+          '**이 Mac을 제외하는 이유:** 장비가 항상 데스크톱에 있다면 같은 메모리의 Mac Studio가 더 저렴하고 냉각 성능이 더 좋습니다. 34B 모델로 충분하다면 Mac Mini M5 Pro로 $2,000 이상 절약할 수 있습니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'MacBook Pro 16" M5 Max는 케이스가 뜨거워진 후 지속적인 추론 중 약 10-15% 성능 제한이 발생합니다. 일반적으로 몇 시간의 지속적인 부하 후 발생합니다. 24/7 추론의 경우 Mac Studio가 더 나은 도구입니다. 휴대용 70B 작업의 단기 집중 작업에는 MacBook Pro가 잘 작동합니다.',
+          },
+          {
+            type: 'note',
+            text: 'MacBook Pro M5 Max 64GB와 128GB는 동일한 칩 패밀리를 공유합니다. 128GB 버전은 용량인 Q5 품질의 70B와 동시 모델, 그리고 더 높은 대역폭을 제공하지, 다른 클래스의 장비가 아닙니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.apple.com/macbook-pro/',
+            productName: 'Apple MacBook Pro 16" M5 Max',
+            productCategory: 'mac',
+            priceRange: '3499-4499',
+            label: 'Apple에서 MacBook Pro 16" M5 Max 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=MacBook+Pro+16+M5+Max',
+            productName: 'Apple MacBook Pro 16" M5 Max',
+            productCategory: 'mac',
+            priceRange: '3499-4499',
+            label: 'Amazon에서 MacBook Pro 16" M5 Max 가격 확인',
+          },
+        ],
+      },
+      macStudio: {
+        id: 'mac-studio',
+        title: 'Mac Studio: 70B를 위한 데스크톱 옵션',
+        content:
+          '**Mac Studio는 70B 모델을 실행하는 데스크톱 옵션이지만, Mac Studio M5는 아직 출시되지 않아 오늘 구매자는 M4 Max 버전을 선택하거나 기다려야 합니다.** Mac Studio 128GB는 Q5 품질로 70B를 실행하며, 데스크톱 케이스가 노트북의 열 제한이 없으므로 지속적인 부하에서 MacBook Pro보다 더 조용하게 작동합니다.',
+        items: [
+          '**Mac Studio M4 Max 128GB(약 $2,000+ 구성, 현재 구매 가능):** 현재 구매 가능한 옵션입니다. 70B 모델을 실행하며 M5 업데이트를 기다리지 않고 데스크톱 70B를 원한다면 올바른 구매입니다.',
+          '**Mac Studio M5 Max(미출시 — 2026년 하반기 예상):** Apple은 Mac Studio M5를 발표하지 않았습니다. 보이는 Mac Studio M5 사양이나 가격은 모두 예상치입니다. MacBook Pro의 M5 Max 칩에 기반한 합리적인 예상치는 약 614GB/s 대역폭의 128GB 통합 메모리이지만, 이는 확인되지 않았으며 가격도 없습니다.',
+          '**이 Mac을 구매하는 이유:** 데스크톱 70B 장비를 원하거나, MacBook Pro보다 더 조용한 지속적인 작동을 원하거나, 배터리나 노트북 열 제한 없이 공유 데스크톱 AI 서버를 원하는 경우.',
+          '**이 Mac을 제외하는 이유:** 휴대성이 필요하면 MacBook Pro M5 Max를 구매하십시오. 34B 모델로 충분하면 Mac Mini M5 Pro가 훨씬 저렴합니다. 특별히 Mac Studio M5를 원한다면 출시까지 기다려야 합니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Mac Studio M5는 2026년 5월 기준으로 판매되지 않습니다. M5 사양을 기대하며 프리미엄 가격을 지불하지 마십시오. 오늘 데스크톱 70B가 필요하다면 Mac Studio M4 Max는 현재 판매 중이며 70B 모델 실행이 검증되어 있습니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.apple.com/mac-studio/',
+            productName: 'Apple Mac Studio M4 Max 128GB',
+            productCategory: 'mac',
+            priceRange: '2000-4000',
+            label: 'Apple에서 Mac Studio 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Mac+Studio+M4+Max',
+            productName: 'Apple Mac Studio M4 Max',
+            productCategory: 'mac',
+            priceRange: '2000-4000',
+            label: 'Amazon에서 Mac Studio 가격 확인',
+          },
+        ],
+      },
+      memoryNeeds: {
+        id: 'memory-needs',
+        title: '필요한 통합 메모리 용량',
+        content:
+          '**Q4_K_M 양자화에서 모델은 10억 파라미터당 약 0.6GB의 통합 메모리가 필요하며, 컨텍스트 및 도구용으로 2-4GB가 추가됩니다. Mac에서는 해당 메모리를 macOS와 공유합니다.** 운영 체제에 여유를 남겨두십시오. 16GB Mac은 16GB 모델 예산이 아닙니다.',
+        items: [
+          '**8B 모델 — 8-9GB:** 16GB 이상의 모든 Mac에서 실행 가능합니다. 32GB Mac은 충분한 여유를 제공합니다.',
+          '**13-14B 모델 — 11-13GB:** macOS 및 컨텍스트 오버헤드를 포함하면 32GB가 필요합니다. Mac Mini 32GB부터.',
+          '**34B 모델 — 21-25GB:** 실제로는 64GB가 필요합니다. Mac Mini M5 Pro 64GB가 여기서 가장 좋은 가성비 옵션입니다.',
+          '**70B 모델 Q4 — 39-42GB:** 최소 64GB가 필요하며, 컨텍스트를 추가하면 64GB가 빠듯합니다. MacBook Pro M5 Max 64GB가 최소 기준입니다.',
+          '**70B 모델 Q5 또는 동시 모델 — 50-70GB+:** 128GB가 필요합니다. MacBook Pro M5 Max 128GB 또는 Mac Studio 128GB.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Apple Silicon 메모리는 납땜되어 있어 업그레이드가 불가능합니다. 현재 필요보다 한 단계 위로 구매하십시오. 오늘 34B 모델을 실행한다면 64GB는 편안한 옵션이 아니라 최소 기준입니다. 전체 방법론은 관련 읽을거리 섹션의 통합 메모리 가이드를 참조하십시오.',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: '결정 흐름도: 네 가지 질문으로 Mac 선택',
+        content:
+          '**네 가지 질문을 순서대로 따르면 대부분의 구매자가 Mac에 도달할 수 있습니다.**',
+        items: [
+          '**1. 실행하고 싶은 가장 큰 모델은 무엇입니까?** 8-13B: Mac Mini 32-64GB. 34B: Mac Mini M5 Pro 64GB. 70B Q4: MacBook Pro M5 Max 64GB. 70B Q5 또는 동시 실행: MacBook Pro 128GB 또는 Mac Studio.',
+          '**2. 장비를 이동시켜야 합니까?** 예: MacBook Pro 16" M5 Max. 아니오: Mac Mini(34B까지) 또는 Mac Studio(70B).',
+          '**3. 상시 가동 서버입니까?** 예: Mac Mini M5 Pro 64GB — 조용하고, 25-55W, 24/7 운영에 가장 저렴. 아니오: 위의 모델 크기에 따라 선택하십시오.',
+          '**4. 오늘 장비가 필요합니까?** 지금 데스크톱 70B를 원한다면 Mac Studio M4 Max를 구매하십시오. Mac Studio M5는 아직 출시되지 않았으며 2026년 하반기에만 예상됩니다.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '로컬 AI용 Mac을 선택할 때는 실행할 가장 큰 모델 크기를 먼저 확인하고, 그다음 휴대성, 상시 가동 여부, 가용성 순으로 결정하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '실제로 실행하고 싶은 가장 큰 모델로 시작하여 필요한 메모리를 결정하십시오. 그런 다음 이동해야 하는지, 24시간 작동하는지, Mac Studio M5를 기다릴 수 있는지 결정하십시오. 이 순서로 결정하는 것이 로드할 수 없는 모델에 맞는 Mac을 구매하는 것을 방지하는 방법입니다.',
+          },
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '구매처',
+        content:
+          '**Apple은 모든 구성을 직접 판매합니다. Amazon 및 다른 소매업체는 일반적인 구성을 보유하고 있으며 때로는 Apple 정가보다 낮은 가격을 제공합니다.** 아래 링크는 단순 제품 검색 링크입니다. 제휴 태그가 없으며 수수료를 발생시키지 않습니다.',
+        items: [
+          '**Apple Store(apple.com):** 맞춤 구성을 포함한 모든 메모리 및 저장 공간 구성의 유일한 소스입니다. 비표준 구성을 원하는 경우 필수입니다.',
+          '**Amazon:** Mac Mini 및 MacBook Pro의 일반적인 고정 구성을 보유하고 있으며 때로는 Apple 정가보다 낮은 가격을 제공합니다. 고용량 사용자 정의 구성의 선택은 제한적입니다.',
+          '**Apple 리퍼비시:** 이전 세대 Mac(Mac Studio M4 Max, 이전 MacBook Pro)을 전체 보증과 함께 할인된 가격으로 제공합니다. 오늘 데스크톱 70B를 원하는 경우 합리적인 옵션입니다.',
+          '**B&H Photo 및 공인 대리점:** 일반적인 구성을 보유하고 있으며 때로는 Apple 가격을 능가합니다. MacBook Pro 16" M5 Max에 유용합니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Apple은 GPU에 영향을 미친 것과 동일한 메모리 부족으로 2026년에 구성 메모리 가격을 인상했습니다. 여기의 달러 수치는 2026년 5월 스냅샷입니다. 구매 전에 현재 Apple Store 목록을 열어 필요한 메모리 업그레이드 가격이 변경되었는지 확인하십시오.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.apple.com/shop/buy-mac',
+            productName: 'Macs for local AI (Apple Store)',
+            productCategory: 'mac',
+            priceRange: '599-4499',
+            label: 'Apple에서 Mac 탐색',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Mac+for+local+AI',
+            productName: 'Macs for local AI (Amazon)',
+            productCategory: 'mac',
+            priceRange: '599-4499',
+            label: 'Amazon에서 Mac 탐색',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '로컬 AI용 Mac 구매 시 흔한 실수',
+        items: [
+          '**통합 메모리 대신 칩 이름으로 구매합니다.** 메모리가 적은 더 빠른 M5 Max는 모델을 로드할 수 없습니다. 먼저 통합 메모리에 2-4GB 여유를 두고 모델이 맞는지 확인한 후 대역폭을 비교하십시오.',
+          '**AI 작업을 위해 16GB Mac을 구매합니다.** 16GB는 7B 모델에서 소진되며 macOS와 공유됩니다. 진지한 AI 장비로는 64GB가 실용적인 최소 기준입니다.',
+          '**Apple Silicon 메모리가 업그레이드 불가능하다는 것을 잊습니다.** 메모리는 납땜되어 있습니다. 적은 메모리로 구매하면 유일한 해결책은 새 Mac입니다. 현재 필요보다 한 단계 위로 크기를 결정하십시오.',
+          '**Mac Studio M5가 구매 가능하다고 가정합니다.** 2026년 5월 기준으로 미출시입니다. Mac Studio M5 사양을 약속하는 광고를 보면 예상치로 취급하십시오. Mac Studio M4 Max를 구매하거나 기다리십시오.',
+          '**24/7 데스크톱 서버로 MacBook Pro를 구매합니다.** 지속적인 부하 시 성능이 제한됩니다. 상시 가동 서버로는 Mac Mini M5 Pro 또는 Mac Studio가 더 시원하고 조용하게 작동합니다.',
+          '**8B 모델을 위해 과도하게 구매합니다.** 8B 모델이 사용 사례를 충족한다면 128GB Mac은 낭비입니다. 모델에 맞게 메모리 등급을 조정하십시오.',
+          '**작년 Apple 가격에 집착합니다.** Apple은 2026년에 구성 메모리 가격을 인상했습니다. 기억하는 수치가 아닌 현재 Apple Store 가격을 기준으로 예산을 책정하십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[Apple Mac Mini 사양](https://www.apple.com/mac-mini/specs/) — Mac Mini M5 라인업의 공식 통합 메모리, 칩, 전력 소비 수치.',
+          '[Apple MacBook Pro 사양](https://www.apple.com/macbook-pro/specs/) — M5 Max의 공식 통합 메모리, GPU 코어, 메모리 대역폭 수치.',
+          '[Apple Mac Studio](https://www.apple.com/mac-studio/) — 현재 Mac Studio 라인업 및 구성 옵션(2026년 5월 기준 M4 Max 세대).',
+          '[LLM M5 Pro vs M5 Max 벤치마크 2026](/ko/local-llms/m5-pro-max-llm-benchmarks-2026) — PromptQuorum 하드웨어 테스트: M5 Pro 및 M5 Max에서 8B 및 70B 모델의 측정된 초당 토큰 수.',
+          '[Mac Mini M5를 로컬 AI 서버로 사용](/ko/local-llms/mac-mini-m5-local-ai-server) — PromptQuorum 테스트: Mac Mini M5 Pro 전력 소비, 전기 비용 및 상시 가동 서버로서의 성능.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '로컬 LLM을 제대로 실행할 수 있는 가장 저렴한 Mac은 무엇입니까?',
+            a: 'Mac Mini M5 Pro 64GB(약 $1,199)가 로컬 LLM을 제대로 실행하는 가장 저렴한 Mac입니다. 64GB 통합 메모리는 Q4 양자화로 최대 34B 모델을 수용하며, 8B 모델을 초당 50-60 토큰으로 실행하고 25-55W만 소비합니다. 16GB 및 32GB Mac Mini 모델은 더 저렴하지만 빠르게 부족해집니다. 64GB는 진지한 AI 사용을 위한 실용적인 최소 기준입니다.',
+          },
+          {
+            q: 'Mac Studio M5가 이미 출시되었습니까?',
+            a: '아니요. 2026년 5월 기준으로 Mac Studio M5는 출시되지 않았으며 Apple은 사양이나 가격을 발표하지 않았습니다. 보이는 Mac Studio M5 수치는 모두 예상치입니다. 오늘 데스크톱 70B Mac이 필요하다면 Mac Studio M4 Max는 현재 판매 중이며 70B 모델 실행이 검증되어 있습니다. 그렇지 않다면 Mac Studio M5는 2026년 하반기로 예상됩니다.',
+          },
+          {
+            q: 'Mac에서 로컬 LLM을 위해 얼마나 많은 통합 메모리가 필요합니까?',
+            a: 'Q4_K_M 양자화로 10억 파라미터당 약 0.6GB를 계획하고 2-4GB 오버헤드를 추가하며, macOS가 동일한 풀을 공유한다는 것을 기억하십시오. 이는 8B 모델에 약 8-9GB, 34B에 21-25GB, 70B에 39-42GB를 의미합니다. 64GB Mac은 34B를 편안하게 실행하고 70B Q4도 겨우 맞습니다. Q5 품질의 70B나 여러 모델을 동시에 실행하려면 128GB가 필요합니다.',
+          },
+          {
+            q: 'Mac Mini vs MacBook Pro, 로컬 AI에 어느 것이 좋습니까?',
+            a: '장비가 항상 데스크톱에 있고 34B 모델이 상한선이라면 Mac Mini M5 Pro를 선택하십시오. 훨씬 저렴하고 조용하며 상시 가동 서버에 이상적입니다. 70B 모델을 실행하거나 장비를 가지고 다닐 필요가 있다면 MacBook Pro 16" M5 Max를 선택하십시오. MacBook Pro는 70B를 실행하는 유일한 구매 가능한 Mac이지만 지속적인 부하 시 성능이 제한됩니다.',
+          },
+          {
+            q: 'Mac이 70B 모델을 실행할 수 있습니까?',
+            a: '예. MacBook Pro 16" M5 Max 64GB는 Llama 3.3 70B Q4를 초당 7-11 토큰으로 실행하며, 128GB 버전은 70B Q5를 초당 8-12 토큰으로 실행합니다. Mac Studio 128GB도 70B를 편안하게 실행합니다. Mac Mini M5 Pro는 불가능합니다. macOS 오버헤드를 포함하면 64GB가 70B에 너무 빠듯합니다.',
+          },
+          {
+            q: 'Mac이 로컬 LLM에서 NVIDIA GPU보다 빠릅니까?',
+            a: '아니요, 소형 모델의 순수 속도에서는 그렇지 않습니다. 데스크톱 RTX 카드는 7B-13B 모델에서 더 많은 초당 토큰을 생성합니다. Mac의 장점은 용량과 효율성입니다. 128GB Mac은 24-32GB RTX 카드가 로드할 수 없는 70B 모델을 로드하며, 조용하게 60-100W에서 작동합니다. 300-450W와 비교됩니다. 용량, 정숙성, 낮은 운영 비용을 위해 Mac을 구매하고, 순수 속도를 위해서는 구매하지 마십시오.',
+          },
+          {
+            q: 'Mac 메모리를 나중에 업그레이드할 수 있습니까?',
+            a: '아니요. Apple Silicon 통합 메모리는 칩 패키지에 납땜되어 있으며 구매 후 변경할 수 없습니다. 구매하는 메모리는 장비의 전 수명 동안 영구적입니다. 오늘뿐만 아니라 향후 2-3년 동안 실행하고 싶은 가장 큰 모델에 맞게 크기를 결정하십시오.',
+          },
+          {
+            q: 'Mac을 AI 서버로 운영하는 비용은 얼마입니까?',
+            a: '매우 저렴합니다. Mac Mini M5 Pro는 LLM 부하 시 25-55W, 유휴 시 약 8W를 소비합니다. 1년 동안 24/7 운영하는 비용은 미국 기준 전기료로 약 $26-39입니다. 일반적인 클라우드 AI 채팅 구독 1개월 비용보다 적습니다. 이 낮은 운영 비용이 Mac Mini가 상시 가동 서버로서 최고의 가성비를 제공하는 핵심 이유입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[M5 Pro vs M5 Max 전체 벤치마크 확인](/ko/local-llms/m5-pro-max-llm-benchmarks-2026) — 이 가이드의 수치 뒤에 있는 측정된 초당 토큰, 첫 토큰까지 시간 및 전력 소비.',
+          '[Mac Mini M5를 상시 가동 AI 서버로 설정](/ko/local-llms/mac-mini-m5-local-ai-server) — 완전한 서버 구축, 전기 비용 분석 및 24/7 신뢰성 테스트.',
+          '[전체 M 시리즈 라인업에서 Apple Silicon 비교](/ko/local-llms/apple-silicon-local-llm-guide-2026) — 통합 메모리 및 대역폭에서 M1부터 M5 Max까지 비교.',
+          '[각 모델 크기에 필요한 통합 메모리 계산](/ko/local-llms/how-much-unified-memory-for-local-llm) — 여기의 빠른 공식 뒤에 있는 모델 크기별 전체 방법론.',
+          '[로컬 LLM에서 Apple Silicon과 NVIDIA GPU 비교](/ko/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — Mac이 용량에서 이기는 경우와 NVIDIA 카드가 순수 속도에서 이기는 경우.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 AI용 최고의 Mac 2026: Mac Mini vs Mac Studio vs MacBook Pro',
+      description: '로컬 LLM용 Mac 세 가지 비교: Mac Mini M5 Pro, MacBook Pro 16" M5 Max, Mac Studio. 통합 메모리, 초당 토큰, 전력 소비 및 2026년 가격.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/best-mac-for-local-ai-2026',
+      inLanguage: 'ko',
+      datePublished: '2026-05-22',
+      dateModified: '2026-05-22',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '로컬 AI용 최고의 Mac 2026', item: 'https://www.promptquorum.com/ko/power-local-llm/best-mac-for-local-ai-2026' },
+      ],
+    },
+  },
 }

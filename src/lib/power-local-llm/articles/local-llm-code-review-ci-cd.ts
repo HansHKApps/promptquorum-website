@@ -2925,4 +2925,472 @@ jobs:
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Coding Assistants',
+    title: 'CI/CD에서 로컬 LLM 활용: 클라우드 없는 자동 코드 리뷰',
+    seoTitle: '로컬 LLM으로 CI/CD 코드 리뷰 자동화 2026: PR을 자동으로 리뷰하십시오',
+    intro:
+      '자체 호스팅 로컬 LLM을 활용한 코드 리뷰는 Qwen3-Coder 모델을 CI/CD 파이프라인 뒤에 배치하여, 코드베이스가 네트워크 밖으로 나가지 않으면서도 모든 pull request가 리뷰 패스를 받을 수 있도록 합니다. 아키텍처는 단순합니다 — Ollama를 실행하는 전용 GPU 서버, 해당 서버의 HTTP API를 호출하는 맞춤형 GitHub Action, 그리고 오탐률에 맞춰 조정된 리뷰 프롬프트 — 그리고 경제성은 GitHub 유료 좌석 15~25개 사이의 어느 시점에서 자체 호스팅 쪽으로 기울어집니다. 이 가이드는 아키텍처, 실제로 동작하는 GitHub Actions 워크플로, 팀 규모별 하드웨어 사이징, 보안 모델, 그리고 팀이 두 번째 달에 맞닥뜨리는 운영상의 함정들을 살펴봅니다.',
+    metaDescription:
+      '자체 호스팅 로컬 LLM을 활용한 GitHub Actions 코드 리뷰: 아키텍처, 실제 동작하는 YAML, 팀 규모별 하드웨어 사이징, 보안 모델, GitHub Advanced Security 대비 손익분기점.',
+    twitterDescription:
+      '네트워크 내 GPU 서버에서 자체 호스팅 코드 리뷰. GitHub Actions가 Ollama를 호출하고, Qwen3-Coder가 PR을 리뷰하며, 코드베이스는 절대 외부로 나가지 않습니다. 설정, 사이징, 비용 교차점 상세 안내.',
+    current_models_mentioned: [
+      'Qwen3-Coder 30B',
+      'Qwen3-Coder 7B',
+      'DeepSeek Coder V3',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA RTX 4090 24 GB',
+      'NVIDIA RTX 5090 32 GB',
+      'NVIDIA L40S 48 GB',
+      'NVIDIA A6000 Ada 48 GB',
+      'NVIDIA H100 80 GB',
+    ],
+    audience:
+      '엔지니어링 팀 리더, 플랫폼 엔지니어, GitHub Actions 또는 GitLab CI를 운영하며 소스 코드를 서드파티 API에 전송하지 않고 LLM 기반 코드 리뷰를 추가하고자 하는 DevOps 전문가. Docker, Linux, 자체 호스팅 러너에 대한 친숙함을 전제로 합니다.',
+    readTime: '15분 분량',
+    educationalLevel: 'Advanced',
+    primaryTerm: '로컬 LLM CI/CD 코드 리뷰',
+    targetKeywords: [
+      '로컬 llm 코드 리뷰',
+      '자체 호스팅 llm 코드 리뷰',
+      'github actions 로컬 llm',
+      'ollama github actions',
+      '프라이빗 ai 코드 리뷰',
+      'openai 없는 코드 리뷰',
+    ],
+    leadAnswerBlock:
+      '**자체 호스팅 로컬 LLM 코드 리뷰는 세 가지 구성 요소를 사용합니다: Ollama(또는 vLLM)를 실행하는 전용 GPU 서버, 서버의 HTTP 엔드포인트에 diff를 POST하는 맞춤형 GitHub Action, 그리고 구조화된 판정(승인 / 댓글 / 차단)을 반환하는 리뷰 프롬프트. Qwen3-Coder 30B를 실행하는 RTX 4090(24 GB)은 15~25명의 개발자 팀을 편안하게 지원합니다; 48 GB 카드(L40S 또는 A6000 Ada)는 약 50명까지 확장됩니다; 100명 이상에는 H100급 하드웨어가 필요합니다. 경제성은 GitHub Advanced Security의 유료 좌석 15~25개 사이($19/개발자/월)에서 자체 호스팅 쪽으로 기울어집니다 — 정확한 교차점은 기존 용량 대비 하드웨어 구매 비용에 따라 달라집니다. 보안 이점은 실제입니다: 소스 코드는 절대 네트워크 밖으로 나가지 않으며, 감사 표면은 프로세스 하나와 로그 파일 하나이고, 패킷 캡처로 제로 이그레스를 증명할 수 있습니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: 'CI/CD에서 로컬 LLM을 코드 리뷰어로 어떻게 실행합니까?',
+        answer:
+          '코딩에 맞춰진 모델을 탑재한 Ollama(또는 vLLM, llama.cpp)가 실행되는 GPU 서버를 준비하십시오 — 2026년 5월 기준 Qwen3-Coder 30B가 표준입니다. 동일한 네트워크에 자체 호스팅 GitHub Actions 러너를 추가하거나, 사설 네트워크(Tailscale, WireGuard 또는 VPC 피어링)를 통해 기존 러너에서 GPU 서버의 HTTP 엔드포인트에 접근할 수 있도록 설정하십시오. PR의 diff를 가져와 리뷰 프롬프트와 함께 LLM 엔드포인트에 전송하고, 구조화된 응답(승인 / 댓글 / 차단)을 파싱하여 PR에 인라인 댓글을 다시 게시하는 작은 맞춤형 action을 작성하십시오. 모델은 절대 외부로 나가지 않으며, action은 다른 검사와 동일하게 동작합니다. 하드웨어 측면에서, Qwen3-Coder 30B를 탑재한 RTX 4090은 15~25명의 개발자를 처리하고, 48 GB 카드는 50명까지 확장되며, 100명 이상에는 H100급 하드웨어 또는 멀티 GPU가 필요합니다.',
+        bullets: [
+          '아키텍처: Ollama를 실행하는 GPU 서버 → 자체 호스팅 러너(또는 클라우드 러너에서 HTTP) → 맞춤형 GitHub Action → PR 댓글.',
+          '기본 스택: Ollama + Qwen3-Coder 30B (Apache 2.0) + JavaScript 또는 composite 맞춤형 action.',
+          '하드웨어: 1× RTX 4090 (24 GB) - 15~25명 개발자용; 1× L40S/A6000 Ada (48 GB) - 약 50명용; 1× H100 또는 멀티 GPU - 100명 이상용.',
+          '경제성: GitHub Advanced Security($19/개발자/월) 대비 교차점은 약 15~25개 유료 좌석이며, 하드웨어 비용에 따라 다릅니다.',
+          '보안: 소스 코드는 절대 네트워크 밖으로 나가지 않으며, 이그레스는 패킷 캡처로 증명 가능하고, 감사 표면은 프로세스 하나와 로그 하나입니다.',
+          'GitLab CI도 동일하게 작동합니다 — action 대신 러너를 사용하지만 LLM 호출은 동일합니다.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '아키텍처 비교', anchor: '#architecture-comparison' },
+      { label: '권장 스택', anchor: '#recommended-stack' },
+      { label: 'GitHub Actions 워크플로', anchor: '#workflow' },
+      { label: '팀 규모별 하드웨어 사이징', anchor: '#hardware-sizing' },
+      { label: '빌드 간 GPU 공유', anchor: '#gpu-sharing' },
+      { label: 'GitHub Advanced Security 대비 비용 비교', anchor: '#cost-comparison' },
+      { label: '보안 모델 및 감사 태세', anchor: '#security-model' },
+      { label: '코드 리뷰를 위한 프롬프트 설계', anchor: '#prompt-design' },
+      { label: '오탐 관리', anchor: '#false-positives' },
+      { label: '두 번째 달에 나타나는 운영상 함정', anchor: '#operational-pitfalls' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**아키텍처는 세 가지 구성 요소입니다:** Ollama(또는 vLLM)를 실행하는 GPU 서버 → 네트워크를 통해 서버에 접근 가능한 CI 러너 → PR diff를 POST하고 구조화된 판정을 파싱하는 맞춤형 action. GitHub Actions, GitLab CI, Buildkite, Jenkins에서 동일한 형태로 작동합니다.',
+          '**2026년 5월 기본 스택:** Ollama + Qwen3-Coder 30B (Apache 2.0) + 경량 맞춤형 GitHub Action. 총 인프라: GPU 서버 한 대, 러너 한 개.',
+          '**하드웨어 사이징:** RTX 4090 (24 GB, ~$2,000) - 15~25명 개발자 처리; L40S 또는 A6000 Ada (48 GB, ~$7,000~8,000) - 50명까지; H100 (80 GB, $25,000+) 또는 멀티 GPU - 100명 이상.',
+          '**경제성은 자체 호스팅 영역으로 기웁니다** — GitHub Advanced Security 유료 좌석 약 15~25개($19/개발자/월) 시점에서. RTX 4090 빌드는 해당 팀 규모에서 5~10개월 내 회수됩니다.',
+          '**보안 이점은 실제이며 마케팅 용어가 아닙니다.** 소스 코드는 절대 네트워크 밖으로 나가지 않으며, 아웃바운드 이그레스는 `tcpdump`로 제로임을 증명할 수 있고, 감사 표면 전체는 Ollama 프로세스 하나와 로그 파일 하나입니다.',
+          '**오탐은 운영 비용입니다.** 첫 달에 조정 사이클을 계획하십시오: 프롬프트 반복, 심각도 임계값, 그리고 시간이 지남에 따라 프롬프트가 개선될 수 있도록 리뷰어 피드백 수집 경로.',
+          '**지연 시간은 허용 범위 내입니다.** 24 GB GPU에서 Qwen3-Coder 30B는 200줄 diff를 30초 이내에 리뷰합니다. PR 작성자의 대기 시간은 리뷰가 아닌 다른 CI 작업이 지배합니다.',
+          '**인간 리뷰를 완전히 대체하지 마십시오.** 로컬 LLM은 초기 분류 게이트입니다 — 명백한 문제를 감지하고, 위험한 변경 사항을 표시하며, LLM이 아직 실수하는 판단을 위해 인간을 해방시킵니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**권장 모델:** Q4_K_M의 Qwen3-Coder 30B (~17 GB VRAM, Apache 2.0).',
+          '**권장 런타임:** 설정 단순성을 위한 Ollama; 동일 GPU에서 더 높은 동시성이 필요한 경우 vLLM.',
+          '**진지한 팀을 위한 최소 GPU:** RTX 4090 (24 GB). 더 작은 카드는 7B 모델을 사용하게 되며 리뷰 품질이 현저히 낮아집니다.',
+          '**24 GB 단일 GPU의 동시성:** Qwen3-Coder 30B에서 편안하게 1~3개의 동시 리뷰; 그 이후부터는 대기열.',
+          '**지연 시간 목표:** 200줄 diff에 30초 미만. 그 이상이 되면 PR 작성자 행동이 변화하고 리뷰가 무시됩니다.',
+          '**감사 태세:** GPU 서버의 아웃바운드 제로 이그레스는 증명 가능하며, 표면 전체는 `ollama serve` + 단일 로그 파일입니다.',
+          '**GitHub Advanced Security ($19/개발자/월) 대비 교차점:** 유료 좌석 15~25개가 5~10개월 내 RTX 4090 빌드를 커버합니다.',
+          '**GitLab CI와 동등성:** 아키텍처 동일, 동일한 HTTP 엔드포인트를 호출하는 CI 작업으로 GitHub Action만 교체.',
+        ],
+      },
+      architectureComparison: {
+        id: 'architecture-comparison',
+        title: 'CI 코드 리뷰를 위한 세 가지 실제 옵션: 아키텍처 비교',
+        content:
+          '**2026년 5월 기준으로 실질적으로 모든 PR 리뷰 설정을 다루는 세 가지 아키텍처가 있습니다.** 자체 호스팅 로컬 LLM은 그 중 하나입니다 — 소스 코드가 네트워크 밖으로 나갈 수 없거나 좌석 경제성이 고정 인프라를 선호할 때의 올바른 선택.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '자체 호스팅 로컬 LLM 코드 리뷰는 유료 좌석 15~25개에서 GitHub Advanced Security보다 빠르게 회수되며 소스 코드를 네트워크 내에 유지합니다 — 프라이버시 압박이나 좌석 수 제약이 있는 팀을 위한 올바른 아키텍처입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'CI에서 AI 코드 리뷰를 위한 세 가지 옵션이 있습니다. GitHub Advanced Security는 가장 활성화하기 쉽고 규모에서는 가장 비쌉니다. 클라우드 LLM API(OpenAI, Anthropic)는 시작하기에 저렴하고 각 diff를 서드파티에 전송합니다. 자체 호스팅 로컬 LLM은 설정 비용이 가장 높으며 코드베이스를 외부 경계 내에 유지하는 유일한 옵션입니다 — 그리고 유료 좌석 약 15~25개에서 1년 동안 세 가지 중 가장 경제적이 됩니다.',
+          },
+        ],
+        columns: ['아키텍처', '설정 복잡성', '비용 (개발자 10명)', '비용 (개발자 50명)', 'PR 지연 시간', '적합한 경우'],
+        rows: [
+          {
+            '아키텍처': 'GitHub Advanced Security',
+            '설정 복잡성': '낮음 (토글 하나)',
+            '비용 (개발자 10명)': '$190/월',
+            '비용 (개발자 50명)': '$950/월',
+            'PR 지연 시간': '1분 미만 (관리형)',
+            '적합한 경우': '프라이버시 제약 없이 유료 좌석 ~15개 미만인 팀',
+          },
+          {
+            '아키텍처': '클라우드 LLM API (OpenAI / Anthropic)',
+            '설정 복잡성': '낮음~중간 (API 키 + action)',
+            '비용 (개발자 10명)': '~$50~200/월 (사용량)',
+            '비용 (개발자 50명)': '~$300~1,200/월 (사용량)',
+            'PR 지연 시간': '수초',
+            '적합한 경우': '소스 코드를 서드파티 API에 전송하는 것이 괜찮은 팀',
+          },
+          {
+            '아키텍처': '전용 GPU의 로컬 LLM',
+            '설정 복잡성': '중간~높음 (GPU 서버 + 러너 + action)',
+            '비용 (개발자 10명)': '~$2,000 하드웨어 (일회성)',
+            '비용 (개발자 50명)': '~$7,000+ 하드웨어 (일회성)',
+            'PR 지연 시간': '10~30초 (단일 GPU)',
+            '적합한 경우': '프라이버시 요건, 유료 좌석 15개 이상, EU 컴플라이언스 환경의 팀',
+          },
+          {
+            '아키텍처': '공유 인프라의 로컬 LLM (기존 GPU)',
+            '설정 복잡성': '중간 (러너 + action만)',
+            '비용 (개발자 10명)': '$0 한계 비용 (기존 용량)',
+            '비용 (개발자 50명)': '$0 한계 비용 (기존 용량)',
+            'PR 지연 시간': '가변 (경합에 따라)',
+            '적합한 경우': 'ML 또는 분석용 GPU 인프라를 이미 운영하는 팀',
+          },
+        ],
+      },
+      recommendedStack: {
+        id: 'recommended-stack',
+        title: '권장 스택: Ollama + Qwen3-Coder + 경량 GitHub Action',
+        content:
+          '**가장 단순한 프로덕션급 스택은 세 가지 구성 요소로 이루어져 있습니다.** 각각은 오픈 소스이고 무료이며 잘 문서화되어 있습니다; 이들 간의 통합 표면은 HTTP입니다.',
+        items: [
+          '**GPU 서버**에 **Ollama**(또는 높은 동시성을 위한 vLLM) 탑재. Ollama는 기본적으로 `localhost:11434`에 OpenAI 호환 HTTP API를 노출합니다; 러너에 노출하기 전에 사설 인터페이스 또는 인증이 있는 리버스 프록시에 바인딩하십시오.',
+          '**코딩 조정 모델:** Q4_K_M의 **Qwen3-Coder 30B**는 2026년 5월 기준 표준입니다 — 코딩을 위한 가장 강력한 오픈 웨이트 방향, 256K 컨텍스트, Apache 2.0 라이선스, 24 GB GPU에 적합합니다. 8~16 GB GPU의 경우 Qwen3-Coder 7B를 사용하되 리뷰 품질이 현저히 낮아짐을 인식하십시오.',
+          '**CI 통합:** GPU 서버와 동일한 네트워크의 자체 호스팅 GitHub Actions 러너, 또는 사설 네트워크(Tailscale, WireGuard 또는 VPC 피어링)를 통해 GPU 서버에 접근하는 기존 GitHub 호스팅 러너.',
+          '**맞춤형 GitHub Action** (JavaScript 또는 composite) — GitHub API로 PR diff를 가져와 리뷰 프롬프트와 함께 Ollama 엔드포인트에 전송하고, 구조화된 응답을 파싱하여 PR에 인라인 댓글을 다시 게시합니다.',
+          '**선택 사항:** 파일 해시 + diff 해시를 키로 하는 소규모 Redis 또는 SQLite 캐시 — 이후 CI 실행에서 변경되지 않은 파일의 재리뷰를 방지합니다.',
+          '**GitLab과 동등성:** 동일한 아키텍처, GitHub Action을 대체하는 GitLab CI 작업. LLM 호출은 동일합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '`ollama serve`를 사설 네트워크 인터페이스에 바인딩하십시오(또는 러너가 동일한 호스트에 있는 경우 `127.0.0.1`). 호스트 간 노출 전에 인증을 앞에 배치하십시오. 인증 없는 기본 `OLLAMA_HOST=0.0.0.0:11434`는 단일 머신 실험에는 괜찮지만 다른 모든 맥락에서는 보안 실패입니다.',
+          },
+        ],
+      },
+      workflow: {
+        id: 'workflow',
+        title: '실제로 동작하는 GitHub Actions 워크플로',
+        content:
+          '**최소 실행 가능 워크플로는 약 50줄의 YAML입니다.** 이 템플릿은 PR이 열리거나 동기화될 때 실행되어 diff를 가져오고, Ollama를 호출하며, 다시 댓글을 게시합니다. 프로덕션 배포에서는 캐싱, 심각도 임계값, 그리고 "차단" 판정 시 PR을 막는 옵션이 추가됩니다.',
+        codeLanguage: 'yaml',
+        codeBlock: `# .github/workflows/local-llm-review.yml
+name: Local LLM Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: self-hosted   # OLLAMA_HOST에 접근 가능한 모든 러너
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate diff
+        id: diff
+        run: |
+          git diff origin/\${{ github.base_ref }}...HEAD > /tmp/pr.diff
+          echo "size=$(wc -c < /tmp/pr.diff)" >> "$GITHUB_OUTPUT"
+
+      - name: Call local LLM for review
+        id: review
+        env:
+          OLLAMA_HOST: \${{ secrets.OLLAMA_HOST }}   # 예: http://gpu-server.internal:11434
+        run: |
+          DIFF=$(jq -Rs . < /tmp/pr.diff)
+          curl -sS "$OLLAMA_HOST/api/chat" \
+            -H 'Content-Type: application/json' \
+            -d "{
+              \"model\": \"qwen3-coder:30b\",
+              \"stream\": false,
+              \"format\": \"json\",
+              \"messages\": [
+                {\"role\": \"system\", \"content\": \"You are a senior code reviewer. Return JSON: {verdict: 'approve'|'comment'|'block', summary: string, comments: [{path, line, severity, message}]}\"},
+                {\"role\": \"user\", \"content\": $DIFF}
+              ]
+            }" > /tmp/review.json
+          echo "verdict=$(jq -r '.message.content | fromjson | .verdict' < /tmp/review.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Post review comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const review = JSON.parse(JSON.parse(fs.readFileSync('/tmp/review.json')).message.content);
+            const body = \`### Local LLM Review: \\`\${review.verdict}\\`\n\n\${review.summary}\`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
+
+      - name: Block on critical verdict
+        if: steps.review.outputs.verdict == 'block'
+        run: exit 1
+`,
+        items: [
+          '러너는 네트워크를 통해 `OLLAMA_HOST`에 접근할 수 있어야 합니다 — 동일한 VPC의 자체 호스팅이거나, GPU 서버가 다른 곳에 있는 경우 Tailscale / WireGuard를 통해.',
+          '시스템 프롬프트는 action이 판정에 따라 깔끔하게 분기할 수 있도록 구조화된 JSON 응답을 강제합니다. `format: "json"`과 프롬프트의 엄격한 스키마 없이는 자유 형식 출력 파싱에 운영 시간의 30%를 소비하게 되고 오류 모드가 미묘해집니다.',
+          '`fetch-depth: 0`으로 체크아웃하는 것은 베이스 브랜치 대비 실제 diff를 계산하는 데 필요합니다 — 얕은 체크아웃은 잘못된 diff를 생성합니다.',
+          'PR당 수정된 코드 줄이 ~50K 이상인 저장소의 경우 전송 전에 diff를 잘라내거나 분할하십시오. Qwen3-Coder 30B의 256K 컨텍스트는 너그럽지만, 실제 작업 컨텍스트는 64K~128K에 더 가깝습니다 ([2026년 최고의 로컬 코딩 모델](/ko/power-local-llm/best-local-coding-models-2026) 참조).',
+          '프롬프트 설계의 심층 내용 — 시스템 프롬프트 대 사용자 프롬프트, 예시, 구조화된 출력 — 은 [시스템 프롬프트 대 사용자 프롬프트: 차이점은 무엇입니까?](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)를 참조하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '이 워크플로는 의도적으로 최소한입니다. 프로덕션 배포에는 다음이 추가됩니다: 변경되지 않은 파일의 재리뷰를 건너뛰기 위한 파일 해시 + diff 해시 캐시, 심각도 임계값(오직 `severity >= "high"`에서만 차단), 단일 요약 댓글 대신 인라인 댓글 게시, 언어별 프롬프트 변형, 그리고 시간이 지남에 따라 프롬프트를 개선하기 위한 리뷰어 피드백 수집.',
+          },
+        ],
+      },
+      hardwareSizing: {
+        id: 'hardware-sizing',
+        title: '팀 규모별 하드웨어 사이징',
+        content:
+          '**RTX 4090 (24 GB)은 개발자 15~25명의 팀을 편안하게 처리합니다.** 단일 GPU의 병목은 리뷰당 처리량이 아니라 PR 집중 시간(월요일 아침, 스프린트 종료)의 동시성입니다. 다음 사이징 규칙은 Q4_K_M의 Qwen3-Coder 30B와 50~500줄의 일반적인 PR diff를 가정합니다.',
+        columns: ['팀 규모', 'GPU', 'VRAM', '동시 리뷰', '예상 가격 (2026년 5월)'],
+        rows: [
+          { '팀 규모': '개발자 ~5명', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12~16 GB', '동시 리뷰': '1개 (Qwen3-Coder 7B만 가능)', '예상 가격 (2026년 5월)': '$600~900' },
+          { '팀 규모': '개발자 15~25명', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24~32 GB', '동시 리뷰': '1~3개 (Qwen3-Coder 30B)', '예상 가격 (2026년 5월)': '$2,000~2,500' },
+          { '팀 규모': '개발자 25~50명', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', '동시 리뷰': '3~6개', '예상 가격 (2026년 5월)': '$7,000~8,500' },
+          { '팀 규모': '개발자 50~100명', 'GPU': '2× RTX 4090 또는 1× H100', 'VRAM': '48 GB / 80 GB', '동시 리뷰': '6~10개', '예상 가격 (2026년 5월)': '$5,000 (2× 4090) 또는 $25,000+ (H100)' },
+          { '팀 규모': '개발자 100명 이상', 'GPU': '멀티 GPU H100 또는 H200', 'VRAM': '160 GB 이상', '동시 리뷰': 'vLLM으로 10개 이상', '예상 가격 (2026년 5월)': '$50,000 이상' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '개발자 50명 임계값을 초과하는 팀은 Ollama에서 vLLM으로 전환하십시오. Ollama는 사용 편의성을 우선시하고, vLLM은 공유 GPU에서의 처리량을 우선시합니다. 동일한 Qwen3-Coder 30B 모델이 양쪽 모두에서 작동합니다 — 추론 서버만 변경됩니다.',
+          },
+        ],
+      },
+      gpuSharing: {
+        id: 'gpu-sharing',
+        title: '빌드 및 다른 워크로드 간 GPU 공유',
+        content:
+          '**코드 리뷰 전용 GPU가 가장 단순한 아키텍처이지만 유일한 방법은 아닙니다.** ML 추론이나 학습을 위한 GPU 인프라를 이미 운영하는 팀은 공유할 수 있지만, 경합으로 인해 리뷰 지연 시간이 급증하는 트레이드오프가 있습니다.',
+        items: [
+          '**리뷰 전용 전용 GPU:** 가장 단순한 모델. 지연 시간이 예측 가능하고, 용량 계획이 직관적이며, 오류 모드가 격리됩니다. GPU 인프라를 아직 운영하지 않는 팀에 대한 권장 사항.',
+          '**ML 추론과 공유하는 GPU:** 추론 워크로드가 안정적인 엔벨로프를 가진 경우(예: 4~6 GB에 맞는 소규모 임베딩 서비스) 실현 가능합니다. 리뷰 모델이 나머지 VRAM을 차지합니다. 이 패턴에서 스케줄링 충돌은 드뭅니다.',
+          '**ML 학습과 공유하는 GPU:** 강력하게 권장하지 않습니다. 학습 작업은 VRAM을 한계까지 밀어붙여 리뷰 모델을 굶기고, 개발자의 시스템 신뢰를 침식하는 30~120초의 리뷰 지연 시간을 초래합니다.',
+          '**페이지드 어텐션을 갖춘 vLLM:** 높은 동시성으로 LLM을 서빙하기 위해 특별히 설계되었습니다. Ollama 하에서 1~3개의 동시 리뷰를 처리하는 동일한 RTX 4090이 vLLM 하에서 4~8개를 처리할 수 있으며, 더 복잡한 설정이 트레이드오프입니다. 개발자 25명 이상부터 가치가 있습니다.',
+          '**H100의 멀티 테넌트:** 개발자 100명 이상 규모에서는 H100을 MIG 슬라이스로 파티셔닝하거나 테넌트별 할당량으로 vLLM을 실행하십시오. 이는 플랫폼 엔지니어링 영역입니다; 즉흥적으로 구성하지 마십시오.',
+        ],
+      },
+      costComparison: {
+        id: 'cost-comparison',
+        title: 'GitHub Advanced Security 대비 비용 비교',
+        content:
+          '**경제성은 유료 좌석 약 15~25개에서 자체 호스팅 쪽으로 기울어집니다.** 이것은 1년 상각 비교입니다; 기간이 길수록 자체 호스팅이 더 유리해집니다.',
+        items: [
+          '**GitHub Advanced Security (Code Security):** 정가 $19/개발자/월 (GitHub 가격 페이지에서 확인; 엔터프라이즈 고객에게는 볼륨 할인이 제공됩니다).',
+          '**클라우드 LLM API (예: OpenAI, Anthropic):** 일반적인 PR 볼륨에서 활성 개발자당 대략 $50~200/월; 코드베이스 크기와 리뷰 프롬프트 설계에 따라 크게 달라집니다.',
+          '**자체 호스팅 로컬 LLM, RTX 4090 빌드:** 하드웨어 일회성 약 $2,500 (GPU + 기본 서버 섀시). 전력: 유휴 시 ~50W, 부하 시 ~350W — 일반적인 사용으로 전기요금 월 약 $20~30. 좌석 수수료 없음.',
+          '**개발자 10명 교차점:** GHAS $190/월 대 자체 호스팅 운영비 $25/월 + $2,500 자본 지출. 자본 지출은 약 14개월에 상각됩니다.',
+          '**개발자 25명 교차점:** GHAS $475/월 대 자체 호스팅 운영비 $25/월 + $2,500 자본 지출. 자본 지출은 약 5~6개월에 상각됩니다.',
+          '**개발자 50명 교차점:** GHAS $950/월 대 자체 호스팅 운영비 $40/월 + $7,500 자본 지출 (48 GB GPU). 자본 지출은 약 8개월에 상각됩니다.',
+          '**자본 지출 수치가 계산을 지배합니다.** 이것을 위해 특별히 GPU를 구매한다면 상각이 실제로 일어납니다. 기존 GPU 용량이 있다면 한계 비용은 0에 더 가깝고 자체 호스팅이 즉시 이깁니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '이 수치들은 정가 비교입니다. 대기업을 위한 협상된 GHAS 가격은 교차점을 이동시키고, 기존 GPU 용량은 그것을 제거합니다. 하드웨어 구매에 헌신하기 전에 실제 비용으로 계산을 다시 하십시오.',
+          },
+        ],
+      },
+      securityModel: {
+        id: 'security-model',
+        title: '보안 모델 및 감사 태세',
+        content:
+          '**주요 보안 주장 — "소스 코드는 절대 네트워크 밖으로 나가지 않는다" — 는 사실이고, 증명 가능하며, 이 아키텍처의 가장 강력한 논거입니다.** 감사 표면은 조달 검토에서 방어할 수 있을 만큼 충분히 작습니다.',
+        items: [
+          '**모델은 action이 전송하는 diff만 봅니다.** 텔레메트리 없음, 숨겨진 네트워크 호출 없음. GPU 서버의 아웃바운드 인터페이스에서 `tcpdump` 또는 `nft monitor`로 확인 가능 — 정상 운영 상태에서는 내부가 아닌 호스트로 향하는 아웃바운드 패킷이 제로여야 합니다.',
+          '**전체 감사 표면은 프로세스 하나와 로그 파일 하나입니다.** `ollama serve`가 전체 LLM 스택입니다. 그것의 로그(요청 본문, 지연 시간, 모델 로드 이벤트)가 감사 기록입니다. 쿼리할 SaaS 대시보드 없음, 읽을 서드파티 보존 정책 없음.',
+          '**네트워크 격리는 직관적입니다.** `ollama serve`를 사설 인터페이스에 바인딩하고, mTLS 또는 공유 시크릿 인증이 있는 리버스 프록시를 앞에 배치하며, GPU 서버의 네트워크 네임스페이스에서 CI 러너 서브넷 외의 아웃바운드 트래픽을 거부하십시오. LLM별 마법 없는 표준 제로 트러스트 패턴.',
+          '**모델 가중치는 제공자가 서명한 정적 아티팩트입니다.** Ollama로 한 번 다운로드하고, 다이제스트를 고정하면 모델은 운영자 조치 없이 변경될 수 없습니다. 이것은 업스트림 모델이 자동으로 교체될 수 있는 SaaS API보다 더 강력한 공급망 스토리입니다.',
+          '**컴플라이언스 태세:** 데이터 제로 이그레스는 SOC 2, ISO 27001, GDPR, EU AI Act 제한적 위험 분류에 대해 문서화하기 쉽습니다. 자체 호스팅 컴플라이언스의 가장 어려운 부분은 일반적으로 추론 서버 자체를 문서화하는 것이며, Ollama와 vLLM 모두 잘 문서화되어 있습니다.',
+          '**모델은 여전히 코드를 봅니다.** 자체 호스팅은 서드파티로부터 프라이빗하다는 의미이지, 모델로부터 프라이빗하다는 의미가 아닙니다. 내부자 위협 시나리오(GPU 서버 접근 권한이 있는 엔지니어가 이전 PR diff가 포함된 로그를 읽는 것)는 여전히 범위 내에 있습니다; 로그를 순환하고 그에 따라 접근을 제한하십시오.',
+        ],
+      },
+      promptDesign: {
+        id: 'prompt-design',
+        title: '코드 리뷰를 위한 프롬프트 설계',
+        content:
+          '**오탐률의 가장 중요한 단일 결정 요인은 시스템 프롬프트입니다.** 막연한 "이 코드를 리뷰하라" 프롬프트는 막연한 리뷰 댓글을 생성하고, 심각도 임계값과 구조화된 출력이 있는 구체적인 프롬프트는 실행 가능한 피드백을 생성합니다.',
+        items: [
+          '**구조화된 출력은 협상 불가능합니다.** 엄격한 스키마(`verdict`, `summary`, `comments[]`)로 JSON을 강제하십시오. 없이는 action이 자유 형식 출력 파싱에 코드의 30%를 소비하고 오류 모드가 미묘해집니다.',
+          '모델의 구조화된 출력 컴플라이언스에 대한 전체 가이드는 [구조화된 출력 및 JSON 모드](/ko/prompt-engineering/structured-output-and-json-mode)를 참조하십시오.',
+          '**심각도 임계값은 action이 아닌 프롬프트에 있어야 합니다.** 모델에게 `critical`, `high`, `medium`, `low`가 무엇을 의미하는지 알려주고, 명시적으로 요청받지 않는 한 낮은 심각도 결과를 필터링하도록 하십시오. 이것은 자유 형식 심각도 필드에 대한 사후 필터링보다 훨씬 더 신뢰할 수 있습니다.',
+          '**프롬프트를 예시로 고정하십시오.** 실제 diff와 이상적인 리뷰 JSON이 있는 1~2샷 프롬프트는 동일한 모델과 동일한 diff 크기에 대해 제로샷을 대폭 능가합니다.',
+          '**"리뷰"와 "댓글" 의도를 구분하십시오.** 리뷰어 댓글("이것을 헬퍼로 추출하는 것을 고려하십시오")과 차단자("이것은 SQL 인젝션을 도입합니다")는 CI에서 다른 조치가 필요합니다. 구조화된 출력에 레이블을 붙이고 action이 차단자에서만 차단하도록 하십시오.',
+          '**언어별 프롬프트 변형은 일정 규모부터 도움이 됩니다.** 다국어 코드베이스는 관련 언어 관용구(파이써닉 대 관용적 Rust)를 참조하는 프롬프트에서 이익을 얻습니다. 개발자 ~25명 미만에서는 선택 사항이며, 그 이상에서는 가치가 있습니다.',
+          '프롬프트 엔지니어링 기초 심층 내용 — 시스템 대 사용자 프롬프트, 구조화된 출력, 퓨샷 프롬프팅 — 은 [시스템 프롬프트 대 사용자 프롬프트: 차이점은 무엇입니까?](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)를 참조하십시오.',
+        ],
+      },
+      falsePositives: {
+        id: 'false-positives',
+        title: '개발자 신뢰를 침식하지 않으면서 오탐 관리하기',
+        content:
+          '**오탐은 LLM 코드 리뷰의 운영 비용입니다.** 5% 비율은 허용 가능하고, 20%는 허용할 수 없으며, 차이는 주로 프롬프트 반복과 피드백 루프에 있지 모델에 있지 않습니다.',
+        items: [
+          '**"차단" 임계값을 높게 설정하십시오.** 사소한 린트 문제에서 `차단` 판정이 발동되면 개발자들이 검사를 무시하도록 훈련됩니다. `차단`은 보안 문제, 실패한 테스트, 명백한 정확성 오류에만 예약하십시오.',
+          '**비차단 댓글을 비용이 낮게 만드십시오.** 모델이 확신하지 못하는 인라인 댓글은 ("잠정적" / "고려하십시오")로 레이블되어야 하므로 작성자가 의식 없이 빠르게 무시할 수 있습니다.',
+          '**첫 달에 피드백 루프를 구축하십시오.** 각 리뷰 댓글에 반응(👍 / 👎)을 추가하십시오. 주기적으로(주 1회가 효과적) 👎를 검토하고 가장 흔한 오탐 카테고리에 대한 명시적인 "X를 플래그하지 마십시오" 지시로 시스템 프롬프트를 업데이트하십시오.',
+          '**PR당 댓글 볼륨을 제한하십시오.** 단일 PR은 LLM으로부터 5~10개 이상의 댓글을 받아서는 안 됩니다; 그 이상이 되면 신호 대 잡음비가 무너집니다. 프롬프트 수준에서 action을 제한하십시오("최대 N개의 댓글을 반환하십시오").',
+          '**주간 판정-대-병합 상관관계를 추적하십시오.** `차단` 판정의 80%가 어쨌든 병합된다면 임계값이 너무 공격적입니다. `댓글` 판정의 0%가 인간 조치를 받는다면 프롬프트가 노이즈를 생성하고 있습니다.',
+        ],
+      },
+      operationalPitfalls: {
+        id: 'operational-pitfalls',
+        title: '두 번째 달에 나타나는 운영상 함정',
+        content:
+          '**설정은 주목을 받고, 운영은 무시됩니다.** 다음 실패들은 초기 허니문 이후 팀이 프로젝트를 포기하게 만드는 것들입니다.',
+        items: [
+          '**모델 업데이트가 프롬프트를 깨뜨립니다.** Qwen3-Coder의 새 버전이 미묘하게 출력 형식을 바꾸고, CI에서 구조화된 JSON 파싱이 실패하고, 리뷰가 게시를 중단합니다. `ollama show <model> --modelfile`로 모델 다이제스트를 고정하고, 프로모션 전에 스테이징 브랜치에서 업데이트하십시오.',
+          '**장기간 가동 시 GPU 메모리 단편화.** 24/7 가동하는 GPU 서버는 몇 주간 운영 후 VRAM을 단편화하여 새 할당을 거부할 수 있습니다. cron 작업으로 주 1회 `ollama serve`를 재시작하십시오; 저렴하고 이 오류 모드를 완전히 방지합니다.',
+          '**CI 러너 경합.** LLM 서버와 다른 CI 작업을 모두 호스팅하는 자체 호스팅 러너는 빌드 부하 시 리뷰 지연 시간이 급증하는 것을 볼 수 있습니다. 팀 규모가 개발자 ~25명을 초과하면 러너와 GPU 서버를 분리하십시오.',
+          '**Diff 크기 증가.** PR 크기가 점점 커지고; 결국 PR이 모델의 실제 작업 컨텍스트를 초과하여 리뷰가 자동으로 저하됩니다. ~30K 토큰 이상의 diff를 분할하거나 잘라내고 작성자에게 경고하는 action의 가드를 추가하십시오.',
+          '**전력 및 냉각.** 지속적인 부하의 RTX 4090은 추론 시 ~350W를 소비하고 상당한 열을 발생시킵니다. 능동적인 냉각이 없는 캐비닛 크기의 서버실은 GPU를 스로틀링하고, 스로틀링은 지연 시간 비용이 들며, 개발자들이 알아챕니다.',
+          '**잊혀진 로그 순환.** Ollama는 기본적으로 각 요청 본문을 로깅합니다. 3개월의 PR 리뷰 후 로그 파일은 크고 과거 PR diff를 일반 텍스트로 포함합니다. 주 1회 로그를 순환하십시오; 데이터 보존 정책에 따라 아카이브하거나 삭제하십시오.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '로컬 LLM 코드 리뷰 설정 시 흔한 실수',
+        items: [
+          '**실수 1: 16 GB GPU에서 7B 모델로 시작하기.** Qwen3-Coder 7B 리뷰는 30B보다 현저히 나쁩니다; 개발자들은 빠르게 신뢰를 잃고 프로젝트가 포기됩니다. 30B를 호스팅할 수 없다면, 예산을 확보하는 동안 처음 6개월간 GPU를 업그레이드하거나 클라우드 API를 사용하십시오.',
+          '**실수 2: 첫날부터 `차단` 판정으로 PR 차단하기.** 첫 달은 보정 기간입니다; 오탐률을 측정할 때까지 모든 출력을 자문으로 취급하십시오. ~5% 미만으로 비율이 낮아진 후에만 차단으로 프로모션하십시오.',
+          '**실수 3: 인증 없이 `ollama serve`를 `0.0.0.0:11434`에 노출하기.** 이것은 Redis를 공용 인터페이스에 바인딩하는 것에 해당하는 LLM 시대의 등가물입니다. 사설 인터페이스에 바인딩하고 호스트 간 노출 전에 인증을 앞에 배치하십시오.',
+          '**실수 4: 캐시 생략하기.** 각 CI 실행에서 변경되지 않은 파일을 다시 리뷰하면 일반적인 PR에서 추론 예산의 ~80%를 낭비합니다. 소규모 파일 해시 + diff 해시 캐시(Redis 또는 SQLite)는 리뷰 지연 시간과 GPU 부하를 급격히 줄입니다.',
+          '**실수 5: 동일한 GPU에서 학습 작업 실행하기.** 학습은 VRAM을 한계까지 밀어붙여 리뷰 모델을 굶깁니다. 별도의 GPU를 사용하거나, 꼭 공유해야 한다면 PR 피크 시간과 겹치지 않는 엄격한 일정으로 학습을 실행하십시오.',
+          '**실수 6: 피드백 루프 없이 GitHub Action 구축하기.** 👍/👎 반응이 없는 리뷰 시스템은 개선될 수 없습니다. 첫 주에 루프를 구축하고, 데이터를 수집하며, 월별로 프롬프트를 반복하십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[Ollama 문서](https://github.com/ollama/ollama/blob/main/docs/api.md) — `/api/chat`, `/api/generate`, 구조화된 출력, 모델 관리에 대한 공식 HTTP API 참조.',
+          '[vLLM 문서](https://docs.vllm.ai/) — 고성능 추론 서버 문서; 높은 동시성을 가진 팀을 위한 Ollama 이후 업그레이드 경로.',
+          '[GitHub Actions 문서](https://docs.github.com/en/actions) — 자체 호스팅 러너, 시크릿, 위 워크플로에서 사용된 Actions JavaScript SDK에 대한 공식 참조.',
+          '[GitHub Advanced Security 가격](https://github.com/pricing) — 비용 비교를 위한 정가 참조; 실제 협상된 조건과 대조하여 확인하십시오.',
+          '[Qwen3-Coder 모델 카드](https://huggingface.co/Qwen/Qwen3-Coder-30B) — 권장 리뷰 모델의 아키텍처, 컨텍스트 창, 라이선스 조건.',
+          '[GitLab CI/CD 참조](https://docs.gitlab.com/ee/ci/) — GitLab 팀을 위한 동등한 참조; 워크플로의 LLM 호출 부분은 동일합니다.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '단일 GPU 서버가 개발자 50명의 CI를 처리할 수 있습니까?',
+            a: '단일 24 GB GPU(RTX 4090)는 개발자 15~25명을 편안하게 처리합니다; 개발자 50명에는 48 GB 카드(L40S, A6000 Ada)가 필요하거나 동일 하드웨어에서 Ollama에서 vLLM으로 전환해야 합니다. 병목은 PR 집중 시간(월요일 아침, 스프린트 종료)의 동시성이며, 정상 상태 처리량이 아닙니다. 개발자 100명 이상에는 멀티 GPU 또는 H100급 하드웨어를 계획하십시오.',
+          },
+          {
+            q: '로컬 코드 리뷰가 PR 지연 시간에 영향을 줍니까?',
+            a: '일반적으로 그렇지 않습니다 — 단일 24 GB GPU에서 일반적인 200줄 diff의 리뷰 지연 시간은 10~30초이며, PR 작성자의 대기 시간은 훨씬 오래 걸리는 다른 CI 작업(빌드, 테스트, 린트)이 지배합니다. 예외는 매우 큰 PR(diff 토큰 ~30K 이상)이며, 리뷰가 60~90초 걸릴 수 있습니다; action 수준에서 그것들을 잘라내거나 분할하십시오.',
+          },
+          {
+            q: '모델이 보는 것을 어떻게 감사합니까?',
+            a: 'Ollama는 기본적으로 로그 파일에 각 요청 본문을 기록합니다(위치는 OS에 따라 다릅니다; systemd에서 `journalctl -u ollama` 또는 Ollama 로그 디렉토리를 확인). 리뷰에 가는 각 PR diff가 그 로그에 있습니다. GPU 서버의 아웃바운드 인터페이스에서 `tcpdump`와 결합하여 제로 데이터 이그레스를 증명합니다. 전체 감사 표면은 프로세스 하나와 로그 파일 하나입니다 — SaaS 코드 리뷰 API보다 감사하기 훨씬 단순합니다.',
+          },
+          {
+            q: '로컬 모델 출력을 기반으로 PR을 차단할 수 있습니까?',
+            a: '예. action은 `verdict` 필드를 반환합니다; 판정이 `차단`이면 GitHub Action이 0이 아닌 코드로 종료하고, 이로 인해 검사가 실패하며, 브랜치 보호 규칙이 검사 통과를 요구하면 병합이 차단됩니다. 권장 사항은 첫 달 동안 `차단`을 비활성화된 채로 시작하고(자문 전용), 오탐률을 측정하며, ~5% 미만으로 낮아진 후 차단으로 프로모션하는 것입니다.',
+          },
+          {
+            q: 'GitLab CI와 함께 작동합니까?',
+            a: '예 — 아키텍처가 동일합니다. GitHub Action을 Ollama 엔드포인트에 동일한 `curl`을 실행하고 GitLab API를 통해 병합 요청에 응답을 다시 게시하는 GitLab CI 작업으로 교체하십시오. 모델, 프롬프트, 캐시, 보안 모델, 하드웨어 사이징이 모두 동일합니다. Bitbucket Pipelines, Jenkins, Buildkite도 동일하게 작동합니다.',
+          },
+          {
+            q: '파이프라인을 깨뜨리지 않고 모델을 어떻게 업데이트합니까?',
+            a: '프로덕션 CI가 정확한 버전을 사용하도록 `ollama show <model> --modelfile`로 모델 다이제스트를 고정하십시오. 새 모델 버전이 도착하면 스테이징 서버에 다운로드하고, 대표적인 소규모 PR diff 세트를 실행하며, 구조화된 출력을 프로덕션 버전과 비교하고, 회귀 테스트 세트가 통과한 후에만 프로모션하십시오. 모델 업데이트를 다른 의존성 업데이트와 동일하게 취급하십시오.',
+          },
+          {
+            q: '리뷰 외에 코드 생성에도 사용할 수 있습니까?',
+            a: '예, 하지만 워크로드가 동일한 GPU를 경쟁하며 지연 시간 특성이 다릅니다. 코드 리뷰는 비동기적이고 30초 응답을 허용합니다; 에디터에서의 대화형 코드 생성은 2초 미만의 지연 시간이 필요합니다. 권장 패턴: 개발자 머신의 에디터 자동 완성에는 더 작은 모델(Qwen3-Coder 7B)을 사용하고, CI에서 리뷰급 워크로드를 위해 전용 GPU 서버를 예약하십시오.',
+          },
+          {
+            q: 'GPU 서버의 보안 모델은 무엇입니까?',
+            a: '다른 내부 서비스처럼 취급하십시오: 추론 서버를 사설 인터페이스에 바인딩하고, 앞에 인증(mTLS, 공유 시크릿 토큰 또는 VPN 전용 접근)을 배치하며, 기본 거부로 아웃바운드 트래픽을 제한하고, 자격 증명을 순환하십시오. LLM별 추가 사항은 모델 가중치의 출처를 감사하는 것입니다 — 다이제스트를 고정하고, 소스를 문서화하며, 주기적인 패킷 캡처로 제로 데이터 이그레스를 확인하십시오.',
+          },
+          {
+            q: '여러 저장소가 GPU 서버를 공유할 수 있습니까?',
+            a: '예 — GPU 서버는 단지 HTTP 엔드포인트일 뿐입니다. 서버에 용량이 있는 한 임의의 수의 저장소가 호출할 수 있습니다. 활성 저장소가 10개 이상인 조직의 경우, 하나의 시끄러운 저장소(대형 모노레포, 빈번한 강제 푸시)가 다른 저장소를 굶기지 않도록 Ollama 앞의 리버스 프록시에 저장소별 속도 제한을 추가하십시오.',
+          },
+          {
+            q: 'CI에서 오탐을 어떻게 관리합니까?',
+            a: '세 가지 레이어. 첫째, 프롬프트 설계 — 높은 심각도 임계값을 설정하고, 구조화된 출력을 강제하며, 잠정적 결과에 레이블을 붙이십시오. 둘째, action 수준 필터링 — `severity >= "high"`에서만 `차단`; 중간/낮음은 댓글로 표시하십시오. 셋째, 피드백 루프 — 개발자가 각 댓글에 👍/👎로 반응하게 하고, 주 1회 👎를 검토하여 가장 흔한 오탐 카테고리를 억제하도록 시스템 프롬프트를 업데이트하십시오. 한 달의 조정 후 5~10% 비율을 예상하십시오; 지속적인 반복으로 5% 미만이 달성 가능합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 LLM으로 GitHub Copilot 대체하기](/ko/power-local-llm/replace-github-copilot-with-local-llm) — 자체 호스팅 AI 도구를 고려하는 팀을 위한 더 넓은 비용 대체 맥락.',
+          '[Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코딩 에이전트](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 파이프라인 대 에디터 대화형 작업에서 무엇이 작동하는지; 모델 아래의 하네스 레이어.',
+          '[2026년 최고의 로컬 코딩 모델](/ko/power-local-llm/best-local-coding-models-2026) — 방정식의 모델 측면: Qwen3-Coder, DeepSeek, Codestral, 라이선스 환경.',
+          '[시스템 프롬프트 대 사용자 프롬프트: 차이점은 무엇입니까?](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 리뷰 시스템 프롬프트를 위한 프롬프트 엔지니어링 기초.',
+          '[llama.cpp vs Ollama vs vLLM](/ko/local-llms/llamacpp-vs-ollama-vs-vllm) — 추론 엔진 비교; vLLM은 높은 동시성을 가진 팀을 위한 Ollama 이후 업그레이드 경로.',
+          '[Power Local LLM 허브](/ko/power-local-llm) — 전체 가이드 라이브러리.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'CI/CD에서 로컬 LLM 활용: 클라우드 없는 자동 코드 리뷰',
+      description: '자체 호스팅 로컬 LLM을 활용한 GitHub Actions 코드 리뷰: 아키텍처, 실제 동작하는 워크플로 YAML, 팀 규모별 하드웨어 사이징, 보안 모델, GitHub Advanced Security 대비 경제적 손익분기점.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-code-review-ci-cd',
+      inLanguage: 'ko',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'CI/CD에서 로컬 LLM 활용: 클라우드 없는 자동 코드 리뷰', item: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-code-review-ci-cd' },
+      ],
+    },
+  },
 }

@@ -3657,4 +3657,476 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
 },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    next_refresh_due: '2026-11-22',
+    theme: 'Overview & Reference',
+    title: '2026년 최고의 AI 코딩 도구 비교: Cursor vs Continue.dev',
+    seoTitle: '2026년 최고의 AI 코딩 도구: Cursor, Continue.dev 등 비교',
+    intro:
+      'AI 코딩 도구 비교 자료 대부분은 자동완성 품질만 평가하고, 많은 개발자에게 실제 구매를 결정짓는 핵심 질문을 간과합니다. 바로 이것입니다: 해당 도구는 로컬 LLM 위에서 실행됩니까, 아니면 코드를 제3자 서버로 전송합니까? 독점 코드, NDA 적용 업무, 또는 규제 산업의 경우 이 단 하나의 답변이 순위를 완전히 뒤바꿉니다. 이 가이드는 실제 의사 결정을 좌우하는 기준 — 로컬 LLM 호환성, 가격, IDE 지원 범위, 코드 전송 여부 — 에 따라 네 가지 도구(Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody)를 비교합니다. 가격에 관한 주의 사항: 개발자 도구 구독 요금은 요금제 개편에 따라 변경되므로, 이 가이드의 모든 수치는 2026년 5월 기준 스냅샷입니다. 구독 전에 공급업체 사이트에서 현재 요금을 반드시 확인하십시오.',
+    metaDescription:
+      '2026년 최고의 AI 코딩 도구 비교: GitHub Copilot, Cursor, Cline, Continue.dev. 가격, 로컬 vs 클라우드, 에이전트 기능 분석.',
+    twitterDescription:
+      'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — 4가지 AI 코딩 도구 비교. 대부분의 순위가 놓치는 결정적 기준: 로컬 LLM을 지원합니까?',
+    affiliateDisclosure: true,
+    current_models_mentioned: [
+      'Qwen3 Coder 14B',
+      'Qwen3 Coder 7B',
+      'DeepSeek Coder 33B',
+    ],
+    current_hardware_mentioned: [
+      'Ollama local inference server',
+      'LM Studio local inference app',
+      'llama.cpp inference engine',
+      'NVIDIA RTX 4090',
+    ],
+    audience:
+      'AI 코딩 도구를 선택하려는 개발자로서, 어떤 도구가 로컬 LLM과 함께 작동하는지, 각각의 비용이 얼마인지 파악하고자 하는 분입니다. VS Code 또는 JetBrains IDE, Ollama에 대한 기본 지식을 전제하지만, 특정 AI 코딩 도구 제품에 대한 사전 지식은 필요하지 않습니다.',
+    readTime: '13분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AI 코딩 도구',
+    targetKeywords: [
+      '2026년 최고의 ai 코딩 도구',
+      'cursor vs continue.dev 비교',
+      '로컬 llm 지원 ai 코딩 도구',
+      'github copilot vs cursor 비교',
+      'sourcegraph cody 리뷰 2026',
+    ],
+    leadAnswerBlock:
+      '**최고의 AI 코딩 도구는 로컬 LLM 지원이 필요한지에 따라 달라집니다. Continue.dev는 Ollama를 중심으로 구축된 무료 오픈소스 옵션이고, Cursor는 가장 세련된 유료 편집기이며, GitHub Copilot은 GitHub 생태계의 클라우드 전용 기본 옵션이고, Sourcegraph Cody는 전체 코드베이스 컨텍스트가 필요한 팀을 위한 선택입니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 최고의 AI 코딩 도구는 무엇입니까?',
+        answer:
+          '우선순위에 따라 다릅니다. Continue.dev는 로컬 우선 개발자에게 명확한 선택입니다 — 무료, 오픈소스이며 Ollama와 LM Studio를 주요 대상으로 구축되었습니다. Cursor(월 약 $20)는 가장 세련된 편집기이며 맞춤형 엔드포인트를 통해 로컬 LLM을 지원합니다. GitHub Copilot(월 약 $10)은 클라우드 전용이지만 GitHub와 긴밀하게 통합됩니다. Sourcegraph Cody는 팀에게 전체 코드베이스 컨텍스트를 제공합니다.',
+        bullets: [
+          '로컬 LLM 최적: Continue.dev — 무료, 오픈소스, Ollama 네이티브 지원',
+          '가장 세련된 편집기: Cursor, 월 약 $20, 맞춤형 엔드포인트를 통한 로컬 LLM 지원',
+          'GitHub 생태계 기본 옵션: GitHub Copilot, 월 약 $10, 클라우드 전용',
+          '팀을 위한 최고의 코드베이스 컨텍스트: Sourcegraph Cody, 표준 요금제 기준 사용자당 월 약 $9',
+          '구독 요금은 변경될 수 있습니다 — 각 수치를 2026년 5월 스냅샷으로 취급하십시오',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '편집자 선택', anchor: '#editors-choice' },
+      { label: '도구 비교표', anchor: '#comparison-table' },
+      { label: '어떤 도구를 선택해야 합니까?', anchor: '#which-tool' },
+      { label: 'Continue.dev', anchor: '#continue-dev' },
+      { label: 'Cursor', anchor: '#cursor' },
+      { label: 'GitHub Copilot', anchor: '#github-copilot' },
+      { label: 'Sourcegraph Cody', anchor: '#sourcegraph-cody' },
+      { label: '결정 흐름도', anchor: '#decision-flowchart' },
+      { label: '가입 및 가격 안내', anchor: '#where-to-buy' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽기 자료', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**로컬 LLM 지원은 개인 데이터 작업의 결정적 기준입니다.** 코드가 독점적이거나, NDA가 적용되거나, 규제 산업에 속한다면, 중요한 질문은 자동완성 품질이 아닙니다. 도구가 로컬 LLM 위에서 실행되어 코드가 자신의 컴퓨터 밖으로 나가지 않을 수 있는지가 핵심입니다.',
+          '**로컬 LLM 최적: Continue.dev** — 무료, 오픈소스(Apache 2.0)이며 Ollama, LM Studio, llama.cpp를 네이티브 대상으로 구축되었습니다. 계정 없이도 모든 기능이 로컬에서 작동합니다.',
+          '**가장 세련된 편집기: Cursor** — Pro 요금제 기준 월 약 $20, 최고의 자동완성 경험을 제공하며 OpenAI 호환 맞춤형 엔드포인트를 통해 로컬 LLM을 지원합니다. 소스 비공개입니다.',
+          '**GitHub 생태계 기본 옵션: GitHub Copilot** — 월 약 $10, GitHub와의 긴밀한 통합을 제공하지만 클라우드 전용입니다. 로컬 LLM 모드가 없으므로 코드 컨텍스트가 공급업체에 전송됩니다.',
+          '**팀을 위한 최고의 코드베이스 컨텍스트: Sourcegraph Cody** — 리팩터링을 위한 전체 코드베이스 컨텍스트, 팀 관리 기능 및 감사 로그를 제공합니다. Ollama를 통해 로컬 LLM을 지원하며, 표준 요금제는 사용자당 월 약 $9이고 엔터프라이즈 요금제는 더 비쌉니다.',
+          '**로컬 LLM에는 GPU가 필요합니다.** 로컬 코딩 모델은 약 8GB 이상의 VRAM이 필요합니다 — Qwen3 Coder 7B는 소형 시스템에 적합하고, 14B는 중간 크기 표준이며, 33B 클래스 모델은 24GB가 필요합니다. GPU가 없으면 클라우드 도구가 유일한 옵션입니다.',
+          '**클라우드 도구는 여전히 원시 품질과 설정 속도에서 앞섭니다.** 최고의 클라우드 코딩 모델은 어려운 문제에서 로컬 옵션을 능가하며, 클라우드 도구는 로컬 LLM 스택보다 훨씬 빠르게 생산적으로 사용할 수 있습니다.',
+          '**요금제 개편에 따라 가격이 변경됩니다.** 이 가이드의 모든 수치를 2026년 5월 스냅샷으로 취급하고, 구독 전에 공급업체 가격 페이지에서 현재 요금과 요금제를 확인하십시오.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**최고의 로컬 LLM 지원:** Continue.dev — Ollama, LM Studio, llama.cpp 네이티브 통합; 설정에 약 5분 소요.',
+          '**최고의 자동완성 경험:** Cursor — VS Code 포크; 맞춤형 엔드포인트를 통한 로컬 LLM 설정에 약 15분 소요.',
+          '**이 비교에서 유일한 클라우드 전용 도구:** GitHub Copilot — 로컬 LLM 모드 없음; 코드 컨텍스트가 공급업체에 전송됨.',
+          '**팀을 위한 최적:** Sourcegraph Cody — 전체 코드베이스 컨텍스트, 관리자 콘솔 및 감사 로그.',
+          '**로컬 LLM을 위한 최소 하드웨어:** 약 8GB VRAM 이상; Qwen3 Coder 14B가 중간 크기 표준 코딩 모델입니다.',
+          '**오픈소스:** Continue.dev만 해당(Apache 2.0); Cursor, GitHub Copilot, Cody의 IDE 확장은 소스 비공개.',
+          '**2026년 가격 현실:** 개발자 도구 구독은 요금제 개편에 따라 변경됩니다 — 수치를 2026년 5월 스냅샷으로 취급하십시오.',
+        ],
+      },
+      editorsChoice: {
+        id: 'editors-choice',
+        title: '편집자 선택: Continue.dev',
+        sponsoredSlot: true,
+        content:
+          '**로컬 LLM 위에서 작동하는 AI 코딩 도구를 원하는 개발자에게 Continue.dev가 선택입니다 — 무료, 오픈소스이며 Ollama와 LM Studio를 주요 대상으로 구축되었습니다.** VS Code, JetBrains IDE, Vim을 동등하게 지원하며, 로컬 모델로 모든 기능이 완전히 오프라인으로 작동하고, 로컬 전용 사용에는 계정이 필요하지 않습니다. 가장 세련된 편집기 경험을 원하고 그에 대한 비용을 지불할 의향이 있다면 Cursor가 최선이며, 코드가 공개적이고 GitHub 생태계에서 작업한다면 GitHub Copilot이 가장 간편한 경로입니다. 코드를 자신의 컴퓨터에 유지하고 비용을 전혀 지불하지 않는 것이 모두 우선순위라면 Continue.dev를 선택하십시오.',
+        callouts: [
+          {
+            type: 'note',
+            text: '이 편집자 선택은 로컬 LLM 지원 능력과 가격만을 반영합니다. PromptQuorum은 어떠한 제휴 프로그램에도 등록되어 있지 않으며, 아래 링크에는 제휴 태그가 없습니다 — 수수료를 발생시키지 않는 단순 참조 링크입니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.continue.dev/',
+            productName: 'Continue.dev',
+            productCategory: 'dev-tool',
+            priceRange: '0-0',
+            label: 'continue.dev에서 Continue.dev 받기',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '2026년 4가지 AI 코딩 도구 비교',
+        content:
+          '로컬 LLM 지원, IDE 지원 범위, 오픈소스 여부는 각 공급업체가 게시한 문서에서 가져왔습니다. 가격은 개인 또는 사용자당 표준 요금제의 2026년 5월 스냅샷입니다 — 공급업체는 요금제를 개편하므로, 구독 전에 공급업체 가격 페이지에서 현재 수치와 요금제를 확인하십시오. 로컬 LLM 지원은 네이티브(Continue.dev)부터 맞춤형 엔드포인트 설정(Cursor), Ollama 설정(Cody), 미지원(GitHub Copilot)까지 다양합니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'AI 코딩 도구를 선택할 때 도구가 로컬 LLM 위에서 실행되는지가 코드가 자신의 컴퓨터에 남는지를 결정하므로, 이것을 먼저 확인한 다음 자동완성 품질과 가격을 비교하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '모든 AI 코딩 도구에는 생각할 모델이 필요합니다. 일부는 자신의 컴퓨터에서 실행되는 모델을 사용할 수 있어 코드가 건물 밖으로 나가지 않습니다. 다른 것들은 공급업체의 클라우드 모델만 사용하므로 코드가 전송됩니다. 다른 것을 비교하기 전에 어느 쪽이 필요한지 결정하십시오.',
+          },
+        ],
+        columns: ['도구', '로컬 LLM', '가격 (2026년 5월)', '오픈소스', 'IDE', '적합 대상'],
+        rows: [
+          {
+            '도구': 'Continue.dev',
+            '로컬 LLM': '네이티브 — Ollama, LM Studio, llama.cpp',
+            '가격 (2026년 5월)': '무료',
+            '오픈소스': '예 — Apache 2.0',
+            'IDE': 'VS Code, JetBrains, Vim',
+            '적합 대상': '로컬 우선 개발자',
+          },
+          {
+            '도구': 'Cursor',
+            '로컬 LLM': 'OpenAI 호환 맞춤형 엔드포인트를 통해',
+            '가격 (2026년 5월)': '월 약 $20 (Pro)',
+            '오픈소스': '아니요 — 소스 비공개',
+            'IDE': 'Cursor (VS Code 포크)',
+            '적합 대상': '가장 세련된 편집기 경험',
+          },
+          {
+            '도구': 'GitHub Copilot',
+            '로컬 LLM': '아니요 — 클라우드 전용',
+            '가격 (2026년 5월)': '월 약 $10',
+            '오픈소스': '아니요 — 소스 비공개',
+            'IDE': 'VS Code, JetBrains, Vim',
+            '적합 대상': 'GitHub 생태계 통합',
+          },
+          {
+            '도구': 'Sourcegraph Cody',
+            '로컬 LLM': 'Ollama 설정을 통해',
+            '가격 (2026년 5월)': '표준 사용자당 월 약 $9; 엔터프라이즈 요금제는 더 비쌈',
+            '오픈소스': '부분 — CLI 오픈소스, IDE 확장 소스 비공개',
+            'IDE': 'VS Code, JetBrains, Neovim',
+            '적합 대상': '전체 코드베이스 컨텍스트가 필요한 팀',
+          },
+        ],
+      },
+      whichTool: {
+        id: 'which-tool',
+        title: '어떤 도구를 선택해야 합니까?',
+        content:
+          '**프라이버시 요구사항이 로컬 LLM이 필수인지를 결정하며, 예산과 팀 규모가 나머지를 결정합니다.** 자신의 상황과 일치하는 행을 찾으십시오.',
+        columns: ['상황', '선택할 도구'],
+        rows: [
+          { '상황': '코드가 독점적이며 자신의 컴퓨터에 남아야 함', '선택할 도구': 'Continue.dev + 로컬 LLM' },
+          { '상황': '계정 없이 무료 옵션을 원함', '선택할 도구': 'Continue.dev' },
+          { '상황': '가장 세련된 편집기를 원하고 비용 지불 의향 있음', '선택할 도구': 'Cursor (월 약 $20)' },
+          { '상황': '코드가 공개적이며 GitHub 생태계에서 작업함', '선택할 도구': 'GitHub Copilot (월 약 $10)' },
+          { '상황': '팀이 리팩터링을 위해 전체 코드베이스 컨텍스트가 필요함', '선택할 도구': 'Sourcegraph Cody' },
+          { '상황': 'GPU가 없어 로컬 LLM을 실행할 수 없음', '선택할 도구': 'GitHub Copilot 또는 Cursor (클라우드 모델)' },
+          { '상황': '확실하지 않으며 안전하고 무료인 시작점을 원함', '선택할 도구': 'Continue.dev — 무료로 시작한 후 필요 시 유료 도구 추가' },
+        ],
+      },
+      continueSection: {
+        id: 'continue-dev',
+        title: 'Continue.dev: 최고의 로컬 LLM 코딩 도구',
+        content:
+          '**Continue.dev는 로컬 LLM 위에서 실행되는 AI 코딩 도구를 원할 때 선택입니다. Ollama, LM Studio, llama.cpp를 나중에 추가된 기능이 아니라 네이티브 대상으로 구축했기 때문입니다.** Apache 2.0 라이선스 하에 무료 오픈소스이며, VS Code, JetBrains IDE, Vim에서 작동합니다 — 모든 기능이 로컬 모델로 완전히 오프라인으로 실행됩니다.',
+        items: [
+          '**로컬 LLM 지원:** Ollama, LM Studio, llama.cpp 및 OpenAI 호환 엔드포인트 네이티브 통합 — 설정 파일에서 로컬 엔드포인트를 지정하면 약 5분 만에 작동합니다.',
+          '**가격:** 무료, 프리미엄 요금제 없음; Apache 2.0 라이선스 하에 오픈소스.',
+          '**IDE:** VS Code, JetBrains(IntelliJ, PyCharm, GoLand 등), Vim을 동등하게 완전 지원합니다.',
+          '**프라이버시:** 로컬 모델 모드에서는 네트워크 호출이 없습니다 — 격리된 네트워크 및 NDA 작업에 적합하며, 로컬 전용 사용에는 계정이 필요하지 않습니다.',
+          '**Continue.dev를 선택하는 이유:** GPU가 있고, 코드를 자신의 컴퓨터에 유지하는 것을 중시하며, 비용을 전혀 지불하고 싶지 않을 때.',
+          '**Continue.dev를 선택하지 않는 이유:** 가장 세련된 IDE 경험이나 강력한 팀 협업 기능이 필요하다면 Cursor 또는 Cody가 더 적합합니다; 고급 설정에는 JSON 파일 편집이 필요합니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '로컬 코딩을 위해 Continue.dev와 Qwen3 Coder를 함께 사용하십시오. 7B 모델은 소형 GPU에 적합하고, 14B 모델이 중간 크기 표준이며, 33B 클래스 모델은 약 24GB VRAM이 필요합니다. GPU에 맞는 모델을 먼저 조정하십시오.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.continue.dev/',
+            productName: 'Continue.dev',
+            productCategory: 'dev-tool',
+            priceRange: '0-0',
+            label: 'continue.dev에서 Continue.dev 받기',
+          },
+        ],
+      },
+      cursorSection: {
+        id: 'cursor',
+        title: 'Cursor: 가장 세련된 편집기',
+        content:
+          '**Cursor는 가장 세련된 AI 코딩 경험을 원하고 월 약 $20을 지불할 의향이 있을 때 선택입니다.** VS Code의 포크로 AI가 내장되어 있으며, 네 가지 도구 중 자동완성 품질이 가장 높고, OpenAI 호환 맞춤형 엔드포인트를 통해 로컬 LLM을 지원합니다.',
+        items: [
+          '**가격:** 제한된 무료 요금제와 2026년 5월 스냅샷 기준 월 약 $20의 Pro 요금제.',
+          '**로컬 LLM 지원:** 로컬 모델을 OpenAI 호환 맞춤형 API 엔드포인트로 설정하여 사용 가능합니다 — 작동하지만 Continue.dev보다 번거롭고 약 15분의 설정이 필요합니다.',
+          '**편집기:** 고도로 최적화된 VS Code 포크; 이 비교에서 자동완성이 가장 세련되었으며, Composer 에이전트 모드가 다단계 편집을 처리합니다.',
+          '**프라이버시 주의사항:** 클라우드 모델 사용 시 코드 컨텍스트와 선택 항목이 Cursor 서버로 전송됩니다; Privacy 모드는 데이터 공유를 줄이지만 완전히 제거하지는 않으며, 일부 에이전트 기능은 클라우드 모델을 선호합니다.',
+          '**Cursor를 선택하는 이유:** 최고의 편집기 경험을 원하고 1인당 구독을 수락할 때.',
+          '**Cursor를 선택하지 않는 이유:** 완전히 로컬이고 비용 없이 오픈소스인 워크플로우가 필요하다면 Continue.dev가 더 적합합니다; Cursor는 소스 비공개이며 IDE 선택이 자체 포크로 제한됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'Cursor는 로컬 LLM을 지원하지만 일부 에이전트 기능(Composer 등)은 클라우드 모델에서 더 잘 작동하며 클라우드로 폴백할 수 있습니다. 클라우드 폴백 없이 엄격하게 로컬 워크플로우를 원한다면 Continue.dev가 더 예측 가능한 옵션입니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.cursor.com/pricing',
+            productName: 'Cursor Pro',
+            productCategory: 'dev-tool',
+            priceRange: '0-20',
+            label: 'cursor.com에서 Cursor 가격 확인',
+          },
+        ],
+      },
+      githubCopilotSection: {
+        id: 'github-copilot',
+        title: 'GitHub Copilot: GitHub 생태계의 기본 옵션',
+        content:
+          '**GitHub Copilot은 코드가 공개적이거나 이미 GitHub에 있고 가장 간편한 클라우드 옵션을 원할 때 선택입니다 — 하지만 클라우드 전용으로 로컬 LLM 모드가 없습니다.** 월 약 $10으로 이 비교에서 가장 저렴한 유료 도구이며, GitHub 워크플로우와 긴밀하게 통합됩니다.',
+        items: [
+          '**가격:** 2026년 5월 스냅샷 기준 개인 요금제 월 약 $10 — 이 비교에서 가장 저렴한 유료 도구.',
+          '**로컬 LLM 지원:** 없습니다. GitHub Copilot은 클라우드 모델로만 작동하므로 코드 컨텍스트가 항상 공급업체에 전송됩니다 — 이것이 독점 코드나 규제 코드에 대한 결정적 제한입니다.',
+          '**IDE:** VS Code, JetBrains, Vim을 지원하며, GitHub 중심 워크플로우 내에서 가장 잘 맞습니다.',
+          '**프라이버시:** 코드 컨텍스트가 공급업체에 전송됩니다; 엔터프라이즈 요금제는 규정 준수 약정을 추가하지만 데이터는 여전히 네트워크를 떠납니다.',
+          '**GitHub Copilot을 선택하는 이유:** 코드가 공개적이거나 오픈소스이고, 프라이버시가 제한 사항이 아니며, 마찰 없는 GitHub 통합을 원할 때.',
+          '**GitHub Copilot을 선택하지 않는 이유:** 코드가 로컬에 남아야 한다면 GitHub Copilot은 불가능합니다 — 대신 Continue.dev 또는 로컬 LLM을 사용하는 Cursor를 선택하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'GitHub Copilot에는 로컬 LLM 모드가 없습니다. 독점 코드, NDA, 또는 규제 산업이 포함된 작업이라면 GitHub Copilot은 잘못된 도구입니다 — 코드 컨텍스트가 항상 자신의 컴퓨터를 떠납니다. 그런 작업에는 로컬 지원 기능이 있는 도구를 사용하십시오.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://github.com/features/copilot',
+            productName: 'GitHub Copilot',
+            productCategory: 'dev-tool',
+            priceRange: '0-10',
+            label: 'github.com에서 GitHub Copilot 가격 확인',
+          },
+        ],
+      },
+      sourcegraphCodySection: {
+        id: 'sourcegraph-cody',
+        title: 'Sourcegraph Cody: 팀을 위한 전체 코드베이스 컨텍스트 옵션',
+        content:
+          '**Sourcegraph Cody는 팀이 전체 코드베이스 컨텍스트가 필요할 때 선택입니다 — 대규모 리팩터링과 여러 파일에 걸친 변경이 의존하는 전체 프로젝트를 이해합니다.** Ollama 설정을 통해 로컬 LLM을 지원하며, 팀 관리 제어 기능과 감사 로그를 추가합니다.',
+        items: [
+          '**코드베이스 컨텍스트:** Cody는 전체 프로젝트를 읽어, 리팩터링 및 여러 파일 편집에서 네 가지 중 가장 강력합니다.',
+          '**가격:** 2026년 5월 스냅샷 기준 표준 요금제 사용자당 월 약 $9, 엔터프라이즈 요금제는 더 비쌉니다 — 현재 요금제는 공급업체 가격 페이지에서 확인하십시오.',
+          '**로컬 LLM 지원:** Ollama 설정을 통해 사용 가능합니다; 채팅과 완성이 로컬에서 실행될 수 있지만, Cody의 설계는 클라우드 우선이며 로컬은 보조 경로입니다.',
+          '**팀 기능:** 관리자 콘솔, 감사 로그, 좌석 관리 — 규정 준수에 민감한 팀에 Cody가 적합한 이유입니다.',
+          '**IDE:** VS Code, JetBrains, Neovim; CLI는 오픈소스이지만 IDE 확장은 소스 비공개.',
+          '**Cody를 선택하는 이유:** 전체 코드베이스 컨텍스트, 관리 제어, 감사 로그가 필요한 여러 개발자 팀을 이끌 때.',
+          '**Cody를 선택하지 않는 이유:** 단독 개발자는 Continue.dev로 더 나은 로컬 LLM 경험을, Cursor로 더 나은 편집기를 얻을 수 있습니다 — Cody의 강점은 팀 규모에서 발휘됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Cody는 Ollama를 통해 로컬 LLM을 지원하지만 설계상 클라우드 우선입니다 — 인라인 완성은 기본적으로 클라우드를 사용하며 로컬 모델을 직접 선택해야 합니다. 단독 로컬 우선 워크플로우에는 Continue.dev가 더 적합합니다; Cody는 팀 규모의 코드베이스 컨텍스트에서 그 자리를 찾습니다.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://sourcegraph.com/cody',
+            productName: 'Sourcegraph Cody',
+            productCategory: 'dev-tool',
+            priceRange: '0-59',
+            label: 'sourcegraph.com에서 Sourcegraph Cody 가격 확인',
+          },
+        ],
+      },
+      decisionFlowchart: {
+        id: 'decision-flowchart',
+        title: '결정 흐름도: 4가지 질문으로 AI 코딩 도구 선택',
+        content:
+          '**4가지 질문을 순서대로 따르면 대부분의 개발자가 하나의 도구에 도달합니다.**',
+        items: [
+          '**1. 코드가 자신의 컴퓨터에 남아야 합니까?** 예: 로컬 LLM 지원이 필요합니다 — 질문 2로 계속. 아니요: 클라우드 도구가 유효합니다 — 질문 3으로 건너뜀.',
+          '**2. 로컬 LLM을 위한 GPU가 있습니까?** 예: Continue.dev(무료) 또는 Cursor(유료, 맞춤형 엔드포인트 사용). 아니요: 로컬 LLM이 불가능합니다 — 클라우드 도구가 유일한 옵션.',
+          '**3. 단독 개발자입니까 아니면 팀입니까?** 단독: 최고 편집기를 위해 Cursor, 가장 저렴한 GitHub 통합 옵션을 위해 GitHub Copilot. 팀: 질문 4로 계속.',
+          '**4. 팀이 전체 코드베이스 컨텍스트와 감사 로그가 필요합니까?** 예: Sourcegraph Cody. 아니요: 생태계 통합을 위해 GitHub Copilot, 또는 로컬 LLM 지원이 여전히 필요하다면 Continue.dev.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'AI 코딩 도구를 선택할 때 먼저 코드가 로컬에 남아야 하는지, 다음으로 GPU가 있는지, 그 다음 단독 작업인지 팀 작업인지, 마지막으로 전체 코드베이스 컨텍스트가 필요한지를 결정하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '엄격한 규칙부터 시작하십시오: 코드가 자신의 컴퓨터에 남아야 합니까? 그렇다면 로컬 모델을 실행하는 도구와 GPU가 필요합니다. 아니라면 나머지 질문은 편집기를 얼마나 세련되게 원하는지, 그리고 팀이 전체 프로젝트 이해가 필요한지입니다.',
+          },
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '가입 및 가격 안내',
+        content:
+          '**각 도구는 공급업체 자체 사이트에서 가입하고 어떤 요금제가 해당 가격을 포함하는지 확인하십시오.** 아래 링크는 각 공급업체로 직접 연결됩니다; 제휴 태그가 없으며 수수료가 발생하지 않습니다.',
+        items: [
+          '**Continue.dev:** continue.dev에서 설치 — 무료, 오픈소스이며 로컬 전용 사용에는 계정이 필요하지 않습니다.',
+          '**Cursor:** cursor.com에서 구독 — 제한된 무료 요금제가 있으며, Pro 요금제는 2026년 5월 스냅샷 기준 월 약 $20.',
+          '**GitHub Copilot:** github.com/features/copilot에서 구독 — 개인 요금제 월 약 $10; 클라우드 전용, 로컬 LLM 모드 없음.',
+          '**Sourcegraph Cody:** sourcegraph.com/cody에서 가입 — 표준 요금제 사용자당 월 약 $9, 엔터프라이즈 요금제는 더 비쌉니다; 현재 요금제를 확인하십시오.',
+          '**먼저 무료로 시도:** Continue.dev는 무료이며, Cursor와 Cody에는 무료 요금제가 있습니다 — 비용을 지불하기 전에 실제 워크플로우로 테스트하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '개발자 도구 가격은 요금제 개편에 따라 변경됩니다. 이 가이드의 모든 수치는 2026년 5월 스냅샷입니다 — 구독 전에 공급업체 가격 페이지를 열고 어떤 요금제(개인, 사용자당, 엔터프라이즈)가 해당 가격을 포함하는지 확인하십시오.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.continue.dev/',
+            productName: 'Continue.dev',
+            productCategory: 'dev-tool',
+            priceRange: '0-0',
+            label: 'continue.dev에서 Continue.dev 받기',
+          },
+          {
+            url: 'https://www.cursor.com/pricing',
+            productName: 'Cursor',
+            productCategory: 'dev-tool',
+            priceRange: '0-20',
+            label: 'cursor.com에서 Cursor 가격 확인',
+          },
+          {
+            url: 'https://github.com/features/copilot',
+            productName: 'GitHub Copilot',
+            productCategory: 'dev-tool',
+            priceRange: '0-10',
+            label: 'github.com에서 GitHub Copilot 가격 확인',
+          },
+          {
+            url: 'https://sourcegraph.com/cody',
+            productName: 'Sourcegraph Cody',
+            productCategory: 'dev-tool',
+            priceRange: '0-59',
+            label: 'sourcegraph.com에서 Sourcegraph Cody 가격 확인',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'AI 코딩 도구 선택 시 흔한 실수',
+        items: [
+          '**로컬 LLM 지원을 확인하기 전에 자동완성 품질로 분류하는 것.** 독점 또는 규제 코드의 경우 도구가 로컬에서 실행될 수 있는지가 결정적 기준입니다. 먼저 그것을 확인하고 나서 품질을 비교하십시오.',
+          '**GitHub Copilot에 로컬 모드가 있다고 가정하는 것.** 없습니다 — GitHub Copilot은 클라우드 전용입니다. 자신의 컴퓨터에 남아야 하는 코드에는 Continue.dev 또는 로컬 LLM을 사용하는 Cursor를 선택하십시오.',
+          '**Continue.dev가 무료로 실행하는 로컬 LLM을 위해 유료 도구를 구매하는 것.** 완전히 로컬이고 오픈소스인 워크플로우가 목표라면 Continue.dev는 비용 없이 그것을 수행합니다. Cursor나 Cody는 편집기나 팀 기능 때문에 지불하는 것이지, 단순히 로컬 지원 능력 때문이 아닙니다.',
+          '**GPU 없이 로컬 LLM을 실행하려는 것.** 로컬 코딩 모델은 약 8GB 이상의 VRAM이 필요합니다. 전용 GPU가 없는 컴퓨터에서는 로컬 코딩 LLM이 실행 불가능합니다 — 대신 클라우드 도구를 사용하십시오.',
+          '**로컬 모델을 GPU에 맞추지 않는 것.** Qwen3 Coder 7B는 소형 GPU에 적합하고, 14B는 중간 크기 표준이며, 33B 클래스 모델은 약 24GB VRAM이 필요합니다. GPU가 실제로 처리할 수 있는 모델을 선택하십시오.',
+          '**오래된 가격이나 잘못된 요금제에 집착하는 것.** 개발자 도구 요금제는 변경되며, 사용자당 가격은 개인 가격이 아닙니다. 공급업체 가격 페이지에서 현재 수치와 요금제를 확인하십시오.',
+          '**단독 작업에 팀 도구를 선택하는 것.** Sourcegraph Cody의 강점은 전체 코드베이스 컨텍스트와 감사 로그 — 팀 규모 기능입니다. 단독 개발자는 Continue.dev나 Cursor로 더 잘 서비스를 받습니다.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[로컬 LLM을 위한 최고의 AI 코딩 어시스턴트](/ko/local-llms/best-ai-coding-assistant-local-llm) — 로컬 LLM 지원별 AI 코딩 도구 비교, 검증된 가격 및 설정 테스트가 포함된 PromptQuorum 비교.',
+          '[Continue.dev — 문서](https://docs.continue.dev/) — Ollama 및 LM Studio 설정을 포함한 Continue.dev 공식 문서.',
+          '[Cursor — 가격](https://www.cursor.com/pricing) — Cursor 공식 가격 및 요금제 세부 정보.',
+          '[GitHub Copilot — 요금제](https://github.com/features/copilot/plans) — GitHub Copilot 공식 요금제 및 가격 세부 정보.',
+          '[Sourcegraph Cody — 가격](https://sourcegraph.com/pricing) — Sourcegraph Cody 공식 가격 및 요금제 세부 정보.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '어떤 AI 코딩 도구가 로컬 LLM을 가장 잘 지원합니까?',
+            a: 'Continue.dev입니다. Ollama, LM Studio, llama.cpp를 나중에 추가된 기능이 아니라 주요 대상으로 구축했습니다. 설정에 약 5분이 걸립니다: 설정 파일에서 로컬 엔드포인트를 지정하면 됩니다. 모든 기능이 로컬에서 작동하며, Apache 2.0 하에 무료 오픈소스이고, 로컬 전용 사용에는 계정이 필요하지 않습니다.',
+          },
+          {
+            q: 'Cursor가 로컬 LLM 위에서 실행될 수 있습니까?',
+            a: '예, 로컬 모델을 OpenAI 호환 맞춤형 API 엔드포인트로 설정하여 가능합니다. 그러면 완성이 로컬 모델로 라우팅됩니다. 이것은 작동하지만 Continue.dev보다 번거롭습니다 — 약 15분의 설정이 필요하며, Composer와 같은 일부 에이전트 기능은 클라우드 모델을 선호하거나 폴백할 수 있습니다.',
+          },
+          {
+            q: 'GitHub Copilot이 로컬 LLM을 지원합니까?',
+            a: '아니요. GitHub Copilot은 클라우드 전용이며 로컬 LLM 모드가 없으므로 코드 컨텍스트가 항상 공급업체에 전송됩니다. 독점 코드, NDA 작업, 또는 규제 산업의 경우 이것이 GitHub Copilot을 배제합니다 — 대신 Continue.dev 또는 로컬 LLM을 사용하는 Cursor를 선택하십시오. GitHub Copilot은 프라이버시가 제한 사항이 아닌 공개 또는 오픈소스 코드에 적합합니다.',
+          },
+          {
+            q: 'Continue.dev는 정말 무료입니까?',
+            a: '예. Continue.dev는 Apache 2.0 라이선스 하에 진정으로 무료 오픈소스이며 프리미엄 요금제가 없습니다. 로컬 LLM을 사용하는 단독 개발자에게는 어떠한 함정도 없습니다 — 계정, 구독이 필요 없습니다. 프로젝트는 개인 로컬 사용자에게 요금을 부과하지 않고 선택적 호스팅 서비스와 엔터프라이즈 계약을 통해 개발 자금을 조달합니다.',
+          },
+          {
+            q: '로컬 LLM 코딩을 실행하려면 어떤 하드웨어가 필요합니까?',
+            a: '약 8GB 이상의 VRAM이 있는 GPU가 필요합니다. Qwen3 Coder 7B는 소형 시스템에 적합하고, 14B 모델이 중간 크기 표준이며, 33B 클래스 모델은 약 24GB VRAM이 필요합니다. 전용 GPU가 없는 컴퓨터에서는 로컬 코딩 LLM 실행이 실용적이지 않으며, 클라우드 도구가 유일한 현실적인 옵션입니다.',
+          },
+          {
+            q: '개발 팀에 가장 적합한 도구는 무엇입니까?',
+            a: '팀이 전체 코드베이스 컨텍스트가 필요할 때 Sourcegraph Cody입니다. Cody는 전체 프로젝트를 읽어 대규모 리팩터링에 의존하며, 규정 준수에 민감한 팀을 위한 관리자 콘솔과 감사 로그를 추가합니다. 표준 요금제는 2026년 5월 스냅샷 기준 사용자당 월 약 $9이며, 엔터프라이즈 요금제는 더 비쌉니다.',
+          },
+          {
+            q: 'Cursor와 Continue.dev 중 어느 것을 선택해야 합니까?',
+            a: '무료, 완전 로컬, 오픈소스 워크플로우가 우선순위라면 Continue.dev를 선택하십시오 — 비용과 계정 없이 Ollama와 함께 작동합니다. 최고의 편집기와 자동완성을 원하고 1인당 구독을 수락한다면 Cursor(월 약 $20)를 선택하십시오. Cursor도 로컬 LLM을 사용할 수 있지만, Continue.dev가 더 예측 가능한 로컬 우선 옵션입니다.',
+          },
+          {
+            q: '클라우드 AI 코딩 도구가 최선인 경우는 언제입니까?',
+            a: '코드가 공개적이거나 오픈소스이고 프라이버시가 제한 사항이 아닐 때, 로컬 모델을 실행할 GPU가 없을 때, 또는 설정 속도가 로컬보다 더 중요할 때 — 클라우드 도구는 몇 분 만에 생산적으로 사용할 수 있습니다. 최고의 클라우드 코딩 모델도 어려운 알고리즘 문제에서 로컬 옵션을 능가합니다. 그런 작업에는 GitHub Copilot 또는 클라우드 모델을 사용하는 Cursor가 현실적인 선택입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽기 자료',
+        items: [
+          '[로컬 LLM 지원별 AI 코딩 어시스턴트 비교](/ko/local-llms/best-ai-coding-assistant-local-llm) — 이 가이드 뒤에 있는 더 깊이 있는 기능 및 설정 비교.',
+          '[코딩 작업을 위한 로컬 LLM 선택](/ko/local-llms/best-local-llms-for-coding) — Qwen3 Coder를 포함하여 코드 생성에 가장 강력한 모델.',
+          '[Ollama로 첫 번째 로컬 LLM 설정](/ko/local-llms/run-first-local-llm) — Continue.dev가 연결하는 Ollama의 단계별 설치.',
+          '[로컬 코딩 모델 실행을 위한 GPU 선택](/ko/local-llms/best-gpus-for-local-llms) — 여기서 언급된 7B, 14B, 33B 코딩 모델의 VRAM 요구사항.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '2026년 최고의 AI 코딩 도구 비교: Cursor vs Continue.dev',
+      description: '2026년 최고의 AI 코딩 도구 비교: GitHub Copilot, Cursor, Cline, Continue.dev 등. 가격, 로컬 vs 클라우드, 자동완성 및 에이전트 기능 분석.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/best-ai-coding-tools-comparison-2026',
+      inLanguage: 'ko',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: '2026년 최고의 AI 코딩 도구 비교', item: 'https://www.promptquorum.com/ko/power-local-llm/best-ai-coding-tools-comparison-2026' },
+      ],
+    },
+  },
 }
