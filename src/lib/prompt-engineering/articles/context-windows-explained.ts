@@ -3,7 +3,7 @@
 // Generated: 2026-04-26T09:45:32.245Z
 
 import type { Language } from "@/lib/blog/blogContent";
-import { contextWindowsDe, contextWindowsFr, contextWindowsJa, contextWindowsZh, contextWindowsEs, contextWindowsPt, contextWindowsAr } from "@/lib/prompt-engineering/contextWindowsTranslations";
+import { contextWindowsDe, contextWindowsFr, contextWindowsJa, contextWindowsZh, contextWindowsEs, contextWindowsPt, contextWindowsAr, contextWindowsKo } from "@/lib/prompt-engineering/contextWindowsTranslations";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
 

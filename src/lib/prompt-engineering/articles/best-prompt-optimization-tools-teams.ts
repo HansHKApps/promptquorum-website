@@ -3562,4 +3562,491 @@ tests:
       ],
     },
   },
+  ko: {
+    theme: 'Tools & Platforms',
+    title: '팀을 위한 최고의 프롬프트 최적화 도구',
+    seoTitle: '팀을 위한 프롬프트 최적화 도구 2026: 최고 순위 비교',
+    intro: '**팀을 위한 프롬프트 최적화에는 네 가지 핵심 기능이 필요합니다: 버전 관리 저장소, 변형 A/B 테스트, 출력 점수 평가, 협업 검토. 단일 도구로는 네 가지를 모두 충족할 수 없습니다. 이 가이드는 팀 유형, 가격, 워크플로 적합성을 기준으로 일곱 개의 전문 도구 — 그리고 다중 모델 비교를 위한 PromptQuorum — 를 순위별로 정리합니다.**',
+    metaDescription: '버전 관리, A/B 테스트, 점수 평가, 검토를 모두 커버하는 단일 도구는 없습니다. Braintrust는 평가에서 선두, Vellum은 A/B 테스트에서 선두, Promptfoo는 무료입니다. 팀 규모별 스택 추천.',
+    ogTitle: '팀이 매주 5시간 이상 프롬프트 조정에 쓰고 있다면? 이 도구들이 해결합니다',
+    ogDescription: 'Vellum은 A/B 테스트를 1시간 이내로 단축합니다. DSPy는 20개의 예시만으로 자동 최적화합니다. Promptfoo는 무료입니다. 어떤 스택이 귀하의 팀에 맞습니까?',
+    twitterTitle: '팀을 위한 프롬프트 최적화 도구 2026: 6가지 비교',
+    twitterDescription: '대부분의 팀에는 정확히 2가지 도구가 필요합니다 — 평가용 1개, 배포용 1개. 5가지 모두 구매하면 월 $1,000 이상을 낭비합니다. 팀 유형별 의사결정 매트릭스 포함.',
+    publishDate: '2026-04-10',
+    dateModified: '2026-04-29',
+    readTime: '10분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '다수의 인원이 함께 LLM 워크플로를 구축하는 엔지니어링 매니저 및 프롬프트 엔지니어',
+    primaryTerm: '팀을 위한 프롬프트 최적화 도구',
+    aboutTopics: ['프롬프트 최적화', '팀 협업', 'LLM 평가'],
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-10-10',
+    targetKeywords: [
+      '팀 프롬프트 최적화 도구',
+      'LLM 프롬프트 최적화 소프트웨어',
+      '프롬프트 A/B 테스트',
+      '팀용 프롬프트 관리',
+      'Braintrust 대 Vellum',
+      'Promptfoo CI/CD',
+      'DSPy 팀 워크플로',
+    ],
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '팀을 위한 프롬프트 최적화란?', anchor: '#what-is-prompt-optimization' },
+      { label: '도구 평가 기준', anchor: '#evaluation-criteria' },
+      { label: 'Braintrust: 평가 중심 협업', anchor: '#braintrust' },
+      { label: 'DSPy: 자동화된 프롬프트 프로그래밍', anchor: '#dspy' },
+      { label: 'PromptPerfect: UI 기반 최적화', anchor: '#promptperfect' },
+      { label: 'Vellum: 프로덕션 A/B 테스트', anchor: '#vellum' },
+      { label: 'Promptfoo: 오픈소스 CI/CD 테스트', anchor: '#promptfoo' },
+      { label: 'Helicone: 가시성 + 실험', anchor: '#helicone' },
+      { label: 'PromptQuorum: 비교를 위한 다중 모델 디스패치', anchor: '#promptquorum' },
+      { label: '나란히 비교 표', anchor: '#comparison-table' },
+      { label: '어떤 팀에 어떤 도구가 맞나?', anchor: '#which-tool' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '프롬프트 최적화 스택 선택 방법', anchor: '#how-to-choose' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+      { label: '출처', anchor: '#sources' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', text: '팀을 위한 프롬프트 최적화에는 버전 관리 저장소, A/B 테스트, 출력 점수 평가, 협업 검토의 네 가지 기능이 필요하며 — 이를 모두 충족하는 단일 도구는 존재하지 않습니다.' },
+      { type: 'plain-terms', text: '프롬프트 최적화 도구는 팀이 AI 프롬프트를 체계적으로 개선하고, 변형을 비교하며, 출력 품질을 측정할 수 있게 합니다. Braintrust, Vellum, Promptfoo, DSPy, Helicone, PromptPerfect, PromptQuorum 각각은 서로 다른 팀 필요에 맞춰져 있습니다.' },
+    ],
+    sections: {
+      keyTakeaways: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '팀을 위한 프롬프트 최적화에는 네 가지 기능이 필요합니다: 버전 관리 저장소, 변형 A/B 테스트, 출력 점수 평가, 협업 검토 — 단일 도구로는 네 가지를 모두 충족할 수 없습니다.',
+          'Braintrust는 평가 중심 팀에 적합하고, Vellum은 프로덕션 A/B 테스트에, DSPy는 자동화된 최적화에, Promptfoo는 CI/CD 통합에 가장 앞서 있습니다.',
+          '오픈소스 옵션(DSPy, Promptfoo)은 무료이지만 기술적인 설정이 필요합니다 — 팀 도입 전 1–2일의 설정 기간을 예상하십시오.',
+          '매주 5시간 이상 수동으로 프롬프트를 조정하는 팀은 체계적인 A/B 테스트를 도입해야 합니다; Vellum이나 Promptfoo의 실험 모듈을 사용하면 1시간 이내로 단축됩니다.',
+          'PromptQuorum: 다중 모델 디스패치 — 특정 공급업체를 위해 최적화하기 전에 동일한 프롬프트가 25개 이상의 모델에서 어떻게 작동하는지 비교하십시오.',
+          '단일 도구 함정을 피하십시오: 대부분의 팀은 2가지 도구가 필요합니다 — 평가용(Braintrust 또는 Promptfoo)과 배포/버전 관리용(Vellum 또는 PromptHub).',
+          '가격은 무료(DSPy, Promptfoo)부터 월 $200–600(Vellum, Braintrust)까지 다양합니다 — 팀 규모와 API 호출 볼륨이 주요 비용 요인입니다.',
+        ],
+      },
+      whatIsPromptOptimization: {
+        id: 'what-is-prompt-optimization',
+        title: '팀을 위한 프롬프트 최적화란?',
+        content: [
+          '**프롬프트 최적화는 구조화된 반복, 변형 테스트, 출력 측정을 통해 AI 프롬프트를 체계적으로 개선하는 프로세스입니다 — 즉흥적인 프롬프트 작성과는 다릅니다.** 엔지니어가 프롬프트를 조정하고 구두로 공유할 때 개선 사항은 재현하거나 비교할 수 없습니다. 팀이 체계적인 최적화를 채택하면 모든 엔지니어가 동일한 프롬프트 라이브러리를 편집하고, 동일한 테스트 데이터셋을 기준으로 변형을 비교하며, 어떤 변경이 실제로 품질을 향상시키는지 추적합니다.',
+          '팀 최적화가 개인 작업과 다른 점: 여러 엔지니어가 동시에 편집하는 공유 프롬프트 라이브러리, 프로덕션 프롬프트의 무단 변경을 방지하는 검토 워크플로, 실제 영향을 측정하는 A/B 실험, 컴플라이언스를 위한 감사 추적. 개인적인 프롬프트 조정은 빠르지만 취약합니다; 팀 최적화는 설정에 시간이 더 걸리지만 확장 가능합니다.',
+          '이 가이드는 프롬프트 최적화(프롬프트를 더 좋게 만들기)와 프롬프트 관리(구성 및 배포), 프롬프트 평가(품질 측정)를 구별합니다. 대부분의 팀은 세 가지 범주 모두에 도구가 필요합니다. 최적화 중 다중 모델 비교를 위해 [PromptQuorum](/features)은 프롬프트를 25개 이상의 AI 공급업체에 동시에 전송합니다 — 프롬프트 변경이 모델 전반에 걸쳐 일반화되는지 검증하는 팀에 유용합니다.',
+          '최적화 중심 도구만이 아닌 모든 프롬프트 엔지니어링 도구의 광범위한 비교는 [최고의 프롬프트 엔지니어링 도구 2026: 사용 사례별 순위](/ko/prompt-engineering/best-prompt-engineering-tools-2026)를 참조하십시오.',
+        ],
+      },
+      evaluationCriteria: {
+        id: 'evaluation-criteria',
+        title: '도구 평가 기준',
+        content: [
+          '**여섯 가지 도구를 다섯 가지 기준으로 평가했습니다: 팀 협업 기능, A/B 테스트 기능, 평가/점수 지원, CI/CD 통합, 가격 투명성.** 각 기준은 팀 프롬프트 워크플로에서 실제 병목 현상을 반영합니다.',
+        ],
+        columns: ['기준', '팀에 중요한 이유', '최소 수용 기준'],
+        rows: [
+          {
+            '기준': '팀 협업',
+            '팀에 중요한 이유': '여러 엔지니어가 서로 덮어쓰지 않고 프롬프트를 편집합니다',
+            '최소 수용 기준': '역할 기반 접근 제어 또는 브랜칭/버전 관리',
+          },
+          {
+            '기준': '변형 A/B 테스트',
+            '팀에 중요한 이유': '동일한 입력 세트에서 프롬프트 변형을 비교합니다',
+            '최소 수용 기준': '점수 평가를 포함한 나란히 출력 비교',
+          },
+          {
+            '기준': '평가 지원',
+            '팀에 중요한 이유': '단순 관찰이 아닌 출력 품질 측정',
+            '최소 수용 기준': '수동 검토만이 아닌 사용자 정의 지표',
+          },
+          {
+            '기준': 'CI/CD 통합',
+            '팀에 중요한 이유': '배포 전 프롬프트 회귀를 감지합니다',
+            '최소 수용 기준': '파이프라인에서 실행되는 CLI 또는 API',
+          },
+          {
+            '기준': '가격 투명성',
+            '팀에 중요한 이유': '3–10명 팀의 예산 예측 가능성',
+            '최소 수용 기준': '공개 가격 페이지; "영업팀에 문의"만은 불가',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust: 평가 중심 협업',
+        content: [
+          '**Braintrust는 팀이 사용자 정의 지표에 따라 LLM 출력을 점수화하고, 프로덕션의 모든 호출을 기록하며, 실험 결과를 공유할 수 있게 하는 AI 평가 플랫폼입니다 — 출력 품질을 체계적으로 측정하는 팀에 이상적입니다.** Braintrust는 프롬프트 빌더나 버전 관리 시스템이 아닙니다; 팀이 사용자 정의 점수 함수를 설계하고, 모든 API 호출을 기록하며, 실험을 실행하는 공유 연구실입니다.',
+          'Team 플랜은 월 ~$500입니다. 로깅 프록시는 코드 변경 없이 OpenAI, Anthropic, Google API를 지원합니다. 점수 함수는 TypeScript 또는 Python으로 작성합니다. GitHub 통합을 통해 코드와 함께 프롬프트를 버전 관리합니다. 단점: 사용자 정의 점수를 설정하고 유지하기 위한 기술적 전문성이 필요합니다.',
+          '팀 기능에는 공유 실험 대시보드(모든 구성원이 실시간으로 동일한 평가 결과를 봄), 역할 기반 접근 제어(관리자/구성원/관찰자), 프롬프트 버전의 Git 스타일 커밋 이력, 프로덕션 로깅(입력, 출력, 점수가 기록된 모든 API 호출)이 포함됩니다.',
+        ],
+        items: [
+          '공유 실험 대시보드: 모든 팀 구성원이 실시간으로 평가 결과를 확인합니다',
+          '역할 기반 접근 제어: 관리자/구성원/관찰자 역할',
+          'Git 스타일 커밋 이력을 통한 프롬프트 버전 관리',
+          '프로덕션 로깅: 입력/출력/점수가 기록된 모든 API 호출',
+        ],
+      },
+      dspy: {
+        id: 'dspy',
+        title: 'DSPy: 자동화된 프롬프트 프로그래밍',
+        content: [
+          '**DSPy(Stanford NLP Group, 2023)는 수동으로 작성된 프롬프트를 입력/출력 예시 훈련 세트를 사용하여 자동으로 지침을 최적화하는 학습 가능한 모듈로 대체합니다 — Python에 익숙한 기술 팀에 이상적입니다.** DSPy는 오픈소스(Apache 2.0)이며 무료입니다. 수동으로 프롬프트를 작성하는 대신 DSPy에서 작업을 정의하면 예시를 통해 최적의 지침을 학습합니다.',
+          'Python 3.9+가 필요합니다. LiteLLM 백엔드를 통해 모든 LLM과 작동합니다. 최적화를 위해 일반적으로 레이블이 지정된 20–50개의 예시 훈련 세트로 충분합니다. BootstrapFewShot 최적화기가 팀 친화적으로 가장 적합합니다(GPU 불필요, 복잡한 수학 불필요). 표준 Git 워크플로를 통한 팀 친화성 — SaaS 의존성 없음, 월별 청구서 없음. 단점: 인터페이스 없음; 기술적 설정 필요(팀 도입 전 1–2일).',
+          '레이블이 지정된 데이터셋을 보유하고 있으며 재현 가능하고 버전 관리된 프롬프트 최적화를 원하는 연구 및 ML 팀에 이상적입니다.',
+        ],
+      },
+      promptperfect: {
+        id: 'promptperfect',
+        title: 'PromptPerfect: UI 기반 최적화',
+        content: [
+          '**PromptPerfect는 시각적 인터페이스를 갖춘 SaaS 프롬프트 최적화 도구입니다 — 팀이 프롬프트를 붙여넣고 모델을 선택하면 코드 없이 품질 점수와 함께 최적화된 변형을 받습니다.** 코드 없이 프롬프트 개선이 필요한 비기술적 사용자(콘텐츠, 마케팅, 제품 팀)를 위해 설계되었습니다.',
+          'Starter 플랜 월 $9.99; Team 플랜 ~월 $49.99(최대 5명). GPT-5.5, Claude, Gemini, Stable Diffusion을 지원합니다. UI는 최적화된 프롬프트 + 변경 사항에 대한 자연어 설명을 반환합니다. 대부분의 구성원이 엔지니어가 아닌 팀에 이상적입니다. 단점: DSPy보다 제어 기능이 적음; CI/CD 통합 없음; 사전 정의된 최적화 전략으로 제한됨.',
+        ],
+        items: [
+          '코드 없는 UI: 프롬프트를 붙여넣고 모델을 선택하면 최적화된 변형을 받습니다',
+          '변경 설명: 각 최적화에 대한 자연어 근거',
+          '다중 모델 지원: GPT-5.5, Claude, Gemini, Stable Diffusion',
+        ],
+      },
+      vellum: {
+        id: 'vellum',
+        title: 'Vellum: 프로덕션 A/B 테스트',
+        content: [
+          '**Vellum은 프롬프트 변형 간 프로덕션 트래픽을 라우팅하고 실제 출력 품질을 측정하는 내장 A/B 테스트를 갖춘 프롬프트 배포 플랫폼입니다 — 프로덕션에서 LLM 기능을 실행하는 팀에 이상적입니다.** Vellum은 단순한 테스트 도구가 아닙니다; 실제 사용자 트래픽을 프롬프트 변형으로 분할하고 성능을 측정하는 프로덕션 제어 플레인입니다.',
+          'Starter 월 $200; Growth 월 $500; Enterprise 맞춤형. A/B 테스트는 프롬프트 변형 간 트래픽을 비율로 분할합니다. 평가는 테스트 데이터셋에서 변형을 비교합니다. 팀 기능: 공유 워크스페이스, PR 스타일 프롬프트 검토, 배포 승인 워크플로. 단점: 가장 비싼 옵션; 실제 트래픽을 아직 처리하지 않는 프리 프로덕션 팀에게는 과도합니다.',
+          '실시간 LLM 기능을 보유하고 있으며 별도의 배포를 관리하지 않고 실제 사용자 트래픽에서 변형을 비교하려는 제품 팀에 이상적입니다.',
+        ],
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo: 오픈소스 CI/CD 테스트',
+        content: [
+          '**Promptfoo는 여러 모델에 대해 자동화된 프롬프트 테스트 스위트를 실행하는 오픈소스 CLI 도구입니다 — 팀이 배포 전 프롬프트 회귀를 감지하기 위해 CI/CD 파이프라인에 통합합니다.** YAML로 프롬프트 테스트 케이스를 정의하고, Git에 커밋하면 Promptfoo가 구성된 모든 모델에 대해 모든 PR에서 실행합니다.',
+          '무료(MIT 라이선스). CLI 우선, YAML 기반 구성. 프롬프트 테스트 스위트를 실행합니다: 입력, 예상 출력 패턴, 사용자 정의 LLM 기반 어설션(예: "응답은 3개의 글머리 기호를 포함해야 함")을 제공합니다. 40개 이상의 LLM 공급업체를 지원합니다. GitHub Actions 통합 가능. 팀 친화적: Git의 테스트 구성, CI에서 실행, 계정 필요 없음. 단점: 인터페이스 없음; 엔지니어 전용.',
+        ],
+        codeBlock: `prompts:
+  - "Summarize this in 3 bullet points: {{text}}"
+providers:
+  - openai:gpt-4-turbo
+  - anthropic:claude-opus-4.1
+tests:
+  - vars:
+      text: "Long document text here"
+    assert:
+      - type: contains
+        value: "•"
+      - type: llm-rubric
+        value: "Response has exactly 3 bullet points"`,
+        codeLanguage: 'yaml',
+      },
+      helicone: {
+        id: 'helicone',
+        title: 'Helicone: 가시성 + 실험',
+        content: [
+          '**Helicone은 모든 API 호출을 기록하고, 프롬프트별 비용/지연 시간을 추적하며, A/B 실험을 지원하는 LLM 가시성 플랫폼입니다 — 품질 모니터링과 함께 실시간 비용 가시성이 필요한 팀에 이상적입니다.** Helicone은 프롬프트 빌더가 아닙니다; 앱과 LLM API 사이에 위치하여 모든 호출을 기록하는 프록시입니다.',
+          '무료 티어(월 10만 요청); Pro 월 $20; Growth 월 $200. 원 라인 통합: OpenAI 클라이언트에서 Helicone을 가리키도록 `baseURL`을 변경합니다. 사용자 정의 속성은 프롬프트 버전, 사용자 또는 기능별로 요청에 레이블을 지정합니다. 실험 모듈은 프로덕션 트래픽에서 프롬프트 변형을 비교합니다. 공유 팀 대시보드는 지출, 오류, 지연 시간, 실험 결과를 표시합니다. 스타트업과 비용 의식적인 팀에 이상적입니다.',
+        ],
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'PromptQuorum: 비교를 위한 다중 모델 디스패치',
+        content: [
+          '**PromptQuorum은 프롬프트를 25개 이상의 AI 모델에 동시에 전송하고 나란히 출력을 반환합니다 — 특정 모델이나 버전에 커밋하기 전에 GPT-5.5, Claude, Gemini, 로컬 LLM에서 프롬프트 변형이 어떻게 작동하는지 비교하는 가장 빠른 방법입니다.** 이전 평가 도구들과 달리(한 번에 하나의 모델을 테스트하는), PromptQuorum은 "이 프롬프트를 가장 잘 처리하는 모델은 무엇인가?"라는 질문에 단 한 번의 실행으로 답합니다.',
+          '심층 평가를 위해 Braintrust로, 프로덕션 A/B 테스트를 위해 Vellum으로 라우팅하기 전에 첫 번째 단계로 PromptQuorum을 사용하십시오. 무료 티어 제공 — 기술적 설정 불필요. Ollama 및 LM Studio를 통한 로컬 LLM을 포함한 25개 이상의 모델 지원. 템플릿 지원이 있는 내장 프롬프트 프레임워크. 합의 점수를 통한 나란히 응답 비교.',
+          '특정 모델 공급업체를 위해 최적화할지 평가하는 팀이나 여러 LLM 옵션에서 동일한 프롬프트를 동시에 비교하려는 팀에 이상적입니다.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '나란히 비교 표',
+        content: [
+          '**다섯 가지 기준 모두에서 뛰어난 도구는 없습니다. Braintrust는 평가 깊이에서, Vellum은 프로덕션 A/B 테스트에서, Promptfoo는 CI/CD 통합에서, DSPy는 자동화된 최적화에서 앞서 있습니다.**',
+        ],
+        columns: ['도구', 'A/B 테스트', '협업', 'CI/CD', '가격', '최적 대상'],
+        rows: [
+          {
+            '도구': 'Braintrust',
+            'A/B 테스트': '✅ 실험',
+            '협업': '✅ 역할 + 대시보드',
+            'CI/CD': '✓ API',
+            '가격': '~월 $500',
+            '최적 대상': '평가 중심 팀',
+          },
+          {
+            '도구': 'DSPy',
+            'A/B 테스트': '✅ 자동화',
+            '협업': 'Git 기반',
+            'CI/CD': '✅ 네이티브',
+            '가격': '무료',
+            '최적 대상': '고도 기술 팀',
+          },
+          {
+            '도구': 'PromptPerfect',
+            'A/B 테스트': '⚠️ 변형만',
+            '협업': '✓ Team 플랜',
+            'CI/CD': '✗ 없음',
+            '가격': '월 $50',
+            '최적 대상': '비기술 사용자',
+          },
+          {
+            '도구': 'Vellum',
+            'A/B 테스트': '✅ 트래픽 분할',
+            '협업': '✅ PR 검토',
+            'CI/CD': '✓ 웹훅',
+            '가격': '월 $200–500',
+            '최적 대상': '프로덕션 배포',
+          },
+          {
+            '도구': 'Promptfoo',
+            'A/B 테스트': '✅ 다중 모델',
+            '협업': 'Git 기반',
+            'CI/CD': '✅ GitHub Actions',
+            '가격': '무료',
+            '최적 대상': 'CI/CD 중심 팀',
+          },
+          {
+            '도구': 'Helicone',
+            'A/B 테스트': '✓ 실험',
+            '협업': '✅ 공유 대시보드',
+            'CI/CD': '✓ API',
+            '가격': '무료–월 $200',
+            '최적 대상': '비용 의식적인 팀',
+          },
+          {
+            '도구': 'PromptQuorum',
+            'A/B 테스트': '✅ 다중 모델',
+            '협업': '✓ 공유 워크스페이스',
+            'CI/CD': '✗ CI/CD 없음',
+            '가격': '무료 + 크레딧',
+            '최적 대상': '다중 모델 비교',
+          },
+        ],
+      },
+      whichTool: {
+        id: 'which-tool',
+        title: '어떤 팀에 어떤 도구가 맞나?',
+        content: [
+          '**팀의 병목 현상에 도구를 맞추십시오: 평가 품질 → Braintrust; 자동화 최적화 → DSPy; 프로덕션 A/B 테스트 → Vellum; CI/CD 회귀 방지 → Promptfoo; 비용 모니터링 + 실험 → Helicone; 다중 모델 비교 → PromptQuorum.**',
+        ],
+        numberedItems: [
+          {
+            title: '연구/ML 팀 → DSPy',
+            whyItMatters: '레이블이 지정된 데이터셋에 대한 자동화된 최적화; 네이티브 Git 워크플로; SaaS 의존성 없음.',
+          },
+          {
+            title: '제품 + 엔지니어링 팀 → Vellum',
+            whyItMatters: '프로덕션 트래픽 분할, 승인 워크플로, PM 검토를 위한 비기술적 UI.',
+          },
+          {
+            title: '콘텐츠/마케팅 팀 → PromptPerfect',
+            whyItMatters: '코드 없는 UI, 공유 가능한 최적화된 프롬프트, 다중 모델 지원.',
+          },
+          {
+            title: 'DevOps/플랫폼 팀 → Promptfoo',
+            whyItMatters: 'YAML 기반 테스트 스위트, GitHub Actions, CI에서 회귀 감지.',
+          },
+          {
+            title: '지출을 모니터링하는 스타트업 → Helicone',
+            whyItMatters: '무료 티어는 월 10만 요청 처리; 첫날부터 프롬프트별 비용 가시성.',
+          },
+          {
+            title: '모든 팀(첫 번째 단계) → PromptQuorum',
+            whyItMatters: '모델별 최적화 도구에 투자하기 전에 특정 프롬프트에서 모델 성능을 비교하십시오.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        mistakes: [
+          {
+            mistake: '최적화를 일회성 작업으로 취급하기',
+            problem: '모델이 업데이트되고 데이터 드리프트가 발생함에 따라 프롬프트가 저하됩니다.',
+            fix: '동일한 테스트 데이터셋을 사용하여 월별 재평가를 예약하십시오. Promptfoo의 YAML 구성이 이를 재현 가능하게 만듭니다.',
+          },
+          {
+            mistake: '평가 데이터셋 구축 전 SaaS 도구 구매',
+            problem: '레이블이 지정된 20–50개의 입력/출력 예시 없이는 새 프롬프트가 실제로 더 나은지 측정할 수 없습니다.',
+            fix: '먼저 평가 데이터셋을 구축하십시오. 이것이 모든 최적화 작업의 기반입니다.',
+          },
+          {
+            mistake: '단일 모델을 심판으로 사용하기',
+            problem: 'GPT-5.5 출력을 GPT-5.5를 점수 모델로 평가하면 점수가 10–20% 부풀려집니다(model-as-judge 편향).',
+            fix: '점수 평가에 다른 모델을 사용하거나 ground truth를 위해 인간 평가를 사용하십시오.',
+          },
+          {
+            mistake: '변형 비교 시 토큰 비용 무시',
+            problem: '5% 더 높은 점수를 받지만 40% 더 많은 토큰을 사용하는 프롬프트는 절약하는 것보다 더 많은 비용이 들 수 있습니다.',
+            fix: 'Helicone 또는 Braintrust의 비용 추적을 사용하여 품질과 출력당 비용을 모두 추적하십시오.',
+          },
+          {
+            mistake: '품질 지표 합의 전 도구 채택',
+            problem: '좋은 출력을 정의하지 않고 Vellum이나 Braintrust를 구매한 팀은 최적화가 아니라 점수에 대한 논쟁으로 첫 달을 보냅니다.',
+            fix: '도구를 온보딩하기 전에 3–5개의 구체적인 품질 기준을 정의하십시오.',
+          },
+        ],
+      },
+      howToChoose: {
+        id: 'how-to-choose',
+        title: '프롬프트 최적화 스택 선택 방법',
+        numberedItems: [
+          '주요 병목 현상을 정의하십시오: 출력 품질, 비용, 지연 시간, 팀 속도 중 무엇입니까?',
+          '기술 깊이를 평가하십시오: 엔지니어로만 구성된 팀 → DSPy 또는 Promptfoo; 혼합 팀 → Vellum 또는 Braintrust.',
+          '도구를 평가하기 전에 레이블이 지정된 평가 데이터셋(20–50개의 입력/출력 쌍)을 구축하십시오.',
+          '기준 지표를 설정하기 위해 무료 도구(Promptfoo 또는 Helicone)로 시작하십시오.',
+          'SaaS 플랫폼 비용 지불 전 실제 팀 프롬프트로 2주간 파일럿을 실행하십시오.',
+          '두 가지 도구를 계획하십시오: 평가용(Braintrust, Promptfoo) + 배포/버전 관리용(Vellum, PromptHub).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '팀을 위한 프롬프트 최적화란 무엇입니까?',
+            a: '팀을 위한 프롬프트 최적화는 구조화된 A/B 테스트, 출력 점수 평가, 협업 검토를 통해 LLM 프롬프트를 체계적으로 개선하는 방법입니다. 단순한 프롬프트 작성과 달리 팀 최적화는 버전 관리, 역할 기반 접근, 재현 가능한 테스트 스위트를 갖춘 공유 도구가 필요합니다.',
+          },
+          {
+            q: '최적화와 프롬프트 관리의 차이는 무엇입니까?',
+            a: '프롬프트 관리는 프롬프트의 저장, 버전 관리, 배포를 다룹니다(PromptHub, Vellum). 프롬프트 최적화는 변형 테스트와 점수 평가를 통해 프롬프트 품질을 적극적으로 개선합니다. 대부분의 팀은 두 가지 모두 필요합니다: 프롬프트 구성을 위한 관리와 시간이 지남에 따라 개선하기 위한 최적화.',
+          },
+          {
+            q: '3명 팀에게 DSPy를 배우는 것이 가치 있습니까?',
+            a: '적어도 한 명이 Python에 능숙하다면 그렇습니다. DSPy는 레이블이 지정된 데이터셋을 사용하여 프롬프트 작성의 시행착오 과정을 자동화하여 일반적으로 수동 반복 시간을 50–70% 줄입니다. 비기술 팀의 경우 PromptPerfect가 코드 없이 유사한 자동화된 개선을 제공합니다.',
+          },
+          {
+            q: '5명 팀의 프롬프트 최적화 스택 비용은 얼마입니까?',
+            a: '도구 선택에 따라 월 $0–$700을 예산으로 책정하십시오. 무료 스택(DSPy + Promptfoo + Helicone 무료 티어)은 대부분의 사용 사례를 커버합니다. Vellum 또는 Braintrust를 포함한 SaaS 스택은 월 $200–700입니다. 비용은 API 호출 볼륨과 팀 규모에 따라 확장됩니다.',
+          },
+          {
+            q: '프롬프트가 실제로 더 나아졌는지 어떻게 측정합니까?',
+            a: '작업에 대한 3–5개의 구체적인 품질 기준을 정의하십시오(정확도, 형식 준수, 어조, 길이). 20–50개의 입력/출력 예시 테스트 데이터셋을 구축하십시오. LLM-as-judge(평가 대상과 다른 모델)나 인간 검토를 사용하여 출력을 점수화하십시오. Braintrust와 Promptfoo 모두 사용자 정의 점수 함수를 지원합니다.',
+          },
+          {
+            q: 'Promptfoo가 Braintrust를 대체할 수 있습니까?',
+            a: 'Promptfoo(오픈소스, CLI)는 자동화된 테스트 스위트 실행과 CI/CD 통합을 잘 처리합니다. Braintrust는 공유 인터페이스, 프로덕션 로깅, 팀 대시보드를 추가합니다. 대부분의 엔지니어링 팀은 Promptfoo(무료)로 시작하여 전체 팀이 평가 결과 가시성이 필요할 때 Braintrust로 전환합니다.',
+          },
+          {
+            q: 'Helicone은 모든 LLM 공급업체와 작동합니까?',
+            a: 'Helicone은 OpenAI, Anthropic(Claude), Groq, Mistral, Gemini, Azure OpenAI 및 OpenAI 호환 엔드포인트를 지원합니다. 통합에는 API 클라이언트의 URL 변경만 필요합니다 — SDK 의존성 없음.',
+          },
+          {
+            q: '팀이 Promptfoo 대신 Vellum을 사용해야 하는 경우는 언제입니까?',
+            a: '프로덕션 트래픽 분할(실제 사용자를 통한 A/B 테스트), 비기술 팀 구성원이 UI를 통해 프롬프트를 관리하는 경우, 또는 프롬프트 배포 전 PR 스타일 승인 워크플로가 필요할 때 Vellum을 사용하십시오. YAML과 CLI 도구에 익숙한 팀에서 CI/CD 통합이 필요할 때는 Promptfoo를 사용하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        items: [
+          '[프롬프트 최적화 기초: 실용 가이드](/ko/prompt-engineering/fundamentals-of-prompt-optimization)',
+          '[프롬프트 품질 평가 방법: 지표와 방법론](/ko/prompt-engineering/how-to-evaluate-prompt-quality)',
+          '[수동 vs 자동 프롬프트 최적화: 각각 언제 사용할까](/ko/prompt-engineering/manual-vs-automated-prompt-optimization)',
+          '[최고의 프롬프트 엔지니어링 도구 2026: 사용 사례별 순위](/ko/prompt-engineering/best-prompt-engineering-tools-2026)',
+          '[최고의 프롬프트 관리 플랫폼 2026](/ko/prompt-engineering/best-prompt-management-platforms)',
+          '[모델 간 프롬프트 테스트 방법](/ko/prompt-engineering/how-to-test-prompts-across-models)',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        content: [
+          '마지막 사실 확인: 2026-04-29 — 모든 가격, 기능 및 통합이 공식 문서를 기준으로 검증되었습니다.'
+        ],
+        items: [
+          '[Khattab et al., 2023. "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714](https://arxiv.org/abs/2310.03714) — DSPy 기초 논문; 자동화된 프롬프트 최적화 기능 주장의 근거.',
+          '[Zheng et al., 2023. "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." NeurIPS 2023](https://arxiv.org/abs/2306.05685) — model-as-judge 편향 발견; 흔한 실수에서 10–20% 부풀림 주장의 근거.',
+          '[Braintrust 가격 페이지 — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — Braintrust Team 티어 월 $500 주장의 근거.',
+          '[Promptfoo GitHub 저장소 — github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) — 오픈소스 프롬프트 테스트 CI/CD 프레임워크; Promptfoo 기능 주장의 근거.',
+          '[Vellum 플랫폼 — vellum.ai](https://www.vellum.ai/) — 프로덕션 배포 플랫폼; A/B 테스트 및 승인 워크플로 주장의 근거.',
+          '[Helicone 문서 — docs.helicone.ai](https://docs.helicone.ai/) — 가시성 플랫폼; 프록시 통합 및 실험 기능 주장의 근거.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '팀을 위한 최고의 프롬프트 최적화 도구 2026',
+      description: '팀 규모의 프롬프트 최적화를 위한 여섯 가지 도구: A/B 테스트, 협업 기능, CI/CD 통합, 가격 비교.',
+      url: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-optimization-tools-for-teams',
+      inLanguage: 'ko',
+      datePublished: '2026-04-10',
+      dateModified: '2026-04-29',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        url: 'https://www.promptquorum.com/about',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: '프롬프트 최적화' },
+        { '@type': 'Thing', name: 'LLM 평가' },
+        { '@type': 'Thing', name: '팀 협업' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'DSPy' },
+        { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
+        { '@type': 'SoftwareApplication', name: 'Vellum' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+        { '@type': 'SoftwareApplication', name: 'Helicone' },
+        { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
+      ],
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/ko/api/og/best-prompt-optimization-tools-for-teams',
+        width: 1200,
+        height: 630,
+      },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: '프롬프트 엔지니어링',
+          item: 'https://www.promptquorum.com/ko/prompt-engineering',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: '팀을 위한 최고의 프롬프트 최적화 도구',
+          item: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-optimization-tools-for-teams',
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      inLanguage: 'ko',
+      name: '팀을 위한 최고의 프롬프트 최적화 도구 2026',
+      numberOfItems: 7,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: '공유 대시보드, 사용자 정의 점수 평가, 프로덕션 로깅을 갖춘 AI 평가 플랫폼 — 엔지니어링 팀용.' },
+        { '@type': 'ListItem', position: 2, name: 'DSPy', description: '자동화된 프롬프트 프로그래밍을 위한 오픈소스 프레임워크; 수동으로 작성된 프롬프트를 학습 가능한 모듈로 대체합니다.' },
+        { '@type': 'ListItem', position: 3, name: 'PromptPerfect', description: '코드 없는 UI 기반 최적화; 비기술 팀 구성원에게 이상적입니다.' },
+        { '@type': 'ListItem', position: 4, name: 'Vellum', description: '트래픽 분할 및 PR 스타일 승인 워크플로를 갖춘 프로덕션 A/B 테스트 플랫폼.' },
+        { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: 'CI/CD에서 프롬프트 회귀 테스트를 위한 오픈소스 CLI 도구.' },
+        { '@type': 'ListItem', position: 6, name: 'Helicone', description: '비용 추적 및 A/B 실험 지원이 있는 LLM 가시성 플랫폼.' },
+        { '@type': 'ListItem', position: 7, name: 'PromptQuorum', description: '다중 모델 비교 플랫폼; 최적화 전략을 선택하기 전에 25개 이상의 모델에서 동일한 프롬프트를 동시에 테스트합니다.' },
+      ],
+    },
+  },
 };

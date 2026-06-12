@@ -101,6 +101,11 @@ function preprocessKoBlock(raw) {
   // Strip image path values (file paths — not prose)
   out = out.replace(/\bimage:\s*'[^']*'/g, "image: ''")
   out = out.replace(/\bimage:\s*"[^"]*"/g, 'image: ""')
+  // Strip blockquoteSource — always a bibliographic citation in original language
+  out = out.replace(/\bblockquoteSource:\s*'[^']*'/g, "blockquoteSource: ''")
+  out = out.replace(/\bblockquoteSource:\s*"[^"]*"/g, 'blockquoteSource: ""')
+  // Strip seoTitle — checked separately via title lint if needed; full seoTitle may have product names
+  out = out.replace(/\bseoTitle:\s*'[^']*'/g, "seoTitle: ''")
   return out
 }
 
@@ -114,14 +119,18 @@ for (const file of files) {
   const path = join(dir, file)
   const src = readFileSync(path, 'utf8')
 
-  // Only lint files that already have a ko: block
-  if (!src.includes('\n  ko:')) continue
+  // Only lint files that already have a ko: block (2–6 space indent)
+  if (!/\n {2,6}ko:/.test(src)) continue
   checked++
 
-  // Extract the ko: block (from "\n  ko:" to the next top-level locale key or end)
-  const koIdx = src.indexOf('\n  ko:')
+  // Extract the ko: block (from ko: to the next top-level locale key or end)
+  const koIdxMatch = src.match(/\n( {2,6})ko:/)
+  const koIdx = koIdxMatch ? src.indexOf(koIdxMatch[0]) : -1
+  if (koIdx === -1) continue
+  const indent = koIdxMatch[1]
   const after = src.slice(koIdx + 1)
-  const nextLocale = after.match(/\n  [a-z]{2}:/)
+  // Match next sibling locale at same or lower indent level
+  const nextLocale = after.match(new RegExp(`\\n {2,${indent.length}}[a-z]{2}:`))
   const koBlock = nextLocale ? after.slice(0, nextLocale.index) : after
 
   // 1. Title must contain Hangul

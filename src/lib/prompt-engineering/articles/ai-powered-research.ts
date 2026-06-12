@@ -3685,4 +3685,559 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
-  };
+  ko: {
+    freshness_tier: 'semi_annual',
+    theme: 'Use Cases',
+    title: 'AI 기반 연구: 도구, 환각률, 검증 워크플로우',
+    intro: 'AI 연구 도구는 문헌 검토 시간을 몇 주에서 몇 시간으로 단축합니다 — 그러나 동료 심사를 통과하는 환각된 인용이라는 심각한 위험을 도입합니다. GPTZero는 다수의 심사자 검토를 통과한 NeurIPS 2025 논문에서 100개 이상의 조작된 참고문헌을 확인했습니다. 2026년 4월 기준, 신뢰할 수 있는 워크플로우는 각 연구 단계를 올바른 도구(Elicit로 추출, Consensus로 합성, scite.ai로 검증)로 라우팅하고 신뢰하기 전에 최소 두 개의 독립 모델에서 사실적 주장을 교차 검증합니다.',
+    publishDate: '2026-03-23',
+    dateModified: '2026-05-04',
+    readTime: '9분 분량',
+    seoTitle: 'AI 연구: 인용 검증과 환각 방지 가이드',
+    metaDescription: '문헌 검토를 몇 주에서 몇 시간으로 단축하십시오. Elicit, Consensus, scite.ai로 환각(9.2%)을 감지하고 인용을 검증합니다. AI 연구 워크플로우.',
+    educationalLevel: '중급',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/ko/prompt-engineering/ai-powered-research',
+      inLanguage: 'ko',
+      headline: 'AI 기반 연구: 도구, 환각률, 검증 워크플로우',
+      description: 'AI 연구 도구는 문헌 검토 시간을 몇 주에서 몇 시간으로 단축합니다 — 그러나 9.2%의 환각률로 인해 검증 워크플로우가 필수적입니다. Elicit, Consensus, Perplexity, scite.ai, 다중 모델 교차 검사, 연구용 프롬프트 프레임워크를 다룹니다.',
+      datePublished: '2026-03-23',
+      dateModified: '2026-05-04',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        url: 'https://www.promptquorum.com/about',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/ko/api/og/ai-powered-research',
+        width: 1200,
+        height: 630,
+      },
+      keywords: ['AI 연구 도구', 'AI 환각', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', '다중 모델 검증', '프롬프트 엔지니어링', 'PromptQuorum'],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Elicit' },
+        { '@type': 'SoftwareApplication', name: 'Consensus' },
+        { '@type': 'SoftwareApplication', name: 'Perplexity AI' },
+        { '@type': 'SoftwareApplication', name: 'scite.ai' },
+        { '@type': 'SoftwareApplication', name: 'NotebookLM' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+        { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+        { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
+        { '@type': 'Organization', name: 'PromptQuorum' },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      inLanguage: 'ko',
+      name: '검증된 결과물로 AI를 연구에 활용하는 방법',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Perplexity를 사용하여 주제 전반 파악',
+          text: 'Perplexity AI로 탐색적 연구를 시작하고 학술 및 웹 소스에 걸쳐 주제 지형도를 그리십시오.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Elicit으로 논문 찾기 및 데이터 추출',
+          text: 'Elicit을 사용하여 1억 3,800만 개 이상의 논문에서 의미론적 검색을 수행하고 PDF에서 구조화된 데이터 테이블을 추출하십시오.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Consensus로 과학적 합의 검증',
+          text: 'Consensus를 사용하여 증거를 합성하고 핵심 가설에 대한 과학적 합의를 평가하십시오.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 4,
+          name: '여러 모델에서 주장 검증',
+          text: 'GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro에서 동시에 연구 질문을 실행하여 환각을 감지하십시오.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 5,
+          name: 'scite.ai로 인용이 철회되지 않았는지 확인',
+          text: 'scite.ai를 사용하여 핵심 인용이 철회되거나 후속 연구에서 반박되지 않았는지 확인하십시오.',
+        },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '2026년 학술 연구에 가장 좋은 AI 도구는 무엇입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '어떤 단일 도구도 모든 연구 단계에서 최고가 되지는 않습니다. Elicit은 1억 3,800만 개 이상의 논문 데이터베이스에서 구조화된 문헌 검토 및 PDF 데이터 추출에서 선두입니다. Consensus는 Consensus Meter(예/아니오/가능)로 신속한 증거 합성에서 선두입니다. Perplexity는 학술 및 웹 소스에 걸쳐 빠르고 광범위하게 인용된 탐색적 연구에서 선두입니다. 최고 품질의 워크플로우는 세 가지를 순차적으로 사용합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'AI가 생성한 연구 결과물은 얼마나 정확합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '정확도는 작업과 모델에 따라 다릅니다. 텍스트 요약에 대한 최고의 환각률은 1.3~4.1%입니다. 일반 지식 질문의 경우 모델 간 평균은 9.2%입니다. 법률 및 의료 도메인은 각각 18.7%와 15.6%에 달합니다. 2026년 1월 GPTZero는 동료 심사를 통과한 NeurIPS 2025 논문 53편에서 100개 이상의 환각된 인용을 확인했습니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'AI가 한 번에 처리할 수 있는 학술 논문은 몇 편입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '모델의 컨텍스트 윈도우에 따라 다릅니다. GPT-5.5(OpenAI)는 세션당 약 100페이지의 학술 논문을 처리합니다(128k 토큰 컨텍스트). Claude Opus 4.8(Anthropic)은 약 160페이지를 처리합니다(200k 토큰). Gemini 3.1 Pro(Google DeepMind)는 약 800페이지를 처리합니다(1M 토큰). 더 큰 코퍼스의 경우 벡터 데이터베이스가 있는 RAG 파이프라인이 필요합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '학술 논문에서 AI가 생성한 참고문헌을 인용하는 것이 안전합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '아니요 — 검증 없이는 안전하지 않습니다. AI 모델은 잘못된 저자, 잘못된 권호, 잘못된 DOI가 포함될 수 있는 그럴듯한 인용을 생성합니다. AI가 생성한 모든 인용은 학술 저작물에 포함하기 전에 소스 데이터베이스(Google Scholar, PubMed, arXiv)에 대해 검증해야 합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '미국 외부에서 AI 연구 지원이 다르게 작동합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '예. 유럽 연구자들은 AI 지원 저작물에 대해 EU AI법의 투명성 요건을 준수해야 합니다. 중국 기관들은 주로 Qwen 3(Alibaba)와 DeepSeek V3를 사용합니다. METI 데이터 거버넌스 지침 하의 일본 연구자들은 일반적으로 Ollama 기반 로컬 모델을 사용합니다 — LLaMA 3.1 7B는 8GB RAM으로 로컬에서 실행되며 데이터가 기관 인프라를 벗어나지 않습니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'AI 연구 작업에 어떤 온도를 사용해야 합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '인용 생성에는 온도를 0.0~0.1로 설정하십시오 — 결정론적 출력은 저자 이름이나 DOI를 손상시킬 수 있는 토큰 변동을 최소화합니다. 자연스러운 문체가 중요한 요약에는 0.1~0.3을 사용하십시오. 다양한 출력이 목표인 가설 브레인스토밍에만 0.7~0.9를 사용하십시오.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Elicit이란 무엇이며 어떻게 작동합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Elicit은 1억 3,800만 개 이상의 학술 논문과 545,000개의 임상 시험에서 의미론적 검색을 사용하는 AI 연구 보조 도구입니다. 키워드 검색과 달리 개념적 유사성으로 논문을 매칭합니다. 핵심 기능은 구조화된 데이터 추출로, 키워드 매칭 없이도 비교 테이블에서 PDF 전문에서 직접 방법론, 표본 크기, 결과를 추출합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'AI 연구 도구가 유료 장벽 뒤의 논문에 접근할 수 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '대부분의 AI 연구 도구(Elicit, Consensus, Semantic Scholar)는 오픈 액세스 논문 데이터베이스를 사용합니다. PDF를 직접 업로드하지 않으면 기관 유료 장벽 뒤의 논문에 접근할 수 없습니다. NotebookLM(Google)과 Elicit은 접근 가능한 논문에 대한 소스 기반 QA를 위한 PDF 업로드를 지원합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '환각된 인용을 어떻게 감지합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Google Scholar나 PubMed에서 인용을 실행하십시오. 저자 이름, 학술지, 권호, 연도, DOI가 정확히 일치하는지 확인하십시오. scite.ai를 사용하여 논문에 인용 활동이 있는지 확인하십시오 — 영향력 있는 논문에 인용이 전혀 없는 것은 경고 신호입니다. 두 번째 AI 모델로 검증하십시오: 다른 저자나 학술지 세부 정보를 반환하면 두 버전 모두 수동 검증이 필요합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Perplexity AI는 학술 연구에 신뢰할 수 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Perplexity AI는 탐색적 연구(주제 파악, 핵심 연구자 식별, 추가 조사를 위한 관련 소스 찾기)에 신뢰할 수 있습니다. 동료 심사를 받지 않은 소스를 포함한 웹을 검색하기 때문에 최종 인용 소스로는 신뢰할 수 없습니다. 발견을 위해 Perplexity를 사용한 다음 인용하기 전에 Elicit, Semantic Scholar 또는 직접 데이터베이스 검색을 사용하여 특정 주장을 검증하십시오.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      inLanguage: 'ko',
+      'name': '2026년 AI 연구 도구 비교',
+      'description': '발견, 추출, 합성, 인용 검증을 위한 AI 연구 도구 비교',
+      'numberOfItems': 6,
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Elicit', 'description': '1억 3,800만 개 이상의 논문. PDF에서 구조화된 데이터 추출. 무료 티어: 월 5,000 크레딧.' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Consensus', 'description': '~2억 개의 논문. Consensus Meter(예/아니오/가능)로 증거 합성. 무료 티어 제한적.' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Semantic Scholar', 'description': '2억 개 이상의 논문. 논문 발견, 인용 그래프, TLDR 요약. 완전 무료.' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'Perplexity AI', 'description': '웹 + 학술. 실시간 인용 답변, 광범위한 탐색. 무료 티어 제한적.' },
+        { '@type': 'ListItem', 'position': 5, 'name': 'scite.ai', 'description': '12억 개 이상의 인용 진술. 지지/반박/언급 분석. 무료 티어 제한적.' },
+        { '@type': 'ListItem', 'position': 6, 'name': 'NotebookLM', 'description': '업로드된 문서. 자신의 파일에서 소스 기반 QA. 무료/Plus 티어.' },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: '프롬프트 엔지니어링',
+          item: 'https://www.promptquorum.com/ko/prompt-engineering',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'AI 기반 연구: 도구, 환각률, 검증 워크플로우',
+          item: 'https://www.promptquorum.com/ko/prompt-engineering/ai-powered-research',
+        },
+      ],
+    },
+    snippetBlocks: [
+      { type: 'one-sentence', text: 'AI 연구 도구는 문헌 검토를 몇 주에서 몇 시간으로 단축하지만, 9.2%의 환각률로 인해 Elicit, Consensus, scite.ai를 사용한 다중 모델 교차 검증 워크플로우가 필수적입니다.' },
+      { type: 'plain-terms', text: 'AI 연구 도구를 사용할 때 각 단계에 적합한 도구를 선택하고(발견에는 Perplexity, 추출에는 Elicit, 합성에는 Consensus, 검증에는 scite.ai), 여러 AI 모델에서 동일한 질문을 실행하여 환각된 인용을 식별하십시오.' },
+    ],
+    sections: {
+      tldr: {
+        title: '핵심 내용',
+        isTldr: true,
+        items: [
+          'AI 연구 도구는 문헌 검토 시간을 몇 주에서 몇 시간으로 단축합니다 — 그러나 정확한 결과물을 생산하기 위해서는 구조화된 단계별 워크플로우가 필요합니다',
+          'AI 환각률은 일반 지식에 대해 평균 9.2%, 법률 문제에 대해 18.7%, PersonQA에서 OpenAI o4-mini는 48%입니다 — 어떤 모델도 면역이 아닙니다',
+          'Elicit은 구조화된 데이터 추출, Consensus는 증거 합성, Perplexity는 탐색, scite.ai는 인용 검증에 사용하십시오',
+          '다중 모델 교차 검증(GPT-5.5 + Claude Opus 4.8 + Gemini 3.1 Pro)은 단일 모델 워크플로우가 놓치는 환각을 감지합니다',
+          '인용 생성에 온도(T)를 0.0~0.2로 설정하십시오; 가설 브레인스토밍에만 0.7~0.9를 사용하십시오',
+          'Gemini 3.1 Pro의 1M 토큰 컨텍스트 윈도우는 단일 세션에서 800페이지 이상의 학술 논문을 처리할 수 있는 유일한 현재 모델입니다',
+          '100개 이상의 환각된 인용이 NeurIPS 2025에서 동료 심사를 통과했습니다 — AI 연구 검증은 선택 사항이 아닙니다',
+        ],
+      },
+      quickFacts: {
+        title: '⚡ 빠른 사실',
+        items: [
+          'Elicit은 의미론적 검색(키워드가 아닌)으로 1억 3,800만 개 이상의 논문과 545,000개의 임상 시험을 다룹니다',
+          'AI 환각률 평균: 일반 지식 9.2%, 법률 문제 18.7%, PersonQA에서 o4-mini 48%',
+          '100개 이상의 환각된 인용이 NeurIPS 2025에서 동료 심사를 통과했습니다(엘리트 ML 컨퍼런스, 합격률 24.52%)',
+          'Gemini 3.1 Pro의 1M 토큰 컨텍스트 윈도우는 세션당 약 800페이지의 학술 논문을 처리합니다; GPT-5.5는 약 100페이지, Claude는 약 160페이지',
+          '인용 생성에 온도 0.0~0.1; 가설 브레인스토밍에만 0.7~0.9',
+          '다중 모델 교차 검증은 PromptQuorum 테스트에서 30개의 테스트 인용 중 8개의 환각을 감지했습니다',
+        ],
+      },
+      definition: {
+        title: 'AI 연구가 실제로 하는 일',
+        content: [
+          '📍 **한 문장으로**\nAI 연구는 RAG와 의미론적 검색에 연결된 LLM을 사용하여 문헌 발견, 합성, 검증을 가속화합니다 — 그러나 환각된 인용을 감지하기 위해 다중 모델 교차 검증이 필요합니다.',
+          '💬 **평이한 용어로**\n표준 LLM은 폐쇄형 시험입니다. RAG가 있는 연구 도구는 개방형 시험입니다 — 응답하기 전에 소스를 검색합니다. 그러나 개방형 답변조차 틀릴 수 있으므로 두 번째 모델로 검증하고 인용을 수동으로 확인합니다.',
+          '**작동 방식:** RAG(검색 증강 생성)는 대부분의 AI 연구 도구 뒤에 있는 핵심 아키텍처입니다. RAG는 LLM을 외부 지식 기반(학술 데이터베이스, 업로드된 PDF 또는 라이브 웹 인덱스)에 연결하여 모델이 훈련 데이터에만 의존하지 않고 검색된 문서를 기반으로 응답하도록 합니다. RAG 없이는 모델이 훈련된 사실만 기억할 수 있으며; RAG가 있으면 사용자가 제공하는 소스에서 응답합니다.',
+        ],
+      },
+      confidenceProblem: {
+        title: '🔍 신뢰도 문제',
+        content: [
+          'LLM은 정확도에 비례하여 불확실성을 표현하지 않습니다. 환각된 인용은 실제 인용과 동일하게 읽힙니다 — 동일한 형식, 그럴듯한 학술지 이름, 일관된 저자 조합. 인용이 조작되었다는 시각적 신호가 없습니다. 검증이 유일한 방어입니다.',
+        ],
+      },
+      toolComparison: {
+        title: '각 연구 단계에 적합한 도구',
+        content: [
+          '**2026년 4월 기준, 어떤 단일 AI 연구 도구도 모든 연구 단계를 잘 처리하지 못합니다 — 최고 품질의 워크플로우는 각 작업을 가장 잘 설계된 도구로 라우팅합니다.**',
+          'Elicit(elicit.com)은 1억 3,800만 개 이상의 학술 논문과 545,000개의 임상 시험에서 의미론적 검색을 사용하여 키워드 매칭 없이도 PDF에서 직접 방법론, 표본 크기, 결과를 비교 테이블로 추출합니다. Consensus(consensus.app)는 약 2억 개의 논문을 검색하고 특정 질문에 대한 과학적 합의(예/아니오/가능)를 요약하는 "Consensus Meter"를 반환합니다. Perplexity AI는 개방형 웹과 학술 문헌 모두에서 가장 빠른 범용 인용 응답을 제공하여 탐색 단계에 최적입니다.',
+        ],
+        columns: ['도구', '데이터베이스', '주요 기능', '무료 티어'],
+        rows: [
+          {
+            '도구': 'Elicit',
+            '데이터베이스': '1억 3,800만 개 이상의 논문 + 545K 임상 시험',
+            '주요 기능': 'PDF에서 구조화된 데이터 추출',
+            '무료 티어': '예(월 5,000 크레딧)',
+          },
+          {
+            '도구': 'Consensus',
+            '데이터베이스': '~2억 개의 논문',
+            '주요 기능': 'Consensus Meter로 증거 합성',
+            '무료 티어': '예(제한적)',
+          },
+          {
+            '도구': 'Semantic Scholar',
+            '데이터베이스': '2억 개 이상의 논문',
+            '주요 기능': '논문 발견, 인용 그래프, TLDR 요약',
+            '무료 티어': '완전 무료',
+          },
+          {
+            '도구': 'Perplexity AI',
+            '데이터베이스': '웹 + 학술',
+            '주요 기능': '실시간 인용 답변, 광범위한 탐색',
+            '무료 티어': '예(제한적)',
+          },
+          {
+            '도구': 'scite.ai',
+            '데이터베이스': '12억 개 이상의 인용 진술',
+            '주요 기능': '지지/반박/언급 분석',
+            '무료 티어': '예(제한적)',
+          },
+          {
+            '도구': 'NotebookLM(Google)',
+            '데이터베이스': '업로드된 문서',
+            '주요 기능': '자신의 파일에서 소스 기반 QA',
+            '무료 티어': '무료/Plus 티어',
+          },
+        ],
+        items: [
+          '**발견** — Perplexity를 사용하여 주제 전반을 파악하고 연구 질문을 정의하십시오',
+          '**문헌 수집** — Elicit을 사용하여 특정 논문을 찾고 데이터 테이블을 추출하십시오',
+          '**증거 검증** — Consensus를 사용하여 과학 커뮤니티가 핵심 가설에 동의하는지 확인하십시오',
+          '**인용 검증** — scite.ai를 사용하여 핵심 참고문헌이 광범위하게 반박되지 않았는지 확인하십시오',
+        ],
+      },
+      hallucinationRisk: {
+        title: '연구 AI의 환각 문제',
+        content: [
+          '**2026년 4월 기준, AI 시스템은 인용을 환각하고 통계를 조작합니다 — 이러한 오류는 동료 심사를 통과합니다.** GPTZero는 NeurIPS 2025(엘리트 기계 학습 컨퍼런스, 합격률 24.52%)에 수락된 4,841편의 논문을 분석하여 다수의 심사자 동료 심사를 통과한 53편의 논문에서 100개 이상의 확인된 환각된 인용을 발견했습니다.',
+          '환각률은 도메인과 작업 복잡도에 따라 상당히 다릅니다:',
+        ],
+        columns: ['도메인', '환각률'],
+        rows: [
+          { '도메인': '일반 지식 질문', '환각률': '9.2%(모델 간 평균)' },
+          { '도메인': '법률 정보', '환각률': '18.7%(주요 모델)' },
+          { '도메인': '의료/건강 쿼리', '환각률': '15.6%(전체 평균)' },
+          { '도메인': '텍스트 요약(최고 모델)', '환각률': '1.3~4.1%' },
+          { '도메인': 'PersonQA 벤치마크에서 OpenAI o4-mini', '환각률': '48%' },
+        ],
+        blockquote: '**평이한 용어로:** 환각률 9.2%의 AI 연구 보조 도구는 생성하는 11개의 인용 중 약 1개를 조작할 것입니다. 40개의 인용이 있는 논문에서 그것은 3~4개의 만들어진 참고문헌입니다 — 출판물을 철회하기에 충분합니다. 주요 실패 모드는 신뢰입니다. LLM은 정확도에 비례하여 불확실성을 표현하지 않습니다. 환각된 인용은 실제 인용과 동일하게 읽힙니다 — 동일한 형식, 그럴듯한 학술지 이름, 일관된 저자 조합.',
+      },
+      multiModelCheck: {
+        title: 'AI 연구 결과를 검증하는 방법: 다중 모델 교차 검증',
+        content: [
+          '**다중 모델 교차 검증 — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro에서 동시에 동일한 연구 질문을 실행 — 단일 모델 워크플로우가 놓치는 환각을 감지합니다. 독립적으로 훈련된 모델들이 동일한 특정 허위 주장을 조작하는 경우는 드물기 때문입니다.**',
+          '검증 논리는 통계적입니다: 세 개의 독립적으로 훈련된 모델이 인용에 동의할 때, 세 모델 모두 동일한 저자, 학술지, 권호, 연도를 환각했을 확률은 무시할 수 있을 정도입니다. 동의하지 않을 때, 그 불일치는 수동 검증을 위한 명시적인 신호입니다.',
+          'PromptQuorum은 프롬프트를 여러 AI 제공업체에 동시에 전송하고 모든 응답을 나란히 반환하는 다중 모델 AI 디스패치 도구입니다. 연구 워크플로우의 경우, 단일 디스패치에서 GPT-5.5(OpenAI), Claude Opus 4.8(Anthropic), Gemini 3.1 Pro(Google DeepMind)에서 인용 또는 사실적 주장을 실행하고 세 모델이 수렴하거나 분기하는 위치를 검토하는 것을 의미합니다.',
+          '**PromptQuorum에서 테스트됨 — 세 모델에서 30개의 연구 인용 프롬프트:** 세 모델(GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro)은 30개 중 22개의 경우에서 동일한 인용 형식과 DOI에 동의했습니다. 8개의 경우에서 최소 하나의 모델이 다른 저자 이름이나 학술지 권호를 생성했습니다 — 8개 모두 Google Scholar에 대한 수동 검증에서 환각으로 확인되었습니다.',
+        ],
+        items: [
+          '**생성** — 한 모델(예: Claude Opus 4.8)에게 인용이 있는 문헌 요약을 생성하도록 요청하십시오',
+          '**교차 검증** — PromptQuorum을 통해 GPT-5.5 및 Gemini 3.1 Pro에 동일한 질문을 디스패치하십시오',
+          '**불일치 표시** — 저자, 연도 또는 학술지에서 모델이 동의하지 않는 인용은 수동 검증이 필요합니다',
+          '**수렴된 주장 검증** — scite.ai를 사용하여 동의된 인용이 철회되거나 반박되지 않았는지 확인하십시오',
+        ],
+      },
+      whyCrossCheckingWorks: {
+        title: '🔍 교차 검증이 효과적인 이유',
+        content: [
+          '독립적으로 훈련된 세 모델이 동일한 특정 허위 주장 — 동일한 저자, 동일한 학술지, 동일한 권호, 동일한 연도 — 을 조작하는 경우는 드뭅니다. 세 모델이 동의할 때, 인용은 거의 확실히 실제입니다. 동의하지 않을 때, 그 불일치가 환각 경보입니다.',
+        ],
+      },
+      promptStructure: {
+        title: '연구 작업을 위한 프롬프트 엔지니어링',
+        content: [
+          '**구조화된 프롬프트는 개방형 질문보다 더 정확하고 검증 가능한 연구 결과를 생성합니다 — 차이는 범위의 구체성, 출력 형식, 소스 인용에 대한 명시적 지시에 있습니다.**',
+          '대부분의 연구자들이 저지르는 핵심 실수는 검색 엔진에 입력하는 것과 정확히 같은 방식으로 연구 질문을 하는 것입니다. 검색 엔진은 문서를 순위 매기고; LLM은 토큰을 예측합니다. 다른 입력 구조가 필요합니다.',
+        ],
+      },
+      promptFramework: {
+        title: '연구 프롬프트 프레임워크',
+        content: [
+          'AI 연구 작업에 이 구조를 사용하십시오:',
+        ],
+        items: [
+          '**역할** — "당신은 [분야]를 전문으로 하는 체계적 검토 연구자입니다."',
+          '**범위** — "2020년에서 2026년 사이에 발표된 동료 심사 논문만 분석하십시오."',
+          '**목표** — "[주제]에 대한 현재 과학적 합의를 요약하십시오."',
+          '**인용 요건** — "저자, 연도, 학술지로 각 주장을 인용하십시오. 검증된 인용을 찾을 수 없으면 하나를 생성하는 대신 \'미검증\'이라고 말하십시오."',
+          '**출력 형식** — "결과를 구조화된 테이블로 반환하십시오: 주장 | 소스 | 연도 | 신뢰도(높음/중간/낮음)."',
+        ],
+      },
+      promptBadExample: {
+        content: [
+          '**나쁜 프롬프트:** 역할이나 인용 요건 없는 개방형 질문은 환각된 통계를 생성합니다:',
+        ],
+        blockquote: 'AI 환각에 대한 연구는 무엇을 말합니까?',
+      },
+      promptGoodExample: {
+        title: '좋은 프롬프트 예시',
+        content: [
+          '**좋은 프롬프트:** 아래의 구조화된 버전은 검증 가능한 출력 테이블을 생성합니다. 이전의 개방형 프롬프트는 조작된 통계를 포함할 수 있는 신뢰감 있는 문단을 생성합니다.',
+        ],
+        blockquote: '당신은 체계적 검토 연구자입니다. 여러 도메인(의료, 법률, 일반 지식)에서 AI 환각률에 대한 현재 과학적 합의를 요약하십시오. 2023년에서 2026년 사이에 발표된 동료 심사 논문이나 공식 모델 평가 보고서만 인용하십시오. 결과를 다음과 같이 형식화하십시오: 도메인 | 환각률 | 연구 | 연도. 특정 비율이 검증되지 않은 경우 "추정"으로 레이블을 지정하고 표시하십시오.',
+      },
+      parameters: {
+        title: '연구를 위한 온도 설정',
+        content: [
+          '**사실적 정확도가 필요한 모든 연구 작업에 온도(T)를 0.0~0.2로 설정하십시오.** 온도(T)는 softmax 출력 분포에 적용되는 하이퍼파라미터입니다: T=0.0에서 모델은 각 단계에서 가장 높은 확률의 토큰을 선택하여 결정론적 출력을 생성합니다. T=1.0에서 출력은 더 다양해집니다 — 창의적 작업에는 바람직하지만, 단일 잘못된 토큰이 저자 이름이나 DOI를 변경하는 인용 생성에는 위험합니다.',
+        ],
+        columns: ['작업', '권장 온도(T)', '이유'],
+        rows: [
+          {
+            '작업': '인용 생성',
+            '권장 온도(T)': '0.0~0.1',
+            '이유': '결정론적 출력; 토큰 변동 최소화',
+          },
+          {
+            '작업': '요약',
+            '권장 온도(T)': '0.1~0.3',
+            '이유': '사실적이지만 자연스러운 문체',
+          },
+          {
+            '작업': '가설 브레인스토밍',
+            '권장 온도(T)': '0.7~0.9',
+            '이유': '다양한 출력이 아이디어 범위를 증가시킴',
+          },
+          {
+            '작업': '문헌 검토 초안',
+            '권장 온도(T)': '0.2~0.4',
+            '이유': '정확도와 가독성의 균형',
+          },
+        ],
+      },
+      oneWrongToken: {
+        title: '🔍 하나의 잘못된 토큰',
+        content: [
+          '온도 0.7에서 단일 토큰 변동은 "Smith 2024"를 "Smith 2023"으로 또는 "Nature"를 "Nature Methods"로 변경할 수 있습니다. 인용 생성의 경우 T=0.2조차도 불필요한 위험을 도입합니다. 구체적인 이유가 없는 한 T=0.0을 사용하십시오.',
+        ],
+      },
+      contextWindow: {
+        title: '모델별 AI 연구 도구: 컨텍스트 윈도우 한계',
+        content: [
+          '**컨텍스트 윈도우 크기는 LLM이 세션에서 처리할 수 있는 연구 논문의 수를 결정합니다 — 이것이 대규모 문헌 합성의 주요 기술적 제약입니다.**',
+        ],
+        columns: ['모델', '컨텍스트 윈도우', '대략적인 페이지 처리 용량'],
+        rows: [
+          {
+            '모델': 'GPT-5.5(OpenAI)',
+            '컨텍스트 윈도우': '128k 토큰',
+            '대략적인 페이지 처리 용량': '세션당 약 100페이지의 표준 학술 논문',
+          },
+          {
+            '모델': 'Claude Opus 4.8(Anthropic)',
+            '컨텍스트 윈도우': '200k 토큰',
+            '대략적인 페이지 처리 용량': '세션당 약 160페이지의 표준 학술 논문',
+          },
+          {
+            '모델': 'Gemini 3.1 Pro(Google DeepMind)',
+            '컨텍스트 윈도우': '1M 토큰',
+            '대략적인 페이지 처리 용량': '세션당 약 800페이지의 표준 학술 논문',
+          },
+        ],
+        items: [
+          '20개 미만의 논문을 가진 연구 작업의 경우 세 모델 모두 전체 컨텍스트를 처리합니다. 50~200개의 논문을 포괄하는 체계적 검토의 경우 Gemini 3.1 Pro의 1백만 토큰 컨텍스트 윈도우가 단일 세션에서 전체 텍스트를 처리하는 유일한 현재 모델입니다.',
+          '정말 큰 코퍼스(500개 이상의 논문)의 경우, 논문이 청크로 나뉘어 벡터 데이터베이스에 임베딩되고 의미론적 유사성으로 검색되는 RAG 파이프라인이 올바른 아키텍처입니다.',
+          '컨텍스트 윈도우와 모델이 긴 컨텍스트의 중간에서 정보를 잃는 이유에 대한 자세한 설명은 [컨텍스트 윈도우 설명](/ko/prompt-engineering/context-window-limits-explained)을 참조하십시오.',
+        ],
+      },
+      lostInMiddle: {
+        title: '🔍 중간에서 길을 잃음',
+        content: [
+          '모델의 선언된 컨텍스트 윈도우 내에서도 긴 입력의 중간에 배치된 정보에 대한 검색 정확도는 감소합니다. 가장 중요한 논문을 앞에 배치하고 참고 자료를 끝에 배치하십시오. 이것은 Anthropic과 Google의 연구에서 문서화된 알려진 한계입니다.',
+        ],
+      },
+      globalContext: {
+        title: '연구 AI를 위한 글로벌 및 지역별 맥락',
+        content: [
+          '유럽 연구 기관들은 AI 지원 출판을 포함한 고위험 AI 응용 프로그램에 대한 투명성, 추적 가능성, 인간 감독을 요구하는 EU AI법을 점점 더 많이 준수하도록 요구받고 있습니다. Mistral AI(프랑스)는 모델이 온프레미스 배포 가능하고 민감한 연구 데이터에 대한 GDPR 데이터 잔류 요건을 충족하기 때문에 EU 학술 환경에서 자주 사용됩니다.',
+          '중국 연구 기관들은 **Qwen 3**(Alibaba)과 **DeepSeek V3**를 주요 AI 연구 도구로 사용합니다 — 둘 다 오픈 소스이고 로컬 배포 가능하며 서양에서 훈련된 모델보다 CJK 언어 문헌을 더 빠르게 처리합니다. 중국의 생성형 AI 잠정 조치(2023)는 AI가 생성한 연구 콘텐츠를 그렇게 표시하도록 요구합니다.',
+          'METI 데이터 보호 지침 하에 운영되는 일본 대학들은 일반적으로 **Ollama**와 LLaMA 3.1 모델을 로컬에서 배포합니다 — LLaMA 3.1 7B는 로컬 추론에 8GB RAM이 필요하고 외부 API 호출이 전혀 없으며 민감한 연구에 대한 엄격한 데이터 잔류 기준을 충족합니다.',
+        ],
+      },
+      commonMistakes: {
+        title: 'AI 연구의 일반적인 실수',
+        content: [
+          '**AI 연구 도구를 사용할 때 이러한 일반적인 실수를 피하십시오:**',
+        ],
+        items: [
+          '**벤치마크 리더보드 순위를 기반으로 선택(실제 작업이 아닌)** — **수정:** 리더보드 위치가 아닌 작업 적합성으로 모델을 선택하십시오. 벤치마크 챔피언(GPT-5.5)은 요약에는 과도하고; Gemini 3.1 Pro의 비용 우위는 컨텍스트 처리만 필요할 때 지배합니다.',
+          '**컨텍스트 윈도우 = 품질이라고 가정** — **수정:** 컨텍스트 윈도우는 한 가지 차원입니다. 1M 토큰은 50개 이상의 논문에서만 중요합니다. 소규모 문헌 검토의 경우 GPT-5.5(128k) 또는 Claude Opus 4.8(200k)로 충분하고 비용이 덜 듭니다.',
+          '**모든 작업에 프론티어 모델 사용** — **수정:** 비용 효율성으로 작업을 라우팅하십시오: 분류에는 Gemini Flash, 작문에는 Claude Opus 4.8, 코드에는 GPT-5.5. PromptQuorum을 통한 다중 모델 디스패치는 작업별 모델 선택을 가능하게 합니다.',
+          '**지리 및 데이터 잔류 무시(EU GDPR, 중국)** — **수정:** EU 연구는 GDPR 준수 도구(Mistral 온프레미스, 로컬 Ollama)를 사용해야 합니다. 중국의 기관들은 Qwen 3 또는 DeepSeek를 사용합니다. METI 지침 하의 일본은 로컬에서 LLaMA 3.1과 함께 Ollama를 사용합니다.',
+          '**추상화 레이어 없는 공급업체 종속** — **수정:** 공급업체 종속을 피하기 위해 다중 모델 디스패치 도구(PromptQuorum)를 사용하십시오. 단일 API 호출이 작업별 최적 모델로 라우팅하고; 공급업체 전환이 코드 변경을 필요로 하지 않습니다.',
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽기',
+        items: [
+          '[RAG 설명](/ko/prompt-engineering/rag-explained) — Elicit, Consensus 및 모든 생산 AI 연구 도구를 구동하는 검색 아키텍처',
+          '[AI 한계 — LLM이 할 수 없는 것](/ko/prompt-engineering/ai-limitations-what-llms-cant-do) — 환각이 수정 가능한 버그가 아닌 구조적인 이유',
+          '[프롬프트 인젝션 및 보안](/ko/prompt-engineering/prompt-injection-and-security) — 연구 파이프라인에 스크래핑된 웹 콘텐츠를 입력할 때의 간접 인젝션 위험',
+          '[연쇄 사고 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting) — 체계적 분석 작업을 위한 구조화된 추론',
+          '[온도 및 Top-P 설명](/ko/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 무작위성 매개변수가 인용 생성에서 사실적 정확도에 미치는 영향',
+          '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering) — 구조화된 AI 지시의 기본 정의',
+          '[Qwen vs Llama vs Mistral](/ko/local-llms/qwen-vs-llama-vs-mistral) — 로컬 추론을 위한 주요 오픈 소스 모델 비교',
+          '[코딩을 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) — 소프트웨어 개발 작업을 위한 로컬 모델 평가',
+          '[오픈 소스 대 독점 LLM](/ko/prompt-engineering/open-source-vs-proprietary-llms) — 연구 워크플로우를 위한 모델 선택 시 트레이드오프',
+        ],
+      },
+      howToStart: {
+        title: 'AI 연구를 수행하는 방법',
+        numberedItems: [
+          '**발견, 수집, 합성, 검증 단계별로 연구 워크플로우를 매핑하십시오.** 탐색적 발견에는 Perplexity, 구조화된 문헌 추출에는 Elicit, 증거 합성에는 Consensus, 인용 검증에는 scite.ai를 사용하십시오. 각 작업을 그에 맞게 설계된 도구로 라우팅하십시오.',
+          '**인용 생성에 온도(T)를 0.0~0.1로 설정하십시오.** 결정론적 출력은 저자 이름, 연도, DOI의 환각을 최소화합니다. 사실 기반 주장이 아닌 가설 브레인스토밍에만 T=0.7~0.9를 사용하십시오.',
+          '**역할, 범위, 목표, 인용 요건, 출력 형식으로 연구 프롬프트를 구조화하십시오.** 예: "당신은 체계적 검토 연구자입니다. 2020년에서 2026년 사이의 동료 심사 논문만 분석하십시오. [주제]에 대한 과학적 합의를 요약하십시오. 저자, 연도, 학술지로 각 주장을 인용하십시오. 테이블로 반환하십시오: 주장 | 소스 | 연도 | 신뢰도."',
+          '**환각된 인용을 감지하기 위해 다중 모델 교차 검증을 사용하십시오.** PromptQuorum을 통해 GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro에서 동일한 연구 질문을 실행하십시오. 저자, 연도 또는 학술지에서 모델이 동의하지 않는 인용은 Google Scholar나 PubMed에서 수동 검증이 필요합니다.',
+          '**학술 저작물에 포함하기 전에 모든 인용을 수동으로 검증하십시오.** AI가 생성한 모든 참고문헌은 소스 데이터베이스에 대해 확인해야 합니다. 환각된 인용이 NeurIPS 2025를 포함한 엘리트 컨퍼런스 논문에서 동료 심사를 통과한 것으로 확인되었습니다.',
+        ],
+      },
+      faq: {
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: '2026년 학술 연구에 가장 좋은 AI 도구는 무엇입니까?',
+            a: '어떤 단일 도구도 모든 연구 단계에서 최고가 되지는 않습니다. Elicit은 1억 3,800만 개 이상의 논문 데이터베이스에서 구조화된 문헌 검토 및 PDF 데이터 추출에서 선두입니다. Consensus는 Consensus Meter(예/아니오/가능)로 신속한 증거 합성에서 선두입니다. Perplexity는 학술 및 웹 소스에 걸쳐 빠르고 광범위하게 인용된 탐색적 연구에서 선두입니다. 최고 품질의 워크플로우는 세 가지를 순차적으로 사용합니다.',
+          },
+          {
+            q: 'AI가 생성한 연구 결과물은 얼마나 정확합니까?',
+            a: '정확도는 작업과 모델에 따라 다릅니다. 텍스트 요약에 대한 최고의 환각률은 1.3~4.1%입니다. 일반 지식 질문의 경우 모델 간 평균은 9.2%입니다. 법률 및 의료 도메인은 각각 18.7%와 15.6%에 달합니다. 2026년 1월 GPTZero는 동료 심사를 통과한 NeurIPS 2025 논문 53편에서 100개 이상의 환각된 인용을 확인했습니다 — AI 오류가 항상 전문가 심사자에 의해 감지되는 것은 아님을 의미합니다.',
+          },
+          {
+            q: 'AI가 한 번에 처리할 수 있는 학술 논문은 몇 편입니까?',
+            a: '모델의 컨텍스트 윈도우에 따라 다릅니다. GPT-5.5(OpenAI)는 세션당 약 100페이지의 학술 논문을 처리합니다(128k 토큰 컨텍스트). Claude Opus 4.8(Anthropic)은 약 160페이지를 처리합니다(200k 토큰). Gemini 3.1 Pro(Google DeepMind)는 약 800페이지를 처리합니다(1M 토큰). 더 큰 코퍼스의 경우 벡터 데이터베이스가 있는 RAG 파이프라인이 필요합니다.',
+          },
+          {
+            q: '학술 논문에서 AI가 생성한 참고문헌을 인용하는 것이 안전합니까?',
+            a: '아니요 — 검증 없이는 안전하지 않습니다. AI 모델은 잘못된 저자, 잘못된 권호, 잘못된 DOI가 포함될 수 있는 그럴듯한 인용을 생성합니다. AI가 생성한 모든 인용은 학술 저작물에 포함하기 전에 소스 데이터베이스(Google Scholar, PubMed, arXiv)에 대해 검증해야 합니다. NeurIPS 2025를 포함한 주요 기계 학습 컨퍼런스 논문에서 환각된 인용이 발견되었습니다.',
+          },
+          {
+            q: '미국 외부에서 AI 연구 지원이 다르게 작동합니까?',
+            a: '예. 유럽 연구자들은 AI 지원 저작물에 대해 EU AI법의 투명성 요건을 준수해야 합니다. 중국 기관들은 주로 Qwen 3(Alibaba)와 DeepSeek V3를 사용하며 CJK 언어 문헌 처리가 더 빠릅니다. METI 데이터 거버넌스 지침 하의 일본 연구자들은 일반적으로 Ollama 기반 로컬 모델을 사용합니다 — LLaMA 3.1 7B는 8GB RAM으로 로컬에서 실행되며 데이터가 기관 인프라를 벗어나지 않습니다.',
+          },
+          {
+            q: 'AI 연구 작업에 어떤 온도를 사용해야 합니까?',
+            a: '인용 생성에는 온도를 0.0~0.1로 설정하십시오 — 결정론적 출력은 저자 이름이나 DOI를 손상시킬 수 있는 토큰 변동을 최소화합니다. 자연스러운 문체가 중요한 요약에는 0.1~0.3을 사용하십시오. 다양한 출력이 목표인 가설 브레인스토밍에만 0.7~0.9를 사용하십시오.',
+          },
+          {
+            q: 'Elicit이란 무엇이며 어떻게 작동합니까?',
+            a: 'Elicit은 1억 3,800만 개 이상의 학술 논문과 545,000개의 임상 시험에서 의미론적 검색을 사용하는 AI 연구 보조 도구입니다. 키워드 검색과 달리 개념적 유사성으로 논문을 매칭합니다. 핵심 기능은 구조화된 데이터 추출로, 키워드 매칭 없이도 비교 테이블에서 PDF 전문에서 직접 방법론, 표본 크기, 결과를 추출합니다.',
+          },
+          {
+            q: 'AI 연구 도구가 유료 장벽 뒤의 논문에 접근할 수 있습니까?',
+            a: '대부분의 AI 연구 도구(Elicit, Consensus, Semantic Scholar)는 오픈 액세스 논문 데이터베이스를 사용합니다. PDF를 직접 업로드하지 않으면 기관 유료 장벽 뒤의 논문에 접근할 수 없습니다. NotebookLM(Google)과 Elicit은 접근 가능한 논문에 대한 소스 기반 QA를 위한 PDF 업로드를 지원합니다.',
+          },
+          {
+            q: '환각된 인용을 어떻게 감지합니까?',
+            a: 'Google Scholar나 PubMed에서 인용을 실행하십시오. 저자 이름, 학술지, 권호, 연도, DOI가 정확히 일치하는지 확인하십시오. scite.ai를 사용하여 논문에 인용 활동이 있는지 확인하십시오 — 영향력 있는 논문에 인용이 전혀 없는 것은 경고 신호입니다. 두 번째 AI 모델로 검증하십시오: 다른 저자나 학술지 세부 정보를 반환하면 두 버전 모두 수동 검증이 필요합니다.',
+          },
+          {
+            q: 'Perplexity AI는 학술 연구에 신뢰할 수 있습니까?',
+            a: 'Perplexity AI는 탐색적 연구(주제 파악, 핵심 연구자 식별, 추가 조사를 위한 관련 소스 찾기)에 신뢰할 수 있습니다. 동료 심사를 받지 않은 소스를 포함한 웹을 검색하기 때문에 최종 인용 소스로는 신뢰할 수 없습니다. 발견을 위해 Perplexity를 사용한 다음 인용하기 전에 Elicit, Semantic Scholar 또는 직접 데이터베이스 검색을 사용하여 특정 주장을 검증하십시오.',
+          },
+        ],
+      },
+      sources: {
+        title: '출처 및 추가 읽기',
+        items: [
+          '[Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — 연구 워크플로우에 적용 가능한 58개 이상의 프롬프팅 기법을 목록화',
+          '[GPTZero, 2026. "GPTZero finds 100 new hallucinations in NeurIPS 2025 conference papers"](https://gptzero.me/news/neurips/) — 엘리트 컨퍼런스 의사록에 환각된 인용이 포함된 첫 번째 문서화된 사례',
+          '[Federal Reserve Bank of St. Louis, 2025. "The Impact of Generative AI on Work Productivity"](https://www.stlouisfed.org/on-the-economy/2025/feb/impact-generative-ai-work-productivity) — AI를 사용하는 근로자들은 AI 지원 시간에 33% 더 높은 생산성을 보고',
+          '[Vectara Hallucination Evaluation Model (HHEM)](https://huggingface.co/vectara/hallucination_evaluation_model) — 여러 도메인에서 LLM 환각률을 측정하는 오픈 소스 모델 및 리더보드',
+          '[Elicit Research Documentation](https://elicit.com/research) — Elicit의 의미론적 검색 및 구조화된 추출 방법론에 대한 기술 문서',
+        ],
+      },
+    },
+  },
+};

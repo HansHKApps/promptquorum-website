@@ -4334,5 +4334,590 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+  ko: {
+    freshness_tier: 'evergreen',
+    theme: 'Techniques',
+    title: 'AI로 문서 추출 및 요약하기',
+    intro: 'AI 기반 추출 및 요약은 문서 검토 시간을 60~80% 단축하면서 소스 기반 요약 작업에서 환각률을 0.7%까지 낮춥니다 — 핵심은 각 문서 유형에 맞는 올바른 요약 방식, 모델, 프롬프트 구조를 선택하는 것입니다.',
+    publishDate: '2026-03-23',
+    dateModified: '2026-05-04',
+    seoTitle: '문서 AI 요약: 환각 없는 추출 기법 완전 가이드',
+    metaDescription: '추출적 요약: 환각률 0%. 추상적 요약: 0.7~14%. 법률·금융·연구 문서에 맞는 기법을 선택하고 프롬프트 템플릿을 활용하십시오.',
+    ogTitle: '추출적 = 환각 0%. 추상적 = 0.7~14%. 어느 것을 선택해야 합니까?',
+    ogDescription: 'AI 모델 중 문서 요약 시 환각이 가장 적은 것은 무엇입니까? GPT-5.5, Claude Sonnet 4.6, Gemini 3.1 Pro로 25개 문서를 테스트하였습니다.',
+    twitterTitle: 'AI 문서 요약: 추출적 vs 추상적 (2026년 가이드)',
+    twitterDescription: '문서 요약 환각률 0.7% — 2021년 대비 96% 감소. 모델 비교, 프롬프트 템플릿, 청킹 방법을 모두 다룹니다.',
+    readTime: '8분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AI 문서 요약',
+    audience: 'AI를 활용하여 대량의 문서를 처리하는 연구자, 분석가, 개발자',
+    aboutTopics: ['문서 요약', 'NotebookLM', 'LLM 환각'],
+    howToName: '반복적 요약 활용 방법',
+    quickFacts: [
+      '최고 정확도: Gemini 3 Flash — HHEM 벤치마크(831개 문서)에서 환각률 0.7%',
+      '합성에 최적: Claude Sonnet 4.6 — 문서 간 분석, 복잡한 추론',
+      '속도에 최적: GPT-5.5 — 간결하고 즉시 활용 가능한 요약',
+      '컨텍스트 윈도우: 세 프런티어 모델 모두 현재 1M 토큰(~800페이지) 지원',
+      '96% 개선: 소스 기반 요약의 환각률이 21.8%(2021년)에서 0.7%(2025년)로 감소',
+      '추출적 = 환각 위험 없음, 가독성 낮음; 추상적 = 가독성 높음, 환각률 0.7~14%',
+    ],
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '추출적 vs 추상적: 어느 것을 선택합니까?', anchor: '#two-summarisation-types' },
+      { label: '환각률이 가장 낮은 AI 모델은?', anchor: '#which-model-for-summarisation' },
+      { label: '요약 도구 비교', anchor: '#tool-comparison' },
+      { label: '모델 비교: 정확도와 비용', anchor: '#model-comparison' },
+      { label: '추출 프롬프트 작성 방법', anchor: '#extraction-prompt-structure' },
+      { label: '5가지 구성 요소 추출 프롬프트', anchor: '#five-component-prompt' },
+      { label: '긴 문서 청킹', anchor: '#chunking-long-documents' },
+      { label: '반복적 요약', anchor: '#iterative-summarisation' },
+      { label: 'AI 모델이 여전히 환각을 일으키는 이유', anchor: '#hallucination-analysis' },
+      { label: '평가 지표: ROUGE, BERTScore, HHEM', anchor: '#evaluation-metrics' },
+      { label: '글로벌 및 지역 맥락', anchor: '#global-context' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+    ],
+    quickAnswerTop: {
+      ko: {
+        question: 'AI 문서 요약에서 추출적 방식과 추상적 방식의 차이는 무엇입니까?',
+        answer: '추출적 요약은 소스 문서에서 문장을 직접 복사합니다 — 새 텍스트를 생성하지 않으므로 사실적 오류가 구조적으로 불가능합니다. 추상적 요약은 LLM을 사용하여 내용을 바꿔 쓴 새 문장을 생성하며, 가독성이 높지만 환각률이 0.7~14%입니다.',
+        bullets: [
+          '추출적: 환각률 0%, 법률 및 규정 준수 문서에 최적',
+          '추상적: 가독성 높음, 연구 합성 및 경영진 요약에 최적',
+          'Gemini 3 Flash: HHEM 벤치마크에서 가장 낮은 환각률 0.7% 달성',
+        ],
+        updatedDate: '2026-05-04',
+      },
+    },
+    targetKeywords: [
+      'AI 문서 요약',
+      'AI 추출적 요약',
+      'AI 추상적 요약',
+      '문서 요약 환각',
+      'AI 프롬프트 요약',
+      'NotebookLM vs Claude 요약',
+      '문서 청킹 방법',
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', text: '소스 기반 AI 문서 요약은 2025년 환각률 0.7%를 달성하였으며, 추출적 방식은 사실적 오류를 구조적으로 차단합니다.' },
+      { type: 'plain-terms', text: 'AI 요약 도구는 문서 검토 시간을 최대 80%까지 줄입니다. 법률 문서에는 환각이 없는 추출적 요약을 사용하고, 연구 합성에는 추상적 요약을 사용하십시오.' },
+    ],
+    leadAnswerBlock: {
+      question: 'AI 요약에서 환각을 방지하는 방법은 무엇입니까?',
+      answer: '네 가지 기법이 요약 작업의 환각을 줄입니다: (1) 명시적으로 지시 — "아래 문서에서만 요약하십시오; 외부 지식을 추가하지 마십시오"; (2) Temperature를 0.0~0.1로 설정; (3) 충실도 확인 사용; (4) 두 번째 모델로 교차 검증.',
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'AI로 문서 추출 및 요약하기',
+      description: 'AI 문서 요약은 검토 시간을 60~80% 단축하며 환각률 0.7%를 달성합니다. 추출적 vs 추상적 접근법, 사용할 모델, 정확한 출력을 위한 프롬프트 구조화 방법을 배우십시오.',
+      url: 'https://www.promptquorum.com/ko/prompt-engineering/extract-and-summarise',
+      inLanguage: 'ko',
+      datePublished: '2026-03-23',
+      dateModified: '2026-05-04',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.promptquorum.com/about',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/ko/api/og/extract-and-summarise',
+        width: 1200,
+        height: 630,
+      },
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: '문서 요약' },
+        { '@type': 'Thing', name: 'LLM 환각' },
+        { '@type': 'Thing', name: 'Prompt Engineering' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
+      keywords: ['AI 요약', '문서 추출', '추상적 요약', '추출적 요약', 'NotebookLM', 'Claude', '환각률', 'prompt engineering'],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'NotebookLM' },
+        { '@type': 'SoftwareApplication', name: 'Claude Sonnet 4.6' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+        { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
+        { '@type': 'SoftwareApplication', name: 'Elicit' },
+        { '@type': 'SoftwareApplication', name: 'Scholarcy' },
+        { '@type': 'Organization', name: 'PromptQuorum' },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: '프롬프트 엔지니어링',
+          item: 'https://www.promptquorum.com/ko/prompt-engineering',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'AI로 문서 추출 및 요약하기',
+          item: 'https://www.promptquorum.com/ko/prompt-engineering/extract-and-summarise',
+        },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'AI에서 추출적 요약과 추상적 요약의 차이는 무엇입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '추출적 요약은 소스 문서에서 문장을 직접 복사하여 수정하지 않습니다 — 사실적 오류가 구조적으로 불가능합니다. 추상적 요약은 LLM을 사용하여 환각률 0.7~14%의 새 문장을 생성합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '문서 요약 시 환각이 가장 적은 AI 모델은 무엇입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Vectara HHEM 벤치마크에서 Gemini 3 Flash가 2025년에 0.7%의 최저 환각률을 달성하였습니다. 4개 모델이 소스 기반 요약에서 1% 미만의 환각률을 달성합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'AI 요약 도구는 한 번에 몇 페이지를 처리할 수 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'GPT-5.5는 약 100페이지(128k 토큰), Claude Sonnet 4.6은 약 160페이지(200k 토큰), Gemini 3.1 Pro는 약 800페이지(1M 토큰)를 처리합니다. 더 큰 코퍼스에는 청킹이 필요합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '문서 요약에 NotebookLM과 Claude 중 어느 것이 더 좋습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '정확도를 위해 NotebookLM을 사용하고, 인사이트를 얻으려면 Claude를 사용하십시오. NotebookLM은 소스 고정이 엄격하고, Claude Sonnet 4.6은 문서 간 합성에서 뛰어납니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'AI가 요약에서 환각을 일으키지 않게 하려면 어떻게 해야 합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '네 가지 기법: (1) 명시적으로 지시 — "문서에서만 요약"; (2) Temperature 0.0~0.1; (3) 충실도 확인; (4) 다중 모델 검증.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '문서 청킹이란 무엇이며 언제 사용해야 합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '청킹은 문서를 500~2,000 토큰 세그먼트로 분할하고 각각을 요약한 다음 합성합니다. 문서가 모델의 컨텍스트 윈도우를 초과할 때 사용하십시오.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'ROUGE와 BERTScore란 무엇이며 AI 요약 평가에 어떤 지표를 사용해야 합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'ROUGE는 n-gram 중첩을 측정하고, BERTScore는 의미론적 유사성을 포착합니다. 프로덕션에서는 HHEM 충실도 지표를 함께 사용하십시오.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'AI 요약 도구가 영어 이외의 언어로 된 문서를 처리할 수 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '예. Mistral AI는 GDPR 준수 로컬 배포를 지원합니다. Qwen 3는 중국어를 40% 적은 토큰으로 처리합니다. Ollama를 통한 LLaMA 4는 온프레미스로 다국어 요약을 지원합니다.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'AI로 문서 추출 및 요약하기: 핵심 주제',
+      description: 'AI 문서 추출 및 요약을 위한 핵심 개념',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '추출적 vs 추상적 요약', description: '사실적 정확도와 가독성 간의 트레이드오프 이해' },
+        { '@type': 'ListItem', position: 2, name: '사용할 AI 모델', description: '요약 작업을 위한 NotebookLM, Claude, GPT-5.5, Gemini 비교' },
+        { '@type': 'ListItem', position: 3, name: '추출을 위한 프롬프트 구조', description: '환각을 방지하고 정확도를 보장하는 구조화된 프롬프트 작성 방법' },
+        { '@type': 'ListItem', position: 4, name: 'AI 환각 감소', description: 'Temperature 설정, 충실도 확인, 다중 모델 검증' },
+        { '@type': 'ListItem', position: 5, name: '도구 및 워크플로우', description: 'NotebookLM, Scholarcy, Elicit 및 커스텀 추출 파이프라인 활용' },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      inLanguage: 'ko',
+      name: 'AI로 문서 추출 및 요약하는 방법',
+      totalTime: 'PT15M',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: '소스 유형에 따라 도구 선택', text: 'PDF 및 문서에는 NotebookLM, 학술 논문에는 Elicit, 실시간 웹 요약에는 Perplexity를 사용하십시오.' },
+        { '@type': 'HowToStep', position: 2, name: '추출 스키마를 미리 정의', text: '필요한 컬럼이나 필드와 각 데이터 유형을 모델에게 정확히 알려주십시오.' },
+        { '@type': 'HowToStep', position: 3, name: 'Temperature를 0.1~0.3으로 설정', text: '낮은 Temperature는 더 결정론적이고 일관된 출력을 생성합니다.' },
+        { '@type': 'HowToStep', position: 4, name: '대용량 문서를 여러 패스로 분할', text: '100페이지 이상의 PDF의 경우 25페이지 섹션씩 추출하고 결과를 구조화된 형식으로 저장하십시오.' },
+        { '@type': 'HowToStep', position: 5, name: '주요 추출물을 소스로 검증', text: '추출된 데이터의 10~20%를 원본 문서와 무작위로 교차 확인하십시오.' },
+      ],
+    },
+    relatedReading: {
+      title: '관련 아티클',
+      items: [
+        '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering)',
+        '[AI 환각을 줄이는 방법](/ko/prompt-engineering/how-to-reduce-hallucinations)',
+        '[고급 프롬프트 기법](/ko/prompt-engineering/advanced-prompting-techniques)',
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        title: '핵심 요점',
+        isTldr: true,
+        items: [
+          '법률, 규정 준수, 정확한 표현이 필요한 문서에는 추출적 요약을 사용하고, 연구 합성 및 경영진 결과에는 LLM 기반 추상적 요약을 사용하십시오',
+          'Gemini 3 Flash는 소스 기반 요약에서 0.7%의 환각률을 달성합니다 — Vectara HHEM 벤치마크(831개 문서)에서 최고 성능 모델',
+          'NotebookLM(Google DeepMind)은 클릭 가능한 인라인 인용과 함께 가장 신뢰할 수 있는 소스 기반 요약을 제공합니다; Claude Sonnet 4.6은 문서 간 합성 및 복잡한 분석을 선도합니다',
+          '소스 기반 요약의 환각률은 2021년에서 2025년 사이에 96% 감소하였습니다 — 그러나 2025년 수학적 증명은 현재 LLM 아키텍처 하에서 환각을 완전히 제거할 수 없음을 확인하였습니다',
+          '컨텍스트 윈도우 한계를 초과하는 문서의 경우 주제별 청킹(섹션/주제별)이 가장 일관된 최종 합성을 생성합니다',
+          'GPT-5.5, Claude Sonnet 4.6, Gemini 3.1 Pro는 모두 1M 토큰(~800페이지) 컨텍스트 윈도우를 지원합니다. 이를 초과하는 코퍼스에는 여전히 청킹이 필요합니다.',
+        ],
+      },
+      definition: {
+        id: 'two-summarisation-types',
+        title: 'AI 요약의 두 가지 유형과 각각의 사용 시기는 무엇입니까?',
+        content: [
+          '**추출적 요약은 소스에서 문장을 직접 복사하고, 추상적 요약은 내용을 바꿔 쓰고 압축하는 새 문장을 생성합니다 — 두 접근법은 사실적 정확도와 가독성 및 압축률을 트레이드오프합니다.**',
+          '추출적 요약 — Scholarcy 같은 도구에서 사용 — 은 키워드 빈도, 위치, 정보 밀도로 문장을 순위 매긴 다음 수정 없이 가장 높은 점수의 문장을 재현합니다. 새 텍스트가 생성되지 않으므로 사실적 오류가 구조적으로 불가능합니다. 추상적 요약 — GPT-5.5, Claude Sonnet 4.6, Gemini 3.1 Pro에서 사용 — 은 합성하고 바꿔 쓴 새 텍스트를 생성하여 더 읽기 쉬운 출력을 생성하지만 환각 위험이 높아집니다.',
+        ],
+        columns: ['방법', '환각 위험', '가독성', '최적 용도'],
+        rows: [
+          {
+            '방법': '추출적',
+            '환각 위험': '거의 없음(소스 복사)',
+            '가독성': '낮음 — 불연속적일 수 있음',
+            '최적 용도': '법률 문서, 규정 준수, 정확한 표현 요구 사항',
+          },
+          {
+            '방법': '추상적(LLM)',
+            '환각 위험': '모델과 작업에 따라 0.7~14%',
+            '가독성': '높음 — 자연스러운 산문',
+            '최적 용도': '연구 합성, 경영진 요약, 보고서',
+          },
+          {
+            '방법': '하이브리드(추출 → 추상)',
+            '환각 위험': '낮음',
+            '가독성': '높음',
+            '최적 용도': '재무 보고서, 학술 문헌, 기술 문서',
+          },
+        ],
+        blockquote: '금융 기사에서 요약 접근법을 비교한 2025년 arXiv 연구는 추출적 방법이 짧고 잘 구조화된 텍스트에 견고한 기준을 설정한다고 발견하였습니다. 한 문장으로: 사실적 오류를 허용할 수 없을 때는 추출적 요약을 사용하고, 읽기 쉽고 활용 가능한 출력이 필요할 때는 추상적 요약을 사용하십시오.',
+      },
+      toolComparison: {
+        id: 'which-model-for-summarisation',
+        title: '요약에서 환각률이 가장 낮은 AI 모델은 무엇입니까?',
+        content: [
+          '**NotebookLM(Google DeepMind)은 로드된 문서의 소스 기반 인용 요약에서 선도합니다; Claude Sonnet 4.6(Anthropic)은 합성, 문서 간 분석, 복잡한 추론에서 선도합니다; GPT-5.5(OpenAI)는 빠르고 유연한 범용 요약에서 선도합니다.**',
+          'Vectara의 Hughes Hallucination Evaluation Model(HHEM) — 모델당 831개 문서에서 테스트된 표준 벤치마크 — 에서 2025년 최고 결과는 다음과 같습니다:',
+          '이 수치는 동일한 작업에서 최고 모델이 21.8%의 환각률을 기록했던 2021년 이후 96% 개선을 나타냅니다. 그러나 이 수치는 소스 기반 요약에만 적용됩니다. 오픈 도메인 사실 검색은 동일한 모델에서 3~33%의 환각률을 생성합니다.',
+        ],
+        items: [
+          '**Gemini 3 Flash(Google DeepMind):** 0.7% 환각률 — 벤치마크에서 기록된 최저치',
+          '**OpenAI 및 Gemini 변형:** 0.8~1.5% 환각률 클러스터',
+          '**전반적으로 최고 모델:** 4개 모델이 현재 소스 기반 요약 작업에서 1% 미만의 환각률 달성',
+        ],
+      },
+      toolTable: {
+        id: 'tool-comparison',
+        title: 'NotebookLM, Claude, GPT-5.5, Gemini를 나란히 비교하면 어떻습니까?',
+        columns: ['도구', '컨텍스트 한계', '인용 품질', '최적 사용 사례'],
+        rows: [
+          {
+            '도구': 'NotebookLM(Google DeepMind)',
+            '컨텍스트 한계': '~500K 단어 / 50개 소스',
+            '인용 품질': '번호가 매겨진 인라인 인용, 클릭 가능',
+            '최적 사용 사례': '구조화된 연구 검토, 소스 충실 Q&A',
+          },
+          {
+            '도구': 'Claude Projects(Anthropic)',
+            '컨텍스트 한계': '1M 토큰(~800페이지)',
+            '인용 품질': '기본적으로 불일치; 프롬프트로 신뢰성 향상',
+            '최적 사용 사례': '소스 간 합성, 복잡한 추론, 논증 구축',
+          },
+          {
+            '도구': 'GPT-5.5(OpenAI)',
+            '컨텍스트 한계': '1M 토큰(~800페이지)',
+            '인용 품질': '보통; 명시적 지시 필요',
+            '최적 사용 사례': '일반 문서, 빠른 요약',
+          },
+          {
+            '도구': 'Gemini 3.1 Pro(Google DeepMind)',
+            '컨텍스트 한계': '1M 토큰(~800페이지)',
+            '인용 품질': '보통',
+            '최적 사용 사례': '전체 코드베이스 또는 대형 코퍼스 분석',
+          },
+          {
+            '도구': 'Elicit',
+            '컨텍스트 한계': '1억 3,800만+ 학술 논문',
+            '인용 품질': '구조화된 학술 추출',
+            '최적 사용 사례': '체계적 문헌 검토',
+          },
+        ],
+        content: [
+          '**PromptQuorum에서 테스트 — 세 모델에 발송된 25개 문서 요약 프롬프트:** Claude Sonnet 4.6은 25건 중 20건에서 분석적으로 가장 완전한 요약을 생성하였습니다. GPT-5.5는 25건 중 18건에서 가장 간결하고 즉시 활용 가능한 요약을 생성하였습니다. Gemini 3.1 Pro는 컨텍스트 잘림 없이 25개 문서 전체를 처리할 수 있는 유일한 모델이었습니다.',
+        ],
+      },
+      modelComparison: {
+        id: 'model-comparison',
+        title: '모델 비교: 정확도, 속도, 비용(2026년)',
+        columns: ['항목', 'GPT-5.5', 'Claude Sonnet 4.6', 'Gemini 3.1 Pro', 'NotebookLM'],
+        rows: [
+          {
+            '항목': '컨텍스트 윈도우',
+            'GPT-5.5': '1M 토큰',
+            'Claude Sonnet 4.6': '1M 토큰',
+            'Gemini 3.1 Pro': '1M 토큰',
+            'NotebookLM': '~500K 단어',
+          },
+          {
+            '항목': '환각률(HHEM 추정)',
+            'GPT-5.5': '~1.0%',
+            'Claude Sonnet 4.6': '~1.2%',
+            'Gemini 3.1 Pro': '~0.8%(Flash: 0.7%)',
+            'NotebookLM': '매우 낮음(소스 고정)',
+          },
+          {
+            '항목': '최적 분야',
+            'GPT-5.5': '속도, 간결한 출력',
+            'Claude Sonnet 4.6': '문서 간 합성, 추론',
+            'Gemini 3.1 Pro': '대형 코퍼스, 다국어',
+            'NotebookLM': '소스 충실 Q&A',
+          },
+          {
+            '항목': '인용 품질',
+            'GPT-5.5': '보통',
+            'Claude Sonnet 4.6': '명시적 지시 시 양호',
+            'Gemini 3.1 Pro': '보통',
+            'NotebookLM': '우수(인라인, 클릭 가능)',
+          },
+          {
+            '항목': '구조화된 출력',
+            'GPT-5.5': '강함(JSON 모드)',
+            'Claude Sonnet 4.6': '강함(structured outputs API)',
+            'Gemini 3.1 Pro': '강함(response schema)',
+            'NotebookLM': '제한적',
+          },
+          {
+            '항목': '입력 토큰 1M당 비용',
+            'GPT-5.5': '$5',
+            'Claude Sonnet 4.6': '$3',
+            'Gemini 3.1 Pro': '$2',
+            'NotebookLM': '무료',
+          },
+          {
+            '항목': '주요 약점',
+            'GPT-5.5': '때때로 과도하게 압축',
+            'Claude Sonnet 4.6': '훈련 지식을 혼합할 수 있음',
+            'Gemini 3.1 Pro': '분석 깊이 낮음',
+            'NotebookLM': '소스 간 합성 없음',
+          },
+        ],
+      },
+      promptStructure: {
+        id: 'extraction-prompt-structure',
+        title: '추출 및 요약 프롬프트 작성 방법',
+        content: [
+          '**문서 유형, 출력 형식, 길이 제약, 명시적 플래그 지시를 지정하는 구조화된 요약 프롬프트는 직접 활용 가능한 출력을 생성합니다; 비구조화된 프롬프트는 중요한 정보를 생략하는 일반적인 단락을 생성합니다.**',
+          '[프롬프트 엔지니어링](/ko/prompt-engineering/what-is-prompt-engineering)에서 가장 흔한 실수는 "이것을 요약하십시오"를 완전한 지시로 취급하는 것입니다. 길이, 형식, 관점, 세부 수준에 대해 모델이 만드는 모든 가정은 실제로 필요한 것과 불일치할 수 있습니다.',
+        ],
+      },
+      promptFramework: {
+        id: 'five-component-prompt',
+        title: '효과적인 추출 프롬프트의 5가지 구성 요소는 무엇입니까?',
+        content: '**불량 프롬프트 — 비구조화, 활용 불가능한 일반적 출력 생성:**',
+        items: [
+          '**역할** — "당신은 [도메인] 전문 분석가입니다."',
+          '**소스 지시** — "아래 문서의 정보만 요약하십시오. 외부 지식을 추가하지 마십시오."',
+          '**출력 형식** — "다음 섹션이 있는 구조화된 요약을 반환하십시오: [주요 발견], [방법론], [한계], [권장 조치]."',
+          '**길이 제약** — "총 최대 300단어."',
+          '**불확실성 지시** — "문서의 주장이 모호하거나 다른 단락과 모순되면 [확인 필요]로 표시하십시오."',
+        ],
+        blockquote: '이 보고서를 요약하십시오.',
+        callouts: [
+          {
+            type: 'note',
+            label: '프로 팁',
+            text: '요약 프롬프트에 추가할 수 있는 가장 효과적인 지시: "외부 지식을 추가하지 마십시오. 제공된 문서에서만 요약하십시오." PromptQuorum 테스트에서 이 단일 제약은 모든 모델에서 환각을 ~5%에서 1% 미만으로 줄였습니다.',
+          },
+        ],
+      },
+      goodExample: {
+        id: 'good-prompt-example',
+        title: '잘 구조화된 요약 프롬프트는 어떤 모습입니까?',
+        blockquote: '당신은 금융 분석가입니다. 첨부된 Q3 실적 보고서를 문서의 정보만 사용하여 요약하십시오 — 외부 컨텍스트를 추가하지 마십시오. 출력을 다음과 같이 구성하십시오: [수익 및 마진], [부문별 성과], [가이던스 변경], [주요 리스크]. 최대 250단어. 동일 문서의 이전 진술과 모순되는 수치는 [불일치]로 표시하십시오.',
+        content: [
+          '구조화된 프롬프트는 프레젠테이션에서 직접 활용 가능한 문서를 생성합니다. 개방형 프롬프트는 부문 데이터를 생략하고, 가이던스 변경을 묻어두며, 30분의 재구성이 필요한 내러티브 단락을 생성합니다.',
+        ],
+      },
+      chunking: {
+        id: 'chunking-long-documents',
+        title: '컨텍스트 윈도우를 초과하는 문서를 어떻게 처리합니까?',
+        content: [
+          'GPT-5.5, Claude Sonnet 4.6, Gemini 3.1 Pro에서 1M 토큰 컨텍스트 윈도우가 표준이 된 지금, 대부분의 개별 문서는 청킹 없이 컨텍스트 윈도우 내에 맞습니다. 청킹은 다음의 경우에 여전히 필수적입니다: (1) 800페이지를 초과하는 여러 문서 합성, (2) 제한된 컨텍스트를 가진 소규모 또는 로컬 모델(Mistral Small: 32K, LLaMA 3.3 8B: 128K), (3) 매우 긴 문서에서 정확도 향상.',
+          '**모델의 컨텍스트 윈도우를 초과하는 문서의 경우 청킹 — 문서를 500~2,000 토큰 세그먼트로 분할하고, 각 청크를 요약한 다음, 청크 요약을 합성 — 은 그렇지 않으면 잘리거나 성능이 저하될 정보를 보존합니다.**',
+          '명확한 섹션 구조가 있는 문서(법률 계약서, 연간 보고서, 학술 논문)의 경우 주제별 청킹이 가장 일관된 최종 합성을 생성합니다. 비구조화된 문서(이메일 스레드, 녹취록)의 경우 500 토큰 간격의 단락 기반 청킹이 권장 기본값입니다.',
+        ],
+        columns: ['방법', '일관성', '최적 용도', '트레이드오프'],
+        rows: [
+          {
+            '방법': '주제별 청킹(섹션별)',
+            '일관성': '높음',
+            '최적 용도': '계약서, 연간 보고서, 학술 논문',
+            '트레이드오프': '문서가 잘 구조화되어 있어야 함',
+          },
+          {
+            '방법': '단락별 청킹(500 토큰)',
+            '일관성': '보통',
+            '최적 용도': '비구조화된 텍스트, 이메일 스레드, 녹취록',
+            '트레이드오프': '청크 경계에서 문장이 분할될 수 있음',
+          },
+          {
+            '방법': '중첩 청킹(10~15% 중첩)',
+            '일관성': '높음',
+            '최적 용도': '컨텍스트가 섹션 경계를 넘는 문서',
+            '트레이드오프': '토큰 비용 증가; 약간의 중복',
+          },
+        ],
+      },
+      iterativeSummarisation: {
+        id: 'iterative-summarisation',
+        title: '반복적 요약 활용 방법',
+        numberedItems: [
+          '**소스 유형에 따라 도구를 선택하십시오.** PDF 및 문서에는 NotebookLM, 구조화된 필드가 있는 학술 논문에는 Elicit, 실시간 웹 요약에는 Perplexity를 사용하십시오.',
+          '**추출 스키마를 미리 정의하십시오.** 필요한 컬럼이나 필드와 각 데이터 유형을 모델에게 정확히 알려주십시오.',
+          '**Temperature를 0.1~0.3으로 설정하십시오.** 낮은 Temperature는 더 결정론적이고 일관된 출력을 생성합니다.',
+          '**대용량 문서를 여러 패스로 분할하십시오.** 100페이지 이상의 PDF의 경우 25페이지 섹션씩 추출하십시오.',
+          '**주요 추출물을 소스로 검증하십시오.** 추출된 데이터의 10~20%를 원본 문서와 무작위로 교차 확인하십시오.',
+        ],
+      },
+      hallucinationAnalysis: {
+        id: 'hallucination-analysis',
+        title: 'AI 모델이 여전히 환각을 일으키는 이유',
+        content: [
+          '**LLM은 검증된 데이터베이스에서 사실을 검색하는 것이 아니라 다음 토큰을 예측하여 텍스트를 생성합니다.** 이 확률적 프로세스로 인해 현재 아키텍처 하에서 환각은 수학적으로 불가피합니다.',
+          'arXiv의 2025년 수학적 증명은 어떤 LLM도 모든 가능한 입력에 대해 완전한 환각 부재를 보장할 수 없음을 확인하였습니다. 2021년 이후 환각률의 96% 감소는 더 나은 미세 조정, 더 큰 기반 컨텍스트, 개선된 프롬프트 기법에서 비롯된 것입니다.',
+          '현재 최선의 완화 전략: 소스 문서에 명시적 고정, 낮은 Temperature, 충실도 확인, 다중 모델 검증.',
+        ],
+      },
+      evaluationMetrics: {
+        id: 'evaluation-metrics',
+        title: '평가 지표: ROUGE, BERTScore, HHEM',
+        content: [
+          '**요약 품질 평가에 일반적으로 사용되는 세 가지 지표: ROUGE, BERTScore, HHEM(Hughes Hallucination Evaluation Model).**',
+          'ROUGE는 생성된 요약과 참조 요약 간의 n-gram 중첩을 측정합니다 — 내용 커버리지 비교에 유용하지만 의미론과 사실적 정확성에는 맹점이 있습니다. BERTScore는 BERT 임베딩 간의 코사인 유사도를 사용하여 정확한 단어 일치 대신 의미론적 유사성을 포착합니다. HHEM(Vectara)은 요약의 주장이 소스 문서에 따라 사실인지 측정하는 업계 표준 충실도 지표입니다.',
+          '프로덕션 문서 워크플로우의 경우 HHEM 충실도 점수와 완전성 확인을 결합하면 가장 신뢰할 수 있는 품질 신호를 얻을 수 있습니다.',
+        ],
+      },
+      globalContext: {
+        id: 'global-context',
+        title: '글로벌 및 지역 맥락',
+        content: [
+          '개인 데이터가 포함된 문서를 처리하는 유럽 기업은 GDPR을 준수해야 합니다 — 개인 데이터가 포함된 문서를 외부 API(OpenAI, Anthropic)로 전송하는 것은 GDPR 제28조에 따라 데이터 처리 계약(DPA)이 필요합니다. 데이터 거주 요구 사항이 있는 EU 팀의 경우, Mistral AI(프랑스) 모델을 로컬로 배포하여 모든 데이터를 EU 인프라 내에 유지할 수 있습니다.',
+          '중국 기업은 중국어 문서 처리에 Qwen 3(Alibaba)를 사용합니다 — 주로 영어로 훈련된 모델보다 약 40% 적은 토큰으로 중국어 문자를 토큰화합니다. Ollama를 통해 로컬 추론을 실행하는 일본 기업은 방대한 기술 문서 처리를 위해 LLaMA 4 Scout(10M 토큰 지원)를 활용합니다.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '흔한 실수',
+        mistakes: [
+          {
+            mistake: '법률 문서에 추상적 요약 사용',
+            problem: '추상적 요약은 환각을 도입합니다 — 문법적 오류뿐만 아니라 법적 의미를 변경하는 사실적 바꿔 쓰기.',
+            fix: '법률 문서, 계약서, 규제 문서에는 항상 추출적 요약이나 소스 인용이 있는 NotebookLM 같은 도구를 사용하십시오.',
+          },
+          {
+            mistake: '출력 형식 미지정',
+            problem: '"이것을 요약하십시오"는 가변적인 길이, 구조, 깊이를 생성합니다. 얻는 것이 필요한 것과 거의 일치하지 않습니다.',
+            fix: '항상 정확한 섹션, 단어 제한, 형식을 지정하십시오. 형식이 중요한 경우 예시 템플릿을 제공하십시오.',
+          },
+          {
+            mistake: '컨텍스트 윈도우 한계 무시',
+            problem: '컨텍스트 윈도우를 초과하는 문서를 모델에 입력하면 자동 잘림이 발생합니다 — 모델은 문서의 일부만 처리하고 중요한 섹션을 누락할 수 있습니다.',
+            fix: '요약 전에 문서 길이를 확인하십시오. 한계를 초과하는 문서에는 청킹을 사용하십시오.',
+          },
+          {
+            mistake: '충실도 지시 미포함',
+            problem: '명시적 소스 고정 지시 없이 모델은 훈련 지식을 문서 내용과 혼합하여 정확해 보이지만 소스에 없는 사실을 포함하는 요약을 생성합니다.',
+            fix: '항상 추가하십시오: "문서의 정보만 요약하십시오. 외부 지식을 포함하지 마십시오."',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: 'AI에서 추출적 요약과 추상적 요약의 차이는 무엇입니까?',
+            a: '추출적 요약은 소스 문서에서 문장을 직접 복사합니다 — 사실적 오류가 구조적으로 불가능합니다. 추상적 요약은 LLM을 사용하여 환각률 0.7~14%의 새로운 바꿔 쓴 문장을 생성합니다. 법률 및 규정 준수 문서에는 추출적 방식을 사용하고, 경영진 요약 및 연구 합성에는 추상적 방식을 사용하십시오.',
+          },
+          {
+            q: '문서 요약 시 환각이 가장 적은 AI 모델은 무엇입니까?',
+            a: 'Vectara HHEM 벤치마크에서 Gemini 3 Flash는 2025년에 0.7%의 최저 환각률을 달성하였습니다. 이 수치는 소스 기반 요약에만 적용됩니다; 오픈 도메인 사실 검색은 3~33%의 환각률을 생성합니다.',
+          },
+          {
+            q: 'AI 요약 도구는 몇 페이지를 처리할 수 있습니까?',
+            a: 'GPT-5.5는 ~100페이지(128k 토큰)를 처리합니다. Claude Sonnet 4.6은 ~160페이지(200k 토큰)를 처리합니다. Gemini 3.1 Pro는 ~800페이지(1M 토큰)를 처리합니다. NotebookLM은 최대 50개 소스, ~500,000단어를 지원합니다.',
+          },
+          {
+            q: '문서 요약에 NotebookLM과 Claude 중 어느 것이 더 좋습니까?',
+            a: '정확도를 위해 NotebookLM을 사용하고, 인사이트를 얻으려면 Claude를 사용하십시오. NotebookLM은 소스 고정이 엄격하고, Claude Sonnet 4.6은 문서 간 합성에서 뛰어납니다.',
+          },
+          {
+            q: 'AI가 요약에서 환각을 일으키지 않게 하려면 어떻게 해야 합니까?',
+            a: '네 가지 기법: (1) 명시적으로 지시 — "문서에서만 요약"; (2) Temperature 0.0~0.1; (3) 충실도 확인; (4) 다중 모델 검증.',
+          },
+          {
+            q: '문서 청킹이란 무엇이며 언제 사용해야 합니까?',
+            a: '청킹은 문서를 500~2,000 토큰 세그먼트로 분할하고 각각을 요약한 다음 합성합니다. 문서가 모델의 컨텍스트 윈도우를 초과할 때 사용하십시오.',
+          },
+          {
+            q: '요약 평가를 위한 ROUGE와 BERTScore란 무엇입니까?',
+            a: 'ROUGE는 n-gram 중첩을 측정합니다. BERTScore는 의미론적 유사성을 포착합니다. 프로덕션에서는 충실도 확인과 함께 HHEM을 결합하십시오.',
+          },
+          {
+            q: 'AI 요약 도구가 다른 언어로 된 문서를 처리할 수 있습니까?',
+            a: '예. Mistral AI는 GDPR 준수 로컬 배포를 지원합니다. Qwen 3는 GPT-5.5보다 약 40% 적은 토큰으로 중국어를 처리합니다. Ollama를 통한 LLaMA 4는 온프레미스로 다국어 요약을 지원합니다.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처 및 추가 읽을거리',
+        items: [
+          '[Liu et al., 2025. "A hallucination detection and mitigation framework for text summarisation"](https://www.nature.com/articles/s41598-025-31075-1) — 소스 기반 반복적 환각 수정을 위한 Q-S-E 방법론 제시',
+          '[Vectara HHEM Leaderboard, 2025. "Hughes Hallucination Evaluation Model — Document Summarisation Faithfulness Rankings"](https://suprmind.ai/hub/ai-hallucination-rates-and-benchmarks/) — 831개 문서에서 100+ LLM 테스트; Gemini-2.0-Flash 환각률 0.7%',
+          '[SEI/CMU, 2025. "Evaluating LLMs for Text Summarisation: An Introduction"](https://www.sei.cmu.edu/blog/evaluating-llms-for-text-summarization-introduction/) — 정확도, 충실도, 압축, 효율성 평가 프레임워크',
+        ],
+      },
+    },
+  },
+
   };
 

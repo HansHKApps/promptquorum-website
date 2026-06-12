@@ -2775,4 +2775,472 @@ tests:
       ],
     },
   },
-};
+  ko: {
+    theme: 'Tools & Platforms',
+    title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo 비교 (2026)',
+    seoTitle: 'Braintrust vs PromptHub vs Vellum 비교: 2026년 최적의 2가지 도구',
+    intro: '**팀을 위한 프롬프트 관리 도구는 네 가지가 주도합니다: 출력 평가를 위한 Braintrust, 버전 관리를 위한 PromptHub, 프로덕션 A/B 테스트를 위한 Vellum, CI/CD 회귀 방지를 위한 Promptfoo.** 대부분의 팀은 네 가지 모두를 구매하여 월 $1,000 이상을 낭비합니다. 올바른 스택은 항상 정확히 두 가지 도구입니다 — 하나는 평가용, 하나는 배포용.',
+    metaDescription: 'Braintrust ($249/월)는 프롬프트를 평가합니다. Vellum ($200–500/월)은 프로덕션 A/B 테스트를 수행합니다. Promptfoo는 무료입니다. PromptHub는 버전 관리를 합니다. 대부분의 팀은 2개만 필요합니다.',
+    ogTitle: '프롬프트 도구 4개 구매는 월 $1,000 이상 낭비입니다. 2가지 도구 스택을 소개합니다',
+    ogDescription: 'Braintrust는 채점합니다. Vellum은 트래픽을 분배합니다. Promptfoo는 회귀를 감지합니다. PromptHub는 버전 관리를 합니다. 2개를 선택하세요. 비교 표 포함.',
+    twitterTitle: 'Braintrust vs PromptHub vs Vellum vs Promptfoo: 어떤 2가지를 선택할까',
+    twitterDescription: 'Promptfoo는 무료입니다. Vellum은 월 $200부터 시작합니다. Braintrust는 월 $500부터 시작합니다. PromptHub는 월 $50부터 시작합니다. 정확히 2개가 필요합니다 — 평가 + 배포. 의사결정 매트릭스 포함.',
+    publishDate: '2026-04-10',
+    dateModified: '2026-05-01',
+    readTime: '9분 분량',
+    educationalLevel: 'Intermediate',
+    audience: '프롬프트 관리 스택을 선택하는 프롬프트 엔지니어 및 엔지니어링 매니저',
+    primaryTerm: 'Braintrust vs PromptHub vs Vellum vs Promptfoo',
+    aboutTopics: ['프롬프트 관리', 'LLM 평가', '프롬프트 버전 관리'],
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-10-27',
+    lastFactChecked: '2026-04-28',
+    targetKeywords: ['Braintrust 비교', 'PromptHub 대안', 'Vellum 프롬프트 관리', 'Promptfoo CI/CD', '프롬프트 평가 도구 2026'],
+    toc: [
+      { label: 'Braintrust, PromptHub, Vellum, Promptfoo의 역할', anchor: '#what-is' },
+      { label: '도구 비교 기준', anchor: '#evaluation-criteria' },
+      { label: 'Braintrust: $249/월 Pro 플랜의 평가 심층 기능', anchor: '#braintrust' },
+      { label: 'PromptHub: $50–200/월 버전 관리', anchor: '#prompthub' },
+      { label: 'Vellum: $200–500/월 프로덕션 트래픽 분배', anchor: '#vellum' },
+      { label: 'Promptfoo: 무료 오픈소스 CI/CD 테스트', anchor: '#promptfoo' },
+      { label: 'PromptQuorum: 최적화 전 멀티 모델 비교', anchor: '#promptquorum' },
+      { label: '4가지 도구 직접 비교', anchor: '#comparison-table' },
+      { label: '팀 유형별 도구 선택', anchor: '#which-tool' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '4가지 도구 중 선택 방법', anchor: '#how-to-choose' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+      { label: '출처', anchor: '#sources' },
+    ],
+    quickFacts: [
+      'Promptfoo는 유일한 무료 도구(MIT 라이선스, 유료 티어 없음)입니다 — SaaS 비용 없이 CI/CD를 원하는 팀에 이상적입니다',
+      'Braintrust Pro 플랜은 월 $249부터 시작합니다(1M spans + 10K scores 무료 티어 제공); Vellum은 $200–500/월; PromptHub는 $50–200/월',
+      '두 가지 도구 스택(평가 + 배포)은 5인 팀 기준 월 $250–700이 소요됩니다',
+      'Vellum만이 프로덕션에서 실제 트래픽 분배(실사용자 A/B 테스트)를 지원합니다',
+      '4가지 도구 모두 OpenAI 및 Anthropic API를 지원하며, Promptfoo만이 40개 이상의 프로바이더를 기본 지원합니다',
+      'PromptQuorum은 모델에 구애받지 않는 첫 번째 단계를 추가합니다: 특정 프로바이더에 결정하기 전에 25개 이상의 모델에 프롬프트를 전송합니다',
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', text: 'Braintrust는 채점하고, PromptHub는 버전 관리하고, Vellum은 A/B 테스트하고, Promptfoo는 회귀를 테스트합니다 — 서로 겹치지만 대체하지 않는 네 가지 프롬프트 도구입니다.' },
+      { type: 'plain-terms', text: '소프트웨어 구축처럼 생각하세요: 테스트 프레임워크(Promptfoo), 품질 대시보드(Braintrust), 배포 파이프라인(Vellum), 코드 저장소(PromptHub)가 필요합니다. 대부분의 팀은 네 가지가 아니라 그 중 두 가지가 필요합니다.' },
+    ],
+    sections: {
+      keyTakeaways: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Braintrust는 평가 심층 기능에서 선두를 달립니다: 커스텀 채점 함수, 자율 반복을 위한 Loop 에이전트, IDE 도구 MCP 통합, Pro $249/월(무료 티어 제공). 출력 품질을 체계적으로 측정하는 팀에 이상적입니다.',
+          'Vellum은 프로덕션 A/B 테스트에서 선두입니다: 실사용자 트래픽을 변형 간에 분배하고, 승인 워크플로우를 갖추고 있으며, $200–500/월. 실시간 LLM 기능을 보유한 팀에 이상적입니다.',
+          'Promptfoo는 무료 대안입니다: 오픈소스 CLI, YAML 기반 테스트 스위트, GitHub Actions 통합. DevOps/플랫폼 팀에 이상적입니다.',
+          'PromptHub는 버전 관리와 팀 공유에 집중합니다. 네 가지 중 가장 도입이 쉽고 가장 저렴합니다($50–200/월). 콘텐츠 및 마케팅 팀에 이상적입니다.',
+          '대부분의 팀은 정확히 2가지 도구가 필요합니다: 평가용 하나(Braintrust 또는 Promptfoo)와 배포용 하나(Vellum 또는 PromptHub). 4가지 모두 구매하면 월 $700 이상이 낭비됩니다.',
+          '어떤 도구도 5가지 기준(협업, A/B 테스트, 평가 채점, CI/CD 통합, 투명한 가격) 모두에서 탁월하지 않습니다.',
+          'PromptQuorum: 어떤 도구를 최적화하기 전에 PromptQuorum을 사용하여 25개 이상의 모델에서 프롬프트가 동시에 어떻게 작동하는지 비교하세요.',
+        ],
+      },
+      whatIs: {
+        id: 'what-is',
+        title: 'Braintrust, PromptHub, Vellum, Promptfoo의 역할',
+        content: [
+          '**Braintrust, PromptHub, Vellum, Promptfoo는 팀의 서로 다른 프롬프트 문제를 해결합니다.** Braintrust는 평가 플랫폼(출력 채점)입니다. PromptHub는 버전 관리 시스템(프롬프트 구성 및 공유)입니다. Vellum은 A/B 테스트가 있는 배포 플랫폼(실제 트래픽에서 실험 실행)입니다. Promptfoo는 테스트 자동화 도구(CI/CD에서 회귀 감지)입니다. 서로 겹치지만 대체하지는 않습니다.',
+          '팀이 하나를 선택하기 어려운 이유: 네 가지 모두 "프롬프트 최적화"를 주장하지만 서로 다른 단계에서 수행합니다. Braintrust는 측정하여 최적화하고, Vellum은 트래픽을 분배하여 최적화하며, Promptfoo는 회귀를 감지하여 최적화하고, PromptHub는 구성하여 최적화합니다. 팀은 더 나은 프롬프트를 발견하기 위해 Braintrust를, CI/CD에서 테스트하기 위해 Promptfoo를, 배포하기 위해 Vellum을 사용할 수 있습니다.',
+          '이 가이드는 네 가지 특정 도구에 대한 직접 비교입니다. 모든 프롬프트 엔지니어링 도구에 대한 더 넓은 순위는 [2026년 최고의 프롬프트 엔지니어링 도구](/ko/prompt-engineering/best-prompt-engineering-tools-2026)를 참조하세요. DSPy 및 Helicone을 포함한 팀 최적화 기능은 [팀을 위한 최고의 프롬프트 최적화 도구](/ko/prompt-engineering/best-prompt-optimization-tools-for-teams)를 참조하세요.',
+        ],
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'Braintrust는 채점하고, PromptHub는 버전 관리하고, Vellum은 A/B 테스트하고, Promptfoo는 회귀를 테스트합니다 — 서로 겹치지만 대체하지 않는 네 가지 프롬프트 도구입니다.',
+          },
+          {
+            type: 'in-plain-terms',
+            text: '소프트웨어 구축처럼 생각하세요: 테스트 프레임워크(Promptfoo), 품질 대시보드(Braintrust), 배포 파이프라인(Vellum), 코드 저장소(PromptHub)가 필요합니다. 대부분의 팀은 네 가지가 아니라 그 중 두 가지가 필요합니다.',
+          },
+        ],
+      },
+      evaluationCriteria: {
+        id: 'evaluation-criteria',
+        title: '도구 비교 기준',
+        content: [
+          '**실제 팀 워크플로우에서 중요한 5가지 기준으로 네 가지 도구를 평가했습니다: 팀 협업 지원 수준, A/B 테스트 또는 실험 포함 여부, 채점 또는 평가 기능, CI/CD 통합, 가격 투명성.**',
+        ],
+        columns: ['기준', '측정 항목', '중요한 이유'],
+        rows: [
+          {
+            '기준': '팀 협업',
+            '측정 항목': '역할 기반 접근 제어, 브랜치, 공유 대시보드',
+            '중요한 이유': '여러 엔지니어가 서로 덮어쓰지 않고 프롬프트를 편집해야 합니다',
+          },
+          {
+            '기준': 'A/B 테스트',
+            '측정 항목': '변형 나란히 비교, 트래픽 분배',
+            '중요한 이유': '동일한 입력 세트 또는 프로덕션 트래픽에서 변형 비교',
+          },
+          {
+            '기준': '평가/채점',
+            '측정 항목': '커스텀 메트릭, LLM 기반 채점기, 품질 게이트',
+            '중요한 이유': '시각적으로만 보는 것이 아니라 출력 품질을 측정',
+          },
+          {
+            '기준': 'CI/CD 통합',
+            '측정 항목': 'CLI, API, GitHub Actions, 자동화 테스트',
+            '중요한 이유': '배포 전 회귀 감지; 품질 검사 자동화',
+          },
+          {
+            '기준': '가격 투명성',
+            '측정 항목': '공개 가격 페이지, 단위당 명확한 비용',
+            '중요한 이유': '3–10인 팀의 예산 예측 가능성',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust: $249/월 Pro 플랜의 평가 심층 기능',
+        content: [
+          '**Braintrust는 모든 API 호출을 기록하고, 커스텀 메트릭으로 출력을 채점하며, 공유 실험실에서 A/B 실험을 실행하는 AI 평가 플랫폼입니다 — 출력 품질을 체계적으로 측정하는 팀에 이상적입니다.** Braintrust는 프롬프트 빌더나 버전 관리 시스템이 아니라 공유 평가 실험실입니다.',
+          '무료 티어에는 무제한 사용자가 있는 1M 추적 spans과 10K 점수가 포함되어 있습니다 — 대부분의 프리프로덕션 평가 워크플로우에 충분합니다. Pro 플랜은 $249/월입니다. Braintrust는 2026년에 Loop 에이전트를 추가했습니다: 수동 설정 없이 테스트 케이스를 생성하고 프롬프트를 반복하는 자율 평가기. MCP 서버는 IDE에서 직접 Claude Code와 Cursor를 Braintrust의 평가 스택에 연결합니다. 로깅 프록시는 코드 변경 없이 OpenAI, Anthropic, Google API와 통합됩니다. TypeScript 또는 Python으로 커스텀 채점 함수를 정의합니다. GitHub 통합으로 코드와 함께 프롬프트를 버전 관리할 수 있습니다. SOC 2 Type II 인증 현재 제공 중.',
+          '팀을 위한 최고의 기능: 공유 실험 대시보드(모든 구성원이 실시간으로 평가 결과를 확인), 역할 기반 접근 제어(관리자/구성원/관찰자), 프롬프트에 대한 Git 스타일 커밋 이력, 프로덕션 로깅(모든 API 호출이 입력, 출력, 점수와 함께 기록됨).',
+          '커스텀 채점 뒤의 메트릭에 대해서는 [프롬프트 평가 메트릭: 정밀도, 관련성, 지연시간](/ko/prompt-engineering/prompt-evaluation-metrics)을 참조하세요.',
+        ],
+        items: [
+          '공유 실험 대시보드: 모든 팀 구성원이 실시간 평가 결과를 확인',
+          '역할 기반 접근 제어: 관리자/구성원/관찰자 역할',
+          'Git 스타일 커밋 이력을 통한 프롬프트 버전 관리',
+          '프로덕션 로깅: 입력/출력/점수와 함께 모든 API 호출 기록',
+          'Loop 에이전트: 테스트 케이스를 생성하고 프롬프트를 반복하는 자율 평가기 (2026년 신기능)',
+          'MCP 서버: IDE에서 직접 평가를 위한 Claude Code 및 Cursor와의 직접 통합',
+          '엔터프라이즈 배포를 위한 SOC 2 Type II 인증',
+        ],
+        callouts: [
+          {
+            type: 'insight',
+            label: '알고 계셨나요?',
+            text: 'Braintrust 무료 티어에는 무제한 사용자가 있는 1M 추적 spans과 10K 점수가 포함되어 있습니다 — 대부분의 팀이 처음 3개월 동안 사용하는 것보다 더 많은 평가 용량입니다. 비용 없이 완전한 프롬프트 평가 워크플로우를 실행할 수 있습니다.',
+          },
+          {
+            type: 'warning',
+            label: '채점 함수의 복잡성',
+            text: 'Braintrust Pro의 커스텀 채점기는 TypeScript 또는 Python이 필요합니다. 팀에서 채점 함수를 작성할 수 있는 사람이 없다면, Braintrust의 주요 차별화 요소를 사용할 수 없습니다. 그러나 무료 티어와 Loop 에이전트가 이 장벽을 낮춥니다. Pro에 결정하기 전에 팀 역량을 확인하세요.',
+          },
+        ],
+      },
+      prompthub: {
+        id: 'prompthub',
+        title: 'PromptHub: $50–200/월 버전 관리',
+        content: [
+          '**PromptHub는 프롬프트 버전 관리 및 공유 플랫폼입니다 — 팀이 중앙 라이브러리에 프롬프트를 저장하고, 버전에 태그를 달고, 스프레드시트나 Slack 메시지를 관리하지 않고 조직 전체에 공유합니다.** 네 가지 중 도입이 가장 쉽습니다.',
+          'Starter 약 $50/월; Pro 약 $200/월. 비기술 사용자를 위한 웹 인터페이스. 각 프롬프트의 버전 이력, 구성을 위한 태그, 배포 워크플로우. OpenAI, Anthropic 및 커스텀 API를 지원합니다. 단점: 커스텀 평가 채점 없음; 내장된 품질 검사로 제한됨; 실시간 A/B 실험을 실행하는 팀에는 적합하지 않음.',
+        ],
+      },
+      vellum: {
+        id: 'vellum',
+        title: 'Vellum: $200–500/월 프로덕션 트래픽 분배',
+        content: [
+          '**Vellum은 내장 A/B 테스트가 있는 프롬프트 배포 플랫폼으로, 실제 프로덕션 트래픽을 프롬프트 변형 간에 분배하고 실제 출력 품질을 측정합니다 — 실시간 LLM 기능을 운영하는 팀에 이상적입니다.** Vellum은 제어 플레인이지 테스트 도구가 아닙니다.',
+          'Starter $200/월; Growth $500/월; Enterprise 맞춤형. 비율로 프로덕션 트래픽을 변형 간에 라우팅합니다. 평가는 테스트 데이터셋에서 변형을 비교합니다. 팀 기능: 공유 워크스페이스, PR 스타일 프롬프트 검토, 배포 승인 워크플로우. 단점: 가장 비싼 옵션; 프리프로덕션이거나 아직 실제 사용자 트래픽이 없는 팀에는 과도함.',
+          'A/B 테스트가 수동 최적화 대비 가치를 추가하는 경우에 대해서는 [수동 vs 자동화 프롬프트 최적화](/ko/prompt-engineering/manual-vs-automated-prompt-optimization)를 참조하세요.',
+        ],
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo: 무료 오픈소스 CI/CD 테스트',
+        content: [
+          '**Promptfoo는 여러 LLM에 대해 자동화된 프롬프트 테스트 스위트를 실행하는 오픈소스 CLI 도구입니다 — 팀이 배포 전에 프롬프트 회귀를 감지하기 위해 CI/CD 파이프라인에 통합합니다.** 무료(MIT 라이선스). YAML로 테스트 케이스를 정의하고 Git에 커밋하면 Promptfoo가 각 PR에서 실행합니다.',
+          '40개 이상의 LLM 프로바이더를 지원합니다. GitHub Actions 통합 가능. 입력, 예상 출력 패턴 및 LLM 기반 커스텀 어설션을 제공합니다. 팀 친화적: Git에 테스트 구성, CI에서 실행, 계정이나 월간 청구 없음. 단점: 인터페이스 없음; 엔지니어 전용; Git 이외의 내장된 협업 기능 없음.',
+        ],
+        codeBlock: `prompts:
+  - "Summarize in 3 bullets: {{text}}"
+providers:
+  - openai:gpt-5.5
+  - anthropic:claude-opus-4-7
+tests:
+  - vars:
+      text: "Long document..."
+    assert:
+      - type: contains
+        value: "•"
+      - type: llm-rubric
+        value: "Exactly 3 bullets"`,
+        codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'tip',
+            label: 'Promptfoo + GitHub Actions',
+            text: 'Promptfoo의 YAML 테스트 구성은 Git에 직접 커밋됩니다. 각 PR에서 GitHub Actions가 구성된 모든 모델에 대해 테스트 스위트를 실행하고 실패 시 병합을 차단합니다. 월 비용 없이 완전한 CI/CD 통합이 가능합니다.',
+          },
+        ],
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'PromptQuorum: 최적화 전 멀티 모델 비교',
+        content: [
+          '**특정 LLM 프로바이더를 위해 Braintrust, Vellum, PromptHub 또는 Promptfoo에 결정하기 전에 [PromptQuorum](/features)을 사용하여 프롬프트를 25개 이상의 모델에 동시에 전송하고 어느 것이 가장 잘 작동하는지 확인하세요 — 모델에 구애받지 않는 첫 번째 단계입니다.** 무료 티어 제공.',
+          '앞서 소개한 네 가지 도구(한 번에 하나의 모델만 최적화)와 달리, PromptQuorum은 단일 실행으로 "이 프롬프트에 어느 모델이 가장 적합한가?"라는 질문에 답합니다. PromptQuorum으로 최적 모델을 발견한 후, 심층 평가를 위해 Braintrust로, 프로덕션 A/B 테스트를 위해 Vellum으로, CI/CD 회귀 방지를 위해 Promptfoo로 라우팅하세요.',
+        ],
+        items: [
+          'GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro 및 Ollama와 LM Studio를 통한 로컬 모델을 포함한 25개 이상의 모델',
+          '9가지 내장 프롬프트 프레임워크 — TRACE, CO-STAR, CRAFT 등',
+          '합의 채점이 있는 나란히 응답 비교',
+          '모델별 토큰 수 — 결정하기 전에 비용 차이 확인',
+          '무료 티어 — 기술적 설정 불필요',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '4가지 도구 직접 비교',
+        content: [
+          '**어떤 도구도 5가지 기준 모두에서 탁월하지 않습니다. Braintrust는 평가 심층 기능에서, Vellum은 프로덕션 트래픽 분배에서, Promptfoo는 무료 CI/CD에서, PromptHub는 단순성에서 선두를 달립니다.**',
+        ],
+        columns: ['도구', '주요 용도', '협업', 'CI/CD', '가격', '이상적인 대상'],
+        rows: [
+          {
+            '도구': 'Braintrust',
+            '주요 용도': '출력 평가',
+            '협업': '✅ 역할 + 대시보드',
+            'CI/CD': '✓ API + MCP',
+            '가격': '무료 / $249 Pro',
+            '이상적인 대상': '품질 중심 팀',
+          },
+          {
+            '도구': 'PromptHub',
+            '주요 용도': '버전 관리',
+            '협업': '✅ 팀 워크스페이스',
+            'CI/CD': '✗ 없음',
+            '가격': '$50–200/월',
+            '이상적인 대상': '콘텐츠 팀',
+          },
+          {
+            '도구': 'Vellum',
+            '주요 용도': '프로덕션 A/B',
+            '협업': '✅ PR 검토',
+            'CI/CD': '✓ 웹훅',
+            '가격': '$200–500/월',
+            '이상적인 대상': '실시간 기능 팀',
+          },
+          {
+            '도구': 'Promptfoo',
+            '주요 용도': 'CI/CD 테스트',
+            '협업': 'Git 기반',
+            'CI/CD': '✅ GitHub Actions',
+            '가격': '무료',
+            '이상적인 대상': 'DevOps 팀',
+          },
+          {
+            '도구': 'PromptQuorum',
+            '주요 용도': '멀티 모델 비교',
+            '협업': '✓ 공유 워크스페이스',
+            'CI/CD': '✗ 없음',
+            '가격': '무료 + 크레딧',
+            '이상적인 대상': '모델 선택',
+          },
+        ],
+        callouts: [
+          {
+            type: 'insight',
+            label: '두 가지 도구 스택 규칙',
+            text: '대부분의 팀은 3–4가지 도구에 돈을 낭비합니다. 최적 스택은 두 가지입니다: 평가용 하나(Braintrust 또는 Promptfoo)와 배포/버전 관리용 하나(Vellum 또는 PromptHub). 총 지출: $1,000 이상이 아닌 월 $250–700.',
+          },
+        ],
+      },
+      whichTool: {
+        id: 'which-tool',
+        title: '팀 유형별 도구 선택',
+        content: [
+          '**팀의 주요 병목 지점과 기술 깊이에 맞게 도구를 선택하세요.**',
+          '팀이 커스텀 채점 함수를 작성할 수 없다면 Braintrust를 사용하지 마세요 — 사용되지 않을 것입니다. 아직 실제 사용자가 없다면 Vellum을 사용하지 마세요 — 프로덕션 도달 후에 구매하세요. 출력 품질을 측정해야 한다면 PromptHub만 사용하지 마세요 — 프롬프트를 구성하지만 채점할 수 없습니다.',
+          '소유권 및 검토 규칙을 포함한 전체 팀 설정 워크플로우는 [소규모 팀을 위한 프롬프트 엔지니어링 설정](/ko/prompt-engineering/prompt-engineering-setup-small-teams)을 참조하세요.',
+        ],
+        numberedItems: [
+          {
+            title: '품질 문제가 있는 엔지니어링 팀 → Braintrust',
+            whyItMatters: '커스텀 채점 함수 설계; 재현 가능한 평가 실행; 프롬프트 변경의 영향 측정.',
+          },
+          {
+            title: '버전 관리가 필요한 콘텐츠/마케팅 팀 → PromptHub',
+            whyItMatters: '간단한 웹 인터페이스; 코드 불필요; 중앙 프롬프트 라이브러리.',
+          },
+          {
+            title: '실시간 LLM 기능이 있는 제품 팀 → Vellum',
+            whyItMatters: '실제 트래픽에서 A/B 테스트; 승인 워크플로우; 실제 영향 측정.',
+          },
+          {
+            title: '회귀를 방지하는 DevOps/플랫폼 팀 → Promptfoo',
+            whyItMatters: '무료; YAML 기반; GitHub와 통합; CI에서 회귀 감지.',
+          },
+          {
+            title: '모든 팀 (첫 번째 단계) → PromptQuorum',
+            whyItMatters: '한 프로바이더를 위해 최적화하기 전에 25개 이상의 모델에서 프롬프트를 비교하세요.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '흔한 실수',
+        mistakes: [
+          {
+            mistake: '모든 경우를 커버하기 위해 네 가지 도구 모두 구매',
+            problem: '총 지출이 월 $700 이상에 달하고, 네 가지 시스템을 유지하며, 어떤 도구를 무엇에 사용해야 하는지에 대한 팀 혼란이 생깁니다.',
+            fix: '두 가지를 선택하세요: 평가용 하나(Braintrust 또는 Promptfoo)와 배포용 하나(Vellum 또는 PromptHub). 무료 첫 번째 단계로 PromptQuorum을 추가하세요.',
+          },
+          {
+            mistake: '먼저 무료 티어를 평가하지 않음',
+            problem: 'Braintrust(1M 추적, 10K 점수 무료)와 Promptfoo(완전 무료) 모두 결제 전 실제 평가를 실행하기에 충분한 용량을 제공합니다. 무료 티어를 건너뛰는 팀은 측정했어야 할 것을 배우는 데 첫 달을 낭비합니다.',
+            fix: 'Promptfoo(무료 CLI) 또는 Braintrust 무료 티어로 시작하세요. 평가 데이터셋을 구축하고 품질 메트릭을 정의하세요. 그런 다음에만 확립된 기준선을 바탕으로 유료 도구를 평가하세요.',
+          },
+          {
+            mistake: '워크플로우 적합성 대신 브랜드 평판으로 도구 선택',
+            problem: 'Braintrust Pro를 구매하지만 팀이 기술적이지 않아 채점 함수를 작성할 수 없거나, 실제 병목 지점이 품질 측정인데 PromptHub를 구매하는 경우.',
+            fix: '도구를 평가하기 전에 먼저 주요 병목 지점(평가, 버전 관리, A/B 테스트, 회귀 방지)을 파악하세요.',
+          },
+          {
+            mistake: '평가 데이터셋을 구축하지 않고 도구 채택',
+            problem: 'Braintrust 또는 Vellum에 등록하지만 채점할 레이블된 입력/출력 쌍이 없습니다. 도구가 사용되지 않고 ROI를 보지 못합니다.',
+            fix: '유료 플랫폼에 결제하기 전에 20–50개의 레이블된 입력/출력 예시 테스트 세트를 구축하세요. Braintrust 무료 티어 또는 Promptfoo(무료)를 사용하여 먼저 메트릭을 검증하세요.',
+          },
+          {
+            mistake: '품질 메트릭 없이 Vellum 사용',
+            problem: '프로덕션 트래픽에서 두 프롬프트를 A/B 테스트하지만 "좋은 출력"을 정의하지 않았습니다. 판매 변형이 사용자에게 라우팅되고 아무도 이유를 설명할 수 없습니다.',
+            fix: 'A/B 테스트를 실행하기 전에 3–5가지 품질 기준을 정의하고 어설션(Promptfoo에서) 또는 커스텀 채점기(Braintrust에서)로 구현하세요.',
+          },
+        ],
+      },
+      howToChoose: {
+        id: 'how-to-choose',
+        title: '4가지 도구 중 선택 방법',
+        numberedItems: [
+          '주요 병목 지점 파악: 출력 품질, 비용, 지연시간 또는 팀 속도입니까?',
+          '기술 깊이 평가: 비기술 팀 → PromptHub; 혼합 → Braintrust + Vellum; 고도 기술 → Promptfoo.',
+          '유료 도구를 평가하기 전에 레이블된 평가 데이터셋(20–50개 입력/출력 쌍)을 구축하세요.',
+          '기준선 메트릭을 설정하기 위해 무료 도구(Promptfoo 또는 PromptQuorum)로 시작하세요.',
+          'SaaS 플랫폼에 결정하기 전에 실제 팀 프롬프트로 2주 시험을 실행하세요.',
+          '두 가지 도구를 계획하세요: 평가용 하나와 배포/버전 관리용 하나.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            label: '프로 팁: 먼저 테스트 데이터셋을 구축하세요',
+            text: '유료 도구를 평가하기 전에 20–50개의 레이블된 입력/출력 쌍 테스트 세트를 먼저 구축하세요. 기준선 데이터셋 없이는 도구가 실제로 프롬프트를 개선하는지 측정할 수 없습니다 — 데이터 없이 대시보드 비용만 지불하는 것입니다. Braintrust 무료 티어 또는 Promptfoo(무료)를 사용하여 먼저 메트릭을 검증하세요.',
+          },
+          {
+            type: 'tip',
+            label: '먼저 무료, 그 다음 유료',
+            text: '기준선을 설정하기 위해 Promptfoo(무료) + PromptQuorum(무료 티어)으로 시작하세요. 20개 이상의 레이블된 테스트 케이스와 정의된 품질 메트릭이 있을 때만 Braintrust Pro 또는 Vellum을 추가하세요. 기준선 없는 유료 도구 = 낭비된 예산.',
+          },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'Braintrust와 PromptHub의 주요 차이점은 무엇입니까?',
+            a: 'Braintrust는 평가 플랫폼입니다: API 호출을 기록하고, 커스텀 채점 함수를 정의하며, 출력 품질을 측정하기 위해 A/B 실험을 실행합니다. PromptHub는 버전 관리 시스템입니다: 라이브러리에 프롬프트를 저장하고, 버전에 태그를 달며, 팀과 공유합니다. 병목 지점이 품질 측정이라면 Braintrust를 사용하고, 병목 지점이 프롬프트 구성이라면 PromptHub를 사용하세요.',
+          },
+          {
+            q: 'Promptfoo는 정말 무료입니까?',
+            a: '네. Promptfoo는 오픈소스(MIT 라이선스)이며 유료 티어가 없습니다. 자체 인프라 또는 GitHub Actions에서 CLI 도구로 실행합니다. 월간 요금, API 호출 제한 또는 프리미엄 제한이 없습니다.',
+          },
+          {
+            q: 'Braintrust와 Vellum 중 어느 것을 선택해야 합니까?',
+            a: '주요 목표가 커스텀 메트릭으로 출력 품질을 측정하고 개선하는 것이라면 Braintrust를 선택하세요. 주요 목표가 실제 프로덕션 트래픽에서 A/B 테스트라면 Vellum을 선택하세요. Braintrust는 프리프로덕션 단계에서 더 잘 작동하고, Vellum은 실제 사용자가 있을 때 더 잘 작동합니다.',
+          },
+          {
+            q: 'Vellum은 Braintrust보다 얼마나 더 비쌉니까?',
+            a: 'Braintrust Pro는 $249/월(1M spans + 10K scores 무료 티어도 있음)입니다. Vellum Starter는 $200/월, Growth는 $500/월입니다. Pro 수준에서 Braintrust는 Vellum Starter보다 약간 비싸지만 상당히 더 많은 평가 용량을 포함합니다. 모두 무료 또는 저비용 진입점이 있습니다. Promptfoo는 무료이며, PromptHub는 $50–200/월입니다.',
+          },
+          {
+            q: 'Promptfoo를 GitHub Actions와 어떻게 통합합니까?',
+            a: 'Promptfoo는 GitHub Actions 템플릿을 제공합니다. YAML로 테스트 케이스를 정의하고, 구성을 Git에 커밋하고, 워크플로우 파일에서 공식 promptfoo-github-action을 사용하세요. 각 PR에서 Promptfoo는 구성된 모든 모델에 대해 테스트를 실행하고 통과/실패 상태를 보고합니다.',
+          },
+          {
+            q: 'PromptHub가 Braintrust를 대체할 수 있습니까?',
+            a: '아니요. PromptHub는 프롬프트를 저장하고 버전 관리합니다. Braintrust는 프롬프트를 평가하고 채점합니다. 유일한 필요가 프롬프트 구성이라면 PromptHub만 사용할 수 있습니다; 출력 품질을 측정하거나 실험을 실행해야 한다면 PromptHub만으로는 사용할 수 없습니다.',
+          },
+          {
+            q: 'Vellum은 프롬프트 관리 플랫폼과 같습니까?',
+            a: '아니요. Vellum은 배포 및 A/B 테스트 플랫폼입니다. 기본적인 버전 관리를 포함하지만 주요 강점은 프롬프트 변형 간에 프로덕션 트래픽을 분배하고 실제 영향을 측정하는 것입니다. 진정한 프롬프트 관리 도구(PromptHub)는 프롬프트를 테스트하는 것이 아니라 구성하고 공유하는 데 집중합니다.',
+          },
+          {
+            q: '2026년에 이 4가지 도구 외에 다른 대안이 있습니까?',
+            a: '네. 프롬프트 평가 시장은 2025–2026년에 크게 확장되었습니다. Confident AI는 seat당 $19.99–49.99/월에 50개 이상의 내장 평가 메트릭을 제공하며 Braintrust보다 낮은 추적 비용($3/GB 대비 $1/GB)을 제공합니다. Galileo AI는 Luna-2 평가 모델을 통해 런타임 가드레일을 제공합니다($100+/월). Arize Phoenix는 무료 오픈소스 LLM 관찰성 플랫폼입니다. 대부분의 팀에게 이 비교의 네 가지 도구와 Confident AI가 모든 실용적인 요구를 충족합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[GPT, Claude, Gemini 중 선택: 올바른 모델을 고르는 방법](/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 올바른 평가 도구를 선택하기 전에 올바른 모델을 선택하세요',
+          '[팀을 위한 최고의 프롬프트 최적화 도구: 2026년 순위](/ko/prompt-engineering/best-prompt-optimization-tools-for-teams) — Helicone 및 DSPy를 포함한 7가지 도구 비교',
+          '[체계적으로 프롬프트 품질을 평가하는 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality) — 출력 측정을 위한 프레임워크',
+          '[프롬프트 체이닝](/ko/prompt-engineering/prompt-chaining) — 체계적인 평가로 가장 많은 혜택을 받는 멀티 스텝 워크플로우',
+          '[수동 vs 자동화 프롬프트 최적화](/ko/prompt-engineering/manual-vs-automated-prompt-optimization) — 수동 조정 대비 자동화 시기',
+          '[프롬프트 평가 메트릭: 정밀도, 관련성, 지연시간](/ko/prompt-engineering/prompt-evaluation-metrics) — LLM을 위한 특정 품질 메트릭',
+          '[Qwen vs Llama vs Mistral](/ko/local-llms/qwen-vs-llama-vs-mistral) — Promptfoo는 로컬 모델 패밀리의 직접 비교에서 탁월합니다',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[Braintrust — AI 평가 플랫폼](https://braintrust.dev) — 공식 문서; Loop 에이전트, MCP 통합, SOC 2 인증 및 $249/월 Pro 플랜 가격 주장의 기초(2026년 3월 개편)',
+          '[PromptHub — 프롬프트 버전 관리](https://prompthub.ai) — 제품 홈페이지; 버전 관리, 웹 인터페이스 및 $50–200/월 가격 주장의 기초',
+          '[Vellum — LLM 배포 및 A/B 테스트](https://www.vellum.ai) — 제품 개요 및 가격 페이지; 트래픽 분배, 승인 워크플로우 및 $200–500/월 가격 주장의 기초',
+          '[Promptfoo — 오픈소스 프롬프트 테스트](https://www.promptfoo.dev) — GitHub 저장소 및 문서; MIT 라이선스, YAML 구성 및 GitHub Actions 통합 주장의 기초',
+          '[PromptQuorum — 멀티 모델 디스패치](https://promptquorum.com) — 멀티 모델 비교 도구; 25개 이상의 모델 디스패치 및 멀티 모델 비교 주장의 기초',
+          '[Confident AI](https://confident.ai) — seat당 $19.99–49.99/월에 50개 이상의 내장 메트릭을 갖춘 신흥 평가 플랫폼',
+          '[Galileo AI](https://galileo.ai) — LLM 애플리케이션을 위한 Luna-2 평가 모델 및 런타임 가드레일',
+          '[Arize Phoenix](https://docs.arize.com/phoenix) — 추적 및 평가를 위한 오픈소스 LLM 관찰성 플랫폼',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
+      description: 'Braintrust ($249/월)는 프롬프트를 평가합니다. Vellum ($200–500/월)은 프로덕션에서 A/B 테스트를 수행합니다. Promptfoo CI/CD는 무료입니다. PromptHub ($50–200/월)는 버전 관리합니다. 대부분의 팀은 정확히 2개가 필요합니다.',
+      datePublished: '2026-04-10',
+      dateModified: '2026-05-01',
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/ko/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo',
+      inLanguage: 'ko',
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: '프롬프트 관리' },
+        { '@type': 'Thing', name: 'LLM 평가' },
+        { '@type': 'Thing', name: '프롬프트 버전 관리' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'PromptHub' },
+        { '@type': 'SoftwareApplication', name: 'Vellum' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+        { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
+        { '@type': 'ListItem', position: 3, name: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)', item: 'https://www.promptquorum.com/ko/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo' },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      inLanguage: 'ko',
+      name: 'Braintrust vs PromptHub vs Vellum vs Promptfoo: 도구 비교',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: '협업 로깅, 자율 반복을 위한 Loop 에이전트, MCP-IDE 통합이 있는 AI 평가 플랫폼. 무료 티어 제공(1M Spans, 10K Scores); Pro $249/월. 출력 품질을 측정하는 팀에 이상적.' },
+        { '@type': 'ListItem', position: 2, name: 'PromptHub', description: '팀 협업이 있는 프롬프트 버전 관리' },
+        { '@type': 'ListItem', position: 3, name: 'Vellum', description: '실제 트래픽 분배가 있는 프로덕션 A/B 테스트' },
+        { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'GitHub Actions 통합이 있는 오픈소스 회귀 테스트' },
+        { '@type': 'ListItem', position: 5, name: 'PromptQuorum', description: '모델 선택을 위한 25개 이상의 모델 멀티 모델 비교' },
+      ],
+    },
+  },
+}

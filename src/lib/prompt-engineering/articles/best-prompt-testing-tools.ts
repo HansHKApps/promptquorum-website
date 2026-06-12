@@ -1939,4 +1939,289 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       ]
     }
   }
-} };
+  ko: {
+    theme: 'Tools & Platforms',
+    title: '프롬프트 테스트 및 평가 도구 2026: Promptfoo vs Braintrust vs DeepEval',
+    seoTitle: '프롬프트 테스트 평가 도구 2026: Promptfoo vs Braintrust vs DeepEval 비교',
+    metaDescription: 'Promptfoo는 몇 초 만에 회귀를 감지합니다 (무료). Braintrust는 인간 심사자와 함께 배치 평가를 실행합니다 ($500/월). DeepEval은 RAGAS 지표로 RAG를 채점합니다. LangSmith는 오류를 추적하고 Phoenix는 프로덕션을 모니터링합니다. 전체 파이프라인 비교.',
+    ogTitle: 'Promptfoo는 초 단위. Braintrust는 시간 단위. 무엇이 필요하십니까?',
+    ogDescription: '빠른 CI/CD 테스트 vs 느린 배치 평가 vs RAG 채점 vs 트레이싱 vs 모니터링. 5가지 도구, 5가지 역할. 비교 표 포함.',
+    twitterTitle: '프롬프트 테스트 도구 2026: 5단계 파이프라인 비교',
+    twitterDescription: '자체 평가는 점수를 10–20% 부풀립니다. GPT-5.5를 테스트하십니까? Claude로 채점하십시오. 전체 스택: Promptfoo → Braintrust → DeepEval → LangSmith → Phoenix.',
+    intro: '**프롬프트 테스트는 두 가지로 나뉩니다: 빠른 단위 테스트(Promptfoo) — 초 단위 — 와 느린 배치 평가(Braintrust) — 분 단위입니다.** Promptfoo는 CI/CD에서 실행되며 모든 커밋에서 회귀를 감지합니다.
+
+**Braintrust는 인간 심사자와 함께 오프라인으로 평가합니다.** DeepEval은 RAG 파이프라인을 위한 RAGAS 지표를 추가합니다. 이 가이드는 각 도구를 언제 사용하고 어떻게 함께 작동하는지 보여줍니다.',
+    publishDate: '2026-04-10',
+    dateModified: '2026-04-10',
+    lastFactChecked: '2026-04-28',
+    readTime: '8분 분량',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-10-10',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '프롬프트 테스트 도구',
+    audience: 'LLM 테스트 파이프라인을 구축하는 DevOps 엔지니어, ML 엔지니어 및 플랫폼 팀',
+    aboutTopics: ['프롬프트 테스트', '평가', 'CI/CD 테스트', '회귀 테스트'],
+    targetKeywords: ['프롬프트 테스트 도구', '프롬프트 평가 도구', 'Promptfoo 한국어', 'LLM 평가 도구 2026', 'RAG 평가 도구'],
+    toc: [
+      { label: '핵심 요점', anchor: 'key-takeaways' },
+      { label: '왜 프롬프트를 테스트해야 합니까?', anchor: 'why-test-prompts' },
+      { label: 'Promptfoo: 빠른 CI/CD 테스트', anchor: 'promptfoo-fast-cicd-testing' },
+      { label: 'Braintrust: 느린 배치 평가', anchor: 'braintrust-slow-batch-evaluations' },
+      { label: 'DeepEval: RAG 파이프라인을 위한 RAGAS', anchor: 'deepeval-ragas-for-rag-pipelines' },
+      { label: 'LangSmith: 다단계 체인 트레이싱', anchor: 'langsmith-tracing-multi-step-chains' },
+      { label: 'Phoenix: LLM 앱 관찰 가능성', anchor: 'phoenix-observability-for-llm-apps' },
+      { label: 'PromptQuorum: 테스트 전 모델 비교', anchor: 'promptquorum' },
+      { label: '비교 표', anchor: 'comparison-table' },
+      { label: '선택 방법', anchor: 'how-to-choose' },
+      { label: '프롬프트 테스트가 실패하는 이유', anchor: 'common-mistakes' },
+      { label: '관련 읽을거리', anchor: 'related-reading' },
+      { label: 'FAQ', anchor: 'faq' },
+      { label: '출처', anchor: 'sources' }
+    ],
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 최고의 프롬프트 테스트 도구는 무엇입니까?',
+        answer: 'Promptfoo(무료 CI/CD), Braintrust(배치 평가), DeepEval(RAG 채점), LangSmith(트레이싱), Phoenix(프로덕션 모니터링) — 이 다섯 가지 도구가 완전한 프롬프트 테스트 파이프라인을 구성합니다.',
+        bullets: [
+          'Promptfoo: 오픈 소스, CI/CD용, 무료',
+          'Braintrust: 배치 평가, 인간 심사자, $500/월',
+          'DeepEval: RAG 파이프라인용 RAGAS 지표',
+          'LangSmith: 다단계 체인 트레이싱 및 디버깅',
+          'Phoenix: 프로덕션 실시간 관찰 가능성'
+        ],
+        updatedDate: '2026-04-10'
+      }
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '프롬프트 테스트 도구 2026: Promptfoo, Braintrust, DeepEval',
+      description: 'Promptfoo로 CI/CD에서 빠르게 프롬프트를 테스트하고, Braintrust로 오프라인 평가를 수행하며, DeepEval로 RAG 파이프라인을 측정합니다.',
+      datePublished: '2026-04-10',
+      dateModified: '2026-04-10',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-testing-evaluation-tools',
+      inLanguage: 'ko',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
+      educationalLevel: 'Intermediate',
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: 'Prompt Testing' },
+        { '@type': 'Thing', name: 'LLM Evaluation' },
+        { '@type': 'Thing', name: 'CI/CD Testing' }
+      ]
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
+        { '@type': 'ListItem', position: 3, name: '프롬프트 테스트 및 평가 도구 2026', item: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-testing-evaluation-tools' }
+      ]
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '프롬프트 테스트란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '프롬프트 테스트는 LLM 출력이 기준 응답과 일치하는지 또는 LLM-as-judge 규칙을 통과하는지 검증합니다. 빠른 테스트(단위)는 단일 프롬프트를 초 단위로 확인합니다. 느린 테스트(배치)는 데이터셋을 오프라인으로 분 또는 시간 단위로 평가합니다.' } },
+        { '@type': 'Question', name: '프롬프트를 언제 테스트해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: '프롬프트를 변경할 때마다, 특히 프로덕션 배포 전에 테스트하십시오. 모든 커밋에 CI/CD 테스트를 사용하고 최종 승인을 위해 배치 평가를 사용하십시오.' } },
+        { '@type': 'Question', name: 'Promptfoo와 Braintrust의 차이점은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo는 오픈 소스, CLI 기반으로 CI/CD 파이프라인용으로 만들어졌습니다(빠름, 무료). Braintrust는 인간 및 LLM 심사자와 함께 오프라인 평가를 위한 SaaS 웹 기반 서비스입니다(느림, 완전함).' } },
+        { '@type': 'Question', name: 'RAGAS 지표란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'RAGAS(검색 증강 생성 평가)는 RAG 파이프라인의 세 가지 측면을 측정합니다: 검색 품질, 컨텍스트 관련성, 응답 정확성. DeepEval이 RAGAS를 구현합니다.' } },
+        { '@type': 'Question', name: '여러 도구를 함께 사용할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예. CI/CD에서 빠른 피드백을 위해 Promptfoo를 사용하고, 최종 배치 평가에는 Braintrust를, RAG 지표에는 DeepEval을, 다단계 체인 트레이싱에는 LangSmith를 사용하십시오.' } },
+        { '@type': 'Question', name: '어떤 도구가 무료입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo는 오픈 소스이며 무료입니다. DeepEval은 선택적 유료 클라우드 평가와 함께 무료입니다. Phoenix는 오픈 소스이며 무료입니다. Braintrust와 LangSmith는 무료 티어를 제공합니다.' } },
+        { '@type': 'Question', name: 'CI/CD에서 Promptfoo를 어떻게 설정합니까?', acceptedAnswer: { '@type': 'Answer', text: '프롬프트와 테스트 케이스가 포함된 YAML 구성을 작성하고, CI 파이프라인(GitHub Actions, GitLab CI)에서 promptfoo eval을 실행하며 점수가 임계값 이하로 떨어지면 빌드를 실패시키십시오.' } },
+        { '@type': 'Question', name: 'LLM-as-judge란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge는 다른 LLM(GPT-5.5, Claude)을 사용하여 루브릭에 따라 출력을 채점합니다. 인간 검토 없이 평가를 확장하지만 편향이 있을 수 있습니다. 대부분의 도구가 이를 지원합니다.' } }
+      ]
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      inLanguage: 'ko',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Promptfoo: 빠른 CI/CD 테스트', url: 'https://promptfoo.dev' },
+        { '@type': 'ListItem', position: 2, name: 'Braintrust: 느린 배치 평가', url: 'https://braintrust.dev' },
+        { '@type': 'ListItem', position: 3, name: 'DeepEval: RAG 파이프라인을 위한 RAGAS', url: 'https://deepeval.trychasm.com' },
+        { '@type': 'ListItem', position: 4, name: 'LangSmith: 다단계 체인 트레이싱', url: 'https://smith.langchain.com' },
+        { '@type': 'ListItem', position: 5, name: 'Phoenix: LLM 앱 관찰 가능성', url: 'https://arize.com/phoenix' }
+      ]
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: '프롬프트 테스트 스택 선택 방법',
+      description: 'LLM 애플리케이션에 맞는 프롬프트 테스트 도구 조합을 선택하기 위한 6단계 가이드.',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Promptfoo로 시작하십시오', text: '모든 사용자: CI/CD 파이프라인에서 Promptfoo(무료)로 시작하십시오. 모든 커밋에서 테스트를 실행하십시오. 이것은 협상 불가능합니다.' },
+        { '@type': 'HowToStep', position: 2, name: '프로덕션 승인을 위해 Braintrust를 추가하십시오', text: '프로덕션 배포 시: 출시 전 인간 승인과 함께 최종 배치 평가를 위해 Braintrust를 추가하십시오.' },
+        { '@type': 'HowToStep', position: 3, name: 'RAG 파이프라인에 DeepEval을 추가하십시오', text: 'RAG 파이프라인: 검색 특화 RAGAS 지표를 위해 DeepEval을 추가하십시오.' },
+        { '@type': 'HowToStep', position: 4, name: '다단계 체인에 LangSmith를 추가하십시오', text: '다단계 체인: 트레이싱을 위해 LangSmith를 추가하십시오. Promptfoo가 회귀를 감지하면 LangSmith는 체인의 어디에서 실패했는지 보여줍니다.' },
+        { '@type': 'HowToStep', position: 5, name: '프로덕션 모니터링에 Phoenix를 추가하십시오', text: '프로덕션 모니터링: 실시간 관찰 가능성을 위해 Phoenix를 추가하십시오 — 지연 시간, 비용, 드리프트 감지.' },
+        { '@type': 'HowToStep', position: 6, name: '모델 선택에 PromptQuorum을 사용하십시오', text: '모델 선택: 테스트 스위트를 구축하기 전에 특정 프롬프트에서 모델을 비교하기 위해 먼저 PromptQuorum을 실행하십시오.' }
+      ]
+    },
+    sections: {
+      keyTakeaways: {
+        isTldr: true,
+        items: [
+          'CI/CD 테스트에는 Promptfoo를 사용하십시오 (초 단위, 오픈 소스, 회귀 감지)',
+          '최종 평가에는 Braintrust를 사용하십시오 (분~시간, 인간 + LLM 심사자, 오프라인 워크플로)',
+          'RAG 특화 평가에는 DeepEval을 사용하십시오 (RAGAS 지표, 검색 + 컨텍스트 + 합성)',
+          '트레이싱에는 LangSmith를 사용하십시오 (다단계 체인 디버깅, 실패 근본 원인 파악)',
+          '다중 모델 비교에는 PromptQuorum을 사용하십시오 (테스트할 모델 선택, 초 단위 비교)',
+          '도구를 조합하십시오: CI에서 Promptfoo → 승인을 위한 Braintrust → 디버깅을 위한 LangSmith',
+          'LLM-as-judge는 인간 없이 평가를 확장하지만 편향이 있을 수 있습니다 — 골드 스탠더드와 검증하십시오'
+        ]
+      },
+      whyTestPrompts: {
+        title: '왜 프롬프트를 테스트해야 합니까?',
+        content: '**이 가이드는 테스트 및 평가 도구에만 초점을 맞춥니다.** 프롬프트 엔지니어링 도구의 전체 개요는 [최고의 프롬프트 엔지니어링 도구 2026](/ko/prompt-engineering/best-prompt-engineering-tools-2026)을 참조하십시오. 팀 협업 기능은 [팀을 위한 최고의 프롬프트 최적화 도구](/ko/prompt-engineering/best-prompt-optimization-tools-for-teams)를 참조하십시오.
+
+**프롬프트 변경은 프로덕션을 중단시킵니다.** 단 하나의 재작성이 정확도를 5–10% 떨어뜨리거나 엣지 케이스를 놓치거나 톤을 바꿀 수 있습니다. 2026년 4월 기준, 대부분의 기업은 프롬프트를 전혀 테스트하지 않고 변경 사항을 임시로 전달합니다. 테스트는 사용자에게 도달하기 전에 회귀를 감지합니다. 두 가지 워크플로가 있습니다: [CI/CD](/ko/prompt-engineering/ci-cd-for-prompts)에서 빠른 단위 테스트 (초 단위, 자동화) 및 오프라인 느린 배치 평가 (분~시간, 인간 검토). 테스트 없이는 안전하게 반복할 수 없습니다.',
+        snippetBlocks: [
+          { type: 'one-sentence', text: '프롬프트 테스트는 LLM 출력이 배포 전에 품질 임계값을 충족하는지 자동으로 검증합니다.' },
+          { type: 'plain-terms', text: '프롬프트에 대한 단위 테스트처럼 생각하십시오: "올바름"이 어떤 모습인지 정의한 다음 모든 커밋을 해당 기준으로 실행합니다.' }
+        ],
+        callouts: [
+          { type: 'Warning', label: '테스트를 건너뛰지 마십시오', text: '프롬프트 테스트 없이 배포하면 팀이 CI가 아닌 사용자를 통해 회귀를 발견하게 됩니다. 프롬프트당 단 5개의 테스트 케이스만으로도 일반적인 회귀의 80%를 감지할 수 있습니다.' }
+        ]
+      },
+      promptfoo: {
+        title: 'Promptfoo: 빠른 CI/CD 테스트',
+        content: '**Promptfoo는 오픈 소스, CLI 기반으로 CI/CD 파이프라인용으로 만들어졌습니다.** 초 단위로 실행되고, 모든 커밋에서 회귀를 감지하며, 점수가 떨어지면 빌드를 실패시킵니다. 프롬프트와 테스트 케이스가 포함된 YAML 구성을 작성하고, promptfoo eval을 실행하면 점수를 얻을 수 있습니다. Promptfoo는 문자열 유사도, regex, [LLM-as-judge](/ko/prompt-engineering/llm-as-judge-evaluation) 및 사용자 정의 평가기를 지원합니다.',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Promptfoo는 CI/CD 파이프라인에서 초 단위로 프롬프트 회귀 테스트를 실행하는 무료 오픈 소스 CLI 도구입니다.' }
+        ],
+        callouts: [
+          { type: 'Pro Tip', label: '여기서 시작하십시오', text: 'Promptfoo는 프롬프트 CI/CD 테스트의 가장 빠른 경로입니다: YAML 파일 하나, CLI 명령 하나. 기존 GitHub Actions 파이프라인과의 통합은 약 15분이 소요됩니다.' }
+        ],
+        numberedItems: [
+          '자주 배포하는 경우(매일/매주) Promptfoo를 사용하십시오',
+          '소규모 테스트 세트(100–500 케이스)에 이상적입니다',
+          '가격: 무료 (오픈 소스, MIT 라이선스)'
+        ]
+      },
+      braintrust: {
+        title: 'Braintrust: 느린 배치 평가',
+        content: '**프로덕션 전 인간 검토와 기준 추적이 필요한 경우 Braintrust를 사용하십시오.** 더 느리게 실행되지만(1,000개 테스트 케이스에 5–30분, 전체 인간 검토 포함 시 4시간 이상) 완전한 평가를 지원합니다: 모든 LLM 호출 기록, 나란히 비교 활성화, 기준 회귀 추적. LangChain, LLamaIndex 및 사용자 정의 코드와 통합됩니다.',
+        numberedItems: [
+          '출시 전 최종 승인을 위해 Braintrust를 사용하십시오',
+          '대규모 테스트 세트(1,000+) 및 인간 검토에 이상적입니다',
+          '가격: 평가 요구사항이 있는 팀의 경우 ~$500/월'
+        ]
+      },
+      deepeval: {
+        title: 'DeepEval: RAG 파이프라인을 위한 RAGAS',
+        content: '**[RAG 파이프라인](/ko/prompt-engineering/rag-explained)을 구축하고 검색 품질과 생성에 대한 별도 점수가 필요한 경우 DeepEval을 사용하십시오.** DeepEval은 RAGAS 지표로 RAG 품질을 측정하는 Python 라이브러리로, 성공을 세 가지 차원으로 분해합니다: 검색 품질, 컨텍스트 관련성, 응답 정확성. Python 코드 또는 웹 대시보드를 통해 실행됩니다.',
+        numberedItems: [
+          'RAG 아키텍처를 사용하는 경우 DeepEval을 사용하십시오',
+          '검색 + 합성을 별도로 측정하십시오',
+          '가격: 선택적 유료 클라우드 평가와 함께 무료'
+        ]
+      },
+      langsmith: {
+        title: 'LangSmith: 다단계 체인 트레이싱',
+        content: '**다단계 체인을 디버깅하고 실패가 발생하는 위치를 찾아야 하는 경우 LangSmith를 사용하십시오.** LangSmith는 모든 LLM 호출을 추적하고, 지연 시간과 비용을 측정하며, 각 단계를 자세히 검토하여 병목 현상을 식별할 수 있습니다. Promptfoo가 회귀를 감지하면 LangSmith는 체인의 어디서(검색 → 합성 → 순위 지정) 실패가 발생했는지 정확하게 보여줍니다. [LangChain](/ko/local-llms/local-ai-agents-langgraph-ollama)과 기본 통합됩니다.',
+        callouts: [
+          { type: 'Warning', label: '데이터 개인정보', text: 'LangSmith는 추적을 Arize AI 클라우드 서버로 전송합니다. 프롬프트에 PII 또는 독점 데이터가 포함된 경우 LangSmith의 데이터 거주 옵션을 검토하거나 자체 호스팅 Enterprise 티어를 사용하십시오.' }
+        ],
+        numberedItems: [
+          '다단계 체인 디버깅에 LangSmith를 사용하십시오',
+          'LangChain을 사용하는 경우 필수입니다',
+          '가격: 무료 티어, 저장소의 경우 $50+/월'
+        ]
+      },
+      phoenix: {
+        title: 'Phoenix: LLM 앱 관찰 가능성',
+        content: '**프로덕션 관찰 가능성이 필요한 경우 Phoenix를 사용하십시오: 실시간 프롬프트 성능 모니터링.** Phoenix(Arize AI 제공)는 프롬프트, 응답, 임베딩, 지연 시간을 기록합니다. 오픈 소스이며 자체 호스팅 가능합니다. Promptfoo(테스트) 및 Braintrust(평가)의 권장 보완 도구입니다.',
+        numberedItems: [
+          '프로덕션 관찰 가능성을 위해 Phoenix를 사용하십시오',
+          '오픈 소스이며 무료입니다 (Apache 2.0)',
+          '자체 호스팅 또는 클라우드 관리형으로 사용 가능합니다'
+        ]
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'PromptQuorum: 테스트 전 다중 모델 비교',
+        content: '**테스트 스위트에 모델을 확정하기 전에 단일 제출로 GPT-5.5, Claude, Gemini 및 로컬 LLM에서 동일한 프롬프트가 어떻게 작동하는지 비교하려면 PromptQuorum을 사용하십시오.** Promptfoo와 Braintrust는 한 번에 하나의 모델을 테스트합니다. PromptQuorum은 "어떤 모델을 테스트해야 합니까?"라는 질문에 초 단위로 답합니다.',
+        numberedItems: [
+          'Promptfoo 테스트 스위트를 설정하기 전 첫 번째 단계로 PromptQuorum을 사용하십시오',
+          '합의 채점으로 25개 이상의 모델을 나란히 비교하십시오',
+          '가격: 무료 티어 + 크레딧'
+        ]
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '비교 표: 기능 매트릭스',
+        content: '**2026년 4월 기준, 기능 분석은 다음과 같습니다:**',
+        columns: ['도구', '속도', '사용 사례', 'CI/CD', '인간 검토', '가격'],
+        rows: [
+          { '도구': 'Promptfoo', '속도': '초 단위', '사용 사례': '단위 테스트, 회귀', 'CI/CD': '✅ 기본', '인간 검토': '✗ 없음', '가격': '무료 (MIT)' },
+          { '도구': 'Braintrust', '속도': '분~시간', '사용 사례': '배치 평가, 승인', 'CI/CD': '✓ API', '인간 검토': '✅ 있음', '가격': '~$500/월' },
+          { '도구': 'DeepEval', '속도': '분 단위', '사용 사례': 'RAG 파이프라인 채점', 'CI/CD': '✓ Python', '인간 검토': '✗ 없음', '가격': '무료 + 유료 클라우드' },
+          { '도구': 'LangSmith', '속도': '실시간', '사용 사례': '트레이싱, 디버깅', 'CI/CD': '✓ API', '인간 검토': '✗ 없음', '가격': '무료 / $50+/월' },
+          { '도구': 'Phoenix', '속도': '실시간', '사용 사례': '프로덕션 모니터링', 'CI/CD': '✓ API', '인간 검토': '✗ 없음', '가격': '무료 (Apache 2.0)' },
+          { '도구': 'PromptQuorum', '속도': '초 단위', '사용 사례': '다중 모델 비교', 'CI/CD': '✗ 없음', '인간 검토': '✓ 나란히', '가격': '무료 + 크레딧' }
+        ]
+      },
+      howToChoose: {
+        id: 'how-to-choose',
+        title: '테스트 스택 선택 방법',
+        numberedItems: [
+          '모든 사용자: CI/CD 파이프라인에서 Promptfoo(무료)로 시작하십시오. 모든 커밋에서 테스트를 실행하십시오. 이것은 협상 불가능합니다.',
+          '프로덕션 배포 시: 출시 전 인간 승인과 함께 최종 배치 평가를 위해 Braintrust를 추가하십시오.',
+          'RAG 파이프라인: 검색 특화 RAGAS 지표를 위해 DeepEval을 추가하십시오. Promptfoo는 전체 파이프라인을 테스트하고 DeepEval은 검색 레이어를 진단합니다.',
+          '다단계 체인: 트레이싱을 위해 LangSmith를 추가하십시오. Promptfoo가 회귀를 감지하면 LangSmith는 체인의 어디에서 실패했는지 보여줍니다.',
+          '프로덕션 모니터링: 실시간 관찰 가능성을 위해 Phoenix를 추가하십시오 — 지연 시간, 비용, 드리프트 감지.',
+          '모델 선택: 테스트 스위트를 구축하기 전에 특정 프롬프트에서 모델을 비교하기 위해 먼저 PromptQuorum을 실행하십시오.'
+        ]
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '프롬프트 테스트가 실패하는 이유',
+        mistakes: [
+          { mistake: '행복한 경로만 테스트하기', problem: '엣지 케이스(빈 입력, 매우 긴 입력, 모순된 지시)가 프로덕션 실패의 30% 이상을 유발합니다.', fix: '적대적 입력을 포함하여 시나리오당 최소 20개의 대표 케이스를 테스트하십시오.' },
+          { mistake: '회귀 테스트 안 하기', problem: '한 케이스를 개선하는 프롬프트 변경은 종종 다른 세 케이스를 깨뜨립니다. 기준 비교 없이는 맹목적으로 배포합니다.', fix: '모든 새 버전에 대해 이전 테스트 세트를 실행하십시오. 10% 이상의 케이스가 임계값 이하로 떨어지면 되돌리십시오.' },
+          { mistake: '테스트하는 동일한 LLM으로 채점하기', problem: '자체 평가는 점수를 10–20% 부풀립니다. GPT-5.5가 자체 출력을 채점하는 것은 독립적인 검증이 아닙니다.', fix: '채점에는 다른 모델을 사용하십시오. GPT-5.5 테스트 → Claude로 채점. 또는 골드 스탠더드를 위해 인간 심사자를 사용하십시오.' },
+          { mistake: '평가에서 지연 시간과 비용 무시하기', problem: '10% 더 정확하지만 2배 느린 프롬프트는 배포할 가치가 없을 수 있습니다.', fix: '출력당 품질, 지연 시간, 비용을 추적하십시오. Helicone 또는 Phoenix가 비용 가시성을 추가합니다.' }
+        ]
+      },
+      relatedReading: {
+        title: '관련 읽을거리',
+        items: [
+          '[Braintrust vs PromptHub vs Vellum vs Promptfoo: 어떤 것을 사용합니까?](/ko/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
+          '[최고의 프롬프트 엔지니어링 도구 2026: 사용 사례별 순위](/ko/prompt-engineering/best-prompt-engineering-tools-2026)',
+          '[팀을 위한 최고의 프롬프트 최적화 도구 2026](/ko/prompt-engineering/best-prompt-optimization-tools-for-teams)',
+          '[프롬프트 엔지니어링 vs 파인튜닝: 어떻게 결정합니까?](/ko/prompt-engineering/prompt-engineering-vs-fine-tuning)',
+          '[수동 vs 자동 프롬프트 최적화 2026](/ko/prompt-engineering/manual-vs-automated-prompt-optimization)',
+          '[Zero-Shot vs Few-Shot 프롬프팅: 언제 사용합니까?](/ko/prompt-engineering/zero-shot-vs-few-shot)'
+        ]
+      },
+      faq: {
+        title: 'FAQ',
+        faqs: [
+          { q: '프롬프트 테스트란 무엇입니까?', a: '프롬프트 테스트는 LLM 출력이 기준 응답과 일치하는지 또는 LLM-as-judge 규칙을 통과하는지 검증합니다. 빠른 테스트(단위)는 단일 프롬프트를 초 단위로 확인합니다. 느린 테스트(배치)는 데이터셋을 오프라인으로 분 또는 시간 단위로 평가합니다.' },
+          { q: '프롬프트를 언제 테스트해야 합니까?', a: '프롬프트를 변경할 때마다, 특히 프로덕션 배포 전에 테스트하십시오. 모든 커밋에 CI/CD 테스트를 사용하고 최종 승인을 위해 배치 평가를 사용하십시오.' },
+          { q: 'Promptfoo와 Braintrust의 차이점은 무엇입니까?', a: 'Promptfoo는 오픈 소스, CLI 기반으로 CI/CD 파이프라인용으로 만들어졌습니다(빠름, 무료). Braintrust는 인간 및 LLM 심사자와 함께 오프라인 평가를 위한 SaaS 웹 기반 서비스입니다(느림, 완전함).' },
+          { q: 'RAGAS 지표란 무엇입니까?', a: 'RAGAS(검색 증강 생성 평가)는 RAG 파이프라인의 세 가지 측면을 측정합니다: 검색 품질, 컨텍스트 관련성, 응답 정확성. DeepEval이 RAGAS를 구현합니다.' },
+          { q: '여러 도구를 함께 사용할 수 있습니까?', a: '예. CI/CD에서 빠른 피드백을 위해 Promptfoo를 사용하고, 최종 배치 평가에는 Braintrust를, RAG 지표에는 DeepEval을, 다단계 체인 트레이싱에는 LangSmith를 사용하십시오.' },
+          { q: '어떤 도구가 무료입니까?', a: 'Promptfoo는 오픈 소스이며 무료입니다. DeepEval은 선택적 유료 클라우드 평가와 함께 무료입니다. Phoenix는 오픈 소스이며 무료입니다. Braintrust와 LangSmith는 무료 티어를 제공합니다.' },
+          { q: 'CI/CD에서 Promptfoo를 어떻게 설정합니까?', a: '프롬프트와 테스트 케이스가 포함된 YAML 구성을 작성하고, CI 파이프라인(GitHub Actions, GitLab CI)에서 promptfoo eval을 실행하며 점수가 임계값 이하로 떨어지면 빌드를 실패시키십시오.' },
+          { q: 'LLM-as-judge란 무엇입니까?', a: 'LLM-as-judge는 다른 LLM(GPT-5.5, Claude)을 사용하여 루브릭에 따라 출력을 채점합니다. 인간 검토 없이 평가를 확장하지만 편향이 있을 수 있습니다. 대부분의 도구가 이를 지원합니다.' }
+        ]
+      },
+      sources: {
+        title: '출처',
+        items: [
+          '[Promptfoo GitHub](https://github.com/promptfoo/promptfoo) — 오픈 소스 CI/CD 프롬프트 테스트 프레임워크; 속도 및 기능 주장의 근거',
+          '[Braintrust Documentation](https://docs.braintrust.dev) — 배치 평가 플랫폼; 인간 검토 및 LLM 심사자 주장의 근거',
+          '[DeepEval RAGAS Metrics](https://docs.deepeval.trychasm.com) — RAG 평가 라이브러리; RAGAS 지표 분석의 근거',
+          '[LangSmith Tracing Guide](https://docs.smith.langchain.com) — LangChain 트레이싱 및 디버깅; 다단계 체인 주장의 근거',
+          '[Phoenix Documentation](https://docs.arize.com/phoenix) — 오픈 소스 LLM 관찰 가능성; 모니터링 기능 주장의 근거'
+        ]
+      }
+    }
+  },
+}

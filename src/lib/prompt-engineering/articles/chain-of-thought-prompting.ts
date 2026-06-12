@@ -3292,4 +3292,428 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ]
   },
 },
+  ko: {
+  freshness_tier: 'semi_annual',
+  theme: 'Techniques',
+  title: 'Chain-of-Thought 프롬프팅: AI가 추론 과정을 보여주게 하는 방법',
+  intro: 'Chain-of-thought 프롬프팅은 모델에게 최종 답변으로 바로 넘어가지 말고 추론 단계를 명시적으로 보여달라고 요청하는 기법입니다. 이를 통해 복잡한 결정을 감사하고, 디버깅하고, 시간이 지나면서 개선하기가 훨씬 쉬워집니다.',
+  leadAnswerBlock: '**Chain-of-thought(CoT) 프롬프팅은 AI 모델이 최종 답변을 제시하기 전에 추론 과정을 단계별로 보여주도록 지시합니다.** 이를 통해 수학, 논리, 다단계 작업에서 정확도가 향상됩니다. 2026년에는 Claude Opus 4.8, OpenAI o3와 같은 최전선 모델들이 CoT를 내부적으로 자동화하는 내장 추론 모드를 갖추고 있습니다. 그러나 프롬프트 수준의 CoT는 구조화된 사고를 이끌어내는 주요 방법으로서 더 작은 비추론 모델에서 여전히 가치 있습니다.',
+  publishDate: '2026-03-26',
+  dateModified: '2026-05-03',
+  lastFactChecked: '2026-05-03',
+  readTime: '13분 분량',
+  seoTitle: 'Chain-of-Thought 프롬프팅: 정확도 40% 향상 방법',
+  metaDescription: 'Chain-of-Thought 프롬프팅으로 수학·논리 작업 정확도를 10~40% 향상시키는 방법. 프롬프트 수준 CoT와 내장 추론 모드의 차이를 알아보세요.',
+  educationalLevel: 'Intermediate',
+  primaryTerm: 'Chain-of-Thought 프롬프팅',
+  audience: 'GPT-5.5, Claude, Gemini 또는 로컬 LLM으로 개발하는 개발자, 데이터 과학자, 팀',
+  next_refresh_due: '2026-11-03',
+  aboutTopics: ['Chain-of-Thought 프롬프팅', '구조화된 추론', '프롬프트 엔지니어링', '추론 모델'],
+  targetKeywords: ['chain of thought 프롬프팅', '단계별 추론 AI', '프롬프트 엔지니어링 기법', 'CoT 프롬프팅', 'AI 추론 향상'],
+  toc: [
+    { label: '핵심 요점', anchor: '#key-takeaways' },
+    { label: '빠른 사실', anchor: '#quick-facts' },
+    { label: 'Chain-of-thought 프롬프팅이란?', anchor: '#what-is-chain-of-thought' },
+    { label: '중요한 이유', anchor: '#why-it-matters' },
+    { label: '언제 도움이 되는가 (그리고 언제 아닌가)', anchor: '#when-it-helps' },
+    { label: '예시: CoT 없음 vs. CoT 있음', anchor: '#example-without-vs-with' },
+    { label: '수학 예시: 매출 계산', anchor: '#math-example' },
+    { label: '효과적인 프롬프트 작성법', anchor: '#how-to-write' },
+    { label: 'PromptQuorum에서의 Chain-of-Thought', anchor: '#in-promptquorum' },
+    { label: 'CoT 프롬프팅 사용 방법', anchor: '#how-to-start' },
+    { label: 'CoT vs. 내장 추론 모델', anchor: '#reasoning-models' },
+    { label: 'Chain-of-thought 변형', anchor: '#cot-variants' },
+    { label: '모델 비교', anchor: '#model-comparison' },
+    { label: '관련 자료', anchor: '#related-reading' },
+    { label: 'FAQ', anchor: '#faq' },
+    { label: '출처', anchor: '#sources' },
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    url: 'https://www.promptquorum.com/ko/prompt-engineering/chain-of-thought-prompting',
+    inLanguage: 'ko',
+    headline: 'Chain-of-Thought 프롬프팅: AI가 추론 과정을 보여주게 하는 방법',
+    description: 'Chain-of-thought 프롬프팅이란 무엇인지, 언제 도움이 되는지, 모델이 추론 과정을 명확하게 보여주도록 프롬프트를 구성하는 방법.',
+    datePublished: '2026-03-26',
+    dateModified: '2026-05-03',
+    keywords: ['chain-of-thought 프롬프팅', '단계별 추론', '프롬프트 엔지니어링', '추론 모델', 'extended thinking'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: 'Chain-of-Thought 프롬프팅', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },
+      { '@type': 'Thing', name: '대규모 언어 모델', 'sameAs': 'https://www.wikidata.org/wiki/Q115305900' },
+      { '@type': 'Thing', name: '추론' },
+      { '@type': 'Thing', name: '구조화된 출력' },
+    ],
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.article-intro', '.key-takeaways'],
+    },
+  },
+  breadcrumbSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+      { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
+      { '@type': 'ListItem', position: 3, name: 'Chain-of-Thought 프롬프팅: AI가 추론 과정을 보여주게 하는 방법', item: 'https://www.promptquorum.com/ko/prompt-engineering/chain-of-thought-prompting' },
+    ],
+  },
+  snippetBlocks: [
+    { type: 'one-sentence', text: 'Chain-of-thought 프롬프팅은 AI 모델이 최종 답변 전에 추론 단계를 단계별로 보여주도록 요청하여 정확도를 최대 40%까지 향상시키는 기법입니다.' },
+    { type: 'plain-terms', text: 'AI에게 단계별로 생각해 봐라고 말하면, AI는 문제 해결 과정을 보여주며 답합니다. 이렇게 하면 실수를 찾기 쉽고, 결과를 신뢰하기도 쉬워집니다.' },
+  ],
+  sections: {
+    tldr: {
+      isTldr: true,
+      title: '핵심 요점',
+      numberedItems: [
+        '**Chain-of-thought 프롬프팅은 모델에게 최종 답변을 내놓기 전에 추론 단계를 보여달라고 요청합니다.** 이를 통해 수학, 논리, 다단계 작업에서 정확도가 향상됩니다.',
+        'Zero-shot CoT("단계별로 생각해 보자")는 대부분의 모델에서 작동합니다. Few-shot CoT(풀이된 예시 제공)는 더 안정적입니다.',
+        '2026년에 Claude Opus 4.8, OpenAI o3 같은 최전선 모델들은 **내장 추론 모드**를 갖추고 있어 프롬프트 수준의 CoT가 필요 없습니다.',
+        'CoT는 출력 토큰 수를 늘려 비용을 증가시킵니다. 내장 추론 모드는 별도의 사고 토큰 예산이 있어 별도로 청구됩니다.',
+        '비추론 모델(Haiku, Flash, LLaMA 4)에서는 경제적인 추론을 위해 프롬프트 수준 CoT를 사용하세요. 최고 정확도를 위해서는 최전선 모델의 내장 추론 모드를 사용하세요.',
+        'CoT는 수학, 논리, 계획 수립, 근본 원인 분석에 가장 유용합니다. 단순 분류, 짧은 답변, 빠른 작성에는 생략해도 됩니다.',
+      ]
+    },
+    quickFacts: {
+      title: '빠른 사실',
+      numberedItems: [
+        '**최초 제안자:** Wei 외 (2022), Google Brain — NeurIPS 2022 창시 논문',
+        '**핵심 결과:** Zero-shot CoT로 PaLM 540B의 MultiArith 정확도가 17.7%에서 78.7%로 향상',
+        '**활성화 문구:** "단계별로 생각해 보자" (zero-shot) 또는 풀이된 예시 (few-shot)',
+        '**2026년 발전:** 내장 추론 모드(o3, Claude extended thinking)가 CoT를 내부적으로 자동화',
+        '**비용 영향:** 프롬프트 수준 CoT = 출력 토큰 증가; 추론 모드 = 별도 사고 토큰 예산',
+        '**프롬프트 수준 CoT에 최적인 모델:** 비추론 모델 (Claude Haiku 4.5, Gemini Flash, GPT-5.5 mini, LLaMA 4 Scout)',
+      ]
+    },
+    whatIsChainOfThought: {
+      title: 'Chain-of-thought 프롬프팅이란 무엇인가',
+      content: [
+        '**Chain-of-thought 프롬프팅은 모델이 최종 결론에 도달하기 전에 단계별로 추론하도록 요청합니다.** 답변만 반환하는 대신, 모델이 중간 계산, 논리적 단계, 설명을 작성합니다.',
+        '단계별로 생각해 보자, 추론 과정을 보여줘 같은 지시 또는 추론이 명시된 풀이된 예시를 제공함으로써 이 동작을 활성화할 수 있습니다. 결과는 모델이 어떻게 결론에 도달했는지 이해할 수 있는 추적 경로가 됩니다.',
+      ],
+    },
+    whyItMatters: {
+      title: 'Chain-of-thought 프롬프팅이 중요한 이유',
+      content: [
+        '**Chain-of-thought 프롬프팅은 다단계 추론이 필요한 작업에서 모델의 동작을 더 투명하게 만들기 때문에 중요합니다.** 각 단계를 볼 수 있으면 오해, 누락된 가정, 산술 오류를 발견할 수 있습니다.',
+        '이는 분석, 계획 수립, 문제 해결 분야에서 특히 가치 있습니다. 불투명한 출력 대신 검증하거나, 수정하거나, 문서로 재사용할 수 있는 서술을 얻게 됩니다.',
+      ],
+      callouts: [
+        {
+          type: 'info',
+          label: '로컬 모델에서도 작동합니다',
+          text: 'Chain-of-thought는 7B+ 파라미터를 가진 모든 모델에서 작동합니다. [Ollama 또는 LM Studio](https://www.promptquorum.com/local-llms)로 로컬에서 시험해 보세요.'
+        }
+      ],
+    },
+    whenItHelps: {
+      title: '언제 Chain-of-thought가 도움이 되는가 (그리고 언제 아닌가)',
+      content: [
+        '**Chain-of-thought 프롬프팅은 명확한 단계로 자연스럽게 나뉘는 작업에서 가장 도움이 되지만, 모든 프롬프트에 필요한 것은 아닙니다.** 목적지만큼 경로가 중요할 때 빛을 발합니다.',
+        'Chain-of-thought 추론은 도구 호출이 있는 에이전트가 다단계 작업에서 신뢰성을 갖추게 하는 핵심입니다. MCP를 활용한 로컬 에이전트 스택에 대해서는 [MCP를 활용한 로컬 AI 에이전트](/power-local-llm/local-ai-agents-with-mcp-2026)를 참조하세요.',
+        '좋은 사용 사례는 다음과 같습니다:',
+      ],
+      items: [
+        '수학 및 정량적 추론 문제.',
+        '다단계 논리 퍼즐 또는 의사결정 분석.',
+        '근본 원인 분석, 사고 후 검토, 트레이드오프 논의.',
+        '작업 순서가 명시적이어야 하는 계획 수립 작업.',
+      ],
+    },
+    whenItDoesntHelp: {
+      content: [
+        '단순 분류, 빠른 작성, 짧은 사실 기반 답변의 경우 chain-of-thought는 추가 가치 없이 장황함만 더하는 경우가 많습니다. 민감한 분야에서는 추론을 내부적으로 유지하고 사용자에게는 최종 답변만 표시하고 싶을 수도 있습니다.',
+      ],
+    },
+    example: {
+      title: '예시: Chain-of-thought 없음 vs. 있음',
+      content: [
+        '**직접 답변 프롬프트와 명시적으로 추론을 요청하는 프롬프트를 비교하면 차이가 분명해집니다.** 간단한 의사결정 예시입니다.',
+        '**[미흡한 프롬프트]**',
+        '"다음 분기에 어떤 프로젝트를 우선시해야 합니까?"',
+        '**[개선된 프롬프트]**',
+        '"당신은 제품 운영 관리자입니다. 다음 분기 후보 프로젝트가 세 가지 있습니다. Chain-of-thought 추론을 사용하여 우선시할 프로젝트를 결정하세요. 1) 사용할 의사결정 기준을 나열하세요 (예: 매출 영향, 위험도, 전략적 정렬). 2) 각 기준에 대해 각 프로젝트를 단계별로 평가하세요. 3) 명확한 추천을 제시하고 3~5문장으로 정당화하세요. 마지막에 별도 줄에 추천: 으로 시작하는 짧은 최종 답변을 제공하세요."',
+        '개선된 버전에서 모델은 기준을 어떻게 선택했는지, 각 프로젝트를 어떻게 점수화했는지 설명한 다음 반박하거나 수용할 수 있는 추천을 제시합니다.',
+      ],
+    },
+    howToWrite: {
+      title: '효과적인 Chain-of-thought 프롬프트 작성법',
+      content: [
+        '**효과적인 chain-of-thought 프롬프트를 작성하려면 추론 구조와 최종 답변 구조를 모두 정의해야 합니다.** 더 설명해줘 같은 막연한 요청은 구체적인 지시보다 신뢰성이 떨어집니다.',
+        '실용적인 패턴은 다음과 같습니다:',
+      ],
+      items: [
+        '모델에게 역할을 알려주세요 (예: "당신은 시니어 데이터 분석가입니다.").',
+        '단계별로 생각하거나 chain-of-thought를 사용해야 한다고 명시하세요.',
+        '기대하는 추론 섹션을 정의하세요 (예: 가정, 계산, 비교, 결론).',
+        '빠르게 사용할 수 있도록 마지막에 짧고 명확하게 표시된 최종 답변을 요청하세요.',
+      ],
+    },
+    howtWriteNote: {
+      content: [
+        '이렇게 하면 상세한 추론과 간결한 출력이 분리되어, 결과를 다른 도구나 보고서에 통합할 때 유용합니다.',
+      ],
+    },
+    inPromptQuorum: {
+      title: 'PromptQuorum에서의 Chain-of-thought 프롬프팅',
+      content: [
+        '**PromptQuorum은 여러 모델에서 chain-of-thought 프롬프팅을 일관성 있게 적용할 수 있는 멀티모델 AI 디스패치 도구입니다.** 구조화된 chain-of-thought 프롬프트를 작성하고 여러 공급자에게 병렬로 전송합니다.',
+        'PromptQuorum에서 다음을 수행할 수 있습니다:',
+      ],
+      items: [
+        'Chain-of-thought 지시와 TRACE 또는 APE 같은 추론 중심 프레임워크를 결합하여 사고 단계가 명시적으로 레이블링되도록 합니다.',
+        '서로 다른 모델이 동일한 추론 작업을 처리하는 방식을 비교하고 단계별 추적 과정을 나란히 검사합니다.',
+        '반복적인 분석, 사고 검토, 전략적 의사결정을 위해 chain-of-thought 프롬프트를 템플릿으로 저장합니다.',
+      ],
+    },
+    inPromptQuorumClosing: {
+      content: [
+        '이를 통해 chain-of-thought 프롬프팅이 일회성 요령에서 반복 가능한 의사결정 프로세스의 일부로 전환됩니다.',
+      ],
+    },
+    howToStart: {
+      title: 'CoT 프롬프팅 사용 방법',
+      numberedItems: [
+        '**논리, 추론, 디버깅 작업에서는 모델에게 답변 전에 단계별로 생각해라고 요청하세요.** 버그가 뭐야? 대신 실행 과정을 단계별로 추적한 다음 버그를 찾아줘라고 질문하세요.',
+        '**단계별 추론을 보여주는 풀이된 예시를 제공하세요.** 설명만 하지 말고, 모델에게 단계별 추론이 어떻게 보이는지 보여주세요. 예시: "먼저 함수 시그니처를 검토합니다... 그다음 입력 X로 첫 번째 호출을 추적합니다..."',
+        '**단계별로 생각해 봅시다 또는 먼저, 파악하세요... 그다음... 같은 명시적 프롬프트를 사용하세요.** 이렇게 하면 모델에서 더 신중한 추론이 활성화됩니다.',
+        '**복잡한 문제의 경우 모델에게 중간 출력을 추적하도록 요청하세요.** 예시: "입력 [5]에 대해 이 함수의 실행을 추적하세요. 각 줄 후의 각 변수 값을 보여주세요."',
+        '**CoT를 검증 가능한 출력과 결합하세요: 모델에게 작업을 감사할 수 있도록 과정을 보여달라고 요청하세요.** 각 단계에서 추론을 설명하세요. 실수를 하면, 보여주는 과정에서 눈에 띄어야 합니다.',
+      ],
+    },
+    mathExample: {
+      title: '수학 예시: 매출 계산',
+      content: [
+        '**CoT 없이는 모델이 단일 최종 답변을 줄 수 있습니다. CoT를 사용하면 모델은 단계별로 계산을 보여줍니다.**',
+        '**CoT 없음:**',
+        '고객이 개당 $15에 50개를 구매하지만 10% 할인을 받습니다. 얼마를 지불합니까?',
+        '모델: "$675"',
+        '**CoT 있음:**',
+        '고객이 개당 $15에 50개를 구매하지만 10% 할인을 받습니다. 단계별로 계산하세요: 1) 소계를 계산하세요. 2) 할인 금액을 계산하세요. 3) 소계에서 할인을 빼서 최종 가격을 구하세요.',
+        '모델: "1) 소계 = 50 × $15 = $750. 2) 할인 = $750의 10% = $75. 3) 최종 가격 = $750 − $75 = $675."',
+        '두 경우 모두 같은 답변을 제시하지만, CoT 버전은 수학을 볼 수 있고 오류를 발견할 수 있습니다 (예: 누군가 $750의 10%를 잘못 계산했을 경우).',
+      ],
+    },
+    reasoningModels: {
+      title: 'CoT vs. 내장 추론 모델 (2026)',
+      content: [
+        '**2026년에는 Claude Opus 4.8, OpenAI o3, Gemini Deep Think 같은 최전선 모델들이 chain-of-thought를 자동으로 내부화하는 내장 추론 모드를 갖추고 있습니다.** 이러한 모델에는 단계별로 생각해라는 지시를 추가할 필요가 없습니다.',
+        '**프롬프트 수준 CoT를 사용해야 할 때:** 비추론 모델 (Claude Haiku 4.5, GPT-5.5 mini, Gemini Flash, Llama 4), 로컬 LLM, 또는 추론 토큰 예산의 추가 비용을 피하고 싶을 때.',
+        '**내장 추론 모드를 사용해야 할 때:** 최전선 모델에서 최고 정확도, 수학 집약적 작업, 복잡한 분석이 필요할 때. 이러한 모델은 추론 토큰을 별도로 청구합니다 (일반적으로 출력 토큰보다 높은 요금). 프로덕션 배포 전에 [Anthropic 콘솔](https://docs.anthropic.com/) 또는 [OpenAI 플레이그라운드](https://platform.openai.com/playground)에서 CoT 프롬프트를 테스트하세요.',
+      ],
+      columns: ['방식', '최적 사용 사례', '비용', '투명성', '모델'],
+      rows: [
+        { '방식': '프롬프트 수준 CoT ("단계별로 생각해")', '최적 사용 사례': '소형 모델, 로컬 LLM, 비용에 민감한 작업', '비용': '출력 토큰 증가', '투명성': '완전: 출력에 단계가 보임', '모델': 'Haiku, Flash, LLaMA, Qwen' },
+        { '방식': 'Claude extended thinking (Opus 4.8, Sonnet 4.6)', '최적 사용 사례': '복잡한 분석, 최고 정확도', '비용': '별도 사고 토큰 예산 (입력 요금)', '투명성': 'API를 통한 검사기 추적', '모델': 'Claude Opus 4.8, Claude Sonnet 4.6' },
+        { '방식': 'OpenAI o3', '최적 사용 사례': '가장 어려운 문제 (수학, 코드, 경쟁)', '비용': '추론 토큰 예산 (최고 수준)', '투명성': '추론 숨김, 출력만 보임', '모델': 'OpenAI o3' },
+        { '방식': 'Gemini Deep Think', '최적 사용 사례': 'Google Cloud 통합, Gemini 생태계', '비용': '출력과 별도의 사고 토큰', '투명성': 'thinking_level 파라미터 (LOW, MEDIUM, HIGH)', '모델': 'Gemini 3.1 Pro' },
+        { '방식': 'DeepSeek R1', '최적 사용 사례': '오픈 가중치 옵션, 온디바이스 추론', '비용': '출력 텍스트로 추론 스트리밍', '투명성': '완전: 출력에 CoT 인라인', '모델': 'DeepSeek R1' },
+      ],
+      callouts: [
+        {
+          type: 'tip',
+          label: '전문가 팁',
+          text: '비용을 고려하여 개발한다면 더 작은 모델에서 프롬프트 수준 CoT를 사용하세요. 어려운 문제에서 정확도를 위해 개발한다면 o3 또는 Claude extended thinking을 사용하고 추론은 모델에게 맡기세요.'
+        }
+      ],
+    },
+    cotVariants: {
+      title: 'Chain-of-thought의 변형 및 확장',
+      content: [
+        '**기본 단계별로 생각해 패턴을 넘어, 연구자들은 서로 다른 유형의 문제에 최적화된 여러 CoT 변형을 개발했습니다.**',
+      ],
+      items: [
+        '**Zero-shot CoT:** 예시 없이 단계별로 생각해 봅시다라고 질문합니다. 대부분의 모델에서 작동하며 구현이 가장 간단합니다. 향상: 추론 작업에서 약 10~20% 개선.',
+        '**Few-shot CoT:** 추론이 명시된 2~5개의 풀이된 예시를 보여준 다음, 새 문제에 같은 패턴을 적용하도록 요청합니다. Zero-shot보다 안정적이지만 예시를 수동으로 만들어야 합니다. 향상: 정확도 약 20~40%.',
+        '**Self-consistency (Wang 외, 2023):** 여러 CoT 추론 경로를 독립적으로 생성한 다음 최종 답변에 다수결을 적용합니다. 오류에 대해 훨씬 강건합니다. 향상: 어려운 작업에서 약 30~50%.',
+        '**Tree of Thought (ToT):** 선형 체인 대신 여러 추론 분기를 탐색하고 약한 것을 제거합니다. 가능한 해결 경로가 많을 때 사용하세요 (계획, 게임, 창의적 작업).',
+        '**ReAct (추론 + 행동):** 추론을 외부 행동 — API 호출, 데이터베이스 검색, 코드 실행 — 과 교차하고 결과를 다음 추론 단계에 통합합니다. 실시간 데이터나 검증이 필요한 실세계 작업에 이상적입니다.',
+      ],
+    },
+    modelComparison: {
+      title: '모델 비교: 2026년 CoT 프롬프팅 처리 방식',
+      columns: ['모델', '프롬프트 수준 CoT', '내장 추론', '최적 사용 사례', '비용 (약)'],
+      rows: [
+        { '모델': 'Claude Opus 4.8', '프롬프트 수준 CoT': '불필요', '내장 추론': 'Extended thinking (API를 통한 검사 가능한 추적)', '최적 사용 사례': '최고 정확도 분석', '비용 (약)': '높음 (입력 + 출력 + 사고 토큰)' },
+        { '모델': 'Claude Sonnet 4.6', '프롬프트 수준 CoT': '불필요', '내장 추론': 'Extended thinking', '최적 사용 사례': '정확도/비용 균형', '비용 (약)': '중간' },
+        { '모델': 'Claude Haiku 4.5', '프롬프트 수준 CoT': '권장', '내장 추론': '없음', '최적 사용 사례': '빠르고 경제적인 추론', '비용 (약)': '낮음' },
+        { '모델': 'OpenAI o3', '프롬프트 수준 CoT': '불필요', '내장 추론': '노력 수준 (low, medium, high, xhigh)', '최적 사용 사례': '경쟁 수준 문제', '비용 (약)': '매우 높음 (추론 토큰 수준)' },
+        { '모델': 'GPT-5.5 mini', '프롬프트 수준 CoT': '권장', '내장 추론': '없음', '최적 사용 사례': '경제적 배포', '비용 (약)': '매우 낮음' },
+        { '모델': 'Gemini 3.1 Pro', '프롬프트 수준 CoT': '작동', '내장 추론': 'Deep Think (thinking_level 파라미터)', '최적 사용 사례': 'Google Cloud 통합', '비용 (약)': '중간-높음' },
+        { '모델': 'Gemini Flash', '프롬프트 수준 CoT': '권장', '내장 추론': '없음', '최적 사용 사례': '빠른 응답', '비용 (약)': '낮음' },
+        { '모델': 'DeepSeek R1', '프롬프트 수준 CoT': '불필요', '내장 추론': '출력에 인라인 추론', '최적 사용 사례': '오픈 가중치, 온디바이스', '비용 (약)': '무료 (오픈소스)' },
+        { '모델': 'Llama 4', '프롬프트 수준 CoT': '권장', '내장 추론': '없음', '최적 사용 사례': '로컬 배포, 개인정보 보호', '비용 (약)': '셀프호스팅 (컴퓨팅에 따라 다름)' },
+      ],
+    },
+    relatedReading: {
+      title: '관련 자료',
+      items: [
+        '[프롬프트 엔지니어링이란? 2026 완벽 가이드](/ko/prompt-engineering/what-is-prompt-engineering)',
+        '[구조화된 출력 및 JSON Schema 프롬프팅](/ko/prompt-engineering/structured-output)',
+        '[AI 환각 줄이는 방법](/ko/prompt-engineering/reducing-hallucination)',
+        '[Constrained 프롬프팅: 모델 출력 제한하기](/ko/prompt-engineering/constrained-prompting)',
+        '[멀티모델 디스패치 시스템 구축 방법](/ko/prompt-engineering/multi-model-dispatch)',
+        '[프롬프트 테스팅 및 평가 프레임워크](/ko/prompt-engineering/prompt-testing)',
+      ],
+    },
+    faqSection: {
+      title: '자주 묻는 질문',
+      faqs: [
+        {
+          q: 'Chain-of-thought는 모든 모델에서 작동합니까?',
+          a: 'Chain-of-thought는 7B+ 파라미터를 가진 대부분의 모델에서 작동하지만 이점은 다양합니다. 중소형 모델 (Haiku, Flash, Llama 4)에서 가장 효과적입니다. 최전선 모델 (Claude Opus 4.8, o3)에서는 내장 추론 모드가 프롬프트 수준 CoT보다 더 효율적인 경우가 많습니다.'
+        },
+        {
+          q: 'Chain-of-thought는 비용을 증가시킵니까?',
+          a: '예, 프롬프트 수준 CoT는 출력 토큰 수를 증가시킵니다 (모델이 최종 답변 전에 추론을 작성하기 때문). 내장 추론 모드 (Claude extended thinking, OpenAI o3)는 별도의 청구 요금이 있는 별도의 사고 토큰 예산을 사용합니다. 비용/정확도 트레이드오프를 비교하기 위해 사용 사례에서 두 가지를 모두 테스트하세요.'
+        },
+        {
+          q: '언제 zero-shot 대신 few-shot CoT를 사용해야 합니까?',
+          a: '먼저 zero-shot CoT를 사용하세요 — 더 간단하고 대부분의 경우에 작동합니다. zero-shot이 신뢰할 수 없거나 도메인에 특정 추론 패턴이 필요한 경우 (예: 표준 라인 구조의 재무 분석) few-shot (예시 2~5개)으로 전환하세요.'
+        },
+        {
+          q: 'Chain-of-thought를 구조화된 출력(JSON)과 결합할 수 있습니까?',
+          a: '예. 모델에게 먼저 일반 텍스트로 추론을 보여준 다음 최종 답변이 있는 JSON 객체를 생성하도록 요청할 수 있습니다. 지시를 결합하세요: 단계별로 생각하세요. 그런 다음 결과를 유효한 JSON으로 생성하세요. 이것은 프로덕션 시스템에서 일반적입니다.'
+        },
+        {
+          q: 'Chain-of-thought와 tree-of-thought의 차이는 무엇입니까?',
+          a: 'Chain-of-thought는 선형 순서입니다: 1단계 → 2단계 → ... → 결론. Tree-of-thought는 여러 분기 (대안적 추론 경로)를 탐색하고 답변에 도달하기 전에 더 약한 것을 제거합니다. Tree-of-thought는 더 강력하지만 비용이 더 많이 듭니다 (여러 모델 호출 필요).'
+        },
+        {
+          q: 'OpenAI o3는 chain-of-thought 프롬프팅이 필요합니까?',
+          a: '아닙니다. OpenAI o3는 자동으로 활성화되는 내장 추론 기능을 갖추고 있습니다. 단계별로 생각해 지시를 추가할 필요가 없습니다. o3에 문제를 제시하고 지출할 추론 예산을 제어하기 위해 노력 수준 (low/medium/high/xhigh)을 설정하기만 하면 됩니다.'
+        },
+        {
+          q: '내장 추론 모델의 추론을 감사할 수 있습니까?',
+          a: '예, 하지만 모델에 따라 다릅니다. Claude extended thinking의 추론 추적은 API를 통해 검사할 수 있습니다. OpenAI o3의 추론은 기본적으로 숨겨져 있습니다 (경쟁 우위를 위해). Gemini Deep Think의 추론도 숨겨져 있습니다. 완전한 감사 가능성을 위해서는 프롬프트 수준 CoT 또는 DeepSeek R1을 사용하세요.'
+        },
+        {
+          q: 'Chain-of-thought 프롬프팅은 실시간 애플리케이션에 적합합니까?',
+          a: '프롬프트 수준 CoT는 지연 시간을 증가시킵니다 (출력 토큰이 더 많으면 생성이 느려짐). 실시간 사용 사례의 경우 최소 추론이 있는 소형 모델을 사용하거나 토큰이 들어올 때 보여주기 위해 스트리밍 엔드포인트를 사용하세요. 내장 추론 모드는 더 많은 지연 시간을 추가할 수 있습니다; 특정 사용 사례를 벤치마크하세요.'
+        },
+      ],
+    },
+    sources: {
+      title: '출처 및 추가 자료',
+      items: [
+        'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
+        'Kojima, T., Gu, S. S., Reid, M., Matsuo, Y., & Iwasawa, Y. (2022). "Large Language Models are Zero-Shot Reasoners." NeurIPS 2022. arXiv:2205.11916',
+        'Wang, X., Wei, J., Schuurmans, D., et al. (2023). "Self-Consistency Improves Chain of Thought Reasoning in Language Models." ICLR 2023. arXiv:2203.11171',
+        'Anthropic. (2024). "Extended Thinking in Claude." Claude Opus 4.8 및 Sonnet 4.6의 추론 기능에 관한 기술 문서.',
+        'OpenAI. (2026). "OpenAI o3: Reasoning Models for Competition-Level Problem Solving." OpenAI 문서 및 연구.',
+      ],
+    },
+  },
+  faqSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Chain-of-thought는 모든 모델에서 작동합니까?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Chain-of-thought는 7B+ 파라미터를 가진 대부분의 모델에서 작동하지만 이점은 다양합니다. 중소형 모델에서 가장 효과적입니다. 최전선 모델에서는 내장 추론 모드가 더 효율적인 경우가 많습니다.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Chain-of-thought는 비용을 증가시킵니까?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '예, 프롬프트 수준 CoT는 출력 토큰 수를 증가시킵니다. 내장 추론 모드는 별도의 청구 요금이 있는 별도의 사고 토큰 예산을 사용합니다. 비용/정확도 트레이드오프를 비교하기 위해 두 가지를 모두 테스트하세요.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: '언제 zero-shot 대신 few-shot CoT를 사용해야 합니까?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '먼저 zero-shot CoT를 사용하세요. zero-shot이 신뢰할 수 없거나 특정 추론 패턴이 필요한 경우 few-shot으로 전환하세요.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Chain-of-thought를 구조화된 출력(JSON)과 결합할 수 있습니까?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '예. 모델에게 먼저 일반 텍스트로 추론을 보여준 다음 JSON 객체를 생성하도록 요청하세요. 단계별로 생각하세요. 그런 다음 결과를 유효한 JSON으로 생성하세요.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Chain-of-thought와 tree-of-thought의 차이는 무엇입니까?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Chain-of-thought는 선형 순서입니다. Tree-of-thought는 여러 분기를 탐색하고 약한 것을 제거합니다. Tree-of-thought는 더 강력하지만 여러 모델 호출이 필요합니다.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'OpenAI o3는 chain-of-thought 프롬프팅이 필요합니까?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '아닙니다. OpenAI o3는 자동으로 활성화되는 내장 추론 기능을 갖추고 있습니다. 문제를 제시하고 노력 수준 (low/medium/high/xhigh)을 설정하기만 하면 됩니다.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: '내장 추론 모델의 추론을 감사할 수 있습니까?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '모델에 따라 다릅니다. Claude extended thinking의 추론 추적은 API를 통해 검사할 수 있습니다. OpenAI o3와 Gemini Deep Think의 추론은 기본적으로 숨겨져 있습니다. 완전한 감사 가능성을 위해서는 프롬프트 수준 CoT 또는 DeepSeek R1을 사용하세요.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Chain-of-thought 프롬프팅은 실시간 애플리케이션에 적합합니까?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '프롬프트 수준 CoT는 지연 시간을 증가시킵니다. 실시간 사용 사례의 경우 소형 모델이나 스트리밍 엔드포인트를 사용하세요. 내장 추론 모드도 더 많은 지연 시간을 추가할 수 있으므로 특정 사용 사례를 벤치마크하세요.'
+        }
+      },
+    ]
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Chain-of-thought 변형',
+    numberOfItems: 5,
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Zero-shot CoT',
+        description: '예시 없이 단계별로 생각해 봅시다라고 질문합니다. 대부분의 모델에서 작동하며 가장 간단합니다. 향상: 약 10~20% 정확도 개선.'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Few-shot CoT',
+        description: '추론이 명시된 2~5개의 풀이된 예시를 보여준 다음 새 문제에 적용합니다. Zero-shot보다 안정적입니다. 향상: 약 20~40% 정확도.'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Self-Consistency',
+        description: '여러 독립적인 추론 경로를 생성하고 다수결로 최종 답변을 결정합니다. 오류에 훨씬 강건합니다. 향상: 어려운 작업에서 약 30~50%.'
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: 'Tree of Thought',
+        description: '여러 추론 분기를 탐색하고 약한 것을 제거합니다. 해결 경로가 많은 경우에 사용합니다 (계획, 게임, 창의적 작업).'
+      },
+      {
+        '@type': 'ListItem',
+        position: 5,
+        name: 'ReAct',
+        description: '추론과 외부 행동 (API 호출, 검색, 코드 실행)을 교차합니다. 실시간 데이터나 검증이 필요한 실세계 작업에 이상적입니다.'
+      },
+    ]
+  },
+},
   };

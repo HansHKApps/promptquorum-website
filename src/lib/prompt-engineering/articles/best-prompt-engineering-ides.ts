@@ -2374,4 +2374,367 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   },
-};
+
+  ko: {
+    theme: 'Tools & Platforms',
+    title: '2026년 최고의 프롬프트 엔지니어링 IDE 및 에디터',
+    seoTitle: '2026년 최고의 프롬프트 엔지니어링 IDE: 6가지 도구 비교',
+    metaDescription: 'Cursor는 월 $20; LM Studio는 하드웨어 투자 후 $0. 용도별로 최적화된 6가지 프롬프트 엔지니어링 IDE를 비교합니다. 나에게 맞는 도구를 찾아보세요.',
+    ogTitle: '2026년 최고의 프롬프트 엔지니어링 IDE 및 에디터: 완전 가이드',
+    ogDescription: 'Cursor, LM Studio, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio — 워크플로우별로 최적화된 6가지 IDE 옵션. 나에게 맞는 것을 찾아보세요.',
+    twitterTitle: '2026년 최고의 프롬프트 엔지니어링 IDE 및 에디터: 가이드',
+    twitterDescription: '어떤 IDE도 모든 것을 커버하지는 않습니다. 코드+프롬프트에는 Cursor, 오프라인에는 LM Studio, API 테스트에는 OpenAI Playground. 선택 방법을 알아보세요.',
+    intro: '**TL;DR:** 어떤 프롬프트 엔지니어링 IDE도 모든 워크플로우를 커버하지는 않습니다. 개발에는 Cursor 또는 VS Code + Continue, API 테스트에는 OpenAI Playground 또는 Claude Console, 무료 멀티모달 작업에는 Google AI Studio, 오프라인에는 LM Studio를 사용하십시오. 이 가이드의 6가지 도구는 각각 서로 다른 사용 사례에 최적화되어 있습니다 — 기능 목록이 아닌 워크플로우를 기준으로 선택하십시오.',
+    publishDate: '2026-04-10',
+    dateModified: '2026-05-01',
+    readTime: '8분 분량',
+    educationalLevel: 'Intermediate',
+    audience: 'LLM 애플리케이션을 개발하는 개발자',
+    primaryTerm: '프롬프트 엔지니어링 IDE',
+    aboutTopics: ['프롬프트 개발', 'IDE 도구', '로컬 모델', '클라우드 플레이그라운드'],
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-10-10',
+    leadAnswerBlock: '**프롬프트 엔지니어링 IDE는 아이디어와 실행 사이의 마찰을 최소화하는 특화된 에디터입니다 — 모델 전환, 플레이그라운드 실행, 프롬프트 히스토리, 코드 내보내기, 비용 가시성을 포함합니다. 2026년 4월 기준, 6가지 기준을 모두 충족하는 단일 IDE는 없습니다.**',
+    quickFacts: [
+      'Cursor: 무료 티어(제한) 또는 무제한 사용 월 $20',
+      'VS Code + Continue.dev: 무료 오픈소스 (MIT 라이선스)',
+      'OpenAI Playground: 프로덕션 API 토큰 가격으로 종량 과금',
+      'LM Studio: 하드웨어 초기 투자($500–3,000) 후 토큰당 $0',
+      'LM Studio 추론 속도: 소비자용 GPU에서 10–50 토큰/초 vs 클라우드 100+ 토큰/초',
+      '설정 시간: 클라우드 플레이그라운드 2분 미만; LM Studio 첫 설치 30–60분',
+    ],
+    quickAnswerTop: {
+      ko: {
+        question: '프롬프트 엔지니어링 IDE란 무엇입니까?',
+        answer: '프롬프트 엔지니어링 IDE는 별도의 터미널이나 API 클라이언트 없이 프롬프트를 작성, 테스트, 반복할 수 있는 전문화된 에디터입니다. 주요 기능: 모델 전환, 즉각적인 피드백, 토큰 카운팅, 프롬프트 히스토리, 코드 내보내기.',
+        bullets: [
+          'Cursor: 코드+프롬프트 통합 개발 (월 $20 또는 무료 티어)',
+          'VS Code + Continue.dev: 멀티모델 오픈소스 지원 (무료, MIT)',
+          'OpenAI Playground: API 탐색 및 토큰 카운팅 (종량 과금)',
+          'LM Studio: 하드웨어 투자 후 로컬 오프라인 개발 ($0/토큰)',
+        ],
+        updatedDate: '2026-05-01',
+      },
+    },
+    toc: [
+      { label: '좋은 프롬프트 IDE의 조건', anchor: 'what-makes-good-ide' },
+      { label: 'Cursor: AI 네이티브 IDE', anchor: 'cursor-ai-native' },
+      { label: 'VS Code + Continue.dev', anchor: 'vscode-continue' },
+      { label: 'OpenAI Playground', anchor: 'openai-playground' },
+      { label: 'Anthropic Console', anchor: 'anthropic-console' },
+      { label: 'Google AI Studio', anchor: 'google-ai-studio' },
+      { label: 'LM Studio: 로컬 플레이그라운드', anchor: 'lm-studio-local' },
+      { label: '비교표', anchor: 'comparison-table' },
+      { label: '선택 방법', anchor: 'how-to-choose' },
+      { label: '흔한 실수', anchor: 'common-mistakes' },
+      { label: '지역별 가용성', anchor: 'regional-context' },
+      { label: '관련 자료', anchor: 'related-reading' },
+      { label: 'FAQ', anchor: 'faq' },
+      { label: '출처', anchor: 'sources' },
+    ],
+    targetKeywords: [
+      '프롬프트 엔지니어링 IDE',
+      '프롬프트 엔지니어링 도구 2026',
+      'AI 코딩 IDE 비교',
+      'Cursor vs VS Code 프롬프트',
+      'LM Studio 한국어',
+      'OpenAI Playground 사용법',
+      '로컬 LLM 개발 도구',
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '2026년 최고의 프롬프트 엔지니어링 IDE 및 에디터',
+      description: 'Cursor는 월 $20; LM Studio는 하드웨어 투자 후 $0. 용도별로 최적화된 6가지 프롬프트 엔지니어링 IDE. 나에게 맞는 도구를 찾아보세요.',
+      datePublished: '2026-04-10',
+      dateModified: '2026-05-01',
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-engineering-ides',
+      inLanguage: 'ko',
+      proficiencyLevel: 'Intermediate',
+      about: [
+        { '@type': 'Thing', name: '프롬프트 엔지니어링 IDE', description: 'AI 프롬프트를 작성, 테스트, 반복하기 위한 전문화된 에디터' },
+        { '@type': 'Thing', name: '로컬 언어 모델', description: 'LM Studio와 Ollama 같은 도구를 사용해 로컬에서 실행되는 오픈소스 LLM' },
+        { '@type': 'Thing', name: '클라우드 AI 플레이그라운드', description: 'API 탐색을 위한 OpenAI Playground와 Google AI Studio 같은 웹 기반 도구' },
+      ],
+      audience: { '@type': 'Audience', audienceType: 'LLM 애플리케이션을 개발하는 개발자' },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
+        { '@type': 'ListItem', position: 3, name: '2026년 최고의 프롬프트 엔지니어링 IDE', item: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-engineering-ides' },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      inLanguage: 'ko',
+      numberOfItems: 6,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Cursor: AI 네이티브 IDE',
+          url: 'https://cursor.sh',
+          description: '내장 AI 채팅, 모델 전환(GPT-5.5, Claude, Gemini), 코드베이스 인식 컨텍스트를 갖춘 VS Code 포크. 프롬프트와 애플리케이션 코드를 모두 작성하는 개발자에게 이상적. 무료 티어 또는 월 $20.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'VS Code + Continue.dev',
+          url: 'https://continue.dev',
+          description: 'Ollama를 통한 10개 이상의 LLM과 로컬 모델을 지원하는 오픈소스 VS Code 확장. MIT 라이선스, 완전 무료. 멀티모델 워크플로우와 프라이버시 중심 개발에 이상적.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'OpenAI Playground',
+          url: 'https://platform.openai.com/playground',
+          description: '실시간 토큰 카운팅과 원클릭 코드 내보내기로 GPT 모델을 테스트하는 웹 기반 에디터. 프로덕션 API 가격으로 종량 과금. 2분 미만 설정.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'Anthropic Console',
+          url: 'https://console.anthropic.com',
+          description: 'system 프롬프트 정제와 여러 모델 버전 비교에 최적화된 Claude 테스트 환경. 시각적 프롬프트를 위한 이미지 입력 지원. Anthropic API 가격으로 종량 과금.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'Google AI Studio',
+          url: 'https://aistudio.google.com',
+          description: '멀티모달 입력(텍스트, 이미지, 동영상, 오디오)과 넉넉한 무료 티어를 갖춘 Gemini용 노코드 플레이그라운드. 실험 시작에 API 키가 필요 없음.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 6,
+          name: 'LM Studio',
+          url: 'https://lmstudio.ai',
+          description: 'Llama, Mistral 및 기타 오픈소스 LLM을 로컬에서 실행하는 오프라인 플레이그라운드. 하드웨어 투자($500–3,000) 후 토큰당 비용 없음. 추론 속도: 소비자용 GPU에서 10–50 토큰/초.',
+        },
+      ],
+    },
+    snippetBlocks: [
+      { type: 'one-sentence', text: '프롬프트 엔지니어링 IDE는 별도의 터미널이나 API 클라이언트로 전환하지 않고도 프롬프트를 작성, 테스트, 반복할 수 있는 전문화된 에디터입니다.' },
+      { type: 'plain-terms', text: '워크숍을 선택하는 것과 같습니다: VS Code + Continue는 완전히 갖춰진 작업실(도구 지참), OpenAI Playground는 시간제 임대 작업대(사용한 만큼 지불), LM Studio는 직접 소유한 차고(초기 비용 후 무료)입니다.' },
+    ],
+    sections: {
+      keyTakeaways: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Cursor: AI 네이티브 개발(통합 채팅, 자동완성, 모델 전환)',
+          'VS Code + Continue.dev: 멀티모델 및 로컬 LLM 지원(오픈소스, 무료)',
+          'OpenAI Playground: API 탐색 및 토큰 카운팅(클라우드 전용, 종량 과금)',
+          'Claude Console: system 프롬프트 테스트 및 Anthropic API 탐색',
+          'Google AI Studio: Gemini 실험(무료 티어, 멀티모달)',
+          'LM Studio: 모델 다운로드 후 API 비용 없이 로컬 오프라인 개발',
+        ],
+      },
+      whatMakesGoodIDE: {
+        id: 'what-makes-good-ide',
+        title: '좋은 프롬프트 엔지니어링 IDE의 조건',
+        content: '**좋은 프롬프트 IDE는 아이디어와 실행 사이의 마찰을 최소화합니다.** 몇 초 만에 모델을 전환하고, 결과를 즉시 확인하고, 토큰 수를 파악하고, 프롬프트 히스토리를 저장하고, 도구를 벗어나지 않고 코드로 내보낼 수 있어야 합니다.
+
+평가할 핵심 기능:
+
+- **모델 전환:** 하나의 도구에서 GPT-5.5, Claude, Gemini로 동일한 프롬프트를 테스트할 수 있습니까?
+- **플레이그라운드 모드:** 코드를 작성하지 않고 프롬프트를 실행할 수 있습니까?
+- **토큰 카운터:** 확인 전에 소비된 토큰을 표시합니까? (토큰 비용이 쌓입니다 — [비용 기준 프롬프트 최적화](/ko/prompt-engineering/optimize-prompts-for-cost)를 참고하십시오.)
+- **프롬프트 히스토리:** 수동 저장 파일 없이 이전 버전으로 돌아갈 수 있습니까?
+- **코드 내보내기:** 작동하는 프롬프트를 Python/JS/API 형식으로 변환할 수 있습니까?
+- **비용 가시성:** 탐색 중에 요청당 비용을 볼 수 있습니까?
+
+2026년 4월 기준, 6가지 기준을 모두 충족하는 단일 IDE는 없습니다. 개발자들은 워크플로우에 따라 선택합니다: 개발 속도에는 Cursor, API 탐색에는 Playground, 특정 모델에 집중할 때는 Console, 오프라인 작업에는 LM Studio.',
+        snippets: [
+          { type: 'in-one-sentence', text: '프롬프트 엔지니어링 IDE는 별도의 터미널이나 API 클라이언트로 전환하지 않고도 프롬프트를 작성, 테스트, 반복할 수 있는 도구입니다.' },
+        ],
+        callouts: [
+          { type: 'tip', label: '전문가 팁', text: 'IDE를 선택하기 전에 워크플로우를 파악하십시오: 프롬프트와 함께 코드를 작성합니까(→ Cursor 또는 VS Code)? 아니면 모델 동작만 테스트합니까(→ 클라우드 플레이그라운드)? 답이 올바른 도구를 결정합니다.' },
+        ],
+      },
+      cursor: {
+        id: 'cursor-ai-native',
+        title: 'Cursor: 코드 + 프롬프트를 위한 AI 네이티브 IDE',
+        content: '**Cursor는 AI 지원 개발에 최적화된 VS Code 포크입니다.** 통합 채팅을 통해 에디터에서 코딩하면서 사이드바에서 프롬프트를 작성할 수 있습니다. 프롬프트를 작성하고, 코드를 생성하고, 두 가지를 동시에 정제할 수 있습니다. GPT-5.5, Claude, Gemini를 1등급으로 지원합니다 — 대화 중간에 모델을 전환하십시오. 프로젝트 간 프롬프트 버전 관리를 위해 [프롬프트 관리 플랫폼](/ko/prompt-engineering/best-prompt-management-platforms)과 함께 Cursor를 사용하십시오.',
+        numberedItems: [
+          '프롬프트와 애플리케이션 코드를 모두 작성하는 경우 이상적',
+          '코드베이스 인식 컨텍스트 포함(프로젝트 파일을 읽음)',
+          '가격: 무료 티어(제한), 무제한 사용 월 $20',
+          '지연 시간: 선택된 모델에 따라 다름(GPT-5.5 ~1-2초, Claude ~2-3초)',
+        ],
+        callouts: [
+          { type: 'warning', label: '주의', text: 'Cursor는 클라우드 전용입니다 — 모든 프롬프트가 Anthropic, OpenAI 또는 Google 서버로 전송됩니다. 각 공급업체의 데이터 처리 계약(DPA)을 검토하지 않고는 GDPR 민감 데이터나 기밀 데이터에는 적합하지 않습니다.' },
+        ],
+      },
+      continueVscode: {
+        id: 'vscode-continue',
+        title: 'VS Code + Continue.dev: 오픈소스 멀티모델',
+        content: '**Continue는 모든 LLM을 코드 에디터로 가져오는 오픈소스 VS Code 확장입니다.** GPT-5.5, Claude, Gemini와 Ollama를 통한 로컬 모델을 지원합니다. 프롬프트를 작성하고 Tab을 누르면 모델이 코드를 자동완성합니다. 벤더 잠금 없음. 커뮤니티가 유지 관리하며 완전히 투명합니다. 최고의 프롬프트를 재사용하고 버전 관리하기 위해 [프롬프트 라이브러리](/ko/prompt-engineering/build-a-prompt-library)를 함께 구축하십시오.',
+        numberedItems: [
+          '오픈소스 및 로컬 모델 지원을 원하는 개발자에게 이상적',
+          '단일 IDE에서 로컬 Ollama, vLLM 및 클라우드 API 지원',
+          '무료 오픈소스(MIT 라이선스)',
+          'VS Code(무료), Ollama 또는 모델 API 키 필요',
+        ],
+        callouts: [
+          { type: 'tip', label: '전문가 팁', text: 'Ollama가 포함된 VS Code + Continue.dev는 이 목록에서 지속적인 비용 없이 완전히 로컬, 멀티모델로 실행할 수 있는 유일한 설정입니다. 프라이버시에 민감한 워크플로우나 클라우드 API 비용이 엄청날 수 있는 대용량 테스트에 이상적입니다.' },
+        ],
+      },
+      openAIPlayground: {
+        id: 'openai-playground',
+        title: 'OpenAI Playground: API 탐색 및 테스트',
+        content: '**OpenAI Playground는 GPT-5.5 및 기타 OpenAI 모델을 테스트하는 웹 기반 에디터입니다.** 토큰 카운터가 실시간으로 사용량을 표시합니다. 플레이그라운드 설정을 API 코드(curl, Python, JavaScript)로 내보냅니다. 프로덕션 배포 전 API 탐색을 위해 설계되었습니다.',
+        numberedItems: [
+          '코드 작성 전 API 테스트 및 토큰 카운팅에 이상적',
+          '종량 과금: 탐색 중 사용된 각 토큰에 대해 요금 지불',
+          '모델 선택: GPT-5.5, GPT-4o mini, 커스텀 파인튜닝',
+          '클릭 한 번으로 curl/Python/JS로 내보내기',
+        ],
+        callouts: [
+          { type: 'warning', label: '경고', text: 'Playground 토큰은 프로덕션 API 호출과 동일한 요금으로 청구됩니다. few-shot 예제가 포함된 복잡한 프롬프트는 GPT-5.5 가격 기준 실행당 $0.10–$0.50이 소요될 수 있습니다. 각 실행 전에 토큰 카운터를 확인하십시오.' },
+        ],
+      },
+      anthropicConsole: {
+        id: 'anthropic-console',
+        title: 'Claude Console: system 프롬프트 및 모델 테스트',
+        content: '**Anthropic Console(console.anthropic.com)은 Claude 모델과 system 프롬프트 테스트에 최적화되어 있습니다.** 복잡한 system 프롬프트를 작성하고, 여러 Claude 버전(Claude 4.6 Sonnet, Claude Opus 4.8)에 대해 테스트하고, 출력을 나란히 비교할 수 있습니다. 이미지 입력을 위한 비전 지원.',
+        numberedItems: [
+          'Claude 특화 개발 및 system 프롬프트 정제에 이상적',
+          'Claude 4.6 Sonnet, Claude Opus 4.8, Claude Haiku 4.5 지원(현재 버전)',
+          '비전 지원: 이미지 및 PDF에 대한 프롬프트 테스트',
+          'OpenAI Playground와 동일한 종량 과금',
+        ],
+      },
+      googleAIStudio: {
+        id: 'google-ai-studio',
+        title: 'Google AI Studio: Gemini 무료 실험',
+        content: '**Google AI Studio(aistudio.google.com)는 Gemini를 위한 Google의 노코드 플레이그라운드입니다.** 무료 티어로 광범위한 탐색이 가능합니다. 멀티모달 지원: 텍스트, 이미지, 동영상, 오디오로 프롬프트를 테스트하십시오. 드래그 앤 드롭 인터페이스, 시작하는 데 API 키가 필요 없습니다.',
+        numberedItems: [
+          'Gemini 탐색 및 멀티모달 프롬프트 테스트에 이상적',
+          '무료 티어에 동영상 및 오디오 입력 포함(명시된 한도 없음)',
+          'Python, JavaScript, Curl로 내보내기',
+          '드래그 앤 드롭 인터페이스, 반복에 코딩이 필요 없음',
+        ],
+      },
+      lmStudio: {
+        id: 'lm-studio-local',
+        title: 'LM Studio: 로컬 오프라인 플레이그라운드',
+        content: '**LM Studio는 오픈소스 LLM(Llama, Mistral, Deepseek)을 다운로드하여 로컬 머신에서 실행합니다.** API 키 없음, 초기 다운로드 후 인터넷 없음, 토큰당 비용 없음. 단점: 클라우드 서비스보다 CPU/GPU 추론이 느립니다. 프라이버시에 민감한 작업과 대규모 비용 최적화에 이상적입니다.',
+        numberedItems: [
+          '로컬 개발 및 오프라인 실험에 이상적',
+          '양자화 모델 지원: Q4, Q5, Q8(소비자용 GPU에 7B–70B 파라미터 적합)',
+          '비용: 하드웨어 초기 투자($500–3,000) 후 월 $0',
+          '추론 속도: 소비자용 GPU에서 10–50 토큰/초 vs 클라우드 100+ 토큰/초',
+        ],
+        callouts: [
+          { type: 'note', label: '핵심 사항', text: 'LM Studio의 추론 속도는 하드웨어에 크게 의존합니다. 8GB VRAM(예: RTX 3080) 기준: 7B 모델이 30–50 토큰/초로 실행됩니다. CPU만 사용 시: 2–8 토큰/초 — 큰 컨텍스트 윈도우나 빠른 반복에는 너무 느립니다.' },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '비교표: IDE 기능 매트릭스',
+        content: '**2026년 4월 기준 현황입니다.** 워크플로우 테스트에서 클라우드 플레이그라운드 설정은 첫 사용자 기준 평균 2분 미만이었으며, LM Studio는 첫 설치(모델 다운로드 포함)에 약 45분이 소요되었습니다. 이후 모델 다운로드는 10분(7B Q4, ~4GB)에서 90분 이상(70B Q4, ~40GB)까지 다양했습니다.',
+        columns: ['IDE', '유형', '멀티모델', '로컬 모델', '토큰 카운터', '프롬프트 히스토리', '코드 내보내기', '오프라인', '가격', '이상적인 용도'],
+        rows: [
+          { IDE: 'Cursor', '유형': '데스크톱 IDE', '멀티모델': 'GPT-5.5, Claude, Gemini', '로컬 모델': '아니오', '토큰 카운터': 'API 경유', '프롬프트 히스토리': '예(채팅)', '코드 내보내기': '예', '오프라인': '아니오', '가격': '무료 / 월 $20', '이상적인 용도': '앱+프롬프트 개발자' },
+          { IDE: 'VS Code + Continue', '유형': '데스크톱 IDE + 확장', '멀티모델': 'GPT-5.5, Claude, Gemini, 로컬', '로컬 모델': '예(Ollama)', '토큰 카운터': '공급업체마다 다름', '프롬프트 히스토리': '수동', '코드 내보내기': '예', '오프라인': '예(로컬)', '가격': '무료(MIT)', '이상적인 용도': '멀티모델 + 오픈소스' },
+          { IDE: 'OpenAI Playground', '유형': '웹 플레이그라운드', '멀티모델': 'OpenAI만', '로컬 모델': '아니오', '토큰 카운터': '통합, 실시간', '프롬프트 히스토리': '예', '코드 내보내기': '예(curl/Python/JS)', '오프라인': '아니오', '가격': '토큰당 과금', '이상적인 용도': 'API 탐색' },
+          { IDE: 'Claude Console', '유형': '웹 플레이그라운드', '멀티모델': 'Claude만', '로컬 모델': '아니오', '토큰 카운터': '통합', '프롬프트 히스토리': '예', '코드 내보내기': '예(Python/JS)', '오프라인': '아니오', '가격': '토큰당 과금', '이상적인 용도': 'Claude 특화' },
+          { IDE: 'Google AI Studio', '유형': '웹 플레이그라운드', '멀티모델': 'Gemini 변형', '로컬 모델': '아니오', '토큰 카운터': '표시 안 됨', '프롬프트 히스토리': '예', '코드 내보내기': '예(Python/JS/curl)', '오프라인': '아니오', '가격': '무료 티어', '이상적인 용도': 'Gemini + 멀티모달' },
+          { IDE: 'LM Studio', '유형': '데스크톱 앱', '멀티모델': 'OSS 모델만', '로컬 모델': '예(로컬만)', '토큰 카운터': '통합', '프롬프트 히스토리': '예', '코드 내보내기': '예(Python/JS)', '오프라인': '예', '가격': '무료(하드웨어 후)', '이상적인 용도': '프라이버시 + 오프라인' },
+        ],
+      },
+      howToChoose: {
+        id: 'how-to-choose',
+        title: '프롬프트 엔지니어링 IDE 선택 방법',
+        content: '**워크플로우와 제약 조건에서 시작하십시오.** 프로덕션 코드를 작성합니까(Cursor)? API를 탐색합니까(OpenAI Playground)? Claude를 특화적으로 테스트합니까(Console)? 오프라인 개발을 원합니까(LM Studio)? 각 도구는 서로 다른 사용 사례에 최적화되어 있습니다.
+
+**프로필별:**
+- **앱 + 프롬프트 개발자:** Cursor 또는 VS Code + Continue(코드와 통합)
+- **ML 연구원 / 학자:** Google AI Studio(멀티모달, 무료) 또는 LM Studio(로컬, 재현 가능). [프롬프트 품질 평가 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality)과 결합하여 출력 품질을 측정하십시오.
+- **비기술적 프롬프트 작성자:** OpenAI Playground 또는 Claude Console(설정 불필요)
+- **프라이버시 중시 / 오프라인 필요:** LM Studio(로컬만, 외부 API 없음)
+- **대규모 비용 최적화:** LM Studio(초기 하드웨어 후) 또는 VS Code + 로컬 Ollama
+
+클라우드 모델 대신 로컬 LLM에 대해 작동하는 코딩 하네스를 위해 [Continue.dev vs Cline vs Aider](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local)를 참조하십시오 — 에디터를 변경하지 않고 클라우드 모델을 오프라인으로 교체하는 세 가지 오픈소스 옵션. 스택을 결정하기 전에 프롬프트가 공급업체 간에 일반화되는지 확인하려면 [PromptQuorum](/features)이 25개 이상의 모델에 동시에 전송합니다.',
+        snippets: [
+          { type: 'in-plain-terms', text: '워크숍을 선택하는 것처럼 생각하십시오: VS Code + Continue는 완전히 갖춰진 작업실(도구 지참), OpenAI Playground는 시간제 임대 작업대(시간당 요금), LM Studio는 직접 소유한 차고(초기 비용, 이후 무료)입니다.' },
+        ],
+        callouts: [
+          { type: 'tip', label: '전문가 팁', text: '주로 사용하는 LLM 공급업체의 클라우드 플레이그라운드로 시작하십시오. 어떤 모델을 가장 많이 사용하는지 파악한 후, 로컬 지원(LM Studio)이 필요한지 코드 통합(Cursor/VS Code)이 필요한지 결정하십시오.' },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '프롬프트 엔지니어링 IDE 사용 시 흔한 실수',
+        content: '이러한 실수는 API 낭비, 불안정한 출력, 프로덕션 배포 문제를 일으킵니다. 플레이그라운드에서 프로덕션으로 프롬프트를 이동하기 전에 [전용 테스트 도구](/ko/prompt-engineering/best-prompt-testing-evaluation-tools)를 사용하십시오.',
+        items: [
+          'Playground를 프로덕션 테스트에 사용 — Playground는 프롬프트 설계용이지 배포 검증용이 아닙니다. **수정:** 프로덕션에는 에러 처리, 속도 제한, 재시도, 폴백 로직을 갖춘 API를 직접 호출하십시오.',
+          'IDE를 너무 자주 전환 — 각 IDE마다 학습 곡선이 있습니다(키보드 단축키, 내보내기 형식, 모델 선택 패턴). **수정:** 기본 IDE를 선택하고 대안을 평가하기 전에 최소 2주 동안 사용하십시오. 키보드 숙련도가 기능 목록보다 더 중요합니다.',
+          '탐색 중 토큰 수 무시 — OpenAI Playground와 Claude Console의 모든 요청은 청구됩니다. 작은 변경(예제 추가)으로 토큰 사용량이 세 배가 될 수 있습니다. **수정:** 각 실행 전에 토큰 카운터를 확인하고 과도한 비용을 방지하기 위해 세션당 예산(예: $5)을 설정하십시오.',
+          '코드 내보내기를 너무 늦게 — Playground 프롬프트와 코드 기반 프롬프트는 공백, API 매개변수 차이, 라이브러리 버전으로 인해 다르게 동작하는 경우가 많습니다. **수정:** 프로젝트 마지막이 아닌 첫 번째 성공적인 반복 후에 코드로 내보내십시오 — 누적되기 전에 차이를 감지하십시오.',
+        ],
+        callouts: [
+          { type: 'warning', label: '경고', text: '프로젝트 중간에 IDE를 전환하면 프롬프트 드리프트가 발생합니다. system 프롬프트 형식, 공백 처리, 기본 내보내기 매개변수가 도구마다 다릅니다 — 환경을 전환할 때는 항상 프롬프트를 다시 테스트하십시오.' },
+          { type: 'practice', label: '모범 사례', text: '프로젝트 마지막이 아닌 첫 번째 성공적인 반복 후에 프롬프트를 코드로 내보내십시오. 기본 온도 설정과 매개변수 차이로 인해 Playground 동작이 API 동작과 달라질 수 있습니다.' },
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: '프롬프트 엔지니어링 IDE의 지역별 가용성',
+        content: '**IDE 선택은 어디서 작업하느냐와 어떤 데이터 프라이버시 요건이 적용되느냐에 달려 있습니다.** 클라우드 플레이그라운드(Cursor, OpenAI Playground, Claude Console, Google AI Studio)는 기본적으로 미국 서버로 프롬프트를 전송합니다. LM Studio와 VS Code + 로컬 Ollama는 모든 데이터를 기기 내에 유지합니다.
+
+**한국 / 개인정보보호법:** 클라우드 플레이그라운드는 개인정보나 연구 참여자 데이터에 사용하기 전에 각 공급업체의 데이터 처리 계약(DPA)을 검토해야 합니다. LM Studio와 VS Code + Ollama는 외부 전송 없이 개인정보보호법 하에 모든 데이터에 안전합니다.
+
+**EU / GDPR:** 한국과 동일한 클라우드 데이터 전송 고려사항이 적용됩니다. GDPR 요건을 가진 기업들은 내부 프롬프트 테스트를 위해 VS Code + 로컬 Ollama 또는 LM Studio를 채택하고 있습니다.
+
+**중국:** OpenAI Playground와 Claude Console은 중국 본토에서 차단됩니다. 로컬에서 다운로드된 Qwen 3 7B가 포함된 LM Studio가 오프라인 개발에 가장 많이 사용되는 대안입니다.',
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[2026년 최고의 프롬프트 엔지니어링 도구: 사용 사례별 순위](/ko/prompt-engineering/best-prompt-engineering-tools-2026) — 관리, 테스트, 개발 카테고리의 15개 이상 도구 완전 순위',
+          '[2026년 최고의 프롬프트 테스트 및 평가 도구](/ko/prompt-engineering/best-prompt-testing-evaluation-tools) — 자동화된 회귀 테스트, LLM-as-judge, 통과율 점수 도구',
+          '[2026년 최고의 프롬프트 관리 플랫폼](/ko/prompt-engineering/best-prompt-management-platforms) — 팀 간 프롬프트 버전 관리, 공유, 거버넌스 플랫폼',
+          '[비용 기준 프롬프트 최적화: 2026년 실용 기술](/ko/prompt-engineering/optimize-prompts-for-cost) — 프로덕션 프롬프트를 위한 토큰 절감, 모델 티어링, 캐싱 전략',
+          '[프롬프트 엔지니어링 vs 파인튜닝: 결정 방법](/ko/prompt-engineering/prompt-engineering-vs-fine-tuning) — 프롬프팅으로 충분한 경우 vs 모델 학습이 필요한 경우의 결정 프레임워크',
+          '[프롬프트 품질 평가 방법: 실용적인 프레임워크](/ko/prompt-engineering/how-to-evaluate-prompt-quality) — 프롬프트 신뢰성, 정확도, 회귀를 측정하는 체계적인 방법',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '프롬프트 엔지니어링 IDE란 무엇입니까?', a: '프롬프트 엔지니어링 IDE는 프롬프트를 작성, 테스트, 정제하기에 최적화된 전문화된 에디터입니다. 주요 기능: 모델 전환, 즉각적인 피드백, 토큰 카운팅, 프롬프트 히스토리, 코드 내보내기.' },
+          { q: 'Cursor와 VS Code의 차이점은 무엇입니까?', a: 'Cursor는 AI 네이티브 기능(채팅 사이드바, AI 자동완성, 통합 컨텍스트 인식)이 내장된 VS Code 포크입니다. VS Code + Continue.dev는 확장을 통해 유사한 결과를 달성합니다.' },
+          { q: 'OpenAI Playground를 무료로 사용할 수 있습니까?', a: 'Playground 자체는 무료로 접근할 수 있지만, 각 API 호출은 토큰 사용에 따라 청구됩니다(프로덕션 API와 동일한 가격). 탐색 토큰에 대해 배포 토큰과 동일하게 요금을 지불합니다.' },
+          { q: '로컬 모델을 지원하는 IDE는 무엇입니까?', a: 'LM Studio와 VS Code + Continue.dev가 로컬 모델(Ollama, vLLM)을 지원합니다. Cursor, OpenAI Playground, Claude Console, Google AI Studio는 클라우드 전용입니다.' },
+          { q: '프롬프트 엔지니어링에 Cursor와 VS Code 중 어느 것을 사용해야 합니까?', a: '통합 AI 채팅과 빠른 반복을 원하면 Cursor. 오픈소스, 로컬 모델 지원, 벤더 잠금 없음을 원하면 VS Code + Continue. 둘 다 훌륭합니다.' },
+          { q: '플레이그라운드에서 코드로 프롬프트를 어떻게 내보냅니까?', a: '모든 클라우드 플레이그라운드에는 "내보내기" 또는 "코드 스니펫 가져오기" 버튼이 있습니다. 언어(Python, JavaScript, curl)를 선택하고 코드를 복사하여 프로젝트에 붙여넣으십시오. 매개변수가 자동으로 변환됩니다.' },
+          { q: '새 모델을 가장 빠르게 테스트하는 방법은 무엇입니까?', a: 'Google AI Studio(Gemini, 설정 불필요) 또는 OpenAI Playground(GPT, API 키 필요). 둘 다 몇 초 안에 로드되며 로컬 설치가 필요 없습니다.' },
+          { q: '동일한 워크플로우에서 여러 IDE를 사용할 수 있습니까?', a: '예. 일반적인 워크플로우: OpenAI Playground에서 탐색, Claude Console에서 정제, 프로덕션 코드에는 Cursor로 통합, 오프라인 폴백 테스트는 LM Studio.' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[Cursor 문서 (cursor.sh)](https://cursor.sh)',
+          '[Continue.dev GitHub (github.com/continuedev/continue)](https://github.com/continuedev/continue)',
+          '[OpenAI Playground (platform.openai.com/playground)](https://platform.openai.com/playground)',
+          '[Claude Console (console.anthropic.com)](https://console.anthropic.com)',
+          '[Google AI Studio (aistudio.google.com)](https://aistudio.google.com)',
+          '[LM Studio (lmstudio.ai)](https://lmstudio.ai)',
+        ],
+      },
+    },
+  },
+}

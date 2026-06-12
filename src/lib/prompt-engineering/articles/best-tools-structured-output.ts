@@ -2630,4 +2630,337 @@ export const article: Partial<Record<Language, PEArticle>> = {
       }
     }
   },
-};
+  ko: {
+    theme: 'Tools & Platforms',
+    title: 'Structured Output 및 JSON Mode 최고의 도구 (2026)',
+    seoTitle: '2026년 Structured Output JSON Mode 최고의 한국어 도구',
+    metaDescription: 'Instructor, Outlines, Pydantic AI, LangChain, Marvin, PromptQuorum — 6가지 structured output 도구 비교. 가격 및 로컬 모델 지원 포함.',
+    ogTitle: 'Structured Output 및 JSON Mode 최고의 도구 (2026)',
+    ogDescription: '6가지 LLM structured output 도구 비교: Instructor(재시도), Outlines(constrained decoding), Pydantic AI(에이전트). PromptQuorum으로 일관성을 테스트하십시오.',
+    twitterTitle: 'Structured Output 및 JSON Mode 최고의 도구 (2026)',
+    twitterDescription: 'Instructor vs Outlines vs Pydantic AI vs LangChain vs Marvin — 어떤 structured output 도구가 귀하의 스택에 적합합니까? 2026년 나란히 비교.',
+    intro: '**2026년 6가지 도구가 structured output을 지배합니다: Pydantic 추출을 위한 Instructor, constrained decoding을 위한 Outlines, type-safe 에이전트를 위한 Pydantic AI, 통합 API를 위한 LangChain, 데코레이터 기반 추출을 위한 Marvin, 멀티 모델 테스트를 위한 PromptQuorum. 각 도구는 워크플로우의 서로 다른 병목 현상을 해결합니다.**',
+    publishDate: '2026-04-30',
+    dateModified: '2026-04-30',
+    lastFactChecked: '2026-04-30 — 모든 가격, GitHub 링크 및 기능 비교는 공식 문서와 대조하여 검증되었습니다',
+    readTime: '10분 분량',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'LLM용 structured output 도구',
+    aboutTopics: ['structured output 도구', 'LLM 유효성 검사 라이브러리', '스키마 준수'],
+    audience: 'structured output 요구 사항을 갖춘 프로덕션 LLM 애플리케이션을 구축하는 개발자',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-10-30',
+    toc: [
+      { label: '각 도구가 해결하는 문제', anchor: '#which-problem-each-tool-solves' },
+      { label: 'Instructor: Pydantic 추출', anchor: '#instructor' },
+      { label: 'Outlines: constrained decoding', anchor: '#outlines' },
+      { label: 'Pydantic AI: type-safe 에이전트', anchor: '#pydantic-ai' },
+      { label: 'LangChain: 통합 API', anchor: '#langchain-structured-output' },
+      { label: 'Marvin: 데코레이터 기반 추출', anchor: '#marvin' },
+      { label: 'PromptQuorum: 멀티 모델 테스트', anchor: '#promptquorum' },
+      { label: '나란히 비교', anchor: '#side-by-side-comparison' },
+      { label: '올바른 도구 선택', anchor: '#how-to-choose' },
+      { label: 'Structured output 단계별 추가', anchor: '#how-to-add-structured-output' },
+      { label: 'Structured output 일반적인 실수', anchor: '#common-mistakes' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+    ],
+    leadAnswerBlock: '**모델이 실행되는 위치에 따라 선택하십시오: 재시도 및 type safety가 있는 API-first 워크플로우에는 Instructor와 Pydantic AI; 로컬 모델에서 보장된 스키마 준수에는 Outlines; 이미 chains 또는 에이전트를 사용하는 팀에는 LangChain; 빠른 데코레이터 기반 프로토타입 제작에는 Marvin; 프로덕션 전 GPT, Claude, Gemini에서 일관성 테스트에는 PromptQuorum.**',
+    quickFacts: [
+      'Instructor는 20개 이상의 LLM 공급자를 지원합니다 (OpenAI, Anthropic, Google, Ollama, vLLM)',
+      'Outlines는 토큰 생성 시 스키마 준수를 보장합니다 (환각 0%)',
+      'Pydantic AI는 완전한 async로 실행되며 멀티 턴 대화 유효성 검사를 지원합니다',
+      'LangChain의 with_structured_output()은 6개 이상의 주요 공급자 API를 균일하게 래핑합니다',
+      'Marvin 데코레이터 구문: @marvin.fn 시그니처 → 자동 LLM 호출 바인딩',
+      'PromptQuorum은 일관성을 위해 25개 이상의 모델에서 동일한 프롬프트를 테스트합니다'
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Structured Output 및 JSON Mode 최고의 도구 (2026)',
+      description: '6가지 LLM structured output 라이브러리 비교: Instructor, Outlines, Pydantic AI, LangChain, Marvin, PromptQuorum. 스키마 준수, 언어 지원, 로컬 모델 호환성, 가격 기준으로 분류됩니다.',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-04-30',
+      dateModified: '2026-04-30',
+      url: 'https://www.promptquorum.com/ko/prompt-engineering/best-tools-structured-output-json',
+      inLanguage: 'ko',
+      proficiencyLevel: 'Advanced',
+      about: [
+        { '@type': 'Thing', name: 'Structured Output 라이브러리' },
+        { '@type': 'Thing', name: '스키마 유효성 검사' },
+        { '@type': 'Thing', name: 'LLM API 래퍼' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Instructor' },
+        { '@type': 'SoftwareApplication', name: 'Outlines' },
+        { '@type': 'SoftwareApplication', name: 'Pydantic AI' },
+        { '@type': 'SoftwareApplication', name: 'LangChain' },
+        { '@type': 'SoftwareApplication', name: 'Marvin' },
+        { '@type': 'SoftwareApplication', name: 'PromptQuorum' }
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: '2026년 최고의 LLM structured output 도구',
+      description: '언어 모델에서 structured output을 강제하는 6가지 선도적인 라이브러리.',
+      numberOfItems: 6,
+      inLanguage: 'ko',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Instructor', description: '모든 LLM에서 Pydantic 기반 추출을 위한 Python/TypeScript 라이브러리. Open-source Apache 2.0.' },
+        { '@type': 'ListItem', position: 2, name: 'Outlines', description: '로컬 모델에서 보장된 스키마 준수를 위한 constrained decoding 라이브러리.' },
+        { '@type': 'ListItem', position: 3, name: 'Pydantic AI', description: '통합 structured output 유효성 검사가 있는 type-safe 에이전트 프레임워크.' },
+        { '@type': 'ListItem', position: 4, name: 'LangChain', description: 'OpenAI, Anthropic, Google 및 로컬 모델에서 structured output을 위한 통합 API 레이어.' },
+        { '@type': 'ListItem', position: 5, name: 'Marvin', description: 'Python 함수 시그니처를 타입이 있는 LLM 호출로 변환하는 데코레이터 기반 프레임워크.' },
+        { '@type': 'ListItem', position: 6, name: 'PromptQuorum', description: 'GPT, Claude, Gemini에서 structured output 일관성을 검증하기 위한 멀티 모델 테스트 플랫폼.' }
+      ]
+    },
+    sections: {
+      keyTakeaways: {
+        isTldr: true,
+        callouts: [
+          {
+            type: 'tip',
+            label: 'TL;DR',
+            text: '재시도와 함께 Python 추출에는 Instructor를 사용하십시오. 로컬 모델에서 보장된 스키마 준수에는 Outlines를 사용하십시오. type-safe 멀티 턴 에이전트에는 Pydantic AI를 사용하십시오. 이미 해당 생태계에 있다면 LangChain을 사용하십시오. 빠른 프로토타입 제작에는 Marvin을 사용하십시오. 프로덕션 전 모든 모델에서 structured output 일관성을 테스트하려면 PromptQuorum을 사용하십시오.'
+          }
+        ],
+        items: [
+          '**Instructor** 가장 인기 있는 Python 옵션 — Pydantic 스키마, 자동 재시도, 모든 LLM API 지원',
+          '**Outlines** constrained decoding을 통해 로컬 모델에서 스키마 준수를 보장합니다 — 환각 위험 제로',
+          '**Pydantic AI** 일류 structured output으로 멀티 턴 에이전트 대화에 type safety를 추가합니다',
+          '**LangChain의 with_structured_output()** OpenAI, Anthropic, Google API에서 structured output을 통합합니다',
+          '**Marvin** 데코레이터를 사용하여 빠른 프로토타입 제작 — Python 함수 시그니처를 타입이 있는 LLM 호출로 변환합니다',
+          '**PromptQuorum** 프로덕션 배포 전 모든 모델에서 structured output 일관성을 테스트합니다'
+        ]
+      },
+      whichProblem: {
+        id: 'which-problem-each-tool-solves',
+        title: '각 도구가 해결하는 문제',
+        content: '**Structured output은 세 가지 상호 연관된 문제를 해결해야 합니다: 스키마 정의, API 준수, 유효성 검사.** 서로 다른 도구는 이러한 문제를 다른 방식으로 공격합니다. Instructor는 재시도와 함께 Python에서 세 가지를 모두 관리합니다. Outlines는 constrained decoding을 통해 유효성 검사 단계를 제거합니다. Pydantic AI는 에이전트에 type safety를 추가합니다. LangChain은 공급자 API를 래핑합니다. Marvin은 개발자 속도를 우선시합니다. PromptQuorum은 모든 모델에서 일관성을 검증합니다.',
+        columns: ['문제', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
+        rows: [
+          { '문제': '스키마 정의', 'Instructor': 'Pydantic 모델', 'Outlines': 'JSON Schema / GBNF', 'Pydantic AI': 'Pydantic 모델', 'LangChain': '도구 정의', 'Marvin': 'Python 데코레이터' },
+          { '문제': 'API 호출에서 강제', 'Instructor': '재시도 + 유효성 검사', 'Outlines': '토큰 수준 제약', 'Pydantic AI': 'API + 유효성 검사', 'LangChain': '공급자 JSON 모드', 'Marvin': '프롬프트 주입' },
+          { '문제': '응답 유효성 검사', 'Instructor': '자동', 'Outlines': '생성 시 보장', 'Pydantic AI': '유형 검증됨', 'LangChain': '수동', 'Marvin': '자동' }
+        ]
+      },
+      instructor: {
+        id: 'instructor',
+        title: 'Instructor: Pydantic 추출',
+        content: '**Instructor는 가장 많이 채택된 structured output 라이브러리입니다. 모든 LLM API — OpenAI GPT-4.5, Claude 4.8, Gemini, Ollama, vLLM — 을 래핑하고 일반 텍스트 대신 검증된 Pydantic 모델을 반환합니다.** Instructor는 유효성 검사가 실패할 때 자동으로 재시도를 관리하여 추가적인 오류 처리 없이 프로덕션에 적합하게 만듭니다.',
+        items: [
+          '20개 이상의 LLM 공급자와 호환됩니다 (OpenAI, Anthropic, Google, Ollama/vLLM을 통한 로컬 모델)',
+          'Pydantic v2 스키마: 스키마에 통합된 타입 힌트, 유효성 검사 규칙, docstring 설명',
+          '유효성 검사 실패 시 backoff와 함께 자동 재시도 — 수동 오류 처리 불필요',
+          'Python과 TypeScript에서 작동합니다 (Node.js 어댑터를 통해)',
+          'Open-source Apache 2.0, 활발히 유지 관리됨',
+          '가격: 무료 (LLM API 호출 이외의 추가 비용 없음)'
+        ],
+        codeLanguage: 'python',
+        codeBlock: 'import instructor\nfrom pydantic import BaseModel\nfrom openai import OpenAI\n\nclass User(BaseModel):\n    name: str\n    age: int\n\nclient = instructor.from_openai(OpenAI())\nuser = client.chat.completions.create(\n    model="gpt-4o",\n    response_model=User,\n    messages=[{"role": "user", "content": "Extract: John is 25 years old"}]\n)\n# user.name == "John", user.age == 25'
+      },
+      outlines: {
+        id: 'outlines',
+        title: 'Outlines: constrained decoding',
+        content: '**Outlines는 constrained decoding을 통해 토큰 생성 시 스키마 준수를 강제합니다. 토큰을 생성한 다음 유효성 검사하는 대신, Outlines는 각 단계에서 유효한 토큰을 스키마와 일치하도록 제한합니다.** 이는 환각 위험 제로로 100% 스키마 준수를 보장하여 로컬 모델에 이상적입니다.',
+        items: [
+          'llama.cpp, vLLM, transformers, NVIDIA NIM 및 모든 HuggingFace 모델과 함께 작동합니다',
+          'JSON Schema 또는 GBNF (GGML BNF) 형식의 스키마 정의',
+          '보장된 스키마 준수 — 생성 후 유효성 검사 또는 재시도 불필요',
+          '재시도 기반 유효성 검사보다 빠릅니다 (낭비되는 토큰 감소)',
+          '무료 및 open-source (Apache 2.0)',
+          '로컬 배포 및 비용에 민감한 워크플로우에 이상적'
+        ]
+      },
+      pydanticAi: {
+        id: 'pydantic-ai',
+        title: 'Pydantic AI: type-safe 에이전트',
+        content: '**Pydantic AI는 Pydantic 모델을 멀티 턴 에이전트 대화에 대한 일류 지원과 결합하는 새로운 프레임워크(2025)입니다. 각 턴에서 structured output을 강제하면서 에이전트 루프에 완전한 type safety를 추가합니다.** Python async 워크플로우를 위해 설계되었습니다.',
+        items: [
+          'Pydantic v2 타입 시스템 — 완전한 IDE 지원 및 타입 검사',
+          '각 에이전트 단계에 내장된 Structured output',
+          '고성능 애플리케이션을 위한 async-first 설계',
+          'OpenAI GPT, Anthropic Claude, Google Gemini 및 Ollama를 통한 로컬 모델 지원',
+          '통합 도구 호출 — 타입 힌트가 있는 Python 함수로 도구 정의',
+          '무료 (LLM API 호출 이외의 추가 비용 없음)'
+        ]
+      },
+      langchain: {
+        id: 'langchain-structured-output',
+        title: 'LangChain: 통합 API',
+        content: '**LangChain 0.1+은 모든 주요 채팅 모델에 with_structured_output()을 추가했습니다. 이는 단일 API 뒤에서 OpenAI, Anthropic, Google 및 로컬 모델에서 structured output을 통합합니다.** 팀이 이미 LangChain chains 또는 에이전트를 사용하고 있다면, 이것이 structured output으로 가는 가장 쉬운 경로입니다.',
+        items: [
+          '통합 API: 하나의 .with_structured_output() 메서드가 모든 공급자에서 작동합니다',
+          'LangChain 도구 정의를 공급자별 스키마 형식으로 자동 변환합니다',
+          'chains, 에이전트 및 실행 가능한 워크플로우와 완벽하게 통합됩니다',
+          'Pydantic 모델, TypedDict 및 OpenAI 스키마 정의를 지원합니다',
+          'LangChain 생태계의 일부 (추가 종속성 없음)',
+          '이미 LangChain에 투자한 팀에 이상적'
+        ]
+      },
+      marvin: {
+        id: 'marvin',
+        title: 'Marvin: 데코레이터 기반 추출',
+        content: '**Marvin은 Python 데코레이터를 사용하여 함수 시그니처를 타입이 있는 LLM 호출로 변환합니다. 타입 힌트가 있는 함수 시그니처를 정의하고, @marvin.fn으로 데코레이팅하면 Marvin이 자동으로 프롬프트 생성 및 structured output 유효성 검사를 관리합니다.** 아이디어에서 작동하는 코드까지 가장 빠른 경로입니다.',
+        items: [
+          '데코레이터 구문: @marvin.fn이 Python 시그니처를 LLM 프롬프트로 변환합니다',
+          'OpenAI, Anthropic, Google 및 로컬 모델과 함께 작동합니다',
+          '타입 힌트가 스키마로 변환됩니다 — 최소한의 보일러플레이트',
+          '통합 유효성 검사 및 오류 처리',
+          '프로토타입 제작 및 소규모에서 중규모 워크플로우에 적합',
+          '무료 (2026년 4월 기준 가격 미확정)'
+        ]
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'PromptQuorum: 멀티 모델 테스트',
+        content: '**PromptQuorum 자체는 structured output 라이브러리가 아니라 모델 간 structured output 일관성을 검증하는 테스트 플랫폼입니다.** 동일한 프롬프트를 GPT-4.5, Claude 4.8 Opus, Gemini 3.1 Pro 및 20개 이상의 모델에 동시에 실행하십시오. 모델별 스키마 준수율, 지연 시간 및 비용을 측정합니다.',
+        items: [
+          '단일 API 호출로 멀티 모델 디스패치 — 25개 이상의 모델에서 프롬프트를 테스트합니다',
+          'Structured output 준수 메트릭 — 통과율, 지연 시간, 모델별 비용',
+          '귀하의 스키마로 환각을 유발하는 모델 식별 — 신뢰할 수 없는 모델에 배포하는 것을 방지합니다',
+          '합의 모드 — 독립적인 모델 실행 간의 합의를 찾습니다',
+          'Instructor, Outlines, Pydantic AI, LangChain 또는 원시 LLM API와 함께 작동합니다',
+          '무료 티어 제공, 고용량 테스트를 위한 엔터프라이즈 가격'
+        ]
+      },
+      comparison: {
+        id: 'side-by-side-comparison',
+        title: '나란히 비교',
+        columns: ['도구', '이상적인 사용 사례', '스키마 형식', '언어', '로컬 모델', '가격', '학습 곡선'],
+        rows: [
+          { '도구': 'Instructor', '이상적인 사용 사례': 'Python API + 재시도', '스키마 형식': 'Pydantic 모델', '언어': 'Python/TypeScript', '로컬 모델': '예 (Ollama)', '가격': '무료', '학습 곡선': '낮음' },
+          { '도구': 'Outlines', '이상적인 사용 사례': '로컬 모델 배포', '스키마 형식': 'JSON Schema/GBNF', '언어': 'Python', '로컬 모델': '예 (네이티브)', '가격': '무료', '학습 곡선': '중간' },
+          { '도구': 'Pydantic AI', '이상적인 사용 사례': 'type-safe 에이전트', '스키마 형식': 'Pydantic 모델', '언어': 'Python', '로컬 모델': '예 (Ollama)', '가격': '무료', '학습 곡선': '낮음' },
+          { '도구': 'LangChain', '이상적인 사용 사례': 'chains + 에이전트', '스키마 형식': '도구 정의', '언어': 'Python/JS', '로컬 모델': '예', '가격': '무료', '학습 곡선': '중간' },
+          { '도구': 'Marvin', '이상적인 사용 사례': '빠른 프로토타입 제작', '스키마 형식': '타입 힌트', '언어': 'Python', '로컬 모델': '예', '가격': '무료', '학습 곡선': '매우 낮음' },
+          { '도구': 'PromptQuorum', '이상적인 사용 사례': '멀티 모델 테스트', '스키마 형식': 'API 불가지론적', '언어': 'API-first', '로컬 모델': 'OpenAI 프록시를 통해', '가격': '무료 + 엔터프라이즈', '학습 곡선': '낮음' }
+        ]
+      },
+      decision: {
+        id: 'how-to-choose',
+        title: '올바른 도구 선택',
+        content: '세 가지 질문에 답하는 것으로 시작하십시오: (1) 이미 LangChain을 사용하고 있습니까? (2) 로컬 모델 지원이 필요합니까? (3) 유효성 검사 복잡도는 얼마나 됩니까?',
+        items: [
+          '**Instructor를 사용하십시오:** Python API를 구축하고 유효성 검사 실패 시 자동 재시도가 필요한 경우. 가장 좋은 범용 옵션입니다.',
+          '**Outlines를 사용하십시오:** 로컬 모델(llama.cpp, vLLM)을 배포하고 생성 시 보장된 스키마 준수를 원하는 경우.',
+          '**Pydantic AI를 사용하십시오:** 모든 단계에서 type safety와 함께 멀티 턴 에이전트 워크플로우를 구축하는 경우.',
+          '**LangChain을 사용하십시오:** 이미 LangChain chains 또는 에이전트를 사용하고 있다면 — with_structured_output()이 가장 간단한 추가입니다.',
+          '**Marvin을 사용하십시오:** 빠르게 프로토타입을 만들고 복잡한 유효성 검사가 필요하지 않은 경우 — 데코레이터가 가장 빠른 경로입니다.',
+          '**PromptQuorum을 사용하십시오:** 프로덕션 전 GPT, Claude, Gemini에서 structured output 일관성을 테스트해야 하는 경우.'
+        ]
+      },
+      howToIntegrate: {
+        id: 'how-to-add-structured-output',
+        title: 'Structured output 단계별 추가',
+        numberedItems: [
+          '**출력 스키마 정의** — LLM이 반환하기를 원하는 필드, 유형 및 제약 조건을 설명하는 Pydantic 모델(Python), TypeScript 인터페이스 또는 JSON Schema를 만드십시오.',
+          '**라이브러리 선택** — Python API에는 Instructor, 로컬 모델에는 Outlines, 에이전트에는 Pydantic AI, 이미 사용 중이면 LangChain, 빠른 속도에는 Marvin.',
+          '**LLM 호출 설치 및 래핑** — `pip install instructor` (Python), 그런 다음 스키마를 API 호출에 전달하십시오. Instructor가 유효성 검사와 재시도를 관리합니다.',
+          '**PromptQuorum으로 테스트** — PromptQuorum에 배포하고 GPT, Claude, Gemini에서 프롬프트를 실행하십시오. 모델별 스키마 준수율을 측정하십시오.',
+          '**실패에 따라 스키마 개선** — 모델이 유효성 검사에 실패하면 프롬프트에 예시를 추가하거나 스키마 제약 조건을 조정하십시오. 모든 모델이 통과할 때까지 반복하십시오.'
+        ]
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Structured output 일반적인 실수',
+        mistakes: [
+          {
+            mistake: '유효성 검사 없이 JSON 모드 사용',
+            problem: 'API JSON 모드(OpenAI response_format, Anthropic JSON 제어)는 JSON 구조를 제안할 뿐입니다 — 스키마가 준수될 것을 보장하지 않습니다. 모델은 여전히 필드 이름과 유형을 환각합니다.',
+            fix: '항상 상위에 유효성 검사를 추가하십시오: Instructor, Outlines 또는 Pydantic AI를 사용하십시오. JSON 모드만 신뢰하지 마십시오. PromptQuorum으로 테스트하여 준수 실패를 감지하십시오.'
+          },
+          {
+            mistake: '너무 엄격한 스키마 설계',
+            problem: '너무 제한적인 스키마(작은 열거형 목록, 매우 구체적인 regex 패턴)는 LLM이 유효성 검사에 자주 실패하게 합니다. 높은 재시도 횟수는 토큰과 비용을 낭비합니다.',
+            fix: 'PromptQuorum을 사용하여 모델 간 스키마 엄격도를 테스트하십시오. 95% 이상의 준수율을 달성하기 위해 제약 조건을 완화하십시오. 가능한 경우 필수 필드 대신 선택적 필드를 사용하십시오.'
+          },
+          {
+            mistake: '로컬 모델과 API 모델 간의 차이를 테스트하지 않음',
+            problem: 'llama.cpp의 Outlines는 GPT-4.5의 Instructor와 다르게 작동합니다. 스키마 준수율은 모델마다 다릅니다. GPT만을 위해 구축한 다음 로컬로 배포하면 프로덕션 실패가 발생합니다.',
+            fix: '예상하는 모든 모델 백엔드를 일찍 테스트하십시오. PromptQuorum을 사용하여 로컬 모델(vLLM), API(OpenAI, Anthropic) 및 오픈 소스(Gemini)에서 동일한 프롬프트를 실행하십시오.'
+          },
+          {
+            mistake: '지연 시간 및 토큰 비용 영향 무시',
+            problem: '재시도가 있는 structured output은 더 많은 토큰이 필요합니다. Instructor는 실패 시 재시도합니다. Outlines의 constrained decoding은 자유 생성보다 느립니다. 모델별 비용을 측정하지 않습니다.',
+            fix: 'PromptQuorum의 비용 추적을 사용하십시오. 모델 간 지연 시간을 비교하십시오. 예산에 민감한 워크플로우에는 Outlines(재시도 없음)를 선호하십시오. 정확도를 위해서는 Instructor의 재시도 비용을 받아들이십시오.'
+          },
+          {
+            mistake: '유효성 검사 방법 혼합 (일관성 없음)',
+            problem: '일부 요청은 Instructor를 사용하고, 다른 요청은 원시 JSON 파싱을 사용합니다. 일부 모델은 유효성 검사되고, 다른 모델은 그렇지 않습니다. 이는 프로덕션에서 일관성 없는 오류를 초래합니다.',
+            fix: '코드베이스당 하나의 유효성 검사 접근 방식으로 표준화하십시오. 모든 요청이 Instructor를 사용하거나, 모두 Outlines를 사용합니다. 일관성은 디버깅 시간을 10배 줄입니다.'
+          }
+        ]
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[Structured Output 및 JSON Mode](/ko/prompt-engineering/structured-output-json-mode) — OpenAI, Anthropic, Google API에서 JSON 모드 작동 방식; 형식 준수 대 스키마 유효성 검사를 사용하는 시점.',
+          '[프롬프트 인젝션 및 보안](/ko/prompt-engineering/prompt-injection-and-security) — 구조화된 프롬프트에서 사용자 입력을 수락할 때의 위험; 새니타이제이션 전략.',
+          '[프롬프트 품질 평가 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality) — structured output 스키마에서 정확도, 일관성 및 지시 사항 준수를 측정하십시오.',
+          '[모델 간 프롬프트 테스트 방법](/ko/prompt-engineering/how-to-test-prompts-across-models) — GPT, Claude, Gemini에서 동일한 테스트 세트를 실행하고 통과율을 비교하십시오.',
+          '[프롬프트 엔지니어링 vs. 파인튜닝](/ko/prompt-engineering/prompt-engineering-vs-fine-tuning) — 구조화된 프롬프팅으로 충분한 시기 vs. 모델 파인튜닝이 필요한 시기.',
+          '[소규모 팀을 위한 프롬프트 엔지니어링 설정](/ko/prompt-engineering/prompt-engineering-setup-small-teams) — 2-15명 팀을 위한 구조화된 데이터 출력 워크플로우 구축.'
+        ]
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          {
+            q: 'LLM에서 structured output이란 무엇입니까?',
+            a: 'Structured output은 LLM 응답을 특정 스키마(JSON 형식, 정의된 필드, 유형 제약 조건)로 제한합니다. 자유 형식 텍스트 응답 대신, structured output은 오류 처리 없이 코드가 직접 파싱하고 유효성 검사할 수 있는 데이터를 반환합니다.'
+          },
+          {
+            q: 'Python 개발자에게 어떤 도구가 가장 좋습니까?',
+            a: 'Instructor는 가장 인기 있는 Python 옵션입니다. Pydantic 모델을 사용하여 스키마를 정의하고, 자동으로 재시도와 유효성 검사를 처리하며, 모든 LLM API(OpenAI, Anthropic, Google, Ollama)를 지원합니다. type-safe 에이전트와 함께 멀티 턴 대화도 원하는 경우 Pydantic AI가 대안입니다.'
+          },
+          {
+            q: 'Llama와 같은 로컬 모델에서 structured output을 사용할 수 있습니까?',
+            a: '예. Outlines는 로컬 모델을 위한 constrained decoding에 특화되어 있습니다 — llama.cpp, vLLM 및 transformers 라이브러리와 함께 작동합니다. Outlines는 환각 위험 제로로 토큰 생성 시 스키마 준수를 보장합니다. Instructor는 API로 실행하는 경우 Ollama도 지원합니다.'
+          },
+          {
+            q: 'Instructor와 Marvin의 차이점은 무엇입니까?',
+            a: 'Instructor는 Pydantic 모델을 사용하여 스키마를 정의하고 오류 복구와 함께 추출을 처리합니다. Marvin은 Python 데코레이터를 사용합니다 — 함수 시그니처를 데코레이팅하면 Marvin이 자동으로 LLM 프롬프트를 생성합니다. Instructor는 더 명시적입니다(복잡한 유효성 검사에 더 좋음), Marvin은 더 간결합니다(빠른 프로토타입 제작에 더 좋음).'
+          },
+          {
+            q: 'LangChain은 structured output을 지원합니까?',
+            a: '예. LangChain 0.1+은 ChatOpenAI, ChatAnthropic, ChatGoogle 등에 with_structured_output() 메서드를 포함합니다. LangChain 도구를 structured output 스키마로 자동 변환합니다. 이미 LangChain 에이전트를 사용하고 라이브러리를 변경하지 않고 스키마 준수를 추가하려는 경우 사용하십시오.'
+          },
+          {
+            q: 'Structured output의 신뢰성을 어떻게 테스트합니까?',
+            a: 'PromptQuorum을 사용하여 여러 모델에서 동일한 프롬프트를 실행하고 스키마 준수율을 측정하십시오. 서로 다른 모델(GPT-4.5, Claude 4.8, Gemini 3.1)은 structured output 신뢰성 수준이 다릅니다. 프로덕션에 배포하기 전에 테스트하십시오.'
+          },
+          {
+            q: '"constrained decoding"이란 무엇을 의미합니까?',
+            a: 'Constrained decoding은 토큰 생성을 스키마에 따라 유효한 값만으로 제한합니다. Outlines는 각 단계에서 다음에 유효한 토큰 집합을 계산하여 이를 수행합니다. 이는 생성 후 유효성 검사 또는 재시도 없이 스키마 준수를 보장하여 API 수준 JSON 모드보다 더 빠르고 신뢰할 수 있게 만듭니다.'
+          },
+          {
+            q: '라이브러리 없이 structured output을 사용할 수 있습니까?',
+            a: '기술적으로 예 — 모델이 JSON을 반환하게 한 다음 직접 파싱할 수 있습니다. 하지만 환각에서 유효성 검사가 실패합니다. 6가지 도구는 재시도와 함께 유효성 검사(Instructor, Marvin), 디코딩 시 강제(Outlines) 또는 공급자 API 래핑(LangChain, Pydantic AI)을 통해 이 문제를 해결합니다.'
+          },
+          {
+            q: '어떤 도구가 최고의 문서를 가지고 있습니까?',
+            a: 'LangChain과 Pydantic AI는 기업 지원으로 인해 가장 포괄적인 문서를 가지고 있습니다. Instructor는 커뮤니티가 유지 관리함에도 불구하고 훌륭한 튜토리얼과 예시를 가지고 있습니다. Outlines 문서는 기술적이지만 포괄적입니다. Marvin에는 빠른 시작 가이드가 있습니다.'
+          },
+          {
+            q: '6가지 도구가 모두 필요합니까, 아니면 하나만 필요합니까?',
+            a: '하나로 시작하십시오. Python 개발자는 Instructor 또는 Pydantic AI를 시도해야 합니다. 로컬 모델을 사용하는 팀은 Outlines를 시도해야 합니다. LangChain 사용자는 with_structured_output()을 시도해야 합니다. PromptQuorum을 사용하여 모든 모델에서 일관성을 검증하십시오. 대부분의 팀은 하나의 도구 + 테스트를 위한 PromptQuorum을 사용합니다.'
+          }
+        ]
+      },
+      sources: {
+        id: 'sources',
+        title: '참고 자료',
+        items: [
+          '[Instructor GitHub 저장소](https://github.com/jxnl/instructor) — Instructor 라이브러리의 공식 저장소 및 문서',
+          '[Outlines 문서](https://outlines-dev.github.io/) — 보장된 스키마 준수를 위한 constrained decoding',
+          '[Pydantic AI](https://ai.pydantic.dev) — structured output이 있는 type-safe 에이전트 프레임워크',
+          '[LangChain의 with_structured_output()](https://python.langchain.com/docs/modules/model_io/chat/structured_output/) — LangChain의 통합 structured output API',
+          '[Marvin 문서](https://askmarvin.ai) — 데코레이터 기반 LLM 추출 프레임워크'
+        ]
+      }
+    }
+  },
+}
