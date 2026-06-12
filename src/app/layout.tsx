@@ -235,14 +235,6 @@ export default async function RootLayout({
           }}
         />
 
-        {/* Microsoft Clarity — cookieless mode (consentv2 storage denied), runs for all
-            visitors. No cookies are set, so no consent is required (§ 25 TDDDG). */}
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="/api/clarity/tag/wtwpeavhum";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wtwpeavhum");window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'denied'});`,
-          }}
-        />
       </head>
       <body>
         <Providers>
@@ -258,7 +250,8 @@ export default async function RootLayout({
 
           {/* Cookieless analytics — load for every visitor, no consent required.
               Umami (cookieless by design), Vercel Analytics + Speed Insights (cookieless),
-              and Microsoft Clarity (cookieless consentv2, loaded in <head> above).
+              Microsoft Clarity (cookieless consentv2, afterInteractive so its history-API
+              patch installs post-hydration and catches App Router client-side navigations).
               GA4 removed. ConsentedAnalytics is a no-op stub kept for reversibility. */}
           <Script
             id="umami-script"
@@ -267,6 +260,13 @@ export default async function RootLayout({
             data-website-id="1a0d1160-11ea-4882-a110-90fd9e5ebb75"
             data-host-url="/lib/s"
           />
+          {/* Microsoft Clarity — cookieless mode (consentv2 storage denied), no consent
+              required (§ 25 TDDDG). afterInteractive mirrors Umami so Clarity's own
+              history-API patch installs after hydration and tracks SPA navigations. */}
+          <Script
+            id="clarity-init"
+            strategy="afterInteractive"
+          >{`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="/api/clarity/tag/wtwpeavhum";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wtwpeavhum");window.clarity("consentv2",{ad_Storage:"denied",analytics_Storage:"denied"});`}</Script>
           <Analytics endpoint="/api/data" scriptSrc="/api/data/script.js" />
           <SpeedInsights />
           <ConsentedAnalytics />
