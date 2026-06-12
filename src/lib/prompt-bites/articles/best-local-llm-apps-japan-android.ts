@@ -738,4 +738,153 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Tool Comparisons',
+    title: '일본 Android에서 가장 좋은 로컬 LLM 앱은 무엇입니까?',
+    seoTitle: '일본 Android 로컬 LLM 앱 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'MLC Chat은 4 GB RAM으로 Rinna 3.6B를 실행합니다. PocketPal AI는 6 GB RAM으로 ELYZA-7B를 지원합니다. Termux + Ollama는 8 GB 이상 기기에서 Qwen3 7B를 추가합니다. 일본에서 완전히 오프라인으로 동작합니다.',
+    publishDate: '2026-05-27',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-27',
+    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 7B'],
+    current_hardware_mentioned: ['Xperia 1 VI', 'Xperia 5 V', 'Xperia 10 VI', 'Samsung Galaxy S24'],
+    educationalLevel: 'Intermediate',
+    audience: '일본에서 로컬 LLM을 실행하는 Android 사용자',
+    parentArticle: '/power-local-llm/best-local-llm-apps-android-2026',
+    siblingBites: ['best-ollama-models-4gb-vram', 'best-local-llm-apps-android'],
+    is_living_page: false,
+    targetKeywords: [
+      '일본 Android 로컬 LLM 앱',
+      'MLC Chat 일본어',
+      'PocketPal AI GGUF',
+      'Termux Ollama Android',
+      'ELYZA-7B Android',
+      'Rinna 3.6B 오프라인',
+    ],
+    quickAnswerTop: {
+      ko: {
+        question: '일본 Android에서 가장 좋은 로컬 LLM 앱은 무엇입니까?',
+        answer: 'MLC Chat, PocketPal AI, Termux 경유 Ollama가 일본 Android 사용자에게 최적의 선택입니다. Rinna 3.6B, ELYZA-7B 등 일본어 모델이 완전히 로컬에서 실행되며 일본 Play 스토어에서 이용 가능합니다.',
+        bullets: [
+          'MLC Chat: 가장 간단한 설정, Rinna 3.6B를 포함한 사전 최적화 모델 제공',
+          'PocketPal AI: ELYZA-7B를 포함한 모든 GGUF 모델 지원, 완전한 일본어 지원',
+          'Termux + Ollama: Qwen3 7B를 포함한 전체 Ollama 라이브러리, 8 GB RAM 필요',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      inLanguage: 'ko',
+      headline: '일본 Android에서 가장 좋은 로컬 LLM 앱은 무엇입니까?',
+      description: 'MLC Chat은 4 GB RAM으로 Rinna 3.6B를 실행합니다. PocketPal AI는 6 GB RAM으로 ELYZA-7B를 지원합니다. Termux + Ollama는 8 GB 이상 기기에서 Qwen3 7B를 추가합니다.',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-apps-japan-android',
+      datePublished: '2026-05-27',
+      dateModified: '2026-05-27',
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Prompt Bites',
+          item: 'https://www.promptquorum.com/ko/prompt-bites',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: '일본 Android에서 가장 좋은 로컬 LLM 앱은 무엇입니까?',
+          item: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-apps-japan-android',
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'MLC Chat은 일본에서 가장 간단한 시작점입니다 — 일본 Google Play 스토어에서 제공되며 Rinna 3.6B를 포함한 사전 최적화된 일본어 모델을 탑재합니다',
+          'PocketPal AI는 Hugging Face의 모든 GGUF 모델을 지원하며, 7B 수준에서 가장 강력한 일본어 지시 추종 모델인 ELYZA-7B도 포함합니다',
+          'Termux + Ollama는 Android에서 Qwen3 7B를 포함한 전체 Ollama 모델 라이브러리를 사용할 수 있게 하여 일본어/중국어/영어 다국어 활용이 가능하지만 8 GB RAM이 필요합니다',
+          '일본어 토크나이저는 동일한 모델에서 영어보다 약 30% 느리게 동작합니다 — 모바일 기기에서 일본어 추론 벤치마크 시 tok/s가 낮게 나올 것을 예상하십시오',
+        ],
+      },
+      body1: {
+        title: '일본어를 지원하는 3가지 최고 앱',
+        content: [
+          '<strong>2026년 5월 기준, 일본 Play 스토어에서 일본어 로컬 LLM을 지원하는 Android 앱은 세 가지입니다: MLC Chat, PocketPal AI, Termux 경유 Ollama.</strong> 세 앱 모두 최초 모델 다운로드 이후 완전히 오프라인으로 동작합니다 — 어떤 데이터도 클라우드 서버에 도달하지 않으므로, 개인 대화에 관한 APPI(個人情報保護法, 일본 개인정보 보호법) 준수를 직접적으로 충족합니다.',
+          'MLC Chat은 첫 번째 토큰까지의 시간이 가장 짧습니다. 사전 최적화 모델 목록에는 Rinna 3.6B가 포함되어 있으며, 이는 3 GB RAM에서도 실행 가능한 경량 일본어 네이티브 모델입니다. 12 GB RAM을 탑재한 Xperia 1 VI 또는 Samsung Galaxy S24에서 Rinna 3.6B Q4는 6–10 tok/s로 동작하여 대화형 사용에 충분합니다. 명령줄 경험 없이도 10분 이내에 설정이 완료됩니다.',
+          'Hugging Face 커뮤니티가 개발한 PocketPal AI는 Hugging Face에서 모든 GGUF 파일을 직접 불러올 수 있습니다. 이로 인해 앱의 공식 릴리스를 기다리지 않고도 ELYZA-7B와 Qwen3 7B를 사용할 수 있습니다. 단점은 수동 모델 선택이 필요하여 설정 시간이 약간 더 길다는 점입니다. 기기별 RAM 및 저장 공간 팁은 <a href="/ko/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia 로컬 LLM 가이드</a>를 참고하십시오.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '일본 Android에서 로컬 LLM을 실행하는 최고의 앱은 MLC Chat(Rinna 3.6B), PocketPal AI(ELYZA-7B), Termux + Ollama(Qwen3 7B)입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '로컬 LLM 앱은 인터넷 없이도 스마트폰에서 AI 언어 모델을 실행합니다. 모든 대화 데이터는 기기 안에 머물며 클라우드로 전송되지 않습니다.',
+          },
+        ],
+        columns: ['앱', '최소 RAM', '일본어 모델 지원'],
+        rows: [
+          { '앱': 'MLC Chat', '최소 RAM': '4 GB', '일본어 모델 지원': 'Rinna 3.6B 포함 사전 최적화 모델' },
+          { '앱': 'PocketPal AI', '최소 RAM': '4 GB', '일본어 모델 지원': 'ELYZA-7B 포함 모든 GGUF 모델' },
+          { '앱': 'Termux + Ollama', '최소 RAM': '8 GB', '일본어 모델 지원': 'Qwen3 7B 포함 전체 Ollama 라이브러리' },
+        ],
+        note: '결정 가이드: 초보자는 MLC Chat을 사용하십시오. 터미널 없이 모델 유연성이 필요하면 PocketPal AI를 선택하십시오. Termux + Ollama는 8 GB RAM 이상에서만 사용하십시오.',
+      },
+      body2: {
+        title: '올바른 일본어 모델 선택 방법',
+        content: [
+          '<strong>2026년 5월 기준, 세 가지 일본어 지원 모델이 중급부터 플래그십 Android 기기의 실용적인 사용 사례를 커버합니다.</strong> 올바른 선택은 RAM 용량, 주요 작업, 다국어 출력 필요 여부에 따라 달라집니다.',
+          'Rinna 3.6B는 경량 옵션입니다: 일본어 네이티브 모델로 일본어 웹 코퍼스로 학습되었으며, 최소 3 GB RAM에서 동작합니다. 일상 대화, 텍스트 요약, 단문 생성에 적합합니다. Xperia 10 VI(4–6 GB RAM) 또는 7B 모델이 너무 느릴 중급 기기에 적합한 선택입니다.',
+          'ELYZA-7B는 7B 수준에서 가장 강력한 일본어 지시 추종 성능을 제공합니다. 최소 6 GB RAM이 필요하며 Xperia 5 V, Xperia 1 VI, Samsung Galaxy S24에서 편안하게 동작합니다. 다단계 지시, 구조화된 출력, 세밀한 일본어 작문이 필요한 작업에 ELYZA-7B를 사용하십시오.',
+          'Qwen3 7B는 다국어 선택지입니다: 일본어, 중국어, 영어 코퍼스로 학습되었습니다. 최소 6 GB RAM이 필요하며 하나의 대화에서 세 언어 모두에 유창한 출력을 생성합니다. 예를 들어 다국어 비즈니스 문서 번역 또는 요약과 같이 일본어/중국어/영어가 혼용되는 작업에 Qwen3 7B를 사용하십시오.',
+          '중요: 일본어 토크나이저는 동일한 모델에서 영어보다 약 30% 더 무겁습니다. 영어 7B 모델을 8 tok/s로 실행하는 기기는 일본어에서 약 5–6 tok/s를 출력합니다. 하드웨어 결정 시 이 점을 고려하십시오. CPU 전용 모델 추천은 <a href="/ko/local-llms/best-cpu-only-llm" class="text-primary hover:underline">최고의 CPU 전용 LLM</a>을 참조하십시오. 전체 설정 가이드는 <a href="/ko/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">Android 최고의 로컬 LLM 앱 가이드</a>를 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '일본 Android LLM에 관한 빠른 답변',
+        faqs: [
+          {
+            q: '일본어 로컬 LLM 모델은 오프라인에서도 동작합니까?',
+            a: '그렇습니다. Rinna 3.6B, ELYZA-7B, Qwen3 7B 세 모델 모두 최초 다운로드 이후 완전히 오프라인으로 동작합니다. 어떤 서버에도 데이터가 전송되지 않으므로 개인정보의 로컬 처리에 관한 APPI 요건을 충족합니다.',
+          },
+          {
+            q: '6 GB RAM의 Xperia에서 어떤 모델이 가장 잘 동작합니까?',
+            a: 'ELYZA-7B와 Qwen3 7B 모두 최소 6 GB RAM에서 동작합니다. 8 GB RAM을 탑재한 Xperia 5 V에서는 두 모델 모두 편안한 속도로 실행됩니다. 4–6 GB RAM의 Xperia 10 VI에는 Rinna 3.6B가 더 적합합니다. 단계별 설정 방법은 <a href="/ko/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia 로컬 LLM 가이드</a>를 참조하십시오.',
+          },
+          {
+            q: '로컬 LLM 실행 시 APPI 측면의 이점은 무엇입니까?',
+            a: 'APPI(個人情報保護法)에 따르면 클라우드 AI가 개인정보를 처리하는 경우 제3자 제공 통지 및 사용자 동의가 필요할 수 있습니다. 로컬 LLM을 실행하면 대화 데이터가 기기 밖으로 나가지 않습니다 — 클라우드 저장 없음, 제3자 데이터 전송 없음, 개인 사용 애플리케이션에 대한 추가적인 동의 의무 없음.',
+          },
+          {
+            q: '이 LLM 앱들에서 일본어 음성 입력을 사용할 수 있습니까?',
+            a: '그렇습니다. Android 키보드(Google Japanese Input 또는 Gboard)를 통한 표준 일본어 음성 입력이 세 앱 모두에서 동작합니다 — MLC Chat, PocketPal AI, Termux + Ollama. 일본어로 말하거나 입력하면 모델이 동일한 방식으로 처리합니다. 별도의 음성 통합 설정은 필요하지 않습니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[Xperia에서 로컬 LLM 실행하기](/ko/prompt-bites/run-local-llm-on-xperia-japan)',
+          '[4 GB VRAM에 최적인 Ollama 모델](/ko/prompt-bites/best-ollama-models-4gb-vram)',
+          '[Android 최고의 로컬 LLM 앱 2026](/ko/power-local-llm/best-local-llm-apps-android-2026)',
+          '[CPU 전용 최고의 LLM](/ko/local-llms/best-cpu-only-llm)',
+        ],
+      },
+    },
+  },
 }

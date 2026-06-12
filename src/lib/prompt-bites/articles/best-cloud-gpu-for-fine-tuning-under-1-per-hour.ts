@@ -1018,4 +1018,164 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: 'أفضل معالج رسومات سحابي للضبط الدقيق للنماذج اللغوية الكبيرة بأقل من دولار/ساعة (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ar/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour', inLanguage: 'ar' },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Cost & Comparisons',
+    type: 'comparison',
+    title: 'LLM 파인튜닝을 위한 최저가 클라우드 GPU — 시간당 $1 미만 (2026)',
+    seoTitle: '클라우드 GPU LLM 파인튜닝 시간당 1달러 미만 2026',
+    metaDescription: 'RunPod, Vast.ai, Lambda Labs에서 시간당 $1 미만으로 Llama 3.3 8B 또는 Qwen3 14B를 QLoRA로 파인튜닝하는 방법. 가장 저렴한 GPU 옵션과 실제 비용을 비교합니다.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    parentArticle: '/local-llms/cloud-gpu-rental-comparison-2026',
+    leadAnswerBlock: '**2026년 QLoRA로 Llama 3.3 8B 또는 Qwen3 14B를 파인튜닝하려면, RunPod 스팟 인스턴스의 A40 48GB($0.44/시간) 또는 Vast.ai의 RTX 4090 24GB($0.32–0.48/시간)가 시간당 $1 미만으로 충분히 작동합니다. 전체 파인튜닝 실행 비용은 총 $2–8입니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 LLM 파인튜닝을 위한 가장 저렴한 클라우드 GPU는 무엇입니까?',
+        answer: 'RunPod A40 48GB 스팟($0.44/시간) 또는 Vast.ai RTX 4090($0.32–0.48/시간)이 7B–14B 모델의 QLoRA 파인튜닝을 위한 가장 저렴하고 신뢰할 수 있는 선택입니다. 일반적인 파인튜닝 실행은 2–4시간이 소요되며, 총 비용은 $1–2입니다.',
+        bullets: [
+          'RunPod RTX 4090 (스팟): $0.28–0.44/시간 — 7B QLoRA에 최적',
+          'Vast.ai RTX 4090: $0.32–0.48/시간 — 입찰 시장, 가용 시 가장 저렴',
+          'RunPod A40 48GB (스팟): $0.44/시간 — 14B 및 30B QLoRA에 이상적',
+          'Lambda Labs A10G 24GB: $0.60/시간 — 안정적인 온디맨드, 스팟 중단 없음',
+          'Google Colab Pro (T4): ~$0.36/시간 상당 — 7B에는 적합하지만 대형 모델에는 느림',
+        ],
+        updatedDate: '2026-05-26',
+      },
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          '7B 모델 QLoRA 파인튜닝에는 ~10–14 GB VRAM 필요 — RTX 4090 (24 GB)이 이상적',
+          '14B 모델 QLoRA 파인튜닝에는 ~20–28 GB VRAM 필요 — A40 48GB 또는 A100 80GB',
+          'RunPod 스팟 인스턴스: 가장 저렴하고 신뢰할 수 있는 클라우드 GPU — RTX 4090 $0.28–0.44/시간',
+          'Vast.ai: 입찰 시장 — 인내심을 가지면 RTX 3090 (24 GB)을 $0.20–0.30/시간에 확보 가능',
+          '전체 파인튜닝 실행 (1K 스텝, 1K 샘플): 2–4시간 × $0.44/시간 = $0.88–$1.76',
+          'Unsloth + Hugging Face PEFT를 사용하면 동일한 GPU에서 2배 빠른 파인튜닝 가능',
+        ],
+      },
+      rankedList: {
+        title: '시간당 $1 미만으로 LLM 파인튜닝을 위한 최고의 클라우드 GPU 플랫폼',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'RunPod 스팟 (RTX 4090 $0.28–0.44/시간)과 Vast.ai (RTX 4090 $0.32–0.48/시간 입찰)가 2026년 7B–14B 모델의 QLoRA 파인튜닝을 위한 가장 저렴한 클라우드 GPU 옵션입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '파인튜닝은 QLoRA라는 방법을 사용해 사전 학습된 AI 모델을 특정 데이터에 적응시킵니다. QLoRA는 모델의 대부분을 압축 형태로 고정하고 소형 어댑터 레이어만 학습시켜 VRAM 사용량을 4–8배 줄입니다. 이를 통해 몇 달러의 임대 GPU에서도 저렴하게 파인튜닝할 수 있습니다.',
+          },
+        ],
+        rankedItems: [
+          {
+            rank: 1,
+            title: 'RunPod — 종합 최고 (스팟 + 온디맨드)',
+            content: 'RunPod은 파인튜닝을 위한 가격, 신뢰성, 개발자 경험의 최적 조합을 제공합니다. 스팟 RTX 4090 (24 GB): $0.28–0.44/시간. 스팟 A40 48GB: $0.44/시간. 온디맨드 RTX 4090: $0.74/시간. 영구 스토리지 볼륨, Docker 템플릿 (Axolotl, Unsloth 사전 설치), GPU 상태 점검을 지원합니다. 사전 구성 템플릿: "Unsloth + Llama Factory" — 설정 시간 불필요.',
+            affiliateLinks: [
+              { label: 'RunPod GPU Cloud (제휴 링크)', url: 'https://www.runpod.io' },
+            ],
+          },
+          {
+            rank: 2,
+            title: 'Vast.ai — 가장 저렴한 스팟 마켓플레이스',
+            content: 'Vast.ai는 개인 판매자가 가격을 책정하는 P2P GPU 마켓플레이스입니다. RTX 4090 인스턴스를 $0.32–0.48/시간, RTX 3090 (24 GB)을 $0.20–0.32/시간에 입찰할 수 있습니다. RunPod 대비 절약: 20–40%. 주의사항: 호스트 신뢰성이 다양하므로 시작 전 체크섬을 확인하십시오. 체크포인트 전략 없이 12시간 이상 실행에는 권장하지 않습니다.',
+            affiliateLinks: [
+              { label: 'Vast.ai GPU Marketplace (제휴 링크)', url: 'https://vast.ai' },
+            ],
+          },
+          {
+            rank: 3,
+            title: 'Lambda Labs — 가장 안정적인 온디맨드',
+            content: 'Lambda Labs Cloud는 스팟 리스크 없이 온디맨드 GPU를 제공합니다. 가격: A10G 24GB $0.60/시간, A100 40GB $1.29/시간. A10G에서 4시간 파인튜닝 실행 시 총 비용: $2.40. 보장된 가용성과 재현 가능한 환경이 필요한 팀에 선호됩니다.',
+            affiliateLinks: [
+              { label: 'Lambda Labs Cloud (제휴 링크)', url: 'https://lambdalabs.com' },
+            ],
+          },
+        ],
+      },
+      costCalculator: {
+        title: '파인튜닝 실제 비용 추정치',
+        content: 'Unsloth + QLoRA를 사용한 일반적인 파인튜닝 시나리오의 실제 비용:',
+        columns: ['작업', '필요 GPU', '소요 시간', '플랫폼', '총 비용'],
+        rows: [
+          { '작업': 'Llama 3.3 8B QLoRA, 1K 샘플, 1K 스텝', '필요 GPU': 'RTX 4090 (24 GB)', '소요 시간': '~2시간', '플랫폼': 'RunPod 스팟 ($0.44/시간)', '총 비용': '~$0.88' },
+          { '작업': 'Qwen3 14B QLoRA, 5K 샘플, 3K 스텝', '필요 GPU': 'A40 48GB', '소요 시간': '~5시간', '플랫폼': 'RunPod 스팟 ($0.44/시간)', '총 비용': '~$2.20' },
+          { '작업': 'Llama 3.3 70B QLoRA-4bit, 1K 샘플', '필요 GPU': 'A100 80GB', '소요 시간': '~8시간', '플랫폼': 'RunPod ($1.49/시간)', '총 비용': '~$11.92' },
+          { '작업': 'Qwen3-Coder 7B, SQL 데이터셋, 10K 스텝', '필요 GPU': 'RTX 3090 (24 GB)', '소요 시간': '~4시간', '플랫폼': 'Vast.ai ($0.28/시간)', '총 비용': '~$1.12' },
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: '$1 미만으로 14B 모델을 파인튜닝할 수 있습니까?',
+            a: '14B 모델의 고품질 전체 파인튜닝 실행은 최소 4–8시간이 소요되며, RunPod A40 스팟($0.44/시간)에서 $1.76–$3.52의 비용이 발생합니다. $1 미만은 빠른 개념 검증 실행(500–1,000 학습 스텝)에서는 달성 가능합니다. 14B 모델의 프로덕션 파인튜닝 작업에는 $3–8의 예산을 잡으십시오.',
+          },
+          {
+            q: '클라우드 GPU에서 QLoRA 파인튜닝을 위해 어떤 소프트웨어가 필요합니까?',
+            a: '가장 빠른 설정: RunPod의 사전 구성된 Unsloth 템플릿을 사용하십시오 (CUDA, PyTorch, Hugging Face PEFT, Unsloth이 사전 설치된 Python 환경). 수동 설정의 경우: Python 3.11+, torch, transformers, peft, trl, unsloth를 설치하십시오. 템플릿을 사용한 총 설정 시간: 5분 미만.',
+          },
+          {
+            q: '더 큰 기본 모델을 사용하는 것과 비교하여 파인튜닝이 가치 있습니까?',
+            a: '도메인별 작업(의료 노트, 법률 문서, 회사별 형식)의 경우, 7B–14B 모델 파인튜닝이 일반적인 70B 모델보다 추론 비용의 일부로 더 나은 성능을 보이는 경우가 많습니다. 최적의 시점: 500개 이상의 도메인별 예시가 있고 일관된 출력 형식이 필요할 때 파인튜닝하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        items: [
+          '[클라우드 GPU 임대 비교 2026](/ko/local-llms/cloud-gpu-rental-comparison-2026)',
+          '[로컬 LLM 실행 가이드](/ko/local-llms)',
+          '[프롬프트 엔지니어링 기초](/ko/prompt-engineering)',
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '로컬 LLM 파인튜닝을 위한 가장 저렴한 클라우드 GPU는 무엇입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'RunPod RTX 4090 스팟 $0.28–0.44/시간 및 Vast.ai RTX 4090 $0.32–0.48/시간. 일반적인 실행 비용은 총 $1–2입니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '$1 미만으로 14B 모델을 파인튜닝할 수 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '개념 검증 실행(500–1,000 스텝)은 $1 미만입니다. 14B 모델의 프로덕션 파인튜닝 작업은 총 $3–8입니다.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'LLM 파인튜닝을 위한 최저가 클라우드 GPU 2026',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'RunPod', description: '종합 최고 — RTX 4090 스팟 $0.28–0.44/시간, Unsloth 템플릿' },
+        { '@type': 'ListItem', position: 2, name: 'Vast.ai', description: '가장 저렴한 스팟 마켓플레이스 — RTX 4090 $0.32–0.48/시간 입찰' },
+        { '@type': 'ListItem', position: 3, name: 'Lambda Labs', description: '가장 안정적인 온디맨드 — A10G 24GB $0.60/시간' },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: '프롬프트 바이트', item: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { '@type': 'ListItem', position: 3, name: 'LLM 파인튜닝을 위한 최저가 클라우드 GPU — 시간당 $1 미만 (2026)', item: 'https://www.promptquorum.com/ko/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'LLM 파인튜닝을 위한 최저가 클라우드 GPU — 시간당 $1 미만 (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ko/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour', inLanguage: 'ko' },
+    targetKeywords: ['LLM 파인튜닝 클라우드 GPU', '저렴한 GPU 파인튜닝', 'RunPod 한국어', 'QLoRA 파인튜닝 비용', '클라우드 GPU 시간당 1달러'],
+    readTime: '5분 분량',
+    dateModified: '2026-05-26',
+  },
 }

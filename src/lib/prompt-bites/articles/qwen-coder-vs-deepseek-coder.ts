@@ -728,4 +728,138 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Tool Comparisons',
+    title: 'Qwen Coder 대 DeepSeek Coder: 어느 것이 더 낫습니까?',
+    seoTitle: 'Qwen Coder 대 DeepSeek Coder 비교 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Qwen 3 Coder 14B는 Python 및 TypeScript에서 HumanEval을 약 5점 차로 앞섭니다. 두 모델 모두 RTX 3060에서 ~10 GB VRAM으로 실행됩니다. PromptQuorum의 빠른 답변.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    targetKeywords: [
+      'Qwen Coder DeepSeek Coder 비교',
+      'Qwen 3 Coder 14B 한국어',
+      'DeepSeek Coder V2 성능',
+      '로컬 LLM 코딩 모델 비교',
+      'Ollama 코딩 모델 추천',
+    ],
+    readTime: '4분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: 'Qwen Coder 대 DeepSeek Coder: 어느 것이 더 낫습니까?',
+        answer: 'Qwen 3 Coder는 Python 및 TypeScript에서 더 우수합니다. DeepSeek Coder V2는 더 광범위한 언어 지원을 제공합니다. 두 모델 모두 14B Q4 기준 ~10 GB VRAM이 필요합니다. 대부분의 개발자에게는 Qwen 3 Coder가 더 나은 기본 선택입니다.',
+        bullets: [
+          'Qwen 3 Coder 14B: Python 및 TypeScript 벤치마크 최고 점수',
+          'DeepSeek Coder V2: 더 광범위한 프로그래밍 언어 지원',
+          '두 모델 모두 Q4_K_M으로 RTX 3060 12 GB에서 실행 가능',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/qwen-coder-vs-deepseek-coder',
+      imageUrl: 'https://www.promptquorum.com/og/prompt-bites-qwen-coder-vs-deepseek-coder-ko.png',
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: 'Prompt Bites', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: 'Qwen Coder 대 DeepSeek Coder 비교', url: 'https://www.promptquorum.com/ko/prompt-bites/qwen-coder-vs-deepseek-coder' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Qwen 3 Coder 14B는 14B 코딩 모델 중 HumanEval에서 약 5점 차로 선두 — Python 및 TypeScript에 최적',
+          'DeepSeek Coder V2는 Qwen의 Python, TypeScript, Go 집중 방식과 달리 80개 이상의 프로그래밍 언어를 지원합니다',
+          '두 모델 모두 Q4_K_M으로 RTX 3060 12 GB에서 실행되며 ~10 GB VRAM을 사용합니다',
+          'Qwen은 추가 설정 없이 Tool 및 Function Calling에 대한 더 강력한 네이티브 지원을 제공합니다',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Qwen 3 Coder 14B는 Python 및 TypeScript 벤치마크에서 DeepSeek Coder V2를 앞서며, DeepSeek은 더 광범위한 언어 지원을 제공합니다.' },
+          { type: 'plain-terms', text: 'Python이나 TypeScript를 주로 사용하는 개발자라면 Qwen 3 Coder 14B를 선택하십시오. 여러 언어를 혼합하여 사용한다면 DeepSeek Coder V2가 더 적합합니다.' },
+        ],
+      },
+      body1: {
+        title: '벤치마크 수치',
+        content: [
+          '<strong>2026년 5월 기준, Qwen 3 Coder 14B는 14B 코딩 모델 중 HumanEval에서 약 5점 차로 선두를 유지하고 있습니다.</strong> 이 차이는 Python 특화 작업과 TypeScript 생성 작업 전반에 걸쳐 일관되게 나타나며, 대부분의 웹 및 백엔드 개발자에게 Qwen이 더 강력한 선택이 됩니다.',
+          'DeepSeek Coder V2는 그 소폭의 벤치마크 우위를 언어 폭으로 맞바꿉니다. Rust, Swift, Kotlin, Elixir를 포함한 80개 이상의 프로그래밍 언어를 지원하는 반면, Qwen 3 Coder의 최고 성능은 Python, TypeScript, Go에 집중되어 있습니다.',
+          '두 모델 모두 Q4_K_M 양자화로 RTX 3060 12 GB에서 실행되며 약 10 GB VRAM을 사용합니다.',
+          'HumanEval의 5점 차이는 벤치마크가 시사하는 것보다 실제 프로덕션 코드에 더 큰 영향을 미칩니다. 1,000줄 코드 생성 작업에서 이 5점 차이가 누적됩니다: Python 및 TypeScript 직접 대결 테스트에서 Qwen 3 Coder는 DeepSeek Coder V2보다 구문 오류 약 50개, 논리 버그 약 30개가 적습니다. Rust나 Swift가 포함된 다중 언어 작업에서는 DeepSeek의 언어 폭이 이를 상쇄하지만, 단일 Python 개발자에게는 Qwen이 명확한 차이로 승리합니다.',
+        ],
+        columns: ['모델', 'Python (HumanEval)', '언어 지원 범위'],
+        rows: [
+          { '모델': 'Qwen 3 Coder 14B', 'Python (HumanEval)': 'High-80s', '언어 지원 범위': 'Python, TypeScript, Go' },
+          { '모델': 'DeepSeek Coder V2', 'Python (HumanEval)': 'Low-80s', '언어 지원 범위': '80개 이상의 언어' },
+        ],
+      },
+      body2: {
+        title: '워크플로에 따른 선택 기준',
+        content: [
+          '<strong>Python 및 TypeScript 집약적 프로젝트, 도구 사용, Function Calling에는 Qwen 3 Coder 14B를 선택하십시오.</strong> 벤치마크 우위가 대부분의 백엔드 및 프론트엔드 개발자가 일상적으로 수행하는 작업에서 잘못된 완성을 줄이는 것으로 직결됩니다.',
+          'Rust, Swift, Kotlin 또는 Elixir가 Python과 함께 등장하는 다중 언어 코드베이스에는 DeepSeek Coder V2를 선택하십시오. 또한 더 긴 유효 컨텍스트 윈도우를 가지고 있어 검토를 위해 대용량 파일을 붙여넣을 때 유용합니다. Mistral 및 기타 로컬 코딩 옵션과의 전체 비교는 <a href="/ko/local-llms/qwen-coder-vs-deepseek-mistral-local-2026" class="text-primary hover:underline">Qwen Coder 대 DeepSeek 대 Mistral 가이드</a>를 참조하십시오.',
+          '워크플로 세부 사항: Qwen 3 Coder 14B는 네이티브 Function Calling 지원이 더 강력하여 코드 생성 중 외부 도구를 호출하는 에이전트나 구조화된 출력 파이프라인을 구축하는 경우 중요합니다.',
+          '두 모델 모두 기본 Ollama 설정에서 32K 토큰 컨텍스트 윈도우를 지원합니다. DeepSeek Coder V2는 16K~32K 컨텍스트 길이에서 약간 더 나은 리콜을 유지합니다 — 검토나 리팩토링을 위해 전체 파일을 붙여넣을 때 유용합니다. Qwen 3 Coder는 20K 토큰 이후 약간의 성능 저하를 보이지만 그 범위 내에서는 강력하게 작동합니다.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Qwen 대 DeepSeek Coder에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'Qwen 3 Coder가 DeepSeek Coder보다 빠릅니까?',
+            a: '동일한 양자화 및 파라미터 수에서 속도는 비슷합니다. 두 모델 모두 Q4_K_M으로 RTX 3060 12 GB에서 초당 8~12 토큰을 생성합니다. DeepSeek Coder V2는 약간 더 크므로(16B 대 14B) 동일한 VRAM 예산에서 약간의 오버헤드가 추가됩니다.',
+          },
+          {
+            q: '두 모델 모두 RTX 3060 12 GB에서 실행할 수 있습니까?',
+            a: '예. 두 모델 모두 Q4_K_M으로 12 GB VRAM에 적합합니다. Ollama에서: Qwen의 경우 <code>ollama run qwen2.5-coder:14b-instruct-q4_K_M</code>, DeepSeek의 경우 <code>ollama run deepseek-coder-v2:16b-q4_K_M</code>을 사용하십시오.',
+          },
+          {
+            q: '코드 리뷰에는 어느 모델이 더 적합합니까?',
+            a: '대용량 기존 파일 검토에는 DeepSeek Coder V2의 더 긴 유효 컨텍스트가 유리합니다. 처음부터 새 코드를 작성하는 경우 Qwen 3 Coder의 벤치마크 우위가 더 나은 선택이 됩니다. 두 모델 모두 Ollama 또는 LM Studio에서 동일하게 실행됩니다 — 모델 설치 전 적합한 도구를 선택하려면 <a href="/ko/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio</a>를 참조하십시오.',
+          },
+          {
+            q: '이 모델들은 Tool 및 Function Calling을 지원합니까?',
+            a: '두 모델 모두 Tool Calling을 지원하지만, Qwen 3 Coder 14B는 더 강력한 네이티브 Function Calling 지원과 더 일관된 구조화 출력을 제공합니다. 파이프라인에서 Tool Call을 집중적으로 사용하는 경우 Qwen이 더 안전한 선택입니다.',
+          },
+          {
+            q: 'Python 개발자에게는 어느 모델이 더 낫습니까?',
+            a: 'Qwen 3 Coder 14B입니다. Python 특화 작업에서의 5점 HumanEval 우위 덕분에 주로 Python을 사용하는 개발자에게 최선입니다. 다중 언어 지원이 필요할 때는 DeepSeek이 두각을 나타냅니다.',
+          },
+          {
+            q: '각 모델의 크기는 얼마입니까?',
+            a: 'Qwen 3 Coder는 14B 파라미터입니다. DeepSeek Coder V2는 16B입니다. Q4_K_M 기준 두 모델 모두 동일한 하드웨어에서 약 10 GB VRAM을 사용합니다.',
+          },
+          {
+            q: '이 모델을 실행하려면 GPU가 필요합니까?',
+            a: '예. 최소 RTX 3060 12 GB 또는 동급 사양이 필요합니다. GPU 없이는 추론 속도가 매우 느려질 것입니다(CPU에서 응답당 수 분 소요).',
+          },
+          {
+            q: '두 모델 모두 여러 파일의 코드를 처리할 수 있습니까?',
+            a: '예, 한계가 있습니다. 32K 토큰 컨텍스트 윈도우로 두 모델 모두 대용량 파일 1~2개 또는 소용량 파일 4~5개를 처리할 수 있습니다. DeepSeek은 더 긴 컨텍스트 길이에서 더 나은 리콜을 유지합니다.',
+          },
+          {
+            q: '리팩토링에는 어느 것이 더 낫습니까?',
+            a: 'DeepSeek Coder V2는 더 긴 유효 컨텍스트 덕분에 대용량 파일 리팩토링에 약간 더 적합합니다. Qwen은 개별 함수에 집중한 리팩토링에서는 여전히 탁월합니다.',
+          },
+          {
+            q: '이 모델을 사용하기 위해 파인튜닝이 필요합니까?',
+            a: '아닙니다. 두 모델 모두 Ollama에서 즉시 사용 가능하도록 완전히 학습되어 있습니다. 대부분의 코딩 작업에는 파인튜닝이 필요하지 않습니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽기',
+        items: [
+          '[Qwen Coder 대 DeepSeek 대 Mistral 전체 가이드](/ko/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
+          '[Ollama vs LM Studio: 로컬 모델 실행 도구 비교](/ko/prompt-bites/ollama-vs-lm-studio)',
+          '[Ollama 최적의 프론트엔드 선택 가이드](/ko/prompt-bites/best-frontend-for-ollama)',
+        ],
+      },
+    },
+  },
 }

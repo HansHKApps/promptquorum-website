@@ -681,4 +681,102 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Hardware-Specific',
+    title: 'AMD 5700X + RTX 3070 Ti에 최적인 LLM은?',
+    seoTitle: 'AMD 5700X + RTX 3070 Ti 최적 LLM | Prompt Bites | PromptQuorum',
+    metaDescription: 'Llama 3 8B Q4_K_M과 Mistral Small Q5_K_M은 RTX 3070 Ti에서 22~25 tok/s로 실행됩니다. 두 모델 모두 VRAM 약 6 GB를 사용합니다. LLM 성능 향상의 핵심은 GPU입니다.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    targetKeywords: [
+      'AMD 5700X RTX 3070 Ti LLM',
+      'RTX 3070 Ti 로컬 LLM',
+      '3070 Ti 8GB VRAM 추천 모델',
+      '로컬 LLM VRAM 8GB',
+    ],
+    readTime: '4분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: 'AMD 5700X + RTX 3070 Ti에 최적인 LLM은?',
+        answer: 'RTX 3070 Ti(8 GB VRAM)에서는 Llama 3 8B Q4_K_M과 Mistral Small Q5_K_M이 최선의 로컬 LLM입니다. 두 모델 모두 VRAM 약 6 GB를 사용하며 약 22~25 tok/s로 실행됩니다. AMD Ryzen 7 5700X는 CPU 폴백으로서 빠른 토크나이제이션을 담당합니다.',
+        bullets: [
+          'Llama 3 8B Q4_K_M: VRAM 약 6 GB, RTX 3070 Ti에서 약 25 tok/s',
+          'Mistral Small Q5_K_M: VRAM 약 6 GB, VRAM 대비 우수한 추론 성능',
+          'RTX 3070 Ti는 VRAM 8 GB — Q4 양자화 13B 모델은 용량 초과 가능',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'RTX 3070 Ti는 VRAM 8 GB GDDR6X — Llama 3 8B Q4_K_M과 Mistral Small Q5_K_M이 VRAM에서 완전히 실행되며 약 22~25 tok/s를 달성합니다.',
+          'Q4_K_M 양자화의 14B 모델은 약 10 GB가 필요하므로 적재 불가; Q3_K_M(약 7 GB)은 적재되지만 품질이 눈에 띄게 저하됩니다.',
+          '5700X의 8코어 Zen 3 설계 덕분에 14B 모델을 가끔 사용할 때 CPU 부분 오프로드로 약 8 tok/s가 가능합니다.',
+          '이 구성은 일반 채팅, Python 스크립팅, TypeScript 툴링 작업에 충분합니다 — 병목은 CPU가 아닌 GPU입니다.',
+        ],
+      },
+      body1: {
+        title: '이 구성에서 잘 작동하는 모델',
+        content: [
+          '2026년 5월 기준, <strong>RTX 3070 Ti(8 GB GDDR6X, 608 GB/s 대역폭)는 Llama 3 8B Q4_K_M과 Mistral Small Q5_K_M을 VRAM에서 완전히 실행합니다 — 각각 약 6 GB를 사용하며 약 22~25 tok/s를 달성합니다.</strong> 14B 모델 클래스가 절대적인 한계입니다: Q4 양자화에서 약 10 GB가 필요하여 8 GB 한도를 초과합니다.',
+          '14B 모델이 필요한 경우 세 가지 방법이 있습니다: Q3_K_M으로 사용량을 약 7 GB로 낮추면 VRAM에 완전히 적재되지만 추론 및 코드 작업에서 출력 품질이 저하됩니다. llama.cpp를 통한 부분 CPU 오프로드(VRAM과 RAM에 레이어 분산)는 약 8 tok/s로 실행 가능합니다 — 5700X의 8개 Zen 3 코어는 4코어 CPU보다 이를 더 잘 처리합니다. 70B 모델을 Q2_K로 실행하는 것은 기술적으로 약 1 tok/s로 가능하지만 대화형 사용에는 실용적이지 않습니다.',
+          '전체 품질의 14B 코딩 모델이 목표라면 하드웨어 업그레이드 경로에 대해 <a href="/ko/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">12 GB VRAM 최적 코딩 LLM 가이드</a>를 참조하십시오.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'RTX 3070 Ti(8 GB VRAM)에서 Llama 3 8B Q4_K_M은 약 6 GB를 사용하며 약 25 tok/s의 추론 속도를 제공합니다.' },
+          { type: 'plain-terms', text: 'VRAM 8 GB가 있으면 8B 모델이 완전히 적재됩니다. 14B 모델은 약 10 GB가 필요하므로 부분 오프로드나 Q3 양자화가 필요합니다.' },
+        ],
+        columns: ['모델', '설정', '속도'],
+        rows: [
+          { '모델': 'Llama 3 8B Q4_K_M', '설정': 'VRAM 전체 사용', '속도': '약 25 tok/s' },
+          { '모델': 'Mistral Small Q5_K_M', '설정': 'VRAM 전체 사용', '속도': '약 22 tok/s' },
+          { '모델': 'Qwen 14B Q3_K_M', '설정': 'VRAM 전체 사용(여유 없음)', '속도': '약 14 tok/s (품질 저하)' },
+          { '모델': 'Qwen 14B Q4_K_M', '설정': 'CPU 부분 오프로드', '속도': '약 8 tok/s' },
+          { '모델': 'Llama 3 70B Q2_K', '설정': 'CPU 집중', '속도': '약 1 tok/s (매우 느림)' },
+        ],
+      },
+      body2: {
+        title: '업그레이드 시점과 현재 유지 판단',
+        content: [
+          '<strong>이 구성은 7B~8B 모델을 20+ tok/s로 실행합니다 — 일반 채팅, Python 스크립팅, TypeScript 툴링, 단일 파일 코드 리뷰에 충분합니다.</strong> 이것이 귀하의 작업 부하에 해당한다면 업그레이드할 긴급한 이유가 없습니다.',
+          '품질이나 속도 저하 없이 14B 코딩 모델이 필요하다면 업그레이드 대상은 GPU입니다 — CPU가 아닙니다. 중고 RTX 3060 12 GB(일반적으로 약 30~40만 원) 또는 RTX 4070 기본형(12 GB)으로 업그레이드하면 Qwen 3 Coder 14B를 Q4 전체 처리량으로 실행할 수 있습니다. 5800X3D는 최고의 AM4 CPU 업그레이드이지만, 3D V-Cache 이점은 게임 및 CPU에 제한된 과학 작업에 특화되어 있습니다 — LLM 추론은 GPU 메모리 대역폭에 의해 제한되며 5700X는 이 구성에서 병목이 아닙니다.',
+          '전체 GPU 선택 가이드와 메모리 대역폭이 LLM 추론 속도에 어떻게 작용하는지는 <a href="/ko/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">로컬 LLM 최적 GPU 가이드</a>를 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'AMD 5700X + RTX 3070 Ti LLM에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'RTX 3070 Ti 8 GB에서 14B 모델을 실행할 수 있습니까?',
+            a: 'Q4_K_M에서는 불가능합니다 — 14B 모델은 약 10 GB가 필요하여 8 GB 한도를 초과합니다. Q3_K_M(약 7 GB)은 적재되지만 추론 및 코드 작업에서 출력 품질이 눈에 띄게 저하됩니다. llama.cpp를 통한 CPU 부분 오프로드는 약 8 tok/s로 가능합니다.',
+          },
+          {
+            q: 'LLM 성능 향상을 위해 GPU와 CPU 중 어느 것을 업그레이드해야 합니까?',
+            a: 'GPU입니다. LLM 추론 속도는 GPU 메모리 대역폭에 의해 제한됩니다; 5700X는 병목이 아닙니다. 12 GB GPU(RTX 3060 12 GB 또는 RTX 4070 기본형)로 업그레이드하면 전체 Q4 품질과 속도로 14B 모델 계열을 사용할 수 있습니다.',
+          },
+          {
+            q: 'CPU 부분 오프로드에서 RAM 속도가 중요합니까?',
+            a: '예, 부차적인 요소로서 중요합니다. DDR4-3600 대 DDR4-2133은 RAM에 상주하는 레이어의 CPU 오프로드 처리량을 약 15% 향상시킵니다. GPU는 VRAM에 맞는 레이어에 대한 주요 제약으로 남아 있습니다.',
+          },
+          {
+            q: 'LLM을 위해 5800X3D가 5700X보다 가치 있습니까?',
+            a: '아닙니다. 5800X3D의 3D V-Cache는 게임과 특정 CPU에 제한된 작업에는 도움이 되지만, LLM 추론은 GPU 메모리 대역폭에 의해 제한됩니다. 5700X는 이 구성에서 병목이 아닙니다 — 업그레이드 예산을 12 GB GPU에 투자하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[12 GB VRAM 최적 코딩 LLM](/ko/prompt-bites/best-local-llm-coding-12gb-vram)',
+          '[로컬 LLM 최적 GPU 가이드](/ko/local-llms/best-gpus-for-local-llms)',
+          '[로컬 LLM에 필요한 VRAM 용량](/ko/local-llms/how-much-vram-local-llm)',
+        ],
+      },
+    },
+  },
 }

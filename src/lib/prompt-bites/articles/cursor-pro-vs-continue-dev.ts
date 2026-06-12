@@ -922,4 +922,173 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Tool Comparisons',
+    title: 'Cursor Pro vs Continue.dev: 2026년 월 $20 가치가 있을까?',
+    seoTitle: 'Cursor Pro vs Continue.dev 2026 | Prompt Bites',
+    metaDescription: 'Cursor Pro(월 $20)는 Claude, GPT 등 클라우드 모델과 세련된 편집기 UX에 탁월합니다. Continue.dev는 무료이며 Ollama 로컬 모델에 더 적합합니다. 모델 위치에 따라 선택하십시오.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: '중급',
+    audience: 'VS Code 기반 워크플로에서 AI 코딩 어시스턴트를 선택하는 개발자',
+    affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/replace-github-copilot-with-local-llm',
+    siblingBites: ['best-frontend-for-ollama', 'jan-vs-lm-studio'],
+    is_living_page: false,
+    readTime: '3분 분량',
+    targetKeywords: [
+      'Cursor Pro vs Continue.dev 한국어',
+      'Cursor Pro 월 구독 가치',
+      'Continue.dev Ollama 설정',
+      'AI 코딩 어시스턴트 비교 2026',
+      'Continue.dev 무료 사용법',
+    ],
+    leadAnswerBlock: 'Cursor Pro(월 ~$20)는 주로 클라우드 프론티어 모델(Claude, GPT)을 사용하고 세련된 편집기 경험을 원하는 경우에 가치가 있습니다. Continue.dev는 무료이며 Ollama를 통해 주로 로컬 모델을 실행하는 경우에 더 적합합니다. 모델 위치에 따라 선택하십시오: 클라우드 → Cursor Pro, 로컬 → Continue.dev.',
+    toc: [
+      { label: '워크플로별 최선의 선택', anchor: '#best-pick' },
+      { label: 'Cursor Pro vs Continue.dev 비교', anchor: '#comparison' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related' },
+    ],
+    intro: 'Cursor Pro와 Continue.dev는 모두 AI 코딩 어시스턴트이지만 핵심 방향이 다릅니다. Cursor Pro는 클라우드 프론티어 모델에 최적화된 유료 완전 편집기로, VS Code를 포크한 제품입니다. Continue.dev는 로컬 Ollama를 포함한 "모델 직접 가져오기" 개념을 중심으로 구축된 무료 VS Code/JetBrains 확장 프로그램입니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'Cursor Pro와 Continue.dev 중 어느 것이 더 낫습니까?',
+        answer: 'Claude, GPT 등 클라우드 모델을 주로 사용하고 통합된 편집기 경험을 원한다면 Cursor Pro(월 ~$20)를 선택하십시오. Ollama 로컬 모델을 주로 사용하거나 이미 API 비용을 지불하고 있다면 무료인 Continue.dev가 더 적합합니다.',
+        bullets: [
+          '클라우드 모델 사용 → Cursor Pro: 세련된 편집기, 에이전트 모드, 모델 할당량 포함',
+          '로컬 모델 사용 → Continue.dev: 무료, 오픈소스, Ollama 완전 지원',
+          '이미 Claude/OpenAI API를 구독 중이라면 Continue.dev가 더 저렴할 수 있음',
+        ],
+        updatedDate: '2026-05-22',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      headline: 'Cursor Pro vs Continue.dev: 2026년 월 $20 가치가 있을까?',
+      description: 'Cursor Pro(월 $20)는 Claude, GPT 등 클라우드 모델과 세련된 편집기 UX에 탁월합니다. Continue.dev는 무료이며 Ollama 로컬 모델에 더 적합합니다.',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/cursor-pro-vs-continue-dev',
+      datePublished: '2026-05-22',
+      dateModified: '2026-05-22',
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: 'Prompt Bites', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: 'Cursor Pro vs Continue.dev: 2026년 월 $20 가치가 있을까?', url: 'https://www.promptquorum.com/ko/prompt-bites/cursor-pro-vs-continue-dev' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '클라우드 프론티어 모델에 최적: Cursor Pro(월 ~$20) — 세련된 UX, 에이전트 모드, 모델 할당량 포함',
+          '로컬 Ollama 모델에 최적: Continue.dev — 무료, 오픈소스, "모델 직접 가져오기" 중심으로 구축',
+          'Cursor Pro의 $20은 편집기 경험과 모델 접근을 함께 제공하며, Continue.dev는 편집기 레이어만 제공',
+          '이미 Claude 또는 OpenAI API 접근을 위해 비용을 지불하고 있다면 Continue.dev가 자체 키로 훨씬 저렴하게 Cursor 수준을 구현 가능',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Cursor Pro는 클라우드 모델 워크플로에, Continue.dev는 Ollama 로컬 모델 워크플로에 각각 최적화된 AI 코딩 어시스턴트입니다.' },
+          { type: 'plain-terms', text: 'Cursor Pro(월 $20)는 Claude, GPT 등 클라우드 AI 모델을 편집기에 통합한 유료 도구이고, Continue.dev는 무료 확장 프로그램으로 로컬 Ollama 모델을 포함한 다양한 모델을 자유롭게 연결할 수 있습니다.' },
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: '최선의 선택: 클라우드는 Cursor Pro, 로컬은 Continue.dev',
+        content: [
+          '<strong>주로 클라우드 프론티어 모델(Claude 4.6 Sonnet, GPT 계열)을 사용하고 세련된 IDE를 원한다면 Cursor Pro가 최선입니다. Ollama를 통해 주로 로컬 모델을 실행하거나 이미 API 비용을 지불하고 있다면 Continue.dev가 최선입니다.</strong> 모델 위치에 따라 선택하십시오.',
+          'Cursor Pro(월 ~$20)는 모델 사용량과 긴밀하게 통합된 편집기를 묶어 제공합니다 — 에이전트 모드, 저장소 전체 컨텍스트, 예측 편집 기능이 포함됩니다. Claude 또는 OpenAI API를 이미 구독하지 않는 개발자에게 이 $20은 모델 사용 비용만으로도 경쟁력이 있습니다.',
+          'Continue.dev는 무료 오픈소스 도구입니다. VS Code 또는 JetBrains 확장 프로그램으로 실행되며 클라우드 API(자체 키), Ollama, LM Studio, vLLM 등 모든 모델로 연결할 수 있습니다. 주요 워크플로가 로컬 Ollama라면 Continue.dev가 명확한 선택입니다. 사용량 요금으로 Claude API 접근을 이미 구독하고 있다면 자체 키로 Continue.dev를 사용하는 것이 일반적으로 Cursor Pro보다 저렴합니다.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://cursor.com',
+            productName: 'Cursor Pro',
+            productCategory: 'ide',
+            priceRange: '월 ~$20',
+            label: 'cursor.com에서 Cursor Pro 가격 확인하기',
+          },
+          {
+            url: 'https://continue.dev',
+            productName: 'Continue.dev (무료)',
+            productCategory: 'ide-extension',
+            priceRange: '무료',
+            label: 'Continue.dev 무료 다운로드',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Cursor Pro vs Continue.dev 비교',
+        content: [
+          '<strong>두 도구는 겹치면서도 서로 다른 워크플로를 지원합니다.</strong> 가격은 2026년 5월 기준 근사치이며, 현재 요금은 각 공급업체 사이트를 확인하십시오.',
+        ],
+        columns: ['기능', 'Cursor Pro', 'Continue.dev'],
+        rows: [
+          {
+            '기능': '가격(근사치)',
+            'Cursor Pro': '월 ~$20',
+            'Continue.dev': '무료',
+          },
+          {
+            '기능': '라이선스',
+            'Cursor Pro': '독점 소프트웨어',
+            'Continue.dev': '오픈소스 (Apache 2.0)',
+          },
+          {
+            '기능': '기본 모델',
+            'Cursor Pro': 'Claude 4.6 Sonnet (포함)',
+            'Continue.dev': '직접 가져오기 (Ollama, OpenAI 등)',
+          },
+          {
+            '기능': '로컬 Ollama 지원',
+            'Cursor Pro': '기본 미지원',
+            'Continue.dev': '완전 지원',
+          },
+          {
+            '기능': '에이전트 모드',
+            'Cursor Pro': '지원',
+            'Continue.dev': '기본 수준',
+          },
+          {
+            '기능': '추천 사용 사례',
+            'Cursor Pro': '클라우드 모델, 세련된 UX',
+            'Continue.dev': '로컬 모델, 유연성',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Cursor Pro와 Continue.dev에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: 'Cursor Pro 월 $20은 가치가 있습니까?',
+            a: '주로 Claude 4.6 또는 GPT를 사용하고 최고의 AI IDE를 원한다면 그렇습니다. 주로 로컬 Ollama를 사용한다면 아닙니다 — Continue.dev는 무료이며 로컬 워크플로에 더 적합합니다. 이미 Claude 또는 OpenAI API 접근 비용을 지불하고 있다면 Continue.dev와 자체 키 조합이 일반적으로 더 저렴합니다.',
+          },
+          {
+            q: 'Continue.dev는 Ollama와 함께 작동합니까?',
+            a: '그렇습니다 — 이것이 주요 사용 사례입니다. Ollama를 설치하고 Qwen 3 Coder와 같은 코딩 모델을 다운로드한 후 Continue.dev를 로컬 Ollama 엔드포인트로 연결하십시오. API 키가 필요하지 않습니다.',
+          },
+          {
+            q: '집중적인 일일 사용 시 어느 것이 더 저렴합니까?',
+            a: '자체 API 키를 사용하는 Continue.dev가 집중적인 사용 시 일반적으로 더 저렴합니다. 마진 없이 토큰 비용만 지불하기 때문입니다. Cursor Pro의 ~$20에 포함된 할당량은 집중 사용 시 초과될 수 있으며, 이 경우 추가 요금이 발생합니다.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: '관련 읽을거리',
+        items: [
+          '[Ollama 최고의 프런트엔드](/ko/prompt-bites/best-frontend-for-ollama) — Continue.dev와 다른 Ollama 클라이언트 비교',
+          '[Jan vs LM Studio](/ko/prompt-bites/jan-vs-lm-studio) — 채팅 워크플로를 위한 유사한 선택지',
+          '[Qwen Coder vs DeepSeek Coder](/ko/prompt-bites/qwen-coder-vs-deepseek-coder) — Continue.dev와 함께 사용할 로컬 코딩 모델 비교',
+        ],
+      },
+    },
+  },
 }

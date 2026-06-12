@@ -686,4 +686,103 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Tool Comparisons',
+    title: 'Ollama vs LM Studio: 어떤 도구를 선택해야 할까요?',
+    seoTitle: 'Ollama vs LM Studio | Prompt Bites | PromptQuorum',
+    metaDescription: '터미널을 사용하고 API로 개발하신다면 Ollama를 선택하십시오. GUI를 선호하고 모델과 채팅하고 싶으시다면 LM Studio를 사용하십시오. 두 도구 모두 무료이며 모델을 로컬에서 실행합니다.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: '중급',
+    audience: 'Ollama와 LM Studio 중에서 선택하는 개발자',
+    parentArticle: '/local-llms/ollama-vs-lm-studio',
+    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ko: {
+        question: 'Ollama vs LM Studio: 어떤 도구를 선택해야 할까요?',
+        answer: '터미널을 사용하고 API로 개발하신다면 Ollama를 선택하십시오. GUI를 선호하고 모델과 채팅만 원하신다면 LM Studio를 사용하십시오. 두 도구 모두 무료이며 모델을 로컬에서 실행합니다.',
+        bullets: [
+          'Ollama: CLI 우선, OpenAI 호환 API, 개발자 도구',
+          'LM Studio: 데스크톱 GUI, 드래그 앤 드롭 모델 관리, 초보자 친화적',
+          '두 도구 모두 Mac, Windows, Linux에서 실행됩니다',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Ollama는 포트 11434에서 CLI 백그라운드 서비스로 실행됩니다 — `ollama serve`로 시작하고, `ollama pull`로 모델을 다운로드하며, curl 또는 OpenAI 호환 클라이언트로 쿼리를 실행하십시오',
+          'LM Studio는 데스크톱 GUI 애플리케이션입니다 — lmstudio.ai에서 다운로드하고, 클릭 한 번으로 모델을 탐색 및 로드하며, 내장 채팅 창을 사용하십시오',
+          '두 도구 모두 내부적으로 llama.cpp와 GGUF를 사용하므로, 동일한 모델과 양자화 수준에서 토큰 생성 속도는 거의 동일합니다',
+        ],
+      },
+      body1: {
+        title: '각 도구의 강점',
+        content: [
+          '<strong>Ollama는 개발자에게 탁월합니다: GUI 오버헤드 없이 OpenAI 호환 REST API를 통해 Python 및 JavaScript 애플리케이션과 통합되며, Linux 서버에서 헤드리스로 실행됩니다.</strong> LM Studio는 초보자에게 탁월합니다: 내장 모델 스토어를 통해 터미널을 전혀 사용하지 않고 3분 이내에 모델을 다운로드하고 실행할 수 있습니다.',
+          '두 도구 모두 내부적으로 llama.cpp를 사용하므로 모델 자체는 동일하게 실행됩니다. 선택은 워크플로우의 문제입니다: 커맨드 라인 vs 시각적 인터페이스. 다음 표는 각 도구가 더 잘 처리하는 다섯 가지 실용적인 측면을 정리한 것입니다.',
+        ],
+        columns: ['기능', 'Ollama', 'LM Studio'],
+        rows: [
+          { '기능': '설치 방법', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'GUI 설치 프로그램' },
+          { '기능': '채팅 인터페이스', 'Ollama': '없음 (API만 제공)', 'LM Studio': '내장' },
+          { '기능': 'API 서버', 'Ollama': 'REST, 포트 11434', 'LM Studio': 'REST, 포트 1234' },
+          { '기능': '모델 관리', 'Ollama': '`ollama pull <model>`', 'LM Studio': '탐색 + 클릭' },
+          { '기능': '최적 사용 대상', 'Ollama': '개발자 + 서버', 'LM Studio': '초보자 + 채팅 사용' },
+        ],
+      },
+      body2: {
+        title: '두 도구를 함께 사용하는 경우',
+        content: [
+          'Ollama와 LM Studio를 동시에 실행할 수 있습니다. LM Studio를 사용하여 새로운 모델을 탐색하고 테스트한 다음, Python 또는 JavaScript 애플리케이션에 통합할 모델을 결정하면 Ollama로 전환하십시오.',
+          'Ollama는 기본적으로 포트 11434를 사용하고 LM Studio는 기본적으로 포트 1234를 사용하므로, 기본 설정에서는 충돌하지 않습니다. 포트를 커스터마이즈한 경우 OLLAMA_HOST 환경 변수를 설정하거나 LM Studio 설정에서 서버 포트를 변경하십시오.',
+          '설치, 모델 선택, 성능 조정을 다루는 전체 가이드는 <a href="/ko/local-llms/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio 심층 비교</a>를 참조하십시오.',
+        ],
+      },
+      snippetSection: {
+        title: 'Ollama와 LM Studio의 핵심 차이점',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ollama는 API 개발을 위한 CLI 우선 도구이고, LM Studio는 채팅 및 모델 탐색을 위한 데스크톱 GUI 애플리케이션입니다.' },
+          { type: 'plain-terms', text: 'Ollama는 터미널에서 실행되며 코드와 통합하기 쉽습니다. LM Studio는 그래픽 앱으로 클릭만으로 모델을 사용할 수 있습니다. 두 도구 모두 무료이고 인터넷 연결 없이 로컬에서 AI 모델을 실행합니다.' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Ollama vs LM Studio에 대한 빠른 답변',
+        faqs: [
+          {
+            q: 'Ollama와 LM Studio를 동시에 실행할 수 있습니까?',
+            a: '네. Ollama는 기본적으로 포트 11434를 사용하고 LM Studio는 포트 1234를 사용하므로 기본 설정에서 충돌하지 않습니다. 포트를 커스터마이즈한 경우에만 변경이 필요합니다.',
+          },
+          {
+            q: 'Ollama와 LM Studio 중 어느 것이 더 빠릅니까?',
+            a: '성능은 거의 동일합니다. 두 도구 모두 GGUF 모델 실행에 llama.cpp를 사용하기 때문입니다. 동일한 모델과 양자화 수준에서 두 도구 간의 토큰 생성 속도 차이는 5% 미만입니다.',
+          },
+          {
+            q: 'LM Studio에는 커맨드 라인 인터페이스가 있습니까?',
+            a: 'LM Studio는 모델 실행을 위한 CLI가 없습니다. 데스크톱 전용 애플리케이션입니다. CLI 접근이 필요하거나 스크립트에 모델 추론을 통합하려는 경우 Ollama를 사용하십시오.',
+          },
+          {
+            q: 'Ollama를 GUI 없이 완전히 사용할 수 있습니까?',
+            a: '네. Ollama는 헤드리스 및 서버 사용을 위해 설계되었습니다. Linux에서 systemd 서비스로 실행되며 GUI 의존성이 없고, 필요 시 브라우저 기반 채팅 인터페이스와 결합할 수 있습니다. 데스크톱 GUI 옵션 비교는 <a href="/ko/prompt-bites/jan-vs-lm-studio" class="text-primary hover:underline">Jan vs LM Studio</a>를 참조하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[Ollama vs LM Studio 심층 비교](/ko/local-llms/ollama-vs-lm-studio)',
+          '[Jan vs LM Studio](/ko/prompt-bites/jan-vs-lm-studio)',
+          '[Ollama 최고의 프론트엔드](/ko/prompt-bites/best-frontend-for-ollama)',
+        ],
+      },
+    },
+  },
 }

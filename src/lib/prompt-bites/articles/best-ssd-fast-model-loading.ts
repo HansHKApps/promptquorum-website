@@ -1220,4 +1220,166 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Hardware-Specific',
+    title: '2026년 모델 빠른 로딩을 위한 최고의 SSD는?',
+    seoTitle: '2026년 LLM 모델 빠른 로딩을 위한 최고의 SSD',
+    metaDescription: 'LLM 모델을 빠르게 로딩하려면 Samsung 990 Pro 2 TB 같은 NVMe PCIe Gen4가 최선입니다. 순차 읽기 속도 약 7,000 MB/s로 수 기가바이트 모델 파일을 몇 초 만에 RAM에 올립니다.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Samsung 990 Pro 2 TB'],
+    educationalLevel: 'Intermediate',
+    audience: '모델 로딩 속도가 느려서 불만인 로컬 LLM 사용자',
+    affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
+    siblingBites: ['best-gpu-under-600-local-llm', 'best-mini-pc-for-local-llm'],
+    is_living_page: false,
+    readTime: '4분 분량',
+    leadAnswerBlock:
+      'LLM 모델을 빠르게 로딩하는 데 최적의 SSD는 Samsung 990 Pro 2 TB 같은 NVMe PCIe Gen4입니다. 높은 순차 읽기 속도(약 7,000 MB/s)로 수 기가바이트 모델 파일을 RAM에 올리는 데 불과 몇 초밖에 걸리지 않으며, 14B 모델의 콜드 스타트 시간을 약 30초(SATA SSD)에서 5초 미만으로 단축합니다.',
+    toc: [
+      { label: '추천 제품: Samsung 990 Pro 2 TB', anchor: '#best-pick' },
+      { label: '모델 로딩별 SSD 유형 비교', anchor: '#comparison' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related' },
+    ],
+    intro:
+      '모델 로딩 속도는 순차 읽기 속도에 의해 결정됩니다. 14B Q4 모델은 디스크에서 약 9 GB를 차지하며, 이를 RAM에 복사하는 시간이 곧 모델 전환 시 기다리는 시간입니다. 빠른 NVMe는 그 대기 시간을 사라지게 만듭니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 LLM 모델을 가장 빠르게 로딩하는 SSD는 무엇입니까?',
+        answer: 'Samsung 990 Pro 2 TB(7,450 MB/s)는 7B Q4 모델을 2초 미만에 로딩합니다. AI 모델 저장에 있어 가장 뛰어난 가격 대비 성능을 자랑합니다.',
+        bullets: [
+          '7B Q4_K_M 모델(약 4.1 GB)은 990 Pro에서 약 0.8초, SATA SSD에서는 약 3.5초가 소요됩니다.',
+          '어떤 NVMe Gen4든 사용 가능합니다. WD Black SN850X와 Seagate FireCuda 530이 유사한 대안입니다.',
+          '빠른 로딩을 위해 Ollama 모델 캐시(~/ollama/models)를 OS 드라이브가 아닌 NVMe에 저장하십시오.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/best-ssd-fast-model-loading',
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: 'Prompt Bites', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: '2026년 모델 빠른 로딩을 위한 최고의 SSD는?', url: 'https://www.promptquorum.com/ko/prompt-bites/best-ssd-fast-model-loading' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '추천 제품: Samsung 990 Pro 2 TB(PCIe Gen4 NVMe) — 순차 읽기 약 7,000 MB/s로 14B 모델을 5초 미만에 RAM에 로딩',
+          'PCIe Gen4 NVMe는 대용량 모델 파일을 SATA SSD보다 7~10배 빠르게 로딩합니다',
+          '양자화된 모델을 두세 개 이상 보유하면 2 TB가 실질적인 최소 용량입니다',
+          'Gen5 드라이브는 이론상 더 빠르지만 LLM 로딩에서는 순수 벤치마크보다 체감 차이가 작습니다',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: '추천 제품: Samsung 990 Pro 2 TB(PCIe Gen4 NVMe)',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Samsung 990 Pro 2 TB는 순차 읽기 약 7,000 MB/s로 14B Q4 모델(약 9 GB)을 5초 미만에 RAM에 올리는 LLM 로딩 최적화 SSD입니다.' },
+          { type: 'plain-terms', text: 'PCIe Gen4 NVMe SSD는 SATA SSD보다 최대 10배 빠르게 대형 AI 모델 파일을 읽어 로컬 LLM의 시작 대기 시간을 크게 줄입니다.' },
+        ],
+        content: [
+          '<strong>Samsung 990 Pro 2 TB는 순차 읽기 약 7,000 MB/s로 14B Q4 모델(약 9 GB)을 5초 미만에 RAM에 로딩하기 때문에 LLM 빠른 로딩을 위한 최고의 SSD입니다.</strong> 같은 모델 기준으로 SATA SSD(약 550 MB/s)는 15초 이상, 구형 HDD는 1분 이상 소요됩니다.',
+          'PCIe Gen4 NVMe가 최적의 선택입니다. Samsung 990 Pro, WD Black SN850X, Crucial T500 모두 순차 읽기 약 7,000 MB/s를 비슷한 가격에 제공합니다. Gen5 드라이브는 더 높은 최대 속도를 자랑하지만 모델 로딩에서 체감 차이는 작으며, Gen5 슬롯이 있는 메인보드도 필요합니다.',
+          '2 TB 이상을 구매하십시오. 양자화된 모델 여러 개(7B, 8B, 13B, 14B의 다양한 양자화 버전)를 쌓다 보면 1 TB는 금세 부족해집니다. 2 TB면 OS, 프레임워크, 십여 개의 모델을 다운로드 순환 없이 보관할 수 있습니다. 현재 가격은 판매처 목록을 확인하십시오. NVMe 가격은 매주 변동됩니다.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.co.kr/s?k=Samsung+990+Pro+2TB',
+            productName: 'Samsung 990 Pro 2 TB',
+            productCategory: 'ssd',
+            label: 'Samsung 990 Pro 2 TB 가격 확인 (Amazon.co.kr)',
+          },
+          {
+            url: 'https://www.coupang.com/np/search?q=Samsung+990+Pro+2TB',
+            productName: 'Samsung 990 Pro 2 TB',
+            productCategory: 'ssd',
+            label: 'Samsung 990 Pro 2 TB 가격 확인 (쿠팡)',
+          },
+          {
+            url: 'https://www.amazon.co.kr/s?k=WD+Black+SN850X+2TB',
+            productName: 'WD Black SN850X 2 TB',
+            productCategory: 'ssd',
+            label: 'WD Black SN850X 2 TB 가격 확인 (Amazon.co.kr)',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'LLM 모델 로딩별 SSD 유형 비교',
+        content: [
+          '<strong>모델 로딩에서 유일하게 중요한 수치는 순차 읽기 속도입니다.</strong> 아래 표는 각 드라이브가 14B Q4 모델(약 9 GB)을 디스크에서 RAM으로 로딩하는 데 걸리는 시간을 나타냅니다. 시스템 오버헤드를 제외한 근사치입니다.',
+        ],
+        columns: ['드라이브 유형', '순차 읽기', '9 GB 모델 로딩 시간', '평가'],
+        rows: [
+          {
+            '드라이브 유형': 'PCIe Gen4 NVMe (예: Samsung 990 Pro)',
+            '순차 읽기': '약 7,000 MB/s',
+            '9 GB 모델 로딩 시간': '약 1.5초(이론), 약 3~5초(실제)',
+            '평가': '최선의 선택',
+          },
+          {
+            '드라이브 유형': 'PCIe Gen3 NVMe',
+            '순차 읽기': '약 3,500 MB/s',
+            '9 GB 모델 로딩 시간': '약 3~7초',
+            '평가': '무난함',
+          },
+          {
+            '드라이브 유형': 'SATA SSD',
+            '순차 읽기': '약 550 MB/s',
+            '9 GB 모델 로딩 시간': '약 17~25초',
+            '평가': '느림 — 가능하면 업그레이드 권장',
+          },
+          {
+            '드라이브 유형': 'HDD (7200 RPM)',
+            '순차 읽기': '약 150 MB/s',
+            '9 GB 모델 로딩 시간': '약 60~90초',
+            '평가': 'LLM 용도로 비추천',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '로컬 LLM SSD에 대한 자주 묻는 질문',
+        faqs: [
+          {
+            q: '더 빠른 SSD가 추론 속도도 높여 줍니까?',
+            a: '아닙니다. 모델이 RAM 또는 VRAM에 로딩된 이후에는 추론 속도가 메모리 대역폭과 GPU에 의해 결정되며, SSD는 관여하지 않습니다. 빠른 SSD는 모델 시작 시 또는 모델 전환 시의 초기 로딩 시간만 단축합니다.',
+          },
+          {
+            q: 'LLM에서 PCIe Gen5가 Gen4보다 더 낫습니까?',
+            a: '모델 로딩 측면에서는 차이가 작습니다. Gen5 드라이브는 12,000 MB/s를 초과하지만 9 GB 모델 로딩 시간은 약 1.5초에서 1초 미만으로 줄어드는 정도로, 대부분의 사용자가 체감하기 어렵습니다. Gen5는 가격도 높고 메인보드에 Gen5 슬롯이 필요합니다.',
+          },
+          {
+            q: '로컬 LLM을 위해 SSD 용량이 얼마나 필요합니까?',
+            a: '2 TB가 편안한 최소 용량입니다. 양자화된 14B 모델 몇 개만 해도 30~50 GB를 차지할 수 있으며, 용도별로 여러 모델을 저장해 두고 싶을 것입니다. OS, 프레임워크, 사용자 데이터까지 더하면 1 TB는 금세 부족해집니다.',
+          },
+          {
+            q: 'OS 드라이브와 모델 저장 드라이브를 반드시 같은 SSD로 써야 합니까?',
+            a: '아닙니다. OS는 한 드라이브에, 모델 파일은 별도의 빠른 NVMe에 저장하는 것이 일반적인 구성입니다. Ollama나 LM Studio에서 빠른 드라이브의 모델 디렉터리를 지정하기만 하면 됩니다.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 LLM용 $600 이하 최고의 GPU](/ko/prompt-bites/best-gpu-under-600-local-llm) — 빠른 SSD와 적합한 GPU를 함께 구성하십시오',
+          '[로컬 LLM을 위한 최고의 미니 PC](/ko/prompt-bites/best-mini-pc-for-local-llm) — 많은 미니 PC에는 느린 SSD가 기본 탑재됩니다',
+          '[7B 모델에는 RAM이 얼마나 필요합니까?](/ko/prompt-bites/how-much-ram-for-7b-model) — 추론 속도에는 SSD보다 RAM이 더 중요합니다',
+        ],
+      },
+    },
+  },
 }

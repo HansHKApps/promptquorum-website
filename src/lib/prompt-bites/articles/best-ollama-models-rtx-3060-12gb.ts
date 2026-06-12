@@ -643,4 +643,102 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Quantization & VRAM',
+    title: 'RTX 3060 12 GB에 최적인 Ollama 모델은?',
+    seoTitle: 'RTX 3060 12 GB 최적 Ollama 모델 2026 | PromptQuorum',
+    metaDescription: 'RTX 3060 12 GB: 채팅용 Llama 3 8B Q5_K_M (20 토큰/초), 코딩용 Qwen 3 Coder 14B Q4. 두 모델 모두 12 GB VRAM에 탑재 가능합니다. PromptQuorum의 빠른 답변.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ko: {
+        question: 'RTX 3060 12 GB에 최적인 Ollama 모델은?',
+        answer: '12 GB VRAM 환경에서 최적의 범용 모델은 Q5_K_M의 Llama 3 8B로, 균형 잡힌 품질로 초당 20–30 토큰을 제공합니다. 코딩에는 Q4_K_M의 Qwen 3 Coder 14B를 사용하십시오. 두 모델 모두 초당 20–30 토큰으로 동작합니다.',
+        bullets: [
+          'Llama 3 8B Q5_K_M: RTX 3060 최적 범용 모델',
+          'Qwen 3 Coder 14B Q4_K_M: 코딩에 최적',
+          'Mistral Small Q6_K: 채팅용 고속 대안',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '최적 범용 모델: Q5_K_M의 Llama 3 8B — 7 GB VRAM, ~25 토큰/초, 채팅 및 코딩 품질 우수',
+          '최적 코딩 모델: Q4_K_M의 Qwen 3 Coder 14B — 10 GB VRAM, 14B 클래스 최고 HumanEval 점수',
+          'RTX 3060 12 GB는 $400 미만의 소비자용 GPU 중 Q4 양자화로 14B 모델을 실행할 수 있는 유일한 제품입니다',
+        ],
+      },
+      body1: {
+        title: 'RTX 3060 12 GB 최적 Ollama 모델 Top 5',
+        content: [
+          '2026년 5월 기준, <strong>RTX 3060 12 GB는 14B 모델을 로컬에서 실행하는 가장 저렴한 경로입니다.</strong> 12 GB VRAM은 RTX 4070 Ti (~$800)와 RTX 4080 (~$1,100)과 동일한 용량을 훨씬 낮은 비용에 제공합니다. 중고 $280–$350에 3배 비싼 카드와 동일한 모델 탑재 능력을 얻을 수 있으며, 제한은 로드 가능한 모델이 아닌 원시 속도에만 있습니다.',
+          '아래 다섯 모델은 모두 Ollama에서 별도 설정 없이 바로 실행됩니다. 속도 수치는 CPU 오프로드 없는 데스크탑 PC에서 기본 2048 토큰 컨텍스트 기준입니다.',
+        ],
+        columns: ['모델', 'VRAM 사용량', '속도'],
+        rows: [
+          { '모델': 'Llama 3 8B Q5_K_M', 'VRAM 사용량': '7.0 GB', '속도': '~25 토큰/초' },
+          { '모델': 'Qwen 3 Coder 14B Q4_K_M', 'VRAM 사용량': '10.0 GB', '속도': '~20 토큰/초' },
+          { '모델': 'Mistral Small Q6_K', 'VRAM 사용량': '6.5 GB', '속도': '~27 토큰/초' },
+          { '모델': 'Phi-4 Q5_K_M', 'VRAM 사용량': '6.2 GB', '속도': '~28 토큰/초' },
+          { '모델': 'Qwen 14B Q4_K_M', 'VRAM 사용량': '10.0 GB', '속도': '~18 토큰/초' },
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'RTX 3060 12 GB에서 범용 최적 모델은 Q5_K_M의 Llama 3 8B(7 GB VRAM, ~25 토큰/초)이며, 코딩에는 Q4_K_M의 Qwen 3 Coder 14B(10 GB VRAM)가 최선입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'RTX 3060 12 GB를 보유하고 있다면 채팅에는 Llama 3 8B Q5_K_M을, 코딩에는 Qwen 3 Coder 14B Q4_K_M을 사용하십시오. 두 모델 모두 VRAM에 완전히 탑재되며 CPU 오프로드가 필요하지 않습니다.',
+          },
+        ],
+      },
+      body2: {
+        title: 'RTX 3060에서 최고 성능 달성 방법',
+        content: [
+          '범용 사용에는 4096 토큰 컨텍스트 창을 사용하여 Q5_K_M의 Llama 3 8B를 실행하십시오. 이 구성은 총 ~8 GB VRAM을 사용하며 4 GB의 여유를 남겨 모델 전환 시 VRAM 오버플로를 방지합니다.',
+          '코딩에는 Q4_K_M의 Qwen 3 Coder 14B가 명확한 선택입니다. HumanEval에서 Llama 3 8B를 능가하고, 10 GB VRAM에 탑재되며, 파인튜닝 없이 Python, TypeScript, Go를 처리합니다.',
+          '항상 최소 1.5–2 GB VRAM을 여유 공간으로 확보하십시오. 첫 번째 모델을 언로드하지 않고 두 모델을 연속으로 로드하면 VRAM 오버플로가 발생하고 느린 CPU 오프로드가 강제됩니다. GPU 벤치마크 전체 비교는 <a href="/ko/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">로컬 LLM 최적 GPU</a>를 참조하십시오. GPU가 12 GB 미만이라면 <a href="/ko/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB VRAM 최적 모델</a>을 참조하십시오. RTX 3060에서 최적 범용 모델을 실행하려면:',
+        ],
+        codeBlock: 'ollama pull llama3:8b-instruct-q5_K_M\nollama run llama3:8b-instruct-q5_K_M',
+        callouts: [{ type: 'tip', text: '최초 실행 시 Pull이 약 7 GB를 다운로드합니다. 이후 실행은 캐시에서 즉시 시작됩니다. 더 큰 컨텍스트 창이 필요한 경우 <code>--num-ctx 4096</code>을 사용하십시오.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'RTX 3060 모델에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: 'RTX 3060으로 70B 모델을 실행할 수 있습니까?',
+            a: '불가합니다. Q4_K_M의 70B 모델은 약 40 GB VRAM이 필요합니다. RTX 3060 12 GB는 Q4 기준 최대 ~14B 모델까지 실행 가능합니다. 옵션은 <a href="/ko/prompt-bites/vram-for-70b-model" class="text-primary hover:underline">70B 모델에 필요한 VRAM</a>을 참조하십시오.',
+          },
+          {
+            q: 'RTX 3060 12 GB는 로컬 LLM에 적합합니까?',
+            a: '예 — 이 VRAM 등급에서 최고의 가성비를 제공합니다. 12 GB 용량은 Q4 기준 14B 모델을 실행할 수 있으며, 8 GB 카드로는 불가능합니다. 중고 가격은 보통 $280–$350입니다.',
+          },
+          {
+            q: 'RTX 3060 12 GB에서 어떤 양자화를 사용해야 합니까?',
+            a: '7–8B 모델에는 Q5_K_M(12 GB 예산 내 최고 품질), 13–14B 모델에는 Q4_K_M(탑재를 위해 필수)을 사용하십시오. 품질 트레이드오프는 <a href="/ko/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M의 의미</a>를 참조하십시오.',
+          },
+          {
+            q: 'Ollama는 RTX 3060 GPU를 자동으로 사용합니까?',
+            a: '예. Ollama는 Windows와 Linux에서 CUDA를 통해 NVIDIA GPU를 자동으로 감지합니다. 수동 설정이 필요하지 않습니다. <code>ollama run 모델이름</code>을 실행하면 VRAM이 충분할 경우 GPU에 완전히 로드됩니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽을거리',
+        items: [
+          '[6 GB VRAM 최적 로컬 LLM](/ko/prompt-bites/best-local-llm-6gb-vram)',
+          '[Q4_K_M 양자화란?](/ko/prompt-bites/what-is-q4-k-m-quantization)',
+          '[로컬 LLM 최적 GPU](/ko/local-llms/best-gpus-for-local-llms)',
+          '[70B 모델에 필요한 VRAM](/ko/prompt-bites/vram-for-70b-model)',
+        ],
+      },
+    },
+  },
 }

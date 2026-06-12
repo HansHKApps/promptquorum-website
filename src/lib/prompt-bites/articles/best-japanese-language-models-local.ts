@@ -731,4 +731,135 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Model Comparisons',
+    title: '일본어를 가장 잘 지원하는 로컬 LLM 모델은 무엇입니까?',
+    seoTitle: '최고의 일본어 로컬 LLM 2026 | PromptQuorum',
+    metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 7B (다국어 JA/ZH/EN), Phi-4 (10–12 GB): 2026년 Ollama를 통해 실행하는 일본어 작업용 로컬 LLM 4종 비교.',
+    publishDate: '2026-05-27',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-27',
+    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 7B', 'Phi-4'],
+    current_hardware_mentioned: [],
+    educationalLevel: 'Intermediate',
+    audience: '로컬에서 일본어 LLM을 실행하는 개발자 및 사용자',
+    parentArticle: '/local-llms/best-local-llms-for-coding',
+    siblingBites: ['best-ollama-models-cpu-only', 'can-you-run-qwen3-on-ollama'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ko: {
+        question: '일본어를 가장 잘 지원하는 로컬 LLM 모델은 무엇입니까?',
+        answer: '일본어에 최적화된 로컬 LLM은 사용 목적에 따라 다릅니다. 대화에는 Rinna 3.6B(4 GB RAM에서 실행 가능), 명령어 수행에는 ELYZA-7B, 일본어 코딩에는 Qwen3-Coder를 권장합니다. 모두 Ollama를 통해 실행됩니다.',
+        bullets: [
+          'Rinna 3.6B — 일본어 네이티브 모델, 최소 4 GB RAM, 일상 대화에 적합',
+          'ELYZA-7B — 명령어 수행 및 Q&A, 6 GB RAM 필요',
+          'Qwen3 7B — JA/ZH/EN 다국어 지원 및 코딩, 6 GB RAM',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Rinna 3.6B는 가장 가벼운 일본어 네이티브 모델입니다 — 파인튜닝 없이 Ollama를 통해 4 GB RAM으로 실행됩니다',
+          'ELYZA-7B(Llama 파인튜닝)는 일본어 명령어 수행에서 최고 성능을 발휘합니다; Q&A 및 작업 자동화에 활용하십시오',
+          'Qwen3 7B는 최고의 다국어 선택입니다: 일본어와 함께 중국어, 영어를 지원하며 코딩 기능도 포함합니다',
+          '일본어 토크나이제이션은 한자/가나 처리 오버헤드로 인해 영어 대비 유효 토큰/초가 약 20–30% 낮습니다 — 지연 시간 예상치 설정 시 이를 고려하십시오',
+          'Q4_K_M은 일본어 사용 시 권장되는 최소 양자화 수준입니다; Q3 이하는 측정 가능한 품질 저하를 보입니다',
+        ],
+      },
+      body1: {
+        title: '일본어 모델 비교표',
+        content: [
+          '<strong>2026년 5월 기준, 일본어 작업에 특화된 로컬 LLM 5종이 주목받고 있습니다: Rinna 3.6B, ELYZA-7B, CyberAgent CALM3-22B, Qwen3 7B, Phi-4입니다.</strong> 각 모델은 하드웨어 요구사항과 사용 사례가 다릅니다. 아래 표에서 핵심 결정 기준을 확인하십시오.',
+          '선택 기준 요약: RAM이 4 GB뿐이고 일본어 네이티브 대화가 필요하다면 Rinna 3.6B를 사용하십시오. 6 GB 하드웨어에서 구조화된 명령어 수행이 필요하다면 ELYZA-7B를 선택하십시오. 단일 모델로 일본어, 중국어, 영어 다국어 출력이 필요하다면 Qwen3 7B를 사용하십시오.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '2026년 일본어 로컬 LLM 최적 선택은 대화에 Rinna 3.6B, 명령어 수행에 ELYZA-7B, 다국어 작업에 Qwen3 7B입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '로컬 LLM은 인터넷 연결 없이 자신의 컴퓨터에서 실행되는 AI 언어 모델입니다 — 데이터가 외부로 전송되지 않아 개인 정보 보호에 유리합니다.',
+          },
+        ],
+        columns: ['모델', '크기 / 최소 RAM', '최적 용도'],
+        rows: [
+          { '모델': 'Rinna 3.6B', '크기 / 최소 RAM': '3.6B / 4 GB RAM', '최적 용도': '일본어 일상 대화' },
+          { '모델': 'ELYZA-7B', '크기 / 최소 RAM': '7B / 6 GB RAM', '최적 용도': '명령어 수행, Q&A' },
+          { '모델': 'CyberAgent CALM3-22B', '크기 / 최소 RAM': '22B / 16 GB RAM', '최적 용도': '일본어 비즈니스 문서' },
+          { '모델': 'Qwen3 7B', '크기 / 최소 RAM': '7B / 6 GB RAM', '최적 용도': '다국어 JA/ZH/EN, 코딩' },
+          { '모델': 'Phi-4', '크기 / 최소 RAM': '14B / 10–12 GB RAM', '최적 용도': '추론 + 일본어 (파인튜닝 활용)' },
+        ],
+      },
+      body2: {
+        title: '작업별 모델 추천',
+        content: [
+          '<strong>가장 큰 모델을 기본으로 선택하는 대신, 작업에 맞는 모델을 선택하십시오.</strong> 일본어 토크나이제이션은 영어 텍스트 대비 유효 토큰/초가 약 20–30% 낮습니다 — 한자, 히라가나, 가타카나가 각각 별도의 토큰 슬롯을 차지하기 때문입니다. 영어 기준 20 tok/s로 평가된 모델은 일본어에서 약 14–16 tok/s의 실효 처리 속도를 보입니다.',
+          '작업-모델 매핑: <strong>일상 대화</strong> → Rinna 3.6B(가장 가볍고 일본어 네이티브, 파인튜닝 불필요). <strong>비즈니스 문서 및 공식 작성</strong> → ELYZA-7B 또는 CyberAgent CALM3-22B(16 GB RAM이 있을 경우 CALM3이 가장 강력한 선택). <strong>일본어 코딩 지원</strong> → Qwen3-Coder(일본어 주석과 문서를 잘 지원하는 다국어 코드 모델). <strong>일본어, 영어, 중국어 간 번역</strong> → Qwen3 7B(모델 전환 없이 세 언어를 단일 모델로 처리).',
+          '일본어에서는 영어보다 양자화가 품질에 더 큰 영향을 미칩니다. Q4_K_M이 권장 최소 수준입니다 — 테스트 결과 품질 저하가 최소화되었습니다. Q3_K_M은 일본어 출력 품질이 약 5–10% 감소합니다. Q2 양자화는 일본어 사용에 권장하지 않습니다. 이 비교에 포함된 모든 모델은 Ollama 또는 LM Studio를 통해 Q4_K_M으로 제공됩니다.',
+          '일본에서 Android에 이 모델들을 실행하는 앱에 대해서는 <a href="/ko/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">일본 Android용 LLM 앱 가이드</a>를 참조하십시오. 일본에서 7B+ 모델을 일본어로 실행하기 위한 GPU 추천은 <a href="/ko/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">일본 GPU 가격 가이드</a>를 확인하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '일본어 로컬 LLM에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: 'Llama와 Mistral은 일본어를 지원합니까?',
+            a: '기본적인 지원만 가능합니다. Llama 3.3 8B는 일부 일본어 학습 데이터를 포함하지만, 일본어 벤치마크에서 일본어 특화 모델보다 30–40% 낮은 성능을 보입니다. Mistral Small은 일본어 학습 데이터가 매우 적으며 일본어 작업에는 권장하지 않습니다. 안정적인 일본어 출력을 위해서는 ELYZA-7B(Llama 파인튜닝) 또는 Rinna 3.6B를 사용하십시오.',
+          },
+          {
+            q: '양자화가 일본어 품질에 영향을 미칩니까?',
+            a: 'Q4_K_M은 품질 저하가 최소화되어 일본어 사용 시 권장되는 최소 수준입니다. Q3_K_M은 일본어 텍스트 품질이 약 5–10% 감소합니다 — 긴 응답과 공식 문서 작성에서 눈에 띄게 나타납니다. 일본어 사용 시 Q2는 완전히 피하십시오. VRAM이 충분하다면 Q8_0이 최고의 품질을 제공합니다.',
+          },
+          {
+            q: '8 GB MacBook에서 일본어 모델이 작동합니까?',
+            a: '예. Rinna 3.6B Q4와 ELYZA-7B Q4_K_M 모두 Ollama를 통해 8 GB 통합 메모리를 갖춘 MacBook에서 실행됩니다. Apple Silicon은 시스템 RAM을 통합 메모리로 처리하므로 8 GB 전체가 모델에 사용됩니다. M1/M2 하드웨어에서 이 크기의 모델은 약 8–12 tok/s를 기대할 수 있습니다.',
+          },
+          {
+            q: 'Ollama에서 일본어 모델을 시작하는 방법은 무엇입니까?',
+            a: '터미널에서 <code>ollama run rinna</code> 또는 <code>ollama run elyza</code>를 실행하십시오. Ollama는 첫 실행 시 모델을 자동으로 다운로드합니다. 최신 모델 변형 및 양자화 옵션은 ollama.com/library의 Ollama 모델 라이브러리를 참조하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        heading: '관련 콘텐츠',
+        items: [
+          '[CPU 전용 최고의 Ollama 모델](/ko/prompt-bites/best-ollama-models-cpu-only)',
+          '[Ollama에서 Qwen3 실행 가능 여부](/ko/prompt-bites/can-you-run-qwen3-on-ollama)',
+          '[코딩용 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding)',
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Llama와 Mistral은 일본어를 지원합니까?',
+          acceptedAnswer: { '@type': 'Answer', text: '기본적인 지원만 가능합니다. Llama 3.3 8B는 일본어 벤치마크에서 일본어 특화 모델보다 30–40% 낮은 성능을 보입니다. ELYZA-7B 또는 Rinna 3.6B를 사용하십시오.' },
+        },
+        {
+          '@type': 'Question',
+          name: '양자화가 일본어 품질에 영향을 미칩니까?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M은 품질 저하가 최소화되어 일본어 사용 시 권장되는 최소 수준입니다. Q3_K_M은 품질이 약 5–10% 감소하며, Q2는 일본어 사용에 권장하지 않습니다.' },
+        },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: '프롬프트 바이트', item: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { '@type': 'ListItem', position: 3, name: '일본어를 가장 잘 지원하는 로친 LLM 모델은 무엇입니까?', item: 'https://www.promptquorum.com/ko/prompt-bites/best-japanese-language-models-local' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: '일본어를 가장 잘 지원하는 로친 LLM 모델은 무엇입니까?', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-27', url: 'https://www.promptquorum.com/ko/prompt-bites/best-japanese-language-models-local', inLanguage: 'ko' },
+  },
 }

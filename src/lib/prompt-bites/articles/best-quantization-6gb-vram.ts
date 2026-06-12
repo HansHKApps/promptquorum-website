@@ -704,4 +704,117 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Quantization & VRAM',
+    title: '6GB VRAM에 최적화된 양자화: 어떤 레벨이 적합한가?',
+    seoTitle: '6GB VRAM 최적 양자화 2026: Q4_K_M vs Q5_K_M | PromptQuorum',
+    metaDescription: '7B/8B 모델의 Q4_K_M은 4.7~4.9GB를 사용하여 KV 캐시에 1.1GB를 남깁니다. Q5_K_M은 5.7GB로 컨텍스트를 2k로 제한해야 합니다. Q6_K 이상은 6GB를 초과합니다.',
+    publishDate: '2026-05-23',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-23',
+    targetKeywords: [
+      '6GB VRAM 양자화',
+      '6GB 그래픽카드 LLM 실행',
+      'Q4_K_M 6GB VRAM',
+      'Ollama 6GB VRAM 모델',
+      '로컬 LLM 양자화 레벨',
+    ],
+    readTime: '5분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: '6GB VRAM에 가장 적합한 양자화 레벨은 무엇입니까?',
+        answer: 'Q4_K_M이 최적입니다. 7B/8B 모델의 Q4_K_M은 4.7~4.9GB를 사용하며 KV 캐시에 1.1GB를 남깁니다. Q5_K_M도 가능하지만 컨텍스트를 2k 토큰으로 제한해야 합니다. 6GB 카드에서 Q6_K 이상은 사용하지 마십시오.',
+        bullets: [
+          'Llama 3.3 8B / Mistral Small / Qwen 3 7B의 Q4_K_M: 4.7~4.9GB — 4k 컨텍스트로 6GB에서 실행 가능',
+          'Q5_K_M은 ~5.7GB 사용 — 실행 가능하지만 OOM 방지를 위해 컨텍스트를 2k 토큰으로 제한해야 합니다',
+          '14B 모델의 Q4_K_M은 9.3GB 필요 — 어떤 양자화 레벨도 6GB에서 실행 불가능합니다',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      canonicalUrl: 'https://www.promptquorum.com/ko/prompt-bites/best-quantization-6gb-vram',
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: '프롬프트 바이트', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: '6GB VRAM에 최적화된 양자화', url: 'https://www.promptquorum.com/ko/prompt-bites/best-quantization-6gb-vram' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '6GB VRAM 카드(RTX 3060 6GB, RTX 3050 6GB, GTX 1660 Ti 6GB)에서 7B 및 8B 모델에는 Q4_K_M이 올바른 양자화 설정입니다',
+          'Q4_K_M은 1.1GB를 여유 공간으로 남깁니다 — Ollama 기본 컨텍스트 크기 2048에서 4k 토큰 KV 캐시로 충분합니다',
+          'Q5_K_M은 퍼플렉시티를 ~1포인트 개선하지만 5.7GB를 사용합니다. 메모리 부족 오류를 방지하려면 `--ctx-size`를 2048로 줄이십시오',
+          '14B 모델(Qwen 3 14B, Llama 3.3 13B)은 Q4_K_M에서 9.3GB가 필요합니다 — 어떤 양자화 레벨로도 6GB에서 실행이 불가능합니다',
+        ],
+      },
+      body1: {
+        title: '6GB에서 7B/8B 모델의 양자화 레벨별 VRAM 사용량',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Q4_K_M은 6GB VRAM에서 7B/8B 모델의 최적 양자화 레벨이며, 4k 컨텍스트 KV 캐시를 위해 1.1GB를 남깁니다.' },
+          { type: 'plain-terms', text: '양자화 레벨이 높을수록 모델 품질은 향상되지만 더 많은 VRAM이 필요합니다. Q4_K_M은 6GB 카드에서 품질과 메모리 효율의 최적 균형을 제공합니다.' },
+        ],
+        content: [
+          '양자화 레벨은 모델이 사용하는 VRAM 용량을 직접 제어합니다. 70억 및 80억 파라미터 모델 — 6GB GPU에 들어갈 수 있는 가장 큰 클래스 — 의 경우 실용적인 옵션은 Q3_K_M에서 Q5_K_M까지입니다. Q2_K는 들어가지만 품질이 유용한 수준 이하로 저하됩니다. Q6_K 이상은 6GB 한도를 초과합니다.',
+          'Q4_K_M이 권장 기본값입니다. 이 양자화에서 7B 모델은 약 4.7GB를, 8B 모델은 4.9GB를 사용합니다. 이를 통해 Ollama가 컨텍스트 창에 할당하는 KV 캐시에 1.1GB가 남습니다. 기본 2048 토큰 컨텍스트에서는 충분합니다. 컨텍스트를 4096 토큰으로 늘리면 7B 모델에서 약 0.5GB의 추가 KV 캐시가 필요하지만 대부분의 6GB 카드에서 여전히 예산 내에 있습니다.',
+          'Q5_K_M은 그 다음 단계입니다. Q5_K_M에서 8B 모델은 약 5.7GB를 사용하여 300MB만 여유 공간이 남습니다. 매우 짧은 컨텍스트(512~2048 토큰)에는 충분하지만 더 긴 대화나 시스템 프롬프트에서는 OOM 오류가 발생합니다. `num_ctx`를 2048 이하로 유지하는 경우에만 Q5_K_M을 사용하십시오.',
+        ],
+        columns: ['양자화', '7B VRAM', '8B VRAM', '6GB 적합 여부', '최대 컨텍스트 (근사치)'],
+        rows: [
+          { '양자화': 'Q2_K', '7B VRAM': '~2.8 GB', '8B VRAM': '~3.0 GB', '6GB 적합 여부': '✓ (품질 낮음)', '최대 컨텍스트 (근사치)': '8k+' },
+          { '양자화': 'Q3_K_M', '7B VRAM': '~3.5 GB', '8B VRAM': '~3.7 GB', '6GB 적합 여부': '✓ (양호)', '최대 컨텍스트 (근사치)': '8k+' },
+          { '양자화': 'Q4_K_M', '7B VRAM': '~4.7 GB', '8B VRAM': '~4.9 GB', '6GB 적합 여부': '✓ 권장', '최대 컨텍스트 (근사치)': '4k' },
+          { '양자화': 'Q5_K_M', '7B VRAM': '~5.5 GB', '8B VRAM': '~5.7 GB', '6GB 적합 여부': '⚠ 빠듯함 (2k 컨텍스트만)', '최대 컨텍스트 (근사치)': '2k' },
+          { '양자화': 'Q6_K', '7B VRAM': '~6.4 GB', '8B VRAM': '~6.6 GB', '6GB 적합 여부': '✗ OOM', '최대 컨텍스트 (근사치)': '—' },
+          { '양자화': 'Q8_0', '7B VRAM': '~7.5 GB', '8B VRAM': '~7.7 GB', '6GB 적합 여부': '✗ OOM', '최대 컨텍스트 (근사치)': '—' },
+        ],
+      },
+      body2: {
+        title: '6GB VRAM에서 Q4_K_M으로 실행할 수 있는 최고의 모델',
+        content: [
+          '6GB 카드에서 Q4_K_M으로 세 가지 7B/8B 모델이 두드러집니다. Qwen 3 7B Instruct는 가장 균형 잡혀 있습니다 — 코드 성능 우수(HumanEval ~60%), 다국어 지원, 128k 컨텍스트 아키텍처(단, VRAM 제한으로 4k에서 작동). `ollama run qwen2.5:7b`로 실행하십시오.',
+          'Llama 3.3 8B는 가장 빠른 옵션입니다. Q4_K_M에서 RTX 3060 6GB 기준 약 25 토큰/초로 실행되며 일반 대화 및 지시 따르기를 안정적으로 처리합니다. MMLU 점수 66.6%는 Qwen 3 7B보다 낮지만 속도 이점 덕분에 대화형 세션에 적합합니다.',
+          'Phi-4 Mini (3.8B)는 의외의 선택입니다. Q8_0에서 약 4.1GB를 차지하여 6GB 내에 편안하게 들어가며 추론 벤치마크에서 동일 크기 클래스를 능가합니다. 이전 7B 모델보다 더 나은 추론으로 5GB 미만의 메모리 사용이 필요할 때 사용하십시오. `ollama run phi4-mini`로 실행하십시오.',
+          '6GB에서 14B 모델은 시도하지 마십시오. Q4_K_M에서 Qwen 3 14B는 9.3GB가 필요합니다. Q2_K로 낮추면 약 5.5GB로 줄어들지만 퍼플렉시티 패널티가 심각합니다 — 모델이 현저히 저하된 출력을 생성합니다. Q4_K_M의 7B/8B 또는 Q8_0의 3B/4B 모델을 사용하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '6GB VRAM 양자화에 관한 빠른 답변',
+        faqs: [
+          {
+            q: '6GB VRAM에서 14B 모델을 실행할 수 있습니까?',
+            a: '실행 가능한 솔루션이 없습니다. Q4_K_M에서 Qwen 3 14B는 9.3GB가 필요합니다. Q2_K로 낮추면 약 5.5GB로 줄어들지만 품질 저하가 심각하여 출력이 현저히 비일관적으로 됩니다. 6GB VRAM에 적합한 모델은 Q4_K_M의 7B 또는 8B 모델입니다.',
+          },
+          {
+            q: 'Q4_K_M과 Q4_K_S 중 6GB VRAM에 더 적합한 것은 무엇입니까?',
+            a: 'Q4_K_M입니다. Q4_K_S 변형은 Q4_K_M에 비해 약 200MB를 절약하지만 퍼플렉시티 패널티가 더 큽니다. 6GB 카드에서 Q4_K_M은 이미 1.1GB의 여유를 남기므로 Q4_K_S의 추가 200MB 절약은 필요 없으며 품질 저하는 가치가 없습니다.',
+          },
+          {
+            q: '6GB VRAM에서 Q4_K_M 대신 Q5_K_M을 사용해야 합니까?',
+            a: '컨텍스트를 2k 토큰으로 엄격히 제한하는 경우에만 가능합니다. Q5_K_M은 Q4_K_M에 비해 퍼플렉시티를 약 1~1.5포인트 개선하지만 8B 모델에서 5.7GB를 사용하여 KV 캐시에 300MB만 남깁니다. 세션 중 OOM을 방지하기 위해 Modelfile 또는 Ollama 파라미터에서 `num_ctx 2048`을 설정하십시오.',
+          },
+          {
+            q: '모델이 6GB VRAM 한도를 초과하면 어떻게 됩니까?',
+            a: 'Ollama는 초과 레이어를 CPU RAM으로 오프로드합니다(llama.cpp의 레이어 오프로딩 사용). 이로 인해 속도가 급격히 떨어집니다 — GPU 전용 ~25 토큰/초에서 부분 CPU 오프로드 시 ~3~5 토큰/초로 감소합니다. "n_gpu_layers" 경고가 표시되거나 초당 토큰이 5 미만으로 떨어지면 선택한 양자화 설정으로 VRAM에 비해 모델이 너무 큰 것입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽을거리',
+        items: [
+          '[6GB VRAM에서 실행할 수 있는 최고의 LLM 모델](/ko/local-llms/best-llm-models-6gb-vram)',
+          '[Ollama에서 컨텍스트 크기 설정하는 방법](/ko/prompt-bites/ollama-context-size)',
+          '[GGUF란 무엇인가: 로컬 LLM 파일 형식 설명](/ko/local-llms/what-is-gguf)',
+          '[RTX 3060에서 LLM 실행 가이드](/ko/local-llms/run-llm-rtx-3060)',
+        ],
+      },
+    },
+  },
 }

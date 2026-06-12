@@ -863,4 +863,132 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       ],
     },
   },
+  ko: {
+    theme: 'Model Comparisons',
+    title: 'DeepSeek V3를 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?',
+    seoTitle: 'DeepSeek V3 로컬 실행 2026: 400 GB RAM과 실용적 대안',
+    metaDescription: 'DeepSeek V3 (671B MoE)는 Q4_K_M 양자화 기준 약 400 GB RAM이 필요합니다. 소비자용 하드웨어에서는 실행 불가합니다. VRAM 수준별 증류 모델 대안을 정확한 수치로 안내합니다.',
+    publishDate: '2026-05-26',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    educationalLevel: 'Intermediate',
+    audience: 'DeepSeek V3를 로컬에서 실행하려는 사용자',
+    parentArticle: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
+    siblingBites: ['vram-for-70b-model', 'best-moe-models-local-coding'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ko: {
+        question: 'DeepSeek V3를 로컬에서 실행할 수 있습니까?',
+        answer: '아닙니다. DeepSeek V3 (671B MoE)는 Q4_K_M 기준 약 400 GB RAM이 필요합니다. 소비자용 하드웨어로는 불가능합니다. 실용적 대안: DS-R1-Distill-Qwen-32B (20.5 GB VRAM, 94% MATH-500).',
+        bullets: [
+          'DeepSeek V3: 671B MoE — Q4_K_M 기준 약 400 GB RAM 필요',
+          '소비자용 GPU로는 로드 불가',
+          'DS-R1-Distill-Qwen-32B: 20.5 GB VRAM, 94% MATH-500 ✓',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'DeepSeek V3 (671B MoE) Q4_K_M 기준 약 400 GB RAM 필요 — 2026년 기준 소비자용 하드웨어로는 실행 불가',
+          'DS-R1-Distill-Qwen-32B: 20.5 GB VRAM, 94% MATH-500 — 가장 실용적인 로컬 추론 모델',
+          '8 GB VRAM 환경: DS-R1-Distill-Qwen-7B (5.5 GB), 88% MATH-500',
+          'MoE 특성 주의: DeepSeek V3는 포워드 패스당 약 37B 파라미터만 활성화하지만, 671B 전체 가중치가 메모리에 동시에 로드되어야 합니다',
+        ],
+      },
+      hardware: {
+        id: 'hardware-requirements',
+        title: 'DeepSeek V3 하드웨어 요구사항 현실 점검',
+        content: [
+          '**전체 모델 (671B, Q4_K_M):** 약 400 GB RAM 필요 — 서버급 워크스테이션이 필요합니다. 소비자용 GPU로는 지원되지 않습니다.',
+          '**MoE가 이 경우 도움이 되지 않는 이유:** DeepSeek V3는 포워드 패스당 약 37B 파라미터만 활성화합니다. 하지만 671B 전체 가중치 텐서가 메모리에 동시에 존재해야 합니다.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'DeepSeek V3 전체 모델(671B MoE)은 Q4_K_M 양자화 기준 약 400 GB RAM이 필요하므로 소비자용 하드웨어로는 실행이 불가능합니다.' },
+          { type: 'plain-terms', text: 'DeepSeek V3는 671억 개 파라미터를 가진 MoE 모델입니다. Q4_K_M 양자화로도 약 400 GB RAM이 필요해 일반 소비자 GPU로는 실행할 수 없습니다. 대신 DS-R1-Distill-Qwen-32B 같은 증류 모델을 사용하십시오.' },
+        ],
+        comparisonTable: {
+          columns: ['모델', '파라미터', 'RAM (Q4_K_M)', 'VRAM', '로컬 실행 가능?'],
+          rows: [
+            { '모델': 'DeepSeek V3 (전체)', '파라미터': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'N/A', '로컬 실행 가능?': '❌ 불가' },
+            { '모델': 'DS-R1-Distill-Qwen-32B', '파라미터': '32B', 'RAM (Q4_K_M)': '20.5 GB', 'VRAM': '20.5 GB', '로컬 실행 가능?': '✅ RTX 4090 / M3 Max' },
+            { '모델': 'DS-R1-Distill-Qwen-14B', '파라미터': '14B', 'RAM (Q4_K_M)': '9.5 GB', 'VRAM': '9.5 GB', '로컬 실행 가능?': '✅ RTX 3080 / M2 Pro' },
+            { '모델': 'DS-R1-Distill-Qwen-7B', '파라미터': '7B', 'RAM (Q4_K_M)': '5.5 GB', 'VRAM': '5.5 GB', '로컬 실행 가능?': '✅ RTX 3060 / M2' },
+          ],
+        },
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: '하드웨어 수준별 실용적 대안 모델',
+        content: [
+          '**8 GB VRAM (RTX 3060 / M2):** DS-R1-Distill-Qwen-7B Q4_K_M — 88% MATH-500, 7B 범주에서 가장 강력한 로컬 추론 모델입니다.',
+          '**12–16 GB VRAM (RTX 3080 / M2 Pro):** DS-R1-Distill-Qwen-14B Q4_K_M — 90% MATH-500, 복잡한 문제에서 단계별 추론이 가능합니다.',
+          '**24 GB VRAM (RTX 4090 / M3 Max):** DS-R1-Distill-Qwen-32B Q4_K_M — 94% MATH-500, 표준 수학 벤치마크에서 V3 전체 모델을 능가합니다.',
+          '**64+ GB RAM (전용 GPU 없음):** Qwen3-72B Q4_K_M — CPU 추론, 0.5–1 tok/s, 범용 목적에서 최고의 로컬 대형 모델입니다.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: 'DeepSeek V3를 로컬에서 실행하려면 RAM이 얼마나 필요합니까?', a: 'Q4_K_M 양자화 기준 약 400 GB RAM이 필요합니다. FP16 정밀도에서는 1.3 TB 이상의 RAM이 필요합니다.' },
+          { q: 'llama.cpp로 DeepSeek V3를 실행할 수 있습니까?', a: '약 400 GB RAM이 있다면 기술적으로 가능하지만, 추론 속도가 약 0.1–0.5 tok/s에 불과합니다. 실용적 사용을 위해서는 증류 버전이 올바른 선택입니다.' },
+          { q: '증류 버전이 DeepSeek V3만큼 성능이 좋습니까?', a: '추론 작업에서: DS-R1-Distill-Qwen-32B (94% MATH-500)는 수학 벤치마크에서 V3 전체 모델을 능가합니다. 광범위한 일반 지식에서는 V3가 더 낫지만, 클라우드 API 접근이 필요합니다.' },
+          { q: 'DeepSeek V3와 DeepSeek-R1의 차이는 무엇입니까?', a: 'DeepSeek V3는 범용 채팅 모델(671B MoE)입니다. DeepSeek-R1은 강화학습으로 훈련된 추론 모델입니다. 증류 버전(Qwen-7B/14B/32B)은 R1의 추론 능력을 보존한 더 작은 밀집 모델입니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[로컬 LLM을 위한 VRAM 요구사항: 70B 모델 가이드](/ko/prompt-bites/vram-for-70b-model)',
+          '[로컬 코딩용 최고의 MoE 모델](/ko/prompt-bites/best-moe-models-local-coding)',
+          '[DeepSeek vs Qwen 로컬 비교 2026](/ko/power-local-llm/deepseek-vs-qwen-local-comparison-2026)',
+        ],
+      },
+    },
+    readTime: '4분 분량',
+    targetKeywords: [
+      'DeepSeek V3 로컬 실행',
+      'DeepSeek V3 RAM 요구사항',
+      'DeepSeek V3 VRAM',
+      'DeepSeek V3 하드웨어 사양',
+      '로컬 LLM 671B 실행',
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'DeepSeek V3 로컬 실행 하드웨어 요구사항: 가능합니까?',
+      description: 'DeepSeek V3 (671B MoE)는 약 400 GB RAM이 필요합니다. 소비자용 하드웨어로는 실행이 불가능합니다. VRAM 수준별 실용적인 증류 모델 대안을 안내합니다.',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/deepseek-v3-local-hardware-requirements',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      about: [{ '@type': 'Thing', name: 'DeepSeek V3 로컬 배포' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { '@type': 'ListItem', position: 3, name: 'DeepSeek V3 로컬 실행 하드웨어 요구사항', item: 'https://www.promptquorum.com/ko/prompt-bites/deepseek-v3-local-hardware-requirements' },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: 'DeepSeek V3를 로컬에서 실행하려면 RAM이 얼마나 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M 양자화 기준 약 400 GB RAM이 필요합니다. 소비자용 하드웨어로는 실행이 불가능합니다.' } },
+        { '@type': 'Question', name: 'DeepSeek V3의 최고 로컬 대안은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'DS-R1-Distill-Qwen-32B — 20.5 GB VRAM, 94% MATH-500으로 수학 벤치마크에서 V3 전체 모델을 능가합니다.' } },
+      ],
+    },
+  },
 }

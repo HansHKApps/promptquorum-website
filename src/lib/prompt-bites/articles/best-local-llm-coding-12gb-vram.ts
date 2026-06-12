@@ -668,4 +668,112 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Hardware-Specific',
+    title: '12 GB VRAM으로 코딩에 최적인 로컬 LLM은?',
+    seoTitle: '12 GB VRAM 코딩 최적 LLM 2026 | PromptQuorum',
+    metaDescription: 'Qwen 3 Coder 14B Q4_K_M: 12 GB VRAM 코딩 최고 모델, ~10 GB 사용, HumanEval 최고점. DeepSeek 14B Q4 대안. RTX 3060/3080 Ti 모두 지원.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    targetKeywords: [
+      '12GB VRAM 코딩 LLM',
+      'RTX 3060 로컬 LLM 코딩',
+      'Qwen 3 Coder 14B 한국어',
+      '12 GB VRAM 최적 AI 모델',
+      '로컬 LLM 코드 생성 2026',
+    ],
+    readTime: '5분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: '12 GB VRAM으로 코딩에 최적인 로컬 LLM은 무엇입니까?',
+        answer: 'Qwen 3 Coder 14B Q4_K_M은 RTX 3060과 같은 12 GB VRAM GPU에서 코딩에 가장 적합한 모델입니다. VRAM을 약 10 GB 사용하며 이 제약 조건에 맞는 모델 중 HumanEval 점수가 가장 높습니다. DeepSeek Coder 14B는 강력한 대안입니다.',
+        bullets: [
+          'Qwen 3 Coder 14B Q4_K_M: ~10 GB VRAM 사용, 이 크기에서 코딩 벤치마크 최고점',
+          'DeepSeek Coder 14B Q4_K_M: 유사한 VRAM, 코드 완성에서 경쟁력 있음',
+          '두 모델 모두 RTX 3060 12 GB와 RTX 3080 Ti 12 GB에서 구동 가능',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-coding-12gb-vram',
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: 'Prompt Bites', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: '12 GB VRAM 코딩 최적 로컬 LLM', url: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-coding-12gb-vram' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Qwen 3 Coder 14B Q4_K_M은 VRAM 약 10 GB를 사용하며 RTX 3060 12 GB 또는 RTX 3080 Ti 12 GB에 2 GB 여유를 두고 탑재됩니다.',
+          '짧은 컨텍스트(≤4k 토큰) 환경에서 Qwen과 DeepSeek Coder 14B는 12 GB 카드에서 14~18 tok/s로 구동됩니다.',
+          '8k 토큰 이상의 컨텍스트 세션에서는 VRAM이 약 11.5 GB까지 증가합니다. 12 GB에서 안정적인 사용을 위해 8k 미만을 권장합니다.',
+          'Qwen 3 Coder 14B는 HumanEval에서 78.4%를 달성하며, DeepSeek Coder 14B는 75.1%로 모든 7B 코딩 모델을 크게 능가합니다.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: '12 GB VRAM 환경에서 코딩에 가장 적합한 로컬 LLM은 Qwen 3 Coder 14B Q4_K_M이며 HumanEval 78.4%를 기록합니다.' },
+          { type: 'plain-terms', text: 'VRAM 12 GB인 RTX 3060이나 RTX 3080 Ti를 사용하는 개발자는 Qwen 3 Coder 14B Q4_K_M을 선택하면 약 10 GB VRAM으로 최고 수준의 코드 생성 성능을 얻을 수 있습니다.' },
+        ],
+      },
+      body1: {
+        title: 'Qwen 3 Coder 14B: 12 GB VRAM을 위한 최선의 선택',
+        content: [
+          '<strong>Q4_K_M 양자화를 적용한 Qwen 3 Coder 14B는 VRAM 약 10 GB를 사용하여 12 GB 카드에 2 GB 여유를 남깁니다. 이는 운영 체제와 Ollama 런타임을 위한 충분한 공간입니다.</strong> 2026년 5월 기준 로컬 배포 가능한 14B 이하 코딩 모델 중 HumanEval 78.4%로 가장 높은 점수를 기록합니다.',
+          'Q4_K_M 양자화의 DeepSeek Coder 14B는 VRAM 사용량이 거의 동일하며(~10 GB) HumanEval에서 75.1%를 달성합니다. 차이는 작지만, Qwen 3 Coder는 개발자가 가장 많이 다루는 Python과 TypeScript 작업에서 일관적으로 우세합니다.',
+          '두 모델 모두 RTX 3060 12 GB와 RTX 3080 Ti 12 GB에서 동일하게 동작합니다. RTX 3080 Ti는 메모리 대역폭이 더 높아(912 GB/s 대 360 GB/s) 동일한 모델과 양자화 조건에서 약 18 tok/s 대 14 tok/s의 차이를 냅니다.',
+        ],
+        columns: ['모델', 'VRAM', 'HumanEval', '속도 (RTX 3060)', '속도 (RTX 3080 Ti)'],
+        rows: [
+          { '모델': 'Qwen 3 Coder 14B Q4_K_M', 'VRAM': '~10 GB', 'HumanEval': '78.4%', '속도 (RTX 3060)': '~14 tok/s', '속도 (RTX 3080 Ti)': '~18 tok/s' },
+          { '모델': 'DeepSeek Coder 14B Q4_K_M', 'VRAM': '~10 GB', 'HumanEval': '75.1%', '속도 (RTX 3060)': '~14 tok/s', '속도 (RTX 3080 Ti)': '~18 tok/s' },
+          { '모델': 'Qwen 3 Coder 7B Q4_K_M', 'VRAM': '~5 GB', 'HumanEval': '72.1%', '속도 (RTX 3060)': '~28 tok/s', '속도 (RTX 3080 Ti)': '~38 tok/s' },
+        ],
+      },
+      body2: {
+        title: '컨텍스트 길이가 VRAM 사용량을 결정합니다',
+        content: [
+          '4k 컨텍스트에서는 두 14B 모델 모두 VRAM 약 10 GB를 사용하며 안정적으로 구동됩니다. <strong>8k 컨텍스트에서는 VRAM이 약 11.5 GB까지 증가하여 12 GB 카드에 500 MB 여유만 남습니다.</strong> 16k 컨텍스트에서는 14B Q4_K_M 모델이 12 GB VRAM 한계를 초과하여 CPU로 부분 오프로드가 시작되고 속도가 약 3 tok/s로 떨어집니다.',
+          '실제 코딩 사용 시 4k 컨텍스트로 단일 파일 완성과 코드 리뷰 세션 대부분을 처리할 수 있습니다. 전체 저장소나 대규모 리팩토링 같은 긴 컨텍스트 작업에는 16 GB 또는 24 GB GPU가 필요하거나, VRAM 약 5 GB만 사용하는 7B 변형으로 전환해야 합니다.',
+          '대용량 파일을 자주 다루면서 12 GB 카드를 유지하려는 경우 Qwen 3 Coder 7B Q4_K_M을 고려하십시오. RTX 3060에서 약 28 tok/s로 구동되고 HumanEval 72.1%를 달성하며 컨텍스트를 위해 7 GB VRAM을 확보합니다. 14B 대 7B 트레이드오프에 대한 자세한 내용은 <a href="/ko/prompt-bites/best-14b-models-coding" class="text-primary hover:underline">최고의 14B 코딩 모델 비교</a>를 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '12 GB VRAM 코딩 LLM에 관한 빠른 답변',
+        faqs: [
+          {
+            q: '12 GB VRAM에서 더 나은 선택은 RTX 3060입니까, RTX 3080 Ti입니까?',
+            a: '두 카드 모두 12 GB VRAM을 탑재하며 동일한 모델을 구동합니다. RTX 3080 Ti의 메모리 대역폭은 912 GB/s로 RTX 3060의 360 GB/s보다 약 2.5배 빠릅니다. 선택권이 있다면 RTX 3080 Ti가 동일한 VRAM 용량에도 불구하고 LLM 추론에서 현저히 뛰어난 성능을 발휘합니다.',
+          },
+          {
+            q: '12 GB VRAM에 20B 또는 22B 모델을 올릴 수 있습니까?',
+            a: 'Q3_K_M 양자화를 사용하면 일부 20B 모델이 약 12 GB에 맞지만, Q3 양자화는 코드 작업에서 눈에 띄는 품질 저하를 유발합니다. Qwen 3 Coder 14B Q4_K_M은 이 범위에서 매개변수 수보다 양자화 품질이 더 중요하기 때문에 대부분의 코딩 벤치마크에서 Q3_K_M의 Qwen 3 Coder 20B를 능가합니다.',
+          },
+          {
+            q: 'RTX 3060에서 Qwen 3 Coder 14B를 Ollama에 설치하려면 어떻게 합니까?',
+            a: '<code>ollama pull qwen2.5-coder:14b-instruct-q4_K_M</code>을 실행하십시오. Ollama는 NVIDIA GPU를 자동으로 감지하고 CUDA를 사용합니다. <code>ollama ps</code>로 GPU 사용 여부를 확인하십시오. 모델이 CPU가 아닌 GPU에서 실행 중으로 표시되어야 합니다. CPU로 폴백되면 CUDA 드라이버 최신 여부를 확인하십시오.',
+          },
+          {
+            q: '코드 완성에 전용 코딩 모델이 범용 모델보다 우수합니까?',
+            a: '예, 현저하게 우수합니다. Qwen 3 Coder 14B는 HumanEval에서 78.4%를 기록합니다. 비슷한 크기의 범용 Mistral 12B는 약 60%에 그칩니다. 18점 차이는 코드 특화 사전 학습 데이터를 반영합니다. 진지한 코딩 작업에는 동일한 크기의 범용 모델 대신 항상 코드 특화 모델을 선택하십시오. <a href="/ko/prompt-bites/qwen-coder-vs-deepseek-coder" class="text-primary hover:underline">Qwen Coder 대 DeepSeek Coder 가이드</a>에서 옵션을 비교하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[14B 코딩 모델 비교](/ko/prompt-bites/best-14b-models-coding)',
+          '[Qwen Coder vs DeepSeek Coder](/ko/prompt-bites/qwen-coder-vs-deepseek-coder)',
+          '[코딩을 위한 최고의 로컬 LLM 가이드](/ko/local-llms/best-local-llms-for-coding)',
+        ],
+      },
+    },
+  },
 }

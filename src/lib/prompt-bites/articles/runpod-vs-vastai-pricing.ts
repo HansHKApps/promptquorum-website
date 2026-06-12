@@ -1121,4 +1121,150 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Tool Comparisons',
+    title: 'RunPod 대 Vast.ai: 2026년에 어느 쪽이 더 저렴합니까?',
+    seoTitle: 'RunPod 대 Vast.ai 가격 2026 | Prompt Bites',
+    metaDescription: 'Vast.ai는 스팟/중단 가능 GPU에서 더 저렴합니다. RunPod는 지속적인 워크로드에 더 안정적입니다. 2026년 5월 기준 시간당 요금 — 현재 요금을 다시 확인하십시오.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['RTX 4090', 'A100', 'H100'],
+    educationalLevel: 'Intermediate',
+    audience: 'GPU 렌탈을 위해 RunPod와 Vast.ai 중 하나를 선택하는 개발자',
+    affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
+    siblingBites: ['cloud-gpu-cost-per-hour', 'best-gpu-under-600-local-llm'],
+    is_living_page: false,
+    readTime: '4분 분량',
+    leadAnswerBlock:
+      'Vast.ai는 스팟 및 중단 가능 GPU 렌탈에서 더 저렴합니다. RunPod는 지속적인 워크로드에 더 안정적입니다. Vast.ai의 P2P 마켓플레이스는 가격을 RunPod의 관리형 요금 이하로 낮추지만, 인스턴스가 회수될 수 있습니다. 짧은 실험에는 Vast.ai를, 프로덕션 훈련에는 RunPod를 선택하십시오.',
+    targetKeywords: [
+      'RunPod Vast.ai 비교',
+      '클라우드 GPU 렌탈 가격',
+      'Vast.ai RTX 4090 요금',
+      'RunPod 시간당 가격',
+      '저렴한 클라우드 GPU 2026',
+    ],
+    toc: [
+      { label: '사용 사례별 최선의 선택', anchor: '#best-pick' },
+      { label: 'RunPod 대 Vast.ai 시간당 요금', anchor: '#comparison' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 자료', anchor: '#related' },
+    ],
+    intro:
+      'RunPod와 Vast.ai 모두 시간 단위로 GPU를 대여하지만 모델이 다릅니다. RunPod는 고정 요금의 관리형 클라우드입니다. Vast.ai는 개인 호스트가 가격을 설정하는 P2P 마켓플레이스로, 가격이 더 낮은 경우가 많으며 중단될 수 있습니다. 선택은 워크로드 기간과 안정성 요구 사항에 따라 다릅니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'RunPod 대 Vast.ai — 클라우드 GPU 렌탈에서 어느 쪽이 더 저렴합니까?',
+        answer: 'Vast.ai는 스팟 인스턴스에서 더 저렴합니다 (RTX 4090 약 $0.15/hr 대 RunPod 약 $0.44/hr). RunPod는 보장된 가동 시간으로 더 안정적입니다.',
+        bullets: [
+          'Vast.ai 스팟 RTX 4090: $0.10-0.25/hr; 온디맨드: $0.50-0.80/hr.',
+          'RunPod Secure Cloud RTX 4090: $0.44/hr — 콜드 스타트 없음, 가용성 보장.',
+          '배치 추론 작업에는 Vast.ai, 인터랙티브 세션이나 프로덕션 API에는 RunPod를 사용하십시오.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Vast.ai는 스팟/중단 가능 GPU에서 일반적으로 더 저렴합니다. 특히 RTX 4090과 같은 소비자용 카드에서 두드러집니다.',
+          'RunPod는 더 예측 가능한 가동 시간과 통합 지원 채널을 제공합니다. 지속적인 또는 프로덕션 운영에 더 적합합니다.',
+          'Vast.ai 요금은 호스트마다 다릅니다. 예약 전에 현재 목록을 확인하십시오. 아래 인용된 범위는 2026년 5월 기준 근사치입니다.',
+          '중단 허용 작업(파인튜닝, 배치 추론)에는 Vast.ai가 비용 면에서 유리합니다. 라이브 프로덕션에는 RunPod가 더 안전한 선택입니다.',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: '최선의 선택: 비용에는 Vast.ai, 안정성에는 RunPod',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Vast.ai는 중단을 허용할 수 있는 경우 시간당 최저 요금을 제공하며, RunPod는 중단 없는 실행이 필요한 워크로드에 더 적합합니다.' },
+          { type: 'plain-terms', text: 'Vast.ai는 개인 호스트들이 가격 경쟁을 하는 P2P 마켓플레이스입니다. RunPod는 고정 요금의 관리형 클라우드로 안정성이 높습니다.' },
+        ],
+        content: [
+          '<strong>중단을 허용할 수 있고 최저 시간당 요금이 목표라면 Vast.ai가 최선의 선택입니다. 워크로드가 중단 없이 실행되어야 한다면 RunPod가 최선의 선택입니다.</strong> 두 서비스는 서로 다른 요구 사항을 충족합니다. 단일 승자는 없습니다.',
+          'Vast.ai의 마켓플레이스 모델에서는 개인 호스트들이 가격으로 경쟁하여 소비자 GPU 요금(RTX 4090, RTX 3090)을 관리형 클라우드 요금보다 훨씬 낮춥니다. 단점은 중단 가능성입니다. 호스트가 짧은 통보로 인스턴스를 회수할 수 있습니다. 체크포인트가 가능한 파인튜닝 실행, 배치 추론, 또는 일회성 실험에는 적합합니다.',
+          'RunPod는 일관된 가동 시간, 통합 지원 팀, 예측 가능한 요금을 갖춘 관리형 데이터센터 클라우드를 운영합니다. 시간당 요금은 더 비싸지만 P2P 마켓의 변동성을 피할 수 있습니다. 프로덕션 API 엔드포인트, 장기 훈련 작업, 또는 갑작스러운 중단이 비용이 많이 드는 워크로드에는 RunPod를 선택하십시오.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.vast.ai',
+            productName: 'Vast.ai',
+            productCategory: 'cloud-gpu',
+            label: 'Vast.ai의 현재 GPU 요금 확인하기',
+          },
+          {
+            url: 'https://www.runpod.io',
+            productName: 'RunPod',
+            productCategory: 'cloud-gpu',
+            label: 'RunPod의 현재 GPU 요금 확인하기',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'RunPod 대 Vast.ai 시간당 근사 요금',
+        content: [
+          '<strong>아래 요금은 2026년 5월 기준 근사 범위입니다. 예약 전에 실시간 대시보드를 확인하십시오.</strong> Vast.ai 요금은 호스트 및 지역에 따라 다릅니다. 범위의 하한은 일반적으로 중단 가능 인스턴스입니다.',
+        ],
+        columns: ['GPU', 'Vast.ai (근사)', 'RunPod (근사)', '비고'],
+        rows: [
+          {
+            'GPU': 'RTX 4090 24 GB',
+            'Vast.ai (근사)': '$0.30-0.55/hr',
+            'RunPod (근사)': '$0.60-0.80/hr',
+            '비고': 'Vast.ai는 소비자 카드에서 일반적으로 더 저렴합니다',
+          },
+          {
+            'GPU': 'A100 80 GB',
+            'Vast.ai (근사)': '$0.90-1.40/hr',
+            'RunPod (근사)': '$1.20-1.90/hr',
+            '비고': '데이터센터 카드; 차이가 더 작습니다',
+          },
+          {
+            'GPU': 'H100 80 GB',
+            'Vast.ai (근사)': '$2.20-3.50/hr',
+            'RunPod (근사)': '$2.70-4.00/hr',
+            '비고': '고급 카드; 가용성이 가변적입니다',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'RunPod와 Vast.ai에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'Vast.ai는 항상 RunPod보다 저렴합니까?',
+            a: '일반적으로 그렇지만 항상 그런 것은 아닙니다. Vast.ai는 마켓플레이스이므로 가격은 호스트와 시간대에 따라 다릅니다. RTX 4090과 같은 소비자 GPU에서는 Vast.ai가 일반적으로 30~50% 더 저렴합니다. 데이터센터 카드에서는 차이가 줄어듭니다.',
+          },
+          {
+            q: 'Vast.ai에서 "중단 가능"은 무엇을 의미합니까?',
+            a: '중단 가능 인스턴스는 짧은 통보로 호스트가 회수할 수 있습니다. 일반적으로 5~30초입니다. 저장되지 않은 상태는 손실됩니다. 정기적으로 체크포인트를 저장하거나 처음부터 재개할 수 있는 워크로드에만 중단 가능 인스턴스를 사용하십시오.',
+          },
+          {
+            q: '모델 파인튜닝에는 어느 서비스가 더 적합합니까?',
+            a: '체크포인트가 있는 단기 파인튜닝에는 Vast.ai가 비용 면에서 일반적으로 유리합니다. 재시작 비용이 높은 장기 지속 훈련에는 RunPod의 안정성이 높은 시간당 요금을 정당화합니다.',
+          },
+          {
+            q: '이 요금에 스토리지와 대역폭이 포함됩니까?',
+            a: '아닙니다. 두 플랫폼 모두 영구 스토리지와 아웃바운드 대역폭을 별도로 청구합니다. 특히 대용량 모델 가중치나 방대한 데이터셋을 사용할 경우 총 비용에 포함시키십시오.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: '관련 자료',
+        items: [
+          '[클라우드 GPU 시간당 비용은 얼마입니까?](/ko/prompt-bites/cloud-gpu-cost-per-hour) — 공급업체 간 더 넓은 시장 개요',
+          '[로컬 LLM용 $600 이하 최고의 GPU](/ko/prompt-bites/best-gpu-under-600-local-llm) — 카드를 구매하는 것이 대여보다 나은 경우',
+          '[2026 로컬 LLM용 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 구매 대 대여 결정의 맥락',
+        ],
+      },
+    },
+  },
 }

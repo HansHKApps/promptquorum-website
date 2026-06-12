@@ -705,4 +705,109 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Model Comparisons',
+    title: '로컬 LLM용 최고의 미니 PC는?',
+    seoTitle: '로컬 LLM용 최고의 미니 PC 2026 | PromptQuorum',
+    metaDescription: 'Mac Mini M4는 7B Q4에서 ~18 tok/s 달성. Minisforum UM790 Pro는 64 GB DDR5까지 확장 가능. Beelink SER8: ~8 tok/s의 가성비 선택. 2026년 로컬 LLM용 미니 PC 3종 비교.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    schema: {
+      inLanguage: 'ko',
+      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-local-llm',
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: 'Prompt Bites', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: '로컬 LLM용 최고의 미니 PC는?', url: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-local-llm' },
+      ],
+    },
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 LLM용 최고의 미니 PC는 무엇입니까?',
+        answer: '로컬 LLM 추론에 뛰어난 미니 PC 세 가지가 있습니다. Mac Mini M4는 통합 메모리로 VRAM 병목 없이 ~18 tok/s를 제공하며, Minisforum UM790 Pro는 더 큰 모델을 위해 64 GB DDR5까지 확장 가능하고, Beelink SER8은 Ryzen 9 8845HS로 ~8 tok/s의 가성비를 제공합니다. 세 제품 모두 전용 GPU 없이 7–13B Q4 모델을 실행합니다.',
+        bullets: [
+          'Mac Mini M4: LLM용 가장 빠른 미니 PC, Llama 3 8B에서 ~18 tok/s, 전력 효율 우수',
+          'Minisforum UM790 Pro: AMD Radeon 780M iGPU, 통합 RAM 최대 64 GB',
+          'Beelink SER8: Ryzen 9 8845HS, ~8 tok/s, 경제적인 대안',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Mac Mini M4는 ~599 USD(한국 기준 약 89만 원)부터 시작하며, Apple Metal GPU 가속을 사용해 부하 시 ~30 W 소비로 7B Q4 모델에서 ~18 tok/s를 달성합니다',
+          'Minisforum UM790 Pro(AMD Ryzen 9 7940HS)는 64 GB DDR5를 지원하며 Linux의 ROCm을 통해 7B 모델에서 ~8 tok/s를 제공합니다',
+          'Apple Silicon의 통합 메모리 아키텍처가 핵심 장점입니다 — M4의 RAM은 VRAM 병목 없이 CPU와 GPU 간에 공유됩니다',
+          'Beelink SER8(Ryzen 9 8845HS)는 경제적인 선택입니다: UM790 Pro와 동일한 ~8 tok/s이지만 CPU 전용 추론으로 전력 소비가 낮고 Linux에서 ROCm 설정이 불필요합니다',
+        ],
+      },
+      body1: {
+        title: 'Mac Mini M4, 속도와 효율에서 선두',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Mac Mini M4는 7B Q4 모델에서 ~18 tok/s를 달성하며 약 599 USD부터 시작하는 로컬 LLM 추론용 가장 빠른 미니 PC입니다.' },
+          { type: 'plain-terms', text: '미니 PC에서 로컬 LLM을 실행할 때 Mac Mini M4가 가장 빠른 이유는 Apple M4 칩이 통합 메모리 아키텍처를 사용하기 때문입니다. 이는 동일한 물리적 RAM이 데이터 복사 오버헤드 없이 CPU와 GPU 사이에서 공유됨을 의미합니다.' },
+        ],
+        content: [
+          '<strong>Mac Mini M4는 7B Q4 모델에서 ~18 토큰/초를 달성하고, 부하 시 ~30 W를 소비하며, 약 599 USD(한국 기준 약 89만 원)부터 시작합니다 — 이는 로컬 LLM 추론용으로 가장 빠른 미니 PC입니다.</strong> M4 칩은 통합 메모리 아키텍처를 사용합니다. 이는 동일한 물리적 RAM이 메모리 복사 오버헤드 없이 CPU와 GPU 사이에서 공유됨을 의미합니다. 속도를 우선시하는 사용자에게 M4는 첫 번째 선택입니다.',
+          'Minisforum UM790 Pro는 확장 가능한 옵션입니다: AMD Ryzen 9 7940HS에 Radeon 780M iGPU를 탑재하고, ROCm을 통해 Linux에서 통합 메모리로 구성된 64 GB DDR5에서 ~8 tok/s를 제공합니다. Beelink SER8(Ryzen 9 8845HS)은 처리량에서 UM790 Pro와 동일하지만 CPU 전용 추론을 사용합니다 — 전용 GPU 없이 — ROCm 설정을 피하려는 Windows 또는 Linux 사용자를 위한 경제적인 선택입니다.',
+          '아래 표는 CPU/GPU, 최적 메모리 구성, 측정된 LLM 속도를 기준으로 세 미니 PC를 비교합니다.',
+        ],
+        columns: ['미니 PC', 'CPU/GPU', '최적 구성', 'LLM 속도 (7B Q4)'],
+        rows: [
+          { '미니 PC': 'Mac Mini M4', 'CPU/GPU': 'Apple M4', '최적 구성': '16 GB 통합', 'LLM 속도 (7B Q4)': '~18 tok/s' },
+          { '미니 PC': 'Minisforum UM790 Pro', 'CPU/GPU': 'Ryzen 9 7940HS', '최적 구성': '64 GB DDR5', 'LLM 속도 (7B Q4)': '~8 tok/s' },
+          { '미니 PC': 'Beelink SER8', 'CPU/GPU': 'Ryzen 9 8845HS', '최적 구성': '64 GB DDR5', 'LLM 속도 (7B Q4)': '~8 tok/s' },
+        ],
+      },
+      body2: {
+        title: '통합 메모리가 LLM 성능의 핵심 차별점입니다',
+        content: [
+          '전용 GPU 슬롯이 있는 일반 미니 PC는 LLM 추론에 적합하지 않습니다. GPU의 VRAM이 공장에서 고정되어 있기 때문입니다 — 일반적으로 4–8 GB — 확장이 불가능합니다. Mac Mini M4와 UM790 Pro는 통합 메모리를 사용한 GPU 기반 추론으로 이 문제를 해결합니다. Beelink SER8은 다른 접근 방식을 취합니다: Ryzen 9 8845HS는 CPU 전용 추론을 사용하며, 속도는 느리지만 GPU 설정이 필요 없습니다.',
+          '16 GB 통합 메모리를 가진 Mac Mini M4는 순수 추론 속도에서 32 GB DDR5를 가진 UM790 Pro를 능가합니다. Apple의 메모리 대역폭(~68 GB/s)과 Metal GPU 가속이 Radeon 780M iGPU보다 효율적이기 때문입니다. UM790 Pro의 장점은 64 GB까지 확장 가능하다는 것으로, 16 GB에 맞지 않는 13B 및 30B Q4 같은 더 큰 모델을 실행할 수 있습니다.',
+          '로컬 LLM을 위한 완전한 하드웨어 선택 가이드를 위해 <a href="/ko/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">최고의 Ollama 프론트엔드 요약</a>을 참조하십시오. 이 가이드는 로컬 설정의 소프트웨어 측면을 다룹니다.',
+          '일본 내 미니 PC 추천(Amazon.co.jp 링크 및 JPY 가격 포함)은 <a href="/ko/prompt-bites/best-mini-pc-local-llm-japan" class="text-primary hover:underline">일본 로컬 LLM용 최고의 미니 PC 가이드</a>를 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '로컬 LLM용 미니 PC에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'Mac Mini M4로 13B 모델을 로컬에서 실행할 수 있습니까?',
+            a: '예, 16 GB 버전에서 Q4 양자화로 약 1 GB 여유를 두고 모델이 맞습니다. 32 GB Mac Mini M4 Pro는 13B 및 30B Q4 모델을 편안하게 실행할 수 있습니다. 기본 16 GB M4에서 13B Q4의 추론 속도는 ~10 tok/s로 낮아집니다.',
+          },
+          {
+            q: 'Minisforum UM790 Pro에서 GPU 가속을 위해 ROCm이 필요합니까?',
+            a: '예. Linux에서 Ollama와 llama.cpp는 ROCm을 통해 Radeon 780M iGPU를 지원합니다. Windows에서 Ollama는 AMD iGPU 가속을 위해 DirectML을 사용하는데, 이는 일반적으로 Linux의 ROCm보다 성능이 낮습니다. UM790 Pro에서 가장 빠른 추론을 위해서는 ROCm과 함께 Linux를 사용하십시오.',
+          },
+          {
+            q: 'Mac Mini M4로 7B 모델을 사용한 코딩 작업이 충분합니까?',
+            a: '예. 7B Q4 모델에서 ~18 tok/s로 Mac Mini M4는 대화형 코드 완성에 충분히 빠르게 토큰을 생성합니다. 200 토큰 완성의 응답 지연은 약 11초입니다 — 실시간이 아닌 코딩 보조 작업에 실용적입니다.',
+          },
+          {
+            q: 'UM790 Pro가 전속력으로 실행할 수 있는 최대 모델 크기는 무엇입니까?',
+            a: 'ROCm을 사용하는 Linux에서 64 GB DDR5를 통합 메모리로 구성하면, UM790 Pro는 30B Q4 모델(~18 GB)을 약 3–4 tok/s로 실행할 수 있습니다. 13B Q4 모델(~8 GB)은 ~6 tok/s로 실행됩니다. 소프트웨어 설정은 <a href="/ko/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">Ollama 프론트엔드 가이드</a>를 참조하십시오.',
+          },
+          {
+            q: 'Mac Mini M4나 UM790 Pro 대신 Beelink SER8을 선택해야 하는 경우는 언제입니까?',
+            a: 'Beelink SER8을 선택하십시오: (1) Linux에서 GPU 드라이버와 ROCm 설정을 피하고 싶을 때; (2) 속도보다 예산을 우선시할 때(두 제품보다 저렴함); (3) Windows를 사용하며 DirectML을 원하지 않을 때; (4) ~8 tok/s의 간헐적 추론을 하며 CPU 추론의 단순함을 선호할 때. 속도에서 Mac Mini M4를, 확장성에서 UM790 Pro를 능가하지는 않지만, CPU 전용으로 가장 간단한 옵션입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽기 자료',
+        items: [
+          '[Ollama 최고의 프론트엔드](/ko/prompt-bites/best-frontend-for-ollama)',
+          '[일본 로컬 LLM용 최고의 미니 PC](/ko/prompt-bites/best-mini-pc-local-llm-japan)',
+          '[로컬 LLM 소프트웨어 디렉토리 2026](/ko/local-llms/local-llm-software-directory-2026)',
+        ],
+      },
+    },
+  },
 }

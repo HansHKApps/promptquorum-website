@@ -630,4 +630,147 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Ollama',
+    title: 'Ollama에서 비전을 지원하는 모델은 무엇인가요?',
+    seoTitle: 'Ollama 비전 모델 2026: LLaVA, Qwen-VL, Gemma 3 | PromptQuorum',
+    metaDescription: 'Ollama에서 프로덕션 준비된 비전 모델 4종: LLaVA, Llama 3.2 Vision, Qwen-VL, Gemma 3. 각 모델은 1~3 GB 추가 VRAM이 필요합니다. ollama run llava로 시작하십시오.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    targetKeywords: [
+      'Ollama 비전 모델',
+      'Ollama 이미지 인식 모델',
+      'LLaVA Ollama 한국어',
+      'Ollama 멀티모달 모델 2026',
+      'Qwen-VL Ollama 설치',
+      'Ollama OCR 모델',
+    ],
+    readTime: '4분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: 'Ollama에서 비전을 지원하는 모델은 무엇인가요?',
+        answer: 'Ollama는 여러 비전 모델을 지원합니다: LLaVA, Gemma 3 멀티모달, Qwen-VL. ollama run llava를 실행하면 가장 간편하게 시작할 수 있습니다. 모든 모델이 Ollama API를 통해 이미지 입력을 받습니다.',
+        bullets: [
+          'llava: 원조 비전 모델, 최고의 호환성',
+          'gemma3: Google 멀티모달 모델, 우수한 품질',
+          'qwen-vl: 문서 이해 능력이 탁월합니다',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Ollama에서 비전을 지원하는 모델은 무엇인가요?',
+      description: 'Ollama에서 프로덕션 준비된 비전 모델 4종: LLaVA, Llama 3.2 Vision, Qwen-VL, Gemma 3. 각 모델의 VRAM 요구사항과 활용 사례를 정리합니다.',
+      inLanguage: 'ko',
+      datePublished: '2026-05-18',
+      dateModified: '2026-05-18',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/which-ollama-models-support-vision',
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Prompt Bites',
+          item: 'https://www.promptquorum.com/ko/prompt-bites',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Ollama에서 비전을 지원하는 모델은 무엇인가요?',
+          item: 'https://www.promptquorum.com/ko/prompt-bites/which-ollama-models-support-vision',
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Ollama에서 프로덕션 준비된 비전 모델은 4종입니다: LLaVA, Llama 3.2 Vision, Qwen-VL, Gemma 3',
+          '비전 모델은 텍스트 전용 모델보다 VRAM이 1~3 GB 더 필요합니다. 이미지 인코더가 LLM과 함께 실행되기 때문입니다',
+          'LLaVA 7B는 가장 안전한 시작점입니다 (~7 GB VRAM, 폭넓은 클라이언트 호환성)',
+          'Qwen-VL은 차트 및 다이어그램 분석에, Llama 3.2 Vision 11B는 OCR 및 다단계 시각적 추론에 사용하십시오',
+        ],
+      },
+      body1: {
+        title: 'Ollama의 주요 비전 모델',
+        content: [
+          '<strong>2026년 5월 기준, Ollama는 프로덕션 준비된 비전 모델 4종을 지원합니다: LLaVA, Llama 3.2 Vision, Qwen-VL, Gemma 3.</strong> 각 모델은 고유한 강점과 VRAM 프로필을 가지고 있습니다.',
+          'LLaVA는 가장 안전한 시작점입니다. 클라이언트 호환성이 가장 넓고 Ollama가 지원하는 모든 이미지 형식에서 작동합니다. Llama 3.2 Vision 11B는 OCR 및 다단계 시각적 추론에 최적입니다. Qwen-VL은 차트, 다이어그램, 구조화된 문서 분야에서 선두를 달리고 있습니다. Gemma 3의 비전 버전은 35개 이상의 언어를 처리할 수 있어, 이미지에 비영어 텍스트(간판, 외국어 문서, 현지화된 레이블이 있는 차트 등)가 포함된 경우에 유용합니다. LLaVA와 Qwen-VL은 영어 텍스트 처리에 더 강합니다.',
+          '모든 비전 모델은 LLM 가중치와 함께 이미지 인코더를 로드합니다. 이 인코더는 텍스트 전용 기본 모델에 필요한 VRAM보다 1~3 GB를 추가로 요구합니다. VRAM 예산을 검토할 때 이 오버헤드를 반드시 고려하십시오.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Ollama에서 비전을 지원하는 주요 모델은 LLaVA, Llama 3.2 Vision, Qwen-VL, Gemma 3이며, 모두 Ollama API를 통해 이미지 입력을 처리합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '비전 모델은 이미지를 이해하는 AI 모델입니다. Ollama에서 ollama run llava 명령어로 이미지 분석 기능을 바로 실행할 수 있습니다.',
+          },
+        ],
+      },
+      body2: {
+        title: '비전 모델의 VRAM 요구사항',
+        content: [
+          '<strong>모든 비전 모델은 텍스트 전용 버전보다 더 많은 VRAM이 필요합니다.</strong> 7B 비전 모델은 일반적으로 7~9 GB VRAM을 요구합니다. 7B 텍스트 모델에 할당하는 ~6 GB와는 다릅니다.',
+          '차트 및 문서 분석에는 Qwen-VL 7B와 Gemma 3가 강력한 다이어그램 이해 능력을 갖추면서도 VRAM 효율이 가장 높습니다. OCR 및 이미지에 대한 복잡한 추론에는 Llama 3.2 Vision 11B가 추가 VRAM을 정당화합니다. 멀티모달 로컬 모델에 대한 전체 가이드는 <a href="/ko/local-llms/multimodal-local-llms" class="text-primary hover:underline">멀티모달 로컬 LLM 가이드</a>를 참조하십시오.',
+        ],
+        columns: ['모델', 'Q4 기준 VRAM', '이미지 처리 능력'],
+        rows: [
+          { '모델': 'LLaVA 7B', 'Q4 기준 VRAM': '~7 GB', '이미지 처리 능력': '일반 이미지 Q&A, 폭넓은 호환성' },
+          { '모델': 'Llama 3.2 Vision 11B', 'Q4 기준 VRAM': '~10 GB', '이미지 처리 능력': 'OCR, 다단계 시각적 추론' },
+          { '모델': 'Qwen-VL 7B', 'Q4 기준 VRAM': '~7 GB', '이미지 처리 능력': '차트, 다이어그램, 문서 분석' },
+          { '모델': 'Gemma 3 (비전)', 'Q4 기준 VRAM': '~6 GB', '이미지 처리 능력': '다국어 이미지 이해' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Ollama 비전 모델에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'API를 통해 Ollama에 이미지를 보내려면 어떻게 해야 합니까?',
+            a: '<code>/api/chat</code> 엔드포인트에 POST 요청을 보내면서 <code>images</code> 배열에 base64 문자열로 이미지를 포함하십시오. 최소 작동 JSON 본문: <code>{"model":"llava","messages":[{"role":"user","content":"What is in this image?","images":["&lt;base64&gt;"]}]}</code> 강력한 툴 콜링 지원을 갖춘 멀티모달 옵션은 <a href="/ko/prompt-bites/can-you-run-qwen3-on-ollama" class="text-primary hover:underline">Ollama에서 Qwen 3 실행하기</a>를 참조하십시오.',
+          },
+          {
+            q: '비전 모델은 OCR(이미지에서 텍스트 읽기)을 수행할 수 있습니까?',
+            a: '네, 가능합니다. 다만 품질은 모델에 따라 다릅니다. Llama 3.2 Vision 11B는 Ollama 지원 모델 중 OCR 성능이 가장 뛰어납니다. LLaVA 7B는 인쇄된 텍스트를 명확하게 읽을 수 있지만, 손글씨나 작은 글꼴에서는 어려움을 겪습니다.',
+          },
+          {
+            q: '차트와 다이어그램 분석에 가장 적합한 Ollama 비전 모델은 무엇입니까?',
+            a: 'Qwen-VL 7B입니다. 차트, 표, 다이어그램 등 구조화된 시각 데이터로 파인튜닝되었으며, 문서 이해 벤치마크에서 LLaVA와 Gemma 3를 능가합니다.',
+          },
+          {
+            q: '비전 모델은 하나의 프롬프트에서 여러 이미지를 지원합니까?',
+            a: '지원 여부는 모델에 따라 다릅니다. LLaVA와 Qwen-VL은 현재 Ollama에서 턴당 이미지 1장만 처리합니다. Llama 3.2 Vision은 Ollama 버전 및 클라이언트 구현에 따라 다중 이미지 입력을 지원합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[Ollama에서 Qwen 3 실행하기](/ko/prompt-bites/can-you-run-qwen3-on-ollama)',
+          '[Ollama 128K 컨텍스트 모델](/ko/prompt-bites/ollama-128k-context-models)',
+          '[멀티모달 로컬 LLM 가이드](/ko/local-llms/multimodal-local-llms)',
+        ],
+      },
+    },
+  },
 }

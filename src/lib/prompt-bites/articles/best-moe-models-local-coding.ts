@@ -665,4 +665,81 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Model Comparisons',
+    title: '로컬 코딩을 위한 최적 MoE 모델은?',
+    seoTitle: '로컬 코딩 최적 MoE 모델 2026 | PromptQuorum',
+    metaDescription: 'Mixtral 8x22B: 26 GB VRAM, 46.7B 파라미터. DeepSeek V2: 16 GB VRAM, 코딩 벤치마크 최고 성능. MoE는 활성 파라미터만 사용합니다. PromptQuorum의 빠른 답변.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 코딩을 위한 최적 MoE 모델은 무엇입니까?',
+        answer: 'Mixtral 8x22B와 DeepSeek V2는 로컬 사용에 최적인 MoE 코딩 모델입니다. 토큰당 전체 파라미터의 일부만 활성화하여 밀집 모델 대비 VRAM당 더 높은 품질을 제공합니다. 두 모델 모두 Q4에서 최소 16 GB VRAM이 필요하며, Mixtral은 약 26 GB, DeepSeek V2는 약 16 GB입니다.',
+        bullets: [
+          'Mixtral 8x22B Q4_K_M: ~26 GB VRAM, 탁월한 코딩 성능, Ollama에서 사용 가능',
+          'DeepSeek V2 Q4: ~16 GB VRAM, 코딩 벤치마크 최고 점수',
+          'MoE 장점: 동급 밀집 모델보다 빠른 추론 속도',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'MoE 모델은 토큰당 활성 전문가 파라미터만 사용합니다 — Mixtral 8x22B는 전체 46.7B 파라미터 중 토큰당 약 12.9B만 활성화됩니다.',
+          'Mixtral 8x22B Q4_K_M은 약 26 GB VRAM이 필요하여 듀얼 GPU 또는 고용량 단일 GPU 환경이 요구됩니다.',
+          'DeepSeek V2 Q4는 약 16 GB VRAM에 적재되며 훨씬 큰 밀집 모델에 필적하는 코딩 벤치마크 최고 점수를 달성합니다.',
+          'VRAM이 16 GB 미만인 경우, DeepSeek Coder 14B와 같은 밀집 13B–14B 코딩 모델이 MoE 옵션보다 실용적입니다.',
+        ],
+      },
+      body1: {
+        title: 'MoE 아키텍처가 VRAM 계산을 바꾸는 방식',
+        content: [
+          '<strong>Mixture of Experts (MoE) 모델은 각 토큰을 전문가라 불리는 특화 레이어의 일부 집합을 통해서만 라우팅하므로, 추론 비용은 전체 파라미터가 아닌 활성 파라미터에 비례하여 증가합니다.</strong> Mixtral 8x22B는 전체 파라미터 46.7B 중 순방향 패스당 약 12.9B만 활성화되어 연산 비용 면에서 13B 밀집 모델과 유사합니다.',
+          '이는 Mixtral 8x22B가 토큰당 추론 비용 대비 출력 품질에서 우위를 차지함을 의미합니다. 단, 모든 전문가 가중치는 시작 시 VRAM에 로드되어야 합니다. Q4_K_M에서 Mixtral 8x22B는 약 26 GB VRAM이 필요합니다. 이를 위해 24 GB 단일 GPU(예: RTX 3090/4090)에서 일부 양자화 절충이 필요하거나, 듀얼 GPU 구성이 필요합니다.',
+          'DeepSeek V2는 코딩 작업에 최적화된 유사한 MoE 아키텍처를 사용하며 Q4에서 약 16 GB VRAM만 필요하여 단일 16 GB 또는 24 GB GPU에서 실행됩니다. 코딩 벤치마크 점수는 활성 파라미터 수 기준으로 두 배에서 세 배 더 큰 모델에 필적합니다.',
+        ],
+        columns: ['모델', '전체 파라미터', '토큰당 활성', 'Q4 VRAM'],
+        rows: [
+          { '모델': 'Mixtral 8x22B', '전체 파라미터': '46.7B', '토큰당 활성': '~12.9B', 'Q4 VRAM': '~26 GB' },
+          { '모델': 'DeepSeek V2', '전체 파라미터': '236B', '토큰당 활성': '~21B', 'Q4 VRAM': '~16 GB' },
+        ],
+      },
+      body2: {
+        title: 'Ollama로 MoE 모델 실행하기',
+        content: [
+          '<strong>Mixtral 8x22B는 <code>ollama pull mixtral:8x7b</code> 명령으로 Ollama에서 사용 가능하며, Q4_K_M GGUF 파일이 자동으로 다운로드됩니다.</strong> Ollama는 사용 가능한 VRAM에 걸쳐 레이어 할당을 관리하며, VRAM이 부족한 경우 CPU RAM으로 부분 오프로드를 수행하지만, 이는 속도를 크게 저하시킵니다.',
+          'VRAM이 16 GB뿐이라면 DeepSeek V2 Q4가 더 나은 MoE 선택입니다. 단일 16 GB 카드에 완전히 적재되며 RTX 4080 또는 동급 GPU에서 약 15–20 tok/s의 코딩 처리량을 제공합니다. VRAM이 16 GB 미만인 경우 밀집 모델로 전환하십시오 — CPU 오프로드가 많이 필요한 경우 MoE의 이점이 사라집니다.',
+          '흔한 오해 한 가지: MoE 모델은 시작 시 활성 서브셋만이 아닌 모든 전문가 가중치를 VRAM에 로드해야 합니다. VRAM 비용은 활성 파라미터가 아닌 전체 파라미터를 반영합니다. 단일 언어 코딩 작업(예: Python 전용 작업)에서는 Qwen 3 Coder 14B 같은 밀집 모델이 Mixtral 8x22B를 능가하는 경우가 많습니다. 이는 가중치가 범용 전문가들에 분산되지 않고 코드에 완전히 특화되어 있기 때문입니다.',
+          '밀집 모델 대안을 포함한 각 VRAM 등급별 최적 코딩 모델의 전체 비교는 <a href="/ko/local-llms/best-local-llms-for-coding" class="text-primary hover:underline">로컬 코딩 최적 LLM 가이드</a>를 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'MoE 코딩 모델에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'MoE 모델이란 무엇이며 로컬 코딩에 왜 중요합니까?',
+            a: 'MoE는 Mixture of Experts의 약자입니다. 모델에는 많은 특화 서브네트워크(전문가)가 포함되어 있지만 토큰당 소수만 활성화됩니다. 이는 추론 연산 비용이 훨씬 작은 밀집 모델과 동등하면서도, 전체 파라미터 수 덕분에 더 광범위한 지식 기반을 갖추게 됨을 의미합니다 — 여러 언어와 프레임워크에 걸친 코딩 작업에 유용합니다.',
+          },
+          {
+            q: 'Mixtral 8x22B가 단일 GPU에 들어갑니까?',
+            a: 'Q4_K_M에서 Mixtral 8x22B는 약 26 GB VRAM이 필요합니다. 단일 RTX 3090 또는 RTX 4090(24 GB)에서는 Q3_K_M(약 22 GB)으로 양자화를 약간 낮춰야 합니다. 48 GB 카드(예: RTX A6000)는 Q4에서 지원됩니다. llama.cpp를 통한 듀얼 RTX 3090과 텐서 병렬 처리도 사용 가능합니다.',
+          },
+          {
+            q: 'DeepSeek V2가 코딩에서 Mixtral 8x22B보다 우수합니까?',
+            a: '코딩 벤치마크에서 DeepSeek V2 Q4는 더 적은 VRAM(약 16 GB 대 약 26 GB)으로 Mixtral 8x22B와 동등하거나 이를 능가합니다. VRAM이 제한된 환경에서는 DeepSeek V2가 더 나은 선택입니다. 고용량 VRAM 시스템에서 순수 생성 품질을 비교하면 두 모델 모두 경쟁력이 있습니다.',
+          },
+          {
+            q: 'Mixtral 8x22B를 실행하는 Ollama 명령은 무엇입니까?',
+            a: '<code>ollama pull mixtral:8x7b</code>를 실행하면 Q4_K_M 양자화 GGUF가 다운로드됩니다. 이후 <code>ollama run mixtral:8x7b</code>로 시작합니다. Ollama는 VRAM을 자동으로 할당하며 필요 시 CPU RAM으로 오버플로우됩니다. 해당 GPU의 처리 가능 여부를 확인하려면 <a href="/ko/prompt-bites/best-models-amd-5700x-3070ti" class="text-primary hover:underline">모델별 GPU VRAM 요구사항</a>을 참조하십시오.',
+          },
+        ],
+      },
+    },
+  },
 }

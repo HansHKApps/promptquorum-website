@@ -1172,5 +1172,167 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Hardware-Specific',
+    title: 'Mac Mini M4는 2026년에 로컬 LLM 실행에 적합한가?',
+    seoTitle: 'Mac Mini M4 로컬 LLM 2026 | Prompt Bites',
+    metaDescription: 'Mac Mini M4 Pro 24 GB 통합 메모리로 Llama 3 8B를 MLX를 통해 ~36 tok/s로 실행합니다. 별도 VRAM 한계 없이 로컬 LLM 실행에 최고의 Apple 가성비 옵션입니다.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Mac Mini M4', 'Mac Mini M4 Pro'],
+    educationalLevel: 'Intermediate',
+    audience: '로컬 LLM 실행을 위해 Mac Mini M4 구매를 고려하는 사용자',
+    affiliateDisclosure: true,
+    parentArticle: '/local-llms/best-mini-pcs-local-llm',
+    siblingBites: ['best-mini-pc-for-local-llm', 'best-egpu-ollama-macbook'],
+    is_living_page: false,
+    readTime: '4분 분량',
+    targetKeywords: [
+      'Mac Mini M4 로컬 LLM',
+      'Mac Mini M4 Pro LLM 추론',
+      '애플 실리콘 로컬 AI 모델',
+      'Mac Mini M4 Ollama 설정',
+      'Mac Mini 통합 메모리 LLM',
+    ],
+    leadAnswerBlock:
+      'Mac Mini M4는 로컬 LLM 실행에 적합합니다. M4 Pro 24 GB 통합 메모리 구성은 8B 모델을 원활하게 실행하며, 로컬 추론용 Apple 제품 중 가장 우수한 가성비를 제공합니다. 통합 메모리는 CPU와 GPU가 동일한 RAM을 공유함을 의미하므로 별도의 VRAM 한계가 없습니다.',
+    toc: [
+      { label: '최선의 선택: Mac Mini M4 Pro 24 GB', anchor: '#best-pick' },
+      { label: 'Mac Mini M4 구성 비교', anchor: '#comparison' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 읽기', anchor: '#related' },
+    ],
+    intro:
+      'Mac Mini M4는 Apple Silicon이 통합 메모리를 사용하기 때문에 로컬 LLM에 적합한 머신입니다. 동일한 RAM이 CPU와 GPU 모두에 사용됩니다. 이는 별도 GPU가 있는 미니 PC를 제한하는 고정 VRAM 한계를 없애 줍니다. 문제는 어떤 구성을 구매하느냐입니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'Mac Mini M4는 로컬 LLM 실행에 적합합니까?',
+        answer: '네 — Mac Mini M4 Pro 24 GB 통합 메모리는 MLX를 통해 Llama 3 8B를 ~36 tok/s로 실행합니다. $1,599에 최고의 Apple 가성비 옵션입니다.',
+        bullets: [
+          'M4 기본형(16 GB)은 7B 모델을 원활하게 실행하지만, 14B 모델을 전체 품질로 로드할 수 없습니다.',
+          'M4 Pro 24 GB는 Qwen 14B Q4를 ~20 tok/s로 처리합니다 — 실용적인 최적 지점입니다.',
+          'M4 Pro 48 GB는 Qwen 32B Q4를 ~12 tok/s로 실행합니다 — 대부분의 작업에서 별도 RTX 4090에 상응합니다.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/mac-mini-m4-local-llm',
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: 'Prompt Bites', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: 'Mac Mini M4 로컬 LLM', url: 'https://www.promptquorum.com/ko/prompt-bites/mac-mini-m4-local-llm' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '최선의 선택: Mac Mini M4 Pro 24 GB 통합 메모리 — 8B 모델을 원활하게 실행하고 대부분의 14B Q4 모델도 처리',
+          '통합 메모리 아키텍처는 CPU와 GPU 간에 RAM을 공유합니다 — 별도 VRAM 한계 없음',
+          'Mac Mini M4 기본형 16 GB는 8B 모델을 실행하지만 더 큰 모델이나 긴 컨텍스트를 위한 여유가 부족',
+          'M4는 GPU 가속을 위해 Apple Metal을 사용하며, Ollama와 LM Studio는 드라이버 설정 없이 이를 지원',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Mac Mini M4 Pro 24 GB 통합 메모리는 별도 VRAM 한계 없이 Llama 3 8B를 ~36 tok/s로 실행하는 로컬 LLM용 최고의 Apple 가성비 옵션입니다.' },
+          { type: 'plain-terms', text: '통합 메모리는 CPU와 GPU가 동일한 RAM 풀을 공유함을 의미합니다. 이는 Mac Mini M4 Pro의 24 GB 전부가 모델 로드에 사용 가능하여 별도 GPU 카드에서 발생하는 VRAM 병목 현상을 없애 줍니다.' },
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: '최선의 선택: Mac Mini M4 Pro 24 GB 통합 메모리',
+        content: [
+          '<strong>Mac Mini M4 Pro 24 GB 통합 메모리는 로컬 LLM용 Apple 제품 중 가격 대비 최고의 선택입니다. 24 GB는 8B 모델을 원활하게 실행하고 대부분의 14B 모델도 Q4 양자화로 처리할 수 있습니다.</strong> 통합 메모리는 CPU와 GPU 간에 공유되므로 별도로 관리해야 하는 VRAM 예산이 없습니다.',
+          'Q4 양자화 8B 모델은 약 5 GB를 사용하며, 14B 모델은 약 9–10 GB를 사용합니다. 총 24 GB로 M4 Pro는 컨텍스트 창, 운영 체제 및 기타 애플리케이션을 위한 충분한 여유를 남깁니다. 16 GB Mac Mini M4 기본형은 8B 모델을 실행하지만 더 큰 모델을 위한 여유가 거의 없습니다.',
+          'M4는 GPU 가속을 위해 Apple Metal을 사용하며, Ollama와 LM Studio는 드라이버 설정 없이 이를 지원합니다. 8B 모델만 실행하고 최저 가격을 원한다면 16 GB M4 기본형을 선택하십시오. 14B 모델로 확장할 여유를 원한다면 M4 Pro 24 GB를 선택하십시오. 가격은 Apple 및 소매업체의 현재 목록을 확인하십시오.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro+24GB',
+            productName: 'Apple Mac Mini M4 Pro 24GB',
+            productCategory: 'mini-pc',
+            label: 'Amazon에서 Mac Mini M4 Pro 가격 확인',
+          },
+          {
+            url: 'https://www.bestbuy.com/site/searchpage.jsp?st=Mac+Mini+M4+Pro',
+            productName: 'Apple Mac Mini M4 Pro 24GB',
+            productCategory: 'mini-pc',
+            label: 'Best Buy에서 Mac Mini M4 Pro 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.com/s?k=Mac+Mini+M4+16GB',
+            productName: 'Apple Mac Mini M4 16GB',
+            productCategory: 'mini-pc',
+            label: 'Amazon에서 Mac Mini M4 기본형 가격 확인',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '로컬 LLM을 위한 Mac Mini M4 구성 비교',
+        content: [
+          '<strong>결정적인 요소는 통합 메모리 크기입니다 — 실행할 수 있는 최대 모델 크기를 결정합니다.</strong> 가격은 소매업체와 구성에 따라 다르므로 구매 전에 현재 목록을 확인하십시오.',
+        ],
+        columns: ['구성', '통합 메모리', '최대 모델(Q4)', '적합한 용도'],
+        rows: [
+          {
+            '구성': 'Mac Mini M4 (기본형)',
+            '통합 메모리': '16 GB',
+            '최대 모델(Q4)': '8B 원활하게',
+            '적합한 용도': '최저 가격, 8B 전용',
+          },
+          {
+            '구성': 'Mac Mini M4 Pro',
+            '통합 메모리': '24 GB',
+            '최대 모델(Q4)': '14B 원활하게',
+            '적합한 용도': '최고 가성비 — 확장 여유',
+          },
+          {
+            '구성': 'Mac Mini M4 Pro (업그레이드)',
+            '통합 메모리': '48 GB+',
+            '최대 모델(Q4)': '30B급',
+            '적합한 용도': '더 큰 모델, 높은 비용',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Mac Mini M4 로컬 LLM에 대한 자주 묻는 질문',
+        faqs: [
+          {
+            q: 'Mac Mini M4는 8B 모델을 실행할 수 있습니까?',
+            a: '네. 16 GB 통합 메모리를 탑재한 Mac Mini M4 기본형은 Q4 양자화 8B 모델을 원활하게 실행합니다. M4 Pro 24 GB는 더 많은 여유로 실행하며 대부분의 14B 모델도 처리합니다.',
+          },
+          {
+            q: '통합 메모리는 로컬 LLM에 어떤 의미가 있습니까?',
+            a: '통합 메모리는 Apple Silicon에서 CPU와 GPU 간에 공유되는 RAM입니다. 별도의 VRAM 풀이 없으므로 사용 가능한 모든 메모리를 모델 로드에 사용할 수 있습니다. Mac Mini M4 Pro 24 GB는 해당 24 GB의 대부분을 추론에 할당할 수 있습니다.',
+          },
+          {
+            q: 'LLM을 위해 Mac Mini M4를 구매할 때 메모리를 얼마나 선택해야 합니까?',
+            a: '14B 모델을 원활하게 실행하려면 24 GB를 구매하십시오. Apple Silicon에서는 구매 후 메모리를 업그레이드할 수 없으므로, 현재 필요뿐만 아니라 앞으로 실행할 가장 큰 모델을 기준으로 선택하십시오.',
+          },
+          {
+            q: 'Mac Mini M4에서 LLM을 실행하려면 추가 소프트웨어가 필요합니까?',
+            a: '특별한 드라이버가 필요하지 않습니다. Ollama와 LM Studio는 M4에서 Apple Metal GPU 가속을 기본으로 지원합니다. 애플리케이션을 설치하고, 모델을 다운로드하고, 실행하면 됩니다.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: '관련 읽기',
+        items: [
+          '[로컬 LLM을 위한 최고의 미니 PC](/ko/prompt-bites/best-mini-pc-for-local-llm) — Mac Mini M4와 AMD 미니 PC 비교',
+          '[MacBook용 Ollama를 위한 최고의 eGPU](/ko/prompt-bites/best-egpu-ollama-macbook) — Apple Silicon에서 LLM 추론에 eGPU가 도움이 되지 않는 이유',
+          '[16 GB RAM 노트북을 위한 최고의 로컬 LLM](/ko/prompt-bites/best-local-llm-16gb-ram-laptop) — 16 GB 수준의 모델 선택',
+        ],
+      },
+    },
+  },
 }
-

@@ -994,4 +994,132 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Hardware-Specific',
+    title: 'MacBook에서 Ollama를 위한 최고의 eGPU는 무엇입니까? (2026)',
+    seoTitle: 'MacBook Ollama eGPU 2026 | Prompt Bites',
+    metaDescription: 'Apple Silicon MacBook에서 Ollama를 위한 작동하는 eGPU는 존재하지 않습니다. 통합 메모리와 PCIe eGPU 미지원으로 인해 불가능합니다. 더 많은 통합 메모리나 Linux 노트북을 사용하십시오.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Apple Silicon MacBook'],
+    educationalLevel: 'Intermediate',
+    audience: 'Ollama 가속을 위해 eGPU를 고려하는 MacBook 사용자',
+    affiliateDisclosure: true,
+    siblingBites: ['mac-mini-m4-local-llm', 'best-budget-ai-laptop-under-1000'],
+    is_living_page: false,
+    readTime: '3분 분량',
+    leadAnswerBlock:
+      'Apple Silicon MacBook에서 Ollama를 위한 작동하는 eGPU는 존재하지 않습니다. Apple Silicon은 통합 메모리를 사용하며 외부 GPU에 PCIe를 노출하지 않습니다. Intel Mac이 단종될 때 macOS는 서드파티 eGPU 드라이버를 제거하였습니다. eGPU는 Thunderbolt 4 또는 OCuLink를 갖춘 Linux 노트북에서만 유용합니다.',
+    toc: [
+      { label: '최선의 선택: eGPU를 포기하고 더 많은 통합 메모리를 사용하십시오', anchor: '#best-pick' },
+      { label: 'Apple Silicon에서 eGPU가 작동하지 않는 이유', anchor: '#comparison' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related' },
+    ],
+    intro:
+      'eGPU 인클로저는 Thunderbolt 또는 OCuLink를 통해 외부 GPU를 노트북에 연결합니다. Linux에서는 유용합니다. Apple Silicon MacBook에서는 작동하지 않습니다. 가격이나 가용성의 문제가 아니라 아키텍처 자체가 이를 불가능하게 합니다.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Apple Silicon MacBook은 eGPU를 지원하지 않습니다. Intel Mac이 단종될 때 macOS는 서드파티 GPU 드라이버를 제거하였습니다.',
+          'Apple Silicon은 GPU 메모리로 통합 메모리를 사용합니다. 별도의 GPU를 연결할 PCIe 경로가 존재하지 않습니다.',
+          'Mac에서 더 많은 LLM 실행 공간을 확보하려면 더 많은 통합 메모리를 갖춘 MacBook Pro 또는 Mac Studio를 구입하십시오.',
+          'eGPU는 Thunderbolt 4 또는 OCuLink를 갖춘 Linux 노트북에서는 여전히 작동합니다. Apple 제품 이외의 하드웨어에만 해당됩니다.',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: '최선의 선택: eGPU를 포기하고 더 많은 통합 메모리를 구입하십시오',
+        content: [
+          '<strong>MacBook에서 Ollama를 위한 최고의 eGPU는 eGPU를 사용하지 않는 것입니다. Apple Silicon은 eGPU를 지원하지 않으며 어떠한 우회 방법도 존재하지 않습니다.</strong> Mac에서 더 빠른 로컬 LLM 추론을 위한 방법은 외부 GPU가 아닌 더 많은 통합 메모리입니다.',
+          'Apple Silicon에서 GPU는 CPU와 동일한 물리적 RAM을 공유합니다. 확장할 수 있는 별도의 VRAM 풀이 없으며, macOS는 Linux와 달리 Thunderbolt를 통한 PCIe 장치 터널링을 노출하지 않습니다. Apple은 Intel Mac이 단종될 때 서드파티 eGPU 드라이버를 제거하였습니다. NVIDIA, AMD 또는 외부 GPU에 대한 Metal 드라이버가 존재하지 않습니다.',
+          'Mac에서 더 많은 로컬 LLM 실행 공간을 원한다면, 업그레이드 경로는 더 많은 통합 메모리(32 GB, 64 GB, 96 GB)를 갖춘 MacBook Pro 또는 Mac Studio입니다. GPU 확장성이 필수적이라면, Thunderbolt 4를 갖춘 Linux 노트북이나 인클로저 내의 데스크탑 GPU와 쌍을 이루는 OCuLink 장착 노트북이 대안입니다. 이는 Apple Silicon이 아닌 장치에서만 작동합니다.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.co.jp/s?k=MacBook+Pro+M4+32GB',
+            productName: 'MacBook Pro M-series 32GB+',
+            productCategory: 'laptop',
+            label: 'Amazon Japan에서 MacBook Pro 32GB+ 보기 (eGPU 대안)',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=Mac+Studio+M+series',
+            productName: 'Mac Studio M-series',
+            productCategory: 'desktop',
+            label: 'Amazon Japan에서 Mac Studio 가격 보기',
+          },
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple Silicon MacBook에서 Ollama용 작동하는 eGPU는 존재하지 않습니다. 아키텍처 자체가 외부 GPU 연결을 불가능하게 합니다.' },
+          { type: 'plain-terms', text: 'Apple Silicon MacBook은 외부 GPU를 위한 PCIe 연결을 지원하지 않으며, macOS는 서드파티 eGPU 드라이버를 제공하지 않습니다. 로컬 LLM 성능을 향상시키려면 더 많은 통합 메모리가 있는 Mac을 구입하는 것이 유일한 방법입니다.' },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Apple Silicon에서 eGPU가 작동하지 않는 이유',
+        content: [
+          '<strong>이 제한은 아키텍처적인 것이지 상업적인 것이 아닙니다. 어떠한 인클로저, 드라이버 또는 소프트웨어 스택도 이 문제를 해결할 수 없습니다.</strong>',
+        ],
+        columns: ['제한 사항', 'Apple Silicon MacBook', 'Thunderbolt 4/OCuLink Linux 노트북'],
+        rows: [
+          {
+            '제한 사항': '외부 NVIDIA/AMD GPU 드라이버',
+            'Apple Silicon MacBook': 'macOS에서 사용 불가',
+            'Thunderbolt 4/OCuLink Linux 노트북': '사용 가능 (nvidia, amdgpu)',
+          },
+          {
+            '제한 사항': 'Thunderbolt를 통한 PCIe 터널링',
+            'Apple Silicon MacBook': 'macOS에서 노출되지 않음',
+            'Thunderbolt 4/OCuLink Linux 노트북': '지원됨',
+          },
+          {
+            '제한 사항': '메모리 아키텍처',
+            'Apple Silicon MacBook': '통합 메모리만 사용',
+            'Thunderbolt 4/OCuLink Linux 노트북': 'eGPU의 별도 VRAM',
+          },
+          {
+            '제한 사항': 'Ollama를 위한 eGPU 가속',
+            'Apple Silicon MacBook': '경로 없음 — 작동하지 않음',
+            'Thunderbolt 4/OCuLink Linux 노트북': 'CUDA 또는 ROCm으로 작동',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'eGPU와 MacBook에 대한 자주 묻는 질문',
+        faqs: [
+          {
+            q: '왜 MacBook은 eGPU를 지원하지 않습니까?',
+            a: 'Apple Silicon MacBook은 통합 메모리를 사용하며 Thunderbolt를 통한 PCIe 터널링을 노출하지 않습니다. 또한 Apple은 Intel Mac이 단종될 때 서드파티 eGPU 드라이버를 제거하였습니다. 현재 macOS에서 외부 NVIDIA 또는 AMD GPU를 작동시키는 소프트웨어 경로는 존재하지 않습니다.',
+          },
+          {
+            q: '구형 Intel MacBook은 eGPU를 지원했습니까?',
+            a: '네, Intel MacBook은 Thunderbolt 3를 통해 AMD eGPU를 지원하였습니다. 그 지원은 Apple Silicon으로의 전환과 함께 종료되었습니다. 새로운 Mac과 Apple Silicon의 Ollama에는 eGPU 경로가 없습니다.',
+          },
+          {
+            q: 'MacBook에서 Ollama를 가장 빠르게 가속하는 방법은 무엇입니까?',
+            a: '더 많은 통합 메모리를 구입하는 것입니다. 32 GB 또는 64 GB 통합 메모리를 갖춘 MacBook Pro는 Metal GPU 가속으로 더 큰 모델을 로컬에서 실행할 수 있습니다. 외부 가속기 옵션은 존재하지 않습니다.',
+          },
+          {
+            q: 'Linux 노트북에서 eGPU가 Ollama를 위해 작동합니까?',
+            a: '네. Thunderbolt 4 또는 OCuLink를 갖춘 Linux 노트북은 NVIDIA 또는 AMD 데스크탑 GPU를 연결하고 CUDA 또는 ROCm을 통해 Ollama를 실행할 수 있습니다. 성능은 Thunderbolt 4 대역폭(40 Gbps)에 의해 제한되지만 작동합니다.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: '관련 읽을거리',
+        items: [
+          '[Mac Mini M4가 로컬 LLM에 적합합니까?](/ko/prompt-bites/mac-mini-m4-local-llm) — 동일한 아키텍처를 갖춘 데스크탑 동등 제품',
+          '[1,000달러 미만의 최고의 저렴한 AI 노트북](/ko/prompt-bites/best-budget-ai-laptop-under-1000) — 엔트리 레벨의 Apple 이외 대안',
+          '[로컬 LLM을 위한 최고의 미니 PC](/ko/prompt-bites/best-mini-pc-for-local-llm) — 데스크탑 미니 PC 대 MacBook 통합 메모리',
+        ],
+      },
+    },
+  },
 }

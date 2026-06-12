@@ -653,4 +653,84 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Ollama',
+    title: 'Ollama 최신 버전은 무엇입니까?',
+    seoTitle: 'Ollama 최신 버전 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'ollama --version 명령으로 설치된 버전을 확인하십시오. GitHub 릴리스 페이지에서 최신 버전을 확인할 수 있습니다. Linux는 설치 스크립트 재실행, Mac/Windows는 ollama.com에서 재다운로드하십시오.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    is_living_page: true,
+    quickAnswerTop: {
+      ko: {
+        question: 'Ollama 최신 버전은 무엇입니까?',
+        answer: '현재 버전은 ollama.com 또는 Ollama GitHub 릴리스 페이지에서 확인하십시오. Linux에서는 설치 스크립트를 실행하여 업데이트하십시오. Mac/Windows에서는 최신 설치 프로그램을 다운로드하십시오.',
+        bullets: [
+          '확인 방법: github.com/ollama/ollama/releases에서 최신 버전 확인',
+          'Linux 업데이트: curl -fsSL https://ollama.com/install.sh | sh',
+          'Mac/Windows: ollama.com에서 설치 프로그램 재다운로드',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '<code>ollama --version</code>을 실행하여 설치된 빌드를 확인하고 GitHub 릴리스 페이지와 비교하십시오',
+          'Linux 업데이트는 명령어 하나로 가능합니다: <code>curl -fsSL https://ollama.com/install.sh | sh</code>',
+          'Mac 및 Windows: ollama.com에서 설치 프로그램을 재다운로드하십시오 — 명령줄이 필요하지 않습니다',
+          '업데이트 시 모델 파일은 삭제되지 않습니다 — GGUF 파일은 Ollama 바이너리와 별도로 저장됩니다',
+        ],
+      },
+      body1: {
+        title: 'Ollama 버전을 확인하는 방법',
+        content: [
+          '<strong>2026년 5월 기준, 최신 안정 버전 Ollama 릴리스는 github.com/ollama/ollama/releases에서 확인할 수 있습니다 — 해당 페이지에서 정확한 버전 번호와 릴리스 노트를 확인할 수 있습니다. 이 페이지는 매월 업데이트됩니다 — 최종 확인: 2026년 5월.</strong>',
+          '터미널에서 <code>ollama --version</code>을 실행하면 설치된 빌드를 확인할 수 있습니다. 출력은 한 줄입니다. GitHub 릴리스 페이지에 더 높은 버전 번호가 표시되면 현재 설치가 오래된 것입니다.',
+          'Llama 3.3 및 Qwen 3을 포함한 새로운 모델 계열은 올바르게 로드하기 위해 최소 Ollama 버전이 필요합니다. 최신 릴리스에는 더 빠른 GGUF 로딩과 향상된 멀티 GPU 컨텍스트 처리가 포함되어 있으며, 이러한 개선 사항은 일상적인 사용에서 누적됩니다.',
+        ],
+      },
+      body2: {
+        title: 'Ollama를 안전하게 업데이트하는 방법',
+        content: [
+          '<strong>업데이트는 안전합니다: 다운로드된 모델은 별도의 디렉토리에 저장되며 Ollama 업데이트로 인해 삭제되지 않습니다.</strong> 사용자 대면 REST API는 버전 0.1 이후 하위 호환성을 유지하고 있습니다.',
+          '여러 버전이 뒤처져 있는 경우, 업데이트 전에 <code>ollama list</code>를 실행하여 현재 모델을 기록해 두십시오. 아무것도 손상되지 않지만, 이 30초짜리 단계는 주요 버전 업그레이드 전의 불확실성을 제거합니다.',
+          '각 Ollama 릴리스의 변경 내용과 혜택을 받는 모델 계열에 대한 전체 변경 로그는 <a href="/ko/local-llms/local-llm-model-updates-2026" class="text-primary hover:underline">2026년 로컬 LLM 모델 업데이트 가이드</a>를 참조하십시오.',
+        ],
+        columns: ['플랫폼', '업데이트 방법', '참고 사항'],
+        rows: [
+          { '플랫폼': 'Linux', '업데이트 방법': '설치 스크립트 실행 (명령어 하나)', '참고 사항': '바이너리 덮어쓰기, 모델 유지' },
+          { '플랫폼': 'macOS', '업데이트 방법': 'ollama.com에서 재다운로드', '참고 사항': 'Applications에 드래그, 모델 유지' },
+          { '플랫폼': 'Windows', '업데이트 방법': 'ollama.com에서 .exe 재다운로드', '참고 사항': '설치 프로그램 실행, 모델 유지' },
+        ],
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+        callouts: [{ type: 'info', text: '최종 확인: 2026년 5월. 위의 데이터가 오래된 것으로 보이면 공식 Ollama GitHub 릴리스 페이지 또는 모델 라이브러리를 확인하십시오.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Ollama 업데이트에 관한 빠른 답변',
+        faqs: [
+          {
+            q: '설치된 Ollama 버전을 어떻게 확인합니까?',
+            a: '터미널에서 <code>ollama --version</code>을 실행하십시오. 예를 들어 <code>ollama version 0.x.y</code>와 같이 빌드 번호가 한 줄로 출력됩니다.',
+          },
+          {
+            q: 'Ollama를 업데이트하면 다운로드된 모델이 삭제됩니까?',
+            a: '아닙니다. Ollama는 Linux와 macOS에서 <code>~/.ollama/models/</code>에 모델 파일을 저장하며, 이는 애플리케이션 바이너리와 별도로 관리됩니다. 업데이트는 해당 디렉토리를 절대 건드리지 않습니다. 업데이트 후 새 모델을 추가하고 싶다면 <a href="/ko/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">지금 가장 좋은 Ollama 모델</a>을 참조하십시오.',
+          },
+          {
+            q: 'Ollama 업데이트 시 여러 버전을 건너뛰어도 안전합니까?',
+            a: '예. Ollama 설치 프로그램은 건너뛴 버전 수에 관계없이 항상 한 번에 최신 버전으로 업데이트합니다. 단계적 업데이트는 필요하지 않습니다.',
+          },
+          {
+            q: 'Ollama를 업데이트할 때 설치된 모델도 업데이트해야 합니까?',
+            a: '아닙니다. GGUF 모델 파일은 전방 호환됩니다. 이전 Ollama 버전용으로 다운로드한 동일한 파일이 재다운로드 없이 현재 버전에서 작동합니다.',
+          },
+        ],
+      },
+    },
+  },
 }

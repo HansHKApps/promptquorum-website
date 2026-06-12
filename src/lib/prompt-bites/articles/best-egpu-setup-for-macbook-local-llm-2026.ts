@@ -925,4 +925,169 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: 'eGPU مع MacBook والذكاء الاصطناعي المحلي: ما الذي يعمل في 2026؟', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ar/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ar' },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Hardware & Performance',
+    type: 'how-to',
+    title: 'MacBook eGPU와 로컬 AI: 2026년에 무엇이 작동하는가',
+    seoTitle: 'MacBook eGPU 로컬 LLM 2026 — 대안 가이드',
+    metaDescription: 'Apple Silicon MacBook은 macOS Ventura 이후 eGPU GPU 컴퓨팅을 지원하지 않습니다. 2026년 대안: Mac Mini M4 Pro, OCuLink AMD 미니 PC, LAN Ollama 서버.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
+    leadAnswerBlock: '**Apple Silicon MacBook(M2–M5)은 2026년에 GPU 컴퓨팅을 위한 eGPU를 사용할 수 없습니다 — Apple이 macOS Ventura에서 Thunderbolt eGPU 지원을 제거했습니다. 대안: Mac Mini M4 Pro(48GB 통합 메모리) 또는 OCuLink eGPU를 탑재한 AMD 미니 PC(UM890 Pro).**',
+    quickAnswerTop: {
+      ko: {
+        question: 'MacBook에서 로컬 LLM 추론에 eGPU를 사용할 수 있습니까?',
+        answer: '아닙니다. Apple Silicon MacBook(M2/M3/M4/M5)은 GPU 컴퓨팅을 위한 eGPU를 사용할 수 없습니다. macOS Ventura 이후 버전에서는 Thunderbolt eGPU 지원이 완전히 제거되었습니다. 대안: Mac Mini M4 Pro(48GB 통합 메모리) 또는 OCuLink eGPU를 탑재한 AMD 미니 PC.',
+        bullets: [
+          'Apple Silicon MacBook: GPU 컴퓨팅에 eGPU 미지원(macOS Ventura 이상)',
+          'Intel MacBook(2015–2020): Thunderbolt 3 경유 eGPU 작동 — 단, 해당 라인 단종됨',
+          'macOS 최적 대안: Mac Mini M4 Pro(48GB 통합 메모리)',
+          '최적 GPU + 휴대성 조합: AMD 미니 PC(UM890 Pro) + OCuLink + RTX 3090',
+          'OCuLink은 PCIe x16 대역폭의 ~80% 제공 — LLM 추론 병목 없음',
+        ],
+        updatedDate: '2026-05-26',
+      },
+    },
+    targetKeywords: [
+      'MacBook eGPU 로컬 LLM',
+      'Apple Silicon eGPU 불가',
+      'MacBook AI 추론 대안 2026',
+      'OCuLink 미니 PC 로컬 AI',
+      'Ollama MacBook GPU 설정',
+    ],
+    readTime: '5분 분량',
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Apple Silicon MacBook은 컴퓨팅에 eGPU를 사용할 수 없습니다 — Apple이 macOS Ventura에서 해당 기능을 제거했습니다',
+          'Intel MacBook(2018–2020)은 구형 macOS에서 Thunderbolt 3 경유 eGPU를 지원했으나 해당 라인은 단종되었습니다',
+          'macOS 사용 시: eGPU로 MacBook을 확장하려 하지 말고 Mac Mini M4 Pro(48GB)를 구매하십시오',
+          '노트북 + GPU 조합: AMD 미니 PC(UM890 Pro) + OCuLink 경유 RTX 3090 — Ollama 60–80 tok/s',
+          'x86 노트북(Windows/Linux)의 Thunderbolt 4 eGPU는 작동 — 단, 대역폭 ~35–45% 손실 있음',
+        ],
+      },
+      mainContent: {
+        title: '2026년에 eGPU가 MacBook에서 작동하지 않는 이유',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '2026년 Apple Silicon MacBook에서 eGPU는 GPU 가속 로컬 LLM 추론에 작동하지 않습니다. Apple이 macOS Ventura(2022)에서 Thunderbolt eGPU 컴퓨팅 지원을 제거했기 때문입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'eGPU는 Thunderbolt 또는 OCuLink로 연결된 케이스에 들어있는 외장 그래픽 카드입니다. Apple M 칩이 탑재된 MacBook은 GPU가 칩에 통합되어 있어 컴퓨팅 작업에 외장 GPU를 추가할 수 없습니다. Apple의 GPU API인 Metal은 M 시리즈 하드웨어에서 외장 GPU로 확장되지 않습니다.',
+          },
+        ],
+        content: 'Apple은 macOS Ventura(2022년 10월 출시)에서 Thunderbolt eGPU 지원을 제거했습니다. 모든 Apple Silicon MacBook(M1, M2, M3, M4, M5)은 이 버전 이상에서 실행됩니다. eGPU를 물리적으로 연결해도 macOS는 외장 GPU를 GPU 컴퓨팅 작업에 사용하지 않으며, 내부 GPU만 활성화됩니다.',
+        items: [
+          '**macOS 13 Ventura(2022)**: eGPU 지원 제거. 모든 Apple Silicon Mac 영향.',
+          '**macOS 14 Sonoma, 15 Sequoia**: eGPU 컴퓨팅 지원 없음.',
+          '**Intel MacBook(2018–2020)**: 구형 macOS에서 Thunderbolt 3 경유 eGPU 작동. 해당 Mac은 단종됨.',
+          '**eGPU 경유 외부 모니터**: 구형 Mac에서 출력 장치로는 여전히 작동.',
+        ],
+      },
+      alternatives: {
+        title: '실질적 대안: 대신 할 수 있는 것',
+        productItems: [
+          {
+            title: 'Mac Mini M4 Pro(48GB) — 최적의 macOS 선택',
+            content: 'Mac Mini M4 Pro(48GB 통합 메모리)는 Ollama의 Metal 백엔드를 통해 Qwen3 32B Q4를 20–30 tok/s로 실행합니다. 가격: ~$1,399. macOS 생태계에 머물러야 하고 32B 이상 모델 용량이 필요하다면, 이것이 업그레이드 경로입니다 — eGPU가 아닙니다.',
+            affiliateLinks: [
+              { label: 'Amazon에서 Apple Mac Mini M4 Pro 보기', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
+            ],
+          },
+          {
+            title: 'AMD 미니 PC + OCuLink eGPU(최적의 GPU/휴대성 조합)',
+            content: 'AOOSTAR GEM12 Pro OCuLink(AMD Ryzen 9 8945HS, ~$480)는 OCuLink(PCIe 4.0 x4, 64 Gbps — x16 슬롯 대역폭의 ~80%)를 통해 RTX 3090 또는 RTX 4090에 연결됩니다. Linux 또는 Windows에서 CUDA로 Ollama를 실행하면 RTX 3090으로 7B Q4 모델이 65–85 tok/s로 실행됩니다. 미니 PC는 MacBook 옆 책상에 올려두고 LAN을 통해 Ollama를 제공하기에 충분히 작습니다.',
+            affiliateLinks: [
+              { label: 'Amazon에서 AOOSTAR GEM12 Pro OCuLink 보기', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
+            ],
+          },
+          {
+            title: 'Thunderbolt 4 eGPU(Windows/Linux 노트북 사용 시)',
+            content: 'Thunderbolt 4를 탑재한 Windows 또는 Linux x86 노트북에서는 Ollama에 eGPU가 작동합니다. 네이티브 PCIe x16 슬롯 대비 대역폭 손실은 ~35–45%이지만, Ollama 추론은 메모리 대역폭으로 제한됩니다(PCIe가 아님). 권장 케이스: Razer Core X(~$299) + RTX 3090.',
+            affiliateLinks: [
+              { label: 'Amazon에서 Razer Core X eGPU Enclosure 보기', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
+            ],
+          },
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: 'M4 MacBook Pro에서 AI를 위해 eGPU를 작동시킬 방법이 있습니까?',
+            a: 'GPU 컴퓨팅에는 불가합니다. macOS는 M 시리즈 하드웨어에서 Metal compute 작업을 실행하기 위한 외장 GPU API를 노출하지 않습니다. 유일한 방법은 MacBook을 로컬 네트워크를 통해 별도 기기(전용 GPU를 탑재한 미니 PC 또는 데스크톱)의 Ollama 서버에 연결하는 것입니다. 서버에서 OLLAMA_HOST=0.0.0.0으로 설정하고 MacBook 앱이 해당 IP 주소를 가리키도록 하십시오.',
+          },
+          {
+            q: 'Apple이 Apple Silicon에 eGPU 지원을 다시 도입할 가능성이 있습니까?',
+            a: '가능성이 낮습니다. Apple의 M 시리즈 아키텍처는 GPU, CPU, 메모리를 하나의 칩에 통합합니다 — 설계 철학은 통합 메모리이지 확장성이 아닙니다. GPU 확장을 지원하는 것은 Mac Pro(2023)뿐입니다.',
+          },
+          {
+            q: 'NVIDIA GPU를 추론에 사용하고 출력을 MacBook으로 전달할 수 있습니까?',
+            a: '예 — 이것이 권장 방식입니다. NVIDIA GPU가 탑재된 Windows 또는 Linux 기기에서 Ollama를 실행하고 LAN에 노출(OLLAMA_HOST=0.0.0.0)한 다음, Open WebUI, Cursor, Continue 또는 OpenAI 호환 클라이언트를 통해 MacBook에서 연결하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[GPU vs CPU vs Apple Silicon — 로컬 LLM 비교](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+          '[2026년 최고의 로컬 LLM 소프트웨어 디렉토리](/ko/local-llms/local-llm-software-directory-2026)',
+          '[MacBook에서 Ollama 실행하기](/ko/local-llms/run-ollama-on-mac)',
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'MacBook에서 로컬 LLM 추론에 eGPU를 사용할 수 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '아닙니다. Apple이 macOS Ventura(2022)에서 eGPU 컴퓨팅 지원을 제거했습니다. 대안: Mac Mini M4 Pro(48GB 통합 메모리) 또는 OCuLink를 탑재한 AMD 미니 PC.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'M4 MacBook Pro에서 AI를 위해 eGPU를 작동시킬 방법이 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'GPU 컴퓨팅에는 불가합니다. 로컬 네트워크를 통해 전용 GPU를 탑재한 별도 기기의 Ollama 서버에 MacBook을 연결하십시오(서버에서 OLLAMA_HOST=0.0.0.0 설정).',
+          },
+        },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: '프롬프트 바이트',
+          item: 'https://www.promptquorum.com/ko/prompt-bites',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'MacBook eGPU와 로컬 AI: 2026년에 무엇이 작동하는가',
+          item: 'https://www.promptquorum.com/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026',
+        },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU와 로컬 AI: 2026년에 무엇이 작동하는가', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ko' },
+  },
 }

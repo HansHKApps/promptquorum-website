@@ -601,4 +601,117 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Quick Answers',
+    title: '16 GB RAM 노트북에 가장 적합한 로컬 LLM은 무엇입니까?',
+    seoTitle: '16 GB RAM 노트북 최적 로컬 LLM 2026 | PromptQuorum',
+    metaDescription: 'Llama 3 8B Q4_K_M(~5 tok/s)은 16 GB 노트북에서 독립 GPU 없이 최적입니다. 코딩 작업에는 Qwen 3 Coder 7B를 권장합니다. Apple Silicon은 약 3배 빠릅니다.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    targetKeywords: [
+      '16gb 램 노트북 로컬 llm',
+      '노트북 로컬 ai 모델 추천',
+      '16gb 로컬 llm 최적',
+      'llama 3 8b 노트북 실행',
+      '애플 실리콘 로컬 llm 속도',
+    ],
+    readTime: '4분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: '16 GB RAM 노트북에 가장 적합한 로컬 LLM은 무엇입니까?',
+        answer: '독립 GPU가 없는 16 GB RAM 노트북에서는 Llama 3 8B Q4_K_M이 가장 적합한 로컬 LLM입니다. 약 5 GB RAM을 사용하며 현대 CPU에서 초당 약 5 토큰으로 실행됩니다. 코딩 작업에는 Qwen 3 Coder 7B가 선호됩니다. Apple Silicon(M 시리즈) 노트북은 통합 메모리 덕분에 3~4배 더 빠릅니다.',
+        bullets: [
+          'Llama 3 8B Q4_K_M: ~5 GB RAM, CPU에서 ~5 tok/s, 범용 최적 균형',
+          'Qwen 3 Coder 7B Q4_K_M: ~5 GB RAM, CPU에서 ~5 tok/s, 코딩 작업 최적화',
+          'Apple Silicon 노트북(M 시리즈): 통합 메모리로 ~18 tok/s — 훨씬 빠름',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop',
+      breadcrumbs: [
+        { position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: '프롬프트 바이트', item: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: '16 GB RAM 노트북 최적 로컬 LLM 2026', item: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop' },
+      ],
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: '프롬프트 바이트', item: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: '16 GB RAM 노트북 최적 로컬 LLM 2026', item: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        title: 'TL;DR — 핵심 요약',
+        content: [
+          '16 GB RAM 노트북(독립 GPU 없음)에는 Llama 3 8B Q4_K_M을 사용하십시오. 약 5 GB RAM을 차지하며 CPU에서 초당 약 5 토큰으로 실행됩니다. 코딩 전용 작업에는 Qwen 3 Coder 7B를 선택하십시오. Apple Silicon(M1/M2/M3/M4) 노트북은 통합 메모리 아키텍처 덕분에 동일한 RAM에서 약 18 tok/s를 달성합니다.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: '16 GB RAM 노트북에서 독립 GPU 없이 실행할 수 있는 최적의 로컬 LLM은 Llama 3 8B Q4_K_M입니다.' },
+          { type: 'plain-terms', text: '16 GB RAM 노트북에서 독립 GPU 없이 가장 잘 작동하는 로컬 LLM은 Llama 3 8B Q4_K_M입니다. 약 5 GB RAM을 사용하고 CPU에서 초당 약 5 토큰을 생성합니다. Apple Silicon 노트북은 통합 메모리 구조 덕분에 약 3배 더 빠릅니다.' },
+        ],
+      },
+      body1: {
+        title: 'Llama 3 8B Q4_K_M — 16 GB 노트북의 최선택',
+        content: [
+          '2026년 5월 기준, 독립 GPU가 없는 16 GB RAM 노트북에서 Q4_K_M 양자화된 Llama 3 8B는 범용 로컬 LLM으로 최적입니다. 약 5 GB RAM을 사용하여 운영체제와 다른 애플리케이션에 11 GB를 남기며, 최신 x86 CPU에서 초당 약 5 토큰으로 실행됩니다. 양자화로 인한 품질 손실 없이 코딩, 작문, 요약 작업을 처리합니다.',
+          '아래 표는 16 GB 노트북에서 고려할 만한 4가지 모델을 권장 사용 사례별로 정렬하여 보여줍니다.',
+        ],
+        columns: ['모델', 'RAM 사용량 (Q4_K_M)', '속도 (최적 용도)'],
+        rows: [
+          { '모델': 'Llama 3 8B', 'RAM 사용량 (Q4_K_M)': '~5 GB', '속도 (최적 용도)': '~5 tok/s — 범용, 최적 균형' },
+          { '모델': 'Qwen 3 Coder 7B', 'RAM 사용량 (Q4_K_M)': '~5 GB', '속도 (최적 용도)': '~5 tok/s — 코딩 작업' },
+          { '모델': 'Phi-4 Mini', 'RAM 사용량 (Q4_K_M)': '~3 GB', '속도 (최적 용도)': '~12 tok/s — 속도 우선' },
+          { '모델': 'Qwen 3 14B', 'RAM 사용량 (Q4_K_M)': '~9 GB', '속도 (최적 용도)': '~3 tok/s — 추론, 긴 컨텍스트' },
+        ],
+        content2: [
+          'Qwen 3 14B는 16 GB의 상한선입니다. Q4_K_M으로 약 7 GB를 남기고 작동하지만, CPU 속도가 초당 약 3 토큰으로 떨어져 대화형 사용에서는 답답할 정도로 느립니다. 속도보다 출력 품질이 더 중요한 비대화형 작업(일괄 요약, 문서 분석)에 사용하십시오.',
+        ],
+      },
+      body2: {
+        title: 'RAM과 VRAM의 차이 — 중요한 이유',
+        content: [
+          '<strong>독립 GPU가 없는 노트북에서는 RAM과 VRAM이 동일한 메모리 풀입니다.</strong> CPU는 시스템 RAM에서 직접 모델 가중치를 읽습니다. 따라서 16 GB RAM은 모델에 16 GB의 주소 지정 가능한 메모리를 제공하며 VRAM 병목 현상이 없습니다. 반면 4 GB 독립 GPU(예: RTX 4050 4 GB 노트북 버전)가 탑재된 노트북은 고정된 VRAM 한계가 있습니다. 5 GB 모델은 GPU VRAM에 맞지 않아 느린 CPU 실행으로 전환됩니다.',
+          'Apple Silicon(M1/M2/M3/M4)은 다른 사례입니다. Apple 노트북에서는 메모리가 통합되어 있습니다. 동일한 물리 메모리를 CPU와 GPU가 하드웨어 수준에서 높은 대역폭으로 공유합니다. 16 GB M3 MacBook Pro는 Llama 3 8B를 초당 약 18 토큰으로 실행하는데, 이는 동일한 RAM의 x86 Intel 또는 AMD CPU보다 약 3배 빠릅니다. 로컬 LLM 사용 목적으로 16 GB Intel 노트북과 16 GB Apple Silicon 노트북 중 하나를 선택해야 한다면, Apple Silicon이 추론 속도에서 현저히 빠릅니다.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '16 GB RAM 노트북 LLM에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: '16 GB RAM으로 13B 모델을 실행할 수 있습니까?',
+            a: 'Q4_K_M의 13B 모델은 약 8~9 GB RAM이 필요합니다. 16 GB에서 실행은 가능하지만 운영체제와 다른 프로세스에 7 GB만 남습니다. x86에서는 속도가 초당 약 2~3 토큰으로 대화 사용에 느립니다. 대화형 사용에는 8B 모델을 유지하고, 품질 향상이 필요하며 속도를 감수할 수 있을 때만 13B를 사용하십시오.',
+          },
+          {
+            q: '16 GB 로컬 LLM 실행: Apple M 시리즈 vs Intel i7?',
+            a: 'Apple Silicon이 명확히 앞섭니다. 16 GB M3는 Llama 3 8B를 초당 약 18 토큰으로 실행합니다. 16 GB Intel Core i7(13세대)는 동일 모델을 초당 약 4~5 토큰으로 실행합니다. 차이는 아키텍처에서 비롯됩니다. Apple 통합 메모리 대역폭(~100 GB/s)은 일반 x86 DDR5 노트북 메모리 대역폭보다 5~6배 높습니다.',
+          },
+          {
+            q: 'LLM을 위해 RAM을 확보하려면 앱을 종료해야 합니까?',
+            a: 'RAM 한계에 가까운 모델을 실행할 때만 해당합니다. 16 GB에서 Llama 3 8B(~5 GB)를 실행할 때는 불필요합니다. 운영체제가 메모리를 효율적으로 관리합니다. Qwen 3 14B(~9 GB)의 경우 Chrome 등 메모리 집약적 앱을 종료하면 디스크 스왑을 방지하고 일정한 속도를 유지할 수 있습니다. 모델 로드 전 활성 모니터(macOS) 또는 작업 관리자(Windows)에서 여유 RAM을 확인하십시오.',
+          },
+          {
+            q: '로컬 LLM을 위해 32 GB RAM으로 업그레이드할 가치가 있습니까?',
+            a: '14B 이상 모델을 자주 실행하거나 다른 무거운 애플리케이션을 사용하는 동안 모델을 로드 상태로 유지하려면 가치가 있습니다. 32 GB에서는 Qwen 3 14B가 메모리 압박 없이 실행됩니다. 매우 공격적인 양자화(Q2_K, 약 24 GB)의 70B 모델도 사용할 수 있지만, Q4 이하에서는 품질이 눈에 띄게 저하됩니다. 7~8B 모델을 실행하는 대부분의 사용자에게는 16 GB면 충분합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[노트북에서 로컬 LLM 실행 가이드](/ko/local-llms/local-llm-on-laptop)',
+          '[2 GB RAM에서 RAG를 실행할 수 있습니까?](/ko/prompt-bites/can-you-run-rag-on-2gb-ram)',
+          '[Ollama 시작 가이드](/ko/local-llms/ollama-getting-started)',
+        ],
+      },
+    },
+  },
 }

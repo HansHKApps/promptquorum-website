@@ -654,5 +654,142 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Privacy & Security',
+    title: 'DeepSeek는 GDPR에 안전한가?',
+    seoTitle: 'DeepSeek GDPR 안전성 2026 | PromptQuorum',
+    metaDescription: 'DeepSeek API는 GDPR 위험이 가장 높은 LLM입니다: 중국 관할권, PIPL 데이터 법, EU 적정성 결정 없음. 로컬 가중치는 위험이 낮습니다. 2026년 5월 업데이트.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    readTime: '5분 분량',
+    targetKeywords: [
+      'DeepSeek GDPR 안전성',
+      'DeepSeek 개인정보보호',
+      'DeepSeek PIPL',
+      'DeepSeek API 위험성',
+      'GDPR LLM 비교',
+    ],
+    quickAnswerTop: {
+      ko: {
+        question: 'DeepSeek는 GDPR에 안전하게 사용할 수 있습니까?',
+        answer: 'DeepSeek API는 주요 LLM 중 GDPR 위험이 가장 높습니다. 서버가 중국 개인정보 접근법(PIPL)에 적용되고, 중국에 대한 EU 적정성 결정이 없으며, 서비스 약관에서 중국 당국과의 데이터 공유 권리를 명시적으로 유보하고 있기 때문입니다. DeepSeek 로컬 오픈 가중치 모델은 다르고 더 낮은 위험 프로필을 가지고 있습니다.',
+        bullets: [
+          'DeepSeek API: 중국 서버, PIPL 데이터 공개 의무 — 최고 위험',
+          '중국에 대한 EU 적정성 결정 없음: SCCs + TIA 필요, TIA 결과가 불리할 수 있음',
+          'DeepSeek R1/V3 로컬 가중치(Apache 2.0): API 호출 없이 로컬 배포 시 위험 대폭 낮아짐',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'inLanguage': 'ko',
+      'headline': 'DeepSeek는 GDPR에 안전한가?',
+      'datePublished': '2026-05-22',
+      'dateModified': '2026-05-22',
+      'url': 'https://www.promptquorum.com/ko/prompt-bites/is-deepseek-gdpr-safe',
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': '홈',
+          'item': 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Prompt Bites',
+          'item': 'https://www.promptquorum.com/ko/prompt-bites',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'DeepSeek는 GDPR에 안전한가?',
+          'item': 'https://www.promptquorum.com/ko/prompt-bites/is-deepseek-gdpr-safe',
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'DeepSeek API는 GDPR에서 위험이 가장 높은 LLM입니다: 중국 관할권, PIPL 데이터 접근법, EU 적정성 결정 없음',
+          '표준 계약 조항(SCCs)은 기술적으로 가능하나, 중국에 대한 이전 영향 평가(TIA)는 민감 데이터에 불리한 결과를 낼 가능성이 높습니다',
+          'DeepSeek 오픈 가중치 모델(R1, V3, Coder V2)은 Apache 2.0 — 로컬에서 실행하면 Qwen 또는 Llama 로컬과 동일하게 낮은 위험',
+          'EU 규제 데이터의 경우: DeepSeek API를 피하고 로컬 가중치를 사용하거나 EU 호스팅 API 옵션이 있는 모델로 전환하십시오',
+        ],
+      },
+      body1: {
+        title: 'DeepSeek API가 GDPR에서 고위험인 이유',
+        content: [
+          '<strong>세 가지 누적 요인이 DeepSeek API를 주요 LLM 중 GDPR 규제 데이터에 가장 위험한 선택으로 만듭니다. 첫째: 서버가 중국에 있어 모든 API 호출이 GDPR 제44조에 따른 제3국 이전이 됩니다. 둘째: 중국에는 EU 적정성 결정이 없습니다(미국과 달리 EU-미국 데이터 프라이버시 프레임워크가 존재함). 셋째: 중국 개인정보보호법(PIPL)은 중국에서 운영되는 기관이 요청 시 국가 기관에 데이터를 제공하도록 의무화합니다.</strong>',
+          '표준 계약 조항(SCCs)은 중국으로의 이전에 유효한 법적 메커니즘입니다. 그러나 Schrems II 이후 조직들은 SCCs가 실제로 실질적인 보호를 제공하는지 평가하는 이전 영향 평가(TIA)도 수행해야 합니다. 중국의 경우 민감 데이터에 대한 TIA 통과가 어렵습니다: PIPL은 계약상 보호를 무력화할 수 있으며, 중국 정부는 접근을 요구할 수 있습니다. EDPB 지침은 보완 조치가 대상 국가의 법적 틀의 결함을 보완할 수 없는 경우 이전을 수행해서는 안 된다고 명확히 합니다.',
+          '이는 모든 개인 데이터에 적용됩니다: HR 기록, 고객 정보, 의료 메모, 법적 서신. 프롬프트에 이러한 데이터가 포함된 경우, DeepSeek API는 SCCs만으로는 해결되지 않을 수 있는 규제 노출을 야기합니다.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'DeepSeek API는 중국 PIPL이 표준 계약 조항을 무력화하고 국가 기관에 데이터 공개를 강제할 수 있어 주요 LLM 중 GDPR에 가장 위험합니다.' },
+          { type: 'plain-terms', text: '중국 법은 기업이 요청 시 정부에 데이터를 제출하도록 의무화하며, 이 법은 서명한 프라이버시 계약을 무효화할 수 있습니다. 이는 DeepSeek API와 함께 유럽 데이터를 보호하겠다는 약속이 법적으로 집행 가능하지 않을 수 있음을 의미합니다.' },
+        ],
+      },
+      body2: {
+        title: 'DeepSeek 로컬 가중치 — 완전히 다른 위험 프로필',
+        content: [
+          '<strong>DeepSeek 오픈 소스 모델(R1, V3, Coder V2)은 API와 별개의 제품입니다. Apache 2.0 라이선스로 배포되며 DeepSeek 서버에 연결하지 않고 로컬에서 다운로드하여 실행할 수 있습니다.</strong> 로컬에서 가중치를 실행하면 GDPR 제44조의 이전 문제가 완전히 제거되며, 이는 Qwen 또는 Llama 로컬과 동일합니다.',
+          'DeepSeek R1 7B 또는 8B 로컬 버전은 6–8 GB VRAM GPU에서 Ollama를 통해 원활하게 작동합니다. 성능이 뛰어납니다: R1은 7B 수준에서 사용 가능한 가장 강력한 추론 모델 중 하나입니다. 코딩 작업의 경우 DeepSeek Coder V2의 더 작은 변형이 제공됩니다.',
+          'DeepSeek 로컬에 대해 남아 있는 질문: 모델 학습 데이터입니다. DeepSeek는 이 모델 학습에 사용된 데이터에 대한 전체 세부 정보를 공개하지 않았습니다. 고보증 환경(의료, 법률, 공공 부문)에서는 로컬 배포에서도 이 불확실성이 관련될 수 있습니다. Qwen 3(Alibaba/Tongyi)와 Llama 4(Meta)는 학습 데이터 출처에 대해 더 많은 투명성을 제공합니다.',
+        ],
+        columns: ['배포 방식', 'GDPR 위험', '이유', '권장 조치'],
+        rows: [
+          { '배포 방식': 'DeepSeek API', 'GDPR 위험': '최고', '이유': '중국 서버, PIPL, 적정성 결정 없음', '권장 조치': '개인 또는 민감 데이터에 사용 금지' },
+          { '배포 방식': 'DeepSeek 로컬 (R1/V3)', 'GDPR 위험': '낮음', '이유': '이전 없음, Apache 2.0 가중치', '권장 조치': '허용 가능; 학습 데이터 불투명성 유의' },
+          { '배포 방식': 'Qwen 로컬 (2.5/3)', 'GDPR 위험': '낮음', '이유': '이전 없음, Apache 2.0, 학습 데이터 공개', '권장 조치': '민감 데이터 사용에 권장' },
+          { '배포 방식': 'Claude / OpenAI API', 'GDPR 위험': '중간', '이유': '미국 관할권; EU 지역이 위험을 줄이나 제거하지 않음', '권장 조치': 'SCCs + DPA 필요; EU 지역 선호' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문: DeepSeek와 GDPR',
+        faqs: [
+          {
+            q: 'GDPR을 위해 표준 계약 조항과 함께 DeepSeek API를 사용할 수 있습니까?',
+            a: '기술적으로 가능합니다: DeepSeek 데이터 관리 법인과 SCCs에 서명할 수 있습니다. 그러나 중국 법이 실제로 해당 조항을 훼손하는지 평가하는 이전 영향 평가(TIA)도 완료해야 합니다. PIPL의 공개 의무를 감안할 때, 민감 개인 데이터에 대한 TIA는 SCCs가 불충분하다는 결론을 내릴 가능성이 높습니다. 비개인 데이터(코드, 공개 텍스트)의 경우 위험이 낮습니다.',
+          },
+          {
+            q: 'DeepSeek R1은 DeepSeek API와 동일합니까?',
+            a: '아닙니다. DeepSeek R1은 Apache 2.0 라이선스로 Hugging Face에 배포된 오픈 가중치 모델을 가리킵니다. DeepSeek API(api.deepseek.com)는 중국에 서버를 둔 별도의 클라우드 서비스입니다. GDPR 위험은 API에 적용되며 가중치에는 해당되지 않습니다. Ollama를 통해 R1을 로컬에서 실행(<code>ollama run deepseek-r1:7b</code>)하면 이전 위험이 전혀 없습니다.',
+          },
+          {
+            q: 'PIPL이란 무엇이며 GDPR에서 왜 중요합니까?',
+            a: '중국 개인정보보호법(PIPL)은 2021년 11월부터 시행되며, 중국에서 운영되는 기관이 본사 위치에 관계없이 공안이나 국가 안보 당국의 요청 시 개인 정보를 제공하도록 의무화합니다. 이는 중국 기업인 DeepSeek가 API를 통해 처리된 데이터를 제출하도록 강요받을 수 있음을 의미합니다. SCCs는 대상 국가 법률의 강제 공개 의무를 무효화할 수 없습니다.',
+          },
+          {
+            q: 'GDPR 규제 데이터에 가장 안전한 LLM은 무엇입니까?',
+            a: 'GDPR 하에서 최대 안전성을 위해서는: 외부 API 호출 없이 오프라인으로 실행되는 오픈 소스 로컬 모델(Qwen 3, Llama 4, DeepSeek R1 로컬) 중 하나를 선택하십시오. 이 중 Qwen 3와 Llama 4는 학습 데이터 출처가 더 투명합니다. 구조화된 의사결정 도구로는 <a href="/ko/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">LLM 간 GDPR 위험 완전 비교</a>를 참조하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽을거리',
+        items: [
+          '[LLM GDPR 위험 비교 2026](/ko/local-llms/gdpr-llm-risk-comparison-2026)',
+          '[Qwen은 GDPR에 안전합니까?](/ko/prompt-bites/is-qwen-gdpr-compliant)',
+          '[로컬 LLM이 GDPR 준수에 도움이 됩니까?](/ko/prompt-bites/can-local-llm-help-gdpr)',
+          '[Ollama 로컬 설치 가이드](/ko/local-llms/how-to-run-llm-locally)',
+        ],
+      },
+    },
+  },
 }
-

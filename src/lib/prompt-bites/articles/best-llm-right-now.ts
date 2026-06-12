@@ -710,4 +710,118 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Prompt Engineering',
+    title: '지금 가장 좋은 LLM은 무엇입니까?',
+    seoTitle: '2026년 최고의 LLM | Prompt Bites | PromptQuorum',
+    metaDescription: '코딩: Claude Opus 4.8 (SWE-Bench 87.6%). 일반 채팅: GPT-5.5 Instant (환각 52.5% 감소). 로컬: Llama 4 Scout 또는 Qwen 3 14B. 매월 업데이트.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    current_models_mentioned: ['Claude Opus 4.8', 'GPT-5.5 Instant', 'Gemini 2.5 Pro', 'Llama 4 Scout', 'Qwen 3 14B'],
+    current_hardware_mentioned: [],
+    educationalLevel: 'Intermediate',
+    audience: '클라우드 및 로컬에서 이용 가능한 최고의 LLM을 비교하는 사용자',
+    parentArticle: '/prompt-engineering/best-local-llms-2026',
+    siblingBites: ['co-star-prompt-framework'],
+    is_living_page: true,
+    targetKeywords: ['최고의 LLM 2026', '지금 가장 좋은 AI 모델', 'Claude vs GPT 비교', '로컬 LLM 추천', 'Llama 4 Scout 한국어'],
+    readTime: '4분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: '지금 가장 좋은 LLM은 무엇입니까?',
+        answer: '클라우드 코딩 작업의 경우 Claude Opus 4.8이 SWE-Bench에서 87.6%를 달성하며, GPT-5.5 Instant는 이전 버전 대비 환각이 52.5% 적어 일반 채팅을 선도합니다. 클라우드: Claude Opus 4.8은 코딩 및 장문 문서에, GPT-5.5 Instant는 일반 채팅에, Gemini 2.5 Pro는 멀티모달 작업에 적합합니다. 로컬: 24GB VRAM이 있다면 Llama 4 Scout, 12GB VRAM이라면 Qwen 3 14B를 선택하십시오.',
+        bullets: [
+          '클라우드 일반: GPT-5.5 Instant — ChatGPT 기본 모델, 환각 52.5% 감소',
+          '클라우드 코딩: Claude Opus 4.8 — SWE-Bench Verified 87.6%',
+          '로컬 12GB VRAM: Qwen 3 14B Q4_K_M — 최고의 품질/VRAM 비율',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/best-llm-right-now',
+      breadcrumbSchema: {
+        items: [
+          { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+          { position: 2, name: 'Prompt Bites', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+          { position: 3, name: '지금 가장 좋은 LLM은 무엇입니까?', url: 'https://www.promptquorum.com/ko/prompt-bites/best-llm-right-now' },
+        ],
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '어떤 LLM도 모든 작업에서 우위를 점하지는 않습니다 — Claude Opus 4.8은 코딩(SWE-Bench 87.6%)에서, GPT-5.5 Instant는 일반 채팅에서 선두입니다',
+          '12GB VRAM으로 로컬 사용 시, Qwen 3 14B Q4_K_M이 현재 최고의 품질/VRAM 비율을 제공합니다',
+          '클라우드 모델은 API 키가 필요하고 토큰당 비용이 발생하며, 로컬 모델은 하드웨어 초기 투자 후 무료로 실행됩니다',
+          '로컬 사용의 경우, Llama 4 Scout(17B/16 experts)는 단일 H100에서 10M 토큰 컨텍스트로 실행 가능하며, 12GB VRAM에는 Qwen 3 14B Q4_K_M을 권장합니다',
+        ],
+      },
+      body1: {
+        title: '최고의 LLM은 작업에 따라 다릅니다 — 전체 비교표',
+        snippetBlocks: [
+          { type: 'one-sentence', text: '2026년 5월 기준, Claude Opus 4.8은 코딩(SWE-Bench 87.6%), GPT-5.5 Instant는 일반 채팅(환각 52.5% 감소), Llama 4 Scout는 오프라인 로컬 실행에서 각각 선두입니다.' },
+          { type: 'plain-terms', text: '클라우드 LLM 중 코딩에는 Claude Opus 4.8, 일반 대화에는 GPT-5.5 Instant가 가장 적합합니다. 로컬 실행에는 VRAM 용량에 따라 Llama 4 Scout 또는 Qwen 3 14B를 선택하십시오.' },
+        ],
+        content: [
+          '<strong>2026년 5월 기준, 세 가지 모델 계열이 서로 다른 사용 사례를 선도하고 있습니다. 이 페이지는 매월 업데이트됩니다 — 최종 확인: 2026년 5월. 코딩 및 기술 분석: Claude Opus 4.8 (Anthropic). 일반 채팅 및 ChatGPT: GPT-5.5 Instant (OpenAI). 프라이버시, 오프라인 작업, 무제한 사용: 로컬로 실행되는 Llama 4 Scout.</strong> 아래에서 각 모델이 우위를 보이는 상황과 워크플로우별 선택 방법을 확인하십시오.',
+          '단일 클라우드 모델이 모든 벤치마크를 지배하지는 않습니다. Claude Opus 4.8은 SWE-Bench Verified에서 87.6%를 달성하여 소프트웨어 엔지니어링의 명확한 선택입니다. GPT-5.5 Instant(2026년 5월부터 새로운 ChatGPT 기본 모델)는 이전 버전 대비 환각이 52.5% 적어 다양한 일상적 작업에서 가장 신뢰할 수 있는 결과를 제공합니다.',
+          'Gemini 2.5 Pro는 여전히 동영상 및 이미지 분석에 있어 가장 강력한 네이티브 멀티모달 모델입니다. 순수 텍스트 또는 코딩 작업의 경우 Claude Opus 4.8과 GPT-5.5 사이의 품질 차이가 눈에 띕니다 — 특정 워크플로우에 맞게 선택하십시오. 로컬 사용의 경우, Llama 4 Scout는 10M 토큰 컨텍스트 창으로 일반 소비자 하드웨어에서 실행됩니다.',
+        ],
+        columns: ['사용 사례', '최적 LLM', '이유'],
+        rows: [
+          { '사용 사례': '코딩 (Python, TypeScript)', '최적 LLM': 'Claude Opus 4.8', '이유': 'SWE-Bench Verified 87.6%, 코딩 벤치마크 선두' },
+          { '사용 사례': '일반 채팅', '최적 LLM': 'GPT-5.5 Instant', '이유': '2026년 5월부터 ChatGPT 기본 모델, 환각 52.5% 감소' },
+          { '사용 사례': '로컬 / 오프라인', '최적 LLM': 'Llama 4 Scout', '이유': '17B/16 experts, 단일 H100 지원, 10M 토큰 컨텍스트' },
+          { '사용 사례': '장문 문서', '최적 LLM': 'Claude Opus 4.8', '이유': '1M 컨텍스트 창, 강력한 정보 유지력' },
+          { '사용 사례': '이미지+텍스트 빠른 작업', '최적 LLM': 'GPT-5.5 또는 Gemini 2.5 Pro', '이유': '멀티모달 지연 시간' },
+          { '사용 사례': '저비용 대용량 처리', '최적 LLM': 'Claude Haiku 또는 GPT-5.5 mini', '이유': '$/M 토큰 비용' },
+          { '사용 사례': '연구 / 에이전트', '최적 LLM': 'Claude Opus 4.8', '이유': 'MCP-Atlas 77.3%, function calling 신뢰성' },
+        ],
+      },
+      body2: {
+        title: '50개의 리뷰를 읽지 않고 선택하는 방법',
+        content: [
+          '<strong>제약 조건부터 시작하십시오.</strong> 예산, 프라이버시, 지연 시간, 또는 벤치마크 중 무엇이 우선입니까? 가장 어려운 제약 조건을 처리하는 모델을 먼저 선택하십시오. 코딩에는 Claude Opus 4.8, 일반 채팅에는 GPT-5.5 Instant, 오프라인에는 Llama 4 Scout가 적합합니다.',
+          '<strong>실제 작업에서 2개 모델을 테스트하십시오.</strong> 공개된 벤치마크가 개인의 사용 사례를 예측하지는 않습니다. 클라우드 모델(Claude, OpenAI)은 무료 API 티어를 활용하고, Llama 4 Scout는 Ollama를 통해 로컬로 실행해 보십시오. 대부분의 사용자는 실제 사용을 통해 선호하는 모델을 빠르게 파악합니다.',
+          '<strong>매월 확인하십시오.</strong> 새 모델은 분기별로 출시됩니다. Claude Opus 4.8은 4월 16일, GPT-5.5는 4월 23일에 출시되었습니다. 지금의 답은 계속 변합니다. 이 페이지를 매월 재확인하십시오. <strong>로컬 사용자의 경우,</strong> Llama 4 Scout는 일반 소비자 하드웨어의 최상위 선택입니다(10M 컨텍스트, 단일 H100). VRAM이 부족한 경우 Llama 3 8B 또는 Phi-4 등 이전 모델을 사용하십시오.',
+        ],
+        callouts: [{ type: 'info', text: '최종 확인: 2026년 5월. 최고의 LLM 현황은 빠르게 변화합니다 — Claude Opus 4.8은 4월 16일, GPT-5.5는 4월 23일에 출시되었습니다. 이 페이지를 매월 확인하십시오. 주요 출시(Claude 5, GPT-6, Llama 5)가 있을 경우 업데이트됩니다.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: '현재 최고의 LLM에 관한 빠른 답변',
+        faqs: [
+          {
+            q: '2026년 5월 기준 Claude Opus 4.8과 GPT-5.5 중 어느 것이 더 낫습니까?',
+            a: 'Claude Opus 4.8은 코딩 및 기술 분석에서 SWE-Bench Verified(87.6%)를 선도합니다. GPT-5.5 Instant는 일반 채팅 및 명령 이행에서 선두이며 이전 버전 대비 환각이 52.5% 감소했습니다. 최적의 모델은 특정 작업에 따라 달라집니다.',
+          },
+          {
+            q: 'VRAM이 8GB만 있는 경우 최고의 로컬 LLM은 무엇입니까?',
+            a: '8GB VRAM의 경우, Q4_K_M의 Llama 3 8B가 여전히 최선의 선택입니다 — 약 5GB VRAM으로 안정적으로 실행되며 컨텍스트를 위한 여유 공간이 남습니다. 최신 하드웨어의 경우, Llama 4 Scout(17B/16 experts)는 단일 H100 또는 동급 GPU(24GB VRAM)가 필요합니다.',
+          },
+          {
+            q: 'Gemini 2.5 Pro는 Claude Opus 4.8 및 GPT-5.5와 어떻게 비교됩니까?',
+            a: 'Gemini 2.5 Pro는 동영상 및 이미지 분석과 같은 네이티브 멀티모달 작업에서 선두입니다. 순수 텍스트 추론 및 코딩의 경우 Claude Opus 4.8과 GPT-5.5 Instant가 더 강력한 선택입니다. 모든 클라우드 모델의 출력 품질을 향상시키는 팁은 <a href="/ko/prompt-bites/co-star-prompt-framework" class="text-primary hover:underline">CO-STAR 프레임워크 가이드</a>를 참조하십시오.',
+          },
+          {
+            q: '로컬 LLM이 코딩 작업에서 클라우드 모델과 견줄 수 있습니까?',
+            a: 'Llama 4 Scout(17B)와 Llama 4 Maverick(17B/128 experts)은 강력한 오픈소스 대안을 제공하지만 SWE-Bench에서 Claude Opus 4.8에 미치지 못합니다. 대부분의 일상적인 코딩 보조 작업에서 그 차이는 실용적인 수준으로 작습니다. 복잡한 다중 파일 리팩토링의 경우 클라우드 모델이 여전히 명확한 우위를 유지합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 문서',
+        items: [
+          '[CO-STAR 프롬프트 프레임워크 가이드](/ko/prompt-bites/co-star-prompt-framework)',
+          '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026)',
+          '[Prompt Bites 허브](/ko/prompt-bites)',
+        ],
+      },
+    },
+  },
 }

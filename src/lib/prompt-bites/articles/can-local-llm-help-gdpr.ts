@@ -646,4 +646,104 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Privacy & Security',
+    title: '로컬 LLM이 GDPR 컴플라이언스에 도움이 됩니까?',
+    seoTitle: '로컬 LLM GDPR 컴플라이언스 2026: 제44조 해결 | PromptQuorum',
+    metaDescription: '네 — 오픈 웨이트 모델을 로컬에서 실행하면 GDPR 제44조 제3국 이전 문제가 완전히 해소됩니다. 2026년 민감 데이터 처리에 적합한 최적 모델을 소개합니다.',
+    publishDate: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    targetKeywords: [
+      '로컬 LLM GDPR',
+      'GDPR AI 컴플라이언스',
+      '로컬 LLM 개인정보보호',
+      '로컬 AI GDPR 제44조',
+      'Ollama GDPR 기업 사용',
+    ],
+    readTime: '5분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 LLM이 GDPR 컴플라이언스에 도움이 됩니까?',
+        answer: '네 — 오픈 웨이트 모델을 로컬에서 실행하면 클라우드 AI를 GDPR 하에서 법적으로 복잡하게 만드는 제44조 제3국 이전이 완전히 제거됩니다. 프롬프트와 응답이 서버를 벗어나지 않습니다. Qwen 3 14B나 Llama 4 Scout와 같은 로컬 모델은 HR, 법무, 의료 텍스트를 완전히 온프레미스에서 처리할 수 있습니다.',
+        bullets: [
+          '이전 없음 = 제44조 문제 없음: 클라우드 AI의 가장 큰 GDPR 장벽이 사라집니다',
+          '제25조(프라이버시 바이 디자인) 충족: 아키텍처 설계상 데이터가 관할권을 벗어나지 않습니다',
+          '12 GB VRAM 최적 모델: Ollama를 통한 Qwen 3 14B Q4_K_M — 범용 및 코딩 지원',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'GDPR에서 클라우드 AI의 핵심 문제는 제44조입니다. 개인정보를 포함한 프롬프트를 EU 역외 서버로 전송하면 법적 근거가 필요한 제3국 이전에 해당합니다.',
+          '로컬 LLM은 이전 자체를 완전히 제거합니다. 이전이 없으면 프롬프트 내용에 관계없이 제44조 문제가 발생하지 않습니다.',
+          'GDPR 제25조(프라이버시 바이 디자인)가 직접 충족됩니다. 인프라 기본 설정으로 관할권 내에서 데이터를 처리합니다.',
+          '실용적인 출발점: 12 GB VRAM GPU에서 Ollama로 실행하는 Qwen 3 14B Q4_K_M — HR 요약, 법무 문서 작성, 의료 텍스트를 프로덕션 수준으로 처리합니다.',
+        ],
+      },
+      body1: {
+        title: '클라우드 AI의 GDPR 문제 — 로컬 사용이 해결하는 이유',
+        content: [
+          '<strong>클라우드 LLM(ChatGPT, Claude, Gemini)에 프롬프트를 전송할 때마다 해당 프롬프트에 포함된 개인정보는 EU 역외 서버로 이전됩니다. GDPR 제44조는 이 이전에 법적 근거를 요구합니다. 통상 표준계약조항(SCC)과 이전 영향 평가(TIA)가 필요합니다. 이것이 클라우드 AI가 만들어내는 컴플라이언스 부담입니다. 로컬 LLM은 이전 자체를 없애 이 부담을 해소합니다.</strong>',
+          '로컬 모델이 자체 하드웨어에서 실행될 때 데이터 처리는 관할권 내에서 이루어집니다. 모델은 프롬프트를 수신하고 CPU 또는 GPU에서 응답을 완전히 생성합니다. 어떤 네트워크 호출도 사업장을 벗어나지 않습니다. 이는 제44조(이전 없음, 법적 근거 불필요), 제25조(프라이버시 바이 디자인: 아키텍처 기본 설정이 외부 이전을 방지), 제5조 제1항 (f)호(데이터 무결성 및 기밀성: 통제 하의 시스템만 처리)를 모두 충족합니다.',
+          '이것은 기술적 허점이나 우회책이 아닙니다. GDPR 규제 당국이 설명하는 프라이버시 바이 디자인 아키텍처 그 자체입니다. EU 기관들이 AI와 GDPR에 관한 지침을 발표할 때 로컬 처리는 일관되게 최저 위험 배포 모델로 식별됩니다.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: '로컬 LLM은 GDPR 제44조 제3국 이전을 완전히 제거함으로써 컴플라이언스를 지원합니다. 데이터가 서버를 절대 벗어나지 않으므로 국제 이전에 대한 법적 근거가 필요하지 않습니다.' },
+          { type: 'plain-terms', text: '클라우드 AI는 사용자의 질문을 해외 서버로 전송합니다. GDPR은 이를 제한합니다. 로컬 AI 모델은 사용자 컴퓨터에서 모든 것을 처리합니다. 데이터가 이동하지 않으므로 EU 역외 데이터 이전에 관한 GDPR 규정이 단순히 적용되지 않습니다.' },
+        ],
+      },
+      body2: {
+        title: 'GDPR 규제 업무에 실용적인 로컬 모델',
+        content: [
+          '<strong>2026년 기준으로 세 가지 오픈 웨이트 모델이 주요 GDPR 규제 업무 흐름을 커버합니다. 일반 HR, 법무, 문서 작성용: Qwen 3 14B Q4_K_M(10~12 GB VRAM 필요). 코드 분석 및 기술 문서용: Qwen 3 Coder 14B(동일한 VRAM, 구조화 출력 능력이 더 뛰어남). 단일 GPU 또는 더 제한된 하드웨어를 보유한 조직용: Qwen 3 8B Q4_K_M(6~8 GB VRAM).</strong>',
+          '세 모델 모두 Ollama를 통해 단일 명령어로 실행되며 최초 모델 다운로드 이후 클라우드 연결이 필요하지 않습니다. 다운로드는 Hugging Face에서 HTTPS로 한 번만 이루어지며 물리적 매체를 통해 에어갭 환경 기계에서도 수행할 수 있습니다. 이후에는 완전 오프라인으로 운영됩니다.',
+          '프론티어급 품질이 필요한 대규모 조직의 경우: Llama 4 Scout(17B MoE)는 24 GB VRAM에서 1000만 토큰 컨텍스트 윈도우로 실행됩니다. 긴 계약서, HR 정책 문서, 의료 기록을 단일 컨텍스트에서 처리하기에 적합합니다.',
+        ],
+        columns: ['업무 흐름', '권장 모델', '필요 VRAM', 'Ollama 명령어'],
+        rows: [
+          { '업무 흐름': 'HR 문서, 요약', '권장 모델': 'Qwen 3 14B Q4_K_M', '필요 VRAM': '10~12 GB', 'Ollama 명령어': 'ollama run qwen2.5:14b' },
+          { '업무 흐름': '법무 문서 작성, 계약서', '권장 모델': 'Qwen 3 14B Q4_K_M', '필요 VRAM': '10~12 GB', 'Ollama 명령어': 'ollama run qwen2.5:14b' },
+          { '업무 흐름': '코드, 기술 문서', '권장 모델': 'Qwen 3 Coder 14B', '필요 VRAM': '10~12 GB', 'Ollama 명령어': 'ollama run qwen2.5-coder:14b' },
+          { '업무 흐름': '예산 제한 / 8 GB VRAM', '권장 모델': 'Qwen 3 8B Q4_K_M', '필요 VRAM': '6~8 GB', 'Ollama 명령어': 'ollama run qwen3:8b' },
+          { '업무 흐름': '장문 문서(100K 토큰 이상)', '권장 모델': 'Llama 4 Scout', '필요 VRAM': '24 GB', 'Ollama 명령어': 'ollama run llama4:scout' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '빠른 답변: 로컬 LLM과 GDPR',
+        faqs: [
+          {
+            q: '로컬 LLM을 사용하면 GDPR 의무가 전혀 없습니까?',
+            a: '아닙니다. GDPR 의무는 AI 사용 여부와 관계없이 개인정보를 처리할 때마다 적용됩니다. 로컬 LLM은 제44조 이전 위험을 줄이지만, 제30조 처리 기록 유지, 적법한 처리 근거 확보, 데이터 최소화 보장 등의 의무를 없애지는 않습니다. GDPR의 가장 어려운 문제 중 하나인 국제 이전을 해결하는 것이지 모든 문제를 해결하는 것이 아닙니다.',
+          },
+          {
+            q: 'GDPR 컴플라이언스를 위해 기업 환경에서 Ollama를 사용할 수 있습니까?',
+            a: '네. Ollama는 추론 트래픽에 대한 클라우드 원격 분석이 없는 로컬 추론 런타임입니다(모델 다운로드 원격 분석 정책은 Ollama 공식 문서를 확인하십시오). 기업 환경에서는 자동 모델 업데이트를 비활성화하고, 제30조 처리 기록에 Ollama 버전과 모델 체크섬을 문서화하며, 격리된 네트워크 세그먼트에서 실행하십시오. 전체 체크리스트는 <a href="/ko/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">Qwen GDPR 컴플라이언스 설정 가이드</a>를 참조하십시오.',
+          },
+          {
+            q: '로컬 LLM이 GDPR 하에서 의료 또는 법무 데이터를 처리하기에 충분합니까?',
+            a: '이전법 관점에서는 충분합니다. 로컬 처리는 주요 GDPR 장벽을 제거합니다. 다만 해당 범주의 데이터를 처리하기 위한 실질적인 법적 근거는 여전히 충족해야 합니다(의료 데이터는 제9조, 일반 개인정보는 제6조). 로컬 LLM 실행이 유효한 법적 근거나 필요한 경우의 데이터 보호 영향 평가(DPIA)를 대체하지는 않습니다.',
+          },
+          {
+            q: '오픈소스 LLM 가중치는 학습 데이터로 인한 GDPR 위험이 있습니까?',
+            a: '잠재적으로 있습니다. 동의 없이 수집된 개인정보로 훈련된 모델(초기 LLM에서 일반적인 우려 사항)을 배포하면 간접적인 GDPR 책임이 발생할 수 있습니다. 프로덕션 사용 시 학습 데이터 출처가 문서화된 모델을 선호하십시오: Qwen 3(Alibaba Tongyi), Llama 4(Meta), 또는 Mistral(유럽 기업). 고위험 GDPR 환경에서는 학습 데이터가 공개되지 않은 모델을 피하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[Qwen GDPR 컴플라이언스 설정 가이드](/ko/local-llms/qwen-local-gdpr-setup-guide-2026)',
+          '[Qwen이 GDPR을 준수합니까?](/ko/prompt-bites/is-qwen-gdpr-compliant)',
+          '[DeepSeek는 GDPR에 안전합니까?](/ko/prompt-bites/is-deepseek-gdpr-safe)',
+          '[로컬 LLM 최적 GPU 가이드](/ko/local-llms/best-gpus-for-local-llms)',
+        ],
+      },
+    },
+  },
 }

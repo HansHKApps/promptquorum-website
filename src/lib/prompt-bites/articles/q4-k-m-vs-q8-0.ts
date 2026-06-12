@@ -627,4 +627,99 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Quantization & VRAM',
+    title: 'Q4_K_M vs Q8_0: 어느 것을 선택해야 합니까?',
+    seoTitle: 'Q4_K_M vs Q8_0: 2026년 선택 가이드 | Prompt Bites | PromptQuorum',
+    metaDescription: 'VRAM이 8 GB 이하이면 Q4_K_M을 사용하십시오. 12 GB 이상이면 Q8_0을 사용하십시오. Q4_K_M은 절반의 파일 크기로 Q8_0 품질의 95%를 제공합니다. PromptQuorum의 빠른 답변.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ko: {
+        question: 'Q4_K_M vs Q8_0: 어느 것을 선택해야 합니까?',
+        answer: 'VRAM이 8 GB 이하이면 Q4_K_M을 사용하십시오. 12 GB 이상이면 Q8_0을 사용하십시오. Q4_K_M은 약 절반의 파일 크기로 Q8_0 품질의 95%를 제공합니다.',
+        bullets: [
+          'Q4_K_M: 7B 모델에서 ~5–6 GB, 8 GB VRAM에 최적',
+          'Q8_0: 7B 모델에서 ~8–9 GB, 12+ GB VRAM 필요',
+          '실제 사용에서 품질 차이는 5% 미만입니다',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '8 GB VRAM 이하: Q4_K_M을 사용하십시오 — 약 절반의 파일 크기로 Q8_0 품질의 95%를 제공합니다',
+          '12+ GB VRAM: Q8_0은 속도 손실 없이 거의 완전 정밀도에 가까운 품질을 위해 선택할 가치가 있습니다',
+          '매일 Ollama를 사용하는 대부분의 사용자에게 Q4_K_M이 올바른 선택입니다',
+        ],
+      },
+      body1: {
+        title: '빠른 결론',
+        content: [
+          '2026년 5월 기준, <strong>Q8_0은 완전 정밀도 품질의 ~99%입니다. Q4_K_M은 ~92%입니다.</strong> 이 7포인트 차이는 채팅, 코딩, 요약에서는 눈에 보이지 않습니다. 이 세 가지 작업이 로컬 LLM 사용의 95%를 차지합니다. Q8_0이 우위를 보이는 경우는 장문 사실 회상, 다단계 수학, 그리고 500줄 이상의 정확한 구문이 필요한 코드뿐입니다.',
+          'Q4_K_M이 올바른 기본값인 이유는 Q8_0의 추가 품질이 엣지 케이스에서만 나타나기 때문입니다: 정확한 사실 회상이 필요한 장문 생성, 또는 높은 정밀도가 필요한 수학적 추론. 그 외 모든 상황에서 Q4_K_M은 실제로 Q8_0과 동등합니다.',
+          '이미 Q4_K_M을 사용하고 있는데 결과가 올바르지 않게 느껴진다면, 문제는 거의 항상 양자화가 아닌 모델 크기나 프롬프트 구조에 있습니다.',
+        ],
+      },
+      body2: {
+        title: '나란히 비교',
+        content: [
+          '아래 표는 7B 모델에 대한 Q4_K_M과 Q8_0을 비교합니다. 두 형식 모두 특별한 설정 없이 Ollama, LM Studio, llama.cpp에서 작동합니다.',
+          'Q4_K_M의 의미와 k-quant 압축이 어떻게 작동하는지 이해하려면 <a href="/ko/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M 설명 가이드</a>를 참조하십시오. 전체 양자화 참조 자료는 <a href="/ko/local-llms/quantization-levels-comparison" class="text-primary hover:underline">양자화 레벨 비교</a>를 참조하십시오.',
+          '<strong>세 가지 작업이 Q4_K_M의 품질 차이를 드러냅니다: 장문 문서 회상(50+ 페이지), 중간 상태가 있는 다단계 수학, 300줄 이상의 코드 생성.</strong> 이러한 경우 Q8_0의 추가 정밀도는 긴 출력에서 누적되는 작은 드리프트 오류를 방지합니다. 그 외 모든 것 — 채팅, 200줄 미만의 코드, 질문과 답변, 요약 — 에서는 차이가 보이지 않습니다. 결정 전 복습을 위해 <a href="/ko/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M의 의미</a>를 참조하십시오.',
+        ],
+        columns: ['지표', 'Q4_K_M', 'Q8_0'],
+        rows: [
+          { '지표': '파일 크기 (7B 모델)', 'Q4_K_M': '~4.1 GB', 'Q8_0': '~7.7 GB' },
+          { '지표': '필요 VRAM (7B)', 'Q4_K_M': '5–6 GB', 'Q8_0': '8–9 GB' },
+          { '지표': '완전 정밀도 대비 품질', 'Q4_K_M': '~92%', 'Q8_0': '~99%' },
+          { '지표': '최적 VRAM', 'Q4_K_M': '6–8 GB VRAM', 'Q8_0': '12+ GB VRAM' },
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Q4_K_M은 VRAM이 8 GB 이하인 환경에서 Q8_0 품질의 95%를 절반 크기로 제공하는 최적의 양자화 형식입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Q4_K_M은 더 작은 파일(7B 모델 기준 약 4.1 GB)을 사용하며 Q8_0(약 7.7 GB)보다 덜 정확하지만, 채팅, 코딩, 요약 등 일상적인 작업에서는 그 차이가 거의 눈에 보이지 않습니다.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Q4_K_M vs Q8_0에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'Q8_0은 Q4_K_M보다 눈에 띄게 우수합니까?',
+            a: '엣지 케이스에서만 그렇습니다. 복잡한 다단계 수학, 장문 문서의 정확한 인용 회상, 또는 매우 긴 출력의 경우가 해당됩니다. 채팅, 코딩, 요약(사용의 95%를 차지)에서는 대부분의 사용자가 차이를 인식하지 못합니다.',
+          },
+          {
+            q: 'Q8_0이 Q4_K_M보다 빠릅니까?',
+            a: '아닙니다. Q8_0은 더 크고 더 많은 메모리 대역폭을 필요로 하여 토큰당 Q4_K_M보다 약간 더 느립니다. VRAM이 제한된 환경에서는 속도와 품질 모두 Q4_K_M이 유리합니다. 근본적인 이유는 <a href="/ko/prompt-bites/what-is-q4-k-m-quantization" class="text-primary hover:underline">Q4_K_M의 의미</a>를 참조하십시오.',
+          },
+          {
+            q: '작업에 따라 Q4_K_M과 Q8_0을 전환할 수 있습니까?',
+            a: '다른 모델 태그를 다운로드하여 실행하면 가능합니다. Ollama에서는 <code>ollama pull llama3:8b-q4_K_M</code>과 <code>ollama pull llama3:8b-q8_0</code>이 별도의 다운로드입니다. <code>ollama run</code>에서 태그를 지정하여 전환합니다.',
+          },
+          {
+            q: 'Q4_K_S는 어떻습니까? Q4_K_M 대신 사용할 가치가 있습니까?',
+            a: 'Q4_K_S는 Q4_K_M에 비해 약 300 MB를 절약하지만 품질이 더 낮습니다. VRAM이 매우 부족하여 Q4_K_M이 맞지 않는 경우에만 Q4_K_S를 사용하십시오. 거의 모든 경우에 Q4_K_M이 더 나은 선택입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[Q4_K_M 양자화란 무엇입니까?](/ko/prompt-bites/what-is-q4-k-m-quantization)',
+          '[로컬 LLM에 필요한 VRAM 용량](/ko/local-llms/how-much-vram-local-llm)',
+          '[양자화 레벨 비교](/ko/local-llms/quantization-levels-comparison)',
+        ],
+      },
+    },
+  },
 }

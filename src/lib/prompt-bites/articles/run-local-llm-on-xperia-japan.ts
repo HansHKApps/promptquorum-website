@@ -741,4 +741,108 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Hardware Guides',
+    title: 'Xperia 스마트폰에서 로컬 LLM을 실행할 수 있습니까?',
+    seoTitle: 'Xperia 로컬 LLM 일본 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Xperia 1 VI (12 GB RAM)에서 MLC Chat으로 Phi-4 Q4와 Rinna 3.6B 실행 가능합니다. Xperia 5 V (8 GB)는 3B 모델 지원, Xperia 10 VI (6 GB)는 TinyLlama만 가능합니다.',
+    publishDate: '2026-05-27',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-27',
+    quickAnswerTop: {
+      ko: {
+        question: 'Xperia 스마트폰에서 로컬 LLM을 실행할 수 있습니까?',
+        answer: '예 — Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3)는 MLC Chat을 통해 Rinna 3.6B와 Phi-4 Q4를 실행할 수 있습니다. Xperia 5 V (8 GB)는 경량 모델을 지원합니다. Xperia 10 VI (6 GB)는 TinyLlama와 Gemma 2B만 동작합니다.',
+        bullets: [
+          'Xperia 1 VI: 12 GB RAM — Phi-4 Q4, Rinna 3.6B, Qwen3-3B 실행 가능',
+          'Xperia 5 V: 8 GB RAM — Rinna 3.6B 및 Gemma 2B Q4 지원',
+          'Xperia 10 VI: 6 GB RAM — TinyLlama와 Gemma 2B만 지원',
+          'Sony는 Galaxy AI 유사 기능을 포함하지 않습니다 — MLC Chat을 통한 로컬 LLM이 그 공백을 채웁니다',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3)는 7B+ 모델을 안정적으로 실행할 수 있는 유일한 Xperia입니다 — Phi-4 Q4와 Qwen3-3B에 최적입니다',
+          'Xperia 5 V (8 GB RAM)는 Rinna 3.6B와 Gemma 2B Q4를 포함한 3B 모델을 문제없이 처리합니다',
+          'Xperia 10 VI (6 GB RAM)는 Sub-2B 모델로 제한됩니다 — TinyLlama 1.1B와 Gemma 2B가 실질적인 상한선입니다',
+          'Sony는 On-Device AI 기능을 제공하지 않습니다 — Google Play의 MLC Chat 또는 PocketPal AI가 실용적인 대안입니다',
+          'Xperia 1 VI에서 화면 켠 상태로 연속 추론 시 배터리 소모는 시간당 약 15%입니다; 비행기 모드로 소모를 줄일 수 있습니다',
+        ],
+      },
+      body1: {
+        title: 'Xperia 모델별 호환성',
+        content: [
+          '<strong>2026년 5월 기준, 현행 3개 Xperia 모델이 로컬 LLM 추론을 지원하며, 성능은 RAM과 칩셋에 의해 완전히 결정됩니다 — Xperia 1 VI가 선두, Xperia 5 V가 중급 영역을 담당하며, Xperia 10 VI는 가장 작은 모델로 제한됩니다.</strong> Sony는 On-Device AI 어시스턴트를 사전 설치하지 않으므로 (Samsung Galaxy AI와 달리), 로컬 LLM 앱이 Xperia 기기에서 프라이빗하고 오프라인으로 AI를 사용하는 유일한 방법입니다.',
+          'Xperia 1 VI는 양자화된 7B+ 모델을 실행할 수 있는 유일한 Xperia입니다. Snapdragon 8 Gen 3 SoC와 12 GB LPDDR5X RAM 덕분에 일상적인 앱 사용과 함께 Phi-4 Q4 (14B를 약 8 GB로 양자화)와 Qwen3-3B를 동작시킬 여유가 있습니다. Snapdragon 8 Gen 2와 8 GB RAM을 탑재한 Xperia 5 V는 3B 모델의 최적 지점입니다 — Rinna 3.6B와 Gemma 2B Q4가 안정적으로 실행됩니다. Xperia 10 VI는 미드레인지 Snapdragon 6 Gen 1과 6 GB RAM만 탑재합니다; 이 단계에서는 TinyLlama 1.1B 또는 Gemma 2B에 머무르십시오 — 더 큰 모델은 로딩 중 크래시하거나 OOM 오류가 발생합니다.',
+          'Xperia 1 VI는 7B+ 모델에, Xperia 5 V는 3B 모델에, Xperia 10 VI는 Sub-2B 모델에 사용하십시오.',
+          '앱 설정 안내는 <a href="/ko/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">일본용 Android LLM 앱 가이드</a>를 참조하십시오.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Xperia 1 VI (12 GB RAM, Snapdragon 8 Gen 3)는 Phi-4 Q4와 Rinna 3.6B를 MLC Chat으로 실행할 수 있는 유일한 Xperia 모델입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '로컬 LLM이란 인터넷 연결 없이 스마트폰의 칩에서 직접 실행되는 AI 모델입니다. Xperia에서는 MLC Chat 앱을 통해 설치하며, 루트 권한이 필요하지 않습니다.',
+          },
+        ],
+        columns: ['Xperia 모델', 'RAM / 칩', '권장 모델'],
+        rows: [
+          { 'Xperia 모델': 'Xperia 1 VI', 'RAM / 칩': '12 GB / Snapdragon 8 Gen 3', '권장 모델': 'Phi-4 Q4, Rinna 3.6B, Qwen3-3B' },
+          { 'Xperia 모델': 'Xperia 5 V', 'RAM / 칩': '8 GB / Snapdragon 8 Gen 2', '권장 모델': 'Rinna 3.6B, Gemma 2B Q4' },
+          { 'Xperia 모델': 'Xperia 10 VI', 'RAM / 칩': '6 GB / Snapdragon 6 Gen 1', '권장 모델': 'TinyLlama 1.1B, Gemma 2B만' },
+        ],
+      },
+      body2: {
+        title: '3단계 설치 가이드',
+        content: [
+          '<strong>Xperia에 로컬 LLM을 설치하는 데는 3단계가 필요하며, 모델 다운로드 시간을 포함해 30분 미만이면 완료됩니다.</strong> 루트 액세스, 개발자 모드, 특별한 Xperia 설정이 필요하지 않습니다 — 표준 Android 앱 및 파일 관리만으로 완전히 처리됩니다.',
+          '1단계: Google Play 스토어 (Google Playストア)에서 MLC Chat 또는 PocketPal AI를 설치합니다. 두 앱 모두 무료이며 일본에서 VPN이나 지역 우회 없이 이용할 수 있습니다. MLC Chat은 첫 번째 추론까지의 속도가 빠르고, PocketPal AI는 Hugging Face에서 더 넓은 범위의 GGUF 모델 파일을 지원합니다.',
+          '2단계: Wi-Fi로 모델을 다운로드합니다. 다운로드 크기 기준: TinyLlama 1.1B Q4 약 0.7 GB, Rinna 3.6B Q4 약 2 GB, Gemma 2B Q4 약 1.5 GB, Phi-4 Q4 약 8 GB입니다. Phi-4에는 128 GB 이상의 저장 공간을 가진 Xperia를 사용하십시오. Phi-4 Q4 로딩 전에 다른 모든 앱을 닫으십시오 — Xperia 1 VI의 12 GB RAM 중 약 8 GB를 사용하므로 크래시 없이 로드하려면 최대 메모리가 필요합니다. 모바일 데이터로는 다운로드하지 마십시오 — 파일 크기가 큽니다.',
+          '3단계: 키보드를 일본어 입력으로 전환합니다. 일본어가 활성화된 Gboard 또는 ATOK (일본에서 비즈니스용으로 인기 있는)는 MLC Chat 및 PocketPal AI와 바로 연동됩니다 — 일본어로 입력하면 모델도 일본어로 응답합니다. 일본어 입력 기능을 사용하기 위한 추가 설정은 필요하지 않습니다.',
+          '배터리 관련: Xperia 1 VI에서 화면 켠 상태로 연속 추론 시 시간당 약 15%의 배터리 소모를 예상하십시오. 추론 세션 중 비행기 모드 (機内モード)를 활성화하면 백그라운드 무선 통신 소모를 줄이고 세션 시간을 연장할 수 있습니다. Sony Xperia AI Agent (현재 베타)는 클라우드 AI 서비스에 연결됩니다 — MLC Chat의 로컬 LLM은 외부 서버로 데이터를 전송하지 않고 Xperia에서 AI 추론을 완전히 실행하는 유일한 방법으로, 개인정보 보호법 (APPI / 個人情報保護法) 적용 환경에서 중요한 차이점입니다. Android 기기에서의 LLM 설정 전체 가이드는 <a href="/ko/power-local-llm/run-ai-on-tablet-ipad-android" class="text-primary hover:underline">태블릿 및 Android 폰에서 AI 실행하기</a>를 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Xperia LLM에 대한 자주 묻는 질문',
+        faqs: [
+          {
+            q: 'Xperia 10 VI에서 로컬 LLM이 작동합니까?',
+            a: 'TinyLlama 1.1B와 Gemma 2B Q4만 작동합니다. Xperia 10 VI는 6 GB RAM과 Snapdragon 6 Gen 1을 탑재하고 있어, 더 큰 모델은 로딩 중 크래시하거나 메모리 부족 오류가 발생합니다. Xperia 10 VI에서 Rinna 3.6B나 7B 모델은 시도하지 마십시오.',
+          },
+          {
+            q: 'Xperia에서 모델이 필요한 저장 공간은 얼마입니까?',
+            a: 'Rinna 3.6B Q4는 약 2 GB의 저장 공간이 필요합니다. Phi-4 Q4는 약 8 GB가 필요합니다. TinyLlama 1.1B Q4는 약 0.7 GB가 필요합니다. Phi-4에는 128 GB 이상의 Xperia를 사용하십시오; 64 GB 저장 공간이면 Rinna 3.6B와 Gemma 2B에 충분합니다.',
+          },
+          {
+            q: 'Xperia에서 LLM 실행 시 배터리가 얼마나 소모됩니까?',
+            a: 'Xperia 1 VI에서 화면 켠 상태로 전체 성능으로 연속 추론 시 시간당 약 15%의 배터리가 소모됩니다. Xperia 5 V에서 Rinna 3.6B를 사용할 때도 유사한 소모가 예상됩니다. 비행기 모드 (機内モード)를 활성화하면 백그라운드 무선 통신 소모를 시간당 2~4% 줄일 수 있습니다.',
+          },
+          {
+            q: 'Xperia에서 오프라인으로 작동합니까?',
+            a: '예 — 최초 모델 다운로드 후에는 완전 오프라인으로 동작합니다. MLC Chat과 PocketPal AI는 모델이 기기에 저장되면 인터넷 연결, API 키, Sony 계정이 모두 필요하지 않습니다. 추론 중에는 어떤 데이터도 기기 밖으로 나가지 않습니다.',
+          },
+          {
+            q: 'Sony Xperia AI Agent와 로컬 LLM의 차이는 무엇입니까?',
+            a: 'Sony Xperia AI Agent (베타)는 클라우드 AI 서버를 통해 요청을 처리합니다 — 사용자의 프롬프트와 응답이 Sony 또는 서드파티 인프라를 통과합니다. MLC Chat을 통해 실행되는 로컬 LLM은 Xperia의 Snapdragon 칩에서 완전히 실행됩니다 — 데이터가 기기 밖으로 절대 나가지 않습니다. 이 On-Device 방식은 개인정보 보호법 (APPI / 個人情報保護法) 적용 환경에서 민감한 데이터를 처리하는 사용자를 위한 프라이버시 준수 대안입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽을거리',
+        items: [
+          '[일본 Android용 최고의 로컬 LLM 앱](/ko/prompt-bites/best-local-llm-apps-japan-android)',
+          '[태블릿 및 Android 폰에서 AI 실행하기](/ko/power-local-llm/run-ai-on-tablet-ipad-android)',
+          '[4 GB VRAM에 최적인 Ollama 모델](/ko/prompt-bites/best-ollama-models-4gb-vram)',
+        ],
+      },
+    },
+  },
 }

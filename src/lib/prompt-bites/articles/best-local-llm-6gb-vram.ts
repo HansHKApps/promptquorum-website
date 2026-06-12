@@ -619,4 +619,80 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Quantization & VRAM',
+    title: '6 GB VRAM에 최적인 로컬 LLM은?',
+    seoTitle: '6 GB VRAM 최적 로컬 LLM 2026 | PromptQuorum',
+    metaDescription: 'Llama 3 8B Q4_K_M(5.5 GB)은 6 GB VRAM에서 최선의 선택입니다. Phi-4 Q4_K_M과 Mistral Small Q4_K_S가 우수한 대안입니다. PromptQuorum의 빠른 답변.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ko: {
+        question: '6 GB VRAM에 최적인 로컬 LLM은?',
+        answer: '6 GB VRAM에서는 Llama 3 8B Q4_K_M(약 5.5 GB)이 최선의 선택입니다. ~20 tok/s로 뛰어난 채팅 및 코딩 성능을 제공합니다. Phi-4 Q4_K_M과 Mistral Small Q4_K_S도 훌륭한 대안입니다.',
+        bullets: [
+          'Llama 3 8B Q4_K_M: 6 GB 최고의 종합 선택 (5.5 GB VRAM)',
+          'Phi-4 Q4_K_M: 명령어 수행에 최적',
+          'Mistral Small Q4_K_S: 6 GB에서 가장 빠른 모델',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Llama 3 8B Q4_K_M은 6 GB VRAM의 최선 선택입니다: 5.5 GB, ~20 tok/s, 채팅 및 코딩에 탁월합니다.',
+          'Phi-4 Q4_K_M(5.0 GB)은 명령어 수행 및 추론 작업에서 선두를 달립니다.',
+          '6 GB VRAM은 Windows의 RTX 3050/4050 및 16 GB 통합 메모리를 갖춘 모든 MacBook을 지원합니다.',
+        ],
+      },
+      body1: {
+        title: '6 GB VRAM을 위한 상위 3개 모델',
+        content: [
+          '2026년 5월 기준, <strong>6 GB VRAM은 두 가지 매우 다른 하드웨어 클래스를 포괄합니다: 보급형 Windows 노트북(RTX 3050/4050)과 16 GB 통합 메모리를 갖춘 모든 MacBook.</strong> 양자 간 성능 차이는 30~50%에 달합니다. Mac은 통합 메모리 대역폭 덕분에 Llama 3 8B Q4_K_M을 ~25 tok/s로 구동하는 반면, Windows 독립 GPU는 PCIe 전송 오버헤드로 인해 ~18 tok/s에 그칩니다.',
+          '세 모델 모두 Ollama에서 별도 설정 없이 작동합니다. 아래 속도 수치는 2048 토큰 컨텍스트 창을 기준으로 합니다. 4096 토큰으로 확장하면 ~1 GB가 추가되며, Phi-4 및 Mistral의 경우 여전히 6 GB 범위 내에 있습니다.',
+        ],
+        columns: ['모델', 'VRAM', '최적 용도'],
+        rows: [
+          { '모델': 'Llama 3 8B Q4_K_M', 'VRAM': '5.5 GB', '최적 용도': '일반 채팅, 코딩' },
+          { '모델': 'Phi-4 Q4_K_M', 'VRAM': '5.0 GB', '최적 용도': '명령어 수행, 추론' },
+          { '모델': 'Mistral Small Q4_K_S', 'VRAM': '4.5 GB', '최적 용도': '속도 우선 작업' },
+        ],
+      },
+      body2: {
+        title: 'Windows vs MacBook에서의 6 GB VRAM',
+        content: [
+          'Windows에서는 RTX 3050 6 GB와 RTX 4050 6 GB가 이 등급의 주요 GPU 두 종입니다. 두 모델 모두 CUDA를 통해 Ollama를 거의 동일한 성능으로 실행합니다. 최신 RTX 4050은 와트당 약 10% 더 효율적이지만 실사용에서는 큰 속도 차이가 없습니다.',
+          'macOS에서는 16 GB 통합 메모리를 탑재한 MacBook이라면 GPU 워크로드에 약 6 GB를 사용할 수 있습니다. 통합 메모리는 독립 GPU 카드를 제한하는 PCIe 대역폭 병목을 제거하므로, macOS 성능은 독립형 RTX 3050과 동등하거나 그 이상인 경우가 많습니다.',
+          '6 GB에서 8 GB로 업그레이드하면 7~8B 모델에서 Q5_K_M 양자화(+3% 품질)와 더 빠른 컨텍스트 창이 가능해집니다. 12 GB 옵션과 14B 모델은 <a href="/ko/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">RTX 3060 12 GB 최적 Ollama 모델</a>을 참조하십시오. 전체 VRAM 참고 자료는 <a href="/ko/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">로컬 LLM에 필요한 VRAM 용량</a>을 확인하십시오.',
+          '<strong>6 GB는 로컬 LLM이 일상 작업에서 클라우드 모델과 경쟁할 수 있는 최소 VRAM 용량입니다.</strong> 6 GB 미만에서는 코딩이나 장문 추론에 어려움을 겪는 소형 모델에 제한됩니다. 6 GB에서는 Llama 3 8B Q4_K_M이 완전히 해방됩니다. 14B 모델로 한 단계 올라가려면 <a href="/ko/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">12 GB 등급 선택지</a>를 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '6 GB VRAM 모델에 관한 빠른 답변',
+        faqs: [
+          {
+            q: '6 GB VRAM으로 일상적인 LLM 사용이 가능합니까?',
+            a: '예. Llama 3 8B Q4_K_M은 ~20 tok/s로 멀티턴 채팅, 코드 자동완성, 문서 요약, 질의응답을 처리합니다. 대화형 사용에 충분한 속도입니다.',
+          },
+          {
+            q: 'Llama 3 8B가 6 GB VRAM에 들어갑니까?',
+            a: 'Q4_K_M에서는 가능합니다. 모델이 5.5 GB를 사용합니다. 4096 토큰 컨텍스트 창은 ~1 GB를 추가하여 총 ~6.5 GB가 됩니다. 엄격하게 6 GB 범위를 유지하려면 2048 토큰 컨텍스트(<code>--num-ctx 2048</code>)를 사용하거나 Phi-4 Q4_K_M을 선택하십시오.',
+          },
+          {
+            q: '6 GB VRAM으로 13B 또는 14B 모델을 실행할 수 있습니까?',
+            a: '불가능합니다. Qwen 14B의 Q4_K_M은 ~10 GB VRAM이 필요합니다. 14B 모델의 최소 요건은 12 GB로 업그레이드입니다. <a href="/ko/prompt-bites/best-ollama-models-rtx-3060-12gb" class="text-primary hover:underline">RTX 3060 12 GB 최적 Ollama 모델</a>을 참조하십시오.',
+          },
+          {
+            q: '6 GB VRAM으로 이미지 생성도 가능합니까?',
+            a: '충분하지 않습니다. Stable Diffusion XL은 최소 8 GB VRAM이 필요합니다. 6 GB 카드에서 LLM과 이미지 생성을 동시에 실행하면 지속적인 전환이 필요합니다. 한 번에 하나의 워크로드에 집중하거나 8 GB로 업그레이드하는 것을 권장합니다.',
+          },
+        ],
+      },
+    },
+  },
 }

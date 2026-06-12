@@ -644,4 +644,157 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: 'أفضل بدائل مفتوحة المصدر لـChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/ar/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'ar' },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Cost & Comparisons',
+    type: 'comparison',
+    title: 'ChatGPT Plus 최고의 오픈소스 대안 2026',
+    seoTitle: 'ChatGPT Plus 무료 오픈소스 대안 2026 비교',
+    metaDescription: '2026년 ChatGPT Plus 최고의 무료 오픈소스 대안: Ollama+Open WebUI, LM Studio, Jan, AnythingLLM 비교. 월 $20 구독 없이 로컬에서 무료로 GPT-4급 모델을 실행하십시오.',
+    educationalLevel: 'Beginner',
+    affiliateDisclosure: false,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**2026년 ChatGPT Plus 최고의 오픈소스 대안은 Ollama + Open WebUI입니다. 무료이며 모든 하드웨어에서 로컬 모델을 실행하고 Qwen3 72B, Llama 3.3 70B 같은 GPT-4급 모델을 지원하며 월 $20 구독이 필요 없습니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: 'ChatGPT Plus의 최고 무료 대안은 무엇입니까?',
+        answer: '로컬 셀프호스팅에는 Ollama + Open WebUI, 가장 쉬운 데스크톱 앱에는 Jan, 무료 티어 클라우드 추론에는 Groq API를 선택하십시오. 세 가지 모두 구독 없이 무료입니다.',
+        bullets: [
+          'Ollama + Open WebUI: 완전한 기능의 최고 로컬 ChatGPT 대체제',
+          'Jan: 가장 쉬운 데스크톱 앱, 원클릭 모델 다운로드',
+          'LM Studio: 모델 탐색 및 테스트에 최적',
+          'Groq API (무료 티어): 신용카드 불필요, 가장 빠른 클라우드 추론',
+          'AnythingLLM: 팀 및 문서 Q&A에 최적',
+        ],
+        updatedDate: '2026-05-26',
+      },
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: '2026년 ChatGPT Plus 최고의 오픈소스 대안은 Ollama + Open WebUI로, 무료이며 로컬에서 GPT-4급 모델을 실행할 수 있습니다.',
+      },
+      {
+        type: 'plain-terms',
+        text: 'ChatGPT 오픈소스 대안은 OpenAI에 월 $20를 지불하는 대신 자신의 컴퓨터나 무료 클라우드 서비스에서 AI 언어 모델을 실행합니다.',
+      },
+    ],
+    parentArticle: '/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026',
+    targetKeywords: [
+      'ChatGPT Plus 오픈소스 대안',
+      'ChatGPT 무료 대체제 2026',
+      'Ollama Open WebUI 한국어',
+      '로컬 AI 모델 무료 실행',
+      'ChatGPT 대신 무료 AI',
+    ],
+    readTime: '5분 분량',
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Ollama + Open WebUI: 완전 무료, 최고의 로컬 ChatGPT Plus 대체제',
+          'Jan: 초보자를 위한 가장 쉬운 원클릭 데스크톱 앱',
+          'LM Studio: 모델 탐색 및 비교에 최적',
+          'Groq API 무료 티어: 신용카드 없이 가장 빠른 클라우드 추론',
+          'AnythingLLM: 문서 Q&A와 다중 사용자가 필요한 팀에 최적',
+          '다섯 가지 모두 $0 — ChatGPT Plus는 월 $20 (연 $240)',
+        ],
+      },
+      comparison: {
+        heading: '무료 ChatGPT Plus 대안 비교',
+        body: 'ChatGPT Plus에서 전환하는 사용자를 위한 주요 차이점입니다.',
+        columns: ['도구', '설치', '최고 모델', '프라이버시', '비용'],
+        rows: [
+          { '도구': 'Ollama + Open WebUI', '설치': 'CLI + Docker', '최고 모델': 'Qwen3 72B, Llama 3.3 70B', '프라이버시': '100% 로컬', '비용': '무료' },
+          { '도구': 'Jan', '설치': '데스크톱 앱', '최고 모델': 'Qwen3 14B, Mistral Small', '프라이버시': '100% 로컬', '비용': '무료' },
+          { '도구': 'LM Studio', '설치': '데스크톱 앱', '최고 모델': '모든 GGUF 모델', '프라이버시': '100% 로컬', '비용': '무료' },
+          { '도구': 'Groq (무료 티어)', '설치': 'API/웹', '최고 모델': 'Llama 3.3 70B, Gemma2 27B', '프라이버시': '클라우드 (제한적 보존)', '비용': '무료 (속도 제한)' },
+          { '도구': 'AnythingLLM', '설치': '데스크톱/Docker', '최고 모델': '모든 Ollama 모델', '프라이버시': '100% 로컬', '비용': '무료 (Enterprise: 유료)' },
+        ],
+      },
+      ollamaWebui: {
+        heading: 'Ollama + Open WebUI — 최고의 완전 대체제',
+        body: 'Ollama는 모델 관리를 처리하고 로컬 API를 제공합니다. Open WebUI는 ChatGPT 경험과 유사한 브라우저 인터페이스를 제공합니다: 대화 기록, 시스템 프롬프트, 파일 업로드, 이미지 생성, 웹 검색 기능이 포함됩니다.\n\n16GB RAM 또는 8GB VRAM 머신에서 Qwen3 14B는 초당 15~25 토큰으로 실행됩니다. 24GB VRAM(RTX 4090, RTX 3090)에서 Qwen3 72B Q4_K_M은 대부분의 추론 작업에서 GPT-5.5에 필적합니다.\n\n**원커맨드 설치:**\n```bash\ncurl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\ndocker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main\n```',
+        pros: ['완전한 ChatGPT 유사 인터페이스', '모델 기록 및 시스템 프롬프트 지원', '파일 업로드 및 웹 검색 플러그인', '속도 제한 없는 무료 이용'],
+        cons: ['Open WebUI에 Docker 필요', '설치에 15~30분 소요', '성능은 로컬 하드웨어에 따라 다름'],
+        verdict: '기본 터미널 명령에 익숙한 사용자에게 최고의 ChatGPT Plus 대체제입니다.',
+      },
+      jan: {
+        heading: 'Jan — 가장 쉬운 데스크톱 앱',
+        body: 'Jan은 Windows, Mac, Linux용 원다운로드 데스크톱 애플리케이션입니다. Qwen3, Llama, Mistral 등 인기 모델을 클릭으로 다운로드하는 내장 모델 허브가 포함됩니다. 커맨드라인이 필요하지 않습니다.\n\nJan은 로컬 API 서버 모드(OpenAI 호환)도 있어 코드를 변경하지 않고 Cursor나 Continue 같은 기존 도구를 Jan으로 연결할 수 있습니다.',
+        pros: ['커맨드라인 설치 불필요', '내장 모델 다운로더', 'OpenAI 호환 로컬 API', '깔끔하고 단순한 인터페이스'],
+        cons: ['Open WebUI보다 약한 UI 기능', '다중 사용자 지원 없음'],
+        verdict: '설치 복잡성 없이 ChatGPT 유사 앱을 원하는 초보자와 비기술 사용자에게 최적입니다.',
+      },
+      faq: {
+        faqs: [
+          {
+            q: '오픈소스 로컬 모델이 ChatGPT Plus 품질에 필적할 수 있습니까?',
+            a: 'Qwen3 72B와 Llama 3.3 70B는 로컬에서 실행할 때 대부분의 추론, 코딩, 글쓰기 벤치마크에서 GPT-5.5 성능에 필적합니다. 최고 품질을 위해서는 24GB 이상 VRAM이 필요합니다. 더 작은 14B 모델은 GPT-5.5보다 눈에 띄게 약하지만 대부분의 일상 작업에 충분히 강력합니다.',
+          },
+          {
+            q: 'ChatGPT 대안을 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?',
+            a: '최소 사양: CPU의 3B 모델에 8GB RAM. 권장: 7B 모델에 16GB RAM, 7B 모델 전속도 실행에 8GB VRAM GPU. 최적: 14~34B 모델에 16~24GB VRAM. Apple Silicon M2 이상의 Mac은 통합 메모리로 7B~14B 모델을 잘 처리합니다.',
+          },
+          {
+            q: 'Groq는 정말 무료입니까?',
+            a: 'Groq는 속도 제한이 있는 무료 티어를 제공합니다: Llama 3.3 70B에 분당 약 30 요청. 개인 사용에는 충분합니다. 무료 티어는 신용카드가 필요 없습니다. 프로덕션이나 대용량 사용의 경우 유료 플랜은 백만 토큰당 약 $0.05부터 시작합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        heading: '관련 자료',
+        items: [
+          '[LM Studio vs Jan vs GPT4All 2026](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
+          '[Ollama로 로컬 LLM 실행하기](/ko/local-llms/run-local-llm-ollama)',
+          '[Qwen3 로컬 설치 가이드 2026](/ko/prompt-bites/how-to-run-qwen3-locally-2026)',
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'ChatGPT Plus의 최고 무료 대안은 무엇입니까?',
+          acceptedAnswer: { '@type': 'Answer', text: '로컬 셀프호스팅에는 Ollama + Open WebUI, 가장 쉬운 데스크톱 앱에는 Jan을 선택하십시오. 두 가지 모두 완전히 무료입니다.' },
+        },
+        {
+          '@type': 'Question',
+          name: '오픈소스 로컬 모델이 ChatGPT Plus 품질에 필적할 수 있습니까?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 72B와 Llama 3.3 70B는 대부분의 벤치마크에서 GPT-5.5에 필적하며 24GB 이상 VRAM이 필요합니다. 14B 모델은 일상 작업에 충분히 강력합니다.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Groq는 정말 무료입니까?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Groq 무료 티어는 신용카드 없이 분당 약 30 요청을 제공합니다. 개인 사용에는 충분하며 프로덕션 플랜은 백만 토큰당 약 $0.05부터 시작합니다.' },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'ChatGPT Plus 최고의 오픈소스 대안 2026',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Ollama + Open WebUI', description: '최고의 완전 기능 로컬 ChatGPT 대체제' },
+        { '@type': 'ListItem', position: 2, name: 'Jan', description: '원클릭 모델 다운로드 가장 쉬운 데스크톱 앱' },
+        { '@type': 'ListItem', position: 3, name: 'LM Studio', description: '모델 탐색 및 테스트에 최적' },
+        { '@type': 'ListItem', position: 4, name: 'Groq API 무료 티어', description: '신용카드 없이 가장 빠른 클라우드 추론' },
+        { '@type': 'ListItem', position: 5, name: 'AnythingLLM', description: '팀과 문서 Q&A에 최적' },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { '@type': 'ListItem', position: 3, name: 'ChatGPT Plus 최고의 오픈소스 대안 2026', item: 'https://www.promptquorum.com/ko/prompt-bites/best-open-source-alternatives-to-chatgpt-plus' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: 'ChatGPT Plus 최고의 오픈소스 대안 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/ko/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'ko' },
+  },
 }

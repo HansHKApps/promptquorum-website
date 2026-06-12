@@ -1854,4 +1854,233 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       ],
     },
   },
+  ko: {
+    theme: 'Model Comparisons',
+    title: 'SillyTavern 중국어 롤플레이 설정 가이드',
+    seoTitle: 'SillyTavern 중국어 롤플레이 2026: Qwen3 및 Yi-34B',
+    metaDescription: 'SillyTavern에서 중국어 롤플레이를 위한 최고의 로컬 모델 2026: Qwen3-72B, Yi-34B, ChatGLM. UTF-8 캐릭터 카드 설정 및 Ollama API 브릿지 구성법.',
+    publishDate: '2026-05-26',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    educationalLevel: 'Intermediate',
+    audience: 'SillyTavern과 로컬 LLM으로 중국어 롤플레이를 설정하는 한국어 사용자',
+    parentArticle: '/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
+    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing-2026'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ko: {
+        question: 'SillyTavern에서 중국어 롤플레이에 가장 적합한 모델은 무엇입니까?',
+        answer: 'Qwen3-72B Q4_K_M은 중국어 롤플레이를 위한 최고의 로컬 모델입니다 — 중국어 네이티브 학습, 풍부한 어휘, 128K 컨텍스트를 제공합니다. Yi-34B는 캐릭터의 감정적 깊이에 탁월합니다. 8 GB VRAM에서는 Qwen3-7B가 8~12 tok/s로 작동합니다.',
+        bullets: [
+          'Qwen3-72B Q4_K_M: 46 GB RAM, 최고의 중국어 산문 품질, 128K 컨텍스트',
+          'Yi-34B Q4_K_M: 21 GB RAM, 탁월한 캐릭터 음성 및 감정 범위',
+          'Qwen3-7B Q4_K_M: 5.5 GB VRAM, 8~12 tok/s — 8 GB GPU에 최적',
+          'ChatGLM3-6B: 4.5 GB VRAM, 더 빠른 추론이지만 캐릭터 일관성 낮음',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    readTime: '5분 분량',
+    intro: 'SillyTavern을 중국어 로컬 모델과 함께 실행하려면 세 가지가 필요합니다. 중국어 텍스트로 네이티브 학습된 모델, 캐릭터 카드의 올바른 UTF-8 인코딩, 그리고 SillyTavern에서 Ollama 또는 llama.cpp로의 API 브릿지입니다. 이 가이드에서는 VRAM 수준별 최고 모델, 중국어 캐릭터 카드 구성, 실제로 작동하는 연결 설정을 다룹니다.',
+    leadAnswerBlock: 'Qwen3-72B Q4_K_M은 46 GB RAM이 필요한 중국어 롤플레이 최고의 로컬 모델입니다. 8 GB VRAM에서는 Qwen3-7B를 사용하십시오. 캐릭터 카드는 항상 UTF-8로 설정하고 SillyTavern을 http://127.0.0.1:11434의 Ollama에 연결하십시오.',
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        content: 'Qwen3-72B Q4_K_M은 로컬에서 최고 품질의 중국어 롤플레이를 제공합니다. 8 GB VRAM에서는 Qwen3-7B가 8~12 tok/s로 실용적인 선택입니다.',
+      },
+      {
+        type: 'plain-terms',
+        content: 'SillyTavern은 롤플레이를 위한 채팅 인터페이스입니다. Ollama는 내 컴퓨터에서 AI 모델을 실행합니다. 로컬 중국어 롤플레이를 위해: (1) Ollama를 통해 중국어 학습 모델을 다운로드하고, (2) SillyTavern이 Ollama API를 가리키도록 설정하고, (3) UTF-8 인코딩으로 중국어 캐릭터 카드를 작성하십시오.',
+      },
+    ],
+    toc: [
+      { label: 'VRAM별 모델 비교', anchor: 'model-comparison' },
+      { label: 'SillyTavern과 Ollama 연결', anchor: 'connection-setup' },
+      { label: '중국어 캐릭터 카드', anchor: 'character-cards' },
+      { label: '인코딩 설정', anchor: 'encoding-settings' },
+      { label: '중국어 프롬프트 템플릿', anchor: 'prompt-template' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    targetKeywords: [
+      'SillyTavern 중국어 롤플레이',
+      '로컬 LLM 중국어 모델',
+      'Qwen3 SillyTavern 설정',
+      'SillyTavern Ollama 연결',
+      '중국어 AI 롤플레이 모델 추천',
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '핵심 요약',
+        isTldr: true,
+        items: [
+          'Qwen3-72B Q4_K_M: 최고의 중국어 산문, 46 GB RAM 필요',
+          'Yi-34B Q4_K_M: 최고의 캐릭터 깊이, 21 GB RAM 필요',
+          'Qwen3-7B Q4_K_M: 8 GB VRAM에 최적, 8~12 tok/s',
+          'SillyTavern → API 유형: OpenAI 호환 → URL: http://127.0.0.1:11434/v1',
+          '캐릭터 카드: 중국어 텍스트를 직접 붙여넣고 UTF-8로 저장',
+          '시스템 프롬프트: 始终用简体中文回复。保持角色一致性。',
+        ],
+      },
+      modelComparison: {
+        id: 'model-comparison',
+        title: '중국어 롤플레이에 적합한 Qwen 또는 중국어 모델 선택',
+        content: [
+          '네 가지 모델이 주요 하드웨어 수준을 커버합니다. Qwen3-72B는 산문 품질에서 최고이지만 46 GB 통합 메모리의 워크스테이션 또는 Mac Studio가 필요합니다. Yi-34B는 캐릭터 음성과 감정적 깊이를 우선시하는 사용자를 위한 두 번째 선택입니다. Qwen3-7B는 일반 게이밍 GPU에 적합한 실용적인 옵션입니다.',
+        ],
+        comparisonTable: {
+          columns: ['모델', 'VRAM / RAM', '중국어 점수', '속도', '최적 용도'],
+          rows: [
+            { '모델': 'Qwen3-72B Q4_K_M', 'VRAM / RAM': '46 GB RAM', '중국어 점수': '★★★★★', '속도': '1~3 tok/s', '최적 용도': '최고 산문, 장편 내러티브' },
+            { '모델': 'Yi-34B Q4_K_M', 'VRAM / RAM': '21 GB RAM', '중국어 점수': '★★★★☆', '속도': '2~5 tok/s', '최적 용도': '감정적 깊이, 캐릭터 음성' },
+            { '모델': 'Qwen3-14B Q4_K_M', 'VRAM / RAM': '9.5 GB VRAM', '중국어 점수': '★★★★☆', '속도': '4~8 tok/s', '최적 용도': '품질과 속도의 균형' },
+            { '모델': 'Qwen3-7B Q4_K_M', 'VRAM / RAM': '5.5 GB VRAM', '중국어 점수': '★★★☆☆', '속도': '8~12 tok/s', '최적 용도': 'RTX 3060, 8 GB VRAM GPU' },
+            { '모델': 'ChatGLM3-6B', 'VRAM / RAM': '4.5 GB VRAM', '중국어 점수': '★★★☆☆', '속도': '12~18 tok/s', '최적 용도': '더 빠름, 제한된 컨텍스트 (8K)' },
+          ],
+        },
+      },
+      connectionSetup: {
+        id: 'connection-setup',
+        title: '4단계로 SillyTavern을 Ollama에 연결하기',
+        content: [
+          'SillyTavern은 OpenAI 호환 API 엔드포인트를 통해 Ollama와 통신합니다. 별도의 플러그인이 필요하지 않습니다 — Ollama가 포트 11434에서 네이티브로 이를 제공합니다.',
+        ],
+        numberedItems: [
+          '모델 다운로드: 터미널에서 `ollama pull qwen2.5:7b` (또는 `qwen2.5:72b`, `yi:34b`)를 실행하십시오',
+          'SillyTavern 열기 → API 연결 → **OpenAI 호환** 선택',
+          '사용자 정의 API URL을 `http://127.0.0.1:11434/v1`로 설정하십시오',
+          'API 키를 비어있지 않은 임의의 문자열로 설정하십시오 (예: `ollama`) — Ollama는 키를 무시합니다',
+          '연결 클릭 → 드롭다운에서 모델 선택',
+        ],
+      },
+      characterCards: {
+        id: 'character-cards',
+        title: '중국어 캐릭터 카드 작성하기',
+        content: [
+          'SillyTavern 캐릭터 카드(페르소나 설명, 환영 메시지, 대화 예시)는 중국어 텍스트를 완전히 지원합니다. 시스템 로케일이 UTF-8로 설정되어 있다면 특별한 인코딩 단계 없이 간체 중국어로 직접 작성하십시오.',
+        ],
+        codeBlock: `名字：苏云
+描述：苏云是一名二十五岁的古风侠女，性格冷静、话语简洁，行事果断。她来自江湖，精通剑术，内心深处渴望平静的生活。
+开场白：（苏云缓缓抬头，眸色沉静）你来了。有什么事？
+示例对话：
+{{user}}: 我需要你的帮助。
+苏云: 先说清楚，值不值得我出手。`,
+        codeLanguage: 'text',
+      },
+      encodingSettings: {
+        id: 'encoding-settings',
+        title: '깨진 문자를 방지하는 인코딩 설정',
+        content: [
+          '중국어 깨짐 현상(乱码)은 거의 항상 세 가지 원인 중 하나입니다: 시스템 프롬프트에 언어 지시어 누락, 중국어로 학습되지 않은 모델, 또는 UTF-8로 설정되지 않은 터미널/에디터.',
+        ],
+        items: [
+          '**SillyTavern 설정:** 별도의 특수 설정이 필요하지 않습니다 — 앱이 내부적으로 UTF-8을 사용합니다. 캐릭터 카드를 JSON으로 내보내기/가져오기 시 에디터가 UTF-8(ANSI 또는 GB2312가 아닌)로 저장하는지 확인하십시오.',
+          '**Windows 터미널:** Ollama를 시작하기 전에 `chcp 65001`을 실행하여 UTF-8 코드 페이지를 강제 적용하십시오.',
+          '**Ollama 모델 파일:** 사용자 정의 Modelfile을 사용하는 경우 `PARAMETER stop ""`을 설정하십시오 — 。！？와 같은 중국어 구두점이 일부 기본 모델에서 조기 종료 토큰을 유발할 수 있습니다.',
+          '**llama.cpp 백엔드:** `--log-disable` 플래그를 추가하십시오 — 기본 로그 출력이 일부 Windows 터미널에서 Unicode를 손상시킬 수 있습니다.',
+        ],
+      },
+      promptTemplate: {
+        id: 'prompt-template',
+        title: '중국어 롤플레이를 위한 시스템 프롬프트 템플릿',
+        content: [
+          'SillyTavern의 시스템 프롬프트 필드(API → 지시어 템플릿)에 다음을 붙여넣으십시오. 필요에 따라 캐릭터 이름과 어조를 조정하십시오.',
+        ],
+        codeBlock: `你是{{char}}。请始终用简体中文回复，保持角色一致性。
+规则：
+- 不要破坏角色（OOC）
+- 回复长度：100–300字，根据情境调整
+- 使用符合古风/现代/科幻（选择一种）语境的词汇
+- 如有动作描写，用括号标注，如：（她轻轻叹气）`,
+        codeLanguage: 'text',
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: 'Qwen3-7B는 긴 중국어 롤플레이 세션을 처리할 수 있습니까?',
+            a: '예. Qwen3-7B Q4_K_M은 Ollama에서 기본적으로 32K 컨텍스트를 지원합니다. 방대한 설정이나 긴 대화 기록이 있는 긴 세션의 경우, SillyTavern의 API 설정에서 컨텍스트 창을 늘리고 10K+ 토큰에서 더 나은 일관성을 위해 Qwen3-14B 이상을 사용하십시오.',
+          },
+          {
+            q: 'SillyTavern은 중국어 캐릭터 이름과 설명을 지원합니까?',
+            a: '예. SillyTavern은 모든 캐릭터 데이터를 UTF-8 JSON으로 저장합니다. 이름, 설명, 환영 메시지, 대화 예시를 완전히 중국어로 작성할 수 있습니다. 인터페이스는 별도의 플러그인 없이 중국어 문자를 올바르게 표시합니다.',
+          },
+          {
+            q: 'Yi-34B가 중국어 롤플레이에서 Qwen3-14B보다 낫습니까?',
+            a: 'Yi-34B는 특히 복잡하거나 문학적인 장면에서 더 표현적이고 감정적으로 다양한 캐릭터 응답을 생성합니다. Qwen3-14B는 더 빠르고(4~8 tok/s 대 2~5 tok/s) RAM이 덜 필요합니다. 순수한 롤플레이 몰입감을 위해서는 Yi-34B가 우수하고, 속도와 낮은 하드웨어 요구 사항을 위해서는 Qwen3-14B가 최선입니다.',
+          },
+          {
+            q: '모델이 중국어와 영어를 혼합하여 출력하는 이유는 무엇입니까?',
+            a: '시스템 프롬프트에 언어 지시어가 없기 때문입니다. SillyTavern의 지시어 템플릿 시스템 프롬프트에 始终用简体中文回复，不要使用英文을 추가하십시오. 기본적으로 영어를 출력하는 Llama나 Mistral 대신 중국어로 학습된 모델(Qwen3, Yi, ChatGLM)을 사용하고 있는지도 확인하십시오.',
+          },
+          {
+            q: '간체 대신 번체 중국어를 사용할 수 있습니까?',
+            a: '예. 시스템 프롬프트에서 简体中文을 繁體中文으로 교체하십시오. Qwen3는 번체 중국어를 잘 처리합니다. Yi-34B도 번체 중국어를 지원하지만 간체보다 일관성이 약간 낮습니다. ChatGLM3는 주로 간체 중국어로 학습되었으므로 번체 사용에는 권장되지 않습니다.',
+          },
+          {
+            q: 'Mac에서 작동합니까?',
+            a: '예. Apple Silicon의 Ollama는 Metal(MLX 백엔드)을 통해 Qwen3-7B와 14B를 실행합니다. Qwen3-72B의 경우 최소 64 GB 통합 메모리가 필요합니다(Mac Studio M2 Ultra 또는 M3 Ultra, 또는 Mac Pro). `ollama pull qwen2.5:72b`를 실행하고 동일한 방법으로 SillyTavern을 연결하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[SillyTavern vs Agn.ai vs RisuAI 롤플레이 비교](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
+          '[2026년 창작 글쓰기를 위한 최고의 로컬 LLM](/ko/prompt-bites/best-local-llm-creative-writing-2026)',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'SillyTavern 중국어 롤플레이 설정 가이드 2026',
+      description: 'SillyTavern에서 중국어 롤플레이를 위한 최고의 모델: Qwen3-72B 선두, 캐릭터 깊이를 위한 Yi-34B, 속도를 위한 ChatGLM. 카드 인코딩 및 Ollama로의 API 브릿지.',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/sillytavern-chinese-roleplay-setup',
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'SillyTavern' },
+        { '@type': 'Thing', name: '중국어 언어 모델' },
+        { '@type': 'Thing', name: '로컬 LLM 롤플레이' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'SillyTavern' },
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+        { '@type': 'SoftwareApplication', name: 'ChatGLM' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { '@type': 'ListItem', position: 3, name: 'SillyTavern 중국어 롤플레이 설정 가이드', item: 'https://www.promptquorum.com/ko/prompt-bites/sillytavern-chinese-roleplay-setup' },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Qwen3-7B는 긴 중국어 롤플레이 세션을 처리할 수 있습니까?',
+          acceptedAnswer: { '@type': 'Answer', text: '예. Qwen3-7B Q4_K_M은 Ollama에서 기본적으로 32K 컨텍스트를 지원합니다. 긴 세션의 경우 컨텍스트 창을 늘리고 Qwen3-14B 이상을 사용하십시오.' },
+        },
+        {
+          '@type': 'Question',
+          name: '모델이 중국어와 영어를 혼합하여 출력하는 이유는 무엇입니까?',
+          acceptedAnswer: { '@type': 'Answer', text: '시스템 프롬프트에 始终用简体中文回复，不要使用英文을 추가하십시오. Qwen3, Yi 또는 ChatGLM을 사용하십시오 — Llama와 Mistral은 기본적으로 영어를 출력합니다.' },
+        },
+      ],
+    },
+  },
 }

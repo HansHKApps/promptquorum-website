@@ -638,4 +638,94 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Ollama',
+    title: 'Ollama에서 128K 컨텍스트를 지원하는 모델은 무엇입니까?',
+    seoTitle: 'Ollama 128K 컨텍스트 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Llama 3.3 8B와 Qwen 3 14B는 Ollama에서 128K 이상의 컨텍스트를 지원합니다. Qwen 3는 1M 토큰에 도달합니다. 전체 컨텍스트 실행 시 VRAM이 크게 증가합니다. 2026년 업데이트.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ko: {
+        question: 'Ollama에서 128K 컨텍스트를 지원하는 모델은 무엇입니까?',
+        answer: 'Llama 3.3 8B는 Ollama에서 128K 컨텍스트를 지원합니다. Qwen 3 14B는 1M 토큰에 도달합니다. 주의: 전체 컨텍스트 실행 시 VRAM이 크게 증가합니다 — 128K 윈도우는 기본 4K 윈도우보다 3~4배 더 많은 VRAM이 필요합니다.',
+        bullets: [
+          'Llama 3.3 8B: 128K 컨텍스트, 전체 컨텍스트 시 ~16 GB VRAM',
+          'Qwen 3 14B: 최대 1M 토큰, 전체 컨텍스트 시 24+ GB VRAM',
+          '일반 사용 시 --num-ctx 4096으로 설정하여 VRAM을 절약하십시오',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '대부분의 Ollama 7B 모델은 128K 컨텍스트를 지원한다고 광고하지만 32K 토큰 이상에서는 품질이 저하됩니다',
+          'Llama 3.3 8B와 Qwen 3 14B는 전체 128K에서 안정적인 품질을 제공하는 두 가지 모델입니다',
+          '128K 컨텍스트 윈도우는 VRAM 사용량을 거의 3배까지 늘릴 수 있습니다 — 7B Q4 모델은 기본값 대비 128K에서 ~15 GB VRAM이 필요합니다',
+          '일상적인 작업에는 <code>--num-ctx 4096</code>으로 설정하고, 필요할 때만 컨텍스트를 늘리십시오',
+        ],
+      },
+      body1: {
+        title: '실제로 128K에 도달하는 모델',
+        snippetBlocks: [
+          { type: 'one-sentence', text: '2026년 5월 기준, Ollama에서 전체 128K 컨텍스트 품질을 안정적으로 유지하는 모델은 Llama 3.3 8B와 Qwen 3 14B 두 가지입니다.' },
+          { type: 'plain-terms', text: 'Llama 3.3 8B는 128K 컨텍스트로 네이티브 학습된 모델이며, Qwen 3 14B는 최대 1M 토큰까지 지원하지만 소비자 환경에서는 VRAM 제약으로 인해 128K가 실질적인 한계입니다. 대부분의 다른 7B 모델은 32K 토큰 이상에서 출력 품질이 눈에 띄게 저하됩니다.' },
+        ],
+        content: [
+          '<strong>2026년 5월 기준, 대부분의 Ollama 모델은 128K 컨텍스트를 광고하지만 그 길이에서 유용한 출력 품질을 제공하는 모델은 소수에 불과합니다.</strong> 문제는 "lost in the middle" 효과입니다: 일반적인 문서 길이로 학습된 모델은 긴 컨텍스트 깊은 곳에 배치된 정보에 주의를 기울이기 어렵습니다.',
+          'Ollama에서 전체 128K 컨텍스트로 안정적으로 품질을 유지하는 모델은 두 가지입니다: <strong>Llama 3.3 8B</strong>(128K로 네이티브 학습)와 <strong>Qwen 3 14B</strong>(최대 1M 토큰이지만 VRAM 제약으로 소비자에게는 128K가 실질적 한계). 대부분의 다른 7B 모델의 경우, 32K 토큰 이상에서 출력 품질이 눈에 띄게 저하됩니다.',
+          '20,000단어 이상의 문서를 처리하는 작업이라면 Llama 3.3 8B부터 시작하십시오. 최고의 긴 컨텍스트 품질이 필요하고 12 GB 이상의 VRAM을 보유하고 있다면, Qwen 3 14B가 더 나은 선택입니다.',
+        ],
+      },
+      body2: {
+        title: '긴 컨텍스트의 VRAM 비용',
+        content: [
+          '컨텍스트 윈도우를 늘리면 VRAM 사용량이 크게 증가합니다. <strong>컨텍스트의 모든 토큰에 대한 어텐션 상태를 저장하는 KV-cache는 128K 컨텍스트에서 모델 가중치 자체만큼의 VRAM을 추가할 수 있습니다.</strong>',
+          '아래 표는 Q4_K_M의 7B 모델에서 KV-cache VRAM이 어떻게 확장되는지를 보여줍니다. 이 수치는 grouped query attention(GQA)을 사용하는 모델을 기준으로 합니다 — GQA가 없는 모델은 KV-cache를 훨씬 더 많이 사용합니다.',
+          '일상적인 작업에서 VRAM을 절약하려면 Ollama 실행 시 <code>--num-ctx 4096</code>으로 설정하십시오. 특정 작업에 필요한 경우에만 32K 또는 128K로 확장하십시오. 모델 선택과 RAM 분할을 포함한 긴 컨텍스트 로컬 LLM 전체 가이드는 <a href="/ko/local-llms/long-context-local-llms" class="text-primary hover:underline">긴 컨텍스트 로컬 LLM 가이드</a>를 참조하십시오.',
+        ],
+        columns: ['컨텍스트 길이', 'KV-Cache (7B)', '총 VRAM (7B Q4)'],
+        rows: [
+          { '컨텍스트 길이': '4K (기본값)', 'KV-Cache (7B)': '~0.5 GB', '총 VRAM (7B Q4)': '~5.5 GB' },
+          { '컨텍스트 길이': '16K', 'KV-Cache (7B)': '~1.5 GB', '총 VRAM (7B Q4)': '~6.5 GB' },
+          { '컨텍스트 길이': '32K', 'KV-Cache (7B)': '~3 GB', '총 VRAM (7B Q4)': '~8 GB' },
+          { '컨텍스트 길이': '128K', 'KV-Cache (7B)': '~10 GB', '총 VRAM (7B Q4)': '~15 GB' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '긴 컨텍스트 모델에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'Ollama에서 128K 컨텍스트를 활성화하는 방법은 무엇입니까?',
+            a: '실행 명령에 <code>--num-ctx 131072</code>를 추가하십시오: <code>ollama run llama3.1:8b --num-ctx 131072</code>. 이 플래그 없이는 모델의 최대 용량과 관계없이 Ollama가 기본적으로 2048~4096 토큰을 사용합니다.',
+          },
+          {
+            q: '긴 컨텍스트는 왜 그렇게 많은 VRAM을 사용합니까?',
+            a: 'KV-cache는 컨텍스트의 모든 토큰에 대한 어텐션 상태를 저장합니다. 128K 토큰에서 이 캐시는 모델 가중치 자체만큼 커질 수 있습니다. 7B 모델(Q4)은 가중치에 ~5.5 GB가 필요하지만 128K 컨텍스트에서는 ~10 GB의 KV-cache가 필요합니다.',
+          },
+          {
+            q: '128K 컨텍스트는 코딩에 유용합니까?',
+            a: '예, 대규모 코드베이스 작업 시 유용합니다. 전체 저장소 또는 여러 파일을 컨텍스트에 넣으면 리팩토링과 파일 간 추론 작업이 크게 향상됩니다. 128K 코딩에는 Qwen 3 14B가 권장 모델입니다.',
+          },
+          {
+            q: '긴 문서 분석에 가장 적합한 모델은 무엇입니까?',
+            a: 'Ollama에서 긴 문서 처리에는 Q4_K_M의 Qwen 3 14B가 최선의 선택입니다 — 7B 대안보다 전체 컨텍스트 길이에서 품질을 더 잘 유지합니다. 긴 문서와 함께 이미지 이해도 필요하다면 <a href="/ko/prompt-bites/which-ollama-models-support-vision" class="text-primary hover:underline">Ollama 비전 모델</a>을 참조하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[긴 컨텍스트 로컬 LLM 가이드](/ko/local-llms/long-context-local-llms)',
+          '[Qwen 3를 Ollama에서 실행할 수 있습니까?](/ko/prompt-bites/can-you-run-qwen3-on-ollama)',
+          '[비전을 지원하는 Ollama 모델](/ko/prompt-bites/which-ollama-models-support-vision)',
+        ],
+      },
+    },
+  },
 }

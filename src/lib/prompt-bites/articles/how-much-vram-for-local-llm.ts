@@ -643,5 +643,136 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Quantization & VRAM',
+    title: '로컬 LLM에 VRAM이 얼마나 필요합니까?',
+    seoTitle: '로컬 LLM VRAM 요구사항 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: '4 GB로 Phi-4 Mini Q4 실행. 6 GB로 Llama 3 8B Q4_K_M 처리. 12 GB로 Qwen 14B 실행. 공식: 파라미터 × 0.7 = Q4 기준 GB. PromptQuorum VRAM 티어 가이드.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    readTime: '4분 분량',
+    targetKeywords: [
+      '로컬 LLM VRAM 용량',
+      'LLM 실행 VRAM 요구사항',
+      '로컬 LLM 그래픽카드 메모리',
+      'Ollama VRAM 얼마나 필요',
+      'Llama 8B VRAM 용량',
+    ],
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 LLM에 VRAM이 얼마나 필요합니까?',
+        answer: '4 GB VRAM으로 Phi-4 Mini와 Gemma 2B를 컨텍스트 확장 여유를 두고 편안하게 실행할 수 있습니다. 6 GB로 Q4에서 Llama 3 8B를 실행할 수 있습니다. 12 GB로 Qwen 14B Q4를 효율적으로 로드할 수 있습니다. Q4에서 70B 모델은 16+ GB가 필요합니다.',
+        bullets: [
+          '4 GB: Phi-4 Mini Q4, Gemma 2 2B',
+          '6 GB: Llama 3 8B Q4_K_M',
+          '8~12 GB: Mistral Small Q5, Qwen 14B Q4',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      mainEntityOfPage: 'https://www.promptquorum.com/ko/prompt-bites/how-much-vram-for-local-llm',
+    },
+    breadcrumbSchema: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Prompt Bites',
+          item: 'https://www.promptquorum.com/ko/prompt-bites',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: '로컬 LLM에 VRAM이 얼마나 필요합니까?',
+          item: 'https://www.promptquorum.com/ko/prompt-bites/how-much-vram-for-local-llm',
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '4 GB VRAM으로 Phi-4 Mini Q4 및 Gemma 2 2B를 원활하게 실행할 수 있습니다',
+          '6 GB는 가장 인기 있는 로컬 모델인 Llama 3 8B(Q4_K_M)의 시작점입니다',
+          '12 GB로 Qwen 14B Q4를 실행할 수 있으며, 가격 대비 최고 품질 티어입니다',
+          '70B 모델은 40+ GB가 필요합니다. 듀얼 RTX 3090 또는 대용량 통합 메모리를 갖춘 Apple M 시리즈를 계획하십시오',
+        ],
+      },
+      body1: {
+        title: '모델 크기별 VRAM 요구사항',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '2026년 5월 기준, 모델의 VRAM 필요량은 파라미터 수(십억 단위) × 0.7 = Q4 양자화 기준 대략적인 GB로 계산됩니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '7B 모델은 가중치에 약 4.9 GB가 필요하고, 컨텍스트 오버헤드로 0.5~1 GB가 추가됩니다. 따라서 7~8B 티어의 최소 요건은 6 GB이며, 12 GB로 14B 티어를 여유 있게 실행할 수 있습니다.',
+          },
+        ],
+        content: [
+          '2026년 5월 기준, 모델의 VRAM 필요량은 파라미터 수(십억 단위) × 0.7 = Q4 양자화 기준 대략적인 GB로 계산됩니다. <strong>7B 모델은 가중치에 약 4.9 GB가 필요하며, 컨텍스트 오버헤드로 0.5~1 GB가 추가됩니다.</strong> 따라서 6 GB가 7~8B 티어의 최소 요건이며, 12 GB로 14B 티어를 여유 있게 실행할 수 있습니다.',
+          '아래 표를 빠른 의사결정 참조용으로 사용하십시오. "속도" 열은 기본 컨텍스트(2048 토큰)에서 데스크톱 GPU로 Ollama를 실행하는 경우를 가정합니다.',
+          '<strong>항상 모델의 명시된 요구사항보다 1~2 GB의 VRAM을 여유로 남겨 두십시오.</strong> 운영체제, 브라우저 탭, Ollama 런타임은 모델이 로드되지 않아도 500 MB~1 GB를 소비합니다. 6 GB 카드에서 5.5 GB 모델을 실행하면 여유 공간이 500 MB뿐이므로 <code>--num-ctx</code>를 2048 토큰 이상으로 늘리면 메모리 부족 오류가 발생합니다. 안전한 여유가 있는 6 GB 티어에 대해서는 <a href="/ko/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB VRAM 최적 로컬 LLM</a>을 참조하십시오.',
+        ],
+        columns: ['VRAM', 'Q4_K_M 최적 모델', '속도'],
+        rows: [
+          { 'VRAM': '4 GB', 'Q4_K_M 최적 모델': 'Phi-4 Mini Q4', '속도': '~25 tok/s' },
+          { 'VRAM': '6 GB', 'Q4_K_M 최적 모델': 'Llama 3 8B Q4_K_M', '속도': '~20 tok/s' },
+          { 'VRAM': '8 GB', 'Q4_K_M 최적 모델': 'Mistral Small Q5_K_M', '속도': '~18 tok/s' },
+          { 'VRAM': '12 GB', 'Q4_K_M 최적 모델': 'Qwen 14B Q4_K_M', '속도': '~15 tok/s' },
+          { 'VRAM': '16+ GB', 'Q4_K_M 최적 모델': 'Qwen 32B Q4 또는 Llama 70B 부분 로드', '속도': '~8 tok/s' },
+        ],
+      },
+      body2: {
+        title: 'VRAM이 부족할 때의 대처법',
+        content: [
+          '모델이 VRAM을 초과할 경우 세 가지 옵션이 있습니다. 양자화를 낮추거나(Q5 대신 Q4_K_M), <code>--num-ctx 2048</code>로 컨텍스트 창을 줄이거나, Ollama가 레이어를 시스템 RAM으로 오프로드하도록 허용하는 방법입니다.',
+          'CPU 오프로드는 작동하지만 속도가 느립니다. RAM으로 이동된 레이어마다 지연이 추가됩니다. 인터랙티브 사용을 위해서는 GPU의 VRAM 한도 내에서 유지하십시오. 7B 모델에서 컨텍스트를 4096에서 2048 토큰으로 줄이면 약 2 GB를 절약할 수 있습니다.',
+          '모델 크기와 VRAM 추정 계산에 대한 전체 분석은 <a href="/ko/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">로컬 LLM VRAM 완전 가이드</a>를 참조하십시오. 7B 티어에 대해서는 <a href="/ko/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">7B 모델에 필요한 RAM 용량</a>을 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'VRAM에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: '8 GB VRAM으로 로컬 LLM을 실행하기에 충분합니까?',
+            a: '네. 8 GB로 Llama 3 8B를 Q5_K_M에서 초당 약 18 토큰 속도로 실행할 수 있으며, Mistral Small을 Q5_K_M에서 여유 있게 실행할 수 있습니다. 대부분의 일상적인 채팅 및 코딩 작업은 이 티어에서 충분히 처리됩니다.',
+          },
+          {
+            q: '4 GB VRAM으로 7B 모델을 실행할 수 있습니까?',
+            a: '아니요. Q4에서 7B 모델은 5~6 GB의 VRAM이 필요합니다. 사용 가능한 가장 작은 양자화도 4 GB를 초과합니다. 전체 분석은 <a href="/ko/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">7B 모델에 필요한 RAM 용량</a>을 참조하십시오.',
+          },
+          {
+            q: '컨텍스트 창 크기가 VRAM 사용량에 영향을 줍니까?',
+            a: '네. 7B 모델에서 추가 컨텍스트 1,000 토큰마다 약 250 MB의 VRAM을 사용합니다. 기본 2048 토큰 컨텍스트는 약 0.5 GB를 사용하며, 16,384 토큰은 모델 가중치 외에 약 4 GB를 추가로 사용합니다.',
+          },
+          {
+            q: '모델이 예상보다 더 많은 VRAM을 사용할 때 어떻게 해야 합니까?',
+            a: 'Ollama 명령에서 <code>--num-ctx 2048</code>을 설정하십시오. 이렇게 하면 모델 파일을 변경하지 않고도 7B 모델에서 VRAM을 최대 2 GB까지 줄일 수 있습니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 LLM VRAM 완전 가이드](/ko/local-llms/how-much-vram-local-llm)',
+          '[7B 모델에 필요한 RAM 용량](/ko/prompt-bites/how-much-ram-for-7b-model)',
+          '[6 GB VRAM 최적 로컬 LLM](/ko/prompt-bites/best-local-llm-6gb-vram)',
+        ],
+      },
+    },
+  },
 }
-

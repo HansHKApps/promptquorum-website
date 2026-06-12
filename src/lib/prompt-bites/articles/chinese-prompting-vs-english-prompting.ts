@@ -959,4 +959,134 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       ],
     },
   },
+  ko: {
+    theme: 'Model Comparisons',
+    title: '중국어 vs 영어 프롬프팅: 로컬 LLM에는 어느 쪽이 더 낫습니까?',
+    seoTitle: '중국어 vs 영어 프롬프팅 2026: 토큰 효율성',
+    metaDescription: '중국어 프롬프트는 Qwen3에서 토큰을 30–50% 절약합니다. 영어는 더 강력한 추론 체인을 생성합니다. 혼합 기법 및 모델별 가이드.',
+    publishDate: '2026-05-26',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    educationalLevel: 'Intermediate',
+    audience: '로컬 LLM을 실행하는 중국어-영어 이중 언어 사용자',
+    parentArticle: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
+    siblingBites: ['can-you-run-qwen3-on-ollama', 'qwen-coder-vs-deepseek-coder'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 LLM 프롬프팅에는 중국어와 영어 중 어느 쪽이 더 낫습니까?',
+        answer: '영어 지시문 + "중국어로 답하라"는 지시어 조합이 모든 모델에서 최적의 설정입니다. 중국어 프롬프트는 Qwen3에서 토큰을 30–50% 절약합니다. 영어 프롬프트는 더 강력한 추론 체인을 생성합니다.',
+        bullets: [
+          'CJK 토크나이징: Qwen3에서 30–50% 더 적은 토큰',
+          '영어 시스템 프롬프트 → 더 나은 추론',
+          'Llama 3 / Mistral: 영어 프롬프팅이 현저히 우수',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          '중국어 프롬프트는 Qwen3 및 DeepSeek-R1-Distill에서 토큰을 30–50% 절약합니다 — CJK 토크나이징은 본질적으로 더 밀도가 높습니다',
+          '영어 프롬프트는 거의 모든 모델에서 더 강력한 논리적 추론 체인을 생성합니다',
+          '최적 방법: "중국어로 답하십시오. [영어 지시문]" — 테스트된 모든 모델에서 순수 중국어보다 우수합니다',
+          'Llama 3 및 Mistral에서는 중국어 프롬프트를 피하십시오 — 서양권 토크나이저가 한자를 분절합니다',
+        ],
+      },
+      tokenEfficiency: {
+        id: 'token-efficiency',
+        title: '토큰 효율성: 중국어 vs 영어',
+        snippetBlocks: [
+          { type: 'one-sentence', text: '중국어 CJK 토크나이징은 같은 내용에 대해 영어보다 토큰을 30–50% 더 적게 사용합니다.' },
+          { type: 'plain-terms', text: 'AI 모델은 텍스트를 토큰이라는 단위로 처리합니다. 중국어 한자 하나가 하나의 토큰에 해당하는 경우가 많지만, 같은 의미의 영어 단어는 여러 토큰으로 분리될 수 있습니다. 이로 인해 중국어 프롬프트는 Qwen3 같은 모델에서 더 효율적입니다.' },
+        ],
+        content: [
+          'CJK 토크나이징은 의미 단위당 훨씬 적은 토큰을 생성합니다.',
+          '**예시:** 동일한 지시문: 영어 ~25 토큰; 중국어 ~16 토큰 (36% 감소)',
+          '**모델 계열별 효율성:** Qwen3: 한자 1개 ≈ 1–1.5 토큰; Llama 3: 한자 1개 ≈ 3–5 토큰 (비효율적)',
+        ],
+      },
+      reasoning: {
+        id: 'reasoning-quality',
+        title: '추론 품질: 영어의 우위',
+        content: [
+          'Qwen3의 중국어 네이티브 능력에도 불구하고, 영어 시스템 프롬프트는 일관되게 더 강력한 추론 체인을 생성합니다.',
+          '**최적 조합:** 영어 시스템 프롬프트 + 사용자 프롬프트에 "중국어로 답하십시오".',
+        ],
+      },
+      mixedTechnique: {
+        id: 'mixed-language',
+        title: '다중 언어 프롬프팅 기법',
+        content: [
+          '**시스템 프롬프트 템플릿 (최고 성능):**',
+          '`You are a helpful assistant. Always respond in Simplified Chinese (简体中文). Think step by step before answering.`',
+          '**창작 글쓰기의 경우:** Qwen3-72B에서 순수 중국어 프롬프트가 최상의 문체적 결과를 냅니다.',
+          '**기술 작업(코드 생성)의 경우:** Qwen3-Coder에서도 영어 프롬프트를 사용하십시오.',
+        ],
+      },
+      modelGuide: {
+        id: 'model-guide',
+        title: '모델별 프롬프팅 전략',
+        content: [
+          '**Qwen3 7B/14B/32B:** 최고의 중국어 네이티브 지원. 추론 집약적 작업에는 영어 시스템 프롬프트를 사용하십시오.',
+          '**DeepSeek-R1-Distill (모든 크기):** 두 언어 모두 강력합니다. 영어 시스템 프롬프트 + 중국어 사용자 쿼리가 최적 설정입니다.',
+          '**Llama 3 8B/70B:** 중국어 프롬프트를 피하십시오. 토크나이저가 한자를 바이트 단위로 분절합니다.',
+          '**Mistral Small:** 중국어 지원이 더 약합니다. 영어 프롬프트를 사용하십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '중국어 프롬프팅은 API 호출 비용을 절약합니까?', a: '네, 상당히 절약됩니다. Qwen 계열 모델에서 동일한 내용에 대해 중국어 토큰이 30–50% 더 적습니다.' },
+          { q: '같은 프롬프트에 중국어와 영어를 혼합할 수 있습니까?', a: '네. Qwen3 및 DeepSeek-R1-Distill은 이중 언어 프롬프트를 잘 처리합니다.' },
+          { q: '시스템 프롬프트에는 어떤 언어를 사용해야 합니까?', a: 'Qwen3 같은 중국어 네이티브 모델에서도 영어를 사용하십시오. 영어 시스템 프롬프트는 일관되게 더 나은 지시 준수를 보여줍니다.' },
+          { q: '번체 중국어와 간체 중국어의 차이는 무엇입니까?', a: 'Qwen3은 두 가지 모두 처리합니다. 번체의 경우 "请使用繁体中文回答", 간체의 경우 "请使用简体中文回答"를 지정하십시오.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽기 자료',
+        items: [
+          '[로컬에서 Qwen3 실행 방법](/ko/prompt-bites/can-you-run-qwen3-on-ollama)',
+          '[Qwen Coder vs DeepSeek Coder 비교](/ko/prompt-bites/qwen-coder-vs-deepseek-coder)',
+          '[DeepSeek vs Qwen 로컬 비교 2026](/ko/power-local-llm/deepseek-vs-qwen-local-comparison-2026)',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '로컬 LLM을 위한 중국어 vs 영어 프롬프팅 2026',
+      description: 'CJK 토크나이징: Qwen3에서 30–50% 더 적은 토큰. 더 나은 추론을 위한 영어 시스템 프롬프트. 혼합 기법 권장.',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/chinese-prompting-vs-english-prompting',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      about: [{ '@type': 'Thing', name: 'LLM 프롬프팅 기법' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen3' }, { '@type': 'SoftwareApplication', name: 'DeepSeek-R1' }],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { '@type': 'ListItem', position: 3, name: '중국어 vs 영어 프롬프팅', item: 'https://www.promptquorum.com/ko/prompt-bites/chinese-prompting-vs-english-prompting' },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '로컬 LLM 프롬프팅에는 중국어와 영어 중 어느 쪽이 더 낫습니까?', acceptedAnswer: { '@type': 'Answer', text: '영어 지시문 + 중국어 지시어가 최적입니다. 중국어는 토큰을 30–50% 절약하고, 영어는 더 나은 추론을 생성합니다.' } },
+        { '@type': 'Question', name: '시스템 프롬프트에는 어떤 언어를 사용해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 같은 중국어 네이티브 모델에서도 영어를 사용하십시오. 영어 시스템 프롬프트는 항상 더 나은 지시 준수를 보여줍니다.' } },
+      ],
+    },
+  },
 }

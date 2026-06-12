@@ -630,4 +630,85 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Ollama',
+    title: 'CPU 전용 최고의 Ollama 모델은 무엇입니까?',
+    seoTitle: 'GPU 없이 사용하는 최고의 Ollama 모델 2026 | PromptQuorum',
+    metaDescription: 'Phi-4 Mini Q4는 CPU 전용 최고의 Ollama 모델입니다: RAM 4 GB, ~5 tok/s. Llama 3 8B Q4는 8 GB RAM이 필요합니다. Gemma 2B는 CPU에서 가장 빠릅니다(~6 tok/s). GPU 불필요.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    quickAnswerTop: {
+      ko: {
+        question: 'CPU 전용 최고의 Ollama 모델은 무엇입니까?',
+        answer: 'GPU가 없는 환경에서 Phi-4 Mini Q4는 CPU에서 품질과 속도의 최적 균형을 제공합니다. Llama 3 8B Q4는 8 GB 이상의 RAM에서 동작합니다. Gemma 2B는 CPU에서 가장 빠른 옵션입니다.',
+        bullets: [
+          'Phi-4 Mini Q4: CPU에서 품질/속도 균형 최고, RAM 4 GB 필요',
+          'Llama 3 8B Q4: 최고 품질, RAM 8 GB 필요(더 느림)',
+          'Gemma 2B: CPU 추론 속도 최고, RAM 2 GB',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'CPU 추론은 GPU보다 5~10배 느립니다 — 최신 8코어 데스크톱 CPU에서 3~6 tok/s를 예상하십시오',
+          'Phi-4 Mini Q4는 CPU 전용 최선의 선택입니다: RAM 4 GB, ~5 tok/s, 우수한 추론 품질',
+          'Gemma 2B는 CPU에서 가장 빠르지만(~6 tok/s) Phi-4 Mini보다 추론 품질이 낮습니다',
+          'CPU 추론은 배치 작업과 단일 쿼리에 실용적이며, 대화형 채팅에는 너무 느립니다',
+        ],
+      },
+      body1: {
+        title: 'CPU 속도의 현실',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'CPU 추론은 최신 8코어 데스크톱 CPU에서 초당 3~6개 토큰으로 동작하며, GPU보다 약 5~10배 느립니다.' },
+          { type: 'plain-terms', text: 'GPU가 없으면 Ollama는 RAM에서 직접 모델 데이터를 읽어 CPU로 처리합니다. 소비자용 CPU의 메모리 대역폭은 GPU의 약 10분의 1 수준이므로 토큰 생성 속도가 현저히 낮습니다.' },
+        ],
+        content: [
+          '<strong>2026년 5월 기준, CPU 추론은 최신 8코어 데스크톱 CPU에서 초당 3~6개 토큰으로 동작하며 — 중급 GPU보다 약 5~10배 느립니다.</strong> Q4 수준의 7B 모델은 CPU에서 약 200~300밀리초마다 단어 하나를 생성합니다.',
+          '이 속도는 두 가지 사용 사례에서 허용 가능합니다: 문서 요약이나 데이터 분류와 같은 야간 배치 처리, 그리고 30초 대기를 허용할 수 있는 단일 쿼리 조회입니다. 대화형 채팅이나 실시간 코드 자동 완성에는 CPU 추론이 너무 느려 실용적이지 않습니다.',
+          '근본적인 제약은 CPU 클록 속도가 아니라 메모리 대역폭입니다. 소비자용 CPU는 RAM을 40~80 GB/s로 읽습니다. 전용 GPU는 VRAM을 400~900 GB/s로 읽습니다. LLM 추론은 메모리 대역폭에 직접 비례하므로, 중급 GPU조차 고급 CPU보다 훨씬 빠른 추론을 제공합니다.',
+        ],
+      },
+      body2: {
+        title: 'CPU 전용 사용을 위한 상위 3개 모델',
+        content: [
+          '올바른 CPU 전용 모델은 품질과 속도 중 무엇을 우선시하는지에 따라 달라집니다. <strong>Phi-4 Mini Q4가 최적의 균형을 제공합니다 — RAM 4 GB만으로 Llama 3 8B에 근접한 추론 품질을 제공하면서 눈에 띄게 더 빠르게 동작합니다.</strong>',
+          'Gemma 2B는 RAM이 2 GB로 제한될 때 유일하게 실용적인 선택입니다. CPU에서 ~6 tok/s에 도달하지만 다단계 추론 작업에서 Phi-4 Mini와 비교하면 눈에 띄게 낮은 품질의 답변을 생성합니다.',
+          'RAM 요구 사항 및 OS 수준 최적화를 포함한 CPU 전용 구성의 전체 비교는 <a href="/ko/local-llms/best-cpu-only-llm" class="text-primary hover:underline">CPU 전용 최고의 LLM 가이드</a>를 참조하십시오.',
+        ],
+        columns: ['모델', '필요 RAM', 'CPU 속도'],
+        rows: [
+          { '모델': 'Phi-4 Mini Q4', '필요 RAM': '4 GB', 'CPU 속도': '~4–5 tok/s' },
+          { '모델': 'Llama 3 8B Q4', '필요 RAM': '8 GB', 'CPU 속도': '~3 tok/s' },
+          { '모델': 'Gemma 2B', '필요 RAM': '2 GB', 'CPU 속도': '~6 tok/s' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'CPU 전용 LLM에 관한 간단 답변',
+        faqs: [
+          {
+            q: 'CPU 전용 Ollama 사용 시 RAM이 얼마나 필요합니까?',
+            a: 'Gemma 2B의 경우 최소 2 GB, Phi-4 Mini Q4는 4 GB, Llama 3 8B Q4는 8 GB가 필요합니다. OS 및 Ollama 런타임 오버헤드를 위해 모델 크기에 1~2 GB를 추가하십시오.',
+          },
+          {
+            q: 'CPU 추론이 GPU보다 훨씬 느린 이유는 무엇입니까?',
+            a: 'LLM 추론은 메모리 대역폭에 의해 제한됩니다. 소비자용 CPU는 RAM을 40~80 GB/s로 읽습니다. 중급 GPU는 VRAM을 400~900 GB/s로 읽습니다. 이 10배의 대역폭 차이가 직접적으로 5~10배 느린 토큰 생성으로 이어집니다.',
+          },
+          {
+            q: '전용 GPU가 없는 노트북에서 Ollama를 사용할 수 있습니까?',
+            a: '네. Ollama는 GPU가 감지되지 않으면 자동으로 CPU에서 실행됩니다. 최신 노트북 CPU에서 3~5 tok/s를 예상하십시오. 나중에 업그레이드할 경우 GPU 등급별 권장 사항은 <a href="/ko/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">지금 최고의 Ollama 모델</a>을 참조하십시오.',
+          },
+          {
+            q: '로컬 LLM 추론에 가장 빠른 CPU는 무엇입니까?',
+            a: 'Apple M-series 칩(M3, M4)은 통합 메모리 아키텍처를 사용하여 7B 모델에서 15~30 tok/s에 도달합니다 — CPU 전용 추론에서 x86 CPU를 크게 능가합니다. x86 CPU 중에서는 메모리 대역폭이 높고 대용량 L3 캐시를 갖춘 CPU가 가장 좋은 성능을 발휘합니다.',
+          },
+        ],
+      },
+    },
+  },
 }

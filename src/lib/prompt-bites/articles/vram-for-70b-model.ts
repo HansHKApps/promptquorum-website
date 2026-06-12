@@ -619,4 +619,80 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Quantization & VRAM',
+    title: '70B 모델에 VRAM이 얼마나 필요합니까?',
+    seoTitle: '70B VRAM: 3가지 실행 옵션 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Q4_K_M 방식의 70B 모델은 약 40 GB의 VRAM이 필요합니다. 옵션: 듀얼 RTX 3090(48 GB), M5 Max 128 GB 통합 메모리, 또는 클라우드 GPU. PromptQuorum의 빠른 답변.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ko: {
+        question: '70B 모델에 VRAM이 얼마나 필요합니까?',
+        answer: 'Q4_K_M 방식의 70B 모델은 약 40 GB의 VRAM이 필요합니다. 소비자용 옵션: 듀얼 RTX 3090(48 GB 합계), M5 Max 128 GB 통합 메모리, 또는 클라우드 GPU 임대.',
+        bullets: [
+          'Q4_K_M 70B: 약 40 GB VRAM 필요',
+          '듀얼 RTX 3090(48 GB 합계): 소비자용 데스크톱 옵션',
+          'M5 Max 128 GB 통합 메모리: 단일 기기 최고 경험',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Q4_K_M 방식의 70B 모델은 약 40 GB의 VRAM이 필요합니다.',
+          '소비자용 하드웨어 옵션: 듀얼 RTX 3090(48 GB) 또는 Apple M5 Max 128 GB 통합 메모리',
+          '주 5시간 미만의 간헐적 사용의 경우, RunPod 등 클라우드 GPU 임대($0.50–$1.50/시간)가 하드웨어 구매보다 저렴합니다.',
+        ],
+      },
+      body1: {
+        title: '70B 모델 실행을 위한 하드웨어 옵션',
+        content: [
+          '2026년 5월 기준으로, <strong>Q4_K_M 방식의 70B 모델은 약 40 GB의 압축 가중치를 나타냅니다 — 단일 RTX 4090의 1.7배, 단일 RTX 3090의 1.6배에 해당합니다.</strong> 이 때문에 70B는 로컬 실행 중 가장 어려운 수준입니다. 소비자용 GPU(최대 24 GB)와 워크스테이션 하드웨어의 경계를 넘기 때문입니다. 각각 다른 절충안을 가진 세 가지 경로가 있습니다.',
+          'Apple M5 Max 128 GB 통합 메모리는 단일 기기로 가장 원활한 옵션입니다 — CPU와 GPU 메모리 간 PCIe 병목이 없으며 macOS가 자동으로 할당을 관리합니다. 듀얼 RTX 3090도 작동하지만, 워크스테이션 수준의 데스크톱과 신중한 드라이버 설정이 필요합니다.',
+        ],
+        columns: ['하드웨어', 'VRAM 합계', '속도'],
+        rows: [
+          { '하드웨어': '듀얼 RTX 3090', 'VRAM 합계': '48 GB', '속도': '~8 tok/s' },
+          { '하드웨어': 'RTX 3090 + CPU 오프로드', 'VRAM 합계': '24 GB + 32 GB RAM', '속도': '~3 tok/s' },
+          { '하드웨어': 'Apple M5 Max 128 GB', 'VRAM 합계': '128 GB 통합', '속도': '~15 tok/s' },
+          { '하드웨어': 'RunPod H100 (클라우드)', 'VRAM 합계': '80 GB', '속도': '~50 tok/s' },
+        ],
+      },
+      body2: {
+        title: '클라우드가 로컬보다 유리한 경우',
+        content: [
+          '2026년 5월 기준으로, RunPod 및 Lambda Labs에서 70B 추론용 클라우드 GPU 임대 비용은 시간당 $0.50–$1.50입니다. 듀얼 RTX 3090 구성은 하드웨어 비용이 $1,500–$2,500이며, 1,500–3,000시간의 사용 후에야 클라우드 비용 대비 본전을 찾을 수 있습니다.',
+          '70B 모델을 주당 5시간 미만으로 사용하는 팀이나 개인에게는 클라우드 임대가 더 저렴하고 유지 관리도 쉽습니다. 로컬 70B 실행은 프라이버시에 민감한 사용 사례(하드웨어 외부로 데이터가 나가지 않음) 또는 클라우드 비용이 빠르게 누적되는 고빈도 지속 추론에 적합합니다. 소비자용 GPU에 맞는 소형 모델의 경우, <a href="/ko/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">VRAM 계층 가이드</a>를 참조하십시오.',
+          '70B 배포 전략의 전체 분석은 <a href="/ko/local-llms/run-70b-models-24gb-vram" class="text-primary hover:underline">24 GB VRAM으로 70B 모델 실행하는 방법</a>을 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '70B 모델의 VRAM에 관한 빠른 답변',
+        faqs: [
+          {
+            q: '단일 RTX 3090으로 70B 모델을 실행할 수 있습니까?',
+            a: '부분적으로 가능합니다. 단일 RTX 3090(24 GB)은 CPU 오프로딩을 통해 70B를 실행할 수 있지만, 속도가 약 3 tok/s로 떨어져 대화형 사용에는 너무 느립니다. 70B의 완전한 GPU 추론에는 40 GB 이상의 합산 VRAM이 필요합니다.',
+          },
+          {
+            q: 'MacBook에서 70B 모델을 실행할 수 있습니까?',
+            a: '128 GB 통합 메모리를 갖춘 M3 Max, M4 Max, M4 Ultra 또는 M5 Max에서만 가능합니다. 32 GB RAM의 MacBook은 Q4 방식의 70B를 실행할 수 없습니다. 소형 모델 대안에 대해서는 <a href="/ko/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAM 규모 산정 가이드</a>를 참조하십시오.',
+          },
+          {
+            q: '70B 모델을 로컬에서 더 저렴하게 실행하는 방법이 있습니까?',
+            a: 'Q2_K 양자화를 사용하면 70B 모델을 약 21 GB VRAM으로 낮출 수 있지만, 품질이 크게 저하됩니다. 또는 Q5 방식의 34B 모델이 VRAM 요구량의 절반으로 70B 품질의 80–90%를 제공합니다.',
+          },
+          {
+            q: '70B 모델의 VRAM은 13B 모델과 어떻게 비교됩니까?',
+            a: 'Q4 방식의 13B 모델은 약 9 GB VRAM이 필요한 반면, 70B는 약 40 GB가 필요합니다. 대부분의 작업(채팅, 코딩, 요약)에서는 Q5 방식의 13–14B 모델이 차이를 메울 수 있습니다. <a href="/ko/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">모델 크기별 VRAM 요구 사항</a>을 참조하십시오.',
+          },
+        ],
+      },
+    },
+  },
 }

@@ -1161,4 +1161,144 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Hardware-Specific',
+    title: '2026년 로컬 LLM용 $600 이하 최고의 GPU는?',
+    seoTitle: '로컬 LLM용 $600 이하 최고 GPU 2026',
+    metaDescription: '로컬 LLM용 $600 이하 최고 GPU: RTX 4060 Ti 16 GB(약 $424 신품). 16 GB VRAM은 14B 모델의 최적 지점입니다. 2026년 5월 가격 기준.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['RTX 4060 Ti 16 GB', 'RTX 3060 12 GB'],
+    educationalLevel: 'Intermediate',
+    audience: '$600 예산으로 14B 로컬 모델용 GPU를 선택하는 구매자',
+    affiliateDisclosure: true,
+    parentArticle: '/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026',
+    siblingBites: ['best-gpu-under-300-local-llm', 'best-ollama-models-rtx-3060-12gb'],
+    is_living_page: false,
+    readTime: '4분 분량',
+    leadAnswerBlock:
+      '로컬 LLM용 $600 이하 최고의 GPU는 NVIDIA RTX 4060 Ti 16 GB(신품 약 $424, 2026년 5월 중고 약 $290)입니다. 16 GB VRAM은 최적의 지점으로, Q4 양자화로 14B 모델을 실행하면서 컨텍스트 여유가 남고 소비전력은 165 W에 불과하며 2026년 가격 급등의 영향도 가장 적었습니다.',
+    toc: [
+      { label: '최고의 선택: RTX 4060 Ti 16 GB', anchor: '#best-pick' },
+      { label: 'RTX 4060 Ti 16 GB vs RTX 3060 12 GB', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽기', anchor: '#related' },
+    ],
+    intro:
+      '$600 예산으로 16 GB VRAM을 확보할 수 있으며, 16 GB는 14B 모델이 Q4에서 쾌적하게 실행되는 기준점입니다. NVIDIA RTX 4060 Ti 16 GB는 그 기준점을 출시 가격에 가장 가깝게 달성하는 카드입니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 LLM용 $600 이하 최고의 GPU는 무엇입니까?',
+        answer: 'RTX 4060 Ti 16 GB(약 $424)가 최적의 선택입니다. 16 GB VRAM은 Q5 양자화로 14B 모델을 여유 있게 처리합니다.',
+        bullets: [
+          '16 GB VRAM은 Q3_K_M(약 13 GB)으로 Qwen 32B를 실행합니다. 12 GB GPU보다 한 단계 위입니다.',
+          'RTX 4070 12 GB($550-599)는 더 빠르지만 VRAM이 4 GB 적습니다. 속도보다 VRAM을 우선하십시오.',
+          '중고 RTX 3090 24 GB는 $300 미만이 아니면 피하십시오. 소비전력이 350 W 대 4060 Ti의 165 W입니다.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '최고의 선택: NVIDIA RTX 4060 Ti 16 GB — 신품 약 $424, 중고 $290(2026년 5월). Q4로 14B 모델 실행을 위한 16 GB VRAM',
+          '16 GB가 최적: 14B 모델 Q4 실행 시 약 9-10 GB 사용, 6 GB가 컨텍스트와 도구용으로 남습니다',
+          'RTX 4060 Ti 16 GB는 165 W만 소비합니다. 기존 전원 공급 장치 업그레이드 없이 대부분의 시스템에서 작동합니다',
+          '2026년 메모리 부족의 영향을 가장 적게 받아 권장 소매가에 가장 가깝게 유지됩니다',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: '최고의 선택: NVIDIA RTX 4060 Ti 16 GB',
+        content: [
+          '<strong>NVIDIA RTX 4060 Ti 16 GB는 $600 이하 로컬 LLM용 최고의 GPU입니다. 16 GB VRAM은 14B 모델의 최적 지점으로, Q4 실행과 넓은 컨텍스트 창을 동시에 지원합니다.</strong> 2026년 5월 기준 신품 약 $424, 중고 $290으로 예산 내에서 충분히 구매 가능합니다.',
+          'Q4_K_M 양자화의 14B 모델은 약 9-10 GB의 VRAM이 필요합니다. RTX 4060 Ti의 16 GB는 6 GB를 컨텍스트 창과 런타임 오버헤드용으로 남겨둡니다. 이는 느린 CPU 오프로드 없이 16K 토큰 컨텍스트를 처리하기에 충분합니다. 12 GB 카드는 동일한 모델을 실행하지만 컨텍스트 여유가 거의 없습니다.',
+          'RTX 4060 Ti 16 GB는 165 W만 소비하므로 전원 공급 장치 업그레이드 없이 대부분의 기존 구성에 맞습니다. 중고 RTX 3060 12 GB는 $300 이하이며 좁은 컨텍스트 제한을 수용할 경우에만 선택하십시오. 33B 또는 70B 모델이 특별히 필요한 경우에만 더 높은 등급을 선택하십시오.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB',
+            productName: 'NVIDIA RTX 4060 Ti 16GB',
+            productCategory: 'gpu',
+            priceRange: '290-424',
+            label: 'Amazon에서 RTX 4060 Ti 16GB 가격 확인',
+          },
+          {
+            url: 'https://www.newegg.com/p/pl?d=RTX+4060+Ti+16GB',
+            productName: 'NVIDIA RTX 4060 Ti 16GB',
+            productCategory: 'gpu',
+            priceRange: '290-424',
+            label: 'Newegg에서 RTX 4060 Ti 16GB 가격 확인',
+          },
+          {
+            url: 'https://www.bestbuy.com/site/searchpage.jsp?st=RTX+4060+Ti+16GB',
+            productName: 'NVIDIA RTX 4060 Ti 16GB',
+            productCategory: 'gpu',
+            priceRange: '290-424',
+            label: 'Best Buy에서 RTX 4060 Ti 16GB 가격 확인',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'RTX 4060 Ti 16 GB vs RTX 3060 12 GB',
+        content: [
+          '<strong>추가 4 GB VRAM이 쾌적한 14B 구성과 빠듯한 14B 구성을 가릅니다.</strong> 아래 가격은 2026년 5월 미국 기준 스냅샷입니다. 2026년 메모리 부족으로 가격이 변동적이므로 구매 전 확인하십시오.',
+        ],
+        columns: ['GPU', 'VRAM', '가격 (2026년 5월)', '최대 모델', '소비전력'],
+        rows: [
+          {
+            'GPU': 'RTX 4060 Ti 16 GB',
+            'VRAM': '16 GB',
+            '가격 (2026년 5월)': '신품 $424 / 중고 $290',
+            '최대 모델': '14B Q4, 긴 컨텍스트',
+            '소비전력': '165 W',
+          },
+          {
+            'GPU': 'RTX 3060 12 GB',
+            'VRAM': '12 GB',
+            '가격 (2026년 5월)': '중고 $150-250',
+            '최대 모델': '14B Q4, 짧은 컨텍스트',
+            '소비전력': '170 W',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '로컬 LLM용 $600 이하 GPU에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: '왜 16 GB VRAM이 로컬 LLM의 최적 지점입니까?',
+            a: 'Q4 양자화의 14B 모델은 약 9-10 GB VRAM을 사용합니다. 16 GB를 보유하면 나머지 6 GB가 컨텍스트 창과 런타임 오버헤드를 수용하여 CPU 오프로드 없이 16K 토큰 컨텍스트를 지원합니다. 12 GB 카드는 모델을 실행하지만 컨텍스트 여유가 거의 없습니다.',
+          },
+          {
+            q: 'RTX 4060 Ti 16 GB가 중고 RTX 4070 Ti Super보다 낫습니까?',
+            a: '모델 기준으로 RTX 4070 Ti Super도 16 GB이며 14B 모델을 더 빠르게 실행합니다. 그러나 2026년 5월 중고 기준 약 $770으로 $600을 크게 초과합니다. $600 이하에서는 RTX 4060 Ti 16 GB가 선택지이며, 예산이 더 클 경우에만 4070 Ti Super를 고려하십시오.',
+          },
+          {
+            q: 'RTX 4060 Ti 16 GB에 전원 공급 장치 업그레이드가 필요합니까?',
+            a: '일반적으로 불필요합니다. 165 W를 소비하며 RTX 3060보다 낮습니다. 500 W 이상 전원 공급 장치가 있는 대부분의 구성에서 변경 없이 사용 가능합니다. 전원 공급 장치에 필요한 8핀 커넥터가 있는지 확인하십시오.',
+          },
+          {
+            q: 'RTX 4060 Ti 16 GB로 30B 모델을 실행할 수 있습니까?',
+            a: 'Q4 양자화의 30B 모델은 약 18-20 GB VRAM이 필요하므로 16 GB에 완전히 들어가지 않습니다. 부분 CPU 오프로드로 실행되지만 속도가 크게 떨어집니다. 30B 모델에는 24 GB 카드를 고려하십시오.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: '관련 읽기',
+        items: [
+          '[로컬 LLM용 $300 이하 최고의 GPU](/ko/prompt-bites/best-gpu-under-300-local-llm) — 예산 등급: 중고 RTX 3060 12 GB',
+          '[12 GB VRAM으로 코딩에 최적화된 로컬 LLM](/ko/prompt-bites/best-local-llm-coding-12gb-vram) — 12-16 GB 카드를 위한 모델 선택',
+          '[2026년 로컬 LLM용 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 모든 예산 범위의 8개 GPU 완전 비교',
+        ],
+      },
+    },
+  },
 }

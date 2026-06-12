@@ -625,4 +625,108 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Tool Comparisons',
+    title: 'Ollama 모델을 MLX 형식으로 변환하는 방법',
+    seoTitle: 'Ollama 모델 MLX 변환 2026 | PromptQuorum',
+    metaDescription: 'Ollama 모델을 MLX로 직접 변환할 수 없습니다. Hugging Face 가중치와 mlx-lm convert를 사용하십시오. 대부분의 인기 모델은 이미 MLX 버전이 존재합니다.',
+    publishDate: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: ['Llama 3', 'Qwen', 'Mistral'],
+    current_hardware_mentioned: ['Apple Silicon'],
+    educationalLevel: '중급',
+    audience: 'Ollama 생태계에서 MLX 형식 모델을 원하는 Mac 개발자',
+    parentArticle: '/local-llms/apple-silicon-local-llm-guide-2026',
+    siblingBites: ['mlx-vs-ollama-vs-llamacpp', 'ollama-mlx-apple-silicon', 'ollama-vs-lm-studio'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ko: {
+        question: 'Ollama 모델을 MLX 형식으로 어떻게 변환합니까?',
+        answer: 'Ollama 모델을 MLX로 직접 변환할 수 없습니다. 대신 Hugging Face에서 원본 GGUF 또는 SafeTensors 가중치를 다운로드한 후 mlx-lm convert로 변환하십시오. 대부분의 인기 모델(Llama 3, Qwen, Mistral)은 Hugging Face의 mlx-community 조직 아래에 이미 사전 변환된 MLX 버전이 있습니다.',
+        bullets: [
+          'Ollama 모델은 직접 변환할 수 없습니다 — 모델 형식이 다릅니다',
+          '사전 변환된 MLX 모델이 대부분의 인기 모델에 대해 huggingface.co/mlx-community에 존재합니다',
+          '직접 변환하려면: Hugging Face에서 다운로드한 후 mlx_lm.convert를 실행하십시오',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    targetKeywords: [
+      'Ollama MLX 변환',
+      'Ollama 모델 MLX 형식',
+      'mlx-lm convert 사용법',
+      'Hugging Face MLX 모델 다운로드',
+      'Apple Silicon 로컬 LLM',
+    ],
+    readTime: '3분 분량',
+    schema: {
+      inLanguage: 'ko',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/convert-ollama-model-to-mlx',
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: 'Prompt Bites', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: 'Ollama 모델을 MLX 형식으로 변환하는 방법', url: 'https://www.promptquorum.com/ko/prompt-bites/convert-ollama-model-to-mlx' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Ollama GGUF 모델은 MLX로 직접 변환할 수 없습니다 — Hugging Face의 원본 가중치에서 시작해야 합니다',
+          '인기 모델은 이미 huggingface.co/mlx-community에 MLX 버전이 있습니다 — 변환 전에 먼저 검색하십시오',
+          '변환하려면: Hugging Face에서 가중치를 다운로드한 후 `mlx_lm.convert --model-path <경로> -o <출력>`을 실행하십시오',
+        ],
+      },
+      body1: {
+        title: '직접 변환이 불가능한 이유',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ollama 모델은 GGUF 형식으로 압축되어 있어 MLX가 필요로 하는 원본 16비트 가중치 정보가 손실됩니다.' },
+          { type: 'plain-terms', text: 'Ollama는 모델을 GGUF 형식(4~8비트 압축)으로 저장합니다. MLX는 Apple Silicon용 알고리즘으로 재압축하기 위해 Hugging Face의 원본 16비트 가중치가 필요합니다. GGUF에서 직접 변환하면 압축 과정에서 정밀도 정보가 손실되어 품질이 저하됩니다.' },
+        ],
+        content: [
+          'Ollama 모델은 GGUF 형식(4~8비트 압축)으로 저장됩니다. MLX는 Apple Silicon 네이티브 알고리즘으로 재압축하기 위해 Hugging Face의 원본 16비트 가중치가 필요합니다.',
+          'GGUF에서 직접 변환을 시도하면 압축 과정에서 정밀도 정보가 손실되어 결과 모델의 품질이 저하됩니다.',
+          '해결책: Hugging Face에서 비압축 가중치로 시작한 후 mlx-lm이 Apple Silicon의 Metal에 최적화된 방식으로 재압축하도록 하십시오.',
+        ],
+      },
+      body2: {
+        title: '변환 방법 (필요한 경우)',
+        content: [
+          '<strong>첫 번째 시도: mlx-community에서 모델을 검색하십시오.</strong> `pip install mlx-lm`을 실행한 후 `python -m mlx_lm.generate --model mlx-community/model-name-4bit`를 실행하십시오. 작동하면 이미 사전 변환된 것입니다.',
+          '<strong>사용 가능하지 않은 경우 직접 변환하십시오:</strong> `git clone https://huggingface.co/owner/model`로 원본 가중치를 다운로드한 후 `mlx_lm.convert --model-path ./model -o ./mlx_model`을 실행하십시오(5~10분 소요).',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Ollama에서 MLX 변환에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: '사전 변환된 MLX 모델은 어디서 찾을 수 있습니까?',
+            a: 'Hugging Face의 mlx-community 조직(huggingface.co/mlx-community)에서 찾을 수 있습니다. 원하는 모델(Llama, Qwen, Mistral 등)을 검색하십시오. 없는 경우 직접 변환해야 합니다.',
+          },
+          {
+            q: '변환에 얼마나 시간이 걸립니까?',
+            a: 'M5 Pro에서 7B 모델의 경우 일반적으로 5~10분이 소요됩니다. 더 큰 모델은 20분 이상 걸릴 수 있습니다. 변환은 한 번만 수행하면 되며 결과 모델은 로컬에 캐시됩니다.',
+          },
+          {
+            q: 'MLX로 변환할 때 어떤 양자화를 사용해야 합니까?',
+            a: '16 GB 통합 메모리에서 대부분의 7B~14B 모델에는 4비트 양자화(`-q` 플래그의 기본값)를 사용하십시오. 이는 M1/M2/M3/M4 칩에서 잘 작동하는 ~4 GB 모델을 생성합니다. 32 GB 이상의 메모리가 있고 더 높은 출력 품질이 필요한 경우에만 8비트 양자화를 사용하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽을거리',
+        items: [
+          '[MLX vs Ollama vs llama.cpp 비교](/ko/prompt-bites/mlx-vs-ollama-vs-llamacpp)',
+          '[Apple Silicon에서 Ollama와 MLX 함께 사용하기](/ko/prompt-bites/ollama-mlx-apple-silicon)',
+          '[Ollama vs LM Studio 비교](/ko/prompt-bites/ollama-vs-lm-studio)',
+          '[Apple Silicon 로컬 LLM 가이드 2026](/ko/local-llms/apple-silicon-local-llm-guide-2026)',
+        ],
+      },
+    },
+  },
 }

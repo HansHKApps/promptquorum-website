@@ -627,4 +627,141 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Quantization & VRAM',
+    title: 'Q4_K_M 양자화란 무엇입니까?',
+    seoTitle: 'Q4_K_M 양자화 완전 가이드 2026 | PromptQuorum',
+    metaDescription: 'Q4_K_M은 중간 품질의 4비트 k-quant 양자화입니다. Q4_0보다 품질이 높고 Q8_0보다 파일 크기가 작습니다. Ollama의 기본 설정으로 사용하십시오.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    targetKeywords: [
+      'Q4_K_M 양자화',
+      'k-quant 4비트 차이',
+      'Ollama 기본 양자화',
+      'Q4_K_M vs Q4_0',
+      'VRAM 8GB 양자화 추천',
+    ],
+    readTime: '3분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: 'Q4_K_M 양자화란 무엇입니까?',
+        answer: 'Q4_K_M은 k-quant(K) 압축 방식을 사용하는 4비트 양자화로, 중간(M) 품질 수준을 의미합니다. 대부분의 모델에 대한 최적의 기본 설정입니다. Q4_0보다 품질이 높고 Q8_0보다 파일 크기가 작습니다.',
+        bullets: [
+          'Q = 양자화, 4 = 4비트, K = k-quant, M = 중간',
+          '동일한 파일 크기에서 Q4_0보다 품질이 높습니다',
+          'Q4_K_M을 기본 양자화 설정으로 사용하십시오',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      inLanguage: 'ko',
+      headline: 'Q4_K_M 양자화란 무엇입니까?',
+      description: 'Q4_K_M은 중간 품질의 4비트 k-quant 양자화입니다. Q4_0보다 5~8% 품질이 높고 Q8_0보다 파일 크기가 작으며 Ollama의 기본 설정으로 사용됩니다.',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/what-is-q4-k-m-quantization',
+      datePublished: '2026-05-18',
+      dateModified: '2026-05-18',
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Prompt Bites',
+          item: 'https://www.promptquorum.com/ko/prompt-bites',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Q4_K_M 양자화란 무엇입니까?',
+          item: 'https://www.promptquorum.com/ko/prompt-bites/what-is-q4-k-m-quantization',
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Q4_K_M = 중간 품질의 k-quant 압축 방식을 사용하는 4비트 양자화 — 동일한 파일 크기에서 Q4_0보다 품질이 높습니다',
+          'Q4_K_M으로 실행되는 7B 모델은 디스크에 ~4.1 GB를 차지하며 실행에 ~5.5 GB VRAM이 필요합니다',
+          'Q4_K_M을 기본값으로 사용하십시오 — 대부분의 VRAM 예산에서 최고의 품질/GB 비율을 제공합니다',
+        ],
+      },
+      body1: {
+        title: 'Q4_K_M의 각 문자가 의미하는 것',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Q4_K_M은 중요한 가중치에 더 많은 비트를 할당하는 k-quant 압축을 사용하여 동일한 파일 크기에서 Q4_0보다 5~8% 높은 품질을 제공하는 4비트 양자화 형식입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Q4_K_M에서 Q는 양자화, 4는 4비트, K는 k-quant(비균일 비트 할당), M은 중간 품질을 의미하며, 파일 크기는 작게 유지하면서 더 나은 품질을 제공합니다.',
+          },
+        ],
+        content: [
+          '2026년 5월 기준, <strong>Q4_K_M은 기존 4비트 형식(Q4_0)이 중요한 가중치에서 너무 많은 품질을 손실했기 때문에 존재합니다.</strong> k-quant 압축은 출력에 가장 큰 영향을 미치는 가중치에 더 많은 비트를 할당하고 영향이 적은 가중치에는 더 적은 비트를 할당하여 이 문제를 해결합니다. 결과: 동일한 파일 크기에서 Q4_0보다 5~8% 높은 품질.',
+          '"K"는 핵심적인 차별점입니다. k-quant 압축은 비균일 비트 할당을 적용합니다 — 중요한 가중치는 더 많은 비트를 받고, 덜 중요한 가중치는 더 적은 비트를 받습니다. 이를 통해 동일한 파일 크기에서 기존 Q4_0 형식 대비 5~8%의 품질을 회복합니다.',
+          '"M"은 k-quant 내의 품질 설정입니다. Q4_K_S(small)는 더 낮은 품질로 약간 더 작습니다. Q4_K_M(medium)은 최적의 균형입니다. Q4_K_L(large)은 약간 더 낫지만 추가 크기를 정당화하는 경우는 거의 없습니다.',
+          '<strong>k-quant는 가중치를 클러스터링하고 중요도에 따라 비트를 할당하는 방식으로 작동합니다.</strong> 최고 중요도 클러스터는 가중치당 6비트를 받습니다. 중간 수준 클러스터는 4비트를 받습니다. 낮은 중요도 클러스터는 3비트를 받습니다. "M" 수준은 모델 전체에서 가중치당 평균 4.5비트입니다 — 이것이 Q4_K_M이 크기와 품질 모두에서 Q4_K_S와 Q5_K_M 사이에 위치하는 이유입니다. M 수준으로 충분하지 않을 때는 <a href="/ko/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>을 참조하십시오.',
+        ],
+      },
+      body2: {
+        title: 'Q4_K_M과 다른 양자화 형식 비교',
+        content: [
+          '아래 표는 7B 모델에 대한 트레이드오프를 보여줍니다. 품질은 완전 정밀도 Q8_0 기준선에 대한 상대적 수치입니다. VRAM이 12GB 이상 없다면 Q4_K_M이 최고의 품질/GB 비율을 제공합니다.',
+          'Q4_K_M과 Q8_0의 직접 비교는 <a href="/ko/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0 결정 가이드</a>를 참조하십시오. 전체 양자화 참고 자료는 <a href="/ko/local-llms/quantization-levels-comparison" class="text-primary hover:underline">양자화 수준 비교</a>를 참조하십시오.',
+        ],
+        columns: ['형식', '파일 크기 (7B)', 'Q8_0 대비 품질'],
+        rows: [
+          { '형식': 'Q4_0', '파일 크기 (7B)': '3.8 GB', 'Q8_0 대비 품질': '기준선 (~87%)' },
+          { '형식': 'Q4_K_M', '파일 크기 (7B)': '4.1 GB', 'Q8_0 대비 품질': '~92% (+5%)' },
+          { '형식': 'Q5_K_M', '파일 크기 (7B)': '5.0 GB', 'Q8_0 대비 품질': '~95% (+3%)' },
+          { '형식': 'Q8_0', '파일 크기 (7B)': '7.7 GB', 'Q8_0 대비 품질': '100% (기준)' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '양자화에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: 'Q4_K_M은 Q4_0과 같습니까?',
+            a: '아닙니다. Q4_K_M은 동일한 비트 깊이에서 Q4_0 대비 5~8%의 품질을 회복하는 k-quant 압축을 사용합니다. 항상 Q4_0보다 Q4_K_M을 선택하십시오. 더 높은 수준으로 언제 올려야 하는지는 <a href="/ko/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0 가이드</a>를 참조하십시오.',
+          },
+          {
+            q: 'VRAM 8GB에서 어떤 양자화를 사용해야 합니까?',
+            a: '7B 모델에는 Q4_K_M을 사용하십시오(5.5 GB VRAM). 더 나은 품질을 원하고 여유가 있다면 Q5_K_M은 6.5 GB를 사용하고 약 3%의 품질을 추가합니다. 두 가지 모두 8 GB에 편안하게 들어맞습니다.',
+          },
+          {
+            q: "Q4_K_M에서 'M'은 무엇을 의미합니까?",
+            a: 'Medium(중간)을 의미합니다 — k-quant 압축 내의 품질 수준을 나타냅니다. Q4_K_S는 소형(낮은 품질) 변형이고, Q4_K_M은 중간(권장 설정)이며, Q4_K_L은 대형(M 대비 미미한 향상)입니다.',
+          },
+          {
+            q: 'Ollama에서 기본적으로 Q4_K_M을 사용하는 모델은 무엇입니까?',
+            a: '대부분의 모델입니다 — Llama 3, Mistral, Qwen, Phi, Gemma 모두 기본적으로 Q4_K_M 태그를 사용합니다. 양자화를 변경하려면 모델 태그에 <code>:q5_K_M</code> 또는 <code>:q8_0</code>을 지정하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[Q4_K_M vs Q8_0: 결정 가이드](/ko/prompt-bites/q4-k-m-vs-q8-0)',
+          '[로컬 LLM에 필요한 VRAM 용량](/ko/prompt-bites/how-much-vram-for-local-llm)',
+          '[양자화 수준 전체 비교](/ko/local-llms/quantization-levels-comparison)',
+        ],
+      },
+    },
+  },
 }

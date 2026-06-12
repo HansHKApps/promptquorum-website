@@ -646,4 +646,102 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Ollama',
+    title: 'Ollama에서 Qwen 3를 실행할 수 있습니까?',
+    seoTitle: 'Ollama Qwen 3 실행 방법 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: '예 — Ollama는 0.6B부터 72B까지 모든 Qwen 3 크기를 지원합니다. 실행 명령: ollama run qwen3:8b. 8B 모델은 Q4 양자화에서 VRAM 약 6 GB가 필요합니다. 2026년 5월 업데이트.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    targetKeywords: [
+      'Ollama Qwen 3 실행',
+      'Qwen 3 로컬 설치',
+      'ollama run qwen3 VRAM',
+      'Qwen 3 8B 로컬 LLM',
+    ],
+    readTime: '4분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: 'Ollama에서 Qwen 3를 실행할 수 있습니까?',
+        answer: '예 — Ollama는 0.6B부터 72B까지 모든 Qwen 3 모델 크기를 지원합니다. ollama run qwen3:8b 명령 하나로 원하는 크기를 실행할 수 있습니다. 8B 모델은 Q4 양자화에서 VRAM 약 6 GB가 필요합니다.',
+        bullets: [
+          'ollama run qwen3:0.6b — VRAM 1 GB로 실행 가능',
+          'ollama run qwen3:8b — VRAM 약 6 GB 필요',
+          'ollama run qwen3:72b — VRAM 약 40 GB 필요',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Ollama는 0.6B, 1.5B, 3B, 7B, 14B, 32B, 72B 등 모든 Qwen 3 크기를 지원합니다.',
+          '<code>ollama run qwen3:8b</code> 명령으로 원하는 크기를 다운로드하십시오 — 태그를 목표 크기로 교체하면 됩니다.',
+          '7B 모델은 Q4 양자화에서 VRAM 약 6 GB가 필요하며 중급 GPU에서 약 20 tok/s로 실행됩니다.',
+          'Qwen 3는 표준 Ollama API를 통해 도구 호출을 기본 지원합니다 — 별도의 Modelfile이 필요하지 않습니다.',
+        ],
+      },
+      body1: {
+        title: '예 — 사용 가능한 크기 목록',
+        content: [
+          '<strong>2026년 5월 기준, Ollama는 0.6B부터 72B까지 Qwen 3의 모든 주요 모델 크기를 지원합니다.</strong> 단일 명령 <code>ollama run qwen3:8b</code>로 원하는 크기를 다운로드할 수 있습니다. <code>8b</code>를 <code>0.6b</code>, <code>1.5b</code>, <code>3b</code>, <code>14b</code>, <code>32b</code>, 또는 <code>72b</code>로 교체하면 다른 크기를 사용할 수 있습니다.',
+          '각 크기는 여러 양자화 옵션으로 제공됩니다. Q4_K_M은 기본값이자 권장 시작점입니다 — 품질 대비 파일 크기 비율이 가장 우수합니다. VRAM 여유가 있다면 7B 및 14B 모델에서 Q8_0도 선택할 수 있습니다.',
+          '도구 호출은 표준 Ollama API를 통해 모든 Qwen 3 크기에서 기본 지원됩니다. 별도의 Modelfile이나 특수 프롬프트 템플릿이 필요하지 않습니다.',
+        ],
+        codeBlock: 'ollama run qwen3:8b',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ollama는 ollama run qwen3:8b 명령 하나로 0.6B부터 72B까지 모든 Qwen 3 크기를 기본 지원합니다.' },
+          { type: 'plain-terms', text: 'Ollama에서 Qwen 3를 설치하려면 터미널에서 ollama run qwen3:8b를 실행하면 됩니다. 8b를 원하는 모델 크기로 교체하십시오. VRAM 6 GB이면 8B 모델이 완전히 적재됩니다.' },
+        ],
+      },
+      body2: {
+        title: '적합한 Qwen 3 크기 선택 방법',
+        content: [
+          '적합한 Qwen 3 크기는 전적으로 사용 가능한 VRAM에 따라 결정됩니다. <strong>중급 GPU(VRAM 6~8 GB)를 사용하는 대부분의 사용자에게는 Q4_K_M 양자화의 7B 모델이 실용적인 선택입니다 — VRAM 약 6 GB가 필요하며 약 20 tok/s로 실행됩니다.</strong>',
+          'Q4 양자화의 14B 모델은 코딩 작업에 권장되는 수준입니다. 코드 생성에서 7B보다 우수하며 VRAM 10~12 GB에 여유 있게 적재됩니다. 다른 로컬 모델과의 Qwen 3 코딩 성능 비교는 <a href="/ko/local-llms/run-qwen-locally-guide-2026" class="text-primary hover:underline">2026년 Qwen 로컬 실행 가이드</a>를 참조하십시오.',
+        ],
+        columns: ['VRAM', 'Qwen 3 크기', '최적 용도'],
+        rows: [
+          { 'VRAM': '< 4 GB', 'Qwen 3 크기': '0.6B / 1.5B', '최적 용도': '엣지 디바이스, 테스트, CPU 전용' },
+          { 'VRAM': '4–6 GB', 'Qwen 3 크기': '3B', '최적 용도': '저가형 GPU 또는 저용량 RAM CPU' },
+          { 'VRAM': '6–12 GB', 'Qwen 3 크기': '7B / 14B', '최적 용도': '일반 사용 및 코딩' },
+          { 'VRAM': '12–24 GB', 'Qwen 3 크기': '14B / 32B', '최적 용도': '고품질 코딩 및 추론' },
+          { 'VRAM': '40+ GB', 'Qwen 3 크기': '72B', '최적 용도': '프론티어 수준에 근접한 로컬 품질' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Ollama에서 Qwen 3 사용에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'Ollama에서 Qwen 3를 어떻게 설치합니까?',
+            a: '터미널에서 <code>ollama run qwen3:8b</code>를 실행하십시오. Ollama는 첫 실행 시 모델을 자동으로 다운로드합니다. <code>8b</code>를 목표 크기인 0.6b, 1.5b, 3b, 14b, 32b, 또는 72b로 교체하면 됩니다.',
+          },
+          {
+            q: 'Qwen 3는 코딩에서 Llama 3보다 우수합니까?',
+            a: '코딩 측면에서는 그렇습니다. Qwen 3 14B는 HumanEval 벤치마크에서 Llama 3 8B를 능가합니다. 8B 수준의 일반 대화에서는 Llama 3 8B도 경쟁력이 있습니다. 모든 작업에서 현재 최고의 Ollama 모델은 <a href="/ko/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">지금 당장 최적의 Ollama 모델</a>을 참조하십시오.',
+          },
+          {
+            q: 'Qwen 3는 Ollama에서 도구 호출을 지원합니까?',
+            a: '예. Qwen 3는 표준 Ollama API를 통해 함수 및 도구 호출을 기본 지원합니다. 별도의 Modelfile이나 특수 설정이 필요하지 않으며 Ollama 도구 사용 형식을 지원하는 모든 클라이언트에서 작동합니다.',
+          },
+          {
+            q: '소비자용 하드웨어에서 Qwen 3 72B를 실행할 수 있습니까?',
+            a: '기술적으로는 가능하지만 Q4 양자화에서 VRAM 약 40 GB가 필요합니다. 이는 듀얼 GPU 구성(RTX 3090 두 장) 또는 통합 메모리 64 GB 이상의 Apple M 시리즈 Mac을 의미합니다. 대부분의 소비자용 구성에서는 32B 수준이 실질적인 최대치입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[Ollama 최적 모델 추천](/ko/prompt-bites/best-ollama-models-right-now)',
+          '[2026년 Qwen 로컬 실행 가이드](/ko/local-llms/run-qwen-locally-guide-2026)',
+          '[로컬 LLM에 필요한 VRAM 용량](/ko/local-llms/how-much-vram-local-llm)',
+        ],
+      },
+    },
+  },
 }

@@ -685,4 +685,146 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Tool Comparisons',
+    title: 'Ollama 최적 프론트엔드는?',
+    seoTitle: 'Ollama 최적 프론트엔드 비교: Open WebUI vs SillyTavern vs Jan 2026',
+    metaDescription: 'Ollama 프론트엔드 추천: Open WebUI가 대부분의 사용자에게 최선입니다. SillyTavern은 롤플레이, Jan은 모델 관리에 적합합니다. 세 가지 모두 무료 오픈소스입니다. 2026년 5월.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-06-18',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: '중급',
+    audience: 'Ollama 환경에 채팅 UI를 추가하려는 개발자',
+    parentArticle: '/local-llms/best-local-llm-frontends',
+    siblingBites: ['ollama-vs-lm-studio', 'jan-vs-lm-studio'],
+    is_living_page: true,
+    targetKeywords: [
+      'Ollama 프론트엔드 추천',
+      'Open WebUI Ollama 설치',
+      'Ollama 웹 인터페이스',
+      'SillyTavern Ollama 연결',
+      'Jan 모델 관리',
+    ],
+    readTime: '3분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: 'Ollama 최적 프론트엔드는?',
+        answer: 'Open WebUI는 대부분의 사용자에게 가장 적합한 Ollama 프론트엔드입니다. Docker 기반으로 동작하며 RAG 지원과 다양한 기능을 무료로 제공합니다. 롤플레이에는 SillyTavern이, 모델 관리에는 Jan이 더 적합합니다.',
+        bullets: [
+          'Open WebUI: 전반적으로 최선, Docker 기반, ChatGPT 유사 UI',
+          'SillyTavern: 창작 글쓰기 및 롤플레이에 최적',
+          'Jan: 내장 모델 다운로더와 로컬 API 서버 제공',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      inLanguage: 'ko',
+      headline: 'Ollama 최적 프론트엔드는?',
+      description: 'Open WebUI, SillyTavern, Jan 세 가지 Ollama 프론트엔드를 비교하고 사용 목적에 따른 최적 선택을 안내합니다.',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/best-frontend-for-ollama',
+      datePublished: '2026-05-18',
+      dateModified: '2026-05-18',
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Prompt Bites',
+          item: 'https://www.promptquorum.com/ko/prompt-bites',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Ollama 최적 프론트엔드는?',
+          item: 'https://www.promptquorum.com/ko/prompt-bites/best-frontend-for-ollama',
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Open WebUI는 Ollama의 범용 최적 프론트엔드입니다. RAG, 다중 사용자 관리, 복수 Ollama 인스턴스를 기본 지원합니다.',
+          'SillyTavern은 롤플레이와 창작 소설에 특화되어 있으며, Open WebUI에는 없는 캐릭터 카드와 스토리 분기 기능을 지원합니다.',
+          'Jan은 Docker 없이 실행되며 채팅 UI와 함께 모델 다운로드 관리 기능을 제공하여 모델 전환 워크플로에 유용합니다.',
+          '세 프론트엔드 모두 로컬 REST API를 통해 Ollama에 연결되며 무료로 사용할 수 있습니다.',
+        ],
+      },
+      body1: {
+        title: 'Open WebUI vs SillyTavern vs Jan 비교',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Open WebUI는 Docker 기반 Ollama 프론트엔드 중 가장 기능이 풍부하며 RAG와 다중 사용자를 지원합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Ollama를 설치한 후 채팅 화면이 필요하다면 Open WebUI를 Docker로 실행하는 것이 가장 간단한 방법입니다.',
+          },
+        ],
+        content: [
+          '<strong>Open WebUI</strong> (전반적으로 최선) — ChatGPT와 유사한 Docker 기반 웹 인터페이스입니다. RAG를 완전히 지원하여 PDF 및 TXT 문서를 업로드할 수 있습니다. 사용자 관리, 영구 채팅 기록, 복수 Ollama 인스턴스를 지원합니다. 단순 채팅 이상의 기능이 필요할 때 가장 완성도 높은 선택입니다.',
+          '<strong>SillyTavern</strong> (롤플레이에 최선) — 창작 글쓰기, 롤플레이, 스토리 구성을 위해 설계되었습니다. 캐릭터 카드, 대화 분기, 복잡한 장면을 지원합니다. Docker가 필요 없으며 Node.js가 필요합니다. 몰입감 있는 이야기를 원하는 비기술 사용자에게 적합합니다.',
+          '<strong>Jan</strong> (모델 관리 + 채팅) — Docker 없이 동작하는 네이티브 데스크톱 앱입니다. 내장 모델 관리자(Hugging Face에서 다운로드), 채팅 UI, 로컬 API 서버를 포함합니다. 빠른 모델 전환이 필요하고 고급 RAG가 필요 없다면 적합합니다.',
+        ],
+      },
+      body2: {
+        title: '어떤 것을 선택해야 할까요',
+        content: [
+          'RAG, 다중 사용자 또는 복수 Ollama 인스턴스가 필요하다면 <strong>Open WebUI</strong>를 사용하십시오.',
+          '몰입감 있는 롤플레이나 스토리텔링 경험을 원한다면 <strong>SillyTavern</strong>을 사용하십시오.',
+          '내장 모델 관리자와 간단한 채팅 UI를 원한다면 <strong>Jan</strong>을 사용하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Ollama 프론트엔드에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: 'Open WebUI를 실행하려면 Docker가 필요합니까?',
+            a: '예, Open WebUI는 Docker 컨테이너로 배포됩니다. Docker가 설치되어 있지 않다면 docker.com에서 설치하거나 패키지 관리자(Mac의 Homebrew, Linux의 apt)를 사용하십시오.',
+          },
+          {
+            q: 'Open WebUI는 Ollama와 호환됩니까?',
+            a: '예. Open WebUI는 localhost:11434(Ollama의 기본 API 주소)를 통해 Ollama에 연결됩니다. 실행 중인 Ollama 인스턴스 옆에서 시작하려면 `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main` 명령을 실행하십시오.',
+          },
+          {
+            q: 'SillyTavern을 Ollama와 함께 사용할 수 있습니까?',
+            a: '예. SillyTavern은 API 연결 설정을 통해 Ollama를 백엔드로 지원합니다. SillyTavern 연결 패널에서 API 유형을 "Ollama"로 설정하고 엔드포인트를 http://localhost:11434로 지정하십시오.',
+          },
+          {
+            q: 'Docker가 필요 없는 Ollama 프론트엔드가 있습니까?',
+            a: 'Jan은 Docker가 필요 없는 네이티브 데스크톱 앱입니다. 로컬 모델 실행기에 직접 연결되며 자체 모델 다운로드 관리자를 포함합니다. SillyTavern도 Docker 없이 동작하지만 Node.js가 필요합니다.',
+          },
+          {
+            q: 'Open WebUI는 RAG(검색 증강 생성)를 지원합니까?',
+            a: '예. Open WebUI에는 RAG 지원이 내장되어 있습니다. 채팅에서 직접 PDF, TXT 및 기타 문서를 업로드할 수 있습니다. 임베딩된 내용은 자동으로 청크로 분할되고 검색되어 모델 응답의 근거로 활용됩니다. Ollama 설정 옵션에 대한 자세한 내용은 <a href="/ko/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio 빠른 답변</a>을 참조하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[Ollama vs LM Studio: 빠른 비교](/ko/prompt-bites/ollama-vs-lm-studio)',
+          '[Jan vs LM Studio 비교](/ko/prompt-bites/jan-vs-lm-studio)',
+          '[최적 로컬 LLM 프론트엔드 종합 가이드](/ko/local-llms/best-local-llm-frontends)',
+        ],
+      },
+    },
+  },
 }

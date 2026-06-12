@@ -681,4 +681,114 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Hardware-Specific',
+    title: 'Radeon RX 6800M에서 로컬 LLM을 실행할 수 있습니까?',
+    seoTitle: 'Radeon 6800M 로컬 LLM? ROCm vs Vulkan | PromptQuorum',
+    metaDescription: 'Radeon RX 6800M (12 GB VRAM)은 Linux에서 ROCm을 통해 ~12 tok/s로, Windows에서는 llama.cpp Vulkan으로 LLM을 실행할 수 있습니다. Llama 3 8B Q4_K_M 지원 확인됩니다.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    readTime: '5분 분량',
+    targetKeywords: [
+      'Radeon 6800M 로컬 LLM',
+      'AMD 노트북 GPU LLM 실행',
+      'ROCm 설정 방법',
+      'llama.cpp Vulkan AMD',
+      '12GB VRAM 언어 모델',
+    ],
+    quickAnswerTop: {
+      ko: {
+        question: 'Radeon RX 6800M에서 로컬 LLM을 실행할 수 있습니까?',
+        answer: '예. Radeon RX 6800M은 12 GB GDDR6 VRAM을 갖추고 있으며 로컬 LLM을 실행할 수 있습니다. Linux에서는 ROCm을 사용하여 GPU 가속을 얻을 수 있습니다. Windows에서는 Vulkan 백엔드를 사용하는 llama.cpp 또는 CPU 폴백을 사용하십시오. Linux + ROCm 환경에서 Llama 3 8B Q4_K_M은 약 12 tok/s로 동작합니다.',
+        bullets: [
+          'Linux + ROCm: 완전한 GPU 가속, Llama 3 8B Q4에서 ~12 tok/s',
+          'Windows: Vulkan 백엔드를 사용하는 llama.cpp로 부분 GPU 오프로드',
+          '12 GB VRAM은 Q4_K_M에서 최대 14B 모델을 지원합니다',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/radeon-6800m-local-llm',
+      breadcrumbSchema: {
+        items: [
+          { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+          { position: 2, name: 'Prompt Bites', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+          { position: 3, name: 'Radeon RX 6800M에서 로컬 LLM 실행하기', url: 'https://www.promptquorum.com/ko/prompt-bites/radeon-6800m-local-llm' },
+        ],
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Radeon RX 6800M은 12 GB GDDR6 VRAM을 갖춘 모바일 RDNA 2 칩입니다 — 데스크탑 RX 6800과는 다른 GPU 다이를 사용하며 ROCm 지원 범위도 다릅니다',
+          'Vulkan 백엔드(Ollama 또는 llama.cpp)가 크로스 플랫폼 환경에서 가장 안정적인 방법이며, Linux + ROCm 조합은 작동 시 더 높은 속도(~12 tok/s)를 제공합니다',
+          'Vulkan 속도는 동급 NVIDIA 카드의 CUDA보다 30~40% 느립니다 — Llama 3 8B에서 12 GB NVIDIA 카드의 ~25 tok/s에 비해 ~14 tok/s를 기대하십시오',
+          '항상 전원에 연결하여 사용하십시오: AMD 모바일 GPU는 배터리 구동 시 클럭을 낮추며 LLM 추론 속도가 40~50% 감소합니다',
+        ],
+      },
+      body1: {
+        title: 'Radeon 6800M이 실제로 실행할 수 있는 모델',
+        content: [
+          '2026년 5월 기준, <strong>Radeon RX 6800M은 12 GB GDDR6 VRAM을 갖춘 모바일 RDNA 2 칩입니다 — 이는 ROCm 지원 범위가 다른 별개의 GPU 다이를 사용하는 데스크탑 RX 6800과 다릅니다.</strong> 12 GB 덕분에 6800M은 레이어 오프로딩 없이 Q4_K_M 형식의 최대 14B 모델을 로드할 수 있으며, 이는 데스크탑 RTX 3060 12 GB와 동일한 용량입니다.',
+          'ROCm의 모바일 RDNA 2 칩 지원은 역사적으로 불안정했습니다 — 의존하기 전에 AMD ROCm 공식 GPU 지원 매트릭스에서 현재 상태를 확인하십시오. ROCm이 작동하는 Linux 환경에서는 Ollama가 6800M을 자동으로 감지하며 Llama 3 8B Q4_K_M이 약 12 tok/s에 도달합니다. Ollama 또는 llama.cpp의 Vulkan 백엔드는 ROCm 의존성 없이 Windows와 Linux 모두에서 작동하며 가장 안정적인 크로스 플랫폼 경로입니다.',
+          'Vulkan 속도는 동급 NVIDIA 하드웨어의 CUDA보다 30~40% 낮습니다: RTX 3060 12 GB에서 ~25 tok/s로 동작하는 동일한 모델이 Vulkan을 통한 6800M에서는 ~14 tok/s에 달합니다. 8 GB VRAM CUDA 시스템과의 비교는 <a href="/ko/prompt-bites/best-models-amd-5700x-3070ti" class="text-primary hover:underline">AMD 5700X + RTX 3070 Ti 시스템 비교</a>를 참조하십시오.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Radeon RX 6800M은 12 GB VRAM으로 Linux에서 ROCm을 통해 Llama 3 8B Q4_K_M을 약 12 tok/s로 실행할 수 있습니다.' },
+          { type: 'plain-terms', text: 'ROCm은 AMD GPU 가속 소프트웨어 스택입니다. Vulkan은 Windows와 Linux 모두에서 작동하는 크로스 플랫폼 그래픽/컴퓨팅 API입니다. GGUF는 llama.cpp용 양자화된 모델 파일 형식입니다.' },
+        ],
+        columns: ['모델', 'VRAM Q4', '측정 속도'],
+        rows: [
+          { '모델': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', '측정 속도': '~14 tok/s (Vulkan)' },
+          { '모델': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', '측정 속도': '~13 tok/s (Vulkan)' },
+          { '모델': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', '측정 속도': '~10 tok/s (Vulkan)' },
+          { '모델': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', '측정 속도': '~9 tok/s (Vulkan)' },
+        ],
+      },
+      body2: {
+        title: '6800M에서 로컬 LLM 설정 방법',
+        content: [
+          '<strong>Linux에서는 Ollama를 설치하십시오 — 기본적으로 Vulkan 지원이 포함되어 있으며 6800M을 자동으로 감지합니다.</strong> 특정 칩에서 ROCm이 작동한다면(AMD ROCm GPU 지원 매트릭스 확인) Ollama가 자동으로 이를 사용하여 Vulkan 기준선 대신 Llama 3 8B Q4_K_M에서 약 12 tok/s를 제공합니다.',
+          'Windows에서는 6800M용 네이티브 ROCm을 안정적으로 사용할 수 없습니다. Vulkan 지원이 포함된 Ollama를 사용하거나, llama.cpp의 사전 빌드된 Vulkan 바이너리를 다운로드하고 <code>-ngl 33</code> 옵션으로 GGUF 파일을 로드하여 GPU에 레이어를 오프로드하십시오. GPU 패스스루를 사용하는 WSL2는 듀얼 부팅 없이 Linux 전용 ROCm 혜택에 접근하는 또 다른 옵션입니다.',
+          '항상 전원에 연결하여 사용하십시오 — AMD 모바일 GPU는 배터리 구동 시 클럭을 적극적으로 낮추며 전원 미연결 시 LLM 추론 속도가 40~50% 감소합니다. NVIDIA와 AMD의 전체 GPU 비교는 <a href="/ko/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">로컬 LLM용 최고의 GPU 가이드</a>를 참조하십시오.',
+        ],
+        callouts: [{ type: 'tip', text: '설정을 테스트하십시오: <code>ollama run llama3:8b</code>를 실행하고 <code>rocm-smi</code>(ROCm 사용 시) 또는 <code>ollama ps</code>로 GPU 사용을 확인하십시오. 모델이 CPU로 폴백되면 <code>ollama info</code>로 GPU 감지를 확인하십시오.' }],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Radeon 6800M과 로컬 LLM에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'Radeon 6800M은 ROCm을 공식적으로 지원합니까?',
+            a: 'ROCm의 모바일 RDNA 2 칩 지원은 역사적으로 불안정했습니다. 데스크탑 RDNA 2 카드(RX 6800, RX 6900 XT)는 AMD ROCm GPU 지원 매트릭스에 공식적으로 등재되어 있지만, 모바일 6800M은 다른 칩입니다. ROCm 가속에 의존하기 전에 AMD의 ROCm 호환성 페이지에서 현재 상태를 확인하십시오.',
+          },
+          {
+            q: 'LLM 실행에서 6800M이 RTX 3070 Mobile보다 빠릅니까?',
+            a: '6800M의 12 GB VRAM 대 대부분의 RTX 3070 Mobile 구성의 8 GB는 원시 속도보다 모델 적재 용량 측면에서 더 중요합니다. 동일한 모델 크기에서 RTX 3070 Mobile은 Windows에서 더 나은 CUDA 드라이버 통합의 혜택을 받습니다. 6800M에서 ROCm이 작동하는 Linux 환경에서는 속도 차이가 줄어듭니다.',
+          },
+          {
+            q: 'AMD 모바일에서 Apple Silicon 방식의 통합 메모리 트릭을 사용할 수 있습니까?',
+            a: '아닙니다. 6800M은 시스템 RAM과 분리된 전용 GDDR6 VRAM을 사용합니다 — Apple M 시리즈 통합 메모리 아키텍처에 해당하는 메모리 풀링이 없습니다. 전체 12 GB는 GPU 전용이며 시스템 RAM은 추가 VRAM으로 사용할 수 없습니다.',
+          },
+          {
+            q: 'LLM을 지속적으로 실행할 때 6800M의 온도는 어느 정도입니까?',
+            a: '게임 세션과 유사하게 지속적인 추론 부하 하에서 80~90°C를 예상하십시오. ~100°C 이상의 열 제한은 추론 속도를 감소시킵니다. Windows의 Radeon Software 또는 Linux의 CoreCtrl을 사용하여 언더볼팅 프로파일을 설정하고 충분한 환기를 확보하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 LLM용 최고의 GPU 가이드](/ko/local-llms/best-gpus-for-local-llms)',
+          '[AMD 5700X + RTX 3070 Ti 시스템에서의 최고 모델](/ko/prompt-bites/best-models-amd-5700x-3070ti)',
+          '[12GB VRAM 로컬 코딩 최고의 LLM](/ko/prompt-bites/best-local-llm-coding-12gb-vram)',
+        ],
+      },
+    },
+  },
 }

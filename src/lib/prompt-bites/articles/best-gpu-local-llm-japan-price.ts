@@ -1833,4 +1833,213 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Hardware Guides',
+    title: '일본에서 로컬 LLM용 최고의 가성비 GPU는 무엇입니까?',
+    seoTitle: '일본 LLM용 최고의 GPU 2026 | PromptQuorum',
+    metaDescription:
+      'RTX 3060 12 GB는 일본에서 가성비 최고의 GPU입니다: 신품 ~¥40,000, 중고 ¥25,000. 7B 모델을 20-25 tok/s로 실행합니다. Tsukumo 및 Dospara에서 구입 가능합니다.',
+    publishDate: '2026-05-27',
+    dateModified: '2026-05-27',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-27',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['RTX 3060 12GB', 'RTX 4060 Ti 16GB', 'RX 7800 XT 16GB', 'RTX 3090 24GB'],
+    educationalLevel: 'Intermediate',
+    audience: '로컬 LLM 추론을 위해 GPU를 구매하는 일본 거주 사용자',
+    affiliateDisclosure: true,
+    parentArticle: '/local-llms/best-budget-gpus-local-llm',
+    siblingBites: ['best-ollama-models-rtx-3060-12gb', 'best-egpu-ollama-macbook'],
+    is_living_page: false,
+    readTime: '5분 분량',
+    leadAnswerBlock:
+      '일본에서 RTX 3060 12 GB는 최고의 가격 대비 성능을 제공합니다 (신품 ~¥40,000, 중고 ~¥25,000). 12 GB VRAM으로 7B 모델을 20-25 tok/s로 실행할 수 있습니다. 아키하바라의 Tsukumo 및 Dospara에서 구입 가능합니다.',
+    toc: [
+      { label: '일본의 가격대별 GPU', anchor: '#gpus-by-price' },
+      { label: '일본 구매 가이드', anchor: '#buying-guide' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+    ],
+    intro:
+      '일본의 GPU 가격은 수입 비용과 10% 소비세로 인해 미국 가격보다 15-20% 높습니다. 중고 시장(Mercari, Yahoo Auctions, Janpara)을 이용하면 신품 대비 30-40%를 절약할 수 있습니다. 이 가이드는 2026년 5월 기준 실제 일본 거리 가격으로 구매할 가치 있는 GPU 4종을 정리합니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '일본에서 로컬 LLM용 가성비 최고의 GPU는 무엇입니까?',
+        answer:
+          'RTX 3060 12 GB (신품 ~¥40,000, 중고 ¥25,000)는 일본에서 가성비 최고의 GPU입니다. 12 GB VRAM으로 추가 설정 없이 7B 모델을 20-25 tok/s로 실행할 수 있습니다.',
+        bullets: [
+          'RTX 3060 12 GB: 신품 ¥40K / 중고 ¥25K — 7B 모델 20-25 tok/s 최고 가성비',
+          'RTX 4060 Ti 16 GB: 신품 ¥65K / 중고 ¥50K — 13B 모델 18-22 tok/s 지원',
+          'RTX 3090 24 GB 중고 ¥90K — 일본 원룸에서는 비추천: 340W, 전기료 ~¥8,000/월',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '최고 가성비: RTX 3060 12 GB 신품 ~¥40,000 / 중고 ¥25,000 (2026년 5월) — 7B 모델 20-25 tok/s',
+          '중급형: RTX 4060 Ti 16 GB 신품 ¥65,000 — 13B 모델 18-22 tok/s, 16 GB 여유',
+          'AMD 대안: RX 7800 XT 16 GB ¥70,000 — 16 GB VRAM, Vulkan/ROCm, Linux에 최적',
+          '비추천: RTX 3090 24 GB (일본 원룸 기준) — 340W TDP로 ¥31/kWh 기준 월 ~¥8,000 전기료 발생',
+          '중고 구입처: Mercari (メルカリ), Yahoo Auctions (Yahoo!オークション), Janpara (じゃんぱら) — 아키하바라',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'RTX 3060 12 GB (신품 ~¥40,000)는 2026년 5월 기준 일본에서 로컬 LLM용 가격 대비 성능이 가장 뛰어난 GPU입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '일본의 GPU 가격은 미국보다 15-20% 높습니다. RTX 3060 12 GB는 7B 모델을 20-25 tok/s로 실행하며, 아키하바라의 Tsukumo·Dospara 또는 Mercari에서 중고로 ¥25,000에 구입할 수 있습니다.',
+          },
+        ],
+      },
+      body1: {
+        id: 'gpus-by-price',
+        title: '일본의 가격대별 GPU',
+        content: [
+          '<strong>2026년 5월 기준으로 일본의 GPU 가격은 미국 동급 제품보다 15-20% 높습니다. 다음 4종의 카드는 중고 ¥25,000부터 중고 ¥90,000까지 로컬 LLM 추론을 위한 현실적인 모든 예산을 커버합니다.</strong>',
+          '다음 표는 신품 기준으로 Tsukumo, Dospara, Yodobashi의 2026년 5월 거리 가격을, 중고 기준으로 Mercari/Yahoo Auctions 중간값을 사용합니다. 가격은 변동될 수 있으니 구매 전 반드시 확인하십시오.',
+        ],
+        columns: ['GPU + VRAM', '신품 / 중고 가격 (¥)', '추천 용도'],
+        rows: [
+          {
+            'GPU + VRAM': 'RTX 3060 12 GB',
+            '신품 / 중고 가격 (¥)': '¥40,000 / ¥25,000',
+            '추천 용도': '7B 모델, 입문용 최고 가성비',
+          },
+          {
+            'GPU + VRAM': 'RTX 4060 Ti 16 GB',
+            '신품 / 중고 가격 (¥)': '¥65,000 / ¥50,000',
+            '추천 용도': '13B 모델, 중급형',
+          },
+          {
+            'GPU + VRAM': 'RX 7800 XT 16 GB',
+            '신품 / 중고 가격 (¥)': '¥70,000 / ¥55,000',
+            '추천 용도': 'AMD/Vulkan/ROCm — Linux 사용자',
+          },
+          {
+            'GPU + VRAM': 'RTX 3090 24 GB',
+            '신품 / 중고 가격 (¥)': '— / ¥90,000',
+            '추천 용도': '30B+ 모델 (비추천: 340W, 원룸에서 발열 과다)',
+          },
+        ],
+        callouts: [
+          {
+            type: 'verdict',
+            text: 'RTX 3060 12 GB — 추천 대상: 첫 GPU 빌드, 7B 모델, 예산이 빠듯한 경우. 비추천: 13B 이상 모델이 필요한 경우.',
+          },
+          {
+            type: 'verdict',
+            text: 'RTX 4060 Ti 16 GB — 추천 대상: 13B 모델, 3060에서 업그레이드. 비추천: 예산이 부족하고 7B로 충분한 경우.',
+          },
+          {
+            type: 'verdict',
+            text: 'RX 7800 XT 16 GB — 추천 대상: AMD 선호, Linux에서 Vulkan/ROCm 사용자. 비추천: CUDA 생태계를 선호하는 경우.',
+          },
+          {
+            type: 'warning',
+            text: 'RTX 3090 24 GB — 일본 원룸에서는 비추천입니다. 340W TDP로 ¥31/kWh 기준 전기료가 월 ~¥8,000 발생합니다. 전용 공간과 충분한 환기가 갖춰진 경우에만 구입하십시오.',
+          },
+        ],
+        items: [
+          'GPU 없이 일본에서 미니 PC로 추론하는 방법은 [일본 미니 PC 가이드](/ko/prompt-bites/best-mini-pc-local-llm-japan)를 참조하십시오.',
+          '일본어 최적화 LLM 모델은 [일본어 LLM 모델 가이드](/ko/prompt-bites/best-japanese-language-models-local)를 참조하십시오.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+3060+12GB',
+            productName: 'NVIDIA RTX 3060 12 GB',
+            productCategory: 'gpu',
+            priceRange: '¥25,000-40,000',
+            label: 'Amazon.co.jp에서 RTX 3060 12 GB 가격 확인',
+          },
+          {
+            url: 'https://www.tsukumo.co.jp/search/?keyword=RTX+3060+12GB',
+            productName: 'NVIDIA RTX 3060 12 GB',
+            productCategory: 'gpu',
+            priceRange: '¥40,000',
+            label: 'Tsukumo (ツクモ)에서 RTX 3060 12 GB 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+4060+Ti+16GB',
+            productName: 'NVIDIA RTX 4060 Ti 16 GB',
+            productCategory: 'gpu',
+            priceRange: '¥50,000-65,000',
+            label: 'Amazon.co.jp에서 RTX 4060 Ti 16 GB 가격 확인',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RX+7800+XT',
+            productName: 'AMD RX 7800 XT 16 GB',
+            productCategory: 'gpu',
+            priceRange: '¥55,000-70,000',
+            label: 'Amazon.co.jp에서 RX 7800 XT 가격 확인',
+          },
+        ],
+      },
+      body2: {
+        id: 'buying-guide',
+        title: '일본 구매 가이드',
+        content: [
+          '<strong>일본에서는 GPU를 구입할 수 있는 두 가지 신뢰할 수 있는 채널이 있습니다: 공인 판매점(Amazon.co.jp, Tsukumo, Dospara, Yodobashi Camera)에서 신품 구입, 그리고 Mercari·Yahoo Auctions 또는 아키하바라의 Janpara에서 중고 구입입니다.</strong> 처음 구매하는 분께는 아키하바라가 결정적인 장점이 있습니다. 직접 카드를 확인하고 당일 가져갈 수 있습니다.',
+          '일본의 신품 GPU 판매점 (2026년 5월 가격 기준): Amazon.co.jp는 전국 당일 배송이 가능합니다. Tsukumo (ツクモ) 아키하바라 1초메는 가장 넓은 재고를 보유합니다. Dospara (ドスパラ) 아키하바라는 NVIDIA 카드를 강점으로 합니다. Yodobashi Camera (ヨドバシカメラ) Multi Akiba는 모든 주요 브랜드를 취급합니다.',
+          '중고 구입처: Mercari (メルカリ)와 Yahoo! Auctions (Yahoo!オークション)에서 가장 다양한 선택지와 최저가를 찾을 수 있습니다. 아키하바라의 Janpara (じゃんぱら)는 30일 반품이 가능한 신뢰할 수 있는 중고 전문점입니다. Mercari 구입 시: 보증 상태(保証)를 확인하고, 판매자에게 GPU가 채굴(マイニング)에 사용된 적 있는지 직접 문의하며, 실제 카드의 선명한 사진이 여러 장 있는 매물만 구입하십시오.',
+          '예산별 의사결정 매트릭스: ¥30,000 미만 → Mercari의 RTX 3060 12 GB 중고. ¥30,000-50,000 → Tsukumo 또는 Dospara의 RTX 3060 12 GB 신품. ¥50,000-70,000 → RTX 4060 Ti 16 GB (중고) 또는 RX 7800 XT (신품). ¥70,000 초과 → RX 7800 XT 신품 또는 RTX 3090 중고 (전용 공간 및 충분한 환기 필요).',
+          '일본 전기 요금 참고: 2026년 기준 평균 ¥31/kWh입니다. 하루 8시간 사용 시: RTX 3060 12 GB (170W)는 월 ~¥3,200. RTX 4060 Ti 16 GB (165W)는 월 ~¥3,100. RTX 3090 24 GB (350W)는 월 ~¥6,600입니다.',
+          '<em>공지: 이 글에는 제휴 링크가 포함되어 있습니다. 이 링크를 통해 구매하시면 추가 비용 없이 수수료를 받을 수 있습니다.</em>',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://jp.mercari.com/search?keyword=RTX+3060+12GB',
+            productName: 'NVIDIA RTX 3060 12 GB (중고)',
+            productCategory: 'gpu',
+            priceRange: '¥20,000-25,000',
+            label: 'Mercari (メルカリ)에서 RTX 3060 12 GB 중고 검색',
+          },
+          {
+            url: 'https://auctions.yahoo.co.jp/search/search?p=RTX+3060+12GB',
+            productName: 'NVIDIA RTX 3060 12 GB (중고)',
+            productCategory: 'gpu',
+            priceRange: '¥20,000-27,000',
+            label: 'Yahoo Auctions (Yahoo!オークション)에서 RTX 3060 12 GB 검색',
+          },
+          {
+            url: 'https://www.janpara.co.jp/sale/search/?KEYWORDS=RTX+3060+12GB',
+            productName: 'NVIDIA RTX 3060 12 GB (중고)',
+            productCategory: 'gpu',
+            priceRange: '¥25,000-30,000',
+            label: 'Janpara (じゃんぱら)에서 RTX 3060 12 GB 검색',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문: 일본에서 로컬 LLM용 GPU 구매',
+        faqs: [
+          {
+            q: 'RTX 3060 12 GB와 8 GB 버전의 차이점은 무엇입니까?',
+            a: '8 GB 버전은 Q4_K_M 양자화로 7B 모델을 실행할 수 없습니다. 7B 모델을 Q4_K_M으로 실행하려면 약 6 GB VRAM이 필요하며 런타임 오버헤드가 8 GB 한도를 초과합니다. 12 GB 버전은 5-6 GB의 여유를 두고 이를 처리합니다. 로컬 LLM용으로는 항상 12 GB 버전을 구입하십시오.',
+          },
+          {
+            q: 'Ollama는 RX 7800 XT와 같은 AMD GPU에서 작동합니까?',
+            a: '예. Ollama는 RX 7800 XT 및 기타 RDNA3 카드에 대해 Linux의 ROCm 및 Windows의 Vulkan을 통해 AMD GPU 가속을 지원합니다. ROCm이 설치된 Linux에서는 성능이 NVIDIA CUDA에 근접합니다. Windows에서는 Vulkan이 작동하지만 수동 설정 단계가 필요합니다.',
+          },
+          {
+            q: 'Mercari (メルカリ)에서 구입할 때 무엇을 확인해야 합니까?',
+            a: '매물에서 보증 상태(保証)를 확인하십시오. 이상적으로는 제조사 보증이 최소 1개월 이상 남아 있어야 합니다. 판매자에게 GPU가 채굴(マイニング)에 사용된 적 있는지 직접 문의하십시오. 판매자 평점이 95% 이상인지 확인하고, 실제 카드의 선명한 사진이 여러 장 있는 매물에서만 구입하십시오.',
+          },
+          {
+            q: '일본에서 MacBook에 eGPU를 연결하여 로컬 추론을 사용할 수 있습니까?',
+            a: '예. Thunderbolt 3 또는 4를 통해 가능합니다. RTX 3060 12 GB 또는 RTX 4060 Ti 16 GB가 장착된 eGPU는 내부 PCIe 연결 성능의 약 80% 수준으로 GPU 가속을 통해 Ollama 및 llama.cpp를 실행합니다. eGPU 인클로저는 Yodobashi Camera 및 Amazon.co.jp에서 구입할 수 있습니다.',
+          },
+          {
+            q: '일본에서 GPU를 실행할 때 전기 요금은 얼마입니까?',
+            a: '2026년 기준 일본의 평균 전기 요금은 약 ¥31/kWh입니다. 하루 4시간 사용 시: RTX 3060 12 GB (170W)는 월 ~¥1,600. RTX 4060 Ti 16 GB (165W)는 월 ~¥1,550. RTX 3090 24 GB (350W)는 월 ~¥3,300입니다.',
+          },
+        ],
+      },
+    },
+  },
 }

@@ -701,4 +701,143 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Prompt Engineering',
+    title: 'CO-STAR 프롬프트 프레임워크란 무엇입니까?',
+    seoTitle: 'CO-STAR 프레임워크 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'CO-STAR는 6개 구성 요소로 이루어진 프롬프트 프레임워크입니다: Context, Objective, Style, Tone, Audience, Response. 60~120 단어로 일관된 LLM 출력을 위한 프롬프트를 구조화합니다.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    readTime: '4분 분량',
+    targetKeywords: [
+      'CO-STAR 프롬프트 프레임워크',
+      'CO-STAR LLM 프롬프트 구조',
+      '프롬프트 엔지니어링 프레임워크 한국어',
+      '대형 언어 모델 프롬프트 작성법',
+    ],
+    quickAnswerTop: {
+      ko: {
+        question: 'CO-STAR 프롬프트 프레임워크란 무엇입니까?',
+        answer: 'CO-STAR는 일관된 LLM 출력을 위한 6부 구성 프롬프트 구조입니다: Context(배경 정보), Objective(목표), Style(문체), Tone(감정적 어조), Audience(독자), Response(출력 형식). 모든 제약 조건을 명시적으로 설정하여 명확하고 일관된 출력을 생성하는 데 도움이 됩니다.',
+        bullets: [
+          'C = Context: LLM에 필요한 배경 정보',
+          'O = Objective: 완료해야 할 구체적인 작업',
+          'S/T/A = Style, Tone, Audience: 어떻게, 누구를 위해 작성할지',
+          'R = Response: 출력 형식 (목록, 단락, JSON 등)',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'CO-STAR는 Context, Objective, Style, Tone, Audience, Response의 약자로 — 일관된 출력을 위한 6개 구성 요소 프롬프트 구조입니다.',
+          '이 프레임워크는 모든 가정을 명시적으로 만들어 대형 언어 모델의 모호하거나 부적절한 응답을 줄여 줍니다.',
+          'CO-STAR는 문서 작성, 고객 대상 커뮤니케이션, 특정 어조나 형식이 필요한 작업에 가장 효과적입니다.',
+          '단순한 사실 조회나 단일 명령어에는 CO-STAR가 큰 품질 향상 없이 부담만 가중시킵니다.',
+        ],
+      },
+      body1: {
+        title: 'CO-STAR 각 구성 요소의 역할',
+        content: [
+          '<strong>CO-STAR는 6개 구성 요소 프롬프트 구조입니다: Context, Objective, Style, Tone, Audience, Response format. 언어 모델이 목표 지향적이고 일관된 출력을 생성하는 데 필요한 모든 변수를 포괄하므로 복잡한 LLM 프롬프트 구조화를 위한 가장 많이 인용되는 프레임워크 중 하나입니다.</strong>',
+          '이 프레임워크는 프롬프트 엔지니어링에서 반복적으로 발생하는 문제를 해결하기 위해 개발되었습니다. 바로 기술적으로는 명확하지만 암묵적 제약 조건이 빠진 프롬프트입니다. "이 문서를 요약하십시오"라고 작성하면 모델은 길이, 형식성, 독자, 형식에 대한 가정을 합니다. CO-STAR는 이러한 가정을 명시적 지시로 대체합니다.',
+          '각 구성 요소는 출력의 다른 차원을 다룹니다. Context는 관련 상황에 모델을 고정시킵니다. Objective는 정확한 결과물을 설정합니다. Style과 Tone은 글쓰기 수준을 제어합니다. Audience는 어휘와 복잡성을 조정합니다. Response는 구조적 형식을 지정합니다.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'CO-STAR는 Context, Objective, Style, Tone, Audience, Response의 6개 요소로 구성된 프롬프트 프레임워크로, 일관된 LLM 출력을 위해 모든 제약 조건을 명시화합니다.' },
+          { type: 'plain-terms', text: 'CO-STAR를 사용하면 AI 모델에게 배경 상황, 수행할 작업, 글쓰기 방식, 어조, 독자, 출력 형식을 모두 알려 줄 수 있어 명확하고 유용한 응답을 얻을 수 있습니다.' },
+        ],
+        columns: ['문자', '요소', '목적'],
+        rows: [
+          { '문자': 'C', '요소': 'Context', '목적': '모델에 필요한 배경 정보' },
+          { '문자': 'O', '요소': 'Objective', '목적': '모델이 수행하기를 원하는 것' },
+          { '문자': 'S', '요소': 'Style', '목적': '글쓰기 스타일 (공식적, 일상적, 기술적 등)' },
+          { '문자': 'T', '요소': 'Tone', '목적': '감정적 어조 (중립적, 격려적, 직접적)' },
+          { '문자': 'A', '요소': 'Audience', '목적': '출력을 읽는 대상 (전문가, 초보자, 경영진)' },
+          { '문자': 'R', '요소': 'Response format', '목적': '구조 (목록, 단락, JSON, 표)' },
+        ],
+      },
+      body2: {
+        title: 'CO-STAR가 빠른 프롬프트보다 효과적인 경우',
+        content: [
+          'CO-STAR는 모든 작업에 적합한 도구가 아닙니다. 문서 작성, 고객 대상 커뮤니케이션, 공식 보고서, 그리고 어조, 형식, 독자 일관성이 중요한 출력에 가장 큰 가치를 발휘합니다. 잘 구조화된 CO-STAR 프롬프트는 일반적으로 60~120 단어의 설정이 필요하지만 여러 차례의 수정 작업을 없애 줍니다.',
+          '실제 예시를 살펴보겠습니다. <strong>이전:</strong> "프로젝트 지연에 대해 팀에 이메일을 작성하십시오." <strong>이후:</strong> "Context: Q2 프로젝트가 협력업체 지연으로 3주 늦어졌습니다. Objective: 팀에 알리고 안심시키십시오. Style: 전문적. Tone: 공감적, 해결 지향적. Audience: 다양한 경력의 엔지니어 12명. Response: 제목 줄이 포함된 150 단어 이메일." CO-STAR 버전은 더 구체적이고 바로 사용할 수 있는 초안을 생성합니다.',
+          '<strong>단순한 사실 조회, 코드 생성, 단일 조회에는 CO-STAR가 의미 있는 품질 향상 없이 부담만 가중시킵니다.</strong> "Python의 `zip()` 함수는 무엇을 합니까?"라는 질문은 6개 구성 요소 구조의 혜택을 받지 못합니다. CO-STAR는 출력이 특정 맥락에서 실제 사람들이 읽는 작업에 활용하십시오. CO-STAR와 잘 맞는 프롬프트 패턴에 대한 심층 분석은 고급 예제와 일반적인 실패 패턴을 다루는 <a href="/ko/prompt-engineering/co-star-framework" class="text-primary hover:underline">CO-STAR 프롬프트 엔지니어링 완전 가이드</a>를 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'CO-STAR 프레임워크에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'CO-STAR는 RISEN이나 TRACE 같은 다른 프롬프트 프레임워크와 어떻게 다릅니까?',
+            a: 'CO-STAR는 특히 출력 특성인 스타일, 어조, 독자, 형식에 집중합니다. RISEN(Role, Instructions, Steps, End Goal, Narrowing)은 프로세스와 제약 조건을 강조합니다. TRACE(Task, Role, Audience, Context, Examples)는 CO-STAR와 크게 겹칩니다. CO-STAR의 핵심 장점은 Style과 Tone을 명시적으로 분리한다는 점으로, 대부분의 다른 프레임워크는 이 둘을 단일 "어조" 매개변수로 합칩니다.',
+          },
+          {
+            q: 'CO-STAR에서 가장 중요한 구성 요소는 무엇입니까?',
+            a: 'Objective 구성 요소가 가장 큰 영향을 미칩니다. Style, Tone, Audience를 아무리 세심하게 지정해도 모호한 Objective는 모호한 응답을 만들어 냅니다. Objective를 먼저 작성하고 가능한 한 구체적으로 설정하십시오 — 측정 가능한 완료 기준이 있는 구체적인 결과물 하나를 목표로 삼으십시오.',
+          },
+          {
+            q: 'CO-STAR는 모든 대형 언어 모델에서 작동합니까?',
+            a: '예. CO-STAR는 구조적 기법이며 특정 모델에 종속된 기능이 아닙니다. 자연어 지시를 처리하는 모든 언어 모델에서 작동합니다. 지시 따르기 능력이 뛰어난 모델이 제약 조건을 더 안정적으로 적용하지만, 이 프레임워크는 보편적으로 적용 가능합니다.',
+          },
+          {
+            q: 'CO-STAR를 완전히 건너뛰어야 할 때는 언제입니까?',
+            a: 'CO-STAR를 건너뛰어야 할 경우: 단일 행 사실 조회, 출력 형식이 고정된 코드 생성, 빠른 데이터 추출, 그리고 요청에서 출력 형식이 명확한 모든 작업입니다. 사용 사례에 맞는 올바른 모델과 구조화된 프롬프트 엔지니어링을 연결하려면 <a href="/ko/prompt-bites/best-llm-right-now" class="text-primary hover:underline">LLM 비교 가이드</a>를 참조하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[CO-STAR 프롬프트 엔지니어링 완전 가이드](/ko/prompt-engineering/co-star-framework)',
+          '[지금 최고의 LLM은?](/ko/prompt-bites/best-llm-right-now)',
+          '[프롬프트 엔지니어링이란 무엇입니까?](/ko/prompt-engineering)',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'CO-STAR 프롬프트 프레임워크란 무엇입니까?',
+      description: 'CO-STAR는 6개 구성 요소로 이루어진 프롬프트 프레임워크입니다: Context, Objective, Style, Tone, Audience, Response. 일관된 LLM 출력을 위한 프롬프트를 구조화합니다.',
+      inLanguage: 'ko',
+      datePublished: '2026-05-18',
+      dateModified: '2026-05-18',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/co-star-prompt-framework',
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Prompt Bites',
+          item: 'https://www.promptquorum.com/ko/prompt-bites',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'CO-STAR 프롬프트 프레임워크란 무엇입니까?',
+          item: 'https://www.promptquorum.com/ko/prompt-bites/co-star-prompt-framework',
+        },
+      ],
+    },
+  },
 }

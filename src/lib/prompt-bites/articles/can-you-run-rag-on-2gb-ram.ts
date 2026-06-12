@@ -609,4 +609,118 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Quick Answers',
+    title: '2 GB RAM으로 RAG를 실행할 수 있습니까?',
+    seoTitle: '2 GB RAM RAG 실행 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 임베딩으로 2 GB RAM에서 RAG를 실행할 수 있습니다(~1.3-1.5 GB). 7B+ 모델은 최소 8 GB가 필요합니다. PromptQuorum 빠른 답변.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    targetKeywords: [
+      '2gb 램 rag 실행',
+      '저용량 램 rag 파이프라인',
+      '2gb 로컬 llm rag 가능',
+      'llama 3.2 1b rag 설정',
+      '라즈베리 파이 rag 실행',
+    ],
+    readTime: '4분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: '2 GB RAM으로 RAG를 실행할 수 있습니까?',
+        answer: '예 — 단, Llama 3.2 1B(~750 MB)와 MiniLM-L6-v2 임베딩(~80 MB), 인메모리 벡터 스토어를 사용하는 소규모 개인 문서 세트에 한해 가능합니다. 총 ~1.3-1.5 GB로 2 GB 장치에 들어갑니다. 더 큰 모델(7B+) 및 대규모 문서 세트(200페이지 이상)는 최소 8 GB가 필요합니다.',
+        bullets: [
+          'Llama 3.2 1B Q4_K_M(~750 MB) + MiniLM-L6-v2 임베딩(~80 MB)이 2 GB에 들어갑니다',
+          '문서 세트는 RAM 내에 유지하려면 ~200페이지 미만이어야 합니다',
+          '7B+ 모델 또는 대형 코퍼스는 최소 8 GB RAM이 필요합니다',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/can-you-run-rag-on-2gb-ram',
+      breadcrumbs: [
+        { position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: '프롬프트 바이트', item: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: '2 GB RAM으로 RAG 실행 2026', item: 'https://www.promptquorum.com/ko/prompt-bites/can-you-run-rag-on-2gb-ram' },
+      ],
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: '프롬프트 바이트', item: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: '2 GB RAM으로 RAG 실행 2026', item: 'https://www.promptquorum.com/ko/prompt-bites/can-you-run-rag-on-2gb-ram' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        title: 'TL;DR — 핵심 요약',
+        content: [
+          '2 GB RAM에서는 Llama 3.2 1B Q4_K_M(~750 MB)과 MiniLM-L6-v2 임베딩(~80 MB), 인메모리 Chroma 벡터 스토어를 조합하면 RAG가 동작합니다. 총 메모리는 ~1.3-1.5 GB로 Raspberry Pi 4 2 GB 모델에서도 실행됩니다. 단, 문서 세트는 ~200페이지 미만으로 제한해야 합니다. 7B+ 모델이나 대형 코퍼스를 다루려면 8 GB RAM으로 업그레이드하십시오.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: '2 GB RAM에서 RAG를 실행하려면 Llama 3.2 1B Q4_K_M과 MiniLM-L6-v2 임베딩을 사용하십시오.' },
+          { type: 'plain-terms', text: '2 GB RAM으로도 RAG가 가능합니다. Llama 3.2 1B(~750 MB)와 MiniLM-L6-v2 임베딩(~80 MB)을 조합하면 총 ~1.3-1.5 GB로 소규모 개인 문서를 검색할 수 있습니다. 단, 7B 이상 모델이나 200페이지 이상의 문서는 최소 8 GB RAM이 필요합니다.' },
+        ],
+      },
+      body1: {
+        title: '예 — 최소 구성만 동작합니다',
+        content: [
+          '2 GB RAM에서 유일하게 실용적인 RAG 파이프라인은 1B급 LLM(Llama 3.2 1B 또는 Phi-3 Mini)과 경량 임베딩 모델(MiniLM-L6-v2, ~80 MB), 플랫 파일 또는 인메모리 벡터 스토어를 사용합니다. 2026년 5월 기준으로 이 구성은 동작하지만 소규모 개인 문서 세트(~200페이지 미만)에만 적합합니다.',
+          '아래 표는 최소 실행 가능 설정에서 각 RAG 구성 요소의 메모리 사용량을 보여줍니다.',
+        ],
+        columns: ['구성 요소', '메모리 사용량', '비고'],
+        rows: [
+          { '구성 요소': 'LLM (Llama 3.2 1B Q4_K_M)', '메모리 사용량': '~750 MB', '비고': '사용 가능한 가장 작은 instruction-tuned 모델' },
+          { '구성 요소': '임베딩 모델 (MiniLM-L6-v2)', '메모리 사용량': '~80 MB', '비고': 'CPU에서 실행 가능; GPU 불필요' },
+          { '구성 요소': '벡터 스토어 (Chroma 인메모리)', '메모리 사용량': '~150 MB', '비고': '코퍼스 크기에 따라 확장됨' },
+          { '구성 요소': 'Python 런타임 + 프레임워크 오버헤드', '메모리 사용량': '~300 MB', '비고': 'LangChain 또는 최소 llama-index' },
+          { '구성 요소': '최소 합계', '메모리 사용량': '~1.3-1.5 GB', '비고': '2 GB 장치에서 OS에 ~500 MB 여유' },
+        ],
+        content2: [
+          '이 구성은 Raspberry Pi 4(2 GB 모델) 또는 2 GB RAM을 갖춘 저전력 장치에서 실행됩니다. 검색 품질은 MiniLM-L6의 384차원 임베딩에 의해 제한되며, 짧은 문단 매칭에는 효과적이지만 다중 페이지 문서에서는 성능이 저하됩니다.',
+        ],
+      },
+      body2: {
+        title: '2 GB에서 문제가 생기는 경우',
+        content: [
+          '<strong>가장 흔한 실패는 LLM이 컨텍스트 윈도우 확장 시 사용 가능한 RAM을 초과하는 것입니다.</strong> 2 GB에서 1B 모델 컨텍스트는 OS가 스왑을 시작하기 전 약 2k 토큰으로 제한됩니다. 7B 이상 모델 로딩은 즉시 실패합니다. Llama 3 8B Q4_K_M은 단독으로 ~5 GB가 필요합니다.',
+          '두 번째 실패 유형은 벡터 스토어 증가입니다. PDF 500페이지에 대한 Chroma 데이터베이스는 청크 크기에 따라 약 400-600 MB를 사용합니다. LLM과 임베딩 모델을 합치면 총 RAM이 2 GB를 초과합니다. 해결책: 수집을 150페이지 미만으로 제한하고, 256 토큰 청크를 사용하며, 각 세션 후 스토어를 정리하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '2 GB RAM RAG에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: 'RAG에 사용할 수 있는 가장 작은 LLM은 무엇입니까?',
+            a: 'Llama 3.2 1B Q4_K_M(~750 MB)은 검색 증강 작업에 일관된 답변을 생성하는 가장 작은 instruction-tuned 모델입니다. 3-4 GB를 사용할 수 있다면 Phi-3 Mini(3.8B)가 더 나은 선택입니다. 4k 컨텍스트가 더 긴 검색 문단을 처리합니다. 1B 파라미터 미만에서는 RAG 스타일 질의에 대한 출력 품질이 급격히 저하됩니다.',
+          },
+          {
+            q: '2 GB RAM에서 Ollama를 사용할 수 있습니까?',
+            a: 'Ollama의 권장 최소 RAM은 8 GB입니다. 2 GB에서는 Ollama 자체는 로드되지만 모델 서빙이 실패하거나 스왑을 과도하게 사용합니다. 2 GB 장치에는 CLI를 통해 llama.cpp를 직접 사용하거나 llama-cpp-python 바인딩을 활용하십시오. 이 방식이 Ollama 서버 프로세스보다 상주 메모리 사용량이 적습니다.',
+          },
+          {
+            q: 'Raspberry Pi 5(8 GB)에서 실제 RAG를 실행할 수 있습니까?',
+            a: '예. 8 GB RAM의 Raspberry Pi 5는 Llama 3 8B Q4_K_M(~5 GB)과 전체 임베딩 + 벡터 스토어 스택을 여유 있게 실행합니다. Pi 5 CPU에서 속도는 ~1-2 tok/s로 느리지만 오프라인 개인 검색 용도로는 충분합니다. 속도 벤치마크는 <a href="/ko/prompt-bites/best-ollama-models-cpu-only" class="text-primary hover:underline">CPU 전용 추론을 위한 최적 Ollama 모델</a>을 참조하십시오.',
+          },
+          {
+            q: '2 GB RAM에서 로컬 RAG를 구성할 가치가 있습니까?',
+            a: '소규모 개인 문서(메모, 몇 개의 PDF)에는 예 — 1B + MiniLM 파이프라인은 실질적으로 유용합니다. 대형 코퍼스에서 정밀한 검색이나 복잡한 다단계 추론이 필요한 경우 2 GB RAM은 엄격한 한계입니다. 프로덕션 수준의 RAG 품질을 기대하기 전에 최소 8 GB로 업그레이드하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[16 GB RAM 노트북 최적 로컬 LLM](/ko/prompt-bites/best-local-llm-16gb-ram-laptop)',
+          '[로컬 RAG 파이프라인 구축 가이드 2026](/ko/local-llms/local-rag-2026)',
+          '[CPU 전용 추론을 위한 최적 Ollama 모델](/ko/prompt-bites/best-ollama-models-cpu-only)',
+        ],
+      },
+    },
+  },
 }

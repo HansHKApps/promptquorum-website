@@ -619,5 +619,100 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Quantization & VRAM',
+    title: '7B 모델에 얼마나 많은 RAM이 필요합니까?',
+    seoTitle: '7B 로컬 모델 RAM 요구사항 2026 | PromptQuorum',
+    metaDescription: 'Q4 양자화 7B 모델은 5~6 GB RAM 또는 VRAM이 필요합니다. CPU는 ~5 tok/s, GPU는 동일한 메모리로 ~25 tok/s를 제공합니다. 공식: 파라미터 × 0.7 = Q4 기준 GB.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    targetKeywords: [
+      '7B 모델 RAM 용량',
+      '로컬 LLM VRAM 요구사항',
+      'Q4 양자화 메모리',
+      '7B LLM 실행 RAM',
+      'Llama 8B VRAM',
+    ],
+    readTime: '4분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: '7B 모델에 얼마나 많은 RAM이 필요합니까?',
+        answer: 'Q4 양자화 7B 모델은 효율적인 추론 성능을 위해 5~6 GB VRAM 또는 RAM이 필요합니다. 계산 공식: 모델 파라미터(십억 단위) × 0.7 = Q4 기준 근사 GB. GPU는 ~25 tok/s를 제공하며, CPU는 동일한 메모리로 ~5 tok/s를 제공합니다.',
+        bullets: [
+          '7B Q4: 5~6 GB VRAM 또는 통합 메모리',
+          '7B Q5: 6~7 GB VRAM',
+          '7B Q8: 8~9 GB VRAM',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Q4 양자화 7B 모델은 5~6 GB VRAM이 필요합니다 — 컨텍스트 윈도우 오버헤드를 포함하여 6 GB를 확보하십시오.',
+          '빠른 계산 공식: 파라미터(십억 단위) × 0.7 = Q4 기준 필요 근사 GB',
+          '컨텍스트 윈도우를 16K 토큰으로 확장하면 모델 가중치 외에 ~4 GB가 추가됩니다.',
+        ],
+      },
+      body1: {
+        title: 'CPU 및 GPU를 위한 빠른 계산 공식',
+        content: [
+          '2026년 5월 기준, <strong>Q4 양자화 7B 모델은 5~6 GB 메모리가 필요합니다 — 시스템 RAM(CPU 전용 추론)이든 VRAM(GPU 추론)이든 동일합니다.</strong> 용량은 같으며 차이는 속도입니다. CPU 추론은 8코어 현대 프로세서에서 ~5 토큰/초로 작동합니다. GPU 추론은 충분한 VRAM이 있는 카드에서 20~25 토큰/초로 작동합니다.',
+          'CPU 전용 모드에서는 8코어 프로세서 기준으로 GPU 속도 열을 5배로 나누어 예상하십시오. Q4 양자화 7B 모델은 CPU에서 ~5 tok/s, GPU에서 ~25 tok/s로 실행됩니다. 이 5배 차이가 대화형 사용에 저가형 GPU를 구입할 가치가 있는 이유입니다.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Q4 양자화 7B 모델은 CPU 전용 또는 GPU 추론 모두에서 5~6 GB 메모리가 필요하며, GPU는 동일한 메모리로 5배 빠른 추론 속도를 제공합니다.' },
+          { type: 'plain-terms', text: '7B 모델을 Q4로 실행하려면 약 6 GB가 필요합니다. GPU가 있으면 25 tok/s를, CPU만 있으면 5 tok/s를 기대하십시오.' },
+        ],
+        columns: ['모델 크기', 'Q4 메모리', 'GPU 속도'],
+        rows: [
+          { '모델 크기': '3B', 'Q4 메모리': '~2 GB', 'GPU 속도': '~40 tok/s' },
+          { '모델 크기': '7B', 'Q4 메모리': '~5 GB', 'GPU 속도': '~25 tok/s' },
+          { '모델 크기': '8B', 'Q4 메모리': '~5.5 GB', 'GPU 속도': '~22 tok/s' },
+          { '모델 크기': '13B', 'Q4 메모리': '~9 GB', 'GPU 속도': '~15 tok/s' },
+        ],
+      },
+      body2: {
+        title: 'CPU와 GPU 중 선택 기준',
+        content: [
+          '시스템 RAM이 16 GB 이상이고 작업이 일괄 처리나 백그라운드 작업(야간 문서 분석, 예약된 요약)인 경우 CPU 전용을 선택하십시오. ~5 tok/s 속도는 비대화형 작업에 허용 가능하며 GPU 비용을 완전히 회피합니다.',
+          '대화형 채팅이나 코딩이 필요한 경우 GPU를 선택하십시오. 5배 속도 차이는 실시간 사용에서 중요합니다. 6 GB VRAM의 저가형 RTX 3050도 Llama 3 8B Q4_K_M에서 ~22 tok/s를 제공합니다 — 즉각적으로 느껴지는 채팅에 충분한 속도입니다.',
+          'GPU 등급별 전체 VRAM 분석은 <a href="/ko/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">로컬 LLM에 필요한 VRAM 용량</a>을 참조하십시오. 전체 하드웨어 참조 가이드는 <a href="/ko/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">로컬 LLM VRAM 완전 가이드</a>를 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '7B 모델 RAM에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'GPU 없이 7B 모델을 실행하는 데 시스템 RAM 8 GB로 충분합니까?',
+            a: '예. CPU 전용 모드에서 Q4 양자화 7B 모델은 시스템 RAM ~5~6 GB를 사용하며 8코어 현대 프로세서에서 3~6 tok/s로 작동합니다. GPU 가속 옵션은 <a href="/ko/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">VRAM 가이드</a>를 참조하십시오.',
+          },
+          {
+            q: 'Llama 3 8B에 정확히 얼마나 많은 VRAM이 필요합니까?',
+            a: '모델 가중치에 Q4_K_M으로 ~5.5 GB가 필요합니다. 4096 토큰 컨텍스트 윈도우에 0.5~1 GB를 추가하십시오. VRAM 오버플로를 방지하기 위해 총 6~7 GB를 확보하십시오.',
+          },
+          {
+            q: '모델이 사용 가능한 VRAM을 초과하면 어떻게 됩니까?',
+            a: 'Ollama는 레이어를 시스템 RAM으로 오프로드하며, 이는 10~20배 더 느립니다. 모델은 계속 실행되지만 생성 속도가 현저히 저하됩니다. 이를 방지하려면 양자화를 줄이거나 <code>--num-ctx 2048</code>로 컨텍스트를 줄이십시오.',
+          },
+          {
+            q: 'GPU 추론이 항상 CPU보다 우수합니까?',
+            a: '모든 사용 사례에서 그런 것은 아닙니다. 일괄 작업, 예약된 처리, 비대화형 사용의 경우 CPU에서 ~5 tok/s는 허용 가능하며 GPU 비용을 회피합니다. 실시간 채팅이나 코딩의 경우 GPU의 20~25 tok/s가 필수적입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[로컬 LLM에 필요한 VRAM 용량](/ko/prompt-bites/how-much-vram-for-local-llm)',
+          '[70B 모델 VRAM 요구사항](/ko/prompt-bites/vram-for-70b-model)',
+          '[로컬 LLM VRAM 완전 가이드](/ko/local-llms/how-much-vram-local-llm)',
+        ],
+      },
+    },
+  },
 }
-

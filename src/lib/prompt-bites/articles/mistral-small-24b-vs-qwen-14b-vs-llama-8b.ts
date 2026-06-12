@@ -672,5 +672,103 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Model Comparisons',
+    title: 'Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B: 로컬에서 무엇을 실행할까?',
+    seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026 | PromptQuorum',
+    metaDescription: 'Llama 3.3 8B: 4.9 GB VRAM, MMLU 66.6%. Qwen 3 14B: 9.3 GB, MMLU 74.8%. Mistral Small 24B: 14.4 GB, MMLU 81%. VRAM 용량에 따라 최적 모델을 선택하십시오.',
+    publishDate: '2026-05-23',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-23',
+    targetKeywords: [
+      'Mistral Small 24B vs Qwen 14B vs Llama 8B',
+      '로컬 LLM VRAM 비교 2026',
+      'Qwen 3 14B 로컬 실행',
+      'Llama 3.3 8B VRAM 요구 사항',
+      'Mistral Small 24B 성능',
+    ],
+    readTime: '4분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: 'Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B: 로컬에서 무엇을 실행해야 합니까?',
+        answer: 'VRAM에 따라 선택하십시오: Llama 3.3 8B(4.9 GB), Qwen 3 14B(9.3 GB), Mistral Small 3.1 24B(14.4 GB). 12 GB VRAM에서는 Qwen 14B가 최적입니다. 16 GB 이상의 추론 작업에서는 Mistral Small 24B가 우위를 보입니다.',
+        bullets: [
+          'Llama 3.3 8B Q4_K_M: 4.9 GB VRAM, RTX 4090에서 ~45 tok/s, MMLU 66.6% — 6~8 GB 카드에 최적',
+          'Qwen 3 14B Q4_K_M: 9.3 GB VRAM, ~28 tok/s, MMLU 74.8% — 12 GB 카드의 최적 선택',
+          'Mistral Small 3.1 24B Q4_K_M: 14.4 GB VRAM, ~20 tok/s, MMLU ~81% — 16 GB 이상 카드 전용',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Llama 3.3 8B Q4_K_M은 VRAM 4.9 GB를 사용하며 RTX 4090에서 ~45 tok/s로 실행됩니다 — 6 GB 카드에서 이 그룹 내 유일하게 실행 가능한 모델입니다.',
+          'Qwen 3 14B Q4_K_M은 9.3 GB를 사용하며 MMLU 74.8%를 달성합니다 — RTX 3060 12 GB 또는 RTX 4060 Ti 16 GB 등 12 GB 카드의 최적 선택입니다.',
+          'Mistral Small 3.1 24B Q4_K_M은 14.4 GB를 사용하며 MMLU ~81%에 도달합니다 — 16 GB 카드(RTX 4080, RTX 3090, RTX 4090)에서만 실행 가능합니다.',
+          '12 GB에서 코딩 작업: Qwen 3 Coder 14B. 16 GB 이상에서 다국어 추론: Mistral Small 3.1 24B. 10 GB 미만: Llama 3.3 8B.',
+        ],
+      },
+      body1: {
+        title: 'VRAM 요구 사항: 어느 카드가 어느 모델을 실행하는가',
+        content: [
+          '이 세 가지 모델 중에서의 선택은 기본적으로 VRAM에 관한 결정입니다. Q4_K_M 양자화 기준: Llama 3.3 8B는 4.9 GB, Qwen 3 14B는 9.3 GB, Mistral Small 3.1 24B는 14.4 GB를 사용합니다. 이는 세 가지 GPU 계층에 직접 대응됩니다: 6~8 GB 카드(Llama 3.3 8B만 가능), 10~12 GB 카드(Qwen 3 14B), 16 GB 이상 카드(Mistral Small 24B).',
+          'RTX 4090에서 Q4_K_M 기준 속도: Llama 3.3 8B는 약 45 tok/s, Qwen 3 14B는 ~28 tok/s, Mistral Small 3.1 24B는 ~20 tok/s입니다. RTX 3060 12 GB에서는 Llama 3.3 8B와 Qwen 3 14B만 탑재 가능합니다 — Mistral Small 24B는 CPU RAM으로의 스필을 방지하려면 최소 16 GB 카드가 필요합니다.',
+          '벤치마크 차이는 중요합니다: Mistral Small 24B의 MMLU 81%는 Llama 3.3 8B보다 14점, Qwen 3 14B보다 6점 높습니다. 복잡한 다단계 추론 및 지시 이행 작업에서 이 격차는 실제로 체감됩니다.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Q4_K_M 양자화 기준으로 Llama 3.3 8B는 4.9 GB VRAM, Qwen 3 14B는 9.3 GB, Mistral Small 3.1 24B는 14.4 GB를 사용합니다.' },
+          { type: 'plain-terms', text: 'VRAM 6~8 GB: Llama 3.3 8B만 가능합니다. VRAM 12 GB: Qwen 3 14B가 최적입니다. VRAM 16 GB 이상: Mistral Small 24B가 최고 품질을 제공합니다.' },
+        ],
+        columns: ['모델', 'VRAM (Q4_K_M)', '속도 (RTX 4090)', 'MMLU', '최소 GPU'],
+        rows: [
+          { '모델': 'Llama 3.3 8B', 'VRAM (Q4_K_M)': '4.9 GB', '속도 (RTX 4090)': '~45 tok/s', 'MMLU': '66.6%', '최소 GPU': 'RTX 3060 6 GB' },
+          { '모델': 'Qwen 3 14B', 'VRAM (Q4_K_M)': '9.3 GB', '속도 (RTX 4090)': '~28 tok/s', 'MMLU': '74.8%', '최소 GPU': 'RTX 3060 12 GB' },
+          { '모델': 'Mistral Small 3.1 24B', 'VRAM (Q4_K_M)': '14.4 GB', '속도 (RTX 4090)': '~20 tok/s', 'MMLU': '~81%', '최소 GPU': 'RTX 4080 16 GB' },
+        ],
+      },
+      body2: {
+        title: '품질 대 VRAM: 각 모델이 유리한 상황',
+        content: [
+          '<strong>Llama 3.3 8B는 VRAM 효율성에서 우위를 보입니다.</strong> Q4_K_M 기준 4.9 GB로 이 그룹에서 4k 토큰 컨텍스트 윈도우를 위한 여유 공간과 함께 6 GB 카드에 탑재되는 유일한 모델입니다. MMLU 66.6%를 달성하며 빠른 대화형 응답(RTX 4090에서 ~45 tok/s)을 제공합니다. 채팅, 빠른 코딩 쿼리, 제한된 하드웨어에서의 일상적인 사용에 적합한 선택입니다.',
+          '<strong>Qwen 3 14B는 12 GB VRAM에서 최적입니다.</strong> MMLU 74.8%로 추론 및 코딩에서 Llama 3.3 8B를 크게 상회하며 가장 일반적인 프로슈머 GPU 계층에 탑재됩니다. Qwen Coder 14B 변형(동일 크기, 코드 최적화)은 HumanEval에서 약 78%를 달성합니다. 주요 용도가 코딩이고 12 GB 카드를 보유하고 있다면 Qwen 3 14B가 정답입니다.',
+          '<strong>Mistral Small 3.1 24B는 VRAM이 허용할 때 품질에서 우위를 보입니다.</strong> MMLU 81%와 강력한 다국어 성능으로 16 GB 카드의 최선 선택입니다. 14B급 모델보다 장문 추론, 구조화된 출력 작업, 복잡한 지시 이행을 더 안정적으로 처리합니다. RTX 4090 24 GB에서는 Q5_K_M으로 더욱 향상된 품질을 얻을 수 있습니다.',
+          '14B급 직접 비교는 코딩 벤치마크 세부 내용이 포함된 <a href="/ko/prompt-bites/qwen-14b-vs-llama-8b" class="text-primary hover:underline">Qwen 14B vs Llama 8B 비교</a>를 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '빠른 답변: Mistral Small 24B vs Qwen 14B vs Llama 8B',
+        faqs: [
+          {
+            q: 'Mistral Small 24B를 RTX 3060 12 GB에서 실행할 수 있습니까?',
+            a: '아닙니다. Mistral Small 3.1 24B는 Q4_K_M 기준 14.4 GB VRAM이 필요하여 RTX 3060의 12 GB를 초과합니다. Q2_K로 낮추면 약 7.6 GB로 줄어들지만 품질이 크게 저하됩니다. RTX 3060 12 GB에서는 Qwen 3 14B Q4_K_M(9.3 GB)이 올바른 선택입니다 — 컨텍스트를 위한 2.7 GB의 여유 공간을 남깁니다.',
+          },
+          {
+            q: 'Mistral Small 24B는 코딩에서 Qwen 3 14B보다 우수합니까?',
+            a: '일반 코딩에서는 크기가 더 큰 Mistral Small 24B가 약간의 우위를 보입니다. 그러나 Qwen 3 Coder 14B(코드 최적화 Qwen 변형)는 HumanEval에서 Mistral Small 24B와 경쟁하며 12 GB VRAM에 탑재됩니다. 16 GB 카드 예산으로 추론과 코딩 모두 필요하다면 Mistral Small 24B가 유리합니다. 12 GB에서는 Qwen Coder 14B가 더 나은 트레이드오프입니다.',
+          },
+          {
+            q: 'RTX 4080과 같은 16 GB GPU에서는 어느 모델을 사용해야 합니까?',
+            a: 'Mistral Small 3.1 24B Q4_K_M은 14.4 GB로 1.6 GB 여유 공간과 함께 탑재됩니다 — 2k 컨텍스트 윈도우에 충분합니다. 추론 벤치마크에서 Qwen 3 14B를 능가합니다. 대안으로 Qwen 3 32B Q3_K_M은 약 13.5 GB에 탑재되어 코딩 작업에서 Mistral Small 24B와 경쟁하며 더 많은 파라미터를 제공합니다.',
+          },
+          {
+            q: 'Llama 3.3 8B와 Llama 3.2는 어떻게 비교됩니까?',
+            a: 'Llama 3.2 8B는 출시되지 않았습니다 — 3.2 시리즈는 1B, 3B, 멀티모달 11B/90B 변형만 도입했습니다. Llama 3.3 8B는 여전히 표준 8B Llama 참조 모델입니다. 6~8 GB VRAM에서 텍스트 전용 사용을 위해 Llama 3.3 8B는 현재 이 크기 클래스에서 권장되는 선택입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[Qwen 14B vs Llama 8B 비교](/ko/prompt-bites/qwen-14b-vs-llama-8b)',
+          '[12 GB VRAM 최적 코딩 LLM](/ko/prompt-bites/best-local-llm-coding-12gb-vram)',
+          '[로컬 LLM에 필요한 VRAM 용량](/ko/local-llms/how-much-vram-local-llm)',
+          '[로컬 LLM 최적 GPU 가이드](/ko/local-llms/best-gpus-for-local-llms)',
+        ],
+      },
+    },
+  },
 }
-

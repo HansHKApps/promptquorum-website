@@ -774,4 +774,178 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: 'أرخص طريقة لتشغيل نموذج 70B محليًا 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/ar/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'ar' },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Hardware & Performance',
+    type: 'comparison',
+    title: '2026년 70B 모델을 가장 저렴하게 로컬에서 실행하는 방법',
+    seoTitle: '2026년 70B LLM 로컬 실행 최저비용 방법',
+    metaDescription: '2026년 70B LLM을 로컬에서 가장 저렴하게 실행하는 방법: Mac Mini M4 Pro 48GB ($2,000), 듀얼 RTX 3090 ($2,200), CPU 전용 128GB RAM. 성능 대비 비용 비교.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**2026년 70B 모델을 로컬에서 가장 저렴하게 실행하는 방법은 48GB 통합 메모리를 탑재한 Mac Mini M4 Pro(~$2,000)입니다. Llama 3.3 70B Q4_K_M을 완전히 적재하고, 초당 12~18 토큰 속도로 구동되며, 소비전력은 45W에 불과하고, 듀얼 GPU 구성보다 저렴합니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '70B 모델을 로컬에서 실행하는 가장 저렴한 방법은 무엇입니까?',
+        answer: 'Mac Mini M4 Pro 48GB(~$2,000)는 2026년 기준 단일 구매로 가장 저렴한 70B 솔루션입니다. Windows/Linux 사용자라면 중고 듀얼 RTX 3090 구성(~$2,200)이 다음으로 저렴한 선택지입니다.',
+        bullets: [
+          'Mac Mini M4 Pro 48GB: ~$2,000, 초당 12~18 토큰, 소비전력 45W',
+          '중고 듀얼 RTX 3090: ~$2,200, 초당 20~35 토큰, 600~700W',
+          'CPU 전용 128GB RAM: ~$1,800, 초당 1~3 토큰(사용 가능하나 느림)',
+          '2x RTX 4070 Ti Super 16GB: ~$1,600, CPU 오프로드로 초당 25~40 토큰',
+          '단일 RTX 4090 + CPU 오프로드: ~$1,800, 초당 8~12 토큰',
+        ],
+        updatedDate: '2026-05-26',
+      },
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: '2026년 70B 모델을 로컬에서 가장 저렴하게 실행하는 방법은 Mac Mini M4 Pro 48GB(~$2,000)로, Llama 3.3 70B Q4_K_M을 초당 12~18 토큰 속도로 구동합니다.',
+      },
+      {
+        type: 'plain-terms',
+        text: '70B 모델은 700억 개의 파라미터를 보유한 대형 AI 모델로, 실행하려면 최소 40GB의 메모리가 필요합니다. 로컬에서 이를 구현하는 가장 저렴한 하드웨어 옵션을 소개합니다.',
+      },
+    ],
+    affiliateLinks: [
+      {
+        productName: 'Mac Mini M4 Pro',
+        url: 'https://www.apple.com/shop/buy-mac/mac-mini',
+        productCategory: 'hardware',
+      },
+      {
+        productName: '중고 RTX 3090 (eBay)',
+        url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090',
+        productCategory: 'gpu',
+      },
+    ],
+    parentArticle: '/power-local-llm/best-workstation-build-local-ai-2026',
+    targetKeywords: [
+      '70B 모델 로컬 실행 비용',
+      '70B LLM 저렴하게 실행',
+      'Mac Mini M4 Pro 70B 실행',
+      'RTX 3090 듀얼 70B',
+      'llama 70b 로컬 하드웨어',
+    ],
+    readTime: '5분 분량',
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Mac Mini M4 Pro 48GB: 가장 저렴한 단일 구매 옵션, $2,000, 45W',
+          '중고 듀얼 RTX 3090: $2,200, Windows/Linux, 초당 20~35 토큰',
+          'CPU 전용 128GB RAM: ~$1,800이지만 초당 1~3 토큰(느림)',
+          '70B Q4_K_M 실행에는 최소 ~42GB RAM/VRAM 필요',
+          'Q2_K 양자화는 32GB에 적재 가능하나 품질 저하가 눈에 띔',
+          'Apple MLX 덕분에 2026년 Mac이 70B 달러당 최고 성능을 제공합니다',
+        ],
+      },
+      overview: {
+        title: '70B 모델 로컬 실행: 비용 기준 최적 옵션',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '2026년 기준 70B LLM을 로컬에서 실행하는 가장 경제적인 방법은 Mac Mini M4 Pro 48GB입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '70B 파라미터 모델을 로컬에서 실행하려면 충분한 메모리, 적절한 하드웨어, 그리고 올바른 양자화 설정이 필요합니다.',
+          },
+        ],
+        items: [
+          'Llama 3.3 70B Q4_K_M을 완전히 적재하려면 최소 42GB VRAM 또는 통합 메모리가 필요합니다.',
+          'Mac Mini M4 Pro 48GB는 $2,000에 45W 소비전력으로 완전 적재가 가능하여 현재 가장 저렴한 옵션입니다.',
+          '중고 듀얼 RTX 3090은 $2,200에 초당 20~35 토큰을 제공하지만 소비전력이 600~700W에 달합니다.',
+          'CPU 전용 128GB RAM 구성은 ~$1,800로 가장 저렴하지만 속도가 초당 1~3 토큰에 불과합니다.',
+          'Q4_K_M 양자화는 FP16 품질의 ~96%를 유지하므로 70B 규모에서는 일반적으로 충분합니다.',
+        ],
+      },
+      hardware_options: {
+        title: '하드웨어 옵션별 상세 비교',
+        items: [
+          'Mac Mini M4 Pro 48GB: Apple MLX 프레임워크로 초당 12~18 토큰, 45W, $2,000. 70B 로컬 실행 최고의 달러당 성능.',
+          '중고 듀얼 RTX 3090 (2x 24GB): NVLink 또는 llama.cpp 텐서 병렬화로 초당 20~35 토큰, 600~700W, ~$2,200.',
+          'CPU 전용 128GB DDR5 RAM: $1,800 이하이나 초당 1~3 토큰으로 느림. 긴 컨텍스트 작업에서는 활용 가능.',
+          '2x RTX 4070 Ti Super 16GB: CPU 오프로드 방식으로 ~$1,600에 초당 25~40 토큰. 비용 대비 최고 토큰 속도.',
+          '단일 RTX 4090 + CPU 오프로드: ~$1,800에 초당 8~12 토큰. GPU 1장으로 70B를 구동하는 현실적인 방법.',
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: '소비자용 단일 GPU로 70B 모델을 실행할 수 있습니까?',
+            a: '2026년 기준, 단일 소비자용 GPU 중 70B Q4_K_M(42GB)을 완전히 적재할 수 있는 VRAM을 갖춘 제품은 없습니다. RTX 4090(24GB)이 가장 근접하며 CPU 오프로드를 통해 초당 8~12 토큰 속도로 실행 가능합니다. 이 경우 약 40%의 레이어가 GPU에 올라가고 나머지는 RAM에 유지됩니다. 64GB 이상의 시스템 RAM이 필요합니다.',
+          },
+          {
+            q: '70B 모델을 CPU 전용으로 실행하려면 RAM이 얼마나 필요합니까?',
+            a: '70B Q4_K_M 실행에는 최소 ~44GB RAM이 필요합니다. 실용적인 CPU 전용 추론을 위해서는 운영체제 오버헤드와 컨텍스트 버퍼를 고려해 64GB를 권장합니다. 최신 데스크톱 CPU 기준 속도는 초당 1~3 토큰으로 사용은 가능하나 느립니다. 128GB DDR5는 속도를 약간 향상시킵니다.',
+          },
+          {
+            q: 'Q4 양자화가 70B 모델에 충분한 품질을 제공합니까?',
+            a: '70B 모델에서 Q4_K_M은 FP16 품질의 ~96%를 유지합니다. 파라미터 공간이 넓어 중복성이 높기 때문에 7B 모델보다 정밀도 손실이 훨씬 적습니다. 대부분의 사용자는 70B 규모에서 Q4_K_M과 Q8_0의 차이를 거의 구별하지 못합니다.',
+          },
+          {
+            q: '클라우드를 이용하는 가장 저렴한 방법은 무엇입니까?',
+            a: 'RunPod의 A40 48GB(70B Q4를 완전히 적재할 수 있는 가장 작은 GPU) 스팟 요금은 시간당 $0.44부터 시작합니다. Groq API는 유료 플랜에서 Llama 3.3 70B를 백만 토큰당 $0.59에 제공합니다. 간헐적 사용이라면 Groq가 어떤 하드웨어 옵션보다 저렴합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[2026년 로컬 AI를 위한 최고의 워크스테이션 구성](/ko/power-local-llm/best-workstation-build-local-ai-2026)',
+          '[Llama 3.3 70B 로컬 실행 가이드](/ko/local-llms/run-llama-3-locally)',
+          '[llama.cpp CPU 오프로드 설정 방법](/ko/prompt-bites/cheapest-way-to-run-70b-model-locally)',
+          '[2026년 최고의 로컬 LLM 소프트웨어 디렉토리](/ko/local-llms/local-llm-software-directory-2026)',
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '70B 모델을 로컬에서 실행하는 가장 저렴한 방법은 무엇입니까?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Mac Mini M4 Pro 48GB(~$2,000)는 2026년 기준 70B 모델을 로컬에서 실행하는 가장 저렴한 솔루션입니다. 초당 12~18 토큰 속도에 소비전력은 45W에 불과합니다.' },
+        },
+        {
+          '@type': 'Question',
+          name: '소비자용 단일 GPU로 70B 모델을 실행할 수 있습니까?',
+          acceptedAnswer: { '@type': 'Answer', text: '단일 소비자용 GPU는 70B Q4_K_M(42GB)을 완전히 적재할 수 없습니다. RTX 4090은 CPU 오프로드로 초당 8~12 토큰 속도로 실행 가능하지만, 64GB 이상의 시스템 RAM이 필요합니다.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'CPU 전용으로 70B 모델을 실행하려면 RAM이 얼마나 필요합니까?',
+          acceptedAnswer: { '@type': 'Answer', text: '70B Q4_K_M 실행에는 최소 ~44GB RAM이 필요합니다. 실용적인 사용을 위해서는 64GB를 권장합니다. CPU 속도는 초당 1~3 토큰입니다.' },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: '2026년 70B 모델 로컬 실행 최저비용 방법',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Mac Mini M4 Pro 48GB', description: '가장 저렴한 완전 적재 70B 솔루션, $2,000, 45W' },
+        { '@type': 'ListItem', position: 2, name: '중고 듀얼 RTX 3090', description: 'Windows/Linux 최고 옵션, $2,200, 초당 20~35 토큰' },
+        { '@type': 'ListItem', position: 3, name: 'CPU 전용 128GB RAM', description: '가장 저렴한 하드웨어 경로이나 초당 1~3 토큰으로 느림' },
+        { '@type': 'ListItem', position: 4, name: '단일 RTX 4090 + CPU 오프로드', description: 'RAM 오프로드를 사용하는 단일 GPU, 초당 8~12 토큰' },
+        { '@type': 'ListItem', position: 5, name: 'Mac Studio M4 Max 128GB', description: '와트당 최고 성능, $3,000' },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { '@type': 'ListItem', position: 3, name: '2026년 70B 모델을 가장 저렴하게 로컬에서 실행하는 방법', item: 'https://www.promptquorum.com/ko/prompt-bites/cheapest-way-to-run-70b-model-locally' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: '2026년 70B 모델을 가장 저렴하게 로컬에서 실행하는 방법', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/ko/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'ko' },
+  },
 }

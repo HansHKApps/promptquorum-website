@@ -897,4 +897,166 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: { '@type': 'TechArticle', headline: 'أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ar/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ar' },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Hardware & Performance',
+    type: 'comparison',
+    title: '2026년 Ollama 상시 서버용 최고의 미니 PC 추천',
+    seoTitle: '2026년 Ollama 상시 서버 미니 PC 추천 (4종 비교)',
+    metaDescription: '15–35W 초저전력으로 Ollama를 24시간 운영하는 미니 PC 추천: Minisforum UM890 Pro (AMD 890M 내장 그래픽), AOOSTAR GEM12, Beelink SER8. 사양 비교, 실측 전력 소비 및 구매 링크.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    parentArticle: '/local-llms/local-llm-hardware-guide-2026',
+    leadAnswerBlock: '**Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU)는 2026년 Ollama 상시 서버용 최고의 미니 PC입니다. CPU만으로 7B 모델을 12–18 tok/s 속도로 실행하며, 부하 시 소비 전력은 25–45 W에 불과하고 서랍 안에도 들어갑니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: 'Ollama 상시 홈 서버 운영에 가장 좋은 미니 PC는 무엇입니까?',
+        answer: 'Minisforum UM890 Pro가 최선의 선택입니다. 고성능 CPU, 대형 모델을 위한 최대 96 GB RAM, 부하 시 25–45 W 소비 전력, 그리고 Radeon 780M GPU가 7B–13B 모델 추론을 가속합니다. 보급형 선택: Beelink SER8 (~$350). eGPU 사용자: AOOSTAR GEM12 Pro OCuLink.',
+        bullets: [
+          'Minisforum UM890 Pro: 종합 최고 — Ryzen 9 8945HS, 최대 96 GB DDR5, 25–45 W',
+          'AOOSTAR GEM12 Pro OCuLink: eGPU 최고 — OCuLink 포트로 RTX 3080/3090 연결 가능',
+          'Beelink SER8: 가성비 최고 — Ryzen 7 8745H, 32 GB, ~$350',
+          'Apple Mac Mini M4 Pro: macOS 최고 — 48 GB 통합 메모리, 15–30 W',
+          '전 모델 대기 전력 50 W 미만 — 24/7 운영 시 전기료 월 ~$3–5',
+        ],
+        updatedDate: '2026-05-26',
+      },
+    },
+    targetKeywords: [
+      'Ollama 미니 PC 추천 2026',
+      'Ollama 홈 서버 미니 PC',
+      '저전력 AI 서버 미니 PC',
+      'Ollama 상시 운영 PC',
+      'Minisforum UM890 Pro Ollama',
+      'eGPU OCuLink 미니 PC',
+      'Beelink SER8 Ollama',
+      'Mac Mini M4 Pro 로컬 LLM',
+    ],
+    readTime: '6분 분량',
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          '미니 PC 소비 전력은 15–45 W로 데스크톱 GPU의 200–350 W 대비 압도적으로 낮아 24시간 운영에 유리합니다.',
+          'UM890 Pro는 CPU만으로 7B 모델을 12–18 tok/s로 실행하여 API 서버 용도에 적합합니다.',
+          'AOOSTAR GEM12 Pro + OCuLink eGPU 조합은 데스크톱 PC 없이도 GPU 가속을 실현합니다.',
+          'Mac Mini M4 Pro는 48 GB 통합 메모리로 32B 모델을 실행할 수 있는 최고의 macOS 선택입니다.',
+          'Beelink SER8은 $400 이하 진입점으로 32 GB RAM이 7B 및 13B 모델을 충분히 처리합니다.',
+        ],
+      },
+      rankedList: {
+        title: 'Ollama 상시 서버용 미니 PC 순위',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Minisforum UM890 Pro는 고속 CPU 추론, 최대 96 GB DDR5 메모리, 50 W 미만 소비 전력을 갖춘 Ollama 상시 서버용 최고의 미니 PC입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Ollama가 설치된 미니 PC는 전구 하나보다 적은 전력으로 가정 내 네트워크 전체에 AI 서비스를 제공할 수 있습니다. 메모리가 많을수록 더 큰 모델을 실행할 수 있으며, OCuLink 포트를 활용하면 데스크톱 PC 없이도 실제 독립 GPU를 연결할 수 있습니다.',
+          },
+        ],
+        rankedItems: [
+          {
+            rank: 1,
+            title: 'Minisforum UM890 Pro — 종합 최고',
+            content: 'Minisforum UM890 Pro는 AMD Ryzen 9 8945HS(8코어, 최대 5.2 GHz)를 탑재하고 최대 96 GB DDR5-5600 듀얼 채널 메모리를 지원합니다. 이는 Llama 3.3 70B Q4 모델 전체를 메모리에 적재하기에 충분합니다. Radeon 780M 내장 GPU(RDNA3 CU 12개)는 ROCm을 통해 7B 및 13B 모델을 8–14 tok/s로 가속합니다. CPU 전용 7B Q4: 약 12–18 tok/s. 대기 전력: 약 15 W. 부하(GPU 활성화) 시: 약 35–45 W. 가격: 약 $450(32 GB) ~ $600(64 GB).',
+            affiliateLinks: [
+              { label: 'Amazon에서 Minisforum UM890 Pro 보기', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
+              { label: 'Minisforum 공식 사이트에서 UM890 Pro 보기', url: 'https://www.minisforum.com' },
+            ],
+          },
+          {
+            rank: 2,
+            title: 'AOOSTAR GEM12 Pro OCuLink — eGPU 최고 선택',
+            content: 'AOOSTAR GEM12 Pro OCuLink는 PCIe 4.0 x4 대역폭(64 Gbps)의 OCuLink 포트를 통해 외장 GPU를 연결합니다. 이는 Ollama에서 RTX 3090이 전속력으로 작동하기에 충분합니다. eGPU 없이: 다른 미니 PC와 동일하게 CPU 전용 13–18 tok/s. RTX 3090 eGPU 연결 시: 7B Q4 기준 60–80 tok/s. OCuLink to PCIe 어댑터 별도 필요(약 $30). 가격: 약 $480.',
+            affiliateLinks: [
+              { label: 'Amazon에서 AOOSTAR GEM12 Pro OCuLink 보기', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro+OCuLink' },
+            ],
+          },
+          {
+            rank: 3,
+            title: 'Beelink SER8 — 가성비 최고 선택',
+            content: 'Beelink SER8은 AMD Ryzen 7 8745H(8코어), 32 GB DDR5, 500 GB NVMe SSD를 약 $350에 제공합니다. Ollama 속도: 7B Q4 기준 약 10–15 tok/s. 대기 전력: 10–15 W. 메모리는 납땜 방식으로 업그레이드 불가합니다. 저비용 Ollama 상시 운영 진입점으로서 7B 및 13B 모델을 훌륭하게 처리합니다.',
+            affiliateLinks: [
+              { label: 'Amazon에서 Beelink SER8 보기', url: 'https://www.amazon.com/s?k=Beelink+SER8' },
+            ],
+          },
+          {
+            rank: 4,
+            title: 'Apple Mac Mini M4 Pro — macOS 최고 선택',
+            content: 'Mac Mini M4 Pro(24코어 GPU, 48 GB 통합 메모리, 약 $1,399)는 박스에서 꺼내자마자 GPU 속도로 32B 모델을 실행할 수 있는 유일한 미니 PC입니다. Apple Silicon의 Ollama는 Metal을 사용하며, 48 GB 통합 메모리로 Qwen3 32B Q4(약 18 GB)를 적재하고 20–30 tok/s로 실행합니다. 소비 전력: Ollama 부하 시 18–30 W. 조용한 상시 홈 서버를 원하는 macOS 사용자에게 적합합니다.',
+            affiliateLinks: [
+              { label: 'Apple에서 Mac Mini M4 Pro 보기', url: 'https://www.apple.com/mac-mini/' },
+            ],
+          },
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: '미니 PC로 13B 이상의 모델을 실용적인 속도로 실행할 수 있습니까?',
+            a: '네, 충분한 RAM이 있다면 가능합니다. 64 GB 메모리를 갖춘 UM890 Pro는 Llama 3.3 13B Q8 모델 전체를 메모리에 적재하여 CPU 전용으로 약 8–12 tok/s로 실행합니다. Radeon 780M 내장 GPU 가속 시 Q4 모델은 10–18 tok/s로 동작하여 백그라운드 요약이나 API 호출에 유용합니다. 30B 이상 모델의 경우, Mac Mini M4 Pro(48 GB 통합 메모리)가 $1,500 미만 미니 PC 중 유일한 선택입니다.',
+          },
+          {
+            q: 'Ollama를 미니 PC에서 네트워크 서버로 운영하면 잘 작동합니까?',
+            a: '잘 작동합니다. OLLAMA_HOST=0.0.0.0으로 설정하면 Ollama는 로컬 네트워크 내 모든 기기의 요청을 처리합니다. Open WebUI(Docker 컨테이너)와 함께 사용하면 스마트폰, 태블릿, PC에서 브라우저 기반 인터페이스에 접근할 수 있습니다. 단일 동시 요청 처리에는 아무런 문제가 없습니다.',
+          },
+          {
+            q: 'eGPU 구성은 비용 대비 가치가 있습니까?',
+            a: 'Ollama 용도에 한해서는 OCuLink eGPU(AOOSTAR GEM12 Pro + RTX 3090)가 두 마리 토끼를 잡을 수 있는 최선입니다. 데스크톱급 GPU 속도와 미니 PC의 대기 전력 소비를 동시에 누릴 수 있습니다. OCuLink(PCIe 4.0 x4)는 직접 PCIe x16 슬롯 대역폭의 약 80%를 제공하며, LLM 추론에는 병목 현상이 거의 없습니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽기 자료',
+        items: [
+          '[2026년 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)',
+          '[Ollama 설치 및 시작 가이드](/ko/prompt-bites/how-to-install-ollama)',
+          '[최고의 무료 로컬 AI 모델 2026](/ko/local-llms/best-free-local-ai-models-2026)',
+          '[eGPU로 로컬 LLM 실행하기](/ko/prompt-bites/run-local-llm-with-egpu)',
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '미니 PC로 13B 이상의 모델을 실용적인 속도로 실행할 수 있습니까?',
+          acceptedAnswer: { '@type': 'Answer', text: '네, 충분한 RAM이 있다면 가능합니다. 64 GB 메모리의 UM890 Pro는 13B Q8를 CPU 전용 8–12 tok/s로 실행하며, Radeon 780M 가속 시 10–18 tok/s를 달성합니다. 30B 이상 모델에는 Mac Mini M4 Pro(48 GB)가 최선입니다.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Ollama를 미니 PC에서 네트워크 서버로 운영하면 잘 작동합니까?',
+          acceptedAnswer: { '@type': 'Answer', text: 'OLLAMA_HOST=0.0.0.0 설정으로 로컬 네트워크 전체에 서비스합니다. Open WebUI와 함께 사용하면 브라우저 인터페이스를 제공합니다. 단일 동시 요청 처리에는 문제가 없습니다.' },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: '2026년 Ollama 상시 서버용 최고의 미니 PC 순위',
+      numberOfItems: 4,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: '종합 최고 — Ryzen 9 8945HS, 최대 96 GB DDR5, ~$450' },
+        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'eGPU 최고 — OCuLink 포트, ~$480' },
+        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: '가성비 최고 — Ryzen 7 8745H, 32 GB, ~$350' },
+        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'macOS 최고 — 48 GB 통합 메모리, ~$1399' },
+      ],
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { '@type': 'ListItem', position: 3, name: '2026년 Ollama 상시 서버용 최고의 미니 PC 추천', item: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on' },
+      ],
+    },
+    schema: { '@type': 'TechArticle', headline: '2026년 Ollama 상시 서버용 최고의 미니 PC 추천', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ko' },
+  },
 }

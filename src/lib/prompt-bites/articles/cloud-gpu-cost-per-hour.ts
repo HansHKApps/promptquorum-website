@@ -1129,4 +1129,153 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Hardware-Specific',
+    title: '2026년 클라우드 GPU 시간당 비용은 얼마입니까?',
+    seoTitle: '클라우드 GPU 시간당 가격 2026 | Prompt Bites',
+    metaDescription: '클라우드 GPU 시간당 비용 (2026년 5월): RTX 4090 ~$0.30–0.80, A100 80 GB ~$0.90–1.90, H100 ~$2.20–4.00. 주요 공급업체 간 대략적인 범위입니다.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['RTX 4090', 'A100 80 GB', 'H100'],
+    educationalLevel: 'Intermediate',
+    audience: 'LLM 워크로드를 위한 클라우드 GPU 가격을 비교하는 개발자',
+    affiliateDisclosure: true,
+    parentArticle: '/power-local-llm/best-gpu-buying-guide-local-llm-2026',
+    siblingBites: ['runpod-vs-vastai-pricing', 'best-gpu-under-600-local-llm'],
+    is_living_page: false,
+    readTime: '4분 분량',
+    leadAnswerBlock:
+      '2026년 5월 기준 클라우드 GPU 비용은 일반적으로 다음과 같습니다: RTX 4090 24 GB는 시간당 $0.30–0.80, A100 80 GB는 시간당 $0.90–1.90, H100 80 GB는 시간당 $2.20–4.00입니다. 요금은 공급업체, 지역, 인터럽트 가능 여부에 따라 크게 달라집니다. 예약 전에 실시간 대시보드를 확인하십시오.',
+    toc: [
+      { label: '워크로드별 최적 선택', anchor: '#best-pick' },
+      { label: 'GPU 카드별 시간당 요금 비교', anchor: '#comparison' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related' },
+    ],
+    intro:
+      '2026년 클라우드 GPU 가격은 가장 저렴한 인터럽트 가능 소비자용 카드와 온디맨드 데이터센터 카드 사이에서 10배 이상 차이가 납니다. 올바른 등급을 선택하려면 워크로드 크기, 실행 시간, 그리고 중단을 얼마나 감수할 수 있는지를 고려해야 합니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 클라우드 GPU 시간당 비용은 얼마입니까?',
+        answer: 'RTX 4090: $0.15–0.44/시간. A100 80 GB: $1.10–2.00/시간. H100: $2.50–4.00/시간. 추론에 가장 저렴한 옵션: Vast.ai 스팟 인스턴스.',
+        bullets: [
+          'Vast.ai 스팟 RTX 4090는 약 $0.15/시간으로 가장 저렴하지만, 작업 중간에 인터럽트될 수 있습니다.',
+          'RunPod Secure Cloud는 RTX 4090에 대해 ~$0.44/시간을 청구하며 가용성을 보장합니다.',
+          'Lambda Labs의 H100 80 GB: ~$2.49/시간 — 70B+ 모델이나 대규모 배치 작업에만 사용하십시오.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'RTX 4090 24 GB는 가장 저렴하게 활용 가능한 옵션입니다 — 마켓플레이스에서 시간당 $0.30–0.80, 13B–30B 추론에 이상적입니다',
+          'A100 80 GB는 시간당 $0.90–1.90으로 70B 추론과 대부분의 파인튜닝 작업에 적합한 핵심 선택지입니다',
+          'H100 80 GB는 시간당 $2.20–4.00으로 가장 빠르지만 대규모 훈련 또는 프로덕션 서빙에만 가치가 있습니다',
+          '모든 범위는 2026년 5월 기준 대략적인 수치입니다 — 예약 전에 공급업체 실시간 대시보드를 확인하십시오',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: '최적 선택: 워크로드에 맞는 카드를 고르십시오',
+        content: [
+          '<strong>활용 가능한 가장 저렴한 클라우드 GPU는 VRAM 여유가 가장 적은 모델에 맞는 것입니다.</strong> 13B 모델을 실행하기 위해 H100을 시간당 $4에 임대하면 지불하는 VRAM 60 GB 이상을 낭비하는 것입니다.',
+          '7B–13B 추론의 경우: 마켓플레이스(Vast.ai, RunPod community pool)에서 RTX 4090 24 GB를 시간당 $0.30–0.80에 이용하십시오. 24 GB VRAM으로 충분하며, 소비자용 카드 마켓플레이스는 관리형 클라우드보다 저렴합니다.',
+          '70B 추론 또는 중간 규모 파인튜닝의 경우: A100 80 GB를 시간당 $0.90–1.90에 이용하십시오. 80 GB VRAM은 Q4 양자화된 70B 모델을 컨텍스트 공간과 함께 수용합니다. 프론티어 모델 훈련 또는 엄격한 레이턴시 목표가 있는 프로덕션 서빙의 경우: H100 80 GB를 시간당 $2.20–4.00에 이용하십시오 — 지속적인 처리량이 병목일 때만 가치가 있습니다.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io',
+            productName: 'RunPod cloud GPUs',
+            productCategory: 'cloud-gpu',
+            label: 'RunPod 현재 GPU 요금 보기',
+          },
+          {
+            url: 'https://www.vast.ai',
+            productName: 'Vast.ai marketplace',
+            productCategory: 'cloud-gpu',
+            label: 'Vast.ai 현재 GPU 요금 보기',
+          },
+          {
+            url: 'https://lambdalabs.com',
+            productName: 'Lambda Labs cloud GPUs',
+            productCategory: 'cloud-gpu',
+            label: 'Lambda Labs 현재 GPU 요금 보기',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'GPU 카드별 클라우드 시간당 요금 (2026년 5월)',
+        content: [
+          '<strong>아래 범위는 주요 공급업체(RunPod, Vast.ai, Lambda Labs 등) 기준 2026년 5월 대략적인 수치입니다.</strong> 하한선은 일반적으로 인터럽트 가능 또는 마켓플레이스 가격이며, 상한선은 온디맨드 관리형 클라우드 가격입니다.',
+        ],
+        columns: ['GPU', 'VRAM', '시간당 요금 (대략)', '적합한 용도'],
+        rows: [
+          {
+            'GPU': 'RTX 4090',
+            'VRAM': '24 GB',
+            '시간당 요금 (대략)': '$0.30–0.80/시간',
+            '적합한 용도': '7B–30B 추론, 경량 파인튜닝',
+          },
+          {
+            'GPU': 'A100 80 GB',
+            'VRAM': '80 GB',
+            '시간당 요금 (대략)': '$0.90–1.90/시간',
+            '적합한 용도': '70B 추론, 대부분의 파인튜닝',
+          },
+          {
+            'GPU': 'H100 80 GB',
+            'VRAM': '80 GB',
+            '시간당 요금 (대략)': '$2.20–4.00/시간',
+            '적합한 용도': '대규모 훈련, 레이턴시 중요 프로덕션 서빙',
+          },
+        ],
+      },
+      snippets: {
+        id: 'snippets',
+        title: '요약 정보',
+        snippetBlocks: [
+          { type: 'one-sentence', text: '2026년 클라우드 GPU 비용은 RTX 4090의 경우 시간당 $0.30–0.80, A100 80 GB는 $0.90–1.90, H100 80 GB는 $2.20–4.00입니다.' },
+          { type: 'plain-terms', text: '클라우드에서 GPU를 빌리는 비용은 카드 종류에 따라 크게 다릅니다. 소비자용 RTX 4090은 저렴하고 중소형 모델 실행에 적합하며, 고성능 A100과 H100은 더 큰 모델과 훈련 작업에 사용됩니다.' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '클라우드 GPU 가격에 대한 자주 묻는 질문',
+        faqs: [
+          {
+            q: '클라우드 GPU 임대가 구매보다 저렴한 경우는 언제입니까?',
+            a: '임대는 짧고 산발적인 워크로드에서 유리합니다 — 주당 몇 시간 정도. 구매는 지속적인 일일 사용에서 유리합니다. 약 $2,500의 중고 RTX 4090은 시간당 $0.30–0.80 클라우드 임대 기준으로 약 3,000–8,000시간이면 비용을 회수합니다.',
+          },
+          {
+            q: '같은 GPU가 공급업체마다 가격이 크게 다른 이유는 무엇입니까?',
+            a: '관리형 클라우드(Lambda, AWS, GCP)는 지원, SLA, 전용 하드웨어를 포함하므로 더 비쌉니다. 마켓플레이스(Vast.ai)는 개인 호스트로부터 제공되며 인터럽트 가능할 수 있습니다. 지역과 수요도 가격에 영향을 줍니다.',
+          },
+          {
+            q: '표시된 요금에 스토리지와 대역폭이 포함됩니까?',
+            a: '일반적으로 포함되지 않습니다. 영구 스토리지는 일반적으로 GB당 월 $0.05–0.20입니다. 아웃바운드 대역폭은 GB당 몇 센트가 추가될 수 있습니다. 대형 모델 가중치나 데이터셋의 경우 총 비용에 이를 포함시키십시오.',
+          },
+          {
+            q: '지금 내 워크로드에 가장 저렴한 GPU를 어떻게 찾습니까?',
+            a: '예약 전에 최소 두 개의 공급업체를 비교하십시오 — RunPod(관리형)와 Vast.ai(마켓플레이스)는 스펙트럼의 양쪽 끝을 커버합니다. 필요한 VRAM으로 필터링한 다음 가격순으로 정렬하십시오.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: '관련 읽을거리',
+        items: [
+          '[RunPod vs Vast.ai 가격 비교](/ko/prompt-bites/runpod-vs-vastai-pricing) — 관리형 대 마켓플레이스 장단점',
+          '[로컬 LLM용 $600 이하 최적 GPU](/ko/prompt-bites/best-gpu-under-600-local-llm) — 구매 대 임대 결정을 위한 맥락',
+          '[로컬 LLM용 GPU 구매 완전 가이드 2026](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 하드웨어 구매 전체 개요',
+        ],
+      },
+    },
+  },
 }

@@ -705,5 +705,128 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Tool Comparisons',
+    title: 'Jan vs LM Studio: 어느 쪽이 더 낫습니까?',
+    seoTitle: 'Jan vs LM Studio 비교: 무엇을 선택할까? | Prompt Bites | PromptQuorum',
+    metaDescription: 'Jan: MIT 오픈 소스, 약 30개 확장 기능, Linux 지원. LM Studio: 세련된 UI, 내장 모델 스토어. 커스터마이징에는 Jan, 편의성에는 LM Studio를 선택하십시오.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: '중급',
+    audience: '로컬 LLM 데스크톱 앱을 선택하는 개발자',
+    parentArticle: '/local-llms/lm-studio-vs-jan-ai',
+    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama'],
+    is_living_page: false,
+    targetKeywords: [
+      'Jan vs LM Studio 비교',
+      'Jan LM Studio 차이점',
+      '로컬 LLM 데스크톱 앱 추천',
+      'Jan AI 사용법',
+      'LM Studio 한국어',
+    ],
+    readTime: '3분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: 'Jan vs LM Studio: 어느 쪽이 더 낫습니까?',
+        answer: 'Jan은 확장 시스템을 갖춘 완전한 오픈 소스 소프트웨어입니다. LM Studio는 보다 세련된 UI와 더 큰 내장 모델 라이브러리를 제공합니다. 커스터마이징을 원하는 고급 사용자에게는 Jan을 권장하며, 사용 편의성을 원한다면 LM Studio를 선택하십시오.',
+        bullets: [
+          'Jan: 오픈 소스, 확장 기능 지원, Linux에서 원활하게 작동',
+          'LM Studio: 세련된 UI, 더 큰 모델 라이브러리, 우수한 UX',
+          '두 앱 모두 무료이며 완전한 오프라인 환경에서 작동합니다',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/jan-vs-lm-studio',
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: 'Prompt Bites', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: 'Jan vs LM Studio 비교', url: 'https://www.promptquorum.com/ko/prompt-bites/jan-vs-lm-studio' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Jan은 MIT 라이선스 오픈 소스 소프트웨어이며, LM Studio는 개인 및 상업 프로젝트 모두 무료로 사용 가능한 독점 소프트웨어입니다',
+          'Jan은 세 가지 운영 체제를 기본으로 지원하며 NVIDIA 및 AMD GPU 가속을 모두 제공합니다. LM Studio는 Mac과 Windows만 지원합니다(2026년 5월 기준 Linux 지원은 베타 전용)',
+          'LM Studio는 원클릭 다운로드가 가능한 내장 모델 스토어를 제공합니다. Jan은 Hugging Face 등 서드파티 모델 소스에 의존합니다',
+          '두 앱 모두 GGUF 형식을 사용하고 로컬 API 서버를 포함하며 완전히 오프라인으로 작동합니다. 선택 기준은 커스터마이징 대 편의성입니다',
+        ],
+      },
+      body1: {
+        title: '오픈 소스 대 세련미: 핵심 트레이드오프',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Jan은 MIT 라이선스 오픈 소스 앱으로 약 30개의 확장 기능을 지원하며, LM Studio는 세련된 UI와 내장 모델 스토어를 제공하는 독점 소프트웨어입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Jan을 사용하면 소스 코드를 수정하고 확장 기능으로 기능을 추가할 수 있습니다. LM Studio는 앱 안에서 바로 수백 개의 GGUF 모델을 검색하고 다운로드할 수 있습니다.',
+          },
+        ],
+        content: [
+          '<strong>Jan (github.com/janhq/jan)은 MIT 라이선스로 완전한 오픈 소스입니다. 코드를 읽고, 포크하고, 수정할 수 있습니다.</strong> LM Studio (lmstudio.ai)는 무료로 사용할 수 있지만 소스가 공개되지 않은 독점 소프트웨어입니다. Jan은 개발자가 맞춤 기능을 추가할 수 있는 확장 시스템을 제공하며, 이는 LM Studio에서 제공하지 않는 기능입니다.',
+          '실제 확장 기능 활용 사례로는 OpenAI, Anthropic, Groq 등 클라우드 API와 Jan을 연결하여 로컬/클라우드 하이브리드 워크플로우를 구축하거나, 맞춤 프롬프트 템플릿 및 채팅 프리셋 추가, Obsidian 같은 외부 도구와의 통합 등이 있습니다. 2026년 5월 기준 약 30개의 커뮤니티 확장 기능이 존재합니다.',
+          'LM Studio의 주요 장점은 내장 모델 스토어입니다. 앱을 벗어나지 않고도 수백 개의 GGUF 모델을 탐색, 미리 보기, 다운로드할 수 있습니다. Jan은 Hugging Face에서 모델을 찾거나 수동으로 가져와야 합니다. 빠르게 시작하고 싶은 사용자에게는 마찰이 더 많습니다.',
+          '앱 위에 무언가를 구축하려는 개발자에게 Jan의 오픈 소스 코드베이스와 확장 API는 중요한 이점입니다. 그 외의 사용자에게는 일상적인 사용 패턴에 맞는 워크플로우를 선택하는 것이 핵심입니다.',
+        ],
+      },
+      body2: {
+        title: '자신의 워크플로우에 맞는 선택',
+        content: [
+          '<strong>앱을 확장하거나, Linux에서 실행하거나, AMD GPU 지원이 필요하다면 Jan을 사용하십시오.</strong> 커스터마이징 없이 내장 모델 라이브러리가 있는 세련된 환경을 원한다면 LM Studio를 사용하십시오.',
+          '설치 단계 및 API 세부 정보가 포함된 전체 비교는 <a href="/ko/local-llms/lm-studio-vs-jan-ai" class="text-primary hover:underline">Jan vs LM Studio 심층 가이드</a>를 참조하십시오.',
+        ],
+        columns: ['항목', 'Jan', 'LM Studio'],
+        rows: [
+          { '항목': '라이선스', 'Jan': 'MIT (오픈 소스)', 'LM Studio': '독점 (무료)' },
+          { '항목': '확장 기능', 'Jan': '약 30개 제공', 'LM Studio': '없음' },
+          { '항목': '운영 체제', 'Jan': 'Mac, Windows, Linux', 'LM Studio': 'Mac, Windows (Linux 베타)' },
+          { '항목': 'GPU 백엔드', 'Jan': 'NVIDIA + AMD', 'LM Studio': 'NVIDIA만 지원' },
+          { '항목': '모델 라이브러리', 'Jan': '서드파티 (Hugging Face)', 'LM Studio': '내장 스토어' },
+          { '항목': '추천 대상', 'Jan': '커스터마이징 / 확장성 필요 시', 'LM Studio': '편의성 / 모델 다양성 우선 시' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Jan vs LM Studio 자주 묻는 질문',
+        faqs: [
+          {
+            q: 'Jan은 정말 무료입니까?',
+            a: 'Jan은 MIT 라이선스 오픈 소스 소프트웨어입니다. 유료 플랜이 없으며 기본적으로 텔레메트리도 수집하지 않습니다. 전체 소스 코드는 github.com/janhq/jan에서 확인할 수 있습니다.',
+          },
+          {
+            q: 'LM Studio는 Linux에서 작동합니까?',
+            a: 'LM Studio는 공식 안정 Linux 버전이 없습니다. Mac과 Windows에서만 실행됩니다. Linux 사용자는 Jan, Ollama 또는 Open WebUI를 사용하시기 바랍니다.',
+          },
+          {
+            q: 'Jan과 LM Studio 모두 AMD GPU를 사용할 수 있습니까?',
+            a: 'Jan은 Linux에서 ROCm을 통해 AMD GPU 가속을 지원합니다. Windows의 LM Studio는 NVIDIA만 지원합니다(안정적인 Linux 버전 없음). macOS에서는 GPU 브랜드에 관계없이 두 앱 모두 Apple Metal이 GPU 가속을 처리합니다. 운영 체제에 관계없이 터미널 기반 대안을 찾는다면 <a href="/ko/prompt-bites/ollama-vs-lm-studio" class="text-primary hover:underline">Ollama vs LM Studio</a>를 참조하십시오.',
+          },
+          {
+            q: '어느 앱이 더 많은 모델 라이브러리를 제공합니까?',
+            a: 'LM Studio는 원클릭으로 탐색 및 다운로드할 수 있는 더 큰 큐레이션 GGUF 모델 스토어를 내장하고 있습니다. Jan은 Hugging Face 또는 다른 소스에서 모델을 가져와야 합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽을거리',
+        items: [
+          '[Jan vs LM Studio 심층 가이드](/ko/local-llms/lm-studio-vs-jan-ai)',
+          '[Ollama vs LM Studio 비교](/ko/prompt-bites/ollama-vs-lm-studio)',
+          '[Ollama 최고의 프론트엔드](/ko/prompt-bites/best-frontend-for-ollama)',
+        ],
+      },
+    },
+  },
 }
-

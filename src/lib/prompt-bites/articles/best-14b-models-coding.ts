@@ -665,4 +665,99 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Model Comparisons',
+    title: '코딩에 최적인 14B 모델은 무엇입니까?',
+    seoTitle: '코딩용 최적 14B 모델 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'Qwen 3 Coder 14B: HumanEval 78%, VRAM 10 GB. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73%. PromptQuorum의 빠른 답변.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ko: {
+        question: '코딩에 최적인 14B 모델은 무엇입니까?',
+        answer: 'Qwen 3 Coder 14B는 로컬 사용을 위한 최고의 14B 코딩 모델입니다. Q4_K_M 양자화에서 10 GB VRAM으로 동작하며, 14B 모델 중 HumanEval 점수가 가장 높습니다. DeepSeek Coder 14B는 VRAM 요구 사항이 유사한 강력한 대안입니다.',
+        bullets: [
+          'Qwen 3 Coder 14B Q4_K_M: ~10 GB VRAM, 최고의 HumanEval 점수',
+          'DeepSeek Coder 14B: 강력한 대안, 유사한 VRAM 사용량',
+          '두 모델 모두 코드 완성 및 디버깅에서 범용 14B 모델을 능가합니다',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Qwen 3 Coder 14B Q4_K_M은 ~10 GB VRAM을 사용하며 로컬 14B 코딩 모델 중 가장 높은 HumanEval 점수를 달성합니다',
+          'DeepSeek Coder 14B는 대부분의 코드 벤치마크에서 Qwen과 3점 이내 차이를 보이는 경쟁력 있는 대안입니다',
+          '두 모델 모두 코드 완성, 디버깅, 문서 생성에서 범용 14B 모델보다 현저히 뛰어납니다',
+          'VRAM이 10 GB 이상인 경우 Qwen 3 Coder를 권장하며, 8 GB 미만이면 전문화된 7B 코더로 전환하십시오',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen 3 Coder 14B는 Q4_K_M 양자화 시 VRAM 10 GB로 HumanEval 78.4%를 달성하여 로컬 14B 코딩 모델 중 1위입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '14B 코딩 모델을 로컬에서 실행하려면 Qwen 3 Coder 14B 또는 DeepSeek Coder 14B를 선택하십시오. 두 모델 모두 Q4_K_M 양자화 시 약 10 GB VRAM이 필요하며, 범용 모델보다 코드 작업에서 훨씬 높은 성능을 발휘합니다.',
+          },
+        ],
+      },
+      body1: {
+        title: 'Qwen 3 Coder 14B가 HumanEval에서 선두',
+        content: [
+          '<strong>2026년 5월 기준, Qwen 3 Coder 14B는 Q4_K_M 양자화에서 HumanEval 78.4%를 기록합니다 — Ollama 또는 llama.cpp를 통해 사용 가능한 모든 14B 모델 중 가장 높은 점수입니다.</strong> 이 모델은 5조 개 이상의 코드 중심 토큰으로 파인튜닝되었으며, 이는 다단계 완성 및 테스트 케이스 생성에서의 뛰어난 성능으로 이어집니다.',
+          'DeepSeek Coder 14B는 동일한 Q4_K_M 조건에서 HumanEval 75.1%를 기록합니다. 차이가 크지 않아 DeepSeek Coder도 유효한 선택지입니다. 특히 이미 캐시에 저장되어 있거나 출력 스타일에 익숙한 경우라면 더욱 그렇습니다.',
+          'StarCoder2 15B는 오픈소스 코드 특화 작업을 위한 세 번째 선택입니다. The Stack v2에서 학습되었으며, ~10 GB VRAM Q4_K_M에서 HumanEval 약 73%를 달성합니다. 오픈소스 기여 작업, 대형 저장소에서의 코드 검색, 구조화된 리팩토링이 강점입니다 — 이러한 사용 사례에서 학습 말뭉치가 범용 명령어 조정 모델보다 유리합니다.',
+        ],
+        columns: ['모델', 'HumanEval', 'VRAM (Q4_K_M)'],
+        rows: [
+          { '모델': 'Qwen 3 Coder 14B', 'HumanEval': '78.4%', 'VRAM (Q4_K_M)': '~10 GB' },
+          { '모델': 'DeepSeek Coder 14B', 'HumanEval': '75.1%', 'VRAM (Q4_K_M)': '~10 GB' },
+          { '모델': 'StarCoder2 15B', 'HumanEval': '~73%', 'VRAM (Q4_K_M)': '~10 GB' },
+        ],
+      },
+      body2: {
+        title: 'VRAM 여유 공간이 선택을 결정합니다',
+        content: [
+          'Qwen 3 Coder 14B와 DeepSeek Coder 14B 모두 Q4_K_M에서 약 10 GB VRAM이 필요하며, 12 GB 카드에서는 여유 공간이 2 GB에 불과합니다. <strong>이 여유 공간은 긴 컨텍스트 세션에서 부족합니다: 8k 컨텍스트에서 VRAM 사용량이 ~11.5 GB까지 증가합니다.</strong> 대용량 파일을 다루는 작업이라면 16 GB 이상의 카드를 권장합니다.',
+          '4k 토큰 미만의 컨텍스트 창(단일 파일 코드 완성의 일반적인 경우)에서는 세 모델 모두 RTX 3060 12 GB 또는 RTX 3080 Ti 12 GB에서 문제없이 실행됩니다. Qwen과 DeepSeek Coder의 속도는 약 14–18 tok/s이며, StarCoder2 15B는 유사한 VRAM 사용량을 감안할 때 비슷한 처리량으로 동작합니다. 저장소 규모 검색이나 오픈소스 기여 패턴에 집중하는 작업이라면 StarCoder2를 권장합니다.',
+          '다른 크기와 VRAM 계층의 코딩 모델에 대한 더 넓은 비교는 <a href="/ko/prompt-bites/best-local-llm-coding-12gb-vram" class="text-primary hover:underline">12 GB VRAM 최적 코딩 LLM 가이드</a>를 참조하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '14B 코딩 모델에 관한 빠른 답변',
+        faqs: [
+          {
+            q: 'Qwen 3 Coder 14B를 8 GB VRAM에서 실행할 수 있습니까?',
+            a: '안정적으로는 불가능합니다. Q4_K_M에서 모델은 ~10 GB VRAM이 필요합니다. Q3_K_M을 사용하면 8 GB에 넣을 수 있지만 품질 저하가 눈에 띕니다. 8 GB VRAM에는 Qwen 3 Coder 7B 또는 DeepSeek Coder 7B가 더 나은 선택입니다.',
+          },
+          {
+            q: 'Qwen 3 Coder 14B와 DeepSeek Coder 14B는 실제 작업에서 어떻게 다릅니까?',
+            a: 'Python과 TypeScript 완성에서 Qwen 3 Coder가 3–5 퍼센트포인트 앞섭니다. Rust나 Go 같은 소수 언어에서는 차이가 줄어듭니다. DeepSeek Coder는 더 많은 프로그래밍 언어에 걸쳐 더 넓은 학습 범위를 갖고 있습니다.',
+          },
+          {
+            q: '코드 작업에서 14B 코딩 모델이 범용 34B 모델보다 낫습니까?',
+            a: '코드 특화 작업에서 Qwen 3 Coder 14B는 코딩 중심 사전 학습 덕분에 크기가 작음에도 불구하고 범용 34B 모델보다 일반적으로 우수합니다. 자세한 벤치마크 데이터는 <a href="/ko/prompt-bites/qwen-coder-vs-deepseek-coder" class="text-primary hover:underline">Qwen Coder 대 DeepSeek Coder 비교</a>를 참조하십시오.',
+          },
+          {
+            q: '14B 코딩 모델에는 어떤 양자화를 사용해야 합니까?',
+            a: 'Q4_K_M이 표준 권장 사항입니다: FP16 품질의 ~97%를 VRAM 비용의 약 40%로 유지합니다. Q5_K_M은 ~1 GB의 VRAM을 추가로 사용하여 약간 더 높은 품질을 제공하며, 12 GB 이상의 VRAM을 보유하고 짧은 컨텍스트를 실행하는 경우에만 가치가 있습니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽을거리',
+        items: [
+          '[12 GB VRAM 최적 코딩 LLM](/ko/prompt-bites/best-local-llm-coding-12gb-vram)',
+          '[Qwen Coder 대 DeepSeek Coder 비교](/ko/prompt-bites/qwen-coder-vs-deepseek-coder)',
+          '[코딩을 위한 최적 로컬 LLM](/ko/local-llms/best-local-llms-for-coding)',
+        ],
+      },
+    },
+  },
 }

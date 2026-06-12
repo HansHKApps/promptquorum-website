@@ -652,4 +652,119 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Tool Comparisons',
+    title: 'MLX vs Ollama vs llama.cpp: 어떤 추론 엔진을 사용해야 합니까?',
+    seoTitle: 'MLX vs Ollama vs llama.cpp 추론 엔진 비교 2026 | PromptQuorum',
+    metaDescription: 'Apple Silicon에서는 MLX를 사용하십시오(M5 Pro에서 ~65 tok/s). NVIDIA GPU에서는 간편함을 위해 Ollama, 최대 제어를 위해 llama.cpp를 사용하십시오. Ollama는 llama.cpp를 내부적으로 사용합니다.',
+    publishDate: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Apple M5 Pro', 'Apple Silicon', 'NVIDIA GPU'],
+    educationalLevel: '중급',
+    audience: '로컬 추론을 위해 MLX, Ollama, llama.cpp 중에서 선택하는 개발자',
+    parentArticle: '/local-llms/apple-silicon-local-llm-guide-2026',
+    siblingBites: ['ollama-vs-lm-studio', 'convert-ollama-model-to-mlx', 'ollama-mlx-apple-silicon'],
+    is_living_page: false,
+    targetKeywords: [
+      'MLX Ollama llama.cpp 비교',
+      '로컬 LLM 추론 엔진 선택',
+      'Apple Silicon 추론 엔진',
+      'MLX vs Ollama 속도',
+      'llama.cpp 사용법',
+    ],
+    readTime: '4분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: 'MLX vs Ollama vs llama.cpp: 어떤 추론 엔진을 사용해야 합니까?',
+        answer: 'Apple Silicon에서는 MLX를 사용하십시오 — M5 Pro에서 8B 모델 기준 약 ~65 tok/s로 Ollama의 ~35 tok/s보다 빠릅니다. NVIDIA GPU에서는 간편함을 위해 Ollama, 최대 제어를 위해 llama.cpp를 사용하십시오. Ollama는 내부적으로 llama.cpp를 사용하며 그 위에 API 계층을 추가합니다.',
+        bullets: [
+          'MLX: Apple Silicon 전용, 가장 빠른 네이티브 추론, Python 기반',
+          'Ollama: 모든 플랫폼, OpenAI 호환 API, 가장 간편한 설정',
+          'llama.cpp: 모든 하드웨어, 최대 제어, 컴파일 필요',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/mlx-vs-ollama-vs-llamacpp',
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: 'Prompt Bites', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+        { position: 3, name: 'MLX vs Ollama vs llama.cpp: 어떤 추론 엔진을 사용해야 합니까?', url: 'https://www.promptquorum.com/ko/prompt-bites/mlx-vs-ollama-vs-llamacpp' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'MLX는 Apple Silicon 네이티브에서 가장 빠릅니다 — M5 Pro에서 ~65 tok/s이지만 Mac에서만 작동합니다',
+          'Ollama는 모든 플랫폼에서 가장 간편합니다 — REST API를 갖춘 llama.cpp 래퍼로 OpenAI 호환',
+          'llama.cpp는 가장 유연합니다 — 직접 추론, 모든 하드웨어에서 컴파일 가능, API 계층 없음',
+          'Ollama는 내부적으로 llama.cpp를 사용합니다 — 더 편리한 계층이지만 세밀한 제어는 줄어듭니다',
+        ],
+      },
+      body1: {
+        title: '추론 엔진 비교',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple Silicon에서는 MLX가 가장 빠르고, 범용 플랫폼에서는 Ollama가 가장 간편하며, 최대 제어가 필요할 때는 llama.cpp를 직접 사용하십시오.' },
+          { type: 'plain-terms', text: 'MLX는 Apple의 자체 머신러닝 프레임워크로 Mac 전용이며 가장 빠릅니다. Ollama는 llama.cpp를 감싸는 래퍼로 어떤 PC에서도 쉽게 실행할 수 있습니다. llama.cpp는 직접 컴파일하는 저수준 엔진으로 가장 높은 제어권을 제공합니다.' },
+        ],
+        content: [
+          '<strong>Apple Silicon이 있고 최대 추론 속도가 필요하다면 MLX를 선택하십시오.</strong> mlx-lm은 Python 패키지(<code>pip install mlx-lm</code>로 설치)이며 Apple의 통합 메모리를 활용하여 동일 하드웨어에서 Ollama의 llama.cpp+Metal 경로보다 빠릅니다. 트레이드오프: MLX는 Apple Silicon에서만 작동하며 지속적인 API 서비스가 아닌 Python 스크립트를 실행합니다.',
+          '<strong>모든 하드웨어에서 한 번의 명령으로 설치하고 안정적인 OpenAI 호환 API를 원한다면 Ollama를 선택하십시오.</strong> Mac, Windows, Linux에서 실행됩니다. Apple Silicon에서는 Metal과 함께 llama.cpp를 사용합니다 — 빠르지만 네이티브 MLX만큼 최적화되지는 않습니다.',
+          '<strong>최대 제어가 필요하다면 llama.cpp를 직접 선택하십시오:</strong> 사용자 정의 양자화, 특정 샘플링 파라미터, 또는 C/C++ 애플리케이션에 추론 임베딩. 설정 비용이 더 높지만(소스에서 컴파일) Ollama가 구현하기 전에 모든 기능을 사용할 수 있습니다.',
+        ],
+        columns: ['엔진', '최적 용도', '속도 (M5 Pro, 8B)', '설정 난이도'],
+        rows: [
+          { '엔진': 'MLX', '최적 용도': 'Apple Silicon 네이티브', '속도 (M5 Pro, 8B)': '~65 tok/s', '설정 난이도': '보통 (Python)' },
+          { '엔진': 'Ollama', '최적 용도': '모든 플랫폼, 간편 API', '속도 (M5 Pro, 8B)': '~35 tok/s', '설정 난이도': '쉬움 (한 명령)' },
+          { '엔진': 'llama.cpp', '최적 용도': '최대 제어, 모든 하드웨어', '속도 (M5 Pro, 8B)': '~40 tok/s', '설정 난이도': '어려움 (컴파일)' },
+        ],
+      },
+      body2: {
+        title: '하드웨어별 최적 선택',
+        content: [
+          '<strong>Apple Silicon Mac이 있다면 MLX를 사용하십시오.</strong> <code>pip install mlx-lm</code>으로 설치한 후 <a href="https://huggingface.co/mlx-community" rel="nofollow noopener noreferrer" target="_blank" class="text-primary hover:underline">Hugging Face의 mlx-community 조직</a>에 있는 모델을 실행하십시오. OpenAI 호환 API도 필요하다면 <code>mlx_lm.server --model mlx-community/model-name</code>을 실행하십시오.',
+          '<strong>NVIDIA GPU 또는 다른 하드웨어가 있다면 <a href="https://ollama.com" rel="nofollow noopener noreferrer" target="_blank" class="text-primary hover:underline">Ollama</a>를 사용하십시오.</strong> 한 명령으로 설치되고 모델이 자동으로 다운로드되며 11434 포트에서 OpenAI 호환 API를 제공합니다. Ollama 오버헤드 없이 고급 제어가 필요하다면 <a href="https://github.com/ggerganov/llama.cpp" rel="nofollow noopener noreferrer" target="_blank" class="text-primary hover:underline">llama.cpp를 직접 컴파일</a>하여 내장 서버 모드를 사용하십시오.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'MLX, Ollama, llama.cpp에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: 'Ollama는 Mac에서 MLX를 사용합니까?',
+            a: '아닙니다. Ollama는 Apple Silicon에서 MLX 네이티브가 아닌 Metal GPU 가속을 갖춘 llama.cpp를 사용합니다. 네이티브 MLX 추론을 위해서는 mlx-lm을 직접 사용하거나 두 백엔드를 모두 지원하는 LM Studio를 사용하십시오.',
+          },
+          {
+            q: 'llama.cpp가 Ollama보다 빠릅니까?',
+            a: '약간 빠릅니다 — 네이티브로 컴파일된 llama.cpp는 Ollama보다 약 5-10% 빠릅니다. Ollama는 HTTP API와 모델 관리 오버헤드를 추가하기 때문입니다. 대부분의 워크로드에서 차이는 작습니다. Apple Silicon 하드웨어에서 MLX는 둘 다보다 훨씬 빠릅니다.',
+          },
+          {
+            q: 'Windows나 Linux에서 MLX를 사용할 수 있습니까?',
+            a: '아닙니다. MLX는 Apple의 프레임워크로 Apple Silicon(M1 이상)에서만 실행됩니다. NVIDIA 또는 AMD GPU가 있는 Windows나 Linux에서는 CUDA 또는 ROCm을 지원하는 Ollama나 llama.cpp를 사용하십시오.',
+          },
+          {
+            q: 'Ollama 모델을 MLX 형식으로 변환하는 방법은 무엇입니까?',
+            a: 'Ollama 모델을 MLX로 직접 변환할 수는 없습니다. Hugging Face에서 원본 가중치를 다운로드하여 mlx-lm의 변환기를 사용하거나 mlx-community 조직에서 미리 변환된 버전을 찾으십시오. <a href="/ko/prompt-bites/convert-ollama-model-to-mlx" class="text-primary hover:underline">Ollama 모델을 MLX로 변환하는 방법</a>을 참조하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[Ollama vs LM Studio: 어떤 것을 선택해야 합니까?](/ko/prompt-bites/ollama-vs-lm-studio)',
+          '[Ollama 모델을 MLX로 변환하는 방법](/ko/prompt-bites/convert-ollama-model-to-mlx)',
+          '[Apple Silicon에서 Ollama와 MLX 비교](/ko/prompt-bites/ollama-mlx-apple-silicon)',
+          '[Apple Silicon 로컬 LLM 완전 가이드 2026](/ko/local-llms/apple-silicon-local-llm-guide-2026)',
+        ],
+      },
+    },
+  },
 }

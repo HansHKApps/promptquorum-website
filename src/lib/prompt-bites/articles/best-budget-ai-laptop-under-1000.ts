@@ -1032,4 +1032,173 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Hardware-Specific',
+    title: '2026년 100만원 이하 최고의 예산형 AI 노트북은?',
+    seoTitle: '100만원 이하 최고의 AI 노트북 2026 | Prompt Bites',
+    metaDescription:
+      '100만원 이하 최고의 AI 노트북: Ryzen 7 + 16GB RAM 모델이 CPU에서 소형 LLM을 실행합니다. GPU 추론이 필요하다면 MacBook Air M 시리즈를 목표로 저축하십시오.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    current_models_mentioned: [],
+    current_hardware_mentioned: ['Ryzen 7 노트북', 'MacBook Air'],
+    educationalLevel: 'Intermediate',
+    audience: '로컬 LLM을 실험해 보고 싶은 예산형 노트북 구매자',
+    affiliateDisclosure: true,
+    parentArticle: '/local-llms/best-laptops-local-llm',
+    siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
+    is_living_page: false,
+    targetKeywords: [
+      '100만원 이하 AI 노트북',
+      '예산형 AI 노트북 추천',
+      '로컬 LLM 노트북',
+      'Ryzen 7 LLM 노트북',
+      '저가 AI 노트북 2026',
+    ],
+    readTime: '4분 분량',
+    leadAnswerBlock:
+      '100만원 이하 최고의 AI 노트북은 Ryzen 7 + 16GB RAM 모델로, CPU에서 소형 LLM(3B-8B Q4 양자화)을 충분히 실행할 수 있습니다. GPU 가속 추론이 필요하다면 100만원 이하 구간은 너무 좁습니다. 유니파이드 메모리로 훨씬 빠른 로컬 LLM 작업이 가능한 MacBook Air M 시리즈를 목표로 저축하십시오.',
+    quickAnswerTop: {
+      ko: {
+        question: '100만원 이하에서 로컬 LLM을 실행할 수 있는 최고의 AI 노트북은 무엇입니까?',
+        answer: 'Ryzen 7 + 16GB RAM 노트북이 최선의 선택입니다. CPU에서 3B-8B 모델을 초당 3-7 토큰 속도로 실행할 수 있습니다. GPU 가속이 필요하다면 MacBook Air M 시리즈를 목표로 저축하십시오.',
+        bullets: [
+          'Ryzen 7 + 16GB RAM: CPU 추론으로 3B-8B 모델 실행 가능',
+          '8GB RAM 노트북은 7B 모델을 안정적으로 탑재하기 어렵습니다',
+          'MacBook Air M 시리즈는 유니파이드 메모리로 3-5배 빠른 추론을 제공합니다',
+        ],
+        updatedDate: '2026-05-22',
+      },
+    },
+    schema: {
+      inLanguage: 'ko',
+      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/best-budget-ai-laptop-under-1000',
+      imageUrl: 'https://www.promptquorum.com/images/prompt-bites/best-budget-ai-laptop-under-1000.png',
+    },
+    breadcrumbSchema: {
+      items: [
+        { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },
+        { position: 2, name: 'Prompt Bites', url: 'https://www.promptquorum.com/ko/prompt-bites' },
+        {
+          position: 3,
+          name: '100만원 이하 최고의 예산형 AI 노트북은?',
+          url: 'https://www.promptquorum.com/ko/prompt-bites/best-budget-ai-laptop-under-1000',
+        },
+      ],
+    },
+    toc: [
+      { label: '최선의 선택: Ryzen 7 + 16GB RAM 노트북', anchor: '#best-pick' },
+      { label: '예산형 노트북 옵션 비교', anchor: '#comparison' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related' },
+    ],
+    intro:
+      '100만원 이하에서 LLM을 실행할 수 있는 전용 GPU가 탑재된 노트북은 매우 드뭅니다. 이 예산에서 현실적인 선택은 CPU 기반 추론을 지원하는 Ryzen 7 + 16GB RAM 노트북입니다. GPU 가속이 중요하다면, MacBook Air가 이 구간 바로 위에 위치하며 더 나은 저축 목표입니다.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '100만원 이하 최선의 선택: Ryzen 7 + 16GB RAM 노트북 — 3B-8B 모델을 CPU에서 사용 가능한 속도로 실행',
+          'CPU 추론은 7B Q4 모델에서 초당 약 3-7 토큰 제공 — 짧은 작업에는 충분하나 긴 생성에는 느림',
+          '실시간 GPU 추론이 필요하다면 100만원 이하 구간은 너무 좁습니다 — 유니파이드 메모리를 갖춘 MacBook Air M 시리즈를 목표로 저축하십시오',
+          '8GB RAM 노트북은 피하십시오 — 운영체제 및 앱과 함께 7B 모델을 안정적으로 탑재하기 어렵습니다',
+        ],
+      },
+      bestPick: {
+        id: 'best-pick',
+        title: '최선의 선택: Ryzen 7 + 16GB RAM 노트북',
+        snippetBlocks: [
+          { type: 'one-sentence', text: '100만원 이하 최고의 AI 노트북은 Ryzen 7 + 16GB RAM 모델로, CPU 추론을 통해 3B-8B 모델을 사용 가능한 속도로 실행합니다.' },
+          { type: 'plain-terms', text: 'Ryzen 7과 16GB RAM을 갖춘 노트북은 llama.cpp나 Ollama를 사용해 Mistral Small, Llama 3.2 3B, Phi-3 Mini 같은 소형 모델을 초당 3-7 토큰 속도로 실행합니다. GPU 가속은 없지만 짧은 프롬프트와 학습 목적으로는 충분합니다.' },
+        ],
+        content: [
+          '<strong>100만원 이하 최고의 AI 노트북은 Ryzen 7(또는 동급 Intel Core i7) + 16GB RAM 모델로, 3B 및 7-8B 모델을 CPU에서 사용 가능한 속도로 실행합니다.</strong> Mistral Small, Llama 3.2 3B, Phi-3 Mini 등의 모델이 CPU 추론에서 초당 3-7 토큰 속도로 구동되며, 짧은 프롬프트에는 충분합니다.',
+          '주의 사항: 이 구간은 CPU 전용 추론을 의미합니다. 100만원 이하 노트북 대부분은 전용 GPU가 없거나, LLM 작업에 비해 너무 작은 4GB GPU만 탑재되어 있습니다. CPU 추론은 실험과 학습, 짧은 작업에는 적합하지만 긴 생성에는 속도가 느립니다.',
+          'GPU 가속 추론이 최우선이라면, 100만원 이하 구간은 너무 좁습니다. MacBook Air M 시리즈를 목표로 저축하십시오. 유니파이드 메모리 아키텍처는 시스템 RAM을 LLM 메모리로 활용하여, 동일 가격대의 Windows 노트북 대비 훨씬 높은 초당 토큰 수를 제공합니다. 특정 모델 가격은 구매 시점의 최신 목록을 확인하십시오.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://search.shopping.naver.com/search/all?query=Ryzen+7+16GB+노트북',
+            productName: 'Ryzen 7 + 16GB RAM 노트북',
+            productCategory: 'laptop',
+            label: '네이버쇼핑에서 Ryzen 7 + 16GB 노트북 보기',
+          },
+          {
+            url: 'https://www.coupang.com/np/search?q=Ryzen+7+16GB+노트북',
+            productName: 'Ryzen 7 + 16GB RAM 노트북',
+            productCategory: 'laptop',
+            label: '쿠팡에서 Ryzen 7 + 16GB 노트북 보기',
+          },
+          {
+            url: 'https://search.shopping.naver.com/search/all?query=MacBook+Air+M',
+            productName: 'MacBook Air M 시리즈',
+            productCategory: 'laptop',
+            label: 'MacBook Air 가격 확인 (다음 구간)',
+          },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '예산형 AI 노트북 옵션 비교',
+        content: [
+          '<strong>핵심 선택 기준은 CPU 추론(느리지만 저렴함)을 수용할지, 아니면 유니파이드 메모리 가속(빠르지만 100만원 초과)을 위해 저축할지입니다.</strong> 특정 모델 가격은 변동될 수 있으니 구매 시점의 최신 목록을 확인하십시오.',
+        ],
+        columns: ['옵션', '추론 방식', '속도 (7B Q4)', '평가'],
+        rows: [
+          {
+            '옵션': 'Ryzen 7 + 16GB RAM 노트북 (약 70-100만원)',
+            '추론 방식': 'CPU 전용',
+            '속도 (7B Q4)': '약 3-7 tok/s',
+            '평가': '100만원 이하 최선의 선택',
+          },
+          {
+            '옵션': '8GB RAM 예산 노트북 (60만원 이하)',
+            '추론 방식': 'CPU 전용, 메모리 부족',
+            '속도 (7B Q4)': '안정적 탑재 불가',
+            '평가': '비권장 — RAM 부족',
+          },
+          {
+            '옵션': 'MacBook Air M 시리즈 (100만원 초과)',
+            '추론 방식': 'Apple Metal GPU',
+            '속도 (7B Q4)': '약 15-20 tok/s',
+            '평가': '저축 권장 — 충분히 가치 있음',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '예산형 AI 노트북에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: '70-100만원짜리 노트북으로 로컬 LLM을 실행할 수 있습니까?',
+            a: '예, 가능합니다. 단, CPU 추론에 한정됩니다. Ryzen 7(또는 Intel Core i7) + 16GB RAM 노트북은 llama.cpp 또는 Ollama CPU 모드를 사용해 3B 및 7-8B 모델을 초당 3-7 토큰 속도로 실행합니다. 긴 생성에는 느리지만 짧은 프롬프트에는 충분합니다.',
+          },
+          {
+            q: '예산형 AI 노트북에 8GB RAM으로 충분합니까?',
+            a: '충분하지 않습니다. Q4 양자화 7B 모델은 약 5-6GB RAM이 필요하여, 운영체제와 다른 앱을 위한 공간이 거의 남지 않습니다. 로컬 LLM 작업에는 16GB가 실용적인 최소 기준입니다.',
+          },
+          {
+            q: '왜 MacBook Air가 AI 노트북의 다음 단계입니까?',
+            a: 'Apple Silicon은 유니파이드 메모리를 사용하므로 시스템 RAM이 GPU 메모리 역할도 합니다. MacBook Air M 시리즈는 Metal을 통해 7B 모델을 초당 15-20 토큰 속도로 실행하며, 이는 유사한 가격대의 Windows 노트북 CPU 추론보다 3-5배 빠릅니다.',
+          },
+          {
+            q: '예산형 노트북에 외장 GPU를 연결해 LLM을 실행할 수 있습니까?',
+            a: '일반적으로 불가능합니다. 대부분의 예산형 노트북에는 Thunderbolt 4나 OCuLink가 없으며, 이 두 인터페이스만이 실용적인 eGPU 연결을 지원합니다. 지원되더라도 eGPU 추론은 PCIe 대역폭 병목으로 제한됩니다. 데스크톱을 구매하거나 유니파이드 메모리 노트북을 위해 저축하는 것이 더 나은 방향입니다.',
+          },
+        ],
+      },
+      related: {
+        id: 'related',
+        title: '관련 읽을거리',
+        items: [
+          '[16GB RAM 노트북을 위한 최고의 로컬 LLM](/ko/prompt-bites/best-local-llm-16gb-ram-laptop) — 16GB 구간 모델 선택 가이드',
+          '[Mac Mini M4는 로컬 LLM에 적합합니까?](/ko/prompt-bites/mac-mini-m4-local-llm) — MacBook Air의 데스크톱 버전',
+          '[MacBook용 Ollama 최고의 eGPU](/ko/prompt-bites/best-egpu-ollama-macbook) — eGPU가 예산 해결책이 아닌 이유',
+        ],
+      },
+    },
+  },
 }

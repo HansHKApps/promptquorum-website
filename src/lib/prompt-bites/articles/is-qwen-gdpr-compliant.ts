@@ -662,5 +662,100 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Privacy & Security',
+    title: 'Qwen은 GDPR을 준수합니까?',
+    seoTitle: 'Qwen GDPR 준수 여부 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: '로컬에서 실행되는 Qwen은 GDPR을 준수합니다. 프롬프트 데이터가 외부로 전송되지 않아 제44조 문제가 없습니다. Alibaba Cloud API는 SCCs가 필요합니다.',
+    publishDate: '2026-05-22',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    targetKeywords: [
+      'Qwen GDPR 준수',
+      'Qwen 로컬 개인정보보호',
+      '로컬 LLM GDPR',
+      'Ollama GDPR 준수',
+    ],
+    readTime: '4분 분량',
+    quickAnswerTop: {
+      ko: {
+        question: 'Qwen은 GDPR을 준수합니까?',
+        answer: '자체 하드웨어에서 로컬로 실행되는 Qwen은 GDPR을 준수합니다. 프롬프트 데이터가 인프라 외부로 전송되지 않으므로 제44조의 제3국 이전이 발생하지 않습니다. Alibaba Cloud를 통한 Qwen API는 다른 문제입니다. EU 외 클라우드 공급자와 마찬가지로 표준 계약 조항(SCCs)과 전송 영향 평가(TIA)가 필요합니다.',
+        bullets: [
+          '로컬 Qwen: 데이터 전송 없음 = GDPR 제44조 문제 없음',
+          'Qwen API (Alibaba Cloud): Post-Schrems II 규정에 따라 SCCs + TIA 필요',
+          '권장 사항: 데이터 민감 작업에는 Ollama를 통해 Qwen 3 14B 또는 Qwen 3 8B를 로컬에서 실행',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '로컬 Qwen 배포는 GDPR을 준수합니다. 프롬프트가 서버를 벗어나지 않으므로 제44조(제3국 이전)가 적용되지 않습니다.',
+          'Alibaba Cloud를 통한 Qwen API는 표준 계약 조항 + 전송 영향 평가가 필요합니다. OpenAI 또는 Anthropic API와 동일한 요건입니다.',
+          'Apache 2.0 라이선스로 모델 가중치를 감사할 수 있습니다. 모델이 수행하는 작업을 검증할 수 있어 제25조(설계 기반 개인정보보호)를 충족합니다.',
+          '데이터 민감 작업(HR, 법무, 의료)에서는 클라우드 LLM API보다 로컬 Qwen이 낮은 위험 경로입니다.',
+        ],
+      },
+      body1: {
+        title: '로컬 Qwen은 GDPR을 준수합니다 — 아키텍처가 이유입니다',
+        content: [
+          '<strong>GDPR 제44조는 적절한 법적 근거 없이 개인 데이터를 EU 외부 국가로 전송하는 것을 금지합니다. Qwen을 로컬에서 실행하면 데이터 전송이 발생하지 않습니다. 모델이 귀하의 관할 내 하드웨어에서 모든 것을 처리합니다. 이 때문에 로컬 배포가 GDPR에 대해 가장 방어 가능한 입장입니다.</strong>',
+          'Qwen 모델 가중치(Qwen 3, Qwen 2.5)는 Apache 2.0 라이선스로 배포됩니다. 이는 자체 서버에 영구적으로 다운로드, 검사, 실행할 수 있음을 의미합니다. 라이선스는 철회될 수 없습니다. 민감한 데이터가 외부로 전송되지 않는다는 것을 증명할 수 있으므로 제25조(설계 기반 개인정보보호)가 충족됩니다.',
+          'Ollama를 통해 Qwen을 로컬에서 실행하십시오. 범용 14B 모델에는 <code>ollama run qwen2.5:14b</code>를, 현재 Qwen 3 세대에는 <code>ollama run qwen3:8b</code>를 사용하십시오. 두 모델 모두 Q4_K_M에서 10~12 GB VRAM이 필요합니다. 표준 RTX 3080 또는 RTX 4070으로 충분합니다.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: '로컬 Qwen은 GDPR을 준수합니다. 프롬프트 데이터가 인프라를 벗어나지 않으므로 제44조의 제3국 이전 요건이 완전히 제거됩니다.' },
+          { type: 'plain-terms', text: '자체 컴퓨터나 서버에서 Qwen을 실행하면 데이터가 귀하의 기기에 남습니다. GDPR은 EU를 벗어나는 데이터만 제한합니다. 데이터가 건물을 벗어나지 않는다면 GDPR 문제는 없습니다.' },
+        ],
+      },
+      body2: {
+        title: 'Alibaba Cloud를 통한 Qwen API — 다른 위험 프로파일',
+        content: [
+          '<strong>Qwen API(api.qwen.ai, Alibaba Cloud 경유)는 중국에서 호스팅됩니다. API를 통해 전송되는 개인 데이터는 GDPR 제44조에 따른 제3국 이전에 해당합니다.</strong> 중국에는 EU 적정성 결정이 없으므로 개인 정보가 포함된 데이터에 사용하기 전에 표준 계약 조항(SCCs)과 전송 영향 평가(TIA)가 필요합니다.',
+          '이것은 OpenAI, Anthropic, Google Cloud에 적용되는 요건과 동일합니다. Qwen만의 문제가 아니라 EU 외부에서 호스팅되는 모든 클라우드 LLM의 구조적 문제입니다. 중국에 특화된 추가 위험은 개인정보보호법(PIPL)입니다. PIPL은 정부 요청 시 데이터 공개를 강제할 수 있습니다. 이전 적정성 평가에서 유럽 규제 기관이 미국보다 중국 관할권을 더 높은 위험으로 간주할 수 있습니다.',
+          'Qwen API를 사용해야 한다면 비개인 데이터(공개 문서, PII 없는 코드 생성 등)에만 사용하십시오. 개인 데이터나 기밀 비즈니스 데이터에는 로컬 배포를 사용하십시오.',
+        ],
+        columns: ['배포 방식', '데이터가 서버를 벗어납니까?', 'GDPR 제44조 적용 여부', '필요한 조치'],
+        rows: [
+          { '배포 방식': 'Qwen 로컬 (Ollama)', '데이터가 서버를 벗어납니까?': '아니요', 'GDPR 제44조 적용 여부': '아니요', '필요한 조치': '없음 — 아키텍처가 준수' },
+          { '배포 방식': 'Qwen API (Alibaba Cloud)', '데이터가 서버를 벗어납니까?': '예', 'GDPR 제44조 적용 여부': '예', '필요한 조치': '개인 데이터에 SCCs + TIA 필요' },
+          { '배포 방식': 'Claude / OpenAI (EU 리전)', '데이터가 서버를 벗어납니까?': '예 (EU)', 'GDPR 제44조 적용 여부': '부분적', '필요한 조치': 'SCCs 여전히 필요; TIA는 경미할 수 있음' },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '빠른 답변: Qwen과 GDPR',
+        faqs: [
+          {
+            q: 'Qwen을 로컬에서 실행하면 GDPR 제25조를 충족합니까?',
+            a: '예. 제25조는 설계 및 기본 설정에 의한 개인정보보호를 요구합니다. 불필요한 데이터 노출을 방지하는 기술적 조치가 필요합니다. 추론을 위한 외부 네트워크 호출 없이 격리된 서버에서 Qwen을 로컬 실행하면 이 요건을 직접 충족합니다. 완전한 제25조 구현을 위해 디스크 암호화(dm-crypt 또는 FileVault)와 접근 제어를 추가하십시오.',
+          },
+          {
+            q: 'Alibaba Cloud는 GDPR을 준수합니까?',
+            a: 'Alibaba Cloud는 EU 거주 데이터에 대해 GDPR 준수 구성을 제공합니다(프랑크푸르트 리전). SCCs가 있는 Alibaba Cloud EU 리전을 사용하면 GDPR 이전 위험이 AWS 또는 Azure와 동일한 수준으로 감소합니다. 그러나 Qwen API(api.qwen.ai)는 별도 제품입니다. 이 결론에 도달하기 전에 요청을 처리하는 인프라 리전을 확인하십시오.',
+          },
+          {
+            q: 'GDPR 민감 워크플로우에 가장 적합한 Qwen 모델은 무엇입니까?',
+            a: '12 GB VRAM의 경우: 범용 작업에는 Q4_K_M의 Qwen 3 14B, 코드 집약적 워크플로우에는 Qwen 3 Coder 14B를 권장합니다. 6~8 GB VRAM의 경우: Q4_K_M의 Qwen 3 8B를 권장합니다. 두 모델 모두 Ollama를 통해 완전히 오프라인으로 실행됩니다. Ollama 설치 단계는 <a href="/ko/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">완전한 GDPR Qwen 설정 가이드</a>를 참조하십시오.',
+          },
+          {
+            q: 'Ollama와 데이터 처리 계약(DPA)이 필요합니까?',
+            a: '아니요. Ollama는 로컬 런타임입니다. 서버 구성 요소가 없으며 귀하를 대신하여 데이터를 처리하지 않습니다. Ollama는 GDPR 제28조에 따른 데이터 처리자가 아니므로 DPA가 필요하지 않습니다. 모델은 전적으로 귀하의 하드웨어에서 실행됩니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[Qwen GDPR 완전 설정 가이드](/ko/local-llms/qwen-local-gdpr-setup-guide-2026)',
+          '[DeepSeek는 GDPR에 안전합니까?](/ko/prompt-bites/is-deepseek-gdpr-safe)',
+          '[로컬 LLM이 GDPR 준수에 도움이 됩니까?](/ko/prompt-bites/can-local-llm-help-gdpr)',
+        ],
+      },
+    },
+  },
 }
-

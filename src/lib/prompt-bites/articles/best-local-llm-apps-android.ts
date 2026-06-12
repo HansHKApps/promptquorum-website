@@ -680,4 +680,133 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Tool Comparisons',
+    title: 'Android용 최고의 로컬 LLM 앱은 무엇입니까?',
+    seoTitle: 'Android 최고 LLM 앱 2026: MLC Chat, Pocketpal, Termux | PromptQuorum',
+    metaDescription: 'Android에서 로컬 LLM을 실행하는 최고의 앱: MLC Chat(가장 간편), Pocketpal(유연한 GGUF), Termux + Ollama(완전 제어). 모두 오프라인에서 작동합니다.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    current_models_mentioned: [],
+    current_hardware_mentioned: [],
+    educationalLevel: '초급',
+    audience: 'Android 기기에서 LLM을 실행하는 사용자',
+    parentArticle: '/power-local-llm/best-local-llm-apps-android-2026',
+    siblingBites: ['best-frontend-for-ollama', 'jan-vs-lm-studio'],
+    is_living_page: false,
+    quickAnswerTop: {
+      ko: {
+        question: 'Android용 최고의 로컬 LLM 앱은 무엇입니까?',
+        answer: 'Android에서 LLM을 로컬로 실행하기 위한 최고의 앱은 사전 최적화된 모델로 간편하게 설정할 수 있는 MLC Chat, 유연한 GGUF 모델 로딩을 지원하는 Pocketpal, 그리고 완전한 제어를 위한 Termux + Ollama입니다. 모두 완전히 오프라인에서 작동합니다.',
+        bullets: [
+          'MLC Chat: 가장 간편한 설정, Android용 사전 최적화 모델 제공',
+          'Pocketpal: GGUF 모델을 유연하게 로드 가능',
+          'Termux + Ollama: Android에서 전체 Ollama 실행, 8GB 이상 RAM 필요',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'Android에서 로컬 LLM을 실행하려면 MLC Chat(초보자), Pocketpal(중급자), Termux + Ollama(고급자) 중 하나를 선택하면 됩니다.',
+      },
+      {
+        type: 'plain-terms',
+        text: '로컬 LLM 앱은 인터넷 연결 없이 Android 스마트폰에서 AI 언어 모델을 직접 실행하는 애플리케이션입니다. MLC Chat은 Google Play에서 1분 만에 설치할 수 있으며, Pocketpal은 Hugging Face의 GGUF 모델을 자유롭게 선택할 수 있고, Termux + Ollama는 개발자 수준의 완전한 제어를 제공합니다.',
+      },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Android용 최고의 로컬 LLM 앱은 무엇입니까?',
+      description: 'Android에서 로컬 LLM을 실행하는 최고의 앱 비교: MLC Chat, Pocketpal, Termux + Ollama.',
+      inLanguage: 'ko',
+      url: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-apps-android',
+      datePublished: '2026-05-18',
+      dateModified: '2026-05-18',
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: 'https://www.promptquorum.com/ko',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Prompt Bites',
+          item: 'https://www.promptquorum.com/ko/prompt-bites',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Android용 최고의 로컬 LLM 앱',
+          item: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-apps-android',
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'MLC Chat은 가장 간편한 선택입니다: Google Play에서 다운로드하고 사전 최적화된 모델을 선택하면 바로 오프라인에서 사용 가능합니다.',
+          'Pocketpal LLM은 더 유연합니다: Hugging Face에서 GGUF 모델을 자유롭게 로드할 수 있지만 설정이 조금 더 복잡합니다.',
+          'Termux + Ollama는 스마트폰에서 Ollama를 완전히 제어할 수 있게 해줍니다. 단, 8GB 이상의 RAM과 터미널 사용 능력이 필요합니다.',
+        ],
+      },
+      body1: {
+        title: '3가지 최고 옵션 빠른 비교',
+        content: [
+          '<strong>MLC Chat(가장 간편한 다운로드)</strong> — Google Play에서 1분 만에 설치할 수 있습니다. Android용으로 사전 최적화된 모델 목록(Phi-2, Llama 3B)이 포함되어 있습니다. 명령줄이나 별도 설정이 필요 없으며 초보자에게 가장 적합한 선택입니다.',
+          '<strong>Pocketpal AI(더 유연함)</strong> — Hugging Face에서 직접 GGUF 모델을 로드할 수 있습니다. MLC Chat보다 설정이 복잡하지만 원하는 모델을 자유롭게 선택할 수 있습니다. 통합 채팅 인터페이스가 제공됩니다.',
+          '<strong>Termux + Ollama(완전 제어)</strong> — Android에 전체 Ollama를 설치합니다. 모든 Ollama 명령어를 사용할 수 있습니다. 터미널, 8GB 이상의 RAM, 기술적 지식이 필요하며 고급 사용자 전용입니다.',
+        ],
+      },
+      body2: {
+        title: '어떤 앱을 선택해야 합니까',
+        content: [
+          '스마트폰에서 LLM을 처음 실행해보신다면 <strong>MLC Chat</strong>으로 시작하시기 바랍니다. 가장 접근하기 쉬운 옵션입니다.',
+          '터미널을 사용하지 않고 실행할 모델을 직접 선택하고 싶다면 <strong>Pocketpal</strong>을 사용하시기 바랍니다.',
+          '개발자이거나 기기에서 완전한 Ollama 기능을 원하신다면 <strong>Termux + Ollama</strong>를 선택하시기 바랍니다.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Android LLM 앱에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: 'MLC Chat은 얼마나 많은 RAM이 필요합니까?',
+            a: 'MLC Chat은 4GB 이상의 RAM을 갖춘 스마트폰에서 작동합니다. 최적의 성능을 위해서는 8GB 이상을 권장합니다. 사전 최적화된 모델은 모바일 기기에서 실행할 수 있도록 압축되어 있습니다.',
+          },
+          {
+            q: 'Hugging Face 계정 없이 Pocketpal을 사용할 수 있습니까?',
+            a: '네, 가능합니다. Pocketpal AI는 계정 없이도 Hugging Face의 공개 저장소에서 GGUF 모델을 다운로드할 수 있습니다. Hugging Face 계정은 비공개 또는 제한된 저장소에 접근할 때만 필요합니다.',
+          },
+          {
+            q: 'Termux를 통해 Android에 Ollama를 설치하려면 어떻게 합니까?',
+            a: 'F-Droid에서 Termux를 설치하시기 바랍니다(Google Play 버전은 오래되어 사용하지 마십시오). Termux에서 <code>pkg update && pkg install ollama</code>를 실행합니다. 그런 다음 표준 Ollama 명령어를 사용하십시오: <code>ollama pull llama3</code> 및 <code>ollama run llama3</code>. 안정적인 실행을 위해 기기에 8GB 이상의 메모리가 필요합니다.',
+          },
+          {
+            q: '초보자에게 가장 적합한 Android LLM 앱은 무엇입니까?',
+            a: 'MLC Chat이 가장 좋은 시작점입니다. Google Play에서 1분 만에 설치할 수 있고, 사전 최적화된 모델 목록을 제공하며, 명령줄 경험이 전혀 필요하지 않습니다. 더 풍부한 채팅 인터페이스를 원하신다면 <a href="/ko/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">Ollama 최고의 프론트엔드 가이드</a>를 참조하시기 바랍니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[Ollama 최고의 프론트엔드 비교](/ko/prompt-bites/best-frontend-for-ollama)',
+          '[Jan vs LM Studio 비교](/ko/prompt-bites/jan-vs-lm-studio)',
+          '[Android 로컬 LLM 앱 종합 가이드](/ko/power-local-llm/best-local-llm-apps-android-2026)',
+        ],
+      },
+    },
+  },
 }

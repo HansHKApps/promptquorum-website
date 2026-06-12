@@ -89,8 +89,12 @@ function preprocessKoBlock(raw) {
   out = out.replace(/\btype:\s*"[^"]*"/g, 'type: ""')
   out = out.replace(/\bid:\s*'[^']*'/g, "id: ''")
   out = out.replace(/\bid:\s*"[^"]*"/g, 'id: ""')
-  // Strip targetKeywords arrays (keyword identifiers — legitimately Latin tech terms)
+  // Strip targetKeywords / siblingBites arrays (slug/keyword identifiers — legitimately Latin tech terms)
   out = out.replace(/\btargetKeywords:\s*\[[^\]]*\]/gs, 'targetKeywords: []')
+  out = out.replace(/\bsiblingBites:\s*\[[^\]]*\]/gs, 'siblingBites: []')
+  // Strip parentArticle values (URL-path references)
+  out = out.replace(/\bparentArticle:\s*'[^']*'/g, "parentArticle: ''")
+  out = out.replace(/\bparentArticle:\s*"[^"]*"/g, 'parentArticle: ""')
   // Strip source { title, url } title values — bibliographic refs stay in English
   out = out.replace(/\btitle:\s*'[^']*'(\s*,\s*url:)/g, "title: ''$1")
   out = out.replace(/\btitle:\s*"[^"]*"(\s*,\s*url:)/g, 'title: ""$1')

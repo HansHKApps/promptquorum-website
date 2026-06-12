@@ -651,4 +651,102 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  ko: {
+    theme: 'Quantization & VRAM',
+    title: '4GB VRAM에 최적화된 Ollama 모델은?',
+    seoTitle: 'Ollama 4GB VRAM 모델 2026 | PromptQuorum',
+    metaDescription: '4GB VRAM은 좁지만 사용 가능합니다. Phi-4 Mini Q4 (3.2GB), Gemma 2 2B (1.5GB), SmolLM 1.7B (1.0GB). Llama 3 8B는 들어가지 않습니다. PromptQuorum의 빠른 답변.',
+    publishDate: '2026-05-18',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-18',
+    quickAnswerTop: {
+      ko: {
+        question: '4GB VRAM에 최적화된 Ollama 모델은 무엇입니까?',
+        answer: '4GB VRAM은 제한적이지만 Phi-4 Mini Q4 (~3.2GB), Gemma 2 2B (~1.5GB), SmolLM 1.7B (~1.0GB) 같은 소형 모델과 함께 사용 가능합니다. Llama 3 8B는 탑재되지 않습니다.',
+        bullets: [
+          'Phi-4 Mini Q4: 4GB에서 최고 품질 (3.2GB VRAM)',
+          'Gemma 2 2B: 빠르고 경량 (1.5GB)',
+          'SmolLM 1.7B: 최소 VRAM 점유 (1.0GB)',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '4GB VRAM 최적 모델: Phi-4 Mini Q4 (~3.2GB) — 이 등급에서 가장 높은 품질',
+          'Gemma 2 2B (1.5GB)는 가장 빠른 옵션이며, SmolLM 1.7B (1.0GB)는 가장 소형',
+          'Llama 3 8B는 어떤 양자화에서도 탑재 불가 — 최소 5.5GB가 필요합니다',
+        ],
+      },
+      body1: {
+        title: '4GB VRAM에 탑재 가능한 모델',
+        content: [
+          '2026년 5월 기준, <strong>4GB VRAM에서는 Q4 양자화 기준 30억 개 이하의 파라미터를 가진 모델로 제한됩니다.</strong> 이는 모든 주류 로컬 모델 — Llama 3 8B, Mistral Small, Qwen 14B — 을 배제합니다. 세 가지 최신 소형 모델이 놀라울 정도로 우수한 성능을 발휘합니다: Phi-4 Mini는 지시 수행에서 GPT-4o mini에 필적하고, Gemma 2 2B는 빠른 채팅을 처리하며, SmolLM 1.7B는 내장 그래픽에서도 동작합니다.',
+          'Phi-4 Mini가 이 등급에서 최우선 선택입니다. 소형임에도 일반 Q&A, 경량 코딩, 문서 요약을 초당 약 25 토큰 속도로 처리합니다. Gemma 2 2B는 단일 대화 채팅에서 더 빠릅니다. SmolLM 1.7B는 Phi-4 Mini조차 VRAM 한계에 너무 근접할 때의 대안입니다.',
+        ],
+        columns: ['모델', 'VRAM', '최적 용도'],
+        rows: [
+          { '모델': 'Phi-4 Mini Q4', 'VRAM': '3.2 GB', '최적 용도': '4GB에서 최고 품질' },
+          { '모델': 'Gemma 2 2B Q4', 'VRAM': '1.5 GB', '최적 용도': '빠른 단일 대화 채팅' },
+          { '모델': 'SmolLM 1.7B Q4', 'VRAM': '1.0 GB', '최적 용도': '최소 VRAM 점유' },
+        ],
+      },
+      body2: {
+        title: '4GB에 탑재되지 않는 모델',
+        content: [
+          '다음 모델들은 자주 요청되지만 모든 양자화 수준에서 4GB VRAM을 초과합니다:',
+          '6GB로 업그레이드하면 Llama 3 8B와 Mistral Small — 가장 인기 있는 두 로컬 모델 — 을 사용할 수 있습니다. <a href="/ko/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6GB VRAM 최적 로컬 LLM</a>을 참조하십시오. 전체 하드웨어 비교는 <a href="/ko/local-llms/fastest-local-llms-low-end-pcs" class="text-primary hover:underline">저사양 PC용 최속 로컬 LLM</a>을 참조하십시오.',
+        ],
+        items: [
+          'Llama 3 8B — Q4_K_M에서 최소 ~5.5GB 필요',
+          'Mistral Small — Q4_K_M에서 ~4.5GB 필요 (한계적; 컨텍스트 오버헤드로 4GB에서 위험)',
+          'Phi-4 (전체 14B) — ~9.8GB 필요',
+          'Qwen 14B — Q4_K_M에서 ~9.5GB 필요',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '4GB VRAM에서는 Q4 양자화 기준 Phi-4 Mini Q4 (3.2GB), Gemma 2 2B (1.5GB), SmolLM 1.7B (1.0GB)만 탑재 가능합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '4GB VRAM GPU를 보유하고 있다면 Phi-4 Mini Q4가 최선의 선택입니다. Gemma 2 2B는 더 빠르고, SmolLM 1.7B는 더 작습니다. Llama 3 8B는 최소 5.5GB가 필요하므로 탑재가 불가합니다.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '4GB VRAM 모델에 관한 자주 묻는 질문',
+        faqs: [
+          {
+            q: '4GB VRAM으로 유용한 LLM을 실행할 수 있습니까?',
+            a: '예, 기본 작업에는 충분합니다. Phi-4 Mini는 초당 약 25 토큰으로 일반 Q&A와 경량 코딩을 처리합니다. 긴 컨텍스트, 다단계 코딩 에이전트, 문서 분석에는 4GB가 병목이 됩니다 — 6GB 이상으로 업그레이드하십시오.',
+          },
+          {
+            q: '4GB VRAM으로 Llama 3를 실행할 수 있습니까?',
+            a: '불가합니다. Llama 3 8B는 Q4_K_M에서 최소 ~5.5GB가 필요합니다. Llama 변형을 원하신다면 Llama 3.2 3B가 ~2.5GB에 탑재됩니다. <a href="/ko/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">전체 VRAM 요구사항 가이드</a>를 참조하십시오.',
+          },
+          {
+            q: '4GB VRAM을 갖춘 GPU는 어떤 것이 있습니까?',
+            a: 'RTX 3050 Ti (4GB), GTX 1650 Super (4GB), AMD RX 6500 XT (4GB)가 가장 일반적입니다. 세 가지 모두 Ollama와 호환됩니다 — NVIDIA는 CUDA, AMD는 ROCm 또는 Vulkan을 통해 지원합니다.',
+          },
+          {
+            q: 'CPU 전용 모드로 4GB VRAM 제한을 우회할 수 있습니까?',
+            a: '예. GPU 없이 Llama 3 8B Q4는 시스템 RAM 약 6GB를 사용하며 현대적인 8코어 CPU에서 초당 3–6 토큰으로 동작합니다. 속도가 느리지만 충분한 RAM이 있으면 작동합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽을거리',
+        items: [
+          '[6GB VRAM 최적 로컬 LLM](/ko/prompt-bites/best-local-llm-6gb-vram)',
+          '[VRAM 요구사항 전체 가이드](/ko/prompt-bites/how-much-vram-for-local-llm)',
+          '[저사양 PC용 최속 로컬 LLM](/ko/local-llms/fastest-local-llms-low-end-pcs)',
+        ],
+      },
+    },
+  },
 }
