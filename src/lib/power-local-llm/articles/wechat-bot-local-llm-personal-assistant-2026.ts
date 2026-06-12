@@ -700,6 +700,203 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Productivity & Knowledge Tools',
+    title: 'WeChat 봇과 로컬 LLM: 개인 비서 2026',
+    seoTitle: 'WeChat 봇과 로컬 LLM: 개인 비서 가이드 2026',
+    metaDescription: '2026년 로컬 LLM으로 WeChat 개인 비서 봇 만들기: Windows에서 WeChatFerry + Ollama. 완전히 개인적으로, 클라우드 API 없이 실시간으로.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**2026년 WeChatFerry + Ollama를 사용하여 WeChat에서 개인 비서 봇을 만들 수 있습니다. 봇은 Windows PC에서 완전히 실행되며, 로컬 LLM(Qwen3 7B 또는 14B)을 사용하고 클라우드 API로 데이터를 전송하지 않고 실시간으로 WeChat 메시지에 응답합니다.**',
+    quickAnswerTop: {
+      question: '로컬 LLM으로 WeChat 봇을 어떻게 만듭니까?',
+      answer: 'WeChatFerry(Windows)를 사용하여 WeChat PC 클라이언트에 연결하고, HTTP API를 통해 Ollama에 연결하고, 들어오는 메시지를 로컬 LLM으로 라우팅하십시오. 총 설정 시간: 30–60분.',
+      bullets: [
+        'WeChatFerry: 2026년 Windows에서 최고의 WeChat 봇 프레임워크',
+        'Ollama: 로컬 LLM 백엔드(중국어에는 Qwen3 7B 권장)',
+        'Python 브리지: 메시지 라우팅 및 응답 형식 관리',
+        '컨텍스트 창: 다중 턴 채팅을 위한 대화 기록 저장',
+        '개인 정보 보호: 모든 데이터가 로컬 기기에 유지됨, 클라우드 API 호출 없음',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'Windows에서 WeChatFerry와 Ollama로 WeChat 개인 비서 봇을 만드십시오 — LLM이 로컬에서 실행되며 데이터가 기기를 떠나지 않습니다.',
+      },
+      {
+        type: 'plain-terms',
+        text: '이 가이드는 WeChat을 로컬 AI 모델에 연결하여 자동으로 메시지에 응답하고, 질문에 답하고, WeChat 앱 내에서 개인 비서처럼 행동하는 방법을 보여줍니다.',
+      },
+    ],
+    affiliateLinks: [
+      {
+        productName: 'Minisforum UM890 Pro (로컬 AI 서버)',
+        url: 'https://search.jd.com/Search?keyword=Minisforum+UM890+Pro',
+        productCategory: 'hardware',
+      },
+    ],
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'WeChatFerry + Ollama: 2026년 로컬 WeChat 봇을 위한 권장 조합',
+          'Qwen3 7B: WeChat에서 중국어 응답을 위한 최고의 로컬 모델',
+          'Windows 전용: WeChatFerry는 WeChat PC 클라이언트에 주입됩니다(Windows 전용)',
+          '설정 시간: Python에 익숙한 사람이 30–60분',
+          '클라우드 API 없음: 모든 추론이 로컬에서 실행되며 어떤 메시지도 외부로 전송되지 않음',
+          '위험: WeChat 서비스 약관이 자동화된 봇을 금지합니다 — 개인 비서로만 사용하십시오',
+        ],
+      },
+      overview: {
+        heading: '이 가이드가 만드는 것',
+        body: '이 가이드는 WeChat 내에서 개인 AI 비서를 만드는 방법을 단계별로 설명합니다:\n\n1. 실시간으로 WeChat 메시지를 모니터링\n2. 들어오는 메시지를 로컬 Ollama 모델로 전송\n3. 3–10초 내에 AI 생성 응답 반환\n4. 여러 턴에 걸쳐 대화 컨텍스트 유지\n5. 모든 메시지에 응답하지 않도록 키워드(예: "@ai")로 활성화 가능\n\n설정은 Windows PC 또는 Windows 가상 머신에서 실행됩니다. macOS는 WeChatFerry와 호환되지 않습니다. 로컬 LLM은 Ollama를 통해 실행됩니다 — 클라우드 API 키가 필요하지 않습니다.',
+      },
+      requirements: {
+        heading: '요구 사항',
+        body: '시작하기 전에 필요한 하드웨어 및 소프트웨어:\n\n- **Windows 10/11**(WeChatFerry 요구 사항)\n- **WeChat PC 클라이언트** — WeChat 3.9.x로 테스트됨\n- **Python 3.10+**\n- **Ollama** 동일한 기기에 설치\n- **최소 8 GB RAM**(7B 모델로 원활한 성능을 위해 16 GB 권장)\n- 모델 가중치를 위해 **6–8 GB 디스크 공간** Qwen3 7B\n\n권장 모델: **Qwen3:7b** — 훌륭한 중국어 품질, 7B 매개변수가 8 GB VRAM에 맞거나 16 GB RAM에서 허용 가능한 속도로 CPU에서 실행됩니다.',
+      },
+      installation: {
+        heading: '단계별 설치',
+        numberedItems: [
+          {
+            title: 'Ollama 설치 및 Qwen3 7B 다운로드',
+            whyItMatters: 'ollama.com에서 Ollama를 다운로드하고 실행: `ollama pull qwen2.5:7b`',
+          },
+          {
+            title: 'WeChat PC에 로그인',
+            whyItMatters: 'Windows에서 WeChat을 열고 QR 코드를 스캔하여 로그인하십시오. 백그라운드에서 연결 상태를 유지하고 실행하십시오.',
+          },
+          {
+            title: 'WeChatFerry 설치',
+            whyItMatters: 'pip를 통해 설치: `pip install wcferry`. WeChatFerry는 메시지 API를 노출하기 위해 WeChat 프로세스에 주입됩니다.',
+          },
+          {
+            title: 'Python 메시지 핸들러 생성',
+            whyItMatters: 'WeChatFerry 클라이언트, Ollama HTTP API 호출, 메시지 라우팅 로직을 갖춘 `wechat_bot.py`를 만드십시오.',
+          },
+          {
+            title: '자신에게 메시지 보내서 테스트',
+            whyItMatters: '"@ai"로 시작하는 WeChat 메시지를 자신에게 보내고 봇이 10초 이내에 응답하는지 확인하십시오.',
+          },
+          {
+            title: '대화 기록 추가',
+            whyItMatters: '다중 턴 대화 컨텍스트를 활성화하기 위해 dict에 연락처별 마지막 10개 메시지를 저장하십시오.',
+          },
+          {
+            title: '백그라운드 서비스로 실행',
+            whyItMatters: 'NSSM(Non-Sucking Service Manager)을 사용하여 Python 스크립트를 자동으로 시작하는 Windows 서비스로 실행하십시오.',
+          },
+        ],
+      },
+      codeExample: {
+        heading: '핵심 Python 코드',
+        body: '최소한의 기능하는 봇 코드는 메시지를 받기 위해 WeChatFerry를 사용하고 응답을 생성하기 위해 Ollama HTTP API를 사용합니다:\n\n```python\nimport requests\nfrom wcferry import Wcf, WxMsg\n\nOLLAMA_URL = "http://localhost:11434/api/chat"\nMODEL = "qwen2.5:7b"\nTRIGGER = "@ai"\n\nconversation_history: dict[str, list] = {}\n\ndef ask_ollama(contact_id: str, user_message: str) -> str:\n    if contact_id not in conversation_history:\n        conversation_history[contact_id] = []\n    history = conversation_history[contact_id]\n    history.append({"role": "user", "content": user_message})\n    # keep last 10 turns\n    if len(history) > 20:\n        history = history[-20:]\n    conversation_history[contact_id] = history\n    response = requests.post(OLLAMA_URL, json={\n        "model": MODEL,\n        "messages": history,\n        "stream": False\n    })\n    reply = response.json()["message"]["content"]\n    history.append({"role": "assistant", "content": reply})\n    return reply\n\ndef on_message(msg: WxMsg):\n    if msg.type == 1 and msg.content.startswith(TRIGGER):\n        user_text = msg.content[len(TRIGGER):].strip()\n        reply = ask_ollama(msg.sender, user_text)\n        wcf.send_text(reply, msg.sender)\n\nwcf = Wcf()\nwcf.enable_receiving_msg()\nfor msg in wcf.get_msgs():\n    on_message(msg)\n```',
+      },
+      modelChoice: {
+        heading: '중국어 WeChat 대화를 위한 최고의 로컬 모델',
+        body: '모델 선택이 중국어 메시지 응답 품질에 크게 영향을 미칩니다.',
+        columns: ['모델', '크기', '중국어 품질', '속도 (CPU)', '속도 (8 GB VRAM)'],
+        rows: [
+          { '모델': 'Qwen3:7b', '크기': '4.7 GB', '중국어 품질': '우수', '속도 (CPU)': '3–5 tok/s', '속도 (8 GB VRAM)': '30–45 tok/s' },
+          { '모델': 'Qwen3:14b', '크기': '9 GB', '중국어 품질': '최적', '속도 (CPU)': '1–2 tok/s', '속도 (8 GB VRAM)': '15–20 tok/s' },
+          { '모델': 'Qwen3:3b', '크기': '2 GB', '중국어 품질': '양호', '속도 (CPU)': '8–12 tok/s', '속도 (8 GB VRAM)': '60+ tok/s' },
+          { '모델': 'Llama3.1:8b', '크기': '4.7 GB', '중국어 품질': '보통', '속도 (CPU)': '3–5 tok/s', '속도 (8 GB VRAM)': '30–45 tok/s' },
+        ],
+      },
+      limitations: {
+        heading: '제한 사항 및 위험',
+        body: '**WeChat 서비스 약관:** WeChat 서비스 약관은 자동화된 봇, 스크레이퍼, 타사 클라이언트를 금지합니다. WeChatFerry 사용은 WeChat의 사기 방지 시스템이 감지하면 계정 정지를 초래할 수 있습니다. 이 설정은 개인 생산성에만 사용하십시오 — 대량 메시지 발송, 마케팅, 상업적 자동화에는 사용하지 마십시오.\n\n**Windows 전용:** WeChatFerry는 WeChat 프로세스에 연결하기 위해 Windows에서 DLL 주입을 사용합니다. macOS나 Linux에서는 작동하지 않습니다.\n\n**WeChat 클라이언트 버전 의존성:** WeChatFerry는 특정 WeChat PC 클라이언트 버전과의 호환성을 유지합니다. WeChat을 업데이트하기 전에 WeChatFerry GitHub 저장소에서 지원되는 버전 목록을 확인하십시오.\n\n**지연:** 7B 모델로 CPU 전용 추론은 응답당 5–15초가 걸리며, 채팅에서 느릴 수 있습니다. 8 GB GPU는 그 시간을 1–3초로 줄입니다.',
+      },
+      faq: {
+        faqs: [
+          {
+            q: '이 WeChat 봇이 Mac에서 작동합니까?',
+            a: '아니요. WeChatFerry는 Windows가 필요하며 DLL 주입을 통해 Windows용 WeChat 클라이언트에 연결합니다. macOS 사용자는 이 설정을 사용하기 위해 가상 머신(Parallels 또는 VMware Fusion)에서 Windows를 실행할 수 있습니다.',
+          },
+          {
+            q: '봇을 사용하면 WeChat 계정이 차단될 수 있습니까?',
+            a: 'WeChat은 서비스 약관에서 자동화된 봇을 금지합니다. 자동화 도구를 사용하는 것으로 감지된 계정은 일시적 정지 또는 영구 차단의 위험이 있습니다. 낮은 메시지 볼륨으로 개인 생산성에만 사용하십시오.',
+          },
+          {
+            q: '중국어 WeChat 메시지에 가장 좋은 Ollama 모델은 무엇입니까?',
+            a: 'Qwen3 7B는 중국어 WeChat 응답을 위한 최고의 품질-속도 균형입니다 — 뛰어난 중국어 이해, 대부분의 하드웨어에서 충분히 빠르며, 4.7 GB 모델이 8 GB VRAM에 맞습니다.',
+          },
+          {
+            q: '봇이 그룹 채팅을 처리할 수 있습니까?',
+            a: '네. WeChatFerry는 방 ID와 함께 그룹 메시지를 노출합니다. `on_message` 핸들러를 수정하여 `msg.roomid`를 확인하고 봇이 응답할 그룹을 필터링하십시오. 그룹의 모든 메시지에 응답하지 않도록 트리거 키워드를 추가하십시오.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '로컬 LLM으로 WeChat 봇을 어떻게 만듭니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'WeChatFerry(Windows)를 사용하여 WeChat PC 클라이언트에 연결하고, HTTP API를 통해 Ollama에 연결하고, 들어오는 메시지를 로컬 LLM으로 라우팅하십시오. Python을 사용하여 총 설정 시간: 30–60분.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '이 WeChat 봇이 Mac에서 작동합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '아니요. WeChatFerry는 Windows가 필요합니다. macOS 사용자는 가상 머신(Parallels 또는 VMware Fusion)에서 Windows를 실행할 수 있습니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '중국어 WeChat 메시지에 가장 좋은 모델은 무엇입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Qwen3 7B는 최고의 품질-속도 균형입니다 — 뛰어난 중국어 이해, 4.7 GB가 8 GB VRAM에 맞으며, GPU로 1–3초 내에 응답합니다.',
+          },
+        },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      inLanguage: 'ko',
+      name: '로컬 LLM으로 WeChat 봇 만들기',
+      step: [
+        { '@type': 'HowToStep', name: 'Ollama 설치 및 Qwen3 7B 다운로드', text: 'Ollama를 다운로드하고 실행: ollama pull qwen2.5:7b' },
+        { '@type': 'HowToStep', name: 'WeChat PC에 로그인', text: 'Windows에서 WeChat을 열고 연결 상태 유지' },
+        { '@type': 'HowToStep', name: 'WeChatFerry 설치', text: 'pip install wcferry' },
+        { '@type': 'HowToStep', name: 'Python 메시지 핸들러 생성', text: 'WeChat 메시지를 Ollama API로 라우팅하는 봇 코드 작성' },
+        { '@type': 'HowToStep', name: '테스트 및 서비스로 실행', text: '자신에게 메시지를 보내 테스트한 다음 Windows 서비스로 백그라운드에서 실행' },
+      ],
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'WeChat 봇과 로컬 LLM: 개인 비서 2026',
+      description: 'Windows에서 WeChatFerry와 Ollama로 WeChat 개인 비서 봇 만들기 — 완전히 로컬, 클라우드 API 없음.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/wechat-bot-local-llm-personal-assistant-2026',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+    },
+    relatedReading: {
+      items: [
+        '[WeChat 로컬 LLM 통합 가이드 — 3가지 통합 패턴](/ko/power-local-llm/wechat-local-llm-integration-2026) — 개발자를 위한 webhook, WeChatFerry, 미니 PC 서버 패턴',
+        '[2026년 MCP가 있는 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — WeChat을 넘어 도구 호출 및 자동화로 로컬 LLM 확장',
+        '[항상 켜져 있는 Ollama 서버를 위한 최고의 미니 PC](/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on) — WeChat 봇 서버를 24/7 실행하기 위한 하드웨어 옵션',
+      ],
+    },
+  },
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

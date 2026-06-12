@@ -1378,6 +1378,253 @@ while True:
       ],
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-26',
+    dateModified: '2026-05-26',
+    next_refresh_due: '2026-11-26',
+    theme: 'Local AI Agents & Tool Use',
+    title: 'WeChat + 로컬 LLM: 개발자 가이드 2026',
+    seoTitle: 'WeChat 로컬 LLM 통합 2026 | Ollama API 브리지',
+    intro:
+      'WeChat을 로컬 LLM에 연결하면 세계에서 가장 많이 사용되는 메시지 앱에서 개인 AI 비서를 가질 수 있습니다 — 단 하나의 메시지도 클라우드 API로 전송되지 않습니다. 이 가이드는 세 가지 통합 패턴(Windows에서 WeChatFerry, HTTP webhook 브리지, 항상 켜져 있는 미니 PC 서버)을 다루고, 중국어 채팅에 적합한 Qwen 모델 선택을 도와주며, 로컬 추론이 중국 데이터 보안법을 어떻게 준수하는지 보여줍니다.',
+    metaDescription:
+      '2026년 WeChat을 로컬 LLM에 연결하기. 세 가지 패턴: WeChatFerry, HTTP webhook, 미니 PC Ollama 서버. 중국어에는 Qwen3 7B. 클라우드 API 없음.',
+    twitterDescription:
+      'WeChat + 로컬 LLM 브리지 만들기: WeChatFerry, HTTP webhook 또는 미니 PC 서버. 중국어에는 Qwen3 7B. 클라우드 API 없음.',
+    gammaEmbedUrl: '/presentations/wechat-local-llm-integration-2026-static.html',
+    readTime: '11분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'WeChat 로컬 LLM 통합',
+    targetKeywords: [
+      '위챗 로컬 LLM 2026',
+      '위챗 Ollama 통합',
+      '위챗 봇 로컬 AI',
+      'WeChatFerry Qwen2.5',
+      '위챗 LLM Python 로컬',
+    ],
+    leadAnswerBlock:
+      '**항상 켜져 있는 미니 PC에서 Ollama를 실행한 후 WeChatFerry(Windows) 또는 webhook 리스너를 통해 WeChat 메시지를 Ollama HTTP API로 라우팅하여 WeChat을 로컬 LLM에 연결하십시오. Qwen3 7B Q4_K_M은 WeChat에서 중국어 채팅에 최고의 모델입니다: 네이티브 CJK 토큰화, 5.5 GB VRAM, 적당한 하드웨어에서 8–15 tok/s.**',
+    quickAnswerTop: {
+      ko: {
+        question: 'WeChat을 로컬 LLM에 어떻게 연결합니까?',
+        answer:
+          '미니 PC(또는 localhost)에서 Ollama를 실행하고, WeChatFerry를 설치하여 WeChat PC 클라이언트 메시지를 인터셉트하고, localhost:11434의 Ollama HTTP API로 메시지를 전송하는 Python 브리지를 작성하고, LLM 응답을 채팅으로 반환하십시오. 중국어 채팅에는 Qwen3 7B Q4_K_M을 권장합니다.',
+        bullets: [
+          'WeChatFerry: Windows 전용 WeChat 훅; 2026년 가장 신뢰할 수 있는 접근 방식',
+          'Ollama HTTP API: /api/generate에 POST — 클라우드 자격증명 불필요',
+          'Qwen3 7B Q4_K_M: 5.5 GB VRAM, 네이티브 CJK 토큰화, 8–15 tok/s',
+          '미니 PC 서버: Minisforum UM890 Pro는 항상 켜진 채팅을 위해 ~35 W로 24/7 실행',
+          '개인 정보 보호: WeChat 서버나 어떤 LLM API로도 데이터 전송 없음',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    snippetBlocks: [
+      {
+        type: 'one-sentence',
+        text: 'WeChatFerry와 Ollama로 WeChat을 로컬 LLM에 연결하십시오: 메시지가 클라우드 API 없이 하드웨어에 남아 있습니다.',
+      },
+      {
+        type: 'plain-terms',
+        text: '이 가이드는 어떤 데이터도 네트워크를 떠나지 않고 자신의 컴퓨터나 미니 PC에서 실행되는 로컬 AI 모델을 사용하여 WeChat이 자동으로 응답하게 만드는 방법을 보여줍니다.',
+      },
+    ],
+    toc: [
+      { label: '핵심 요약', anchor: 'tldr' },
+      { label: '통합 패턴', anchor: 'integration-patterns' },
+      { label: 'WeChatFerry 설정', anchor: 'wechatferry' },
+      { label: 'Ollama API 브리지', anchor: 'ollama-bridge' },
+      { label: '미니 PC 서버', anchor: 'mini-pc-server' },
+      { label: '중국어 모델 선택', anchor: 'model-choice' },
+      { label: '그룹 채팅 처리', anchor: 'group-chat' },
+      { label: '개인 정보 보호 및 법적 준수', anchor: 'privacy' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'WeChatFerry(Windows)는 2026년 WeChat PC 클라이언트를 위한 가장 신뢰할 수 있는 훅입니다: 바이너리를 수정하지 않고 WeChat과 함께 실행됩니다',
+          'Ollama는 포트 11434에서 로컬 HTTP API를 노출합니다: 10줄짜리 Python 스크립트가 WeChat 메시지를 로드된 모델로 라우팅합니다',
+          'Qwen3 7B Q4_K_M: 중국어 채팅에 권장 — 5.5 GB VRAM, 네이티브 CJK 토큰화, 미니 PC에서 8–15 tok/s',
+          '항상 켜져 있는 미니 PC 서버(Minisforum UM890 Pro, ~35 W): 그룹 및 개인 채팅을 위해 봇을 24/7 사용 가능하게 유지',
+          '로컬 추론: 클라우드로 데이터 전송 없음 — 개인 데이터에 대한 중국 데이터 보안법 제31조 준수',
+        ],
+      },
+      integrationPatterns: {
+        id: 'integration-patterns',
+        title: 'WeChat + LLM 세 가지 통합 패턴',
+        content: [
+          '**패턴 1 — WeChatFerry + Ollama(Windows):** 가장 안정적입니다. WeChatFerry는 공식 WeChat PC 클라이언트를 인터셉트하고 Python SDK를 노출합니다. 메시지가 이벤트로 도착합니다; 스크립트가 Ollama HTTP API를 호출하고 응답을 반환합니다. 개인 및 그룹 채팅에 작동합니다. WeChat PC가 설치된 Windows가 필요합니다.',
+          '**패턴 2 — HTTP webhook 브리지:** 타사 WeChat 게이트웨이에서 webhook 콜백을 받는 로컬 HTTP 서버를 실행합니다. 설정이 더 복잡하지만 여러 플랫폼에서 작동합니다. WeChat Official Account 인프라가 있는 기업에 적합합니다.',
+          '**패턴 3 — Ollama + Open WebUI 포워딩:** Open WebUI의 WeChat 알림 기능을 사용하여(사용 가능한 경우) 개인 WeChat 계정으로 요약이나 응답을 전송합니다. 가볍고 훅 없이 작동하지만 단방향 알림만 지원합니다.',
+          '대부분의 사용자에게 — 특히 개인 계정을 가진 중국 사용자에게 — 패턴 1(WeChatFerry + Ollama)이 2026년을 위한 올바른 선택입니다.',
+        ],
+      },
+      wechatferry: {
+        id: 'wechatferry',
+        title: 'WeChatFerry 설정: 단계별',
+        numberedItems: [
+          'Windows에 WeChat PC(weixin.qq.com의 공식 버전) 설치',
+          'WeChatFerry 설치: `pip install wcferry`(Python 3.10+)',
+          'WeChatFerry 데몬 시작: `python -m wcferry.daemon`',
+          '메시지 핸들러 작성: `from wcferry import Wcf; wcf = Wcf(); wcf.enable_receiving_msg()`',
+          '메시지 루프에서 Ollama에 POST: `requests.post("http://localhost:11434/api/generate", json={"model":"qwen2.5:7b","prompt":msg.content})`',
+          '응답 전송: `wcf.send_text(response["response"], msg.roomid or msg.sender)`',
+          '개인 메시지로 테스트; 2–5초 내에 응답이 WeChat에 나타나는지 확인',
+        ],
+        codeBlock: `import requests
+from wcferry import Wcf
+
+wcf = Wcf()
+wcf.enable_receiving_msg()
+
+while True:
+    msg = wcf.get_msg()
+    if msg and msg.from_self() is False:
+        resp = requests.post(
+            "http://localhost:11434/api/generate",
+            json={"model": "qwen2.5:7b", "prompt": msg.content, "stream": False}
+        ).json()
+        wcf.send_text(resp["response"], msg.roomid or msg.sender)`,
+        codeLanguage: 'python',
+      },
+      ollamaBridge: {
+        id: 'ollama-bridge',
+        title: 'Ollama HTTP API: 주요 엔드포인트',
+        content: [
+          'Ollama는 `ollama serve` 이후 `http://localhost:11434`에서 로컬 REST 서버를 실행합니다. 로컬 연결에는 인증이 필요하지 않습니다.',
+          '**생성(단일 턴):** `POST /api/generate` — 본문: `{model, prompt, stream: false}` — 반환: `{response, done}`',
+          '**채팅(다중 턴):** `POST /api/chat` — 본문: `{model, messages: [{role, content}]}` — 호출 간 대화 컨텍스트 유지',
+          '**모델 목록:** `GET /api/tags` — 크기와 함께 모든 설치된 모델 반환',
+          'WeChat 통합에는 세션 동안 컨텍스트를 유지하기 위해 순환 대화 기록(마지막 10개 메시지)과 함께 `/api/chat`을 사용하십시오.',
+        ],
+      },
+      miniPcServer: {
+        id: 'mini-pc-server',
+        title: '항상 켜져 있는 WeChat LLM 서버로서의 미니 PC',
+        content: [
+          '전용 항상 켜져 있는 미니 PC는 노트북이나 워크스테이션을 차지하지 않고 WeChat 봇을 계속 실행하게 합니다.',
+          '**Minisforum UM890 Pro(권장):** AMD Ryzen 9 8945HS, 32–64 GB DDR5, AMD Radeon 780M iGPU. Linux에서 ROCm을 통해 Qwen3 7B를 ~8 tok/s로 실행합니다. 소비 전력: 유휴 시 ~35 W, 추론 시 ~65 W. 가격: ~$350–$450.',
+          '**Mac Mini M4:** Apple Silicon M4, 16–32 GB 통합 메모리, MLX를 통해 7B 모델에서 ~18 tok/s. 소비 전력: 유휴 시 ~20 W. 가장 조용한 옵션. 가격: ~$599.',
+          '**설정 팁:** 자동 시작 활성화 — `ollama serve`와 WeChatFerry 브리지 스크립트를 systemd(Linux) 또는 Windows 작업 스케줄러에 추가하십시오. 봇은 모든 정전 후 자동으로 복구됩니다.',
+        ],
+        comparisonTable: {
+          columns: ['기기', 'RAM', '속도 (7B)', '소비 전력', '가격 (USD)'],
+          rows: [
+            { '기기': 'Minisforum UM890 Pro', 'RAM': '32–64 GB', '속도 (7B)': '~8 tok/s', '소비 전력': '35–65 W', '가격 (USD)': '$350–$450' },
+            { '기기': 'Mac Mini M4',          'RAM': '16–32 GB', '속도 (7B)': '~18 tok/s','소비 전력': '20–40 W', '가격 (USD)': '$599+' },
+            { '기기': 'Beelink SER8',         'RAM': '32 GB',    '속도 (7B)': '~8 tok/s', '소비 전력': '30–55 W', '가격 (USD)': '$280–$330' },
+          ],
+        },
+      },
+      modelChoice: {
+        id: 'model-choice',
+        title: 'WeChat에서 중국어 채팅을 위한 최고의 모델',
+        content: [
+          '**Qwen3 7B Q4_K_M(첫 번째 선택):** Alibaba가 네이티브 CJK 토큰화로 개발했습니다. 5.5 GB VRAM, 8–15 tok/s. 서구 중심 모델보다 중국어 관용어, 고전적 참조, 구어체를 훨씬 잘 이해합니다. 설치: `ollama pull qwen2.5:7b`.',
+          '**Qwen3 14B Q4_K_M:** 12–16 GB RAM의 미니 PC가 있을 때 더 풍부한 대화를 위해. 9.5 GB VRAM, 4–8 tok/s. 중국어 미묘한 추론과 다중 턴 컨텍스트에서 현저히 더 나음.',
+          '**DeepSeek-R1-Distill-Qwen-7B:** 중국어 질문 답변 및 단계별 설명에 좋음. 캐주얼 대화에서 Qwen3 7B보다 약간 약함.',
+          '**피해야 할 것:** Llama 3과 Mistral — 서구 중심 토크나이저가 중국어 텍스트에 2–3배 더 많은 토큰을 사용하여 더 느린 응답과 긴 메시지에서 잘림이 발생합니다.',
+        ],
+      },
+      groupChat: {
+        id: 'group-chat',
+        title: '그룹 채팅 처리',
+        content: [
+          'WeChat 그룹 채팅은 @ 멘션 처리가 필요합니다. WeChatFerry는 봇이 멘션되었을 때 감지하기 위해 `msg.is_at`을 노출합니다.',
+          '좋은 관행: `msg.is_at`이 True이거나 메시지가 트리거 키워드로 시작할 때만 응답하십시오. 모든 그룹 메시지에 응답하면 노이즈가 생기고 WeChat의 안티봇 속도 제한이 트리거됩니다.',
+          '속도 제한: WeChat은 분당 ~30개 이상의 메시지를 전송하는 계정을 제한할 수 있습니다. 그룹 컨텍스트에서 봇 응답 사이에 2–3초 지연을 추가하십시오.',
+          '컨텍스트 관리: 그룹 채팅의 경우 참가자 간 컨텍스트 혼합을 피하기 위해 사용자별(`msg.sender`로 인덱싱)로 별도의 대화 기록을 유지하십시오.',
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: '개인 정보 보호 및 중국 데이터 보안법 준수',
+        content: [
+          '로컬 추론은 프롬프트, 응답, 대화 기록이 절대 하드웨어를 떠나지 않음을 의미합니다. WeChat의 Tencent 서버도 어떤 클라우드 LLM API도 콘텐츠를 처리하지 않습니다.',
+          '**중국 데이터 보안법(DSL, 2021) 제31조:** 중국 영토 내에서 수집하거나 사용하는 개인 데이터는 중국 관할권 아래에 남아야 합니다. 자체 로컬 LLM을 실행하면 추론이 외국 클라우드 공급업체(OpenAI, Anthropic, Google)를 통해 라우팅되지 않습니다.',
+          '**사이버보안법 제37조:** 핵심 정보 인프라 운영자는 데이터를 국내에 저장해야 합니다. 로컬 추론은 개인 및 중소기업 사용 사례에서 이 요구 사항을 충족합니다.',
+          '**이것이 커버하지 않는 것:** WeChat 메시지 메타데이터(누가 누구에게 보냈는지, 타임스탬프)는 WeChat 서비스 약관에 따라 Tencent 서버에 남아 있습니다 — 로컬 추론은 이것을 변경할 수 없습니다. 완전한 개인 정보 보호를 위해 WeChat 대신 로컬 메시지 플랫폼을 사용하십시오.',
+          '**EU/글로벌 독자를 위한 참고:** GDPR 제28조는 처리자와의 계약을 요구합니다. 로컬 LLM 실행은 어떤 LLM 공급업체와의 DPA 필요성도 피합니다 — 중요한 준수 단순화.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'WeChatFerry가 Mac용 WeChat에서 작동합니까?',
+            a: '아니요. WeChatFerry는 Windows WeChat PC 클라이언트 DLL을 인터셉트하며 Mac용 WeChat과 호환되지 않습니다. Mac에서는 Windows VM을 사용하거나 HTTP webhook 패턴 중 하나를 사용하십시오.',
+          },
+          {
+            q: 'Tencent가 봇을 사용한다고 계정을 차단할 수 있습니까?',
+            a: 'WeChat 서비스 약관은 자동화된 대량 메시지 전송을 금지합니다. 인간과 유사한 응답 속도(분당 1–5개 메시지)의 개인 봇은 차단을 거의 유발하지 않습니다. 대량 전송, 그룹 스팸, 또는 상업적 홍보에 봇을 사용하지 마십시오.',
+          },
+          {
+            q: 'WeChat에서 중국어 텍스트에 가장 좋은 Ollama 모델은 무엇입니까?',
+            a: 'Qwen3 7B Q4_K_M. 네이티브 CJK 토큰화로 Alibaba가 개발했습니다 — 중국어 텍스트에서 Llama나 Mistral 모델보다 30–40% 더 효율적입니다.',
+          },
+          {
+            q: '노트북에서 이것을 실행할 수 있습니까?',
+            a: '네. 16 GB RAM의 노트북은 CPU 전용으로 Qwen3 7B를 8–15 tok/s로 편안하게 실행합니다. 메시지당 응답 지연은 3–8초로 채팅에서 허용 가능합니다.',
+          },
+          {
+            q: '로컬 추론이 중국 데이터 보안법을 준수합니까?',
+            a: '추론 콘텐츠(프롬프트 및 응답)의 경우 네 — 데이터가 하드웨어를 떠나지 않습니다. WeChat 메시지 메타데이터는 서비스 약관에 따라 Tencent 서버에 계속 남아 있습니다.',
+          },
+          {
+            q: '다중 턴 대화를 어떻게 처리합니까?',
+            a: '보낸 사람으로 인덱싱된 {role, content} dict의 Python 목록으로 대화 기록을 저장하십시오. 컨텍스트를 유지하기 위해 각 요청에서 /api/chat에 마지막 10–15개 메시지를 전달하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 읽을거리',
+        items: [
+          '[WeChat 로컬 LLM 봇: 개인 비서 가이드](/ko/power-local-llm/wechat-bot-local-llm-personal-assistant-2026) — 개인 비서를 위한 WeChatFerry 심층 분석',
+          '[로컬 LLM을 위한 최고의 미니 PC](/ko/prompt-bites/best-mini-pc-for-local-llm) — 항상 켜져 있는 LLM 서버를 위한 하드웨어 비교',
+          '[2026년 MCP가 있는 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 도구 사용 및 자동화로 WeChat 봇 확장',
+          '[Zapier를 로컬 AI 에이전트로 대체하기](/ko/power-local-llm/replace-zapier-with-local-ai-agents) — WeChat 이벤트로 트리거되는 자동화 워크플로우',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'WeChat + 로컬 LLM: 개발자 가이드 2026',
+      description: 'WeChatFerry와 Ollama로 WeChat을 로컬 LLM에 연결하십시오. 세 가지 통합 패턴, 모델 추천, 미니 PC 서버 설정 및 중국 DSL 준수.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/wechat-local-llm-integration-2026',
+      inLanguage: 'ko',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      about: [
+        { '@type': 'Thing', name: 'WeChat API 통합' },
+        { '@type': 'Thing', name: '로컬 LLM 배포' },
+        { '@type': 'Thing', name: '중국 AI 준수' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'WeChatFerry' },
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+        { '@type': 'SoftwareApplication', name: 'Qwen3 7B' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: 'WeChatFerry가 Mac용 WeChat에서 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: '아니요. WeChatFerry는 Windows WeChat PC 클라이언트 DLL을 인터셉트하며 Mac용 WeChat과 호환되지 않습니다. Mac에서는 Windows VM을 사용하거나 HTTP webhook 패턴을 사용하십시오.' } },
+        { '@type': 'Question', name: 'WeChat에서 중국어 채팅에 가장 좋은 Ollama 모델은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — 네이티브 CJK 토큰화로 Alibaba가 개발했으며, 5.5 GB VRAM, 중국어 텍스트에서 Llama나 Mistral보다 30–40% 더 효율적입니다.' } },
+        { '@type': 'Question', name: 'Tencent가 봇을 사용한다고 차단할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '인간과 유사한 응답 속도(분당 1–5개 메시지)의 개인 봇은 차단을 거의 유발하지 않습니다. 대량 전송이나 상업적 홍보에 봇을 사용하지 마십시오.' } },
+        { '@type': 'Question', name: '로컬 LLM으로의 로컬 추론이 중국 데이터 보안법을 준수합니까?', acceptedAnswer: { '@type': 'Answer', text: '추론 콘텐츠의 경우 네 — 어떤 프롬프트나 응답도 하드웨어를 떠나지 않습니다. WeChat 메타데이터는 서비스 약관에 따라 Tencent 서버에 계속 남아 있습니다.' } },
+      ],
+    },
+  },
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',

@@ -908,6 +908,213 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Coding Assistants',
+    title: '2026년 최고의 로컬 LLM IDE 플러그인 5선',
+    seoTitle: '2026년 최고의 로컬 LLM IDE 플러그인 5선',
+    metaDescription: '2026년 로컬 LLM 코딩 어시스턴트: Continue, Cline, Aider, Cursor(오프라인 모드), GitHub Copilot 대안을 Ollama와 함께 직접 비교합니다.',
+    educationalLevel: 'Intermediate',
+    affiliateDisclosure: false,
+    publishDate: '2026-05-26',
+    leadAnswerBlock: '**2026년 대부분의 개발자에게 최적인 로컬 LLM IDE 플러그인은 Continue입니다. VS Code와 JetBrains를 모두 지원하며, Ollama를 통해 어떤 로컬 모델과도 연동되고, 자동완성·채팅·인라인 편집을 완전 오프라인으로 제공합니다.**',
+    quickAnswerTop: {
+      question: '2026년 로컬 LLM에 가장 좋은 IDE 플러그인은 무엇입니까?',
+      answer: 'Continue(VS Code/JetBrains, Ollama 통합, 완전 무료)가 대부분의 개발자에게 최적입니다. 에이전트 작업에는 Cline, 터미널 기반 편집에는 Aider, 팀 코드베이스 인식에는 Cody를 선택하십시오.',
+      bullets: [
+        'Continue — 최고의 올인원 로컬 코딩 어시스턴트',
+        'Cline — 파일/터미널 접근이 가능한 최고의 에이전트 플러그인',
+        'Aider — 최고의 터미널 기반 AI 코딩 도구',
+        'Cody — 최고의 대형 코드베이스 인식 어시스턴트',
+        'Tabby — 최고의 셀프호스팅 코드 자동완성 서버',
+      ],
+      updatedDate: '2026-05-26',
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Continue는 VS Code와 JetBrains용 최고의 무료 로컬 LLM 플러그인으로, Ollama 및 LM Studio와 완전히 통합됩니다.',
+          'Cline은 파일 시스템과 터미널에 접근할 수 있는 에이전트 작업에 특화되어 있습니다.',
+          'Aider는 터미널에서 실행되는 로컬 모델 기반 AI 코딩 도구입니다.',
+          'Cody(Sourcegraph)는 대형 코드베이스 인식에 탁월하며 로컬 Ollama 백엔드를 지원합니다.',
+          'Tabby는 팀 단위로 셀프호스팅할 수 있는 코드 자동완성 서버입니다.',
+        ],
+      },
+      rankedList: {
+        heading: '2026년 최고의 로컬 LLM IDE 플러그인 상세 리뷰',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '2026년 로컬 LLM 코딩 어시스턴트 중 Continue가 VS Code/JetBrains 통합, 무제한 Ollama 요청, 오프라인 완전 작동으로 가장 뛰어납니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '로컬 LLM IDE 플러그인은 GitHub Copilot 같은 클라우드 서비스 없이도 코드 자동완성·채팅·리팩토링을 제공합니다. Ollama로 로컬에서 실행 중인 모델을 IDE에 직접 연결합니다.',
+          },
+        ],
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Continue',
+            tagline: '최고의 올인원 로컬 코딩 어시스턴트',
+            verdict: 'VS Code와 JetBrains 모두 지원하며 Ollama·LM Studio와 완벽하게 통합됩니다. 자동완성, 채팅, 인라인 편집을 무료로 제공합니다.',
+            pros: ['VS Code와 JetBrains 완전 지원', 'Ollama·LM Studio 완벽 통합', '자동완성·채팅·인라인 편집 무료 제공', '완전 오프라인 작동'],
+            cons: ['고급 에이전트 기능은 Cline보다 제한적'],
+            affiliateLinks: [
+              { productName: 'Continue', url: 'https://continue.dev', productCategory: 'software' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'Cline',
+            tagline: '최고의 에이전트 코딩 플러그인',
+            verdict: '파일 시스템 접근, 터미널 명령 실행, 브라우저 자동화를 지원합니다. Ollama 로컬 모델과 연동되며 대규모 리팩토링에 적합합니다.',
+            pros: ['파일·터미널 에이전트 기능', '로컬 모델 전체 지원', 'VS Code에서 사용 가능'],
+            cons: ['Continue보다 설정이 복잡함'],
+            affiliateLinks: [
+              { productName: 'Cline', url: 'https://github.com/cline/cline', productCategory: 'software' },
+            ],
+          },
+          {
+            rank: 3,
+            name: 'Aider',
+            tagline: '최고의 터미널 기반 AI 코딩 도구',
+            verdict: '터미널에서 실행되며 Ollama를 통해 로컬 모델과 연동됩니다. 멀티 파일 편집과 Git 통합을 지원합니다.',
+            pros: ['터미널에서 직접 실행', 'Ollama 완전 지원', 'Git 통합 내장'],
+            cons: ['GUI 없음 — 터미널 친숙도 필요'],
+            affiliateLinks: [
+              { productName: 'Aider', url: 'https://aider.chat', productCategory: 'software' },
+            ],
+          },
+          {
+            rank: 4,
+            name: 'Cody',
+            tagline: '최고의 대형 코드베이스 인식 어시스턴트',
+            verdict: 'Sourcegraph의 코드 검색 엔진을 활용하여 대규모 코드베이스에서도 정확한 컨텍스트를 제공합니다. Ollama 백엔드를 지원합니다.',
+            pros: ['대형 코드베이스 인식에 탁월', 'Ollama 로컬 백엔드 지원', 'VS Code·JetBrains 지원'],
+            cons: ['전체 기능 활용에는 Sourcegraph 계정 필요'],
+            affiliateLinks: [
+              { productName: 'Cody', url: 'https://sourcegraph.com/cody', productCategory: 'software' },
+            ],
+          },
+          {
+            rank: 5,
+            name: 'Tabby',
+            tagline: '최고의 셀프호스팅 코드 자동완성 서버',
+            verdict: 'Docker로 배포 가능한 자체 코드 자동완성 서버입니다. 팀 전체가 하나의 인스턴스를 공유하며 완전한 데이터 프라이버시를 보장합니다.',
+            pros: ['팀 단위 셀프호스팅 가능', '완전한 데이터 프라이버시', '다양한 IDE 플러그인 지원'],
+            cons: ['서버 설정 및 유지관리 필요'],
+            affiliateLinks: [
+              { productName: 'Tabby', url: 'https://tabby.tabbyml.com', productCategory: 'software' },
+            ],
+          },
+        ],
+      },
+      setupGuide: {
+        heading: '설치 가이드: Continue + Ollama 설정하기',
+        numberedItems: [
+          'ollama.com에서 Ollama를 설치합니다.',
+          '코딩 모델을 다운로드합니다: `ollama pull qwen2.5-coder:14b`',
+          'VS Code 마켓플레이스에서 Continue 확장을 설치합니다.',
+          '~/.continue/config.json에서 Continue를 Ollama 엔드포인트에 연결합니다.',
+          'VS Code에서 Cmd/Ctrl+L을 눌러 채팅을 시작합니다.',
+          'Tab 키로 인라인 자동완성을 사용합니다.',
+          '인라인 편집을 위해 Cmd/Ctrl+I를 사용합니다.',
+        ],
+      },
+      modelRecommendations: {
+        heading: '로컬 코딩 어시스턴트를 위한 최적 모델',
+        columns: ['모델', '크기', '자동완성', '채팅', '최소 VRAM'],
+        rows: [
+          { '모델': 'Qwen2.5-Coder 14B', '크기': '14B', '자동완성': '우수', '채팅': '우수', '최소 VRAM': '12 GB' },
+          { '모델': 'Qwen2.5-Coder 7B', '크기': '7B', '자동완성': '양호', '채팅': '양호', '최소 VRAM': '8 GB' },
+          { '모델': 'DeepSeek Coder V2 Lite', '크기': '16B', '자동완성': '우수', '채팅': '우수', '최소 VRAM': '12 GB' },
+          { '모델': 'Llama 3.3 8B', '크기': '8B', '자동완성': '양호', '채팅': '우수', '최소 VRAM': '8 GB' },
+          { '모델': 'Phi-4', '크기': '14B', '자동완성': '보통', '채팅': '우수', '최소 VRAM': '10 GB' },
+        ],
+      },
+      faq: {
+        faqs: [
+          {
+            q: 'Continue와 Copilot의 차이점은 무엇입니까?',
+            a: 'Continue는 Ollama를 통해 로컬 모델을 사용하므로 코드가 서버로 전송되지 않습니다. GitHub Copilot은 월 구독료가 필요하며 Microsoft 서버로 코드를 전송합니다. Continue는 완전 무료로 오프라인에서 작동합니다.',
+          },
+          {
+            q: '로컬 LLM 코딩 어시스턴트에 가장 좋은 모델은 무엇입니까?',
+            a: '코딩 특화 모델인 Qwen2.5-Coder 14B가 2026년 기준 최고의 로컬 코딩 모델입니다. 8 GB VRAM 제약이 있다면 Qwen2.5-Coder 7B를 선택하십시오.',
+          },
+          {
+            q: 'Aider를 Ollama와 함께 사용할 수 있습니까?',
+            a: '네. `aider --model ollama/qwen2.5-coder:14b` 명령으로 Ollama 모델을 직접 사용할 수 있습니다. Ollama가 로컬에서 실행 중이어야 합니다.',
+          },
+          {
+            q: 'Tabby를 Docker로 셀프호스팅하는 방법은 무엇입니까?',
+            a: '`docker run -it --gpus all -p 8080:8080 tabbyml/tabby serve --model TabbyML/StarCoder-1B` 명령으로 시작할 수 있습니다. 팀 전체가 하나의 인스턴스를 공유하며 사용할 수 있습니다.',
+          },
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Continue와 Copilot의 차이점은 무엇입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Continue는 Ollama를 통해 로컬 모델을 사용하므로 코드가 서버로 전송되지 않습니다. GitHub Copilot은 월 구독료가 필요하며 Microsoft 서버로 코드를 전송합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '로컬 LLM 코딩 어시스턴트에 가장 좋은 모델은 무엇입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Qwen2.5-Coder 14B가 2026년 기준 최고의 로컬 코딩 모델입니다. 8 GB VRAM 제약이 있다면 Qwen2.5-Coder 7B를 선택하십시오.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Aider를 Ollama와 함께 사용할 수 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '네. `aider --model ollama/qwen2.5-coder:14b` 명령으로 Ollama 모델을 직접 사용할 수 있습니다.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      inLanguage: 'ko',
+      name: '2026년 최고의 로컬 LLM IDE 플러그인 5선',
+      numberOfItems: 5,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Continue', description: '최고의 올인원 로컬 코딩 어시스턴트' },
+        { '@type': 'ListItem', position: 2, name: 'Cline', description: '최고의 에이전트 코딩 플러그인' },
+        { '@type': 'ListItem', position: 3, name: 'Aider', description: '최고의 터미널 기반 AI 코딩 도구' },
+        { '@type': 'ListItem', position: 4, name: 'Cody', description: '최고의 대형 코드베이스 인식 어시스턴트' },
+        { '@type': 'ListItem', position: 5, name: 'Tabby', description: '최고의 셀프호스팅 코드 자동완성 서버' },
+      ],
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: '2026년 최고의 로컬 LLM IDE 플러그인 5선',
+      description: 'Continue, Cline, Aider, Cody, Tabby를 로컬 Ollama 모델과 함께 직접 비교합니다.',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/best-local-llm-ide-plugins-2026',
+      inLanguage: 'ko',
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+  },
+
   pt: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

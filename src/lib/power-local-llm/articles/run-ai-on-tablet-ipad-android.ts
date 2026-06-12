@@ -2420,6 +2420,412 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Mobile & Edge LLMs',
+    title: '태블릿에서 로컬 AI 실행하기: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+    seoTitle: '아이패드·안드로이드 태블릿에서 AI 로컬 실행 2026',
+    intro:
+      '2026년에는 고급형 iPad와 RAM 8GB 이상의 안드로이드 기기에서 태블릿 로컬 AI 실행이 실용적입니다. 이 가이드는 iPad 온디바이스 추론(Pocket Paladin, LLM Farm), Android Termux + Ollama, 그리고 원격 연결(Wi-Fi를 통해 Ollama를 실행 중인 Mac이나 PC에 태블릿을 연결)을 포함한 모든 옵션을 다룹니다.',
+    metaDescription:
+      '2026년 iPad 및 안드로이드 태블릿에서 AI를 로컬로 실행하는 방법: 온디바이스 추론 앱, Termux + Ollama, 자택 Mac·PC 원격 연결 안내.',
+    twitterDescription:
+      '2026년 iPad·안드로이드 태블릿에서 AI 실행: 온디바이스 추론(Pocket Paladin, LLM Farm, Termux+Ollama), 자택 Mac·PC 원격 연결 및 기기별 모델 선택.',
+    current_models_mentioned: [
+      'Phi-4 Mini',
+      'Llama 3.2 3B',
+      'Qwen3 1.7B',
+      'Gemma 3 4B',
+      'Mistral Small',
+    ],
+    current_hardware_mentioned: [
+      'iPad Pro M4 16 GB',
+      'iPad Air M2 8 GB',
+      'Samsung Galaxy Tab S10+ 12 GB',
+      'Google Pixel Tablet 8 GB',
+    ],
+    audience:
+      'iPad 또는 안드로이드 기기에서 로컬로 AI를 실행하거나, 자택 LLM 설정에 원격으로 연결하고자 하는 태블릿 사용자. 클라우드 AI 서비스에 의존하지 않으려는 분들을 위한 안내입니다.',
+    readTime: '11분 분량',
+    educationalLevel: 'Beginner',
+    primaryTerm: '태블릿에서 AI 실행',
+    targetKeywords: [
+      'iPad 로컬 AI 실행',
+      '안드로이드 태블릿 LLM 로컬',
+      'Ollama iPad 원격 연결',
+      'Termux Ollama 안드로이드',
+      'LLM Farm iPad',
+      'Pocket Paladin iOS LLM',
+    ],
+    leadAnswerBlock:
+      '**태블릿에서 로컬 AI를 실행하는 방식은 두 가지입니다: 온디바이스 추론(태블릿 칩에서 모델이 직접 실행)과 원격 연결(태블릿이 Ollama를 실행 중인 자택 Mac·PC의 화면 역할). 온디바이스 추론은 iPad Pro M4(16GB, Phi-4 Mini·Llama 3.2 3B 실시간 실행), iPad Air M2(8GB, 3B 모델 적절한 속도), RAM 8GB 이상의 고급형 안드로이드 기기(Samsung Galaxy Tab S10+, Termux + Ollama)에서 실용적입니다. 자택 서버 IP를 통한 Open WebUI 또는 간단한 채팅 인터페이스 원격 연결은 RAM 용량·OS에 상관없이 모든 태블릿에서 작동하며, 태블릿을 강력한 자택 기기의 터치 단말로 활용할 수 있습니다. 대부분의 사용자에게 원격 연결이 더 나은 선택입니다: 자택 기기가 70B 모델을 실행하고 태블릿은 편리한 인터페이스를 제공합니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: 'iPad나 안드로이드 태블릿에서 로컬 AI 모델을 실행할 수 있습니까?',
+        answer:
+          '네, 고급형 기기에서 가능합니다. iPad Pro M4(16GB RAM)는 LLM Farm 또는 Pocket Paladin을 사용해 Phi-4 Mini(3.8B)와 Llama 3.2 3B를 실시간으로 실행합니다. iPad Air M2(8GB)는 3B 모델을 적절한 속도로 실행합니다. RAM 8GB 이상의 안드로이드 태블릿(Samsung Galaxy Tab S10+)은 Termux + Ollama를 통해 Phi-4 Mini와 Qwen3 1.7B를 로컬로 실행할 수 있습니다. RAM이 부족하거나 구형 칩의 태블릿은 원격 연결을 권장합니다: 자택 네트워크의 Mac·PC에서 Ollama를 실행하고 태블릿 브라우저의 Open WebUI로 접속하십시오.',
+        bullets: [
+          'iPad Pro M4(16GB) — LLM Farm 또는 Pocket Paladin으로 Phi-4 Mini·Llama 3.2 3B를 로컬 실시간 실행.',
+          'iPad Air M2(8GB) — 3B 모델을 사용 가능한 속도로 실행; 7B 모델은 느리지만 동작.',
+          '안드로이드 태블릿(RAM 8GB 이상) — Termux + Ollama로 Phi-4 Mini·Qwen3 1.7B 로컬 실행.',
+          '원격 연결 — RAM·OS 무관 모든 태블릿: 브라우저 Open WebUI로 자택 Mac·PC의 Ollama 접속.',
+          '대부분의 태블릿 최적 온디바이스 모델: Phi-4 Mini(3.8B, ~2.7GB) 또는 RAM 제한 기기용 Qwen3 1.7B.',
+          '7B 이상 모델에는 원격 연결 권장 — 자택 기기가 태블릿보다 빠르게 모델 실행.',
+          'SillyTavern·RisuAI는 iPad Safari·Android Chrome에서 작동하는 모바일 최적화 인터페이스 제공.',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '두 가지 모드: 온디바이스 vs 원격 연결', anchor: '#two-modes' },
+      { label: 'iPad: 온디바이스 추론', anchor: '#ipad-on-device' },
+      { label: 'Android: 온디바이스 추론', anchor: '#android-on-device' },
+      { label: '자택 기기 원격 연결', anchor: '#remote-connection' },
+      { label: '기기별 모델 추천', anchor: '#models' },
+      { label: '태블릿 로컬 AI 프런트엔드', anchor: '#frontends' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**온디바이스 추론은 iPad Pro M4(16GB)와 고급형 안드로이드(8GB 이상)에서 실용적입니다.** 이 임계치 이하에서는 생성 속도가 실시간 사용에 너무 느립니다. 대부분의 태블릿 사용자에게는 자택 기기 원격 연결이 최선의 방법입니다.',
+          '**원격 연결이 대부분의 사람들에게 권장하는 접근 방식입니다.** 자택 Wi-Fi 네트워크의 Mac·PC에서 Ollama를 실행하고 태블릿(RAM·OS 무관)을 연결하십시오. 자택 기기가 70B 모델을 실행하고 태블릿은 터치 채팅 인터페이스를 제공합니다. 태블릿에 모델을 다운로드할 필요가 없습니다.',
+          '**LLM Farm과 Pocket Paladin이 iPad 네이티브 옵션입니다.** 둘 다 iPad의 Apple Silicon 칩에서 GGUF 모델을 로컬로 실행합니다. LLM Farm은 설정 옵션이 더 많고, Pocket Paladin은 초보자에게 더 쉽습니다.',
+          '**Termux + Ollama가 안드로이드 접근 방식입니다.** 터미널 사용에 익숙해야 하지만 RAM 8GB 이상의 모든 안드로이드 기기에서 작동합니다. Ollama는 Termux에서 실행되어 localhost:11434에서 모델을 제공합니다.',
+          '**대부분의 태블릿 최적 온디바이스 모델: Phi-4 Mini(3.8B).** 사용 가능한 RAM 6GB 이상의 기기에서 작동하며, 일상적인 대부분의 작업에서 사용 가능한 출력을 생성하고 빠른 연결 시 5~10분 내 다운로드 가능합니다.',
+          '**태블릿 브라우저에서 Open WebUI가 가장 간단한 원격 연결 인터페이스입니다.** 자택 Mac·PC가 `192.168.x.x:3000`에서 Open WebUI를 실행하고 있다면, 태블릿 브라우저에서 해당 주소를 여십시오 — 앱 설치 없이, 설정 없이, 완전한 채팅 인터페이스를 제공합니다.',
+          '**SillyTavern은 모바일 최적화 인터페이스를 제공합니다.** 태블릿에서 캐릭터 카드 롤플레이 및 픽션 사용 시, 자택 기기에서 실행 중인 SillyTavern을 태블릿 브라우저로 접속하면 잘 작동합니다; RisuAI는 가장 뛰어난 네이티브 모바일 지원을 제공합니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**iPad 앱:** LLM Farm(무료, 오픈소스), Pocket Paladin(무료 티어 + 유료), PocketLLM(구형, 비활성).',
+          '**안드로이드 방법:** Termux + Ollama(CLI) 또는 MNN LLM(앱, 제한된 모델 지원).',
+          '**원격 연결:** 태블릿 브라우저 → 자택 기기 로컬 IP의 Open WebUI 또는 간단한 채팅 인터페이스.',
+          '**온디바이스 최소 사양:** iPad Air M2(8GB) — 3B 모델; iPad Pro M4(16GB) — 7B~8B 모델.',
+          '**안드로이드 온디바이스 최소 사양:** RAM 8GB 기기(Samsung Galaxy Tab S10+, OnePlus Pad 2).',
+          '**최적 온디바이스 모델:** 대부분의 태블릿에 Phi-4 Mini(3.8B, 2.7GB); 매우 제한된 기기에 Qwen3 1.7B.',
+          '**원격 연결 속도:** 태블릿 하드웨어가 아닌 Wi-Fi 품질과 자택 기기 생성 속도에 의존합니다.',
+        ],
+      },
+      twoModes: {
+        id: 'two-modes',
+        title: '두 가지 모드: 온디바이스 vs 원격 연결',
+        content:
+          '**가장 중요한 결정은 어떤 앱을 사용할지가 아니라, 태블릿에서 추론을 실행할지 자택의 더 강력한 기기에서 실행할지입니다.** 각 모드는 서로 다른 하드웨어 요구 사항과 성능 한계를 가집니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '태블릿에서 AI를 실행하는 실용적인 두 가지 모드: 온디바이스 추론(모델이 태블릿 칩에서 실행, 3B~7B 모델로 제한)과 원격 연결(태블릿이 Ollama와 Open WebUI를 통해 더 큰 모델을 실행하는 자택 Mac·PC의 브라우저 화면 역할).',
+          },
+          {
+            type: 'plain-terms',
+            text: '온디바이스 모드: 모델이 태블릿에 있어 오프라인으로 작동합니다. 소형 모델(3B, 고급형 iPad Pro라면 7B 정도)로 제한되며 클라우드 AI보다 느립니다. 원격 모드: 자택 Mac·PC가 Ollama와 70B 모델을 실행하고 태블릿은 브라우저에서 채팅만 표시합니다 — 태블릿 화면에서 70B 모델의 전체 품질을 얻고, 태블릿에 모델이 저장되지 않으며, 자택 기기가 켜져 동일한 Wi-Fi에 연결되어 있어야 합니다. 오프라인 사용이 특별히 필요하지 않다면 원격 연결을 선택하십시오.',
+          },
+        ],
+        columns: ['요소', '온디바이스', '원격 연결'],
+        rows: [
+          { '요소': '모델 크기 한계', '온디바이스': '3B~8B(iPad Pro M4); 3B(대부분의 태블릿)', '원격 연결': '무제한 — 자택 기기가 모든 모델 실행' },
+          { '요소': '오프라인 사용', '온디바이스': '가능 — Wi-Fi 없이 작동', '원격 연결': '불가 — 자택 Wi-Fi 필요' },
+          { '요소': '생성 속도', '온디바이스': '보통(iPad Pro M4 10~25 tok/초)', '원격 연결': '자택 기기에 의존(최대 40+ tok/초)' },
+          { '요소': '태블릿 저장 공간', '온디바이스': '모델당 2~10GB', '원격 연결': '없음 — 모델이 자택 기기에 존재' },
+          { '요소': '설정 복잡성', '온디바이스': '낮음(앱 + 모델 파일 다운로드)', '원격 연결': '낮음~중간(자택 기기에 Ollama + Open WebUI 필요)' },
+          { '요소': '적합한 용도', '온디바이스': '여행, 오프라인 사용, 3B 모델 작업', '원격 연결': '품질 우선 사용, 70B 모델, 편의성' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '자택에 Ollama를 실행할 수 있는 Mac·PC가 있다면 원격 연결부터 시작하십시오. 모델 파일을 태블릿에 저장하거나 모바일 앱의 제한을 다룰 필요 없이 즉시 더 나은 모델 품질을 태블릿에서 얻을 수 있습니다. 오프라인 사용이 필요하다고 느끼면 나중에 온디바이스 기능을 추가하십시오.',
+          },
+        ],
+        image: '/images/run-ai-on-tablet-two-modes-es.svg',
+        imageCaption: '태블릿 AI 두 가지 모드: 온디바이스 추론(모델이 태블릿 칩에서 실행, 오프라인 작동, 3B~8B 모델로 제한) vs 원격 연결(태블릿 브라우저가 Ollama를 사용하는 자택 Mac·PC에 연결, 태블릿에 모델 저장 없음, 무제한 모델 크기).',
+      },
+      ipadOnDevice: {
+        id: 'ipad-on-device',
+        title: 'iPad: 온디바이스 추론',
+        content:
+          '**iPad Pro M4(16GB)만이 7B 모델을 편안한 속도로 실행하는 유일한 iPad입니다.** iPad Air M2(8GB)와 M3(8GB)는 3B 모델을 적절하게 실행합니다. [RAM 8GB의 iPhone(iPhone 15 Pro Max)도](/ko/power-local-llm/best-local-llm-apps-iphone-2026) LLM Farm을 통해 소형 모델을 실행합니다.',
+        items: [
+          '**LLM Farm**(무료, 오픈소스): Hugging Face에서 GGUF 모델을 다운로드하여 Apple Silicon에서 llama.cpp로 실행합니다. iOS 네이티브 옵션 중 최고 성능. 채팅 및 완성 모드 지원. App Store에서 설치하십시오.',
+          '**Pocket Paladin**(무료 티어 + 구독): 선별된 모델 다운로드, LLM Farm보다 깔끔한 인터페이스, 초기 사용 경험이 약간 더 쉽습니다. 무료 티어는 3B 모델 포함; 구독 시 더 큰 모델과 API 모드 잠금 해제.',
+          '**모델 가져오기:** LLM Farm에서 모델 라이브러리 아이콘 탭 → "URL에서 모델 추가" → GGUF 파일의 Hugging Face 직접 다운로드 URL 붙여넣기. 또는 Apple 파일을 사용해 다른 곳에서 다운로드한 GGUF를 전송하십시오. 모델은 iCloud가 아닌 앱 로컬 스토리지에 저장됩니다.',
+          '**iPad RAM 관리:** iOS는 백그라운드 앱의 RAM을 적극적으로 관리합니다. 8GB iPad에서 7B 모델 실행 전에 다른 모든 앱을 닫으십시오 — 다른 앱이 메모리를 필요로 하면 iOS가 모델을 제거합니다. 16GB iPad Pro M4에서는 거의 문제가 없습니다.',
+          '**생성 속도 기대치:** iPad Pro M4(16GB): Phi-4 Mini ~20 tok/초, Llama 3.2 3B ~30 tok/초, Gemma 3 4B ~18 tok/초. iPad Air M2(8GB): 3B 모델 ~12~18 tok/초; 7B 모델 ~5~8 tok/초(실시간 채팅에 너무 느림).',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '8GB iPad에서 7B 모델을 실시간 채팅에 실행하려 하지 마십시오. 초당 5~8 토큰 속도로 각 응답은 15~30초가 걸립니다. 프롬프트를 보내고 기다리는 요약 작업에는 사용 가능하지만 대화용으로는 불편합니다. 8GB 기기에서는 3B 모델을 사용하고, 7B 이상 모델을 위해서는 16GB 기기로 업그레이드하거나 원격 연결로 전환하십시오.',
+          },
+        ],
+        image: '/images/run-ai-on-tablet-ipad-speed-es.svg',
+        imageCaption: 'iPad 온디바이스 추론 속도: iPad Pro M4(16GB)는 Phi-4 Mini·Llama 3.2 3B에서 18~30 tok/초 달성; iPad Air M2(8GB)는 3B 모델을 12~18 tok/초로 실행하지만 7B 모델에서 5~8 tok/초로 하락 — 실시간 채팅에 너무 느림.',
+      },
+      androidOnDevice: {
+        id: 'android-on-device',
+        title: 'Android: 온디바이스 추론',
+        content:
+          '**안드로이드 온디바이스 추론은 [Termux + Ollama](/ko/power-local-llm/best-local-llm-apps-android-2026)를 사용합니다 — Termux는 Android에서 Ollama를 네이티브로 실행하는 Linux 터미널 에뮬레이터입니다.** iPad 앱 경험보다 기술적이지만 Ollama 전체 생태계에 접근할 수 있습니다.',
+        numberedItems: [
+          'F-Droid에서 Termux를 설치하십시오(Play Store 버전 아님 — Play Store 빌드는 구식이고 필요한 패키지가 없습니다).',
+          'Termux에서: `pkg update && pkg install curl`',
+          'Ollama ARM 바이너리 다운로드: `curl -fsSL https://ollama.com/install.sh | sh` — 대부분의 안드로이드 태블릿과 호환되는 ARM64 빌드를 설치합니다.',
+          '모델 다운로드: `ollama pull phi4-mini` 또는 `ollama pull qwen3:1.7b`.',
+          '서버 시작: `ollama serve`(이 Termux 세션을 활성 상태로 유지).',
+          'Termux로 채팅: `ollama run phi4-mini` — 또는 브라우저를 열어 `http://localhost:11434`로 이동해 API에 접속. 그래픽 인터페이스를 원하면 로컬 Ollama 엔드포인트에 연결하는 Android 채팅 앱을 설치하십시오.',
+        ],
+        items: [
+          '**3B 이상 모델 지원 기기:** 최소 RAM 8GB(Samsung Galaxy Tab S10+, OnePlus Pad 2, Xiaomi Pad 7 Pro). RAM 6GB 기기는 Qwen3 1.7B만 실행 가능.',
+          '**Pixel Tablet 온디바이스 비권장:** Pixel Tablet(2023, 8GB Tensor G2)은 로컬 추론 권장 기기 목록에서 제외됩니다 — Tensor G2는 LLM 추론에서 Snapdragon 8 Gen 3·Dimensity 9300보다 현저히 느리며, Phi-4 Mini에서 4~7 tok/초(대화용으로 너무 느림)를 기록합니다. Pixel Tablet 사용자는 자택 기기 원격 연결을 사용하십시오.',
+          '**Snapdragon 8 Gen 3·Dimensity 9300**은 2026년 온디바이스 추론에서 가장 빠른 Android 칩입니다. 생성 속도: 1.7B 모델 ~15~25 tok/초; 3B 모델 ~8~12 tok/초.',
+          '**모델 저장:** Android에는 통합 메모리가 없습니다 — 대부분의 Termux 설정에서 모델은 GPU 가속 없이 시스템 RAM에서 실행됩니다. GPU 가속은 Termux:NVIDIA 또는 특정 Vulkan 빌드가 필요하며 설정이 더 복잡합니다.',
+          '**대안 앱:** MNN LLM(Alibaba, 무료, 선택된 모델용 Android 온디바이스 추론 앱)은 설정이 더 간단하지만 Ollama보다 모델 선택이 제한적입니다. AI Runner·llamafile도 Android 빌드가 있으며 지원은 다양합니다.',
+          '일본 Xperia 전용 설정 가이드와 하드웨어 호환성 표는 <a href="/ko/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">일본 Xperia 스마트폰에서 로컬 LLM 실행 방법</a>을 참조하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Termux:Widget 플러그인을 설치하고 "ollama serve"를 실행하는 바로가기를 만드십시오 — 이렇게 하면 Termux를 수동으로 열지 않고도 Android 홈 화면에서 Ollama 서버를 시작할 수 있습니다. Ollama가 서빙 중이면 localhost:11434에 연결하도록 설정된 채팅 앱을 열면 됩니다.',
+          },
+        ],
+        image: '/images/run-ai-on-tablet-termux-setup-es.svg',
+        imageCaption: 'Android 온디바이스 AI: Termux + Ollama 5단계 설정 — F-Droid에서 Termux 설치(Play Store 아님), 패키지 업데이트, curl로 Ollama 설치, 모델 다운로드(phi4-mini 또는 qwen3:1.7b), localhost:11434에서 서버 시작. RAM 최소 8GB 필요.',
+      },
+      remoteConnection: {
+        id: 'remote-connection',
+        title: '자택 기기 원격 연결',
+        content:
+          '**대부분의 태블릿 사용자를 위한 가장 간단한 설정: 자택 Mac·PC에서 Ollama와 Open WebUI를 실행하고 동일한 Wi-Fi 네트워크의 태블릿 브라우저로 채팅 인터페이스에 접속하십시오.** 태블릿은 자택에서 Ollama를 실행하는 더 강력한 기기의 터치 인터페이스가 됩니다 — 자택 기기 하드웨어 선택 시 [노트북 가이드](/ko/local-llms/best-laptops-local-llm)를 참조하십시오.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Ollama·Open WebUI를 실행하는 자택 기기에 원격 연결하면 모든 태블릿이 브라우저를 통해 70B 모델에 완전히 접근할 수 있습니다 — 태블릿에 모델 저장 없음, 앱 설치 없음, 모델 품질 타협 없음.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Mac·PC에서: Ollama 설치, 모델 다운로드, Open WebUI 설치(단일 Docker 명령), 로컬 네트워크 IP에 바인딩하여 실행. 태블릿에서: Safari 또는 Chrome 열어 http://[Mac-IP]:3000 접속, 완전한 AI 채팅 인터페이스 제공. 모델은 Mac에서 실행; 태블릿은 채팅만 표시. 모든 태블릿, OS, 화면 크기에서 작동.',
+          },
+        ],
+        numberedItems: [
+          '**자택 기기에서:** Ollama 설치(macOS: `brew install ollama`, Windows: ollama.com에서 다운로드). 모델 다운로드: `ollama pull llama3.3:70b`(또는 원하는 모델). 네트워크 바인딩으로 Ollama 시작: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`.',
+          '**Open WebUI 설치**(태블릿 친화적인 채팅 인터페이스): `docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --name open-webui ghcr.io/open-webui/open-webui:main`. Open WebUI는 이제 `http://[기기-IP]:3000`에서 접근 가능.',
+          '**자택 기기 로컬 IP 확인:** macOS에서 시스템 환경설정 → 네트워크 → 현재 네트워크 → IP 주소. Windows에서 명령 프롬프트에서 `ipconfig` 실행 후 IPv4 주소 확인. IP를 기록하십시오(일반적으로 `192.168.x.x`).',
+          '**태블릿에서:** Safari(iPad) 또는 Chrome(Android) 열기. `http://[기기-IP]:3000` 접속. Open WebUI에서 계정 생성(로컬 전용, 클라우드 없음). 드롭다운 메뉴에서 모델 선택. 채팅 시작.',
+          '**보안:** 이 설정은 로컬 네트워크 전용입니다. 인증 없이 포트 3000을 인터넷에 노출하지 마십시오(Open WebUI는 내장 관리자 계정 시스템을 갖추고 있습니다). 연결은 일반 HTTP입니다 — 공공 Wi-Fi에서 민감한 정보를 전송하지 마십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '태블릿 홈 화면에 자택 기기의 Open WebUI URL을 북마크하십시오(Safari: 공유 → 홈 화면에 추가; Chrome: 점 세 개 메뉴 → 홈 화면에 추가). 이렇게 하면 네이티브 앱처럼 느껴집니다. iPad에서 Safari의 전체 화면 웹 앱은 앱과 유사한 경험을 위해 브라우저 바를 숨깁니다.',
+          },
+        ],
+        image: '/images/run-ai-on-tablet-remote-setup-es.svg',
+        imageCaption: '태블릿 원격 AI 4단계: 자택 기기에 Ollama 설치, 모델·Open WebUI 다운로드, 기기 IP 확인, 태블릿 브라우저에서 http://[IP]:3000 접속 — 태블릿에 모델 저장 없이 20~40 tok/초로 70B 모델 실행.',
+      },
+      models: {
+        id: 'models',
+        title: '기기별 모델 추천',
+        content:
+          '**모델 선택은 선호도가 아닌 사용 가능한 RAM에 의해 결정됩니다.** 아래 표는 기기 RAM을 실시간 속도(8 tok/초 이상)로 실행 가능한 가장 큰 모델에 매핑합니다. 모델 레이어에 대해서는 [2026년 모바일 LLM 모델 비교](/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm)를, 모든 하드웨어 레벨의 더 넓은 모델 개요는 [2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026)을 참조하십시오.',
+        columns: ['기기 / RAM', '권장 모델', '속도', '적합한 용도'],
+        rows: [
+          { '기기 / RAM': 'iPad Air M2/M3(8GB)', '권장 모델': 'Phi-4 Mini Q4', '속도': '~15~18 tok/초', '적합한 용도': '글쓰기 지원, 요약' },
+          { '기기 / RAM': 'iPad Pro M4(16GB)', '권장 모델': 'Llama 3.2 3B / Gemma 3 4B Q4', '속도': '~25~30 tok/초 / ~15~20 tok/초', '적합한 용도': '실제 LLM 워크스테이션, RAG, 픽션 작성' },
+          { '기기 / RAM': 'Android 8GB(Tab S10+)', '권장 모델': 'Termux+Ollama로 Phi-4 Mini Q4', '속도': '~10~15 tok/초', '적합한 용도': 'Termux에 익숙한 고급 사용자' },
+          { '기기 / RAM': 'Android 6GB', '권장 모델': 'Qwen3 1.7B Q4', '속도': '~15~20 tok/초', '적합한 용도': '가벼운 채팅, 번역, 간단한 작업' },
+          { '기기 / RAM': 'Pixel Tablet(8GB)', '권장 모델': '원격 연결만', '속도': 'N/A', '적합한 용도': 'Tensor G2가 온디바이스에 너무 느림' },
+          { '기기 / RAM': '모든 태블릿(원격)', '권장 모델': '자택 기기의 모든 모델', '속도': '~20~40 tok/초', '적합한 용도': '품질 우선 사용, 70B 모델' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '일상적인 대부분의 작업(텍스트 작성, 질문 응답, 콘텐츠 요약)에서 태블릿의 Phi-4 Mini(3.8B)는 충분히 유능합니다. 70B 모델 대비 부족한 점: 복잡한 다단계 추론, 섬세한 창의적 글쓰기, 장문 문서 분석. 이러한 작업에는 더 큰 모델을 실행하는 자택 기기에 원격 연결하십시오.',
+          },
+        ],
+        image: '/images/run-ai-on-tablet-model-by-device-es.svg',
+        imageCaption: '태블릿별 최적 모델: iPad Pro M4(16GB)는 Llama 3.2 3B에서 25~30 tok/초 달성; iPad Air M2/M3은 Phi-4 Mini를 15~18 tok/초로 실행; Android 8GB는 Termux를 통해 10~15 tok/초 달성; Pixel Tablet은 느린 Tensor G2 칩으로 원격 연결 필요.',
+      },
+      frontends: {
+        id: 'frontends',
+        title: '태블릿 로컬 AI 프런트엔드',
+        content:
+          '**태블릿에서 사용하는 채팅 인터페이스는 사용성에 크게 영향을 미칩니다.** 일부 프런트엔드는 모바일용으로 설계되었으며, 다른 것들은 주로 데스크톱용으로 태블릿에서는 겨우 사용 가능합니다.',
+        items: [
+          '**Open WebUI(브라우저):** 일반 채팅용 최고의 모바일 친화적 웹 인터페이스. Safari 또는 Chrome에서 모든 로컬IP:포트에서 작동. 태블릿 화면 비율에 잘 적응. 원격 연결 설정에 권장.',
+          '**LLM Farm(iPad 앱):** iOS 전용 설계, iPad 전체 화면 활용. iPad에서 가장 유능한 온디바이스 추론 옵션. 데스크톱 앱보다 세련됨은 덜하지만 iOS 추론을 위해 특별히 제작됨.',
+          '**Pocket Paladin(iPad 앱):** LLM Farm보다 깔끔한 인터페이스, 일반 사용자용 설계. 무료 티어는 3B 모델 실행; 유료 티어는 더 큰 모델과 API 접근 잠금 해제.',
+          '**RisuAI(브라우저, 모바일 최적화):** 캐릭터 카드 롤플레이·픽션을 위한 최고의 모바일 경험. 원격 Ollama 인스턴스에 연결 가능. iPad Safari에서 거의 네이티브 수준의 인터페이스로 작동.',
+          '**SillyTavern(브라우저):** 원격 Ollama 인스턴스에 연결된 iPad Safari에서 작동. 모바일 최적화되지 않았지만 기능적. 일부 확장 기능은 모바일 Safari에서 작동하지 않습니다.',
+          '**Termux CLI(Android):** 명령줄 전용. 스크립팅 작업에 유용; 보조 앱 없이는 대화용으로 실용적이지 않음.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'iPad에서 캐릭터 카드 롤플레이·픽션 사용 시, Llama 3.3 70B를 실행하는 원격 Ollama 인스턴스에 연결된 RisuAI가 2026년 최고의 조합입니다. RisuAI의 모바일 인터페이스는 터치에 최적화되었으며, 원격 연결은 태블릿에 들어갈 수 있는 어떤 모델보다 훨씬 나은 캐릭터 목소리를 생성하는 70B 모델에 접근할 수 있게 합니다.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '흔한 실수',
+        items: [
+          '**8GB 태블릿에서 7B 모델 실행.** 5~8 tok/초 속도는 대화용으로 너무 느립니다. 8GB 기기 온디바이스 채팅에는 3B 모델을 사용하고, 7B 이상 품질은 원격 연결을 사용하십시오.',
+          '**Android에서 Play Store의 Termux 사용.** Termux의 Play Store 버전은 구식이고 Ollama에 필요한 패키지가 없습니다. 항상 F-Droid에서 Termux를 설치하십시오.',
+          '**인증 없이 Open WebUI를 인터넷에 노출.** Open WebUI는 기본적으로 비밀번호가 없습니다. 자택 네트워크 외부에 노출하면 URL을 찾은 누구든 모델에 접근할 수 있습니다. 관리자 계정 시스템을 활성화하고 방화벽을 사용하십시오.',
+          '**8GB iPad에서 온디바이스 실행 전 다른 앱을 닫지 않음.** iOS는 RAM에서 백그라운드 앱을 제거합니다. 8GB iPad의 3B 모델은 ~3.5GB를 사용하며, iOS가 다른 앱을 위해 해당 메모리를 회수하면 모델이 실패합니다. 추론 시작 전 다른 모든 앱을 닫으십시오.',
+          '**모바일 브라우저에서 데스크톱 수준의 인터페이스 기대.** SillyTavern과 일부 다른 프런트엔드는 주로 데스크톱용입니다. 브라우저에서의 모바일 경험은 기능하지만 세련되지 않습니다. 모바일 UX를 위해서는 RisuAI 또는 Open WebUI를 선호하십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          'LLM Farm(iOS) 문서 및 GitHub — [github.com/guinmoon](https://github.com/guinmoon/LLMFarm)',
+          'Pocket Paladin iOS 앱 — [App Store](https://apps.apple.com)',
+          'Ollama Termux ARM 빌드 — [Ollama 문서](https://ollama.com/docs)',
+          'Open WebUI 문서 — [docs.openwebui.com](https://docs.openwebui.com)',
+          'Apple M4 칩 사양, 메모리 대역폭·Neural Engine — [Apple Silicon](https://apple.com/newsroom)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: 'iPad에서 AI를 실행할 수 있습니까?',
+            a: '네, iPad Pro M4(16GB) 및 iPad Air M2/M3(8GB)에서 가능합니다. iPad Pro M4는 LLM Farm 또는 Pocket Paladin을 사용해 Phi-4 Mini와 Llama 3.2 3B를 실시간으로 실행합니다. iPad Air M2는 3B 모델을 적절하게 실행합니다. iPad에서 7B 이상 모델에는 자택 Mac·PC에서 Ollama를 실행하는 원격 연결을 권장합니다 — iPad는 채팅을 표시하지만 자택 기기가 추론을 처리합니다.',
+          },
+          {
+            q: '안드로이드 태블릿에서 AI를 실행할 수 있습니까?',
+            a: '네, Termux + Ollama를 사용해 RAM 8GB 이상의 기기에서 가능합니다. Samsung Galaxy Tab S10+(12GB RAM)는 Phi-4 Mini를 ~10~15 tok/초로 실행합니다. RAM 6GB 기기는 Qwen3 1.7B를 실행할 수 있습니다. 설정에는 F-Droid의 Termux와 일부 터미널 명령에 대한 친숙함이 필요합니다. 대부분의 Android 태블릿 사용자에게 자택 기기 원격 연결이 더 간단한 방법입니다.',
+          },
+          {
+            q: '태블릿 온디바이스 AI가 인터넷 없이 작동합니까?',
+            a: '네. 모델이 다운로드되고 앱이 설치되면 iPad(LLM Farm, Pocket Paladin)와 Android(Termux + Ollama)의 온디바이스 추론은 인터넷 연결 없이 작동합니다. 이것이 원격 연결 접근 방식 대비 온디바이스의 주요 이점 중 하나입니다 — 원격 연결 방식은 자택 Wi-Fi가 필요합니다.',
+          },
+          {
+            q: 'iPad에서 최고의 AI 앱은 무엇입니까?',
+            a: '온디바이스 추론: LLM Farm(더 많은 옵션, 오픈소스) 또는 Pocket Paladin(더 간단한 인터페이스). 자택 Ollama 서버에 원격 연결: Safari의 Open WebUI(최고의 일반 채팅), Safari의 RisuAI(롤플레이·캐릭터 픽션 최고). 최선의 선택은 온디바이스 기능, 오프라인 사용, 또는 최고의 인터페이스 품질 중 무엇을 원하느냐에 따라 다릅니다.',
+          },
+          {
+            q: 'Android에서 Termux + Ollama는 안전합니까?',
+            a: '네. Termux는 수백만 개발자가 사용하는 잘 검증된 Android 터미널 에뮬레이터입니다. Termux의 Ollama는 로컬 전용 API(기본적으로 localhost:11434)를 제공합니다 — 바인딩 주소를 명시적으로 변경하지 않는 한 네트워크의 다른 기기에서 접근할 수 없습니다. 모델 파일은 Android 공유 스토리지가 아닌 Termux의 개인 스토리지에 저장됩니다.',
+          },
+          {
+            q: '태블릿에서 ChatGPT와 유사한 품질의 응답을 로컬로 얻을 수 있습니까?',
+            a: '거의 가능하지만 올바른 설정이 필요합니다. GPT-5.5 품질에는 70B 이상의 모델이 필요합니다. 태블릿에서: iPad Pro M4(16GB)는 70B 모델을 실행할 수 없습니다 — 3B~8B 모델만 들어갑니다. 원격 연결을 통해: 자택 기기에 24GB GPU(RTX 4090) 또는 64GB 통합 메모리(Mac M5 Max)가 있다면 Llama 3.3 70B를 실행할 수 있고, 태블릿은 브라우저의 Open WebUI를 통해 그 품질에 접근합니다. 이것이 태블릿에서 클라우드 AI 품질에 가장 근접한 방법입니다.',
+          },
+          {
+            q: '노트북 덮개를 닫아도 자택 Ollama 서버가 계속 실행되게 하려면 어떻게 해야 합니까?',
+            a: 'macOS에서 덮개 닫기 절전 정책 설정: 시스템 환경설정 → 배터리 → "Power Nap 활성화" 비활성화, Amphetamine 같은 도구로 전원 연결 시 절전 방지. Windows에서 전원 옵션 → 전원 계획 설정 변경 → 전원 연결 시 "절대 안 함"으로 설정. 또는 주 노트북 대신 항상 켜진 기기(미니 PC, NAS, 재활용한 구형 노트북)에서 Ollama를 실행하십시오.',
+          },
+          {
+            q: '태블릿에서 AI를 실행하면 배터리가 빨리 소모됩니까?',
+            a: '네 — 온디바이스 추론은 CPU/GPU 집약적입니다. iPad Pro M4에서 활성 대화에 Phi-4 Mini를 실행하면 시간당 약 20~30% 배터리가 소모됩니다. 장시간 사용 시 태블릿을 충전 상태로 유지하십시오. 자택 기기에 원격 연결하면 태블릿 배터리 소모가 현저히 줄어듭니다 — 태블릿은 단지 웹 페이지를 표시합니다.',
+          },
+          {
+            q: 'AI 추론 중에 태블릿에 열 쓰로틀링이 발생합니까?',
+            a: '네, 특히 능동 냉각 없는 iPad Air M2/M3 및 Android 태블릿에서 발생합니다. iPad Pro M4는 더 넓은 열 마진을 가지며 눈에 띄는 쓰로틀링 전에 ~10~15분간 생성 속도를 유지합니다. Android 태블릿은 더 빨리 쓰로틀링됩니다(5~8분의 지속적인 추론). 완화 방법: 더 짧은 생성 청크(응답당 200~400 토큰) 사용, 딱딱한 표면 위에 태블릿 놓기, 동시에 CPU를 많이 사용하는 다른 앱 실행 피하기.',
+          },
+          {
+            q: '태블릿 AI 사용에 가장 적합한 키보드는 무엇입니까?',
+            a: 'iPad Pro M4용 Apple Magic Keyboard(트랙패드 포함)가 가장 세련된 설정입니다 — Safari + Open WebUI에서 전체 키보드 단축키 작동, 트랙패드로 긴 응답에서 텍스트 선택 가능. Logitech Combo Touch가 경제적인 대안입니다. Android: Bluetooth 키보드 모두 Termux에서 작동하지만 경험이 더 거칩니다(터미널 전용). 글쓰기 작업의 경우 iPad Pro + Magic Keyboard는 태블릿을 글쓰기 중심 AI 워크스테이션으로 변환합니다.',
+          },
+          {
+            q: 'iPad에서 SillyTavern을 실행할 수 있습니까?',
+            a: '네, 원격 연결을 통해 가능합니다. SillyTavern은 자택 Mac·PC에서 실행되고 iPad Safari가 로컬 IP로 연결됩니다. 모바일 인터페이스는 기능하지만 세련되지 않습니다 — 일부 확장 기능(regex 도구, 그룹 채팅 패널)은 작동하지만 좁게 느껴집니다. 롤플레이에 특화하여, RisuAI는 SillyTavern보다 더 나은 모바일 인터페이스를 갖추며, 둘 다 자택 기기의 동일한 Ollama 백엔드에 연결할 수 있습니다.',
+          },
+          {
+            q: '태블릿에서 장문 RAG를 처리할 수 있습니까?',
+            a: '온디바이스에서는 불가능합니다 — 태블릿에 1,000개 이상의 문서를 임베딩하는 것은 실용적이지 않습니다. 원격 연결을 통해서는 가능합니다 — 자택 기기가 RAG 파이프라인을 처리하고 태블릿은 채팅 인터페이스를 표시합니다. 자택 기기에서 실행되는 AnythingLLM을 태블릿 브라우저로 접속하면 태블릿 측 제한 없이 모든 크기의 문서 컬렉션을 처리합니다. 태블릿에서 RAG를 원하는 학생이나 지식 노동자에게 원격 연결이 유일한 실용적 옵션입니다.',
+          },
+          {
+            q: '태블릿 AI와 함께 외부 모니터를 사용할 수 있습니까?',
+            a: '네, iPad Pro M4에서는 Stage Manager + 외부 디스플레이로 다중 창 설정이 가능합니다; 외부 모니터에 Open WebUI, iPad 화면에 노트/원본 문서. Galaxy Tab S10 Ultra는 외부 디스플레이로 DeX 모드를 지원해 다중 모니터 AI 워크플로가 가능합니다. DeX 모드 없는 Android 태블릿은 화면을 미러링합니다 — 덜 유용합니다. iPad Pro + 외부 모니터 + Magic Keyboard는 2026년 태블릿이 실제 AI 워크스테이션에 가장 근접하게 됩니다.',
+          },
+          {
+            q: '로컬 AI에 태블릿이 스마트폰보다 낫습니까?',
+            a: '집중적인 타이핑 작업(초안 작성, RAG, 긴 대화)에는 네 — 키보드 지원과 화면 크기가 중요합니다. 빠른 채팅, 음성 쿼리, 이동 중 사용에는 이미 갖고 있는 스마트폰이 낫습니다. iPad Pro M4는 로컬 AI에서 플래그십 스마트폰을 크게 능가하는 유일한 태블릿입니다; 중급 태블릿과 스마트폰은 대략 동등합니다. 대부분의 독자는 특별히 로컬 AI를 위해 태블릿을 구매해서는 안 됩니다 — 다른 이유로 원한다면 구매하십시오; AI 기능은 보너스입니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[2026년 iPhone용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — iPhone 특화 앱 선택 및 설정에 초점을 맞춘 동반 가이드.',
+          '[2026년 Android용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-android-2026) — Termux + Ollama를 넘어선 Android 앱 선택을 위한 동반 가이드.',
+          '[2026년 최고의 모바일 LLM 모델: Phi-4 Mini vs Gemma 3 vs SmolLM](/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — 모델 레이어 동반 가이드: 각 작업에 어떤 모바일 모델을 선택할지.',
+          '[스마트폰에서 로컬 오프라인 음성 비서 구축](/ko/power-local-llm/voice-assistant-local-mobile-offline) — 오프라인 모바일 음성 지원을 위한 동반 제작 가이드.',
+          '[Windows, Mac, Linux용 가장 쉬운 로컬 AI 앱](/ko/power-local-llm/easiest-local-ai-app-windows-mac-linux) — Mac·PC에서 로컬 AI를 설정하는 사용자를 위한 데스크톱 버전.',
+          '[저사양 PC용 최고의 로컬 AI 앱](/ko/power-local-llm/best-local-ai-app-low-end-pc) — 리소스가 제한된 저RAM 기기를 위한 추천.',
+          '[비기술 사용자를 위한 최고의 로컬 AI 앱](/ko/power-local-llm/local-ai-app-non-technical-users) — 온보딩 및 사용 편의성 중심의 사용자 경험 비교.',
+          '[SillyTavern vs Agnai vs RisuAI: 최고의 로컬 롤플레이 프런트엔드](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 태블릿에서 캐릭터 카드 롤플레이를 위한 모바일 인터페이스 비교.',
+          '[LM Studio vs Jan vs GPT4All: 전체 비교](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 태블릿 가이드를 보완하는 데스크톱 앱 비교.',
+          '[2026년 MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 태블릿을 자택 기기의 MCP 지원 에이전트 설정에 연결.',
+          '[최고의 로컬 LLM 노트북](/ko/local-llms/best-laptops-local-llm) — 태블릿과 원격 연결로 결합하는 자택 기기의 하드웨어 사이징 가이드.',
+          '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 모바일이 아닌 것을 포함한 모든 하드웨어 레벨의 더 넓은 모델 개요.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '태블릿에서 로컬 AI 실행하기: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+      description:
+        '2026년 iPad 또는 안드로이드 태블릿에서 AI를 로컬로 실행하는 방법. 온디바이스 추론 앱, Android Termux + Ollama, 자택 Mac·PC 원격 연결 설명.',
+      image: `https://www.promptquorum.com/ko/og/power-local-llm/run-ai-on-tablet-ipad-android`,
+      url: 'https://www.promptquorum.com/ko/power-local-llm/run-ai-on-tablet-ipad-android',
+      inLanguage: 'ko',
+      datePublished: '2026-05-07',
+      dateModified: '2026-05-07',
+      author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      articleBody:
+        '태블릿에서 로컬 AI를 실행하는 것은 2026년에 실용적입니다. 이 가이드는 온디바이스 추론과 자택 기기 원격 연결을 다룹니다.',
+      keywords: [
+        'iPad 로컬 AI',
+        '안드로이드 태블릿 LLM',
+        'Ollama iPad',
+        'Termux Ollama',
+        'LLM Farm',
+        'Pocket Paladin',
+      ],
+      educationalLevel: 'Beginner',
+      teaches: [
+        'iPad 로컬 AI 추론 설정 방법',
+        'Android에서 Termux·Ollama 사용 방법',
+        '태블릿에서 원격 Ollama 연결 방법',
+        '태블릿 하드웨어에 따른 모델 선택',
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', 'name': 'LLM Farm' },
+        { '@type': 'SoftwareApplication', 'name': 'Pocket Paladin' },
+        { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+        { '@type': 'SoftwareApplication', 'name': 'Open WebUI' },
+        { '@type': 'SoftwareApplication', 'name': 'Termux' },
+      ],
+      about: [
+        { '@type': 'Thing', 'name': '로컬 AI 추론' },
+        { '@type': 'Thing', 'name': '태블릿 LLM' },
+        { '@type': 'Thing', 'name': 'iPad AI 앱' },
+        { '@type': 'Thing', 'name': 'Android 태블릿 추론' },
+      ],
+    },
+  },
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',

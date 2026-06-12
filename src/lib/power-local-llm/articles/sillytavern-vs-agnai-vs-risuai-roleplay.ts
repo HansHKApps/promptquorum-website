@@ -1228,6 +1228,422 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
 },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-07',
+    dateModified: '2026-05-07',
+    next_refresh_due: '2026-11-07',
+    theme: 'Creative & Roleplay',
+    title: 'SillyTavern vs Agnai vs RisuAI: 최고의 로컬 롤플레이 인터페이스 (2026)',
+    seoTitle: 'SillyTavern vs Agnai vs RisuAI: 로컬 롤플레이 UI 2026',
+    intro:
+      'SillyTavern, Agnai, RisuAI는 2026년 로컬 LLM을 위한 세 가지 가장 견고한 롤플레이 인터페이스입니다 — 각각 Ollama, llama.cpp 또는 OpenAI 호환 엔드포인트에 쉽게 연결되며, 기능 밀도에 대해 서로 다른 입장을 취합니다. SillyTavern은 깊은 커스터마이징 옵션(대부분의 경험 많은 사용자가 결국 정착하는 곳); Agnai는 멀티유저 옵션(진정한 공유 서버 모드를 갖춘 유일한 솔루션); RisuAI는 SillyTavern이 과하게 느껴질 때의 가벼운 대안입니다. 이 가이드는 캐릭터 카드, 페르소나 관리, 로어북, 그룹 채팅, 모델 호환성, 프라이버시, 플랫폼 지원 면에서 비교합니다.',
+    metaDescription:
+      '로컬 LLM 롤플레이를 위한 SillyTavern, Agnai, RisuAI 비교. 기능, 모델 호환성, 프라이버시, 커뮤니티 생태계 비교.',
+    twitterDescription:
+      '3가지 로컬 롤플레이 인터페이스 비교: SillyTavern(깊은 커스터마이징), Agnai(멀티유저), RisuAI(가벼운 대안). 캐릭터 카드, 로어북, 그룹 채팅, 프라이버시.',
+    current_models_mentioned: [
+      'Llama 3.3 70B',
+      'Qwen3 32B',
+      'Command R+ 104B',
+      'Hermes 3 Llama 3.3',
+      'Mistral Large',
+    ],
+    current_hardware_mentioned: [
+      'Apple M5 MacBook Pro 16 GB',
+      'NVIDIA RTX 4090 24 GB',
+      'Apple M5 Max 64 GB',
+    ],
+    audience:
+      '캐릭터 카드, 페르소나 관리, 그룹 장면을 갖춘 전용 채팅 인터페이스를 통해 로컬 LLM을 실행하는 롤플레이 작가, 캐릭터 디자이너, 픽션 협업자 및 창의적 글쓰기 팀.',
+    readTime: '13분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '로컬 롤플레이 인터페이스',
+    targetKeywords: [
+      'SillyTavern vs Agnai',
+      'Agnai vs RisuAI',
+      '최고의 로컬 롤플레이 UI',
+      'SillyTavern Ollama 설정',
+      '로컬 LLM 캐릭터 카드',
+      'RisuAI vs SillyTavern',
+    ],
+    leadAnswerBlock:
+      '**SillyTavern은 ~80%의 사용자에게 올바른 선택입니다 — 가장 깊은 캐릭터 카드 호환성, 가장 큰 커뮤니티 생태계, 가장 강력한 커스터마이징 표면(확장, 프리셋, regex 교체, world info). Agnai는 세 가지 중 유일한 실제 멀티유저 호환성을 갖추고 있어, 공유 서버, 협업 롤플레이, 소규모 그룹 프로젝트에 올바른 선택입니다. RisuAI는 SillyTavern의 기능 밀도가 장벽이 될 때의 가벼운 옵션입니다 — 동일한 캐릭터 카드 사양, 더 작은 기능 표면, 더 쉬운 첫 실행. 세 가지 모두 Tavern v2 캐릭터 카드 사양을 지원하고, Ollama 또는 OpenAI 호환 엔드포인트에 연결하며, 텔레메트리 없이 완전히 로컬로 실행됩니다. 워크플로우 형태에 따라 선택하십시오: 깊은 커스터마이징이 필요한 솔로 작가 → SillyTavern; 캐릭터를 공유하는 작가 그룹 → Agnai; 오늘 바로 채팅을 시작하고 싶은 신규 사용자 → RisuAI.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 최고의 로컬 LLM 롤플레이 인터페이스는 SillyTavern, Agnai, RisuAI 중 무엇입니까?',
+        answer:
+          'SillyTavern은 대부분의 사용자의 기본 선택입니다 — 더 깊은 기능, 더 큰 커뮤니티, 더 많은 확장. Agnai는 협업자와 캐릭터·채팅을 공유하는 경우 유일한 신뢰할 수 있는 멀티유저 옵션입니다. RisuAI는 SillyTavern이 과하다고 느끼는 사용자를 위한 가벼운 대안입니다. 세 가지 모두 오픈소스이며, Tavern v2 캐릭터 카드를 로드하고 Ollama·OpenAI 호환 엔드포인트에 연결됩니다. SillyTavern은 커스터마이징 깊이(확장, regex 교체, world info, 고급 프리셋)에서 승리하고, Agnai는 공유 서버 모드에서 승리하며, RisuAI는 첫 실행 단순성에서 승리합니다. 결정은 원시 품질이 아닌 워크플로우 형태에 관한 것입니다 — 세 가지 모두 동일한 모델과 결합될 때 동일한 대화를 생성합니다.',
+        bullets: [
+          'SillyTavern — 더 깊은 기능, 더 큰 커뮤니티, 커스터마이징이 필요한 솔로 사용자의 기본 선택.',
+          'Agnai — 실제 멀티유저 지원이 있는 유일한 인터페이스; 공유 서버·협업 롤플레이에 선택.',
+          'RisuAI — 세 가지 중 가장 가벼움; SillyTavern의 기능 밀도가 장벽일 때 선택.',
+          '세 가지 모두 Tavern v2 캐릭터 카드 지원; 하나의 카드가 다른 것들에서도 작동.',
+          '세 가지 모두 Ollama, llama.cpp, LM Studio, vLLM, OpenAI 호환 엔드포인트에 연결.',
+          '세 가지 모두 오픈소스이며 완전히 로컬로 실행; 기본적으로 어느 것도 텔레메트리 없음.',
+          '모델 추천: Llama 3.3 70B(최고 범용), Hermes 3(무검열), Command R+(대화), Qwen3 32B(24GB 리그 기본 선택).',
+        ],
+        updatedDate: '2026-05-07',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '테스트 방법', anchor: '#how-we-tested' },
+      { label: '세 인터페이스 비교', anchor: '#comparison' },
+      { label: 'SillyTavern 심층 분석', anchor: '#sillytavern' },
+      { label: 'Agnai 심층 분석', anchor: '#agnai' },
+      { label: 'RisuAI 심층 분석', anchor: '#risuai' },
+      { label: '캐릭터 카드 형식(Tavern v2)', anchor: '#character-cards' },
+      { label: '인터페이스별 모델 추천', anchor: '#models' },
+      { label: '프라이버시: 어떤 인터페이스가 외부와 통신하는가', anchor: '#privacy' },
+      { label: '결정: 인터페이스 선택하기', anchor: '#decision' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**SillyTavern은 2026년 ~80%의 사용자의 기본 선택입니다.** 더 깊은 캐릭터 카드 기능, 더 큰 확장 생태계, 더 넓은 커스터마이징 표면. 대안을 시도한 후 대부분의 경험 많은 롤플레이 사용자가 결국 정착하는 인터페이스.',
+          '**Agnai는 유일한 신뢰할 수 있는 멀티유저 옵션입니다.** 공유 서버 모드는 여러 작가가 동일한 인스턴스에 연결하고, 캐릭터를 공유하며, 장기 채팅에서 협업할 수 있게 합니다. 소규모 작가 그룹, 친구 서클, 공유 캐릭터 커뮤니티에 올바른 선택.',
+          '**RisuAI는 가벼운 대안입니다.** 동일한 Tavern v2 캐릭터 카드 지원, 더 작은 기능 표면, 더 쉬운 첫 실행. SillyTavern이 과하거나 빠르게 시작하고 싶을 때의 선택.',
+          '**세 가지 모두 Tavern v2 캐릭터 카드 사양을 지원합니다.** SillyTavern에서 만든 카드는 변환 없이 Agnai·RisuAI에서 작동합니다. 인터페이스 간 마이그레이션이 쉽습니다.',
+          '**세 가지 모두 Ollama, llama.cpp, LM Studio, OpenAI 호환 엔드포인트에 연결됩니다.** 특정 모델 백엔드에 묶이지 않으며, 백엔드 변경은 설정 변경입니다.',
+          '**프라이버시: 세 가지 모두 기본적으로 텔레메트리 없이 완전히 로컬로 실행됩니다.** 각각의 선택적 클라우드 기능(번역, 이미지 생성)은 명시적으로 활성화될 때만 외부와 통신합니다. 공식 감사 증거가 필요하면 네트워크 모니터링으로 확인하십시오.',
+          '**모델 선택이 인터페이스 선택보다 더 중요합니다.** 훌륭한 인터페이스에 소형 범용 모델을 결합하면 로어북 시스템이 아무리 좋아도 평범한 대화를 생성합니다; 기본 인터페이스에 Llama 3.3 70B를 결합하면 생동감 있는 장면을 만듭니다. 모델 측면은 [2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026)을 참조하십시오.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-setup-es.svg',
+        imageCaption: '설정 시간 및 설치: SillyTavern 15분(git clone + npm), Agnai 단일 사용자 10분(npm), Agnai 공유 서버 30분(+ MongoDB + 인증), RisuAI 5분(데스크톱 앱 다운로드, 터미널 없음). 첫 사용자: RisuAI가 가장 빠름.',
+        items: [
+          '**SillyTavern** — Node.js + 브라우저 UI, 로컬 호스팅. 가장 깊은 커스터마이징, 가장 큰 커뮤니티.',
+          '**Agnai** — Node.js + 브라우저 UI; 로컬 또는 공유 서버로 실행. 세 가지 중 유일한 멀티유저 옵션.',
+          '**RisuAI** — Tauri/Electron 데스크톱 앱; 더 가벼운 기능 세트, 더 쉬운 첫 실행.',
+          '**캐릭터 카드 사양:** 세 가지 모두 Tavern v2(표준)를 로드; 완전히 상호 호환.',
+          '**모델 백엔드:** Ollama, llama.cpp, LM Studio, vLLM, OpenAI 호환 엔드포인트, 클라우드 API(선택적).',
+          '**기본 프라이버시:** 로컬 전용, 텔레메트리 없음, 세 가지 모두 기본적으로 분석 없음. 선택적 클라우드 기능은 명시적으로 활성화해야 함.',
+          '**플랫폼:** SillyTavern·Agnai는 macOS, Windows, Linux, Termux/Android에서 실행. RisuAI는 macOS, Windows, Linux, iOS, Android에서 실행.',
+        ],
+      },
+      howWeTested: {
+        id: 'how-we-tested',
+        title: '테스트 방법',
+        content:
+          '이 가이드의 평가는 기능 목록 비교가 아닌 세 인터페이스의 실제 사용을 기반으로 합니다.',
+        items: [
+          '**버전:** SillyTavern 1.x(안정 브랜치), Agnai 최신 안정 버전, RisuAI 최신 데스크톱 버전(2026년 5월).',
+          '**백엔드:** 세 인터페이스 모두 주요 테스트 모델로 Q4_K_M Llama 3.3 70B를 실행하는 Ollama 0.5+.',
+          '**테스트 시나리오:** 세 인터페이스 모두에 동일한 Tavern v2 캐릭터 카드 로드; 각각에 동일한 5가지 대화 프롬프트 실행; 3명의 캐릭터가 있는 그룹 채팅 장면; 25개 항목(키워드 트리거 + 두 개의 재귀 항목)의 로어북; 서드파티 프리셋 파일에서 샘플링 프리셋 가져오기.',
+          '**설치 시간:** 동일한 기기에서 인터페이스별 3번의 새 설치 중간값.',
+          '**기능 평가:** "더 단순하다" 또는 "제한적이다"로 설명된 기능은 설명서의 주장이 아닌 테스트 시나리오에서의 관찰 가능한 동작을 반영합니다. 인터페이스들이 로어북 깊이나 그룹 채팅 안정성에서 다를 경우, 평가는 각 프로젝트가 게시하는 기능 목록이 아닌 관찰된 동작을 반영합니다.',
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '세 인터페이스 비교',
+        content:
+          '**동일한 캐릭터 카드, 동일한 모델 백엔드 — 다른 기능 밀도와 대상 사용자.** 다음 표는 결정에 관련된 차이점을 매핑합니다.',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-comparison-es.svg',
+        imageCaption: '기능 비교: SillyTavern은 더 깊은 로어북·확장, 멀티캐릭터 그룹 채팅(성숙), 멀티유저 모드 없음. Agnai는 실제 멀티유저/공유 서버 모드 추가, 더 단순한 로어북. RisuAI 가장 쉬운 설정(5분), 통합 모바일 앱, 더 가벼운 기능 세트. 세 가지 모두 Tavern v2 캐릭터 카드 로드.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'SillyTavern은 솔로 사용자를 위한 깊은 커스터마이징 옵션; Agnai는 공유 서버를 위한 멀티유저 옵션; RisuAI는 첫 사용자를 위한 가벼운 옵션 — 세 가지 모두 동일한 Tavern v2 캐릭터 카드를 로드하고 동일한 모델 백엔드에 연결됩니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '특별한 이유가 없다면 SillyTavern을 선택하십시오 — 대부분의 경험 많은 사용자가 결국 정착하는 곳입니다. 다른 작가들과 서버를 공유하고 싶다면 Agnai를 선택하십시오. SillyTavern이 과하고 5분 안에 채팅을 시작하고 싶다면 RisuAI를 선택하십시오. 세 가지 모두 동일한 캐릭터 카드를 로드하므로 나중에 바꾸는 것이 간단합니다.',
+          },
+        ],
+        columns: ['기능', 'SillyTavern', 'Agnai', 'RisuAI'],
+        rows: [
+          { '기능': '주요 표면', 'SillyTavern': 'Node.js 로컬 + 브라우저', 'Agnai': 'Node.js 로컬 + 브라우저, 또는 공유 서버', 'RisuAI': 'Tauri/Electron 데스크톱 앱 + 모바일' },
+          { '기능': '설정 시간(첫 실행)', 'SillyTavern': '~15분', 'Agnai': '~10분(단일 사용자); ~30분(서버)', 'RisuAI': '~5분' },
+          { '기능': '캐릭터 카드', 'SillyTavern': 'Tavern v2(전체 사양) + 확장', 'Agnai': 'Tavern v2', 'RisuAI': 'Tavern v2 + 자체 형식' },
+          { '기능': '페르소나 / 사용자 프로필', 'SillyTavern': '네이티브, 여러 페르소나, 캐릭터별', 'Agnai': '네이티브, 멀티유저', 'RisuAI': '네이티브, 더 단순' },
+          { '기능': '로어북 / world info', 'SillyTavern': '네이티브, 매우 유연(재귀 스캔)', 'Agnai': '네이티브, 더 단순한 스캔', 'RisuAI': '네이티브, 더 단순한 스캔' },
+          { '기능': '그룹 채팅(여러 캐릭터)', 'SillyTavern': '네이티브, 성숙', 'Agnai': '네이티브', 'RisuAI': '네이티브, 더 단순' },
+          { '기능': '멀티유저 / 공유 서버', 'SillyTavern': '없음(단일 사용자)', 'Agnai': '있음(차별점)', 'RisuAI': '없음(단일 사용자)' },
+          { '기능': '확장 / 플러그인', 'SillyTavern': '가장 큰 생태계(regex, 프리셋, 커스텀 UI)', 'Agnai': '더 작음', 'RisuAI': '플러그인 시스템, 더 작은 라이브러리' },
+          { '기능': '백엔드 호환성', 'SillyTavern': 'Ollama, llama.cpp, LM Studio, vLLM, OAI 호환, KoboldAI, Aphrodite', 'Agnai': 'Ollama, llama.cpp, LM Studio, OAI 호환', 'RisuAI': 'Ollama, llama.cpp, LM Studio, OAI 호환' },
+          { '기능': '기본 텔레메트리', 'SillyTavern': '없음', 'Agnai': '없음', 'RisuAI': '없음' },
+          { '기능': '최적 대상', 'SillyTavern': '깊은 커스터마이징을 원하는 솔로 사용자', 'Agnai': '공유 서버, 멀티유저 협업', 'RisuAI': '첫 사용자, 더 가벼운 설정' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '결정은 원시 품질이 아닌 워크플로우 형태에 관한 것입니다. 세 가지 모두 동일한 모델과 캐릭터 카드와 결합될 때 동일한 대화를 생성합니다. 어떻게 글을 쓰는지에 따라 선택하십시오 — 깊은 조정이 있는 솔로, 공유 서버의 협업자, 또는 데스크톱·모바일 앱에서 빠르게 — 그러면 고민의 90%를 피할 수 있습니다.',
+          },
+        ],
+      },
+      sillytavern: {
+        id: 'sillytavern',
+        title: 'SillyTavern: 기본 깊은 커스터마이징 옵션',
+        content:
+          '**SillyTavern은 대안을 시도한 후 대부분의 경험 많은 롤플레이 사용자가 결국 정착하는 곳입니다.** 더 큰 커뮤니티, 더 깊은 캐릭터 카드 기능, 로컬 롤플레이 공간에서 가장 큰 확장 생태계.',
+        items: [
+          '**설치:** 리포지토리 `git clone`, `npm install`, `npm start`. 로컬 서버가 `http://localhost:8000`에서 실행됩니다. 멀티플랫폼 — macOS, Windows, Linux, Android Termux. 설정은 `data/default-user/`에 저장됩니다(설정, 캐릭터, world info, 프리셋).',
+          '**캐릭터 카드:** 전체 Tavern v2 사양. 드래그 앤 드롭 가져오기(JSON 임베드된 PNG), UI에서 필드 탐색·편집, PNG로 다시 내보내기. SillyTavern에서 만든 카드는 문제 없이 Agnai·RisuAI에서 열립니다; 반대도 마찬가지입니다.',
+          '**로어북 / world info:** 세 가지 중 가장 유연합니다. 재귀 스캔(항목이 다른 항목을 트리거), 키워드 우선순위, 조건부 트리거, 캐릭터별 범위를 지원합니다. 세계가 캐릭터보다 복잡한 장기 캠페인에 적합한 도구.',
+          '**그룹 채팅:** 성숙한 멀티캐릭터 구현. 어떤 캐릭터가 장면에 있는지 정의하고, 턴 순서나 모델 주도 턴을 설정하고, 교환에 걸쳐 모델이 고유한 목소리를 유지하는 것을 관찰합니다. 그룹 장면이 작업의 핵심일 때 선택.',
+          '**확장:** regex 교체(표시 전 모델 출력 정제), 프리셋(캐릭터별 샘플링 설정), Stable Diffusion 통합(이미지 생성), 번역, 웹 검색, 커스텀 UI. 이 공간에서 가장 큰 플러그인 생태계.',
+          '**강점:** 솔로 롤플레이, 장기 개인 프로젝트, 깊은 커스터마이징 필요, 복잡한 세계 구축.',
+          '**약점:** 멀티유저 모드 없음(단일 사용자 설계); 기능 표면이 첫 사용자를 압도할 수 있음; 설정 분산(여러 JSON 파일, 프리셋, world info, regex)에는 학습 시간이 필요.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'SillyTavern의 기본 프리셋과 chub.ai 또는 SillyTavern 커뮤니티의 캐릭터 카드 한두 개로 시작하십시오. 처음 10시간 사용 전에 확장을 설치하려는 충동을 억제하십시오 — 대부분의 사용자는 기본값, regex 교체, 번역 확장 이상이 필요하지 않습니다.',
+          },
+        ],
+      },
+      agnai: {
+        id: 'agnai',
+        title: 'Agnai: 멀티유저 옵션',
+        content:
+          '**Agnai는 2026년 유일한 신뢰할 수 있는 멀티유저 롤플레이 인터페이스입니다.** SillyTavern과 동일한 캐릭터 카드 지원, 더 작은 커스터마이징 표면, 하지만 여러 작가가 동일한 백엔드에 연결할 수 있는 진정한 공유 서버 모드.',
+        items: [
+          '**설치(단일 사용자):** Node.js + npm install + start. 기본적으로 `http://localhost:3001`에서 실행됩니다. ~10분 설정, SillyTavern의 단순성과 비슷.',
+          '**설치(공유 서버):** 데이터베이스(MongoDB)와 인증 레이어 추가; Agnai가 사용자 계정, 역할 분리, 공유 캐릭터/채팅 소유권을 네이티브로 관리합니다. ~30분 설정; 프로젝트 README에 문서화됨.',
+          '**캐릭터 카드:** Tavern v2; 완전한 가져오기/내보내기. 카드 사양이 SillyTavern과 동일하므로 카드가 인터페이스 간에 이동합니다.',
+          '**페르소나 시스템:** 네이티브 멀티유저. 각 사용자는 페르소나를 가지며 에이전트는 채팅별로 활성 페르소나를 선택합니다. 여러 작가가 자신의 프로필을 원하는 공유 서버에 유용.',
+          '**로어북 / world info:** 있음, SillyTavern보다 덜 강력합니다. 대부분의 프로젝트에 적합; 부족한 것은 깊은 재귀 스캔.',
+          '**그룹 채팅:** 네이티브, SillyTavern보다 더 단순. 2~4명의 캐릭터가 있는 일반적인 경우에 작동.',
+          '**강점:** 공유 서버(작가 그룹, 친구 서클, 캐릭터를 공유하는 소규모 커뮤니티), 협업 롤플레이, 여러 사용자가 함께 글을 써야 하는 프로젝트.',
+          '**약점:** SillyTavern보다 더 작은 확장 생태계; 로어북 재귀가 제한됨; 깊은 솔로 커스터마이징에 적합하지 않음.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '공유 서버의 경우 TLS가 있는 역방향 프록시(Caddy가 가장 간단) 뒤에서 Agnai를 실행하십시오. 기본 설정은 HTTP이며 단일 포트에서 수신합니다 — localhost에는 괜찮지만 다른 작가에게 노출하는 서버에는 적합하지 않습니다. README는 프로덕션 설정을 다룹니다.',
+          },
+        ],
+      },
+      risuai: {
+        id: 'risuai',
+        title: 'RisuAI: 가벼운 대안',
+        content:
+          '**RisuAI는 SillyTavern이 과하게 느껴질 때 올바른 선택입니다.** 동일한 Tavern v2 캐릭터 카드, 더 작은 기능 표면, 로컬 웹 서버 대신 데스크톱 앱으로 패키징. 마찰 없는 첫 실행이 차별점입니다.',
+        items: [
+          '**설치:** macOS, Windows, Linux용 데스크톱 설치 프로그램, iOS·Android 앱 포함. Node.js 없음, 터미널 없음 — 더블클릭하면 열립니다. 세 가지 중 가장 빠른 첫 실행.',
+          '**캐릭터 카드:** Tavern v2 + RisuAI 자체 확장 형식(더 많은 모듈 필드, 플롯 트리거). SillyTavern·Agnai 카드가 문제 없이 로드됨; RisuAI에서 만든 카드는 대부분 다른 두 곳으로 다시 이식 가능.',
+          '**페르소나 시스템:** 있음, SillyTavern보다 더 단순. 채팅별 하나의 활성 페르소나, UI에서 전환 가능.',
+          '**로어북 / world info:** 있음, SillyTavern의 재귀 시스템보다 더 단순한 스캔. 최대 ~50개의 로어 항목이 있는 대부분의 프로젝트에 적합.',
+          '**그룹 채팅:** 네이티브; 2~4명의 캐릭터가 있는 일반적인 장면에 작동.',
+          '**플러그인:** SillyTavern보다 더 작은 생태계. 코어는 서드파티 플러그인 없이 대부분의 일반적인 요구(캐릭터 편집, 샘플링 프리셋, 로어북 관리)를 커버합니다.',
+          '**강점:** 첫 사용자, 모바일 작가(iOS/Android 앱이 실제이며 사후 고려가 아님), SillyTavern보다 깔끔한 UI를 원하는 사용자, 단일 캐릭터 솔로 롤플레이. RisuAI와 잘 작동하는 모바일 특화 모델 추천은 [2026년 최고의 모바일 LLM 모델](/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm)을 참조하십시오.',
+          '**약점:** SillyTavern보다 더 작은 커뮤니티; 더 낮은 커스터마이징 깊이(재귀 로어 스캔 없음, 더 작은 확장 표면); 기능 한계가 중요할 때 적합하지 않음.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'RisuAI의 모바일 앱은 세 가지 중 실제로 iOS·Android용으로 패키징된 유일한 앱입니다. SillyTavern은 Android에서 Termux를 통해 실행됩니다(작동하지만 복잡함 — 터미널 설치, 브라우저 UI). Agnai는 모바일 브라우저에서 실행되지만 앱으로 패키징되지 않습니다. 모바일 사용이 실제 워크플로우라면 다른 기능에 관계없이 RisuAI가 올바른 선택입니다.',
+          },
+        ],
+      },
+      characterCards: {
+        id: 'character-cards',
+        title: '캐릭터 카드 형식(Tavern v2): 공통 언어',
+        content:
+          '**세 인터페이스 모두 Tavern v2 캐릭터 카드 사양을 로드하므로 인터페이스 간 마이그레이션이 쉽습니다.** 카드는 메타데이터에 JSON이 임베드된 PNG 파일이며, 동일한 파일이 세 곳 어디서나 열립니다.',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-character-cards-es.svg',
+        imageCaption: 'Tavern v2 캐릭터 카드 형식: PNG + 임베드된 JSON 메타데이터. 이름, 설명, 성격, 시나리오, 첫 메시지, 예시 대화, 시스템 프롬프트 포함. SillyTavern, Agnai, RisuAI 간 상호 운용 가능(모두 동일한 사양 로드). V3 사양(2026년 5월)은 네이티브 임베드된 로어와 다국어 지원을 추가하며 하위 호환. chub.ai의 커뮤니티 카드가 세 인터페이스 모두에서 작동.',
+        items: [
+          '**Tavern v2 카드에 포함된 것:** 이름, 설명, 성격, 시나리오, 첫 메시지, 예시 대화, 태그, 제작자 노트, 시스템 프롬프트. 선택적 필드는 로어북 항목과 캐릭터별 샘플링 설정을 커버합니다.',
+          '**V3 사양(2026년 5월):** 네이티브 임베드된 로어, 다국어 지원, 더 풍부한 제작자 메타데이터로 V2를 확장합니다. SillyTavern은 V3 가져오기를 완전히 지원; Agnai는 V3 카드를 로드하지만 일부 V3 특정 필드를 무시; RisuAI는 확장 형식을 통해 V3를 부분적으로 처리합니다. V2가 여전히 공통 언어입니다 — V3는 추가적이며 하위 호환되므로 V2 카드는 어디서나 작동.',
+          '**왜 중요한가:** 전체 커뮤니티 제작 캐릭터 생태계(chub.ai, JanitorAI 내보내기, 캐릭터 테마 Discord 서버)는 Tavern v2를 사용합니다. 다른 사람이 만든 카드가 변환 없이 인터페이스에 로드됩니다.',
+          '**사양이 끝나는 곳:** Tavern v2는 정적 캐릭터 정의를 커버합니다. 장기 장면 메모리, 동적 관계 상태, 채팅별 재정의는 인터페이스별 구현입니다. 활성 채팅을 인터페이스 간에 마이그레이션하는 것은 캐릭터 카드만 마이그레이션하는 것보다 더 어렵습니다.',
+          '**가져온 카드 정제:** chub.ai의 카드에는 모델 동작을 변경하는 샘플링 프리셋, 시스템 프롬프트 재정의, 또는 공격적인 jailbreak 프롬프트가 포함될 수 있습니다. 다운로드한 카드를 사용하기 전에 시스템 프롬프트와 성격 필드를 읽으십시오 — 특히 공유 서버 컨텍스트(Agnai)에서는 하나의 카드가 모든 사용자에게 영향을 미칩니다.',
+          '**자신만의 카드 만들기:** 세 인터페이스 모두 카드 편집기를 갖추고 있습니다. SillyTavern의 편집기가 기능이 가장 풍부하고; RisuAI의 UI가 가장 깔끔합니다. 처음부터 만들기 전에 기존 카드 몇 개를 편집하십시오 — 예시를 보고 나면 필드의 의미론이 더 이해됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '가져온 커뮤니티 카드에는 숨겨진 동작이 있을 수 있습니다: 긴 jailbreak 시스템 프롬프트, 샘플링 재정의, 페르소나 모순. 첫 사용 전에 편집기에서 각 다운로드된 카드를 열고 시스템 프롬프트 필드를 읽으십시오. 공유 서버 컨텍스트(Agnai)에서는 결함 있는 카드가 모든 사용자에게 영향을 미칩니다.',
+          },
+        ],
+      },
+      models: {
+        id: 'models',
+        title: '인터페이스별 모델 추천',
+        content:
+          '**인터페이스 선택이 모델 선택을 제한하지 않습니다.** 세 가지 모두 동일한 백엔드(Ollama가 가장 일반적)를 지원하며 아래 모델 추천은 SillyTavern, Agnai, RisuAI에 동등하게 적용됩니다.',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-models-es.svg',
+        imageCaption: '추천 모델(3가지 인터페이스 모두): Llama 3.3 70B가 표준(최고 범용, 42GB VRAM, 목소리 일관성). Qwen3 32B는 24GB 리그의 인기 선택(70B와 거의 동등한 품질). Command R+ 104B는 대화 전문가(그룹 장면, 62GB VRAM). Hermes 3는 70B 무검열 작업. 창의적 파인튜닝 없이 13B 이하 모델은 피하기.',
+        items: [
+          '**Llama 3.3 70B** — 캐릭터 작업에서 최고의 로컬 범용 옵션. 긴 세션에서 더 높은 목소리 일관성, 캐릭터 지시 따르기 잘 함, 픽션으로 프레임되면 어두운 테마 처리. Q4_K_M에서 ~42GB VRAM 필요.',
+          '**Qwen3 32B** — 24GB 리그에 올바른 선택. 하드웨어 비용 없이 Llama 70B에 가까운 산문 품질. 대부분의 소비자 노트북·데스크톱의 기본 선택.',
+          '**Command R+ 104B** — 대화 전문가. 그룹 장면에서 캐릭터 간 더 자연스러운 대화 목소리 차별화. Q4_K_M에서 ~62GB VRAM 필요.',
+          '**Hermes 3(Llama 3.3 기반)** — 무검열 파생 모델. Llama 3.3 70B와 동일한 아키텍처; RLHF 안전 레이어 제거됨; 모델이 성숙한 장면을 거부하는 대신 프롬프트를 따릅니다. 동일한 Ollama에서 두 가지 설치(instruct + Hermes)가 일반적인 패턴.',
+          '**Mistral Large** — 장문 컨텍스트 옵션. 기본 128K 컨텍스트; 롤플레이 세션이 더 작은 컨텍스트 모델을 컨텍스트 밖으로 밀어낼 만큼 길 때 유용.',
+          '**심각한 롤플레이 작업에서 피해야 할 것:** 창의적 글쓰기 파인튜닝 없이 13B 이하 모든 것. 소형 범용 모델은 5~10번 교환 후 목소리 일관성을 잃습니다; 캐릭터가 모델의 기본 목소리로 "표류"합니다.',
+          '이 옵션들의 비교 데이터는 [2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026)을 참조하십시오.',
+          '세 인터페이스 모두에서 작동하는 즉시 사용 가능한 시스템 프롬프트 템플릿은 [픽션 작가를 위한 로컬 LLM 프롬프트](/ko/power-local-llm/local-llm-prompts-for-fiction-writers)를 참조하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '롤플레이에서는 모델 선택만큼 샘플링 설정도 중요합니다. 온도 0.85~1.05, top-p 0.9~0.95, 반복 패널티 1.1이 시작점입니다. SillyTavern은 캐릭터별 프리셋 저장을 허용합니다; 이것을 사용하십시오 — 다른 캐릭터는 종종 다른 온도가 필요합니다(긴장된 심문 장면은 0.7이 필요하고; 초현실적인 꿈 시퀀스는 1.2가 필요).',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: '프라이버시: 어떤 인터페이스가 외부와 통신하는가',
+        content:
+          '**세 인터페이스 모두 기본적으로 텔레메트리 없이 로컬 전용입니다.** 각각의 선택적 클라우드 기능은 명시적 옵트인 뒤에 잠겨 있습니다; 공식 감사 증거가 필요하면 네트워크 모니터링으로 확인하십시오.',
+        items: [
+          '**SillyTavern:** 텔레메트리 없음. 통신할 수 있는 선택적 기능: 클라우드 LLM 백엔드(OpenAI, Claude 등 — 설정했을 때만), 번역 확장(기본적으로 클라우드 API 사용; 로컬로 설정 가능), Stable Diffusion 이미지 생성(로컬 SD 또는 구성된 원격 엔드포인트 사용), 웹 검색 확장(클라우드 검색 사용). 각각 옵트인이 필요하며 레이블이 표시됩니다.',
+          '**Agnai:** 메인 앱에서 텔레메트리 없음. 서버 모드는 활성화할 경우에만 계정 텔레메트리를 추가합니다. SillyTavern과 동일한 선택적 클라우드 기능(번역, 클라우드 LLM 백엔드, 이미지 생성) — 모두 명시적.',
+          '**RisuAI:** 텔레메트리 없음. 동일한 패턴 — 기본적으로 로컬 전용, 선택적 클라우드 기능(번역, 이미지 생성, 클라우드 LLM 백엔드)은 명시적 설정 뒤에 잠김.',
+          '**프라이버시 주장 검증:** 설치 후 인터넷 없이 인터페이스를 실행(Wi-Fi 끄기) — 로컬 모델로 채팅 — 모든 것이 계속 작동하는지 확인. 또는 macOS에서 Little Snitch, Linux에서 Wireshark 같은 네트워크 모니터를 실행하고 채팅 세션 중 아웃바운드 연결을 관찰. 세 인터페이스 모두 기본적으로 이 테스트를 통과합니다.',
+          '**프라이버시가 깨질 수 있는 곳:** 클라우드 LLM 백엔드(사용자가 설정; 프롬프트와 응답이 기기를 떠남), 클라우드 기반 번역 확장(번역하는 메시지가 서드파티에 전송됨), 원격 Stable Diffusion 엔드포인트, 웹 검색 확장. 각각은 의도적인 사용자 선택입니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '"프라이버시 중심" 로컬 인터페이스는 가리키는 백엔드만큼만 프라이빗합니다. SillyTavern을 GPT-5에 가리키면 롤플레이 프롬프트가 OpenAI로 전송됩니다; Ollama에 가리키면 모든 것이 로컬로 유지됩니다. 인터페이스 자체가 제한이 아닙니다; 모델 백엔드가 그렇습니다.',
+          },
+        ],
+      },
+      decision: {
+        id: 'decision',
+        title: '결정: 어떤 인터페이스를 선택해야 하는가',
+        content:
+          '**세 가지 질문이 대부분의 사용자를 올바른 선택으로 이끕니다.**',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-decision-es.svg',
+        imageCaption: '결정 다이어그램: (1) 다른 작가들과 공유? → 예: Agnai(유일한 멀티유저). (2) 깊은 커스터마이징 원함? → 예: SillyTavern. (3) 모바일 우선? → 예: RisuAI(iOS/Android용 패키징 앱). 확신 없을 때 기본: SillyTavern(80% 사용자가 결국 여기 정착). 캐릭터 카드가 세 곳 모두로 이동 — 전환 비용 최소.',
+        columns: ['나의 상황', '선택'],
+        rows: [
+          { '나의 상황': '솔로 작가이고 깊은 커스터마이징이 필요하며 도구 학습에 시간을 투자할 의향이 있음', '선택': 'SillyTavern' },
+          { '나의 상황': '공유 서버에서 다른 작가들과 캐릭터·채팅을 공유하고 싶음', '선택': 'Agnai' },
+          { '나의 상황': '오늘 바로 채팅을 시작하고 싶음; SillyTavern이 과하다고 느껴짐', '선택': 'RisuAI' },
+          { '나의 상황': '주로 모바일(iOS 또는 Android)로 글을 씀', '선택': 'RisuAI(패키징 모바일 앱을 갖춘 유일한 것)' },
+          { '나의 상황': '작가 그룹이나 3인 이상의 커뮤니티가 있음', '선택': 'Agnai(공유 서버) — 유일한 신뢰할 수 있는 멀티유저 옵션' },
+          { '나의 상황': '복잡한 세계 구축(로어 항목 50개 이상, 재귀 트리거)', '선택': 'SillyTavern(로어북 기능이 가장 깊음)' },
+          { '나의 상황': '확신 없음', '선택': '먼저 RisuAI 시도(5분 설치). 한계를 느끼면 SillyTavern으로 이동. 카드는 이동됩니다.' },
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'SillyTavern은 커스터마이징이 필요한 솔로 사용자의 기본 선택; Agnai는 공유 서버를 위한 유일한 멀티유저 옵션; RisuAI는 첫 사용자·모바일 작가를 위한 가벼운 대안 — 워크플로우 형태에 따라 선택하고, 카드가 세 곳 모두로 이동하므로 마이그레이션 옵션을 유지하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '롤플레이 인터페이스를 사용해본 적이 없다면 먼저 RisuAI를 시도하십시오 — 5분 만에 채팅을 시작할 수 있습니다. 커스터마이징 한계에 부딪히기 시작하면 SillyTavern으로 이동하십시오. Agnai는 공유 서버 멀티유저 모드가 특별히 필요한 경우에만 사용하십시오. 세 곳 어디서나 만든 캐릭터 카드가 다른 곳에서 로드되므로 선택은 되돌릴 수 있습니다.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '확장을 설치하거나 정교한 로어북을 만들기 전에 선택한 인터페이스에서 처음 10시간의 사용을 보내십시오. 기본값 + 커뮤니티 카드 몇 개면 적합성을 평가하기 충분합니다. 조기 설정은 다음 인터페이스로의 마이그레이션이 흡수했을 마찰을 만듭니다.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '롤플레이 인터페이스 선택·사용 시 흔한 실수',
+        items: [
+          '**실수 1: 모델이 병목일 때 기능을 쫓는 것.** 훌륭한 인터페이스에 7B 범용 모델을 결합하면 로어북 시스템이 아무리 좋아도 평범한 대화를 생성합니다. 유능한 인터페이스를 선택하고 나머지 예산을 창의적 글쓰기 친화적인 32B+ 모델에 투자하십시오. 모델 측면은 [2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026)을 참조하십시오.',
+          '**실수 2: 창의적 모델에 기본 샘플링 설정 사용.** SillyTavern, Agnai, RisuAI 모두 Q&A용으로 조정된 기본값(온도 ~0.7, top-p ~0.9)으로 제공됩니다. 창의적 롤플레이는 0.85~1.05, top-p 0.9~0.95, 반복 패널티 1.1이 필요합니다. 캐릭터별 프리셋을 저장하십시오.',
+          '**실수 3: 읽지 않고 커뮤니티 카드 가져오기.** chub.ai의 카드에는 기본값과 충돌하는 샘플링 재정의가 있는 2,000 토큰 jailbreak 시스템 프롬프트나 설명과 모순되는 성격 필드가 포함될 수 있습니다. 사용 전에 편집기에서 카드를 열고 시스템 프롬프트를 정제하십시오.',
+          '**실수 4: 페르소나/사용자 프로필 건너뛰기.** 빈 "사용자" 페르소나는 모델이 누가 말하는지 알 닻이 없다는 것을 의미합니다. 이름, 나이, 기본 상황이 있는 단락 하나의 페르소나조차 기본 빈 사용자보다 극적으로 더 몰입감 있는 장면을 생성합니다.',
+          '**실수 5: 카드 대신 채팅 창에서 편집.** "재생성" 또는 "수정 요청"을 통해 모델 출력을 조정하면 모델에 글쓰기를 요청하는 습관이 생깁니다. 편집 사항을 캐릭터 카드나 시스템 프롬프트에 다시 저장하십시오; 다음 세션은 더 높은 수준에서 시작합니다.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[SillyTavern 문서](https://docs.sillytavern.app/) — 설치, 캐릭터 카드, 로어북, 확장, 샘플링 프리셋.',
+          '[SillyTavern GitHub 리포지토리](https://github.com/SillyTavern/SillyTavern) — 소스, 릴리스 노트, 커뮤니티 확장.',
+          '[Agnai GitHub 리포지토리](https://github.com/agnaistic/agnai) — 설치, 멀티유저 서버 설정, 캐릭터 카드 사양.',
+          '[RisuAI GitHub 리포지토리](https://github.com/kwaroran/RisuAI) — 설치, 플러그인 시스템, 모바일 앱 빌드.',
+          '[Tavern v2 캐릭터 카드 사양](https://github.com/malfoyslastname/character-card-spec-v2) — 인터페이스 간 호환 캐릭터 카드 형식.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '2026년 최고의 로컬 롤플레이 인터페이스는 무엇입니까?',
+            a: '~80%의 사용자에게 SillyTavern — 더 깊은 기능, 더 큰 커뮤니티, 더 많은 확장. Agnai는 멀티유저 공유 서버 지원이 필요한 경우 올바른 선택입니다(세 가지 중 유일한 신뢰할 수 있는 옵션). RisuAI는 첫 사용자, 모바일 작가, SillyTavern이 과하다고 느끼는 사람을 위한 가벼운 옵션입니다. 세 가지 모두 Tavern v2 캐릭터 카드를 지원하고 동일한 모델 백엔드에 연결됩니다; 카드가 이동하므로 나중에 전환이 간단합니다.',
+          },
+          {
+            q: 'SillyTavern, Agnai, RisuAI가 동일한 캐릭터 카드를 사용할 수 있습니까?',
+            a: '네. 세 가지 모두 JSON이 임베드된 PNG인 Tavern v2 캐릭터 카드 사양을 로드합니다. SillyTavern에서 만든 카드는 변환 없이 Agnai·RisuAI에서 열리며, 반대도 마찬가지입니다. RisuAI는 선택적 필드로 형식을 확장하지만 RisuAI의 Tavern v2 카드는 여전히 SillyTavern·Agnai에서 확장 필드가 무시된 채로 로드됩니다. 인터페이스 간 마이그레이션이 쉽습니다.',
+          },
+          {
+            q: '이 인터페이스들이 채팅을 클라우드 서버로 전송합니까?',
+            a: '아니요, 기본적으로는 그렇지 않습니다. 세 가지 모두 텔레메트리 없이 로컬 전용입니다. 채팅 데이터, 캐릭터 카드, 로어북은 사용자 기기에 저장됩니다. 선택적 기능(클라우드 LLM 백엔드, 번역 확장, 이미지 생성, 웹 검색)은 명시적 설정 뒤에 잠겨 있습니다; 인터페이스를 Ollama 또는 다른 로컬 백엔드에 가리키면 아무것도 네트워크를 떠나지 않습니다. 공식 감사 증거가 필요하면 네트워크 모니터로 확인하십시오.',
+          },
+          {
+            q: '롤플레이에 어떤 모델을 사용해야 합니까?',
+            a: '하드웨어가 허용하면 Llama 3.3 70B가 최고의 범용 선택입니다(Q4_K_M에서 ~42GB VRAM). 24GB 리그에서는 Qwen3 32B가 더 가벼운 기본 선택입니다. Command R+ 104B는 그룹 장면에서 가장 자연스러운 대화 목소리를 가지지만 ~62GB가 필요합니다. 조정된 instruct 모델이 거부하는 성숙한 장면의 경우 동일한 Ollama에 Hermes 3(Llama 3.3 기반)를 설치하고 장면별로 전환하십시오. 창의적 글쓰기 파인튜닝 없이 13B 이하 모델은 5~10번 교환 후 목소리 일관성을 잃으며 심각한 롤플레이 작업에는 피해야 합니다.',
+          },
+          {
+            q: 'SillyTavern은 성인 롤플레이 전용입니까?',
+            a: '아니요. SillyTavern은 캐릭터 카드, 페르소나 관리, 로어북을 갖춘 범용 채팅 인터페이스입니다 — 많은 대화나 캐릭터 중심의 모든 창의적 작업에 유용합니다. 많은 작가들이 비성인 픽션 작성, 멀티캐릭터 장면, 장기 프로젝트의 목소리 일관성 작업, 스크립팅 연습, 게임 내러티브 작성에 사용합니다. 커뮤니티 캐릭터 생태계(chub.ai)는 성인 콘텐츠를 포함하지만 이에 국한되지 않습니다.',
+          },
+          {
+            q: '친구들과 캐릭터를 어떻게 공유합니까?',
+            a: '세 가지 옵션이 있습니다. (1) 캐릭터 카드를 PNG로 내보내고 파일을 전송 — 세 인터페이스 모두에서 작동합니다. (2) 공유 캐릭터뿐만 아니라 협업 채팅을 원한다면 Agnai의 공유 서버 모드 사용. (3) 공개 릴리스를 원한다면 chub.ai 또는 유사한 리포지토리에 카드 게시. 대부분의 작가 그룹은 옵션 1(파일 공유) + 조율을 위한 Discord 채널 방식을 선호합니다; 옵션 2는 같은 채팅을 적극적으로 공동 작성하는 그룹에 적합합니다.',
+          },
+          {
+            q: '이 인터페이스들이 iPad나 Android에서 작동합니까?',
+            a: 'RisuAI는 iOS·Android용 패키징 앱을 갖추고 있습니다. SillyTavern은 Android에서 Termux를 통해 실행됩니다(작동하지만 복잡함 — 터미널 설치, 브라우저 UI). Agnai는 모바일 브라우저에서 실행되지만 앱으로 패키징되지 않습니다. 모바일이 주요 사용 환경이라면 RisuAI가 올바른 선택입니다. 모바일이 가끔씩이라면 데스크톱 브라우저에서 SillyTavern + RisuAI 모바일 폴백 패턴이 실용적입니다(카드는 이동됩니다).',
+          },
+          {
+            q: '여러 사용자를 위한 공유 백엔드를 사용할 수 있습니까?',
+            a: '롤플레이 멀티유저에 특화하여, Agnai는 공유 서버 모드가 신뢰할 수 있는 유일한 인터페이스입니다(내장 사용자 계정, 역할 분리, 공유 캐릭터/채팅 소유권). 모델 백엔드만 공유하는 경우(동일한 기기에서 여러 인터페이스에 서비스하는 하나의 Ollama), 세 가지 모두 작동합니다 — Ollama는 여러 클라이언트에 서비스하며 인터페이스들이 충돌하지 않습니다. "공유 백엔드" 질문은 실제로 두 가지 질문입니다: 공유 모델(쉬움, 세 가지) 대 공유 채팅·캐릭터(Agnai만).',
+          },
+          {
+            q: '어떤 것이 로어북 지원이 가장 뛰어납니까?',
+            a: 'SillyTavern은 가장 깊은 로어북 시스템을 갖추고 있습니다 — 재귀 스캔(항목이 다른 항목을 트리거), 키워드 우선순위, 조건부 트리거, 캐릭터별 범위, regex 매칭. Agnai·RisuAI는 더 단순한 키워드 스캔으로 로어북을 지원하며 ~50개 미만의 항목이 있는 프로젝트에 적합합니다. 복잡한 세계 구축 — 여러 파벌 정치, 재귀적 참조, 조건부 공개 — 에는 SillyTavern이 세 가지 중 유일하게 신뢰할 수 있는 옵션입니다.',
+          },
+          {
+            q: '로컬 백엔드에서 그룹 채팅이 안정적입니까?',
+            a: '네, 올바른 모델로는 가능합니다. 3명 이상의 캐릭터가 있는 그룹 채팅에는 강한 목소리 차별화를 가진 모델이 필요합니다 — Command R+ 104B가 최선이며, Llama 3.3 70B가 실용적인 기본 선택입니다. 더 작은 모델(13B 미만)에서는 캐릭터가 5~10번 교환 후 동일한 목소리로 표류합니다. SillyTavern은 가장 성숙한 그룹 채팅 구현을 갖추고 있고; Agnai·RisuAI는 2~4명의 캐릭터 장면을 깔끔하게 처리하지만 턴 역학에 대한 제어가 적습니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026) — 모델 측면; 이 가이드에서 권장된 옵션들의 직접 비교.',
+          '[창의적 글쓰기를 위한 무검열 로컬 LLM: 윤리·법적 측면·모범 사례](/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 무검열 파생 모델(Hermes 3, Dolphin 3.0)이 올바른 선택인 경우와 법적 경계.',
+          '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 더 넓은 모델 개요; 이 인터페이스들 뒤에 설치할 모델 선택 시 유용.',
+          '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) — 이 인터페이스들과 함께 가장 많이 사용되는 두 백엔드; 무엇을 먼저 설치할지.',
+          '[페르소나 프롬프팅](/ko/prompt-engineering/persona-prompting) — 캐릭터 목소리를 위한 시스템 프롬프트 구조; 세 인터페이스 모두에서 작동.',
+          '[온도와 Top-P: AI 창의성 제어](/ko/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 이 인터페이스들이 지원하는 캐릭터별 프리셋을 위한 샘플링 가이드.',
+          '[픽션 작가를 위한 로컬 LLM 프롬프트](/ko/power-local-llm/local-llm-prompts-for-fiction-writers) — 캐릭터 기반 픽션을 위한 즉시 사용 가능한 시스템 프롬프트 템플릿; SillyTavern, Agnai, RisuAI에서 작동.',
+          '[2026년 최고의 모바일 LLM 모델](/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — iOS·Android에 최적화된 모델 추천; RisuAI 모바일 앱과 잘 결합.',
+          '[SillyTavern으로 중국어 롤플레이 설정](/ko/prompt-bites/sillytavern-chinese-roleplay-setup) — Qwen3 + SillyTavern: 중국어 롤플레이를 위한 캐릭터 카드 설정.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'SillyTavern vs Agnai vs RisuAI: 최고의 로컬 롤플레이 인터페이스 (2026)',
+      description: '로컬 LLM 롤플레이를 위한 SillyTavern, Agnai, RisuAI 비교. 기능, 모델 호환성, 프라이버시, 커뮤니티 생태계 비교.',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
+      inLanguage: 'ko',
+      datePublished: '2026-05-24',
+      dateModified: '2026-05-24',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    },
+  },
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',

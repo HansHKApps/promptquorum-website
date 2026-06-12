@@ -2814,6 +2814,482 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-08',
+    dateModified: '2026-05-08',
+    next_refresh_due: '2026-11-08',
+    theme: 'Mobile & Edge LLMs',
+    title: '전화기에서 로컬 음성 비서 만들기: Whisper + 로컬 LLM (클라우드 없음) — 2026',
+    seoTitle: '로컬 음성 비서 Whisper LLM 전화기 2026',
+    intro:
+      '2026년 iPhone 또는 Android에서 완전히 오프라인 음성 비서는 세 가지 구성 요소를 결합합니다: 음성을 텍스트로 변환하는 Whisper, 응답을 생성하는 기기 내 로컬 LLM, 음성 합성을 위한 Piper 또는 시스템 TTS. 고급 전화기에서 말하기 시작부터 첫 오디오까지의 실제 지연은 0.8–1.5초로, "사용 가능하게 느껴지는" 2초 임계값 이하입니다. 이 가이드는 iPhone(LLM Farm + WhisperKit), Android(Layla + Whisper.cpp), 하이브리드(전화기에서 STT + 원격 Ollama) 경로를 측정된 지연, 배터리, 정확도 수치와 함께 다룹니다.',
+    metaDescription:
+      '2026년 iPhone 및 Android에서 완전히 오프라인 AI 음성: Whisper STT + 로컬 LLM + Piper TTS. iPhone, Android, 하이브리드 설정. 지연 및 배터리.',
+    twitterDescription:
+      '오프라인으로 작동하는 Siri 대체품 만들기: 로컬 Whisper STT + Phi-4 Mini + Piper TTS. 고급 전화기에서 1.5초 미만으로 음성에서 첫 오디오. iPhone + Android 설정.',
+    current_models_mentioned: [
+      'Whisper Small',
+      'Whisper Medium',
+      'WhisperKit',
+      'Phi-4 Mini',
+      'Gemma 3 4B',
+      'Piper TTS',
+    ],
+    current_hardware_mentioned: [
+      'iPhone 17 Pro (A19 Pro)',
+      'iPhone 16 Pro (A18 Pro, 8 GB RAM)',
+      'Pixel 9 Pro (Tensor G4)',
+      'Galaxy S25 Ultra (Snapdragon 8 Elite)',
+      'OnePlus 13 (Snapdragon 8 Elite)',
+    ],
+    audience:
+      '완전히 기기 내에서 작동하는 Siri / Google Assistant 대체품을 원하는 개인 정보 보호를 중시하는 전화기 사용자로, 오프라인 음성 워크플로우를 구축하는 여행자, 기자, 의료 전문가, 개발자 포함.',
+    readTime: '13분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '로컬 음성 비서',
+    targetKeywords: [
+      '로컬 음성 비서 전화기',
+      'Whisper 오프라인 iPhone',
+      'Whisper LLM 로컬 Android',
+      'Siri 오프라인 대체',
+      'Piper TTS 모바일',
+      'WhisperKit iOS',
+      'Layla Android 음성',
+    ],
+    leadAnswerBlock:
+      '**2026년 완전히 오프라인 음성 비서는 세 가지 구성 요소가 필요합니다: 음성 텍스트 변환을 위한 Whisper Small 또는 Medium, 응답을 위한 3B–4B 로컬 LLM(Phi-4 Mini 또는 Gemma 3 4B), 오디오 출력을 위한 Piper TTS 또는 시스템 TTS.** iPhone에서 가장 간단한 설정은 WhisperKit(또는 Whisper Transcription 앱) + LLM Farm + iOS 시스템 TTS입니다 — iPhone 16 Pro에서 음성에서 첫 오디오까지 ~0.9–1.4초. Android에서 Layla는 유사한 설정을 네이티브로 포함하거나, Termux + whisper.cpp + Ollama + Piper로 조립할 수 있습니다. 더 나은 LLM 품질을 위해 하이브리드 경로 사용: 전화기가 로컬에서 Whisper를 실행하고(개인 정보 보호에 중요) 텍스트 전사를 집에 있는 Mac이나 PC의 Ollama와 70B 모델로 전송합니다. 세 가지 설정 모두 모델을 다운로드하면 인터넷 없이 작동합니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 전화기에서 완전히 오프라인 음성 비서를 만들 수 있습니까?',
+        answer:
+          '네. 표준 설정은 음성 텍스트 변환을 위한 Whisper, 응답을 위한 3B–4B 로컬 LLM(Phi-4 Mini 또는 Gemma 3 4B), 오디오 출력을 위한 Piper TTS 또는 iOS/Android 시스템 TTS입니다. iPhone 16 Pro에서 음성에서 첫 오디오까지의 지연은 ~0.9–1.4초로, "사용 가능하게 느껴지는" 2초 임계값 이하입니다. 고급 Android 전화기(Pixel 9 Pro, Galaxy S25 Ultra)에서 지연은 ~1.0–1.6초입니다. iPhone 경로는 WhisperKit + LLM Farm을 사용하고; Android 경로는 Layla(통합 스택) 또는 Termux + whisper.cpp + Ollama를 사용합니다; 하이브리드 경로는 STT를 기기에 유지하고 전사를 70B 모델이 있는 집의 Mac이나 PC로 전송합니다.',
+        bullets: [
+          '스택: Whisper(STT) + 3B–4B 로컬 LLM + Piper 또는 시스템 TTS — 모두 기기에서.',
+          'iPhone: WhisperKit / Whisper Transcription + LLM Farm + iOS 시스템 음성. 16 Pro에서 지연 ~0.9–1.4초.',
+          'Android: Layla(통합 스택) 또는 Termux + whisper.cpp + Ollama + Piper. Pixel 9 Pro에서 지연 ~1.0–1.6초.',
+          '하이브리드: 전화기가 로컬에서 STT 실행, 전사를 집의 Ollama에 Llama 3.3 70B로 전송. 더 높은 품질.',
+          '배터리(1시간 활성 대화): iPhone 16 Pro에서 ~25–35%; 고급 Android에서 ~25–40%.',
+          'Whisper Small(~466 MB)은 모바일 표준 — ~12% WER, ~150–300ms STT 지연.',
+          '음성에서 첫 오디오까지 2초 미만이 "사용 가능하게 느껴지는" 임계값; 1초 미만은 네이티브하게 느껴집니다.',
+        ],
+        updatedDate: '2026-05-08',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '빠른 사실', anchor: '#quick-facts' },
+      { label: '어떤 음성 비서 스택을 구축해야 합니까?', anchor: '#which-stack' },
+      { label: '음성 비서 스택 비교', anchor: '#stack-comparison' },
+      { label: '세 가지 구성 요소 스택: STT + LLM + TTS', anchor: '#the-stack' },
+      { label: 'iPhone 설정: WhisperKit + LLM Farm (5분)', anchor: '#iphone-setup' },
+      { label: 'Android 설정: Layla 또는 Termux 스택 (5–15분)', anchor: '#android-setup' },
+      { label: '하이브리드 설정: 전화기 STT + 원격 Ollama', anchor: '#hybrid-setup' },
+      { label: '지연 예산: 초가 어디로 가는가', anchor: '#latency-budget' },
+      { label: '1시간 동안의 정확도와 배터리 소모', anchor: '#accuracy-battery' },
+      { label: '핸즈프리: Shortcuts, Tasker, CarPlay, Android Auto', anchor: '#hands-free' },
+      { label: '개인 정보 보장: 진정한 오프라인 vs 클라우드 지원', anchor: '#privacy' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**완전히 오프라인 스택은 Whisper(STT) + 3B–4B 로컬 LLM + Piper 또는 시스템 TTS입니다.** 세 가지 구성 요소는 설치 후 기기에서 로컬로 실행됩니다; 사용 중 클라우드 호출 없음.',
+          '**iPhone: WhisperKit + LLM Farm + iOS 시스템 음성이 가장 간단한 경로입니다.** WhisperKit는 STT에 Apple Neural Engine을 사용하고; LLM Farm은 응답을 위해 Phi-4 Mini를 실행하고; iOS 시스템 TTS가 오디오를 처리합니다. 음성에서 첫 오디오: iPhone 16 Pro에서 ~0.9–1.4초.',
+          '**Android: Layla는 전체 스택을 네이티브로 포함하거나, Termux + whisper.cpp + Ollama + Piper로 수동으로 구축하십시오.** Layla가 더 쉬운 경로이고; Termux 빌드가 더 유연합니다. 음성에서 첫 오디오: Pixel 9 Pro와 Galaxy S25 Ultra에서 ~1.0–1.6초.',
+          '**하이브리드(전화기에서 STT + 원격 Ollama)는 최고의 LLM 품질을 제공합니다.** 전화기가 로컬에서 Whisper를 실행하고(오디오 개인 정보 보호에 중요), 집의 Mac이나 PC의 Llama 3.3 70B로 텍스트 전사를 전송합니다. 더 높은 응답 품질; 홈 Wi-Fi가 필요합니다.',
+          '**Whisper Small(~466 MB)은 모바일에서 최적입니다.** 일반적인 말에서 ~12% WER, ~150–300ms STT 지연. Whisper Medium(~1.5 GB)은 더 정확하지만(~9% WER) 더 느립니다; Whisper Tiny(~75 MB)는 더 빠르지만 배경 소음에서 오류가 발생하기 쉽습니다.',
+          '**배터리 소모가 큽니다 — 고급 전화기에서 시간당 활성 대화 약 25–35%.** 하루 종일 사용하려면 충전하거나 하이브리드 경로를 사용하십시오(STT만 전화기에서 실행, 소모를 시간당 ~10–15%로 줄임).',
+          '**이것은 기능의 폭보다 개인 정보 보호를 선호하는 사용자를 위한 진정한 Siri 대체품입니다.** 포기하는 것: 웹 검색, 독점 클라우드 스마트 홈 통합, 시스템 액션 커버리지. 얻는 것: 오프라인 작동, 텔레메트리 없음, 계정 없음.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실',
+        items: [
+          '**STT 엔진:** Whisper.cpp(크로스플랫폼), WhisperKit(iOS, Apple Neural Engine에 최적화), Sherpa-ONNX(Android, ONNX 런타임).',
+          '**LLM:** 고급 전화기에서 Phi-4 Mini(3.8B); 오래된 기기에서 Qwen3 1.7B 또는 SmolLM 2 1.7B.',
+          '**TTS:** Piper TTS(오픈소스, 음성당 ~50 MB), iOS TTS 시스템(AVSpeechSynthesizer), Android 시스템 TTS.',
+          '**iPhone 앱:** WhisperKit, Whisper Transcription(개발자 Aiko), LLM Farm, PocketPal AI.',
+          '**Android 앱:** Layla(통합 스택), Termux + whisper.cpp + Ollama, Sherpa-ONNX 데모 앱.',
+          '**음성에서 첫 오디오 목표:** 2초 미만 = "사용 가능하게 느껴짐"; 1초 미만 = "네이티브하게 느껴짐".',
+          '**배터리(1시간 활성):** iPhone 16 Pro ~25–35%; Pixel 9 Pro / Galaxy S25 Ultra ~25–40%.',
+        ],
+      },
+      whichStack: {
+        id: 'which-stack',
+        title: '어떤 음성 비서 스택을 구축해야 합니까?',
+        content:
+          '**고급 전화기를 가진 대부분의 사용자에게: 완전히 기기 내 경로가 올바른 선택입니다.** 완전히 개인 정보 보호가 되고, 오프라인으로 작동하며, 1.5초 미만에 사용 가능한 결과를 생성합니다. 구체적으로 70B급 품질이 필요하고 홈 Wi-Fi 의존성을 수용하는 경우에만 하이브리드 경로를 사용하십시오.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Whisper(STT), 3B–4B 로컬 LLM(Phi-4 Mini 또는 Gemma 3 4B), Piper 또는 시스템 TTS를 결합하여 완전히 오프라인 음성 비서를 구축하십시오 — 2026년 고급 전화기에서 0.9–1.6초의 음성에서 첫 오디오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '음성 비서는 세 가지 작업이 있습니다: 음성을 텍스트로 변환, 응답 생성, 큰 소리로 응답 말하기. 첫 번째 단계를 위한 Whisper, 두 번째를 위한 소형 로컬 LLM, 세 번째를 위한 Piper 또는 전화기의 내장 음성으로 인터넷 없이 전화기에서 세 가지 모두 할 수 있습니다. 전체 루프는 최근 고급 iPhone이나 Android에서 약 1초가 걸립니다 — Siri와 대화하는 것처럼 느낄 만큼 빠르지만 모든 것이 기기에 남아 있습니다.',
+          },
+        ],
+        decisionBlock: {
+          title: '결정: 어떤 음성 비서 스택?',
+          localIf: [
+            '완전한 개인 정보 보호와 오프라인 작동을 원한다 → 완전히 기기 내(iPhone 또는 Android 경로)',
+            '자주 여행하고 비행기/음영 지역에서 음성을 원한다 → 완전히 기기 내',
+            '기자, 의료 전문가, 또는 변호사이다 → 소스/환자/클라이언트 기밀을 위해 완전히 기기 내',
+            '오프라인 음성 워크플로우 프로토타입을 만드는 개발자이다 → 완전히 기기 내',
+          ],
+          cloudIf: [
+            '70B+ 모델 품질이 필요하다(복잡한 추론) → 하이브리드 경로(전화기에서 STT + 집의 원격 Ollama)',
+            '실시간 웹 검색 또는 라이브 데이터가 필요하다 → 클라우드 비서(2026년에는 로컬 동등물 없음)',
+            '독점 클라우드와의 깊은 통합이 필요하다(Google Calendar, iCloud 등) → 해당 작업을 위해 계속 Siri / Google Assistant 사용',
+          ],
+          quick: [
+            'iPhone에서 가장 간단한 경로: WhisperKit + LLM Farm + iOS 음성',
+            'Android에서 가장 간단한 경로: Layla(통합 스택)',
+            '최고 품질: 하이브리드(전화기에서 STT + 집에서 Ollama 70B)',
+          ],
+        },
+        callouts: [
+          {
+            type: 'tip',
+            text: '결국 하이브리드 접근 방식을 원하더라도 완전히 기기 내 경로로 시작하십시오. 기기 내 설정은 모바일 구성 요소(STT, LLM, TTS)를 가르쳐 주고 홈 서버 의존 없이 작동합니다. 일단 작동하면, LLM 호출을 로컬에서 원격 Ollama URL로 변경하는 것은 한 줄 변경입니다.',
+          },
+        ],
+      },
+      stackComparison: {
+        id: 'stack-comparison',
+        title: '음성 비서 스택 비교',
+        content:
+          '**2026년 세 가지 실행 가능한 스택, 각각 다른 우선순위에 맞게 조정됨: 단순성(Layla), 네이티브 Apple 폴리시(WhisperKit + LLM Farm), LLM 품질(하이브리드).** 세 가지 모두 기기에서 STT와 TTS를 실행합니다; 하이브리드만 LLM 단계를 집의 컴퓨터로 이동합니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'iOS에서 단순성을 위한 iPhone(WhisperKit + LLM Farm + iOS 음성), Android에서 단순성을 위한 Android(Layla), 더 나은 LLM 품질을 위한 하이브리드(전화기에서 STT + 집의 Ollama)를 선택하십시오.',
+          },
+          {
+            type: 'plain-terms',
+            text: '아래 지연 수치는 음성에서 첫 오디오까지입니다 — 말을 멈추고 나서 비서가 응답을 시작할 때까지의 시간. 2초 미만은 사용 가능하게 느껴집니다; 1초 미만은 네이티브하게 느껴집니다. 배터리는 양방향 활성 대화 1시간 동안 소모된 비율입니다.',
+          },
+        ],
+        columns: ['스택', '지연 (음성 → 첫 오디오)', '배터리 (1시간 활성)', '최적'],
+        rows: [
+          { '스택': 'iPhone (WhisperKit + LLM Farm)', '지연 (음성 → 첫 오디오)': '~0.9–1.4초 (16 Pro / 17 Pro)', '배터리 (1시간 활성)': '~25–35%', '최적': '네이티브 Apple 폴리시를 원하는 iOS 사용자' },
+          { '스택': 'Android (Layla, 통합)', '지연 (음성 → 첫 오디오)': '~1.0–1.6초 (Pixel 9 Pro, Galaxy S25 Ultra)', '배터리 (1시간 활성)': '~25–40%', '최적': '하나의 앱에서 단순성을 원하는 Android 사용자' },
+          { '스택': 'Android (Termux + whisper.cpp + Ollama + Piper)', '지연 (음성 → 첫 오디오)': '~1.2–2.0초', '배터리 (1시간 활성)': '~30–40%', '최적': '완전한 제어를 원하는 고급 사용자' },
+          { '스택': '하이브리드 (전화기에서 STT + 집의 Ollama 70B)', '지연 (음성 → 첫 오디오)': '~1.5–2.5초 (Wi-Fi 의존)', '배터리 (1시간 활성)': '~10–15%', '최적': '70B급 품질, 홈 네트워크 사용' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '지연은 Whisper나 TTS가 아닌 LLM의 "첫 번째 토큰" 단계에 의해 지배됩니다. 지연을 줄이려면 더 작은 LLM을 사용하십시오(Phi-4 Mini 대신 Qwen3 1.7B를 사용하면 LLM 단계가 ~600ms에서 ~250ms로 줄어듭니다). 단점은 더 짧고 덜 상세한 응답입니다.',
+          },
+        ],
+      },
+      theStack: {
+        id: 'the-stack',
+        title: '세 가지 구성 요소 스택: STT + LLM + TTS',
+        content:
+          '**음성 텍스트 변환, LLM, 텍스트 음성 변환은 개별적으로 교환할 수 있는 세 가지 독립 구성 요소입니다.** 어느 것이든 최적화하면(더 작은 Whisper, 더 빠른 LLM, 더 낮은 지연 TTS) 전체 지연이 줄어듭니다.',
+        items: [
+          '**STT — Whisper.cpp / WhisperKit / Sherpa-ONNX.** Whisper Small(~466 MB)은 모바일을 위한 표준 선택 — 일반적인 말에서 ~12% WER(단어 오류율), 5초 발화에서 ~150–300ms STT 지연. Whisper Medium(~1.5 GB)은 WER을 ~9%로 낮추지만 지연을 두 배로 늘립니다. Whisper Tiny(~75 MB)는 빠르지만 중간 정도의 배경 소음에서 오류가 발생하기 쉽습니다. WhisperKit(iOS)는 Apple Neural Engine을 사용하여 표준 Whisper.cpp보다 ~30–40% 더 낮은 STT 지연을 달성합니다.',
+          '**LLM — Phi-4 Mini, Gemma 3 4B, Llama 3.2 3B.** Phi-4 Mini(3.8B Q4_K_M, ~2.7 GB)는 고급 전화기에서 권장 기본값입니다. 짧은 프롬프트에서 iPhone 16 Pro의 첫 번째 토큰까지 시간은 ~400–800ms — 전체 지연에서 가장 큰 단일 기여자. 오래되거나 RAM이 제한된 기기의 경우, Qwen3 1.7B(~1.1 GB)는 더 짧고 단순한 응답을 희생하여 더 빠릅니다(~200–400ms TTFT).',
+          '**TTS — Piper TTS 또는 시스템 TTS.** Piper(Rhasspy 프로젝트, 오픈소스)는 30개 이상의 언어를 지원하고, 음성당 ~50 MB, 첫 오디오까지 ~100–200ms 지연을 가지며, iOS, Android, Linux, macOS, Windows에서 작동합니다. 시스템 TTS(iOS에서 AVSpeechSynthesizer, Android에서 TextToSpeech)는 더 낮은 지연(~50–100ms)을 가지지만 이전 OS 버전에서 더 로봇 같은 음성. iOS 18+ 및 Android 14+ 시스템 음성은 이전 버전보다 현저히 향상되었습니다.',
+          '**음성 활동 감지(VAD).** 대부분의 앱은 말하기를 멈출 때를 감지하기 위해 Silero VAD 또는 webrtcvad를 사용합니다. 200–500ms 침묵 창이 일반적인 발화 종료 임계값입니다. 너무 짧으면 → 문장 중간에 끊기고; 너무 길면 → 지연이 추가됩니다. 300ms가 합리적인 기본값입니다.',
+          '**전체 파이프라인:** 마이크 캡처 → VAD가 말하기 종료 감지 → Whisper 전사 → LLM 응답 생성 → TTS 말하기. 도착하는 대로 LLM 토큰을 TTS로 스트리밍하는 것이 고급 전화기에서 "첫 오디오"가 1초 미만으로 도달하게 만드는 것입니다 — 대안(전체 LLM 응답을 기다렸다가 말하기)은 지각된 지연을 두 배로 늘립니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '스택이 느리게 느껴진다면 각 단계를 프로파일링하십시오: (마이크 → STT 준비), (STT 준비 → LLM 첫 번째 토큰), (LLM 첫 번째 토큰 → TTS 첫 오디오)의 지속 시간을 기록하십시오. 한 단계가 지배하는 경향이 있습니다. 2026년 고급 전화기에서 거의 항상 LLM 첫 번째 토큰 시간(~400–800ms)입니다. 지각된 지연을 줄이려면 더 작은 LLM으로 전환하십시오.',
+          },
+        ],
+      },
+      iphoneSetup: {
+        id: 'iphone-setup',
+        title: 'iPhone 설정: WhisperKit + LLM Farm (5분)',
+        content:
+          '**2026년 가장 간단하고 완전히 오프라인인 iPhone 음성 비서: STT를 위한 WhisperKit(또는 Whisper Transcription), LLM을 위한 LLM Farm, 음성을 위한 iOS 시스템 TTS.** 총 설정 시간은 모델 다운로드 시간 플러스 5–10분입니다.',
+        numberedItems: [
+          'App Store에서 WhisperKit 기반 앱 설치(예: 개발자 Aiko의 "Whisper Transcription", 무료) — Apple Neural Engine을 사용하여 기기 내 전사를 제공합니다. GitHub(Argmax / WhisperKit)에서 WhisperKit 참조 앱을 빌드할 수도 있습니다.',
+          'WhisperKit / Whisper Transcription에서: "Small" 모델 다운로드(~466 MB). Tiny는 더 빠르지만 부정확하고; Medium은 더 정확하지만 더 느립니다.',
+          'App Store에서 LLM Farm 설치(무료). LLM Farm에서: Models 탭 → "URL에서 모델 추가" → Phi-4 Mini Q4_K_M을 위한 Hugging Face URL 붙여넣기(또는 사용 가능한 경우 내장 라이브러리 사용). 모델은 ~2.7 GB를 차지합니다.',
+          'iOS Shortcuts를 통해 연결: 다음 액션으로 단축어 생성 — (1) 오디오 녹음(또는 공유 시트에서 오디오 입력 수락), (2) Whisper Transcription으로 전사, (3) LLM Farm(사용 가능한 경우) 또는 Private LLM(~£10, 단축어 액션 있음)으로 텍스트 생성, (4) iOS 시스템 음성으로 텍스트 재생.',
+          '단축어를 잠금 화면 위젯, 동작 버튼(iPhone 15 Pro 이상) 또는 "Siri야, [단축어 이름] 실행"에 할당하십시오. 동작 버튼이 가장 짧은 핸즈프리 응답 시간을 제공합니다.',
+          '테스트: 동작 버튼을 길게 누르기 → 말하기 → 놓기. STT 실행(~200ms) → LLM 생성(~600ms 첫 번째 토큰, TTS로 스트리밍) → 첫 오디오가 총 ~0.9–1.4초에 들림. 끊기는 경우 단축어에서 VAD 침묵 임계값을 조정하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'LLM Farm은 현재(2026년 5월 기준) 단축어 액션을 노출하지 않습니다. iOS Shortcuts 파이프라인을 사용하려면 "텍스트 생성" 액션을 노출하는 Private LLM(~£10 일회성 구매)이 필요합니다. 단축어 접근 방식이 iPhone 경로를 "5분"으로 만드는 것입니다 — 단축어 없이는 앱을 수동으로 체인해야 합니다.',
+          },
+        ],
+      },
+      androidSetup: {
+        id: 'android-setup',
+        title: 'Android 설정: Layla 또는 Termux 스택 (5–15분)',
+        content:
+          '**Android에서 두 가지 경로: Layla(5분의 통합 스택 접근 방식) 또는 Termux + whisper.cpp + Ollama + Piper(더 많은 제어가 있는 15분 수동 접근 방식).** 두 가지 모두 설정 후 완전히 오프라인으로 작동합니다.',
+        items: [
+          '**경로 A — Layla(5분):** Play Store에서 Layla 설치, 모델 다운로드(Phi-4 Mini 또는 Gemma 3 4B), 설정에서 음성 모드 활성화. Layla는 STT를 위한 whisper.cpp, 응답을 위한 로컬 LLM을 포함하며 Android 시스템 TTS를 사용합니다. 가장 간단한 경로; 단점은 구성 가능성이 낮습니다.',
+          '**경로 B — Termux 스택(15분):**',
+          'F-Droid에서 Termux 설치(Play Store 버전은 오래되어 권장하지 않음).',
+          'Termux에서: `pkg update && pkg install git cmake clang ffmpeg`.',
+          'whisper.cpp 빌드: `git clone https://github.com/ggerganov/whisper.cpp && cd whisper.cpp && make`와 Small 모델 다운로드: `bash ./models/download-ggml-model.sh small`.',
+          'Ollama(Termux ARM 빌드) 설치: `curl -fsSL https://ollama.com/install.sh | sh`. 모델 다운로드: `ollama pull phi4-mini`. 서버 시작: `ollama serve`.',
+          'Piper 설치: `pip install piper-tts`(Termux Python venv에서)와 음성 다운로드(예: `piper-tts --download-voice ko_KR-kss-medium`).',
+          '`arecord`에서 읽어 오디오에 whisper.cpp를 실행하고, 전사를 localhost:11434의 Ollama로 전송하고, 응답을 Piper로 파이프하는 소형 Python 스크립트로 파이프라인을 연결하십시오. 또는 Tasker를 사용하여 버튼이나 빠른 타일로 활성화된 쉘 명령을 체인하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '경로 B의 경우, Termux:Widget을 사용하여 음성 비서 스크립트를 실행하는 홈 화면 단축키를 만드십시오. 위젯을 한 번 터치하면 전체 파이프라인이 활성화됩니다. 핸즈프리 호출을 위해 Bluetooth 버튼이나 Tasker 빠른 타일과 결합하십시오. Pixel 9 Pro와 Galaxy S25 Ultra의 동작/사이드 키도 Tasker 액션을 트리거할 수 있습니다.',
+          },
+        ],
+      },
+      hybridSetup: {
+        id: 'hybrid-setup',
+        title: '하이브리드 설정: 전화기 STT + 원격 Ollama',
+        content:
+          '**하이브리드 스택은 기기에서 STT와 TTS를 유지하면서 LLM 호출만 집의 컴퓨터로 이동합니다.** 이를 통해 오디오 개인 정보 보호를 유지하면서(전화기를 떠나지 않음 — 텍스트 전사만 홈 Wi-Fi를 통해 전송) 70B급 모델(Llama 3.3 70B, Qwen3-Coder 32B)에 접근할 수 있습니다.',
+        numberedItems: [
+          '집의 컴퓨터(Mac, PC 또는 NAS)에 Ollama를 설치하십시오. 70B 모델 다운로드: `ollama pull llama3.3:70b`(~40GB 여유 디스크 공간 + ~48GB RAM 또는 24GB GPU VRAM 필요).',
+          'Ollama를 로컬 네트워크에 바인딩: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. 집 컴퓨터의 로컬 IP를 메모하십시오(예: 192.168.1.20).',
+          '전화기에서 음성 비서 파이프라인(iOS Shortcut 또는 Android Tasker)을 설정하여 Whisper 전사를 로컬 LLM 호출 대신 `http://192.168.1.20:11434/api/generate`로 HTTP POST로 전송하십시오.',
+          'TTS는 집 컴퓨터의 응답 텍스트를 사용하여 전화기에서 계속 실행됩니다(Piper 또는 시스템 음성).',
+          '결과: Whisper STT가 전화기에서 실행되고(오디오가 기기를 떠나지 않음), 집의 Ollama가 ~600–1200ms에 70B급 응답을 생성하며, TTS가 전화기에서 말합니다. 총 지연 ~1.5–2.5초 — 완전히 기기 내보다 약간 더 많지만 훨씬 더 나은 LLM 품질.',
+        ],
+        promptExamples: [
+          {
+            label: 'iOS Shortcut: 하이브리드 음성 비서 (동작 버튼으로 활성화)',
+            text: '1. 오디오 녹음 → 임시 파일에 저장.\n2. Whisper Transcription으로 전사 → 출력: 전사 텍스트.\n3. URL에서 콘텐츠 가져오기 → URL: http://192.168.1.20:11434/api/generate, 메서드: POST, JSON 본문: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → 출력: 응답 텍스트.\n4. 텍스트 재생 → 입력: 응답 텍스트, 음성: iOS 시스템 음성.\n동작 버튼에 할당. 길게 누르기로 녹음; 놓기로 전송. 첫 오디오가 ~1.5–2.5초에 들림.',
+          },
+          {
+            label: 'Tasker: Android에서 하이브리드 음성 비서',
+            text: '1. 변수: %TRANSCRIPT = (녹음된 오디오 파일에서 whisper-cli 출력).\n2. HTTP 요청: URL http://192.168.1.20:11434/api/generate, 메서드 POST, 본문 {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. 변수: %REPLY = (JSON에서 파싱된 "response" 필드).\n4. 말하기: %REPLY (Android 시스템 TTS 또는 Piper가 설치된 경우).\n빠른 타일, Bluetooth 버튼 또는 Pixel 9 Pro 사이드 키 길게 누르기로 활성화.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '하이브리드 모드에서 최저 지연을 위해 Ollama를 스트리밍 모드(`"stream":true`)로 설정하고 전체 응답을 기다리는 대신 도착하는 대로 TTS로 토큰을 스트리밍하십시오. iOS Shortcuts는 네이티브로 스트리밍을 할 수 없지만 소형 Tasker 플러그인이나 커스텀 iOS 앱은 할 수 있습니다. 스트리밍으로 총 응답 시간이 동일해도 "첫 오디오" 지각 지연이 200–400ms 줄어듭니다.',
+          },
+        ],
+      },
+      latencyBudget: {
+        id: 'latency-budget',
+        title: '지연 예산: 초가 어디로 가는가',
+        content:
+          '**2026년 고급 전화기에서 LLM 첫 번째 토큰 시간이 전체 지연을 지배합니다 — 일반적으로 음성에서 첫 오디오 시간의 50–60%.** LLM 단계를 최적화하면 Whisper나 TTS를 조정하는 것보다 더 큰 영향을 줍니다.',
+        columns: ['단계', '일반적인 시간 (iPhone 16 Pro, 기기 내)', '참고'],
+        rows: [
+          { '단계': 'VAD 발화 종료 감지', '일반적인 시간 (iPhone 16 Pro, 기기 내)': '~200–500ms', '참고': '조정 가능; 기본 300ms. 지각 지연에 포함됨.' },
+          { '단계': 'Whisper Small STT (5초 발화)', '일반적인 시간 (iPhone 16 Pro, 기기 내)': '~150–300ms', '참고': 'WhisperKit은 Apple Neural Engine을 통해 ~30–40% 더 빠름.' },
+          { '단계': 'LLM 첫 번째 토큰 시간 (Phi-4 Mini)', '일반적인 시간 (iPhone 16 Pro, 기기 내)': '~400–800ms', '참고': '가장 큰 기여자. 더 작은 모델 = 더 빠름.' },
+          { '단계': 'TTS 첫 오디오 (Piper 또는 시스템)', '일반적인 시간 (iPhone 16 Pro, 기기 내)': '~100–200ms', '참고': '시스템 TTS가 Piper보다 약간 더 빠름.' },
+          { '단계': '총 음성에서 첫 오디오', '일반적인 시간 (iPhone 16 Pro, 기기 내)': '~0.9–1.4초', '참고': '2초 미만 = "사용 가능하게 느껴짐"; 1초 미만 = "네이티브하게 느껴짐".' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '총 1초 미만으로 줄이려면: Whisper Tiny(75 MB, ~80ms STT) + Qwen3 1.7B(~250ms TTFT) + 시스템 TTS(~80ms 첫 오디오)를 사용하십시오. iPhone 16 Pro에서 총 ~600–800ms. 단점은 더 짧고 덜 일관된 LLM 응답과 소음이 있는 환경에서 더 낮은 STT 정확도입니다. 응답 속도가 주요 우선순위인 경우 가치 있습니다.',
+          },
+        ],
+      },
+      accuracyBattery: {
+        id: 'accuracy-battery',
+        title: '1시간 동안의 정확도와 배터리 소모',
+        content:
+          '**Whisper Small은 중간 정도의 배경 소음이 있는 일반적인 말에서 ~88% 정확도를 달성합니다; Whisper Medium은 ~91%에 도달하지만 지연이 두 배입니다.** 1시간 활성 대화 동안 배터리 소모는 iPhone 16 Pro에서 ~25–35%, 고급 Android에서 ~25–40%입니다.',
+        items: [
+          '**모델 크기별 Whisper 정확도(WER LibriSpeech-clean, 낮을수록 좋음):** Tiny ~7.5%, Small ~3%, Medium ~2.4%, Large v3 ~1.8%. 소음이 있는 실제 조건에서: Tiny는 ~15–20% WER로 악화, Small은 ~10–14%, Medium은 ~7–10%, Large v3는 ~5–7%.',
+          '**클라우드 Whisper vs 로컬 Whisper:** OpenAI의 클라우드 Whisper API는 기본적으로 Large v3를 사용합니다(깨끗한 말에서 ~2% WER). 전화기의 로컬 Whisper Small은 동일한 오디오에서 ~3% WER — 일상적인 음성 비서 사용에서 차이가 감지되지 않을 만큼 충분히 가깝습니다.',
+          '**배터리 소모(1시간 활성 대화, 화면 켜짐):** iPhone 16 Pro ~25–35%; iPhone 17 Pro ~22–30%; Pixel 9 Pro ~30–40%; Galaxy S25 Ultra ~28–38%. 하이브리드 모드는 STT만 로컬에서 실행되므로 전화기 소모를 시간당 ~10–15%로 줄입니다.',
+          '**열 제한:** 기기 내 지속적인 LLM 추론은 iPhone에서 ~10–15분 후 열 제한을 트리거하고(칩 표면 ~38°C); 고급 Android에서 ~15–20분(태블릿과 대형 전화기에서 더 나은 열 질량). 제한은 토큰/초를 30–50% 줄여 LLM 첫 번째 토큰 지연을 ~600ms에서 ~900ms로 늘립니다.',
+          '**긴 세션을 위한 완화:** 충전기를 연결하고, 딱딱한 표면에 전화기를 앞면 위로 놓거나(손에 들지 않고) 하이브리드 모드로 전환하십시오. 마이크로 전화기를 사용하면 전화기를 전부로 사용하는 에너지의 일부를 사용합니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '완전히 로컬인 1시간 음성 세션은 전화기 배터리의 30–40%를 소모할 수 있습니다. 하루 종일 또는 차에서 사용하려면 충전을 계획하십시오. 하이브리드 경로(기기에서 STT만)는 항상 켜져 있는 주변 음성 비서를 위한 현실적인 옵션입니다 — 집의 컴퓨터가 무거운 작업을 합니다.',
+          },
+        ],
+      },
+      handsFree: {
+        id: 'hands-free',
+        title: '핸즈프리: Shortcuts, Tasker, CarPlay, Android Auto',
+        content:
+          '**핸즈프리 활성화는 음성 스택이 아닌 활성화 메커니즘에 달려 있습니다.** iOS는 동작 버튼 또는 "Siri야, [단축어 이름] 실행"으로 Shortcuts를 사용하고; Android는 사이드 키, 빠른 타일 또는 Bluetooth 버튼으로 Tasker를 사용합니다.',
+        items: [
+          '**iPhone 동작 버튼(iPhone 15 Pro 이상):** 음성 파이프라인을 활성화하는 단축어를 할당하십시오. 동작 버튼을 길게 누르기로 녹음 시작; 놓기로 전송. 2026년 iPhone에서 가장 낮은 지연의 핸즈프리 트리거.',
+          '**iPhone "Siri야, [단축어 이름] 실행":** Siri를 활성화하고(~500ms) 단축어를 실행합니다. 동작 버튼보다 지연이 추가되지만 전화기가 잠금 해제된 언제든지 핸즈프리로 작동합니다.',
+          '**Android 사이드 키/Bixby 키(Galaxy):** Galaxy Modes & Routines 설정 또는 Bixby 키 재매핑 앱을 통해 Tasker 액션을 할당하십시오. 누르기로 활성화.',
+          '**Android의 Tasker 빠른 타일:** 음성 스크립트를 실행하는 알림 패널에 빠른 타일을 추가하십시오. 잠금 화면에서 두 번 스와이프로 활성화.',
+          '**Bluetooth 버튼(예: Flic, 일반 미디어 버튼):** iOS 또는 Android와 페어링하고 음성 단축어/Tasker 작업을 트리거하도록 구성하십시오. 진정한 핸즈프리(책상, 핸들, 주머니의 버튼).',
+          '**CarPlay / Android Auto:** 이것들은 Siri / Google Assistant 시스템을 중심으로 설계되었습니다 — 2026년에는 어느 것도 타사 음성 비서 API를 노출하지 않습니다. CarPlay 해결책은 CarPlay 동작 버튼에 단축어 연결(제한된 단축어 지원); Android Auto의 경우 Bluetooth 미디어 버튼으로 활성화된 Tasker 사용. 어느 것도 차량 사용을 위해 시스템 비서와 동일한 통합 수준을 달성하지 않습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'CarPlay / Android Auto 통합 없이 차량 사용의 경우: 작은 Bluetooth 버튼(Flic, AirShou, 일반 미디어 컨트롤)을 페어링하고 핸들에 부착하십시오. 누르기로 오프라인 음성 비서를 활성화합니다 — 인터넷 없이 작동하고, 오디오를 클라우드로 전송하지 않으며, ~1.5초에 응답합니다. CarPlay와 비교한 단점은 차량 화면에 인터페이스가 없고 오디오만 있다는 것입니다.',
+          },
+        ],
+      },
+      privacy: {
+        id: 'privacy',
+        title: '개인 정보 보장: 진정한 오프라인 vs 클라우드 지원',
+        content:
+          '**음성 비서는 마이크 오디오, 전사, TTS 오디오가 네트워크 호출 없이 기기에 남아 있는 경우에만 "진정으로 오프라인"입니다.** "개인 정보 보호"로 마케팅된 많은 앱이 여전히 전사나 텔레메트리를 클라우드로 전송합니다 — 신뢰하기 전에 비행기 모드나 네트워크 모니터로 확인하십시오.',
+        items: [
+          '**"진정으로 오프라인" 확인 방법:** 전화기를 비행기 모드로 설정하고 비서를 사용하십시오. 완전한 품질로 작동하면 진정으로 오프라인입니다. 저하되거나 실패하면 일부 단계가 클라우드 서비스에 의존합니다.',
+          '**오디오 캡처:** 마이크 데이터는 로컬로 처리되고 전사 후 어디에도 기록되거나 전송되지 않아야 합니다. Whisper, WhisperKit, Sherpa-ONNX는 메모리에서 STT를 실행하고 전사 후 오디오를 버립니다.',
+          '**LLM 추론:** 응답이 전화기의 로컬 모델(Phi-4 Mini, Gemma 3, Llama 3.2)에 의해 생성되는 경우, 프롬프트가 기기를 나가지 않습니다. 비서가 "클라우드 지원" 모드를 사용하는 경우(Apple Intelligence Private Cloud Compute, Google의 기기 우선 후 클라우드 모드), 전사가 특정 조건에서 서버로 전송될 수 있습니다 — 앱의 개인 정보 보호 정책을 확인하십시오.',
+          '**TTS:** Piper와 시스템 TTS는 완전히 기기 내. 일부 "프리미엄" 클라우드 음성(ElevenLabs, OpenAI TTS)은 응답 텍스트를 서버로 전송해야 합니다 — 진정한 오프라인 사용을 위해 피하십시오.',
+          '**하이브리드 경로의 개인 정보 보호 입장:** 하이브리드 모드에서 오디오는 전화기에 남아 있지만(로컬 Whisper) 텍스트 전사가 홈 Wi-Fi를 통해 집의 Ollama 서버로 전송됩니다. 이것은 로컬 네트워크 전용으로 클라우드가 아닙니다 — 데이터는 네트워크 내에 남아 있습니다. 대부분의 개인 정보 보호 의식이 있는 사용자에게 허용 가능합니다; 가장 엄격한 위협 모델에는 완전히 기기 내와 동등하지 않습니다.',
+          '**앱별 참고사항(2026년 5월):** WhisperKit과 whisper.cpp는 오픈소스이며 검증 가능하게 오프라인입니다. Layla는 기본적으로 로컬로 작동합니다(비행기 모드에서 확인하십시오). LLM Farm과 PocketPal AI는 완전히 기기 내에서 추론을 실행합니다. Apple Intelligence는 기기 내 모드와 Private Cloud Compute 모두 있습니다 — 완전히 기기 내 작동을 위해 설정에서 PCC를 비활성화하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '완전히 오프라인 작동이 중요한 경우(기자/소스 기밀, 의료, 법률): 네트워크 동작을 감사할 수 있는 오픈소스 앱(WhisperKit 참조 빌드, Termux를 통한 whisper.cpp, Layla)을 선호하십시오. 클로즈드 소스 앱은("개인 정보 보호"로 마케팅된 경우에도) 사용자에게 명확한 알림 없이 향후 업데이트에서 클라우드 기능을 추가할 수 있습니다.',
+          },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '흔한 실수',
+        items: [
+          '**모든 것에 Whisper Tiny 사용하기.** Tiny는 빠르지만(~80ms STT) 소음이 있는 환경에서 오류가 발생하기 쉽습니다(~15–20% WER 대 Small의 ~10–14%). Tiny는 조용한 방에서 짧은 명령에는 허용 가능합니다; 범용 음성 비서에는 Small을 사용하십시오.',
+          '**TTS가 시작하기 전에 전체 LLM 응답 기다리기.** 이것은 지각 지연을 두 배로 늘립니다. 도착하는 대로 LLM 토큰을 TTS로 스트리밍하십시오 — Piper는 스트리밍 입력을 지원하고, 시스템 TTS는 증분적 말하기를 지원합니다. 첫 오디오는 전체 응답 후가 아닌 LLM의 첫 번째 문장 후에 재생되어야 합니다.',
+          '**더운 환경에서 기기 내 LLM 실행하기.** 열 제한은 직사광선이나 뜨거운 차 안에서 몇 분 안에 활성화되어 토큰/초를 30–50% 줄이고 지연을 2초 이상으로 밀어냅니다. 하이브리드 경로를 사용하거나 전화기를 시원하게 유지하십시오.',
+          '**확인 없이 "개인 정보 보호"를 신뢰하기.** "개인 정보 보호"와 "로컬"은 2026년 마케팅 용어입니다 — 로컬 처리를 주장하는 일부 앱이 여전히 분석, 모델 업데이트 또는 클라우드 지원 전사를 위해 데이터를 전송합니다. 민감한 사용에 신뢰하기 전에 비행기 모드로 확인하십시오.',
+          '**RAM이 부족한 Android 기기에서 Termux 스택 구축하기.** Termux + whisper.cpp + Ollama + Piper는 피크에서 ~4GB 시스템 RAM을 소비합니다. RAM이 6GB 이하인 기기는 대화 중간에 OOM으로 구성 요소를 죽입니다. RAM이 부족한 Android에서는 Layla를 사용하거나 iPhone 경로를 사용하십시오.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          'Whisper.cpp — [github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)(Android 및 iOS 빌드 포함 크로스플랫폼 Whisper).',
+          'WhisperKit (Argmax) — [github.com/argmaxinc/WhisperKit](https://github.com/argmaxinc/WhisperKit)(iOS / macOS에서 Apple Neural Engine에 최적화된 Whisper).',
+          'Piper TTS (Rhasspy) — [github.com/rhasspy/piper](https://github.com/rhasspy/piper)(오픈소스 신경망 TTS, 모바일 호환, 30개 이상 언어).',
+          'LLM Farm — [github.com/guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)(로컬에서 GGUF 모델 실행을 위한 iOS 앱).',
+          'Layla (Android) — [Play Store 목록](https://play.google.com) 및 개발자 문서(음성 지원이 있는 통합 로컬 LLM 스택).',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          {
+            q: '로컬 Whisper는 클라우드 Whisper와 비교하여 얼마나 정확합니까?',
+            a: '전화기에서 로컬로 실행되는 Whisper Small은 깨끗한 말에서 ~3% WER을 달성합니다; OpenAI의 클라우드 Whisper(Large v3)는 ~2%를 달성합니다. 소음이 있는 환경에서 로컬 Small은 동일한 오디오에서 ~10–14% WER로 떨어지는 반면 Cloud Large v3는 ~5–7%로 떨어집니다. 일상적인 음성 비서 사용에서 로컬 정확도는 실용적으로 감지되지 않을 만큼 충분히 가깝습니다. 모든 단어가 중요한 긴 받아쓰기의 경우 클라우드나 로컬 Medium/Large가 선호됩니다.',
+          },
+          {
+            q: '로컬 음성 비서가 Siri를 완전히 대체할 수 있습니까?',
+            a: '개인 Q&A, 초안 작성, 요약의 경우: 네, Siri의 기기 내 기능과 비교 가능하거나 더 나은 품질로. 시스템 액션(앱 열기, 타이머 설정, HomeKit 제어), 웹 검색 시작 또는 라이브 데이터(날씨, 스포츠 결과): 아니요 — iOS와 Apple 서비스와의 Siri 통합은 2026년에 타사 로컬 스택으로 복제할 수 없습니다. 많은 사용자가 두 가지를 유지합니다: 시스템 액션을 위한 Siri, 개인 Q&A를 위한 로컬 스택.',
+          },
+          {
+            q: 'CarPlay나 Android Auto에서 작동합니까?',
+            a: '제한적으로. CarPlay와 Android Auto는 Siri / Google Assistant 시스템을 중심으로 설계되었습니다; 어느 것도 2026년에 타사 음성 비서 API를 노출하지 않습니다. 해결책: CarPlay 동작 버튼에 단축어 연결(제한된 단축어 지원), 또는 Bluetooth 버튼으로 Tasker/단축어를 활성화하십시오. 어느 것도 차량 사용에서 시스템 비서와 동일한 통합 수준을 달성하지 않습니다.',
+          },
+          {
+            q: '핸즈프리로 어떻게 활성화합니까?',
+            a: 'iPhone: 단축어를 호출하기 위해 동작 버튼을 길게 누르거나(iPhone 15 Pro 이상), "Siri야, [단축어 이름] 실행"이라고 말하십시오. Android: Galaxy 전화기의 사이드 키나 Bixby 키, Tasker 빠른 타일, 또는 페어링된 Bluetooth 버튼을 사용하십시오. 진정한 핸즈프리 주변 환경(웨이크 워드를 들을 때까지 항상 듣기)의 경우, 로컬 스택은 2026년에 Siri / Google Assistant와 동등하지 않습니다 — 전화기의 시스템 웨이크 워드 감지기는 타사 앱에 노출되지 않습니다.',
+          },
+          {
+            q: '여러 언어로 대화를 처리할 수 있습니까?',
+            a: '네, 하지만 뉘앙스가 있습니다. Whisper는 입력 언어를 자동으로 감지하고 99개 언어를 지원합니다. 로컬 LLM은 다양합니다: Phi-4 Mini는 영어를 잘 처리하고 주요 유럽 언어를 합리적으로 처리합니다; Qwen3는 중국어를 포함한 강력한 다국어 지원을 가지고 있습니다; Gemma 3는 100개 이상의 언어를 지원합니다. TTS의 경우 Piper는 30개 이상의 언어에 음성이 있습니다; 시스템 TTS는 설치된 OS 언어 패키지에 따라 다릅니다. 대화 중간 언어 전환은 Whisper에서는 작동하지만 LLM을 혼란스럽게 할 수 있습니다.',
+          },
+          {
+            q: '배경 소음이 로컬 STT를 망칩니까?',
+            a: 'Whisper Tiny는 중간 정도의 소음에서 크게 저하됩니다(~15–20% WER); Small은 카페 수준의 소음을 합리적으로 처리합니다(~10–14% WER); Medium과 Large는 대부분의 실제 환경을 잘 처리합니다. 소음이 있는 사용(차, 대중교통)의 경우, 전화기에 RAM이 있다면 Whisper Medium을 사용하거나 VAD를 공격적으로 적용하십시오(발화가 감지될 때만 전사, 발화 사이의 침묵은 무시).',
+          },
+          {
+            q: '스마트 홈 기기와 로컬로 통합하려면 어떻게 합니까?',
+            a: 'LLM 응답을 인텐트를 감지하는 파서를 통해 전달하고(예: "주방 불 끄기") 스마트 홈 허브의 API를 직접 호출하십시오 — Home Assistant는 로컬 IP에 REST API가 있으며, Apple HomeKit 통합은 단축어의 "홈 제어" 액션을 통해 작동합니다. 진정한 오프라인 파이프라인을 원한다면 클라우드 스마트 홈 통합(Alexa, Google Home)을 피하십시오.',
+          },
+          {
+            q: 'TTS 음성을 커스터마이징할 수 있습니까?',
+            a: '네. Piper TTS는 30개 이상의 언어에 100개 이상의 커뮤니티 훈련 음성이 있으며 ~50 MB 음성 모델로 다운로드 가능합니다. iOS 음성 단축어는 고품질 Premium 음성을 포함한 시스템 음성 중에서 선택할 수 있습니다(설정 → 접근성 → 말한 콘텐츠 → 음성에서 다운로드). Android 시스템 TTS는 Google이나 타사 음성 패키지를 지원합니다. 커스텀 음성 클로닝(자신의 음성 또는 특정 인물)은 별도의 TTS 도구 체인(Coqui, Tortoise TTS)이 필요합니다 — 2026년에는 아직 기기 내에서 실용적이지 않습니다.',
+          },
+          {
+            q: '배터리가 많이 소모됩니까?',
+            a: '네 — 고급 전화기에서 시간당 활성 대화 약 25–40%. 가끔 음성 쿼리의 경우 영향이 작습니다. 하루 종일 또는 항상 켜져 있는 사용의 경우 충전하거나 하이브리드 경로를 사용하십시오(기기에서 STT만 실행, 소모를 시간당 ~10–15%로 줄임). 웨이크 워드 감지를 통한 수동 백그라운드 청취는 현재 허용 가능한 배터리 비용으로 타사 로컬 스택에서 실현 가능하지 않습니다.',
+          },
+          {
+            q: 'iOS 19 또는 Android 16이 이 설정을 망칩니까?',
+            a: '주요 스택(Whisper, 로컬 LLM, TTS)에는 거의 그렇지 않습니다 — 이것들은 표준 API(마이크 캡처, TTS, 네트워크)에 의존하는 사용자 공간 앱입니다. 망가질 수 있는 것: Apple이 단축어 API를 변경하면 단축어 통합; Android 16이 백그라운드 프로세스를 더 제한하면 Android에서 Termux(Android는 각 버전에서 이를 점진적으로 제한해 왔습니다). 앱을 업데이트하고 각 주요 OS 업데이트 후 확인하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[2026년 iPhone을 위한 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — iPhone 경로를 위한 기본 레이어 앱(PocketPal AI, LLM Farm, Private LLM).',
+          '[2026년 Android를 위한 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-android-2026) — Android 경로를 위한 기본 레이어 앱(Layla, Maid, MLC Chat, Termux + Ollama).',
+          '[2026년 최고의 모바일 LLM 모델: Phi-4 Mini vs Gemma 3 vs SmolLM](/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — 음성 스택의 모델 레이어; 품질 대 지연 절충점 벤치마크.',
+          '[태블릿에서 AI 실행하는 방법: iPad 및 Android (2026)](/ko/power-local-llm/run-ai-on-tablet-ipad-android) — 더 큰 화면으로 음성 설정을 원하는 사용자를 위한 태블릿 동등물.',
+          '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 하이브리드 설정에서 LLM을 선택하는 데 유용한 모든 하드웨어 계층을 다루는 광범위한 모델 권위.',
+          '[2026년 로컬 LLM 소프트웨어 디렉토리](/ko/power-local-llm/local-llm-software-directory-2026) — Whisper.cpp, WhisperKit, Piper TTS 및 기타 음성 스택 구성 요소의 디렉토리 항목.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '전화기에서 로컬 음성 비서 만들기: Whisper + 로컬 LLM (클라우드 없음) — 2026',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/voice-assistant-local-mobile-offline',
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/og-image.png',
+        width: 1200,
+        height: 630,
+      },
+      description: '2026년 iPhone 및 Android에서 완전히 오프라인 AI 음성. 로컬 Whisper STT + 로컬 LLM + Piper TTS. iPhone, Android, 하이브리드 설정; 지연, 배터리, 개인 정보 보호.',
+      inLanguage: 'ko',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/logo.svg',
+        },
+      },
+      datePublished: '2026-05-08',
+      dateModified: '2026-05-08',
+      about: [
+        { '@type': 'Thing', name: 'Whisper STT' },
+        { '@type': 'Thing', name: '로컬 LLM' },
+        { '@type': 'Thing', name: 'iPhone 오프라인' },
+        { '@type': 'Thing', name: 'Android 오프라인' },
+        { '@type': 'Thing', name: '음성 비서' },
+        { '@type': 'Thing', name: '모바일 AI' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'WhisperKit' },
+        { '@type': 'SoftwareApplication', name: 'LLM Farm' },
+        { '@type': 'SoftwareApplication', name: 'Layla' },
+        { '@type': 'SoftwareApplication', name: 'Piper TTS' },
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways', '.faq'],
+      },
+    },
+  },
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
