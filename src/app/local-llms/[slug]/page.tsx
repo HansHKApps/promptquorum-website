@@ -7,7 +7,7 @@ import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { llmThemes } from '@/lib/local-llms/themes'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, toOutputLocale } from '@/lib/i18n/constants'
 import { getLocalLLMGeoEntities, type Language } from '@/lib/geo-schema'
 
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
@@ -225,6 +225,7 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
     description: article.intro,
     datePublished: article.publishDate,
     dateModified: (article as any).dateModified ?? ((article as any).lastFactChecked as string | undefined)?.substring(0, 10) ?? article.publishDate,
+    inLanguage: toOutputLocale(selectedLang),
     url: canonicalUrl,
     ...(llmProficiencyLevel && { proficiencyLevel: llmProficiencyLevel }),
     ...(llmAboutTopics?.length && { about: llmAboutTopics.map((t: string) => ({ '@type': 'Thing', name: t })) }),
@@ -254,6 +255,11 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
       name: 'Local LLMs Guide',
       url: 'https://www.promptquorum.com/local-llms',
     },
+  }
+
+  // Ensure inLanguage is always set (covers pre-built article.schema with missing or EN block)
+  if (!(articleSchema as any).inLanguage) {
+    (articleSchema as any).inLanguage = toOutputLocale(selectedLang)
   }
 
   // Inject GEO Schema Matrix entities
@@ -304,6 +310,7 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    inLanguage: toOutputLocale(selectedLang),
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: labels.home, item: 'https://www.promptquorum.com' },
       { '@type': 'ListItem', position: 2, name: labels.hub, item: 'https://www.promptquorum.com/local-llms' },

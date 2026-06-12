@@ -241,6 +241,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     description: article.intro,
     datePublished: article.publishDate || '2026-03-01',
     dateModified: (article as any).dateModified ?? ((article as any).lastFactChecked as string | undefined)?.substring(0, 10) ?? article.publishDate,
+    inLanguage: toOutputLocale(selectedLang),
     url: canonicalUrl,
     ...(peProficiencyLevel && { proficiencyLevel: peProficiencyLevel }),
     ...(peAboutTopics?.length && { about: peAboutTopics.map((t: string) => ({ '@type': 'Thing', name: t })) }),
@@ -281,6 +282,11 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
         { '@type': 'WebPageElement', name: 'Metrics & Production', cssSelector: '#metrics-production' },
       ],
     }),
+  }
+
+  // Ensure inLanguage is always set (covers pre-built article.schema with missing or EN block)
+  if (!(articleSchema as any).inLanguage) {
+    (articleSchema as any).inLanguage = toOutputLocale(selectedLang)
   }
 
   // Inject GEO Schema Matrix entities
@@ -330,6 +336,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    inLanguage: toOutputLocale(selectedLang),
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: bcLabel.home, item: 'https://www.promptquorum.com' },
       { '@type': 'ListItem', position: 2, name: bcLabel.hub, item: 'https://www.promptquorum.com/prompt-engineering' },

@@ -18,6 +18,7 @@ import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد' }
 const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث' }
 import { getPowerLLMGeoEntities } from '@/lib/geo-schema'
+import { toOutputLocale } from '@/lib/i18n/constants'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -214,6 +215,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
     description: article.intro,
     datePublished: article.publishDate,
     dateModified: (article as any).dateModified ?? ((article as any).lastFactChecked as string | undefined)?.substring(0, 10) ?? article.publishDate,
+    inLanguage: toOutputLocale(lang),
     url: canonicalUrl,
     ...(proficiencyLevel && { proficiencyLevel }),
     author: {
@@ -240,6 +242,11 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
     },
   }
 
+  // Ensure inLanguage is always set (covers pre-built article.schema with missing or EN block)
+  if (!(articleSchema as any).inLanguage) {
+    (articleSchema as any).inLanguage = toOutputLocale(lang)
+  }
+
   // Prefer heroImage when available, fall back to OG API route
   if ((article as any).heroImage) {
     ;(articleSchema as any).image = {
@@ -259,7 +266,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    inLanguage: lang,
+    inLanguage: toOutputLocale(lang),
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: HOME_LABEL[lang], item: BASE },
       { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: `${BASE}${powerLLMHubPath(lang)}` },
