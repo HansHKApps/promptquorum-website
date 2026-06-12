@@ -1152,9 +1152,9 @@ schema: {
     ar: {
       theme: 'Tools & Interfaces',
       title: 'نماذج LLM المحلية مع VS Code وCursor: الإعداد وأفضل الممارسات',
-      seoTitle: 'نماذج LLM المحلية في VS Code وCursor: دليل الإعداد 2026',
+      seoTitle: 'LLM محلي في VS Code وCursor: إعداد Ollama 2026',
       intro: 'يستطيع VS Code وCursor (محرر شيفرة موجّه نحو الذكاء الاصطناعي) استخدام نماذج LLM المحلية لإكمال الشيفرة واقتراحها، عبر إضافة Continue.dev (VS Code) أو التكامل المباشر (Cursor). اعتبارًا من أبريل 2026، إكمالات الشيفرة المحلية عملية لنماذج 7B-13B وتتطلب 8-16 GB من RAM. يغطي هذا الدليل الإعداد وأفضل النماذج وضبط الأداء.',
-      metaDescription: 'استخدم Ollama في VS Code مع Continue.dev لإكمالات شيفرة محلية بلا مفتاح API. أفضل النماذج، متطلبات VRAM والتكامل مع Cursor 2026.',
+      metaDescription: 'Ollama مع Continue.dev في VS Code يتيح إكمال الشيفرة محليًا بلا مفتاح API. أفضل النماذج 2026، متطلبات VRAM التفصيلية، وإعداد Cursor بخطوات واضحة.',
       publishDate: '2026-04-04',
       readTime: '10 دقائق للقراءة',
       educationalLevel: 'Intermediate',

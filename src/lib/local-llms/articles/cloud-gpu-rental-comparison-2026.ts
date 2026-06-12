@@ -1067,8 +1067,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     title: 'استئجار GPU سحابية 2026: RunPod مقابل Vast.ai مقابل Lambda Labs (مختبَر مايو 2026)',
-    seoTitle: 'استئجار GPU سحابية 2026: RunPod مقابل Vast.ai مقابل Lambda',
-    metaDescription: 'قارن بين RunPod وVast.ai وLambda Labs لاستدلال LLM: الأسعار (0.34–2.99 دولار/ساعة)، اتفاقية مستوى وقت التشغيل، امتثال GDPR ووقت الإعداد. 2026.',
+    seoTitle: 'RunPod مقابل Vast.ai مقابل Lambda: GPU سحابية 2026',
+    metaDescription: 'RunPod: 0.34–0.69 دولار/ساعة لـ RTX 4090 مع وقت تشغيل 99%. Vast.ai أرخص بـ 30–50%. Lambda Labs: 1.79–2.99 دولار/ساعة مع SLA بـ 99.9% ودعم مُدَار.',
     intro: 'استئجار وحدات GPU سحابية أرخص بنسبة 30–50% من شراء العتاد إن كنت تحتاج قوة الحوسبة بشكل عَرَضي. تختبر هذه المقارنة المرجعية ثلاثة مزودين رائدين (RunPod، Vast.ai، Lambda Labs) من حيث السعر والموثوقية وامتثال GDPR وسهولة الاستخدام. محدَّثة شهرياً.',
     publishDate: '2026-05-17',
     dateModified: '2026-05-18',

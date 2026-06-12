@@ -651,9 +651,9 @@ schema: {
       freshness_tier: 'monthly',
       theme: 'GPU Buying Guides',
       title: 'RTX 3060 12GB: شغّل Qwen3 8B وQwen3 14B وGemma 4 وMistral Small (دليل 2026)',
-      seoTitle: 'RTX 3060 12GB: أفضل GPU اقتصادية لنماذج LLM المحلية 2026',
+      seoTitle: 'RTX 3060 12GB: أفضل GPU اقتصادية لـ LLM 2026',
       intro: '**تشغّل RTX 3060 12GB نموذج Qwen3 14B بسرعة 9–12 tok/ث، وQwen3 8B بسرعة 16–20 tok/ث، وGemma 4 E12B بسرعة 11–14 tok/ث، وMistral Small بسرعة 18 tok/ث، وDeepSeek-R1 7B بسرعة 10–12 tok/ث — كل ذلك بتكميم Q4.** النسخة بسعة 6GB محدودة بنماذج 3B فقط. اعتباراً من يونيو 2026، تبقى RTX 3060 12GB (200–250 دولار مستعملة) أفضل GPU اقتصادية لنماذج LLM المحلية: تتسع 12GB من VRAM لجميع نماذج 7B-8B بصيغة Q4/Q5 ومعظم النماذج الكثيفة 13B-14B بصيغة Q4. (ملاحظة: Llama 4 Scout هو MoE بـ 17B نشطة/109B إجمالاً يحتاج إلى ~55 GB بصيغة Q4 — لا يتسع في 12 GB عادةً.) يغطي هذا الدليل بالضبط أي النماذج تعمل عند كل مستوى VRAM، بسرعات حقيقية وإعدادات عملية. قد تختلف الأسعار حسب بلدك.',
-      metaDescription: 'RTX 3060 12GB: Qwen3 8B (16–20 tok/s)، Qwen3 14B (9–12 tok/s)، Gemma 4 E12B، Mistral Small وDeepSeek-R1. جدول كامل باختبارات VRAM والسرعة.',
+      metaDescription: 'RTX 3060 12GB تشغّل Qwen3 8B بـ 16-20 رمزًا/ثانية وQwen3 14B بـ 9-12. مقارنة 5 بطاقات حسب VRAM والسرعة والسعر لنماذج LLM المحلية 2026.',
       publishDate: '2026-04-05',
       leadAnswerBlock: '**تشغّل RTX 3060 12GB نموذج Qwen3 14B بسرعة 9–12 tok/ث، وQwen3 8B بسرعة 16–20 tok/ث، وGemma 4 E12B بسرعة 11–14 tok/ث، وMistral Small بسرعة 18 tok/ث، وDeepSeek-R1 7B بسرعة 10–12 tok/ث. النسخة بسعة 6GB تتعامل مع نماذج 3B فقط. أفضل GPU اقتصادية لنماذج LLM المحلية في 2026 بسعر 200–250 دولار مستعملة. قد تختلف الأسعار حسب بلدك.**',
       nextStep: {

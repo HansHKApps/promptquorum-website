@@ -768,8 +768,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Model Comparisons',
     title: 'ما هي متطلبات الأجهزة لتشغيل DeepSeek V3 محلياً؟',
-    seoTitle: 'DeepSeek V3 محلياً 2026: 400 GB وبدائل فعلية',
-    metaDescription: 'DeepSeek V3 نموذج MoE بـ 671B، غير قابل للتشغيل على أجهزة استهلاكية: Q4_K_M يحتاج حوالي 400 GB RAM. بدائل عملية مع أرقام دقيقة لكل مستوى VRAM.',
+    seoTitle: 'DeepSeek V3 محلياً 2026: 400 GB وبدائل عملية',
+    metaDescription: 'DeepSeek V3 (671B MoE) يحتاج حوالي 400 GB RAM بـ Q4_K_M — خارج نطاق أي جهاز استهلاكي. بدائل قابلة للتشغيل بأرقام VRAM دقيقة لكل مستوى.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

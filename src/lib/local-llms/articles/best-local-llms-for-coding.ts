@@ -1053,9 +1053,9 @@ schema: {
       next_refresh_due: '2026-06-30',
       theme: 'Best Models',
       title: 'أفضل نماذج LLM المحلية للبرمجة 2026: Kimi K2.6 مقابل Qwen مقابل Devstral',
-      seoTitle: 'أفضل نماذج LLM المحلية للبرمجة 2026: Kimi K2.6 مقابل Qwen',
+      seoTitle: 'LLM محلي للبرمجة 2026: Kimi K2.6 مقابل Qwen وDevstral',
       intro: 'أفضل نماذج LLM المحلية للبرمجة في يونيو 2026 هي Kimi K2.6 (58.6 SWE-Bench Pro، MoE، رخصة MIT معدّلة)، وQwen 3.6 27B (77.2% في SWE-bench، أفضل نموذج كثيف)، وDevstral Small 24B (الأفضل للبرمجة الوكيلة). للأجهزة بسعة 8 GB، يحل Qwen3 8B محل التوصية السابقة Qwen3-Coder 7B. تعمل جميعها محلياً عبر Ollama.',
-      metaDescription: 'يونيو 2026: Kimi K2.6 (58.6 SWE-Bench Pro) هو أفضل نموذج LLM محلي للبرمجة. مقارنة بـ Qwen 3.6 27B (77.2% SWE-bench) وDevstral 24B.',
+      metaDescription: 'Kimi K2.6 يسجّل 58.6 في SWE-Bench Pro — أعلى نموذج برمجة محلي. Qwen 3.6 27B يبلغ 77.2% في SWE-bench. Devstral 24B الأفضل للبرمجة الوكيلة.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**في يونيو 2026، أفضل نماذج البرمجة المحلية هي Kimi K2.6 (58.6 SWE-Bench Pro، MoE، رخصة MIT معدّلة) لأقصى جودة، وQwen 3.6 27B (77.2% SWE-bench، أفضل نموذج كثيف) لأداء متوازن، وDevstral Small 24B (الأفضل لسير العمل الوكيل). لـ 8 GB من RAM: Qwen3 8B. تعمل جميعها عبر Ollama محلياً لتوليد كود دون اتصال وخاص ودون تكاليف API سحابية.** على عكس HumanEval الذي يقيّم الدوال الفردية، أصبح SWE-bench (حل مشكلات GitHub الحقيقية) المعيار الأساسي للبرمجة العملية في 2026.',
       quickAnswerTop: {

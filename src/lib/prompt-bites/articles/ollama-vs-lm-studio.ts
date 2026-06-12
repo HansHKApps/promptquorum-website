@@ -605,8 +605,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Tool Comparisons',
     title: 'Ollama مقابل LM Studio: أيهما تختار؟',
-    seoTitle: 'Ollama مقابل LM Studio | Prompt Bites | PromptQuorum',
-    metaDescription: 'إذا كنت تستخدم الطرفية وتطور تطبيقات بواجهات برمجية، اختر Ollama. إذا كنت تفضل واجهة رسومية والدردشة مع النماذج، استخدم LM Studio. كلاهما مجاني ويشغّل النماذج محليًا.',
+    seoTitle: 'Ollama مقابل LM Studio 2026: أيهما تختار؟',
+    metaDescription: 'Ollama للمطورين: طرفية وREST API على المنفذ 11434. LM Studio لمستخدمي الواجهة الرسومية والدردشة. كلاهما مجاني ويشغّل LLMs محلياً دون اتصال.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

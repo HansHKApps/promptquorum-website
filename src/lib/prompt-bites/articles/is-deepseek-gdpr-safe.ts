@@ -575,8 +575,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Privacy & Security',
     title: 'هل استخدام DeepSeek آمن وفق اللائحة الأوروبية لحماية البيانات GDPR؟',
-    seoTitle: 'هل DeepSeek آمن وفق GDPR؟ 2026 | PromptQuorum',
-    metaDescription: 'واجهة برمجة DeepSeek هي الأعلى خطورة على GDPR: اختصاص صيني، قانون PIPL، لا قرار كفاية أوروبي. الأوزان المحلية أقل خطورة. مايو 2026.',
+    seoTitle: 'DeepSeek وGDPR 2026: API أم أوزان محلية؟',
+    metaDescription: 'API DeepSeek هو الأعلى خطورة على GDPR: اختصاص صيني، قانون PIPL، ولا قرار كفاية أوروبي. الأوزان المحلية تُجنّب نقل البيانات تماماً.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

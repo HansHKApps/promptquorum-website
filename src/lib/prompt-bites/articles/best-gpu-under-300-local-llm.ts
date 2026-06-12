@@ -1024,8 +1024,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Hardware-Specific',
     title: 'أفضل بطاقة رسوميات بأقل من 300 دولار لنماذج اللغة المحلية في 2026؟',
-    seoTitle: 'أفضل بطاقة رسوميات بأقل من 300 دولار لنماذج اللغة المحلية 2026',
-    metaDescription: 'أفضل بطاقة رسوميات بأقل من 300 دولار لنماذج اللغة المحلية: RTX 3060 12 GB مستعملة ($150–250)، CUDA فوري مع Ollama. RX 6700 XT أرخص لكنها تتطلب ROCm.',
+    seoTitle: 'RTX 3060 12 GB: أفضل GPU بأقل من 300 دولار للـ LLM 2026',
+    metaDescription: 'RTX 3060 12 GB المستعملة (150–250 دولار) الأفضل لـ LLMs المحلية — 12 GB VRAM تكفي لنماذج 7B. RX 6700 XT أرخص لكنها تحتاج ROCm على Linux.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

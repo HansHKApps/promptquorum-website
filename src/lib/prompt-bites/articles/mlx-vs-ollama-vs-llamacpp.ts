@@ -579,8 +579,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Tool Comparisons',
     title: 'MLX مقابل Ollama مقابل llama.cpp: أي محرك استنتاج يجب أن تستخدم؟',
-    seoTitle: 'MLX مقابل Ollama مقابل llama.cpp 2026 | PromptQuorum',
-    metaDescription: 'على Apple Silicon استخدم MLX (حوالي 65 رمزاً/ثانية على M5 Pro). على NVIDIA، استخدم Ollama للبساطة أو llama.cpp للتحكم الكامل. Ollama يُغلّف llama.cpp. إجابة سريعة.',
+    seoTitle: 'MLX مقابل Ollama مقابل llama.cpp: أيهما لـ Mac؟',
+    metaDescription: 'على Apple Silicon استخدم MLX: ~65 رمز/ثانية على M5 Pro. على NVIDIA اختر Ollama أو llama.cpp. Ollama يُغلّف llama.cpp داخلياً ويوفر واجهة REST.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

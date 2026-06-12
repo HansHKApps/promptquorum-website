@@ -600,8 +600,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Model Comparisons',
     title: 'Qwen 14B مقابل Llama 3 8B: أيهما يعمل بشكل أفضل محليًا؟',
-    seoTitle: 'Qwen 14B مقابل Llama 3 8B: أيهما تختار؟ 2026 | PromptQuorum',
-    metaDescription: 'Llama 3 8B: 6 GB VRAM، ~25 tok/s. Qwen 3 14B: 10 GB، MMLU 74.8%. مع 12 GB VRAM يفوز Qwen 14B في الجودة. إجابة سريعة من PromptQuorum.',
+    seoTitle: 'Qwen 3 14B مقابل Llama 3.3 8B: الاختيار الصحيح',
+    metaDescription: 'Llama 3.3 8B: 6 GB VRAM، ~25 tok/s على RTX 3060، MMLU 66.6%. Qwen 3 14B: 10 GB VRAM، ~15 tok/s، MMLU 74.8%. عند 12 GB VRAM يتفوق Qwen 14B في الجودة.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

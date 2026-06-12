@@ -2197,7 +2197,7 @@ schema: {
       title: 'نماذج LLM المحلية على الهواتف 2026: iPhone 16 Pro وiPad M4 وSnapdragon X',
       seoTitle: 'أفضل تطبيقات LLM المحلية لـ Android وiOS 2026',
       intro: '**نعم، يمكنك تشغيل نموذج LLM محلي على هاتفك في 2026، لكن نماذج صغيرة فقط (1–3B على iPhone، حتى 7B على Android المتطور).** توقّع 3–5 tok/ث، لا 80–150 tok/ث التي تحصل عليها على سطح المكتب. تستحق المقايضة العناء للمحادثة دون اتصال والملاحظات الخاصة ومهام الذكاء الاصطناعي الخفيفة بلا تكاليف API ولا إنترنت. يغطي هذا الدليل أفضل تطبيقات LLM للهواتف (PocketPal AI، MLC Chat، Ollama iOS)، ودروس الإعداد لـ Android وiOS، وأي عتاد يشغّلها فعلًا.',
-      metaDescription: 'أفضل تطبيقات LLM للهواتف: MLC LLM وPocketPal AI (500K+ تنزيل) على Android؛ Ollama iOS وPrivate LLM على iOS. شغّل 1–3B على iPhone و7B على Snapdragon X.',
+      metaDescription: 'تطبيقات LLM للهواتف: MLC LLM وPocketPal AI (500K+ تنزيل) على Android؛ Ollama iOS وPrivate LLM على iOS. شغّل 1–3B على iPhone و7B على Snapdragon X.',
       publishDate: '2026-04-04',
       dateModified: '2026-05-17',
       leadAnswerBlock: '**يمكنك تشغيل نماذج LLM محلية على هاتفك: 1–3B على iPhone (3 tok/ث)، 7B على Snapdragon X Android (5 tok/ث)، 13B على iPad M4 (15 tok/ث). بطيء لكنه عملي للمحادثة دون اتصال والملاحظات الخاصة والذكاء الاصطناعي الخفيف بلا تكاليف API.**',

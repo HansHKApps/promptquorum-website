@@ -582,8 +582,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Tool Comparisons',
     title: 'هل يدعم Ollama MLX على Apple Silicon؟',
-    seoTitle: 'دعم Ollama لـ MLX على Apple Silicon 2026 | PromptQuorum',
-    metaDescription: 'لا — يستخدم Ollama llama.cpp + Metal، وليس MLX. للاستنتاج الأصلي عبر MLX على Apple Silicon، استخدم mlx-lm أو LM Studio. LM Studio يدعم كلا الخلفيتين.',
+    seoTitle: 'Ollama وMLX على Apple Silicon: الفرق الحقيقي 2026',
+    metaDescription: 'لا — Ollama يعتمد llama.cpp + Metal وليس MLX. للاستنتاج عبر MLX على Apple Silicon استخدم mlx-lm أو LM Studio. LM Studio يدعم كلتا الخلفيتين.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

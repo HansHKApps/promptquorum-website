@@ -556,8 +556,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Ollama',
     title: 'ما نماذج Ollama التي تدعم الرؤية؟',
-    seoTitle: 'نماذج رؤية Ollama 2026 | PromptQuorum',
-    metaDescription: 'LLaVA و Gemma 3 متعدد الوسائط و Qwen-VL تدعم الرؤية في Ollama. ابدأ بـ: ollama run llava. جميعها تقبل الصور عبر واجهة Ollama البرمجية. مُحدَّث 2026.',
+    seoTitle: 'نماذج Ollama للرؤية: LLaVA و Qwen-VL و Gemma 3',
+    metaDescription: '4 نماذج رؤية جاهزة للإنتاج في Ollama: LLaVA و Llama 3.2 Vision و Qwen-VL و Gemma 3. تحتاج 1–3 GB VRAM إضافية؛ ابدأ بـ ollama run llava للتوافق الأوسع.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

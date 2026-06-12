@@ -1591,9 +1591,9 @@ schema: {
     ar: {
       theme: 'Tools & Interfaces',
       title: 'Jan AI مقابل LM Studio: أيهما أفضل لنماذج LLM المحلية؟',
-      seoTitle: 'Jan AI مقابل LM Studio 2026: الميزات والسرعة والواجهة',
+      seoTitle: 'LM Studio مقابل Jan AI 2026: أيهما تختار؟',
       intro: '**كل من LM Studio وJan AI تطبيقا سطح مكتب لتشغيل نماذج LLM المحلية دون عبء سطر الأوامر.** اعتبارًا من أبريل 2026، يتميز LM Studio بالبساطة وإدارة النماذج؛ أما Jan AI فهو أحدث ويُعطي الأولوية للخصوصية وقابلية التوسعة. للمستخدمين العاديين، LM Studio. للمطورين الذين يريدون التحكم، Jan AI. ولا أحدهما أسرع بشكل ملحوظ من Ollama + OpenWebUI.',
-      metaDescription: 'Jan AI مقابل LM Studio: قارن الميزات والخصوصية والواجهة ودعم API. أي تطبيق LLM لسطح المكتب أفضل؟ Jan مفتوح المصدر مع إضافات.',
+      metaDescription: 'LM Studio أفضل للمبتدئين: واجهة أبسط وبحث HuggingFace مدمج. Jan AI للمطورين: مفتوح المصدر وبلا قياس عن بُعد وإضافات متعددة. كلاهما يستخدم llama.cpp.',
       publishDate: '2026-04-05',
       dateModified: 'April 8, 2026',
       readTime: '7 دقائق للقراءة',

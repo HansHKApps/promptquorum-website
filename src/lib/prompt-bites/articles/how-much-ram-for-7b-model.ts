@@ -546,8 +546,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Quantization & VRAM',
     title: 'كم من الذاكرة يحتاج نموذج 7B؟',
-    seoTitle: 'ذاكرة نموذج 7B المحلي 2026 | PromptQuorum',
-    metaDescription: 'نموذج 7B بتكميم Q4 يحتاج 5–6 GB ذاكرة RAM أو VRAM. الاستدلال عبر CPU يعطي ~5 توكن/ث؛ GPU يعطي ~25 توكن/ث. القاعدة: عدد المعاملات × 0.7 = GB عند Q4.',
+    seoTitle: 'ذاكرة RAM لنماذج 7B المحلية 2026 | PromptQuorum',
+    metaDescription: 'نموذج 7B بتكميم Q4 يحتاج 5–6 GB RAM أو VRAM. CPU يعطي ~5 توكن/ث؛ GPU يعطي ~25 توكن/ث. المعادلة: عدد المعاملات × 0.7 = GB عند Q4.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

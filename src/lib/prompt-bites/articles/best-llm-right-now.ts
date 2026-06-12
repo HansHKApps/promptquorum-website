@@ -624,8 +624,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Prompt Engineering',
     title: 'ما هو أفضل نموذج لغوي كبير الآن؟',
-    seoTitle: 'أفضل نموذج لغوي كبير 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'البرمجة: Claude Opus 4.8 (87.6% SWE-Bench). المحادثة: GPT-5.5 Instant (52.5% أقل هلوسة). محلياً: Llama 4 Scout أو Qwen 3 14B. يُحدَّث شهرياً.',
+    seoTitle: 'أفضل LLM الآن 2026: Claude وGPT-5.5 وLlama 4',
+    metaDescription: 'Claude Opus 4.8 يُحقق 87.6% على SWE-Bench للبرمجة. GPT-5.5 Instant يُقلل الهلوسة 52.5%. محلياً: Llama 4 Scout أو Qwen 3 14B. يُحدَّث شهرياً.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',

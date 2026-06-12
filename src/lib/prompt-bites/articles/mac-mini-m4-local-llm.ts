@@ -1034,8 +1034,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Hardware-Specific',
     title: 'هل Mac Mini M4 مناسب للنماذج اللغوية المحلية في 2026؟',
-    seoTitle: 'Mac Mini M4 للنماذج اللغوية المحلية 2026 | Prompt Bites',
-    metaDescription: 'نعم، Mac Mini M4 يشغّل النماذج اللغوية المحلية بشكل جيد. M4 Pro بـ 24 GB ذاكرة موحدة يتعامل مع نماذج 8B بسلاسة وهو أفضل خيار Apple من حيث السعر.',
+    seoTitle: 'Mac Mini M4 للنماذج المحلية 2026 | PromptQuorum',
+    metaDescription: 'Mac Mini M4 Pro بـ 24 GB ذاكرة موحدة يُشغّل نماذج 8B بسلاسة، وهو أفضل خيار Apple من حيث السعر. لا سقف VRAM منفصل — الذاكرة مشتركة بالكامل.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

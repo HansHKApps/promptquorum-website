@@ -659,7 +659,7 @@ curl http://localhost:11434/v1/chat/completions \\
     title: 'دليل النشر المحلي لـ Qwen 2026: شغّل Qwen3 وCoder وVL على كل مستوى أجهزة',
     seoTitle: 'Qwen3 محليًا 2026: Coder وVL ومستويات الأجهزة',
     intro: 'يعمل Qwen3 7B بـ 5.5 GB فقط من VRAM عبر Ollama — أمر واحد، بلا إعداد. يحقق Qwen3-Coder 32B نسبة 92.7% في HumanEval. وQwen2-VL 7B هو نموذج الرؤية المحلي الرائد لـ OCR للمستندات الصينية واليابانية. يغطي هذا الدليل عائلة نماذج Qwen الكاملة: أي نموذج تشغّل على كل مستوى أجهزة، والإعداد عبر Ollama وLM Studio، وتوصيات التكميم، وبيانات المعايير، وكيف يقارن Qwen بـ DeepSeek وLlama على الأجهزة الاستهلاكية في 2026.',
-    metaDescription: 'شغّل Qwen3 (7B–72B) وQwen3-Coder وQwen2-VL محليًا في 2026. متطلبات VRAM، إعداد Ollama وLM Studio، ودليل حسب مستوى الأجهزة.',
+    metaDescription: 'Qwen3 7B يعمل بـ 5.5 GB VRAM عبر Ollama — أمر واحد. Qwen3-Coder 32B: 92.7% HumanEval. دليل VRAM حسب الأجهزة، LM Studio، وتوصيات التكميم 2026.',
     publishDate: '2026-05-26',
     dateModified: '2026-05-26',
     readTime: '14 دقيقة قراءة',

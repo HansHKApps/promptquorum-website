@@ -797,7 +797,7 @@ DEEPSEEK_MODEL=deepseek-chat
     title: 'Qwen 3.6 Coder مقابل DeepSeek Coder مقابل Mistral Devstral: معيار الكود المحلي 2026',
     seoTitle: 'Qwen 3.6 Coder مقابل DeepSeek مقابل Mistral: كود 2026',
     intro: 'يحقق Qwen 3.6 27B نسبة 77.2% في SWE-bench محليًا على 16 GB من VRAM، مساويًا DeepSeek Coder (91.6% HumanEval، ~75% SWE-bench) ومتفوقًا على Mistral Devstral Small 24B (90.1% HumanEval، ~73% SWE-bench) في البرمجة بالوكلاء. تعمل النماذج الثلاثة محليًا على أجهزة استهلاكية. يغطي هذا المعيار HumanEval وSWE-bench وMBPP وحسابات تكلفة الـ token والكمون عند مستويات تكميم مختلفة وملفات الأجهزة واستراتيجية التوزيع متعدد النماذج لأعباء عمل البرمجة.',
-    metaDescription: 'معيار الكود المحلي: Qwen 3.6 27B (92.1% HumanEval، 77.2% SWE-bench) وDeepSeek Coder ($0.14/1M) وMistral Devstral. التكلفة والكمون والأجهزة.',
+    metaDescription: 'Qwen 3.6 27B يحقق 92.1% HumanEval و77.2% SWE-bench محليًا بـ 16 GB VRAM. DeepSeek Coder بـ $0.14/1M. Mistral Devstral للمهام الوكيلة. تكلفة وكمون.',
     publishDate: '2026-05-16',
     dateModified: '2026-05-16',
     readTime: '9 دقائق قراءة',

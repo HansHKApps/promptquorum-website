@@ -584,8 +584,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Privacy & Security',
     title: 'هل Qwen متوافق مع اللائحة الأوروبية لحماية البيانات GDPR؟',
-    seoTitle: 'هل Qwen متوافق مع GDPR؟ 2026 | PromptQuorum',
-    metaDescription: 'Qwen المحلي متوافق مع GDPR: لا نقل بيانات ولا مشكلة المادة 44. واجهة Qwen البرمجية (Alibaba Cloud) تتطلب SCCs كسائر المزودين غير الأوروبيين. 2026.',
+    seoTitle: 'Qwen وGDPR 2026: المحلي آمن، API يحتاج SCCs',
+    metaDescription: 'Qwen المُشغَّل محلياً متوافق مع GDPR: لا نقل بيانات ولا مشكلة المادة 44. API Qwen عبر Alibaba Cloud يتطلب SCCs كسائر المزودين خارج الاتحاد الأوروبي.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

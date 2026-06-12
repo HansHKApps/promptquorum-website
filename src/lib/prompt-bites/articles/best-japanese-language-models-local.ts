@@ -545,8 +545,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Model Comparisons',
     title: 'ما أفضل النماذج اللغوية الكبيرة المحلية لدعم اللغة اليابانية؟',
-    seoTitle: 'أفضل النماذج اللغوية الكبيرة المحلية باللغة اليابانية 2026 | PromptQuorum',
-    metaDescription: 'Rinna 3.6B (4 جيجابايت) وELYZA-7B (6 جيجابايت) وQwen3 7B (متعدد اللغات JA/ZH/EN) وPhi-4 (10–12 جيجابايت): أربعة نماذج لغوية كبيرة محلية للمهام اليابانية، جميعها عبر Ollama في 2026.',
+    seoTitle: 'LLMs محلية لليابانية: Rinna وQwen3 وPhi-4 عبر Ollama',
+    metaDescription: 'Rinna 3.6B يعمل بـ4 GB، وELYZA-7B بـ6 GB، وQwen3 7B يدعم JA/ZH/EN، وPhi-4 يحتاج 10–12 GB. الأربعة تعمل محلياً عبر Ollama لمهام اللغة اليابانية.',
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',

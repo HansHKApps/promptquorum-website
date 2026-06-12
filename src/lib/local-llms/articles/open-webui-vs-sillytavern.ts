@@ -1291,9 +1291,9 @@ schema: {
     ar: {
       theme: 'Tools & Interfaces',
       title: 'Open WebUI مقابل SillyTavern: أفضل واجهة محادثة لنماذج LLM المحلية',
-      seoTitle: 'Open WebUI مقابل SillyTavern 2026: محادثة فريق مقابل roleplay',
+      seoTitle: 'Open WebUI مقابل SillyTavern: أداة عمل أم roleplay',
       intro: '**Open WebUI هو الخيار المهني للمحادثة: نظيف وسريع ومتوافق مع تعدد المستخدمين ومع OpenAI.** اعتبارًا من أبريل 2026، يتفوق SillyTavern في roleplay والمحادثة القائمة على الشخصيات، لكنه يفتقر لدعم تعدد المستخدمين. كلاهما يستخدم خلفيات متطابقة (Ollama، vLLM، llama.cpp)، فاختر حسب سير عملك: Open WebUI للعمل/البحث، SillyTavern للكتابة الإبداعية وroleplay الشخصيات.',
-      metaDescription: 'Open WebUI (محادثة مهنية متعددة المستخدمين، Docker) مقابل SillyTavern (roleplay، lorebooks، محادثة جماعية) لنماذج LLM المحلية. خلفيات Ollama وvLLM وllama.cpp.',
+      metaDescription: 'Open WebUI يدعم تعدد المستخدمين عبر Docker ومتوافق مع OpenAI. SillyTavern متخصص في roleplay وlorebooks. كلاهما يعمل مع Ollama وvLLM وllama.cpp.',
       twitterDescription: 'Open WebUI: محادثة فريق مهنية ومتعددة المستخدمين. SillyTavern: roleplay، lorebooks، محادثة جماعية. كلاهما يعمل مع Ollama وvLLM. مقارنة أبريل 2026.',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',

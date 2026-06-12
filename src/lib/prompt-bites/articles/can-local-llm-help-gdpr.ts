@@ -566,8 +566,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Privacy & Security',
     title: 'هل يمكن لنموذج LLM المحلي المساعدة في الامتثال للائحة GDPR؟',
-    seoTitle: 'هل يساعد LLM المحلي في الامتثال للائحة GDPR؟ 2026 | PromptQuorum',
-    metaDescription: 'نعم: تشغيل نموذج مفتوح الأوزان محليًا يُزيل مشكلة نقل البيانات إلى دولة ثالثة وفق المادة 44 من GDPR تمامًا. أفضل النماذج للمؤسسات ذات البيانات الحساسة في 2026.',
+    seoTitle: 'LLM محلي لامتثال GDPR: حلّ مادة 44 في 2026',
+    metaDescription: 'نعم — النموذج المحلي مفتوح الأوزان يُلغي نقل البيانات بموجب المادة 44 من GDPR. لا تغادر بياناتك الخادم. Qwen 3 14B Q4_K_M عبر Ollama يحتاج 12 GB VRAM.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

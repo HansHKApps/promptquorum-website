@@ -466,8 +466,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Quick Answers',
     title: 'ما أفضل نموذج لغوي كبير محلي لحاسب محمول بـ16 جيجابايت RAM؟',
-    seoTitle: 'أفضل نموذج لغوي كبير لحاسب 16 جيجابايت 2026 | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M (~5 رمز/ثانية) لحاسبات 16 جيجابايت RAM. Qwen 3 Coder 7B للبرمجة. Apple Silicon أسرع بـ3 مرات. PromptQuorum.',
+    seoTitle: 'أفضل LLM محلي لحاسب 16 GB RAM 2026 | PromptQuorum',
+    metaDescription: 'Llama 3 8B Q4_K_M يُنتج ~5 رموز/ثانية على حاسب 16 GB RAM. Qwen 3 Coder 7B الأفضل للبرمجة. Apple Silicon أسرع بنحو 3 مرات من معالجات x86 بنفس الذاكرة.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
