@@ -338,7 +338,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LLM Local vs GPU en la Nube: Comparativa de Costos Paperspace, Lambda Labs, AWS 2026',
         'description': 'GPU local vs cómputo en la nube: costo por hora, análisis de punto de equilibrio. Lambda Labs, Paperspace, AWS.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/local-llm-vs-cloud-gpu-cost',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-vs-cloud-gpu-cost',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -349,7 +349,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/local-llm-vs-cloud-gpu-cost',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-vs-cloud-gpu-cost',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo usar GPU en la nube para inferencia continua 24/7?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, pero los costos escalan rápidamente. Lambda Labs RTX 4090 24/7: $2.50 × 8,760 = $21,900/año. GPU local: $1,000 + $526/año en electricidad = $1,526 el primer año, luego $526/año.' } },
           { '@type': 'Question', 'name': '¿Qué pasa con los costos de egreso de ancho de banda en la nube?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'AWS/Google cobran $0.02-0.10/GB por los datos que salen de la nube. Ejecutar una API local que devuelve 100MB/día = $60-300/mes en egreso. Lo local tiene cero costos de egreso.' } },

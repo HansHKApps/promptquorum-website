@@ -1292,7 +1292,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LM Studio: Funciones avanzadas 2026 (GPU, API y ajuste fino)',
         'description': 'Funciones avanzadas de LM Studio: optimización de GPU, ventana de contexto, API e inferencia por lotes. Guía para desarrolladores en flujos de trabajo locales de LLM en producción. 2026.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/lm-studio-advanced-features',
+        'url': 'https://www.promptquorum.com/es/local-llms/lm-studio-advanced-features',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

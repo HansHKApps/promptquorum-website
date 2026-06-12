@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Mejores LLM solo CPU 2026',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/best-cpu-only-llm',
+        'url': 'https://www.promptquorum.com/es/local-llms/best-cpu-only-llm',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — Mejor LLM CPU general (3,8B, 12 tok/s)' },

@@ -624,7 +624,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Laptop vs escritorio para LLMs locales: brecha de costo 7×, datos de throttling térmico y guía de compra 2026',
         'description': 'Escritorio RTX 4070 Ti: 80 tok/seg sostenido a $19/tok/seg. MacBook M5 Max: 55-70 tok/seg (est.), throttling después de 15-18 min, $50-70/tok/seg. Datos térmicos completos, análisis de costos, capacidad 70B del M5 Max y guía de compra 2026.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/laptop-vs-desktop-local-llm',
+        'url': 'https://www.promptquorum.com/es/local-llms/laptop-vs-desktop-local-llm',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-05',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

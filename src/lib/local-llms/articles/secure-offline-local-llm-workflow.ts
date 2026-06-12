@@ -339,7 +339,7 @@ schema: {
         author: { '@type': 'Person', 'name': 'Hans Kuepper' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         inLanguage: 'es',
-        url: 'https://www.promptquorum.com/es/es/local-llms/secure-offline-local-llm-workflow',
+        url: 'https://www.promptquorum.com/es/local-llms/secure-offline-local-llm-workflow',
         proficiencyLevel: 'Advanced',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -347,7 +347,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'es',
-        url: 'https://www.promptquorum.com/es/es/local-llms/secure-offline-local-llm-workflow',
+        url: 'https://www.promptquorum.com/es/local-llms/secure-offline-local-llm-workflow',
         mainEntity: [
           {
             '@type': 'Question',

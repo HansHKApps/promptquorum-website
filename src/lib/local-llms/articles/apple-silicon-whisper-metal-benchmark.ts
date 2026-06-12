@@ -549,7 +549,7 @@ while True:
       '@type': 'TechArticle',
       headline: 'Whisper en Apple Silicon 2026: Benchmarks Metal, Configuración Core ML',
       description: 'Whisper en Mac: benchmarks GPU Metal M1–M5, configuración, transcripción rápida sin GPU externa.',
-      url: 'https://www.promptquorum.com/es/es/local-llms/apple-silicon-whisper-metal-benchmark',
+      url: 'https://www.promptquorum.com/es/local-llms/apple-silicon-whisper-metal-benchmark',
       inLanguage: 'es',
       datePublished: '2026-05-15',
       dateModified: '2026-05-15',

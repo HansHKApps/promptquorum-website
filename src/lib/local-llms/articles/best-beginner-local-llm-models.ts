@@ -678,7 +678,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/best-beginner-local-llm-models',
+        'url': 'https://www.promptquorum.com/es/local-llms/best-beginner-local-llm-models',
         headline: 'Llama 3.2, Phi-4 Mini, Gemma 3: Mejores LLMs para principiantes 2026',
         description: 'Llama 3.2 3B = 2,5 GB RAM, 25-45 tok/s. Phi-4 Mini = 2,5 GB. Gemma 3 2B = 1,7 GB, 40-60 tok/s. Tabla de comparación completa y comandos de Ollama. Abril 2026.',
         'datePublished': '2026-04-04',

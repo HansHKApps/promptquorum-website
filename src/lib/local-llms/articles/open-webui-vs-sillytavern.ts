@@ -1247,7 +1247,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Open WebUI vs SillyTavern 2026: Chat de Equipo vs Frontend de Roleplay',
         'description': 'Open WebUI (chat profesional, multiusuario, Docker) vs SillyTavern (roleplay de personajes, lorebooks, chat grupal) para LLMs locales. Ambos usan backends Ollama, vLLM, llama.cpp. Matriz de funciones, comparación abril 2026.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/open-webui-vs-sillytavern',
+        'url': 'https://www.promptquorum.com/es/local-llms/open-webui-vs-sillytavern',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

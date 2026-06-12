@@ -581,7 +581,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'GPU vs ChatGPT Plus 2026: Cuándo comprar una GPU es más rentable que la suscripción',
         'description': 'RTX 5060 Ti de segunda mano ($450) alcanza el punto de equilibrio con ChatGPT Plus ($240/año) en 18–24 meses a 5 h/semana. Usuarios intensivos ahorran $5,000+ en 5 años. Tablas ROI completas para los 7 niveles de ChatGPT.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/gpu-vs-ai-subscription-roi',
+        'url': 'https://www.promptquorum.com/es/local-llms/gpu-vs-ai-subscription-roi',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -599,7 +599,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/gpu-vs-ai-subscription-roi',
+        'url': 'https://www.promptquorum.com/es/local-llms/gpu-vs-ai-subscription-roi',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Qué pasa si los costos de electricidad son mucho más altos en mi región?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A $0.30/kWh (tarifas europeas), la RTX 5060 Ti cuesta $60/año en vez de $30. El punto de equilibrio se extiende a 2 años. Sigue siendo competitivo para 5+ horas/semana.' } },
           { '@type': 'Question', 'name': '¿Afecta la volatilidad de precios de GPU al ROI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Los precios de GPU usadas varían estacionalmente. Los nuevos lanzamientos (RTX 5090 en 2025) pueden bajar los precios de segunda mano entre un 20 y un 40%. Monitorea eBay en busca de tarjetas de 6 meses de antigüedad.' } },

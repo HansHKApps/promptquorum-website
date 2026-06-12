@@ -621,7 +621,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Prompt Engineering para LLMs locales 2026: Cadena de pensamiento, Few-Shot y system prompts',
         description: 'La cadena de pensamiento mejora la precisión de los modelos 7B locales un 10–20%. Few-shot (3–5 ejemplos) supera a zero-shot un 15–25%. Formatos de system prompt para Ollama, LM Studio y llama.cpp incluidos.',
-        url: 'https://www.promptquorum.com/es/es/local-llms/prompt-engineering-for-local-models',
+        url: 'https://www.promptquorum.com/es/local-llms/prompt-engineering-for-local-models',
         inLanguage: 'es',
         datePublished: '2026-04-04',
         dateModified: '2026-04-25',

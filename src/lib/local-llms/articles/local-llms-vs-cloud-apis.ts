@@ -406,7 +406,7 @@ schema: {
         'headline': 'LLMs locales vs APIs en la nube: ¿Cuál deberías usar en 2026?',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/local-llms-vs-cloud-apis',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-cloud-apis',
         'proficiencyLevel': 'Beginner',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },

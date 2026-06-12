@@ -1991,7 +1991,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'IA Local Privada para Empresas 2026: GDPR, HIPAA, On-Premises',
         description: 'La IA on-premises es rentable a partir de 200M tokens/mes — $83/mes en hardware frente a $1.000/mes de API en la nube. Cumple GDPR, HIPAA y SOC2. Llama 3.3 70B en RTX 5090 o clúster vLLM.',
-        url: 'https://www.promptquorum.com/es/es/local-llms/private-local-ai-for-business',
+        url: 'https://www.promptquorum.com/es/local-llms/private-local-ai-for-business',
         inLanguage: 'es',
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',

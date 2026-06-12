@@ -404,7 +404,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         inLanguage: 'es',
-        url: 'https://www.promptquorum.com/es/es/local-llms/create-custom-local-models',
+        url: 'https://www.promptquorum.com/es/local-llms/create-custom-local-models',
         headline: 'Crear LLMs Locales Personalizados 2026: Fine-Tuning vs Pre-Training con Unsloth y Ollama',
         description: 'Fine-tune un modelo 7B con LoRA: 500 ejemplos, 8 GB VRAM, 1–2 horas, $100–500. Pre-training: 10B+ tokens, $50K–500K. Incluye matriz de decisión, configuración de Unsloth y despliegue en Ollama.',
         author: {
@@ -522,7 +522,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         inLanguage: 'es',
-        url: 'https://www.promptquorum.com/es/es/local-llms/create-custom-local-models',
+        url: 'https://www.promptquorum.com/es/local-llms/create-custom-local-models',
         name: 'Enfoques de LLM Personalizado: Matriz de Decisión',
         numberOfItems: 3,
         itemListElement: [

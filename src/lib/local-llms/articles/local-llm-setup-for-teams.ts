@@ -1098,7 +1098,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Servidor LLM local para equipos: control de acceso y seguimiento de costos',
         'description': 'Servidor LLM local para equipos con vLLM, nginx, control de acceso y seguimiento de uso. Configuración multiusuario, comparación de costos y permisos por roles.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/local-llm-setup-for-teams',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-setup-for-teams',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

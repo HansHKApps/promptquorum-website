@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Apple Silicon para LLM local 2026: M5 Pro vs M5 Max vs Mac Studio',
       description: 'Compara Apple M5 Pro, M5 Max y Mac Studio para LLM local: memoria unificada, tok/s y precio.',
-      url: 'https://www.promptquorum.com/es/es/local-llms/apple-silicon-m5-local-llm',
+      url: 'https://www.promptquorum.com/es/local-llms/apple-silicon-m5-local-llm',
       inLanguage: 'es',
       datePublished: '2026-05-18',
       dateModified: '2026-05-18',

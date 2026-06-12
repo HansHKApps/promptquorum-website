@@ -386,7 +386,7 @@ schema: {
         'description': 'Llama 4 Scout (10M de contexto), DeepSeek V4-Flash (1M), Qwen 3.6 (256K nativo, extensible a 1M mediante YaRN) lideran los LLM locales de contexto largo. Los modelos 7B-8B son prácticos en 16K-32K; los modelos MoE y 70B+ alcanzan 256K-1M. Guía de mayo 2026.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-06',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/long-context-local-llms',
+        'url': 'https://www.promptquorum.com/es/local-llms/long-context-local-llms',
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'LLM de contexto largo' },

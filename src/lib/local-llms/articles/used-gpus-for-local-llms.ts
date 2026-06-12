@@ -376,7 +376,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Mejores GPUs de segunda mano para LLMs locales: Guía de compra RTX 3060, 3080, 4090',
         'description': 'Mejores GPUs de segunda mano para LLMs locales: RTX 3060, 3080, 3090, 4090. Dónde comprar, evaluación de riesgos y cómo hacer pruebas de rendimiento.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/used-gpus-for-local-llms',
+        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -396,7 +396,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/used-gpus-for-local-llms',
+        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
         'mainEntity': [
           {
             '@type': 'Question',
@@ -438,7 +438,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/used-gpus-for-local-llms',
+        'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
         'name': 'GPUs de segunda mano para LLMs locales: Comparativa de costes y fiabilidad',
         'itemListElement': [
           { '@type': 'ListItem', position: 1, name: 'Comparativa de costes: RTX 3060 ($200-250 de segunda mano) vs RTX 3080 ($350-400) vs RTX 4090 ($1,000-1,300): ahorro del 30-50% frente a nueva.' },
@@ -451,9 +451,9 @@ schema: {
       freshness_tier: 'annual',
       theme: 'GPU Buying Guides',
       title: 'وحدات GPU المستعملة لنماذج LLM المحلية: أفضل الخيارات حسب السعر',
-      seoTitle: 'وحدات GPU المستعملة لنماذج LLM المحلية: RTX 3060، 3080، 4090',
+      seoTitle: 'GPU مستعملة لنماذج LLM المحلية: RTX 3060 و3080 و4090',
       intro: '**توفّر وحدات GPU المستعملة 30-50% مقارنة بالجديدة، مع مخاطر أداء ضئيلة في الطُرز الموثوقة المُثبتة مثل RTX 3060 12GB وRTX 3080.** في أبريل 2026، السوق المستعمل مغمور ببطاقات سابقة للتعدين وسابقة للألعاب بأسعار مستقرة. الشراء المستعمل منطقي لأول جهاز لك أو عند الترقية؛ بطاقات التعدين محفوفة بالمخاطر ما لم تستطع اختبارها في الموقع.',
-      metaDescription: 'أفضل وحدات GPU المستعملة لنماذج LLM المحلية: RTX 3060، 3080، 3090، 4090. أين تشتري، وتقييم المخاطر، وكيفية اختبار الأداء.',
+      metaDescription: 'RTX 3060 12GB مستعملة بـ 200-250 دولارًا توفّر 40% عن السعر الجديد. دليل GPU مستعملة لـ LLM المحلي: أين تشتري، اختبار VRAM، مخاطر التعدين. 2026.',
       publishDate: '2026-04-05',
       leadAnswerBlock: '**توفّر وحدات GPU المستعملة 30-50% مقارنة بالجديدة، مع مخاطر ضئيلة في طُرز مثل RTX 3060 12GB وRTX 3080. في أبريل 2026، السوق المستعمل مغمور ببطاقات سابقة للتعدين وسابقة للألعاب بأسعار مستقرة.**',
       audience: 'المطورون المُلمّون بـ Ollama أو LM Studio الذين يحسّنون سير عمل نماذج LLM المحلية',

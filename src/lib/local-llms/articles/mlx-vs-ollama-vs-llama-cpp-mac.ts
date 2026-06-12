@@ -1841,7 +1841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'MLX vs Ollama vs llama.cpp en Mac 2026: Motor de inferencia',
       description: 'MLX: 15–25% más rápido en Apple Silicon. Ollama: más fácil. llama.cpp: mayor control.',
-      url: 'https://www.promptquorum.com/es/es/local-llms/mlx-vs-ollama-vs-llama-cpp-mac',
+      url: 'https://www.promptquorum.com/es/local-llms/mlx-vs-ollama-vs-llama-cpp-mac',
       inLanguage: 'es',
       datePublished: '2026-05-15',
       dateModified: '2026-05-15',

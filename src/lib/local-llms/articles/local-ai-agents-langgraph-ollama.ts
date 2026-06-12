@@ -1743,7 +1743,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Agentes de IA Locales con LangGraph y Ollama: Construye Sistemas de Toma de Decisiones Autónomos',
         'description': 'Los agentes de IA observan, razonan, llaman herramientas y repiten. LangGraph + Ollama ejecutan esto localmente — sin costos de API, control total de datos. Así se construye y despliega uno.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/local-ai-agents-langgraph-ollama',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-ai-agents-langgraph-ollama',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
         'proficiencyLevel': 'Advanced',

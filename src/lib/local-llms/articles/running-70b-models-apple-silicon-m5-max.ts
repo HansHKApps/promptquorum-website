@@ -782,7 +782,7 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
       '@type': 'TechArticle',
       headline: 'Ejecutar modelos 70B en Apple Silicon 2026: Guía M5 Max',
       description: 'M5 Max 128 GB ejecuta modelos 70B a 12–20 tok/s. Calidad comparable a GPT-5.5 en local.',
-      url: 'https://www.promptquorum.com/es/es/local-llms/running-70b-models-apple-silicon-m5-max',
+      url: 'https://www.promptquorum.com/es/local-llms/running-70b-models-apple-silicon-m5-max',
       inLanguage: 'es',
       datePublished: '2026-05-15',
       dateModified: '2026-05-15',

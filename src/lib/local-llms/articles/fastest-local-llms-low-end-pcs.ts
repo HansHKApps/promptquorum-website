@@ -641,7 +641,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'LLMs Locales más Rápidos para PCs de Gama Baja 2026: Modelos por Nivel de VRAM',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/fastest-local-llms-low-end-pcs',
+        'url': 'https://www.promptquorum.com/es/local-llms/fastest-local-llms-low-end-pcs',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -735,7 +735,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'LLMs Locales más Rápidos por Nivel de Hardware 2026',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/fastest-local-llms-low-end-pcs',
+        'url': 'https://www.promptquorum.com/es/local-llms/fastest-local-llms-low-end-pcs',
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Solo CPU (sin GPU)', 'description': 'Phi-4 Mini 3.8B Q4. 5–15 tok/s. 2.5 GB RAM. ollama run phi4-mini' },

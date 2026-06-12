@@ -396,7 +396,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Mejores GPUs para LLMs locales 2026: Guía de VRAM, velocidad y valor',
         description: 'Mejores GPUs para LLMs locales 2026: RTX 4090, 4080, 4070 Ti, 4060 Ti. Benchmarks de VRAM, consumo, costo y rendimiento por dólar.',
-        url: 'https://www.promptquorum.com/es/es/local-llms/best-gpus-for-local-llms',
+        url: 'https://www.promptquorum.com/es/local-llms/best-gpus-for-local-llms',
         inLanguage: 'es',
         datePublished: '2026-04-04',
         dateModified: '2026-04-19',
@@ -415,7 +415,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        url: 'https://www.promptquorum.com/es/es/local-llms/best-gpus-for-local-llms',
+        url: 'https://www.promptquorum.com/es/local-llms/best-gpus-for-local-llms',
         inLanguage: 'es',
         mainEntity: [
           {

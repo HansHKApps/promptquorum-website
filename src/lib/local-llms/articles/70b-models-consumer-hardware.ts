@@ -532,7 +532,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Cómo ejecutar modelos 70B en hardware de consumo 2026: RAM y GPU',
         'description': 'Ejecuta modelos Llama 3.3 y Qwen3 70B localmente: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Guía de hardware completa -- abril 2026.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/70b-models-consumer-hardware',
+        'url': 'https://www.promptquorum.com/es/local-llms/70b-models-consumer-hardware',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

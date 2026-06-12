@@ -1297,7 +1297,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Guía de Comandos de Ollama: Todos los Comandos Explicados (2026)',
         'description': 'Comandos de Ollama explicados 2026: pull, run, list, rm, serve, create con ejemplos. Referencia CLI completa cubre el 95% de los casos de uso.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/ollama-command-guide',
+        'url': 'https://www.promptquorum.com/es/local-llms/ollama-command-guide',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

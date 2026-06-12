@@ -1821,7 +1821,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'API compatible con OpenAI para LLMs locales: Guía de configuración con Python y Node.js (localhost:1234 y 11434)',
         'description': 'Cambia una línea -- base_url a localhost -- para usar Ollama como API OpenAI de reemplazo directo. Python, Node.js, streaming y function calling funcionan sin cambios.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/local-llm-openai-compatible-api',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llm-openai-compatible-api',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

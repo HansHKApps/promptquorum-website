@@ -1403,7 +1403,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LLMs Locales para Flujos de Trabajo de Programación 2026: Qwen3-Coder 92% HumanEval',
         'description': 'Modelos de programación local (Qwen3-Coder 32B: 92,7% HumanEval, CodeLlama 34B: 75% HumanEval) generan, revisan y prueban código de forma privada sin APIs en la nube. Guías completas de configuración para VS Code y Cursor.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/local-llms-for-coding-workflows',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-for-coding-workflows',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

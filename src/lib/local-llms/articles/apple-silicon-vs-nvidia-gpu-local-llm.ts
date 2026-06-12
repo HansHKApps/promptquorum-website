@@ -586,7 +586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Apple Silicon vs NVIDIA GPU para LLMs locales 2026',
       description: 'M5 Max vs RTX 4090: velocidad, costo, consumo, VRAM vs memoria unificada. Comparativa completa.',
-      url: 'https://www.promptquorum.com/es/es/local-llms/apple-silicon-vs-nvidia-gpu-local-llm',
+      url: 'https://www.promptquorum.com/es/local-llms/apple-silicon-vs-nvidia-gpu-local-llm',
       inLanguage: 'es',
       datePublished: '2026-05-15',
       dateModified: '2026-05-15',

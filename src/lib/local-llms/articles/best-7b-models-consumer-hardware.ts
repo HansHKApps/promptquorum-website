@@ -289,7 +289,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Mejores modelos 7B 2026: comparativa Llama 3.3, Mistral, Qwen3, Phi',
         'description': 'Mejores modelos 7B para 8 GB de VRAM en 2026: Llama 3.3 7B (82% MATH), Mistral Small (92% seguimiento de instrucciones), Qwen3 7B (27 idiomas). Guía de configuración para GPU de consumo.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/best-7b-models-consumer-hardware',
+        'url': 'https://www.promptquorum.com/es/local-llms/best-7b-models-consumer-hardware',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

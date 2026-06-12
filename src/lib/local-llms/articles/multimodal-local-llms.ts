@@ -232,7 +232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'TechArticle',
         headline: 'LLMs locales multimodales: visión, audio y procesamiento de texto',
         description: 'LLMs locales multimodales 2026: visión, OCR, procesamiento de imágenes. LLaVA, Qwen-VL.',
-        url: 'https://www.promptquorum.com/es/es/local-llms/multimodal-local-llms',
+        url: 'https://www.promptquorum.com/es/local-llms/multimodal-local-llms',
         inLanguage: 'es',
         datePublished: '2026-04-04',
         dateModified: '2026-04-04',

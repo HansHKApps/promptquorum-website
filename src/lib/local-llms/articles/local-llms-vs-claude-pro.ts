@@ -457,7 +457,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LLMs Locales vs Claude Pro: Análisis de costos, privacidad y comparativa de calidad del modelo',
         'description': 'Claude Pro vs LLMs locales: comparativa de costo, privacidad y calidad. Anthropic vs código abierto.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/local-llms-vs-claude-pro',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-claude-pro',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
@@ -478,7 +478,7 @@ schema: {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/local-llms-vs-claude-pro',
+        'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-claude-pro',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Puedo usar Claude Pro sin conexión?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Claude Pro requiere conexión a internet activa y los servidores de Anthropic. Llama 3.3 local funciona completamente sin conexión.' } },
           { '@type': 'Question', 'name': '¿Anthropic usa mis conversaciones de Claude Pro para entrenar?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No (a partir de abril de 2026). Anthropic no entrena explícitamente con el historial de chat. Las conversaciones se registran para seguridad/depuración pero no se usan para mejorar el modelo.' } },

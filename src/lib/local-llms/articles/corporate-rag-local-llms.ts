@@ -429,7 +429,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'RAG Corporativo LLMs Locales',
         'description': 'RAG corporativo con LLMs locales: Q&A documental seguro, bases de conocimiento propietarias, audit trails, control de acceso multiusuario, empresa.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/corporate-rag-local-llms',
+        'url': 'https://www.promptquorum.com/es/local-llms/corporate-rag-local-llms',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

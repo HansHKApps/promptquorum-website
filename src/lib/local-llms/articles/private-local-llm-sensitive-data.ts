@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         description: 'LLM local seguro para datos sensibles: HIPAA, PCI-DSS, cumplimiento legal. Configuración air-gapped, registros de auditoría, gobernanza de datos.',
         datePublished: '2026-04-05',
         dateModified: '2026-05-03',
-        url: 'https://www.promptquorum.com/es/es/local-llms/private-local-llm-sensitive-data',
+        url: 'https://www.promptquorum.com/es/local-llms/private-local-llm-sensitive-data',
         inLanguage: 'es',
         author: { '@type': 'Person', 'name': 'Hans Kuepper' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },

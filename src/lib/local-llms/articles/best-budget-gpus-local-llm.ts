@@ -511,7 +511,7 @@ schema: {
         '@type': 'NewsArticle',
         'headline': 'Guía de LLMs locales con RTX 3060 2026: qué modelos puedes ejecutar',
         'description': '¿Qué LLMs locales puedes ejecutar en RTX 3060 12GB o 6GB? Consulta los mejores modelos para código, chat y razonamiento en 2026 con límites reales de VRAM y consejos de rendimiento.',
-        'url': 'https://www.promptquorum.com/es/es/local-llms/best-budget-gpus-local-llm',
+        'url': 'https://www.promptquorum.com/es/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-01',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

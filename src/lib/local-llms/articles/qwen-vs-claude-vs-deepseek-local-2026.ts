@@ -492,7 +492,7 @@ dispatch_rules:
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/es/local-llms/qwen-vs-claude-vs-deepseek-local-2026',
+      url: 'https://www.promptquorum.com/es/local-llms/qwen-vs-claude-vs-deepseek-local-2026',
       inLanguage: 'es',
       headline: 'Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2: LLM Local vs Cloud Comparación 2026',
       description: 'Compara Qwen 3.6 27B (92,1% HumanEval, 16 GB VRAM), Claude Sonnet 4.6 (89,4%, $3/1M) y DeepSeek R2 ($0,14/1M). Cumplimiento GDPR, coste y análisis de hardware para 2026.',
