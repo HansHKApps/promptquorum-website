@@ -1217,8 +1217,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     theme: 'Tools & Platforms',
     title: 'PromptLayer مقابل Mirascope مقابل PromptPerfect (2026)',
-    seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: اختر الأداة المناسبة',
-    metaDescription: 'PromptLayer ($49/شهر) يسجّل استدعاءات نماذج اللغة، Mirascope (مجاني) يبني تطبيقات Python، وPromptPerfect ($20/شهر) يُعيد كتابة الموجّهات. مشاكل مختلفة: اختر واحدة.',
+    seoTitle: 'PromptLayer مقابل Mirascope مقابل PromptPerfect 2026',
+    metaDescription: 'PromptLayer ($49/شهر) يسجّل استدعاءات LLMs، Mirascope (مجاني) يبني تطبيقات Python، وPromptPerfect ($20/شهر) يُحسّن الموجّهات. اختر واحدة.',
     intro: '**PromptLayer يسجّل ويُصدر استدعاءات نماذج اللغة (مجاني حتى $49/شهر للفرق الصغيرة). Mirascope مكتبة Python مجانية ومفتوحة المصدر لبناء تطبيقات نماذج اللغة الآمنة من حيث النوع. PromptPerfect يُعيد كتابة الموجّهات تلقائيًا للحصول على نتائج أفضل ($0–$20/شهر). تحل هذه الأدوات الثلاث مشاكل مختلفة — اختر واحدة فقط بناءً على نقطة الاختناق لديك.**',
     publishDate: '2026-04-10',
     dateModified: '2026-05-01',

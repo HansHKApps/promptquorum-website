@@ -516,8 +516,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     intro: 'يُوفّر إطار SPECS هيكلاً منضبطاً لكتابة البرومبتات من خلال خمسة مكوّنات: الموضوع، والهدف، والسياق، والمتطلبات، والأسلوب. يمكّن هذا الهيكل المطوّرين وفرق المحتوى من توحيد البرومبتات وتكرارها بدلاً من الاعتماد على الصياغة العشوائية.',
     publishDate: '2025-09-15',
     readTime: '8 دقائق للقراءة',
-    seoTitle: 'إطار SPECS: الموضوع، الهدف، السياق، المتطلبات، الأسلوب | PromptQuorum',
-    metaDescription: 'تعرّف على إطار SPECS لهندسة البرومبت — خمسة مكوّنات تضمن وضوح التوجيهات وقابليتها للتكرار. أمثلة عملية مقارنة بين البرومبتات الجيدة والضعيفة.',
+    seoTitle: 'إطار SPECS لهندسة البرومبت: 5 مكوّنات عملية',
+    metaDescription: '5 مكوّنات تُحوّل البرومبتات الغامضة إلى مواصفات دقيقة: Scope وPurpose وExamples وConstraints وSteps. مقارنة برومبتات جيدة وضعيفة في PromptQuorum.',
     educationalLevel: 'Intermediate',
     schema: {
       '@context': 'https://schema.org',

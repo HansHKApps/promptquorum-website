@@ -453,8 +453,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-24',
       readTime: '٧ دقائق للقراءة',
       educationalLevel: 'متوسط',
-      seoTitle: 'إطار CRAFT: السياق والدور والجمهور ٢٠٢٦',
-      metaDescription: 'إطار CRAFT (السياق، الدور، الجمهور، التنسيق، النبرة): اكتب نصوص ذكاء اصطناعي بهوية علامة تجارية في ٥ حقول. قوالب ومقارنة مع CO-STAR.',
+      seoTitle: 'إطار CRAFT: السياق والدور والجمهور والنبرة 2026',
+      metaDescription: 'إطار CRAFT بـ5 حقول منظّمة (سياق، دور، جمهور، تنسيق، نبرة): أنتج نصوص ذكاء اصطناعي متسقة مع علامتك. قوالب جاهزة ومقارنة مع CO-STAR في PromptQuorum.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',

@@ -1046,8 +1046,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-26',
       dateModified: '2026-04-05',
       readTime: '١٠ دقائق للقراءة',
-      seoTitle: 'المخرجات المهيكلة ووضع JSON في النماذج اللغوية: دليل شامل',
-      metaDescription: 'تعلّم متى تستخدم المخرجات المهيكلة أو وضع JSON أو استدعاء الوظائف. قارن امتثال JSON حسب النموذج وأتقن تصميم المخطط لواجهات برمجة التطبيقات.',
+      seoTitle: 'المخرجات المهيكلة ووضع JSON في LLMs: دليل 2026',
+      metaDescription: 'أقل من 5% معدل فشل مع تصميم المخطط الصحيح. متى تستخدم وضع JSON أو استدعاء الوظائف في GPT وClaude وGemini. مقارنة امتثال JSON حسب النموذج مع أمثلة.',
       educationalLevel: 'متوسط',
       schema: {
         '@context': 'https://schema.org',

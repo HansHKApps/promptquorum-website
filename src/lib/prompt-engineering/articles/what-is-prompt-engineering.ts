@@ -1021,9 +1021,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       theme: 'Fundamentals',
       title: 'ما هي هندسة الطلبات؟ — دليل PromptQuorum',
-      seoTitle: 'ما هي هندسة الطلبات في 2026؟ دليل المبتدئين',
+      seoTitle: 'هندسة الطلبات 2026: دليل المبتدئين الشامل',
       intro: 'هندسة الطلبات: تصميم المدخلات النصية للحصول على مخرجات موثوقة ودقيقة من نماذج LLM كـ GPT-5.5 وClaude وGemini. تعلّم التقنيات الأساسية والأطر ولماذا تهم لجودة مخرجات الذكاء الاصطناعي.',
-      metaDescription: 'هندسة الطلبات في 2026: صمّم المدخلات النصية للحصول على نتائج موثوقة. تعلّم role prompting وchain-of-thought وfew-shot لـ ChatGPT وClaude وOllama.',
+      metaDescription: 'هندسة الطلبات: صمّم المدخلات النصية للحصول على نتائج موثوقة من LLMs. تعلّم role prompting وchain-of-thought وfew-shot لـ ChatGPT وClaude وOllama.',
       publishDate: '2026-03-01',
       readTime: '١٠ دقائق للقراءة',
       schema: {

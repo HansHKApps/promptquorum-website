@@ -2324,9 +2324,9 @@ tests:
   ar: {
     theme: 'Tools & Platforms',
     title: 'Braintrust مقابل PromptHub مقابل Vellum مقابل Promptfoo (2026)',
-    seoTitle: 'Braintrust مقابل PromptHub مقابل Vellum: المجموعة الثنائية لعام 2026',
+    seoTitle: 'Braintrust مقابل PromptHub مقابل Vellum 2026',
     intro: '**تهيمن أربع أدوات على إدارة الـ prompts للفرق: Braintrust لتقييم المخرجات، وPromptHub للتحكم في الإصدارات، وVellum لاختبار A/B في الإنتاج، وPromptfoo لمنع انحدارات CI/CD.** معظم الفرق تشتري الأدوات الأربع وتُهدر $1,000+ شهريًا. المجموعة الصحيحة دائمًا هي أداتان فقط — إحداهما للتقييم والأخرى للنشر.',
-    metaDescription: 'Braintrust (‎$249/شهر) يُقيّم الـ prompts. Vellum (‎$200–500/شهر) يجري A/B في الإنتاج. Promptfoo مجاني لـ CI/CD. PromptHub (‎$50–200/شهر) يُدير الإصدارات. معظم الفرق تحتاج 2 فقط.',
+    metaDescription: 'Braintrust بـ $249/شهر للتقييم. Vellum بـ $200–500/شهر لاختبار A/B. Promptfoo مجاني لـ CI/CD. PromptHub بـ $50–200/شهر. معظم الفرق تحتاج أداتين فقط.',
     ogTitle: 'شراء الأدوات الأربع للـ prompts يُهدر $1,000+/شهر. إليك المجموعة الثنائية',
     ogDescription: 'Braintrust يُسجّل النقاط. Vellum يُوزّع الحركة. Promptfoo يكتشف الانحدارات. PromptHub يُدير الإصدارات. اختر 2. جدول المقارنة بالداخل.',
     twitterTitle: 'Braintrust مقابل PromptHub مقابل Vellum مقابل Promptfoo: أي اثنتين تختار',

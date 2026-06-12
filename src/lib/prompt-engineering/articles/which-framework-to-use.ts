@@ -599,8 +599,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'أي إطار طلب يجب استخدامه؟',
       intro: 'يعتمد إطار الطلب الصحيح على مهمتك ومستوى خبرتك وما إذا كنت تُحسّن للإبداع أو الدقة أو الاستدلال الموثوق. PromptQuorum يُسهّل هذا الاختيار بتضمين أطر متعددة ومحدد تلقائي وباني أطر مخصصة مباشرة في التطبيق.',
       publishDate: '2026-03-24',
-      seoTitle: 'اختر إطار الطلب الصحيح لمهمتك 2026',
-      metaDescription: 'قارن أطر الطلبات: Chain-of-Thought وReAct وTree-of-Thought. تعلّم الإيجابيات والسلبيات لكل حالة استخدام واختر الأفضل لتطبيق LLM الخاص بك.',
+      seoTitle: 'أطر الطلبات 2026: اختر الإطار الأنسب لمهمتك',
+      metaDescription: 'قارن بين 5 أطر طلبات: Chain-of-Thought وCO-STAR وCRAFT وSPECS وTRACE. تعلّم متى تستخدم كل إطار مع LLMs مثل GPT-5.5 وClaude وGemini.',
       readTime: '٩ دقائق للقراءة',
       educationalLevel: 'متوسط',
       schema: {

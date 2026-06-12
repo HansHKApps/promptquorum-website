@@ -963,8 +963,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     dateModified: "2026-04-12",
     readTime: '8 دقائق للقراءة',
     educationalLevel: 'Beginner',
-    seoTitle: 'System Prompt مقابل User Prompt: الفروق الرئيسية في 2026',
-    metaDescription: 'System prompt مقابل user prompt: أحدهما يتحكم في سلوك الذكاء الاصطناعي للجلسة بأكملها، والآخر يدير كل طلب على حدة. أمثلة API وأنماط تشخيص الأخطاء.',
+    seoTitle: 'System Prompt مقابل User Prompt: ما يتحكم فيه كل منهما',
+    metaDescription: 'System prompts تُحدد 70% من ثبات مخرجات LLMs. تعلّم الفرق بين system prompt وuser prompt وكيف يتفاعلان في GPT وClaude وOllama مع أمثلة API.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',

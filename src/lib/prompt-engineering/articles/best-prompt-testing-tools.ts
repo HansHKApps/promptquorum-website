@@ -837,8 +837,8 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
 }, ar: {
   theme: 'Tools & Platforms',
   title: 'أدوات اختبار وتقييم البرامج النصية 2026: Promptfoo مقابل Braintrust مقابل DeepEval',
-  seoTitle: 'أدوات اختبار وتقييم البرامج النصية 2026: Promptfoo مقابل Braintrust مقابل DeepEval',
-  metaDescription: 'Promptfoo يكتشف التراجعات في ثوانٍ (مجاني). Braintrust ينفّذ تقييمات دفعية مع محكّمين بشريين (500$/شهر). DeepEval يقيس خطوط RAG بمعايير RAGAS. LangSmith يتتبع الأعطال. Phoenix يراقب الإنتاج. مقارنة شاملة لخط الأنابيب.',
+  seoTitle: 'اختبار التعليمات 2026: Promptfoo وBraintrust وDeepEval',
+  metaDescription: 'Promptfoo يكتشف التراجعات في ثوانٍ (مجاني). Braintrust ينفّذ تقييمات دفعية مع محكّمين بشريين (500 دولار/شهر). DeepEval يقيس RAG بمعايير RAGAS.',
   ogTitle: 'Promptfoo في ثوانٍ. Braintrust في ساعات. أيهما تحتاج؟',
   ogDescription: 'اختبارات CI/CD السريعة مقابل التقييمات الدفعية مقابل تسجيل RAG مقابل التتبع مقابل المراقبة. 5 أدوات، 5 مهام. جدول مقارنة مرفق.',
   twitterTitle: 'أدوات اختبار البرامج النصية 2026: خط الأنابيب من 5 مراحل مقارنةً',
