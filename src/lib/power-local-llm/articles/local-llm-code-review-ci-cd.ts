@@ -1999,7 +1999,7 @@ jobs:
       '@type': 'TechArticle',
       headline: 'LLM Local en CI/CD: Revisión de Código Automatizada Sin Cloud',
       description: 'Revisión de código con LLM local autoalojado en GitHub Actions: arquitectura, YAML de flujo de trabajo funcional, dimensionamiento de hardware por tamaño de equipo, modelo de seguridad y punto de equilibrio económico frente a GitHub Advanced Security.',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/local-llm-code-review-ci-cd',
+      url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-code-review-ci-cd',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

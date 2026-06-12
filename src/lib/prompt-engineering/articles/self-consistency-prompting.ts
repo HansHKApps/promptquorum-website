@@ -547,7 +547,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'El self-consistency prompting mejora la precisión de la IA en matemáticas, lógica y análisis generando múltiples caminos de razonamiento y seleccionando la respuesta mayoritaria. Técnica, ejemplos y análisis costo-beneficio.',
         datePublished: '2026-03-26',
         dateModified: '2026-05-04',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/self-consistency-prompting',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/self-consistency-prompting',
         inLanguage: 'es',
         keywords: ['self-consistency prompting', 'prompt engineering', 'prompts de razonamiento', 'voto mayoritario', 'chain-of-thought', 'mejora de precisión', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

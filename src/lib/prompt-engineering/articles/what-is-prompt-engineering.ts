@@ -691,7 +691,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/what-is-prompt-engineering',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/what-is-prompt-engineering',
         inLanguage: 'es',
         headline: '¿Qué es el Prompt Engineering?',
         description: 'Prompt engineering: diseñar entradas de texto para obtener respuestas fiables y precisas de LLMs. Aprende las técnicas esenciales, los frameworks y por qué importa.',
@@ -713,7 +713,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Frameworks de Prompt Engineering',
         inLanguage: 'es',
         numberOfItems: 5,
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/what-is-prompt-engineering',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/what-is-prompt-engineering',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Single-Line', description: 'Tareas rápidas de una sola línea donde la velocidad importa más que la precisión.' },
           { '@type': 'ListItem', position: 2, name: 'CRAFT', description: 'Marketing, redacción y contenido creativo con una voz definida.' },

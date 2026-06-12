@@ -1034,8 +1034,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Hardware-Specific',
     title: 'هل Mac Mini M4 مناسب للنماذج اللغوية المحلية في 2026؟',
-    seoTitle: 'Mac Mini M4 للنماذج المحلية 2026 | PromptQuorum',
-    metaDescription: 'Mac Mini M4 Pro بـ 24 GB ذاكرة موحدة يُشغّل نماذج 8B بسلاسة، وهو أفضل خيار Apple من حيث السعر. لا سقف VRAM منفصل — الذاكرة مشتركة بالكامل.',
+    seoTitle: 'Mac Mini M4 لتشغيل النماذج LLM محلياً 2026',
+    metaDescription: 'Mac Mini M4 Pro بـ 24 GB ذاكرة موحدة يُشغّل Llama 3 8B بـ ~36 توكن/ثانية عبر MLX. لا سقف VRAM منفصل؛ أفضل خيار Apple لتشغيل LLMs محلياً.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

@@ -711,7 +711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
       dateModified: '2026-04-30',
-      url: 'https://www.promptquorum.com/es/es/prompt-engineering/best-tools-structured-output-json',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/best-tools-structured-output-json',
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
       about: [

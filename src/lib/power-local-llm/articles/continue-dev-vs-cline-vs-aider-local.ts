@@ -2980,7 +2980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Continue.dev vs Cline vs Aider: Mejor agente de código local en 2026',
       description: 'Continue.dev, Cline y Aider comparados como agentes de código local en 2026. Modelo de edición, integración con IDE, deshacer y estrategia de contexto — elegidos por flujo de trabajo, no por hype.',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/continue-dev-vs-cline-vs-aider-local',
+      url: 'https://www.promptquorum.com/es/power-local-llm/continue-dev-vs-cline-vs-aider-local',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

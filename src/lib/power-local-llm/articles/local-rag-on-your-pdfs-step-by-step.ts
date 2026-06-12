@@ -2772,7 +2772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'url': 'https://www.promptquorum.com/es/es/power-local-llm/local-rag-on-your-pdfs-step-by-step',
+      'url': 'https://www.promptquorum.com/es/power-local-llm/local-rag-on-your-pdfs-step-by-step',
       'headline': 'Crea un RAG local en tus PDFs en 30 minutos (Ollama + AnythingLLM)',
       'description':
         'Paso a paso: instala Ollama, configura AnythingLLM, sube PDFs y chatea con ellos. Tiempo total 30 minutos. Probado en portátil con 16 GB de RAM. Mayo 2026.',

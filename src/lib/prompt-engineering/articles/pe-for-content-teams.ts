@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/es/prompt-engineering/pe-for-content-teams',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/pe-for-content-teams',
       headline: 'Prompt engineering para equipos de contenido: plantillas, flujos de revisión y controles de calidad',
       description: 'Cómo los equipos de contenido codifican la voz de marca, construyen plantillas de prompts reutilizables para 5 tipos de contenido, ejecutan flujos de revisión editorial y puntúan la calidad de los prompts de forma sistemática.',
       datePublished: '2026-05-02',

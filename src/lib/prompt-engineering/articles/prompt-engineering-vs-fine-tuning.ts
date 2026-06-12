@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/es/prompt-engineering/prompt-engineering-vs-fine-tuning',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-engineering-vs-fine-tuning',
       inLanguage: 'es',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       headline: 'Prompt Engineering vs Fine-Tuning: cuándo usar prompts, cuándo entrenar',

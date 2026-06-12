@@ -445,7 +445,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/es/prompt-engineering/multi-model-prompt-testing',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/multi-model-prompt-testing',
       headline: 'Pruebas de prompts multi-modelo: Comparar resultados en GPT-5.5, Claude y Gemini',
       description: 'Cómo probar prompts en múltiples modelos de IA, construir una matriz de puntuación y elegir el modelo adecuado con PromptQuorum y Promptfoo.',
       datePublished: '2026-05-02',

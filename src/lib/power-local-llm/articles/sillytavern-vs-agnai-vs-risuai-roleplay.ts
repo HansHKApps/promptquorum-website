@@ -1220,7 +1220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'SillyTavern vs Agnai vs RisuAI: Mejor interfaz de roleplay local (2026)',
       description: 'Comparativa de SillyTavern, Agnai y RisuAI para roleplay con LLM local. Funciones, compatibilidad de modelos, privacidad y ecosistema comunitario comparados.',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
+      url: 'https://www.promptquorum.com/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

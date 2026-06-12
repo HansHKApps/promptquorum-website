@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     description: 'Qué es el negative prompting, por qué importa y cómo usar reglas explícitas de "no hacer" para mantener las salidas de IA dentro de límites seguros y conformes a la marca.',
     datePublished: '2026-03-26',
     dateModified: '2026-05-04',
-    url: 'https://www.promptquorum.com/es/es/prompt-engineering/negative-prompting',
+    url: 'https://www.promptquorum.com/es/prompt-engineering/negative-prompting',
     inLanguage: 'es',
     keywords: ['negative prompting', 'prompt engineering', 'guardrails', 'PromptQuorum'],
     author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

@@ -165,7 +165,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       siteName: 'PromptQuorum',
       images: [{ url: finalOgImage, width: 1200, height: 630, alt: isGlossary ? 'Prompt Engineering Glossary Mind Map 2026 — 100 Essential Terms' : article.title }],
       publishedTime: article.publishDate,
-      modifiedTime: article.dateModified ?? article.publishDate,
+      modifiedTime: article.dateModified ?? ((article as any).lastFactChecked as string | undefined)?.substring(0, 10) ?? article.publishDate,
     },
     twitter: {
       card: 'summary_large_image',
@@ -240,7 +240,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     headline: article.title,
     description: article.intro,
     datePublished: article.publishDate || '2026-03-01',
-    dateModified: (article as any).dateModified ?? article.publishDate ?? '2026-03-28',
+    dateModified: (article as any).dateModified ?? ((article as any).lastFactChecked as string | undefined)?.substring(0, 10) ?? article.publishDate,
     url: canonicalUrl,
     ...(peProficiencyLevel && { proficiencyLevel: peProficiencyLevel }),
     ...(peAboutTopics?.length && { about: peAboutTopics.map((t: string) => ({ '@type': 'Thing', name: t })) }),

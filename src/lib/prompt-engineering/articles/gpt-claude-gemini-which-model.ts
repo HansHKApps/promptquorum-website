@@ -1887,7 +1887,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model',
       inLanguage: 'es',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       headline: 'GPT, Claude o Gemini: Cómo elegir el modelo de IA correcto',

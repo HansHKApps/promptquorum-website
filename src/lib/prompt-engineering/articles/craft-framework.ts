@@ -310,7 +310,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Cómo funciona el Framework CRAFT (Contexto, Rol, Audiencia, Formato y Tono), cuándo usarlo y cómo PromptQuorum ofrece CRAFT como opción integrada.',
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/craft-framework',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/craft-framework',
         inLanguage: 'es',
         keywords: ['Framework CRAFT', 'frameworks de prompt', 'prompt engineering', 'prompts creativos', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

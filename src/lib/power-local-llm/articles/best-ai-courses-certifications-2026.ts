@@ -2885,7 +2885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Mejores cursos y certificaciones de IA: guía de compra 2026',
       description: 'Tres itinerarios de aprendizaje de IA comparados para 2026: cursos gratuitos, cursos estructurados de pago y certificaciones — con una recomendación clara para orientarte, desarrollar profundidad o conseguir una credencial.',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/best-ai-courses-certifications-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-ai-courses-certifications-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

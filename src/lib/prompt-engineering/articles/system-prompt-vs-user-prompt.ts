@@ -639,7 +639,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      'url': 'https://www.promptquorum.com/es/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference',
+      'url': 'https://www.promptquorum.com/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference',
       headline: "System Prompt vs User Prompt: La diferencia en 2026",
       description: "Los system prompts definen cómo un modelo de IA piensa y se comporta; los user prompts definen lo que hace ahora mismo. Aprende la diferencia y cómo interactúan.",
       datePublished: "2026-03-22",

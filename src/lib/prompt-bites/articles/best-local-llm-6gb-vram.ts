@@ -547,7 +547,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     title: 'أفضل نموذج لغوي محلي لـ 6 GB من VRAM؟',
     seoTitle: 'أفضل LLM محلي لـ 6 GB VRAM في 2026 | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M يشغل 5.5 GB ويُعدّ الخيار الأمثل لـ 6 GB VRAM. Phi-4 Q4 وMistral Small Q4_K_S بدائل موثوقة تناسب بطاقات RTX 3050 وRTX 4050.',
+    metaDescription: 'Llama 3 8B Q4_K_M (5.5 GB VRAM) هو أفضل LLM محلي لـ6 GB VRAM بسرعة ~20 رمز/ثانية. Phi-4 Q4_K_M وMistral Small Q4_K_S بدائل للـRTX 3050 وRTX 4050.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

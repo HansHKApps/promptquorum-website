@@ -902,7 +902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Agentes de IA locales en 2026: lo que realmente funciona (y lo que sigue fallando)',
       description: '6 stacks de agentes de IA locales probados en 5 tareas reales. 2 funcionan de forma fiable, 3 fallan de maneras que los demos ocultan, 1 es inutilizable. Cline, LangGraph, AutoGPT y MetaGPT evaluados.',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/autonomous-local-agents-actually-work',
+      url: 'https://www.promptquorum.com/es/power-local-llm/autonomous-local-agents-actually-work',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

@@ -450,7 +450,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       description: 'Optimización manual vs automatizada de prompts: elige según el número de prompts. Framework de decisión de escalabilidad.',
       datePublished: '2026-04-26',
       dateModified: '2026-05-05',
-      url: 'https://www.promptquorum.com/es/es/prompt-engineering/manual-vs-automated-prompt-optimization',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },

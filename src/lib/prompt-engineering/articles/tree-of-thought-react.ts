@@ -762,7 +762,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       description: 'Cómo funcionan Tree-of-Thought (explorar múltiples ramas) y ReAct (bucles razonar-actuar), y cuándo usarlos para resolver problemas complejos de forma más fiable.',
       datePublished: '2026-03-26',
       dateModified: '2026-05-03',
-      url: 'https://www.promptquorum.com/es/es/prompt-engineering/tree-of-thought-react',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/tree-of-thought-react',
       inLanguage: 'es',
       keywords: ['tree-of-thought', 'ReAct', 'prompt engineering', 'prompts de razonamiento', 'agentes de IA', 'prompting agéntico', 'uso nativo de herramientas', 'chain-of-thought', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

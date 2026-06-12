@@ -1185,7 +1185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'El Framework RISEN para refinamiento iterativo de prompts: Refinar borradores, Inspeccionar cambios, Resumir resultados, Evaluar según criterios, planificar Próximos Pasos. Pruebas multi-modelo con PromptQuorum.',
         datePublished: '2026-03-24',
         dateModified: '2026-05-04',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/risen-framework',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/risen-framework',
         inLanguage: 'es',
         keywords: ['Framework RISEN', 'prompting iterativo', 'refinamiento de prompts', 'flujos de trabajo multi-paso', 'prompt engineering', 'PromptQuorum', 'GPT-5.5', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

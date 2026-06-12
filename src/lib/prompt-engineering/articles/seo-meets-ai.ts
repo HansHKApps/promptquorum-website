@@ -1024,7 +1024,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/seo-meets-ai',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/seo-meets-ai',
         inLanguage: 'es',
         headline: 'SEO y la IA: Cómo GEO Está Reemplazando el Manual Tradicional',
         description: 'Aprende la Optimización para Motores Generativos (GEO) para ChatGPT, Perplexity y Gemini. Estrategias para el tráfico de búsqueda de IA, marcado de esquema y estructura de contenido.',

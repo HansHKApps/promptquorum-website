@@ -449,7 +449,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/es/prompt-engineering/build-your-own-framework',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/build-your-own-framework',
       inLanguage: 'es',
       headline: 'Construye tu propio framework de prompts: proceso de 5 pasos',
       description: 'Aprende cuándo y cómo construir un framework de prompts personalizado: proceso de 5 pasos desde el objetivo hasta la documentación. Con el ejemplo REPAIR para equipos de soporte.',

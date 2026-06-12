@@ -859,7 +859,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
       dateModified: '2026-04-29',
-      url: 'https://www.promptquorum.com/es/es/prompt-engineering/how-to-reduce-prompt-brittleness',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'es',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },

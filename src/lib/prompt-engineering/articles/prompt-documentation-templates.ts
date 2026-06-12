@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/es/es/prompt-engineering/prompt-documentation-templates',
+      url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-documentation-templates',
       inLanguage: 'es',
       headline: 'Plantillas de documentación de prompts: 6 formatos reutilizables para equipos',
       description: '6 plantillas de documentación de prompts: Tarjeta One-Liner, Bloque de Versión, Encabezado de Suite de Pruebas, Registro de Decisiones, Justificación de Cambio, Bloque de Config API.',

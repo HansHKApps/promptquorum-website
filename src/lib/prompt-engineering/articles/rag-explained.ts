@@ -749,7 +749,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Cómo funciona la generación aumentada por recuperación, por qué reduce las alucinaciones y cómo implementar un pipeline RAG de 4 etapas para datos privados o frecuentemente cambiantes.',
         datePublished: '2026-03-26',
         dateModified: '2026-05-05',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/rag-explained',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/rag-explained',
         inLanguage: 'es',
         keywords: ['RAG', 'Retrieval-Augmented Generation', 'base de datos vectorial', 'alucinación LLM', 'búsqueda semántica', 'prompt engineering'],
         proficiencyLevel: 'Intermediate',

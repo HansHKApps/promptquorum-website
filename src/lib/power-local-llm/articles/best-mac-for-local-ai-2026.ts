@@ -966,7 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'El mejor Mac para IA local 2026: Mac Mini vs Mac Studio vs MacBook Pro',
       description: 'Tres Mac comparados para LLMs locales: Mac Mini M5 Pro, MacBook Pro 16',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/best-mac-for-local-ai-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

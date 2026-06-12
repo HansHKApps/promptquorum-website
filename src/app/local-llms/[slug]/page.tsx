@@ -133,7 +133,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       siteName: 'PromptQuorum',
       images: [{ url: ogImageUrl, width: 1200, height: 630, alt: article.title }],
       publishedTime: article.publishDate,
-      modifiedTime: article.dateModified ?? article.publishDate,
+      modifiedTime: article.dateModified ?? ((article as any).lastFactChecked as string | undefined)?.substring(0, 10) ?? article.publishDate,
     },
     twitter: {
       card: 'summary_large_image',
@@ -224,7 +224,7 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
     headline: article.title,
     description: article.intro,
     datePublished: article.publishDate,
-    dateModified: (article as any).dateModified ?? article.publishDate,
+    dateModified: (article as any).dateModified ?? ((article as any).lastFactChecked as string | undefined)?.substring(0, 10) ?? article.publishDate,
     url: canonicalUrl,
     ...(llmProficiencyLevel && { proficiencyLevel: llmProficiencyLevel }),
     ...(llmAboutTopics?.length && { about: llmAboutTopics.map((t: string) => ({ '@type': 'Thing', name: t })) }),

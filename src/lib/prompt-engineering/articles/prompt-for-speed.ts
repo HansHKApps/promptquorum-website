@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Los prompts lentos de IA tienen una sola causa: la ambigüedad. Cinco decisiones de diseño dan respuestas precisas y rápidas en el primer intento.',
         datePublished: '2026-03-22',
         dateModified: '2026-03-22',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },

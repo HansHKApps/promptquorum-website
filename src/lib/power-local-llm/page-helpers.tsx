@@ -147,7 +147,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
         },
       ],
       publishedTime: article?.publishDate,
-      modifiedTime: article?.dateModified ?? article?.publishDate,
+      modifiedTime: article?.dateModified ?? ((article as any)?.lastFactChecked as string | undefined)?.substring(0, 10) ?? article?.publishDate,
     },
     twitter: {
       card: 'summary_large_image',
@@ -213,7 +213,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
     headline: article.title,
     description: article.intro,
     datePublished: article.publishDate,
-    dateModified: (article as any).dateModified ?? article.publishDate,
+    dateModified: (article as any).dateModified ?? ((article as any).lastFactChecked as string | undefined)?.substring(0, 10) ?? article.publishDate,
     url: canonicalUrl,
     ...(proficiencyLevel && { proficiencyLevel }),
     author: {

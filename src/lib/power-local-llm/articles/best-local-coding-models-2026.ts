@@ -2933,7 +2933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
       inLanguage: 'es',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/best-local-coding-models-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-local-coding-models-2026',
       keywords: 'mejor modelo de código local 2026, qwen3-coder vs deepseek, codestral vs qwen, llm local para programar, modelo de código open source, llm local humaneval',
       about: [
         { '@type': 'Thing', name: 'Qwen3-Coder' },

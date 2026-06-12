@@ -2503,7 +2503,7 @@ if __name__ == "__main__":
        '@type': 'TechArticle',
        headline: 'Pipeline multimodal de IA local 2026: combina voz, visión y texto sin conexión',
        description: 'Ejecuta IA de voz + visión + texto localmente en 2026. Combina whisper.cpp, LLaVA 1.6, Ollama y Piper TTS. Orquestador Python completo — sin nube, sin claves de API.',
-       url: 'https://www.promptquorum.com/es/es/power-local-llm/local-multimodal-pipeline-voice-vision-text',
+       url: 'https://www.promptquorum.com/es/power-local-llm/local-multimodal-pipeline-voice-vision-text',
        inLanguage: 'es',
        datePublished: '2026-05-24',
        dateModified: '2026-05-24',

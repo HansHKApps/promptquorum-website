@@ -778,8 +778,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Hardware-Specific',
     title: 'أفضل حاسب محمول للذكاء الاصطناعي بأقل من 1,000 دولار في 2026؟',
-    seoTitle: 'أفضل حاسب محمول للذكاء الاصطناعي بأقل من 1,000 دولار 2026 | Prompt Bites',
-    metaDescription: 'أفضل حاسب محمول للذكاء الاصطناعي بأقل من 1,000 دولار: حاسب Ryzen 7 مع 16 جيجابايت RAM يشغّل النماذج الصغيرة على وحدة المعالجة المركزية. للاستدلال بمعالج الرسومات، وفّر لشراء MacBook Air.',
+    seoTitle: 'أفضل حاسب محمول للذكاء الاصطناعي دون 1000 دولار 2026',
+    metaDescription: 'Ryzen 7 مع 16 GB RAM يشغّل نماذج 7B على CPU بـ 3-7 رمز/ثانية بأقل من 1000 دولار. للاستدلال GPU احفظ لشراء MacBook Air بمعالج سلسلة M.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

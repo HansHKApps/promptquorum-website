@@ -625,8 +625,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Hardware-Specific',
     title: 'هل توجد eGPU تعمل مع Ollama على MacBook في 2026؟',
-    seoTitle: 'eGPU لـ Ollama على MacBook 2026 | Prompt Bites',
-    metaDescription: 'لا توجد eGPU تعمل مع Ollama على MacBook بمعالج Apple Silicon: الذاكرة الموحدة وغياب PCIe يستبعدان هذا الخيار. استخدم ذاكرة أكبر أو حاسباً Linux.',
+    seoTitle: 'Ollama وeGPU على MacBook Apple Silicon 2026',
+    metaDescription: 'لا توجد eGPU تعمل مع Ollama على MacBook Apple Silicon: macOS لا يدعم PCIe الخارجي منذ إيقاف Intel Mac. البديل: ذاكرة موحدة أكبر أو Linux.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

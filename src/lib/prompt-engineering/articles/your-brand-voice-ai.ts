@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/your-brand-voice-ai',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/your-brand-voice-ai',
         headline: 'IA para la Voz de Marca: Cómo Entrenar Modelos para que Coincidan con tu Tono',
         description: 'Aprende cómo entrenar modelos de IA para entender y aplicar la voz de tu marca. Incluye pilares de voz, directrices de estilo, reglas de vocabulario y salvaguardas para mantener la coherencia de la marca a escala.',
         datePublished: '2026-03-24',

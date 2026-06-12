@@ -591,8 +591,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Model Comparisons',
     title: 'أفضل نماذج MoE للبرمجة المحلية؟',
-    seoTitle: 'أفضل نماذج MoE للبرمجة 2026 | PromptQuorum',
-    metaDescription: 'Mixtral 8x22B: 26 GB VRAM، 46.7B معامل. DeepSeek V2: 16 GB VRAM، الأفضل في البرمجة. MoE تنشّط المعاملات النشطة فقط. إجابة سريعة.',
+    seoTitle: 'أفضل نماذج MoE للبرمجة المحلية 2026 | PromptQuorum',
+    metaDescription: 'Mixtral 8x22B يحتاج 26 GB VRAM لـ46.7B معامل. DeepSeek V2 يعمل بـ16 GB VRAM ويتصدر معايير البرمجة. MoE تنشّط المعاملات النشطة فقط.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

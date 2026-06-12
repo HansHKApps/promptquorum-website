@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/es/es/prompt-engineering/open-source-vs-proprietary-llms',
+        'url': 'https://www.promptquorum.com/es/prompt-engineering/open-source-vs-proprietary-llms',
         headline: 'LLMs de código abierto vs propietarios',
         description: 'Los modelos open-weights como LLaMA 4 y Mistral ofrecen control y ahorro de costos; los modelos propietarios como GPT-5.5 y Claude Opus 4.8 ofrecen rendimiento de frontera.',
         datePublished: '2026-03-24',
@@ -1211,7 +1211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Open-Weights vs LLMs Propietarios — Comparación Completa',
         description: 'Comparación en 10 dimensiones de LLMs open-weights y propietarios que cubre costo, rendimiento, privacidad, fine-tuning, context window, soberanía, velocidad, soporte, actualizaciones y vendor lock-in.',
         numberOfItems: 10,
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/open-source-vs-proprietary-llms',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/open-source-vs-proprietary-llms',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Modelo de costos', description: 'Open-weights: $0,50–2,00/hr de infraestructura; gratis una vez desplegado, sin facturación por token. Propietarios: facturación por API $0,15–5,00 por 1M tokens de entrada; $0,30–15,00 por 1M tokens de salida.' },
           { '@type': 'ListItem', position: 2, name: 'Techo de rendimiento', description: 'Open-weights (LLaMA 70B, Mistral Large): MMLU 80–82 %, competitivos en tareas específicas. Propietarios (GPT-5.5, Claude, Gemini): MMLU 88–90 %, mayor techo en razonamiento y multimodal.' },

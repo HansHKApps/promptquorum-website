@@ -1586,7 +1586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'IA local para email y calendario: automatización sin API en la nube (2026)',
       description: 'Cómo automatizar la redacción de emails, el resumen de la bandeja de entrada y la gestión del calendario con un LLM local. Ollama, integración IMAP y automatización de comunicaciones con privacidad.',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/local-llm-email-and-calendar-automation',
+      url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-email-and-calendar-automation',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

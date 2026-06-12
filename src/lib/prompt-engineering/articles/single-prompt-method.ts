@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/the-single-step-prompt-method',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/the-single-step-prompt-method',
         inLanguage: 'es',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         headline: 'El Método de Prompt de Un Solo Paso',

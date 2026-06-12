@@ -557,7 +557,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'أفضل نماذج Ollama للـCPU فقط؟',
     seoTitle: 'أفضل نماذج Ollama بدون GPU 2026 | PromptQuorum',
-    metaDescription: 'Phi-4 Mini Q4 هو أفضل نموذج Ollama للـCPU فقط: 4 GB RAM، ~5 رمز/ثانية. Llama 3 8B Q4 يحتاج 8 GB. Gemma 2B هو الأسرع على CPU (~6 رمز/ثانية). بدون GPU.',
+    metaDescription: 'Phi-4 Mini Q4 أفضل نموذج Ollama لـCPU فقط: 4 GB RAM، ~5 رمز/ثانية. Llama 3 8B Q4 يحتاج 8 GB RAM. Gemma 2B الأسرع على CPU بـ~6 رمز/ثانية.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',

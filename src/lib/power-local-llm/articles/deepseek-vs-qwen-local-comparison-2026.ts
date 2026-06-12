@@ -692,7 +692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'DeepSeek vs Qwen: Comparativa de LLM local 2026',
       description:
         'DeepSeek-R1 destilado vs Qwen3 LLM local: comparativa directa de VRAM, MMLU, MATH-500 y HumanEval. Qué modelo ejecutar en cada nivel de hardware en 2026.',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

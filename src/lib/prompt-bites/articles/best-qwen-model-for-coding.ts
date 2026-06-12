@@ -737,8 +737,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Model Comparisons',
     title: 'ما هو أفضل نموذج Qwen للبرمجة؟',
-    seoTitle: 'Qwen3-Coder 2026: 7B مقابل 14B مقابل 32B حسب مستوى VRAM',
-    metaDescription: 'Qwen3-Coder 32B يتصدر بـ24 GB VRAM (HumanEval 91.5%). بـ8 GB يحقق 7B نسبة 79.7%. 14B هو النقطة المثلى لمعظم المطورين بـ12 GB. دليل حسب العتاد.',
+    seoTitle: 'Qwen3-Coder للبرمجة 2026: 7B مقابل 14B مقابل 32B',
+    metaDescription: 'Qwen3-Coder 32B يحقق 91.5% HumanEval بـ24 GB VRAM. 14B النقطة المثلى بـ9.5 GB (88.0%). 7B يعمل بـ5.5 GB على RTX 3060 بـ8–15 رمز/ثانية.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

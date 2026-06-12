@@ -3701,7 +3701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'RAG local para datos empresariales: IA conforme al RGPD para documentos sensibles (2026)',
       description: 'RAG local conforme al RGPD para equipos jurídicos, médicos y financieros. Arquitectura, registro de auditoría, alcance de la EIPD y 3 patrones de despliegue comparados.',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/local-rag-for-private-business-data',
+      url: 'https://www.promptquorum.com/es/power-local-llm/local-rag-for-private-business-data',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

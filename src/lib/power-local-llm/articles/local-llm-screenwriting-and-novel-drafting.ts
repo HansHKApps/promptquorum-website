@@ -724,7 +724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Redactar novelas y guiones con LLMs locales: guía de flujo de trabajo para más de 100.000 palabras',
       description: 'Flujo de trabajo completo para usar LLMs locales en la redacción de novelas y guiones: selección de modelos, gestión del contexto, andamiaje por capítulos, generación de escenas e integraciones de herramientas para escritores.',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/local-llm-screenwriting-and-novel-drafting',
+      url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-screenwriting-and-novel-drafting',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

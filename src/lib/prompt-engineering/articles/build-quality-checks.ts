@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/build-quality-checks',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/build-quality-checks',
         inLanguage: 'es',
         keywords: ['gates de calidad', 'CI/CD', 'alucinaciones IA', 'revisión de código', 'escaneo de seguridad', 'validación de dependencias', 'controles de build'],
         proficiencyLevel: 'Intermediate',

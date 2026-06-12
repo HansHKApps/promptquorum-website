@@ -685,7 +685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Bot de WeChat con LLM local: asistente personal 2026',
       description: 'Crea un bot asistente personal en WeChat con WeChatFerry y Ollama en Windows — completamente local, sin API en la nube.',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/wechat-bot-local-llm-personal-assistant-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/wechat-bot-local-llm-personal-assistant-2026',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

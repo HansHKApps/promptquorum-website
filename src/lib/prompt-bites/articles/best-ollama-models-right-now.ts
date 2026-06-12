@@ -566,7 +566,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'أفضل نماذج Ollama الآن؟',
     seoTitle: 'أفضل نماذج Ollama الآن 2026 | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4 هو أفضل نموذج Ollama عام (20 رمز/ثانية، 6 GB VRAM). Qwen 3 Coder 14B Q4 للبرمجة. Phi-4 Mini Q4 للأجهزة المحدودة. قائمة تُحدَّث شهرياً.',
+    metaDescription: 'Llama 3 8B Q4_K_M أفضل نموذج Ollama عام بـ20 رمز/ثانية و6 GB VRAM. Qwen 3 Coder 14B Q4 للبرمجة. Phi-4 Mini Q4 للأجهزة المحدودة.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',

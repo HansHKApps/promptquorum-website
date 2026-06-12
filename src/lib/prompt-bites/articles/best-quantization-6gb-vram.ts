@@ -626,8 +626,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Quantization & VRAM',
     title: 'أفضل تكميم لـ6 GB VRAM: أي مستوى يتسع؟',
-    seoTitle: 'أفضل تكميم لـ6 GB VRAM 2026 | PromptQuorum',
-    metaDescription: 'Q4_K_M لنماذج 7B: 4.9 GB، يتسع في 6 GB VRAM مع 1.1 GB للسياق. Q5_K_M يتسع بصعوبة؛ Q6_K وما فوق يتجاوز 6 GB. إجابة سريعة.',
+    seoTitle: 'أفضل تكميم لـ6 GB VRAM: Q4_K_M أم Q5_K_M؟ 2026',
+    metaDescription: 'Q4_K_M لنماذج 7B/8B يستخدم 4.7–4.9 GB ويترك 1.1 GB لذاكرة KV. Q5_K_M يتسع بـ5.7 GB فقط مع تقليل السياق إلى 2k. Q6_K يتجاوز 6 GB.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',

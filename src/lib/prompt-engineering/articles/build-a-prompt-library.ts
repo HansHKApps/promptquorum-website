@@ -1248,7 +1248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         proficiencyLevel: 'Beginner',
         audience: { '@type': 'Audience', audienceType: 'Líderes de equipo y profesionales que adoptan herramientas de IA' },
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/build-a-prompt-library',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/build-a-prompt-library',
         inLanguage: 'es',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
       },

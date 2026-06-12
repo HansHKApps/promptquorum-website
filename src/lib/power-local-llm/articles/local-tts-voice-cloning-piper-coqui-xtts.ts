@@ -2347,7 +2347,7 @@ tts.tts_to_file(
        '@type': 'TechArticle',
        headline: 'TTS local y clonación de voz 2026: Piper vs Coqui vs XTTS v2 vs F5-TTS vs Bark vs StyleTTS 2',
        description: 'Piper funciona en tiempo real en CPU; XTTS v2 clona una voz en 6 segundos en 17 idiomas. 6 motores TTS offline comparados para 2026 — VRAM, calidad y licencia.',
-       url: 'https://www.promptquorum.com/es/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
+       url: 'https://www.promptquorum.com/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
        inLanguage: 'es',
        datePublished: '2026-05-24',
        dateModified: '2026-05-24',

@@ -381,7 +381,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Aprende cómo los tokens controlan los costes y límites de la IA. Entiende los modelos de precios, los límites de tasa y las estrategias para optimizar el gasto en GPT-5.5, Claude, Gemini y modelos locales.',
         datePublished: '2026-03-22',
         dateModified: '2026-04-12',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

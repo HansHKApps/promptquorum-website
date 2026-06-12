@@ -605,8 +605,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Hardware-Specific',
     title: 'أفضل نموذج لغة كبير لـAMD 5700X + RTX 3070 Ti؟',
-    seoTitle: 'AMD 5700X + RTX 3070 Ti: نماذج اللغة الكبيرة | PromptQuorum',
-    metaDescription: 'Llama 3 8B Q4_K_M وMistral Small Q5_K_M يعملان بـ22–25 رمز/ثانية على RTX 3070 Ti: كلاهما يستخدم ~6 GB VRAM. GPU وليس CPU هي هدف الترقية لنماذج اللغة الكبيرة.',
+    seoTitle: 'LLMs على AMD 5700X + RTX 3070 Ti | PromptQuorum',
+    metaDescription: 'Llama 3 8B Q4_K_M وMistral Small Q5_K_M يعملان بـ22–25 رمز/ثانية على RTX 3070 Ti بـ~6 GB VRAM لكل منهما. GPU هي هدف الترقية لا CPU.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

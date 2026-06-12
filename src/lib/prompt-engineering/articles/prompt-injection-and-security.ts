@@ -827,7 +827,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         description: 'La prompt injection es el OWASP LLM #1. Aprende los tipos de ataque, las diferencias con el jailbreaking y un framework de 5 defensas por capas.',
         datePublished: '2026-03-30',
         dateModified: '2026-03-30',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/prompt-injection-and-security',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-injection-and-security',
         inLanguage: 'es',
         proficiencyLevel: 'Advanced',
         dependencies: 'Conocimiento básico de prompt engineering con LLMs',

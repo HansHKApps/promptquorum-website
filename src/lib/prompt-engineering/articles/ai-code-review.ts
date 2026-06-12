@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/ai-code-review',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/ai-code-review',
         inLanguage: 'es',
         headline: 'Revisión de Código con IA 2026: Mejores Herramientas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
         description: 'La revisión de código con IA detecta entre el 42 y el 85 % de los bugs en tiempo de ejecución vs. menos del 20 % para SAST. CodeRabbit, Greptile y Snyk comparados. Incluye framework de prompts de 5 partes para reducir el ruido 3 veces.',

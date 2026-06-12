@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'El prompt engineering pasó por 7 fases distintas desde GPT-3 (2020) hasta el context design (2026). Línea de tiempo completa con 12+ citas de investigación y análisis de por qué la disciplina se transformó pero no desapareció.',
         datePublished: '2026-03-01',
         dateModified: '2026-05-03',
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/how-prompt-engineering-evolved',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'es',
         keywords: ['historia del prompt engineering', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'context engineering', 'línea de tiempo del prompt engineering', 'InstructGPT', 'RLHF'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

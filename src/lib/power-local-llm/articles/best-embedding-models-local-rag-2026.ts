@@ -896,7 +896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Mejores modelos de embedding para RAG local en 2026 (probados con documentos reales)',
       description: 'Nomic, BGE, GTE, Mixedbread, Snowflake y Jina probados en contratos legales, artículos de investigación, código y wiki multilingüe. retrieval@10, velocidad, memoria. Veredicto de mayo 2026.',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/best-embedding-models-local-rag-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-embedding-models-local-rag-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

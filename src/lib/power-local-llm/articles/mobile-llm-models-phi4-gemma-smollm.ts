@@ -924,7 +924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Mejores modelos LLM para móviles en 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
       description: 'Seis LLMs pequeños evaluados en teléfonos en 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.5B, Llama 3.2 3B comparados en velocidad, RAM y calidad.',
-      url: 'https://www.promptquorum.com/es/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm',
+      url: 'https://www.promptquorum.com/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

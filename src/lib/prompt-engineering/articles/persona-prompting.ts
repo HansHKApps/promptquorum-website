@@ -693,7 +693,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'url': 'https://www.promptquorum.com/es/es/prompt-engineering/persona-prompting',
+      'url': 'https://www.promptquorum.com/es/prompt-engineering/persona-prompting',
       headline: 'Persona Prompting: dale un rol a tu IA y observa cómo mejora',
       description: 'Qué es el persona prompting, por qué importa, los bloques de construcción fundamentales, ejemplos prácticos y cómo probar personas en múltiples modelos de IA.',
       datePublished: '2026-03-26',

@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['salida estructurada', 'modo JSON', 'prompt engineering', 'diseño de esquemas', 'salida legible por máquinas', 'validación JSON', 'plantillas de prompts'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        url: 'https://www.promptquorum.com/es/es/prompt-engineering/structured-output-json-mode',
+        url: 'https://www.promptquorum.com/es/prompt-engineering/structured-output-json-mode',
         inLanguage: 'es',
       },
       howToSchema: {

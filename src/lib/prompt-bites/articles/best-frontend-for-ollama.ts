@@ -606,8 +606,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Tool Comparisons',
     title: 'أفضل واجهة أمامية لـ Ollama؟',
-    seoTitle: 'أفضل واجهة أمامية لـ Ollama؟ | Prompt Bites | PromptQuorum',
-    metaDescription: 'Open WebUI هي أفضل واجهة أمامية لـ Ollama. SillyTavern للعب الأدوار، و Jan لإدارة النماذج. الثلاثة مجانية ومفتوحة المصدر. مايو 2026.',
+    seoTitle: 'أفضل واجهة لـ Ollama: Open WebUI أو SillyTavern 2026',
+    metaDescription: 'Open WebUI الأفضل لـ Ollama: يعمل كحاوية Docker ويدعم RAG. SillyTavern للأدوار، Jan لإدارة النماذج. الثلاثة مجانية. مايو 2026.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',

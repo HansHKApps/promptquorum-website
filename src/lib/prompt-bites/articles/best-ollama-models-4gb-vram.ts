@@ -574,8 +574,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Quantization & VRAM',
     title: 'أفضل نماذج Ollama لـ4 GB VRAM؟',
-    seoTitle: 'نماذج Ollama لـ4 GB VRAM 2026 | PromptQuorum',
-    metaDescription: '4 GB VRAM ضيّقة. Phi-4 Mini Q4 (3.2 GB)، Gemma 2 2B (1.5 GB)، SmolLM 1.7B (1.0 GB). Llama 3 8B لا يتسع. إجابة سريعة من PromptQuorum.',
+    seoTitle: 'Ollama بـ4 GB VRAM: أفضل النماذج 2026 | PromptQuorum',
+    metaDescription: '4 GB VRAM تتسع لـPhi-4 Mini Q4 (3.2 GB) وGemma 2 2B (1.5 GB) وSmolLM 1.7B (1.0 GB). Llama 3 8B يحتاج 5.5 GB ولا يتسع.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

@@ -591,8 +591,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Model Comparisons',
     title: 'أفضل نموذج 14B للبرمجة؟',
-    seoTitle: 'أفضل نماذج 14B للبرمجة 2026 | PromptQuorum',
-    metaDescription: 'Qwen 3 Coder 14B: 78% HumanEval، 10 GB VRAM. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73% بـ 10 GB. إجابة سريعة من PromptQuorum.',
+    seoTitle: 'أفضل نماذج 14B للبرمجة: Qwen 3 Coder يتصدر 2026',
+    metaDescription: 'Qwen 3 Coder 14B يسجل 78% على HumanEval بـ 10 GB VRAM عند Q4_K_M. DeepSeek Coder 14B يصل إلى 75%. StarCoder2 15B يحقق 73% بنفس VRAM.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

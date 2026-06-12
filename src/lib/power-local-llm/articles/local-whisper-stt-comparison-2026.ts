@@ -3179,7 +3179,7 @@ for segment in segments:
        '@type': 'TechArticle',
        headline: 'Whisper.cpp vs faster-whisper 2026: Benchmarks STT local, configuración y aceleración GPU',
        description: 'Compara whisper.cpp y faster-whisper para reconocimiento de voz local en 2026. Benchmarks WER, velocidad GPU vs CPU, Apple Silicon Metal, transcripción en tiempo real y guías de instalación. Todo offline.',
-       url: 'https://www.promptquorum.com/es/es/power-local-llm/local-whisper-stt-comparison-2026',
+       url: 'https://www.promptquorum.com/es/power-local-llm/local-whisper-stt-comparison-2026',
        inLanguage: 'es',
        datePublished: '2026-05-24',
        dateModified: '2026-05-24',
