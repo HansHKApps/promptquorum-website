@@ -1939,6 +1939,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       ]
     }
   },
+},
   ko: {
     theme: 'Tools & Platforms',
     title: '프롬프트 테스트 및 평가 도구 2026: Promptfoo vs Braintrust vs DeepEval',
