@@ -33,6 +33,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
     { code: 'es', flag: '🇪🇸' },
     { code: 'pt', flag: '🇧🇷' },
     { code: 'ar', flag: '🇸🇦' },
+    { code: 'ko', flag: '🇰🇷' },
   ]
 
   const current = languageCodes.find(l => l.code === currentLang) || languageCodes[0]
@@ -64,7 +65,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
     // --- Check 1: All-langs path-prefix cluster (e.g. power-local-llm) ---
     // Match: /<cluster> or /<cluster>/... or /<lang>/<cluster> or /<lang>/<cluster>/...
     const clusterMatch = pathname.match(
-      new RegExp(`^(?:/(de|fr|ja|zh|es|pt|ar))?/(${PATH_LOCALE_CLUSTERS.join('|')})(/.*)?$`)
+      new RegExp(`^(?:/(de|fr|ja|zh|es|pt|ar|ko))?/(${PATH_LOCALE_CLUSTERS.join('|')})(/.*)?$`)
     )
     if (clusterMatch) {
       const cluster = clusterMatch[2]
@@ -82,7 +83,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
     //   A. Currently at /<lang>/<cluster>/... → handle all language switches from a path-prefix path
     //   B. Currently at /<cluster>/... → handle switch TO any language
     const pathPrefixLangClusterMatch = pathname.match(
-      new RegExp(`^(?:/(de|fr|ja|zh|es|pt|ar))?/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/.*)?$`)
+      new RegExp(`^(?:/(de|fr|ja|zh|es|pt|ar|ko))?/(${PATH_PREFIX_LANG_CLUSTERS.join('|')})(/.*)?$`)
     )
 
     if (pathPrefixLangClusterMatch) {
@@ -108,7 +109,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
 
     // --- Check 3: Home page (/, /de, /de/, /fr, /fr/, /ja, /ja/, /zh, /zh/, /es, /es/) ---
     // Handle home page path-prefix for all non-EN languages.
-    const isHome = pathname === '/' || pathname === '/de' || pathname === '/de/' || pathname === '/fr' || pathname === '/fr/' || pathname === '/ja' || pathname === '/ja/' || pathname === '/zh' || pathname === '/zh/' || pathname === '/es' || pathname === '/es/' || pathname === '/pt' || pathname === '/pt/'
+    const isHome = pathname === '/' || pathname === '/de' || pathname === '/de/' || pathname === '/fr' || pathname === '/fr/' || pathname === '/ja' || pathname === '/ja/' || pathname === '/zh' || pathname === '/zh/' || pathname === '/es' || pathname === '/es/' || pathname === '/pt' || pathname === '/pt/' || pathname === '/ar' || pathname === '/ar/' || pathname === '/ko' || pathname === '/ko/'
     if (isHome) {
       if (lang === 'en') {
         window.location.href = window.location.origin + '/'
