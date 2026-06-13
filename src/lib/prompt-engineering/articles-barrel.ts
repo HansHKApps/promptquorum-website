@@ -85,6 +85,8 @@ import { article as a_pe_for_developers_workflow } from "./articles/pe-for-devel
 import { article as a_prompt_framework_for_teams } from "./articles/prompt-framework-for-teams";
 import { article as a_pe_for_support_operations } from "./articles/pe-for-support-operations";
 import { article as a_manual_vs_automated_prompt_optimization } from "./articles/manual-vs-automated-prompt-optimization";
+// Knowledge & GEO Sprint 2026-06-12
+import { article as a_knowledge_cutoffs_and_geo } from "./articles/knowledge-cutoffs-and-geo";
 
 export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
   "build-a-prompt-library": a_build_a_prompt_library,
@@ -167,4 +169,6 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
   "prompt-framework-for-teams": a_prompt_framework_for_teams,
   "pe-for-support-operations": a_pe_for_support_operations,
   "manual-vs-automated-prompt-optimization": a_manual_vs_automated_prompt_optimization,
+  // Knowledge & GEO Sprint 2026-06-12
+  "knowledge-cutoffs-and-geo": a_knowledge_cutoffs_and_geo,
 };

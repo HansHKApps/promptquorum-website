@@ -100,4 +100,7 @@ export const PE_SLUG_TO_KEY: Record<string, string> = {
   'prompt-engineering-for-support-operations': 'pe-for-support-operations',
   'prompt-framework-selection-for-teams': 'prompt-framework-for-teams',
   'prompt-engineering-setup-small-teams': 'pe-setup-small-teams',
+
+  // Knowledge & GEO Sprint 2026-06-12
+  'knowledge-cutoffs-and-geo': 'knowledge-cutoffs-and-geo',
 }

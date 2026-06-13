@@ -65,6 +65,8 @@ import { article as bestOpenSourceAlternativesToChatgptPlus } from './articles/b
 import { article as cheapestWayToRun70bModelLocally } from './articles/cheapest-way-to-run-70b-model-locally'
 // Japan Sprint 2026-05-27
 import { article as bestLocalLlmAppsJapanAndroid } from './articles/best-local-llm-apps-japan-android'
+// Knowledge & GEO Sprint 2026-06-12
+import { article as aiModelKnowledgeCutoffDates } from './articles/ai-model-knowledge-cutoff-dates'
 import { article as bestJapaneseLanguageModelsLocal } from './articles/best-japanese-language-models-local'
 import { article as runLocalLlmOnXperiaJapan } from './articles/run-local-llm-on-xperia-japan'
 import { article as bestMiniPcLocalLlmJapan } from './articles/best-mini-pc-local-llm-japan'
@@ -139,4 +141,6 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   runLocalLlmOnXperiaJapan,
   bestMiniPcLocalLlmJapan,
   bestGpuLocalLlmJapanPrice,
+  // Knowledge & GEO Sprint 2026-06-12
+  aiModelKnowledgeCutoffDates,
 }

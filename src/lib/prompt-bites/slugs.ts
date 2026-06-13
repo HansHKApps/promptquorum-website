@@ -89,4 +89,7 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'run-local-llm-on-xperia-japan':             'runLocalLlmOnXperiaJapan',
   'best-mini-pc-local-llm-japan':              'bestMiniPcLocalLlmJapan',
   'best-gpu-local-llm-japan-price':            'bestGpuLocalLlmJapanPrice',
+
+  // Knowledge & GEO Sprint 2026-06-12
+  'ai-model-knowledge-cutoff-dates':          'aiModelKnowledgeCutoffDates',
 }
