@@ -114,8 +114,6 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  const response = NextResponse.next()
-
   // Resolve selected language: path prefix wins over ?lang= query param.
   // The path-prefix takes priority because path-prefix-routed clusters render server-side
   // off the URL, not the query string — the <html lang="..."> attribute must match.
@@ -124,18 +122,24 @@ export function middleware(request: NextRequest) {
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
   const selectedLang = pathLocale ?? (validLangs.includes(lang) ? lang : 'en')
 
-  // Persist language choice in cookie so auto-detection only runs on first visit.
   const cookieLang = request.cookies.get('pq_lang')?.value
-  if (selectedLang !== 'en' || !cookieLang) {
-    response.cookies.set('pq_lang', selectedLang, { path: '/', maxAge: 60 * 60 * 24 * 365, sameSite: 'lax' })
-  }
-
-  // Add lang as header for layout.tsx to read
-  response.headers.set('x-selected-lang', selectedLang)
 
   // Add pathname + query string (without lang param) as header for hreflang links
   const pathnameWithoutLang = url.pathname + (url.search ? url.search.replace(/\?lang=[^&]*&?|&lang=[^&]*/g, '').replace(/\?$/, '') : '')
-  response.headers.set('x-pathname', pathnameWithoutLang)
+
+  // Forward locale to server components via request headers — the correct Next.js pattern.
+  // response.headers.set() only sets response headers (sent to browser); layout.tsx reads
+  // from await headers() which is REQUEST headers. Use NextResponse.next({ request }) instead.
+  const requestHeaders = new Headers(request.headers)
+  requestHeaders.set('x-selected-lang', selectedLang)
+  requestHeaders.set('x-pathname', pathnameWithoutLang)
+
+  const response = NextResponse.next({ request: { headers: requestHeaders } })
+
+  // Persist language choice in cookie so auto-detection only runs on first visit.
+  if (selectedLang !== 'en' || !cookieLang) {
+    response.cookies.set('pq_lang', selectedLang, { path: '/', maxAge: 60 * 60 * 24 * 365, sameSite: 'lax' })
+  }
 
   return response
 }
