@@ -27,7 +27,8 @@ function fixValidator() {
 function runBuild() {
   return new Promise((resolve, reject) => {
     const child = spawn('npx', ['next', 'build'], {
-      stdio: 'inherit'
+      stdio: 'inherit',
+      env: { ...process.env, NODE_OPTIONS: '--max-old-space-size=4096' }
     })
 
     child.on('close', (code) => {
