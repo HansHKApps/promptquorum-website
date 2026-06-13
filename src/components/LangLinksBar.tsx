@@ -23,6 +23,7 @@ export function LangLinksBar({ cluster, slug, availableLangs, initialLang }: Lan
     { code: 'es', flag: '🇪🇸' },
     { code: 'pt', flag: '🇧🇷' },
     { code: 'ar', flag: '🇸🇦' },
+    { code: 'ko', flag: '🇰🇷' },
   ]
 
   const buildHref = (lang: Language): string => {
