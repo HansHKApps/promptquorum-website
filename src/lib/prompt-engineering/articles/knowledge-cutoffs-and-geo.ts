@@ -19,8 +19,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     primaryTerm: 'AI Knowledge Cutoff',
     audience: 'Users, product teams, and marketers who need to understand where AI models get their information — and what to do about it',
     current_models_mentioned: [
-      'Claude Opus 4.8', 'Claude Sonnet 4.6', 'ChatGPT', 'GPT-4o', 'Gemini 2.5 Pro',
-      'Grok 3', 'Mistral Large 3', 'DeepSeek-V3', 'Llama 4 Scout', 'Qwen3 14B',
+      'Claude Opus 4.8', 'ChatGPT', 'GPT-5.5', 'GPT-4o', 'Gemini 3.1 Pro',
+      'Grok 4.3', 'Mistral Large 3', 'DeepSeek-V3', 'Llama 4 Scout', 'Qwen3 14B',
       'Gemma 3 27B', 'Phi-4', 'Perplexity',
     ],
     leadAnswerBlock: '**An AI knowledge cutoff is the date after which the model has no training data.** Cloud models partially compensate via built-in web search (ChatGPT → Bing, Gemini → Google, Grok → X). Local LLMs have no search layer — their cutoff is absolute. For GEO strategy: to appear in cloud AI, optimize for search. To appear in local AI, build RAG pipelines — SEO alone cannot reach a model that never searches the web.',
@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '**6 local/open-weight models** covered — all have "None" for search layer',
       '**Gemma 3 27B** has the earliest verified cutoff among current local models: August 2024',
       '**Phi-4** has a June 2024 cutoff — the second-earliest verified among locals',
-      '**Grok 3** is the only cloud model whose default search layer is a social platform (X/Twitter) rather than general web',
+      '**Grok 4.3** is the only cloud model whose default search layer is a social platform (X/Twitter) rather than general web',
       '**GEO implication**: companies that deploy Llama/Qwen internally can only be reached via the RAG pipelines those companies build themselves',
     ],
     toc: [
@@ -95,10 +95,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           '@type': 'Question',
-          name: 'Why does ChatGPT seem to know about recent events even with an Oct 2023 cutoff?',
+          name: 'Why does ChatGPT seem to know about recent events even though its base model has a training cutoff?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'ChatGPT (the product) searches Bing by default in paid tiers and augments its responses with current search results. This means it can answer factual questions about recent events even though the underlying GPT-4o model\'s training data ends in October 2023. The training cutoff still limits contextual understanding of post-cutoff topics.',
+            text: 'ChatGPT (the product) searches Bing by default in paid tiers and augments its responses with current search results. This means it can answer factual questions about recent events even though the underlying model\'s training data has a fixed cutoff (GPT-5.5 training cutoff is Aug 2025; legacy GPT-4o ends Oct 2023). The training cutoff still limits contextual understanding of post-cutoff topics.',
           },
         },
         {
@@ -122,7 +122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           name: 'Which AI model has the most recent knowledge cutoff date?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Among verified primary-source cutoffs: Claude Sonnet 4.6 has the most recent at August 2025. Grok 3 is next at November 2024. DeepSeek-V3 is July 2024. Gemma 3 27B is August 2024. Phi-4 is June 2024. GPT-4o is October 2023. Several current models including Llama 4, Qwen3, and Mistral Large have not publicly disclosed exact cutoff dates.',
+            text: 'Among verified primary-source cutoffs: Claude Opus 4.8 has the most recent reliable cutoff at January 2026. GPT-5.5 is August 2025. Grok 4.3 is November 2024. Gemini 3.1 Pro is January 2025. DeepSeek-V3 is July 2024. Gemma 3 27B is August 2024. Phi-4 is June 2024. GPT-4o (legacy) is October 2023. Several current models including Llama 4, Qwen3, and Mistral Large have not publicly disclosed exact cutoff dates.',
           },
         },
         {
@@ -138,7 +138,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           name: 'Which cloud AI models search the live web by default?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'ChatGPT uses Bing by default (paid tiers). Gemini 2.5 Pro uses Google Search by default. Grok 3 searches X (Twitter) by default. Perplexity is web-search-native for every query. Claude requires explicit developer tool activation and does not search by default. DeepSeek and Mistral Large have no default search. All local LLMs (Llama, Qwen, Gemma, Phi, Mistral open weights) have no search capability.',
+            text: 'ChatGPT uses Bing by default (paid tiers). Gemini 3.1 Pro uses Google Search by default. Grok 4.3 searches X (Twitter) by default. Perplexity is web-search-native for every query. Claude requires explicit developer tool activation and does not search by default. DeepSeek and Mistral Large have no default search. All local LLMs (Llama, Qwen, Gemma, Phi, Mistral open weights) have no search capability.',
           },
         },
         {
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Cloud models (ChatGPT, Gemini, Grok) layer live web search on top of their training data; this partially overrides the cutoff for factual queries',
           'Local LLMs (Llama, Qwen, Gemma, Phi, open-weight Mistral) have NO search layer — the cutoff is absolute and cannot be overridden without building a RAG system',
           'For GEO (Generative Engine Optimization): appearing in cloud AI requires traditional search optimization (Bing, Google, X); appearing in local AI requires RAG pipelines — SEO cannot reach a model that never touches the web',
-          'Verified cutoffs: Claude Sonnet 4.6 = Aug 2025; Grok 3 = Nov 2024; Gemma 3 27B = Aug 2024; DeepSeek-V3 = Jul 2024; Phi-4 = Jun 2024; GPT-4o = Oct 2023',
+          'Verified cutoffs: Claude Opus 4.8 = Jan 2026 (reliable); GPT-5.5 = Aug 2025; Gemini 3.1 Pro = Jan 2025; Grok 4.3 = Nov 2024; Gemma 3 27B = Aug 2024; DeepSeek-V3 = Jul 2024; Phi-4 = Jun 2024; GPT-4o (legacy) = Oct 2023',
           'Several major models — Llama 4, Qwen3, Mistral Large 3 — have not publicly disclosed exact cutoff dates',
         ],
       },
@@ -190,9 +190,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         columns: ['Model / Product', 'Search Layer', 'Search Trigger', 'Notes'],
         rows: [
-          { 'Model / Product': 'ChatGPT (GPT-4o)', 'Search Layer': 'Bing', 'Search Trigger': 'Automatic — model decides', 'Notes': 'Default on for ChatGPT Plus/Pro; off for raw API calls' },
-          { 'Model / Product': 'Gemini 2.5 Pro', 'Search Layer': 'Google Search', 'Search Trigger': 'Automatic — model decides', 'Notes': 'Google Grounding API available for Vertex AI developers' },
-          { 'Model / Product': 'Grok 3 (X.com)', 'Search Layer': 'X (Twitter)', 'Search Trigger': 'Automatic — model decides', 'Notes': 'DeepSearch = broader web search, opt-in' },
+          { 'Model / Product': 'GPT-5.5 (ChatGPT)', 'Search Layer': 'Bing', 'Search Trigger': 'Automatic — model decides', 'Notes': 'Default on for ChatGPT Plus/Pro; off for raw API calls' },
+          { 'Model / Product': 'Gemini 3.1 Pro', 'Search Layer': 'Google Search', 'Search Trigger': 'Automatic — model decides', 'Notes': 'Google Grounding API available for Vertex AI developers' },
+          { 'Model / Product': 'Grok 4.3 (X.com)', 'Search Layer': 'X (Twitter)', 'Search Trigger': 'Automatic — model decides', 'Notes': 'DeepSearch = broader web search, opt-in' },
           { 'Model / Product': 'Perplexity', 'Search Layer': 'Multi-source web', 'Search Trigger': 'Always — every query', 'Notes': 'Search-first by design; cites sources' },
           { 'Model / Product': 'Claude (Anthropic)', 'Search Layer': 'Brave / Web (tool)', 'Search Trigger': 'Developer opt-in only', 'Notes': 'Not on by default; requires API tool configuration' },
           { 'Model / Product': 'DeepSeek (cloud)', 'Search Layer': 'None', 'Search Trigger': 'N/A', 'Notes': 'No search layer; cutoff is hard limit' },
@@ -288,7 +288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { 'AI System': 'ChatGPT (paid)', 'Post-Cutoff Behavior': 'Searches Bing automatically', 'Reliability for Current Info': 'High for facts; lower for nuance', 'How to Improve': 'Ask it to cite sources; cross-check key claims' },
           { 'AI System': 'Gemini (paid)', 'Post-Cutoff Behavior': 'Searches Google automatically', 'Reliability for Current Info': 'High for facts; lower for nuance', 'How to Improve': 'Enable grounding; review cited URLs' },
           { 'AI System': 'Grok (X.com)', 'Post-Cutoff Behavior': 'Searches X posts automatically', 'Reliability for Current Info': 'Good for social trends; uneven for facts', 'How to Improve': 'Use DeepSearch for deeper web coverage' },
-          { 'AI System': 'Claude (free/pro)', 'Post-Cutoff Behavior': 'Uses training data only by default', 'Reliability for Current Info': 'Low — Aug 2025 cutoff', 'How to Improve': 'Paste current text into context; API users can enable search tool' },
+          { 'AI System': 'Claude (free/pro)', 'Post-Cutoff Behavior': 'Uses training data only by default', 'Reliability for Current Info': 'Moderate — Jan 2026 reliable cutoff', 'How to Improve': 'Paste current text into context; API users can enable search tool' },
           { 'AI System': 'Perplexity', 'Post-Cutoff Behavior': 'Always searches web first', 'Reliability for Current Info': 'High — search-native product', 'How to Improve': 'Already cites sources by design' },
           { 'AI System': 'Any local LLM', 'Post-Cutoff Behavior': 'Uses training data only — no override', 'Reliability for Current Info': 'Very low for post-cutoff topics', 'How to Improve': 'Build RAG pipeline; paste context manually' },
         ],
@@ -310,9 +310,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         columns: ['AI System', 'GEO Channel', 'Optimize For', 'Local Deployment Changes This?'],
         rows: [
-          { 'AI System': 'ChatGPT / GPT-4o', 'GEO Channel': 'Bing search retrieval', 'Optimize For': 'Bing SEO: technical SEO, Bing Webmaster Tools, structured data', 'Local Deployment Changes This?': 'Yes — local GPT-4o APIs have no Bing; cutoff is hard' },
-          { 'AI System': 'Gemini 2.5 Pro', 'GEO Channel': 'Google Search grounding', 'Optimize For': 'Google SEO + structured data (FAQ, HowTo, Article schemas)', 'Local Deployment Changes This?': 'Not yet — Gemini is cloud-only as of June 2026' },
-          { 'AI System': 'Grok 3', 'GEO Channel': 'X (Twitter) content', 'Optimize For': 'X presence: verified account, high-engagement posts, X Communities', 'Local Deployment Changes This?': 'Not yet — Grok is cloud-only as of June 2026' },
+          { 'AI System': 'GPT-5.5 (ChatGPT)', 'GEO Channel': 'Bing search retrieval', 'Optimize For': 'Bing SEO: technical SEO, Bing Webmaster Tools, structured data', 'Local Deployment Changes This?': 'Yes — local OpenAI API calls have no Bing; cutoff is hard' },
+          { 'AI System': 'Gemini 3.1 Pro', 'GEO Channel': 'Google Search grounding', 'Optimize For': 'Google SEO + structured data (FAQ, HowTo, Article schemas)', 'Local Deployment Changes This?': 'Not yet — Gemini is cloud-only as of June 2026' },
+          { 'AI System': 'Grok 4.3', 'GEO Channel': 'X (Twitter) content', 'Optimize For': 'X presence: verified account, high-engagement posts, X Communities', 'Local Deployment Changes This?': 'Not yet — Grok is cloud-only as of June 2026' },
           { 'AI System': 'Perplexity', 'GEO Channel': 'Web-native retrieval', 'Optimize For': 'All search engines + citing authoritative sources, clear structured content', 'Local Deployment Changes This?': 'No — Perplexity is web-native by design' },
           { 'AI System': 'Claude (API)', 'GEO Channel': 'Tool-use search (Brave/Web) — opt-in', 'Optimize For': 'General web presence; structured content for snippet eligibility', 'Local Deployment Changes This?': 'Yes — many Claude deployments have search disabled' },
           { 'AI System': 'Llama (local)', 'GEO Channel': 'RAG pipelines ONLY', 'Optimize For': 'RAG: structured data formats, knowledge bases, document APIs', 'Local Deployment Changes This?': 'This IS local deployment — SEO is irrelevant' },
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Which AI model has the most recent knowledge cutoff date (verified)?',
-            a: 'Among primary-source verified cutoffs: Claude Sonnet 4.6 is August 2025. Grok 3 is November 2024. DeepSeek-V3 and Gemma 3 27B are tied at around July–August 2024. Phi-4 is June 2024. GPT-4o is October 2023. Several current models (Llama 4, Qwen3, Mistral Large) have not publicly disclosed exact dates.',
+            a: 'Among primary-source verified cutoffs: Claude Opus 4.8 has the most recent reliable cutoff at January 2026. GPT-5.5 is August 2025. Gemini 3.1 Pro is January 2025. Grok 4.3 is November 2024. DeepSeek-V3 and Gemma 3 27B are around July–August 2024. Phi-4 is June 2024. GPT-4o (legacy) is October 2023. Several current models (Llama 4, Qwen3, Mistral Large) have not publicly disclosed exact dates.',
           },
           {
             q: 'Can I use SEO to appear in Llama or Qwen answers?',
