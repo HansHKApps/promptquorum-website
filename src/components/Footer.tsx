@@ -111,7 +111,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     copyright: '© 2026 PromptQuorum. 모든 권리 보유.',
     worldwide: '🌍 전 세계 이용 가능',
     about: '소개',
-    frameworks: 'Frameworks',
+    frameworks: '프레임워크',
     privacy: '개인 정보 처리 방침',
     impressum: '법적 고지',
     contact: 'hello@promptquorum.com',
