@@ -3229,4 +3229,482 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Use Cases',
+      title: 'AI로 더 나은 코드 작성하기: 프롬프트, 모델, 그리고 2026년의 보안',
+      intro: '**2026년 AI로 더 나은 코드를 작성하려면: 구조화된 프롬프트(역할, 목표, 제약 조건, 출력 형식, 엣지 케이스)를 사용하고, 프로덕션 환경에서는 Temperature를 0.1–0.2로 설정하며, 백엔드 작업은 Claude 4.8로, 알고리즘 작업은 GPT-5로 라우팅하고, 배포 전에 모든 출력물에 보안 린터를 실행하십시오.**\n\nAI 코딩 도구는 개발 시간을 30–75% 단축시킵니다. 단, 개발자가 단순한 질문이 아닌 구조화된 프롬프트를 작성할 때만 가능합니다. 모델의 출력 품질은 역할, 제약 조건, 예상 출력을 얼마나 명확하게 명시하느냐에 따라 직접적으로 결정됩니다. 2026년 4월 기준으로, Claude 4.8 Opus는 백엔드 코드 및 버그 추적에서 선두를 달리고 있으며, GPT-5는 알고리즘 설계에서 앞서고, Ollama를 통한 LLaMA 4는 8GB RAM으로 사용자의 하드웨어에서 완전히 실행됩니다.\n\nAI는 여전히 생성된 코드의 45%에서 보안 취약점을 도입합니다. 이로 인해 배포 전 검토와 린팅은 협상 불가능한 필수 사항입니다.',
+      publishDate: '2026-03-22',
+      dateModified: '2026-04-28',
+      readTime: '15분 읽기',
+      seoTitle: 'AI로 더 나은 코드 작성: 프롬프트, 모델 & 보안 (2026)',
+      metaDescription: 'AI는 구조화된 프롬프트로 코딩 시간을 30–75% 단축합니다. 코드 작업에 대한 Claude, GPT-5.5, Gemini를 비교하십시오. AI 코드의 45%에 보안 결함이 있습니다 — 안전한 워크플로우를 배우십시오.',
+      lastFactChecked: '2026-04-28',
+      educationalLevel: 'Intermediate',
+      aboutTopics: ['AI 보조 코딩', '코드 생성', '프롬프트 엔지니어링'],
+      howToName: '더 나은 코드를 생성하는 프롬프트 작성 방법',
+      toc: [
+        { label: '직접 답변: 프롬프트 품질이 코드 품질을 결정합니다', anchor: '#the-direct-answer-prompt-quality-determines-code-quality' },
+        { label: '코딩 작업에 사용할 AI 모델', anchor: '#which-ai-model-to-use-for-coding-tasks' },
+        { label: '더 나은 코드를 생성하는 프롬프트 작성 방법', anchor: '#how-to-write-prompts-that-produce-better-code' },
+        { label: 'Chain-of-Thought 프롬프팅은 어떻게 디버깅을 개선합니까?', anchor: '#how-does-chain-of-thought-prompting-improve-debugging' },
+        { label: '영구 지침으로 코딩 규칙을 주입하는 방법', anchor: '#how-to-inject-coding-rules-as-persistent-instructions' },
+        { label: '환각률이 가장 낮은 AI 코딩 도구는 무엇입니까?', anchor: '#which-ai-coding-tool-has-the-lowest-hallucination-rate' },
+        { label: '보안 문제: AI가 잘못 처리하는 것', anchor: '#the-security-problem-what-ai-gets-wrong' },
+        { label: '다중 모델 교차 검증 방법', anchor: '#the-multi-model-cross-check-method' },
+        { label: 'Temperature 및 Context Window 설정은 코드 품질에 어떤 영향을 미칩니까?', anchor: '#how-do-temperature-and-context-window-settings-affect-code-quality' },
+        { label: 'AI 코딩은 지역마다 어떻게 다릅니까?', anchor: '#how-does-ai-coding-vary-by-region' },
+        { label: 'AI 코딩 사용 시 흔한 실수', anchor: '#common-mistakes-when-using-ai-for-code' },
+        { label: '관련 읽기', anchor: '#related-reading' },
+        { label: '단계별 워크플로우: AI로 더 나은 코드 작성', anchor: '#step-by-step-workflow-write-better-code-with-ai' },
+        { label: '자주 묻는 질문', anchor: '#frequently-asked-questions' },
+        { label: '출처 및 추가 읽기', anchor: '#sources-further-reading' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'AI로 더 나은 코드 작성하기: 프롬프트, 모델, 그리고 2026년의 보안',
+        description: '구조화된 프롬프트, 모델 비교, 보안 워크플로우로 AI 코드 생성을 마스터하십시오. Temperature 설정, 로컬 모델, 그리고 환각의 45%를 방지하는 방법을 배우십시오.',
+        datePublished: '2026-03-22',
+        dateModified: '2026-04-28',
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        keywords: 'AI 코딩, 프롬프트 엔지니어링, 코드 생성, Claude, GPT-5, Gemini 3, 보안 취약점, temperature, context window',
+        about: [
+          { '@type': 'Thing', name: 'AI 코드 생성' },
+          { '@type': 'Thing', name: '프롬프트 엔지니어링' },
+          { '@type': 'Thing', name: '코드 보안' },
+          { '@type': 'Thing', name: 'GitHub Copilot' },
+          { '@type': 'Thing', name: 'Claude Code' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-5' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.8 Opus' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3 Pro' },
+          { '@type': 'Thing', name: 'Chain-of-Thought' },
+          { '@type': 'Thing', name: 'Temperature' },
+        ],
+        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: '더 나은 코드를 생성하는 프롬프트 작성 방법',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: '역할 정의',
+            text: '역할을 명시하십시오: "당신은 시니어 Python 백엔드 엔지니어입니다" 또는 "당신은 React 전문가입니다." 역할 정의는 모델의 전문성을 고정시킵니다.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: '목표 명시',
+            text: '원하는 것을 정의하십시오: "REST API 엔드포인트를 작성하십시오" 또는 "이 함수를 디버그하십시오." 작업에 대해 구체적으로 기술하십시오.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: '제약 조건 명시',
+            text: '요구 사항을 나열하십시오: "FastAPI를 사용하십시오. 외부 유효성 검사 라이브러리는 사용하지 마십시오. 누락된 필드는 HTTP 422로 처리하십시오."',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: '출력 형식 정의',
+            text: '반환할 내용을 명시하십시오: "Python 코드만 반환하십시오. 산문 설명은 제외하십시오."',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: '처리할 엣지 케이스 나열',
+            text: '엣지 케이스를 설명하십시오: "모든 필드에서 빈 문자열과 null 값을 처리하십시오. 유효하지 않은 JSON은 거부하십시오."',
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '2026년 코드 작성에 가장 좋은 AI 모델은 무엇입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Claude Opus 4.8 (Anthropic)은 백엔드 코드, API 설계, 버그 추적에서 가장 일관된 결과를 생성하며, 해당 작업에서 GPT-5.5와의 직접 비교에서 60–65% 승률을 기록합니다. GPT-5.5 (OpenAI)는 알고리즘 설계 및 복잡한 추론에서 약간 앞섭니다. 개인 정보 보호가 중요한 코드베이스의 경우, Ollama를 통해 로컬로 실행되는 LLaMA 3.1 7B는 외부 API 호출을 생성하지 않습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI가 생성한 코드를 바로 배포해도 안전합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '아닙니다. AI는 생성된 코드 케이스의 45%에서 보안 취약점을 도입합니다. 여기에는 안전하지 않은 구현과 공급망 공격을 가능하게 하는 환각된 패키지 이름이 포함됩니다. 모든 AI 생성 코드는 프로덕션 배포 전에 개발자가 검토하고 보안 린터(예: Python용 Bandit, JavaScript용 ESLint Security)로 스캔해야 합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI 코딩 도구를 사용하는 개발자는 얼마나 더 빠릅니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'AI 코딩 보조 도구를 사용하는 개발자는 통제된 연구에서 수동 코더보다 주당 126% 더 많은 프로젝트를 완료합니다. 그러나 2025년 METR 현장 연구에서는 숙련된 개발자들이 복잡한 코드베이스 통합이 필요한 작업에서 19% 더 오래 걸렸습니다 — 생산성 향상은 작업에 따라 다르며 구조화된 프롬프트 훈련이 필요합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Chain-of-Thought 프롬프팅은 코드 디버깅을 어떻게 개선합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Chain-of-Thought (CoT) 프롬프팅은 최종 출력을 생성하기 전에 모델이 추론의 각 단계를 추적하도록 요청합니다. 디버깅의 경우, 이는 모델이 잘못된 중간 값을 생성하는 정확한 작업을 식별함을 의미합니다. 이를 통해 전체 출력 재생성 없이 오류를 추적하고 수정할 수 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI 코딩 지원은 모든 프로그래밍 언어에서 동일하게 작동합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '아닙니다. AI 도구는 주로 영어 코드베이스로 훈련되어 Python과 JavaScript에서 가장 강력한 지원을 제공합니다. 일본어(한자/가나), 중국어 또는 기타 CJK 중심 프로젝트의 경우, Qwen 3 (Alibaba) 또는 DeepSeek V3는 서양 훈련 모델보다 더 나은 비율로 CJK 스크립트를 처리하는 토크나이저 덕분에 더 빠른 토큰 처리를 제공합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI 코드 생성에 어떤 temperature를 사용해야 합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '프로덕션 코드 생성에는 temperature를 0.1–0.2로 설정하십시오. 이는 최소한의 무작위 변동으로 결정론적이고 보수적인 출력을 생성합니다. temperature 0.7–0.9는 다양한 옵션을 평가하고 싶은 알고리즘 접근 방식을 브레인스토밍할 때만 사용하십시오 — 배포될 코드를 작성할 때는 사용하지 마십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI 코딩에서 환각된 의존성이란 무엇입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '환각된 의존성은 모델이 추천하지만 실제로 존재하지 않는 패키지 또는 라이브러리 이름입니다. 연구에 따르면 AI 모델은 20%의 경우에 존재하지 않는 라이브러리를 추천합니다. 공격자들은 슬롭스쿼팅을 통해 이를 악용합니다 — 환각된 패키지 이름을 악성 코드로 등록하는 방식입니다. 설치하기 전에 PyPI나 npm에서 AI가 제안한 패키지를 항상 확인하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '개인 정보 보호를 위해 로컬 LLM으로 AI 코딩 도구를 사용할 수 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '예. 8GB RAM을 갖춘 기기에서 Ollama를 통해 실행되는 LLaMA 3.1 7B는 외부 API 호출을 생성하지 않습니다. 모든 추론은 사용자의 하드웨어에서 이루어집니다. 이는 독점 알고리즘, 소스 파일의 자격 증명, 또는 인프라를 벗어날 수 없는 코드가 포함된 코드베이스에 적합합니다. 품질은 복잡한 작업에서 GPT-5.5나 Claude보다 낮지만 보일러플레이트와 단순 함수에는 적합합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI 코딩 도구를 위한 시스템 프롬프트를 어떻게 작성합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '시스템 프롬프트에 네 가지를 정의하십시오: (1) 기술적 역할("시니어 Python 백엔드 엔지니어"), (2) 기술 스택과 금지된 라이브러리, (3) 코드 스타일 규칙("TypeScript strict mode, any 타입 금지"), (4) 출력 형식("코드만 반환, 산문 제외"). 이를 Cursor, Claude Code 또는 IDE의 AI 설정에서 프로젝트 수준 규칙으로 유지하여 모든 세션에 적용되도록 하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'GitHub Copilot과 Cursor 중 어느 것이 버그를 더 적게 생성합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Cursor는 Copilot의 ~15–20%에 비해 ~10–15%의 환각률로 더 적은 형식 오류를 생성합니다. 주로 프로젝트 수준 RAG 인덱싱 덕분에 기존 코드베이스를 이해하기 때문입니다. 단일 파일 보일러플레이트 작업에서는 차이가 작습니다. 아키텍처 일관성이 중요한 다중 파일 리팩토링에서는 Cursor의 코드베이스 컨텍스트가 측정 가능하게 더 적은 통합 오류를 생성합니다.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'AI 코딩 도구 비교 2026',
+        'description': 'AI 코딩 보조 도구의 환각률, 아키텍처 인식, 최적 사용 사례 비교',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'GitHub Copilot', 'description': '환각률 15–20%. 파일 수준 컨텍스트. 개인 개발자 및 보일러플레이트에 최적.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Cursor', 'description': '환각률 10–15%. 프로젝트 수준 RAG 인덱싱. AI 네이티브 IDE를 원하는 팀에 최적.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Claude Code', 'description': '구조화된 작업에서 낮은 환각률. 전체 코드베이스 컨텍스트. 백엔드 및 다중 파일 리팩토링에 최적.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Devin', 'description': '가변 환각률. 자율 작업 실행. 자율 티켓-to-PR 파이프라인에 최적.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Qwen Code', 'description': '가변 환각률. 로컬 배포 가능. 연구 및 전체 인프라 제어에 최적.' },
+        ],
+      },
+      gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
+      gammaDescription: '아래 슬라이드 덱은 다음을 다룹니다: 5가지 구조화된 프롬프트 요소(역할, 목표, 제약 조건, 출력 형식, 엣지 케이스), AI 모델 선택(Claude 4.8 Opus vs GPT-5 vs Gemini 3 Pro), 디버깅을 위한 Chain-of-Thought 프롬프팅, temperature 설정(프로덕션용 0.1–0.2), 보안 취약점(환각률 45%). PDF를 AI 코드 생성 및 보안 참조 카드로 다운로드하십시오.',
+      sections: {
+        tldr: {
+          title: '핵심 요점',
+          isTldr: true,
+          items: [
+            'AI는 코딩 시간을 30–75% 단축시킵니다 — 단, 프롬프트가 역할, 목표, 제약 조건, 출력 형식, 엣지 케이스로 구조화된 경우에만 해당됩니다',
+            'Claude Opus 4.8 (Anthropic)은 백엔드 코드, API 설계, 버그 추적에서 선두를 달리고 있으며; GPT-5.5 (OpenAI)는 알고리즘 설계 및 다단계 추론에서 앞섭니다',
+            'Chain-of-Thought (CoT) 프롬프팅 — "코드를 생성하기 전에 단계별로 추론하십시오" — 모델의 논리를 검사 가능하게 만들고 디버깅 오류를 줄입니다',
+            'AI는 생성된 코드의 45%에서 보안 취약점을 도입합니다; 배포 전에 항상 보안 린터를 실행하십시오',
+            '프로덕션 코드에는 Temperature (T)를 0.1–0.2로 설정하십시오; 탐색적 알고리즘 브레인스토밍에만 0.7–0.9를 사용하십시오',
+            'Ollama를 통한 LLaMA 3.1 7B는 8GB RAM으로 로컬에서 실행됩니다 — 데이터가 사용자의 기기를 벗어나지 않아 개인 정보 보호가 필요한 코드베이스에 적합합니다',
+          ],
+        },
+        directAnswer: {
+          title: '직접 답변: 프롬프트 품질이 코드 품질을 결정합니다',
+          content: [
+            '**AI 코딩 세션의 출력은 제공하는 지시만큼만 좋습니다 — 모호한 프롬프트는 모호한 코드를 생성하고, 구조화된 프롬프트는 프로덕션 준비 코드를 생성합니다.** 대형 언어 모델(LLM) — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro를 뒷받침하는 신경망 계열 — 은 사용자의 프로젝트를 "이해"하지 않습니다. 수십억 줄의 코드에서 학습한 패턴을 기반으로 다음으로 가장 가능성 있는 토큰을 예측합니다.',
+            '이는 프롬프트가 단순한 질문이 아닌 아키텍처 계약임을 의미합니다. 프로그래밍 언어, 예상 입출력, 처리할 엣지 케이스를 명시하면 프로덕션에 더 가까운 코드를 일관되게 받을 수 있습니다.',
+            '한 문장으로: 개발자의 역할은 모든 줄을 직접 작성하는 것에서 AI가 실행하는 지시를 작성하는 것으로 전환되었습니다 — 필요한 기술은 키보딩 속도가 아닌 프롬프트 엔지니어링입니다.',
+            '이러한 프롬프팅 기법은 로컬 코딩 스택에도 동일하게 적용됩니다. Continue.dev + Ollama + Qwen3-Coder의 오픈 소스 조합으로 클라우드 보조 도구를 대체하려면 [GitHub Copilot을 로컬 LLM으로 교체하기](/power-local-llm/replace-github-copilot-with-local-llm)를 참조하십시오.',
+          ],
+        },
+        modelComparison: {
+          title: '코딩 작업에 사용할 AI 모델',
+          content: [
+            '**2026년 4월 기준으로, 각 모델은 서로 다른 코딩 작업에서 뛰어납니다 — 프롬프트를 적절한 모델로 라우팅하면 오류와 토큰 비용을 줄일 수 있습니다.**',
+            'Claude 4.8 Opus (Anthropic)은 백엔드 코드 생성, API 설계, 데이터베이스 스키마, 다중 파일 리팩토링을 지배합니다. GPT-5 (OpenAI)는 창의적인 알고리즘 솔루션과 복잡한 단계별 추론에서 앞섭니다. Gemini 3 Pro (Google DeepMind)는 200만 토큰 컨텍스트 창으로 가장 긴 문서를 처리합니다 — 코드베이스 전체 분석에 유용합니다.',
+          ],
+          tableFormat: true,
+          columns: ['작업', '최적 모델', '이유'],
+          rows: [
+            {
+              '작업': 'React 컴포넌트 생성',
+              '최적 모델': 'Claude 4.8 Opus',
+              '이유': 'Anthropic 벤치마크 기준 강력한 성능; 정확한 JSX 및 prop 처리',
+            },
+            {
+              '작업': '버그 수정',
+              '최적 모델': 'Claude 4.8 Opus',
+              '이유': '다중 파일 문제 디버깅을 위한 우수한 단계별 추적 출력',
+            },
+            {
+              '작업': '알고리즘 설계',
+              '최적 모델': 'GPT-5',
+              '이유': '창의적인 알고리즘 솔루션에서 약간 앞섬; 강력한 추론 능력',
+            },
+            {
+              '작업': '긴 문서/코드베이스 분석',
+              '최적 모델': 'Gemini 3 Pro',
+              '이유': '최대 2M 토큰의 컨텍스트 처리',
+            },
+            {
+              '작업': '다국어 프로젝트 (CJK)',
+              '최적 모델': 'Qwen 3 (Alibaba)',
+              '이유': '중국어/일본어/한국어 스크립트에 대한 더 빠른 토큰 처리',
+            },
+            {
+              '작업': '로컬 추론 (개인 정보 보호)',
+              '최적 모델': 'LLaMA 3.1 via Ollama',
+              '이유': '데이터가 기기를 벗어나지 않음; 7B 모델은 8GB RAM 필요',
+            },
+          ],
+        },
+        promptStructure: {
+          title: '더 나은 코드를 생성하는 프롬프트 작성 방법',
+          content: [
+            '**역할, 목표, 제약 조건, 출력 형식을 코드 요청 전에 정의하는 구조화된 프롬프트는 개방형 요청보다 측정 가능하게 더 적은 오류를 생성합니다.** 핵심 원칙: 모델의 추측을 최소화하십시오. 모델이 사용자를 대신하여 내리는 모든 가정은 잠재적 오류입니다. 프로그래밍 언어, 대상 런타임, 엣지 케이스, 성능 제약 조건, 예상 출력 형식을 명시적으로 지정하십시오.',
+          ],
+          numberedItems: [
+            '**역할** — "당신은 시니어 Python 백엔드 엔지니어입니다."',
+            '**목표** — "JSON 페이로드를 수신하고 유효성을 검사하는 REST API 엔드포인트를 작성하십시오."',
+            '**제약 조건** — "FastAPI를 사용하십시오. 외부 유효성 검사 라이브러리는 사용하지 마십시오. 누락된 필드는 HTTP 422로 처리하십시오."',
+            '**출력 형식** — "Python 코드만 반환하십시오. 산문 설명은 제외하십시오."',
+            '**엣지 케이스** — "모든 필드에서 빈 문자열과 null 값을 처리하십시오."',
+          ],
+        },
+        chainOfThought: {
+          title: 'Chain-of-Thought 프롬프팅은 어떻게 디버깅을 개선합니까?',
+          content: [
+            '**[Chain-of-Thought (CoT) 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 최종 답변을 생성하기 전에 모델이 단계별로 추론하도록 요청하는 것 — 은 모델의 논리를 검사 가능하게 만들어 디버깅 오류를 줄입니다.** CoT 프롬프팅은 LLM이 출력을 생성하기 전에 중간 추론 단계를 생성하도록 요청하는 기법입니다. 디버깅의 경우, 이는 모델이 오류 경로를 명시적으로 추적하여 논리가 어디서 무너지는지 정확히 파악할 수 있음을 의미합니다.',
+          ],
+        },
+        rules: {
+          title: '영구 지침으로 코딩 규칙을 주입하는 방법',
+          content: [
+            '**규칙 — 시스템 프롬프트 또는 프로젝트 구성에 삽입된 명시적 지시의 짧은 집합 — 은 단일 생성뿐만 아니라 세션 전체에 걸쳐 AI 코딩 도구를 일관성 있게 만듭니다.** 최신 코딩 도구(Cursor, GitHub Copilot, Claude Code)는 모든 상호 작용에 걸쳐 지속되는 프로젝트 수준 규칙을 지원합니다. 이는 사용자와 모델 간의 아키텍처 계약으로 기능합니다. 기초 규칙으로 [역할 정의](/prompt-engineering/persona-prompting)를 사용하면 모든 후속 요청이 일관성을 갖습니다. 효과적인 규칙의 예:',
+          ],
+          items: [
+            '항상 TypeScript strict mode를 사용하십시오. `any` 타입은 사용하지 마십시오.',
+            '새 패키지를 설치하지 마십시오 — package.json의 기존 의존성만 사용하십시오.',
+            '모든 함수에 JSDoc 주석을 포함해야 합니다.',
+            '새 컴포넌트를 생성하기 전에 항상 `ARCHITECTURE.md`를 읽으십시오.',
+          ],
+        },
+        codingTools: {
+          title: '환각률이 가장 낮은 AI 코딩 도구는 무엇입니까?',
+          content: [
+            '**AI 코딩에서 환각은 존재하지 않는 함수, 라이브러리 또는 API를 참조하지만 그럴듯하게 보이는 생성 출력을 의미합니다.** Cursor는 프로젝트 수준 검색 증강 생성(RAG) 인덱싱 덕분에 ~10–15%로 가장 낮은 환각률을 보고합니다 — 이는 모델에 관련 컨텍스트를 제공하기 위해 코드베이스를 인덱싱합니다. GitHub Copilot은 파일 수준 컨텍스트만으로 ~15–20%에서 작동합니다. Claude Code는 다중 파일 리팩토링 작업을 위한 장문 컨텍스트 코드베이스 이해를 제공합니다.',
+          ],
+          tableFormat: true,
+          columns: ['도구', '환각률', '아키텍처 인식', '최적 용도'],
+          rows: [
+            {
+              '도구': 'GitHub Copilot',
+              '환각률': '~15–20%',
+              '아키텍처 인식': '파일 수준 컨텍스트',
+              '최적 용도': '개인 개발자, 보일러플레이트',
+            },
+            {
+              '도구': 'Cursor',
+              '환각률': '~10–15%',
+              '아키텍처 인식': '프로젝트 수준 RAG 인덱싱',
+              '최적 용도': 'AI 네이티브 IDE를 원하는 팀',
+            },
+            {
+              '도구': 'Claude Code (Anthropic)',
+              '환각률': '구조화된 작업에서 더 낮음',
+              '아키텍처 인식': '전체 코드베이스 컨텍스트',
+              '최적 용도': '백엔드, 다중 파일 리팩토링',
+            },
+            {
+              '도구': 'Devin (Cognition AI)',
+              '환각률': '가변',
+              '아키텍처 인식': '자율 작업 실행',
+              '최적 용도': '자율 티켓-to-PR 파이프라인',
+            },
+            {
+              '도구': 'Qwen Code (Alibaba)',
+              '환각률': '가변',
+              '아키텍처 인식': '로컬 배포 가능',
+              '최적 용도': '연구, 전체 인프라 제어',
+            },
+          ],
+        },
+        security: {
+          title: '보안 문제: AI가 잘못 처리하는 것',
+          content: [
+            '**2026년 4월 기준으로, AI는 45%의 경우에서 보안 취약점이 있는 코드를 생성합니다 — 모델이 더 발전해도 개선되지 않은 비율입니다.** 2025년 Veracode 보고서에 따르면 안전한 구현과 안전하지 않은 구현 중 선택이 주어졌을 때, 생성형 AI 모델은 45%의 경우에 안전하지 않은 옵션을 선택했습니다. 학술 연구에서도 이 패턴이 확인됩니다: AI 생성 코드 솔루션의 40% 이상에 [보안 결함](/prompt-engineering/prompt-injection-and-security)이 있습니다.',
+            '세 가지 가장 심각한 실패 범주:',
+          ],
+          items: [
+            '**환각된 의존성** — 모델은 존재하지 않는 패키지를 가져오도록 추천합니다. 텍사스 대학교 샌안토니오 캠퍼스, 오클라호마 대학교, 버지니아 공과대학교의 연구자들은 LLM이 존재하지 않는 라이브러리를 추천하는 20%의 경향성을 발견했습니다. 공격자들은 "슬롭스쿼팅"을 통해 이를 악용합니다 — 환각된 패키지 이름을 악성 코드로 등록하는 방식입니다.',
+            '**안전하지 않은 구현** — AI는 훈련 데이터에서 안전하지 않은 패턴을 재현합니다(SQL 인젝션 위험, 부적절한 입력 정제, 취약한 암호화 기본값).',
+            '**누락된 엣지 케이스** — 생성된 코드가 예기치 않은 입력을 처리하지 않아 충돌 또는 악용 가능한 예외가 발생할 때 견고성 실패가 나타납니다.',
+          ],
+        },
+        multiModelCheck: {
+          title: '다중 모델 교차 검증 방법',
+          content: [
+            '**동일한 프롬프트를 여러 모델에 동시에 실행하면 환각된 의존성이나 안전하지 않은 구현을 수용할 가능성이 줄어듭니다 — 독립적인 모델들은 동일한 특정 잘못된 세부 사항을 거의 조작하지 않기 때문입니다.**',
+            '[PromptQuorum](/)은 하나의 프롬프트를 여러 AI 공급자에게 동시에 전송하고 모든 응답을 나란히 표시하는 다중 모델 AI 디스패치 도구입니다. GPT-5, Claude 4.8 Opus, Gemini 3 Pro가 동일한 패키지 이름을 추천할 때, 그 수렴은 패키지가 실제로 존재한다는 강력한 신호입니다. 구현 접근 방식에 대해 의견이 다를 때, 그 분기는 커밋하기 전에 조사해야 할 신호입니다.',
+          ],
+        },
+        parameters: {
+          title: 'Temperature 및 Context Window 설정은 코드 품질에 어떤 영향을 미칩니까?',
+          content: [
+            '**[Temperature (T)](/prompt-engineering/temperature-and-top-p-control-ai-creativity)는 AI 출력의 무작위성을 제어합니다: 코드 생성의 경우, T = 0.0–0.3은 결정론적이고 보수적인 출력을 생성하며; T = 0.7–1.0은 창의적 변동을 늘리지만 오류율도 증가합니다.** Temperature는 모델 어휘에 대한 소프트맥스 확률 분포에 적용되는 하이퍼파라미터입니다. T = 0.0에서 모델은 항상 가장 높은 확률의 토큰을 선택합니다 — 결정론적 출력을 생성합니다.',
+            '프로덕션 코드 생성에는 안정성을 위해 Temperature (T)를 0.1–0.2로 설정하십시오. 알고리즘 접근 방식의 탐색적 브레인스토밍에는 T = 0.7–0.9가 평가할 더 다양한 옵션을 생성합니다.',
+            '**컨텍스트 창은 모델이 단일 요청에서 처리할 수 있는 최대 토큰 수(입력 + 출력 합계)입니다.** 더 큰 컨텍스트 창은 모델이 코드베이스를 더 많이 볼 수 있게 하여 다중 파일 리팩토링 작업의 일관성을 개선합니다. 컨텍스트 창 크기는 생성 중에 모델이 코드베이스를 얼마나 "볼 수 있는지" 결정합니다:',
+          ],
+          tableFormat: true,
+          columns: ['모델', '컨텍스트 창', '의미'],
+          rows: [
+            {
+              '모델': 'GPT-5',
+              '컨텍스트 창': '128k 토큰',
+              '의미': '세션당 약 96,000줄의 코드 가시',
+            },
+            {
+              '모델': 'Claude 4.8 Opus',
+              '컨텍스트 창': '200k 토큰',
+              '의미': '더 큰 코드베이스 컨텍스트; 다중 파일 리팩토링에 더 적합',
+            },
+            {
+              '모델': 'Gemini 3 Pro',
+              '컨텍스트 창': '2M 토큰',
+              '의미': '대규모 프로젝트의 전체 코드베이스 분석',
+            },
+          ],
+        },
+        globalContext: {
+          title: 'AI 코딩은 지역마다 어떻게 다릅니까?',
+          content: [
+            '**유럽 개발 팀은 EU AI Act 준수와 데이터 거주지가 중요한 코딩 작업에서 점점 더 Mistral AI(프랑스 개발)를 채택하고 있습니다.** Mistral Large와 Mistral Small은 Ollama를 통한 로컬 배포로 이용할 수 있으며, 코드가 온프레미스 인프라를 벗어나지 않도록 보장합니다 — 민감한 소스 코드를 처리하는 팀에게는 GDPR 하에서 중요합니다.',
+            '중국 기업들은 특히 CJK 언어 지원이나 중국의 생성형 AI 임시 조치(2023)에 따른 완전한 온프레미스 배포가 필요한 프로젝트에서 GPT 시리즈 모델의 오픈 소스 대안으로 Qwen 3 (Alibaba)와 DeepSeek V3를 널리 사용합니다.',
+            'METI 데이터 거버넌스 지침에 따라 운영되는 일본 기업들은 종종 Ollama 기반 로컬 모델 배포를 선호합니다. Ollama를 통해 로컬에서 실행되는 LLaMA 4 8B는 8GB RAM이 필요하며 외부 API 호출을 생성하지 않아 엄격한 데이터 거주지 요건을 충족합니다.',
+          ],
+        },
+        commonMistakes: {
+          title: 'AI 코딩 사용 시 흔한 실수',
+          content: [
+            '**AI 코딩 도구를 사용할 때 이러한 빈번한 오류를 피하십시오:**',
+          ],
+          items: [
+            '**AI 출력을 배포 준비 상태로 처리하기:** AI는 검증된 코드가 아닌 그럴듯해 보이는 코드를 생성합니다. AI 생성 코드의 45%에 보안 취약점이 나타납니다. 모든 출력은 배포 전에 개발자 검토와 보안 린팅이 필요합니다.',
+            '**복잡한 작업에 모호한 프롬프트 사용:** "로그인 시스템을 작성하십시오"는 안전하지 않은 기본값을 생성합니다. "FastAPI에서 bcrypt를 비밀번호 해싱에 사용하고, 유효하지 않은 자격 증명에 401을 반환하며, 데이터베이스 연결 오류를 500으로 처리하는 JWT 기반 인증 엔드포인트를 작성하십시오"는 사용 가능한 코드를 생성합니다. 구체성이 변수입니다.',
+            '**temperature 설정 무시:** 대부분의 플랫폼에서 기본 temperature는 0.7–1.0입니다 — 창의적 작문에는 맞지만 코드에는 틀립니다. 모든 세션의 프로덕션 코드 생성에는 temperature를 0.1–0.2로 설정하십시오.',
+            '**환각된 패키지 이름 수용:** AI는 20%의 경우에 존재하지 않는 라이브러리를 추천합니다. AI가 제안한 패키지에 pip install 또는 npm install을 실행하기 전에 PyPI나 npm에 존재하는지 확인하고 다운로드 수를 확인하십시오. 최근 생성된 패키지의 낮은 다운로드 수는 슬롭스쿼팅의 적신호입니다.',
+            '**기존 코드 컨텍스트 미제공:** AI는 기존 패턴을 볼 수 없을 때 아키텍처와 충돌하는 코드를 생성합니다. 새 구현을 요청하기 전에 관련 기존 파일이나 인터페이스를 프롬프트에 붙여넣으십시오.',
+          ],
+        },
+        relatedReading: {
+          title: '관련 읽기',
+          items: [
+            '[Chain-of-Thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 논리 및 디버깅 작업을 위한 단계별 추론',
+            '[AI 코드 리뷰: 도구, 환각률, 검증 워크플로우](/prompt-engineering/ai-code-review) — AI 생성 코드에 대한 체계적인 리뷰 워크플로우',
+            '[Temperature 및 Top-P 설명](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 무작위성 파라미터가 모든 모델 출력에 미치는 영향',
+            '[프롬프트 인젝션 및 보안](/prompt-engineering/prompt-injection-and-security) — AI 보조 개발 워크플로우의 보안 위험',
+            '[페르소나 프롬프팅](/prompt-engineering/persona-prompting) — "시니어 Python 엔지니어"와 같은 역할 정의가 모델 출력 품질을 어떻게 변화시키는지',
+            '[프롬프트 엔지니어링이란 무엇입니까?](/prompt-engineering/what-is-prompt-engineering) — 기초 정의 및 핵심 개념',
+          ],
+        },
+        howToStart: {
+          title: '단계별 워크플로우: AI로 더 나은 코드 작성',
+          numberedItems: [
+            '**역할과 제약 조건을 미리 정의하십시오.** 요청을 작성하기 전에 \'당신은 시니어 [언어] 엔지니어입니다,\' 대상 프레임워크(React, FastAPI 등), 그리고 아키텍처 제약 조건(새 패키지 없음, 엄격한 타입 안전성 등)을 명시하십시오.',
+            '**역할, 목표, 제약 조건, 출력 형식으로 프롬프트를 구조화하십시오.** 일관된 템플릿을 사용하십시오: 역할 → 목표 → 제약 조건 → 출력 형식 → 엣지 케이스. 이는 모델의 추측을 줄이고 첫 번째 시도에서 더 깔끔한 코드를 생성합니다.',
+            '**디버깅 작업에 Chain-of-Thought (CoT) 프롬프팅을 사용하십시오.** 최종 수정 사항을 생성하기 전에 모델에게 \'실행을 단계별로 추적하십시오\'를 요청하십시오. 이는 모델의 추론을 검사 가능하게 만들고 프로덕션에 들어가기 전에 논리 오류를 잡습니다.',
+            '**프로덕션 코드에는 Temperature (T)를 0.1–0.2로 설정하십시오.** 결정론적 출력은 프로덕션에서 실행될 코드를 작성할 때 창의적 변동보다 더 안전합니다. T = 0.7–0.9는 알고리즘 브레인스토밍에만 예약하십시오.',
+            '**보안 린터와 다중 모델 교차 검증으로 코드를 실행하십시오.** AI 생성 코드는 (1) 보안 스캐너(Python용 Bandit, JavaScript용 ESLint)와 (2) 환각된 의존성을 잡기 위한 PromptQuorum 또는 유사한 다중 모델 디스패치를 통한 검증 없이는 절대 배포하지 마십시오.',
+          ],
+        },
+        faq: {
+          title: '자주 묻는 질문',
+          faqs: [
+            {
+              q: '2026년 코드 작성에 가장 좋은 AI 모델은 무엇입니까?',
+              a: 'Claude 4.8 Opus (Anthropic)은 백엔드 코드, API 설계, 버그 추적에서 가장 일관된 결과를 생성합니다. GPT-5 (OpenAI)는 알고리즘 설계 및 복잡한 추론에서 약간 앞섭니다. 개인 정보 보호가 중요한 코드베이스의 경우, Ollama를 통해 로컬로 실행되는 LLaMA 4 8B는 외부 API 호출을 생성하지 않습니다. 벤치마크 성능은 작업에 따라 다릅니다; 특정 사용 사례에서 세 가지 모두 테스트해 보시기를 권장합니다.',
+            },
+            {
+              q: 'AI가 생성한 코드를 바로 배포해도 안전합니까?',
+              a: '아닙니다. AI는 생성된 코드 케이스의 45%에서 보안 취약점을 도입합니다. 여기에는 안전하지 않은 구현과 공급망 공격을 가능하게 하는 환각된 패키지 이름이 포함됩니다. 모든 AI 생성 코드는 프로덕션 배포 전에 개발자가 검토하고 보안 린터(예: Python용 Bandit, JavaScript용 ESLint Security)로 스캔해야 합니다.',
+            },
+            {
+              q: 'AI 코딩 도구를 사용하는 개발자는 얼마나 더 빠릅니까?',
+              a: 'AI 코딩 보조 도구를 사용하는 개발자는 통제된 연구에서 수동 코더보다 주당 126% 더 많은 프로젝트를 완료합니다. 그러나 2025년 METR 현장 연구에서는 숙련된 개발자들이 복잡한 코드베이스 통합이 필요한 작업에서 19% 더 오래 걸렸습니다 — 생산성 향상은 작업에 따라 다르며 구조화된 프롬프트 훈련이 필요합니다.',
+            },
+            {
+              q: 'Chain-of-Thought 프롬프팅은 코드 디버깅을 어떻게 개선합니까?',
+              a: 'Chain-of-Thought (CoT) 프롬프팅은 최종 출력을 생성하기 전에 모델이 추론의 각 단계를 추적하도록 요청합니다. 디버깅의 경우, 이는 모델이 잘못된 중간 값을 생성하는 정확한 작업을 식별함을 의미합니다. 이를 통해 전체 출력 재생성 없이 오류를 추적하고 수정할 수 있습니다.',
+            },
+            {
+              q: 'AI 코딩 지원은 모든 프로그래밍 언어에서 동일하게 작동합니까?',
+              a: '아닙니다. AI 도구는 주로 영어 코드베이스로 훈련되어 Python과 JavaScript에서 가장 강력한 지원을 제공합니다. 일본어(한자/가나), 중국어 또는 기타 CJK 중심 프로젝트의 경우, Qwen 3 (Alibaba) 또는 DeepSeek V3는 서양 훈련 모델보다 더 나은 비율로 CJK 스크립트를 처리하는 토크나이저 덕분에 더 빠른 토큰 처리를 제공합니다.',
+            },
+            {
+              q: 'AI 코드 생성에 어떤 temperature를 사용해야 합니까?',
+              a: '프로덕션 코드 생성에는 temperature를 0.1–0.2로 설정하십시오. 이는 최소한의 무작위 변동으로 결정론적이고 보수적인 출력을 생성합니다. temperature 0.7–0.9는 다양한 옵션을 평가하고 싶은 알고리즘 접근 방식을 브레인스토밍할 때만 사용하십시오 — 배포될 코드를 작성할 때는 사용하지 마십시오.',
+            },
+            {
+              q: 'AI 코딩에서 환각된 의존성이란 무엇입니까?',
+              a: '환각된 의존성은 모델이 추천하지만 실제로 존재하지 않는 패키지 또는 라이브러리 이름입니다. 2024년 학술 연구에 따르면 LLM은 약 20%의 경우에 존재하지 않는 라이브러리를 추천합니다. 공격자들은 슬롭스쿼팅을 통해 이를 악용합니다 — 악성 코드가 든 PyPI 또는 npm에 환각된 패키지 이름을 등록하는 방식입니다. 공식 저장소를 확인하여 설치하기 전에 AI가 제안한 패키지를 항상 검증하십시오.',
+            },
+            {
+              q: '개인 정보 보호를 위해 로컬 LLM으로 AI 코딩 도구를 사용할 수 있습니까?',
+              a: '예. 8GB RAM을 갖춘 기기에서 Ollama를 통해 실행되는 LLaMA 4 8B는 외부 API 호출을 생성하지 않습니다. 모든 추론은 사용자의 하드웨어에서 이루어집니다. 이는 독점 알고리즘, 소스 파일의 자격 증명, 또는 인프라를 벗어날 수 없는 코드가 포함된 코드베이스에 적합합니다. 품질은 복잡한 작업에서 GPT-5나 Claude보다 낮지만 보일러플레이트와 단순 함수에는 적합합니다.',
+            },
+            {
+              q: 'AI 코딩 도구를 위한 시스템 프롬프트를 어떻게 작성합니까?',
+              a: '시스템 프롬프트에 네 가지를 정의하십시오: (1) 기술적 역할("시니어 Python 백엔드 엔지니어"), (2) 기술 스택과 금지된 라이브러리, (3) 코드 스타일 규칙("TypeScript strict mode, any 타입 금지"), (4) 출력 형식("코드만 반환, 산문 제외"). 이를 Cursor, Claude Code 또는 IDE의 AI 설정에서 프로젝트 수준 규칙으로 유지하여 모든 세션에 적용되도록 하십시오.',
+            },
+            {
+              q: 'GitHub Copilot과 Cursor 중 어느 것이 버그를 더 적게 생성합니까?',
+              a: 'Cursor는 전체 코드베이스를 이해하기 위해 프로젝트 수준 RAG(검색 증강 생성) 인덱싱을 사용하여 GitHub Copilot의 파일 수준 컨텍스트에 비해 환각을 줄입니다. 단일 파일 보일러플레이트 작업에서는 차이가 최소화됩니다. 아키텍처 일관성이 중요한 다중 파일 리팩토링에서는 Cursor의 코드베이스 인식 컨텍스트가 더 적은 통합 오류를 생성합니다. 두 도구 모두 배포 전에 보안 린팅이 필요합니다.',
+            },
+          ],
+        },
+        sources: {
+          title: '출처 및 추가 읽기',
+          items: [
+            '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — LLM의 단계별 추론에 관한 기초 논문',
+            '[Veracode, 2025. "AI Code Security Report"](https://www.securitymagazine.com/articles/101801-ai-introduces-security-vulnerabilities-within-code-in-45-of-cases) — AI 생성 코드의 45% 취약점 비율 문서화',
+            '[METR, 2025. "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"](https://www.infoq.com/news/2025/07/ai-productivity/) — AI 도구를 사용한 19% 작업 완료 지연을 보여주는 현장 연구',
+          ],
+        },
+      },
+      leadAnswerBlock: '2026년 AI로 더 나은 코드를 작성하려면: 역할, 목표, 제약 조건, 출력 형식, 엣지 케이스를 포함하는 구조화된 프롬프트를 사용하고, 프로덕션 환경에서는 Temperature를 0.1–0.2로 설정하며, 백엔드 작업은 Claude 4.8 Opus로, 알고리즘 작업은 GPT-5로 라우팅하고, 배포 전에 모든 출력물에 보안 린터를 실행하십시오.',
+    },
   };

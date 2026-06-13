@@ -2795,7 +2795,6 @@ tests:
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-27',
     lastFactChecked: '2026-04-28',
-    targetKeywords: ['Braintrust 비교', 'PromptHub 대안', 'Vellum 프롬프트 관리', 'Promptfoo CI/CD', '프롬프트 평가 도구 2026'],
     toc: [
       { label: 'Braintrust, PromptHub, Vellum, Promptfoo의 역할', anchor: '#what-is' },
       { label: '도구 비교 기준', anchor: '#evaluation-criteria' },
@@ -2820,10 +2819,6 @@ tests:
       '4가지 도구 모두 OpenAI 및 Anthropic API를 지원하며, Promptfoo만이 40개 이상의 프로바이더를 기본 지원합니다',
       'PromptQuorum은 모델에 구애받지 않는 첫 번째 단계를 추가합니다: 특정 프로바이더에 결정하기 전에 25개 이상의 모델에 프롬프트를 전송합니다',
     ],
-    snippetBlocks: [
-      { type: 'one-sentence', text: 'Braintrust는 채점하고, PromptHub는 버전 관리하고, Vellum은 A/B 테스트하고, Promptfoo는 회귀를 테스트합니다 — 서로 겹치지만 대체하지 않는 네 가지 프롬프트 도구입니다.' },
-      { type: 'plain-terms', text: '소프트웨어 구축처럼 생각하세요: 테스트 프레임워크(Promptfoo), 품질 대시보드(Braintrust), 배포 파이프라인(Vellum), 코드 저장소(PromptHub)가 필요합니다. 대부분의 팀은 네 가지가 아니라 그 중 두 가지가 필요합니다.' },
-    ],
     sections: {
       keyTakeaways: {
         id: 'key-takeaways',
@@ -2845,16 +2840,6 @@ tests:
           '**Braintrust, PromptHub, Vellum, Promptfoo는 팀의 서로 다른 프롬프트 문제를 해결합니다.** Braintrust는 평가 플랫폼(출력 채점)입니다. PromptHub는 버전 관리 시스템(프롬프트 구성 및 공유)입니다. Vellum은 A/B 테스트가 있는 배포 플랫폼(실제 트래픽에서 실험 실행)입니다. Promptfoo는 테스트 자동화 도구(CI/CD에서 회귀 감지)입니다. 서로 겹치지만 대체하지는 않습니다.',
           '팀이 하나를 선택하기 어려운 이유: 네 가지 모두 "프롬프트 최적화"를 주장하지만 서로 다른 단계에서 수행합니다. Braintrust는 측정하여 최적화하고, Vellum은 트래픽을 분배하여 최적화하며, Promptfoo는 회귀를 감지하여 최적화하고, PromptHub는 구성하여 최적화합니다. 팀은 더 나은 프롬프트를 발견하기 위해 Braintrust를, CI/CD에서 테스트하기 위해 Promptfoo를, 배포하기 위해 Vellum을 사용할 수 있습니다.',
           '이 가이드는 네 가지 특정 도구에 대한 직접 비교입니다. 모든 프롬프트 엔지니어링 도구에 대한 더 넓은 순위는 [2026년 최고의 프롬프트 엔지니어링 도구](/ko/prompt-engineering/best-prompt-engineering-tools-2026)를 참조하세요. DSPy 및 Helicone을 포함한 팀 최적화 기능은 [팀을 위한 최고의 프롬프트 최적화 도구](/ko/prompt-engineering/best-prompt-optimization-tools-for-teams)를 참조하세요.',
-        ],
-        snippets: [
-          {
-            type: 'in-one-sentence',
-            text: 'Braintrust는 채점하고, PromptHub는 버전 관리하고, Vellum은 A/B 테스트하고, Promptfoo는 회귀를 테스트합니다 — 서로 겹치지만 대체하지 않는 네 가지 프롬프트 도구입니다.',
-          },
-          {
-            type: 'in-plain-terms',
-            text: '소프트웨어 구축처럼 생각하세요: 테스트 프레임워크(Promptfoo), 품질 대시보드(Braintrust), 배포 파이프라인(Vellum), 코드 저장소(PromptHub)가 필요합니다. 대부분의 팀은 네 가지가 아니라 그 중 두 가지가 필요합니다.',
-          },
         ],
       },
       evaluationCriteria: {
@@ -3219,15 +3204,6 @@ tests:
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    breadcrumbSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
-        { '@type': 'ListItem', position: 3, name: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)', item: 'https://www.promptquorum.com/ko/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo' },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -3236,11 +3212,7 @@ tests:
       numberOfItems: 5,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Braintrust', description: '협업 로깅, 자율 반복을 위한 Loop 에이전트, MCP-IDE 통합이 있는 AI 평가 플랫폼. 무료 티어 제공(1M Spans, 10K Scores); Pro $249/월. 출력 품질을 측정하는 팀에 이상적.' },
-        { '@type': 'ListItem', position: 2, name: 'PromptHub', description: '팀 협업이 있는 프롬프트 버전 관리' },
-        { '@type': 'ListItem', position: 3, name: 'Vellum', description: '실제 트래픽 분배가 있는 프로덕션 A/B 테스트' },
-        { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'GitHub Actions 통합이 있는 오픈소스 회귀 테스트' },
-        { '@type': 'ListItem', position: 5, name: 'PromptQuorum', description: '모델 선택을 위한 25개 이상의 모델 멀티 모델 비교' },
       ],
     },
   },
-}
+};

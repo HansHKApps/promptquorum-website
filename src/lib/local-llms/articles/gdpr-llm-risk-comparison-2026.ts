@@ -1067,4 +1067,184 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   // VERIFY: preços de hardware on-premise em BRL (RTX 4070 Ti ~R$ 4.500-6.500; multi-GPU ~R$ 40.000-120.000) e eletricidade (~R$ 50-90/mês, ~R$ 600/ano) são estimativas de varejo BR (jun/2026); custos de API/tokens da nuvem mantidos em USD (cobrados em dólar). Referências jurídicas latino-americanas do bloco es foram trocadas pela LGPD/ANPD do Brasil. Confirmar antes de publicar.
+  ko: {
+    theme: '개인정보 보호 및 보안',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    title: 'GDPR 리스크 비교: Qwen vs DeepSeek vs Llama vs Claude 2026',
+    seoTitle: 'GDPR 리스크 매트릭스: LLM 비교 Qwen DeepSeek Llama Claude | PromptQuorum',
+    metaDescription: 'GDPR 준수 LLM 비교: DeepSeek API(최고 위험), Qwen 로컬(최저), Llama 로컬, Claude/GPT API(중간 위험). 데이터 거주지, 관할권, ToS, SCC 요건별 리스크 매트릭스. 2026년 5월 업데이트.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    readTime: '8분 읽기',
+    educationalLevel: 'Advanced',
+    audience: '독점적 LLM과 오픈 웨이트 LLM 중에서 선택하는 CISO, 조달팀, 컴플라이언스 담당자',
+    primaryTerm: 'GDPR 리스크 비교 LLM 모델',
+    leadAnswerBlock: '**DeepSeek API는 중국 데이터 접근법(PIPL)으로 인해 주요 LLM 중 GDPR 리스크가 가장 높습니다. Qwen과 Llama를 로컬로 실행하면 동등하게 낮은 위험을 가집니다. EU 데이터 거주지를 갖춘 Claude 및 GPT-5.5 API는 중간 위험을 가지며 표준 계약 조항(SCC)이 필요합니다.**',
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 4.6', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
+    current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
+    quickAnswerTop: {
+      ko: {
+        question: 'GDPR 하에서 가장 안전한 LLM은 무엇입니까?',
+        answer: 'Qwen 3 14B 또는 Llama 4 Scout을 자체 하드웨어에서 로컬로 실행하는 것이 가장 안전합니다. 데이터가 관할권을 벗어나지 않으며, 제44조 이전도 없고, SCC나 TIA도 필요하지 않습니다. DeepSeek API는 서버가 중국 데이터법(PIPL)을 따르기 때문에 위험도가 가장 높습니다. Claude 및 GPT-5.5 API는 중간 수준의 규정 준수를 위해 EU 데이터 거주지 + SCC가 필요합니다.',
+        bullets: [
+          'Qwen 로컬: 최저 위험. 이전 없음, Apache 2.0 가중치, 12–24 GB VRAM, 30분 이내 설정.',
+          'DeepSeek API: 최고 위험. PIPL 관할권, EU 적정성 결정 없음, ToS는 국가 명령에 의한 데이터 공유를 허용.',
+          'Claude/GPT EU+SCC: 중간 위험. 거주지 계약 + SCC가 도움이 되지만 이전은 여전히 수반됨.',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: 'LLM의 4가지 GDPR 리스크 벡터', anchor: 'risk-vectors' },
+      { label: '리스크 매트릭스: 모델별 비교', anchor: 'risk-matrix' },
+      { label: '모델별 판정 및 권장 용도', anchor: 'model-verdicts' },
+      { label: '조직 유형별 권장 스택', anchor: 'org-stacks' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'DeepSeek API는 최고 위험: 서버가 중국 데이터 접근법(PIPL)의 적용을 받으며, 중국에 대한 EU 적정성 결정이 없고, ToS는 중국 당국과의 데이터 공유를 명시적으로 허용합니다',
+          'Qwen 3 14B 및 Llama 4 Scout을 로컬로 실행하면 최저 위험: 제44조 이전 없음, SCC 불필요, 데이터가 자체 하드웨어에 보관됩니다',
+          'Claude API 및 GPT-5.5 Instant는 중간 위험: 미국 관할권은 표준 계약 조항 + 이전 영향 평가를 필요로 하며, EU 데이터 거주지 옵션(Claude EU)이 위험을 줄여줍니다',
+          '권장 스택: 스타트업(Claude + SCC), 데이터 민감 조직(Qwen 24 GB 로컬), 기업(멀티 GPU Qwen + 에어갭)',
+          '리스크 결정 매트릭스는 데이터 거주지, 학습 데이터 관할권, ToS 데이터 보존, SCC 요건, 법적 판정의 5가지 벡터를 다룹니다',
+        ],
+      },
+      riskVectors: {
+        id: 'risk-vectors',
+        title: 'LLM의 4가지 GDPR 리스크 벡터',
+        content: [
+          '모든 LLM 배포가 동일한 GDPR 리스크를 가지는 것은 아닙니다. LLM 사용의 법적·운영적 위험은 네 가지 독립적인 요소에 의해 결정됩니다.',
+        ],
+        subsections: [
+          {
+            title: '데이터 거주지',
+            text: '모델 서버가 물리적으로 위치한 곳입니다. 서버가 EU 내에 있고, 모델 제공업체가 계약상으로 데이터를 EU 내에 보관하기로 약정하면 데이터 거주지 위험은 낮습니다. SCC 없이 EU 외부에 서버가 있으면 데이터 거주지 위험은 높습니다.',
+          },
+          {
+            title: '학습 데이터 관할권',
+            text: '학습 데이터와 제공업체의 보존 권리를 규율하는 국가의 법률입니다. 미국 데이터법(CFAA, SCA)은 법 집행 기관의 접근을 허용합니다. 중국 데이터법(PIPL)은 훨씬 광범위한 국가 접근 권한을 의무화합니다. EU 데이터는 GDPR 및 ePrivacy 지침에 따라 보호됩니다.',
+          },
+          {
+            title: 'ToS 데이터 보존',
+            text: '추론이 완료된 후 데이터를 보관하는 것에 대해 이용약관은 무엇을 말하고 있습니까? OpenAI와 DeepSeek는 여러 포럼에서 모델 개선 또는 법적으로 의무화된 공개를 위해 사용자 프롬프트를 보존할 수 있다고 밝혔습니다. Qwen과 Llama를 로컬로 실행하면 ToS가 없으며 보존은 사용자가 통제합니다.',
+          },
+          {
+            title: 'SCC / TIA 요건',
+            text: 'Schrems II 이후, EU 외부로의 EU 개인정보 이전에는 대상 관할권이 적절한 보호를 제공함을 확인하기 위해 표준 계약 조항(SCC) 및 이전 영향 평가(TIA)가 필요합니다. 클라우드 API는 이를 필요로 하지만 로컬 모델은 그렇지 않습니다.',
+          },
+        ],
+      },
+      riskMatrix: {
+        id: 'risk-matrix',
+        title: '리스크 매트릭스: 모델별 비교',
+        content: [
+          '아래 표는 각 배포 옵션의 GDPR 리스크 프로필을 요약합니다. 점수가 높을수록 법적·운영적 위험이 높습니다.',
+        ],
+        columns: ['배포 환경', '데이터 거주지', '학습 데이터 관할권', 'ToS 보존 위험', 'SCC / TIA 필요 여부', '전체 위험 수준'],
+        rows: [
+          { '배포 환경': 'DeepSeek API', '데이터 거주지': '중국(Alibaba Cloud)', '학습 데이터 관할권': '중국(PIPL)', 'ToS 보존 위험': '당국 공유 권한 명시적 유보', 'SCC / TIA 필요 여부': '필요하나 효과 없음(EU-중국 적정성 결정 없음)', '전체 위험 수준': '🔴 최고' },
+          { '배포 환경': 'Claude API (미국)', '데이터 거주지': '미국(버지니아)', '학습 데이터 관할권': '미국', 'ToS 보존 위험': 'Anthropic은 요청 시 삭제 약정; 기본 30일 보존', 'SCC / TIA 필요 여부': 'SCC + TIA 필요', '전체 위험 수준': '🟠 중상' },
+          { '배포 환경': 'GPT-5.5 (미국)', '데이터 거주지': '미국(다수 지역)', '학습 데이터 관할권': '미국', 'ToS 보존 위험': 'OpenAI는 모델 개선 목적 보존 가능; 정책 불투명', 'SCC / TIA 필요 여부': 'SCC + TIA 필요', '전체 위험 수준': '🟠 중상' },
+          { '배포 환경': 'Claude (EU 데이터 거주지)', '데이터 거주지': 'EU(아일랜드 또는 독일)', '학습 데이터 관할권': '미국(Anthropic), 데이터는 EU에 보관', 'ToS 보존 위험': 'Anthropic은 EU 전용 거주지 + GDPR 준수 약정', 'SCC / TIA 필요 여부': 'EU 처리로 SCC 충분', '전체 위험 수준': '🟡 중간' },
+          { '배포 환경': 'Llama 4 Scout (로컬)', '데이터 거주지': '자체 하드웨어(LAN)', '학습 데이터 관할권': '오픈소스, 상업적 보존 없음', 'ToS 보존 위험': '로컬 로그를 통해 사용자가 보존 통제', 'SCC / TIA 필요 여부': '없음', '전체 위험 수준': '🟢 최저' },
+          { '배포 환경': 'Qwen 3 14B (로컬)', '데이터 거주지': '자체 하드웨어(LAN)', '학습 데이터 관할권': '오픈소스(Apache 2.0), 상업적 보존 없음', 'ToS 보존 위험': '로컬 로그를 통해 사용자가 보존 통제', 'SCC / TIA 필요 여부': '없음', '전체 위험 수준': '🟢 최저' },
+        ],
+      },
+      modelVerdicts: {
+        id: 'model-verdicts',
+        title: '모델별 판정 및 권장 용도',
+        content: [
+          '이 섹션을 통해 GDPR 컴플라이언스 상황에 맞는 각 배포 방식을 파악하십시오.',
+        ],
+        subsections: [
+          {
+            title: 'DeepSeek API — GDPR 워크플로에서 사용 금지',
+            text: 'DeepSeek API는 주요 LLM 중 가장 높은 위험을 가집니다. (1) 서버가 중국 본토에 있어 PIPL 데이터 접근 의무의 적용을 받으며, (2) EU-중국 간 적정성 결정이 없어 Schrems II로 인해 SCC가 불충분하고, (3) ToS는 중국 당국과의 데이터 공유 권한을 명시적으로 유보합니다. 프롬프트에 EU 거주자의 개인정보가 포함된 경우, 각 정보 주체의 명시적 동의와 이전에 대한 문서화된 법적 근거가 없으면 DeepSeek API는 GDPR 제44조를 위반합니다. 민감하지 않은 작업(경쟁 분석, 브레인스토밍)의 경우 위험이 낮지만, 사용 전 계약 검토가 필수입니다.',
+          },
+          {
+            title: 'Claude API (미국) — 중간 위험, SCC + TIA로 관리 가능',
+            text: 'Claude API는 표준 계약 조항 및 이전 영향 평가가 필요하지만 GPT-5.5보다 더 준수됩니다. (1) Anthropic은 요청 시 삭제에 대한 명확한 약정을 가지고 있으며, (2) Anthropic은 GDPR 제28조 및 제32조를 명시적으로 참조하는 데이터 처리 부속서(DPA)를 공개했고, (3) 미국법은 법 집행 기관의 접근을 허용하지만 상업적 데이터 보존을 의무화하지는 않습니다. 민감하지 않은 개인정보(직함, 일반 비즈니스 컨텍스트)의 경우 SCC + TIA를 갖춘 Claude API가 허용됩니다. 고감도 데이터(건강, 금융, 생체정보)는 로컬 배포가 필요합니다.',
+          },
+          {
+            title: 'Claude (EU 데이터 거주지) — 중간 위험, EU 처리로 위험 감소',
+            text: 'Anthropic은 프롬프트가 아일랜드 또는 독일에서 처리되는 EU 데이터 거주지 옵션을 제공합니다. (1) 처리 중 데이터가 EU 내에 보관되고, (2) 30일 후 삭제되며, (3) Anthropic이 GDPR 준수를 약정합니다. 그러나 Claude 모델의 학습 데이터는 여전히 미국에서 학습되었고 Anthropic은 미국 기업이므로, 완전한 제44조 준수를 위해서는 여전히 SCC가 필요합니다. 미국 Claude보다 GDPR 측면에서 낫지만 로컬 배포와 동등하지는 않습니다.',
+          },
+          {
+            title: 'GPT-5.5 / GPT-5.5 Instant — 중상 위험',
+            text: 'OpenAI API는 Claude보다 높은 위험을 가집니다. (1) OpenAI의 데이터 보존 정책이 불투명하며 "연구 및 안전 개선"을 위해 사용자 데이터를 보존할 수 있다고 밝혔고, (2) 공개된 DPA가 없으며, (3) EU 데이터 거주지 옵션이 없습니다. OpenAI를 선택하는 경우, 명시적인 SCC + 포괄적인 TIA가 필요하며 고감도 데이터(건강, 금융, 생체정보, 유전자 정보)는 전송하지 마십시오. 저감도 작업의 경우 SCC를 갖추면 허용됩니다.',
+          },
+          {
+            title: 'Llama 4 Scout (로컬) — 최저 위험, 이전 없음',
+            text: 'Llama 가중치는 상업적 사용이 가능한 라이선스 하에 오픈소스입니다. 자체 하드웨어에서 Llama를 로컬로 실행하면 (1) 제44조 이전이 전혀 없고, (2) 모든 데이터 보존을 사용자가 통제하며, (3) SCC나 TIA가 필요 없고, (4) 제25조(프라이버시 바이 디자인)를 완전히 준수합니다. 모든 데이터 민감도 수준에 적합합니다. 8 GB VRAM의 Llama 4 Scout 또는 48 GB의 Llama 3.2 70B로 대부분의 기업 사용 사례를 처리할 수 있습니다.',
+          },
+          {
+            title: 'Qwen 3 / 3 (로컬) — 최저 위험, 이전 없음',
+            text: 'Qwen 가중치는 Apache 2.0 하에 오픈소스입니다. Llama와 마찬가지로 Qwen을 로컬로 실행하면 (1) 제44조 이전이 전혀 없고, (2) 보존을 사용자가 통제하며, (3) 법적 근거가 필요 없습니다(이전이 없으면 이전 위험도 없음). Qwen 3 14B는 우수한 다국어 성능과 작은 VRAM 사용량(Llama 3.2 70B의 48 GB 대비 12–16 GB)으로 인해 유럽에서 가장 널리 배포됩니다. 모든 민감도 수준에 적합합니다.',
+          },
+        ],
+      },
+      orgStacks: {
+        id: 'org-stacks',
+        title: '조직 유형별 권장 스택',
+        content: [
+          '올바른 LLM 스택은 조직의 데이터 민감도, 예산, 규제 태세에 따라 달라집니다. 이 권장 사항을 조달 결정의 출발점으로 활용하십시오.',
+        ],
+        subsections: [
+          {
+            title: '초기 스타트업(낮은 규제 압력)',
+            text: 'SCC를 갖춘 Claude API를 사용하십시오. 근거: Claude는 품질이 높고 프로덕션 준비가 되어 있으며, 관리 오버헤드가 낮고, SCC는 미국 기반 AI 벤더에게 표준입니다. 실험적 사용 비용은 월 약 $3–5입니다. 위험이 허용 가능한 이유: 스타트업 데이터는 일반적으로 저감도(익명 사용 패턴, 일반 비즈니스 로직)입니다. 헬스케어나 핀테크로 성장하면 로컬 Qwen으로 마이그레이션하십시오.',
+          },
+          {
+            title: '직원/고객 데이터를 보유한 중소기업(중간 규제 압력)',
+            text: 'Qwen 3 14B 또는 Llama 3.2 32B를 로컬로 사용하십시오. 근거: 개인정보(직원 명단, 고객 연락처, 거래 내역)를 처리하므로 제로 이전 아키텍처가 필요합니다. 단일 온프레미스 GPU(RTX 4070 Ti, Q4 양자화 시 Qwen 3용 12 GB VRAM)에 배포하십시오. 비용은 하드웨어 약 $500 일시불 + 연간 전기 약 $100입니다. 설정 시간: 1시간 미만(Ollama는 간단합니다). 컴플라이언스 부담: 없음(SCC, TIA, DPA 협상 불필요).',
+          },
+          {
+            title: '기업(높은 규제 압력: 헬스케어, 핀테크, 법률)',
+            text: '에어갭 배포로 멀티 GPU Qwen 3 33B를 사용하십시오. 근거: 고감도 데이터는 가능한 가장 강력한 아키텍처가 필요합니다. 멀티 GPU(2× RTX 3090 또는 4× RTX 4090)를 사용하면 더 크고 유능한 모델을 낮은 지연으로 실행할 수 있습니다. 에어갭은 추론 클러스터가 외부 인터넷에 접근할 수 없음을 의미하며, 취약점이 발견되더라도 프롬프트가 유출될 수 없습니다. 비용은 하드웨어 약 $5–15K이며, 인프라 팀이 1–2주 내에 설정합니다. 컴플라이언스: GDPR 제32조(보안) 완전 충족, 전체 접근 로그를 갖춘 제30조 감사 추적.',
+          },
+          {
+            title: '기존 법적 계약을 보유한 조직(특수 사례)',
+            text: 'Claude 또는 OpenAI와 이미 데이터 처리 부속서(DPA)를 체결한 경우, 해당 서비스를 사용하십시오. 로컬로 마이그레이션하는 전환 비용이 DPA 재협상보다 낮은 경우가 많으며, 기존 계약이 최근(2024–2026) 체결되었고 SCC + TIA를 포함한다면 위험은 관리 가능합니다. 결정 전 법무팀과 검토하십시오.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          {
+            q: 'SCC를 사용하면 DeepSeek가 GDPR을 준수합니까?',
+            a: '아닙니다. SCC만으로는 중국 본토로의 GDPR 제44조 이전을 충족하지 못합니다. (1) Schrems II 이후 EU-중국 간 적정성 결정이 없고, (2) 중국법(PIPL)은 기업이 요청 시 국가 당국과 데이터를 공유하도록 의무화하며 SCC로 이를 재정의할 수 없고, (3) Anthropic, OpenAI 및 기타 주요 벤더들은 중국에서 SCC 집행을 제공하지 않으며 운영 자체를 거부합니다. EU 거주자의 개인정보에 대해서는 DeepSeek API를 사용하지 마십시오. DeepSeek가 필요하다면 로컬 가중치를 사용하십시오(`ollama run deepseek-coder:latest`를 자체 하드웨어에서 실행).',
+          },
+          {
+            q: 'SCC를 갖춘 Claude EU가 GDPR을 충족합니까?',
+            a: '대부분 그렇습니다만, 몇 가지 주의사항이 있습니다. Claude EU는 처리 중 데이터를 아일랜드 또는 독일에 보관하고 30일 이내에 삭제합니다. Anthropic은 GDPR 준수 DPA와 SCC를 공개했습니다. 그러나 Claude 모델은 미국 기반 데이터로 학습되었고 Anthropic은 미국 기업이므로, 기술적으로는 모델 학습 및 벤더 관계 형태의 "이전"이 여전히 존재합니다. 실질적인 컴플라이언스 측면에서 Claude EU + SCC는 대부분의 조직에게 허용됩니다. 이전 위험이 전혀 없는 가장 강력한 태세를 원한다면 로컬 Qwen 또는 Llama를 사용하십시오.',
+          },
+          {
+            q: 'Llama 4 Scout를 Claude의 대체재로 사용할 수 있습니까?',
+            a: 'GDPR 컴플라이언스 측면에서: 그렇습니다. Llama 4 Scout는 오픈소스이며 로컬로 실행할 수 있으므로 제44조, 제25조, 제32조를 완전히 충족합니다. 기능 및 성능 측면에서: 경우에 따라 다릅니다. Llama 4 Scout는 Claude보다 소형(8 GB VRAM)이므로 로컬 실행이 빠르고 저렴하지만, 일부 벤치마크에서는 성능이 낮을 수 있습니다. 먼저 워크로드에서 테스트하십시오. 단순한 Q&A, 요약, 코드 작업의 경우 Llama 4 Scout는 경쟁력이 있습니다. 매우 복잡한 추론의 경우 Claude가 여전히 우수하지만, 로컬 Qwen 3 14B 또는 Llama 3.2 70B는 대부분의 기업 작업을 처리할 수 있습니다.',
+          },
+          {
+            q: '감사 목적으로 프롬프트를 로컬에 로깅하면 어떻게 됩니까?',
+            a: '로깅은 제30조 컴플라이언스를 위해 권장됩니다. 다음을 로깅하십시오: 모델 이름, 세션 타임스탬프, 입력 토큰 수, 출력 토큰 수, 프롬프트 및 응답의 SHA-256 해시. 개인정보가 포함된 프롬프트의 원문 텍스트는 로깅하지 마십시오. 해시 기반 로깅은 제5조 제1항 제e호(저장 제한)를 위반하지 않고도 제30조(처리 기록) 및 제32조(보안)를 충족합니다. 암호화된 접근 통제 시스템(예: 역할 기반 접근을 갖춘 로그 집계 서버)에 로그를 저장하십시오. DPA 표준에 따라 로그를 3년간 보존하십시오.',
+          },
+          {
+            q: '온프레미스 LLM 실행이 클라우드 API보다 비용이 많이 듭니까?',
+            a: '초기 비용: 그렇습니다. 하드웨어(RTX 4070 Ti) 비용은 약 $500–1000입니다. 월별 비용: 아닙니다. 온프레미스 전기 비용은 월 약 $5–10입니다. 클라우드 API는 1K 토큰당 $0.001–0.01이며, 대량 사용(월 >1M 토큰)의 경우 $100를 초과합니다. 손익분기점은 일반적으로 중간-대량 사용의 경우 6–12개월입니다. 월 <100K 토큰을 실행하는 경우 클라우드 API가 더 저렴합니다. 월 >1M 토큰을 실행하는 경우 온프레미스가 더 저렴합니다. GDPR 컴플라이언스는 추가적인 비즈니스 케이스입니다: 온프레미스는 SCC/TIA 법적 비용이 없습니다.',
+          },
+        ],
+      },
+    },
+    snippetBlocks: [
+      {
+        sectionId: 'risk-vectors',
+        oneLineSentence: 'LLM에 대한 GDPR 리스크는 데이터 거주지, 학습 데이터 관할권, ToS 보존 정책, SCC/TIA 요건에 의해 결정됩니다.',
+        plainTerms: 'LLM 선택은 데이터가 어디에 있는지, 어느 나라가 모델을 소유하는지, 벤더가 데이터를 얼마나 오래 보관하는지, 국경을 초과하여 데이터를 이동하기 위해 법적 계약이 필요한지에 따라 GDPR에 영향을 미칩니다.',
+      },
+    ],
+  },
 }

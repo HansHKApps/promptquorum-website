@@ -2527,11 +2527,6 @@ zh: {
     dateModified: '2026-05-01',
     readTime: '11분 분량',
     educationalLevel: 'Intermediate',
-    targetKeywords: ['AI 한계', 'LLM 한계', 'LLM이 할 수 없는 것', '대형 언어 모델 한계', '환각', '지식 콼오프', '컨텍스트 윈도우', '프롬프트 엔지니어링'],
-    snippetBlocks: [
-      { type: 'one-sentence', text: '대형 언어 모델은 실시간 데이터, 지속적 메모리, 자기 검증, 실제 세계 행동 능력이 없는 여덟 가지 구조적 한계를 가지며 어떤 모델도 이를 제거할 수 없습니다.' },
-      { type: 'plain-terms', text: 'GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro 등 모든 AI는 동일한 근본적 한계를 가집니다. RAG, chain-of-thought 프롬프팅, 도구 호출은 이러한 한계를 완화하지만 제거하지는 못합니다.' },
-    ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -2549,15 +2544,6 @@ zh: {
       },
       audience: { '@type': 'Audience', audienceType: '개발자, AI 실무자, 제품 팀' },
     },
-    breadcrumbSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
-        { '@type': 'ListItem', position: 3, name: 'AI 한계: 2026년 LLM이 할 수 없는 것들', item: 'https://www.promptquorum.com/ko/prompt-engineering/ai-limitations-what-llms-cant-do' },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -2566,13 +2552,6 @@ zh: {
       description: '모델 크기나 학습 방식에 관계없이 모든 LLM이 공유하는 구조적 제약사항과 각각의 근본 원인 및 주요 우회법',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: '지식 콼오프', description: '근본 원인: 최종 날짜가 있는 정적 학습 데이터. 심각도: 현재 사건에 대해 높음. 우회법: RAG 또는 현재 사실을 프롬프트에 직접 붙여넣기.' },
-        { '@type': 'ListItem', position: 2, name: '환각', description: '근본 원인: 학습 패턴 기반 토큰 예측, 사실 검증 없음. 심각도: 특정 사실, 인용, 수치에 대해 높음. 우회법: 소스 자료로 프롬프트를 기반화하고 1차 소스에 대해 출력 검증.' },
-        { '@type': 'ListItem', position: 3, name: '신뢰할 수 없는 다단계 추론', description: '근본 원인: 토큰 예측 사이에 작업 메모리나 상태 없음. 심각도: 중간, chain-of-thought 프롬프팅으로 크게 개선. 우회법: chain-of-thought 프롬프팅 사용 또는 코드 인터프리터로 산술 지시.' },
-        { '@type': 'ListItem', position: 4, name: '컨텍스트 윈도우 제한', description: '근본 원인: 트랜스포머 어텐션에 토큰 하드 제한. 심각도: 긴 문서에 대해 중간. 우회법: RAG, 청킹, 요약.' },
-        { '@type': 'ListItem', position: 5, name: '지속적 메모리 없음', description: '근본 원인: 상태 없는 아키텍체 — 각 세션은 빈 컨텍스트에서 시작. 심각도: 다중 세션 워크플로우에 대해 중간. 우회법: 벡터 데이터베이스 또는 대화 요약을 사용한 애플리케이션 레벨 메모리 주입.' },
-        { '@type': 'ListItem', position: 6, name: '실제 세계 행동 능력 없음', description: '근본 원인: LLM은 기본적으로 텍스트만 생성. 심각도: 자율 작업에 대해 높음. 우회법: GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro에서 사용 가능한 도구 사용/함수 호출.' },
-        { '@type': 'ListItem', position: 7, name: '학습 데이터 편향', description: '근본 원인: 학습 말뛬치는 주로 2025년 이전 영어, 서구, 인터넷 콘텐츠. 심각도: 언어 및 도메인에 따라 다른 중간. 우회법: 프롬프트에 도메인별 맥락, 용어, 예시를 명시적으로 제공.' },
-        { '@type': 'ListItem', position: 8, name: '출력 자기 검증 불가', description: '근본 원인: 기본 진실에 대한 접근 없음 — 모델은 학습 패턴과의 일관성만 평가하며 사실적 정확성 평가 불가. 심각도: 사실적 주장에 대해 높음. 우회법: 게시 전 권위 있는 1차 소스에 대한 외부 검증.' },
       ],
     },
     howToSchema: {

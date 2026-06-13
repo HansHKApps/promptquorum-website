@@ -1617,4 +1617,166 @@ schema: {
         },
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Getting Started',
+      title: '로컬 LLM이란 무엇인가요? 자체 하드웨어에서 AI 모델을 실행하는 방법',
+      seoTitle: '로컬 LLM이란? 자체 하드웨어에서 AI 모델을 실행하는 방법',
+      intro: '로컬 LLM은 인터넷 연결 없이, API 호출 없이, 데이터 외부 전송 없이 완전히 자체 하드웨어에서 실행되는 AI 언어 모델입니다. 모델 가중치를 파일로 다운로드하고 Ollama 또는 LM Studio와 같은 추론 엔진을 실행하면, 모델이 CPU 또는 GPU만으로 응답합니다. 2026년 4월 기준, 초보자에게 가장 실용적인 모델은 Llama 3.2 3B와 Phi-3 Mini입니다.',
+      metaDescription: '로컬 LLM은 인터넷 없이 자체 하드웨어에서 AI 모델을 실행합니다. 로컬 LLM이 무엇인지, 어떻게 작동하는지, 언제 사용해야 하는지 알아보세요. 2026년 가이드.',
+      leadAnswerBlock: '**로컬 LLM은 모든 추론을 자체 하드웨어에서 실행하며 토큰 비용이 없고 완전한 데이터 프라이버시를 제공합니다.** 클라우드 API(GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro)는 최소한의 설정으로 더 높은 품질을 제공합니다.',
+      dateModified: '2026-04-15',
+      publishDate: '2026-04-04',
+      audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
+      readTime: '7분 읽기',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM',
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: '로컬 LLM이란?', anchor: '#what-is-a-local-llm' },
+        { label: '로컬 LLM은 어떻게 작동하나요?', anchor: '#how-does-a-local-llm-work' },
+        { label: '어떤 하드웨어가 필요한가요?', anchor: '#what-hardware-do-you-need' },
+        { label: '로컬 LLM과 클라우드 API의 차이점은?', anchor: '#local-llm-vs-cloud-api' },
+        { label: '어떤 모델 형식이 사용되나요?', anchor: '#which-model-formats-are-used' },
+        { label: '언제 로컬 LLM을 사용해야 하나요?', anchor: '#when-should-you-use-a-local-llm' },
+        { label: '자주 묻는 질문', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '로컬 LLM은 자체 CPU 또는 GPU에서 실행됩니다 — 인터넷 불필요, API 비용 없음, 제3자 서버로 데이터 전송 없음.',
+            '세 가지 구성 요소가 필요합니다: 모델 파일(GGUF 또는 safetensors 형식), 추론 엔진(Ollama, LM Studio, 또는 llama.cpp), 그리고 선택적으로 채팅 인터페이스.',
+            '최소 하드웨어: 4비트 양자화 7B 파라미터 모델 실행에 8 GB RAM 필요. 16 GB RAM이면 대부분의 일상적인 모델을 편안하게 실행할 수 있습니다.',
+            '로컬 모델은 소비자용 하드웨어에서 클라우드 API보다 느립니다 — 최신 노트북의 7B 모델은 초당 15~40 토큰을 생성하는 반면, API를 통한 GPT-5.5 Mini는 초당 약 100 토큰입니다.',
+            '최적 사용 사례: 민감한 데이터 처리, 오프라인 작업, 반복 비용 없음, LLM 작동 원리 학습.',
+          ],
+        },
+        whatIsLocalLlm: {
+          title: '로컬 LLM이란?',
+          content: [
+            '**로컬 LLM(대형 언어 모델)은 노트북, 데스크톱, 온프레미스 서버 등 사용자가 직접 제어하는 하드웨어에서 실행되는 AI 모델입니다.** 모델 가중치는 디스크의 파일로 저장되며, 모든 처리는 사용자의 CPU 또는 GPU에서 이루어집니다. 프롬프트 텍스트나 응답 데이터는 외부 서버로 전송되지 않습니다.',
+            '"로컬"이라는 용어는 이러한 모델을 OpenAI GPT-5.5, Anthropic Claude 4.6, Google Gemini 3.1 Pro와 같이 원격 서버에서 프롬프트를 처리하고 인터넷을 통해 결과를 반환하는 클라우드 호스팅 서비스와 구분합니다.',
+            '로컬 LLM의 규모는 스마트폰에서 실행 가능한 1B 파라미터 소형 모델부터 48 GB VRAM을 갖춘 워크스테이션이 필요한 70B 파라미터 모델까지 다양합니다. 가장 널리 사용되는 초보자용 모델인 Meta Llama 3.2 3B, Microsoft Phi-3 Mini, Google Gemma 2 2B는 8 GB RAM을 갖춘 모든 노트북에서 실행 가능합니다.',
+          ],
+        },
+        howItWorks: {
+          title: '로컬 LLM은 어떻게 작동하나요?',
+          content: [
+            '**로컬 LLM 실행에는 세 가지 계층이 함께 작동합니다: 모델 파일, 추론 엔진, 인터페이스.**',
+            '**모델 파일**에는 신경망 가중치가 포함되어 있습니다 — 모델이 텍스트를 처리하고 생성하는 방식을 정의하는 학습된 수치 값들입니다. 로컬 사용의 경우, 이러한 가중치는 거의 항상 GGUF 형식(llama.cpp 프로젝트에서 개발한 압축 형식) 또는 safetensors 형식으로 저장됩니다. 4비트 정밀도로 양자화된 7B 파라미터 모델은 디스크에서 약 4.5 GB입니다.',
+            '**추론 엔진**은 모델 파일을 읽고 토큰 생성에 필요한 행렬 계산을 수행합니다. 가장 널리 사용되는 엔진은 [Ollama](/local-llms/how-to-install-ollama)(OpenAI 호환 API를 갖춘 백그라운드 서비스로 실행), [LM Studio](/local-llms/how-to-install-lm-studio)(내장 채팅 UI가 있는 데스크톱 앱), 그리고 llama.cpp(대부분의 다른 도구들이 기반으로 하는 기본 C++ 라이브러리)입니다.',
+            '**인터페이스**는 터미널, 웹 UI, 또는 API 엔드포인트 등 모델과 상호작용하는 곳입니다. Ollama와 같은 많은 도구들은 `http://localhost:11434`에 REST API를 노출하여 OpenAI 호환 애플리케이션을 로컬 모델에 연결할 수 있습니다.',
+          ],
+          youtubeUrl: 'https://www.youtube.com/watch?v=2p2xMKpz7wM',
+        },
+        hardware: {
+          id: 'what-hardware-do-you-need',
+          title: '로컬 LLM 실행에 필요한 하드웨어는?',
+          content: '하드웨어 요구 사항은 실행하려는 모델과 필요한 응답 속도에 따라 완전히 달라집니다.',
+          rows: [
+            { 'Model Size': '1B~3B 파라미터', 'RAM Required': '4~6 GB', 'Speed (CPU)': '20~60 tok/sec', 'Example Models': 'Llama 3.2 1B, Phi-3 Mini 3.8B' },
+            { 'Model Size': '7B~8B 파라미터', 'RAM Required': '6~8 GB', 'Speed (CPU)': '10~30 tok/sec', 'Example Models': 'Llama 3.3 8B, Mistral Small' },
+            { 'Model Size': '13B~14B 파라미터', 'RAM Required': '10~12 GB', 'Speed (CPU)': '5~15 tok/sec', 'Example Models': 'Llama 3.2 13B, Qwen3 14B' },
+            { 'Model Size': '32B~34B 파라미터', 'RAM Required': '20~24 GB', 'Speed (CPU)': '2~6 tok/sec', 'Example Models': 'Qwen3 32B, DeepSeek-R1 32B' },
+            { 'Model Size': '70B+ 파라미터', 'RAM Required': '40~48 GB', 'Speed (CPU)': '1~3 tok/sec', 'Example Models': 'Llama 3.3 70B, Qwen3 72B' },
+          ],
+          columns: ['Model Size', 'RAM Required', 'Speed (CPU)', 'Example Models'],
+        },
+        hardwareGpu: {
+          title: 'GPU를 사용하면 로컬 LLM이 더 빨라지나요?',
+          content: 'GPU 가속은 속도를 크게 향상시킵니다. NVIDIA RTX 4070 Ti(12 GB VRAM)는 7B 모델을 초당 80~120 토큰으로 실행하며, 이는 CPU 전용 모드보다 4~8배 빠릅니다. Apple Silicon Mac(M1, M2, M3, M4)은 통합 메모리를 사용하며 별도의 GPU 없이도 7B 모델에서 초당 40~80 토큰을 달성합니다. 노트북 사용자의 경우 하드웨어별 팁은 [노트북에서 로컬 LLM 실행하기](/local-llms/local-llm-on-laptop)를 참조하세요.',
+        },
+        vsCloud: {
+          id: 'local-llm-vs-cloud-api',
+          title: '로컬 LLM과 클라우드 API의 차이점은?',
+          content: '핵심 트레이드오프는 프라이버시와 비용 대 성능과 속도입니다. 전체 비교는 [로컬 LLM과 클라우드 API](/local-llms/local-llms-vs-cloud-apis)에서 확인하세요.',
+          rows: [
+            { 'Factor': '프라이버시', 'Local LLM': '완전함 — 데이터가 기기를 벗어나지 않음', 'Cloud API': '공급자 서버에서 데이터 처리' },
+            { 'Factor': '비용', 'Local LLM': '하드웨어 비용 이후 토큰당 $0', 'Cloud API': '모델에 따라 1M 토큰당 $0.15~$15' },
+            { 'Factor': '속도', 'Local LLM': '소비자 하드웨어에서 10~120 tok/sec', 'Cloud API': '부하에 따라 50~200 tok/sec' },
+            { 'Factor': '모델 품질', 'Local LLM': '양호 — 70B 규모에서 경쟁력 있음', 'Cloud API': '최고 수준 (GPT-5.5, Claude 4.6 Sonnet)' },
+            { 'Factor': '설정 시간', 'Local LLM': 'Ollama 또는 LM Studio로 5~15분', 'Cloud API': 'API 키 발급에 2~5분' },
+            { 'Factor': '오프라인 사용', 'Local LLM': '가능 — 인터넷 없이 작동', 'Cloud API': '불가 — 활성 연결 필요' },
+          ],
+          columns: ['Factor', 'Local LLM', 'Cloud API'],
+        },
+        modelFormats: {
+          id: 'which-model-formats-are-used',
+          title: '로컬 LLM에 사용되는 모델 형식은?',
+          content: [
+            '**GGUF**(GPT-Generated Unified Format)는 로컬 추론의 지배적인 형식입니다. llama.cpp 프로젝트에서 개발된 GGUF 파일은 모든 모델 메타데이터를 포함하고 단일 파일에서 여러 양자화 수준을 지원합니다. `ollama pull llama3.2`를 실행하면 Ollama가 내부적으로 GGUF 파일을 다운로드합니다.',
+            '**Safetensors**는 Hugging Face에서 만든 형식으로 주로 transformers 및 vLLM과 같은 PyTorch 기반 추론 도구와 함께 사용됩니다. 연구 및 서버 배포에서 더 일반적입니다.',
+            '**양자화**는 모델 정밀도를 줄여 메모리 요구 사항을 낮춥니다. 전체 FP16 정밀도의 7B 모델은 약 14 GB의 RAM이 필요합니다. Q4_K_M 양자화(4비트)에서는 동일한 모델이 최소한의 품질 손실로 약 4.5 GB만 필요합니다. 대부분의 초보자 가이드는 Q4_K_M 또는 Q5_K_M을 사용합니다.',
+          ],
+        },
+        whenToUse: {
+          id: 'when-should-you-use-a-local-llm',
+          title: '클라우드 API 대신 로컬 LLM을 사용해야 하는 경우는?',
+          items: [
+            '**민감한 데이터 처리** — 인프라를 벗어날 수 없는 의료 기록, 법적 문서, 재무 데이터, 또는 개인 식별 정보(PII).',
+            '**API 비용 절감** — 토큰당 클라우드 비용이 빠르게 누적되는 대용량 배치 처리. 로컬에서 실행되는 7B 모델은 쿼리당 $0의 비용이 듭니다.',
+            '**오프라인 또는 에어갭 환경** — 현장 작업, 보안 시설, 또는 인터넷 연결 없이 작동해야 하는 애플리케이션.',
+            '**학습 및 실험** — LLM의 내부 작동 방식 이해, 비용 걱정 없는 프롬프트 테스트, 또는 로컬 AI 기반 도구 구축.',
+            '**낮은 지연 시간 애플리케이션** — 네트워크 왕복 시간이 허용되지 않고 더 작은 로컬 모델이 작업에 충분히 빠른 경우.',
+          ],
+        },
+        faqSection: {
+          id: 'common-questions',
+          title: '로컬 LLM에 관한 자주 묻는 질문',
+          faqs: [
+            {
+              q: '로컬 LLM이 GPT-5.5 수준의 품질을 낼 수 있나요?',
+              a: '현재 소비자용 하드웨어에서는 불가능합니다. GPT-5.5와 Claude 4.6 Sonnet은 복잡한 추론, 코드 생성, 명령 수행 벤치마크에서 로컬로 실행 가능한 어떤 모델보다 우수합니다. 그러나 요약, 번역, 일상적인 작성 작업의 경우 잘 양자화된 13B~34B 모델은 프런티어 모델과 구별하기 어려운 결과를 생성합니다.',
+            },
+            {
+              q: '로컬 LLM을 실행하려면 GPU가 필요한가요?',
+              a: '아닙니다. 모든 주요 추론 엔진(Ollama, LM Studio, llama.cpp)은 CPU만으로 실행됩니다. GPU는 속도를 크게 향상시킵니다 — NVIDIA RTX 4060(8 GB VRAM)은 7B 모델을 CPU에서의 10~20 tok/sec 대비 60~90 tok/sec로 실행합니다. Apple Silicon Mac은 기본적으로 GPU 가속 통합 메모리를 사용하여 별도의 GPU 없이도 로컬 LLM에 적합합니다.',
+            },
+            {
+              q: '로컬 LLM 모델은 어디서 다운로드하나요?',
+              a: '세 가지 주요 소스가 있습니다: 간편한 원클릭 다운로드를 위한 Ollama 모델 라이브러리(ollama.com/library), GGUF 및 safetensors 모델의 전체 범위를 갖춘 Hugging Face(huggingface.co), 그리고 Hugging Face를 직접 검색하는 LM Studio의 내장 모델 브라우저. 설정 가이드는 [Ollama 설치 방법](/local-llms/how-to-install-ollama)과 [LM Studio 설치 방법](/local-llms/how-to-install-lm-studio)을 참조하세요.',
+            },
+            {
+              q: '로컬 LLM 실행은 프라이버시가 보장되나요?',
+              a: '네 — 단, 주의사항이 있습니다. 모델 추론 자체는 완전히 로컬입니다. 그러나 로컬 LLM 위에 구축된 일부 애플리케이션은 외부 서버로 데이터를 전송할 수 있습니다. 사용하는 인터페이스나 플러그인 계층에 텔레메트리 또는 클라우드 동기화가 활성화되어 있는지 항상 확인하세요. 전체 감사 가이드는 [로컬 LLM 보안 및 프라이버시 체크리스트](/local-llms/local-llm-security-privacy-checklist)를 참조하세요.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: '로컬 LLM을 시작하는 방법은?',
+          content: '첫 번째 로컬 LLM을 실행하는 가장 빠른 방법은 [Ollama 설치 방법](/local-llms/how-to-install-ollama)입니다 — 단 하나의 명령으로 엔진을 설치하고 macOS, Windows, Linux에서 5분 이내에 모델을 불러올 수 있습니다. 그래픽 인터페이스를 선호하신다면 [LM Studio 설치 방법](/local-llms/how-to-install-lm-studio)이 데스크톱 앱 설정을 안내합니다. 어떤 모델로 시작할지 결정하려면 [초보자용 최고의 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models)을 참조하세요.',
+        },
+        sources: {
+          id: 'sources',
+          title: '참고 자료',
+          items: [
+            '**llama.cpp — GitHub** — 로컬에서 양자화된 모델을 실행하기 위한 기본 C++ 라이브러리',
+            '**Hugging Face — Model Hub** — 100,000개 이상의 GGUF, safetensors 및 기타 모델 형식 저장소',
+            '**Ollama Model Library** — 원클릭 다운로드로 제공되는 사전 양자화된 모델 선별 목록',
+          ],
+        },
+        commonMistakes: {
+          title: '시작 시 흔히 하는 실수',
+          items: [
+            '모든 로컬 모델이 동등하게 프라이버시를 보장한다고 가정하는 것 — 일부 인터페이스나 양자화는 여전히 데이터를 기록할 수 있습니다.',
+            '사용 가능한 RAM보다 너무 큰 모델을 실행하여 디스크 스와핑으로 심각한 속도 저하를 초래하는 것.',
+            '모델 품질이 크게 다를 수 있다는 점을 이해하지 못하는 것 — 모든 로컬 모델이 복잡한 작업에서 GPT-5.5와 동등하지 않습니다.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 읽을거리',
+          items: [
+            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — 단계별 설정 및 첫 번째 모델 실행 안내',
+            '[LM Studio 설치 방법](/local-llms/how-to-install-lm-studio) — 그래픽 인터페이스가 있는 데스크톱 앱 대안',
+            '[초보자용 최고의 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models) — RAM에 맞는 모델 추천',
+            '[로컬 LLM과 클라우드 API](/local-llms/local-llms-vs-cloud-apis) — 트레이드오프 전체 비교',
+            '로컬 LLM이 무엇인지 이해하는 것이 첫 번째 단계입니다. 효과적으로 사용하는 방법을 이해하는 것이 두 번째 단계입니다: [프롬프트 엔지니어링 가이드](https://www.promptquorum.com/prompt-engineering)는 80가지 기법을 다룹니다.',
+            '[O Que São LLMs Locais (Português)](/pt/local-llms/what-are-local-llms) — versão em português deste guia',
+          ],
+        },
+      },
+    },
   };

@@ -1960,7 +1960,6 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
     primaryTerm: '프롬프트 테스트 도구',
     audience: 'LLM 테스트 파이프라인을 구축하는 DevOps 엔지니어, ML 엔지니어 및 플랫폼 팀',
     aboutTopics: ['프롬프트 테스트', '평가', 'CI/CD 테스트', '회귀 테스트'],
-    targetKeywords: ['프롬프트 테스트 도구', '프롬프트 평가 도구', 'Promptfoo 한국어', 'LLM 평가 도구 2026', 'RAG 평가 도구'],
     toc: [
       { label: '핵심 요점', anchor: 'key-takeaways' },
       { label: '왜 프롬프트를 테스트해야 합니까?', anchor: 'why-test-prompts' },
@@ -1976,22 +1975,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       { label: '관련 읽을거리', anchor: 'related-reading' },
       { label: 'FAQ', anchor: 'faq' },
       { label: '출처', anchor: 'sources' }
-    ],
-    quickAnswerTop: {
-      ko: {
-        question: '2026년 최고의 프롬프트 테스트 도구는 무엇입니까?',
-        answer: 'Promptfoo(무료 CI/CD), Braintrust(배치 평가), DeepEval(RAG 채점), LangSmith(트레이싱), Phoenix(프로덕션 모니터링) — 이 다섯 가지 도구가 완전한 프롬프트 테스트 파이프라인을 구성합니다.',
-        bullets: [
-          'Promptfoo: 오픈 소스, CI/CD용, 무료',
-          'Braintrust: 배치 평가, 인간 심사자, $500/월',
-          'DeepEval: RAG 파이프라인용 RAGAS 지표',
-          'LangSmith: 다단계 체인 트레이싱 및 디버깅',
-          'Phoenix: 프로덕션 실시간 관찰 가능성'
-        ],
-        updatedDate: '2026-04-10'
-      }
-    },
-    schema: {
+    ],    schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '프롬프트 테스트 도구 2026: Promptfoo, Braintrust, DeepEval',
@@ -2010,17 +1994,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
         { '@type': 'Thing', name: 'LLM Evaluation' },
         { '@type': 'Thing', name: 'CI/CD Testing' }
       ]
-    },
-    breadcrumbSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
-        { '@type': 'ListItem', position: 3, name: '프롬프트 테스트 및 평가 도구 2026', item: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-testing-evaluation-tools' }
-      ]
-    },
-    faqSchema: {
+    },    faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       inLanguage: 'ko',
@@ -2077,9 +2051,9 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       whyTestPrompts: {
         title: '왜 프롬프트를 테스트해야 합니까?',
         content: '**이 가이드는 테스트 및 평가 도구에만 초점을 맞춥니다.** 프롬프트 엔지니어링 도구의 전체 개요는 [최고의 프롬프트 엔지니어링 도구 2026](/ko/prompt-engineering/best-prompt-engineering-tools-2026)을 참조하십시오. 팀 협업 기능은 [팀을 위한 최고의 프롬프트 최적화 도구](/ko/prompt-engineering/best-prompt-optimization-tools-for-teams)를 참조하십시오.\n\n**프롬프트 변경은 프로덕션을 중단시킵니다.** 단 하나의 재작성이 정확도를 5–10% 떨어뜨리거나 엣지 케이스를 놓치거나 톤을 바꿀 수 있습니다. 2026년 4월 기준, 대부분의 기업은 프롬프트를 전혀 테스트하지 않고 변경 사항을 임시로 전달합니다. 테스트는 사용자에게 도달하기 전에 회귀를 감지합니다. 두 가지 워크플로가 있습니다: [CI/CD](/ko/prompt-engineering/ci-cd-for-prompts)에서 빠른 단위 테스트 (초 단위, 자동화) 및 오프라인 느린 배치 평가 (분~시간, 인간 검토). 테스트 없이는 안전하게 반복할 수 없습니다.',
-        snippetBlocks: [
-          { type: 'one-sentence', text: '프롬프트 테스트는 LLM 출력이 배포 전에 품질 임계값을 충족하는지 자동으로 검증합니다.' },
-          { type: 'plain-terms', text: '프롬프트에 대한 단위 테스트처럼 생각하십시오: "올바름"이 어떤 모습인지 정의한 다음 모든 커밋을 해당 기준으로 실행합니다.' }
+        snippets: [
+          { type: 'in-one-sentence', text: '프롬프트 테스트는 LLM 출력이 배포 전에 품질 임계값을 충족하는지 자동으로 검증합니다.' },
+          { type: 'in-plain-terms', text: '프롬프트에 대한 단위 테스트처럼 생각하십시오: "올바름"이 어떤 모습인지 정의한 다음 모든 커밋을 해당 기준으로 실행합니다.' }
         ],
         callouts: [
           { type: 'Warning', label: '테스트를 건너뛰지 마십시오', text: '프롬프트 테스트 없이 배포하면 팀이 CI가 아닌 사용자를 통해 회귀를 발견하게 됩니다. 프롬프트당 단 5개의 테스트 케이스만으로도 일반적인 회귀의 80%를 감지할 수 있습니다.' }
@@ -2088,8 +2062,8 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       promptfoo: {
         title: 'Promptfoo: 빠른 CI/CD 테스트',
         content: '**Promptfoo는 오픈 소스, CLI 기반으로 CI/CD 파이프라인용으로 만들어졌습니다.** 초 단위로 실행되고, 모든 커밋에서 회귀를 감지하며, 점수가 떨어지면 빌드를 실패시킵니다. 프롬프트와 테스트 케이스가 포함된 YAML 구성을 작성하고, promptfoo eval을 실행하면 점수를 얻을 수 있습니다. Promptfoo는 문자열 유사도, regex, [LLM-as-judge](/ko/prompt-engineering/llm-as-judge-evaluation) 및 사용자 정의 평가기를 지원합니다.',
-        snippetBlocks: [
-          { type: 'one-sentence', text: 'Promptfoo는 CI/CD 파이프라인에서 초 단위로 프롬프트 회귀 테스트를 실행하는 무료 오픈 소스 CLI 도구입니다.' }
+        snippets: [
+          { type: 'in-one-sentence', text: 'Promptfoo는 CI/CD 파이프라인에서 초 단위로 프롬프트 회귀 테스트를 실행하는 무료 오픈 소스 CLI 도구입니다.' }
         ],
         callouts: [
           { type: 'Pro Tip', label: '여기서 시작하십시오', text: 'Promptfoo는 프롬프트 CI/CD 테스트의 가장 빠른 경로입니다: YAML 파일 하나, CLI 명령 하나. 기존 GitHub Actions 파이프라인과의 통합은 약 15분이 소요됩니다.' }

@@ -1924,4 +1924,247 @@ schema: {
         },
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: '도구 및 인터페이스',
+      title: 'LM Studio 고급 기능 2026: GPU 설정, LoRA, 파인튜닝',
+      seoTitle: 'LM Studio vs Ollama: API 서버, GPU 레이어 & LoRA 2026',
+      intro: 'LM Studio는 기본적으로 채팅 앱이지만, 개발자를 위한 고급 기능도 포함하고 있습니다. GPU 메모리 구성, 컨텍스트 창 조정, OpenAI 호환 API, 파인튜닝 도구와의 통합이 가능합니다. 2026년 4월 기준으로 LM Studio는 채팅을 넘어 LoRA 파인튜닝과 배치 추론 등 전문적인 워크플로우를 지원하는 방향으로 확장되고 있습니다.',
+      metaDescription: 'LM Studio의 API 서버(포트 1234), GPU 레이어 슬라이더, 컨텍스트 창 조정, LoRA 로드/언로드, 배치 추론에 대한 2026년 고급 가이드입니다.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**LM Studio는 기본적으로 채팅 앱이지만, 개발자를 위한 고급 기능도 포함하고 있습니다. GPU 메모리 구성, 컨텍스트 창 조정, OpenAI 호환 API, 파인튜닝 도구와의 통합 기능을 제공합니다.**',
+      audience: '프로덕션 또는 엔터프라이즈 환경에서 로컬 LLM을 배포하는 엔지니어',
+      readTime: '9분 읽기',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'LM Studio 고급',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'LM Studio 고급 기능 2026: GPU, API, 파인튜닝',
+        'description': 'LM Studio 고급 기능: GPU 최적화, 컨텍스트 창, API, 배치 추론. 로컬 LLM 프로덕션 워크플로우를 위한 개발자 가이드 2026.',
+        'url': 'https://www.promptquorum.com/local-llms/lm-studio-advanced-features',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-18',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'LM Studio' },
+          { '@type': 'Thing', 'name': 'GPU 최적화' },
+          { '@type': 'Thing', 'name': 'LoRA 파인튜닝' },
+          { '@type': 'Thing', 'name': '로컬 LLM 추론' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
+        },
+        'educationalLevel': 'Advanced',
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'LM Studio 고급 기능 구성하기',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'GPU 메모리 구성', 'text': '설정 → GPU 가속 슬라이더를 엽니다. VRAM의 10~100% 범위에서 조정합니다. 낮은 값은 다른 앱을 위해 GPU를 확보하고, 높은 값은 추론 속도를 최대화합니다.' },
+          { '@type': 'HowToStep', 'name': '컨텍스트 창 조정', 'text': '설정에서 모델 한계까지 컨텍스트 길이를 늘립니다. 컨텍스트가 길수록 VRAM을 더 많이 사용하지만, 기록을 잃지 않고 더 긴 대화를 이어갈 수 있습니다.' },
+          { '@type': 'HowToStep', 'name': '로컬 API(베타) 활성화', 'text': '설정에서 로컬 API를 활성화하면 localhost:1234에 OpenAI 호환 엔드포인트가 노출됩니다. OpenAI 호환 클라이언트와 통합할 수 있습니다.' },
+          { '@type': 'HowToStep', 'name': 'LoRA 파인튜닝 설정', 'text': '2026년 4월 기준으로 LoRA 파인튜닝은 LM Studio에 내장되어 있지 않습니다. 파인튜닝 워크플로우에는 Text-Generation-WebUI 또는 학습 스크립트를 사용하십시오.' },
+          { '@type': 'HowToStep', 'name': '배치 추론 실행', 'text': '배치 모드를 사용하여 여러 프롬프트를 한 번에 처리합니다. 평가, 테스트, 대규모 추론 작업에 유용합니다.' },
+          { '@type': 'HowToStep', 'name': '성능 벤치마킹', 'text': '성능 탭에서 토큰/초, 지연 시간, VRAM 사용량을 측정합니다. GPU/컨텍스트 변경 후 개선 사항을 확인하기 위해 벤치마크를 실행하십시오.' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'LM Studio에서 컨텍스트 창을 늘리면 어떤 영향이 있습니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '컨텍스트가 길수록 모델이 더 많은 대화 기록을 기억할 수 있지만, VRAM 사용량과 지연 시간이 증가합니다. 2K 컨텍스트는 512 토큰 컨텍스트보다 약 2배의 VRAM을 사용합니다. 변경 후 반드시 벤치마크를 실행하십시오.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio에서 GPU 가속을 100%로 설정해야 합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '항상 그런 것은 아닙니다. LM Studio만 실행하는 경우 최대 속도를 위해 100%를 사용하십시오. 브라우저, IDE 또는 다른 GPU 작업을 위해 VRAM 여유가 필요하면 50~75%로 줄이십시오. 각 수준에서 추론 속도를 측정하십시오.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio를 다른 앱의 백엔드로 어떻게 사용합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '설정에서 로컬 서버를 활성화하십시오. localhost:1234에 OpenAI 호환 엔드포인트가 노출됩니다. OpenAI SDK(Python, Node.js)에서 이 URL을 base_url로 지정하면 로컬 모델을 사용할 수 있습니다.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio는 LoRA 파인튜닝을 지원합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '2026년 4월 기준으로 LoRA 파인튜닝은 LM Studio에 내장되어 있지 않습니다. 파인튜닝에는 Unsloth 또는 llama.cpp 학습 스크립트를 사용하십시오. LM Studio는 디스크에서 LoRA 어댑터 파일을 로드하여 실행할 수 있습니다.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio에서 배치 추론은 어떻게 실행합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio 로컬 API와 루프를 사용하십시오. /v1/chat/completions에 다른 프롬프트로 여러 POST 요청을 전송합니다. 2026년 4월 기준으로 LM Studio는 각 요청을 순차적으로 처리합니다.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio에서 모델 속도를 어떻게 벤치마킹합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio는 추론 중 상태 표시줄에 토큰/초를 표시합니다. 성능 탭에서 지연 시간 지표, VRAM 사용량, 생성 속도를 확인할 수 있습니다. 안정적인 벤치마크를 얻으려면 긴 프롬프트를 실행하십시오.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio에서 temperature와 top-p를 조정할 수 있습니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '가능합니다. 채팅 패널의 설정 아이콘(기어)을 클릭하면 temperature, top-p, top-k, 반복 페널티 슬라이더에 접근할 수 있습니다. temperature 기본값은 0.7이며, 낮을수록 더 결정론적인 출력을 제공합니다.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio에서 커스텀 GGUF 모델을 어떻게 로드합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '.gguf 파일을 수동으로 다운로드하여 LM Studio 모델 디렉토리(macOS/Linux에서는 ~/.lmstudio/models)에 저장하십시오. LM Studio가 이 폴더를 스캔하여 모델 선택기에 커스텀 모델을 표시합니다.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio에서 코딩 작업 속도를 개선하는 설정은 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '가장 빠른 추론을 위해 Q4_K_M 양자화를 사용하십시오. 컨텍스트 창을 4K로 설정하면 코드 파일에 충분합니다. GPU 오프로드를 100%로 활성화하십시오. 강력한 코딩 지원 모델(Qwen3-Coder, DeepSeek-Coder)을 사용하십시오.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio에서 테스트를 위해 채팅 기록을 비활성화할 수 있습니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '가능합니다. "새 채팅"을 클릭하면 새로 시작할 수 있습니다. API 기반 테스트에서는 messages 배열에서 이전 메시지를 제거하고 시스템 프롬프트와 사용자 메시지만 전송하십시오. 이렇게 하면 제로 컨텍스트 추론을 시뮬레이션할 수 있습니다.' }
+          }
+        ]
+      },
+
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: 'GPU 메모리 구성', anchor: '#gpu-memory' },
+        { label: '컨텍스트 창 조정', anchor: '#context-window' },
+        { label: 'LM Studio 로컬 API(베타)', anchor: '#local-api' },
+        { label: '영상: LM Studio로 Claude Code 실행하기', anchor: '#video-walkthrough' },
+        { label: 'LoRA 및 파인튜닝', anchor: '#lora-finetuning' },
+        { label: '배치 추론', anchor: '#batch-inference' },
+        { label: '성능 벤치마킹', anchor: '#benchmarking' },
+        { label: '자주 하는 실수', anchor: '#common-mistakes' },
+        { label: '자주 묻는 질문', anchor: '#common-questions' },
+        { label: '관련 읽기', anchor: '#related-reading' },
+        { label: '출처', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'LM Studio에는 설정 → 서버 탭에 고급 설정이 있습니다(GPU 옵션, 컨텍스트 길이).',
+            'GPU 메모리는 VRAM의 10%에서 100%까지 수동으로 설정할 수 있으며, 낮은 값으로 설정하면 다른 앱을 위해 GPU를 확보할 수 있습니다.',
+            '컨텍스트 창(모델이 볼 수 있는 토큰 수)은 모델 한계까지 확장할 수 있지만, VRAM을 더 많이 사용합니다.',
+            '로컬 API(베타)는 localhost:1234에 OpenAI 호환 엔드포인트를 노출하여 통합을 지원합니다.',
+            '2026년 4월 기준으로 LoRA 파인튜닝은 LM Studio에 아직 내장되어 있지 않습니다. Text-Generation-WebUI 또는 학습 스크립트를 대신 사용하십시오.',
+          ],
+        },
+        gpuMemory: {
+          title: 'LM Studio에서 GPU 메모리를 어떻게 구성합니까?',
+          content: 'LM Studio에서는 모델이 사용하는 GPU VRAM 양을 제어할 수 있습니다:',
+          items: [
+            '1. **설정**(왼쪽 하단 기어 아이콘)을 클릭합니다.',
+            '2. **GPU 가속** 슬라이더를 찾습니다(기본값: 100%).',
+            '3. VRAM의 50%를 GPU에 사용하려면 슬라이더를 50%로 조정합니다. 나머지는 다른 애플리케이션을 위해 확보됩니다.',
+            '4. GPU 할당을 낮추면 추론 속도는 느려지지만 동시에 실행되는 앱을 위한 여유 공간이 늘어납니다.',
+            '5. 변경 사항을 적용하려면 **재시작**을 클릭합니다.',
+          ],
+        },
+        contextWindow: {
+          title: '컨텍스트 창을 어떻게 확장합니까?',
+          content: '컨텍스트 창은 모델이 읽을 수 있는 최대 토큰(텍스트) 수입니다. 확장하면 더 긴 대화가 가능하지만 VRAM을 더 많이 사용합니다.',
+          items: [
+            '1. 설정 → 서버를 엽니다.',
+            '2. **컨텍스트 길이**를 찾습니다(기본값: 모델 내장 한계).',
+            '3. 모델 지원에 따라 4k, 8k, 16k, 32k로 늘립니다.',
+            '4. 컨텍스트 길이를 두 배로 늘릴 때마다 VRAM 사용량도 약 두 배가 됩니다.',
+            '5. 채팅을 시작하고 긴 프롬프트를 제공하여 확장된 컨텍스트를 테스트하십시오.',
+          ],
+        },
+        localAPI: {
+          title: 'LM Studio의 로컬 API(베타)를 어떻게 활성화합니까?',
+          content: 'LM Studio의 로컬 API(2026년 4월 기준 베타)는 OpenAI API를 모방합니다:',
+          codeBlock: '# 1. LM Studio 설정 → 서버를 엽니다\n# 2. "로컬 API 서버 활성화"를 켭니다\n# 3. API는 http://localhost:1234/v1에서 실행됩니다\n\n# 4. Ollama와 동일하게 사용합니다:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="not-needed"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        videoWalkthrough: {
+          id: 'video-walkthrough',
+          title: '영상: 로컬 하드웨어에서 LM Studio로 Claude Code 실행하기',
+          content: '이 커뮤니티 워크스루에서 한 개발자가 RTX 5090에서 Qwen 3.5를 사용해 Claude Code를 실행하는 방법을 시연합니다. LM Studio Link를 사용하여 Linux GPU 머신을 MacBook에 연결하며, 클라우드 API 키가 전혀 필요하지 않습니다. 이 영상은 전체 설정 과정을 다루며 로컬 AI 추론만을 사용하여 Next.js 대시보드를 처음부터 구축하는 과정을 보여줍니다.',
+          youtubeUrl: 'https://www.youtube.com/watch?v=3zSANOIBHYw',
+        },
+        lora: {
+          title: 'LM Studio로 모델을 파인튜닝할 수 있습니까?',
+          content: [
+            '**2026년 4월 기준으로 LM Studio에는 LoRA 파인튜닝 기능이 내장되어 있지 않습니다.** 파인튜닝에는 다음을 사용하십시오:',
+            '- **Text-Generation-WebUI** (LoRA에 가장 쉬운 방법)',
+            '- **LLaMA-Factory** (고급, 프로덕션 수준)',
+            '- **unsloth** (가장 빠르고 VRAM 사용 최적)',
+            'LM Studio는 사전 학습된 LoRA 어댑터를 적용하는 데는 적합하지만, 새로운 어댑터를 학습하는 데는 적합하지 않습니다. 향후 버전에서 LoRA 학습 기능이 추가될 수 있습니다.',
+          ],
+        },
+        batch: {
+          title: 'LM Studio에서 배치 추론을 어떻게 실행합니까?',
+          content: [
+            '**배치 추론은 응답을 기다리지 않고 여러 프롬프트를 처리하는 것을 의미합니다.** LM Studio에는 내장된 배치 모드가 없지만, API나 Python 루프를 통해 시뮬레이션할 수 있습니다:',
+          ],
+          codeBlock: '# Python: LM Studio API를 통한 배치 추론\nfrom openai import OpenAI\nimport json\n\nclient = OpenAI(base_url="http://localhost:1234/v1", api_key="x")\n\nprompts = [\n  "What is 2+2?",\n  "Explain quantum computing",\n  "How do transformers work?"\n]\n\nresults = []\nfor prompt in prompts:\n  response = client.chat.completions.create(\n    model="llama-3.2-3b-gguf",\n    messages=[{"role": "user", "content": prompt}]\n  )\n  results.append({\n    "prompt": prompt,\n    "response": response.choices[0].message.content\n  })\n\nwith open("batch_results.json", "w") as f:\n  json.dump(results, f, indent=2)',
+          codeLanguage: 'python',
+        },
+        benchmarking: {
+          title: 'LM Studio에서 모델 속도를 어떻게 벤치마킹합니까?',
+          content: 'LM Studio에는 내장 벤치마크 도구가 포함되어 있습니다:',
+          items: [
+            '1. LM Studio에서 모델을 로드합니다.',
+            '2. **설정** → **벤치마크** 탭을 클릭합니다.',
+            '3. **벤치마크 실행**을 클릭합니다. 특정 하드웨어에 대한 토큰/초를 측정합니다.',
+            '4. 결과는 채팅 오버헤드 없이 기준 성능을 보여줍니다.',
+            '이를 통해 프로덕션에 배포하기 전에 예상 속도를 파악할 수 있습니다.',
+          ],
+        },
+        commonMistakes: {
+          title: 'LM Studio 고급 기능에서 자주 하는 실수',
+          items: [
+            '**GPU 할당을 너무 낮게 설정하고 느린 속도를 모델 탓으로 돌리는 것.** GPU를 10%로 설정하면 대부분 CPU에서 실행되어 추론 속도가 5~10배 느려집니다. 먼저 GPU 할당을 80% 이상으로 테스트하십시오.',
+            '**모델 지원 범위를 초과하여 컨텍스트 창을 확장하는 것.** 모델에는 최대 지원 컨텍스트 길이가 있습니다. 그 이상으로 확장해도 기능이 추가되지 않으며 VRAM만 낭비됩니다.',
+            '**LM Studio에서 LoRA 학습을 기대하는 것.** 2026년 4월 기준으로 이 기능은 제공되지 않습니다. Text-Generation-WebUI 또는 학습 라이브러리를 사용하십시오.',
+            '**API를 명시적으로 활성화해야 한다는 것을 잊는 것.** 로컬 API는 기본적으로 꺼져 있습니다. 설정 → 서버에서 활성화하십시오.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'LM Studio 고급 기능에 대한 자주 묻는 질문',
+          faqs: [
+            {
+              q: 'LM Studio API와 Ollama API의 차이점은 무엇입니까?',
+              a: '둘 다 OpenAI 호환 엔드포인트를 노출합니다. LM Studio API는 localhost:1234에서, Ollama는 localhost:11434에서 실행됩니다. 동일하게 작동합니다. 채팅에 선호하는 도구를 선택하십시오.',
+            },
+            {
+              q: 'LM Studio API를 프로덕션에서 사용할 수 있습니까?',
+              a: '작동하지만 Ollama API가 더 성숙합니다. LM Studio API는 베타 상태입니다. 프로덕션에서는 Ollama가 더 안전한 선택입니다.',
+            },
+            {
+              q: 'GPU 할당을 낮추면 VRAM 요구 사항이 줄어듭니까?',
+              a: '그렇습니다. GPU 할당을 50%로 낮추면 VRAM 사용량이 약 절반으로 줄어들지만, 모델이 부분적으로 CPU에서 실행되어 추론 속도가 2~5배 느려집니다.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 읽기',
+          items: [
+            '[LM Studio 설치 방법](/local-llms/how-to-install-lm-studio) -- 설치 가이드.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 상세 비교.',
+            '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- API 문서.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 추론 엔진.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            'LM Studio 문서 -- lmstudio.ai/docs',
+            'LM Studio 로컬 서버(베타) -- lmstudio.ai/docs/local-server/overview',
+            'OpenAI API 호환성 -- platform.openai.com/docs/api-reference',
+            '고급 모델 파라미터는 고급 프롬프팅 기술을 가능하게 합니다. 잠금 해제 방법: [chain-of-thought prompting](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting)에서 로컬 모델에서 다단계 추론을 구성하는 방법을 안내합니다.',
+          ],
+        },
+      },
+    },
   };

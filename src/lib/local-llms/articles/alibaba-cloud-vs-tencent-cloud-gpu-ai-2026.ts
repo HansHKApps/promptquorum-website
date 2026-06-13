@@ -1598,4 +1598,319 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/zh/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-05-26',
+    dateModified: '2026-05-26',
+    next_refresh_due: '2026-11-26',
+    theme: '비용 및 비교',
+    title: 'Alibaba Cloud vs Tencent Cloud GPU AI 2026 비교: 완전 분석',
+    seoTitle: 'Alibaba vs Tencent Cloud GPU 2026: Qwen 성능 및 가격 비교',
+    metaDescription:
+      'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL — 2026년 중국 AI GPU 렌탈 비교: 가격, Qwen 추론 성능, 데이터 레지던시, 설정 가이드.',
+    affiliateDisclosure: true,
+    educationalLevel: 'Intermediate',
+    audience:
+      '중국 또는 중국 기반 워크로드를 운영하는 개발자 및 연구자로, LLM 추론과 파인튜닝을 위해 중국 클라우드 GPU 공급자를 선택하려는 분.',
+    readTime: '13분 읽기',
+    primaryTerm: '중국 클라우드 GPU 비교',
+    targetKeywords: [
+      'alibaba cloud gpu ai',
+      'tencent cloud gpu 렌탈',
+      'autodl gpu 비교',
+      '중국 클라우드 gpu llm',
+      'aliyun vs tencent cloud ai 2026',
+    ],
+    current_models_mentioned: [
+      'Qwen3 72B',
+      'DeepSeek-V3',
+      'Qwen3-Coder 32B',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'NVIDIA A10 24 GB',
+      'NVIDIA A100 40 GB',
+      'NVIDIA A100 80 GB',
+      'NVIDIA H100 80 GB',
+    ],
+    leadAnswerBlock:
+      '**AutoDL은 버스트 추론에 가장 저렴한 중국 GPU 클라우드입니다 (A100 40 GB 스팟가 ¥2.5/시간, 약 $0.34). Alibaba Cloud PAI는 Qwen 최적화 추론 런타임이 가장 우수하며, Alibaba Tongyi 에코시스템 연동 시 필수입니다. Tencent Cloud TI Platform은 WeChat/Tencent 에코시스템 팀에 최적의 선택입니다. 세 공급자 모두 중국 본토 내 데이터 레지던시를 지원합니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 AI를 위한 최고의 중국 클라우드 GPU 공급자는?',
+        answer:
+          'AutoDL은 저비용 버스트 추론에 적합합니다 (중국 내 GPU 시간당 최저가). Alibaba Cloud PAI는 Qwen 전용 추론에 최적입니다 (사전 최적화 런타임, Alibaba 에코시스템에 최적). Tencent Cloud TI는 WeChat 연동 및 Tencent 에코시스템 사용자에게 적합합니다. 세 공급자 모두 네트워크 성능 및 규제 이점으로 인해 중국에서 AWS/GCP보다 저렴합니다.',
+        bullets: [
+          'AutoDL A100 40 GB: ¥2.5/시간부터 (스팟) — 클래스 최저가',
+          'Alibaba Cloud PAI A100 80 GB: ¥6–10/시간 (~$0.82–1.37) — Qwen 최적화',
+          'Tencent Cloud TI A10 24 GB: ¥3.5–5/시간 (~$0.48–0.68)',
+          '세 공급자 모두 중국 본토 내 데이터 보관 지원 (PIPL 준수에 중요)',
+          'AutoDL은 국제 신용카드 불필요; Alibaba Cloud는 전 세계 카드 허용',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '공급자 개요', anchor: '#providers' },
+      { label: '가격 비교', anchor: '#pricing' },
+      { label: 'Qwen 추론 성능', anchor: '#qwen-performance' },
+      { label: '데이터 레지던시 및 규정 준수', anchor: '#compliance' },
+      { label: '설정 가이드', anchor: '#setup' },
+      { label: '사용 사례별 결론', anchor: '#verdict' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        title: '핵심 요약',
+        items: [
+          'AutoDL은 가장 저렴한 중국 GPU 클라우드입니다 — A100 40 GB 스팟 ¥2.5/시간, 온디맨드 ¥4.5/시간. 개발 및 버스트 파인튜닝에 최적입니다.',
+          'Alibaba Cloud PAI에는 사전 구성된 Qwen 추론 환경이 있으며, 표준 Ollama보다 20–30% 빠릅니다. Alibaba Cloud Tongyi 에코시스템 연동 시 필수입니다.',
+          'Tencent Cloud TI Platform은 WeChat 및 Tencent 에코시스템과의 통합이 가장 깊습니다. AI 기능을 갖춘 WeChat 미니 프로그램을 개발하는 팀에 최적입니다.',
+          '세 공급자 모두 중국 본토 내 데이터 레지던시를 지원합니다 — 개인정보 보호법(PIPL) 준수에 매우 중요합니다.',
+          '신규 계정 혜택: Alibaba Cloud는 신규 사용자에게 ¥300 무료 크레딧을 제공합니다. AutoDL은 ¥10 무료 GPU 크레딧을 제공합니다 (A100 테스트 2–4시간 분량).',
+          '중국 클라우드를 사용하는 해외 개발자: Alibaba Cloud International은 국제 신용카드와 영문 콘솔을 지원합니다. AutoDL과 Tencent Cloud는 중국 은행 카드 또는 Alipay가 필요합니다.',
+          'Qwen3 72B는 Alibaba DAMO Academy Qwen 팀이 개발한 Qwen 최적화 추론 런타임 덕분에 Alibaba Cloud PAI에서 가장 빠르게 실행됩니다.',
+        ],
+      },
+      snippets: {
+        id: 'snippets',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'AutoDL은 A100 40 GB 기준 ¥2.5–4.5/시간으로 중국 내 최저가 GPU 클라우드이며, Alibaba Cloud PAI는 Qwen 추론 성능이 가장 우수하고, Tencent Cloud TI는 WeChat 에코시스템에 최적입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '중국 GPU 클라우드는 AWS/GCP와 유사하지만 중국 내에 서버가 있으며, 중국 워크로드에 대해 시간당 비용이 저렴하고 중국 데이터 법률을 준수합니다. AutoDL은 스타트업 친화적이고, Alibaba와 Tencent는 기업급입니다.',
+          },
+        ],
+      },
+      providers: {
+        id: 'providers',
+        title: '공급자 개요',
+        content:
+          '**AI 워크로드용 중국 클라우드 GPU 렌탈 시장은 세 플랫폼이 주도하고 있습니다: AutoDL (개발자 중심, 최저가), Alibaba Cloud PAI (기업급, Qwen 최적화), Tencent Cloud TI Platform (WeChat 에코시스템).** 네 번째 옵션인 Baidu AI Cloud는 ERNIE 연동으로 주목받지만, 일반적으로 비용이 더 높고 GPU 다양성이 부족합니다.',
+        items: [
+          '**AutoDL (autodl.com):** 2020년 설립된 커뮤니티 중심 GPU 클라우드로, 개인 연구자와 스타트업에서 지배적입니다. 중국 내 최대 GPU 재고를 보유합니다. RTX 4090, A100, H100을 지원합니다. 결제: Alipay/WeChat Pay. 기업 계약 불필요. 콘솔은 중국어 전용입니다.',
+          '**Alibaba Cloud PAI (aliyun.com/product/bigdata/learn):** Qwen 최적화 추론을 갖춘 기업급 ML 플랫폼입니다. Qwen 모델을 개발한 Alibaba 그룹 소유입니다. Alibaba 에코시스템(DingTalk, Taobao 데이터셋, OSS 스토리지)과 깊이 통합되어 있습니다. Alibaba Cloud International 포털을 통해 국제 신용카드 결제가 가능합니다.',
+          '**Tencent Cloud TI Platform (cloud.tencent.com/product/tione):** WeChat, WeCom, Tencent 게임/미디어 데이터셋과 통합된 ML 플랫폼입니다. Tencent 에코시스템에서 소비자 AI 제품을 개발하는 팀에 최적입니다. Hunyuan LLM이 이 플랫폼의 네이티브 모델입니다.',
+          '**Baidu AI Cloud (qianfan.cloud.baidu.com):** ERNIE Bot 및 Baidu 검색 에코시스템과 통합되어 있습니다. 문서 AI 및 검색 강화 워크플로에 경쟁력이 있지만, 동급 하드웨어 기준 GPU 렌탈 가격이 AutoDL보다 15–30% 높습니다.',
+        ],
+      },
+      pricing: {
+        id: 'pricing',
+        title: 'GPU 가격 비교 — 2026년 5월',
+        content:
+          '**AutoDL이 일관되게 가장 저렴합니다. Alibaba Cloud PAI는 40–80% 높지만 최적화 소프트웨어 스택을 포함합니다. Tencent Cloud TI는 중간 수준입니다.** 모든 가격은 CNY(¥) 기준입니다. USD는 ¥7.25/USD로 환산한 근사값입니다.',
+        columns: ['GPU', 'AutoDL (스팟)', 'AutoDL (온디맨드)', 'Alibaba PAI', 'Tencent Cloud TI', 'USD 환산 (AutoDL 온디맨드)'],
+        rows: [
+          { '0': 'RTX 4090 24 GB', '1': '¥1.5–2.5/시간', '2': '¥3.5/시간', '3': '없음', '4': '없음', '5': '~$0.48/시간' },
+          { '0': 'A10 24 GB', '1': '¥1.8–3/시간', '2': '¥4/시간', '3': '¥3.5–5/시간', '4': '¥3.5–5/시간', '5': '~$0.55/시간' },
+          { '0': 'A100 40 GB', '1': '¥2.5–4/시간', '2': '¥4.5/시간', '3': '¥6–8/시간', '4': '¥5.5–7/시간', '5': '~$0.62/시간' },
+          { '0': 'A100 80 GB', '1': '¥4–6/시간', '2': '¥7/시간', '3': '¥8–12/시간', '4': '¥7.5–10/시간', '5': '~$0.97/시간' },
+          { '0': 'H100 80 GB', '1': '¥8–12/시간', '2': '¥14/시간', '3': '¥18–25/시간', '4': '¥18–24/시간', '5': '~$1.93/시간' },
+        ],
+        note: '가격은 2026년 5월 각 공급자 콘솔에서 수집되었습니다. 스팟 가격은 시간대별로 변동되며 베이징 시간 자정~오전 6시 사이가 가장 저렴합니다. AutoDL 스팟 가격은 온디맨드 대비 40–60% 저렴할 수 있습니다.',
+        affiliateLinks: [
+          {
+            url: 'https://www.aliyun.com',
+            productName: 'Alibaba Cloud (International)',
+            productCategory: 'cloud-gpu',
+            priceRange: '¥3.5/시간부터',
+            label: 'Alibaba Cloud에서 ¥300 무료 크레딧 받기 →',
+          },
+          {
+            url: 'https://cloud.tencent.com/product/gpu',
+            productName: 'Tencent Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '¥3.5/시간부터',
+            label: 'Tencent Cloud TI Platform 체험하기 →',
+          },
+        ],
+      },
+      qwenPerformance: {
+        id: 'qwen-performance',
+        title: '공급자별 Qwen 추론 성능',
+        content:
+          '**Alibaba Cloud PAI는 동급 하드웨어 대비 다른 플랫폼보다 Qwen 모델을 20–30% 빠르게 실행합니다.** 이 성능 우위는 Alibaba DAMO Academy Qwen 팀이 공동 개발한 PAI-EAS 추론 런타임에서 비롯됩니다. 이 팀은 Qwen을 직접 학습시키는 팀으로, 외부 공급자가 접근할 수 없는 모델 내부 정보를 보유하고 있습니다.',
+        columns: ['플랫폼', 'GPU', 'Qwen3 72B 속도 (tok/s)', '첫 토큰 지연', '비고'],
+        rows: [
+          { '0': 'Alibaba Cloud PAI (PAI-EAS)', '1': 'A100 80 GB', '2': '22–28 tok/s', '3': '~120ms', '4': 'Qwen 최적화 런타임, FlashAttention 3' },
+          { '0': 'AutoDL (Ollama)', '1': 'A100 80 GB', '2': '16–20 tok/s', '3': '~180ms', '4': '표준 Ollama 스택, 최적화 없음' },
+          { '0': 'AutoDL (vLLM)', '1': 'A100 80 GB', '2': '19–24 tok/s', '3': '~150ms', '4': 'AWQ 양자화 적용 vLLM' },
+          { '0': 'Tencent Cloud TI (vLLM)', '1': 'A100 80 GB', '2': '17–22 tok/s', '3': '~160ms', '4': '표준 vLLM 스택' },
+          { '0': 'RunPod (서양, A100 80 GB)', '1': 'A100 80 GB', '2': '15–18 tok/s', '3': '~200ms', '4': '태평양 횡단 라우팅으로 지연 증가' },
+        ],
+      },
+      compliance: {
+        id: 'compliance',
+        title: '데이터 레지던시 및 PIPL 규정 준수',
+        content:
+          '**세 중국 공급자 모두 기본적으로 중국 본토 내에 데이터를 저장합니다 — PIPL 규제 워크로드에서 서양 공급자 대비 핵심 이점입니다.** 중국 개인정보 보호법(PIPL)은 명시적 사용자 동의 및 별도 법적 메커니즘 없이 개인 데이터를 중국 밖으로 전송하는 것을 제한합니다.',
+        items: [
+          'AutoDL: 모든 데이터가 중국 본토(베이징, 상하이, 광저우 데이터센터)에 저장됩니다. 공식 기업 SLA는 없지만 대부분의 연구 및 스타트업 워크로드에 적합합니다.',
+          'Alibaba Cloud PAI: 데이터 레지던시 보장을 포함한 완전한 기업 SLA를 제공합니다. 특정 리전(cn-beijing, cn-hangzhou, cn-shanghai) 선택이 가능합니다. PIPL 준수 문서가 제공됩니다.',
+          'Tencent Cloud TI: 기업 SLA, 중국 내 데이터 레지던시. WeChat 데이터 연동을 위해서는 별도의 WeChat Open Platform 계약이 필요합니다.',
+          '이 공급자들은 명시적 구성 없이는 국제 리전으로 데이터를 내보낼 수 없습니다 — 기본값은 중국 내 레지던시입니다.',
+          '중국 대상 제품을 위해 중국 클라우드를 사용하는 해외 개발자: Alibaba Cloud International이 영문 콘솔과 국제 결제 지원으로 가장 간편한 온보딩을 제공합니다.',
+        ],
+      },
+      setup: {
+        id: 'setup',
+        title: '설정 가이드 — 공급자별 빠른 시작',
+        content:
+          '**각 공급자마다 온보딩 방식이 다릅니다.** AutoDL이 가장 빠릅니다 (첫 GPU까지 5분). Alibaba Cloud PAI는 더 많은 설정이 필요하지만 Qwen 최적화 환경의 가치가 있습니다.',
+        numberedItems: [
+          { title: 'AutoDL: autodl.com에서 Alipay/WeChat Pay로 가입 → GPU 인스턴스 선택 → 커뮤니티 Docker 이미지에서 Qwen 환경 클론', whyItMatters: 'AutoDL 커뮤니티가 사전 빌드된 Qwen Docker 이미지를 호스팅하여 30분 이상의 환경 설정 시간을 절약할 수 있습니다.' },
+          { title: 'Alibaba Cloud PAI: aliyun.com (국제의 경우 intl.aliyun.com)에서 가입 → PAI 서비스 활성화 → DSW 노트북 실행 → Qwen 빠른 시작 환경 선택', whyItMatters: 'PAI-EAS는 원클릭 Qwen 배포를 지원하며 최적화 런타임을 자동으로 선택합니다.' },
+          { title: 'Tencent Cloud TI: cloud.tencent.com에서 가입 → TI Platform 활성화 → 노트북 인스턴스 생성 → Tencent 공식 Qwen/Hunyuan Jupyter 템플릿 사용', whyItMatters: 'Tencent의 Jupyter 템플릿에는 챗봇 프로젝트용 WeChat API 연동이 사전 구성되어 있습니다.' },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: '결론: 사용 사례별 중국 클라우드 GPU 선택 가이드',
+        content:
+          '**"전반적으로 최고"인 공급자가 아닌, 주요 워크로드에 따라 선택하십시오.**',
+        decisionBlock: {
+          title: '중국 클라우드 GPU 선택 기준',
+          localIf: [
+            '저비용 버스트 파인튜닝 또는 개발: AutoDL — GPU 시간당 최저가, 가장 빠른 가입',
+            '프로덕션 Qwen 모델 추론: Alibaba Cloud PAI — 런타임이 20–30% 빠르며 동일 모델 계열',
+            'WeChat 미니 프로그램 또는 WeCom AI 연동: Tencent Cloud TI — WeChat API 네이티브 연동',
+            '중국 대상 제품을 위한 PIPL 준수 추론: 세 공급자 모두 — 모두 중국 내 데이터 저장',
+          ],
+          cloudIf: [
+            '중국 거점 없는 해외 팀: RunPod, Vast.ai, Lambda Labs 사용 — 결제 및 영문 콘솔이 더 간편',
+            'Baidu 검색 연동 또는 ERNIE 모델: Baidu AI Cloud Qianfan — 네이티브 ERNIE 런타임',
+            '기업 SLA가 있는 장기 학습 작업: Alibaba Cloud PAI 또는 Tencent Cloud TI (둘 다 기업 SLA 보유)',
+          ],
+          quick: [
+            '최저가 GPU: AutoDL (A100 40 GB, ¥2.5/시간 스팟)',
+            '최고의 Qwen 추론: Alibaba Cloud PAI',
+            '최고의 WeChat 연동: Tencent Cloud TI',
+            '국제 가입: Alibaba Cloud International',
+          ],
+        },
+      },
+      internalLinks: {
+        id: 'see-also',
+        title: '관련 가이드',
+        items: [
+          '서양 클라우드 GPU 비교: /local-llms/cloud-gpu-rental-comparison-2026',
+          'Qwen 배포 가이드: /power-local-llm/qwen-local-deployment-complete-guide-2026',
+          '비용 계산기 (직접 구축 vs 렌탈): /local-llms/local-llm-cost-calculator-build-vs-rent-2026',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: '중국 외부에서 Alibaba Cloud GPU를 사용할 수 있습니까?',
+            a: '네. Alibaba Cloud International (intl.aliyun.com)은 국제 신용카드(Visa, Mastercard, American Express)를 허용하며 영문 콘솔을 제공합니다. International 포털과 중국 국내 포털은 별도 계정이며 가격이 다릅니다 — International 포털이 약간 더 비싸지만 비중국 사용자가 설정하기 더 쉽습니다.',
+          },
+          {
+            q: 'AutoDL은 프로덕션 추론에 충분히 신뢰할 수 있습니까?',
+            a: 'AutoDL은 연구 및 개발용으로 설계되었으며 프로덕션급 추론에는 적합하지 않습니다. 공식 SLA가 없으며 스팟 인스턴스는 짧은 예고로 선점될 수 있습니다. 가용성이 보장된 프로덕션 추론에는 온디맨드 인스턴스로 Alibaba Cloud PAI 또는 Tencent Cloud TI를 사용하십시오. AutoDL은 간헐적 중단이 허용되는 파인튜닝, 개발, 비용 민감형 배치 처리에 가장 적합합니다.',
+          },
+          {
+            q: 'Alibaba Cloud의 Qwen 추론은 직접 Ollama를 실행하는 것과 어떻게 다릅니까?',
+            a: 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다 (테스트: A100 80 GB, Qwen3 72B). 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 추론 런타임에서 비롯되며, 공개 Ollama 빌드에는 없는 Qwen 특화 주의 커널 및 KV-캐시 튜닝이 포함됩니다.',
+          },
+          {
+            q: '중국 클라우드 GPU를 테스트할 수 있는 무료 티어가 있습니까?',
+            a: 'Alibaba Cloud는 신규 계정에 ¥300 무료 크레딧을 제공합니다 (국제 사용자는 intl.aliyun.com을 통해). 약 30–40시간의 A10 추론이 가능한 분량입니다. Tencent Cloud는 신규 사용자를 위해 유사한 프로모션 크레딧을 제공합니다. AutoDL은 ¥10 무료 GPU 크레딧(A100 2–4시간)을 제공합니다. 영구 무료 GPU 티어를 제공하는 플랫폼은 없으며 모든 GPU 사용량은 과금됩니다.',
+          },
+          {
+            q: '중국 클라우드 플랫폼에서 Qwen3 72B에 가장 적합한 GPU는 무엇입니까?',
+            a: 'A100 80 GB가 단일 카드 Qwen3 72B 추론에 권장됩니다 — 양자화 없이 BF16 정밀도로 전체 모델이 VRAM에 맞습니다. Q4_K_M 양자화 시 Qwen3 72B (43.5 GB)는 A100 40 GB에도 들어가지만 품질이 약간 낮아집니다. H100 80 GB는 A100 80 GB보다 25–35% 빠르지만 시간당 비용이 2–2.5배 더 높습니다 — 지속적인 고처리량 프로덕션 워크로드에만 프리미엄 가치가 있습니다.',
+          },
+        ],
+      },
+      updateLog: {
+        id: 'update-log',
+        title: '업데이트 로그',
+        items: [
+          '2026-05-26: 최초 게시. 가격은 2026년 5월 AutoDL, Alibaba Cloud, Tencent Cloud 콘솔에서 수집되었습니다. 성능 벤치마크는 A100 80 GB 인스턴스에서 측정되었습니다.',
+          '다음 검토 예정: 2026-11-26',
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '중국 외부에서 Alibaba Cloud GPU를 사용할 수 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Alibaba Cloud International (intl.aliyun.com)은 국제 신용카드를 허용하며 영문 콘솔을 제공합니다. International 포털과 중국 국내 포털은 별도 계정이며 가격이 약간 다릅니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'AutoDL은 프로덕션 추론에 충분히 신뢰할 수 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'AutoDL은 연구 및 개발용으로 설계되었습니다. 공식 SLA가 없으며 스팟 인스턴스는 선점될 수 있습니다. 프로덕션 환경에는 온디맨드 인스턴스로 Alibaba Cloud PAI 또는 Tencent Cloud TI를 사용하십시오.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Alibaba Cloud PAI는 Qwen 추론에서 Ollama보다 얼마나 빠릅니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다. 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 런타임의 Qwen 특화 최적화에서 비롯됩니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '중국 클라우드 GPU를 테스트할 수 있는 무료 티어가 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Alibaba Cloud: 신규 계정 ¥300 무료 크레딧 (A10 추론 30–40시간 분량). Tencent Cloud: 유사한 프로모션 크레딧. AutoDL: ¥10 무료 GPU 크레딧 (A100 2–4시간). 영구 무료 GPU 티어를 제공하는 플랫폼은 없습니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '중국 클라우드 플랫폼에서 Qwen3 72B에 최적의 GPU는 무엇입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'A100 80 GB가 Qwen3 72B에 권장됩니다 — 양자화 없이 BF16로 전체 모델이 VRAM에 맞습니다. Q4_K_M 양자화 시 A100 40 GB에도 가능합니다. H100 80 GB는 25–35% 빠르지만 시간당 비용이 2–2.5배 더 높습니다.',
+          },
+        },
+      ],
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Alibaba Cloud vs Tencent Cloud GPU AI 2026 비교: 완전 분석',
+      description:
+        'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL — AI GPU 렌탈: 가격, Qwen 성능, 데이터 레지던시, 설정 가이드.',
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      url: 'https://www.promptquorum.com/ko/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
+      inLanguage: 'ko',
+      about: [
+        { '@type': 'Thing', name: 'Alibaba Cloud PAI' },
+        { '@type': 'Thing', name: 'Tencent Cloud TI Platform' },
+        { '@type': 'Thing', name: 'AutoDL' },
+        { '@type': 'Thing', name: '중국 클라우드 GPU' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Alibaba Cloud PAI' },
+        { '@type': 'SoftwareApplication', name: 'Tencent Cloud TI Platform' },
+        { '@type': 'SoftwareApplication', name: 'AutoDL' },
+        { '@type': 'SoftwareApplication', name: 'Ollama' },
+        { '@type': 'SoftwareApplication', name: 'vLLM' },
+      ],
+    },
+  },
 }

@@ -996,6 +996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
 },
+
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',

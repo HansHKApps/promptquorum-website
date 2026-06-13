@@ -153,4 +153,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'alibaba-cloud-vs-tencent-cloud-gpu-ai-2026':  'alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
   'best-gpu-for-llm-inference-under-500-2026':   'best-gpu-for-llm-inference-under-500-2026',
   'local-llm-cost-calculator-build-vs-rent-2026': 'local-llm-cost-calculator-build-vs-rent-2026',
+
+  // WWDC 2026 Apple on-device AI
+  'apple-on-device-ai-vs-local-llms':             'apple-on-device-ai-vs-local-llms',
 }

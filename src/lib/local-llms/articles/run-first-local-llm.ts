@@ -1510,4 +1510,207 @@ schema: {
         ]
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Getting Started',
+      title: '로컬 LLM 처음 실행하기: 설치부터 첫 응답까지 10분 완성',
+      seoTitle: '로컬 LLM 처음 실행하기 10분 완성 (단계별 안내)',
+      intro: 'Ollama를 사용하면 로컬 LLM을 10분 이내에 실행할 수 있습니다. Ollama를 설치하고 명령어 하나로 모델을 다운로드한 후, 터미널에서 바로 대화를 시작하십시오. API 키, 계정, 최초 다운로드 이후의 인터넷 연결이 전혀 필요하지 않습니다. 2026년 4월 기준, 초보자에게 가장 빠른 모델은 최신 노트북 CPU에서 초당 25~45 토큰을 처리하는 Llama 3.2 3B입니다.',
+      metaDescription: 'Ollama로 로컬 LLM을 10분 이내에 실행하십시오: 설치, 3B 모델 다운로드, 첫 응답 확인까지 — 다운로드 후에는 API 키나 인터넷이 필요 없습니다.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**Ollama를 사용하면 로컬 LLM을 10분 이내에 실행할 수 있습니다. Ollama를 설치하고 명령어 하나로 모델을 다운로드한 후, 터미널에서 바로 대화를 시작하십시오. API 키, 계정, 최초 다운로드 이후의 인터넷 연결이 전혀 필요하지 않습니다.**',
+      audience: '일반 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
+      readTime: '7분 읽기',
+      heroComponent: 'LLMImageSelector',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM',
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: '1단계: Ollama 설치', anchor: '#step-1-install-ollama' },
+        { label: '2단계: 첫 모델 선택', anchor: '#step-2-choose-your-first-model' },
+        { label: '3단계: 모델 다운로드', anchor: '#step-3-pull-the-model' },
+        { label: '4단계: 실행 및 대화', anchor: '#step-4-run-and-chat' },
+        { label: '속도 및 품질 기대치', anchor: '#what-to-expect' },
+        { label: '터미널 이후 활용', anchor: '#beyond-the-terminal' },
+        { label: '지역별 참고사항', anchor: '#regional-context' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
+        { label: '자주 하는 실수', anchor: '#common-mistakes' },
+        { label: '관련 읽기', anchor: '#related-reading' },
+        { label: '출처', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '가장 빠른 방법: Ollama 설치 → `ollama run llama3.2` 실행 → 터미널에서 대화 시작. 빠른 인터넷 환경에서 총 소요 시간은 5분 이내입니다.',
+            'RAM 8 GB 기기: `llama3.2:3b` (다운로드 2 GB) 또는 `phi4-mini` (2.3 GB)로 시작하십시오. 두 모델 모두 최신 노트북에서 실행됩니다.',
+            'CPU에서 초당 15~40 토큰, 중급 GPU 또는 Apple Silicon에서 초당 60~120 토큰을 기대하십시오.',
+            '첫 응답은 클라우드 API보다 느릴 수 있습니다. 로컬 모델은 속도 대신 프라이버시와 무료 이용을 제공합니다.',
+            '최초 모델 다운로드 이후에는 모든 처리가 오프라인으로 이루어집니다. 이후 세션에서는 인터넷 연결이 필요 없습니다.',
+          ],
+        },
+        step1: {
+          title: '1단계: Ollama 설치',
+          content: 'Ollama는 로컬 LLM을 가장 빠르게 실행할 수 있는 도구입니다. 명령어 하나 또는 2분 이내의 다운로드로 설치할 수 있습니다:',
+          codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: ollama.com/download에서 설치 파일을 다운로드하십시오',
+          codeLanguage: 'bash',
+        },
+        step1Detail: {
+          title: 'Ollama 실행 확인',
+          content: '설치 후 Ollama가 정상적으로 실행 중인지 확인하십시오:',
+          codeBlock: 'curl http://localhost:11434\n# 예상 출력: Ollama is running',
+          codeLanguage: 'bash',
+        },
+        step2: {
+          title: '2단계: 첫 모델 선택',
+          content: '사용 가능한 RAM에 따라 모델을 선택하십시오. 어떤 모델을 선택해야 할지 모르겠다면 `llama3.2:3b`로 시작하십시오. RAM 4 GB 이상의 모든 기기에서 실행되며 유용한 결과를 제공합니다:',
+          rows: [
+            { '보유 RAM': '4 GB', '권장 모델': 'llama3.2:1b', '다운로드 크기': '약 1.3 GB', '이유': '가장 작은 사용 가능한 Llama 모델' },
+            { '보유 RAM': '8 GB', '권장 모델': 'Llama 3.2 3B', '다운로드 크기': '약 2 GB', '이유': '초보자를 위한 최적의 품질/크기 비율' },
+            { '보유 RAM': '8~16 GB', '권장 모델': 'Llama 3.3 8B', '다운로드 크기': '약 4.7 GB', '이유': '강력한 범용 모델' },
+            { '보유 RAM': '16 GB 이상', '권장 모델': 'mistral:7b 또는 qwen2.5:7b', '다운로드 크기': '약 4~5 GB', '이유': '우수한 품질, 빠른 추론 속도' },
+          ],
+          columns: ['보유 RAM', '권장 모델', '다운로드 크기', '이유'],
+        },
+        step3: {
+          title: '3단계: 모델 다운로드',
+          content: '`ollama pull` 명령어로 모델을 다운로드하십시오. 모델은 `~/.ollama/models`에 저장되며 한 번만 다운로드하면 됩니다:',
+          codeBlock: 'ollama pull llama3.2\n\n# 또는 특정 크기 변형을 다운로드\nollama pull llama3.2:3b\nollama pull llama3.1:8b',
+          codeLanguage: 'bash',
+        },
+        step3Progress: {
+          title: '다운로드 진행 화면',
+          content: 'Ollama는 터미널에서 다운로드 진행 상황을 표시합니다. `llama3.2:3b` 모델은 일반적인 광대역 인터넷 환경에서 2~5분이 소요됩니다. 모델은 압축된 형태로 저장되므로 2 GB 다운로드가 디스크에서 약 2.3 GB로 늘어납니다.',
+          codeBlock: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess',
+          codeLanguage: 'text',
+        },
+        step4: {
+          id: 'step-4-run-and-chat',
+          title: '4단계: 모델 실행 및 첫 프롬프트 전송',
+          content: '대화형 채팅 세션을 시작하십시오:',
+          codeBlock: 'ollama run llama3.2\n\n# Ollama가 모델을 로드하고 프롬프트를 표시합니다:\n>>> Send a message (/? for help)',
+          codeLanguage: 'bash',
+        },
+        step4Chat: {
+          title: '첫 번째 대화',
+          content: '메시지를 입력하고 Enter 키를 누르십시오. 모델이 토큰 단위로 응답을 스트리밍합니다:',
+          codeBlock: '>>> What are local LLMs?\n\nLocal LLMs (large language models) are AI models that run entirely\non your own hardware -- your laptop, desktop, or server. Unlike cloud\nservices such as ChatGPT or Claude, local LLMs process everything\nlocally with no data sent to external servers...',
+          codeLanguage: 'text',
+        },
+        whatToExpect: {
+          id: 'what-to-expect',
+          title: '속도, 품질 및 한계 기대치',
+          content: [
+            '**속도**는 하드웨어에 따라 다릅니다. 2023년형 노트북(GPU 없음): 3B 모델에서 초당 15~25 토큰, 8B 모델에서 초당 8~15 토큰을 기대하십시오. Apple M3 Pro: 8B 모델에서 초당 50~80 토큰. NVIDIA RTX 4070 Ti: 8B 모델에서 초당 90~130 토큰.',
+            '`llama3.2:3b`의 **품질**은 복잡한 작업에서 GPT-5.5나 Claude Opus 4.8보다 눈에 띄게 낮습니다. 요약, 간단한 Q&A, 코드 설명에서는 충분히 유용한 결과를 제공합니다. 다단계 추론이나 장문 작성에는 8B 또는 13B 모델로 업그레이드하십시오.',
+            '**컨텍스트 윈도우**: `llama3.2:3b`는 Ollama에서 기본적으로 128K 토큰을 지원합니다. 실제로는 단일 대화에서 약 16K 토큰을 넘어서면 품질이 저하됩니다.',
+            '**첫 응답 지연**: `ollama run` 이후 첫 번째 응답에는 모델 로딩 시간(5~30초)이 포함됩니다. 같은 세션 내 이후 응답은 더 빠릅니다.',
+          ],
+        },
+        beyondTerminal: {
+          id: 'beyond-the-terminal',
+          title: '터미널 이후 로컬 LLM 활용 방법',
+          content: 'Ollama 터미널 채팅은 테스트에 유용하지만, 실제 활용 사례 대부분에는 더 나은 인터페이스가 필요합니다:',
+          items: [
+            '**Open WebUI**: Ollama를 위한 완전한 기능의 웹 UI입니다. Docker로 실행하십시오: `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main`. http://localhost:3000에서 접속할 수 있습니다.',
+            '**LM Studio**: 데스크탑 GUI를 선호하신다면 [LM Studio 설치 방법](/local-llms/how-to-install-lm-studio)에서 전체 설정 과정을 확인하십시오. LM Studio의 내장 채팅 인터페이스는 세련되고 대화 기록을 지원합니다.',
+            '**API 연동**: `localhost:11434`의 Ollama API는 OpenAI SDK와 호환됩니다. OpenAI base URL을 수용하는 모든 애플리케이션을 로컬 모델에 연결할 수 있습니다.',
+            '**VS Code / Cursor**: Continue.dev 같은 확장 프로그램이 Ollama에 연결되어 편집기 내에서 직접 로컬 AI 코딩 지원을 제공합니다.',
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: '로컬 LLM 첫 실행: 지역별 참고사항',
+          content: [
+            '**EU / GDPR**: Ollama로 로컬 LLM을 실행하면 프롬프트 데이터, 컨텍스트, 출력이 기기 밖으로 나가지 않습니다. GDPR 제46조의 이전 메커니즘이 적용되지 않습니다. 개인 데이터를 다루는 EU 전문가에게 이는 클라우드 AI API의 프라이버시 보호 대안입니다. 첫 번째 로컬 모델(llama3.2:3b)은 디스크 2 GB를 사용하고 외부 API 호출을 전혀 생성하지 않으며, 독일 BSI의 데이터 최소화 지침을 설계 단계에서부터 충족합니다.',
+            '**일본(METI)**: METI AI 거버넌스 가이드라인은 AI 추론이 어디에서 발생하는지 문서화하도록 요구합니다. Ollama 설정은 완전하고 감사 가능한 로컬 환경을 제공합니다. 모델 파일은 버전별 파일명으로 ~/.ollama/models에 저장되고, 외부 API 의존성이 없으며, `ollama ps`로 추론을 검증할 수 있습니다. Llama 또는 Qwen3를 로컬에서 실행하는 일본 전문가는 METI 컴플라이언스 목적으로 정확한 모델 버전과 하드웨어를 문서화할 수 있습니다.',
+            '**한국**: 한국어 워크플로우에서는 첫 번째 모델로 llama3.2:3b 대신 qwen2.5:3b를 선택하십시오: `ollama pull qwen2.5:3b`. Qwen3는 동일한 하드웨어 환경에서 Llama보다 한국어 텍스트를 30~40% 더 효율적으로 처리하여 더 나은 결과를 제공합니다. ollama pull 및 run 명령어는 동일합니다.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '로컬 LLM 처음 실행 시 자주 묻는 질문',
+          faqs: [
+            {
+              q: '모델 응답이 매우 느립니다. 정상인가요?',
+              a: 'CPU 전용 하드웨어에서 7B 모델의 경우 초당 8~20 토큰은 정상입니다. 각 토큰은 약 0.75개의 단어에 해당합니다. 초당 10 토큰이라면 100단어 응답에 약 13초가 걸립니다. 추론 속도를 높이려면 더 작은 모델(8B 대신 3B)을 사용하거나, 호환 GPU가 있다면 GPU 오프로딩을 활성화하거나, 가장 빠른 일반 설정인 Q4_K_M 양자화 수준을 사용하십시오.',
+            },
+            {
+              q: '두 모델을 동시에 실행할 수 있나요?',
+              a: 'RAM이 충분하다면 Ollama는 여러 모델을 동시에 로드된 상태로 유지할 수 있습니다. 기본적으로 Ollama는 5분 비활성 후 모델을 언로드합니다. OLLAMA_KEEP_ALIVE 환경 변수로 이를 변경할 수 있습니다. 두 개의 7B 모델을 동시에 실행하려면 약 16 GB의 RAM이 필요합니다.',
+            },
+            {
+              q: 'Ollama가 백그라운드에서 실행되는 것을 중지하려면 어떻게 하나요?',
+              a: 'macOS: 메뉴 바의 llama 아이콘을 클릭하고 Quit을 선택하십시오. Linux: `systemctl stop ollama`를 실행하십시오. Windows: 시스템 트레이 아이콘을 오른쪽 클릭하고 Quit을 선택하십시오. 로그인 시 Ollama가 시작되지 않도록 하려면 시작 항목에서 제거하십시오.',
+            },
+            {
+              q: '로컬 LLM을 처음 실행하는 가장 쉬운 방법은 무엇인가요?',
+              a: 'Ollama(ollama.com)를 설치하고, `ollama pull llama3.2:3b`를 실행한 다음, `ollama run llama3.2:3b`를 실행하십시오. 이것이 전부입니다. 세 개의 명령어, 2~5분이면 인터넷 연결 없이도 기기에서 작동하는 AI 모델을 갖게 됩니다.',
+            },
+            {
+              q: '로컬 LLM이 정상적으로 작동하는지 어떻게 알 수 있나요?',
+              a: '터미널에서 `ollama ps`를 실행하십시오. 모델이 실행 중이라면 이름, 크기, 메모리 사용량과 함께 목록에 표시됩니다. "2+2는 얼마인가요?"와 같은 간단한 프롬프트를 보내십시오. "4"라고 응답하면 모델이 정상적으로 작동하는 것입니다.',
+            },
+            {
+              q: '로컬 LLM을 실행하려면 GPU가 필요한가요?',
+              a: '아닙니다. 로컬 LLM은 CPU에서도 실행됩니다. GPU를 사용하면 추론 속도가 5~10배 빨라지지만, CPU 전용으로도 학습 및 많은 실제 사용 사례에 충분합니다. Apple M1/M2, AMD Ryzen, 또는 Intel 12세대 CPU가 탑재된 최신 노트북은 3B~7B 모델을 합리적인 속도(초당 10~30 토큰)로 실행할 수 있습니다.',
+            },
+            {
+              q: '로컬 LLM은 디스크 공간을 얼마나 차지하나요?',
+              a: '`llama3.2:1b`는 1.3 GB, `llama3.2:3b`는 2 GB, `llama3.1:8b`는 4.7 GB입니다. 이는 Ollama가 저장하는 압축 크기입니다. 추론을 위해 RAM에 로드될 때 크기가 달라집니다(자세한 내용은 [로컬 LLM에 필요한 VRAM](/local-llms/how-much-vram-local-llm) 참조).',
+            },
+            {
+              q: '인터넷 연결 없이 로컬 LLM을 사용할 수 있나요?',
+              a: '네, 완전히 가능합니다. Ollama로 모델을 한 번 다운로드(인터넷 필요)하면 이후에는 인터넷 없이 영구적으로 로컬에서 실행할 수 있습니다. 사설 네트워크, 비행기, 또는 완전한 오프라인 환경에 적합합니다.',
+            },
+            {
+              q: '로컬 LLM은 ChatGPT와 어떻게 다른가요?',
+              a: 'ChatGPT는 Anthropic의 서버에서 실행됩니다. 로컬 LLM은 사용자의 기기에서 실행됩니다. 로컬 = 데이터가 기기 밖으로 나가지 않음, 완전한 프라이버시, 지속적인 API 비용 없음. ChatGPT = 복잡한 작업에서 더 높은 품질, 인터넷 및 유료 구독 필요. 두 방식 모두 장단점이 있습니다.',
+            },
+            {
+              q: 'Ollama로 처음 시도해볼 최적의 모델은 무엇인가요?',
+              a: '`ollama pull llama3.2:3b` — 용량이 2 GB이고 최신 노트북에서 실행되며 적절한 답변을 제공합니다. Ollama가 권장하는 시작점입니다. 사용해본 후 하드웨어에 맞는 대안을 확인하려면 [초보자를 위한 최적 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models)을 참조하십시오.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: '첫 실행 이후 다음 단계',
+          content: '로컬 LLM이 정상적으로 작동하고 있다면 이제 다양한 활용 가능성을 탐색해 보십시오. 하드웨어에 가장 적합한 모델을 파악하려면 [초보자를 위한 최적 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models)을 참조하십시오. 노트북 특화 성능 팁은 [노트북에서 로컬 LLM 실행하기](/local-llms/local-llm-on-laptop)를 확인하십시오. 프라이버시 및 보안 모범 사례는 [로컬 LLM 보안 및 프라이버시 체크리스트](/local-llms/local-llm-security-privacy-checklist)를 참조하십시오.',
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            '[**Ollama 모델 라이브러리**](https://ollama.com/library) — 다운로드 가능한 모델 및 사양 공식 목록',
+            '[**Ollama GitHub 저장소**](https://github.com/ollama/ollama) — 오픈소스 코드, 문서, 이슈 추적',
+            '[**Meta Llama 3.2 모델 카드**](https://llama.meta.com/) — 공식 사양, 훈련 데이터, 성능 벤치마크',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: '첫 실행 후 자주 하는 실수',
+          items: [
+            '토큰 수와 속도를 혼동하는 것 — 초당 20 토큰으로 100 토큰을 생성하는 7B 모델은 5초가 걸리며 즉각적이지 않습니다.',
+            '다른 작업으로 시스템이 바쁜 상태에서 추론을 실행하면 실제 토큰/초가 크게 감소합니다.',
+            '컨텍스트 윈도우 한계를 확인하지 않는 것 — 대부분의 입문 모델은 2K~8K 토큰을 지원하며 프론티어 모델의 100K+와는 다릅니다.',
+            '첫 실행 시 즉각적인 응답을 기대하는 것 — 첫 번째 응답에는 모델 로딩 시간(5~30초)이 포함됩니다. 같은 세션 내 이후 응답은 2~5배 빠릅니다.',
+            '잘못된 모델 태그 사용 — `llama3.1:8b-text`는 기본 텍스트 완성 모드로 무한 반복됩니다. 채팅에는 `llama3.1:8b-instruct`와 같은 `-instruct` 태그를 사용하십시오.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 읽기',
+          items: [
+            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — 설치 및 설정',
+            '[LM Studio 설치 방법](/local-llms/how-to-install-lm-studio) — GUI 대안',
+            '[초보자를 위한 최적 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models) — 하드웨어별 모델 추천',
+            '[로컬 LLM이란 무엇인가?](/local-llms/what-are-local-llms) — 핵심 개념 및 작동 원리',
+            '[로컬 LLM 설정 문제 해결](/local-llms/troubleshooting-local-llm-setup) — 느린 추론, GPU 미감지, 일반적인 오류 수정',
+            '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) — 실행 중인 Ollama를 Python 및 다른 애플리케이션에 연결',
+            '첫 번째 로컬 LLM이 실행되고 있습니다. 이제 효과적으로 프롬프트하는 방법을 배워보십시오: [프롬프트 엔지니어링이란](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering)에서 기초를 학습할 수 있습니다.',
+          ],
+        },
+      },
+    },
   };

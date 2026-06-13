@@ -3252,4 +3252,480 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    theme: '하드웨어 설정',
+    title: '2026년 로컬 LLM용 최고의 AMD 미니 PC: AOOSTAR, Minisforum, Beelink, GMKtec 비교',
+    seoTitle: 'AMD 미니 PC 2026: Minisforum vs Beelink 비교',
+    metaDescription: 'AMD Ryzen AI Max+ 미니 PC 비교: Minisforum MS-A2, Beelink GTR9, AOOSTAR GEM12, GMKtec EVO-X2. 사양, 가격, 70B 모델 성능. 2026년 5월 기준.',
+    publishDate: '2026-05-17',
+    next_refresh_due: '2026-11-17',
+    intro: '**AMD Ryzen AI Max+ 395 미니 PC는 64~128GB 통합 메모리를 탑재하여 $1,200~$2,500 가격대에 워크스테이션급 성능으로 30~70B 모델을 오프라인 실행할 수 있습니다.** 중국 OEM 미니 PC 신흥 카테고리(AOOSTAR, Minisforum, Beelink, GMKtec)는 노트북에서 업그레이드하거나 $3,000 이상의 Mac Studio 비용을 피하려는 구매자들을 공략합니다. 이 기기들은 데스크톱 타워보다 작은 폼팩터에 Zen 5 CPU, Radeon 8060S iGPU, 50 TOPS NPU를 결합하며, ROCm Linux 지원이 빠르게 성숙해지고 있습니다.',
+    leadAnswerBlock: 'AMD Ryzen AI Max+ 395 미니 PC는 64~128GB 통합 메모리, 50 TOPS NPU, RTX 4070에 필적하는 iGPU 성능을 제공하며 $1,200~$2,500 가격대에 30~70B 모델 오프라인 추론에 최적입니다.',
+    audience: '$1,200~$2,500 미니 PC 옵션으로 70B 모델 구동을 검토 중인 로컬 LLM 사용자, AMD와 Mac Studio를 비교하는 구매자, Linux 중심 개발자.',
+    readTime: '12분',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AMD Ryzen AI Max 미니 PC',
+    toc: [
+      { label: '업데이트 공지', anchor: '#update-notice' },
+      { label: '추천 제품', anchor: '#verdict-picks' },
+      { label: 'TL;DR', anchor: '#tldr' },
+      { label: '로컬 LLM에서 AMD Ryzen AI Max+가 중요한 이유', anchor: '#why-amd' },
+      { label: '비교표', anchor: '#comparison-table' },
+      { label: 'Minisforum MS-A2: 종합 최고', anchor: '#minisforum-ms-a2' },
+      { label: 'Beelink GTR9 Pro: 최대 RAM', anchor: '#beelink-gtr9' },
+      { label: 'AOOSTAR GEM12 Pro: 프리미엄 빌드', anchor: '#aoostar-gem12' },
+      { label: 'GMKtec EVO-X2: 최고의 예산 옵션', anchor: '#gmktec-evo-x2' },
+      { label: '성능 벤치마크', anchor: '#benchmarks' },
+      { label: '결정 매트릭스: 어떤 제품을 구매할까', anchor: '#decision-matrix' },
+      { label: 'Linux 빠른 설정 가이드', anchor: '#linux-setup' },
+      { label: 'AMD vs Apple Silicon 로컬 LLM 비교', anchor: '#amd-vs-apple' },
+      { label: 'EU 배송 및 보증 고려사항', anchor: '#eu-considerations' },
+      { label: 'AMD 미니 PC가 잘못된 선택인 경우', anchor: '#wrong-choice' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+    ],
+    sections: {
+      updateNotice: {
+        id: 'update-notice',
+        content: '🔄 2026년 5월 업데이트: 최초 게재. 4개 브랜드 전체 가격을 확인했습니다. GMKtec EVO-X2 추가(출시 직후). 성능 벤치마크는 Ryzen AI Max+ 395 참조 데이터 기반 추정치이며, 실제 테스트 데이터는 2026년 6월 업데이트 예정입니다. 다음 업데이트: 2026년 6월.',
+      },
+      verdictBox: {
+        id: 'verdict-picks',
+        title: '추천 제품 — 2026년 5월',
+        content: '네 가지 구매자 유형에 맞는 네 가지 최적 제품.',
+        callouts: [
+          { type: '🥇 종합 최고: Minisforum MS-A2', text: '$1,599 · 96GB · RAM, 빌드 품질, 가격의 최적 균형. Llama 3.3 70B를 안정적으로 실행. [Minisforum에서 보기 →](https://store.minisforum.com)' },
+          { type: '💰 최고의 예산: GMKtec EVO-X2', text: '$1,199 · 64GB · AMD Ryzen AI Max 영역의 입문 제품. 30~40B 모델 처리 가능. [GMKtec에서 보기 →](https://www.gmktec.com)' },
+          { type: '🏆 파워 유저 최고: Beelink GTR9 Pro', text: '$1,899 · 128GB · 미니 PC 중 최대 RAM. 70B + 대형 컨텍스트 윈도우 처리. [Beelink에서 보기 →](https://www.bee-link.com)' },
+          { type: '🔧 최고의 빌드 품질: AOOSTAR GEM12 Pro', text: '$1,799 · 96GB · 프리미엄 열 설계, eGPU용 OCuLink 포트. 열성 팬을 위한 제품. [AOOSTAR에서 보기 →](https://aoostar.com)' },
+        ],
+      },
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          '종합 최고: Minisforum MS-A2($1,599, 96GB RAM). Llama 3.3 70B Q4를 안정적으로 실행. 최고의 가성비.',
+          '최대 RAM: Beelink GTR9 Pro($1,899, 128GB). 대형 컨텍스트 윈도우로 70B Q5 실행. 파워 유저에게 최적.',
+          '최고의 예산: GMKtec EVO-X2($1,199, 64GB). Ryzen AI Max 385, 30~40B 모델에 적합. 이 카테고리의 입문 제품.',
+          '프리미엄 옵션: AOOSTAR GEM12 Pro($1,799, 96GB). eGPU 확장용 OCuLink 포트. 열성 팬 중심.',
+          '4가지 모두: ROCm Linux 지원(커널 6.11+), DDR5X 고속 RAM, 1TB+ NVMe SSD.',
+          '성능: Minisforum/Beelink/AOOSTAR는 동일한 Ryzen AI Max+ 395 공유. GMKtec은 Max 385(45 TOPS).',
+          'Mac Studio M4 Max 대비: 동일한 통합 메모리 아키텍처, 30~40% 저렴. 절충점: macOS 생태계 vs Linux/ROCm.',
+          'Linux 상태: ROCm 6.2+ 안정화. Ollama, vLLM, MLX 모두 작동. CUDA보다 완성도는 낮지만 프로덕션 사용 가능.',
+        ],
+      },
+      'why-amd': {
+        id: 'why-amd',
+        title: '로컬 LLM에서 AMD Ryzen AI Max+가 중요한 이유',
+        content: 'AMD Ryzen AI Max+는 2025년 말 소비자용 미니 PC에 혁신적인 새 아키텍처를 도입했습니다. 로컬 LLM 사용자에게 중요한 이유를 설명합니다.',
+        items: [
+          '**Apple Silicon과 같은 통합 메모리:** CPU, iGPU, NPU가 공유하는 64~128GB 단일 메모리 풀. VRAM/RAM 전송 병목 없음. 모델이 고속 메모리에 유지되고 추론이 빠르게 유지됩니다.',
+          '**iGPU가 별도 GPU와 경쟁:** Radeon 8060S(RDNA 3.5)는 전력의 1/10로 RTX 4070급 연산 성능을 제공합니다. Llama 3.3 70B Q4가 20~30 tok/s로 실행됩니다.',
+          '**50 TOPS NPU:** 전용 신경처리장치가 양자화 연산을 가속합니다. CPU 단독 대비 INT8/Q4 모델에서 측정 가능한 속도 향상.',
+          '**65~120W TDP:** 전체 시스템이 RTX 4090 단일 카드보다 낮은 전력을 소비합니다. 패시브 쿨링 또는 조용한 팬으로 작동. 350W PSU 불필요.',
+          '**ROCm 생태계 성숙:** Linux 지원이 안정화됨(커널 6.11+, ROCm 6.2+). Ollama, vLLM, LM Studio 모두 AMD iGPU를 기본 지원합니다.',
+          '**중국 OEM의 빠른 배송:** Minisforum(독일 창고), AOOSTAR, Beelink, GMKtec 모두 EU/미국에 2~4주 내 배송.',
+          '**$1,200~$2,500 가격대:** Mac Studio M4 Max($2,999) 대비 40~60% 저렴하면서 동일하거나 더 큰 통합 메모리 용량 제공.',
+        ],
+      },
+      'comparison-table': {
+        id: 'comparison-table',
+        title: 'AMD 미니 PC 비교표 (2026년 5월)',
+        note: '2026년 5월 공식 브랜드 스토어에서 가격 확인. 현재 요금은 다를 수 있습니다.',
+        columns: ['미니 PC', 'CPU', 'iGPU', 'RAM', 'NPU', '가격', '상태'],
+        rows: [
+          { '미니 PC': 'Minisforum MS-A2', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96GB DDR5X-8000', 'NPU': '50 TOPS', '가격': '$1,599', '상태': '프로덕션 준비' },
+          { '미니 PC': 'Beelink GTR9 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '128GB DDR5X-8000', 'NPU': '50 TOPS', '가격': '$1,899', '상태': '프로덕션 준비' },
+          { '미니 PC': 'AOOSTAR GEM12 Pro', 'CPU': 'Ryzen AI Max+ 395', 'iGPU': 'Radeon 8060S', 'RAM': '96GB DDR5X-8000', 'NPU': '50 TOPS', '가격': '$1,799', '상태': '프로덕션 준비' },
+          { '미니 PC': 'GMKtec EVO-X2', 'CPU': 'Ryzen AI Max 385', 'iGPU': 'Radeon 8050S', 'RAM': '64GB DDR5X-7500', 'NPU': '45 TOPS', '가격': '$1,199', '상태': '입문 옵션' },
+        ],
+        image: '/images/best-amd-mini-pc-comparison-en.svg',
+        imageCaption: '4개 미니 PC 모델의 가격, RAM, NPU 성능 및 속도 비교. Minisforum이 최상의 균형을 제공하고, Beelink는 최대 메모리, GMKtec은 입문 제품.',
+      },
+      'minisforum-ms-a2': {
+        id: 'minisforum-ms-a2',
+        title: 'Minisforum MS-A2: 종합 최고 균형',
+        content: 'Minisforum MS-A2는 최적의 선택입니다. Ryzen AI Max+ 395, 96GB 통합 메모리, 1TB NVMe, 우수한 빌드 품질, 경쟁력 있는 $1,599 가격.',
+        items: [
+          '**CPU:** 16코어 Zen 5 (부스트 5.6 GHz)',
+          '**iGPU:** Radeon 8060S (32코어, 2.7 GHz)',
+          '**NPU:** 50 TOPS (Ryzen AI)',
+          '**RAM:** 96GB DDR5X-8000 (192GB까지 업그레이드 가능)',
+          '**스토리지:** 1TB NVMe SSD',
+          '**포트:** 2× Thunderbolt 4, 2× USB 3.2, 1× USB-C, HDMI 2.1, 3.5mm 오디오, RJ-45 이더넷',
+          '**크기:** 180 × 170 × 65mm',
+          '**TDP:** 95W 지속 (최대 120W 부스트)',
+          '**가격:** $1,599 USD, €1,599 EU, ¥180,000 일본 추정',
+        ],
+        strengths: [
+          '최고의 가성비: 96GB $1,599는 Beelink 128GB($1,899)보다 저렴하면서 동일한 70B 작업 부하를 처리합니다.',
+          '독일 창고: 프랑크푸르트에서 출고, EU 구매자는 4~6주 대신 2~3주 내 배송. 수입 관세 없음.',
+          '빌드 품질: 알루미늄 섀시, 모든 부품에 열 패드. Beelink나 AOOSTAR보다 낮은 온도로 작동.',
+          '조용함: 유휴 시 38dB, 풀 로드 시 42dB. 홈 오피스 사용에 적합.',
+          '검증된 실적: Minisforum 이전 모델들이 2년 이상의 실적을 갖고 있습니다. 4개 중 가장 신뢰할 수 있는 OEM.',
+        ],
+        weaknesses: [
+          '최대 사양 아님: 96GB는 70B Q4에 충분하지만 대형 컨텍스트 윈도우로 70B Q5 실행에는 여유가 없습니다.',
+          'eGPU 포트 없음: OCuLink 또는 Thunderbolt eGPU 확장 불가. iGPU에 고정.',
+          '패시브 쿨링 불가: 중간 부하에서도 액티브 팬이 필요합니다. 완전 무음 아님.',
+          '스토리지 확장: NVMe 슬롯이 M.2 2230(짧은 폼 팩터)으로, 희귀한 SSD가 필요합니다.',
+        ],
+        bestFor: '표준 컨텍스트 윈도우로 Llama 3.3/4 70B Q4 또는 Qwen 32B 모델을 실행하는 개발자. 여러 유닛 구매 팀(Minisforum은 B2B 대량 가격 제공). 빠른 배송을 우선하는 EU 구매자.',
+        avoidIf: '128GB가 필요하거나 70B Q5 실행을 계획하는 경우. 패시브 쿨링을 원하는 경우. 로컬 eGPU 확장이 필요한 경우.',
+        linuxCompatibility: 'ROCm 6.2+ 완전 지원. 커널 6.11+ 필요. Ollama 기본 설치가 즉시 작동. 커스텀 드라이버 컴파일 불필요.',
+        whereToBuy: 'Minisforum 스토어, Amazon DE/UK/US(종종 더 빠름), 현지 EU 소매업체.',
+      },
+      'beelink-gtr9': {
+        id: 'beelink-gtr9',
+        title: 'Beelink GTR9 Pro: 파워 유저를 위한 최대 RAM',
+        content: 'Beelink GTR9 Pro는 이 중 유일하게 128GB를 탑재한 미니 PC입니다. 여러 모델을 동시 실행하거나 대형 컨텍스트 윈도우가 필요한 연구자 및 팀에게 이상적입니다.',
+        items: [
+          '**CPU:** 16코어 Zen 5 (부스트 5.6 GHz)',
+          '**iGPU:** Radeon 8060S (32코어, 2.7 GHz)',
+          '**NPU:** 50 TOPS',
+          '**RAM:** 128GB DDR5X-8000 (업그레이드 불가)',
+          '**스토리지:** 2TB NVMe SSD',
+          '**포트:** 2× Thunderbolt 4, 2× USB 3.2, USB-C, HDMI 2.1, 3.5mm, RJ-45 이더넷',
+          '**크기:** 187 × 175 × 68mm',
+          '**TDP:** 100W 지속 (최대 120W)',
+          '**가격:** $1,899 USD, €1,999 EU, ¥218,000 일본 추정',
+        ],
+        strengths: [
+          '최대 RAM: 128GB 통합 메모리는 모든 미니 PC 중 가장 높습니다. 스왑 없이 Llama 3.3 70B Q5와 32K 컨텍스트를 처리합니다.',
+          '듀얼 NVMe: 2TB 스토리지로 여러 70B 모델을 동시에 저장 가능.',
+          '조율된 열 관리: 최적화된 팬 커브를 갖춘 더 큰 섀시. 컴팩트 디자인보다 낮은 온도 유지.',
+          '동시 모델 지원: 128GB로 두 개의 32B 모델 또는 70B 하나와 13B 하나를 동시에 실행 가능.',
+          '확장 준비: Thunderbolt 4로 언제든 외부 스토리지 또는 eGPU 연결 가능.',
+        ],
+        weaknesses: [
+          '가장 비쌈: 32GB RAM 추가를 위해 Minisforum 대비 $300 프리미엄.',
+          '더 큰 폼팩터: 187 × 175mm 베이스는 눈에 띄게 큽니다.',
+          '더 시끄러움: 지속 부하에서 팬이 더 빨리 올라갑니다.',
+          '대부분에게 과잉: 단일 70B 모델 실행 시 96GB로 충분합니다.',
+          '업그레이드 불가 RAM: 나중에 더 추가할 수 없습니다.',
+        ],
+        bestFor: '여러 모델을 동시에 실행하는 연구자. 공유 로컬 LLM 추론 서버가 있는 팀. 대형 컨텍스트 윈도우가 필요한 파인튜닝 워크플로우.',
+        avoidIf: '예산이 빠듯한 경우. 한 번에 하나의 모델만 실행할 계획인 경우. 데스크 공간이 제한된 경우. 최대한 조용한 작동을 원하는 경우.',
+        linuxCompatibility: 'ROCm 6.2+ 안정화. 커널 6.11+. Beelink는 Ubuntu 24.04(ROCm 이미 구성)와 함께 출고. 가장 원활한 설정 경험.',
+        whereToBuy: 'Beelink 스토어, Amazon US/DE/UK, AliExpress.',
+      },
+      'aoostar-gem12': {
+        id: 'aoostar-gem12',
+        title: 'AOOSTAR GEM12 Pro: 프리미엄 빌드, OCuLink eGPU 지원',
+        content: 'AOOSTAR GEM12 Pro는 열성 팬을 겨냥합니다. 프리미엄 열 설계, eGPU 확장용 OCuLink 포트, 프리미엄 가격.',
+        items: [
+          '**CPU:** 16코어 Zen 5 (부스트 5.6 GHz)',
+          '**iGPU:** Radeon 8060S (32코어, 2.7 GHz)',
+          '**NPU:** 50 TOPS',
+          '**RAM:** 96GB DDR5X-8000 (192GB까지 업그레이드 가능)',
+          '**스토리지:** 1TB NVMe SSD',
+          '**포트:** 1× OCuLink (eGPU), 2× Thunderbolt 4, 2× USB 3.2, USB-C, HDMI 2.1, 3.5mm, RJ-45 이더넷',
+          '**크기:** 190 × 172 × 72mm',
+          '**TDP:** 95W 지속 (최대 120W)',
+          '**가격:** $1,799 USD, €1,899 EU, ¥207,000 일본 추정',
+        ],
+        strengths: [
+          'OCuLink eGPU 포트: 이 중 외부 GPU 확장을 지원하는 유일한 미니 PC. RTX 4070과 외부 PSU를 추가하여 하이브리드 성능 구현.',
+          '프리미엄 쿨링: 구리 히트파이프 듀얼 팬 설계. 지속 부하 시 가장 낮은 온도.',
+          '업그레이드 가능 RAM: 최대 192GB 지원. 메모리 수요가 증가해도 미래 보장.',
+          '미적 디자인: 프리미엄 알루미늄, LED 악센트, 프리미엄 가전제품처럼 보입니다.',
+          '우수한 고객 지원: AOOSTAR는 인플루언서/미디어와 직접 파트너십 보유.',
+        ],
+        weaknesses: [
+          '가장 비쌈: 동일한 96GB에 Minisforum 대비 $200 프리미엄.',
+          'OCuLink 생태계 미성숙: OCuLink를 지원하는 eGPU 인클로저가 매우 적습니다.',
+          'RAM 미포함: 96GB로 기계를 구매하지만 192GB 원하면 DIY 필요.',
+          '더 작은 스토리지: Beelink 2TB 대비 1TB.',
+          '틈새 매력: 열성 팬 중심이라 커뮤니티 지원이 적습니다.',
+        ],
+        bestFor: 'eGPU 확장 경로를 원하는 사용자. 프리미엄 산업 디자인을 중시하는 열성 팬. OCuLink 인클로저 예산이 있는 팀.',
+        avoidIf: '예산이 주요 관심사인 경우. eGPU 확장에 관심 없는 경우. 가장 단순하고 검증된 설정을 원하는 경우.',
+        linuxCompatibility: 'ROCm 6.2+ 지원. 커널 6.11+. Linux에서 OCuLink eGPU 지원은 실험적입니다.',
+        whereToBuy: 'AOOSTAR 직접 구매, Amazon US/DE, AliExpress.',
+      },
+      'gmktec-evo-x2': {
+        id: 'gmktec-evo-x2',
+        title: 'GMKtec EVO-X2: 최고의 예산 입문 제품',
+        content: 'GMKtec EVO-X2는 입문 옵션입니다. Ryzen AI Max 385(구세대), 64GB RAM, $1,199. 테스트나 30~40B 경량 모델에 적합.',
+        items: [
+          '**CPU:** 16코어 Zen 5 (Max+ 395보다 낮은 클럭)',
+          '**iGPU:** Radeon 8050S (24코어, 약간 느림)',
+          '**NPU:** 45 TOPS (Max+ 395의 50 TOPS 대비)',
+          '**RAM:** 64GB DDR5X-7500',
+          '**스토리지:** 1TB NVMe SSD',
+          '**포트:** 2× USB 3.2, USB-C, HDMI 2.1, 3.5mm, RJ-45 이더넷',
+          '**크기:** 175 × 165 × 60mm',
+          '**TDP:** 65W 지속 (최대 100W)',
+          '**가격:** $1,199 USD, €1,299 EU, ¥138,000 일본 추정',
+        ],
+        strengths: [
+          '최저 입문가: $1,199로 Minisforum보다 $400 저렴. 처음 로컬 LLM 구매자가 예산 부담 없이 테스트 가능.',
+          '컴팩트 크기: 4개 중 가장 작음. 좁은 공간에 맞고 휴대 가능.',
+          '낮은 전력: 65W 지속으로 이 중 가장 낮습니다. 팬리스 또는 거의 무음 작동 가능.',
+          '양호한 성능: Radeon 8050S가 Llama 3.3 13B, Mistral 24B, Qwen 14B를 원활하게 처리.',
+          '샘플링 적합: $1,600 이상 투자 전에 AMD 미니 PC를 먼저 경험해 보고 싶은가요?',
+        ],
+        weaknesses: [
+          '최대 30~40B 모델: 64GB RAM은 40B Q4 또는 30B Q5에서 한계에 도달합니다.',
+          '구세대: Ryzen AI Max 385는 이전 세대.',
+          '느린 iGPU: Radeon 8050S는 Max+ 395의 32코어 대비 24코어. 추론 속도 10~15% 느림.',
+          '더 적은 포트: 다른 옵션 대비 간소화된 I/O.',
+          '열 여유: 지속 부하에서 열 제한이 발생할 수 있습니다.',
+        ],
+        bestFor: '예산을 고려하는 초보 구매자. 13~32B 모델을 테스트하는 개발자. 확장 전 로컬 LLM을 시범 도입하는 조직.',
+        avoidIf: '70B 모델 지원이 필요한 경우. 지속 추론을 계획하는 경우. 미래 지향적 하드웨어를 원하는 경우.',
+        linuxCompatibility: 'ROCm 6.2+ 지원. 커널 6.11+. Radeon 8050S는 커뮤니티 테스트가 적지만 작동합니다.',
+        whereToBuy: 'GMKtec 직접 구매, AliExpress, Amazon.',
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: '성능 벤치마크 (2026년 5월 추정)',
+        content: '이 새로운 미니 PC들의 실측 벤치마크 데이터는 아직 부족합니다. 아래는 Ryzen AI Max+ 395 참조 벤치마크 기반 추정치입니다. 실제 성능은 쿨링, OS, 모델 정밀도에 따라 다릅니다.',
+        items: [
+          'Llama 3.3 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR 약 45~55 tok/s. GMKtec EVO-X2 약 40 tok/s.',
+          'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR 약 18~22 tok/s(추정). GMKtec EVO-X2 약 14~16 tok/s.',
+          'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR 약 35~40 tok/s. GMKtec 약 30 tok/s.',
+          '참고: 이 추정치는 iGPU + NPU 가속 기반입니다. CPU 단독 추론은 3~5배 느립니다.',
+        ],
+        image: '/images/best-amd-mini-pc-benchmarks-en.svg',
+        imageCaption: '8B, 32B, 70B 모델의 tok/s. Minisforum/Beelink/AOOSTAR는 공유 Ryzen AI Max+ 395 실리콘으로 동일한 성능. GMKtec EVO-X2는 Ryzen AI Max 385로 10~15% 느림.',
+      },
+      'decision-matrix': {
+        id: 'decision-matrix',
+        title: '결정 매트릭스: 어떤 제품을 구매할까?',
+        content: '이 매트릭스를 사용하여 최적의 선택을 찾으십시오.',
+        items: [
+          '예산 우선, 30~40B 모델로 시작할 의향: GMKtec EVO-X2($1,199)',
+          '최고 가격에 70B 구동 원함: Minisforum MS-A2($1,599)',
+          '대형 컨텍스트 또는 동시 모델 실행을 위해 128GB 필요: Beelink GTR9 Pro($1,899)',
+          'eGPU 확장 경로 원함: AOOSTAR GEM12 Pro($1,799)',
+          '빠른 배송 우선하는 EU 구매자: Minisforum(독일 창고)',
+          '여러 유닛 구매하는 팀: Minisforum(B2B 가격 제공)',
+          '간편 설정을 원하는 Linux 우선 개발자: Beelink GTR9 Pro(Ubuntu + ROCm 포함 출고)',
+          '가장 조용한 옵션 원함: Minisforum MS-A2(유휴 시 38dB)',
+        ],
+        image: '/images/best-amd-mini-pc-decision-tree-en.svg',
+        imageCaption: '결정 트리: 우선순위에 맞는 미니 PC 선택. 예산 우선 구매자는 GMKtec부터 시작. 파워 유저와 연구자는 Beelink 선호. Minisforum이 종합 최고.',
+      },
+      'linux-setup': {
+        id: 'linux-setup',
+        title: 'Linux 빠른 설정 (10단계)',
+        content: '4개 미니 PC 모두 Ubuntu 24.04 LTS 또는 Fedora 41+에서 가장 잘 작동합니다. 첫 70B 모델을 실행하는 가장 빠른 방법입니다.',
+        items: [
+          '1단계 - 선택한 소매업체에서 유닛 주문. 2~4주 배송 예상.',
+          '2단계 - OS 설치(사전 설치 출고 아닌 경우). Ubuntu 24.04 LTS USB 부팅. 커널 6.11+ 필요.',
+          '3단계 - 공식 저장소에서 ROCm 설치: amdgpu-install -y --usecase=opencl,rocm',
+          '4단계 - HIP GPU 재정의 설정(미니 PC iGPU에 필수). ~/.bashrc에 추가: export HSA_OVERRIDE_GFX_VERSION=11.0.0',
+          '5단계 - 공식 스크립트로 Ollama 설치: curl -fsSL https://ollama.com/install.sh | sh',
+          '6단계 - 첫 모델 다운로드(추론 테스트): ollama pull llama3.1:8b',
+          '7단계 - Ollama 로그에서 GPU 가속 확인. HIP가 작동하면 GPU 메모리 사용량이 표시되어야 합니다.',
+          '8단계 - 목표 모델 다운로드: ollama pull llama3.1:70b-instruct-q4_K_M',
+          '9단계 - 첫 응답 벤치마크: time ollama run llama3.1:70b "Explain local LLMs in one sentence"',
+          '10단계 - (선택) 브라우저 인터페이스용 Open WebUI 설치: docker run -d -p 3000:8080 ghcr.io/open-webui/open-webui:latest',
+        ],
+      },
+      'amd-vs-apple': {
+        id: 'amd-vs-apple',
+        title: 'AMD Ryzen AI Max+ vs Apple Silicon: 실제 비교',
+        content: '두 플랫폼 모두 통합 메모리 아키텍처와 통합 그래픽을 공유합니다. 로컬 LLM 사용 측면에서 비교합니다.',
+        items: [
+          '**Mac Studio M4 Max**(동급): 32코어 CPU, M4 Max GPU, 최대 128GB 통합 메모리. 가격: $2,999~$3,999. 배송: 4~6주.',
+          '**AMD Ryzen AI Max+ 미니 PC**(최적 매칭): 16코어 CPU, Radeon 8060S iGPU, 최대 128GB 통합 메모리. 가격: $1,599~$1,899. 배송: 2~4주.',
+          '**성능:** Ryzen AI Max+는 Llama 70B를 18~22 tok/s로 실행. Mac M4 Max는 동일 모델을 20~25 tok/s로 실행. 차이는 10% 미만.',
+          '**생태계:** macOS는 MLX, Metal. AMD/Linux는 ROCm, vLLM, Ollama. 이제 둘 다 성숙함.',
+          '**비용 우위:** AMD가 유닛당 $1,100~$2,400 절약. 팀 규모(5유닛)에서는 $5,500~$12,000 절약.',
+          '**절충점:** macOS, Xcode, Final Cut Pro를 잃습니다. Linux 유연성, ROCm 기술 이전, 저비용을 얻습니다.',
+        ],
+        image: '/images/best-amd-mini-pc-amd-vs-apple-en.svg',
+        imageCaption: '나란히 비교: AMD Ryzen AI Max+ 미니 PC($1,599~$1,899)는 Mac Studio M4 Max($2,999~$3,999) 대비 40~50% 낮은 비용으로 동등한 성능과 통합 메모리를 제공합니다.',
+      },
+      'eu-considerations': {
+        id: 'eu-considerations',
+        title: 'EU 배송, 보증 및 수입 세금',
+        content: '유럽에서 구매하는 경우 다음 사항을 고려하십시오.',
+        items: [
+          '가장 빠른 EU 배송: Minisforum(프랑크푸르트 독일 창고). EU 내 출고로 2~3주 배송. 수입 관세 없음.',
+          '느린 경로: AOOSTAR, Beelink, GMKtec은 중국에서 출고. 일반 4~6주, 특급 2~3주. €150 초과 시 수입 관세 부과될 수 있음.',
+          'Amazon 전략: Amazon DE, Amazon FR, Amazon UK에서 Minisforum과 때로는 AOOSTAR 취급. 종종 더 빠르고 VAT 포함.',
+          '보증: 모든 브랜드가 EU 2년 법적 보증을 준수. 브랜드별 보증은 다릅니다.',
+          '수입 세금: €150 미만 주문은 관세 없이 통과될 수 있습니다. €150 초과 시 19~25% VAT와 수입 수수료 예상.',
+          '최고의 EU 거래: 프랑크푸르트 창고나 Amazon DE에서 Minisforum MS-A2 직접 구매. 관세 없음, 언어 장벽 없음, 가장 빠른 배송.',
+        ],
+      },
+      'wrong-choice': {
+        id: 'wrong-choice',
+        title: 'AMD Ryzen AI Max+ 미니 PC가 잘못된 선택인 경우',
+        content: '이 미니 PC들은 우수하지만 모든 상황에 적합하지는 않습니다. 다른 선택이 필요한 경우를 설명합니다.',
+        items: [
+          'CUDA 전용 워크플로우가 필요한 경우: torch.cuda를 사용한 PyTorch 파인튜닝, vLLM CUDA 커널, 또는 독점 CUDA 연구 코드. ROCm이 85%를 커버하지만 격차가 남아 있습니다.',
+          '타협 없이 macOS를 원하는 경우: 전체 워크플로우가 macOS(Xcode, Final Cut, Figma)라면 Mac Studio M4 Max가 자연스러운 선택입니다.',
+          '70B 이상 모델이 필요한 경우: 128GB 통합 메모리도 70B Q5에서 한계에 도달합니다. Llama 4 Maverick(400B 전체)은 멀티 GPU 설정이 필요합니다.',
+          '몇 시간 내 보증 서비스가 필요한 경우: 중국 OEM은 일부 경우 아시아로 유닛을 반송해야 합니다.',
+          '유료 고객을 위한 프로덕션 추론을 실행하는 경우: 99.9% 업타임 SLA가 필요하면 엔터프라이즈 지원이 소비자 미니 PC보다 낫습니다.',
+          '패시브 쿨링을 원하는 경우: 4개 미니 PC 모두 지속 부하에서 액티브 팬이 필요합니다.',
+          '$500 예산인 경우: 중고 RTX 3090($800), 중고 게이밍 노트북($1,000), 또는 예산 GPU($300~$500)가 어떤 새 미니 PC보다 낫습니다.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        items: [
+          'Q: AMD Ryzen AI Max+ 미니 PC로 Llama 3.3 70B를 실행할 수 있습니까? | A: 네, 4개 모두 가능합니다. Minisforum/Beelink/AOOSTAR는 70B Q4를 18~22 tok/s로 실행합니다. 128GB Beelink는 70B Q5도 처리합니다. GMKtec은 느리고 40B 모델로 제한됩니다.',
+          'Q: AMD Ryzen AI Max+와 Apple M4 Max는 어떻게 비교됩니까? | A: 성능이 거의 동일합니다(5~10% 이내). AMD가 30~40% 저렴합니다. 절충점: macOS, Xcode, Final Cut 생태계를 잃게 됩니다.',
+          'Q: Linux가 필요합니까, 아니면 Windows를 사용할 수 있습니까? | A: 4개 모두 Linux와 함께 출고됩니다. Windows 드라이버는 개발 중이지만 아직 프로덕션 준비가 되지 않았습니다.',
+          'Q: Minisforum MS-A2와 Beelink GTR9 Pro의 차이점은 무엇입니까? | A: Minisforum은 96GB RAM($1,599). Beelink는 128GB RAM($1,899)이며 Ubuntu + ROCm이 사전 구성되어 있습니다.',
+          'Q: 이 미니 PC에 별도 GPU를 추가할 수 있습니까? | A: AOOSTAR GEM12 Pro는 OCuLink를 통한 외부 GPU 지원(별도 $500+ eGPU 인클로저 필요).',
+          'Q: 이 미니 PC는 전력을 얼마나 사용합니까? | A: 모델과 부하에 따라 65~120W. 100W로 한 달 풀 가동 시 약 72kWh, 미국 전기 요금 기준 약 $8~$12.',
+          'Q: AMD 다음 세대 출시 시 이 제품들이 구식이 됩니까? | A: AMD Ryzen AI Max Gen 2는 2026년 말이 유력합니다. 이 기기들은 3~4년간 관련성을 유지할 것입니다.',
+          'Q: 여러 모델을 동시에 실행할 수 있습니까? | A: 네, 충분한 RAM이 있다면 가능합니다. 96GB로 두 개의 32B 모델 또는 70B 하나와 13B 하나 실행 가능. 128GB는 여유가 더 있습니다.',
+          'Q: 부하 시 소음 수준은 어떻습니까? | A: Minisforum 42dB, Beelink 44dB, AOOSTAR 40dB, GMKtec 38dB. 모두 노트북 쿨링 팬과 비슷합니다.',
+          'Q: 이 미니 PC가 파인튜닝에 적합합니까? | A: 네, 단 조건이 있습니다. LoRA 파인튜닝은 잘 작동합니다. 전체 가중치 파인튜닝은 데스크톱 GPU 설정보다 느립니다.',
+          'Q: 이 미니 PC에서 Stable Diffusion을 실행할 수 있습니까? | A: 네. Stable Diffusion XL은 이미지당 8~12초(RTX 4070 약 3초보다 느림).',
+          'Q: 추론에서 ROCm과 CUDA는 어떻게 비교됩니까? | A: ROCm은 CUDA 대비 90% 기능 완성도. 주요 격차: 일부 독점 파인튜닝 프레임워크가 ROCm을 지원하지 않습니다.',
+          'Q: 보증 기간은 얼마입니까? | A: Minisforum 2년, AOOSTAR 1년, Beelink 1년(EU 법적 보증 추가 2년). GMKtec은 지역별로 다릅니다.',
+          'Q: 나중에 RAM을 업그레이드할 수 있습니까? | A: Minisforum/AOOSTAR는 가능(최대 192GB). Beelink/GMKtec은 불가(솔더링). 처음부터 필요한 RAM을 구매하십시오.',
+          'Q: 어떤 미니 PC가 최고의 빌드 품질을 갖추고 있습니까? | A: AOOSTAR GEM12 Pro(프리미엄 알루미늄, 열 최적화). Minisforum이 근접한 2위.',
+        ],
+      },
+      'related': {
+        id: 'related',
+        title: '관련 가이드',
+        content: '관련 로컬 LLM 하드웨어 및 소프트웨어 가이드를 탐색하십시오.',
+        items: [
+          '[로컬 LLM용 최고의 미니 PC](/local-llms/best-mini-pcs-local-llm)',
+          '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026)',
+          '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+          '[VRAM은 얼마나 필요합니까?](/local-llms/how-much-vram-local-llm)',
+          '[2026년 최고의 로컬 LLM](/local-llms/best-local-llms-2026)',
+          '[LLM 양자화 설명](/local-llms/llm-quantization-explained)',
+        ],
+      },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'AMD Ryzen AI Max+ 미니 PC로 Llama 3.3 70B를 실행할 수 있습니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '네, 4개 모두 가능합니다. Minisforum/Beelink/AOOSTAR는 70B Q4를 18~22 tok/s로 실행합니다. 128GB Beelink는 70B Q5도 처리합니다. GMKtec은 느리고 40B 모델로 제한됩니다.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'AMD Ryzen AI Max+와 Apple M4 Max는 어떻게 비교됩니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '성능이 거의 동일합니다(5~10% 이내). AMD가 30~40% 저렴합니다. 절충점: macOS, Xcode, Final Cut 생태계를 잃게 됩니다.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Linux가 필요합니까, 아니면 Windows를 사용할 수 있습니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '4개 모두 Linux와 함께 출고됩니다. Windows 드라이버는 개발 중이지만 아직 프로덕션 준비가 되지 않았습니다.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Minisforum MS-A2와 Beelink GTR9 Pro의 차이점은 무엇입니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Minisforum은 96GB RAM($1,599). Beelink는 128GB RAM($1,899)이며 Ubuntu + ROCm이 사전 구성되어 있습니다.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '이 미니 PC에 별도 GPU를 추가할 수 있습니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'AOOSTAR GEM12 Pro는 OCuLink를 통한 외부 GPU 지원(별도 $500+ eGPU 인클로저 필요).'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '이 미니 PC는 전력을 얼마나 사용합니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '100W로 한 달 풀 가동 시 약 72kWh, 미국 전기 요금 기준 약 $8~$12.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'AMD 다음 세대 출시 시 이 제품들이 구식이 됩니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'AMD Ryzen AI Max Gen 2는 2026년 말이 유력합니다. 이 기기들은 3~4년간 관련성을 유지할 것입니다.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '여러 모델을 동시에 실행할 수 있습니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '네, 충분한 RAM이 있다면 가능합니다. 96GB로 두 개의 32B 모델 또는 70B 하나와 13B 하나 실행 가능. 128GB는 여유가 더 있습니다.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '부하 시 소음 수준은 어떻습니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Minisforum 42dB, Beelink 44dB, AOOSTAR 40dB, GMKtec 38dB. 모두 노트북 쿨링 팬과 비슷합니다.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '이 미니 PC가 파인튜닝에 적합합니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '네, 단 조건이 있습니다. LoRA 파인튜닝은 잘 작동합니다. 전체 가중치 파인튜닝은 데스크톱 GPU 설정보다 느립니다.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '이 미니 PC에서 Stable Diffusion을 실행할 수 있습니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '네. Stable Diffusion XL은 이미지당 8~12초(RTX 4070 약 3초보다 느림).'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '추론에서 ROCm과 CUDA는 어떻게 비교됩니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'ROCm은 CUDA 대비 90% 기능 완성도. 주요 격차: 일부 독점 파인튜닝 프레임워크가 ROCm을 지원하지 않습니다.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '보증 기간은 얼마입니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Minisforum 2년, AOOSTAR 1년, Beelink 1년(EU 법적 보증 추가 2년). GMKtec은 지역별로 다릅니다.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '나중에 RAM을 업그레이드할 수 있습니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Minisforum/AOOSTAR는 가능(최대 192GB). Beelink/GMKtec은 불가(솔더링). 처음부터 필요한 RAM을 구매하십시오.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '어떤 미니 PC가 최고의 빌드 품질을 갖추고 있습니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'AOOSTAR GEM12 Pro(프리미엄 알루미늄, 열 최적화). Minisforum이 근접한 2위.'
+          }
+        },
+      ],
+    },
+  },
 };

@@ -2537,4 +2537,358 @@ for chunk in stream_generate(model, tokenizer, "解释量子计算", max_tokens=
       },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-15',
+    theme: 'Hardware & Performance',
+    title: 'Apple Silicon M5 Max에서 70B+ 모델 실행하기 2026: 완전 가이드',
+    seoTitle: 'M5 Max 128GB에서 70B 모델: 12–20 tok/s, GPT-5.5 수준의 품질',
+    intro: 'Apple Silicon M5 Max(128GB)에서 70B 이상의 LLM을 로컬로 실행하십시오. Ollama와 MLX를 사용한 완전한 설정 가이드, 양자화 비교(Q4/Q5/Q8), 8B 대 70B 품질 벤치마크, 실제 tok/s 수치, 70B 대 클라우드 API 비용 분석, 대안 70B+ 모델, 속도 최적화, 그리고 2026년 M5 Ultra 전망을 포함합니다.',
+    metaDescription: 'M5 Max 128GB는 70B 모델을 12–20 tok/s로 실행합니다. Q5 품질은 GPT-5.5와 3% 이내의 차이입니다. Ollama/MLX 완전 설정 가이드, 양자화 가이드, 벤치마크 포함.',
+    twitterDescription: 'M5 Max 128GB에서 70B LLM: 12–20 tok/s, Q4–Q8 옵션, 클라우드 품질의 3% 이내, 월 $0. 완전 설정 + 벤치마크 가이드.',
+    publishDate: '2026-05-15',
+    dateModified: '2026-05-15',
+    current_models_mentioned: ['Llama 3.3 70B', 'Qwen3 72B', 'DeepSeek 67B', 'Mixtral 8x22B', 'Llama 3.3 8B'],
+    current_hardware_mentioned: ['M5 Max', 'M5 Ultra', 'M4 Max', 'M3 Max', 'RTX 4090'],
+    audience: '클라우드 API 없이 최고의 로컬 LLM 품질을 원하는 M5 Max 소유자 및 구매 예정자.',
+    readTime: '16분 읽기',
+    educationalLevel: 'Advanced',
+    primaryTerm: '70B 모델 Apple Silicon',
+    targetKeywords: ['70B 모델 Mac', 'M5 Max 128GB LLM', '70B 로컬 실행', 'Llama 70B Apple Silicon', '대형 모델 로컬 추론'],
+    ctaText: 'M5 Max에서 Llama 3.3 70B를 로컬로 실행하고 계십니까? PromptQuorum을 통해 로컬 응답을 GPT-5.5, Claude Sonnet 4.6, Gemini 3.5 Pro 및 22개의 다른 클라우드 모델과 비교하십시오. $4,000 하드웨어 투자가 특정 추론, 코딩, 글쓰기 작업에서 클라우드 품질과 일치하는지 검증하십시오. 모두 하나의 디스패치에서.',
+    leadAnswerBlock: 'M5 Max 128GB는 Llama 3.3 70B를 15–20 tok/s(Q4_K_M) 또는 12–16 tok/s(Q5_K_M)로 실행합니다. 70B Q5는 MMLU에서 86.1점을 기록하여 GPT-5.5(88.7)와 3% 이내의 차이를 보이며, 월 $0으로 로컬에서 실행됩니다. 복잡한 멀티 GPU 설정 없이 70B를 수용할 수 있는 유일한 소비자용 하드웨어입니다. Ollama로 설정하는 데 10분도 걸리지 않습니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'M5 Max 128GB에서 70B 모델을 실행할 수 있습니까?',
+        answer: '네. Llama 3.3 70B Q5_K_M은 12–16 tok/s로 실행됩니다. Q4_K_M은 15–20 tok/s, Q8_0은 8–12 tok/s(무손실 품질)입니다. 모두 128GB 통합 메모리에 맞습니다. Ollama로 설정하는 데 10분이면 충분합니다. 70B Q5는 표준 벤치마크에서 GPT-5.5 품질의 3% 이내입니다.',
+        bullets: [
+          '70B Q4_K_M: 42 GB, 15–20 tok/s, 양호한 품질',
+          '70B Q5_K_M: 49 GB, 12–16 tok/s, 매우 좋음(권장)',
+          '70B Q8_0: 74 GB, 8–12 tok/s, 무손실 품질',
+          '멀티 GPU 복잡성 없이 사용 가능한 유일한 소비자용 옵션',
+          'MMLU: 70B Q5 = 86.1 vs GPT-5.5 = 88.7 (3% 차이)',
+          '설정: brew install ollama && ollama pull llama3.1:70b',
+        ],
+        updatedDate: '2026-05-15',
+      },
+    },
+    toc: [
+      { label: '70B가 중요한 이유', anchor: '#why' },
+      { label: '하드웨어 요구사항', anchor: '#hardware' },
+      { label: '단계별 설정', anchor: '#setup' },
+      { label: '품질: 8B vs 70B vs GPT-5.5', anchor: '#quality' },
+      { label: '양자화 심층 분석', anchor: '#quantization' },
+      { label: '대안 70B+ 모델', anchor: '#alternatives' },
+      { label: '70B 로컬 vs 클라우드 API', anchor: '#vs-cloud' },
+      { label: '실제 활용 사례', anchor: '#use-cases' },
+      { label: '속도 최적화', anchor: '#speed-opts' },
+      { label: 'M5 Ultra 미리보기', anchor: '#m5ultra' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 문서', anchor: '#related-articles' },
+    ],
+    sections: {
+      why: {
+        id: 'why',
+        title: '70B가 중요한 이유: 8B에서의 품질 도약',
+        content: [
+          '8B에서 70B 파라미터로의 도약은 로컬 AI에서 가장 중요한 품질 임계점입니다. 산업 벤치마크 점수:',
+        ],
+        tableFormat: true,
+        columns: ['벤치마크', 'Llama 3.3 8B', 'Llama 3.3 70B Q5', 'GPT-5.5'],
+        rows: [
+          { '벤치마크': 'MMLU (일반 지식)', 'Llama 3.3 8B': '73.0', 'Llama 3.3 70B Q5': '86.1', 'GPT-5.5': '88.7' },
+          { '벤치마크': 'HumanEval (코드)', 'Llama 3.3 8B': '72.6', 'Llama 3.3 70B Q5': '80.5', 'GPT-5.5': '90.2' },
+          { '벤치마크': 'GSM8K (수학)', 'Llama 3.3 8B': '84.5', 'Llama 3.3 70B Q5': '95.1', 'GPT-5.5': '95.8' },
+          { '벤치마크': 'BBH (추론)', 'Llama 3.3 8B': '71.0', 'Llama 3.3 70B Q5': '85.3', 'GPT-5.5': '88.9' },
+          { '벤치마크': '평균', 'Llama 3.3 8B': '75.3', 'Llama 3.3 70B Q5': '86.8', 'GPT-5.5': '90.9' },
+        ],
+        note: '70B Q5는 8B와 GPT-5.5 사이의 품질 격차를 75% 좁힙니다 — 월 $0으로 로컬에서 실행하면서.',
+      },
+      hardware: {
+        id: 'hardware',
+        title: '70B 모델을 실행할 수 있는 하드웨어',
+        tableFormat: true,
+        columns: ['하드웨어', '양자화', '모델 크기', 'tok/s', '품질', '적합 여부'],
+        rows: [
+          { '하드웨어': 'M3 Max 96GB', '양자화': 'Q4_K_M', '모델 크기': '42 GB', 'tok/s': '9–13', '품질': '양호', '적합 여부': '✓ 가능' },
+          { '하드웨어': 'M3 Max 128GB', '양자화': 'Q5_K_M', '모델 크기': '49 GB', 'tok/s': '8–12', '품질': '매우 양호', '적합 여부': '✓ 가능' },
+          { '하드웨어': 'M4 Max 128GB', '양자화': 'Q5_K_M', '모델 크기': '49 GB', 'tok/s': '10–14', '품질': '매우 양호', '적합 여부': '✓ 가능' },
+          { '하드웨어': 'M5 Max 128GB', '양자화': 'Q4_K_M', '모델 크기': '42 GB', 'tok/s': '15–20', '품질': '양호', '적합 여부': '✓ 가능' },
+          { '하드웨어': 'M5 Max 128GB', '양자화': 'Q5_K_M', '모델 크기': '49 GB', 'tok/s': '12–16', '품질': '매우 양호', '적합 여부': '✓ 가능' },
+          { '하드웨어': 'M5 Max 128GB', '양자화': 'Q8_0', '모델 크기': '74 GB', 'tok/s': '8–12', '품질': '무손실', '적합 여부': '✓ 가능' },
+          { '하드웨어': 'M5 Ultra 256GB (예상)', '양자화': 'FP16', '모델 크기': '140 GB', 'tok/s': '14–18', '품질': '완벽', '적합 여부': '✓ 가능' },
+          { '하드웨어': 'RTX 4090 24GB', '양자화': '모두', '모델 크기': '42 GB+', 'tok/s': '—', '품질': '—', '적합 여부': '✗ OOM' },
+          { '하드웨어': 'Dual RTX 3090 48GB', '양자화': 'Q4_K_M', '모델 크기': '42 GB', 'tok/s': '12–15', '품질': '양호', '적합 여부': '✓ 가능(복잡)' },
+          { '하드웨어': 'Dual RTX 4090 48GB', '양자화': 'Q5_K_M', '모델 크기': '49 GB', 'tok/s': '18–25', '품질': '매우 양호', '적합 여부': '✓ 가능($5,000+)' },
+          { '하드웨어': '4× RTX 3090 96GB', '양자화': 'Q8_0', '모델 크기': '74 GB', 'tok/s': '12–16', '품질': '무손실', '적합 여부': '✓ 가능(고비용)' },
+        ],
+        note: 'M5 Max 128GB는 복잡한 멀티 GPU 설정 없이 70B 모델을 실행할 수 있는 유일한 소비자용 하드웨어입니다. $4,000짜리 Mac Studio 구성은 $5,000–8,000짜리 NVIDIA 멀티 GPU 장비를 대체합니다.',
+      },
+      setupInstall: {
+        id: 'setup',
+        title: '단계별 가이드: M5 Max 128GB에서 70B 실행하기',
+        content: [
+          '1단계: 하드웨어를 확인하십시오. 2단계: Ollama를 설치하고 구성하십시오.',
+        ],
+        codeBlock: `# 1단계: 통합 메모리 확인 (128 GB로 표시되어야 함)
+system_profiler SPHardwareDataType | grep Memory
+# → Memory: 128 GB
+
+# 2단계: Ollama 설치
+brew install ollama
+brew services start ollama
+
+# 3단계: 70B용 구성 (모델을 메모리에 유지하여 각 요청 시 60초 워밍업 방지)
+echo 'export OLLAMA_KEEP_ALIVE=1h' >> ~/.zshrc
+echo 'export OLLAMA_NUM_PARALLEL=1' >> ~/.zshrc
+source ~/.zshrc
+brew services restart ollama`,
+        codeLanguage: 'bash',
+      },
+      setupPull: {
+        id: 'setup-pull',
+        title: '3단계: 70B 모델 다운로드',
+        content: [
+          '100 Mbps 연결에서 다운로드 시간: 45–90분. 1 Gbps에서: 5–10분.',
+        ],
+        codeBlock: `# 권장: Q5_K_M — 최고의 품질/속도 균형 (49 GB 다운로드)
+ollama pull llama3.1:70b-instruct-q5_K_M
+
+# 대안: Q4 — 최대 속도, 42 GB 다운로드
+ollama pull llama3.1:70b-instruct-q4_K_M
+
+# 대안: Q8 — 무손실 품질, 74 GB 다운로드
+ollama pull llama3.1:70b-instruct-q8_0`,
+        codeLanguage: 'bash',
+      },
+      setupRun: {
+        id: 'setup-run',
+        title: '4–6단계: 첫 실행, Metal 확인, 메모리 체크',
+        content: [
+          '첫 번째 요청은 49 GB를 통합 메모리에 로드하는 데 30–60초가 걸립니다. 이후 요청은 즉시 처리됩니다.',
+        ],
+        codeBlock: `# 4단계: 첫 실행 (모델 로드에 30-60초 대기)
+ollama run llama3.1:70b-instruct-q5_K_M "Write a 200-word essay on local AI"
+
+# 5단계: Metal GPU 가속이 활성화되어 있는지 확인
+ollama run llama3.1:70b-instruct-q5_K_M --verbose
+# 예상 출력: ggml_metal_init: found device: Apple M5 Max
+
+# 6단계: 애플리케이션을 위한 API 접근
+curl http://localhost:11434/api/chat -d '{
+  "model": "llama3.1:70b-instruct-q5_K_M",
+  "messages": [{"role": "user", "content": "Explain quantum computing"}]
+}'`,
+        codeLanguage: 'bash',
+      },
+      quality8B: {
+        id: 'quality',
+        title: '품질 비교: 8B vs 70B vs GPT-5.5',
+        content: [
+          '프롬프트: "재귀 함수에서 스택 오버플로우가 발생하는 이유를 설명하고, 충돌 전에 무한 재귀를 감지하는 Python 함수를 작성하십시오."',
+          'Llama 3.3 8B Q4 응답 (16GB+ Mac에서 실행 가능):',
+        ],
+        blockquote: '스택 오버플로우는 너무 많은 함수 호출이 메모리를 초과할 때 발생합니다.',
+        codeBlock: `def detect_recursion(func):
+    count = 0
+    try:
+        func()
+    except RecursionError:
+        count += 1
+    return count > 0`,
+        codeLanguage: 'python',
+        note: '핵심 통찰 누락: sys.setrecursionlimit이 필요하며, 실제 감지 로직이 올바르지 않습니다.',
+      },
+      quality70B: {
+        id: 'quality-70b',
+        title: 'Llama 3.3 70B Q5 응답 (M5 Max 128GB)',
+        blockquote: '재귀에서의 스택 오버플로우는 호출 스택이 OS가 부과한 제한(일반적으로 1MB–8MB)을 초과할 때 발생합니다. 각 재귀 호출은 지역 변수와 반환 주소를 포함하는 스택 프레임을 추가합니다. Python의 기본 제한은 1000번의 호출입니다.',
+        codeBlock: `import sys
+import functools
+
+def detect_recursion(threshold=900):
+    def decorator(func):
+        depth = 0
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            nonlocal depth
+            depth += 1
+            try:
+                if depth > threshold:
+                    raise RecursionError(
+                        f"Detected potential infinite recursion at depth {depth}"
+                    )
+                return func(*args, **kwargs)
+            finally:
+                depth -= 1
+        return wrapper
+    return decorator`,
+        codeLanguage: 'python',
+        note: '정확함: 데코레이터 패턴, 깊이 추적, 충돌 전 사전 감지, 구성 가능한 임계값. GPT-5.5는 약간 더 우아한 오류 처리를 추가합니다 — 실제로는 3% 품질 차이입니다.',
+      },
+      quantization: {
+        id: 'quantization',
+        title: '70B 모델의 양자화 심층 분석',
+        items: [
+          'Q4 vs Q5 품질 차이는 8B보다 70B에서 더 큽니다. Q4: 약 3–5% 품질 손실. Q5: FP16 대비 약 0.5–1% 손실.',
+          '8B 모델에서는 Q4 vs Q8의 차이가 거의 느껴지지 않습니다. 70B에서는 복잡한 추론과 코드에서 Q4 vs Q8의 차이가 상당합니다.',
+          '권장사항: Q5_K_M이 최선의 균형점입니다. 속도가 중요한 경우(채팅, 자동완성)에는 Q4를, 출력 품질이 중요한 경우(법률, 코드 리뷰)에는 Q8을 사용하십시오.',
+          '메모리: Q4 = 42 GB, Q5 = 49 GB, Q8 = 74 GB. 모두 M5 Max 128GB에 맞습니다. OS(약 8 GB) 및 앱을 위한 여유 공간을 남겨 두십시오.',
+          '실제 tok/s: Q4 = 15–20, Q5 = 12–16, Q8 = 8–12. 12 tok/s에서 500단어 응답은 약 40초가 걸립니다.',
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: 'Apple Silicon을 위한 대안 70B+ 모델',
+        tableFormat: true,
+        columns: ['모델', '크기 (Q5)', '최적 용도', 'M5 Max tok/s'],
+        rows: [
+          { '모델': 'Llama 3.3 70B Instruct', '크기 (Q5)': '49 GB', '최적 용도': '범용, 추론', 'M5 Max tok/s': '12–16' },
+          { '모델': 'Qwen3 72B Instruct', '크기 (Q5)': '51 GB', '최적 용도': '다국어, 수학, 코드', 'M5 Max tok/s': '11–15' },
+          { '모델': 'DeepSeek 67B', '크기 (Q5)': '47 GB', '최적 용도': '코딩 우수성', 'M5 Max tok/s': '12–16' },
+          { '모델': 'Llama 3.3 70B Coder', '크기 (Q5)': '49 GB', '최적 용도': '순수 코딩 작업', 'M5 Max tok/s': '13–17' },
+          { '모델': 'Mixtral 8x22B (MoE)', '크기 (Q4)': '88 GB', '최적 용도': '고품질 추론', 'M5 Max tok/s': '18–22' },
+          { '모델': 'Cohere Command R+ 104B', '크기 (Q4)': '73 GB', '최적 용도': 'RAG, 128K 컨텍스트', 'M5 Max tok/s': '8–12' },
+        ],
+        note: '용도별 권장사항: 범용 추론 → Llama 3.3 70B Q5. 코드 → DeepSeek 67B. 비영어권 → Qwen3 72B. 문서 Q&A → Command R+. 최대 속도 → Mixtral 8x22B (MoE는 더 적은 활성 파라미터를 사용).',
+      },
+      alternativesPull: {
+        id: 'alternatives-pull',
+        title: '대안 모델 다운로드',
+        codeBlock: `ollama pull qwen2.5:72b-instruct-q5_K_M
+ollama pull deepseek-coder:67b-q5_K_M
+ollama pull mixtral:8x22b`,
+        codeLanguage: 'bash',
+      },
+      vsCloud: {
+        id: 'vs-cloud',
+        title: '70B 로컬 vs 클라우드 API — 상세 비교',
+        tableFormat: true,
+        columns: ['지표', '70B Q5 로컬 (M5 Max)', 'GPT-5.5 API', 'Claude Sonnet 3.5', 'Gemini 3.5 Pro'],
+        rows: [
+          { '지표': '품질 (MMLU)', '70B Q5 로컬 (M5 Max)': '86.1', 'GPT-5.5 API': '88.7', 'Claude Sonnet 3.5': '88.7', 'Gemini 3.5 Pro': '85.9' },
+          { '지표': '속도 (tok/s)', '70B Q5 로컬 (M5 Max)': '12–16', 'GPT-5.5 API': '50–80', 'Claude Sonnet 3.5': '50–80', 'Gemini 3.5 Pro': '60–100' },
+          { '지표': '첫 토큰 지연', '70B Q5 로컬 (M5 Max)': '1–2초', 'GPT-5.5 API': '0.3–0.8초', 'Claude Sonnet 3.5': '0.4–0.9초', 'Gemini 3.5 Pro': '0.5–1초' },
+          { '지표': '1M 토큰당 비용', '70B Q5 로컬 (M5 Max)': '$0', 'GPT-5.5 API': '$2.50/$10.00', 'Claude Sonnet 3.5': '$3.00/$15.00', 'Gemini 3.5 Pro': '$1.25/$5.00' },
+          { '지표': '월 비용 (5M 토큰)', '70B Q5 로컬 (M5 Max)': '$0', 'GPT-5.5 API': '$50–150', 'Claude Sonnet 3.5': '$75–200', 'Gemini 3.5 Pro': '$30–80' },
+          { '지표': '개인정보 보호', '70B Q5 로컬 (M5 Max)': '100% 로컬', 'GPT-5.5 API': 'OpenAI로 전송', 'Claude Sonnet 3.5': 'Anthropic으로 전송', 'Gemini 3.5 Pro': 'Google로 전송' },
+          { '지표': '인터넷 필요', '70B Q5 로컬 (M5 Max)': '아니오', 'GPT-5.5 API': '예', 'Claude Sonnet 3.5': '예', 'Gemini 3.5 Pro': '예' },
+          { '지표': '속도 제한', '70B Q5 로컬 (M5 Max)': '없음', 'GPT-5.5 API': '티어 기반', 'Claude Sonnet 3.5': '티어 기반', 'Gemini 3.5 Pro': '티어 기반' },
+          { '지표': '커스터마이제이션', '70B Q5 로컬 (M5 Max)': '완전 지원 (로컬 파인튜닝)', 'GPT-5.5 API': '제한됨', 'Claude Sonnet 3.5': '제한됨', 'Gemini 3.5 Pro': '제한됨' },
+        ],
+        note: '70B Q5 로컬은 MMLU에서 클라우드 품질의 3% 이내입니다. $4,000 하드웨어 비용과 월 $50–150 클라우드 절감을 고려하면, 사용량에 따라 투자 회수 기간은 27–80개월입니다. 의료, 법률, 금융 등 개인정보 보호가 필요한 작업에서는 클라우드 대안이 없습니다.',
+      },
+      useCases: {
+        id: 'use-cases',
+        title: '70B 로컬 추론의 실제 활용 사례',
+        numberedItems: [
+          { title: '기밀 문서 분석', whyItMatters: '법적 계약서, 의료 기록, 재무제표, M&A 실사. HIPAA, GDPR 또는 NDA 하에서 클라우드 API는 허용되지 않습니다. M5 Max에서의 70B Q5는 데이터 유출 없이 클라우드 수준의 분석을 제공합니다.' },
+          { title: '대용량 코딩 지원', whyItMatters: 'Copilot을 하루 8시간 사용하는 개인 개발자: 월 약 $10. 10명 팀이 70B Coder를 로컬로 사용: 월 $0. 코드는 회사 네트워크를 벗어나지 않습니다. 공유 추론 서버로서의 M5 Max는 10인 팀에서 3개월 안에 비용을 회수합니다.' },
+          { title: '장문 콘텐츠 생성', whyItMatters: '5,000단어 블로그 포스트, 기술 문서. 70B는 8B보다 훨씬 우수한 장문 콘텐츠를 생성합니다. 로컬: 토큰 제한 없음, 속도 제한 없음. API 비용 $50–100 대비 $0으로 하루 50,000단어를 생성할 수 있습니다.' },
+          { title: '연구 및 학술 용도', whyItMatters: '문헌 검토를 위한 수천 편의 논문 처리, 다양한 분야에 걸친 가설 생성. 70B 추론 품질이 필요합니다. 학생 및 박사후 연구원의 예산에는 클라우드 비용이 부담스럽습니다.' },
+          { title: '개인정보 보호 우선 개인 AI', whyItMatters: '개인 일기 분석, 가족 재정 계획, 개인 데이터를 활용한 건강 성찰. 전 가족을 위해 ChatGPT Plus를 대체합니다. 제3자에게 데이터가 전송되지 않습니다.' },
+          { title: '오프라인 중요 워크플로우', whyItMatters: '제한적인 지역의 현장 언론인, 오지의 의료 전문가, 안정적인 인터넷 없는 여행, 외부 네트워크 접근이 없는 보안 시설.' },
+        ],
+      },
+      speedMlx: {
+        id: 'speed-opts',
+        title: '속도 최적화: MLX vs Ollama',
+        content: [
+          'MLX는 Apple의 네이티브 ML 프레임워크로, 동일한 모델에서 Ollama보다 15–25% 빠릅니다. M5 Max에서 70B Q5: Ollama = 12–16 tok/s, MLX = 18–22 tok/s.',
+        ],
+        codeBlock: `from mlx_lm import load, generate
+
+# 70B Q5 모델 로드 (Hugging Face의 MLX 변환 버전)
+model, tokenizer = load("mlx-community/Llama-3.1-70B-Instruct-Q5")
+
+# 스트리밍 생성 — 사용자가 1-2초 안에 첫 단어를 볼 수 있음
+from mlx_lm import stream_generate
+for chunk in stream_generate(model, tokenizer, "Explain quantum computing", max_tokens=500):
+    print(chunk, end="", flush=True)`,
+        codeLanguage: 'python',
+      },
+      speedTips: {
+        id: 'speed-tips',
+        title: '추가 속도 팁',
+        items: [
+          '모델 웜 유지: OLLAMA_KEEP_ALIVE=1h(또는 항상 켜져 있는 Mac Mini의 경우 24h)를 설정하여 각 요청 시 30–60초의 재로드를 방지하십시오.',
+          '스트리밍 사용: 전체 응답을 위해 25–40초를 기다리는 대신 1–2초 안에 첫 토큰을 볼 수 있습니다.',
+          'max_tokens 낮추기: 200단어 답변이 필요한 경우 max_tokens=200으로 설정하십시오. 14 tok/s에서: 200토큰 = 14초 vs 500토큰 = 36초.',
+          'Q4 vs Q5 속도 트레이드오프: Q4 = 15–20 tok/s (Q5보다 25% 빠름). 대부분의 작업에서 품질 차이는 약 2–3%입니다. 채팅에는 Q4를, 중요한 추론에는 Q5를 사용하십시오.',
+          '추론 중에는 다른 GPU 집중 앱 실행을 피하십시오 — Activity Monitor GPU History에서 다른 프로세스가 Metal 대역폭을 경쟁하는지 확인할 수 있습니다.',
+        ],
+      },
+      m5ultra: {
+        id: 'm5ultra',
+        title: 'M5 Ultra 미리보기: 다음 성능 단계 (2026년 중반 예상)',
+        content: [
+          'Apple의 이전 Ultra 패턴(2× Max 사양)을 기반으로 한 M5 Ultra 예상 사양: 256 GB 통합 메모리, 약 1,200 GB/s 대역폭, 약 80개 GPU 코어. Mac Studio Ultra 전용으로 예상됩니다.',
+        ],
+        tableFormat: true,
+        columns: ['모델', 'M5 Max 128GB', 'M5 Ultra 256GB (예상)'],
+        rows: [
+          { '모델': 'Llama 3.3 70B Q5', 'M5 Max 128GB': '12–16 tok/s', 'M5 Ultra 256GB (예상)': '24–32 tok/s' },
+          { '모델': 'Llama 3.3 70B Q8', 'M5 Max 128GB': '8–12 tok/s', 'M5 Ultra 256GB (예상)': '16–24 tok/s' },
+          { '모델': 'Llama 3.3 70B FP16 (무손실)', 'M5 Max 128GB': '✗ 용량 부족', 'M5 Ultra 256GB (예상)': '14–18 tok/s' },
+          { '모델': 'Qwen3 72B Q8', 'M5 Max 128GB': '8–12 tok/s', 'M5 Ultra 256GB (예상)': '16–24 tok/s' },
+          { '모델': 'Mixtral 8x22B Q5', 'M5 Max 128GB': '14–18 tok/s', 'M5 Ultra 256GB (예상)': '28–36 tok/s' },
+          { '모델': 'Llama 3.3 405B Q3', 'M5 Max 128GB': '✗ 용량 부족', 'M5 Ultra 256GB (예상)': '4–6 tok/s' },
+          { '모델': 'Llama 3.3 405B Q4 (~200 GB)', 'M5 Max 128GB': '✗ 용량 부족', 'M5 Ultra 256GB (예상)': '3–5 tok/s' },
+        ],
+        note: 'M5 Ultra의 혜택: (1) 소비자 하드웨어 최초의 무손실 70B FP16. (2) 405B 파라미터 모델. (3) 두 개의 동시 70B 모델. 예상 가격: $5,500–7,000 (Mac Studio Ultra). 대기해야 할 때: 405B 모델, 70B FP16이 필요하거나 이미 M3/M4 Max를 보유하고 있는 경우.',
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: '70B Q4는 대부분의 작업에 충분합니까?',
+            a: '네. Q4는 업계 표준 양자화입니다. Q5 대비 약 3–5%의 품질 손실은 대부분의 채팅, 글쓰기, 범용 작업에서 거의 느껴지지 않습니다. Q5 또는 Q8은 출력 품질이 중요한 경우(법률 분석, 코드 리뷰, 의료 용도)에만 사용하십시오.',
+          },
+          {
+            q: '70B Q5와 다른 모델을 동시에 실행할 수 있습니까?',
+            a: '네, 더 작은 모델 하나와 함께 가능합니다. 70B Q5 = 49 GB. 128 GB에서 OS 오버헤드 8 GB를 뺀 120 GB. 70B Q5(49 GB) + 7–8B 모델(5 GB) = 총 54 GB — 여유롭게 가능합니다. 두 개의 동시 70B 모델은 M5 Ultra 256 GB가 필요합니다.',
+          },
+          {
+            q: '지금 M5 Max를 사는 것이 나을까요, M5 Ultra를 기다려야 할까요?',
+            a: 'M5 Ultra를 기다려야 하는 경우: (1) 70B FP16(무손실 품질)이 필요한 경우, (2) 405B 모델이 필요한 경우, (3) 이미 M3 Max 또는 M4 Max를 보유하고 있는 경우(M5 Max는 건너뛰십시오). 지금 M5 Max를 구매해야 하는 경우: 오늘 당장 70B 기능이 필요하고 예산이 $5,000 미만인 경우.',
+          },
+          {
+            q: 'M5 Ultra에서 70B가 M5 Max보다 얼마나 더 빠릅니까?',
+            a: '메모리 대역폭이 두 배(약 1,200 GB/s vs 614 GB/s)로 향상되어 약 2배 빠릅니다. M5 Max는 70B Q5를 12–16 tok/s로 실행하며, M5 Ultra는 24–32 tok/s로 예상됩니다. M5 Ultra는 또한 M5 Max에서 용량이 부족한 70B FP16(무손실 품질)도 실행할 수 있습니다.',
+          },
+          {
+            q: 'M5 Max 128GB에서 두 개의 70B 모델을 동시에 실행할 수 있습니까?',
+            a: '아니요, 두 개의 전체 70B 모델은 불가능합니다. 두 개의 70B Q4 모델 = 84 GB에 OS 오버헤드를 더하면 약 95 GB로, 128 GB에서 빠듯합니다. M5 Ultra 256 GB는 두 개의 동시 70B 모델이나 70B 하나와 34B 하나를 쉽게 처리할 수 있습니다.',
+          },
+          {
+            q: '70B 모델에 필요한 디스크 공간은 얼마입니까?',
+            a: '각 70B 모델은 디스크에서 42 GB(Q4), 49 GB(Q5), 또는 74 GB(Q8)를 차지합니다. 비교를 위해 한 모델의 3가지 양자화를 유지한다면: 165 GB. 여러 모델로 진지하게 70B 작업을 하려면 Mac Studio에서 1 TB 또는 2 TB SSD를 사용하십시오.',
+          },
+          {
+            q: '70B 로컬이 제 특정 사용 사례에서 GPT-5.5만큼 좋습니까?',
+            a: '70B Q5는 MMLU에서 86.1점을 기록하여 GPT-5.5의 88.7점과 3% 차이입니다. 복잡한 추론과 섬세한 글쓰기에서는 GPT-5.5가 여전히 약간 앞섭니다. 개인정보 보호가 필요한 작업, 대용량 사용($50+/월), 또는 오프라인 사용의 경우 로컬이 자동으로 유리합니다. 본인의 워크플로우에서 직접 프롬프트를 테스트하여 확인하십시오.',
+          },
+          {
+            q: 'Llama 4 또는 최신 70B 모델이 M5 Max에서 작동합니까?',
+            a: '네. M5 Max 128 GB는 아키텍처에 관계없이 Q4/Q5/Q8 양자화의 모든 70B 모델에 맞습니다. 새로운 70B 릴리스(Llama 4, Qwen3 등)는 일반적으로 출시 후 며칠 안에 Ollama에 등장합니다. 새 모델 이름으로 ollama pull을 실행하십시오.',
+          },
+        ],
+      },
+      relatedArticles: {
+        id: 'related-articles',
+        title: '관련 문서',
+        items: [
+          '[Apple Silicon 로컬 LLM 완전 가이드](/local-llms/apple-silicon-local-llm-guide-2026) — M1에서 M5 Max 비교, 통합 메모리 설명',
+          '[M5 Pro vs M5 Max LLM 벤치마크 2026](/local-llms/m5-pro-max-llm-benchmarks-2026) — 모델 크기별 상세 tok/s 수치',
+          '[로컬 LLM에 필요한 통합 메모리 용량?](/local-llms/how-much-unified-memory-for-local-llm) — 16GB vs 36GB vs 64GB vs 128GB 가이드',
+          '[Apple Silicon을 위한 최고의 LLM 모델](/local-llms/best-models-apple-silicon-2026) — Mac 구성별 모델 권장사항',
+          '[Mac에서 MLX vs Ollama vs llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) — 프레임워크 속도 비교 및 설정 가이드',
+          '[Apple Silicon vs NVIDIA GPU 로컬 LLM](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — 크로스 플랫폼 하드웨어 비교',
+          '[LLM 양자화 설명](/local-llms/llm-quantization-explained) — Q4/Q5/Q8/FP16 심층 분석',
+          '[Mac Mini M5 로컬 AI 서버로 사용하기](/local-llms/mac-mini-m5-local-ai-server) — 항상 켜져 있는 추론 서버 설정',
+        ],
+      },
+    },
+  },
 }

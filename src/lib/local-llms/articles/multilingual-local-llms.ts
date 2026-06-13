@@ -2723,4 +2723,170 @@ schema: {
         }
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Best Models',
+      title: '다국어 로컬 LLM: 2026년 비영어권 언어에 최적화된 모델',
+      seoTitle: '2026년 최고의 다국어 로컬 LLM: Qwen3 vs Mistral',
+      intro: 'Qwen3는 2026년 현재 가장 강력한 다국어 로컬 LLM 패밀리로, 중국어, 일본어, 한국어, 아랍어, 주요 유럽 언어를 포함한 29개 언어를 기본 지원합니다. 유럽 언어에 한해서는 Mistral과 Llama 3.x 모델도 Qwen3에 근접한 성능을 보입니다. 아시아 언어(일본어, 한국어, 중국어)에서는 Qwen3가 동급 모델 크기 기준으로 모든 대안을 능가합니다.',
+      metaDescription: 'Qwen3는 아시아 언어에서 Llama 대비 15~25% 높은 성능을 기록합니다. Mistral은 유럽 언어에서 경쟁력이 있습니다. 2026년 4월 벤치마크 비교.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: 'Qwen3는 2026년 현재 가장 강력한 다국어 로컬 LLM 패밀리로, 중국어, 일본어, 한국어, 아랍어, 주요 유럽 언어를 포함한 29개 언어를 기본 지원합니다.',
+      audience: '일반 소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 입문자',
+      readTime: '9분 읽기',
+      educationalLevel: 'Beginner',
+      primaryTerm: '다국어 로컬 LLM',
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: '다국어를 지원하는 로컬 LLM은 무엇입니까?', anchor: '#which-llms-support-multiple-languages' },
+        { label: '유럽 언어에 최적화된 모델', anchor: '#best-models-for-european-languages' },
+        { label: '아시아 언어에 최적화된 모델', anchor: '#best-models-for-asian-languages' },
+        { label: '아랍어 및 중동 언어에 최적화된 모델', anchor: '#best-models-for-arabic' },
+        { label: '다국어 품질 벤치마크 방법', anchor: '#how-to-benchmark-multilingual-quality' },
+        { label: '다국어 비교표', anchor: '#multilingual-comparison-table' },
+        { label: '다국어 모델 사용 시 흔한 실수', anchor: '#common-mistakes' },
+        { label: '자주 묻는 질문', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**최고의 다국어 패밀리**: Qwen3 -- 29개 언어 기본 지원, 모든 모델 크기에서 최고의 비영어권 벤치마크 점수.',
+            '**유럽 언어(독일어, 프랑스어, 스페인어, 이탈리아어)**: Mistral과 Llama 3.x는 유럽 언어에서 Qwen3와 경쟁력이 있습니다. 코드 혼합 및 공식 문체 작업에서는 Qwen3가 여전히 앞섭니다.',
+            '**일본어 및 한국어**: Qwen3가 동급 크기의 Llama 3.x 대비 언어별 벤치마크에서 15~25% 높은 성능을 보입니다.',
+            '**중국어(간체 및 번체)**: Qwen3가 지배적인 모델입니다 -- 오픈 웨이트 모델 중 가장 방대한 중국어 코퍼스로 학습되었습니다.',
+            '2026년 4월 기준, 복잡한 작업에서 로컬 실행 가능한 어떤 모델도 일본어나 한국어에서 GPT-5.5 또는 Claude Opus 4.8 수준의 품질에 도달하지 못합니다. Qwen3가 로컬에서 최선의 선택입니다.',
+          ],
+        },
+        whichSupport: {
+          title: '실제로 다국어를 지원하는 로컬 LLM은 무엇입니까?',
+          content: [
+            '**언어를 "지원"한다는 것은 단순히 해당 언어로 텍스트를 생성하는 것 이상을 의미합니다.** 진정한 다국어 지원을 위해서는 해당 언어의 학습 데이터(번역이 아닌 원문), 해당 언어의 문자 체계에 최적화된 토크나이저, 해당 언어에서의 명령 수행에 대한 파인튜닝이 필요합니다.',
+            '다국어 지원을 주장하지만 주로 영어로 학습된 모델은 다른 언어에서 품질이 낮은 결과물을 생성합니다 -- 문법 오류, 문화적 불일치, 명령 수행 정확도 저하가 발생합니다. 2026년 4월 기준, 로컬에서 아시아 언어에 대해 진정한 네이티브 품질 지원을 제공하는 모델은 Qwen3뿐입니다.',
+          ],
+          rows: [
+            { 'Model Family': 'Qwen3', 'Native Languages': '29', 'Strong Asian Support': '예', 'Strong EU Support': '예', 'Arabic Support': '예' },
+            { 'Model Family': 'Llama 3.x', 'Native Languages': '8', 'Strong Asian Support': '제한적', 'Strong EU Support': '양호', 'Arabic Support': '제한적' },
+            { 'Model Family': 'Mistral', 'Native Languages': '5', 'Strong Asian Support': '아니오', 'Strong EU Support': '양호', 'Arabic Support': '제한적' },
+            { 'Model Family': 'Gemma 3', 'Native Languages': '35+', 'Strong Asian Support': '보통', 'Strong EU Support': '양호', 'Arabic Support': '보통' },
+            { 'Model Family': 'Phi-4', 'Native Languages': '~10', 'Strong Asian Support': '제한적', 'Strong EU Support': '보통', 'Arabic Support': '제한적' },
+          ],
+          columns: ['Model Family', 'Native Languages', 'Strong Asian Support', 'Strong EU Support', 'Arabic Support'],
+        },
+        european: {
+          title: '유럽 언어에서 가장 뛰어난 로컬 LLM은 무엇입니까?',
+          content: [
+            '**독일어, 프랑스어, 스페인어, 이탈리아어, 포르투갈어, 네덜란드어, 폴란드어에서는 Qwen3, Mistral, Llama 3.x 모두 수용 가능한 품질을 제공합니다.** Mistral은 Mistral AI가 프랑스 기업이고 프랑스어 학습 데이터를 중시하기 때문에 프랑스어에서 특히 강점을 보입니다. 2026년 4월 기준, 독일어 벤치마크에서 Qwen3 7B는 독일어 명령 수행 작업에서 Mistral Small을 8~12% 앞서고 있습니다.',
+            'EU 내 GDPR 민감 사례에서는 데이터 거주 요건을 위해 클라우드 API보다 로컬 모델(어떤 패밀리든) 실행이 권장됩니다. EU AI Act(2025년 2월 시행) 하에서 AI를 사용하는 독일 기업들은 고위험 AI 애플리케이션에 로컬 추론을 활용하는 방식에서 이점을 얻습니다. Mistral AI는 EU 기업이기 때문에 일부 유럽 조직에서는 벤치마크 점수와 무관하게 거버넌스 측면에서 선호합니다.',
+          ],
+          items: [
+            '**독일어**: Qwen3 7B가 명령 수행에서 선두; Mistral Small은 공식 텍스트에서 경쟁력 있음.',
+            '**프랑스어**: Mistral Small은 Qwen3 7B와 경쟁력이 있으며, 두 모델 모두 Llama 3.3 8B를 크게 앞섭니다.',
+            '**스페인어, 이탈리아어, 포르투갈어**: Qwen3 7B가 약간 앞서며; Llama 3.3 8B도 경쟁력 있음.',
+            '**폴란드어, 체코어, 루마니아어**: Qwen3 7B가 선두; Mistral Small은 상당한 품질 저하가 발생합니다.',
+          ],
+        },
+        asian: {
+          title: '일본어, 한국어, 중국어에서 가장 뛰어난 로컬 LLM은 무엇입니까?',
+          content: [
+            '**Qwen3가 아시아 언어 성능에서 지배적입니다.** 이 모델 패밀리는 Alibaba에서 방대한 중국어 학습 데이터와 일본어 및 한국어에 대한 명시적인 다국어 파인튜닝을 통해 개발하였습니다.',
+            '일본어의 경우: Qwen3 7B는 JMT-bench(일본어 명령 수행 벤치마크)에서 Llama 3.3 8B보다 15~20% 높은 점수를 기록합니다. 한국어의 경우: Qwen3는 유사한 격차로 대안 모델들을 능가합니다. 중국어(간체)의 경우: Qwen3는 로컬 실행 가능한 모델 중에서 독보적입니다.',
+            '2026년 4월 기준, 일본 경제산업성(METI)은 국내 AI 개발을 촉진하고 있으며, 일부 일본 기업들은 데이터 주권을 위해 로컬 배포 모델을 선호합니다. Qwen3는 일본어 로컬 추론의 실질적인 선택지입니다.',
+          ],
+          rows: [
+            { 'Language': '중국어(간체)', 'Best Model': 'Qwen3 (모든 크기)', 'Second Best': 'Gemma 3', 'Notes': 'Qwen3 지배적 -- 가장 방대한 중국어 학습 코퍼스' },
+            { 'Language': '일본어', 'Best Model': 'Qwen3 7B 이상', 'Second Best': 'Gemma 3 9B', 'Notes': 'JMT-bench에서 Llama 대비 15~20% 격차' },
+            { 'Language': '한국어', 'Best Model': 'Qwen3 7B 이상', 'Second Best': 'Gemma 3 9B', 'Notes': 'Qwen3가 현저히 강함' },
+            { 'Language': '중국어(번체)', 'Best Model': 'Qwen3', 'Second Best': 'Llama 3.3 8B', 'Notes': 'Qwen3는 간체와 번체 모두로 학습됨' },
+          ],
+          columns: ['Language', 'Best Model', 'Second Best', 'Notes'],
+        },
+        arabic: {
+          title: '아랍어에서 가장 뛰어난 로컬 LLM은 무엇입니까?',
+          content: [
+            '**아랍어는 오른쪽에서 왼쪽으로 쓰는 문자 체계, 형태론적 복잡성, 다양한 방언(현대 표준 아랍어 vs. 이집트어, 걸프어, 레반트어)으로 인해 독특한 도전을 제시합니다.** 2026년 4월 기준, Qwen3와 Gemma 3가 로컬 실행 가능한 아랍어 모델 중 가장 강력합니다.',
+            '현대 표준 아랍어(MSA) 명령 수행의 경우, Qwen3 14B 이상의 모델이 수용 가능한 품질을 생성합니다. 방언 아랍어의 경우, 모든 로컬 모델은 더 광범위한 아랍어 방언 지원을 갖춘 GPT-5.5와 같은 클라우드 모델보다 현저히 낮은 성능을 보입니다.',
+          ],
+        },
+        howToBenchmark: {
+          title: '로컬 LLM의 다국어 품질을 어떻게 벤치마크합니까?',
+          content: '표준 벤치마크(MMLU, HumanEval)는 영어 전용입니다. 다국어 품질을 평가하려면 다음 방법을 사용하십시오.',
+          numberedItems: [
+            'MGSM(Multilingual Grade School Math)을 실행하십시오 -- 10개 언어에서 수학적 추론을 테스트합니다. Hugging Face에서 확인 가능합니다: datasets/juletxara/mgsm.',
+            'm-MMLU를 실행하십시오 -- 여러 언어로 57개 주제를 다루는 MMLU의 다국어 버전입니다.',
+            '대화 품질의 경우: 요약, Q&A, 번역, 창의적 글쓰기 등 다양한 작업 유형을 포함하여 대상 언어로 10개의 테스트 프롬프트를 작성하십시오. 결과를 수동으로 또는 원어민 화자와 함께 평가하십시오.',
+            '일본어의 경우: JMT-bench(github.com/Stability-AI/lm-evaluation-harness)를 사용하십시오 -- 일본어 명령 수행을 다룹니다.',
+            '[PromptQuorum](/)을 사용하여 로컬 모델과 클라우드 API를 비교하십시오 -- 동일한 다국어 프롬프트를 로컬 Ollama 모델과 GPT-5.5에 동시에 전송하여 특정 사용 사례에서의 품질 격차를 정량화하십시오.',
+          ],
+        },
+        comparisonTable: {
+          title: '다국어 로컬 LLM 비교: Qwen3 vs Llama 3.x vs Mistral vs Gemma 3',
+          rows: [
+            { 'Language Group': '중국어(모든 방언)', 'Qwen3 7B': '★★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': '일본어', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': '한국어', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': '프랑스어 / 독일어', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': '스페인어 / 이탈리아어', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': '아랍어(MSA)', 'Qwen3 7B': '★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+          ],
+          columns: ['Language Group', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          image: 'multilingual-llm-comparison-en.svg',
+          imageCaption: '2026년 다국어 LLM 비교: Qwen3 7B는 모든 아시아 언어(중국어, 일본어, 한국어에서 ★★★★~★★★★★)에서 선두를 차지합니다. Mistral Small은 유럽 언어(프랑스어/독일어)에서 Qwen3에 필적합니다. 별점(1~5)은 2026년 벤치마크를 기반으로 합니다.',
+        },
+        commonMistakes: {
+          title: '다국어 로컬 LLM 사용 시 흔한 실수는 무엇입니까?',
+          faqs: [
+            {
+              q: '일본어 또는 중국어 작업에 영어 중심 모델을 사용하는 경우',
+              a: 'Llama 3.3 8B와 Mistral Small은 문법적으로는 그럴듯하지만 의미적으로 일관성이 없는 일본어 및 중국어 결과물을 생성합니다. 원어민 지식 없이는 오류를 발견하기 어렵습니다. 일본어 또는 중국어 작업에는 항상 Qwen3를 사용하십시오 -- 품질 차이는 상당하며 측정 가능합니다.',
+            },
+            {
+              q: '작업이 다른 언어인데 영어로 프롬프트를 작성하는 경우',
+              a: '네이티브 다국어 지원을 갖춘 로컬 모델은 시스템 프롬프트, 사용자 지시사항, 내용이 모두 동일한 대상 언어로 작성될 때 더 나은 결과를 생성합니다. 영어 지시사항과 중국어 내용을 혼합하면 완전한 중국어 프롬프트보다 낮은 품질의 결과물이 나옵니다. 최상의 결과를 위해 시스템 프롬프트를 대상 언어로 작성하십시오.',
+            },
+            {
+              q: '동일한 모델 태그가 모든 문자 체계를 동등하게 처리한다고 가정하는 경우',
+              a: '토크나이저 효율성은 문자 체계에 따라 다릅니다. 라틴 문자는 토큰당 약 3~4자를 사용하며, 한자는 종종 1자 1토큰입니다. "4K 컨텍스트"는 언어마다 다른 양의 내용을 의미합니다. 4096 토큰 컨텍스트는 영어로 약 3,000 단어를 담을 수 있지만 중국어로는 약 2,000자에 불과합니다 -- 이에 맞게 컨텍스트 길이를 계획하십시오.',
+            },
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '다국어 로컬 LLM에 관한 자주 묻는 질문',
+          faqs: [
+            {
+              q: '일본어 전용 파인튜닝 모델을 로컬에서 실행할 수 있습니까?',
+              a: '예 -- 일본 AI 커뮤니티는 Hugging Face에서 Qwen3 및 Llama 모델의 여러 일본어 특화 파인튜닝 버전을 유지 관리합니다. 현재 옵션을 찾으려면 Hugging Face에서 "Japanese instruct GGUF"를 검색하십시오. LM Studio에서 로드하거나 커스텀 Modelfile과 함께 `ollama create`를 사용하십시오.',
+            },
+            {
+              q: '다국어 기능이 영어 품질을 저하시킵니까?',
+              a: 'Qwen3의 경우 크게 저하되지 않습니다. 벤치마크에 따르면 Qwen3 7B는 영어 MMLU에서 74%를 기록하며 -- Llama 3.3 8B의 73%와 비슷한 수준입니다. 다국어 학습이 이 모델 크기에서 영어 성능을 의미 있게 저하시키지 않습니다.',
+            },
+            {
+              q: '로컬에서 번역 작업에 가장 적합한 모델은 무엇입니까?',
+              a: '영어, 중국어, 일본어, 한국어 간의 고품질 번역에는 Qwen3 14B 이상을 사용하십시오. 유럽 언어 번역에는 Mistral Small 3.1 24B가 신뢰할 수 있는 결과를 제공합니다. 대규모 프로덕션 번역 워크로드의 경우, 클라우드 API(DeepL, Google Translate)가 대부분의 언어 쌍에서 여전히 로컬 실행 가능한 모델을 능가합니다.',
+            },
+            {
+              q: 'Ollama에서 언어를 설정하는 방법은 무엇입니까?',
+              a: '대상 언어로 프롬프트를 작성하십시오. 특별한 언어 매개변수는 필요하지 않습니다 -- 모델이 입력 언어를 자동으로 감지합니다. 특정 언어로 일관된 출력을 위해 시스템 프롬프트를 추가하십시오: "You are a helpful assistant. Always respond in German." Ollama system 매개변수를 사용하십시오: `ollama run qwen2.5:7b --system "Always respond in Japanese."`',
+            },
+            {
+              q: 'EU 기관을 위한 개인정보보호 규정 준수 다국어 로컬 LLM이 있습니까?',
+              a: '예. Ollama와 함께 Qwen3 또는 Mistral을 로컬에서 실행하면 모든 데이터가 온프레미스에 유지되며 완전히 오프라인으로 처리됩니다. EU AI Act 준수(2025년 2월 시행)를 위해 로컬 추론은 고위험 AI 애플리케이션에 대한 제3자 데이터 처리자 우려를 해소합니다. 프랑스에 본사를 둔 Mistral AI는 일부 EU 조직에서 로컬 배포 모델의 경우에도 데이터 거버넌스 측면에서 선호됩니다.',
+            },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            'Qwen3 기술 보고서 -- qwenlm.github.io/blog/qwen2.5/',
+            'MGSM 벤치마크 -- huggingface.co/datasets/juletxara/mgsm',
+            'JMT-bench 일본어 평가 -- github.com/Stability-AI/lm-evaluation-harness',
+            'EU AI Act GDPR 및 로컬 AI -- artificialintelligenceact.eu',
+          ],
+        },
+      },
+    },
   };

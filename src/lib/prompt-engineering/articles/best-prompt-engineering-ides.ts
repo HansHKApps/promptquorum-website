@@ -2403,19 +2403,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'LM Studio 추론 속도: 소비자용 GPU에서 10–50 토큰/초 vs 클라우드 100+ 토큰/초',
       '설정 시간: 클라우드 플레이그라운드 2분 미만; LM Studio 첫 설치 30–60분',
     ],
-    quickAnswerTop: {
-      ko: {
-        question: '프롬프트 엔지니어링 IDE란 무엇입니까?',
-        answer: '프롬프트 엔지니어링 IDE는 별도의 터미널이나 API 클라이언트 없이 프롬프트를 작성, 테스트, 반복할 수 있는 전문화된 에디터입니다. 주요 기능: 모델 전환, 즉각적인 피드백, 토큰 카운팅, 프롬프트 히스토리, 코드 내보내기.',
-        bullets: [
-          'Cursor: 코드+프롬프트 통합 개발 (월 $20 또는 무료 티어)',
-          'VS Code + Continue.dev: 멀티모델 오픈소스 지원 (무료, MIT)',
-          'OpenAI Playground: API 탐색 및 토큰 카운팅 (종량 과금)',
-          'LM Studio: 하드웨어 투자 후 로컬 오프라인 개발 ($0/토큰)',
-        ],
-        updatedDate: '2026-05-01',
-      },
-    },
     toc: [
       { label: '좋은 프롬프트 IDE의 조건', anchor: 'what-makes-good-ide' },
       { label: 'Cursor: AI 네이티브 IDE', anchor: 'cursor-ai-native' },
@@ -2431,15 +2418,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: '관련 자료', anchor: 'related-reading' },
       { label: 'FAQ', anchor: 'faq' },
       { label: '출처', anchor: 'sources' },
-    ],
-    targetKeywords: [
-      '프롬프트 엔지니어링 IDE',
-      '프롬프트 엔지니어링 도구 2026',
-      'AI 코딩 IDE 비교',
-      'Cursor vs VS Code 프롬프트',
-      'LM Studio 한국어',
-      'OpenAI Playground 사용법',
-      '로컬 LLM 개발 도구',
     ],
     schema: {
       '@context': 'https://schema.org',
@@ -2460,17 +2438,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       audience: { '@type': 'Audience', audienceType: 'LLM 애플리케이션을 개발하는 개발자' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    breadcrumbSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
-        { '@type': 'ListItem', position: 3, name: '2026년 최고의 프롬프트 엔지니어링 IDE', item: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-engineering-ides' },
-      ],
-    },
-    itemListSchema: {
+    },    itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       inLanguage: 'ko',
@@ -2519,12 +2487,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           description: 'Llama, Mistral 및 기타 오픈소스 LLM을 로컬에서 실행하는 오프라인 플레이그라운드. 하드웨어 투자($500–3,000) 후 토큰당 비용 없음. 추론 속도: 소비자용 GPU에서 10–50 토큰/초.',
         },
       ],
-    },
-    snippetBlocks: [
-      { type: 'one-sentence', text: '프롬프트 엔지니어링 IDE는 별도의 터미널이나 API 클라이언트로 전환하지 않고도 프롬프트를 작성, 테스트, 반복할 수 있는 전문화된 에디터입니다.' },
-      { type: 'plain-terms', text: '워크숍을 선택하는 것과 같습니다: VS Code + Continue는 완전히 갖춰진 작업실(도구 지참), OpenAI Playground는 시간제 임대 작업대(사용한 만큼 지불), LM Studio는 직접 소유한 차고(초기 비용 후 무료)입니다.' },
-    ],
-    sections: {
+    },    sections: {
       keyTakeaways: {
         id: 'key-takeaways',
         isTldr: true,

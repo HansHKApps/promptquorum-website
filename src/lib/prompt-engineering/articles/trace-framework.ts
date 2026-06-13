@@ -2410,4 +2410,308 @@ export const article: Partial<Record<Language, PEArticle>> = {
       gammaEmbedUrl: '/presentations/trace-framework-static.html',
       gammaDescription: '以下幻灯片涵盖：TRACE框架（Think→Reason→Analyze→Conclude→Explain）如何让AI展示推理过程、5阶段方法与好坏提示词对比示例、何时与CO-STAR、CRAFT、RISEN和SPECS组合使用，以及5个常见错误。下载PDF作为TRACE框架参考卡。',
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Frameworks',
+      title: 'TRACE 프레임워크',
+      seoTitle: 'TRACE 프레임워크: AI 추론을 가시화하는 프롬프트 2026',
+      intro: '**TRACE 프레임워크는 AI의 추론 과정을 블랙박스에서 단계별로 가시화된 프로세스로 전환합니다.** 모델에게 Think(생각), Reason(추론), Analyze(분석), Conclude(결론), Explain(설명)을 수행하도록 요청함으로써, 논리가 성립되는 지점과 무너지는 지점을 직접 확인할 수 있습니다. PromptQuorum은 TRACE 프레임워크를 기본 옵션으로 제공하며, 모든 사용자가 앱 내에서 직접 선택하여 활용할 수 있습니다.',
+      publishDate: '2026-03-24',
+      dateModified: '2026-04-28',
+      readTime: '8분 읽기',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'TRACE Framework',
+      metaDescription: 'TRACE 프레임워크(Think, Reason, Analyze, Conclude, Explain)는 AI가 추론 과정을 보여주도록 강제합니다. 사용 시점, TRACE 프롬프트 작성법, 투명성의 중요성을 알아보십시오.',
+      toc: [
+        { anchor: 'key-takeaways', label: '핵심 요점' },
+        { anchor: 'what-is-trace', label: 'TRACE 프레임워크란 무엇인가' },
+        { anchor: 'why-trace-matters', label: 'TRACE 프레임워크가 중요한 이유' },
+        { anchor: 'five-stages', label: 'TRACE의 다섯 단계는 무엇인가' },
+        { anchor: 'bad-vs-good-example', label: '예시: 나쁜 TRACE 프롬프트 vs 좋은 TRACE 프롬프트' },
+        { anchor: 'when-to-use', label: 'TRACE 프레임워크를 사용해야 할 때' },
+        { anchor: 'how-to-write', label: 'TRACE 프롬프트 작성 방법' },
+        { anchor: 'how-promptquorum-implements', label: 'PromptQuorum의 TRACE 프레임워크 구현 방식' },
+        { anchor: 'combining-trace', label: 'TRACE를 다른 프레임워크와 결합하는 방법' },
+        { anchor: 'how-to-start', label: 'TRACE 프레임워크 사용 방법' },
+        { anchor: 'common-mistakes', label: 'TRACE 사용 시 흔한 실수' },
+        { anchor: 'related-reading', label: '관련 자료' },
+        { anchor: 'faq', label: 'FAQ' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'url': 'https://www.promptquorum.com/prompt-engineering/trace-framework',
+        headline: 'TRACE 프레임워크',
+        description: 'TRACE 프레임워크(Think, Reason, Analyze, Conclude, Explain)의 작동 원리, 사용 시점, 그리고 PromptQuorum이 TRACE를 기본 옵션으로 제공하는 방법.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-04-28',
+        keywords: ['TRACE Framework', 'Think Reason Analyze Conclude Explain (사고-추론-분석-결론-설명)', 'prompt frameworks', 'prompt engineering', 'reasoning prompts', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Prompt Frameworks' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': '프롬프트 엔지니어링에서 TRACE는 무엇을 의미합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE는 Think, Reason, Analyze, Conclude, Explain의 약자입니다. AI 모델이 최종 답변으로 바로 넘어가지 않고 추론의 각 단계를 보여주도록 지시하는 구조화된 프롬프트 패턴입니다.' } },
+          { '@type': 'Question', 'name': 'TRACE 프레임워크는 언제 사용해야 합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '간결함보다 추론의 질과 근거가 더 중요한 경우에 TRACE를 사용하십시오. 전략적 의사결정, 기술 아키텍처 검토, 복잡한 디버깅, 그리고 이해관계자에게 결론에 이른 과정을 보여주어야 하는 상황이 이에 해당합니다.' } },
+          { '@type': 'Question', 'name': 'TRACE는 Chain-of-Thought 프롬프팅과 어떻게 다릅니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chain-of-Thought은 모델에게 단계적으로 추론하도록 요청하는 일반적인 기법입니다. TRACE는 작업과 모델 전반에 걸쳐 일관되고 재현 가능한 추론 흔적을 생성하는 특정 5단계 구조(Think, Reason, Analyze, Conclude, Explain)입니다.' } },
+          { '@type': 'Question', 'name': 'TRACE는 RISEN 프레임워크와 어떻게 다릅니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE는 감사할 수 있도록 추론 과정을 명시적으로 만드는 데 초점을 맞춥니다. RISEN은 기존 초안을 반복적으로 개선하는 데 초점을 맞춥니다. 모델의 사고 방식을 이해하려면 TRACE를, 결과물의 품질을 다듬으려면 RISEN을 사용하십시오.' } },
+          { '@type': 'Question', 'name': 'TRACE를 단일 프롬프트에서 사용할 수 있습니까, 아니면 여러 턴이 필요합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '두 방법 모두 가능합니다. 다섯 단계를 모두 나열한 단일 프롬프트가 더 빠릅니다. 여러 턴은 각 단계에서 필요에 따라 일시 중지하고 방향을 재조정할 수 있습니다. 최대한의 제어를 원하는 많은 사용자들은 TRACE 단계를 별도로 전송합니다.' } },
+          { '@type': 'Question', 'name': 'TRACE가 과도하게 긴 응답을 생성하지 않도록 방지하는 방법은 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '단계별 길이 제약을 추가하십시오. 예를 들어 "각 단계를 1~2문장으로 유지하십시오."라고 지시하면 모델이 추론 과정을 보여주면서도 간결하게 작성하도록 강제할 수 있습니다.' } },
+          { '@type': 'Question', 'name': 'TRACE는 모델 오류를 감지하는 데 도움이 됩니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '그렇습니다. 추론을 가시화함으로써 TRACE는 최종 답변만 제공하는 응답에서는 보이지 않을 잘못된 가정, 논리적 공백, 잘못된 계산을 발견할 수 있게 합니다.' } },
+          { '@type': 'Question', 'name': 'PromptQuorum은 TRACE 프롬프트를 어떻게 지원합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum은 TRACE를 기본 프롬프트 구조로 포함합니다. 다섯 단계에 맞춰 정렬된 구조화된 필드에 작업별 컨텍스트를 입력하면 됩니다. PromptQuorum은 구성된 프롬프트를 여러 모델에 병렬로 전송하여 추론 흔적을 나란히 비교할 수 있게 합니다.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'TRACE 프롬프트 작성 방법',
+        'description': 'AI 추론을 투명하고 감사 가능하게 만들기 위해 TRACE 프레임워크(Think, Reason, Analyze, Conclude, Explain)를 사용하여 프롬프트를 구조화하는 단계별 가이드.',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Think', 'text': '모델에게 문제를 자신의 말로 재서술하고 답변을 시도하기 전에 핵심 변수와 가정을 나열하도록 요청하십시오.' },
+          { '@type': 'HowToStep', 'name': 'Reason', 'text': '모델에게 하나를 선택하기 전에 트레이드오프와 함께 가능한 2~3가지 접근법이나 가설을 제안하도록 요청하십시오.' },
+          { '@type': 'HowToStep', 'name': 'Analyze', 'text': '모델에게 제공한 실제 데이터나 컨텍스트에 선택한 접근법을 단계별로 적용하고, 숫자나 구체적인 예시를 보여주도록 요청하십시오.' },
+          { '@type': 'HowToStep', 'name': 'Conclude', 'text': '모델에게 최종 답변이나 권고사항을 한 문장으로 직접적이고 명확하게 서술하도록 요청하십시오.' },
+          { '@type': 'HowToStep', 'name': 'Explain', 'text': '모델에게 비기술적인 이해관계자가 이해할 수 있는 평이한 언어로 결론을 정당화하도록 요청하십시오.' },
+        ],
+      },
+      gammaEmbedUrl: '/presentations/trace-framework-static.html',
+      gammaDescription: '아래 슬라이드 덱은 다음 내용을 다룹니다: TRACE(Think, Reason, Analyze, Conclude, Explain)가 AI로 하여금 단계적으로 추론 과정을 보여주도록 강제하는 방법, 나쁜 프롬프트 vs 좋은 프롬프트 예시를 포함한 5단계 방법론, TRACE를 CO-STAR, CRAFT, RISEN, SPECS와 짝지어 사용하는 방법, 그리고 피해야 할 5가지 흔한 실수. TRACE 프레임워크 참고 카드로 PDF를 다운로드하십시오.',
+      leadAnswerBlock: 'TRACE 프레임워크는 AI 모델이 최종 답변만 제시하는 대신 각 추론 단계를 보여주도록 강제하는 구조화된 프롬프트 패턴입니다. Think(생각), Reason(추론), Analyze(분석), Conclude(결론), Explain(설명)의 다섯 단계로 구성되며, 추론의 질과 감사 가능성이 간결함보다 중요한 복잡한 결정, 기술 분석, 또는 이해관계자에게 결론을 정당화해야 하는 상황에 가장 적합합니다.',
+      sections: {
+        keyTakeaways: {
+          title: '핵심 요점',
+          isTldr: true,
+          items: [
+            'TRACE는 Think, Reason, Analyze, Conclude, Explain의 약자로, AI 모델이 추론의 각 단계를 보여주도록 강제하는 5단계 프롬프트 패턴입니다.',
+            '간결함보다 추론의 질이 더 중요한 경우에 TRACE를 사용하십시오. 전략적 의사결정, 아키텍처 트레이드오프, 복잡한 디버깅, 또는 이해관계자에게 정당화해야 하는 모든 결과물이 이에 해당합니다.',
+            'TRACE는 잘못된 가정과 논리적 공백을 의사결정에 영향을 미치기 전에 가시화함으로써 모델 결과물에 대한 맹목적인 신뢰를 줄입니다.',
+            'TRACE 프롬프트는 다섯 단계가 모두 정의된 단일 메시지로 작성하거나, 더 많은 제어를 위해 턴별로 전송할 수 있습니다.',
+            'PromptQuorum은 TRACE를 기본 구조로 제공합니다. 컨텍스트를 입력하고, 여러 모델에 병렬로 전송하여 추론 흔적을 나란히 비교하십시오.',
+          ],
+        },
+        whatIsTRACE: {
+          title: 'TRACE 프레임워크란 무엇인가',
+          content: [
+            '**TRACE 프레임워크는 대형 언어 모델이 최종 답변만이 아닌 추론 과정 전체를 보여주도록 강제하는 추론 우선 프롬프트 패턴입니다.** 기술 분석, 전략, 복잡한 문제 해결 등 모델이 결과에 어떻게 도달했는지가 중요한 작업을 위해 설계되었습니다.',
+            'TRACE의 일반적인 해석은 다음과 같습니다:',
+            'TRACE는 GPT-5(OpenAI), Claude 4.8 Opus(Anthropic), Gemini 3 Pro(Google DeepMind), 그리고 Ollama 또는 LM Studio를 통한 로컬 모델 등 모든 주요 모델에서 작동합니다. 단, 모델마다 다섯 단계를 따르는 수준이 다릅니다. 동일한 TRACE 프롬프트를 여러 모델에서 테스트하면 특정 작업에 대해 어떤 제공업체가 가장 투명하게 추론하는지 확인할 수 있습니다.',
+          ],
+          items: [
+            'Think: 문제를 자신의 말로 재서술하고 해석합니다.',
+            'Reason: 가능한 접근법이나 가설을 탐색합니다.',
+            'Analyze: 해당 접근법을 구체적인 데이터나 상황에 적용합니다.',
+            'Conclude: 최종 답변이나 권고사항을 명확하게 서술합니다.',
+            'Explain: 사람이 쉽게 따를 수 있는 방식으로 결론을 정당화합니다.',
+          ],
+        },
+        whyTRACEMatters: {
+          title: 'TRACE 프레임워크가 중요한 이유',
+          content: [
+            '**TRACE 프레임워크는 추론 경로를 명시적으로 만듦으로써 모델 결과물에 대한 맹목적인 신뢰를 줄이기 때문에 중요합니다.** 모델이 각 단계를 설명하면 잘못 이해된 요구사항, 약한 가정, 또는 논리의 공백을 조기에 발견할 수 있습니다. 이는 더 넓은 [chain-of-thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) 원칙과 연결됩니다. TRACE는 그 기법의 구조화되고 재현 가능한 형태입니다.',
+            '다음과 같은 경우에 특히 유용합니다:',
+          ],
+          items: [
+            '모델 결과물을 기반으로 비즈니스 또는 기술적 의사결정을 내리는 경우.',
+            '서로 다른 모델이 동일한 문제를 어떻게 추론하는지 비교하고 싶은 경우.',
+            '선택을 정당화하기 위해 팀원이나 이해관계자에게 보여줄 수 있는 기록이 필요한 경우.',
+          ],
+        },
+        fiveStages: {
+          title: 'TRACE의 다섯 단계는 무엇인가',
+          content: [
+            '**좋은 TRACE 프롬프트는 작업과 모델 전반에 걸쳐 추론 흔적이 일관되도록 각 단계에서 모델이 수행해야 할 작업을 명확히 지시합니다.** 단계를 명확하게 유지하면서 하나의 메시지로 압축할 수 있습니다. 단순한 작업의 경우 [zero-shot 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot-prompting)이 더 빠릅니다. 감사 가능성이 필요한 경우에 TRACE를 사용하십시오.',
+            '일반적인 단계 정의:',
+          ],
+          items: [
+            'Think: 작업을 명확히 하고, 핵심 변수를 나열하며, 모호한 점을 파악합니다.',
+            'Reason: 잠재적인 방법, 트레이드오프, 또는 해결 경로를 설명합니다.',
+            'Analyze: 선택한 방법을 실제 입력에 단계별로 적용합니다.',
+            'Conclude: 질문과 연결된 직접적인 답변이나 권고사항을 제공합니다.',
+            'Explain: "왜"에 초점을 맞추어 평이한 언어로 논리를 요약합니다.',
+          ],
+        },
+        badVsGoodExample: {
+          title: '예시: 나쁜 TRACE 프롬프트 vs 좋은 TRACE 프롬프트',
+          content: [
+            '**TRACE 프레임워크의 이점은 동일한 작업에 대한 일반적인 요청과 TRACE 기반 요청을 비교할 때 명확해집니다.** 두 가지 제품 가격 옵션 중 선택하는 간단한 예시를 살펴보겠습니다.',
+            '**[나쁜 프롬프트]**',
+            '"이 두 가지 요금제 중 어느 것이 더 낫습니까?"',
+            '**[좋은 프롬프트]**',
+            '"당신은 SaaS 가격 분석가입니다. 이 결정에 TRACE 프로세스를 사용하십시오. Think: 문제를 재서술하고 중요한 핵심 요소를 나열하십시오(예: 수익, 이탈 위험, 고객 인식). Reason: 두 가지 요금제를 비교하는 2~3가지 가능한 방법을 제안하십시오(예: 손익분기점 분석, 업그레이드 경로, 인지된 공정성). Analyze: 제가 제공하는 데이터에 선호하는 비교 방법을 단계별로 적용하십시오. 가능한 경우 숫자나 구체적인 예시를 보여주십시오. Conclude: 어떤 요금제를 권장하는지, 해당되는 경우 어떤 고객 세그먼트에 대해 권장하는지 명확히 서술하십시오. Explain: 비기술적인 이해관계자가 이해할 수 있는 평이한 언어로 3~5문장으로 권고사항을 정당화하십시오. 데이터: [요금제 세부 정보를 여기에 입력하십시오]"',
+            'TRACE 버전은 단순히 "플랜 A가 낫습니다"라고 말하는 것이 아니라, 모델이 트레이드오프를 어떻게 생각했는지 보여줍니다.',
+          ],
+        },
+        whenToUse: {
+          title: 'TRACE 프레임워크를 사용해야 할 때',
+          content: [
+            '**주된 관심사가 최대한의 간결함이 아닌 추론의 질과 정당성일 때 TRACE 프레임워크를 사용해야 합니다.** TRACE는 한 줄 답변에 비해 오버헤드가 추가되지만, 오류가 비용이 클 때 그 가치를 발휘합니다.',
+            '일반적인 사용 사례는 다음과 같습니다:',
+          ],
+          items: [
+            '전략적 옵션, 트레이드오프, 또는 기술 아키텍처 평가.',
+            '복잡한 코드 변경 검토 또는 까다로운 문제 디버깅.',
+            '연구 결과, 지표, 또는 사용자 피드백을 분석하여 결론 도출.',
+            '관리자나 고객과 공유할 수 있는 설명 가능한 권고사항 작성.',
+          ],
+        },
+        howToWrite: {
+          title: 'TRACE 프롬프트 작성 방법',
+          content: [
+            '**다섯 단계를 명시적으로 참조하고 각 단계에 대한 기대치를 정의하면 TRACE 프롬프트 작성은 간단합니다.** 간단한 템플릿에서 시작하여 도메인에 맞게 조정할 수 있습니다.',
+            '일반적인 패턴은 다음과 같습니다:',
+            '"당신은 [역할]입니다. TRACE 프로세스를 사용하십시오. Think: [문제를 재서술하고 명확히 하는 방법]. Reason: [해결 경로를 탐색하는 방법]. Analyze: [특정 데이터나 컨텍스트에 추론을 적용하는 방법]. Conclude: [최종 답변을 제시하는 방법]. Explain: [인간 독자를 위해 답변을 정당화하는 방법]. 컨텍스트/데이터: [여기에 입력하십시오]."',
+            '템플릿으로 저장하면 각 새로운 작업에 대해 역할과 컨텍스트만 변경하면 됩니다. TRACE 프롬프트를 워크플로에 통합하기 전에 [Anthropic의 Console](https://docs.anthropic.com/) 또는 [OpenAI의 Playground](https://platform.openai.com/playground)에서 테스트하여 모델이 명확하고 감사 가능한 추론 흔적을 생성하는지 확인하십시오.',
+          ],
+        },
+        howPQImplements: {
+          title: 'PromptQuorum의 TRACE 프레임워크 구현 방식',
+          content: [
+            '**PromptQuorum은 사용자가 한 번의 클릭으로 여러 모델에 걸쳐 추론 우선 프롬프트를 실행할 수 있도록 TRACE 프레임워크를 기본 프롬프트 구조 중 하나로 포함하는 멀티모델 AI 디스패치 도구입니다.** PromptQuorum 내에서 TRACE를 선택하면, 인터페이스가 프레임워크의 단계에 맞춰 정렬된 필드를 노출하고 자동으로 단일 지시로 구성합니다.',
+            'PromptQuorum에서 다음을 수행할 수 있습니다:',
+          ],
+          items: [
+            '앱이 TRACE 구조를 일관되게 유지하는 동안 작업별 컨텍스트를 입력합니다.',
+            '동일한 TRACE 기반 프롬프트를 여러 모델에 병렬로 전송하고, 추론 흔적을 비교하며, 어떤 제공업체가 기대에 가장 잘 부합하는지 확인합니다.',
+            '"기능 트레이드오프 검토" 또는 "인시던트 사후 분석"과 같은 반복적인 분석을 위한 TRACE 템플릿을 저장하고 팀 전체에 공유합니다.',
+          ],
+        },
+        combiningTRACE: {
+          title: 'TRACE를 다른 프레임워크와 결합하는 방법',
+          content: [
+            '**워크플로의 각 단계에 프레임워크를 정렬하여 TRACE 프레임워크를 다른 프레임워크와 결합해야 합니다. 추론에는 TRACE를, 초안 작성이나 형식화에는 다른 것을 사용하십시오.** 실용적인 패턴은 다음과 같습니다:',
+          ],
+          items: [
+            '콘텐츠나 옵션을 초안 작성하는 데 생성 지향 프레임워크(예: [CO-STAR](/prompt-engineering/co-star-framework) 또는 CRAFT)를 사용합니다.',
+            '선택을 분석하거나, 가정을 검증하거나, 결정을 정당화해야 할 때 TRACE로 전환합니다.',
+            '새로운 문제를 추론하는 것이 아니라 초안을 반복적으로 개선해야 한다면 [RISEN](/prompt-engineering/risen-framework)을 사용합니다.',
+            '최종 결과물이 엄격한 구조나 스키마를 따라야 하는 경우 선택적으로 사양 스타일 프레임워크(예: SPECS)로 마무리합니다.',
+          ],
+          columns: ['Framework', '가장 적합한 용도', 'TRACE와 함께 사용하는 경우'],
+          rows: [
+            { 'Framework': 'CO-STAR', '가장 적합한 용도': '콘텐츠 생성, 초안 작성', 'TRACE와 함께 사용하는 경우': '먼저 초안 작성 후, 옵션 평가에 TRACE 사용' },
+            { 'Framework': 'CRAFT', '가장 적합한 용도': '제약이 있는 구조화된 콘텐츠', 'TRACE와 함께 사용하는 경우': '콘텐츠 생성 후, 주장 검증에 TRACE 사용' },
+            { 'Framework': 'RISEN', '가장 적합한 용도': '반복적 개선', 'TRACE와 함께 사용하는 경우': '분석에 TRACE, 개선에 RISEN 사용' },
+            { 'Framework': 'SPECS', '가장 적합한 용도': '엄격한 출력 스키마', 'TRACE와 함께 사용하는 경우': '추론에 TRACE, 최종 형식에 SPECS 사용' },
+            { 'Framework': 'Few-Shot', '가장 적합한 용도': '형식 일관성', 'TRACE와 함께 사용하는 경우': '복잡한 작업을 위해 TRACE 단계에 예시 추가' },
+          ],
+        },
+
+        howToStart: {
+          title: 'TRACE 프레임워크 사용 방법',
+          numberedItems: [
+            '**Think:** 모델에게 답변을 시도하기 전에 문제를 자신의 말로 재서술하고 모호한 점을 파악하도록 요청하십시오. 예시: "답변 전에 제가 무엇을 요청하는지 재서술하십시오. 핵심 변수와 가정하고 있는 내용을 나열하십시오."',
+            '**Reason:** 모델에게 하나를 선택하기 전에 2~3가지 가능한 접근법이나 가설과 그 트레이드오프를 설명하도록 요청하십시오. 예시: "이 문제에 접근하는 2~3가지 방법을 제안하십시오. 각각에 대해 장단점을 간략히 서술하십시오."',
+            '**Analyze:** 모델에게 선택한 접근법을 제공한 실제 데이터나 컨텍스트에 단계별로 적용하도록 요청하십시오. 가능한 경우 숫자나 구체적인 예시를 보여주십시오. 예시: "선호하는 접근법을 제가 제시한 특정 상황에 적용하십시오. 각 단계를 보여주십시오."',
+            '**Conclude:** 모델에게 최종 답변이나 권고사항을 한 문장으로 직접적이고 명확하게 서술하도록 요청하십시오. 예시: "권고사항을 명확하게 서술하십시오. 해당되는 경우 어떤 조건이나 세그먼트에 적용되는지 명시하십시오."',
+            '**Explain:** 모델에게 비기술적인 이해관계자가 이해할 수 있는 평이한 언어로 결론을 정당화하도록 요청하십시오. 예시: "3~5문장으로 이유를 설명하십시오. 전문 용어를 피하십시오. 기술적 배경이 없는 고위 관리자에게 설명하듯이 작성하십시오."',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'TRACE 사용 시 흔한 실수',
+          mistakes: [
+            {
+              mistake: 'Think 단계 건너뛰기',
+              problem: '문제를 재서술하지 않으면 모델이 요구사항을 잘못 해석하고 자신 있게 잘못된 방향으로 진행할 수 있습니다.',
+              fix: '항상 모델에게 Reason으로 넘어가기 전에 문제를 재서술하고 핵심 변수를 나열하도록 요청하십시오. 이렇게 하면 오해를 조기에 발견할 수 있습니다.',
+            },
+            {
+              mistake: '각 단계의 길이를 제한하지 않음',
+              problem: '제한이 없는 TRACE 프롬프트는 매우 긴 응답을 생성할 수 있어 읽기 어렵고 비용이 더 많이 듭니다.',
+              fix: '단계별 길이 제약을 추가하십시오: "각 단계를 1~2문장으로 유지하십시오" 또는 "Analyze를 3단계로 제한하십시오."',
+            },
+            {
+              mistake: '일상적인 작업에 TRACE 사용',
+              problem: 'TRACE는 지연 시간과 장황함을 추가합니다. 단순한 사실이나 간단한 변환만 필요한 경우 TRACE는 과도합니다.',
+              fix: '의사결정, 분석, 복잡한 추론을 위해 TRACE를 예약하십시오. 단순한 작업에는 zero-shot 프롬프팅을 사용하십시오.',
+            },
+            {
+              mistake: '다섯 단계를 엄격하게 적용',
+              problem: '일부 작업은 다섯 단계가 모두 필요하지 않으므로 엄격하게 따르면 시간과 토큰이 낭비됩니다.',
+              fix: '작업에 맞게 TRACE를 조정하십시오. 데이터 분석 작업에서는 Reason을 건너뛰거나, 간결함을 위해 Analyze와 Conclude를 결합할 수 있습니다.',
+            },
+            {
+              mistake: '모델 간 TRACE 결과를 비교하지 않음',
+              problem: '모델마다 추론 방식이 다르므로 하나의 모델만 테스트하면 어떤 제공업체가 작업에 가장 적합한지 파악할 기회를 놓칩니다.',
+              fix: 'PromptQuorum 또는 유사한 디스패치 도구를 사용하여 TRACE 프롬프트를 여러 모델에 병렬로 전송하고 추론 흔적을 비교하십시오.',
+            },
+          ],
+        },
+
+        relatedReading: {
+          title: '관련 자료',
+          content: [
+            'TRACE 프레임워크는 더 넓은 추론 기법 위에 구축됩니다. 이해를 심화하기 위한 관련 가이드를 소개합니다:',
+          ],
+          items: [
+            '[Chain-of-Thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 모델에게 단계적으로 추론하도록 요청하는 기초 기법.',
+            '[RISEN 프레임워크](/prompt-engineering/risen-framework) — 추론과 함께 반복적 개선이 필요할 때 사용하십시오.',
+            '[CO-STAR 프레임워크](/prompt-engineering/co-star-framework) — 초안 작성 및 생성 작업을 위한 보완 프레임워크.',
+            '[Zero-Shot vs Few-Shot 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot-prompting) — TRACE가 과도하고 더 간단한 기법으로 충분한 경우를 이해하십시오.',
+            '[프롬프트 엔지니어링 기초](/prompt-engineering/prompt-engineering-fundamentals) — 프롬프트를 효과적으로 구조화하기 위한 기초 가이드.',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            {
+              q: '프롬프트 엔지니어링에서 TRACE는 무엇을 의미합니까?',
+              a: 'TRACE는 Think, Reason, Analyze, Conclude, Explain의 약자입니다. AI 모델이 최종 답변으로 바로 넘어가지 않고 추론의 각 단계를 보여주도록 지시하는 구조화된 프롬프트 패턴입니다.',
+            },
+            {
+              q: 'TRACE 프레임워크는 언제 사용해야 합니까?',
+              a: '간결함보다 추론의 질과 근거가 더 중요한 경우에 TRACE를 사용하십시오. 전략적 의사결정, 기술 아키텍처 검토, 복잡한 디버깅, 그리고 이해관계자에게 결론에 이른 과정을 보여주어야 하는 상황이 이에 해당합니다.',
+            },
+            {
+              q: 'TRACE는 Chain-of-Thought 프롬프팅과 어떻게 다릅니까?',
+              a: 'Chain-of-Thought은 모델에게 단계적으로 추론하도록 요청하는 일반적인 기법입니다. TRACE는 작업과 모델 전반에 걸쳐 일관되고 재현 가능한 추론 흔적을 생성하는 특정 5단계 구조(Think, Reason, Analyze, Conclude, Explain)입니다.',
+            },
+            {
+              q: 'TRACE는 RISEN 프레임워크와 어떻게 다릅니까?',
+              a: 'TRACE는 감사할 수 있도록 추론 과정을 명시적으로 만드는 데 초점을 맞춥니다. RISEN은 기존 초안을 반복적으로 개선하는 데 초점을 맞춥니다. 모델의 사고 방식을 이해하려면 TRACE를, 결과물의 품질을 다듬으려면 RISEN을 사용하십시오.',
+            },
+            {
+              q: 'TRACE를 단일 프롬프트에서 사용할 수 있습니까, 아니면 여러 턴이 필요합니까?',
+              a: '두 방법 모두 가능합니다. 다섯 단계를 모두 나열한 단일 프롬프트가 더 빠릅니다. 여러 턴은 각 단계에서 필요에 따라 일시 중지하고 방향을 재조정할 수 있습니다. 최대한의 제어를 원하는 많은 사용자들은 TRACE 단계를 별도로 전송합니다.',
+            },
+            {
+              q: 'TRACE가 과도하게 긴 응답을 생성하지 않도록 방지하는 방법은 무엇입니까?',
+              a: '단계별 길이 제약을 추가하십시오. 예를 들어: "각 단계를 1~2문장으로 유지하십시오." 이렇게 하면 모델이 추론 과정을 보여주면서도 간결하게 작성하도록 강제할 수 있습니다.',
+            },
+            {
+              q: 'TRACE는 모델 오류를 감지하는 데 도움이 됩니까?',
+              a: '그렇습니다. 추론을 가시화함으로써 TRACE는 최종 답변만 제공하는 응답에서는 보이지 않을 잘못된 가정, 논리적 공백, 잘못된 계산을 발견할 수 있게 합니다.',
+            },
+            {
+              q: 'PromptQuorum은 TRACE 프롬프트를 어떻게 지원합니까?',
+              a: 'PromptQuorum은 TRACE를 기본 프롬프트 구조로 포함합니다. 다섯 단계에 맞춰 정렬된 구조화된 필드에 작업별 컨텍스트를 입력하면 됩니다. PromptQuorum은 구성된 프롬프트를 여러 모델에 병렬로 전송하여 추론 흔적을 나란히 비교할 수 있게 합니다.',
+            },
+          ],
+        },
+
+        sources: {
+          title: '참고 자료',
+          content: [
+            '이 글은 프롬프트 엔지니어링과 AI 추론의 현재 모범 사례를 요약합니다. TRACE 프레임워크 패턴은 언어 모델 추론을 투명하게 만들기 위한 학술 연구 및 산업 실천에서 활용되어 왔습니다.',
+          ],
+          items: [
+            'Wei, J., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." *arXiv:2201.11903*. [arXiv에서 읽기](https://arxiv.org/abs/2201.11903)',
+            'OpenAI. (2024). "How to use the OpenAI API." [OpenAI API 문서](https://platform.openai.com/docs/guides/prompt-engineering)',
+            'Anthropic. (2024). "Prompt Engineering Techniques." [Anthropic 문서](https://docs.anthropic.com/en/docs/build-a-chatbot)',
+            'LM Studio & Ollama. 오픈 소스 LLM 배포 및 추론 도구.',
+          ],
+        },
+      },
+    },
   };

@@ -3357,4 +3357,489 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Frameworks',
+      title: 'RTF 프레임워크: Role, Task, Format (2026)',
+      intro: 'RTF 프레임워크는 세 가지 구성 요소로 이루어진 경량 프롬프트 구조입니다. Role(모델의 역할), Task(수행할 작업), Format(출력 방식)으로 구성됩니다. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro 및 로컬 모델 전반에 걸쳐 작동합니다. 요약, 코드 리뷰, 이메일, 보고서 등 일상적인 작업에는 이를 기본 구조로 사용하고, 더 많은 구조가 필요한 경우에만 CO-STAR나 SPECS로 업그레이드하십시오.',
+      publishDate: '2026-03-24',
+      dateModified: '2026-05-04',
+      readTime: '6분 읽기',
+      seoTitle: 'RTF 프레임워크: Role, Task, Format 프롬프트 구조',
+      metaDescription: 'RTF = Role + Task + Format. 일상적인 작업에서 장황한 접근법을 능가하는 3개 필드 프롬프트 구조. 템플릿, 예시, 업그레이드 가이드.',
+      ogDescription: 'RTF: 3가지 구성 요소의 프롬프트 프레임워크. Role, Task, Format. 그 이유를 알아보십시오.',
+      twitterDescription: 'RTF = Role + Task + Format. 일상 작업을 위한 가장 간단한 프롬프트 구조. 팀이 복잡한 프레임워크 대신 이것을 선택하는 이유.',
+      leadAnswerBlock: '**RTF = Role, Task, Format. 세 가지 구성 요소, 오버헤드 없음. 모델의 역할, 수행할 작업, 답변의 형식을 정의하십시오. 요약, 코드 리뷰, 이메일, 회의록 등 일상적인 작업의 기본값으로 사용하십시오. 어조/대상이 중요할 때는 CO-STAR로, 스키마가 중요할 때는 SPECS로, 추론이 중요할 때는 TRACE로 전환하십시오. RTF는 구조를 강제하면서도 가장 가벼운 프레임워크입니다.**',
+      quickFacts: [
+        'RTF = Role + Task + Format — 가장 경량화된 구조적 프롬프트 프레임워크 (CO-STAR/SPECS의 5-6개 구성 요소 대비 3개)',
+        '일상적이고 반복 가능한 작업을 위해 설계됨: 요약, 이메일, 코드 리뷰, 회의록',
+        'GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro 및 로컬 모델(Ollama, LM Studio) 전반에서 작동',
+        'RTF는 권장 시작 프레임워크 — 한계에 부딪혔을 때만 CO-STAR, SPECS 또는 TRACE로 업그레이드',
+        'Format 필드는 제약 조건과 예시를 포함할 수 있어, 3개 구성 요소라는 수보다 더 유연함',
+        'PromptQuorum은 RTF를 25개 이상의 모델에 걸친 멀티 모델 디스패치 기능을 갖춘 내장 프레임워크로 포함',
+      ],
+      toc: [
+        { label: '핵심 요점', anchor: 'key-takeaways' },
+        { label: 'RTF 프레임워크란 무엇인가?', anchor: 'what-is-rtf-framework' },
+        { label: '세 가지 RTF 구성 요소', anchor: 'three-components' },
+        { label: 'RTF가 유용한 이유', anchor: 'why-rtf-useful' },
+        { label: '예시: 나쁜 RTF 프롬프트 vs 좋은 RTF 프롬프트', anchor: 'bad-vs-good' },
+        { label: 'RTF를 사용할 때', anchor: 'when-to-use' },
+        { label: 'RTF가 적합하지 않은 경우', anchor: 'when-not-to-use' },
+        { label: '비교 표', anchor: 'comparison-tables' },
+        { label: 'RTF 프롬프트 작성 방법', anchor: 'how-to-write' },
+        { label: '실제 RTF 예시 5가지', anchor: 'five-examples' },
+        { label: 'RTF와 다른 프레임워크 결합', anchor: 'combining-rtf' },
+        { label: '일반적인 RTF 실수', anchor: 'common-mistakes' },
+        { label: 'PromptQuorum의 RTF 구현 방식', anchor: 'promptquorum-implementation' },
+        { label: '자주 묻는 질문', anchor: 'faq' },
+        { label: '출처', anchor: 'sources' },
+      ],
+      educationalLevel: 'Intermediate',
+      audience: 'LLM 애플리케이션을 구축하는 개발자, AI 워크플로를 설계하는 프로덕트 매니저, AI 기반 도구를 개발하는 팀',
+      primaryTerm: 'RTF 프레임워크',
+      aboutTopics: ['RTF 프롬프팅', '프롬프트 프레임워크', '프롬프트 엔지니어링'],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'RTF 프레임워크: Role, Task, Format (2026)',
+        description: 'RTF 프레임워크(Role, Task, Format)의 작동 방식, 사용 시기, 그리고 PromptQuorum이 RTF를 내장 옵션으로 제공하는 방법.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-05-04',
+        url: 'https://www.promptquorum.com/prompt-engineering/rtf-framework',
+        inLanguage: 'ko',
+        keywords: ['RTF 프레임워크', 'Role Task Format', '프롬프트 프레임워크', '프롬프트 엔지니어링', 'PromptQuorum', 'LLM 프롬프팅'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'RTF 프레임워크' },
+          { '@type': 'Thing', name: '프롬프트 프레임워크' },
+          { '@type': 'Thing', name: '프롬프트 엔지니어링' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'RTF 프레임워크란 무엇입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'RTF = Role, Task, Format. 세 가지 구성 요소의 프롬프트 구조입니다. Role은 모델의 역할을 정의하고(예: "시니어 데이터 분석가"), Task는 수행할 작업을 명시하며, Format은 출력의 구조화 방식을 지정합니다. 모든 주요 모델에서 작동합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CO-STAR나 SPECS 대신 RTF를 언제 사용해야 합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '일상적이고 반복 가능한 작업(요약, 코드 리뷰, 이메일, 보고서)에는 RTF를 사용하십시오. 어조/대상이 중요한 경우 CO-STAR로, 엄격한 스키마와 제약이 필요한 경우 SPECS로, 추론 투명성이 중요한 경우 TRACE로 업그레이드하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTF는 "모델에게 할 일을 말하는 것"과 같습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '아닙니다. RTF는 세 가지를 명시적으로 지정하도록 강제합니다. 모델의 역할(Role), 해결할 작업(Task), 그리고 출력의 구조화 방식(Format)입니다. 이 구조는 모호함을 제거하고 모델과 실행 전반에 걸쳐 일관성을 향상시킵니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTF는 Chain-of-Thought와 어떻게 비교됩니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Chain-of-Thought는 모델에게 "단계적으로 생각하도록" 요청하여 추론을 향상시킵니다. RTF는 출력 형식과 역할을 구조화합니다. 이 둘은 상호 보완적입니다. RTF로 역할과 형식을 정의한 다음, 복잡한 추론 작업을 위해 "단계적으로 생각하십시오"를 추가할 수 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ollama와 같은 로컬 모델과 RTF를 사용할 수 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '예. RTF는 Ollama나 LM Studio를 통해 실행되는 로컬 모델을 포함한 모든 LLM에서 작동합니다. 단순한 모델(Mistral Small, Llama 3.3)은 복잡한 Format 필드에서 일관성이 떨어질 수 있지만, RTF는 여전히 출력 품질을 향상시킵니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTF에서 가장 흔한 실수는 무엇입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Format을 암묵적으로 두거나 모호하게 남겨 두는 것입니다. 명시적인 Format 필드(예: "최대 50단어씩 3개의 글머리표")가 없으면 모델은 산문 단락을 기본값으로 사용합니다. 항상 Format을 지정하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTF는 일관성에 어떻게 도움이 됩니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Role, Task, Format을 명시적으로 지정함으로써 모델이 원하는 것에 대한 모호함을 줄입니다. 이를 통해 모델, 실행, 그리고 프롬프트를 재사용하는 팀원 전반에 걸쳐 출력이 더 일관성 있게 됩니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTF 프롬프트를 저장해야 합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '예. 반복 작업(주간 요약, 코드 리뷰, 이메일 초안)을 위해 잘 작성된 RTF 프롬프트는 템플릿으로 저장하여 재사용해야 합니다. 이것이 매번 프롬프트를 처음부터 작성하는 것에 비해 RTF의 가장 큰 장점입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTF는 JSON 출력과 같은 엄격한 제약을 적용할 수 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '부분적으로 가능합니다. RTF는 Format 필드에서 "JSON 형식"을 요청할 수 있으며, 최신 모델(GPT-5.5, Claude)은 일반적으로 이에 따릅니다. 100% 엄격한 스키마 적용을 위해서는 SPECS(명시적 제약 필드 포함) 또는 구조화된 출력 API를 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'PromptQuorum은 RTF를 어떻게 사용합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PromptQuorum은 RTF를 내장 프레임워크 템플릿으로 포함합니다. 사용자는 Role, Task, Format 필드를 작성하고, PromptQuorum은 비교 및 A/B 테스트를 위해 동일한 프롬프트를 25개 이상의 모델(GPT-5.5, Claude, Gemini, 로컬 모델)에 디스패치합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTF 프레임워크는 AI 프롬프팅 시 무엇을 도와줍니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'RTF는 세 가지 필드로 관심사를 분리하여 프롬프트를 일관성 있게 구조화하도록 도와줍니다. 모델의 역할(Role), 해결할 작업(Task), 그리고 출력의 형식화 방식(Format)입니다. 이를 통해 모호함이 제거되고 프롬프트가 재사용 가능한 템플릿이 됩니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '프롬프트 엔지니어링에서 RTF는 무엇을 의미합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'RTF는 Role, Task, Format을 의미합니다. 경량 프롬프트 구조의 세 가지 필수 구성 요소입니다. Role은 모델의 페르소나를 정의하고, Task는 행동을 정의하며, Format은 출력 구조를 정의합니다. 함께 일관된 결과를 위해 필요한 최소한의 프레임워크를 만들어 냅니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'RTF 프레임워크는 프롬프트 엔지니어링에서 CO-STAR와 어떻게 비교됩니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'RTF는 3개의 구성 요소(Role, Task, Format)를 가지며 최소화되어 있습니다. CO-STAR는 6개의 구성 요소(Context, Objective, Style, Tone, Audience, Response)를 가지며 포괄적입니다. 일상 작업에는 RTF를, 어조/대상/스타일이 중요한 경우에는 CO-STAR를 사용하십시오. RTF는 기본값이고 CO-STAR는 업그레이드입니다.',
+            },
+          },
+        ],
+      },
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: '핵심 요점',
+          isTldr: true,
+          items: [
+            'RTF = Role(모델의 역할), Task(수행할 작업), Format(출력 방식). 세 가지 간단한 구성 요소.',
+            '일상 작업의 기본값으로 RTF를 사용하십시오: 요약, 코드 리뷰, 이메일, 보고서, 회의록.',
+            'Format 필드는 RTF가 가장 많은 가치를 더하는 곳으로, 명시적인 구조는 훨씬 더 일관된 출력을 만들어 냅니다.',
+            'RTF는 일상적인 LLM 작업의 80%를 처리합니다. RTF의 한계에 부딪혔을 때만 CO-STAR(어조/대상), SPECS(제약), TRACE(추론)로 업그레이드하십시오.',
+            '잘 작성된 RTF 프롬프트는 재사용 가능한 템플릿입니다. 저장해 두고 매주 다시 작성하는 대신 연간 52번 재사용하십시오.',
+            'GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro 및 로컬 모델(Ollama, LM Studio) 전반에서 작동합니다.',
+            'PromptQuorum을 사용하여 동일한 RTF 프롬프트를 여러 모델에서 나란히 테스트하십시오.',
+          ],
+        },
+        whatIsRTFFramework: {
+          id: 'what-is-rtf-framework',
+          title: 'RTF 프레임워크란 무엇인가?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'RTF는 Role, Task, Format이라는 세 부분으로 구성된 프롬프트 기본 구조로, 더 큰 프레임워크의 오버헤드 없이 일상 작업에 필요한 최소한의 구조를 모델에 제공합니다.' },
+            { type: 'in-plain-terms', text: 'AI에게 누구여야 하는지(Role), 무엇을 해야 하는지(Task), 그리고 답변을 어떻게 형식화해야 하는지(Format)를 알려 주십시오. 그것이 전부입니다. 세 가지. 일상 작업의 80%에 효과적입니다. 충분하지 않을 때는 CO-STAR나 SPECS로 넘어가십시오.' },
+          ],
+          content: [
+            '**RTF 프레임워크는 모델에게 자신이 누구인지, 무엇을 해야 하는지, 그리고 답변이 어떻게 보여야 하는지를 알려 주는 세 부분으로 구성된 프롬프트 패턴입니다.** 느슨한 질문을 보내는 대신 Role, Task, Format을 명시적으로 지정합니다. 이는 GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro 및 Ollama나 LM Studio를 통해 실행하는 로컬 모델 전반에서 작동합니다.',
+            'RTF는 의도적으로 최소화되어 있습니다. 세 가지 필드만으로 기억하기 쉽고, 채우기 빠르며, 많은 일상 작업에 충분히 유연합니다. 어떤 특수 프레임워크를 사용해야 할지 확실하지 않을 때는 "기본 프롬프트 기본 구조"로 취급할 수 있습니다.',
+          ],
+        },
+        threeComponents: {
+          id: 'three-components',
+          title: '세 가지 RTF 구성 요소',
+          content: [
+            '**강력한 RTF 프롬프트는 세 가지 구성 요소를 명확하게 정의하여 모델이 자신의 역할에 대해 모호함이 없도록 합니다.** 레이블이 붙은 줄로 작성하거나, 세 부분을 모두 포함하는 하나의 문장으로 작성할 수 있습니다.',
+            '일반적인 정의:',
+          ],
+          items: [
+            'Role: 모델이 채택해야 하는 관점이나 전문성(예: "당신은 시니어 데이터 분석가입니다").',
+            'Task: 원하는 구체적인 행동을 한두 문장으로 설명.',
+            'Format: 출력의 구조, 길이, 스타일(예: "3개의 글머리표와 2문장 요약").',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Format이 핵심 전략',
+              text: 'Role과 Task는 명확합니다 — 대부분의 사람들은 이미 원하는 것을 말합니다. Format이 RTF가 실질적인 가치를 더하는 곳입니다. "최대 50단어씩 3개의 글머리표, markdown"은 "요약해 주십시오"보다 훨씬 더 일관된 출력을 생성합니다. Format 필드는 RTF의 비밀 무기입니다.',
+            },
+          ],
+        },
+        whyRTFUseful: {
+          id: 'why-rtf-useful',
+          title: 'RTF가 유용한 이유',
+          content: [
+            '**RTF 프레임워크는 거의 오버헤드 없이 더 복잡한 프레임워크의 대부분의 이점을 제공하기 때문에 유용합니다.** 프롬프트를 보내기 전에 세 가지 결정(누가, 무엇을, 어떻게)을 내리도록 강제합니다.',
+            '실용적인 장점은 다음과 같습니다:',
+          ],
+          items: [
+            '일상 작업을 위한 다중 섹션 프레임워크보다 빠른 프롬프트 작성.',
+            '형식이 항상 명시적이므로 모델과 실행 전반에 걸쳐 더 나은 일관성.',
+            'RTF를 몇 분 안에 배우고 어디서든 재사용할 수 있는 팀원을 위한 쉬운 온보딩.',
+          ],
+        },
+        badVsGood: {
+          id: 'bad-vs-good',
+          title: '예시: 나쁜 RTF 프롬프트 vs 좋은 RTF 프롬프트',
+          promptExamples: [
+            {
+              bad: '이 회의를 요약해 주십시오.',
+              good: 'Role: 당신은 고위 경영진을 위한 프로젝트 상태 회의를 요약하는 운영 매니저입니다. Task: 회의록을 읽고 회의에서 논의된 주요 결정 사항, 미결 위험, 다음 단계를 파악하십시오. Format: 세 가지 섹션(`Decisions`, `Risks`, `Next steps`)을 포함한 Markdown 요약을 출력하십시오. 각 섹션 아래에 3-5개의 글머리표를 사용하십시오. 총 요약은 250단어 이내로 유지하십시오.',
+              badLabel: '비구조적 요청',
+              goodLabel: 'RTF 프롬프트',
+            },
+          ],
+          content: [
+            'RTF 버전은 모델에게 내용을 어떻게 생각하고 결과를 어떻게 패키징해야 하는지 정확히 알려 주어 다른 사람들이 즉시 사용할 수 있게 합니다.',
+          ],
+        },
+        whenToUse: {
+          id: 'when-to-use',
+          title: 'RTF를 사용할 때',
+          content: [
+            '**여전히 명확성과 구조를 강제하는 간단하고 재사용 가능한 패턴을 원할 때 RTF 프레임워크를 사용해야 합니다.** 긴 명세서나 다단계 추론 추적이 필요하지 않을 때마다 강력한 기본값입니다.',
+            '일반적인 사용 사례는 다음과 같습니다:',
+          ],
+          items: [
+            '이메일이나 채팅을 위한 짧은 보고서, 요약, 정리.',
+            '명확한 구조로 고객이나 내부 이해관계자에 대한 응답 초안 작성.',
+            '지정된 출력 형식으로 작은 코드 스니펫이나 리팩터링 생성.',
+            '제품 설명, FAQ 항목, 간단한 체크리스트와 같은 빠른 콘텐츠.',
+          ],
+        },
+        whenNotToUse: {
+          id: 'when-not-to-use',
+          title: 'RTF가 적합하지 않은 경우',
+          tableFormat: true,
+          columns: ['시나리오', 'RTF의 한계', '대신 사용'],
+          rows: [
+            { '시나리오': '어조와 대상이 중요한 고객 대상 콘텐츠', 'RTF의 한계': '명시적인 Audience 또는 Tone 필드 없음', '대신 사용': 'CO-STAR(Style, Audience, Tone 포함) 또는 CRAFT(Constraints, Role, Audience, Format, Tone)' },
+            { '시나리오': '엄격한 데이터 구조 또는 스키마 적용 필요', 'RTF의 한계': 'Format 필드가 JSON을 요청할 수 있지만 제약 구문 없음', '대신 사용': 'SPECS(명시적 Constraints 필드 포함)' },
+            { '시나리오': '다단계 추론 또는 결정 논리 필요', 'RTF의 한계': '명시적인 단계별 추론 필드 없음', '대신 사용': 'TRACE(Trigger, Response, Action, Consequence, Evaluation 포함)' },
+            { '시나리오': '조건부 논리가 있는 복잡한 워크플로', 'RTF의 한계': '프롬프트당 단일 Role/Task/Format', '대신 사용': 'APE(Action, Process, Examples) 또는 맞춤형 멀티턴 워크플로' },
+          ],
+        },
+        comparisonTables: {
+          id: 'comparison-tables',
+          title: '비교 표',
+          content: [
+            '**RTF와 다른 주요 프레임워크의 비교:**',
+          ],
+        },
+        dimensionComparison: {
+          title: '차원 기반 비교',
+          tableFormat: true,
+          columns: ['차원', 'RTF', 'CO-STAR', 'SPECS', 'TRACE'],
+          rows: [
+            { '차원': '필드 수', 'RTF': '3개 (Role, Task, Format)', 'CO-STAR': '6개 (Context, Objective, Style, Audience, Response, Tone)', 'SPECS': '5개 (Settings, Person, Examples, Pattern, Constraints)', 'TRACE': '5개 (Trigger, Response, Action, Consequence, Evaluation)' },
+            { '차원': '설정 시간', 'RTF': '30초', 'CO-STAR': '2-3분', 'SPECS': '3-5분', 'TRACE': '2-3분' },
+            { '차원': '최적 용도', 'RTF': '일상적이고 반복 가능한 작업', 'CO-STAR': '어조 및 대상 제어', 'SPECS': '엄격한 스키마 및 제약', 'TRACE': '명시적 추론 단계' },
+            { '차원': '출력 일관성', 'RTF': '좋음', 'CO-STAR': '매우 좋음', 'SPECS': '매우 좋음', 'TRACE': '좋음' },
+            { '차원': '예시 필요 여부', 'RTF': '아니오', 'CO-STAR': '선택적', 'SPECS': '예 (강력한 패턴)', 'TRACE': '아니오' },
+          ],
+        },
+        pairwiseComparison: {
+          title: '쌍별 비교 (RTF vs 기타)',
+          tableFormat: true,
+          columns: ['비교', '우세', '이유'],
+          rows: [
+            { '비교': 'RTF vs CO-STAR', '우세': 'CO-STAR (대상이 중요한 경우)', '이유': 'CO-STAR는 명시적인 Audience와 Tone 필드를 포함합니다. RTF는 어조를 Role이나 Format에 억지로 넣어야 하는데 이는 지저분해집니다. 목소리에 신경 쓰지 않는다면 RTF가 더 빠릅니다.' },
+            { '비교': 'RTF vs SPECS', '우세': 'SPECS (엄격한 제약이 필요한 경우)', '이유': 'SPECS는 전용 Constraints 필드를 포함하며 예시를 기대합니다. RTF는 Format에서 제약을 요청할 수 있지만 구조화된 구문이 없습니다. JSON, CSV 또는 구조화된 데이터에는 SPECS가 우세합니다.' },
+            { '비교': 'RTF vs TRACE', '우세': 'TRACE (추론이 중요한 경우)', '이유': 'TRACE는 인과 관계(Trigger → Response → Action → Consequence)를 명시적으로 모델링합니다. RTF에는 추론 단계 필드가 없습니다. 복잡한 논리에는 TRACE를, 단순한 출력에는 RTF를 사용하십시오.' },
+            { '비교': 'RTF vs Chain-of-Thought', '우세': '상호 보완적', '이유': 'RTF는 역할과 출력 형식을 정의합니다. CoT는 추론을 향상시킵니다. 결합하십시오: RTF로 프롬프트를 구조화하고, 복잡한 수학이나 논리를 위해 "단계적으로 생각하십시오"를 추가하십시오.' },
+          ],
+        },
+        howToWrite: {
+          id: 'how-to-write',
+          title: 'RTF 프롬프트 작성 방법',
+          numberedItems: [
+            '**Role: AI가 연기할 역할을 정의하십시오.** 구체적인 역할이 일반적인 역할보다 낫습니다. 나쁜 예: "당신은 도움이 됩니다." 좋은 예: "당신은 성능 저하를 검토하는 시니어 백엔드 엔지니어입니다." 구체적일수록 출력이 더 일관됩니다.',
+            '**Task: AI가 무엇을 해야 하는지 명시하십시오.** 구체적으로 작성하십시오. 나쁜 예: "이것을 요약하십시오." 좋은 예: "논의된 세 가지 주요 결정 사항, 미결 위험, 다음 단계를 파악하십시오."',
+            '**Format: 구조, 길이, 스타일을 지정하십시오.** 이것이 RTF가 가치를 더하는 곳입니다. 나쁜 예: (Format 없음). 좋은 예: "3개의 글머리표, 각 최대 50단어, markdown, 총 200단어 이내."',
+            '**Task와 Format을 분리하십시오.** 하나의 덩어리로 합치면 어느 것도 충분한 구체성을 얻지 못합니다. 구분하여 유지하십시오.',
+            '**명확해 보일 때도 항상 Format을 포함하십시오.** Format 없이는 모델이 기본적으로 산문 단락을 사용합니다.',
+          ],
+        },
+        fiveExamples: {
+          id: 'five-examples',
+          title: '실제 RTF 예시 5가지',
+          content: ['일반적인 워크플로를 위한 5가지 실제 사용 가능한 RTF 프롬프트입니다:'],
+        },
+        example1: {
+          title: '예시 1: 주간 상태 요약',
+          content: [
+            '**Role:** 당신은 임원진을 위한 주간 상태 요약을 작성하는 운영 매니저입니다.',
+            '**Task:** 이번 주 프로젝트 진행 상황, 주요 결정 사항, 파악된 위험, 다음 주 우선순위를 요약하십시오.',
+            '**Format:** Markdown, 네 가지 섹션(Summary, Decisions, Risks, Next Week), 섹션당 3-5개의 글머리표, 최대 300단어.',
+          ],
+        },
+        example2: {
+          title: '예시 2: 코드 리뷰 피드백',
+          content: [
+            '**Role:** 당신은 유지보수성, 성능, 보안을 검토하는 시니어 백엔드 엔지니어입니다.',
+            '**Task:** 이 코드 블록을 검토하고 문제를 파악하며, 개선 사항을 제안하고, 전체 품질을 평가하십시오.',
+            '**Format:** Markdown, 세 가지 섹션(Issues Found, Improvements, Quality Rating 1-5), 예시에는 코드 블록 사용.',
+          ],
+        },
+        example3: {
+          title: '예시 3: 고객 이메일 초안',
+          content: [
+            '**Role:** 당신은 고객 불만에 전문적이고 공감적인 답변을 작성하는 고객 성공 매니저입니다.',
+            '**Task:** 고객의 우려를 해결하고, 적절한 경우 사과하며, 해결책을 설명하고, 신뢰를 회복하십시오.',
+            '**Format:** 이메일 형식(인사말, 2-3단락, 맺음말), 전문적인 어조, 150-250단어.',
+          ],
+        },
+        example4: {
+          title: '예시 4: 회의록에서 행동 항목 추출',
+          content: [
+            '**Role:** 당신은 미가공 회의록에서 행동 항목을 추출하는 프로젝트 코디네이터입니다.',
+            '**Task:** 내려진 결정, 논의된 위험, 담당자와 기한이 있는 다음 단계를 파악하십시오.',
+            '**Format:** 세 가지 섹션(Decisions, Risks, Action Items)이 있는 Markdown, 담당자와 기한이 있는 체크리스트 형식의 행동 항목.',
+          ],
+        },
+        example5: {
+          title: '예시 5: 비기술 사용자를 위한 제품 문서',
+          content: [
+            '**Role:** 당신은 비기술 사용자에게 간단한 언어로 기능을 설명하는 기술 작가입니다.',
+            '**Task:** 이 기능이 무엇을 하는지, 왜 사용할 수 있는지, 세 가지 간단한 단계로 어떻게 사용하는지 설명하십시오.',
+            '**Format:** 1문장 도입, 예시가 있는 3개의 번호 매기기 단계, 1문장 결론. 전문 용어를 피하십시오.',
+          ],
+        },
+        combiningRTF: {
+          id: 'combining-rtf',
+          title: 'RTF와 다른 프레임워크 결합',
+          content: [
+            '**RTF를 경량 기본값으로 취급하고 제약이 증가할 때 더 무거운 프레임워크로 전환함으로써 RTF 프레임워크를 다른 프레임워크와 결합해야 합니다.** 실용적인 패턴은 다음과 같습니다:',
+          ],
+          items: [
+            '빠르게 명확한 구조가 필요한 대부분의 새로운 작업에는 RTF로 시작하십시오.',
+            '엄격한 스키마, 예시, 제약이 필요할 때는 SPECS로 이동하십시오.',
+            '최종 답변 전에 명시적인 추론 단계가 필요할 때는 TRACE나 APE를 사용하십시오.',
+            '대상과 어조가 중심이 될 때는 CRAFT와 같은 창의적인 프레임워크를 사용하십시오.',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: '일반적인 RTF 실수',
+          mistakes: [
+            {
+              mistake: '모호한 Role — "당신은 도움이 되는 어시스턴트입니다"',
+              problem: '"도움이 되는 어시스턴트"는 기본값입니다. 아무것도 추가하지 않습니다. 모호한 역할은 모델이 자신의 관점을 선택하게 하며, 이는 실행 간에 달라집니다.',
+              fix: '구체적으로 작성하십시오: "당신은 시니어 백엔드 엔지니어입니다" 또는 "당신은 CFO를 대상으로 하는 B2B 마케팅 매니저입니다." 역할이 구체적일수록 출력이 더 일관됩니다.',
+            },
+            {
+              mistake: 'Task와 Format이 하나의 덩어리로 합쳐짐',
+              problem: '"이 회의를 글머리표로 요약하십시오"는 작업과 형식을 혼합합니다. 합쳐지면 어느 것도 충분한 구체성을 얻지 못합니다.',
+              fix: '분리하십시오: Task = "결정 사항, 위험, 다음 단계를 파악하십시오." Format = "Markdown, 3개 섹션, 각 3-5개 글머리표, 250단어 이내."',
+            },
+            {
+              mistake: 'Format이 완전히 누락됨',
+              problem: '명시적인 Format 없이는 모델이 기본적으로 산문 단락을 사용합니다. 이것이 "AI가 텍스트 덩어리를 줬다"는 #1 원인입니다.',
+              fix: '항상 Format을 지정하십시오. "Format: 3개의 글머리표"라도 없는 것보다 낫습니다.',
+            },
+            {
+              mistake: '대상/어조 제어가 필요한 작업에 RTF 사용',
+              problem: 'RTF에는 Audience나 Tone 필드가 없습니다. 목소리가 중요한 고객 대상 콘텐츠를 작성하는 경우 RTF는 어조를 Role이나 Format 필드에 억지로 넣어야 하는데, 이는 지저분해집니다.',
+              fix: '목소리가 중요할 때는 CRAFT(명시적 Audience와 Tone 필드 포함) 또는 CO-STAR(Style과 Audience를 분리하는)로 전환하십시오.',
+            },
+            {
+              mistake: 'RTF 프롬프트를 템플릿으로 저장하지 않음',
+              problem: '매주 같은 "회의 요약" RTF 프롬프트를 처음부터 작성하는 것은 시간을 낭비하고 비일관성을 초래합니다.',
+              fix: 'PromptQuorum에서 작동하는 RTF 프롬프트를 명명된 템플릿으로 저장하십시오. 입력 데이터만 교체하여 재사용하십시오.',
+            },
+          ],
+        },
+        promptquorumImplementation: {
+          id: 'promptquorum-implementation',
+          title: 'PromptQuorum의 RTF 프레임워크 구현 방식',
+          content: [
+            '**PromptQuorum은 사용자가 일관된 방식으로 Role-Task-Format 프롬프팅을 적용할 수 있도록 RTF 프레임워크를 내장 프롬프트 구조 중 하나로 포함하는 멀티 모델 AI 디스패치 도구입니다.** PromptQuorum 내에서 RTF 옵션을 선택하면 인터페이스가 Role, Task, Format 필드를 노출하고 이를 단일 잘 구성된 지시문으로 조합합니다.',
+            'PromptQuorum에서 RTF 프레임워크를 사용하면 다음이 가능합니다:',
+          ],
+          items: [
+            'Role, Task, Format을 한 번 채우고 GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro 및 Ollama나 LM Studio를 통해 구성된 로컬 모델 등 25개 이상의 모델에 동일한 구조화된 프롬프트를 전송.',
+            '반복 워크플로를 위한 RTF 프롬프트를 템플릿으로 저장 — 예를 들어 "주간 상태 요약", "고객 답변 초안" 또는 "버그 보고서 요약".',
+            '팀 전반에 RTF 템플릿을 공유하여 전문가가 아닌 사람도 일관된 구조화된 출력을 생성하는 프롬프트를 만들 수 있게 함.',
+            '동일한 RTF 프롬프트를 여러 모델에서 나란히 A/B 테스트하여 사용 사례에 가장 적합한 모델을 찾음.',
+          ],
+        },
+        faqSection: {
+          title: '자주 묻는 질문',
+          id: 'faq',
+          faqs: [
+            {
+              q: 'RTF는 무엇을 의미합니까?',
+              a: 'RTF는 Role, Task, Format을 의미합니다 — 세 부분으로 구성된 프롬프트 구조로, Role은 모델이 어떤 역할을 해야 하는지, Task는 모델이 무엇을 해야 하는지, Format은 원하는 출력의 구조를 설명합니다.',
+            },
+            {
+              q: 'RTF는 CO-STAR와 어떻게 다릅니까?',
+              a: 'RTF는 세 가지 필드(Role, Task, Format)에 초점을 맞춘 최소화된 구조입니다. CO-STAR는 Context, Style, Audience, Tone을 추가하여 더 포괄적입니다. 빠르고 간단한 작업에는 RTF를, 대상과 어조가 중요한 경우에는 CO-STAR를 사용하십시오.',
+            },
+            {
+              q: 'RTF를 언제 사용해야 합니까?',
+              a: '명확하게 정의된 역할에서 구조화된 출력이 필요할 때 RTF를 사용하십시오. 예시: 회의 요약, 코드 생성, 특정 형식의 이메일 작성, 문서 작성. RTF는 템플릿 기반 워크플로에 이상적입니다.',
+            },
+            {
+              q: 'RTF를 다른 프레임워크와 결합할 수 있습니까?',
+              a: '예. RTF를 초기 출력 생성에 사용한 다음 RISEN을 반복적 개선에 적용할 수 있습니다. 또는 RTF와 Chain-of-Thought를 결합하여 추론을 추가할 수 있습니다. 복잡한 워크플로에는 프레임워크를 혼합하여 사용하십시오.',
+            },
+            {
+              q: '어떤 Role을 지정해야 할지 확실하지 않은 경우에는 어떻게 해야 합니까?',
+              a: '작업에 맞는 가장 단순한 역할로 시작하십시오: "당신은 기술 작가입니다", "당신은 프로덕트 매니저입니다", 또는 "당신은 Python 전문가입니다." 구체적이되 지나치게 정교하게 하지 마십시오. 어떤 역할이 더 나은 결과를 만드는지 보기 위해 여러 역할을 테스트하십시오.',
+            },
+            {
+              q: 'Role, Task, Format의 순서가 중요합니까?',
+              a: '전통적인 순서는 Role → Task → Format이지만, 모델은 순서에 상관없이 의도를 이해합니다. 그러나 이 표준 순서를 유지하면 프롬프트를 읽고 템플릿화하기 더 쉬워집니다. 엄격한 순서보다 일관성이 더 중요합니다.',
+            },
+            {
+              q: 'RTF는 모든 언어 모델과 함께 작동합니까?',
+              a: '예. RTF는 프레임워크에 독립적입니다. GPT-5.5, Claude, Gemini, Llama 3.2와 같은 오픈소스 모델, 그리고 Ollama나 LM Studio를 통한 로컬 모델과 함께 작동합니다. 원칙은 명령을 따르는 모든 LLM에 보편적으로 적용됩니다.',
+            },
+            {
+              q: '좋은 Format 명세는 어떻게 작성합니까?',
+              a: '구체적으로 작성하십시오: "Format: 좋은 출력" 대신 "Format: 각 15단어 이내의 5개 글머리표"라고 작성하십시오. 구조(글머리표, 단락, 코드 블록, JSON), 길이(단어 수, 항목 수), 어조(공식, 격식 없음, 기술적)를 지정하십시오.',
+            },
+          ],
+        },
+        relatedReading: {
+          items: [
+            { title: 'Chain-of-Thought 프롬프팅', url: '/prompt-engineering/chain-of-thought-prompting' },
+            { title: '프롬프트 엔지니어링이란 무엇인가?', url: '/prompt-engineering/what-is-prompt-engineering' },
+            { title: 'Zero-Shot vs Few-Shot 프롬프팅', url: '/prompt-engineering/zero-shot-vs-few-shot' },
+            { title: '제약 프롬프팅', url: '/prompt-engineering/constrained-prompting' },
+            { title: '올바른 모델 선택 방법: GPT-5.5 vs Claude vs Gemini', url: '/prompt-engineering/gpt-claude-gemini-which-model' },
+            { title: 'CO-STAR 프레임워크', url: '/prompt-engineering/co-star-framework' },
+          ],
+        },
+        sources: {
+          items: [
+            'Schulhoff, L., et al. (2024). Prompt Engineering Guide. [https://www.promptingguide.ai](https://www.promptingguide.ai)',
+            'Brown, T. B., et al. (2020). "Language Models are Few-Shot Learners." OpenAI. arXiv:2005.14165',
+            'OpenAI. (2026). Prompt Engineering Best Practices. [https://platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
+            'Anthropic. (2026). Prompt Engineering — Claude API Documentation. [https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering)',
+          ],
+        },
+      },
+    },
 };

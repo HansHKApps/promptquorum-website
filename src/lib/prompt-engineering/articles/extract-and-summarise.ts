@@ -539,24 +539,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
         },
-        relatedReading: {
-          id: 'related-reading',
-          title: 'Related Reading',
-          items: [
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundational principles behind structured AI instructions',
-            '[AI-Powered Research](/prompt-engineering/ai-powered-research) — how to combine extraction tools with multi-source verification workflows',
-            '[Why AI Hallucinates and How to Stop It](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — understanding the root causes of hallucination and proven mitigation strategies',
-            '[AI Limitations — What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — specific techniques for grounding AI outputs in verified source content',
-            '[5 Building Blocks Every AI Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — structured prompt components that directly improve extraction accuracy',
-            '[Temperature and Top-P: How to Control AI Output](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — set Temperature to 0.0–0.1 for deterministic, hallucination-resistant summarisation',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — step-by-step reasoning that improves faithfulness in complex multi-document analysis',
-            '[Constrained Prompting](/prompt-engineering/constrained-prompting) — constraining summarisation output format and structure',
-            '[Prompt Chaining](/prompt-engineering/prompt-chaining) — building extract → classify → summarise pipelines',
-            '[Tokens, Costs & Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — cost implications of processing large documents',
-            '[GPT, Claude, or Gemini?](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — detailed model selection guidance',
-            '[Context Windows Explained](/prompt-engineering/context-windows-explained-why-ai-forgets) — why context size matters for summarisation fidelity',
-          ],
-        },
         howToStart: {
           id: 'how-to-extract-and-summarise',
           title: 'How to Extract Data and Summarize With AI',
@@ -1066,19 +1048,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Temperature über 0,3 für Extraktionsaufgaben setzen — Temperaturen über 0,3 erhöhen die Halluzinationshäufigkeit messbar; 0,0–0,1 für maximale Determinismus bei quelltreuen Aufgaben verwenden',
             'Dokumenttyp im Prompt nicht angeben — ohne Kontext wendet das Modell falsche Zusammenfassungsheuristiken an (z. B. behandelt einen Rechtsvertrag wie einen Nachrichtenartikel und lässt kritische Klauselformulierungen aus)',
             'Chunking für Dokumente über 50 Seiten überspringen — Kontextfensterüberschreitung kürzt Inhalte still ab; das Modell fasst nur den verfügbaren Teil zusammen, ohne zu warnen, dass es etwas übersehen hat',
-          ],
-        },
-        relatedReading: {
-          id: 'related-reading',
-          title: 'Weiterführende Lektüre',
-          items: [
-            '[Was ist Prompt-Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — die Grundprinzipien strukturierter KI-Anweisungen',
-            '[KI-gestützte Recherche](/de/prompt-engineering/ai-powered-research) — wie man Extraktionstools mit Mehrquellen-Verifizierungs-Workflows kombiniert',
-            '[Warum KI halluziniert und wie man es stoppt](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — die Ursachen von Halluzinationen und bewährte Gegenmaßnahmen',
-            '[KI-Grenzen — Was LLMs nicht können](/de/prompt-engineering/ai-limitations-what-llms-cant-do) — spezifische Techniken zur Verankerung von KI-Ausgaben in verifizierten Quellinhalten',
-            '[5 Bausteine, die jeder KI-Prompt benötigt](/de/prompt-engineering/5-building-blocks-every-prompt-needs) — strukturierte Prompt-Komponenten, die die Extraktionsgenauigkeit direkt verbessern',
-            '[Temperature und Top-P: KI-Ausgabe kontrollieren](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) — Temperature auf 0,0–0,1 setzen für deterministische, halluzinationsresistente Zusammenfassung',
-            '[Chain-of-Thought-Prompting](/de/prompt-engineering/chain-of-thought-prompting) — schrittweises Denken, das die Treue bei komplexen Mehrquellen-Analysen verbessert',
           ],
         },
         howToStart: {
@@ -3175,19 +3144,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Ignorer le chunking pour les documents dépassant 50 pages — le débordement de fenêtre de contexte tronque silencieusement le contenu ; le modèle résume uniquement la portion disponible sans avertir qu\'il a manqué quelque chose',
           ],
         },
-        relatedReading: {
-          id: 'related-reading',
-          title: 'Lecture complémentaire',
-          items: [
-            '[Qu\'est-ce que l\'ingénierie des prompts ?](/fr/prompt-engineering/what-is-prompt-engineering) — les principes fondamentaux derrière les instructions IA structurées',
-            '[Recherche assistée par IA](/fr/prompt-engineering/ai-powered-research) — comment combiner les outils d\'extraction avec les workflows de vérification multi-sources',
-            '[Pourquoi l\'IA hallucine et comment l\'arrêter](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — comprendre les causes profondes de l\'hallucination et les stratégies d\'atténuation prouvées',
-            '[Limites de l\'IA — Ce que les LLM ne peuvent pas faire](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) — techniques spécifiques pour ancrer les résultats de l\'IA dans le contenu source vérifié',
-            '[5 composants que chaque prompt IA doit avoir](/fr/prompt-engineering/5-building-blocks-every-prompt-needs) — composants de prompt structurés qui améliorent directement la précision d\'extraction',
-            '[Température et Top-P : contrôler la sortie IA](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) — définir la température à 0.0–0.1 pour la résumé déterministe et résistante aux hallucinations',
-            '[Chaînage de pensée](/fr/prompt-engineering/chain-of-thought-prompting) — raisonnement étape par étape qui améliore la fidélité dans l\'analyse complexe multi-sources',
-          ],
-        },
         howToStart: {
           id: 'how-to-extract-and-summarise',
           title: 'Comment extraire et résumer avec l\'IA',
@@ -3711,19 +3667,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '抽出タスク向けの0.3上の温度設定 — 0.3上の温度が測定可能にハルシネーション頻度を増やす。ソース固定タスク向けに最大決定性で0.0～0.1使用',
             'プロンプトでドキュメントタイプ指定なし — コンテキスト無しでモデルが間違った要約ヒューリスティックを適用（例：法律契約をニュース記事として扱う、重要条項言語を見落とす）',
             '50ページ上のドキュメント向けチャンキングをスキップ — コンテキストウィンドウオーバーフロー静かにコンテンツを切り詰め。モデルは利用可能な部分のみ要約。何か見落とした警告なし。',
-          ],
-        },
-        relatedReading: {
-          id: 'related-reading',
-          title: '参考資料',
-          items: [
-            '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) — 構造化AI指示の背後の基本原則',
-            '[AI支援研究](/ja/prompt-engineering/ai-powered-research) — 複数ソース検証ワークフローで抽出ツール組み合わせ方法',
-            '[AIがなぜ幻覚見て、どのように停止するか](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — ハルシネーション根本原因と実証的軽減戦略理解',
-            '[AIの限界 — LLMができないこと](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) — 確認されたソースコンテンツにAI出力をアンカーするための特定技術',
-            '[すべてのAIプロンプトが必要な5つのコンポーネント](/ja/prompt-engineering/5-building-blocks-every-prompt-needs) — 抽出正確性を直接改善する構造化プロンプトコンポーネント',
-            '[温度とTop-P：AI出力制御](/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 決定論的でハルシネーション抵抗性のある要約向けに0.0～0.1に温度設定',
-            '[チェーン・オブ・シンク・プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) — 複雑な複数ソース分析で忠実性改善するステップバイステップ推論',
           ],
         },
         howToStart: {
@@ -4253,19 +4196,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '跳过50页以上文档的分块——上下文窗口溢出会无声地截断内容；模型仅总结可用部分而无警告已遗漏任何内容',
           ],
         },
-        relatedReading: {
-          id: 'related-reading',
-          title: '相关阅读',
-          items: [
-            '[什么是提示词工程？](/zh/prompt-engineering/what-is-prompt-engineering) —— 结构化AI指示背后的基础原则',
-            '[AI驱动的研究](/zh/prompt-engineering/ai-powered-research) —— 如何将提取工具与多源验证工作流程相结合',
-            '[AI为什么会幻觉及如何阻止](/zh/prompt-engineering/ai-hallucinations-how-to-stop) —— 理解幻觉的根本原因和经过验证的缓解策略',
-            '[AI限制——LLM不能做什么](/zh/prompt-engineering/ai-limitations-what-llms-cant-do) —— 将AI输出根植于已验证源内容的具体技术',
-            '[每个AI提示词需要的5个构建块](/zh/prompt-engineering/prompt-building-blocks) —— 直接改进提取准确性的结构化提示词组件',
-            '[温度和Top-P：如何控制AI输出](/zh/prompt-engineering/temperature-and-top-p) —— 将温度设置为0.0–0.1以实现确定性、抗幻觉总结',
-            '[思路链式提示词](/zh/prompt-engineering/chain-of-thought-prompting) —— 改进复杂多文档分析中忠实度的分步推理',
-          ],
-        },
         howToStart: {
           id: 'how-to-extract-and-summarise',
           title: '如何使用AI提取数据和总结',
@@ -4377,35 +4307,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: '흔한 실수', anchor: '#common-mistakes' },
       { label: '자주 묻는 질문', anchor: '#faq' },
     ],
-    quickAnswerTop: {
-      ko: {
-        question: 'AI 문서 요약에서 추출적 방식과 추상적 방식의 차이는 무엇입니까?',
-        answer: '추출적 요약은 소스 문서에서 문장을 직접 복사합니다 — 새 텍스트를 생성하지 않으므로 사실적 오류가 구조적으로 불가능합니다. 추상적 요약은 LLM을 사용하여 내용을 바꿔 쓴 새 문장을 생성하며, 가독성이 높지만 환각률이 0.7~14%입니다.',
-        bullets: [
-          '추출적: 환각률 0%, 법률 및 규정 준수 문서에 최적',
-          '추상적: 가독성 높음, 연구 합성 및 경영진 요약에 최적',
-          'Gemini 3 Flash: HHEM 벤치마크에서 가장 낮은 환각률 0.7% 달성',
-        ],
-        updatedDate: '2026-05-04',
-      },
-    },
-    targetKeywords: [
-      'AI 문서 요약',
-      'AI 추출적 요약',
-      'AI 추상적 요약',
-      '문서 요약 환각',
-      'AI 프롬프트 요약',
-      'NotebookLM vs Claude 요약',
-      '문서 청킹 방법',
-    ],
-    snippetBlocks: [
-      { type: 'one-sentence', text: '소스 기반 AI 문서 요약은 2025년 환각률 0.7%를 달성하였으며, 추출적 방식은 사실적 오류를 구조적으로 차단합니다.' },
-      { type: 'plain-terms', text: 'AI 요약 도구는 문서 검토 시간을 최대 80%까지 줄입니다. 법률 문서에는 환각이 없는 추출적 요약을 사용하고, 연구 합성에는 추상적 요약을 사용하십시오.' },
-    ],
-    leadAnswerBlock: {
-      question: 'AI 요약에서 환각을 방지하는 방법은 무엇입니까?',
-      answer: '네 가지 기법이 요약 작업의 환각을 줄입니다: (1) 명시적으로 지시 — "아래 문서에서만 요약하십시오; 외부 지식을 추가하지 마십시오"; (2) Temperature를 0.0~0.1로 설정; (3) 충실도 확인 사용; (4) 두 번째 모델로 교차 검증.',
-    },
+    leadAnswerBlock: '네 가지 기법이 요약 작업의 환각을 줄입니다: (1) 명시적으로 지시 — "아래 문서에서만 요약하십시오; 외부 지식을 추가하지 마십시오"; (2) Temperature를 0.0~0.1로 설정; (3) 충실도 확인 사용; (4) 두 번째 모델로 교차 검증.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -4456,30 +4358,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Organization', name: 'PromptQuorum' },
       ],
     },
-    breadcrumbSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: '홈',
-          item: 'https://www.promptquorum.com/ko',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: '프롬프트 엔지니어링',
-          item: 'https://www.promptquorum.com/ko/prompt-engineering',
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: 'AI로 문서 추출 및 요약하기',
-          item: 'https://www.promptquorum.com/ko/prompt-engineering/extract-and-summarise',
-        },
-      ],
-    },
+
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -4558,10 +4437,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       description: 'AI 문서 추출 및 요약을 위한 핵심 개념',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: '추출적 vs 추상적 요약', description: '사실적 정확도와 가독성 간의 트레이드오프 이해' },
-        { '@type': 'ListItem', position: 2, name: '사용할 AI 모델', description: '요약 작업을 위한 NotebookLM, Claude, GPT-5.5, Gemini 비교' },
-        { '@type': 'ListItem', position: 3, name: '추출을 위한 프롬프트 구조', description: '환각을 방지하고 정확도를 보장하는 구조화된 프롬프트 작성 방법' },
-        { '@type': 'ListItem', position: 4, name: 'AI 환각 감소', description: 'Temperature 설정, 충실도 확인, 다중 모델 검증' },
-        { '@type': 'ListItem', position: 5, name: '도구 및 워크플로우', description: 'NotebookLM, Scholarcy, Elicit 및 커스텀 추출 파이프라인 활용' },
       ],
     },
     howToSchema: {
@@ -4576,14 +4451,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'HowToStep', position: 3, name: 'Temperature를 0.1~0.3으로 설정', text: '낮은 Temperature는 더 결정론적이고 일관된 출력을 생성합니다.' },
         { '@type': 'HowToStep', position: 4, name: '대용량 문서를 여러 패스로 분할', text: '100페이지 이상의 PDF의 경우 25페이지 섹션씩 추출하고 결과를 구조화된 형식으로 저장하십시오.' },
         { '@type': 'HowToStep', position: 5, name: '주요 추출물을 소스로 검증', text: '추출된 데이터의 10~20%를 원본 문서와 무작위로 교차 확인하십시오.' },
-      ],
-    },
-    relatedReading: {
-      title: '관련 아티클',
-      items: [
-        '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering)',
-        '[AI 환각을 줄이는 방법](/ko/prompt-engineering/how-to-reduce-hallucinations)',
-        '[고급 프롬프트 기법](/ko/prompt-engineering/advanced-prompting-techniques)',
       ],
     },
     sections: {
@@ -4917,7 +4784,5 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
     },
-  },
-
-  };
-
+},
+};

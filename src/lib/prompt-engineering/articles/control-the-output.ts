@@ -2840,4 +2840,363 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       },
     },
+    ko: {
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-09-24',
+      theme: 'Techniques',
+      title: 'AI 출력 제어: JSON 스키마 준수, 제약 디코딩 및 형식 선택',
+      intro: '**제약 디코딩은 JSON 스키마 준수율 100%를 달성합니다 — 잘못된 형식의 출력은 더 이상 없습니다. 이 기술이 등장하기 전, 모델은 복잡한 스키마에서 40% 미만의 성적을 기록했으며 엣지 케이스에서 조용히 실패하였습니다. 출력 제어는 프로토타입(성공률 80%)과 프로덕션 시스템(신뢰도 100%)을 구분하는 핵심 엔지니어링 변수입니다.**',
+      publishDate: '2026-03-24',
+      readTime: '10분 읽기',
+
+      seoTitle: 'AI 출력 형식 및 스키마 준수 제어 (2026)',
+      metaDescription: 'JSON 모드와 제약 디코딩으로 LLM 출력을 제어하십시오. 2단계 파이프라인을 사용하여 추론 품질을 희생하지 않고 100% 스키마 준수를 달성합니다. GPT, Claude, Gemini를 위한 프로덕션 가이드입니다.',
+
+      ogTitle: 'JSON 준수율 40%에서 100%로 — 제약 디코딩이 모든 것을 바꿉니다',
+      ogDescription: '프롬프트만으로 형식을 지정하면 60%의 경우 실패합니다. Strict 모드는 토큰 수준에서 스키마 준수를 보장합니다. 전체 설정 가이드입니다.',
+      twitterTitle: 'AI 출력 제어: JSON, 온도 및 중지 시퀀스 (2026)',
+      twitterDescription: '제약 디코딩 = 100% 스키마 준수이지만 정확도 2~10% 저하. 프로덕션 JSON에는 온도 0.0~0.1을 사용하십시오. 아무도 알려주지 않는 트레이드오프입니다.',
+
+      educationalLevel: 'Beginner',
+      audience: '구조화된 출력이 필요한 프로덕션 LLM 파이프라인을 구축하는 개발자',
+      toc: [
+        { label: '출력 제어의 세 가지 수준이란?', anchor: 'three-levels' },
+        { label: '프롬프트 엔지니어링으로 출력 형식을 제어하는 방법은?', anchor: 'prompt-engineering' },
+        { label: '우수한 구조화 출력 프롬프트란?', anchor: 'good-prompt' },
+        { label: '각 모델에 적용되는 출력 형식 규칙은?', anchor: 'model-rules' },
+        { label: '출력 생성을 제어하는 샘플링 파라미터는?', anchor: 'sampling-parameters' },
+        { label: '추론과 형식 간의 트레이드오프는?', anchor: 'reasoning-tradeoff' },
+        { label: '주요 모델들의 출력 형식 제어 비교', anchor: 'model-comparison' },
+        { label: '중지 시퀀스와 부정 제약의 차이점은?', anchor: 'stop-sequences' },
+        { label: '프로덕션에 사용할 출력 형식은?', anchor: 'production-format' },
+        { label: '글로벌 및 지역별 고려 사항은?', anchor: 'global-regional' },
+        { label: '핵심 요점', anchor: 'key-takeaways' },
+        { label: 'AI 출력 형식 제어 방법 (단계별)', anchor: 'how-to' },
+        { label: '흔한 실수', anchor: 'common-mistakes' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: '출처', anchor: 'sources' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'AI 출력 제어: JSON 스키마 준수, 제약 디코딩 및 형식 선택',
+        description: 'LLM 출력 제어 마스터하기: 제약 디코딩, 프롬프트 기반 형식 지정, 샘플링 파라미터, 추론 품질 트레이드오프. JSON, JSONL, CSV에 관한 프로덕션 가이드입니다.',
+        url: 'https://www.promptquorum.com/ko/prompt-engineering/control-the-output',
+        inLanguage: 'ko',
+        datePublished: '2026-03-24',
+        dateModified: '2026-04-29',
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ko/api/og/control-the-output', width: 1200, height: 630 },
+        keywords: ['출력 제어', '제약 디코딩', 'JSON 스키마', '구조화 출력', 'Temperature', 'Top-P', '샘플링 파라미터', '프롬프트 엔지니어링'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
+          { '@type': 'SoftwareApplication', name: 'Ollama' },
+          { '@type': 'SoftwareApplication', name: 'Mistral AI' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'ko',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'LLM에서 Temperature와 Top-P의 차이점은 무엇입니까?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Temperature(T)는 다음 토큰 예측의 전체 소프트맥스 확률 분포를 조정합니다. T=0.0이면 항상 가장 높은 확률의 토큰을 선택(결정론적)하고, T=1.0이면 자연 분포를 유지하며, T=2.0이면 무작위성 방향으로 분포를 평탄화합니다. Top-P(핵 샘플링)는 누적 확률이 P에 도달하는 최소 토큰 집합에서 선택합니다. Top-P=0.9이면 누적 확률 상위 90%의 토큰만 대상이 됩니다. 이 두 파라미터는 생성의 서로 다른 측면을 제어하므로, 동시에 높은 값으로 설정하면 불규칙한 출력이 증폭됩니다.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'JSON 출력을 강제하면 AI 응답 품질이 저하됩니까?',
+            acceptedAnswer: { '@type': 'Answer', text: '예, 측정 가능한 수준으로 저하됩니다. BAML의 BFCL 벤치마크에서 스키마 정렬 자유 형식 파싱은 93.63%의 정확도를 달성한 반면, OpenAI의 제약 디코딩(엄격한 함수 호출)은 91.37%에 그쳐 2.26포인트의 품질 저하가 발생하였습니다. 메커니즘은 토큰 마스킹입니다. 복잡한 추론 작업에서는 2단계 접근 방식(자유 형식 → 전문 구조화)을 사용하면 100% 형식 준수를 달성하면서 품질을 유지할 수 있습니다.' },
+          },
+          {
+            '@type': 'Question',
+            name: '제약 디코딩이란 무엇이며 어떻게 JSON 출력을 보장합니까?',
+            acceptedAnswer: { '@type': 'Answer', text: '제약 디코딩은 모델의 토큰 생성 프로세스에 유한 상태 기계(FSM)를 적용합니다. 각 생성 단계에서 FSM은 현재 위치에서 대상 스키마와 호환되는 출력을 생성할 토큰을 평가하고, 다른 모든 토큰의 확률을 0으로 마스킹합니다. 이로써 스키마에 유효하지 않은 출력이 생성되는 것이 수학적으로 불가능해집니다. OpenAI는 `response_format: { type: "json_schema", strict: true }`로 구현하고, Anthropic은 엄격 도구 사용 모드로 구현합니다.' },
+          },
+          {
+            '@type': 'Question',
+            name: '프로덕션 LLM 파이프라인에는 어떤 출력 형식을 사용해야 합니까?',
+            acceptedAnswer: { '@type': 'Answer', text: 'JSON은 타입이 지정된 API 객체에 직접 매핑되고 모든 주요 공급자(OpenAI, Anthropic, Google Gemini)에서 네이티브로 지원되므로 프로덕션 LLM 파이프라인의 표준입니다. 이벤트 스트림과 배치 처리에는 JSONL을 사용하십시오. 레거시 시스템 호환성에만 CSV를 사용하십시오. 2026년 권장 아키텍처: 입력 토큰 효율성을 위한 TOON + Stage 1 자유 추론 후 Stage 2 출력에만 제약 디코딩이 적용된 JSON입니다.' },
+          },
+          {
+            '@type': 'Question',
+            name: '중지 시퀀스와 프롬프트의 부정 제약은 어떻게 다릅니까?',
+            acceptedAnswer: { '@type': 'Answer', text: '중지 시퀀스는 API/추론 수준에서 강제됩니다. 지정된 문자열이 생성되는 순간 모델은 예외 없이 생성을 중단합니다. 프롬프트 본문의 부정 제약("설명을 포함하지 마십시오", "마크다운 없음")은 모델에게 특정 출력을 피하도록 지시하지만 구속력이 없습니다. 두 가지를 모두 사용하십시오. 중지 시퀀스는 구조적 종료 보장에, 부정 제약은 콘텐츠 스타일 형성에 활용하십시오.' },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'AI 출력 제어: 핵심 주제',
+        description: 'AI 모델의 구조화 출력을 관리하기 위한 핵심 개념',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '출력 제어의 세 가지 수준', description: '프롬프트 기반, 스키마 기반, 제약 디코딩 접근 방식과 각각의 트레이드오프' },
+          { '@type': 'ListItem', position: 2, name: '프롬프트를 통한 출력 형식 제어', description: '제약 디코딩 없이 JSON 준수를 달성하기 위한 모델별 기술' },
+          { '@type': 'ListItem', position: 3, name: '샘플링 파라미터', description: 'Temperature, Top-P, Top-K, max_tokens 및 패널티 파라미터 설명' },
+          { '@type': 'ListItem', position: 4, name: '추론과 형식의 트레이드오프', description: '제약 디코딩에 의한 정확도 저하와 2단계 솔루션 이해' },
+          { '@type': 'ListItem', position: 5, name: '중지 시퀀스와 제약', description: 'API 수준 제약과 부정 지시를 사용한 출력 경계 제어' },
+        ],
+      },
+      sections: {
+
+        definition: {
+          title: '출력 제어의 세 가지 수준이란?',
+          content: [
+            '출력 제어는 프롬프트 기반, 스키마 기반, 제약 디코딩의 세 가지 서로 다른 수준에서 작동합니다. 각 수준은 추론 품질에 대한 트레이드오프가 점진적으로 높아지는 대신 점진적으로 강력한 형식 보장을 제공합니다.',
+            '프롬프트 기반 형식은 자연어로 모델에 지시합니다("Return JSON with fields: name, email, score"). 이 방법은 80~95%의 경우에 작동하지만 형식 보장 없이 엣지 케이스에서 조용히 실패하므로, 잘못된 형식의 응답 5~20%에 대한 오류 처리가 필요합니다. 스키마 기반 접근 방식(함수 호출/도구 사용)은 95~99% 준수율로 출력 구조를 공식적으로 정의하지만, 스키마는 절대적인 제약이 아닌 강력한 힌트에 그칩니다. 네이티브 제약 디코딩은 생성 시 무효 토큰을 마스킹하는 유한 상태 기계를 사용하여 수학적 확실성으로 100% 스키마 유효 출력을 생성합니다.',
+            '2단계 접근 방식 — Stage 1에서 Claude Opus 4.8(Anthropic) 또는 GPT-5.5(OpenAI)가 자유롭게 추론하도록 한 다음, 출력을 Stage 2의 소형 전문 구조화 모델(Osmosis-Structure-0.6B, 50만 건의 합성 비구조화→구조화 변환으로 훈련)에 전달하는 방식 — 은 제약 디코딩의 추론 품질 패널티 없이 형식 보장을 달성합니다.',
+            '한 문장으로 요약하면: 작업에 맞게 출력 제약 수준을 조정하십시오. 형식 정확성이 추론 깊이보다 더 중요한 경우에만 제약 디코딩을 사용하십시오.',
+          ],
+          columns: ['수준', '준수율', '추론 영향', '최적 용도'],
+          rows: [
+            { '수준': '프롬프트 기반("return JSON")', '준수율': '80~95%', '추론 영향': '없음', '최적 용도': '프로토타입; 단순 파이프라인' },
+            { '수준': '함수 호출 / 도구 사용', '준수율': '95~99%', '추론 영향': '최소', '최적 용도': '대부분의 프로덕션 애플리케이션' },
+            { '수준': '네이티브 제약 디코딩 (strict)', '준수율': '100%', '추론 영향': '품질 저하 2~10%', '최적 용도': '데이터 추출; 대용량 파이프라인' },
+            { '수준': '2단계(자유 형식 → 전문 모델)', '준수율': '~100%', '추론 영향': '없음', '최적 용도': '복잡한 추론 + 형식 보장' },
+          ],
+          tableFormat: true,
+        },
+
+        promptStructure: {
+          title: '프롬프트 엔지니어링으로 출력 형식을 제어하는 방법은?',
+          content: [
+            '명시적인 출력 스키마 지시 — Claude Opus 4.8의 경우 시스템 프롬프트 시작 부분에, GPT-5.5의 경우 사용자 콘텐츠 바로 앞에 배치 — 를 사용하면 네이티브 제약 디코딩의 추론 품질 패널티 없이 85~95%의 구조화 출력 준수율을 달성할 수 있습니다.',
+            'Claude Opus 4.8(Anthropic)은 XML 스타일 섹션 레이블을 사용하여 시스템 프롬프트 시작 부분에 배치된 출력 형식 지시에 가장 효과적으로 반응합니다. GPT-5.5(OpenAI)는 사용자 콘텐츠 바로 앞에 번호가 매겨진 형식 규칙으로 스키마를 배치할 때 가장 좋은 성능을 발휘합니다. Gemini 3.1 Pro(Google DeepMind)는 프롬프트의 시작과 끝 모두에 스키마를 명시할 때 가장 신뢰할 수 있는 구조화 출력을 생성합니다.',
+          ],
+        },
+
+        badPrompt: {
+          content: ['**나쁜 프롬프트 — 구조화되지 않고 형식 지정 없음:**'],
+          blockquote: '이 고객 리뷰를 분석하여 감정, 주요 문제점, 긴급도를 알려주세요.',
+        },
+
+        goodPrompt: {
+          title: '우수한 구조화 출력 프롬프트란 (Claude Opus 4.8)?',
+          content: ['**좋은 프롬프트 — Claude Opus 4.8**'],
+          blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
+        },
+
+        promptOutcome: {
+          content: [
+            'XML 구조화 프롬프트는 출력 형식 계약을 고정하면서 `<task>` 블록 내에서의 자유로운 추론을 보존합니다. 제약 디코딩이 필요하지 않습니다. Claude Opus 4.8은 이 구조로 93% 이상의 프로덕션 호출에서 준수합니다.',
+          ],
+        },
+
+        goodPromptGPT: {
+          title: '우수한 구조화 출력 프롬프트란 (GPT-5.5)?',
+          content: ['**좋은 프롬프트 — GPT-5.5**'],
+          blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
+        },
+
+        modelRules: {
+          title: '각 모델에 적용되는 출력 형식 규칙은?',
+          content: ['주요 LLM은 각각 출력 형식 준수에 대해 서로 다른 구조적 선호도를 갖고 있습니다:'],
+          items: [
+            '**Claude Opus 4.8 (Anthropic)** — XML 태그(`<output>`, `<format>`, `<constraints>`); 스키마를 맨 앞에 배치; "JSON만 출력하고 다른 내용은 포함하지 마십시오"',
+            '**GPT-5.5 (OpenAI)** — 번호가 매겨진 형식 규칙; 스키마를 주 지시 뒤에 배치; "유효한 JSON으로 응답하십시오. 마크다운 펜스 없음. 설명 없음."',
+            '**Gemini 3.1 Pro (Google DeepMind)** — 프롬프트의 시작과 끝 모두에 간결하고 명시적인 스키마; 프롬프트 내에 원하는 출력 형식의 원샷 예시 포함',
+            '**Ollama를 통한 로컬 모델** (LLaMA 3.1 7B, Mistral) — 형식 드리프트에 더 민감함; 신뢰할 수 있는 JSON 출력을 위해 프롬프트에 원샷 형식 예시를 직접 포함해야 함',
+          ],
+        },
+
+        parameters: {
+          title: '출력 생성을 제어하는 샘플링 파라미터는?',
+          content: [
+            'Temperature(T), Top-P, Top-K, max_tokens, frequency_penalty, presence_penalty는 출력 길이, 무작위성, 반복을 공동으로 결정하는 6개의 독립적인 파라미터이며, 충돌 없이 일관되게 설정해야 합니다.',
+            'Temperature(T)는 소프트맥스 출력 분포를 조정합니다. T=0.0이면 모델이 항상 가장 높은 확률의 토큰을 선택(결정론적)하고, T=2.0이면 분포가 거의 평탄해져 출력이 일관성을 잃습니다. Top-P(핵 샘플링)는 누적 확률이 P에 도달하는 최소 토큰 집합에서 선택합니다. Top-P=0.9이면 모델은 확률 질량 상위 90%를 포함하는 토큰만을 고려합니다. Top-K는 각 단계에서 가장 높은 확률의 K개 토큰으로 생성을 제한합니다. Top-K=1은 탐욕적 디코딩과 동일합니다.',
+            '온도를 적용한 소프트맥스 공식: P(토큰) = exp(logit / T) / sum(exp(logits / T)). T가 0에 가까워질수록 로짓이 가장 높은 토큰의 확률이 1.0에 가까워집니다. T가 무한대에 가까워질수록 모든 토큰이 동등한 확률에 가까워집니다.',
+          ],
+          columns: ['파라미터', '범위', '집중 / 사실적', '창의적 / 다양한'],
+          rows: [
+            { '파라미터': 'Temperature (T)', '범위': '0.0–2.0', '집중 / 사실적': '0.0–0.3', '창의적 / 다양한': '0.7–1.0' },
+            { '파라미터': 'Top-P', '범위': '0.0–1.0', '집중 / 사실적': '0.3–0.5', '창의적 / 다양한': '0.9–1.0' },
+            { '파라미터': 'Top-K', '범위': '1–어휘 크기', '집중 / 사실적': '10–20', '창의적 / 다양한': '50–100' },
+            { '파라미터': 'max_tokens', '범위': '작업 의존적', '집중 / 사실적': '256–512', '창의적 / 다양한': '2,048–8,192' },
+            { '파라미터': 'frequency_penalty', '범위': '-2.0~2.0', '집중 / 사실적': '0.3–0.5 (반복 감소)', '창의적 / 다양한': '0.0–0.2' },
+            { '파라미터': 'presence_penalty', '범위': '-2.0~2.0', '집중 / 사실적': '0.0–0.2', '창의적 / 다양한': '0.5–0.8' },
+          ],
+          tableFormat: true,
+        },
+
+        parameterWarning: {
+          content: [
+            '**중요 규칙:** Temperature와 Top-P를 동시에 높은 값으로 설정하지 마십시오. Temperature는 먼저 전체 분포를 조정하고, 그 다음 Top-P가 이미 조정된 상위 확률 질량에서 샘플링합니다. T=1.5와 Top-P=0.95를 조합하면 어느 한 파라미터 단독보다 더 불규칙한 출력이 생성됩니다. 이 두 파라미터는 쌓아서 사용하는 것이 아니라 대안으로 사용하도록 설계되었습니다.',
+            '`frequency_penalty`는 이미 출현한 횟수에 비례하여 토큰의 확률을 감소시킵니다. 양수 값은 반복적인 표현을 제거하고, 음수 값은 적극적으로 반복을 장려합니다. `presence_penalty`는 빈도에 관계없이 이미 출현한 모든 토큰에 일회성 고정 패널티를 적용합니다. 이를 통해 모델이 기존 내용을 반복하는 대신 새로운 어휘와 주제를 도입하도록 유도합니다.',
+          ],
+        },
+
+        reasoningTradeoff: {
+          title: '추론 품질과 출력 형식 보장 간의 트레이드오프는?',
+          content: [
+            '제약 디코딩으로 JSON을 강제하면 함수 호출 벤치마크에서 모델 정확도가 2.26포인트 감소합니다. BAML의 스키마 정렬 파싱은 BFCL에서 93.63%의 정확도를 달성한 반면, 동일한 벤치마크에서 OpenAI의 엄격한 제약 디코딩은 91.37%에 그쳤습니다.',
+            '메커니즘은 다음과 같습니다. 제약 디코딩은 현재 스키마 위치와 호환되지 않는 토큰을 마스킹하는 유한 상태 기계를 적용합니다. 스키마가 정수를 지정하는 경우, float 필드에 `51.7`을 출력하려는 모델은 `51`을 출력하도록 강제됩니다. 기술적으로는 유효하지만 사실적으로는 저하된 결과입니다. Chain-of-Thought(CoT) 프롬프팅도 동일한 방식으로 제약 디코딩과 호환되지 않습니다. 추론 필드를 포함하면 모델이 JSON 문자열 내에서 개행, 따옴표, 특수 문자를 이스케이프하도록 강제되어 테스트된 모든 모델에서 추론 품질이 측정 가능한 수준으로 저하됩니다.',
+            '추론 깊이와 형식 보장이 모두 필요한 시스템의 프로덕션 등급 솔루션: (1) **Stage 1** — 제약 없이 GPT-5.5 또는 Claude Opus 4.8에 전송: "이것을 분석하고, 단계별로 추론하고, 논리를 설명하십시오." (2) **Stage 2** — Stage 1 출력을 소형 전문 모델(Osmosis-Structure-0.6B 또는 `strict: true`가 적용된 GPT-5.5-mini)에 전달: "이 분석에서 핵심 데이터를 추출하여 이 정확한 JSON 스키마로 반환하십시오."',
+            '이 아키텍처는 Stage 1의 추론 품질을 보존하고 Stage 2에서 100% 형식 준수를 달성합니다. 전체 프론티어 모델을 제약 모드로 실행하는 비용의 일부로 구현할 수 있습니다.',
+          ],
+        },
+
+        promptquorumTest: {
+          title: '주요 모델들의 출력 형식 제어 비교',
+          content: [
+            '[PromptQuorum](https://www.promptquorum.com/)에서 테스트되었습니다. 3개 모델에 30개의 출력 제어 프롬프트를 전송하였습니다. Claude Opus 4.8은 제약 디코딩 없이 XML 태그 형식 지시를 사용하여 93%의 JSON 준수율을 달성하였습니다. GPT-5.5는 번호가 매겨진 형식 규칙으로 89% 준수율을 달성하였습니다. Gemini 3.1 Pro는 스키마를 시작과 끝 모두에 명시했을 때 91% 준수율을 달성하였습니다. `strict: true` 제약 디코딩이 활성화되었을 때 세 모델 모두 더 짧고 덜 완성된 추론을 생성하였습니다. 이는 BFCL 벤치마크에서 관찰된 2.26포인트 정확도 저하와 일치합니다.',
+          ],
+        },
+
+        stopSequences: {
+          title: '중지 시퀀스와 부정 제약은 어떻게 다릅니까?',
+          content: [
+            '중지 시퀀스 — 생성 시 즉시 모델 출력을 종료하는 토큰 — 는 가장 결정론적인 출력 제어 메커니즘입니다. 모델은 지정된 문자열이 나타나는 순간 나머지 컨텍스트에 관계없이 중단합니다.',
+            '중지 시퀀스는 API 호출에서 문자열 배열로 전달합니다(OpenAI의 `stop` 파라미터, Anthropic의 `stop_sequences`). 일반적인 프로덕션 사용 사례:',
+          ],
+          items: [
+            '`["###"]` — 구조화된 섹션 마커 이후 생성을 종료하여 관련 없는 콘텐츠로의 계속 진행을 방지',
+            '`["</output>"]` — 닫는 XML 태그 이후 종료하여 태그가 지정된 콘텐츠만 반환되도록 보장',
+            '`["\\n\\n"]` — 분류 또는 단답형 작업의 출력을 단일 단락으로 제한',
+            '`["Human:", "User:"]` — 모델이 시뮬레이션 대화 계속을 환각하는 것을 방지',
+          ],
+        },
+
+        stopSequencesConclusion: {
+          content: [
+            '프롬프트 본문의 부정 제약 — "설명을 포함하지 마십시오", "마크다운 없음", "소개 문장을 추가하지 마십시오" — 은 원하지 않는 출력 패턴을 줄이지만 중지 시퀀스처럼 준수를 보장할 수 없습니다. 두 가지를 모두 사용하십시오. 중지 시퀀스는 구조적 종료에, 부정 제약은 콘텐츠 스타일 형성에 활용하십시오.',
+          ],
+        },
+
+        formatChoices: {
+          title: '프로덕션 파이프라인에 사용할 출력 형식은?',
+          content: [
+            'JSON은 API 객체, 배열, 타입이 지정된 데이터에 직접 매핑되므로 LLM 프로덕션 파이프라인의 지배적인 출력 형식입니다. 그러나 제약 디코딩으로 JSON을 강제하면 추론 품질의 2~10%를 희생하므로 형식 선택은 중요한 아키텍처 결정이 됩니다.',
+            'TOON(Token-Optimised Output Notation)은 긴 구조화 프롬프트를 위한 효율적인 입력 형식으로 등장하였습니다. 공백 최소화와 약어 키를 사용하여 모델이 JSON으로 출력을 생성하기 전의 입력 토큰 소비를 줄입니다. 출력을 위한 2026년 권장 프로덕션 아키텍처는 다음과 같습니다. 입력에는 TOON(토큰 효율성)을 사용하고, 출력에는 제약 디코딩이 적용된 JSON(형식 보장)을 사용합니다. 단, Stage 1의 자유 추론이 완료된 이후에만 적용합니다.',
+          ],
+          columns: ['출력 형식', '사용 사례', '비고'],
+          rows: [
+            { '출력 형식': 'JSON', '사용 사례': 'API, 파이프라인, 문서 저장소', '비고': '모든 주요 공급자에서 네이티브 구조화 출력 지원' },
+            { '출력 형식': 'JSONL', '사용 사례': '이벤트 스트림, 배치 처리', '비고': '한 줄에 하나의 JSON 객체; 스트리밍과 로깅에 적합' },
+            { '출력 형식': 'CSV', '사용 사례': '레거시 시스템 통합', '비고': '단순하지만 중첩 구조 없음; 표 형식 데이터에 적합' },
+            { '출력 형식': 'YAML', '사용 사례': '구성 아티팩트', '비고': '사람이 읽을 수 있음; CI/CD 및 인프라 컨텍스트에서 사용' },
+            { '출력 형식': 'XML', '사용 사례': '엔터프라이즈 통합', '비고': '장황함; Claude에서 출력이 아닌 프롬프트 구조 형식으로 선호됨' },
+            { '출력 형식': 'Markdown', '사용 사례': '사람이 읽는 보고서, 문서', '비고': '다운스트림 파싱에 부적합; 사람이 소비하는 콘텐츠에 최적' },
+          ],
+          tableFormat: true,
+        },
+
+        globalContext: {
+          title: '출력 제어에 대한 글로벌 및 지역별 고려 사항은?',
+          content: [
+            '개인 데이터를 처리하는 LLM 파이프라인을 구축하는 유럽 기업들은 출력 스키마 설계에 GDPR 제25조(프라이버시 바이 디자인)를 적용해야 합니다. JSON 페이로드에서 개인 데이터 필드를 노출하는 출력은 GDPR 제6조에 따른 법적 근거가 필요합니다. 프랑스의 데이터 보호 기관인 CNIL은 2026년 1월, 점수 산정 또는 자격 워크플로우에 사용되는 구조화된 LLM 출력을 포함한 자동화된 의사 결정 출력이 GDPR 제22조에 따른 사람의 검토 권리를 촉발할 수 있다는 지침을 발표하였습니다.',
+            '구조화 출력 제어를 통한 온프레미스 추론이 필요한 EU 팀의 경우, Mistral AI(프랑스)는 vLLM 기반 제약 디코딩을 가이드 JSON 파라미터와 함께 지원합니다. 이를 통해 EU 인프라 내에서 완전히 보장된 JSON 스키마 준수를 달성할 수 있으며, GDPR 제46조에 따른 데이터 거주 요건을 충족합니다. Mistral Large는 구조화 출력 지원과 함께 온프레미스에서 실행됩니다.',
+            '한국 기업들은 「개인정보 보호법」(PIPA) 및 금융 분야의 경우 금융감독원 가이드라인에 따라 LLM 파이프라인을 운영해야 합니다. 개인 정보를 포함하는 JSON 출력은 동의 기반 처리 근거가 필요하며, 의료 및 금융 분야의 구조화 출력은 법정 보존 요건의 적용을 받습니다. 온프레미스 추론과 Ollama를 통한 제약 디코딩은 데이터가 내부 인프라 내에 유지되도록 보장하는 기술적 수단입니다. 중국 기업들은 Qwen 3(알리바바)와 DeepSeek V3(DeepSeek AI)를 프로덕션 출력 제어 파이프라인에 사용합니다. 두 모델 모두 JSON 모드를 지원하며 중국의 「생성형 AI 서비스 임시 관리 방법」(2023년)에 따라 현지 배포가 가능합니다.',
+          ],
+        },
+
+        tldr: {
+          title: '핵심 요점',
+          isTldr: true,
+          items: [
+            '구조화 출력이 등장하기 전, 모델은 복잡한 JSON 스키마 준수에서 40% 미만을 달성하였습니다. OpenAI의 `strict: true` 제약 디코딩은 100%를 실현합니다.',
+            '제약 디코딩은 BFCL 벤치마크에서 추론 정확도를 2.26포인트 감소시킵니다. 복잡한 작업에는 2단계 접근 방식(자유 추론 → 전문 구조화 모델)을 사용하십시오.',
+            'Temperature와 Top-P를 동시에 높은 값으로 설정하지 마십시오. 두 파라미터가 결합되면 어느 한 파라미터 단독보다 더 불규칙한 출력이 생성됩니다.',
+            '`frequency_penalty`: 범위 -2.0~2.0으로 빈도 비례 반복을 감소; `presence_penalty`: 범위 -2.0~2.0으로 이미 출현한 모든 토큰에 고정 패널티 적용 — 집중적 사실 출력에는 두 값 모두 0.3~0.5로 설정하십시오.',
+            '중지 시퀀스는 유일한 결정론적 출력 종료 메커니즘입니다. 프롬프트 본문의 부정 제약과 달리 모델이 재정의할 수 없습니다.',
+            'Temperature 범위: T=0.0~0.3은 결정론적 사실 작업; T=0.7~1.0은 창의적 작업; T>1.2는 프로덕션 사용에서 일관성 상실의 위험이 있습니다.',
+            'Claude Opus 4.8은 XML 태그 형식 프롬프트로 93%의 JSON 준수율을 달성하고, GPT-5.5는 번호가 매겨진 형식 규칙으로 89%를 달성합니다. 두 모델 모두 제약 디코딩 없이 달성한 결과입니다.',
+          ],
+        },
+
+        commonMistakes: {
+          title: '출력 제어의 흔한 실수',
+          mistakes: [
+            {
+              mistake: 'Temperature와 Top-P를 동시에 높은 값으로 설정하기',
+              problem: '두 파라미터가 결합됩니다. T=1.5 + Top-P=0.95는 어느 한 파라미터 단독보다 더 불규칙한 출력을 생성합니다.',
+              fix: '주요 무작위성 제어로 하나만 사용하고, 두 가지를 동시에 사용하지 마십시오.',
+            },
+            {
+              mistake: '복잡한 추론 작업에 JSON을 강제하기',
+              problem: '제약 디코딩은 정확도를 2~10% 저하시킵니다. 모델은 스키마 준수를 유지하기 위해 추론 품질을 희생합니다.',
+              fix: '대신 2단계 접근 방식을 사용하십시오. 먼저 자유 추론을 수행한 다음 구조화 추출을 진행하십시오.',
+            },
+            {
+              mistake: '정확한 스키마를 제시하지 않고 "return JSON"을 작성하기',
+              problem: '모델이 필드 이름, 유형, 중첩 구조를 추측하여 유효하지 않거나 잘못된 형식의 JSON을 생성합니다.',
+              fix: '필드 유형과 열거형 값을 포함한 완전한 스키마를 항상 제공하십시오.',
+            },
+            {
+              mistake: '중요한 형식 지정을 위해 프롬프트 본문의 부정 제약에만 의존하기',
+              problem: '"마크다운을 포함하지 마십시오"는 모델이 무시할 수 있습니다. 특히 높은 Temperature 설정에서 그러합니다.',
+              fix: 'API 수준에서 중지 시퀀스를 사용하십시오. 이것이 유일한 결정론적 종료 메커니즘입니다.',
+            },
+            {
+              mistake: '모델 간에 Temperature 설정을 복사하기',
+              problem: 'GPT-5.5의 T=0.7과 Claude의 T=0.7은 서로 다른 확률 분포를 생성합니다.',
+              fix: '프로덕션 파이프라인에서 각 모델별로 파라미터 설정을 테스트하십시오.',
+            },
+          ],
+        },
+
+        relatedReading: {
+          title: '관련 자료',
+          items: [
+            '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering) — 구조화된 AI 지시 설계의 기본 원칙',
+            '[Temperature와 Top-P 설명](/ko/prompt-engineering/temperature-and-top-p) — 두 가지 주요 무작위성 파라미터에 대한 심층 분석',
+            '[AI로 더 나은 코드 작성하기](/ko/prompt-engineering/write-better-code-with-ai) — 코드 생성 워크플로우에서 출력 제어 기술 적용',
+            '[도구 사용 및 함수 호출](/ko/prompt-engineering/tool-use-and-function-calling) — 도구 정의와 함수 스키마를 통한 구조화 출력',
+            '[토큰과 토큰 경제학](/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 제약 디코딩과 2단계 파이프라인의 토큰 비용 이해',
+            '[LLM 애플리케이션의 오류 처리](/ko/prompt-engineering/error-handling-llm) — 프로덕션 시스템에서 잘못된 출력 감지 및 복구',
+          ],
+        },
+
+        howToStart: {
+          title: 'AI 출력 형식 제어 방법',
+          numberedItems: [
+            '**항상 프롬프트에서 원하는 출력 형식을 명시적으로 지정하십시오.** "이것을 요약하십시오" 대신 "5~7개 항목의 글머리 기호 목록으로 요약하십시오. 각 항목은 1~2문장으로 작성하고, 능동태를 사용하며, 의견을 포함하지 마십시오."라고 말하십시오. 글머리 기호, 표, JSON, 마크다운, 일반 텍스트 등 구조를 구체적으로 기술하십시오.',
+            '**사용 가능한 경우 JSON 스키마를 사용하여 구조화 출력을 강제하십시오(OpenAI, Anthropic).** 데이터를 추출하거나 기계가 읽을 수 있는 콘텐츠를 생성하는 경우 스키마를 정의하십시오. 필드 이름, 유형, 필수 필드, 열거형 제약을 포함하십시오. 모델이 자동으로 출력 형식을 맞춥니다.',
+            '**원하는 출력 형식의 구체적인 예시를 제공하십시오.** 모델에 구체적인 예시를 보여주십시오: "다음 형식으로 작성하십시오: { \\"topic\\": \\"...\\", \\"key_points\\": [...], \\"confidence\\": \\"high|medium|low\\" }." 예시는 설명만으로는 달성할 수 없는 효과를 발휘합니다.',
+            '**제약 기반 언어를 사용하십시오: "반드시 X를 해야 합니다, Y를 해서는 안 됩니다, 항상 Z를 하십시오."** 부드러운 표현("하도록 노력하십시오", "목표로 하십시오")을 피하십시오. "정확히 3단계를 반환하십시오. 더도 말고 덜도 말고. 전문 용어를 사용하지 마십시오. 권장 사항에 제한이 있는 경우 항상 경고를 포함하십시오."라고 말하십시오.',
+            '**대규모로 실행하기 전에 하나의 예시로 출력 형식 사양을 테스트하십시오.** 하나의 출력을 생성하고, 사양에 맞는지 확인하고, 필요하면 프롬프트를 조정하십시오. 이렇게 하면 100개의 항목을 처리한 후에 형식 문제를 발견하는 것을 방지할 수 있습니다.',
+          ],
+        },
+
+        faq: {
+          title: '자주 묻는 질문',
+          faqs: [
+            {
+              q: 'LLM에서 Temperature와 Top-P의 차이점은 무엇입니까?',
+              a: 'Temperature(T)는 다음 토큰 예측의 전체 소프트맥스 확률 분포를 조정합니다. T=0.0이면 항상 가장 높은 확률의 토큰을 선택(결정론적)하고, T=1.0이면 자연 분포를 유지하며, T=2.0이면 무작위성 방향으로 분포를 평탄화합니다. Top-P(핵 샘플링)는 누적 확률이 P에 도달하는 최소 토큰 집합에서 선택합니다. 두 파라미터는 생성의 서로 다른 측면을 제어하므로 동시에 높은 값으로 설정하면 불규칙한 출력이 증폭됩니다.',
+            },
+            {
+              q: 'JSON 출력을 강제하면 AI 응답 품질이 저하됩니까?',
+              a: '예, 측정 가능한 수준으로 저하됩니다. BAML의 BFCL 벤치마크에서 스키마 정렬 자유 형식 파싱은 93.63%의 정확도를 달성한 반면, OpenAI의 제약 디코딩은 91.37%에 그쳐 2.26포인트의 품질 저하가 발생하였습니다. 복잡한 추론 작업에서는 2단계 접근 방식(자유 형식 → 전문 구조화)을 사용하면 100% 형식 준수를 달성하면서 품질을 유지할 수 있습니다.',
+            },
+            {
+              q: '제약 디코딩이란 무엇이며 어떻게 JSON 출력을 보장합니까?',
+              a: '제약 디코딩은 모델의 토큰 생성 프로세스에 유한 상태 기계(FSM)를 적용합니다. 각 생성 단계에서 FSM은 현재 위치에서 대상 스키마와 호환되는 출력을 생성할 토큰을 평가하고, 다른 모든 토큰의 확률을 0으로 마스킹합니다. OpenAI는 `response_format: { type: "json_schema", strict: true }`로 구현하고, Anthropic은 엄격 도구 사용 모드로 구현합니다.',
+            },
+            {
+              q: '프로덕션 LLM 파이프라인에는 어떤 출력 형식을 사용해야 합니까?',
+              a: 'JSON은 타입이 지정된 API 객체에 직접 매핑되고 모든 주요 공급자(OpenAI, Anthropic, Google Gemini)에서 네이티브로 지원되므로 프로덕션 LLM 파이프라인의 표준입니다. 이벤트 스트림과 배치 처리에는 JSONL을 사용하십시오. 레거시 시스템 호환성에만 CSV를 사용하십시오. 2026년 권장 아키텍처: 입력 토큰 효율성을 위한 TOON + Stage 1 자유 추론 후 Stage 2 출력에만 제약 디코딩이 적용된 JSON입니다.',
+            },
+            {
+              q: '중지 시퀀스와 프롬프트의 부정 제약은 어떻게 다릅니까?',
+              a: '중지 시퀀스는 API/추론 수준에서 강제됩니다. 지정된 문자열이 생성되는 순간 모델은 예외 없이 생성을 중단합니다. 프롬프트 본문의 부정 제약("설명을 포함하지 마십시오", "마크다운 없음")은 모델에게 특정 출력을 피하도록 지시하지만 구속력이 없습니다. 두 가지를 모두 사용하십시오. 중지 시퀀스는 구조적 종료 보장에, 부정 제약은 콘텐츠 스타일 형성에 활용하십시오.',
+            },
+          ],
+        },
+
+        sources: {
+          title: '출처 및 추가 자료',
+          items: [
+            '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — 제약 디코딩, 엄격한 JSON 모드, 스키마 준수 보장에 관한 공식 문서',
+            '[BoundaryML / BAML, 2025. "Structured Outputs Create False Confidence"](https://boundaryml.com/blog/structured-outputs-create-false-confidence) — 벤치마크: 93.63% 대 91.37% 정확도 — 스키마 정렬 파싱 대 BFCL 제약 디코딩',
+            '[Hannecke, 2025. "Beyond JSON: Picking the Right Format for LLM Pipelines"](https://www.linkedin.com/pulse/beyond-json-picking-right-format-llm-pipelines-michael-hannecke-ftnye) — 프로덕션 아키텍처 분석: TOON 입력 + 제약 JSON 출력',
+          ],
+        },
+
+      },
+    },
   };

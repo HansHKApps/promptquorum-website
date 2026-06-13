@@ -3263,4 +3263,410 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Frameworks',
+      title: 'RISEN 프레임워크: Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
+      intro: 'RISEN 프레임워크는 구조화된 수정 사이클을 통해 AI 출력을 개선하기 위한 5단계 반복 구조입니다. 첫 번째 초안을 그대로 수용하거나 처음부터 다시 작성하는 대신, RISEN을 사용하여 체계적으로 다듬고, 감사하고, 평가하며, 다음 개선 사항을 계획합니다. 각 단계는 고유한 목적을 가지고 있습니다. Refine은 초안을 개선하고, Inspect는 모든 변경 사항을 기록하며, Summarize는 새 버전이 무엇을 하는지 설명하고, Evaluate는 기준에 따라 점수를 매기며, Next Steps는 추가 편집을 권장합니다. RISEN은 "더 좋게 만들어라"라는 막연한 요청을 투명하고 반복 가능한 워크플로로 전환합니다.',
+      leadAnswerBlock: '**RISEN은 5단계 반복 개선 프레임워크입니다. Refine은 초안을 개선하고, Inspect는 정당성을 포함한 모든 변경 사항을 나열하며, Summarize는 새 버전을 설명하고, Evaluate는 기준에 따라 점수(1-5 척도)를 매기며, Next Steps는 다음 사이클을 위한 3가지 집중적인 개선 사항을 권장합니다. 이미 초안이 있고 감사 추적을 통해 통제된 개선을 원할 때 RISEN을 사용하십시오. Inspect 단계는 모델이 변경 사항을 문서화하도록 강제하여 수정 사항을 추적 가능하게 만드는 독특한 특징입니다. 2026년에 RISEN은 PromptQuorum에 멀티 모델 디스패치 옵션으로 내장되어, GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro에서 동일한 RISEN 사이클을 동시에 테스트하여 개선 방식을 비교할 수 있습니다.**',
+      publishDate: '2026-03-24',
+      dateModified: '2026-05-04',
+      lastFactChecked: '2026-05-04 — RISEN 프레임워크 원본 논문 (Yao et al., 2023), PromptQuorum 네이티브 RISEN 구현',
+      readTime: '13분 읽기',
+      seoTitle: 'RISEN: 반복적 프롬프트 개선을 위한 5단계 프레임워크 (2026)',
+      metaDescription: 'RISEN의 Narrowing 필드는 복잡한 작업에서 다른 프레임워크보다 뛰어난 이유입니다 — AI가 궤도를 유지하도록 범위를 제한합니다. 템플릿과 엔터프라이즈 예제.',
+      educationalLevel: 'Intermediate',
+      audience: '프롬프트 워크플로를 구축하는 개발자, 콘텐츠를 반복 개선하는 제품팀, 다단계 검토를 수행하는 팀, 연구자',
+      primaryTerm: 'RISEN 프레임워크',
+      aboutTopics: ['RISEN Framework', 'Iterative Prompting', 'Prompt Refinement', 'Multi-Step Workflows'],
+      next_refresh_due: '2026-09-24',
+
+      quickFacts: [
+        'RISEN = Refine, Inspect, Summarize, Evaluate, Next Steps — 통제된 출력 개선을 위한 5단계 반복 루프',
+        '이미 초안, 문서 또는 계획이 있을 때 RISEN을 사용하십시오. 첫 번째 초안 생성에는 사용하지 마십시오 — 그 단계에는 CO-STAR 또는 CRAFT와 함께 사용하십시오.',
+        'Inspect 단계는 독특합니다. 모델이 모든 구체적인 변경 사항을 나열하고 각각을 정당화하도록 강제하여 감사 추적을 생성합니다. 이러한 내장된 책임성을 가진 프레임워크는 없습니다.',
+        '일반적인 워크플로: 거친 초안에서 제품 품질에 도달하기 위해 2-4 RISEN 사이클. 각 사이클은 3가지 출력을 생성합니다: 개선된 콘텐츠, 변경 로그(Inspect), 행동 계획(Next Steps).',
+        'GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama 또는 LM Studio를 통한 로컬 모델 등 모든 모델에서 작동합니다. 더 큰 모델(13B+)이 다단계 구조를 더 잘 처리합니다. 7B 모델은 단계를 분리해야 할 수 있습니다.',
+        'RISEN + CO-STAR 조합 패턴: 첫 번째 초안 생성에는 CO-STAR를 사용하고, 반복 개선에는 RISEN으로 전환하십시오. "생성"과 "개선"을 분리합니다 — 근본적으로 다른 두 가지 작업입니다.',
+      ],
+
+      toc: [
+        { anchor: 'key-takeaways', label: '핵심 요점' },
+        { anchor: 'what-is-risen', label: 'RISEN 프레임워크란 무엇입니까?' },
+        { anchor: 'five-components', label: '5가지 RISEN 구성 요소' },
+        { anchor: 'why-useful', label: 'RISEN이 유용한 이유' },
+        { anchor: 'when-to-use', label: 'RISEN을 사용할 때' },
+        { anchor: 'comparison-table', label: '비교표 (CoT vs 단일 패스 vs RISEN)' },
+        { anchor: 'bad-vs-good', label: '나쁜 vs 좋은 RISEN 프롬프트 예제' },
+        { anchor: 'how-to-write', label: 'RISEN 프롬프트 작성 방법' },
+        { anchor: 'common-mistakes', label: 'RISEN 사용 시 일반적인 실수' },
+        { anchor: 'risen-in-promptquorum', label: 'PromptQuorum의 RISEN' },
+        { anchor: 'combining-frameworks', label: 'RISEN과 다른 프레임워크 결합' },
+        { anchor: 'faq', label: '자주 묻는 질문' },
+        { anchor: 'related-reading', label: '관련 읽기' },
+        { anchor: 'sources', label: '출처' },
+      ],
+
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: '핵심 요점',
+          id: 'key-takeaways',
+          items: [
+            'RISEN은 5단계 반복 루프입니다 — Refine, Inspect, Summarize, Evaluate, Next Steps — "더 좋게 만들어라"를 감사 추적이 있는 구조화되고 반복 가능한 개선 워크플로로 전환합니다.',
+            '반복 개선(기존 초안 개선)을 위해 RISEN을 사용하십시오. 첫 번째 초안 생성에는 사용하지 마십시오 — 그 단계에는 CO-STAR 또는 CRAFT와 결합하십시오.',
+            'Inspect 단계는 독특합니다: 모델이 모든 구체적인 변경 사항을 나열하고 정당화하도록 강제합니다. 이것은 감사 추적을 생성합니다 — 무엇이 왜 변경되었는지 정확히 알 수 있습니다.',
+            '일반적인 워크플로: 제품 품질에 도달하기 위해 2-4 RISEN 사이클. 각 사이클은 개선된 콘텐츠, 변경 로그, 다음 반복에 대한 권장 사항을 생성합니다.',
+            'RISEN은 모든 모델에서 작동합니다: GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama, LM Studio. 더 큰 모델(13B+)이 다단계 구조를 더 잘 처리합니다.',
+            'PromptQuorum에서 RISEN은 내장되어 있습니다. 동일한 RISEN 사이클을 여러 모델에 동시에 보내고 각 모델이 어떻게 다르게 개선하는지 비교하십시오.',
+            'PromptQuorum을 사용하여 모델 전반에 걸쳐 RISEN 패턴을 테스트하십시오 — 어떤 모델의 개선 방식이 귀하의 목표에 가장 잘 맞는지 확인하십시오.',
+          ],
+        },
+
+        whatIsRISEN: {
+          title: 'RISEN 프레임워크란 무엇입니까?',
+          id: 'what-is-risen',
+          snippets: [
+            { type: 'in-one-sentence', text: 'RISEN은 5단계 반복 루프입니다 — Refine, Inspect, Summarize, Evaluate, Next Steps — "더 좋게 만들어라"를 감사 추적이 있는 구조화되고 반복 가능한 개선 워크플로로 전환합니다.' },
+            { type: 'in-plain-terms', text: '"이것을 개선하라"고 말하고 기대하는 대신, AI에게 수정하고(Refine), 변경 사항을 나열하고(Inspect), 새 버전이 무엇을 하는지 설명하고(Summarize), 자체 평가하고(Evaluate), 다음에 무엇을 수정할지 제안하도록(Next Steps) 지시합니다. 완료될 때까지 반복합니다.' },
+          ],
+          content: [
+            '**RISEN 프레임워크는 여러 개선 사이클을 통해 기존 초안, 분석 및 계획을 개선하기 위해 설계된 반복적 프롬프트 패턴입니다.** 각 프롬프트를 일회성 작업으로 처리하는 대신, GPT-5.5, Claude 4.6 Sonnet 또는 Gemini 2.5 Pro와 같은 모델을 구조화되고 반복 가능한 개선 루프를 통해 안내합니다. 이를 통해 워크플로가 무작위 시행착오보다는 지속적인 편집처럼 됩니다.',
+            'RISEN은 블로그 초안, 전략 노트, 코드 스니펫 또는 분석과 같은 첫 번째 버전이 이미 있고, 모델이 통제되고 감사 가능한 방식으로 개선하기를 원할 때 특히 유용합니다. 각 RISEN 단계는 고유한 목적을 가지고 있어 수정 사항을 집중적이고 추적 가능하게 유지합니다.',
+            '프레임워크의 이름은 다섯 단계에서 유래합니다: **R**efine(초안 개선), **I**nspect(변경 사항 확인), **S**ummarize(변경된 내용 설명), **E**valuate(기준에 따른 점수 매기기), **N**ext steps(개선 사항 권장).',
+          ],
+        },
+
+        fiveComponents: {
+          title: '5가지 RISEN 구성 요소',
+          id: 'five-components',
+          content: [
+            '**강력한 RISEN 프롬프트는 모델이 각각 고유한 출력을 가진 5단계를 통해 이동하도록 명시적으로 요청합니다.** 원하는 제어 및 피드백 양에 따라 이러한 단계를 하나의 긴 프롬프트로 결합하거나 순차적인 프롬프트로 분리할 수 있습니다.',
+          ],
+          items: [
+            '**Refine:** 목표(명확성, 구조, 정확성, 간결성, 청중 정렬, 어조 등)에 따라 기존 초안을 개선합니다. 모델은 원본 자료를 다시 쓰거나 향상시킵니다.',
+            '**Inspect:** 정확히 무엇이 다시 작성되었는지, 어떤 세부 사항이 추가되었는지, 어떤 문제가 수정되었는지 — 구체적으로 이루어진 변경 사항을 확인합니다. 이것이 감사 추적을 생성합니다. 정당성이 있는 5-7개의 구체적인 편집을 요구하십시오.',
+            '**Summarize:** 새 버전이 이제 무엇을 말하거나 하는지에 대한 간결한 설명을 제공합니다 — 콘텐츠의 반복이 아니라 초점과 강조에 대한 메타 수준의 설명입니다.',
+            '**Evaluate:** 명시적 기준(어조, 정확성, 완전성, 청중 정렬, 명확성)에 대한 결과를 비판합니다. 1-5 수치 척도를 사용하고 기준당 한 문장의 정당성을 요구합니다.',
+            '**Next steps:** 다음 반복을 위한 3가지 집중적인 개선 사항을 권장하여 항상 추가 개선을 위한 명확한 방향을 가질 수 있도록 합니다.',
+          ],
+        },
+
+        whyUseful: {
+          title: 'RISEN이 유용한 이유',
+          id: 'why-useful',
+          content: [
+            '**RISEN 프레임워크는 "더 좋게 만들어라"를 블랙박스 대신 투명하고 반복 가능한 워크플로로 전환하고 싶을 때마다 유용합니다.** 모델이 생성할 뿐만 아니라 자신의 작업을 분석하고 비판하도록 장려합니다.',
+            '실제적인 이점은 다음과 같습니다:',
+          ],
+          items: [
+            '버전 간에 무엇이 변경되었는지에 대한 명확한 가시성 — Inspect 단계가 완전한 문서화를 강제합니다.',
+            '약점, 격차 및 기회를 드러내는 구조화된 자기 비판.',
+            '다음에 무엇을 시도해야 할지 막막해하지 않도록 다음 반복을 위한 내장된 로드맵.',
+            '팀과 공유하고 표준화할 수 있는 반복 가능한 프로세스.',
+            '규정 준수 또는 지식 관리를 위한 감사 추적 — 모든 수정을 정당화할 수 있습니다.',
+          ],
+        },
+
+        badVsGood: {
+          title: '나쁜 vs 좋은 RISEN 프롬프트 예제',
+          id: 'bad-vs-good',
+          content: [
+            '**비구조적인 수정 요청과 RISEN 기반 요청의 차이는 동일한 초안에 두 가지를 모두 적용할 때 명확해집니다.** 다음은 제품 설명을 개선하기 위한 실제 예제입니다.',
+            '**[나쁜 프롬프트]**',
+            '"이 제품 설명을 더 좋게 만들어라."',
+            '**[좋은 RISEN 프롬프트]**',
+            '"당신은 제품 마케팅 편집자입니다. 제품 설명 초안을 드리겠습니다. 다음과 같이 RISEN 프로세스를 사용하십시오: **Refine:** 모든 사실적 세부 사항을 유지하면서 명확성과 간결성을 위해 설명을 다시 작성하십시오. 120-160 단어를 목표로 하십시오. **Inspect:** 당신이 만든 5-7개의 구체적인 편집을 나열하십시오(예: \'혜택 X 명확화\', \'반복된 문장 Y 제거\', \'목표 청중 추가\'). **Summarize:** 2-3 문장으로 업데이트된 설명이 이제 무엇을 강조하고 초점이 어떻게 이동했는지 설명하십시오. **Evaluate:** 명확성(1-5), 설득력(1-5), B2B 청중 정렬(1-5)에 대해 1-5 척도로 새 설명을 평가하십시오. 각 평가를 한 문장으로 정당화하십시오. **Next steps:** 이 카피를 더 개선하기 위해 향후 프롬프트에서 요청할 수 있는 3가지 집중적인 편집을 제안하십시오. 초안: [여기에 초안을 붙여넣으십시오]"',
+            'RISEN 버전은 막연한 요청을 구조화된 미니 프로세스로 전환하여 개선된 설명뿐만 아니라 완전한 감사 추적과 다음 사이클에 대한 계획을 생성합니다.',
+          ],
+        },
+
+        whenToUse: {
+          title: 'RISEN을 사용할 때',
+          id: 'when-to-use',
+          content: [
+            '**이미 자료가 있고 각 변경 사항을 이해하는 것이 중요한 반복 개선 작업에 RISEN 프레임워크를 사용하십시오.** RISEN은 첫 번째 초안 생성이 아닌 개선을 위한 것입니다.',
+          ],
+          items: [
+            '여러 라운드에 걸쳐 블로그 게시물, 문서 또는 도움말 센터 기사 다듬기.',
+            '영업 데크, 피치 스크립트 및 경영진 요약 다듬기.',
+            '프롬프트 자체 검토 및 개선, 특히 프로덕션에서 사용되는 복잡한 프롬프트.',
+            '긴 분석을 반복적으로 압축하여 더 명확하고 실행 가능하게 만들기.',
+            '여러 사람이 변경된 내용을 볼 필요가 있는 팀 콘텐츠 검토 워크플로.',
+            '코드 리뷰 및 문서 개선.',
+          ],
+        },
+
+        comparisonTable: {
+          title: '비교표: CoT vs 단일 패스 vs RISEN',
+          id: 'comparison-table',
+          tableFormat: true,
+          columns: ['차원', 'Chain-of-Thought (CoT)', '단일 패스 프롬프트', 'RISEN 프레임워크'],
+          rows: [
+            {
+              '차원': '구조',
+              'Chain-of-Thought (CoT)': '선형 단일 경로 ("단계별로 생각하라")',
+              '단일 패스 프롬프트': '단일 생성 시도',
+              'RISEN 프레임워크': '개선 사이클이 있는 반복적 5단계 루프'
+            },
+            {
+              '차원': '핵심 동작',
+              'Chain-of-Thought (CoT)': '모델이 추론 후 답변 작성',
+              '단일 패스 프롬프트': '모델이 출력 생성',
+              'RISEN 프레임워크': 'Refine → Inspect → Summarize → Evaluate → Next Steps → 반복'
+            },
+            {
+              '차원': '감사 추적 / 변경 추적',
+              'Chain-of-Thought (CoT)': '없음 — 추론은 표시되지만 수정 없음',
+              '단일 패스 프롬프트': '없음 — 출력이 최종',
+              'RISEN 프레임워크': '있음 — Inspect 단계가 모든 변경 사항을 문서화'
+            },
+            {
+              '차원': '적합한 용도',
+              'Chain-of-Thought (CoT)': '수학, 논리, 설명 (단일 정답)',
+              '단일 패스 프롬프트': '빠른 생성, 간단한 작업',
+              'RISEN 프레임워크': '반복 개선, 복잡한 문서, 팀 리뷰'
+            },
+            {
+              '차원': '기준 대비 토큰 비용',
+              'Chain-of-Thought (CoT)': '~1.5-2× (추론 추가)',
+              '단일 패스 프롬프트': '기준 (1×)',
+              'RISEN 프레임워크': '가변 (깊이에 따라 사이클당 2-5×)'
+            },
+            {
+              '차원': '여러 프롬프트 필요?',
+              'Chain-of-Thought (CoT)': '없음 — 하나의 프롬프트에서 추론 + 답변',
+              '단일 패스 프롬프트': '없음',
+              'RISEN 프레임워크': '하나의 긴 프롬프트 또는 5개의 순차적 프롬프트 가능 (선택)'
+            },
+            {
+              '차원': '내장 모델 비교',
+              'Chain-of-Thought (CoT)': '없음',
+              '단일 패스 프롬프트': '없음',
+              'RISEN 프레임워크': '있음 (PromptQuorum을 통해 GPT, Claude, Gemini에 동일한 RISEN 사이클을 병렬로 전송)'
+            },
+          ],
+        },
+
+        howToWrite: {
+          title: 'RISEN 프롬프트 작성 방법',
+          id: 'how-to-write',
+          numberedItems: [
+            '**문제와 예상 결과물을 명시하십시오.** "당신은 [역할]입니다. 당신의 작업은 RISEN 프로세스를 사용하여 [자료 유형]을 개선하는 것입니다."',
+            '**Refine 목표를 명시적으로 정의하십시오.** "[특정 기준: 명확성, 정확성, 간결성, 어조, 청중 정렬]을 위해 개선하십시오. [길이 또는 형식]을 목표로 하십시오."',
+            '**구체적인 Inspect 출력을 요구하십시오.** "5-7개의 구체적인 편집을 나열하십시오. 각각에 대해 무엇을 변경했고 왜 변경했는지 명시하십시오."',
+            '**Evaluate 기준을 지정하십시오.** "[3-5개의 명명된 차원, 예: 명확성, 정확성, 설득력] 1-5 척도로 평가하십시오. 한 문장으로 각 평가를 정당화하십시오."',
+            '**실행 가능한 Next Steps를 요청하십시오.** "다음 반복을 위한 3가지 집중적인 개선 사항을 제안하십시오."',
+          ],
+        },
+
+        calloutBoxes: {
+          title: '주요 콜아웃',
+          callouts: [
+            {
+              type: 'pro-tip',
+              label: 'Inspect 단계는 비밀 무기입니다',
+              text: 'Inspect 단계는 RISEN을 다른 프레임워크와 차별화하는 요소입니다. 대부분의 프레임워크는 출력을 생성합니다. RISEN은 모델이 모든 구체적인 변경 사항을 문서화하도록 강제하여 영구적인 감사 추적을 생성합니다. 이러한 내장된 책임성을 가진 다른 프레임워크는 없습니다 — 이것이 RISEN이 추적 가능성이 중요한 규제 산업, 학술 작업 및 팀 협업에 필수적인 이유입니다.',
+            },
+            {
+              type: 'key-point',
+              label: '"더 좋게 만들어라"가 실패하는 이유',
+              text: '"더 좋게 만들어라" 또는 "이것을 개선하라"와 같은 막연한 개선 요청은 모델에 아무런 제약을 주지 않습니다. 명시적인 기준과 구조 없이는 모델이 방황하며 일관성 없는 결과를 생성합니다. RISEN은 각 단계에 특정하고 명명된 출력과 제약이 있기 때문에 효과적입니다. 구체성이 품질을 높입니다.',
+            },
+            {
+              type: 'warning',
+              label: 'RISEN을 사용하지 말아야 할 때',
+              text: '첫 번째 초안 생성에 RISEN을 사용하지 마십시오. RISEN은 개선할 기존 자료가 필요합니다. 처음부터 무언가를 생성해야 하는 경우, 먼저 CO-STAR, CRAFT 또는 Single Step을 사용하십시오. 그런 다음 반복 개선을 위해 RISEN으로 전환하십시오. 존재하지 않는 자료에 RISEN을 사용하면 토큰이 낭비되고 무의미한 Inspect 출력이 생성됩니다.',
+            },
+            {
+              type: 'pro-tip',
+              label: '두 프레임워크 워크플로',
+              text: '최적 패턴: 첫 번째 초안 생성에는 CO-STAR 또는 CRAFT를 사용하십시오. 그런 다음 반복 개선과 자기 비판을 위해 RISEN으로 전환하십시오. 이 분리는 모델이 두 가지 근본적으로 다른 인지 작업인 "생성"과 "개선"을 혼동하는 것을 방지합니다. 각 프레임워크는 특정 단계에서 탁월합니다.',
+            },
+          ],
+        },
+
+        commonMistakes: {
+          title: 'RISEN 사용 시 일반적인 실수',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: '첫 번째 초안 생성에 RISEN 사용',
+              problem: 'RISEN은 개선할 기존 자료가 필요합니다. 초안 없이 모델에게 "Refine"하도록 요청하면 처음부터 생성하며 Inspect 단계에는 보고할 의미 있는 내용이 없습니다.',
+              fix: '첫 번째 초안에는 CO-STAR, CRAFT 또는 Single Step을 사용하십시오. 개선할 자료가 생긴 후에만 RISEN으로 전환하십시오.',
+            },
+            {
+              mistake: 'Inspect 단계 건너뛰기',
+              problem: '많은 사용자가 Refine에서 Evaluate로 바로 건너뜁니다. Inspect 없이는 감사 추적을 잃게 됩니다 — 무엇이 변경되었는지 또는 왜 변경되었는지 알 수 없어 개선이 실제로 출력을 향상시켰는지 판단하기 불가능합니다.',
+              fix: '항상 Inspect를 포함하십시오. 모델이 간략한 정당성과 함께 5-7개의 구체적인 변경 사항을 나열하도록 요구하십시오. 이것이 감사 추적을 생성합니다.',
+            },
+            {
+              mistake: '모호한 Evaluate 기준',
+              problem: '"품질에 대해 이것을 평가하라"는 모델에게 점수를 매길 기준을 제공하지 않습니다. 명시적인 기준 없이는 자체 평가가 무의미합니다.',
+              fix: '수치 척도와 함께 3-5개의 명명된 기준을 지정하십시오. 예: "명확성(1-5), 정확성(1-5), 청중 정렬(1-5)에 대해 평가하십시오. 각각을 한 문장으로 정당화하십시오."',
+            },
+            {
+              mistake: '하나의 RISEN 사이클만 실행',
+              problem: '한 번의 패스로 제품 품질에 도달하는 경우는 드뭅니다. RISEN은 반복을 위해 설계되었습니다 — Next Steps 출력이 다음 Refine 단계에 직접 공급됩니다.',
+              fix: '2-4 RISEN 사이클을 계획하십시오. Evaluate 점수가 안정화되고 Next Steps 제안이 사소해질 때 중단하십시오.',
+            },
+            {
+              mistake: '모델 전반에 걸쳐 RISEN 출력을 비교하지 않음',
+              problem: '다른 모델은 다르게 개선합니다. Claude는 간결성을 선호하는 경향이 있고, GPT는 정교화를 선호하며, Gemini는 사용자 경험에 집중합니다. 한 모델에서만 RISEN을 실행하면 관점이 제한됩니다.',
+              fix: 'PromptQuorum을 사용하여 GPT-5.5, Claude 4.6 Sonnet 및 Gemini 2.5 Pro에서 동일한 RISEN 사이클을 실행하십시오. 어떤 모델의 개선이 귀하의 목표에 가장 잘 맞는지 비교하십시오.',
+            },
+          ],
+        },
+
+        risenInPromptQuorum: {
+          title: 'PromptQuorum의 RISEN',
+          id: 'risen-in-promptquorum',
+          content: [
+            '**PromptQuorum은 RISEN 프레임워크를 내장 프롬프트 구조 중 하나로 제공하는 멀티 모델 AI 디스패치 도구입니다.** RISEN 옵션을 선택하면 앱이 각 단계에 대한 레이블이 지정된 필드를 제공하고 이를 단일 재사용 가능한 지침으로 구성합니다.',
+            'PromptQuorum 내에서 RISEN을 통해 다음을 수행할 수 있습니다:',
+          ],
+          items: [
+            '기존 초안을 삽입하고 전체 메타 프롬프트를 직접 작성하지 않고도 사전 구조화된 "Refine–Inspect–Summarize–Evaluate–Next steps" 패턴을 적용합니다.',
+            '동일한 RISEN 기반 지침을 여러 모델 — GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro — 에 병렬로 보내고 각 모델이 초안을 어떻게 개선하고 비판하는지 비교합니다.',
+            '반복 워크플로(예: "블로그 초안 개선", "기술 문서 검토", "영업 데크 다듬기")를 위한 RISEN 템플릿을 저장하고 팀과 공유합니다.',
+            '모든 RISEN 사이클에 대한 완전한 수정 이력을 보여 개선 프로세스를 투명하고 감사 가능하게 만듭니다.',
+          ],
+        },
+
+        combiningFrameworks: {
+          title: 'RISEN과 다른 프레임워크 결합',
+          id: 'combining-frameworks',
+          content: [
+            '**RISEN을 수정 단계에 할당하고 워크플로의 앞 단계에서 생성 프레임워크를 사용하여 다른 프레임워크와 RISEN을 결합하십시오.** 실제적인 패턴은 다음과 같습니다:',
+            '이 분리는 모델이 근본적으로 다른 두 가지 인지 작업인 "생성"과 "개선"을 혼동하는 것을 방지합니다.',
+          ],
+          numberedItems: [
+            '첫 번째 초안을 만들기 위해 CO-STAR, CRAFT 또는 Single Step을 사용하십시오.',
+            '반복 개선, 자기 비판 및 계획을 위해 RISEN으로 전환하십시오.',
+            '최종 출력이 엄격한 스키마 또는 형식을 따라야 하는 경우 SPECS로 이동하십시오 (선택 사항).',
+          ],
+        },
+
+        faqSection: {
+          title: '자주 묻는 질문',
+          id: 'faq',
+          faqs: [
+            {
+              q: 'RISEN은 무엇의 약자입니까?',
+              a: 'RISEN은 Refine, Inspect, Summarize, Evaluate, Next Steps의 약자입니다. 구조화된 수정 사이클을 통해 기존 초안을 개선하기 위해 설계된 5단계 반복 프레임워크입니다.',
+            },
+            {
+              q: 'RISEN은 CO-STAR 또는 CRAFT와 어떻게 다릅니까?',
+              a: 'CO-STAR와 CRAFT는 생성 프레임워크입니다 — 첫 번째 초안을 만드는 데 도움을 줍니다. RISEN은 개선 프레임워크입니다 — 추적된 반복을 통해 기존 자료를 개선하는 데 도움을 줍니다. 생성 프레임워크를 사용하여 만들고, 그런 다음 개선하기 위해 RISEN으로 전환하십시오.',
+            },
+            {
+              q: '다른 프레임워크 대비 RISEN을 언제 사용해야 합니까?',
+              a: '이미 초안이 있고 통제된 개선을 원할 때 RISEN을 사용하십시오. 일반적인 첫 번째 초안 생성에는 CO-STAR를, 창의적 콘텐츠에는 CRAFT를, 구조화된 역할-작업-형식 사양에는 RTF를, 모델 추론 이해에는 TRACE를 사용하십시오.',
+            },
+            {
+              q: '몇 번의 RISEN 사이클이 필요합니까?',
+              a: '일반적으로 2-4 사이클입니다. Evaluate 점수가 안정화(연속 사이클에서 동일한 점수)되고 Next Steps 제안이 실질적인 개선보다는 사소한 형식 수정이 될 때 중단하십시오.',
+            },
+            {
+              q: '로컬 모델에 RISEN을 사용할 수 있습니까?',
+              a: '예. RISEN은 지침을 따르는 모든 LLM에서 작동합니다 — Ollama 또는 LM Studio를 통한 로컬 모델 포함. 더 큰 모델(13B+)이 다단계 구조를 더 잘 처리합니다. 7B 모델은 각 단계를 별도의 프롬프트로 분리해야 할 수 있습니다.',
+            },
+            {
+              q: 'Inspect 단계가 특별한 이유는 무엇입니까?',
+              a: 'Inspect 단계는 모델이 Refine 중에 만든 모든 구체적인 변경 사항을 나열하도록 강제하여 감사 추적을 생성합니다. 버전 간에 무엇이 변경되었는지 정확히 알 수 있고 각 변경이 출력을 개선했는지 판단할 수 있습니다. Inspect 없이는 수정이 블랙박스입니다.',
+            },
+            {
+              q: 'RISEN을 멀티 모델 테스트와 결합할 수 있습니까?',
+              a: '예. PromptQuorum을 사용하여 동일한 RISEN 사이클을 GPT-5.5, Claude 4.6 Sonnet 및 Gemini 2.5 Pro에 동시에 보내십시오. 어떤 모델의 개선, 자기 비판 점수 및 다음 단계 제안이 귀하의 요구 사항에 가장 잘 맞는지 비교하십시오.',
+            },
+            {
+              q: 'RISEN은 토큰 비용에 오버헤드를 추가합니까?',
+              a: '예. 각 RISEN 사이클은 모델이 여러 섹션(개선된 콘텐츠, 변경 로그, 요약, 평가, 권장 사항)을 작성하기 때문에 단일 패스 프롬프트보다 2-5배 더 많은 출력 토큰을 생성합니다. 고위험 작업에 선택적으로 RISEN을 사용하십시오. 빠른 편집을 위해서는 단일 단계 프롬프트를 선호하십시오.',
+            },
+          ],
+        },
+
+        relatedReading: {
+          title: '관련 읽기',
+          id: 'related-reading',
+          items: [
+            { title: 'Chain-of-Thought Prompting', url: '/prompt-engineering/chain-of-thought-prompting' },
+            { title: 'CO-STAR Framework', url: '/prompt-engineering/co-star-framework' },
+            { title: 'CRAFT Framework', url: '/prompt-engineering/craft-framework' },
+            { title: 'TRACE Framework', url: '/prompt-engineering/trace-framework' },
+            { title: 'Which Prompt Framework Should You Use?', url: '/prompt-engineering/which-prompt-framework-should-you-use' },
+            { title: 'Build Your Own Prompt Framework', url: '/prompt-engineering/build-your-own-prompt-framework' },
+          ],
+        },
+
+        sources: {
+          title: '출처',
+          id: 'sources',
+          items: [
+            'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608. 반복 개선 패턴을 포함한 58개 이상의 프롬프트 기법을 목록화합니다.',
+            'OpenAI Prompt Engineering Guide. https://platform.openai.com/docs/guides/prompt-engineering — 반복 개선 전략을 포함한 공식 프롬프트 모범 사례.',
+            'Anthropic Prompt Engineering Documentation. https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering — 다단계 프롬프트 워크플로에 대한 Claude 전용 지침.',
+          ],
+        },
+      },
+
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'RISEN 프레임워크: Refine, Inspect, Summarize, Evaluate, Next Steps (2026)',
+        description: '반복적 프롬프트 개선을 위한 RISEN 프레임워크: 초안 개선(Refine), 변경 사항 감사(Inspect), 결과 요약(Summarize), 기준에 따른 평가(Evaluate), 다음 단계 계획(Next Steps). PromptQuorum을 통한 멀티 모델 테스트.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-05-04',
+        'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework',
+        keywords: ['RISEN Framework', '반복 프롬프트', '프롬프트 개선', '다단계 워크플로', '프롬프트 엔지니어링', 'PromptQuorum', 'GPT-5.5', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'RISEN Framework' },
+          { '@type': 'Thing', name: 'Iterative Prompting' },
+          { '@type': 'Thing', name: 'Prompt Refinement' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+      },
+
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'RISEN은 무엇의 약자입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RISEN은 Refine, Inspect, Summarize, Evaluate, Next Steps의 약자입니다. 구조화된 수정 사이클을 통해 기존 초안을 개선하기 위해 설계된 5단계 반복 프레임워크입니다.' } },
+          { '@type': 'Question', 'name': 'RISEN은 CO-STAR 또는 CRAFT와 어떻게 다릅니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR와 CRAFT는 생성 프레임워크입니다 — 첫 번째 초안을 만드는 데 도움을 줍니다. RISEN은 개선 프레임워크입니다 — 추적된 반복을 통해 기존 자료를 개선하는 데 도움을 줍니다. 생성 프레임워크를 사용하여 만들고, 그런 다음 개선하기 위해 RISEN으로 전환하십시오.' } },
+          { '@type': 'Question', 'name': '다른 프레임워크 대비 RISEN을 언제 사용해야 합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '이미 초안이 있고 통제된 개선을 원할 때 RISEN을 사용하십시오. 일반적인 첫 번째 초안 생성에는 CO-STAR를, 창의적 콘텐츠에는 CRAFT를, 구조화된 사양에는 RTF를, 모델 추론 이해에는 TRACE를 사용하십시오.' } },
+          { '@type': 'Question', 'name': '몇 번의 RISEN 사이클이 필요합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '일반적으로 2-4 사이클입니다. Evaluate 점수가 안정화되고 Next Steps 제안이 실질적인 개선보다는 사소한 수정이 될 때 중단하십시오.' } },
+          { '@type': 'Question', 'name': '로컬 모델에 RISEN을 사용할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '예. RISEN은 지침을 따르는 모든 LLM에서 작동합니다 — Ollama 또는 LM Studio를 통한 로컬 모델 포함. 더 큰 모델(13B+)이 다단계 구조를 더 잘 처리합니다. 7B 모델은 단계를 분리해야 할 수 있습니다.' } },
+          { '@type': 'Question', 'name': 'Inspect 단계가 특별한 이유는 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Inspect 단계는 모델이 모든 구체적인 변경 사항을 나열하도록 강제하여 감사 추적을 생성합니다. 버전 간에 무엇이 변경되었는지 정확히 알 수 있고 각 변경이 출력을 개선했는지 판단할 수 있습니다.' } },
+          { '@type': 'Question', 'name': 'RISEN을 멀티 모델 테스트와 결합할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '예. PromptQuorum을 사용하여 동일한 RISEN 사이클을 GPT-5.5, Claude 4.6 Sonnet 및 Gemini 2.5 Pro에 동시에 보내십시오. 어떤 모델의 개선이 귀하의 요구 사항에 가장 잘 맞는지 비교하십시오.' } },
+          { '@type': 'Question', 'name': 'RISEN은 토큰 비용에 오버헤드를 추가합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '예. 각 RISEN 사이클은 단일 패스 프롬프트보다 2-5배 더 많은 출력 토큰을 생성합니다. 고위험 작업에 선택적으로 RISEN을 사용하십시오. 빠른 편집을 위해서는 단일 단계 프롬프트를 선호하십시오.' } },
+        ],
+      },
+
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'CoT vs 단일 패스 vs RISEN 비교',
+        'numberOfItems': 7,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '구조', 'description': 'CoT: 선형 단일 경로. 단일 패스: 단일 생성. RISEN: 반복적 5단계 루프.' },
+          { '@type': 'ListItem', 'position': 2, 'name': '핵심 동작', 'description': 'CoT: 추론 후 답변. 단일 패스: 생성. RISEN: Refine → Inspect → Summarize → Evaluate → Next Steps → 반복.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '감사 추적', 'description': 'CoT: 변경 추적 없음. 단일 패스: 없음. RISEN: 있음 — Inspect가 모든 변경 사항을 문서화.' },
+          { '@type': 'ListItem', 'position': 4, 'name': '적합한 용도', 'description': 'CoT: 수학 및 논리. 단일 패스: 빠른 작업. RISEN: 반복 개선 및 팀 리뷰.' },
+          { '@type': 'ListItem', 'position': 5, 'name': '토큰 비용', 'description': 'CoT: 1.5-2×. 단일 패스: 1× 기준. RISEN: 사이클당 2-5×.' },
+          { '@type': 'ListItem', 'position': 6, 'name': '여러 프롬프트?', 'description': 'CoT: 없음. 단일 패스: 없음. RISEN: 하나의 긴 프롬프트 또는 5개의 순차적 프롬프트 가능.' },
+          { '@type': 'ListItem', 'position': 7, 'name': '모델 비교', 'description': 'CoT: 없음. 단일 패스: 없음. RISEN: 있음 — PromptQuorum을 통해 GPT, Claude, Gemini에서 병렬 테스트.' },
+        ],
+      },
+    },
   };

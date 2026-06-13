@@ -2074,4 +2074,232 @@ schema: {
         ],
       },
     },
+  ko: {
+  freshness_tier: 'semi_annual',
+  theme: '도구 및 인터페이스',
+  title: '사용 사례별 최적 로컬 LLM 스택 2026: 글쓰기, 코딩, RAG, 에이전트',
+  seoTitle: '최적 로컬 LLM 스택 2026: 코딩, RAG, 글쓰기 & 에이전트',
+  intro: '**최적의 로컬 LLM 스택은 워크플로에 따라 다릅니다. 작가에게는 Ollama + OpenWebUI + Llama 3.3, 개발자에게는 vLLM + Qwen3-Coder + IDE 확장, 연구자에게는 LangGraph + vLLM이 적합합니다. 2026년 4월 기준, 모든 영역에서 우수한 단일 도구는 존재하지 않습니다.** 이 가이드는 7가지 일반적인 사용 사례를 최적의 스택(백엔드 + UI + 통합)과 하드웨어 등급(VRAM 8~24 GB)에 매핑합니다.',
+  metaDescription: '코딩: vLLM + Qwen3-Coder. 글쓰기: Ollama + Llama 3.3. RAG: LlamaIndex + Qdrant. 에이전트: CrewAI. VRAM 등급 8~24 GB 및 설정 명령어 포함. 2026년.',
+  twitterDescription: '사용 사례별 로컬 LLM 스택: 코딩 → vLLM + Qwen3-Coder. 글쓰기 → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. 에이전트 → LangGraph + vLLM. 2026년 4월 가이드.',
+  publishDate: '2026-04-05',
+  dateModified: '2026-04-19',
+  leadAnswerBlock: '**최적의 로컬 LLM 스택은 워크플로에 따라 다릅니다. 작가에게는 OpenWebUI + Llama 3, 개발자에게는 vLLM + Python SDK, 연구자에게는 LangGraph + 커스텀 스크립트가 필요합니다. 2026년 4월 기준, 모든 영역에서 우수한 단일 도구는 존재하지 않습니다.**',
+  audience: 'Ollama 또는 LM Studio에 익숙한 개발자로서 로컬 LLM 워크플로를 최적화하고자 하는 분',
+  readTime: '10분 분량',
+  educationalLevel: 'Intermediate',
+  primaryTerm: 'LLM 스택',
+  toc: [
+    { label: '요약', anchor: '#tldr' },
+    { label: '하드웨어 결정 테이블', anchor: '#hardware' },
+    { label: '글쓰기 및 콘텐츠 제작', anchor: '#writing' },
+    { label: '소프트웨어 개발 및 코드 리뷰', anchor: '#coding' },
+    { label: '로컬 RAG (문서 Q&A)', anchor: '#rag' },
+    { label: 'AI 에이전트 및 워크플로', anchor: '#agents' },
+    { label: '다중 사용자 API 서버', anchor: '#api' },
+    { label: '파인튜닝 및 연구', anchor: '#finetuning' },
+    { label: '실시간 채팅 (스트리밍)', anchor: '#streaming' },
+    { label: '자주 묻는 질문', anchor: '#faq' },
+  ],
+  sections: {
+    tldr: {
+      id: 'tldr',
+      isTldr: true,
+      items: [
+        '**글쓰기/콘텐츠 제작:** Ollama + OpenWebUI. 별도 설정 불필요, 우수한 채팅 UI, 컨텍스트 창 조절 가능.',
+        '**코딩/코드 리뷰:** vLLM + FastAPI + VS Code 확장. 배치 처리, 병렬 추론, 스트리밍 지원.',
+        '**로컬 RAG:** LlamaIndex + Ollama/vLLM + Qdrant 벡터 DB. 문서 청킹, 임베딩, 검색이 통합되어 있습니다.',
+        '**AI 에이전트:** LangGraph + vLLM 백엔드. 도구 사용, 메모리, 계획 루프. 학습 곡선이 가파릅니다.',
+        '**다중 사용자 API:** nginx 뒤의 vLLM. 동시 요청 10건 이상 처리 가능. 가장 확장성이 뛰어납니다.',
+        '**파인튜닝:** HuggingFace Transformers + LoRA + Ollama(추론용). 학습과 서빙을 분리하여 진행합니다.',
+        '**실시간 스트리밍:** Ollama(네이티브 스트리밍) 또는 vLLM + 토큰 스트리밍 엔드포인트. 챗봇에서 최고의 UX를 제공합니다.',
+      ],
+    },
+    'hardware': {
+      id: 'hardware',
+      title: '빠른 결정: 하드웨어 등급별 스택 (2026년 4월)',
+      content: 'GPU/VRAM에 맞는 최적 스택을 선택하십시오. 각 조합은 실제 벤치마크를 기준으로 테스트되었습니다. 코딩 및 에이전트 워크플로는 글쓰기보다 대형 모델의 혜택을 더 크게 받으며, RAG는 LLM 크기보다 임베딩 품질이 더 중요합니다.',
+      columns: ['하드웨어', '글쓰기', '코딩', 'RAG', '에이전트'],
+      rows: [
+        { '하드웨어': '4~8 GB VRAM (GTX 1660, RTX 3050)', '글쓰기': 'Ollama + Phi-4 Mini', '코딩': 'Ollama + Qwen3-Coder-1.5B', 'RAG': 'LlamaIndex + Phi-4 Mini', '에이전트': '권장하지 않음' },
+        { '하드웨어': '12 GB VRAM (RTX 3060, RTX 4070)', '글쓰기': 'Ollama + Llama 3.2 8B', '코딩': 'vLLM + Qwen3-Coder-7B', 'RAG': 'LlamaIndex + Llama 3.2 8B', '에이전트': 'LangGraph + Ollama (느림)' },
+        { '하드웨어': '16 GB VRAM (RTX 4070 Ti, RTX 4080)', '글쓰기': 'Ollama + Mistral Small 3.1', '코딩': 'vLLM + Qwen3-Coder-14B', 'RAG': 'LlamaIndex + Mistral 3.1', '에이전트': 'LangGraph + vLLM' },
+        { '하드웨어': '24 GB VRAM (RTX 3090, RTX 4090)', '글쓰기': 'Ollama + Llama 3.3 70B Q4', '코딩': 'vLLM + Qwen3-Coder-32B', 'RAG': 'LlamaIndex + Llama 3.3 70B', '에이전트': 'LangGraph + vLLM (가장 빠름)' },
+      ],
+    },
+    'writing': {
+      id: 'writing',
+      content: [
+        '**최적 스택: [Ollama](/local-llms/how-to-install-ollama) + [OpenWebUI](/local-llms/open-webui-vs-sillytavern) + 마크다운 편집기**',
+        '이 스택을 선택하는 이유: OpenWebUI는 최고의 채팅 UX를 제공합니다. 코딩이 필요하지 않습니다. 컨텍스트 창 유연성(4K~32K)은 장문 글쓰기에서 LM Studio보다 뛰어납니다. 작가에게 클라우드 API보다 경제적입니다.',
+      ],
+      numberedItems: [
+        'VRAM 24 GB의 경우: `ollama pull llama3.3:70b` — 최고 품질, 글쓰기 벤치마크에서 GPT-4(2023)에 필적합니다.',
+        'VRAM 16 GB의 경우: `ollama pull mistral-small3.1` — 128K 컨텍스트, 24 GB 미만에서 최고 품질.',
+        'VRAM 8 GB의 경우: `ollama pull llama3.2:8b` — 양호한 글쓰기 품질, 소비자 하드웨어에서 빠릅니다.',
+        'Docker를 통해 OpenWebUI 설치: `docker run -d -p 3000:8080 ghcr.io/open-webui/open-webui:latest`.',
+        '문서 길이에 따라 OpenWebUI 설정에서 컨텍스트 창(8K~32K 토큰)을 구성하십시오.',
+      ],
+    },
+    'coding': {
+      id: 'coding',
+      content: [
+        '**최적 스택: [vLLM](/local-llms/vllm-performance-guide) + Qwen3-Coder + IDE 확장**',
+        '이 스택을 선택하는 이유: Qwen3-Coder는 HumanEval에서 82%를 기록합니다(2026년 4월 기준 최고의 오픈소스 코딩 모델). vLLM은 배치 추론에서 Ollama보다 3~5배 빠릅니다. 네이티브 OpenAI API 호환성으로 기존 IDE 도구에 적합합니다. 실시간 제안을 위한 스트리밍이 활성화됩니다.',
+        '',
+        '**여러 파일에 대한 AI 기반 코드 리뷰**',
+        '여러 파일에 대한 자동 코드 리뷰를 위해 vLLM의 배치 처리를 사용하십시오:',
+      ],
+      numberedItems: [
+        'vLLM 설치: `pip install vllm`.',
+        'Qwen3-Coder-7B로 vLLM 서버 시작: `python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen3-Coder-7B-Instruct --port 8000`.',
+        'VRAM 16 GB 이상의 경우 14B 사용: `--model Qwen/Qwen3-Coder-14B-Instruct`.',
+        'IDE 확장(VS Code Continue.dev, Cursor 등)을 `http://localhost:8000/v1`에 연결하십시오.',
+        '코드 리뷰를 위한 배치 처리 활성화: 단일 API 호출로 10개 파일을 병렬 처리합니다(`vllm`은 기본적으로 batch=10을 지원합니다).',
+      ],
+      codeBlock: `# vLLM 배치 처리를 사용하여 10개 파일을 병렬로 리뷰
+from openai import OpenAI
+
+client = OpenAI(base_url="http://localhost:8000/v1", api_key="not-needed")
+
+code_files = [
+    ("utils.py", open("utils.py").read()),
+    ("models.py", open("models.py").read()),
+    # ... 최대 10개 파일
+]
+
+# vLLM은 10개를 병렬로 처리 (배치 요청 1회)
+reviews = []
+for filename, code in code_files:
+    prompt = f"Review this code for bugs, style, and performance:\n\n{code}"
+    response = client.chat.completions.create(
+        model="Qwen3-Coder-7B-Instruct",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.2,  # 리뷰 작업에는 결정론적 설정 권장
+    )
+    reviews.append((filename, response.choices[0].message.content))
+
+for filename, review in reviews:
+    print(f"=== {filename} ===\n{review}\n")`,
+      codeLanguage: 'python',
+    },
+    'rag': {
+      id: 'rag',
+      content: [
+        '**최적 스택: LlamaIndex + Ollama/vLLM + Qdrant + FastAPI UI**',
+        '이 스택을 선택하는 이유: [LlamaIndex](/local-llms/local-rag-2026)는 청킹 + 검색을 처리합니다. Qdrant는 빠르고, 로컬에서 실행되며, 프라이버시를 보호합니다. Ollama는 임베딩을 무료로 제공하거나 vLLM을 LLM 추론에 사용할 수 있습니다.',
+      ],
+      numberedItems: [
+        'LlamaIndex 설치(`pip install llama-index`).',
+        'LlamaIndex에 문서(PDF, TXT, 마크다운)를 로드합니다.',
+        '문서를 청킹(기본 1024 토큰)하고 로컬 모델 또는 OpenAI(백업)로 임베딩합니다.',
+        'Docker를 통해 로컬에서 실행되는 Qdrant 벡터 DB에 임베딩을 저장합니다.',
+        'LlamaIndex를 통해 쿼리합니다: 상위 K개의 유사 문서를 검색하고 컨텍스트와 함께 LLM에 프롬프트를 전달합니다.',
+        '웹 UI 또는 IDE 통합을 위해 FastAPI 엔드포인트로 래핑합니다.',
+      ],
+    },
+    'agents': {
+      id: 'agents',
+      content: [
+        '**최적 스택: LangGraph + vLLM + 도구 정의**',
+        '이 스택을 선택하는 이유: [LangGraph](/local-llms/local-llm-agents-with-langgraph)는 구조화된 에이전트 플로를 제공합니다. vLLM은 순차적 LLM 호출 10회 이상에도 충분히 빠릅니다. 도구 사용이 명시적이고 디버그 가능합니다.',
+      ],
+      numberedItems: [
+        'LangGraph 설치(`pip install langchain langgraph`).',
+        '도구(웹 검색, 계산기, 파일 I/O)를 함수 서명으로 정의합니다.',
+        'LLM을 결정 노드로, 도구를 액션 노드로 하는 에이전트 그래프를 생성합니다.',
+        '타이트 루프에서 낮은 지연 시간의 LLM 호출을 위해 vLLM 백엔드를 사용합니다.',
+        '에이전트 루프를 실행합니다: LLM → 도구 선택 → 도구 실행 → 완료까지 반복.',
+      ],
+    },
+    'api': {
+      id: 'api',
+      content: [
+        '**최적 스택: vLLM + nginx 로드 밸런서 + 모니터링**',
+        '이 스택을 선택하는 이유: vLLM은 분산 서빙을 지원합니다. Nginx는 요청을 멀티플렉싱합니다. 듀얼 GPU 시스템에서 동시 사용자 10명 이상으로 확장됩니다. 사용자별 토큰 처리량을 모니터링합니다.',
+      ],
+      numberedItems: [
+        '고정 포트에서 `--served-model-name model-name`으로 vLLM을 배포합니다.',
+        '2개 이상의 vLLM 인스턴스(멀티 GPU인 경우 GPU당 하나)에 걸쳐 nginx 로드 밸런싱을 구성합니다.',
+        '클라이언트 호환성을 위해 OpenAI 호환 `/v1/chat/completions` 엔드포인트를 사용합니다.',
+        'Prometheus 스크레이프 엔드포인트를 통해 모니터링합니다(vLLM은 요청 지연 시간, 처리량 메트릭을 내보냅니다).',
+        '사용자별 토큰 버킷 알고리즘으로 속도 제한을 설정합니다.',
+      ],
+    },
+    'finetuning': {
+      id: 'finetuning',
+      content: [
+        '**최적 스택: HuggingFace Transformers + LoRA + Ollama(추론)**',
+        '이 스택을 선택하는 이유: LoRA는 파인튜닝 VRAM을 10분의 1로 줄입니다. Ollama는 파인튜닝된 모델을 쉽게 로드합니다. 모듈식 구조: 한 박스에서 학습하고 다른 박스에서 서빙합니다.',
+        '',
+        '**참고 사항 (2026년 4월):** Meta는 상업적 파인튜닝에서 Llama 3.3을 지원 중단했습니다. Apache 2.0 / 오픈소스 라이선스 조건을 위해 Llama 3.2(`meta-llama/Llama-3.2-1B` 또는 더 큰 모델) 또는 Qwen3(`Qwen/Qwen3-7B`)에서 파인튜닝하십시오. 두 모델 모두 LoRA를 지원하고 Ollama에서 쉽게 로드됩니다.',
+      ],
+      numberedItems: [
+        '`peft` 라이브러리(LoRA)로 파인튜닝하여 VRAM 사용량을 줄입니다.',
+        '학습: 모델 VRAM의 4배가 필요합니다(옵티마이저 상태, 그래디언트). 추론과 별도로 실행합니다.',
+        'LoRA 어댑터를 HuggingFace Hub 또는 로컬 파일 시스템으로 내보냅니다.',
+        'Ollama에서 파인튜닝된 모델 로드: `ollama create mymodel -f Modelfile`.',
+        '또는 RLHF를 위해 HuggingFace TRL(Transformers Reinforcement Learning)을 사용합니다.',
+      ],
+    },
+    'streaming': {
+      id: 'streaming',
+      content: [
+        '**최적 스택: Ollama(네이티브 스트리밍) 또는 vLLM + Server-Sent Events (SSE)**',
+        '이 스택을 선택하는 이유: 스트리밍은 체감 성능을 향상시킵니다(사용자가 토큰이 나타나는 것을 확인). Ollama가 가장 간단합니다. vLLM은 토큰 처리량이 가장 빠릅니다.',
+      ],
+      numberedItems: [
+        'Ollama: `stream: true`로 `/api/generate`를 호출합니다. 토큰은 줄바꿈으로 구분된 JSON으로 도착합니다.',
+        'vLLM: `stream: true`로 `/v1/chat/completions`를 사용합니다. OpenAI 호환 SSE 스트림을 반환합니다.',
+        '프론트엔드: EventSource API(JavaScript)를 사용하여 스트림을 소비하고 토큰당 UI를 업데이트합니다.',
+        '최저 지연 시간을 위해 배치 처리를 비활성화합니다(batch=1).',
+      ],
+    },
+    'faqSection': {
+      id: 'faq',
+      faqs: [
+        { q: 'Ollama와 vLLM 중 어떤 것을 사용해야 합니까?', a: 'Ollama는 채팅 UI와 간편함에 적합합니다. vLLM은 API 서버, 배치 처리, 성능에 적합합니다. 상호 배타적이지 않으므로 둘 다 실행할 수 있습니다.' },
+        { q: 'Ollama를 프로덕션 API에 사용할 수 있습니까?', a: '예, 하지만 vLLM이 더 빠릅니다(처리량 3~5배 높음). Ollama는 초당 10건 미만 요청에 적합합니다. 초당 10건 이상에는 vLLM을 사용하십시오.' },
+        { q: '코드 리뷰에 가장 적합한 로컬 LLM은 무엇입니까?', a: 'vLLM + Qwen3-Coder-7B-Instruct입니다. Qwen3-Coder는 HumanEval에서 82%를 기록합니다(최고의 오픈소스). vLLM은 10개 파일을 병렬로 처리합니다. RTX 3060 12GB에서 약 30~50 tok/sec입니다.' },
+        { q: '간단한 RAG에 벡터 DB가 필요합니까?', a: '문서 100개 미만의 경우: 인메모리 임베딩(np.ndarray)으로 충분합니다. 100개 이상의 경우: 메모리 과부하를 방지하기 위해 Qdrant 또는 Weaviate를 사용하십시오.' },
+        { q: 'LangGraph는 간단한 챗봇에 과도합니까?', a: '예. Ollama 또는 vLLM만 사용하십시오. LangGraph는 다단계 워크플로(에이전트 루프, 계획)를 위한 것입니다.' },
+        { q: 'Ollama와 vLLM 백엔드를 혼합할 수 있습니까?', a: '예. 예를 들어, Ollama는 채팅 UI용, vLLM은 배치 API용으로 사용합니다. 같은 머신에서 서로 다른 포트로 실행할 수 있습니다.' },
+      ],
+    },
+    'relatedReading': {
+      title: '관련 읽을거리',
+      items: [
+        '[로컬 LLM을 위한 최고의 AI 코딩 어시스턴트](/local-llms/best-ai-coding-assistant-local-llm) — 코딩 스택을 위한 IDE 선택(Cursor, Continue.dev, Cody).',
+        '[2026년 코딩용 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) — Qwen3-Coder 대 DeepSeek-Coder HumanEval 순위.',
+        '[2026년 로컬 RAG 설정](/local-llms/local-rag-2026) — LlamaIndex + Qdrant + Ollama 완전 구현 가이드.',
+        '[LangGraph로 로컬 LLM 에이전트 구축](/local-llms/local-llm-agents-with-langgraph) — 단계별 예시가 포함된 에이전트 워크플로 프레임워크.',
+        '[Ollama 대 LM Studio](/local-llms/ollama-vs-lm-studio) — 백엔드 비교: CLI 대 GUI, 속도, 배치 처리.',
+        '[Open WebUI 대 SillyTavern](/local-llms/open-webui-vs-sillytavern) — 채팅 UI 비교: 전문적 vs 롤플레이.',
+        '[로컬 LLM에 VRAM이 얼마나 필요합니까?](/local-llms/how-much-vram-local-llm) — 모델 크기 및 사용 사례별 하드웨어 요구 사항.',
+      ],
+    },
+    'commonMistakes': {
+      title: 'LLM 스택 선택 시 일반적인 실수',
+      items: [
+        '**vLLM 없이 Ollama를 프로덕션 API에 사용하는 것:** Ollama는 초당 10건 미만으로 한계가 있습니다. 동시 사용자 10명 이상을 서빙하는 프로덕션 환경에서는 vLLM이 필수입니다. 배포 전에 부하 테스트로 처리량을 확인하십시오.',
+        '**vLLM 백엔드 없이 LangGraph를 실행하는 것:** LangGraph 에이전트는 순차적 LLM 호출을 10회 이상 수행합니다. Ollama는 지연 시간 병목 현상을 유발합니다. 1초 미만의 왕복 시간을 위해 항상 LangGraph와 vLLM을 함께 사용하십시오.',
+        '**메모리 관리 없이 같은 GPU에서 Ollama + vLLM을 혼합하는 것:** 두 도구 모두 VRAM에 가중치를 로드합니다. 70B 모델 두 인스턴스를 실행하면 32 GB를 소비합니다. 별도의 GPU를 사용하거나 두 모델을 모두 수용하기 위해 많이 양자화(Q2)하십시오.',
+        '**글쓰기에 잘못된 컨텍스트 창을 선택하는 것:** 기본 4K 컨텍스트는 브레인스토밍 세션을 제한합니다. 장문 글쓰기의 경우 OpenWebUI에서 16K~32K 컨텍스트 창을 설정하십시오. 트레이드오프: 추론 속도가 느려집니다(토큰당 2~3배 느림).',
+        '**모든 백엔드의 속도가 동일하다고 가정하는 것:** vLLM과 Ollama는 서로 다른 커널을 사용합니다. 동일한 하드웨어에서 vLLM은 추론에서 2~3배 더 빠릅니다. 속도 차이는 백엔드에 있으며, 프론트엔드(OpenWebUI, LM Studio는 단순한 UI)에는 없습니다.',
+      ],
+    },
+    'sources': {
+      title: '출처',
+      items: [
+        '[Ollama GitHub](https://github.com/ollama/ollama) — 공식 문서, 스트리밍 API 사양, 모델 라이브러리.',
+        '[vLLM GitHub](https://github.com/lm-sys/vllm) — OpenAI API 호환성, 배치 처리, 연속 배치 문서.',
+        '[Qwen3-Coder 기술 보고서](https://qwenlm.github.io/blog/qwen2.5-coder/) — Alibaba Qwen. HumanEval 점수 82%, 코딩 작업 특화. Apache 2.0 라이선스.',
+        '[LlamaIndex 문서](https://docs.llamaindex.ai) — 문서 인덱싱, 청킹, RAG 검색 프레임워크.',
+        '[LangGraph 문서](https://langchain-ai.github.io/langgraph/) — 에이전트 워크플로 프레임워크, 상태 머신, 도구 사용 패턴.',
+        '[Qdrant 문서](https://qdrant.tech/documentation/) — 로컬 임베딩 저장을 위한 벡터 데이터베이스, Docker 지원, Apache 2.0.',
+        '[Continue.dev 문서](https://docs.continue.dev/) — 로컬 LLM 백엔드를 사용하는 VS Code 및 JetBrains용 IDE 확장.',
+      ],
+    },
+  },
+},
   };

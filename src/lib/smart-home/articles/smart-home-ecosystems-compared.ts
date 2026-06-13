@@ -199,11 +199,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
     title: 'مقارنة منظومات المنزل الذكي (2026): Alexa مقابل Google مقابل Apple مقابل HA',
-    seoTitle: 'منصات المنزل الذكي 2026: Alexa وGoogle Home وApple وHome Assistant',
+    seoTitle: 'Alexa مقابل Google Home مقابل Home Assistant 2026',
     intro:
       'تختلف المنظومات الأربع الكبرى للمنزل الذكي — Amazon Alexa وGoogle Home وApple Home وHome Assistant — في المقام الأول على صعيد الخصوصية والتحكم المحلي. تغطي هذه المقارنة دعم الأجهزة والخصوصية والتحكم المحلي والصوت والتكلفة والتقيد، وتوصي بمنصة لكل نوع مستخدم، مع تموضع Home Assistant بوصفه البطل المحلي والخاص.',
     metaDescription:
-      'Alexa مقابل Google Home مقابل Apple Home مقابل Home Assistant: مقارنة دعم الأجهزة والخصوصية والتحكم المحلي والصوت والتكلفة والتقيد. اختر وفق نوع مستخدمك.',
+      '4 منصات منزل ذكي كبرى مقارنةً: Alexa وGoogle Home وApple Home وHome Assistant — الخصوصية والتحكم المحلي والتكلفة. اختر وفق أولويتك.',
     twitterDescription:
       'Alexa مقابل Google مقابل Apple Home مقابل Home Assistant: مقارنة الخصوصية والتحكم المحلي والأجهزة والصوت والتكلفة والتقيد. أي منصة تناسبك؟',
     readTime: '9 دقائق للقراءة',

@@ -1186,6 +1186,182 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
 
+  ko: {
+    freshness_tier: 'evergreen',
+    theme: 'Workflows & Automatización',
+    title: '프롬프트 라이브러리 관리: 팀 프롬프트 구성·버전 관리·거버넌스 방법',
+    seoTitle: '프롬프트 라이브러리 관리: 구성과 버전 관리',
+    intro: '구조화된 라이브러리 없이 공유 프롬프트에 의존하는 팀은 이미 존재하는 프롬프트를 다시 만드는 데 상당한 시간을 허비하고, 이전 버전에 담긴 지식을 잃으며, 규모에 맞는 품질 기준을 적용하지 못합니다. 이 가이드는 폴더 구조, 명명 규칙, Git과 PromptHub를 이용한 버전 관리, 접근 제어, 사용 중단 워크플로를 다룹니다.',
+    metaDescription: '팀 프롬프트 라이브러리 관리: 폴더, 명명, Git 버전 관리, 접근 제어, 사용 중단. 프롬프트 작성자가 3명 이상인 팀을 위한 가이드.',
+    ogDescription: '팀 프롬프트 라이브러리 관리: /prompts/주제/slug-v1.txt 구조, Git 태그, PR 검토, 접근 제어, 사용 중단. PromptQuorum으로 테스트하십시오.',
+    twitterDescription: '프롬프트 작성자가 3명 이상이십니까? 라이브러리가 필요합니다. 폴더 구조, 명명, Git 버전 관리, 접근 제어, 사용 중단 흐름.',
+    publishDate: '2026-05-02',
+    readTime: '10분 분량',
+    educationalLevel: 'Intermediate',
+    primaryTerm: '프롬프트 라이브러리 관리',
+    leadAnswerBlock: '**프롬프트 라이브러리는 팀이 검색·재사용·발전시킬 수 있는 공유·버전 관리된 프롬프트 저장소입니다.** 없으면 팀은 처음부터 프롬프트를 다시 만들고, 이전 버전의 기관 지식을 잃으며, 규모에 맞는 품질 기준을 적용하지 못합니다.',
+    quickFacts: [
+      '프롬프트 작성자가 3명 이상이거나 활성 순환 중인 프롬프트가 20개 이상일 때 라이브러리를 구축하십시오',
+      '/prompts/[주제]/[slug]-v[N].[ext] 사용 — 파일 이름에 버전 접미사 필수',
+      'Git: 프로덕션 버전에 태그 지정, 기능 브랜치 사용, main으로 병합 전 PR 검토 필요',
+      '세 가지 접근 역할: 기여자(추가), 소유자/검토자(수정), 승인자(프로덕션 배포)',
+      '90일간 미사용 프롬프트는 사용 중단; 삭제 전 1년간 /deprecated에 보존',
+      'PromptHub는 역할 기반 접근과 댓글 스레드가 있는 구조화된 검토 흐름 제공',
+    ],
+    toc: [
+      { label: '프롬프트 라이브러리란 무엇인가', anchor: 'what_is_library' },
+      { label: '폴더 구조와 명명 규칙', anchor: 'folder_structure' },
+      { label: '버전 관리 전략', anchor: 'version_control' },
+      { label: '접근 제어와 소유권', anchor: 'access_control' },
+      { label: '검토 흐름과 사용 중단', anchor: 'deprecation' },
+      { label: '일반적인 실수', anchor: 'common_mistakes' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+      { label: '관련 읽기', anchor: 'related_reading' },
+      { label: '출처', anchor: 'sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      url: 'https://www.promptquorum.com/ko/prompt-engineering/prompt-library-team-management',
+      inLanguage: 'ko',
+      headline: '프롬프트 라이브러리 관리: 팀 프롬프트 구성·버전 관리·거버넌스 방법',
+      description: '팀 프롬프트 라이브러리 관리: 폴더 구조, 명명 규칙, Git 버전 관리, 접근 제어, 사용 중단 흐름.',
+      datePublished: '2026-05-02',
+      dateModified: '2026-05-02',
+      keywords: ['프롬프트 라이브러리', '프롬프트 관리', '팀 프롬프트', '프롬프트 버전 관리', 'PromptHub', '프롬프트 거버넌스'],
+      mentions: [
+        { '@type': 'Thing', name: 'GPT-5.5' },
+        { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
+        { '@type': 'Thing', name: 'PromptQuorum' },
+        { '@type': 'Thing', name: 'Braintrust' },
+      ],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-library-team-management', width: 1200, height: 630 },
+    },
+    sections: {
+      tldr: {
+        isTldr: true,
+        title: 'TL;DR',
+        content: '프롬프트 라이브러리는 검색·중복·품질 기준선 문제를 해결합니다. 프롬프트 작성자가 3명 이상이거나 20개 이상의 프롬프트가 활성 사용 중일 때 구축하십시오. /prompts/[주제]/[slug]-v[N].[ext] 구조, 프로덕션 버전을 위한 Git 태그, 3역할 접근 모델을 사용하십시오. 90일간 미사용 프롬프트는 사용 중단하십시오.',
+      },
+      what_is_library: {
+        title: '프롬프트 라이브러리란 무엇인가',
+        snippets: [
+          { type: 'in-one-sentence', text: '프롬프트 라이브러리는 팀이 시간이 지남에 따라 검색·재사용·개선할 수 있는 공유·버전 관리·검색 가능한 프롬프트 저장소입니다.' },
+          { type: 'in-plain-terms', text: '프롬프트 라이브러리를 AI 지침을 위한 코드 라이브러리라고 생각하십시오: 모든 것에 이름, 버전이 있고 검색 가능하며 프로덕션에 가기 전 검토됩니다.' },
+        ],
+        content: [
+          '**프롬프트 라이브러리는 팀이 시간이 지남에 따라 검색·재사용·개선할 수 있는 공유·버전 관리된 프롬프트 모음입니다.** 세 가지 문제를 해결합니다: 검색(필요한 작업을 이미 수행하는 프롬프트 찾기), 중복(동일한 프롬프트를 두 번 작성하기), 품질 기준선(모든 프롬프트가 공유 전 최소 기준을 충족하도록 보장하기).',
+          '라이브러리 없이 프롬프트는 개인 노트, Slack 메시지, ChatGPT 기록에 존재합니다 — 팀에게는 접근 불가능하고, 버전 관리도 없으며, 누군가 떠나면 사라집니다. 라이브러리는 프롬프트를 개인 지식이 아닌 팀 자산으로 전환합니다.',
+          '3명 이상이 정기적으로 프롬프트를 작성하거나, 팀이 활성 순환 중에 20개 이상의 서로 다른 프롬프트를 사용하거나, 아무도 이전 버전을 찾을 수 없어 동일한 프롬프트가 다시 만들어지는 것을 알아차릴 때 프롬프트 라이브러리를 구축하십시오.',
+        ],
+        callouts: [
+          { type: 'insight', label: '구축 시점', text: '라이브러리 구축의 트리거는 규모가 아닙니다 — 프롬프트 재생성이 일어나기 시작할 때입니다. 팀원이 "이것을 위한 프롬프트가 이미 있다고 생각해요"라고 말한 적이 있다면, 라이브러리를 구축할 때입니다.' },
+        ],
+      },
+      folder_structure: {
+        title: '폴더 구조와 명명 규칙',
+        content: [
+          '**모든 프롬프트 파일에 `/prompts/[주제]/[slug]-v[버전].[ext]` 패턴을 사용하십시오.** 이 구조를 통해 주제별 필터링, 버전별 정렬, 형식(마크다운은 `.md`, 일반 텍스트는 `.txt`, 구조화된 프롬프트는 `.json`) 식별을 한눈에 할 수 있습니다.',
+          '4명 팀을 위한 예시 디렉토리 구조:',
+        ],
+        items: [
+          '/prompts/customer-support/ticket-triage-v2.md',
+          '/prompts/customer-support/first-response-draft-v1.md',
+          '/prompts/content/blog-outline-v3.md',
+          '/prompts/content/product-description-v1.md',
+          '/prompts/engineering/code-review-v2.md',
+          '/prompts/engineering/pr-summary-v1.md',
+          '/prompts/research/source-summarize-v2.md',
+          '/prompts/deprecated/ (보관된 프롬프트, 1년간 보존)',
+        ],
+        callouts: [
+          { type: 'warning', label: '이 이름은 절대 사용 금지', text: '파일 이름에서 버전 식별자로 "latest", "final", "new", "copy"를 절대 사용하지 마십시오. 이 식별자들은 즉시 의미를 잃고 버전 기록을 읽을 수 없게 만듭니다.' },
+        ],
+      },
+      folder_structure_part2: {
+        content: [
+          '명명 규칙: 소문자만, 공백 대신 하이픈, 특수 문자 없음. 버전 제어 로그를 열지 않고도 파일 목록에서 버전 기록이 보이도록 파일 이름에 버전 접미사(`-v1`, `-v2`)를 포함하십시오. 버전 식별자로 `latest` 또는 `final`을 절대 사용하지 마십시오.',
+        ],
+      },
+      version_control: {
+        title: '프롬프트 라이브러리의 버전 관리 전략',
+        content: [
+          '**Git 태그를 사용하여 프롬프트의 프로덕션 버전을 표시하십시오: 해당 버전이 프로덕션에 배포될 때 `prompt/ticket-triage/v2`로 태그를 지정하십시오.** 이렇게 하면 롤백이 결정적이 됩니다 — 모호한 "마지막 안정 버전" 상태가 아닌 태그된 커밋으로 되돌립니다.',
+          '동시 편집의 경우 코드와 동일한 브랜치 전략을 따르십시오: 기능 브랜치(`prompt/ticket-triage-intent-detection`)를 만들고, 풀 리퀘스트를 열고, 검토를 받은 후 병합하십시오. main에서 직접 프롬프트를 편집하지 마십시오. main의 브랜치 보호 규칙이 인프라 수준에서 이를 강제합니다.',
+          'PromptHub는 Git 브랜치를 수동으로 관리하지 않고 댓글 스레드, 승인 체크박스, 역할 기반 접근을 원하는 팀을 위한 구조화된 검토 흐름을 제공합니다. 새 프롬프트 버전을 병합하기 전에 PromptQuorum이 25개 이상의 모델에서 동시에 검증합니다.',
+        ],
+      },
+      access_control: {
+        title: '접근 제어와 소유권',
+        content: [
+          '**3역할 모델이 대부분의 팀을 담당합니다: 기여자(추가 가능), 소유자/검토자(수정 가능), 승인자(프로덕션 배포 가능).** 이 역할을 합치는 것 — 누구나 편집하고 배포 가능하게 하는 것 — 이 공유 라이브러리의 프롬프트 회귀의 주요 원인입니다.',
+          'Git에서의 구현: 병합 전 1개의 검토 승인을 요구하는 main의 브랜치 보호 규칙을 설정하십시오. 각 프롬프트 폴더를 특정 검토자에게 매핑하는 CODEOWNERS 파일을 지정하십시오. PromptHub의 경우: 내장 역할 설정 — 기여자, 검토자, 관리자를 사용하십시오.',
+          '각 프롬프트는 지정된 소유자가 있어야 합니다. 소유자는 프롬프트를 최신 상태로 유지하고, 문제를 분류하며, 언제 사용 중단할지 결정할 책임이 있습니다. 소유자가 팀을 떠날 때 마지막 날 전에 프롬프트를 재배정해야 합니다.',
+        ],
+        callouts: [
+          { type: 'tip', label: '소유권 이전', text: '프롬프트 소유권 재배정을 팀 오프보딩 체크리스트에 추가하십시오. 소유자 없는 고아 프롬프트는 조용히 저하됩니다 — 다운스트림 시스템이 실패할 때까지 아무도 알아차리지 못합니다.' },
+        ],
+      },
+      deprecation: {
+        title: '검토 흐름과 사용 중단',
+        content: [
+          '**분기별 프롬프트 라이브러리 검토를 실행하십시오: 사용 메트릭을 확인하고, 현재 버전이 여전히 품질 기준을 충족하는지 평가하며, 사용 중단 준비가 된 프롬프트를 식별하십시오.** 90일간 아무도 사용하지 않는 프롬프트는 자산이 아닌 유지보수 부담입니다.',
+          '프롬프트 사용 중단 기준: 지난 90일간 사용 없음; 더 나은 버전이 대체했고 구버전이 더 이상 필요하지 않음; 작성되고 테스트된 모델이 더 이상 프로덕션에 없음. 이 중 셋 중 둘이 해당되면 사용 중단하십시오.',
+          '사용 중단 프로세스: (1) 프롬프트의 frontmatter에 `status: deprecated` 추가, (2) 파일을 `/prompts/deprecated/`로 이동, (3) 대체 프롬프트가 있으면 가리키는 메모 추가, (4) deprecated 폴더에서 최소 1년간 보존. 롤백 요청이 없으면 1년 후 삭제하십시오.',
+        ],
+      },
+      common_mistakes: {
+        title: '프롬프트 라이브러리 관리의 일반적인 실수',
+        mistakes: [
+          { mistake: '주제 구성 없는 평면 폴더 구조', problem: '프롬프트가 20개 이상이면 파일 검색이 불가능해지고 팀원들이 기존 프롬프트를 찾지 못해 작업을 중복합니다', fix: '주제별로 프롬프트를 구성하십시오: /prompts/[주제]/[slug]-v[N].txt. 주제 폴더당 최대 20개 프롬프트.' },
+          { mistake: '프롬프트 파일에 명명 규칙 없음', problem: '"prompt1.txt", "final.txt", "final-v2.txt"라는 파일은 검색하거나 프로그래밍 방식으로 비교할 수 없습니다', fix: '형식 사용: [slug]-v[major].[minor].txt. 예: classify-intent-v2.1.txt. "final", "copy", "new"는 절대 사용 금지.' },
+          { mistake: '사용 중단 프로세스 없음', problem: '구 프롬프트가 쌓이고 팀원들이 이미 더 나은 버전이 있다는 것도 모른 채 구버전을 사용합니다', fix: '각 폴더에 DEPRECATED.md를 추가하여 사용 중단된 slug, 사용 중단 날짜, 대체 slug 목록을 유지하십시오.' },
+          { mistake: '프로덕션 프롬프트에 접근 제어 없음', problem: '팀원 누구나 검토 없이 프로덕션 프롬프트를 수정하여 조용한 품질 회귀를 야기합니다', fix: '브랜치 보호 규칙을 추가하십시오: /prompts/production/의 모든 변경에 PR 검토 + CI/CD 통과를 요구하십시오.' },
+        ],
+      },
+      key_takeaways: {
+        title: '핵심 요점',
+        items: [
+          '프롬프트 라이브러리는 검색·중복·품질 기준선 문제를 해결합니다 — 프롬프트 작성자가 3명 이상이거나 20개 이상의 프롬프트가 활성 사용 중일 때 구축하십시오',
+          '폴더 구조: /prompts/[주제]/[slug]-v[버전].[ext] — 소문자, 하이픈, 파일 이름에 버전',
+          'Git: 프로덕션 버전에 태그, 기능 브랜치 사용, main으로의 병합 전 PR 검토 필요',
+          'PromptHub: 댓글 스레드와 역할 기반 승인이 있는 구조화된 검토 흐름에 사용',
+          '세 가지 접근 역할: 기여자(추가), 소유자/검토자(수정), 승인자(프로덕션 배포)',
+          '90일간 미사용 프롬프트는 사용 중단; 삭제 전 1년간 보관',
+        ],
+      },
+      faq: {
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '프롬프트 라이브러리란 무엇입니까?', a: '프롬프트 라이브러리는 팀이 프롬프트를 저장·검색·재사용하는 공유·버전 관리된 저장소입니다. 일반적으로 주제 또는 사용 사례별로 구성된 폴더 구조, 명명 및 버전 관리된 파일, 접근 제어 규칙, 검토 또는 승인 프로세스를 포함합니다.' },
+          { q: '프롬프트 버전 관리에 Git 또는 PromptHub를 사용해야 합니까?', a: '팀이 프롬프트를 코드처럼 취급하고 버전 관리에 익숙하다면 Git을 사용하십시오. 역할 기반 접근과 댓글 스레드가 있는 구조화된 검토 흐름이 필요하다면 PromptHub를 사용하십시오. 많은 팀이 저장에는 Git을, 검토 인터페이스에는 PromptHub를 사용합니다.' },
+          { q: '3명 팀을 위한 최소 프롬프트 라이브러리 구조는 무엇입니까?', a: '3명 팀에는 다음이 필요합니다: Git의 /prompts/ 디렉토리, 주제별 폴더(최대 5개 주제), 명명 규칙(slug + 버전), 폴더당 README.md. main에 검토 요구 사항을 추가하십시오. 설정에 30분 미만이 걸립니다.' },
+          { q: '프롬프트 관리에 PromptHub vs Git을 언제 사용해야 합니까?', a: '팀이 주로 개발자이고 GitHub PR에서 프롬프트를 검토하고 싶다면 Git을 사용하십시오. 팀에 비개발자가 포함되어 있거나, 검색 및 비교를 위한 UI가 필요하거나, 여러 코드베이스에서 프롬프트를 공유해야 한다면 PromptHub를 사용하십시오.' },
+        ],
+      },
+      related_reading: {
+        title: '관련 읽기',
+        items: [
+          { title: '프롬프트 라이브러리 구축', url: '/prompt-engineering/build-a-prompt-library' },
+          { title: '프롬프트 문서 템플릿', url: '/prompt-engineering/prompt-documentation-templates' },
+          { title: '프롬프트 버전 관리', url: '/prompt-engineering/prompt-version-control' },
+          { title: '프로덕션 프롬프트 거버넌스', url: '/prompt-engineering/prompt-governance-in-production' },
+          { title: '소규모 팀을 위한 프롬프트 엔지니어링 설정', url: '/prompt-engineering/pe-setup-small-teams' },
+        ],
+      },
+      sources: {
+        title: '출처',
+        items: [
+          { title: 'Git Documentation: Branch Protection', url: 'https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches' },
+          { title: 'PromptHub Documentation', url: 'https://app.prompthub.us/docs' },
+          { title: 'Braintrust: Prompt Management', url: 'https://www.braintrust.dev/docs/guides/prompts' },
+        ],
+      },
+    },
+  },
+
   ar: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',

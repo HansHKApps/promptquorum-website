@@ -2063,36 +2063,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
     },
-    breadcrumbSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
-        { '@type': 'ListItem', position: 3, name: 'AI 환각: AI가 사실을 꾸며내는 이유와 이를 막는 방법', item: 'https://www.promptquorum.com/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up' },
-      ],
-    },
     gammaEmbedUrl: '/presentations/ai-hallucinations-why-ai-makes-things-up-static.html',
     gammaDescription: '슬라이드 덱에서 다루는 내용: LLM이 환각을 일으키는 이유(확률적 토큰 예측, 이해 아님), 탐지 패턴이 있는 7가지 환각 유형, 환각을 줄이는 프롬프트 기술, 모델 동작 비교. PDF를 환각 감소 참고 카드로 다운로드하십시오.',
-    snippetBlocks: [
-      { type: 'one-sentence', text: 'AI 환각은 LLM이 존재하지 않는 것에 대해 자신 있게 거짓 진술을 생성할 때 발생하며, 이는 사실 검색이 아닌 텍스트 패턴 예측으로 인한 것입니다.' },
-      { type: 'plain-terms', text: 'AI 환각이란 언어 모델이 꾸며낸 출처, 잘못된 날짜, 존재하지 않는 URL과 같은 거짓 정보를 마치 사실인 것처럼 자신 있게 제시하는 현상입니다. RAG(검색 증강 생성), 명시적 제약 조건, 다중 모델 합의를 사용하면 오류를 줄일 수 있지만 완전히 제거하지는 못합니다.' },
-    ],
-    quickAnswerTop: {
-      ko: {
-        question: 'AI 환각이란 무엇이며 어떻게 멈출 수 있습니까?',
-        answer: 'AI 환각은 LLM이 존재하지 않는 것에 대해 자신 있게 거짓 진술을 하는 것으로, 텍스트 패턴 예측 아키텍처의 결과입니다. 명시적인 "모르겠습니다" 허가, RAG를 통한 근거 제공, 다중 모델 합의 점수를 통해 크게 줄일 수 있지만 완전히 제거할 수는 없습니다.',
-        bullets: [
-          '환각은 불확실성을 솔직히 표현하는 것과 달리 자신 있는 거짓 진술이 특징입니다',
-          '근본 원인: LLM은 사실을 검색하는 것이 아니라 텍스트 패턴을 예측합니다',
-          '프롬프트에 "모르겠습니다"를 허용하는 명시적 허가를 추가하십시오',
-          'RAG는 실제 문서로 응답을 근거화하여 꾸며낸 사실을 줄입니다',
-          '5개 이상의 독립 모델에 동일한 프롬프트를 보내 합의를 확인하십시오',
-        ],
-        updatedDate: '2026-03-22',
-      },
-    },
-    targetKeywords: ['AI 환각', 'LLM 환각 탐지', '프롬프트 엔지니어링 환각 방지', 'AI 환각 줄이기', '언어 모델 오류'],
     sections: {
       definition: {
         title: 'AI 환각이란 무엇입니까?',

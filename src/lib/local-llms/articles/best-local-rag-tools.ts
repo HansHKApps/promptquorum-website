@@ -1693,4 +1693,163 @@ schema: {
         ],
       },
     },
+  ko: {
+  freshness_tier: 'semi_annual',
+  theme: '도구 및 인터페이스',
+  title: '2026년 최고의 로컬 RAG 도구: Open WebUI, LlamaIndex, LangChain',
+  seoTitle: '최고의 로컬 RAG 도구 비교',
+  intro: 'RAG(검색 증강 생성)를 활용하면 로컬 LLM이 사용자 자신의 문서에 대한 질문에 답변할 수 있습니다. 2026년 4월 현재, Open WebUI는 가장 간편한 내장 RAG 기능을 제공하며(문서 업로드 후 질문 가능), LlamaIndex와 LangChain은 RAG 파이프라인 구축을 위한 전문가급 프레임워크입니다. 이 가이드는 사용 편의성, 기능, 프로덕션 준비 상태 측면에서 8가지 도구를 다룹니다.',
+  metaDescription: '최고의 로컬 RAG 도구: Open WebUI, LlamaIndex, LangChain 등. 문서 Q&A, 검색, 청킹.',
+  publishDate: '2026-04-04',
+  leadAnswerBlock: '**RAG(검색 증강 생성)를 활용하면 로컬 LLM이 사용자 자신의 문서에 대한 질문에 답변할 수 있습니다. 2026년 4월 현재, Open WebUI는 가장 간편한 내장 RAG 기능을 제공하며(문서 업로드 후 질문 가능), LlamaIndex와 LangChain은 RAG 파이프라인 구축을 위한 전문가급 프레임워크입니다.**',
+  audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 입문자',
+  readTime: '12분 분량',
+  educationalLevel: 'Intermediate to Advanced',
+  primaryTerm: '로컬 RAG',
+  toc: [
+    { label: '핵심 요점', anchor: '#key-takeaways' },
+    { label: 'RAG란 무엇인가?', anchor: '#what-is-rag' },
+    { label: '상위 8개 RAG 도구 비교', anchor: '#top-8-rag-tools' },
+    { label: '가장 쉬운 선택: Open WebUI RAG', anchor: '#easiest-open-webui' },
+    { label: '가장 유연한 선택: LlamaIndex', anchor: '#flexible-llamaindex' },
+    { label: '전문가용 선택: LangChain', anchor: '#professional-langchain' },
+    { label: '오픈소스 대안', anchor: '#open-source-alternatives' },
+    { label: 'RAG vs 파인튜닝', anchor: '#rag-vs-finetuning' },
+    { label: '흔한 실수', anchor: '#common-mistakes' },
+    { label: '자주 묻는 질문', anchor: '#common-questions' },
+    { label: '관련 자료', anchor: '#related-reading' },
+    { label: '출처', anchor: '#sources' },
+  ],
+  sections: {
+    tldr: {
+      id: 'key-takeaways',
+      isTldr: true,
+      items: [
+        'RAG = 문서를 업로드하고 모델이 출처를 인용하며 질문에 답변하도록 하는 방식입니다.',
+        '**Open WebUI**는 가장 간편한 내장 RAG를 제공합니다. PDF를 업로드하고 질문하면 됩니다. 5분 설치.',
+        '**LlamaIndex**는 RAG 파이프라인 구축에 가장 유연한 프레임워크입니다.',
+        '**LangChain**은 가장 널리 사용되는 전문가용 프레임워크로, 방대한 생태계를 보유하고 있습니다.',
+        '**Chroma**와 **Qdrant**는 문서 청크 저장을 위한 주요 벡터 데이터베이스입니다.',
+        '2026년 4월 현재, 로컬 RAG는 성숙하고 프로덕션 환경에 적합합니다.',
+      ],
+    },
+    whatIsRAG: {
+      title: 'RAG(검색 증강 생성)란 무엇입니까?',
+      content: [
+        '**RAG는 모델을 파인튜닝하지 않고도 LLM이 사용자 자신의 문서에 대한 질문에 답변할 수 있도록 하는 기법입니다.**',
+        '처리 과정: (1) 문서(PDF, 텍스트 파일) 업로드, (2) 청크로 분할, (3) 청크를 임베딩(수치 벡터)으로 변환, (4) 벡터 데이터베이스에 임베딩 저장, (5) 질문 시 데이터베이스에서 관련 청크 검색, (6) 청크와 질문을 LLM에 전달, (7) LLM이 청크를 기반으로 답변.',
+        'RAG는 문서가 자주 변경되는 경우(파인튜닝은 일회성 훈련)와 출처 표시가 필요한 경우(RAG는 사용된 문서를 표시) 파인튜닝보다 선호됩니다.',
+      ],
+    },
+    top8Tools: {
+      title: '2026년 상위 8개 로컬 RAG 도구',
+      rows: [
+        { 'Tool': 'Open WebUI', 'Type': '웹 앱 (Docker)', 'Best For': '입문자, 가장 쉬운 설치', 'Vector DB': '내장', 'Learning Curve': '없음' },
+        { 'Tool': 'LlamaIndex', 'Type': 'Python 프레임워크', 'Best For': '유연한 파이프라인', 'Vector DB': '모두 지원 (Chroma, Qdrant, Pinecone)', 'Learning Curve': '중간' },
+        { 'Tool': 'LangChain', 'Type': 'Python 프레임워크', 'Best For': '프로덕션 시스템', 'Vector DB': '모두 지원', 'Learning Curve': '중간' },
+        { 'Tool': 'Chroma', 'Type': '벡터 데이터베이스', 'Best For': '간단한 RAG', 'Vector DB': 'Chroma (임베디드)', 'Learning Curve': '낮음' },
+        { 'Tool': 'Qdrant', 'Type': '벡터 데이터베이스', 'Best For': '확장 가능한 RAG', 'Vector DB': 'Qdrant (분산형)', 'Learning Curve': '중간' },
+        { 'Tool': 'Weaviate', 'Type': '벡터 데이터베이스', 'Best For': 'GraphQL 쿼리', 'Vector DB': 'Weaviate', 'Learning Curve': '중간' },
+        { 'Tool': 'Milvus', 'Type': '벡터 데이터베이스', 'Best For': '대규모 처리', 'Vector DB': 'Milvus', 'Learning Curve': '높음' },
+        { 'Tool': 'Text-Generation-WebUI RAG', 'Type': '확장 기능', 'Best For': '모델과의 통합', 'Vector DB': '내장', 'Learning Curve': '낮음' },
+      ],
+      columns: ['Tool', 'Type', 'Best For', 'Vector DB', 'Learning Curve'],
+    },
+    openWebUIRAG: {
+      title: 'Open WebUI RAG는 어떻게 사용합니까? (가장 쉬운 방법)',
+      content: [
+        '**Open WebUI에는 내장 RAG 기능이 있습니다.** Docker 외에 별도 설정이 필요하지 않습니다. 문서를 업로드하고 질문하면 됩니다.',
+      ],
+      codeBlock: '# 1. Run Open WebUI with Docker\ndocker run -d -p 3000:8080 \\\n  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \\\n  ghcr.io/open-webui/open-webui:latest\n\n# 2. Open http://localhost:3000\n# 3. Click "+" next to message input → "Upload files"\n# 4. Select PDFs or text files\n# 5. Ask questions -- Open WebUI retrieves relevant chunks\n# 6. Model answers based on documents, with citations',
+      codeLanguage: 'bash',
+    },
+    llamaindex: {
+      title: 'LlamaIndex로 RAG를 구축하는 방법은 무엇입니까?',
+      content: [
+        '**LlamaIndex는 문서 로딩, 청킹, 임베딩, 검색을 처리하는 프레임워크입니다.** 유연하며 모든 벡터 데이터베이스를 지원합니다.',
+      ],
+      codeBlock: '# 1. Install\npip install llama-index\npip install llama-index-embeddings-ollama  # use local Ollama embeddings\npip install llama-index-vector-stores-chroma  # use Chroma for storage\n\n# 2. Simple RAG pipeline\nfrom llama_index.core import SimpleDirectoryReader, VectorStoreIndex\nfrom llama_index.embeddings.ollama import OllamaEmbedding\n\n# Load documents\ndocuments = SimpleDirectoryReader("./documents").load_data()\n\n# Create index with local embeddings\nembedding_model = OllamaEmbedding(model_name="nomic-embed-text")\nindex = VectorStoreIndex.from_documents(\n  documents,\n  embed_model=embedding_model\n)\n\n# Query\nquery_engine = index.as_query_engine()\nresponse = query_engine.query("What does the document say about X?")\nprint(response)',
+      codeLanguage: 'python',
+    },
+    langchain: {
+      title: 'LangChain으로 RAG를 구축하는 방법은 무엇입니까?',
+      content: [
+        '**LangChain은 프로덕션 RAG 시스템에서 가장 널리 사용되는 프레임워크입니다.** 모든 벡터 데이터베이스와 LLM 제공업체를 지원합니다.',
+      ],
+      codeBlock: '# pip install langchain langchain-community langchain-chroma\n\nfrom langchain.document_loaders import DirectoryLoader\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\nfrom langchain.embeddings import OllamaEmbeddings\nfrom langchain.vectorstores import Chroma\nfrom langchain.chat_models import ChatOllama\nfrom langchain.chains import RetrievalQA\n\n# Load documents\nloader = DirectoryLoader("./documents")\ndocs = loader.load()\n\n# Split into chunks\nsplitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)\nchunks = splitter.split_documents(docs)\n\n# Create embeddings and vector store\nembeddings = OllamaEmbeddings(model="nomic-embed-text")\nvectorstore = Chroma.from_documents(chunks, embeddings)\n\n# Create QA chain\nllm = ChatOllama(model="llama3.2:8b")\nqa = RetrievalQA.from_chain_type(\n  llm=llm,\n  chain_type="stuff",\n  retriever=vectorstore.as_retriever()\n)\n\n# Answer questions\nresult = qa.run("What does the document say about X?")\nprint(result)',
+      codeLanguage: 'python',
+    },
+    vectors: {
+      title: '로컬 RAG에 가장 적합한 벡터 데이터베이스는 무엇입니까?',
+      content: [
+        '**Chroma** (가장 쉬움): 인프로세스 벡터 데이터베이스. 서버 설정이 필요하지 않습니다. 소규모 RAG 프로젝트(문서 100만 개 미만)에 적합합니다.',
+        '**Qdrant** (확장 가능): 자체 호스팅 또는 클라우드. 대규모 RAG에 더 적합합니다. Chroma보다 더 많은 기능을 제공합니다.',
+        '**Weaviate**: GraphQL 기반. 임베딩에 대한 복잡한 쿼리에 적합합니다.',
+        '**Milvus**: 엔터프라이즈급. 초대규모 RAG(문서 1억 개 이상)에 적합합니다.',
+        '대부분의 로컬 배포에는 Chroma로 충분하며 가장 사용하기 쉽습니다.',
+      ],
+    },
+    ragVsFinetuning: {
+      title: 'RAG와 파인튜닝 중 무엇을 사용해야 합니까?',
+      content: '다음 기준을 참고하십시오:',
+      items: [
+        '**RAG를 사용하는 경우:** 문서가 자주 변경되거나, 출처 표시가 필요하거나, 모델 훈련 없이 시작하고 싶거나, 문서가 10만 개 미만인 경우.',
+        '**파인튜닝을 사용하는 경우:** 지식 베이스가 고정되어 있거나, 모델이 해당 도메인을 진정으로 "이해"하기를 원하거나, 추론 속도가 필요한 경우(파인튜닝된 모델이 더 빠름).',
+        '**둘 다 결합하는 경우:** 도메인에 맞게 모델을 파인튜닝한 후 RAG를 추가하여 매우 높은 품질의 Q&A를 구현합니다.',
+      ],
+    },
+    commonMistakes: {
+      title: '로컬 RAG 사용 시 흔한 실수',
+      items: [
+        '**잘못된 청크 크기 사용.** 너무 작으면(100 토큰) 조각이 너무 많아집니다. 너무 크면(2000 토큰) 구체성이 부족합니다. 최적은 500-1000 토큰입니다.',
+        '**임베딩을 사용하지 않는 경우.** 청크를 임베딩으로 변환하지 않으면 RAG를 수행할 수 없습니다. 영어에는 `nomic-embed-text`, 다국어에는 `bge-m3`를 사용하십시오.',
+        '**검색 품질을 평가하지 않는 경우.** RAG가 실행된다고 해서 올바른 문서를 검색하는 것은 아닙니다. 알려진 질문으로 테스트하고 검색된 청크가 관련성이 있는지 확인하십시오.',
+        '**RAG를 파인튜닝의 대체제로 취급하는 경우.** RAG는 검색 + 인컨텍스트 학습입니다. 파인튜닝은 실제 모델 적응입니다. 목적이 다른 도구입니다.',
+      ],
+    },
+    faqSection: {
+      id: 'faq',
+      title: '로컬 RAG에 관한 자주 묻는 질문',
+      faqs: [
+        {
+          q: '로컬 RAG는 문서를 몇 개까지 처리할 수 있습니까?',
+          a: '벡터 데이터베이스에 따라 다릅니다. Chroma는 소비자용 하드웨어에서 10만~100만 개의 문서를 쉽게 처리합니다. 100만 개를 초과하면 Qdrant 또는 Milvus를 사용하십시오.',
+        },
+        {
+          q: 'RAG는 이미지와 함께 작동합니까?',
+          a: '텍스트를 먼저 추출(OCR)한 경우에만 가능합니다. 진정한 이미지 이해를 위해서는 RAG와 함께 Llama 3.2 Vision과 같은 멀티모달 모델을 사용하십시오.',
+        },
+        {
+          q: 'RAG는 파인튜닝보다 느립니까?',
+          a: 'RAG는 검색(밀리초) + 컨텍스트 전달(프롬프트에 토큰 추가)이 필요합니다. 일반적으로 파인튜닝된 추론보다 느리지만 설정 속도는 훨씬 빠릅니다.',
+        },
+        {
+          q: '로컬 LLM과 클라우드 임베딩을 함께 사용할 수 있습니까?',
+          a: '가능합니다. 검색에는 클라우드 임베딩(OpenAI, Cohere)을 사용하고 답변에는 로컬 LLM을 사용하는 하이브리드 방식이 일반적입니다.',
+        },
+      ],
+    },
+    relatedReading: {
+      id: 'related-reading',
+      title: '관련 자료',
+      items: [
+        '[최고의 로컬 LLM 프런트엔드](/local-llms/best-local-llm-frontends) -- Open WebUI에는 내장 RAG 기능이 있습니다.',
+        '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 임베딩을 위한 설정.',
+        '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- RAG용 추론 엔진.',
+        '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- RAG 파이프라인에서 API를 통해 LLM 사용.',
+      ],
+    },
+    sources: {
+      id: 'sources',
+      title: '출처',
+      items: [
+        'LlamaIndex Documentation -- docs.llamaindex.ai',
+        'LangChain Documentation -- python.langchain.com',
+        'Chroma Documentation -- docs.trychroma.com',
+        'Qdrant Documentation -- qdrant.tech/documentation',
+        'RAG Paper -- arxiv.org/abs/2005.11401',
+      ],
+    },
+  },
+},
   };

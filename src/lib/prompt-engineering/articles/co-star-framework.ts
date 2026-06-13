@@ -2486,7 +2486,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     readTime: '8분 분량',
     educationalLevel: 'Intermediate',
     primaryTerm: 'CO-STAR 프레임워크',
-    targetKeywords: ['CO-STAR 프레임워크', 'CO-STAR 프롬프트', 'CO-STAR 방법론', '프롬프트 엔지니어링 프레임워크', '구조화된 프롬프트 작성법', 'AI 프롬프트 구조', '프롬프트 템플릿'],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -2513,16 +2512,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
       },
     },
-    breadcrumbSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      inLanguage: 'ko',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
-        { '@type': 'ListItem', position: 3, name: 'CO-STAR 프레임워크: 컨텍스트, 목표, 스타일, 어조, 대상, 응답', item: 'https://www.promptquorum.com/ko/prompt-engineering/co-star-framework' },
-      ],
-    },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -2541,23 +2530,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Question', name: 'CO-STAR가 RISEN, CRAFT 및 다른 프레임워크와 어떻게 비교됩니까?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR(6요소, 대상 중심)는 커뮤니케이션 작업에 적합합니다. CRAFT(5요소, 역할 지향)는 작업 실행에, RISEN은 역할과 목표에, SPECS는 문제 해결에 집중합니다.' } },
       ],
     },
-    quickAnswerTop: {
-      ko: {
-        question: 'CO-STAR 프레임워크란 무엇입니까?',
-        answer: 'CO-STAR는 컨텍스트(Context), 목표(Objective), 스타일(Style), 어조(Tone), 대상(Audience), 응답(Response)의 약어입니다. 이 6개 구성 요소를 하나의 프롬프트에 정의하여 AI 모델이 복잡한 작업을 정확하게 수행할 수 있도록 하는 구조화된 프롬프트 프레임워크입니다.',
-        bullets: [
-          '6개 구성 요소: 컨텍스트, 목표, 스타일, 어조, 대상, 응답',
-          '문서화, 온보딩 자료, 고객 대상 콘텐츠에 이상적',
-          '모든 주요 언어 모델(클라우드 API 및 Ollama 로컬 모델)에서 작동',
-          '최소 실행 가능 프롬프트: 컨텍스트 + 목표 + 응답',
-        ],
-        updatedDate: '2026-05-04',
-      },
-    },
-    snippetBlocks: [
-      { type: 'one-sentence', text: 'CO-STAR 프레임워크는 컨텍스트, 목표, 스타일, 어조, 대상, 응답의 6개 구성 요소로 AI 프롬프트를 구조화하여 복잡한 작업에서 일관되고 고품질의 출력을 생성합니다.' },
-      { type: 'plain-terms', text: 'CO-STAR는 AI에게 무엇을 해야 하는지(목표), 왜 해야 하는지(컨텍스트), 어떻게 작성해야 하는지(스타일 및 어조), 누구를 위해 작성해야 하는지(대상), 어떤 형식으로 작성해야 하는지(응답)를 알려주는 6부분 프롬프트 공식입니다.' },
-    ],
     leadAnswerBlock: 'CO-STAR 프레임워크는 명확하고 일관된 AI 출력을 만들기 위해 프롬프트를 컨텍스트, 목표, 스타일, 어조, 대상, 응답의 6개 부분으로 나누는 구조화된 방법입니다. 복잡한 문서화, 커뮤니케이션, 교육 작업에 효과적입니다.',
     sections: {
       whatIsCOSTAR: {

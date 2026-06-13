@@ -3998,15 +3998,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'ko',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
       },
-      breadcrumbSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-          { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
-          { '@type': 'ListItem', position: 3, name: '프롬프트 라이브러리 구축 방법', item: 'https://www.promptquorum.com/ko/prompt-engineering/build-a-prompt-library' },
-        ],
-      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -4066,9 +4057,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '태그(예: #조사, #마케팅, #지원, #코드-검토).',
             '담당자 및 간단한 버전("v1.2 - 새 모델용으로 업데이트됨").',
           ],
-          snippetBlocks: [
-            { type: 'one-sentence', text: '프롬프트 라이브러리는 팀의 모든 구성원이 원작자 없이도 결과를 재현할 수 있도록 충분한 메타데이터를 갖춘 구조화된 재사용 가능한 자산으로 검증된 프롬프트를 저장합니다.' },
-            { type: 'plain-terms', text: '레시피 박스처럼 생각하십시오. 한 사람이 레시피를 테스트하고 정확한 재료와 단계를 적어두면, 이제 팀 전체가 같은 요리를 만들 수 있습니다. 원래 요리사가 휴가 중이어도 괜찮습니다.' },
+          snippets: [
+            { type: 'in-one-sentence', text: '프롬프트 라이브러리는 팀의 모든 구성원이 원작자 없이도 결과를 재현할 수 있도록 충분한 메타데이터를 갖춘 구조화된 재사용 가능한 자산으로 검증된 프롬프트를 저장합니다.' },
+            { type: 'in-plain-terms', text: '레시피 박스처럼 생각하십시오. 한 사람이 레시피를 테스트하고 정확한 재료와 단계를 적어두면, 이제 팀 전체가 같은 요리를 만들 수 있습니다. 원래 요리사가 휴가 중이어도 괜찮습니다.' },
           ],
         },
         libraryAsset: {
@@ -4139,9 +4130,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**사용 가능한 프롬프트 라이브러리를 구축하는 가장 빠른 방법은 일상 업무에서 실제 프롬프트를 수집하고, 공통 템플릿으로 정규화한 다음, 가벼운 거버넌스를 추가하는 것입니다.**',
             '실용적인 접근 방법:',
           ],
-          snippetBlocks: [
-            { type: 'one-sentence', text: '프롬프트 라이브러리는 팀이 효과적인 것을 재사용할 수 있도록 명확한 메타데이터를 갖춘 검증된 프롬프트의 구조화된 저장소입니다.' },
-            { type: 'plain-terms', text: '레시피 박스처럼 생각하십시오. 한 사람이 레시피를 테스트하고 정확한 재료와 단계를 적어두면 팀 전체가 같은 요리를 만들 수 있습니다. 원래 요리사가 휴가 중이어도 괜찮습니다.' },
+          snippets: [
+            { type: 'in-one-sentence', text: '프롬프트 라이브러리는 팀이 효과적인 것을 재사용할 수 있도록 명확한 메타데이터를 갖춘 검증된 프롬프트의 구조화된 저장소입니다.' },
+            { type: 'in-plain-terms', text: '레시피 박스처럼 생각하십시오. 한 사람이 레시피를 테스트하고 정확한 재료와 단계를 적어두면 팀 전체가 같은 요리를 만들 수 있습니다. 원래 요리사가 휴가 중이어도 괜찮습니다.' },
           ],
           numberedItems: [
             '실제 고가치 사용 사례로 시작하십시오: AI가 이미 도움이 되는 반복적인 작업 3~5개를 선택하십시오(회의 요약, 지원 응답, 코드 검토 댓글, 캠페인 초안).',

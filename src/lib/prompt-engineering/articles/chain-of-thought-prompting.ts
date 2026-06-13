@@ -3309,7 +3309,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
   audience: 'GPT-5.5, Claude, Gemini 또는 로컬 LLM으로 개발하는 개발자, 데이터 과학자, 팀',
   next_refresh_due: '2026-11-03',
   aboutTopics: ['Chain-of-Thought 프롬프팅', '구조화된 추론', '프롬프트 엔지니어링', '추론 모델'],
-  targetKeywords: ['chain of thought 프롬프팅', '단계별 추론 AI', '프롬프트 엔지니어링 기법', 'CoT 프롬프팅', 'AI 추론 향상'],
   toc: [
     { label: '핵심 요점', anchor: '#key-takeaways' },
     { label: '빠른 사실', anchor: '#quick-facts' },
@@ -3351,19 +3350,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       cssSelector: ['.article-intro', '.key-takeaways'],
     },
   },
-  breadcrumbSchema: {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-      { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
-      { '@type': 'ListItem', position: 3, name: 'Chain-of-Thought 프롬프팅: AI가 추론 과정을 보여주게 하는 방법', item: 'https://www.promptquorum.com/ko/prompt-engineering/chain-of-thought-prompting' },
-    ],
-  },
-  snippetBlocks: [
-    { type: 'one-sentence', text: 'Chain-of-thought 프롬프팅은 AI 모델이 최종 답변 전에 추론 단계를 단계별로 보여주도록 요청하여 정확도를 최대 40%까지 향상시키는 기법입니다.' },
-    { type: 'plain-terms', text: 'AI에게 단계별로 생각해 봐라고 말하면, AI는 문제 해결 과정을 보여주며 답합니다. 이렇게 하면 실수를 찾기 쉽고, 결과를 신뢰하기도 쉬워집니다.' },
-  ],
   sections: {
     tldr: {
       isTldr: true,

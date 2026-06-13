@@ -1525,4 +1525,239 @@ schema: {
         },
       },
     },
-  };
+  ko: {
+    freshness_tier: 'semi_annual',
+    theme: 'GPU 구매 가이드',
+    title: '로컬 LLM을 위한 최고의 AMD GPU',
+    seoTitle: '로컬 LLM용 AMD GPU 2026: RX 7900 XTX vs RTX 비교 가이드',
+    intro: '**AMD RX 6800 XT와 RX 7900 XTX는 NVIDIA의 견실한 대안으로, 달러당 연산 성능이 15-20% 우수합니다. 다만 ONNX Runtime 및 vLLM 드라이버 지원이 상대적으로 취약합니다.** 2026년 4월 현재 AMD ROCm(HIP)은 성숙 단계에 접어들었으나, 호환성 레이어로 인한 설정 부담이 여전히 존재합니다. NVIDIA CUDA는 로컬 LLM 구동에 있어 여전히 가장 수월한 경로입니다. AMD는 중고 제품을 저렴하게 구입하거나 이미 AMD 하드웨어를 보유한 경우에만 사용을 권장합니다.',
+    metaDescription: 'AMD RX 6800 XT, RX 7900 XTX vs NVIDIA RTX 비교: ROCm 설치, vLLM 성능, TFLOP당 비용 분석, AMD 선택 시기. 2026년 4월 업데이트.',
+    publishDate: '2026-04-05',
+    dateModified: '2026-04-18',
+    lastFactChecked: '2026-04-18',
+    next_refresh_due: '2026-10-05',
+    leadAnswerBlock: '**AMD RX 6800 XT와 RX 7900 XTX는 NVIDIA의 견실한 대안으로, 달러당 연산 성능이 15-20% 우수하지만 ONNX Runtime 및 vLLM 드라이버 지원이 상대적으로 취약합니다.**',
+    audience: 'Ollama 또는 LM Studio에 익숙하며 로컬 LLM 워크플로를 최적화하려는 개발자',
+    readTime: '7분',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AMD GPU',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'NewsArticle',
+      'headline': '로컬 LLM용 최고의 AMD GPU 2026: RX 7900 XTX',
+      'description': 'AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX 비교. ROCm 설치, vLLM 성능, TFLOP당 비용 분석. CUDA 대신 AMD를 선택해야 하는 경우. 2026년 4월.',
+      'url': 'https://www.promptquorum.com/ko/local-llms/best-amd-gpus-local-llm',
+      'datePublished': '2026-04-05',
+      'dateModified': '2026-04-18',
+      'inLanguage': 'ko',
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'about': [
+        { '@type': 'Thing', 'name': 'AMD GPU' },
+        { '@type': 'Thing', 'name': 'ROCm' },
+        { '@type': 'Thing', 'name': 'GPU VRAM' },
+        { '@type': 'Thing', 'name': '로컬 LLM 추론' },
+      ],
+      'speakable': {
+        '@type': 'SpeakableSpecification',
+        'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
+      },
+      'educationalLevel': 'Intermediate',
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'ko',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '로컬 LLM용으로 AMD RX 6800 XT와 NVIDIA RTX 3080 중 어느 것을 구입해야 합니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '단순함을 중시한다면 RTX 3080(CUDA는 바로 작동합니다). 25% 더 나은 가성비를 원하고 5-10시간의 ROCm 설정을 감수할 수 있다면 RX 6800 XT를 권장합니다.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'AMD RX 7900 XTX가 RTX 4090보다 우수합니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '속도는 비슷하고 VRAM도 동일(24GB)합니다. RX 7900 XTX는 중고 기준 $200-300 더 저렴합니다($450-550 대 $1,000-1,300). ROCm 설정이 트레이드오프입니다.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'AMD GPU로 Ollama를 사용할 수 있습니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '기술적으로는 가능하지만 불안정한 동작이 예상됩니다. CPU 폴백이 자주 발생합니다. AMD에서는 vLLM 또는 llama.cpp를 사용하십시오.' }
+        },
+        {
+          '@type': 'Question',
+          'name': '2026년 로컬 LLM을 위한 최적의 AMD 경로는 무엇입니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama.cpp(HIP 백엔드) + Text Generation WebUI입니다. 두 도구 모두 AMD 지원이 견실합니다. Ollama는 피하십시오.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'AMD ROCm에 Ubuntu가 필요합니까, 아니면 Windows에서도 작동합니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Windows 지원(HIP on Windows)도 있지만 더 최신이고 버그가 많습니다. Ubuntu가 권장 경로입니다.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'RX 6700 또는 6750은 7B 모델에 적합합니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'RX 6700(12GB)은 작동하지만 RX 6800 XT보다 20% 느립니다. $250 미만일 경우에만 구입하십시오. 그렇지 않으면 6800 XT를 선택하십시오.' }
+        },
+        {
+          '@type': 'Question',
+          'name': '하나의 시스템에서 AMD와 NVIDIA GPU를 혼용할 수 있습니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '이론적으로는 가능하지만 관리가 매우 복잡합니다. 각 GPU마다 별도의 CUDA/HIP 런타임이 필요합니다. 권장하지 않습니다.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'AMD RX 7900 XTX의 VRAM 용량은 얼마입니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'AMD RX 7900 XTX는 24GB GDDR6 VRAM을 탑재하고 있습니다. RTX 4090과 동일한 용량으로, Q4 양자화 기준 70B 모델을 실행할 수 있는 가장 강력한 AMD 소비자용 카드입니다.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'AMD ROCm은 프로덕션 LLM 추론에 충분히 안정적입니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'ROCm 6.x(2025)는 ROCm 5.x보다 훨씬 안정적입니다. 프로덕션 환경에서는 Ubuntu 22.04+ 위의 llama.cpp HIP 백엔드 스택이 가장 신뢰성이 높습니다. AMD에서 Ollama를 프로덕션 워크로드에 사용하는 것은 피하십시오.' }
+        },
+        {
+          '@type': 'Question',
+          'name': '$400 이하에서 가장 적합한 AMD GPU는 무엇입니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'AMD RX 6800 XT(16GB, 중고 약 $220-300)가 $400 이하에서 최고의 가성비 AMD GPU입니다. llama.cpp HIP 백엔드를 통해 Q4 기준 13B 모델을 원활하게, Q8 기준 7B 모델을 편안하게 실행합니다.' }
+        },
+      ]
+    },
+    toc: [
+      { label: '요약', anchor: '#tldr' },
+      { label: '실제로 사용할 만한 AMD GPU는?', anchor: '#which-amd' },
+      { label: 'AMD GPU와 RTX의 가격·성능 비교', anchor: '#amd-vs-nvidia' },
+      { label: 'AMD ROCm 설정의 부담은?', anchor: '#rocm-setup' },
+      { label: 'AMD에서 Ollama와 vLLM을 실행할 수 있는가?', anchor: '#software-support' },
+      { label: 'AMD를 NVIDIA 대신 선택해야 하는 경우', anchor: '#when-buy-amd' },
+      { label: 'AMD 도입 시 흔한 실수', anchor: '#mistakes' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'AMD RX 6800 XT(16GB, 중고 $300-350)와 RX 7900 XTX(24GB, 중고 $400-500)는 로컬 LLM에 실질적으로 사용 가능한 유일한 AMD 옵션입니다.',
+          '달러당 성능: AMD는 NVIDIA보다 20-30% 저렴하지만, 소프트웨어 설정 부담으로 5-10시간이 추가로 소요됩니다.',
+          'Ollama: AMD 지원이 제한적입니다(ROCm 경로에 버그 존재, CPU 폴백 속도 느림). 권장하지 않습니다.',
+          'vLLM: v0.6.0부터 AMD ROCm 완전 지원. 단, 수동 드라이버 설치가 필요합니다. 설정을 완료하면 잘 작동합니다.',
+          'Text Generation WebUI: ROCm을 통한 AMD 지원이 우수합니다. AMD에서 최고의 사용자 경험을 제공합니다.',
+          'Llama.cpp: AMD 네이티브 지원(HIP 백엔드). 안정적인 성능. AMD에서 권장되는 경로입니다.',
+          '설정 비용: ROCm 드라이버 디버깅, HIPCC 컴파일, 커널 호환성 확인에 5-10시간을 계획하십시오.',
+          '결론(2026년 4월): AMD 하드웨어를 이미 보유하고 있거나 저렴한 중고 제품(16GB 카드 $300)을 발견한 경우에만 AMD를 선택하십시오. 그렇지 않으면 NVIDIA CUDA가 여전히 더 간편합니다.',
+        ],
+      },
+      'which-amd': {
+        title: '실제로 사용할 만한 AMD GPU는?',
+        items: [
+          '**RX 6800 XT** (16GB GDDR6): AMD 가성비의 왕. 2020년 출시. 7B-22B 추론에 여전히 견실합니다. 중고: $300-350.',
+          '**RX 6900 XT** (16GB GDDR6): 6800 XT보다 소폭 빠릅니다. 희귀합니다. 중고: $350-400. 가격 차이만큼의 가치가 없습니다.',
+          '**RX 7900 XT** (20GB GDDR6): 신형 RDNA 3 아키텍처. 6800 XT보다 20% 빠릅니다. 중고: $400-480. 70B Q4에 적합합니다.',
+          '**RX 7900 XTX** (24GB GDDR6): AMD 최상위 소비자용 GPU. 24GB VRAM은 70B 모델 구동의 판도를 바꿉니다. 중고: $450-550. RTX 4090과 유사한 속도.',
+          '**Radeon Pro W6800 (32GB)**: 엔터프라이즈 카드, 중고 가격이 저렴합니다(약 $200-300). 속도는 느리지만 32GB는 70B Q8에 탁월합니다. 틈새 선택지.',
+        ],
+      },
+      'amd-vs-nvidia': {
+        title: 'AMD GPU와 RTX의 가격·성능 비교',
+        rows: [
+          { '0': 'RX 6800 XT', '1': '16GB', '2': '1,952', '3': '$300-350', '4': '+25%', '5': 'RTX 3080 (느림)' },
+          { '0': 'RX 7900 XT', '1': '20GB', '2': '2,540', '3': '$400-480', '4': '+20%', '5': 'RTX 4080 (유사)' },
+          { '0': 'RX 7900 XTX', '1': '24GB', '2': '2,750', '3': '$450-550', '4': '+15%', '5': 'RTX 4090 (유사 속도)' },
+          { '0': 'RTX 3080', '1': '10GB', '2': '1,456', '3': '$350-400', '4': '--', '5': '--' },
+          { '0': 'RTX 4090', '1': '24GB', '2': '2,752', '3': '$1,000-1,300', '4': '--', '5': '--' },
+        ],
+        columns: ['GPU', 'VRAM', 'TFLOPS', '중고 가격', '달러당 성능 vs. RTX', '동급 RTX'],
+      },
+      'rocm-setup': {
+        title: 'AMD ROCm 설정의 부담은?',
+        content: [
+          '**1. AMD ROCm 드라이버 설치: `apt-get install rocm-dkms` (Ubuntu). Windows에서는 수동 .exe 설치 프로그램 사용. 약 30분 소요.**',
+          '2. HIP 컴파일러 확인: `hipcc --version`. 첫 시도에서 실패하는 경우가 많습니다. GPU 커널 호환성을 디버깅하십시오.',
+          '3. HIPCC(AMD HIP-to-C++ 컴파일러) 설치: `apt-get install hip-runtime-amd`. 또 다른 의존성 체인입니다.',
+          '4. 소형 LLM으로 테스트: 추론을 실행하여 GPU 가속이 작동하는지 확인합니다. CPU 폴백이 자주 발생합니다.',
+          '5. 드라이버 버전 불일치 해결: ROCm v5.7은 커널 5.15에서 작동하지만 6.x에서는 작동하지 않습니다. 2-4시간의 디버깅이 필요합니다.',
+          'NVIDIA CUDA와 비교: `nvidia-cuda-toolkit` → apt-get 한 번으로 즉시 GPU 접근 가능. AMD는 5-10배 더 많은 설정 부담이 있습니다.',
+        ],
+      },
+      'software-support': {
+        title: 'AMD에서 Ollama와 vLLM을 실행할 수 있는가?',
+        content: [
+          '**AMD에서의 Ollama:** 2026년 4월 기준 실험적/불안정 단계. ROCm 경로가 때때로 작동하지만 CPU 폴백은 느립니다. 권장하지 않습니다.',
+          '**AMD에서의 vLLM:** v0.6.0부터 완전한 ROCm 지원. 잘 작동하지만 ROCm/HIP 드라이버 수동 설정이 필요합니다. 설정을 완료하면 좋은 성능을 발휘합니다.',
+          '**Text Generation WebUI:** AMD ROCm 지원이 우수합니다. AMD에서 최고의 사용자 경험. 권장합니다.',
+          '**Llama.cpp:** 네이티브 HIP 백엔드. 안정적인 성능. 가장 간편한 AMD 경로. 권장합니다.',
+          '**LM Studio:** NVIDIA 전용. AMD 지원 없음.',
+          '2026년 4월 기준: vLLM + llama.cpp가 AMD에서의 선택지입니다. Ollama는 신뢰할 수 없습니다.',
+        ],
+      },
+      'when-buy-amd': {
+        title: 'AMD를 NVIDIA 대신 선택해야 하는 경우',
+        content: [
+          'AMD를 구입해야 하는 경우:',
+          '- 중고 RX 7900 XTX를 $450 미만에 발견한 경우(RTX 4090 대비 저평가된 가격).',
+          '- 이미 AMD 하드웨어를 보유하고 있으며 에코시스템 일관성을 원하는 경우.',
+          '- 클러스터를 구축 중이며 설정 편의성보다 달러당 연산 성능을 우선시하는 경우.',
+          'AMD를 구입하지 말아야 하는 경우:',
+          '- 플러그 앤 플레이 경험을 원하는 경우. NVIDIA CUDA가 더 빠르게 작동합니다.',
+          '- Ollama가 필요한 경우. AMD 지원이 불안정합니다.',
+          '- 시간이 제한되어 있는 경우. ROCm 디버깅에 10시간 이상 소요될 수 있습니다.',
+        ],
+      },
+      'mistakes': {
+        title: 'AMD 도입 시 흔한 실수',
+        items: [
+          'RX 6700(12GB)을 3060 12GB와 동급으로 착각하고 구입하는 것 — 20% 느리며 중고 시장에서 찾기도 어렵습니다.',
+          'ROCm이 CUDA처럼 "그냥 작동"한다고 가정하는 것 — 드라이버 및 커널 호환성 디버깅에 5-10시간을 계획하십시오.',
+          'AMD에서 Ollama를 사용하며 원활한 통합을 기대하는 것 — ROCm 경로에 버그가 있습니다. llama.cpp 또는 vLLM이 더 나은 선택입니다.',
+        ],
+      },
+      'faqSection': {
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '로컬 LLM용으로 AMD RX 6800 XT와 NVIDIA RTX 3080 중 어느 것을 구입해야 합니까?', a: '단순함을 중시한다면 RTX 3080(CUDA는 바로 작동합니다). 25% 더 나은 가성비를 원하고 5-10시간의 ROCm 설정을 감수할 수 있다면 RX 6800 XT를 권장합니다.' },
+          { q: 'AMD RX 7900 XTX가 RTX 4090보다 우수합니까?', a: '속도는 비슷하고 VRAM도 동일(24GB)합니다. RX 7900 XTX는 중고 기준 $200-300 더 저렴합니다($450-550 대 $1,000-1,300). ROCm 설정이 트레이드오프입니다.' },
+          { q: 'AMD GPU로 Ollama를 사용할 수 있습니까?', a: '기술적으로는 가능하지만 불안정한 동작이 예상됩니다. CPU 폴백이 자주 발생합니다. AMD에서는 vLLM 또는 llama.cpp를 사용하십시오.' },
+          { q: '2026년 로컬 LLM을 위한 최적의 AMD 경로는 무엇입니까?', a: 'Llama.cpp(HIP 백엔드) + Text Generation WebUI입니다. 두 도구 모두 AMD 지원이 견실합니다. Ollama는 피하십시오.' },
+          { q: 'AMD ROCm에 Ubuntu가 필요합니까, 아니면 Windows에서도 작동합니까?', a: 'Windows 지원(HIP on Windows)도 있지만 더 최신이고 버그가 많습니다. Ubuntu가 권장 경로입니다.' },
+          { q: 'RX 6700 또는 6750은 7B 모델에 적합합니까?', a: 'RX 6700(12GB)은 작동하지만 RX 6800 XT보다 20% 느립니다. $250 미만일 경우에만 구입하십시오. 그렇지 않으면 6800 XT를 선택하십시오.' },
+          { q: '하나의 시스템에서 AMD와 NVIDIA GPU를 혼용할 수 있습니까?', a: '이론적으로는 가능하지만 관리가 매우 복잡합니다. 각 GPU마다 별도의 CUDA/HIP 런타임이 필요합니다. 권장하지 않습니다.' },
+        ],
+      },
+      'relatedReading': {
+        title: '관련 자료',
+        items: [
+          '[로컬 LLM용 저예산 최고 GPU](/ko/local-llms/best-budget-gpus-local-llm)',
+          '[로컬 LLM용 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms)',
+          '[GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+          '[Text Generation WebUI vs vLLM vs Llama.cpp](/ko/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
+          '[로컬 LLM용 노트북 vs 데스크톱](/ko/local-llms/laptop-vs-desktop-local-llm) — AI를 위한 노트북과 데스크톱의 비용 및 성능 비교.',
+        ],
+      },
+      'sources': {
+        title: '참고 자료',
+        items: [
+          'AMD ROCm 공식 문서 및 GitHub: HIP 컴파일러, 드라이버 호환성 매트릭스, LLM 추론 예제',
+          'vLLM GitHub: AMD/ROCm 백엔드 구현 및 지원 현황(v0.6.0+)',
+          'Llama.cpp GitHub: AMD GPU 지원을 위한 HIP 백엔드',
+          'AMD GPU는 초당 토큰 속도가 우수하지만, 속도만으로 응답 품질이 결정되지는 않습니다. 모델에게 무엇을 묻느냐가 응답 속도만큼 중요합니다. [context windows explained](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets)에서는 GPU 메모리 한계 내에서 긴 요청을 구성하는 방법을 설명합니다.',
+        ],
+      },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'url': 'https://www.promptquorum.com/ko/local-llms/best-amd-gpus-local-llm',
+      'inLanguage': 'ko',
+      name: '로컬 LLM용 최고의 AMD GPU',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT(16GB, 중고 $300-350)와 RX 7900 XTX(24GB, 중고 $400-500)는 로컬 LLM에 실질적으로 사용 가능한 유일한 AMD 옵션입니다.' },
+        { '@type': 'ListItem', position: 2, name: '달러당 성능: AMD는 NVIDIA보다 20-30% 저렴하지만, 소프트웨어 설정 부담으로 5-10시간이 추가로 소요됩니다.' },
+        { '@type': 'ListItem', position: 3, name: 'Ollama: AMD 지원이 제한적입니다(ROCm 경로에 버그 존재, CPU 폴백 속도 느림). 권장하지 않습니다.' },
+        { '@type': 'ListItem', position: 4, name: 'vLLM: v0.6.0부터 AMD ROCm 완전 지원. 단, 수동 드라이버 설치가 필요합니다. 설정을 완료하면 잘 작동합니다.' },
+        { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI: ROCm을 통한 AMD 지원이 우수합니다. AMD에서 최고의 사용자 경험을 제공합니다.' },
+        { '@type': 'ListItem', position: 6, name: 'Llama.cpp: AMD 네이티브 지원(HIP 백엔드). 안정적인 성능. AMD에서 권장되는 경로입니다.' },
+        { '@type': 'ListItem', position: 7, name: '설정 비용: ROCm 드라이버 디버깅, HIPCC 컴파일, 커널 호환성 확인에 5-10시간을 계획하십시오.' },
+        { '@type': 'ListItem', position: 8, name: '결론(2026년 4월): AMD 하드웨어를 이미 보유하고 있거나 저렴한 중고 제품을 발견한 경우에만 AMD를 선택하십시오. 그렇지 않으면 NVIDIA CUDA가 여전히 더 간편합니다.' },
+      ],
+    },
+  },
+};

@@ -192,11 +192,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'تحويل الكلام إلى نص محليًا للمنازل الذكية: Whisper + HA (2026)',
-    seoTitle: 'Whisper + Home Assistant 2026: دليل تحويل الكلام إلى نص المحلي',
+    seoTitle: 'Whisper + Home Assistant 2026: تحويل الكلام محليًا',
     intro:
       'يمنح Whisper المحلي Home Assistant خاصية تحويل الكلام إلى نص بشكل خاص دون سحابة: تختار حجم نموذج Whisper لتحقيق التوازن بين الدقة والسرعة والأجهزة، ثم تربطه بـ Assist عبر بروتوكول Wyoming. يتناول هذا الدليل سبب أهمية تحويل الكلام إلى نص المحلي، وأحجام نماذج Whisper، وإعداد Wyoming، ومتطلبات الأجهزة، وكيفية ضبط الدقة.',
     metaDescription:
-      'أضف تحويل الكلام إلى نص محليًا لـ Home Assistant مع Whisper: أحجام النماذج ومتطلبات الأجهزة والدقة مقابل السرعة وإعداد Wyoming. نسخ خاص دون إنترنت.',
+      '5 أحجام نماذج Whisper لـ Home Assistant — tiny على CPU، large مع GPU. اربط بـ Assist عبر Wyoming لنسخ صوتي خاص دون إنترنت.',
     twitterDescription:
       'تحويل كلام إلى نص خاص لـ Home Assistant مع Whisper المحلي: اختر حجم النموذج، اربط عبر Wyoming، اضبط الدقة. بدون سحابة.',
     readTime: '8 دقائق للقراءة',

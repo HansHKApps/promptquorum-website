@@ -1385,4 +1385,155 @@ schema: {
         ],
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Tools & Interfaces',
+      title: '로컬 LLM용 데스크톱 vs 웹 UI: 어떤 인터페이스를 선택해야 합니까?',
+      seoTitle: '로컬 LLM용 데스크톱 vs 웹 UI',
+      intro: '로컬 LLM 도구는 두 가지 인터페이스 방식으로 제공됩니다: 데스크톱 애플리케이션(LM Studio, Jan AI)과 웹 UI(Open WebUI, Enchanted UI). 데스크톱 앱은 일반 사용자에게 더 간단하며, 웹 UI는 더 강력하고 공유가 용이합니다. 2026년 4월 기준, 두 방식 모두 성숙한 단계에 이르렀으며 선택은 전적으로 워크플로우에 따라 결정됩니다.',
+      metaDescription: '로컬 LLM용 데스크톱 vs 웹 UI 2026: 인터페이스, 기능, 공유, 확장성 비교. 프로덕션 배포 시 각 방식의 활용 시점을 안내합니다.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**로컬 LLM 도구는 두 가지 인터페이스 방식으로 제공됩니다: 데스크톱 애플리케이션(LM Studio, Jan AI)과 웹 UI(Open WebUI, Enchanted UI). 데스크톱 앱은 일반 사용자에게 더 간단하며, 웹 UI는 더 강력하고 공유가 용이합니다.**',
+      audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
+      readTime: '9분 읽기',
+      educationalLevel: 'Beginner',
+      primaryTerm: '로컬 LLM 인터페이스',
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: '데스크톱 애플리케이션', anchor: '#desktop-apps' },
+        { label: '웹 UI', anchor: '#web-uis' },
+        { label: '기능 비교', anchor: '#feature-comparison' },
+        { label: '각 방식의 선택 시점', anchor: '#when-to-choose' },
+        { label: '두 방식을 동시에 사용할 수 있습니까?', anchor: '#use-both' },
+        { label: '일반적인 실수', anchor: '#common-mistakes' },
+        { label: '자주 묻는 질문', anchor: '#common-questions' },
+        { label: '관련 읽을거리', anchor: '#related-reading' },
+        { label: '출처', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**데스크톱 앱** (LM Studio, Jan AI): 간단하고 단일 사용자 방식이며 서버 설정이 필요 없습니다. 일반 사용자에게 최적입니다.',
+            '**웹 UI** (Open WebUI, Enchanted): 브라우저 기반이며 공유 가능하고 다중 사용자를 지원합니다. 팀 및 파워 유저에게 최적입니다.',
+            '두 방식 모두 동일한 기반 모델(Ollama, vLLM)에 연결됩니다. 두 방식 간에 전환이 가능합니다.',
+            '데스크톱 앱은 초보자에게 더 쉽고, 웹 UI는 전문가에게 더 유연합니다.',
+            '2026년 4월 기준, 두 방식 모두 성숙하고 프로덕션 수준에 도달했습니다.',
+          ],
+        },
+        desktopApps: {
+          title: '데스크톱 애플리케이션이란 무엇입니까?',
+          content: [
+            '**데스크톱 앱은 운영 체제에서 직접 실행되는 네이티브 애플리케이션입니다.** 예: LM Studio, Jan AI.',
+            '**장점:** 간단한 설정, 서버 지식 불필요, 단일 사용자, 독립 실행형 애플리케이션으로 구동, GUI에서 GPU 설정 가능.',
+            '**단점:** 주로 Windows/macOS 전용, 단일 기기 한정, 다중 사용자 접근 불가, 간편한 공유 불가.',
+          ],
+        },
+        webUIs: {
+          title: '웹 UI란 무엇입니까?',
+          content: [
+            '**웹 UI는 브라우저를 통해 접근하는 인터페이스입니다.** 웹 서버(보통 Docker)를 실행하고 브라우저 기반 인터페이스를 제공합니다. 예: Open WebUI, Enchanted UI.',
+            '**장점:** 브라우저 기반(모든 OS에서 작동), URL로 공유 가능, 다중 사용자 지원, 네트워크 내 다른 기기에서 접근 가능, 더 강력한 기능 제공.',
+            '**단점:** Docker 또는 포트에 대한 이해 필요, 설정이 다소 복잡, 실행 중인 웹 서버 필요.',
+          ],
+        },
+        featureComp: {
+          title: '기능 비교: 데스크톱 vs 웹 UI',
+          rows: [
+            { 'Feature': '설정 복잡도', 'Desktop': '매우 쉬움', 'Web UI': '보통' },
+            { 'Feature': 'GPU 설정 GUI', 'Desktop': '있음', 'Web UI': '경우에 따라 다름' },
+            { 'Feature': '다중 사용자 접근', 'Desktop': '없음', 'Web UI': '있음' },
+            { 'Feature': '다른 기기에서 접근', 'Desktop': '없음', 'Web UI': '있음(설정 시)' },
+            { 'Feature': '내장 채팅', 'Desktop': '있음', 'Web UI': '있음' },
+            { 'Feature': 'RAG 지원', 'Desktop': '제한적', 'Web UI': '완전 지원(Open WebUI)' },
+            { 'Feature': 'API 노출', 'Desktop': '경우에 따라 다름', 'Web UI': '있음' },
+            { 'Feature': '운영 체제', 'Desktop': 'macOS, Windows', 'Web UI': '모든 OS(Docker)' },
+            { 'Feature': '리소스 오버헤드', 'Desktop': '낮음', 'Web UI': '보통(Docker)' },
+          ],
+          columns: ['Feature', 'Desktop', 'Web UI'],
+        },
+        whenToChoose: {
+          title: '데스크톱 vs 웹 UI 중 언제 무엇을 선택해야 합니까?',
+          content: '다음의 경우 데스크톱 앱을 선택하십시오:',
+          items: [
+            '일반 사용자 또는 비기술적 사용자인 경우.',
+            '가능한 한 간단한 설정을 원하는 경우.',
+            '단일 기기만 사용하는 경우.',
+            '네이티브 OS 통합(알림, 시스템 메뉴)이 필요한 경우.',
+            'macOS 또는 Windows를 사용하는 경우.',
+          ],
+        },
+        choosWebUI: {
+          title: '웹 UI를 언제 선택해야 합니까?',
+          content: '다음의 경우 웹 UI를 선택하십시오:',
+          items: [
+            'Linux를 사용하는 경우(최고의 지원).',
+            '여러 사용자가 동일한 모델에 접근해야 하는 경우.',
+            '네트워크 내 다른 기기에서 접근하려는 경우.',
+            'RAG 또는 고급 기능이 필요한 경우(Open WebUI).',
+            '서버 또는 클라우드 VM에 배포하려는 경우.',
+            'API를 노출하려는 경우.',
+          ],
+        },
+        useBoth: {
+          title: '데스크톱과 웹 UI를 동시에 실행할 수 있습니까?',
+          content: [
+            '**가능하지만 주의 사항이 있습니다.** 두 방식 모두 동일한 GPU와 모델을 사용하려 합니다. 동일한 Ollama 백엔드를 통해 두 방식을 함께 실행할 수 있지만(모델을 공유), 추론 성능이 분산됩니다.',
+            '권장 방식: Ollama를 백그라운드에서 실행한 후 LM Studio 또는 Open WebUI 중 하나를 인터페이스로 사용하십시오. 두 방식 간 전환은 즉각적으로 이루어집니다.',
+          ],
+        },
+        commonMistakes: {
+          title: '데스크톱 vs 웹 UI 관련 일반적인 실수',
+          items: [
+            '**데스크톱이 항상 더 간단하다고 생각하는 것.** 데스크톱은 초기에는 더 간단하지만, 웹 UI가 더 나은 기능을 제공합니다. 학습 목적에는 데스크톱이 더 간단합니다.',
+            '**두 방식을 함께 사용할 수 있다는 것을 모르는 것.** 동일한 Ollama 인스턴스를 가리키도록 설정하면 LM Studio와 Open WebUI 사이를 전환할 수 있습니다.',
+            '**웹 UI에 서버 지식이 필요하다고 가정하는 것.** 현대적인 웹 UI(Open WebUI Docker)는 서버 복잡성을 자동으로 처리합니다. Docker 명령어만 실행하면 됩니다.',
+            '**서버에 데스크톱 앱을 배포하는 것.** 데스크톱 앱(LM Studio, Jan)은 단일 사용자용입니다. 서버 배포에는 웹 UI 또는 API를 사용하십시오.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '데스크톱 vs 웹 UI에 관한 자주 묻는 질문',
+          faqs: [
+            {
+              q: 'Open WebUI와 LM Studio를 동시에 실행할 수 있습니까?',
+              a: '가능합니다. Open WebUI(브라우저)와 LM Studio(데스크톱) 모두 동일한 Ollama 백엔드에 연결할 수 있습니다. 두 방식은 모델을 공유합니다.',
+            },
+            {
+              q: '데스크톱과 웹 UI 중 어느 것이 더 빠릅니까?',
+              a: '데스크톱 앱은 오버헤드가 적어(웹 서버 없음) 약간 더 빠릅니다. 그러나 추론 속도 면에서 그 차이는 체감하기 어렵습니다.',
+            },
+            {
+              q: '스마트폰에서 로컬 LLM에 접근할 수 있습니까?',
+              a: '웹 UI를 사용하면 가능합니다. Docker에서 Open WebUI를 실행하고 `OLLAMA_HOST=0.0.0.0:11434`를 설정하십시오. 그런 다음 동일한 네트워크에서 스마트폰으로 접근할 수 있습니다.',
+            },
+            {
+              q: '네트워크에서 웹 UI를 사용할 때 보안 위험이 있습니까?',
+              a: '있습니다. Ollama는 기본적으로 인증이 없습니다. 네트워크에 노출하는 경우 방화벽 또는 인증이 포함된 리버스 프록시(nginx)를 사용하십시오.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 읽을거리',
+          items: [
+            '[최고의 로컬 LLM 프론트엔드](/local-llms/best-local-llm-frontends) -- 인터페이스 전체 목록.',
+            '[LM Studio 설치 방법](/local-llms/how-to-install-lm-studio) -- 데스크톱 앱 설정.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 두 도구의 비교.',
+            '[최고의 로컬 LLM 프론트엔드](/local-llms/best-local-llm-frontends) -- Open WebUI 및 웹 대안.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            'LM Studio -- lmstudio.ai',
+            'Jan AI -- jan.ai',
+            'Open WebUI -- github.com/open-webui/open-webui',
+            'Enchanted UI -- enchanted.div.ai',
+          ],
+        },
+      },
+    },
   };

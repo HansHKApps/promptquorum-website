@@ -2004,4 +2004,231 @@ schema: {
       ]
     },
   },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: '시작하기',
+      title: '로컬 LLM 보안 및 개인정보 체크리스트: 안전한 설정을 위한 12단계',
+      seoTitle: '데이터를 안전하게 보호하십시오: 로컬 LLM 보안 가이드 2026',
+      intro: '로컬 LLM을 실행하면 프롬프트가 외부 서버에 전송되지 않지만, 자동으로 설정이 안전해지는 것은 아닙니다. 텔레메트리, 신뢰할 수 없는 모델 파일, 노출된 API 등의 위험 요소가 여전히 데이터를 유출할 수 있습니다. 이 체크리스트는 10분 이내에 로컬 LLM을 안전하게 설정하는 방법을 정확하게 안내합니다.',
+      metaDescription: '12단계 체크리스트: 텔레메트리 비활성화, 체크섬 검증, 포트 11434 격리, 디스크 암호화 활성화. GDPR 및 HIPAA 준수. 에어갭 설정. 2026.',
+      twitterDescription: '12단계 로컬 LLM 보안 체크리스트: 텔레메트리 비활성화, 체크섬 검증, 포트 11434 격리, 디스크 암호화 활성화. GDPR 및 HIPAA 포함.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-18',
+      leadAnswerBlock: '**로컬 LLM을 실행하면 프롬프트가 외부 서버에 전송되지 않지만, 자동으로 설정이 안전해지는 것은 아닙니다. 텔레메트리, 신뢰할 수 없는 모델 파일, 노출된 API 등의 위험 요소가 여전히 데이터를 유출할 수 있습니다. 이 체크리스트는 10분 이내에 로컬 LLM을 안전하게 설정하는 방법을 정확하게 안내합니다.**',
+      audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
+      readTime: '8분 읽기',
+      educationalLevel: 'Beginner',
+      primaryTerm: '로컬 LLM 개인정보 보호',
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: '로컬 LLM이 자동으로 비공개가 아닌 이유', anchor: '#why-not-automatically-private' },
+        { label: '12가지 보안 체크리스트', anchor: '#the-12-item-checklist' },
+        { label: '모델 출처: 안전하게 다운로드하는 방법', anchor: '#model-provenance' },
+        { label: '네트워크 격리: 아웃바운드 연결 차단', anchor: '#network-isolation' },
+        { label: '도구별 텔레메트리 설정', anchor: '#telemetry-settings' },
+        { label: '위협 모델', anchor: '#threat-model' },
+        { label: '자주 묻는 질문', anchor: '#common-questions' },
+      ],
+      sections: {
+        areLLMsSecure: {
+          id: 'are-llms-private-and-secure',
+          title: '로컬 LLM은 비공개이고 안전합니까?',
+          content: '로컬 LLM은 기본적으로 프롬프트가 장치에 남아 있기 때문에 비공개입니다. 그러나 자동으로 안전한 것은 아닙니다. 주요 위험 요소는 도구의 텔레메트리, 신뢰할 수 없는 모델 파일, 그리고 네트워크 노출입니다. 안전한 설정을 위해서는 텔레메트리를 비활성화하고, 모델 출처를 검증하며, 외부 접근으로부터 시스템을 격리해야 합니다.',
+        },
+        tldr: {
+          id: 'key-takeaways',
+          title: '핵심 요약은 무엇입니까?',
+          isTldr: true,
+          items: [
+            '로컬 추론은 프롬프트 데이터를 서드파티 서버에서 보호합니다. 남은 위험 요소는 추론 도구의 텔레메트리, 신뢰할 수 없는 출처의 모델 파일, 그리고 네트워크에 노출된 Ollama API입니다.',
+            'Ollama는 기본적으로 localhost에 바인딩됩니다. OLLAMA_HOST=0.0.0.0을 명시적으로 설정하지 않는 한 다른 장치에서 접근할 수 없습니다.',
+            'LM Studio에서 분석을 비활성화하십시오(설정 → 개인정보 → "익명 사용 데이터 전송" 비활성화). GPT4All에서도 텔레메트리를 비활성화하십시오(설정 → 텔레메트리 비활성화).',
+            '모델 가중치는 Hugging Face(huggingface.co) 또는 공식 Ollama 라이브러리에서만 다운로드하십시오. 민감한 배포의 경우 SHA256 체크섬을 검증하십시오.',
+            '규제 데이터(HIPAA, GDPR, 법적 특권)의 경우: 전체 디스크 암호화를 활성화하고, 에어갭 장치를 사용하며, 설치된 모든 확장 프로그램을 감사하십시오.',
+          ],
+        },
+        whyNotAutoPrivate: {
+          title: '로컬 LLM이 자동으로 비공개가 아닌 이유는 무엇입니까?',
+          content: [
+            '**모델 추론 자체는 비공개입니다. 프롬프트는 절대 모델 제공자의 서버로 전송되지 않습니다.** 그러나 세 가지 다른 데이터 흐름이 정보를 유출할 수 있습니다:',
+          ],
+          items: [
+            '**애플리케이션 텔레메트리**: LM Studio, GPT4All 및 일부 다른 도구는 기본적으로 익명 사용 분석을 수집합니다. 여기에는 세션 수, 사용된 모델 이름, 성능 지표가 포함될 수 있습니다.',
+            '**모델 다운로드 출처**: 악성 GGUF 파일은 취약한 추론 엔진에서 모델 로딩 중에 실행되는 코드를 포함할 수 있습니다. 검증되지 않은 모델 파일은 공급망 위험입니다.',
+            '**네트워크 노출**: Ollama의 API 서버는 장치의 모든 프로세스에서 접근할 수 있습니다. `OLLAMA_HOST=0.0.0.0`으로 잘못 구성되면 인증 없이 전체 네트워크에서 접근 가능해집니다.',
+          ],
+        },
+        localVsCloud: {
+          id: 'local-vs-cloud',
+          title: '로컬 LLM이 클라우드 API보다 더 안전합니까?',
+          content: '로컬 LLM은 데이터가 장치에 남아 있기 때문에 개인정보 보호 측면에서 더 안전합니다. 반면 클라우드 API는 프롬프트를 외부 서버로 전송합니다. 그러나 로컬 설정은 수동 보안 구성이 필요하지만, 클라우드 제공자는 인프라 보안을 처리합니다. 실제 트레이드오프는 개인정보 자율성 대 위임된 보안입니다.',
+        },
+        misconceptions: {
+          id: 'common-misconceptions',
+          title: '로컬 LLM 보안에 대한 일반적인 오해는 무엇입니까?',
+          items: [
+            '"로컬 LLM은 자동으로 안전하다" → 거짓, 구성이 가장 중요합니다',
+            '"인터넷 없음 = 위험 없음" → 거짓, 악성 파일과 플러그인은 여전히 적용됩니다',
+            '"오픈 소스 = 안전" → 거짓, 코드는 여전히 검증되어야 합니다',
+          ],
+        },
+        risks: {
+          id: 'security-risks',
+          title: '로컬 LLM에서 가장 큰 보안 위험은 무엇입니까?',
+          items: [
+            '**텔레메트리 유출** → LM Studio와 같은 도구가 사용 데이터를 전송할 수 있습니다',
+            '**악성 모델 파일** → 검증되지 않은 GGUF 파일이 위험을 초래할 수 있습니다',
+            '**네트워크 노출** → Ollama와 같은 API가 잘못 구성되면 노출될 수 있습니다',
+          ],
+        },
+        quickChecklist: {
+          id: 'quick-checklist',
+          title: '처음 5분 안에 무엇을 해야 합니까?',
+          numberedItems: [
+            '도구에서 텔레메트리를 비활성화하십시오',
+            'Hugging Face 또는 Ollama에서만 모델을 다운로드하십시오',
+            'API가 localhost에만 바인딩되어 있는지 확인하십시오',
+            '전체 디스크 암호화를 활성화하십시오',
+            '인터넷에 포트를 노출하지 마십시오',
+          ],
+        },
+        checklist: {
+          title: '로컬 LLM 보안 체크리스트에는 무엇이 포함됩니까?',
+          content: '**민감하거나 규제된 데이터를 처리하기 전에 아래의 모든 항목을 확인하십시오.** 이 체크리스트는 Ollama, LM Studio, Jan AI, GPT4All 설정에서 가장 일반적인 개인정보 및 보안 격차를 다룹니다.',
+          numberedItems: [
+            { title: '신뢰할 수 있는 출처에서만 모델을 다운로드하십시오', whyItMatters: '신뢰할 수 없는 출처의 악성 모델 파일을 방지합니다.' },
+            { title: '민감한 사용의 경우 모델 체크섬을 검증하십시오', whyItMatters: '다운로드한 모델 파일이 변조되지 않았음을 확인합니다.' },
+            { title: '추론 도구에서 텔레메트리를 비활성화하십시오', whyItMatters: '사용 데이터 및 세션 정보가 수집되는 것을 방지합니다.' },
+            { title: 'Ollama가 localhost에만 바인딩되어 있는지 확인하십시오', whyItMatters: 'API가 네트워크의 다른 장치에 노출되는 것을 방지합니다.' },
+            { title: '전체 디스크 암호화를 활성화하십시오', whyItMatters: '장치를 분실하거나 도난당했을 때 모델 가중치와 채팅 로그를 보호합니다.' },
+            { title: '민감한 채팅 로그를 암호화된 폴더에 저장하십시오', whyItMatters: '민감한 데이터가 포함된 대화 기록을 무단 접근으로부터 보호합니다.' },
+            { title: '설치된 확장 프로그램과 플러그인을 검토하십시오', whyItMatters: '악성 서드파티 확장 프로그램이 네트워크에 접근하는 것을 방지합니다.' },
+            { title: 'LLM 작업을 위해 전용 사용자 계정을 사용하십시오', whyItMatters: '모델 파일, 채팅 기록, API 키를 기본 프로필에서 격리합니다.' },
+            { title: '로컬 API를 인터넷에 노출하지 마십시오', whyItMatters: '로컬 추론 엔진에 대한 무단 원격 접근을 방지합니다.' },
+            { title: '로컬 LLM을 사용하는 모든 앱의 시스템 프롬프트를 감사하십시오', whyItMatters: '브라우저 확장 프로그램 또는 생산성 도구 통합을 통한 데이터 유출을 방지합니다.' },
+            { title: '추론 도구를 최신 상태로 유지하십시오', whyItMatters: 'Ollama, LM Studio 및 관련 도구의 알려진 보안 취약점을 패치합니다.' },
+            { title: '에어갭 또는 규제 환경의 경우: 승인된 모델 버전을 문서화하십시오', whyItMatters: '데이터 처리 및 인프라 격리에 대한 규제 요구사항 준수를 보장합니다.' },
+          ],
+        },
+        modelProvenance: {
+          title: '로컬 LLM 모델을 어디에서 안전하게 다운로드해야 합니까?',
+          content: [
+            '**모델 가중치는 대용량 바이너리 파일입니다.** 악성 GGUF 파일은 llama.cpp에서 사용하는 파서의 취약점을 악용할 수 있습니다. 2026년 현재 광범위한 GGUF 기반 악성코드는 확인되지 않았지만, 공격 표면은 존재합니다.',
+          ],
+          items: [
+            '**Hugging Face**(huggingface.co): 오픈 모델의 주요 출처입니다. 각 파일에는 검증된 SHA256 해시가 있습니다. 잘 알려진 게시자(Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba)의 모델만 사용하십시오.',
+            '**Ollama 라이브러리**(ollama.com/library): Ollama는 모델을 저장하기 전에 해시를 검증합니다. `ollama pull`로 가져온 모델은 안전합니다.',
+            '**LM Studio 모델 브라우저**: Hugging Face를 직접 검색합니다. 동일한 신뢰 규칙이 적용됩니다. 게시자 계정을 확인하십시오.',
+            '**피해야 할 것**: 익명 파일 공유 사이트, Discord 파일 전송, 검증 가능한 해시를 제공하지 않는 출처.',
+          ],
+        },
+        networkIsolation: {
+          title: '로컬 LLM에서 아웃바운드 연결을 어떻게 차단합니까?',
+          content: '**모델을 다운로드한 후 아웃바운드 연결을 차단하여 추론 도구가 외부에 연락하는 것을 방지하십시오.** macOS에서는 `pf` 방화벽을 사용하고, Linux에서는 `ufw` 또는 OpenSnitch를 사용하십시오:',
+          codeBlock: '# macOS -- pf 방화벽으로 Ollama 아웃바운드 차단\n# /etc/pf.conf에 추가:\nblock out proto tcp from any to any user ollama\n\n# Linux -- ufw로 차단\nsudo ufw deny out from any to any app ollama\n\n# 또는 Little Snitch(macOS) / OpenSnitch(Linux) 사용\n# GUI로 애플리케이션별 네트워크 제어',
+          codeLanguage: 'bash',
+        },
+        telemetry: {
+          title: '로컬 LLM 도구에서 텔레메트리를 어떻게 비활성화합니까?',
+          rows: [
+            { 'Tool': 'Ollama', 'Telemetry Default': '수집하지 않음', 'How to Confirm': 'github.com/ollama/ollama 확인 -- 분석 코드 없음' },
+            { 'Tool': 'LM Studio', 'Telemetry Default': '익명 분석 활성화됨', 'How to Disable': '설정 → 개인정보 → "익명 사용 데이터 전송" 체크 해제' },
+            { 'Tool': 'Jan AI', 'Telemetry Default': '없음 -- 명시적으로 비활성화됨', 'How to Confirm': '오픈 소스 -- github.com/janhq/jan 감사' },
+            { 'Tool': 'GPT4All', 'Telemetry Default': '첫 실행 시 옵트인만', 'How to Change': '설정 → 개인정보 → 사용 분석 비활성화' },
+          ],
+          columns: ['Tool', 'Telemetry Default', 'How to Confirm/Disable'],
+        },
+        threatModel: {
+          id: 'threat-model',
+          title: '어떤 위협 모델을 가정해야 합니까?',
+          content: [
+            '**로컬 LLM 환경이 도구, 플러그인 또는 잘못된 구성을 통해 데이터를 유출할 수 있다고 가정하십시오. 모델을 신뢰할 수 없는 것으로 취급하십시오. 모델이 손상되더라도 민감한 데이터에 접근하거나 전송할 수 없도록 설정을 설계하십시오. 이는 추론 도구를 인터넷에서 격리하고, 텔레메트리를 비활성화하며, 파일 시스템 접근을 제한하는 것을 의미합니다.**',
+            '보안은 데이터 개인정보 보호만이 아닙니다. 프롬프트 인젝션은 악의적인 입력이 모델 동작을 조작하는 별개의 공격 벡터입니다. 로컬 및 클라우드 모델 모두에 적용되는 인젝션 방어 기술에 대해서는 [프롬프트 인젝션 및 보안](https://www.promptquorum.com/prompt-engineering/prompt-injection-and-security)을 참조하십시오.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '로컬 LLM 보안에 관한 일반적인 질문은 무엇입니까?',
+          faqs: [
+            {
+              q: '로컬 LLM이 내 파일이나 인터넷에 접근할 수 있습니까?',
+              a: '아니요. 모델 자체는 텍스트를 생성하는 정적 파일입니다. 파일 시스템을 읽거나 네트워크 요청을 할 수 있는 기능이 없습니다. 그러나 모델을 실행하는 추론 도구(Ollama, LM Studio)는 일반적인 OS 수준의 접근 권한을 갖습니다. 일부 도구에는 파일을 읽는 기능이 포함되어 있습니다. 예를 들어 GPT4All의 LocalDocs 또는 LM Studio의 파일 첨부 기능이 있습니다. 이러한 기능은 옵트인이며 명시적으로 문서화되어 있습니다.',
+            },
+            {
+              q: 'HIPAA 적용 데이터에 로컬 LLM을 사용하는 것이 안전합니까?',
+              a: '로컬 추론은 클라우드 API가 생성하는 서드파티 데이터 처리자 위험을 제거합니다. 그러나 HIPAA 준수는 비공개 추론 이상을 요구합니다. 전체 디스크 암호화, 접근 제어, 감사 로깅, 그리고 소프트웨어 공급업체가 PHI에 접근할 수 있는 경우 Business Associate Agreement가 필요합니다. FileVault가 활성화되고 텔레메트리가 비활성화된 Ollama 사용은 합리적인 시작점이지만, 공식 HIPAA 준수에는 완전한 위험 평가가 필요합니다.',
+            },
+            {
+              q: 'Ollama가 내 프롬프트를 어딘가로 전송합니까?',
+              a: '아니요. Ollama는 오픈 소스(github.com/ollama/ollama)이며 텔레메트리나 데이터 수집 코드가 없습니다. 프롬프트는 llama.cpp에 의해 로컬에서 처리되며 절대 전송되지 않습니다. Ollama의 유일한 아웃바운드 네트워크 활동은 `ollama pull`을 실행할 때 ollama.com에서 모델을 다운로드하는 것입니다.',
+            },
+            {
+              q: '로컬 LLM을 사용하는 것이 OpenAI API를 사용하는 것보다 더 비공개입니까?',
+              a: '네, 프롬프트 개인정보 보호 측면에서 그렇습니다. 로컬 LLM을 사용하면 프롬프트가 장치를 벗어나지 않습니다. OpenAI API는 처리를 위해 프롬프트를 OpenAI 서버로 전송합니다. OpenAI의 API 서비스 약관은 기본적으로 API 입력/출력이 모델 훈련에 사용되지 않는다고 명시하지만, 데이터는 그들의 인프라를 통과합니다. 민감하거나 규제된 데이터(의료, 법률, 금융)의 경우 로컬 추론이 더 보수적인 선택입니다.',
+            },
+            {
+              q: '다운로드한 모델 파일이 안전한지 어떻게 확인합니까?',
+              a: 'Hugging Face(huggingface.co) 또는 공식 Ollama 라이브러리에서만 모델을 다운로드하십시오. Hugging Face에서는 각 파일에 SHA256 해시가 표시됩니다. 다운로드 후 `sha256sum <model_file>`로 검증하십시오. 알려진 게시자의 모델만 사용하십시오: Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba. 익명 파일 공유 또는 Discord 파일 전송은 피하십시오.',
+            },
+            {
+              q: '로컬 LLM의 개인정보 보호와 보안의 차이는 무엇입니까?',
+              a: '개인정보 보호는 프롬프트와 출력이 서드파티에 접근 불가능함을 의미합니다. 보안은 시스템이 위협으로부터 보호됨을 의미합니다. 로컬 LLM은 비공개(데이터가 장치를 벗어나지 않음)이지만 불안전(신뢰할 수 없는 출처에서 다운로드된 모델, 또는 네트워크에 노출된 Ollama API)할 수 있습니다. 두 가지 모두 독립적으로 해결되어야 합니다.',
+            },
+            {
+              q: 'GDPR 규제 데이터에 로컬 LLM을 사용할 수 있습니까?',
+              a: '로컬 추론은 데이터가 인프라를 벗어나지 않기 때문에 GDPR 위험을 크게 줄입니다. 그러나 추론 도구(Ollama, LM Studio)에 텔레메트리가 비활성화되어 있는지, 디스크 암호화가 활성화되어 있는지, 그리고 접근 제어가 마련되어 있는지 여전히 확인해야 합니다. 제35조 DPIA 요구사항을 위해 데이터 처리 설정을 문서화하고 개인 데이터가 서드파티 서버를 통과하지 않음을 확인하십시오.',
+            },
+            {
+              q: 'LM Studio가 서버로 데이터를 전송합니까?',
+              a: 'LM Studio는 기본적으로 익명 분석을 수집합니다(세션 수, 사용된 모델 이름, 성능 지표). 프롬프트 내용은 전송하지 않습니다. 분석을 비활성화하려면: 설정 → 개인정보 → "익명 사용 데이터 전송" 체크 해제. 모델 추론 및 채팅 로그는 이 설정에 관계없이 로컬에 유지됩니다.',
+            },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '추가 자료는 어디에서 찾을 수 있습니까?',
+          items: [
+            '**OWASP LLM 애플리케이션 상위 10위**(owasp.org/www-project-top-10-for-large-language-model-applications/) -- 프롬프트 인젝션 및 공급망 공격을 포함한 LLM 배포의 보안 위험',
+            '**Hugging Face 모델 카드 문서**(huggingface.co/docs/hub/model-cards) -- 모델 출처 표준 및 SHA256 해시 검증',
+            '**VeraCrypt**(veracrypt.fr) -- Windows, macOS, Linux용 오픈 소스 전체 디스크 및 폴더 암호화',
+          ],
+        },
+        commonMistakes: {
+          title: '가장 일반적인 로컬 LLM 보안 실수는 무엇입니까?',
+          content: '**대부분의 로컬 LLM 보안 실패는 모델 취약점이 아닌 구성 실수에서 비롯됩니다.** 다음은 가장 빈번한 다섯 가지 실수와 각각의 해결 방법입니다.',
+          items: [
+            '**실수:** 서드파티 사이트(Discord, 무작위 GitHub 릴리스)에서 모델 다운로드. **해결:** Hugging Face(huggingface.co) 또는 Ollama 라이브러리만 사용하십시오. `sha256sum`으로 검증하십시오.',
+            '**실수:** 로컬 추론 = 완전한 개인정보 보호라고 가정. **해결:** LM Studio 분석을 비활성화하십시오(설정 → 개인정보). GPT4All 텔레메트리도 비활성화하십시오. `netstat -an | grep 11434`를 실행하여 예상치 못한 포트가 없는지 확인하십시오.',
+            '**실수:** 테스트 후 `OLLAMA_HOST=0.0.0.0`을 활성화된 상태로 방치. **해결:** 되돌리십시오: `export OLLAMA_HOST=127.0.0.1:11434`. 다른 장치에서 테스트하십시오. 연결이 거부되어야 합니다.',
+            '**실수:** HIPAA/GDPR 워크로드에 대한 디스크 암호화 건너뜀. **해결:** FileVault(macOS) 또는 BitLocker(Windows)를 활성화하십시오. LM Studio 채팅 로그 폴더를 별도로 암호화하십시오.',
+            '**실수:** Open WebUI 또는 Jan AI의 서드파티 확장 프로그램 검토 안 함. **해결:** 매월 설치된 확장 프로그램을 감사하십시오. 인식하지 못하는 네트워크 접근을 요청하는 확장 프로그램을 제거하십시오.',
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: '지역별 규정 준수 고려사항은 무엇입니까?',
+          content: '**로컬 LLM 추론은 데이터 거주 위험을 줄이지만, 완전한 규제 준수에는 지역별 추가 제어가 필요합니다.**',
+          items: [
+            '**EU / GDPR (2018):** 로컬 추론은 모델 제공자에 대한 제28조 데이터 처리자 의무를 제거합니다. LM Studio 분석을 비활성화하고, 디스크 암호화를 활성화하며, 모든 DPIA를 위해 데이터 처리 설정을 문서화해야 합니다. 개인 데이터를 처리하기 전에 정당한 이익 평가를 수행하십시오.',
+            '**미국 / HIPAA:** HIPAA는 PHI에 대한 안전장치를 요구합니다: 전체 디스크 암호화("암호화 안전 항구"), 접근 제어, 감사 로깅. FileVault가 활성화되고 텔레메트리가 비활성화된 Ollama 사용은 합리적인 HIPAA 시작점입니다. 공식 준수에는 완전한 위험 평가가 필요합니다.',
+            '**일본 / APPI (2022):** 개인정보 보호법은 처리 중 개인 데이터 보호를 요구합니다. 에어갭 장치의 로컬 추론은 데이터 현지화를 만족합니다. APPI 준수를 위해 Ollama 업데이트 확인 및 LM Studio 분석을 비활성화하십시오.',
+            '**중국 / PIPL (2021):** 내부 사용을 위한 로컬 LLM 실행은 CAC 등록이 필요하지 않습니다. 중국에서 공개 서비스로 로컬 LLM을 배포하는 경우 CAC 알고리즘 등록이 필요합니다.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '또 무엇을 읽어야 합니까?',
+          items: [
+            '[로컬 LLM이란 무엇입니까?](/local-llms/what-are-local-llms) -- 핵심 개념 및 구성 요소',
+            '[로컬 LLM 대 클라우드 API](/local-llms/local-llms-vs-cloud-apis) -- 개인정보 보호 트레이드오프',
+            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 설치 및 설정',
+            '[노트북에서 로컬 LLM 실행 방법](/local-llms/local-llm-on-laptop) -- 안전한 노트북 구성',
+            '[로컬 LLM 원클릭 설치 프로그램](/local-llms/local-llm-one-click-installers) -- 개인정보 보호 및 설치 편의성을 위한 LM Studio, Ollama, Jan AI, GPT4All 설치 프로그램 비교',
+            '[로컬 LLM 설정 문제 해결](/local-llms/troubleshooting-local-llm-setup) -- 포트 11434 거부 및 GPU 미감지를 포함한 일반적인 오류 수정',
+            '[방화벽 뒤의 로컬 AI / 오프라인 (2026)](/power-local-llm/local-ai-behind-firewall-offline-2026) -- Ollama 에어갭: 네트워크 격리, 감사 로깅, 인터넷 없는 설정.',
+            '[중국 AI 개발을 위한 최고의 VPN (2026)](/prompt-bites/best-vpn-for-ai-development-china-2026) -- 방화벽 뒤에서 Hugging Face, GitHub 및 모델 레지스트리 접근.',
+          ],
+        },
+      },
+    },
   };

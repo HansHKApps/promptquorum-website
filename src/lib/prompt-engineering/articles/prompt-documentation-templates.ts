@@ -1406,4 +1406,182 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   },
-}
+
+  ko: {
+  freshness_tier: 'evergreen',
+  theme: '팀 거버넌스',
+  title: '프롬프트 문서화 템플릿: 팀을 위한 6가지 재사용 가능한 형식',
+  seoTitle: '프롬프트 문서화 템플릿: 팀을 위한 6가지 형식',
+  intro: '문서화되지 않은 프롬프트는 조용히 고장 나고, 중복 작성되며, 감사가 불가능합니다. 6가지 재사용 가능한 문서화 템플릿이 단일 사용 한 줄짜리부터 검토 이력이 있는 버전 관리된 프로덕션 프롬프트까지 모든 프롬프트 수명 주기 단계를 다룹니다.',
+  metaDescription: '6가지 프롬프트 문서화 템플릿: One-Liner Card, Version Block, Test Suite Header, Decision Log, Change Rationale, API Config. 각각 10분 이내.',
+  ogDescription: '6가지 형식으로 프롬프트를 문서화하세요: 빠른 저장을 위한 One-Liner Card부터 프로덕션용 API Config Block까지. 별도 시스템이 아닌 프롬프트와 함께 저장하세요.',
+  twitterDescription: '문서화되지 않은 프롬프트는 조용히 고장 납니다. 6가지 템플릿, 각각 10분 이내. One-Liner Card부터 API Config Block까지.',
+  publishDate: '2026-05-02',
+  readTime: '10분 읽기',
+  educationalLevel: 'Intermediate',
+  primaryTerm: '프롬프트 문서화',
+  leadAnswerBlock: '**프롬프트 문서화는 프롬프트가 무엇을 하는지, 왜 그렇게 작성되었는지, 어떤 테스트를 통과해야 하는지에 대한 구조화된 기록입니다.** 이것이 없으면 프롬프트는 검토 불가능하고, 롤백 불가능하며, 작성자가 팀을 떠날 때 재현이 불가능합니다.',
+  quickFacts: [
+    'One-Liner Card부터 API Config Block까지 전체 프롬프트 수명 주기를 다루는 6가지 템플릿',
+    'One-Liner Card는 2분 이내에 작성 가능하며 가장 흔한 문서화 실패를 예방합니다',
+    '문서화는 별도 시스템이 아닌 프롬프트와 함께 저장하세요',
+    '"why" 필드(변경 이유)는 모든 템플릿에서 가장 중요한 필드입니다',
+    'Version Block + Change Rationale은 모든 프로덕션 프롬프트 수정에 필수입니다',
+    'PromptHub는 Version Block 및 API Config Block 필드에 직접 매핑됩니다',
+  ],
+  toc: [
+    { label: '문서화되지 않은 프롬프트가 팀을 망가뜨리는 이유', anchor: 'why_documentation' },
+    { label: '6가지 프롬프트 문서화 템플릿', anchor: 'six_templates' },
+    { label: '프롬프트 문서화 저장 위치', anchor: 'storage_options' },
+    { label: '일반적인 문서화 실수', anchor: 'common_doc_mistakes' },
+    { label: '자주 묻는 질문', anchor: 'faq' },
+    { label: '관련 읽기', anchor: 'related_reading' },
+    { label: '출처', anchor: 'sources' },
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    url: 'https://www.promptquorum.com/prompt-engineering/prompt-documentation-templates',
+    inLanguage: 'ko',
+    headline: '프롬프트 문서화 템플릿: 팀을 위한 6가지 재사용 가능한 형식',
+    description: '6가지 프롬프트 문서화 템플릿: One-Liner Card, Version Block, Test Suite Header, Decision Log, Change Rationale, API Config Block. 각각 10분 이내.',
+    datePublished: '2026-05-02',
+    dateModified: '2026-05-02',
+    keywords: ['프롬프트 문서화', '프롬프트 템플릿', '프롬프트 관리', '프롬프트 엔지니어링 팀', '프롬프트 버전 관리'],
+    mentions: [
+      { '@type': 'Thing', name: 'PromptHub' },
+      { '@type': 'Thing', name: 'Git' },
+      { '@type': 'Thing', name: 'Notion' },
+      { '@type': 'Thing', name: 'Braintrust' },
+      { '@type': 'Thing', name: 'GPT-5.5' },
+      { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
+    ],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+    image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
+  },
+  sections: {
+    tldr: {
+      isTldr: true,
+      content: [
+        '6가지 템플릿이 전체 프롬프트 수명 주기를 다룹니다: One-Liner Card(2분, 목적 손실 예방), Version Block(변경 추적), Test Suite Header(통과 기준 정의), Decision Log(설계 결정 기록), Change Rationale(이유 설명), API Config Block(프로덕션 파라미터). 문서화는 프롬프트와 함께 저장하세요 — 별도로 저장하지 마세요.',
+      ],
+    },
+    key_takeaways: {
+      title: '핵심 내용',
+      items: [
+        '모든 프로덕션 프롬프트는 최소한 One-Liner Card(목적, 모델, 날짜, 작성자)가 필요합니다',
+        '모든 수정된 프롬프트는 Version Block(변경 내용, 이유, 테스트 결과)이 필요합니다',
+        '모든 테스트된 프롬프트는 Test Suite Header(통과 기준, 골든 예제, 실패 모드)가 필요합니다',
+        '문서화를 프롬프트와 동일한 시스템에 저장하세요 — 별도 문서는 방치됩니다',
+        '변경 이유("why")가 가장 중요한 필드입니다: 이를 건너뛰는 팀은 작성자가 떠난 후 이전 패턴으로 되돌아갑니다',
+        'PromptHub는 가장 완전한 내장 문서화 구조를 제공합니다; Git은 좋은 커밋 규율을 갖춘 엔지니어링 팀에 적합합니다',
+      ],
+    },
+    why_documentation: {
+      title: '문서화되지 않은 프롬프트가 팀을 망가뜨리는 이유',
+      snippets: [
+        { type: 'in-one-sentence', text: '문서화되지 않은 프롬프트는 조용한 회귀, 중복 작성, 지식 손실을 통해 팀을 망가뜨립니다 — 각각 프롬프트당 5~10분의 문서화로 예방할 수 있습니다.' },
+        { type: 'in-plain-terms', text: '프롬프트에 무엇을 하는지 또는 왜 그렇게 작성되었는지에 대한 기록이 없으면, 팀은 안전하게 변경할 수 없고, 수정 후 복구할 수 없으며, 새 팀원에게 맥락 없이 인계할 수 없습니다.' },
+      ],
+      content: [
+        '**문서화되지 않은 프롬프트는 세 가지 방식으로 팀을 망가뜨립니다: 조용한 회귀(변경 기록 없음), 중복(팀이 기존 프롬프트를 찾지 못해 다시 작성), 지식 손실(작성자가 떠나면 프롬프트를 유지 관리할 수 없음).** 각 실패는 프롬프트당 5~10분의 문서화로 예방할 수 있습니다.',
+        '가장 비용이 많이 드는 실패는 조용한 회귀입니다. 팀이 하나의 문제를 수정하기 위해 프로덕션 프롬프트를 수정했다가 의도치 않게 다른 문제를 발생시키고, 비교할 기준선이 없습니다. 버전 이력과 Test Suite Header 없이는 회귀를 진단하려면 수동 비교와 추측이 필요합니다.',
+        '한 번 이상 사용되거나, 공유 인프라에 저장되거나, 프로덕션에 배포되는 모든 프롬프트에 문서화를 사용하세요. 단일 세션에서 사용하는 일회성 탐색 프롬프트는 건너뛰어도 됩니다.',
+      ],
+      callouts: [
+        { type: 'warning', label: '조용한 회귀 위험', text: 'Version Block과 골든 예제가 없으면, 프로덕션 프롬프트를 수정하는 팀에게는 기준선이 없습니다. 모든 수정은 이전 상태가 어떠했는지에 대한 추측입니다.' },
+      ],
+    },
+    six_templates: {
+      title: '6가지 프롬프트 문서화 템플릿',
+      content: [
+        '**6가지 템플릿이 첫 번째 초안부터 프로덕션 폐기까지 전체 프롬프트 수명 주기를 다룹니다.** 각 템플릿은 완성하는 데 10분 이내가 걸리도록 설계되었으며, 각 수명 주기 단계에 필요한 최소한의 정보를 제공합니다.',
+      ],
+      numberedItems: [
+        { title: 'One-Liner Card', whyItMatters: '목적: 재사용되는 모든 프롬프트에 대한 최소한의 실행 가능한 기록을 캡처합니다. 필드: 프롬프트 이름, 목적(1문장), 대상 모델, 생성 날짜, 작성자. 사용 시기: 프롬프트가 처음 저장될 때. 저장: 모든 공유 도구(Notion, Git, PromptHub).' },
+        { title: 'Version Block', whyItMatters: '목적: 시간이 지남에 따라 변경되는 프롬프트의 이력을 추적합니다. 필드: 버전 번호, 수정 날짜, 작성자, 변경 내용(1문장), 변경 이유(1문장), 테스트 결과 요약. 사용 시기: 프롬프트가 수정될 때. 저장: Git 커밋 메시지 또는 PromptHub 버전 항목.' },
+        { title: 'Test Suite Header', whyItMatters: '목적: 테스트 작성 전에 허용 기준을 정의합니다. 필드: 테스트 목표(프롬프트가 해야 할 것), 통과 기준(성공을 정의하는 출력 특성), 골든 예제(2~3개의 입력/출력 쌍), 알려진 실패 모드. 사용 시기: 프롬프트가 테스트 스위트에 들어갈 때. 저장: Git 또는 Braintrust 프로젝트의 테스트 파일과 함께.' },
+        { title: 'Decision Log', whyItMatters: '목적: 프롬프트 텍스트에서 명확하지 않은 설계 결정을 기록합니다. 필드: 내린 결정, 고려한 대안, 이 옵션을 선택한 이유, 날짜. 사용 시기: 비명확한 설계 선택이 이루어질 때(예: 특정 temperature가 설정된 이유, 특정 제약이 추가된 이유). 저장: Version Block에서 링크된 문서.' },
+        { title: 'Change Rationale', whyItMatters: '목적: 변경을 되돌리거나 복제할 수 있는 방식으로 프롬프트가 변경된 이유를 설명합니다. 필드: 문제 진술(무엇이 잘못됐는지), 변경 내용, 예상 개선 사항, 측정된 결과. 사용 시기: 실패 또는 회귀에 대응하여 프롬프트가 수정될 때. 저장: Git 커밋 본문 또는 PromptHub 변경 노트.' },
+        { title: 'API Config Block', whyItMatters: '목적: 프로덕션에서 사용된 모델 파라미터를 기록합니다. 필드: 모델(예: GPT-5.5, Claude 4.6 Sonnet), temperature, max tokens, top_p, stop sequences, 시스템 프롬프트 버전, 사용자 프롬프트 버전. 사용 시기: 프롬프트가 프로덕션에 배포될 때. 저장: 배포 구성 파일, Version Block에서 참조.' },
+      ],
+      callouts: [
+        { type: 'insight', label: '템플릿 선택 가이드', text: '새 프롬프트 → One-Liner Card. 수정된 프롬프트 → Version Block. 테스트된 프롬프트 → Test Suite Header. 설계 결정 → Decision Log. 실패 후 변경 → Change Rationale. 프로덕션 배포 → API Config Block.' },
+      ],
+    },
+    storage_options: {
+      title: '프롬프트 문서화 저장 위치',
+      content: [
+        '**프롬프트 문서화를 프롬프트와 동일한 시스템에 저장하세요.** 프롬프트가 코드에 있다면 Git에 문서를 저장하세요. GUI 도구에 있다면 해당 도구의 노트나 링크된 문서에 저장하세요.',
+      ],
+      items: [
+        'Git: 파일로 저장된 프롬프트가 있는 엔지니어링 팀에 최적입니다. 커밋 메시지가 Version Block 역할을 합니다. 무료. 규율이 필요합니다. 내장 리뷰어 워크플로우가 없습니다.',
+        'PromptHub: 버전 이력, 리뷰어 서명, 테스트 결과 저장 기능을 갖춘 목적에 특화된 프롬프트 관리 도구입니다. $0~$49/월. 3명 이상이 프롬프트를 작성하는 팀에 최적입니다.',
+        'Notion: 코드가 아닌 문서로 프롬프트를 관리하는 팀에 적합합니다. 설정하기 쉽습니다. 버전 관리 및 테스트 통합이 없습니다 — 진실의 원천이 아닌 문서화 레이어로 취급하세요.',
+        'Braintrust: 프롬프트 버전과 함께 Test Suite Header 및 평가 결과를 저장합니다. 정기적인 자동화 평가를 실행하는 팀에 최적입니다.',
+        'PromptQuorum: 25개 이상의 AI 공급자에게 동시에 문서화된 프롬프트를 전달하는 [프롬프트 최적화 플랫폼](/features)입니다. 버전을 확정하기 전에 문서화된 프롬프트가 여러 모델에서 일반화되는지 검증하는 데 사용하세요. 무료 티어 제공.',
+      ],
+      callouts: [
+        { type: 'tip', label: '문서화를 함께 저장하세요', text: '프롬프트와 별도 시스템(Notion, Confluence, Google Docs)에 저장된 문서화는 며칠 내에 구식이 됩니다. 현재 상태를 유지하는 유일한 문서화는 프롬프트와 함께 있는 문서화입니다.' },
+      ],
+    },
+    common_doc_mistakes: {
+      title: '일반적인 문서화 실수',
+      mistakes: [
+        {
+          mistake: '문서화 전혀 없음',
+          problem: '수정 후 프롬프트를 복구할 수 없고, 팀이 프롬프트가 특정 방식으로 작성된 이유를 이해할 수 없습니다',
+          fix: '최소한 One-Liner Card 템플릿을 사용하세요 — 3개 필드, 2분 이내',
+        },
+        {
+          mistake: '프롬프트와 별도로 저장된 문서화',
+          problem: '프롬프트가 변경됨에 따라 문서화가 구식이 되며, 팀이 업데이트하는 것을 잊습니다',
+          fix: '프롬프트 자체와 동일한 파일 또는 Git 커밋에 문서화를 저장하세요',
+        },
+        {
+          mistake: '"why" 필드 없음 — 프롬프트가 무엇을 하는지만 설명',
+          problem: '미래 편집자가 제약 조건을 모르고, 안전하게 리팩터링할 수 없습니다',
+          fix: '모든 템플릿에 "rationale" 필드를 추가하세요: 이 구조가 선택된 이유에 대한 1~2문장',
+        },
+        {
+          mistake: 'Version Block 없음',
+          problem: '프로덕션에서 실행 중인 프롬프트가 문서화된 버전과 일치하는지 알 방법이 없습니다',
+          fix: '모든 프로덕션 프롬프트 파일에 version과 dateModified를 추가하세요',
+        },
+      ],
+    },
+    faq: {
+      title: '자주 묻는 질문',
+      faqs: [
+        { q: '프롬프트에 왜 문서화가 필요합니까?', a: '문서화가 없는 프롬프트는 검토, 감사, 재현이 불가능합니다. 작성자가 프롬프트를 변경하고 기록을 남기지 않으면, 팀은 회귀를 진단할 수 없고, 알려진 정상 버전으로 롤백할 수 없으며, 새 팀원을 온보딩할 수 없습니다.' },
+        { q: '프롬프트에 필요한 최소한의 문서화는 무엇입니까?', a: '최소한은 One-Liner Card입니다: 프롬프트 목적(한 문장), 대상 모델, 생성 날짜, 작성자. 작성하는 데 2분이 걸리며 가장 흔한 문서화 실패 — 6개월 후 목적을 알 수 없는 프롬프트 — 를 예방합니다.' },
+        { q: '프롬프트 문서화는 어디에 저장해야 합니까?', a: '프롬프트 자체와 동일한 위치에 프롬프트 문서화를 저장하세요. Git은 코드 파일로 저장된 프롬프트에 적합합니다. PromptHub는 버전 이력과 리뷰어 서명이 내장된 구조화된 저장소를 제공합니다. Notion은 문서로 프롬프트를 관리하는 팀에 적합하지만 버전 관리가 없습니다.' },
+        { q: 'Change Rationale은 얼마나 상세해야 합니까?', a: '세 줄: 변경된 내용(한 문장), 이유(변경이 해결하는 문제), 어떤 테스트가 효과를 확인했는지. "why"를 건너뛰는 팀은 작성자가 떠난 후 반드시 이전 패턴으로 되돌아갑니다.' },
+        { q: '새 프롬프트에 어떤 문서화 템플릿을 사용해야 합니까?', a: 'One-Liner Card로 시작하세요. 프롬프트가 프로덕션에 가면 Version Block으로 업그레이드하세요. 여러 테스트 케이스가 있으면 Test Suite Header를 추가하세요. 비명확한 설계 결정이 필요했다면 Decision Log를 추가하세요.' },
+        { q: '프롬프트 문서화를 얼마나 자주 업데이트해야 합니까?', a: '프롬프트 텍스트가 변경될 때마다 업데이트하세요. 모든 실질적인 수정에 대해 버전 번호를 올리고 Change Rationale 항목을 추가하세요. 문서화를 소급하여 업데이트하지 마세요.' },
+        { q: '프롬프트 문서화는 어디에 저장해야 합니까?', a: '프롬프트와 함께 문서화를 저장하세요 — 동일한 파일, 디렉터리, 또는 Git 커밋에. 프롬프트 파일 자체에 참조 링크 없이는 절대 별도 시스템에 저장하지 마세요. 분리된 문서화는 며칠 내에 구식이 됩니다.' },
+        { q: 'PromptHub에서 이 템플릿을 사용할 수 있습니까?', a: '예. PromptHub는 Version Block 및 API Config Block 템플릿에 직접 매핑되는 프롬프트 메타데이터 필드를 저장합니다. 템플릿을 초안으로 사용한 다음, 팀과 공유할 준비가 되면 PromptHub에 필드를 복사하세요.' },
+      ],
+    },
+    related_reading: {
+      title: '관련 읽기',
+      items: [
+        { title: '프롬프트 버전 관리', url: '/prompt-engineering/prompt-version-control' },
+        { title: '프로덕션에서의 프롬프트 거버넌스', url: '/prompt-engineering/prompt-governance-in-production' },
+        { title: '팀을 위한 프롬프트 라이브러리 관리', url: '/prompt-engineering/prompt-library-management-for-teams' },
+        { title: '프롬프트 라이브러리 구축', url: '/prompt-engineering/build-a-prompt-library' },
+        { title: '팀을 위한 프롬프트 검토 워크플로우', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
+      ],
+    },
+    sources: {
+      title: '출처',
+      items: [
+        { title: 'Git Documentation: Version Control', url: 'https://git-scm.com/doc' },
+        { title: 'Braintrust: Prompt Management Docs', url: 'https://www.braintrust.dev/docs' },
+        { title: 'PromptHub Documentation', url: 'https://app.prompthub.us/docs' },
+      ],
+    },
+  },
+},
+};

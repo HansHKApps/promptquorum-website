@@ -61,6 +61,8 @@ import { article as a_xinference_llama_qwen_chatglm_mistral } from "./articles/x
 import { article as a_alibaba_cloud_vs_tencent_cloud_gpu_ai_2026 } from "./articles/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026";
 import { article as a_best_gpu_for_llm_inference_under_500_2026 } from "./articles/best-gpu-for-llm-inference-under-500-2026";
 import { article as a_local_llm_cost_calculator_build_vs_rent_2026 } from "./articles/local-llm-cost-calculator-build-vs-rent-2026";
+// WWDC 2026 Apple on-device AI
+import { article as a_apple_on_device_ai_vs_local_llms } from "./articles/apple-on-device-ai-vs-local-llms";
 import { article as a_local_llm_hardware_guide_2026 } from "./articles/local-llm-hardware-guide-2026";
 import { article as a_vram_calculator_local_llm } from "./articles/vram-calculator-local-llm";
 import { article as a_gpu_vs_cpu_vs_apple_silicon } from "./articles/gpu-vs-cpu-vs-apple-silicon";
@@ -233,4 +235,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "alibaba-cloud-vs-tencent-cloud-gpu-ai-2026": a_alibaba_cloud_vs_tencent_cloud_gpu_ai_2026,
   "best-gpu-for-llm-inference-under-500-2026": a_best_gpu_for_llm_inference_under_500_2026,
   "local-llm-cost-calculator-build-vs-rent-2026": a_local_llm_cost_calculator_build_vs_rent_2026,
+  // WWDC 2026 Apple on-device AI
+  "apple-on-device-ai-vs-local-llms": a_apple_on_device_ai_vs_local_llms,
 };

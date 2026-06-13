@@ -1967,4 +1967,247 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Techniques',
+      title: 'Prompt 평가 지표: 무엇을 측정하고 어떻게 합니까',
+      seoTitle: 'Prompt 평가 지표: Pass Rate, BLEU, LLM-as-Judge (2026)',
+      metaDescription: '출력 유형별 prompt 평가 지표 선택: JSON은 pass rate, 번역은 BLEU, 의역은 시맨틱 유사성, 자유 텍스트는 LLM-as-judge.',
+      ogDescription: '출력 유형별 올바른 prompt 평가 지표 선택. Pass rate, BLEU, 시맨틱 유사성, LLM-as-judge 비교 — 회귀 감지 워크플로우 포함.',
+      twitterDescription: 'Pass rate, BLEU, 시맨틱 유사성, 아니면 LLM-as-judge? 출력 유형별 올바른 prompt 평가 지표를 선택하십시오. 회귀 알림을 포함한 프레임워크.',
+      intro: 'Prompt에 잘못된 평가 지표를 선택하면 실제 프로덕션 실패를 숨기는 오해의 소지가 있는 결과가 나옵니다. BLEU 점수는 JSON 출력에 의미가 없습니다. 이진 pass/fail은 미묘한 생성 품질에 대해 아무것도 말하지 않습니다. 작동하는 지표는 prompt가 무엇을 생성하느냐에 전적으로 달려 있습니다.',
+      publishDate: '2026-04-10',
+      dateModified: '2026-04-10',
+      readTime: '8분 분량',
+      educationalLevel: 'Intermediate',
+      audience: '프로덕션에서 LLM을 배포하는 개발자 및 팀',
+      primaryTerm: 'prompt 평가 지표',
+      aboutTopics: ['pass rate', 'BLEU 점수', 'LLM-as-judge'],
+      next_refresh_due: '2026-10-10',
+      leadAnswerBlock: '**Prompt 평가 지표는 prompt가 의도한 출력을 안정적으로 생성하는지 측정하는 정량적 신호입니다.** 올바른 지표는 출력 유형에 따라 달라집니다: 구조화된 데이터에는 pass rate, 번역에는 BLEU, 의역 작업에는 시맨틱 유사성, 미묘한 자유 텍스트 생성에는 LLM-as-judge.',
+      quickFacts: [
+        'Pass rate는 프로덕션 실패율에 직접 매핑됩니다: 90% = 요청의 10%가 실패',
+        'BLEU 점수는 2002년 기계 번역을 위해 설계되었으며, 일반 AI 출력을 위한 것이 아닙니다',
+        '0.85 이상의 시맨틱 유사성은 일반적으로 의미론적으로 동등한 콘텐츠를 나타냅니다',
+        'LLM-as-judge는 시간당 수천 건의 평가로 확장됩니다',
+        'Pass rate가 5포인트 하락하는 것이 표준 회귀 경보 임계값입니다',
+        'GPT-5.5와 Claude 모델은 동일한 prompt 테스트 세트에서 10-20포인트 차이가 날 수 있습니다',
+      ],
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: 'Prompt 평가 지표란 무엇입니까?', anchor: '#definition' },
+        { label: '출력 유형별 지표', anchor: '#metric-types' },
+        { label: 'Pass Rate: 가장 유용한 지표', anchor: '#pass-rate' },
+        { label: 'BLEU 점수: 언제 사용합니까', anchor: '#bleu' },
+        { label: '시맨틱 유사성 점수', anchor: '#semantic-similarity' },
+        { label: 'LLM-as-Judge 평가', anchor: '#llm-as-judge' },
+        { label: '지표 회귀 감지 방법', anchor: '#regression-metrics' },
+        { label: '시작하는 방법', anchor: '#how-to-start' },
+        { label: '일반적인 실수', anchor: '#common-mistakes' },
+        { label: '지역별 고려사항', anchor: '#regional-considerations' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: '출처', anchor: '#sources' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Prompt 평가 지표: 무엇을 측정하고 어떻게 합니까',
+        description: 'Prompt 평가 지표에는 pass rate, BLEU 점수, 시맨틱 유사성, LLM-as-judge 점수가 포함됩니다.',
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        datePublished: '2026-04-10',
+        dateModified: '2026-04-10',
+        url: 'https://www.promptquorum.com/ko/prompt-engineering/prompt-evaluation-metrics',
+        inLanguage: 'ko',
+        proficiencyLevel: 'Intermediate',
+        about: [
+          { '@type': 'Thing', name: 'Pass Rate' },
+          { '@type': 'Thing', name: 'BLEU 점수' },
+          { '@type': 'Thing', name: 'LLM-as-Judge' },
+          { '@type': 'Thing', name: '시맨틱 유사성' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        audience: { '@type': 'Audience', audienceType: '프로덕션에서 LLM을 배포하는 개발자 및 팀' },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'ko',
+        mainEntity: [
+          { '@type': 'Question', name: 'Prompt 평가 지표란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt 평가 지표는 prompt가 의도한 출력을 안정적으로 생성하는지 측정하는 정량적 신호입니다. 주요 지표에는 pass rate(이진 정확/부정확), BLEU 점수(번역 및 요약을 위한 n-그램 겹침), 시맨틱 유사성(의역 작업을 위한 임베딩 코사인 유사성), LLM-as-judge(자유 텍스트를 위한 모델 점수 품질 루브릭)가 포함됩니다. 출력 유형에 잘못된 지표를 선택하면 오해의 소지가 있는 점수가 나옵니다.' } },
+          { '@type': 'Question', name: 'Prompt 평가에서 pass rate란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Pass rate는 prompt 출력이 정의된 성공 기준을 충족하는 테스트 입력의 비율입니다. Pass rate = 통과한 출력 / 총 테스트 케이스. 구조화된 출력에 가장 실행 가능한 지표로, 프로덕션 실패율에 직접 매핑됩니다.' } },
+          { '@type': 'Question', name: 'Prompt에 BLEU 점수를 언제 사용해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'BLEU는 출력이 참조 텍스트와 밀접하게 일치해야 하는 번역 및 요약 작업에 적합합니다. n-그램 단어 겹침을 측정하고 형식 준수나 의미론적 정확성을 측정하지 않기 때문에 JSON 생성, 지시 따르기, 창의적 글쓰기에는 오해의 소지가 있습니다.' } },
+          { '@type': 'Question', name: 'LLM-as-judge 평가란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge는 GPT-5.5 또는 Claude Opus 4.8 같은 유능한 모델을 사용하여 루브릭에 따라 출력을 점수화합니다. 인간 검토 없이 수천 건의 테스트 케이스로 확장되며 이진 지표가 놓치는 품질 차원을 처리합니다. 주요 위험은 모델 편향입니다: 판사가 자체 스타일과 유사한 출력을 더 높이 평가할 수 있습니다.' } },
+          { '@type': 'Question', name: 'Prompt 지표 회귀를 어떻게 감지합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt 버전별 기본 지표를 추적하고 설정된 기준선에서 5포인트 이상 하락할 때 경보를 울리십시오. 워크플로우: 변경 전 기준선 지표 기록, 변경 수행, 전체 테스트 세트 재실행, 기준선과 비교. 5포인트 이상 하락 시 배포를 차단해야 합니다. 10포인트 이상 하락은 진행 전 조사가 필요한 심각한 회귀입니다.' } },
+          { '@type': 'Question', name: 'JSON 출력 prompt에 어떤 지표를 사용해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'JSON 출력 prompt에 이진 pass/fail을 사용하십시오. 통과를 다음과 같이 정의하십시오: 유효한 JSON + 필수 필드 존재 + 허용 범위 내의 값. BLEU와 시맨틱 유사성은 구조화된 출력에 의미가 없습니다.' } },
+          { '@type': 'Question', name: '여러 prompt 평가 지표를 결합할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '네 — 프로덕션 prompt는 일반적으로 다양한 실패 모드를 포착하기 위해 기본 지표(구조화된 출력의 pass rate, 분류의 정확도)와 보조 지표(시맨틱 유사성 또는 LLM-as-judge)가 모두 필요합니다. 두 지표를 독립적으로 추적하고 임계값 아래로 떨어지면 경보를 울리십시오.' } },
+          { '@type': 'Question', name: '코드 생성을 위한 prompt 품질을 어떻게 평가합니까?', acceptedAnswer: { '@type': 'Answer', text: '테스트 pass rate를 기본 지표로 사용하십시오 — 코드를 생성하고, 단위 테스트를 실행하고, 통과한 비율을 계산하십시오. 코드가 완전히 다른 구문으로도 기능적으로 올바를 수 있기 때문에 BLEU나 시맨틱 유사성보다 더 신뢰할 수 있습니다. 더 완전한 품질 그림을 위해 정적 분석 점수로 보완하십시오.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        inLanguage: 'ko',
+        name: 'Prompt 평가 지표를 선택하고 적용하는 방법',
+        step: [
+          { '@type': 'HowToStep', name: '출력 유형 파악', text: 'Prompt 출력을 구조화된 데이터(JSON, CSV), 자유 텍스트(요약, 설명), 코드로 분류하십시오. 출력 유형에 따라 적용되는 지표가 결정됩니다.' },
+          { '@type': 'HowToStep', name: '올바른 지표 선택', text: '구조화된 출력: 이진 pass/fail. 번역/요약: BLEU 또는 ROUGE. 의역 작업: 시맨틱 유사성. 미묘한 생성: LLM-as-judge.' },
+          { '@type': 'HowToStep', name: '기준선 설정', text: '테스트 세트를 실행하고 prompt 변경을 하기 전에 지표 값을 기준선으로 기록하십시오.' },
+          { '@type': 'HowToStep', name: '회귀 경보 임계값 설정', text: '최소 허용 지표 값을 정의하십시오. Pass rate가 5포인트 이상 하락하면 배포를 차단해야 합니다.' },
+          { '@type': 'HowToStep', name: '모든 prompt 변경 후 지표 실행', text: 'Prompt 텍스트, 모델, 또는 temperature가 변경될 때마다 테스트 세트를 다시 실행하고 기준선과 비교하십시오.' },
+        ],
+      },
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: '핵심 요약',
+          items: [
+            'Pass rate(올바른 출력 / 총계)는 구조화된 출력이 있는 프로덕션 prompt에 가장 실행 가능한 지표입니다',
+            'BLEU 점수는 n-그램 겹침을 측정하며 번역 및 요약 작업에만 의미가 있습니다',
+            '시맨틱 유사성(임베딩의 코사인 유사성)은 의역 및 재작성 작업에서 BLEU를 능가합니다',
+            'LLM-as-judge는 GPT-5.5 또는 Claude Opus 4.8을 사용하여 미묘한 자유 텍스트 출력을 대규모로 점수화합니다',
+            'Prompt 버전별 pass rate를 추적하고 5포인트 이상 하락 시 경보를 울리십시오',
+            '모든 출력 유형을 커버하는 단일 지표는 없습니다 — prompt의 의도한 출력 형식에 따라 선택하십시오',
+          ],
+        },
+        definition: {
+          title: 'Prompt 평가 지표란 무엇입니까?',
+          content: '**Prompt 평가 지표는 prompt가 중요한 입력에 걸쳐 의도한 출력을 안정적으로 생성하는지 알려주는 정량적 신호입니다.** 지표 없이는 prompt 평가가 주관적입니다. 올바른 지표는 prompt가 무엇을 생성해야 하는지에 달려 있습니다. 작업에 올바른 지표를 선택하면 체계적으로 [prompt 품질을 평가](/ko/prompt-engineering/how-to-evaluate-prompt-quality)할 수 있습니다.',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Prompt 평가 지표는 prompt가 대표적인 테스트 세트에서 의도한 출력을 안정적으로 생성하는지 측정하는 정량적 신호입니다.' },
+            { type: 'in-plain-terms', text: 'AI를 위한 단위 테스트라고 생각하십시오: "올바름"이 무엇인지 정의하고, 20개 이상의 예시에 prompt를 실행하고, pass rate를 점수화합니다. 95% 점수는 실제 사용자 요청의 5%가 여전히 실패한다는 것을 의미합니다.' }
+          ],
+          callouts: [
+            { type: 'tip', label: '프로 팁', text: '복잡한 지표를 추가하기 전에 pass rate로 시작하십시오. 이진 정확/부정확이 1-5 루브릭보다 더 실행 가능한 경우가 많습니다.' }
+          ],
+        },
+        metricTypes: {
+          title: '구조화된 출력 vs 자유 텍스트 vs 코드에 어떤 지표가 적용됩니까?',
+          content: '**출력 유형이 어떤 지표가 유효한지 결정합니다. JSON 출력에 BLEU를 사용하거나 창의적 생성 작업에 pass/fail을 사용하면 의미 없는 점수가 나옵니다.**',
+          columns: ['출력 유형', '권장 지표', '이유'],
+          rows: [
+            { '출력 유형': 'JSON / 구조화된 데이터', '권장 지표': '이진 pass/fail', '이유': '유효하고 올바르거나 그렇지 않거나. 부분 점수 없음.' },
+            { '출력 유형': '분류', '권장 지표': '정확도 (이진)', '이유': '입력당 하나의 올바른 레이블.' },
+            { '출력 유형': '번역 / 요약', '권장 지표': 'BLEU 또는 ROUGE', '이유': '비교를 위한 참조 텍스트가 있음.' },
+            { '출력 유형': '의역 / 재작성', '권장 지표': '시맨틱 유사성', '이유': '의미 보존, 단어별 일치 아님.' },
+            { '출력 유형': '자유 텍스트 / 창의적', '권장 지표': 'LLM-as-judge', '이유': '미묘한 루브릭 필요, 참조 텍스트 없음.' },
+            { '출력 유형': '코드 생성', '권장 지표': '테스트 pass rate', '이유': '생성된 코드에 단위 테스트를 실행함.' },
+          ],
+          callouts: [
+            { type: 'insight', label: '핵심 포인트', text: '출력 유형이 지표 선택을 결정합니다. 가장 흔한 실수는 번역이 아닌 작업에 BLEU를 적용하는 것입니다 — 단어 겹침을 측정하며 형식 준수가 아닙니다.' }
+          ],
+        },
+        passRate: {
+          title: 'Pass rate란 무엇이며 왜 가장 유용한 지표입니까?',
+          content: '**Pass rate는 prompt 출력이 정의된 성공 기준을 충족하는 테스트 입력의 비율입니다 — 프로덕션 실패율에 직접 매핑되기 때문에 가장 실행 가능한 지표입니다.** Pass rate 92%는 실제 사용자 요청의 8%가 실패한다는 것을 의미합니다.\n\nPass rate = 통과한 출력 / 총 테스트 케이스\n\n구조화된 출력의 경우, 테스트를 실행하기 전에 "통과"를 정확하게 정의하십시오: 유효한 JSON, 필수 필드 존재, 허용된 열거형 내의 값, 지정된 한도 미만의 길이.\n\nPrompt 버전별 pass rate를 추적하십시오. 5포인트 이상 하락은 회귀입니다. 10포인트 이상 하락은 프로덕션 배포를 차단해야 합니다.',
+          callouts: [
+            { type: 'warning', label: '경고', text: 'Pass rate 90%는 실제 사용자 요청의 10%가 실패한다는 것을 의미합니다. 대시보드에서 보기 좋은 것이 아닌 프로덕션 위험 허용 범위를 기반으로 회귀 임계값을 설정하십시오.' }
+          ],
+        },
+        bleu: {
+          title: 'BLEU 점수란 무엇이며 언제 사용해야 합니까?',
+          content: '**BLEU(Bilingual Evaluation Understudy) 점수는 모델 출력과 참조 텍스트 간의 n-그램 겹침을 측정합니다.** 기계 번역의 표준 지표이며 출력이 참조와 밀접하게 일치해야 하는 모든 작업에 적합합니다.\n\nBLEU가 오해의 소지가 있는 경우:\n\n- **JSON 또는 구조화된 출력:** BLEU는 형식 토큰을 점수화하며 의미론적 정확성을 점수화하지 않음\n- **지시 따르기:** 모든 지시를 따르지만 다르게 의역한 prompt는 BLEU에서 낮은 점수를 받음\n- **창의적 생성:** BLEU는 품질이 높을 때도 어휘 다양성을 벌점함\n\nBLEU가 적합한 경우: 금 참조가 있는 번역 작업, 인간이 작성한 요약과 비교한 요약, 예상 단어 그대로의 답변이 있는 추출적 QA.',
+          callouts: [
+            { type: 'note', label: '알고 계셨습니까?', text: 'BLEU는 2002년 기계 번역을 위해 설계되었습니다. 개방형 생성에 알려진 한계가 있지만 MT 벤치마크의 표준으로 남아 있습니다.' }
+          ],
+        },
+        semanticSimilarity: {
+          title: '시맨틱 유사성 점수란 무엇입니까?',
+          content: '**시맨틱 유사성은 임베딩의 코사인 유사성을 계산하여 두 텍스트가 의미상 얼마나 가까운지 측정합니다.** 단어 선택이 아닌 의미를 포착하기 때문에 의역 및 재작성 작업에서 BLEU를 능가합니다.\n\n작동 방식: OpenAI text-embedding-3-small 또는 로컬 임베딩 모델을 사용하여 모델 출력과 참조를 임베딩하고, 코사인 유사성을 계산합니다. 0.85 이상의 점수는 일반적으로 의미론적으로 동등한 콘텐츠를 나타냅니다.\n\n한계: 시맨틱 유사성은 사실적 정확성을 확인하지 않고, 형식 위반을 감지하지 않으며, 환각이 예상 답변과 의미론적으로 유사하면 높은 점수를 줄 수 있습니다.',
+          callouts: [
+            { type: 'tip', label: '프로 팁', text: 'OpenAI text-embedding-3-small은 유사성 점수를 위한 가장 빠르고 저렴한 모델입니다. 기술/코드 콘텐츠의 경우 코드별 임베딩 모델을 고려하십시오.' }
+          ],
+        },
+        llmAsJudge: {
+          title: 'LLM-as-judge 평가란 무엇입니까?',
+          content: '**LLM-as-judge는 유능한 모델 — 일반적으로 GPT-5.5 또는 Claude Opus 4.8 — 을 사용하여 루브릭에 따라 출력을 점수화합니다.** 이것은 인간 검토 없이 수천 건의 테스트 케이스로 평가를 확장하고 이진 지표가 포착할 수 없는 품질 차원을 처리합니다: 일관성, 톤, 완전성, 사실적 정확성.',
+          columns: ['차원', '장점', '한계'],
+          rows: [
+            { '차원': '규모', '장점': '시간당 수천 건의 케이스', '한계': '볼륨에 따라 API 비용 증가' },
+            { '차원': '미묘함', '장점': '복잡한 루브릭 처리', '한계': '자체 출력 스타일에 대한 모델 편향' },
+            { '차원': '일관성', '장점': '재현 가능한 점수화', '한계': '판사 prompt 표현에 민감' },
+            { '차원': '비용', '장점': '대규모에서 인간 검토보다 저렴', '한계': '소규모 테스트 세트에는 비쌈' },
+          ],
+          promptExamples: [
+            {
+              badLabel: '모호한 루브릭',
+              bad: '이 출력의 품질을 1에서 5까지 평가하십시오.',
+              goodLabel: '명시적 다차원 루브릭',
+              good: '이 출력을 3가지 차원에서 점수화하십시오(각 1-3): (1) 사실적 정확성 — 참조 사실과 일치합니까? (2) 완전성 — 모든 필수 필드가 다루어졌습니까? (3) 톤 — 적절히 전문적입니까? JSON 반환: {"accuracy": X, "completeness": X, "tone": X, "total": X, "reason": "..."}'
+            }
+          ],
+          callouts: [
+            { type: 'warning', label: '경고', text: 'LLM-as-judge에는 자기 편향이 있습니다: 모델이 자신의 스타일과 유사한 출력을 더 높이 평가합니다. 출력을 생성하는 모델과 다른 모델을 판사로 사용하십시오.' }
+          ],
+        },
+        regressionMetrics: {
+          title: '지표 회귀를 어떻게 감지합니까?',
+          content: '**Prompt 버전별 기본 지표를 추적하고 설정된 기준선에서 5포인트 이상 하락할 때 경보를 울리십시오.** 모든 prompt 변경, 모델 업데이트, 또는 temperature 조정 전후에 동일한 테스트 세트를 실행하십시오.\n\n[prompt 감사 및 회귀 위험](/ko/prompt-engineering/prompt-audit-and-regression-risk) 감지를 구현할 때 이 워크플로우를 따르십시오:\n\n1. 현재 지표 점수를 기준선으로 기록합니다 (예: pass rate = 91%)\n2. Prompt 변경을 수행합니다\n3. 전체 테스트 세트를 다시 실행합니다\n4. 새 점수를 기준선과 비교합니다\n5. 하락 > 5포인트: 변경을 차단하고, 조사하고, 수정합니다\n\nCI/CD에서 자동화된 회귀 감지를 위해 Promptfoo 같은 도구가 GitHub Actions와 통합되어 pass rate가 임계값 아래로 떨어지면 PR을 실패시킬 수 있습니다.',
+          callouts: [
+            { type: 'practice', label: '모범 사례', text: 'Promptfoo를 GitHub Actions와 통합하여 pass rate가 임계값 아래로 떨어지면 자동으로 PR을 실패시키십시오. 이것은 prompt 회귀가 프로덕션에 도달하는 것을 방지합니다.' }
+          ],
+        },
+        howToStart: {
+          title: 'Prompt 평가 지표 측정을 시작하는 방법',
+          numberedItems: [
+            'Prompt 출력 유형을 파악하십시오: 구조화된 데이터, 분류, 번역/요약, 의역, 자유 텍스트, 코드.',
+            '적절한 지표를 선택하십시오: 구조화된 것은 이진 pass/fail, 번역/요약은 BLEU, 의역은 시맨틱 유사성, 자유 텍스트는 LLM-as-judge, 코드는 테스트 pass rate.',
+            '테스트를 실행하기 전에 예상 출력 또는 통과 기준이 작성된 20개 이상의 입력으로 테스트 세트를 구축하십시오.',
+            '테스트 세트를 실행하고 기준선 지표 점수를 기록하십시오.',
+            '회귀 경보 임계값을 설정하십시오: 기준선에서 5포인트 이상 하락 시 경보.',
+            'Promptfoo, Braintrust, 또는 PromptQuorum을 사용하여 모든 prompt 변경 시 자동으로 지표를 실행하십시오.',
+          ],
+          callouts: [
+            { type: 'insight', label: '핵심 포인트', text: 'Prompt를 작성한 후가 아니라 전에 테스트 세트를 구축하십시오. 사후에 정의된 테스트 케이스는 실제 입력 분포가 아닌 현재 prompt와 일치하는 경향이 있습니다.' }
+          ],
+        },
+        commonMistakes: {
+          title: 'Prompt 평가 지표에서 피해야 할 실수는 무엇입니까?',
+          items: [
+            '**실수: JSON 또는 지시 따르기 prompt에 BLEU 사용.** 해결책: BLEU는 n-그램 겹침을 측정하며 형식 준수나 지시 준수를 측정하지 않습니다. 구조화된 출력에는 이진 pass/fail을 사용하십시오.',
+            '**실수: 모호한 루브릭으로 LLM-as-judge 사용.** 해결책: 판사 prompt는 각 점수 수준을 명시적으로 정의해야 합니다. "1-5로 품질 점수화" 같은 모호한 루브릭은 진단 가치가 없는 일관성 없는 점수를 생성합니다.',
+            '**실수: 첫 번째 변경 전 기준선 없음.** 해결책: 변경을 하기 전에 지표 값을 기록하십시오. 기준선 없이는 회귀를 감지할 수 없습니다.',
+            '**실수: 하나의 지표만 측정.** 해결책: 프로덕션 prompt는 일반적으로 다양한 실패 모드를 포착하기 위해 기본 지표(pass rate 또는 정확도)와 보조 지표(시맨틱 유사성 또는 LLM-as-judge) 모두가 필요합니다.',
+          ],
+        },
+        relatedReading: {
+          title: '관련 자료',
+          items: [
+            '[Prompt 품질 평가 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality) — 세 가지 구성 요소 프레임워크: 정확도, 일관성, 지시 준수율',
+            '[모델에 걸쳐 prompt 테스트하는 방법](/ko/prompt-engineering/how-to-test-prompts-across-models) — GPT-5.5, Claude, Gemini에서 동일한 테스트 세트 실행',
+            '[Prompt 감사 및 회귀 위험](/ko/prompt-engineering/prompt-audit-and-regression-risk) — 자동화된 회귀 스위트 및 CI/CD 게이트',
+            '[Braintrust vs Prompthub vs Vellum](/ko/prompt-engineering/braintrust-vs-prompthub-vs-vellum) — 팀을 위한 전용 prompt 평가 플랫폼 비교',
+            '[최고의 Prompt 테스트 및 평가 도구 2026](/ko/prompt-engineering/best-prompt-testing-tools) — 체계적인 prompt QA를 위한 순위 도구',
+            '[Prompt 라이브러리 구축 방법](/ko/prompt-engineering/build-a-prompt-library) — 평가 기준선과 함께 prompt 버전 관리 및 구성',
+          ],
+        },
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            { q: 'Prompt 평가 지표란 무엇입니까?', a: 'Prompt 평가 지표는 prompt가 의도한 출력을 안정적으로 생성하는지 측정하는 정량적 신호입니다. 주요 지표에는 pass rate, BLEU 점수, 시맨틱 유사성, LLM-as-judge가 포함됩니다. 출력 유형에 잘못된 지표를 선택하면 오해의 소지가 있는 점수가 나옵니다.' },
+            { q: 'Prompt 평가에서 pass rate란 무엇입니까?', a: 'Pass rate는 출력이 정의된 성공 기준을 충족하는 테스트 입력의 비율입니다. 프로덕션 실패율에 직접 매핑되며 구조화된 출력 prompt에 가장 실행 가능한 지표입니다.' },
+            { q: 'Prompt에 BLEU 점수를 언제 사용해야 합니까?', a: 'BLEU는 출력이 참조 텍스트와 밀접하게 일치해야 하는 번역 및 요약 작업에 적합합니다. 형식 준수나 의미론적 정확성이 아닌 n-그램 단어 겹침을 측정하기 때문에 JSON 생성, 지시 따르기, 창의적 글쓰기에는 오해의 소지가 있습니다.' },
+            { q: 'LLM-as-judge 평가란 무엇입니까?', a: 'LLM-as-judge는 GPT-5.5 또는 Claude Opus 4.8을 사용하여 대규모로 루브릭에 따라 출력을 점수화합니다. 이진 지표가 놓치는 미묘한 품질 차원을 처리합니다. 주요 위험은 자체 출력 스타일에 대한 모델 편향입니다.' },
+            { q: 'Prompt 지표 회귀를 어떻게 감지합니까?', a: 'Prompt 버전별 기본 지표를 추적하고 설정된 기준선에서 5포인트 이상 하락할 때 경보를 울리십시오. 5포인트 이상 하락 시 배포를 차단해야 합니다. 10포인트 이상 하락은 진행 전 조사가 필요한 심각한 회귀입니다.' },
+            { q: 'JSON 출력 prompt에 어떤 지표를 사용해야 합니까?', a: '이진 pass/fail을 사용하십시오. 통과를 유효한 JSON + 필수 필드 존재 + 허용 범위 내의 값으로 정의하십시오. BLEU와 시맨틱 유사성은 구조화된 출력에 의미가 없습니다.' },
+            { q: '여러 prompt 평가 지표를 결합할 수 있습니까?', a: '네 — 프로덕션 prompt는 일반적으로 다양한 실패 모드를 포착하기 위해 기본 지표와 보조 지표가 모두 필요합니다. 두 지표를 독립적으로 추적하고 임계값 아래로 떨어지면 경보를 울리십시오.' },
+            { q: '코드 생성을 위한 prompt 품질을 어떻게 평가합니까?', a: '테스트 pass rate를 기본 지표로 사용하십시오 — 코드를 생성하고, 단위 테스트를 실행하고, 통과한 비율을 계산하십시오. 더 완전한 품질 그림을 위해 정적 분석 점수로 보완하십시오.' },
+          ],
+        },
+        regionalConsiderations: {
+          title: '어떤 지역적 요소가 Prompt 평가 요구사항에 영향을 미칩니까?',
+          content: '**규제 프레임워크는 관할권과 위험 분류에 따라 특정 의무를 가진 문서화된 AI 품질 지표를 점점 더 요구하고 있습니다.**\n\n- **EU (AI Act 2025–2026):** 고위험 AI 시스템은 정량적 품질 지표를 사용한 문서화된 테스트를 증명해야 합니다. Prompt 평가 기록 — 테스트 세트, pass rate, 회귀 기준선 — 은 AI Act 투명성 요구사항을 위한 감사 준비 증거를 제공합니다.\n\n- **미국 (SOC 2 / NIST AI RMF):** SOC 2 Type II 감사는 AI 기반 프로세스에 대한 문서화된 품질 보증을 기대합니다. 버전 기록이 있는 Prompt 평가 지표는 변경 관리 및 품질 관리 감사 요구사항을 충족합니다.\n\n- **다국어 평가:** 여러 언어에 걸쳐 prompt를 배포할 때 각 언어 변형을 별도로 평가하십시오. BLEU 점수와 시맨틱 유사성 임계값은 언어 쌍 간에 크게 다릅니다. 한국어 평가에서는 한국어 특화 임베딩 모델을 사용하고 한국어 컨텍스트에 맞게 임계값을 조정하십시오.',
+        },
+        sources: {
+          title: '출처',
+          items: [
+            '[Promptfoo 문서 (promptfoo.dev)](https://www.promptfoo.dev) — LLM-as-judge를 포함한 내장 지표가 있는 오픈소스 prompt 평가 프레임워크',
+            '[Braintrust 평가 가이드 (braintrust.dev)](https://www.braintrust.dev) — pass rate, LLM-as-judge, 사용자 정의 점수화를 지원하는 프로덕션 평가 플랫폼',
+            '[Papineni et al., 2002. "BLEU: a Method for Automatic Evaluation of Machine Translation"](https://aclanthology.org/P02-1040.pdf) — 원래 BLEU 논문',
+            '[DeepEval: Open-Source LLM Evaluation Framework (github.com/confident-ai/deepeval)](https://github.com/confident-ai/deepeval) — Confident AI, 2024-2025. CI/CD 통합이 있는 pass rate, 환각 감지, LLM-as-judge 지표를 지원합니다.',
+            '[The Prompt Report: A Systematic Survey of Prompting Techniques (arXiv:2406.06608)](https://arxiv.org/abs/2406.06608) — Schulhoff et al., 2024. Prompt engineering을 위한 평가 방법론 및 지표 선택을 포함한 포괄적인 조사.',
+          ],
+        },
+      },
+    },
   };

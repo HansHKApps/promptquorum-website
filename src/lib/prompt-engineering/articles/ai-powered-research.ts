@@ -3879,34 +3879,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'ListItem', 'position': 6, 'name': 'NotebookLM', 'description': '업로드된 문서. 자신의 파일에서 소스 기반 QA. 무료/Plus 티어.' },
       ],
     },
-    breadcrumbSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: '홈',
-          item: 'https://www.promptquorum.com/ko',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: '프롬프트 엔지니어링',
-          item: 'https://www.promptquorum.com/ko/prompt-engineering',
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: 'AI 기반 연구: 도구, 환각률, 검증 워크플로우',
-          item: 'https://www.promptquorum.com/ko/prompt-engineering/ai-powered-research',
-        },
-      ],
-    },
-    snippetBlocks: [
-      { type: 'one-sentence', text: 'AI 연구 도구는 문헌 검토를 몇 주에서 몇 시간으로 단축하지만, 9.2%의 환각률로 인해 Elicit, Consensus, scite.ai를 사용한 다중 모델 교차 검증 워크플로우가 필수적입니다.' },
-      { type: 'plain-terms', text: 'AI 연구 도구를 사용할 때 각 단계에 적합한 도구를 선택하고(발견에는 Perplexity, 추출에는 Elicit, 합성에는 Consensus, 검증에는 scite.ai), 여러 AI 모델에서 동일한 질문을 실행하여 환각된 인용을 식별하십시오.' },
-    ],
+
     sections: {
       tldr: {
         title: '핵심 내용',

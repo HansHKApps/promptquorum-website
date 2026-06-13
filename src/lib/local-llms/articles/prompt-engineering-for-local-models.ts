@@ -2893,4 +2893,250 @@ schema: {
         ],
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Advanced Techniques',
+      title: '로컬 LLM 프롬프트 엔지니어링 2026: CoT 및 Few-Shot',
+      seoTitle: '로컬 LLM 프롬프트 엔지니어링 2026: CoT 및 Few-Shot',
+      intro: '로컬 7B–13B 모델은 GPT-5.2 또는 Claude와 다르게 프롬프트에 반응합니다. 명시적인 구조, 더 명확한 지침, 그리고 클라우드 모델이 1–2개만 필요한 곳에서 3–5개의 few-shot 예시가 필요합니다. 2026년 4월 기준으로, 검증된 기법에는 chain-of-thought 프롬프팅(정확도 10–20% 향상), 역할 정의, 구조화된 출력 형식 지정(JSON), Ollama 및 LM Studio의 시스템 프롬프트 구성이 포함됩니다.',
+      metaDescription: 'Chain-of-thought로 7B 정확도를 10–20% 향상시킵니다. Few-shot(예시 3–5개)은 zero-shot 대비 15–25% 우수합니다. Ollama 및 LM Studio의 시스템 프롬프트 가이드.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-24',
+      leadAnswerBlock: '**로컬 LLM(7B–13B 모델)은 클라우드 API와 다르게 프롬프트에 반응합니다. 명시적인 구조, 더 명확한 지침, 그리고 in-context 학습에 대한 의존도를 줄여야 합니다.**',
+      audience: '소비자용 하드웨어에서 첫 번째 로컬 LLM을 실행하는 초보자',
+      readTime: '11분 읽기',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'prompt engineering',
+      toc: [
+        { label: '핵심 요점', anchor: '#key-takeaways' },
+        { label: '빠른 사실', anchor: '#quick-facts' },
+        { label: '클라우드 LLM과의 차이점', anchor: '#differences' },
+        { label: 'Chain-of-Thought 프롬프팅', anchor: '#chain-of-thought' },
+        { label: '구조화된 출력 형식 지정', anchor: '#structured-output' },
+        { label: '역할 정의 및 페르소나', anchor: '#roles' },
+        { label: '도구별 시스템 프롬프트 형식', anchor: '#system-prompt-formats' },
+        { label: 'Temperature, Top-P, Repeat Penalty', anchor: '#temperature-sampling' },
+        { label: 'Few-Shot vs Zero-Shot', anchor: '#few-shot' },
+        { label: '흔한 실수', anchor: '#common-mistakes' },
+        { label: '지역별 고려사항', anchor: '#regional-context' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: '관련 읽기', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '로컬 7B 모델은 GPT-5.5보다 더 명시적인 안내가 필요합니다. 더 긴 프롬프트와 더 명확한 지침이 필요합니다.',
+            'Chain-of-thought("단계별로 생각해 보겠습니다")은 추론 정확도를 10–20% 향상시킵니다.',
+            '항상 출력 형식(JSON, Markdown, 일반 텍스트)을 지정하십시오. 비구조화된 출력은 예측 불가능합니다.',
+            'Few-shot 예시(1–3개)는 로컬 모델에서 zero-shot보다 더 효과적입니다. 예시가 많을수록 일관성이 높아집니다.',
+            '역할 정의("당신은 Python 전문가입니다")는 도메인별 응답을 향상시킵니다.',
+          ],
+        },
+        quickFacts: {
+          id: 'quick-facts',
+          title: '빠른 사실',
+          items: [
+            '**CoT를 통한 정확도 향상:** 추론 작업에서 10–20% 향상',
+            '**Few-shot 요구사항:** 로컬 7B는 예시 3–5개 필요 vs 클라우드 API는 1–2개 필요',
+            '**컨텍스트 소비:** 각 예시당 50–200 토큰 사용',
+            '**Temperature 영향:** 0.8에서 0.3으로 낮추면 사실 정확도 15–25% 향상',
+            '**모델 크기 차이:** 7B 모델은 70B 모델보다 더 명시적인 안내가 필요',
+            '**출력 형식 일관성:** JSON 명세는 신뢰성을 30–40% 향상',
+          ],
+        },
+        differences: {
+          id: 'differences',
+          title: '로컬 모델은 어떻게 다릅니까?',
+          rows: [
+            { 'Aspect': '컨텍스트 창', 'GPT-5.2 (ChatGPT Plus)': '128K 토큰', 'Local 7B (Llama 3.3 8B)': '4K–128K 토큰', 'Local 70B (Llama 3.3)': '128K 토큰' },
+            { 'Aspect': '지침 따르기', 'GPT-5.2 (ChatGPT Plus)': '매우 우수', 'Local 7B (Llama 3.3 8B)': '명시적 프롬프트로 양호', 'Local 70B (Llama 3.3)': '매우 좋음' },
+            { 'Aspect': 'Few-shot 학습', 'GPT-5.2 (ChatGPT Plus)': '예시 1–2개', 'Local 7B (Llama 3.3 8B)': '예시 3–5개 필요', 'Local 70B (Llama 3.3)': '예시 2–3개' },
+            { 'Aspect': '추론', 'GPT-5.2 (ChatGPT Plus)': '다단계 암묵적', 'Local 7B (Llama 3.3 8B)': '단계별 명시적 필요', 'Local 70B (Llama 3.3)': '중간 수준 암묵적' },
+            { 'Aspect': '시스템 프롬프트', 'GPT-5.2 (ChatGPT Plus)': 'API가 처리', 'Local 7B (Llama 3.3 8B)': '도구별 설정 필요', 'Local 70B (Llama 3.3)': '도구별 설정 필요' },
+            { 'Aspect': 'Temperature 기본값', 'GPT-5.2 (ChatGPT Plus)': '1.0 (API)', 'Local 7B (Llama 3.3 8B)': '0.8 (Ollama 기본값)', 'Local 70B (Llama 3.3)': '0.8 (Ollama 기본값)' },
+          ],
+          columns: ['Aspect', 'GPT-5.2 (ChatGPT Plus)', 'Local 7B (Llama 3.3 8B)', 'Local 70B (Llama 3.3)'],
+        },
+        chainOfThought: {
+          id: 'chain-of-thought',
+          title: 'Chain-of-Thought 프롬프팅은 어떻게 정확도를 향상시킵니까?',
+          content: [
+            '**Chain-of-thought(CoT) 프롬프팅은 LLM에게 답변하기 전에 추론 과정을 단계별로 보여달라고 요청합니다.** 이 기법은 로컬 7B–13B 모델에 특히 효과적입니다. 이러한 모델들은 더 큰 클라우드 모델의 암묵적 추론 능력이 부족하기 때문입니다. "17 × 24"와 같은 수학 문제에서, CoT 없이는 로컬 모델이 자주 잘못 추측합니다. 명시적인 단계별 추론을 사용하면 문제를 부분으로 분해하여 10–20% 더 높은 정확도를 달성합니다.',
+            '**CoT 없이:** "17 × 24는 얼마입니까?" → 모델이 직접 답변하며 자주 틀림.',
+            '**CoT 사용:** "단계별로 풀어보십시오: 17 × 24" → 모델이 표시: 17 × 20 = 340, 17 × 4 = 68, 합계 = 408. 더 정확함.',
+            '이 기법이 도구 선택을 위해 [내부적으로 추론을 사용하는 로컬 AI 에이전트](/local-llms/local-ai-agents-langgraph-ollama)까지 어떻게 확장되는지 알아보십시오.',
+          ],
+          callouts: [
+            { type: '💡', text: '프로 팁: CoT는 부분적인 추론으로 출력을 준비할 때 가장 효과적입니다. 예시: "단계별로 분석해 보겠습니다: 먼저, 다음을 알아차립니다..."' },
+          ],
+          codeBlock: '# CoT를 사용한 프롬프트\nprompt = """\nYou will answer a question by thinking step-by-step.\nLet me think about this:\n\nQuestion: Why do local LLMs require more explicit prompting than cloud APIs?\n\nThinking:\n1. First, consider the differences in model size...\n2. Then, think about training data and fine-tuning...\n3. Finally, consider the architecture and inference optimization...\n\nAnswer:\n"""\n\n# 이 코드는 모델이 문제를 추론하도록 안내합니다',
+          codeLanguage: 'python',
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Chain-of-thought 프롬프팅은 모델에게 답변 전에 추론을 명시적 단계로 분해하도록 지시하며, 복잡한 작업에서 정확도를 10–20% 향상시킵니다.' },
+          ],
+        },
+        structuredOutput: {
+          id: 'structured-output',
+          title: '출력 형식 지정이 로컬 모델에 왜 중요합니까?',
+          content: [
+            '**정확한 출력 형식(JSON, Markdown, 일반 텍스트)을 지정하는 것은 로컬 모델에 매우 중요합니다. 명시적인 지침 없이는 예측 불가능한 출력을 생성하기 때문입니다.** GPT-5.5와 같은 클라우드 모델은 모호한 요청에서도 의도를 추론할 수 있지만, 로컬 7B–13B 모델은 그렇지 않습니다. [구조화된 문서 추출이 필요한 로컬 RAG 시스템](/local-llms/local-rag-2026)의 경우, JSON 형식 명세는 파싱 오류를 방지하고 추출 정확도를 30–40% 향상시킵니다.',
+            '**예시:** "텍스트에서 엔티티를 추출하십시오"는 목록 대신 서술형 텍스트를 반환할 수 있습니다.',
+            '**개선:** "JSON 형식으로 엔티티를 추출하십시오: person, location, organization 키 포함".',
+          ],
+          callouts: [
+            { type: '⚠️', text: '일반적인 문제: 로컬 모델이 원시 JSON 출력을 거부하는 경우가 있습니다. 프롬프트에 "Output ONLY JSON, no markdown fence"를 추가하여 이를 우회하십시오.' },
+          ],
+          codeBlock: '# 나쁜 예: 모호한 출력\nprompt = "Summarize this text"\n\n# 좋은 예: 명시적 형식\nprompt = """\nSummarize the text in EXACTLY 3 bullet points.\nFormat as a JSON list:\n{\n  "summary": [\n    "- Point 1",\n    "- Point 2",\n    "- Point 3"\n  ]\n}\n"""',
+          codeLanguage: 'python',
+        },
+        roles: {
+          id: 'roles',
+          title: '역할 할당이 로컬 모델 응답을 어떻게 향상시킵니까?',
+          content: [
+            '**특정 역할을 할당하는 것("당신은 10년 경력의 Python 전문가입니다")은 일반적인 프롬프트에 비해 도메인별 응답을 대폭 향상시킵니다.** 페르소나 프롬프팅이라고 불리는 이 기법은 모델의 응답 생성을 특정 전문 도메인에 고정시킴으로써 작동합니다. 로컬 모델은 클라우드 모델보다 역할 정의에 15–25% 더 잘 반응합니다. 이는 일반적인 프롬프트가 작동하도록 하는 강력한 RLHF 정렬이 부족하기 때문입니다. 예시:',
+            '- "당신은 Python 전문가입니다" → 더 나은 코드 설명',
+            '- "당신은 의학 연구원입니다" → 더 상세한 생의학 응답',
+            '- "당신은 회의적인 분석가입니다" → 더 비판적인 사고',
+            '여러 사용 사례에 걸쳐 배포하는 경우 더 강력한 도메인 정렬을 위해 역할 정의와 [파인튜닝을 결합하십시오](/local-llms/fine-tuning-local-llms-lora).',
+          ],
+          callouts: [
+            { type: '🎯', text: '모범 사례: 구체성이 중요합니다. "당신은 전문가입니다"는 약합니다. "당신은 async/await 패턴에 집중하는 10년 경력의 Python 백엔드 전문가입니다"가 강합니다.' },
+          ],
+          snippetBlocks: [
+            { type: 'plain-terms', text: '일상적인 표현으로, 페르소나 프롬프팅은 모델에게 답변할 때 어떤 "모자"를 쓸지 알려줍니다. Python 전문가 모자는 일반 보조자 모자보다 다른(그리고 더 나은) 코드를 생성합니다.' },
+          ],
+        },
+        systemPromptFormats: {
+          id: 'system-prompt-formats',
+          title: 'Ollama, LM Studio, llama.cpp에서 시스템 프롬프트를 어떻게 설정합니까?',
+          content: [
+            '**시스템 프롬프트는 사용자 메시지 이전에 모델의 역할과 제약을 정의하며, 각 도구(Ollama, LM Studio, llama.cpp)마다 설정 방법이 다릅니다.**',
+          ],
+          codeBlock: '# Ollama (Modelfile)\nFROM llama3.1:8b\nSYSTEM """You are a Python expert with 10 years experience. Answer only Python questions. Provide code examples. Use type hints."""\nPARAMETER temperature 0.7\nPARAMETER top_p 0.9\nPARAMETER repeat_penalty 1.1\n\n# Ollama (API / OpenAI SDK)\nresponse = client.chat.completions.create(\n  model="llama3.1:8b",\n  messages=[\n    {"role": "system", "content": "You are a Python expert..."},\n    {"role": "user", "content": "Write a FastAPI endpoint"}\n  ],\n  temperature=0.7\n)\n\n# LM Studio (GUI)\n# Settings -> System Prompt 필드(프롬프트 붙여넣기)\n# 또는 localhost:1234의 API -- Ollama와 동일한 형식\n\n# llama.cpp (CLI)\n./main -m llama-3.1-8b.gguf \\\n  --system-prompt "You are a Python expert..." \\\n  --temp 0.7 --top-p 0.9 --repeat-penalty 1.1 \\\n  -p "Write a FastAPI endpoint"',
+          codeLanguage: 'bash',
+        },
+        temperatureSampling: {
+          id: 'temperature-sampling',
+          title: 'Temperature 및 샘플링 파라미터가 출력 품질에 어떤 영향을 미칩니까?',
+          content: [
+            '**temperature, top_p, repeat_penalty 조정은 프롬프트 문구만큼이나 로컬 7B 출력 품질에 영향을 미치며, 로컬 모델은 클라우드 API와 다른 기본값이 필요합니다.**',
+            '**로컬 모델을 위한 핵심 인사이트:** Ollama의 기본 temperature(0.8)는 OpenAI API의 기본값(nucleus 샘플링으로 1.0)보다 높습니다. Temperature를 0.3–0.5로 낮추면 로컬 7B 모델의 사실 정확도가 크게 향상됩니다. 코딩 작업의 경우 temperature를 0.1–0.2로 설정하고 repeat_penalty를 1.0으로 설정하십시오(코드는 import나 함수 호출처럼 반복적인 패턴이 필요합니다).',
+          ],
+          callouts: [
+            { type: '📌', text: '핵심 사항: Temperature는 logit에 대한 승수입니다. 0.0에서는 항상 가장 높은 확률 토큰을 선택합니다. 1.0 이상에서는 무작위성이 증가합니다. 로컬 모델은 temperature 1.5 이상에서 포화됩니다.' },
+          ],
+          rows: [
+            { 'Parameter': 'temperature', 'What it controls': '무작위성', 'Default (Ollama)': '0.8', 'Recommended': '사실적: 0.3–0.5, 창의적: 0.7–0.9' },
+            { 'Parameter': 'top_p', 'What it controls': '어휘 다양성', 'Default (Ollama)': '0.9', 'Recommended': '일관성: 0.8, 다양성: 0.95' },
+            { 'Parameter': 'repeat_penalty', 'What it controls': '반복 방지', 'Default (Ollama)': '1.1', 'Recommended': '대화: 1.1–1.2, 코드: 1.0' },
+          ],
+          columns: ['Parameter', 'What it controls', 'Default (Ollama)', 'Recommended'],
+        },
+        fewShot: {
+          id: 'few-shot',
+          title: '로컬 모델은 왜 클라우드 API보다 더 많은 Few-Shot 예시가 필요합니까?',
+          content: [
+            '**로컬 모델에 3–5개의 예시(few-shot 학습)를 제공하면 zero-shot 대비 출력 일관성이 15–25% 향상됩니다. 반면 클라우드 모델은 1–2개의 예시만 필요합니다.**',
+            '로컬 모델은 파라미터 수가 적고 학습 데이터가 덜 다양하기 때문에 더 많은 예시가 도움이 됩니다. Few-shot 학습은 모델에게 실제 작업을 해결하기 전에 예상되는 입력/출력 패턴을 보여주는 in-context 학습 기법입니다.',
+          ],
+          callouts: [
+            { type: '🛠️', text: '구현 팁: 예시를 다양하게 제공하십시오(쉬운 것 1개, 중간 것 1개, 어려운 것 1개). 3개의 유사한 예시보다 다양성이 일반화를 향상시키고 특정 패턴에 대한 과적합을 방지합니다.' },
+          ],
+          codeBlock: '# Few-shot 프롬프트\nprompt = """\nClassify sentiment. Examples:\n\n"I love this product!" -> positive\n"Worst experience ever" -> negative\n"It\'s okay, nothing special" -> neutral\n\nNow classify: "This is amazing!"\nAnswer: """\n\n# 모델이 예시에서 형식과 스타일을 학습합니다',
+          codeLanguage: 'python',
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: '일반적인 프롬프트 엔지니어링 실수',
+          items: [
+            '**구조 없는 장황한 프롬프트.** 횡설수설하는 지침은 로컬 모델을 혼란스럽게 합니다. 간결하고 명시적으로 작성하십시오.',
+            '**Chain-of-thought 미사용.** CoT는 정확도를 10–20% 향상시킵니다. 추론 작업에는 항상 포함하십시오.',
+            '**하나의 프롬프트가 모든 경우에 적용된다는 가정.** 반복하고 테스트하십시오. 작은 문구 변경이 큰 출력 변화를 야기합니다.',
+            '**출력 형식 무시.** 명시적인 형식 지정 없이는 출력이 예측 불가능합니다.',
+            '**모호한 역할 정의 사용.** "당신은 전문가입니다"는 모호합니다. "당신은 10년 경력의 Python 전문가입니다"가 더 낫습니다.',
+          ],
+          callouts: [
+            { type: '📍', text: '알고 계셨습니까? 가장 효과적인 프롬프트는 3–5번 반복합니다. 로컬 모델 프롬프팅은 "한 번 설정하고 잊어버리기"가 아닙니다. 작은 개선이 누적되어 상당한 정확도 향상으로 이어집니다.' },
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: '프롬프트 엔지니어링의 지역별 고려사항',
+          content: [
+            '**EU(GDPR):** EU 인프라에서 로컬 모델을 위한 프롬프트 엔지니어링을 배포할 때, 프롬프트 반복에 사용되는 모든 학습 데이터가 GDPR 데이터 최소화 원칙을 준수하는지 확인하십시오. 테스트를 위해 사용자 쿼리를 외부 API로 내보내지 마십시오. 로컬에서 반복하십시오.',
+            '**일본(APPI):** 고객 데이터에 로컬 LLM을 사용하는 일본 기업은 모든 프롬프트와 응답에 대한 명시적인 감사 로깅을 구현해야 합니다. 프롬프트 품질은 데이터 보안에 직접 영향을 미칩니다. 잘못 설계된 프롬프트는 출력에서 민감한 정보를 노출할 수 있습니다.',
+            '**중국(데이터 보안법 2021):** 중국 본토의 로컬 LLM 배포는 모든 추론, 프롬프팅, 모델 튜닝을 온프레미스에서 유지해야 합니다. 데이터 거주 준수를 위해 Qwen 및 기타 국내 모델이 선호됩니다.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '로컬 LLM 프롬프팅에 관한 자주 묻는 질문',
+          faqs: [
+            {
+              q: '로컬 LLM은 왜 GPT-5.5보다 더 명시적인 프롬프트가 필요합니까?',
+              a: '로컬 7B–13B 모델은 GPT-5.5(추정 1.8T 파라미터)보다 파라미터 수가 적고 학습 데이터가 덜 다양합니다. 모호한 의도를 잘 추론하지 못합니다. 명시적인 지침(형식, 역할, 단계별 추론)이 이 격차를 보완합니다. Chain-of-thought 프롬프팅은 추론 작업에서 로컬 모델 정확도를 10–20% 향상시킵니다.',
+            },
+            {
+              q: '로컬 LLM 프롬프트에 few-shot 예시를 몇 개 포함해야 합니까?',
+              a: '로컬 7B 모델에는 예시 3–5개가 최적입니다. GPT-5.5는 일반적으로 1–2개만 필요합니다. 예시가 많을수록 일관성이 향상되지만 컨텍스트 창 토큰을 소비합니다(모델에 따라 4K–32K 토큰). 4K 컨텍스트 창을 가진 Llama 3.2 8B의 경우 예시 3개와 작업으로 제한하십시오. 32K 이상의 컨텍스트를 가진 모델의 경우 5개가 안전합니다.',
+            },
+            {
+              q: 'Chain-of-thought 프롬프팅이 모든 로컬 모델에서 작동합니까?',
+              a: 'Chain-of-thought는 모든 instruction-tuned 모델(Llama 3.x, Qwen 3, Mistral Small)에서 작동합니다. 기본 모델(non-instruction-tuned)은 "단계별로 생각하십시오" 지침을 안정적으로 따르지 않습니다. 로컬 모델의 경우 "단계별로 풀어보십시오:" 또는 예상 출력 시작 부분의 "Reasoning:"과 같은 CoT 구문이 가장 효과적입니다.',
+            },
+            {
+              q: '로컬 LLM에서 가장 신뢰할 수 있는 출력 형식은 무엇입니까?',
+              a: 'JSON은 로컬 LLM에서 가장 신뢰할 수 있는 구조화된 출력 형식입니다. 프롬프트에 정확한 JSON 스키마를 지정하십시오: "name, score, reasoning 키를 가진 JSON 객체로만 응답하십시오." Markdown 헤더(##)는 섹션에 신뢰할 수 있습니다. XML이나 사용자 정의 형식 요청은 피하십시오. 로컬 모델은 이를 일관성 없이 처리합니다.',
+            },
+            {
+              q: '로컬 LLM이 주제를 벗어나지 않도록 어떻게 방지합니까?',
+              a: '시스템 또는 지침 프롬프트에 명시적인 제약을 추가하십시오: "[주제]에 대해서만 답변하십시오. 다른 것에 대해 묻는 경우 다음을 말하십시오: [주제]에 대해서만 도움드릴 수 있습니다." Ollama의 경우 시스템 프롬프트 필드를 사용하십시오. llama.cpp의 경우 시스템 메시지로 앞에 추가하십시오. 이 경계 설정은 강력한 RLHF 정렬을 가진 클라우드 모델보다 로컬 7B 모델에서 훨씬 더 효과적으로 작동합니다.',
+            },
+            {
+              q: '로컬 모델의 zero-shot과 few-shot 프롬프팅의 차이점은 무엇입니까?',
+              a: 'Zero-shot은 예시 없이 제공됩니다: "이 이메일을 스팸인지 아닌지 분류하십시오." Few-shot은 작업 전에 2–5개의 레이블된 예시를 제공합니다. 로컬 7B 모델의 경우, few-shot은 분류 및 추출 작업에서 zero-shot 대비 15–25% 정확도로 일관되게 우수합니다. Zero-shot은 형식이 덜 중요한 생성 작업(요약, 번역)에 효과적입니다.',
+            },
+            {
+              q: '로컬 모델에 대한 프롬프트를 어떻게 테스트하고 반복합니까?',
+              a: '5–10개의 다양한 예시에서 테스트하십시오. 한 번에 하나의 변수(역할, 형식, 또는 CoT 지침)를 변경하십시오. 변경 전후의 정확도나 일관성을 측정하십시오. 간단한 테스트 세트 사용: 쉬운 예시 2–3개, 어려운 예시 2–3개. 가장 잘 작동하는 프롬프트 버전을 추적하십시오. 3–5개의 프롬프트 변형 사이클로 반복하십시오. 재사용을 위해 프롬프트 라이브러리에 작동하는 프롬프트를 문서화하십시오.',
+            },
+            {
+              q: '특정 작업에 프롬프트 엔지니어링을 해야 합니까, 아니면 파인튜닝을 해야 합니까?',
+              a: '먼저 프롬프트 엔지니어링을 시도하십시오(빠르고, 무료이며, 반복 가능). 20개 이상의 프롬프트 변형 후에도 정확도가 정체되면 파인튜닝을 고려하십시오. 파인튜닝은 500개 이상의 작업별 예시와 1–4시간의 학습 시간이 필요하지만 10–20%의 정확도 향상을 가져옵니다. 범용 작업의 경우 프롬프트 엔지니어링으로 충분합니다. 도메인별 작업(의료, 법률, 코딩)의 경우 파인튜닝이 지속적인 개선을 제공합니다.',
+            },
+            {
+              q: '로컬 LLM에서 시스템 프롬프트와 사용자 지침은 어떻게 다릅니까?',
+              a: '시스템 프롬프트는 사용자 메시지 이전에 모델의 역할과 제약을 정의하며 요청 구조의 일부입니다(Ollama, LM Studio 또는 API를 통해). 사용자 지침은 대화의 일부입니다. 시스템 프롬프트는 기준 동작을 설정하며 사용자 메시지에 지침을 포함하는 것보다 더 신뢰할 수 있습니다. 로컬 모델의 경우, 잘 작성된 시스템 프롬프트는 일관성을 15–25% 향상시킵니다. 모델이 사용자 수준 텍스트보다 시스템 수준 제약을 우선시하기 때문입니다.',
+            },
+            {
+              q: '다양한 로컬 모델에서 동일한 프롬프트를 사용할 수 있습니까?',
+              a: '부분적으로 가능합니다. 기본 CoT 구조와 역할 정의는 모델 간에 이전됩니다(Llama, Qwen, Mistral). 그러나 최적의 결과를 위해서는 각 모델에 맞게 프롬프트를 조정해야 합니다. Llama 모델은 "단계별로 생각해 보겠습니다"에 반응하는 반면, Qwen 모델은 "먼저, ..."를 선호합니다. 실제로 배포하는 모델에서 프롬프트를 테스트하십시오. 더 큰 모델(70B)은 더 작은 모델(7B)보다 프롬프트 변형에 더 관대합니다.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 읽기',
+          items: [
+            '[Chain-of-Thought 프롬프팅 설명](/prompt-engineering/chain-of-thought-prompting) -- 더 나은 출력을 위한 구조화된 추론.',
+            '[LoRA를 사용한 로컬 LLM 파인튜닝](/local-llms/fine-tuning-local-llms-lora) -- 프롬프트 엔지니어링을 넘어 모델을 적응시켜야 할 때.',
+            '[로컬 RAG 2026: 검색 증강 생성](/local-llms/local-rag-2026) -- 더 나은 컨텍스트를 위해 문서 검색으로 프롬프트를 강화합니다.',
+            '[LangGraph 및 Ollama를 사용한 로컬 AI 에이전트](/local-llms/local-ai-agents-langgraph-ollama) -- 에이전트는 도구 선택을 위해 내부적으로 프롬프팅을 사용합니다.',
+            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 로컬 LLM 환경을 설정하십시오.',
+            '[2026 최고의 오픈소스 로컬 LLM](/local-llms/top-open-source-models-ollama) -- 프롬프팅 요구에 맞는 적절한 모델을 선택하십시오.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            '[Chain-of-Thought 프롬프팅 논문 (Wei et al.)](https://arxiv.org/abs/2201.11903) — 단계별 지침을 통한 추론에 관한 기초 연구.',
+            '[프롬프트 엔지니어링 가이드 (DAIR-AI)](https://github.com/dair-ai/Prompt-Engineering-Guide) — 프롬프팅 기법과 모범 사례의 포괄적인 컬렉션.',
+            '[Ollama Modelfile 참조](https://github.com/ollama/ollama/blob/main/docs/modelfile.md) — 시스템 프롬프트, 파라미터(temperature, top_p, repeat_penalty), 사용자 정의 모델 생성에 관한 공식 문서.',
+          ],
+        },
+      },
+    },
   };

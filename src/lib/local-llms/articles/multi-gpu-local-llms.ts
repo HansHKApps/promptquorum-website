@@ -2572,4 +2572,196 @@ schema: {
       gammaEmbedUrl: '/presentations/multi-gpu-local-llms-static.html',
       gammaDescription: 'A apresentação cobre: como dual RTX 4090 (48 GB total) executa Llama 3.3 70B a 100 tok/s com apenas 5–10% de overhead, configuração de paralelismo tensorial vLLM (--tensor-parallel-size 2), divisão automática de GPU do Ollama, comparação NVLink vs PCIe (900 GB/s vs 64 GB/s), tabela de desempenho de GPU e 5 erros comuns de multi-GPU. Baixe o PDF como cartão de referência de inferência LLM multi-GPU.',
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Hardware & Performance',
+      title: '멀티 GPU 로컬 LLM 2026: vLLM과 Ollama로 2개 이상의 GPU에서 70B 모델 실행하기',
+      seoTitle: '멀티 GPU 로컬 LLM 2026: 듀얼 RTX 4090으로 100 tok/s에 70B 실행',
+      intro: '여러 개의 GPU를 사용하면 단일 GPU의 VRAM에 맞지 않는 70B 이상의 모델을 실행할 수 있습니다. 듀얼 RTX 4090(합산 48 GB)은 Llama 3.3 70B를 Q4 양자화로 초당 약 100 토큰의 속도로 실행합니다. GPU 간 통신 오버헤드로 인해 이론상의 단일 48 GB GPU보다 약 5~10% 느린 수준입니다. 2026년 4월 기준으로 vLLM(텐서 병렬화)과 Ollama(자동 레이어 분할)는 모두 멀티 GPU를 기본 지원합니다. NVLink는 오버헤드를 3~5%로 줄여 주지만 소비자용 RTX 카드에는 제공되지 않으며, 대부분의 듀얼 GPU 구성에는 PCIe 4.0/5.0으로도 충분합니다.',
+      metaDescription: '2× RTX 4090(합산 48 GB): Llama 3.3 70B를 100 tok/s로, 가격은 $3,600. 이론상 단일 GPU 대비 속도 손실 5~10%에 불과합니다. vLLM 텐서 병렬화 + Ollama 자동 분할. NVLink vs PCIe 비교.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-16',
+      leadAnswerBlock: '듀얼 RTX 4090(합산 48 GB)은 Llama 3.3 70B를 초당 약 100 토큰의 속도로 실행합니다. 이론상의 단일 48 GB GPU 대비 속도 손실은 5~10%에 불과합니다. 2026년에 70B 모델을 위한 가장 비용 효율적인 멀티 GPU 구성입니다.',
+      audience: '프로덕션 또는 엔터프라이즈 환경에서 로컬 LLM을 배포하는 엔지니어',
+      readTime: '11분 분량',
+      educationalLevel: 'Advanced',
+      primaryTerm: '멀티 GPU 추론',
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: '레이어 분할 및 텐서 병렬화', anchor: '#splitting' },
+        { label: 'vLLM 설정', anchor: '#vllm-setup' },
+        { label: 'Ollama 설정', anchor: '#ollama-setup' },
+        { label: '성능: GPU 2개', anchor: '#performance' },
+        { label: '멀티 GPU 사용 시기', anchor: '#when-to-use' },
+        { label: '자주 하는 실수', anchor: '#common-mistakes' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
+        { label: '관련 문서', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '멀티 GPU: 대형 모델을 2개 이상의 GPU에 분산합니다. 예시: 70B 모델을 2× RTX 4090에 균등 분할 = 총 VRAM 48 GB.',
+            '속도 손실: 단일 GPU 대비 약 5~10% 느림(GPU 간 통신 오버헤드).',
+            '**최적 용도:** 70B 모델, 고동시접속 서비스(동시 사용자 50명 이상).',
+            '**자동 처리:** 최신 툴(vLLM, Ollama, llama.cpp)은 여러 GPU를 자동으로 감지합니다.',
+            '2026년 4월 기준, 이는 프로덕션 배포의 표준입니다.',
+          ],
+        },
+        splitting: {
+          id: 'splitting',
+          title: '레이어 분할 및 텐서 병렬화의 동작 원리',
+          content: [
+            '**70B Transformer 모델에는 80개의 레이어가 있습니다.** 레이어 분할을 적용하면 Ollama는 다음과 같이 배치할 수 있습니다:',
+            '- GPU 1: 레이어 1~40',
+            '- GPU 2: 레이어 41~80',
+            '토큰이 생성될 때 GPU 1을 통과한 뒤 GPU 2를 통과하고, 다음 토큰을 위해 반환됩니다. 통신 오버헤드는 최소 수준입니다.',
+          ],
+          callouts: [
+            { type: '💡', text: '전문가 팁: 레이어 자체는 가볍습니다. 중요한 것은 GPU 간 통신 속도입니다. GPU1에 레이어 1~40, GPU2에 레이어 41~80을 배치하면 토큰당 GPU 전송이 한 번만 발생합니다. 이것이 NVLink가 중요한 이유입니다.' },
+          ],
+          image: '/images/multi-gpu-local-llms-layer-splitting-en.svg',
+          imageCaption: '2개의 GPU에 걸친 레이어 분할: 80레이어 70B 모델 분산(GPU 1에 레이어 1~40, GPU 2에 레이어 41~80), PCIe GPU 간 통신으로 약 10% 오버헤드 추가(듀얼 RTX 4090 기준 약 100 tok/s).',
+        },
+        vllmSetup: {
+          id: 'vllm-setup',
+          title: 'vLLM을 활용한 멀티 GPU 설정',
+          content: '**vLLM은 단일 명령으로 텐서 병렬화를 기본 지원합니다.** `--tensor-parallel-size` 플래그로 GPU 개수를 지정하십시오:',
+          codeBlock: '# 2개의 GPU에서 70B 모델 실행\nvllm serve meta-llama/Llama-3.1-70B \\\n  --tensor-parallel-size 2 \\\n  --gpu-memory-utilization 0.95 \\\n  --port 8000\n\n# API는 이제 http://localhost:8000/v1 에서 이용 가능\n# 동일한 API, 자동 멀티 GPU 처리',
+          codeLanguage: 'bash',
+          callouts: [
+            { type: '⚠️', text: '주의: 두 GPU의 VRAM이 동일해야 합니다. RTX 4090(24 GB)과 RTX 4080(16 GB)을 함께 사용할 경우, vLLM은 GPU당 16 GB로 제한됩니다. 최적의 성능을 위해 동일한 GPU 모델을 사용하십시오.' },
+          ],
+          image: '/images/multi-gpu-local-llms-vllm-setup-en.svg',
+          imageCaption: 'vLLM 멀티 GPU 4단계 설정: 두 GPU 인식 확인(nvidia-smi), vLLM 설치, --tensor-parallel-size 2 플래그로 실행, 두 GPU 로드 및 약 100 tok/s 처리량 확인.',
+        },
+        ollamaSetup: {
+          id: 'ollama-setup',
+          title: 'Ollama를 활용한 멀티 GPU 설정',
+          content: [
+            '**Ollama는 여러 GPU를 자동으로 감지하여 자동으로 분할합니다:**',
+            '1. 평소와 같이 Ollama를 실행합니다: `ollama serve`',
+            '2. Ollama가 2개 이상의 GPU를 감지하여 자동으로 모델을 분할합니다.',
+            '3. 별도의 구성이 필요하지 않습니다 -- 그냥 작동합니다.',
+            '`nvidia-smi` 또는 `rocm-smi`로 두 GPU에 모두 로드되는지 확인하십시오.',
+          ],
+          callouts: [
+            { type: '🛠️', text: '권장 사항: `nvidia-smi`를 실행하여 두 GPU의 메모리 사용량을 확인함으로써 멀티 GPU 설정이 정상 작동하는지 검증하십시오. GPU 한 개에만 로드된다면 Ollama가 두 번째 GPU를 감지하지 못한 것입니다. 드라이버 버전을 확인하고 필요하면 업그레이드하십시오.' },
+          ],
+        },
+        performance: {
+          id: 'performance',
+          title: 'GPU 2개 사용 시 성능',
+          rows: [
+            { 'Setup': '1× RTX 4090 (24GB)', 'Model': '7B', 'Speed': '150 tok/sec', 'Cost': '$1,800' },
+            { 'Setup': '1× RTX 4090 (24GB)', 'Model': '70B', 'Speed': '실행 불가', 'Cost': '$1,800' },
+            { 'Setup': '2× RTX 4090 (48GB)', 'Model': '70B Q4', 'Speed': '100 tok/sec', 'Cost': '$3,600' },
+            { 'Setup': '2× RTX 4090 (48GB)', 'Model': '70B Q5', 'Speed': '90 tok/sec', 'Cost': '$3,600' },
+            { 'Setup': '1× RTX 5090 (32GB)', 'Model': '70B Q4', 'Speed': '40~50 tok/sec', 'Cost': '$2,000' },
+            { 'Setup': '2× RTX 5090 (64GB)', 'Model': '70B Q8', 'Speed': '120 tok/sec', 'Cost': '$4,000' },
+            { 'Setup': '2× RTX 5090 (64GB)', 'Model': '405B Q4', 'Speed': '25~35 tok/sec', 'Cost': '$4,000' },
+            { 'Setup': 'RTX 6000 Ada + RTX 4090', 'Model': '70B FP16', 'Speed': '110 tok/sec', 'Cost': '$6,800' },
+          ],
+          columns: ['Setup', 'Model', 'Speed', 'Cost'],
+          callouts: [
+            { type: '📌', text: '핵심 포인트: RTX 4090 두 개로 70B 모델에서 약 100 tok/s를 달성합니다. 5~10%의 통신 오버헤드로 단일 GPU 속도의 약 90% 수준입니다. 2026년 1월 출시된 RTX 5090(32 GB GDDR7)은 계산 방식을 바꿨습니다. 단일 5090으로 분할 없이 70B Q4를 40~50 tok/s로 실행할 수 있습니다. 듀얼 5090(합산 64 GB)은 소비자용 구성 중 최초로 405B Q4 모델을 처리할 수 있습니다.' },
+          ],
+          image: '/images/multi-gpu-local-llms-performance-table-en.svg',
+          imageCaption: '70B 모델을 위한 8행 GPU 성능 비교: 단일 RTX 4090은 70B 불가, 듀얼 RTX 4090은 100 tok/s($3,600), RTX 5090 32GB는 70B Q4를 40~50 tok/s($2,000), 듀얼 RTX 5090은 405B Q4를 25~35 tok/s($4,000)로 처리.',
+        },
+        whenToUse: {
+          id: 'when-to-use',
+          title: '멀티 GPU를 사용해야 하는 경우',
+          content: '**70B 이상의 모델이나 고동시접속 서비스가 필요할 때 멀티 GPU는 비용 효율적입니다.** 다음 경우에 여러 GPU를 사용하십시오:',
+          items: [
+            '70B 이상의 모델을 실행해야 하는 경우.',
+            '50명 이상의 동시 사용자를 처리해야 하는 경우(배치 처리).',
+            '여러 13B 모델을 동시에 실행하려는 경우.',
+            '프로덕션 서비스를 운영하는 경우(실험용이 아닌).',
+          ],
+          callouts: [
+            { type: '💡', text: '전문가 팁: 70B 모델 실험 단계라면 먼저 단일 GPU CPU 오프로딩을 시도해 보십시오(RTX 4090에서 8~10 tok/s). 프로덕션 수요가 확인된 후 멀티 GPU 구성(100 tok/s)을 위해 두 번째 RTX 4090에 투자하십시오.' },
+          ],
+          image: '/images/multi-gpu-local-llms-when-to-use-en.svg',
+          imageCaption: '멀티 GPU 의사결정 매트릭스: 70B 이상 모델 실행, 동시 사용자 50명 이상, 또는 프로덕션에서 100 tok/s 이상이 필요한 경우 사용; 두 번째 GPU 미구매 또는 실험 단계라면 사용 보류.',
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: '멀티 GPU에서 자주 하는 실수',
+          items: [
+            '**GPU 2개로 2배 속도를 기대하는 것.** GPU 통신 오버헤드(5~10%)로 인해 단일 GPU 속도의 약 90%를 달성합니다.',
+            '**GPU가 동일해야 한다고 가정하는 것.** RTX 4090과 RTX 4080을 혼합할 수 있지만, vLLM은 느린 GPU의 속도에 제한됩니다.',
+            '**통신에 NVLink를 사용하지 않는 것.** NVLink 없이는 멀티 GPU 통신이 더 느립니다. NVLink는 소비자용 GPU에서 드뭅니다.',
+            '**PCIe 대역폭을 간과하는 것.** GPU 간 통신은 PCIe를 통해 이루어지며 대역폭이 제한됩니다(PCIe 4.0 기준 약 16 GB/s).',
+            '**단일 GPU 옵션을 먼저 시도하지 않고 두 번째 GPU를 구매하는 것.** 두 번째 RTX 4090에 $1,800 이상을 투자하기 전에 다음을 시도해 보십시오: (1) Q5/Q8 대신 Q4 양자화(VRAM을 절반으로 줄임), (2) Ollama CPU 오프로딩(단일 4090에서 70B 기준 8~10 tok/s), (3) RTX 5090 32 GB 단일 카드(분할 없이 70B Q4 실행, $2,000). 멀티 GPU는 처음이 아닌 마지막 최적화 수단이어야 합니다.',
+          ],
+          callouts: [
+            { type: '⚠️', text: '주의: 일관된 성능을 위해 GPU 모델을 맞추는 것이 필수입니다. 서로 다른 GPU(예: 4090 + 4080)를 혼합하면 느린 카드가 시스템 속도를 결정하는 병목이 됩니다. 프로덕션에서는 항상 동일한 GPU를 사용하십시오.' },
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '자주 묻는 질문',
+          callouts: [
+            { type: '💬', text: '알고 계셨습니까? NVLink 대역폭(900 GB/s) 대 PCIe 대역폭(64 GB/s)은 멀티 GPU 성능에서 숨겨진 핵심 요소입니다. NVLink를 갖춘 A100/H100 전문가용 GPU는 거의 선형적인 확장(예: GPU 2개로 2배 속도)을 달성할 수 있습니다. 소비자용 RTX 카드는 PCIe로 제한되어 5~10%의 오버헤드가 발생합니다.' },
+          ],
+          faqs: [
+            {
+              q: '로컬 LLM에서 여러 GPU를 언제 사용해야 합니까?',
+              a: '단일 GPU의 VRAM이 대상 모델에 부족할 때 여러 GPU를 사용하십시오. RTX 4090 두 개(합산 48 GB)는 70B 모델을 Q5 양자화로 초당 약 100 토큰의 속도로 실행합니다. CPU 오프로딩을 사용하는 단일 GPU는 동일한 모델에서 8~10 tok/s에 불과합니다. 두 번째 GPU를 이미 보유하고 있거나 추가 구매가 가능한 경우, 멀티 GPU는 70B 이상 모델에 비용 효율적입니다.',
+            },
+            {
+              q: 'vLLM 텐서 병렬화는 GPU 간에 어떻게 작동합니까?',
+              a: 'vLLM은 텐서 병렬화(`--tensor-parallel-size 2`)를 사용하여 GPU 간에 모델 레이어를 분산합니다. 각 GPU는 모델 가중치 행렬의 절반을 보유하며, 연산은 병렬로 수행되고 결과는 NVLink 또는 PCIe를 통해 통신됩니다. NVLink(NVLink 4.0: 양방향 900 GB/s)는 GPU 간 통신에서 PCIe(64 GB/s)보다 훨씬 빠릅니다.',
+            },
+            {
+              q: 'NVLink는 LLM 추론에 큰 차이를 만듭니까?',
+              a: 'NVLink는 잦은 GPU 간 통신이 필요한 대형 모델에서 PCIe 대비 처리량을 10~30% 향상시킵니다. 두 GPU에 분산된 70B 모델의 경우, NVLink는 통신 오버헤드를 약 15%에서 3~5%로 줄여 줍니다. 소비자용 RTX 카드는 PCIe를 사용하며, NVLink는 전문가용 A100/H100 GPU에서 제공됩니다. 가정용에서는 PCIe로도 충분합니다.',
+            },
+            {
+              q: '레이어 분할에 서로 다른 GPU 모델(예: RTX 4090 + RTX 4080)을 혼합할 수 있습니까?',
+              a: '기술적으로는 가능합니다. vLLM과 llama.cpp는 혼합 GPU 구성을 지원합니다. 하지만 실제로는 느린 GPU가 쌍의 성능을 제한합니다. 4090+4080 조합은 두 4090보다는 두 4080에 가까운 성능을 냅니다. 프로덕션 배포에서는 동일한 GPU 모델을 강력히 권장합니다.',
+            },
+            {
+              q: '70B 및 405B 모델에는 GPU가 몇 개 필요합니까?',
+              a: '70B Q4: 2× RTX 4090에 수용 가능(필요 35 GB, 사용 가능 48 GB). 70B Q8: 4× RTX 4090 필요(70 GB 필요). 405B Q4: 4× RTX 4090 필요(200 GB 필요 — 간신히 수용). 405B의 경우 전문가용 A100 80GB×4(합산 320 GB)가 권장 플랫폼입니다.',
+            },
+            {
+              q: '단일 GPU 대비 레이어 분할의 속도 손실은 얼마나 됩니까?',
+              a: '레이어 분할은 GPU 간 통신으로 인해 5~10%의 오버헤드가 추가됩니다. 70B 모델을 실행하는 RTX 4090 두 개는 초당 약 100 토큰을 달성합니다. 이는 이론상 단일 48 GB GPU가 달성할 속도의 약 90%에 해당합니다. CPU 오프로딩(8~10 tok/s)이나 단일 4090으로 불가능한 70B 모델을 실행하는 것보다 훨씬 뛰어난 수준입니다.',
+            },
+            {
+              q: '멀티 GPU 없이 단일 RTX 5090으로 70B를 실행할 수 있습니까?',
+              a: '네 — RTX 5090(32 GB GDDR7, 2026년 1월 출시)은 Llama 3.3 70B를 Q4_K_M 양자화로 수용합니다(짧은 컨텍스트에서 KV 캐시 포함 약 40 GB, 4K 컨텍스트에서 32 GB 수준의 빡빡한 수용). 성능: 40~50 tok/s. 긴 컨텍스트(32K 이상) 또는 더 높은 양자화(Q5 이상)의 70B에는 여전히 듀얼 GPU가 필요합니다. RTX 5090은 짧은 컨텍스트에서 70B Q4에 대한 멀티 GPU의 필요성을 없앴습니다.',
+            },
+            {
+              q: 'PCIe 5.0은 멀티 GPU LLM 구성에서 투자할 가치가 있습니까?',
+              a: 'PCIe 5.0은 PCIe 4.0의 64 GB/s 대비 대역폭을 약 128 GB/s로 두 배 늘립니다. 듀얼 GPU 70B 추론에서 이는 통신 오버헤드를 약 10%에서 6~7%로 줄여 줍니다. 개선 효과는 있지만 혁신적인 수준은 아닙니다. NVLink(900 GB/s)만이 거의 선형적인 확장을 달성하는 유일한 방법입니다. 신규 구매 시 PCIe 5.0 메인보드를 권장하지만, 멀티 GPU만을 위해 PCIe 4.0에서 업그레이드하는 것은 비용 효율적이지 않습니다.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 문서',
+          items: [
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 멀티 GPU를 지원하는 추론 엔진.',
+            '[24GB VRAM에서 70B 모델 실행](/local-llms/run-70b-models-24gb-vram) -- CPU 오프로딩을 활용한 멀티 GPU 대안.',
+            '[로컬 LLM을 위한 최고의 GPU](/local-llms/best-gpus-for-local-llms) -- GPU 선택 가이드: RTX 4060부터 RTX 4090까지.',
+            '[로컬 LLM에 필요한 VRAM 용량](/local-llms/how-much-vram-local-llm) -- 모델 크기 및 양자화에 따른 VRAM 요구 사항.',
+            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 완전한 하드웨어 빌드 권장 사항.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 멀티 GPU를 지원하는 추론 툴 비교.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '참고 자료',
+          items: [
+            '[vLLM 텐서 병렬화 문서](https://docs.vllm.ai/en/serving/distributed_serving.html) -- 분산 서빙 및 텐서 병렬화에 관한 공식 vLLM 문서.',
+            '[Ollama 멀티 GPU 지원](https://github.com/ollama/ollama/blob/main/docs/gpu.md) -- GPU 감지 및 레이어 분할에 관한 Ollama GitHub 문서.',
+            '[PyTorch 분산 텐서](https://pytorch.org/docs/stable/distributed.html) -- 분산 텐서 연산을 위한 핵심 프레임워크 문서.',
+          ],
+        },
+      },
+    },
   };

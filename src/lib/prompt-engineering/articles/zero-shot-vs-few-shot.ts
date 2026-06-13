@@ -981,4 +981,116 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
 },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Techniques',
+      title: 'Zero-Shot vs. Few-Shot 프롬프팅',
+      intro: 'Zero-shot 프롬프팅은 프롬프트에 예시를 포함하지 않고 모델의 사전 학습에 전적으로 의존하는 방식이며, few-shot 프롬프팅은 소수의 예시를 포함하여 모델이 원하는 패턴을 모방할 수 있도록 합니다.',
+      seoTitle: 'Zero-Shot vs. Few-Shot 프롬프팅 2026: 어느 것을 사용해야 합니까',
+      metaDescription: 'Zero-shot과 few-shot 프롬프팅을 비교합니다. 각 기법을 언제 사용해야 하는지 알아보십시오. 두 방법의 컨텍스트 요구사항, 정확도 트레이드오프, 모범 사례를 학습합니다.',
+      publishDate: '2026-03-26',
+      readTime: '6분 읽기',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Zero-Shot 및 Few-Shot 프롬프팅',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Zero-Shot vs. Few-Shot 프롬프팅',
+        description: 'Zero-shot과 few-shot 프롬프팅의 실용적 비교, 각각을 사용하는 시점, 그리고 PromptQuorum이 올바른 전략을 선택하는 데 어떻게 도움이 되는지를 설명합니다.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['zero shot prompting', 'few shot prompting', 'prompt engineering', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      },
+      sections: {
+        whatIsZeroShot: {
+          title: 'Zero-Shot 프롬프팅이란 무엇입니까',
+          content: [
+            '**Zero-shot 프롬프팅은 프롬프트 내 예시 없이 명확한 지시문만으로 모델이 작업을 수행하도록 요청하는 방식입니다.** 모델은 사전 학습과 정렬(alignment) 과정에서 습득한 일반 지식 및 지시 수행 능력에 의존합니다.',
+            'Zero-shot은 예시 쌍을 설계하거나 선별할 필요가 없으므로 설정이 빠릅니다. 일반 Q&A, 단순 분류, 요약, 또는 지시문만으로도 충분한 간단한 번역과 같이 범용적인 작업에 적합합니다.',
+          ],
+        },
+        whatIsFewShot: {
+          title: 'Few-Shot 프롬프팅이란 무엇입니까',
+          content: [
+            '**Few-shot 프롬프팅은 지시문에 소수의 입력-출력 예시를 추가하여 모델이 구체적인 시연으로부터 작업 패턴을 추론할 수 있도록 합니다.** 실제로 few-shot은 보통 2개에서 10개 사이의 예시를 의미합니다.',
+            '이 예시들은 프롬프트 내에서 미니 학습 세트처럼 작동하여, 모델이 모호한 작업, 특수 형식, 또는 도메인 특화 언어를 해석하는 방식을 안내합니다. Few-shot 프롬프팅은 일반적인 지시문으로는 포착하기 어려운 특정 스타일, 스키마, 또는 섬세한 동작이 필요할 때 특히 유용합니다.',
+          ],
+        },
+        keyDifferences: {
+          title: '핵심 차이점: Zero-Shot vs. Few-Shot',
+          content: [
+            '**Zero-shot과 few-shot 프롬프팅은 주로 설정 노력, 특정 작업에서의 정확도, 그리고 다양한 사용 사례에 대한 확장성 면에서 차이가 있습니다.** 두 방식 모두 동일한 기반 모델을 사용하지만, 예시 설계 노력과 더 나은 작업 정렬을 트레이드오프합니다.',
+          ],
+          rows: [
+            { 'Dimension': '프롬프트 내 예시', 'Zero Shot': '없음', 'Few Shot': '2–10개 이상의 대표 예시' },
+            { 'Dimension': '설정 속도', 'Zero Shot': '매우 빠름; 예시 선별 불필요', 'Few Shot': '느림; 예시를 선택하고 유지 관리해야 함' },
+            { 'Dimension': '데이터 요구사항', 'Zero Shot': '레이블된 예시 불필요', 'Few Shot': '최소 몇 개의 레이블된 예시 필요' },
+            { 'Dimension': '협소 작업에서의 정확도', 'Zero Shot': '종종 낮거나 일반적', 'Few Shot': '특정 도메인에서 일반적으로 더 높고 일관적' },
+            { 'Dimension': '작업 간 확장성', 'Zero Shot': '높은 확장성, 새로운 작업 추가 용이', 'Few Shot': '확장성 낮음; 각 작업마다 별도의 예시가 필요할 수 있음' },
+          ],
+          columns: ['Dimension', 'Zero Shot', 'Few Shot'],
+        },
+        whenToUseZeroShot: {
+          title: 'Zero-Shot을 사용해야 할 때',
+          content: [
+            '**속도가 필요하고, 레이블된 예시가 없으며, 작업이 비교적 일반적인 경우 zero-shot 프롬프팅을 사용하십시오.** 이 패턴은 첫 번째 시도나 기준선(baseline)으로서 잘 작동합니다.',
+            '일반적인 zero-shot 시나리오:',
+          ],
+          items: [
+            '일반 Q&A, 단순 요약, 기본 감성 분류.',
+            '작업의 형태를 아직 파악하는 중인 빠른 실험.',
+            '선별된 예시가 없는 새로운 도메인이나 언어.',
+          ],
+        },
+        whenToUseFewShot: {
+          title: 'Few-Shot을 사용해야 할 때',
+          content: [
+            '**작업이 특화되어 있거나, 형식에 민감하거나, 고위험이고 좋은 예시를 제공할 수 있는 경우 few-shot 프롬프팅을 사용하십시오.** 이 경우 예시는 순수한 지시문에 비해 신뢰성을 크게 향상시킵니다.',
+            '일반적인 few-shot 시나리오:',
+          ],
+          items: [
+            '정확한 레이블과 표현이 중요한 도메인 특화 분류 또는 추출(법률, 의료, 금융).',
+            '지저분한 텍스트에서 구조화된 JSON을 추출하는 것과 같이 엄격한 스키마가 있는 작업.',
+            '관용구와 스타일을 처리하는 데 언어별 예시가 도움이 되는 다국어 또는 현지화 작업.',
+          ],
+        },
+        example: {
+          title: '예시: Zero-Shot vs. Few-Shot 프롬프트',
+          content: [
+            '**동일한 작업에 대한 프롬프트를 비교하면 zero-shot과 few-shot의 실질적인 차이가 명확하게 드러납니다.** 여기서는 지원 티켓을 의도별로 분류합니다.',
+            '**[잘못된 프롬프트 – 비구조적]**',
+            '"이 지원 티켓을 보고 무엇에 관한 것인지 알려주십시오."',
+            '**[Zero-Shot 프롬프트]**',
+            '"다음 지원 티켓을 `billing_issue`, `login_problem`, `feature_request`, `bug_report`, `other` 중 하나로 분류하십시오. 티켓: \'오늘 세 번이나 비밀번호를 재설정하려 했는데 링크가 항상 만료되었다고 나옵니다.\' 카테고리 이름만 출력하십시오."',
+            '**[Few-Shot 프롬프트]**',
+            '"각 지원 티켓을 `billing_issue`, `login_problem`, `feature_request`, `bug_report`, `other` 중 하나로 분류하십시오. 카테고리 이름만 출력하십시오. 예시 1: 티켓: \'이번 달에 같은 구독에 대해 두 번 청구되었습니다.\' 레이블: `billing_issue` 예시 2: 티켓: \'페이지를 새로 고침해도 \'보고서 내보내기\'를 클릭하면 아무 일도 일어나지 않습니다.\' 레이블: `bug_report` 예시 3: 티켓: \'보고서를 Google Sheets로 직접 내보내는 기능을 추가해 주실 수 있습니까?\' 레이블: `feature_request` 이제 이 티켓을 분류하십시오: \'오늘 세 번이나 비밀번호를 재설정하려 했는데 링크가 항상 만료되었다고 나옵니다.\'"',
+            'Few-shot 버전은 패턴을 명시적으로 보여주므로, 일반적으로 미묘하거나 노이즈가 많은 티켓에 대한 분류 품질이 향상됩니다.',
+          ],
+        },
+        howPQHelps: {
+          title: 'PromptQuorum이 선택을 돕는 방법',
+          content: [
+            '**PromptQuorum은 한 곳에서 여러 제공업체에 걸쳐 zero-shot 및 few-shot 프롬프트를 테스트할 수 있는 멀티 모델 AI 디스패치 도구입니다.** GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro 같은 모델에 동일한 지시문 전용 프롬프트와 예시 보강 프롬프트를 나란히 전송할 수 있습니다.',
+            'PromptQuorum에서 다음을 수행할 수 있습니다:',
+          ],
+          items: [
+            'Single Step, RTF, CO-STAR 같은 프레임워크를 사용하여 빠른 기준선을 위한 zero-shot 프롬프트로 시작합니다.',
+            '더 엄격한 제어가 필요할 때 SPECS 또는 Google\'s Prompting Guide 같은 프레임워크 내에 대표 예시를 포함하여 few-shot 프롬프트로 업그레이드합니다.',
+            'Zero-shot과 few-shot 버전을 모두 템플릿으로 저장한 후, 시간 경과에 따라 모델별 정확도, 지연 시간, 토큰 비용을 비교합니다.',
+          ],
+        },
+        howToStart: {
+          title: 'Zero-Shot과 Few-Shot 프롬프팅 중에서 선택하는 방법',
+          numberedItems: [
+            '**일상적이고 간단한 작업의 경우 zero-shot(예시 없음)으로 시작하십시오.** 예: \'이 리뷰를 긍정 또는 부정으로 분류하십시오.\' 정확도가 충분하다면 zero-shot이 더 빠르고 저렴합니다.',
+            '**Zero-shot 성능이 낮을 경우(정확도 80% 미만 또는 품질 저하) 2–5개의 few-shot 예시를 추가하십시오.** 올바른 레이블이 있는 긍정 리뷰 2–3개와 부정 리뷰 2–3개를 모델에 보여주십시오. Few-shot은 예시를 통해 학습시킵니다.',
+            '**미묘한 구분이나 드문 패턴이 있는 작업의 경우 5–10개의 예시(few-shot+)를 추가하십시오.** 작업에서 빈정거림, 유해한 편향, 도메인 특화 뉘앙스를 감지해야 한다면 더 많은 예시가 도움이 됩니다.',
+            '**예상되는 입력 범위를 아우르는 예시를 선택하십시오.** 제품 리뷰를 분류하는 경우 열정적인 리뷰, 미온적인 리뷰, 부정적인 리뷰를 포함하십시오. 쉬운 사례만 보여주지 마십시오.',
+            '**프로덕션에 적용하기 전에 테스트 세트에서 few-shot의 이점을 측정하십시오.** 50개의 테스트 케이스에 대해 0개의 예시와 5개의 예시로 동일한 프롬프트를 실행하십시오. Few-shot이 정확도를 10퍼센트 포인트 이상 향상시키면 예시를 포함하십시오. 향상이 5% 미만이라면 zero-shot을 유지하십시오.',
+          ],
+        },
+      },
+    },
   };

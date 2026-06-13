@@ -3099,4 +3099,349 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
   },
+  ko: {
+    theme: 'Tools & Platforms',
+    title: 'PromptLayer vs Mirascope vs PromptPerfect 비교 (2026)',
+    seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: 하나를 선택하십시오',
+    metaDescription: 'PromptLayer($49/월)는 LLM 호출을 기록하고, Mirascope(무료)는 Python 앱을 구축하며, PromptPerfect($20/월)는 프롬프트를 재작성합니다. 서로 다른 문제를 해결합니다 — 정확히 하나를 선택하십시오.',
+    intro: '**PromptLayer는 LLM 호출을 기록하고 버전 관리합니다(소규모 팀 기준 무료~$49/월). Mirascope는 타입 안전 LLM 앱을 위한 무료 Python SDK입니다. PromptPerfect는 더 나은 결과를 위해 프롬프트를 자동으로 재작성합니다($0~$20/월). 이 세 가지 도구는 서로 다른 문제를 해결합니다 — 병목 현상에 따라 정확히 하나를 선택하십시오.**',
+    publishDate: '2026-04-10',
+    dateModified: '2026-05-01',
+    readTime: '8분 읽기',
+    educationalLevel: 'Intermediate',
+    audience: 'PromptLayer, Mirascope, PromptPerfect 중에서 선택하는 프롬프트 엔지니어 및 개발자',
+    primaryTerm: 'PromptLayer vs Mirascope vs PromptPerfect',
+    aboutTopics: ['프롬프트 관리', 'LLM 옵저버빌리티', '프롬프트 최적화'],
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-10-10',
+    lastFactChecked: '2026-05-01',
+    toc: [
+      { label: 'PromptLayer, Mirascope, PromptPerfect 각각의 역할', anchor: '#what-is' },
+      { label: '도구 비교 방법', anchor: '#evaluation-criteria' },
+      { label: 'PromptLayer: LLM 옵저버빌리티 및 프롬프트 버전 관리', anchor: '#promptlayer' },
+      { label: 'Mirascope: LLM 앱을 위한 타입 안전 Python SDK', anchor: '#mirascope' },
+      { label: 'PromptPerfect: 자동화된 프롬프트 재작성', anchor: '#promptperfect' },
+      { label: '3가지 도구 직접 비교', anchor: '#comparison-table' },
+      { label: '사용 사례별 도구 선택', anchor: '#which-tool' },
+      { label: '지역별 고려 사항', anchor: '#regional-context' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '선택 방법', anchor: '#how-to-choose' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 자료', anchor: '#related-reading' },
+      { label: '출처', anchor: '#sources' },
+    ],
+    quickFacts: [
+      'PromptLayer 무료 플랜: 월 2,500건 요청, 프롬프트 템플릿 10개, 사용자 5명; Pro 플랜 월 $49',
+      'PromptLayer Team 플랜: 월 $500 — 사용자 25명, 월 100,000건 이상 요청',
+      'Mirascope는 오픈소스(Apache 2.0)로 SaaS 비용 없음 — 20개 이상의 LLM 공급자 지원',
+      'PromptPerfect 무료 플랜: 하루 최적화 10건; Pro 플랜 월 $19.99(하루 500건), Pro Max 월 $99.99(하루 1,500건)',
+      'PromptLayer는 OpenAI, Anthropic, Cohere, Azure OpenAI 및 10개 이상의 공급자를 기본으로 지원',
+      'PromptPerfect는 텍스트 모델(GPT-4, Claude)과 이미지 모델(Midjourney, Stable Diffusion) 지원',
+    ],
+    sections: {
+      keyTakeaways: {
+        isTldr: true,
+        items: [
+          'PromptLayer는 세 도구 중 유일하게 프로덕션 LLM 옵저버빌리티를 위해 구축된 도구입니다 — 프롬프트 버전별 비용, 지연 시간, 사용량을 실시간으로 기록합니다.',
+          'Mirascope는 무료 오픈소스입니다 — SaaS 플랫폼이나 월정액 없이 타입 안전 LLM 호출을 원하는 Python 개발자에게 적합한 선택입니다.',
+          'PromptPerfect는 비개발자를 대상으로 합니다: 코드 없이 웹 UI를 통해 프롬프트를 재작성하며, 요금은 $0~$20/월(Pro) 또는 $100/월(Pro Max)입니다.',
+          '이 세 가지 도구는 경쟁 관계가 아닙니다 — 각기 다른 병목 현상을 해결합니다. 세 가지 모두 필요하지는 않습니다.',
+          '프로덕션 LLM 호출을 기록해야 한다면 PromptLayer, Python 앱을 구축한다면 Mirascope, 프롬프트를 수동으로 개선한다면 PromptPerfect를 사용하십시오.',
+          '이 도구들 중 어느 것도 출력 품질을 체계적으로 평가하지 않습니다 — 체계적인 평가를 위해서는 Braintrust 또는 Promptfoo를 사용하십시오.',
+        ],
+      },
+      whatIs: {
+        id: 'what-is',
+        title: 'PromptLayer, Mirascope, PromptPerfect 각각의 역할',
+        content: [
+          '**PromptLayer, Mirascope, PromptPerfect는 거의 겹치지 않는 세 가지 서로 다른 워크플로 문제를 해결합니다.** PromptLayer는 LLM 호출에 옵저버빌리티를 추가합니다: 모든 요청을 기록하고, 비용과 지연 시간을 추적하며, 프롬프트 템플릿의 버전을 관리할 수 있습니다. Mirascope는 LLM 호출을 타입 안전하고 테스트 가능하며 공급자에 종속되지 않도록 만드는 Python 라이브러리입니다. PromptPerfect는 프롬프트를 입력받아 개선된 버전을 반환합니다 — 코드가 필요 없습니다.',
+          '개발자들이 이 도구들을 혼동하는 이유: 세 가지 모두 프롬프트를 개선한다고 주장하지만, 단계와 사용자 유형이 다릅니다. PromptLayer는 어느 버전이 프로덕션에서 가장 성능이 좋은지 보여줌으로써 프롬프트를 개선합니다. Mirascope는 프롬프트를 구조화된 테스트 가능한 Python 함수로 만들어 개선합니다. PromptPerfect는 특정 모델에 맞게 프롬프트를 재작성하여 개선합니다.',
+          '프롬프트 엔지니어링 도구에 대한 더 넓은 순위는 [Best Prompt Engineering Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026)을 참조하십시오. 평가 및 CI/CD에 초점을 맞춘 도구는 [Braintrust vs PromptHub vs Vellum vs Promptfoo](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)를 참조하십시오.',
+        ],
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'PromptLayer는 프로덕션 호출을 기록하고, Mirascope는 Python 코드를 구조화하며, PromptPerfect는 프롬프트를 재작성합니다 — 세 가지 다른 단계, 세 가지 다른 사용자.',
+          },
+          {
+            type: 'in-plain-terms',
+            text: '세 가지 역할로 생각해 보십시오: PromptLayer는 모니터링 대시보드(프로덕션에서 무슨 일이 있었는가?), Mirascope는 코드 프레임워크(어떻게 깔끔한 LLM 코드를 작성하는가?), PromptPerfect는 작문 보조 도구(이 프롬프트를 어떻게 더 잘 표현하는가?)입니다.',
+          },
+        ],
+      },
+      evaluationCriteria: {
+        id: 'evaluation-criteria',
+        title: '도구 비교 방법',
+        content: [
+          '**실제 팀의 의사 결정을 반영하는 다섯 가지 기준으로 세 도구를 평가하였습니다: 주요 사용 사례, 통합 방법, LLM 공급자 지원, 옵저버빌리티 기능, 가격.**',
+          '프로덕션 로깅이 필요하다면 PromptLayer가 적합합니다. 타입 안전 Python 코드가 필요하다면 Mirascope가 적합합니다. 코드 없이 프롬프트를 재작성해야 한다면 PromptPerfect가 적합합니다.',
+        ],
+        columns: ['기준', '측정 항목', '중요한 이유'],
+        rows: [
+          {
+            '기준': '주요 사용 사례',
+            '측정 항목': '도구가 해결하는 핵심 워크플로 문제',
+            '중요한 이유': '이 도구들은 서로 다른 문제를 해결합니다 — 잘못된 도구를 구매하면 예산과 설정 시간이 낭비됩니다',
+          },
+          {
+            '기준': '통합 방법',
+            '측정 항목': 'SDK 래퍼, Python 라이브러리, 또는 웹 UI',
+            '중요한 이유': '팀 내 사용 가능 인원과 필요한 설정 범위가 결정됩니다',
+          },
+          {
+            '기준': 'LLM 공급자 지원',
+            '측정 항목': '기본으로 지원되는 모델 및 API',
+            '중요한 이유': '공급자를 전환하거나 여러 모델을 사용하는 팀은 폭넓은 지원이 필요합니다',
+          },
+          {
+            '기준': '옵저버빌리티',
+            '측정 항목': '도구가 로그를 기록하고, 비용을 추적하며, 프로덕션 오류를 표시하는지 여부',
+            '중요한 이유': '프로덕션 디버깅 및 비용 관리를 위해 LLM 호출에 대한 실시간 가시성이 필요합니다',
+          },
+          {
+            '기준': '가격',
+            '측정 항목': '무료 플랜 제한 및 유료 플랜 시작 비용',
+            '중요한 이유': '소규모 팀의 예산 예측 가능성; 무료 플랜이 유료 업그레이드 시점을 결정합니다',
+          },
+        ],
+      },
+      promptlayer: {
+        id: 'promptlayer',
+        title: 'PromptLayer: LLM 옵저버빌리티 및 프롬프트 버전 관리',
+        content: [
+          '**PromptLayer는 LLM API 호출을 래핑하여 모든 요청을 대시보드에 기록하는 프롬프트 관리 및 옵저버빌리티 플랫폼입니다.** 통합은 얇은 SDK 레이어로 이루어집니다: `openai.chat.completions.create(...)`를 `promptlayer.openai.chat.completions.create(...)`로 교체하면 모든 호출이 자동으로 기록됩니다. 프롬프트 로직 변경이 필요하지 않습니다.',
+          '대시보드에는 요청 내역, 프롬프트 버전, 토큰 사용량, 호출당 비용, 지연 시간 분포, 오류율이 표시됩니다. 팀은 이를 통해 프로덕션에서 프롬프트 실패를 디버깅하고, 기능별 LLM 비용을 추적하며, 프로덕션 트래픽에서 동시에 실행되는 두 프롬프트 버전을 비교합니다.',
+          'PromptLayer 프롬프트 템플릿은 이름과 버전으로 저장됩니다. 현재 SDK는 `client.run(prompt_name="support-reply", input_variables={...})`로 이를 가져와 실행합니다 — 비엔지니어도 코드 배포 없이 PromptLayer UI에서 템플릿을 편집할 수 있습니다. 이것이 PromptLayer를 Mirascope 및 PromptPerfect와 구별짓는 핵심 기능입니다.',
+        ],
+        items: [
+          '무료: $0 — 사용자 5명, 월 2,500건 요청, 프롬프트 템플릿 10개, 하루 플레이그라운드 실행 10회',
+          'Pro: 월 $49 — 사용자 5명, 2,500건 이상 요청(종량제 $0.003/건), 템플릿 무제한',
+          'Team: 월 $500 — 사용자 25명, 100,000건 이상 요청($0.002/건 초과), 웹훅, 배포 승인',
+          'Enterprise: 맞춤 가격 — HIPAA/BAA, SSO, RBAC, EU 클라우드 호스팅 또는 GCP/AWS/Azure 자체 호스팅',
+          '지원 공급자: OpenAI, Anthropic, Cohere, Azure OpenAI, 그 외 10개 이상',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: 'SDK 래핑 필요',
+            text: 'PromptLayer는 네이티브 LLM SDK 호출을 PromptLayer 래핑 버전으로 교체해야 합니다. 공식 SDK 대신 원시 HTTP 요청을 사용하는 경우 설정에 커스텀 로깅 레이어가 필요합니다. 유료 플랜을 결정하기 전에 통합 방법을 확인하십시오.',
+          },
+        ],
+      },
+      mirascope: {
+        id: 'mirascope',
+        title: 'Mirascope: LLM 앱을 위한 타입 안전 Python SDK',
+        content: [
+          '**Mirascope는 LLM 인터랙션을 타입이 지정된 함수로 정의하는 오픈소스 Python 라이브러리로, IDE 자동 완성, 정적 분석, Pydantic 기반 출력 유효성 검사를 지원합니다.** 프롬프트 문자열을 수동으로 구성하는 대신, Python 함수에 `@prompt_template` 데코레이터를 추가하고 일반 함수처럼 호출합니다. 반환 타입은 Pydantic 모델에 대해 유효성이 검사됩니다.',
+          '이 라이브러리는 통합 인터페이스를 통해 20개 이상의 공급자(OpenAI, Anthropic, Google Gemini, Mistral, Cohere, Groq 등)를 지원합니다. 공급자를 전환할 때 파라미터 하나만 변경하면 되며 전체 함수를 수정할 필요가 없습니다. 이는 여러 모델을 평가하거나 비용 관리를 위해 다양한 요청 유형을 다른 공급자로 라우팅하는 팀에 유용합니다.',
+          'Mirascope에는 대시보드, 로깅 플랫폼, SaaS 구독이 없습니다. 개발자 도구입니다 — LLM 코드를 작성하는 개발 경험을 향상시키며, 실행 중인 코드의 옵저버빌리티는 개선하지 않습니다. Mirascope 위에서 프로덕션 로깅을 위해 팀은 일반적으로 PromptLayer나 커스텀 로깅 레이어를 별도로 추가합니다.',
+        ],
+        items: [
+          '라이선스: Apache 2.0 오픈소스 — 팀 규모에 관계없이 $0, 사용량 제한 없음',
+          '지원 공급자: OpenAI, Anthropic, Gemini, Mistral, Groq, Cohere, Together AI 등 15개 이상',
+          '출력 유효성 검사: 구조화된 추출 및 타입 검사를 위한 Pydantic 기본 통합',
+          '대시보드, 로깅, 호스팅 플랫폼 없음 — 순수 개발자 라이브러리',
+          '비동기, 스트리밍, 도구 호출, 다중 턴 대화를 기본으로 지원',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            label: '월정액 비용 없음',
+            text: 'Mirascope는 Apache 라이선스 오픈소스로 유료 플랜이나 사용량 제한이 없습니다. 유일한 비용은 기반 LLM API 호출(OpenAI, Anthropic 등)입니다. 예산이 빠듯한 Python 팀에게 구조화된 LLM 개발의 가장 낮은 진입 장벽을 제공합니다.',
+          },
+        ],
+      },
+      promptperfect: {
+        id: 'promptperfect',
+        title: 'PromptPerfect: 자동화된 프롬프트 재작성',
+        content: [
+          '**PromptPerfect는 프롬프트를 입력받아 특정 모델에서 더 좋은 성능을 발휘하도록 자동으로 재작성된 버전을 반환합니다.** 웹 UI에 프롬프트를 붙여넣고, 대상 모델(GPT-4, Claude, Midjourney, Stable Diffusion 등)을 선택한 후 최적화를 클릭합니다. 출력은 무엇이 변경되었고 그 이유가 설명된 재작성된 프롬프트입니다.',
+          '이 도구는 시행착오 없이 더 나은 프롬프트를 원하는 비개발자를 대상으로 합니다. 콘텐츠 크리에이터는 이미지 생성 프롬프트(Midjourney, DALL-E)에 사용합니다. 지원팀은 고객 응대 응답 템플릿 개선에 사용합니다. 마케터는 콘텐츠 워크플로를 위한 ChatGPT 프롬프트 작성에 사용합니다.',
+          'PromptPerfect는 프로그래밍 방식 사용을 위한 API도 제공하지만, CI/CD 파이프라인이나 자동화 테스트를 위해 설계되지 않았습니다 — 최적화는 비결정적이며 품질 지표를 포함하지 않습니다. 자동화된 프롬프트 테스트를 위해서는 Promptfoo 또는 Braintrust를 사용하십시오.',
+        ],
+        items: [
+          '무료: 하루 최적화 10건, 웹 UI만 제공, API 접근 불가',
+          'Pro: 월 $19.99 — 하루 최적화 500건(Autotune + Interactive optimizer), API 접근 포함',
+          'Pro Max: 월 $99.99 — 하루 최적화 1,500건, 우선 처리',
+          '지원 모델: GPT-4, Claude, Gemini(텍스트); Midjourney, Stable Diffusion, DALL-E(이미지)',
+          '출력: 재작성된 프롬프트 + 각 변경 사항에 대한 설명',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: '비결정적 출력',
+            text: 'PromptPerfect 최적화는 매 실행마다 달라집니다 — 동일한 입력 프롬프트가 다른 재작성 결과를 반환할 수 있습니다. CI/CD 파이프라인이나 자동화 테스트 워크플로에는 사용하지 마십시오. 재현 가능한 자동화가 아닌, 수동적이고 사람이 개입하는 프롬프트 개선을 위해 설계되었습니다.',
+          },
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '3가지 도구 직접 비교',
+        content: [
+          '**세 가지 도구는 팀 도입에 중요한 모든 차원에서 차이가 있습니다: 사용자, 통합 방법, 비용, 해결하는 문제.**',
+        ],
+        columns: ['기능', 'PromptLayer', 'Mirascope', 'PromptPerfect'],
+        rows: [
+          {
+            '기능': '주요 사용 사례',
+            'PromptLayer': '프로덕션 옵저버빌리티',
+            'Mirascope': 'Python 앱 개발',
+            'PromptPerfect': '프롬프트 재작성',
+          },
+          {
+            '기능': '통합 방법',
+            'PromptLayer': 'SDK 래퍼(Python, Node.js)',
+            'Mirascope': 'Python 라이브러리',
+            'PromptPerfect': '웹 UI + API',
+          },
+          {
+            '기능': '대상 사용자',
+            'PromptLayer': '엔지니어링 + 제품 팀',
+            'Mirascope': 'Python 개발자',
+            'PromptPerfect': '비개발자, 크리에이터',
+          },
+          {
+            '기능': 'LLM 공급자 지원',
+            'PromptLayer': '10개 이상(OpenAI, Anthropic, Cohere)',
+            'Mirascope': '20개 이상(모든 주요 공급자)',
+            'PromptPerfect': 'GPT-4, Claude, Midjourney, SD',
+          },
+          {
+            '기능': '프로덕션 로깅',
+            'PromptLayer': '예 — 핵심 기능',
+            'Mirascope': '아니요',
+            'PromptPerfect': '아니요',
+          },
+          {
+            '기능': '무료 플랜',
+            'PromptLayer': '월 2,500건 요청, 템플릿 10개',
+            'Mirascope': '무제한(오픈소스)',
+            'PromptPerfect': '하루 최적화 10건',
+          },
+          {
+            '기능': '유료 시작 가격',
+            'PromptLayer': '월 $49(Pro)',
+            'Mirascope': '$0(유료 플랜 없음)',
+            'PromptPerfect': '월 $19.99(Pro)',
+          },
+        ],
+        callouts: [
+          {
+            type: 'insight',
+            label: '단일 도구 원칙',
+            text: '이 세 가지 도구는 서로 다른 사용자와 단계를 위한 것이기 때문에 한 팀의 스택에 공존하는 경우가 드뭅니다. Python 엔지니어링 팀은 일반적으로 Mirascope(라이브러리)와 PromptLayer(옵저버빌리티)를 선택합니다. 비개발자 팀은 PromptPerfect를 선택합니다. 세 가지 모두 구매해도 기능 중복 없이 비용만 늘어납니다.',
+          },
+        ],
+      },
+      whichTool: {
+        id: 'which-tool',
+        title: '사용 사례별 도구 선택',
+        content: [
+          '**팀이 프로덕션에서 LLM 호출을 모니터링하거나, 기능별 비용을 추적하거나, 코드 배포 없이 실제 트래픽에서 프롬프트 버전을 비교해야 한다면 PromptLayer를 선택하십시오.**',
+          '**LLM을 호출하는 Python 애플리케이션을 구축하고 SaaS 비용 없이 타입 안전하고 테스트 가능하며 공급자에 종속되지 않는 코드를 원한다면 Mirascope를 선택하십시오.**',
+          '**코드 작성 없이 특정 프롬프트를 빠르게 개선해야 한다면, 특히 이미지 생성이나 콘텐츠 생성 워크플로에서는 PromptPerfect를 선택하십시오.**',
+          '**단일 공급자에 구속되기 전에 [PromptQuorum](/features)을 사용하여 동일한 프롬프트를 25개 이상의 AI 모델에 동시에 전송하십시오** — 프롬프트 최적화가 공급자 간에 일반화되는지 확인하는 모델 독립적 검증 단계입니다.',
+          'PromptLayer는 기록할 라이브 트래픽이 없는 프리 프로덕션 단계에서는 사용하지 마십시오 — 옵저버빌리티 기능은 프로덕션 데이터 없이는 가치가 없습니다. Mirascope는 팀이 Python을 작성하지 않는다면 사용하지 마십시오 — 웹 UI도 Python 외 SDK도 없는 Python 전용 라이브러리입니다. PromptPerfect는 자동화되고 반복 가능한 프롬프트 테스트가 필요하다면 사용하지 마십시오 — 비결정적 출력으로 인해 CI/CD 게이트에 부적합합니다.',
+          '프롬프트 검토 소유권과 CI/CD 게이트를 포함한 전체 팀 설정 워크플로는 [Prompt Engineering Setup for Small Teams](/prompt-engineering/prompt-engineering-setup-small-teams)를 참조하십시오.',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'PromptLayer, Mirascope, PromptPerfect의 지역별 고려 사항',
+        content: [
+          '**GDPR이 적용되는 EU 팀의 경우 올바른 도구 선택은 데이터가 처리되는 위치에 따라 달라집니다.** PromptLayer는 무료, Pro, Team 플랜에서 미국 클라우드에 호스팅됩니다; EU 호스팅 및 자체 호스팅 옵션은 Enterprise에서만 가능합니다. PromptLayer는 SOC2 Type 2, GDPR, HIPAA 인증을 보유하고 있습니다. Mirascope는 로컬 Python 라이브러리입니다 — LLM 호출 데이터가 제3자 플랫폼에 도달하지 않아, 호스팅된 옵저버빌리티 대시보드가 필요 없는 팀에게 기본적으로 GDPR 안전한 선택입니다.',
+          '**PromptPerfect는 처리를 위해 모든 프롬프트를 Jina AI 서버로 전송합니다.** 민감한 데이터(개인 데이터, 의료 기록, 법률 문서)를 처리하는 EU 팀의 경우 GDPR 44~49조에 따른 데이터 이전 의무가 발생합니다. 민감한 프롬프트에 PromptPerfect를 사용하기 전에 Jina AI의 데이터 처리 계약 및 서버 위치를 확인하십시오.',
+          '**일본의 경우 METI의 AI 거버넌스 가이드라인(2024)은 기업 사용을 위한 온프레미스 또는 국내 클라우드 AI 배포를 권장합니다.** 국내 API 엔드포인트(Azure Japan East, AWS ap-northeast-1)에서 실행되는 Mirascope는 이 요구 사항을 충족합니다. PromptLayer Enterprise는 일본 데이터 센터 지역을 포함한 GCP/AWS/Azure 배포를 지원합니다. PromptPerfect는 일본 전용 호스팅 옵션이 없습니다.',
+          '**중국의 경우 데이터 안전법(数据安全法)과 CAC 규정은 국내에서 처리된 데이터가 국내에 머물도록 요구합니다.** 국내 모델 엔드포인트(Alibaba Cloud를 통한 Qwen3, Baidu ERNIE)와 결합된 Mirascope가 표준 기업 접근 방식입니다. PromptLayer Enterprise는 이 요구 사항을 충족할 수 있는 자체 호스팅 배포를 지원합니다. PromptPerfect는 Jina AI의 비중국 인프라로 데이터를 전송하므로 CAC 규제 사용 사례에는 적합하지 않습니다.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '흔한 실수',
+        content: [
+          '가장 흔한 실수는 아직 존재하지 않는 문제를 위한 도구를 구매하는 것입니다. PromptLayer는 프로덕션 이전에는 가치가 없고, PromptPerfect는 자동화 파이프라인에서는 가치가 없으며, Mirascope는 Python을 사용하지 않는 팀에게는 가치가 없습니다.',
+        ],
+        numberedItems: [
+          '프로덕션 출시 전에 PromptLayer를 추가하는 것. 핵심 가치 — 요청 로그, 비용 추적, A/B 테스트 — 는 라이브 트래픽이 있어야 합니다. 개발 중에 추가한 팀은 데이터 없는 대시보드를 얻고 아직 사용할 수 없는 플랜에 비용을 지불합니다.',
+          '자동화 프롬프트 파이프라인에 PromptPerfect를 사용하는 것. PromptPerfect는 수동 일회성 최적화를 위해 설계되었습니다. 출력이 매 실행마다 달라져 재현 가능한 CI/CD 테스트 스위트나 회귀 검사와 호환되지 않습니다.',
+          'Mirascope를 옵저버빌리티 도구의 대안으로 취급하는 것. Mirascope는 코드 품질과 테스트 가능성을 향상시키지만 대시보드에 아무것도 기록하지 않습니다. 요청 내역을 볼 것으로 기대하고 Mirascope로 전환한 팀은 놀라게 됩니다 — 옵저버빌리티를 위해 PromptLayer를 별도로 추가하십시오.',
+          'Python을 사용하지 않는 팀에 Mirascope를 선택하는 것. Mirascope는 Python 전용입니다. Node.js, Go 또는 다른 언어를 사용하는 팀은 공식 OpenAI 또는 Anthropic SDK, 또는 LangChain.js를 평가해야 합니다.',
+          'PromptPerfect의 이미지 모델 지원을 간과하는 것. 대부분의 팀은 텍스트 모델(GPT-4, Claude)만을 위해 PromptPerfect를 평가하지만, 창의적인 팀에게 가장 강력한 사용 사례는 Midjourney 및 Stable Diffusion 프롬프트 최적화입니다.',
+        ],
+      },
+      howToChoose: {
+        id: 'how-to-choose',
+        title: '선택 방법',
+        content: [
+          '**세 가지 질문에 답하여 올바른 도구를 파악하십시오: 이미 프로덕션 단계입니까? Python을 작성합니까? 코드 없이 프롬프트를 개선해야 합니까?**',
+        ],
+        numberedItems: [
+          '라이브 트래픽이 있는지 확인하십시오. 있고 비용 또는 실패를 디버깅해야 한다면: PromptLayer. 없다면, 출시까지 PromptLayer를 건너뛰십시오 — 프로덕션 데이터 없이는 가치가 없습니다.',
+          '팀이 Python을 작성하는지 확인하십시오. 그렇고 깔끔하고 타입 안전한 LLM 코드를 원한다면: Mirascope. 아니라면, Mirascope는 선택지가 아닙니다 — 웹 UI도 Python 외 SDK도 없습니다.',
+          '팀 중 코드 작성 없이 프롬프트를 개선해야 하는 사람이 있는지 확인하십시오. 있다면: PromptPerfect. 팀 전원이 엔지니어라면: PromptPerfect는 적합하지 않습니다.',
+          '체계적인 품질 평가 — 지표, 점수, 회귀 테스트 — 가 필요한지 확인하십시오. 필요하다면: 이 세 가지 도구 중 어느 것도 해당하지 않습니다. 대신 평가를 위해 Braintrust 또는 Promptfoo를 추가하십시오.',
+          '대부분의 엔지니어링 팀을 위한 기본 경로: Mirascope(무료, 코드 품질)로 시작하고, 출시 후 PromptLayer를 추가하며(~$20/월), 비개발자 프롬프트 작성자가 없다면 PromptPerfect는 건너뛰십시오.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            label: '무료 우선 경로',
+            text: 'Mirascope(오픈소스, $0)로 시작하여 LLM 코드를 구조화하십시오. 라이브 트래픽이 생기면 PromptLayer의 무료 플랜(월 2,500건)을 추가하십시오. 무료 한도를 초과할 때까지 둘 다 비용이 없습니다. PromptPerfect의 무료 플랜(하루 10건)은 월 $19.99 Pro 플랜에 투자하기 전에 워크플로에 적합한지 평가하기에 충분합니다.',
+          },
+        ],
+      },
+      faq: {
+        title: 'FAQ',
+        faqs: [
+          {
+            q: 'PromptLayer는 무엇에 사용됩니까?',
+            a: 'PromptLayer는 모든 LLM API 호출을 요청 내역, 비용, 지연 시간, 프롬프트 버전 추적이 포함된 대시보드에 기록합니다. 팀은 이를 통해 프로덕션 LLM 실패를 디버깅하고, 기능별 API 비용을 추적하며, 코드 배포 없이 실제 트래픽에서 프롬프트 버전을 비교합니다.',
+          },
+          {
+            q: 'Mirascope는 LangChain보다 낫습니까?',
+            a: '두 도구는 서로 다른 문제를 해결합니다. Mirascope는 Pydantic 유효성 검사를 통한 타입 안전하고 공급자에 종속되지 않는 LLM 함수 호출에 집중합니다. LangChain은 체인, 에이전트, 메모리가 있는 더 광범위한 오케스트레이션 프레임워크입니다. Mirascope는 LangChain의 추상화 오버헤드 없이 깔끔한 LLM 함수 호출을 원하는 팀에 더 적합하고, LangChain은 복잡한 에이전트 워크플로에 더 적합합니다.',
+          },
+          {
+            q: 'PromptPerfect의 비용은 얼마입니까?',
+            a: 'PromptPerfect는 하루 10건 최적화가 가능한 무료 플랜을 제공합니다. Pro 플랜은 API 접근이 포함된 하루 500건 최적화에 월 $19.99입니다. Pro Max 플랜은 우선 처리가 포함된 하루 1,500건 최적화에 월 $99.99입니다. 구매 전에 promptperfect.jina.ai에서 현재 가격을 확인하십시오.',
+          },
+          {
+            q: 'PromptLayer와 Mirascope 중 무엇을 선택해야 합니까?',
+            a: '두 도구는 서로 다른 역할을 하며 대부분의 팀은 둘 다 필요하거나 둘 다 필요하지 않습니다. PromptLayer는 옵저버빌리티 플랫폼입니다 — 라이브 트래픽이 있고 비용을 모니터링하며 실패를 디버깅해야 할 때 사용하십시오. Mirascope는 Python 개발자 라이브러리입니다 — LLM 애플리케이션을 작성하고 타입 안전하고 테스트 가능한 코드를 원할 때 사용하십시오. 두 도구는 서로 대체재가 아닙니다.',
+          },
+          {
+            q: 'Mirascope는 몇 개의 LLM 공급자를 지원합니까?',
+            a: 'Mirascope는 OpenAI, Anthropic(Claude), Google Gemini, Mistral, Groq, Cohere, Together AI 등 20개 이상의 공급자를 지원합니다. 공급자 전환은 함수 데코레이터의 파라미터 하나만 변경하면 됩니다 — 프롬프트 로직은 변경할 필요가 없습니다.',
+          },
+          {
+            q: 'PromptLayer는 프롬프트 버전 관리 도구와 동일합니까?',
+            a: 'PromptLayer에는 프롬프트 버전 관리(템플릿을 이름과 버전으로 저장하고 API로 가져오기)가 포함되어 있지만, 주요 가치는 옵저버빌리티 — 비용, 지연 시간, 오류 데이터와 함께 모든 프로덕션 LLM 호출을 기록하는 것입니다. 옵저버빌리티 없이 버전 관리만 필요하다면 PromptHub가 더 가벼운 대안입니다.',
+          },
+          {
+            q: 'PromptPerfect를 이미지 생성 프롬프트에 사용할 수 있습니까?',
+            a: '그렇습니다. PromptPerfect는 GPT-4, Claude와 같은 텍스트 모델 외에도 Midjourney와 Stable Diffusion을 지원합니다. 이미지 생성 워크플로를 사용하는 팀에게 이미지 프롬프트 최적화가 가장 강력한 사용 사례인 경우가 많습니다 — 텍스트 프롬프트 재작성보다 더 큰 효과를 발휘합니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — 평가, CI/CD, A/B 테스트, 버전 관리를 다루는 4가지 도구 비교](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
+          '[Best Prompt Engineering Tools 2026 — 모든 프롬프트 워크플로 카테고리에 걸친 10개 이상의 도구 순위 개요](/prompt-engineering/best-prompt-engineering-tools-2026)',
+          '[Prompt Engineering Setup for Small Teams — 2~10인 팀을 위한 역할, 검토 워크플로, 도구 선택 결정](/prompt-engineering/prompt-engineering-setup-small-teams)',
+          '[How to Evaluate Prompt Quality — LLM 출력 정확도 및 관련성 측정을 위한 지표, 점수 함수, 프레임워크](/prompt-engineering/how-to-evaluate-prompt-quality)',
+        ],
+      },
+      sources: {
+        title: '출처',
+        items: [
+          '[PromptLayer Documentation](https://docs.promptlayer.com) — SDK 설정, 프롬프트 버전 관리, A/B 테스트, 대시보드 분석을 다루는 공식 문서.',
+          '[Mirascope GitHub Repository](https://github.com/Mirascope/mirascope) — Apache 2.0 소스 코드, 공급자 통합 가이드, 사용 예제.',
+          '[PromptPerfect by Jina AI](https://promptperfect.jina.ai) — 가격 플랜, 지원 모델, API 문서가 포함된 공식 제품 페이지.',
+          '[PromptLayer Pricing](https://promptlayer.com/pricing) — 현재 가격 플랜; 플랜이 변경될 수 있으므로 구매 전에 확인하십시오.',
+        ],
+      },
+    },
+    leadAnswerBlock: 'PromptLayer는 프로덕션 LLM 호출을 기록하고($49/월), Mirascope는 무료 Python 라이브러리로 타입 안전 LLM 코드를 지원하며, PromptPerfect는 코드 없이 프롬프트를 재작성합니다($20/월). 세 도구는 서로 다른 문제를 해결하므로 하나만 선택하십시오.',
+  },
 };

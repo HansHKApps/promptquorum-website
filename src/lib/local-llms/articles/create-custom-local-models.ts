@@ -2804,4 +2804,382 @@ schema: {
         },
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Advanced Techniques',
+      title: '커스텀 로컬 LLM 만들기 2026: Unsloth와 Ollama를 활용한 파인튜닝 vs 사전학습',
+      seoTitle: '커스텀 로컬 LLM 만들기 2026: $500 파인튜닝 vs $5만 사전학습 비교',
+      intro: '커스텀 로컬 LLM을 만드는 방법은 기존 모델을 파인튜닝하거나 처음부터 사전학습하는 두 가지가 있습니다. 2026년 4월 기준, LoRA를 활용한 파인튜닝은 소비자용 하드웨어에서도 실용적입니다: 예시 500개, VRAM 8 GB, 1~2시간, $100~500. 사전학습은 $5만~50만이 소요되며 100억 개 이상의 토큰이 필요합니다 — 특수한 독점 목적에만 정당화됩니다. 이 가이드에서는 두 가지 접근 방식을 모두 다룹니다: Unsloth를 활용한 7단계 파인튜닝 경로, 파인튜닝 vs 사전학습 vs RAG 의사결정 매트릭스, 그리고 [Ollama](https://ollama.com/) 배포 방법.',
+      metaDescription: 'LoRA로 Llama 3.3 8B 파인튜닝: 예시 500개, VRAM 8 GB, 1~2시간, $100~500. 사전학습: 토큰 100억 개 이상, 수 주, $5만~50만. 의사결정 매트릭스 및 Ollama 배포 가이드.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-24',
+      leadAnswerBlock: '커스텀 로컬 LLM을 만드는 방법은 기존 모델을 파인튜닝하거나 처음부터 사전학습하는 두 가지가 있습니다. 2026년 4월 기준, LoRA를 활용한 파인튜닝은 소비자용 하드웨어에서도 실용적입니다: 예시 500개, VRAM 8 GB, 1~2시간, $100~500. 사전학습은 $5만~50만이 소요되며 100억 개 이상의 토큰이 필요합니다 — 특수한 독점 목적에만 정당화됩니다. 이 가이드에서는 Unsloth를 활용한 7단계 파인튜닝 경로, 파인튜닝 vs 사전학습 vs RAG 의사결정 매트릭스, 그리고 Ollama 배포 방법을 다룹니다.',
+      audience: '프로덕션 또는 엔터프라이즈 환경에서 로컬 LLM을 배포하는 엔지니어',
+      readTime: '12분 읽기',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'model creation',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: '커스텀 로컬 LLM 만들기 2026: Unsloth를 활용한 파인튜닝 vs 사전학습',
+        description: 'LoRA로 7B 모델 파인튜닝: 예시 500개, VRAM 8 GB, 1~2시간, $100~500. 사전학습: 토큰 100억 개 이상, $5만~50만. 의사결정 매트릭스, Unsloth 설정, Ollama 배포 포함.',
+        author: {
+          '@type': 'Person',
+          name: 'Hans Kuepper',
+          url: 'https://www.promptquorum.com/about',
+        },
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-24',
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+        },
+        proficiencyLevel: 'Advanced',
+        about: [
+          { '@type': 'Thing', 'name': 'Custom LLM fine-tuning' },
+          { '@type': 'Thing', 'name': 'LoRA domain adaptation' },
+          { '@type': 'Thing', 'name': 'Unsloth fine-tuning' },
+          { '@type': 'Thing', 'name': 'Pre-training vs fine-tuning cost' },
+          { '@type': 'Thing', 'name': 'GGUF Ollama deployment' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '파인튜닝이 사전학습 모델의 품질에 필적할 수 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '파인튜닝된 모델은 특정 도메인에서 기본 모델의 성능을 능가할 수 있지만, 더 큰 사전학습 모델의 광범위한 지식에는 미치지 못합니다. 법률 문서로 파인튜닝된 Llama 3.3 8B는 법률 과제에서 Llama 3.3 70B를 능가하지만, 일반 지식에서는 성능이 낮습니다. 도메인 특화 정확도가 폭넓은 지식보다 중요할 때 파인튜닝을 선택하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '효과적으로 파인튜닝하려면 얼마나 많은 데이터가 필요합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '사용 가능한 모델을 위해 최소 500~1,000개의 예시가 필요하며, 프로덕션 품질을 위해서는 5,000개 이상이 필요합니다. 양보다 품질이 더 중요합니다 — 고품질 예시 1,000개가 저품질 예시 50,000개보다 낫습니다. 소규모 데이터셋(500~2,000개)에는 LoRA를 사용하고, 전체 파인튜닝은 10,000개 이상의 예시가 있을 때만 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'LoRA와 전체 파인튜닝의 차이는 무엇입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'LoRA(Low-Rank Adaptation)는 전체 파인튜닝에 비해 가중치의 약 1~2%만 업데이트하여 4배 빠르고 VRAM을 80~90% 덜 사용합니다. 전체 파인튜닝은 모든 가중치를 업데이트하여 약간 더 나은 결과(정확도 2~5% 향상)를 제공하지만 상당한 연산 자원이 필요합니다. 대부분의 프로젝트에는 LoRA를 사용하고, 전체 파인튜닝은 예산이 충분할 때만 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '파인튜닝 대신 사전학습을 고려해야 하는 경우는 언제입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '다음 경우에만 해당합니다: (1) 고유한 데이터가 100억 토큰 이상 있을 때, (2) 파인튜닝으로 목표 정확도에 지속적으로 도달하지 못할 때, (3) 예산이 $5만 이상일 때, (4) 경쟁 우위를 위한 독점 모델이 필요할 때. 99%의 조직에는 파인튜닝이 올바른 선택입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '커스텀 모델이 프로덕션 준비가 되었는지 어떻게 평가합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '3가지 차원에서 테스트하십시오: (1) 과제별 지표(정확도, F1, BLEU), (2) 벤치마크 비교(MMLU 또는 HumanEval로 기본 모델과 비교), (3) 비즈니스 지표(실제 결과를 개선합니까?). 파인튜닝된 모델이 해당 과제에서 기본 모델보다 5~10% 우수하다면 프로덕션 준비가 된 것입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '더 나은 결과를 위해 파인튜닝과 프롬프트 엔지니어링을 결합할 수 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '예 — 이것이 모범 사례입니다. 파인튜닝은 구조적 변화(도메인 언어, 형식)를 처리하고, 프롬프트 엔지니어링은 특정 사용 사례를 처리합니다. 파인튜닝된 법률 모델과 좋은 프롬프트 엔지니어링을 결합하면 둘 중 하나만 사용하는 것보다 성능이 뛰어납니다. 먼저 프롬프트 최적화(무료)로 시작한 다음 필요에 따라 파인튜닝하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '파인튜닝에 어떤 프레임워크를 사용해야 합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Unsloth(가장 빠름), Axolotl(유연함), Hugging Face Transformers(공식, 가장 문서화됨)가 주요 선택지입니다. 속도를 위해서는 Unsloth를 권장하고, 멀티 GPU 설정에는 Axolotl을 권장합니다. 모두 LoRA를 지원하며 Ollama 배포와 호환됩니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '사전학습이 비용 대비 가치가 있는지 어떻게 알 수 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '다음 계산을 수행하십시오: (1) 과제에서 파인튜닝 품질 격차를 추정합니다(예: 파인튜닝 85%, 사전학습 92% 도달 가능). (2) 정확도 포인트당 비즈니스 가치를 정량화합니다(예: 정확도 +1% = 수익 $1만). (3) ($5만 사전학습 비용) < (7% 향상의 가치)이면 사전학습하고, 그렇지 않으면 파인튜닝하십시오.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: '커스텀 로컬 LLM을 만들고 배포하는 방법',
+        totalTime: 'PT3H',
+        step: [
+          { '@type': 'HowToStep', 'position': 1, 'name': '도메인 특화 예시 500~5,000개 수집', 'text': '각 예시 = JSON/JSONL 형식의 입력 + 예상 출력' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '기본 모델 선택 (Llama 3.3 8B 또는 Qwen3 7B)', 'text': '최상의 결과를 위해 instruction-tuned 변형 사용' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Unsloth를 사용하여 LoRA로 학습 (4배 빠름)', 'text': 'lora_r=16, learning_rate=2e-4, 3 epochs, VRAM 8 GB' },
+          { '@type': 'HowToStep', 'position': 4, 'name': '홀드아웃 테스트 세트에서 평가', 'text': '미공개 데이터에서 정확도, F1 또는 과제별 지표 측정' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'LoRA 어댑터를 기본 모델에 병합', 'text': 'model.merge_and_unload()로 단일 모델 파일 생성' },
+          { '@type': 'HowToStep', 'position': 6, 'name': 'GGUF로 변환 및 양자화', 'text': 'python convert_hf_to_gguf.py --outtype q4_k_m' },
+          { '@type': 'HowToStep', 'position': 7, 'name': 'Ollama에 배포', 'text': 'FROM ./model.gguf로 Modelfile 생성 후 ollama create my-model -f Modelfile 실행' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '커스텀 LLM 접근 방식: 의사결정 매트릭스',
+        numberOfItems: 3,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: '파인튜닝 (권장)',
+            description: '도메인 특화 예시 500~5,000개로 기존 모델 파인튜닝. 비용: $100~500, 시간: 1~4시간, VRAM: 8 GB. 도메인 특화 데이터가 있는 99%의 조직에 최적.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'RAG (무료)',
+            description: '검색 증강 생성: 학습 불필요. 비용: $0, 시간: 즉시, VRAM: 최소. 빠른 반복 및 레이블된 학습 데이터가 없는 조직에 최적.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: '사전학습 (드문 경우)',
+            description: '원시 데이터 1,000억 개 이상의 토큰으로 처음부터 학습. 비용: $5만~50만, 시간: 수 주~수 개월, VRAM: 100+ GB. 대규모 예산의 독점 모델에만 정당화.',
+          },
+        ],
+      },
+      toc: [
+        { label: '핵심 요점', anchor: '#key-takeaways' },
+        { label: '파인튜닝 vs 사전학습', anchor: '#finetuning-vs-pretraining' },
+        { label: '파인튜닝 경로', anchor: '#finetuning-path' },
+        { label: 'LoRA vs 전체 파인튜닝', anchor: '#lora-vs-full-finetuning' },
+        { label: 'VRAM 요구사항', anchor: '#vram-requirements-finetuning' },
+        { label: 'Ollama 배포', anchor: '#ollama-deployment' },
+        { label: '사전학습 기초', anchor: '#pretraining-basics' },
+        { label: '의사결정 매트릭스', anchor: '#decision-matrix' },
+        { label: '도메인 적응 전략', anchor: '#domain-adaptation' },
+        { label: '평가 지표', anchor: '#evaluation' },
+        { label: '흔한 실수', anchor: '#common-mistakes' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
+        { label: '관련 읽기', anchor: '#related-reading' },
+      ],
+      gammaEmbedUrl: '/presentations/create-custom-local-models-static.html',
+      gammaDescription: '슬라이드 덱은 파인튜닝 vs 사전학습 분석, 7단계 Unsloth 경로, GGUF 배포, 프로덕션 준비 지표를 다룹니다. 커스텀 LLM 파인튜닝 참조 카드로 다운로드하십시오.',
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**파인튜닝(권장):** VRAM 8 GB, 학습 예시 500개 이상, 1~4시간. 비용: $100~500.',
+            '**사전학습:** GPU 8개 이상, 토큰 1,000억 개 이상, 수 주간 학습. 비용: $5만~50만.',
+            '대부분의 조직은 사전학습이 아닌 파인튜닝을 해야 합니다. 커스텀 사전학습은 수확 체감이 발생합니다.',
+            '최선의 접근 방식: 도메인 데이터로 파인튜닝을 시작한 다음 사전학습이 정당화되는지 평가하십시오.',
+            '2026년 4월 기준, 독점 모델이 필요한 경우가 아니면 사전학습은 거의 정당화되지 않습니다.',
+          ],
+        },
+        ftVsPt: {
+          id: 'finetuning-vs-pretraining',
+          title: '파인튜닝 vs 사전학습',
+          rows: [
+            { 'Aspect': '학습 시간', 'Fine-Tuning': '1~4시간', 'Pre-Training': '수 주~수 개월' },
+            { 'Aspect': '필요 VRAM', 'Fine-Tuning': '8 GB', 'Pre-Training': '100+ GB (멀티 GPU)' },
+            { 'Aspect': '필요 데이터', 'Fine-Tuning': '예시 500~5,000개', 'Pre-Training': '토큰 1,000억 개 이상' },
+            { 'Aspect': '비용', 'Fine-Tuning': '$100~500', 'Pre-Training': '$5만~50만' },
+            { 'Aspect': '커스터마이제이션', 'Fine-Tuning': '도메인 지식', 'Pre-Training': '독점 모델' },
+            { 'Aspect': '사용 시기', 'Fine-Tuning': '99%의 경우', 'Pre-Training': '드물고 특수한 필요' },
+          ],
+          columns: ['Aspect', 'Fine-Tuning', 'Pre-Training'],
+          image: '/images/create-custom-local-models-finetuning-vs-pretraining-comparison-en.svg',
+          imageCaption: '파인튜닝(1~4시간, $100~500, VRAM 8 GB) vs 사전학습(수 주~수 개월, $5만~50만, 100+ GB): 학습 시간, 비용, 데이터 요구사항 및 사용 시기 비교.',
+        },
+        finetuningPath: {
+          id: 'finetuning-path',
+          title: '파인튜닝 경로 (권장)',
+          numberedItems: [
+            '도메인 특화 예시 500~5,000개 수집 (품질이 중요합니다).',
+            '기본 모델 선택 (Llama 3.3 8B, Qwen 7B 등).',
+            '효율적인 학습을 위해 LoRA 사용 (4배 빠름, 동일한 품질).',
+            'GPU에서 3~5 에포크 학습.',
+            '테스트 세트에서 평가 (정밀도, 재현율, 커스텀 지표).',
+            'LoRA 어댑터를 기본 모델에 병합.',
+            '프로덕션 모델로 배포.',
+          ],
+          image: '/images/create-custom-local-models-7step-finetuning-path-en.svg',
+          imageCaption: '7단계 파인튜닝 워크플로우: 데이터 수집 → 기본 모델 선택 → LoRA로 학습(3~5 에포크, VRAM 8 GB) → 평가 → 병합 → GGUF 변환 → Ollama 배포. 총 소요 시간: 1~4시간.',
+        },
+        loraVsFull: {
+          id: 'lora-vs-full-finetuning',
+          title: 'LoRA vs 전체 파인튜닝: 무엇을 선택해야 합니까?',
+          content: [
+            'LoRA(Low-Rank Adaptation)는 모델 가중치의 1~2%만 업데이트하여 전체 파인튜닝보다 4배 빠르고 VRAM을 80~90% 덜 사용합니다. 전체 파인튜닝은 모든 가중치를 업데이트하여 약간 더 나은 결과(정확도 2~5% 향상)를 제공하지만 VRAM 64+ GB와 상당한 연산 자원이 필요합니다.',
+          ],
+          image: '/images/create-custom-local-models-lora-vs-fulltuning-comparison-en.svg',
+          imageCaption: 'LoRA(4배 빠름, VRAM 8 GB, 정확도 95~98%) vs 전체 파인튜닝(기준 속도, VRAM 64+ GB, +2~5% 향상): 속도-정확도 트레이드오프 및 VRAM 요구사항 비교.',
+        },
+        vramRequirements: {
+          id: 'vram-requirements-finetuning',
+          title: '모델 크기별 VRAM 요구사항',
+          content: [
+            'LoRA 파인튜닝을 위해 모든 모델이 VRAM 8 GB에 맞는 것은 아닙니다. 실행 가능한 것은 다음과 같습니다:',
+          ],
+          image: '/images/create-custom-local-models-vram-by-model-en.svg',
+          imageCaption: '파인튜닝 VRAM 호환성: 3B~8B 모델 ✓ 8 GB에서 작동, 13B ✓ 작동하나 빡빡함, 32B는 64+ GB 필요, 70B는 불가능. LoRA는 배치 학습에 약 25% 오버헤드 추가.',
+        },
+        ollamaDeployment: {
+          id: 'ollama-deployment',
+          title: '커스텀 모델을 Ollama에 배포하기',
+          content: [
+            'LoRA 어댑터 병합 후 3단계로 Ollama에 배포하십시오:',
+          ],
+          numberedItems: [
+            '**1단계 — GGUF로 내보내기:** llama.cpp의 변환 스크립트를 사용하여 병합된 모델을 PyTorch/safetensors 형식에서 GGUF로 변환하십시오. 이는 Ollama 및 llama.cpp 호환성에 필수적입니다.\n```bash\npython convert_hf_to_gguf.py \\\n  --model ./merged-model \\\n  --outfile ./my-custom-model.gguf \\\n  --outtype q4_k_m\n```',
+            '**2단계 — Ollama Modelfile 생성:** 모델의 시스템 프롬프트, 파라미터 및 추론 설정을 정의하십시오.\n```\nFROM ./my-custom-model.gguf\nSYSTEM "You are a [your domain] expert..."\nPARAMETER temperature 0.4\nPARAMETER num_ctx 4096\n```',
+            '**3단계 — 등록 및 실행:** 로컬 또는 API 접근을 위해 모델을 Ollama에 로드하십시오.\n```bash\nollama create my-custom-model -f Modelfile\nollama run my-custom-model\n```\n\n파인튜닝된 모델이 이제 localhost:11434에서 Ollama의 OpenAI 호환 API를 통해 접근 가능합니다 — 표준 Ollama 모델과 동일합니다. Continue.dev, Open WebUI 또는 Python/Node.js OpenAI SDK를 통한 자체 애플리케이션과 함께 사용하십시오.',
+          ],
+        },
+        pretraining: {
+          id: 'pretraining-basics',
+          title: '사전학습: 언제 그리고 왜',
+          content: [
+            '**사전학습은 원시 데이터(책, 문서, 코드)에서 학습하는 것을 의미합니다.** 다음 경우에만 정당화됩니다:',
+            '1. 고유하고 가치 있는 데이터가 100억 토큰 이상 있을 때.',
+            '2. 사전학습된 모델이 귀하의 도메인에서 지속적으로 실패할 때.',
+            '3. 예산이 $5만 이상일 때 (현실적인 비용).',
+            '4. 경쟁 우위를 위한 독점 모델이 필요할 때.',
+            '예시: 500GB의 비공개 연구 데이터를 보유한 유전체학 회사는 커스텀 사전학습을 정당화할 수 있습니다.',
+          ],
+        },
+        decisionMatrix: {
+          id: 'decision-matrix',
+          title: '의사결정 매트릭스: 어떤 접근 방식을 사용해야 합니까?',
+          content: [
+            '커스텀 모델을 위한 세 가지 주요 접근 방식이 있습니다. 데이터, 예산 및 일정에 따라 선택하십시오:',
+          ],
+          image: '/images/create-custom-local-models-cost-benefit-matrix-en.svg',
+          imageCaption: '의사결정 매트릭스: 학습 데이터가 없으면 RAG($0), 예시 500개 이상이면 파인튜닝($100~500, 1~4시간), 토큰 1,000억 개 이상이면 사전학습($5만~50만, 수 주~수 개월).',
+        },
+        domainAdaptation: {
+          id: 'domain-adaptation',
+          title: '도메인 적응 전략',
+          content: [
+            '**전체 사전학습 없이 도메인에서 모델 성능을 향상시키는 방법:**',
+          ],
+          items: [
+            '**지속적 사전학습:** 기본 모델을 가져와 도메인 데이터(100억 토큰 이상)로 학습. 전체 사전학습보다 저렴합니다.',
+            '**LoRA 파인튜닝:** 가장 실용적입니다. 예시 500개 이상으로 튜닝.',
+            '**프롬프트 엔지니어링:** 좋은 프롬프트 제작. 무료이나 한계가 있습니다.',
+            '**RAG:** 문서 검색, 컨텍스트 제공. 재학습 없이 작동합니다.',
+            '**앙상블:** 여러 모델 결합.',
+          ],
+        },
+        evaluation: {
+          id: 'evaluation',
+          title: '평가 지표',
+          content: [
+            '모델 품질 측정:',
+          ],
+          items: [
+            '**과제별 지표:** 정확도, F1 점수, BLEU (텍스트 생성용).',
+            '**벤치마크 테스트:** 표준 벤치마크(MMLU, HumanEval)에서 실행.',
+            '**인간 평가:** 수동 채점 (시간 소모적이나 정확함).',
+            '**비즈니스 지표:** 모델이 실제 비즈니스 결과를 개선합니까?',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: '흔한 실수',
+          items: [
+            '**충분한 데이터 없이 사전학습.** 토큰 100억 개 미만은 연산 자원 낭비입니다. 파인튜닝을 대신 사용하십시오.',
+            '**올바르게 평가하지 않음.** 학습 손실만 보는 것은 오해를 불러일으킵니다. 미공개 데이터에서 테스트하십시오.',
+            '**커스텀 모델이 GPT-4와 동일할 것이라는 기대.** 오픈 모델과 프론티어 모델 간의 격차는 큽니다.',
+            '**추론 비용 무시.** 더 큰 커스텀 모델 = 더 높은 추론 비용. 트레이드오프를 고려하십시오.',
+            '**GGUF 변환 단계 건너뜀.** Unsloth 또는 HuggingFace로 파인튜닝 후 모델은 PyTorch/safetensors 형식입니다. Ollama와 llama.cpp는 GGUF를 요구합니다. llama.cpp의 `convert_hf_to_gguf.py`를 사용하여 변환하십시오. 이 단계 없이는 파인튜닝된 모델이 Ollama, LM Studio 또는 GGUF 기반 추론 엔진에서 실행될 수 없습니다. 파일 크기를 3~4배 줄이기 위해 변환 중에 항상 양자화하십시오(Q4_K_M 권장).',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '자주 묻는 질문',
+          faqs: [
+            {
+              q: '파인튜닝이 사전학습 모델의 품질에 필적할 수 있습니까?',
+              a: '파인튜닝된 모델은 특정 도메인에서 기본 모델의 성능을 능가할 수 있지만, 더 큰 사전학습 모델의 광범위한 지식에는 미치지 못합니다. 법률 문서로 파인튜닝된 Llama 3.3 8B는 법률 과제에서 Llama 3.3 70B를 능가하지만, 일반 지식에서는 성능이 낮습니다. 도메인 특화 정확도가 폭넓은 지식보다 중요할 때 파인튜닝을 선택하십시오.',
+            },
+            {
+              q: '효과적으로 파인튜닝하려면 얼마나 많은 데이터가 필요합니까?',
+              a: '사용 가능한 모델을 위해 최소 500~1,000개의 예시가 필요하며, 프로덕션 품질을 위해서는 5,000개 이상이 필요합니다. 양보다 품질이 더 중요합니다 — 고품질 예시 1,000개가 저품질 예시 50,000개보다 낫습니다. 소규모 데이터셋(500~2,000개)에는 LoRA를 사용하고, 전체 파인튜닝은 10,000개 이상의 예시가 있을 때만 사용하십시오.',
+            },
+            {
+              q: 'LoRA와 전체 파인튜닝의 차이는 무엇입니까?',
+              a: 'LoRA(Low-Rank Adaptation)는 전체 파인튜닝에 비해 가중치의 약 1~2%만 업데이트하여 4배 빠르고 VRAM을 80~90% 덜 사용합니다. 전체 파인튜닝은 모든 가중치를 업데이트하여 약간 더 나은 결과(정확도 2~5% 향상)를 제공하지만 상당한 연산 자원이 필요합니다. 대부분의 프로젝트에는 LoRA를 사용하고, 전체 파인튜닝은 예산이 충분할 때만 사용하십시오.',
+            },
+            {
+              q: '파인튜닝 대신 사전학습을 고려해야 하는 경우는 언제입니까?',
+              a: '다음 경우에만 해당합니다: (1) 고유한 데이터가 100억 토큰 이상 있을 때, (2) 파인튜닝으로 목표 정확도에 지속적으로 도달하지 못할 때, (3) 예산이 $5만 이상일 때, (4) 경쟁 우위를 위한 독점 모델이 필요할 때. 99%의 조직에는 파인튜닝이 올바른 선택입니다.',
+            },
+            {
+              q: '커스텀 모델이 프로덕션 준비가 되었는지 어떻게 평가합니까?',
+              a: '3가지 차원에서 테스트하십시오: (1) 과제별 지표(정확도, F1, BLEU), (2) 벤치마크 비교(MMLU 또는 HumanEval로 기본 모델과 비교), (3) 비즈니스 지표(실제 결과를 개선합니까?). 파인튜닝된 모델이 해당 과제에서 기본 모델보다 5~10% 우수하다면 프로덕션 준비가 된 것입니다.',
+            },
+            {
+              q: '더 나은 결과를 위해 파인튜닝과 프롬프트 엔지니어링을 결합할 수 있습니까?',
+              a: '예 — 이것이 모범 사례입니다. 파인튜닝은 구조적 변화(도메인 언어, 형식)를 처리하고, 프롬프트 엔지니어링은 특정 사용 사례를 처리합니다. 파인튜닝된 법률 모델과 좋은 프롬프트 엔지니어링을 결합하면 둘 중 하나만 사용하는 것보다 성능이 뛰어납니다. 먼저 프롬프트 최적화(무료)로 시작한 다음 필요에 따라 파인튜닝하십시오.',
+            },
+            {
+              q: '파인튜닝에 어떤 프레임워크를 사용해야 합니까?',
+              a: 'Unsloth(가장 빠름), Axolotl(유연함), Hugging Face Transformers(공식, 가장 문서화됨)가 주요 선택지입니다. 속도를 위해서는 Unsloth를 권장하고, 멀티 GPU 설정에는 Axolotl을 권장합니다. 모두 LoRA를 지원하며 Ollama 배포와 호환됩니다.',
+            },
+            {
+              q: '사전학습이 비용 대비 가치가 있는지 어떻게 알 수 있습니까?',
+              a: '다음 계산을 수행하십시오: (1) 과제에서 파인튜닝 품질 격차를 추정합니다(예: 파인튜닝 85%, 사전학습 92% 도달 가능). (2) 정확도 포인트당 비즈니스 가치를 정량화합니다(예: 정확도 +1% = 수익 $1만). (3) ($5만 사전학습 비용) < (7% 향상의 가치)이면 사전학습하고, 그렇지 않으면 파인튜닝하십시오.',
+            },
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: '커스텀 모델에 대한 지역별 고려사항',
+          content: [
+            '**커스텀 모델은 지역에 따라 다른 데이터 프라이버시 및 규제적 함의를 가집니다. 파인튜닝되거나 사전학습된 모델을 배포하기 전에 지역별 컴플라이언스 요구사항을 이해하십시오:**',
+          ],
+          items: [
+            '**유럽 (GDPR):** 개인 데이터로 모델을 파인튜닝하려면 정보 주체의 동의와 처리 계약 문서화가 필요합니다. GDPR 제5조(데이터 최소화)는 가능한 경우 익명화되거나 합성된 데이터로 파인튜닝할 것을 권장합니다. 비EU 데이터로 사전학습된 모델은 EU 지역 배포 전에 추가 거버넌스가 필요할 수 있습니다.',
+            '**일본 (APPI):** 일본의 개인정보 보호법은 개인 데이터 학습에 대한 명시적 동의를 요구합니다. 의료 또는 금융 서비스를 위한 커스텀 모델은 데이터 거주(처리가 일본 내에서 이루어져야 함)가 필요합니다. 온프레미스 파인튜닝 및 배포를 고려하십시오.',
+            '**중국 (DSL + CAC):** 중국의 데이터 보안법 및 사이버공간관리국 규정은 개인 및 산업 데이터의 로컬 처리를 요구합니다. 중국 데이터로 학습된 커스텀 모델은 중국 인프라에서 학습되어야 합니다. 중국 배포를 위한 사전학습 모델은 CAC 등록이 필요합니다.',
+            '**미국:** 연방 LLM 규정 없음 (2026년 4월 기준). 주 수준 규정은 다양하며, 캘리포니아 법률은 알고리즘 투명성에 초점을 맞춥니다. 금융/의료 모델의 경우 규제 기관(SEC, FDA, CMS)이 문서화 요구사항을 부과할 수 있습니다. 모델 변경에 대한 감사 추적을 고려하십시오.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 읽기',
+          items: [
+            '[LoRA로 로컬 LLM 파인튜닝](/local-llms/fine-tuning-local-llms-lora) -- 효율적인 파인튜닝 단계별 가이드.',
+            '[2026년 최고의 로컬 LLM](/local-llms/best-local-llms-2026) -- 파인튜닝을 위한 권장 기본 모델.',
+            '[로컬 모델 양자화](/local-llms/quantization-explained) -- 품질 손실 없이 모델 크기 줄이기.',
+            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- GPU, Apple Silicon 및 CPU 요구사항.',
+            '[로컬 LLM 평가 방법](/local-llms/how-to-evaluate-local-llms) -- 벤치마킹 및 테스트 프레임워크.',
+            '[프롬프트 엔지니어링 가이드](/prompt-engineering) -- 모델 재학습 없는 대안적 접근 방식.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            '[Chinchilla Scaling Laws](https://arxiv.org/abs/2203.15556) -- 학습 및 추론을 위한 최적 연산 할당.',
+            '[Instruction Tuning Survey](https://arxiv.org/abs/2308.10792) -- 파인튜닝 접근 방식의 포괄적 리뷰.',
+            '[LoRA: Low-Rank Adaptation](https://arxiv.org/abs/2106.09685) -- 효율적인 파인튜닝 방법.',
+            '[Hugging Face Fine-Tuning Guide](https://huggingface.co/docs/transformers/training) -- 공식 파인튜닝 문서.',
+          ],
+        },
+      },
+    },
   };

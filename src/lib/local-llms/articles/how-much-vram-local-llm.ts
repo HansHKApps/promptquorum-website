@@ -1687,4 +1687,301 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
       },
     },
 
+  ko: {
+      freshness_tier: 'monthly',
+      next_refresh_due: '2026-06-30',
+      theme: 'GPU 구매 가이드',
+      title: '로컬 LLM에 VRAM이 얼마나 필요합니까? 7B~70B 차트 (2026)',
+      seoTitle: '로컬 LLM에 VRAM이 얼마나 필요합니까? 7B~70B 차트 (2026)',
+      intro: '**7B 모델에는 8GB VRAM이 필요하고, 13B~22B에는 12~16GB, 70B에는 최소 24GB가 필요합니다.** 2026년 4월 기준, 이 수치는 Q4(4비트) 양자화를 가정합니다. 완전 정밀도(FP32) 모델은 VRAM이 2~3배 더 필요하며, 소비자용 GPU에서는 거의 실용적이지 않습니다. 공식은 다음과 같습니다: 모델 크기(십억 단위) × 2바이트(FP32) ÷ 양자화 계수.',
+      metaDescription: '로컬 LLM에 필요한 정확한 VRAM: 7B는 6~8GB, 13B는 10~14GB, 70B는 Q4에서 40~48GB. Q2~Q8 양자화, 배치 크기, 컨텍스트별 차트 포함.',
+      publishDate: '2026-04-05',
+      leadAnswerBlock: '**7B 모델에는 8GB VRAM이 필요하고, 13B~22B에는 12~16GB, 70B에는 최소 24GB가 필요합니다. 2026년 4월 기준, 이 수치는 Q4(4비트) 양자화를 가정합니다.**',
+      nextStep: {
+        text: 'VRAM 예산을 파악하셨습니다. 이제 적합한 GPU를 선택하십시오.',
+        label: '로컬 LLM을 위한 최고의 예산 GPU →',
+        href: '/local-llms/best-budget-gpus-local-llm',
+      },
+      audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
+      readTime: '7분',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'VRAM 요구 사항',
+      toc: [
+        { label: '요약', anchor: '#tldr' },
+        { label: 'LLM의 VRAM 공식이란 무엇입니까?', anchor: '#formula' },
+        { label: '각 모델 크기에 필요한 VRAM은 얼마입니까?', anchor: '#by-model-size' },
+        { label: 'MoE 모델 VRAM', anchor: '#moe-vram' },
+        { label: '양자화는 어떻게 VRAM 요구 사항을 줄입니까?', anchor: '#quantization' },
+        { label: '배치 크기와 다중 사용자 추론에 대해', anchor: '#batch-size' },
+        { label: '모델 크기보다 더 많은 VRAM이 필요합니까?', anchor: '#overhead' },
+        { label: 'VRAM에 관한 일반적인 오해', anchor: '#mistakes' },
+        { label: 'VRAM 계산기', anchor: '#vram-calculator' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '7B 모델: 최소 8GB(Q4), 10GB 권장(Q5), Q8 완전 정밀도에는 14GB.',
+            '13B 모델: 최소 10GB(Q4), 12~14GB 권장(Q5), Q8에는 16GB.',
+            '70B 모델: 최소 24GB(Q4), Q5/Q8 또는 다중 사용자 설정에는 32GB 이상.',
+            '양자화(Q4, Q5, Q8)는 완전 정밀도(FP32) 대비 VRAM을 50~75% 절감합니다.',
+            '오버헤드(KV 캐시, 옵티마이저 상태, 시스템 OS)를 위해 항상 1~2GB를 추가로 확보하십시오.',
+            '배치 크기 ≠ 추론당 VRAM. 단일 추론은 배치 크기에 관계없이 동일한 VRAM을 사용합니다(배치는 순차적으로 처리됩니다).',
+            '더 많은 VRAM이 단일 프롬프트 추론을 빠르게 만들지 않습니다. 다중 사용자/다중 요청 설정에만 도움이 됩니다.',
+          ],
+        },
+        'ruleOfThumb': {
+          title: 'VRAM 경험 법칙 — 빠른 참조',
+          content: [
+            '**공식이 복잡하십니까? 이 간단한 규칙을 사용하십시오:**',
+            'VRAM 예산을 파악하셨다면, [각 등급에 맞는 GPU를 확인하십시오 →](/local-llms/best-budget-gpus-local-llm)',
+          ],
+          items: [
+            '**3B 모델** (Phi, StableLM): 최소 4GB VRAM',
+            '**7B 모델** (Llama, Mistral, Qwen): 8GB VRAM(Q4), 10GB(Q5)',
+            '**13B 모델** (Llama 3.3, Mistral): 최소 12GB VRAM(Q4)',
+            '**22B 모델** (Qwen3, Gemma): 16GB VRAM(Q4)',
+            '**70B 모델** (Llama 3.3, Qwen 3.6): 24~32GB VRAM(Q4~Q5)',
+            '**MoE 모델**: VRAM은 메모리에 보관해야 하는 가중치에 따라 확장됩니다. 예시: Qwen 3.6 35B-A3B(3B 활성)는 약 2GB의 작은 공간에 들어맞지만, Llama 4 Scout(17B 활성 / 109B 총량)는 모든 전문가가 상주하기 때문에 Q4에서 여전히 약 55GB가 필요합니다.',
+          ],
+          codeBlock: '# Quick VRAM formula (memorize this)\nVRAM (GB) ≈ Model Size (B) ÷ 8  # at Q4 quantization\n\n# Examples:\n7B ÷ 8 = 0.875 GB per billion ≈ 8 GB total\n70B ÷ 8 = 8.75 GB per billion ≈ 48 GB total\n\n# For other quantizations:\nQ8 (8-bit): Model Size ÷ 4\nQ5 (5-bit): Model Size ÷ 5\nFP32 (full): Model Size × 4',
+          codeLanguage: 'bash',
+        },
+        'formula': {
+          title: 'LLM의 VRAM 공식이란 무엇입니까?',
+          content: [
+            '**VRAM (GB) = (모델 크기(십억 단위) × 4바이트 × 양자화 계수)**',
+            '- 모델 크기: 파라미터 수(7B, 13B, 70B 등)',
+            '- 4바이트: FP32 정밀도(1바이트 = 8비트)',
+            '- 양자화 계수: 1.0(FP32), 0.5(Q8), 0.25(Q4)',
+            '예시: Llama 3 70B, FP32, 양자화 없음:',
+            '700억 × 4바이트 = 280GB. 비실용적입니다.',
+            'Llama 3 70B, Q4(4비트) 양자화:',
+            '700억 × 4바이트 × 0.25 = 70GB 할당, 압축 후 약 24GB 사용.',
+            '',
+            '**MoE 모델(희소형):** 활성 파라미터가 연산을 처리하지만, 모든 전문가는 VRAM에 로드된 상태를 유지해야 합니다. 예시: Llama 4 Scout는 109B의 총 파라미터에서 토큰당 17B가 활성화됩니다. Q4에서도 모든 전문가를 보관하기 위해 약 55GB의 VRAM이 필요하며, 공격적인 1.78비트 양자화(약 20 tok/s)에서만 24GB GPU에 들어맞습니다. 연산은 저렴하지만, 메모리가 제약 조건입니다.',
+          ],
+        },
+        'by-model-size': {
+          title: '각 모델 크기에 필요한 VRAM은 얼마입니까?',
+          columns: ['모델 크기', 'FP32 (양자화 없음)', 'Q8 (8비트)', 'Q5 (5비트)', 'Q4 (4비트)', '권장 GPU'],
+          rows: [
+            { '모델 크기': '3B (Phi, StableLM)', 'FP32 (양자화 없음)': '12 GB', 'Q8 (8비트)': '6 GB', 'Q5 (5비트)': '4 GB', 'Q4 (4비트)': '3 GB', '권장 GPU': 'RTX 2060 6 GB 또는 RTX 5070 12 GB' },
+            { '모델 크기': '7B (Llama 3.3, Mistral)', 'FP32 (양자화 없음)': '28 GB', 'Q8 (8비트)': '14 GB', 'Q5 (5비트)': '9 GB', 'Q4 (4비트)': '7 GB', '권장 GPU': 'RTX 3060 12 GB 또는 RTX 5070 12 GB' },
+            { '모델 크기': '13B (Llama 3.3, Mistral)', 'FP32 (양자화 없음)': '52 GB', 'Q8 (8비트)': '26 GB', 'Q5 (5비트)': '17 GB', 'Q4 (4비트)': '13 GB', '권장 GPU': 'RTX 3090 24 GB 또는 RTX 5080 16 GB' },
+            { '모델 크기': '22B (Qwen, Gemma)', 'FP32 (양자화 없음)': '88 GB', 'Q8 (8비트)': '44 GB', 'Q5 (5비트)': '28 GB', 'Q4 (4비트)': '22 GB', '권장 GPU': 'RTX 4090 24 GB(Q4) 또는 RTX 5090 32 GB' },
+            { '모델 크기': '70B (Llama 3, Qwen)', 'FP32 (양자화 없음)': '280 GB', 'Q8 (8비트)': '140 GB', 'Q5 (5비트)': '88 GB', 'Q4 (4비트)': '70 GB', '권장 GPU': '2× RTX 4090(각 24 GB), 또는 1× H100 80 GB' },
+            { '모델 크기': 'Qwen 3.6 35B-A3B (3B 활성, MoE)*', 'FP32 (양자화 없음)': '12 GB', 'Q8 (8비트)': '3 GB', 'Q5 (5비트)': '2 GB', 'Q4 (4비트)': '2 GB', '권장 GPU': 'RTX 2060 6 GB 또는 RTX 5070 12 GB' },
+            { '모델 크기': 'DeepSeek V4-Flash (13B 활성 / 284B 총량, MoE)*', 'FP32 (양자화 없음)': '52 GB', 'Q8 (8비트)': '13 GB', 'Q5 (5비트)': '8 GB', 'Q4 (4비트)': '7 GB', '권장 GPU': 'RTX 3060 12 GB 또는 RTX 5070 12 GB' },
+            { '모델 크기': 'Llama 4 Scout (17B 활성 / 109B 총량, MoE)†', 'FP32 (양자화 없음)': '436 GB', 'Q8 (8비트)': '109 GB', 'Q5 (5비트)': '68 GB', 'Q4 (4비트)': '55 GB', '권장 GPU': '2× RTX 4090(48 GB) — 1.78비트에서만 24 GB에 들어맞음(약 20 tok/s)' },
+            { '모델 크기': 'gpt-oss:20b (3.6B 활성 / 21B 총량, MoE)*', 'FP32 (양자화 없음)': '84 GB', 'Q8 (8비트)': '21 GB', 'Q5 (5비트)': '13 GB', 'Q4 (4비트)': '12 GB', '권장 GPU': 'RTX 5070 12 GB 또는 16 GB GPU' },
+            { '모델 크기': 'Kimi K2.6 (32B 활성 / 1T 총량, MoE)*', 'FP32 (양자화 없음)': '128 GB', 'Q8 (8비트)': '32 GB', 'Q5 (5비트)': '20 GB', 'Q4 (4비트)': '16 GB', '권장 GPU': '2× RTX 4090 또는 RTX 5090 32 GB(Q4 전용)' },
+          ],
+          note: '* MoE 모델: VRAM은 총 모델 크기가 아닌 활성 파라미터에서만 계산됩니다. † Llama 4 Scout는 109B 파라미터를 모두 상주시키므로, 토큰당 17B만 활성화되더라도 Q4에서 약 55 GB가 필요합니다.',
+        },
+        'moe-vram': {
+          title: 'MoE 모델은 크기에 비해 훨씬 적은 VRAM을 필요로 합니다',
+          id: 'moe-vram',
+          content: [
+            'Mixture-of-Experts(MoE) 모델은 파라미터를 여러 "전문가" 서브네트워크에 분산시키고 각 토큰에 대해 일부만 활성화합니다. 활성 파라미터는 연산을 줄이고 추론을 빠르게 하지만, 대부분의 MoE 모델에서 모든 전문가는 여전히 VRAM에 로드되어 있어야 합니다 — 따라서 메모리 사용량은 활성 파라미터가 아닌 총 파라미터를 기준으로 합니다.',
+            '**밀집 모델 규칙:** VRAM = 총_파라미터 × 파라미터당_바이트',
+            '**MoE 모델 규칙(연산):** 활성_파라미터가 초당 토큰 수를 결정합니다 — **하지만 VRAM은 여전히 총 상주 가중치에 따라 확장됩니다.**',
+            '예시: Llama 4 Scout는 109B의 총 파라미터에서 토큰당 17B만 활성화됩니다. 크기 대비 빠르지만, Q4에서 모든 전문가를 보관하기 위해 여전히 약 55 GB의 VRAM이 필요합니다 — 공격적인 1.78비트 양자화(RTX 4090에서 약 20 tok/s)를 사용하지 않는 한 단일 24 GB GPU로는 불가능합니다.',
+            '일부 런타임은 비활성 전문가를 시스템 RAM으로 스트리밍하거나 오프로드할 수 있어, 속도를 희생하면서 VRAM 사용을 줄일 수 있습니다. 핵심 결론: MoE 모델이 활성 파라미터 크기의 VRAM에 들어맞는다고 가정하지 마십시오 — 선택한 양자화 수준에서 실제 온디스크 크기를 확인하십시오.',
+          ],
+        },
+        'quantization': {
+          title: '양자화는 어떻게 VRAM 요구 사항을 줄입니까?',
+          content: [
+            '**양자화**는 각 모델 파라미터를 표현하는 데 필요한 비트 수를 줄입니다.',
+            '- **FP32**(32비트 부동소수점): 완전 정밀도. 파라미터 1개 = 4바이트. 손실 없음. 가장 느림.',
+            '- **Q8**(8비트): 파라미터 1개 = 1바이트. 약 6% 정확도 손실. 75% VRAM 절감.',
+            '- **Q5**(5비트): 파라미터 1개 = 0.625바이트. 약 2% 정확도 손실. 84% VRAM 절감.',
+            '- **Q4**(4비트): 파라미터 1개 = 0.5바이트. 약 1% 정확도 손실. 87.5% VRAM 절감.',
+            '대부분의 사용자에게 Q4가 최적점입니다: 감지하기 어려운 정확도 손실, 87% 더 작은 VRAM 공간.',
+            '2026년 4월 기준, Q4가 표준입니다. 여유 VRAM이 있고 약간의 품질 향상을 원하시면 Q5와 Q8도 사용 가능합니다.',
+            'VRAM은 모델 크기를 결정하지만, 프롬프트 설계가 출력 품질을 결정합니다. 연쇄 사고(chain-of-thought) 및 퓨샷(few-shot) 프롬프팅과 같은 기법은 소규모 모델과 대규모 모델 간의 품질 격차를 줄일 수 있습니다. 하드웨어가 지원하는 모델에서 더 많은 것을 얻으려면 [프롬프트 엔지니어링 툴킷](https://www.promptquorum.com/prompt-engineering)을 살펴보십시오. 12~16 GB VRAM이 있고 해당 툴킷을 적용할 구체적인 코딩 작업이 필요하다면, [로컬 LLM으로 GitHub Copilot 대체하기](/power-local-llm/replace-github-copilot-with-local-llm)에서 Continue.dev + Ollama + Qwen3-Coder 스택을 정확히 해당 VRAM 등급에 맞게 설명합니다.',
+          ],
+        },
+        'batch-size': {
+          title: '배치 크기와 다중 사용자 추론에 대해',
+          content: [
+            '**배치 크기는 처리량(초당 토큰 수)에 영향을 미치며, 단일 추론 지연 시간에는 영향을 주지 않습니다.**',
+            '"2+2는 얼마입니까?"라고 묻는 단일 사용자는 배치 크기가 1이든 32이든 동일한 VRAM을 사용합니다.',
+            '배치 크기 = 32는 32개의 프롬프트를 병렬로 처리한다는 의미입니다. 이는 약 32배 더 많은 VRAM을 사용하지만, 32개의 응답을 더 빠르게 생성합니다.',
+            '단일 사용자(일반적인 로컬 LLM 사용): 배치 크기 = 1. VRAM은 모델 크기 + 1~2GB 오버헤드.',
+            '다중 사용자 서버: 배치 크기 × 모델 VRAM을 할당하십시오. batch=4의 70B 모델은 약 96GB(24GB × 4)가 필요합니다.',
+          ],
+        },
+        'overhead': {
+          title: '모델 크기보다 더 많은 VRAM이 필요합니까?',
+          content: [
+            '**예. 모델 가중치 외에 추가하십시오:**',
+            '- **KV 캐시**(컨텍스트용 키-값 캐시): 약 5~10% 추가 VRAM.',
+            '- **옵티마이저 상태**(파인튜닝 시): 모델 크기의 2~4배(학습에만 해당, 추론에는 무관).',
+            '- **시스템 오버헤드**(OS, 드라이버, Ollama/LM Studio 런타임): 약 1~2GB.',
+            '규칙: 70B 모델 Q4(20GB) + KV 캐시(2GB) + 시스템(2GB) = 약 24GB 할당.',
+            '항상 이론적 최소치보다 최소 1~2GB 여유가 있는 GPU를 구매하십시오.',
+          ],
+        },
+        'mistakes': {
+          title: 'VRAM에 관한 일반적인 오해',
+          items: [
+            'VRAM이 많을수록 추론이 빠릅니다. 틀렸습니다. VRAM 크기는 속도에 영향을 주지 않습니다. 메모리 대역폭(GB/초)이 영향을 미치며, 이는 GPU마다 고정되어 있습니다.',
+            '배치 크기 = 순차적 토큰 한계. 틀렸습니다. 배치 크기 = 병렬 요청. 단일 추론은 VRAM 크기에 관계없이 batch=1을 사용합니다.',
+            '70B 모델에는 24GB가 필요합니다. 틀렸습니다. Q4는 24GB가 필요합니다. Q8은 48GB가 필요합니다. 양자화에 따라 다릅니다.',
+          ],
+        },
+        'vramCalculator': {
+          id: 'vram-calculator',
+          title: 'VRAM 계산기',
+          component: 'VramCalculator',
+          content: '모델 크기와 양자화를 선택하여 VRAM 요구 사항을 추정하십시오.',
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            { q: 'Mistral Small을 6GB GPU에서 실행할 수 있습니까?', a: 'Q4에서 오버헤드를 빡빡하게 잡으면 간신히 가능합니다. 실질적으로는 불가능합니다. 최소 8GB를 구매하십시오. 6GB에서는 OOM 오류가 발생합니다.' },
+            { q: '7B 모델을 파인튜닝하려면 VRAM이 얼마나 필요합니까?', a: 'LoRA: 12~16GB. 전체 파인튜닝: 28GB 이상. 파인튜닝은 옵티마이저 상태(모델 VRAM의 2~4배)가 필요하며, 추론만이 아닙니다.' },
+            { q: 'Llama 3 13B에 12GB로 충분합니까?', a: 'Q4에서는 간신히 가능합니다. Q5 또는 Q8에서는 불가능합니다. 12GB는 빠듯합니다. 16GB가 편안합니다.' },
+            { q: '70B 모델에 24GB가 필요합니까?', a: 'Q4에서는 예. Q5 이상에서는 아닙니다. 더 높은 양자화(Q5, Q8)는 70B에 32GB 이상이 필요합니다.' },
+            { q: '배치 크기를 늘리면 단일 추론의 VRAM이 줄어듭니까?', a: '아닙니다. 단일 추론은 항상 batch=1 VRAM을 사용합니다. 배치 크기는 처리량(다중 사용자 시나리오)에만 도움이 됩니다.' },
+            { q: '정확도를 위한 최고의 양자화는 무엇입니까?', a: 'Q8은 거의 감지하기 어려운 손실입니다. Q5는 약 2% 손실. Q4는 약 1% 손실. 대부분의 경우 Q4가 최적점입니다.' },
+            { q: 'VRAM 일부를 CPU RAM으로 오프로드할 수 있습니까?', a: '예, 레이어 분할(NVLink)을 통해 가능합니다. Llama.cpp와 Ollama가 이를 지원합니다. 성능은 30~50% 저하되지만 작동합니다. VRAM이 8GB 미만이십니까? **[정확한 하드웨어 등급에서 가장 빠른 모델을 확인하십시오](/local-llms/fastest-local-llms-low-end-pcs)** — CPU 전용, 4 GB, 6 GB, 8 GB VRAM의 실제 tok/초 벤치마크.' },
+          ],
+        },
+        'relatedReading': {
+          id: 'related-reading',
+          title: '관련 읽을거리',
+          items: [
+            '[로컬 LLM용 VRAM 계산기](/local-llms/vram-calculator-local-llm) -- 인터랙티브 계산기: 모든 모델, 양자화 및 GPU에 대한 정확한 VRAM.',
+            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 가격 및 tok/초 벤치마크가 포함된 완전한 GPU 등급 권장 사항.',
+            '[로컬 LLM을 위한 최고의 GPU](/local-llms/best-gpus-for-local-llms) -- RTX 4090, 4080, 4070 Ti 벤치마크 및 비용 분석.',
+            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) -- Q4, Q5, Q8 형식과 품질 트레이드오프에 대한 심층 분석.',
+            '[로컬 LLM에 통합 메모리가 얼마나 필요합니까?](/local-llms/how-much-unified-memory-for-local-llm) -- Apple Silicon을 위한 VRAM의 Mac 동등물: 16GB vs 36GB vs 64GB vs 128GB.',
+            '[Apple Silicon M5 Max에서 70B 모델 실행](/local-llms/running-70b-models-apple-silicon-m5-max) -- 통합 메모리가 Mac이 24GB VRAM이 실패하는 곳에서 70B를 기본적으로 실행할 수 있게 하는 방법.',
+            '[Apple Silicon을 위한 최고의 모델 2026](/local-llms/best-models-apple-silicon-2026) -- 통합 메모리 등급별 특정 모델 선택: 16GB~128GB.',
+            '[로컬 LLM을 위한 GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) -- 세 플랫폼 아키텍처 비교: NVIDIA CUDA, Apple 통합 메모리, CPU 전용 추론 병렬 비교.',
+          ],
+        },
+        'sources': {
+          title: '참고 자료',
+          items: [
+            'NVIDIA CUDA 메모리 아키텍처 및 공유 메모리 모델 문서',
+            'Ollama 및 LM Studio 공식 문서: 모델 VRAM 요구 사항 및 양자화 사양',
+            'llama.cpp 프로젝트 GitHub: 양자화 수준(Q4, Q5, Q8) 및 메모리 계산',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': '로컬 LLM VRAM 요구 사항 2026: 7B~70B 양자화 모델',
+        'description': '70B LLM에 VRAM이 얼마나 필요합니까? Q4/Q5 양자화, 13B~70B 모델, 24GB~32GB GPU에 맞는 모델의 2026년 정확한 요구 사항을 확인하십시오.',
+        'url': 'https://www.promptquorum.com/local-llms/how-much-vram-local-llm',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-06-01',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'GPU VRAM' },
+          { '@type': 'Thing', 'name': 'LLM 메모리 요구 사항' },
+          { '@type': 'Thing', 'name': '양자화' },
+          { '@type': 'Thing', 'name': '로컬 LLM 추론' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Mistral Small을 6GB GPU에서 실행할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4에서 오버헤드를 빡빡하게 잡으면 간신히 가능합니다. 실질적으로는 불가능합니다. 최소 8GB를 구매하십시오. 6GB에서는 OOM 오류가 발생합니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '7B 모델을 파인튜닝하려면 VRAM이 얼마나 필요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LoRA 파인튜닝: 12~16GB. 전체 파인튜닝: 28GB 이상. 파인튜닝은 옵티마이저 상태(모델 VRAM의 2~4배)가 필요하며, 추론 가중치만이 아닙니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Llama 3 13B에 12GB로 충분합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4에서는 간신히 가능합니다. Q5 또는 Q8에서는 불가능합니다. 12GB는 빠듯합니다. 13B 모델에는 16GB가 편안합니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '70B 모델에 24GB VRAM이 필요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4에서는 예 — 70B 모델은 약 20~24GB VRAM이 필요합니다. Q5 이상에서는 32GB 이상이 필요합니다. 더 높은 양자화는 VRAM 요구 사항을 비례적으로 늘립니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '배치 크기를 늘리면 단일 추론의 VRAM이 줄어듭니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아닙니다. 단일 추론은 항상 batch=1 VRAM을 사용합니다. 배치 크기는 다중 사용자 시나리오에서 처리량에만 도움이 됩니다. 요청당 VRAM을 줄이지 않습니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '정확도가 가장 높은 양자화 수준은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8은 거의 감지하기 어려운 품질 손실입니다. Q5는 약 2% 저하. Q4는 약 1% 저하. 대부분의 작업에서 Q4가 VRAM 절감과 품질 사이의 최적점입니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'VRAM 일부를 CPU RAM으로 오프로드할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예, 레이어 분할을 통해 가능합니다. llama.cpp와 Ollama는 --n-gpu-layers를 통해 이를 지원합니다. 성능은 30~50% 저하되지만 VRAM이 부족할 때 모델을 실행할 수 있습니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'LLM의 VRAM 공식이란 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'VRAM (GB) = 모델 파라미터(십억 단위) × 파라미터당 바이트 + 오버헤드. Q4(4비트)에서: 7B × 0.5바이트 + 1GB 오버헤드 ≈ 4.5GB 가중치 + 2GB KV 캐시 = 약 7GB 합계.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q8은 Q4보다 VRAM이 얼마나 더 필요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8은 Q4의 2배 VRAM을 사용합니다. 7B 모델은 Q4에서 약 4~5GB, Q8에서 약 8~9GB가 필요합니다. GPU를 구매하기 전에 항상 양자화 수준을 확인하십시오.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '두 개의 GPU로 70B 모델을 실행할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. 두 개의 RTX 5090(각 24GB)을 합치면 48GB VRAM — Q4에서 70B 모델을 실행하기에 충분합니다. llama.cpp와 Ollama는 텐서 병렬 처리 및 --n-gpu-layers를 통해 다중 GPU를 지원합니다.'
+            }
+          }
+        ]
+      },
+    },
   };

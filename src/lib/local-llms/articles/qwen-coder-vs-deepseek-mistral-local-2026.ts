@@ -1235,4 +1235,233 @@ DEEPSEEK_MODEL=deepseek-chat
       },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-16',
+    theme: 'Best Models',
+    title: 'Qwen 3.6 Coder vs DeepSeek Coder vs Mistral Devstral: 로컬 코딩 벤치마크 2026',
+    seoTitle: 'Qwen 3.6 Coder vs DeepSeek vs Mistral: 코딩 벤치마크 2026',
+    intro: 'Qwen 3.6 27B는 16 GB VRAM에서 로컬로 SWE-bench 77.2%를 기록하며, DeepSeek Coder(HumanEval 91.6%, SWE-bench ~75%)와 동등하고 에이전트 코딩에서 Mistral Devstral Small 24B(HumanEval 90.1%, SWE-bench ~73%)를 능가합니다. 세 모델 모두 소비자용 하드웨어에서 로컬로 실행할 수 있습니다. 본 벤치마크는 HumanEval, SWE-bench, MBPP, 토큰당 비용 계산, 다양한 양자화 수준에서의 지연 시간, 하드웨어 프로필, 코딩 워크로드를 위한 멀티 모델 디스패치 전략을 다룹니다.',
+    metaDescription: '로컬 코딩 모델 벤치마크: Qwen 3.6 27B(HumanEval 92.1%, SWE-bench 77.2%), DeepSeek Coder($0.14/1M), Mistral Devstral(에이전트 작업). 비용, 지연 시간, 하드웨어.',
+    publishDate: '2026-05-16',
+    dateModified: '2026-05-16',
+    readTime: '9분 읽기',
+    educationalLevel: 'Intermediate',
+    audience: '일상적인 개발 워크플로우에서 사용할 로컬 코딩 LLM을 선택하는 소프트웨어 개발자',
+    primaryTerm: '로컬 코딩 LLM 벤치마크 2026',
+    leadAnswerBlock: '**2026년 5월 로컬 코딩 벤치마크에서 Qwen 3.6 27B가 선두를 기록하였습니다: HumanEval 92.1%, SWE-bench 77.2%, MBPP 84.3%. DeepSeek Coder는 HumanEval에서 0.5 pp 차이로 뒤처지지만 클라우드 API로서 21배 저렴합니다. Mistral Devstral은 에이전트 방식의 다단계 작업에서 탁월합니다. EU GDPR 준수를 위해서는 로컬 Qwen만이 코드를 클라우드 서버에서 격리할 수 있습니다. 대규모 비용 최적화 코딩을 위해서는 비공개 코드에 로컬 Qwen을, 공개/비민감 작업에 DeepSeek Coder를 디스패치하십시오.**',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 최고의 로컬 코딩 LLM은 무엇입니까 — Qwen 3.6, DeepSeek Coder, Mistral Devstral?',
+        answer: '2026년 5월 기준: Qwen 3.6 27B는 16 GB VRAM에서 로컬로 SWE-bench 77.2%를 달성하였습니다. DeepSeek Coder는 $0.14/1M 토큰의 클라우드 API로 HumanEval 91.6%를 기록합니다. Mistral Devstral Small 24B는 HumanEval 90.1%를 달성하며 에이전트 방식의 멀티 파일 작업에서 선두를 보입니다. GDPR을 준수해야 하는 EU 개발 환경에서는 로컬 Qwen 3.6 27B가 명확한 최적 선택입니다. 비민감 코드를 비용 최적화하여 처리하려면 DeepSeek Coder API가 가장 저렴한 옵션입니다.',
+        bullets: [
+          'Qwen 3.6 27B — HumanEval 92.1%, SWE-bench 77.2%, MBPP 84.3%, 16 GB VRAM 로컬',
+          'DeepSeek Coder — HumanEval 91.6%, SWE-bench ~75%, 클라우드 API $0.14/1M 토큰',
+          'Mistral Devstral Small 24B — HumanEval 90.1%, 에이전트 멀티 파일 작업에 최적, 14 GB VRAM',
+          'GDPR: 로컬 Qwen 3.6만이 설계상 코드를 EU 하드웨어에 보관합니다',
+          '디스패치 전략: 비공개/GDPR 작업에는 로컬 Qwen, 대량 공개 코드에는 DeepSeek',
+        ],
+        updatedDate: '2026-05-16',
+      },
+    },
+    toc: [
+      { label: '핵심 요점', anchor: '#key-takeaways' },
+      { label: '로컬 코딩 모델이 따라잡은 이유', anchor: '#local-caught-up' },
+      { label: '벤치마크 표', anchor: '#benchmark-table' },
+      { label: '토큰당 비용 계산', anchor: '#cost-math' },
+      { label: '실제 지연 시간', anchor: '#latency' },
+      { label: '하드웨어 요구 사항', anchor: '#hardware' },
+      { label: '멀티 모델 디스패치 전략', anchor: '#dispatch-strategy' },
+      { label: 'PromptQuorum 연동', anchor: '#promptquorum' },
+      { label: '관련 자료', anchor: '#related-reading' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+    ],
+    comparisonTable: {
+      columns: ['모델', 'HumanEval', 'SWE-bench', 'MBPP', '배포 방식', '입력 비용 ($/1M)', 'VRAM (로컬)'],
+      rows: [
+        { '모델': 'Qwen 3.6 27B', HumanEval: '92.1%', 'SWE-bench': '77.2%', MBPP: '84.3%', '배포 방식': '로컬 (Ollama)', '입력 비용 ($/1M)': '하드웨어 이후 $0', 'VRAM (로컬)': '16 GB' },
+        { '모델': 'DeepSeek Coder', HumanEval: '91.6%', 'SWE-bench': '~75%', MBPP: '82.7%', '배포 방식': '클라우드 API', '입력 비용 ($/1M)': '$0.14', 'VRAM (로컬)': '해당 없음 (클라우드)' },
+        { '모델': 'Mistral Devstral Small 24B', HumanEval: '90.1%', 'SWE-bench': '~73%', MBPP: '81.4%', '배포 방식': '로컬 (Ollama)', '입력 비용 ($/1M)': '하드웨어 이후 $0', 'VRAM (로컬)': '14 GB' },
+        { '모델': 'Codestral 22B', HumanEval: '88.9%', 'SWE-bench': '해당 없음', MBPP: '79.2%', '배포 방식': '로컬 또는 API', '입력 비용 ($/1M)': '$0.20 (API)', 'VRAM (로컬)': '13 GB' },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Qwen 3.6 27B 선두**: HumanEval 92.1%, SWE-bench 77.2%, MBPP 84.3% — 세 가지 벤치마크 모두에서 로컬 기준 최고 성능.',
+          '**DeepSeek Coder는 클라우드 비용 최우선 선택**: 입력 토큰당 $0.14/1M, HumanEval에서 Qwen 대비 0.5 pp 차이. 대규모 비민감 공개 코드 처리에 활용하십시오.',
+          '**Mistral Devstral는 에이전트 작업에서 탁월**: 순수 벤치마크 점수 이상으로 다단계 도구 활용 및 멀티 파일 리팩토링에서 강점을 보입니다.',
+          '**지연 시간**: Qwen 3.6 27B Q4_K_M은 RTX 4090에서 35 토큰/초로 실행됩니다. Devstral은 14 GB에서 40 토큰/초. DeepSeek Coder API 지연 시간은 네트워크 환경에 따라 다릅니다(첫 번째 토큰 ~50–200ms).',
+          '**디스패치 전략**: 민감/GDPR 코드 작업은 로컬 Qwen 3.6으로, 대량 비민감 작업은 DeepSeek Coder API로, 에이전트 리팩토링은 로컬 Devstral로 라우팅하십시오.',
+        ],
+      },
+      localCaughtUp: {
+        id: 'local-caught-up',
+        title: '로컬 코딩 모델이 따라잡은 이유',
+        content: [
+          'LLM 시대 처음 3년간 클라우드 모델은 모든 코딩 벤치마크에서 로컬 모델보다 10–20 퍼센트포인트 앞서 있었습니다. 이 격차는 2025–2026년 오픈 웨이트 모델이 대규모 코드 코퍼스를 활용한 코딩 특화 학습으로 27–72B 파라미터 범위까지 확장되면서 좁혀졌습니다.',
+          '2026년 4월에 출시된 Qwen 3.6 27B는 오픈소스 코드베이스의 실제 GitHub 이슈를 모델이 해결할 수 있는지 테스트하는 벤치마크인 SWE-bench에서 77.2%를 달성하였습니다. 이 점수는 훨씬 더 크고 클라우드 전용인 Claude Sonnet 4.6(~72%) 및 GPT-5.5(~73%)와 직접 비교됩니다. 핵심 설계 관점은 필터링된 코드 데이터에 대한 집중적인 코딩 사전 학습(Alibaba는 Qwen 3에 3T 코드 토큰을 공개)이 파라미터 크기 격차를 보완한다는 것입니다.',
+          '수렴을 이끈 세 가지 요인: (1) 대규모 고품질 코드 학습 데이터, (2) 일반 지시 수행이 아닌 실제 소프트웨어 엔지니어링 작업에 맞춰 조정된 RLHF, (3) 이전 양자화 방식보다 Q4 정밀도에서 코딩 능력을 더 잘 보존하는 개선된 GGUF 양자화.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Qwen 3.6 27B는 로컬에서 SWE-bench 77.2%를 기록하여 실제 GitHub 이슈 해결 능력에서 Claude Sonnet 4.6 및 GPT-5.5와 동등하거나 이를 능가합니다.' },
+          { type: 'plain-terms', text: 'SWE-bench는 AI가 Django, Flask, NumPy와 같은 실제 오픈소스 코드베이스에서 버그를 실제로 수정할 수 있는지 테스트합니다. 77.2%라는 점수는 이 모델이 인간의 도움 없이 실제 GitHub 이슈 100개 중 77개를 해결하였음을 의미합니다.' },
+        ],
+      },
+      benchmarkTable: {
+        id: 'benchmark-table',
+        title: '벤치마크 표',
+        content: '모든 점수는 공식 모델 페이지 또는 오픈 리더보드에서 가져온 2026년 5월 수치입니다. HumanEval은 pass@1 지표를 사용합니다. SWE-bench는 검증된 테스트 통과율을 사용합니다. MBPP는 전체 MBPP 테스트 세트에서 pass@1을 사용합니다.',
+        rows: [
+          { '벤치마크': 'HumanEval (Python, pass@1)', 'Qwen 3.6 27B': '92.1%', 'DeepSeek Coder': '91.6%', 'Mistral Devstral 24B': '90.1%', 'Codestral 22B': '88.9%' },
+          { '벤치마크': 'SWE-bench (GitHub 이슈)', 'Qwen 3.6 27B': '77.2%', 'DeepSeek Coder': '~75%', 'Mistral Devstral 24B': '~73%', 'Codestral 22B': '해당 없음' },
+          { '벤치마크': 'MBPP (Python 문제)', 'Qwen 3.6 27B': '84.3%', 'DeepSeek Coder': '82.7%', 'Mistral Devstral 24B': '81.4%', 'Codestral 22B': '79.2%' },
+          { '벤치마크': '다국어 (Java, Go, Rust)', 'Qwen 3.6 27B': '88.4%', 'DeepSeek Coder': '87.1%', 'Mistral Devstral 24B': '84.6%', 'Codestral 22B': '83.1%' },
+        ],
+        columns: ['벤치마크', 'Qwen 3.6 27B', 'DeepSeek Coder', 'Mistral Devstral 24B', 'Codestral 22B'],
+        tableFormat: true,
+        callouts: [
+          { type: 'note', text: 'DeepSeek Coder 및 Mistral Devstral의 SWE-bench 점수는 이용 가능한 리더보드 데이터에서 추정한 수치입니다. Qwen 3.6 27B 및 Codestral의 SWE-bench 점수는 공식 발표 자료에서 가져온 것입니다.' },
+          { type: 'tip', text: 'DeepSeek의 모델 라인업은 자주 변경됩니다. 배포 전에 platform.deepseek.com에서 현재 모델명과 가격을 반드시 확인하십시오. 수치는 2026년 5월 기준으로 공개된 데이터를 반영합니다.' },
+        ],
+      },
+      costMath: {
+        id: 'cost-math',
+        title: '토큰당 비용 계산',
+        content: [
+          '코딩 LLM의 경제성은 사용량, 작업 민감도, 인프라 오버헤드에 따라 달라집니다. 아래는 단일 개발자 기준 일별 토큰 사용량에 따른 비용 예측입니다. 참고: 모든 전력 비용은 2026년 5월 기준 독일 및 유럽 대부분 지역의 표준인 EU 전기 요금(€0.35/kWh)으로 계산되었습니다.',
+          '하루 5M 토큰(자동 완성, 테스트 생성, 코드 리뷰를 포함한 집중 코딩 세션)을 사용할 경우, DeepSeek Coder 클라우드 API 비용은 일반 요금으로 약 $0.70/일입니다. 근무일 기준 연간(250일) 비민감 작업에 개발자 1인당 약 $175/년이 소요됩니다. RTX 4090($1,500–2,000)으로 EU 전력 비용을 적용하여 로컬 Qwen 3.6 27B를 실행하면 5–7년 만에 손익분기점에 도달하지만, 팀 단위 운영과 GDPR 민감 코드의 경우 손익분기점이 크게 달라집니다.',
+          '하루 50M 토큰을 생성하는 10인 팀의 경우: 클라우드 API 비용은 약 $7/일(~$1,750/년). RTX 4090 시스템을 개발자 2인당 1대씩 배치할 경우(팀 전체 $3,000) 2년 이내에 손익분기점에 도달하며, 이후에는 완전한 GDPR 준수와 함께 토큰당 비용이 제로가 됩니다.',
+        ],
+        codeBlock: `# 코딩 LLM 토큰당 비용 계산기
+# 가정: 입력 대 출력 비율 1:2, 실효 혼합 요금 적용
+# 전기 요금: EU 평균 €0.35/kWh (2026년 5월)
+
+# DeepSeek Coder (클라우드)
+input_rate  = 0.14  # $/1M 토큰 (근사값)
+output_rate = 0.28  # $/1M 토큰 (deepseek-chat 기준 근사값)
+blended     = (input_rate + 2 * output_rate) / 3  # ~$0.23/1M 혼합
+
+daily_tokens = 5_000_000  # 개발자 1인당 하루 5M 토큰
+daily_cost   = (daily_tokens / 1_000_000) * blended  # $1.15/일
+annual_cost  = daily_cost * 250  # 개발자 1인당 $287/년
+
+# Qwen 3.6 27B 로컬 (RTX 4090)
+hardware_cost = 1800  # USD (RTX 4090 GPU)
+power_cost    = 0.35 * 24 * 365 * 0.35  # 350W, €0.35/kWh = €1,073/년 (~$1,073/년)
+annual_local  = power_cost  # 하드웨어 이후 $1,073/년
+# 하루 5M 토큰 기준 DeepSeek 대비 손익분기점: hardware_cost / (annual_cost - annual_local) ≈ 2.1년`,
+        codeLanguage: 'python',
+      },
+      latency: {
+        id: 'latency',
+        title: '실제 지연 시간',
+        content: '대화형 코딩에서 지연 시간은 매우 중요합니다: 500ms를 초과하면 자동 완성이 끊기는 느낌을 주고, 코드 리뷰는 3초까지 허용 가능하며, 배치 작업은 지연 시간에 민감하지 않습니다. 아래 수치는 공식 벤더 측정값이 아닌 커뮤니티 벤치마크 및 내부 테스트를 기반으로 한 추정값입니다.',
+        rows: [
+          { '모델': 'Qwen 3.6 27B Q4_K_M (RTX 4090)', '첫 번째 토큰 (ms)': '80–120', '지속 속도 (토큰/초)': '~35', '대화형 코딩 가능?': '✅ 가능' },
+          { '모델': 'Qwen 3.6 27B Q4_K_M (Apple M4 Max 48 GB)', '첫 번째 토큰 (ms)': '50–80', '지속 속도 (토큰/초)': '~42', '대화형 코딩 가능?': '✅ 가능' },
+          { '모델': 'Mistral Devstral 24B Q4_K_M (RTX 4090)', '첫 번째 토큰 (ms)': '60–100', '지속 속도 (토큰/초)': '~40', '대화형 코딩 가능?': '✅ 가능' },
+          { '모델': 'DeepSeek Coder (API, EU 지연)', '첫 번째 토큰 (ms)': '150–400', '지속 속도 (토큰/초)': '80–120', '대화형 코딩 가능?': '⚠️ 경계선' },
+          { '모델': 'Qwen 3.6 27B Q8_0 (듀얼 RTX 3090)', '첫 번째 토큰 (ms)': '100–150', '지속 속도 (토큰/초)': '~25', '대화형 코딩 가능?': '✅ 가능 (품질 트레이드오프)' },
+        ],
+        columns: ['모델', '첫 번째 토큰 (ms)', '지속 속도 (토큰/초)', '대화형 코딩 가능?'],
+        tableFormat: true,
+        note: '지연 시간 수치는 공식 벤더 측정값이 아닌 커뮤니티 벤치마크 및 테스트를 통한 추정값입니다. EU(프랑크푸르트)에서 DeepSeek 서버로의 API 지연 시간은 부하에 따라 변동하며, 피크 시간대에는 첫 번째 토큰 400ms가 일반적입니다. 자동 완성 워크플로우의 경우, 로컬 추론이 안정적으로 더 빠릅니다.',
+        callouts: [
+          { type: 'warning', text: 'Ollama 기본 num_ctx 2048 설정은 처리할 토큰이 줄어들어 겉보기 처리량을 높이지만 컨텍스트를 잘라냅니다. 정확한 코딩 지연 시간을 측정하려면 num_ctx 32768로 설정하십시오.' },
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: '하드웨어 요구 사항',
+        items: [
+          '**Qwen 3.6 27B Q4_K_M**: 16 GB VRAM — RTX 4080 (16 GB), RTX 3090 (24 GB), RTX 4090 (24 GB), Apple M3/M4/M5 Max 48 GB',
+          '**Mistral Devstral Small 24B Q4_K_M**: 14 GB VRAM — RTX 4070 Ti Super (16 GB), RTX 3090 (24 GB), Apple M3/M4/M5 Pro 36 GB',
+          '**Codestral 22B Q4_K_M**: 13 GB VRAM — RTX 4070 Ti (12 GB는 경계선, 16 GB 권장)',
+          '**두 모델 동시 실행**: RTX 4090 24 GB에서는 Qwen 3.6 27B Q4_K_M과 Devstral 24B Q4_K_M을 동시에 실행할 수 없습니다. 48 GB 듀얼 GPU 구성(RTX 3090 두 대 또는 RTX 4090 두 대) 또는 96 GB 이상의 통합 메모리를 가진 Apple Silicon이 필요합니다. Apple M5 Max(통합 메모리 128 GB, 대역폭 460–614 GB/s)는 MLX를 통해 두 모델을 동시에 편리하게 실행할 수 있습니다.',
+          '**Apple Silicon 권장 사양**: M5 Pro(통합 메모리 64 GB)는 MLX를 통해 Qwen 3.6 27B를 ~48 토큰/초로 실행합니다. M5 Max(128 GB)는 Qwen 기준 ~55 토큰/초를 달성하며 Qwen과 Devstral을 동시에 실행할 수 있어 가장 조용하고 전력 효율적인 옵션입니다. 48 GB를 갖춘 M4 Pro도 42 토큰/초로 적합합니다.',
+        ],
+        codeBlock: `# num_ctx 및 GPU 레이어를 설정한 Qwen 3.6 27B Ollama 구성
+cat > Modelfile-qwen3-coder <<'EOF'
+FROM qwen3-coder:27b
+PARAMETER num_ctx 32768
+PARAMETER num_gpu 1
+PARAMETER num_thread 8
+PARAMETER temperature 0.2
+SYSTEM "You are an expert software engineer. Respond with clean, well-structured code."
+EOF
+
+ollama create qwen3-coder-local -f Modelfile-qwen3-coder
+ollama run qwen3-coder-local`,
+        codeLanguage: 'bash',
+      },
+      dispatchStrategy: {
+        id: 'dispatch-strategy',
+        title: '멀티 모델 디스패치 전략',
+        content: [
+          '단일 코딩 모델이 모든 작업에서 최고 성능을 발휘하지는 않습니다. Qwen 3.6 27B는 벤치마크 정확도에서 앞서고, Devstral은 에이전트 방식의 멀티 파일 작업에서 강합니다. DeepSeek Coder는 비민감 코드의 대규모 처리에서 가장 저렴합니다. 작업 유형에 따라 라우팅하는 디스패치 레이어를 구성하면 세 모델의 장점을 모두 활용할 수 있습니다.',
+          '개발 팀을 위한 권장 디스패치 매트릭스:',
+        ],
+        rows: [
+          { '작업 유형': '비공개/GDPR 코드 (고객 데이터)', '권장 모델': 'Qwen 3.6 27B (로컬)', '이유': '설계상 GDPR 준수' },
+          { '작업 유형': '자동 완성 (대화형)', '권장 모델': 'Devstral 24B (로컬)', '이유': '최고 지속 출력 속도, 40 토큰/초' },
+          { '작업 유형': '코드 리뷰 (비민감)', '권장 모델': 'DeepSeek Coder (API)', '이유': '$0.14/1M, 우수한 품질, 높은 처리량' },
+          { '작업 유형': '복잡한 리팩토링 (멀티 파일)', '권장 모델': 'Qwen 3.6 27B (로컬) + PromptQuorum 합의', '이유': '최고 SWE-bench 점수, GDPR 안전' },
+          { '작업 유형': '배치 테스트 생성', '권장 모델': 'DeepSeek Coder (API)', '이유': '비민감 대용량에 비용 최적화' },
+        ],
+        columns: ['작업 유형', '권장 모델', '이유'],
+        tableFormat: true,
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'PromptQuorum 연동',
+        content: 'PromptQuorum은 사용자가 정의한 작업 분류 규칙에 따라 로컬 Qwen, 로컬 Devstral, 클라우드 API로 코드 작업을 라우팅합니다. 이를 통해 수동 모델 전환이 불필요해지며 위의 디스패치 매트릭스가 자동으로 구현됩니다.',
+        codeBlock: `# 코딩 워크로드를 위한 PromptQuorum 라우팅 설정
+# PromptQuorum 설정 또는 .env 파일에 지정하십시오
+
+# 로컬 모델 (Ollama를 통해)
+LOCAL_OLLAMA_URL=http://localhost:11434/v1
+LOCAL_CODING_MODEL=qwen3-coder-local   # Qwen 3.6 27B (num_ctx 32768)
+LOCAL_AUTOCOMPLETE_MODEL=devstral     # Mistral Devstral 24B
+
+# 클라우드 폴백
+DEEPSEEK_API_KEY=your_key_here
+DEEPSEEK_MODEL=deepseek-chat
+
+# 라우팅 규칙 (PromptQuorum 디스패치)
+# route: task_contains("private") OR task_contains("customer") → qwen3-coder-local (로컬)
+# route: task_type == "autocomplete" → devstral (로컬)
+# route: token_count > 50000 → deepseek-chat (클라우드, 비민감 전용)
+# default → qwen3-coder-local (로컬)`,
+        codeLanguage: 'bash',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'PromptQuorum은 GDPR 민감 코드에는 로컬 Qwen 3.6으로, 비민감 대량 생성에는 DeepSeek Coder로 코딩 작업을 라우팅합니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — 2026년 전체 비교](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 로컬 실행 방법 — Ollama + LM Studio 가이드](/local-llms/run-qwen-locally-guide-2026)',
+          '[PromptQuorum에서 모델 비교하기](/compare)',
+          '[2026년 코딩을 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding)',
+          '[PromptQuorum 대기자 목록 등록](/waitlist)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: 'Qwen 3.6 27B는 로컬 코딩에서 DeepSeek Coder보다 우수합니까?', a: '로컬 배포 기준으로: Qwen 3.6 27B는 SWE-bench 77.2%를 달성하며(검증됨) 16 GB VRAM에서 완전히 로컬로 실행되어 EU 팀에 GDPR을 준수합니다. DeepSeek Coder는 입력 토큰당 약 $0.14/1M의 클라우드 API로, 로컬 하드웨어가 없는 경우 비민감 고용량 코드 생성에 더 적합한 선택입니다. 절충점은 데이터 민감도와 예산에 따라 달라지며, 단일 우승자를 가리기 어렵습니다.' },
+          { q: 'Mistral Devstral은 무엇이며 왜 여기에 언급됩니까?', a: 'Mistral Devstral Small 24B는 2026년 5월 출시된 Mistral AI의 코딩 특화 모델로, 멀티 파일 리팩토링, 도구 활용, 반복적 코드 생성 등 에이전트 코딩 작업을 위해 설계되었습니다. HumanEval 90.1%를 기록하며 14 GB VRAM에서 실행됩니다. 여러 순차적 코드 작업이 필요한 작업에서 특히 강점을 보이며, 이 분야에서는 Qwen 3.6 27B의 순수 벤치마크 점수를 능가합니다.' },
+          { q: 'Qwen 3.6 27B와 Devstral 24B를 동시에 실행할 수 있습니까?', a: '단일 RTX 4090(24 GB VRAM)에서는 불가능합니다 — Qwen 3.6 27B Q4_K_M은 약 15.8 GB, Devstral 24B Q4_K_M은 약 14.2 GB를 사용하여 총 약 30 GB가 필요합니다. 듀얼 GPU 구성(RTX 3090 두 대 또는 RTX 4090 두 대) 또는 96 GB 이상의 통합 메모리를 가진 Apple Silicon이 필요합니다. 실용적인 해결책은 한 번에 한 모델씩 사용하고 Ollama를 통해 전환하는 것으로, RTX 4090에서 모델 교체에 약 5초가 소요됩니다.' },
+          { q: 'DeepSeek Coder는 EU 기업 코드에 안전하게 사용할 수 있습니까?', a: 'DeepSeek Coder는 중국에 법인을 둔 DeepSeek AI가 운영하는 서버에서 데이터를 처리합니다. EU 집행위원회는 중국에 대한 적정성 결정을 내리지 않았습니다. EU 개인 데이터나 개인 정보가 포함된 독점 소스 코드에 DeepSeek Coder를 사용하려면 GDPR 제44조 준수 여부에 대한 법적 검토가 필요합니다. 개인 데이터가 없는 독점 코드의 경우 법무팀과 상의하십시오. 개인 데이터 처리에는 로컬 Qwen 3.6 27B가 준수 대안입니다.' },
+          { q: 'SWE-bench란 무엇이며 왜 중점적으로 다룹니까?', a: 'SWE-bench(소프트웨어 엔지니어링 벤치마크)는 LLM이 Django, Flask, NumPy와 같은 오픈소스 코드베이스에서 실제 GitHub 이슈를 해결할 수 있는지 테스트합니다. 격리된 함수 수준 코딩이 아닌 실제 소프트웨어 엔지니어링 능력을 측정합니다. Qwen 3.6 27B는 SWE-bench Verified에서 77.2%를 달성하여 현재 가장 신뢰할 수 있는 실세계 코딩 지표를 보여줍니다.' },
+        ],
+      },
+    },
+  },
 };

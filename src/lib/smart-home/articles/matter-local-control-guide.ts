@@ -195,11 +195,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
     title: 'Matter والتحكم المحلي: منزل ذكي مستقل عن الإنترنت (2026)',
-    seoTitle: 'التحكم المحلي بـ Matter 2026: منزل ذكي بدون سحابة',
+    seoTitle: 'Matter + Thread 2026: منزل ذكي محلي بلا سحابة',
     intro:
       'يمكن لـ Matter عبر Thread تشغيل منزل ذكي محلي حقيقي من خلال متحكم محلي مثل Home Assistant — دون الحاجة إلى سحابة مورِّد. يُوضِّح هذا الدليل ما إذا كان Matter يعني محليًا، ويشرح موجِّهات حدود Thread والتوصيل المحلي فقط، ويوضح كيفية تجنب الجسور السحابية، ويتناول إعداد Matter المحلي مع Home Assistant.',
     metaDescription:
-      'Matter + Thread للتحكم المحلي في المنزل الذكي 2026: موجِّهات حدود Thread، التوصيل المحلي فقط، تجنب الجسور السحابية — إعداد Home Assistant مُضمَّن.',
+      'Matter عبر Thread يعمل بلا سحابة مورِّد: موجِّهات حدود Thread، التوصيل المحلي فقط، تجنب الجسور السحابية — إعداد Home Assistant مُضمَّن.',
     twitterDescription:
       'يمكن لـ Matter وThread العمل محليًا بالكامل من خلال متحكم مثل Home Assistant — بدون سحابة مورِّد. كيفية التوصيل محليًا وتجنب الجسور السحابية.',
     readTime: '8 دقائق للقراءة',

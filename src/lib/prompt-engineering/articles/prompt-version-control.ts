@@ -2706,4 +2706,352 @@ jobs:
       },
     },
   },
+
+  ko: {
+    freshness_tier: 'evergreen',
+    theme: 'Team Operations & Governance',
+    title: '프롬프트 버전 관리: 추적·롤백·팀 워크플로',
+    intro: '버전 관리되지 않은 프롬프트는 조용히 실패합니다 — 변경 기록 없이는 프롬프트 업데이트가 출력 품질을 저하시키거나 다운스트림 파서를 깨뜨릴 때 롤백 경로가 없습니다. 시맨틱 버전 관리(MAJOR.MINOR.PATCH), Git 브랜치 워크플로, 자동화 회귀 테스트, 구조화된 체인지로그는 소프트웨어 팀이 이미 코드에 사용하는 동일한 규율을 프롬프트 관리에 적용합니다.',
+    publishDate: '2026-04-30',
+    dateModified: '2026-04-30',
+    educationalLevel: 'Advanced',
+    audience: '프로덕션에서 LLM 프롬프트를 관리하는 개발자, 프롬프트 엔지니어, 엔지니어링 팀 리더',
+    primaryTerm: 'Prompt Version Control',
+    readTime: '10분 분량',
+    seoTitle: '프롬프트 버전 관리: Git, Semver, 롤백',
+    metaDescription: '버전 관리되지 않은 프롬프트는 조용히 실패합니다: 롤백도 기록도 없습니다. 각 프롬프트 변경에 MAJOR.MINOR.PATCH 버전 관리와 Git을 적용하십시오.',
+    leadAnswerBlock: '**프롬프트 버전 관리는 시맨틱 버전 관리(MAJOR.MINOR.PATCH)와 Git 워크플로를 사용하여 AI 프롬프트의 모든 변경을 추적합니다. 즉각적인 롤백, 팀 협업, 회귀 탐지를 가능하게 합니다 — 코드에 적용되는 동일한 규율을 프롬프트에 적용합니다.**',
+    quickFacts: [
+      '프롬프트를 위한 시맨틱 버전 관리: 호환성을 깨는 출력 형식 변경에 MAJOR, 품질 향상에 MINOR, 오타 수정/설명에 PATCH',
+      '프롬프트에 대한 git revert는 몇 초가 걸립니다; 버전 기록 없이 재테스트하면 몇 시간이 걸립니다',
+      '프롬프트 체인지로그에는 5개 필드가 필요합니다: 버전, 날짜, 작성자, 변경 유형(MAJOR/MINOR/PATCH), 예상 출력 변화',
+      '수동 검토 전에 각 프롬프트 PR에서 ≥10개의 골든 테스트 케이스에 대해 자동화 회귀 테스트를 실행하십시오',
+      '프롬프트를 위한 세 가지 브랜칭 패턴: feature/(새 기능), fix/(회귀), experiment/(A/B 테스트)',
+    ],
+    toc: [
+      { label: '버전 관리가 필요한 이유', anchor: 'why-version-control' },
+      { label: 'AI 프롬프트를 위한 시맨틱 버전 관리', anchor: 'semantic-versioning' },
+      { label: 'Git 워크플로 설정 방법', anchor: 'git-workflow' },
+      { label: '체인지로그 요구사항', anchor: 'changelog' },
+      { label: '롤백 전략', anchor: 'rollback' },
+      { label: '팀 협업', anchor: 'team-collaboration' },
+      { label: '자동화 테스트', anchor: 'automated-testing' },
+      { label: '일반적인 실수', anchor: 'mistakes' },
+      { label: '준수 및 감사', anchor: 'regional-considerations' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+      { label: '관련 읽기', anchor: 'related-reading' },
+      { label: '출처', anchor: 'sources' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '프롬프트 버전 관리: 추적·롤백·팀 워크플로',
+      description: '버전 관리되지 않은 프롬프트는 조용히 실패합니다 — 기록 없이는 롤백이 없습니다. 각 프롬프트 변경에 MAJOR.MINOR.PATCH 버전 관리, Git 워크플로, 자동화 회귀 테스트를 적용하십시오.',
+      datePublished: '2026-04-30',
+      dateModified: '2026-04-30',
+      inLanguage: 'ko',
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      url: 'https://www.promptquorum.com/ko/prompt-engineering/prompt-version-control-workflows',
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ko/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      keywords: ['프롬프트 버전 관리', '프롬프트 버전 관리', 'Git 프롬프트 워크플로', '프롬프트 변경 관리', 'AI 프롬프트 버전 관리 방법'],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'git' },
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'PromptLayer' },
+        { '@type': 'SoftwareApplication', name: 'GitHub Actions' },
+      ],
+      about: [
+        { '@type': 'Thing', name: '프롬프트 버전 관리', description: 'AI 프롬프트의 모든 변경을 추적하고, 이전 버전으로 롤백하며, 각 수정의 작성자와 이유를 기록하는 시스템' },
+        { '@type': 'Thing', name: 'AI 프롬프트를 위한 시맨틱 버전 관리', description: 'AI 프롬프트에 MAJOR.MINOR.PATCH 버전 관리 적용: 호환성을 깨는 출력 형식 변경에 MAJOR, 품질 향상에 MINOR, 오타 수정에 PATCH' },
+        { '@type': 'Thing', name: '프롬프트 롤백', description: 'git revert, 기능 플래그, 환경 변수 재정의를 사용하여 AI 프롬프트를 이전 승인된 버전으로 되돌리는 프로세스' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: '프롬프트 롤백 방법',
+      inLanguage: 'ko',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'git revert', description: '표준 롤백: 문제가 있는 변경을 취소하는 새 커밋을 생성합니다. 즉각적이고 위험이 낮으며 완전한 감사 기록이 있습니다. 비긴급 롤백에 권장됩니다.' },
+        { '@type': 'ListItem', position: 2, name: '기능 플래그 변경', description: '배포 없이 프롬프트의 이전 버전으로 플래그를 변경합니다. 다운타임 없이 몇 초 만에 실행됩니다. 기능 플래그가 사전에 배포되어 있어야 합니다.' },
+        { '@type': 'ListItem', position: 3, name: '환경 변수 재정의', description: '코드 배포 없이 환경 변수를 통해 프롬프트 내용을 재정의합니다. 가장 빠른 핫픽스 경로; 변경이 일반 검토 워크플로를 우회하므로 중간 위험.' },
+      ],
+    },
+    sections: {
+      tldrCallout: {
+        callouts: [
+          {
+            type: 'tldr',
+            label: 'TL;DR',
+            text: '모든 프롬프트에 MAJOR.MINOR.PATCH 버전 관리와 Git 워크플로를 적용하십시오. 각 변경은 PR을 열고, 각 PR은 자동화 회귀 테스트를 실행하며, 각 병합은 버전으로 태그됩니다. 롤백은 `git revert` — 완전한 감사 기록이 보존된 상태로 몇 초 만에 실행됩니다.',
+          },
+        ],
+      },
+
+      tldr: {
+        title: '핵심 요점',
+        isTldr: true,
+        content: [
+          '**요약:** 프롬프트 버전 관리는 AI 프롬프트에 시맨틱 버전 관리(MAJOR.MINOR.PATCH)와 Git 워크플로를 적용합니다. 각 변경은 PR을 생성하고, 각 PR은 자동화 회귀 테스트를 실행하며, 각 병합은 버전으로 태그됩니다. 롤백은 `git revert`입니다. 버전 관리 없이 프로덕션의 품질 저하는 탐지 불가능하고 복구 불가능합니다.',
+        ],
+        items: [
+          '프롬프트에 MAJOR.MINOR.PATCH를 적용하십시오: 호환성을 깨는 출력 형식 변경에 MAJOR, 품질 향상에 MINOR, 오타/문구 수정에 PATCH',
+          'Git의 `/prompts/` 디렉토리에 프롬프트를 저장하십시오 — 구성이 아닌 코드로 취급하십시오',
+          '각 프롬프트 변경은 PR을 엽니다; 자동화 회귀 테스트는 수동 검토 전에 각 PR에서 실행됩니다',
+          '프롬프트 체인지로그에는 5개 필드가 필요합니다: 버전, 날짜, 작성자, 변경 유형, 예상 출력 변화',
+          '`git revert`(표준), 기능 플래그(다운타임 없음) 또는 환경 변수 재정의(핫픽스)로 롤백하십시오',
+          '병합 충돌과 불명확한 책임을 피하기 위해 기능 영역별로 프롬프트 소유자를 지정하십시오',
+          '대표적인 10–20개 입력의 골든 테스트 세트는 모든 프로덕션 프롬프트의 최소 요구사항입니다',
+        ],
+      },
+
+      whyVersionControl: {
+        id: 'why-version-control',
+        title: '프롬프트 버전 관리가 조용한 회귀를 방지하는 이유',
+        content: [
+          '**버전 관리 없이 출력 품질을 저하시키는 프롬프트 변경은 흔적을 남기지 않습니다 — 오류 로그도, 차이도, 롤백 경로도 없습니다.** 모델은 예외를 발생시키는 대신 그럴듯하지만 잘못된 응답을 반환합니다. 품질 저하가 탐지될 때(사용자 불만, 정확도 메트릭, 또는 다운스트림 파싱 오류를 통해) 원래 프롬프트가 없어진 경우가 많습니다.',
+          '버전 관리가 방지하는 세 가지 실패 모드: (1) 조용한 회귀 — 문구 변경이 모델 동작을 미묘하게 변경하여 누군가 알아차리기 전에 수천 건의 요청에서 출력 품질을 저하시킵니다. (2) 롤백 불가 함정 — 기록 없이 이전 프롬프트 복원은 메모리나 오래된 배포 로그에서 재구성이 필요합니다. (3) 협업 중 충돌 — 두 엔지니어가 독립적으로 동일한 프롬프트를 편집하고 이후 병합이 무엇이 손실되었는지 기록 없이 이전 변경을 조용히 덮어씁니다.',
+        ],
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: '프롬프트 버전 관리는 AI 프롬프트의 모든 변경을 추적하고, 이전 버전으로 롤백하며, 각 수정의 작성자와 이유를 기록하는 시스템입니다.',
+          },
+        ],
+        callouts: [
+          { type: 'Warning', label: '조용한 회귀', text: '프롬프트는 조용히 실패합니다 — 오류 대신 그럴듯하지만 잘못된 응답을 반환합니다. 오류 로그는 품질 저하를 탐지하지 못합니다. 골든 테스트 세트에 대한 회귀 테스트만이 탐지합니다.' },
+        ],
+      },
+
+      semanticVersioning: {
+        id: 'semantic-versioning',
+        title: 'AI 프롬프트에 시맨틱 버전 관리가 어떻게 작동하는가',
+        content: [
+          '**MAJOR.MINOR.PATCH 버전 관리는 각 호출자에게 프롬프트 변경이 다운스트림 코드를 재테스트 없이 안전하게 채택할 수 있는지 알려줍니다.** MAJOR는 출력 형식이 변경되었음을 의미합니다(다운스트림 파서가 중단됩니다). MINOR는 품질이 향상되었지만 형식이 안정적임을 의미합니다. PATCH는 동작에 영향 없이 문구 또는 명확성만 변경되었음을 의미합니다.',
+        ],
+        columns: ['변경 유형', '증가 시점', '예시', '하위 호환성?'],
+        rows: [
+          { '변경 유형': 'MAJOR', '증가 시점': '출력 형식 변경 — JSON에서 마크다운으로, 새 필수 필드, 필드 삭제', '예시': 'v1.2.0 → v2.0.0', '하위 호환성?': '아니오 — 모든 호출자 업데이트' },
+          { '변경 유형': 'MINOR', '증가 시점': '품질 향상, 지연 시간 최적화, 향상된 지침 따르기', '예시': 'v1.2.0 → v1.3.0', '하위 호환성?': '예 — 채택 안전' },
+          { '변경 유형': 'PATCH', '증가 시점': '오타 수정, 명확화, 모델 동작을 변경하지 않는 사소한 문구', '예시': 'v1.2.0 → v1.2.1', '하위 호환성?': '예 — 예상 동작 변경 없음' },
+        ],
+        callouts: [
+          { type: 'Key Point', label: 'MAJOR 트리거', text: '프롬프트 출력을 파싱하는 다운스트림 코드가 중단될 때마다 MAJOR를 증가시키십시오. 출력이 JSON 배열에서 마크다운 목록으로 변경되면 내용이 동일하더라도 MAJOR 증가입니다.' },
+          { type: 'Pro Tip', label: 'Git에 태그', text: '병합 후 각 버전을 태그하십시오: `git tag v2.1.0 -m "날짜 추출 추론 향상"`. 이렇게 하면 롤백을 위한 영구 참조가 생성됩니다.' },
+        ],
+      },
+
+      gitWorkflow: {
+        id: 'git-workflow',
+        title: '프롬프트 변경을 위한 Git 워크플로 설정 방법',
+        content: [
+          '**표준 워크플로는: 브랜치 생성 → 프롬프트 편집 → 회귀 테스트 실행 → PR 열기 → 병합 및 태그입니다.** 각 단계는 소프트웨어 코드 변경을 반영합니다 — 프롬프트가 코드이기 때문입니다.',
+        ],
+        numberedItems: [
+          '기능 브랜치를 만드십시오: `git checkout -b feature/add-json-output`. 프리픽스 `feature/`(새 기능), `fix/`(회귀 수정) 또는 `experiment/`(A/B 테스트)를 사용하십시오.',
+          '`/prompts/[name].txt`의 프롬프트 파일을 편집하십시오. 상단의 버전 주석을 업데이트하십시오: `# version: 2.0.0 | changed: JSON output format | author: jane`.',
+          '골든 테스트 세트(최소 10개 케이스)에 대해 자동화 회귀 스위트를 실행하십시오. 테스트는 형식 검증, 골든 응답과의 출력 비교, 환각 플래그, 지연 시간을 포함해야 합니다. PR을 열기 전에 모든 테스트가 통과해야 합니다.',
+          '변경된 내용, 이유, 버전 증가(MAJOR/MINOR/PATCH), 예상 출력 변화를 포함하는 설명으로 PR을 여십시오. 검토자가 확인합니다: 명확성, 환각 위험, 출력 형식, 보안.',
+          '승인 후 main에 병합하고 버전을 태그하십시오: `git tag v2.0.0 -m "JSON output format — MAJOR"` 그런 다음 `git push origin v2.0.0`.',
+        ],
+        codeBlock: `# .github/workflows/prompt-regression.yml
+name: Prompt Regression Tests
+on:
+  pull_request:
+    paths:
+      - 'prompts/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run prompt regression tests
+        run: npm run test:prompts
+        env:
+          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}`,
+        codeLanguage: 'yaml',
+        callouts: [
+          { type: 'Pro Tip', label: '디렉토리 구조', text: '프롬프트는 `/prompts/`에, 테스트 픽스처는 `/prompts/tests/`에 저장하십시오. 이렇게 하면 프롬프트 파일이 애플리케이션 코드와 분리된 채 동일한 저장소에 있으면서 독립적으로 검토 가능합니다.' },
+        ],
+      },
+
+      changelog: {
+        id: 'changelog',
+        title: '프롬프트 체인지로그의 각 항목에 포함해야 할 내용',
+        content: [
+          '**프롬프트 체인지로그 항목에는 5개 필드가 필요합니다: 버전, 날짜, 작성자, 변경 유형, 예상 출력 변화.** 예상 출력 변화는 가장 중요한 필드입니다: 변경 후 모델 응답이 어떻게 달라질지 설명하여 다운스트림 호출자가 무엇을 업데이트해야 하는지 알 수 있게 합니다.',
+        ],
+        columns: ['필드', '필수', '예시'],
+        rows: [
+          { '필드': 'version', '필수': '예', '예시': '`v2.1.0`' },
+          { '필드': 'date', '필수': '예', '예시': '`2026-04-30`' },
+          { '필드': 'author', '필수': '예', '예시': '`jane.smith@company.com`' },
+          { '필드': 'change type', '필수': '예', '예시': '`MINOR — 날짜 추출 추론 향상`' },
+          { '필드': 'expected output delta', '필수': '예', '예시': '`날짜 필드가 이제 일관되게 ISO 8601(YYYY-MM-DD)을 사용합니다. 이전: ~30%의 엣지 케이스에서 MM/DD/YYYY.`' },
+        ],
+        codeBlock: `## [v2.1.0] — 2026-04-30
+
+**Author:** jane.smith@company.com
+**Change type:** MINOR — improved date extraction reasoning
+**Expected output delta:** Date fields now consistently use ISO 8601 format (YYYY-MM-DD).
+  Previous behavior: returned MM/DD/YYYY in ~30% of edge cases.
+  Backwards-compatible — parsers accepting ISO 8601 require no update.
+
+**Test results:** 18/18 golden test cases passed (previously 15/18).`,
+        codeLanguage: 'markdown',
+        callouts: [
+          { type: 'Best Practice', label: '체인지로그를 먼저 작성하십시오', text: '프롬프트 변경을 작성하기 전에 체인지로그 항목을 작성하십시오 — 의도를 명확히 해야 합니다. 예상 출력 변화를 설명할 수 없다면 아직 무엇을 변경하고 있는지 이해하지 못한 것입니다.' },
+        ],
+      },
+
+      rollback: {
+        id: 'rollback',
+        title: '프롬프트를 이전 버전으로 롤백하는 시점과 방법',
+        content: [
+          '**`git revert`는 표준 롤백 경로입니다 — 기록을 삭제하지 않고 문제 있는 변경을 취소하는 새 커밋을 생성합니다.** 롤백 트리거를 알고 긴급성에 방법을 맞추십시오.',
+          '롤백 트리거: (1) 정확도 메트릭 또는 사용자 보고를 통해 탐지된 프로덕션 품질 저하. (2) 배포된 프롬프트에서 발견된 보안 문제. (3) 모델 버전 업데이트가 기존 프롬프트와의 호환성을 깨뜨립니다. (4) 비즈니스 로직 변경으로 이전 출력 형식이 잘못됩니다.',
+        ],
+        columns: ['롤백 방법', '속도', '위험', '사용 시점'],
+        rows: [
+          { '롤백 방법': '`git revert <commit>`', '속도': '생성에 몇 초, 배포에 몇 분', '위험': '낮음 — 문서화된 되돌리기 커밋 생성', '사용 시점': '비긴급 표준 롤백; 완전한 감사 기록 보존' },
+          { '롤백 방법': '기능 플래그 변경', '속도': '몇 초 — 배포 불필요', '위험': '낮음 — 플래그가 사전 배포되어 있으면 다운타임 없음', '사용 시점': '프롬프트 선택이 이미 플래그 뒤에 있고 플래그 시스템이 활성화될 때' },
+          { '롤백 방법': '환경 변수 재정의', '속도': '몇 초 — 코드 배포 없음', '위험': '중간 — 일반 검토 워크플로 우회', '사용 시점': '긴급 핫픽스 전용; 즉시 올바른 `git revert` PR로 후속 조치' },
+        ],
+        callouts: [
+          { type: 'Warning', label: '롤백 전 테스트', text: '먼저 회귀 테스트를 실행하지 않고 롤백하지 마십시오 — 이전에 수정된 버그를 재도입할 수 있습니다. 되돌린 버전이 수정한 버그가 피하려는 회귀보다 더 심각할 수 있습니다.' },
+        ],
+      },
+
+      teamCollaboration: {
+        id: 'team-collaboration',
+        title: '팀이 충돌 없이 프롬프트 변경에 협업하는 방법',
+        content: [
+          '**소유권이 병합 충돌을 방지합니다: 기능 영역별로 프롬프트 소유자를 지정하고, 해당 프롬프트의 모든 변경은 해당 소유자의 검토가 필요합니다.** 명확한 소유권 없이 두 엔지니어가 병렬로 동일한 프롬프트를 편집하면 이후 병합이 무엇이 손실되었는지 기록 없이 이전 변경을 조용히 덮어씁니다.',
+          '팀을 위한 두 가지 저장소 패턴이 있습니다: (1) `/prompts/` 디렉토리가 있는 모노레포 — 프롬프트가 단일 서비스에 밀접하게 결합되어 있고 프롬프트 변경이 애플리케이션과 함께 배포되어야 할 때 최적. (2) 전용 프롬프트 저장소 또는 패키지 — 프롬프트가 여러 서비스에서 공유되거나 프롬프트 엔지니어가 애플리케이션 저장소 접근 없이 독립적인 검토 사이클이 필요할 때 최적.',
+        ],
+        callouts: [
+          { type: 'Best Practice', label: '소유권 모델', text: '기능 영역별로 프롬프트 소유자를 지정하십시오(예: 추출 프롬프트 소유자, 분류 프롬프트 소유자). 해당 프롬프트의 모든 변경은 해당 소유자의 검토를 거칩니다 — 예외 없이.' },
+        ],
+      },
+
+      automatedTesting: {
+        id: 'automated-testing',
+        title: '자동화 테스트가 프롬프트 변경 배포 전에 탐지하는 내용',
+        content: [
+          '**회귀 테스트는 형식 파손을 탐지하고; LLM-as-judge는 품질 저하를 탐지합니다.** 네 가지 테스트 유형이 프롬프트 변경이 프로덕션에 도달하기 전에 주요 실패 모드를 커버합니다.',
+          '네 가지 테스트 유형: (1) 형식 검증 — 출력이 예상 스키마와 일치하는지 확인합니다(JSON 구조, 필수 필드, 데이터 유형). 밀리초 단위로 실행되며 문제 있는 변경의 60–70%를 탐지합니다. (2) 골든 세트 비교 — 10–20개의 대표 입력에서 수동으로 검증된 올바른 응답과 출력을 비교합니다. LLM-as-judge 또는 문자열 유사성 메트릭이 비교를 채점합니다. (3) 환각 플래그 — 제공된 컨텍스트를 기반으로 하지 않은 출력의 사실적 주장을 탐지합니다. 입력에 없는 사실을 주장하는 응답을 플래그합니다. (4) 지연 시간 확인 — 중간 응답 시간이 허용 가능한 범위 내에 유지되는지 확인합니다(예: p95 ≤ 3s). 과도한 모델 계산을 일으키는 프롬프트를 탐지합니다.',
+        ],
+        callouts: [
+          { type: 'Key Point', label: '최소 테스트 세트', text: '10–20개의 대표 입력의 골든 테스트 세트는 모든 프로덕션 프롬프트의 최소 요구사항입니다. 커버하십시오: 정상 경로, 엣지 케이스(빈 입력/매우 긴 입력), 적대적 입력, 알려진 실패 모드.' },
+        ],
+      },
+
+      mistakes: {
+        id: 'mistakes',
+        title: '프롬프트 버전 관리의 일반적인 실수',
+        mistakes: [
+          {
+            mistake: '첫날부터 버전 관리 체계 없음',
+            problem: '팀이 성장하고 여러 엔지니어가 공유 버전 관리 규칙 없이 프롬프트를 편집할 때 조용한 문제 있는 변경이 배포됩니다',
+            fix: '프로덕션의 첫 번째 프롬프트부터 MAJOR.MINOR.PATCH를 채택하십시오 — 오늘 한 명의 엔지니어만 프롬프트를 작성하더라도 다음 채용자가 시스템을 상속받습니다',
+          },
+          {
+            mistake: '애플리케이션 코드 내에 프롬프트를 저장하는 것 대신 `/prompts/` 디렉토리 사용',
+            problem: '애플리케이션 코드에 묻힌 프롬프트는 독립적으로 검토·테스트·버전 관리할 수 없습니다 — 각 애플리케이션 배포와 함께 변경됩니다',
+            fix: '모든 프롬프트를 `/prompts/`로 이동하고 테스트 픽스처를 `/prompts/tests/`에 저장하십시오. 이렇게 하면 애플리케이션 코드를 건드리지 않고도 독립적인 아티팩트로 검토 가능합니다',
+          },
+          {
+            mistake: 'PR당 체인지로그 요구사항 없음',
+            problem: '몇 주 후 회귀가 나타날 때 무엇이, 언제, 왜 변경되었는지에 대한 기록이 없어 git 로그를 통한 힘든 고고학이 필요합니다',
+            fix: 'CI 검사를 통해 CHANGELOG.md 항목을 PR 요구사항으로 의무화하십시오 — 수정된 프롬프트 파일에 대한 체인지로그 항목이 없으면 PR이 실패합니다',
+          },
+          {
+            mistake: '정상 경로만 테스트',
+            problem: '이전 버전에서 작동했던 엣지 케이스가 프롬프트 변경 후 조용히 실패합니다 — 프로덕션의 사용자 불만 또는 다운스트림 파싱 오류에 의해서만 탐지됩니다',
+            fix: '최소 2개의 엣지 케이스와 1개의 적대적 입력을 포함한 최소 10개의 골든 테스트 케이스를 요구하십시오 — 전체 테스트 스위트가 통과하지 않으면 PR이 병합되지 않습니다',
+          },
+          {
+            mistake: '회귀 테스트 없이 롤백',
+            problem: '되돌린 버전이 이제 되돌린 변경이 수정한 버그를 재도입하여 첫 번째 위에 두 번째 회귀를 생성합니다',
+            fix: '되돌리기 PR을 병합하기 전에 항상 전체 회귀 스위트를 실행하십시오 — 롤백 커밋을 순방향 변경과 동일한 테스트 게이트가 필요한 프로덕션 변경으로 취급하십시오',
+          },
+        ],
+      },
+
+      regionalConsiderations: {
+        id: 'regional-considerations',
+        title: '프롬프트 변경에 대한 준수 및 감사 요구사항',
+        content: [
+          'EU AI Act는 헬스케어, 금융, HR, 중요 인프라의 고위험 시스템에 적용되며, 규제 도메인의 AI 출력에 대한 추적 가능성을 요구합니다. 작성자, 날짜, 변경 유형, 승인 기록이 있는 제어된 프롬프트 버전 기록이 추가 도구 없이 추적 가능성 요구사항을 충족합니다.',
+          'GDPR 제22조는 개인에게 영향을 미치는 자동화된 결정을 내리거나 지원하는 프롬프트에 적용됩니다. 버전 관리와 감사 로그는 인간 감독을 증명합니다 — 서명된 커밋이 있는 git 로그가 이 증거를 제공합니다. MiFID II, HIPAA, MDR과 같은 부문별 규정 하에서 운영되는 헬스케어 및 금융 팀은 일반적으로 변조 방지 저장소와 함께 12개월 이상의 프롬프트 버전 기록이 필요합니다.',
+        ],
+      },
+
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: '프롬프트 버전 관리란 무엇입니까?',
+            a: '프롬프트 버전 관리는 AI 프롬프트의 모든 변경을 추적하고, 이전 버전으로 롤백하며, 각 수정의 작성자와 이유를 기록하는 시스템입니다. 프롬프트에 시맨틱 버전 관리(MAJOR.MINOR.PATCH)를 적용합니다: 호환성을 깨는 출력 형식 변경에 MAJOR, 품질 향상에 MINOR, 오타/문구 수정에 PATCH. 프롬프트는 Git에 텍스트 파일로 저장되고, 변경은 PR 검토를 거치며, 버전은 태그됩니다.',
+          },
+          {
+            q: '프롬프트를 위한 별도의 Git 저장소가 필요합니까, 아니면 기존 애플리케이션 저장소를 사용할 수 있습니까?',
+            a: '5명 미만의 엔지니어 또는 20개 미만의 프롬프트 팀의 경우: 기존 애플리케이션 저장소의 /prompts/ 디렉토리를 사용하십시오. 더 큰 팀이나 여러 서비스에서 프롬프트가 공유되는 경우: 전용 프롬프트 저장소는 더 명확한 소유권, 독립적인 버전 관리, 접근 제어를 제공합니다. 프롬프트가 애플리케이션 로직에 밀접하게 결합되어 있으면 애플리케이션 저장소를 사용하십시오; 프롬프트가 여러 서비스나 팀에 서비스를 제공한다면 별도의 저장소를 사용하십시오.',
+          },
+          {
+            q: '프롬프트 버전 관리는 모델 버전 관리와 어떻게 다릅니까?',
+            a: '프롬프트 버전 관리는 모델에 보내는 텍스트 지침의 변경을 추적합니다. 모델 버전 관리는 애플리케이션이 호출하는 AI 버전(GPT-5.5, Claude Sonnet 4.6, Llama 4)을 추적합니다. 둘 다 별도의 버전 관리가 필요합니다. 대상 모델을 변경할 때 프롬프트 텍스트가 동일하더라도 MAJOR 버전 증가로 취급하십시오 — 다른 모델은 동일한 프롬프트에 다르게 반응합니다.',
+          },
+          {
+            q: '프로덕션 프롬프트를 위한 최소 권장 테스트 세트 크기는 무엇입니까?',
+            a: '10–20개의 골든 테스트 케이스가 최소입니다. 커버하십시오: 정상 경로, 엣지 케이스(빈 입력, 매우 긴 입력), 적대적 입력(지침 무력화 시도), 알려진 실패 모드. 10개 미만이면 너무 많은 엣지 케이스를 놓칩니다; 50개 이상은 비례적인 이익 없이 유지하는 데 비용이 많이 듭니다.',
+          },
+          {
+            q: '동일한 프롬프트가 다른 모델에서 사용될 때 버전 관리를 어떻게 관리합니까?',
+            a: '프롬프트+모델 조합별로 별도의 버전 기록을 유지하십시오. 프롬프트 파일에 메타데이터 헤더를 사용하십시오: `# version: 2.1.0 | model: gpt-4o`. 새 모델에 배포할 때 기존 파일을 덮어쓰는 대신 새 변형 파일을 만드십시오. 프로모션하기 전에 각 모델 변형에 대해 전체 골든 테스트 세트를 실행하십시오.',
+          },
+          {
+            q: '모든 문구 변경이 버전을 증가시켜야 합니까?',
+            a: '예 — 모든 변경은 어떤 수준에서든 버전을 증가시킵니다. 오타 수정: PATCH. 형식 변경 없는 품질 향상: MINOR. 다운스트림 파서를 깨는 형식/구조 변경: MAJOR. 버전 증가를 생략하지 마십시오 — 작은 문구 변경도 예상치 못하게 모델 동작에 영향을 줄 수 있으며, 버전 관리되지 않은 변경은 롤백할 수 없습니다.',
+          },
+          {
+            q: '기본적으로 프롬프트 버전 관리를 지원하는 도구는 무엇입니까?',
+            a: 'Braintrust, PromptLayer, Vellum은 버전 비교, 평가 실행, 차이 기록 보기를 위한 UI 대시보드와 함께 네이티브 프롬프트 버전 관리를 제공합니다. LangSmith는 허브에서 프롬프트 버전 추적을 제공합니다. [PromptQuorum](/how-it-works)은 다중 모델 검증을 추가합니다 — 배포 전에 일관되게 작동하는지 확인하기 위해 25개 이상의 공급자에서 버전 관리된 프롬프트를 실행합니다. 더 간단한 설정의 경우 /prompts/ 디렉토리가 있는 순수 Git이 잘 작동합니다 — 프롬프트는 텍스트 파일이고 Git은 차이, 기록, 롤백을 기본적으로 처리합니다.',
+          },
+          {
+            q: 'Git을 사용하지 않는 경우 프롬프트를 어떻게 롤백합니까?',
+            a: '프롬프트 관리 플랫폼(Braintrust, Vellum, PromptLayer)을 사용하는 경우 내장 버전 기록을 사용하여 이전 승인된 버전으로 되돌리십시오. 환경 변수에 프롬프트를 저장하는 경우 각 변경 전에 백업을 저장하고 배포 파이프라인을 통해 복원하십시오. 앞으로는 최소한 CHANGELOG.md 파일을 추가하십시오 — Git 없이도 롤백 참조를 제공합니다.',
+          },
+        ],
+      },
+
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽기',
+        items: [
+          '[팀을 위한 프롬프트 검토 워크플로](/ko/prompt-engineering/prompt-review-workflow-for-teams) — 배포 전 프롬프트 변경을 검토하기 위한 7개 항목 체크리스트와 CI/CD 게이트',
+          '[LLM 출력을 위한 빌드 품질 검사](/ko/prompt-engineering/build-quality-checks) — PR 게이트의 일부로 실행되는 자동화 품질 검사',
+          '[여러 모델에서 프롬프트를 테스트하는 방법](/ko/prompt-engineering/how-to-test-prompts-across-models) — 배포 전 프롬프트 일관성을 검증하기 위한 다중 모델 회귀 테스트',
+          '[AI 환각: 중단 방법](/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 버전 관리 워크플로의 자동화 테스트 단계를 위한 환각 탐지 기술',
+          '[프롬프트를 위한 RTF 프레임워크](/ko/prompt-engineering/rtf-framework) — 출력 형식을 명시적으로 만들어 버전 관리를 단순화하는 구조화된 프롬프트 형식(역할, 작업, 형식)',
+        ],
+      },
+
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[Semantic Versioning Specification (semver.org)](https://semver.org/) — 프롬프트 버전 관리에 직접 적용 가능한 표준 MAJOR.MINOR.PATCH 규격',
+          '[Git Documentation: git revert](https://git-scm.com/docs/git-revert) — 프롬프트 버전 관리 워크플로에서 사용되는 주요 롤백 메커니즘에 대한 공식 참조',
+          '[Braintrust: Prompt Evaluation and Versioning Guide](https://www.braintrust.dev/docs/guides/evals) — 전용 도구를 사용한 프롬프트 버전 관리, 자동화 테스트, CI/CD 통합에 대한 기술 가이드',
+        ],
+      },
+    },
+  },
 };

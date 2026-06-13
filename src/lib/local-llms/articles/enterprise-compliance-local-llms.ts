@@ -1774,4 +1774,266 @@ schema: {
         ],
       },
     },
+  ko: {
+      freshness_tier: 'annual',
+      theme: '기업',
+      title: '기업 컴플라이언스: GDPR, HIPAA, SOC2 및 AI 규정',
+      seoTitle: '기업 컴플라이언스 로컬 LLM',
+      intro: 'GDPR, HIPAA, SOC2, AI Act 등 컴플라이언스 프레임워크는 AI 시스템에 데이터 거주지, 감사 추적, 투명성, 모델 문서화 등 구체적인 요구 사항을 부과합니다. 로컬 LLM은 데이터를 온프레미스에 유지하고 완전한 제어권을 제공함으로써 이러한 요구 사항을 충족하는 데 도움이 됩니다. 2026년 4월 기준으로 규제 준수는 기업의 로컬 AI 도입을 주도하는 가장 주요한 요인입니다.',
+      metaDescription: '기업 AI 컴플라이언스: GDPR, HIPAA, SOC2, EU AI Act 요구 사항. 로컬 LLM 규제 가이드.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**GDPR, HIPAA, SOC2, AI Act 등 컴플라이언스 프레임워크는 AI 시스템에 데이터 거주지, 감사 추적, 투명성, 모델 문서화 등 구체적인 요구 사항을 부과합니다. 로컬 LLM은 데이터를 온프레미스에 유지하고 완전한 제어권을 제공함으로써 이러한 요구 사항을 충족하는 데 도움이 됩니다.**',
+      audience: '프로덕션 또는 기업 환경에서 로컬 LLM을 배포하는 엔지니어',
+      readTime: '13분 읽기',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'AI 컴플라이언스',
+      toc: [
+        { label: '핵심 요점', anchor: '#key-takeaways' },
+        { label: 'GDPR: 데이터 거주지 및 권리', anchor: '#gdpr' },
+        { label: 'HIPAA: 보호 건강 정보', anchor: '#hipaa' },
+        { label: 'SOC2: 감사 및 통제', anchor: '#soc2' },
+        { label: 'EU AI Act: 투명성 요구 사항', anchor: '#eu-ai-act' },
+        { label: '문서화 및 감사 추적', anchor: '#documentation' },
+        { label: '일반적인 컴플라이언스 실수', anchor: '#common-mistakes' },
+        { label: '관련 읽기 자료', anchor: '#related-reading' },
+        { label: '출처', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**GDPR (제44조):** 개인 데이터는 EU 내에 보관되어야 하며, 정보 주체는 접근, 삭제, 이동 권리를 가집니다. 클라우드 API는 이를 위반합니다.',
+            '**HIPAA (164.306):** 환자 데이터에는 암호화, 접근 로그, 감사 추적, 사고 보고가 필요합니다.',
+            '**SOC2 Type II:** 6개월 이상의 통제 증거(암호화, 접근 통제, 사고 대응)가 요구됩니다.',
+            '**EU AI Act (2024):** AI 시스템은 문서화, 투명성, 감사를 갖추어야 합니다. 위반 시: €2,000만 또는 매출의 4%.',
+            '로컬 LLM은 데이터가 인프라를 벗어나지 않으므로 모든 컴플라이언스 요구 사항을 충족합니다.',
+            '**과징금:** GDPR 최대 €2,000만(매출의 4%), HIPAA 위반당 최대 $150만.',
+            '2026년 4월 기준으로 로컬 배포는 컴플라이언스 인증 취득의 가장 빠른 경로입니다.',
+          ],
+        },
+        gdpr: {
+          title: 'GDPR: AI에서 컴플라이언스는 무엇을 의미합니까?',
+          content: [
+            '**GDPR(일반 데이터 보호 규정)은 회사 위치에 관계없이 EU 거주자의 개인 데이터 처리에 적용됩니다.**',
+            '**제44조(데이터 이전):** 특정 보호 조치가 적용되지 않는 한 개인 데이터를 EU 밖으로 이전할 수 없습니다. 미국 서버에 대한 클라우드 API는 이를 위반합니다. [Hetzner Cloud GPU](https://www.hetzner.com/cloud/gpu/)와 같은 EU 기반 인프라 옵션은 GDPR 준수 배포를 제공합니다.',
+            '**제12-22조(정보 주체 권리):** 개인은 데이터에 대한 접근, 삭제("잊힐 권리"), 이동을 요청할 수 있습니다. 30일 이내에 응답해야 합니다.',
+            '**제5조(원칙):** 데이터는 최소화되고 정확하며 적법하게 처리되어야 합니다. 목적 제한: 동의 없이 새로운 목적으로 데이터를 사용할 수 없습니다.',
+            '**과징금:** 연간 전 세계 매출의 4% 또는 최대 €2,000만 중 더 높은 금액.',
+          ],
+        },
+        hipaa: {
+          title: 'HIPAA는 환자 프라이버시를 어떻게 보호합니까?',
+          content: [
+            '**HIPAA(의료 보험 이동성 및 책임법)는 의료 제공자, 보험사 및 보호 건강 정보(PHI)를 취급하는 모든 사람에게 적용됩니다.**',
+            '**164.306(보안 규칙):** 관리적, 물리적, 기술적 보호 조치가 요구됩니다.',
+            '**물리적:** 시설은 안전해야 합니다(잠금 장치, 감시).',
+            '**기술적:** 암호화, 접근 통제, 감사 로그.',
+            '**관리적:** 정책, 교육, 사고 대응.',
+            '환자 데이터를 클라우드 API로 전송하는 것은 금지됩니다. HIPAA는 공급업체와의 "비즈니스 파트너 계약(BAA)"을 요구하지만, 클라우드 AI 서비스는 종종 BAA 서명을 거부합니다.',
+            '**과징금:** 연간 위반 범주당 최대 $150만.',
+          ],
+        },
+        soc2: {
+          title: 'SOC2 Type II는 무엇을 요구합니까?',
+          content: [
+            '**SOC2(서비스 조직 통제)는 기업 데이터를 처리하는 조직을 위한 컴플라이언스 인증입니다.** Type II는 6개월 이상의 감사 증거를 요구합니다.',
+            '**인증 감사자가 검토하는 항목:**',
+            '- 접근 통제(시스템에 접근할 수 있는 사람)',
+            '- 암호화(저장 중 및 전송 중 데이터)',
+            '- 사고 대응(보안 사고 절차)',
+            '- 변경 관리(업데이트 승인 방법)',
+            '- 백업 및 재해 복구 절차',
+            '로컬 LLM은 모든 시스템을 제어하므로 SOC2 달성에 도움이 됩니다. 클라우드 API는 일부 통제를 공급업체에 위임하여 인증을 복잡하게 만듭니다.',
+          ],
+        },
+        euAiAct: {
+          title: 'EU AI Act는 무엇을 요구합니까?',
+          content: [
+            '**EU AI Act(2024)는 공급업체 위치에 관계없이 EU에 배포되는 AI 시스템에 새로운 요구 사항을 부과합니다.**',
+            '**금지된 AI:** 얼굴 인식(공공장소), 예측적 치안 유지, 특정 감정 감지.',
+            '**고위험 AI:** 위험 평가, 문서화, 인간 감독이 필요합니다.',
+            '**요구되는 문서화:**',
+            '- 훈련 데이터 출처 및 규모',
+            '- 다양한 집단에서의 모델 성능',
+            '- 제한 사항 및 오류율',
+            '- 의도된 사용 및 금지된 사용',
+            '로컬 LLM을 사용하면 모든 것을 문서화할 수 있습니다(훈련을 제어하므로). 클라우드 API는 문서화를 어렵게 만듭니다(공급업체가 훈련을 제어하므로).',
+          ],
+        },
+        documentation: {
+          title: '어떤 문서화 및 감사 추적이 필요합니까?',
+          content: [
+            '**컴플라이언스는 포괄적인 문서화 및 로깅을 요구합니다:**',
+          ],
+          items: [
+            '**데이터 인벤토리:** 어떤 개인/민감 데이터가 처리되는지, 어디서, 누가 처리하는지.',
+            '**데이터 흐름:** 데이터가 시스템을 통해 이동하는 방식.',
+            '**접근 로그:** 누가 어떤 데이터에, 언제, 왜 접근했는지.',
+            '**변경 로그:** 모델, 데이터, 정책이 변경된 시기.',
+            '**사고 보고서:** 보안 사고, 침해, 무단 접근.',
+            '**데이터 보존 정책:** 데이터를 얼마나 오래 보관하는지, 언제 삭제하는지.',
+            '**제3자 위험:** 데이터를 취급하는 공급업체 및 계약업체.',
+          ],
+        },
+        commonMistakes: {
+          title: '일반적인 기업 컴플라이언스 실수',
+          items: [
+            '**클라우드 공급업체가 대신 컴플라이언스를 충족해 준다고 가정하는 것.** 공급업체가 SOC2를 보유하고 있더라도 GDPR 및 HIPAA 준수에 대한 책임은 여전히 귀하에게 있습니다. 클라우드는 책임을 면제해 주지 않습니다.',
+            '**AI 훈련 데이터를 문서화하지 않는 것.** EU AI Act는 문서화를 요구합니다. 훈련을 문서화할 수 없다면 법을 위반하는 것입니다.',
+            '**취약한 접근 통제.** "비밀번호가 있는 사람이면 누구나"는 안전하지 않습니다. 다중 인증, 역할 기반 접근 통제를 요구하십시오.',
+            '**사고 대응 계획 없음.** 침해가 발생할 때(발생하지 않을 경우가 아님) 며칠 내로 대응해야 합니다. 사전에 계획을 수립하십시오.',
+            '**감사 추적 무시.** 로그는 보관, 보호, 검토되어야 합니다. 로그 없이는 컴플라이언스를 증명할 수 없습니다.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '기업 컴플라이언스에 대한 일반적인 질문은 무엇입니까?',
+          faqs: [
+            {
+              q: '로컬 LLM 배포가 GDPR 준수를 보장합니까?',
+              a: '아니요 -- 로컬 배포는 필요하지만 충분하지 않습니다. 적절한 접근 통제, 암호화, 데이터 보존 정책, 사고 대응 절차가 여전히 필요합니다. 로컬 LLM은 클라우드 공급업체 위험 요소를 제거하지만 컴플라이언스 책임을 없애지는 않습니다.',
+            },
+            {
+              q: 'SOC2 Type II 인증은 얼마나 걸립니까?',
+              a: '일반적으로 6-12개월이 소요됩니다. 보안 통제(암호화, 접근 로그, 사고 대응)에 대해 6개월 이상 지속적인 컴플라이언스를 증명해야 합니다. 로컬 LLM 배포는 모든 필요한 통제에 대한 완전한 제어권을 제공함으로써 이를 가속화할 수 있습니다.',
+            },
+            {
+              q: '로컬 LLM 사용 중 침해가 발생하면 어떻게 됩니까?',
+              a: '72시간 이내에 영향을 받은 개인과 규제 기관에 통보해야 합니다(GDPR). 감사 추적, 사고 대응 절차, 암호화를 갖추면 과징금이 줄어들고 성실한 이행을 증명할 수 있습니다. 모든 로그가 온프레미스에 유지되므로 로컬 LLM이 도움이 됩니다.',
+            },
+            {
+              q: '독점 데이터로 로컬 LLM을 파인튜닝할 수 있습니까?',
+              a: '네 -- 온프레미스에서 파인튜닝하면 데이터를 완전히 제어할 수 있습니다. 인프라를 벗어나는 데이터가 없습니다. 완전한 소유권과 감사 추적을 유지하므로 GDPR, HIPAA, SOC2를 충족합니다.',
+            },
+            {
+              q: '어떤 규정이 충족하기 가장 어렵습니까?',
+              a: 'HIPAA가 가장 엄격합니다: 암호화, 감사 로그, 접근 통제, 즉각적인 침해 통보가 필요합니다. SOC2는 가장 절차적입니다(문서화 필요). GDPR은 가장 광범위합니다(전 세계 데이터 처리 포괄). 로컬 LLM은 세 가지 모두에 도움이 됩니다.',
+            },
+            {
+              q: '로컬 AI 배포에 별도의 보험이 필요합니까?',
+              a: '사이버 보험 제공업체에 확인하십시오. 일부 정책은 온프레미스와 클라우드를 구분합니다. 로컬 LLM은 제3자 공급업체 위험을 제거하므로 실제로 보험료를 낮출 수 있습니다.',
+            },
+            {
+              q: 'GDPR을 충족하면서 클라우드 규모가 필요한 경우 어떻게 합니까?',
+              a: 'GDPR 준수가 필요한 클라우드 워크로드의 경우, Hetzner, Scaleway, OVHcloud, Nebius 및 기타 GDPR 준수 제공업체를 Schrems II 전체 분석과 함께 다루는 [EU 클라우드 GPU 비교 →](/local-llms/eu-cloud-gpu-gdpr-2026)를 참조하십시오.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 읽기 자료',
+          items: [
+            '[기업이 로컬 LLM을 사용하는 이유](/local-llms/why-enterprises-use-local-llms) -- 비즈니스 사례.',
+            '[온프레미스 에어갭 로컬 LLM](/local-llms/on-prem-air-gapped-local-llm) -- 기밀 데이터를 위한 최고 수준의 보안.',
+            '[로컬 LLM 기업 확장](/local-llms/scaling-local-llms-enterprise) -- 컴플라이언스 통제를 갖춘 프로덕션 배포.',
+            '[로컬 LLM 보안 및 프라이버시 체크리스트](/local-llms/local-llm-security-privacy-checklist) -- 컴플라이언스 검증 단계.',
+            '[Conformidade de LLMs Locais para Empresas (Português)](/pt/local-llms/enterprise-compliance-local-llms) — versão em português deste guia',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            'GDPR 공식 문서 -- gdpr-info.eu',
+            'HIPAA 최종 규칙 -- hhs.gov/hipaa',
+            'SOC2 신뢰 서비스 -- aicpa.org/soc2',
+            'EU AI Act -- ec.europa.eu/digital-single-market/en/news/proposal-regulation',
+          ],
+        },
+      },
+schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': '기업 컴플라이언스 로컬 LLM',
+        'description': '기업 AI 컴플라이언스: GDPR, HIPAA, SOC2, EU AI Act 요구 사항. 로컬 LLM 규제 가이드.',
+        'url': 'https://www.promptquorum.com/local-llms/enterprise-compliance-local-llms',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-19',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '로컬 LLM 배포가 GDPR 준수를 보장합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아니요 -- 로컬 배포는 필요하지만 충분하지 않습니다. 적절한 접근 통제, 암호화, 데이터 보존 정책, 사고 대응 절차가 여전히 필요합니다. 로컬 LLM은 클라우드 공급업체 위험 요소를 제거하지만 컴플라이언스 책임을 없애지는 않습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'SOC2 Type II 인증은 얼마나 걸립니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '일반적으로 6-12개월이 소요됩니다. 보안 통제(암호화, 접근 로그, 사고 대응)에 대해 6개월 이상 지속적인 컴플라이언스를 증명해야 합니다. 로컬 LLM 배포는 모든 필요한 통제에 대한 완전한 제어권을 제공함으로써 이를 가속화할 수 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '로컬 LLM 사용 중 침해가 발생하면 어떻게 됩니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '72시간 이내에 영향을 받은 개인과 규제 기관에 통보해야 합니다(GDPR). 감사 추적, 사고 대응 절차, 암호화를 갖추면 과징금이 줄어들고 성실한 이행을 증명할 수 있습니다. 모든 로그가 온프레미스에 유지되므로 로컬 LLM이 도움이 됩니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '독점 데이터로 로컬 LLM을 파인튜닝할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네 -- 온프레미스에서 파인튜닝하면 데이터를 완전히 제어할 수 있습니다. 인프라를 벗어나는 데이터가 없습니다. 완전한 소유권과 감사 추적을 유지하므로 GDPR, HIPAA, SOC2를 충족합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '어떤 규정이 충족하기 가장 어렵습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'HIPAA가 가장 엄격합니다: 암호화, 감사 로그, 접근 통제, 즉각적인 침해 통보가 필요합니다. SOC2는 가장 절차적입니다(문서화 필요). GDPR은 가장 광범위합니다(전 세계 데이터 처리 포괄). 로컬 LLM은 세 가지 모두에 도움이 됩니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '로컬 AI 배포에 별도의 보험이 필요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '사이버 보험 제공업체에 확인하십시오. 일부 정책은 온프레미스와 클라우드를 구분합니다. 로컬 LLM은 제3자 공급업체 위험을 제거하므로 실제로 보험료를 낮출 수 있습니다.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '기업 컴플라이언스 로컬 LLM',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'GDPR 및 데이터 거주지',
+            'description': '개인 데이터는 EU 내에 보관되어야 하며, 정보 주체는 접근, 삭제, 이동 권리를 가지고, 컴플라이언스는 EU 운영에 필수입니다.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'HIPAA 보호 건강 정보',
+            'description': '의료 환경에서 환자 데이터에는 암호화, 접근 로그, 감사 추적, 사고 보고가 필요합니다.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'SOC2 및 EU AI Act',
+            'description': '두 가지 모두 기업 배포를 위한 문서화, 투명성, 감사 추적, 포괄적인 통제를 요구합니다.',
+          },
+        ],
+      },
+    },
   };

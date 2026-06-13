@@ -3693,15 +3693,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'ko',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
-    breadcrumbSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
-        { '@type': 'ListItem', position: 3, name: '프롬프트 최적화 방법: 기술과 모범 사례', item: 'https://www.promptquorum.com/ko/prompt-engineering/fundamentals-of-prompt-optimization' },
-      ],
-    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -3710,11 +3701,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       numberOfItems: 6,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: '구체성', description: '작업이 얼마나 정밀하게 정의되는지. 최적화 방법: 모호한 목표를 정확한 지시로 재작성. 예시: \'요약하라\' → \'각각 ≤20단어로 3가지 핵심 발견을 나열하라\'.' },
-        { '@type': 'ListItem', position: 2, name: '컨텍스트', description: '모델이 작업할 정보. 최적화 방법: 배경, 대상 독자, 제약을 추가. 예시: \'보고서를 작성하라\' → \'비기술적 CFO를 위한 보고서를 작성하라\'.' },
-        { '@type': 'ListItem', position: 3, name: '예시', description: '원하는 출력 형식에 대한 모델의 이해. 최적화 방법: 1–3개의 입력/출력 쌍(few-shot)을 추가. 원하는 형식을 한 번 보여주십시오.' },
-        { '@type': 'ListItem', position: 4, name: '제약 조건', description: '모델이 생성할 수 있는 것의 한계. 최적화 방법: 명시적 금지 사항을 추가. 예시: \'전문 용어를 사용하지 마시오. 최대 150단어.\'.' },
-        { '@type': 'ListItem', position: 5, name: '출력 형식', description: '응답의 구조. 최적화 방법: 형식을 명시적으로 지정. 예시: \'JSON으로 응답하시오: {제목, 요약, 태그[]}\'.' },
-        { '@type': 'ListItem', position: 6, name: '역할/페르소나', description: '모델이 채택하는 전문성 수준. 최적화 방법: 특정 역할을 추가. 예시: \'B2B SaaS 기업의 시니어 데이터 분석가 역할을 하시오\'.' },
       ],
     },
     howToSchema: {
@@ -3740,20 +3726,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '**다중 모델 테스트 필요:** GPT-5.5에서는 작동하지만 Claude에서는 실패하는 프롬프트는 취약합니다 — 견고성을 확인하기 위해 ≥2개 모델에서 테스트하십시오.',
       '**파인튜닝 비용:** 파인튜닝은 프롬프트 최적화보다 50–100배 느리고 비용이 많이 듭니다 — 항상 최적화를 먼저 소진하십시오.',
     ],
-    quickAnswerTop: {
-      ko: {
-        question: '프롬프트 최적화란 무엇입니까?',
-        answer: '프롬프트 최적화는 특정 작업에 대한 AI 출력 품질을 향상시키기 위해 기존 프롬프트를 반복적으로 수정하는 프로세스입니다. 6가지 레버(구체성, 컨텍스트, 예시, 제약 조건, 출력 형식, 역할)를 조정하여 실패 방식을 진단하고 목표 변경을 적용합니다.',
-        bullets: [
-          '반복당 하나의 변수만 변경하십시오',
-          '여러 모델(GPT-5.5, Claude, Gemini)에서 테스트하십시오',
-          '품질 기준에 대해 측정하십시오',
-          '최적화된 프롬프트를 라이브러리에 저장하십시오',
-        ],
-        updatedDate: '2026-04-04',
-      },
-    },
-    targetKeywords: ['프롬프트 최적화', '프롬프트 최적화 방법', 'AI 프롬프트 개선', '프롬프트 엔지니어링 기초', 'LLM 프롬프트 최적화', 'GPT 프롬프트 최적화', 'Claude 프롬프트 최적화'],
     toc: [
       { label: '핵심 요점', anchor: 'key-takeaways' },
       { label: '로컬 LLM 사용자를 위한 핵심 요점', anchor: 'key-takeaways-for-local-llm-users' },
@@ -3801,10 +3773,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Question', name: '프롬프트 최적화와 RAG의 차이점은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '프롬프트 최적화는 프롬프트의 지시와 구조를 개선합니다. RAG는 관련 문서를 검색하여 모델이 사용할 수 있는 정보를 개선합니다. 둘은 상호 보완적입니다: RAG는 정보 문제를 해결하고; 프롬프트 최적화는 처리 문제를 해결합니다.' } },
       ],
     },
-    snippetBlocks: [
-      { type: 'one-sentence', text: '프롬프트 최적화는 프롬프트가 실패하는 이유를 진단하고 출력이 품질 기준을 충족할 때까지 하나의 변수를 수정하는 체계적인 프로세스입니다.' },
-      { type: 'plain-terms', text: '프롬프트 최적화는 AI에게 요청하는 방식을 조정하는 것입니다 — 더 명확한 지시, 예시 또는 규칙을 추가하여 — AI가 매번 필요한 것을 정확히 제공할 때까지 계속합니다.' },
-    ],
     sections: {
 
       tldr: {
@@ -3837,9 +3805,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**프롬프트 최적화는 특정 작업에 대한 AI 출력의 품질, 정확성 또는 일관성을 향상시키기 위해 기존 프롬프트를 반복적으로 수정하는 프로세스입니다.** 모든 주요 모델 — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, 그리고 Ollama 또는 LM Studio를 통해 로컬에서 실행되는 모델 — 에 적용됩니다. 프롬프트 엔지니어링이 프롬프트의 초기 구조를 설계하는 곳에서, 프롬프트 최적화는 무엇이 실패하는지 진단하고 출력이 정의된 기준을 충족할 때까지 목표 변경을 적용합니다.',
           '프롬프트 최적화는 프롬프트 엔지니어링의 하위 프로세스입니다. 항상 작동하는 프롬프트로 시작하여 한 번에 하나의 변경을 합니다. 이 변수 분리가 진단을 가능하게 하는 것입니다 — 구체성, 출력 형식, 제약 조건을 동시에 수정하면 어떤 변경이 결과를 개선했는지 확인할 수 없습니다.',
           '왜 중요한지: 동일한 모델이 거의 동일한 프롬프트에서 급격히 다른 출력을 생성합니다. "대략 맞음"과 "신뢰할 수 있게 맞음"의 차이는 운이 아닙니다 — 체계적인 최적화입니다. 다중 모델 검증을 위해 [PromptQuorum](/features)은 최적화된 프롬프트를 25개 이상의 AI 모델에 동시에 실행하여 공급자 간 일관성을 확인합니다.',
-        ],
-        snippets: [
-          { type: 'in-one-sentence', text: '프롬프트 최적화는 프롬프트가 실패하는 이유를 진단하고 출력이 품질 기준을 충족할 때까지 하나의 변수를 수정하는 체계적인 프로세스입니다.' },
         ],
       },
 
@@ -3982,9 +3947,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Claude Opus 4.8 (Anthropic):** 미묘하고 다부분 지시에 탁월합니다. 길고 상세한 시스템 프롬프트를 안정적으로 처리하고 암묵적 컨텍스트를 거의 놓치지 않습니다. 명시적 출력 길이 안내("≤200단어로 응답하시오")의 혜택을 받습니다.',
           '**Gemini 3.1 Pro (Google DeepMind):** 긴 컨텍스트 문서 분석(최대 1M 토큰)에서 최고입니다. 프롬프트의 명시적 섹션 헤더가 구조화된 출력 일관성을 향상시킵니다. 긴 문서를 처리하는 경우 헤더를 추가하십시오: "## 입력 문서\n[문서]\n## 작업\n[작업]."',
           '**Mistral Large (Mistral AI):** 명시적 역할 정의와 더 규범적인 지시 표현의 혜택을 받습니다. GPT-5.5나 Claude보다 암묵적 작업 구성에 덜 관대합니다. 프롬프트가 GPT-5.5에서는 작동하지만 Mistral에서는 작동하지 않는 경우 지시를 더 명시적으로 만들고 역할을 추가하십시오.',
-        ],
-        snippets: [
-          { type: 'in-plain-terms', text: '다른 모델은 다른 특성을 가집니다 — Claude는 긴 지시에 인내심이 있고, GPT-5.5는 엄격한 제약 조건을 선호하고, Gemini는 방대한 문서를 처리합니다. 프롬프트를 최적화한 후 모든 목표 모델에서 테스트하십시오.' },
         ],
       },
 
@@ -4134,5 +4096,5 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
     },
-  },
+},
 };

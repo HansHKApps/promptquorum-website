@@ -1465,5 +1465,311 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: { theme: 'Techniques', title: 'Sortie structuree dans les LLM : mode JSON, exemples et utilisation', intro: 'La sortie structuree et le mode JSON transforment les resultats libres des modeles linguistiques en formats fiables et lisibles par machine qui s\'integrent parfaitement aux bases de donnees, aux API et aux workflows d\'automatisation. Apprenez a concevoir des prompts qui forcent une sortie JSON valide, comparez le mode JSON avec les appels de fonction et les prompts de schema, et decidez quelle methode convient a votre cas d\'usage.', publishDate: '2026-03-26', dateModified: '2026-04-05', readTime: '10 min de lecture', seoTitle: 'Sortie structuree et mode JSON dans les LLM : utilisation, exemples et comparaison', metaDescription: 'Apprenez quand utiliser la sortie structuree, le mode JSON ou les appels de fonction. Comparez la conformite JSON par modele, voyez des exemples reels et maitrisez la conception de schemas pour les API.', educationalLevel: 'Intermediate', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Sortie structuree et mode JSON : obtenir des donnees utilisables de l\'IA', description: 'Maitrisez la sortie structuree et le mode JSON dans les prompts. Apprenez a concevoir des schemas, a imposer un JSON valide, a comparer la conformite des modeles et a eviter les erreurs courantes dans les systemes de production.', datePublished: '2026-03-26', dateModified: '2026-04-05', keywords: ['sortie structuree', 'mode JSON', 'ingenierie des prompts', 'conception de schemas', 'sortie lisible par machine', 'validation JSON', 'modeles de prompts'], author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } }, howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'Comment utiliser la sortie structuree et le mode JSON', step: [ { '@type': 'HowToStep', position: 1, name: 'Choisir le mode JSON', text: 'Pour l\'extraction de donnees et les sorties lisibles par machine, utilisez le mode JSON disponible dans OpenAI GPT-5.5, Anthropic Claude, Google Gemini et autres fournisseurs majeurs. Cela garantit que le modele renvoie un JSON valide, pas du texte.' }, { '@type': 'HowToStep', position: 2, name: 'Definir votre schema', text: 'Definissez explicitement votre schema JSON, y compris les noms de champs, les types de donnees et les contraintes.' }, { '@type': 'HowToStep', position: 3, name: 'Fournir un exemple de sortie', text: 'Fournissez un exemple de la structure JSON exacte que vous voulez. Les exemples sont plus puissants que les descriptions de schemas seules.' }, { '@type': 'HowToStep', position: 4, name: 'Gerer les structures imbriquees', text: 'Pour les objets dans les tableaux, soyez explicite sur la hierarchie. Fournissez un exemple JSON complet.' }, { '@type': 'HowToStep', position: 5, name: 'Valider la sortie JSON', text: 'Validez la sortie JSON avant la use en aval. Analysez et verifiez le JSON valide, le schema correct, et les types de donnees attendus.' } ] }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [ { '@type': 'Question', name: 'Quelle est la difference entre la sortie structuree et le mode JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'La sortie structuree est la categorie plus large de demander aux modeles de renvoyer des donnees dans un format fixe. Le mode JSON est une variante plus stricte qui impose une sortie JSON valide.' } }, { '@type': 'Question', name: 'Tous les LLM supportent-ils le mode JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. OpenAI GPT-5.5, Anthropic Claude Sonnet 4.6+ et Google Gemini supportent le mode JSON natif. Les modeles plus anciens et les LLM open-source peuvent necessiter l\'application du mode JSON basee sur les prompts.' } }, { '@type': 'Question', name: 'Comment imposer des reponses JSON uniquement sans mode JSON natif ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez l\'ingenierie des prompts : declarez explicitement "sortie uniquement du JSON valide", fournissez un schema detaille et des exemples.' } }, { '@type': 'Question', name: 'Que se passe-t-il si le modele renvoie un JSON invalide ?', acceptedAnswer: { '@type': 'Answer', text: 'Validez le JSON de votre cote avec un analyseur. En cas d\'echec, reessayez la demande avec un prompt plus clair ou revenez a l\'extraction manuelle.' } }, { '@type': 'Question', name: 'Puis-je utiliser la sortie structuree pour des documents complexes ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Divisez les taches complexes en etapes : d\'abord extraire les champs cles, puis valider, puis optionnellement transformer dans les systemes en aval.' } }, { '@type': 'Question', name: 'Comment gerer les donnees manquantes ou ambigues dans les sorties structurees ?', acceptedAnswer: { '@type': 'Answer', text: 'Definissez le comportement de secours dans votre schema : utilisez des chaines vides, des valeurs null ou un marqueur special comme "inconnu".' } }, { '@type': 'Question', name: 'Le mode JSON est-il affecte par la conformite reglementaire (RGPD, CCPA) ?', acceptedAnswer: { '@type': 'Answer', text: 'Le mode JSON lui-meme est neutre. Cependant, la sortie structuree est benefique pour la conformite car elle vous permet de suivre systematiquement les donnees extraites.' } }, { '@type': 'Question', name: 'Comment tester les prompts en mode JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'Testez avec des entrees diversifiees : cas limites, donnees ambigues et exemples du monde reel. Analysez la sortie et verifiez le JSON valide.' } }, { '@type': 'Question', name: 'Puis-je reutiliser les schemas de sortie structuree sur differents modeles ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, avec prudence. Definissez votre schema une fois et testez-le sur les modeles, vous devrez peut-etre ajuster les prompts pour les modeles plus anciens.' } }, { '@type': 'Question', name: 'Quel est le cout de performance du mode JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'Minimal. Le mode JSON natif (OpenAI, Anthropic, Google) a un impact de performance negligeable.' } } ] }, sections: { definition: { content: [ '**La sortie structuree est une methode de forcer les modeles linguistiques a renvoyer les donnees dans un format predefini (par exemple JSON).** Elle differe du texte libre en imposant des noms de champs stricts, des types de donnees et des schemas que les outils en aval peuvent traiter sans nettoyage manuel.' ] }, exampleBlock: { content: [ 'Voici un exemple simple de sortie structuree au format JSON :' ], codeBlock: '{\n  "task": "summarize",\n  "title": "Quick AI Guide",\n  "summary": "This article explains structured output and JSON mode.",\n  "key_points": ["JSON enforces format", "Reduces parsing errors", "Enables automation"],\n  "audience_level": "intermediate",\n  "confidence": 0.95\n}', codeLanguage: 'json' }, keyTakeaways: { isTldr: true, content: [ '**Points cles : ce que vous devez savoir sur la sortie structuree :**' ], items: [ '**Ameliore la fiabilite** : la sortie structuree reduit les erreurs d\'analyse en imposant des schemas stricts.', '**Active l\'automatisation** : le mode JSON declenche la logique conditionnelle basee sur les champs extraits.', '**Pret pour l\'API** : integration directe aux bases de donnees, CRM et systemes metier sans reformatage.', '**Dependant du modele** : le mode JSON natif est disponible dans GPT-5.5, Claude, Gemini.', '**Meilleur pour les taches deterministes** : API, automatisation, pipelines de donnees.', '**Necessite la validation** : analysez et validez toujours la sortie JSON avant utilisation en aval.', '**Echelle entre les modeles** : definissez le schema une fois ; testez et documentez les differences.' ] }, whatIsStructured: { title: 'Qu\'est-ce que la sortie structuree', content: [ '**La sortie structuree signifie demander au modele de suivre un schema fixe.** Au lieu d\'un paragraphe libre, vous definissez les champs, les types et les valeurs autorisees.', 'La sortie structuree peut prendre plusieurs formes :' ], items: [ 'Listes a puces avec un nombre fixe d\'elements.', 'Tableaux Markdown avec colonnes specifiques.', 'Paires cle-valeur pour les attributs simples.', 'Objets ou tableaux JSON complets avec des cles predefinies.' ] }, structuredGoal: { content: [ 'L\'objectif est toujours le meme : transformer une description floue en une forme previsible.' ] }, whatIsJSON: { title: 'Qu\'est-ce que le mode JSON', content: [ '**Le mode JSON est une variante plus stricte de la sortie structuree ou le modele est invite a renvoyer uniquement du JSON valide.** En mode JSON, tout ce que le modele produit devrait etre analysable en JSON.', 'Un schema JSON typique pourrait ressembler a ceci :' ], codeBlock: '{\n  "title": "string",\n  "summary": "string",\n  "tags": ["string"],\n  "priority": "low | medium | high"\n}', codeLanguage: 'json' }, jsonModeApproach: { content: [ 'Vous refletez ce schema dans votre prompt, puis demandez au modele de le remplir. Certaines plates-formes fournissent egalement des parametres speciaux ou des API.' ] }, whyItMatterns: { title: 'Pourquoi la sortie structuree et le mode JSON sont importants', content: [ '**La sortie structuree et le mode JSON sont importants parce qu\'ils vous permettent de transformer les modeles linguistiques en composants de systemes plus larges.** Quand la sortie est previsible, vous pouvez :' ], items: [ 'Alimenter les resultats directement dans les bases de donnees, CRM ou outils d\'analyse.', 'Declencheur des automations basees sur des champs comme "priorite", "statut" ou "confiance".', 'Creer des interfaces utilisateur qui affichent les resultats du modele.' ] }, jsonVsFunctionCalling: { title: 'Mode JSON vs Appels de fonction vs Prompts de schema', content: [ '**Trois methodes existent pour obtenir une sortie structuree des LLM.**' ], items: [ '**Mode JSON** : le modele ne produit que du JSON valide.', '**Appels de fonction** : le modele selectionne quelle fonction appeler et fournit des arguments en JSON.', '**Prompts de schema** : instructions explicites + exemples.' ] }, example: { title: 'Exemple : texte libre vs JSON structure', content: [ '**La difference devient claire quand vous comparez un prompt texte libre avec un prompt JSON structure.** Ici, nous classons et resumons un email client.', '**[Mauvais prompt]**', '"Lisez cet email client et resumez ce qu\'ils veulent."', '**[Bon prompt – Mode JSON]**', '"Vous etes un assistant de support client."', 'La version "bonne" definit le schema, les valeurs valides et l\'exigence JSON uniquement.' ] }, bestPractices: { title: 'Meilleures pratiques', content: [ '**Pour obtenir des sorties structurees fiables, vous devez etre explicite et strict dans vos prompts.** Lorsque les données extraites ne peuvent pas quitter votre infrastructure, les mêmes patterns JSON-mode fonctionnent contre un store vectoriel local — voir [RAG local pour les données métier](/fr/power-local-llm/local-rag-for-private-business-data) pour l\'architecture conforme RGPD.' ], items: [ 'Montrez le schema exact que vous attendez.', 'Declarez clairement que rien d\'autre que le JSON ne doit etre retourne.', 'Utilisez des noms de cles courts et sans ambiguite.', 'Ajoutez des exemples de sorties valides quand la tache est complexe.', 'Pour les structures imbriquees, construisez-les etape par etape.' ] }, modelComparison: { title: 'Comparaison des modeles : conformite JSON par fournisseur', content: [ '**Differents modeles ont differents niveaux de support du mode JSON natif.** En avril 2026, voici comment se classent les principaux fournisseurs :' ], columns: [ 'Modele', 'Mode JSON natif', 'Conformite prompt seul', 'Notes' ], rows: [ { 'Modele': 'OpenAI GPT-5.5', 'Mode JSON natif': 'Oui (applique)', 'Conformite prompt seul': 'Non necessaire', 'Notes': 'Standard de l\'industrie.' }, { 'Modele': 'Anthropic Claude Sonnet 4.6', 'Mode JSON natif': 'Oui (applique)', 'Conformite prompt seul': 'Non necessaire', 'Notes': 'Conformite JSON excellente.' }, { 'Modele': 'Google Gemini 2.0', 'Mode JSON natif': 'Oui (applique)', 'Conformite prompt seul': 'Non necessaire', 'Notes': 'Support JSON natif.' }, { 'Modele': 'Meta Llama 3.3 70B', 'Mode JSON natif': 'Partiel', 'Conformite prompt seul': 'Fortement recommande', 'Notes': 'Open-source.' }, { 'Modele': 'Mistral Large', 'Mode JSON natif': 'Partiel', 'Conformite prompt seul': 'Recommande', 'Notes': 'Bon comportement JSON.' }, { 'Modele': 'Anciens GPT-3.5, Claude 2', 'Mode JSON natif': 'Non', 'Conformite prompt seul': 'Requis', 'Notes': 'Necessite une ingenierie forte.' }, { 'Modele': 'Petits modeles open-source (<13B)', 'Mode JSON natif': 'Non', 'Conformite prompt seul': 'Requis avec exemples', 'Notes': 'Necessitent des schemas detailles.' } ] }, relatedReading: { title: 'Lectures connexes', items: [ '[Prompts contraints](/fr/prompt-engineering/constrained-prompting) — imposer des formats.', '[Framework SPECS](/fr/prompt-engineering/specs-framework) — prompts axes sur la specification.', '[RAG explique](/fr/prompt-engineering/rag-explained) — combinez l\'extraction avec la recuperation.', '[Chaine de pensee](/fr/prompt-engineering/chain-of-thought) — raisonnez etape par etape.', '[Modeles de prompts](/fr/prompt-engineering/prompt-templates) — modeles reutilisables.', '[Zero-Shot vs Few-Shot](/fr/prompt-engineering/zero-shot-vs-few-shot) — quand les exemples ameliorent.' ] }, faq: { title: 'Questions frequemment posees', faqs: [ { q: 'Quelle est la difference entre la sortie structuree et le mode JSON ?', a: 'La sortie structuree est la categorie plus large. Le mode JSON est une variante plus stricte.' }, { q: 'Tous les LLM supportent-ils le mode JSON ?', a: 'Non. OpenAI GPT-5.5, Anthropic Claude Sonnet 4.6+ et Google Gemini supportent le mode JSON natif.' }, { q: 'Comment imposer les reponses JSON uniquement ?', a: 'Utilisez l\'ingenierie des prompts : declarez explicitement "sortie uniquement du JSON valide".' }, { q: 'Que se passe-t-il si le modele renvoie un JSON invalide ?', a: 'Validez le JSON de votre cote. En cas d\'echec, reessayez ou revenez a l\'extraction manuelle.' }, { q: 'Puis-je utiliser la sortie structuree pour des documents complexes ?', a: 'Oui. Divisez les taches complexes en etapes.' }, { q: 'Comment gerer les donnees manquantes ?', a: 'Definissez le comportement de secours : utilisez des chaines vides, null ou un marqueur special.' }, { q: 'Le mode JSON est-il affecte par la conformite RGPD ?', a: 'Le mode JSON lui-meme est neutre. Mais la sortie structuree aide a la conformite.' }, { q: 'Comment tester les prompts en mode JSON ?', a: 'Testez avec des entrees diversifiees : cas limites, donnees ambigues et exemples reels.' }, { q: 'Puis-je reutiliser les schemas sur differents modeles ?', a: 'Oui, avec prudence. Testez-le sur les modeles et documentez les differences.' }, { q: 'Quel est le cout de performance du mode JSON ?', a: 'Minimal. Le mode JSON natif a un impact negligeable.' } ] }, sources: { title: 'Sources', items: [ '[Documentation mode JSON OpenAI](https://platform.openai.com/docs/guides/json-mode) — Guide officiel.', '[Guide Anthropic](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) — Documentation.', '[API Google Gemini](https://ai.google.dev/gemini-2/docs/structured-output) — Support JSON natif.', '[Specification JSON Schema](https://json-schema.org/specification.html) — Standard de conception.' ] } } },
     ja: { theme: 'テクニック', title: 'LLMの構造化出力：JSONモード、サンプル、使用タイミング', intro: '構造化出力とJSONモードは、言語モデルの出力を信頼性の高い機械可読フォーマットに変換し、データベース、API、自動化ワークフローにシームレスに統合できます。有効なJSONを強制するプロンプトの設計方法、JSONモード対関数呼び出し対スキーマプロンプティングの比較、およびユースケースに適した方法の選択方法を学びます。', publishDate: '2026-03-26', dateModified: '2026-04-05', readTime: '10分読む', seoTitle: 'LLMの構造化出力とJSONモード：使用時期、サンプル、比較', metaDescription: '構造化出力、JSONモード、関数呼び出しをいつ使用するかを学びます。モデル別のJSON準拠を比較し、実例を確認し、APIのスキーマ設計をマスターしてください。', educationalLevel: 'Intermediate', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '構造化出力とJSONモード：AIから使用可能なデータを取得', description: 'プロンプトで構造化出力とJSONモードをマスターします。スキーマ設計、有効なJSONの強制、モデル準拠の比較、および本番システムでの一般的なエラーの回避方法を学びます。', datePublished: '2026-03-26', dateModified: '2026-04-05', keywords: ['構造化出力', 'JSONモード', 'プロンプトエンジニアリング', 'スキーマ設計', '機械可読出力', 'JSON検証', 'プロンプトテンプレート'], author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } }, howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: '構造化出力とJSONモードの使用方法', step: [ { '@type': 'HowToStep', position: 1, name: 'JSONモードを選択', text: 'データ抽出と機械可読出力の場合、OpenAI GPT-5.5、Anthropic Claude、Google Geminiおよびその他の主要プロバイダで利用可能なJSONモードを使用します。これにより、モデルが有効なJSONを返すことが保証されます。' }, { '@type': 'HowToStep', position: 2, name: 'スキーマを定義', text: 'JSONスキーマを明示的に定義します。フィールド名、データタイプ、および制約を含めます。' }, { '@type': 'HowToStep', position: 3, name: '出力例を提供', text: '必要なJSON構造の例を提供します。例はスキーマの説明だけより強力です。' }, { '@type': 'HowToStep', position: 4, name: 'ネストされた構造を処理', text: '配列内のオブジェクトの場合、階層に関して明示的にします。完全なJSON例を提供します。' }, { '@type': 'HowToStep', position: 5, name: 'JSON出力を検証', text: 'ダウンストリームシステムで使用する前にJSON出力を検証します。有効なJSON、正しいスキーマ、期待されるデータタイプを確認します。' } ] }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [ { '@type': 'Question', name: '構造化出力とJSONモードの違いは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '構造化出力はモデルに固定フォーマットでデータを返すよう要求する広いカテゴリです。JSONモードはより厳密なバリアントで、有効なJSON出力を強制します。' } }, { '@type': 'Question', name: 'すべてのLLMがJSONモードをサポートしていますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。OpenAI GPT-5.5、Anthropic Claude Sonnet 4.6+、Google Geminiがネイティブjsonモードをサポートします。古いモデルとオープンソースLLMはプロンプトベースの適用が必要です。' } }, { '@type': 'Question', name: 'ネイティブJSONモードなしでJSON応答のみを強制するにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトエンジニアリングを使用します：「有効なJSONのみを出力」を明示的に宣言し、詳細なスキーマと例を提供します。' } }, { '@type': 'Question', name: 'モデルが無効なJSONを返す場合はどうなりますか？', acceptedAnswer: { '@type': 'Answer', text: 'JSONをサイドで検証します。失敗した場合、より明確なプロンプトでリクエストを再試行するか、手動抽出に戻ります。' } }, { '@type': 'Question', name: '複雑なドキュメントに構造化出力を使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。複雑なタスクをステップに分割します：最初に主要フィールドを抽出し、次に検証し、オプションでダウンストリームシステムに変換します。' } }, { '@type': 'Question', name: '構造化出力で欠落しているまたは曖昧なデータを処理するにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'スキーマでフォールバック動作を定義します：空の文字列、null値、または「不明」などの特別なマーカーを使用します。' } }, { '@type': 'Question', name: 'JSONモードは規制遵守（GDPR、CCPA）の影響を受けますか？', acceptedAnswer: { '@type': 'Answer', text: 'JSONモード自体は中立的です。ただし、構造化出力は、抽出、変換、記録されたデータを体系的に追跡できるため、コンプライアンスに有益です。' } }, { '@type': 'Question', name: 'JSONモードプロンプトをテストするにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: '多様な入力でテストします：エッジケース、曖昧なデータ、実世界の例。有効なJSON、正しいスキーマ、予想されるデータタイプを確認します。' } }, { '@type': 'Question', name: 'さまざまなモデル全体で構造化出力スキーマを再利用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、注意深く。スキーマを一度定義し、モデル全体でテストします。古いモデルや小さいモデルのプロンプト調整が必要な場合があります。' } }, { '@type': 'Question', name: 'JSONモードのパフォーマンスコストは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '最小限。ネイティブJSONモード（OpenAI、Anthropic、Google）はパフォーマンスへの影響がわずかです。' } } ] }, sections: { definition: { content: [ '**構造化出力は、言語モデルを強制して、定義済みフォーマット（JSONなど）でデータを返す方法です。** 自由形式のテキストとは異なり、ダウンストリームツールが手動クリーンアップなしで処理できる厳密なフィールド名、データタイプ、スキーマを強制します。' ] }, exampleBlock: { content: [ 'JSON形式での構造化出力の簡単な例を次に示します。' ], codeBlock: '{\n  "task": "summarize",\n  "title": "Quick AI Guide",\n  "summary": "This article explains structured output and JSON mode.",\n  "key_points": ["JSON enforces format", "Reduces parsing errors", "Enables automation"],\n  "audience_level": "intermediate",\n  "confidence": 0.95\n}', codeLanguage: 'json' }, keyTakeaways: { isTldr: true, content: [ '**重要なポイント：構造化出力について知っておくべきことが：**' ], items: [ '**信頼性の向上** : 構造化出力は、厳密なスキーマを強制することで、パースエラーと手動データクリーンアップを削減します。', '**自動化の有効化** : JSONモードは、抽出されたフィールド（優先度、カテゴリ、緊急度）に基づいて条件付きロジックをトリガーします。', '**API対応** : 再フォーマットなしでデータベース、CRM、ビジネスシステムへの直接統合。', '**モデル依存** : ネイティブJSONモードはGPT-5.5、Claude、Geminiで利用可能です。古いモデル/オープンソースモデルはプロンプトエンジニアリングが必要です。', '**決定論的タスクに最適** : API、自動化、データパイプライン。クリエイティブライティングは避けてください。', '**検証が必要** : ダウンストリーム使用前にJSON出力を常に検証および検証してください。', '**モデル全体でスケール** : スキーマを一度定義します。テストし、相違点を文書化します。' ] }, whatIsStructured: { title: '構造化出力とは', content: [ '**構造化出力とは、モデルに固定スキーマ（リスト、テーブル、JSONなど）に従うよう要求することです。** 自由形式の段落の代わりに、フィールド、タイプ、許可された値を定義します。', '構造化出力はいくつかの形式をとることができます：' ], items: [ '固定数のアイテムを含むブレットリスト。', '特定の列を持つMarkdownテーブル。', '単純な属性のキーと値のペア。', '事前定義されたキーを持つ完全なJSONオブジェクトまたは配列。' ] }, structuredGoal: { content: [ '目標は常に同じです：あいまいな説明を予測可能な形に変換することです。' ] }, whatIsJSON: { title: 'JSONモードとは', content: [ '**JSONモードは、モデルが有効なJSONのみを返すよう指示または構成される厳密な構造化出力バリアントです。** JSONモードでは、モデルが出力するすべてが追加のクリーンアップなしでJSONとして解析可能である必要があります。', '典型的なJSONスキーマは次のようになります：' ], codeBlock: '{\n  "title": "string",\n  "summary": "string",\n  "tags": ["string"],\n  "priority": "low | medium | high"\n}', codeLanguage: 'json' }, jsonModeApproach: { content: [ 'このスキーマをプロンプトに反映し、モデルにそれを入力するよう要求します。一部のプラットフォームはJSON のみの応答を強制する特別な設定またはAPIも提供します。' ] }, whyItMatters: { title: '構造化出力とJSONモードが重要な理由', content: [ '**構造化出力とJSONモードが重要な理由は、言語モデルを単なるチャットアシスタントではなく、より大きなシステムのコンポーネントに変換できるためです。** 出力が予測可能な場合、以下を実行できます：' ], items: [ 'データベース、CRM、分析ツールに結果を直接供給します。', 'モデル出力フィールド（優先度、ステータス、信頼度）に基づいてアクションをトリガーします。', 'カード、テーブル、ダッシュボードにモデル結果を表示するUIを構築します。' ] }, jsonVsFunctionCalling: { title: 'JSONモード対関数呼び出し対スキーマプロンプティング', content: [ '**LLMから構造化出力を取得するための3つのメソッドが存在します。それぞれ異なる強さと弱さを持っています。**' ], items: [ '**JSONモード** : モデルは有効なJSONのみを出力します。最適用途：データ抽出、分類、要約。', '**関数呼び出し** : モデルは呼び出す関数を選択し、JSONで引数を提供します。最適用途：API統合、ツール使用、エージェントワークフロー。', '**スキーマプロンプティング** : スキーマに従うようモデルに要求する明示的な指示と例。最適用途：柔軟性、オープンソースモデル、カスタムフォーマット。' ] }, example: { title: '例：自由テキスト対構造化JSON', content: [ '**同じタスクに対して自由形式のプロンプトと構造化JSONプロンプトを比較すると、違いが明確になります。** ここでは、顧客メールを分類および要約します。', '**[悪いプロンプト]**', '"この顧客メールを読んで、彼らが欲しいものを要約してください。"', '**[良いプロンプト - JSONモード]**', '"あなたはカスタマーサポートアシスタントです。"', '「良い」バージョンはスキーマ、有効な値、およびJSONのみの要件を定義します。' ] }, bestPractices: { title: '構造化出力とJSONモードのベストプラクティス', content: [ '**信頼性の高い構造化出力を取得するには、プロンプトで明示的、一貫性があり、厳密である必要があります。** 抽出データを社外インフラに出せない場合、同じ JSON モードのパターンはオンプレミスのベクトルストアでもそのまま機能します。GDPR 対応のデプロイテンプレートは、[業務データのためのローカル RAG](/ja/power-local-llm/local-rag-for-private-business-data)を参照してください。' ], items: [ '予期するスキーマを正確に表示します。' , '列挙の許可値を含めます。', 'JSON（または構造）のみを返す必要があることを明確に宣言してください。', '短くて曖昧でないキー名を使用します。', 'タスクが複雑または機密の場合は、有効な出力の例を追加します。', 'ネストされた構造については、段階的に構築し、実際の入力でテストしてください。' ] }, modelComparison: { title: 'モデル比較：プロバイダー別のJSON準拠', content: [ '**異なるモデルは、ネイティブJSONモードサポートのレベルが異なります。** 2026年4月現在、主要プロバイダーがどのようにランク付けされているかを次に示します：' ], columns: [ 'モデル', 'ネイティブJSONモード', 'プロンプトのみ準拠', '備考' ], rows: [ { 'モデル': 'OpenAI GPT-5.5', 'ネイティブJSONモード': 'はい（実施）', 'プロンプトのみ準拠': '不要', '備考': 'JSONモードの業界標準です。' }, { 'モデル': 'Anthropic Claude Sonnet 4.6', 'ネイティブJSONモード': 'はい（実施）', 'プロンプトのみ準拠': '不要', '備考': 'JSON準拠が優れています。' }, { 'モデル': 'Google Gemini 2.0', 'ネイティブJSONモード': 'はい（実施）', 'プロンプトのみ準拠': '不要', '備考': 'ネイティブJSONサポート。' }, { 'モデル': 'Meta Llama 3.3（70B）', 'ネイティブJSONモード': '部分的', 'プロンプトのみ準拠': '強く推奨', '備考': 'オープンソース。' }, { 'モデル': 'Mistral Large', 'ネイティブJSONモード': '部分的', 'プロンプトのみ準拠': '推奨', '備考': '良好なJSONの動作。' }, { 'モデル': '古いGPT-3.5、Claude 2', 'ネイティブJSONモード': 'いいえ', 'プロンプトのみ準拠': '必須', '備考': '強いエンジニアリングが必要です。' }, { 'モデル': '小さいオープンソースモデル（<13B）', 'ネイティブJSONモード': 'いいえ', 'プロンプトのみ準拠': '例に必須', '備考': '詳細なスキーマが必要です。' } ] }, relatedReading: { title: '関連読み物', items: [ '[制約付きプロンプト](/ja/prompt-engineering/constrained-prompting) — 特定の出力フォーマットを強制します。', '[SPECSフレームワーク](/ja/prompt-engineering/specs-framework) — 仕様重視のプロンプト。', '[RAG説明](/ja/prompt-engineering/rag-explained) — 構造化抽出とデータ取得を組み合わせます。', '[思考の連鎖](/ja/prompt-engineering/chain-of-thought) — ステップバイステップで理由を述べます。', '[プロンプトテンプレート](/ja/prompt-engineering/prompt-templates) — 再利用可能なテンプレート。', '[ゼロショット対フューショット](/ja/prompt-engineering/zero-shot-vs-few-shot) — 例がJSON準拠を改善するとき。' ] }, faq: { title: 'よくある質問', faqs: [ { q: '構造化出力とJSONモードの違いは何ですか？', a: '構造化出力はより広いカテゴリです。JSONモードはより厳密なバリアントです。' }, { q: 'すべてのLLMがJSONモードをサポートしていますか？', a: 'いいえ。OpenAI GPT-5.5、Anthropic Claude Sonnet 4.6+、Google Geminiがサポートしています。' }, { q: 'ネイティブJSONモードなしでJSON応答のみを強制するにはどうすればよいですか？', a: 'プロンプトエンジニアリング：「有効なJSONのみ」を宣言し、スキーマと例を提供します。' }, { q: 'モデルが無効なJSONを返す場合はどうなりますか？', a: 'JSONをサイドで検証します。失敗した場合は再試行するか、手動で戻ります。' }, { q: '複雑なドキュメントに構造化出力を使用できますか？', a: 'はい。複雑なタスクをステップに分割します。' }, { q: '欠落しているまたは曖昧なデータを処理するにはどうすればよいですか？', a: 'スキーマでフォールバック動作を定義します。' }, { q: 'JSONモードは規制遵守に影響を受けますか？', a: 'JSONモード自体は中立的です。しかし構造化出力はコンプライアンスに有益です。' }, { q: 'JSONモードプロンプトをテストするにはどうすればよいですか？', a: '多様な入力でテストします。本番前に95%以上の成功率を目指します。' }, { q: 'さまざまなモデル全体でスキーマを再利用できますか？', a: 'はい、注意深く。スキーマを定義してテストします。' }, { q: 'JSONモードのパフォーマンスコストは何ですか？', a: '最小限。ネイティブJSONモードはわずかな影響です。' } ] }, sources: { title: 'ソース', items: [ '[OpenAI JSONモードドキュメント](https://platform.openai.com/docs/guides/json-mode) — 公式ガイド。', '[Anthropicガイド](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) — ドキュメント。', '[Google Gemini API](https://ai.google.dev/gemini-2/docs/structured-output) — ネイティブJSONサポート。', '[JSON Schemaスペック](https://json-schema.org/specification.html) — 標準仕様。' ] } } },
-    zh: { theme: '技术', title: 'LLM中的结构化输出：JSON模式、示例及使用时机', intro: '结构化输出和JSON模式将语言模型的输出转变为可靠的机器可读格式，可以无缝集成到数据库、API和自动化工作流中。学习如何设计强制有效JSON输出的提示词，比较JSON模式与函数调用与架构提示词，并确定哪种方法适合您的用例。', publishDate: '2026-03-26', dateModified: '2026-04-05', readTime: '10分钟阅读', seoTitle: 'LLM中的结构化输出和JSON模式：何时使用、示例和比较', metaDescription: '学习何时使用结构化输出、JSON模式或函数调用。按模型比较JSON合规性，查看真实示例，掌握API的架构设计。', educationalLevel: 'Intermediate', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '结构化输出和JSON模式：从AI获取可用数据', description: '掌握提示词中的结构化输出和JSON模式。学习架构设计、强制有效JSON、比较模型合规性以及避免生产系统中的常见错误。', datePublished: '2026-03-26', dateModified: '2026-04-05', keywords: ['结构化输出', 'JSON模式', '提示词工程', '架构设计', '机器可读输出', 'JSON验证', '提示词模板'], author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } }, howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: '如何使用结构化输出和JSON模式', step: [ { '@type': 'HowToStep', position: 1, name: '选择JSON模式', text: '对于数据提取和机器可读输出，请使用OpenAI GPT-5.5、Anthropic Claude、Google Gemini及其他主要提供商提供的JSON模式。这可确保模型返回有效的JSON，而不是文本。' }, { '@type': 'HowToStep', position: 2, name: '定义架构', text: '显式定义JSON架构。包括字段名称、数据类型和约束。' }, { '@type': 'HowToStep', position: 3, name: '提供输出示例', text: '提供您想要的确切JSON结构的示例。示例比架构描述本身更强大。' }, { '@type': 'HowToStep', position: 4, name: '处理嵌套结构', text: '对于数组中的对象，明确说明层次结构。提供完整的JSON示例。' }, { '@type': 'HowToStep', position: 5, name: '验证JSON输出', text: '在下游使用前验证JSON输出。检查有效的JSON、正确的架构和预期的数据类型。' } ] }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [ { '@type': 'Question', name: '结构化输出和JSON模式之间有什么区别？', acceptedAnswer: { '@type': 'Answer', text: '结构化输出是要求模型以固定格式返回数据的更广泛类别。JSON模式是更严格的变体，强制有效的JSON输出。' } }, { '@type': 'Question', name: '所有LLM都支持JSON模式吗？', acceptedAnswer: { '@type': 'Answer', text: '否。OpenAI GPT-5.5、Anthropic Claude Sonnet 4.6+和Google Gemini支持原生JSON模式。较旧的模型和开源LLM可能需要基于提示词的应用。' } }, { '@type': 'Question', name: '在没有原生JSON模式的情况下如何强制仅JSON响应？', acceptedAnswer: { '@type': 'Answer', text: '使用提示词工程：明确声明"仅输出有效的JSON"，提供详细的架构和示例。' } }, { '@type': 'Question', name: '如果模型返回无效的JSON会发生什么？', acceptedAnswer: { '@type': 'Answer', text: '在您的一方验证JSON。如果失败，请用更清晰的提示词重试请求或回到手动提取。' } }, { '@type': 'Question', name: '我可以将结构化输出用于复杂的文档吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。将复杂任务分解成步骤：首先提取关键字段，然后验证，然后可选地转换为下游系统。' } }, { '@type': 'Question', name: '我如何处理结构化输出中缺失或模糊的数据？', acceptedAnswer: { '@type': 'Answer', text: '在架构中定义后备行为：使用空字符串、null值或特殊标记（如"未知"）。' } }, { '@type': 'Question', name: 'JSON模式是否受到监管合规性（GDPR、CCPA）的影响？', acceptedAnswer: { '@type': 'Answer', text: 'JSON模式本身是中立的。但是，结构化输出对合规性有益，因为它可以系统地跟踪提取、转换和记录的数据。' } }, { '@type': 'Question', name: '我如何测试JSON模式提示词？', acceptedAnswer: { '@type': 'Answer', text: '使用不同的输入进行测试：边界案例、模糊数据和真实示例。验证有效的JSON、正确的架构和预期的数据类型。' } }, { '@type': 'Question', name: '我可以在不同的模型中重复使用结构化输出架构吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，但要谨慎。定义一次架构，在模型中测试。您可能需要为较旧或较小的模型调整提示词。' } }, { '@type': 'Question', name: 'JSON模式的性能成本是什么？', acceptedAnswer: { '@type': 'Answer', text: '最少。原生JSON模式（OpenAI、Anthropic、Google）的性能影响可以忽略不计。' } } ] }, sections: { definition: { content: [ '**结构化输出是强制语言模型以预定义格式（如JSON）返回数据的一种方法。** 它不同于自由形式文本，在于它强制严格的字段名称、数据类型和架构，下游工具可以毫不费力地处理。' ] }, exampleBlock: { content: [ '以下是JSON格式的结构化输出的简单示例：' ], codeBlock: '{\n  "task": "summarize",\n  "title": "Quick AI Guide",\n  "summary": "This article explains structured output and JSON mode.",\n  "key_points": ["JSON enforces format", "Reduces parsing errors", "Enables automation"],\n  "audience_level": "intermediate",\n  "confidence": 0.95\n}', codeLanguage: 'json' }, keyTakeaways: { isTldr: true, content: [ '**关键点：关于结构化输出您需要了解的内容：**' ], items: [ '**提高可靠性** : 结构化输出通过强制严格的架构来减少解析错误和手动数据清理。', '**启用自动化** : JSON模式基于提取的字段（优先级、类别、紧急性）触发条件逻辑。', '**API就绪** : 直接集成到数据库、CRM和业务系统，无需重新格式化。', '**取决于模型** : 原生JSON模式在GPT-5.5、Claude、Gemini中可用。旧型号/开源模式需要提示词工程。', '**最适合确定性任务** : API、自动化、数据管道。避免创意写作。', '**需要验证** : 始终在下游使用前验证和检查JSON输出。', '**跨模型扩展** : 定义一次架构；测试和记录差异。' ] }, whatIsStructured: { title: '什么是结构化输出', content: [ '**结构化输出意味着要求模型遵循固定的架构，例如列表、表格或JSON。** 而不是自由形式的段落，您定义字段、类型和允许的值。', '结构化输出可以采用多种形式：' ], items: [ '具有固定项数的项目符号列表。', '具有特定列的Markdown表格。', '简单属性的键值对。', '具有预定义键的完整JSON对象或数组。' ] }, structuredGoal: { content: [ '目标始终是相同的：将模糊的描述转换为可预测的形式。' ] }, whatIsJSON: { title: '什么是JSON模式', content: [ '**JSON模式是结构化输出的更严格变体，其中模型被指示或配置为仅返回有效的JSON。** 在JSON模式中，模型输出的所有内容都应该可以解析为JSON而无需额外的清理。', '典型的JSON架构可能如下所示：' ], codeBlock: '{\n  "title": "string",\n  "summary": "string",\n  "tags": ["string"],\n  "priority": "low | medium | high"\n}', codeLanguage: 'json' }, jsonModeApproach: { content: [ '您在提示词中反映该架构，然后要求模型填充它。某些平台也提供强制仅JSON响应的特殊设置或API。' ] }, whyItMatters: { title: '为什么结构化输出和JSON模式很重要', content: [ '**结构化输出和JSON模式很重要，因为它们使您能够将语言模型转变为更大系统的组件，而不仅仅是聊天助手。** 当输出是可预测的时，您可以：' ], items: [ '直接将结果提供给数据库、CRM或分析工具。', '基于模型输出字段（优先级、状态、信心）触发自动化。', '构建显示卡片、表格或仪表板中模型结果的用户界面。' ] }, jsonVsFunctionCalling: { title: 'JSON模式与函数调用与架构提示词', content: [ '**存在三种从LLM获取结构化输出的方法。每种都有不同的优缺点。**' ], items: [ '**JSON模式** : 模型仅输出有效的JSON。最佳用途：数据提取、分类、摘要。', '**函数调用** : 模型选择要调用的函数并以JSON提供参数。最佳用途：API集成、工具使用、代理工作流。', '**架构提示词** : 显式指令+要求模型遵循架构的示例。最佳用途：灵活性、开源模型、自定义格式。' ] }, example: { title: '示例：自由文本与结构化JSON', content: [ '**当您比较免费文本提示词和结构化JSON提示词完成相同任务时，差异变得明显。** 在这里，我们对客户电子邮件进行分类和汇总。', '**[错误的提示词]**', '"阅读此客户电子邮件并总结他们想要什么。"', '**[正确的提示词 - JSON模式]**', '"您是一名客户支持助理。"', '"正确"版本定义架构、有效值和仅JSON要求。' ] }, bestPractices: { title: '结构化输出和JSON模式的最佳做法', content: [ '**要获得可靠的结构化输出，您在提示词中需要明确、一致和严格。** 当抽取的数据不能离开自有基础设施时，同样的 JSON 模式模式也可以直接对接本地向量存储——要查看符合 GDPR 的部署模板，请参阅[面向企业数据的本地 RAG](/zh/power-local-llm/local-rag-for-private-business-data)。' ], items: [ '显示您期望的确切架构。', '声明仅应返回JSON或结构。', '使用简短、明确的键名称。', '当任务复杂或敏感时添加有效输出的示例。', '对于嵌套结构，逐步构建并使用真实输入进行测试。' ] }, modelComparison: { title: '模型比较：按提供商的JSON合规性', content: [ '**不同的模型对原生JSON模式支持的级别不同。** 截至2026年4月，以下是主要提供商的排名：' ], columns: [ '模型', '原生JSON模式', '仅提示词合规', '备注' ], rows: [ { '模型': 'OpenAI GPT-5.5', '原生JSON模式': '是（强制）', '仅提示词合规': '不需要', '备注': 'JSON模式的行业标准。' }, { '模型': 'Anthropic Claude Sonnet 4.6', '原生JSON模式': '是（强制）', '仅提示词合规': '不需要', '备注': 'JSON合规性优秀。' }, { '模型': 'Google Gemini 2.0', '原生JSON模式': '是（强制）', '仅提示词合规': '不需要', '备注': '原生JSON支持。' }, { '模型': 'Meta Llama 3.3（70B）', '原生JSON模式': '部分', '仅提示词合规': '强烈推荐', '备注': '开源。' }, { '模型': 'Mistral Large', '原生JSON模式': '部分', '仅提示词合规': '推荐', '备注': 'JSON行为良好。' }, { '模型': '旧GPT-3.5、Claude 2', '原生JSON模式': '否', '仅提示词合规': '必需', '备注': '需要强大的工程。' }, { '模型': '小型开源模型（<13B）', '原生JSON模式': '否', '仅提示词合规': '示例需要', '备注': '需要详细的架构。' } ] }, relatedReading: { title: '相关阅读', items: [ '[约束提示词](/zh/prompt-engineering/constrained-prompting) — 强制特定的输出格式。', '[SPECS框架](/zh/prompt-engineering/specs-framework) — 规范专注的提示词。', '[RAG说明](/zh/prompt-engineering/rag-explained) — 结合结构化提取和数据检索。', '[思维链](/zh/prompt-engineering/chain-of-thought) — 逐步推理。', '[提示词模板](/zh/prompt-engineering/prompt-templates) — 可重复使用的模板。', '[零次对少次](/zh/prompt-engineering/zero-shot-vs-few-shot) — 何时示例改进JSON合规性。' ] }, faq: { title: '常见问题', faqs: [ { q: '结构化输出和JSON模式之间有什么区别？', a: '结构化输出是更广泛的类别。JSON模式是更严格的变体。' }, { q: '所有LLM都支持JSON模式吗？', a: '否。OpenAI GPT-5.5、Anthropic Claude Sonnet 4.6+和Google Gemini支持。' }, { q: '在没有原生JSON模式的情况下如何强制仅JSON响应？', a: '使用提示词工程：明确声明"仅输出有效JSON"。' }, { q: '如果模型返回无效JSON会发生什么？', a: '在您的一方验证。失败时重试或回到手动方法。' }, { q: '我可以将结构化输出用于复杂文档吗？', a: '是的。将复杂任务分解成步骤。' }, { q: '我如何处理缺失或模糊的数据？', a: '在架构中定义后备行为。' }, { q: 'JSON模式是否受监管合规性影响？', a: 'JSON本身是中立的。但结构化输出有益于合规性。' }, { q: '我如何测试JSON模式提示词？', a: '使用不同的输入进行测试。在部署前达到95%的成功率。' }, { q: '我可以跨不同模型重复使用架构吗？', a: '可以，但要谨慎。定义、测试和记录差异。' }, { q: 'JSON模式的性能成本是什么？', a: '最少。原生JSON模式影响可以忽略不计。' } ] }, sources: { title: '来源', items: [ '[OpenAI JSON模式文档](https://platform.openai.com/docs/guides/json-mode) — 官方指南。', '[Anthropic指南](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) — 文档。', '[Google Gemini API](https://ai.google.dev/gemini-2/docs/structured-output) — 原生JSON支持。', '[JSON架构规范](https://json-schema.org/specification.html) — 标准规范。' ] } } },
+  ko: {
+    theme: 'Techniques',
+    title: 'LLM의 구조화된 출력: JSON 모드, 예시 및 사용 시점',
+    intro: '구조화된 출력과 JSON 모드는 언어 모델의 자유형 결과물을 신뢰할 수 있는 기계 판독 가능한 형식으로 변환하여 데이터베이스, API 및 자동화 워크플로우에 원활하게 통합될 수 있도록 합니다. 유효한 JSON을 강제하는 프롬프트를 설계하는 방법, JSON 모드와 함수 호출 및 스키마 프롬프팅을 비교하는 방법, 그리고 사용 사례에 적합한 방법을 결정하는 방법을 학습하십시오.',
+    publishDate: '2026-03-26',
+    dateModified: '2026-04-05',
+    readTime: '10분 분량',
+    seoTitle: 'LLM 구조화 출력과 JSON 모드: 완전 가이드',
+    metaDescription: '구조화된 출력, JSON 모드 또는 함수 호출 중 언제 사용해야 하는지 학습하십시오. 모델별 JSON 준수를 비교하고 API용 스키마 설계를 마스터하십시오.',
+    educationalLevel: 'Intermediate',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '구조화된 출력과 JSON 모드: AI에서 사용 가능한 데이터 가져오기',
+      description: '프롬프트에서 구조화된 출력과 JSON 모드를 마스터하십시오. 스키마 설계, 유효한 JSON 강제, 모델 준수 비교 및 프로덕션 시스템의 일반적인 오류를 피하는 방법을 학습하십시오.',
+      datePublished: '2026-03-26',
+      dateModified: '2026-04-05',
+      keywords: ['구조화된 출력', 'JSON 모드', '프롬프트 엔지니어링', '스키마 설계', '기계 판독 가능한 출력', 'JSON 검증', '프롬프트 템플릿'],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/ko/prompt-engineering/structured-output-json-mode',
+      inLanguage: 'ko',
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: '구조화된 출력과 JSON 모드 사용 방법',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'JSON 모드 선택', text: '데이터 추출 및 기계 판독 가능한 출력의 경우 OpenAI GPT-5.5, Anthropic Claude, Google Gemini 및 기타 주요 제공업체에서 사용할 수 있는 JSON 모드를 사용하십시오. 이렇게 하면 모델이 산문이 아닌 유효한 JSON을 반환하게 됩니다.' },
+        { '@type': 'HowToStep', position: 2, name: '스키마 정의', text: '필드 이름, 데이터 유형 및 제약 조건을 포함하여 JSON 스키마를 명시적으로 정의하십시오.' },
+        { '@type': 'HowToStep', position: 3, name: '출력 예시 제공', text: '원하는 정확한 JSON 구조의 예시를 제공하십시오. 예시는 스키마 설명만보다 더 강력합니다.' },
+        { '@type': 'HowToStep', position: 4, name: '중첩된 구조 처리', text: '배열 내의 객체의 경우 계층 구조에 대해 명시적으로 설명하십시오. 중첩된 배열이 포함된 완전한 JSON 예시를 제공하십시오.' },
+        { '@type': 'HowToStep', position: 5, name: 'JSON 출력 검증', text: '다운스트림 시스템에서 사용하기 전에 JSON 출력을 검증하십시오. 구문 분석하고 확인하십시오: (1) 유효한 JSON 문법, (2) 모든 필수 필드 존재, (3) 데이터 유형이 예상과 일치.' },
+      ],
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        { '@type': 'Question', name: '구조화된 출력과 JSON 모드의 차이는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '구조화된 출력은 모델에 고정된 형식(목록, 표, 키-값 쌍 또는 JSON)으로 데이터를 반환하도록 요청하는 더 넓은 범주입니다. JSON 모드는 종종 API 수준 보장과 함께 유효한 JSON 출력을 강제하는 더 엄격한 변형입니다.' } },
+        { '@type': 'Question', name: '모든 LLM이 JSON 모드를 지원합니까?', acceptedAnswer: { '@type': 'Answer', text: '아닙니다. OpenAI GPT-5.5, Anthropic Claude Sonnet 4.6+ 및 Google Gemini는 기본 JSON 모드를 지원합니다. 이전 모델 및 오픈 소스 LLM은 프롬프트 기반 적용이 필요할 수 있습니다.' } },
+        { '@type': 'Question', name: '기본 JSON 모드 없이 JSON 전용 응답을 강제하는 방법은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '프롬프트 엔지니어링을 사용하십시오: (1) "유효한 JSON만 출력"을 명시적으로 선언, (2) 상세한 스키마와 예시 제공, (3) "JSON 외부에 텍스트를 포함하지 마십시오"와 같은 지시사항 추가.' } },
+        { '@type': 'Question', name: '모델이 유효하지 않은 JSON을 반환하면 어떻게 됩니까?', acceptedAnswer: { '@type': 'Answer', text: '파서를 사용하여 JSON을 검증하십시오. 실패하면 더 명확한 프롬프트로 요청을 재시도하거나 수동 추출로 되돌아가십시오.' } },
+        { '@type': 'Question', name: '복잡한 문서에 구조화된 출력을 사용할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예. 복잡한 작업을 단계로 나누십시오: 먼저 핵심 필드를 추출한 다음 검증하고 선택적으로 다운스트림 시스템으로 변환하십시오.' } },
+        { '@type': 'Question', name: '구조화된 출력에서 누락되거나 모호한 데이터를 처리하는 방법은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '스키마에서 대체 동작을 정의하십시오: 빈 문자열, null 값 또는 "unknown"과 같은 특수 마커를 사용하십시오. 지시사항을 추가하십시오: "값이 모호하면 추측하는 대신 null을 사용하십시오."' } },
+        { '@type': 'Question', name: 'JSON 모드가 규정 준수(GDPR, CCPA)의 영향을 받습니까?', acceptedAnswer: { '@type': 'Answer', text: 'JSON 모드 자체는 중립적입니다. 그러나 구조화된 출력은 추출, 변환 및 기록된 데이터를 체계적으로 추적할 수 있으므로 규정 준수에 유익합니다.' } },
+        { '@type': 'Question', name: 'JSON 모드 프롬프트를 테스트하는 방법은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '다양한 입력으로 테스트하십시오: 에지 케이스, 모호한 데이터 및 실제 예시. 출력을 구문 분석하고 확인하십시오: (1) 유효한 JSON, (2) 올바른 스키마, (3) 예상 데이터 유형. 프로덕션 배포 전 ≥95% 성공률을 목표로 하십시오.' } },
+        { '@type': 'Question', name: '다양한 모델 간에 구조화된 출력 스키마를 재사용할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예, 주의를 기울이십시오. 스키마를 한 번 정의하고 모델 간에 테스트하십시오. 이전 또는 소규모 모델에 대한 프롬프트 조정이 필요할 수 있습니다.' } },
+        { '@type': 'Question', name: 'JSON 모드의 성능 비용은 얼마입니까?', acceptedAnswer: { '@type': 'Answer', text: '최소한입니다. 기본 JSON 모드(OpenAI, Anthropic, Google)는 성능에 미치는 영향이 미미합니다.' } },
+      ],
+    },
+    toc: [
+      { label: '구조화된 출력이란', anchor: '#what-structured-output-is' },
+      { label: 'JSON 모드란', anchor: '#what-json-mode-is' },
+      { label: '구조화된 출력과 JSON 모드가 중요한 이유', anchor: '#why-structured-output-and-json-mode-matter' },
+      { label: '모델 비교: 제공업체별 JSON 준수', anchor: '#model-comparison-json-compliance-by-provider' },
+      { label: 'JSON 모드 vs 함수 호출 vs 스키마 프롬프팅', anchor: '#json-mode-vs-function-calling-vs-schema-prompting' },
+      { label: '예시: 자유 텍스트 vs 구조화된 JSON', anchor: '#example-free-text-vs-structured-json' },
+      { label: '모범 사례', anchor: '#best-practices-for-structured-output-and-json-mode' },
+      { label: '규제 환경에서의 구조화된 출력', anchor: '#structured-output-in-regulated-environments' },
+      { label: '일반적인 실수', anchor: '#common-mistakes' },
+      { label: 'JSON 모드 vs 대안 사용 시점', anchor: '#when-to-use-json-mode-vs-alternatives' },
+      { label: '구조화된 출력을 언제 사용해야 합니까?', anchor: '#when-should-you-use-structured-output' },
+      { label: '구조화된 출력과 JSON 모드 사용 방법', anchor: '#how-to-use-structured-output-and-json-mode' },
+      { label: '관련 읽기', anchor: '#related-reading' },
+      { label: '자주 묻는 질문', anchor: '#frequently-asked-questions' },
+      { label: '출처', anchor: '#sources' },
+    ],
+    sections: {
+      definition: {
+        content: [
+          '**구조화된 출력은 언어 모델이 사전 정의된 형식(예: JSON)으로 데이터를 반환하도록 강제하는 방법으로, 신뢰할 수 있는 파싱, 자동화 및 소프트웨어 시스템 통합을 가능하게 합니다.** 자유 형식 텍스트와 달리 다운스트림 도구가 수동 정리 없이 처리할 수 있는 엄격한 필드 이름, 데이터 유형 및 스키마를 강제합니다.',
+        ],
+      },
+      exampleBlock: {
+        content: [
+          '다음은 JSON 형식의 구조화된 출력의 간단한 예시입니다:',
+        ],
+        codeBlock: '{\n  "task": "summarize",\n  "title": "Quick AI Guide",\n  "summary": "This article explains structured output and JSON mode.",\n  "key_points": ["JSON enforces format", "Reduces parsing errors", "Enables automation"],\n  "audience_level": "intermediate",\n  "confidence": 0.95\n}',
+        codeLanguage: 'json',
+      },
+      keyTakeaways: {
+        isTldr: true,
+        content: [
+          '**핵심 내용 — 구조화된 출력에 대해 알아야 할 사항:**',
+        ],
+        items: [
+          '**신뢰성 향상**: 구조화된 출력은 엄격한 스키마를 강제하여 파싱 오류와 수동 데이터 정리를 줄입니다.',
+          '**자동화 활성화**: JSON 모드는 추출된 필드(우선순위, 범주, 긴급도)를 기반으로 조건부 논리를 트리거합니다.',
+          '**API 준비 완료**: 재포맷 없이 데이터베이스, CRM 및 비즈니스 시스템과 직접 통합됩니다.',
+          '**모델 의존적**: 기본 JSON 모드는 GPT-5.5, Claude, Gemini에서 사용 가능합니다. 이전/오픈 소스 모델은 프롬프트 엔지니어링이 필요합니다.',
+          '**결정론적 작업에 최적**: API, 자동화, 데이터 파이프라인. 창의적 글쓰기는 피하십시오.',
+          '**검증 필요**: 다운스트림 사용 전에 항상 JSON 출력을 파싱하고 검증하십시오.',
+          '**모델 간 확장 가능**: 스키마를 한 번 정의하고 OpenAI, Anthropic, Google 및 오픈 소스 제공업체 간의 차이를 테스트하고 문서화하십시오.',
+        ],
+      },
+      whatIsStructured: {
+        title: '구조화된 출력이란',
+        content: [
+          '**구조화된 출력은 다운스트림 도구가 결과를 안정적으로 파싱할 수 있도록 모델에 목록, 표 또는 JSON과 같은 고정된 스키마를 따르도록 요청하는 것을 의미합니다.** 자유 형식 단락 대신 필드, 유형 및 허용된 값을 정의합니다.',
+          '구조화된 출력은 여러 형태를 취할 수 있습니다:',
+        ],
+        items: [
+          '고정된 수의 항목이 있는 글머리 기호 목록.',
+          '특정 열이 있는 Markdown 표.',
+          '단순 속성을 위한 키-값 쌍.',
+          '사전 정의된 키가 있는 완전한 JSON 객체 또는 배열.',
+        ],
+      },
+      structuredGoal: {
+        content: [
+          '목표는 항상 동일합니다: 모호한 설명("회의에 대한 몇 가지 메모")을 예측 가능한 형태("제목, 날짜, 참석자, 결정사항, 위험요소")로 변환하는 것입니다.',
+        ],
+      },
+      whatIsJSON: {
+        title: 'JSON 모드란',
+        content: [
+          '**JSON 모드는 모델이 유효한 JSON만 반환하도록 지시 또는 구성되는 구조화된 출력의 더 엄격한 변형입니다.** JSON 모드에서는 모델이 출력하는 모든 것이 추가 정리 없이 JSON으로 파싱 가능해야 합니다.',
+          '일반적인 JSON 스키마는 다음과 같습니다:',
+        ],
+        codeBlock: '{\n  "title": "string",\n  "summary": "string",\n  "tags": ["string"],\n  "priority": "low | medium | high"\n}',
+        codeLanguage: 'json',
+      },
+      jsonModeApproach: {
+        content: [
+          '프롬프트에 해당 스키마를 반영하고 모델에 채우도록 요청합니다. 일부 플랫폼은 추가 주석을 줄이기 위해 JSON 전용 응답을 강제하는 특수 설정 또는 API도 제공합니다.',
+        ],
+      },
+      whyItMatters: {
+        title: '구조화된 출력과 JSON 모드가 중요한 이유',
+        content: [
+          '**구조화된 출력과 JSON 모드가 중요한 이유는 단순한 채팅 도우미가 아닌 더 큰 시스템의 구성 요소로 언어 모델을 변환할 수 있기 때문입니다.** 출력이 예측 가능하면 다음을 수행할 수 있습니다:',
+        ],
+        items: [
+          '결과를 데이터베이스, CRM 또는 분석 도구에 직접 제공합니다.',
+          '`priority`, `status` 또는 `confidence`와 같은 필드를 기반으로 자동화를 트리거합니다.',
+          '수동 포맷 없이 카드, 표 또는 대시보드에 모델 결과를 표시하는 UI를 구축합니다.',
+        ],
+      },
+      debuggingBenefit: {
+        content: [
+          '또한 프롬프트 디버깅을 더 쉽게 만듭니다. 구조가 깨지면 문제가 프롬프트나 스키마에 있다는 것을 알 수 있으며, "품질"이라는 모호한 차원이 아닙니다.',
+        ],
+      },
+      jsonVsFunctionCalling: {
+        title: 'JSON 모드 vs 함수 호출 vs 스키마 프롬프팅',
+        content: [
+          '**LLM에서 구조화된 출력을 얻기 위한 세 가지 방법이 존재합니다. 각각은 서로 다른 강점과 약점을 가지고 있습니다:**',
+        ],
+        items: [
+          '**JSON 모드**: 모델이 유효한 JSON만 출력합니다. 최적 용도: 데이터 추출, 분류, 요약. 제약사항: 출력 형식에만 제한되며 도구 실행 없음.',
+          '**함수 호출**: 모델이 호출할 함수를 선택하고 JSON으로 인수를 제공합니다. 최적 용도: API 통합, 도구 사용, 에이전틱 워크플로우. 제약사항: 사전 정의된 함수 스키마 필요.',
+          '**스키마 프롬프팅**: 모델에 스키마를 따르도록 요청하는 명시적 지시사항과 예시. 최적 용도: 유연성, 오픈 소스 모델, 사용자 지정 형식. 제약사항: ~80–85% 신뢰성, API 수준 보장 없음.',
+        ],
+      },
+      example: {
+        title: '예시: 자유 텍스트 vs 구조화된 JSON',
+        content: [
+          '**동일한 작업에 대한 자유 형식 프롬프트와 구조화된 JSON 프롬프트를 비교하면 차이가 명확해집니다.** 여기서는 고객 이메일을 분류하고 요약합니다.',
+          '**[나쁜 프롬프트]**',
+          '"이 고객 이메일을 읽고 그들이 원하는 것을 요약하십시오."',
+          '**[좋은 프롬프트 – JSON 모드]**',
+          '"귀하는 고객 지원 담당자입니다. 아래 고객 이메일을 읽고 핵심 정보를 JSON 객체로 추출하십시오. 요구사항: 큰따옴표 키와 문자열 값을 사용하여 유효한 JSON만 출력하십시오. JSON 외부에 설명이나 추가 텍스트를 포함하지 마십시오. 값이 누락된 경우 빈 문자열을 사용하십시오. JSON 스키마: {\n  \"issue_type\": \"string\",\n  \"urgency\": \"low | medium | high\",\n  \"summary\": \"string (최대 25 단어)\",\n  \"customer_sentiment\": \"negative | neutral | positive\"\n} 고객 이메일: [이메일 텍스트 여기에 붙여넣기]"',
+          '"좋은" 버전은 스키마, 유효한 값 및 JSON 전용 요구사항을 정의하여 출력을 파싱하고 다른 시스템에서 사용하기 쉽게 만듭니다.',
+        ],
+      },
+      bestPractices: {
+        title: '구조화된 출력과 JSON 모드의 모범 사례',
+        content: [
+          '**신뢰할 수 있는 구조화된 출력을 얻으려면 프롬프트에서 명시적이고 일관되며 엄격해야 합니다.** 몇 가지 관행이 많은 도움이 됩니다:',
+        ],
+        items: [
+          '열거형에 대한 허용된 값을 포함하여 예상하는 정확한 스키마를 표시하십시오.',
+          'JSON(또는 구조) 외에는 아무것도 반환되어서는 안 된다는 것을 명확히 명시하십시오.',
+          '짧고 명확한 키 이름을 사용하십시오(예: `issue_type`, `urgency`, `summary`).',
+          '작업이 복잡하거나 민감한 경우 유효한 출력의 예시를 추가하십시오.',
+          '중첩된 구조의 경우 단계별로 구성하고 실제 입력으로 테스트하십시오.',
+          '스키마를 프롬프트에 직접 인코딩하는 SPECS와 같은 명세 중심 프레임워크나 형식 제약이 있는 RTF를 사용하십시오.',
+        ],
+      },
+      practicesAddendum: {
+        content: [
+          '여전히 포맷 문제가 발생하면 "확실하지 않은 경우 추측하는 대신 필드를 빈 문자열로 남겨두십시오."와 같은 간단한 지시사항을 추가할 수 있습니다. 구조화된 출력은 추출된 데이터를 팩트 체크하기 위한 RAG(검색 증강 생성)와 결합할 때 가장 잘 작동합니다. 추출된 데이터가 사내 인프라를 벗어날 수 없는 경우, 동일한 JSON 모드 패턴을 온프레미스 벡터 저장소에 연결할 수 있습니다.',
+        ],
+      },
+      modelComparison: {
+        title: '모델 비교: 제공업체별 JSON 준수',
+        content: [
+          '**다양한 모델은 기본 JSON 모드 지원 수준이 다릅니다.** 2026년 4월 기준, 주요 제공업체의 순위는 다음과 같습니다:',
+        ],
+        columns: ['모델', '기본 JSON 모드', '프롬프트 전용 준수', '비고'],
+        rows: [
+          { '모델': 'OpenAI GPT-5.5', '기본 JSON 모드': '예 (강제)', '프롬프트 전용 준수': '불필요', '비고': 'JSON 모드의 업계 표준; 99%+ 성공률.' },
+          { '모델': 'Anthropic Claude Sonnet 4.6', '기본 JSON 모드': '예 (강제)', '프롬프트 전용 준수': '불필요', '비고': '우수한 JSON 준수; 복잡한 중첩 구조 지원.' },
+          { '모델': 'Google Gemini 2.0', '기본 JSON 모드': '예 (강제)', '프롬프트 전용 준수': '불필요', '비고': '기본 JSON 지원; 빠른 추론.' },
+          { '모델': 'Meta Llama 3.3 70B', '기본 JSON 모드': '부분적', '프롬프트 전용 준수': '강력 권장', '비고': '오픈 소스; 상세한 프롬프트와 예시로 잘 작동.' },
+          { '모델': 'Mistral Large', '기본 JSON 모드': '부분적', '프롬프트 전용 준수': '권장', '비고': '양호한 JSON 동작; 특정 스키마로 테스트하십시오.' },
+          { '모델': '이전 GPT-3.5, Claude 2', '기본 JSON 모드': '아니요', '프롬프트 전용 준수': '필요', '비고': '강력한 프롬프트 엔지니어링 필요; ~80–85% 성공률.' },
+          { '모델': '소규모 오픈 소스 모델 (<13B)', '기본 JSON 모드': '아니요', '프롬프트 전용 준수': '예시와 함께 필요', '비고': '상세한 스키마와 여러 예시 필요; ~60–70% 성공률.' },
+        ],
+      },
+      regulatedEnvironments: {
+        title: '규제 환경에서의 구조화된 출력',
+        content: [
+          '**구조화된 출력은 일관된 데이터 추출, 감사 추적 및 규정 준수 문서를 강제하기 때문에 규제된 산업에서 특히 가치 있습니다.** 지역마다 다른 요구사항이 있습니다:',
+        ],
+        items: [
+          '**EU (GDPR, AI 법)**: 구조화된 출력은 체계적인 데이터 분류 및 삭제권 추적을 가능하게 합니다. JSON 모드를 사용하면 어떤 필드에 개인 데이터가 포함되는지 태그를 지정하여 DPIA 및 규정 준수 감사를 용이하게 합니다.',
+          '**일본 (METI AI 지침, APPI)**: 명확한 스키마 정의가 있는 구조화된 추출은 투명성 및 책임 요구사항을 지원합니다. 일본의 AI 법 준수는 종종 데이터 처리 방식을 문서화하도록 요구하며, 구조화된 출력은 명확한 감사 추적을 제공합니다.',
+          '**중국 (CAC 규정, 데이터 보안법)**: 구조화된 출력은 콘텐츠 조정 및 데이터 거주 로깅에 도움이 됩니다. JSON 모드를 사용하면 CAC 표준 준수를 위해 민감한 콘텐츠(금융 데이터, 개인 정보)를 체계적으로 분류할 수 있습니다.',
+        ],
+      },
+      commonMistakes: {
+        title: '일반적인 실수',
+        content: [
+          '**구조화된 출력과 JSON 모드를 구현할 때 다음과 같은 빈번한 오류를 피하십시오:**',
+        ],
+        items: [
+          '**모호한 스키마**: 스키마를 정의하지 않고 "핵심 포인트를 추출하십시오"라고 말하면 일관성 없는 출력이 발생합니다. 항상 정확한 필드 이름, 유형 및 제약 조건을 지정하십시오.',
+          '**누락된 예시**: 예시 없이 스키마 설명만 제공하면 20–30% 실패율이 발생합니다. 항상 유효한 출력의 1–3개 예시를 제시하십시오.',
+          '**출력 검증 실패**: 모델이 항상 유효한 JSON을 반환할 것이라고 가정하면 프로덕션에서 파싱 오류가 발생합니다. 항상 검증하고 파싱 실패를 우아하게 처리하십시오.',
+          '**에지 케이스 미처리**: 누락되거나 모호하거나 범위를 벗어난 필드는 정의된 대체 동작(null, 빈 문자열 또는 기본값)이 있어야 합니다.',
+          '**쉬운 입력으로만 테스트**: 실제 데이터는 지저분합니다. 에지 케이스로 스키마를 테스트하십시오: 불완전한 이메일, 특수 문자, 혼합 언어, 매우 긴 입력.',
+        ],
+      },
+      whenToUseJsonMode: {
+        title: 'JSON 모드 vs 대안 사용 시점',
+        content: [
+          '**엄격한 스키마 적용 및 결정론적 출력이 필요할 때 JSON 모드를 선택하십시오. 창의성과 개방형 추론이 중요할 때는 피하십시오.**',
+        ],
+        items: [
+          '**✓ JSON 모드 사용**: 엄격한 스키마 필요, 자동화 파이프라인, API 통합, 데이터 추출, 분류 작업, 결정론적 출력, 검증이 필요한 프로덕션 시스템.',
+          '**✗ JSON 모드 피하기**: 창의적 글쓰기, 개방형 추론, 브레인스토밍, 에세이, 코드 생성(함수 호출이 더 나음), 철학적 질문, 서술적 콘텐츠.',
+          '**대안: 함수 호출 사용** 도구 통합 및 에이전틱 워크플로우가 필요할 때(모델이 호출할 함수를 선택).',
+          '**대안: 스키마 프롬프팅 사용** 유연성이 필요하거나 오픈 소스 모델을 사용하거나 API 수준 보장이 필요하지 않을 때.',
+        ],
+      },
+      whenToUseStructuredOutput: {
+        title: '구조화된 출력을 언제 사용해야 합니까?',
+        content: [
+          '**구조화된 출력은 세 가지 주요 시나리오에서 빛을 발합니다. 결정론적이고 기계 판독 가능한 결과가 필요할 때 사용하십시오:**',
+        ],
+        items: [
+          '**API 및 통합**: LLM 출력을 다운스트림 시스템(데이터베이스, CRM, 대시보드)에 직접 연결합니다. 구조화된 출력은 파싱 오류 및 수동 정리를 방지합니다. 예시: 이메일에서 고객 데이터를 추출하여 CRM에 작성.',
+          '**자동화 및 워크플로우**: 모델 출력 필드(우선순위, 긴급도, 범주)를 기반으로 작업을 트리거합니다. JSON 모드는 조건부 논리를 위한 신뢰할 수 있는 필드 추출을 보장합니다. 예시: 긴급도 수준별로 지원 티켓 라우팅.',
+          '**데이터 파이프라인**: 대규모로 대량 데이터(문서, 이메일, 로그)를 처리합니다. 일관된 스키마는 배치 처리, 검증 및 오류 처리를 가능하게 합니다. 예시: 10,000개의 연구 논문에서 메타데이터를 검색 가능한 데이터베이스로 추출.',
+        ],
+      },
+      howToStart: {
+        title: '구조화된 출력과 JSON 모드 사용 방법',
+        numberedItems: [
+          '**데이터 추출 및 기계 판독 가능한 출력의 경우 JSON 모드(OpenAI GPT-5.5, Anthropic Claude, Google Gemini 등에서 사용 가능)를 사용하십시오.** 이렇게 하면 모델이 산문이 아닌 유효한 JSON을 반환하게 됩니다. 예시: 제품 정보를 키(이름, 가격, 설명, 평점)가 있는 JSON으로 추출.',
+          '**필드 이름, 데이터 유형 및 제약 조건을 포함하여 JSON 스키마를 명시적으로 정의하십시오.** 예시: { "name": string, "price": number (≥ 0), "in_stock": boolean, "tags": array of strings }.',
+          '**원하는 정확한 JSON 구조의 예시를 제공하십시오.** 예시: { "issue": "memory leak", "severity": "critical", "suggested_fix": "...", "code_snippet": "..." }. 예시는 스키마 설명보다 더 강력합니다.',
+          '**중첩된 구조(배열 내의 객체)의 경우 계층 구조에 대해 명시적으로 설명하십시오.** 중첩된 배열을 포함한 완전한 JSON 예시를 제공하십시오.',
+          '**다운스트림 시스템에서 사용하기 전에 JSON 출력을 검증하십시오.** 반환된 JSON을 파싱하고 확인하십시오: (1) 유효한 JSON 문법, (2) 모든 필수 필드 존재, (3) 데이터 유형이 예상과 일치. 파싱 오류를 우아하게 처리하십시오.',
+        ],
+      },
+      howToStep4Code: {
+        content: [
+          '**다음은 올바른 계층 구조를 보여주는 중첩된 배열이 있는 완전한 JSON 예시입니다:**',
+        ],
+        codeBlock: '{\n  "articles": [\n    {\n      "title": "string",\n      "author": "string",\n      "citations": [\n        {\n          "title": "string",\n          "year": "number"\n        }\n      ]\n    }\n  ]\n}',
+        codeLanguage: 'json',
+      },
+      relatedReading: {
+        title: '관련 읽기',
+        content: [
+          '**관련 프롬프트 엔지니어링 주제로 지식을 확장하십시오:**',
+        ],
+        items: [
+          '[제약 프롬프팅](/ko/prompt-engineering/constrained-prompting) — 특정 출력 형식 및 토큰 예산을 강제합니다.',
+          '[SPECS 프레임워크](/ko/prompt-engineering/specs-framework) — 신뢰할 수 있는 모델 동작을 위한 명세 중심 프롬프트.',
+          '[RAG 설명](/ko/prompt-engineering/rag-explained) — 구조화된 추출과 실시간 데이터 검색을 결합합니다.',
+          '[Chain of Thought](/ko/prompt-engineering/chain-of-thought) — 구조화된 출력을 반환하기 전에 단계별로 추론합니다.',
+          '[프롬프트 템플릿](/ko/prompt-engineering/prompt-templates) — 일반적인 구조화된 출력 작업을 위한 재사용 가능한 패턴.',
+          '[Zero-Shot vs Few-Shot](/ko/prompt-engineering/zero-shot-vs-few-shot) — 예시(few-shot)가 JSON 준수를 향상시키는 시점 이해.',
+        ],
+      },
+      faq: {
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: '구조화된 출력과 JSON 모드의 차이는 무엇입니까?', a: '구조화된 출력은 모델에 고정된 형식(목록, 표, 키-값 쌍 또는 JSON)으로 데이터를 반환하도록 요청하는 더 넓은 범주입니다. JSON 모드는 종종 모델 제공업체의 API 수준 보장과 함께 유효한 JSON 출력을 강제하는 더 엄격한 변형입니다.' },
+          { q: '모든 LLM이 JSON 모드를 지원합니까?', a: '아닙니다. OpenAI GPT-5.5, Anthropic Claude Sonnet 4.6+ 및 Google Gemini는 기본 JSON 모드를 지원합니다. 이전 모델 및 오픈 소스 LLM은 프롬프트 기반 적용이 필요할 수 있습니다(예: 지시사항과 예시에 스키마 지정).' },
+          { q: '기본 JSON 모드 없이 JSON 전용 응답을 강제하는 방법은 무엇입니까?', a: '프롬프트 엔지니어링을 사용하십시오: (1) "유효한 JSON만 출력"을 명시적으로 선언, (2) 상세한 스키마와 예시 제공, (3) "JSON 외부에 텍스트를 포함하지 마십시오"와 같은 지시사항 추가. 좋은 예시로 성공률이 크게 향상됩니다.' },
+          { q: '모델이 유효하지 않은 JSON을 반환하면 어떻게 됩니까?', a: '파서를 사용하여 JSON을 검증하십시오. 실패하면 더 명확한 프롬프트로 요청을 재시도하거나 수동 추출로 되돌아가십시오. 강력한 프롬프트 엔지니어링과 스키마 예시로 실패율이 낮습니다(잘 설계된 프롬프트에서 일반적으로 <5%).' },
+          { q: '복잡한 문서에 구조화된 출력을 사용할 수 있습니까?', a: '예. 복잡한 작업을 단계로 나누십시오: 먼저 핵심 필드를 추출한 다음 검증하고 선택적으로 다운스트림 시스템으로 변환하십시오. 대용량 문서를 청크로 나누고 별도로 처리하면 신뢰성이 향상되고 토큰 사용량이 줄어드는 경우가 많습니다.' },
+          { q: '구조화된 출력에서 누락되거나 모호한 데이터를 처리하는 방법은 무엇입니까?', a: '스키마에서 대체 동작을 정의하십시오: 빈 문자열, null 값 또는 "unknown"과 같은 특수 마커를 사용하십시오. 지시사항을 추가하십시오: "값이 모호하거나 누락된 경우 추측하는 대신 null을 사용하십시오."' },
+          { q: 'JSON 모드가 규정 준수(GDPR, CCPA)의 영향을 받습니까?', a: 'JSON 모드 자체는 중립적입니다. 그러나 구조화된 출력은 추출, 변환 및 기록된 데이터를 체계적으로 추적할 수 있어 감사 추적 및 규정 보고에 중요하므로 규정 준수에 유익합니다.' },
+          { q: 'JSON 모드 프롬프트를 테스트하는 방법은 무엇입니까?', a: '다양한 입력으로 테스트하십시오: 에지 케이스, 모호한 데이터 및 실제 예시. 출력을 파싱하고 확인하십시오: (1) 유효한 JSON, (2) 올바른 스키마, (3) 예상 데이터 유형. 프로덕션 배포 전 ≥95% 성공률을 목표로 하십시오.' },
+          { q: '다양한 모델 간에 구조화된 출력 스키마를 재사용할 수 있습니까?', a: '예, 주의를 기울이십시오. 스키마를 한 번 정의하고 모델 간에 테스트하십시오. 이전 또는 소규모 모델에 대한 프롬프트 조정이 필요할 수 있습니다. 모델별 차이점과 성공률을 문서화하십시오.' },
+          { q: 'JSON 모드의 성능 비용은 얼마입니까?', a: '최소한입니다. 기본 JSON 모드(OpenAI, Anthropic, Google)는 성능에 미치는 영향이 미미합니다. 프롬프트 전용 적용은 스키마 설명 오버헤드로 인해 5–10% 지연 시간이 추가될 수 있지만 안전성 향상이 일반적으로 정당화됩니다.' },
+        ],
+      },
+      sources: {
+        title: '출처',
+        items: [
+          '[OpenAI JSON 모드 문서](https://platform.openai.com/docs/guides/json-mode) — OpenAI API의 JSON 모드에 대한 공식 가이드.',
+          '[Anthropic 구조화된 출력 가이드](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) — Claude의 구조화된 출력에 대한 Anthropic 문서.',
+          '[Google Gemini API – 구조화된 출력](https://ai.google.dev/gemini-2/docs/structured-output) — Gemini 2.0의 Google 기본 JSON 모드 지원.',
+          '[JSON Schema 사양](https://json-schema.org/specification.html) — JSON Schema 설계 및 검증을 위한 표준 사양.',
+        ],
+      },
+    },
+  },
+  zh: { theme: '技术', title: 'LLM中的结构化输出：JSON模式、示例及使用时机', intro: '结构化输出和JSON模式将语言模型的输出转变为可靠的机器可读格式，可以无缝集成到数据库、API和自动化工作流中。学习如何设计强制有效JSON输出的提示词，比较JSON模式与函数调用与架构提示词，并确定哪种方法适合您的用例。', publishDate: '2026-03-26', dateModified: '2026-04-05', readTime: '10分钟阅读', seoTitle: 'LLM中的结构化输出和JSON模式：何时使用、示例和比较', metaDescription: '学习何时使用结构化输出、JSON模式或函数调用。按模型比较JSON合规性，查看真实示例，掌握API的架构设计。', educationalLevel: 'Intermediate', schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '结构化输出和JSON模式：从AI获取可用数据', description: '掌握提示词中的结构化输出和JSON模式。学习架构设计、强制有效JSON、比较模型合规性以及避免生产系统中的常见错误。', datePublished: '2026-03-26', dateModified: '2026-04-05', keywords: ['结构化输出', 'JSON模式', '提示词工程', '架构设计', '机器可读输出', 'JSON验证', '提示词模板'], author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } }, howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: '如何使用结构化输出和JSON模式', step: [ { '@type': 'HowToStep', position: 1, name: '选择JSON模式', text: '对于数据提取和机器可读输出，请使用OpenAI GPT-5.5、Anthropic Claude、Google Gemini及其他主要提供商提供的JSON模式。这可确保模型返回有效的JSON，而不是文本。' }, { '@type': 'HowToStep', position: 2, name: '定义架构', text: '显式定义JSON架构。包括字段名称、数据类型和约束。' }, { '@type': 'HowToStep', position: 3, name: '提供输出示例', text: '提供您想要的确切JSON结构的示例。示例比架构描述本身更强大。' }, { '@type': 'HowToStep', position: 4, name: '处理嵌套结构', text: '对于数组中的对象，明确说明层次结构。提供完整的JSON示例。' }, { '@type': 'HowToStep', position: 5, name: '验证JSON输出', text: '在下游使用前验证JSON输出。检查有效的JSON、正确的架构和预期的数据类型。' } ] }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [ { '@type': 'Question', name: '结构化输出和JSON模式之间有什么区别？', acceptedAnswer: { '@type': 'Answer', text: '结构化输出是要求模型以固定格式返回数据的更广泛类别。JSON模式是更严格的变体，强制有效的JSON输出。' } }, { '@type': 'Question', name: '所有LLM都支持JSON模式吗？', acceptedAnswer: { '@type': 'Answer', text: '否。OpenAI GPT-5.5、Anthropic Claude Sonnet 4.6+和Google Gemini支持原生JSON模式。较旧的模型和开源LLM可能需要基于提示词的应用。' } }, { '@type': 'Question', name: '在没有原生JSON模式的情况下如何强制仅JSON响应？', acceptedAnswer: { '@type': 'Answer', text: '使用提示词工程：明确声明"仅输出有效的JSON"，提供详细的架构和示例。' } }, { '@type': 'Question', name: '如果模型返回无效的JSON会发生什么？', acceptedAnswer: { '@type': 'Answer', text: '在您的一方验证JSON。如果失败，请用更清晰的提示词重试请求或回到手动提取。' } }, { '@type': 'Question', name: '我可以将结构化输出用于复杂的文档吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。将复杂任务分解成步骤：首先提取关键字段，然后验证，然后可选地转换为下游系统。' } }, { '@type': 'Question', name: '我如何处理结构化输出中缺失或模糊的数据？', acceptedAnswer: { '@type': 'Answer', text: '在架构中定义后备行为：使用空字符串、null值或特殊标记（如"未知"）。' } }, { '@type': 'Question', name: 'JSON模式是否受到监管合规性（GDPR、CCPA）的影响？', acceptedAnswer: { '@type': 'Answer', text: 'JSON模式本身是中立的。但是，结构化输出对合规性有益，因为它可以系统地跟踪提取、转换和记录的数据。' } }, { '@type': 'Question', name: '我如何测试JSON模式提示词？', acceptedAnswer: { '@type': 'Answer', text: '使用不同的输入进行测试：边界案例、模糊数据和真实示例。验证有效的JSON、正确的架构和预期的数据类型。' } }, { '@type': 'Question', name: '我可以在不同的模型中重复使用结构化输出架构吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，但要谨慎。定义一次架构，在模型中测试。您可能需要为较旧或较小的模型调整提示词。' } }, { '@type': 'Question', name: 'JSON模式的性能成本是什么？', acceptedAnswer: { '@type': 'Answer', text: '最少。原生JSON模式（OpenAI、Anthropic、Google）的性能影响可以忽略不计。' } } ] }, sections: { definition: { content: [ '**结构化输出是强制语言模型以预定义格式（如JSON）返回数据的一种方法。** 它不同于自由形式文本，在于它强制严格的字段名称、数据类型和架构，下游工具可以毫不费力地处理。' ] }, exampleBlock: { content: [ '以下是JSON格式的结构化输出的简单示例：' ], codeBlock: '{\n  "task": "summarize",\n  "title": "Quick AI Guide",\n  "summary": "This article explains structured output and JSON mode.",\n  "key_points": ["JSON enforces format", "Reduces parsing errors", "Enables automation"],\n  "audience_level": "intermediate",\n  "confidence": 0.95\n}', codeLanguage: 'json' }, keyTakeaways: { isTldr: true, content: [ '**关键点：关于结构化输出您需要了解的内容：**' ], items: [ '**提高可靠性** : 结构化输出通过强制严格的架构来减少解析错误和手动数据清理。', '**启用自动化** : JSON模式基于提取的字段（优先级、类别、紧急性）触发条件逻辑。', '**API就绪** : 直接集成到数据库、CRM和业务系统，无需重新格式化。', '**取决于模型** : 原生JSON模式在GPT-5.5、Claude、Gemini中可用。旧型号/开源模式需要提示词工程。', '**最适合确定性任务** : API、自动化、数据管道。避免创意写作。', '**需要验证** : 始终在下游使用前验证和检查JSON输出。', '**跨模型扩展** : 定义一次架构；测试和记录差异。' ] }, whatIsStructured: { title: '什么是结构化输出', content: [ '**结构化输出意味着要求模型遵循固定的架构，例如列表、表格或JSON。** 而不是自由形式的段落，您定义字段、类型和允许的值。', '结构化输出可以采用多种形式：' ], items: [ '具有固定项数的项目符号列表。', '具有特定列的Markdown表格。', '简单属性的键值对。', '具有预定义键的完整JSON对象或数组。' ] }, structuredGoal: { content: [ '目标始终是相同的：将模糊的描述转换为可预测的形式。' ] }, whatIsJSON: { title: '什么是JSON模式', content: [ '**JSON模式是结构化输出的更严格变体，其中模型被指示或配置为仅返回有效的JSON。** 在JSON模式中，模型输出的所有内容都应该可以解析为JSON而无需额外的清理。', '典型的JSON架构可能如下所示：' ], codeBlock: '{\n  "title": "string",\n  "summary": "string",\n  "tags": ["string"],\n  "priority": "low | medium | high"\n}', codeLanguage: 'json' }, jsonModeApproach: { content: [ '您在提示词中反映该架构，然后要求模型填充它。某些平台也提供强制仅JSON响应的特殊设置或API。' ] }, whyItMatters: { title: '为什么结构化输出和JSON模式很重要', content: [ '**结构化输出和JSON模式很重要，因为它们使您能够将语言模型转变为更大系统的组件，而不仅仅是聊天助手。** 当输出是可预测的时，您可以：' ], items: [ '直接将结果提供给数据库、CRM或分析工具。', '基于模型输出字段（优先级、状态、信心）触发自动化。', '构建显示卡片、表格或仪表板中模型结果的用户界面。' ] }, jsonVsFunctionCalling: { title: 'JSON模式与函数调用与架构提示词', content: [ '**存在三种从LLM获取结构化输出的方法。每种都有不同的优缺点。**' ], items: [ '**JSON模式** : 模型仅输出有效的JSON。最佳用途：数据提取、分类、摘要。', '**函数调用** : 模型选择要调用的函数并以JSON提供参数。最佳用途：API集成、工具使用、代理工作流。', '**架构提示词** : 显式指令+要求模型遵循架构的示例。最佳用途：灵活性、开源模型、自定义格式。' ] }, example: { title: '示例：自由文本与结构化JSON', content: [ '**当您比较免费文本提示词和结构化JSON提示词完成相同任务时，差异变得明显。** 在这里，我们对客户电子邮件进行分类和汇总。', '**[错误的提示词]**', '"阅读此客户电子邮件并总结他们想要什么。"', '**[正确的提示词 - JSON模式]**', '"您是一名客户支持助理。"', '"正确"版本定义架构、有效值和仅JSON要求。' ] }, bestPractices: { title: '结构化输出和JSON模式的最佳做法', content: [ '**要获得可靠的结构化输出，您在提示词中需要明确、一致和严格。** 当抽取的数据不能离开自有基础设施时，同样的 JSON 模式模式也可以直接对接本地向量存储——要查看符合 GDPR 的部署模板，请参阅[面向企业数据的本地 RAG](/zh/power-local-llm/local-rag-for-private-business-data)。' ], items: [ '显示您期望的确切架构。', '声明仅应返回JSON或结构。', '使用简短、明确的键名称。', '当任务复杂或敏感时添加有效输出的示例。', '对于嵌套结构，逐步构建并使用真实输入进行测试。' ] }, modelComparison: { title: '模型比较：按提供商的JSON合规性', content: [ '**不同的模型对原生JSON模式支持的级别不同。** 截至2026年4月，以下是主要提供商的排名：' ], columns: [ '模型', '原生JSON模式', '仅提示词合规', '备注' ], rows: [ { '模型': 'OpenAI GPT-5.5', '原生JSON模式': '是（强制）', '仅提示词合规': '不需要', '备注': 'JSON模式的行业标准。' }, { '模型': 'Anthropic Claude Sonnet 4.6', '原生JSON模式': '是（强制）', '仅提示词合规': '不需要', '备注': 'JSON合规性优秀。' }, { '模型': 'Google Gemini 2.0', '原生JSON模式': '是（强制）', '仅提示词合规': '不需要', '备注': '原生JSON支持。' }, { '模型': 'Meta Llama 3.3（70B）', '原生JSON模式': '部分', '仅提示词合规': '强烈推荐', '备注': '开源。' }, { '模型': 'Mistral Large', '原生JSON模式': '部分', '仅提示词合规': '推荐', '备注': 'JSON行为良好。' }, { '模型': '旧GPT-3.5、Claude 2', '原生JSON模式': '否', '仅提示词合规': '必需', '备注': '需要强大的工程。' }, { '模型': '小型开源模型（<13B）', '原生JSON模式': '否', '仅提示词合规': '示例需要', '备注': '需要详细的架构。' } ] }, relatedReading: { title: '相关阅读', items: [ '[约束提示词](/zh/prompt-engineering/constrained-prompting) — 强制特定的输出格式。', '[SPECS框架](/zh/prompt-engineering/specs-framework) — 规范专注的提示词。', '[RAG说明](/zh/prompt-engineering/rag-explained) — 结合结构化提取和数据检索。', '[思维链](/zh/prompt-engineering/chain-of-thought) — 逐步推理。', '[提示词模板](/zh/prompt-engineering/prompt-templates) — 可重复使用的模板。', '[零次对少次](/zh/prompt-engineering/zero-shot-vs-few-shot) — 何时示例改进JSON合规性。' ] }, faq: { title: '常见问题', faqs: [ { q: '结构化输出和JSON模式之间有什么区别？', a: '结构化输出是更广泛的类别。JSON模式是更严格的变体。' }, { q: '所有LLM都支持JSON模式吗？', a: '否。OpenAI GPT-5.5、Anthropic Claude Sonnet 4.6+和Google Gemini支持。' }, { q: '在没有原生JSON模式的情况下如何强制仅JSON响应？', a: '使用提示词工程：明确声明"仅输出有效JSON"。' }, { q: '如果模型返回无效JSON会发生什么？', a: '在您的一方验证。失败时重试或回到手动方法。' }, { q: '我可以将结构化输出用于复杂文档吗？', a: '是的。将复杂任务分解成步骤。' }, { q: '我如何处理缺失或模糊的数据？', a: '在架构中定义后备行为。' }, { q: 'JSON模式是否受监管合规性影响？', a: 'JSON本身是中立的。但结构化输出有益于合规性。' }, { q: '我如何测试JSON模式提示词？', a: '使用不同的输入进行测试。在部署前达到95%的成功率。' }, { q: '我可以跨不同模型重复使用架构吗？', a: '可以，但要谨慎。定义、测试和记录差异。' }, { q: 'JSON模式的性能成本是什么？', a: '最少。原生JSON模式影响可以忽略不计。' } ] }, sources: { title: '来源', items: [ '[OpenAI JSON模式文档](https://platform.openai.com/docs/guides/json-mode) — 官方指南。', '[Anthropic指南](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) — 文档。', '[Google Gemini API](https://ai.google.dev/gemini-2/docs/structured-output) — 原生JSON支持。', '[JSON架构规范](https://json-schema.org/specification.html) — 标准规范。' ] } } },
   };

@@ -2508,4 +2508,346 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    theme: 'Advanced Techniques',
+    title: '2026년 Qwen2-VL 로컬 실행 방법: 문서 OCR 및 비전 가이드',
+    seoTitle: 'Qwen2-VL 로컬 실행 2026: OCR 및 비전 설정 가이드',
+    intro: 'Qwen2-VL은 Alibaba의 오픈 비전-언어 모델로, 7B 변형은 Ollama 또는 LM Studio를 통해 약 6 GB의 VRAM으로 로컬에서 실행됩니다. 문서, 스크린샷, 차트, 사진을 읽을 수 있으며, 중국어·일본어·한국어 OCR에서 다른 모든 로컬 비전 모델을 앞섭니다. 이 가이드는 모델 선택, 하드웨어, Ollama 및 LM Studio 설정, 다국어 문서 추출, 그리고 Qwen2-VL과 LLaVA 및 Llama 3.2 Vision의 비교를 다룹니다.',
+    metaDescription: 'Ollama를 통해 약 6 GB VRAM으로 Qwen2-VL을 로컬 실행: 설정 단계, 중국어·일본어 문서 OCR, 이미지 Q&A, LLaVA 및 Llama 3.2 Vision 대비 성능 비교.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    readTime: '11분 읽기',
+    educationalLevel: 'Intermediate',
+    audience: '클라우드 API에 데이터를 전송하지 않고 오프라인으로 문서 OCR 및 이미지 이해가 필요한 개발자 및 분석가 — 특히 중국어, 일본어, 혼합 언어 파일을 다루는 분들',
+    primaryTerm: 'Qwen2-VL 로컬 실행',
+    targetKeywords: [
+      'Qwen2-VL 로컬 실행 2026',
+      'Qwen2-VL Ollama 설정',
+      'Qwen2-VL 문서 OCR',
+      '로컬 다국어 비전 모델',
+      'Qwen2-VL vs Llama 3.2 Vision',
+      '중국어 일본어 OCR 로컬 LLM',
+    ],
+    current_models_mentioned: [
+      'Qwen2-VL 2B',
+      'Qwen2-VL 7B',
+      'Qwen2-VL 72B',
+      'LLaVA 1.6 7B',
+      'Llama 3.2 Vision 11B',
+      'MiniCPM-V 2.6',
+      'InternVL 2.5 8B',
+      'Moondream 2',
+    ],
+    current_hardware_mentioned: [
+      '4 GB VRAM',
+      '6 GB VRAM',
+      '8 GB VRAM',
+      '48 GB VRAM',
+      'RTX 4060',
+      'RTX 3060 12 GB',
+      'Apple Silicon (통합 메모리)',
+    ],
+    ctaText: 'PromptQuorum 대기자 명단 등록 →',
+    leadAnswerBlock: '**VRAM이 8 GB인 모든 기기에서 `ollama pull qwen2-vl:7b`를 실행하면 중국어, 일본어, 혼합 언어 문서를 로컬에서 읽을 수 있습니다.** Qwen2-VL은 다국어 OCR에 가장 강력한 오픈 비전 모델로, 모든 이미지가 클라우드에 업로드되지 않고 사용자 기기에서 처리됩니다.',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년에 Qwen2-VL을 로컬에서 실행하려면 어떻게 해야 합니까?',
+        answer: 'Ollama를 설치한 후 `ollama pull qwen2-vl:7b`를 실행하고, 이어서 `ollama run qwen2-vl:7b`를 실행한 뒤 프롬프트에 이미지 파일 경로를 입력하십시오. GUI를 선호하시면 LM Studio를 사용하여 "Qwen2-VL 7B"를 검색하고 Q4_K_M GGUF 빌드를 다운로드한 후 이미지 아이콘으로 이미지를 첨부하십시오. Qwen2-VL 7B는 약 6 GB의 VRAM이 필요하며 문서, 스크린샷, 차트를 완전 오프라인으로 읽습니다.',
+        bullets: [
+          '최소 하드웨어: 8 GB VRAM (RTX 4060, RTX 3060 12 GB) 또는 16 GB 통합 메모리의 Apple Silicon',
+          '모델 다운로드: ollama pull qwen2-vl:7b (Qwen2-VL 7B Q4_K_M ~6 GB 다운로드)',
+          '이미지 첨부: 프롬프트에 파일 경로 입력 (CLI) 또는 base64 images 배열 전송 (API)',
+          '최적 용도: 중국어, 일본어, 한국어 문서 OCR — LLaVA 및 Llama 3.2 Vision 대비 우수',
+          '크기: 2B (~3 GB VRAM), 7B (~6 GB, 권장), 72B (~48 GB)',
+        ],
+        updatedDate: '2026-05-22',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: 'Qwen2-VL이 다국어 OCR에서 앞서는 이유', anchor: '#why-qwen-vl' },
+      { label: 'Qwen2-VL 모델 크기 선택', anchor: '#choose-model' },
+      { label: '하드웨어 요구 사항', anchor: '#hardware' },
+      { label: 'Ollama 설정', anchor: '#ollama-setup' },
+      { label: 'LM Studio 설정', anchor: '#lm-studio-setup' },
+      { label: 'CJK 파일 문서 OCR', anchor: '#ocr-use-case' },
+      { label: '이미지 Q&A, 스크린샷, 차트', anchor: '#other-use-cases' },
+      { label: 'Qwen2-VL vs LLaVA vs Llama 3.2 Vision', anchor: '#vs-other-models' },
+      { label: 'PromptQuorum 연결', anchor: '#promptquorum' },
+      { label: '문제 해결', anchor: '#troubleshooting' },
+      { label: '관련 자료', anchor: '#related-reading' },
+      { label: 'FAQ', anchor: '#faq' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Qwen2-VL 7B는 Ollama를 통해 약 6 GB의 VRAM (Q4)으로 로컬 실행 가능** — `ollama pull qwen2-vl:7b` 명령 하나로 실행되며 모델 변환이 필요 없습니다.',
+          '**다국어 OCR에 최적인 로컬 모델**: Qwen2-VL은 MiniCPM-V 2.6과 동등하며, 중국어·일본어·한국어 텍스트에서 LLaVA 1.6 및 Llama 3.2 Vision 11B를 능가합니다.',
+          '**4096×4096까지 네이티브 해상도 지원** — LLaVA 1.6 (672×672) 또는 Llama 3.2 Vision (1120×1120)과 달리 다운샘플링 없이 고해상도 스캔을 읽습니다.',
+          '**세 가지 크기**: 2B (~3 GB VRAM, 빠르고 기본적), 7B (~6 GB, 대부분의 사용자에게 권장), 72B (~48 GB, 오픈 소스 벤치마크 최상위).',
+          '**요청당 최대 8개의 이미지 처리** — 로컬 비전 모델 중 가장 높은 다중 이미지 처리 용량.',
+          '**직접 PDF 입력 불가**: PDF 페이지를 PNG 또는 JPEG로 먼저 변환한 후 각 페이지를 별도 이미지로 전송해야 합니다.',
+          '**다운로드 후 100% 오프라인**: API 키 불필요, 클라우드 업로드 없음 — 모든 문서가 사용자 기기에 보관되어 GDPR 데이터 전송 범위에서 AI 레이어가 제외됩니다.',
+        ],
+      },
+      whyQwenVl: {
+        id: 'why-qwen-vl',
+        title: 'Qwen2-VL이 다국어 OCR에서 로컬 비전 모델을 선도하는 이유',
+        content: [
+          '**Qwen2-VL은 다국어 문서 OCR을 위한 가장 강력한 로컬 비전 모델로, 소비자 하드웨어에서 실행되는 다른 모든 모델과 동등하거나 능가하여 중국어, 일본어, 한국어, 영어 텍스트를 읽습니다.** Alibaba는 대규모 다국어 문서 코퍼스로 이 모델을 훈련했기 때문에 비영어 텍스트 추출에서 LLaVA 1.6 및 Llama 3.2 Vision 11B를 능가합니다.',
+          'Qwen2-VL은 최대 4096×4096 픽셀의 동적 입력 해상도를 지원합니다. LLaVA 1.6은 672×672, Llama 3.2 Vision은 1120×1120으로 제한되어 고해상도 스캔을 읽기 전에 다운샘플링합니다. Qwen2-VL은 300 DPI A4 스캔을 네이티브 해상도로 읽어냅니다 — 이것이 고밀도 문서와 작은 CJK 문자에서 OCR 정확도가 더 높은 주된 이유입니다.',
+          'Qwen2-VL을 로컬로 실행하는 비용은 하드웨어 이후 이미지당 €0입니다. 클라우드 비전 API는 이미지당 약 $0.01–0.03을 청구하며, 월 10,000개의 이미지 처리 시 $100–300을 절약할 수 있고, 어떤 문서도 기기를 벗어나지 않습니다.',
+          'CJK 텍스트, 작은 폰트, 또는 고해상도 스캔이 포함된 문서가 있다면 Qwen2-VL을 사용하십시오. 영어 전용 사진 Q&A라면 Llama 3.2 Vision 11B도 동등하게 좋은 선택입니다.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Qwen2-VL은 Ollama를 통해 약 6 GB의 VRAM으로 실행되는 중국어, 일본어, 한국어 문서 OCR에 가장 정확한 로컬 비전 모델입니다.' },
+          { type: 'plain-terms', text: '비전-언어 모델은 이미지를 생성하는 대신 이미지를 읽습니다. Qwen2-VL에 사진이나 스캔된 페이지를 제공하면 텍스트를 반환합니다 — 설명, 답변, 또는 추출된 내용을.' },
+        ],
+      },
+      chooseModel: {
+        id: 'choose-model',
+        title: 'Qwen2-VL 모델 크기 선택',
+        content: [
+          'Qwen2-VL은 세 가지 크기로 제공됩니다. VRAM과 필요한 정확도에 따라 선택하십시오. 모든 크기는 [Hugging Face (Qwen)](https://huggingface.co/Qwen)과 명시적 태그가 있는 Ollama 모델 라이브러리에서 사용할 수 있습니다.',
+        ],
+        rows: [
+          { Model: 'Qwen2-VL 2B Q4', 'VRAM (Q4)': '~3 GB', 'Ollama tag': 'qwen2-vl:2b', 'Best For': '빠른 캡션, 간단한 OCR, 저 VRAM 노트북' },
+          { Model: 'Qwen2-VL 7B Q4', 'VRAM (Q4)': '~6 GB', 'Ollama tag': 'qwen2-vl:7b', 'Best For': '권장 — 문서 OCR, 이미지 Q&A, 차트' },
+          { Model: 'Qwen2-VL 72B Q4', 'VRAM (Q4)': '~48 GB', 'Ollama tag': 'qwen2-vl:72b', 'Best For': '최고 품질, Apple Silicon 64 GB 이상 또는 멀티 GPU' },
+        ],
+        columns: ['Model', 'VRAM (Q4)', 'Ollama tag', 'Best For'],
+        tableFormat: true,
+        note: 'Q4_K_M은 권장 양자화로 최고의 품질 대 크기 비율을 제공합니다. 대부분의 사용자는 Qwen2-VL 7B로 시작해야 합니다: 8 GB GPU에 맞으며 이 가이드의 모든 사용 사례를 처리합니다. VRAM이 6 GB 미만인 경우에만 2B 모델로 내려가십시오. Q4가 품질에 미치는 영향에 대해서는 [LLM 양자화 설명](/local-llms/llm-quantization-explained)을 참조하십시오.',
+      },
+      hardware: {
+        id: 'hardware',
+        title: 'Qwen2-VL 하드웨어 요구 사항',
+        items: [
+          '**최소 사양 (Qwen2-VL 7B Q4)**: 8 GB VRAM GPU — NVIDIA RTX 4060, RTX 3060 12 GB, 또는 RTX 2080.',
+          '**저 VRAM 옵션 (Qwen2-VL 2B Q4)**: 4 GB VRAM — 대부분의 노트북 GPU 및 통합 Apple Silicon에서 실행 가능.',
+          '**최고 품질 (Qwen2-VL 72B Q4)**: ~48 GB — 64 GB 이상 통합 메모리의 Apple Silicon, 또는 24 GB GPU 두 개.',
+          '**Apple Silicon**: 16 GB 이상 통합 메모리의 M 시리즈 칩은 7B 모델을 원활히 실행; 72B에는 64 GB 이상 필요.',
+          '**시스템 RAM**: GPU 추론과 함께 최소 16 GB; 전체 개발 환경이 열려 있을 때 32 GB 권장.',
+          '**저장 공간**: Qwen2-VL 7B Q4 (GGUF)용 약 6 GB, 72B용 약 30 GB의 여유 디스크 공간.',
+        ],
+        callouts: [
+          { type: 'note', text: '비전 모델은 동일한 파라미터 수의 텍스트 전용 모델보다 약 30–60% 느리게 실행됩니다. 비전 인코더는 첫 번째 토큰에서 전체 이미지를 처리하며, 이후 텍스트는 거의 정상 속도로 생성됩니다. 인코더와 언어 모델 모두를 위한 VRAM을 확보하십시오.' },
+        ],
+      },
+      ollamaSetup: {
+        id: 'ollama-setup',
+        title: 'Ollama로 Qwen2-VL 설정',
+        content: [
+          'Ollama는 Qwen2-VL을 로컬로 실행하는 가장 빠른 방법입니다. 모델을 다운로드하고, 양자화를 관리하며, localhost:11434에 API를 노출합니다. [ollama.com](https://ollama.com/download)에서 설치하거나, 처음 사용하시는 경우 [Ollama 설치 방법](/local-llms/how-to-install-ollama)에서 시작하십시오.',
+        ],
+        numberedItems: [
+          { title: 'Ollama 설치', whyItMatters: 'Ollama는 모델 다운로드, GGUF 형식, 로컬 API를 처리합니다. macOS, Linux, Windows에서 사용 가능합니다.' },
+          { title: '명시적 크기 태그로 Qwen2-VL 다운로드', whyItMatters: 'qwen2-vl:7b를 사용하십시오. 태그 없는 qwen2-vl은 다른 크기로 해석될 수 있습니다 — 항상 2b, 7b, 또는 72b를 지정하여 이 가이드에서 대상으로 하는 모델을 받으십시오.' },
+          { title: '모델 실행 및 이미지 첨부', whyItMatters: '대화형 모드에서 프롬프트에 이미지 파일 경로를 입력하십시오. Ollama가 경로를 감지하여 이미지를 비전 인코더에 로드합니다.' },
+          { title: 'API를 통한 이미지 전송', whyItMatters: '/api/generate 엔드포인트는 base64로 인코딩된 images 배열을 수신합니다. 이것이 애플리케이션 — 및 PromptQuorum — 이 이미지를 프로그래밍 방식으로 전송하는 방법입니다.' },
+          { title: '다국어 OCR 확인', whyItMatters: '중국어 또는 일본어 문서 스캔을 전송하고 추출된 텍스트가 일치하는지 확인하십시오. 이를 통해 비전 인코더와 토크나이저가 CJK 스크립트를 올바르게 처리하는지 확인한 후 구축을 진행할 수 있습니다.' },
+        ],
+        codeBlock: `# Step 1 — Install Ollama
+# macOS
+brew install ollama
+
+# Linux
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Windows — download from https://ollama.com/download
+
+# Step 2 — Pull Qwen2-VL 7B (explicit size tag)
+ollama pull qwen2-vl:7b
+# Downloads Qwen2-VL 7B Q4_K_M (~6 GB)
+
+# Step 3 — Run and attach an image (interactive)
+ollama run qwen2-vl:7b
+>>> Extract every line of text from ./invoice-jp.png
+
+# Step 4 — Send an image through the API
+# Encode the image first:  base64 -i scan.png   (macOS)
+curl http://localhost:11434/api/generate -d '{
+  "model": "qwen2-vl:7b",
+  "prompt": "Extract every line of text from this document. Preserve line breaks.",
+  "images": ["<base64-encoded-image>"],
+  "stream": false
+}'
+
+# Step 5 — Verify multilingual OCR
+ollama run qwen2-vl:7b
+>>> Extract all text from this image: ./contract-zh.png`,
+        codeLanguage: 'bash',
+        callouts: [
+          { type: 'warning', text: '문서 이미지를 150 DPI 이상으로 전송하십시오. Qwen2-VL은 4096×4096까지 네이티브로 읽으므로 고해상도 스캔은 직접적으로 정확도를 향상시킵니다. 텍스트 프롬프트와 달리 이미지 품질이 OCR 결과에서 가장 중요한 단일 요소입니다 — 흐릿한 스캔은 모델이 아무리 좋아도 잘못된 문자를 출력합니다.' },
+        ],
+      },
+      lmStudioSetup: {
+        id: 'lm-studio-setup',
+        title: 'LM Studio로 Qwen2-VL 설정',
+        content: [
+          'LM Studio는 CLI 명령 없이 그래픽 인터페이스를 통해 Qwen2-VL을 실행합니다. Windows 사용자 및 GUI를 선호하는 분들에게 권장되는 경로입니다. [lmstudio.ai](https://lmstudio.ai)에서 다운로드하거나, [LM Studio 설치 방법](/local-llms/how-to-install-lm-studio)을 참조하십시오.',
+        ],
+        numberedItems: [
+          { title: 'LM Studio 다운로드 및 설치', whyItMatters: '로컬 모델 추론을 위한 무료 크로스 플랫폼 GUI. 터미널이 필요 없습니다.' },
+          { title: '모델 브라우저에서 Qwen2-VL 검색', whyItMatters: '"Qwen2-VL 7B"를 검색하고 Q4_K_M GGUF 빌드를 선택하십시오. LM Studio는 비전 지원 모델에 이미지 아이콘을 표시합니다.' },
+          { title: '모델 로드 및 이미지 첨부', whyItMatters: '채팅 입력의 이미지 아이콘을 클릭하여 사진이나 스캔을 업로드하십시오. LM Studio가 이를 비전 인코더에 전달합니다.' },
+          { title: '로컬 서버 시작', whyItMatters: '"Start Server" 버튼을 누르면 localhost:1234에 OpenAI 호환 API가 노출됩니다. 비전 요청은 표준 image_url 콘텐츠 형식을 사용합니다.' },
+        ],
+        codeBlock: `// LM Studio — OpenAI-compatible vision request (localhost:1234)
+{
+  "model": "qwen2-vl-7b",
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        { "type": "text", "text": "Extract all text from this document." },
+        {
+          "type": "image_url",
+          "image_url": { "url": "data:image/png;base64,<base64-encoded-image>" }
+        }
+      ]
+    }
+  ]
+}`,
+        codeLanguage: 'json',
+        note: 'LM Studio와 Ollama는 서로 다른 이미지 형식을 사용합니다: LM Studio는 OpenAI의 image_url 콘텐츠 스키마 (data: 접두사 포함)를 따르고, Ollama는 원시 base64의 최상위 images 배열 (접두사 없음)을 사용합니다. 하나의 런타임을 선택하고 해당 형식을 맞추십시오.',
+      },
+      ocrUseCase: {
+        id: 'ocr-use-case',
+        title: '중국어, 일본어, 혼합 언어 파일 문서 OCR',
+        content: [
+          '**Qwen2-VL은 다른 어떤 로컬 비전 모델보다 정확하게 중국어, 일본어, 한국어, 혼합 언어 문서에서 텍스트를 추출합니다.** 훈련 데이터에 대규모 다국어 문서 코퍼스가 포함되었으며, 4096×4096 네이티브 해상도는 LLaVA 1.6과 Llama 3.2 Vision이 다운샘플링으로 놓치는 작은 CJK 문자를 읽어냅니다.',
+          '가장 신뢰할 수 있는 패턴은 구체적인 추출 프롬프트입니다. "이것을 읽어라"와 같은 모호한 요청 대신 구조를 요청하십시오 — "테이블 레이아웃 유지", "각 필드를 key: value로 반환". Qwen2-VL은 서식 지시를 면밀히 따르므로 후처리 없이도 출력을 사용할 수 있습니다.',
+        ],
+        items: [
+          '**일반 텍스트 추출**: "이 이미지의 모든 텍스트 줄을 추출하십시오. 줄 바꿈과 읽기 순서를 유지하십시오."',
+          '**구조화된 필드**: "이것은 일본어 청구서입니다. 공급업체, 날짜, 소계, 세금, 합계를 key: value 쌍으로 반환하십시오."',
+          '**테이블 추출**: "이 테이블을 CSV로 추출하십시오. 첫 번째 행을 헤더로 처리하십시오."',
+          '**한 번에 추출 및 번역**: "이 이미지에서 중국어 텍스트를 추출한 후 영어로 번역하십시오. 둘 다 표시하십시오."',
+        ],
+        codeBlock: `# Japanese invoice -> structured fields
+ollama run qwen2-vl:7b
+>>> This is a Japanese invoice. Extract vendor name, invoice date,
+    subtotal, consumption tax, and total. Return as key: value pairs.
+    ./invoice-jp.png
+
+# Example output:
+# vendor: Sample Trading Co., Ltd.
+# date: 2026-04-30
+# subtotal: 84,000 JPY
+# tax: 8,400 JPY
+# total: 92,400 JPY`,
+        codeLanguage: 'bash',
+        callouts: [
+          { type: 'important', text: '항상 추출된 숫자를 원본 문서와 대조하여 확인하십시오. Qwen2-VL을 포함한 로컬 비전 모델은 저품질 스캔에서 숫자를 잘못 읽을 수 있습니다. OCR 출력을 최종 값이 아닌 확인이 필요한 초안으로 취급하십시오 — 특히 청구서 및 재무 문서의 경우.' },
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Qwen2-VL로 CJK 문서에서 텍스트를 추출하려면 150 DPI 이상의 이미지를 "각 필드를 key: value로 반환"과 같은 구조를 요청하는 구체적인 프롬프트와 함께 전송하십시오.' },
+          { type: 'plain-terms', text: 'OCR은 텍스트 사진을 편집 가능한 텍스트로 변환하는 것을 의미합니다. Qwen2-VL은 스캔된 페이지를 보고 보이는 것을 타이핑하며, 영어만큼 중국어와 일본어 문자도 잘 처리합니다.' },
+        ],
+      },
+      otherUseCases: {
+        id: 'other-use-cases',
+        title: '이미지 Q&A, 스크린샷 분석, 차트 읽기',
+        content: [
+          'OCR 외에도 Qwen2-VL은 사진 설명, 스크린샷 질문 응답, 차트 읽기 등 일반적인 이미지 이해를 처리합니다. 명확한 입력에서는 정확하며, 복잡하거나 모호한 장면에서는 다소 약합니다.',
+        ],
+        items: [
+          '**이미지 Q&A**: 사진에 대한 개방형 질문 — "이 이미지에 무엇이 있습니까?", "빨간색을 입은 사람은 몇 명입니까?". Qwen2-VL 7B는 명확한 사진에서 정확하며, 복잡하거나 모호한 장면에서는 다소 약합니다.',
+          '**스크린샷 및 UI 분석**: Qwen2-VL은 UI 스크린샷, 오류 대화 상자, 앱 상태를 읽습니다. 고밀도 코드 스크린샷의 경우 InternVL 2.5가 해당 데이터에 더 집중적으로 훈련되었으므로, UI 및 코드가 주요 작업인 경우 이를 사용하십시오.',
+          '**차트 및 그래프 읽기**: Qwen2-VL은 차트 구조와 추세를 잘 설명하지만, 차트에서 정확한 수치를 추출하는 것은 모든 로컬 비전 모델에서 신뢰할 수 없습니다. 정확한 수치는 기저 데이터와 대조하여 확인하십시오.',
+          '**비디오 프레임**: Qwen2-VL은 여러 프레임을 시퀀스로 수신합니다 — 초당 약 1 프레임을 샘플링하여 짧은 클립을 요약하기 위해 최대 8개를 전송하십시오.',
+          '**다중 이미지 비교**: 한 번의 요청에 최대 8개의 이미지를 전송하여 버전을 비교하거나, 차이를 찾거나, 세트를 일괄 설명하십시오.',
+        ],
+        callouts: [
+          { type: 'tip', text: 'OCR, 다국어 문서, 일반 이미지 Q&A에는 Qwen2-VL을 사용하십시오. 코드나 UI 스크린샷이 주요 작업인 경우 InternVL 2.5로 전환하거나, VRAM이 4 GB 미만인 경우 Moondream 2로 전환하십시오.' },
+        ],
+      },
+      vsOtherModels: {
+        id: 'vs-other-models',
+        title: 'Qwen2-VL vs LLaVA vs Llama 3.2 Vision',
+        content: [
+          '**다국어 OCR의 경우 Qwen2-VL은 더 낮은 VRAM에서 LLaVA 1.6을 능가하고 Llama 3.2 Vision 11B와 동등하거나 능가합니다.** 영어 전용 사진 Q&A의 경우 Llama 3.2 Vision 11B가 동등하게 강력한 선택입니다. LLaVA 1.6은 커뮤니티 문제 해결 리소스가 가장 많이 문서화된 모델입니다.',
+        ],
+        rows: [
+          { Model: 'Qwen2-VL 7B', 'VRAM (Q4)': '~6 GB', 'OCR / CJK': '우수', 'Max Resolution': '4096×4096', 'Best For': '다국어 OCR, 고해상도 스캔' },
+          { Model: 'Llama 3.2 Vision 11B', 'VRAM (Q4)': '~8 GB', 'OCR / CJK': '양호', 'Max Resolution': '1120×1120', 'Best For': '영어 사진 Q&A, 일반 문서' },
+          { Model: 'LLaVA 1.6 7B', 'VRAM (Q4)': '~6 GB', 'OCR / CJK': '보통', 'Max Resolution': '672×672', 'Best For': '일반 Q&A, 커뮤니티 지원' },
+          { Model: 'MiniCPM-V 2.6 8B', 'VRAM (Q4)': '~6 GB', 'OCR / CJK': '우수', 'Max Resolution': '1792×1792', 'Best For': '문서 OCR (영어 중심)' },
+          { Model: 'InternVL 2.5 8B', 'VRAM (Q4)': '~8 GB', 'OCR / CJK': '양호', 'Max Resolution': 'High', 'Best For': '코드 및 UI 스크린샷' },
+        ],
+        columns: ['Model', 'VRAM (Q4)', 'OCR / CJK', 'Max Resolution', 'Best For'],
+        tableFormat: true,
+        note: '다섯 모델 모두 Ollama를 통해 실행됩니다 (InternVL 2.5는 커뮤니티 빌드를 통해). Moondream 2 및 청구서 추출 벤치마크를 포함한 전체 로컬 비전 모델 조사는 [로컬 비전 모델 비교](/power-local-llm/local-vision-models-llava-ollama-2026)를 참조하십시오. 확신이 없다면 Qwen2-VL 7B부터 시작하십시오: 6 GB의 VRAM으로 OCR, 문서, 일반 Q&A를 모두 처리합니다.',
+      },
+      promptquorum: {
+        id: 'promptquorum',
+        title: 'PromptQuorum에 로컬 Qwen2-VL 연결',
+        content: [
+          'PromptQuorum은 여러 모델에 걸쳐 프롬프트를 라우팅합니다. 로컬 Qwen2-VL을 비전 디스패치 대상으로 사용하려면 PromptQuorum의 로컬 LLM 엔드포인트를 Ollama 서버로 지정하십시오. 이렇게 하면 이미지 처리가 사용자 하드웨어에 유지되며, 텍스트 작업에는 클라우드 모델을 계속 사용할 수 있습니다.',
+          '이것은 Claude에 사용되는 Anthropic API 구성과는 별개인 Ollama (OpenAI 호환) 엔드포인트입니다. 두 가지를 동시에 활성화하여 PromptQuorum이 작업 유형 및 데이터 민감도에 따라 라우팅하도록 할 수 있습니다.',
+        ],
+        codeBlock: `# PromptQuorum dispatch config — local Qwen2-VL via Ollama
+# Set in your .env or the PromptQuorum settings panel
+
+OLLAMA_BASE_URL=http://localhost:11434/v1
+LOCAL_VISION_MODEL=qwen2-vl:7b
+
+# Example routing rules:
+# - task_type: ocr / image  -> qwen2-vl:7b        (local Ollama, no cloud upload)
+# - task_type: text         -> claude-sonnet-4-6  (Anthropic API, separate config)`,
+        codeLanguage: 'bash',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'OLLAMA_BASE_URL을 http://localhost:11434/v1로 설정하고 로컬 비전 모델을 qwen2-vl:7b로 지정하여 PromptQuorum을 로컬 Qwen2-VL에 연결하십시오.' },
+        ],
+      },
+      troubleshooting: {
+        id: 'troubleshooting',
+        title: 'Qwen2-VL 문제 해결',
+        items: [
+          '**"unknown model" 오류 또는 다운로드 실패**: 명시적 크기 태그를 사용하십시오 — `qwen2-vl`이 아닌 `ollama pull qwen2-vl:7b`. 설치된 이름을 확인하려면 `ollama list`를 실행하십시오.',
+          '**이미지가 무시되고 이미지 없이 답변하는 경우**: 파일 경로가 올바르고 읽기 가능한지 확인하십시오. Ollama API에서 `images` 배열은 `data:` 접두사 없이 원시 base64를 포함해야 합니다 — `data:` 접두사는 LM Studio 및 OpenAI 형식에만 해당합니다.',
+          '**깨지거나 누락된 CJK 문자**: 스캔 해상도가 너무 낮습니다. 150–300 DPI로 재스캔하십시오. Qwen2-VL은 4096×4096까지 읽으므로 높은 입력 해상도가 중국어 및 일본어 정확도를 직접적으로 향상시킵니다.',
+          '**CUDA out of memory**: 모델이 VRAM에 맞지 않습니다. Qwen2-VL 2B (~3 GB)로 내려가거나, CPU와 GPU 간에 통합 메모리를 공유하는 Apple Silicon에서 실행하십시오.',
+          '**첫 번째 응답은 느리고 이후는 빠른 경우**: 정상입니다. 비전 인코더가 첫 번째 토큰에서 전체 이미지를 처리하며, 이후 텍스트는 거의 정상 속도로 생성됩니다.',
+          '**청구서나 차트에서 잘못된 숫자 추출**: 로컬 비전 모델은 노이즈가 많은 입력에서 숫자를 잘못 읽습니다. 스캔 품질을 높이고 항상 수치 출력을 원본과 대조하여 확인하십시오.',
+          '**PDF가 로드되지 않는 경우**: 어떤 로컬 비전 모델도 PDF를 직접 수신하지 않습니다. pdf2image 또는 pypdfium2를 사용하여 페이지를 PNG 또는 JPEG로 변환한 후 각 페이지를 별도의 이미지로 전송하십시오.',
+          '**LM Studio에서 "failed to load model" 표시**: VRAM 부족이거나 비전이 아닌 GGUF를 다운로드했습니다. 모델 카드에 비전 지원이 명시되어 있는지 확인하고 Q4_K_M 빌드를 선택하십시오.',
+        ],
+        callouts: [
+          { type: 'tip', text: '`ollama ps`를 실행하면 VRAM에 로드된 모델과 각 모델이 사용하는 메모리를 확인할 수 있습니다. 72B로 전환하기 전에 `ollama stop qwen2-vl:7b`를 사용하여 모델을 언로드하십시오.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[Qwen 3 로컬 실행 방법](/local-llms/run-qwen-locally-guide-2026) — 텍스트 모델 동반 가이드: Qwen 3 언어 모델을 위한 Ollama 및 LM Studio 설정.',
+          '[로컬 비전 모델 비교: LLaVA, Llama 3.2 Vision, MiniCPM-V](/power-local-llm/local-vision-models-llava-ollama-2026) — 벤치마크와 함께 모든 로컬 비전 모델의 전체 조사.',
+          '[다중 모달 로컬 LLM: 비전, 오디오, 텍스트](/local-llms/multimodal-local-llms) — 멀티모달 모델을 로컬로 실행하는 것에 대한 광범위한 개요.',
+          '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) — Qwen 텍스트 모델과 대안 모델 비교.',
+          '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — 로컬 추론을 위한 VRAM 및 GPU 요구 사항.',
+          '[모든 로컬 LLM 가이드 보기](/local-llms)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'FAQ',
+        faqs: [
+          { q: 'Qwen2-VL을 로컬로 실행하기 위한 최소 하드웨어는 무엇입니까?', a: 'Q4_K_M 양자화의 Qwen2-VL 7B는 8 GB VRAM (RTX 4060, RTX 3060 12 GB, 또는 RTX 2080)이 필요합니다. 더 작은 Qwen2-VL 2B는 4 GB에서 실행됩니다. 72B 모델은 약 48 GB가 필요합니다 — 64 GB 이상 통합 메모리의 Apple Silicon 또는 24 GB GPU 두 개. 16 GB 이상 통합 메모리의 Apple Silicon은 7B 모델을 원활히 실행합니다.' },
+          { q: 'Qwen2-VL이 OCR에서 LLaVA보다 낫습니까?', a: '예, 특히 비영어 텍스트에서 그렇습니다. Qwen2-VL은 MiniCPM-V 2.6과 동등하며, 중국어·일본어·한국어 OCR에서 LLaVA 1.6 및 Llama 3.2 Vision 11B를 능가합니다. 네이티브 4096×4096 해상도는 LLaVA 1.6이 672×672로 제한되는 동안 다운샘플링 없이 고해상도 스캔을 읽습니다. LLaVA는 여전히 가장 큰 커뮤니티와 가장 많은 튜토리얼을 보유하고 있습니다.' },
+          { q: 'Qwen2-VL이 PDF를 직접 읽을 수 있습니까?', a: '아니요. 어떤 로컬 비전 모델도 PDF 입력을 직접 수신하지 않습니다. pdf2image 또는 pypdfium2를 사용하여 각 PDF 페이지를 PNG 또는 JPEG 이미지로 먼저 변환한 후, 각 페이지를 별도의 이미지 요청으로 전송하십시오. 10페이지 PDF의 경우 10개의 이미지 쿼리를 전송하고 결과를 합칩니다.' },
+          { q: 'Ollama를 통해 Qwen2-VL에 이미지를 어떻게 전송합니까?', a: '두 가지 방법이 있습니다. 대화형 모드 (`ollama run qwen2-vl:7b`)에서는 프롬프트에 이미지 파일 경로를 입력하면 Ollama가 이를 감지하여 이미지를 로드합니다. API를 통해서는 base64로 인코딩된 `images` 배열과 함께 /api/generate에 POST 요청을 보내십시오. base64 문자열에는 `data:` 접두사가 포함되지 않아야 합니다.' },
+          { q: 'Qwen2-VL이 완전히 오프라인으로 실행됩니까?', a: '예. 일회성 모델 다운로드 후 Qwen2-VL은 사용자 기기에서 완전히 실행됩니다 — API 키와 클라우드 계정이 필요 없습니다. 어떤 이미지도 어디에도 업로드되지 않아 문서 처리가 사용자 인프라 내에 유지됩니다. 규정 준수 의미에 대해서는 [Qwen 로컬 GDPR 설정 가이드](/local-llms/qwen-local-gdpr-setup-guide-2026)를 참조하십시오.' },
+          { q: 'Qwen2-VL이 한 번에 처리할 수 있는 이미지는 몇 개입니까?', a: '요청당 최대 8개의 이미지 — 로컬 비전 모델 중 가장 높은 다중 이미지 처리 용량입니다. 이로 인해 문서 버전 비교, 차이 발견, 또는 초당 1 프레임으로 샘플링된 짧은 비디오 요약에 적합합니다.' },
+          { q: 'Qwen2-VL 또는 Llama 3.2 Vision — 어느 것을 선택해야 합니까?', a: '중국어, 일본어, 한국어 문서, 고해상도 스캔, 또는 작은 글꼴의 경우 Qwen2-VL을 선택하십시오 — Llama 3.2 Vision 11B의 8 GB 대비 7B가 6 GB의 VRAM에 맞기 때문이기도 합니다. 두 모델이 비슷한 영어 전용 일반 사진 Q&A에는 Llama 3.2 Vision 11B를 선택하십시오.' },
+          { q: 'OCR 출력에서 문자가 깨지는 이유는 무엇입니까?', a: '거의 항상 저해상도 스캔 때문입니다. Qwen2-VL은 4096×4096까지 네이티브로 읽으므로, 150–300 DPI로 문서를 재스캔하면 보통 깨지거나 누락된 문자가 수정됩니다. 저품질 입력은 모든 로컬 비전 모델에서 OCR 오류의 가장 큰 단일 원인입니다.' },
+        ],
+      },
+    },
+  },
 }

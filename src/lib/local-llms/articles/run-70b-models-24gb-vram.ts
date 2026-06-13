@@ -1740,4 +1740,219 @@ schema: {
         ],
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Hardware & Performance',
+      title: '24GB VRAM에서 70B 모델 실행하기: 고급 기법',
+      seoTitle: '24GB VRAM에서 70B 모델 실행: 완전 설정 가이드 2026',
+      intro: '70B 모델(일반적으로 40GB 이상 필요)을 24GB VRAM에서 실행하려면 공격적인 양자화(Q2-Q3)와 레이어 오프로딩이 필요하지만, 속도가 느립니다(~3-5 토큰/초). 2026년 4월 기준으로 실시간 채팅에는 적합하지 않지만, 배치 처리나 실험 목적으로는 활용 가능합니다.',
+      metaDescription: '24GB VRAM에서 70B 모델 실행 2026: 양자화(Q4_K_M), 오프로딩, 레이어 분할. 트레이드오프와 성능 데이터를 포함한 기법 안내.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-19',
+      leadAnswerBlock: '70B 모델(일반적으로 40GB 이상 필요)을 24GB VRAM에서 실행하는 것은 공격적인 양자화(Q2-Q3)와 레이어 오프로딩을 통해 가능하지만, 속도가 느립니다(~3-5 토큰/초).',
+      audience: '프로덕션 또는 엔터프라이즈 환경에서 로컬 LLM을 배포하는 엔지니어',
+      readTime: '10분 읽기',
+      educationalLevel: 'Advanced',
+      primaryTerm: '70B 모델 최적화',
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: '이론적 한계', anchor: '#limits' },
+        { label: '양자화 전략', anchor: '#quantization' },
+        { label: '오프로딩 전략', anchor: '#offloading' },
+        { label: '실용적 설정', anchor: '#setup' },
+        { label: '현실적인 성능', anchor: '#performance' },
+        { label: '더 나은 대안', anchor: '#alternatives' },
+        { label: '흔한 실수', anchor: '#common-mistakes' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
+        { label: '관련 자료', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Llama 3.3 70B을 Q4로 실행하면 35GB(24GB 초과), Q3이면 26GB(여전히 초과), Q2이면 17GB(적합)입니다.',
+            '트레이드오프: Q2는 품질 저하가 눈에 띕니다. FP16 품질의 약 70% 수준입니다.',
+            '속도: 시스템 RAM에 20GB를 오프로드하면 3-5 토큰/초(매우 느림)입니다.',
+            '더 나은 선택: Q5로 실행하는 13B 모델을 사용하거나, 레이어 분할을 위해 두 번째 GPU를 구입하십시오.',
+            '2026년 4월 기준, 이 방법은 권장 접근법이 아니라 제약 우회 방법입니다.',
+          ],
+        },
+        limits: {
+          id: 'limits',
+          title: 'VRAM 수학: 이론적 한계',
+          content: [
+            '**다양한 양자화 수준에서 Llama 3.3 70B:**',
+          ],
+          rows: [
+            { 'Quantization': 'FP16 (기준)', 'Size': '140 GB', 'Fits 24GB?': '불가' },
+            { 'Quantization': 'Q8 (8비트)', 'Size': '70 GB', 'Fits 24GB?': '불가' },
+            { 'Quantization': 'Q5 (5비트)', 'Size': '43.75 GB', 'Fits 24GB?': '불가' },
+            { 'Quantization': 'Q4 (4비트)', 'Size': '35 GB', 'Fits 24GB?': '불가 (오프로딩 시 가능)' },
+            { 'Quantization': 'Q3 (3비트)', 'Size': '26 GB', 'Fits 24GB?': '불가 (근소하게 초과)' },
+            { 'Quantization': 'Q2 (2비트)', 'Size': '17.5 GB', 'Fits 24GB?': '가능' },
+          ],
+          columns: ['Quantization', 'Model Size', 'Fits 24GB?'],
+        },
+        quantization: {
+          id: 'quantization',
+          title: '공격적 양자화: 핵심 수단',
+          content: [
+            '**24GB에 70B를 맞추려면 Q2 또는 Q3 양자화를 사용해야 합니다.**',
+            '- **Q3**: 26GB(여전히 2GB 초과). 2GB를 RAM으로 오프로드 가능. Q2보다 품질이 약간 좋습니다.',
+            '- **Q2**: 17.5GB(적합!). FP16 대비 70% 품질. 눈에 띄는 열화가 있지만 사용 가능합니다.',
+            '양자화된 모델 다운로드: `ollama pull llama3.1:70b-q2` (가용 시) 또는 llama.cpp 같은 변환 도구를 사용하십시오.',
+          ],
+        },
+        offloading: {
+          id: 'offloading',
+          title: '시스템 RAM으로 오프로딩',
+          content: [
+            '**24GB GPU에서 Q4(35GB)를 사용할 경우, 나머지 11GB를 시스템 RAM으로 오프로드할 수 있습니다.** 속도 페널티가 심각합니다(10배 느려짐).',
+            '결과를 몇 시간씩 기다릴 수 있는 배치 처리에만 실용적입니다.',
+          ],
+        },
+        setup: {
+          id: 'setup',
+          title: '실용적 설정: 24GB에서 70B 실행하기',
+          content: '단계별 안내:',
+          numberedItems: [
+            'Q2 양자화 사용: `ollama pull llama3.1:70b-q2` (가용 시, 아니면 llama.cpp로 변환)',
+            'VRAM 확인: `nvidia-smi`로 ~18GB 사용 중임을 확인',
+            '모델 실행: `ollama run llama3.1:70b-q2`',
+            '3-5 토큰/초 예상(매우 느림)',
+            '인터랙티브 채팅이 아닌 배치/오프라인 처리에만 사용하십시오',
+          ],
+        },
+        performance: {
+          id: 'performance',
+          title: '현실적인 성능 기대치',
+          content: [
+            '**24GB VRAM에서 70B 실행은 느립니다:**',
+          ],
+          rows: [
+            { 'Quantization': 'Q2 (24GB VRAM)', 'Speed': '5-8 tok/초', 'Latency': '토큰당 2-4초', 'Use Case': '배치 처리 전용' },
+            { 'Quantization': 'Q3 + 오프로드 (24GB)', 'Speed': '3-5 tok/초', 'Latency': '토큰당 3-5초', 'Use Case': '극히 제한적' },
+            { 'Quantization': 'Q4 + 오프로드 (24GB)', 'Speed': '1-3 tok/초', 'Latency': '토큰당 5-10초', 'Use Case': '야간 배치 전용' },
+          ],
+          columns: ['Quantization', 'Speed', 'Latency', 'Use Case'],
+        },
+        alternatives: {
+          id: 'alternatives',
+          title: '제약된 70B의 더 나은 대안',
+          content: '제한된 VRAM에서 70B와 씨름하는 대신 다음을 고려하십시오:',
+          items: [
+            '13B 모델 사용 (Llama 3.3 13B at Q5 = 8GB, 매우 빠름)',
+            '레이어 분할을 위한 두 번째 RTX 4090 구입 (2× 24GB = 48GB, 100+ tok/초)',
+            '클라우드 API 활용 (중요한 작업에는 GPT-5.5, 실험에는 로컬)',
+            '더 효율적인 모델을 기다리기 (더 작고, 동일한 품질)',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: '제약된 70B 사용 시 흔한 실수',
+          items: [
+            '**Q2가 채팅에 사용 가능하다고 기대하는 것.** 그렇지 않습니다. 품질 저하가 너무 심해 실시간 인터랙션에 부적합합니다.',
+            '**대형 배치 작업 전에 실제 속도를 측정하지 않는 것.** 짧은 프롬프트(10 토큰)로 테스트하고 속도를 확인한 후 대형 배치 작업을 실행하십시오.',
+            '**오프로딩이 "무료"라고 가정하는 것.** 시스템 RAM은 GPU VRAM보다 100배 느립니다. 오프로딩은 추론을 비실용적으로 만듭니다.',
+            '**대안을 고려하지 않는 것.** 13B 모델은 훨씬 빠르고 품질면에서도 충분한 경우가 많습니다.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '자주 묻는 질문',
+          faqs: [
+            {
+              q: '실제로 단일 RTX 4090에서 70B 모델을 실행할 수 있습니까?',
+              a: '가능하지만 중요한 제약이 있습니다. Q2 양자화(17.5GB)에서 모델은 24GB VRAM에 맞지만 5–8 토큰/초로 실행되며 FP16 품질의 약 70% 수준입니다. Q4(35GB)에서는 11GB를 시스템 RAM으로 오프로드해야 하며 속도가 1–3 토큰/초로 떨어집니다. 둘 다 실시간 채팅에는 적합하지 않으며, 오프라인 배치 처리에만 사용 가능합니다.',
+            },
+            {
+              q: '24GB VRAM에 70B를 맞추려면 어떤 양자화가 필요합니까?',
+              a: 'Q2 양자화가 24GB에 맞습니다(모델 크기 17.5GB). Q3(26GB)는 2GB RAM 오프로딩이 필요합니다. Q4(35GB)는 11GB 오프로딩이 필요하며 추론이 매우 느려집니다. Q5 이상(44–70GB)은 24GB GPU에서 오프로딩으로도 맞출 수 없습니다. Q2가 VRAM에서 완전히 실행되는 유일한 옵션입니다.',
+            },
+            {
+              q: '24GB VRAM에서 70B 모델은 얼마나 느립니까?',
+              a: 'Q2(VRAM 완전 사용): 5–8 토큰/초. 2GB RAM 오프로드 Q3: 3–5 토큰/초. 11GB RAM 오프로드 Q4: 1–3 토큰/초. 동일한 GPU에서 Q5로 실행하는 13B 모델: 80–100 토큰/초. 제약된 70B 설정은 적절한 크기의 소형 모델보다 10–20배 느립니다.',
+            },
+            {
+              q: '제약된 70B보다 13B 모델을 사용하는 것이 더 낫습니까?',
+              a: '대부분의 작업에서 그렇습니다. Q5 양자화의 13B 모델은 RTX 4090에서 80–100 토큰/초로 실행되며 높은 품질을 제공합니다. Q2의 70B 모델은 5–8 토큰/초로 실행되며 품질이 저하됩니다. Q2 열화로 인해 13B가 속도와 실용적 품질 모두에서 앞섭니다. 70B 특유의 기능이 필요하고 배치 전용 사용을 감수할 수 있는 경우에만 24GB에서 70B를 사용하십시오.',
+            },
+            {
+              q: '24GB VRAM에서 70B의 최적 사용 사례는 무엇입니까?',
+              a: '야간 배치 처리 — 100개 이상의 프롬프트를 제출하고 몇 시간 후에 결과를 가져오는 작업. 예: 문서 분석, 코드 리뷰 배치, 데이터셋 어노테이션. 1–8 토큰/초에서 실시간 채팅은 비실용적입니다. 인터랙티브 사용에는 레이어 분할이 가능한 두 번째 RTX 4090($1,800)이 ~100 토큰/초를 달성하여 훨씬 나은 투자입니다.',
+            },
+            {
+              q: 'Q2 양자화 70B 모델은 어떻게 다운로드합니까?',
+              a: 'Ollama를 통해: `ollama pull llama3.1:70b-instruct-q2_K` (가용성은 다를 수 있음). llama.cpp를 통해: Hugging Face에서 GGUF Q2_K 파일 다운로드("llama-3.1-70b GGUF" 검색). TheBloke와 bartowski가 양자화 버전을 제공합니다. 모델 로드 후 `nvidia-smi`로 확인 — Q2의 경우 VRAM 사용량이 ~18–20GB여야 합니다.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 자료',
+          items: [
+            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 더 나은 하드웨어를 구입하십시오.',
+            '[멀티 GPU 로컬 LLM](/local-llms/multi-gpu-local-llms) -- 레이어 분할을 사용하십시오.',
+            '[코딩을 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) -- 소형 모델로도 충분한 경우가 많습니다.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            'llama.cpp Quantization -- github.com/ggerganov/llama.cpp/blob/master/gguf-py/gguf/quants.py',
+            'Model Card: Llama 3.3 70B -- huggingface.co/meta-llama/Llama-3.1-70B',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: '24GB VRAM에서 70B 모델 실행: 완전 설정 가이드 2026',
+        description: '24GB VRAM에서 70B 모델 실행 2026: 양자화(Q4_K_M), 오프로딩, 레이어 분할. 트레이드오프와 성능 데이터를 포함한 기법 안내.',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-19',
+        author: { '@type': 'Organization', name: 'PromptQuorum' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        proficiencyLevel: 'Advanced',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '실제로 단일 RTX 4090에서 70B 모델을 실행할 수 있습니까?',
+            acceptedAnswer: { '@type': 'Answer', text: '가능하지만 중요한 제약이 있습니다. Q2 양자화(17.5GB)에서 모델은 24GB VRAM에 맞지만 5–8 토큰/초로 실행되며 FP16 품질의 약 70% 수준입니다. Q4(35GB)에서는 11GB를 시스템 RAM으로 오프로드해야 하며 속도가 1–3 토큰/초로 떨어집니다. 둘 다 실시간 채팅에는 적합하지 않습니다.' },
+          },
+          {
+            '@type': 'Question',
+            name: '24GB VRAM에 70B를 맞추려면 어떤 양자화가 필요합니까?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Q2 양자화가 24GB에 맞습니다(모델 크기 17.5GB). Q3(26GB)는 2GB RAM 오프로딩이 필요합니다. Q4(35GB)는 11GB 오프로딩이 필요하며 추론이 매우 느려집니다. Q5 이상은 오프로딩으로도 맞출 수 없습니다. Q2가 VRAM에서 완전히 실행되는 유일한 옵션입니다.' },
+          },
+          {
+            '@type': 'Question',
+            name: '24GB VRAM에서 70B 모델은 얼마나 느립니까?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Q2(VRAM 완전 사용): 5–8 토큰/초. 2GB RAM 오프로드 Q3: 3–5 토큰/초. 11GB RAM 오프로드 Q4: 1–3 토큰/초. 동일한 GPU에서 Q5로 실행하는 13B 모델: 80–100 토큰/초 — 10–20배 빠릅니다.' },
+          },
+          {
+            '@type': 'Question',
+            name: '제약된 70B보다 13B 모델을 사용하는 것이 더 낫습니까?',
+            acceptedAnswer: { '@type': 'Answer', text: '대부분의 작업에서 그렇습니다. Q5의 13B 모델은 RTX 4090에서 80–100 토큰/초로 실행됩니다. Q2의 70B 모델은 5–8 토큰/초로 실행되며 품질이 저하됩니다. Q2 열화로 인해 13B가 속도와 실용적 품질 모두에서 앞섭니다. 70B 특유의 기능이 필요하고 배치 전용 사용을 감수할 수 있는 경우에만 사용하십시오.' },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '24GB VRAM에서 70B 모델을 실행하기 위한 기법',
+        numberOfItems: 3,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Q2 양자화 (17.5 GB)', description: '24GB VRAM에 완전히 맞습니다. 품질: FP16의 약 70%. 속도: 5–8 토큰/초.' },
+          { '@type': 'ListItem', position: 2, name: 'Q4 + CPU 오프로딩 (11GB 오프로드)', description: '품질이 더 좋지만 매우 느림: 1–3 토큰/초. 야간 배치에만 적합합니다.' },
+          { '@type': 'ListItem', position: 3, name: '레이어 분할 (2× RTX 4090)', description: '최선의 옵션: 총 48GB, Q5로 ~100 토큰/초 실행. 단일 GPU 제약보다 권장됩니다.' },
+        ],
+      },
+    },
   };

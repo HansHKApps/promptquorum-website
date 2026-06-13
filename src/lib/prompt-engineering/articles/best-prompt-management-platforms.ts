@@ -21,7 +21,6 @@ export const article: Partial<Record<Language, PEArticle>> = { en: { theme: 'Too
     next_refresh_due: '2026-12-03',
     primaryTerm: '프롬프트 관리 플랫폼',
     aboutTopics: ['프롬프트 버전 관리', '프롬프트 저장소', '팀 협업', '배포'],
-    targetKeywords: ['프롬프트 관리 플랫폼', '프롬프트 버전 관리 도구', '최고의 프롬프트 관리 소프트웨어 2026', 'PromptHub 한국어', 'AI 프롬프트 저장 도구'],
     toc: [
       { label: '핵심 요점', anchor: 'key-takeaways' },
       { label: '프롬프트 관리란 무엇인가?', anchor: 'what-is-prompt-management' },
@@ -37,10 +36,6 @@ export const article: Partial<Record<Language, PEArticle>> = { en: { theme: 'Too
       { label: '관련 읽을거리', anchor: 'related-reading' },
       { label: 'FAQ', anchor: 'faq' },
       { label: '출처', anchor: 'sources' },
-    ],
-    snippetBlocks: [
-      { type: 'one-sentence', text: '프롬프트 관리 플랫폼은 AI 프롬프트의 저장, 버전 관리, 검토, 배포를 팀 단위로 처리하는 시스템입니다.' },
-      { type: 'plain-terms', text: 'PromptHub는 Git처럼 프롬프트를 버전 관리하고, Vellum은 프로덕션 배포와 A/B 테스트를 지원하며, PromptLayer는 각 LLM 호출에 대한 비용, 지연시간, 로그를 기록합니다.' },
     ],
     schema: {
       '@context': 'https://schema.org',
@@ -60,15 +55,6 @@ export const article: Partial<Record<Language, PEArticle>> = { en: { theme: 'Too
         { '@type': 'Thing', name: 'LLM 배포' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-    },
-    breadcrumbSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: '프롬프트 엔지니어링', item: 'https://www.promptquorum.com/ko/prompt-engineering' },
-        { '@type': 'ListItem', position: 3, name: '2026년 최고의 프롬프트 관리 플랫폼', item: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-management-platforms' },
-      ],
     },
     sections: {
       keyTakeaways: {

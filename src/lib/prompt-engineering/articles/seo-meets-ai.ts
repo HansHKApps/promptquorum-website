@@ -3090,4 +3090,518 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Use Cases',
+      title: 'SEO와 AI의 만남: GEO가 기존 방식을 대체하는 방법',
+      intro: '**생성형 엔진 최적화(GEO)란 AI 검색 엔진(ChatGPT, Perplexity, Gemini, Claude)이 답변을 합성할 때 해당 콘텐츠를 인용하도록 구조화하는 기법입니다. Google의 파란색 링크 중 상위에 노출되는 기존 SEO 목표를, AI가 답변마다 인용하는 2~7개 출처 안에 포함되는 새로운 목표로 전환합니다.**\n\nGEO는 기존 SEO를 대체하지 않습니다. AI 어시스턴트가 검색 상호작용의 40% 이상을 처리하고, 전체 검색의 약 60%가 단 한 번의 클릭 없이 종료되는 검색 환경에서 두 번째 최적화 레이어를 추가하는 것입니다.',
+      publishDate: '2026-03-23',
+      dateModified: '2026-04-28',
+      lastFactChecked: '2026-04-28',
+      readTime: '8분 읽기',
+
+      seoTitle: 'SEO와 AI의 만남: GEO로 ChatGPT 인용을 얻는 방법 (2026)',
+
+      metaDescription: 'GEO는 AI 답변에서 콘텐츠가 인용되도록 합니다. AI 트래픽은 796% 성장했으며 전환율은 유기 검색 45% 대비 54%입니다. 스키마 마크업은 인용률을 340% 높입니다. 완전한 SEO + GEO 플레이북.',
+
+      educationalLevel: 'Beginner',
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: 'GEO vs. SEO: 서로 다른 두 게임', anchor: '#geo-vs-seo-two-different-games' },
+        { label: 'AI 트래픽이 다르게 전환되는 이유', anchor: '#why-ai-traffic-converts-differently' },
+        { label: 'GEO의 기술적 토대란 무엇인가?', anchor: '#what-are-the-technical-foundations-of-geo' },
+        { label: 'robots.txt에서 차단을 해제해야 할 AI 크롤러는?', anchor: '#which-ai-crawlers-should-you-unblock-in-robotstxt' },
+        { label: '콘텐츠 구조: AI 엔진이 실제로 인용하는 것', anchor: '#content-structure-what-ai-engines-actually-cite' },
+        { label: '나쁜 예 vs. 좋은 예: GEO 준수 재작성', anchor: '#bad-vs-good-a-geo-compliant-rewrite' },
+        { label: 'GEO 시대에도 기존 SEO가 중요한가?', anchor: '#does-traditional-seo-still-matter-for-geo' },
+        { label: 'AI 검색 시장을 지배하는 플랫폼은?', anchor: '#which-ai-platforms-dominate-the-search-market' },
+        { label: 'GEO는 지역과 시장에 따라 어떻게 달라지는가?', anchor: '#how-does-geo-differ-across-regions-and-markets' },
+        { label: 'GEO를 위한 콘텐츠 최적화 방법', anchor: '#how-to-optimize-content-for-geo' },
+        { label: '흔한 GEO 실수(와 수정 방법)', anchor: '#common-geo-mistakes-and-how-to-fix-them' },
+        { label: '관련 읽기', anchor: '#related-reading' },
+        { label: '자주 묻는 질문', anchor: '#frequently-asked-questions' },
+        { label: '출처 및 추가 읽기', anchor: '#sources-further-reading' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'SEO와 AI의 만남: GEO가 기존 방식을 대체하는 방법',
+        description: '생성형 엔진 최적화(GEO)는 AI 기반 검색 엔진이 콘텐츠를 인용하도록 하는 방법입니다. GEO와 SEO의 차이, AI 트래픽이 더 높은 전환율을 보이는 이유, ChatGPT·Perplexity·Gemini에서 콘텐츠가 인용되기 위한 기술적 토대를 알아봅니다.',
+        datePublished: '2026-03-23',
+        dateModified: '2026-04-28',
+        author: {
+          '@type': 'Person',
+          name: 'Hans Kuepper',
+          url: 'https://www.promptquorum.com/about',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.promptquorum.com/logo.svg',
+          },
+        },
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/api/og/seo-meets-ai',
+          width: 1200,
+          height: 630,
+        },
+        keywords: ['GEO', 'SEO', '생성형 엔진 최적화', 'AI 검색', 'ChatGPT 검색', 'Perplexity', 'Google AI Overviews', 'JSON-LD 스키마', 'AI 인용'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'ChatGPT' },
+          { '@type': 'SoftwareApplication', name: 'Google AI Overviews' },
+          { '@type': 'SoftwareApplication', name: 'Perplexity AI' },
+          { '@type': 'SoftwareApplication', name: 'Claude' },
+          { '@type': 'SoftwareApplication', name: 'Microsoft Copilot' },
+          { '@type': 'SoftwareApplication', name: 'Gemini' },
+          { '@type': 'Organization', name: 'PromptQuorum' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'SEO와 GEO의 차이점은 무엇입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'SEO(검색 엔진 최적화)는 사용자가 파란색 링크 목록에서 선택하는 Google·Bing 같은 전통적인 검색 엔진 결과에서 페이지 순위를 높이는 데 집중합니다. GEO(생성형 엔진 최적화)는 ChatGPT·Perplexity·Gemini·Claude의 AI 생성 답변 안에서 콘텐츠가 인용되도록 하는 데 집중합니다. 사용자는 선택지 목록 대신 하나의 통합 답변을 받습니다. 두 가지 모두 필요합니다. Google 상위 10위 안에 드는 사이트는 Google AI Overviews에 인용될 확률이 약 25% 높아집니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI 검색 트래픽이 유기 검색보다 전환율이 높습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'B2B 기업의 경우 그렇습니다. WebFX가 23억 세션을 분석한 결과, AI 추천 방문자의 세션 전환율은 54.15%로 유기 검색의 45.23%보다 높았습니다. Ahrefs는 자사 사이트에서 AI 검색이 유기 검색보다 23배 높은 전환율을 보고했습니다. 이커머스의 경우 결과가 혼재되어 있습니다. SearchEngineLand의 973개 이커머스 사이트 분석에서는 AI 검색이 유기 검색보다 전환율이 낮았습니다. 전환 우위는 B2B 및 고관여 구매에서 가장 뚜렷합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '스키마 마크업은 AI 인용률을 얼마나 향상시킵니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '올바른 JSON-LD 스키마 마크업이 있는 페이지는 리치 결과 노출 수가 최대 40% 증가합니다. 제어된 테스트에서 구조화 데이터를 올바르게 구현한 콘텐츠는 구조화되지 않은 동일 콘텐츠보다 인용률이 340% 높았습니다. 단, 2026년 SearchAtlas 연구에 따르면 스키마 커버리지만으로는 OpenAI·Gemini·Perplexity에서 LLM 인용 빈도가 일관되게 증가하지 않습니다. 콘텐츠 권위와 답변 우선 구조가 더 강력한 신호입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI 검색은 얼마나 빠르게 성장하고 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '생성형 AI 트래픽은 2024년 1월부터 2025년 12월까지 796% 성장했으며, 같은 기간 세션 전환은 6,432% 증가했습니다. 2025년 7월 기준 미국 소매 사이트의 AI 생성 트래픽은 전년 대비 4,700% 증가했습니다. 이 같은 성장에도 불구하고 AI 검색은 전체 웹 세션의 0.18%에 불과합니다. 유기 및 직접 트래픽이 여전히 63%를 차지합니다. AI 검색 트래픽은 2~4년 내에 전통적인 유기 검색을 추월할 것으로 전망됩니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI 검색 시대에도 SEO는 여전히 중요합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '그렇습니다. 기존 SEO는 GEO의 대안이 아니라 전제 조건입니다. Google 상위 10위 안에 드는 사이트는 AI Overviews에 인용될 확률이 25%이며, 상위 10위 밖의 사이트는 Google 플랫폼에서 AI 가시성이 거의 없습니다. 기존 순위를 높이는 E-E-A-T(경험·전문성·권위성·신뢰성) 신호는 AI 인용 확률도 강화합니다. 두 분야는 기초 요건을 공유하며, 차이점은 GEO가 답변 우선 구조·엔티티 밀도·스키마 마크업을 추가 레이어로 더한다는 것입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'GEO를 위해 콘텐츠를 최적화하는 첫 번째 단계는 무엇입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'AI 관점에서 현재 콘텐츠를 감사하는 것으로 시작하십시오. 트래픽이 가장 높은 페이지 10개를 선택하고 ChatGPT·Perplexity·Google AI Overviews에 해당 주제와 관련된 질문을 입력하여 콘텐츠가 인용되거나 추천되는지 확인하십시오. 이를 통해 AI 답변에 나타나지 않는 격차를 파악합니다. 이후 JSON-LD 스키마 마크업(Article·FAQPage가 가장 효과적) 추가, 콘텐츠의 답변 우선 형식 재구성, AI 시스템이 광범위한 사용자 쿼리를 세분화하는 하위 질문에 대비한 FAQ 섹션 추가를 우선시하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'llms.txt란 무엇이며 필요합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'llms.txt는 robots.txt와 유사한 새로운 표준으로, AI 모델이 직접 수집할 수 있도록 구조화된 사이트 요약을 제공합니다. 사이트 루트에 위치하며 인용 가능한 콘텐츠를 신호합니다. 2026년 4월 현재 ChatGPT·Perplexity·Claude는 모두 llms.txt를 크롤 힌트로 지원합니다. 필수는 아니지만 핵심 콘텐츠의 AI 색인화를 가속화합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'GEO는 AEO(답변 엔진 최적화)와 다릅니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GEO와 AEO는 밀접하게 관련되어 있지만 동일하지 않습니다. AEO는 전통적인 검색 엔진의 직접 답변 상자와 추천 스니펫 최적화에 집중합니다. GEO는 RAG 파이프라인을 사용하여 여러 출처의 답변을 합성하는 생성형 AI 엔진(ChatGPT·Gemini·Perplexity·Claude)을 구체적으로 겨냥합니다. GEO에는 답변 우선 구조·스키마 마크업·엔티티 밀도가 필요합니다. AEO 기법과 상당히 겹치지만, GEO는 문맥 없이 인용될 수 있는 독립적이고 추출 가능한 단락이라는 요건을 추가합니다.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'SEO와 AI의 만남: 핵심 주제',
+        'description': '생성형 엔진 최적화를 이해하기 위한 핵심 개념',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'GEO vs SEO: 서로 다른 두 게임', 'description': '기존 SEO와 생성형 엔진 최적화의 차이 이해' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'AI 트래픽이 다르게 전환되는 이유', 'description': 'AI 추천 방문자가 유기 검색보다 높은 전환율을 보이는 방식' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'GEO의 기술적 토대', 'description': 'JSON-LD 스키마 마크업과 AI 인용률에 대한 영향' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'AI 크롤러 스택', 'description': 'GPTBot·ClaudeBot·PerplexityBot 및 llms.txt 표준 이해' },
+          { '@type': 'ListItem', 'position': 5, 'name': '콘텐츠 구조와 AI 인용', 'description': '답변 우선 구조·엔티티 밀도·서식이 AI 인용을 극대화하는 방법' },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: '핵심 요약',
+          isTldr: true,
+          items: [
+            'GEO(생성형 엔진 최적화)는 AI 생성 답변에서 콘텐츠가 인용되도록 하고, SEO는 파란색 링크 결과에서 페이지가 순위에 오르도록 합니다. 2026년에는 둘 다 필요합니다.',
+            'AI 트래픽의 세션 전환율은 54.15%로 유기 검색의 45.23%보다 높지만, 현재 전체 세션의 0.18%에 불과합니다.',
+            'JSON-LD 스키마 마크업이 있는 페이지는 리치 결과 노출이 최대 40% 증가하며, 제어 테스트에서 구조화 데이터는 인용 확률을 최대 340% 높입니다.',
+            'Google 상위 10위 안에 들면 Google AI Overviews에 노출될 확률이 25%입니다. 기존 SEO 권위는 GEO 가시성의 전제 조건입니다.',
+            'ChatGPT는 AI 검색 시장의 59.70%를 차지합니다. ChatGPT를 먼저 최적화한 뒤 Perplexity(100% 출처 투명성)와 Gemini를 순서대로 처리하십시오.',
+            '리스트 기반 콘텐츠는 산문형 콘텐츠보다 AI 인용이 68% 많으며, FAQ 섹션은 AI 가시성을 45% 높입니다.',
+            '2025년 7월 기준 미국 소매 사이트의 AI 생성 트래픽은 전년 대비 4,700% 증가했습니다. 채널 규모는 작지만 전례 없는 속도로 성장 중입니다.',
+          ],
+        },
+        definition: {
+          title: 'GEO vs. SEO: 서로 다른 두 게임',
+          content: [
+            '**기존 SEO는 10개의 파란색 링크 중 한 자리를 차지하고, GEO는 AI 모델이 하나의 통합 답변에서 일반적으로 언급하는 2~7개 출처 중 하나로 인용되는 것을 목표로 합니다.** 순위 신호·콘텐츠 형식·성공 지표가 근본적으로 다릅니다. [AI 시스템의 작동 방식과 한계](/prompt-engineering/ai-limitations-what-llms-cant-do)를 이해하는 것이 GEO 최적화에 필수적입니다.',
+          ],
+          callouts: [
+            {
+              type: 'pro-tip',
+              label: '💡 Pro Tip',
+              text: 'Google 상위 10위 안에 드는 페이지는 Google AI Overviews에 노출될 확률이 25%입니다. 즉, 기존 SEO 순위가 GEO 가시성의 전제 조건이지 선택 사항이 아닙니다.',
+            },
+          ],
+          columns: ['항목', '기존 SEO', '생성형 엔진 최적화 (GEO)'],
+          rows: [
+            { '항목': '주요 목표', '기존 SEO': 'Google/Bing 1~10위 달성', '생성형 엔진 최적화 (GEO)': 'AI 생성 답변에서 인용되기' },
+            { '항목': '대상 플랫폼', '기존 SEO': 'Google, Bing, Yahoo', '생성형 엔진 최적화 (GEO)': 'ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews' },
+            { '항목': '핵심 성과 지표', '기존 SEO': '순위·클릭·유기 트래픽', '생성형 엔진 최적화 (GEO)': 'AI 인용·AI 응답 내 브랜드 언급' },
+            { '항목': '콘텐츠 접근 방식', '기존 SEO': '키워드·백링크·메타데이터', '생성형 엔진 최적화 (GEO)': '엔티티 풍부·구조화·답변 우선 사실' },
+            { '항목': '결과까지 소요 시간', '기존 SEO': '4~6개월', '생성형 엔진 최적화 (GEO)': '6~12개월' },
+            { '항목': '전환율 (B2B)', '기존 SEO': '평균 약 2.1%', '생성형 엔진 최적화 (GEO)': 'AI 추천 방문자 평균 약 27%' },
+          ],
+          blockquote: 'SEO와 GEO 모두 명확성·권위·구조화 콘텐츠·사용자 의도라는 동일한 기반에 의존합니다. 차이점은 AI 엔진이 백링크와 클릭 지표 대신 엔티티 인식과 의미적 완전성을 통해 그 신호를 해석한다는 것입니다. 한 문장으로 요약하면: 기존 SEO가 1페이지를 차지하기 위한 경쟁이었다면, GEO는 AI가 이미 답을 알고 있을 때 인용하는 출처가 되는 것입니다.',
+        },
+        conversionAnalysis: {
+          title: 'AI 트래픽이 다르게 전환되는 이유',
+          content: [
+            '**AI 검색 엔진을 통해 유입된 방문자는 유기 검색 방문자보다 훨씬 높은 전환율을 보입니다. AI가 이미 옵션을 합성·비교한 후 유입되기 때문입니다.**',
+            '**지표 관련 참고 사항:** 아래 연구는 각각 세션 수준 전환율(WebFX), 목표 완료 증가(Ahrefs), B2B 특화 전환(SEMrush)을 측정합니다. 이 수치들은 직접 비교할 수 없으며, 각각 출처와 레이블이 명시되어 있습니다.',
+            'WebFX의 23억 사이트 세션 분석(2024년 1월~2025년 12월) 결과:',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: '⚠️ Warning',
+              text: '전환 상승은 업종마다 다릅니다. B2B는 AI 트래픽 전환율 54% 대 유기 45%를 보이지만, 이커머스는 반대입니다. AI 트래픽이 귀사 업종에 유리한지 직접 테스트하십시오.',
+            },
+          ],
+          items: [
+            '생성형 AI 트래픽이 **2년 만에 796% 성장**',
+            'AI 추천 방문자의 세션 전환율은 **54.15%**로 유기 검색 45.23% 대비 높음',
+            'AI 트래픽 전환이 **전년 대비 6,432% 성장** — 세션 성장보다 빠르게 증가하여 더 높은 비율의 방문자가 전환되고 있음',
+          ],
+          blockquote: '전환 프리미엄은 B2B에서 특히 두드러집니다. Ahrefs는 자사 사이트에서 AI 검색 도구가 유기 검색보다 23배 높은 전환율을 보고했습니다. SEMrush는 500개 이상의 B2B 주제 연구에서 AI 검색 트래픽이 유기 대비 4.4배 높은 전환율을 확인했습니다. 그러나 SearchEngineLand의 973개 이커머스 사이트 분석에서는 AI 추천 방문자의 전환율이 유기보다 낮았습니다. 우위는 업무·업종에 따라 다릅니다. **PromptQuorum에서 테스트 완료 — 세 모델에 25개 브랜드 가시성 쿼리를 실행한 결과:** GPT-5(OpenAI)·Claude 4.8 Opus(Anthropic)·Gemini 3 Pro(Google DeepMind)는 25개 중 17개 사례에서 동일한 브랜드 출처를 인용했습니다. 8개 사례에서는 동일 쿼리에 대해 서로 다른 출처를 인용했으며, 이는 AI 인용이 결정론적이지 않음을 확인합니다. 여러 권위 있는 맥락에서 훈련 데이터에 등장할수록 인용 확률이 높아집니다.',
+        },
+        technicalFoundations: {
+          title: 'GEO의 기술적 토대란 무엇인가?',
+          content: [
+            '**올바른 JSON-LD 스키마 마크업이 있는 페이지는 마크업이 없는 페이지보다 리치 결과 노출 수가 최대 40% 많으며, 구조화 데이터를 올바르게 구현한 콘텐츠는 제어된 AI 인용 테스트에서 인용률이 최대 340% 높습니다.**',
+            'JSON-LD(JavaScript Object Notation for Linked Data)는 Google이 권장하는 스키마 형식으로, AI가 가장 잘 파싱하는 구조화 데이터 형식입니다. 페이지 `<head>`의 `<script>` 블록에 배치되어 의미론적 레이블을 가시적인 HTML에서 분리합니다. 이를 통해 인라인 Microdata나 RDFa 대비 구현 오류율이 약 60% 감소합니다. [잘 구성된 글쓰기](/prompt-engineering/write-better-code-with-ai)와 결합하면 스키마 마크업이 GEO의 토대가 됩니다.',
+            'AI 인용 향상 효과 순으로 정렬한 가장 영향력 있는 스키마 유형:',
+          ],
+          callouts: [
+            {
+              type: 'key-point',
+              label: '📌 Key Point',
+              text: '2026년 SearchAtlas 연구에 따르면 스키마 마크업만으로는 AI 인용률이 보장되지 않습니다. 콘텐츠 권위와 답변 우선 구조가 더 강력한 신호입니다. 스키마는 기반이지만 그것만으로는 충분하지 않습니다.',
+            },
+          ],
+          items: [
+            '**Article / TechArticle** — 저자·발행일·주제 카테고리 확립',
+            '**FAQPage** — AI 답변 엔진이 직접 추출하는 Q&A 쌍',
+            '**HowTo** — 절차 쿼리에 대해 AI가 선호하는 번호 매긴 단계',
+            '**Organization** — 엔티티 인식: 누구인지·무엇을 하는지·공식 URL',
+            '**BreadcrumbList** — 콘텐츠 계층 구조 및 주제적 깊이 신호',
+          ],
+          blockquote: '중요한 주의 사항: OpenAI·Gemini·Perplexity의 스키마 채택 대 AI 인용 빈도를 분석한 2026년 SearchAtlas 연구에 따르면 스키마 커버리지가 높다고 해서 LLM 인용률이 일관되게 높아지지는 않습니다. 스키마는 콘텐츠를 파싱하기 쉽게 만들지만, 콘텐츠 권위·엔티티 밀도·답변 우선 구조가 더 강력한 인용 신호로 남아 있습니다.',
+        },
+        crawlerStack: {
+          title: 'robots.txt에서 차단을 해제해야 할 AI 크롤러는?',
+          content: [
+            '**AI 검색 플랫폼은 Googlebot과 구별되는 전용 크롤러를 사용합니다. `robots.txt`에서 차단되어 있지 않은지 확인하십시오:**',
+          ],
+          callouts: [
+            {
+              type: 'best-practice',
+              label: '🛠️ Best Practice',
+              text: '사이트 루트에 전용 `llms.txt` 파일을 추가하십시오. 고가치 콘텐츠 주제·업데이트 빈도·데이터 출처를 나열하십시오. 이를 통해 AI 크롤러에게 인용을 원하는 콘텐츠를 정확히 알려줍니다. 새로운 표준은 https://llms.txt에서 확인하십시오.',
+            },
+          ],
+          items: [
+            '**GPTBot** — ChatGPT 검색 및 훈련을 위한 OpenAI 크롤러',
+            '**ClaudeBot** — Claude AI를 위한 Anthropic 크롤러',
+            '**PerplexityBot** — Perplexity AI의 웹 크롤러',
+            '**GoogleBot** — Google AI Overviews에도 Gemini를 통해 연결됨',
+          ],
+          blockquote: '새로운 `llms.txt` 표준은 `robots.txt`와 유사하게 AI 모델이 직접 수집할 수 있는 구조화된 사이트 요약을 제공하여, 인용 및 검색에 사용 가능한 콘텐츠를 신호합니다.',
+        },
+        contentStructure: {
+          title: '콘텐츠 구조: AI 엔진이 실제로 인용하는 것',
+          content: [
+            '**리스트 기반 콘텐츠는 산문형 대안보다 AI 인용이 68% 많으며, 구조화된 Q&A 블록이 있는 FAQ 섹션은 AI 생성 응답에서 가시성이 45% 증가합니다.**',
+            'AI 엔진은 검색 증강 생성(RAG)을 사용합니다. 먼저 인덱스를 검색하고 일치하는 구절을 검색한 다음 답변을 합성합니다. 따라서 콘텐츠는 페이지 수준이 아닌 단락 또는 섹션 수준에서 인용 가능해야 합니다. 잘 구성된 단일 섹션은 AI가 전체 페이지를 읽지 않아도 추출하여 인용할 수 있습니다.',
+            'AI 인용 확률을 극대화하는 5가지 콘텐츠 원칙:',
+          ],
+          snippets: [
+            {
+              type: 'in-one-sentence',
+              text: '검색 증강 생성(RAG)은 전체 페이지가 아닌 콘텐츠의 개별 구절을 추출하여 인용합니다. 따라서 단어 수보다 구조가 더 중요합니다.',
+            },
+            {
+              type: 'in-plain-terms',
+              text: '콘텐츠를 교과서처럼 생각하십시오. AI 시스템은 처음부터 끝까지 읽지 않습니다. 특정 질문에 대한 답을 검색하고, 관련 단락을 뽑아 인용한 후 넘어갑니다. 명확하고 독립적인 단락 하나가 5,000단어 분량의 산문보다 효과적입니다.',
+            },
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: '⚠️ Warning',
+              text: '모호한 마케팅 언어("강력한", "원활한", "혁신적인", "선도적인")는 AI 크롤러가 무시합니다. 정확한 수치·명명된 엔티티·측정 가능한 주장 등 구체적인 사실을 사용하십시오. 인용할 수 없다면 AI 시스템도 추출하지 않습니다.',
+            },
+          ],
+          items: [
+            '**답변 우선** — 모든 섹션의 첫 문장에 직접 답변을 배치하십시오. AI 크롤러는 각 제목의 시작 문장을 샘플링합니다. 이것이 작성된 콘텐츠에 적용된 [프롬프트 엔지니어링](/prompt-engineering/what-is-prompt-engineering)의 핵심 원칙입니다.',
+            '**엔티티 밀도** — 기사당 5~7개의 명명된 엔티티(제품명·회사명·기술 용어·연구자명)를 언급하여 주제적 권위를 신호하십시오. 이것이 AI 시스템에 주제가 권위 있고 인용 가능하다고 알리는 방법입니다.',
+            '**의미적 완전성** — 각 섹션은 다른 섹션의 맥락 없이 질문에 답할 수 있어야 합니다. AI는 구절을 독립적으로 추출합니다.',
+            '**모호한 주장 대신 구체적인 사실** — 정확한 수치·날짜·명명된 출처가 인용되며, "선도적인 솔루션"이나 "강력한 도구" 같은 문구는 무시됩니다.',
+            '**구조화된 서식** — 표와 글머리 기호 목록은 기계 판독 가능하며, 산문 단락은 NLP 파싱이 필요해 인용 빈도가 낮습니다.',
+          ],
+        },
+        goodExample: {
+          title: '나쁜 예 vs. 좋은 예: GEO 준수 재작성',
+          content: [
+            '**나쁜 예 — 정보가 없는 산문 (인용되지 않음):**',
+            '> 저희 플랫폼은 선도적인 AI 도구와 원활하게 통합되어 업계 최고의 결과를 제공하는 강력하고 포괄적인 솔루션입니다.',
+            '어떤 경쟁자도 이 문장을 그대로 게시할 수 있습니다. 엔티티도, 구체적인 사실도, 검증 가능한 주장도 없어 AI 엔진은 이를 완전히 건너뜁니다.',
+            '**좋은 예 — 엔티티 풍부, 사실 밀도 높음 (인용 가능):**',
+          ],
+          blockquote: 'PromptQuorum은 하나의 프롬프트를 GPT-5(OpenAI)·Claude 4.8 Opus(Anthropic)·Gemini 3 Pro(Google DeepMind)·Ollama를 통한 로컬 모델을 포함한 최대 25개의 AI 모델에 동시에 전송하고 모든 응답을 나란히 반환하여 비교합니다.',
+        },
+        goodExampleExplanation: {
+          content: [
+            '4개의 명명된 엔티티, 하나의 구체적인 숫자(25), 하나의 검증 가능한 기능(나란히 비교). AI 엔진은 이를 즉시 추출하여 귀속합니다. PromptQuorum에는 앱 내에서 직접 이러한 GEO 요건을 충족하는 콘텐츠 구성을 돕는 9개의 내장 프롬프트 프레임워크(CO-STAR·CRAFT·RISEN·SPECS·TRACE 등)가 포함되어 있습니다.',
+          ],
+        },
+        seoFoundation: {
+          title: 'GEO 시대에도 기존 SEO가 중요한가?',
+          content: [
+            '**웹사이트가 Google 상위 10위 파란색 링크에 포함된다면 Google AI Overviews에 출처로 인용될 확률이 25%입니다. SEO 권위가 GEO 가시성을 뒷받침합니다.**',
+            'AI 검색 플랫폼에서 실제 사용자 쿼리 25,000개를 분석한 결과, 기존 Google 순위 위치가 AI 인용 확률과 직접 상관관계가 있는 것으로 나타났습니다. 기존 검색 1위 사이트는 AI Overviews에 25% 빈도로 등장했으며, 상위 10위 밖의 페이지는 거의 0에 가까웠습니다. Google AI Overviews는 Gemini를 사용하여 쿼리에 대해 상위 랭크된 문서를 종합하므로, 기존 순위가 AI 포함의 전제 조건이 됩니다.',
+            '2026년을 위한 하이브리드 SEO + GEO 스택:',
+          ],
+          snippets: [
+            {
+              type: 'in-one-sentence',
+              text: 'E-E-A-T(경험·전문성·권위성·신뢰성) 신호는 기존 검색 순위와 AI 인용 확률을 모두 높입니다.',
+            },
+          ],
+          callouts: [
+            {
+              type: 'pro-tip',
+              label: '💡 Pro Tip',
+              text: 'GEO를 위해 SEO를 포기하지 마십시오. 두 가지는 서로를 강화합니다. Core Web Vitals 개선(SEO) → 순위 상승 → AI Overviews에 인용(GEO). E-E-A-T 신호는 두 가지 모두를 강화합니다. 한 레이어만이 아닌 전체 스택을 최적화하십시오.',
+            },
+          ],
+          columns: ['레이어', '실행 사항', '이유'],
+          rows: [
+            {
+              '레이어': '기술적 SEO',
+              '실행 사항': '페이지 속도·모바일·Core Web Vitals·정규 URL',
+              '이유': 'GEO 봇은 Googlebot과 동일한 크롤링 가능성 신호를 따름',
+            },
+            {
+              '레이어': '콘텐츠 SEO',
+              '실행 사항': 'E-E-A-T 신호·저자 자격 증명·가시적 발행일; [더 나은 콘텐츠 작성법 보기](/prompt-engineering/write-better-code-with-ai)',
+              '이유': 'AI 엔진은 명시적인 권위 신호가 있는 콘텐츠를 선호함',
+            },
+            {
+              '레이어': '엔티티 SEO',
+              '실행 사항': 'JSON-LD 스키마·지식 그래프 최적화',
+              '이유': '기계는 엔티티 그래프를 구축하며, 모호한 페이지는 건너뜀',
+            },
+            {
+              '레이어': 'GEO 특화',
+              '실행 사항': '답변 우선 구조·FAQ 섹션·llms.txt',
+              '이유': 'RAG 파이프라인에 의한 추출을 최적화함',
+            },
+            {
+              '레이어': '인용 구축',
+              '실행 사항': '권위 있는 출처(arXiv·Reuters·공식 문서)에서의 링크',
+              '이유': 'AI 모델은 다른 권위 있는 출처가 인용한 도메인에 가중치를 부여함',
+            },
+          ],
+        },
+        platformBreakdown: {
+          title: 'AI 검색 시장을 지배하는 플랫폼은?',
+          content: [
+            '**ChatGPT는 생성형 AI 검색 시장의 59.70%를 차지하며, Microsoft Copilot이 14.40%, Google Gemini가 13.50%로 뒤를 잇습니다. 대부분의 콘텐츠 전략에서 ChatGPT 최적화가 가장 높은 레버리지를 가진 GEO 투자입니다.**',
+          ],
+          callouts: [
+            {
+              type: 'insight',
+              label: '🔍 Did You Know?',
+              text: 'Perplexity AI는 사실 기반 쿼리에 대해 100%의 경우 출처 인용을 제공합니다. 이는 가장 투명한 AI 검색 플랫폼으로, 인용 성공 측정이 가장 쉽습니다. Perplexity 최적화 모범 사례는 ChatGPT와 Gemini 최적화에도 직접 적용됩니다.',
+            },
+          ],
+          columns: ['플랫폼', '시장 점유율', '크롤러', '인용 방식'],
+          rows: [
+            {
+              '플랫폼': 'ChatGPT (OpenAI)',
+              '시장 점유율': '59.70%',
+              '크롤러': 'GPTBot',
+              '인용 방식': '발췌문을 포함한 인라인 출처 링크',
+            },
+            {
+              '플랫폼': 'Microsoft Copilot',
+              '시장 점유율': '14.40%',
+              '크롤러': 'Bingbot',
+              '인용 방식': 'Bing 색인 페이지·각주 인용',
+            },
+            {
+              '플랫폼': 'Google Gemini / AI Overviews',
+              '시장 점유율': '13.50%',
+              '크롤러': 'Googlebot',
+              '인용 방식': '상위 10위 페이지·리치 스키마 선호',
+            },
+            {
+              '플랫폼': 'Perplexity AI',
+              '시장 점유율': '약 6~8% 추정',
+              '크롤러': 'PerplexityBot',
+              '인용 방식': '사실 기반 쿼리의 100%에 출처 목록 제공',
+            },
+            {
+              '플랫폼': 'Claude (Anthropic)',
+              '시장 점유율': '성장 중',
+              '크롤러': 'ClaudeBot',
+              '인용 방식': '장문의 잘 구성된 콘텐츠 선호',
+            },
+          ],
+          blockquote: 'Perplexity AI는 사실 기반 쿼리의 100%에 출처 링크를 제공합니다. 이는 투명성이 가장 높은 AI 검색 플랫폼으로 인용 추적 측정이 가장 쉽습니다. Perplexity 최적화 모범 사례는 ChatGPT 및 Gemini 최적화에도 잘 전달됩니다.',
+        },
+        globalContext: {
+          title: 'GEO는 지역과 시장에 따라 어떻게 달라지는가?',
+          content: [
+            '유럽 기업들은 AI 생성 콘텐츠에 대한 투명성을 요구하고 기만적인 AI 시스템을 금지하는 EU AI Act 준수와 GEO 투자의 균형을 맞춰야 합니다. Mistral AI(프랑스)는 유럽 검색 존재감을 확대하고 있습니다. 유럽 AI 플랫폼을 위해 최적화된 콘텐츠는 EU의 엄격한 데이터 출처 귀속 요건을 준수해야 합니다.',
+            '중국에서 생성형 검색은 **Baidu ERNIE**와 **Alibaba Qwen** 기반 검색 제품이 지배합니다. 중국 시장을 타겟으로 하는 GEO 전략은 Google 또는 OpenAI 지식 베이스와 구별되는 중국어 엔티티 그래프를 위한 최적화가 필요합니다. 중국의 생성형 AI 임시 조치(2023)는 AI 생성 콘텐츠에 레이블을 붙이도록 의무화하여, AI 플랫폼이 중국 검색 결과에서 출처를 귀속하는 방식에 영향을 미칩니다.',
+            'METI 데이터 거버넌스 지침 하의 일본 기업들은 점점 더 온프레미스 AI 검색 도구를 사용하고 있습니다. 따라서 일본 기업 청중을 위한 GEO는 Google AI Overviews만이 아니라 국내 인덱스에 나타나고 METI의 2024년 AI 거버넌스 프레임워크를 준수하는 콘텐츠를 우선시해야 합니다.',
+          ],
+          callouts: [
+            {
+              type: 'key-point',
+              label: '📌 Key Point',
+              text: '유럽·중국·일본 시장은 AI 콘텐츠 귀속에 대한 규제 요건이 다릅니다. 국제 청중을 대상으로 한다면 GEO 전략을 현지화하십시오. 하나의 글로벌 접근 방식으로는 모든 지역 준수 표준을 충족할 수 없습니다.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: '관련 읽기',
+          items: [
+            '[프롬프트 엔지니어링이란?](/prompt-engineering/what-is-prompt-engineering) — AI 시스템이 추출하고 인용하는 내용을 결정하는 구조화된 지침',
+            '[AI 한계 — LLM이 할 수 없는 것](/prompt-engineering/ai-limitations-what-llms-cant-do) — AI 생성 콘텐츠 주장에 대한 검증 기법',
+            '[AI로 더 나은 코드 작성하기](/prompt-engineering/write-better-code-with-ai) — AI 지원 코드 생성에 GEO 준수 구조 적용',
+          ],
+        },
+        howToStart: {
+          title: 'GEO(생성형 엔진 최적화)를 위한 콘텐츠 최적화 방법',
+          callouts: [
+            {
+              type: 'best-practice',
+              label: '🛠️ Best Practice',
+              text: 'ChatGPT를 먼저 우선시하십시오(시장 점유율 59.70%). 그 다음 Perplexity(가장 높은 투명성), 그 다음 Gemini 순서로 진행하십시오. 이 80/20 접근 방식은 새로운 플랫폼들에 노력을 분산하지 않고 최대 ROI를 제공합니다.',
+            },
+          ],
+          numberedItems: [
+            '**AI 관점에서 현재 콘텐츠의 검색 가능성과 인용 가능성을 감사하십시오.** 트래픽이 가장 높은 페이지 10개를 가져와 ChatGPT·Perplexity·Google AI Overviews에 주제와 관련된 질문을 하십시오. 콘텐츠가 인용되거나 추천되는지 확인하고 AI 답변에 나타나지 않는 격차를 표시하십시오.',
+            '**검증 가능한 사실과 명확한 스키마 마크업으로 답변 우선 콘텐츠를 구성하십시오.** 각 섹션을 질문이 아닌 직접 답변으로 시작하십시오. 모든 주장을 출처나 명확한 근거로 뒷받침하십시오. AI 크롤러가 콘텐츠 구조를 이해할 수 있도록 JSON-LD 스키마(Article·FAQPage·HowTo·Breadcrumb)를 추가하십시오.',
+            '**키워드만이 아닌 키워드 의도를 포함하십시오.** \'최고의 AI 도구\'로 순위를 매기고 있다면, GEO는 \'AI 도구가 최고인 이유는?\'(정확도·속도·비용·사용 편의성)에 답해야 합니다. AI 시스템은 키워드 매칭이 아닌 의도 매칭을 사용합니다. 답변이 AI 시스템이 사용자 의도를 추론하는 내용과 일치하는지 확인하십시오.',
+            '**AI 시스템이 질문하는 파생 질문에 답하는 FAQ 섹션을 구축하십시오.** AI 시스템은 광범위한 쿼리를 하위 질문으로 분해합니다. \'AI 할루시네이션\'을 타겟으로 한다면 \'AI 할루시네이션은 얼마나 자주 발생합니까?\', \'할루시네이션을 방지할 수 있습니까?\', \'어떤 모델이 가장 많이 할루시네이션을 합니까?\'에 답하는 FAQ 섹션을 추가하십시오.',
+            '**루트 디렉토리에 기계 판독 가능한 llms.txt 파일을 추가하십시오.** 고가치 콘텐츠 주제·데이터 출처·신뢰 신호(자격 증명·인용·업데이트 빈도)를 포함하십시오. 이를 통해 AI 크롤러가 콘텐츠를 인용할지 빠르게 결정할 수 있습니다.',
+          ],
+        },
+        commonMistakes: {
+          title: '흔한 GEO 실수(와 수정 방법)',
+          mistakes: [
+            {
+              mistake: 'GEO를 인용 최적화가 아닌 키워드 최적화로 취급하는 것.',
+              problem: '검색 쿼리를 위해 페이지를 최적화하고, AI 추출 및 인용을 위해서는 최적화하지 않습니다. AI 시스템은 키워드 밀도가 아닌 의도 매칭과 의미적 완전성을 사용합니다.',
+              fix: '초점을 전환하십시오. 각 섹션의 처음 2~3문장에서 질문 전체에 답하도록 콘텐츠를 구성하십시오. 키워드 반복 대신 정확한 엔티티와 구체적인 숫자를 사용하십시오. ChatGPT와 Perplexity로 직접 테스트하여 무엇이 인용되는지 확인하십시오.',
+            },
+            {
+              mistake: '"GEO에 올인"한다며 기존 SEO를 무시하는 것.',
+              problem: 'Google 상위 10위 밖의 페이지는 Google AI Overviews에서 가시성이 거의 없습니다. GEO는 SEO를 기반으로 합니다.',
+              fix: '이중 레이어: 강력한 E-E-A-T 신호·Core Web Vitals·백링크 품질을 유지하십시오(SEO). 그 위에 답변 우선 구조·스키마 마크업·FAQ 섹션을 추가하십시오(GEO). 두 가지는 서로를 강화합니다.',
+            },
+            {
+              mistake: 'AI 인용 개선을 위해 스키마 마크업에만 지나치게 의존하는 것.',
+              problem: '스키마는 AI 시스템이 콘텐츠를 더 쉽게 파싱하도록 하지만, 권위와 콘텐츠 구조가 더 강력한 인용 신호입니다. 완벽한 스키마가 있어도 모호한 산문으로 된 페이지는 인용되지 않습니다.',
+              fix: '레이어를 결합하십시오. JSON-LD 스키마 + 답변 우선 구조 + 엔티티 밀도를 추가하십시오. 2026년 SearchAtlas 연구에 따르면 스키마만으로는 강력한 콘텐츠 권위 없이 제한적인 영향을 미칩니다.',
+            },
+            {
+              mistake: '시장 점유율에 따른 우선순위 없이 모든 AI 플랫폼을 동등하게 최적화하는 것.',
+              problem: 'ChatGPT는 AI 검색 볼륨의 59.70%를 차지합니다. 5개 플랫폼에 최적화 노력을 분산하면 ROI가 희석됩니다.',
+              fix: 'ChatGPT를 먼저 우선시하십시오(GPTBot 크롤링·답변 우선 구조·FAQ 섹션). 그 다음 Perplexity(100% 출처 투명성·가장 높은 인용 빈도)를 최적화하십시오. 이후 Gemini와 Claude로 확장하십시오.',
+            },
+            {
+              mistake: '리스트 기반 콘텐츠 대신 밀도 높은 단락을 작성하는 것.',
+              problem: '리스트 기반 콘텐츠는 산문보다 AI 인용이 68% 많습니다. AI 시스템은 RAG(검색 증강 생성)를 사용하여 구조화된 섹션을 더 안정적으로 추출합니다.',
+              fix: '가능한 경우 산문 설명을 글머리 기호 목록으로 변환하십시오. 비교에는 표를 사용하십시오. 단락은 최대 2~3문장으로 유지하십시오. AI 크롤러는 각 제목의 첫 문장을 샘플링하여 섹션을 추출할지 결정합니다.',
+            },
+          ],
+        },
+        faq: {
+          title: '자주 묻는 질문',
+          faqs: [
+            {
+              q: 'SEO와 GEO의 차이점은 무엇입니까?',
+              a: 'SEO(검색 엔진 최적화)는 사용자가 파란색 링크 목록에서 선택하는 Google·Bing 같은 전통적인 검색 엔진 결과에서 페이지 순위를 높이는 데 집중합니다. GEO(생성형 엔진 최적화)는 ChatGPT·Perplexity·Gemini·Claude의 AI 생성 답변 안에서 콘텐츠가 인용되도록 하는 데 집중합니다. 사용자는 선택지 목록 대신 하나의 통합 답변을 받습니다. 두 가지 모두 필요합니다. Google 상위 10위 안에 드는 것은 Google AI Overviews에 인용될 확률을 약 25% 높입니다.',
+            },
+            {
+              q: 'AI 검색 트래픽이 유기 검색보다 전환율이 높습니까?',
+              a: 'B2B 기업의 경우 그렇습니다. WebFX가 23억 세션을 분석한 결과, AI 추천 방문자의 세션 전환율은 54.15%로 유기 검색의 45.23%보다 높았습니다. Ahrefs는 자사 사이트에서 AI 검색이 유기 검색보다 23배 높은 전환율을 보고했습니다. 이커머스의 경우 결과가 혼재되어 있습니다. SearchEngineLand의 973개 이커머스 사이트 분석에서는 AI 검색이 유기 검색보다 전환율이 낮았습니다. 전환 우위는 B2B 및 고관여 구매에서 가장 뚜렷합니다.',
+            },
+            {
+              q: '스키마 마크업은 AI 인용률을 얼마나 향상시킵니까?',
+              a: '올바른 JSON-LD 스키마 마크업이 있는 페이지는 리치 결과 노출 수가 최대 40% 증가합니다. 제어된 테스트에서 구조화 데이터를 올바르게 구현한 콘텐츠는 구조화되지 않은 동일 콘텐츠보다 인용률이 340% 높았습니다. 단, 2026년 SearchAtlas 연구에 따르면 스키마 커버리지만으로는 OpenAI·Gemini·Perplexity에서 LLM 인용 빈도가 일관되게 증가하지 않습니다. 콘텐츠 권위와 답변 우선 구조가 더 강력한 신호입니다.',
+            },
+            {
+              q: 'AI 검색은 얼마나 빠르게 성장하고 있습니까?',
+              a: '생성형 AI 트래픽은 2024년 1월부터 2025년 12월까지 796% 성장했으며, 같은 기간 세션 전환은 6,432% 증가했습니다. 2025년 7월 기준 미국 소매 사이트의 AI 생성 트래픽은 전년 대비 4,700% 증가했습니다. 이 같은 성장에도 불구하고 AI 검색은 전체 웹 세션의 0.18%에 불과합니다. 유기 및 직접 트래픽이 여전히 63%를 차지합니다. AI 검색 트래픽은 2~4년 내에 전통적인 유기 검색을 추월할 것으로 전망됩니다.',
+            },
+            {
+              q: 'AI 검색 시대에도 SEO는 여전히 중요합니까?',
+              a: '그렇습니다. 기존 SEO는 GEO의 대안이 아닌 전제 조건입니다. Google 상위 10위 안에 드는 사이트는 AI Overviews에 인용될 확률이 25%이며, 상위 10위 밖의 사이트는 Google 플랫폼에서 AI 가시성이 거의 없습니다. 기존 순위를 높이는 E-E-A-T(경험·전문성·권위성·신뢰성) 신호는 AI 인용 확률도 강화합니다. 두 분야는 기초 요건을 공유하며, 차이점은 GEO가 답변 우선 구조·엔티티 밀도·스키마 마크업을 추가 레이어로 더한다는 것입니다.',
+            },
+            {
+              q: 'GEO를 위해 콘텐츠를 최적화하는 첫 번째 단계는 무엇입니까?',
+              a: 'AI 관점에서 현재 콘텐츠를 감사하는 것으로 시작하십시오. 트래픽이 가장 높은 페이지 10개를 선택하고 ChatGPT·Perplexity·Google AI Overviews에 해당 주제와 관련된 질문을 입력하여 콘텐츠가 인용되거나 추천되는지 확인하십시오. 이를 통해 AI 답변에 나타나지 않는 격차를 파악합니다. 이후 JSON-LD 스키마 마크업(Article·FAQPage가 가장 효과적) 추가, 콘텐츠의 답변 우선 형식 재구성, AI 시스템이 광범위한 사용자 쿼리를 세분화하는 하위 질문에 대비한 FAQ 섹션 추가를 우선시하십시오.',
+            },
+            {
+              q: 'llms.txt란 무엇이며 필요합니까?',
+              a: 'llms.txt는 robots.txt와 유사한 새로운 표준으로, AI 모델이 직접 수집할 수 있도록 구조화된 사이트 요약을 제공합니다. 사이트 루트에 위치하며 인용 가능한 콘텐츠를 신호합니다. 2026년 4월 현재 ChatGPT·Perplexity·Claude는 모두 llms.txt를 크롤 힌트로 지원합니다. 필수는 아니지만 핵심 콘텐츠의 AI 색인화를 가속화합니다.',
+            },
+            {
+              q: 'GEO는 AEO(답변 엔진 최적화)와 다릅니까?',
+              a: 'GEO와 AEO는 밀접하게 관련되어 있지만 동일하지 않습니다. AEO는 전통적인 검색 엔진의 직접 답변 상자와 추천 스니펫 최적화에 집중합니다. GEO는 RAG 파이프라인을 사용하여 여러 출처의 답변을 합성하는 생성형 AI 엔진(ChatGPT·Gemini·Perplexity·Claude)을 구체적으로 겨냥합니다. GEO에는 답변 우선 구조·스키마 마크업·엔티티 밀도가 필요합니다. AEO 기법과 상당히 겹치지만, GEO는 문맥 없이 인용될 수 있는 독립적이고 추출 가능한 단락이라는 요건을 추가합니다.',
+            },
+          ],
+        },
+        sources: {
+          title: '출처 및 추가 읽기',
+          items: [
+            '[Aggarwal et al., 2023. "GEO: Generative Engine Optimization"](https://arxiv.org/abs/2311.09735) — GEO를 학문 분야로 정의하고 구조화 콘텐츠의 인용 상승을 측정한 기초 학술 논문',
+            '[WebFX, 2026. "Study: AI Traffic Grew 796% & Out-Converts Organic Search"](https://www.webfx.com/blog/seo/gen-ai-search-trends/) — AI 대 유기 전환율에 관한 23억 세션 분석',
+            '[xSeek / Milestone Research, 2026. "Structured Data for AI Search: 40% More Citations"](https://www.xseek.io/learnings/how-does-structured-data-boost-ai-search-visibility) — JSON-LD 스키마와 AI 인용 빈도에 관한 제어 연구',
+          ],
+        },
+      },
+    },
   };

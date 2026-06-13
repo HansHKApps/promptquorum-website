@@ -3769,6 +3769,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
 },
+
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',

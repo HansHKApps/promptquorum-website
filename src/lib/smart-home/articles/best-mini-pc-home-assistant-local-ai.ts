@@ -194,11 +194,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'أفضل Mini PCs لـ Home Assistant + الذكاء الاصطناعي المحلي (2026)',
-    seoTitle: 'أفضل Mini PC لـ Home Assistant + الذكاء الاصطناعي المحلي 2026',
+    seoTitle: 'أفضل Mini PC لـ Home Assistant + LLM محلي 2026',
     intro:
       'أفضل mini PCs لتشغيل Home Assistant مع نموذج LLM محلي على صندوق واحد تُعطي الأولوية لـ RAM وGPU متكاملة أو NPU قادرة. يشرح هذا الدليل الشرائي ما تحتاجه لـ HA مع الذكاء الاصطناعي على جهاز واحد، ويقارن الفئات الرئيسية لـ mini PC، ويوازن الميزانية مقابل الأداء، ويغطي ملاحظات الإعداد — مع إحالات متقاطعة إلى دليل أجهزة local-llms لتفاصيل VRAM.',
     metaDescription:
-      'Home Assistant + نموذج LLM محلي على mini PC واحد في 2026: RAM وiGPU أو NPU هما الأهم. مقارنة بين فئات N-series وRyzen/Core i وNPU حسب حمل العمل.',
+      'RAM وiGPU أو NPU أهم من تردد CPU لتشغيل LLM محلي على Home Assistant. N-series للنماذج الصغيرة، Ryzen/Core i للنموذج 7B. مقارنة 3 فئات.',
     twitterDescription:
       'أفضل mini PCs لتشغيل Home Assistant + نموذج LLM محلي على صندوق واحد: أعطِ الأولوية لـ RAM وiGPU/NPU قادرة. مقارنة الفئات واختيارات حسب الميزانية.',
     readTime: '8 دقائق للقراءة',

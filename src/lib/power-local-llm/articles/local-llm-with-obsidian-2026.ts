@@ -2701,6 +2701,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
 },
 
+
+
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',

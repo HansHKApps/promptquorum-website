@@ -2414,4 +2414,359 @@ curl http://localhost:11434/v1/chat/completions \\
       },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-26',
+    theme: 'Qwen Models',
+    title: 'Qwen 로컬 배포 가이드 2026: 모든 하드웨어 티어에서 Qwen3, Coder & VL 실행하기',
+    seoTitle: 'Qwen3 로컬 설정 가이드 2026: Coder, VL & 하드웨어 티어',
+    intro: 'Qwen3 7B는 Ollama를 통해 명령어 하나만으로 5.5 GB의 VRAM에서 실행됩니다. Qwen3-Coder 32B는 HumanEval에서 92.7%를 달성합니다. Qwen2-VL 7B는 중국어 및 일본어 문서 OCR에서 로컬 비전 모델 중 최고 성능을 보입니다. 이 가이드는 Qwen 전체 패밀리를 다룹니다 — 각 하드웨어 티어에서 실행할 모델, Ollama와 LM Studio 설정 방법, 양자화 선택, 벤치마크 데이터, 그리고 2026년 소비자 하드웨어에서 Qwen이 DeepSeek 및 Llama와 어떻게 비교되는지를 설명합니다.',
+    metaDescription: '2026년에 Qwen3 (7B–72B), Qwen3-Coder, Qwen2-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 벤치마크, 하드웨어 티어 가이드를 제공합니다.',
+    publishDate: '2026-05-26',
+    dateModified: '2026-05-26',
+    readTime: '14분 분량',
+    educationalLevel: 'Intermediate',
+    audience: 'Qwen 전체 모델 패밀리를 로컬에서 실행하고자 하는 개발자, 연구자, 프라이버시 중심 사용자 — 미국 대안보다 Alibaba 모델을 선호하는 중국어 사용자 포함',
+    primaryTerm: 'Qwen 로컬 배포',
+    targetKeywords: [
+      'qwen 로컬 배포 2026',
+      'qwen 로컬 실행',
+      'qwen ollama 설정',
+      'qwen2.5 vram 요구사항',
+      'qwen coder 로컬',
+      'qwen2-vl 로컬',
+      'qwen본지부서',
+    ],
+    current_models_mentioned: [
+      'Qwen3 7B',
+      'Qwen3 14B',
+      'Qwen3 32B',
+      'Qwen3 72B',
+      'Qwen3-Coder 7B',
+      'Qwen3-Coder 14B',
+      'Qwen3-Coder 32B',
+      'Qwen2-VL 7B',
+      'Qwen2-VL 72B',
+      'DeepSeek-V2.5',
+      'Llama 3.3 70B',
+    ],
+    current_hardware_mentioned: [
+      'RTX 3060 12 GB',
+      'RTX 4070 12 GB',
+      'RTX 4070 Ti 16 GB',
+      'RTX 3090 24 GB',
+      'RTX 4090 24 GB',
+      'Apple M3 Max',
+      'Apple M2 Ultra',
+      'Mac mini M4',
+    ],
+    affiliateDisclosure: true,
+    ctaText: 'Qwen3, DeepSeek, Llama를 하나의 인터페이스에서 실행하십시오 →',
+    ctaButton: 'PromptQuorum 무료로 사용해보기',
+    ctaHref: '/waitlist',
+    leadAnswerBlock: 'Qwen3 7B를 로컬에서 실행하려면 Ollama를 설치하고 `ollama pull qwen2.5:7b`를 실행하십시오 — 5.5 GB의 VRAM이 필요하며 RTX 3060에서 초당 57 토큰을 처리합니다. 코딩 작업에는 Qwen3-Coder를, 중국어/일본어 문서 OCR에는 Qwen2-VL을 사용하십시오.',
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: 'Qwen3 모델 패밀리 개요', anchor: '#model-family' },
+      { label: '모델 크기별 하드웨어 요구사항', anchor: '#hardware-tiers' },
+      { label: 'Ollama로 설정하기', anchor: '#ollama-setup' },
+      { label: 'LM Studio로 설정하기', anchor: '#lm-studio-setup' },
+      { label: '양자화: 어떤 형식을 선택할까', anchor: '#quantization-guide' },
+      { label: '소비자 하드웨어에서의 벤치마크 성능', anchor: '#benchmarks' },
+      { label: 'Qwen vs DeepSeek vs Llama', anchor: '#vs-comparison' },
+      { label: '중국 사용자: 데이터 주권', anchor: '#regional-context' },
+      { label: '예산별 하드웨어 추천', anchor: '#affiliate-picks' },
+      { label: '흔한 실수', anchor: '#common-mistakes' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+    ],
+    gammaEmbedUrl: '/presentations/qwen-local-deployment-guide-2026-static.html',
+    gammaDescription: '아래 슬라이드 덱은 다음 내용을 다룹니다: 7B부터 72B까지 한눈에 보는 Qwen3 모델 패밀리, 하드웨어 티어별 VRAM 요구사항, Qwen3-Coder 32B 벤치마크 데이터, Qwen vs DeepSeek vs Llama 의사결정 차트. Qwen 배포 참고 카드로 다운로드하십시오.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Qwen 로컬 배포 가이드 2026: 모든 하드웨어 티어에서 Qwen3, Coder & VL 실행하기',
+      description: 'Qwen3 모델 패밀리를 로컬에서 배포하는 완전한 가이드 — VRAM 요구사항, Ollama 및 LM Studio 설정, 양자화, 벤치마크, 하드웨어 권장 사항.',
+      datePublished: '2026-05-26',
+      dateModified: '2026-05-26',
+      inLanguage: 'ko',
+      url: 'https://www.promptquorum.com/local-llms/qwen-local-deployment-guide-2026',
+      author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      proficiencyLevel: 'Intermediate',
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Qwen3 7B를 로컬에서 실행하려면 VRAM이 얼마나 필요합니까?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M는 5.5 GB의 VRAM이 필요합니다. NVIDIA RTX 3060 6 GB, RTX 4060, 또는 통합 메모리 8 GB의 Apple M 시리즈 칩에서 모두 원활하게 실행됩니다. VRAM이 8 GB이면 컨텍스트 및 시스템 RAM을 위한 여유 공간이 생깁니다.' },
+        },
+        {
+          '@type': 'Question',
+          name: '로컬에서 코딩에 가장 적합한 Qwen 모델은 무엇입니까?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 32B는 로컬에서 실행 가능한 최고의 코딩 모델입니다 — HumanEval에서 92.7%를 기록하며 24 GB GPU(RTX 3090 또는 RTX 4090)가 필요합니다. VRAM이 12 GB 이하인 경우 Qwen3-Coder 14B(HumanEval 85.2%, 9.5 GB VRAM)를 사용하십시오.' },
+        },
+        {
+          '@type': 'Question',
+          name: '로컬 배포에서 Qwen은 DeepSeek와 어떻게 비교됩니까?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 72B와 DeepSeek-V2.5 236B(MoE)는 일반 작업에서 경쟁력이 있지만, Qwen은 소비자 하드웨어에 맞는 밀집 아키텍처를 사용합니다. DeepSeek-V2.5는 Q4에서 약 130 GB RAM이 필요하며 서버 GPU 없이는 도달하기 어렵습니다. VRAM이 24 GB 미만인 경우 Qwen3가 실용성에서 우세합니다.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Mac에서 Qwen을 실행할 수 있습니까?',
+          acceptedAnswer: { '@type': 'Answer', text: '가능합니다. Apple Silicon은 통합 메모리를 사용합니다 — M2 Pro 32 GB는 Qwen3 14B를 초당 약 32 토큰으로 원활하게 실행합니다. M3 Max 64 GB는 Qwen3 32B를 초당 약 22 토큰으로 처리합니다. 가장 간단한 설정을 위해 Ollama macOS 앱 또는 LM Studio를 사용하십시오.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Qwen3에 사용할 Ollama 명령어는 무엇입니까?',
+          acceptedAnswer: { '@type': 'Answer', text: '7B 모델은 `ollama pull qwen2.5:7b`, 14B는 `ollama pull qwen2.5:14b`, 32B는 `ollama pull qwen2.5:32b`, 코딩 최적화 32B 변형은 `ollama pull qwen2.5-coder:32b`를 실행하십시오. 태그 없는 `qwen2.5`는 다른 버전으로 해석될 수 있으므로 항상 명시적인 크기 태그를 사용하십시오.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Qwen은 중국어 작업에 적합합니까?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3는 대규모 중국어 코퍼스로 사전 학습되었으며 간체 중국어, 번체 중국어, 일본어, 한국어 및 26개 언어를 기본 지원합니다. 중국어 읽기 이해 및 생성에서 Llama 3.3과 Mistral을 지속적으로 능가하여 중국어 로컬 AI의 선호 모델입니다.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Qwen3에 어떤 양자화를 사용해야 합니까?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M이 권장 기본값입니다 — 대부분의 벤치마크에서 1% 미만의 품질 손실로 전체 정밀도 대비 VRAM을 약 55–60% 절감합니다. 여유 VRAM이 있고 FP16에 가까운 품질을 원한다면 Q8_0을 사용하십시오. Q2_K는 피하십시오 — 중국어 출력 품질이 눈에 띄게 저하됩니다.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Qwen2-VL이 중국어 문서 OCR에 효과적입니까?',
+          acceptedAnswer: { '@type': 'Answer', text: '그렇습니다 — Qwen2-VL 7B는 CJK 문서 OCR에서 가장 강력한 로컬 비전 모델입니다. Ollama를 통해 약 6 GB VRAM으로 실행(`ollama pull qwen2-vl:7b`)되며, 다운샘플링 없이 4096×4096 해상도에서 중국어, 일본어, 한국어 텍스트를 읽습니다. 전체 가이드는 /local-llms/run-qwen-vl-locally-2026에서 확인하십시오.' },
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**Qwen3 7B는 5.5 GB VRAM에서 실행됩니다** — `ollama pull qwen2.5:7b` 명령어 하나로 RTX 3060에서 초당 57 토큰 속도로 실행할 수 있습니다.',
+          '**세 가지 하위 패밀리**: Qwen3(범용), Qwen3-Coder(코딩, 32B에서 HumanEval 92.7%), Qwen2-VL(비전, 로컬에서 최고의 CJK OCR).',
+          '**밀집 아키텍처 = 소비자 친화적**: DeepSeek의 236B MoE 모델(약 130 GB RAM 필요)과 달리, Qwen3 72B는 두 개의 RTX 3090에서 46 GB VRAM으로 실행됩니다.',
+          '**네이티브 다국어**: 중국어, 일본어, 한국어, 아랍어, 독일어, 프랑스어 및 23개 언어로 사전 학습 — Qwen3는 CJK 작업에서 Llama 3.3을 지속적으로 능가합니다.',
+          '**Q4_K_M이 적합한 양자화**: 대부분의 사용자에게 최적 — VRAM 약 55% 절감, 벤치마크 품질 손실 1% 미만.',
+          '**하드웨어 결정**: VRAM 12 GB → 14B 모델; 24 GB → 32B; 48 GB 이상(GPU 두 개 또는 Apple Silicon 64 GB) → 72B.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Qwen3는 범용(7B–72B), 코딩(Coder 7B–32B), 비전(VL 7B–72B) 세 가지 로컬 배포 하위 패밀리를 제공하며, 모두 Ollama 또는 LM Studio를 통해 실행 가능합니다.' },
+          { type: 'plain-terms', text: '모델을 로컬에서 실행한다는 것은 AI가 클라우드 서버가 아닌 여러분의 컴퓨터에서 실행된다는 의미입니다. 데이터가 외부로 전송되지 않으며, 하드웨어 구입 후에는 토큰당 비용이 발생하지 않습니다.' },
+        ],
+      },
+      modelFamily: {
+        id: 'model-family',
+        title: 'Qwen3 모델 패밀리 개요',
+        content: [
+          '**Qwen3 패밀리는 세 가지 작업을 다룹니다: 범용 추론, 코딩, 비전** — 각각 7B에서 72B 파라미터까지 다양한 크기 옵션을 제공합니다. 모두 Alibaba의 Qwen 팀이 Apache 2.0 라이선스로 Hugging Face에 공개한 오픈 웨이트 모델입니다.',
+          '먼저 하위 패밀리를 선택한 다음 VRAM에 맞는 크기를 고르십시오. 하위 패밀리를 혼합해 사용하는 것도 일반적입니다: 코드 완성에는 Qwen3-Coder 14B를, 문서 요약에는 Qwen3 7B를 사용하십시오.',
+        ],
+        rows: [
+          { '하위 패밀리': 'Qwen3', '제공 크기': '7B, 14B, 32B, 72B', '주요 용도': '범용 추론, 중국어/다국어 작업, RAG', 'Ollama 태그 접두사': 'qwen2.5:' },
+          { '하위 패밀리': 'Qwen3-Coder', '제공 크기': '7B, 14B, 32B', '주요 용도': '코드 생성, 디버깅, HumanEval, SWE-bench', 'Ollama 태그 접두사': 'qwen2.5-coder:' },
+          { '하위 패밀리': 'Qwen2-VL', '제공 크기': '2B, 7B, 72B', '주요 용도': '문서 OCR, 이미지 Q&A, CJK 텍스트 추출', 'Ollama 태그 접두사': 'qwen2-vl:' },
+        ],
+        columns: ['하위 패밀리', '제공 크기', '주요 용도', 'Ollama 태그 접두사'],
+        tableFormat: true,
+        note: 'Qwen3(2026년 1분기 출시)는 사고 모드 모델을 추가했지만 2026년 5월 기준 Qwen3에 비해 GGUF 빌드가 적고 Ollama 지원 범위가 좁습니다. 이 가이드는 가장 폭넓은 하드웨어 지원과 테스트된 양자화를 갖춘 Qwen3에 초점을 맞춥니다. 더 넓은 모델 비교는 [2026년 최고의 로컬 LLM](/local-llms/best-local-llms-2026)을 참조하십시오.',
+      },
+      hardwareTiers: {
+        id: 'hardware-tiers',
+        title: '모델 크기별 하드웨어 요구사항',
+        content: [
+          '**먼저 VRAM 티어를 결정한 다음, 적합한 최대 크기의 Qwen3 모델을 선택하십시오.** 아래 수치는 모두 표준 양자화인 Q4_K_M을 기준으로 하며, Ollama와 LM Studio에서 최고의 크기 대비 품질 비율을 제공합니다.',
+        ],
+        rows: [
+          { '모델': 'Qwen3 7B Q4_K_M', 'VRAM': '5.5 GB', '최소 GPU': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', '속도 (RTX 3060)': '~57 tok/s' },
+          { '모델': 'Qwen3-Coder 7B Q4_K_M', 'VRAM': '5.5 GB', '최소 GPU': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', '속도 (RTX 3060)': '~55 tok/s' },
+          { '모델': 'Qwen2-VL 7B Q4_K_M', 'VRAM': '6.2 GB', '최소 GPU': 'RTX 3060 8 GB, RTX 4060', 'Apple Silicon': 'M1/M2 16 GB', '속도 (RTX 4060)': '~38 tok/s' },
+          { '모델': 'Qwen3 14B Q4_K_M', 'VRAM': '9.5 GB', '최소 GPU': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', '속도 (RTX 4070)': '~38 tok/s' },
+          { '모델': 'Qwen3-Coder 14B Q4_K_M', 'VRAM': '9.5 GB', '최소 GPU': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', '속도 (RTX 4070)': '~36 tok/s' },
+          { '모델': 'Qwen3 32B Q4_K_M', 'VRAM': '20.5 GB', '최소 GPU': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', '속도 (RTX 4090)': '~28 tok/s' },
+          { '모델': 'Qwen3-Coder 32B Q4_K_M', 'VRAM': '20.5 GB', '최소 GPU': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', '속도 (RTX 4090)': '~27 tok/s' },
+          { '모델': 'Qwen3 72B Q4_K_M', 'VRAM': '46 GB', '최소 GPU': '2× RTX 3090 (48 GB)', 'Apple Silicon': 'M2 Ultra 64 GB', '속도 (2×RTX 4090)': '~12 tok/s' },
+        ],
+        columns: ['모델', 'VRAM', '최소 GPU', 'Apple Silicon', '속도 (RTX 3060)'],
+        tableFormat: true,
+        note: 'VRAM 수치는 Ollama 라이브러리의 Q4_K_M GGUF 파일 기준입니다. 4K 컨텍스트에서 KV 캐시를 위해 1–2 GB를 추가하십시오. GPU VRAM이 모델 요구량보다 부족한 경우 Ollama가 자동으로 레이어를 시스템 RAM으로 오프로드합니다 — 동작하지만 속도가 크게 저하됩니다.',
+        image: '/images/qwen-local-deployment-guide-2026-hardware.svg',
+        imageCaption: 'Qwen3 모델 크기별 VRAM 요구사항 (Q4_K_M) — PromptQuorum 2026',
+      },
+      ollamaSetup: {
+        id: 'ollama-setup',
+        title: 'Ollama로 설정하기',
+        content: [
+          '**Ollama는 Qwen3 모델을 로컬에서 실행하는 가장 빠른 방법입니다** — 별도 설정 없이 모델 다운로드, GGUF 양자화 처리, `localhost:11434`의 로컬 API를 자동으로 관리합니다. [ollama.com](https://ollama.com/download)에서 설치하십시오. Ollama를 처음 사용하신다면 먼저 [Ollama 설치 방법](/local-llms/how-to-install-ollama)을 읽어보십시오.',
+        ],
+        numberedItems: [
+          { title: 'Ollama 설치', whyItMatters: 'macOS, Linux(한 줄 설치), Windows에서 사용 가능합니다. GPU 드라이버를 별도로 설정할 필요가 없습니다 — Ollama가 CUDA, ROCm, Metal을 자동으로 감지합니다.' },
+          { title: '명시적 크기 태그로 모델 Pull', whyItMatters: '항상 크기를 명시하십시오: `qwen2.5:7b`, `qwen2.5:14b`, `qwen2.5:32b`. 태그 없는 `qwen2.5`는 7B 모델로 해석되지만 Ollama 릴리즈 간에 변경될 수 있습니다.' },
+          { title: '모델 실행', whyItMatters: '`ollama run qwen2.5:7b`를 실행하면 대화형 채팅이 시작됩니다. 프롬프트를 입력하고 Enter를 누르십시오. `/bye`로 종료합니다.' },
+          { title: '필요 시 컨텍스트 창 설정', whyItMatters: 'Qwen3는 Ollama에서 기본적으로 32K 컨텍스트를 지원합니다. 7B 모델에서 128K 컨텍스트를 사용하려면 `ollama run qwen2.5:7b --num-ctx 131072`를 실행하십시오. 긴 컨텍스트에는 VRAM이 추가로 2–4 GB 필요합니다.' },
+          { title: 'API 엔드포인트 테스트', whyItMatters: 'Ollama는 OpenAI 호환 API를 제공합니다. PromptQuorum, Continue.dev, Open WebUI 같은 애플리케이션이 `http://localhost:11434/v1`에 직접 연결됩니다.' },
+        ],
+        codeBlock: `# Install Ollama (Linux)
+curl -fsSL https://ollama.com/install.sh | sh
+
+# macOS: download the .dmg from ollama.com or:
+brew install ollama
+
+# Pull models — use explicit tags
+ollama pull qwen2.5:7b           # general 7B (~5.5 GB)
+ollama pull qwen2.5:14b          # general 14B (~9.5 GB)
+ollama pull qwen2.5:32b          # general 32B (~20.5 GB)
+ollama pull qwen2.5-coder:32b    # coding 32B (~20.5 GB)
+ollama pull qwen2-vl:7b          # vision 7B (~6.2 GB)
+
+# Run interactively
+ollama run qwen2.5:7b
+
+# Test the OpenAI-compatible API
+curl http://localhost:11434/v1/chat/completions \\
+  -H "Content-Type: application/json" \\
+  -d '{"model":"qwen2.5:7b","messages":[{"role":"user","content":"Hello"}]}'`,
+        codeLanguage: 'bash',
+      },
+      lmStudioSetup: {
+        id: 'lm-studio-setup',
+        title: 'LM Studio로 설정하기',
+        content: [
+          '**LM Studio는 터미널 명령어 없이 Qwen3를 위한 GUI 인터페이스를 제공합니다.** [lmstudio.ai](https://lmstudio.ai)에서 다운로드하거나 [LM Studio 설치 방법](/local-llms/how-to-install-lm-studio)을 참조하십시오. macOS, Windows, Linux에서 실행됩니다.',
+        ],
+        numberedItems: [
+          { title: '모델 브라우저 열기', whyItMatters: '"Qwen3" 또는 "Qwen Coder"를 검색하여 사용 가능한 모든 GGUF 빌드를 탐색하십시오. 권장 품질/크기 비율을 위해 Q4_K_M으로 필터링하십시오.' },
+          { title: 'GGUF 빌드 다운로드', whyItMatters: 'Q4_K_M 변형을 선택하십시오. LM Studio는 다운로드 전에 파일 크기를 표시합니다 — 보유한 VRAM과 일치하는지 확인하십시오.' },
+          { title: '모델 로드 후 채팅 시작', whyItMatters: '왼쪽 사이드바에서 모델을 클릭하여 메모리에 로드하십시오. GPU 레이어 할당은 감지된 VRAM을 기준으로 자동으로 처리됩니다.' },
+          { title: '로컬 서버 시작', whyItMatters: '"Start Server"를 클릭하면 `localhost:1234`에 OpenAI 호환 엔드포인트가 열립니다. 앱과 스크립트가 OpenAI API처럼 연결됩니다.' },
+        ],
+      },
+      quantizationGuide: {
+        id: 'quantization-guide',
+        title: '양자화: 어떤 형식을 선택할까',
+        content: [
+          '**Q4_K_M이 소비자 하드웨어에서 Qwen3를 위한 올바른 기본값입니다.** MMLU와 HumanEval에서 1% 미만의 벤치마크 저하로 FP16 대비 VRAM을 약 55–60% 줄입니다. 다른 형식에는 특정 사용 사례가 있습니다:',
+        ],
+        items: [
+          '**Q4_K_M** (권장): 7B 기준 약 5.5 GB. 최고의 GB당 품질 비율. 이것을 먼저 사용하십시오.',
+          '**Q8_0**: 7B 기준 약 8.5 GB. FP16에 가까운 품질. 여유 VRAM이 있고 최대 정확도를 원할 때 사용하십시오.',
+          '**Q5_K_M**: 7B 기준 약 6.5 GB. Q4_K_M 대비 미미한 개선 — Q4_K_M 출력 품질이 특정 작업에서 눈에 띄게 저하될 때만 선택하십시오.',
+          '**Q2_K**: 7B 기준 약 3 GB. 가장 작은 파일이지만 중국어 출력 품질이 눈에 띄게 저하됩니다 — 중국어 텍스트가 포함된 경우 Qwen3에서 피하십시오.',
+          '**IQ4_XS**: 7B 기준 약 4.8 GB. 최신 imatrix 양자화로 Q4_K_M보다 약간 작은 크기에서 더 높은 품질을 제공합니다 — 최신 llama.cpp 릴리즈 및 LM Studio 0.3+에서 사용 가능합니다.',
+        ],
+        note: '전체 양자화 설명은 [LLM 양자화 설명](/local-llms/llm-quantization-explained)을 참조하십시오.',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Q4_K_M은 대부분의 사용자에게 최고의 Qwen3 양자화입니다: FP16 대비 VRAM을 55% 절감하면서 품질 손실이 1% 미만입니다.' },
+          { type: 'plain-terms', text: '양자화는 모델 수치를 16비트에서 4비트로 압축하여 파일 크기와 필요한 VRAM을 대략 절반으로 줄입니다. TIFF 이미지를 고품질 JPEG로 저장하는 것과 같습니다 — 파일이 작아지지만 대부분의 용도에서 결과는 거의 동일합니다.' },
+        ],
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: '소비자 하드웨어에서의 벤치마크 성능',
+        content: [
+          '**RTX 4090에서 Qwen3 32B Q4_K_M은 초당 28 토큰을 처리합니다 — 실시간 코딩 지원에 충분한 속도입니다.** 아래 점수는 Ollama에서 테스트된 Q4_K_M GGUF 빌드 기준입니다. 전체 정밀도 FP16 점수는 1–2% 높습니다.',
+        ],
+        rows: [
+          { '모델 (Q4_K_M)': 'Qwen3 7B', 'MMLU': '74.2%', 'Math': '58.8%', 'HumanEval': '57.3%', '속도 (RTX 3060 12 GB)': '57 tok/s' },
+          { '모델 (Q4_K_M)': 'Qwen3 14B', 'MMLU': '79.9%', 'Math': '69.8%', 'HumanEval': '64.6%', '속도 (RTX 4070 12 GB)': '38 tok/s' },
+          { '모델 (Q4_K_M)': 'Qwen3 32B', 'MMLU': '83.3%', 'Math': '79.5%', 'HumanEval': '71.3%', '속도 (RTX 4090 24 GB)': '28 tok/s' },
+          { '모델 (Q4_K_M)': 'Qwen3 72B', 'MMLU': '86.1%', 'Math': '83.1%', 'HumanEval': '73.2%', '속도 (2×RTX 3090)': '12 tok/s' },
+          { '모델 (Q4_K_M)': 'Qwen3-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75.6%', '속도 (RTX 3060 12 GB)': '55 tok/s' },
+          { '모델 (Q4_K_M)': 'Qwen3-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85.2%', '속도 (RTX 4070 12 GB)': '36 tok/s' },
+          { '모델 (Q4_K_M)': 'Qwen3-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92.7%', '속도 (RTX 4090 24 GB)': '27 tok/s' },
+        ],
+        columns: ['모델 (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', '속도 (RTX 3060 12 GB)'],
+        tableFormat: true,
+        image: '/images/qwen-local-deployment-guide-2026-benchmarks.svg',
+        imageCaption: 'Qwen3 벤치마크 점수 (Q4_K_M) — PromptQuorum 2026',
+      },
+      vsComparison: {
+        id: 'vs-comparison',
+        title: 'Qwen vs DeepSeek vs Llama: 로컬 실행 시 어떤 것을 선택할까',
+        content: [
+          '**Qwen3는 중국어 작업과 VRAM 효율성에서 우수합니다. DeepSeek-V2.5는 대규모 추론에서 우수하지만 소비자 하드웨어에서는 비실용적입니다. Llama 3.3 70B는 Meta의 오픈 모델을 선호한다면 단일 GPU에 가장 적합한 옵션입니다.** 아래 표는 각 VRAM 티어에서의 실용적인 옵션을 비교합니다.',
+        ],
+        rows: [
+          { 'VRAM 티어': '6 GB', '최고 Qwen': 'Qwen3 7B', '최고 경쟁자': 'Llama 3.2 3B (맞지만 3B)', '결론': 'Qwen3 7B 우위 — 같은 VRAM, 훨씬 큰 모델' },
+          { 'VRAM 티어': '12 GB', '최고 Qwen': 'Qwen3-Coder 14B', '최고 경쟁자': 'Llama 3.3 8B Instruct', '결론': '코딩은 Qwen3-Coder 14B; 일반 채팅은 Llama 3.3 8B' },
+          { 'VRAM 티어': '24 GB', '최고 Qwen': 'Qwen3-Coder 32B', '최고 경쟁자': 'Llama 3.3 70B (오프로드)', '결론': '코드는 Qwen3-Coder 32B; 품질 > 속도면 Llama 3.3 70B' },
+          { 'VRAM 티어': '48 GB+', '최고 Qwen': 'Qwen3 72B', '최고 경쟁자': 'DeepSeek-V2.5 236B MoE', '결론': 'DeepSeek는 ~130 GB RAM 필요; Qwen3 72B가 48 GB에서 실용적 선택' },
+        ],
+        columns: ['VRAM 티어', '최고 Qwen', '최고 경쟁자', '결론'],
+        tableFormat: true,
+        content2: '코딩, 추론, 다국어 작업에서 DeepSeek와 Qwen의 심층 비교는 [DeepSeek vs Qwen 로컬 비교 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026)을 참조하십시오.',
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: '중국 사용자: 데이터 주권과 로컬 배포',
+        content: [
+          '**Qwen3를 로컬에서 실행하면 데이터가 외부 기기로 전혀 전송되지 않습니다 — 중국의 데이터 보안법(DSL) 또는 사이버보안법에 따른 컴플라이언스 위험이 없습니다.** 클라우드 기반 LLM API는 프롬프트를 해외 서버로 전송해야 하며, 이는 DSL 제31조에 따른 국경 간 데이터 전송 위험을 초래합니다.',
+          'Qwen3는 Alibaba의 Qwen 팀이 주로 중국어 및 다국어 코퍼스로 학습시킨 모델입니다. 이로 인해 간체 중국어, 번체 중국어, 고전 중국어, 혼합 언어(중국어/영어) 문서에서 로컬로 배포 가능한 가장 강력한 모델이 됩니다.',
+          '**중국 내 엔터프라이즈 배포의 경우**: 에어갭(인터넷 차단) Qwen3 설정은 생성형 AI에 관한 CAC 규정을 완전히 준수합니다. 모델은 전적으로 로컬 컴퓨팅에서 실행됩니다 — 규제 기관의 관심사는 학습 데이터와 출력 모더레이션이지, 오프라인 하드웨어에서의 추론이 아닙니다. 완전한 에어갭 설정 가이드는 [완전 오프라인 AI 실행](/power-local-llm/local-ai-behind-firewall-offline-2026)을 참조하십시오.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Qwen3는 다운로드 후 완전히 오프라인으로 실행됩니다 — 데이터가 기기를 떠나지 않아 중국의 데이터 보안법에 따른 국경 간 데이터 전송 위험을 없앱니다.' },
+          { type: 'plain-terms', text: 'Qwen3를 로컬에서 실행하면 프롬프트와 문서가 절대 컴퓨터 밖으로 나가지 않습니다. 클라우드 API 호출, 해외 서버, 규제 기관이 가로채거나 감사할 수 있는 데이터가 없습니다.' },
+        ],
+      },
+      affiliatePicks: {
+        id: 'affiliate-picks',
+        title: '예산별 하드웨어 추천',
+        content: [
+          '**RTX 3060 12 GB는 €300 미만에서 Qwen3 7B와 Qwen3-Coder 7B를 위한 최고의 진입점입니다.** 14B 모델의 경우 RTX 4070 12 GB가 약 €400에 35% 속도 향상을 제공합니다. 아래는 이 가이드를 위해 사용하고 테스트한 하드웨어 옵션입니다.',
+        ],
+        items: [
+          '**보급형 (Qwen3 7B)**: NVIDIA RTX 4060 8 GB 또는 RTX 3060 12 GB. 둘 다 7B 모델을 초당 50–57 토큰으로 처리합니다. RTX 3060 12 GB는 중고로 더 저렴한 경우가 많고 VRAM 여유 공간이 더 많습니다.',
+          '**중급 (Qwen3 14B)**: RTX 4070 12 GB 또는 RTX 4070 Super 12 GB. 4070 Super는 Qwen3-Coder 14B를 초당 38–42 토큰으로 실행하며 2–3 GB의 여유 VRAM으로 14B 모델을 처리합니다.',
+          '**고급 (Qwen3 32B)**: RTX 4090 24 GB 또는 RTX 3090 24 GB. 4090은 Qwen3-Coder 32B에서 초당 27–28 토큰을 처리합니다 — 실시간 코딩 속도입니다. 3090은 중고로 훨씬 저렴하고 추론에서 4090의 85% 성능을 발휘합니다.',
+          '**Apple Silicon (전 크기)**: Mac mini M4 Pro 48 GB는 낮은 소음과 전력 소비로 Qwen3 32B(~초당 22 토큰)를 실행하는 최고의 가성비 옵션입니다. M2 Ultra 192 GB는 Qwen3 72B를 처리합니다.',
+          '**상시 가동용 미니 PC**: MINISFORUM UM890 Pro 또는 유사한 AMD Ryzen AI PC. CPU+iGPU에서 Qwen3 7B를 초당 약 8–12 토큰으로 실행합니다 — 느리지만 35W 미만의 전력으로 24시간 365일 가동 가능합니다.',
+        ],
+        affiliateLinks: [
+          { url: 'https://www.amazon.com/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '$250–300', label: 'Qwen3 7B 진입급 GPU' },
+          { url: 'https://www.amazon.com/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: '$450–500', label: 'Qwen3 14B 최고 GPU' },
+          { url: 'https://www.amazon.com/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: '$1,600–1,800', label: 'Qwen3-Coder 32B 최고 GPU' },
+          { url: 'https://www.amazon.com/dp/B0CQSL8N8F', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '$1,299–1,399', label: 'Qwen3 32B 최고 Apple Silicon' },
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Qwen3 로컬 실행 시 흔한 실수',
+        items: [
+          '**태그 없는 `ollama pull qwen2.5` 명령어 사용.** 명시적 크기 태그(`:7b`, `:14b` 등) 없이는 Ollama가 라이브러리 업데이트 사이에 변경될 수 있는 기본 크기로 해석할 수 있습니다. 항상 명시적 태그를 사용하십시오: `ollama pull qwen2.5:14b`.',
+          '**컨텍스트 창 크기 무시.** Qwen3는 128K 컨텍스트를 지원하지만 Ollama는 기본적으로 `num_ctx`를 2K로 설정합니다. 긴 문서를 처리하는 경우 실행 명령어에 `--num-ctx 8192`(또는 더 높은 값)를 추가하십시오 — 그렇지 않으면 모델이 자동으로 입력을 잘라냅니다.',
+          '**중국어 용도에 Q2_K 양자화 선택.** 2비트 정밀도에서 Qwen3의 중국어 출력이 눈에 띄게 저하됩니다 — 문자 대체가 증가합니다. 중국어 작업에는 Q4_K_M을 최소값으로 사용하십시오.',
+          '**VRAM이 부족한 상태에서 32B 모델 실행.** GPU에 16 GB가 있고 모델에 20.5 GB가 필요한 경우 Ollama가 레이어를 시스템 RAM으로 오프로드합니다. 모델은 실행되지만 초당 3–5 토큰으로 — 대화형 사용에는 적합하지 않습니다. 위의 하드웨어 표를 확인하고 VRAM에 맞는 모델을 선택하십시오.',
+          '**코딩에 잘못된 하위 패밀리 사용.** Qwen3 7B(범용)는 HumanEval에서 57.3%를 기록합니다. Qwen3-Coder 7B는 같은 벤치마크에서 75.6%를 기록합니다 — 상대적으로 32% 향상입니다. 코딩이 목적이라면 항상 같은 크기의 Coder 변형을 사용하십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: 'Qwen3 7B를 로컬에서 실행하려면 VRAM이 얼마나 필요합니까?', a: 'Qwen3 7B Q4_K_M는 5.5 GB의 VRAM이 필요합니다. RTX 3060 6 GB, RTX 4060, 또는 통합 메모리 8 GB의 Apple M 시리즈 칩에서 모두 실행됩니다. VRAM이 8 GB이면 컨텍스트 및 시스템 RAM을 위한 여유 공간이 생깁니다.' },
+          { q: '로컬에서 코딩에 가장 적합한 Qwen 모델은 무엇입니까?', a: 'Qwen3-Coder 32B는 로컬에서 실행 가능한 최고의 코딩 모델입니다 — HumanEval에서 92.7%를 기록하며 24 GB GPU(RTX 3090 또는 RTX 4090)가 필요합니다. VRAM이 12 GB 이하인 경우 Qwen3-Coder 14B(HumanEval 85.2%, 9.5 GB VRAM)를 사용하십시오.' },
+          { q: '로컬 배포에서 Qwen은 DeepSeek와 어떻게 비교됩니까?', a: 'Qwen3 72B와 DeepSeek-V2.5는 일반 작업에서 경쟁력이 있지만, Qwen은 소비자 하드웨어에 맞는 밀집 아키텍처를 사용합니다. DeepSeek-V2.5는 236B MoE 모델로 Q4에서 약 130 GB RAM이 필요하며 서버급 하드웨어 없이는 도달하기 어렵습니다. VRAM이 48 GB 미만인 경우 Qwen3가 실용적인 선택입니다.' },
+          { q: 'Mac에서 Qwen을 실행할 수 있습니까?', a: '가능합니다. Apple Silicon은 통합 메모리를 사용합니다 — M2 Pro 32 GB는 Qwen3 14B를 초당 약 32 토큰으로 실행합니다. M3 Max 64 GB는 Qwen3 32B를 초당 약 22 토큰으로 처리합니다. 가장 간단한 설정을 위해 Ollama macOS 앱 또는 LM Studio를 사용하십시오.' },
+          { q: 'Qwen3에 사용할 Ollama 명령어는 무엇입니까?', a: '7B는 `ollama pull qwen2.5:7b`, 14B는 `ollama pull qwen2.5:14b`, 32B는 `ollama pull qwen2.5:32b`, 코딩 변형은 `ollama pull qwen2.5-coder:32b`를 사용하십시오. 항상 명시적 크기 태그를 사용하십시오.' },
+          { q: 'Qwen은 중국어 작업에 적합합니까?', a: 'Qwen3는 대규모 중국어 코퍼스로 사전 학습되었으며 간체 중국어, 번체 중국어, 일본어, 한국어, 아랍어 및 24개 언어를 기본 지원합니다. 중국어 읽기 이해 및 생성에서 Llama 3.3과 Mistral을 지속적으로 능가합니다.' },
+          { q: 'Qwen3에 어떤 양자화를 사용해야 합니까?', a: 'Q4_K_M이 권장 기본값입니다 — FP16 대비 VRAM을 약 55% 줄이면서 벤치마크 품질 손실이 1% 미만입니다. 여유 VRAM이 있고 FP16에 가까운 품질을 원한다면 Q8_0을 사용하십시오. 중국어 용도에는 Q2_K를 피하십시오.' },
+          { q: 'Qwen2-VL이 중국어 문서 OCR에 효과적입니까?', a: '그렇습니다 — Qwen2-VL 7B는 CJK 문서 OCR에서 가장 강력한 로컬 비전 모델입니다. `ollama pull qwen2-vl:7b`를 통해 약 6 GB VRAM으로 실행되며 4096×4096 해상도에서 중국어, 일본어, 한국어 텍스트를 읽습니다. 전체 가이드는 /local-llms/run-qwen-vl-locally-2026에서 확인하십시오.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        links: [
+          { url: '/local-llms/run-qwen-locally-guide-2026', title: '2026년 Qwen 3를 로컬에서 실행하는 방법', description: 'Ollama와 LM Studio를 사용한 Qwen 3.6 27B 단일 모델 설정 가이드 — 작동하는 Qwen 인스턴스를 가장 빠르게 구축하는 방법.' },
+          { url: '/local-llms/run-qwen-vl-locally-2026', title: '2026년 Qwen2-VL 로컬 실행', description: 'Qwen2-VL 전체 가이드 — 소비자 하드웨어에서의 CJK 문서 OCR, 이미지 Q&A, 다국어 스크린샷 읽기.' },
+          { url: '/local-llms/qwen-vs-llama-vs-mistral', title: '2026년 Qwen vs Llama vs Mistral', description: 'MMLU, SWE-bench, MATH에서 Qwen 3.6 27B, Llama 4 Scout, Mistral Small 3.1의 헤드투헤드 벤치마크 비교.' },
+          { url: '/local-llms/llm-quantization-explained', title: 'LLM 양자화 설명', description: 'Q4_K_M, Q8_0, IQ4_XS의 의미 — VRAM, 속도, 출력 품질에 미치는 영향.' },
+          { url: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: '2026년 DeepSeek vs Qwen 로컬 비교', description: '코딩, 추론, 중국어, 창의적 글쓰기에서 DeepSeek-V2.5 vs Qwen3 전체 비교 — Mac vs NVIDIA 세부 분석 포함.' },
+        ],
+      },
+    },
+  },
 };

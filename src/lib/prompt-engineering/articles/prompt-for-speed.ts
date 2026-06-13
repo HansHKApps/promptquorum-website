@@ -1682,4 +1682,188 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
+    ko: {
+      theme: 'Fundamentals',
+      title: '더 빠른 AI 답변: 속도를 위한 Prompt 작성 방법',
+      intro: 'AI prompt의 느린 응답에는 단 하나의 원인이 있습니다: 모호함이 모델을 추측하게 만듭니다. 다섯 가지 설계 결정으로 모호함을 제거하면 어떤 모델에서든 첫 번째 시도에 정확하고 빠른 답변을 얻을 수 있습니다.',
+      publishDate: '2026-03-22',
+      seoTitle: '더 빠른 AI Prompt 기법: 속도 최적화 2026',
+      metaDescription: '느린 AI prompt는 모델을 추측하게 만드는 모호함입니다. GPT-5.5와 Claude에서 첫 번째 시도에 정확한 답변을 위한 5가지 설계 변경 방법.',
+      readTime: '8분 분량',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: '더 빠른 AI 답변: 속도를 위한 Prompt 작성 방법',
+        description: '느린 AI prompt에는 단 하나의 원인이 있습니다: 모호함. 다섯 가지 설계 결정이 첫 번째 시도에 정확하고 빠른 답변을 제공합니다.',
+        datePublished: '2026-03-22',
+        dateModified: '2026-03-22',
+        url: 'https://www.promptquorum.com/ko/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
+        inLanguage: 'ko',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        keywords: ['더 빠른 AI prompt', '속도를 위한 프롬프팅', 'AI 지연 시간 감소', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini'],
+      },
+      sections: {
+        definition: {
+          title: 'AI 답변이 느리거나 긴 이유는 무엇입니까?',
+          content: [
+            '**느리거나 긴 AI 답변에는 단 하나의 원인이 있습니다: 모호함이 모델을 추측하게 만듭니다.** Prompt가 길이, 형식, 범위, 또는 세부 사항 수준을 지정하지 않으면 모델은 빈 공간을 추측, 요약, 불필요한 컨텍스트, 경고로 채웁니다. 추가된 모든 문장은 추가된 지연 시간입니다.',
+            '해결책은 더 많이 쓰는 것이 아닙니다 — 명시적인 설계 결정으로 모호함을 제거하는 것입니다. 아래의 다섯 가지 변경 사항이 느리고 모호한 prompt를 첫 번째 시도에 올바른 출력을 생성하는 정확하고 빠른 지시로 변환합니다.',
+          ],
+        },
+        tldr: {
+          title: '핵심 요약',
+          isTldr: true,
+          items: [
+            '느린 AI 답변 = 모호함 → 길이가 지정되지 않으면 모델이 상세히 설명함',
+            '정확한 출력 형식 지정 (bullet, JSON, 한 문장) — 이것만으로도 긴 출력이 절반으로 줄어듦',
+            '명시적인 부정 제약 사용: "도입 없음", "경고 없음", "질문 반복 없음"',
+            '원샷 프롬프팅 (기대 출력의 예시 하나)은 형식 정확도에 가장 큰 영향을 미치는 변경 사항',
+            '정량적 길이 제약 ("정확히 3개 bullet")이 모호한 길이 지시 ("간결하게")보다 더 잘 작동함',
+            '더 작은 모델 (GPT-5.5 mini, Claude Haiku 4.5)이 짧은 출력에 더 빠르게 응답함 — 항상 최신 모델이 필요하지는 않음',
+          ],
+        },
+        whySlow: {
+          title: '모호한 prompt가 느린 출력을 생성하는 이유',
+          content: [
+            '언어 모델은 토큰을 순차적으로 생성합니다 — 출력 길이가 직접 지연 시간을 결정합니다. 500 토큰 출력은 100 토큰 출력보다 ~5배 더 오래 걸리고, 비용은 선형으로 증가합니다.',
+            '불필요한 길이를 추가하는 네 가지 모델 행동:',
+          ],
+          items: [
+            '**요약 반복:** 모델이 질문을 반복하거나 오프닝으로 prompt를 바꾸어 말함',
+            '**헤징:** 모델이 요청 없이 "참고하십시오..." 또는 "이것은 다를 수 있습니다..."를 추가함',
+            '**배경 상세 설명:** 모델이 요청하지 않은 개념을 설명함',
+            '**결론 채우기:** 모델이 방금 한 말을 요약하는 마무리 단락을 추가함',
+          ],
+        },
+        change1: {
+          title: '변경 1: 정확한 출력 형식 지정',
+          content: [
+            '**형식 지정은 출력 길이를 줄이는 가장 영향력 있는 단일 변경 사항입니다.** 형식 없이 모델은 자체 구조를 선택합니다 — 대부분의 작업이 요구하는 것보다 더 길고 산문적인 경향이 있습니다.',
+          ],
+          items: [
+            '❌ 형식 없음: "prompt caching을 설명해 주세요" → 일반적인 출력: 400-600단어 산문',
+            '✅ 형식 포함: "prompt caching을 20단어 미만의 3개 bullet로 설명해 주세요" → 일반적인 출력: 60-80단어',
+          ],
+        },
+        change2: {
+          title: '변경 2: 명시적 부정 제약 추가',
+          content: [
+            '**부정 제약은 한 번에 가장 흔한 채우기 행동을 제거합니다.** 긍정적 지시보다 더 효과적입니다 (모델에게 하지 말아야 할 것을 말하는 것이 대신 해야 할 것을 설명하는 것보다 더 정확합니다).',
+          ],
+          items: [
+            '"질문을 반복하지 마십시오" — 요약 반복 제거',
+            '"도입이나 결론 없음" — 오프닝과 클로징 단락 제거',
+            '"중요하지 않으면 경고나 고려사항 없음" — 반사적 헤징 제거',
+            '"기본 개념을 설명하지 마십시오 — X에 대한 전문 지식을 가정하십시오" — 배경 상세 설명 제거',
+            '"결과만 — 과정이나 추론 없음" — 작업 표시 제거',
+          ],
+        },
+        change3: {
+          title: '변경 3: 정량적 길이 제약 지정',
+          content: [
+            '**수치 길이 제약이 품질 설명자보다 더 잘 작동합니다.** "간결하게"는 모호합니다 — "정확히 2개의 문장으로"는 그렇지 않습니다.',
+          ],
+          items: [
+            '❌ 모호함: "간결하게" → 모델이 훈련 패턴에 따라 간결함을 해석함',
+            '✅ 정량적: "정확히 2개의 문장으로" → 모델에게 명확하고 엄격한 제한 제공',
+            '✅ 정량적: "최대 50단어" → 채우기를 제거하는 압력 생성',
+            '✅ 정량적: "정확히 5개 bullet, 각 15단어 미만" → 이중 제약',
+          ],
+        },
+        change4: {
+          title: '변경 4: 출력 예시 하나 (원샷 프롬프팅)',
+          content: [
+            '**목표 출력의 예시 하나가 형식 정확도에 가장 큰 영향을 미치는 변경 사항입니다.** 원하는 정확한 패턴을 보는 것이 설명하는 것보다 더 효과적입니다, 특히 구조화된 출력의 경우.',
+          ],
+          items: [
+            '**예시 없음 (zero-shot):** "유효하지 않은 입력에 대한 오류 메시지 작성" — 모델이 형식, 길이, 톤을 선택함',
+            '**예시 포함 (one-shot):** "유효하지 않은 입력에 대한 오류 메시지 작성. 예시: \'오류: 사용자 이름은 3-20자여야 합니다. 다시 시도하십시오.\'" — 모델이 예시의 길이, 형식, 톤을 정확히 모방함',
+          ],
+        },
+        change5: {
+          title: '변경 5: 특정 도메인 역할 할당',
+          content: [
+            '**특정 도메인 역할이 기본 세부 사항 수준을 낮춥니다.** 전문가는 기본 사항을 알고 있다고 가정합니다 — 직접 답변하고, 배경 설명을 생략하며, 정의 없이 업계 어휘를 사용합니다.',
+          ],
+          items: [
+            '❌ 역할 없음: "JavaScript debounce를 설명해 주세요" → debounce가 무엇인지 소개를 포함할 가능성이 높음',
+            '✅ 역할 포함: "당신은 시니어 JavaScript 개발자입니다. JavaScript debounce를 설명해 주세요" → 기본 정의를 생략하고 구현으로 바로 이동함',
+          ],
+        },
+        combineAll: {
+          title: '5가지 변경 사항 결합: 속도 prompt 템플릿',
+          content: [
+            '5가지 변경 사항이 적용된 완전한 속도 prompt 패턴입니다:',
+            '[역할] 당신은 [도메인 전문가]입니다.\n[작업] [행동 동사] [구체적인 대상].\n[형식] 형식: [정확한 구조].\n[길이] 길이: [수치 제약].\n[부정] 없음: [제거할 행동].',
+          ],
+        },
+        modelSelection: {
+          title: '속도를 위한 모델 선택',
+          content: [
+            '**더 작은 모델이 잘 지정된 짧은 출력에 더 빠르게 응답합니다.** GPT-5.5 mini, Claude Haiku 4.5, Gemini Flash는 200 토큰 미만의 출력에서 전체 크기 버전보다 첫 번째 토큰 지연 시간이 ~2-3배 빠릅니다.',
+          ],
+          items: [
+            '**GPT-5.5 mini:** 빠른 분류, 짧은 Q&A, 데이터 추출에 최적',
+            '**Claude Haiku 4.5:** 빠른 형식 작업, 짧은 구조화된 합성에 최적',
+            '**Gemini Flash:** 빠른 조회, 한 문장 답변, 짧은 합성에 최적',
+            '**GPT-5.5 / Claude Opus / Gemini Pro:** 다단계 추론, 긴 출력, 복잡한 코드를 위해 예약',
+          ],
+        },
+        promptquorum: {
+          title: 'PromptQuorum이 더 빠른 prompt 작성을 어떻게 돕습니까',
+          content: [
+            '**멀티 모델 디스패치:** GPT-5.5, Claude, Gemini에서 속도 prompt를 별도로 테스트하는 대신(세 번 복사 붙여넣기), PromptQuorum은 하나의 prompt를 25개 이상의 모델에 동시에 전송하고 모든 응답을 나란히 표시합니다. 어떤 모델이 작업에 가장 간결한 답변을 제공하는지 즉시 확인할 수 있습니다.',
+            '**내장 프레임워크:** PromptQuorum의 9개 프레임워크(CO-STAR, CRAFT, SPECS, RISEN, TRACE 등)가 단일 인터페이스에서 역할, 작업, 형식, 제약을 자동으로 포함합니다.',
+            '**합의 보기:** 모델에 걸쳐 속도를 테스트할 때 길이만이 아니라 정확도도 비교해야 합니다. PromptQuorum의 Quorum 분석은 어떤 모델이 가장 직접적이고 정확하게 답변하는지 평가합니다.',
+          ],
+        },
+        template: {
+          title: '속도 prompt 템플릿 — 빠른 참조',
+          blockquote: '당신은 [역할]입니다.\n\n[단일, 구체적인 작업].\n\n형식: [출력 형식 — 한 문장, JSON, bullet, 표 등].\n\n길이: [명시적 제약 — X단어, Y bullet, 한 문장 등].\n\n없음: 질문 반복, 도입/결론 추가, 중요하지 않으면 경고 포함, 기본 개념 설명.',
+        },
+        templateExample: {
+          title: '예시 (완성)',
+          blockquote: '당신은 B2B SaaS 지표 전문 제품 관리자입니다.\n\n구독 코호트에서 고객 이탈의 상위 3가지 원인을 요약하십시오.\n\n형식: Bullet, 각 한 줄.\n\n길이: 최대 3개 bullet.\n\n없음: 제공된 데이터 반복, 도입 추가, "경우에 따라 다릅니다"로 헤징.',
+        },
+        faqs: {
+          faqs: [
+            {
+              q: '더 짧은 prompt가 항상 더 빠른 답변을 제공합니까?',
+              a: '아닙니다. **정확성이 간결함보다 중요합니다.** 50단어의 모호한 prompt가 100단어의 정확한 prompt보다 더 긴 답변을 생성합니다. 구체성 없는 길이 제약은 쓸모가 없습니다.',
+            },
+            {
+              q: 'GPT-5.5, Claude, Gemini에서 같은 방식으로 작동합니까?',
+              a: '대부분 그렇습니다. 세 가지 모두 명시적인 길이 제한과 형식 제약을 따릅니다. Claude는 bullet 제약을 더 엄격하게 따르는 경향이 있습니다; GPT-5.5는 "결론 없음"을 요청해도 요약 문장을 추가하는 경우가 있습니다. 세 가지 모두에서 속도 prompt를 테스트하여 최적을 찾으십시오.',
+            },
+            {
+              q: '빠른 답변이 필요하지만 정확해야 하면 어떻게 합니까?',
+              a: '정확성과 자기 검증 지시를 결합하십시오. 예시: "2개의 문장으로 답변하십시오. 그런 다음 모순점을 확인하십시오." 이것은 주요 답변을 부풀리지 않고 검증 단계를 추가합니다.',
+            },
+            {
+              q: '재사용을 위해 속도 prompt 템플릿을 저장할 수 있습니까?',
+              a: '네. PromptQuorum에서 내장 프레임워크 옆에 속도 prompt 템플릿을 만들고, 이름을 붙이고, 저장할 수 있습니다. 팀과 템플릿을 공유하여 반복적인 prompt 작성을 없애십시오.',
+            },
+            {
+              q: '로컬 추론 (Ollama, LM Studio)이 답변을 더 빠르게 합니까?',
+              a: '네, 하지만 prompt가 최적화된 경우에만 그렇습니다. 로컬 모델이 하드웨어에서 실행됩니다 — 더 빠른 네트워크 지연. 하지만 prompt가 100개 대신 500개 토큰을 생성한다면 지연 시간 개선이 중요하지 않습니다. 먼저 prompt를 최적화하십시오; 로컬 추론이 그 이점을 증폭시킵니다.',
+            },
+          ],
+        },
+        relatedReading: {
+          content: [
+            '[Prompt Engineering이란 무엇입니까?](/ko/prompt-engineering/what-is-prompt-engineering) — 모든 prompt 설계의 기초',
+            '[모든 Prompt에 필요한 5가지 구성 요소](/ko/prompt-engineering/5-building-blocks-every-prompt-needs) — 역할, 작업, 예시, 제약, 형식',
+            '[토큰, 비용, 한도](/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 출력 길이가 API 비용에 직접 미치는 영향',
+          ],
+        },
+        sources: {
+          content: [
+            '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — prompt의 구조가 설명 오버헤드를 줄이는 방법을 보여줌',
+            '[Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — 58가지 이상의 개별 프롬프팅 기법을 목록화함',
+            '[OpenAI, 2024. "Techniques for Production LLM Applications"](https://platform.openai.com/docs/guides/prompt-engineering) — 속도와 신뢰성을 위한 prompt 최적화에 대한 공식 가이드',
+          ],
+        },
+      },
+    },
   };

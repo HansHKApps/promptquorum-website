@@ -1766,4 +1766,198 @@ schema: {
         },
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Advanced Techniques',
+      title: '코딩 워크플로를 위한 로컬 LLM: 코드 생성, 리뷰, 테스트',
+      seoTitle: '로컬 LLM 코딩 2026: Qwen3-Coder 92% HumanEval',
+      intro: '로컬 LLM은 코딩을 보조할 수 있습니다. 보일러플레이트 생성, 코드 리뷰, 테스트 작성, 함수 설명 등의 작업을 수행합니다. 2026년 4월 기준, Qwen3-Coder 32B 및 CodeLlama 34B와 같은 모델은 HumanEval 벤치마크에서 72~92.7%의 정확도를 달성합니다. 속도는 클라우드보다 느리지만(응답당 2~5초), 코드가 외부로 유출되지 않습니다.',
+      metaDescription: 'Qwen3-Coder 32B: 92.7% HumanEval, 24 GB VRAM에서 실행. Qwen3-Coder 7B: 5 GB에서 72%. Ollama + VS Code로 코드 생성, 리뷰, 테스트 작성. 전체 벤치마크 표 포함.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-24',
+      leadAnswerBlock: '로컬 LLM은 코딩을 보조할 수 있습니다. 보일러플레이트 생성, 코드 리뷰, 테스트 작성, 함수 설명 등의 작업을 수행합니다. 2026년 4월 기준, Qwen3-Coder 32B(92.7% HumanEval) 및 CodeLlama 34B(75% HumanEval)와 같은 모델은 프로그래밍 벤치마크에서 최고 수준의 정확도를 달성합니다.',
+      audience: '소비자용 하드웨어에서 로컬 코딩 AI를 설정하는 개발자',
+      readTime: '11분 읽기',
+      educationalLevel: 'Intermediate',
+      primaryTerm: '로컬 LLM으로 코딩하기',
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: '최고의 코딩 모델', anchor: '#best-models' },
+        { label: '코드 생성', anchor: '#code-generation' },
+        { label: '코드 리뷰 워크플로', anchor: '#code-review' },
+        { label: '테스트 생성', anchor: '#test-generation' },
+        { label: 'IDE 연동', anchor: '#ide-integration' },
+        { label: '흔한 실수', anchor: '#common-mistakes' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
+        { label: '관련 자료', anchor: '#related-reading' },
+      ],
+      gammaEmbedUrl: '/presentations/local-llms-for-coding-workflows-static.html',
+      gammaDescription: '아래 슬라이드 덱은 최고의 로컬 코딩 모델(Qwen3-Coder 92.7%, CodeLlama 75%), 프롬프트 엔지니어링을 활용한 코드 생성, 코드 리뷰 워크플로, 테스트 생성, VS Code/Cursor IDE 연동, 그리고 피해야 할 흔한 실수들을 다룹니다. PDF를 로컬 코딩 AI 참고 카드로 다운로드하세요.',
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**최고의 코딩 모델 (2026):** Qwen3-Coder 32B (92.7% HumanEval), Qwen3-Coder 7B (72% HumanEval), CodeLlama 34B (75%).',
+            '**속도:** 코드 제안당 2~5초. 개발에 충분히 빠르지만 GitHub Copilot(~300ms)보다는 느립니다.',
+            '**프라이버시:** 코드가 절대 외부로 전송되지 않습니다. 독점 코드베이스에 매우 중요합니다.',
+            '**사용 사례:** 보일러플레이트 생성, 코드 리뷰, 테스트 작성, 문서화. 복잡한 아키텍처 결정에는 적합하지 않습니다.',
+            '2026년 4월 기준, 로컬 코딩 AI는 개인 개발자 및 소규모 팀에 실용적으로 활용 가능합니다.',
+          ],
+        },
+        bestModels: {
+          id: 'best-models',
+          title: '로컬 코딩에 가장 적합한 모델은 무엇입니까?',
+          content: [
+            '**최고의 로컬 코딩 모델은 정확도, 속도, 메모리 사용량의 균형을 갖춰야 합니다. Qwen3-Coder 32B가 정확도(92.7%)에서 선두를 달리며, Qwen3-Coder 7B는 속도와 품질의 최적 균형을 제공합니다.**',
+          ],
+          callouts: [
+            { type: 'tip', text: '**팁:** VRAM이 4~6 GB라면 Qwen3-Coder 7B(72% 정확도)로 시작하십시오. 최대 정확도를 원하신다면 24 GB+ VRAM에서 Qwen3-Coder 32B(92.7% 정확도)를 사용하십시오. CodeLlama 34B는 75% 정확도의 안정적인 중간 선택지입니다.' },
+          ],
+          rows: [
+            { 'Model': 'Qwen3-Coder 32B', 'HumanEval': '92.7%', 'VRAM': '22 GB', 'Speed': '느림 (3~5초)', 'Best For': '최대 정확도' },
+            { 'Model': 'CodeLlama 34B', 'HumanEval': '75%', 'VRAM': '22 GB', 'Speed': '느림 (3~5초)', 'Best For': '고품질, 멀티모달' },
+            { 'Model': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Speed': '매우 빠름', 'Best For': '속도/품질 균형' },
+            { 'Model': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Speed': '매우 빠름', 'Best For': '소형, 경량' },
+          ],
+          columns: ['Model', 'HumanEval %', 'VRAM', '추론 속도', '적합한 용도'],
+        },
+        codeGeneration: {
+          id: 'code-generation',
+          title: '로컬 LLM으로 코드를 어떻게 생성합니까?',
+          content: [
+            '**함수 시그니처와 docstring을 제공하면 모델이 구현을 생성합니다. 코드 품질은 프롬프트 컨텍스트에 크게 좌우됩니다.**',
+          ],
+          callouts: [
+            { type: 'insight', text: '📍 **핵심 인사이트:** 산문보다 함수 시그니처가 더 중요합니다. 모델을 안내하기 위해 타입, docstring, 입출력 예시를 포함하십시오.' },
+          ],
+          codeBlock: '# 코드 생성을 위한 프롬프트 설계\nprompt = """\n다음 함수를 구현하세요:\n\ndef merge_sorted_arrays(arr1: List[int], arr2: List[int]) -> List[int]:\n    \\"\\"\"\n    두 개의 정렬된 배열을 하나의 정렬된 배열로 병합합니다.\n    Args:\n        arr1: 첫 번째 정렬된 배열\n        arr2: 두 번째 정렬된 배열\n    Returns:\n        병합된 정렬 배열\n    \\"\\"\"\n    # 구현:\n"""\n\n# 모델이 구현을 출력합니다\n# 예상: 투 포인터 병합 알고리즘',
+          codeLanguage: 'python',
+          promptExamples: [
+            { label: '❌ 나쁜 프롬프트', text: '배열 병합 코드를 생성하세요' },
+            { label: '✅ 좋은 프롬프트', text: '투 포인터 알고리즘을 사용하여 merge_sorted_arrays(arr1: List[int], arr2: List[int]) -> List[int]를 구현하세요. Docstring: 두 개의 정렬된 배열을 하나의 정렬된 배열로 병합합니다.' },
+          ],
+          image: '/images/local-llms-for-coding-workflows-generation-workflow-en.svg',
+          imageCaption: '코드 생성 워크플로: 함수 시그니처와 docstring이 포함된 상세 프롬프트 작성 → Qwen3-Coder 또는 CodeLlama 7B 모델에 전송 → 모델이 구현 생성 → 버그 검토 → 애플리케이션에 통합. 5단계 모두 필수입니다.',
+        },
+        codeReview: {
+          id: 'code-review',
+          title: '로컬 LLM으로 코드를 어떻게 리뷰합니까?',
+          content: [
+            '**버그, 스타일, 성능을 검토하도록 모델에 프롬프트를 입력하십시오. 로컬 모델은 일반적인 실수를 잡아내는 데 탁월하지만 아키텍처 결정에는 어려움을 겪습니다.**',
+          ],
+          callouts: [
+            { type: 'warning', text: '⚠️ **경고:** 로컬 모델은 개별 함수는 이해하지만 시스템 아키텍처는 이해하지 못합니다. 디자인 리뷰가 아닌 린트 수준의 검사에 사용하십시오.' },
+          ],
+          items: [
+            '프롬프트: "이 코드에서 버그, 보안 문제, 성능 이슈를 검토하세요." + 코드 스니펫.',
+            '모델 식별 항목: 사용되지 않은 변수, 잠재적 None 오류, 비효율적인 루프.',
+            '한계: 복잡한 도메인 로직이나 아키텍처 패턴을 이해할 수 없습니다.',
+          ],
+        },
+        testGeneration: {
+          id: 'test-generation',
+          title: '테스트를 어떻게 생성합니까?',
+          content: [
+            '**단위 테스트 요청 프롬프트와 함께 함수 코드를 모델에 입력하십시오. 프롬프트에 엣지 케이스와 오류 조건을 포함하십시오.**',
+          ],
+          callouts: [
+            { type: 'practice', text: '🛠️ **모범 사례:** 정상 케이스, 엣지 케이스, 오류 케이스를 포함하는 테스트를 요청하십시오. 예시: "정상 케이스 3개, 엣지 케이스 3개, 오류 케이스 2개를 포함하는 pytest 테스트를 작성하세요."' },
+          ],
+          codeBlock: '# 테스트 생성을 위한 프롬프트\nprompt = """\n이 함수에 대한 포괄적인 단위 테스트를 작성하세요:\n\n[함수 코드]\n\n다음을 포함하는 테스트를 생성하세요:\n- 정상 케이스\n- 엣지 케이스\n- 오류 케이스\n\npytest 형식 사용:\n\"\"\"\n\n# 모델이 어서션이 포함된 test_* 함수를 생성합니다',
+          codeLanguage: 'python',
+        },
+        ideIntegration: {
+          id: 'ide-integration',
+          title: 'IDE 연동을 어떻게 설정합니까?',
+          content: [
+            '**[VS Code와 Continue.dev](/local-llms/local-llms-with-vscode-cursor)를 사용하거나 기본 로컬 LLM 지원이 내장된 Cursor 에디터로 전환하십시오. 두 방법 모두 키보드 단축키로 인라인 코드 제안을 트리거할 수 있습니다.**',
+          ],
+          callouts: [
+            { type: 'note', text: '📌 **참고:** Continue.dev는 로컬에서 Ollama를 실행해야 합니다. VS Code 기반의 Cursor 에디터는 Ollama를 기본 지원하므로 추가 설정이 필요하지 않습니다.' },
+          ],
+          items: [
+            'VS Code + Continue.dev: 확장 프로그램 설치 후 로컬 Ollama 서버(http://localhost:11434)를 연결하십시오.',
+            'Cursor 에디터: Ollama 기본 지원. 추가 설정 불필요.',
+            '인라인 완성: Ctrl+Shift+\\\\ (VS Code) 또는 Cmd+Shift+\\\\ (Mac)으로 로컬 LLM 제안을 트리거합니다.',
+          ],
+          image: '/images/local-llms-for-coding-workflows-ide-setup-en.svg',
+          imageCaption: 'IDE 연동 설정: Ollama(ollama.ai) 설치 → Continue.dev VS Code 확장 설치 → localhost:11434 설정 → Qwen3-Coder 7B 모델 선택 → Ctrl+Shift+\\로 인라인 제안 트리거. 3단계 설정 완료.',
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: '흔한 실수는 무엇입니까?',
+          items: [
+            '**검토 없이 생성된 코드를 신뢰하는 것.** 생성된 코드에는 버그가 있을 수 있습니다. 항상 검토하십시오.',
+            '**너무 작은 모델 사용.** Qwen3-Coder 7B가 실용적인 코딩의 최소 요구 사항입니다. 3B 모델은 저품질 코드를 생성합니다.',
+            '**컨텍스트를 제공하지 않는 것.** 코드 품질은 프롬프트 컨텍스트에 달려 있습니다. 함수 시그니처, 타입, docstring을 제공하십시오.',
+            '**아키텍처를 이해할 것으로 기대하는 것.** 로컬 모델은 개별 함수를 이해하지만 시스템 설계는 이해하지 못합니다.',
+            '**코딩 전용 모델을 사용하지 않는 것.** 범용 모델(Llama 3.3 8B, Mistral Small)은 코딩 모델(Qwen3-Coder 7B: 72%)보다 HumanEval에서 15~25% 낮은 점수를 기록합니다(Llama 3.3 8B: 55%). 항상 코드를 위해 특별히 훈련된 모델을 사용하십시오. Ollama에서: `ollama pull qwen2.5-coder:7b` — 코딩 작업에는 `ollama pull llama3.1:8b`가 아닙니다.',
+          ],
+          image: '/images/local-llms-for-coding-workflows-mistakes-en.svg',
+          imageCaption: '흔한 코딩 실수 대 모범 사례: 3B 모델 회피(낮은 정확도), 최소 Qwen3-Coder 7B 사용(72% HumanEval). 반복 횟수 제한(10~20), 항상 코드 검토, 범용 Mistral 또는 Llama가 아닌 코딩 전용 모델 사용.',
+        },
+        faqSection: {
+          id: 'faq',
+          title: '자주 묻는 질문',
+          faqs: [
+            {
+              q: '2026년 코딩에 가장 좋은 로컬 LLM은 무엇입니까?',
+              a: '24 GB VRAM에서 최고 품질을 위해 Qwen3-Coder 32B(92.7% HumanEval)를 사용하십시오. 5 GB VRAM에서 속도를 원하신다면 Qwen3-Coder 7B(72%)를 사용하십시오. Apple Silicon MacBook 사용자: Qwen3-Coder 7B는 Ollama를 통해 M1 Pro+에서 30~60 tok/sec로 실행됩니다.',
+            },
+            {
+              q: 'Qwen3-Coder 32B는 GitHub Copilot과 어떻게 비교됩니까?',
+              a: 'Qwen3-Coder 32B는 HumanEval에서 92.7%를 기록합니다 — Copilot의 GPT-5.2 백엔드(~94%)와 2% 이내의 차이입니다. 속도: 로컬은 제안당 2~5초 대 Copilot의 ~300ms(클라우드 이점). 품질은 거의 동등합니다. 프라이버시: 로컬은 코드를 온디바이스에 보관합니다. 비용: 로컬은 하드웨어 후 월 $0; Copilot은 월 $19($228/년).',
+            },
+            {
+              q: 'VS Code에서 로컬 코딩 LLM을 사용할 수 있습니까?',
+              a: '가능합니다 — Continue.dev 확장 프로그램(무료, 오픈 소스)을 설치하십시오. localhost:11434의 Ollama에 연결하도록 설정하십시오. Tab 또는 Ctrl+Shift+\\\\로 인라인 완성이 트리거됩니다. Continue.dev는 Qwen3-Coder, DeepSeek-Coder 및 모든 Ollama 모델을 지원합니다.',
+            },
+            {
+              q: '독점 코드베이스에는 Copilot과 로컬 LLM 중 어느 것이 낫습니까?',
+              a: '로컬 LLM이 낫습니다. Copilot을 사용하면 코드가 Microsoft/OpenAI 서버로 전송됩니다. Ollama의 로컬 모델을 사용하면 코드가 절대 외부로 나가지 않습니다. 규제 산업(금융, 의료, 국방)의 경우 로컬이 유일한 규정 준수 옵션입니다. HumanEval의 품질 차이는 ~2%로 미미합니다.',
+            },
+            {
+              q: '로컬 코딩 LLM에는 VRAM이 얼마나 필요합니까?',
+              a: '최소: Qwen3-Coder 7B Q4를 위해 5 GB VRAM. 권장: 7B 추론을 위해 8 GB. 프리미엄: 최고 품질의 Qwen3-Coder 32B를 위해 24 GB. RTX 4060 Ti(8 GB)는 7B 모델을 실행합니다. RTX 4070(12 GB)은 14~16B 모델을 실행합니다. RTX 4090/5090(24~32 GB)은 32B 모델을 실행합니다.',
+            },
+            {
+              q: '로컬 코딩 LLM은 Copilot처럼 자동 완성을 지원합니까?',
+              a: '지원합니다 — Continue.dev 또는 Cursor 에디터를 통해 사용할 수 있습니다. 두 방법 모두 모델이 커서 위아래의 코드를 보고 중간을 생성하는 fill-in-the-middle(FIM) 모드를 지원합니다. Qwen3-Coder 7B는 FIM을 기본 지원합니다. 응답 시간: GPU에서 1~3초(Copilot의 200~300ms 클라우드 대비).',
+            },
+            {
+              q: '내 코드베이스에 맞게 코딩 모델을 파인튜닝할 수 있습니까?',
+              a: '가능합니다 — Unsloth를 사용하여 LoRA/QLoRA로 파인튜닝하십시오. 인스트럭션 형식으로 코드베이스에서 500개 이상의 코드 예시를 준비하십시오(입력: 함수 시그니처 + docstring, 출력: 구현). 8 GB VRAM에서 Qwen3-Coder 7B 파인튜닝은 1~2시간이 소요됩니다. 일반적인 정확도 향상: 특정 코드 패턴에서 10~15%.',
+            },
+            {
+              q: '가장 많은 프로그래밍 언어를 지원하는 코딩 LLM은 무엇입니까?',
+              a: 'Qwen3-Coder 32B와 DeepSeek-Coder-V2 모두 Python, JavaScript, TypeScript, Rust, Go, Java, C++, SQL, Bash, Ruby를 포함한 90개 이상의 언어를 지원합니다. CodeLlama는 Python과 C++에서 가장 강력합니다. 틈새 언어(Haskell, Erlang, Elixir)의 경우 Qwen3-Coder 32B가 가장 넓은 지원 범위를 제공합니다.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 자료',
+          items: [
+            '[로컬 LLM을 위한 최고의 AI 코딩 어시스턴트](/local-llms/best-ai-coding-assistant-local-llm) — 코딩 모델을 위한 Cursor, Continue.dev, Cody 및 기타 IDE 도구 선택 가이드.',
+            '[VS Code와 Cursor로 로컬 LLM 사용하기](/local-llms/local-llms-with-vscode-cursor) — 두 IDE에 대한 상세 설정 가이드',
+            '[프롬프트 엔지니어링 가이드](/prompt-engineering) — 코드 생성 개선을 위한 프롬프팅 기법 마스터',
+            '[코딩을 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) — 상세 벤치마크 및 모델 비교',
+            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — GPU 요구 사항 및 비용 분석',
+            '[코드 검색을 위한 로컬 RAG](/local-llms/local-rag-2026) — 의미론적 이해로 기존 코드 검색',
+            '[비즈니스를 위한 프라이빗 로컬 AI](/local-llms/private-local-ai-for-business) — 엔터프라이즈 배포 및 규정 준수',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            '[HumanEval 벤치마크](https://github.com/openai/human-eval) — OpenAI의 공식 코드 생성 벤치마크',
+            '[Qwen3-Coder 모델 카드](https://github.com/QwenLM/Qwen3-Coder) — Qwen3-Coder 모델 사양 및 평가 결과',
+            '[Continue.dev IDE 확장](https://continue.dev) — 로컬 및 클라우드 LLM을 위한 오픈 소스 IDE 지원',
+            '로컬 LLM은 코드 생성에 탁월하지만 코드 품질은 프롬프트 품질에 달려 있습니다. 코딩 특화 프롬프트 기법을 학습하세요: [AI로 더 나은 코드 작성하기](https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai)에서 테스트, 리뷰, 반복에 대해 다룹니다.',
+          ],
+        },
+      },
+    },
   };

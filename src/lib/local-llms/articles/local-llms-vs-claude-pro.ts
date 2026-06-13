@@ -1961,4 +1961,203 @@ schema: {
         ],
       },
     },
+  ko: {
+      theme: 'Cost & Comparisons',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-10-05',
+      title: '로컬 LLM vs Claude Pro: 프라이버시, 비용, 품질 비교',
+      seoTitle: '로컬 LLM vs Claude Pro: 비용, 프라이버시, 품질 비교',
+      intro: '**Claude Pro는 월 $20(ChatGPT Plus와 동일)이지만, 더 강력한 프라이버시(Anthropic은 대화 기록으로 훈련하지 않음)와 뛰어난 장문 맥락 추론(200K 토큰 컨텍스트 창)을 제공합니다.** 2026년 4월 기준, 중고 GPU로 구성한 로컬 Llama 3.3 70B 환경($1,000)은 80%의 작업에서 Claude 3.5 Sonnet(2024)과 동등한 품질을 제공하며, 3년 기준으로 20~30% 더 저렴합니다. 로컬 LLM은 프라이버시, 비용, 장문 문서 처리에서 우위를 보입니다.',
+      metaDescription: 'Claude Pro는 월 $20이며, 중고 RTX 4090으로 구동하는 Llama 3.3 70B는 4년 후 손익분기점에 도달합니다. 비용, 프라이버시, 벤치마크 점수, 200K 컨텍스트 창 — 전면 비교 분석.',
+      publishDate: '2026-04-05',
+      dateModified: '2026-04-19',
+      leadAnswerBlock: '**Claude Pro는 월 $20(ChatGPT Plus와 동일)이지만, 더 강력한 프라이버시(Anthropic은 대화 기록으로 훈련하지 않음)와 뛰어난 장문 맥락 추론(200K 토큰 컨텍스트 창)을 제공합니다.**',
+      audience: 'Ollama 또는 LM Studio에 익숙하며 로컬 LLM 워크플로를 최적화하려는 개발자',
+      readTime: '8분 읽기',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Claude Pro',
+      toc: [
+        { label: 'TL;DR', anchor: '#tldr' },
+        { label: '빠른 요약', anchor: '#quick-facts' },
+        { label: 'Claude Pro vs 로컬 LLM 가격', anchor: '#pricing' },
+        { label: '프라이버시: Anthropic vs 자체 호스팅', anchor: '#privacy' },
+        { label: '모델 품질: Claude 3.5 Sonnet(2024) vs Llama 3.3 70B', anchor: '#quality' },
+        { label: '장문 맥락 성능(200K 토큰)', anchor: '#context' },
+        { label: '5년 총 소유 비용', anchor: '#five-year' },
+        { label: '비용 및 프라이버시 FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        'tldr': {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'Claude Pro: 월 $20 = 연 $240; 200K 토큰 컨텍스트 창, 이미지 이해, 파일 업로드 포함',
+            '로컬 Llama 3.3 70B: 중고 GPU $1,000 + 연간 전기료 $60 = 1년차 $1,060, 이후 연 $60',
+            '프라이버시: Claude Pro — Anthropic은 대화 기록으로 훈련하지 않으나, 독점 서버 사용. 로컬 LLM — 100% 프라이빗, 데이터가 기기 밖으로 유출되지 않음',
+            '품질 동등성: Llama 3.3 70B ≈ Claude 3.5 Sonnet(2024) 벤치마크; Claude가 뉘앙스·엣지 케이스에서 미세하게 우위',
+            '컨텍스트 창: Claude Pro 200K 토큰 vs Llama 3.3 70B 128K 토큰(문서 처리에도 우수한 수준)',
+            '5년 TCO: Claude Pro $1,200 vs 로컬($1,000 GPU + $300 전기료) = $1,300. 거의 동일한 비용.',
+            '로컬 우위: 무제한 쿼리, 속도 제한 없음, 오프라인 사용 가능, 모델 소유권',
+            'Claude Pro 우위: 멀티모달(이미지) 우수, 실시간 업데이트, 인프라 오버헤드 없음',
+          ],
+        },
+        'quickFacts': {
+          id: 'quick-facts',
+          title: '빠른 요약',
+          items: [
+            '**Claude Pro 가격:** 월 $20(연 $240), 별도 하드웨어 불필요',
+            '**Llama 3.3 70B 하드웨어:** RTX 4090(중고 ~$1,000) 또는 듀얼 RTX 4070(중고 ~$550)',
+            '**5년 TCO:** Claude Pro $1,200 vs 로컬 ~$1,300(중고 GPU) — 거의 동일',
+            '**MMLU 점수:** Claude Sonnet 4.6 97% vs Llama 3.3 70B 96%',
+            '**컨텍스트 창:** Claude Pro 200K 토큰 vs Llama 3.3 128K 토큰',
+            '**손익분기점:** 50개월차(중고 GPU) — 이후 로컬이 무기한 저렴',
+          ],
+        },
+        'pricing': {
+          id: 'pricing',
+          title: 'Claude Pro와 로컬 LLM의 가격 차이는 얼마입니까?',
+          content: [
+            '**Claude Pro는 별도 하드웨어 없이 월 $20이며, 로컬 Llama 3.3 70B는 초기 비용이 $1,000 이상이지만 이후 연간 전기료는 $60에 불과합니다.** 1년차는 로컬이 비싸지만, 손익분기점은 50개월차에 도달합니다.',
+            '**5년 총 소유 비용:** Claude Pro $1,200 vs 로컬 Llama(중고 GPU) $1,300 vs 로컬 Llama(신품 GPU) $1,900. 1년차: Claude Pro $240 vs 로컬 $1,060~1,660. 3년차: Claude Pro $720 vs 로컬 $1,180~1,780. 5년차: Claude Pro $1,200 vs 로컬 $1,300~1,900.',
+            '[로컬 LLM용 최적 GPU](/local-llms/best-gpus-for-local-llms)에서 상세 하드웨어 옵션과 가격을 확인하실 수 있습니다.',
+          ],
+          callouts: [
+            { type: '⚠️ 주의', text: '1년차에는 로컬 비용이 4~7배 더 높습니다. 중고 GPU 사용 시 손익분기점은 약 50개월차입니다.' },
+            { type: '💡 Pro Tip', text: '듀얼 RTX 4070(중고 $500~600)으로도 Llama 3.3 70B를 60~70% 속도로 구동할 수 있으며, GPU 비용이 약 절반으로 줄어듭니다.' },
+          ],
+        },
+        'privacy': {
+          id: 'privacy',
+          title: 'Claude Pro와 로컬 LLM의 프라이버시 모델은 어떻게 다릅니까?',
+          content: [
+            '**Claude Pro(Anthropic): 대화 내용은 미래 Claude 모델 훈련에 사용되지 않습니다(2026년 기준 Anthropic 명시적 개인정보 처리방침).** 다만, 안전 모니터링 및 디버깅을 위해 Anthropic 서버에 쿼리가 기록됩니다. Anthropic은 미국 기반 기업으로, 미국 법률의 적용을 받습니다.',
+            '로컬 LLM: 모든 데이터가 기기 내에 보관됩니다. 클라우드 로그 없음, 제3자 접근 없음. 의료(HIPAA), 금융(PCI-DSS), 법률(변호사-의뢰인 특권) 워크플로에 적합합니다. 2026년 4월 기준, Llama 3.3은 완전한 오픈소스이며 Anthropic 데이터 수집이 없습니다.',
+          ],
+          callouts: [
+            { type: '📌 핵심 사항', text: 'Anthropic은 대화 기록으로 훈련하지 않지만, 안전 모니터링을 위해 미국 서버에 대화가 기록됩니다.' },
+            { type: '🛡️ 컴플라이언스', text: 'HIPAA, PCI-DSS, 또는 변호사-의뢰인 특권이 적용되는 워크플로에는 로컬 LLM만 적합합니다 — 제3자 서버가 데이터를 일절 처리하지 않습니다.' },
+          ],
+        },
+        'quality': {
+          id: 'quality',
+          title: 'Claude 3.5 Sonnet(2024)과 Llama 3.3 70B의 품질 비교는 어떻습니까?',
+          content: [
+            '**Claude 3.5 Sonnet(2024)(Anthropic, 2024년 6월): 추론, 뉘앙스, 지시 따르기에서 최고 수준.**  MMLU(언어 이해) 점수 97%. 복잡한 분석, 카피라이팅, 코드 리뷰에 탁월합니다. MMLU 점수: 97%. 컨텍스트 창: 200K 토큰. 이미지 이해: 네이티브. 파인튜닝: 불가. 오프라인: 불가. 속도 제한: 있음.',
+            'Llama 3.3 70B(Meta, 2024년 4월): MMLU 점수 96%. 탁월한 추론 능력, 벤치마크에서 Claude와 거의 동등한 수준. 코딩 성능이 더 우수함(HumanEval에서 +2%). 창작/서사 작업에서는 미세하게 부족. MMLU 점수: 96%. HumanEval: Claude 대비 +2%. 컨텍스트 창: 128K 토큰. 이미지 이해: 어댑터 통해서만 가능. 파인튜닝: 완전 지원(LoRA, 전체). 오프라인: 가능. 속도 제한: 없음.',
+            '실제 업무의 80%(요약, Q&A, 데이터 추출, 코딩)에서 Llama 3.3 70B와 Claude 3.5 Sonnet(2024)은 동등한 결과를 냅니다. 엣지 케이스(미묘한 서사 분석, 도메인별 창작)에서는 Claude가 미세하게 우위입니다. [로컬 LLM에 필요한 VRAM 용량](/local-llms/how-much-vram-local-llm)에서 70B 모델 구동을 위한 하드웨어 요구 사항을 확인하실 수 있습니다.',
+          ],
+          callouts: [
+            { type: '💡 Pro Tip', text: '코딩 벤치마크(HumanEval)에서 Llama 3.3 70B는 2026년 4월 기준 Claude Sonnet 4.6보다 약 2% 더 높은 성능을 보입니다.' },
+          ],
+          snippetBlocks: [
+            {
+              type: 'one-sentence',
+              text: 'Llama 3.3 70B는 실제 업무의 80%에서 Claude Sonnet 4.6과 동등하지만, 미묘한 추론과 창작 엣지 케이스에서는 Claude가 앞섭니다.',
+            },
+          ],
+        },
+        'context': {
+          id: 'context',
+          title: '각 모델이 처리할 수 있는 장문 문서의 양은 얼마입니까?',
+          content: [
+            '**Claude Pro 200K 토큰: 약 150,000단어(책 3권 분량).** 전체 코드베이스, 법률 계약서, 연구 논문을 단일 쿼리로 처리할 수 있습니다.',
+            'Llama 3.3 70B 128K 토큰: 약 96,000단어. 대부분의 문서에서 여전히 우수한 수준이나, 매우 큰 코드베이스나 500페이지 이상의 계약서는 이 한도를 초과할 수 있습니다.',
+            '2026년 4월 기준: 문서 처리 워크플로(RAG, 대량 요약, 계약서 검토)에서 Claude Pro의 200K 창은 실질적인 이점입니다. Llama 3.3의 128K는 약 95%의 비즈니스 문서에 충분합니다.',
+          ],
+          callouts: [
+            { type: '📌 핵심 사항', text: '두 컨텍스트 창 모두 방대합니다. 매우 큰 코드베이스나 500페이지 이상의 계약서만이 Llama의 128K 한도에 도달합니다.' },
+          ],
+        },
+        'five-year': {
+          id: 'five-year',
+          title: '5년 총 소유 비용 비교는 어떻습니까?',
+          content: [
+            '**Claude Pro: $20 × 60개월 = 총 $1,200.**',
+            '로컬 Llama 3.3 70B(신품 GPU): RTX 4090 $1,600 + 5년 전기료 $300 = 총 $1,900.',
+            '로컬 Llama 3.3 70B(중고 GPU): $1,000 + $300 전기료 = 총 $1,300.',
+            '손익분기점: 중고 GPU 사용 시 약 50개월(4.2년). 신품 GPU는 6년 이상 사용해야 비용 경쟁력이 생깁니다.',
+          ],
+          callouts: [
+            { type: '💡 Pro Tip', text: 'RTX 4090의 전력을 350W로 제한하면 속도 손실 약 10%로 전기료를 40% 절감할 수 있어, 5년 로컬 비용을 $1,200 이하로 낮출 수 있습니다.' },
+          ],
+          snippetBlocks: [
+            {
+              type: 'plain-terms',
+              text: '5년 기준으로 중고 GPU를 사용할 경우 두 옵션 모두 약 $1,200~1,300의 비용이 발생합니다. 진정한 차이는 월 $20 구독료 대 초기 $1,000 지출 후 하드웨어를 영구 소유하는 것입니다.',
+            },
+          ],
+        },
+        'faqSection': {
+          id: 'faq',
+          title: '비용 및 프라이버시 FAQ',
+          faqs: [
+            {
+              q: 'Claude Pro를 오프라인으로 사용할 수 있습니까?',
+              a: '아니요. Claude Pro는 인터넷 연결과 Anthropic 서버가 필요합니다. 로컬 Llama 3.3은 완전한 오프라인 사용이 가능합니다.',
+            },
+            {
+              q: 'Anthropic은 Claude Pro 대화를 훈련에 사용합니까?',
+              a: '아니요(2026년 4월 기준). Anthropic은 대화 기록을 훈련에 사용하지 않음을 명시적으로 밝히고 있습니다. 대화는 안전 및 디버깅 목적으로 기록되지만 모델 개선에는 사용되지 않습니다.',
+            },
+            {
+              q: 'Llama 3.3 70B는 실제로 무료로 사용할 수 있습니까?',
+              a: '예. Llama 3.3은 Meta의 커뮤니티 라이선스 하에 오픈소스입니다. GPU를 보유하면 추론 비용이 $0(전기료만 발생)이며, 모델 업데이트도 무료입니다.',
+            },
+            {
+              q: 'Claude Pro와 로컬 Llama의 파인튜닝 방식은 다릅니까?',
+              a: 'Claude Pro: 2026년 4월 기준 파인튜닝 불가. 로컬 Llama 3.3: 완전한 파인튜닝 지원(LoRA, 전체 파라미터 튜닝). 커스터마이징에서는 로컬이 우위입니다.',
+            },
+            {
+              q: '로컬 GPU가 고장나면 어떻게 됩니까?',
+              a: '교체(~$1,000)까지 컴퓨팅 능력을 사용할 수 없게 됩니다. Claude Pro는 속도 제한으로 서비스 품질이 점진적으로 저하됩니다. 로컬은 이중화 계획이 필요합니다(백업 GPU, 클라우드 페일오버).',
+            },
+            {
+              q: 'Llama 3.3은 Claude Pro처럼 이미지를 처리할 수 있습니까?',
+              a: '네이티브 멀티모달: 불가(2026년 4월 기준). 오픈소스 비전 모델(CLIP, LLaVA)과의 통합은 가능하지만, Claude만큼 원활하지는 않습니다.',
+            },
+            {
+              q: 'Claude Pro가 Llama 3.3보다 특별히 우수한 작업이 있습니까?',
+              a: '예. Claude Sonnet 4.6은 미묘한 서사 분석, 모호한 맥락에서의 복잡한 다단계 추론, 창작 엣지 케이스에 탁월합니다. 코딩에서는 Llama 3.3 70B가 2026년 4월 기준 HumanEval 벤치마크에서 Claude보다 약 2% 더 높은 성능을 보입니다.',
+            },
+            {
+              q: 'Claude Pro에서 로컬 LLM으로 전환해도 기존 워크플로를 유지할 수 있습니까?',
+              a: '예. 대부분의 Claude Pro 사용 사례(Q&A, 요약, 코딩)는 Ollama 또는 LM Studio를 통해 Llama 3.3 70B로 직접 이전할 수 있습니다. 마이그레이션 과정: Ollama 설치 → llama3.1:70b 다운로드 → API 통합을 claude.ai에서 localhost:11434로 변경. Claude Pro에 데이터가 잠기지 않습니다.',
+            },
+          ],
+          callouts: [
+            { type: '🔍 알고 계셨습니까?', text: 'Claude Pro는 ChatGPT Plus와 동일하게 월 $20이지만, 컨텍스트 창은 10배 더 큽니다(200K vs 16K 토큰).' },
+          ],
+        },
+        'commonMistakes': {
+          id: 'common-mistakes',
+          title: 'Claude Pro와 로컬 LLM을 비교할 때 흔히 하는 실수',
+          items: [
+            '월 구독료가 눈에 보이기 때문에 Claude Pro가 더 저렴하다고 생각하는 것. 5년 이상 사용 시 로컬이 따라잡거나 더 저렴해집니다.',
+            'Llama 3.3 70B에 $1,600 GPU가 필요하다고 가정하는 것. 중고 RTX 4090(~$1,000) 또는 듀얼 RTX 4070(총 $500~600)으로도 구동 가능합니다.',
+            'Llama 3.3이 Claude의 이미지 이해를 따라잡을 것이라고 기대하는 것. 네이티브 멀티모달은 불가하며, CLIP 어댑터를 사용해야 합니다.',
+            'Claude Pro의 200K 컨텍스트 이점을 간과하는 것. 단일 쿼리 문서 처리에서는 Claude가 우위입니다. 일반적인 Q&A에서는 Llama 3.3으로 충분합니다.',
+            '인프라 오버헤드를 고려하지 않는 것. Llama 3.3 70B 구동에는 전문 지식이 필요합니다(CUDA, PyTorch, Docker). Claude Pro는 즉시 사용 가능합니다.',
+          ],
+        },
+        'relatedReading': {
+          title: '관련 글',
+          items: [
+            '[로컬 LLM vs ChatGPT Plus: 비용 비교](/local-llms/local-llms-vs-chatgpt-plus)',
+            '[로컬 LLM vs 클라우드 GPU: 비용 분석](/local-llms/local-llm-vs-cloud-gpu-cost)',
+            '[로컬 LLM용 최적 GPU](/local-llms/best-gpus-for-local-llms)',
+            '[로컬 LLM에 필요한 VRAM 용량](/local-llms/how-much-vram-local-llm)',
+            '[LLM 양자화 설명](/local-llms/llm-quantization-explained)',
+            '[GPU 구매 vs AI 구독: 수익성 비교](/local-llms/gpu-vs-ai-subscription-roi)',
+          ],
+        },
+        'sources': {
+          title: '출처',
+          items: [
+            '[Anthropic Claude Pro 가격 및 개인정보 처리방침](https://claude.ai) — Anthropic, 2026년 4월',
+            '[Meta Llama 3.3 70B 모델 카드](https://huggingface.co/meta-llama/Meta-Llama-3.1-70B) — Meta, 2024년 4월',
+            '[Open LLM Leaderboard — MMLU 및 HumanEval 벤치마크](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — Hugging Face, 2026년 4월',
+          ],
+        },
+      },
+    },
   };

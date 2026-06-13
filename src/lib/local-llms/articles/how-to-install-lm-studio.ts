@@ -2097,4 +2097,188 @@ schema: {
         ]
       },
     },
+  ko: {
+      freshness_tier: 'annual',
+      theme: '시작하기',
+      title: 'LM Studio 설치: macOS, Windows 및 Linux GUI 설정 가이드',
+      seoTitle: 'LM Studio 설치: macOS, Windows 및 Linux GUI 설정 가이드',
+      intro: 'LM Studio는 터미널 명령어 없이 그래픽 인터페이스를 통해 로컬 LLM을 탐색하고, 다운로드하고, 실행할 수 있는 데스크톱 애플리케이션입니다. macOS, Windows, Linux에서 작동하며, 내장 채팅 UI와 OpenAI 호환 로컬 서버를 포함합니다. 2026년 4월 현재, LM Studio는 Hugging Face의 모든 GGUF 양자화 모델을 지원합니다.',
+      metaDescription: 'macOS, Windows 또는 Linux에서 LM Studio를 설치하는 방법: 다운로드, 모델 로드, 5분 안에 채팅 시작. 터미널 불필요. 초보자 가이드 2026.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**LM Studio는 터미널 명령어 없이 그래픽 인터페이스를 통해 로컬 LLM을 탐색하고, 다운로드하고, 실행할 수 있는 데스크톱 애플리케이션입니다. macOS, Windows, Linux에서 작동하며, 내장 채팅 UI와 OpenAI 호환 로컬 서버를 포함합니다.**',
+      audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
+      readTime: '7분 읽기',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'LM Studio',
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: 'LM Studio란 무엇입니까?', anchor: '#what-is-lm-studio' },
+        { label: '시스템 요구 사항', anchor: '#system-requirements' },
+        { label: '다운로드 및 설치', anchor: '#download-and-install' },
+        { label: '모델 찾기 및 다운로드', anchor: '#find-and-download-a-model' },
+        { label: '채팅 시작하기', anchor: '#start-chatting' },
+        { label: '로컬 서버 활성화', anchor: '#enable-the-local-server' },
+        { label: 'LM Studio vs Ollama', anchor: '#lm-studio-vs-ollama' },
+        { label: '문제 해결', anchor: '#troubleshooting' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'lmstudio.ai에서 LM Studio를 다운로드하십시오 -- macOS(Apple Silicon + Intel), Windows, Linux(AppImage)용으로 제공됩니다.',
+            '최소 사양: RAM 8 GB. 권장 사양: 7B 모델용 RAM 16 GB. Apple Silicon Mac은 기본적으로 GPU 가속을 사용합니다.',
+            '내장 모델 브라우저가 Hugging Face를 직접 검색합니다 -- 앱을 벗어나지 않고 GGUF 모델을 다운로드할 수 있습니다.',
+            'LM Studio에는 내장 채팅 UI와 포트 1234의 로컬 OpenAI 호환 서버가 포함되어 있습니다.',
+            '적합한 대상: GUI를 선호하는 초보자, 여러 모델을 나란히 비교하려는 사용자, 터미널 명령어 없이 완전한 패키지를 원하는 모든 분.',
+          ],
+        },
+        whatIsLmStudio: {
+          title: 'LM Studio란 무엇입니까?',
+          content: [
+            '**LM Studio는 로컬 LLM을 실행하기 위한 데스크톱 애플리케이션입니다.** 그래픽 모델 브라우저, 내장 채팅 인터페이스, 로컬 API 서버를 하나의 앱에서 제공합니다. 내부적으로는 [Ollama](/local-llms/how-to-install-ollama)와 동일한 엔진인 llama.cpp를 추론에 사용합니다.',
+            'Ollama와의 주요 차이점은 LM Studio가 완전히 GUI 방식으로 구동된다는 점입니다. 앱 인터페이스를 통해 모델을 탐색하고 다운로드하며, 클릭 한 번으로 채팅을 시작하고, 설정 파일 대신 슬라이더로 모델 설정을 관리합니다.',
+            'LM Studio는 개인 사용에 한해 무료입니다. LM Studio, Inc.에서 개발하였으며 2023년에 출시되었습니다. 2026년 현재 NVIDIA CUDA, AMD ROCm, Apple Metal 가속을 지원합니다.',
+          ],
+        },
+        requirements: {
+          id: 'system-requirements',
+          title: 'LM Studio의 시스템 요구 사항은 무엇입니까?',
+          rows: [
+            { 'Spec': '운영 체제', 'Minimum': 'macOS 13.6, Windows 10, Ubuntu 22.04', 'Recommended': 'macOS 14+, Windows 11, Ubuntu 24.04' },
+            { 'Spec': 'RAM', 'Minimum': '8 GB', 'Recommended': '16 GB 이상' },
+            { 'Spec': '저장 공간', 'Minimum': '앱용 500 MB + 모델 공간', 'Recommended': '여러 모델용 50 GB 이상 여유 공간' },
+            { 'Spec': 'GPU (선택 사항)', 'Minimum': 'NVIDIA GTX 10 시리즈 이상', 'Recommended': 'NVIDIA RTX 40/50 시리즈, AMD RX 7000+, 또는 Apple M 시리즈' },
+          ],
+          columns: ['Spec', 'Minimum', 'Recommended'],
+        },
+        download: {
+          id: 'download-and-install',
+          title: 'LM Studio를 어떻게 다운로드하고 설치합니까?',
+          numberedItems: [
+            'lmstudio.ai로 이동하여 운영 체제에 맞는 다운로드 버튼을 클릭하십시오.',
+            'macOS: .dmg 파일을 열고 LM Studio를 응용 프로그램 폴더로 드래그하십시오. 처음 실행 시 시스템 환경설정 → 개인 정보 보호 및 보안에서 보안 프롬프트를 승인하십시오.',
+            'Windows: LM-Studio-Setup.exe 설치 프로그램을 실행하십시오. LM Studio는 %LOCALAPPDATA%\\LM-Studio에 설치됩니다.',
+            'Linux: .AppImage 파일을 다운로드하십시오. `chmod +x LM-Studio-*.AppImage`로 실행 권한을 부여하고 실행하십시오. 시스템 설치가 필요하지 않습니다.',
+            '처음 실행 시 LM Studio는 환영 화면을 표시하고 모델 다운로드를 안내합니다.',
+          ],
+        },
+        findModel: {
+          id: 'find-and-download-a-model',
+          title: 'LM Studio에서 모델을 어떻게 찾고 다운로드합니까?',
+          content: '왼쪽 사이드바의 검색 탭(돋보기 아이콘)을 사용하여 모델을 찾으십시오:',
+          numberedItems: [
+            '왼쪽 사이드바에서 검색 탭을 클릭하십시오.',
+            '모델 이름을 입력하십시오 -- 예: "llama 3.1" 또는 "phi-3 mini".',
+            'LM Studio는 Hugging Face에서 파일 크기 및 양자화 옵션과 함께 일치하는 GGUF 모델을 표시합니다.',
+            '양자화 수준을 선택하십시오. RAM 8 GB: Q4_K_M 선택(7B 모델 기준 약 4.5 GB). RAM 16 GB: Q5_K_M 또는 Q6_K가 더 높은 품질을 제공합니다.',
+            '다운로드 화살표를 클릭하십시오. 진행 상황은 다운로드 탭에서 확인할 수 있습니다.',
+          ],
+        },
+        firstChat: {
+          id: 'start-chatting',
+          title: 'LM Studio에서 모델과 채팅을 어떻게 시작합니까?',
+          numberedItems: [
+            '왼쪽 사이드바에서 채팅 탭(말풍선 아이콘)을 클릭하십시오.',
+            '채팅 창 상단에서 모델 선택 드롭다운을 클릭하고 다운로드된 모델을 선택하십시오.',
+            'LM Studio가 모델을 메모리에 로드합니다 -- 모델 크기와 하드웨어에 따라 5~30초가 소요됩니다.',
+            '하단 입력 필드에 메시지를 입력하고 Enter를 누르거나 전송 버튼을 클릭하십시오.',
+            '모델의 응답이 토큰 단위로 스트리밍됩니다. 생성 속도는 창 하단의 상태 표시줄에 표시됩니다.',
+          ],
+        },
+        modelSettings: {
+          title: 'LM Studio에서 모델 설정을 어떻게 조정합니까?',
+          content: '채팅 탭의 오른쪽 패널에서 주요 추론 매개변수를 조정할 수 있습니다:',
+          items: [
+            '**Temperature** (기본값 0.8): 응답의 무작위성을 제어합니다. 낮은 값(0.1~0.4)은 더 집중적이고 예측 가능한 출력을 생성합니다. 높은 값(0.8~1.2)은 더 다양하고 창의적인 출력을 생성합니다.',
+            '**Context Length** (기본값 4096 토큰): 모델이 처리할 수 있는 최대 대화 기록입니다. 컨텍스트가 길수록 RAM을 더 많이 사용합니다. 대부분의 7B 모델은 4096~8192 토큰을 지원합니다.',
+            '**GPU Layers** (GPU가 있는 macOS/Linux/Windows): GPU로 오프로드할 모델 레이어 수입니다. GPU에 충분한 VRAM이 있다면 최대로 설정하여 가장 빠른 추론 속도를 얻으십시오.',
+            '**System Prompt**: 모든 대화에 앞서 추가되는 고정 지시문입니다. 모델의 역할이나 동작을 설정하는 데 사용하십시오.',
+          ],
+        },
+        localServer: {
+          id: 'enable-the-local-server',
+          title: 'LM Studio 로컬 서버를 어떻게 활성화합니까?',
+          content: 'LM Studio에는 OpenAI API를 모방하는 로컬 서버가 포함되어 있습니다. OpenAI와 호환되는 모든 애플리케이션은 이 서버를 통해 로컬 모델을 사용할 수 있습니다:',
+          numberedItems: [
+            '왼쪽 사이드바에서 로컬 서버 탭("<->" 아이콘)을 클릭하십시오.',
+            '상단의 모델 드롭다운에서 모델을 선택하십시오.',
+            '"Start Server"를 클릭하십시오. 서버가 http://localhost:1234에서 시작됩니다.',
+            '애플리케이션에서 `base_url = "http://localhost:1234/v1"`로 설정하고 API 키는 임의의 문자열을 사용하십시오(서버는 어떤 값이든 허용합니다).',
+          ],
+        },
+        localServerCode: {
+          title: 'Python으로 LM Studio에 연결하기',
+          codeBlock: 'from openai import OpenAI\n\nclient = OpenAI(\n    base_url="http://localhost:1234/v1",\n    api_key="not-needed"\n)\n\nresponse = client.chat.completions.create(\n    model="local-model",\n    messages=[{"role": "user", "content": "What is a local LLM?"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        vsOllama: {
+          id: 'lm-studio-vs-ollama',
+          title: 'LM Studio vs Ollama: 어느 것을 사용해야 합니까?',
+          rows: [
+            { 'Factor': '인터페이스', 'LM Studio': '그래픽 데스크톱 앱', 'Ollama': '터미널 + API' },
+            { 'Factor': '모델 소스', 'LM Studio': 'Hugging Face (모든 GGUF 모델)', 'Ollama': 'Ollama 라이브러리 (큐레이션된 약 200개 모델)' },
+            { 'Factor': 'API 포트', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
+            { 'Factor': '모델 관리', 'LM Studio': '파일 크기 정보 포함 GUI 브라우저', 'Ollama': 'CLI 명령어 (ollama pull, list, rm)' },
+            { 'Factor': '자동화', 'LM Studio': '제한적 (GUI 중심)', 'Ollama': '강력함 (스크립팅, Docker, CI)' },
+            { 'Factor': '적합 대상', 'LM Studio': '초보자, GUI 사용자, 모델 탐색', 'Ollama': '개발자, 자동화, 서버 배포' },
+          ],
+          columns: ['Factor', 'LM Studio', 'Ollama'],
+        },
+        troubleshooting: {
+          id: 'troubleshooting',
+          title: 'LM Studio 일반적인 문제 해결',
+          faqs: [
+            {
+              q: 'LM Studio에서 "메모리가 부족하여 모델을 로드할 수 없습니다"라고 표시됩니다',
+              a: '선택한 모델이 사용 가능한 RAM보다 더 많은 메모리를 필요로 합니다. 다른 애플리케이션을 종료하여 메모리를 확보하거나, 더 작은 양자화(Q4_K_M 대신 Q3_K_S)를 선택하십시오. 기준으로: 모델 파일 크기에 1.2를 곱하면 필요한 RAM을 추정할 수 있습니다. 4.5 GB 파일은 약 5.4 GB의 여유 RAM이 필요합니다.',
+            },
+            {
+              q: '모델 생성 속도가 매우 느립니다 (초당 5 토큰 미만)',
+              a: '모델이 완전히 CPU에서 실행되고 있습니다. 오른쪽 패널에서 GPU Layers를 확인하십시오 -- 0으로 표시되면 GPU가 사용되지 않는 것입니다. macOS에서 LM Studio는 Apple Silicon용 Metal(GPU)을 자동으로 활성화합니다. NVIDIA가 탑재된 Windows/Linux에서는 드라이버가 최신 상태인지 확인하고 GPU Layers를 표시된 최대값으로 늘리십시오.',
+            },
+            {
+              q: 'LM Studio 검색에서 특정 모델을 찾을 수 없습니다',
+              a: 'LM Studio는 GGUF 파일에 대해 Hugging Face를 검색합니다. 모델이 표시되지 않는 경우 Hugging Face 리포지토리 이름으로 직접 검색해 보십시오(예: "bartowski/Llama-3.1-8B-Instruct-GGUF"). 일부 최신 모델은 아직 인덱싱되지 않았을 수 있습니다.',
+            },
+            {
+              q: '로컬 서버가 "model not found" 오류를 반환합니다',
+              a: '서버가 응답하려면 로컬 서버 탭에 모델이 로드되어 있어야 합니다. 로컬 서버 탭을 열고 드롭다운에서 모델을 선택한 후 Start Server를 클릭하십시오. API 요청의 모델 이름은 어떤 문자열이든 상관없습니다 -- LM Studio는 현재 로드된 모델을 사용합니다.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'LM Studio 설치 후 다음 단계',
+          content: 'LM Studio가 실행되면 [첫 번째 로컬 LLM 실행하기](/local-llms/run-first-local-llm)를 통해 응답 품질과 속도를 확인하십시오. 하드웨어에 맞는 모델 추천은 [초보자용 최고의 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models)을 참조하십시오. 설정 문제를 해결하려면 [로컬 LLM 설정 문제 해결](/local-llms/troubleshooting-local-llm-setup)을 확인하십시오.',
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            '**LM Studio 공식 웹사이트** -- 다운로드 및 문서',
+            '**Hugging Face Model Hub** -- 전체 GGUF 양자화 모델 목록',
+            '**LM Studio GitHub** -- 소스 코드 및 커뮤니티 토론',
+          ],
+        },
+        commonMistakes: {
+          title: 'LM Studio 설치 시 흔한 실수',
+          items: [
+            'LM Studio 설정에서 선택한 모델에 충분한 시스템 RAM을 할당하지 않는 경우.',
+            '사전 양자화된 모델임에도 불구하고 GPU VRAM에 비해 여전히 너무 큰 모델을 사용하는 경우.',
+            'CPU 전용 시스템에서 대형 모델의 즉각적인 응답을 기대하는 경우 -- 응답 시간은 10~30초가 소요됩니다.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 읽을거리',
+          items: [
+            '[로컬 LLM이란 무엇입니까?](/local-llms/what-are-local-llms) -- 핵심 개념 및 구성 요소',
+            '[첫 번째 로컬 LLM 실행하기](/local-llms/run-first-local-llm) -- 설치 후 다음 단계',
+            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- LM Studio의 터미널 기반 대안',
+            '[초보자용 최고의 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models) -- 하드웨어별 모델 추천',
+            '[코딩용 최고의 로컬 LLM 2026](/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs DeepSeek 벤치마크 비교',
+          ],
+        },
+      },
+    },
   };

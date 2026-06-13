@@ -2884,4 +2884,384 @@ uptime`,
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-15',
+    theme: 'Hardware & Performance',
+    title: 'Mac Mini M5를 로컬 AI 서버로 활용하기 2026: 상시 구동 LLM, Whisper, RAG, 음성 어시스턴트',
+    seoTitle: 'Mac Mini M5 로컬 AI 서버: 24/7 상시 구동',
+    intro: 'Mac Mini M5 Pro 64GB를 조용하고 항상 켜진 상태의 로컬 AI 서버로 운영하는 완전 가이드입니다. Ollama LLM, Whisper STT, RAG 파이프라인, 음성 어시스턴트 스택을 다룹니다. 연간 전기 요금은 약 $26–39입니다. 실제 명령어, 사용 사례, 비용 분석, 5년 총 소유 비용 분석을 포함한 단계별 설정 안내를 제공합니다.',
+    metaDescription: 'Mac Mini M5에서 상시 구동 로컬 AI 서버를 실행하세요. 소비 전력 25–55W, 연간 전기 요금 $26–39. Ollama LLM, Whisper STT, RAG, 음성 어시스턴트. 조용하고 재부팅 불필요.',
+    twitterDescription: 'Mac mini M5 Pro 64GB: 완벽한 무소음 로컬 AI 서버. 연간 전기 요금 $35로 상시 LLM + Whisper + RAG 운영. 전체 설정 가이드.',
+    publishDate: '2026-05-15',
+    dateModified: '2026-05-15',
+    ctaText: 'Mac Mini AI 서버를 가동 중이신가요? PromptQuorum에서 로컬 Llama 또는 DeepSeek 출력 결과를 GPT-4, Claude, Gemini 및 22개 이상의 모델과 한 번에 비교해 보십시오. 자체 호스팅 설정이 특정 사용 사례에서 클라우드 수준의 답변을 제공하는지 검증하세요.',
+    current_models_mentioned: ['Llama 3.3 8B', 'Mistral Small', 'DeepSeek Coder V2', 'Whisper large-v3', 'Piper TTS'],
+    current_hardware_mentioned: ['M5 Pro', 'M5 Max', 'Mac Mini M5'],
+    audience: '가정 또는 사무실에서 상시 구동 로컬 AI 서버를 원하는 사용자. 터미널 사용에 익숙한 기술 사용자.',
+    readTime: '12분 읽기',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Mac mini 로컬 AI 서버',
+    targetKeywords: ['Mac mini AI 서버', '상시 구동 LLM', '홈 AI 인프라', 'Ollama 상시 구동', 'Mac mini M5 서버'],
+    leadAnswerBlock: '**2026년 기준 $1,199의 Mac mini M5 Pro 64GB는 최고의 가성비 상시 구동 AI 서버입니다. 무소음(팬리스에 가까움), 소비 전력 25-55W, 연간 전기 요금 $26-39. Ollama 34B 모델, Whisper STT, RAG 파이프라인, 음성 어시스턴트를 동시에 실행합니다. ChatGPT Plus 4개 구독 대비 15개월 만에 본전을 회수합니다.**',
+    nextStep: {
+      text: 'Mac Mini M5에 Ollama를 설정할 준비가 되셨습니까? 전체 설치 가이드를 확인하세요.',
+      label: 'Mac용 Ollama — 설정 가이드 2026 →',
+      href: '/local-llms/ollama-on-mac-apple-silicon-setup-2026',
+    },
+    quickAnswerTop: {
+      ko: {
+        question: 'Mac mini M5를 로컬 AI 서버로 사용하는 이유는 무엇입니까?',
+        answer: '무소음(팬리스 또는 거의 무음), 소비 전력 25-55W(GPU 데스크톱의 300W+ 대비), 연간 전기 요금 $26-39(GPU 대비 $263-394), 하드웨어 일회성 비용 $1,199. 64GB 통합 메모리에서 Ollama 34B LLM + Whisper + RAG를 동시에 실행합니다.',
+        bullets: [
+          'M5 Pro 64GB: $1,199 — 최고의 가성비',
+          '소비 전력: 25-55W (GPU 데스크톱 300W+ 대비)',
+          '연간 전기 요금: $26-39 (GPU 대비 $263-394)',
+          '무소음: 일반 LLM 부하에서 팬리스에 가까운 동작',
+          'LAN의 모든 기기에서 REST API 접근 가능',
+          'ChatGPT Plus 4개 구독 대비 약 15개월 만에 본전 회수',
+        ],
+        updatedDate: '2026-05-15',
+      },
+    },
+    toc: [
+      { label: 'Mac Mini M5를 선택하는 이유', anchor: '#why' },
+      { label: '하드웨어 구성', anchor: '#hardware' },
+      { label: '완전한 서버 설정', anchor: '#setup' },
+      { label: '원격 접근', anchor: '#remote-access' },
+      { label: '사용 사례', anchor: '#usecases' },
+      { label: '전력 소비 및 열 성능', anchor: '#monitoring' },
+      { label: '모니터링 및 유지 관리', anchor: '#maintenance' },
+      { label: '5년 총 소유 비용', anchor: '#tco' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 문서', anchor: '#related' },
+    ],
+    sections: {
+      why: {
+        id: 'why',
+        title: 'Mac Mini M5가 이상적인 AI 서버인 이유',
+        content: [
+          '$1,199의 Mac Mini M5 Pro 64GB는 2026년 기준 조용하고 상시 구동되는 로컬 AI 서버를 운영하기 위한 최고의 가성비 하드웨어입니다. 거의 무음(팬리스 또는 매우 낮은 RPM의 팬), 낮은 소비 전력(25-55W, GPU 데스크톱의 300W+ 대비), 그리고 34B 파라미터 모델 또는 여러 소형 모델을 동시에 실행할 수 있는 충분한 통합 메모리를 갖추고 있습니다.',
+          '연간 전기 요금은 $26-39로, GPU 데스크톱 동급 제품의 $263-394에 비해 훨씬 저렴합니다. 이는 매년 ChatGPT Plus 구독 한 달 치보다도 적은 금액입니다.',
+        ],
+        tableFormat: true,
+        columns: ['항목', 'Mac Mini M5 Pro', '데스크톱 + RTX 4070', 'Raspberry Pi 5'],
+        rows: [
+          { '항목': '하드웨어 비용', 'Mac Mini M5 Pro': '$1,199', '데스크톱 + RTX 4070': '$1,200+', 'Raspberry Pi 5': '$80' },
+          { '항목': '대기 전력', 'Mac Mini M5 Pro': '8W', '데스크톱 + RTX 4070': '50W', 'Raspberry Pi 5': '5W' },
+          { '항목': 'LLM 부하 전력', 'Mac Mini M5 Pro': '25-55W', '데스크톱 + RTX 4070': '200-300W', 'Raspberry Pi 5': '해당 없음 (성능 부족)' },
+          { '항목': '연간 전기 요금', 'Mac Mini M5 Pro': '$26-39', '데스크톱 + RTX 4070': '$263-394', 'Raspberry Pi 5': '~$5' },
+          { '항목': '소음 수준', 'Mac Mini M5 Pro': '무소음', '데스크톱 + RTX 4070': '소음 큼 (팬 3개 이상)', 'Raspberry Pi 5': '무소음' },
+          { '항목': '최대 모델 크기', 'Mac Mini M5 Pro': '34B (Q5)', '데스크톱 + RTX 4070': '8B (12GB VRAM)', 'Raspberry Pi 5': '1-3B 전용' },
+          { '항목': '상시 구동 안정성', 'Mac Mini M5 Pro': '우수', '데스크톱 + RTX 4070': '양호', 'Raspberry Pi 5': '우수' },
+          { '항목': '크기', 'Mac Mini M5 Pro': '약 12.7×12.7cm', '데스크톱 + RTX 4070': '풀타워', 'Raspberry Pi 5': '약 7.6×7.6cm' },
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: '하드웨어 구성 권장 사항',
+        content: '$1,199의 64GB M5 Pro는 34B 모델을 실행하고 멀티 모델 음성 어시스턴트 스택을 지원하며, 향후 2-3년간의 모델 크기 성장에도 충분한 여유가 있어 최고의 가성비 제품입니다. AI 서버 용도로는 절대로 36GB 미만 메모리를 구매하지 마십시오.',
+        tableFormat: true,
+        columns: ['구성', '가격 (2026)', '메모리', '적합 용도', '지원 모델'],
+        rows: [
+          { '구성': 'Mac Mini M5 (기본)', '가격 (2026)': '$599', '메모리': '16 GB', '적합 용도': '가벼운 사용, 단일 사용자', '지원 모델': '7B Q4 전용' },
+          { '구성': 'Mac Mini M5 (32GB)', '가격 (2026)': '$799', '메모리': '32 GB', '적합 용도': '단일 사용자 일반 용도', '지원 모델': '최대 13B Q4' },
+          { '구성': 'Mac Mini M5 Pro 36GB', '가격 (2026)': '$999', '메모리': '36 GB', '적합 용도': '음성 어시스턴트 스택', '지원 모델': '8B + Whisper + TTS' },
+          { '구성': 'Mac Mini M5 Pro 64GB ★', '가격 (2026)': '$1,199', '메모리': '64 GB', '적합 용도': '권장 가성비 제품', '지원 모델': '34B 모델 여유 있게 실행' },
+          { '구성': 'Mac Mini M5 Pro 64GB + 1TB', '가격 (2026)': '$1,399', '메모리': '64 GB', '적합 용도': '다수의 모델 저장', '지원 모델': '50개 이상의 모델을 디스크에 저장' },
+        ],
+        note: '★ 권장 제품. 스토리지 계획: Llama 3.3 8B Q4 ~모델당 5 GB, Whisper large-v3 ~3 GB, 임베딩 모델 ~0.5 GB, 문서 10,000건의 ChromaDB ~2 GB. 일반적인 5모델 설정: 50-80 GB. 최소 512 GB SSD 권장, 고급 사용자는 1 TB.',
+      },
+      setup: {
+        id: 'setup',
+        title: '완전한 서버 설정 (개봉 후 30분 만에 구동)',
+        content: '이 단계를 통해 Mac Mini M5를 지속적으로 네트워크에서 접근 가능한 AI 서버로 구성합니다. 모든 단계를 완료하면 LAN의 모든 기기가 포트 11434에서 Mac Mini의 Ollama API로 요청을 보낼 수 있습니다.',
+      },
+      setupStep1: {
+        id: 'setup-step1',
+        title: '1단계: Homebrew 및 Ollama 설치',
+        codeBlock: `# Homebrew 설치 (아직 설치하지 않은 경우)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Ollama 설치
+brew install ollama
+
+# 백그라운드 서비스로 시작 (재부팅 시 자동 시작)
+brew services start ollama
+
+# 실행 중인지 확인
+curl http://localhost:11434/api/version`,
+        codeLanguage: 'bash',
+      },
+      setupStep2: {
+        id: 'setup-step2',
+        title: '2단계: 네트워크 접근 구성',
+        content: '기본적으로 Ollama는 localhost에서만 수신 대기합니다. 이 설정으로 LAN에 개방하고 멀티 모델 캐싱을 구성합니다.',
+        codeBlock: `# Ollama가 모든 인터페이스에서 수신 대기하도록 허용 (localhost 제외)
+echo 'export OLLAMA_HOST=0.0.0.0:11434' >> ~/.zshrc
+echo 'export OLLAMA_MAX_LOADED_MODELS=3' >> ~/.zshrc
+echo 'export OLLAMA_KEEP_ALIVE=1h' >> ~/.zshrc
+source ~/.zshrc
+
+# 새 설정으로 Ollama 재시작
+brew services restart ollama
+
+# 모든 인터페이스에서 수신 대기 중인지 확인
+lsof -i :11434`,
+        codeLanguage: 'bash',
+      },
+      setupStep3: {
+        id: 'setup-step3',
+        title: '3단계: macOS 방화벽 구성',
+        content: '시스템 설정 → 네트워크 → 방화벽 → 옵션 → Ollama 바이너리 경로 추가 (/opt/homebrew/bin/ollama) → 수신 연결 허용. 이렇게 하면 방화벽을 활성 상태로 유지하면서 LAN 기기가 포트 11434에 접근할 수 있습니다.',
+      },
+      setupStep4: {
+        id: 'setup-step4',
+        title: '4단계: 권장 모델 다운로드',
+        codeBlock: `# 범용 LLM
+ollama pull llama3.1:8b
+
+# 대안: 더 빠르고 비슷한 품질
+ollama pull mistral:7b
+
+# 코딩 작업용
+ollama pull deepseek-coder-v2:16b
+
+# RAG용 임베딩 모델
+ollama pull nomic-embed-text`,
+        codeLanguage: 'bash',
+      },
+      setupStep5: {
+        id: 'setup-step5',
+        title: '5단계: 고정 IP 설정 또는 mDNS 사용',
+        content: 'mDNS(Bonjour)가 가장 간편한 옵션입니다. 별도의 구성 없이 로컬 네트워크에서 호스트명으로 Mac Mini에 접근할 수 있습니다.',
+        codeBlock: `# 현재 로컬 IP 확인
+ipconfig getifaddr en0
+
+# 또는 Bonjour 사용 - hostname.local로 접근
+scutil --get LocalHostName
+# 출력 예: macmini → http://macmini.local:11434로 접근 가능`,
+        codeLanguage: 'bash',
+        note: '안정적인 IP를 위해 Mac의 MAC 주소를 사용하여 라우터 설정에서 DHCP 예약을 지정하십시오. 이렇게 하면 IP가 변경되지 않습니다.',
+      },
+      setupStep6: {
+        id: 'setup-step6',
+        title: '6단계: 절전 모드 방지 (상시 구동에 필수)',
+        content: '이 설정이 없으면 macOS가 비활성 상태에서 절전 모드로 전환되어 수동으로 깨울 때까지 서버에 접근할 수 없게 됩니다.',
+        codeBlock: `sudo pmset -a sleep 0
+sudo pmset -a displaysleep 1
+sudo pmset -a powernap 0
+sudo pmset -a hibernatemode 0
+
+# 설정 확인
+pmset -g`,
+        codeLanguage: 'bash',
+        note: '정전 후 복구를 위해 시스템 설정 → 에너지에서 "전원 장애 후 자동으로 시작"을 설정하십시오.',
+      },
+      setupStep7: {
+        id: 'setup-step7',
+        title: '7단계: LAN의 다른 기기에서 테스트',
+        codeBlock: `# 같은 네트워크의 노트북/스마트폰/태블릿에서:
+curl http://macmini.local:11434/api/chat -d '{
+  "model": "llama3.1:8b",
+  "messages": [{"role": "user", "content": "Hello from my phone!"}]
+}'`,
+        codeLanguage: 'bash',
+        note: '응답이 반환되면 AI 서버가 작동 중입니다. LAN의 모든 기기가 이제 AI 백엔드로 사용할 수 있습니다.',
+      },
+      remoteAccess: {
+        id: 'remote-access',
+        title: '원격 접근: 어디서나 Mac Mini AI 서버 사용하기',
+        content: [
+          '홈 네트워크 외부에서 Mac Mini AI 서버에 접근하는 두 가지 옵션: 개인 사용에는 Tailscale(권장), 웹 접근 가능 엔드포인트에는 Cloudflare Tunnel을 사용합니다.',
+        ],
+        codeBlock: `# 옵션 1: Tailscale (권장) — Mac Mini에 설치
+brew install --cask tailscale
+# Tailscale 앱으로 로그인 — Mac Mini에 사설 IP 할당
+# Tailscale이 설치된 어디서나 접근:
+curl http://macmini.tailnet.ts.net:11434/api/chat -d '{...}'
+
+# 옵션 2: Cloudflare Tunnel (웹 접근)
+brew install cloudflared
+cloudflared tunnel create ai-server
+cloudflared tunnel route dns ai-server ai.yourdomain.com
+# 어디서나 https://ai.yourdomain.com으로 접근 가능`,
+        codeLanguage: 'bash',
+        note: '보안 주의: 인증 없이 Ollama를 공용 인터넷에 직접 노출하지 마십시오. Ollama에는 기본 인증 기능이 없습니다. Tailscale, Access 정책이 적용된 Cloudflare Tunnel, 또는 WireGuard VPN을 사용하십시오.',
+      },
+      usecases: {
+        id: 'usecases',
+        title: 'Mac Mini AI 서버의 네 가지 실제 사용 사례',
+        content: 'Mac Mini AI 서버는 네 가지 주요 사용 사례를 지원합니다. 각각은 독립적인 워크플로우이며, 64GB M5 Pro에서 네 가지를 동시에 실행할 수 있습니다.',
+      },
+      usecaseFamilyServer: {
+        id: 'usecases-family',
+        title: '사용 사례 1: 가정용 AI 서버',
+        content: [
+          'Mac Mini를 24/7 상시 구동 상태로 수납장에 보관합니다. 홈 네트워크의 모든 기기(스마트폰, 태블릿, 노트북)가 동일한 Ollama 인스턴스에 API 요청을 보냅니다. iPhone, iPad, MacBook을 보유한 4인 가족이 동시에 사용합니다.',
+          'iPhone은 Shortcuts → macmini.local:11434로 POST 요청을 사용합니다. MacBook 사용자는 Continue.dev 또는 Raycast 확장 프로그램을 사용합니다. OLLAMA_NUM_PARALLEL=2로 설정하면 두 명의 가족 구성원이 Llama 3.3 8B에서 동시에 대화할 수 있습니다.',
+          'ChatGPT Plus 4개 구독($80/월 = $960/년)을 대체합니다. Mac Mini 투자 회수 기간: 약 15개월. 2-5년차: 순수 절감.',
+        ],
+      },
+      usecaseRAG: {
+        id: 'usecases-rag',
+        title: '사용 사례 2: 개인 정보 보호 RAG 문서 Q&A 서버',
+        content: '스택: Ollama (Llama 3.3 8B) + nomic-embed-text + ChromaDB. 모두 Mac Mini에서 실행되며 LAN을 통해 접근 가능합니다. 사용 사례: 가족 문서, 법률 계약서, 기술 매뉴얼, 레시피 라이브러리, 의료 기록, 연구 논문. 모두 비공개, 검색 가능, 오프라인.',
+        codeBlock: `# Docker로 ChromaDB 설치
+brew install --cask docker
+docker run -d -p 8000:8000 -v ~/chromadb:/data chromadb/chroma
+
+# 문서 인덱싱 (Python)
+from langchain_community.embeddings import OllamaEmbeddings
+from langchain_community.vectorstores import Chroma
+
+embeddings = OllamaEmbeddings(
+    model="nomic-embed-text",
+    base_url="http://localhost:11434"
+)
+vectordb = Chroma.from_documents(
+    documents=splits,
+    embedding=embeddings,
+    persist_directory="./chroma_db"
+)`,
+        codeLanguage: 'python',
+      },
+      usecaseVoice: {
+        id: 'usecases-voice',
+        title: '사용 사례 3: 상시 구동 음성 어시스턴트',
+        content: [
+          'Mac Mini의 스택: STT를 위한 whisper.cpp(Metal 가속), 추론을 위한 Ollama Llama 3.3 8B, 음성 출력을 위한 Piper TTS, Home Assistant 통합을 위한 Wyoming 프로토콜.',
+          '클라이언트 기기를 통한 웨이크워드 트리거(Apple HomePod via Home Assistant, 또는 각 방의 Raspberry Pi 마이크 어레이). M5 Pro에서의 엔드투엔드 지연 시간: 1.2초 (STT 0.3초 + LLM 0.7초 + TTS 0.2초).',
+          '연간 전기 요금: $35. 유사한 클라우드 서비스(Alexa Plus, 월 $20): $240/년. 모든 음성 데이터를 비공개로 유지하면서 연간 $200 이상 절감.',
+        ],
+        items: [
+          '상세 설정 가이드: [로컬 음성 어시스턴트 구축](/power-local-llm/build-local-voice-assistant-2026)',
+        ],
+      },
+      usecaseCoding: {
+        id: 'usecases-coding',
+        title: '사용 사례 4: 개인 정보 보호 코딩 에이전트 (IDE 통합)',
+        content: 'Continue.dev 또는 Cursor를 Mac Mini의 API를 사용하도록 구성합니다. 16B의 DeepSeek Coder V2는 여러 언어 벤치마크에서 GitHub Copilot을 능가하면서 모든 코드를 비공개 및 오프라인으로 유지합니다.',
+        codeBlock: `// ~/.continue/config.json
+{
+  "models": [{
+    "title": "Mac Mini DeepSeek Coder",
+    "provider": "ollama",
+    "model": "deepseek-coder-v2:16b",
+    "apiBase": "http://macmini.local:11434"
+  }]
+}`,
+        codeLanguage: 'json',
+        items: [
+          '연간 $0 (GitHub Copilot 사용자당 $10/월 대비)',
+          '코드가 네트워크 밖으로 유출되지 않음',
+          '오프라인에서도 작동 (비행기, 보안 사무실)',
+          'DeepSeek Coder V2가 Go, Python, TypeScript 벤치마크에서 Copilot 능가',
+        ],
+      },
+      monitoring: {
+        id: 'monitoring',
+        title: '전력 소비 및 열 성능',
+        content: 'Ollama를 Metal 가속으로 실행하는 M5 Pro Mac Mini 64GB에서 측정한 수치입니다. 전기 요금은 $0.15/kWh 기준으로 계산됩니다.',
+        tableFormat: true,
+        columns: ['워크로드', '전력', '연간 비용 (24/7, $0.15/kWh)'],
+        rows: [
+          { '워크로드': '대기', '전력': '8W', '연간 비용 (24/7, $0.15/kWh)': '~$10/년' },
+          { '워크로드': 'Llama 8B 추론', '전력': '25-35W', '연간 비용 (24/7, $0.15/kWh)': '~$39/년' },
+          { '워크로드': 'Llama 34B 추론', '전력': '40-55W', '연간 비용 (24/7, $0.15/kWh)': '~$63/년' },
+          { '워크로드': '일반적인 혼합 워크로드', '전력': '15-25W', '연간 비용 (24/7, $0.15/kWh)': '~$26/년' },
+        ],
+        items: [
+          '부하 시 표면 온도: 35-42°C (만지면 따뜻한 정도)',
+          '내부 CPU 온도: 65-75°C (스로틀링 임계값 이하)',
+          '팬: M5 기본 모델에서는 작동 없음; M5 Pro에서 최대 부하 시 잠깐 낮은 RPM으로 작동',
+          '30일 연속 작동 테스트에서 열 스로틀링 발생 없음',
+          '통풍: 개방된 공간 권장 — 밀폐된 캐비닛 내부 설치 지양',
+          'SSD 내구성: 일반적인 600 TBW = AI 서버 쓰기 패턴 기준 약 30년',
+        ],
+        note: '일반적인 혼합 워크로드의 연간 평균 전기 요금: $26-39. 1년 내내 상시 구동해도 ChatGPT Plus 한 달 구독료보다 저렴합니다.',
+      },
+      maintenance: {
+        id: 'maintenance',
+        title: '24/7 운영을 위한 모니터링 및 유지 관리',
+        content: '이 상태 점검 스크립트를 ~/check-ai-server.sh로 저장하십시오. cron 또는 launchd를 통해 시간마다 실행하면 Ollama가 충돌 시 자동으로 재시작됩니다.',
+        codeBlock: `#!/bin/bash
+echo "=== AI 서버 상태 점검 ==="
+echo "날짜: $(date)"
+
+if pgrep -x "ollama" > /dev/null; then
+    echo "✓ Ollama 실행 중"
+else
+    echo "✗ Ollama 미실행 - 재시작 중"
+    brew services restart ollama
+fi
+
+if curl -s http://localhost:11434/api/version > /dev/null; then
+    echo "✓ API 응답 중"
+else
+    echo "✗ API 미응답"
+fi
+
+df -h / | tail -1
+uptime`,
+        codeLanguage: 'bash',
+        items: [
+          '매월: \`brew upgrade ollama\`로 Ollama 업데이트',
+          '매월: \`ollama pull llama3.1:8b\`로 모델 업데이트 (최신 버전 재다운로드)',
+          '매월: \`ollama list\` 후 \`ollama rm <model-name>\`으로 미사용 모델 정리',
+          '매월: 시스템 설정 → 소프트웨어 업데이트를 통해 macOS 업데이트 적용',
+          '매월: Mac Mini 재시작 (메모리 정리, 누적 상태 초기화)',
+        ],
+        note: '상태 점검을 매시간 예약하려면 ~/Library/LaunchAgents/com.user.ollama-monitor.plist를 생성하고 launchctl로 로드하십시오.',
+      },
+      tco: {
+        id: 'tco',
+        title: '5년 총 소유 비용 분석',
+        tableFormat: true,
+        columns: ['연도', 'Mac Mini AI 서버', 'ChatGPT Plus 4개', '차이'],
+        rows: [
+          { '연도': '1년차', 'Mac Mini AI 서버': '$1,199 하드웨어 + $35 전기 = $1,234', 'ChatGPT Plus 4개': '$960', '차이': '-$274 (1년차에는 Mac이 더 비쌈)' },
+          { '연도': '2년차', 'Mac Mini AI 서버': '$35 (전기만)', 'ChatGPT Plus 4개': '$960', '차이': '+$925 절감' },
+          { '연도': '3년차', 'Mac Mini AI 서버': '$35', 'ChatGPT Plus 4개': '$960', '차이': '+$925 절감' },
+          { '연도': '4년차', 'Mac Mini AI 서버': '$35', 'ChatGPT Plus 4개': '$960', '차이': '+$925 절감' },
+          { '연도': '5년차', 'Mac Mini AI 서버': '$35', 'ChatGPT Plus 4개': '$960', '차이': '+$925 절감' },
+          { '연도': '5년 합계', 'Mac Mini AI 서버': '$1,374', 'ChatGPT Plus 4개': '$4,800', '차이': '+$3,426 절감' },
+        ],
+        items: [
+          'ChatGPT Plus를 대체하는 4인 가족 기준 투자 회수 기간: 약 15개월',
+          '코딩 에이전트 (Copilot $10/사용자/월 대체) — 개발자 1명: 12개월 만에 투자 회수',
+          '코딩 에이전트 — 4인 개발팀: 3개월 만에 투자 회수',
+          '코딩 에이전트 — 10인 개발팀: 1.2개월 만에 투자 회수',
+        ],
+        note: 'TCO는 연간 $960 (ChatGPT Plus 4개, 각 $20/월) 기준입니다. 모든 데이터 비공개, 쿼리당 비용 없음, 오프라인 기능 포함.',
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          { q: 'Mac Mini M5가 대안 제품보다 조용합니까?', a: '그렇습니다. M5 기본 모델은 완전 팬리스입니다. M5 Pro의 팬은 거의 작동하지 않으며, 작동 시에도 매우 조용합니다. RTX GPU 데스크톱: 약 50-70 dB. Mac Mini M5: 대기 시 0 dB, 34B+ 이상의 과부하 시 잠깐 20-25 dB.' },
+          { q: 'Mac Mini에 원격으로 접속할 수 있습니까?', a: '네. 터미널을 통한 SSH 또는 시스템 설정 → 공유 → 원격 관리를 통한 화면 공유(VNC). LAN에서는 ssh user@macmini.local을 사용합니다. 원격 접근의 경우 Tailscale을 먼저 설치한 후 Tailscale IP를 통해 SSH로 접속하십시오.' },
+          { q: '더 높은 처리량이 필요한 경우 어떻게 합니까?', a: '업그레이드 경로: Mac Studio M5 Max(128GB, 약 $2,000) — 2배 속도 및 70B 모델 지원. Mac Studio M5 Ultra(2026년 출시 예정) — 4배 속도. 서버 팜의 경우 여러 Mac Mini를 연결하고 Nginx로 부하 분산을 구성하십시오.' },
+          { q: 'Mac Mini는 24/7 AI 서버로 얼마나 오래 사용할 수 있습니까?', a: 'Apple Silicon Mac은 지속적인 작동을 위해 설계되었습니다. AI 서버 용도 예상 수명: 7-10년. SSD 내구성(일반적인 600 TBW)은 AI 워크로드 기준 25-30년을 커버합니다. 연간 하드웨어 고장률은 0.5% 미만입니다.' },
+          { q: '여러 사용자가 동시에 사용할 수 있습니까?', a: '네. OLLAMA_NUM_PARALLEL=2(또는 메모리에 따라 더 높게)로 설정하면 동시 요청을 처리할 수 있습니다. 64GB M5 Pro는 8B 모델에서 2-3명의 동시 사용자를 처리하거나, 멀티 모델 스택(LLM + 비전 + STT)에서 1명의 사용자를 지원합니다.' },
+          { q: 'Mac Mini의 전원이 나가면 어떻게 됩니까?', a: '전원이 복구되면 시스템 설정 → 에너지에서 "전원 장애 후 자동으로 시작"을 설정한 경우 macOS가 자동으로 부팅됩니다. Ollama는 brew 서비스로 시작됩니다. 모델은 첫 번째 요청 시 다시 로드됩니다(재부팅 후 첫 응답에 5-15초 지연 발생).' },
+          { q: 'Mac Mini에 외부 GPU를 추가하여 추론 속도를 높일 수 있습니까?', a: '아니요. Apple Silicon은 Metal/ML 가속을 위한 외부 GPU를 지원하지 않습니다. 통합 메모리 아키텍처가 설계 원칙입니다. 독립형 GPU를 추가할 수 없습니다. 속도 향상을 원한다면 Mac Studio M5 Max로 업그레이드하십시오.' },
+          { q: 'Mac Mini가 AI 서버로 과잉 사양입니까, 아니면 부족합니까?', a: '8B-34B 모델을 실행하는 1-4인 가정 또는 소규모 팀의 경우: 적합합니다. 70B 모델의 경우: 부족합니다(Mac Studio M5 Max 128GB 필요). 취미 예산으로 소형 모델을 원한다면: 과잉 사양입니다(Raspberry Pi 5는 1-3B 모델만 지원하지만, 2026년 기준 실용적인 용도에는 부족합니다).' },
+        ],
+      },
+      relatedArticles: {
+        id: 'related',
+        title: '관련 문서',
+        items: [
+          '[Apple Silicon 로컬 LLM 완전 가이드](/local-llms/apple-silicon-local-llm-guide-2026)',
+          '[M5 Pro vs M5 Max 벤치마크 2026](/local-llms/m5-pro-max-llm-benchmarks-2026)',
+          '[Mac용 Ollama 설정 가이드](/local-llms/ollama-on-mac-apple-silicon-setup-2026)',
+          '[로컬 LLM에 필요한 통합 메모리 용량](/local-llms/how-much-unified-memory-for-local-llm)',
+          '[Apple Silicon 최적 LLM 모델](/local-llms/best-models-apple-silicon-2026)',
+          '[MLX vs Ollama vs llama.cpp 비교](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac)',
+          '[로컬 음성 어시스턴트 구축](/power-local-llm/build-local-voice-assistant-2026)',
+          '[비공개 비즈니스 데이터를 위한 로컬 RAG](/power-local-llm/local-rag-for-private-business-data)',
+        ],
+      },
+    },
+  },
 }

@@ -3581,15 +3581,6 @@ tests:
     aboutTopics: ['프롬프트 최적화', '팀 협업', 'LLM 평가'],
     freshness_tier: 'monthly',
     next_refresh_due: '2026-10-10',
-    targetKeywords: [
-      '팀 프롬프트 최적화 도구',
-      'LLM 프롬프트 최적화 소프트웨어',
-      '프롬프트 A/B 테스트',
-      '팀용 프롬프트 관리',
-      'Braintrust 대 Vellum',
-      'Promptfoo CI/CD',
-      'DSPy 팀 워크플로',
-    ],
     toc: [
       { label: '핵심 요점', anchor: '#key-takeaways' },
       { label: '팀을 위한 프롬프트 최적화란?', anchor: '#what-is-prompt-optimization' },
@@ -3608,10 +3599,6 @@ tests:
       { label: 'FAQ', anchor: '#faq' },
       { label: '관련 읽을거리', anchor: '#related-reading' },
       { label: '출처', anchor: '#sources' },
-    ],
-    snippetBlocks: [
-      { type: 'one-sentence', text: '팀을 위한 프롬프트 최적화에는 버전 관리 저장소, A/B 테스트, 출력 점수 평가, 협업 검토의 네 가지 기능이 필요하며 — 이를 모두 충족하는 단일 도구는 존재하지 않습니다.' },
-      { type: 'plain-terms', text: '프롬프트 최적화 도구는 팀이 AI 프롬프트를 체계적으로 개선하고, 변형을 비교하며, 출력 품질을 측정할 수 있게 합니다. Braintrust, Vellum, Promptfoo, DSPy, Helicone, PromptPerfect, PromptQuorum 각각은 서로 다른 팀 필요에 맞춰져 있습니다.' },
     ],
     sections: {
       keyTakeaways: {
@@ -4008,30 +3995,7 @@ tests:
         cssSelector: ['.article-intro', '.key-takeaways'],
       },
     },
-    breadcrumbSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: '홈',
-          item: 'https://www.promptquorum.com/ko',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: '프롬프트 엔지니어링',
-          item: 'https://www.promptquorum.com/ko/prompt-engineering',
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: '팀을 위한 최고의 프롬프트 최적화 도구',
-          item: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-optimization-tools-for-teams',
-        },
-      ],
-    },
+
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -4040,12 +4004,6 @@ tests:
       numberOfItems: 7,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Braintrust', description: '공유 대시보드, 사용자 정의 점수 평가, 프로덕션 로깅을 갖춘 AI 평가 플랫폼 — 엔지니어링 팀용.' },
-        { '@type': 'ListItem', position: 2, name: 'DSPy', description: '자동화된 프롬프트 프로그래밍을 위한 오픈소스 프레임워크; 수동으로 작성된 프롬프트를 학습 가능한 모듈로 대체합니다.' },
-        { '@type': 'ListItem', position: 3, name: 'PromptPerfect', description: '코드 없는 UI 기반 최적화; 비기술 팀 구성원에게 이상적입니다.' },
-        { '@type': 'ListItem', position: 4, name: 'Vellum', description: '트래픽 분할 및 PR 스타일 승인 워크플로를 갖춘 프로덕션 A/B 테스트 플랫폼.' },
-        { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: 'CI/CD에서 프롬프트 회귀 테스트를 위한 오픈소스 CLI 도구.' },
-        { '@type': 'ListItem', position: 6, name: 'Helicone', description: '비용 추적 및 A/B 실험 지원이 있는 LLM 가시성 플랫폼.' },
-        { '@type': 'ListItem', position: 7, name: 'PromptQuorum', description: '다중 모델 비교 플랫폼; 최적화 전략을 선택하기 전에 25개 이상의 모델에서 동일한 프롬프트를 동시에 테스트합니다.' },
       ],
     },
   },

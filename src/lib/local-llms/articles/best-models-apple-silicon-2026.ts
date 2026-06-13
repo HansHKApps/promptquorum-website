@@ -1514,4 +1514,196 @@ ollama pull aya-expanse:32b         # 翻译`,
     },
     ctaText: '已为您的Mac选好模型？使用PromptQuorum将其响应与GPT-4、Claude、Gemini及其他22个模型并排比较——验证您的本地Llama、Qwen或Phi模型是否在特定用例中达到云端质量。',
   },
+  ko: {
+    freshness_tier: 'annual',
+    specific_year: 2026,
+    theme: '하드웨어 & 성능',
+    title: 'Apple Silicon 최적 LLM 모델 2026: 16GB, 36GB, 64GB, 128GB별 추천',
+    seoTitle: 'Apple Silicon 최적 모델 2026: 16GB~128GB',
+    intro: 'Apple Silicon Mac 메모리 용량별 로컬 LLM 모델 추천입니다. 16GB(Phi-4), 36GB(Llama 3.3 8B), 64GB(Qwen2 34B), 128GB(Llama 3.3 70B)에 대한 구체적인 모델 선택과 M5 Pro/Max에서의 tok/s 성능 수치를 제공합니다.',
+    metaDescription: 'Apple Silicon 최적 LLM 모델: Phi-4(16GB), Llama 8B(36GB), Qwen 34B(64GB), Llama 70B(128GB). Tok/s 속도, 양자화, 업그레이드 시점 안내.',
+    twitterDescription: 'Mac용 최적 LLM: 16GB→Phi-4, 36GB→Llama 8B, 64GB→Qwen 34B, 128GB→Llama 70B. M5 2026에서 테스트 완료.',
+    publishDate: '2026-05-15',
+    dateModified: '2026-05-15',
+    current_models_mentioned: ['Phi-4', 'Llama 3.3 8B', 'Qwen3 14B', 'Qwen3 34B', 'Mistral 8x7B', 'Llama 3.3 70B'],
+    current_hardware_mentioned: ['M5 Pro', 'M5 Max'],
+    audience: '자신의 Mac 구성에 맞는 모델 추천을 원하는 Mac 사용자.',
+    readTime: '10분 읽기',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'Apple Silicon Mac 최적 모델',
+    targetKeywords: ['최적 LLM Mac', '모델 추천', 'Mac 구성별 성능'],
+    leadAnswerBlock: '**16GB: Phi-4. 36GB: Llama 3.3 8B Q8 (~38 tok/s). 64GB: Qwen3 34B Q5 (~18 tok/s). 128GB: Llama 3.3 70B Q5 (~14 tok/s M5 Pro, ~16 tok/s M5 Max). 모두 Metal 기반 Ollama를 통해 실행됩니다.**',
+    quickAnswerTop: {
+      en: {
+        question: 'Which LLM model should I run on my Mac?',
+        answer: '16GB → Phi-4. 36GB → Llama 3.3 8B or Qwen3 14B. 64GB → Qwen3 34B. 128GB → Llama 3.3 70B. Performance: 30-40 tok/s (8B), 15-20 tok/s (34B), 12-18 tok/s (70B) on M5 Pro.',
+        bullets: ['16GB: Phi-4 3.8B', '36GB: Llama 3.3 8B Q8 (38 tok/s)', '64GB: Qwen3 34B Q5 (18 tok/s)', '128GB: Llama 3.3 70B Q5 (14–16 tok/s)', 'Use quantization: Q4/Q5 are standard', 'All available via Ollama'],
+        updatedDate: '2026-05-15',
+      },
+      de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      zh: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      ko: {
+        question: 'Mac에서 어떤 LLM 모델을 실행해야 합니까?',
+        answer: '16GB → Phi-4. 36GB → Llama 3.3 8B 또는 Qwen3 14B. 64GB → Qwen3 34B. 128GB → Llama 3.3 70B. M5 Pro 기준 성능: 30~40 tok/s(8B), 15~20 tok/s(34B), 12~18 tok/s(70B).',
+        bullets: ['16GB: Phi-4 3.8B', '36GB: Llama 3.3 8B Q8 (38 tok/s)', '64GB: Qwen3 34B Q5 (18 tok/s)', '128GB: Llama 3.3 70B Q5 (14~16 tok/s)', '양자화 활용: Q4/Q5가 표준입니다', '모두 Ollama를 통해 이용 가능합니다'],
+        updatedDate: '2026-05-15',
+      },
+    },
+    toc: [
+      { label: '메모리 용량별 최적 모델', anchor: '#by-tier' },
+      { label: '품질 벤치마크', anchor: '#quality-benchmarks' },
+      { label: '사용 사례별 최적 모델', anchor: '#by-usecase' },
+      { label: '실제 사용자 시나리오', anchor: '#scenarios' },
+      { label: '피해야 할 모델', anchor: '#avoid' },
+      { label: '모델 형식 참조', anchor: '#format-reference' },
+      { label: '모델 다운로드 방법', anchor: '#download-guide' },
+      { label: '관련 문서', anchor: '#related-articles' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+    ],
+    sections: {
+      byTier: {
+        id: 'by-tier',
+        title: 'Mac 메모리 용량별 모델 추천',
+        content: '최종 검증: 2026-05-15. 새로운 모델 출시에 따라 추천 모델이 변경될 수 있습니다. 이 페이지는 분기별로 업데이트됩니다.',
+        columns: ['메모리', '주요 추천', '양자화', '크기', 'M5 Pro tok/s', 'M5 Max tok/s', '대안'],
+        rows: [
+          { '메모리': '16 GB', '주요 추천': 'Phi-4', '양자화': 'Q4_K_M', '크기': '2.5 GB', 'M5 Pro tok/s': '60–70', 'M5 Max tok/s': '110–130', '대안': 'Llama 3.3 8B Q4 (여유 없음)' },
+          { '메모리': '36 GB', '주요 추천': 'Llama 3.3 8B', '양자화': 'Q8', '크기': '8.5 GB', 'M5 Pro tok/s': '38–45', 'M5 Max tok/s': '75–85', '대안': 'Qwen3 14B Q4 (8.5 GB)' },
+          { '메모리': '48 GB', '주요 추천': 'Qwen3 14B', '양자화': 'Q8', '크기': '16 GB', 'M5 Pro tok/s': '25–30', 'M5 Max tok/s': '50–60', '대안': 'Mixtral 8x22B Q4 (26 GB)' },
+          { '메모리': '64 GB', '주요 추천': 'Qwen3 34B', '양자화': 'Q5', '크기': '24 GB', 'M5 Pro tok/s': '18–22', 'M5 Max tok/s': '35–42', '대안': 'Mixtral 8x22B Q5 (32 GB)' },
+          { '메모리': '96 GB', '주요 추천': 'Llama 3.3 70B', '양자화': 'Q4', '크기': '42 GB', 'M5 Pro tok/s': '10–13', 'M5 Max tok/s': '20–25', '대안': 'Qwen3 72B Q4 (44 GB)' },
+          { '메모리': '128 GB', '주요 추천': 'Llama 3.3 70B', '양자화': 'Q5', '크기': '49 GB', 'M5 Pro tok/s': '8–11', 'M5 Max tok/s': '14–18', '대안': 'Qwen3 72B Q5 (51 GB)' },
+          { '메모리': '128 GB', '주요 추천': 'Llama 3.3 70B', '양자화': 'Q8', '크기': '74 GB', 'M5 Pro tok/s': 'N/A', 'M5 Max tok/s': '9–12', '대안': '최고 품질, M5 Max 전용' },
+        ],
+        note: '크기는 GGUF 형식 기준입니다. MLX 4비트 동등 모델은 비슷한 크기입니다.',
+      },
+      qualityBenchmarks: {
+        id: 'quality-benchmarks',
+        title: '모델 품질 벤치마크 (2026 표준 테스트)',
+        columns: ['모델', 'MMLU', 'HumanEval', 'GSM8K', '평균', '비고'],
+        rows: [
+          { '모델': 'Phi-4 (3.8B)', 'MMLU': '84.8', 'HumanEval': '82.6', 'GSM8K': '91.0', '평균': '86.1', '비고': '최고의 소형 모델' },
+          { '모델': 'Llama 3.3 8B', 'MMLU': '73.0', 'HumanEval': '72.6', 'GSM8K': '84.5', '평균': '76.7', '비고': '안정적인 범용 모델' },
+          { '모델': 'Qwen3 14B', 'MMLU': '79.7', 'HumanEval': '83.5', 'GSM8K': '90.2', '평균': '84.5', '비고': '강력한 추론 성능' },
+          { '모델': 'Mistral Small', 'MMLU': '60.1', 'HumanEval': '30.5', 'GSM8K': '50.0', '평균': '46.9', '비고': '구형이지만 빠름' },
+          { '모델': 'Qwen3 34B', 'MMLU': '83.3', 'HumanEval': '88.4', 'GSM8K': '93.0', '평균': '88.2', '비고': '최고의 중형 모델' },
+          { '모델': 'Mixtral 8x22B', 'MMLU': '70.6', 'HumanEval': '40.2', 'GSM8K': '60.4', '평균': '57.1', '비고': 'MoE 아키텍처' },
+          { '모델': 'Llama 3.3 70B', 'MMLU': '86.0', 'HumanEval': '80.5', 'GSM8K': '95.1', '평균': '87.2', '비고': '최고의 범용 모델' },
+          { '모델': 'Qwen3 72B', 'MMLU': '86.1', 'HumanEval': '86.6', 'GSM8K': '95.8', '평균': '89.5', '비고': '최고의 추론 성능' },
+          { '모델': 'Llama 3.3 405B', 'MMLU': '88.6', 'HumanEval': '89.0', 'GSM8K': '96.8', '평균': '91.5', '비고': '로컬 실행 불가' },
+          { '모델': 'GPT-5.5 (참조)', 'MMLU': '88.7', 'HumanEval': '90.2', 'GSM8K': '95.8', '평균': '91.6', '비고': '클라우드 기준선' },
+        ],
+        note: '128GB Mac에서 Qwen3 72B는 추가 비용 없이 GPT-5.5 수준의 품질에 근접합니다. 이것이 2026년 로컬 AI 분야에서 가장 중요한 발전입니다.',
+      },
+      byUsecase: {
+        id: 'by-usecase',
+        title: '사용 사례별 최적 모델 (2026)',
+        columns: ['사용 사례', '36GB Mac 최적', '64GB Mac 최적', '128GB Mac 최적'],
+        rows: [
+          { '사용 사례': '코딩 (일반)', '36GB Mac 최적': 'Llama 3.3 8B', '64GB Mac 최적': 'DeepSeek Coder V2 16B', '128GB Mac 최적': 'Llama 3.3 70B' },
+          { '사용 사례': '코딩 (Python)', '36GB Mac 최적': 'DeepSeek Coder V2 Lite', '64GB Mac 최적': 'DeepSeek Coder V2 16B', '128GB Mac 최적': 'DeepSeek Coder V2 236B' },
+          { '사용 사례': '장문 글쓰기', '36GB Mac 최적': 'Llama 3.3 8B Q8', '64GB Mac 최적': 'Qwen3 34B Q5', '128GB Mac 최적': 'Llama 3.3 70B Q5' },
+          { '사용 사례': '채팅 / 대화', '36GB Mac 최적': 'Mistral Small', '64GB Mac 최적': 'Mixtral 8x22B', '128GB Mac 최적': 'Llama 3.3 70B' },
+          { '사용 사례': '추론 / 수학', '36GB Mac 최적': 'Qwen3 14B', '64GB Mac 최적': 'Qwen3 34B', '128GB Mac 최적': 'Qwen3 72B' },
+          { '사용 사례': 'RAG / Q&A', '36GB Mac 최적': 'Llama 3.3 8B + nomic-embed', '64GB Mac 최적': '[Llama 3.3 8B](/local-llms/local-rag-for-private-business-data) + bge-large', '128GB Mac 최적': 'Llama 3.3 70B + bge-large' },
+          { '사용 사례': '비전 / 멀티모달', '36GB Mac 최적': 'LLaVA 7B', '64GB Mac 최적': '[Llama 3.2 Vision 11B](/power-local-llm/local-vision-models-llava-ollama-2026)', '128GB Mac 최적': 'Llama 3.2 Vision 90B' },
+          { '사용 사례': '번역', '36GB Mac 최적': 'Qwen3 14B', '64GB Mac 최적': 'Qwen3 34B', '128GB Mac 최적': 'Aya Expanse 32B' },
+          { '사용 사례': '요약', '36GB Mac 최적': 'Llama 3.3 8B', '64GB Mac 최적': 'Qwen3 34B', '128GB Mac 최적': 'Llama 3.3 70B' },
+          { '사용 사례': '코드 리뷰', '36GB Mac 최적': 'DeepSeek Coder V2 Lite', '64GB Mac 최적': 'DeepSeek Coder V2 16B', '128GB Mac 최적': 'Llama 3.3 70B' },
+        ],
+        note: '특화 모델은 특정 작업에서 범용 모델보다 뛰어난 성능을 보이는 경우가 많습니다. DeepSeek Coder는 더 큰 Llama보다 코딩에서 우수한 성능을 발휘합니다.',
+      },
+      scenarios: {
+        id: 'scenarios',
+        title: '사용자 유형별 실제 구성 사례',
+        callouts: [
+          { type: 'tip', text: '**인디 개발자 (Mac Mini M5 Pro 64GB, $1,200)**\n- 코딩: DeepSeek Coder V2 Lite (16B Q4, 10 GB)\n- 글쓰기: 문서 및 이메일용 Llama 3.3 8B Q8 (8.5 GB)\n- 상시 실행: `OLLAMA_MAX_LOADED_MODELS=2`로 두 모델 유지\n- 일일 비용: $0 (Copilot + ChatGPT 월 $30~100 대비)' },
+          { type: 'tip', text: '**개인정보 보호 중심 전문가 (MacBook Pro M5 Pro 48GB, $2,500)**\n- 주요: 일반 업무용 Llama 3.3 8B Q8\n- 민감 업무: 법률/의료/금융 문서용 Qwen3 14B Q5\n- 이동 중: 비행기, 보안 시설에서 오프라인 사용 가능\n- 데이터가 노트북 외부로 전혀 유출되지 않음' },
+          { type: 'tip', text: '**연구자 / ML 엔지니어 (Mac Studio M5 Max 128GB, $4,000)**\n- 주요: 품질 중심 Llama 3.3 70B Q5 (49 GB)\n- 전문: 비영어권 연구용 Qwen3 72B Q4\n- 코딩: DeepSeek Coder V2 16B\n- 비전: 논문 그림 분석용 Llama 3.2 Vision 11B\n- 네 가지 모델 동시 로드' },
+          { type: 'tip', text: '**가정용 AI 서버 (Mac Mini M5 Pro 64GB, 상시 가동)**\n- 음성 어시스턴트: Llama 3.3 8B + Whisper + Piper\n- RAG: 임베딩을 활용한 가족 문서 Q&A\n- REST API를 통한 가족 구성원 코딩 지원\n- 전력 비용: 연간 약 $35\n- 대체 효과: 4인 ChatGPT Plus = 연간 $1,000' },
+        ],
+      },
+      avoid: {
+        id: 'avoid',
+        title: '2026년 피해야 할 모델 및 이유',
+        callouts: [
+          { type: 'warning', text: '**Llama 3.3 (모든 크기) 사용 금지** — 2023년 출시, Llama 3 및 3.1로 대체됨. 동일 파라미터 수 대비 품질이 30~50% 낮음. 구형 튜토리얼에 여전히 등장하므로 따르지 마십시오. 대체 모델: Llama 3.3 8B.' },
+          { type: 'warning', text: '**Vicuna, Alpaca, WizardLM 사용 금지** — 2023년대 커뮤니티 파인튜닝 모델. 현재 베이스 모델(Llama 3.3, Qwen3)이 이미 동등하거나 우수한 성능을 발휘합니다. 대체 모델: Qwen3 14B 또는 Llama 3.3 8B.' },
+          { type: 'warning', text: '**Falcon 180B 사용 금지** — 소비자용 Apple Silicon에서 실행 불가. [Llama 3.3 70B](/local-llms/running-70b-models-apple-silicon-m5-max)(더 작음)가 성능이 더 뛰어납니다. 대체 모델: Llama 3.3 70B Q5.' },
+          { type: 'warning', text: '**소비자 하드웨어에서 FP16 양자화 사용 금지** — Llama 3.3 70B FP16 = 140 GB로 어떤 Mac에도 탑재 불가. Q5 대비 품질 향상은 1% 미만. 대체: [Q4_K_M 또는 Q5_K_M](/local-llms/llm-quantization-explained).' },
+          { type: 'warning', text: '**순수 베이스 모델 (instruct 변형 없음) 사용 금지** — 베이스 모델은 텍스트를 완성하지만 지시를 따르지 않습니다. "-instruct" 또는 "-chat" 접미사를 확인하십시오. 대체: 동일 모델의 instruct 변형.' },
+          { type: 'warning', text: '**활발하게 개발되지 않는 모델 사용 금지** — StableLM, RedPajama, MPT, Pythia: 개발 중단 또는 정체 상태. 정기 업데이트를 제공하는 Meta, Alibaba, Mistral, Microsoft의 모델을 사용하십시오.' },
+        ],
+      },
+      formatReference: {
+        id: 'format-reference',
+        title: '모델 형식 빠른 참조',
+        columns: ['형식', '사용 도구', '원본 대비 크기'],
+        rows: [
+          { '형식': 'GGUF Q4_K_M', '사용 도구': '[Ollama](/local-llms/ollama-on-mac-apple-silicon-setup-2026), llama.cpp', '원본 대비 크기': 'FP16의 약 30%' },
+          { '형식': 'GGUF Q5_K_M', '사용 도구': '[Ollama](/local-llms/ollama-on-mac-apple-silicon-setup-2026), llama.cpp', '원본 대비 크기': 'FP16의 약 35%' },
+          { '형식': 'GGUF Q8_0', '사용 도구': '[Ollama](/local-llms/ollama-on-mac-apple-silicon-setup-2026), llama.cpp', '원본 대비 크기': 'FP16의 약 50%' },
+          { '형식': 'MLX 4비트', '사용 도구': 'MLX 프레임워크', '원본 대비 크기': 'FP16의 약 30%' },
+          { '형식': 'MLX 8비트', '사용 도구': 'MLX 프레임워크', '원본 대비 크기': 'FP16의 약 50%' },
+          { '형식': 'FP16 (원본)', '사용 도구': '모든 프레임워크', '원본 대비 크기': '100%' },
+        ],
+        note: '이 문서의 크기는 별도 명시가 없는 한 GGUF Q4_K_M 기준입니다. MLX 4비트 동등 모델은 크기가 비슷합니다. 정확한 바이트 수는 HuggingFace의 모델 카드를 확인하십시오.',
+      },
+      downloadGuide: {
+        id: 'download-guide',
+        title: '빠른 참조: 모델 다운로드 방법',
+        codeBlock: `# 16 GB Mac
+ollama pull phi4
+
+# 36 GB Mac (하나 선택)
+ollama pull llama3.1:8b
+ollama pull qwen2.5:14b
+ollama pull mistral:7b
+
+# 64 GB Mac
+ollama pull qwen2.5:34b
+ollama pull mixtral:8x7b
+
+# 128 GB Mac
+ollama pull llama3.1:70b
+ollama pull qwen2.5:72b
+
+# 특화 모델
+ollama pull deepseek-coder-v2:16b   # 코딩
+ollama pull llama3.2-vision:11b     # 비전
+ollama pull aya-expanse:32b         # 번역`,
+        codeLanguage: 'bash',
+        note: '각 모델은 수 GB 크기입니다. 여러 모델을 보유할 경우 총 디스크 사용량이 50~100 GB에 달할 수 있습니다. `du -sh ~/.ollama/`로 사용량을 확인하십시오.',
+      },
+      relatedArticles: {
+        id: 'related-articles',
+        title: '관련 문서',
+        items: [
+          '[Apple Silicon 로컬 LLM 완전 가이드](/local-llms/apple-silicon-local-llm-guide-2026)',
+          '[M5 Pro vs M5 Max 벤치마크 2026](/local-llms/m5-pro-max-llm-benchmarks-2026)',
+          '[로컬 LLM에 필요한 통합 메모리 용량](/local-llms/how-much-unified-memory-for-local-llm)',
+          '[MLX vs Ollama vs llama.cpp 비교](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac)',
+          '[Mac에서 Ollama 설치 가이드](/local-llms/ollama-on-mac-apple-silicon-setup-2026)',
+          '[Apple Silicon에서 70B 모델 실행하기](/local-llms/running-70b-models-apple-silicon-m5-max)',
+          '[LLM 양자화 해설](/local-llms/llm-quantization-explained)',
+          '[Qwen vs Llama vs Mistral 비교](/local-llms/qwen-vs-llama-vs-mistral)',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        faqs: [
+          { q: '두 가지 모델을 동시에 실행할 수 있습니까?', a: '예, 환경 변수에 `OLLAMA_MAX_LOADED_MODELS=2`를 설정하십시오. 64GB에서는 8B와 34B 모델을 동시에 실행할 수 있습니다.' },
+          { q: '초보자에게 가장 좋은 모델은 무엇입니까?', a: 'Llama 3.3 8B입니다. 광범위하게 제공되며 출력 품질이 우수하고 검증된 실적을 보유하고 있습니다. M1 이상의 모든 Mac에서 실행됩니다.' },
+          { q: 'Mixtral 8x22B는 Llama 8B보다 빠릅니까?', a: '아닙니다. M5 Pro 기준 약간 느립니다(40~50 tok/s 대 50~60 tok/s). 그러나 추론 성능은 더 뛰어납니다.' },
+          { q: '2026년 최고의 로컬 LLM은 무엇입니까?', a: 'Apple Silicon 대부분의 사용자에게는 Qwen3(Mac에 맞는 크기)이 품질 벤치마크에서 현재 선두입니다. 128GB Mac에서는 Llama 3.3 70B가 비슷한 성능을 발휘합니다. 16GB 미만의 경우 [Phi-4](/local-llms/llm-quantization-explained)가 3.8B 파라미터로 2024년 8B 모델에 필적하는 놀라운 성능을 보입니다.' },
+          { q: 'Mac에서 Llama 3.3 405B를 실행할 수 있습니까?', a: '아닙니다. Llama 3.3 405B는 Q4 양자화에서도 200GB 이상이 필요하므로 어떤 소비자용 Mac에도 충분한 통합 메모리가 없습니다. M5 Ultra(2026년 중반 예상, 256 GB)를 기다리십시오 — 이것이 Q3~Q4에서 405B를 실행할 수 있는 첫 번째 소비자용 하드웨어가 될 것입니다.' },
+          { q: 'Qwen이 로컬 사용에서 Llama보다 낫습니까?', a: '대부분의 작업에서 Qwen3는 동일 파라미터 수 기준 벤치마크에서 Llama 3.3보다 약간 앞서 있습니다(MMLU에서 1~3점 차이). Llama는 더 넓은 커뮤니티 지원과 더 많은 파인튜닝 모델을 보유하고 있습니다. 대부분의 사용자는 차이를 체감하기 어려우므로 가용성과 파인튜닝 생태계를 기준으로 선택하십시오.' },
+          { q: '실제로 유용한 최소 모델은 무엇입니까?', a: '파라미터 3.8B의 Phi-4입니다. MMLU 점수 84.8로 일부 2024년 8B 모델에 필적합니다. 채팅과 Q&A에서 놀랍도록 유능합니다. 코딩이나 복잡한 추론에는 Llama 3.3 8B 또는 [Qwen3 14B](/local-llms/qwen-vs-llama-vs-mistral)로 이동하십시오.' },
+        ],
+      },
+    },
+    ctaText: 'Mac에 맞는 모델을 선택하셨습니까? PromptQuorum으로 해당 모델의 응답을 GPT-4, Claude, Gemini 및 22개 이상의 모델과 나란히 비교해 보십시오 — 로컬 Llama, Qwen 또는 Phi 모델이 특정 사용 사례에서 클라우드 품질에 부합하는지 검증하십시오.',
+  },
 }

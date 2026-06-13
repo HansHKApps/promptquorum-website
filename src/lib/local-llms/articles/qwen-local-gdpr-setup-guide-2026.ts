@@ -1033,4 +1033,176 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
   },
+  ko: {
+    theme: 'Privacy & Security',
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-11-22',
+    title: 'GDPR 준수 워크플로를 위한 Qwen 로컬 설치 가이드',
+    seoTitle: 'Qwen으로 GDPR 준수 로컬 LLM 설정하기 2026 | PromptQuorum',
+    metaDescription: 'Ollama 설치, 네트워크 격리, 디스크 암호화, Article 30 감사 추적을 포함한 GDPR 준수 Qwen 3 14B 로컬 실행 단계별 가이드. 2026년 5월 업데이트.',
+    publishDate: '2026-05-22',
+    dateModified: '2026-05-22',
+    readTime: '9분 읽기',
+    educationalLevel: 'Intermediate',
+    audience: 'GDPR 준수 로컬 LLM 환경을 구성하는 DPO, IT 책임자, 법무 운영 팀',
+    primaryTerm: 'GDPR 준수 로컬 LLM 설치',
+    leadAnswerBlock: '자체 하드웨어에서 Ollama를 통해 Qwen 3 14B를 로컬로 실행하면 프롬프트 데이터가 관할 구역 밖으로 전혀 전송되지 않는 배포 환경이 구성됩니다. 이는 GDPR Article 44, 25, 5(1)(f)를 단일 아키텍처 결정으로 직접 충족합니다.',
+    current_models_mentioned: ['Qwen 3 14B', 'Qwen 3 Coder 14B', 'Qwen 3 8B', 'Llama 4 Scout'],
+    current_hardware_mentioned: ['RTX 3080', 'RTX 4070', 'RTX 3090'],
+    quickAnswerTop: {
+      ko: {
+        question: 'GDPR 준수를 위해 Qwen을 로컬에서 어떻게 설정합니까?',
+        answer: 'Ollama를 설치하고, 12 GB VRAM이 탑재된 기기에서 ollama run qwen2.5:14b를 실행한 뒤, 추론 프로세스의 모든 외부 네트워크 호출을 차단하고, 전체 디스크 암호화를 활성화하며, 제30조 처리 기록을 위해 프롬프트/응답 해시(내용이 아닌)를 기록합니다. 총 설치 시간: 30분 미만.',
+        bullets: [
+          '하드웨어: RTX 3080 / RTX 4070 / 12 GB VRAM 이상의 GPU — Q4에서 Qwen 3 14B 실행을 위한 최소 요건',
+          '격리: 방화벽으로 Ollama 포트(11434)를 LAN 전용으로 제한; .ollama/config에서 원격 측정 비활성화',
+          '제30조 기록: 모델명, 양자화 수준, 타임스탬프, 프롬프트 해시를 기록 — 원시 개인 식별 정보는 절대 포함 금지',
+        ],
+        updatedDate: '2026-05',
+      },
+    },
+    toc: [
+      { label: '로컬 배포가 GDPR을 충족하는 이유', anchor: 'gdpr-case' },
+      { label: '하드웨어 요건', anchor: 'hardware' },
+      { label: 'Ollama 설치', anchor: 'ollama-install' },
+      { label: '네트워크 격리', anchor: 'network-isolation' },
+      { label: '디스크 암호화', anchor: 'disk-encryption' },
+      { label: '제30조 감사 기록', anchor: 'article-30' },
+      { label: 'DPA에 제출할 문서', anchor: 'dpa-docs' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '로컬 Qwen 배포는 단일 아키텍처 결정으로 GDPR 제44조(제3국 이전 금지), 제25조(설계 단계의 개인정보 보호), 제5조 제1항 (f)호(무결성 및 기밀성)를 충족합니다.',
+          '최소 하드웨어: 12 GB VRAM GPU(RTX 3080, RTX 4070 Ti 또는 동급) — Ollama를 통해 Qwen 3 14B를 Q4_K_M으로 실행',
+          '핵심 격리 조치: Ollama 포트 11434를 LAN 전용으로 방화벽 설정, 모델 다운로드 원격 측정 비활성화, 격리된 네트워크 세그먼트에서 실행',
+          '제30조 처리 기록: 모델 버전, 양자화 수준, 세션 타임스탬프, 프롬프트의 SHA-256 해시를 기록 — PII 내용 자체는 절대 기록 금지',
+          '깨끗한 OS에서 첫 GDPR 안전 추론까지 총 설치 시간: 30분 미만',
+        ],
+      },
+      gdprCase: {
+        id: 'gdpr-case',
+        title: '로컬 배포가 GDPR을 충족하는 이유',
+        content: [
+          '<strong>AI 사용과 가장 직접적으로 관련된 세 가지 GDPR 조항은 제44조(국제 데이터 이전), 제25조(설계 단계의 개인정보 보호), 제5조 제1항 (f)호(무결성 및 기밀성)입니다. 로컬 LLM 배포는 단일 아키텍처 선택으로 세 조항을 모두 해결합니다. 모델이 귀사의 하드웨어에서, 귀사의 관할 구역 내에서, 외부 데이터 전송 없이 실행됩니다.</strong>',
+          '제44조는 클라우드 AI에서 충족하기 가장 까다로운 조항입니다. 개인 데이터가 포함된 모든 프롬프트를 OpenAI, Anthropic 또는 Alibaba Cloud로 전송하려면 최소한 표준 계약 조항(SCC), 대부분의 경우 이전 영향 평가(TIA)까지 포함한 이전의 법적 근거가 필요합니다. 추론이 로컬에서 이루어지면 제44조의 이전 자체가 발생하지 않으며, 법적 문제가 사라집니다.',
+          '제25조는 처리가 개인 데이터 보호를 근본적인 설계 원칙으로 삼아야 한다고 요구합니다. 로컬 모델은 이 원칙의 교과서적 사례입니다. 기본적으로 데이터가 사내를 벗어나지 않습니다. 감사관과 DPA(감독기관)는 이 아키텍처에 익숙하며, 문서화도 간단합니다.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Qwen을 로컬에서 실행하면 모든 데이터를 귀사의 하드웨어, 귀사의 관할 구역 내에서 처리한다는 단일 아키텍처 선택으로 GDPR 제44조, 제25조, 제5조 제1항 (f)호를 충족합니다.' },
+          { type: 'plain-terms', text: 'GDPR은 데이터의 국가 간 전송에 엄격한 규정을 적용합니다. 로컬 AI 모델은 데이터를 자체 서버에만 보관하므로 데이터가 국경을 넘지 않아 국제 이전 규정이 적용되지 않습니다.' },
+        ],
+      },
+      hardware: {
+        id: 'hardware',
+        title: '조직 규모별 하드웨어 요건',
+        content: [
+          '<strong>단독 DPO 또는 법무 운영 분석가의 경우: 12 GB VRAM GPU(RTX 3080 기준 약 18 tok/s)로 Qwen 3 14B Q4_K_M을 실용적인 속도로 실행할 수 있습니다. 5~10명이 중앙 서버를 공유하는 팀의 경우: 24 GB VRAM(RTX 3090 또는 RTX 4090)으로 여러 동시 요청을 처리할 수 있습니다.</strong> 기업의 대규모 멀티 유저 배포는 멀티 GPU 구성이 필요하며, 본 가이드의 범위를 벗어납니다.',
+          '최소 실행 가능 구성: RTX 3080, RTX 4070 Ti, 또는 12 GB VRAM의 모든 GPU. 공유 워크스테이션 GPU보다 전용 GPU를 권장합니다. 추론만을 위한 GPU가 필요하며, 게이밍과 LLM 작업 부하를 번갈아 처리하는 GPU는 적합하지 않습니다. Ollama를 통한 CPU 폴백도 가능하지만 추론 속도가 약 3 tok/s로 낮아집니다.',
+        ],
+        columns: ['팀 규모', '권장 GPU', '모델', '예상 속도'],
+        rows: [
+          { '팀 규모': '1인 사용자', '권장 GPU': 'RTX 3080 (12 GB)', '모델': 'Qwen 3 14B Q4', '예상 속도': '~18 tok/s' },
+          { '팀 규모': '2~5인 사용자 (대기열)', '권장 GPU': 'RTX 4070 Ti (12 GB)', '모델': 'Qwen 3 14B Q4', '예상 속도': '~22 tok/s' },
+          { '팀 규모': '5~10인 사용자 (공유)', '권장 GPU': 'RTX 3090 / 4090 (24 GB)', '모델': 'Qwen 3 14B Q5', '예상 속도': '~28 tok/s' },
+          { '팀 규모': '장문서 처리 팀', '권장 GPU': 'RTX 3090 (24 GB)', '모델': 'Llama 4 Scout (10M ctx)', '예상 속도': '~15 tok/s' },
+        ],
+      },
+      ollamaInstall: {
+        id: 'ollama-install',
+        title: 'Ollama 설치 — 단계별 안내',
+        content: [
+          '<strong>Linux, macOS, 또는 Windows에 Ollama를 설치합니다. HTTPS를 통해 Qwen 3 14B를 한 번 다운로드합니다. 이후 추론은 완전히 오프라인으로 실행됩니다.</strong>',
+        ],
+        numberedItems: [
+          {
+            title: 'Ollama 설치',
+            whyItMatters: 'Linux에서의 한 줄 설치 명령: <code>curl -fsSL https://ollama.com/install.sh | sh</code>. macOS: ollama.com에서 .app 파일을 다운로드합니다. Windows: .exe 설치 프로그램을 다운로드합니다. 확인: <code>ollama --version</code>을 실행하여 버전 번호가 출력되는지 확인합니다.',
+          },
+          {
+            title: '모델 다운로드 (최초 1회 HTTPS 다운로드)',
+            whyItMatters: '<code>ollama pull qwen2.5:14b</code>를 실행합니다. Hugging Face에서 HTTPS를 통해 약 9 GB를 다운로드합니다. 이것이 외부 네트워크 접근이 필요한 유일한 단계입니다. 에어갭(air-gapped) 환경의 경우: 네트워크가 연결된 기기에서 다운로드하고, USB를 통해 GGUF 파일을 전송한 뒤, <code>ollama create qwen2.5:14b --from /path/to/file.gguf</code>로 가져옵니다.',
+          },
+          {
+            title: '원격 측정 비활성화',
+            whyItMatters: '<code>~/.ollama/config.json</code>을 생성하거나 편집하여 <code>{"telemetry": false}</code>를 추가합니다. Ollama는 추론 트래픽을 외부로 전송하지 않지만, 시작 시 원격 측정 핑을 보냅니다. 이를 비활성화하면 런타임의 잔여 네트워크 활동이 모두 제거됩니다.',
+          },
+          {
+            title: '추론 테스트',
+            whyItMatters: '<code>ollama run qwen2.5:14b</code>를 실행하고 프롬프트를 입력합니다. 응답이 로컬에서 생성되는지 확인합니다. 추론 중 외부 연결이 발생하지 않는지 <code>ss -tnp | grep ollama</code>(Linux) 또는 Wireshark로 검증합니다.',
+          },
+        ],
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\nollama run qwen2.5:14b',
+      },
+      networkIsolation: {
+        id: 'network-isolation',
+        title: '네트워크 격리',
+        content: [
+          '<strong>Ollama는 기본적으로 포트 11434에서 HTTP API를 제공합니다. 이 포트는 LAN 전용으로 제한되어야 하며, 인터넷에 절대 노출되어서는 안 됩니다. 올바르게 구성된 Ollama 서버의 추론은 외부 트래픽을 전혀 발생시키지 않습니다.</strong>',
+          'Linux에서 UFW 사용 시: <code>ufw allow from 192.168.0.0/16 to any port 11434</code>에 이어 <code>ufw deny 11434</code>를 실행합니다. 이렇게 하면 LAN 클라이언트는 허용하고 모든 외부 접근을 차단합니다. 단일 사용자 로컬 환경의 경우, 환경 변수 <code>OLLAMA_HOST=127.0.0.1 ollama serve</code>를 설정하여 Ollama를 localhost에만 바인딩합니다.',
+          '추가 강화 조치: 비루트(non-root) 시스템 사용자로 Ollama를 실행하고, 모델 디렉터리를 해당 사용자로 제한하며, 추론 세션 중 <code>conntrack -L | grep ESTABLISHED</code>를 통해 외부 호출이 없음을 확인하는 월별 외부 연결 감사를 수행합니다.',
+        ],
+        callouts: [
+          {
+            type: 'important',
+            text: 'Open WebUI 또는 Ollama용 브라우저 접근 가능한 프론트엔드를 사용하는 경우, 해당 프론트엔드도 LAN 전용으로 제한해야 합니다. 프론트엔드가 공개적으로 접근 가능한 상태라면 Ollama API를 격리하는 것만으로는 충분하지 않습니다.',
+          },
+        ],
+      },
+      diskEncryption: {
+        id: 'disk-encryption',
+        title: '디스크 암호화 — GDPR 제5조 제1항 (f)호',
+        content: [
+          '<strong>GDPR 제5조 제1항 (f)호는 개인 데이터가 무단 접근에 대한 보호를 포함한 적절한 보안 조치와 함께 처리되어야 한다고 규정합니다. 전체 디스크 암호화를 통해 하드웨어 자산을 분실하거나 도난당하더라도 모델 파일 및 기록된 데이터에 접근할 수 없도록 보장합니다.</strong>',
+          'Linux: LUKS2와 dm-crypt가 표준입니다. OS 설치 시점에 활성화하면 가장 광범위한 보호가 적용됩니다. 기존 시스템의 경우: <code>cryptsetup</code>으로 특정 파티션을 암호화할 수 있습니다. macOS: FileVault가 내장되어 있습니다. 시스템 설정 → 개인정보 보호 및 보안 → FileVault에서 활성화합니다. Windows: Pro/Enterprise 에디션에서 BitLocker를 사용합니다.',
+          'OS 드라이브뿐만 아니라 모델 파일이나 세션 로그를 저장하는 모든 외부 드라이브도 암호화합니다. Qwen 모델 가중치 자체에는 개인 데이터가 포함되지 않지만, 세션 로그나 파인튜닝된 모델은 개인 데이터를 포함할 가능성이 있는 것으로 취급해야 합니다.',
+        ],
+      },
+      article30: {
+        id: 'article-30',
+        title: '제30조 감사 기록 — 기록 항목 및 방법',
+        content: [
+          '<strong>GDPR 제30조는 조직이 개인 데이터와 관련된 처리 활동의 기록을 유지할 것을 요구합니다. LLM 배포의 경우, 이는 처리의 목적, 처리되는 데이터의 범주, 기술적·조직적 조치, 보존 기간을 문서화하는 것을 의미합니다.</strong>',
+          '추론 세션별 기록 항목: (1) 모델명 및 버전(예: qwen2.5:14b), (2) 양자화 수준(Q4_K_M), (3) 세션 타임스탬프(ISO 8601), (4) 입력 프롬프트의 SHA-256 해시 — 원시 텍스트가 아닌 해시만 기록. 해시를 통해 PII를 보존하지 않고도 일관성을 증명할 수 있습니다. (5) 해당하는 경우 사용자 식별자(가명 처리).',
+          '기록하지 말아야 할 항목: 원시 프롬프트 텍스트, 원시 응답 텍스트, 응답에서 추출한 모든 개인 식별 정보. 해시의 목적은 새로운 개인 데이터 보존 문제를 만들지 않고 변조 방지 기록을 생성하는 것입니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Python에서 한 줄로 프롬프트 해시 생성: <code>import hashlib; hashlib.sha256(prompt.encode()).hexdigest()</code>. 원본 프롬프트 대신 이 값을 세션 메타데이터와 함께 저장합니다.',
+          },
+        ],
+      },
+      dpaDoc: {
+        id: 'dpa-docs',
+        title: 'DPA 또는 내부 감사에 제출할 문서',
+        content: [
+          '<strong>개인정보 보호 감독기관(DPA)이 LLM 배포를 감사할 경우, 네 가지 문서가 대부분의 질문을 해결합니다: (1) 제30조 처리 등록부 항목, (2) 데이터 흐름을 보여주는 기술 아키텍처 다이어그램, (3) 디스크 암호화 증거, (4) 외부 추론 트래픽 부재를 보여주는 네트워크 모니터링 로그.</strong>',
+          '로컬 LLM의 제30조 항목: 컨트롤러 신원, 처리 목적(예: "법률 문서 요약"), 개인 데이터의 범주(예: "계약 당사자 이름, 재무 조건"), 기술적 조치(로컬 모델, 전체 디스크 암호화, LAN 전용 접근), 세션 로그 보존 기간(통상 해시만 30~90일).',
+          '아키텍처 다이어그램은 DPA에 제출하는 가장 중요한 문서입니다. 사용자 → Ollama API(LAN 전용) → 모델 추론 → 응답의 흐름을 보여주고 "외부 인터넷 연결 없음"이라는 명시적인 주석이 달린 단일 페이지 다이어그램으로 제44조 문제를 시각적으로 효율적으로 해결할 수 있습니다.',
+        ],
+        faqs: [
+          {
+            q: '로컬 LLM에 데이터 보호 영향 평가(DPIA)가 필요합니까?',
+            a: '경우에 따라 필요할 수 있습니다. DPIA는 처리가 개인에게 높은 위험을 초래할 가능성이 있는 경우, 예를 들어 의료 기록, 직원 성과 데이터 또는 대규모 법률 문서를 처리하는 경우에 요구됩니다. 트리거는 AI 도구 자체가 아니라 "체계적이고 대규모" 기준입니다. 계약서 검토를 위해 Qwen 3 14B를 사용하는 단독 분석가는 DPIA 의무를 발생시키지 않을 가능성이 높습니다. 하루에 수백 건의 환자 기록을 처리하는 의료 기관은 DPIA가 필요할 가능성이 높습니다.',
+          },
+          {
+            q: 'GDPR 준수 접근을 위해 Ollama와 함께 Open WebUI를 사용할 수 있습니까?',
+            a: '가능합니다. Open WebUI도 LAN으로 제한된 경우에 한합니다. Open WebUI를 Ollama와 동일한 격리된 네트워크에서 실행하고, 내부 인터페이스에만 포트를 바인딩하며, 인증을 활성화합니다. Open WebUI는 사용자 계정을 지원하므로 제30조 요건에 매핑되는 사용자 수준 감사 추적도 확보할 수 있습니다.',
+          },
+          {
+            q: '유럽 언어로 된 법률 및 인사 텍스트에 가장 적합한 Qwen 모델 변형은 무엇입니까?',
+            a: 'Qwen 3 14B Q4_K_M이 권장 기준입니다. 독일어, 프랑스어, 이탈리아어, 스페인어, 영어 전반에서 14B 티어의 강력한 성능을 발휘합니다. 코드가 포함된 법률 워크플로우(예: 임베디드 코드 조항이나 구조화 데이터가 포함된 계약서 처리)의 경우 Qwen 3 Coder 14B Q4_K_M을 사용합니다. 6~8 GB VRAM으로 제한된 조직에서는 Qwen 3 8B가 다국어 텍스트에서 우수한 성능을 발휘합니다.',
+          },
+          {
+            q: 'Ollama와 데이터 처리 계약(DPA)을 체결해야 합니까?',
+            a: '아닙니다. Ollama는 서버 컴포넌트가 없는 로컬 런타임입니다. Ollama는 귀사를 대신하여 데이터를 처리하지 않으며, 모델 가중치가 귀사의 하드웨어에서 완전히 실행됩니다. GDPR 제28조상 데이터 처리자 역할을 하는 Ollama 법인이 존재하지 않으므로 DPA 체결이 필요하지 않습니다.',
+          },
+        ],
+      },
+    },
+  },
 }

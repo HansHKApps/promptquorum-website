@@ -1359,4 +1359,137 @@ schema: {
         ]
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: '도구 및 인터페이스',
+      title: '헤드리스 로컬 LLM: UI 없이 모델 실행하기 (2026)',
+      seoTitle: '헤드리스 로컬 LLM 배포',
+      intro: '헤드리스 로컬 LLM은 채팅 인터페이스나 UI 없이 서비스(API)로 실행되는 모델입니다. Python, Node.js 또는 curl을 통해 REST API로 상호작용합니다. 헤드리스 배포는 프로덕션 서버, 일괄 처리 및 자동화에 이상적입니다. 2026년 4월 기준으로, 이 방식은 프로덕션 배포의 표준입니다.',
+      metaDescription: '헤드리스 로컬 LLM 배포 2026: UI 없이 Ollama, vLLM, 추론 API 실행. 서버 및 마이크로서비스를 위한 프로덕션 설정.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**헤드리스 로컬 LLM은 채팅 인터페이스나 UI 없이 서비스(API)로 실행되는 모델입니다. Python, Node.js 또는 curl을 통해 REST API로 상호작용합니다.**',
+      audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 입문자',
+      readTime: '10분 읽기',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: '헤드리스 LLM',
+      aboutTopics: ['헤드리스 LLM', 'Ollama', 'vLLM', 'API', '프로덕션 배포'],
+      toc: [
+        { label: '핵심 요점', anchor: '#key-takeaways' },
+        { label: '헤드리스란?', anchor: '#what-is-headless' },
+        { label: '헤드리스 Ollama', anchor: '#headless-ollama' },
+        { label: '헤드리스 vLLM', anchor: '#headless-vllm' },
+        { label: '프로덕션 배포', anchor: '#production-deployment' },
+        { label: '모니터링 및 확장', anchor: '#monitoring' },
+        { label: '흔한 실수', anchor: '#common-mistakes' },
+        { label: '자주 묻는 질문', anchor: '#common-questions' },
+        { label: '관련 읽을거리', anchor: '#related-reading' },
+        { label: '출처', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '헤드리스 = 채팅 UI 없이 API만. Ollama, vLLM, LM Studio 모두 헤드리스로 실행 가능합니다.',
+            '**Ollama 헤드리스**: `ollama serve`로 localhost:11434에서 API를 시작합니다. UI 없음.',
+            '**vLLM 헤드리스**: `vllm serve`로 포트 8000에서 API를 시작합니다. Ollama보다 처리량이 우수합니다.',
+            '**프로덕션**: 처리량에는 vLLM, 단순성에는 Ollama, 로드 밸런싱 및 보안에는 nginx를 사용하십시오.',
+            '2026년 4월 기준으로, vLLM은 고처리량 서비스의 프로덕션 표준입니다.',
+          ],
+        },
+        whatIsHeadless: {
+          title: '헤드리스란 무엇입니까?',
+          content: [
+            '**헤드리스란 소프트웨어가 그래픽 사용자 인터페이스 없이 서비스로 실행되는 것을 의미합니다.** 버튼을 클릭하는 대신 API 호출(REST, gRPC)을 통해 상호작용합니다.',
+            '장점: 더 가벼운 리소스 사용(UI 오버헤드 없음), 자동화가 용이함, 서버에 적합함, 확장이 더 쉬움.',
+            '단점: 시각적 피드백 없음, API 지식 필요, 로그 없이 디버깅이 어려움.',
+          ],
+        },
+        ollama: {
+          title: 'Ollama를 헤드리스로 실행하는 방법은?',
+          content: 'Ollama는 순수 API 서비스로 실행할 수 있습니다:',
+          codeBlock: '# Run Ollama headless\nollama serve\n\n# This starts the API at http://localhost:11434/v1\n# No chat UI, just a background service\n\n# Use the API from Python\nfrom openai import OpenAI\nclient = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")\nresponse = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)\n\n# Or from curl\ncurl http://localhost:11434/v1/chat/completions \\\n  -H "Content-Type: application/json" \\\n  -d \'{{"model": "llama3.2:3b", "messages": [{{"role": "user", "content": "Hello"}}]}}\'',
+          codeLanguage: 'bash',
+        },
+        vllm: {
+          title: 'vLLM을 헤드리스로 실행하는 방법은?',
+          content: 'vLLM은 헤드리스, 고처리량 배포에 최적화되어 있습니다:',
+          codeBlock: '# Install vLLM\npip install vllm\n\n# Run headless with API\nvllm serve llama-3.1-8b-instruct \\\n  --host 0.0.0.0 \\\n  --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Access at http://localhost:8000/v1\n# Supports 50+ concurrent requests\n\n# Use from Python (same as Ollama)\nfrom openai import OpenAI\nclient = OpenAI(base_url="http://localhost:8000/v1", api_key="anything")\nresponse = client.chat.completions.create(\n  model="meta-llama/Llama-2-7b-chat-hf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'bash',
+        },
+        production: {
+          title: '프로덕션 배포 방법은?',
+          content: [
+            '**1. **고처리량(동시 사용자 50명 이상)에는 vLLM**을 사용하십시오.**',
+            '2. **단순성(단일 사용자 또는 소규모 팀)에는 Ollama**를 사용하십시오.',
+            '3. **로드 밸런싱 및 인증을 위해 nginx 역방향 프록시**를 추가하십시오.',
+            '4. **GPU 메모리를 모니터링하십시오** -- 모델이 VRAM의 80%를 초과하지 않아야 합니다.',
+            '5. **로깅을 설정하십시오** -- 오류 및 성능을 추적하십시오.',
+            '6. **서비스 관리에는 systemd 또는 Docker**를 사용하십시오(충돌 시 자동 재시작).',
+          ],
+          codeBlock: '# Example: Deploy vLLM on a server via Docker\ndocker run --gpus all -p 8000:8000 \\\n  --env VLLM_API_KEY="your-secret-key" \\\n  vllm/vllm-openai:latest \\\n  --model meta-llama/Llama-2-13b-chat-hf \\\n  --tensor-parallel-size 2  # Use 2 GPUs\n\n# Nginx reverse proxy config (optional)\n# server {\n#   listen 80;\n#   location / {\n#     proxy_pass http://localhost:8000;\n#     proxy_set_header Authorization "Bearer $http_authorization";\n#   }\n# }',
+          codeLanguage: 'bash',
+        },
+        monitoring: {
+          title: '헤드리스 배포를 모니터링하는 방법은?',
+          content: [
+            '**GPU 메모리, 요청 지연 시간, 오류율을 모니터링하십시오:**',
+          ],
+          codeBlock: '# Monitor GPU usage (nvidia-smi)\nwatch nvidia-smi  # Updates every 2 seconds\n\n# Monitor request latency\n# Add logging to your client code\nimport time\nstart = time.time()\nresponse = client.chat.completions.create(...)\nlatency = time.time() - start\nprint(f"Request took {latency:.2f} seconds")\n\n# Monitor vLLM logs\ndocker logs -f <container_id>\n\n# Check error rates\n# Parse logs for errors or use a monitoring tool (Prometheus + Grafana)',
+          codeLanguage: 'python',
+        },
+        commonMistakes: {
+          title: '헤드리스 배포의 흔한 실수',
+          items: [
+            '**VRAM을 모니터링하지 않음.** 모델이 조용히 메모리를 소진할 수 있습니다. 프로덕션에 배포하기 전에 GPU를 모니터링하십시오.',
+            '**인증 없이 API 노출.** 헤드리스 서비스는 종종 네트워크에 노출됩니다. 항상 인증(API 키, 방화벽)을 추가하십시오.',
+            '**리소스 제한 미설정.** 모델이 GPU를 100% 사용하여 다른 작업을 차단할 수 있습니다. vLLM에서 `--gpu-memory-utilization`을 사용하십시오.',
+            '**Ollama가 100명 이상의 사용자를 처리할 것으로 기대함.** 높은 동시성에는 vLLM을 사용하십시오. Ollama는 소수의 동시 사용자만 처리할 수 있습니다.',
+            '**장애 조치 테스트 미실시.** 모델 서버가 충돌하면 요청이 중단됩니다. 로드 밸런서와 상태 검사를 사용하십시오.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '헤드리스 배포에 대한 자주 묻는 질문',
+          faqs: [
+            {
+              q: 'Ollama와 vLLM이 동일한 GPU에서 실행될 수 있습니까?',
+              a: '동시에는 실행할 수 없습니다. 두 도구가 VRAM을 두고 경쟁합니다. 하나만 실행하거나 여러 GPU를 사용하십시오.',
+            },
+            {
+              q: 'API를 인터넷에 노출하는 것이 안전합니까?',
+              a: '인증 없이는 안전하지 않습니다. 항상 API 키, 방화벽, 또는 역방향 프록시를 앞에 배치하십시오. localhost:11434를 직접 노출하지 마십시오.',
+            },
+            {
+              q: 'Ollama는 몇 명의 동시 사용자를 처리할 수 있습니까?',
+              a: '큐잉 없이 일반적으로 1-3명입니다. 더 많은 사용자를 위해서는 vLLM을 사용하거나 요청 큐잉을 추가하십시오.',
+            },
+            {
+              q: 'Ollama와 vLLM의 성능 차이는 무엇입니까?',
+              a: '단일 요청: 유사한 속도. 여러 동시 요청: vLLM이 요청을 일괄 처리하기 때문에 5-10배 더 우수합니다.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 읽을거리',
+          items: [
+            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- Ollama 설정.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 엔진 비교.',
+            '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- API 문서.',
+            '[로컬 LLM 하드웨어 가이드](/local-llms/local-llm-hardware-guide-2026) -- 하드웨어 요구 사항.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            'Ollama GitHub -- github.com/ollama/ollama',
+            'vLLM GitHub -- github.com/vllm-project/vllm',
+            'vLLM 배포 가이드 -- docs.vllm.ai/en/serving/deploying_with_docker.html',
+            'Ollama API 문서 -- github.com/ollama/ollama/blob/main/docs/api.md',
+          ],
+        },
+      },
+    },
   };

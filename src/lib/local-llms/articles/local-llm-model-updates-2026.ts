@@ -1903,4 +1903,182 @@ schema: {
         ],
       },
     },
+  ko: {
+      freshness_tier: 'semi_annual',
+      theme: 'Best Models',
+      title: '로컬 LLM 모델 업데이트 2026: 올해 출시된 주요 오픈 웨이트 모델 총정리',
+      seoTitle: '로컬 LLM 2026: 주요 모델 출시 현황 + Ollama 지원 여부',
+      intro: '2026년 4월 기준, 올해의 가장 중요한 로컬 LLM 출시 모델로는 Meta Llama 3.3 70B (2025년 12월), DeepSeek-R1 (2025년 1월), Qwen3 및 Qwen3-Coder 패밀리 (2025년 9월), Microsoft Phi-4 (2024년 12월), 그리고 Google Gemma 3 (2026년 2월)가 있습니다. 본 문서는 모든 주요 모델 출시 현황을 주요 사양 및 Ollama 지원 여부와 함께 추적합니다.',
+      metaDescription: '로컬 LLM 모델 업데이트 2026: Gemma 3, Llama 4 Scout, Q1 출시 모델을 사양, MMLU 벤치마크, Ollama 지원 여부와 함께 정리했습니다. 2026년 4월 기준.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: '**2026년 4월 기준, 올해의 가장 중요한 로컬 LLM 출시 모델로는 Meta Llama 3.3 70B (2025년 12월), DeepSeek-R1 (2025년 1월), Qwen3 및 Qwen3-Coder 패밀리 (2025년 9월), Microsoft Phi-4 (2024년 12월)가 있습니다.**',
+      audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
+      readTime: '8분 소요',
+      educationalLevel: 'Beginner',
+      primaryTerm: '로컬 LLM 업데이트 2026',
+      toc: [
+        { label: '핵심 요약', anchor: '#key-takeaways' },
+        { label: '2026년 Q1 출시 모델', anchor: '#q1-2026-releases' },
+        { label: '2025년 Q4 출시 모델', anchor: '#q4-2025-releases' },
+        { label: '2025년 Q3 출시 모델', anchor: '#q3-2025-releases' },
+        { label: '2024년부터 2026년까지의 품질 향상', anchor: '#quality-improvement' },
+        { label: '최신 정보를 유지하는 방법', anchor: '#how-to-stay-updated' },
+        { label: '지역별 컨텍스트', anchor: '#regional-context' },
+        { label: '일반적인 실수', anchor: '#common-mistakes' },
+        { label: '관련 자료', anchor: '#related-reading' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
+        { label: '출처', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**2026년 Q1 최대 출시작**: Google Gemma 3 (2026년 2월) -- 1B, 4B, 9B, 27B 변형, 모든 크기에서 비전 지원, Apache 2.0 라이선스.',
+            '**최고의 추론 모델 출시**: DeepSeek-R1 (2025년 1월) -- 연쇄 사고 추론 방식, 7B 규모에서 MATH 52% 달성, 7B 벤치마크 구도를 뒤흔들었습니다.',
+            '**2025년 가장 큰 품질 도약**: Llama 3.3 70B (2025년 12월) -- MMLU에서 GPT-4 (2023년)와 동등한 성능, `ollama run llama3.3:70b`로 실행 가능합니다.',
+            '**2025년 가장 빠르게 성장한 모델 패밀리**: Qwen3 -- 2025년 Q4 기준 Ollama 다운로드 수에서 Mistral Small을 추월했습니다.',
+            '2026년 4월 기준, 로컬에서 실행 가능한 모델과 최첨단 클라우드 모델 사이의 품질 격차는 약 18~24개월의 성능 차이로 좁혀졌습니다.',
+          ],
+        },
+        q12026: {
+          title: '2026년 Q1에 출시된 로컬 LLM 모델은 무엇입니까?',
+          content: '2026년 4월 기준, 2026년 1월~4월 사이에 출시된 주목할 만한 오픈 웨이트 모델들입니다. 아래의 모든 모델은 다양한 양자화 형식으로 제공됩니다 -- Q4 대비 Q5 트레이드오프에 대한 자세한 내용은 [양자화 가이드](/local-llms/llm-quantization-explained)를 참조하십시오.',
+          image: '/images/q1-2026-model-releases-timeline-en.svg',
+          imageCaption: '2026년 Q1 로컬 LLM 출시 타임라인: Phi-4 Mini (1월, 3.8B), Gemma 3 (2월, 모든 크기에서 비전 지원), Llama 4 Scout (3월, MoE 아키텍처), Mistral Small 3.2 (4월). 모두 오픈 웨이트 발표 후 며칠 내에 Ollama에 출시되었습니다.',
+          rows: [
+            { 'Model': 'Gemma 3 (전 크기)', 'Released': '2026년 2월', 'Developer': 'Google', 'Key Feature': '모든 크기에서 비전 지원, 128K 컨텍스트, Apache 2.0', 'Ollama': 'ollama run gemma3:9b' },
+            { 'Model': 'Llama 4 Scout (프리뷰)', 'Released': '2026년 3월', 'Developer': 'Meta', 'Key Feature': 'MoE 아키텍처 프리뷰, 10M 토큰 컨텍스트 주장', 'Ollama': '아직 사용 불가' },
+            { 'Model': 'Mistral Small 3.2', 'Released': '2026년 2월', 'Developer': 'Mistral AI', 'Key Feature': 'Small 3.1 대비 향상된 명령어 수행 능력', 'Ollama': 'ollama run mistral-small3.2' },
+            { 'Model': 'Phi-4 Mini', 'Released': '2026년 1월', 'Developer': 'Microsoft', 'Key Feature': '3.8B, HumanEval 70%, 128K 컨텍스트', 'Ollama': 'ollama run phi4-mini' },
+          ],
+          columns: ['Model', 'Released', 'Developer', 'Key Feature', 'Ollama'],
+        },
+        q42025: {
+          title: '2026년에도 가장 중요한 2025년 Q4 모델은 무엇입니까?',
+          image: '/images/model-comparison-2026-en.svg',
+          imageCaption: '2026년 4월 로컬 LLM 모델 비교: Llama 3.3 70B는 42GB VRAM으로 MMLU 82%를 달성하며 선두를 유지하고, Qwen3 7B는 5GB VRAM으로 MMLU 74%의 최고 다국어 지원을 제공하며, Gemma 3 9B는 비전 기능을 추가하고, DeepSeek-R1 7B는 MATH 52%로 추론 작업에 특화되어 있습니다. 모두 Ollama를 통해 실행 가능합니다.',
+          rows: [
+            { 'Model': 'Llama 3.3 70B', 'Released': '2025년 12월', 'Key Specs': 'MMLU 82%, HumanEval 88%, 128K 컨텍스트', 'Still Relevant': '예 -- 최고의 70B 옵션' },
+            { 'Model': 'Phi-4 14B', 'Released': '2024년 12월', 'Key Specs': 'MMLU 84% -- 파라미터 규모를 초월한 성능', 'Still Relevant': '예 -- 강력한 14B 추론 모델' },
+            { 'Model': 'Qwen3 전 패밀리', 'Released': '2025년 9월', 'Key Specs': '0.5B~72B 범위, 29개 언어, Apache 2.0', 'Still Relevant': '예 -- 현재 최고의 다국어 패밀리' },
+            { 'Model': 'DeepSeek-R1', 'Released': '2025년 1월', 'Key Specs': '추론 모델, 7B에서 MATH 52%, 대규모에서 MoE 아키텍처', 'Still Relevant': '예 -- 로컬 최고의 추론 모델' },
+          ],
+          columns: ['Model', 'Released', 'Key Specs', 'Still Relevant'],
+        },
+        q32025: {
+          title: '현재도 널리 사용되는 2025년 Q3 모델은 무엇입니까?',
+          content: [
+            '**도구 호환성과 커뮤니티 문서화 덕분에 여러 2025년 출시 모델이 2026년에도 광범위하게 사용되고 있습니다:**',
+          ],
+          items: [
+            '**Llama 3.3 8B** (2025년 7월) -- 방대한 가이드와 도구 통합으로 가장 문서화가 잘 된 8B 모델로 초보자들이 선호합니다.',
+            '**Mistral Small v0.3** (2025년 5월) -- 현재 대안들보다 벤치마크 점수가 낮지만, Apache 2.0 라이선스와 Mistral EU 출처 덕분에 일부 유럽 배포 환경에서 선호됩니다.',
+            '**Llama 3.2 3B 및 1B** (2025년 9월) -- 작은 크기와 광범위한 문서화로 여전히 첫 번째 설치 추천 모델입니다.',
+          ],
+        },
+        whatChanged: {
+          id: 'quality-improvement',
+          title: '2024년부터 2026년까지 로컬 LLM 품질은 얼마나 향상되었습니까?',
+          content: [
+            '**로컬에서 실행 가능한 모델 품질의 2년간 향상은 상당합니다.** 2026년 4월 기준, 7B 모델(Qwen3 7B, MMLU 74%)은 2024년 초 13B 모델의 벤치마크 성능과 동등합니다. 70B 모델(Llama 3.3 70B, MMLU 82%)은 GPT-4 (2023년) 성능과 동등한데, 3년 전에는 수십억 달러의 서버 인프라가 필요하던 모델이 이제 Mac Studio에서 실행됩니다. 각 모델 클래스에 맞는 하드웨어 추천은 [로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026)을 참조하십시오.',
+          ],
+          image: '/images/llm-quality-improvement-2024-2026-en.svg',
+          imageCaption: '로컬 LLM 품질 향상 2024~2026: 7B급 모델은 MMLU 64% (Mistral Small, 2024년 초)에서 74% (Qwen3 7B, 2026년 4월)로 향상되었습니다. 70B급은 75% (Llama 3.3 70B)에서 82~84% (Llama 3.3 70B 및 Qwen3 72B)로 향상되었습니다. 18~24개월마다 로컬 모델 품질이 한 세대 발전합니다.',
+          rows: [
+            { 'Year': '2024년 초', 'Best 7B MMLU': '~64% (Mistral Small)', 'Best Local 70B MMLU': '~75% (Llama 3.3 70B)', 'Hardware Needed': '7B: RAM 8 GB; 70B: RAM 48 GB' },
+            { 'Year': '2025년 후반', 'Best 7B MMLU': '~74% (Qwen3 7B)', 'Best Local 70B MMLU': '~82% (Llama 3.3 70B)', 'Hardware Needed': '7B: RAM 5 GB; 70B: RAM 40 GB' },
+            { 'Year': '2026년 4월', 'Best 7B MMLU': '~74% (Qwen3 7B)', 'Best Local 70B MMLU': '~84% (Qwen3 72B)', 'Hardware Needed': '7B: RAM 4.7 GB; 70B: RAM 43 GB' },
+          ],
+          columns: ['Year', 'Best 7B MMLU', 'Best Local 70B MMLU', 'Hardware Needed'],
+        },
+        stayUpdated: {
+          title: '새로운 로컬 LLM 출시 정보를 어떻게 최신 상태로 유지합니까?',
+          items: [
+            '**Ollama 블로그** (ollama.com/blog) -- 오픈 웨이트 출시 후 보통 며칠 내에 Ollama 라이브러리에 추가된 새 모델을 발표합니다.',
+            '**Hugging Face Open LLM Leaderboard** (huggingface.co/spaces/open-llm-leaderboard) -- 새로 출시된 모든 모델의 벤치마크 점수를 실시간으로 추적합니다.',
+            '**r/LocalLLaMA** (reddit.com/r/LocalLLaMA) -- 로컬 AI 뉴스, 벤치마크, 하드웨어 논의를 위한 가장 활발한 커뮤니티입니다.',
+            '**GitHub Releases**: llama.cpp (github.com/ggerganov/llama.cpp) 및 Ollama (github.com/ollama/ollama) 저장소를 팔로우하여 새 모델을 지원하는 엔진 업데이트를 추적하십시오.',
+            '**PromptQuorum**: 주요 모델 출시로 추천 사항이 변경될 때 이 가이드가 업데이트됩니다. 가장 최근 업데이트는 dateModified 필드를 확인하십시오.',
+          ],
+        },
+        regionalContext: {
+          title: '로컬 LLM 모델 업데이트 2026: 지역별 컨텍스트',
+          content: [
+            '**EU / GDPR + AI 법**: 2025년 2월부터 발효된 EU AI 법은 규제 환경에서 사용되는 AI 시스템에 대한 문서화 요구 사항을 도입했습니다. 2026년에 새로운 로컬 모델이 출시됨에 따라 EU 조직들은 다음을 유의해야 합니다: Mistral AI (프랑스)는 주요 EU 기반 오픈 웨이트 모델 개발사로 유일합니다. Mistral Small 3.2 (2026년 2월)와 Mistral Small은 계속해서 Apache 2.0 라이선스를 제공합니다 -- 규제 분야에서 가장 깔끔한 컴플라이언스 선택입니다. 독일 BSI와 프랑스 CNIL은 고위험 AI 애플리케이션에 로컬 추론을 권장합니다. EU 외 모델(Llama, Qwen, Gemma, DeepSeek)의 경우: 데이터가 조직 외부로 나가지 않으므로 로컬 추론에서 GDPR 하에 모두 사용 가능합니다. 컴플라이언스 차이는 공급업체 문서화에 있으며 데이터 처리 방식에 있지 않습니다. 새 모델로 업그레이드할 때는 AI 도구 문서를 새 모델 버전, 양자화 수준, GGUF 파일명으로 업데이트하십시오.',
+            '**일본 (METI)**: METI AI 거버넌스 가이드라인은 프로덕션 AI 시스템에서 모델 버전 변경 사항을 문서화하도록 요구합니다. Llama 3.3 8B에서 최신 모델로 업그레이드할 때 이전 모델 태그, 새 모델 태그, 업그레이드 날짜, 변경 이유를 문서화하십시오. `ollama show <model>` 명령어는 컴플라이언스 기록을 위한 정확한 버전 문자열을 제공합니다. 일본어 배포 환경에서는 네이티브 CJK 토크나이저 덕분에 2026년에도 Qwen3 패밀리가 추천됩니다.',
+            '**중국**: 중국 CAC 생성형 AI 임시 조치 (2023년)에 따라, 대중에게 AI 서비스를 제공하는 조직은 규제 당국에 모델을 등록해야 합니다. 내부 사용을 위한 로컬 배포는 이 범위에 해당하지 않습니다. 중국어 배포 환경에서는 Qwen3 (Alibaba, Apache 2.0)와 DeepSeek-R1 (DeepSeek, MIT)가 주요 선택지입니다. Qwen3는 2025년 Q3에 주요 모델 패밀리 업데이트를 받았습니다 -- 여전히 Qwen2를 실행하는 조직은 향상된 성능과 확장된 29개 언어 지원을 위해 Qwen3로 업그레이드해야 합니다.',
+          ],
+        },
+        commonMistakes: {
+          title: '로컬 LLM 모델 추적 및 업그레이드 시 일반적인 실수',
+          items: [
+            '**불필요하게 모든 새 출시 버전으로 업그레이드하기**: 새 모델 출시는 매달 이루어집니다. 현재 모델이 사용 목적을 충족한다면 업그레이드는 선택 사항입니다. 특정 품질 한계에 도달했을 때만 새 모델을 평가하십시오: 복잡한 작업에서의 낮은 추론 능력, 약한 다국어 출력, 또는 코딩 실패. 미미한 벤치마크 향상을 위해 4~40 GB 모델을 다운로드하는 것은 시간과 디스크 공간 낭비입니다.',
+            '**출시 후 Ollama에서 모델을 조회할 때 잘못된 슬러그 사용**: Hugging Face의 모델 이름과 Ollama 태그는 다릅니다. Meta Llama 3.3은 Ollama에서 `llama3.3`으로 표시되며, `llama-3.3` 또는 `meta-llama-3.3`이 아닙니다. 스크립트에서 사용하기 전에 항상 ollama.com/library에서 정확한 Ollama 태그를 확인하십시오.',
+            '**새 모델을 가져오기 전에 Ollama 자체를 업데이트하지 않기**: 새 모델 지원에는 종종 업데이트된 Ollama 버전이 필요합니다. 최근에 출시된 모델을 가져오기 전에 Ollama를 업데이트하십시오: macOS는 자동 업데이트됩니다; Linux는 `curl -fsSL https://ollama.com/install.sh | sh`를 다시 실행하십시오; Windows는 최신 설치 프로그램을 다운로드하십시오. 구버전 Ollama를 실행하면 새 모델이 자동으로 실패할 수 있습니다.',
+            '**특정 작업에서 최신 = 최고라고 가정하기**: Gemma 3 9B (2026년 2월)는 대부분의 벤치마크에서 Llama 3.3 8B (2025년 7월)보다 높은 점수를 기록하지만, Llama 3.3 8B는 18개월 이상의 커뮤니티 파인튠, 시스템 프롬프트, 문서화된 사용 사례를 보유하고 있습니다. 커뮤니티 리소스가 있는 기존 워크플로의 경우 이전 모델이 더 나은 실용적 선택일 수 있습니다.',
+          ],
+        },
+        relatedReading: {
+          id: 'related',
+          title: '관련 자료',
+          items: [
+            '[최고의 로컬 LLM 2026](/local-llms/best-local-llms-2026) -- 2026년 전체 출시 모델을 포함한 작업, 하드웨어, 품질별 상위 5개 모델의 현재 순위.',
+            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) -- 새 모델 출시 버전 다운로드 시 Q4_K_M 대비 Q5_K_M 이해.',
+            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) -- 최신 2026년 데이터를 포함한 세 주요 모델 패밀리의 전체 벤치마크 비교.',
+            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 다운로드 전에 하드웨어가 최신 모델 출시를 지원하는지 확인.',
+            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- Ollama를 업데이트하고 올바른 버전 태그로 최신 모델을 가져오기.',
+            '[Ollama의 상위 오픈 소스 모델](/local-llms/top-open-source-models-ollama) -- pull 명령어와 성능 데이터가 포함된 사용 가능한 모델의 전체 라이브러리.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '2026년 로컬 LLM 모델 업데이트에 관한 자주 묻는 질문',
+          faqs: [
+            {
+              q: '오픈 웨이트 출시 후 새 모델은 Ollama에 얼마나 빨리 등장합니까?',
+              a: 'Meta, Google, Mistral, Alibaba의 주요 모델 출시는 보통 1~7일 내에 등록됩니다. Ollama 팀은 주요 출시를 우선순위로 처리합니다 -- Llama 3.3 70B는 Meta의 오픈 웨이트 출시 3일 후 Ollama 라이브러리에 등록되었습니다. 소규모 또는 커뮤니티 모델은 2~4주가 걸릴 수 있습니다.',
+            },
+            {
+              q: 'Llama 3.3 8B에서 더 새로운 모델로 업그레이드해야 합니까?',
+              a: '일반 작업에 Llama 3.3 8B를 사용하고 품질에 만족한다면 업그레이드는 선택 사항입니다. Qwen3 7B는 벤치마크 점수가 약간 더 높고 다국어 및 코딩 지원이 더 우수합니다. 대부분의 영어 중심 일반 사용에서 실용적 품질 차이는 작습니다. 현재 모델이 특정 작업에서 어려움을 겪을 때 업그레이드하십시오.',
+            },
+            {
+              q: '로컬 모델이 언젠가 현재 최첨단 클라우드 모델 품질과 동등해질 수 있습니까?',
+              a: '추세는 그렇습니다 -- 18~24개월의 지연과 함께. GPT-4 (2023년, 추정 1.7조 파라미터)는 Llama 3.3 70B (2025년, 로컬 실행 가능)와 동등한 성능을 보입니다. GPT-5.5 (2024년)는 2026년 후반 또는 2027년까지 로컬에서 실행 가능한 동등 모델이 등장할 것으로 예상됩니다. 제한 요소는 알고리즘 능력이 아니라 컴퓨팅 효율성입니다.',
+            },
+            {
+              q: 'DeepSeek에서 무슨 일이 있었으며 왜 중요합니까?',
+              a: 'DeepSeek-R1 (2025년 1월)은 중국 AI 연구소가 더 낮은 훈련 비용으로 OpenAI o1과 경쟁하는 추론 가능한 모델을 개발할 수 있음을 입증했습니다. 오픈 웨이트 출시로 최첨단 추론 모델이 처음으로 로컬에서 사용 가능해졌습니다. DeepSeek-R1 7B는 MATH에서 52%를 달성했는데, 이는 연쇄 사고 훈련 방법론 덕분에 Mistral Small의 28%의 거의 두 배에 해당합니다.',
+            },
+            {
+              q: 'Llama 4는 무엇이며 로컬에서 아직 사용 가능합니까?',
+              a: '2026년 4월 기준, Meta는 최대 10M 토큰 컨텍스트를 주장하는 혼합 전문가 모델인 Llama 4 Scout의 프리뷰를 출시했습니다. 전체 오픈 웨이트 출시는 아직 로컬 추론에 사용할 수 없습니다. Ollama 라이브러리에는 아직 Llama 4 변형이 포함되지 않았습니다. Llama 4가 로컬 배포에 사용 가능해지면 이 페이지가 업데이트될 것입니다.',
+            },
+            {
+              q: '2026년에 기업 또는 규제 산업을 위한 로컬 모델이 있습니까?',
+              a: 'Mistral AI는 Mistral 모델에 대한 엔터프라이즈급 지원 계약을 제공합니다. 유럽 출처는 GDPR 컴플라이언스 (2025년 2월 발효 EU AI 법)와 관련이 있습니다. 의료 (HIPAA) 또는 금융 (SOC 2)의 경우 로컬로 배포된 모든 모델이 데이터 잔존 요구 사항을 충족할 수 있습니다 -- 모델 자체는 데이터 중립적입니다. 컴플라이언스 작업은 모델 선택이 아닌 배포 인프라에 있습니다.',
+            },
+            {
+              q: '2026년에 완전한 초보자는 어떤 모델로 시작해야 합니까?',
+              a: 'Llama 3.2 3B 또는 Gemma 3 4B가 최고의 초보자 선택입니다. 두 모델 모두 보통 수준의 하드웨어(VRAM 4~6 GB)에서 실행되고, 광범위한 문서화가 있으며, 일반 작업에서 우수한 성능을 보입니다. Llama 3.2 3B는 더 많은 커뮤니티 가이드와 도구 통합이 있습니다. Gemma 3 4B는 더 최신이며 약간 더 빠르고 비전 기능을 지원합니다. 비기술적 사용자를 위해 LM Studio는 명령줄 없이 두 모델을 쉽게 설치할 수 있게 해줍니다.',
+            },
+            {
+              q: '현재 모델이 잘 작동한다면 새 모델로 업데이트할 가치가 있습니까?',
+              a: '현재 모델에서 특정 품질 한계에 도달했을 때만 업데이트하십시오. 7B 또는 8B 모델이 사용 사례를 충족한다면 업그레이드는 선택 사항입니다. 추론 오류, 낮은 다국어 지원, 또는 약한 코딩 능력이 발견되면 새로운 모델 테스트가 가치 있습니다. Qwen3 7B (2025년)는 대부분의 벤치마크에서 Llama 3.3 8B보다 성능이 뛰어나 점진적 개선을 원하는 사용자들에게 안전한 업그레이드 대상입니다.',
+            },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            'Hugging Face. (2026). "Open LLM Leaderboard." https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard -- 모든 오픈 웨이트 모델 출시에 대한 실시간 벤치마크 순위.',
+            'Google DeepMind. (2026). "Gemma 3 Technical Report." https://storage.googleapis.com/deepmind-media/gemma/gemma-3-report.pdf -- 모든 Gemma 3 변형의 아키텍처, 벤치마크, 비전 기능 데이터.',
+            'Meta AI. (2025). "Llama 3.3 Release." https://ai.meta.com/blog/llama-3-3/ -- Llama 3.3 70B의 공식 발표 및 사양.',
+            'DeepSeek AI. (2025). "DeepSeek-R1 Technical Paper." https://arxiv.org/abs/2501.12948 -- DeepSeek-R1의 연쇄 사고 아키텍처 및 MATH 벤치마크 결과.',
+          ],
+        },
+      },
+    },
   };

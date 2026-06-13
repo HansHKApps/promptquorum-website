@@ -212,11 +212,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'ابنِ مساعدًا صوتيًا محليًا كاملًا لمنزلك الذكي (2026)',
-    seoTitle: 'مساعد صوتي محلي 2026: استبدال Alexa بشكل خاص',
+    seoTitle: 'مساعد صوتي محلي 2026: استبدل Alexa بشكل خاص',
     intro:
       'يمكنك استبدال Alexa أو Google بمساعد صوتي محلي كامل مبني من Home Assistant Assist، وWhisper المحلي لتحويل الكلام إلى نص، وPiper لتحويل النص إلى كلام، ونموذج لغوي محلي كعقل. يتناول هذا الدليل البنية الصوتية دون إنترنت، وكل مكون، وبروتوكول Wyoming الذي يربطها، والأجهزة التي تحتاجها — جميعها خاصة وتعمل بدون سحابة.',
     metaDescription:
-      'استبدل Alexa بمساعد صوتي محلي كامل: Home Assistant Assist + Whisper + Piper + نموذج لغوي محلي عبر بروتوكول Wyoming. خاص ويعمل دون إنترنت.',
+      'Whisper + Piper + نموذج لغوي محلي عبر Wyoming يستبدل Alexa بمساعد Home Assistant كامل يعمل دون إنترنت — بدون سحابة، بدون تسجيلات خارجية.',
     twitterDescription:
       'ابنِ مساعدًا صوتيًا خاصًا يحل محل Alexa: Assist + Whisper (STT) + Piper (TTS) + نموذج لغوي محلي. كامل بدون إنترنت، عبر Wyoming.',
     readTime: '11 دقائق للقراءة',

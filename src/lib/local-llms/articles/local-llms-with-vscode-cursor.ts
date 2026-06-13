@@ -1499,4 +1499,141 @@ schema: {
         ],
       },
     },
+  ko: {
+      freshness_tier: 'annual',
+      theme: 'Tools & Interfaces',
+      title: 'VS Code와 Cursor에서 로컬 LLM 사용하기: 설정 및 모범 사례',
+      seoTitle: 'VS Code와 Cursor에서 로컬 LLM 사용하기: 2026 설정 가이드',
+      intro: 'VS Code와 Cursor(AI 중심 코드 편집기)는 모두 Continue.dev 확장(VS Code) 또는 직접 통합(Cursor)을 통해 로컬 LLM을 코드 자동 완성 및 제안에 활용할 수 있습니다. 2026년 4월 기준, 7B~13B 모델에서 로컬 코드 자동 완성이 실용적이며 8~16GB RAM이 필요합니다. 이 가이드는 설정 방법, 최적 모델, 성능 튜닝을 다룹니다.',
+      metaDescription: 'Continue.dev를 통해 Ollama를 VS Code에 연결하여 로컬 코드 자동 완성을 사용하십시오 — API 키 불필요. 2026년 최적 모델, VRAM 요구 사항, Cursor 통합 안내.',
+      publishDate: '2026-04-04',
+      leadAnswerBlock: 'VS Code와 Cursor(AI 중심 코드 편집기)는 모두 Continue.dev 확장(VS Code) 또는 직접 통합(Cursor)을 통해 로컬 LLM을 코드 자동 완성 및 제안에 활용할 수 있습니다.',
+      audience: 'Ollama 또는 LM Studio에 익숙하며 로컬 LLM 워크플로를 최적화하려는 개발자',
+      readTime: '10분 분량',
+      educationalLevel: 'Intermediate',
+      primaryTerm: '로컬 코드 자동 완성',
+      toc: [
+        { label: '핵심 요점', anchor: '#key-takeaways' },
+        { label: 'VS Code + Continue.dev', anchor: '#vscode-continue' },
+        { label: 'Cursor 편집기', anchor: '#cursor-editor' },
+        { label: '코드용 최적 모델', anchor: '#best-models' },
+        { label: '성능 및 VRAM', anchor: '#performance' },
+        { label: '고급 설정', anchor: '#advanced' },
+        { label: '자주 발생하는 실수', anchor: '#common-mistakes' },
+        { label: '자주 묻는 질문', anchor: '#common-questions' },
+        { label: '관련 자료', anchor: '#related-reading' },
+        { label: '출처', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            'VS Code는 Continue.dev 확장을 사용하여 로컬 모델(Ollama, LM Studio, vLLM)에 연결합니다.',
+            'Cursor는 VS Code 포크로 로컬 모델 지원이 내장되어 있습니다. 별도 확장이 필요하지 않습니다.',
+            '**코드용 최적 로컬 모델**: Qwen3-Coder 7B, Llama Code 13B 또는 Mistral Small.',
+            '7B 모델 기준 소비자 GPU에서 2~5초의 자동 완성 지연을 예상하십시오.',
+            '2026년 4월 기준, 로컬 코드 자동 완성은 개인 사용에는 실용적이나 팀 프로덕션 환경에는 아직 적합하지 않습니다.',
+          ],
+        },
+        vscodeContinue: {
+          title: 'VS Code에서 Continue.dev를 설정하는 방법은 무엇입니까?',
+          content: 'Continue.dev는 로컬 및 클라우드 코드 자동 완성을 위한 VS Code 확장입니다.',
+          codeBlock: '# 1. Install Continue from VS Code marketplace\n# Search "Continue" and click Install\n\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Continue settings (Ctrl+Shift+P → Continue: Open Settings)\n# config.json opens\n\n# 4. Configure for your local model:\n# Replace the default settings with:\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. Start typing code and press Tab for completions\n# Or Ctrl+Shift+\\ to manually trigger completions',
+          codeLanguage: 'json',
+        },
+        cursor: {
+          title: 'Cursor에서 로컬 모델을 사용하는 방법은 무엇입니까?',
+          content: [
+            '**Cursor는 AI 지원 코딩에 최적화된 VS Code 포크입니다.** Ollama를 통한 로컬 모델 지원이 내장되어 있습니다.',
+          ],
+          codeBlock: '# 1. Download Cursor from cursor.sh\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Cursor Settings (Cmd/Ctrl + ,)\n# 4. Search "Model" and set:\n#    - Model Provider: "Ollama"\n#    - Model: "qwen2.5-coder:7b" (or your choice)\n#    - API Base: "http://localhost:11434"\n\n# 5. Type code and press Tab for inline completions\n# 6. Ctrl+K for multi-line completions',
+          codeLanguage: 'bash',
+        },
+        bestModels: {
+          title: '코드용으로 가장 적합한 모델은 무엇입니까?',
+          rows: [
+            { 'Model': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Speed': '빠름', 'Best For': '최상의 균형, 가장 빠름' },
+            { 'Model': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Speed': '빠름', 'Best For': '일반 코딩' },
+            { 'Model': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4.5 GB', 'Speed': '매우 빠름', 'Best For': '경량, EU 서버' },
+            { 'Model': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', 'Speed': '보통', 'Best For': '16GB 머신에서 더 높은 품질' },
+            { 'Model': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Speed': '빠름', 'Best For': '경량 대안' },
+          ],
+          columns: ['Model', 'HumanEval', 'VRAM', 'Speed', 'Best For'],
+        },
+        performance: {
+          title: '예상 지연 시간과 VRAM은 얼마입니까?',
+          content: [
+            '**자동 완성 지연 시간(첫 번째 토큰까지의 시간)은 IDE 경험에 매우 중요합니다.** 2026년 4월 기준 대표적인 수치는 다음과 같습니다:',
+          ],
+          rows: [
+            { 'Hardware': 'RTX 4090 GPU', 'Model': 'Qwen3-Coder 7B', 'Latency': '0.3~0.5초', 'Throughput': '150 토큰/초' },
+            { 'Hardware': 'RTX 4070 GPU', 'Model': 'Qwen3-Coder 7B', 'Latency': '0.8~1.5초', 'Throughput': '80 토큰/초' },
+            { 'Hardware': 'M3 MacBook Pro', 'Model': 'Qwen3-Coder 7B', 'Latency': '2~3초', 'Throughput': '20 토큰/초' },
+            { 'Hardware': '8코어 CPU만 사용', 'Model': 'Qwen3-Coder 7B', 'Latency': '5~10초', 'Throughput': '3 토큰/초' },
+          ],
+          columns: ['Hardware', 'Model', 'Latency', 'Throughput'],
+        },
+        advanced: {
+          title: '코드 자동 완성을 위한 고급 설정',
+          content: '다음 설정으로 경험을 세밀하게 조정하십시오:',
+          codeBlock: '# config.json advanced settings\n{\n  "tabAutocompleteModel": {\n    "contextLength": 2048,     # How much code context to send\n    "maxTokens": 50            # Max tokens per completion\n  },\n  "completionOptions": {\n    "maxContextTokens": 1024,\n    "maxSuggestionsCount": 5,\n    "debounceWaitMs": 200      # Wait before showing completions (ms)\n  },\n  # For faster inference, use smaller context:\n  "models": [{\n    "contextLength": 1024      # Smaller context = faster\n  }]\n}\n\n# For best speed on 8GB machines:\n# - Use 7B model (not 13B)\n# - Set maxTokens to 30\n# - Set debounceWaitMs to 500 (less flickering)',
+          codeLanguage: 'json',
+        },
+        commonMistakes: {
+          title: '로컬 코드 자동 완성의 자주 발생하는 실수',
+          items: [
+            '**디바운스 지연 시간 미조정.** 자동 완성이 "느리게" 느껴진다면 debounceWaitMs를 늘리십시오(예: 400ms). 불완전한 제안이 나타나는 것을 방지할 수 있습니다.',
+            '**VRAM에 비해 너무 큰 모델 사용.** 13B 모델과 편집기 오버헤드를 합치면 12GB 이상이 필요할 수 있습니다. 8GB 머신에서는 7B 모델을 사용하십시오.',
+            '**클라우드 수준의 코드 품질 기대.** GPT-5.5는 7B 모델보다 코드 품질이 현저히 높습니다. 로컬 자동 완성은 클라우드 품질의 70~80% 수준입니다.',
+            '**CPU에서 추론 실행.** CPU 자동 완성은 비실용적입니다(5~10초 지연). 실용적인 자동 완성을 위해서는 GPU가 필요합니다.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '로컬 코드 자동 완성에 관한 자주 묻는 질문',
+          faqs: [
+            {
+              q: '로컬 코드 자동 완성이 클라우드보다 빠릅니까?',
+              a: '그렇지 않습니다. 클라우드 자동 완성(GitHub Copilot)은 최적화된 서버 덕분에 더 빠릅니다. 로컬 자동 완성은 지연 시간이 더 길지만 비용이 없고 개인 정보 보호 위험도 없습니다.',
+            },
+            {
+              q: '다른 IDE(PyCharm, Neovim)에서도 로컬 자동 완성을 사용할 수 있습니까?',
+              a: '가능합니다. 단, 설정 방법이 다릅니다. PyCharm에는 Ollama 플러그인이 있습니다. Neovim의 경우 cmp-ollama(자동 완성 플러그인)를 사용하십시오. 각 IDE 커뮤니티에서 통합 방법을 확인하십시오.',
+            },
+            {
+              q: 'Continue나 Cursor에서 클라우드 모델을 사용할 수 있습니까?',
+              a: '가능합니다. Continue를 OpenAI, Claude 또는 Gemini와 함께 사용하도록 설정할 수 있습니다. 빠른 작업에는 로컬, 복잡한 코드에는 클라우드를 혼합하여 사용할 수도 있습니다.',
+            },
+            {
+              q: '로컬 코드 자동 완성은 오프라인에서 작동합니까?',
+              a: '예. Ollama에서 모델을 이미 pull한 경우 자동 완성은 완전히 오프라인으로 동작합니다.',
+            },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '관련 자료',
+          items: [
+            '[로컬 LLM용 최고의 AI 코딩 어시스턴트](/local-llms/best-ai-coding-assistant-local-llm) -- 로컬 LLM을 지원하는 Cursor, Continue.dev, Cody, Tabnine, Windsurf의 종합 비교.',
+            '[로컬 LLM 개발자 스택](/local-llms/local-llm-developer-stack) -- IDE 통합을 넘어 API 서버 설정 및 프로덕션 모니터링을 포함한 완전한 스택.',
+            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 코드 자동 완성을 위한 Ollama 설정.',
+            '[코딩용 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) -- 상세한 코딩 모델 벤치마크.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 어떤 도구를 사용해야 하는지.',
+            '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- 코드 자동 완성 API.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '출처',
+          items: [
+            'Continue.dev -- continue.dev',
+            'Cursor Editor -- cursor.sh',
+            'Continue GitHub -- github.com/continuedev/continue',
+            'Qwen3-Coder -- github.com/QwenLM/Qwen3-Coder',
+            'IDE 통합은 절반에 불과합니다. 코드 생성을 위한 효과적인 프롬프트 작성은 일반 대화와 다른 마인드셋이 필요합니다. 개발자를 위한 프롬프트 엔지니어링을 알아보십시오: [best prompt engineering IDEs](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides)에서 도구와 기법을 비교합니다.',
+          ],
+        },
+      },
+    },
   };

@@ -1705,4 +1705,279 @@ schema: {
         ],
       },
     },
+  ko: {
+      freshness_tier: 'monthly',
+      next_seo_review_due: '2026-07-01',
+      next_refresh_due: '2026-06-30',
+      last_full_refresh: '2026-06-01',
+      current_models_mentioned: ['Qwen3 8B', 'Qwen3 14B', 'Gemma 4 E12B', 'Gemma 4 E4B', 'Mistral Small', 'DeepSeek-R1 7B', 'gpt-oss:20b'],
+      theme: 'GPU 구매 가이드',
+      title: 'RTX 3060 12GB: Qwen3 8B, Qwen3 14B, Gemma 4, Mistral Small 실행 가이드 (2026)',
+      seoTitle: 'RTX 3060 12GB: 2026년 로컬 LLM 최고의 예산형 GPU',
+      intro: '**RTX 3060 12GB는 Q4 양자화 기준으로 Qwen3 14B를 초당 9–12토큰, Qwen3 8B를 초당 16–20토큰, Gemma 4 E12B를 초당 11–14토큰, Mistral Small을 초당 18토큰, DeepSeek-R1 7B를 초당 10–12토큰으로 실행합니다.** 6GB 버전은 3B 모델만 실행 가능합니다. 2026년 6월 현재, RTX 3060 12GB(중고 $200–250)는 로컬 LLM용 최고의 예산형 GPU로 자리잡고 있습니다. 12GB VRAM은 Q4/Q5로 모든 7B-8B 모델과 대부분의 밀집형 13B-14B 모델을 Q4로 실행할 수 있습니다. (참고: Llama 4 Scout는 활성 파라미터 17B/총 109B의 MoE 모델로 Q4에서 약 55GB가 필요하므로 12GB에서는 일반적으로 실행되지 않습니다.) 이 가이드는 각 VRAM 등급에서 실행 가능한 모델과 실측 속도, 실용적인 설정 방법을 상세히 안내합니다.',
+      metaDescription: 'RTX 3060 12GB: Qwen3 8B(초당 16-20토큰), Qwen3 14B(초당 9-12토큰), Gemma 4 E12B, Mistral Small, DeepSeek-R1. VRAM 및 속도 벤치마크를 포함한 전체 모델 표.',
+      publishDate: '2026-04-05',
+      leadAnswerBlock: '**RTX 3060 12GB는 Qwen3 14B를 초당 9–12토큰, Qwen3 8B를 초당 16–20토큰, Gemma 4 E12B를 초당 11–14토큰, Mistral Small을 초당 18토큰, DeepSeek-R1 7B를 초당 10–12토큰으로 실행합니다. 6GB 버전은 3B 모델만 처리 가능합니다. 2026년 중고 $200–250에 구매할 수 있는 로컬 LLM용 최고의 예산형 GPU입니다.**',
+      nextStep: {
+        text: 'GPU를 준비하셨습니까? 이제 모델 실행에 적합한 소프트웨어를 선택하십시오.',
+        label: '2026년 최고의 로컬 LLM 프론트엔드 →',
+        href: '/local-llms/best-local-llm-frontends',
+      },
+      audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 입문자',
+      readTime: '7분 분량',
+      educationalLevel: 'Beginner',
+      primaryTerm: '예산형 GPU',
+      toc: [
+        { label: '요약', anchor: '#tldr' },
+        { label: 'RTX 3060 12GB에서 실행 가능한 모델은?', anchor: '#rtx-3060-12gb' },
+        { label: 'RTX 3060 6GB에서 실행 가능한 모델은?', anchor: '#rtx-3060-6gb' },
+        { label: 'RTX 3060 대 다른 예산형 GPU 비교', anchor: '#which-budget-gpus' },
+        { label: '7B 모델에 필요한 VRAM 용량은?', anchor: '#vram-7b' },
+        { label: 'RTX 3060에서 용도별 최적 모델', anchor: '#best-by-use-case' },
+        { label: '중고 vs. 신품: 어디서 구매해야 할까?', anchor: '#used-vs-new' },
+        { label: '예산형 GPU 구매 시 흔한 실수', anchor: '#mistakes' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**RTX 3060 12GB** (중고 $200–250): Q4/Q5로 모든 7B-8B 모델과 대부분의 밀집형 13B-14B 모델을 Q4로 실행합니다. 최고의 예산형 선택입니다.',
+            '**RTX 3060 6GB**: 3B 모델(Phi-4 Mini, Llama 3.2 3B)만 지원합니다. 7B 모델에는 용량이 부족합니다.',
+            '**12GB 최고의 전체 모델:** Qwen3 14B (~9GB VRAM, 초당 9–12토큰). 편안하게 실행 가능한 최고 품질의 밀집형 모델입니다.',
+            '**12GB 최고의 코딩 모델:** Qwen3 8B (초당 16–20토큰).',
+            '**12GB 최고의 추론 모델:** DeepSeek-R1 7B (초당 10–12토큰). 연쇄 사고(Chain-of-thought) 지원.',
+            '**이 GPU가 적합하지 않은 경우:** 70B 모델, Llama 4 Scout(~55GB 필요), 또는 13B Q8 실행을 원하신다면 24GB 이상(RTX 4090)이 필요합니다.',
+          ],
+        },
+        'rtx-3060-12gb': {
+          id: 'rtx-3060-12gb',
+          title: 'RTX 3060 12GB에서 실행 가능한 모델은?',
+          content: [
+            '**RTX 3060 12GB는 2026년 로컬 LLM용 최고의 예산형 GPU입니다.** 12GB VRAM은 Q4/Q5 양자화로 모든 7B 모델과 대부분의 13B 모델을 Q4로 실행할 수 있습니다. 모델 크기별 VRAM 요구 사항에 대한 자세한 안내는 [VRAM 요구 사항 가이드 →](/local-llms/how-much-vram-local-llm)를 참조하십시오. 실행 가능한 정확한 모델과 예상 속도는 다음과 같습니다:',
+          ],
+          columns: ['모델', '크기', '양자화', 'VRAM 사용량', '속도', '최적 용도'],
+          rows: [
+            { '모델': 'Qwen3 14B', '크기': '14B (밀집형)', '양자화': 'Q4_K_M', 'VRAM 사용량': '~9 GB', '속도': '초당 9–12토큰', '최적 용도': '실행 가능한 최고 품질' },
+            { '모델': 'Qwen3 8B', '크기': '8B', '양자화': 'Q4_K_M', 'VRAM 사용량': '~7 GB', '속도': '초당 16–20토큰', '최적 용도': '코딩, 범용' },
+            { '모델': 'Gemma 4 E12B', '크기': '26B MoE', '양자화': 'Q4_K_M', 'VRAM 사용량': '~9 GB', '속도': '초당 11–14토큰', '최적 용도': '비전, 멀티모달' },
+            { '모델': 'Mistral Small v0.3', '크기': '7B', '양자화': 'Q4_K_M', 'VRAM 사용량': '~7 GB', '속도': '초당 18토큰', '최적 용도': '명령어 따르기' },
+            { '모델': 'DeepSeek-R1 7B', '크기': '7B', '양자화': 'Q4_K_M', 'VRAM 사용량': '~7 GB', '속도': '초당 10–12토큰', '최적 용도': '추론, 수학' },
+            { '모델': 'Gemma 4 E4B', '크기': 'E4B (멀티모달)', '양자화': 'Q4_K_M', 'VRAM 사용량': '~5 GB', '속도': '초당 18–22토큰', '최적 용도': '경량 비전, 빠른 채팅' },
+            { '모델': 'Llama 3.2 13B', '크기': '13B', '양자화': 'Q4_K_M', 'VRAM 사용량': '~11 GB', '속도': '초당 8–10토큰', '최적 용도': '고품질 채팅 (Q4 전용, 빡빡한 구성)' },
+          ],
+          note: 'Qwen3 14B (밀집형)은 Q4_K_M으로 약 9GB를 사용하여 RTX 3060 12GB에서 가장 편안하게 실행되는 최고 품질의 모델입니다. `ollama pull qwen3:14b`. 참고: Llama 4 Scout (활성 파라미터 17B / 총 109B MoE, 1000만 토큰 컨텍스트, 멀티모달)는 Q4에서 약 55GB VRAM이 필요하므로 12GB 카드에서는 일반적으로 실행되지 않습니다. 이 모델은 고VRAM 시스템을 위한 장문 컨텍스트/대형 멀티모달 선택지입니다. gpt-oss:20b (총 21B / 활성 3.6B MoE)는 16GB가 필요하므로 12GB 카드에서는 실행이 불가능합니다. 모든 속도는 RTX 3060 12GB, 시스템 RAM 16GB, Ryzen 7 7700X 환경에서 Ollama로 측정되었습니다. Q4_K_M 양자화 기준이며, 프롬프트 길이 및 컨텍스트 창에 따라 ±15% 차이가 발생할 수 있습니다.',
+        },
+        'rtx-3060-6gb': {
+          id: 'rtx-3060-6gb',
+          title: 'RTX 3060 6GB에서 실행 가능한 모델은?',
+          content: [
+            '**6GB 버전은 심각하게 제한적입니다.** 3B 모델만 편안하게 실행 가능합니다. Q4의 7B 모델은 약 7GB가 필요하므로 용량이 부족합니다. CPU 오프로딩은 가능하지만 속도가 50–70% 저하됩니다.',
+          ],
+          items: [
+            '**Phi-4 Mini 3.8B (Q4):** ~3GB VRAM, 초당 20–25토큰. 이 크기에서 최고의 추론 성능. 수학과 논리에 강합니다.',
+            '**Llama 3.2 3B (Q4):** ~2.5GB VRAM, 초당 25–35토큰. 가장 빠른 옵션. 단순 채팅과 Q&A에 적합합니다.',
+            '**Gemma 2 2B (Q4):** ~1.7GB VRAM, 초당 35–45토큰. 가장 경량의 모델. 설정 테스트에 적합합니다.',
+            '**CPU 오프로딩을 통한 7B 실행:** 가능하지만 느립니다. CPU 오프로드를 사용한 Llama 7B = 초당 ~5–8토큰. 비대화형 배치 작업에만 실용적입니다.',
+            '**권장 사항:** 6GB 카드를 보유하고 있다면 우회 방법에 시간을 투자하기 전에 중고 12GB 카드($200–250)로 업그레이드하십시오. 속도와 모델 품질 향상이 충분한 가치를 제공합니다.',
+          ],
+        },
+        'which-budget-gpus': {
+          id: 'which-budget-gpus',
+          title: 'RTX 3060 대 다른 예산형 GPU 비교',
+          columns: ['GPU', 'VRAM', '가격 (중고)', '7B 속도', '최대 모델', '평가'],
+          rows: [
+            { 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '가격 (중고)': '$200–250', '7B 속도': '초당 15–20토큰', '최대 모델': '13B (Q4)', '평가': '전체 최고 예산형' },
+            { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', '가격 (중고)': '$250–300', '7B 속도': '초당 20–25토큰', '최대 모델': '7B (Q5 최대)', '평가': '더 빠르지만 VRAM 부족' },
+            { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '가격 (중고)': '$180–230', '7B 속도': '초당 12–15토큰', '최대 모델': '13B (Q5)', '평가': '달러당 최고 VRAM' },
+            { 'GPU': 'RTX 4070 Super', 'VRAM': '12 GB', '가격 (중고)': '$400–450', '7B 속도': '초당 25–30토큰', '최대 모델': '13B (Q5)', '평가': '더 빠르지만 가격 2배' },
+            { 'GPU': 'RX 6700 XT', 'VRAM': '12 GB', '가격 (중고)': '$150–200', '7B 속도': '초당 10–14토큰', '최대 모델': '13B (Q4)', '평가': '가장 저렴하지만 AMD 설정 복잡' },
+          ],
+          note: 'RTX 3060 12GB는 가성비에서 앞섭니다. $200–250에 12GB VRAM으로 모든 7B 모델과 대부분의 13B 모델을 실행할 수 있습니다. RTX A4000을 $230 이하에 구할 수 있다면 좋은 차선책입니다.',
+        },
+        'vram-7b': {
+          title: '7B 모델에 필요한 VRAM 용량은?',
+          content: [
+            '**Q4(4비트)로 양자화된 7B 모델은 6-8GB VRAM이 필요하고, Q5(5비트)는 8-10GB, Q8(8비트)는 14-16GB가 필요합니다.**',
+            '실제로 **8GB는 최소 요구 사항입니다.** Q4로 7B 모델을 편안하게 실행하고 배치 처리를 위한 여유 공간을 확보하려면 8GB가 필요합니다.',
+            '6GB 카드(RTX 2060)도 기술적으로 작동하지만 적극적인 최적화가 필요하고 더 높은 배치를 위한 여유 공간이 없습니다.',
+            '8GB 미만의 VRAM으로 제한된 경우에도 로컬 LLM을 효과적으로 실행할 수 있습니다 — **[4–8 GB 하드웨어를 위한 속도 최적화 모델 보기](/local-llms/fastest-local-llms-low-end-pcs)**.',
+            'GPU 비용은 경제성의 한 측면이며 토큰 비용은 또 다른 측면입니다. 로컬 추론은 토큰당 API 요금을 없애지만 프롬프트 길이는 여전히 지연 시간과 처리량에 영향을 미칩니다. 토큰, 가격 정책, 최적화 전략을 포함한 전체 비용 구조는 [토큰, 비용 및 한계: AI 프롬프팅의 경제학](https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)을 참조하십시오.',
+          ],
+        },
+        'best-by-use-case': {
+          id: 'best-by-use-case',
+          title: 'RTX 3060에서 용도별 최적 모델',
+          content: [
+            '**파라미터 수가 아닌 실제 필요에 맞는 모델을 선택하십시오.** RTX 3060 12GB에서 각 용도에 맞는 최선의 선택은 다음과 같습니다:',
+            '예산형 하드웨어는 소형 모델을 실행하지만 숙련된 프롬프팅으로 품질 격차를 좁힐 수 있습니다. [프롬프트 엔지니어링 가이드](https://www.promptquorum.com/prompt-engineering)에서는 소형 모델이 성능을 발휘할 수 있도록 도와주는 연쇄 사고 및 구조화된 출력과 같은 기법을 다룹니다. RTX 3060 12GB 등급에 적합한 실제 작업 부하로는 자동화된 풀 리퀘스트 검토가 있습니다. 이 정확한 하드웨어에서 Qwen3 8B를 PR에 실행하는 GitHub Actions 패턴은 [로컬 LLM CI/CD 코드 리뷰](/power-local-llm/local-llm-code-review-ci-cd)를 참조하십시오.',
+          ],
+          items: [
+            '**채팅 / Q&A:** `ollama run qwen3:14b` — 밀집형 14B, ~9GB VRAM, 12GB에서 최고 품질. 경량 옵션: `ollama run qwen3:8b` (~7GB).',
+            '**코딩:** `ollama run qwen3:8b` — 뛰어난 범용 코딩 성능. ~7GB VRAM. 초당 16–20토큰.',
+            '**추론 / 수학:** `ollama run deepseek-r1:7b` — 연쇄 사고 추론. 초당 10–12토큰. 속도는 느리지만 다단계 문제에서 정확도가 크게 향상됩니다.',
+            '**작문 / 창작:** `ollama run mistral:7b` — 최고의 명령어 따르기 성능. 초당 18토큰. 깔끔하고 구조화된 출력. 초안 작성과 재작성에 적합합니다.',
+            '**비전 / 이미지:** `ollama run gemma4:e12b` — 멀티모달(이미지 입력 가능). 초당 11–14토큰. ~9GB VRAM 사용. 경량 옵션: `ollama run gemma4:e4b` (~5GB). 사진 설명, 스크린샷 읽기, 차트 분석에 활용하십시오.',
+            '**프라이버시 / 오프라인:** 위의 모든 모델 사용 가능. 100% 로컬 실행. 데이터가 외부로 전송되지 않습니다. 모델 다운로드 후 인터넷 불필요.',
+            '**홈 자동화 / 항상 켜진 AI:** `ollama run phi4-mini` — Phi-4 Mini (3.8B, ~3GB VRAM)는 별도의 GPU 없이 미니 PC에서 Home Assistant 음성 쿼리를 처리합니다. [로컬 스마트홈 최고의 하드웨어 →](/smart-home/best-hardware-for-local-smart-home) 참조.',
+          ],
+        },
+        'used-vs-new': {
+          title: '중고 vs. 신품: 어디서 구매해야 할까?',
+          items: [
+            '**중고 ($50-100 저렴)**: eBay, Facebook Marketplace, Craigslist, 로컬 컴퓨터 수리점. 불량 카드 또는 VRAM 결함 위험이 높습니다. 구매 전 반드시 테스트하십시오.',
+            '**신품 ($280-400)**: Newegg, Amazon, Best Buy, Microcenter. 보증 포함. 예상치 못한 문제 없음. 가격 안정적. 위험 회피형 구매자에게 적합합니다.',
+            '**채굴 카드 (암호화폐, 매우 저렴)**: 극도로 위험합니다. VRAM 열화가 흔합니다. 현장에서 완전한 벤치마크 테스트가 가능한 경우에만 구매하십시오.',
+          ],
+        },
+        'mistakes': {
+          title: '예산형 GPU 구매 시 흔한 실수',
+          items: [
+            '4GB RTX 2060을 구매하고 원활한 7B 추론을 기대하는 경우 — 메모리 부족 오류가 계속 발생합니다.',
+            '$250 GPU에 $30짜리 전원 공급 장치(PSU) 조합 — 전압 저하가 안정성을 해칩니다. 650W 이상, 80+ Gold 인증 제품을 사용하십시오.',
+            'DDR5 RAM과 i9 CPU 속도가 LLM 추론을 빠르게 한다고 가정하는 경우 — 그렇지 않습니다. 추론 속도에서 유일하게 중요한 병목은 GPU VRAM 대역폭입니다.',
+            'Llama 4 Scout가 12GB에 맞다고 가정하는 경우. Scout는 활성 파라미터 17B / 총 109B의 MoE로 Q4에서 약 55GB가 필요합니다(24GB에서 1.78비트로만 실행 가능, ~초당 20토큰). RTX 3060 12GB에서는 밀집형 모델을 실행하십시오: Qwen3 14B (~9GB), Qwen3 8B, 또는 Gemma 4 E12B.',
+            '13B 모델만을 위해 16GB 카드를 구매하는 경우. RTX 3060 12GB는 이미 Qwen3 14B를 Q4로 실행합니다. gpt-oss:20b (16GB), 밀집형 20B+ 모델, 또는 더 많은 컨텍스트 여유 공간이 구체적으로 필요한 경우에만 16GB로 업그레이드하십시오.',
+          ],
+        },
+        'faqSection': {
+          title: '자주 묻는 질문',
+          faqs: [
+            { q: 'RTX 3060 12GB는 2026년에도 구매할 가치가 있습니까?', a: '예. 4년 이상 된 제품이지만 12GB VRAM은 여전히 유효합니다. Q4로 Qwen3 14B, Qwen3 8B, Gemma 4 E12B, Mistral Small을 원활하게 실행합니다. 모든 7B-8B 모델과 대부분의 밀집형 13B-14B 모델에 적합합니다.' },
+            { q: '로컬 LLM에 RTX 5060 Ti와 RTX 4060 Ti 중 어느 것을 구매해야 합니까?', a: 'RTX 5060 Ti를 권장합니다. 최신 세대(2026)는 10-15% 더 나은 성능을 제공합니다. 예산이 제한적인 경우 RTX 4060 Ti도 훌륭한 선택입니다. 기본형 4060/5060(8GB)과 4070(12GB)은 가성비가 낮으므로 피하십시오.' },
+            { q: 'AMD RX 7900 XT 또는 RX 7900 XTX를 대안으로 사용할 수 있습니까?', a: '예, 하지만 AMD의 드라이버 지원은 NVIDIA + CUDA보다 약합니다. HIP/ROCm 설정에는 더 많은 노력이 필요합니다. 초보자에게는 RTX가 더 안전합니다.' },
+            { q: '12GB VRAM은 13B 모델에 충분합니까?', a: 'Q4 양자화로는 간신히 가능합니다. Q5 또는 Q8은 메모리 부족 오류를 유발합니다. 13B 모델을 편안하게 실행하려면 16GB를 목표로 하십시오.' },
+            { q: 'RTX A4000 같은 중고 엔터프라이즈 GPU를 구매해야 합니까?', a: '가능하다면 예. 16GB VRAM, 전문가급 냉각 시스템, 중고 가격 $180-230. RTX 3060보다 약간 느리지만 VRAM 여유 공간이 가치 있습니다.' },
+            { q: '$250 GPU 구매 시 PSU 와트 수는 얼마나 필요합니까?', a: '650W, 80+ Gold 최소 사양. $250 GPU + CPU + 마더보드의 소비 전력은 400W를 넘지 않지만 전압 스파이크를 위한 여유 공간이 필요합니다.' },
+            { q: '$200 예산형 GPU로 Ollama를 실행할 수 있습니까?', a: '예. Ollama는 경량입니다. 4년 된 RTX 3060에 Ollama를 설치하면 Qwen3 14B를 초당 9-12토큰, Qwen3 8B를 초당 16-20토큰으로 실행할 수 있습니다 — 대화형 채팅과 코딩 지원에 완전히 실용적입니다.' },
+            { q: 'RTX 3060 12GB에서 Llama 4 Scout를 실행할 수 있습니까?', a: '일반적으로는 불가능합니다. Llama 4 Scout는 활성 파라미터 17B / 총 109B의 MoE로 Q4에서 약 55GB VRAM이 필요하며 — 12GB 카드의 용량을 훨씬 초과합니다. 극단적인 1.78비트 양자화로만 24GB에서 실행 가능합니다(~초당 20토큰). RTX 3060 12GB에서는 대신 밀집형 모델을 실행하십시오: `ollama pull qwen3:14b`(실행 가능한 최고 품질), Qwen3 8B, 또는 Gemma 4 E12B. Scout는 48GB 이상 시스템을 위한 장문 컨텍스트(1000만 토큰)/대형 멀티모달 모델입니다.' },
+          ],
+        },
+        'relatedReading': {
+          title: '관련 자료',
+          items: [
+            '[AMD Ryzen AI Max+ 미니 PC (2026)](/local-llms/best-amd-mini-pc-local-llm-2026) — 별도 GPU의 대안: iGPU + 50 TOPS NPU, $1,200–2,500.',
+            '[로컬 LLM에 필요한 VRAM 용량](/local-llms/how-much-vram-local-llm)',
+            '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
+            '[로컬 LLM용 중고 GPU](/local-llms/used-gpus-for-local-llms)',
+            '[로컬 LLM용 최고의 GPU](/local-llms/best-gpus-for-local-llms)',
+            '[VRAM 계산기](/local-llms/vram-calculator-local-llm)',
+            '[로컬 LLM: 노트북 vs 데스크탑](/local-llms/laptop-vs-desktop-local-llm) — GPU 데스크탑 vs MacBook 전체 플랫폼 비교.',
+            '[로컬 LLM을 위한 프롬프트 엔지니어링](/prompt-engineering/prompt-engineering-for-local-models) — 예산형 하드웨어에서 실행되는 모델을 위한 프롬프트 최적화.',
+            '[연쇄 사고 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — DeepSeek-R1 출력 품질을 크게 향상시킵니다.',
+            '[로컬 AI 서버로서의 Mac Mini M5](/local-llms/mac-mini-m5-local-ai-server) — GPU 빌드의 예산형 대안: $599 하드웨어 + 연간 $35 전기 요금으로 항상 켜진 AI.',
+            '[로컬 LLM을 위한 Apple Silicon M5](/local-llms/apple-silicon-m5-local-llm) — M5 Pro/Max 완전 가이드: 벤치마크, Mac 구성, 메모리 등급, 로컬 추론을 위한 최적 Mac 선택.',
+            '[로컬 LLM: Apple Silicon vs NVIDIA GPU](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — 전체 비용 및 성능 비교: Mac이 예산형 GPU를 능가하는 경우.',
+            '[2026년 Apple Silicon 최고의 모델](/local-llms/best-models-apple-silicon-2026) — 16GB–128GB 통합 메모리 등급별 모델 권장 사항.',
+            '[Melhores GPUs Econômicas para LLMs Locais (Português)](/pt/local-llms/best-budget-gpus-local-llm) — versão em português deste guia',
+            'For Japan-specific GPU pricing, Akihabara retailers, and used market options on Mercari and Yahoo Auctions, see our <a href="/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">best value GPU for local LLMs in Japan guide</a>.',
+          ],
+        },
+        'sources': {
+          title: '출처',
+          items: [
+            'Meta AI. (2025). "Llama 4 Model Card." — Scout MoE 아키텍처, VRAM 요구 사항',
+            'Qwen Team. (2026). "Qwen3 Technical Report." — Qwen3 8B 사양',
+            'TechPowerUp GPU 데이터베이스: RTX 3060 / RTX 4060 Ti / RTX 4070 Super 사양 및 소비 전력',
+            'NVIDIA CUDA 호환성 매트릭스: 추론 작업 부하를 위한 GPU 메모리 대역폭 및 이론적 처리량',
+            'Ollama 모델 요구 사항: Llama 4 Scout, Qwen3, Mistral Small 양자화 수준에 대한 VRAM 권장 사항',
+            '규정 준수 프레임워크에는 감사 가능한 워크플로우가 필요합니다. AI 프롬프트 품질 및 검토를 위한 거버넌스 표준을 수립하십시오: [프로덕션 환경에서의 프롬프트 거버넌스](https://www.promptquorum.com/prompt-engineering/prompt-governance-in-production)에서는 정책, 버전 관리 및 승인 프로세스를 다룹니다.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'NewsArticle',
+        'headline': 'RTX 3060 로컬 LLM 가이드 2026: 실행 가능한 모델 안내',
+        'description': 'RTX 3060 12GB 또는 6GB에서 어떤 로컬 LLM을 실행할 수 있습니까? 실제 VRAM 한계 및 성능 팁과 함께 2026년 코딩, 채팅, 추론에 최적인 모델을 확인하십시오.',
+        'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-06-01',
+        'inLanguage': 'ko',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': '예산형 GPU' },
+          { '@type': 'Thing', 'name': 'RTX 3060' },
+          { '@type': 'Thing', 'name': 'GPU VRAM' },
+          { '@type': 'Thing', 'name': '로컬 LLM 추론' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'RTX 3060 12GB는 2026년에도 구매할 가치가 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. 출시된 지 4년 이상 지났지만 12GB VRAM은 7B-13B 모델에서 여전히 뛰어납니다. Llama 3 8B와 Mistral Small을 원활하게 실행합니다. 중고로 $250 미만에 구할 수 있다면 최적입니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '로컬 LLM용으로 RTX 4060과 RTX 4060 Ti 중 어느 것을 구매해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4060 Ti. 베이스 RTX 4060 (8GB)과 RTX 4070 (12GB)은 LLM 작업에서 가성비가 낮습니다. Ti는 로컬 추론에서 RTX 40 시리즈 중 가장 합리적인 가격의 카드입니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '로컬 LLM용으로 AMD RX 6700 또는 6800 XT를 대신 사용할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예, 가능합니다. 하지만 AMD의 ONNX Runtime 드라이버 지원은 NVIDIA CUDA보다 약합니다. 설정 시 더 많은 번거로움이 예상됩니다. 예산 빌드에서는 NVIDIA가 더 안전합니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '12GB VRAM은 13B 모델에 충분합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4 양자화에서 겨우 수용 가능합니다. Q5 또는 Q8에서는 OOM 오류가 발생합니다. 13B를 편안하게 실행하려면 16GB VRAM을 목표로 하십시오.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX A4000 같은 중고 엔터프라이즈 GPU를 구매해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예, 구할 수 있다면 적극 권장합니다. 16GB VRAM, 전문가급 냉각 시스템, 보통 중고로 $180-230에 구매 가능합니다. 벤치마크에서 RTX 3060보다 약간 느리지만 VRAM 여유 용량이 그 가치를 합니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '$250 GPU와 함께 구매할 PSU 용량은 얼마입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '최소 650W, 80+ Gold 인증. $250 GPU + CPU + 마더보드의 소비 전력은 400W를 초과하지 않지만, 전력 급등에 대한 여유를 확보해야 안정성이 보장됩니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '$200 예산 GPU로 Ollama를 실행할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. Ollama는 가볍습니다. 4년 된 RTX 3060에서 Ollama를 사용하면 Mistral Small을 10-15 토큰/초로 실행할 수 있으며, 개인 추론에 충분히 활용 가능합니다.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 3060 12GB에서 Llama 4 Scout를 실행할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '일반적으로 불가능합니다. Llama 4 Scout는 17B 활성 / 109B 전체 MoE로 Q4에서 ~55GB VRAM이 필요합니다 — 12GB 카드로는 턱없이 부족합니다. 24GB에서도 1.78비트 극단적 양자화 (~20 토큰/초)로만 가까스로 실행됩니다. RTX 3060 12GB에서는 대신 고밀도 모델을 실행하십시오: qwen3:14b (수용 가능한 최고 품질), Qwen3 8B, 또는 Gemma 4 E12B. Scout는 48GB 이상의 환경을 위한 긴 컨텍스트 (10M 토큰) / 대형 멀티모달 선택입니다.'
+            }
+          },
+        ]
+      },
+    },
   };
