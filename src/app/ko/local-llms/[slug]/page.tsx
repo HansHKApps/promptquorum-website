@@ -40,7 +40,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
   const key = LLM_SLUG_TO_KEY[slug]
-  const lang = 'en'
+  const lang = 'ko'
 
   if (!key) return notFound()
 
@@ -72,13 +72,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = llmContent[key][lang] ?? llmContent[key]['en']
   if (!article) return notFound()
 
-  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt'] as const
+  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ko'] as const
   const availableLangsForMeta = VALID_LANGS_META.filter(l => {
     const c = llmContent[key]?.[l]
     return Boolean(c) && Object.keys(c?.sections ?? {}).length > 0
   })
 
-  const canonicalUrl = `https://www.promptquorum.com/ar/local-llms/${slug}`
+  const canonicalUrl = `https://www.promptquorum.com/ko/local-llms/${slug}`
   const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${lang}`
   const hasTranslation = Boolean(article) && Object.keys(article.sections ?? {}).length > 0
 
@@ -125,16 +125,16 @@ export default async function EsLocalLLMsArticlePage({ params }: PageProps) {
     )
   }
 
-  const article = llmContent[key]['en'] ?? llmContent[key]['en']
+  const article = llmContent[key]['ko'] ?? llmContent[key]['en']
   if (!article) notFound()
 
-  const canonicalUrl = `https://www.promptquorum.com/ar/local-llms/${slug}`
+  const canonicalUrl = `https://www.promptquorum.com/ko/local-llms/${slug}`
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: 'LLMs Locales', item: 'https://www.promptquorum.com/pt/local-llms' },
+      { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com' },
+      { '@type': 'ListItem', position: 2, name: '로컬 LLM', item: 'https://www.promptquorum.com/ko/local-llms' },
       { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrl },
     ],
   }
@@ -144,7 +144,7 @@ export default async function EsLocalLLMsArticlePage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <LocalLLMsPostClient
         slug={slug}
-        initialLang="en"
+        initialLang="ko"
       />
     </>
   )

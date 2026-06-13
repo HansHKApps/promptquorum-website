@@ -5,9 +5,9 @@ import {
 } from '@/lib/blog/page-helpers'
 
 export async function generateMetadata(): Promise<Metadata> {
-  return buildHubMetadata('en')
+  return buildHubMetadata('ko')
 }
 
 export default async function EsBlogPage() {
-  return buildHubPageElement('en')
+  return buildHubPageElement('ko')
 }

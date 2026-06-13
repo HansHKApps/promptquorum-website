@@ -9,12 +9,12 @@ function detectLangFromHeader(acceptLanguage: string, supported: string[]): stri
     .find(l => supported.includes(l)) ?? null
 }
 
-const PATH_LOCALE_RE = new RegExp(`^/(de|fr|ja|zh|es|pt|ar)(/|$)`)
+const PATH_LOCALE_RE = new RegExp(`^/(de|fr|ja|zh|es|pt|ar|ko)(/|$)`)
 
 export function middleware(request: NextRequest) {
   const url = request.nextUrl
 
-  const VALID_NON_EN_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+  const VALID_NON_EN_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
   const langParam = url.searchParams.get('lang')
   const isApiRoute = url.pathname.startsWith('/api/')
   const isCronRoute = url.pathname.startsWith('/cron/')

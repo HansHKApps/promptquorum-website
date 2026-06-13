@@ -12,8 +12,8 @@ const COMPLEXITY_COLOR: Record<string, string> = {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  const lang = 'en'
-  const t = translations['en' as keyof typeof translations]
+  const lang = 'ko'
+  const t = translations['ko' as keyof typeof translations]
 
   return {
     title: t.frameworksMetaTitle,

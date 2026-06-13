@@ -5,8 +5,8 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const lang = 'en'
-  const t = translations['en' as keyof typeof translations]
+  const lang = 'ko'
+  const t = translations['ko' as keyof typeof translations]
 
   return {
     title: t.howItWorksMetaTitle,
@@ -50,7 +50,7 @@ export default async function KoHowItWorksPage() {
 
   return (
     <>
-      <HowItWorksPageClient initialLang="en" />
+      <HowItWorksPageClient initialLang="ko" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

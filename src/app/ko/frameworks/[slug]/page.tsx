@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const fw = getFramework(slug)
   if (!fw) return {}
 
-  const lang = 'en'
+  const lang = 'ko'
   const fwTitle = (fw as any).seoTitle ?? `${fw.name} Prompt Framework — Fields, Examples & When To Use It | PromptQuorum`
   const fwDesc = (fw as any).metaDescription ?? `${fw.expansion}. ${fw.tagline} See all fields, a real example, and when to use ${fw.name} vs other prompt frameworks.`
   return {
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: generateAlternates(`/frameworks/${fw.slug}`, lang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
       type: 'article',
-      url: `https://www.promptquorum.com/ar/frameworks/${fw.slug}`,
+      url: `https://www.promptquorum.com/ko/frameworks/${fw.slug}`,
       siteName: 'PromptQuorum',
       title: `${fw.name} Prompt Framework — Complete Guide`,
       description: `${fw.tagline}`,
@@ -63,8 +63,8 @@ export default async function EsFrameworkPage({ params }: { params: Promise<{ sl
               '@type': 'Article',
               'headline': `${fw.name} Prompt Framework — Fields, Examples & When To Use It`,
               'description': fw.tagline,
-              'url': `https://www.promptquorum.com/ar/frameworks/${fw.slug}`,
-              'inLanguage': 'ja',
+              'url': `https://www.promptquorum.com/ko/frameworks/${fw.slug}`,
+              'inLanguage': 'ko',
               'author': {
                 '@type': 'Person',
                 'name': 'Hans Kuepper',
@@ -91,9 +91,9 @@ export default async function EsFrameworkPage({ params }: { params: Promise<{ sl
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://www.promptquorum.com/es' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'Frameworks', 'item': 'https://www.promptquorum.com/ar/frameworks' },
-                { '@type': 'ListItem', 'position': 3, 'name': fw.name, 'item': `https://www.promptquorum.com/ar/frameworks/${fw.slug}` },
+                { '@type': 'ListItem', 'position': 1, 'name': '홈', 'item': 'https://www.promptquorum.com/ko' },
+                { '@type': 'ListItem', 'position': 2, 'name': '프레임워크', 'item': 'https://www.promptquorum.com/ko/frameworks' },
+                { '@type': 'ListItem', 'position': 3, 'name': fw.name, 'item': `https://www.promptquorum.com/ko/frameworks/${fw.slug}` },
               ],
             },
           ]),
@@ -105,9 +105,9 @@ export default async function EsFrameworkPage({ params }: { params: Promise<{ sl
 
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-xs text-text-muted mb-8">
-            <Link href="/es" className="hover:text-primary transition-colors">Inicio</Link>
+            <Link href="/ko" className="hover:text-primary transition-colors">홈</Link>
             <span>/</span>
-            <Link href="/ar/frameworks" className="hover:text-primary transition-colors">Frameworks</Link>
+            <Link href="/ko/frameworks" className="hover:text-primary transition-colors">Frameworks</Link>
             <span>/</span>
             <span className="text-text-primary">{fw.name}</span>
           </nav>
@@ -223,7 +223,7 @@ export default async function EsFrameworkPage({ params }: { params: Promise<{ sl
                 {related.map(r => (
                   <Link
                     key={r.slug}
-                    href={`/ar/frameworks/${r.slug}`}
+                    href={`/ko/frameworks/${r.slug}`}
                     className="bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/50 transition-colors"
                   >
                     <div className="font-bold text-primary mb-1">{r.name}</div>
@@ -236,8 +236,8 @@ export default async function EsFrameworkPage({ params }: { params: Promise<{ sl
 
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
-            <Link href="/es" className="text-primary hover:text-primary/80 font-medium text-sm">← Inicio</Link>
-            <Link href="/ar/frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">All Frameworks</Link>
+            <Link href="/ko" className="text-primary hover:text-primary/80 font-medium text-sm">← 홈</Link>
+            <Link href="/ko/frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">All Frameworks</Link>
           </div>
 
         </div>

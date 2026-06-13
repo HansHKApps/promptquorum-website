@@ -15,10 +15,10 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
-  return buildArticleMetadata(slug, 'en')
+  return buildArticleMetadata(slug, 'ko')
 }
 
 export default async function EsBlogArticlePage({ params }: PageProps) {
   const { slug } = await params
-  return buildArticlePageElement(slug, 'en')
+  return buildArticlePageElement(slug, 'ko')
 }

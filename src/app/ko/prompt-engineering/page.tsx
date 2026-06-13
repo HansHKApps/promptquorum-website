@@ -7,8 +7,8 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const lang = 'en'
-  const t = translations['en' as keyof typeof translations]
+  const lang = 'ko'
+  const t = translations['ko' as keyof typeof translations]
 
   return {
     title: t.promptEngineeringHubTitle,
@@ -53,5 +53,5 @@ export default async function EsPromptEngineeringPage() {
     ])
   )
 
-  return <PromptEngineeringHub initialLang="en" titlesMap={titlesMap} articleLevels={articleLevels} datesMap={datesMap} />
+  return <PromptEngineeringHub initialLang="ko" titlesMap={titlesMap} articleLevels={articleLevels} datesMap={datesMap} />
 }

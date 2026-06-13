@@ -5,8 +5,8 @@ import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import Link from 'next/link'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const lang = 'en'
-  const t = translations['en' as keyof typeof translations]
+  const lang = 'ko'
+  const t = translations['ko' as keyof typeof translations]
 
   return {
     title: t.aboutMetaTitle,

@@ -10,10 +10,10 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
-  return buildArticleMetadata(slug, 'en')
+  return buildArticleMetadata(slug, 'ko')
 }
 
 export default async function PromptBitesArticleAr({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  return buildArticlePageElement(slug, 'en')
+  return buildArticlePageElement(slug, 'ko')
 }

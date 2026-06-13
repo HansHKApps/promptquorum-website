@@ -6,8 +6,8 @@ import { LandingPageServer } from '@/components/LandingPageServer'
 import { ConfirmedToast } from '@/components/ConfirmedToast'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const lang = 'en'
-  const t = translations['en' as keyof typeof translations]
+  const lang = 'ko'
+  const t = translations['ko' as keyof typeof translations]
 
   return {
     title: t.homeMetaTitle,
@@ -32,7 +32,7 @@ export default async function KoHome() {
   return (
     <>
       <ConfirmedToast />
-      <LandingPageServer initialLang="en" />
+      <LandingPageServer initialLang="ko" />
 
       {/* FAQPage Schema — 8 أسئلة رئيسية للمقتطفات المنسقة */}
       <script

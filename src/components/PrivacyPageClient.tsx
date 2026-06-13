@@ -31,7 +31,7 @@ interface PrivacyPageClientProps {
 // internally consistent. Other languages still carry the GA4 prose, so their
 // GA4 block stays intact until /geo-translation migrates them too — then add
 // the language code here.
-const COOKIELESS_MIGRATED_LANGS: Language[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+const COOKIELESS_MIGRATED_LANGS: Language[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
 
 export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
   const lang = useLang(initialLang) as Language
@@ -66,7 +66,7 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
         </div>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="privacy" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es"]} initialLang={initialLang} />
+        <LangLinksBar cluster="privacy" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es", "pt", "ar", "ko"]} initialLang={initialLang} />
 
         {/* GDPR notice banner */}
         <div className="bg-primary/5 border border-primary/20 rounded-lg px-5 py-4 mb-10 text-sm text-text-secondary leading-relaxed">

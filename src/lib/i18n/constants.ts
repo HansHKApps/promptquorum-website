@@ -11,14 +11,14 @@
  * - Header navigation links (to generate correct href)
  */
 
-export const PATH_PREFIX_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const;
+export const PATH_PREFIX_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const;
 export type PathPrefixLang = typeof PATH_PREFIX_LANGS[number];
 
 /**
  * ALL_LANGS: All supported languages including English.
  * Used for iterating over translations, validation, and type safety.
  */
-export const ALL_LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const;
+export const ALL_LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const;
 export type Lang = typeof ALL_LANGS[number];
 
 /**
@@ -30,7 +30,7 @@ export type Lang = typeof ALL_LANGS[number];
  * BR vocabulary/spelling, LGPD-relevant market. Any code not listed here is
  * emitted unchanged.
  */
-export const OUTPUT_LOCALE: Record<string, string> = { pt: 'pt-BR' };
+export const OUTPUT_LOCALE: Record<string, string> = { pt: 'pt-BR', ko: 'ko' };
 
 /** Convert an internal language code to its outward-facing locale (e.g. pt → pt-BR). */
 export function toOutputLocale(lang: string): string {
