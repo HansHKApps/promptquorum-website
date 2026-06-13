@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = peContent[key][lang] ?? peContent[key]['en']
   if (!article) return notFound()
 
-  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const
+  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const
   const availableLangsForMeta = VALID_LANGS_META.filter(l => {
     const c = peContent[key]?.[l]
     return Boolean(c) && Object.keys(c?.sections ?? {}).length > 0

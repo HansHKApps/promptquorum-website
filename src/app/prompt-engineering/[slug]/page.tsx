@@ -144,7 +144,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const twDesc = (article as PEArticle & { twitterDescription?: string }).twitterDescription ?? ogDesc
 
   // Compute available languages for this article (only include langs with actual translations)
-  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const
+  const VALID_LANGS_META = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const
   const availableLangsForMeta = VALID_LANGS_META.filter(lang => {
     const c = peContent[key]?.[lang]
     return Boolean(c) && Object.keys(c?.sections ?? {}).length > 0
