@@ -2540,18 +2540,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: '좋은 프롬프트 엔지니어링 IDE의 조건',
-        content: '**좋은 프롬프트 IDE는 아이디어와 실행 사이의 마찰을 최소화합니다.** 몇 초 만에 모델을 전환하고, 결과를 즉시 확인하고, 토큰 수를 파악하고, 프롬프트 히스토리를 저장하고, 도구를 벗어나지 않고 코드로 내보낼 수 있어야 합니다.
-
-평가할 핵심 기능:
-
-- **모델 전환:** 하나의 도구에서 GPT-5.5, Claude, Gemini로 동일한 프롬프트를 테스트할 수 있습니까?
-- **플레이그라운드 모드:** 코드를 작성하지 않고 프롬프트를 실행할 수 있습니까?
-- **토큰 카운터:** 확인 전에 소비된 토큰을 표시합니까? (토큰 비용이 쌓입니다 — [비용 기준 프롬프트 최적화](/ko/prompt-engineering/optimize-prompts-for-cost)를 참고하십시오.)
-- **프롬프트 히스토리:** 수동 저장 파일 없이 이전 버전으로 돌아갈 수 있습니까?
-- **코드 내보내기:** 작동하는 프롬프트를 Python/JS/API 형식으로 변환할 수 있습니까?
-- **비용 가시성:** 탐색 중에 요청당 비용을 볼 수 있습니까?
-
-2026년 4월 기준, 6가지 기준을 모두 충족하는 단일 IDE는 없습니다. 개발자들은 워크플로우에 따라 선택합니다: 개발 속도에는 Cursor, API 탐색에는 Playground, 특정 모델에 집중할 때는 Console, 오프라인 작업에는 LM Studio.',
+        content: '**좋은 프롬프트 IDE는 아이디어와 실행 사이의 마찰을 최소화합니다.** 몇 초 만에 모델을 전환하고, 결과를 즉시 확인하고, 토큰 수를 파악하고, 프롬프트 히스토리를 저장하고, 도구를 벗어나지 않고 코드로 내보낼 수 있어야 합니다.\n\n평가할 핵심 기능:\n\n- **모델 전환:** 하나의 도구에서 GPT-5.5, Claude, Gemini로 동일한 프롬프트를 테스트할 수 있습니까?\n- **플레이그라운드 모드:** 코드를 작성하지 않고 프롬프트를 실행할 수 있습니까?\n- **토큰 카운터:** 확인 전에 소비된 토큰을 표시합니까? (토큰 비용이 쌓입니다 — [비용 기준 프롬프트 최적화](/ko/prompt-engineering/optimize-prompts-for-cost)를 참고하십시오.)\n- **프롬프트 히스토리:** 수동 저장 파일 없이 이전 버전으로 돌아갈 수 있습니까?\n- **코드 내보내기:** 작동하는 프롬프트를 Python/JS/API 형식으로 변환할 수 있습니까?\n- **비용 가시성:** 탐색 중에 요청당 비용을 볼 수 있습니까?\n\n2026년 4월 기준, 6가지 기준을 모두 충족하는 단일 IDE는 없습니다. 개발자들은 워크플로우에 따라 선택합니다: 개발 속도에는 Cursor, API 탐색에는 Playground, 특정 모델에 집중할 때는 Console, 오프라인 작업에는 LM Studio.',
         snippets: [
           { type: 'in-one-sentence', text: '프롬프트 엔지니어링 IDE는 별도의 터미널이나 API 클라이언트로 전환하지 않고도 프롬프트를 작성, 테스트, 반복할 수 있는 도구입니다.' },
         ],
@@ -2654,16 +2643,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       howToChoose: {
         id: 'how-to-choose',
         title: '프롬프트 엔지니어링 IDE 선택 방법',
-        content: '**워크플로우와 제약 조건에서 시작하십시오.** 프로덕션 코드를 작성합니까(Cursor)? API를 탐색합니까(OpenAI Playground)? Claude를 특화적으로 테스트합니까(Console)? 오프라인 개발을 원합니까(LM Studio)? 각 도구는 서로 다른 사용 사례에 최적화되어 있습니다.
-
-**프로필별:**
-- **앱 + 프롬프트 개발자:** Cursor 또는 VS Code + Continue(코드와 통합)
-- **ML 연구원 / 학자:** Google AI Studio(멀티모달, 무료) 또는 LM Studio(로컬, 재현 가능). [프롬프트 품질 평가 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality)과 결합하여 출력 품질을 측정하십시오.
-- **비기술적 프롬프트 작성자:** OpenAI Playground 또는 Claude Console(설정 불필요)
-- **프라이버시 중시 / 오프라인 필요:** LM Studio(로컬만, 외부 API 없음)
-- **대규모 비용 최적화:** LM Studio(초기 하드웨어 후) 또는 VS Code + 로컬 Ollama
-
-클라우드 모델 대신 로컬 LLM에 대해 작동하는 코딩 하네스를 위해 [Continue.dev vs Cline vs Aider](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local)를 참조하십시오 — 에디터를 변경하지 않고 클라우드 모델을 오프라인으로 교체하는 세 가지 오픈소스 옵션. 스택을 결정하기 전에 프롬프트가 공급업체 간에 일반화되는지 확인하려면 [PromptQuorum](/features)이 25개 이상의 모델에 동시에 전송합니다.',
+        content: '**워크플로우와 제약 조건에서 시작하십시오.** 프로덕션 코드를 작성합니까(Cursor)? API를 탐색합니까(OpenAI Playground)? Claude를 특화적으로 테스트합니까(Console)? 오프라인 개발을 원합니까(LM Studio)? 각 도구는 서로 다른 사용 사례에 최적화되어 있습니다.\n\n**프로필별:**\n- **앱 + 프롬프트 개발자:** Cursor 또는 VS Code + Continue(코드와 통합)\n- **ML 연구원 / 학자:** Google AI Studio(멀티모달, 무료) 또는 LM Studio(로컬, 재현 가능). [프롬프트 품질 평가 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality)과 결합하여 출력 품질을 측정하십시오.\n- **비기술적 프롬프트 작성자:** OpenAI Playground 또는 Claude Console(설정 불필요)\n- **프라이버시 중시 / 오프라인 필요:** LM Studio(로컬만, 외부 API 없음)\n- **대규모 비용 최적화:** LM Studio(초기 하드웨어 후) 또는 VS Code + 로컬 Ollama\n\n클라우드 모델 대신 로컬 LLM에 대해 작동하는 코딩 하네스를 위해 [Continue.dev vs Cline vs Aider](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local)를 참조하십시오 — 에디터를 변경하지 않고 클라우드 모델을 오프라인으로 교체하는 세 가지 오픈소스 옵션. 스택을 결정하기 전에 프롬프트가 공급업체 간에 일반화되는지 확인하려면 [PromptQuorum](/features)이 25개 이상의 모델에 동시에 전송합니다.',
         snippets: [
           { type: 'in-plain-terms', text: '워크숍을 선택하는 것처럼 생각하십시오: VS Code + Continue는 완전히 갖춰진 작업실(도구 지참), OpenAI Playground는 시간제 임대 작업대(시간당 요금), LM Studio는 직접 소유한 차고(초기 비용, 이후 무료)입니다.' },
         ],
@@ -2689,13 +2669,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       regionalContext: {
         id: 'regional-context',
         title: '프롬프트 엔지니어링 IDE의 지역별 가용성',
-        content: '**IDE 선택은 어디서 작업하느냐와 어떤 데이터 프라이버시 요건이 적용되느냐에 달려 있습니다.** 클라우드 플레이그라운드(Cursor, OpenAI Playground, Claude Console, Google AI Studio)는 기본적으로 미국 서버로 프롬프트를 전송합니다. LM Studio와 VS Code + 로컬 Ollama는 모든 데이터를 기기 내에 유지합니다.
-
-**한국 / 개인정보보호법:** 클라우드 플레이그라운드는 개인정보나 연구 참여자 데이터에 사용하기 전에 각 공급업체의 데이터 처리 계약(DPA)을 검토해야 합니다. LM Studio와 VS Code + Ollama는 외부 전송 없이 개인정보보호법 하에 모든 데이터에 안전합니다.
-
-**EU / GDPR:** 한국과 동일한 클라우드 데이터 전송 고려사항이 적용됩니다. GDPR 요건을 가진 기업들은 내부 프롬프트 테스트를 위해 VS Code + 로컬 Ollama 또는 LM Studio를 채택하고 있습니다.
-
-**중국:** OpenAI Playground와 Claude Console은 중국 본토에서 차단됩니다. 로컬에서 다운로드된 Qwen 3 7B가 포함된 LM Studio가 오프라인 개발에 가장 많이 사용되는 대안입니다.',
+        content: '**IDE 선택은 어디서 작업하느냐와 어떤 데이터 프라이버시 요건이 적용되느냐에 달려 있습니다.** 클라우드 플레이그라운드(Cursor, OpenAI Playground, Claude Console, Google AI Studio)는 기본적으로 미국 서버로 프롬프트를 전송합니다. LM Studio와 VS Code + 로컬 Ollama는 모든 데이터를 기기 내에 유지합니다.\n\n**한국 / 개인정보보호법:** 클라우드 플레이그라운드는 개인정보나 연구 참여자 데이터에 사용하기 전에 각 공급업체의 데이터 처리 계약(DPA)을 검토해야 합니다. LM Studio와 VS Code + Ollama는 외부 전송 없이 개인정보보호법 하에 모든 데이터에 안전합니다.\n\n**EU / GDPR:** 한국과 동일한 클라우드 데이터 전송 고려사항이 적용됩니다. GDPR 요건을 가진 기업들은 내부 프롬프트 테스트를 위해 VS Code + 로컬 Ollama 또는 LM Studio를 채택하고 있습니다.\n\n**중국:** OpenAI Playground와 Claude Console은 중국 본토에서 차단됩니다. 로컬에서 다운로드된 Qwen 3 7B가 포함된 LM Studio가 오프라인 개발에 가장 많이 사용되는 대안입니다.',
       },
       relatedReading: {
         id: 'related-reading',

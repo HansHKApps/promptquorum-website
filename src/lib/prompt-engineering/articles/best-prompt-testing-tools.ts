@@ -1938,7 +1938,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
         '[Phoenix文档](https://docs.arize.com/phoenix) — 开源LLM可观测性；监控功能声明的基础'
       ]
     }
-  }
+  },
   ko: {
     theme: 'Tools & Platforms',
     title: '프롬프트 테스트 및 평가 도구 2026: Promptfoo vs Braintrust vs DeepEval',
@@ -1948,9 +1948,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
     ogDescription: '빠른 CI/CD 테스트 vs 느린 배치 평가 vs RAG 채점 vs 트레이싱 vs 모니터링. 5가지 도구, 5가지 역할. 비교 표 포함.',
     twitterTitle: '프롬프트 테스트 도구 2026: 5단계 파이프라인 비교',
     twitterDescription: '자체 평가는 점수를 10–20% 부풀립니다. GPT-5.5를 테스트하십니까? Claude로 채점하십시오. 전체 스택: Promptfoo → Braintrust → DeepEval → LangSmith → Phoenix.',
-    intro: '**프롬프트 테스트는 두 가지로 나뉩니다: 빠른 단위 테스트(Promptfoo) — 초 단위 — 와 느린 배치 평가(Braintrust) — 분 단위입니다.** Promptfoo는 CI/CD에서 실행되며 모든 커밋에서 회귀를 감지합니다.
-
-**Braintrust는 인간 심사자와 함께 오프라인으로 평가합니다.** DeepEval은 RAG 파이프라인을 위한 RAGAS 지표를 추가합니다. 이 가이드는 각 도구를 언제 사용하고 어떻게 함께 작동하는지 보여줍니다.',
+    intro: '**프롬프트 테스트는 두 가지로 나뉩니다: 빠른 단위 테스트(Promptfoo) — 초 단위 — 와 느린 배치 평가(Braintrust) — 분 단위입니다.** Promptfoo는 CI/CD에서 실행되며 모든 커밋에서 회귀를 감지합니다.\n\n**Braintrust는 인간 심사자와 함께 오프라인으로 평가합니다.** DeepEval은 RAG 파이프라인을 위한 RAGAS 지표를 추가합니다. 이 가이드는 각 도구를 언제 사용하고 어떻게 함께 작동하는지 보여줍니다.',
     publishDate: '2026-04-10',
     dateModified: '2026-04-10',
     lastFactChecked: '2026-04-28',
@@ -2077,9 +2075,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       },
       whyTestPrompts: {
         title: '왜 프롬프트를 테스트해야 합니까?',
-        content: '**이 가이드는 테스트 및 평가 도구에만 초점을 맞춥니다.** 프롬프트 엔지니어링 도구의 전체 개요는 [최고의 프롬프트 엔지니어링 도구 2026](/ko/prompt-engineering/best-prompt-engineering-tools-2026)을 참조하십시오. 팀 협업 기능은 [팀을 위한 최고의 프롬프트 최적화 도구](/ko/prompt-engineering/best-prompt-optimization-tools-for-teams)를 참조하십시오.
-
-**프롬프트 변경은 프로덕션을 중단시킵니다.** 단 하나의 재작성이 정확도를 5–10% 떨어뜨리거나 엣지 케이스를 놓치거나 톤을 바꿀 수 있습니다. 2026년 4월 기준, 대부분의 기업은 프롬프트를 전혀 테스트하지 않고 변경 사항을 임시로 전달합니다. 테스트는 사용자에게 도달하기 전에 회귀를 감지합니다. 두 가지 워크플로가 있습니다: [CI/CD](/ko/prompt-engineering/ci-cd-for-prompts)에서 빠른 단위 테스트 (초 단위, 자동화) 및 오프라인 느린 배치 평가 (분~시간, 인간 검토). 테스트 없이는 안전하게 반복할 수 없습니다.',
+        content: '**이 가이드는 테스트 및 평가 도구에만 초점을 맞춥니다.** 프롬프트 엔지니어링 도구의 전체 개요는 [최고의 프롬프트 엔지니어링 도구 2026](/ko/prompt-engineering/best-prompt-engineering-tools-2026)을 참조하십시오. 팀 협업 기능은 [팀을 위한 최고의 프롬프트 최적화 도구](/ko/prompt-engineering/best-prompt-optimization-tools-for-teams)를 참조하십시오.\n\n**프롬프트 변경은 프로덕션을 중단시킵니다.** 단 하나의 재작성이 정확도를 5–10% 떨어뜨리거나 엣지 케이스를 놓치거나 톤을 바꿀 수 있습니다. 2026년 4월 기준, 대부분의 기업은 프롬프트를 전혀 테스트하지 않고 변경 사항을 임시로 전달합니다. 테스트는 사용자에게 도달하기 전에 회귀를 감지합니다. 두 가지 워크플로가 있습니다: [CI/CD](/ko/prompt-engineering/ci-cd-for-prompts)에서 빠른 단위 테스트 (초 단위, 자동화) 및 오프라인 느린 배치 평가 (분~시간, 인간 검토). 테스트 없이는 안전하게 반복할 수 없습니다.',
         snippetBlocks: [
           { type: 'one-sentence', text: '프롬프트 테스트는 LLM 출력이 배포 전에 품질 임계값을 충족하는지 자동으로 검증합니다.' },
           { type: 'plain-terms', text: '프롬프트에 대한 단위 테스트처럼 생각하십시오: "올바름"이 어떤 모습인지 정의한 다음 모든 커밋을 해당 기준으로 실행합니다.' }
