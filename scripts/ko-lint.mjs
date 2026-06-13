@@ -38,6 +38,8 @@ function cleanedWordCount(str) {
   if (/\bet al\b|\barXiv:\d+|\(\d{4}\)/.test(str)) return 0 // academic citation
   if (/^\.?\.?\//.test(str)) return 0               // shell command / relative path
   if (/(^|\s)--?[a-z]/.test(str) && /[/.]/.test(str)) return 0 // CLI invocation with flags
+  if (/ -- | — /.test(str) && /[a-z0-9]+\.[a-z]{2,}(\/|$)/.test(str.split(/ -- | — /)[1] ?? '')) return 0 // source citation: "Title -- domain/path"
+  if (/^POST |^GET |^PUT |^DELETE /.test(str)) return 0         // HTTP method + URL
 
   const cleaned = str
     // strip known untranslated brand/model names
