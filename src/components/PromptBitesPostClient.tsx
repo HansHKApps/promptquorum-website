@@ -30,6 +30,7 @@ const BREADCRUMB_LABELS: Partial<Record<Language, Record<string, string>>> = {
   es: { home: 'Inicio', hub: 'Prompts en breve' },
   pt: { home: 'Início', hub: 'Prompts em resumo' },
   ar: { home: 'الرئيسية', hub: 'لقطات سريعة' },
+  ko: { home: '홈', hub: '프롬프트 요점' },
 }
 
 const BACK_LABEL: Partial<Record<Language, string>> = {
@@ -41,6 +42,7 @@ const BACK_LABEL: Partial<Record<Language, string>> = {
   es: '← Volver a Prompts en breve',
   pt: '← Voltar para Prompts em resumo',
   ar: '← العودة إلى لقطات سريعة',
+  ko: '← 프롬프트 요점으로 돌아가기',
 }
 
 const QUICK_ANSWER_LABEL: Partial<Record<Language, string>> = {
@@ -52,6 +54,7 @@ const QUICK_ANSWER_LABEL: Partial<Record<Language, string>> = {
   es: 'Respuesta rápida',
   pt: 'Resposta rápida', // VERIFY
   ar: 'إجابة سريعة',
+  ko: '빠른 답변',
 }
 
 const UPDATED_LABEL: Partial<Record<Language, string>> = {
@@ -63,6 +66,7 @@ const UPDATED_LABEL: Partial<Record<Language, string>> = {
   es: 'Actualizado:',
   pt: 'Atualizado:', // VERIFY
   ar: 'تحديث:',
+  ko: '업데이트:',
 }
 
 const KEY_TAKEAWAYS_LABEL: Partial<Record<Language, string>> = {
@@ -74,6 +78,7 @@ const KEY_TAKEAWAYS_LABEL: Partial<Record<Language, string>> = {
   es: 'Puntos clave',
   pt: 'Pontos principais', // VERIFY
   ar: 'النقاط الرئيسية',
+  ko: '핵심 요점',
 }
 
 const GO_DEEPER_HEADING: Partial<Record<Language, string>> = {
@@ -85,6 +90,7 @@ const GO_DEEPER_HEADING: Partial<Record<Language, string>> = {
   es: '¿Quieres el desglose completo?',
   pt: 'Quer a análise completa?', // VERIFY
   ar: 'هل تريد الشرح الكامل؟',
+  ko: '전체 설명이 필요하십니까?',
 }
 
 const READ_FULL_GUIDE: Partial<Record<Language, string>> = {
@@ -96,6 +102,7 @@ const READ_FULL_GUIDE: Partial<Record<Language, string>> = {
   es: 'Leer la guía completa →',
   pt: 'Ler o guia completo →', // VERIFY
   ar: 'اقرأ الدليل الكامل →',
+  ko: '전체 가이드 읽기 →',
 }
 
 const RELATED_BITES_LABEL: Partial<Record<Language, string>> = {
@@ -107,12 +114,13 @@ const RELATED_BITES_LABEL: Partial<Record<Language, string>> = {
   es: 'Prompt Bites relacionados',
   pt: 'Prompt Bites relacionados', // VERIFY
   ar: 'لقطات سريعة ذات صلة',
+  ko: '관련 프롬프트 요점',
 }
 
 const EDUCATIONAL_LEVEL: Record<string, Partial<Record<Language, string>>> = {
-  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante',     ar: 'مبتدئ' }, // VERIFY
-  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio',    pt: 'Intermediário', ar: 'متوسط' }, // VERIFY
-  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级', es: 'Avanzado',      pt: 'Avançado',      ar: 'متقدم' }, // VERIFY
+  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante',     ar: 'مبتدئ',  ko: '초보자' }, // VERIFY
+  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio',    pt: 'Intermediário', ar: 'متوسط',  ko: '기초 이해' }, // VERIFY
+  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级', es: 'Avanzado',      pt: 'Avançado',      ar: 'متقدم',  ko: '고급' }, // VERIFY
 }
 
 function GoDeeper({ parentArticle, siblingBites, lang }: {

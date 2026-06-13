@@ -15,14 +15,14 @@ import { POWER_LLM_BRIEFS, type ArticleBrief } from './briefs'
 import { isPowerLLMArticlePublished, isPowerLLMHubPublished } from './published'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 
-const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد' }
-const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث' }
+const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد', ko: '새글' }
+const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث', ko: '업데이트' }
 import { getPowerLLMGeoEntities } from '@/lib/geo-schema'
 import { toOutputLocale } from '@/lib/i18n/constants'
 
 const BASE = 'https://www.promptquorum.com'
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 
 const HOME_LABEL: Partial<Record<Lang, string>> = {
   en: 'Home',
@@ -33,6 +33,7 @@ const HOME_LABEL: Partial<Record<Lang, string>> = {
   es: 'Inicio',
   pt: 'Início',
   ar: 'الرئيسية',
+  ko: '홈',
 }
 
 const SLUG_ACRONYMS: Record<string, string> = {
@@ -1473,7 +1474,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
           {/* Recently Published — auto-surfaced articles with publishDate within 15 days */}
           {(() => {
             const RECENT_HEADING: Record<string, string> = {
-              en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新増', es: 'Nuevo Este Mes', pt: 'Novo este mês', ar: 'جديد هذا الشهر',
+              en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新増', es: 'Nuevo Este Mes', pt: 'Novo este mês', ar: 'جديد هذا الشهر', ko: '이번 달 신규',
             }
             const RECENT_SUB: Record<string, string> = {
               en: 'Just published — disappears from this spot after 14 days',
@@ -1484,6 +1485,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
               es: 'Recién publicado — desaparece de este lugar después de 14 días',
               pt: 'Recém publicado — desaparece deste local após 14 dias',
               ar: 'نُشر للتو — يختفي من هنا بعد 14 يومًا',
+              ko: '방금 게시됨 — 14일 후 이 위치에서 사라집니다',
             }
             const recentSlugs = Object.entries(powerLLMContent)
               .filter(([slug, content]) => isNewArticle(content?.['en']?.publishDate) && isPowerLLMArticlePublished(slug, 'en'))

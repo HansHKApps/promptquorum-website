@@ -106,6 +106,7 @@ export const AFFILIATE_DISCLOSURE: Record<string, string> = {
   es: 'Esta página contiene enlaces de referencia a productos de terceros. PromptQuorum no participa en ningún programa de afiliados — son enlaces simples que no generan comisión. Hacer clic en los enlaces y los pasos siguientes son de su entera responsabilidad. Estos enlaces no representan ningún respaldo ni verificación por parte de PromptQuorum.',
   pt: 'Esta página contém links de referência para produtos de terceiros. O PromptQuorum não está inscrito em nenhum programa de afiliados — são links simples que não geram comissão. Clicar nos links e os próximos passos são de sua inteira responsabilidade. Estes links não representam qualquer endosso ou verificação por parte do PromptQuorum.',
   ar: 'تحتوي هذه الصفحة على روابط مرجعية لمنتجات طرف ثالث. لا يشارك PromptQuorum في أي برنامج تابع — هذه روابط عادية لا تدر أي عمولة. النقر على الروابط والخطوات التالية تقع على عاتقك بالكامل. لا تمثل هذه الروابط أي تأييد أو تحقق من قِبَل PromptQuorum.',
+  ko: '이 페이지에는 타사 제품에 대한 참조 링크가 포함되어 있습니다. PromptQuorum은 어떤 제휴 프로그램에도 등록되어 있지 않습니다 — 이는 수수료가 발생하지 않는 일반 링크입니다. 링크 클릭 및 이후 단계는 전적으로 귀하의 책임입니다. 이 링크는 PromptQuorum의 어떠한 보증이나 검증을 나타내지 않습니다.',
 }
 
 // Commission wording — use only once real affiliate programs go live.
@@ -118,4 +119,5 @@ export const AFFILIATE_DISCLOSURE_COMMISSION: Record<string, string> = {
   es: 'Esta página contiene enlaces a productos. Podemos recibir una comisión si realiza una compra a través de estos enlaces, sin coste adicional para usted.',
   pt: 'Esta página contém links de produtos. Podemos receber uma comissão se você comprar por meio desses links, sem custo adicional para você.',
   ar: 'تحتوي هذه الصفحة على روابط منتجات. قد نحصل على عمولة إذا أجريت عملية شراء عبر هذه الروابط، دون أي تكلفة إضافية عليك.',
+  ko: '이 페이지에는 제품 링크가 포함되어 있습니다. 이 링크를 통해 구매하시면 추가 비용 없이 수수료를 받을 수 있습니다.',
 }

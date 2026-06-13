@@ -10,8 +10,8 @@ import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 import { LazySection } from './hub/LazySection'
 import type { LLMHubData } from '@/lib/local-llms/hub-data'
 
-const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد' }
-const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث' }
+const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد', ko: '새글' }
+const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث', ko: '업데이트' }
 
 function navHref(path: string, lang: string) {
   if (lang === 'en') return path
@@ -1584,7 +1584,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
         {/* Recently Published — auto-surfaced articles with publishDate within 15 days */}
         {(() => {
           const RECENT_HEADING: Record<string, string> = {
-            en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新增', es: 'Nuevo este mes', pt: 'Novo este mês', ar: 'جديد هذا الشهر',
+            en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新增', es: 'Nuevo este mes', pt: 'Novo este mês', ar: 'جديد هذا الشهر', ko: '이번 달 신규',
           }
           const RECENT_SUB: Record<string, string> = {
             en: 'Just published — disappears from this spot after 14 days',
@@ -1595,6 +1595,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
             es: 'Recién publicado — desaparece de este lugar después de 14 días',
             pt: 'Recém publicado — desaparece deste local após 14 dias',
             ar: 'نُشر للتو — يختفي من هنا بعد 14 يومًا',
+            ko: '방금 게시됨 — 14일 후 이 위치에서 사라집니다',
           }
           const recentSlugs = Object.keys(datesMap)
             .filter(slug => isNewArticle(datesMap[slug]?.publishDate))

@@ -176,6 +176,25 @@ const translations = {
     startNewAnalysis: 'بدء تحليل جديد',
     clearSession: 'مسح الجلسة',
   },
+  ko: {
+    quorumTitle: 'Quorum — 다중 모델 합의',
+    quorumDesc: '여러 LLM의 응답을 수집하고, 패턴을 분석하며, 모델 전반의 인사이트를 개선하십시오.',
+    collect: '수집',
+    analyze: '분석',
+    results: '결과',
+    step3AnalysisResults: '3단계: 분석 결과',
+    analysisComplete: '✓ 분석 완료. 3개 모델에서 합의 패턴과 차이점이 확인되었습니다.',
+    consensus: '합의',
+    differences: '차이점',
+    qualityAssessmentLabel: '품질 평가',
+    exportResults: '결과 내보내기',
+    downloadSelectedFormats: '선택한 형식 다운로드',
+    previous: '← 이전',
+    next: '다음 →',
+    saveToHistory: '기록에 저장',
+    startNewAnalysis: '새 분석 시작',
+    clearSession: '세션 지우기',
+  },
 }
 
 export function QuorumShowcase({ lang = 'en' }: { lang?: Lang }) {

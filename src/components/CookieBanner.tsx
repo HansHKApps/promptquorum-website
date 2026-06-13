@@ -152,6 +152,21 @@ const COPY: Partial<Record<Lang, Copy>> = {
     alwaysOn: 'مفعّل دائمًا',
     save: 'حفظ التفضيلات',
   },
+  ko: {
+    intro: '당사는 방문자가 이 사이트를 이용하는 방식을 파악하기 위해 쿠키 및 유사 기술을 사용합니다. 활성화할 항목을 선택하십시오 — 푸터의 «쿠키 설정»을 통해 언제든지 변경하실 수 있습니다.',
+    policy: '개인 정보 처리 방침',
+    rejectAll: '모두 거부',
+    customize: '설정',
+    acceptAll: '모두 허용',
+    essential: '필수',
+    essentialDesc: '사이트 작동에 필요합니다(예: 언어 및 동의 선택 사항).',
+    analytics: '분석',
+    analyticsDesc: 'Google Analytics, Umami, Vercel Analytics, Microsoft Clarity — 익명 사용 통계.',
+    marketing: '마케팅',
+    marketingDesc: '광고 개인화 및 리마케팅 신호(현재 활성화된 항목 없음).',
+    alwaysOn: '항상 활성',
+    save: '설정 저장',
+  },
 }
 
 const VALID_LANGS: Lang[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']

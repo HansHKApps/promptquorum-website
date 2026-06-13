@@ -9,9 +9,9 @@ import { PROMPT_BITES_PUBLISHED_SLUGS } from '@/lib/prompt-bites/published'
 import type { Language } from '@/lib/blog/blogContent'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 
-const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد' }
-const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث' }
-const RECENT_HEADING: Record<string, string> = { en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新増', es: 'Nuevo este mes', pt: 'Novo este mês', ar: 'جديد هذا الشهر' }
+const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد', ko: '새글' }
+const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث', ko: '업데이트' }
+const RECENT_HEADING: Record<string, string> = { en: 'New This Month', de: 'Neu diesen Monat', fr: 'Nouveautés du mois', ja: '今月の新着', zh: '本月新増', es: 'Nuevo este mes', pt: 'Novo este mês', ar: 'جديد هذا الشهر', ko: '이번 달 신규' }
 const RECENT_SUB: Record<string, string> = {
   en: 'Just published — disappears from this spot after 14 days',
   de: 'Gerade veröffentlicht — verschwindet nach 14 Tagen',
@@ -21,6 +21,7 @@ const RECENT_SUB: Record<string, string> = {
   es: 'Recién publicado — desaparece de este lugar después de 14 días',
   pt: 'Recém publicado — desaparece deste local após 14 dias',
   ar: 'نُشر للتو — يختفي من هنا بعد 14 يومًا',
+  ko: '방금 게시됨 — 14일 후 이 위치에서 사라집니다',
 }
 
 interface Props {
@@ -37,6 +38,7 @@ const HUB_HEADLINE: Partial<Record<Language, string>> = {
   pt: 'Respostas rápidas para perguntas sobre LLMs locais',
   // TODO(ar-review): native MSA check — Wave 4, not yet go-live
   ar: 'إجابات سريعة على أسئلة النماذج اللغوية المحلية',
+  ko: '로컬 LLM 질문에 대한 빠른 답변',
 }
 
 const HUB_EYEBROW: Partial<Record<Language, string>> = {
@@ -49,6 +51,7 @@ const HUB_EYEBROW: Partial<Record<Language, string>> = {
   pt: 'Prompts em resumo',
   // TODO(ar-review): native MSA check — Wave 4, not yet go-live
   ar: 'Prompt Bites',
+  ko: '프롬프트 요점',
 }
 
 const COUNT = PROMPT_BITES_PUBLISHED_SLUGS.size
@@ -63,6 +66,7 @@ const HUB_SUBTITLE: Partial<Record<Language, string>> = {
   pt: `${COUNT} guias de resposta rápida. Requisitos de VRAM, recomendações de Ollama, comparações de hardware e dicas de configuração — respondidos em 60 segundos ou menos.`,
   // TODO(ar-review): native MSA check — Wave 4, not yet go-live
   ar: `${COUNT} دليل للإجابات القصيرة. متطلبات VRAM، وأفضل نماذج Ollama، ومقارنات الأجهزة، ونصائح الإعداد — إجابات في 60 ثانية أو أقل.`,
+  ko: `${COUNT}편 단답 가이드. VRAM 요구 사항, Ollama 추천, 하드웨어 비교, 설정 팁 — 60초 이하로 답변합니다.`,
 }
 
 const VRAM_TABLE_HEADERS: Partial<Record<Language, { vram: string; model: string; quant: string; useCase: string }>> = {
@@ -75,6 +79,7 @@ const VRAM_TABLE_HEADERS: Partial<Record<Language, { vram: string; model: string
   pt: { vram: 'VRAM', model: 'Melhor modelo (maio de 2026)', quant: 'Quantização', useCase: 'Caso de uso' },
   // TODO(ar-review): native MSA check — Wave 4, not yet go-live
   ar: { vram: 'VRAM', model: 'أفضل نموذج (مايو 2026)', quant: 'التكميم', useCase: 'حالة الاستخدام' },
+  ko: { vram: 'VRAM', model: '최고 모델(2026년 5월)', quant: '양자화', useCase: '활용 사례' },
 }
 
 const VRAM_TABLE_ROWS: Partial<Record<Language, Array<{ vram: string; model: string; quant: string; useCase: string }>>> = {
@@ -150,6 +155,15 @@ const VRAM_TABLE_ROWS: Partial<Record<Language, Array<{ vram: string; model: str
     { vram: '16 GB', model: 'Qwen 32B', quant: 'Q4_K_M', useCase: 'مهام معقدة متعددة الخطوات' },
     { vram: '24 GB', model: 'Llama 70B', quant: 'Q4_K_M (جزئي)', useCase: 'جودة قريبة من الإنتاج' },
     { vram: '48+ GB', model: 'Llama 70B', quant: 'Q5_K_M أو أعلى', useCase: 'نماذج دقة كاملة' },
+  ],
+  ko: [
+    { vram: '4 GB', model: 'Phi-4 Mini', quant: 'Q4', useCase: '기본 채팅, 소규모 작업' },
+    { vram: '6 GB', model: 'Llama 3 8B', quant: 'Q4_K_M', useCase: '일상 채팅 및 코딩' },
+    { vram: '8 GB', model: 'Mistral 7B', quant: 'Q5_K_M', useCase: '품질과 속도의 균형' },
+    { vram: '12 GB', model: 'Qwen 14B', quant: 'Q4_K_M', useCase: '코딩 및 추론' },
+    { vram: '16 GB', model: 'Qwen 32B', quant: 'Q4_K_M', useCase: '복잡한 다단계 작업' },
+    { vram: '24 GB', model: 'Llama 70B', quant: 'Q4_K_M (부분)', useCase: '거의 프로덕션 수준 품질' },
+    { vram: '48+ GB', model: 'Llama 70B', quant: 'Q5_K_M 이상', useCase: '완전 정밀도 모델' },
   ],
 }
 
@@ -235,13 +249,23 @@ const DEEPDIVE_LINKS: Partial<Record<Language, Record<string, { text: string; hr
     'Prompt Engineering': { text: 'تعمق: إطار عمل CO-STAR للأوامر', href: '/ar/prompt-engineering/co-star-framework' },
     'Privacy & Compliance': { text: 'تعمق: GDPR ومانيفستو الخصوصية', href: '/ar/local-llms/qwen-gdpr-privacy-manifesto-2026' },
   },
+  ko: {
+    'Quantization & VRAM': { text: '심층 분석: 양자화 설명', href: '/local-llms/llm-quantization-explained' },
+    'Ollama': { text: '심층 분석: Ollama 최고 오픈소스 모델', href: '/local-llms/top-open-source-models-ollama' },
+    'Tool Comparisons': { text: '심층 분석: Ollama 대 LM Studio', href: '/local-llms/ollama-vs-lm-studio' },
+    'Model Comparisons': { text: '심층 분석: Qwen 대 Llama 대 Mistral', href: '/local-llms/qwen-vs-llama-vs-mistral' },
+    'Hardware-Specific': { text: '심층 분석: 로컬 LLM 최고 저예산 GPU', href: '/local-llms/best-budget-gpus-local-llm' },
+    'Quick Answers': { text: '심층 분석: 로컬 LLM에 필요한 VRAM', href: '/local-llms/how-much-vram-local-llm' },
+    'Prompt Engineering': { text: '심층 분석: CO-STAR 프롬프트 프레임워크', href: '/prompt-engineering/co-star-framework' },
+    'Privacy & Compliance': { text: '심층 분석: GDPR 및 개인정보 선언', href: '/local-llms/qwen-gdpr-privacy-manifesto-2026' },
+  },
 }
 
 const EDUCATIONAL_LEVEL: Record<string, Partial<Record<Language, string>>> = {
   // TODO(ar-review): native MSA check — Wave 4, not yet go-live
-  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante',     ar: 'مبتدئ' },
-  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio',    pt: 'Intermediário', ar: 'متوسط' },
-  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级', es: 'Avanzado',      pt: 'Avançado',      ar: 'متقدم' },
+  Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante',     ar: 'مبتدئ',  ko: '초보자' },
+  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio',    pt: 'Intermediário', ar: 'متوسط',  ko: '기초 이해' },
+  Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级', es: 'Avanzado',      pt: 'Avançado',      ar: 'متقدم',  ko: '고급' },
 }
 
 function promptBitesArticleHref(lang: Language, slug: string): string {
@@ -276,6 +300,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     es: 'Árbol de decisión de VRAM y cuantización para LLM locales',
     pt: 'Árvore de decisão de VRAM e quantização para LLMs locais',
     ar: 'شجرة قرار VRAM والتكميم للنماذج اللغوية المحلية',
+    ko: '로컬 LLM용 VRAM 및 양자화 결정 트리',
   },
   'ollama': {
     en: 'Ollama model picker guide for local LLM selection',
@@ -286,6 +311,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     es: 'Guía de selección de modelos Ollama para LLM locales',
     pt: 'Guia de seleção de modelos Ollama para LLMs locais',
     ar: 'دليل اختيار نموذج Ollama للنماذج اللغوية المحلية',
+    ko: '로컬 LLM 선택을 위한 Ollama 모델 선택 가이드',
   },
   'tool-comparisons': {
     en: 'Local LLM tool comparison matrix: Ollama, LM Studio, Jan',
@@ -296,6 +322,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     es: 'Matriz comparativa de herramientas LLM locales: Ollama, LM Studio, Jan',
     pt: 'Matriz de comparação de ferramentas de LLM local: Ollama, LM Studio, Jan',
     ar: 'مصفوفة مقارنة أدوات النماذج اللغوية المحلية: Ollama, LM Studio, Jan',
+    ko: '로컬 LLM 도구 비교 매트릭스: Ollama, LM Studio, Jan',
   },
   'model-comparisons': {
     en: 'Local LLM model size comparison chart',
@@ -306,6 +333,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     es: 'Gráfico comparativo del tamaño de modelos LLM locales',
     pt: 'Gráfico comparativo do tamanho de modelos de LLM local',
     ar: 'مخطط مقارنة أحجام النماذج اللغوية المحلية',
+    ko: '로컬 LLM 모델 크기 비교 차트',
   },
   'hardware-specific': {
     en: 'GPU VRAM tier guide for local LLM hardware selection',
@@ -316,6 +344,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     es: 'Guía de niveles de VRAM de GPU para elegir hardware de LLM local',
     pt: 'Guia de níveis de VRAM de GPU para escolher hardware de LLM local',
     ar: 'دليل مستويات VRAM للـGPU لاختيار أجهزة النماذج اللغوية المحلية',
+    ko: '로컬 LLM 하드웨어 선택을 위한 GPU VRAM 등급 가이드',
   },
   'quick-answers': {
     en: 'VRAM quick reference table for local LLMs',
@@ -326,6 +355,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     es: 'Tabla de referencia rápida de VRAM para LLM locales',
     pt: 'Tabela de referência rápida de VRAM para LLMs locais',
     ar: 'جدول مرجعي سريع لـVRAM للنماذج اللغوية المحلية',
+    ko: '로컬 LLM용 VRAM 빠른 참조 표',
   },
   'prompt-engineering': {
     en: 'Prompt Bites overview — quick answers to local LLM questions',
@@ -336,6 +366,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     es: 'Resumen de Prompt Bites — respuestas rápidas a preguntas sobre LLM locales',
     pt: 'Visão geral do Prompt Bites — respostas rápidas para perguntas sobre LLMs locais',
     ar: 'نظرة عامة على Prompt Bites — إجابات سريعة على أسئلة النماذج اللغوية المحلية',
+    ko: 'Prompt Bites 개요 — 로컬 LLM 질문에 대한 빠른 답변',
   },
   'privacy-compliance': {
     en: 'GPU and VRAM guide for privacy-first local LLM deployment',
@@ -346,6 +377,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     es: 'Guía de GPU y VRAM para despliegue de LLM local centrado en la privacidad',
     pt: 'Guia de GPU e VRAM para implantação de LLM local com foco em privacidade',
     ar: 'دليل GPU وVRAM لنشر النماذج اللغوية المحلية مع الحفاظ على الخصوصية',
+    ko: '개인정보 우선 로컬 LLM 배포를 위한 GPU 및 VRAM 가이드',
   },
 }
 

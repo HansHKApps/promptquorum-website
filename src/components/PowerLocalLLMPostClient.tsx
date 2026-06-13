@@ -41,6 +41,7 @@ const SECTION_HEADER_LABELS: Partial<Record<Language, Record<string, string>>> =
   es: { keyTakeaways: 'Conclusiones clave', tableOfContents: 'Contenido' },
   pt: { keyTakeaways: 'Principais conclusões', tableOfContents: 'Conteúdo' },
   ar: { keyTakeaways: 'النقاط الرئيسية', tableOfContents: 'المحتويات' },
+  ko: { keyTakeaways: '핵심 요점', tableOfContents: '목차' },
 }
 
 // Post UI translations
@@ -54,6 +55,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     es: 'Por [Hans Kuepper](/about) · Fundador de PromptQuorum, herramienta de despacho multi-modelo · PromptQuorum',
     pt: 'Por [Hans Kuepper](/about) · Fundador do PromptQuorum, ferramenta de despacho multi-modelo de IA · PromptQuorum',
     ar: 'بقلم [Hans Kuepper](/about) · مؤسس PromptQuorum، أداة إرسال الذكاء الاصطناعي متعددة النماذج · PromptQuorum',
+    ko: '[Hans Kuepper](/about) 저 · PromptQuorum 창립자, 멀티 모델 AI 디스패치 도구 · PromptQuorum',
   },
   lastUpdated: {
     en: 'Last updated:',
@@ -64,6 +66,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     es: 'Última actualización:',
     pt: 'Última atualização:',
     ar: 'آخر تحديث:',
+    ko: '최종 업데이트:',
   },
   ctaText: {
     en: 'Run PromptQuorum with a local LLM, your own API keys, or both — you pick the backend.',
@@ -74,6 +77,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     es: 'Usa PromptQuorum con un LLM local, tus propias claves de API o ambos — tú eliges el backend.',
     pt: 'Use o PromptQuorum com um LLM local, suas próprias chaves de API ou ambos — você escolhe o backend.',
     ar: 'استخدم PromptQuorum مع نموذج LLM محلي أو مفاتيح API الخاصة بك أو كليهما — أنت تختار الخادم الخلفي.',
+    ko: '로컬 LLM, 직접 보유한 API 키 또는 둘 다로 PromptQuorum을 실행하십시오 — 백엔드를 직접 선택하십시오.',
   },
   ctaButton: {
     en: 'Try PromptQuorum free →',
@@ -84,6 +88,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     es: 'Prueba PromptQuorum gratis →',
     pt: 'Experimente o PromptQuorum gratuitamente →',
     ar: 'جرّب PromptQuorum مجانًا ←',
+    ko: 'PromptQuorum 무료 체험 →',
   },
   backLink: {
     en: '← Back to Power Local LLM',
@@ -94,6 +99,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     es: '← Volver a LLM locales avanzados',
     pt: '← Voltar para LLMs locais avançados',
     ar: '← العودة إلى LLM المحلية المتقدمة',
+    ko: '← 고급 로컬 LLM으로 돌아가기',
   },
   breadcrumbHome: {
     en: 'Home',
@@ -104,6 +110,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     es: 'Inicio',
     pt: 'Início',
     ar: 'الرئيسية',
+    ko: '홈',
   },
   breadcrumbHub: {
     en: 'Power Local LLM',
@@ -114,6 +121,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     es: 'LLM locales avanzados',
     pt: 'LLMs locais avançados',
     ar: 'LLM المحلية المتقدمة',
+    ko: '고급 로컬 LLM',
   },
   snippetOneSentence: {
     en: '📍 In One Sentence',
@@ -124,6 +132,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     es: '📍 En una frase',
     pt: '📍 Em uma frase',
     ar: '📍 في جملة واحدة',
+    ko: '📍 한 문장으로',
   },
   snippetPlainTerms: {
     en: '💬 In Plain Terms',
@@ -134,6 +143,7 @@ const POST_UI: Record<string, Record<string, string>> = {
     es: '💬 En términos simples',
     pt: '💬 Em termos simples',
     ar: '💬 بعبارات بسيطة',
+    ko: '💬 쉽게 말하면',
   },
 }
 
@@ -147,6 +157,7 @@ const LANGUAGE_TO_LOCALE: Record<string, string> = {
   es: 'es-ES',
   pt: 'pt-BR',
   ar: 'ar-SA',
+  ko: 'ko-KR',
 }
 
 // Keys must match each article's `theme` string. Colors mirror the hub
@@ -228,6 +239,12 @@ const PRESENTATION_UI: Partial<Record<Language, { heading: string; description: 
     description: 'تصفح الشرائح أدناه أو قم بتنزيلها بصيغة PDF للرجوع إليها دون اتصال.',
     savePdf: 'تنزيل البطاقة المرجعية (PDF)',
     fallbackDescription: 'عرض شرائح تفاعلي لهذا المقال.',
+  },
+  ko: {
+    heading: '슬라이드 덱',
+    description: '아래 슬라이드를 탐색하거나 오프라인 참조용으로 PDF를 다운로드하십시오.',
+    savePdf: '참조 카드 다운로드(PDF)',
+    fallbackDescription: '이 기사의 대화형 슬라이드 덱입니다.',
   },
 }
 

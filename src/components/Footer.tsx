@@ -107,6 +107,15 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     impressum: 'الإشعار القانوني',
     contact: 'hello@promptquorum.com',
   },
+  ko: {
+    copyright: '© 2026 PromptQuorum. 모든 권리 보유.',
+    worldwide: '🌍 전 세계 이용 가능',
+    about: '소개',
+    frameworks: 'Frameworks',
+    privacy: '개인 정보 처리 방침',
+    impressum: '법적 고지',
+    contact: 'hello@promptquorum.com',
+  },
 }
 
 export function Footer({ lang = 'en' }: { lang?: Language }) {

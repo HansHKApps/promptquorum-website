@@ -28,6 +28,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Quantização e VRAM',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'التكميم والذاكرة VRAM',
+      ko: '양자화 & VRAM',
     },
     description: {
       en: 'How much memory you need, which quantization format to pick, and VRAM decision trees.',
@@ -39,6 +40,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Quanta memória você precisa, qual formato de quantização escolher e árvores de decisão de VRAM.',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'حجم الذاكرة المطلوب، وصيغة التكميم المناسبة، وأشجار قرارات VRAM.',
+      ko: '필요한 메모리 용량, 선택할 양자화 형식, VRAM 결정 트리.',
     },
     articleSlugs: [
       'how-much-vram-for-local-llm',
@@ -67,6 +69,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Ollama',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'Ollama',
+      ko: 'Ollama',
     },
     description: {
       en: 'Latest versions, best models, context windows, vision, and CPU-only use.',
@@ -78,6 +81,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Versões mais recentes, melhores modelos, janelas de contexto, visão e uso somente com CPU.',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'أحدث الإصدارات، وأفضل النماذج، ونوافذ السياق، والرؤية، والاستخدام على CPU فقط.',
+      ko: '최신 버전, 최고 모델, 컨텍스트 창, 비전, CPU 전용 사용.',
     },
     articleSlugs: [
       'ollama-latest-version',
@@ -103,6 +107,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Comparações de ferramentas',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'مقارنة الأدوات',
+      ko: '도구 비교',
     },
     description: {
       en: 'Two-way comparisons: Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
@@ -114,6 +119,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Comparações diretas: Ollama vs LM Studio, Jan vs LM Studio, Qwen vs DeepSeek.',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'مقارنات ثنائية: Ollama مقابل LM Studio، وJan مقابل LM Studio، وQwen مقابل DeepSeek.',
+      ko: '일대일 비교: Ollama 대 LM Studio, Jan 대 LM Studio, Qwen 대 DeepSeek.',
     },
     articleSlugs: [
       'qwen-coder-vs-deepseek-coder',
@@ -142,6 +148,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Comparações de modelos',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'مقارنة النماذج',
+      ko: '모델 비교',
     },
     description: {
       en: 'Best 14B models, MoE models, mini PCs, and head-to-head model matchups.',
@@ -153,6 +160,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Melhores modelos 14B, modelos MoE, mini PCs e confrontos diretos entre modelos.',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'أفضل نماذج 14B، ونماذج MoE، وأجهزة الكمبيوتر المصغرة، ومقارنات مباشرة بين النماذج.',
+      ko: '최고 14B 모델, MoE 모델, 미니 PC, 모델 직접 대결.',
     },
     articleSlugs: [
       'qwen-14b-vs-llama-8b',
@@ -177,6 +185,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Hardware específico',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'الأجهزة المخصصة',
+      ko: '하드웨어 특화',
     },
     description: {
       en: 'Hardware picks and buying-guide bites: GPU recommendations by budget, mini-PCs, SSDs, cloud GPUs, and eGPUs.',
@@ -188,6 +197,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Escolhas de hardware e guias de compra: recomendações de GPU por orçamento, mini PCs, SSDs, GPUs na nuvem e eGPUs.',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'توصيات الأجهزة وأدلة الشراء: بطاقات GPU حسب الميزانية، وأجهزة الكمبيوتر المصغرة، وأقراص SSD، وبطاقات GPU السحابية، وبطاقات eGPU.',
+      ko: '하드웨어 선택 및 구매 가이드: 예산별 GPU 추천, 미니 PC, SSD, 클라우드 GPU, eGPU.',
     },
     articleSlugs: [
       'best-local-llm-coding-12gb-vram',
@@ -218,6 +228,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Respostas rápidas',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'إجابات سريعة',
+      ko: '빠른 답변',
     },
     description: {
       en: 'Yes/no and one-number answers: RAM limits, laptop recommendations.',
@@ -229,6 +240,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Respostas de sim/não e de um único número: limites de RAM, recomendações de notebooks.',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'إجابات بنعم/لا وأرقام مفردة: حدود RAM، وتوصيات أجهزة الحاسوب المحمولة.',
+      ko: '예/아니오 및 단일 숫자 답변: RAM 한계, 노트북 추천.',
     },
     articleSlugs: [
       'can-you-run-rag-on-2gb-ram',
@@ -251,6 +263,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Engenharia de prompts',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'هندسة الأوامر',
+      ko: '프롬프트 엔지니어링',
     },
     description: {
       en: 'Quick definitions and best-of lists for prompt engineering concepts.',
@@ -262,6 +275,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Definições rápidas e listas dos melhores para conceitos de engenharia de prompts.',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'تعريفات سريعة وقوائم بأفضل مفاهيم هندسة الأوامر.',
+      ko: '프롬프트 엔지니어링 개념에 대한 빠른 정의 및 베스트 목록.',
     },
     articleSlugs: [
       'co-star-prompt-framework',
@@ -283,6 +297,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Privacidade e conformidade',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'الخصوصية والامتثال',
+      ko: '개인정보 보호 및 규정 준수',
     },
     description: {
       en: 'GDPR compliance, data sovereignty, and privacy-safe local AI deployment.',
@@ -294,6 +309,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       pt: 'Conformidade com o GDPR, soberania de dados e implantação de IA local com privacidade garantida.',
       // TODO(ar-review): native MSA check — Wave 4, not yet go-live
       ar: 'الامتثال لـGDPR، وسيادة البيانات، ونشر الذكاء الاصطناعي المحلي مع الحفاظ على الخصوصية.',
+      ko: 'GDPR 규정 준수, 데이터 주권, 개인정보 보호 로컬 AI 배포.',
     },
     articleSlugs: [
       'is-qwen-gdpr-compliant',

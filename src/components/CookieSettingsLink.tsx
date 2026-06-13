@@ -9,6 +9,7 @@ const LABELS: Record<string, string> = {
   es: 'Configuración de cookies',
   pt: 'Configurações de cookies',
   ar: 'إعدادات ملفات تعريف الارتباط',
+  ko: '쿠키 설정',
 }
 
 export function CookieSettingsLink({ lang = 'en', className }: { lang?: string; className?: string }) {

@@ -146,4 +146,5 @@ export const AFFILIATE_LINK_MARKER: Record<string, string> = {
   es: 'enlace de producto · divulgado',
   pt: 'link de produto · divulgado',
   ar: 'رابط منتج · مُفصح عنه',
+  ko: '제품 링크 · 공개됨',
 }

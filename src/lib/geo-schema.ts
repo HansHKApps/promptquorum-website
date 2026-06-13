@@ -1,45 +1,45 @@
-export type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar';
+export type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko';
 
 const GEO_ENTITIES = {
   llm: {
     '@id': 'https://www.wikidata.org/wiki/Q115305900',
-    names: { en: 'Large language model', de: 'Großes Sprachmodell', fr: 'Grand modèle linguistique', zh: '大型语言模型', ja: '大規模言語モデル', es: 'Modelo de lenguaje grande', pt: 'Modelo de linguagem grande', ar: 'نموذج لغوي كبير' },
+    names: { en: 'Large language model', de: 'Großes Sprachmodell', fr: 'Grand modèle linguistique', zh: '大型语言模型', ja: '大規模言語モデル', es: 'Modelo de lenguaje grande', pt: 'Modelo de linguagem grande', ar: 'نموذج لغوي كبير', ko: '대형 언어 모델' },
   },
   promptEngineering: {
     '@id': 'https://www.wikidata.org/wiki/Q108941486',
-    names: { en: 'Prompt engineering', de: 'Prompt Engineering', fr: 'Ingénierie des prompts', zh: '提示工程', ja: 'プロンプトエンジニアリング', es: 'Prompt engineering', pt: 'Engenharia de prompts', ar: 'هندسة التوجيهات' },
+    names: { en: 'Prompt engineering', de: 'Prompt Engineering', fr: 'Ingénierie des prompts', zh: '提示工程', ja: 'プロンプトエンジニアリング', es: 'Prompt engineering', pt: 'Engenharia de prompts', ar: 'هندسة التوجيهات', ko: '프롬프트 엔지니어링' },
   },
   aiHallucination: {
     '@id': 'https://www.wikidata.org/wiki/Q116197048',
-    names: { en: 'AI hallucination', de: 'Halluzination (Künstliche Intelligenz)', fr: 'Hallucination (IA)', zh: '人工智能幻觉', ja: 'ハルシネーション (人工知能)', es: 'Alucinación (IA)', pt: 'Alucinação (IA)', ar: 'الهلوسة (ذكاء اصطناعي)' },
+    names: { en: 'AI hallucination', de: 'Halluzination (Künstliche Intelligenz)', fr: 'Hallucination (IA)', zh: '人工智能幻觉', ja: 'ハルシネーション (人工知能)', es: 'Alucinación (IA)', pt: 'Alucinação (IA)', ar: 'الهلوسة (ذكاء اصطناعي)', ko: 'AI 환각' },
   },
   openSource: {
     '@id': 'https://www.wikidata.org/wiki/Q1130645',
-    names: { en: 'Open-source software', de: 'Open-Source-Software', fr: 'Logiciel open source', zh: '开源软件', ja: 'オープンソースソフトウェア', es: 'Software de código abierto', pt: 'Software de código aberto', ar: 'برمجيات مفتوحة المصدر' },
+    names: { en: 'Open-source software', de: 'Open-Source-Software', fr: 'Logiciel open source', zh: '开源软件', ja: 'オープンソースソフトウェア', es: 'Software de código abierto', pt: 'Software de código aberto', ar: 'برمجيات مفتوحة المصدر', ko: '오픈 소스 소프트웨어' },
   },
   gpu: {
     '@id': 'https://www.wikidata.org/wiki/Q183484',
-    names: { en: 'Graphics processing unit', de: 'Grafikprozessor', fr: 'Processeur graphique', zh: '图形处理器', ja: 'グラフィックス プロセッシング ユニット', es: 'Unidad de procesamiento gráfico', pt: 'Unidade de processamento gráfico', ar: 'وحدة معالجة الرسوميات' },
+    names: { en: 'Graphics processing unit', de: 'Grafikprozessor', fr: 'Processeur graphique', zh: '图形处理器', ja: 'グラフィックス プロセッシング ユニット', es: 'Unidad de procesamiento gráfico', pt: 'Unidade de processamento gráfico', ar: 'وحدة معالجة الرسوميات', ko: '그래픽 처리 장치' },
   },
   vram: {
     '@id': 'https://www.wikidata.org/wiki/Q114894',
-    names: { en: 'Video RAM', de: 'Video Random Access Memory', fr: 'Mémoire vidéo', zh: '显存', ja: 'ビデオメモリ', es: 'RAM de vídeo', pt: 'Memória de vídeo', ar: 'ذاكرة الفيديو' },
+    names: { en: 'Video RAM', de: 'Video Random Access Memory', fr: 'Mémoire vidéo', zh: '显存', ja: 'ビデオメモリ', es: 'RAM de vídeo', pt: 'Memória de vídeo', ar: 'ذاكرة الفيديو', ko: '비디오 RAM' },
   },
   ai: {
     '@id': 'https://www.wikidata.org/wiki/Q11660',
-    names: { en: 'Artificial intelligence', de: 'Künstliche Intelligenz', fr: 'Intelligence artificielle', zh: '人工智能', ja: '人工知能', es: 'Inteligencia artificial', pt: 'Inteligência artificial', ar: 'الذكاء الاصطناعي' },
+    names: { en: 'Artificial intelligence', de: 'Künstliche Intelligenz', fr: 'Intelligence artificielle', zh: '人工智能', ja: '人工知能', es: 'Inteligencia artificial', pt: 'Inteligência artificial', ar: 'الذكاء الاصطناعي', ko: '인공 지능' },
   },
   ml: {
     '@id': 'https://www.wikidata.org/wiki/Q2539',
-    names: { en: 'Machine learning', de: 'Maschinelles Lernen', fr: 'Apprentissage automatique', zh: '机器学习', ja: '機械学習', es: 'Aprendizaje automático', pt: 'Aprendizado de máquina', ar: 'تعلم الآلة' },
+    names: { en: 'Machine learning', de: 'Maschinelles Lernen', fr: 'Apprentissage automatique', zh: '机器学习', ja: '機械学習', es: 'Aprendizaje automático', pt: 'Aprendizado de máquina', ar: 'تعلم الآلة', ko: '기계 학습' },
   },
   nlp: {
     '@id': 'https://www.wikidata.org/wiki/Q4845',
-    names: { en: 'Natural language processing', de: 'Verarbeitung natürlicher Sprache', fr: 'Traitement du langage naturel', zh: '自然语言处理', ja: '自然言語処理', es: 'Procesamiento del lenguaje natural', pt: 'Processamento de linguagem natural', ar: 'معالجة اللغة الطبيعية' },
+    names: { en: 'Natural language processing', de: 'Verarbeitung natürlicher Sprache', fr: 'Traitement du langage naturel', zh: '自然语言处理', ja: '自然言語処理', es: 'Procesamiento del lenguaje natural', pt: 'Processamento de linguagem natural', ar: 'معالجة اللغة الطبيعية', ko: '자연어 처리' },
   },
   appleM1: {
     '@id': 'https://www.wikidata.org/wiki/Q101439988',
-    names: { en: 'Apple M1', de: 'Apple M1', fr: 'Apple M1', zh: 'Apple M1', ja: 'Apple M1', es: 'Apple M1', pt: 'Apple M1', ar: 'Apple M1' },
+    names: { en: 'Apple M1', de: 'Apple M1', fr: 'Apple M1', zh: 'Apple M1', ja: 'Apple M1', es: 'Apple M1', pt: 'Apple M1', ar: 'Apple M1', ko: 'Apple M1' },
   },
 } as const;
 

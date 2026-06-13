@@ -28,6 +28,7 @@ const HUB_HERO_TITLE: Record<string, string> = {
   es: 'Guía de Prompt Engineering: 80 artículos en 9 temas (2026)',
   pt: 'Guia de Prompt Engineering: 80 Artigos em 9 Temas (2026)',
   ar: 'دليل هندسة التوجيهات: 80 مقالاً في 9 موضوعات (2026)',
+  ko: '프롬프트 엔지니어링 가이드: 9개 주제 80편의 기사 (2026)',
 }
 
 const HUB_LEAD_ANSWER: Record<string, string> = {
@@ -39,6 +40,7 @@ const HUB_LEAD_ANSWER: Record<string, string> = {
   es: 'El prompt engineering es la práctica de diseñar entradas para modelos de lenguaje IA — especificando rol, contexto, restricciones, formato de salida y ejemplos — para producir resultados precisos y consistentes. En 2026, con más de 25 modelos disponibles, el diseño de prompts es la habilidad con mayor impacto para obtener valor fiable de la IA.',
   pt: 'Prompt engineering é a prática de projetar entradas para modelos de linguagem de IA — especificando papel, contexto, restrições, formato de saída e exemplos — para produzir resultados precisos e consistentes. Em 2026, com mais de 25 modelos disponíveis, o design de prompts é a habilidade de maior impacto para obter valor confiável da IA.',
   ar: 'هندسة التوجيهات هي ممارسة تصميم المُدخلات لنماذج اللغة الاصطناعية — بتحديد الدور والسياق والقيود وصيغة الإخراج والأمثلة — للحصول على نتائج دقيقة ومتسقة. في عام 2026، مع توفر أكثر من 25 نموذجاً تجارياً ومفتوح المصدر، يُعدّ تصميم التوجيهات المهارة الأكثر تأثيراً للحصول على قيمة موثوقة من الذكاء الاصطناعي.',
+  ko: '프롬프트 엔지니어링은 AI 언어 모델에 대한 입력(역할, 문맥, 제약 조건, 출력 형식, 예시)을 설계하여 정확하고 일관된 결과를 얻는 실천입니다. 2026년에는 25개 이상의 상용 및 오픈소스 모델이 제공되어, 프롬프트 설계는 AI에서 신뢰할 수 있는 가치를 얻기 위한 가장 중요한 기술입니다.',
 }
 
 const HUB_IN_ONE_SENTENCE: Record<string, string> = {
@@ -50,6 +52,7 @@ const HUB_IN_ONE_SENTENCE: Record<string, string> = {
   es: 'El prompt engineering consiste en diseñar entradas para modelos de IA — rol, contexto, restricciones, formato, ejemplos — para obtener resultados precisos, consistentes y listos para producción.',
   pt: 'Prompt engineering consiste em projetar entradas para modelos de IA — papel, contexto, restrições, formato, exemplos — para obter resultados precisos, consistentes e prontos para produção.',
   ar: 'هندسة التوجيهات هي تصميم المُدخلات لنماذج الذكاء الاصطناعي — الدور والسياق والقيود والصيغة والأمثلة — للحصول على نتائج دقيقة ومتسقة وجاهزة للإنتاج.',
+  ko: '프롬프트 엔지니어링은 AI 모델에 대한 입력(역할, 문맥, 제약, 형식, 예시)을 설계하여 정확하고 일관된 프로덕션 품질의 결과를 얻는 것입니다.',
 }
 
 const HUB_IN_PLAIN_TERMS: Record<string, string> = {
@@ -61,14 +64,15 @@ const HUB_IN_PLAIN_TERMS: Record<string, string> = {
   es: 'En lugar de escribir "redáctame un email" y esperar, le dices a la IA exactamente qué rol jugar, qué contexto tiene, qué formato usar y cómo es una buena salida — y el rendimiento mejora 3-5×.',
   pt: 'Em vez de digitar "escreve um e-mail pra mim" e torcer, você diz à IA exatamente qual papel desempenhar, qual contexto ela tem, qual formato usar e como é uma boa saída — e o desempenho melhora de 3 a 5×.',
   ar: 'بدلاً من كتابة "اكتب لي بريداً إلكترونياً" وانتظار النتيجة، أخبر الذكاء الاصطناعي تحديداً بالدور الذي يجب أن يؤديه، والسياق المتاح له، والصيغة المطلوبة، وشكل الإخراج الجيد — فيكون الأداء أفضل بـ 3–5 أضعاف.',
+  ko: '\"이메일을 써줘\"라고만 입력하고 기대하는 대신, AI에게 어떤 역할을 맡아야 하는지, 어떤 문맥이 있는지, 어떤 형식을 사용해야 하는지, 좋은 출력이란 무엇인지 정확히 알려주십시오 — 그러면 성능이 3~5배 향상됩니다.',
 }
 
 const HUB_IN_ONE_SENTENCE_LABEL: Record<string, string> = {
-  en: '📍 In One Sentence', de: '📍 Kurzfassung', fr: '📍 En une phrase', ja: '📍 一言で', zh: '📍 一句话概括', es: '📍 En una frase', pt: '📍 Em uma frase', ar: '📍 في جملة واحدة',
+  en: '📍 In One Sentence', de: '📍 Kurzfassung', fr: '📍 En une phrase', ja: '📍 一言で', zh: '📍 一句话概括', es: '📍 En una frase', pt: '📍 Em uma frase', ar: '📍 في جملة واحدة', ko: '📍 한 문장으로',
 }
 
 const HUB_IN_PLAIN_TERMS_LABEL: Record<string, string> = {
-  en: '💬 In Plain Terms', de: '💬 Einfach erklärt', fr: '💬 En termes simples', ja: '💬 わかりやすく言うと', zh: '💬 通俗来说', es: '💬 En términos sencillos', pt: '💬 Em termos simples', ar: '💬 بعبارات بسيطة',
+  en: '💬 In Plain Terms', de: '💬 Einfach erklärt', fr: '💬 En termes simples', ja: '💬 わかりやすく言うと', zh: '💬 通俗来说', es: '💬 En términos sencillos', pt: '💬 Em termos simples', ar: '💬 بعبارات بسيطة', ko: '💬 쉽게 말하면',
 }
 
 const HUB_HERO_DESC: Record<string, string> = {
@@ -80,6 +84,7 @@ const HUB_HERO_DESC: Record<string, string> = {
   es: 'El prompt engineering determina si un modelo de IA te da una respuesta útil o vaga. Un prompt bien diseñado especifica la tarea con claridad, proporciona el contexto adecuado, establece restricciones de formato y usa ejemplos para calibrar el comportamiento del modelo. Estas 80 guías cubren el stack completo: fundamentos (tokens, ventanas de contexto, temperatura), frameworks probados (CO-STAR, CRAFT, RTF, APE, RISEN), técnicas avanzadas (chain-of-thought, RAG, self-consistency, few-shot), flujos de trabajo en equipo (control de versiones, governance, CI/CD), métodos de evaluación y comparativas de herramientas para GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro.',
   pt: 'O prompt engineering determina se um modelo de IA vai te dar uma resposta útil ou uma resposta vaga. Um prompt bem elaborado especifica a tarefa com clareza, fornece o contexto certo, define restrições de formato e usa exemplos para calibrar o comportamento do modelo — transformando respostas genéricas de IA em saídas previsíveis e com qualidade de especialista. Estes 80 guias cobrem o stack completo de prompt engineering: fundamentos (tokens, janelas de contexto, temperatura), frameworks comprovados (CO-STAR, CRAFT, RTF, APE, RISEN), técnicas avançadas (chain-of-thought, RAG, self-consistency, few-shot), fluxos de trabalho de equipe (controle de versão, governança, CI/CD), métodos de avaliação e comparativos de ferramentas para GPT-4o, Claude 4.6 Sonnet e Gemini 2.5 Pro.',
   ar: 'هندسة التوجيهات تحدد ما إذا كان نموذج الذكاء الاصطناعي يمنحك إجابة مفيدة أو مبهمة. يحدد التوجيه المُصمم جيداً المهمة بوضوح، ويوفر السياق الملائم، ويضع قيود التنسيق، ويستخدم الأمثلة لضبط سلوك النموذج — محوِّلاً استجابات الذكاء الاصطناعي العامة إلى مخرجات متوقعة بجودة خبراء. تغطي هذه الـ 80 دليلاً المكدس الكامل لهندسة التوجيهات: الأساسيات (الرموز المميزة ونوافذ السياق ودرجة الحرارة واختيار النماذج)، والأطر المُجرَّبة (CO-STAR وCRAFT وRTF وAPE وRISEN)، والتقنيات المتقدمة (سلسلة التفكير وRAG والاتساق الذاتي والتعلم بأمثلة قليلة)، وسير عمل الفريق (التحكم في الإصدار والحوكمة وبوابات مراجعة CI/CD)، وأساليب التقييم ومقارنات الأدوات لـ GPT-4o وClaude 4.6 Sonnet وGemini 2.5 Pro.',
+  ko: '프롬프트 엔지니어링은 AI 모델이 유용한 답변을 제공하는지 모호한 답변을 제공하는지 결정합니다. 잘 설계된 프롬프트는 작업을 명확히 지정하고 적절한 문맥을 제공하며 형식 제약을 설정하고 예시를 사용하여 모델 동작을 조정합니다. 이 80개 가이드는 전체 프롬프트 엔지니어링 스택을 다룹니다: 기초(토큰, 문맥 창, 온도, 모델 선택), 검증된 프레임워크(CO-STAR, CRAFT, RTF, APE, RISEN), 고급 기법(연쇄 사고, RAG, 자기 일관성, 퓨샷 학습), 팀 워크플로(버전 관리, 거버넌스, CI/CD 검토 게이트), 평가 방법 및 도구 비교(GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro).',
 }
 
 const HUB_TLDR: Record<string, string> = {
@@ -91,6 +96,7 @@ const HUB_TLDR: Record<string, string> = {
   es: '80 guías de prompt engineering organizadas por nivel: empieza con Fundamentos (tokens, temperatura, selección de modelos), aprende Frameworks (CO-STAR, CRAFT, RTF), aplica Técnicas (chain-of-thought, RAG, few-shot), configura la Gobernanza de equipo (control de versiones, CI/CD) y elige las herramientas correctas (Braintrust, Promptfoo, Cursor). Actualizado mayo 2026 para GPT-4o, Claude y Gemini.',
   pt: '80 guias de prompt engineering organizados por nível: comece pelos Fundamentos (tokens, temperatura, seleção de modelos), aprenda os Frameworks (CO-STAR, CRAFT, RTF), aplique as Técnicas (chain-of-thought, RAG, few-shot), configure a Governança de equipe (controle de versão, CI/CD) e escolha as ferramentas certas (Braintrust, Promptfoo, Cursor). Atualizado em maio de 2026 para GPT-4o, Claude e Gemini.',
   ar: '80 دليلاً لهندسة التوجيهات مُنظَّمة حسب مستوى المهارة: ابدأ بالأساسيات (الرموز المميزة ودرجة الحرارة واختيار النماذج)، وتعلّم الأطر (CO-STAR وCRAFT وRTF)، وطبّق التقنيات (سلسلة التفكير وRAG والتعلم بأمثلة قليلة)، وأسّس حوكمة الفريق (التحكم في الإصدار وبوابات CI/CD)، واختر الأدوات المناسبة (Braintrust وPromptfoo وCursor). مُحدَّث في مايو 2026 لـ GPT-4o وClaude وGemini.',
+  ko: '기술 수준별로 구성된 80개의 프롬프트 엔지니어링 가이드: 기초(토큰, 온도, 모델 선택)부터 시작하고, 프레임워크(CO-STAR, CRAFT, RTF)를 익히고, 기법(연쇄 사고, RAG, 퓨샷)을 적용하고, 팀 거버넌스(버전 관리, CI/CD 게이트)를 설정하고, 적절한 도구(Braintrust, Promptfoo, Cursor)를 선택하십시오. GPT-4o, Claude, Gemini를 위해 2026년 5월 업데이트되었습니다.',
 }
 
 const HUB_CTA_TEXT: Record<string, string> = {
@@ -102,6 +108,7 @@ const HUB_CTA_TEXT: Record<string, string> = {
   es: 'PromptQuorum optimiza tus prompts automáticamente y los prueba en más de 25 modelos de IA simultáneamente.',
   pt: 'O PromptQuorum otimiza seus prompts automaticamente e os testa em mais de 25 modelos de IA simultaneamente.',
   ar: 'يُحسّن PromptQuorum توجيهاتك تلقائياً ويختبرها عبر أكثر من 25 نموذج ذكاء اصطناعي في آنٍ واحد.',
+  ko: 'PromptQuorum은 프롬프트를 자동으로 최적화하고 25개 이상의 AI 모델에서 동시에 테스트합니다.',
 }
 
 const HUB_QUICK_FACTS: Record<string, string[]> = {
@@ -113,6 +120,7 @@ const HUB_QUICK_FACTS: Record<string, string[]> = {
   es: ['80 artículos en 9 áreas temáticas', 'Cubre GPT-4o, Claude 4.6 Sonnet y Gemini 2.5 Pro', '5–20 min por artículo', 'Actualizado mayo 2026'],
   pt: ['80 artigos em 9 áreas temáticas', 'Cobre GPT-4o, Claude 4.6 Sonnet e Gemini 2.5 Pro', '5–20 min por artigo', 'Atualizado em maio de 2026'],
   ar: ['80 مقالاً في 9 مجالات موضوعية', 'يغطي GPT-4o وClaude 4.6 Sonnet وGemini 2.5 Pro', '5–20 دقيقة لكل مقال', 'مُحدَّث مايو 2026'],
+  ko: ['9개 주제 영역 80편의 기사', 'GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro 포함', '기사당 5~20분', '2026년 5월 업데이트'],
 }
 
 const HUB_QUICK_FACTS_DETAILED: Record<string, string[]> = {
@@ -180,10 +188,18 @@ const HUB_QUICK_FACTS_DETAILED: Record<string, string[]> = {
     'تحتاج معظم الفرق الإنتاجية إلى أداتين فقط: إحداهما للتقييم والأخرى للنشر',
     'ابدأ بالأساسيات إن كنت جديداً؛ انتقل مباشرة إلى التقييم والموثوقية أو حوكمة الفريق إن كنت خبيراً',
   ],
+  ko: [
+    '9개 주제 영역 80편의 기사, 2026년 5월 업데이트',
+    'GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro 및 20개 이상의 오픈소스 모델 포함',
+    '기사당 5~20분, 각 기사에 핵심 사항, FAQ, 출처 포함',
+    '연쇄 사고 프롬프팅으로 복잡한 추론 정확도 30~40% 향상',
+    '대부분의 프로덕션 팀에는 정확히 2개의 도구 필요: 평가용 1개, 배포용 1개',
+    '초보자라면 기초부터 시작하고, 경험자라면 평가 & 신뢰성 또는 팀 거버넌스로 바로 이동하십시오',
+  ],
 }
 
 const HUB_QUICK_FACTS_HEADER: Record<string, string> = {
-  en: '⚡ Quick Facts', de: '⚡ Schnellfakten', fr: '⚡ En bref', ja: '⚡ クイックファクト', zh: '⚡ 快速事实', es: '⚡ Datos rápidos', pt: '⚡ Fatos rápidos', ar: '⚡ حقائق سريعة',
+  en: '⚡ Quick Facts', de: '⚡ Schnellfakten', fr: '⚡ En bref', ja: '⚡ クイックファクト', zh: '⚡ 快速事实', es: '⚡ Datos rápidos', pt: '⚡ Fatos rápidos', ar: '⚡ حقائق سريعة', ko: '⚡ 빠른 사실',
 }
 
 const HUB_CTA_BUTTON: Record<string, string> = {
@@ -195,27 +211,28 @@ const HUB_CTA_BUTTON: Record<string, string> = {
   es: 'Prueba PromptQuorum gratis →',
   pt: 'Teste o PromptQuorum gratuitamente →',
   ar: 'جرّب PromptQuorum مجاناً ←',
+  ko: 'PromptQuorum 무료 체험 →',
 }
 
 const HUB_NAV_HOME: Record<string, string> = {
-  en: '← Home', de: '← Startseite', fr: '← Accueil', ja: '← ホーム', zh: '← 主页', es: '← Inicio', pt: '← Início', ar: '← الرئيسية',
+  en: '← Home', de: '← Startseite', fr: '← Accueil', ja: '← ホーム', zh: '← 主页', es: '← Inicio', pt: '← Início', ar: '← الرئيسية', ko: '← 홈',
 }
 const HUB_NAV_FEATURES: Record<string, string> = {
-  en: 'Features', de: 'Funktionen', fr: 'Fonctionnalités', ja: '機能', zh: '功能', es: 'Características', pt: 'Recursos', ar: 'الميزات',
+  en: 'Features', de: 'Funktionen', fr: 'Fonctionnalités', ja: '機能', zh: '功能', es: 'Características', pt: 'Recursos', ar: 'الميزات', ko: '기능',
 }
 const HUB_NAV_HOW: Record<string, string> = {
-  en: 'How It Works', de: 'So funktioniert es', fr: 'Comment ça marche', ja: '仕組み', zh: '工作原理', es: 'Cómo funciona', pt: 'Como funciona', ar: 'كيف يعمل',
+  en: 'How It Works', de: 'So funktioniert es', fr: 'Comment ça marche', ja: '仕組み', zh: '工作原理', es: 'Cómo funciona', pt: 'Como funciona', ar: 'كيف يعمل', ko: '작동 방식',
 }
 const HUB_NAV_BLOG: Record<string, string> = {
-  en: 'Blog', de: 'Blog', fr: 'Blog', ja: 'ブログ', zh: '博客', es: 'Blog', pt: 'Blog', ar: 'المدونة',
+  en: 'Blog', de: 'Blog', fr: 'Blog', ja: 'ブログ', zh: '博客', es: 'Blog', pt: 'Blog', ar: 'المدونة', ko: '블로그',
 }
 
 const GUIDES_LABEL: Record<string, string> = {
-  en: 'guides', de: 'Leitfäden', fr: 'guides', ja: 'ガイド', zh: '篇指南', es: 'guías', pt: 'guias', ar: 'دليل',
+  en: 'guides', de: 'Leitfäden', fr: 'guides', ja: 'ガイド', zh: '篇指南', es: 'guías', pt: 'guias', ar: 'دليل', ko: '가이드',
 }
 
 const GUIDE_LABEL_SINGULAR: Record<string, string> = {
-  en: 'guide', de: 'Leitfaden', fr: 'guide', ja: 'ガイド', zh: '篇指南', es: 'guía', pt: 'guia', ar: 'دليل',
+  en: 'guide', de: 'Leitfaden', fr: 'guide', ja: 'ガイド', zh: '篇指南', es: 'guía', pt: 'guia', ar: 'دليل', ko: '가이드',
 }
 
 const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
@@ -228,6 +245,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     es: '¿Qué necesitas saber realmente?',
     pt: 'O que você realmente precisa saber?',
     ar: 'ما الذي تحتاج لمعرفته فعلاً؟',
+    ko: '실제로 무엇을 알아야 합니까?',
   },
   frameworks: {
     en: 'Which Template Gets the Best Results?',
@@ -238,6 +256,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     es: '¿Qué plantilla obtiene los mejores resultados?',
     pt: 'Qual template traz os melhores resultados?',
     ar: 'أي قالب يحقق أفضل النتائج؟',
+    ko: '어떤 템플릿이 최상의 결과를 가져옵니까?',
   },
   techniques: {
     en: 'What Separates Good Prompts from Great Ones?',
@@ -248,6 +267,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     es: '¿Qué separa los buenos prompts de los excelentes?',
     pt: 'O que separa bons prompts dos excelentes?',
     ar: 'ما الذي يُميّز التوجيهات الجيدة عن المتميزة؟',
+    ko: '좋은 프롬프트와 탁월한 프롬프트의 차이는 무엇입니까?',
   },
   'use-topics': {
     en: 'How Do You Prompt for Your Specific Job?',
@@ -258,6 +278,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     es: '¿Cómo haces prompts para tu trabajo específico?',
     pt: 'Como você cria prompts para o seu trabalho específico?',
     ar: 'كيف تُوجّه النموذج لعملك المحدد؟',
+    ko: '특정 업무에 맞게 모델에 프롬프트를 작성하는 방법은 무엇입니까?',
   },
   policy: {
     en: 'What Do AI Regulations Mean for Your Organization?',
@@ -268,6 +289,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     es: '¿Qué significan las regulaciones de IA para tu organización?',
     pt: 'O que as regulamentações de IA significam para a sua organização?',
     ar: 'ماذا تعني لوائح الذكاء الاصطناعي لمؤسستك؟',
+    ko: 'AI 규제는 귀사에 무엇을 의미합니까?',
   },
   'tools-platforms': {
     en: 'Which Tool Fits Your Workflow?',
@@ -278,6 +300,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     es: '¿Qué herramienta encaja con tu flujo de trabajo?',
     pt: 'Qual ferramenta combina com o seu fluxo de trabalho?',
     ar: 'أي أداة تناسب سير عملك؟',
+    ko: '어떤 도구가 귀하의 워크플로에 맞습니까?',
   },
   'evaluation-reliability': {
     en: 'How Do You Know Your Prompts Work?',
@@ -288,6 +311,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     es: '¿Cómo sabes que tus prompts funcionan?',
     pt: 'Como você sabe que seus prompts funcionam?',
     ar: 'كيف تتحقق من أن توجيهاتك تعمل؟',
+    ko: '프롬프트가 작동하는지 어떻게 알 수 있습니까?',
   },
   'team-governance': {
     en: 'How Do You Manage Prompts at Scale?',
@@ -298,6 +322,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     es: '¿Cómo gestionas prompts a escala?',
     pt: 'Como você gerencia prompts em escala?',
     ar: 'كيف تدير التوجيهات على نطاق واسع؟',
+    ko: '대규모로 프롬프트를 어떻게 관리합니까?',
   },
   'workflows-automation': {
     en: 'How Do You Scale Prompts into Systems?',
@@ -308,6 +333,7 @@ const THEME_DESCRIPTION_LEADS: Record<string, Record<string, string>> = {
     es: '¿Cómo conviertes prompts en sistemas?',
     pt: 'Como você transforma prompts em sistemas?',
     ar: 'كيف تحوّل التوجيهات إلى أنظمة؟',
+    ko: '프롬프트를 시스템으로 확장하는 방법은 무엇입니까?',
   },
 }
 
@@ -321,6 +347,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     es: 'Conceptos fundamentales que todo prompt engineer debe entender — cómo funcionan los LLMs, qué son los tokens y por qué la estructura del prompt determina la calidad del resultado. Estos artículos explican cómo la temperatura controla la aleatoriedad, por qué las ventanas de contexto hacen que la IA "olvide" y cómo modelos distintos (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) interpretan las instrucciones de forma diferente. Empieza aquí si eres nuevo en el prompt engineering.',
     pt: 'Conceitos fundamentais que todo prompt engineer precisa entender — como os LLMs funcionam, o que são tokens e por que a estrutura do prompt determina a qualidade da saída. Estes artigos explicam como a temperatura controla a aleatoriedade, por que as janelas de contexto fazem a IA "esquecer" e como modelos diferentes (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) interpretam as instruções de formas distintas. Comece por aqui se você é novo em prompt engineering.',
     ar: 'المفاهيم الأساسية التي يحتاج كل مهندس توجيهات إلى فهمها — كيف تعمل النماذج اللغوية الكبيرة، وما هي الرموز المميزة، ولماذا تحدد بنية التوجيه جودة الإخراج. تشرح هذه المقالات كيف تتحكم درجة الحرارة في العشوائية، ولماذا تجعل نوافذ السياق الذكاء الاصطناعي "ينسى"، وكيف تفسر النماذج المختلفة (GPT-4o وClaude 4.6 Sonnet وGemini 2.5 Pro) التعليمات بطرق مختلفة. ابدأ من هنا إن كنت جديداً على هندسة التوجيهات.',
+    ko: '모든 프롬프트 엔지니어가 이해해야 할 핵심 개념 — LLM의 작동 방식, 토큰이란 무엇인지, 프롬프트 구조가 출력 품질을 결정하는 이유. 이 기사들은 온도가 랜덤성을 제어하는 방법, 문맥 창이 AI를 \"잊게\" 하는 이유, 다양한 모델(GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro)이 지시 사항을 다르게 해석하는 방법을 설명합니다. 프롬프트 엔지니어링이 처음이라면 여기서 시작하십시오.',
   },
   frameworks: {
     en: 'Structured templates for building reliable, repeatable prompts across different tasks — marketing, coding, research, and more. Frameworks like CO-STAR, CRAFT, RTF, and APE break down prompts into components (role, context, constraints, output format) to eliminate guesswork and produce consistent results regardless of who writes the prompt. Use these guides to find the right framework for your use case, compare frameworks head-to-head, or build a custom framework tailored to your team\'s specific needs.',
@@ -331,6 +358,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     es: 'Plantillas estructuradas para construir prompts fiables y repetibles en distintas tareas — marketing, programación, investigación y más. Frameworks como CO-STAR, CRAFT, RTF y APE descomponen los prompts en componentes (rol, contexto, restricciones, formato de salida) para eliminar conjeturas y producir resultados consistentes. Usa estas guías para encontrar el framework adecuado a tu caso de uso, comparar frameworks o crear uno personalizado para tu equipo.',
     pt: 'Templates estruturados para construir prompts confiáveis e repetíveis em diferentes tarefas — marketing, programação, pesquisa e mais. Frameworks como CO-STAR, CRAFT, RTF e APE decompõem os prompts em componentes (papel, contexto, restrições, formato de saída) para eliminar achismos e produzir resultados consistentes, independentemente de quem escreve o prompt. Use estes guias para encontrar o framework certo para o seu caso de uso, comparar frameworks lado a lado ou criar um framework personalizado para as necessidades específicas da sua equipe.',
     ar: 'قوالب منظمة لبناء توجيهات موثوقة وقابلة للتكرار عبر مهام مختلفة — التسويق والبرمجة والبحث وغيرها. تُقسّم الأطر مثل CO-STAR وCRAFT وRTF وAPE التوجيهاتِ إلى مكونات (الدور والسياق والقيود وصيغة الإخراج) للقضاء على التخمين وإنتاج نتائج متسقة بغض النظر عمن يكتب التوجيه. استخدم هذه الأدلة للعثور على الإطار المناسب لحالتك، أو لمقارنة الأطر مع بعضها، أو لبناء إطار مخصص لاحتياجات فريقك.',
+    ko: '마케팅, 코딩, 연구 등 다양한 작업에서 신뢰할 수 있고 반복 가능한 프롬프트를 구축하기 위한 구조화된 템플릿. CO-STAR, CRAFT, RTF, APE와 같은 프레임워크는 프롬프트를 구성 요소(역할, 문맥, 제약, 출력 형식)로 나누어 추측을 제거하고 프롬프트를 작성하는 사람에 관계없이 일관된 결과를 생성합니다. 이 가이드를 사용하여 사용 사례에 적합한 프레임워크를 찾거나, 프레임워크를 비교하거나, 팀의 특정 요구에 맞는 맞춤형 프레임워크를 구축하십시오.',
   },
   techniques: {
     en: 'Proven prompting techniques that improve accuracy, reduce errors, and produce more useful AI outputs for any task. These guides cover chain-of-thought prompting (step-by-step reasoning that improves complex problem accuracy), few-shot prompting (teaching with examples), RAG (grounding outputs in external data sources), self-consistency (reliability through multiple solutions), and prompt security (defending against injection attacks). Each technique includes decision criteria: when to use it, when to avoid it, and how to combine techniques for complex tasks.',
@@ -341,6 +369,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     es: 'Técnicas de prompting probadas que mejoran la precisión, reducen errores y producen resultados de IA más útiles en cualquier tarea. Estas guías cubren chain-of-thought (razonamiento paso a paso), few-shot prompting, RAG, self-consistency y seguridad frente a ataques de inyección. Cada técnica incluye criterios de decisión: cuándo usarla, cuándo evitarla y cómo combinar técnicas para tareas complejas.',
     pt: 'Técnicas de prompting comprovadas que melhoram a precisão, reduzem erros e produzem saídas de IA mais úteis em qualquer tarefa. Estes guias cobrem chain-of-thought (raciocínio passo a passo), few-shot prompting, RAG, self-consistency e segurança contra ataques de injection. Cada técnica inclui critérios de decisão: quando usá-la, quando evitá-la e como combinar técnicas para tarefas complexas.',
     ar: 'تقنيات توجيه مُجرَّبة تُحسّن الدقة وتُقلّل الأخطاء وتُنتج مخرجات ذكاء اصطناعي أكثر فائدة لأي مهمة. تغطي هذه الأدلة التوجيه بسلسلة التفكير (استدلال خطوة بخطوة يُحسّن دقة المسائل المعقدة)، والتوجيه بأمثلة قليلة (التعليم بالأمثلة)، وRAG (ربط المخرجات بمصادر بيانات خارجية)، والاتساق الذاتي (الموثوقية عبر حلول متعددة)، وأمان التوجيه (الدفاع ضد هجمات الحقن). تتضمن كل تقنية معايير قرار: متى تستخدمها، ومتى تتجنبها، وكيف تجمع التقنيات لمهام معقدة.',
+    ko: '정확도를 향상시키고 오류를 줄이며 모든 작업에서 더 유용한 AI 출력을 생성하는 검증된 프롬프팅 기법. 이 가이드는 연쇄 사고 프롬프팅(복잡한 문제 정확도를 향상시키는 단계별 추론), 퓨샷 프롬프팅(예시로 가르치기), RAG(외부 데이터 소스에 출력 근거 두기), 자기 일관성(다수의 솔루션을 통한 신뢰성), 프롬프트 보안(인젝션 공격 방어)을 다룹니다. 각 기법에는 결정 기준이 포함됩니다: 사용 시기, 피해야 할 때, 복잡한 작업을 위해 기법을 결합하는 방법.',
   },
   'use-topics': {
     en: 'Practical prompt engineering guides for specific domains and output types. Whether you\'re prompting for code review, research synthesis, SEO content, customer support, or multilingual tasks, these guides provide ready-to-use patterns optimized for each domain. The Output Engineering subsection covers format control, brand voice consistency, quality validation, and prompt library management — the operational layer for teams producing high-volume AI content.',
@@ -351,6 +380,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     es: 'Guías prácticas de prompt engineering para dominios y tipos de salida específicos. Ya sea para revisión de código, síntesis de investigación, contenido SEO, soporte al cliente o tareas multilingüe, estas guías ofrecen patrones listos para usar optimizados para cada dominio. La subsección Output Engineering cubre control de formato, coherencia de voz de marca, validación de calidad y gestión de biblioteca de prompts.',
     pt: 'Guias práticos de prompt engineering para domínios e tipos de saída específicos. Seja para revisão de código, síntese de pesquisa, conteúdo de SEO, suporte ao cliente ou tarefas multilíngues, estes guias oferecem padrões prontos para usar e otimizados para cada domínio. A subseção Output Engineering cobre controle de formato, consistência da voz da marca, validação de qualidade e gerenciamento de biblioteca de prompts.',
     ar: 'أدلة عملية لهندسة التوجيهات في مجالات ومخرجات محددة. سواء أكنت توجّه لمراجعة الكود أم لتلخيص البحث أم لمحتوى SEO أم لدعم العملاء أم لمهام متعددة اللغات، فإن هذه الأدلة تُقدم أنماطاً جاهزة مُحسَّنة لكل مجال. يغطي قسم هندسة الإخراج التحكمَ في التنسيق واتساق صوت العلامة التجارية والتحقق من الجودة وإدارة مكتبة التوجيهات — الطبقة التشغيلية للفرق التي تُنتج محتوى ذكاء اصطناعي بحجم كبير.',
+    ko: '특정 도메인 및 출력 유형을 위한 실용적인 프롬프트 엔지니어링 가이드. 코드 검토, 연구 종합, SEO 콘텐츠, 고객 지원 또는 다국어 작업에 대한 프롬프팅에 관계없이 이 가이드는 각 도메인에 최적화된 즉시 사용 가능한 패턴을 제공합니다. 출력 엔지니어링 하위 섹션은 형식 제어, 브랜드 음성 일관성, 품질 검증 및 프롬프트 라이브러리 관리를 다룹니다.',
   },
   policy: {
     en: 'How AI regulation, data residency law, and geopolitical competition affect organizations deploying AI. As governments in the EU, US, China, and Japan establish AI governance frameworks, prompt engineers and AI teams need to understand which compliance obligations affect how prompts can be written, what data they can reference, and how outputs must be handled. This section is expanding — additional guides on EU AI Act compliance, GDPR and AI prompts, and enterprise data residency are in development.',
@@ -361,6 +391,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     es: 'Cómo la regulación de IA, las leyes de residencia de datos y la competencia geopolítica afectan a las organizaciones que despliegan IA. Esta sección está en expansión — se están desarrollando guías adicionales sobre cumplimiento del AI Act europeo, RGPD y prompts de IA, y residencia de datos empresariales.',
     pt: 'Como a regulamentação de IA, as leis de residência de dados e a competição geopolítica afetam as organizações que implantam IA. Conforme governos da União Europeia, EUA, China e Japão estabelecem frameworks de governança de IA, prompt engineers e equipes de IA precisam entender quais obrigações de compliance afetam como os prompts podem ser escritos, quais dados eles podem referenciar e como as saídas devem ser tratadas. Esta seção está em expansão — guias adicionais sobre conformidade com o AI Act europeu, LGPD e prompts de IA, e residência de dados corporativos estão em desenvolvimento.',
     ar: 'كيف تؤثر لوائح الذكاء الاصطناعي وقوانين إقامة البيانات والمنافسة الجيوسياسية على المؤسسات التي تنشر الذكاء الاصطناعي. مع إنشاء حكومات الاتحاد الأوروبي والولايات المتحدة والصين واليابان لأطر حوكمة الذكاء الاصطناعي، يحتاج مهندسو التوجيهات وفرق الذكاء الاصطناعي إلى فهم الالتزامات الامتثالية التي تؤثر على كيفية كتابة التوجيهات وكيفية التعامل مع المخرجات. هذا القسم في توسع مستمر — أدلة إضافية حول امتثال قانون الذكاء الاصطناعي الأوروبي وGDPR قيد التطوير.',
+    ko: 'AI 규제, 데이터 거주 법률 및 지정학적 경쟁이 AI를 배포하는 조직에 미치는 영향. EU, 미국, 중국, 일본 정부가 AI 거버넌스 프레임워크를 수립함에 따라 프롬프트 엔지니어와 AI 팀은 프롬프트 작성 방법, 참조할 수 있는 데이터 및 출력 처리 방법에 영향을 미치는 규정 준수 의무를 이해해야 합니다. 이 섹션은 확장 중입니다 — EU AI 법률 준수에 관한 추가 가이드가 개발 중입니다.',
   },
   'tools-platforms': {
     en: 'Evaluate and compare the best prompt engineering tools, platforms, and IDEs for individual and team workflows. These guides cover prompt testing suites (Braintrust for evaluation depth, Promptfoo for CI/CD integration), version control platforms (PromptHub for collaboration, Vellum for production traffic), developer IDEs (Cursor, VS Code with Continue.dev), and head-to-head comparisons with pricing and team-size fit. Every comparison includes explicit decision criteria so you can match the right tool to your workflow.',
@@ -371,6 +402,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     es: 'Evalúa y compara las mejores herramientas, plataformas e IDEs de prompt engineering para flujos de trabajo individuales y en equipo. Estas guías cubren suites de testing (Braintrust, Promptfoo), plataformas de control de versiones (PromptHub, Vellum), IDEs para desarrolladores (Cursor, VS Code con Continue.dev) y comparativas con precios y recomendaciones por tamaño de equipo.',
     pt: 'Avalie e compare as melhores ferramentas, plataformas e IDEs de prompt engineering para fluxos de trabalho individuais e de equipe. Estes guias cobrem suites de testes (Braintrust, Promptfoo), plataformas de controle de versão (PromptHub, Vellum), IDEs para desenvolvedores (Cursor, VS Code com Continue.dev) e comparativos diretos com preços e recomendações por tamanho de equipe. Cada comparativo inclui critérios de decisão explícitos para você escolher a ferramenta certa para o seu fluxo de trabalho.',
     ar: 'تقييم ومقارنة أفضل أدوات هندسة التوجيهات والمنصات وبيئات التطوير للأفراد والفرق. تغطي هذه الأدلة مجموعات اختبار التوجيهات (Braintrust للعمق التقييمي، وPromptfoo لتكامل CI/CD)، ومنصات التحكم في الإصدار (PromptHub للتعاون، وVellum لحركة مرور الإنتاج)، وبيئات المطورين (Cursor وVS Code مع Continue.dev)، ومقارنات مباشرة مع الأسعار والملاءمة حسب حجم الفريق. تتضمن كل مقارنة معايير قرار واضحة لتوافق الأداة المناسبة مع سير عملك.',
+    ko: '개인 및 팀 워크플로를 위한 최고의 프롬프트 엔지니어링 도구, 플랫폼 및 IDE를 평가하고 비교합니다. 이 가이드는 프롬프트 테스트 스위트(Braintrust(평가 깊이용), Promptfoo(CI/CD 통합용)), 버전 관리 플랫폼(PromptHub(협업용), Vellum(프로덕션 트래픽용)), 개발자 IDE(Cursor, VS Code + Continue.dev), 가격 및 팀 규모 적합성을 포함한 직접 비교를 다룹니다.',
   },
   'evaluation-reliability': {
     en: 'Systematic methods to evaluate prompt quality, test across models, and build reliable prompts for production. Untested prompts fail silently — they return plausible-sounding wrong answers instead of throwing errors, meaning quality issues go undetected until production. These guides cover prompt evaluation metrics (accuracy, consistency, latency), regression testing to catch breaking changes, brittleness reduction strategies, cross-model consistency testing, and building automated review gates into CI/CD pipelines.',
@@ -381,6 +413,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     es: 'Métodos sistemáticos para evaluar la calidad de prompts, probar en varios modelos y construir prompts fiables para producción. Los prompts sin probar fallan en silencio. Estas guías cubren métricas de evaluación, pruebas de regresión, estrategias para reducir la fragilidad, testing de consistencia entre modelos e integración de revisiones automatizadas en pipelines CI/CD.',
     pt: 'Métodos sistemáticos para avaliar a qualidade dos prompts, testar em vários modelos e construir prompts confiáveis para produção. Prompts não testados falham em silêncio — eles retornam respostas erradas com aparência plausível em vez de gerar erros, o que significa que problemas de qualidade passam despercebidos até a produção. Estes guias cobrem métricas de avaliação de prompts (precisão, consistência, latência), testes de regressão para detectar mudanças que quebram, estratégias de redução de fragilidade, testes de consistência entre modelos e a criação de gates de revisão automatizados em pipelines de CI/CD.',
     ar: 'أساليب منهجية لتقييم جودة التوجيهات واختبارها عبر النماذج وبناء توجيهات موثوقة للإنتاج. التوجيهات غير المُختبرة تفشل بصمت — تُعيد إجابات خاطئة تبدو معقولة بدلاً من إثارة أخطاء، مما يعني أن مشكلات الجودة لا تُكتشف حتى مرحلة الإنتاج. تغطي هذه الأدلة مقاييس تقييم التوجيهات (الدقة والاتساق والكمون)، واختبار الانحدار للكشف عن التغييرات المُعطِّلة، واستراتيجيات تقليل الهشاشة، واختبار الاتساق عبر النماذج، وبناء بوابات مراجعة آلية في خطوط أنابيب CI/CD.',
+    ko: '프롬프트 품질 평가, 모델 간 테스트 및 프로덕션을 위한 신뢰할 수 있는 프롬프트 구축을 위한 체계적인 방법. 테스트되지 않은 프롬프트는 조용히 실패합니다 — 오류가 발생하는 대신 그럴듯하게 들리는 잘못된 답변을 반환하여 품질 문제가 프로덕션까지 감지되지 않습니다. 이 가이드는 프롬프트 평가 지표(정확도, 일관성, 지연), 변경 사항 감지를 위한 회귀 테스트, 취약성 감소 전략, 모델 간 일관성 테스트 및 CI/CD 파이프라인에 자동화된 검토 게이트 구축을 다룹니다.',
   },
   'team-governance': {
     en: 'Establish version control, documentation, governance, and security workflows for team-based prompt engineering. As AI becomes a core engineering function, teams need repeatable processes: Git-based prompt versioning (every prompt change is a PR), standardized documentation templates, approval workflows with domain and security reviewers, injection-vulnerability scanning, and full audit trails for compliance. These guides explain how to operationalize prompt engineering at team scale without adding workflow overhead.',
@@ -391,6 +424,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     es: 'Establece control de versiones, documentación, gobernanza y flujos de trabajo de seguridad para el prompt engineering en equipo. Los equipos necesitan procesos repetibles: versionado de prompts basado en Git, plantillas de documentación estandarizadas, flujos de aprobación, análisis de vulnerabilidades de inyección y trazabilidad completa para auditorías.',
     pt: 'Estabeleça controle de versão, documentação, governança e fluxos de trabalho de segurança para prompt engineering em equipe. Conforme a IA se torna uma função central de engenharia, as equipes precisam de processos repetíveis: versionamento de prompts baseado em Git (cada alteração de prompt é um PR), templates de documentação padronizados, fluxos de aprovação com revisores de domínio e de segurança, varredura de vulnerabilidades de injection e trilhas de auditoria completas para compliance. Estes guias explicam como operacionalizar o prompt engineering em escala de equipe sem adicionar sobrecarga ao fluxo de trabalho.',
     ar: 'إنشاء سير عمل للتحكم في الإصدار والتوثيق والحوكمة والأمان لهندسة التوجيهات القائمة على الفريق. مع تحول الذكاء الاصطناعي إلى وظيفة هندسية أساسية، تحتاج الفرق إلى عمليات قابلة للتكرار: إصدار التوجيهات المستند إلى Git (كل تغيير في التوجيه هو طلب سحب)، وقوالب توثيق موحدة، وسير عمل موافقة مع مراجعين للمجال والأمان، وفحص ثغرات الحقن، وسجلات تدقيق كاملة للامتثال. تشرح هذه الأدلة كيفية تشغيل هندسة التوجيهات على مستوى الفريق دون إضافة عبء على سير العمل.',
+    ko: '팀 기반 프롬프트 엔지니어링을 위한 버전 관리, 문서화, 거버넌스 및 보안 워크플로를 구축합니다. AI가 핵심 엔지니어링 기능이 됨에 따라 팀은 반복 가능한 프로세스가 필요합니다: Git 기반 프롬프트 버전 관리(모든 프롬프트 변경이 PR), 표준화된 문서 템플릿, 도메인 및 보안 검토자를 통한 승인 워크플로, 인젝션 취약성 스캔 및 규정 준수를 위한 완전한 감사 추적.',
   },
   'workflows-automation': {
     en: 'Build structured outputs, automate prompt workflows, and design repeatable processes for teams and use cases. These guides cover JSON mode and structured extraction (Instructor, Outlines, Pydantic AI), prompt chaining into multi-step workflows, cross-model testing pipelines, and how to configure prompt engineering workflows for developers, content teams, and support operations. Each guide includes practical patterns deployable in days, not months.',
@@ -401,6 +435,7 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     es: 'Construye salidas estructuradas, automatiza flujos de trabajo de prompts y diseña procesos repetibles para equipos y casos de uso. Estas guías cubren el modo JSON y extracción estructurada (Instructor, Outlines, Pydantic AI), encadenamiento de prompts en flujos de trabajo multi-paso, y cómo configurar flujos de prompt engineering para desarrolladores, equipos de contenido y operaciones de soporte.',
     pt: 'Construa saídas estruturadas, automatize fluxos de trabalho de prompts e projete processos repetíveis para equipes e casos de uso. Estes guias cobrem o modo JSON e extração estruturada (Instructor, Outlines, Pydantic AI), encadeamento de prompts em fluxos de trabalho de múltiplas etapas, pipelines de testes entre modelos e como configurar fluxos de prompt engineering para desenvolvedores, equipes de conteúdo e operações de suporte. Cada guia inclui padrões práticos que podem ser implantados em dias, não meses.',
     ar: 'بناء مخرجات منظمة وأتمتة سير عمل التوجيهات وتصميم عمليات قابلة للتكرار للفرق وحالات الاستخدام. تغطي هذه الأدلة وضع JSON واستخراج البنية (Instructor وOutlines وPydantic AI)، وسلسلة التوجيهات في سير عمل متعدد الخطوات، وخطوط أنابيب الاختبار عبر النماذج، وكيفية تكوين سير عمل هندسة التوجيهات للمطورين وفرق المحتوى وعمليات الدعم. يتضمن كل دليل أنماطاً عملية قابلة للنشر في أيام لا أشهر.',
+    ko: '구조화된 출력을 구축하고, 프롬프트 워크플로를 자동화하고, 팀과 사용 사례를 위한 반복 가능한 프로세스를 설계합니다. 이 가이드는 JSON 모드 및 구조화된 추출(Instructor, Outlines, Pydantic AI), 다단계 워크플로로의 프롬프트 체이닝, 개발자, 콘텐츠 팀 및 지원 운영을 위한 프롬프트 엔지니어링 워크플로 구성 방법을 다룹니다.',
   },
 }
 
@@ -414,6 +449,7 @@ const SUBSECTION_LABELS: Record<string, Record<string, string>> = {
     es: 'Casos de uso por sector',
     pt: 'Casos de uso por setor',
     ar: 'حالات الاستخدام حسب القطاع',
+    ko: '산업별 활용 사례',
   },
   'Output Engineering': {
     en: 'Output Engineering',
@@ -424,6 +460,7 @@ const SUBSECTION_LABELS: Record<string, Record<string, string>> = {
     es: 'Ingeniería de salida',
     pt: 'Output Engineering',
     ar: 'هندسة الإخراج',
+    ko: '출력 엔지니어링',
   },
 }
 
@@ -437,6 +474,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     es: 'Fundamentos',
     pt: 'Fundamentos',
     ar: 'الأساسيات',
+    ko: '기초',
   },
   frameworks: {
     en: 'Frameworks',
@@ -447,6 +485,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     es: 'Frameworks',
     pt: 'Frameworks',
     ar: 'الأطر',
+    ko: '프레임워크',
   },
   techniques: {
     en: 'Techniques',
@@ -457,6 +496,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     es: 'Técnicas',
     pt: 'Técnicas',
     ar: 'التقنيات',
+    ko: '기법',
   },
   'use-topics': {
     en: 'Use Cases & Output Engineering',
@@ -467,6 +507,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     es: 'Casos de uso e Ingeniería de salida',
     pt: 'Casos de uso e Output Engineering',
     ar: 'حالات الاستخدام وهندسة الإخراج',
+    ko: '활용 사례 및 출력 엔지니어링',
   },
   policy: {
     en: 'Policy & Compliance',
@@ -477,6 +518,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     es: 'Política & Cumplimiento',
     pt: 'Política & Compliance',
     ar: 'السياسات والامتثال',
+    ko: '정책 및 규정 준수',
   },
   'tools-platforms': {
     en: 'Tools & Platforms',
@@ -487,6 +529,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     es: 'Herramientas & Plataformas',
     pt: 'Ferramentas & Plataformas',
     ar: 'الأدوات والمنصات',
+    ko: '도구 및 플랫폼',
   },
   'evaluation-reliability': {
     en: 'Evaluation & Reliability',
@@ -497,6 +540,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     es: 'Evaluación & Fiabilidad',
     pt: 'Avaliação & Confiabilidade',
     ar: 'التقييم والموثوقية',
+    ko: '평가 및 신뢰성',
   },
   'team-governance': {
     en: 'Team Governance',
@@ -507,6 +551,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     es: 'Gobernanza de equipo',
     pt: 'Governança de equipe',
     ar: 'حوكمة الفريق',
+    ko: '팀 거버넌스',
   },
   'workflows-automation': {
     en: 'Workflows & Automation',
@@ -517,6 +562,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     es: 'Flujos de trabajo & Automatización',
     pt: 'Fluxos de trabalho & Automação',
     ar: 'سير العمل والأتمتة',
+    ko: '워크플로 및 자동화',
   },
 }
 
@@ -530,6 +576,7 @@ const THEME_CALLOUTS: Record<string, Record<string, { icon: string; title: strin
     es: { icon: '🔍', title: 'Por dónde empezar', text: 'Si solo lees 3 artículos, lee: "Qué es el Prompt Engineering", "Chain-of-Thought Prompting" y "Cómo evaluar la calidad de prompts". Estos tres cubren el 80% de lo que necesitas.' },
     pt: { icon: '🔍', title: 'Por onde começar', text: 'Se você ler apenas 3 artigos, leia: "O que é Prompt Engineering", "Chain-of-Thought Prompting" e "Como avaliar a qualidade dos prompts". Esses três cobrem 80% do que você precisa.' },
     ar: { icon: '🔍', title: 'من أين تبدأ', text: 'إن كنت ستقرأ 3 مقالات فقط، اقرأ: "ما هي هندسة التوجيهات" و"التوجيه بسلسلة التفكير" و"كيف تُقيّم جودة التوجيه". هذه الثلاثة تغطي 80% مما تحتاجه.' },
+    ko: { icon: '🔍', title: '시작점', text: '3편의 기사만 읽는다면: \"프롬프트 엔지니어링이란 무엇인가\", \"연쇄 사고 프롬프팅\", \"프롬프트 품질 평가 방법\"을 읽으십시오. 이 세 편이 필요한 것의 80%를 다룹니다.' },
   },
   'tools-platforms': {
     en: { icon: '🔍', title: 'Two-Tool Stack', text: 'Most teams waste money on 3-4 tools. The optimal stack: one for evaluation (Braintrust or Promptfoo) and one for deployment (Vellum or PromptHub). Start with free tools (Promptfoo + PromptQuorum) before paying.' },
@@ -540,6 +587,7 @@ const THEME_CALLOUTS: Record<string, Record<string, { icon: string; title: strin
     es: { icon: '🔍', title: 'Stack de dos herramientas', text: 'La mayoría de equipos malgasta dinero en 3-4 herramientas. El stack óptimo: una para evaluación (Braintrust o Promptfoo) y una para despliegue (Vellum o PromptHub). Empieza con herramientas gratuitas (Promptfoo + PromptQuorum) antes de pagar.' },
     pt: { icon: '🔍', title: 'Stack de duas ferramentas', text: 'A maioria das equipes desperdiça dinheiro com 3-4 ferramentas. O stack ideal: uma para avaliação (Braintrust ou Promptfoo) e uma para deploy (Vellum ou PromptHub). Comece com ferramentas gratuitas (Promptfoo + PromptQuorum) antes de pagar.' },
     ar: { icon: '🔍', title: 'مجموعة الأداتين', text: 'تُهدر معظم الفرق المال على 3-4 أدوات. المجموعة المثلى: أداة للتقييم (Braintrust أو Promptfoo) وأداة للنشر (Vellum أو PromptHub). ابدأ بالأدوات المجانية (Promptfoo + PromptQuorum) قبل الدفع.' },
+    ko: { icon: '🔍', title: '2개 도구 스택', text: '대부분의 팀이 3~4개 도구에 돈을 낭비합니다. 최적 스택: 평가용 1개(Braintrust 또는 Promptfoo)와 배포용 1개(Vellum 또는 PromptHub). 유료 전에 무료 도구(Promptfoo + PromptQuorum)로 시작하십시오.' },
   },
   'evaluation-reliability': {
     en: { icon: '🔍', title: 'Silent Failures', text: 'Prompts fail silently — no error log, no exception. Output quality degrades but nothing breaks visibly. Evaluation and regression testing are the only way to catch this.' },
@@ -550,11 +598,12 @@ const THEME_CALLOUTS: Record<string, Record<string, { icon: string; title: strin
     es: { icon: '🔍', title: 'Fallos silenciosos', text: 'Los prompts fallan sin hacer ruido — sin log de errores, sin excepciones. La calidad de la salida se degrada pero nada falla visiblemente. La evaluación y los tests de regresión son la única forma de detectarlo.' },
     pt: { icon: '🔍', title: 'Falhas silenciosas', text: 'Os prompts falham em silêncio — sem log de erro, sem exceção. A qualidade da saída se degrada, mas nada quebra visivelmente. Avaliação e testes de regressão são a única forma de detectar isso.' },
     ar: { icon: '🔍', title: 'الفشل الصامت', text: 'التوجيهات تفشل بصمت — لا سجل أخطاء ولا استثناءات. تتدهور جودة الإخراج دون أن يظهر أي عطل واضح. التقييم واختبار الانحدار هما الوسيلة الوحيدة لاكتشاف ذلك.' },
+    ko: { icon: '🔍', title: '조용한 실패', text: '프롬프트는 조용히 실패합니다 — 오류 로그도 예외도 없습니다. 출력 품질이 저하되지만 눈에 띄게 망가지는 것이 없습니다. 평가와 회귀 테스트만이 이것을 감지하는 방법입니다.' },
   },
 }
 
 const HUB_SOURCES_HEADER: Record<string, string> = {
-  en: 'Sources', de: 'Quellen', fr: 'Sources', ja: '出典', zh: '参考来源', es: 'Fuentes', pt: 'Fontes', ar: 'المصادر',
+  en: 'Sources', de: 'Quellen', fr: 'Sources', ja: '出典', zh: '参考来源', es: 'Fuentes', pt: 'Fontes', ar: 'المصادر', ko: '출처',
 }
 
 const HUB_SOURCES_DATA: Array<{ title: string; url: string; desc: string }> = [
@@ -575,6 +624,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     zh: '团队提示词文档模板',
     pt: 'Templates de documentação de prompts para equipes',
     ar: 'قوالب توثيق التوجيهات للفرق',
+    ko: '팀을 위한 프롬프트 문서화 템플릿',
   },
   'prompt-governance-in-production': {
     en: 'Prompt Governance in Production',
@@ -584,6 +634,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     zh: '生产环境中的提示词治理',
     pt: 'Governança de prompts em produção',
     ar: 'حوكمة التوجيهات في الإنتاج',
+    ko: '프로덕션에서의 프롬프트 거버넌스',
   },
   'prompt-security-tools-injection-testing': {
     en: 'Prompt Security Tools & Injection Testing',
@@ -593,6 +644,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     zh: '提示词安全工具与注入测试',
     pt: 'Ferramentas de segurança de prompts & testes de injection',
     ar: 'أدوات أمان التوجيهات واختبار الحقن',
+    ko: '프롬프트 보안 도구 및 인젝션 테스트',
   },
   'prompt-audit-and-regression-risk': {
     en: 'Prompt Audit & Regression Risk Management',
@@ -602,6 +654,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     zh: '提示词审计与回归风险管理',
     pt: 'Auditoria de prompts & gestão de risco de regressão',
     ar: 'تدقيق التوجيهات وإدارة مخاطر الانحدار',
+    ko: '프롬프트 감사 및 회귀 위험 관리',
   },
   'multi-model-prompt-testing-workflows': {
     en: 'Multi-Model Prompt Testing Workflows',
@@ -611,6 +664,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     zh: '多模型提示词测试工作流',
     pt: 'Fluxos de teste de prompts multi-modelo',
     ar: 'سير عمل اختبار التوجيهات متعددة النماذج',
+    ko: '다중 모델 프롬프트 테스트 워크플로',
   },
   'prompt-library-management-for-teams': {
     en: 'Prompt Library Management for Teams',
@@ -620,6 +674,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     zh: '团队提示词库管理',
     pt: 'Gerenciamento de biblioteca de prompts para equipes',
     ar: 'إدارة مكتبة التوجيهات للفرق',
+    ko: '팀을 위한 프롬프트 라이브러리 관리',
   },
   'prompts-to-repeatable-workflows': {
     en: 'From Prompts to Repeatable Workflows',
@@ -629,6 +684,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     zh: '从提示词到可重复工作流程',
     pt: 'De prompts a fluxos de trabalho repetíveis',
     ar: 'من التوجيهات إلى سير العمل القابل للتكرار',
+    ko: '프롬프트에서 반복 가능한 워크플로로',
   },
   'prompt-engineering-for-content-teams': {
     en: 'Prompt Engineering for Content Teams',
@@ -638,6 +694,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     zh: '内容团队的提示词工程',
     pt: 'Prompt Engineering para equipes de conteúdo',
     ar: 'هندسة التوجيهات لفرق المحتوى',
+    ko: '콘텐츠 팀을 위한 프롬프트 엔지니어링',
   },
   'prompt-engineering-for-developers-workflow': {
     en: 'Prompt Engineering Workflow for Developers',
@@ -647,6 +704,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     zh: '开发者的提示词工程工作流',
     pt: 'Fluxo de prompt engineering para desenvolvedores',
     ar: 'سير عمل هندسة التوجيهات للمطورين',
+    ko: '개발자를 위한 프롬프트 엔지니어링 워크플로',
   },
   'prompt-engineering-for-support-operations': {
     en: 'Prompt Engineering for Support Operations',
@@ -656,6 +714,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     zh: '客户支持运营的提示词工程',
     pt: 'Prompt Engineering para operações de suporte',
     ar: 'هندسة التوجيهات لعمليات الدعم',
+    ko: '지원 운영을 위한 프롬프트 엔지니어링',
   },
   'prompt-framework-selection-for-teams': {
     en: 'How to Choose the Right Prompt Framework for Your Team',
@@ -665,6 +724,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     zh: '如何为团队选择合适的提示词框架',
     pt: 'Como escolher o framework de prompts certo para a sua equipe',
     ar: 'كيف تختار إطار التوجيه المناسب لفريقك',
+    ko: '팀에 적합한 프롬프트 프레임워크 선택 방법',
   },
   'prompts-for-reliable-structured-data': {
     en: 'Prompts for Reliable Structured Data Extraction',
@@ -674,6 +734,7 @@ const FALLBACK_TITLES: Record<string, Record<string, string>> = {
     zh: '可靠结构化数据提取的提示词',
     pt: 'Prompts para extração confiável de dados estruturados',
     ar: 'توجيهات استخراج البيانات المنظمة الموثوقة',
+    ko: '신뢰할 수 있는 구조화된 데이터 추출을 위한 프롬프트',
   },
 }
 
@@ -685,6 +746,7 @@ const HUB_FAQ_HEADER: Record<string, string> = {
   zh: '常见问题',
   pt: 'Perguntas frequentes',
   ar: 'الأسئلة الشائعة',
+  ko: '자주 묻는 질문',
 }
 
 const HUB_FAQ_DATA: Record<string, Array<{ q: string; a: string }>> = {
@@ -781,6 +843,18 @@ const HUB_FAQ_DATA: Record<string, Array<{ q: string; a: string }>> = {
     { q: 'ما الأدوات التي يستخدمها مهندسو التوجيهات؟', a: 'المجموعة الأساسية: بيئة توجيهات متكاملة (Cursor أو VS Code مع Continue.dev)، وإطار اختبار (Braintrust أو Promptfoo للتقييم وCI/CD)، ونظام تحكم في الإصدار (PromptHub أو Git)، ومنصة اختبار متعددة النماذج (PromptQuorum لمقارنة مخرجات GPT-4o وClaude وGemini في آنٍ واحد). تُضيف الفرق المتقدمة Vellum لإدارة حركة مرور الإنتاج.' },
     { q: 'على كم نموذج ذكاء اصطناعي يجب أن أختبر توجيهاتي؟', a: 'كحد أدنى، اختبر على نموذجين من مزودَين مختلفَين — مثل GPT-4o وClaude 4.6 Sonnet. ينبغي اختبار التوجيهات الإنتاجية على ثلاثة نماذج أو أكثر. استخدم PromptQuorum للإرسال إلى أكثر من 25 نموذجاً في تشغيل واحد ومقارنة المخرجات ومعدلات النجاح والكمون جنباً إلى جنب.' },
     { q: 'ما الفرق بين هندسة التوجيهات وإدارة التوجيهات؟', a: 'هندسة التوجيهات تعني تصميم توجيهات فردية — اختيار الدور والسياق والصيغة والأمثلة المناسبة. أما إدارة التوجيهات فهي الطبقة التشغيلية: التحكم في الإصدار وتعاون الفريق وخطوط أنابيب الاختبار وسير عمل النشر وسجلات التدقيق. تبدأ الفرق الصغيرة بالهندسة؛ وتُضيف الفرق المتنامية الإدارة.' },
+  ],
+  ko: [
+    { q: '프롬프트 엔지니어링이란 무엇입니까?', a: '프롬프트 엔지니어링은 AI 모델에 대한 요청을 구조화하여 더 나은, 더 일관된 출력을 얻는 실천입니다. 모델 동작을 안내하기 위해 프레임워크, 형식, 예시 및 제약 조건을 사용하여 모호한 AI 응답을 정확한 전문가 수준의 출력으로 변환합니다.' },
+    { q: '가장 중요한 프롬프트 엔지니어링 기법은 무엇입니까?', a: '가장 높은 영향력을 가진 기법은 연쇄 사고 프롬프팅(복잡한 문제의 정확도를 향상시키는 단계별 추론), 퓨샷 프롬프팅(원하는 형식을 가르치기 위해 2~5개의 예시 제공), RAG(환각을 방지하기 위해 외부 데이터에 출력 근거 두기)입니다. 이 세 가지 기법이 프로덕션 프롬프트 엔지니어링 사용 사례의 대부분을 다룹니다.' },
+    { q: '온도가 AI 출력에 어떤 영향을 미칩니까?', a: '온도는 AI 응답의 랜덤성을 제어합니다. 낮은 값(0.0~0.5)은 데이터 추출이나 코드와 같은 구조화된 작업에 최적인 결정론적이고 사실에 기반한 출력을 생성합니다. 높은 값(0.7~1.0)은 글쓰기나 브레인스토밍에 창의적이고 다양한 응답을 생성합니다. 대부분의 프로덕션 사용 사례는 0.3~0.5에서 가장 잘 작동합니다.' },
+    { q: '먼저 어떤 프롬프트 프레임워크를 배워야 합니까?', a: '일반적인 프롬프팅에는 CO-STAR(Context, Objective, Style, Tone, Audience, Response)로, 창의적 및 분석 작업에는 CRAFT로 시작하십시오. 이 두 프레임워크가 일반적인 프롬프트 엔지니어링 시나리오의 80%를 다룹니다. 간단한 프롬프트에 빠른 약식으로 RTF(Role, Task, Format)를 배우십시오.' },
+    { q: '프롬프트 엔지니어링을 하려면 코딩을 알아야 합니까?', a: '아니오 — 기본적인 프롬프트 엔지니어링에는 코딩이 필요하지 않습니다. 자동화된 테스트 파이프라인, CI/CD 게이트 및 구조화된 출력 추출과 같은 고급 사용 사례는 Python 친숙도의 혜택을 받습니다. 개념적 프레임워크와 기법부터 시작하십시오.' },
+    { q: '프롬프트 엔지니어링은 2026년에도 여전히 관련성이 있습니까?', a: '예 — 모델 추론의 개선에도 불구하고 프롬프트 엔지니어링은 여전히 필수적입니다. 연쇄 사고 프롬프팅은 벤치마크에서 복잡한 추론 정확도를 30~40% 향상시킵니다. 모델이 개선됨에 따라 프롬프트 엔지니어링은 약점 교정에서 기능 해제로 전환됩니다.' },
+    { q: '프롬프트 엔지니어링과 파인튜닝의 차이는 무엇입니까?', a: '프롬프트 엔지니어링은 모델 가중치를 변경하지 않고 입력 설계를 통해 모델 동작을 형성합니다 — 빠르고(분 단위) 모델에 독립적입니다. 파인튜닝은 기준 동작을 변경하기 위해 새 데이터로 모델을 학습시킵니다 — 시간, 데이터셋이 필요하고 특화된 모델을 생성합니다. 먼저 프롬프트 엔지니어링을 사용하십시오.' },
+    { q: '프롬프트 엔지니어는 어떤 도구를 사용합니까?', a: '핵심 스택: 프롬프트 IDE(Cursor 또는 Continue.dev가 있는 VS Code), 테스트 프레임워크(Braintrust 또는 Promptfoo), 버전 관리 시스템(PromptHub 또는 Git), 다중 모델 테스트 플랫폼(GPT-4o, Claude, Gemini를 동시에 비교하기 위한 PromptQuorum). 고급 팀은 프로덕션 트래픽 관리를 위해 Vellum을 추가합니다.' },
+    { q: '몇 개의 AI 모델에서 프롬프트를 테스트해야 합니까?', a: '최소한 GPT-4o와 Claude 4.6 Sonnet과 같이 서로 다른 제공업체의 두 모델에서 테스트하십시오. 프로덕션 프롬프트는 세 개 이상에서 테스트해야 합니다. PromptQuorum을 사용하여 한 번의 실행으로 25개 이상의 모델에 전송하고 출력, 합격률, 지연을 나란히 비교하십시오.' },
+    { q: '프롬프트 엔지니어링과 프롬프트 관리의 차이는 무엇입니까?', a: '프롬프트 엔지니어링은 개별 프롬프트 설계 — 올바른 역할, 문맥, 형식 및 예시 선택입니다. 프롬프트 관리는 운영 레이어입니다: 버전 관리, 팀 협업, 테스트 파이프라인, 배포 워크플로 및 감사 추적. 소규모 팀은 엔지니어링으로 시작하고 성장하는 팀은 관리를 추가합니다.' },
   ],
 }
 

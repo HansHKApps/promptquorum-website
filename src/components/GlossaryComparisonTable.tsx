@@ -7,7 +7,7 @@ interface ConfusedPair {
   difference: string
 }
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 
 const CONFUSED_PAIRS: Record<Lang, ConfusedPair[]> = {
   en: [
@@ -156,6 +156,18 @@ const CONFUSED_PAIRS: Record<Lang, ConfusedPair[]> = {
   { category: 'جودة المخرجات', termA: 'الهلوسة', termB: 'التلفيق', difference: 'مترادفان عمليًا. كلاهما يصف مخرجات النموذج الواثقة والمقنعة لكنها خاطئة. "الهلوسة" أكثر شيوعًا في السياق التقني؛ "التلفيق" في السياق الأكاديمي.' },
   { category: 'بنية التوجيه', termA: 'System prompt', termB: 'User prompt', difference: 'النظام: تعليمات دائمة (الدور، القواعد، التنسيق) — تُحدَّد مرة واحدة لكل محادثة. المستخدم: مهمة محددة لكل دور. النظام يتحكم في السلوك؛ المستخدم يحدد الطلب.' },
   ],
+  ko: [
+  { category: '프롬프팅 기법', termA: 'Zero-shot', termB: 'Few-shot', difference: 'Zero-shot: 예시 없이 질문(더 빠르고 저렴). Few-shot: 2~5개의 예시 제공(특정 형식이나 도메인에 더 정확).' },
+  { category: '추론', termA: 'Chain-of-Thought', termB: 'Tree-of-Thought', difference: 'CoT: 단선적 추론 경로 하나. ToT: 여러 분기를 탐색하고 경로를 평가. ToT는 토큰이 2~3배 더 들지만 더 어려운 문제를 처리합니다.' },
+  { category: '지식 구조', termA: 'RAG', termB: 'Fine-tuning', difference: 'RAG: 재학습 없이 추론 시 현재 데이터를 검색합니다. Fine-tuning: 모델 가중치를 영구적으로 조정합니다 — 비용이 많이 들고 레이블링된 데이터가 필요합니다.' },
+  { category: '보안', termA: 'Prompt injection', termB: 'Jailbreak', difference: '인젝션: 구조적 공격 — 사용자 입력이 시스템 지시를 우회. Jailbreak: 행동 공격 — 특정 형식이 안전 장치를 우회.' },
+  { category: '샘플링 매개변수', termA: 'Temperature', termB: 'Top-p', difference: 'Temperature: 모든 토큰 확률을 조정(0 = 결정론적, 1+ = 창의적). Top-p: 확률 p를 커버하는 가장 작은 토큰 집합에서만 샘플링. 한 번에 하나만 사용하십시오.' },
+  { category: '메모리', termA: '단기 메모리', termB: '장기 메모리', difference: '단기: 활성 대화 문맥(창 내 토큰). 장기: 세션 간 영구 저장소(벡터 DB 또는 키-값). 에이전트는 둘 다 필요합니다.' },
+  { category: '정렬', termA: 'Guardrail', termB: 'RLHF', difference: 'Guardrail: 런타임 정책 시행(필터링, 검증, 차단) — 재학습 없음. RLHF: 인간 피드백을 통한 학습 시간 정렬 — 모델 동작을 영구적으로 재형성합니다.' },
+  { category: '에이전트 동작', termA: 'Tool calling', termB: '에이전틱', difference: 'Tool calling: 턴당 단일 함수 호출. 에이전틱: 자율 루프 — 결정 → 도구 호출 → 관찰 → 결정 — 목표 달성까지.' },
+  { category: '출력 품질', termA: '환각', termB: '작화', difference: '실용적으로 동의어. 둘 다 자신감 있고 그럴듯하지만 거짓된 모델 출력을 설명합니다. "환각"은 기술/미국 맥락에서, "작화"는 학술 맥락에서 더 일반적입니다.' },
+  { category: '프롬프트 구조', termA: 'System prompt', termB: 'User prompt', difference: '시스템: 영구 지시(역할, 규칙, 형식) — 대화당 한 번 설정. 사용자: 턴당 특정 작업. 시스템이 동작을 제어하고 사용자가 요청을 지정합니다.' },
+  ],
 }
 
 const TABLE_HEADERS: Record<Lang, { heading: string; description: string; category: string; termA: string; termB: string; difference: string }> = {
@@ -167,6 +179,7 @@ const TABLE_HEADERS: Record<Lang, { heading: string; description: string; catego
   es: { heading: 'Términos de IA comúnmente confundidos', description: 'Referencia rápida para 10 pares de términos frecuentemente malentendidos o usados indistintamente.', category: 'Categoría', termA: 'Término A', termB: 'Término B', difference: 'Diferencia clave' },
   pt: { heading: 'Termos de IA Frequentemente Confundidos', description: 'Referência rápida para 10 pares de termos frequentemente mal compreendidos ou usados de forma intercambiável.', category: 'Categoria', termA: 'Termo A', termB: 'Termo B', difference: 'Diferença principal' },
   ar: { heading: 'مصطلحات الذكاء الاصطناعي المتشابهة', description: 'مرجع سريع لـ10 أزواج من المصطلحات التي كثيرًا ما يساء فهمها أو تُستخدم بالتبادل.', category: 'الفئة', termA: 'المصطلح أ', termB: 'المصطلح ب', difference: 'الفرق الرئيسي' },
+  ko: { heading: '자주 혼동되는 AI 용어', description: '자주 오해되거나 혼용되는 10쌍의 용어에 대한 빠른 참조입니다.', category: '카테고리', termA: '용어 A', termB: '용어 B', difference: '주요 차이점' },
 }
 
 export function GlossaryComparisonTable() {

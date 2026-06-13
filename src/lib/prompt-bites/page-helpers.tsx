@@ -16,7 +16,7 @@ import { toOutputLocale } from '@/lib/i18n/constants'
 
 const BASE = 'https://www.promptquorum.com'
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 
 const HOME_LABEL: Partial<Record<Lang, string>> = {
   en: 'Home',
@@ -27,6 +27,7 @@ const HOME_LABEL: Partial<Record<Lang, string>> = {
   es: 'Inicio',
   pt: 'Início',
   ar: 'الرئيسية',
+  ko: '홈',
 }
 
 const SLUG_ACRONYMS: Record<string, string> = {

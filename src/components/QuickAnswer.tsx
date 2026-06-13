@@ -21,6 +21,7 @@ const LABELS: Partial<Record<Language, { title: string; updated: string }>> = {
   es: { title: 'Respuesta rápida', updated: 'Actualizado' },
   pt: { title: 'Resposta rápida', updated: 'Atualizado' },
   ar: { title: 'إجابة سريعة', updated: 'تحديث' },
+  ko: { title: '빠른 답변', updated: '업데이트' },
 }
 
 export function QuickAnswer({

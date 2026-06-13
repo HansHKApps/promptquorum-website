@@ -2247,6 +2247,287 @@ export const translations = {
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. صُنع باعتناء لمستخدمي الذكاء الاصطناعي المتقدمين.",
   },
+
+  ko: {
+    // Navigation
+    features: "기능",
+    howItWorks: "작동 방식",
+    faq: "FAQ",
+    waitlist: "대기자 명단",
+    readIn: "언어 선택:",
+
+    // Hero
+    waitlistNowOpen: "대기자 명단 접수 중",
+    heroTitle: "PromptQuorum: AI 프롬프트 최적화 도구,",
+    heroTitleHighlight: "ChatGPT, Claude & Gemini 지원",
+    heroDescription: "프롬프트를 최적화하고 여러 AI 제공업체에 동시에 전송하는 AI 프롬프트 전문 도구입니다. 결과를 비교하고 합의를 도출하여 더 나은 답변을 얻으십시오.",
+    heroCta: "조기 접근을 기다리는 500명 이상의 사용자와 함께하십시오",
+    heroBuiltFor: "개발자, 마케터, 연구자 및 AI 고급 사용자를 위한 도구입니다",
+
+    // Features
+    featuresTitle: "스마트 AI 프롬프트 최적화",
+    featuresSubtitle: "PromptQuorum은 최적화, 다중 AI 전송, 지능형 비교를 하나의 강력한 도구로 결합합니다.",
+    feature1Title: "스마트 최적화",
+    feature1Desc: "AI 기반 최적화로 거친 아이디어를 정밀한 프롬프트로 변환합니다. 프롬프트 엔지니어링 경험이 필요하지 않습니다.",
+    feature2Title: "다중 AI 전송",
+    feature2Desc: "프롬프트를 ChatGPT, Claude, Gemini 및 로컬 모델에 동시에 전송합니다. 클릭 한 번으로 다양한 결과를 얻으십시오.",
+    feature3Title: "AI 기반 비교",
+    feature3Desc: "AI가 응답을 분석하고 합의를 찾아 모든 제공업체 중 가장 신뢰할 수 있는 답변을 제시합니다.",
+    feature4Title: "내장 프레임워크",
+    feature4Desc: "CO-STAR, CRAFT, RISEN 등 8가지 이상의 검증된 프레임워크 중에서 선택하십시오. 프롬프트에 자동으로 적용됩니다.",
+    feature5Title: "로컬 LLM 또는 자체 API 키 사용",
+    feature5Desc: "프롬프트 최적화 위치를 직접 결정하십시오. 컴퓨터에서 비공개로 무료 최적화가 가능합니다.",
+    feature6Title: "무료 개인 정보 보호 우선 프롬프트 최적화 도구",
+    feature6Desc: "AI 결과를 10배 향상시키는 강력한 프롬프팅 도구를 다운로드하십시오. 최초 사용자 중 한 명이 되십시오!",
+
+    // How It Works
+    howItWorksTitle: "4단계 파이프라인: 프롬프트 → 최적화 → 전송 → Quorum",
+    howItWorksSubtitle: "완벽한 프롬프트를 위한 4가지 간단한 단계",
+    step1Title: "프롬프트",
+    step1Desc: "거친 아이디어나 정제된 생각으로 시작하십시오",
+    step2Title: "최적화",
+    step2Desc: "AI가 정밀한 프롬프트로 변환합니다",
+    step3Title: "전송",
+    step3Desc: "여러 AI에 동시 전송합니다",
+    step4Title: "Quorum",
+    step4Desc: "결과를 비교하여 최상의 답변을 찾으십시오",
+
+    // FAQ
+    faqTitle: "개인 정보 보호 우선 로컬 워크플로 — FAQ",
+    faq1Question: "PromptQuorum은 무료입니까?",
+    faq1Answer: "예. PromptQuorum은 무료로 사용하실 수 있습니다. 자체 API 키를 사용하거나 로컬 LLM을 사용하거나 테스트 목적으로 제한된 무료 백엔드 서비스를 이용하실 수 있습니다.",
+    faq2Question: "개인 정보 보호는 어떻게 작동합니까?",
+    faq2Answer: "데이터 전송 위치를 직접 결정하십시오. LM Studio 또는 Ollama로 모든 것을 로컬에 유지하거나 자체 API 키를 사용하십시오. PromptQuorum의 개인 정보 보호 수준은 사용자가 설정하는 방식에 따라 달라집니다.",
+    faq3Question: "지원되는 AI 제공업체는 무엇입니까?",
+    faq3Answer: "25개 이상의 AI 제공업체가 포함되어 있으며, 사용자 정의 제공업체를 추가할 수도 있습니다. ChatGPT, Claude, Gemini 등 다양한 서비스와 연결하십시오.",
+    faq4Question: "PromptQuorum은 어떤 플랫폼에서 실행됩니까?",
+    faq4Answer: "PromptQuorum은 데스크톱 앱(Mac, Windows)으로 시작하며, 이후 웹 애플리케이션, 그리고 최종적으로 모바일 솔루션으로 확장될 예정입니다.",
+    faq5Question: "PromptQuorum의 차별점은 무엇입니까?",
+    faq5Answer: "PromptQuorum은 프롬프트 개선을 위해 고도로 자동화되어 있으며, 동일한 프롬프트를 여러 AI에 동시에 전송하고 사용자 기준에 따라 결과를 분석할 수 있습니다.",
+    faq6Question: "사용 제한이 있습니까?",
+    faq6Answer: "PromptQuorum 측에서는 제한이 없습니다. 사용량은 API 키 또는 로컬 LLM 리소스에 의해서만 제한됩니다.",
+
+    // Waitlist CTA
+    waitlistCtaTitle: "프롬프트를 혁신할 준비가 되셨습니까?",
+    waitlistCtaDesc: "조기 접근 사용자는 우선 온보딩, 개발자 직접 접근 및 무료 강력한 도구를 제공받습니다!",
+    emailPlaceholder: "이메일을 입력하십시오",
+    joinWaitlist: "대기자 명단 등록",
+    joining: "등록 중...",
+    youAreOnTheList: "명단에 등록되셨습니다!",
+    notifyWhenLaunch: "PromptQuorum 출시 시 알림을 보내 드리겠습니다.",
+
+    // Blog
+    blogTitle: "프롬프트 엔지니어링 가이드",
+    blogSubtitle: "개발자를 위한 프롬프트 엔지니어링, 다중 모델 전송, 환각 감지, RAG 및 로컬 LLM 기법에 관한 12편의 연구 기반 기사입니다.",
+    blogIntro: "각 기사는 구체적인 수치, 명명된 모델 및 즉시 사용 가능한 프롬프트 템플릿으로 실용적인 사용 사례를 다룹니다. 기사는 AI 인용 추출을 위해 구성되었습니다.",
+
+    // SEO Meta Tags — Group A
+    homeMetaTitle: "PromptQuorum — 25개 이상 모델에서 AI 프롬프트 최적화",
+    homeMetaDescription: "25개 이상의 AI 모델에서 프롬프트 최적화 및 관리. 프롬프트 하나로 결과를 비교하고 환각을 감지하며 최상의 답변을 선택하십시오. API 키로 무료 이용 가능.",
+    featuresMetaTitle: "프롬프트 최적화 기능: AI 전송 및 합의 | PromptQuorum",
+    featuresMetaDescription: "PromptQuorum은 9가지 프레임워크(CO-STAR, CRAFT, RISEN)를 사용하여 25개 이상의 AI 제공업체에 전송하고 합의 점수를 산출하는 프롬프트 최적화 도구입니다.",
+    howItWorksMetaTitle: "PromptQuorum 작동 방식: 최적화, 전송 및 점수 산출 2026",
+    howItWorksMetaDescription: "PromptQuorum의 4단계 파이프라인은 프롬프트를 최적화하고 25개 이상의 AI 모델에 동시 전송한 후 최상의 답변을 위한 합의 점수를 산출합니다.",
+    faqMetaTitle: "PromptQuorum FAQ: 다중 모델 프롬프트, 개인 정보 보호 및 가격",
+    faqMetaDescription: "PromptQuorum FAQ: 다중 모델 합의는 어떻게 작동합니까? 무료 플랜이 있습니까? Ollama/LM Studio를 로컬로 지원합니까? 프롬프트 최적화, 프레임워크, 가격에 관한 28개 질문에 대한 완전한 답변.",
+
+    // SEO Meta Tags — Group B
+    promptEngineeringHubTitle: "프롬프트 엔지니어링 모범 사례 2026: 프레임워크",
+    promptEngineeringHubDescription: "프롬프트 엔지니어링 마스터하기: GPT-4o, Claude 4.8 Sonnet, Gemini 2.5 Pro를 위한 연쇄 사고, 퓨샷, RAG 기법. 9개 주제의 80개 가이드.",
+    promptEngineeringHubOgDescription: "모든 수준을 위한 80편의 프롬프트 엔지니어링 기사 — GPT-4o, Claude 4.8 Sonnet, Gemini 2.5 Pro를 위한 연쇄 사고, RAG, 퓨샷 프롬프팅, 팀 거버넌스, 평가.",
+    promptEngineeringHubTwitterDescription: "9개 주제의 80개 프롬프트 엔지니어링 가이드. 기초부터 시작하여 평가 및 신뢰성 마스터하기 — GPT-4o, Claude, Gemini용.",
+    localLlmsHubTitle: "VRAM 등급별 최고 로컬 LLM 2026: 12GB, 24GB, 48GB 가이드",
+    localLlmsHubDescription: "VRAM 등급별(4GB–48GB) 최고 로컬 LLM 모델: RTX 3060 12GB, RTX 4090, Apple Silicon 가이드. Ollama 설정, 하드웨어 등급 비교, 초보자 튜토리얼 — 2026년 6월.",
+    compareMetaTitle: "PromptQuorum 대 경쟁사: 기능 비교 (2026)",
+    compareMetaDescription: "PromptQuorum과 Poe, LM Arena, OpenMark, AiZolo 비교: 다중 모델 전송, 합의 점수 산출, 로컬 LLM 지원, API 제어, 9가지 프레임워크.",
+    frameworksMetaTitle: "프롬프트 프레임워크: CO-STAR, CRAFT, RISEN 외",
+    frameworksMetaDescription: "9가지 프롬프트 엔지니어링 프레임워크 완전 가이드: CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, RTF, Google Prompt, Single Prompt Line.",
+
+    // SEO Meta Tags — Group C
+    featuresOptimizationMetaTitle: "프롬프트 최적화 결과 | PromptQuorum",
+    featuresOptimizationMetaDescription: "PromptQuorum이 프롬프트를 최적화하는 방법: 품질 평가, 버전 기록, 개선 제안 및 상세 개선 지표를 확인하십시오.",
+    featuresQuorumMetaTitle: "Quorum: 다중 모델 합의 분석 | PromptQuorum",
+    featuresQuorumMetaDescription: "여러 AI 모델의 응답을 수집하고 합의 패턴을 분석하며 주요 차이점을 식별하고 제공업체 전반에 걸쳐 인사이트를 종합합니다.",
+    downloadMetaTitle: "Mac 및 Windows용 PromptQuorum 다운로드 — 무료 2026",
+    downloadMetaDescription: "macOS 및 Windows용 PromptQuorum을 다운로드하십시오. 25개 이상의 AI 모델에 프롬프트 전송, 합의 분석 실행, 로컬 LLM으로 오프라인 작업. 무료.",
+    aboutMetaTitle: "PromptQuorum 소개 — Hans Kuepper 제작",
+    aboutMetaDescription: "PromptQuorum은 개인 정보 보호 우선 AI 도구에 집중하는 독립 개발자 Hans Kuepper가 개발했습니다. 미션, 제품, 철학에 대해 알아보십시오.",
+    privacyMetaTitle: "개인 정보 처리 방침 | PromptQuorum",
+    privacyMetaDescription: "PromptQuorum 개인 정보 처리 방침. 데이터 수집, 사용, 보호 방법, GDPR 권리 및 데이터 요청 문의 방법을 확인하십시오.",
+
+    // Privacy Policy Content
+    privacyPageTitle: "개인 정보 처리 방침",
+    privacyBreadcrumb: "개인 정보 처리 방침",
+    privacyEffectiveDate: "발효일:",
+    privacyController: "관리자:",
+    privacyContact: "연락처:",
+    privacyGdprBanner: "이 방침은 EU 일반 데이터 보호 규정(GDPR), 영국 GDPR 및 캘리포니아 소비자 개인 정보 보호법(CCPA)을 준수하기 위해 작성되었습니다. 질문이 있거나 권리를 행사하려면 {{email}}로 이메일을 보내 주시면 30일 이내에 답변 드리겠습니다.",
+
+    // Section 1
+    privacyS1Title: "당사 소개",
+    privacyS1Para1: "PromptQuorum(\"당사\", \"저희\" 또는 \"당사의\")은 {{url}}에서 제공되는 소프트웨어 제품입니다. PromptQuorum은 Hans Kuepper(GDPR 목적의 \"데이터 관리자\")가 개발했습니다.",
+    privacyS1Para2: "당사는 다중 모델 AI 전송 및 합의 분석 도구를 운영합니다. 제품 자체는 개인 데이터를 처리하지 않습니다 — 프롬프트, API 키 및 AI 응답은 전적으로 브라우저 내에서 처리되며 귀하의 기기에서 선택한 AI 제공업체로 직접 전송됩니다. PromptQuorum 서버는 귀하의 프롬프트나 API 키를 수신, 저장 또는 처리하지 않습니다.",
+    privacyS1Para3: "이 개인 정보 처리 방침은 PromptQuorum 웹사이트를 통해 수집하는 개인 데이터 — 특히 {{url}}의 대기자 명단 양식 — 만을 다룹니다.",
+
+    // Section 2
+    privacyS2Title: "수집 데이터 및 수집 이유",
+    privacyS2Intro: "당사는 다음 개인 데이터를 수집합니다:",
+    privacyS2Col1: "데이터",
+    privacyS2Col2: "수집 방법",
+    privacyS2Col3: "목적",
+    privacyS2Col4: "법적 근거",
+    privacyS2Row1_1: "이메일 주소",
+    privacyS2Row1_2: "홈페이지 대기자 명단 양식",
+    privacyS2Row1_3: "베타 출시 알림, 제품 업데이트 이메일",
+    privacyS2Row1_4: "동의(GDPR 제6조 제1항 (a)호)",
+    privacyS2Row2_1: "익명 사용 분석",
+    privacyS2Row2_2: "쿠키 없는 분석(Umami, Vercel Analytics, Microsoft Clarity)",
+    privacyS2Row2_3: "방문 페이지 파악, 사이트 개선",
+    privacyS2Row2_4: "정당한 이익(GDPR 제6조 제1항 (f)호) — §7 참조",
+    privacyS2Closure: "당사는 이름, 전화번호, 결제 정보, 세션 수준 집계를 초과하여 저장된 IP 주소 또는 GDPR 제9조에 따른 특수 카테고리 데이터를 수집하지 않습니다.",
+
+    // Section 3
+    privacyS3Title: "처리의 법적 근거",
+    privacyS3Sub1: "동의 — 이메일 주소",
+    privacyS3Para1: "이메일을 입력하고 \"대기자 명단 등록\"을 클릭하면 베타 출시 공지 및 제품 업데이트에 대한 명시적 동의를 제공하는 것입니다. 동의는 GDPR 제6조 제1항 (a)호에 따른 법적 근거입니다. 당사가 보내는 이메일의 수신 거부 링크를 클릭하거나 {{email}}로 이메일을 보내 언제든지 동의를 철회할 수 있습니다. 동의 철회는 철회 전 처리의 적법성에 영향을 미치지 않습니다.",
+    privacyS3Sub2: "정당한 이익 — 분석",
+    privacyS3Para2: "당사는 집계 방식으로 방문자가 사이트를 사용하는 방법을 이해하기 위해 개인 정보 보호 친화적 분석 도구(Umami, Vercel Analytics, Microsoft Clarity(쿠키 없는 모드))를 사용합니다. 기기 접근(ePrivacy): 이 도구들은 쿠키를 설정하지 않으며 단말 기기에서 읽거나 쓰지 않으므로 ePrivacy 지침에 따른 동의가 필요하지 않습니다. 데이터 처리(GDPR): GDPR 제6조 제1항 (f)호에 따른 당사의 정당한 이익을 근거로 집계된 비식별 사용 데이터만 처리됩니다. 언제든지 이메일로 이 처리에 이의를 제기할 수 있습니다.",
+
+    // Section 4
+    privacyS4Title: "데이터 처리자 및 제3자",
+    privacyS4Intro: "당사는 다음 제3자 처리자를 이용합니다. 각 처리자는 데이터 처리 계약(DPA) 및 GDPR 준수 데이터 처리 의무에 구속됩니다:",
+    privacyS4ColProc: "처리자",
+    privacyS4ColRole: "역할",
+    privacyS4ColData: "공유 데이터",
+    privacyS4ColLoc: "위치",
+    privacyS4Row1Proc: "Resend (Resend Inc.)",
+    privacyS4Row1Role: "대기자 명단 가입 처리 — 구독자 이메일 주소를 저장하고 당사를 대신하여 확인 및 출시 이메일을 전송합니다",
+    privacyS4Row1Data: "이메일 주소",
+    privacyS4Row1Loc: "미국",
+    privacyS4Row2Proc: "Google Analytics 4 (Google LLC)",
+    privacyS4Row2Role: "웹사이트 분석 — 익명화된 집계 사용 데이터",
+    privacyS4Row2Data: "익명화된 분석 이벤트, 개인 식별 정보 없음",
+    privacyS4Row2Loc: "미국",
+    privacyS4Row3Proc: "Umami Analytics (Umami Software, Inc.)",
+    privacyS4Row3Role: "개인 정보 보호 친화적 쿠키 없는 웹사이트 분석 — 페이지 조회 및 집계 참조자(분석 동의 시에만 로드됨)",
+    privacyS4Row3Data: "집계된 트래픽 데이터, 해시된 방문자 지문(쿠키 없음)",
+    privacyS4Row3Loc: "유럽연합",
+    privacyS4Row4Proc: "Microsoft Clarity (Microsoft Corporation)",
+    privacyS4Row4Role: "세션 재생 및 히트맵 — 분석 동의 시에만 로드됨",
+    privacyS4Row4Data: "상호작용 이벤트 및 뷰포트 데이터(분석 동의 후에만 설정됨)",
+    privacyS4Row4Loc: "미국",
+    privacyS4Row5Proc: "Vercel Analytics (Vercel Inc.)",
+    privacyS4Row5Role: "페이지 조회 지표 — 쿠키 없이 방문 수를 측정합니다(분석 동의 시에만 로드됨)",
+    privacyS4Row5Data: "집계된 페이지 조회 수, 해시된 방문자 키(쿠키 없음)",
+    privacyS4Row5Loc: "미국",
+    privacyS4Row6Proc: "Vercel Speed Insights (Vercel Inc.)",
+    privacyS4Row6Role: "Core Web Vitals 측정 — 페이지 성능 지표(분석 동의 시에만 로드됨)",
+    privacyS4Row6Data: "성능 타이밍만(개인 데이터 없음, 쿠키 없음)",
+    privacyS4Row6Loc: "미국",
+    privacyS4Closure: "당사는 귀하의 데이터를 제3자에게 판매하지 않습니다. 귀하의 이메일 주소를 광고주와 공유하지 않습니다.",
+
+    // Section 5
+    privacyS5Title: "국제 데이터 이전",
+    privacyS5Intro: "일부 처리자는 미국에 위치합니다. 유럽경제지역(EEA) 또는 영국(UK)에서 미국으로의 개인 데이터 이전은 적절한 보호 조치를 따릅니다:",
+    privacyS5Bullet1: "Resend: 이전은 GDPR 제46조 제2항 (c)호에 따라 유럽 위원회가 채택한 표준 계약 조항(SCC)으로 보호됩니다. Resend의 데이터 처리 계약은 resend.com/legal/dpa에서 확인하실 수 있습니다.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) 및 Vercel Analytics / Speed Insights (Vercel Inc.)는 미국에 기반하며 쿠키 없이 운영됩니다. 이전은 GDPR 제46조에 따른 표준 계약 조항(SCC)으로 보호됩니다. Microsoft는 추가로 EU-미국 데이터 개인 정보 보호 프레임워크에 참여합니다. Umami는 EU에 호스팅되므로 이전이 발생하지 않습니다.",
+    privacyS5Closure: "적용 가능한 SCC 사본은 {{email}}로 이메일을 보내 요청하실 수 있습니다.",
+
+    // Section 6
+    privacyS6Title: "데이터 보존",
+    privacyS6Para1: "귀하의 이메일 주소는 제출일로부터 24개월 또는 구독을 취소할 때까지(먼저 도달하는 시점까지) 보존됩니다. 이 기간이 지나면 이메일 서비스 제공업체의 목록을 포함한 모든 시스템에서 이메일 주소가 영구 삭제됩니다.",
+    privacyS6Para2: "당사의 쿠키 없는 분석 도구는 집계되고 비식별화된 데이터만 저장합니다. 귀하를 식별하는 개인 데이터는 보존되지 않습니다. Microsoft Clarity는 표준 보존 기간에 따라 익명화된 세션 데이터를 저장합니다.",
+    privacyS6Para3: "Resend는 트랜잭션 이메일 로그를 최대 30일간 보존합니다. 잠재 고객 연락처 기록(이메일 주소 및 구독 상태)은 구독이 활성 상태인 동안 또는 삭제를 요청할 때까지 보존됩니다.",
+
+    // Section 7
+    privacyS7Title: "쿠키 및 추적",
+    privacyS7Para1: "PromptQuorum 웹사이트는 다음 쿠키를 사용합니다:",
+    privacyS7ColCookie: "쿠키",
+    privacyS7ColSetBy: "설정 주체",
+    privacyS7ColPurpose: "목적",
+    privacyS7ColDuration: "기간",
+    privacyS7Row1Cookie: "_ga",
+    privacyS7Row1SetBy: "Google Analytics 4",
+    privacyS7Row1Purpose: "고유 사용자 구별, 익명화",
+    privacyS7Row1Duration: "2년",
+    privacyS7Row2Cookie: "_ga_*",
+    privacyS7Row2SetBy: "Google Analytics 4",
+    privacyS7Row2Purpose: "세션 상태",
+    privacyS7Row2Duration: "2년",
+    privacyS7Row3Cookie: "localStorage",
+    privacyS7Row3SetBy: "PromptQuorum (제품 전용)",
+    privacyS7Row3Purpose: "API 키 및 설정을 브라우저에 로컬로 저장합니다 — 당사로 전송되지 않습니다",
+    privacyS7Row3Duration: "브라우저 데이터 삭제 시까지",
+    privacyS7Row4Cookie: "analytics_consent",
+    privacyS7Row4SetBy: "PromptQuorum (localStorage)",
+    privacyS7Row4Purpose: "매 페이지마다 다시 묻지 않도록 쿠키 동의 선택(허용, 거부 또는 카테고리별)을 저장합니다",
+    privacyS7Row4Duration: "12개월(만료 후 재요청)",
+    privacyS7Para2: "당사는 추적 픽셀, 지문 인식 또는 제3자 광고 쿠키를 사용하지 않습니다. 당사의 분석 도구(Umami, Vercel Analytics, Microsoft Clarity)는 쿠키 없이 작동하며 귀하의 기기에 쿠키를 설정하지 않습니다. 이에 대한 동의는 필요하지 않습니다.",
+    privacyS7Para3: "ePrivacy 지침(2002/58/EC)에 따른 동의: 당사의 분석 도구(Umami, Vercel Analytics, Microsoft Clarity)는 쿠키 없이 작동하며 단말 기기에서 읽거나 쓰지 않으므로 동의가 필요하지 않습니다. 비필수 기기 저장에 대해서는 사전 동의를 요청합니다. 푸터의 \"쿠키 설정\" 링크를 통해 언제든지 변경하거나 철회할 수 있습니다. 관할 감독 기관은 헤센 데이터 보호 및 정보 자유 위원장(Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI)입니다.",
+
+    // Section 8
+    privacyS8Title: "GDPR에 따른 권리",
+    privacyS8Intro: "EEA, 영국 또는 스위스에 거주하는 경우 개인 데이터에 관한 다음 권리를 보유합니다. 당사는 수령 후 30일 이내에 모든 요청에 응답합니다.",
+    privacyS8Right1: "열람권(제15조)",
+    privacyS8Desc1: "당사가 보유한 개인 데이터 사본 및 처리 방법에 관한 정보를 요청하십시오.",
+    privacyS8Right2: "정정권(제16조)",
+    privacyS8Desc2: "부정확하거나 불완전한 개인 데이터를 수정해 달라고 요청하십시오.",
+    privacyS8Right3: "삭제권 / \"잊혀질 권리\"(제17조)",
+    privacyS8Desc3: "개인 데이터 삭제를 요청하십시오. 이메일 서비스 제공업체의 목록을 포함한 모든 시스템에서 30일 이내에 이메일을 삭제합니다.",
+    privacyS8Right4: "처리 제한권(제18조)",
+    privacyS8Desc4: "분쟁이 해결되는 동안 데이터 처리를 일시 중지해 달라고 요청하십시오.",
+    privacyS8Right5: "데이터 이동권(제20조)",
+    privacyS8Desc5: "다른 관리자에게 이전하기 위해 구조화된 기계 판독 가능 형식(JSON 또는 CSV)의 개인 데이터 사본을 받으십시오.",
+    privacyS8Right6: "이의 제기권(제21조)",
+    privacyS8Desc6: "정당한 이익(분석)에 기반한 처리에 이의를 제기하십시오. 당사가 설득력 있는 정당한 근거를 입증할 수 없는 한 해당 처리를 중단합니다.",
+    privacyS8Right7: "동의 철회권",
+    privacyS8Desc7: "당사가 보내는 이메일의 수신 거부를 통해 또는 직접 이메일을 보내 언제든지 이메일 통신에 대한 동의를 철회하십시오. 철회는 이전의 적법한 처리에 영향을 미치지 않습니다.",
+    privacyS8Right8: "자동화된 결정 대상이 되지 않을 권리(제22조)",
+    privacyS8Desc8: "당사는 법적 또는 유사한 중대한 영향을 미치는 자동화된 의사결정 또는 프로파일링을 사용하지 않습니다.",
+    privacyS8Closure: "이 권리 중 하나를 행사하려면 제목란에 \"Data Subject Request\"를 기재하여 {{email}}로 이메일을 보내십시오. 요청 처리 전 신원 확인을 요청할 수 있습니다. 권리 행사에는 비용이 없습니다.",
+
+    // Section 9
+    privacyS9Title: "불만 제기권",
+    privacyS9Para1: "당사가 개인 데이터를 관련 법에 따라 처리하지 않았다고 생각하는 경우 지역 감독 기관에 불만을 제기할 권리가 있습니다. 당사의 관할 감독 기관은 헤센 데이터 보호 및 정보 자유 위원장(Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI)입니다. EU에서는 edpb.europa.eu에서 국가 기관을 찾을 수 있습니다. 영국에서는 감독 기관이 정보위원회(ICO)입니다.",
+    privacyS9Para2: "감독 기관에 제기하기 전에 당사가 직접 우려 사항을 해결할 기회를 주시기 바랍니다 — 먼저 {{email}}로 연락해 주십시오.",
+
+    // Section 10
+    privacyS10Title: "캘리포니아 개인 정보 보호 권리(CCPA)",
+    privacyS10Para: "캘리포니아 거주자의 경우 수집하는 개인 정보를 알 권리, 삭제를 요청할 권리, 판매를 거부할 권리가 있습니다. 당사는 개인 정보를 판매하지 않습니다. 권리를 행사하려면 {{email}}로 이메일을 보내십시오.",
+
+    // Section 11
+    privacyS11Title: "아동 개인 정보 보호",
+    privacyS11Para: "PromptQuorum 웹사이트는 16세 미만 아동을 대상으로 하지 않습니다. 당사는 16세 미만의 아동으로부터 고의적으로 개인 데이터를 수집하지 않습니다. 의도치 않게 이러한 데이터를 수집했다고 생각하는 경우 {{email}}로 이메일을 보내 주시면 즉시 삭제하겠습니다.",
+
+    // Section 12
+    privacyS12Title: "방침 변경",
+    privacyS12Para: "당사의 관행 또는 법적 요건의 변경을 반영하기 위해 이 개인 정보 처리 방침을 업데이트할 수 있습니다. 업데이트 시 이 페이지 상단의 발효일을 변경합니다. 새로운 데이터 카테고리 수집 또는 법적 근거 변경과 같은 중요한 변경 사항은 발효 최소 14일 전에 대기자 명단 구독자에게 이메일로 통보됩니다.",
+
+    // Section 13
+    privacyS13Title: "문의",
+    privacyS13Para: "개인 정보 관련 질문, 정보 주체 요청 또는 동의 철회에 관한 모든 문의:",
+    privacyS13ContactTitle: "PromptQuorum — 데이터 관리자",
+    privacyS13ContactEmail: "이메일:",
+    privacyS13ContactWebsite: "웹사이트:",
+    privacyS13ResponseTime: "응답 시간: 수령 후 30일 이내",
+
+    // Footer Nav
+    privacyFooterHome: "홈",
+    privacyFooterFaq: "FAQ",
+
+    // Explore Free Guides Section
+    guidesTitle: "무료 가이드 둘러보기",
+    guidesDesc: "AI, 프롬프팅 및 로컬 LLM에 대한 심층 분석",
+    guidesLocalLlms: "로컬 LLM",
+    guidesLocalLlmsDesc: "자체 하드웨어에서 AI 모델을 실행하는 방법",
+    guidesPromptEng: "Prompt Engineering",
+    guidesPromptEngDesc: "더 나은 답변을 위해 프롬프트를 최적화하는 기법",
+    guidesQuantization: "LLM 양자화",
+    guidesQuantizationDesc: "소비자용 GPU에서 실행하기 위해 모델을 압축합니다",
+
+    // Footer
+    footerCopyright: "(c) 2026 PromptQuorum. AI 고급 사용자를 위해 정성껏 제작되었습니다.",
+  },
 };
 
 export type Language = "en" | "de" | "fr" | "ja" | "zh" | "es" | "pt" | "ar" | "ko";

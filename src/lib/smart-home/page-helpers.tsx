@@ -25,7 +25,7 @@ import { isSmartHomeArticlePublished, isSmartHomeHubPublished } from './publishe
 
 const BASE = 'https://www.promptquorum.com'
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 
 const HOME_LABEL: Partial<Record<Lang, string>> = {
   en: 'Home',
@@ -36,6 +36,7 @@ const HOME_LABEL: Partial<Record<Lang, string>> = {
   es: 'Inicio',
   pt: 'Início',
   ar: 'الرئيسية',
+  ko: '홈',
 }
 
 const HUB_LABEL = 'Smart Home'
@@ -107,6 +108,12 @@ const COMING_SOON_COPY: Partial<Record<Lang, { badge: string; bodyArticle: strin
     bodyArticle: 'يجري إعداد دليل المنزل الذكي هذا. استكشف النسخة الإنجليزية من مركز المنزل الذكي في هذه الأثناء.',
     bodyHub: 'سيتوفر مركز المنزل الذكي بهذه اللغة قريباً. استكشف النسخة الإنجليزية أدناه.',
     back: '← عرض النسخة الإنجليزية',
+  },
+  ko: {
+    badge: '출시 예정',
+    bodyArticle: '이 Smart Home 가이드를 준비 중입니다. 그동안 영어 버전 Smart Home 허브를 탐색하십시오.',
+    bodyHub: 'Smart Home 허브가 곧 이 언어로 제공될 예정입니다. 아래에서 영어 버전을 확인하십시오.',
+    back: '← 영어 버전 보기',
   },
 }
 
