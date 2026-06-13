@@ -2840,7 +2840,7 @@ schema: {
           { '@type': 'Thing', 'name': 'Custom LLM fine-tuning' },
           { '@type': 'Thing', 'name': 'LoRA domain adaptation' },
           { '@type': 'Thing', 'name': 'Unsloth fine-tuning' },
-          { '@type': 'Thing', 'name': 'Pre-training vs fine-tuning cost' },
+          { '@type': 'Thing', 'name': '사전 학습 대 미세 조정 비용' },
           { '@type': 'Thing', 'name': 'GGUF Ollama deployment' },
         ],
         speakable: {
@@ -2926,7 +2926,7 @@ schema: {
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': '도메인 특화 예시 500~5,000개 수집', 'text': '각 예시 = JSON/JSONL 형식의 입력 + 예상 출력' },
           { '@type': 'HowToStep', 'position': 2, 'name': '기본 모델 선택 (Llama 3.3 8B 또는 Qwen3 7B)', 'text': '최상의 결과를 위해 instruction-tuned 변형 사용' },
-          { '@type': 'HowToStep', 'position': 3, 'name': 'Unsloth를 사용하여 LoRA로 학습 (4배 빠름)', 'text': 'lora_r=16, learning_rate=2e-4, 3 epochs, VRAM 8 GB' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Unsloth를 사용하여 LoRA로 학습 (4배 빠름)', 'text': 'lora_r=16, learning_rate=2e-4, 3 에포크, VRAM 8 GB' },
           { '@type': 'HowToStep', 'position': 4, 'name': '홀드아웃 테스트 세트에서 평가', 'text': '미공개 데이터에서 정확도, F1 또는 과제별 지표 측정' },
           { '@type': 'HowToStep', 'position': 5, 'name': 'LoRA 어댑터를 기본 모델에 병합', 'text': 'model.merge_and_unload()로 단일 모델 파일 생성' },
           { '@type': 'HowToStep', 'position': 6, 'name': 'GGUF로 변환 및 양자화', 'text': 'python convert_hf_to_gguf.py --outtype q4_k_m' },

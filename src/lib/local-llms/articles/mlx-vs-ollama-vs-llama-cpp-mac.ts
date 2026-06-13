@@ -2345,14 +2345,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Which LLM framework should I use on Mac?',
-        answer: 'Ollama for beginners (one-click install). MLX for maximum speed (15–25% faster than Ollama). llama.cpp for cross-platform compatibility. All three work on Apple Silicon with Metal GPU automatically.',
+        answer: 'Ollama는 초보자용(원클릭 설치). MLX는 최고 속도(Ollama보다 15~25% 빠름). llama.cpp는 크로스 플랫폼 호환성. 세 가지 모두 Metal GPU를 활용하여 Apple Silicon에서 자동으로 작동합니다.',
         bullets: [
-          'Ollama: easiest, automatic Metal, built-in REST API',
-          'MLX: fastest (15–25% faster), Apple native, Python native',
-          'llama.cpp: cross-platform C++, most model formats',
-          'All three support same underlying models (different formats)',
-          'Speed difference: MLX fastest, llama.cpp second, Ollama baseline',
-          'Setup time: Ollama 2 min, llama.cpp 10 min, MLX 5 min',
+          'Ollama: 가장 간편, 자동 Metal, REST API 내장',
+          'MLX: 가장 빠름(15~25% 빠름), Apple 네이티브, Python 네이티브',
+          'llama.cpp: 크로스 플랫폼 C++, 가장 많은 모델 포맷',
+          '세 가지 모두 동일한 기본 모델 지원(포맷 상이)',
+          '속도 차이: MLX 최고, llama.cpp 2위, Ollama 기준선',
+          '설정 시간: Ollama 2분, llama.cpp 10분, MLX 5분',
         ],
         updatedDate: '2026-05-15',
       },

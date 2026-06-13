@@ -1378,7 +1378,7 @@ annual_local  = power_cost  # 하드웨어 이후 $1,073/년
         title: '하드웨어 요구 사항',
         items: [
           '**Qwen 3.6 27B Q4_K_M**: 16 GB VRAM — RTX 4080 (16 GB), RTX 3090 (24 GB), RTX 4090 (24 GB), Apple M3/M4/M5 Max 48 GB',
-          '**Mistral Devstral Small 24B Q4_K_M**: 14 GB VRAM — RTX 4070 Ti Super (16 GB), RTX 3090 (24 GB), Apple M3/M4/M5 Pro 36 GB',
+          '**Mistral Devstral Small 24B Q4_K_M**: 14 GB VRAM — RTX 4070 Ti Super (16 GB), RTX 3090 (24 GB), Apple M3/M4/M5 Pro 36 GB (권장 구성)',
           '**Codestral 22B Q4_K_M**: 13 GB VRAM — RTX 4070 Ti (12 GB는 경계선, 16 GB 권장)',
           '**두 모델 동시 실행**: RTX 4090 24 GB에서는 Qwen 3.6 27B Q4_K_M과 Devstral 24B Q4_K_M을 동시에 실행할 수 없습니다. 48 GB 듀얼 GPU 구성(RTX 3090 두 대 또는 RTX 4090 두 대) 또는 96 GB 이상의 통합 메모리를 가진 Apple Silicon이 필요합니다. Apple M5 Max(통합 메모리 128 GB, 대역폭 460–614 GB/s)는 MLX를 통해 두 모델을 동시에 편리하게 실행할 수 있습니다.',
           '**Apple Silicon 권장 사양**: M5 Pro(통합 메모리 64 GB)는 MLX를 통해 Qwen 3.6 27B를 ~48 토큰/초로 실행합니다. M5 Max(128 GB)는 Qwen 기준 ~55 토큰/초를 달성하며 Qwen과 Devstral을 동시에 실행할 수 있어 가장 조용하고 전력 효율적인 옵션입니다. 48 GB를 갖춘 M4 Pro도 42 토큰/초로 적합합니다.',

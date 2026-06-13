@@ -1871,7 +1871,7 @@ schema: {
             '[로컬 LLM: Apple Silicon vs NVIDIA GPU](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — 전체 비용 및 성능 비교: Mac이 예산형 GPU를 능가하는 경우.',
             '[2026년 Apple Silicon 최고의 모델](/local-llms/best-models-apple-silicon-2026) — 16GB–128GB 통합 메모리 등급별 모델 권장 사항.',
             '[Melhores GPUs Econômicas para LLMs Locais (Português)](/pt/local-llms/best-budget-gpus-local-llm) — versão em português deste guia',
-            'For Japan-specific GPU pricing, Akihabara retailers, and used market options on Mercari and Yahoo Auctions, see our <a href="/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">best value GPU for local LLMs in Japan guide</a>.',
+            '일본 특화 GPU 가격, 아키하바라 소매점 및 메르카리·야후 옥션의 중고 시장 정보는 <a href="/ko/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">일본 로컬 LLM 최고 가성비 GPU 가이드</a>를 참조하십시오.',
           ],
         },
         'sources': {

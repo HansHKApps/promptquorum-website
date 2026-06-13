@@ -2026,15 +2026,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock: '**Apple Silicon 로컬 LLM은 데스크탑 GPU 대비 낮은 소비 전력(25–70W)과 무음 추론을 제공하며 VRAM 한계가 없습니다. 32–128GB 통합 메모리 전체를 모델이 사용할 수 있습니다. M5 Pro(64GB)는 8B 모델을 45–55 tok/s, 34B 모델을 15–20 tok/s로 실행하며, M5 Max(128GB)는 70B 모델을 12–18 tok/s로 실행합니다. 통합 메모리의 이점은 결정적입니다. RTX 4090의 독립형 VRAM이 24GB에서 최대인 반면, Apple Silicon 사용자는 70B 파라미터 모델 전체를 로드할 수 있어 두 개의 GPU에 드는 비용과 복잡성을 없앨 수 있습니다. 프레임워크 선택(가장 쉬운 Ollama, 가장 빠른 MLX, 가장 호환성이 높은 llama.cpp)은 올바른 칩을 선택하는 것보다 덜 중요합니다. Mac 크기와 메모리를 선택한 다음 맞는 LLM을 선택하십시오.**',
     quickAnswerTop: {
       en: {
-        question: 'What Apple Silicon Mac should I buy for local LLMs in 2026?',
-        answer: 'Buy the maximum memory configuration your budget allows: 36GB M5 Pro (Mac Mini, $800–1200) runs 13–34B models comfortably. 64GB M5 Pro (MacBook Pro, $1500–2500) is the sweet spot for portable AI workstations. 128GB M5 Max (Mac Studio, $3000–5000) is the only consumer hardware that runs 70B models at usable speed without multi-GPU complexity. Apple Silicon memory cannot be upgraded after purchase.',
+        question: '2026년 로컬 LLM을 위해 어떤 Apple Silicon Mac을 구입해야 합니까?',
+        answer: '예산이 허용하는 최대 메모리 구성을 구매하십시오. 36GB M5 Pro(Mac Mini, $800–1200)는 13–34B 모델을 편안하게 실행합니다. 64GB M5 Pro(MacBook Pro, $1500–2500)는 휴대용 AI 워크스테이션의 최적 선택입니다. 128GB M5 Max(Mac Studio, $3000–5000)는 멀티 GPU 복잡성 없이 70B 모델을 사용 가능한 속도로 실행할 수 있는 유일한 소비자 하드웨어입니다. Apple Silicon 메모리는 구매 후 업그레이드할 수 없습니다.',
         bullets: [
-          'M5 Pro 64GB: best value, runs Llama 3.3 70B Q4 at 15–20 tok/s, $1200–1500',
-          'M5 Max 128GB: max quality, runs Llama 3.3 70B Q5 at 12–16 tok/s, $3000+',
-          'M5 base 32GB: adequate for 13B models, entry point, $800',
-          'Do not buy less than 36GB — models outgrow 32GB within 12 months',
-          'Metal GPU acceleration (automatic in Ollama, MLX, llama.cpp) requires zero configuration',
-          'Power cost: $35–55/year for 24/7 inference vs $300–400/year for desktop RTX 4090',
+          'M5 Pro 64GB: 최고 가성비, Llama 3.3 70B Q4를 15–20 tok/s로 실행, $1200–1500',
+          'M5 Max 128GB: 최고 품질, Llama 3.3 70B Q5를 12–16 tok/s로 실행, $3000 이상',
+          'M5 기본 32GB: 13B 모델에 적합, 입문 모델, $800',
+          '36GB 미만은 구매하지 마십시오 — 모델이 12개월 내에 32GB를 초과합니다',
+          'Metal GPU 가속(Ollama, MLX, llama.cpp에서 자동)은 설정이 필요 없습니다',
+          '전력 비용: 24/7 추론 시 연간 $35–55 대 데스크탑 RTX 4090의 연간 $300–400',
         ],
         updatedDate: '2026-05-15',
       },

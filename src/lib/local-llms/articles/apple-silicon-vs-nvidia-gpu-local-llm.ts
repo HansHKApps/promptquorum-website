@@ -2369,14 +2369,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ctaText: '로컬 AI를 위해 Mac과 NVIDIA 중에서 고민 중이십니까? PromptQuorum으로 두 플랫폼 중 하나에서 실행 중인 Llama 또는 Mistral 로컬 출력을 GPT-4, Claude, Gemini 등 22개 모델과 비교하십시오. $1,200–4,000의 하드웨어 투자를 결정하기 전에 해당 하드웨어가 귀하의 특정 작업에서 클라우드 수준의 결과를 제공하는지 검증하십시오.',
     quickAnswerTop: {
       en: {
-        question: 'Should I buy a Mac or NVIDIA GPU for local LLMs?',
-        answer: 'Buy Mac (M5 Max 128GB) if you run 70B models or need multi-model stacks. Buy NVIDIA (RTX 4090) if you want maximum speed on 8B–24B models and can accept $394/year in electricity. The crossover: ~24GB model size.',
+        question: '로컬 LLM을 위해 Mac과 NVIDIA GPU 중 무엇을 구입해야 합니까?',
+        answer: '70B 모델을 실행하거나 다중 모델 스택이 필요하다면 Mac(M5 Max 128GB)을 구매하십시오. 8B–24B 모델에서 최대 속도를 원하고 연간 $394의 전기 비용을 수용할 수 있다면 NVIDIA(RTX 4090)를 구매하십시오. 분기점: 모델 크기 약 24GB.',
         bullets: [
-          'M5 Max 128GB: only consumer hardware that runs 70B Q4 (42GB) without dual-GPU',
-          'RTX 4090: 120–140 tok/s on 8B models vs M5 Max 100–120 tok/s — 20% faster on small models',
-          'Power: Mac Mini M5 Pro at $35/year vs RTX 4090 at $394/year (24/7 operation)',
-          '3-year TCO: Mac Mini M5 Pro $1,304 vs RTX 4090 desktop $3,682',
-          'Fine-tuning: NVIDIA CUDA ecosystem dominates — use NVIDIA for training, Mac for inference',
+          'M5 Max 128GB: 이중 GPU 없이 70B Q4(42GB)를 실행할 수 있는 유일한 소비자 하드웨어',
+          'RTX 4090: 8B 모델에서 120–140 tok/s 대 M5 Max 100–120 tok/s — 소형 모델에서 20% 빠름',
+          '전력: Mac Mini M5 Pro $35/년 대 RTX 4090 $394/년(24/7 가동)',
+          '3년 TCO: Mac Mini M5 Pro $1,304 대 RTX 4090 데스크탑 $3,682',
+          '파인튜닝: NVIDIA CUDA 에코시스템이 우세 — 훈련에는 NVIDIA, 추론에는 Mac 사용',
         ],
         updatedDate: '2026-05-15',
       },

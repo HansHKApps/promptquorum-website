@@ -2574,7 +2574,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       { label: 'LM Studio 설정', anchor: '#lm-studio-setup' },
       { label: 'CJK 파일 문서 OCR', anchor: '#ocr-use-case' },
       { label: '이미지 Q&A, 스크린샷, 차트', anchor: '#other-use-cases' },
-      { label: 'Qwen2-VL vs LLaVA vs Llama 3.2 Vision', anchor: '#vs-other-models' },
+      { label: '모델 비교: Qwen2-VL vs LLaVA vs Llama 3.2 Vision', anchor: '#vs-other-models' },
       { label: 'PromptQuorum 연결', anchor: '#promptquorum' },
       { label: '문제 해결', anchor: '#troubleshooting' },
       { label: '관련 자료', anchor: '#related-reading' },
@@ -2769,7 +2769,7 @@ ollama run qwen2-vl:7b
       },
       vsOtherModels: {
         id: 'vs-other-models',
-        title: 'Qwen2-VL vs LLaVA vs Llama 3.2 Vision',
+        title: '모델 비교: Qwen2-VL vs LLaVA vs Llama 3.2 Vision',
         content: [
           '**다국어 OCR의 경우 Qwen2-VL은 더 낮은 VRAM에서 LLaVA 1.6을 능가하고 Llama 3.2 Vision 11B와 동등하거나 능가합니다.** 영어 전용 사진 Q&A의 경우 Llama 3.2 Vision 11B가 동등하게 강력한 선택입니다. LLaVA 1.6은 커뮤니티 문제 해결 리소스가 가장 많이 문서화된 모델입니다.',
         ],

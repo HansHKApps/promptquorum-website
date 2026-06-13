@@ -1535,9 +1535,9 @@ ollama pull aya-expanse:32b         # 翻译`,
     leadAnswerBlock: '**16GB: Phi-4. 36GB: Llama 3.3 8B Q8 (~38 tok/s). 64GB: Qwen3 34B Q5 (~18 tok/s). 128GB: Llama 3.3 70B Q5 (~14 tok/s M5 Pro, ~16 tok/s M5 Max). 모두 Metal 기반 Ollama를 통해 실행됩니다.**',
     quickAnswerTop: {
       en: {
-        question: 'Which LLM model should I run on my Mac?',
-        answer: '16GB → Phi-4. 36GB → Llama 3.3 8B or Qwen3 14B. 64GB → Qwen3 34B. 128GB → Llama 3.3 70B. Performance: 30-40 tok/s (8B), 15-20 tok/s (34B), 12-18 tok/s (70B) on M5 Pro.',
-        bullets: ['16GB: Phi-4 3.8B', '36GB: Llama 3.3 8B Q8 (38 tok/s)', '64GB: Qwen3 34B Q5 (18 tok/s)', '128GB: Llama 3.3 70B Q5 (14–16 tok/s)', 'Use quantization: Q4/Q5 are standard', 'All available via Ollama'],
+        question: 'Mac에서 어떤 LLM 모델을 실행해야 합니까?',
+        answer: '16GB → Phi-4. 36GB → Llama 3.3 8B 또는 Qwen3 14B. 64GB → Qwen3 34B. 128GB → Llama 3.3 70B. M5 Pro 기준 성능: 30~40 tok/s(8B), 15~20 tok/s(34B), 12~18 tok/s(70B).',
+        bullets: ['16GB: Phi-4 3.8B', '36GB: Llama 3.3 8B Q8 (38 tok/s)', '64GB: Qwen3 34B Q5 (18 tok/s)', '128GB: Llama 3.3 70B Q5 (14~16 tok/s)', '양자화 활용: Q4/Q5가 표준', '모두 Ollama에서 이용 가능'],
         updatedDate: '2026-05-15',
       },
       de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },

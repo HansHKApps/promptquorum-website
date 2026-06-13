@@ -52,42 +52,42 @@ schema: {
           {
             '@type': 'Question',
             'name': 'How much does a team local LLM server cost compared to cloud APIs?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Single server setup: $2,500 hardware + $50/mo electricity ($600/year) vs. $1,000+/month for cloud APIs ($12,000+/year). Payback period: 2-3 months for active teams.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': '단일 서버 설정: 하드웨어 $2,500 + 전기 $50/월($600/년) 대 클라우드 API $1,000+/월($12,000+/년). 활성 팀의 회수 기간: 2~3개월.' }
           },
           {
             '@type': 'Question',
-            'name': 'How do I set up user authentication for a team LLM server?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Use OAuth 2.0 with SSO (Active Directory / Okta) for enterprise. Use simple token auth for SMB teams. All queries are logged with user ID, timestamp, and token count for cost attribution.' }
+            'name': '팀 LLM 서버의 사용자 인증을 어떻게 설정합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '엔터프라이즈는 SSO(Active Directory / Okta)와 OAuth 2.0 사용. 중소기업 팀은 간단한 토큰 인증 사용. 모든 쿼리는 비용 귀속을 위해 사용자 ID, 타임스탬프, 토큰 수와 함께 기록됩니다.' }
           },
           {
             '@type': 'Question',
-            'name': 'What happens if a GPU fails in a team setup?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Use a dual-GPU cluster with load balancer: if GPU 0 dies, all requests automatically route to GPU 1. No downtime. For single-server setups, RAID storage protects data but GPU failover requires redundancy.' }
+            'name': '팀 설정에서 GPU가 고장나면 어떻게 됩니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '로드 밸런서가 있는 이중 GPU 클러스터 사용: GPU 0이 고장나면 모든 요청이 GPU 1로 자동 라우팅됩니다. 다운타임 없음. 단일 서버 설정의 경우 RAID 스토리지가 데이터를 보호하지만 GPU 장애 복구에는 이중화가 필요합니다.' }
           },
           {
             '@type': 'Question',
-            'name': 'Can I add more users without buying new hardware?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, up to 20-30 concurrent users per GPU. Beyond that, add a GPU card and rebalance the load balancer. One RTX 4090 handles approximately 5 tokens/sec per concurrent user.' }
+            'name': '새 하드웨어를 구매하지 않고 더 많은 사용자를 추가할 수 있습니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '네, GPU당 최대 20~30명의 동시 사용자까지 가능합니다. 그 이상이면 GPU 카드를 추가하고 로드 밸런서를 재조정하십시오. RTX 4090 하나는 동시 사용자당 약 5 토큰/초를 처리합니다.' }
           },
           {
             '@type': 'Question',
-            'name': 'How do I handle model updates in a team setup?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Download new model on separate machine, test, then swap in. vLLM supports hot-swapping models with zero downtime by pausing new requests, finishing in-flight queries, then swapping model files.' }
+            'name': '팀 설정에서 모델 업데이트를 어떻게 처리합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '별도 머신에서 새 모델 다운로드 후 테스트하고 교체하십시오. vLLM은 새 요청을 일시 중지하고 진행 중인 쿼리를 완료한 후 모델 파일을 교체하는 방식으로 다운타임 없이 핫 스왑을 지원합니다.' }
           },
           {
             '@type': 'Question',
-            'name': 'Should I use Kubernetes for team local LLM deployment?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'No, not needed for less than 50 users. Plain Docker + docker-compose is simpler and requires less overhead. Kubernetes adds complexity without benefit for small teams.' }
+            'name': '팀 로컬 LLM 배포에 Kubernetes를 사용해야 합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '50명 미만의 경우 불필요합니다. 일반 Docker + docker-compose가 더 간단하고 오버헤드가 적습니다. Kubernetes는 소규모 팀에 이점 없이 복잡성만 추가합니다.' }
           },
           {
             '@type': 'Question',
-            'name': 'Can I bill team members based on token usage?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, via showback reports. Use Prometheus metrics to track tokens per user per day, then allocate server costs proportionally. Decide policy first: shared cost or per-department chargeback.' }
+            'name': '토큰 사용량에 따라 팀원에게 비용을 청구할 수 있습니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '네, 쇼백 보고서를 통해 가능합니다. Prometheus 메트릭으로 사용자당 일일 토큰을 추적한 후 서버 비용을 비례 배분하십시오. 먼저 정책을 결정하십시오: 공유 비용 또는 부서별 비용 청구.' }
           },
           {
             '@type': 'Question',
-            'name': 'How do I backup user data and logs on a team server?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Run daily backups of all input/output logs to external storage. Use RAID 6 redundancy (survives 2 concurrent drive failures). Test recovery monthly to ensure backups are valid.' }
+            'name': '팀 서버에서 사용자 데이터와 로그를 어떻게 백업합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '모든 입출력 로그를 외부 스토리지에 매일 백업하십시오. RAID 6 이중화(동시 드라이브 2개 장애 생존) 사용. 백업이 유효한지 확인하기 위해 매월 복구를 테스트하십시오.' }
           }
         ]
       },
@@ -1632,8 +1632,8 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Local LLM Server for Teams: Access Control & Cost Tracking',
-        'description': 'Team local LLM server setup with vLLM, nginx, access control, and usage tracking. Multi-user setup guide, cost comparison, and role-based permissions.',
+        'headline': '팀을 위한 로컬 LLM 서버: 액세스 제어 및 비용 추적',
+        'description': 'vLLM, nginx, 액세스 제어 및 사용량 추적을 활용한 팀 로컬 LLM 서버 설정. 다중 사용자 설정 가이드, 비용 비교, 역할 기반 권한 관리.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-setup-for-teams',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
@@ -1646,11 +1646,11 @@ schema: {
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        'name': 'Set Up a Local LLM Server for Teams',
+        'name': '팀을 위한 로컬 LLM 서버 구축',
         'step': [
-          { '@type': 'HowToStep', 'name': 'Small Team Setup (5-10 users)', 'text': 'Single vLLM server + nginx + token auth. Hardware: RTX 4090 + 64GB RAM + 1TB SSD. Cost: $2,500 hardware + $50/mo electricity.' },
-          { '@type': 'HowToStep', 'name': 'Medium Team Setup (10-50 users)', 'text': 'Dual-GPU cluster + load balancer + Prometheus monitoring. Hardware: 2× RTX 4090 + 128GB RAM. Cost: $5,000 hardware + $100/mo electricity.' },
-          { '@type': 'HowToStep', 'name': 'Large Team Setup (50+ users)', 'text': 'Enterprise deployment with redundancy, caching (Redis), auto-scaling. Cost: Custom quote. Setup time: 1 month with security audit.' }
+          { '@type': 'HowToStep', 'name': '소규모 팀 설정 (5~10명)', 'text': '단일 vLLM 서버 + nginx + 토큰 인증. 하드웨어: RTX 4090 + 64GB RAM + 1TB SSD. 비용: 하드웨어 $2,500 + 전기 $50/월.' },
+          { '@type': 'HowToStep', 'name': '중규모 팀 설정 (10~50명)', 'text': '이중 GPU 클러스터 + 로드 밸런서 + Prometheus 모니터링. 하드웨어: 2× RTX 4090 + 128GB RAM. 비용: 하드웨어 $5,000 + 전기 $100/월.' },
+          { '@type': 'HowToStep', 'name': '대규모 팀 설정 (50명 이상)', 'text': '이중화, 캐싱(Redis), 자동 확장을 갖춘 엔터프라이즈 배포. 비용: 별도 문의. 설정 기간: 보안 감사 포함 1개월.' }
         ]
       },
       faqSchema: {
@@ -1659,43 +1659,43 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'How much does a team local LLM server cost compared to cloud APIs?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Single server setup: $2,500 hardware + $50/mo electricity ($600/year) vs. $1,000+/month for cloud APIs ($12,000+/year). Payback period: 2-3 months for active teams.' }
+            'name': '팀 로컬 LLM 서버 비용은 클라우드 API와 비교하면 얼마입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '단일 서버 설정: 하드웨어 $2,500 + 전기 $50/월($600/년) 대 클라우드 API $1,000+/월($12,000+/년). 활성 팀의 회수 기간: 2~3개월.' }
           },
           {
             '@type': 'Question',
-            'name': 'How do I set up user authentication for a team LLM server?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Use OAuth 2.0 with SSO (Active Directory / Okta) for enterprise. Use simple token auth for SMB teams. All queries are logged with user ID, timestamp, and token count for cost attribution.' }
+            'name': '팀 LLM 서버의 사용자 인증을 어떻게 설정합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '엔터프라이즈는 SSO(Active Directory / Okta)와 OAuth 2.0 사용. 중소기업 팀은 간단한 토큰 인증 사용. 모든 쿼리는 사용자 ID, 타임스탬프, 토큰 수와 함께 기록됩니다.' }
           },
           {
             '@type': 'Question',
-            'name': 'What happens if a GPU fails in a team setup?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Use a dual-GPU cluster with load balancer: if GPU 0 dies, all requests automatically route to GPU 1. No downtime. For single-server setups, RAID storage protects data but GPU failover requires redundancy.' }
+            'name': 'GPU가 팀 설정에서 고장나면 어떻게 됩니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '로드 밸런서가 있는 이중 GPU 클러스터 사용: GPU 0이 고장나면 모든 요청이 GPU 1로 자동 라우팅됩니다. 다운타임 없음. 단일 서버의 경우 RAID가 데이터를 보호하지만 GPU 장애 복구에는 이중화가 필요합니다.' }
           },
           {
             '@type': 'Question',
-            'name': 'Can I add more users without buying new hardware?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, up to 20-30 concurrent users per GPU. Beyond that, add a GPU card and rebalance the load balancer. One RTX 4090 handles approximately 5 tokens/sec per concurrent user.' }
+            'name': '새 하드웨어 없이 더 많은 사용자를 추가할 수 있습니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '네, GPU당 최대 20~30명의 동시 사용자까지 가능합니다. 그 이상이면 GPU 카드를 추가하고 로드 밸런서를 재조정하십시오. RTX 4090 하나는 동시 사용자당 약 5 토큰/초를 처리합니다.' }
           },
           {
             '@type': 'Question',
-            'name': 'How do I handle model updates in a team setup?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Download new model on separate machine, test, then swap in. vLLM supports hot-swapping models with zero downtime by pausing new requests, finishing in-flight queries, then swapping model files.' }
+            'name': '팀 설정에서 모델 업데이트를 어떻게 처리합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '별도 머신에서 새 모델 다운로드 후 테스트하고 교체하십시오. vLLM은 새 요청 일시 중지 후 진행 중인 쿼리를 완료하고 모델 파일을 교체하는 방식으로 다운타임 없이 핫 스왑을 지원합니다.' }
           },
           {
             '@type': 'Question',
-            'name': 'Should I use Kubernetes for team local LLM deployment?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'No, not needed for less than 50 users. Plain Docker + docker-compose is simpler and requires less overhead. Kubernetes adds complexity without benefit for small teams.' }
+            'name': '팀 로컬 LLM 배포에 Kubernetes를 사용해야 합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '50명 미만의 경우 불필요합니다. 일반 Docker + docker-compose가 더 간단하고 오버헤드가 적습니다. Kubernetes는 소규모 팀에 이점 없이 복잡성만 추가합니다.' }
           },
           {
             '@type': 'Question',
-            'name': 'Can I bill team members based on token usage?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, via showback reports. Use Prometheus metrics to track tokens per user per day, then allocate server costs proportionally. Decide policy first: shared cost or per-department chargeback.' }
+            'name': '토큰 사용량에 따라 팀원에게 비용을 청구할 수 있습니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '네, 쇼백 보고서로 가능합니다. Prometheus 메트릭으로 사용자당 일일 토큰을 추적 후 서버 비용을 비례 배분하십시오. 정책 먼저 결정: 공유 비용 또는 부서별 비용 청구.' }
           },
           {
             '@type': 'Question',
-            'name': 'How do I backup user data and logs on a team server?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Run daily backups of all input/output logs to external storage. Use RAID 6 redundancy (survives 2 concurrent drive failures). Test recovery monthly to ensure backups are valid.' }
+            'name': '팀 서버에서 사용자 데이터와 로그를 어떻게 백업합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '모든 입출력 로그를 외부 스토리지에 매일 백업하십시오. RAID 6 이중화(동시 드라이브 2개 장애 생존) 사용. 백업 유효성 확인을 위해 매월 복구를 테스트하십시오.' }
           }
         ]
       },
@@ -1840,17 +1840,17 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'Local LLM Setup for Business Teams',
+        'name': '비즈니스 팀을 위한 로컬 LLM 설정',
         'numberOfItems': 8,
         'itemListElement': [
-          { '@type': 'ListItem', position: 1, name: 'Small team (5-10): Single server (vLLM) + nginx + auth = $3K hardware, $50/mo electricity.' },
-          { '@type': 'ListItem', position: 2, name: 'Medium team (10-50): Dual-GPU cluster + load balancer + Prometheus monitoring = $6K hardware, $100/mo electricity.' },
-          { '@type': 'ListItem', position: 3, name: 'Large team (50+): Enterprise setup with redundancy, caching layer (Redis), auto-scaling = custom quote.' },
-          { '@type': 'ListItem', position: 4, name: 'Cost per user: $10-100/month depending on inference volume (vs. $200-500/month cloud APIs).' },
-          { '@type': 'ListItem', position: 5, name: 'Setup time: Single server = 1 day. Cluster = 1 week. Enterprise = 1 month (including security audit).' },
-          { '@type': 'ListItem', position: 6, name: 'API authentication: OAuth 2.0 (SSO via AD/Okta) for enterprise. Simple token auth for SMB.' },
-          { '@type': 'ListItem', position: 7, name: 'Usage tracking: Every query logged with user ID, timestamp, tokens generated (for cost attribution).' },
-          { '@type': 'ListItem', position: 8, name: 'Admin burden: Minimal (automated monitoring). Scaling event = add GPU card + rebalance (no code changes).' },
+          { '@type': 'ListItem', position: 1, name: '소규모 팀(5~10명): 단일 서버(vLLM) + nginx + 인증 = 하드웨어 $3K, 전기 $50/월.' },
+          { '@type': 'ListItem', position: 2, name: '중규모 팀(10~50명): 이중 GPU 클러스터 + 로드 밸런서 + Prometheus 모니터링 = 하드웨어 $6K, 전기 $100/월.' },
+          { '@type': 'ListItem', position: 3, name: '대규모 팀(50명 이상): 이중화, 캐싱 레이어(Redis), 자동 확장을 갖춘 엔터프라이즈 설정 = 별도 문의.' },
+          { '@type': 'ListItem', position: 4, name: '사용자당 비용: 추론 볼륨에 따라 $10~100/월(클라우드 API $200~500/월 대비).' },
+          { '@type': 'ListItem', position: 5, name: '설정 시간: 단일 서버 = 1일. 클러스터 = 1주. 엔터프라이즈 = 1개월(보안 감사 포함).' },
+          { '@type': 'ListItem', position: 6, name: 'API 인증: 엔터프라이즈는 OAuth 2.0(AD/Okta SSO). 중소기업은 간단한 토큰 인증.' },
+          { '@type': 'ListItem', position: 7, name: '사용량 추적: 모든 쿼리에 사용자 ID, 타임스탬프, 생성된 토큰 수 기록(비용 귀속용).' },
+          { '@type': 'ListItem', position: 8, name: '관리 부담: 최소화(자동 모니터링). 확장 이벤트 = GPU 카드 추가 + 재조정(코드 변경 불필요).' },
         ],
       },
     },

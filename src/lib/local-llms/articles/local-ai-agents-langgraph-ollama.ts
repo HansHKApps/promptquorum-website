@@ -2282,8 +2282,8 @@ schema: {
           codeBlock: '# Example: CoT reasoning prompt for agent\nsystem_prompt = """\nYou are a research agent. Break complex tasks into steps:\n1. Identify what information you need\n2. Call appropriate tools to gather information\n3. Analyze results and determine next steps\n4. Return the final answer with sources\nAlways reason step-by-step before calling tools.\n"""',
           codeLanguage: 'python',
           promptExamples: [
-            { label: '❌ 나쁜 프롬프트', text: 'You are a helpful AI assistant. A user will ask you to do research. Do your best.' },
-            { label: '✅ 좋은 프롬프트', text: 'You are a research agent. For each task: (1) break it into 2–3 sub-questions, (2) search for each using the web_search tool, (3) synthesize findings, (4) cite sources. Always explain your reasoning before calling a tool. Hard limit: 10 reasoning steps max.' },
+            { label: '❌ 나쁜 프롬프트', text: '당신은 유용한 AI 어시스턴트입니다. 사용자가 리서치를 요청할 것입니다. 최선을 다하십시오.' },
+            { label: '✅ 좋은 프롬프트', text: '당신은 리서치 에이전트입니다. 각 작업마다: (1) 2~3개의 하위 질문으로 분해하고, (2) web_search 도구로 각각 검색하고, (3) 결과를 종합하고, (4) 출처를 인용하십시오. 도구 호출 전 항상 추론을 설명하십시오. 최대 10단계.' },
           ],
           callouts: [
             { type: 'insight', text: '사고의 연쇄 프롬프트는 에이전트에 잘 작동합니다 — 명시적인 단계별 추론은 LLM이 더 나은 도구 선택을 하는 데 도움이 됩니다.' },
