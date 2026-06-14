@@ -27,6 +27,22 @@ const T: Partial<Record<Lang, { title: string; desc: string }>> = {
     title: '加入候补名单',
     desc: '早期访问用户将获得优先入职辅导、与开发者的直接联系，以及一个免费的强大工具！',
   },
+  es: {
+    title: 'Unirse a la lista de espera',
+    desc: '¡Los usuarios de acceso anticipado obtienen incorporación prioritaria, acceso directo al desarrollador y una herramienta gratuita!',
+  },
+  pt: {
+    title: 'Entrar na lista de espera',
+    desc: 'Os utilizadores de acesso antecipado recebem integração prioritária, acesso direto ao programador e uma ferramenta gratuita!',
+  },
+  ar: {
+    title: 'انضم إلى قائمة الانتظار',
+    desc: 'يحصل مستخدمو الوصول المبكر على تأهيل ذي أولوية، ووصول مباشر إلى المطور، وأداة مجانية قوية!',
+  },
+  ko: {
+    title: '대기자 명단 등록',
+    desc: '얼리 액세스 사용자는 우선 온보딩, 개발자 직접 접근, 무료 파워 툴을 받을 수 있습니다!',
+  },
 }
 
 function WaitlistModalInner() {

@@ -173,6 +173,8 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
     return `${basePath}?${params.toString()}`
   }
 
+  const langPrefix = lang === 'en' ? '' : `/${lang}`
+
   return (
     <footer className="py-12 px-4 sm:px-6 border-t border-gray-200 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -225,11 +227,11 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
             </span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs">
-            <a href="/about" className="hover:text-primary transition-colors">{t.about}</a>
+            <a href={`${langPrefix}/about`} className="hover:text-primary transition-colors">{t.about}</a>
             <span aria-hidden="true">•</span>
-            <a href="/frameworks" className="hover:text-primary transition-colors">{t.frameworks}</a>
+            <a href={`${langPrefix}/frameworks`} className="hover:text-primary transition-colors">{t.frameworks}</a>
             <span aria-hidden="true">•</span>
-            <a href="/privacy" className="hover:text-primary transition-colors">{t.privacy}</a>
+            <a href={`${langPrefix}/privacy`} className="hover:text-primary transition-colors">{t.privacy}</a>
             <span aria-hidden="true">•</span>
             <a href="/impressum" className="hover:text-primary transition-colors">{t.impressum}</a>
             <span aria-hidden="true">•</span>

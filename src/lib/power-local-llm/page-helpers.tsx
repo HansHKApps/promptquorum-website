@@ -1089,6 +1089,55 @@ const HUB_THEME_TEXT_PT: Array<{ badge: string; question: string; description: s
   },
 ]
 
+// KO theme text — same index order as HUB_THEMES
+const HUB_THEME_TEXT_KO: Array<{ badge: string; question: string; description: string }> = [
+  {
+    badge: '개요 및 참고',
+    question: '개요 및 참고: 로컬 LLM 생태계에서 어디서 시작할까요?',
+    description: '알아둘 만한 모든 로컬 LLM 도구 목록 — 런타임, 데스크톱 앱, 웹 UI, 코딩 어시스턴트, RAG 시스템, 에이전트 프레임워크, 음성/멀티모달, 모바일, 생산성 플러그인. 스택을 결정하기 전에 "무엇이 있는지" 파악하는 지도.',
+  },
+  {
+    badge: '가장 쉬운 데스크톱 앱',
+    question: '가장 쉬운 데스크톱 앱: 어떤 로컬 AI 앱을 먼저 설치해야 할까요?',
+    description: '다운로드하면 바로 실행되는 ChatGPT 스타일 앱. 터미널 불필요. 초보자에게 최적의 진입점. LM Studio, Jan, GPT4All을 속도·UX·개인정보 보호 기준으로 비교 테스트.',
+  },
+  {
+    badge: 'RAG 및 문서 채팅',
+    question: 'RAG 및 문서 채팅: 내 PDF와 로컬에서 대화하는 방법은?',
+    description: '기기를 떠나지 않는 개인 지식 베이스. AnythingLLM, PrivateGPT, Open WebUI를 실제 문서로 테스트. 법률·연구·기술 콘텐츠에 맞는 임베딩 모델 추천.',
+  },
+  {
+    badge: '코딩 어시스턴트',
+    question: '코딩 어시스턴트: 로컬 LLM이 정말 GitHub Copilot을 대체할 수 있을까요?',
+    description: 'Continue.dev, Cline, Aider, Qwen3-Coder를 실제 Next.js·Python·Rust 프로젝트에서 GitHub Copilot과 벤치마크 비교. 비용 계산, 설정 가이드, 품질 차이에 대한 솔직한 평가.',
+  },
+  {
+    badge: '로컬 AI 에이전트 및 Tool-Calling',
+    question: '로컬 AI 에이전트 및 Tool-Calling: 클라우드 없이 실제로 작동하는 워크플로는?',
+    description: 'MCP, 도구 호출, 자율 에이전트 — 2026년의 최전선. 안정적으로 작동하는 것(과 여전히 실패하는 것)에 대한 솔직한 보고서. Zapier를 셀프호스팅 에이전트로 교체하고 EU 규정 준수 패턴 적용.',
+  },
+  {
+    badge: '창작 및 롤플레이',
+    question: '창작 및 롤플레이: 어떤 로컬 모델이 사람처럼 글을 쓸까요?',
+    description: '소설, 대화, 세계관 구축, 시나리오 — 50개 이상의 창작 프롬프트로 테스트. 캐릭터 작업을 위한 SillyTavern vs Agnai vs RisuAI. 합법적 창작 글쓰기를 위한 무검열 모델에 대한 솔직한 평가.',
+  },
+  {
+    badge: '모바일 및 엣지 LLM',
+    question: '모바일 및 엣지 LLM: 스마트폰에서 진짜 AI를 오프라인으로 실행할 수 있을까요?',
+    description: 'iPhone, Android, iPad, Pixel — 2026년 실제 기기 테스트. Phi-4 Mini, Gemma 3 4B, SmolLM 속도 및 품질 벤치마크. 음성 어시스턴트와 Whisper 기반 오프라인 파이프라인.',
+  },
+  {
+    badge: '생산성 및 지식 도구',
+    question: '생산성 도구: 로컬 AI를 일상 워크플로에 어떻게 연결할까요?',
+    description: 'Obsidian, Logseq, Joplin 통합. 이메일·캘린더 자동화. Grammarly와 Notion AI를 로컬 모델로 대체. 10,000개 이상 항목을 위한 완전한 개인 지식 베이스 스택.',
+  },
+  {
+    badge: '음성, 음성 인식 및 멀티모달',
+    question: '음성 및 멀티모달: 완전한 오프라인 음성·비전 파이프라인을 어떻게 구축할까요?',
+    description: 'whisper.cpp와 faster-whisper로 로컬 STT. Piper, Coqui, XTTS v2로 로컬 TTS. Ollama를 통한 비전 모델(LLaVA, Llama 3.2 Vision). 완전한 오프라인 음성 어시스턴트와 멀티모달 파이프라인 — 클라우드 마이크 불필요.',
+  },
+]
+
 type HubHeroL10n = { h1: string; intro: string; introBold: string; keyTakeaways: string[] }
 
 const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko', HubHeroL10n> = {
@@ -1589,7 +1638,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
 
           {/* Themed sections — one per category */}
           {HUB_THEMES.map((theme, idx) => {
-            const themeText = lang === 'de' ? HUB_THEME_TEXT_DE[idx] : lang === 'fr' ? HUB_THEME_TEXT_FR[idx] : lang === 'ja' ? HUB_THEME_TEXT_JA[idx] : lang === 'zh' ? HUB_THEME_TEXT_ZH[idx] : lang === 'es' ? HUB_THEME_TEXT_ES[idx] : lang === 'pt' ? HUB_THEME_TEXT_PT[idx] : theme
+            const themeText = lang === 'de' ? HUB_THEME_TEXT_DE[idx] : lang === 'fr' ? HUB_THEME_TEXT_FR[idx] : lang === 'ja' ? HUB_THEME_TEXT_JA[idx] : lang === 'zh' ? HUB_THEME_TEXT_ZH[idx] : lang === 'es' ? HUB_THEME_TEXT_ES[idx] : lang === 'pt' ? HUB_THEME_TEXT_PT[idx] : lang === 'ko' ? HUB_THEME_TEXT_KO[idx] : theme
             return (
               <section key={theme.id} id={theme.id} className="mb-16">
                 <div className="flex items-center gap-3 mb-2">
